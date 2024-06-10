@@ -1,6 +1,7 @@
 import { redirect } from '@sveltejs/kit';
 
-export const prerender = true;
+// TODO reset this once we figure out what to do with the tutorial
+export const prerender = false;
 
 export function load() {
 	redirect(301, '/tutorial/basics');

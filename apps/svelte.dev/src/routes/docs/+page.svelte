@@ -199,12 +199,12 @@
 	function get_url_to_redirect_to() {
 		const hash = $page.url.hash.replace(/^#/i, '');
 
-		if (!hash) return '/docs/introduction';
+		if (!hash) return '/docs/introduction/overview';
 
 		const old_new_map = get_old_new_ids_map();
 
 		// ID doesn't match anything, take the user to intro page only
-		if (!old_new_map.has(hash)) return '/docs/introduction';
+		if (!old_new_map.has(hash)) return '/docs/introduction/overview';
 
 		return `/docs/${old_new_map.get(hash)}`;
 	}

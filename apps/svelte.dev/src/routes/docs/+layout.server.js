@@ -1,4 +1,4 @@
-export const prerender = true;
+export const prerender = false; // TODO
 
 export async function load({ url }) {
 	if (url.pathname === '/docs') {
