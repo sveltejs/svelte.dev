@@ -9,7 +9,7 @@
 
 	let { data } = $props();
 
-	let version = data.version;
+	let version = $state(data.version);
 
 	let repl: Repl;
 	let name = $state(data.gist.name);
@@ -41,16 +41,17 @@
 
 	afterNavigate(() => {
 		repl?.set({
+			// TODO move the snapshotting elsewhere (but also... this shouldn't really be necessary?)
 			files: $state.snapshot(data.gist.components)
 		});
 	});
 
-	function handle_fork(event) {
+	function handle_fork(event: CustomEvent) {
 		console.log('> handle_fork', event);
 		goto(`/repl/${event.detail.gist.id}?version=${version}`);
 	}
 
-	function handle_change(event) {
+	function handle_change(event: CustomEvent) {
 		modified_count = event.detail.files.filter((c) => c.modified).length;
 	}
 
