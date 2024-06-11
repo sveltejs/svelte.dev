@@ -1,12 +1,12 @@
 export type DocsData = Category[];
 
-export type DocsList = {
+export type DocContents = {
 	title: string;
 	pages: {
 		title: string;
 		path: string;
 	}[];
-}[];
+};
 
 export interface Section {
 	title: string;
@@ -29,3 +29,5 @@ export type Page = {
 	content: string;
 	sections: Section[];
 };
+
+export * from './index';

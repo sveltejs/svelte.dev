@@ -2,12 +2,11 @@
 	import { page } from '$app/stores';
 	import { DocsContents } from '@sveltejs/site-kit/docs';
 
-	export let data;
+	let { data, children } = $props();
 
-	$: pageData = $page.data.page;
-
-	$: title = pageData?.title;
-	$: category = pageData?.category;
+	const pageData = $derived($page.data.page);
+	const title = $derived(pageData?.title);
+	const category = $derived(pageData?.category);
 </script>
 
 <div class="container">
@@ -23,7 +22,7 @@
 			<h1>{title}</h1>
 		{/if}
 
-		<slot />
+		{@render children()}
 	</div>
 </div>
 
