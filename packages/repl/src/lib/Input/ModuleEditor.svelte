@@ -2,9 +2,6 @@
 	import { get_repl_context } from '$lib/context.js';
 	import CodeMirror from '../CodeMirror.svelte';
 
-	/** @type {boolean} */
-	export let autocomplete;
-
 	/** @type {any} */ // TODO
 	export let error;
 

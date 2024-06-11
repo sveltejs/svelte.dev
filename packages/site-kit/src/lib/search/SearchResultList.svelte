@@ -82,10 +82,6 @@
 		margin-bottom: 0;
 	}
 
-	ul ul li {
-		margin: 0;
-	}
-
 	a {
 		display: block;
 		text-decoration: none;
