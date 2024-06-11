@@ -22,7 +22,7 @@ const config: UserConfig = {
 	plugins,
 	server: { fs: { allow: ['../../packages'] } },
 	optimizeDeps: {
-		exclude: ['@sveltejs/site-kit', '@sveltejs/repl']
+		exclude: ['@sveltejs/site-kit', '@sveltejs/repl', '@rollup/browser']
 	},
 	ssr: { noExternal: ['@sveltejs/site-kit', '@sveltejs/repl'] }
 };
