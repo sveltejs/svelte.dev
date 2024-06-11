@@ -6,18 +6,23 @@
 	"scripts": {
 		"dev": "vite dev",
 		"package:watch": "svelte-kit sync && svelte-package --watch",
-		"package": "svelte-kit sync && svelte-package"
+		"package": "svelte-kit sync && svelte-package",
+		"build": "npm run package",
+		"prepublishOnly": "npm run package",
+		"check": "svelte-kit sync && svelte-check",
+		"lint": "prettier --check .",
+		"format": "prettier --write ."
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/sveltejs/site-kit.git"
+		"url": "git+https://github.com/sveltejs/svelte.dev.git"
 	},
 	"author": "Rich Harris",
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/sveltejs/site-kit/issues"
+		"url": "https://github.com/sveltejs/svelte.dev/issues"
 	},
-	"homepage": "https://github.com/sveltejs/site-kit#readme",
+	"homepage": "https://github.com/sveltejs/svelte.dev/tree/main/packages/site-kit#readme",
 	"dependencies": {
 		"esm-env": "^1.0.0",
 		"svelte-persisted-store": "^0.9.2"
@@ -29,9 +34,11 @@
 		"flexsearch": "^0.7.43",
 		"magic-string": "^0.30.10",
 		"marked": "^12.0.2",
-		"prettier": "^3.2.5",
+		"prettier": "^3.3.2",
+		"prettier-plugin-svelte": "^3.2.4",
 		"shiki-twoslash": "^3.1.2",
 		"svelte": "^5.0.0-next.1",
+		"svelte-check": "^3.8.0",
 		"typescript": "^5.4.5",
 		"vite": "^5.2.11"
 	},

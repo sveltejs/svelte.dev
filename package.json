@@ -16,6 +16,11 @@
 	"scripts": {
 		"check": "cd packages/svelte && pnpm build && cd ../../ && pnpm -r check",
 		"format": "prettier --write .",
-		"lint": "prettier --check ."
+		"lint": "prettier --check .",
+		"changeset:version": "changeset version && pnpm -r generate:version && git add --all",
+		"changeset:publish": "changeset publish"
+	},
+	"devDependencies": {
+		"@changesets/cli": "^2.27.5"
 	}
 }

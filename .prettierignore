@@ -1,0 +1,6 @@
+# needed in addition to package ignores due to https://github.com/prettier/prettier-vscode/issues/3424
+node_modules
+.svelte-kit
+dist
+pnpm-lock.yaml
+.vercel
