@@ -130,7 +130,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 {#if $searching && ready}
 	<div class="pseudo-overlay" aria-hidden="true" on:click={close}></div>
 
-	<!-- svelte-ignore a11y-no-static-element-interactions -->
+	<!-- svelte-ignore a11y_no_static_element_interactions -->
 	<div
 		bind:this={modal}
 		class="modal"
@@ -152,7 +152,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 		use:trap
 	>
 		<div class="search-box">
-			<!-- svelte-ignore a11y-autofocus -->
+			<!-- svelte-ignore a11y_autofocus -->
 			<input
 				autofocus
 				on:keydown={(e) => {
