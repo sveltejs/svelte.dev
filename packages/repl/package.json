@@ -1,17 +1,26 @@
 {
 	"name": "@sveltejs/repl",
-	"version": "0.0.1",
+	"version": "0.6.0",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build && npm run package",
 		"preview": "vite preview",
 		"package": "svelte-kit sync && svelte-package && publint",
 		"prepublishOnly": "npm run package",
-		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"check": "svelte-kit sync && svelte-check",
 		"lint": "prettier --check .",
 		"format": "prettier --write ."
 	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/sveltejs/svelte.dev.git"
+	},
+	"author": "The Svelte Team",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/sveltejs/svelte.dev/issues"
+	},
+	"homepage": "https://github.com/sveltejs/svelte.dev/tree/main/packages/repl/#readme",
 	"exports": {
 		".": {
 			"types": "./dist/index.d.ts",
@@ -31,10 +40,10 @@
 		"@sveltejs/adapter-auto": "^3.0.0",
 		"@sveltejs/package": "^2.0.0",
 		"@sveltejs/vite-plugin-svelte": "^3.0.0",
-		"prettier": "^3.1.1",
-		"prettier-plugin-svelte": "^3.1.2",
+		"prettier": "^3.3.2",
+		"prettier-plugin-svelte": "^3.2.4",
 		"publint": "^0.1.9",
-		"svelte-check": "^3.6.0",
+		"svelte-check": "^3.8.0",
 		"tslib": "^2.4.1",
 		"typescript": "^5.0.0",
 		"vite": "^5.0.11"

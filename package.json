@@ -14,8 +14,15 @@
 		"url": "git+https://github.com/sveltejs/svelte.dev.git"
 	},
 	"scripts": {
-		"check": "cd packages/svelte && pnpm build && cd ../../ && pnpm -r check",
-		"format": "prettier --write .",
-		"lint": "prettier --check ."
+		"check": "pnpm -r check",
+		"lint": "pnpm -r lint",
+		"format": "pnpm -r format",
+		"test": "pnpm -r test",
+		"build": "cd ./packages/site-kit && pnpm build && cd ../repl && pnpm build && cd ../../apps/svelte.dev && pnpm build",
+		"changeset:version": "changeset version && pnpm -r generate:version && git add --all",
+		"changeset:publish": "changeset publish"
+	},
+	"devDependencies": {
+		"@changesets/cli": "^2.27.5"
 	}
 }

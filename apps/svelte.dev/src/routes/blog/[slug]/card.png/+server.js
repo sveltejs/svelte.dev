@@ -9,7 +9,7 @@ import OverpassRegular from './Overpass-Regular.ttf';
 const height = 630;
 const width = 1200;
 
-export const prerender = true;
+export const prerender = false; // TODO
 
 export async function GET({ params }) {
 	const post = await get_processed_blog_post(await get_blog_data(), params.slug);

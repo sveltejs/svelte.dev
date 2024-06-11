@@ -1,7 +1,7 @@
 import { get_blog_data, get_processed_blog_post } from '$lib/server/blog/index.js';
 import { error } from '@sveltejs/kit';
 
-export const prerender = true;
+export const prerender = false; // TODO
 
 export async function load({ params }) {
 	const post = await get_processed_blog_post(await get_blog_data(), params.slug);

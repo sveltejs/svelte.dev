@@ -13,7 +13,7 @@ import { render_content } from '../renderer';
  * @param {import('./types').DocsData} docs_data
  * @param {string} slug
  */
-export async function get_parsed_docs(docs_data, slug) {
+export async function get_parsed_docs(docs_data, section, slug) {
 	for (const { pages } of docs_data) {
 		for (const page of pages) {
 			if (page.slug === slug) {

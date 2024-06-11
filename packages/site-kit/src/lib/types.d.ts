@@ -14,3 +14,16 @@ export interface NavigationLink {
 		}[];
 	}[];
 }
+
+export interface Page {
+	slug: string;
+	title: string;
+	body: string;
+	sections: Section[];
+	children: Page[];
+}
+
+export interface Section {
+	slug: string;
+	title: string;
+}

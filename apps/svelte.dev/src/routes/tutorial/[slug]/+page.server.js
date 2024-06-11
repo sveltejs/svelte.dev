@@ -5,7 +5,8 @@ import {
 } from '$lib/server/tutorial/index.js';
 import { error, redirect } from '@sveltejs/kit';
 
-export const prerender = true;
+// TODO reset this once we figure out what to do with the tutorial
+export const prerender = false;
 
 export async function load({ params }) {
 	if (params.slug === 'local-transitions') redirect(307, '/tutorial/global-transitions');
@@ -25,6 +26,9 @@ export async function load({ params }) {
 }
 
 export async function entries() {
+	// TODO remove this once we figure out what to do with the tutorial
+	return [];
+
 	const tutorials_list = get_tutorial_list(await get_tutorial_data());
 	const slugs = tutorials_list
 		.map(({ tutorials }) => tutorials)

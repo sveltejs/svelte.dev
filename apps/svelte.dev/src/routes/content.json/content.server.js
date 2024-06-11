@@ -26,6 +26,8 @@ export async function content() {
 	/** @type {import('@sveltejs/site-kit/search').Block[]} */
 	const blocks = [];
 
+	return blocks;
+
 	/** @type {string[]} */
 	const breadcrumbs = [];
 
