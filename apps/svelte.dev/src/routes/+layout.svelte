@@ -6,6 +6,9 @@
 	import { Icon, Shell, Banners } from '@sveltejs/site-kit/components';
 	import { Nav, Separator } from '@sveltejs/site-kit/nav';
 	import { Search, SearchBox } from '@sveltejs/site-kit/search';
+	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
+
+	injectSpeedInsights();
 
 	export let data;
 
@@ -19,7 +22,7 @@
 			};
 		},
 		restore(data) {
-			shell_snapshot?.restore(data.shell);
+			shell_snapshot?.restore(data?.shell);
 		}
 	};
 </script>

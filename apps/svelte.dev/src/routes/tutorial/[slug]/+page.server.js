@@ -1,37 +1,22 @@
-import {
-	get_parsed_tutorial,
-	get_tutorial_data,
-	get_tutorial_list
-} from '$lib/server/tutorial/index.js';
+import { get_exercise } from '$lib/server/tutorial/content.js';
 import { error, redirect } from '@sveltejs/kit';
 
-export const prerender = true;
-
-export async function load({ params }) {
-	if (params.slug === 'local-transitions') redirect(307, '/tutorial/global-transitions');
-
-	const tutorial_data = await get_tutorial_data();
-	const tutorials_list = get_tutorial_list(tutorial_data);
-
-	const tutorial = await get_parsed_tutorial(tutorial_data, params.slug);
-
-	if (!tutorial) error(404);
-
-	return {
-		tutorials_list,
-		tutorial,
-		slug: params.slug
-	};
+export function entries() {
+	return [{ slug: 'local-transitions' }];
 }
 
-export async function entries() {
-	const tutorials_list = get_tutorial_list(await get_tutorial_data());
-	const slugs = tutorials_list
-		.map(({ tutorials }) => tutorials)
-		.flatMap((val) => val.map(({ slug }) => ({ slug })));
+export async function load({ params }) {
+	if (params.slug === 'local-transitions') {
+		redirect(307, '/tutorial/global-transitions');
+	}
 
-	// to force redirect
-	slugs.push({ slug: 'local-transitions' });
+	const exercise = await get_exercise(params.slug);
 
-	return slugs;
+	if (!exercise) {
+		error(404, 'No such tutorial found');
+	}
+
+	return {
+		exercise
+	};
 }
