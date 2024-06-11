@@ -1,6 +1,6 @@
 import { get_blog_data, get_blog_list } from '$lib/server/blog/index.js';
 
-export const prerender = true;
+export const prerender = false; // TODO
 
 const months = ',Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec'.split(',');
 
