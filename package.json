@@ -17,7 +17,7 @@
 		"check": "pnpm -r check",
 		"lint": "pnpm -r lint",
 		"format": "pnpm -r format",
-		"build": "cd ./packages/site-kit && pnpm build && cd ../repl && pnpm build && cd ../..apps/svelte.dev && pnpm build",
+		"build": "cd ./packages/site-kit && pnpm build && cd ../repl && pnpm build && cd ../../apps/svelte.dev && pnpm build",
 		"changeset:version": "changeset version && pnpm -r generate:version && git add --all",
 		"changeset:publish": "changeset publish"
 	},

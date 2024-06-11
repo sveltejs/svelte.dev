@@ -36,7 +36,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: pnpm
       - run: pnpm install --frozen-lockfile
-      - run: pnpm playwright install chromium
+      # unskip once we have tutorial here which runs playwright tests      - run: pnpm playwright install chromium
       - run: pnpm test
         env:
           CI: true
