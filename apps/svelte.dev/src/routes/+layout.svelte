@@ -32,50 +32,45 @@
 	{/if}
 </svelte:head>
 
-<div style:display={$page.url.pathname !== '/docs' ? 'contents' : 'none'}>
-	<Shell
-		nav_visible={$page.route.id !== '/(authed)/repl/[id]/embed'}
-		bind:snapshot={shell_snapshot}
-	>
-		<Nav slot="top-nav" title={data.nav_title} links={data.nav_links}>
-			<svelte:fragment slot="home-large">
-				<strong>svelte</strong>.dev
-			</svelte:fragment>
+<Shell nav_visible={$page.route.id !== '/(authed)/repl/[id]/embed'} bind:snapshot={shell_snapshot}>
+	<Nav slot="top-nav" title={data.nav_title} links={data.nav_links}>
+		<svelte:fragment slot="home-large">
+			<strong>svelte</strong>.dev
+		</svelte:fragment>
 
-			<svelte:fragment slot="home-small">
-				<strong>svelte</strong>
-			</svelte:fragment>
+		<svelte:fragment slot="home-small">
+			<strong>svelte</strong>
+		</svelte:fragment>
 
-			<svelte:fragment slot="search">
-				{#if $page.url.pathname !== '/search'}
-					<Search />
-				{/if}
-			</svelte:fragment>
+		<svelte:fragment slot="search">
+			{#if $page.url.pathname !== '/search'}
+				<Search />
+			{/if}
+		</svelte:fragment>
 
-			<svelte:fragment slot="external-links">
-				<a href="https://learn.svelte.dev/">Tutorial</a>
+		<svelte:fragment slot="external-links">
+			<a href="https://learn.svelte.dev/">Tutorial</a>
 
-				<a href="https://kit.svelte.dev">SvelteKit</a>
+			<a href="https://kit.svelte.dev">SvelteKit</a>
 
-				<Separator />
+			<Separator />
 
-				<a href="/chat" title="Discord Chat">
-					<span class="small">Discord</span>
-					<span class="large"><Icon name="discord" /></span>
-				</a>
+			<a href="/chat" title="Discord Chat">
+				<span class="small">Discord</span>
+				<span class="large"><Icon name="discord" /></span>
+			</a>
 
-				<a href="https://github.com/sveltejs/svelte" title="GitHub Repo">
-					<span class="small">GitHub</span>
-					<span class="large"><Icon name="github" /></span>
-				</a>
-			</svelte:fragment>
-		</Nav>
+			<a href="https://github.com/sveltejs/svelte" title="GitHub Repo">
+				<span class="small">GitHub</span>
+				<span class="large"><Icon name="github" /></span>
+			</a>
+		</svelte:fragment>
+	</Nav>
 
-		<slot />
+	<slot />
 
-		<Banners slot="banner-bottom" data={data.banner} />
-	</Shell>
-</div>
+	<Banners slot="banner-bottom" data={data.banner} />
+</Shell>
 
 {#if browser}
 	<SearchBox />

@@ -1,11 +1,14 @@
-<script>
+<script lang="ts">
 	import { page } from '$app/stores';
 	import TSToggle from './TSToggle.svelte';
+	import type { Page } from '../types';
 
-	/** @type {import('./types').DocsList} */
-	export let contents = [];
+	interface Props {
+		contents: Page[];
+		show_ts_toggle?: boolean;
+	}
 
-	export let show_ts_toggle = true;
+	let { contents, show_ts_toggle = true }: Props = $props();
 </script>
 
 <nav aria-label="Docs">
@@ -17,13 +20,13 @@
 				</span>
 
 				<ul>
-					{#each section.pages as { title, path }}
+					{#each section.children as { title, slug }}
 						<li>
 							<a
 								data-sveltekit-preload-data
 								class="page"
-								class:active={path === $page.url.pathname}
-								href={path}
+								class:active={`/${slug}` === $page.url.pathname}
+								href="/{slug}"
 							>
 								{title}
 							</a>
