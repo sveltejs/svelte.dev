@@ -10,11 +10,9 @@
 		"update": "node scripts/update.js --force=true",
 		"preview": "vite preview",
 		"start": "node build",
-		"check": "node scripts/update.js && pnpm generate && svelte-kit sync && svelte-check",
-		"check:watch": "svelte-kit sync && svelte-check --watch",
+		"check": "node scripts/update.js && svelte-kit sync && svelte-check",
 		"format": "prettier --write .",
-		"lint": "prettier --check .",
-		"check:format": "prettier --check ."
+		"lint": "prettier --check ."
 	},
 	"dependencies": {
 		"@jridgewell/sourcemap-codec": "^1.4.15",
