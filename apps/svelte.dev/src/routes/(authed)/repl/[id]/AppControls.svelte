@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { createEventDispatcher, getContext } from 'svelte';
 	import UserMenu from './UserMenu.svelte';
 	import { Icon } from '@sveltejs/site-kit/components';
@@ -6,38 +6,48 @@
 	import downloadBlob from './downloadBlob.js';
 	import { enter } from '$lib/utils/events.js';
 	import { isMac } from '$lib/utils/compat.js';
+	import Repl from '@sveltejs/repl';
+
+	interface Props {
+		user: TODO;
+		repl: Repl;
+		gist: TODO;
+		name: string;
+		zen_mode: boolean;
+		modified_count: number;
+	}
+
+	let {
+		name = $bindable(),
+		zen_mode = $bindable(),
+		modified_count = $bindable(),
+		user,
+		repl,
+		gist
+	}: Props = $props();
 
 	const dispatch = createEventDispatcher();
 	const { login } = getContext('app');
 
-	export let user;
-
-	/** @type {import('@sveltejs/repl').default} */
-	export let repl;
-	export let gist;
-	export let name;
-	export let zen_mode;
-	export let modified_count;
-
-	let saving = false;
-	let downloading = false;
-	let justSaved = false;
-	let justForked = false;
+	let saving = $state(false);
+	let downloading = $state(false);
+	let justSaved = $state(false);
+	let justForked = $state(false);
 
 	function wait(ms) {
 		return new Promise((f) => setTimeout(f, ms));
 	}
 
-	$: canSave = user && gist && gist.owner === user.id;
+	const canSave = $derived(user && gist && gist.owner === user.id);
 
-	function handleKeydown(event) {
+	function handleKeydown(event: KeyboardEvent) {
 		if (event.key === 's' && (isMac ? event.metaKey : event.ctrlKey)) {
 			event.preventDefault();
 			save();
 		}
 	}
 
-	async function fork(intentWasSave) {
+	async function fork(intentWasSave: boolean) {
 		saving = true;
 
 		const { files } = repl.toJSON();
@@ -191,12 +201,12 @@ export default app;`
 <div class="app-controls">
 	<input
 		bind:value={name}
-		on:focus={(e) => e.target.select()}
+		onfocus={(e) => e.target.select()}
 		use:enter={(e) => /** @type {HTMLInputElement} */ (e.target).blur()}
 	/>
 
 	<div class="buttons">
-		<button class="icon" on:click={() => (zen_mode = !zen_mode)} title="fullscreen editor">
+		<button class="icon" onclick={() => (zen_mode = !zen_mode)} title="fullscreen editor">
 			{#if zen_mode}
 				<Icon name="close" />
 			{:else}
@@ -204,11 +214,11 @@ export default app;`
 			{/if}
 		</button>
 
-		<button class="icon" disabled={downloading} on:click={download} title="download zip file">
+		<button class="icon" disabled={downloading} onclick={download} title="download zip file">
 			<Icon name="download" />
 		</button>
 
-		<button class="icon" disabled={saving || !user} on:click={() => fork(false)} title="fork">
+		<button class="icon" disabled={saving || !user} onclick={() => fork(false)} title="fork">
 			{#if justForked}
 				<Icon name="check" />
 			{:else}
@@ -216,7 +226,7 @@ export default app;`
 			{/if}
 		</button>
 
-		<button class="icon" disabled={saving || !user} on:click={save} title="save">
+		<button class="icon" disabled={saving || !user} onclick={save} title="save">
 			{#if justSaved}
 				<Icon name="check" />
 			{:else}
@@ -230,7 +240,7 @@ export default app;`
 		{#if user}
 			<UserMenu {user} />
 		{:else}
-			<button class="icon" on:click|preventDefault={login}>
+			<button class="icon" onclick={(e) => (e.preventDefault(), login(e))}>
 				<Icon name="log-in" />
 				<span>&nbsp;Log in to save</span>
 			</button>
