@@ -30,7 +30,7 @@
 
 	onMount(() => {
 		if (data.version !== 'local') {
-			fetch(`https://unpkg.com/svelte@${data.version || '4'}/package.json`)
+			fetch(`https://unpkg.com/svelte@${data.version || 'next'}/package.json`)
 				.then((r) => r.json())
 				.then((pkg) => {
 					version = pkg.version;
