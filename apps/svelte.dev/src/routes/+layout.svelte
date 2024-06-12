@@ -10,19 +10,19 @@
 
 	injectSpeedInsights();
 
-	export let data;
+	let { data, children: layout_children } = $props();
 
-	/** @type {import('@sveltejs/kit').Snapshot<number>} */
-	let shell_snapshot;
+	/** @type {import('@sveltejs/site-kit/components').Shell} */
+	let shell;
 
 	export const snapshot = {
 		capture() {
 			return {
-				shell: shell_snapshot?.capture()
+				shell: shell.snapshot.capture()
 			};
 		},
 		restore(data) {
-			shell_snapshot?.restore(data?.shell);
+			shell.snapshot.restore(data?.shell);
 		}
 	};
 </script>
@@ -35,44 +35,50 @@
 	{/if}
 </svelte:head>
 
-<Shell nav_visible={$page.route.id !== '/(authed)/repl/[id]/embed'} bind:snapshot={shell_snapshot}>
-	<Nav slot="top-nav" title={data.nav_title} links={data.nav_links}>
-		<svelte:fragment slot="home-large">
-			<strong>svelte</strong>.dev
-		</svelte:fragment>
+<Shell nav_visible={$page.route.id !== '/(authed)/repl/[id]/embed'} bind:this={shell}>
+	{#snippet top_nav()}
+		<Nav title={data.nav_title} links={data.nav_links}>
+			{#snippet home_large()}
+				<strong>svelte</strong>.dev
+			{/snippet}
 
-		<svelte:fragment slot="home-small">
-			<strong>svelte</strong>
-		</svelte:fragment>
+			{#snippet home_small()}
+				<strong>svelte</strong>
+			{/snippet}
 
-		<svelte:fragment slot="search">
-			{#if $page.url.pathname !== '/search'}
-				<Search />
-			{/if}
-		</svelte:fragment>
+			{#snippet search()}
+				{#if $page.url.pathname !== '/search'}
+					<Search />
+				{/if}
+			{/snippet}
 
-		<svelte:fragment slot="external-links">
-			<a href="https://learn.svelte.dev/">Tutorial</a>
+			{#snippet external_links()}
+				<a href="https://learn.svelte.dev/">Tutorial</a>
 
-			<a href="https://kit.svelte.dev">SvelteKit</a>
+				<a href="https://kit.svelte.dev">SvelteKit</a>
 
-			<Separator />
+				<Separator />
 
-			<a href="/chat" title="Discord Chat">
-				<span class="small">Discord</span>
-				<span class="large"><Icon name="discord" /></span>
-			</a>
+				<a href="/chat" title="Discord Chat">
+					<span class="small">Discord</span>
+					<span class="large"><Icon name="discord" /></span>
+				</a>
 
-			<a href="https://github.com/sveltejs/svelte" title="GitHub Repo">
-				<span class="small">GitHub</span>
-				<span class="large"><Icon name="github" /></span>
-			</a>
-		</svelte:fragment>
-	</Nav>
+				<a href="https://github.com/sveltejs/svelte" title="GitHub Repo">
+					<span class="small">GitHub</span>
+					<span class="large"><Icon name="github" /></span>
+				</a>
+			{/snippet}
+		</Nav>
+	{/snippet}
 
-	<slot />
+	{#snippet children()}
+		{@render layout_children()}
+	{/snippet}
 
-	<Banners slot="banner-bottom" data={data.banner} />
+	{#snippet banner_bottom()}
+		<Banners data={data.banner} />
+	{/snippet}
 </Shell>
 
 {#if browser}
