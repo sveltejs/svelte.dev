@@ -8,3 +8,5 @@ const markdown_modules = import.meta.glob<{ default: string }>('../../../content
 
 // https://github.com/vitejs/vite/issues/17453
 export const index = await create_index(markdown_modules, '../../../content', read);
+
+// console.log(index);
