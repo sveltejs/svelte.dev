@@ -1,0 +1,3 @@
+---
+editing_constraints: {"create":["/src/routes/a/b/c/+page@b.svelte","/src/routes/a/b/c/+page@a.svelte"]}
+---
