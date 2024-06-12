@@ -26,6 +26,11 @@
 		".": {
 			"types": "./dist/Repl.svelte.d.ts",
 			"svelte": "./dist/Repl.svelte"
+		},
+		"./theme": {
+			"types": "./dist/theme.d.ts",
+			"svelte": "./dist/theme.js",
+			"default": "./dist/theme.js"
 		}
 	},
 	"files": [

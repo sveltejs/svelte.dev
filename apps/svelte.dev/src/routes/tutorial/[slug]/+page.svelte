@@ -1,362 +1,420 @@
 <script>
-	import { browser } from '$app/environment';
-	import ScreenToggle from '$lib/components/ScreenToggle.svelte';
-	import Repl from '@sveltejs/repl';
-	import { theme } from '@sveltejs/site-kit/stores';
-	import { mapbox_setup, svelteUrl } from '../../../config.js';
-	import TableOfContents from './TableOfContents.svelte';
+	import { afterNavigate, beforeNavigate } from '$app/navigation';
+	import { SplitPane } from '@rich_harris/svelte-split-pane';
+	import { Icon } from '@sveltejs/site-kit/components';
+	import { reset } from './adapter.js';
+	import Editor from './Editor.svelte';
+	import ContextMenu from './filetree/ContextMenu.svelte';
+	import Filetree from './filetree/Filetree.svelte';
+	import ImageViewer from './ImageViewer.svelte';
+	import Output from './Output.svelte';
+	import ScreenToggle from './ScreenToggle.svelte';
+	import Sidebar from './Sidebar.svelte';
+	import {
+		create_directories,
+		creating,
+		files,
+		reset_files,
+		selected_file,
+		selected_name,
+		solution
+	} from './state.js';
 
 	export let data;
 
-	/** @type {import('@sveltejs/repl').default} */
-	let repl;
-	let prev;
-	let scrollable;
-	/** @type {Map<string, {
-	 * 	slug: string,
-	 * 	section: import('$lib/server/tutorial/types').TutorialSection,
-	 * 	chapter: import('$lib/server/tutorial/types').Tutorial,
-	 *  prev: { slug: string, section: import('$lib/server/tutorial/types').TutorialSection, chapter: import('$lib/server/tutorial/types').Tutorial }
-	 *  next?: { slug: string, section: import('$lib/server/tutorial/types').TutorialSection, chapter: import('$lib/server/tutorial/types').Tutorial }
-	 * }>} */
-	const lookup = new Map();
+	let path = data.exercise.path;
+	let show_editor = false;
+	let show_filetree = false;
+	let paused = false;
+	let w = 1000;
 
-	let width = browser ? window.innerWidth : 1000;
-	let offset = 0;
+	/** @type {import('$lib/tutorial').Stub[]} */
+	let previous_files = [];
 
-	data.tutorials_list.forEach((section) => {
-		section.tutorials.forEach((chapter) => {
-			const obj = {
-				slug: chapter.slug,
-				section,
-				chapter,
-				prev
-			};
+	$: mobile = w < 800; // for the things we can't do with media queries
+	$: files.set(Object.values(data.exercise.a));
+	$: solution.set(data.exercise.b);
+	$: selected_name.set(data.exercise.focus);
+	$: completed = is_completed($files, data.exercise.b);
 
-			lookup.set(chapter.slug, obj);
+	beforeNavigate(() => {
+		previous_files = $files;
+	});
 
-			if (browser) {
-				// pending https://github.com/sveltejs/svelte/issues/2135
-				if (prev) prev.next = obj;
-				prev = obj;
+	afterNavigate(async () => {
+		w = window.innerWidth;
+
+		const will_delete = previous_files.some((file) => !(file.name in data.exercise.a));
+
+		if (data.exercise.path !== path || will_delete) paused = true;
+		await reset($files);
+
+		path = data.exercise.path;
+		paused = false;
+	});
+
+	/**
+	 * @param {import('$lib/tutorial').Stub[]} files
+	 * @param {Record<string, import('$lib/tutorial').Stub> | null} solution
+	 */
+	function is_completed(files, solution) {
+		if (!solution) return true;
+
+		for (const file of files) {
+			if (file.type === 'file') {
+				const expected = solution[file.name];
+				if (expected?.type !== 'file') return false;
+				if (normalise(file.contents) !== normalise(expected.contents)) return false;
 			}
-		});
-	});
+		}
 
-	// TODO is there a non-hacky way to trigger scroll when chapter changes?
-	$: if (scrollable) data.tutorial, scrollable.scrollTo(0, 0);
+		const names = new Set(files.map((stub) => stub.name));
 
-	$: selected = lookup.get(data.slug);
-	$: improve_link = `https://github.com/sveltejs/svelte/tree/svelte-4/documentation/tutorial/${data.tutorial.dir}`;
+		for (const name in solution) {
+			if (!names.has(name)) return false;
+		}
 
-	const clone = (file) => ({
-		name: file.name.replace(/.\w+$/, ''),
-		type: file.type,
-		source: file.content
-	});
-
-	$: if (repl) {
-		completed = false;
-		repl.set({
-			files: data.tutorial.initial.map(clone)
-		});
+		return true;
 	}
 
-	$: mobile = width < 768;
-
-	function reset() {
-		repl.set({
-			files: data.tutorial.initial.map(clone)
-		});
-
-		//! BUG: Fix handleChange on REPL side, setting repl.set doesn't trigger it, and repl.update doesn't even work
-		completed = false;
+	/** @param {string} code */
+	function normalise(code) {
+		// TODO think about more sophisticated normalisation (e.g. truncate multiple newlines)
+		return code.replace(/\s+/g, ' ').trim();
 	}
 
-	function complete() {
-		repl.set({
-			files: data.tutorial.complete.map(clone)
-		});
+	/** @param {string | null} name */
+	function select_file(name) {
+		const file = name && $files.find((file) => file.name === name);
 
-		completed = true;
+		if (!file && name) {
+			// trigger file creation input. first, create any intermediate directories
+			const new_directories = create_directories(name, $files);
+
+			if (new_directories.length > 0) {
+				reset_files([...$files, ...new_directories]);
+			}
+
+			// find the parent directory
+			const parent = name.split('/').slice(0, -1).join('/');
+
+			creating.set({
+				parent,
+				type: 'file'
+			});
+
+			show_filetree = true;
+		} else {
+			show_filetree = false;
+			selected_name.set(name);
+		}
+
+		show_editor = true;
 	}
 
-	let completed = false;
+	/** @param {string} name */
+	function navigate_to_file(name) {
+		if (name === $selected_name) return;
 
-	/** @param {import('svelte').ComponentEvents<Repl>['change']} event */
-	function handle_change(event) {
-		completed = event.detail.files.every((file, i) => {
-			const expected = data.tutorial.complete[i] && clone(data.tutorial.complete[i]);
-			return (
-				expected &&
-				file.name === expected.name &&
-				file.type === expected.type &&
-				file.source.trim().replace(/\s+$/gm, '') === expected.source.trim().replace(/\s+$/gm, '')
-			);
-		});
+		select_file(name);
+
+		if (mobile) {
+			const q = new URLSearchParams({ file: $selected_name || '' });
+			history.pushState({}, '', `?${q}`);
+		}
 	}
+
+	/** @type {HTMLElement} */
+	let sidebar;
+
+	/** @type {import('./$types').Snapshot<number>} */
+	export const snapshot = {
+		capture: () => {
+			const scroll = sidebar.scrollTop;
+			sidebar.scrollTop = 0;
+			return scroll;
+		},
+		restore: (scroll) => {
+			sidebar.scrollTop = scroll;
+		}
+	};
 </script>
 
 <svelte:head>
-	<title>{selected.section.title} / {selected.chapter.title} • Svelte Tutorial</title>
+	<title>{data.exercise.chapter.title} / {data.exercise.title} • Svelte Tutorial</title>
 
-	<meta name="twitter:title" content="Svelte tutorial" />
-	<meta name="twitter:description" content="{selected.section.title} / {selected.chapter.title}" />
-	<meta name="Description" content="{selected.section.title} / {selected.chapter.title}" />
+	<meta name="twitter:title" content="{data.exercise.title} • Svelte Tutorial" />
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@sveltejs" />
+	<meta name="twitter:creator" content="@sveltejs" />
+	<meta name="twitter:image" content="https://svelte.dev/images/twitter-thumbnail.jpg" />
+	<meta property="twitter:domain" content="learn.svelte.dev" />
+	<meta property="twitter:url" content="https://learn.svelte.dev" />
+
+	<meta property="og:title" content="{data.exercise.title} • Svelte Tutorial" />
+	<meta property="og:url" content="https://learn.svelte.dev" />
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content="https://svelte.dev/images/twitter-thumbnail.jpg" />
 </svelte:head>
 
-<svelte:window bind:innerWidth={width} />
+<svelte:window
+	bind:innerWidth={w}
+	on:popstate={(e) => {
+		const q = new URLSearchParams(location.search);
+		const file = q.get('file');
 
-<div class="tutorial-outer">
-	<div class="viewport offset-{offset}">
-		<div class="tutorial-text">
-			<div class="table-of-contents">
-				<TableOfContents sections={data.tutorials_list} slug={data.slug} {selected} />
-			</div>
+		if (file) {
+			show_editor = true;
+			select_file(file || null); // empty string === null
+		} else {
+			show_editor = false;
+		}
+	}}
+/>
 
-			<div class="chapter-markup content" bind:this={scrollable}>
-				{@html data.tutorial.content}
+<ContextMenu />
 
-				<div class="controls">
-					{#if data.tutorial.complete.length}
-						<!-- TODO disable this button when the contents of the REPL
-							matches the expected end result -->
-						<button class="show" on:click={() => (completed ? reset() : complete())}>
-							{completed ? 'Reset' : 'Show me'}
-						</button>
-					{/if}
-
-					{#if selected.next}
-						<a class="next" href="/tutorial/{selected.next.slug}">Next</a>
-					{/if}
-				</div>
-
-				<div class="improve-chapter">
-					<a class="no-underline" href={improve_link}>Edit this chapter</a>
-				</div>
-			</div>
-		</div>
-
-		<div class="tutorial-repl">
-			{#if browser}
-				<Repl
-					bind:this={repl}
-					{svelteUrl}
-					orientation={mobile ? 'columns' : 'rows'}
-					fixed={mobile}
-					on:change={handle_change}
-					injectedJS={mapbox_setup}
-					relaxed
-					previewTheme={$theme.current}
+<div class="container" class:mobile>
+	<div class="top" class:offset={show_editor}>
+		<SplitPane id="main" type="horizontal" min="360px" max="50%" pos="33%">
+			<section slot="a" class="content">
+				<Sidebar
+					bind:sidebar
+					index={data.index}
+					exercise={data.exercise}
+					on:select={(e) => {
+						navigate_to_file(e.detail.file);
+					}}
 				/>
-			{/if}
-		</div>
+			</section>
+
+			<section slot="b">
+				<SplitPane type="vertical" min="100px" max="-4.1rem" pos="50%">
+					<section slot="a">
+						<SplitPane
+							id="editor"
+							type={mobile ? 'vertical' : 'horizontal'}
+							min="120px"
+							max="300px"
+							pos="200px"
+						>
+							<section class="navigator" slot="a">
+								{#if mobile}
+									<button class="file" on:click={() => (show_filetree = !show_filetree)}>
+										{$selected_file?.name.replace(
+											data.exercise.scope.prefix,
+											data.exercise.scope.name + '/'
+										) ?? 'Files'}
+									</button>
+								{:else}
+									<Filetree
+										exercise={data.exercise}
+										on:select={(e) => {
+											select_file(e.detail.name);
+										}}
+									/>
+								{/if}
+
+								<button
+									class="solve"
+									class:completed
+									disabled={!data.exercise.has_solution}
+									on:click={() => {
+										reset_files(Object.values(completed ? data.exercise.a : data.exercise.b));
+									}}
+								>
+									{#if completed && data.exercise.has_solution}
+										reset
+									{:else}
+										solve <Icon name="arrow-right" />
+									{/if}
+								</button>
+							</section>
+
+							<section class="editor-container" slot="b">
+								<Editor />
+								<ImageViewer selected={$selected_file} />
+
+								{#if mobile && show_filetree}
+									<div class="mobile-filetree">
+										<Filetree
+											mobile
+											exercise={data.exercise}
+											on:select={(e) => {
+												navigate_to_file(e.detail.name);
+											}}
+										/>
+									</div>
+								{/if}
+							</section>
+						</SplitPane>
+					</section>
+
+					<section slot="b" class="preview">
+						<Output exercise={data.exercise} {paused} />
+					</section>
+				</SplitPane>
+			</section>
+		</SplitPane>
 	</div>
 
-	{#if mobile}
-		<ScreenToggle bind:offset labels={['tutorial', 'input', 'output']} />
-	{/if}
+	<div class="screen-toggle">
+		<ScreenToggle
+			on:change={(e) => {
+				show_editor = e.detail.pressed;
+
+				const url = new URL(location.origin + location.pathname);
+
+				if (show_editor) {
+					url.searchParams.set('file', $selected_name ?? '');
+				}
+
+				history.pushState({}, '', url);
+			}}
+			pressed={show_editor}
+		/>
+	</div>
 </div>
 
 <style>
-	.tutorial-outer {
-		position: relative;
-		height: calc(100vh - var(--sk-nav-height) - var(--sk-banner-bottom-height));
-		overflow: hidden;
-		padding: 0 0 42px 0;
-		box-sizing: border-box;
-	}
-
-	.viewport {
-		display: grid;
-		width: 300%;
-		height: 100%;
-		grid-template-columns: 33.333% 66.666%;
-		transition: transform 0.3s;
-		grid-auto-rows: 100%;
-	}
-
-	.offset-1 {
-		transform: translate(-33.333%, 0);
-	}
-	.offset-2 {
-		transform: translate(-66.666%, 0);
-	}
-
-	@media (min-width: 768px) {
-		.tutorial-outer {
-			padding: 0;
-		}
-
-		.viewport {
-			width: 100%;
-			height: 100%;
-			display: grid;
-			/* TODO */
-			grid-template-columns: minmax(33.333%, 48rem) auto;
-			grid-auto-rows: 100%;
-			transition: none;
-		}
-
-		.offset-1,
-		.offset-2 {
-			transform: none;
-		}
-	}
-
-	.tutorial-text {
+	.container {
 		display: flex;
 		flex-direction: column;
-		height: 100%;
-		border-right: 1px solid var(--sk-back-4);
-		background-color: var(--sk-back-3);
-		color: var(--sk-text-2);
+		height: calc(100dvh - var(--sk-nav-height));
+		/** necessary for innerWidth to be correct, so we can determine `mobile` */
+		width: 100vw;
+		overflow: hidden;
 	}
 
-	.chapter-markup {
-		padding: 3.2rem 4rem;
-		overflow: auto;
-		flex: 1;
+	.top {
+		width: 200vw;
+		margin-left: -100vw;
 		height: 0;
+		flex: 1;
+		transition: transform 0.2s;
+		/* we transform the default state, rather than the editor state, because otherwise
+		   the positioning of tooltips is wrong (doesn't take into account transforms) */
+		transform: translate(50%, 0);
 	}
 
-	.chapter-markup :global(h2) {
-		margin: 4rem 0 1.6rem 0;
-		font-size: var(--sk-text-m);
-		line-height: 1;
-		font-weight: 400;
-		color: var(--sk-text-2);
+	.top.offset {
+		transform: none;
 	}
 
-	.chapter-markup :global(h2:first-child) {
-		margin-top: 0.4rem;
+	.screen-toggle {
+		height: 4.6rem;
 	}
 
-	.chapter-markup :global(a) {
-		transition: color 0.2s;
-		text-decoration: underline;
-		color: var(--sk-text-2);
-	}
-
-	.chapter-markup :global(a:hover) {
-		color: var(--sk-text-1);
-	}
-
-	.chapter-markup :global(ul) {
-		padding: 0 0 0 2em;
-	}
-
-	.chapter-markup :global(blockquote) {
-		background-color: rgba(0, 0, 0, 0.17);
-		color: var(--sk-text-2);
-	}
-
-	.chapter-markup::-webkit-scrollbar {
-		background-color: var(--sk-theme-2);
-		width: 8px;
-	}
-
-	.chapter-markup::-webkit-scrollbar-thumb {
-		background-color: var(--sk-scrollbar);
-		border-radius: 1em;
-	}
-
-	.chapter-markup :global(p) > :global(code),
-	.chapter-markup :global(ul) :global(code) {
-		color: var(--sk-code-base);
-		background: var(--sk-code-bg);
-		padding: 0.2em 0.4em 0.3em;
-		white-space: nowrap;
-		position: relative;
-		top: -0.1em;
-	}
-
-	.chapter-markup :global(code) {
-		/* padding: 0.4rem; */
-		margin: 0 0.2rem;
-		top: -0.1rem;
-		background: var(--sk-back-4);
-	}
-
-	.chapter-markup :global(pre) :global(code) {
-		padding: 0;
-		margin: 0;
-		top: 0;
-		background: transparent;
-	}
-
-	.chapter-markup :global(pre) {
-		margin: 0 0 2rem 0;
-		width: 100%;
-		max-width: var(--sk-line-max-width);
-		padding: 1rem 1rem;
-		box-shadow: inset 1px 1px 6px hsla(205.7, 63.6%, 30.8%, 0.06);
-		border-radius: 0.5rem;
-		--shiki-color-background: var(--sk-back-1);
-	}
-
-	.controls {
-		border-top: 1px solid rgba(255, 255, 255, 0.15);
-		padding: 1em 0 0 0;
+	.content {
 		display: flex;
-		align-items: center;
-	}
-
-	.show {
-		background: var(--sk-theme-1);
-		padding: 0.3em 0.7em;
-		border-radius: var(--sk-border-radius);
-		top: 0.1em;
+		flex-direction: column;
 		position: relative;
-		font-size: var(--sk-text-s);
-		font-weight: 300;
-		color: rgba(255, 255, 255, 0.7);
+		min-height: 100%;
+		height: 100%;
+		background: var(--sk-back-3);
+		--menu-width: 5rem;
 	}
 
-	.show:hover {
+	.navigator {
+		position: relative;
+		background: var(--sk-back-2);
+		display: flex;
+		flex-direction: column;
+	}
+
+	.navigator .solve {
+		position: relative;
+		background: var(--sk-theme-2);
+		padding: 0.5rem;
+		width: 100%;
+		height: 4rem;
+		border-right: 1px solid var(--sk-back-4);
 		color: white;
+		opacity: 1;
 	}
 
-	a.next {
-		padding-right: 1.2em;
-		/* TODO */
-		/* background: no-repeat 100% 50% url(@sveltejs/site-kit/icons/arrow-right.svg); */
-		background-size: 1em 1em;
-		margin-left: auto;
+	.navigator .solve:disabled {
+		opacity: 0.5;
 	}
 
-	.improve-chapter {
-		padding: 1em 0 0.5em 0;
+	.navigator .solve:not(:disabled) {
+		background: var(--sk-theme-1);
 	}
 
-	.improve-chapter a {
-		color: var(--sk-text-2);
-		font-size: 14px;
-		text-decoration: none;
-		opacity: 0.6;
-		padding: 0 0.1em 0 1.2em;
+	.navigator .solve.completed {
+		background: var(--sk-theme-2);
 	}
 
-	.improve-chapter a::before {
-		content: '';
+	.preview {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.editor-container {
+		position: relative;
+		background-color: var(--sk-back-3);
+	}
+
+	.mobile .navigator {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		padding: 1rem;
+		gap: 1rem;
+	}
+
+	.mobile .navigator .file {
+		flex: 1;
+		text-align: left;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+
+		/* put ellipsis at start */
+		direction: rtl;
+		text-align: left;
+	}
+
+	.mobile .navigator .solve {
+		width: 9rem;
+		height: auto;
+		padding: 0.2rem;
+		border-radius: 4rem;
+		border: none;
+	}
+
+	.mobile-filetree {
 		position: absolute;
 		top: 0;
-		left: 0;
-
+		width: 100%;
 		height: 100%;
-		width: 1em;
-
-		background: no-repeat 0 50% url(/icons/edit.svg);
-		background-size: 1em 1em;
+		overflow-y: auto;
 	}
 
-	@media (prefers-color-scheme: light) {
-		.improve-chapter a::before {
-			filter: invert(1);
+	/* on mobile, override the <SplitPane> controls */
+	@media (max-width: 799px) {
+		:global([data-pane='main']) {
+			--pos: 50% !important;
+		}
+
+		:global([data-pane='editor']) {
+			--pos: 5.4rem !important;
+		}
+
+		:global([data-pane]) :global(.divider) {
+			cursor: default;
 		}
 	}
 
-	.improve-chapter a:hover {
-		opacity: 1;
+	@media (min-width: 800px) {
+		.top {
+			width: 100vw;
+			margin: 0;
+			transform: none;
+		}
+
+		.screen-toggle {
+			display: none;
+		}
 	}
 </style>

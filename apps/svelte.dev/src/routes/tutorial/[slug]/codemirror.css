@@ -1,0 +1,134 @@
+.codemirror-wrapper {
+	height: 100%;
+}
+
+.cm-editor {
+	height: 100%;
+}
+
+.cm-editor .cm-scroller {
+	font-family: var(--font-mono);
+	font-size: 1.3rem;
+	line-height: 2rem;
+}
+
+.cm-editor .cm-gutters {
+	background: var(--sk-back-3);
+	border-right: none;
+	padding: 0;
+	width: 5rem;
+}
+
+.cm-editor .cm-activeLine {
+	background: var(--sk-back-translucent);
+}
+
+.cm-editor .cm-activeLineGutter {
+	background-color: var(--sk-back-3);
+}
+
+.cm-editor .cm-lineNumbers {
+	flex: 1;
+	color: #237893;
+}
+
+.cm-editor .cm-foldGutter {
+	width: 1rem;
+}
+
+.cm-focused .cm-cursor {
+	border-left-color: var(--sk-text-3);
+}
+
+.cm-editor .cm-content {
+	padding: 1rem 0;
+}
+
+.cm-editor .cm-line {
+	padding: 0 1rem;
+}
+
+.cm-editor .cm-selectionBackground {
+	border-radius: 2px;
+}
+
+.cm-editor .cm-selectionMatch {
+	background: var(--selection-color);
+	color: var(--sk-text-2);
+}
+
+.cm-editor.cm-focused .cm-selectionBackground,
+.cm-editor .cm-selectionBackground,
+.cm-editor .cm-content ::selection {
+	background: var(--sk-theme-3);
+	opacity: .3;
+}
+
+.cm-editor .cm-tooltip {
+	background: var(--sk-back-2);
+	color: var(--sk-text-1);
+	border: none;
+	border-radius: 2px;
+	overflow: hidden;
+	margin: 0.4rem 0;
+	filter: drop-shadow(1px 2px 5px rgba(0,0,0,0.1));
+}
+
+.cm-editor .cm-tooltip-hover {
+	border: none;
+}
+
+.cm-editor .cm-tooltip-below {}
+.cm-editor .cm-tooltip-lint {}
+.cm-editor .cm-tooltip-section {}
+.cm-editor .cm-diagnostic {
+	border: none;
+	padding: 0.2rem 0.8rem;
+}
+
+.cm-editor .cm-diagnostic-warning {
+	background: var(--sk-theme-1-variant);
+	color: white;
+}
+
+.cm-editor .cm-diagnosticText {}
+
+.cm-editor .cm-tooltip.cm-tooltip-autocomplete > ul {
+	font-family: var(--font-mono);
+	font-size: 1.3rem;
+}
+
+.cm-editor .cm-panels {
+	background: var(--sk-back-4);
+	color: var(--sk-text-1);
+}
+
+.cm-editor .cm-panels.cm-panels-top,
+.cm-editor .cm-panels.cm-panels-bottom {
+	border-top: 1px solid var(--sk-back-5);
+	border-bottom: 1px solid var(--sk-back-5);
+}
+
+.cm-editor .cm-button {
+	background: var(--sk-back-5);
+	border: 2px solid transparent;
+}
+
+.cm-editor .cm-button:active {
+	background: var(--sk-theme-2-variant);
+}
+
+.cm-editor .cm-textfield {
+	background: var(--sk-back-1);
+	color: var(--sk-text-1);
+	border: 2px solid transparent;
+}
+
+.cm-editor .cm-search button:focus-visible,
+.cm-editor .cm-search input:focus-visible {
+	border: 2px solid var(--flash);
+}
+
+.cm-editor .cm-search input[type='checkbox']:focus-visible {
+	outline: 2px solid var(--flash);
+}
