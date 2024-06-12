@@ -28,7 +28,7 @@
 		theme.set({ preference: $theme.preference, current: e.matches ? 'dark' : 'light' });
 
 	/** @type {MediaQueryList | undefined} */
-	let query = $state();
+	let query;
 
 	$effect(() => {
 		query?.removeEventListener('change', cb);
