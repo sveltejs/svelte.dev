@@ -62,7 +62,9 @@ Renders a search widget which when clicked (or the corresponding keyboard shortc
 		width: 100%;
 		height: 4.2rem;
 		border-radius: 3.5rem;
-		background: no-repeat 1rem 50% / 1em 1em url(../icons/search.svg), var(--sk-back-3);
+		background:
+			no-repeat 1rem 50% / 1em 1em url(../icons/search.svg),
+			var(--sk-back-3);
 		color: var(--sk-text-3);
 	}
 

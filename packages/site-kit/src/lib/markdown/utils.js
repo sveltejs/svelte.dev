@@ -84,10 +84,7 @@ export function removeHTMLEntities(html) {
 
 /** @param {string} str */
 export const normalizeSlugify = (str) => {
-	return slugify(removeHTMLEntities(removeMarkdown(str))).replace(
-		/(<([^>]+)>)/gi,
-		''
-	);
+	return slugify(removeHTMLEntities(removeMarkdown(str))).replace(/(<([^>]+)>)/gi, '');
 };
 
 /** @type {Partial<import('marked').Renderer>} */
@@ -98,11 +95,7 @@ const default_renderer = {
 		code = code.replace(/\n$/, '') + '\n';
 
 		if (!lang) {
-			return (
-				'<pre><code>' +
-				(escaped ? code : escape(code, true)) +
-				'</code></pre>\n'
-			);
+			return '<pre><code>' + (escaped ? code : escape(code, true)) + '</code></pre>\n';
 		}
 
 		return (
@@ -141,13 +134,7 @@ const default_renderer = {
 	},
 
 	checkbox(checked) {
-		return (
-			'<input ' +
-			(checked ? 'checked="" ' : '') +
-			'disabled="" type="checkbox"' +
-			'' +
-			'> '
-		);
+		return '<input ' + (checked ? 'checked="" ' : '') + 'disabled="" type="checkbox"' + '' + '> ';
 	},
 
 	paragraph(text) {
@@ -157,9 +144,7 @@ const default_renderer = {
 	table(header, body) {
 		if (body) body = '<tbody>' + body + '</tbody>';
 
-		return (
-			'<table>\n' + '<thead>\n' + header + '</thead>\n' + body + '</table>\n'
-		);
+		return '<table>\n' + '<thead>\n' + header + '</thead>\n' + body + '</table>\n';
 	},
 
 	tablerow(content) {
@@ -168,9 +153,7 @@ const default_renderer = {
 
 	tablecell(content, flags) {
 		const type = flags.header ? 'th' : 'td';
-		const tag = flags.align
-			? '<' + type + ' align="' + flags.align + '">'
-			: '<' + type + '>';
+		const tag = flags.align ? '<' + type + ' align="' + flags.align + '">' : '<' + type + '>';
 		return tag + content + '</' + type + '>\n';
 	},
 

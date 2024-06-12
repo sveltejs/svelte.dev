@@ -95,7 +95,7 @@
 					? `opacity: ${t}`
 					: `transform: translate3d(0, ${height * u}px, 0) scale3d(${0.9 + 0.1 * t}, ${
 							0.9 + 0.1 * t
-					  }, 1)`,
+						}, 1)`,
 			easing,
 			duration
 		};
