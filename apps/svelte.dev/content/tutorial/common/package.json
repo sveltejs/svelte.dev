@@ -9,7 +9,7 @@
 	"devDependencies": {
 		"@sveltejs/kit": "^2",
 		"esbuild-wasm": "^0.21.5",
-		"svelte": "next",
+		"svelte": "^5.0.0-next.154",
 		"vite": "^5"
 	},
 	"type": "module"

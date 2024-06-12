@@ -29,10 +29,7 @@ if (
 		'node_modules/rollup/dist/shared'
 	];
 
-	const ignored_files = new Set([
-		'node_modules/svelte/compiler.cjs',
-		'node_modules/svelte/compiler/index.js'
-	]);
+	const ignored_files = new Set(['node_modules/svelte/compiler/index.js']);
 
 	for (const file of glob('**', { cwd, filesOnly: true, dot: true }).map((file) =>
 		file.replaceAll('\\', '/')
