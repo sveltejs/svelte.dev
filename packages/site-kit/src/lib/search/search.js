@@ -6,7 +6,7 @@ const Index = /** @type {import('flexsearch').Index} */ (flexsearch.Index) ?? fl
 /** If the search is already initialized */
 export let inited = false;
 
-/** @type {import('flexsearch').Index<any>[]} */
+/** @type {import('flexsearch').Index[]} */
 let indexes;
 
 /** @type {Map<string, import('./types').Block>} */
@@ -25,6 +25,7 @@ export function init(blocks) {
 	// we have multiple indexes, so we can rank sections (migration guide comes last)
 	const max_rank = Math.max(...blocks.map((block) => block.rank ?? 0));
 
+	// @ts-expect-error
 	indexes = Array.from({ length: max_rank + 1 }, () => new Index({ tokenize: 'forward' }));
 
 	for (const block of blocks) {
@@ -57,6 +58,7 @@ export function search(query) {
 
 	const blocks = indexes
 		.flatMap((index) => index.search(query))
+		// @ts-expect-error flexsearch types are wrong i think?
 		.map(lookup)
 		.map((block, rank) => ({ block: /** @type{import('./types').Block} */ (block), rank }))
 		.sort((a, b) => {

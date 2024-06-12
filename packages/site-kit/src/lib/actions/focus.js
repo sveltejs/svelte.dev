@@ -1,19 +1,21 @@
 /** @param {HTMLElement} node */
 export function focusable_children(node) {
-	const nodes = Array.from(
-		node.querySelectorAll(
-			'a[href], button, input, textarea, select, details, [tabindex]:not([tabindex="-1"])'
+	const nodes = /** @type {HTMLElement[]} */ (
+		Array.from(
+			node.querySelectorAll(
+				'a[href], button, input, textarea, select, details, [tabindex]:not([tabindex="-1"])'
+			)
 		)
 	);
 
-	const index = nodes.indexOf(document.activeElement);
+	const index = nodes.indexOf(/** @type {HTMLElement} */ (document.activeElement));
 
+	/** @param {number} d */
 	const update = (d) => {
 		let i = index + d;
 		i += nodes.length;
 		i %= nodes.length;
 
-		// @ts-expect-error
 		nodes[i].focus();
 	};
 
@@ -51,6 +53,7 @@ export function focusable_children(node) {
 export function trap(node, { reset_focus = true } = {}) {
 	const previous = /** @type HTMLElement} */ (document.activeElement);
 
+	/** @param {KeyboardEvent} e */
 	const handle_keydown = (e) => {
 		if (e.key === 'Tab') {
 			e.preventDefault();

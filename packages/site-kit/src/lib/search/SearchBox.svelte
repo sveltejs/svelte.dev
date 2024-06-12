@@ -137,7 +137,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 		on:keydown={(/** @type {KeyboardEvent} */ e) => {
 			if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
 				e.preventDefault();
-				const group = focusable_children(e.currentTarget);
+				const group = focusable_children(/** @type {HTMLElement} */ (e.currentTarget));
 
 				// when using arrow keys (as opposed to tab), don't focus buttons
 				const selector = 'a, input';
@@ -189,9 +189,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 							on:select={(e) => {
 								navigate(e.detail.href);
 							}}
-						>
-							<slot name="no-results" slot="no-results">No results</slot>
-						</SearchResults>
+						/>
 					</div>
 				{:else}
 					<h2 class="info" class:empty={recent_searches.length === 0}>
