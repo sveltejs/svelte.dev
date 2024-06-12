@@ -1,4 +1,5 @@
 /.svelte-kit
+/.vercel
 /package
 /src/lib/generated
 /src/routes/_components/Supporters/contributors.js
