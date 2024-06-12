@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { browser } from '$app/environment';
 	import { afterNavigate, goto, replaceState } from '$app/navigation';
 	import Repl from '@sveltejs/repl';
@@ -7,32 +7,31 @@
 	import { mapbox_setup } from '../../../../config.js';
 	import AppControls from './AppControls.svelte';
 
-	export let data;
+	let { data } = $props();
 
-	let version = data.version;
+	let version = $state(data.version);
 
-	/** @type {import('@sveltejs/repl').default} */
-	let repl;
-	let name = data.gist.name;
-	let zen_mode = false;
-	let modified_count = 0;
+	let repl: Repl;
+	let name = $state(data.gist.name);
+	let zen_mode = $state(false);
+	let modified_count = $state(0);
 
-	function update_query_string(version) {
+	$effect(() => {
 		const params = [];
 
-		if (version !== 'latest') params.push(`version=${version}`);
+		if (version !== 'latest') {
+			params.push(`version=${version}`);
+		}
 
 		const url =
 			params.length > 0 ? `/repl/${data.gist.id}?${params.join('&')}` : `/repl/${data.gist.id}`;
 
 		history.replaceState({}, 'x', url);
-	}
-
-	$: if (typeof history !== 'undefined') update_query_string(version);
+	});
 
 	onMount(() => {
 		if (data.version !== 'local') {
-			fetch(`https://unpkg.com/svelte@${data.version || '4'}/package.json`)
+			fetch(`https://unpkg.com/svelte@${data.version || 'next'}/package.json`)
 				.then((r) => r.json())
 				.then((pkg) => {
 					version = pkg.version;
@@ -42,27 +41,27 @@
 
 	afterNavigate(() => {
 		repl?.set({
-			files: data.gist.components
+			// TODO move the snapshotting elsewhere (but also... this shouldn't really be necessary?)
+			files: $state.snapshot(data.gist.components)
 		});
 	});
 
-	function handle_fork(event) {
+	function handle_fork(event: CustomEvent) {
 		console.log('> handle_fork', event);
 		goto(`/repl/${event.detail.gist.id}?version=${version}`);
 	}
 
-	function handle_change(event) {
+	function handle_change(event: CustomEvent) {
 		modified_count = event.detail.files.filter((c) => c.modified).length;
 	}
 
-	$: svelteUrl =
+	const svelteUrl = $derived(
 		browser && version === 'local'
 			? `${location.origin}/repl/local`
-			: `https://unpkg.com/svelte@${version}`;
+			: `https://unpkg.com/svelte@${version}`
+	);
 
-	$: relaxed = data.gist.relaxed || (data.user && data.user.id === data.gist.owner);
-
-	$: vim = data.vim;
+	const relaxed = $derived(data.gist.relaxed || (data.user && data.user.id === data.gist.owner));
 </script>
 
 <svelte:head>
@@ -89,7 +88,7 @@
 			bind:this={repl}
 			{svelteUrl}
 			{relaxed}
-			{vim}
+			vim={data.vim}
 			injectedJS={mapbox_setup}
 			showModified
 			showAst

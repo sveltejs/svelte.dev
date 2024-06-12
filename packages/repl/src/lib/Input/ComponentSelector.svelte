@@ -210,7 +210,7 @@
 </script>
 
 <div class="component-selector">
-	<!-- svelte-ignore a11y-no-static-element-interactions -->
+	<!-- svelte-ignore a11y_no_static_element_interactions -->
 	<div class="file-tabs" on:dblclick={add_new}>
 		{#each $files as file, index (file.name)}
 			{@const filename = get_full_filename(file)}
@@ -231,7 +231,7 @@
 				on:dragleave={dragLeave}
 				on:drop|preventDefault={dragEnd}
 			>
-				<i class="drag-handle" />
+				<i class="drag-handle"></i>
 				{#if file.name === 'App' && filename !== editing_name}
 					<div class="uneditable">
 						App.svelte{#if show_modified && file.modified}*{/if}
@@ -244,7 +244,7 @@
 							{input_value + (/\./.test(input_value) ? '' : `.${editing_file.type}`)}
 						</span>
 
-						<!-- svelte-ignore a11y-autofocus -->
+						<!-- svelte-ignore a11y_autofocus -->
 						<input
 							autofocus
 							spellcheck={false}
@@ -263,7 +263,6 @@
 						/>
 					{/if}
 				{:else}
-					<!-- svelte-ignore a11y-no-static-element-interactions -->
 					<div
 						class="editable"
 						title="edit component name"
@@ -273,7 +272,6 @@
 						{file.name}.{file.type}{#if show_modified && file.modified}*{/if}
 					</div>
 
-					<!-- svelte-ignore a11y-no-static-element-interactions -->
 					<span
 						class="remove"
 						on:click={() => remove(filename)}

@@ -12,9 +12,6 @@ import replace from './plugins/replace.js';
 import loop_protect from './plugins/loop-protect.js';
 
 /** @type {string} */
-var pkg_name;
-
-/** @type {string} */
 let packages_url;
 
 /** @type {string} */
@@ -185,7 +182,7 @@ async function resolve_from_pkg(pkg, subpath, uid, pkg_url_base) {
 
 			return resolved;
 		} catch {
-			throw `no matched export path was found in "${pkg_name}/package.json"`;
+			throw `no matched export path was found in "${pkg.name}/package.json"`;
 		}
 	}
 
@@ -217,7 +214,7 @@ async function resolve_from_pkg(pkg, subpath, uid, pkg_url_base) {
 				}
 			}
 
-			throw `could not find entry point in "${pkg_name}/package.json"`;
+			throw `could not find entry point in "${pkg.name}/package.json"`;
 		}
 
 		return resolved_id;
@@ -327,8 +324,9 @@ async function get_bundle(uid, mode, cache, local_files_lookup) {
 
 				const fetch_package_info = async () => {
 					try {
+						const version = pkg_name === 'svelte' ? svelte.VERSION : 'latest';
 						const pkg_url = await follow_redirects(
-							`${pkg_name === 'svelte' ? '' : packages_url}/${pkg_name}/package.json`,
+							`${packages_url}/${pkg_name}@${version}/package.json`,
 							uid
 						);
 

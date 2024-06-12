@@ -18,6 +18,7 @@
 		<label for="server"><span class="string">"server"</span>,</label>
 	</div>
 
+	<!-- svelte-ignore a11y_label_has_associated_control (TODO this warning should probably be disabled if there's a component)-->
 	<label class="option">
 		<span class="key">dev:</span>
 		<Checkbox bind:checked={$compile_options.dev} />

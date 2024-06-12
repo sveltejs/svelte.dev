@@ -29,7 +29,7 @@
 					<img src="/whos-using-svelte/{filename}" {alt} {width} {height} loading="lazy" />
 				</a>
 
-				<span class="spacer" />
+				<span class="spacer"></span>
 			{/each}
 		</div>
 	</section>
