@@ -1,24 +1,27 @@
 <script>
 	import Section from '../components/Section.svelte';
+
+	/** @type {{one?: import('svelte').Snippet, two?: import('svelte').Snippet, three?: import('svelte').Snippet}} */
+	let { one, two, three } = $props();
 </script>
 
 <Section --background="var(--sk-back-1)">
 	<div class="grid">
-		{#if $$slots.one}
+		{#if one}
 			<div>
-				<slot name="one" />
+				{@render one()}
 			</div>
 		{/if}
 
-		{#if $$slots.two}
+		{#if two}
 			<div>
-				<slot name="two" />
+				{@render two()}
 			</div>
 		{/if}
 
-		{#if $$slots.three}
+		{#if three}
 			<div>
-				<slot name="three" />
+				{@render three()}
 			</div>
 		{/if}
 	</div>

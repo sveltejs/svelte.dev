@@ -2,13 +2,10 @@
 	import { page } from '$app/stores';
 	import { onMount } from 'svelte';
 
-	/**
-	 * @type {import('../types').NavigationLink['sections']}
-	 */
-	export let contents = [];
+	/** @type {{contents?: import('../types').NavigationLink['sections']}} */
+	let { contents = [] } = $props();
 
-	/** @type {HTMLElement} */
-	let nav;
+	let nav = /** @type {HTMLElement} */ ($state());
 
 	onMount(() => {
 		scrollToActive();

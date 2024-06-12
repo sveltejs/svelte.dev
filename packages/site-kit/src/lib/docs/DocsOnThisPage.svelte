@@ -12,23 +12,18 @@
 		reduced_motion,
 		theme
 	} from '$lib/stores';
-	import { afterUpdate, createEventDispatcher, onMount, tick } from 'svelte';
+	import { createEventDispatcher, onMount, tick } from 'svelte';
 	import { expoOut } from 'svelte/easing';
 	import { readable } from 'svelte/store';
 	import { slide } from 'svelte/transition';
 
-	/** @type {import('./types').Page} */
-	export let details;
-
-	/** @type {'auto' | 'inline' | 'aside'} */
-	export let orientation = 'auto';
+	/** @type {{details: import('./types').Page, orientation?: 'auto' | 'inline' | 'aside', children?: import('svelte').Snippet}} */
+	let { details, orientation = 'auto', children } = $props();
 
 	const dispatch = createEventDispatcher();
 
-	/** @type {string} */
-	let hash = '';
+	let hash = $state('');
 
-	/** @type {number} */
 	let height = 0;
 
 	/** @type {HTMLElement} */
@@ -40,8 +35,8 @@
 	/** @type {number[]} */
 	let positions = [];
 
-	/** @type {HTMLElement} */
-	let containerEl;
+	/** @type {HTMLElement | undefined} */
+	let containerEl = $state();
 
 	let show_contents = false;
 
@@ -50,20 +45,23 @@
 		OPEN: 101
 	};
 
-	let mobile_z_index = Z_INDICES.BASE;
+	let mobile_z_index = $state(Z_INDICES.BASE);
 
-	$: is_mobile =
-		orientation === 'auto' ? mql('(max-width: 1200px)') : readable(orientation === 'inline');
+	let is_mobile = $derived(
+		orientation === 'auto' ? mql('(max-width: 1200px)') : readable(orientation === 'inline')
+	);
 
-	$: pathname = $page.url.pathname;
+	let pathname = $derived($page.url.pathname);
 
-	$: {
+	$effect(() => {
 		pathname;
 
 		emulate_autoscroll();
-	}
+	});
 
-	$: $overlay_open = $on_this_page_open;
+	$effect.pre(() => {
+		$overlay_open = $on_this_page_open;
+	});
 
 	onMount(async () => {
 		await document.fonts.ready;
@@ -71,14 +69,16 @@
 		highlight();
 	});
 
-	afterUpdate(() => {
+	$effect(() => {
+		containerEl;
+		hash;
 		// bit of a hack — prevent sidebar scrolling if
 		// TOC is open on mobile, or scroll came from within sidebar
 		if ((show_contents && window.innerWidth < 832) || !content) return;
 
 		const active = containerEl?.querySelector('.active');
 
-		if (active) {
+		if (containerEl && active) {
 			const { top, bottom } = active.getBoundingClientRect();
 			const min = 100;
 			const max = window.innerHeight - 100;
@@ -173,8 +173,8 @@
 
 <svelte:window
 	use:root_scroll={highlight}
-	on:resize={update}
-	on:hashchange={() => select($page.url)}
+	onresize={update}
+	onhashchange={() => select($page.url)}
 />
 
 {#if !$is_mobile || ($is_mobile && details.sections.length > 0)}
@@ -191,37 +191,41 @@
 			<button
 				class="heading"
 				aria-expanded={$on_this_page_open}
-				on:click={() => ($on_this_page_open = !$on_this_page_open)}
+				onclick={() => ($on_this_page_open = !$on_this_page_open)}
 			>
-				<span class="h2"><slot>On this page</slot></span>
+				<span class="h2"
+					>{#if children}{@render children()}{:else}On this page{/if}</span
+				>
 
 				<span class="expand-icon" class:inverted={$on_this_page_open}>
 					<Icon name="chevron-down" />
 				</span>
 			</button>
-			<span class="h2 desktop-only-heading"><slot>On this page</slot></span>
+			<span class="h2 desktop-only-heading"
+				>{#if children}{@render children()}{:else}On this page{/if}</span
+			>
 		</h2>
 
 		{#if (browser && !$is_mobile) || ($is_mobile && $on_this_page_open)}
 			<nav
 				aria-label="On this page"
 				transition:slide={{ axis: 'y', easing: expoOut, duration: $reduced_motion ? 0 : 400 }}
-				on:introstart={() => $on_this_page_open && (mobile_z_index = Z_INDICES.OPEN)}
-				on:outrostart={async () => {
+				onintrostart={() => $on_this_page_open && (mobile_z_index = Z_INDICES.OPEN)}
+				onoutrostart={async () => {
 					await tick();
 
 					if (!$on_this_page_open && $nav_open) {
 						mobile_z_index = Z_INDICES.BASE;
 					}
 				}}
-				on:outroend={() => !$on_this_page_open && (mobile_z_index = Z_INDICES.BASE)}
+				onoutroend={() => !$on_this_page_open && (mobile_z_index = Z_INDICES.BASE)}
 			>
 				<ul>
 					<li>
 						<a
 							href={details.path}
 							aria-current={hash === '' ? 'page' : false}
-							on:click={on_link_click}>{details.title}</a
+							onclick={on_link_click}>{details.title}</a
 						>
 					</li>
 					{#each details.sections as { title, slug }}
@@ -229,7 +233,7 @@
 							<a
 								href={`#${slug}`}
 								aria-current={`#${slug}` === hash ? 'page' : false}
-								on:click={on_link_click}
+								onclick={on_link_click}
 							>
 								{title}
 							</a>

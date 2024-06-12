@@ -5,21 +5,29 @@ It appears when the user clicks on the `Search` component or presses the corresp
 <script lang="ts">
 	import { afterNavigate } from '$app/navigation';
 	import { overlay_open, search_query, search_recent, searching } from '$lib/stores';
-	import { onMount, tick } from 'svelte';
+	import { onMount, type Snippet } from 'svelte';
 	import { focusable_children, trap } from '../actions/focus.js';
 	import Icon from '../components/Icon.svelte';
 	import SearchResults from './SearchResults.svelte';
 	import SearchWorker from './search-worker.js?worker';
 
-	export let placeholder = 'Search';
+	interface Props {
+		placeholder?: string;
+		idle?: Snippet<[number]>;
+		search_description?: Snippet;
+		no_results?: Snippet;
+	}
+
+	let { placeholder = 'Search', idle, search_description, no_results }: Props = $props();
 
 	let modal: HTMLElement;
 
-	let search: TODO = null;
-	let recent_searches: TODO[] = [];
+	// TODO proper types
+	let search: any = $state(null);
+	let recent_searches: any[] = $state([]);
 
 	let worker: Worker;
-	let ready = false;
+	let ready = $state(false);
 
 	let uid = 1;
 	const pending = new Set();
@@ -77,34 +85,40 @@ It appears when the user clicks on the `Search` component or presses the corresp
 		close();
 	}
 
-	$: if (ready) {
-		const id = uid++;
-		pending.add(id);
+	$effect(() => {
+		if (ready) {
+			const id = uid++;
+			pending.add(id);
 
-		worker.postMessage({ type: 'query', id, payload: $search_query });
-	}
+			worker.postMessage({ type: 'query', id, payload: $search_query });
+		}
+	});
 
-	$: if (ready) {
-		worker.postMessage({ type: 'recents', payload: $search_recent });
-	}
+	$effect(() => {
+		if (ready) {
+			worker.postMessage({ type: 'recents', payload: $search_recent });
+		}
+	});
 
-	$: {
-		tick().then(() => ($overlay_open = $searching));
-	}
+	$effect(() => {
+		$overlay_open = $searching;
+	});
 
-	$: if ($searching) {
-		document.body.style.top = `-${window.scrollY}px`;
-		document.body.style.position = 'fixed';
+	$effect(() => {
+		if ($searching) {
+			document.body.style.top = `-${window.scrollY}px`;
+			document.body.style.position = 'fixed';
 
-		$overlay_open = true;
-		resetSearchQuery();
-	}
+			$overlay_open = true;
+			resetSearchQuery();
+		}
+	});
 
 	const resetSearchQuery = () => ($search_query = '');
 </script>
 
 <svelte:window
-	on:keydown={(e) => {
+	onkeydown={(e) => {
 		if (e.key === 'k' && (navigator.platform === 'MacIntel' ? e.metaKey : e.ctrlKey)) {
 			e.preventDefault();
 			$search_query = '';
@@ -123,13 +137,13 @@ It appears when the user clicks on the `Search` component or presses the corresp
 />
 
 {#if $searching && ready}
-	<div class="pseudo-overlay" aria-hidden="true" on:click={close}></div>
+	<div class="pseudo-overlay" aria-hidden="true" onclick={close}></div>
 
 	<!-- svelte-ignore a11y_no_static_element_interactions -->
 	<div
 		bind:this={modal}
 		class="modal"
-		on:keydown={(/** @type {KeyboardEvent} */ e) => {
+		onkeydown={(e) => {
 			if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
 				e.preventDefault();
 				const group = focusable_children(e.currentTarget);
@@ -150,13 +164,13 @@ It appears when the user clicks on the `Search` component or presses the corresp
 			<!-- svelte-ignore a11y_autofocus -->
 			<input
 				autofocus
-				on:keydown={(e) => {
+				onkeydown={(e) => {
 					if (e.key === 'Enter' && !e.isComposing) {
 						const element = modal.querySelector('a[data-has-node]') as HTMLElement | undefined;
 						element?.click();
 					}
 				}}
-				on:input={(e) => {
+				oninput={(e) => {
 					$search_query = e.currentTarget.value;
 				}}
 				value={$search_query}
@@ -166,12 +180,16 @@ It appears when the user clicks on the `Search` component or presses the corresp
 				spellcheck="false"
 			/>
 
-			<button aria-label="Close" on:click={close}>
+			<button aria-label="Close" onclick={close}>
 				<Icon name="close" />
 			</button>
 
 			<span id="search-description" class="visually-hidden">
-				<slot name="search-description">Results will update as you type</slot>
+				{#if search_description}
+					{@render search_description()}
+				{:else}
+					Results will update as you type
+				{/if}
 			</span>
 
 			<div class="results">
@@ -180,30 +198,32 @@ It appears when the user clicks on the `Search` component or presses the corresp
 						<SearchResults
 							results={search.results}
 							query={search.query}
-							on:select={(e) => {
-								navigate(e.detail.href);
+							onselect={(href) => {
+								navigate(href);
 							}}
 						/>
 					</div>
 				{:else}
 					<h2 class="info" class:empty={recent_searches.length === 0}>
-						<slot name="idle" has_recent_searches={recent_searches.length}>
+						{#if idle}
+							{@render idle(recent_searches.length)}
+						{:else}
 							{recent_searches.length ? 'Recent searches' : 'No recent searches'}
-						</slot>
+						{/if}
 					</h2>
 					{#if recent_searches.length}
 						<div class="results-container">
 							<ul>
 								{#each recent_searches as search}
 									<li class="recent">
-										<a on:click={() => navigate(search.href)} href={search.href}>
+										<a onclick={() => navigate(search.href)} href={search.href}>
 											<small>{search.breadcrumbs.join('/')}</small>
 											<strong>{search.breadcrumbs.at(-1)}</strong>
 										</a>
 
 										<button
 											aria-label="Delete"
-											on:click={(e) => {
+											onclick={(e) => {
 												$search_recent = $search_recent.filter((href) => href !== search.href);
 												e.stopPropagation();
 												e.preventDefault();
@@ -224,7 +244,13 @@ It appears when the user clicks on the `Search` component or presses the corresp
 
 <div aria-live="assertive" class="visually-hidden">
 	{#if $searching && search?.results.length === 0}
-		<p><slot name="no-results">No results</slot></p>
+		<p>
+			{#if no_results}
+				{@render no_results()}
+			{:else}
+				No results
+			{/if}
+		</p>
 	{/if}
 </div>
 

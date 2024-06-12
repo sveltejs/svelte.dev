@@ -4,10 +4,8 @@ use an svg icon that was provided through `Icons.svelte` from
 - https://feathericons.com/
 -->
 <script>
-	/** @type {string} */
-	export let name;
-	/** @type {string | number} */
-	export let size = 20;
+	/** @type {{name: string, size?: string | number}} */
+	let { name, size = 20 } = $props();
 </script>
 
 <svg class="icon" width={size} height={size}>

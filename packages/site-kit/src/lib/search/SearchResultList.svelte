@@ -1,13 +1,6 @@
 <script>
-	import { createEventDispatcher } from 'svelte';
-
-	/** @type {import('./types').Tree[]} */
-	export let results;
-
-	/** @type {string} */
-	export let query;
-
-	const dispatch = createEventDispatcher();
+	/** @type {{results: import('./types').Tree[], query: string, onselect?: (href: string) => void}} */
+	let { results, query, onselect } = $props();
 
 	/** @param {string} text */
 	function escape(text) {
@@ -44,7 +37,7 @@
 			<a
 				data-sveltekit-preload-data
 				href={result.href}
-				on:click={() => dispatch('select', { href: result.href })}
+				onclick={() => onselect?.(result.href)}
 				data-has-node={result.node ? true : undefined}
 			>
 				<strong>{@html excerpt(result.breadcrumbs[result.breadcrumbs.length - 1], query)}</strong>
@@ -55,7 +48,7 @@
 			</a>
 
 			{#if result.children.length > 0}
-				<svelte:self results={result.children} {query} on:select />
+				<svelte:self results={result.children} {query} {onselect} />
 			{/if}
 		</li>
 	{/each}

@@ -34,27 +34,31 @@
 	import Icon from '../components/Icon.svelte';
 	import NavContextMenu from './NavContextMenu.svelte';
 
-	/** @type {boolean} */
-	export let open;
+	/** @type {{open: boolean, links: import('../types').NavigationLink[], children?: import('svelte').Snippet, back_button?: import('svelte').Snippet}} */
+	let { open = $bindable(), links, children, back_button } = $props();
 
-	/** @type {import('../types').NavigationLink[]} */
-	export let links;
+	$open_store = open;
+	$effect.pre(() => {
+		$open_store = open;
+	});
 
-	$: $open_store = open;
-	$: $links_store = links;
+	$links_store = links;
+	$effect.pre(() => {
+		$links_store = links;
+	});
 
-	/** @type {NavContextMenu} */
-	let nav_context_instance;
+	/** @type {NavContextMenu | undefined} */
+	let nav_context_instance = $state();
 
-	let menu_height = 0;
-	let universal_menu_inner_height = 0;
-	let ready = false;
+	let menu_height = $state(0);
+	let universal_menu_inner_height = $state(0);
+	let ready = $state(false);
 
-	/** @type {HTMLElement} */
-	let universal_menu;
+	/** @type {HTMLElement | undefined} */
+	let universal_menu = $state();
 
-	/** @type {HTMLButtonElement} */
-	let menu_button;
+	/** @type {HTMLButtonElement | undefined} */
+	let menu_button = $state();
 
 	function close() {
 		open = false;
@@ -101,16 +105,18 @@
 		};
 	};
 
-	$: $overlay_open = $open_store;
+	$effect.pre(() => {
+		$overlay_open = $open_store;
+	});
 </script>
 
 <svelte:window
-	on:keydown={(e) => {
+	onkeydown={(e) => {
 		if (e.key === 'Escape') {
 			close();
 			// we only manage focus when Esc is hit
 			// otherwise, the navigation will reset focus
-			tick().then(() => menu_button.focus());
+			tick().then(() => menu_button?.focus());
 		}
 	}}
 />
@@ -122,7 +128,7 @@
 		class="menu-toggle"
 		class:open
 		bind:this={menu_button}
-		on:click={open_nav}
+		onclick={open_nav}
 	>
 		<Icon name={$open_store ? 'close' : 'menu'} size="1em" />
 	</button>
@@ -142,7 +148,7 @@
 				<div
 					class="clip"
 					style:--height-difference="{menu_height - universal_menu_inner_height}px"
-					on:transitionstart={(e) => {
+					ontransitionstart={(e) => {
 						const target = /** @type {HTMLElement} */ (e.target);
 
 						if (!target?.classList.contains('viewport')) return;
@@ -165,7 +171,7 @@
 							container.style.clipPath = `polygon(0% ${end}, 100% ${end}, 100% 100%, 0% 100%)`;
 						}, 0);
 					}}
-					on:transitionend={(e) => {
+					ontransitionend={(e) => {
 						const target = /** @type {HTMLElement} */ (e.target);
 
 						if (!target?.classList.contains('viewport')) return;
@@ -175,7 +181,7 @@
 
 						// whenever we transition from one menu to the other, we need to move focus to the first item in the new menu
 						if (!$show_context_menu) {
-							universal_menu.querySelector('a')?.focus();
+							universal_menu?.querySelector('a')?.focus();
 						}
 					}}
 				>
@@ -196,7 +202,9 @@
 										{#if link.sections}
 											<button
 												class="related-menu-arrow"
-												on:click|preventDefault={async () => {
+												onclick={async (event) => {
+													event.preventDefault();
+
 													$current_menu_view = link;
 
 													await tick();
@@ -205,7 +213,7 @@
 
 													await tick();
 
-													nav_context_instance.scrollToActive();
+													nav_context_instance?.scrollToActive();
 												}}
 												aria-label="Show {link.title} submenu"
 											>
@@ -215,7 +223,7 @@
 									</div>
 								{/each}
 
-								<slot />
+								{@render children?.()}
 							</div>
 						</div>
 
@@ -231,11 +239,13 @@
 						<button
 							class="back-button"
 							class:dark={$theme.current === 'dark'}
-							on:click={() => ($show_context_menu = false)}
+							onclick={() => ($show_context_menu = false)}
 							inert={!show_context_menu}
 						>
 							<Icon name="arrow-left" size=".6em" />
-							<span><slot name="back-button">Back to main menu</slot></span>
+							<span
+								>{#if back_button}{@render back_button()}{:else}Back to main menu{/if}</span
+							>
 						</button>
 					</div>
 				</div>

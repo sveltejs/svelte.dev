@@ -3,10 +3,10 @@
 	import { cubicOut } from 'svelte/easing';
 	import { fade } from 'svelte/transition';
 
-	/** @type {string} */
-	export let code;
+	/** @type {{code: string}} */
+	let { code } = $props();
 
-	let copying = false;
+	let copying = $state(false);
 
 	async function copy() {
 		try {
@@ -42,7 +42,7 @@
 	}
 </script>
 
-<button id="copy-to-clipboard-button" on:click={copy}>
+<button id="copy-to-clipboard-button" onclick={copy}>
 	{#if copying}
 		<span transition:fade={{ easing: cubicOut, duration: 400 }}>
 			<Icon name="copy-to-clipboard-filled" />

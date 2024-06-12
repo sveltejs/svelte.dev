@@ -1,8 +1,8 @@
 <script>
 	import Section from '$lib/components/Section.svelte';
 
-	/** @type {Record<string, { href: string; title: string; }[]>} */
-	export let links;
+	/** @type {{links: Record<string, { href: string; title: string; }[]>, copyright?: import('svelte').Snippet, license?: import('svelte').Snippet}} */
+	let { links, copyright, license } = $props();
 </script>
 
 <Section --background="var(--sk-back-4)">
@@ -19,15 +19,15 @@
 		{/each}
 
 		<div class="copyright">
-			<slot name="copyright">
+			{#if copyright}{@render copyright()}{:else}
 				© 2024 <a href="https://github.com/sveltejs/svelte/graphs/contributors">
 					Svelte contributors
 				</a>
-			</slot>
+			{/if}
 		</div>
 
 		<div class="open-source">
-			<slot name="license" />
+			{@render license?.()}
 		</div>
 	</footer>
 </Section>

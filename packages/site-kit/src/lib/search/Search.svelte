@@ -5,20 +5,26 @@ Renders a search widget which when clicked (or the corresponding keyboard shortc
 	import { BROWSER } from 'esm-env';
 	import { search_query, searching } from '../stores/search.js';
 
-	export let q = '';
-	export let label = 'Search';
+	/** @type {{q?: string, label?: string}} */
+	let { q = '', label = 'Search' } = $props();
 </script>
 
 <form class="search-container" action="/search">
 	<input
 		value={q}
-		on:input={(e) => {
+		oninput={(e) => {
 			$searching = true;
 			$search_query = e.currentTarget.value;
 			e.currentTarget.value = '';
 		}}
-		on:mousedown|preventDefault={() => ($searching = true)}
-		on:touchend|preventDefault={() => ($searching = true)}
+		onmousedown={(event) => {
+			event.preventDefault();
+			$searching = true;
+		}}
+		ontouchend={(event) => {
+			event.preventDefault();
+			$searching = true;
+		}}
 		type="search"
 		name="q"
 		placeholder={label}

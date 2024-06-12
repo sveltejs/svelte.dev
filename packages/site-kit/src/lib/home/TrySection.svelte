@@ -1,20 +1,25 @@
 <script>
 	import Section from '$lib/components/Section.svelte';
 	import TryTerminal from './TryTerminal.svelte';
+
+	/** @type {{content_heading?: import('svelte').Snippet, content?: import('svelte').Snippet}} */
+	let { content_heading, content } = $props();
 </script>
 
 <div class="try-container">
 	<Section --background="var(--background-2)">
 		<div class="grid" style="--columns: 2">
 			<div class="copy">
-				<h2><slot name="content-heading">see for yourself</slot></h2>
+				<h2>
+					{#if content_heading}{@render content_heading()}{:else}see for yourself{/if}
+				</h2>
 				<div>
-					<slot name="content">
+					{#if content}{@render content()}{:else}
 						Try it locally, <a target="_blank" rel="noreferrer" href="https://sveltekit.new"
 							>on StackBlitz</a
 						>, or with
 						<a target="_blank" href="https://learn.svelte.dev">the interactive tutorial</a>.
-					</slot>
+					{/if}
 				</div>
 			</div>
 

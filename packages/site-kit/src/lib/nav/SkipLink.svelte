@@ -2,11 +2,13 @@
 Accessibility helper component to skip to the main content
 -->
 <script>
-	/** @type {string} */
-	export let href;
+	/** @type {{href: string, children?: import('svelte').Snippet}} */
+	let { href, children } = $props();
 </script>
 
-<a {href}> <slot>Skip to main content</slot> </a>
+<a {href}>
+	{#if children}{@render children()}{:else}Skip to main content{/if}
+</a>
 
 <style>
 	a {

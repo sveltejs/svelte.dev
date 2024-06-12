@@ -4,22 +4,20 @@
 	import { fade } from 'svelte/transition';
 	import Icon from './Icon.svelte';
 
-	/** Whether to show an arrow at the end */
-	export let arrow = false;
-
 	/**
-	 * Link to the event. It must be an absolute path (https://svelte.dev/blog/runes instead of /blog/runes)
-	 * @type {string}
+	 * @typedef Props
+	 * @property {boolean} [arrow] Whether to show an arrow at the end
+	 * @property {string} href Link to the event. It must be an absolute path (https://svelte.dev/blog/runes instead of /blog/runes)
+	 * @property {{ lg?: string; sm?: string }} content
 	 */
-	export let href;
 
-	/** @type {{ lg?: string; sm?: string }} */
-	export let content;
+	/** @type {Props} */
+	let { arrow = false, href, content } = $props();
 
 	/** @type {import('svelte').EventDispatcher<{ close: undefined }>} */
 	const dispatch = createEventDispatcher();
 
-	let show = false;
+	let show = $state(false);
 	onMount(() => {
 		setTimeout(() => {
 			show = true;
@@ -45,7 +43,7 @@
 			{/if}
 		</div>
 
-		<button class="close-button" on:click={() => dispatch('close')}>
+		<button class="close-button" onclick={() => dispatch('close')}>
 			<Icon name="close" />
 		</button>
 	</div>

@@ -1,12 +1,9 @@
 <script>
-	/** @type {boolean}*/
-	export let pressed;
-
-	/** @type {string} */
-	export let label;
+	/** @type {{pressed: boolean, label: string}} */
+	let { pressed = $bindable(), label } = $props();
 </script>
 
-<button aria-pressed={pressed} aria-label={label} on:click={() => (pressed = !pressed)}></button>
+<button aria-pressed={pressed} aria-label={label} onclick={() => (pressed = !pressed)}></button>
 
 <style>
 	button {

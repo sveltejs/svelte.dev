@@ -7,7 +7,7 @@
 		easing: quadInOut
 	});
 
-	let visible = false;
+	let visible = $state(false);
 
 	onMount(() => {
 		/** @type {any} */

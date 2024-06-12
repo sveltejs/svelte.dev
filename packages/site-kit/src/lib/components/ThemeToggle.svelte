@@ -3,7 +3,8 @@
 	import { BROWSER } from 'esm-env';
 	import { onDestroy } from 'svelte';
 
-	export let label = 'Dark mode';
+	/** @type {{label?: string}} */
+	let { label = 'Dark mode' } = $props();
 
 	function toggle() {
 		const upcoming_theme = $theme.current === 'light' ? 'dark' : 'light';
@@ -26,25 +27,23 @@
 	const cb = (e) =>
 		theme.set({ preference: $theme.preference, current: e.matches ? 'dark' : 'light' });
 
-	/** @type {MediaQueryList} */
-	let query;
+	/** @type {MediaQueryList | undefined} */
+	let query = $state();
 
-	$: {
-		if (!BROWSER) break $;
-
+	$effect(() => {
 		query?.removeEventListener('change', cb);
 
 		if ($theme.preference === 'system') {
 			query = window.matchMedia('(prefers-color-scheme: dark)');
 			query.addEventListener('change', cb);
 		}
-	}
+	});
 
 	onDestroy(() => query?.removeEventListener('change', cb));
 </script>
 
 <button
-	on:click={toggle}
+	onclick={toggle}
 	type="button"
 	aria-pressed={$theme.current === 'dark' ? 'true' : 'false'}
 	aria-label={label}

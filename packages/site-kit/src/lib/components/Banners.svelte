@@ -70,13 +70,12 @@
 </script>
 
 <script>
-	import { browser } from '$app/environment';
 	import { onMount } from 'svelte';
 	import { persisted } from 'svelte-persisted-store';
 	import Banner from './Banner.svelte';
 
-	/** @type {BannerData} */
-	export let data;
+	/** @type {{data: BannerData}} */
+	let { data } = $props();
 
 	const preferences = persisted(
 		'svelte:banner-preferences',
@@ -85,14 +84,16 @@
 
 	const time = +new Date();
 
-	$: showing = data.filter(({ id, start, end }) => $preferences[id] && time > start && time < end);
+	let showing = $derived(
+		data.filter(({ id, start, end }) => $preferences[id] && time > start && time < end)
+	);
 
-	$: if (browser) {
+	$effect(() => {
 		document.documentElement.style.setProperty(
 			'--sk-banner-bottom-height',
 			showing.length ? '41.9px' : '0px'
 		);
-	}
+	});
 
 	onMount(() => {
 		for (const { id } of data) {

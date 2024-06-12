@@ -11,13 +11,10 @@ The main shell of the application. It provides a slot for the top navigation, th
 	import '../styles/index.css';
 	import Icons from './Icons.svelte';
 
-	/**
-	 * Whether the navigation is visible.
-	 */
-	export let nav_visible = true;
+	/** @type {{nav_visible?: boolean, top_nav?: import('svelte').Snippet, children?: import('svelte').Snippet, banner_bottom?: import('svelte').Snippet}} */
+	let { nav_visible = true, top_nav, children, banner_bottom } = $props();
 
-	/** @type {HTMLElement} */
-	let main_el;
+	let main_el = /** @type {HTMLElement} */ ($state());
 	let scroll_restored = false;
 
 	afterNavigate(() => {
@@ -51,17 +48,17 @@ The main shell of the application. It provides a slot for the top navigation, th
 {#if nav_visible}
 	<SkipLink href="#main" />
 
-	<slot name="top-nav" />
+	{@render top_nav?.()}
 {/if}
 
 <div class="modal-overlay" class:visible={$overlay_open} aria-hidden="true"></div>
 
 <main id="main" bind:this={main_el}>
-	<slot />
+	{@render children?.()}
 </main>
 
 <div class="banner-bottom">
-	<slot name="banner-bottom" />
+	{@render banner_bottom?.()}
 </div>
 
 <style>

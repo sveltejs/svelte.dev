@@ -9,14 +9,15 @@ Renders a list of search results
 	interface Props {
 		results: Tree[];
 		query: string;
+		onselect?: (href: string) => void;
 		children?: Snippet;
 	}
 
-	let { results, query, children }: Props = $props();
+	let { results, query, children, onselect }: Props = $props();
 </script>
 
 {#if results.length > 0}
-	<SearchResultList {results} {query} on:select />
+	<SearchResultList {results} {query} {onselect} />
 {:else if query}
 	<p class="info">
 		{#if children}

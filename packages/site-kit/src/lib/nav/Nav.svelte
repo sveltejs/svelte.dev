@@ -12,18 +12,22 @@ Top navigation bar for the application. It provides a slot for the left side, th
 	import Menu from './Menu.svelte';
 	import Separator from './Separator.svelte';
 
-	export let home_title = 'Homepage';
+	/** @type {{home_title?: string, title: string | undefined, links: import('../types').NavigationLink[], home_large?: import('svelte').Snippet, home_small?: import('svelte').Snippet, search?: import('svelte').Snippet, external_links?: import('svelte').Snippet, theme_label?: import('svelte').Snippet}} */
+	let {
+		home_title = 'Homepage',
+		title,
+		links,
+		home_large,
+		home_small,
+		search,
+		external_links,
+		theme_label
+	} = $props();
 
-	/** @type {string | undefined} */
-	export let title;
+	let visible = $state(true);
 
-	/** @type {import('../types').NavigationLink[]} */
-	export let links;
-
-	let visible = true;
-
-	/** @type {HTMLElement} */
-	let nav;
+	/** @type {HTMLElement | undefined} */
+	let nav = $state();
 
 	// Prevents navbar to show/hide when clicking in docs sidebar
 	let hash_changed = false;
@@ -45,7 +49,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 	}
 
 	function handle_focus() {
-		if ($nav_open && !nav.contains(document.activeElement)) {
+		if ($nav_open && !nav?.contains(document.activeElement)) {
 			$nav_open = false;
 		}
 	}
@@ -53,8 +57,8 @@ Top navigation bar for the application. It provides a slot for the left side, th
 
 <svelte:window
 	use:root_scroll={handle_scroll}
-	on:hashchange={handle_hashchange}
-	on:focusin={handle_focus}
+	onhashchange={handle_hashchange}
+	onfocusin={handle_focus}
 />
 
 <nav
@@ -67,11 +71,11 @@ Top navigation bar for the application. It provides a slot for the left side, th
 >
 	<a class="home-link" href="/" title={home_title}>
 		<span class="home-large">
-			<slot name="home-large" />
+			{@render home_large?.()}
 		</span>
 
 		<span class="home-small">
-			<slot name="home-small" />
+			{@render home_small?.()}
 		</span>
 	</a>
 
@@ -83,7 +87,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 
 	<div class="desktop">
 		<div class="center-area">
-			<slot name="search" />
+			{@render search?.()}
 		</div>
 
 		<div class="menu">
@@ -98,10 +102,12 @@ Top navigation bar for the application. It provides a slot for the left side, th
 
 			<Separator />
 
-			<slot name="external-links" />
+			{@render external_links?.()}
 
 			<div class="appearance">
-				<span class="caption"><slot name="theme-label">Theme</slot></span>
+				<span class="caption"
+					>{#if theme_label}{@render theme_label()}{:else}Theme{/if}</span
+				>
 				<ThemeToggle />
 			</div>
 		</div>
@@ -111,7 +117,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		<button
 			aria-label="Search"
 			class="search"
-			on:click={() => {
+			onclick={() => {
 				$searching = true;
 			}}
 		>
@@ -121,12 +127,14 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		<Menu bind:open={$nav_open} {links}>
 			<Separator />
 
-			<slot name="external-links" />
+			{@render external_links?.()}
 
 			<Separator />
 
 			<div class="appearance">
-				<span class="caption"><slot name="theme-label">Theme</slot></span>
+				<span class="caption"
+					>{#if theme_label}{@render theme_label()}{:else}Theme{/if}</span
+				>
 				<ThemeToggle />
 			</div>
 		</Menu>
