@@ -15,12 +15,13 @@ export interface NavigationLink {
 	}[];
 }
 
-export interface Page {
+export interface Document {
 	slug: string;
 	title: string;
 	body: string;
 	sections: Section[];
-	children: Page[];
+	children: Document[];
+	assets?: Record<string, string>;
 }
 
 export interface Section {

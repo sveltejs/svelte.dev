@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import TSToggle from './TSToggle.svelte';
-	import type { Page } from '../types';
+	import type { Document } from '../types';
 
 	interface Props {
-		contents: Page[];
+		contents: Document[];
 		show_ts_toggle?: boolean;
 	}
 

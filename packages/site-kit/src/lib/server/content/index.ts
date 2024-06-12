@@ -1,20 +1,23 @@
 import { extract_frontmatter, slugify } from '$lib/markdown/utils';
-import type { Page } from '../../types';
+import type { Document } from '../../types';
 
 export async function create_index(
-	modules: Record<string, { default: string }>,
+	documents: Record<string, { default: string }>,
+	assets: Record<string, { default: string }>,
 	base: string,
 	read: (asset: string) => Response
 ) {
-	const content: Record<string, Page> = {};
+	const content: Record<string, Document> = {};
 
-	for (const key in modules) {
+	for (const key in documents) {
+		if (key.includes('+assets')) continue;
+
 		const slug = key
 			.slice(base.length + 1, -'.md'.length)
 			.replace(/(^|\/)\d+-/g, '$1')
 			.replace(/\/index$/, '');
 
-		const text = await read(modules[key].default).text();
+		const text = await read(documents[key].default).text();
 		const { metadata, body } = extract_frontmatter(text);
 
 		if (!metadata.title) {
@@ -48,6 +51,16 @@ export async function create_index(
 				parent.children.push(content[slug]);
 			}
 		}
+	}
+
+	for (const key in assets) {
+		const path = key.slice(base.length + 1);
+		const slug = path.slice(0, path.indexOf('+assets') - 1).replace(/(^|\/)\d+-/g, '$1');
+		const file = path.slice(path.indexOf('+assets') + 8);
+
+		const document = content[slug];
+
+		(document.assets ??= {})[file] = assets[key].default;
 	}
 
 	return content;
