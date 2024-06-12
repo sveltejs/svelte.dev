@@ -61,7 +61,7 @@
 .cm-editor .cm-selectionBackground,
 .cm-editor .cm-content ::selection {
 	background: var(--sk-theme-3);
-	opacity: .3;
+	opacity: 0.3;
 }
 
 .cm-editor .cm-tooltip {
@@ -71,16 +71,19 @@
 	border-radius: 2px;
 	overflow: hidden;
 	margin: 0.4rem 0;
-	filter: drop-shadow(1px 2px 5px rgba(0,0,0,0.1));
+	filter: drop-shadow(1px 2px 5px rgba(0, 0, 0, 0.1));
 }
 
 .cm-editor .cm-tooltip-hover {
 	border: none;
 }
 
-.cm-editor .cm-tooltip-below {}
-.cm-editor .cm-tooltip-lint {}
-.cm-editor .cm-tooltip-section {}
+.cm-editor .cm-tooltip-below {
+}
+.cm-editor .cm-tooltip-lint {
+}
+.cm-editor .cm-tooltip-section {
+}
 .cm-editor .cm-diagnostic {
 	border: none;
 	padding: 0.2rem 0.8rem;
@@ -91,7 +94,8 @@
 	color: white;
 }
 
-.cm-editor .cm-diagnosticText {}
+.cm-editor .cm-diagnosticText {
+}
 
 .cm-editor .cm-tooltip.cm-tooltip-autocomplete > ul {
 	font-family: var(--font-mono);

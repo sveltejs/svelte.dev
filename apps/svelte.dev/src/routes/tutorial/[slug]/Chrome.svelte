@@ -14,7 +14,12 @@
 </script>
 
 <div class="chrome" class:loading>
-	<button disabled={loading} class="reload icon" on:click={() => dispatch('refresh')} aria-label="reload"></button>
+	<button
+		disabled={loading}
+		class="reload icon"
+		on:click={() => dispatch('refresh')}
+		aria-label="reload"
+	></button>
 
 	<input
 		disabled={loading}
@@ -31,7 +36,13 @@
 		}}
 	/>
 
-	<a {href} class="new-tab icon" target="_blank" aria-label={href ? 'open in new tab' : undefined} tabindex="0"></a>
+	<a
+		{href}
+		class="new-tab icon"
+		target="_blank"
+		aria-label={href ? 'open in new tab' : undefined}
+		tabindex="0"
+	></a>
 
 	<button
 		disabled={loading}
@@ -69,7 +80,8 @@
 		border: 2px solid var(--sk-theme-3);
 	}
 
-	.icon, .icon::after {
+	.icon,
+	.icon::after {
 		position: relative;
 		height: 100%;
 		aspect-ratio: 1;

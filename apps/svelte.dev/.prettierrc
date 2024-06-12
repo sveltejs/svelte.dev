@@ -14,16 +14,9 @@
 			}
 		},
 		{
-			"files": "content/**/*.svelte",
+			"files": "content/**/*.{css,js,svelte}",
 			"options": {
-				"printWidth": 70,
 				"requirePragma": true
-			}
-		},
-		{
-			"files": "content/**/*.js",
-			"options": {
-				"printWidth": 70
 			}
 		}
 	]

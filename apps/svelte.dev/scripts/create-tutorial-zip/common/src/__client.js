@@ -28,10 +28,10 @@ window.alert = (message) => {
 
 let can_focus = false;
 
-window.addEventListener('pointerdown', (e) => can_focus = true);
-window.addEventListener('pointerup', (e) => can_focus = false);
-window.addEventListener('keydown', (e) => can_focus = true);
-window.addEventListener('keyup', (e) => can_focus = false);
+window.addEventListener('pointerdown', (e) => (can_focus = true));
+window.addEventListener('pointerup', (e) => (can_focus = false));
+window.addEventListener('keydown', (e) => (can_focus = true));
+window.addEventListener('keyup', (e) => (can_focus = false));
 
 /**
  * The iframe sometimes takes focus control in ways we can't prevent
