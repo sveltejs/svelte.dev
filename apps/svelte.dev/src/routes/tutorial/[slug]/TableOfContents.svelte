@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
 	import { goto } from '$app/navigation';
 	import { Icon } from '@sveltejs/site-kit/components';
 
@@ -9,7 +9,7 @@
 
 	let select_focused = false;
 
-	function navigate(e: Event & { target: HTMLSelectElement }) {
+	function navigate(e) {
 		goto(`/tutorial/${e.target.value}`);
 	}
 </script>
