@@ -20,6 +20,6 @@ export async function load({ params }) {
 	}
 
 	return {
-		exercise
+		exercise: e
 	};
 }

@@ -25,6 +25,7 @@
 	"homepage": "https://github.com/sveltejs/svelte.dev/tree/main/packages/site-kit#readme",
 	"dependencies": {
 		"esm-env": "^1.0.0",
+		"json5": "^2.2.3",
 		"svelte-persisted-store": "^0.9.2"
 	},
 	"devDependencies": {

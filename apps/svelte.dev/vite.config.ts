@@ -23,6 +23,7 @@ const plugins: PluginOption[] = [
 if (!process.versions.webcontainer) {
 	plugins.push(
 		(await import('vite-imagetools')).imagetools({
+			exclude: 'content/**',
 			defaultDirectives: (url) => {
 				if (url.searchParams.has('big-image')) {
 					return new URLSearchParams('w=640;1280;2560;3840&format=avif;webp;png&as=picture');
@@ -30,7 +31,7 @@ if (!process.versions.webcontainer) {
 
 				return new URLSearchParams();
 			}
-		})
+		}) as PluginOption
 	);
 }
 

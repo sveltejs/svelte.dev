@@ -1,4 +1,5 @@
 import { Marked } from 'marked';
+import json5 from 'json5';
 
 const escapeTest = /[&<>"']/;
 const escapeReplace = /[&<>"']/g;
@@ -249,11 +250,17 @@ export function extract_frontmatter(markdown) {
 	const metadata = {};
 	frontmatter.split('\n').forEach((pair) => {
 		const i = pair.indexOf(':');
-		metadata[pair.slice(0, i).trim()] = removeQuotes(pair.slice(i + 1).trim());
+		metadata[pair.slice(0, i).trim()] = parse(pair.slice(i + 1).trim());
 	});
 
 	return { metadata, body };
 }
 
 /** @param {string} str */
-const removeQuotes = (str) => str.replace(/(^["']|["']$)/g, '');
+const parse = (str) => {
+	try {
+		return json5.parse(str);
+	} catch (err) {
+		return str;
+	}
+};

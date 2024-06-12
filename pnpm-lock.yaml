@@ -334,6 +334,9 @@ importers:
       esm-env:
         specifier: ^1.0.0
         version: 1.0.0
+      json5:
+        specifier: ^2.2.3
+        version: 2.2.3
       svelte-persisted-store:
         specifier: ^0.9.2
         version: 0.9.4(svelte@5.0.0-next.126)
@@ -2282,6 +2285,11 @@ packages:
 
   json-parse-even-better-errors@2.3.1:
     resolution: {integrity: sha512-xyFwyhro/JEof6Ghe2iz2NcXoj2sloNsWr/XsERDK/oiPCfaNhl5ONfp+jQdAZRQQ0IJWNzH9zIZF7li91kh2w==}
+
+  json5@2.2.3:
+    resolution: {integrity: sha512-XmOWe7eyHYH14cLdVPoyg+GOH3rYX++KpzrylJwSW98t3Nk+U8XOl8FWKOgwtzdb8lXGf6zYwDUzeHMWfxasyg==}
+    engines: {node: '>=6'}
+    hasBin: true
 
   jsonc-parser@3.2.1:
     resolution: {integrity: sha512-AilxAyFOAcK5wA1+LeaySVBrHsGQvUFCDWXKpZjzaL0PqW+xfBOttn8GNtWKFWqneyMZj41MWF9Kl6iPWLwgOA==}
@@ -5558,6 +5566,8 @@ snapshots:
       esprima: 4.0.1
 
   json-parse-even-better-errors@2.3.1: {}
+
+  json5@2.2.3: {}
 
   jsonc-parser@3.2.1: {}
 

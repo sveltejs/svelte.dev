@@ -12,10 +12,8 @@ export async function create_index(
 	for (const key in documents) {
 		if (key.includes('+assets')) continue;
 
-		const slug = key
-			.slice(base.length + 1, -'.md'.length)
-			.replace(/(^|\/)\d+-/g, '$1')
-			.replace(/\/index$/, '');
+		const file = key.slice(base.length + 1);
+		const slug = file.replace(/(^|\/)\d+-/g, '$1').replace(/(\/index)?\.md$/, '');
 
 		const text = await read(documents[key].default).text();
 		const { metadata, body } = extract_frontmatter(text);
@@ -33,7 +31,8 @@ export async function create_index(
 
 		content[slug] = {
 			slug,
-			title: metadata.title,
+			file,
+			metadata: metadata as { title: string; [key: string]: any },
 			body,
 			sections,
 			children: []

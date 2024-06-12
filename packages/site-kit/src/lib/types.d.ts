@@ -17,7 +17,11 @@ export interface NavigationLink {
 
 export interface Document {
 	slug: string;
-	title: string;
+	file: string;
+	metadata: {
+		title: string;
+		[key: string]: any;
+	};
 	body: string;
 	sections: Section[];
 	children: Document[];
