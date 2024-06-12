@@ -13,7 +13,7 @@ if (
 	!fs.existsSync('src/lib/tutorial/adapters/common/common.zip') ||
 	process.argv.includes('--force=true')
 ) {
-	const cwd = 'content/tutorial/common';
+	const cwd = fileURLToPath(new URL('./common', import.meta.url));
 
 	execSync('npm ci', { cwd });
 
