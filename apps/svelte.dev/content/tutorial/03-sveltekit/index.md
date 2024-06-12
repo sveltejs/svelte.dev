@@ -1,5 +1,5 @@
 ---
 title: Basic SvelteKit
-scope: {"prefix":"/","name":"project"}
+scope: { 'prefix': '/', 'name': 'project' }
 focus: /src/routes/+page.svelte
 ---
