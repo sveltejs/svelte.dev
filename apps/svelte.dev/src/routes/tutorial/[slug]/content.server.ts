@@ -94,9 +94,6 @@ export async function load_exercise(slug: string): Promise<Exercise> {
 		}
 	}
 
-	console.log(a);
-	console.log(b);
-
 	const filenames = new Set();
 
 	return {

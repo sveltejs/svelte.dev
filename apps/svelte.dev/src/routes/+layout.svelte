@@ -53,8 +53,6 @@
 			{/snippet}
 
 			{#snippet external_links()}
-				<a href="https://learn.svelte.dev/">Tutorial</a>
-
 				<a href="https://kit.svelte.dev">SvelteKit</a>
 
 				<Separator />

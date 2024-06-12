@@ -57,12 +57,12 @@ async function get_nav_list() {
 			]
 		},
 		{
-			title: 'Examples',
-			prefix: 'examples',
-			pathname: '/examples',
+			title: 'Tutorial',
+			prefix: 'tutorial',
+			pathname: '/tutorial',
 			sections: [
 				{
-					title: 'EXAMPLES',
+					title: 'TUTORIAL',
 					sections: [] //processed_examples_list
 				}
 			]

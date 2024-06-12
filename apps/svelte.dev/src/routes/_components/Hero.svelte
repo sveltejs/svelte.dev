@@ -15,7 +15,7 @@
 			<span style="white-space: nowrap">Cybernetically enhanced</span> <br /> web apps
 		</strong>
 		<div class="buttons">
-			<a href="https://learn.svelte.dev" rel="external" class="cta">
+			<a href="/tutorial" class="cta">
 				tutorial<Icon name="external-link" size="1em" />
 			</a>
 			<a href="/docs/svelte/introduction/overview" class="cta basic">read the docs</a>

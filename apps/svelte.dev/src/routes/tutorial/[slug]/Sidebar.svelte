@@ -14,7 +14,7 @@
 
 	const dispatch = createEventDispatcher();
 
-	const namespace = 'learn.svelte.dev';
+	const namespace = 'svelte.dev/tutorial';
 	const copy_enabled = `${namespace}:copy_enabled`;
 
 	let show_modal = false;

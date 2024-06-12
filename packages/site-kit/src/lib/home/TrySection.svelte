@@ -18,7 +18,7 @@
 						Try it locally, <a target="_blank" rel="noreferrer" href="https://sveltekit.new"
 							>on StackBlitz</a
 						>, or with
-						<a target="_blank" href="https://learn.svelte.dev">the interactive tutorial</a>.
+						<a target="_blank" href="https://svelte.dev/tutorial">the interactive tutorial</a>.
 					{/if}
 				</div>
 			</div>
