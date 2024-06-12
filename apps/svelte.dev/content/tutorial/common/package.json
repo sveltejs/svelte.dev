@@ -1,0 +1,16 @@
+{
+	"name": "tutorial",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "./node_modules/vite/bin/vite.js dev",
+		"build": "./node_modules/vite/bin/vite.js build",
+		"preview": "./node_modules/vite/bin/vite.js preview"
+	},
+	"devDependencies": {
+		"@sveltejs/kit": "^2",
+		"esbuild-wasm": "^0.21.5",
+		"svelte": "^5.0.0-next.154",
+		"vite": "^5"
+	},
+	"type": "module"
+}
