@@ -3,13 +3,14 @@ import type { Page } from '../../types';
 
 export async function create_index(
 	modules: Record<string, { default: string }>,
+	base: string,
 	read: (asset: string) => Response
 ) {
 	const content: Record<string, Page> = {};
 
 	for (const key in modules) {
 		const slug = key
-			.slice('../content/'.length, -'.md'.length)
+			.slice(base.length + 1, -'.md'.length)
 			.replace(/(^|\/)\d+-/g, '$1')
 			.replace(/\/index$/, '');
 
