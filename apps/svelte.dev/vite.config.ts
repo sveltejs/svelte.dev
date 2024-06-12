@@ -1,7 +1,7 @@
 import { sveltekit } from '@sveltejs/kit/vite';
 import type { PluginOption, UserConfig } from 'vite';
 
-const plugins: PluginOption[] = [sveltekit()];
+const plugins: PluginOption[] = [sveltekit() as PluginOption];
 
 // Only enable sharp if we're not in a webcontainer env
 if (!process.versions.webcontainer) {

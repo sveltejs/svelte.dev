@@ -4,7 +4,7 @@
 	import { Icon } from '@sveltejs/site-kit/components';
 	import * as doNotZip from 'do-not-zip';
 	import downloadBlob from './downloadBlob.js';
-	import { enter } from '$lib/utils/events.js';
+	import { enter } from '$lib/utils/events';
 	import { isMac } from '$lib/utils/compat.js';
 	import Repl from '@sveltejs/repl';
 
@@ -34,7 +34,7 @@
 	let justSaved = $state(false);
 	let justForked = $state(false);
 
-	function wait(ms) {
+	function wait(ms: number) {
 		return new Promise((f) => setTimeout(f, ms));
 	}
 
@@ -90,7 +90,7 @@
 			}
 		} catch (err) {
 			if (navigator.onLine) {
-				alert(err.message);
+				alert((err as Error).message);
 			} else {
 				alert(`It looks like you're offline! Find the internet and try again`);
 			}
@@ -145,7 +145,7 @@
 			justSaved = false;
 		} catch (err) {
 			if (navigator.onLine) {
-				alert(err.message);
+				alert((err as Error).message);
 			} else {
 				alert(`It looks like you're offline! Find the internet and try again`);
 			}
@@ -159,14 +159,14 @@
 
 		const { files: components, imports } = repl.toJSON();
 
-		const files = await (await fetch('/svelte-app.json')).json();
+		const files = (await (await fetch('/svelte-app.json')).json()) as TODO[];
 
 		if (imports.length > 0) {
 			const idx = files.findIndex(({ path }) => path === 'package.json');
 			const pkg = JSON.parse(files[idx].data);
 			const { devDependencies } = pkg;
 			imports.forEach((mod) => {
-				const match = /^(@[^/]+\/)?[^@/]+/.exec(mod);
+				const match = /^(@[^/]+\/)?[^@/]+/.exec(mod)!;
 				devDependencies[match[0]] = 'latest';
 			});
 			pkg.devDependencies = devDependencies;
@@ -201,8 +201,8 @@ export default app;`
 <div class="app-controls">
 	<input
 		bind:value={name}
-		onfocus={(e) => e.target.select()}
-		use:enter={(e) => /** @type {HTMLInputElement} */ (e.target).blur()}
+		onfocus={(e) => e.currentTarget.select()}
+		use:enter={(e) => (e.currentTarget as HTMLInputElement).blur()}
 	/>
 
 	<div class="buttons">

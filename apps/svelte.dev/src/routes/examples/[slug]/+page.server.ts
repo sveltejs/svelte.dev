@@ -5,7 +5,7 @@ export const prerender = true;
 
 export async function load({ params }) {
 	const examples_list = get_examples_list(examples_data);
-	const example = get_example(examples_data, params.slug);
+	const example = get_example(examples_data, params.slug)!;
 
 	return {
 		examples_list,

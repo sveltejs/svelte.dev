@@ -1,16 +1,11 @@
-/** @param {number} code */
-export function keyEvent(code) {
-	/**
-	 * @param {HTMLInputElement} node
-	 * @param {(event: KeyboardEvent) => void} callback
-	 */
-	return function (node, callback) {
+export function keyEvent(code: number) {
+	return function (node: HTMLInputElement, callback: (event: KeyboardEvent) => void) {
 		node.addEventListener('keydown', handleKeydown);
 
 		/** @param {KeyboardEvent} event */
-		function handleKeydown(event) {
+		function handleKeydown(event: KeyboardEvent) {
 			if (event.keyCode === code) {
-				callback.call(this, event);
+				callback.call(node, event);
 			}
 		}
 

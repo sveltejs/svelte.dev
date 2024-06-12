@@ -58,6 +58,6 @@ export async function GET({ url }) {
 		);
 	} catch (err) {
 		console.error('GET /auth/callback', err);
-		return new Response(err.data, { status: 500 });
+		return new Response((err as TODO).data, { status: 500 });
 	}
 }

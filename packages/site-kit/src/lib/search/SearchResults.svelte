@@ -1,20 +1,30 @@
 <!--@component
 Renders a list of search results
 -->
-<script>
+<script lang="ts">
 	import SearchResultList from './SearchResultList.svelte';
+	import type { Snippet } from 'svelte';
+	import type { Tree } from './types';
 
-	/** @type {import('./types').Tree[]} */
-	export let results;
+	interface Props {
+		results: Tree[];
+		query: string;
+		children?: Snippet;
+	}
 
-	/** @type {string} */
-	export let query;
+	let { results, query, children }: Props = $props();
 </script>
 
 {#if results.length > 0}
 	<SearchResultList {results} {query} on:select />
 {:else if query}
-	<p class="info"><slot name="no-results">No results</slot></p>
+	<p class="info">
+		{#if children}
+			{@render children()}
+		{:else}
+			No results
+		{/if}
+	</p>
 {/if}
 
 <style>

@@ -2,7 +2,7 @@
 Renders a search box as an overlay that can be used to search the documentation.
 It appears when the user clicks on the `Search` component or presses the corresponding keyboard shortcut.
 -->
-<script>
+<script lang="ts">
 	import { afterNavigate } from '$app/navigation';
 	import { overlay_open, search_query, search_recent, searching } from '$lib/stores';
 	import { onMount, tick } from 'svelte';
@@ -13,16 +13,12 @@ It appears when the user clicks on the `Search` component or presses the corresp
 
 	export let placeholder = 'Search';
 
-	/** @type {HTMLElement} */
-	let modal;
+	let modal: HTMLElement;
 
-	/** @type {any} */
-	let search = null;
-	/** @type {any[]} */
-	let recent_searches = [];
+	let search: TODO = null;
+	let recent_searches: TODO[] = [];
 
-	/** @type {Worker} */
-	let worker;
+	let worker: Worker;
 	let ready = false;
 
 	let uid = 1;
@@ -76,8 +72,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 		search = null;
 	}
 
-	/** @param {string} href */
-	function navigate(href) {
+	function navigate(href: string) {
 		$search_recent = [href, ...$search_recent.filter((x) => x !== href)];
 		close();
 	}
@@ -137,7 +132,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 		on:keydown={(/** @type {KeyboardEvent} */ e) => {
 			if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
 				e.preventDefault();
-				const group = focusable_children(/** @type {HTMLElement} */ (e.currentTarget));
+				const group = focusable_children(e.currentTarget);
 
 				// when using arrow keys (as opposed to tab), don't focus buttons
 				const selector = 'a, input';
@@ -157,9 +152,8 @@ It appears when the user clicks on the `Search` component or presses the corresp
 				autofocus
 				on:keydown={(e) => {
 					if (e.key === 'Enter' && !e.isComposing) {
-						/** @type {HTMLElement | undefined} */ (
-							modal.querySelector('a[data-has-node]')
-						)?.click();
+						const element = modal.querySelector('a[data-has-node]') as HTMLElement | undefined;
+						element?.click();
 					}
 				}}
 				on:input={(e) => {

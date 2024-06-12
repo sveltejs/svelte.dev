@@ -1,25 +1,36 @@
-<script>
+<script lang="ts">
 	import { browser } from '$app/environment';
 	import ScreenToggle from '$lib/components/ScreenToggle.svelte';
 	import Repl from '@sveltejs/repl';
 	import { theme } from '@sveltejs/site-kit/stores';
 	import { mapbox_setup, svelteUrl } from '../../../config.js';
 	import TableOfContents from './TableOfContents.svelte';
+	import type { Tutorial, TutorialSection } from '$lib/server/tutorial/types';
 
 	export let data;
 
-	/** @type {import('@sveltejs/repl').default} */
-	let repl;
-	let prev;
-	let scrollable;
-	/** @type {Map<string, {
-	 * 	slug: string,
-	 * 	section: import('$lib/server/tutorial/types').TutorialSection,
-	 * 	chapter: import('$lib/server/tutorial/types').Tutorial,
-	 *  prev: { slug: string, section: import('$lib/server/tutorial/types').TutorialSection, chapter: import('$lib/server/tutorial/types').Tutorial }
-	 *  next?: { slug: string, section: import('$lib/server/tutorial/types').TutorialSection, chapter: import('$lib/server/tutorial/types').Tutorial }
-	 * }>} */
-	const lookup = new Map();
+	let repl: Repl;
+	let prev: TODO;
+	let scrollable: TODO;
+
+	const lookup: Map<
+		string,
+		{
+			slug: string;
+			section: TutorialSection;
+			chapter: Tutorial;
+			prev: {
+				slug: string;
+				section: TutorialSection;
+				chapter: Tutorial;
+			};
+			next?: {
+				slug: string;
+				section: TutorialSection;
+				chapter: Tutorial;
+			};
+		}
+	> = new Map();
 
 	let width = browser ? window.innerWidth : 1000;
 	let offset = 0;
@@ -46,10 +57,10 @@
 	// TODO is there a non-hacky way to trigger scroll when chapter changes?
 	$: if (scrollable) data.tutorial, scrollable.scrollTo(0, 0);
 
-	$: selected = lookup.get(data.slug);
+	$: selected = lookup.get(data.slug)!;
 	$: improve_link = `https://github.com/sveltejs/svelte/tree/svelte-4/documentation/tutorial/${data.tutorial.dir}`;
 
-	const clone = (file) => ({
+	const clone = (file: TODO) => ({
 		name: file.name.replace(/.\w+$/, ''),
 		type: file.type,
 		source: file.content
@@ -84,7 +95,7 @@
 	let completed = false;
 
 	/** @param {import('svelte').ComponentEvents<Repl>['change']} event */
-	function handle_change(event) {
+	function handle_change(event: CustomEvent) {
 		completed = event.detail.files.every((file, i) => {
 			const expected = data.tutorial.complete[i] && clone(data.tutorial.complete[i]);
 			return (
