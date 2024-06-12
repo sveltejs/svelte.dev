@@ -10,8 +10,10 @@ if (!!process.env.VERCEL) {
 }
 
 if (
-	!fs.existsSync('src/lib/tutorial/adapters/common/common.zip') ||
-	process.argv.includes('--force=true')
+	// TODO
+	false &&
+	(!fs.existsSync('src/lib/tutorial/adapters/common/common.zip') ||
+		process.argv.includes('--force=true'))
 ) {
 	const cwd = 'content/tutorial/common';
 
