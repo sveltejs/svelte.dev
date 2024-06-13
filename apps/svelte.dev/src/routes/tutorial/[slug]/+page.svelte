@@ -31,11 +31,48 @@
 	/** @type {import('$lib/tutorial').Stub[]} */
 	let previous_files = [];
 
+	/**
+	 * @param {Record<string, string>} map
+	 * @returns {Record<string, import('$lib/tutorial').Stub>}
+	 */
+	function create_files(map) {
+		/** @type {Record<string, import('$lib/tutorial').Stub>} */
+		const files = {};
+
+		// TODO handle __delete
+		for (const key in map) {
+			const parts = key.split('/');
+			const basename = /** @type {string} */ (parts.pop());
+			const dir = `/${parts.join('/')}`;
+
+			files[dir] ??= {
+				type: 'directory',
+				name: dir,
+				basename
+			};
+
+			const name = `/${key}`;
+
+			files[name] = {
+				type: 'file',
+				name,
+				basename,
+				contents: map[key],
+				text: true // TODO
+			};
+		}
+
+		return files;
+	}
+
+	$: a = create_files(data.exercise.a);
+	$: b = create_files({ ...data.exercise.a, ...data.exercise.b });
+
 	$: mobile = w < 800; // for the things we can't do with media queries
-	$: files.set(Object.values(data.exercise.a));
-	$: solution.set(data.exercise.b);
+	$: files.set(Object.values(a));
+	$: solution.set(b);
 	$: selected_name.set(data.exercise.focus);
-	$: completed = is_completed($files, data.exercise.b);
+	$: completed = is_completed($files, b);
 
 	beforeNavigate(() => {
 		previous_files = $files;
@@ -44,7 +81,7 @@
 	afterNavigate(async () => {
 		w = window.innerWidth;
 
-		const will_delete = previous_files.some((file) => !(file.name in data.exercise.a));
+		const will_delete = previous_files.some((file) => !(file.name in a));
 
 		if (data.exercise.path !== path || will_delete) paused = true;
 		await reset($files);
@@ -220,7 +257,7 @@
 									class:completed
 									disabled={!data.exercise.has_solution}
 									on:click={() => {
-										reset_files(Object.values(completed ? data.exercise.a : data.exercise.b));
+										reset_files(Object.values(completed ? a : b));
 									}}
 								>
 									{#if completed && data.exercise.has_solution}

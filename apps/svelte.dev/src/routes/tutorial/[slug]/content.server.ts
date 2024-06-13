@@ -70,7 +70,7 @@ export async function load_exercise(slug: string): Promise<Exercise> {
 	const scope = metadata.scope as Scope;
 	const focus = metadata.focus as string;
 
-	// TODO load these separately, not for each exercise
+	// TODO load part/chapter assets separately, not for each exercise?
 	const common = {
 		...part.assets,
 		...chapter.assets
@@ -78,6 +78,21 @@ export async function load_exercise(slug: string): Promise<Exercise> {
 
 	const a: Record<string, string> = {};
 	const b: Record<string, string> = {};
+
+	for (const key in exercise.assets) {
+		// TODO handle binary assets
+		if (key.startsWith('app-a/')) {
+			a[key.slice(6)] = await read(exercise.assets[key]).text();
+		} else if (key.startsWith('app-b/')) {
+			a[key.slice(6)] = await read(exercise.assets[key]).text();
+		}
+	}
+
+	for (const key in common) {
+		if (!(key in a)) {
+			a[key] = await read(common[key]).text();
+		}
+	}
 
 	for (const key in exercise.assets) {
 		const response = read(exercise.assets[key]);
@@ -125,8 +140,8 @@ export async function load_exercise(slug: string): Promise<Exercise> {
 			create: new Set(['TODO']),
 			remove: new Set(['TODO'])
 		},
-		a: {},
-		b: {},
+		a,
+		b,
 		has_solution: false
 	};
 }

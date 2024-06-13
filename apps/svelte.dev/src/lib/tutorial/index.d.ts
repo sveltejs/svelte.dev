@@ -52,8 +52,8 @@ export interface Exercise {
 		create: Set<string>;
 		remove: Set<string>;
 	};
-	a: Record<string, Stub>;
-	b: Record<string, Stub>;
+	a: Record<string, string>;
+	b: Record<string, string>;
 	has_solution: boolean;
 }
 
