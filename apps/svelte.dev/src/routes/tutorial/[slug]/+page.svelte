@@ -45,11 +45,13 @@
 			const basename = /** @type {string} */ (parts.pop());
 			const dir = `/${parts.join('/')}`;
 
-			files[dir] ??= {
-				type: 'directory',
-				name: dir,
-				basename
-			};
+			if (parts.length > 0) {
+				files[dir] ??= {
+					type: 'directory',
+					name: dir,
+					basename: /** @type {string} */ (parts.pop())
+				};
+			}
 
 			const name = `/${key}`;
 

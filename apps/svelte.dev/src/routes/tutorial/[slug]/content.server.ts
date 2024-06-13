@@ -72,6 +72,7 @@ export async function load_exercise(slug: string): Promise<Exercise> {
 
 	// TODO load part/chapter assets separately, not for each exercise?
 	const common = {
+		...index.tutorial.assets,
 		...part.assets,
 		...chapter.assets
 	};
