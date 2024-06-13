@@ -47,8 +47,12 @@ if (
 			continue;
 		}
 
+		if (file.startsWith('node_modules/rollup/') || file.startsWith('node_modules/@rollup/')) {
+			continue;
+		}
+
 		zip.addFile(
-			file.replace('node_modules/esbuild-wasm/', 'node_modules/esbuild/'),
+			file.replace('node_modules/@rollup/wasm-node/', 'node_modules/rollup/'),
 			fs.readFileSync(`${cwd}/${file}`)
 		);
 	}
