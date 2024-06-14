@@ -1,6 +1,6 @@
 // @ts-check
 import { execSync } from 'node:child_process';
-import { mkdirSync, statSync, writeFileSync } from 'node:fs';
+import { mkdirSync, readFileSync, readdirSync, statSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -48,21 +48,48 @@ function write_module_to_md(modules, name) {
 	const dir = `content/docs/${name}/98-reference`;
 	mkdirp(dir);
 
-	let idx = 0;
+	// read all files in the directory into an array
+	const files = readdirSync(dir);
+	const fileContents = {};
 
+	for (const file of files) {
+		const filePath = path.join(dir, file);
+		const content = readFileSync(filePath, 'utf8');
+		fileContents[file] = content;
+	}
+
+	// for each module, generate the markdown content and replace the include in the file
+	// TODO support more granular includes
 	for (const module of modules) {
-		let content = `---\ntitle: ${module.name}\n---\n\n${module.comment}\n\n`;
+		let generated = `${module.comment}\n\n`;
 		for (const _export of module.exports) {
-			content += module_to_string(_export);
+			generated += module_to_string(_export);
 		}
 		for (const type of module.types) {
-			content += module_to_string(type);
+			generated += module_to_string(type);
 		}
-		writeFileSync(
-			`${dir}/${idx.toLocaleString(undefined, { minimumIntegerDigits: 2 })}-${module.name.replace(/\W/g, '_')}.md`,
-			content
-		);
-		idx++;
+		for (const [name, content] of Object.entries(fileContents)) {
+			const include_start_str = `<!-- @include_start ${module.name} -->`;
+			const start_idx = content.indexOf(include_start_str);
+			if (start_idx !== -1) {
+				const include_end_str = `<!-- @include_end ${module.name} -->`;
+				const end_idx = content.indexOf(include_end_str);
+				if (end_idx === -1) {
+					throw new Error(`Could not find end include for ${module.name}`);
+				}
+				const new_content =
+					content.slice(0, start_idx + include_start_str.length) +
+					'\n' +
+					generated +
+					'\n' +
+					content.slice(end_idx);
+				fileContents[name] = new_content;
+			}
+		}
+	}
+
+	for (const [name, content] of Object.entries(fileContents)) {
+		writeFileSync(path.join(dir, name), content);
 	}
 }
 
