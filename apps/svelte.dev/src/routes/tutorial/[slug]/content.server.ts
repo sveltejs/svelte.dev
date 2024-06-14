@@ -114,11 +114,12 @@ export async function load_exercise(slug: string): Promise<Exercise> {
 	const b: Record<string, string> = {};
 
 	for (const key in assets.a) {
-		a[key] = await get(assets.a[key]);
+		// https://github.com/vitejs/vite/issues/17484 — need to replace `.css.x` with `.css`
+		a[key.replace(/\.css\.x$/, '.css')] = await get(assets.a[key]);
 	}
 
 	for (const key in assets.b) {
-		b[key] = await get(assets.b[key]);
+		b[key.replace(/\.css\.x$/, '.css')] = await get(assets.b[key]);
 	}
 
 	for (const key in common) {
