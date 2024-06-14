@@ -12,7 +12,8 @@
 		"start": "node build",
 		"check": "node scripts/update.js && svelte-kit sync && svelte-check",
 		"format": "prettier --write .",
-		"lint": "prettier --check ."
+		"lint": "prettier --check .",
+		"sync-docs": "node scripts/sync-docs.js"
 	},
 	"dependencies": {
 		"@codemirror/autocomplete": "^6.9.0",
