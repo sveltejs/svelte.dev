@@ -43,7 +43,6 @@
 		/** @type {string[]} */
 		const to_delete = [];
 
-		// TODO handle __delete
 		for (const key in map) {
 			const contents = map[key];
 
