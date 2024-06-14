@@ -42,6 +42,12 @@
 
 		// TODO handle __delete
 		for (const key in map) {
+			const contents = map[key];
+
+			if (contents.startsWith('__delete')) {
+				continue;
+			}
+
 			const parts = key.split('/');
 			const basename = /** @type {string} */ (parts.pop());
 			const ext = basename.slice(basename.lastIndexOf('.'));
@@ -63,7 +69,7 @@
 				type: 'file',
 				name,
 				basename,
-				contents: map[key],
+				contents,
 				text: text_files.has(ext)
 			};
 		}
