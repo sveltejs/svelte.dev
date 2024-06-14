@@ -47,11 +47,13 @@
 			const ext = basename.slice(basename.lastIndexOf('.'));
 			const dir = `/${parts.join('/')}`;
 
-			if (parts.length > 0) {
+			while (parts.length > 0) {
+				const basename = /** @type {string} */ (parts.pop());
+
 				files[dir] ??= {
 					type: 'directory',
 					name: dir,
-					basename: /** @type {string} */ (parts.pop())
+					basename
 				};
 			}
 
