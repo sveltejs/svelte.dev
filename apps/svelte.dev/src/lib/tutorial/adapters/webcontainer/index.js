@@ -203,7 +203,9 @@ export async function create(base, error, progress, logs, warnings) {
 					await vm.fs.rm(file, { force: true, recursive: true });
 				}
 
-				await vm.mount(convert_stubs_to_tree(to_write));
+				const tree = convert_stubs_to_tree(to_write);
+
+				await vm.mount(tree);
 				await promise;
 				await new Promise((f) => setTimeout(f, 200)); // wait for chokidar
 

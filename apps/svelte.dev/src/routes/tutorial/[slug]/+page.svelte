@@ -53,14 +53,14 @@
 			const parts = key.split('/');
 			const basename = /** @type {string} */ (parts.pop());
 			const ext = basename.slice(basename.lastIndexOf('.'));
-			const dir = `/${parts.join('/')}`;
 
 			if (basename === '__delete') {
-				to_delete.push(dir);
+				to_delete.push(`/${parts.join('/')}`);
 				continue;
 			}
 
 			while (parts.length > 0) {
+				const dir = `/${parts.join('/')}`;
 				const basename = /** @type {string} */ (parts.pop());
 
 				files[dir] ??= {
