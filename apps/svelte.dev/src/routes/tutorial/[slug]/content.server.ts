@@ -2,6 +2,7 @@ import { read } from '$app/server';
 import { index } from '$lib/server/content';
 import { transform } from '$lib/server/tutorial/markdown';
 import type { Exercise, ExerciseStub, PartStub, Scope } from '$lib/tutorial';
+import { error } from '@sveltejs/kit';
 import type { Document } from '@sveltejs/site-kit';
 
 const text_files = new Set([
@@ -59,6 +60,10 @@ export const parts: PartStub[] = index.tutorial.children.map((part) => {
 });
 
 export async function load_exercise(slug: string): Promise<Exercise> {
+	if (!(slug in lookup)) {
+		error(404, 'No such tutorial found');
+	}
+
 	const { part, chapter, exercise, prev, next } = lookup[slug];
 
 	const metadata = {
