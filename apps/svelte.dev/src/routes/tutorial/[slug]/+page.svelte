@@ -19,6 +19,7 @@
 		selected_name,
 		solution
 	} from './state.js';
+	import { text_files } from './shared';
 
 	export let data;
 
@@ -43,6 +44,7 @@
 		for (const key in map) {
 			const parts = key.split('/');
 			const basename = /** @type {string} */ (parts.pop());
+			const ext = basename.slice(basename.lastIndexOf('.'));
 			const dir = `/${parts.join('/')}`;
 
 			if (parts.length > 0) {
@@ -60,7 +62,7 @@
 				name,
 				basename,
 				contents: map[key],
-				text: true // TODO
+				text: text_files.has(ext)
 			};
 		}
 

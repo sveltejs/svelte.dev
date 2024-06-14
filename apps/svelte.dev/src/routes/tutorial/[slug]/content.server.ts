@@ -3,20 +3,8 @@ import { index } from '$lib/server/content';
 import { transform } from '$lib/server/tutorial/markdown';
 import type { Exercise, ExerciseStub, PartStub, Scope } from '$lib/tutorial';
 import { error } from '@sveltejs/kit';
+import { text_files } from './shared';
 import type { Document } from '@sveltejs/site-kit';
-
-const text_files = new Set([
-	'.svelte',
-	'.txt',
-	'.json',
-	'.js',
-	'.ts',
-	'.css',
-	'.svg',
-	'.html',
-	'.md',
-	'.env'
-]);
 
 const lookup: Record<
 	string,
@@ -108,7 +96,9 @@ export async function load_exercise(slug: string): Promise<Exercise> {
 		const ext = match ? match[0] : '';
 		const is_text = text_files.has(ext);
 
-		const data = is_text ? await response.text() : 'TODO base64-encode binary files';
+		const data = is_text
+			? await response.text()
+			: Buffer.from(await response.arrayBuffer()).toString('base64');
 
 		if (key.startsWith('app-a/')) {
 			a[key.slice(6)] = data;
