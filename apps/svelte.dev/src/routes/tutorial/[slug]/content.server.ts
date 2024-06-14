@@ -84,6 +84,7 @@ export async function load_exercise(slug: string): Promise<Exercise> {
 
 	const a: Record<string, string> = {};
 	const b: Record<string, string> = {};
+	let has_solution = false;
 
 	for (const key in exercise.assets) {
 		// TODO handle binary assets
@@ -91,6 +92,7 @@ export async function load_exercise(slug: string): Promise<Exercise> {
 			a[key.slice(6)] = await read(exercise.assets[key]).text();
 		} else if (key.startsWith('app-b/')) {
 			a[key.slice(6)] = await read(exercise.assets[key]).text();
+			has_solution = true;
 		}
 	}
 
@@ -148,6 +150,6 @@ export async function load_exercise(slug: string): Promise<Exercise> {
 		},
 		a,
 		b,
-		has_solution: false
+		has_solution
 	};
 }
