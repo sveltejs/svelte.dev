@@ -40,6 +40,9 @@
 		/** @type {Record<string, import('$lib/tutorial').Stub>} */
 		const files = {};
 
+		/** @type {string[]} */
+		const to_delete = [];
+
 		// TODO handle __delete
 		for (const key in map) {
 			const contents = map[key];
@@ -52,6 +55,11 @@
 			const basename = /** @type {string} */ (parts.pop());
 			const ext = basename.slice(basename.lastIndexOf('.'));
 			const dir = `/${parts.join('/')}`;
+
+			if (basename === '__delete') {
+				to_delete.push(dir);
+				continue;
+			}
 
 			while (parts.length > 0) {
 				const basename = /** @type {string} */ (parts.pop());
@@ -72,6 +80,14 @@
 				contents,
 				text: text_files.has(ext)
 			};
+		}
+
+		for (const dir of to_delete) {
+			for (const key in files) {
+				if (key === dir || key.startsWith(dir + '/')) {
+					delete files[key];
+				}
+			}
 		}
 
 		return files;
