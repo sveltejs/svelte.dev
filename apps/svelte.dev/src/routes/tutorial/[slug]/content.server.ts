@@ -77,9 +77,9 @@ export const parts: PartStub[] = index.tutorial.children.map((part) => {
 	};
 });
 
-async function get(asset: string) {
-	const response = read(asset);
-	const match = /\.[^.]+$/.exec(asset);
+async function get(assets: Record<string, string>, key: string) {
+	const response = read(assets[key]);
+	const match = /\.[^.]+$/.exec(key);
 	const ext = match ? match[0] : '';
 
 	return text_files.has(ext)
@@ -115,11 +115,11 @@ export async function load_exercise(slug: string): Promise<Exercise> {
 
 	for (const key in assets.a) {
 		// https://github.com/vitejs/vite/issues/17484 — need to replace `.css.x` with `.css`
-		a[key.replace(/\.css\.x$/, '.css')] = await get(assets.a[key]);
+		a[key.replace(/\.css\.x$/, '.css')] = await get(assets.a, key);
 	}
 
 	for (const key in assets.b) {
-		b[key.replace(/\.css\.x$/, '.css')] = await get(assets.b[key]);
+		b[key.replace(/\.css\.x$/, '.css')] = await get(assets.b, key);
 	}
 
 	for (const key in common) {
