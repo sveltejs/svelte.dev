@@ -338,7 +338,9 @@ adapt(builder: Builder): MaybePromise<void>;
 <div class="ts-block-property-details">
 
 <div class="ts-block-property-bullets">
+
 - `builder` An object provided by SvelteKit that contains methods for adapting the app
+
 </div>
 
 This function is called after SvelteKit has built your app.
@@ -365,7 +367,9 @@ read?: (details: { config: any; route: { id: string } }) => boolean;
 <div class="ts-block-property-details">
 
 <div class="ts-block-property-bullets">
+
 - `config` The merged route config
+
 </div>
 
 Test support for `read` from `$app/server`
@@ -574,8 +578,10 @@ createEntries(fn: (route: RouteDefinition) => AdapterEntry): Promise<void>;
 <div class="ts-block-property-details">
 
 <div class="ts-block-property-bullets">
+
 - `fn` A function that groups a set of routes into an entry point
 - <span class="tag deprecated">deprecated</span> Use `builder.routes` instead
+
 </div>
 
 Create separate functions that map to one or more routes of your app.
@@ -631,7 +637,9 @@ generateManifest(opts: { relativePath: string; routes?: RouteDefinition[] }): st
 <div class="ts-block-property-details">
 
 <div class="ts-block-property-bullets">
+
 - `opts` a relative path to the base directory of the app and optionally in which format (esm or cjs) the manifest should be generated
+
 </div>
 
 Generate a server-side manifest to initialise the SvelteKit [server](https://kit.svelte.dev/docs/types#public-types-server) with.
@@ -648,7 +656,9 @@ getBuildDirectory(name: string): string;
 <div class="ts-block-property-details">
 
 <div class="ts-block-property-bullets">
+
 - `name` path to the file, relative to the build directory
+
 </div>
 
 Resolve a path to the `name` directory inside `outDir`, e.g. `/path/to/.svelte-kit/my-adapter`.
@@ -704,8 +714,10 @@ writeClient(dest: string): string[];
 <div class="ts-block-property-details">
 
 <div class="ts-block-property-bullets">
+
 - `dest` the destination folder
 - <span class="tag">returns</span> an array of files written to `dest`
+
 </div>
 
 Write client assets to `dest`.
@@ -722,8 +734,10 @@ writePrerendered(dest: string): string[];
 <div class="ts-block-property-details">
 
 <div class="ts-block-property-bullets">
+
 - `dest` the destination folder
 - <span class="tag">returns</span> an array of files written to `dest`
+
 </div>
 
 Write prerendered files to `dest`.
@@ -740,8 +754,10 @@ writeServer(dest: string): string[];
 <div class="ts-block-property-details">
 
 <div class="ts-block-property-bullets">
+
 - `dest` the destination folder
 - <span class="tag">returns</span> an array of files written to `dest`
+
 </div>
 
 Write server-side code to `dest`.
@@ -765,11 +781,13 @@ copy(
 <div class="ts-block-property-details">
 
 <div class="ts-block-property-bullets">
+
 - `from` the source file or directory
 - `to` the destination file or directory
 - `opts.filter` a function to determine whether a file or directory should be copied
 - `opts.replace` a map of strings to replace
 - <span class="tag">returns</span> an array of files that were copied
+
 </div>
 
 Copy a file or directory.
@@ -786,7 +804,9 @@ compress(directory: string): Promise<void>;
 <div class="ts-block-property-details">
 
 <div class="ts-block-property-bullets">
+
 - `directory` The directory containing the files to be compressed
+
 </div>
 
 Compress files in `directory` with gzip and brotli, where appropriate. Generates `.gz` and `.br` files alongside the originals.
@@ -823,8 +843,10 @@ get(name: string, opts?: import('cookie').CookieParseOptions): string | undefine
 <div class="ts-block-property-details">
 
 <div class="ts-block-property-bullets">
+
 - `name` the name of the cookie
 - `opts` the options, passed directly to `cookie.parse`. See documentation [here](https://github.com/jshttp/cookie#cookieparsestr-options)
+
 </div>
 
 Gets a cookie that was previously set with `cookies.set`, or from the request headers.
@@ -841,7 +863,9 @@ getAll(opts?: import('cookie').CookieParseOptions): Array<{ name: string; value:
 <div class="ts-block-property-details">
 
 <div class="ts-block-property-bullets">
+
 - `opts` the options, passed directly to `cookie.parse`. See documentation [here](https://github.com/jshttp/cookie#cookieparsestr-options)
+
 </div>
 
 Gets all cookies that were previously set with `cookies.set`, or from the request headers.
@@ -862,9 +886,11 @@ set(
 <div class="ts-block-property-details">
 
 <div class="ts-block-property-bullets">
+
 - `name` the name of the cookie
 - `value` the cookie value
 - `opts` the options, passed directly to `cookie.serialize`. See documentation [here](https://github.com/jshttp/cookie#cookieserializename-value-options)
+
 </div>
 
 Sets a cookie. This will add a `set-cookie` header to the response, but also make the cookie available via `cookies.get` or `cookies.getAll` during the current request.
@@ -885,8 +911,10 @@ delete(name: string, opts: import('cookie').CookieSerializeOptions & { path: str
 <div class="ts-block-property-details">
 
 <div class="ts-block-property-bullets">
+
 - `name` the name of the cookie
 - `opts` the options, passed directly to `cookie.serialize`. The `path` must match the path of the cookie you want to delete. See documentation [here](https://github.com/jshttp/cookie#cookieserializename-value-options)
+
 </div>
 
 Deletes a cookie by setting its value to an empty string and setting the expiry date in the past.
@@ -909,9 +937,11 @@ serialize(
 <div class="ts-block-property-details">
 
 <div class="ts-block-property-bullets">
+
 - `name` the name of the cookie
 - `value` the cookie value
 - `opts` the options, passed directly to `cookie.serialize`. See documentation [here](https://github.com/jshttp/cookie#cookieserializename-value-options)
+
 </div>
 
 Serialize a cookie name-value pair into a `Set-Cookie` header string, but don't apply it to the response.
@@ -2074,7 +2104,9 @@ transformPageChunk?(input: { html: string; done: boolean }): MaybePromise<string
 <div class="ts-block-property-details">
 
 <div class="ts-block-property-bullets">
+
 - `input` the html chunk and the info if this is the last chunk
+
 </div>
 
 Applies custom transforms to HTML. If `done` is true, it's the final chunk. Chunks are not guaranteed to be well-formed HTML
@@ -2093,8 +2125,10 @@ filterSerializedResponseHeaders?(name: string, value: string): boolean;
 <div class="ts-block-property-details">
 
 <div class="ts-block-property-bullets">
+
 - `name` header name
 - `value` header value
+
 </div>
 
 Determines which headers should be included in serialized responses when a `load` function loads a resource with `fetch`.
@@ -2112,7 +2146,9 @@ preload?(input: { type: 'font' | 'css' | 'js' | 'asset'; path: string }): boolea
 <div class="ts-block-property-details">
 
 <div class="ts-block-property-bullets">
+
 - `input` the type of the file and its path
+
 </div>
 
 Determines what should be added to the `<head>` tag to preload it.

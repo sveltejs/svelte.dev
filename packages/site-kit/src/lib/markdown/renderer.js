@@ -774,9 +774,11 @@ function fence(code, lang = 'ts') {
 function stringify(member, lang = 'ts') {
 	if (!member) return '';
 
+	// It's important to always use two newlines after a dom tag or else markdown does not render it properly
+
 	const bullet_block =
 		(member.bullets?.length ?? 0) > 0
-			? `\n\n<div class="ts-block-property-bullets">\n${member.bullets?.join('\n')}\n</div>`
+			? `\n\n<div class="ts-block-property-bullets">\n\n${member.bullets?.join('\n')}\n\n</div>`
 			: '';
 
 	const comment = member.comment
