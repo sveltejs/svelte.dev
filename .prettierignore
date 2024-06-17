@@ -4,4 +4,4 @@ node_modules
 dist
 pnpm-lock.yaml
 .vercel
-apps/svelte.dev/content/docs/kit/reference
+apps/svelte.dev/content/docs/kit/98-reference

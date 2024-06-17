@@ -3,6 +3,7 @@ import { execSync } from 'node:child_process';
 import { mkdirSync, readFileSync, readdirSync, statSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { stringify_module } from '@sveltejs/site-kit/markdown';
 
 /** @param {string} dir */
 function mkdirp(dir) {
@@ -61,13 +62,15 @@ function write_module_to_md(modules, name) {
 	// for each module, generate the markdown content and replace the include in the file
 	// TODO support more granular includes
 	for (const module of modules) {
-		let generated = `${module.comment}\n\n`;
-		for (const _export of module.exports) {
-			generated += module_to_string(_export);
-		}
-		for (const type of module.types) {
-			generated += module_to_string(type);
-		}
+		// let generated = `${module.comment}\n\n`;
+		// for (const _export of module.exports) {
+		// 	generated += module_to_string(_export);
+		// }
+		// for (const type of module.types) {
+		// 	generated += module_to_string(type);
+		// }
+		const generated = stringify_module(module);
+
 		for (const [name, content] of Object.entries(fileContents)) {
 			const include_start_str = `<!-- @include_start ${module.name} -->`;
 			const start_idx = content.indexOf(include_start_str);
