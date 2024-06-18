@@ -1,6 +1,6 @@
 import { read } from '$app/server';
 import { index } from '$lib/server/content';
-import { transform } from '$lib/server/tutorial/markdown';
+import { transform } from './markdown.server';
 import type { Exercise, ExerciseStub, PartStub, Scope } from '$lib/tutorial';
 import { error } from '@sveltejs/kit';
 import { text_files } from './shared';
@@ -156,8 +156,8 @@ export async function load_exercise(slug: string): Promise<Exercise> {
 		}),
 		dir: exercise.file.split('/').slice(0, -1).join('/'),
 		editing_constraints: {
-			create: new Set(['TODO']),
-			remove: new Set(['TODO'])
+			create: new Set(exercise.metadata.editing_constraints?.create ?? []),
+			remove: new Set(exercise.metadata.editing_constraints?.remove ?? [])
 		},
 		a,
 		b,
