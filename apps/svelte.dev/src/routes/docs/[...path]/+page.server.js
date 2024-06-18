@@ -3,20 +3,20 @@ import { error, redirect } from '@sveltejs/kit';
 import { markedTransform } from '@sveltejs/site-kit/markdown';
 
 export async function load({ params }) {
-	const page = index[`docs/${params.path}`];
+	const document = index[`docs/${params.path}`];
 
-	if (!page) {
+	if (!document) {
 		error(404);
 	}
 
-	if (!page.body) {
-		let child = page;
+	if (!document.body) {
+		let child = document;
 
 		while (child.children[0]) {
 			child = child.children[0];
 		}
 
-		if (child === page) {
+		if (child === document) {
 			error(404);
 		}
 
@@ -26,15 +26,11 @@ export async function load({ params }) {
 	const pkg = params.path.split('/')[0];
 
 	return {
-		// TODO DRY this out
-		page: {
-			slug: page.slug,
-			file: page.file,
-			title: page.metadata.title,
-			sections: page.sections,
-			body: await markedTransform(page.body),
-			prev: page.prev?.slug.startsWith(`docs/${pkg}/`) ? page.prev : null,
-			next: page.next?.slug.startsWith(`docs/${pkg}/`) ? page.next : null
+		document: {
+			...document,
+			body: await markedTransform(document.body),
+			prev: document.prev?.slug.startsWith(`docs/${pkg}/`) ? document.prev : null,
+			next: document.next?.slug.startsWith(`docs/${pkg}/`) ? document.next : null
 		}
 	};
 }

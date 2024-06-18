@@ -17,7 +17,7 @@
 	import { readable } from 'svelte/store';
 	import { slide } from 'svelte/transition';
 
-	/** @type {{details: import('./types').Page, orientation?: 'auto' | 'inline' | 'aside', children?: import('svelte').Snippet}} */
+	/** @type {{details: import('../types').Document, orientation?: 'auto' | 'inline' | 'aside', children?: import('svelte').Snippet}} */
 	let { details, orientation = 'auto', children } = $props();
 
 	const dispatch = createEventDispatcher();
@@ -223,9 +223,9 @@
 				<ul>
 					<li>
 						<a
-							href={details.path}
+							href="/{details.slug}"
 							aria-current={hash === '' ? 'page' : false}
-							onclick={on_link_click}>{details.title}</a
+							onclick={on_link_click}>{details.metadata.title}</a
 						>
 					</li>
 					{#each details.sections as { title, slug }}
