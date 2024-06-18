@@ -79,6 +79,7 @@ setContext('my-context', {
 	count: writable(0)
 });
 ```
+
 ```js
 /// no-file
 // in a child component

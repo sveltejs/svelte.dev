@@ -11,7 +11,7 @@ A component can specify _fallbacks_ for any slots that are left empty, by puttin
 		<slot name="telephone">
 			+++<i>(telephone)</i>+++
 		</slot>
-		
+
 		<slot name="company">
 			+++<i>(company name)</i>+++
 		</slot>
@@ -20,7 +20,7 @@ A component can specify _fallbacks_ for any slots that are left empty, by puttin
 	<slot>
 		+++<i>(name)</i>+++
 	</slot>
-		
+
 	<footer>
 		<slot name="address">
 			+++<i>(address)</i>+++
