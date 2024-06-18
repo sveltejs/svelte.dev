@@ -2,8 +2,8 @@ import { extract_frontmatter, slugify } from '$lib/markdown/utils';
 import type { Document } from '../../types';
 
 export async function create_index(
-	documents: Record<string, { default: string }>,
-	assets: Record<string, { default: string }>,
+	documents: Record<string, string>,
+	assets: Record<string, string>,
 	base: string,
 	read: (asset: string) => Response
 ) {
@@ -15,7 +15,7 @@ export async function create_index(
 		const file = key.slice(base.length + 1);
 		const slug = file.replace(/(^|\/)\d+-/g, '$1').replace(/(\/index)?\.md$/, '');
 
-		const text = await read(documents[key].default).text();
+		const text = await read(documents[key]).text();
 		const { metadata, body } = extract_frontmatter(text);
 
 		if (!metadata.title) {
@@ -59,7 +59,7 @@ export async function create_index(
 
 		const document = content[slug];
 
-		(document.assets ??= {})[file] = assets[key].default;
+		(document.assets ??= {})[file] = assets[key];
 	}
 
 	return content;
