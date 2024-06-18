@@ -1,15 +1,9 @@
 <script>
-	import { page } from '$app/stores';
 	import { Icon } from '@sveltejs/site-kit/components';
 	import { copy_code_descendants } from '@sveltejs/site-kit/actions';
 	import { DocsOnThisPage, setupDocsHovers } from '@sveltejs/site-kit/docs';
 
 	let { data } = $props();
-
-	const pages = $derived(data.sections.flatMap((page) => page.children));
-	const index = $derived(pages.findIndex(({ path }) => path === $page.url.pathname));
-	const prev = $derived(pages[index - 1]);
-	const next = $derived(pages[index + 1]);
 
 	setupDocsHovers();
 </script>
