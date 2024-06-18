@@ -23,13 +23,17 @@ export async function load({ params }) {
 		redirect(307, `/${child.slug}`);
 	}
 
+	const pkg = params.path.split('/')[0];
+
 	return {
 		// TODO DRY this out
 		page: {
 			slug: page.slug,
 			title: page.metadata.title,
 			sections: page.sections,
-			body: await markedTransform(page.body)
+			body: await markedTransform(page.body),
+			prev: page.prev?.slug.startsWith(`docs/${pkg}/`) ? page.prev : null,
+			next: page.next?.slug.startsWith(`docs/${pkg}/`) ? page.next : null
 		}
 	};
 }

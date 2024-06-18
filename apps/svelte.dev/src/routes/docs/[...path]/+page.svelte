@@ -37,17 +37,17 @@
 
 <div class="controls">
 	<div>
-		<span class:faded={!prev}>previous</span>
+		<span class:faded={!data.page.prev}>previous</span>
 
-		{#if prev}
-			<a href={prev.path}>{prev.metadata.title}</a>
+		{#if data.page.prev}
+			<a href="/{data.page.prev.slug}">{data.page.prev.title}</a>
 		{/if}
 	</div>
 
 	<div>
-		<span class:faded={!next}>next</span>
-		{#if next}
-			<a href={next.path}>{next.metadata.title}</a>
+		<span class:faded={!data.page.next}>next</span>
+		{#if data.page.next}
+			<a href="/{data.page.next.slug}">{data.page.next.title}</a>
 		{/if}
 	</div>
 </div>

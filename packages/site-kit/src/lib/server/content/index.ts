@@ -6,8 +6,10 @@ export async function create_index(
 	assets: Record<string, { default: string }>,
 	base: string,
 	read: (asset: string) => Response
-) {
+): Promise<Record<string, Document>> {
 	const content: Record<string, Document> = {};
+
+	const roots: Document[] = [];
 
 	for (const key in documents) {
 		if (key.includes('+assets')) continue;
@@ -35,7 +37,9 @@ export async function create_index(
 			metadata: metadata as { title: string; [key: string]: any },
 			body,
 			sections,
-			children: []
+			children: [],
+			prev: null,
+			next: null
 		};
 	}
 
@@ -43,11 +47,17 @@ export async function create_index(
 		const parts = slug.split('/');
 		parts.pop();
 
-		if (parts.length > 0) {
+		const document = content[slug];
+
+		if (parts.length === 0) {
+			roots.push(document);
+		} else {
 			const parent = content[parts.join('/')];
 
 			if (parent) {
-				parent.children.push(content[slug]);
+				parent.children.push(document);
+			} else {
+				roots.push(document);
 			}
 		}
 	}
@@ -62,5 +72,35 @@ export async function create_index(
 		(document.assets ??= {})[file] = assets[key].default;
 	}
 
+	let prev: Document | null = null;
+
+	for (const document of roots) {
+		console.group(document.slug);
+		prev = create_links(document, prev);
+		console.groupEnd();
+	}
+
 	return content;
+}
+
+function create_links(document: Document, prev: Document | null): Document | null {
+	if (document.children.length === 0 && !document.body) {
+		throw new Error(`Document ${document.slug} has no body and no children`);
+	}
+
+	if (document.body) {
+		link(prev, document);
+		prev = document;
+	}
+
+	for (let i = 0; i < document.children.length; i += 1) {
+		prev = create_links(document.children[i], prev);
+	}
+
+	return prev;
+}
+
+function link(prev: Document | null, next: Document | null) {
+	if (prev) prev.next = next && { slug: next.slug, title: next.metadata.title };
+	if (next) next.prev = prev && { slug: prev.slug, title: prev.metadata.title };
 }
