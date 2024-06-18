@@ -49,7 +49,7 @@
 				{/each}
 			</div>
 
-			<a href="/examples">more <span class="large-show">&nbsp;examples</span> &rarr;</a>
+			<a href="/repl">more <span class="large-show">&nbsp;examples</span> &rarr;</a>
 		</div>
 
 		{#if selected}

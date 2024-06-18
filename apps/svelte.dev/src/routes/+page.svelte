@@ -70,8 +70,8 @@
 				href: '/tutorial'
 			},
 			{
-				title: 'examples',
-				href: '/examples'
+				title: 'repl',
+				href: '/repl'
 			},
 			{
 				title: 'blog',
