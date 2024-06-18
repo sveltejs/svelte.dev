@@ -19,7 +19,7 @@
 <div class="text" id="docs-content" use:copy_code_descendants>
 	<a
 		class="edit"
-		href="https://github.com/sveltejs/svelte/edit/svelte-4/documentation/docs/{data.page.file}"
+		href="https://github.com/sveltejs/svelte.dev/edit/main/apps/svelte.dev/content/{data.page.file}"
 	>
 		<Icon size={50} name="edit" /> Edit this page on GitHub
 	</a>
