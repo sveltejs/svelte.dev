@@ -28,7 +28,11 @@
 		<Icon size={50} name="edit" /> Edit this page on GitHub
 	</a>
 
-	<DocsOnThisPage details={data.document} />
+	<DocsOnThisPage
+		title={data.document.metadata.title}
+		path="/{data.document.slug}"
+		sections={data.document.sections}
+	/>
 
 	{@html data.document.body}
 </div>
