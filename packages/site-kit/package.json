@@ -5,10 +5,6 @@
 	"type": "module",
 	"scripts": {
 		"dev": "vite dev",
-		"package:watch": "svelte-kit sync && svelte-package --watch",
-		"package": "svelte-kit sync && svelte-package",
-		"build": "npm run package",
-		"prepublishOnly": "npm run package",
 		"check": "svelte-kit sync && svelte-check",
 		"lint": "prettier --check .",
 		"format": "prettier --write ."
@@ -30,7 +26,6 @@
 	},
 	"devDependencies": {
 		"@sveltejs/kit": "^2.5.7",
-		"@sveltejs/package": "^2.3.1",
 		"@types/node": "^20.12.11",
 		"flexsearch": "^0.7.43",
 		"magic-string": "^0.30.10",
