@@ -26,6 +26,8 @@ export interface Document {
 	sections: Section[];
 	children: Document[];
 	assets?: Record<string, string>;
+	next: null | { slug: string; title: string };
+	prev: null | { slug: string; title: string };
 }
 
 export interface Section {

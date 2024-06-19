@@ -25,8 +25,7 @@ export const modules = /** @type {import('@sveltejs/site-kit/markdown').Modules}
         "name": "by",
         "comment": "Sometimes you need to create complex derivations that don't fit inside a short expression.\nIn these cases, you can use `$derived.by` which accepts a function as its argument.\n\nExample:\n```ts\nlet total = $derived.by(() => {\n  let result = 0;\n for (const n of numbers) {\n   result += n;\n  }\n  return result;\n});\n```\n\nhttps://svelte-5-preview.vercel.app/docs/runes#$derived-by",
         "snippet": "function by<T>(fn: () => T): T;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "call",
@@ -69,8 +68,7 @@ export const modules = /** @type {import('@sveltejs/site-kit/markdown').Modules}
         "name": "active",
         "comment": "The `$effect.active` rune is an advanced feature that tells you whether or not the code is running inside an effect or inside your template.\n\nExample:\n```svelte\n<script>\n  console.log('in component setup:', $effect.active()); // false\n\n  $effect(() => {\n    console.log('in effect:', $effect.active()); // true\n  });\n</script>\n\n<p>in template: {$effect.active()}</p> <!-- true -->\n```\n\nThis allows you to (for example) add things like subscriptions without causing memory leaks, by putting them in child effects.\n\nhttps://svelte-5-preview.vercel.app/docs/runes#$effect-active",
         "snippet": "function active(): boolean;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "apply",
@@ -111,8 +109,7 @@ export const modules = /** @type {import('@sveltejs/site-kit/markdown').Modules}
         "name": "pre",
         "comment": "Runs code right before a component is mounted to the DOM, and then whenever its dependencies change, i.e. `$state` or `$derived` values.\nThe timing of the execution is right before the DOM is updated.\n\nExample:\n```ts\n$effect.pre(() => console.log('The count is now ' + count));\n```\n\nIf you return a function from the effect, it will be called right before the effect is run again, or when the component is unmounted.\n\nDoes not run during server side rendering.\n\nhttps://svelte-5-preview.vercel.app/docs/runes#$effect-pre",
         "snippet": "function pre(fn: () => void | (() => void)): void;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "prototype",
@@ -123,8 +120,7 @@ export const modules = /** @type {import('@sveltejs/site-kit/markdown').Modules}
         "name": "root",
         "comment": "The `$effect.root` rune is an advanced feature that creates a non-tracked scope that doesn't auto-cleanup. This is useful for\nnested effects that you want to manually control. This rune also allows for creation of effects outside of the component\ninitialisation phase.\n\nExample:\n```svelte\n<script>\n  let count = $state(0);\n\n  const cleanup = $effect.root(() => {\n    $effect(() => {\n\t\t\tconsole.log(count);\n\t\t})\n\n     return () => {\n       console.log('effect root cleanup');\n\t\t\t}\n  });\n</script>\n\n<button onclick={() => cleanup()}>cleanup</button>\n```\n\nhttps://svelte-5-preview.vercel.app/docs/runes#$effect-root",
         "snippet": "function root(fn: () => void | (() => void)): () => void;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "toString",
@@ -167,15 +163,13 @@ export const modules = /** @type {import('@sveltejs/site-kit/markdown').Modules}
         "name": "frozen",
         "comment": "Declares reactive read-only state that is shallowly immutable.\n\nExample:\n```ts\n<script>\n  let items = $state.frozen([0]);\n\n  const addItem = () => {\n    items = [...items, items.length];\n  };\n</script>\n\n<button on:click={addItem}>\n  {items.join(', ')}\n</button>\n```\n\nhttps://svelte-5-preview.vercel.app/docs/runes#$state-raw",
         "snippet": "function frozen<T>(initial: T): Readonly<T>;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "frozen",
         "comment": "",
         "snippet": "function frozen<T>(): Readonly<T> | undefined;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "length",
@@ -196,8 +190,7 @@ export const modules = /** @type {import('@sveltejs/site-kit/markdown').Modules}
         "name": "snapshot",
         "comment": "To take a static snapshot of a deeply reactive `$state` proxy, use `$state.snapshot`:\n\nExample:\n```ts\n<script>\n  let counter = $state({ count: 0 });\n\n  function onclick() {\n    // Will log `{ count: ... }` rather than `Proxy { ... }`\n    console.log($state.snapshot(counter));\n  };\n</script>\n```\n\nhttps://svelte-5-preview.vercel.app/docs/runes#$state.snapshot",
         "snippet": "function snapshot<T>(state: T): T;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "toString",
@@ -270,22 +263,19 @@ export const modules = /** @type {import('@sveltejs/site-kit/markdown').Modules}
         "name": "ComponentEvents",
         "comment": "Convenience type to get the events the given component expects. Example:\n```html\n<script lang=\"ts\">\n   import type { ComponentEvents } from 'svelte';\n   import Component from './Component.svelte';\n\n   function handleCloseEvent(event: ComponentEvents<Component>['close']) {\n      console.log(event.detail);\n   }\n</script>\n\n<Component on:close={handleCloseEvent} />\n```",
         "snippet": "type ComponentEvents<Comp extends SvelteComponent> =\n\tComp extends SvelteComponent<any, infer Events>\n\t\t? Events\n\t\t: never;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "ComponentProps",
         "comment": "Convenience type to get the props the given component expects. Example:\n```html\n<script lang=\"ts\">\n\timport type { ComponentProps } from 'svelte';\n\timport Component from './Component.svelte';\n\n\tconst props: ComponentProps<Component> = { foo: 'bar' }; // Errors if these aren't the correct props\n</script>\n```",
         "snippet": "type ComponentProps<Comp extends SvelteComponent> =\n\tComp extends SvelteComponent<infer Props> ? Props : never;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "ComponentType",
         "comment": "Convenience type to get the type of a Svelte component. Useful for example in combination with\ndynamic components using `<svelte:component>`.\n\nExample:\n```html\n<script lang=\"ts\">\n\timport type { ComponentType, SvelteComponent } from 'svelte';\n\timport Component1 from './Component1.svelte';\n\timport Component2 from './Component2.svelte';\n\n\tconst component: ComponentType = someLogic() ? Component1 : Component2;\n\tconst componentOfCertainSubType: ComponentType<SvelteComponent<{ needsThisProp: string }>> = someLogic() ? Component1 : Component2;\n</script>\n\n<svelte:component this={component} />\n<svelte:component this={componentOfCertainSubType} needsThisProp=\"hello\" />\n```",
         "snippet": "type ComponentType<\n\tComp extends SvelteComponent = SvelteComponent\n> = (new (\n\toptions: ComponentConstructorOptions<\n\t\tComp extends SvelteComponent<infer Props>\n\t\t\t? Props\n\t\t\t: Record<string, any>\n\t>\n) => Comp) & {\n\t/** The custom element version of the component. Only present if compiled with the `customElement` compiler option */\n\telement?: typeof HTMLElement;\n};",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "EventDispatcher",
@@ -298,15 +288,13 @@ export const modules = /** @type {import('@sveltejs/site-kit/markdown').Modules}
             "bullets": [],
             "children": []
           }
-        ],
-        "deprecated": null
+        ]
       },
       {
         "name": "Snippet",
         "comment": "The type of a `#snippet` block. You can use it to (for example) express that your component expects a snippet of a certain type:\n```ts\nlet { banner }: { banner: Snippet<{ text: string }> } = $props();\n```\nYou can only call a snippet through the `{@render ...}` tag.",
         "snippet": "type Snippet<T extends unknown[] = []> =\n\t// this conditional allows tuples but not arrays. Arrays would indicate a\n\t// rest parameter type, which is not supported. If rest parameters are added\n\t// in the future, the condition can be removed.\n\tnumber extends T['length']\n\t\t? never\n\t\t: {\n\t\t\t\t(\n\t\t\t\t\tthis: void,\n\t\t\t\t\t...args: T\n\t\t\t\t): typeof SnippetReturn & {\n\t\t\t\t\t_: 'functions passed to {@render ...} tags must use the `Snippet` type imported from \"svelte\"';\n\t\t\t\t};\n\t\t\t};",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "SvelteComponent",
@@ -361,8 +349,7 @@ export const modules = /** @type {import('@sveltejs/site-kit/markdown').Modules}
             ],
             "children": []
           }
-        ],
-        "deprecated": null
+        ]
       },
       {
         "name": "SvelteComponentTyped",
@@ -397,85 +384,73 @@ export const modules = /** @type {import('@sveltejs/site-kit/markdown').Modules}
         "name": "flushSync",
         "comment": "Synchronously flushes any pending state changes and those that result from it.",
         "snippet": "function flushSync(fn?: (() => void) | undefined): void;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "getAllContexts",
         "comment": "Retrieves the whole context map that belongs to the closest parent component.\nMust be called during component initialisation. Useful, for example, if you\nprogrammatically create a component and want to pass the existing context to it.\n\nhttps://svelte.dev/docs/svelte#getallcontexts",
         "snippet": "function getAllContexts<\n\tT extends Map<any, any> = Map<any, any>\n>(): T;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "getContext",
         "comment": "Retrieves the context that belongs to the closest parent component with the specified `key`.\nMust be called during component initialisation.\n\nhttps://svelte.dev/docs/svelte#getcontext",
         "snippet": "function getContext<T>(key: any): T;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "hasContext",
         "comment": "Checks whether a given `key` has been set in the context of a parent component.\nMust be called during component initialisation.\n\nhttps://svelte.dev/docs/svelte#hascontext",
         "snippet": "function hasContext(key: any): boolean;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "hydrate",
         "comment": "Hydrates a component on the given target and returns the exports and potentially the props (if compiled with `accessors: true`) of the component",
         "snippet": "function hydrate<\n\tProps extends Record<string, any>,\n\tExports extends Record<string, any>,\n\tEvents extends Record<string, any>\n>(\n\tcomponent: ComponentType<\n\t\tSvelteComponent<Props, Events, any>\n\t>,\n\toptions: {\n\t\ttarget: Document | Element | ShadowRoot;\n\t\tprops?: Props | undefined;\n\t\tevents?:\n\t\t\t| {\n\t\t\t\t\t[Property in keyof Events]: (\n\t\t\t\t\t\te: Events[Property]\n\t\t\t\t\t) => any;\n\t\t\t  }\n\t\t\t| undefined;\n\t\tcontext?: Map<any, any> | undefined;\n\t\tintro?: boolean | undefined;\n\t\trecover?: boolean | undefined;\n\t}\n): Exports;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "mount",
         "comment": "Mounts a component to the given target and returns the exports and potentially the props (if compiled with `accessors: true`) of the component",
         "snippet": "function mount<\n\tProps extends Record<string, any>,\n\tExports extends Record<string, any>,\n\tEvents extends Record<string, any>\n>(\n\tcomponent: ComponentType<\n\t\tSvelteComponent<Props, Events, any>\n\t>,\n\toptions: {\n\t\ttarget: Document | Element | ShadowRoot;\n\t\tanchor?: Node | undefined;\n\t\tprops?: Props | undefined;\n\t\tevents?:\n\t\t\t| {\n\t\t\t\t\t[Property in keyof Events]: (\n\t\t\t\t\t\te: Events[Property]\n\t\t\t\t\t) => any;\n\t\t\t  }\n\t\t\t| undefined;\n\t\tcontext?: Map<any, any> | undefined;\n\t\tintro?: boolean | undefined;\n\t}\n): Exports;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "onDestroy",
         "comment": "Schedules a callback to run immediately before the component is unmounted.\n\nOut of `onMount`, `beforeUpdate`, `afterUpdate` and `onDestroy`, this is the\nonly one that runs inside a server-side component.\n\nhttps://svelte.dev/docs/svelte#ondestroy",
         "snippet": "function onDestroy(fn: () => any): void;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "onMount",
         "comment": "The `onMount` function schedules a callback to run as soon as the component has been mounted to the DOM.\nIt must be called during the component's initialisation (but doesn't need to live *inside* the component;\nit can be called from an external module).\n\nIf a function is returned _synchronously_ from `onMount`, it will be called when the component is unmounted.\n\n`onMount` does not run inside a [server-side component](https://svelte.dev/docs#run-time-server-side-component-api).\n\nhttps://svelte.dev/docs/svelte#onmount",
         "snippet": "function onMount<T>(\n\tfn: () =>\n\t\t| NotFunction<T>\n\t\t| Promise<NotFunction<T>>\n\t\t| (() => any)\n): void;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "setContext",
         "comment": "Associates an arbitrary `context` object with the current component and the specified `key`\nand returns that object. The context is then available to children of the component\n(including slotted content) with `getContext`.\n\nLike lifecycle functions, this must be called during component initialisation.\n\nhttps://svelte.dev/docs/svelte#setcontext",
         "snippet": "function setContext<T>(key: any, context: T): T;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "tick",
         "comment": "Returns a promise that resolves once any pending state changes have been applied.",
         "snippet": "function tick(): Promise<void>;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "unmount",
         "comment": "Unmounts a component that was previously mounted using `mount` or `hydrate`.",
         "snippet": "function unmount(component: Record<string, any>): void;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "untrack",
         "comment": "Use `untrack` to prevent something from being treated as an `$effect`/`$derived` dependency.\n\nhttps://svelte-5-preview.vercel.app/docs/functions#untrack",
         "snippet": "function untrack<T>(fn: () => T): T;",
-        "children": [],
-        "deprecated": null
+        "children": []
       }
     ]
   },
@@ -494,8 +469,7 @@ export const modules = /** @type {import('@sveltejs/site-kit/markdown').Modules}
             "bullets": [],
             "children": []
           }
-        ],
-        "deprecated": null
+        ]
       },
       {
         "name": "ActionReturn",
@@ -516,8 +490,7 @@ export const modules = /** @type {import('@sveltejs/site-kit/markdown').Modules}
             "bullets": [],
             "children": []
           }
-        ],
-        "deprecated": null
+        ]
       }
     ],
     "exports": []
@@ -566,8 +539,7 @@ export const modules = /** @type {import('@sveltejs/site-kit/markdown').Modules}
             "bullets": [],
             "children": []
           }
-        ],
-        "deprecated": null
+        ]
       },
       {
         "name": "FlipParams",
@@ -595,8 +567,7 @@ export const modules = /** @type {import('@sveltejs/site-kit/markdown').Modules}
             "bullets": [],
             "children": []
           }
-        ],
-        "deprecated": null
+        ]
       }
     ],
     "exports": [
@@ -604,8 +575,7 @@ export const modules = /** @type {import('@sveltejs/site-kit/markdown').Modules}
         "name": "flip",
         "comment": "The flip function calculates the start and end position of an element and animates between them, translating the x and y values.\n`flip` stands for [First, Last, Invert, Play](https://aerotwist.com/blog/flip-your-animations/).\n\nhttps://svelte.dev/docs/svelte-animate#flip",
         "snippet": "function flip(\n\tnode: Element,\n\t{\n\t\tfrom,\n\t\tto\n\t}: {\n\t\tfrom: DOMRect;\n\t\tto: DOMRect;\n\t},\n\tparams?: FlipParams\n): AnimationConfig;",
-        "children": [],
-        "deprecated": null
+        "children": []
       }
     ]
   },
@@ -659,8 +629,7 @@ export const modules = /** @type {import('@sveltejs/site-kit/markdown').Modules}
             "bullets": [],
             "children": []
           }
-        ],
-        "deprecated": null
+        ]
       }
     ],
     "exports": [
@@ -668,50 +637,43 @@ export const modules = /** @type {import('@sveltejs/site-kit/markdown').Modules}
         "name": "VERSION",
         "comment": "The current version, as set in package.json.\n\nhttps://svelte.dev/docs/svelte-compiler#svelte-version",
         "snippet": "const VERSION: string;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "compile",
         "comment": "`compile` converts your `.svelte` source code into a JavaScript module that exports a component\n\nhttps://svelte.dev/docs/svelte-compiler#svelte-compile",
         "snippet": "function compile(\n\tsource: string,\n\toptions: CompileOptions\n): CompileResult;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "compileModule",
         "comment": "`compileModule` takes your JavaScript source code containing runes, and turns it into a JavaScript module.\n\nhttps://svelte.dev/docs/svelte-compiler#svelte-compile",
         "snippet": "function compileModule(\n\tsource: string,\n\toptions: ModuleCompileOptions\n): CompileResult;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "migrate",
         "comment": "Does a best-effort migration of Svelte code towards using runes, event attributes and render tags.\nMay throw an error if the code is too complex to migrate automatically.",
         "snippet": "function migrate(source: string): {\n\tcode: string;\n};",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "parse",
         "comment": "The parse function parses a component, returning only its abstract syntax tree.\n\nThe `modern` option (`false` by default in Svelte 5) makes the parser return a modern AST instead of the legacy AST.\n`modern` will become `true` by default in Svelte 6, and the option will be removed in Svelte 7.\n\nhttps://svelte.dev/docs/svelte-compiler#svelte-parse",
         "snippet": "function parse(\n\tsource: string,\n\toptions: {\n\t\tfilename?: string;\n\t\tmodern: true;\n\t}\n): Root;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "parse",
         "comment": "The parse function parses a component, returning only its abstract syntax tree.\n\nThe `modern` option (`false` by default in Svelte 5) makes the parser return a modern AST instead of the legacy AST.\n`modern` will become `true` by default in Svelte 6, and the option will be removed in Svelte 7.\n\nhttps://svelte.dev/docs/svelte-compiler#svelte-parse",
         "snippet": "function parse(\n\tsource: string,\n\toptions?:\n\t\t| {\n\t\t\t\tfilename?: string | undefined;\n\t\t\t\tmodern?: false | undefined;\n\t\t  }\n\t\t| undefined\n): LegacyRoot;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "preprocess",
         "comment": "The preprocess function provides convenient hooks for arbitrarily transforming component source code.\nFor example, it can be used to convert a <style lang=\"sass\"> block into vanilla CSS.\n\nhttps://svelte.dev/docs/svelte-compiler#svelte-preprocess",
         "snippet": "function preprocess(\n\tsource: string,\n\tpreprocessor: PreprocessorGroup | PreprocessorGroup[],\n\toptions?:\n\t\t| {\n\t\t\t\tfilename?: string | undefined;\n\t\t  }\n\t\t| undefined\n): Promise<Processed>;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "walk",
@@ -730,218 +692,187 @@ export const modules = /** @type {import('@sveltejs/site-kit/markdown').Modules}
         "name": "backIn",
         "comment": "https://svelte.dev/docs/svelte-easing",
         "snippet": "function backIn(t: number): number;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "backInOut",
         "comment": "https://svelte.dev/docs/svelte-easing",
         "snippet": "function backInOut(t: number): number;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "backOut",
         "comment": "https://svelte.dev/docs/svelte-easing",
         "snippet": "function backOut(t: number): number;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "bounceIn",
         "comment": "https://svelte.dev/docs/svelte-easing",
         "snippet": "function bounceIn(t: number): number;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "bounceInOut",
         "comment": "https://svelte.dev/docs/svelte-easing",
         "snippet": "function bounceInOut(t: number): number;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "bounceOut",
         "comment": "https://svelte.dev/docs/svelte-easing",
         "snippet": "function bounceOut(t: number): number;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "circIn",
         "comment": "https://svelte.dev/docs/svelte-easing",
         "snippet": "function circIn(t: number): number;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "circInOut",
         "comment": "https://svelte.dev/docs/svelte-easing",
         "snippet": "function circInOut(t: number): number;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "circOut",
         "comment": "https://svelte.dev/docs/svelte-easing",
         "snippet": "function circOut(t: number): number;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "cubicIn",
         "comment": "https://svelte.dev/docs/svelte-easing",
         "snippet": "function cubicIn(t: number): number;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "cubicInOut",
         "comment": "https://svelte.dev/docs/svelte-easing",
         "snippet": "function cubicInOut(t: number): number;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "cubicOut",
         "comment": "https://svelte.dev/docs/svelte-easing",
         "snippet": "function cubicOut(t: number): number;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "elasticIn",
         "comment": "https://svelte.dev/docs/svelte-easing",
         "snippet": "function elasticIn(t: number): number;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "elasticInOut",
         "comment": "https://svelte.dev/docs/svelte-easing",
         "snippet": "function elasticInOut(t: number): number;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "elasticOut",
         "comment": "https://svelte.dev/docs/svelte-easing",
         "snippet": "function elasticOut(t: number): number;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "expoIn",
         "comment": "https://svelte.dev/docs/svelte-easing",
         "snippet": "function expoIn(t: number): number;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "expoInOut",
         "comment": "https://svelte.dev/docs/svelte-easing",
         "snippet": "function expoInOut(t: number): number;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "expoOut",
         "comment": "https://svelte.dev/docs/svelte-easing",
         "snippet": "function expoOut(t: number): number;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "linear",
         "comment": "https://svelte.dev/docs/svelte-easing",
         "snippet": "function linear(t: number): number;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "quadIn",
         "comment": "https://svelte.dev/docs/svelte-easing",
         "snippet": "function quadIn(t: number): number;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "quadInOut",
         "comment": "https://svelte.dev/docs/svelte-easing",
         "snippet": "function quadInOut(t: number): number;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "quadOut",
         "comment": "https://svelte.dev/docs/svelte-easing",
         "snippet": "function quadOut(t: number): number;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "quartIn",
         "comment": "https://svelte.dev/docs/svelte-easing",
         "snippet": "function quartIn(t: number): number;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "quartInOut",
         "comment": "https://svelte.dev/docs/svelte-easing",
         "snippet": "function quartInOut(t: number): number;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "quartOut",
         "comment": "https://svelte.dev/docs/svelte-easing",
         "snippet": "function quartOut(t: number): number;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "quintIn",
         "comment": "https://svelte.dev/docs/svelte-easing",
         "snippet": "function quintIn(t: number): number;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "quintInOut",
         "comment": "https://svelte.dev/docs/svelte-easing",
         "snippet": "function quintInOut(t: number): number;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "quintOut",
         "comment": "https://svelte.dev/docs/svelte-easing",
         "snippet": "function quintOut(t: number): number;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "sineIn",
         "comment": "https://svelte.dev/docs/svelte-easing",
         "snippet": "function sineIn(t: number): number;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "sineInOut",
         "comment": "https://svelte.dev/docs/svelte-easing",
         "snippet": "function sineInOut(t: number): number;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "sineOut",
         "comment": "https://svelte.dev/docs/svelte-easing",
         "snippet": "function sineOut(t: number): number;",
-        "children": [],
-        "deprecated": null
+        "children": []
       }
     ]
   },
@@ -1017,8 +948,7 @@ export const modules = /** @type {import('@sveltejs/site-kit/markdown').Modules}
             "bullets": [],
             "children": []
           }
-        ],
-        "deprecated": null
+        ]
       },
       {
         "name": "Tweened",
@@ -1039,8 +969,7 @@ export const modules = /** @type {import('@sveltejs/site-kit/markdown').Modules}
             "bullets": [],
             "children": []
           }
-        ],
-        "deprecated": null
+        ]
       }
     ],
     "exports": [
@@ -1048,15 +977,13 @@ export const modules = /** @type {import('@sveltejs/site-kit/markdown').Modules}
         "name": "spring",
         "comment": "The spring function in Svelte creates a store whose value is animated, with a motion that simulates the behavior of a spring. This means when the value changes, instead of transitioning at a steady rate, it \"bounces\" like a spring would, depending on the physics parameters provided. This adds a level of realism to the transitions and can enhance the user experience.\n\nhttps://svelte.dev/docs/svelte-motion#spring",
         "snippet": "function spring<T = any>(\n\tvalue?: T | undefined,\n\topts?: SpringOpts | undefined\n): Spring<T>;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "tweened",
         "comment": "A tweened store in Svelte is a special type of store that provides smooth transitions between state values over time.\n\nhttps://svelte.dev/docs/svelte-motion#tweened",
         "snippet": "function tweened<T>(\n\tvalue?: T | undefined,\n\tdefaults?: TweenedOptions<T> | undefined\n): Tweened<T>;",
-        "children": [],
-        "deprecated": null
+        "children": []
       }
     ]
   },
@@ -1075,8 +1002,7 @@ export const modules = /** @type {import('@sveltejs/site-kit/markdown').Modules}
         "name": "render",
         "comment": "",
         "snippet": "function render(\n\tcomponent: typeof import('svelte').SvelteComponent,\n\toptions: {\n\t\tprops: Record<string, any>;\n\t\tcontext?: Map<any, any>;\n\t}\n): RenderOutput;",
-        "children": [],
-        "deprecated": null
+        "children": []
       }
     ]
   },
@@ -1099,36 +1025,31 @@ export const modules = /** @type {import('@sveltejs/site-kit/markdown').Modules}
             ],
             "children": []
           }
-        ],
-        "deprecated": null
+        ]
       },
       {
         "name": "StartStopNotifier",
         "comment": "Start and stop notification callbacks.\nThis function is called when the first subscriber subscribes.",
         "snippet": "type StartStopNotifier<T> = (\n\tset: (value: T) => void,\n\tupdate: (fn: Updater<T>) => void\n) => void | (() => void);",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "Subscriber",
         "comment": "Callback to inform of a value updates.",
         "snippet": "type Subscriber<T> = (value: T) => void;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "Unsubscriber",
         "comment": "Unsubscribes from value updates.",
         "snippet": "type Unsubscriber = () => void;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "Updater",
         "comment": "Callback to update a value.",
         "snippet": "type Updater<T> = (value: T) => T;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "Writable",
@@ -1153,8 +1074,7 @@ export const modules = /** @type {import('@sveltejs/site-kit/markdown').Modules}
             ],
             "children": []
           }
-        ],
-        "deprecated": null
+        ]
       }
     ],
     "exports": [
@@ -1162,50 +1082,43 @@ export const modules = /** @type {import('@sveltejs/site-kit/markdown').Modules}
         "name": "derived",
         "comment": "Derived value store by synchronizing one or more readable stores and\napplying an aggregation function over its input values.\n\nhttps://svelte.dev/docs/svelte-store#derived",
         "snippet": "function derived<S extends Stores, T>(\n\tstores: S,\n\tfn: (\n\t\tvalues: StoresValues<S>,\n\t\tset: (value: T) => void,\n\t\tupdate: (fn: Updater<T>) => void\n\t) => Unsubscriber | void,\n\tinitial_value?: T | undefined\n): Readable<T>;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "derived",
         "comment": "Derived value store by synchronizing one or more readable stores and\napplying an aggregation function over its input values.\n\nhttps://svelte.dev/docs/svelte-store#derived",
         "snippet": "function derived<S extends Stores, T>(\n\tstores: S,\n\tfn: (values: StoresValues<S>) => T,\n\tinitial_value?: T | undefined\n): Readable<T>;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "get",
         "comment": "Get the current value from a store by subscribing and immediately unsubscribing.\n\nhttps://svelte.dev/docs/svelte-store#get",
         "snippet": "function get<T>(store: Readable<T>): T;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "readable",
         "comment": "Creates a `Readable` store that allows reading by subscription.\n\nhttps://svelte.dev/docs/svelte-store#readable",
         "snippet": "function readable<T>(\n\tvalue?: T | undefined,\n\tstart?: StartStopNotifier<T> | undefined\n): Readable<T>;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "readonly",
         "comment": "Takes a store and returns a new one derived from the old one that is readable.\n\nhttps://svelte.dev/docs/svelte-store#readonly",
         "snippet": "function readonly<T>(store: Readable<T>): Readable<T>;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "safe_not_equal",
         "comment": "",
         "snippet": "function safe_not_equal(a: any, b: any): boolean;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "writable",
         "comment": "Create a `Writable` store that allows both updating and reading by subscription.\n\nhttps://svelte.dev/docs/svelte-store#writable",
         "snippet": "function writable<T>(\n\tvalue?: T | undefined,\n\tstart?: StartStopNotifier<T> | undefined\n): Writable<T>;",
-        "children": [],
-        "deprecated": null
+        "children": []
       }
     ]
   },
@@ -1253,8 +1166,7 @@ export const modules = /** @type {import('@sveltejs/site-kit/markdown').Modules}
             "bullets": [],
             "children": []
           }
-        ],
-        "deprecated": null
+        ]
       },
       {
         "name": "CrossfadeParams",
@@ -1282,8 +1194,7 @@ export const modules = /** @type {import('@sveltejs/site-kit/markdown').Modules}
             "bullets": [],
             "children": []
           }
-        ],
-        "deprecated": null
+        ]
       },
       {
         "name": "DrawParams",
@@ -1318,15 +1229,13 @@ export const modules = /** @type {import('@sveltejs/site-kit/markdown').Modules}
             "bullets": [],
             "children": []
           }
-        ],
-        "deprecated": null
+        ]
       },
       {
         "name": "EasingFunction",
         "comment": "",
         "snippet": "type EasingFunction = (t: number) => number;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "FadeParams",
@@ -1354,8 +1263,7 @@ export const modules = /** @type {import('@sveltejs/site-kit/markdown').Modules}
             "bullets": [],
             "children": []
           }
-        ],
-        "deprecated": null
+        ]
       },
       {
         "name": "FlyParams",
@@ -1404,8 +1312,7 @@ export const modules = /** @type {import('@sveltejs/site-kit/markdown').Modules}
             "bullets": [],
             "children": []
           }
-        ],
-        "deprecated": null
+        ]
       },
       {
         "name": "ScaleParams",
@@ -1447,8 +1354,7 @@ export const modules = /** @type {import('@sveltejs/site-kit/markdown').Modules}
             "bullets": [],
             "children": []
           }
-        ],
-        "deprecated": null
+        ]
       },
       {
         "name": "SlideParams",
@@ -1483,8 +1389,7 @@ export const modules = /** @type {import('@sveltejs/site-kit/markdown').Modules}
             "bullets": [],
             "children": []
           }
-        ],
-        "deprecated": null
+        ]
       },
       {
         "name": "TransitionConfig",
@@ -1526,8 +1431,7 @@ export const modules = /** @type {import('@sveltejs/site-kit/markdown').Modules}
             "bullets": [],
             "children": []
           }
-        ],
-        "deprecated": null
+        ]
       }
     ],
     "exports": [
@@ -1535,50 +1439,43 @@ export const modules = /** @type {import('@sveltejs/site-kit/markdown').Modules}
         "name": "blur",
         "comment": "Animates a `blur` filter alongside an element's opacity.\n\nhttps://svelte.dev/docs/svelte-transition#blur",
         "snippet": "function blur(\n\tnode: Element,\n\t{\n\t\tdelay,\n\t\tduration,\n\t\teasing,\n\t\tamount,\n\t\topacity\n\t}?: BlurParams | undefined\n): TransitionConfig;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "crossfade",
         "comment": "The `crossfade` function creates a pair of [transitions](https://svelte.dev/docs#template-syntax-element-directives-transition-fn) called `send` and `receive`. When an element is 'sent', it looks for a corresponding element being 'received', and generates a transition that transforms the element to its counterpart's position and fades it out. When an element is 'received', the reverse happens. If there is no counterpart, the `fallback` transition is used.\n\nhttps://svelte.dev/docs/svelte-transition#crossfade",
         "snippet": "function crossfade({\n\tfallback,\n\t...defaults\n}: CrossfadeParams & {\n\tfallback?: (\n\t\tnode: Element,\n\t\tparams: CrossfadeParams,\n\t\tintro: boolean\n\t) => TransitionConfig;\n}): [\n\t(\n\t\tnode: any,\n\t\tparams: CrossfadeParams & {\n\t\t\tkey: any;\n\t\t}\n\t) => () => TransitionConfig,\n\t(\n\t\tnode: any,\n\t\tparams: CrossfadeParams & {\n\t\t\tkey: any;\n\t\t}\n\t) => () => TransitionConfig\n];",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "draw",
         "comment": "Animates the stroke of an SVG element, like a snake in a tube. `in` transitions begin with the path invisible and draw the path to the screen over time. `out` transitions start in a visible state and gradually erase the path. `draw` only works with elements that have a `getTotalLength` method, like `<path>` and `<polyline>`.\n\nhttps://svelte.dev/docs/svelte-transition#draw",
         "snippet": "function draw(\n\tnode: SVGElement & {\n\t\tgetTotalLength(): number;\n\t},\n\t{\n\t\tdelay,\n\t\tspeed,\n\t\tduration,\n\t\teasing\n\t}?: DrawParams | undefined\n): TransitionConfig;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "fade",
         "comment": "Animates the opacity of an element from 0 to the current opacity for `in` transitions and from the current opacity to 0 for `out` transitions.\n\nhttps://svelte.dev/docs/svelte-transition#fade",
         "snippet": "function fade(\n\tnode: Element,\n\t{ delay, duration, easing }?: FadeParams | undefined\n): TransitionConfig;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "fly",
         "comment": "Animates the x and y positions and the opacity of an element. `in` transitions animate from the provided values, passed as parameters to the element's default values. `out` transitions animate from the element's default values to the provided values.\n\nhttps://svelte.dev/docs/svelte-transition#fly",
         "snippet": "function fly(\n\tnode: Element,\n\t{\n\t\tdelay,\n\t\tduration,\n\t\teasing,\n\t\tx,\n\t\ty,\n\t\topacity\n\t}?: FlyParams | undefined\n): TransitionConfig;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "scale",
         "comment": "Animates the opacity and scale of an element. `in` transitions animate from an element's current (default) values to the provided values, passed as parameters. `out` transitions animate from the provided values to an element's default values.\n\nhttps://svelte.dev/docs/svelte-transition#scale",
         "snippet": "function scale(\n\tnode: Element,\n\t{\n\t\tdelay,\n\t\tduration,\n\t\teasing,\n\t\tstart,\n\t\topacity\n\t}?: ScaleParams | undefined\n): TransitionConfig;",
-        "children": [],
-        "deprecated": null
+        "children": []
       },
       {
         "name": "slide",
         "comment": "Slides an element in and out.\n\nhttps://svelte.dev/docs/svelte-transition#slide",
         "snippet": "function slide(\n\tnode: Element,\n\t{\n\t\tdelay,\n\t\tduration,\n\t\teasing,\n\t\taxis\n\t}?: SlideParams | undefined\n): TransitionConfig;",
-        "children": [],
-        "deprecated": null
+        "children": []
       }
     ]
   }

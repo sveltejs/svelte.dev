@@ -1,53 +1,51 @@
 <script>
-	import { page } from '$app/stores';
 	import { Icon } from '@sveltejs/site-kit/components';
 	import { copy_code_descendants } from '@sveltejs/site-kit/actions';
 	import { DocsOnThisPage, setupDocsHovers } from '@sveltejs/site-kit/docs';
 
 	let { data } = $props();
 
-	const pages = $derived(data.sections.flatMap((page) => page.children));
-	const index = $derived(pages.findIndex(({ path }) => path === $page.url.pathname));
-	const prev = $derived(pages[index - 1]);
-	const next = $derived(pages[index + 1]);
-
 	setupDocsHovers();
 </script>
 
 <svelte:head>
-	<title>{data.page?.title} • Docs • Svelte</title>
+	<title>{data.document.metadata.title} • Docs • Svelte</title>
 
-	<meta name="twitter:title" content="{data.page.title} • Docs • Svelte" />
-	<meta name="twitter:description" content="{data.page.title} • Svelte documentation" />
-	<meta name="Description" content="{data.page.title} • Svelte documentation" />
+	<meta name="twitter:title" content="{data.document.metadata.title} • Docs • Svelte" />
+	<meta
+		name="twitter:description"
+		content="{data.document.metadata.title} • Svelte documentation"
+	/>
+	<meta name="Description" content="{data.document.metadata.title} • Svelte documentation" />
 </svelte:head>
 
 <div class="text" id="docs-content" use:copy_code_descendants>
 	<a
 		class="edit"
-		href="https://github.com/sveltejs/svelte/edit/svelte-4/documentation/docs/{data.page.file}"
+		href="https://github.com/sveltejs/svelte.dev/edit/main/apps/svelte.dev/content/{data.document
+			.file}"
 	>
 		<Icon size={50} name="edit" /> Edit this page on GitHub
 	</a>
 
-	<DocsOnThisPage details={data.page} />
+	<DocsOnThisPage details={data.document} />
 
-	{@html data.page.body}
+	{@html data.document.body}
 </div>
 
 <div class="controls">
 	<div>
-		<span class:faded={!prev}>previous</span>
+		<span class:faded={!data.document.prev}>previous</span>
 
-		{#if prev}
-			<a href={prev.path}>{prev.metadata.title}</a>
+		{#if data.document.prev}
+			<a href="/{data.document.prev.slug}">{data.document.prev.title}</a>
 		{/if}
 	</div>
 
 	<div>
-		<span class:faded={!next}>next</span>
-		{#if next}
-			<a href={next.path}>{next.metadata.title}</a>
+		<span class:faded={!data.document.next}>next</span>
+		{#if data.document.next}
+			<a href="/{data.document.next.slug}">{data.document.next.title}</a>
 		{/if}
 	</div>
 </div>

@@ -3,32 +3,34 @@ import { error, redirect } from '@sveltejs/kit';
 import { renderContentMarkdown } from '@sveltejs/site-kit/markdown';
 
 export async function load({ params }) {
-	const page = index[`docs/${params.path}`];
+	const document = index[`docs/${params.path}`];
 
-	if (!page) {
+	if (!document) {
 		error(404);
 	}
 
-	if (!page.body) {
-		let child = page;
+	if (!document.body) {
+		let child = document;
 
 		while (child.children[0]) {
 			child = child.children[0];
 		}
 
-		if (child === page) {
+		if (child === document) {
 			error(404);
 		}
 
 		redirect(307, `/${child.slug}`);
 	}
 
+	const pkg = params.path.split('/')[0];
+
 	return {
-		page: {
-			slug: page.slug,
-			title: page.metadata.title,
-			sections: page.sections,
-			body: await render_content(page.file, page.body)
+		document: {
+			...document,
+			body: await render_content(document.file, document.body),
+			prev: document.prev?.slug.startsWith(`docs/${pkg}/`) ? document.prev : null,
+			next: document.next?.slug.startsWith(`docs/${pkg}/`) ? document.next : null
 		}
 	};
 }
