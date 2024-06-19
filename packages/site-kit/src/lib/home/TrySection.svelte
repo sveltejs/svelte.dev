@@ -1,9 +1,9 @@
-<script>
+<script lang="ts">
 	import Section from '../components/Section.svelte';
 	import TryTerminal from './TryTerminal.svelte';
+	import type { Snippet } from 'svelte';
 
-	/** @type {{content_heading?: import('svelte').Snippet, content?: import('svelte').Snippet}} */
-	let { content_heading, content } = $props();
+	let { content_heading, content }: { content_heading?: Snippet; content?: Snippet } = $props();
 </script>
 
 <div class="try-container">

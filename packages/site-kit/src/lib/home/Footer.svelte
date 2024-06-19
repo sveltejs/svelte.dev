@@ -1,8 +1,16 @@
-<script>
+<script lang="ts">
 	import Section from '../components/Section.svelte';
+	import type { Snippet } from 'svelte';
 
-	/** @type {{links: Record<string, { href: string; title: string; }[]>, copyright?: import('svelte').Snippet, license?: import('svelte').Snippet}} */
-	let { links, copyright, license } = $props();
+	let {
+		links,
+		copyright,
+		license
+	}: {
+		links: Record<string, { href: string; title: string }[]>;
+		copyright?: Snippet;
+		license?: Snippet;
+	} = $props();
 </script>
 
 <Section --background="var(--sk-back-4)">

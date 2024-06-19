@@ -1,8 +1,8 @@
-<script>
+<script lang="ts">
 	import Section from '../components/Section.svelte';
+	import type { Snippet } from 'svelte';
 
-	/** @type {{one?: import('svelte').Snippet, two?: import('svelte').Snippet, three?: import('svelte').Snippet}} */
-	let { one, two, three } = $props();
+	let { one, two, three }: { one?: Snippet; two?: Snippet; three?: Snippet } = $props();
 </script>
 
 <Section --background="var(--sk-back-1)">
