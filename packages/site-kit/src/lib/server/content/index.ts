@@ -1,4 +1,4 @@
-import { extract_frontmatter, slugify } from '$lib/markdown/utils';
+import { extract_frontmatter, slugify } from '../../markdown/utils';
 import type { Document } from '../../types';
 
 export async function create_index(

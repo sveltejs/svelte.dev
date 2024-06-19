@@ -5,7 +5,7 @@ The main shell of the application. It provides a slot for the top navigation, th
 <script>
 	import { afterNavigate } from '$app/navigation';
 	import { navigating } from '$app/stores';
-	import { overlay_open } from '$lib/stores';
+	import { overlay_open } from '../stores';
 	import PreloadingIndicator from '../nav/PreloadingIndicator.svelte';
 	import SkipLink from '../nav/SkipLink.svelte';
 	import '../styles/index.css';

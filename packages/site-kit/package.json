@@ -53,58 +53,51 @@
 	"types": "./dist/types.d.ts",
 	"exports": {
 		".": {
-			"types": "./dist/types.d.ts"
+			"types": "./src/lib/types.d.ts"
 		},
 		"./actions": {
-			"types": "./dist/actions/index.d.ts",
-			"default": "./dist/actions/index.js"
+			"default": "./src/lib/actions/index.js"
 		},
 		"./stores": {
-			"types": "./dist/stores/index.d.ts",
-			"default": "./dist/stores/index.js"
+			"default": "./src/lib/stores/index.js"
 		},
-		"./branding/svelte-logo.svg": "./dist/branding/svelte-logo.svg",
+		"./branding/svelte-logo.svg": "./src/lib/branding/svelte-logo.svg",
 		"./components": {
-			"types": "./dist/components/index.d.ts",
-			"default": "./dist/components/index.js",
-			"svelte": "./dist/components/index.js"
+			"default": "./src/lib/components/index.js",
+			"svelte": "./src/lib/components/index.js"
 		},
 		"./home": {
 			"default": "./src/lib/home/index.js",
 			"svelte": "./src/lib/home/index.js"
 		},
 		"./docs": {
-			"types": "./dist/docs/types.d.ts",
-			"default": "./dist/docs/index.js",
-			"svelte": "./dist/docs/index.js"
+			"default": "./src/lib/docs/index.js",
+			"svelte": "./src/lib/docs/index.js"
 		},
 		"./markdown": {
-			"types": "./dist/markdown/index.d.ts",
-			"default": "./dist/markdown/index.js",
-			"svelte": "./dist/markdown/index.js"
+			"default": "./src/lib/markdown/index.js",
+			"svelte": "./src/lib/markdown/index.js"
 		},
 		"./nav": {
-			"types": "./dist/nav/index.d.ts",
-			"default": "./dist/nav/index.js",
-			"svelte": "./dist/nav/index.js"
+			"default": "./src/lib/nav/index.js",
+			"svelte": "./src/lib/nav/index.js"
 		},
-		"./icons/link.svg": "./dist/icons/link.svg",
-		"./icons/search.svg": "./dist/icons/search.svg",
+		"./icons/link.svg": "./src/lib/icons/link.svg",
+		"./icons/search.svg": "./src/lib/icons/search.svg",
 		"./search": {
-			"types": "./dist/search/index.d.ts",
-			"default": "./dist/search/index.js",
-			"svelte": "./dist/search/index.js"
+			"default": "./src/lib/search/index.js",
+			"svelte": "./src/lib/search/index.js"
 		},
 		"./server/content": {
 			"default": "./src/lib/server/content/index.ts",
 			"svelte": "./src/lib/server/content/index.ts"
 		},
-		"./styles/base.css": "./dist/styles/base.css",
-		"./styles/code.css": "./dist/styles/code.css",
-		"./styles/fonts.css": "./dist/styles/fonts.css",
-		"./styles/index.css": "./dist/styles/index.css",
-		"./styles/text.css": "./dist/styles/text.css",
-		"./styles/tokens.css": "./dist/styles/tokens.css"
+		"./styles/base.css": "./src/lib/styles/base.css",
+		"./styles/code.css": "./src/lib/styles/code.css",
+		"./styles/fonts.css": "./src/lib/styles/fonts.css",
+		"./styles/index.css": "./src/lib/styles/index.css",
+		"./styles/text.css": "./src/lib/styles/text.css",
+		"./styles/tokens.css": "./src/lib/styles/tokens.css"
 	},
 	"files": [
 		"dist"

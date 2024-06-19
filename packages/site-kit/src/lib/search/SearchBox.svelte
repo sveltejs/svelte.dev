@@ -4,7 +4,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 -->
 <script lang="ts">
 	import { afterNavigate } from '$app/navigation';
-	import { overlay_open, search_query, search_recent, searching } from '$lib/stores';
+	import { overlay_open, search_query, search_recent, searching } from '../stores';
 	import { onMount, type Snippet } from 'svelte';
 	import { focusable_children, trap } from '../actions/focus.js';
 	import Icon from '../components/Icon.svelte';

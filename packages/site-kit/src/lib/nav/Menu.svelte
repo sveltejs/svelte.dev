@@ -26,8 +26,8 @@
 <script>
 	import { afterNavigate } from '$app/navigation';
 	import { page } from '$app/stores';
-	import { click_outside, focus_outside, trap } from '$lib/actions';
-	import { overlay_open, reduced_motion, theme } from '$lib/stores';
+	import { click_outside, focus_outside, trap } from '../actions';
+	import { overlay_open, reduced_motion, theme } from '../stores';
 	import { tick } from 'svelte';
 	import { expoOut, quintOut } from 'svelte/easing';
 	import { get, writable } from 'svelte/store';

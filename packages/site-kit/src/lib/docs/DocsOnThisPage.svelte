@@ -2,16 +2,9 @@
 	import { browser } from '$app/environment';
 	import { afterNavigate } from '$app/navigation';
 	import { page } from '$app/stores';
-	import { click_outside, focus_outside, root_scroll } from '$lib/actions';
-	import Icon from '$lib/components/Icon.svelte';
-	import {
-		mql,
-		nav_open,
-		on_this_page_open,
-		overlay_open,
-		reduced_motion,
-		theme
-	} from '$lib/stores';
+	import { click_outside, focus_outside, root_scroll } from '../actions';
+	import Icon from '../components/Icon.svelte';
+	import { mql, nav_open, on_this_page_open, overlay_open, reduced_motion, theme } from '../stores';
 	import { createEventDispatcher, onMount, tick } from 'svelte';
 	import { expoOut } from 'svelte/easing';
 	import { readable } from 'svelte/store';

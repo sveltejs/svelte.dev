@@ -3,9 +3,9 @@ Top navigation bar for the application. It provides a slot for the left side, th
 -->
 
 <script>
-	import { root_scroll } from '$lib/actions';
-	import { root_scroll_element } from '$lib/actions/root-scroll';
-	import { overlay_open, searching, theme, nav_open, on_this_page_open } from '$lib/stores';
+	import { root_scroll } from '../actions';
+	import { root_scroll_element } from '../actions/root-scroll';
+	import { overlay_open, searching, theme, nav_open, on_this_page_open } from '../stores';
 	import Icon from '../components/Icon.svelte';
 	import { page } from '$app/stores';
 	import ThemeToggle from '../components/ThemeToggle.svelte';

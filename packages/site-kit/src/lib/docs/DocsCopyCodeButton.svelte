@@ -1,5 +1,5 @@
 <script>
-	import Icon from '$lib/components/Icon.svelte';
+	import Icon from '../components/Icon.svelte';
 	import { cubicOut } from 'svelte/easing';
 	import { fade } from 'svelte/transition';
 
