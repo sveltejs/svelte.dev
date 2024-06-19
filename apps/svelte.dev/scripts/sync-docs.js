@@ -40,6 +40,24 @@ execSync(`node ${sveltekit_script_path}`, {
 
 const { modules: sveltekit_modules } = await import(sveltekit_json_path);
 
+// TODO JSdoc points to kit.svelte.dev, rewrite those for now
+for (const module of sveltekit_modules) {
+	traverseObjectKeys(module);
+}
+
+function traverseObjectKeys(obj) {
+	for (let key in obj) {
+		if (typeof obj[key] === 'object') {
+			traverseObjectKeys(obj[key]);
+		} else if (typeof obj[key] === 'string') {
+			obj[key] = obj[key].replace(
+				/(https:\/\/kit.svelte.dev)?\/docs\/modules#([^-]+)-([^-]+)-/g,
+				(_, __, p1, p2) => `/docs/kit/reference/${p1 === 'sveltejs' ? '@sveltejs' : p1}-${p2}#`
+			);
+		}
+	}
+}
+
 write_module_to_md(sveltekit_modules, 'kit');
 
 // Helper methods

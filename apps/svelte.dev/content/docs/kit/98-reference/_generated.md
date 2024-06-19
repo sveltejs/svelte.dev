@@ -610,7 +610,7 @@ console.log(env.DEPLOYMENT_SPECIFIC_VARIABLE);
 <!-- @include_end $env/dynamic/private -->
 
 <!-- @include_start $env/dynamic/public -->
-Similar to [`$env/dynamic/private`](/docs/modules#$env-dynamic-private), but only includes variables that begin with [`config.kit.env.publicPrefix`](/docs/configuration#env) (which defaults to `PUBLIC_`), and can therefore safely be exposed to client-side code.
+Similar to [`$env/dynamic/private`](/docs/kit/reference/$env-dynamic#private), but only includes variables that begin with [`config.kit.env.publicPrefix`](/docs/configuration#env) (which defaults to `PUBLIC_`), and can therefore safely be exposed to client-side code.
 
 Note that public dynamic environment variables must all be sent from the server to the client, causing larger network requests — when possible, use `$env/static/public` instead.
 
@@ -626,9 +626,9 @@ console.log(env.PUBLIC_DEPLOYMENT_SPECIFIC_VARIABLE);
 <!-- @include_end $env/dynamic/public -->
 
 <!-- @include_start $env/static/private -->
-Environment variables [loaded by Vite](https://vitejs.dev/guide/env-and-mode.html#env-files) from `.env` files and `process.env`. Like [`$env/dynamic/private`](/docs/modules#$env-dynamic-private), this module cannot be imported into client-side code. This module only includes variables that _do not_ begin with [`config.kit.env.publicPrefix`](/docs/configuration#env) _and do_ start with [`config.kit.env.privatePrefix`](/docs/configuration#env) (if configured).
+Environment variables [loaded by Vite](https://vitejs.dev/guide/env-and-mode.html#env-files) from `.env` files and `process.env`. Like [`$env/dynamic/private`](/docs/kit/reference/$env-dynamic#private), this module cannot be imported into client-side code. This module only includes variables that _do not_ begin with [`config.kit.env.publicPrefix`](/docs/configuration#env) _and do_ start with [`config.kit.env.privatePrefix`](/docs/configuration#env) (if configured).
 
-_Unlike_ [`$env/dynamic/private`](/docs/modules#$env-dynamic-private), the values exported from this module are statically injected into your bundle at build time, enabling optimisations like dead code elimination.
+_Unlike_ [`$env/dynamic/private`](/docs/kit/reference/$env-dynamic#private), the values exported from this module are statically injected into your bundle at build time, enabling optimisations like dead code elimination.
 
 ```ts
 import { API_KEY } from '$env/static/private';
@@ -651,7 +651,7 @@ MY_FEATURE_FLAG="enabled" npm run dev
 <!-- @include_end $env/static/private -->
 
 <!-- @include_start $env/static/public -->
-Similar to [`$env/static/private`](/docs/modules#$env-static-private), except that it only includes environment variables that begin with [`config.kit.env.publicPrefix`](/docs/configuration#env) (which defaults to `PUBLIC_`), and can therefore safely be exposed to client-side code.
+Similar to [`$env/static/private`](/docs/kit/reference/$env-static#private), except that it only includes environment variables that begin with [`config.kit.env.publicPrefix`](/docs/configuration#env) (which defaults to `PUBLIC_`), and can therefore safely be exposed to client-side code.
 
 Values are replaced statically at build time.
 
@@ -1150,7 +1150,7 @@ during dev, build and prerendering
 
 ## AfterNavigate
 
-The argument passed to [`afterNavigate`](https://kit.svelte.dev/docs/modules#$app-navigation-afternavigate) callbacks.
+The argument passed to [`afterNavigate`](/docs/kit/reference/$app-navigation#afternavigate) callbacks.
 
 <div class="ts-block">
 
@@ -1211,7 +1211,7 @@ type AwaitedActions<
 
 ## BeforeNavigate
 
-The argument passed to [`beforeNavigate`](https://kit.svelte.dev/docs/modules#$app-navigation-beforenavigate) callbacks.
+The argument passed to [`beforeNavigate`](/docs/kit/reference/$app-navigation#beforenavigate) callbacks.
 
 <div class="ts-block">
 
@@ -1815,7 +1815,7 @@ type HandleServerError = (input: {
 
 ## HttpError
 
-The object returned by the [`error`](https://kit.svelte.dev/docs/modules#sveltejs-kit-error) function.
+The object returned by the [`error`](/docs/kit/reference/@sveltejs-kit#error) function.
 
 <div class="ts-block">
 
@@ -2027,7 +2027,7 @@ depends(...deps: Array<`${string}:${string}`>): void;
 
 <div class="ts-block-property-details">
 
-This function declares that the `load` function has a _dependency_ on one or more URLs or custom identifiers, which can subsequently be used with [`invalidate()`](/docs/modules#$app-navigation-invalidate) to cause `load` to rerun.
+This function declares that the `load` function has a _dependency_ on one or more URLs or custom identifiers, which can subsequently be used with [`invalidate()`](/docs/kit/reference/$app-navigation#invalidate) to cause `load` to rerun.
 
 Most of the time you won't need this, as `fetch` calls `depends` on your behalf — it's only necessary if you're using a custom API client that bypasses `fetch`.
 
@@ -2359,7 +2359,7 @@ type NumericRange<
 
 ## OnNavigate
 
-The argument passed to [`onNavigate`](https://kit.svelte.dev/docs/modules#$app-navigation-onnavigate) callbacks.
+The argument passed to [`onNavigate`](/docs/kit/reference/$app-navigation#onnavigate) callbacks.
 
 <div class="ts-block">
 
@@ -2513,7 +2513,7 @@ state: App.PageState;
 
 <div class="ts-block-property-details">
 
-The page state, which can be manipulated using the [`pushState`](https://kit.svelte.dev/docs/modules#$app-navigation-pushstate) and [`replaceState`](https://kit.svelte.dev/docs/modules#$app-navigation-replacestate) functions from `$app/navigation`.
+The page state, which can be manipulated using the [`pushState`](/docs/kit/reference/$app-navigation#pushstate) and [`replaceState`](/docs/kit/reference/$app-navigation#replacestate) functions from `$app/navigation`.
 
 </div>
 </div>
@@ -2558,7 +2558,7 @@ type PrerenderOption = boolean | 'auto';
 
 ## Redirect
 
-The object returned by the [`redirect`](https://kit.svelte.dev/docs/modules#sveltejs-kit-redirect) function
+The object returned by the [`redirect`](/docs/kit/reference/@sveltejs-kit#redirect) function
 
 <div class="ts-block">
 
@@ -3239,7 +3239,7 @@ depends(...deps: string[]): void;
 
 <div class="ts-block-property-details">
 
-This function declares that the `load` function has a _dependency_ on one or more URLs or custom identifiers, which can subsequently be used with [`invalidate()`](/docs/modules#$app-navigation-invalidate) to cause `load` to rerun.
+This function declares that the `load` function has a _dependency_ on one or more URLs or custom identifiers, which can subsequently be used with [`invalidate()`](/docs/kit/reference/$app-navigation#invalidate) to cause `load` to rerun.
 
 Most of the time you won't need this, as `fetch` calls `depends` on your behalf — it's only necessary if you're using a custom API client that bypasses `fetch`.
 
@@ -3618,7 +3618,7 @@ interface Locals {}
 
 ## PageData
 
-Defines the common shape of the [$page.data store](https://kit.svelte.dev/docs/modules#$app-stores-page) - that is, the data that is shared between all pages.
+Defines the common shape of the [$page.data store](/docs/kit/reference/$app-stores#page) - that is, the data that is shared between all pages.
 The `Load` and `ServerLoad` functions in `./$types` will be narrowed accordingly.
 Use optional properties for data that is only present on specific pages. Do not add an index signature (`[key: string]: any`).
 
@@ -3633,7 +3633,7 @@ interface PageData {}
 
 ## PageState
 
-The shape of the `$page.state` object, which can be manipulated using the [`pushState`](https://kit.svelte.dev/docs/modules#$app-navigation-pushstate) and [`replaceState`](https://kit.svelte.dev/docs/modules#$app-navigation-replacestate) functions from `$app/navigation`.
+The shape of the `$page.state` object, which can be manipulated using the [`pushState`](/docs/kit/reference/$app-navigation#pushstate) and [`replaceState`](/docs/kit/reference/$app-navigation#replacestate) functions from `$app/navigation`.
 
 <div class="ts-block">
 
