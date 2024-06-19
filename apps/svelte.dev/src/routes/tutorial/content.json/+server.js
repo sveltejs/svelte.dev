@@ -1,4 +1,3 @@
-import { get_exercise, get_index } from '$lib/server/tutorial/content.js';
 import { json } from '@sveltejs/kit';
 import { markedTransform } from '@sveltejs/site-kit/markdown';
 
@@ -12,24 +11,24 @@ async function content() {
 	/** @type {import('@sveltejs/site-kit/search').Block[]} */
 	const blocks = [];
 
-	for (const { chapters } of await get_index()) {
-		for (const { exercises } of chapters) {
-			for (const { slug, title } of exercises) {
-				const exercise_content = await get_exercise(slug);
+	// for (const { chapters } of await get_index()) {
+	// 	for (const { exercises } of chapters) {
+	// 		for (const { slug, title } of exercises) {
+	// 			const exercise_content = await get_exercise(slug);
 
-				if (exercise_content) {
-					exercise_content.markdown = exercise_content.markdown.replace(/(\+\+\+|---|:::)/g, '');
+	// 			if (exercise_content) {
+	// 				exercise_content.markdown = exercise_content.markdown.replace(/(\+\+\+|---|:::)/g, '');
 
-					blocks.push({
-						href: `/tutorial/${slug}`,
-						breadcrumbs: [title],
-						content: await plaintext(exercise_content.markdown),
-						rank: 0
-					});
-				}
-			}
-		}
-	}
+	// 				blocks.push({
+	// 					href: `/tutorial/${slug}`,
+	// 					breadcrumbs: [title],
+	// 					content: await plaintext(exercise_content.markdown),
+	// 					rank: 0
+	// 				});
+	// 			}
+	// 		}
+	// 	}
+	// }
 
 	return { blocks };
 }

@@ -17,12 +17,14 @@ If you navigate to `/the-bad-place`, you'll see this in action — the error pa
 
 Notice that we're _not_ showing the error message to the user. That's because error messages can include sensitive information that at best will confuse your users, and at worst could benefit evildoers. Instead, the error object available to your application — represented as `$page.error` in your `+error.svelte` pages, or `%sveltekit.error%` in your `src/error.html` fallback — is just this:
 
+<!-- prettier-ignore-start -->
 ```js
 /// no-file
 {
 	message: 'Internal Error' // or 'Not Found' for a 404
 }
 ```
+<!-- prettier-ignore-end -->
 
 In some situations you may want to customise this object. To do so, you can return an object from `handleError`:
 

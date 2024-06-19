@@ -47,7 +47,7 @@ const config: UserConfig = {
 		cssMinify: 'lightningcss'
 	},
 	server: {
-		fs: { allow: ['../../packages'] },
+		fs: { allow: ['../../packages', '../../../KIT/kit/packages/kit'] },
 		// for tutorial
 		headers: {
 			'cross-origin-opener-policy': 'same-origin',

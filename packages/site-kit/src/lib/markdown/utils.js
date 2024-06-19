@@ -248,10 +248,28 @@ export function extract_frontmatter(markdown) {
 
 	/** @type {Record<string, string>} */
 	const metadata = {};
-	frontmatter.split('\n').forEach((pair) => {
-		const i = pair.indexOf(':');
-		metadata[pair.slice(0, i).trim()] = parse(pair.slice(i + 1).trim());
-	});
+
+	// Prettier might split things awkwardly, so we can't just go line-by-line
+
+	/** @type {string} */
+	let key = '';
+
+	/** @type {string} */
+	let value = '';
+
+	for (const line of frontmatter.split('\n')) {
+		const match = /^(\w+):\s*(.*)$/.exec(line);
+		if (match) {
+			if (key) metadata[key] = parse(value);
+
+			key = match[1];
+			value = match[2];
+		} else {
+			value += '\n' + line;
+		}
+	}
+
+	if (key) metadata[key] = parse(value);
 
 	return { metadata, body };
 }

@@ -6,16 +6,16 @@ The `event` object passed into `handle` is the same object — an instance of a 
 
 It contains a number of useful properties and methods, some of which we've already encountered:
 
-* `cookies` — the [cookies API](cookies)
-* `fetch` — the standard [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API), with additional powers
-* `getClientAddress()` — a function to get the client's IP address
-* `isDataRequest` — `true` if the browser is requesting data for a page during client-side navigation, `false` if a page/route is being requested directly
-* `locals` — a place to put arbitrary data
-* `params` — the route parameters
-* `request` — the [Request](https://developer.mozilla.org/en-US/docs/Web/API/Request) object
-* `route` — an object with an `id` property representing the route that was matched
-* `setHeaders(...)` — a function for [setting HTTP headers](headers) on the response
-* `url` — a [URL](https://developer.mozilla.org/en-US/docs/Web/API/URL) object representing the current request
+- `cookies` — the [cookies API](cookies)
+- `fetch` — the standard [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API), with additional powers
+- `getClientAddress()` — a function to get the client's IP address
+- `isDataRequest` — `true` if the browser is requesting data for a page during client-side navigation, `false` if a page/route is being requested directly
+- `locals` — a place to put arbitrary data
+- `params` — the route parameters
+- `request` — the [Request](https://developer.mozilla.org/en-US/docs/Web/API/Request) object
+- `route` — an object with an `id` property representing the route that was matched
+- `setHeaders(...)` — a function for [setting HTTP headers](headers) on the response
+- `url` — a [URL](https://developer.mozilla.org/en-US/docs/Web/API/URL) object representing the current request
 
 A useful pattern is to add some data to `event.locals` in `handle` so that it can be read in subsequent `load` functions:
 
@@ -35,4 +35,3 @@ export function load(+++event+++) {
 	};
 }
 ```
-

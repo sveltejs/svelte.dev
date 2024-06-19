@@ -31,6 +31,7 @@ Most of the time you should return the `css` property and _not_ the `tick` prope
 
 For example, the `fade` transition generates a CSS animation somewhat like this:
 
+<!-- prettier-ignore-start -->
 ```css
 /// no-file
 0% { opacity: 0 }
@@ -39,6 +40,7 @@ For example, the `fade` transition generates a CSS animation somewhat like this:
 /* ... */
 100% { opacity: 1 }
 ```
+<!-- prettier-ignore-end -->
 
 We can get a lot more creative though. Let's make something truly gratuitous:
 

@@ -40,14 +40,14 @@
 		<span class:faded={!prev}>previous</span>
 
 		{#if prev}
-			<a href={prev.path}>{prev.title}</a>
+			<a href={prev.path}>{prev.metadata.title}</a>
 		{/if}
 	</div>
 
 	<div>
 		<span class:faded={!next}>next</span>
 		{#if next}
-			<a href={next.path}>{next.title}</a>
+			<a href={next.path}>{next.metadata.title}</a>
 		{/if}
 	</div>
 </div>

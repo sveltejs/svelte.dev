@@ -19,6 +19,7 @@
 		selected_name,
 		solution
 	} from './state.js';
+	import { text_files } from './shared';
 
 	export let data;
 
@@ -39,17 +40,33 @@
 		/** @type {Record<string, import('$lib/tutorial').Stub>} */
 		const files = {};
 
-		// TODO handle __delete
+		/** @type {string[]} */
+		const to_delete = [];
+
 		for (const key in map) {
+			const contents = map[key];
+
+			if (contents.startsWith('__delete')) {
+				continue;
+			}
+
 			const parts = key.split('/');
 			const basename = /** @type {string} */ (parts.pop());
-			const dir = `/${parts.join('/')}`;
+			const ext = basename.slice(basename.lastIndexOf('.'));
 
-			if (parts.length > 0) {
+			if (basename === '__delete') {
+				to_delete.push(`/${parts.join('/')}`);
+				continue;
+			}
+
+			while (parts.length > 0) {
+				const dir = `/${parts.join('/')}`;
+				const basename = /** @type {string} */ (parts.pop());
+
 				files[dir] ??= {
 					type: 'directory',
 					name: dir,
-					basename: /** @type {string} */ (parts.pop())
+					basename
 				};
 			}
 
@@ -59,9 +76,17 @@
 				type: 'file',
 				name,
 				basename,
-				contents: map[key],
-				text: true // TODO
+				contents,
+				text: text_files.has(ext)
 			};
+		}
+
+		for (const dir of to_delete) {
+			for (const key in files) {
+				if (key === dir || key.startsWith(dir + '/')) {
+					delete files[key];
+				}
+			}
 		}
 
 		return files;
