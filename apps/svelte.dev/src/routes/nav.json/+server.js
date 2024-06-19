@@ -1,4 +1,3 @@
-import { get_blog_data, get_blog_list } from '$lib/server/blog/index.js';
 import { get_docs_data, get_docs_list } from '$lib/server/docs/index.js';
 import { get_examples_list } from '$lib/server/examples/index.js';
 import examples_data from '$lib/generated/examples-data.js';
