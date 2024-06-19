@@ -15,10 +15,8 @@
 			<span style="white-space: nowrap">Cybernetically enhanced</span> <br /> web apps
 		</strong>
 		<div class="buttons">
-			<a href="/tutorial" class="cta">
-				tutorial<Icon name="external-link" size="1em" />
-			</a>
-			<a href="/docs/svelte/introduction/overview" class="cta basic">read the docs</a>
+			<a href="/tutorial" class="cta">tutorial</a>
+			<a href="/docs" class="cta basic">read the docs</a>
 		</div>
 	</div>
 
@@ -116,7 +114,6 @@
 
 	.cta.basic {
 		background-color: var(--sk-back-5);
-
 		color: var(--sk-text-1);
 	}
 

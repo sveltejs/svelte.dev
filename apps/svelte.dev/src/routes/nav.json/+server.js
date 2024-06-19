@@ -48,7 +48,7 @@ async function get_nav_list() {
 		{
 			title: 'Docs',
 			prefix: 'docs',
-			pathname: '/docs/svelte/introduction/overview',
+			pathname: '/docs',
 			sections: [
 				{
 					title: 'DOCS',

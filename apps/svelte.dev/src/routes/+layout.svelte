@@ -53,10 +53,6 @@
 			{/snippet}
 
 			{#snippet external_links()}
-				<a href="https://kit.svelte.dev">SvelteKit</a>
-
-				<Separator />
-
 				<a href="/chat" title="Discord Chat">
 					<span class="small">Discord</span>
 					<span class="large"><Icon name="discord" /></span>
