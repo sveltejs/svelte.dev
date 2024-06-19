@@ -1,10 +1,9 @@
-<script>
+<script lang="ts">
 	import { theme } from '../stores';
 	import { BROWSER } from 'esm-env';
 	import { onDestroy } from 'svelte';
 
-	/** @type {{label?: string}} */
-	let { label = 'Dark mode' } = $props();
+	let { label = 'Dark mode' }: { label?: string } = $props();
 
 	function toggle() {
 		const upcoming_theme = $theme.current === 'light' ? 'dark' : 'light';
@@ -23,12 +22,10 @@
 		$theme.current = upcoming_theme;
 	}
 
-	/** @param {MediaQueryListEvent} e */
-	const cb = (e) =>
+	const cb = (e: MediaQueryListEvent) =>
 		theme.set({ preference: $theme.preference, current: e.matches ? 'dark' : 'light' });
 
-	/** @type {MediaQueryList | undefined} */
-	let query;
+	let query: MediaQueryList | undefined;
 
 	$effect(() => {
 		query?.removeEventListener('change', cb);

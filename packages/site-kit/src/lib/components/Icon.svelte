@@ -3,9 +3,14 @@ use an svg icon that was provided through `Icons.svelte` from
 - https://github.com/jacobmischka/svelte-feather-icon
 - https://feathericons.com/
 -->
-<script>
-	/** @type {{name: string, size?: string | number}} */
-	let { name, size = 20 } = $props();
+<script lang="ts">
+	let {
+		name,
+		size = 20
+	}: {
+		name: string;
+		size?: string | number;
+	} = $props();
 </script>
 
 <svg class="icon" width={size} height={size}>

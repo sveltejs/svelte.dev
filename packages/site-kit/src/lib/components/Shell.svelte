@@ -2,7 +2,7 @@
 The main shell of the application. It provides a slot for the top navigation, the main content, and the bottom banner.
 -->
 
-<script>
+<script lang="ts">
 	import { afterNavigate } from '$app/navigation';
 	import { navigating } from '$app/stores';
 	import { overlay_open } from '../stores';
@@ -10,11 +10,22 @@ The main shell of the application. It provides a slot for the top navigation, th
 	import SkipLink from '../nav/SkipLink.svelte';
 	import '../styles/index.css';
 	import Icons from './Icons.svelte';
+	import type { Snippet } from 'svelte';
+	import type { Snapshot } from '@sveltejs/kit';
 
-	/** @type {{nav_visible?: boolean, top_nav?: import('svelte').Snippet, children?: import('svelte').Snippet, banner_bottom?: import('svelte').Snippet}} */
-	let { nav_visible = true, top_nav, children, banner_bottom } = $props();
+	let {
+		nav_visible = true,
+		top_nav,
+		children,
+		banner_bottom
+	}: {
+		nav_visible?: boolean;
+		top_nav?: Snippet;
+		children?: Snippet;
+		banner_bottom?: Snippet;
+	} = $props();
 
-	let main_el = /** @type {HTMLElement} */ ($state());
+	let main_el = $state() as HTMLElement;
 	let scroll_restored = false;
 
 	afterNavigate(() => {
@@ -24,8 +35,7 @@ The main shell of the application. It provides a slot for the top navigation, th
 		scroll_restored = false;
 	});
 
-	/** @type {import('@sveltejs/kit').Snapshot<number>} */
-	export const snapshot = {
+	export const snapshot: Snapshot<number> = {
 		capture() {
 			return main_el.scrollTop;
 		},

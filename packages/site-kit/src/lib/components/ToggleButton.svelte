@@ -1,6 +1,11 @@
-<script>
-	/** @type {{pressed: boolean, label: string}} */
-	let { pressed = $bindable(), label } = $props();
+<script lang="ts">
+	let {
+		pressed = $bindable(),
+		label
+	}: {
+		pressed: boolean;
+		label: string;
+	} = $props();
 </script>
 
 <button aria-pressed={pressed} aria-label={label} onclick={() => (pressed = !pressed)}></button>
