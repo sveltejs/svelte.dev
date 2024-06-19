@@ -6,7 +6,7 @@
 	"scripts": {
 		"dev": "vite dev",
 		"check": "svelte-kit sync && svelte-check",
-		"package": "echo 'Remove this once https://github.com/sveltejs/svelte.dev/pull/31 is merged'",
+		"package": "svelte-kit sync",
 		"lint": "prettier --check .",
 		"format": "prettier --write ."
 	},
