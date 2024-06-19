@@ -1,5 +1,6 @@
-import DocsCopyCodeButton from '../docs/DocsCopyCodeButton.svelte';
+import { mount } from 'svelte';
 import { page } from '$app/stores';
+import DocsCopyCodeButton from '../docs/DocsCopyCodeButton.svelte';
 
 const map = new WeakMap();
 
@@ -37,7 +38,7 @@ export const copy_code_descendants = (node) => {
 
 			map.set(
 				block,
-				new DocsCopyCodeButton({
+				mount(DocsCopyCodeButton, {
 					target: target,
 					props: {
 						code
