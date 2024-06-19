@@ -1,7 +1,9 @@
 export {
 	render_content_markdown as renderContentMarkdown,
 	replace_export_type_placeholders as replaceExportTypePlaceholders,
-	stringify_module
+	stringify_module,
+	stringify_type,
+	stringify_expanded_type
 } from './renderer.js';
 
 export {

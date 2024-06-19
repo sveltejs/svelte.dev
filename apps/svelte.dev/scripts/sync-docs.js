@@ -3,7 +3,11 @@ import { execSync } from 'node:child_process';
 import { writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { stringify_module } from '@sveltejs/site-kit/markdown';
+import {
+	stringify_expanded_type,
+	stringify_module,
+	stringify_type
+} from '@sveltejs/site-kit/markdown';
 
 // Adjust these as needed for your local setup
 const svelte_path = '../../../../svelte/sites/svelte.dev';
@@ -42,27 +46,42 @@ const { modules: sveltekit_modules } = await import(sveltekit_json_path);
 
 // TODO JSdoc points to kit.svelte.dev, rewrite those for now
 for (const module of sveltekit_modules) {
-	traverseObjectKeys(module);
+	replace_strings(module, (str) =>
+		str
+			.replace(/(https:\/\/kit.svelte.dev)?\/docs\/([^#)]+)/g, (_, __, slug) =>
+				slug === 'cli' || slug === 'modules' || slug === 'types' || slug === 'configuration'
+					? `/docs/kit/reference/${slug}`
+					: _
+			)
+			.replace(/\/docs\/kit\/reference\/modules#([^-]+)-([^-]+)-([^-)]+)/g, (_, p1, p2, p3) => {
+				if (p1 === '$env') {
+					return `/docs/kit/reference/$env-all#${p1}-${p2}-${p3}`;
+				} else {
+					return `/docs/kit/reference/${p1 === 'sveltejs' ? '@sveltejs' : p1}-${p2}#${p3}`;
+				}
+			})
+			.replace(/\/docs\/cli/g, '/docs/kit/reference/cli')
+	);
 }
 
-function traverseObjectKeys(obj) {
-	for (let key in obj) {
-		if (typeof obj[key] === 'object') {
-			traverseObjectKeys(obj[key]);
-		} else if (typeof obj[key] === 'string') {
-			obj[key] = obj[key].replace(
-				/(https:\/\/kit.svelte.dev)?\/docs\/modules#([^-]+)-([^-]+)-/g,
-				(_, __, p1, p2) => `/docs/kit/reference/${p1 === 'sveltejs' ? '@sveltejs' : p1}-${p2}#`
-			);
-		}
-	}
-}
+const config = sveltekit_modules
+	.find((m) => m.name === '@sveltejs/kit')
+	.types.find((t) => t.name === 'Config');
 
-write_module_to_md(sveltekit_modules, 'kit');
+const kit_config = sveltekit_modules
+	.find((m) => m.name === '@sveltejs/kit')
+	.types.find((t) => t.name === 'KitConfig');
+
+write_module_to_md(
+	sveltekit_modules,
+	'kit',
+	`<!-- @include_start KitConfig -->\n${stringify_expanded_type(kit_config)}\n<!-- @include_end KitConfig -->\n\n` +
+		`<!-- @include_start Config -->\n${stringify_type(config)}\n<!-- @include_end Config -->\n\n`
+);
 
 // Helper methods
 
-function write_module_to_md(modules, name) {
+function write_module_to_md(modules, name, additional = '') {
 	const dir = `content/docs/${name}/98-reference`;
 
 	let content =
@@ -75,5 +94,17 @@ function write_module_to_md(modules, name) {
 		content += `<!-- @include_start ${module.name} -->\n${generated}\n<!-- @include_end ${module.name} -->\n\n`;
 	}
 
+	content += additional;
+
 	writeFileSync(path.join(dir, '_generated.md'), content);
+}
+
+function replace_strings(obj, replace) {
+	for (let key in obj) {
+		if (typeof obj[key] === 'object') {
+			replace_strings(obj[key], replace);
+		} else if (typeof obj[key] === 'string') {
+			obj[key] = replace(obj[key]);
+		}
+	}
 }

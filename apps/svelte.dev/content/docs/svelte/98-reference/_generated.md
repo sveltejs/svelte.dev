@@ -1043,10 +1043,14 @@ The custom element version of the component. Only present if compiled with the `
 
 ## ComponentConstructorOptions
 
-<blockquote class="tag deprecated">In Svelte 4, components are classes. In Svelte 5, they are functions.
+<blockquote class="tag deprecated">
+
+In Svelte 4, components are classes. In Svelte 5, they are functions.
 Use `mount` instead to instantiate components.
 See [breaking changes](https://svelte-5-preview.vercel.app/docs/breaking-changes#components-are-no-longer-classes)
-for more info.</blockquote>
+for more info.
+
+</blockquote>
 
 <div class="ts-block">
 
@@ -1122,7 +1126,11 @@ $$inline?: boolean;
 
 ## ComponentEvents
 
-<blockquote class="tag deprecated">The new `Component` type does not have a dedicated Events type. Use `ComponentProps` instead.</blockquote>
+<blockquote class="tag deprecated">
+
+The new `Component` type does not have a dedicated Events type. Use `ComponentProps` instead.
+
+</blockquote>
 
 <div class="ts-block">
 
@@ -1166,7 +1174,11 @@ type ComponentProps<
 
 ## ComponentType
 
-<blockquote class="tag deprecated">This type is obsolete when working with the new `Component` type.</blockquote>
+<blockquote class="tag deprecated">
+
+This type is obsolete when working with the new `Component` type.
+
+</blockquote>
 
 <div class="ts-block">
 
@@ -1365,7 +1377,11 @@ for more info.
 
 ## SvelteComponentTyped
 
-<blockquote class="tag deprecated">Use `Component` instead. See [breaking changes documentation](https://svelte-5-preview.vercel.app/docs/breaking-changes#components-are-no-longer-classes) for more information.</blockquote>
+<blockquote class="tag deprecated">
+
+Use `Component` instead. See [breaking changes documentation](https://svelte-5-preview.vercel.app/docs/breaking-changes#components-are-no-longer-classes) for more information.
+
+</blockquote>
 
 <div class="ts-block">
 

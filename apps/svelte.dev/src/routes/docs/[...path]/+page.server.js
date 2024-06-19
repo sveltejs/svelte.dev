@@ -112,7 +112,7 @@ const render_content = (filename, body) =>
 
 			// special case — we need to make allowances for code snippets coming
 			// from e.g. ambient.d.ts
-			if (filename.endsWith('30-modules.md')) {
+			if (filename.endsWith('02-$env-all.md')) {
 				injected.push('// @errors: 7006 7031');
 			}
 

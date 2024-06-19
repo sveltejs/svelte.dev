@@ -727,27 +727,66 @@ export function stringify_module(module) {
 	}
 
 	for (const t of module.types || []) {
-		content += `## ${t.name}\n\n`;
-
-		if (t.deprecated) {
-			content += `<blockquote class="tag deprecated">${t.deprecated}</blockquote>\n\n`;
-		}
-
-		if (t.comment) {
-			content += `${t.comment}\n\n`;
-		}
-
-		let children = t.children?.map((val) => stringify(val, 'dts')).join('\n\n');
 		if (module.name === '@sveltejs/kit' && (t.name === 'Config' || t.name === 'KitConfig')) {
 			// special case — we want these to be on a separate page
-			children =
-				'<div class="ts-block-property-details">See the [configuration reference](/docs/configuration) for details.</div>';
+			content +=
+				`## ${t.name}\n\n` +
+				'See the [configuration reference](/docs/reference/configuration) for details.\n\n';
+		} else {
+			content += `## ${t.name}\n\n` + stringify_type(t);
 		}
-
-		content += `<div class="ts-block">${fence(t.snippet, 'dts')}` + children + `\n</div>\n\n`;
 	}
 
 	return content;
+}
+
+/**
+ * @param {import('.').ModuleChild} t
+ */
+export function stringify_type(t) {
+	let content = '';
+
+	if (t.deprecated) {
+		content += `<blockquote class="tag deprecated">\n\n${t.deprecated}\n\n</blockquote>\n\n`;
+	}
+
+	if (t.comment) {
+		content += `${t.comment}\n\n`;
+	}
+
+	const children = t.children?.map((val) => stringify(val, 'dts')).join('\n\n');
+	content += `<div class="ts-block">${fence(t.snippet, 'dts')}` + children + `\n</div>\n\n`;
+	return content;
+}
+
+/**
+ * @param {import('.').ModuleChild} type
+ */
+export function stringify_expanded_type(type) {
+	return (
+		type.comment +
+		type.children
+			?.map((child) => {
+				let section = `## ${child.name}`;
+
+				if (child.bullets) {
+					section += `\n\n<div class="ts-block-property-bullets">\n\n${child.bullets.join(
+						'\n'
+					)}\n\n</div>`;
+				}
+
+				section += `\n\n${child.comment}`;
+
+				if (child.children) {
+					section += `\n\n<div class="ts-block-property-children">\n\n${child.children
+						.map((v) => stringify(v))
+						.join('\n')}\n\n</div>`;
+				}
+
+				return section;
+			})
+			.join('\n\n')
+	);
 }
 
 /**
