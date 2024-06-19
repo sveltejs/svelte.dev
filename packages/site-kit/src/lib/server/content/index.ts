@@ -75,9 +75,7 @@ export async function create_index(
 	let prev: Document | null = null;
 
 	for (const document of roots) {
-		console.group(document.slug);
 		prev = create_links(document, prev);
-		console.groupEnd();
 	}
 
 	return content;
