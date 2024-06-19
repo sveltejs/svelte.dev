@@ -59,16 +59,16 @@
 		},
 		"./branding/svelte-logo.svg": "./src/lib/branding/svelte-logo.svg",
 		"./components": {
-			"default": "./src/lib/components/index.js",
-			"svelte": "./src/lib/components/index.js"
+			"default": "./src/lib/components/index.ts",
+			"svelte": "./src/lib/components/index.ts"
 		},
 		"./home": {
-			"default": "./src/lib/home/index.js",
-			"svelte": "./src/lib/home/index.js"
+			"default": "./src/lib/home/index.ts",
+			"svelte": "./src/lib/home/index.ts"
 		},
 		"./docs": {
-			"default": "./src/lib/docs/index.js",
-			"svelte": "./src/lib/docs/index.js"
+			"default": "./src/lib/docs/index.ts",
+			"svelte": "./src/lib/docs/index.ts"
 		},
 		"./markdown": {
 			"default": "./src/lib/markdown/index.js",
