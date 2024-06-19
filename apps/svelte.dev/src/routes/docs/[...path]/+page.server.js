@@ -67,7 +67,8 @@ const render_content = (filename, body) =>
 			}
 
 			// Actions JSDoc examples are invalid. Too many errors, edge cases
-			if (filename.includes('svelte-action')) {
+			// d.ts files are not properly supported right now, fix this later
+			if (filename.includes('svelte-action') || source.includes(' declare const ')) {
 				injected.push('// @noErrors');
 			}
 

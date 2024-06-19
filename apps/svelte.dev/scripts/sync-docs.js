@@ -1,6 +1,6 @@
 // @ts-check
 import { execSync } from 'node:child_process';
-import { mkdirSync, readFileSync, readdirSync, statSync, writeFileSync } from 'node:fs';
+import { writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { stringify_module } from '@sveltejs/site-kit/markdown';
@@ -16,10 +16,13 @@ const svelte_script_path = fileURLToPath(
 );
 const svelte_json_path = new URL(`${svelte_path}/src/lib/generated/type-info.js`, import.meta.url)
 	.href;
+
 execSync(`node ${svelte_script_path}`, {
 	cwd: path.dirname(path.dirname(path.dirname(svelte_script_path)))
 });
+
 const { modules: svelte_modules } = await import(svelte_json_path);
+
 write_module_to_md(svelte_modules, 'svelte');
 
 // Same for SvelteKit
@@ -30,69 +33,29 @@ const sveltekit_json_path = new URL(
 	`${sveltekit_path}/src/lib/generated/type-info.js`,
 	import.meta.url
 ).href;
+
 execSync(`node ${sveltekit_script_path}`, {
 	cwd: path.dirname(path.dirname(path.dirname(sveltekit_script_path)))
 });
+
 const { modules: sveltekit_modules } = await import(sveltekit_json_path);
+
 write_module_to_md(sveltekit_modules, 'kit');
 
 // Helper methods
 
-/** @param {string} dir */
-function mkdirp(dir) {
-	try {
-		mkdirSync(dir, { recursive: true });
-	} catch (/** @type {any} */ e) {
-		if (e.code === 'EEXIST') {
-			if (!statSync(dir).isDirectory()) {
-				throw new Error(`Cannot create directory ${dir}, a file already exists at this position`);
-			}
-			return;
-		}
-		throw e;
-	}
-}
-
 function write_module_to_md(modules, name) {
 	const dir = `content/docs/${name}/98-reference`;
-	mkdirp(dir);
 
-	// read all files in the directory into an array
-	const files = readdirSync(dir);
-	const fileContents = {};
+	let content =
+		'---\ntitle: Generated Reference\n---\n\n' +
+		'This file is generated. Do not edit. If you are doing a translation, ' +
+		'remove the include comments in the other .md files instead and replace it with the translated output.\n\n';
 
-	for (const file of files) {
-		const filePath = path.join(dir, file);
-		const content = readFileSync(filePath, 'utf8');
-		fileContents[file] = content;
-	}
-
-	// for each module, generate the markdown content and replace the include in the file
-	// TODO support more granular includes?
 	for (const module of modules) {
 		const generated = stringify_module(module);
-
-		for (const [name, content] of Object.entries(fileContents)) {
-			const include_start_str = `<!-- @include_start ${module.name} -->`;
-			const start_idx = content.indexOf(include_start_str);
-			if (start_idx !== -1) {
-				const include_end_str = `<!-- @include_end ${module.name} -->`;
-				const end_idx = content.indexOf(include_end_str);
-				if (end_idx === -1) {
-					throw new Error(`Could not find end include for ${module.name}`);
-				}
-				const new_content =
-					content.slice(0, start_idx + include_start_str.length) +
-					'\n' +
-					generated +
-					'\n' +
-					content.slice(end_idx);
-				fileContents[name] = new_content;
-			}
-		}
+		content += `<!-- @include_start ${module.name} -->\n${generated}\n<!-- @include_end ${module.name} -->\n\n`;
 	}
 
-	for (const [name, content] of Object.entries(fileContents)) {
-		writeFileSync(path.join(dir, name), content);
-	}
+	writeFileSync(path.join(dir, '_generated.md'), content);
 }

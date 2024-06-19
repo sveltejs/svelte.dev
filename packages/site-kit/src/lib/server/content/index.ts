@@ -1,4 +1,4 @@
-import { extract_frontmatter, slugify } from '$lib/markdown/utils';
+import { extract_frontmatter, slugify } from '../../markdown/utils';
 import type { Document } from '../../types';
 
 export async function create_index(
@@ -10,16 +10,38 @@ export async function create_index(
 	const content: Record<string, Document> = {};
 
 	for (const key in documents) {
-		if (key.includes('+assets')) continue;
+		if (key.includes('+assets') || key.endsWith('/_generated.md')) continue;
 
 		const file = key.slice(base.length + 1);
 		const slug = file.replace(/(^|\/)\d+-/g, '$1').replace(/(\/index)?\.md$/, '');
 
 		const text = await read(documents[key].default).text();
-		const { metadata, body } = extract_frontmatter(text);
+		let { metadata, body } = extract_frontmatter(text);
 
 		if (!metadata.title) {
 			throw new Error(`Missing title in ${slug} frontmatter`);
+		}
+
+		// Check if there's a generated file inside the same folder
+		// which contains content to include in this document.
+		const generated = documents[key.substring(0, key.lastIndexOf('/')) + '/_generated.md']?.default;
+
+		if (generated) {
+			const generated_text = await read(generated).text();
+
+			body = body.replaceAll(/<!-- @include (.+?) -->/g, (_, name) => {
+				const include_start = `<!-- @include_start ${name} -->`;
+				const snippet = generated_text.slice(
+					generated_text.indexOf(include_start) + include_start.length,
+					generated_text.indexOf(`<!-- @include_end ${name} -->`)
+				);
+
+				if (!snippet) {
+					throw new Error(`Could not find include for ${name}`);
+				}
+
+				return snippet;
+			});
 		}
 
 		const sections = Array.from(body.matchAll(/^##\s+(.*)$/gm)).map((match) => {
