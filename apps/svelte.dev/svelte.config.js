@@ -10,7 +10,9 @@ const config = {
 		prerender: {
 			// TODO remporary while not all docs are migrated
 			handleHttpError({ path }) {
-				return path === '/docs/service-workers' ? 'warn' : 'fail';
+				return path === '/docs/service-workers' || path === '/docs/server-only-modules'
+					? 'warn'
+					: 'fail';
 			},
 			handleMissingId: 'warn'
 		}
