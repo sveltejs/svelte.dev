@@ -4,8 +4,8 @@
 
 	let { data, children } = $props();
 
-	const pageData = $derived($page.data.page);
-	const title = $derived(pageData?.title);
+	const pageData = $derived($page.data.document);
+	const title = $derived(pageData?.metadata.title);
 	const category = $derived(pageData?.category);
 </script>
 
