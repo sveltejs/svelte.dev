@@ -70,9 +70,8 @@
 			"svelte": "./dist/components/index.js"
 		},
 		"./home": {
-			"types": "./dist/home/index.d.ts",
-			"default": "./dist/home/index.js",
-			"svelte": "./dist/home/index.js"
+			"default": "./src/lib/home/index.js",
+			"svelte": "./src/lib/home/index.js"
 		},
 		"./docs": {
 			"types": "./dist/docs/types.d.ts",
@@ -97,9 +96,8 @@
 			"svelte": "./dist/search/index.js"
 		},
 		"./server/content": {
-			"types": "./dist/server/content/index.d.ts",
-			"default": "./dist/server/content/index.js",
-			"svelte": "./dist/server/content/index.js"
+			"default": "./src/lib/server/content/index.ts",
+			"svelte": "./src/lib/server/content/index.ts"
 		},
 		"./styles/base.css": "./dist/styles/base.css",
 		"./styles/code.css": "./dist/styles/code.css",

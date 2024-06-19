@@ -1,5 +1,5 @@
 <script>
-	import Section from '$lib/components/Section.svelte';
+	import Section from '../components/Section.svelte';
 
 	/** @type {{links: Record<string, { href: string; title: string; }[]>, copyright?: import('svelte').Snippet, license?: import('svelte').Snippet}} */
 	let { links, copyright, license } = $props();

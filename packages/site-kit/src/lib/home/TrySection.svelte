@@ -1,5 +1,5 @@
 <script>
-	import Section from '$lib/components/Section.svelte';
+	import Section from '../components/Section.svelte';
 	import TryTerminal from './TryTerminal.svelte';
 
 	/** @type {{content_heading?: import('svelte').Snippet, content?: import('svelte').Snippet}} */
