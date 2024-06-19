@@ -1,9 +1,9 @@
-import { onMount } from 'svelte';
+import { mount, onMount, unmount } from 'svelte';
 import Tooltip from './Tooltip.svelte';
 
 export function setupDocsHovers() {
 	onMount(() => {
-		/** @type {Tooltip | null} */
+		/** @type {any} */
 		let tooltip;
 
 		/** @type {NodeJS.Timeout} */
@@ -16,20 +16,9 @@ export function setupDocsHovers() {
 			if (target.tagName === 'DATA-LSP') {
 				clearTimeout(timeout);
 
-				if (!tooltip) {
-					tooltip = new Tooltip({
-						target: document.body
-					});
-
-					tooltip.$on('mouseenter', () => {
-						clearTimeout(timeout);
-					});
-
-					tooltip.$on('mouseleave', () => {
-						clearTimeout(timeout);
-						tooltip?.$destroy();
-						tooltip = null;
-					});
+				if (tooltip) {
+					unmount(tooltip);
+					tooltip = null;
 				}
 
 				const rect = target?.getBoundingClientRect();
@@ -39,10 +28,21 @@ export function setupDocsHovers() {
 				const y = rect.top + window.scrollY;
 
 				if (html) {
-					tooltip.$set({
-						html,
-						x,
-						y
+					tooltip = mount(Tooltip, {
+						target: document.body,
+						props: {
+							html,
+							x,
+							y,
+							onmouseenter: () => {
+								clearTimeout(timeout);
+							},
+							onmouseleave: () => {
+								clearTimeout(timeout);
+								unmount(tooltip);
+								tooltip = null;
+							}
+						}
 					});
 				}
 			}
@@ -53,7 +53,7 @@ export function setupDocsHovers() {
 			const target = /** @type {HTMLElement} */ (event.target);
 			if (target.tagName === 'DATA-LSP') {
 				timeout = setTimeout(() => {
-					tooltip?.$destroy();
+					unmount(tooltip);
 					tooltip = null;
 				}, 200);
 			}
