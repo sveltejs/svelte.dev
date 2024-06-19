@@ -1,11 +1,18 @@
-<script>
-	import { onMount } from 'svelte';
+<script lang="ts">
+	import { onMount, type Component } from 'svelte';
 
-	let constructor;
+	let {
+		this: importer,
+		...rest
+	}: {
+		this: () => Promise<Component>;
+	} = $props();
+
+	let constructor: Component;
 
 	onMount(async () => {
-		constructor = await $$props.this();
+		constructor = await importer();
 	});
 </script>
 
-<svelte:component this={constructor} {...$$props} />
+<svelte:component this={constructor} {...rest} />
