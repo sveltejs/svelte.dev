@@ -344,9 +344,6 @@ importers:
       '@sveltejs/kit':
         specifier: ^2.5.7
         version: 2.5.7(@sveltejs/vite-plugin-svelte@3.1.1(svelte@5.0.0-next.126)(vite@5.2.11(@types/node@20.12.11)(lightningcss@1.25.1)))(svelte@5.0.0-next.126)(vite@5.2.11(@types/node@20.12.11)(lightningcss@1.25.1))
-      '@sveltejs/package':
-        specifier: ^2.3.1
-        version: 2.3.1(svelte@5.0.0-next.126)(typescript@5.4.5)
       '@types/node':
         specifier: ^20.12.11
         version: 20.12.11
