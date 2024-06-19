@@ -1,10 +1,9 @@
-<script>
+<script lang="ts">
 	import Icon from '../components/Icon.svelte';
 	import { cubicOut } from 'svelte/easing';
 	import { fade } from 'svelte/transition';
 
-	/** @type {{code: string}} */
-	let { code } = $props();
+	let { code }: { code: string } = $props();
 
 	let copying = $state(false);
 

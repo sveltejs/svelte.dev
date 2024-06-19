@@ -3,15 +3,11 @@ import Tooltip from './Tooltip.svelte';
 
 export function setupDocsHovers() {
 	onMount(() => {
-		/** @type {any} */
-		let tooltip;
+		let tooltip: any;
+		let timeout: NodeJS.Timeout;
 
-		/** @type {NodeJS.Timeout} */
-		let timeout;
-
-		/** @param {MouseEvent} event */
-		function over(event) {
-			const target = /** @type {HTMLElement} */ (event.target);
+		function over(event: MouseEvent) {
+			const target = event.target as HTMLElement;
 
 			if (target.tagName === 'DATA-LSP') {
 				clearTimeout(timeout);
@@ -48,9 +44,8 @@ export function setupDocsHovers() {
 			}
 		}
 
-		/** @param {MouseEvent} event */
-		function out(event) {
-			const target = /** @type {HTMLElement} */ (event.target);
+		function out(event: MouseEvent) {
+			const target = event.target as HTMLElement;
 			if (target.tagName === 'DATA-LSP') {
 				timeout = setTimeout(() => {
 					unmount(tooltip);

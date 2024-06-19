@@ -1,9 +1,9 @@
-<script>
+<script lang="ts">
 	import { persisted } from 'svelte-persisted-store';
 	import ToggleButton from '../components/ToggleButton.svelte';
+	import type { Snippet } from 'svelte';
 
-	/** @type {{javascript?: import('svelte').Snippet, typescript?: import('svelte').Snippet}} */
-	let { javascript, typescript } = $props();
+	let { javascript, typescript }: { javascript?: Snippet; typescript?: Snippet } = $props();
 
 	const checked = persisted('svelte:prefers-ts', false);
 

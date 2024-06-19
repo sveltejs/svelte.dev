@@ -1,20 +1,29 @@
-<script>
+<script lang="ts">
 	import { tick } from 'svelte';
 
-	/** @type {{html?: string, x?: number, y?: number, onmouseenter?: (event: any) => void, onmouseleave?: (event: any) => void}} */
-	let { html = '', x = 0, y = 0, onmouseenter, onmouseleave } = $props();
+	let {
+		html = '',
+		x = 0,
+		y = 0,
+		onmouseenter,
+		onmouseleave
+	}: {
+		html?: string;
+		x?: number;
+		y?: number;
+		onmouseenter?: (event: any) => void;
+		onmouseleave?: (event: any) => void;
+	} = $props();
 
 	let width = $state(1);
-
-	/** @type {HTMLDivElement | undefined}*/
-	let tooltip = $state();
+	let tooltip = $state() as HTMLDivElement | undefined;
 
 	// bit of a gross hack but it works — this prevents the
 	// tooltip from disappearing off the side of the screen
 	$effect(() => {
 		if (html && tooltip) {
 			tick().then(() => {
-				width = /** @type {HTMLDivElement} */ (tooltip).getBoundingClientRect().width;
+				width = tooltip!.getBoundingClientRect().width;
 			});
 		}
 	});

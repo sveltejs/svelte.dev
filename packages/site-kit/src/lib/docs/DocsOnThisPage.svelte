@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { browser } from '$app/environment';
 	import { afterNavigate } from '$app/navigation';
 	import { page } from '$app/stores';
@@ -9,9 +9,22 @@
 	import { expoOut } from 'svelte/easing';
 	import { readable } from 'svelte/store';
 	import { slide } from 'svelte/transition';
+	import type { Snippet } from 'svelte';
+	import type { Section } from '../types';
 
-	/** @type {{ title: string, path: string, sections: import('../types').Section[], orientation?: 'auto' | 'inline' | 'aside', children?: import('svelte').Snippet }} */
-	let { title, path, sections, orientation = 'auto', children } = $props();
+	let {
+		title,
+		path,
+		sections,
+		orientation = 'auto',
+		children
+	}: {
+		title: string;
+		path: string;
+		sections: Section[];
+		orientation?: 'auto' | 'inline' | 'aside';
+		children?: Snippet;
+	} = $props();
 
 	const dispatch = createEventDispatcher();
 
@@ -19,17 +32,10 @@
 
 	let height = 0;
 
-	/** @type {HTMLElement} */
-	let content;
-
-	/** @type {NodeListOf<HTMLElement>} */
-	let headings;
-
-	/** @type {number[]} */
-	let positions = [];
-
-	/** @type {HTMLElement | undefined} */
-	let containerEl = $state();
+	let content: HTMLElement;
+	let headings: NodeListOf<HTMLElement>;
+	let positions: number[] = [];
+	let containerEl = $state() as HTMLElement;
 
 	let show_contents = false;
 
@@ -112,7 +118,7 @@
 	}
 
 	async function update() {
-		const contentEl = /** @type {HTMLElement | null} */ (document.querySelector('.content'));
+		const contentEl = document.querySelector('.content') as HTMLElement | null;
 
 		if (!contentEl) return;
 
