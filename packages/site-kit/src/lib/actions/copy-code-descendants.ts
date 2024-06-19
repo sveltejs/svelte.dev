@@ -1,13 +1,12 @@
 import { mount, unmount } from 'svelte';
 import { page } from '$app/stores';
 import DocsCopyCodeButton from '../docs/DocsCopyCodeButton.svelte';
+import type { Action } from 'svelte/action';
 
 const map = new WeakMap();
 
-/** @type {import('svelte/action').Action} */
-export const copy_code_descendants = (node) => {
-	/** @type {NodeListOf<Element>} */
-	let code_blocks;
+export const copy_code_descendants: Action = (node) => {
+	let code_blocks: NodeListOf<Element>;
 
 	function update() {
 		code_blocks = node.querySelectorAll('.copy-code-block');
@@ -22,7 +21,7 @@ export const copy_code_descendants = (node) => {
 			let code = '';
 			for (const node of block.querySelector('code')?.childNodes ?? []) {
 				if (node.nodeType === Node.ELEMENT_NODE) {
-					if (!(/** @type {HTMLElement} */ (node).classList.contains('deleted'))) {
+					if (!(node as HTMLElement).classList.contains('deleted')) {
 						code += node.textContent;
 					}
 				} else {

@@ -52,7 +52,7 @@
 			"types": "./src/lib/types.d.ts"
 		},
 		"./actions": {
-			"default": "./src/lib/actions/index.js"
+			"default": "./src/lib/actions/index.ts"
 		},
 		"./stores": {
 			"default": "./src/lib/stores/index.js"

@@ -1,17 +1,13 @@
-/** @param {HTMLElement} node */
-export function focusable_children(node) {
-	const nodes = /** @type {HTMLElement[]} */ (
-		Array.from(
-			node.querySelectorAll(
-				'a[href], button, input, textarea, select, details, [tabindex]:not([tabindex="-1"])'
-			)
+export function focusable_children(node: HTMLElement) {
+	const nodes: HTMLElement[] = Array.from(
+		node.querySelectorAll(
+			'a[href], button, input, textarea, select, details, [tabindex]:not([tabindex="-1"])'
 		)
 	);
 
-	const index = nodes.indexOf(/** @type {HTMLElement} */ (document.activeElement));
+	const index = nodes.indexOf(document.activeElement as HTMLElement);
 
-	/** @param {number} d */
-	const update = (d) => {
+	const update = (d: number) => {
 		let i = index + d;
 		i += nodes.length;
 		i %= nodes.length;
@@ -20,8 +16,7 @@ export function focusable_children(node) {
 	};
 
 	return {
-		/** @param {string} [selector] */
-		next: (selector) => {
+		next: (selector?: string) => {
 			const reordered = [...nodes.slice(index + 1), ...nodes.slice(0, index + 1)];
 
 			for (let i = 0; i < reordered.length; i += 1) {
@@ -31,8 +26,7 @@ export function focusable_children(node) {
 				}
 			}
 		},
-		/** @param {string} [selector] */
-		prev: (selector) => {
+		prev: (selector?: string) => {
 			const reordered = [...nodes.slice(index + 1), ...nodes.slice(0, index + 1)];
 
 			for (let i = reordered.length - 2; i >= 0; i -= 1) {
@@ -46,15 +40,10 @@ export function focusable_children(node) {
 	};
 }
 
-/**
- * @param {HTMLElement} node
- * @param {{ reset_focus?: boolean }} opts
- */
-export function trap(node, { reset_focus = true } = {}) {
-	const previous = /** @type HTMLElement} */ (document.activeElement);
+export function trap(node: HTMLElement, { reset_focus = true }: { reset_focus?: boolean } = {}) {
+	const previous = document.activeElement as HTMLElement;
 
-	/** @param {KeyboardEvent} e */
-	const handle_keydown = (e) => {
+	const handle_keydown = (e: KeyboardEvent) => {
 		if (e.key === 'Tab') {
 			e.preventDefault();
 
