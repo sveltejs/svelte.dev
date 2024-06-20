@@ -172,8 +172,6 @@ You cannot `export default`, since the default export is the component itself.
 
 CSS inside a `<style>` block will be scoped to that component.
 
-This works by adding a class to affected elements, which is based on a hash of the component styles (e.g. `svelte-123xyz`).
-
 ```svelte
 <style>
 	p {
