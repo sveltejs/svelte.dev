@@ -1,4 +1,4 @@
-import { Marked } from 'marked';
+import { Marked, Renderer, type TokenizerObject } from 'marked';
 import json5 from 'json5';
 
 const escapeTest = /[&<>"']/;
@@ -16,8 +16,8 @@ const escapeReplacements = {
 /**
  * @param {string} ch
  */
-const getEscapeReplacement = (ch) =>
-	escapeReplacements[/** @type {keyof typeof escapeReplacements} */ (ch)];
+const getEscapeReplacement = (ch: string) =>
+	escapeReplacements[ch as keyof typeof escapeReplacements];
 
 export const SHIKI_LANGUAGE_MAP = {
 	bash: 'bash',
@@ -33,11 +33,7 @@ export const SHIKI_LANGUAGE_MAP = {
 	'': ''
 };
 
-/**
- * @param {string} html
- * @param {boolean} encode
- */
-export function escape(html, encode = false) {
+export function escape(html: string, encode = false) {
 	if (encode) {
 		if (escapeTest.test(html)) {
 			return html.replace(escapeReplace, getEscapeReplacement);
@@ -51,8 +47,7 @@ export function escape(html, encode = false) {
 	return html;
 }
 
-/** @param {string} title */
-export function slugify(title) {
+export function slugify(title: string) {
 	return title
 		.toLowerCase()
 		.replace(/&#39;/g, '')
@@ -64,8 +59,7 @@ export function slugify(title) {
 		.replace(/-$/, '');
 }
 
-/** @param {string} markdown */
-export function removeMarkdown(markdown) {
+export function removeMarkdown(markdown: string) {
 	return markdown
 		.replace(/\*\*(.+?)\*\*/g, '$1') // bold
 		.replace(/_(.+?)_/g, '$1') // Italics
@@ -78,18 +72,15 @@ export function removeMarkdown(markdown) {
 		.trim();
 }
 
-/** @param {string} html */
-export function removeHTMLEntities(html) {
+export function removeHTMLEntities(html: string) {
 	return html.replace(/&.+?;/g, '');
 }
 
-/** @param {string} str */
-export const normalizeSlugify = (str) => {
+export const normalizeSlugify = (str: string) => {
 	return slugify(removeHTMLEntities(removeMarkdown(str))).replace(/(<([^>]+)>)/gi, '');
 };
 
-/** @type {Partial<import('marked').Renderer>} */
-const default_renderer = {
+const default_renderer: Partial<Renderer> = {
 	code(code, infostring, escaped) {
 		const lang = infostring?.match(/\S*/)?.[0];
 
@@ -209,8 +200,7 @@ const default_renderer = {
 	}
 };
 
-/** @type {import('marked').TokenizerObject} */
-const tokenizer = {
+const tokenizer: TokenizerObject = {
 	url(src) {
 		// if `src` is a package version string, eg: adapter-auto@1.2.3
 		// do not tokenize it as email
@@ -222,11 +212,7 @@ const tokenizer = {
 	}
 };
 
-/**
- * @param {string} markdown
- * @param {Partial<import('marked').Renderer>} renderer
- */
-export async function transform(markdown, renderer = {}) {
+export async function transform(markdown: string, renderer: Partial<Renderer> = {}) {
 	const marked = new Marked({
 		renderer: {
 			...default_renderer,
@@ -238,16 +224,14 @@ export async function transform(markdown, renderer = {}) {
 	return (await marked.parse(markdown)) ?? '';
 }
 
-/** @param {string} markdown */
-export function extract_frontmatter(markdown) {
+export function extract_frontmatter(markdown: string) {
 	const match = /---\r?\n([\s\S]+?)\r?\n---/.exec(markdown);
 	if (!match) return { metadata: {}, body: markdown };
 
 	const frontmatter = match[1];
 	const body = markdown.slice(match[0].length).trim();
 
-	/** @type {Record<string, string>} */
-	const metadata = {};
+	const metadata: Record<string, string> = {};
 
 	// Prettier might split things awkwardly, so we can't just go line-by-line
 
@@ -274,8 +258,7 @@ export function extract_frontmatter(markdown) {
 	return { metadata, body };
 }
 
-/** @param {string} str */
-const parse = (str) => {
+const parse = (str: string) => {
 	try {
 		return json5.parse(str);
 	} catch (err) {

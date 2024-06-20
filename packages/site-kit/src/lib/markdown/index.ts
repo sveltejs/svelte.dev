@@ -15,14 +15,13 @@ export {
 	escape
 } from './utils';
 
-export interface Modules {
+export type Modules = Array<{
 	name?: string;
 	comment?: string;
 	exempt?: boolean;
 	types?: ModuleChild[];
 	exports?: ModuleChild[];
-}
-
+}>;
 export interface ModuleChild {
 	name: string;
 	snippet: string;

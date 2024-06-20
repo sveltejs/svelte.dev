@@ -3,26 +3,32 @@ import { createHash } from 'node:crypto';
 import { mkdir, readFile, readdir, stat, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import ts from 'typescript';
-import { SHIKI_LANGUAGE_MAP, escape, normalizeSlugify, transform } from './utils.js';
+import { SHIKI_LANGUAGE_MAP, escape, normalizeSlugify, transform } from './utils';
+import type { ModuleChild, Modules } from '.';
 
-/**
- * @typedef {Record<MetadataKeys, string | boolean | number | null>} SnippetOptions
- * @typedef {(filename: string, content: string, language: string, options: SnippetOptions) => string} TwoslashBanner
- * @typedef {'file' | 'link' | 'copy'} MetadataKeys
- */
+type MetadataKeys = 'file' | 'link' | 'copy';
+type SnippetOptions = Record<MetadataKeys, string | boolean | number | null>;
+type TwoslashBanner = (
+	filename: string,
+	content: string,
+	language: string,
+	options: SnippetOptions
+) => string;
+interface RenderContentOptions {
+	twoslashBanner?: TwoslashBanner;
+	modules?: Modules;
+	cacheCodeSnippets?: boolean;
+	resolveTypeLinks?: Parameters<typeof create_type_links>['1'];
+}
 
 // Supports js, svelte, yaml files
 const METADATA_REGEX =
 	/(?:<!---\s*|\/\/\/\s*|###\s*)(?<key>file|link|copy):\s*(?<value>.*?)(?:\s*--->|$)\n/gm;
 
-/** @type {Map<string, string>} */
-const CACHE_MAP = new Map();
+const CACHE_MAP = new Map<string, string>();
 
-/** @type {import('shiki-twoslash')} */
-let twoslash_module;
-
-/** @type {import('prettier')} */
-let prettier_module;
+let twoslash_module: typeof import('shiki-twoslash');
+let prettier_module: typeof import('prettier');
 
 /**
  * A super markdown renderer function. Renders svelte and kit docs specific specific markdown code to html.
@@ -108,9 +114,14 @@ let prettier_module;
  * @param {Parameters<typeof create_type_links>['1']} [options.resolveTypeLinks] Resolve types into its slugs(used on the page itself).
  */
 export async function render_content_markdown(
-	filename,
-	body,
-	{ twoslashBanner, modules = [], cacheCodeSnippets = true, resolveTypeLinks } = {}
+	filename: string,
+	body: string,
+	{
+		twoslashBanner,
+		modules = [],
+		cacheCodeSnippets = true,
+		resolveTypeLinks
+	}: RenderContentOptions = {}
 ) {
 	twoslash_module ??= await import('shiki-twoslash');
 	prettier_module ??= await import('prettier');
@@ -207,17 +218,17 @@ export async function render_content_markdown(
 	});
 }
 
-/**
- * @param {{
- *   body: string;
- *   type_links: Map<string, { relativeURL: string; slug: string; page: string}> | null;
- *   code: (source: string, language: string, current: string) => string;
- *   codespan: (source: string) => string;
- * }} opts
- */
-async function parse({ body, code, codespan }) {
-	/** @type {string[]} */
-	const headings = [];
+async function parse({
+	body,
+	code,
+	codespan
+}: {
+	body: string;
+	type_links: Map<string, { relativeURL: string; slug: string; page: string }> | null;
+	code: (source: string, language: string, current: string) => string;
+	codespan: (source: string) => string;
+}) {
+	const headings: string[] = [];
 
 	// this is a bit hacky, but it allows us to prevent type declarations
 	// from linking to themselves
@@ -256,9 +267,8 @@ async function parse({ body, code, codespan }) {
 /**
  * Pre-render step. Takes in all the code snippets, and replaces them with TS snippets if possible
  * May replace the language labels (```js) to custom labels(```generated-ts, ```original-js, ```generated-svelte,```original-svelte)
- *  @param {string} markdown
  */
-async function generate_ts_from_js(markdown) {
+async function generate_ts_from_js(markdown: string) {
 	markdown = await async_replace(markdown, /```js\n([\s\S]+?)\n```/g, async ([match, code]) => {
 		if (!code.includes('/// file:')) {
 			// No named file -> assume that the code is not meant to be shown in two versions
@@ -311,20 +321,16 @@ async function generate_ts_from_js(markdown) {
 	return markdown;
 }
 
-/** @param {ts.Node} node */
-function get_jsdoc(node) {
-	const { jsDoc } = /** @type {{ jsDoc?: ts.JSDoc[] }} */ (/** @type {*} */ (node));
+function get_jsdoc(node: ts.Node) {
+	const { jsDoc } = node as { jsDoc?: ts.JSDoc[] };
 	return jsDoc;
 }
 
 /**
  * Transforms a JS code block into a TS code block by turning JSDoc into type annotations.
  * Due to pragmatism only the cases currently used in the docs are implemented.
- * @param {string} js_code
- * @param {string} [indent]
- * @param {string} [offset]
  */
-export async function convert_to_ts(js_code, indent = '', offset = '') {
+export async function convert_to_ts(js_code: string, indent = '', offset = '') {
 	js_code = js_code
 		.replaceAll('// @filename: index.js', '// @filename: index.ts')
 		.replace(/(\/\/\/ .+?\.)js/, '$1ts')
@@ -341,10 +347,7 @@ export async function convert_to_ts(js_code, indent = '', offset = '') {
 	const code = new MagicString(js_code);
 	const imports = new Map();
 
-	/**
-	 * @param {import('typescript').Node} node
-	 */
-	async function walk(node) {
+	async function walk(node: ts.Node) {
 		const jsdoc = get_jsdoc(node);
 		if (jsdoc) {
 			for (const comment of jsdoc) {
@@ -475,8 +478,7 @@ export async function convert_to_ts(js_code, indent = '', offset = '') {
 
 	return transformed === js_code ? undefined : transformed.replace(/\n\s*\n\s*\n/g, '\n\n');
 
-	/** @param {ts.JSDocTypeTag | ts.JSDocParameterTag} tag */
-	async function get_type_info(tag) {
+	async function get_type_info(tag: ts.JSDocTypeTag | ts.JSDocParameterTag) {
 		const type_text = tag.typeExpression?.getText();
 		let name = type_text?.slice(1, -1); // remove { }
 
@@ -515,10 +517,8 @@ export async function convert_to_ts(js_code, indent = '', offset = '') {
 
 /**
  * Replace module/export information placeholders in the docs.
- * @param {string} content
- * @param {import('.').Modules} modules
  */
-export async function replace_export_type_placeholders(content, modules) {
+export async function replace_export_type_placeholders(content: string, modules: Modules) {
 	const REGEXES = {
 		EXPANDED_TYPES: /> EXPANDED_TYPES: (.+?)#(.+)$/gm,
 		TYPES: /> TYPES: (.+?)(?:#(.+))?$/gm,
@@ -697,9 +697,8 @@ export async function replace_export_type_placeholders(content, modules) {
 
 /**
  * Takes a module and returns a markdown string.
- * @param {import('.').Modules[0]} module
  */
-export function stringify_module(module) {
+export function stringify_module(module: Modules[0]) {
 	let content = '';
 
 	if (module.exports && module.exports.length > 0) {
@@ -740,10 +739,7 @@ export function stringify_module(module) {
 	return content;
 }
 
-/**
- * @param {import('.').ModuleChild} t
- */
-export function stringify_type(t) {
+export function stringify_type(t: ModuleChild) {
 	let content = '';
 
 	if (t.deprecated) {
@@ -759,10 +755,7 @@ export function stringify_type(t) {
 	return content;
 }
 
-/**
- * @param {import('.').ModuleChild} type
- */
-export function stringify_expanded_type(type) {
+export function stringify_expanded_type(type: ModuleChild) {
 	return (
 		type.comment +
 		type.children
@@ -789,11 +782,7 @@ export function stringify_expanded_type(type) {
 	);
 }
 
-/**
- * @param {string} code
- * @param {keyof typeof import('./utils').SHIKI_LANGUAGE_MAP} lang
- */
-function fence(code, lang = 'ts') {
+function fence(code: string, lang: keyof typeof SHIKI_LANGUAGE_MAP = 'ts') {
 	return (
 		'\n\n```' +
 		lang +
@@ -806,11 +795,8 @@ function fence(code, lang = 'ts') {
 
 /**
  * Helper function for {@link replace_export_type_placeholders}. Renders specifiv members to their markdown/html representation.
- * @param {import('.').ModuleChild} member
- * @param {keyof typeof import('./utils.js').SHIKI_LANGUAGE_MAP} [lang]
- * @returns {string}
  */
-function stringify(member, lang = 'ts') {
+function stringify(member: ModuleChild, lang: keyof typeof SHIKI_LANGUAGE_MAP = 'ts'): string {
 	if (!member) return '';
 
 	// It's important to always use two newlines after a dom tag or else markdown does not render it properly
@@ -847,11 +833,7 @@ function stringify(member, lang = 'ts') {
 	);
 }
 
-/**
- * @param {string} start_path
- * @return {Promise<string | null>}
- */
-async function find_nearest_node_modules(start_path) {
+async function find_nearest_node_modules(start_path: string): Promise<string | null> {
 	try {
 		if (await stat(path.join(start_path, 'node_modules'))) {
 			return path.resolve(start_path, 'node_modules');
@@ -880,10 +862,8 @@ async function find_nearest_node_modules(start_path) {
  * // Later to save the code to the cache
  * SNIPPETS_CACHE.save(uid, processed_code);
  * ```
- *
- * @param {boolean} should
  */
-async function create_snippet_cache(should) {
+async function create_snippet_cache(should: boolean) {
 	const snippet_cache = (await find_nearest_node_modules(import.meta.url)) + '/.snippets';
 
 	// No local cache exists yet
@@ -910,8 +890,7 @@ async function create_snippet_cache(should) {
 		} catch {}
 	}
 
-	/** @param {string} source */
-	function get(source) {
+	function get(source: string) {
 		if (!should) return { uid: null, code: null };
 
 		const hash = createHash('sha256');
@@ -928,11 +907,7 @@ async function create_snippet_cache(should) {
 		return { uid: digest, code: null };
 	}
 
-	/**
-	 * @param {string | null} uid
-	 * @param {string} content
-	 */
-	function save(uid, content) {
+	function save(uid: string | null, content: string) {
 		if (!should || !uid) return;
 
 		CACHE_MAP.set(uid, content);
@@ -942,12 +917,13 @@ async function create_snippet_cache(should) {
 	return { get, save };
 }
 
-/**
- * @param {import('.').Modules | undefined} modules
- * @param {((module_name: string, type_name: string) => { slug: string; page: string; }) | undefined} resolve_link
- * @returns {{ type_regex: RegExp | null, type_links: Map<string, { slug: string; page: string; relativeURL: string }> | null }}
- */
-function create_type_links(modules, resolve_link) {
+function create_type_links(
+	modules: Modules | undefined,
+	resolve_link?: (module_name: string, type_name: string) => { slug: string; page: string }
+): {
+	type_regex: RegExp | null;
+	type_links: Map<string, { slug: string; page: string; relativeURL: string }> | null;
+} {
 	if (!modules || modules.length === 0 || !resolve_link)
 		return { type_regex: null, type_links: null };
 
@@ -974,11 +950,7 @@ function create_type_links(modules, resolve_link) {
 	return { type_regex, type_links };
 }
 
-/**
- * @param {string} source
- * @param {SnippetOptions} options
- */
-function collect_options(source, options) {
+function collect_options(source: string, options: SnippetOptions) {
 	METADATA_REGEX.lastIndex = 0;
 
 	let copy_value = 'true';
@@ -986,7 +958,7 @@ function collect_options(source, options) {
 		if (key === 'copy') {
 			copy_value = value;
 		}
-		options[/** @type {MetadataKeys} */ (key)] = value;
+		options[key as MetadataKeys] = value;
 		return '';
 	});
 
@@ -996,11 +968,7 @@ function collect_options(source, options) {
 	return source;
 }
 
-/**
- * @param {string} source
- * @param {string} language
- */
-function adjust_tab_indentation(source, language) {
+function adjust_tab_indentation(source: string, language: string) {
 	return (
 		source
 			// TODO: what exactly is going on here? The regex finds spaces and replaces them with spaces again?
@@ -1020,23 +988,26 @@ function adjust_tab_indentation(source, language) {
 	);
 }
 
-/** @param {string} html */
-function replace_blank_lines(html) {
+function replace_blank_lines(html: string) {
 	// preserve blank lines in output (maybe there's a more correct way to do this?)
 	return html.replaceAll(/<div class='line'>(&nbsp;)?<\/div>/g, '<div class="line">\n</div>');
 }
 
-/**
- * @param {{
- * source: string,
- * filename: string,
- * language: string,
- * highlighter: ReturnType<import('shiki-twoslash').createShikiHighlighter>
- * twoslashBanner?: TwoslashBanner
- * options: SnippetOptions
- * }} param0
- */
-function syntax_highlight({ source, filename, language, highlighter, twoslashBanner, options }) {
+function syntax_highlight({
+	source,
+	filename,
+	language,
+	highlighter,
+	twoslashBanner,
+	options
+}: {
+	source: string;
+	filename: string;
+	language: string;
+	highlighter: Awaited<ReturnType<typeof import('shiki-twoslash').createShikiHighlighter>>;
+	twoslashBanner?: TwoslashBanner;
+	options: SnippetOptions;
+}) {
 	let html = '';
 
 	if (/^(dts|yaml|yml)/.test(language)) {
@@ -1122,7 +1093,7 @@ function syntax_highlight({ source, filename, language, highlighter, twoslashBan
 			.join('')}</code></pre>`;
 	} else {
 		const highlighted = highlighter.codeToHtml(source, {
-			lang: SHIKI_LANGUAGE_MAP[/** @type {keyof typeof SHIKI_LANGUAGE_MAP} */ (language)]
+			lang: SHIKI_LANGUAGE_MAP[language as keyof typeof SHIKI_LANGUAGE_MAP]
 		});
 
 		html = replace_blank_lines(highlighted);
@@ -1131,10 +1102,7 @@ function syntax_highlight({ source, filename, language, highlighter, twoslashBan
 	return html;
 }
 
-/**
- * @param {string} str
- */
-function indent_multiline_comments(str) {
+function indent_multiline_comments(str: string) {
 	return str.replace(
 		/^(\s+)<span class="token comment">([\s\S]+?)<\/span>\n/gm,
 		(_, intro_whitespace, content) => {
@@ -1154,12 +1122,11 @@ function indent_multiline_comments(str) {
 	);
 }
 
-/**
- * @param {string} inputString
- * @param {RegExp} regex
- * @param {(match: RegExpExecArray) => string | Promise<string>} asyncCallback
- */
-async function async_replace(inputString, regex, asyncCallback) {
+async function async_replace(
+	inputString: string,
+	regex: RegExp,
+	asyncCallback: (match: RegExpExecArray) => string | Promise<string>
+) {
 	let match;
 	let previousLastIndex = 0;
 	let parts = [];

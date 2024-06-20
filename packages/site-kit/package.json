@@ -71,8 +71,8 @@
 			"svelte": "./src/lib/docs/index.ts"
 		},
 		"./markdown": {
-			"default": "./src/lib/markdown/index.js",
-			"svelte": "./src/lib/markdown/index.js"
+			"default": "./src/lib/markdown/index.ts",
+			"svelte": "./src/lib/markdown/index.ts"
 		},
 		"./nav": {
 			"default": "./src/lib/nav/index.ts",
