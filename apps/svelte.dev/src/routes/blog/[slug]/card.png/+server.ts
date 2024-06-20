@@ -12,6 +12,12 @@ import { compile } from 'svelte/compiler';
 
 export const prerender = true;
 
+export function entries() {
+	return blog_posts.map((post) => ({
+		slug: post.slug.slice(5) // remove 'blog/' prefix
+	}));
+}
+
 const height = 630;
 const width = 1200;
 const data = await read(OverpassRegular).arrayBuffer();
