@@ -1,4 +1,4 @@
-import { init, search, lookup } from './search.js';
+import { init, search, lookup } from './search';
 
 addEventListener('message', async (event) => {
 	const { type, payload } = event.data;

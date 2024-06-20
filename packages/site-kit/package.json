@@ -81,8 +81,8 @@
 		"./icons/link.svg": "./src/lib/icons/link.svg",
 		"./icons/search.svg": "./src/lib/icons/search.svg",
 		"./search": {
-			"default": "./src/lib/search/index.js",
-			"svelte": "./src/lib/search/index.js"
+			"default": "./src/lib/search/index.ts",
+			"svelte": "./src/lib/search/index.ts"
 		},
 		"./server/content": {
 			"default": "./src/lib/server/content/index.ts",

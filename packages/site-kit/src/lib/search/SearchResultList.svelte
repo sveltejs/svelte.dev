@@ -1,17 +1,19 @@
-<script>
-	/** @type {{results: import('./types').Tree[], query: string, onselect?: (href: string) => void}} */
-	let { results, query, onselect } = $props();
+<script lang="ts">
+	import type { Tree } from './types';
 
-	/** @param {string} text */
-	function escape(text) {
+	interface Props {
+		results: Tree[];
+		query: string;
+		onselect?: (href: string) => void;
+	}
+
+	let { results, query, onselect }: Props = $props();
+
+	function escape(text: string) {
 		return text.replace(/</g, '&lt;').replace(/>/g, '&gt;');
 	}
 
-	/**
-	 * @param {string} content
-	 * @param {string} query
-	 */
-	function excerpt(content, query) {
+	function excerpt(content: string, query: string) {
 		const index = content.toLowerCase().indexOf(query.toLowerCase());
 		if (index === -1) {
 			return escape(content.slice(0, 100));

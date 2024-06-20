@@ -1,25 +1,22 @@
-import flexsearch from 'flexsearch';
+import flexsearch, { type Index as FlexSearchIndex } from 'flexsearch';
+import type { Block, Tree } from './types';
 
 // @ts-expect-error
-const Index = /** @type {import('flexsearch').Index} */ (flexsearch.Index) ?? flexsearch;
+const Index = (flexsearch.Index as FlexSearchIndex) ?? flexsearch;
 
 /** If the search is already initialized */
 export let inited = false;
 
-/** @type {import('flexsearch').Index[]} */
-let indexes;
+let indexes: FlexSearchIndex[];
 
-/** @type {Map<string, import('./types').Block>} */
-const map = new Map();
+const map = new Map<string, Block>();
 
-/** @type {Map<string, string>} */
-const hrefs = new Map();
+const hrefs = new Map<string, string>();
 
 /**
  * Initialize the search index
- * @param {import('./types').Block[]} blocks
  */
-export function init(blocks) {
+export function init(blocks: Block[]) {
 	if (inited) return;
 
 	// we have multiple indexes, so we can rank sections (migration guide comes last)
@@ -49,10 +46,8 @@ export function init(blocks) {
 
 /**
  * Search for a given query in the existing index
- * @param {string} query
- * @returns {import('./types').Tree[]}
  */
-export function search(query) {
+export function search(query: string): Tree[] {
 	const escaped = query.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
 	const regex = new RegExp(`(^|\\b)${escaped}`, 'i');
 
@@ -60,10 +55,10 @@ export function search(query) {
 		.flatMap((index) => index.search(query))
 		// @ts-expect-error flexsearch types are wrong i think?
 		.map(lookup)
-		.map((block, rank) => ({ block: /** @type{import('./types').Block} */ (block), rank }))
+		.map((block, rank) => ({ block: block as Block, rank }))
 		.sort((a, b) => {
-			const a_title_matches = regex.test(/** @type {string} */ (a.block.breadcrumbs.at(-1)));
-			const b_title_matches = regex.test(/** @type {string} */ (b.block.breadcrumbs.at(-1)));
+			const a_title_matches = regex.test(a.block.breadcrumbs.at(-1)!);
+			const b_title_matches = regex.test(b.block.breadcrumbs.at(-1)!);
 
 			// massage the order a bit, so that title matches
 			// are given higher priority
@@ -82,18 +77,12 @@ export function search(query) {
 
 /**
  * Get a block with details by its href
- * @param {string} href
  */
-export function lookup(href) {
+export function lookup(href: string) {
 	return map.get(href);
 }
 
-/**
- * @param {string[]} breadcrumbs
- * @param {import('./types').Block[]} blocks
- * @returns {import('./types').Tree}
- */
-function tree(breadcrumbs, blocks) {
+function tree(breadcrumbs: string[], blocks: Block[]): Tree {
 	const depth = breadcrumbs.length;
 
 	const node = blocks.find((block) => {
@@ -110,8 +99,8 @@ function tree(breadcrumbs, blocks) {
 
 	return {
 		breadcrumbs,
-		href: /** @type {string} */ (hrefs.get(breadcrumbs.join('::'))),
-		node: /** @type {import('./types').Block} */ (node),
+		href: hrefs.get(breadcrumbs.join('::'))!,
+		node: node!,
 		children: child_parts.map((part) => tree([...breadcrumbs, part], descendants))
 	};
 }

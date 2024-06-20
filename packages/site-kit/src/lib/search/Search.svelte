@@ -1,12 +1,11 @@
 <!-- @component
 Renders a search widget which when clicked (or the corresponding keyboard shortcut is pressed) opens a search overlay.
 -->
-<script>
+<script lang="ts">
 	import { BROWSER } from 'esm-env';
 	import { search_query, searching } from '../stores/search';
 
-	/** @type {{q?: string, label?: string}} */
-	let { q = '', label = 'Search' } = $props();
+	let { q = '', label = 'Search' }: { q?: string; label?: string } = $props();
 </script>
 
 <form class="search-container" action="/search">
