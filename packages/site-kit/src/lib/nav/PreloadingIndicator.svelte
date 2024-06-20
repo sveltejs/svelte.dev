@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { onMount } from 'svelte';
 	import { quadInOut } from 'svelte/easing';
 	import { tweened } from 'svelte/motion';
@@ -10,8 +10,7 @@
 	let visible = $state(false);
 
 	onMount(() => {
-		/** @type {any} */
-		let timeout;
+		let timeout: any;
 
 		function next() {
 			visible = true;

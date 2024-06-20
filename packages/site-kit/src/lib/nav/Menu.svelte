@@ -1,13 +1,11 @@
 <script context="module">
 	const open_store = writable(false);
 
-	/** @type {import('svelte/store').Writable<import('../types').NavigationLink | undefined>} */
-	const current_menu_view = writable(undefined);
+	const current_menu_view = writable<NavigationLink | undefined>(undefined);
 
 	const show_context_menu = writable(false);
 
-	/** @type {import('svelte/store').Writable<import('../types').NavigationLink[]>} */
-	const links_store = writable([]);
+	const links_store = writable<NavigationLink[]>([]);
 
 	export function open_nav() {
 		if (get(open_store)) {
@@ -23,19 +21,27 @@
 	}
 </script>
 
-<script>
+<script lang="ts">
 	import { afterNavigate } from '$app/navigation';
 	import { page } from '$app/stores';
 	import { click_outside, focus_outside, trap } from '../actions';
 	import { overlay_open, reduced_motion, theme } from '../stores';
-	import { tick } from 'svelte';
+	import { tick, type Snippet } from 'svelte';
 	import { expoOut, quintOut } from 'svelte/easing';
+	import type { TransitionConfig } from 'svelte/transition';
 	import { get, writable } from 'svelte/store';
 	import Icon from '../components/Icon.svelte';
 	import NavContextMenu from './NavContextMenu.svelte';
+	import type { NavigationLink } from '$lib/types';
 
-	/** @type {{open: boolean, links: import('../types').NavigationLink[], children?: import('svelte').Snippet, back_button?: import('svelte').Snippet}} */
-	let { open = $bindable(), links, children, back_button } = $props();
+	interface Props {
+		open: boolean;
+		links: NavigationLink[];
+		children?: Snippet;
+		back_button?: Snippet;
+	}
+
+	let { open = $bindable(), links, children, back_button }: Props = $props();
 
 	$open_store = open;
 	$effect.pre(() => {
@@ -47,18 +53,14 @@
 		$links_store = links;
 	});
 
-	/** @type {NavContextMenu | undefined} */
-	let nav_context_instance = $state();
+	let nav_context_instance: NavContextMenu | undefined = $state();
 
 	let menu_height = $state(0);
 	let universal_menu_inner_height = $state(0);
 	let ready = $state(false);
 
-	/** @type {HTMLElement | undefined} */
-	let universal_menu = $state();
-
-	/** @type {HTMLButtonElement | undefined} */
-	let menu_button = $state();
+	let universal_menu: HTMLElement | undefined = $state();
+	let menu_button: HTMLButtonElement | undefined = $state();
 
 	function close() {
 		open = false;
@@ -67,11 +69,7 @@
 
 	afterNavigate(close);
 
-	/**
-	 * @param {HTMLElement} _
-	 * @param {(current: boolean) => void} fn
-	 */
-	function mounted(_, fn) {
+	function mounted(_: HTMLElement, fn: (current: boolean) => void) {
 		// this is necessary to ensure that the menu-background height
 		// is applied without an animation
 		setTimeout(() => {
@@ -85,12 +83,7 @@
 		};
 	}
 
-	/**
-	 * @param {HTMLElement} node
-	 * @param {{easing?: (t: number) => number, duration?: number }} [params]
-	 * @returns {import('svelte/transition').TransitionConfig}
-	 */
-	const slide = (node, { duration = 400, easing = expoOut } = {}) => {
+	function slide(node: HTMLElement, { duration = 400, easing = expoOut } = {}): TransitionConfig {
 		const height = $current_menu_view ? node.clientHeight : universal_menu_inner_height;
 
 		return {
@@ -103,7 +96,7 @@
 			easing,
 			duration
 		};
-	};
+	}
 
 	$effect.pre(() => {
 		$overlay_open = $open_store;
@@ -149,7 +142,7 @@
 					class="clip"
 					style:--height-difference="{menu_height - universal_menu_inner_height}px"
 					ontransitionstart={(e) => {
-						const target = /** @type {HTMLElement} */ (e.target);
+						const target = e.target as HTMLElement;
 
 						if (!target?.classList.contains('viewport')) return;
 						if (e.propertyName !== 'transform') return;
@@ -172,7 +165,7 @@
 						}, 0);
 					}}
 					ontransitionend={(e) => {
-						const target = /** @type {HTMLElement} */ (e.target);
+						const target = e.target as HTMLElement;
 
 						if (!target?.classList.contains('viewport')) return;
 						if (e.propertyName !== 'transform') return;

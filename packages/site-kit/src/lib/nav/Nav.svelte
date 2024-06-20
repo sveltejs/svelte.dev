@@ -2,7 +2,7 @@
 Top navigation bar for the application. It provides a slot for the left side, the right side, and the center.
 -->
 
-<script>
+<script lang="ts">
 	import { root_scroll } from '../actions';
 	import { root_scroll_element } from '../actions/root-scroll';
 	import { overlay_open, searching, theme, nav_open, on_this_page_open } from '../stores';
@@ -11,8 +11,20 @@ Top navigation bar for the application. It provides a slot for the left side, th
 	import ThemeToggle from '../components/ThemeToggle.svelte';
 	import Menu from './Menu.svelte';
 	import Separator from './Separator.svelte';
+	import type { NavigationLink } from '$lib/types';
+	import type { Snippet } from 'svelte';
 
-	/** @type {{home_title?: string, title: string | undefined, links: import('../types').NavigationLink[], home_large?: import('svelte').Snippet, home_small?: import('svelte').Snippet, search?: import('svelte').Snippet, external_links?: import('svelte').Snippet, theme_label?: import('svelte').Snippet}} */
+	interface Props {
+		home_title?: string;
+		title: string | undefined;
+		links: NavigationLink[];
+		home_large?: Snippet;
+		home_small?: Snippet;
+		search?: Snippet;
+		external_links?: Snippet;
+		theme_label?: Snippet;
+	}
+
 	let {
 		home_title = 'Homepage',
 		title,
@@ -22,12 +34,11 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		search,
 		external_links,
 		theme_label
-	} = $props();
+	}: Props = $props();
 
 	let visible = $state(true);
 
-	/** @type {HTMLElement | undefined} */
-	let nav = $state();
+	let nav: HTMLElement | undefined = $state();
 
 	// Prevents navbar to show/hide when clicking in docs sidebar
 	let hash_changed = false;

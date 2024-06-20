@@ -1,18 +1,18 @@
-<script>
+<script lang="ts">
 	import { page } from '$app/stores';
+	import type { NavigationLink } from '$lib/types';
 	import { onMount } from 'svelte';
 
-	/** @type {{contents?: import('../types').NavigationLink['sections']}} */
-	let { contents = [] } = $props();
+	let { contents = [] }: { contents?: NavigationLink['sections'] } = $props();
 
-	let nav = /** @type {HTMLElement} */ ($state());
+	let nav = $state() as HTMLElement;
 
 	onMount(() => {
 		scrollToActive();
 	});
 
 	export async function scrollToActive() {
-		const active = /** @type {HTMLElement} */ (nav.querySelector('[aria-current="true"]'));
+		const active = nav.querySelector('[aria-current="true"]') as HTMLElement;
 
 		if (!active) {
 			nav.scrollTop = 0;

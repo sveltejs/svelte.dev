@@ -1,32 +1,28 @@
 <script context="module">
-	/**
-	 * @typedef {'svelte.dev' | 'kit.svelte.dev' | 'learn.svelte.dev'} BannerScope
-	 *
-	 * @typedef {{
-	 * id: string;
-	 * start: number;
-	 * end: number;
-	 * arrow: boolean;
-	 * href: string;
-	 * content: {
-	 *   lg?: string;
-	 *   sm?: string;
-	 * };
-	 * scope?: BannerScope[];
-	 * }[]} BannerData
-	 *
-	 * @typedef {(Omit<BannerData[0], 'start' | 'end'> & { start: Date, end?: Date })[]} BannerDataInput
-	 */
+	type BannerScope = 'svelte.dev' | 'kit.svelte.dev' | 'learn.svelte.dev';
+	interface BannerData {
+		id: string;
+		start: number;
+		end: number;
+		arrow: boolean;
+		href: string;
+		content: {
+			lg?: string;
+			sm?: string;
+		};
+		scope?: BannerScope[];
+	}
+	type BannerDataInput = Array<Omit<BannerData, 'start' | 'end'> & { start: Date; end?: Date }>;
 
 	/**
 	 * Only to be used on non svelte.dev sites. Shouldn't be used inside svelte.dev codebase itself
-	 * @param {BannerScope} scope
-	 * @param {import('@sveltejs/kit').RequestEvent['fetch']} fetch
-	 * @returns {Promise<BannerData>}
 	 */
-	export async function fetchBanner(scope = 'svelte.dev', fetch) {
+	export async function fetchBanner(
+		scope: BannerScope = 'svelte.dev',
+		fetch: RequestEvent['fetch']
+	): Promise<BannerData[]> {
 		if (scope === 'svelte.dev') {
-			const data = /** @type {BannerData} */ (await fetch('/banner.json').then((r) => r.json()));
+			const data = (await fetch('/banner.json').then((r) => r.json())) as BannerData[];
 
 			// Find out if any time overlap will happen in any banner.
 			// If so, throw an error.
@@ -51,16 +47,12 @@
 			return [];
 		}
 
-		return /** @type {BannerData} */ (await req.json()).filter(
+		return ((await req.json()) as BannerData[]).filter(
 			(banner) => !banner.scope || banner.scope?.includes(scope)
 		);
 	}
 
-	/**
-	 * @param {BannerDataInput} data
-	 * @returns {BannerData}
-	 */
-	export function defineBanner(data) {
+	export function defineBanner(data: BannerDataInput): BannerData[] {
 		return data.map((v) => ({
 			...v,
 			start: +v.start,
@@ -69,19 +61,15 @@
 	}
 </script>
 
-<script>
+<script lang="ts">
 	import { onMount } from 'svelte';
 	import { persisted } from 'svelte-persisted-store';
 	import Banner from './Banner.svelte';
+	import type { RequestEvent } from '@sveltejs/kit';
 
-	/** @type {{data: BannerData}} */
-	let { data } = $props();
+	let { data }: { data: BannerData[] } = $props();
 
-	const preferences = persisted(
-		'svelte:banner-preferences',
-		/** @type {Record<string, boolean>} */ ({})
-	);
-
+	const preferences = persisted<Record<string, boolean>>('svelte:banner-preferences', {});
 	const time = +new Date();
 
 	let showing = $derived(

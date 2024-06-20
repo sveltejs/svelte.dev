@@ -1,9 +1,10 @@
 <!--@component
 Accessibility helper component to skip to the main content
 -->
-<script>
-	/** @type {{href: string, children?: import('svelte').Snippet}} */
-	let { href, children } = $props();
+<script lang="ts">
+	import type { Snippet } from 'svelte';
+
+	let { href, children }: { href: string; children?: Snippet } = $props();
 </script>
 
 <a {href}>
