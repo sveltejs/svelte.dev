@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import type { NavigationLink } from '$lib/types';
+	import type { NavigationLink } from '../types';
 	import { onMount } from 'svelte';
 
 	let { contents = [] }: { contents?: NavigationLink['sections'] } = $props();

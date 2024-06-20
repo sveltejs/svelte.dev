@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { browser } from '$app/environment';
 	import { afterNavigate } from '$app/navigation';
 	import { theme } from '@sveltejs/site-kit/stores';
@@ -6,14 +6,13 @@
 	import { mapbox_setup } from '../../../../../config.js';
 	import { onMount } from 'svelte';
 
-	export let data;
+	let { data } = $props();
 
-	let version = data.version;
+	let version = $state(data.version);
 
-	/** @type {import('@sveltejs/repl').default} */
-	let repl;
+	let repl: import('@sveltejs/repl').default;
 
-	function update_query_string(version) {
+	function update_query_string(version: string) {
 		const params = [];
 
 		if (version !== 'latest') params.push(`version=${version}`);
@@ -26,7 +25,9 @@
 		history.replaceState({}, 'x', url);
 	}
 
-	$: if (typeof history !== 'undefined') update_query_string(version);
+	$effect(() => {
+		update_query_string(version);
+	});
 
 	onMount(() => {
 		if (data.version !== 'local') {
@@ -44,12 +45,13 @@
 		});
 	});
 
-	$: svelteUrl =
+	const svelteUrl = $derived(
 		browser && version === 'local'
 			? `${location.origin}/repl/local`
-			: `https://unpkg.com/svelte@${version}`;
+			: `https://unpkg.com/svelte@${version}`
+	);
 
-	$: relaxed = data.gist.relaxed || (data.user && data.user.id === data.gist.owner);
+	const relaxed = $derived(data.gist.relaxed || (data.user && data.user.id === data.gist.owner));
 </script>
 
 <svelte:head>

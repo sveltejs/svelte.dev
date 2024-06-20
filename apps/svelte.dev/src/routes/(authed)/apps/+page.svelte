@@ -1,16 +1,19 @@
-<script>
+<script lang="ts">
 	import { getContext } from 'svelte';
 	import { Icon } from '@sveltejs/site-kit/components';
 	import { ago } from '$lib/time';
 	import { goto, invalidateAll } from '$app/navigation';
+	import { get_app_context } from '../app-context.js';
 
-	export let data;
+	let { data } = $props();
 
-	const { login, logout } = getContext('app');
+	const { login, logout } = get_app_context();
 
-	const format = /** @param {string} str */ (str) => ago(new Date(str));
+	const format = (str: string) => ago(new Date(str));
 
-	let destroying = false;
+	let destroying = $state(false);
+	let selected: string[] = $state([]);
+	const selecting = $derived(selected.length > 0);
 
 	async function destroy_selected() {
 		const confirmed = confirm(
@@ -45,9 +48,6 @@
 
 		destroying = false;
 	}
-
-	let selected = [];
-	$: selecting = selected.length > 0;
 </script>
 
 <svelte:head>
@@ -83,7 +83,7 @@
 			{:else}
 				<form
 					on:submit|preventDefault={(e) => {
-						const search = new FormData(/** @type {HTMLFormElement} */ (e.target)).get('search');
+						const search = new FormData(e.target as HTMLFormElement).get('search');
 						goto(search ? `/apps?search=${encodeURIComponent(search.toString())}` : '/apps');
 					}}
 				>

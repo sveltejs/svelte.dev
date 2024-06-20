@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { createEventDispatcher, getContext } from 'svelte';
+	import { createEventDispatcher } from 'svelte';
 	import UserMenu from './UserMenu.svelte';
 	import { Icon } from '@sveltejs/site-kit/components';
 	import * as doNotZip from 'do-not-zip';
@@ -7,6 +7,7 @@
 	import { enter } from '$lib/utils/events';
 	import { isMac } from '$lib/utils/compat.js';
 	import Repl from '@sveltejs/repl';
+	import { get_app_context } from '../../app-context';
 
 	interface Props {
 		user: TODO;
@@ -27,7 +28,7 @@
 	}: Props = $props();
 
 	const dispatch = createEventDispatcher();
-	const { login } = getContext('app');
+	const { login } = get_app_context();
 
 	let saving = $state(false);
 	let downloading = $state(false);
@@ -240,7 +241,7 @@ export default app;`
 		{#if user}
 			<UserMenu {user} />
 		{:else}
-			<button class="icon" onclick={(e) => (e.preventDefault(), login(e))}>
+			<button class="icon" onclick={(e) => (e.preventDefault(), login())}>
 				<Icon name="log-in" />
 				<span>&nbsp;Log in to save</span>
 			</button>

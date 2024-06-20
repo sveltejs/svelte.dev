@@ -1,8 +1,8 @@
-<script>
+<script lang="ts">
 	import { invalidateAll } from '$app/navigation';
-	import { setContext } from 'svelte';
+	import { set_app_context } from './app-context';
 
-	setContext('app', {
+	set_app_context({
 		login: () => {
 			const login_window = window.open(
 				`${window.location.origin}/auth/login`,
@@ -12,7 +12,7 @@
 
 			window.addEventListener('message', function handler(event) {
 				if (event.data.source !== 'svelte-auth') return;
-				login_window.close();
+				login_window!.close();
 				window.removeEventListener('message', handler);
 				invalidateAll();
 			});

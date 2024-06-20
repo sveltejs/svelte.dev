@@ -52,7 +52,7 @@
 	}
 
 	function handle_change(event: CustomEvent) {
-		modified_count = event.detail.files.filter((c) => c.modified).length;
+		modified_count = event.detail.files.filter((c: any) => c.modified).length;
 	}
 
 	const svelteUrl = $derived(

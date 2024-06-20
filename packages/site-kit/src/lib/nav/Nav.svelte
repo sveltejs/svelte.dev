@@ -11,7 +11,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 	import ThemeToggle from '../components/ThemeToggle.svelte';
 	import Menu from './Menu.svelte';
 	import Separator from './Separator.svelte';
-	import type { NavigationLink } from '$lib/types';
+	import type { NavigationLink } from '../types';
 	import type { Snippet } from 'svelte';
 
 	interface Props {

@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { onMount } from 'svelte';
 
 	export let once = false;
@@ -8,7 +8,7 @@
 	export let right = 0;
 
 	let intersecting = false;
-	let container;
+	let container: HTMLElement;
 
 	onMount(() => {
 		if (typeof IntersectionObserver !== 'undefined') {

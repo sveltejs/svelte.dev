@@ -1,4 +1,12 @@
-export const companies = [
+export const companies: Array<{
+	href: string;
+	filename: string;
+	alt: string;
+	width: number;
+	height: number;
+	style?: string;
+	invert?: boolean;
+}> = [
 	{
 		href: 'https://1password.com',
 		filename: '1password.svg',

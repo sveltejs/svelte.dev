@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { page } from '$app/stores';
 	import { browser } from '$app/environment';
 
@@ -25,7 +25,7 @@
 		{:else}
 			<h1>Yikes!</h1>
 			<p>Something went wrong when we tried to render this page.</p>
-			{#if $page.error.message}
+			{#if $page.error?.message}
 				<p class="error">{$page.status}: {$page.error.message}</p>
 			{:else}
 				<p class="error">Encountered a {$page.status} error.</p>

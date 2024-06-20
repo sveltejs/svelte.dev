@@ -32,7 +32,7 @@
 	import { get, writable } from 'svelte/store';
 	import Icon from '../components/Icon.svelte';
 	import NavContextMenu from './NavContextMenu.svelte';
-	import type { NavigationLink } from '$lib/types';
+	import type { NavigationLink } from '../types';
 
 	interface Props {
 		open: boolean;
