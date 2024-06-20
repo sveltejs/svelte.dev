@@ -1,53 +1,33 @@
-import { modules } from '$lib/generated/type-info.js';
-import {
-	extractFrontmatter,
-	markedTransform,
-	normalizeSlugify,
-	removeMarkdown,
-	replaceExportTypePlaceholders
-} from '@sveltejs/site-kit/markdown';
-import { readFile } from 'node:fs/promises';
-import glob from 'tiny-glob';
-import { CONTENT_BASE } from '../../constants.js';
+import { index } from '$lib/server/content';
+import { json } from '@sveltejs/kit';
+import { markedTransform, normalizeSlugify, removeMarkdown } from '@sveltejs/site-kit/markdown';
+import type { Block } from '@sveltejs/site-kit/search';
 
-const base = CONTENT_BASE;
+export const prerender = true;
 
-/** @param {string[]} parts */
-function get_href(parts) {
-	return parts.length > 1 ? `/docs/${parts[0]}#${parts.at(-1)}` : `/docs/${parts[0]}`;
+export async function GET() {
+	return json({
+		blocks: await content()
+	});
 }
 
-/** @param {string} path  */
-function path_basename(path) {
-	return path.split(/[\\/]/).pop();
+function get_href(parts: string[]) {
+	return parts.length > 1 ? `/${parts[0]}#${parts.at(-1)}` : `/${parts[0]}`;
 }
 
-export async function content() {
-	/** @type {import('@sveltejs/site-kit/search').Block[]} */
-	const blocks = [];
+async function content() {
+	const blocks: Block[] = [];
+	const breadcrumbs: string[] = [];
+	// We want the actual doc contents: docs -> docs/svelte etc -> docs/svelte/overview etc -> docs/svelte/overview/introduction etc
+	const docs = index.docs.children.flatMap((topic) =>
+		topic.children.flatMap((section) => section.children)
+	);
 
-	return blocks;
-
-	/** @type {string[]} */
-	const breadcrumbs = [];
-
-	for (const file of await glob('**/*.md', { cwd: `${base}/docs` })) {
-		const basename = path_basename(file);
-		const match = basename && /\d{2}-(.+)\.md/.exec(basename);
-		if (!match) continue;
-
-		const slug = match[1];
-
-		const filepath = `${base}/docs/${file}`;
-		const markdown = await replaceExportTypePlaceholders(
-			await readFile(filepath, 'utf-8'),
-			modules
-		);
-
-		const { body, metadata } = extractFrontmatter(markdown);
+	for (const document of docs) {
+		const { slug, body, metadata } = document;
 
 		const sections = body.trim().split(/^## /m);
-		const intro = sections?.shift()?.trim();
+		const intro = sections?.shift()?.trim()!;
 		const rank = +metadata.rank;
 
 		blocks.push({
@@ -103,13 +83,10 @@ export async function content() {
 	return blocks;
 }
 
-/** @param {string} markdown */
-async function plaintext(markdown) {
-	/** @param {unknown} text */
-	const block = (text) => `${text}\n`;
+async function plaintext(markdown: string) {
+	const block = (text: unknown) => `${text}\n`;
 
-	/** @param {string} text */
-	const inline = (text) => text;
+	const inline = (text: string) => text;
 
 	return (
 		await markedTransform(markdown, {
