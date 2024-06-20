@@ -15,7 +15,7 @@ async function get_nav_list(): Promise<NavigationLink[]> {
 			title: section.metadata.title,
 			sections: section.children.map((page) => ({
 				title: page.metadata.title,
-				path: '/docs/' + page.slug
+				path: '/' + page.slug
 			}))
 		}))
 	}));
@@ -25,7 +25,7 @@ async function get_nav_list(): Promise<NavigationLink[]> {
 			title: '',
 			sections: blog_posts.map(({ title, slug, date }) => ({
 				title,
-				path: '/blog/' + slug,
+				path: '/' + slug,
 				// Put a NEW badge on blog posts that are less than 14 days old
 				badge: (+new Date() - +new Date(date)) / (1000 * 60 * 60 * 24) < 14 ? 'NEW' : undefined
 			}))
@@ -38,7 +38,7 @@ async function get_nav_list(): Promise<NavigationLink[]> {
 			title: section.metadata.title,
 			sections: section.children.map((page) => ({
 				title: page.metadata.title,
-				path: '/tutorial/' + page.slug
+				path: '/tutorial/' + page.slug.split('/').pop()
 			}))
 		}))
 	}));
