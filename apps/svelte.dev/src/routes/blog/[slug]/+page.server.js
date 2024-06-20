@@ -1,6 +1,6 @@
 import { error } from '@sveltejs/kit';
-import { markedTransform } from '@sveltejs/site-kit/markdown';
 import { index } from '$lib/server/content';
+import { render_content } from '$lib/server/renderer';
 
 export const prerender = true;
 
@@ -36,7 +36,7 @@ export async function load({ params }) {
 		path: `/${post.slug}`,
 		date,
 		date_formatted: format_date(date),
-		body: await markedTransform(post.body),
+		body: await render_content(post.file, post.body),
 		authors,
 		sections: post.sections
 	};

@@ -1,7 +1,8 @@
-import { get_docs_data, get_docs_list } from '$lib/server/docs/index.js';
+// import { get_docs_data, get_docs_list } from '$lib/server/docs/index.js';
 import { get_examples_list } from '$lib/server/examples/index.js';
 import examples_data from '$lib/generated/examples-data.js';
 import { json } from '@sveltejs/kit';
+import { blog_posts } from '$lib/server/content';
 
 export const prerender = true;
 
@@ -23,17 +24,17 @@ async function get_nav_list() {
 	// 	sections: pages.map(({ title, path }) => ({ title, path }))
 	// }));
 
-	// const processed_blog_list = [
-	// 	{
-	// 		title: '',
-	// 		sections: blog_list.map(({ title, slug, date }) => ({
-	// 			title,
-	// 			path: '/blog/' + slug,
-	// 			// Put a NEW badge on blog posts that are less than 14 days old
-	// 			badge: (+new Date() - +new Date(date)) / (1000 * 60 * 60 * 24) < 14 ? 'NEW' : undefined
-	// 		}))
-	// 	}
-	// ];
+	const processed_blog_list = [
+		{
+			title: '',
+			sections: blog_posts.map(({ title, slug, date }) => ({
+				title,
+				path: '/blog/' + slug,
+				// Put a NEW badge on blog posts that are less than 14 days old
+				badge: (+new Date() - +new Date(date)) / (1000 * 60 * 60 * 24) < 14 ? 'NEW' : undefined
+			}))
+		}
+	];
 
 	// const examples_list = get_examples_list(examples_data);
 	// const processed_examples_list = examples_list
@@ -78,7 +79,7 @@ async function get_nav_list() {
 			sections: [
 				{
 					title: 'BLOG',
-					sections: [] //processed_blog_list
+					sections: processed_blog_list
 				}
 			]
 		}
