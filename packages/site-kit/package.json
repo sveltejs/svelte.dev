@@ -55,7 +55,7 @@
 			"default": "./src/lib/actions/index.ts"
 		},
 		"./stores": {
-			"default": "./src/lib/stores/index.js"
+			"default": "./src/lib/stores/index.ts"
 		},
 		"./branding/svelte-logo.svg": "./src/lib/branding/svelte-logo.svg",
 		"./components": {

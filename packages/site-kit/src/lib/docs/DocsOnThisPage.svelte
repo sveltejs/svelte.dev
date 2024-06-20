@@ -12,19 +12,15 @@
 	import type { Snippet } from 'svelte';
 	import type { Section } from '../types';
 
-	let {
-		title,
-		path,
-		sections,
-		orientation = 'auto',
-		children
-	}: {
+	interface Props {
 		title: string;
 		path: string;
 		sections: Section[];
 		orientation?: 'auto' | 'inline' | 'aside';
 		children?: Snippet;
-	} = $props();
+	}
+
+	let { title, path, sections, orientation = 'auto', children }: Props = $props();
 
 	const dispatch = createEventDispatcher();
 
@@ -148,8 +144,7 @@
 		hash = '';
 	}
 
-	/** @param {URL} url */
-	function select(url) {
+	function select(url: URL) {
 		// belt...
 		setTimeout(() => {
 			hash = url.hash;
