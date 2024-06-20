@@ -1,8 +1,8 @@
-// import { get_docs_data, get_docs_list } from '$lib/server/docs/index.js';
 import { get_examples_list } from '$lib/server/examples/index.js';
 import examples_data from '$lib/generated/examples-data.js';
 import { json } from '@sveltejs/kit';
-import { blog_posts } from '$lib/server/content';
+import { blog_posts, index } from '$lib/server/content';
+import type { NavigationLink } from '@sveltejs/site-kit';
 
 export const prerender = true;
 
@@ -10,19 +10,17 @@ export const GET = async () => {
 	return json(await get_nav_list());
 };
 
-/**
- * @returns {Promise<import('@sveltejs/site-kit').NavigationLink[]>}
- */
-async function get_nav_list() {
-	// const [docs_list, blog_list] = await Promise.all([
-	// 	get_docs_list(await get_docs_data()),
-	// 	get_blog_list(await get_blog_data())
-	// ]);
-
-	// const processed_docs_list = docs_list.map(({ title, pages }) => ({
-	// 	title,
-	// 	sections: pages.map(({ title, path }) => ({ title, path }))
-	// }));
+async function get_nav_list(): Promise<NavigationLink[]> {
+	const processed_docs_list: NavigationLink['sections'] = index.docs.children.map((topic) => ({
+		title: topic.metadata.title,
+		sections: topic.children.map((section) => ({
+			title: section.metadata.title,
+			sections: section.children.map((page) => ({
+				title: page.metadata.title,
+				path: '/docs/' + page.slug
+			}))
+		}))
+	}));
 
 	const processed_blog_list = [
 		{
@@ -49,12 +47,7 @@ async function get_nav_list() {
 			title: 'Docs',
 			prefix: 'docs',
 			pathname: '/docs',
-			sections: [
-				{
-					title: 'DOCS',
-					sections: [] //processed_docs_list
-				}
-			]
+			sections: processed_docs_list
 		},
 		{
 			title: 'Tutorial',
