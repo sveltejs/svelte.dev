@@ -5,27 +5,25 @@ import { read } from '$app/server';
 import satori from 'satori';
 import { html as toReactNode } from 'satori-html';
 import Card from './Card.svelte';
+import CardRaw from './Card.svelte?raw';
 import OverpassRegular from './Overpass-Regular.ttf?url';
-import { index } from '$lib/server/content';
+import { blog_posts } from '$lib/server/content';
+import { compile } from 'svelte/compiler';
+
+export const prerender = true;
 
 const height = 630;
 const width = 1200;
-
-export const prerender = false; // TODO
-
 const data = await read(OverpassRegular).arrayBuffer();
+const css = compile(CardRaw, {}).css!.code;
 
 export async function GET({ params }) {
-	const post = index[`blog/${params.slug}`];
+	const post = blog_posts.find((post) => post.slug === `blog/${params.slug}`);
 
 	if (!post) error(404);
 
-	const result = render(Card, { props: { post } });
-
-	console.log(result.body);
-
-	// @ts-expect-error TODO we need to get the CSS in here somehow...
-	const element = toReactNode(`${result.body}<style>${result.css?.code ?? ''}</style>`);
+	const result = render(Card, { props: post });
+	const element = toReactNode(`${result.body}<style>${css}</style>`);
 
 	const svg = await satori(element, {
 		fonts: [

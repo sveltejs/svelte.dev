@@ -1,13 +1,13 @@
-<script>
-	export let post;
+<script lang="ts">
+	let { title, date_formatted }: { title: string; date_formatted: string } = $props();
 </script>
 
 <div class="card">
 	<img src="https://sveltejs.github.io/assets/artwork/svelte-machine.png" alt="Svelte Machine" />
 
 	<div class="text">
-		<h1>{post.title}</h1>
-		<p class="date">{post.date_formatted}</p>
+		<h1>{title}</h1>
+		<p class="date">{date_formatted}</p>
 	</div>
 </div>
 
