@@ -1,5 +1,3 @@
-import { get_examples_list } from '$lib/server/examples/index.js';
-import examples_data from '$lib/generated/examples-data.js';
 import { json } from '@sveltejs/kit';
 import { blog_posts, index } from '$lib/server/content';
 import type { NavigationLink } from '@sveltejs/site-kit';
@@ -11,7 +9,7 @@ export const GET = async () => {
 };
 
 async function get_nav_list(): Promise<NavigationLink[]> {
-	const processed_docs_list: NavigationLink['sections'] = index.docs.children.map((topic) => ({
+	const docs = index.docs.children.map((topic) => ({
 		title: topic.metadata.title,
 		sections: topic.children.map((section) => ({
 			title: section.metadata.title,
@@ -22,7 +20,7 @@ async function get_nav_list(): Promise<NavigationLink[]> {
 		}))
 	}));
 
-	const processed_blog_list = [
+	const blog = [
 		{
 			title: '',
 			sections: blog_posts.map(({ title, slug, date }) => ({
@@ -34,31 +32,29 @@ async function get_nav_list(): Promise<NavigationLink[]> {
 		}
 	];
 
-	// const examples_list = get_examples_list(examples_data);
-	// const processed_examples_list = examples_list
-	// 	.map(({ title, examples }) => ({
-	// 		title,
-	// 		sections: examples.map(({ title, slug }) => ({ title, path: '/examples/' + slug }))
-	// 	}))
-	// 	.filter(({ title }) => title !== 'Embeds');
+	const tutorial = index.tutorial.children.map((topic) => ({
+		title: topic.metadata.title,
+		sections: topic.children.map((section) => ({
+			title: section.metadata.title,
+			sections: section.children.map((page) => ({
+				title: page.metadata.title,
+				path: '/tutorial/' + page.slug
+			}))
+		}))
+	}));
 
 	return [
 		{
 			title: 'Docs',
 			prefix: 'docs',
 			pathname: '/docs',
-			sections: processed_docs_list
+			sections: docs
 		},
 		{
 			title: 'Tutorial',
 			prefix: 'tutorial',
 			pathname: '/tutorial',
-			sections: [
-				{
-					title: 'TUTORIAL',
-					sections: [] //processed_examples_list
-				}
-			]
+			sections: tutorial
 		},
 		{
 			title: 'REPL',
@@ -72,7 +68,7 @@ async function get_nav_list(): Promise<NavigationLink[]> {
 			sections: [
 				{
 					title: 'BLOG',
-					sections: processed_blog_list
+					sections: blog
 				}
 			]
 		}
