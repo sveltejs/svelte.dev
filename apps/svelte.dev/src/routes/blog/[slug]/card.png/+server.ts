@@ -5,10 +5,10 @@ import { read } from '$app/server';
 import satori from 'satori';
 import { html as toReactNode } from 'satori-html';
 import Card from './Card.svelte';
-import CardRaw from './Card.svelte?raw';
+// @ts-expect-error no types for the query exist
+import CardCSS from './Card.svelte?raw&svelte&type=style';
 import OverpassRegular from './Overpass-Regular.ttf?url';
 import { blog_posts } from '$lib/server/content';
-import { compile } from 'svelte/compiler';
 
 export const prerender = true;
 
@@ -21,7 +21,6 @@ export function entries() {
 const height = 630;
 const width = 1200;
 const data = await read(OverpassRegular).arrayBuffer();
-const css = compile(CardRaw, {}).css!.code;
 
 export async function GET({ params }) {
 	const post = blog_posts.find((post) => post.slug === `blog/${params.slug}`);
@@ -29,7 +28,7 @@ export async function GET({ params }) {
 	if (!post) error(404);
 
 	const result = render(Card, { props: post });
-	const element = toReactNode(`${result.body}<style>${css}</style>`);
+	const element = toReactNode(`${result.body}<style>${CardCSS}</style>`);
 
 	const svg = await satori(element, {
 		fonts: [
