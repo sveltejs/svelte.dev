@@ -2,12 +2,7 @@
 self.window = self; //TODO: still need?: egregious hack to get magic-string to work in a worker
 
 /**
- * @type {{
- * 	 parse: typeof import('svelte/compiler').parse;
- *   compile: typeof import('svelte/compiler').compile;
- *   compileModule: typeof import('svelte/compiler').compileModule;
- *   VERSION: string;
- * }}
+ * @type {import('svelte/compiler')}
  */
 let svelte;
 

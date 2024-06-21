@@ -3,7 +3,7 @@ import type { CompileOptions, File } from '../types';
 
 export interface CompilerInput {
 	id: number;
-	type: 'compile' | 'init';
+	type: 'compile' | 'init' | 'migrate';
 	source: string;
 	options: CompileOptions;
 	is_entry: boolean;
