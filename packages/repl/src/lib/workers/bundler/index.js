@@ -168,13 +168,12 @@ async function resolve_from_pkg(pkg, subpath, uid, pkg_url_base) {
 	// modern
 	if (pkg.exports) {
 		try {
-			const [resolved] =
-				resolve.exports(pkg, subpath, {
-					browser: true,
-					conditions: ['svelte', 'development']
-				}) ?? [];
+			const resolved = resolve.exports(pkg, subpath, {
+				browser: true,
+				conditions: ['svelte', 'development']
+			});
 
-			return resolved;
+			return resolved?.[0];
 		} catch {
 			throw `no matched export path was found in "${pkg.name}/package.json"`;
 		}
@@ -445,7 +444,9 @@ async function get_bundle(uid, mode, cache, local_files_lookup) {
 					'process.env.NODE_ENV': JSON.stringify('production')
 				})
 			],
-			inlineDynamicImports: true,
+			output: {
+				inlineDynamicImports: true
+			},
 			onwarn(warning) {
 				all_warnings.push({
 					message: warning.message
