@@ -26,9 +26,6 @@ const ready = new Promise((f) => {
 	fulfil_ready = f;
 });
 
-/** @type {import('svelte/compiler')} */
-let svelte;
-
 self.addEventListener(
 	'message',
 	/** @param {MessageEvent<import('../workers.js').BundleMessageData>} event */ async (event) => {
@@ -41,8 +38,6 @@ self.addEventListener(
 
 				const compiler = await fetch(`${svelte_url}/compiler/index.js`).then((r) => r.text());
 				(0, eval)(compiler + '\n//# sourceURL=compiler/index.js@' + version);
-
-				svelte = globalThis.svelte;
 
 				fulfil_ready();
 				break;
@@ -411,7 +406,6 @@ async function get_bundle(uid, mode, cache, local_files_lookup) {
 
 			new_cache.set(id, { code, result });
 
-			// @ts-expect-error
 			(result.warnings || result.stats?.warnings)?.forEach((warning) => {
 				// This is required, otherwise postMessage won't work
 				// @ts-ignore

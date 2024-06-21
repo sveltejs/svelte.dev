@@ -56,3 +56,7 @@ export type BundleMessageData = {
 	svelte_url: string;
 	files: File[];
 };
+
+declare global {
+	var svelte: import('svelte/compiler');
+}

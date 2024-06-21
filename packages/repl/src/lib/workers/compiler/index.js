@@ -1,11 +1,6 @@
 /// <reference lib="webworker" />
 self.window = self; //TODO: still need?: egregious hack to get magic-string to work in a worker
 
-/**
- * @type {import('svelte/compiler')}
- */
-let svelte;
-
 /** @type {(arg?: never) => void} */
 let fulfil_ready;
 const ready = new Promise((f) => {
@@ -26,8 +21,6 @@ self.addEventListener(
 
 				const compiler = await fetch(`${svelte_url}/compiler/index.js`).then((r) => r.text());
 				(0, eval)(compiler + '\n//# sourceURL=compiler/index.js@' + version);
-
-				svelte = globalThis.svelte;
 
 				fulfil_ready();
 				break;
