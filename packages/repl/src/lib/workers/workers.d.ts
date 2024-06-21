@@ -58,5 +58,5 @@ export type BundleMessageData = {
 };
 
 declare global {
-	var svelte: import('svelte/compiler');
+	var svelte: typeof import('svelte/compiler');
 }
