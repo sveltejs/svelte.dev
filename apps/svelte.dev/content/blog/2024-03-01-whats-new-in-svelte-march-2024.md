@@ -48,8 +48,8 @@ _Featuring Svelte Contributors and Ambassadors_
 
 - [How to make a great framework better? - Svelte 5 with Rich Harris](https://www.youtube.com/watch?v=z7n17ajJpCo) by Prismic
 - [Svelte 5 is a beast, but is it worth switching?](https://www.youtube.com/watch?v=KB6zkvYJqoE&lc=UgxFIaNKUG5as18CSzp4AaABAg) by Syntax.FM
-- This Week in Svelte:
-  -
+
+## This Week in Svelte:
 
 _To Read/Watch_
 
