@@ -120,10 +120,7 @@ function compile({ source, options, return_ast }) {
 		return {
 			js: message,
 			css: message,
-			error: {
-				message: err.message,
-				position: err.position
-			},
+			error: { ...err },
 			warnings: [],
 			metadata: null
 		};
