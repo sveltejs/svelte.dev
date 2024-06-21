@@ -11,7 +11,7 @@
 	import type { Gist, User } from '$lib/db/types';
 
 	interface Props {
-		user: User;
+		user: User | null;
 		repl: Repl;
 		gist: Gist;
 		name: string;

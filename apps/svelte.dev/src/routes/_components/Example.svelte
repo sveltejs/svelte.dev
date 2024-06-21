@@ -32,6 +32,7 @@
 				relaxed
 				showAst
 				previewTheme={$theme.current}
+				vim={false}
 			/>
 		{/if}
 	</IntersectionObserver>

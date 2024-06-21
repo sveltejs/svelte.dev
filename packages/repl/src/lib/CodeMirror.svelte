@@ -21,6 +21,7 @@
 
 	export let readonly = false;
 	export let tab = true;
+	export let vim = false;
 
 	/** @type {ReturnType<typeof createEventDispatcher<{ change: { value: string } }>>} */
 	const dispatch = createEventDispatcher();
@@ -173,6 +174,30 @@
 
 	/** @type {import('@codemirror/state').Extension[]} */
 	let extensions = [];
+
+	/**
+	 * update the extension if and when vim changes
+	 * @param {boolean} vimEnabled if vim it's included in the set of extensions
+	 */
+	async function getExtensions(vimEnabled) {
+		let extensions = [watcher];
+		if (vimEnabled) {
+			const { vim } = await import('@replit/codemirror-vim').then((vimModule) => ({
+				vim: vimModule.vim
+			}));
+
+			extensions.unshift(
+				vim({
+					status: true
+				})
+			);
+		}
+		return extensions;
+	}
+
+	$: getExtensions(vim).then((ext) => {
+		extensions = ext;
+	});
 
 	let cursor_pos = 0;
 

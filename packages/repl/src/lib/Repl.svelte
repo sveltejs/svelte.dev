@@ -28,6 +28,8 @@
 	export let showModified = false;
 	export let showAst = false;
 	export let autocomplete = true;
+	/** @type {boolean} */
+	export let vim;
 
 	let runes = false;
 
@@ -352,6 +354,7 @@
 					{autocomplete}
 					error={compiled?.result.error}
 					warnings={compiled?.result.warnings ?? []}
+					{vim}
 				/>
 			</section>
 

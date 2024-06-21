@@ -8,6 +8,9 @@
 	/** @type {any[]} */ // TODO
 	export let warnings;
 
+	/** @type {boolean} */
+	export let vim;
+
 	export function focus() {
 		$module_editor?.focus();
 	}
@@ -59,6 +62,7 @@
 
 				return [];
 			}}
+			{vim}
 			on:change={handle_change}
 		/>
 	</div>

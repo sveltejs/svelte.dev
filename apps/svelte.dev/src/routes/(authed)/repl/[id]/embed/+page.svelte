@@ -72,6 +72,7 @@
 			showAst
 			previewTheme={$theme.current}
 			embedded
+			vim={false}
 		/>
 	{/if}
 </div>
