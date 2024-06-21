@@ -20,7 +20,6 @@ So let's dive in to check out what's new and see what the rest of the community 
 - The `read` function is now available in the `$app/server` module - allowing you to read assets from the filesystem (**2.4.0**, [Docs](https://kit.svelte.dev/docs/modules#app-server-read), [#11649](https://github.com/sveltejs/kit/pull/11649))
 - Adapters can now `emulate` the prod environment for dev and preview servers by implementing the corresponding functions. This is useful for providing access to e.g. KV namespaces in development (**2.5.0**, [Docs](https://kit.svelte.dev/docs/writing-adapters), [#11730](https://github.com/sveltejs/kit/pull/11730))
 
-
 ## What's new in Svelte
 
 In case you missed it, [Svelte 5 is in preview](https://svelte-5-preview.vercel.app/docs/introduction). In the meantime, Svelte 4 (`@latest`) has had one bugfix release. There's just one new feature to highlight from the Svelte 5 changelog:
@@ -28,7 +27,6 @@ In case you missed it, [Svelte 5 is in preview](https://svelte-5-preview.vercel.
 - Snippets can now take multiple arguments (**5.0.0-next.42**, [Docs](https://svelte-5-preview.vercel.app/docs/snippets), [#9988](https://github.com/sveltejs/svelte/pull/9988))
 
 For all the bug fixes, chores and underlying work required to get Svelte 5 to release-ready, check out [the CHANGELOG on main](https://github.com/sveltejs/svelte/blob/main/packages/svelte/CHANGELOG.md).
-
 
 ---
 
@@ -47,6 +45,7 @@ For all the bug fixes, chores and underlying work required to get Svelte 5 to re
 **Learning Resources**
 
 _Featuring Svelte Contributors and Ambassadors_
+
 - [New SvelteKit feature: `import { read } from '$app/server'`](https://www.youtube.com/watch?v=m4G-6dyF1MU) by Rich Harris
 - [Reading assets on the server in SvelteKit](https://geoffrich.net/posts/sveltekit-read/) by Geoff Rich
 - [Tan Li Hau's new book](https://packt.link/Z4hXD), _Real-World Svelte_ is out now
@@ -65,12 +64,10 @@ _To Read_
 - [Get Up and Running with Svelte on the Internet Computer](https://blog.icacademy.at/blog/svelte-ic-starter) by Roland BOLE
 - [SvelteKit + Socket.io server deployed on deno](https://devr.me/socket-io-deno) by Devr
 
-
 **Libraries, Tools & Components**
 
 - [Lucia](https://github.com/lucia-auth/lucia/discussions/1361) - an auth library written in TypeScript that abstracts away the complexity of handling sessions - has just released its 3.0 version
 - [Paraglide JS Adapter SvelteKit](https://inlang.com/m/dxnzrydw/library-inlang-paraglideJsAdapterSvelteKit) is a SvelteKit integration for ParaglideJS - a tool for i18n routing
-
 
 That's it for this month! Feel free to let us know if we missed anything on [Reddit](https://www.reddit.com/r/sveltejs/) or [Discord](https://discord.gg/svelte).
 

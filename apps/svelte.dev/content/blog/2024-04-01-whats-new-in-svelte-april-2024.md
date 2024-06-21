@@ -9,7 +9,6 @@ Spring is just around the corner (for half the globe at least), which means [Sve
 
 Also, this month, a ton of new features have been merged into Svelte 5 to make it the best version of Svelte yet. We'll get into them all below, so let's jump right in!
 
-
 ## What's new in Svelte
 
 [Svelte 5 is in preview](https://svelte-5-preview.vercel.app/docs/introduction) and gets closer to release every day. Below, you'll find some highlights from its [changelog](https://github.com/sveltejs/svelte/blob/main/packages/svelte/CHANGELOG.md):
@@ -20,10 +19,9 @@ Also, this month, a ton of new features have been merged into Svelte 5 to make i
 - `SSR` HTML mismatch validation has been improved and provides clearer error messages (**5.0.0-next.69**, [#10658](https://github.com/sveltejs/svelte/pull/10658))
 - **Breaking:** Slots inside templates with a `shadowrootmode` attribute are now preserved (**5.0.0-next.73**, [#10721](https://github.com/sveltejs/svelte/pull/10721))
 - **Breaking:** The `$props()` no longer accepts a generic type argument. Instead, component authors should type their props like any other variable declaration (**5.0.0-next.76**, [#10694](https://github.com/sveltejs/svelte/pull/10694))
-- The new `$bindable` rune allows parents to `:bind` to a component's prop in addition to using them as regular props ([Docs](https://svelte-5-preview.vercel.app/docs/runes#props-bindable), [#10851](https://github.com/sveltejs/svelte/pull/10851)) 
+- The new `$bindable` rune allows parents to `:bind` to a component's prop in addition to using them as regular props ([Docs](https://svelte-5-preview.vercel.app/docs/runes#props-bindable), [#10851](https://github.com/sveltejs/svelte/pull/10851))
 - The webkitdirectory DOM boolean attribute is now supported (**5.0.0-next.81**, [#10847](https://github.com/sveltejs/svelte/pull/10847))
 - Form resets are now taken into account for two way bindings (**5.0.0-next.82**, [Docs](https://svelte-5-preview.vercel.app/docs/breaking-changes#other-breaking-changes-bindings-now-react-to-form-resets), [#10617](https://github.com/sveltejs/svelte/pull/10617))
-
 
 ## What's new in SvelteKit
 
@@ -35,7 +33,6 @@ Also, this month, a ton of new features have been merged into Svelte 5 to make i
 - Google Cloud is now supported in `adapter-auto` without any additional configuration (**@sveltejs/adapter-auto@3.2.0**, [Docs](https://kit.svelte.dev/docs/adapter-auto), [#12015](https://github.com/sveltejs/kit/pull/12015))
 
 For all the changes in SvelteKit, including bug fixes and adapter-specific changes check out the [CHANGELOGs in each of the packages](https://github.com/sveltejs/kit/tree/f1e73c2fe54280d254a1bdfba430a678f4db527a/packages).
-
 
 ---
 
@@ -55,10 +52,10 @@ For all the changes in SvelteKit, including bug fixes and adapter-specific chang
 - [Routickr](https://www.routickr.com/) is a habit-tracking app with Firefox and Chrome extensions
 - [immich](https://immich.app/) is a self-hosted photo and video management solution
 
-
 **Learning Resources**
 
 _Featuring Svelte Contributors and Ambassadors_
+
 - Svienna (Svelte Society Vienna):
   - [Domenik Reitzner - A brief history of prototyping](https://www.youtube.com/watch?v=auqkebVQYXE)
   - [Lukas Stracke - Building an Error and Performance Monitoring SDK for SvelteKit](https://www.youtube.com/watch?v=N8Hs-LVL_f8)
@@ -71,15 +68,13 @@ _Featuring Svelte Contributors and Ambassadors_
 _To Read/Watch_
 
 - [How we built our 41kb SaaS Website](https://criticalmoments.io/blog/how_we_built_our_marketing_page) by Critical Moments
-- [Migrating a personal homepage to Svelte](https://jakeout.com/posts/2024-03-04-svelte) by Jake Ouelletee 
-
+- [Migrating a personal homepage to Svelte](https://jakeout.com/posts/2024-03-04-svelte) by Jake Ouelletee
 
 **Libraries, Tools & Components**
 
 - [Svisualize](https://svisualize.dev/) is a VS Code Extension that visualizes your components as you code
 - [Neel/UI](https://github.com/aidan-neel/neel-ui) is a shadcn-inspired set of customizable components that you can copy and paste into your SvelteKit apps
 - [BLICKCSS](https://blick.netlify.app/) is a small (~30kb) CSS library to build great websites and web apps quickly and easily
-
 
 That's it for this month! Feel free to let us know if we missed anything on [Reddit](https://www.reddit.com/r/sveltejs/) or [Discord](https://discord.gg/svelte).
 

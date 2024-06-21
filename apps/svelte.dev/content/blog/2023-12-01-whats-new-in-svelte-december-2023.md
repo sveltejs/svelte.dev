@@ -6,6 +6,7 @@ authorURL: https://dreamindani.com
 ---
 
 Svelte Summit Fall 2023 was epic! Featuring talks from across the ecosystem and the launches from the core team of new Svelte Dev Tools, image optimization, and a preview version of Svelte 5.0! The whole talk can be found [here](https://www.youtube.com/watch?v=pTgIx-ucMsY) (timestamps below):
+
 - [0:00](https://www.youtube.com/watch?v=pTgIx-ucMsY&t=0s) Hype music!
 - [18:20](https://www.youtube.com/watch?v=pTgIx-ucMsY&t=1100s) Exploring Svelte DevTools - Ignatius B (4 minutes)
 - [25:27](https://www.youtube.com/watch?v=pTgIx-ucMsY&t=1527s) How does SvelteKit fare as a SPA Framework - Henry Lie (25 minutes)
@@ -33,7 +34,6 @@ Now let's dive into the updates...
 
 For all the release notes going forward, check out [the CHANGELOG on main](https://github.com/sveltejs/svelte/blob/main/packages/svelte/CHANGELOG.md). For the highlights, take a look below!
 
-
 ## What's new in SvelteKit
 
 - Creating a new SvelteKit project will now ask if you want to try the Svelte 5 beta ([#11026](https://github.com/sveltejs/kit/pull/11026))
@@ -43,13 +43,11 @@ For all the release notes going forward, check out [the CHANGELOG on main](https
 
 For a complete list of bug fixes and performance updates, check out the [SvelteKit CHANGELOG](https://github.com/sveltejs/kit/blob/master/packages/kit/CHANGELOG.md). You can also find adapter-specific CHANGELOGs in each of [the `adapter` directories](https://github.com/sveltejs/kit/tree/master/packages).
 
-
 ## What's new in Language Tools
 
 - The latest version of language tools adds best-effort fallback typings to `$props()` rune (**extensions-108.1.0**)
 - Language tools better supports the `@render` tag by using the `Snippet` type (**extensions-108.0.0**)
 - The Svelte ESLint plugin has been updated to support the Svelte 5 preview ([v2.36.0-next.2](https://github.com/sveltejs/eslint-plugin-svelte/releases/tag/v2.36.0-next.2))
-
 
 ---
 
@@ -70,6 +68,7 @@ For a complete list of bug fixes and performance updates, check out the [SvelteK
 **Learning Resources**
 
 _Featuring Svelte Contributors and Ambassadors_
+
 - [View Transitions in SvelteKit and beyond with Geoff Rich](https://www.svelteradio.com/episodes/view-transitions-in-sveltekit-and-beyond-with-geoff-rich) and [Melting UIs with Thomas G. Lopes](https://www.svelteradio.com/episodes/melting-uis-with-thomas-g-lopes) by Svelte Radio
 - [Making The Best Svelte SVG Animation Library](https://www.youtube.com/watch?v=_jWnyJRKOvU), [How To Publish Your JavaScript Code To Npm With SvelteKit](https://www.youtube.com/watch?v=Xvq8rCl1lIM), and [What's New In Svelte 5? (Runes, Events, Snippets)](https://www.youtube.com/watch?v=gGwnF-lxS_Q) by Joy of Code
 - Svelte Society Talks

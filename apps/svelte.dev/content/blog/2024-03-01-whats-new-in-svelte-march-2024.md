@@ -9,7 +9,6 @@ This month, the Svelte maintainers made a ton of progress on Svelte 5 and Rich H
 
 Lots to showcase too... so let's dive in!
 
-
 ## What's new in Svelte
 
 As you may already have heard, [Svelte 5 is in preview](https://svelte-5-preview.vercel.app/docs/introduction). In the meantime, Svelte 4 (`@latest`) has had [one bugfix](https://github.com/sveltejs/svelte/blob/svelte-4/packages/svelte/CHANGELOG.md). The Svelte 5 changelog has quite a few updates, though:
@@ -22,7 +21,6 @@ As you may already have heard, [Svelte 5 is in preview](https://svelte-5-preview
 
 For all the bug fixes, chores and underlying work required to get Svelte 5 to release-ready, check out [the CHANGELOG on main](https://github.com/sveltejs/svelte/blob/main/packages/svelte/CHANGELOG.md).
 
-
 ## What's new in SvelteKit
 
 Mostly bug fixes, this month. Most notably is a fix to prevent stale values after navigation (**2.5.1**, [#11870](https://github.com/sveltejs/kit/pull/11870)).
@@ -30,7 +28,6 @@ Mostly bug fixes, this month. Most notably is a fix to prevent stale values afte
 Adapters can also now use an `emulate` function to provide dev and preview functionality (**2.5.0**, [Docs](https://kit.svelte.dev/docs/writing-adapters), [#11730](https://github.com/sveltejs/kit/pull/11730)). This will allow for an improved experience developing for Cloudflare in the near future ([11732](https://github.com/sveltejs/kit/pull/11732)).
 
 For all the changes in SvelteKit, check out the [CHANGELOG](https://github.com/sveltejs/kit/blob/main/packages/kit/CHANGELOG.md).
-
 
 ---
 
@@ -48,10 +45,11 @@ For all the changes in SvelteKit, check out the [CHANGELOG](https://github.com/s
 **Learning Resources**
 
 _Featuring Svelte Contributors and Ambassadors_
+
 - [How to make a great framework better? - Svelte 5 with Rich Harris](https://www.youtube.com/watch?v=z7n17ajJpCo) by Prismic
 - [Svelte 5 is a beast, but is it worth switching?](https://www.youtube.com/watch?v=KB6zkvYJqoE&lc=UgxFIaNKUG5as18CSzp4AaABAg) by Syntax.FM
 - This Week in Svelte:
-  - 
+  -
 
 _To Read/Watch_
 
@@ -61,7 +59,6 @@ _To Read/Watch_
 - [Effortlessly Sync Your SvelteKit Frontend with Backend Using OpenAPI: A Step-by-Step Guide to Generating SDKs](https://www.launchnow.pro/blog/sveltekit-openapi-sdk-generation) by Launchnow
 - [How to build an editable website in 15 minutes in 2024](https://www.svelteheadless.com/how-to-build-an-editable-website-in-15-minutes-in-2024) by Svelte Headless
 - [Local-First LiveView Svelte ToDo App](https://liveview-svelte-pwa.fly.dev/) by Tony Dang
-
 
 **Libraries, Tools & Components**
 
@@ -76,7 +73,6 @@ _To Read/Watch_
 - [apple-svelte](https://github.com/Carza-104/apple-svelte) is a component library for Svelte based on Apple's Human Interface design language
 - [SvelteKit SSE](https://github.com/tncrazvan/sveltekit-sse) provides an easy way to produce and consume server sent events.
 - [Formsnap](https://github.com/huntabyte/formsnap), an accessible wrapper for sveltekit-superforms, got a major rewrite and has improved [its docs](https://formsnap.dev)
-
 
 That's it for this month! Feel free to let us know if we missed anything on [Reddit](https://www.reddit.com/r/sveltejs/) or [Discord](https://discord.gg/svelte).
 

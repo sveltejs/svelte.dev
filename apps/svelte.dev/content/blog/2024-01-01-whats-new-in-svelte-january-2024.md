@@ -26,7 +26,6 @@ With its 2.0 release, SvelteKit is now more capable than ever. Be sure to check 
 
 You can find a migration guide for SvelteKit 2.0 [on the SvelteKit docs](https://kit.svelte.dev/docs/migrating-to-sveltekit-2). Things should be pretty seamless with the `svelte-migrate` command doing much (if not all) for you!
 
-
 ## What's new in Svelte
 
 With [Svelte 5 in preview](https://svelte-5-preview.vercel.app/docs/introduction), Svelte 4 (`@latest`) has only been getting bug fixes - with its current version at `4.2.8`. The updates below are from version 5's preview branch:
@@ -42,7 +41,6 @@ With [Svelte 5 in preview](https://svelte-5-preview.vercel.app/docs/introduction
 
 For all the release notes going forward, check out [the CHANGELOG on main](https://github.com/sveltejs/svelte/blob/main/packages/svelte/CHANGELOG.md).
 
-
 ---
 
 ## Community Showcase
@@ -52,7 +50,7 @@ For all the release notes going forward, check out [the CHANGELOG on main](https
 - [eCourse](https://github.com/Ilyas-Codes/eCourse) is a sleek and customizable website template designed for effortless self-hosting of your online course
 - [Typogram](https://typogram.co/) is a brand design tool with "a sprinkle of AI"
 - [calcium](https://github.com/ethanlynn/calcium) is a browser extension for devs with fuzzy-find on browser tabs, bookmarks, history
-and common developer docs
+  and common developer docs
 - [hintable](https://github.com/willuhmjs/hintable) is an exciting word guessing game
 - [domian.io](https://domian.io/) retrieves a list of the most likely misspellings for your domain, their availability, and an easy way to register them
 - [Story Scroller](https://svelte.dev/repl/6182be0c3ada4a15b5046f7d0d031727?version=4.2.8) is a REPL showcasing how Svelte can be used to make a scrollable cards list
@@ -63,6 +61,7 @@ and common developer docs
 **Learning Resources**
 
 _Featuring Svelte Contributors and Ambassadors_
+
 - [Svelte in dynamic e-commerce widgets with Jacob Stordahl](https://www.svelteradio.com/episodes/svelte-in-dynamic-e-commerce-widgets-with-jacob-stordahl) and [Slicing Svelte with Sam Littlefair and Prismic](https://www.svelteradio.com/episodes/slicing-svelte-with-sam-littlefair-and-prismic) from Svelte Radio
 - [I already love SvelteKit v2](https://www.youtube.com/watch?v=B19DEGEclfk) by Huntabyte
 - [14 Awesome Real World Projects That Use Svelte](https://www.youtube.com/watch?v=E9HxrW5yivs) by Joy of Code
@@ -88,19 +87,17 @@ _To Read_
 - [Svelte 5 is good, but runes need improvement](https://kylenazario.com/blog/svelte-5-runes-impressions) by Kyle Nazario
 - [Shader Park and 2D](https://untested.sonnet.io/Shader+Park+and+2D) by Untested
 
-
 **Libraries, Tools & Components**
 
 - [Routify](https://routify.dev/blog/routify-3-release-candidate), the popular routing library used in many Svelte apps, has its first Release Candidate for version 3
 - [Superforms v2](https://blog.encodeart.dev/superforms-v2-supporting-all-validation-libraries) is out now - supporting all validation libraries
 - [SvelteKit-Design-Pattern](https://github.com/Kreonovo/SvelteKit-Design-Pattern) is a template showcase Kreonovo's SvelteKit MVC Design patterns (more info in [the Reddit post](https://www.reddit.com/r/sveltejs/comments/18ndcd8/our_design_pattern_for_sveltekit_how_we_organize/))
-- [Shadcn's Svelte VSCode extension](https://github.com/selemondev/vscode-shadcn-svelte) helps you install and use Shadcn components directly without leaving your IDE 
+- [Shadcn's Svelte VSCode extension](https://github.com/selemondev/vscode-shadcn-svelte) helps you install and use Shadcn components directly without leaving your IDE
 - [SGSG](https://github.com/mpiorowski/sgsg) is an alternative "full-stack application" template based on Svelte, Go, SQLite and gRPC
 - [mistral-kit](https://github.com/kevmodrome/mistral-kit) is a prompt-to-code site using mistral-7b and ollama
 - [svelte-browser-import](https://github.com/repalash/svelte-browser-import) provides functions to import and render a Svelte App/Component (.svelte files) directly inside a browser without a build step.
 - [progressbar-svelte](https://www.npmjs.com/package/progressbar-svelte) is a Svelte package for customizable progress bars
 - [MdCraft](https://github.com/lovelindhoni/mdcraft) is an open-source web app that serves as an in-browser Markdown editor and previewer
-
 
 That's it for this month! Feel free to let us know if we missed anything on [Reddit](https://www.reddit.com/r/sveltejs/) or [Discord](https://discord.gg/svelte).
 

@@ -18,7 +18,6 @@ Let's dive in!
 - The `$state.is` rune lets you compare values or check if an object exists within a deeply reactive object/array (**5.0.0-next.134**, [Docs](https://svelte-5-preview.vercel.app/docs/runes#state-is), [#11613](https://github.com/sveltejs/svelte/pull/11613))
 - The `rootDir` compiler option makes filenames relative to simplify development in monorepos or complex folder structures (**5.0.0-next.135**, [#11627](https://github.com/sveltejs/svelte/pull/11627))
 
-
 ---
 
 ## Community Showcase
@@ -30,12 +29,12 @@ Let's dive in!
 - [LCH Palette Generator](https://github.com/pauslyapp/lch-palette) is a tool that allows you to easily create and save gradient palettes to be used in UI design
 - [Typepost](https://dezain.io/typepost/) is a simple text post generator for social media
 - [Equimake](https://equimake.com/) is a collaborative real-time 3D platform for learners, gamers, artists, and coders
-- [svelte.dev-machine](https://github.com/Neosoulink/svelte.dev-machine) is a physical based animation to replicate the Svelte machine on the svelte.dev homepage 
-
+- [svelte.dev-machine](https://github.com/Neosoulink/svelte.dev-machine) is a physical based animation to replicate the Svelte machine on the svelte.dev homepage
 
 **Learning Resources**
 
 _Featuring Svelte Contributors and Ambassadors_
+
 - [Svelte 5: Compiler, Signals, and Web App Performance](https://www.youtube.com/watch?v=mjYt35lN3-k) by JSJ 627 with Rich Harris
 - [Svelte London - May 2024](https://www.youtube.com/watch?v=EggM2qMzqdU)
 - This Week in Svelte - deep dives into the Svelte changelog and new learnings from the week:
@@ -44,18 +43,15 @@ _Featuring Svelte Contributors and Ambassadors_
   - [17 May](https://www.youtube.com/watch?v=O1VoD-xhYqs)
   - [24 May](https://www.youtube.com/watch?v=HDjPn8FH-X0)
 
-
 _To Read_
 
 - [Securing Your SvelteKit App](https://captaincodeman.com/securing-your-sveltekit-app) and [Prevent Waterfalls from Multiple SvelteKit Server Hooks in sequence](https://captaincodeman.com/prevent-waterfalls-from-multiple-sveltekit-server-hooks-in-sequence) by Captain Codeman
 - [Svelte 5 Todo App with Firebase](https://code.build/p/svelte-5-todo-app-with-firebase-X1Tr3J) by Jonathan Gamble
 
-
 _To Watch_
 
 - [Svelte 5 Runes Demystified](https://www.youtube.com/playlist?list=PLBvLZ-dkskrKpA01nOZiQE_1SBFyFNB-6) by Peter Makes Websites Ltd
 - [How to Build an eCommerce Store with SvelteKit](https://www.youtube.com/watch?v=S1lK4eJH0tI&t=6s) by Crystallize
-
 
 **Libraries, Tools & Components**
 
@@ -64,7 +60,6 @@ _To Watch_
 - [SvelteKit Passkey Template](https://github.com/passlock-dev/svelte-passkeys) is a SvelteKit template project featuring Passkey authentication, Google sign in and mailbox verification
 - [svelte-infinite](https://github.com/ndom91/svelte-infinite) is an infinite scrolling library designed for Svelte 5 with runes
 - [svelte-next](https://github.com/shinokada/svelte-next) attempts to automated Svelte library updates
-
 
 That's it for this month! Let us know if we missed anything on [Reddit](https://www.reddit.com/r/sveltejs/) or [Discord](https://discord.gg/svelte).
 

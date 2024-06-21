@@ -36,7 +36,6 @@ These will all get broken up into more sharable (and rewatchable) videos over ti
 - HTML tags are now faster with more efficient hydration markers (**5.0.0-next.90-91**, [#10986](https://github.com/sveltejs/svelte/pull/10986) and [#11019](https://github.com/sveltejs/svelte/pull/11019))
 - The new `$host` rune retrieves the `this` reference of the custom element that contains a component - removing the need for `createEventDispatcher` (**5.0.0-next.96**, [Docs](https://svelte-5-preview.vercel.app/docs/runes#host), [#11059](https://github.com/sveltejs/svelte/pull/11059))
 
-
 ---
 
 ## Community Showcase
@@ -51,13 +50,13 @@ These will all get broken up into more sharable (and rewatchable) videos over ti
 - [Gamera](https://gamera.app/) is a simple site analytics tool for a privacy-first world
 - [Collecta](https://collecta.space/) lets you collect your internet in a single space - organize images, bookmarks, inspiration, and share your vibe with friends
 - [ColdCraft](https://coldcraft.ai/) writes for you by turning bullet points and LinkedIn profiles into effective cold emails
-- [Fourplay](https://github.com/kilroyjones/fourplay) is a multiplayer word game written with Rust and Svelte 
-- [how-long-is-a-click](https://www.how-long-is-a-click.com/) is a site that measures how long *exactly* a click is on the web
-
+- [Fourplay](https://github.com/kilroyjones/fourplay) is a multiplayer word game written with Rust and Svelte
+- [how-long-is-a-click](https://www.how-long-is-a-click.com/) is a site that measures how long _exactly_ a click is on the web
 
 **Learning Resources**
 
 _Featuring Svelte Contributors and Ambassadors_
+
 - [Preprocessors Are The Most Powerful Svelte Feature No One Talks About](https://www.youtube.com/watch?v=FNIwqQx7mOo), [How To Make A Custom Markdoc Renderer](https://www.youtube.com/watch?v=mWt7jsgZIWw) and [Responsive CSS Grid Layout In One Line Of Code](https://www.youtube.com/watch?v=b9N1qLTVhvs) by JoyOfCode
 - [Phoenix LiveView and Svelte with Wout De Puysseleir](https://www.svelteradio.com/episodes/phoenix-liveview-and-svelte-with-wout-de-puysseleir) by Svelte Radio
 - Svelte London - April 2024:
@@ -69,7 +68,6 @@ _Featuring Svelte Contributors and Ambassadors_
   - [12 Apr](https://www.youtube.com/watch?v=WQFjaM1-Hm0) - svelte-api-keys with Captain Codeman
   - [19 Apr](https://www.youtube.com/watch?v=r_snb9XDX6Q) - Multiple Action Forms
   - [26 Apr](https://www.youtube.com/watch?v=TbZpK-LtCME) - Service Workers
-
 
 _To Read_
 
@@ -87,7 +85,6 @@ _To Read_
 - [SvelteKit and Stripe demo](https://www.thespatula.io/projects/sveltekit-stripe-demo/demo/) by the spatula
 - [SvelteKit Turso Fly.io App Guide](https://scottspence.com/posts/sveltekit-turso-flyio-app-guide) by Scott Spence
 
-
 _To Watch_
 
 - [Build a Animated Website with SvelteKit, GSAP & Prismic](https://www.youtube.com/watch?v=v5Ncz5AcXjI) by Prismic
@@ -95,14 +92,12 @@ _To Watch_
 - [Build the Ultimate Learning Platform with SvelteKit, PocketBase & TailwindCSS!](https://www.youtube.com/watch?v=b2ftRSX1iZ0&t=47s) and [Lets Build A Filtering System with Svelte 5 , Sveltekit 2, Tailwind, Upstash](https://www.youtube.com/watch?v=5urk4ui_l5o) by Lawal Adebola
 - [Porting a vanilla JavaScript library to Svelte 5](https://www.youtube.com/watch?v=apIJlWJ3HgQ) by Stanislav Khromov
 
-
 **Libraries, Tools & Components**
 
 - [sk-seo](https://github.com/TheDahoom/Sveltekit-seo/) is a dead simple, no dependencies, svelte component that automates a lot of the annoying SEO parts for you
 - [Svelte Lib Helpers](https://github.com/shinokada/svelte-lib-helpers) is a utility package designed to streamline various tasks when developing Svelte libraries
 - [skitsa](https://github.com/michaelcuneo/sveltekit-sst-auth) is a simple yet fully fledged operational demonstration of SvelteKit Magic Links using SST, hosted on AWS, as a Lambda application
 - [svelte-zoomable-circles](https://www.npmjs.com/package/svelte-zoomable-circles) is a Svelte component for displaying and browsing hierarchical data using zoomable circles
-
 
 That's it for this month! Feel free to let us know if we missed anything on [Reddit](https://www.reddit.com/r/sveltejs/) or [Discord](https://discord.gg/svelte).
 
