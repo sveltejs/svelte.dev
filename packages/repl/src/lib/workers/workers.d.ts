@@ -1,9 +1,24 @@
 import type { CompileError, CompileResult, Warning } from 'svelte/compiler';
 import type { CompileOptions, File } from '../types';
 
+export type CompilerCommand =
+	| {
+			id: number;
+			type: 'init';
+			svelte_url: string;
+	  }
+	| {
+			id: number;
+			type: 'compile';
+			payload: CompilerInput;
+	  }
+	| {
+			id: number;
+			type: 'migrate';
+			payload: MigrateInput;
+	  };
+
 export interface CompilerInput {
-	id: number;
-	type: 'compile' | 'init' | 'migrate';
 	source: string;
 	options: CompileOptions;
 	is_entry: boolean;
@@ -12,17 +27,25 @@ export interface CompilerInput {
 }
 
 export interface CompilerOutput {
-	id: number;
-	result: {
-		js: string;
-		css: string;
-		ast?: CompileResult['ast'];
-		error?: CompileError;
-		warnings: Warning[];
-		metadata?: {
-			runes: boolean;
-		};
+	js: string;
+	css: string;
+	ast?: CompileResult['ast'];
+	error?: CompileError;
+	warnings: Warning[];
+	metadata?: {
+		runes: boolean;
 	};
+}
+
+export interface MigrateInput {
+	source: string;
+}
+
+export interface MigrateOutput {
+	result: {
+		code: string;
+	};
+	error?: string;
 }
 
 export type BundleMessageData = {
@@ -32,10 +55,4 @@ export type BundleMessageData = {
 	packages_url: string;
 	svelte_url: string;
 	files: File[];
-};
-
-export type MigrateMessageData = {
-	id: number;
-	result: { code: string };
-	error?: string;
 };

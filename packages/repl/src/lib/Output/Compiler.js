@@ -24,14 +24,14 @@ export default class Compiler {
 		this.worker.addEventListener(
 			'message',
 			/**
-			 * @param {MessageEvent<import('$lib/workers/workers').CompilerInput>} event
+			 * @param {MessageEvent<any>} event
 			 */
 			(event) => {
 				const handler = this.handlers.get(event.data.id);
 
 				if (handler) {
 					// if no handler, was meant for a different REPL
-					handler(event.data);
+					handler(event.data.result);
 					this.handlers.delete(event.data.id);
 				}
 			}
@@ -53,23 +53,25 @@ export default class Compiler {
 			this.worker.postMessage({
 				id,
 				type: 'compile',
-				source: file.source,
-				options: Object.assign(
-					{
-						name: file.name,
-						filename: `${file.name}.${file.type}`
-					},
-					options
-				),
-				entry: file.name === 'App',
-				return_ast
+				payload: {
+					source: file.source,
+					options: Object.assign(
+						{
+							name: file.name,
+							filename: `${file.name}.${file.type}`
+						},
+						options
+					),
+					entry: file.name === 'App',
+					return_ast
+				}
 			});
 		});
 	}
 
 	/**
 	 * @param {import('$lib/types').File} file
-	 * @returns {Promise<import('$lib/workers/workers').MigrateMessageData>}
+	 * @returns {Promise<import('$lib/workers/workers').MigrateOutput>}
 	 */
 	migrate(file) {
 		return new Promise((fulfil) => {
@@ -80,7 +82,9 @@ export default class Compiler {
 			this.worker.postMessage({
 				id,
 				type: 'migrate',
-				source: file.source
+				payload: {
+					source: file.source
+				}
 			});
 		});
 	}

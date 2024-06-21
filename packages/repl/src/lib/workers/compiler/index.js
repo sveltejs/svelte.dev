@@ -14,7 +14,7 @@ const ready = new Promise((f) => {
 
 self.addEventListener(
 	'message',
-	/** @param {MessageEvent<import("../workers").CompilerInput>} event */
+	/** @param {MessageEvent<import("../workers").CompilerCommand>} event */
 	async (event) => {
 		switch (event.data.type) {
 			case 'init':
@@ -34,12 +34,22 @@ self.addEventListener(
 
 			case 'compile':
 				await ready;
-				postMessage(compile(event.data));
+
+				postMessage({
+					id: event.data.id,
+					result: compile(event.data.payload)
+				});
+
 				break;
 
 			case 'migrate':
 				await ready;
-				postMessage(migrate(event.data));
+
+				postMessage({
+					id: event.data.id,
+					result: migrate(event.data.payload)
+				});
+
 				break;
 		}
 	}
@@ -52,8 +62,9 @@ const common_options = {
 
 /**
  * @param {import("../workers").CompilerInput} param0
+ * @returns {import("../workers").CompilerOutput}
  */
-function compile({ id, source, options, return_ast }) {
+function compile({ source, options, return_ast }) {
 	try {
 		const css = `/* Select a component to see compiled CSS */`;
 
@@ -70,15 +81,12 @@ function compile({ id, source, options, return_ast }) {
 			const ast = return_ast ? svelte.parse(source, { modern: true }) : undefined;
 
 			return {
-				id,
-				result: {
-					js: js.code,
-					css: css?.code || `/* Add a <sty` + `le> tag to see compiled CSS */`,
-					error: null,
-					warnings,
-					metadata,
-					ast
-				}
+				js: js.code,
+				css: css?.code || `/* Add a <sty` + `le> tag to see compiled CSS */`,
+				error: null,
+				warnings,
+				metadata,
+				ast
 			};
 		} else if (options.filename.endsWith('.svelte.js')) {
 			const compiled = svelte.compileModule(source, {
@@ -89,63 +97,50 @@ function compile({ id, source, options, return_ast }) {
 
 			if (compiled) {
 				return {
-					id,
-					result: {
-						js: compiled.js.code,
-						css,
-						error: null,
-						warnings: compiled.warnings,
-						metadata: compiled.metadata
-					}
+					js: compiled.js.code,
+					css,
+					error: null,
+					warnings: compiled.warnings,
+					metadata: compiled.metadata
 				};
 			}
 		}
 
 		return {
-			id,
-			result: {
-				js: `// Select a component, or a '.svelte.js' module that uses runes, to see compiled output`,
-				css,
-				error: null,
-				warnings: [],
-				metadata: null
-			}
+			js: `// Select a component, or a '.svelte.js' module that uses runes, to see compiled output`,
+			css,
+			error: null,
+			warnings: [],
+			metadata: null
 		};
 	} catch (err) {
 		// @ts-ignore
 		let message = `/*\nError compiling ${err.filename ?? 'component'}:\n${err.message}\n*/`;
 
 		return {
-			id,
-			result: {
-				js: message,
-				css: message,
-				error: {
-					message: err.message,
-					position: err.position
-				},
-				warnings: [],
-				metadata: null
-			}
+			js: message,
+			css: message,
+			error: {
+				message: err.message,
+				position: err.position
+			},
+			warnings: [],
+			metadata: null
 		};
 	}
 }
 
-/** @param {import("../workers").MigrateMessageData} param0 */
-function migrate({ id, source }) {
+/** @param {import("../workers").MigrateInput} param0 */
+function migrate({ source }) {
 	try {
 		const result = svelte.migrate(source);
 
-		return {
-			id,
-			result
-		};
+		return { result };
 	} catch (err) {
 		// @ts-ignore
 		let message = `/*\nError migrating ${err.filename ?? 'component'}:\n${err.message}\n*/`;
 
 		return {
-			id,
 			result: { code: source },
 			error: message
 		};

@@ -278,7 +278,7 @@
 
 		if ($selected.type === 'svelte' || $selected.type === 'js') {
 			compiled = await compiler.compile($selected, $compile_options, true);
-			runes = compiled.result.metadata?.runes ?? false;
+			runes = compiled.metadata?.runes ?? false;
 		} else {
 			runes = false;
 		}
@@ -349,11 +349,7 @@
 		>
 			<section slot="a">
 				<ComponentSelector show_modified={showModified} {runes} on:add on:remove />
-				<ModuleEditor
-					error={compiled?.result.error}
-					warnings={compiled?.result.warnings ?? []}
-					{vim}
-				/>
+				<ModuleEditor error={compiled?.error} warnings={compiled?.warnings ?? []} {vim} />
 			</section>
 
 			<section slot="b" style="height: 100%;">
