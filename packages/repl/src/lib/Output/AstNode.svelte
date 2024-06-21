@@ -3,10 +3,10 @@
 	import { tick } from 'svelte';
 
 	export let key = '';
-	/** @type {import('svelte/types/compiler/interfaces').Ast} */
+	/** @type {import('svelte/compiler').CompileResult['ast']} */
 	export let value;
 	export let collapsed = true;
-	/** @type {import('svelte/types/compiler/interfaces').Ast[]} */
+	/** @type {import('svelte/compiler').CompileResult['ast'][]} */
 	export let path_nodes = [];
 	export let autoscroll = true;
 

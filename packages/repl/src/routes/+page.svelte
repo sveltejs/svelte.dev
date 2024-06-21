@@ -22,7 +22,7 @@
 </script>
 
 <main>
-	<Repl vim bind:this={repl} showAst autocomplete={true} />
+	<Repl vim bind:this={repl} showAst />
 </main>
 
 <style>

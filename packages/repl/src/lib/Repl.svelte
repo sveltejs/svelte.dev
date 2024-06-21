@@ -27,7 +27,6 @@
 	export let previewTheme = 'light';
 	export let showModified = false;
 	export let showAst = false;
-	export let autocomplete = true;
 	/** @type {boolean} */
 	export let vim;
 

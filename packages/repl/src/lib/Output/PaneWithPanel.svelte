@@ -7,12 +7,12 @@
 	/** @type {string} */
 	export let panel;
 
-	/** @type {Exclude<import('@rich_harris/svelte-split-pane/dist/SplitPane.svelte').SplitPaneProps['max'], undefined>} */
+	/** @type {Exclude<import('svelte').ComponentProps<SplitPane>['pos'], undefined>} */
 	export let pos = '90%';
 
 	$: previous_pos = Math.min(+pos.replace(UNIT_REGEX, '$1'), 70);
 
-	/** @type {Exclude<import('@rich_harris/svelte-split-pane/dist/SplitPane.svelte').SplitPaneProps['max'], undefined>} */
+	/** @type {Exclude<import('svelte').ComponentProps<SplitPane>['max'], undefined>} */
 	let max = '90%';
 
 	// we can't bind to the spring itself, but we

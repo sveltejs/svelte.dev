@@ -183,7 +183,7 @@
 	}`;
 
 	/**
-	 * @param {import('$lib/types').Error & { loc: { line: number; column: number } }} e
+	 * @param {import('svelte/compiler').CompileError & { loc: { line: number; column: number } }} e
 	 */
 	function show_error(e) {
 		const map = $bundle?.client?.map;
