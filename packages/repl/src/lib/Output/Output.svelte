@@ -31,7 +31,7 @@
 	/** @type {import('../types').File | null} */
 	export let selected;
 
-	/** @type {import('../workers/workers').CompileMessageData | null} */
+	/** @type {import('../workers/workers').CompilerOutput | null} */
 	export let compiled;
 
 	$: if (selected && js_editor && css_editor) {

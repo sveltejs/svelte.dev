@@ -2,10 +2,10 @@
 	import { get_repl_context } from '$lib/context.js';
 	import CodeMirror from '../CodeMirror.svelte';
 
-	/** @type {any} */ // TODO
+	/** @type {import('svelte/compiler').CompileError} */
 	export let error;
 
-	/** @type {any[]} */ // TODO
+	/** @type {import('svelte/compiler').Warning[]} */
 	export let warnings;
 
 	/** @type {boolean} */

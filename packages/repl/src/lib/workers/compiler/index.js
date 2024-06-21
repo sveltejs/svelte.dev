@@ -19,7 +19,7 @@ const ready = new Promise((f) => {
 
 self.addEventListener(
 	'message',
-	/** @param {MessageEvent<import("../workers").CompileMessageData>} event */
+	/** @param {MessageEvent<import("../workers").CompilerInput>} event */
 	async (event) => {
 		switch (event.data.type) {
 			case 'init':
@@ -55,7 +55,9 @@ const common_options = {
 	css: false
 };
 
-/** @param {import("../workers").CompileMessageData} param0 */
+/**
+ * @param {import("../workers").CompilerInput} param0
+ */
 function compile({ id, source, options, return_ast }) {
 	try {
 		const css = `/* Select a component to see compiled CSS */`;

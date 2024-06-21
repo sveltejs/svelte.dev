@@ -267,7 +267,7 @@
 
 	const compiler = BROWSER ? new Compiler(svelteUrl) : null;
 
-	/** @type {import('./workers/workers').CompileMessageData | null} */
+	/** @type {import('./workers/workers').CompilerOutput | null} */
 	let compiled = null;
 
 	/**
@@ -351,7 +351,6 @@
 			<section slot="a">
 				<ComponentSelector show_modified={showModified} {runes} on:add on:remove />
 				<ModuleEditor
-					{autocomplete}
 					error={compiled?.result.error}
 					warnings={compiled?.result.warnings ?? []}
 					{vim}

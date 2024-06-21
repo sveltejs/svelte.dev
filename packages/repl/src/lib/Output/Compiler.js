@@ -24,7 +24,7 @@ export default class Compiler {
 		this.worker.addEventListener(
 			'message',
 			/**
-			 * @param {MessageEvent<import('$lib/workers/workers').CompileMessageData>} event
+			 * @param {MessageEvent<import('$lib/workers/workers').CompilerInput>} event
 			 */
 			(event) => {
 				const handler = this.handlers.get(event.data.id);
@@ -42,7 +42,7 @@ export default class Compiler {
 	 * @param {import('$lib/types').File} file
 	 * @param {import('svelte/compiler').CompileOptions} options
 	 * @param {boolean} return_ast
-	 * @returns {Promise<import('$lib/workers/workers').CompileMessageData>}
+	 * @returns {Promise<import('$lib/workers/workers').CompilerOutput>}
 	 */
 	compile(file, options, return_ast) {
 		return new Promise((fulfil) => {
