@@ -3,7 +3,7 @@
 	import AstNode from './AstNode.svelte';
 	import { cursorIndex } from '../CodeMirror.svelte';
 
-	/** @type {import('svelte/types/compiler/interfaces').Ast} */
+	/** @type {import('svelte/compiler').CompileResult['ast']} */
 	export let ast;
 	export let autoscroll = true;
 
@@ -15,8 +15,8 @@
 
 	/**
 	 * @param {number} cursor
-	 * @param {import('svelte/types/compiler/interfaces').Ast[]} paths
-	 * @returns {import('svelte/types/compiler/interfaces').Ast[] | undefined}
+	 * @param {import('svelte/compiler').CompileResult['ast'][]} paths
+	 * @returns {import('svelte/compiler').CompileResult['ast'][] | undefined}
 	 */
 	function find_deepest_path(cursor, paths) {
 		const value = paths[paths.length - 1];
@@ -42,7 +42,7 @@
 		}
 	}
 
-	/** @param {import('svelte/types/compiler/interfaces').Ast} ast */
+	/** @param {import('svelte/compiler').CompileResult['ast']} ast */
 	function get_ast_max_end(ast) {
 		let max_end = 0;
 

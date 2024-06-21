@@ -26,13 +26,7 @@ const ready = new Promise((f) => {
 	fulfil_ready = f;
 });
 
-/**
- * @type {{
- *   compile: typeof import('svelte/compiler').compile;
- *   compileModule: typeof import('svelte/compiler').compileModule;
- *   VERSION: string;
- * }}
- */
+/** @type {import('svelte/compiler')} */
 let svelte;
 
 self.addEventListener(
