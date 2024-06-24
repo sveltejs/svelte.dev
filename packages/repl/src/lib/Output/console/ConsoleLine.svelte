@@ -3,8 +3,12 @@
 	import ConsoleTable from './ConsoleTable.svelte';
 	import type { Log } from './console';
 
-	export let log: Log;
-	export let depth = 0;
+	interface Props {
+		log: Log;
+		depth?: number;
+	}
+
+	let { log = $bindable(), depth = 0 }: Props = $props();
 
 	function toggle_group_collapse() {
 		log.collapsed = !log.collapsed;
@@ -108,7 +112,7 @@
 	<div
 		role="button"
 		tabindex="0"
-		on:click={toggle_group_collapse}
+		onclick={toggle_group_collapse}
 		class="log"
 		class:expandable={log.stack || log.command === 'group'}
 	>

@@ -2,7 +2,11 @@
 	import ConsoleLine from './ConsoleLine.svelte';
 	import type { Log } from './console';
 
-	export let logs: Log[];
+	interface Props {
+		logs: Log[];
+	}
+
+	let { logs }: Props = $props();
 </script>
 
 <div class="container">

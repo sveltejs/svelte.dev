@@ -6,13 +6,17 @@
 	import Migrate from './Migrate.svelte';
 	import type { File } from '$lib/types';
 
-	export let show_modified: boolean;
-	export let runes: boolean;
+	interface Props {
+		show_modified: boolean;
+		runes: boolean;
+	}
+
+	let { show_modified, runes }: Props = $props();
 
 	const dispatch: ReturnType<
 		typeof createEventDispatcher<{
-			remove: { files: import('$lib/types').File[]; diff: import('$lib/types').File };
-			add: { files: import('$lib/types').File[]; diff: import('$lib/types').File };
+			remove: { files: File[]; diff: File };
+			add: { files: File[]; diff: File };
 		}>
 	> = createEventDispatcher();
 
@@ -26,8 +30,8 @@
 		EDITOR_STATE_MAP
 	} = get_repl_context();
 
-	let editing_name: string | null = null;
-	let input_value = '';
+	let editing_name: string | null = $state(null);
+	let input_value = $state('');
 
 	function select_file(filename: string) {
 		if ($selected_name !== filename) {
@@ -164,7 +168,7 @@
 
 	// drag and drop
 	let from: string | null = null;
-	let over: string | null = null;
+	let over: string | null = $state(null);
 
 	function dragStart(event: DragEvent & { currentTarget: HTMLDivElement }) {
 		from = event.currentTarget.id;
@@ -196,7 +200,7 @@
 
 <div class="component-selector">
 	<!-- svelte-ignore a11y_no_static_element_interactions -->
-	<div class="file-tabs" on:dblclick={add_new}>
+	<div class="file-tabs" ondblclick={add_new}>
 		{#each $files as file, index (file.name)}
 			{@const filename = get_full_filename(file)}
 			<div
@@ -207,14 +211,24 @@
 				class:active={filename === $selected_name}
 				class:draggable={filename !== editing_name && index !== 0}
 				class:drag-over={over === file.name}
-				on:click={() => select_file(filename)}
-				on:keyup={(e) => e.key === ' ' && select_file(filename)}
-				on:dblclick|stopPropagation={() => {}}
+				onclick={() => select_file(filename)}
+				onkeyup={(e) => e.key === ' ' && select_file(filename)}
+				ondblclick={(event) => {
+					event.stopPropagation();
+				}}
 				draggable={filename !== editing_name}
-				on:dragstart={dragStart}
-				on:dragover|preventDefault={dragOver}
-				on:dragleave={dragLeave}
-				on:drop|preventDefault={dragEnd}
+				ondragstart={dragStart}
+				ondragover={(event) => {
+					event.preventDefault();
+
+					dragOver?.(event);
+				}}
+				ondragleave={dragLeave}
+				ondrop={(event) => {
+					event.preventDefault();
+
+					dragEnd?.();
+				}}
 			>
 				<i class="drag-handle"></i>
 				{#if file.name === 'App' && filename !== editing_name}
@@ -234,9 +248,9 @@
 							autofocus
 							spellcheck={false}
 							bind:value={input_value}
-							on:focus={select_input}
-							on:blur={close_edit}
-							on:keydown={(e) => {
+							onfocus={select_input}
+							onblur={close_edit}
+							onkeydown={(e) => {
 								if (e.key === 'Enter') {
 									e.preventDefault();
 									if (!is_file_name_used(editing_file)) {
@@ -251,16 +265,16 @@
 					<div
 						class="editable"
 						title="edit component name"
-						on:click={() => edit_tab(file)}
-						on:keyup={(e) => e.key === ' ' && edit_tab(file)}
+						onclick={() => edit_tab(file)}
+						onkeyup={(e) => e.key === ' ' && edit_tab(file)}
 					>
 						{file.name}.{file.type}{#if show_modified && file.modified}*{/if}
 					</div>
 
 					<span
 						class="remove"
-						on:click={() => remove(filename)}
-						on:keyup={(e) => e.key === ' ' && remove(filename)}
+						onclick={() => remove(filename)}
+						onkeyup={(e) => e.key === ' ' && remove(filename)}
 					>
 						<svg width="12" height="12" viewBox="0 0 24 24">
 							<line stroke="#999" x1="18" y1="6" x2="6" y2="18" />
@@ -272,7 +286,7 @@
 		{/each}
 	</div>
 
-	<button class="add-new" on:click={add_new} title="add new component">
+	<button class="add-new" onclick={add_new} title="add new component">
 		<svg width="12" height="12" viewBox="0 0 24 24">
 			<line stroke="#999" x1="12" y1="5" x2="12" y2="19" />
 			<line stroke="#999" x1="5" y1="12" x2="19" y2="12" />

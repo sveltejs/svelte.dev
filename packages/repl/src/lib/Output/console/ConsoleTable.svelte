@@ -1,10 +1,14 @@
 <script lang="ts">
 	import JSONNode from 'svelte-json-tree';
 
-	export let data: any;
-	export let columns: any;
+	interface Props {
+		data: any;
+		columns: any;
+	}
 
-	$: table = create_table(data, columns);
+	let { data, columns }: Props = $props();
+
+	let table = $derived(create_table(data, columns));
 
 	function create_table(data: any, custom_columns?: string[]) {
 		let has_non_object = false;
