@@ -172,7 +172,7 @@ In the examples above, `$state` and `$derived` only appear at the top level of c
 
 ```ts
 /// file: counter.svelte.ts
-export function createCounter(initial) {
+export function createCounter(initial: number) {
 	let count = $state(initial);
 	let double = $derived(count * 2);
 	return {

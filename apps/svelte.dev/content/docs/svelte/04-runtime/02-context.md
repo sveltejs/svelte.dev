@@ -116,13 +116,16 @@ You can also retrieve the whole context map that belongs to the closest parent c
 The above methods are very unopionated about how to use them. When your app grows in scale, it's worthwhile to encapsulate setting and getting the context into functions and properly type them.
 
 ```ts
-let userKey = new Symbol('user');
+// @errors: 2304
+import { getContext, setContext } from 'svelte';
+
+let userKey = Symbol('user');
 
 export function setUserContext(user: User) {
 	setContext(userKey, user);
 }
 
-export function setUserContext(): User {
+export function getUserContext(): User {
 	return getContext(userKey) as User;
 }
 ```
