@@ -63,6 +63,8 @@ Objects and arrays are made deeply reactive by wrapping them with [`Proxies`](ht
 <button onclick={() => entries[1].text = 'baz'}>change second entry text</button>
 ```
 
+> Only POJOs (plain of JavaScript objects) are made deeply reactive. Reactivity will stop at class boundaries and leave those alone
+
 ## `$state.frozen`
 
 State declared with `$state.frozen` cannot be mutated; it can only be _reassigned_. In other words, rather than assigning to a property of an object, or using an array method like `push`, replace the object or array altogether if you'd like to update it:
