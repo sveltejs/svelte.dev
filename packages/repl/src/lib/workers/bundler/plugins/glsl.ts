@@ -1,5 +1,6 @@
-/** @type {import('@rollup/browser').Plugin} */
-export default {
+import type { Plugin } from '@rollup/browser';
+
+const plugin: Plugin = {
 	name: 'glsl',
 	transform: (code, id) => {
 		if (!id.endsWith('.glsl')) return;
@@ -10,3 +11,5 @@ export default {
 		};
 	}
 };
+
+export default plugin;

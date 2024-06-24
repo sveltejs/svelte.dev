@@ -11,20 +11,13 @@ const WARNING_BG = `hsl(${WARNING_HUE} 100% 40% / 0.5)`;
 const ERROR_FG = `hsl(${ERROR_HUE} 100% 40%)`;
 const ERROR_BG = `hsl(${ERROR_HUE} 100% 40% / 0.5)`;
 
-/**
- * @param {string} content
- * @param {string} attrs
- */
-function svg(content, attrs = `viewBox="0 0 40 40"`) {
+function svg(content: string, attrs = `viewBox="0 0 40 40"`) {
 	return `url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" ${attrs}>${encodeURIComponent(
 		content
 	)}</svg>')`;
 }
 
-/**
- * @param {string} color
- */
-function underline(color) {
+function underline(color: string) {
 	return svg(
 		`<path d="m0 3.5 l2 -1.5 l1 0 l2 1.5 l1 0" stroke="${color}" fill="none" stroke-width="1"/>`,
 		`width="6" height="4"`

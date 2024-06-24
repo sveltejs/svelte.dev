@@ -1,4 +1,6 @@
+import type { Plugin } from '@rollup/browser';
 import { parse } from 'acorn';
+import type { Node } from 'estree';
 import { walk } from 'zimmerframe';
 
 const require = `function require(id) {
@@ -6,8 +8,7 @@ const require = `function require(id) {
 	throw new Error(\`Cannot require modules dynamically (\${id})\`);
 }`;
 
-/** @type {import('@rollup/browser').Plugin} */
-export default {
+const plugin: Plugin = {
 	name: 'commonjs',
 
 	transform: (code, id) => {
@@ -21,7 +22,7 @@ export default {
 			/** @type {string[]}  */
 			const requires = [];
 
-			walk(/** @type {import('estree').Node} */ (ast), null, {
+			walk(ast as Node, null, {
 				CallExpression: (node) => {
 					if (node.callee.type === 'Identifier' && node.callee.name === 'require') {
 						if (node.arguments.length !== 1) return;
@@ -56,3 +57,5 @@ export default {
 		}
 	}
 };
+
+export default plugin;

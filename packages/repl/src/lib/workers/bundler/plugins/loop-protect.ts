@@ -1,18 +1,25 @@
+import type { Plugin } from '@rollup/browser';
 import { parse } from 'acorn';
 import { print } from 'esrap';
-import { walk } from 'zimmerframe';
+import type {
+	ArrowFunctionExpression,
+	BlockStatement,
+	DoWhileStatement,
+	ForStatement,
+	FunctionDeclaration,
+	FunctionExpression,
+	Node,
+	Statement,
+	WhileStatement
+} from 'estree';
+import { walk, type Context } from 'zimmerframe';
 
 const TIMEOUT = 100;
 
 const regex = /\b(for|while)\b/;
 
-/**
- *
- * @param {string} code
- * @returns {import('estree').Statement}
- */
-function parse_statement(code) {
-	return /** @type {import('estree').Statement} */ (parse(code, { ecmaVersion: 'latest' }).body[0]);
+function parse_statement(code: string): Statement {
+	return parse(code, { ecmaVersion: 'latest' }).body[0] as Statement;
 }
 
 const declaration = parse_statement(`
@@ -25,12 +32,9 @@ const check = parse_statement(`
 	}
 `);
 
-/**
- *
- * @param {import('estree').Node[]} path
- * @returns {null | import('estree').FunctionExpression | import('estree').FunctionDeclaration | import('estree').ArrowFunctionExpression}
- */
-export function get_current_function(path) {
+export function get_current_function(
+	path: Node[]
+): null | FunctionExpression | FunctionDeclaration | ArrowFunctionExpression {
 	for (let i = path.length - 1; i >= 0; i--) {
 		const node = path[i];
 		if (
@@ -44,27 +48,23 @@ export function get_current_function(path) {
 	return null;
 }
 
-/**
- * @template {import('estree').DoWhileStatement | import('estree').ForStatement | import('estree').WhileStatement} Statement
- * @param {Statement} node
- * @param {import('zimmerframe').Context<import('estree').Node, null>} context
- * @returns {import('estree').Node | void}
- */
-function loop_protect(node, context) {
+function loop_protect<Statement extends DoWhileStatement | ForStatement | WhileStatement>(
+	node: Statement,
+	context: Context<Node, null>
+): Node | void {
 	const current_function = get_current_function(context.path);
 
 	if (current_function === null || (!current_function.async && !current_function.generator)) {
-		const body = /** @type {import('estree').Statement} */ (context.visit(node.body));
+		const body = context.visit(node.body) as import('estree').Statement;
 
 		const statements = body.type === 'BlockStatement' ? [...body.body] : [body];
 
-		/** @type {import('estree').BlockStatement} */
-		const replacement = {
+		const replacement: BlockStatement = {
 			type: 'BlockStatement',
 			body: [
 				declaration,
 				{
-					.../** @type {Statement} */ (context.next() ?? node),
+					...((context.next() ?? node) as Statement),
 					body: {
 						type: 'BlockStatement',
 						body: [...statements, check]
@@ -79,8 +79,7 @@ function loop_protect(node, context) {
 	context.next();
 }
 
-/** @type {import('@rollup/browser').Plugin} */
-export default {
+const plugin: Plugin = {
 	name: 'loop-protect',
 	transform: (code, id) => {
 		// only applies to local files, not imports
@@ -97,7 +96,7 @@ export default {
 			sourceType: 'module'
 		});
 
-		const transformed = walk(/** @type {import('estree').Node} */ (ast), null, {
+		const transformed = walk(ast as Node, null, {
 			WhileStatement: loop_protect,
 			DoWhileStatement: loop_protect,
 			ForStatement: loop_protect
@@ -109,3 +108,5 @@ export default {
 		return print(transformed);
 	}
 };
+
+export default plugin;

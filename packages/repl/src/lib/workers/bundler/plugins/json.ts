@@ -1,5 +1,6 @@
-/** @type {import('@rollup/browser').Plugin} */
-export default {
+import type { Plugin } from '@rollup/browser';
+
+const plugin: Plugin = {
 	name: 'json',
 	transform: (code, id) => {
 		if (!id.endsWith('.json')) return;
@@ -10,3 +11,5 @@ export default {
 		};
 	}
 };
+
+export default plugin;

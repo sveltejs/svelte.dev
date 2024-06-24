@@ -1,7 +1,5 @@
-/// <reference lib="webworker" />
-
 import '../patch_window.js';
-import { sleep } from '$lib/utils.js';
+import { sleep } from '$lib/utils';
 import { rollup } from '@rollup/browser';
 import { DEV } from 'esm-env';
 import * as resolve from 'resolve.exports';
@@ -10,78 +8,70 @@ import glsl from './plugins/glsl.js';
 import json from './plugins/json.js';
 import replace from './plugins/replace.js';
 import loop_protect from './plugins/loop-protect.js';
+import type { Plugin, TransformResult } from '@rollup/browser';
+import type { BundleMessageData } from '../workers.js';
+import type { File, Warning } from '$lib/types.js';
+import type { CompileResult } from 'svelte/compiler';
 
-/** @type {string} */
-let packages_url;
+let packages_url: string;
+let svelte_url: string;
+let current_id: number;
 
-/** @type {string} */
-let svelte_url;
-
-/** @type {number} */
-let current_id;
-
-/** @type {(arg?: never) => void} */
-let fulfil_ready;
+let fulfil_ready: (arg?: never) => void;
 const ready = new Promise((f) => {
 	fulfil_ready = f;
 });
 
-self.addEventListener(
-	'message',
-	/** @param {MessageEvent<import('../workers.js').BundleMessageData>} event */ async (event) => {
-		switch (event.data.type) {
-			case 'init': {
-				({ packages_url, svelte_url } = event.data);
+self.addEventListener('message', async (event: MessageEvent<BundleMessageData>) => {
+	switch (event.data.type) {
+		case 'init': {
+			({ packages_url, svelte_url } = event.data);
 
-				const { version } = await fetch(`${svelte_url}/package.json`).then((r) => r.json());
-				console.log(`Using Svelte compiler version ${version}`);
+			const { version } = await fetch(`${svelte_url}/package.json`).then((r) => r.json());
+			console.log(`Using Svelte compiler version ${version}`);
 
-				const compiler = await fetch(`${svelte_url}/compiler/index.js`).then((r) => r.text());
-				(0, eval)(compiler + '\n//# sourceURL=compiler/index.js@' + version);
+			const compiler = await fetch(`${svelte_url}/compiler/index.js`).then((r) => r.text());
+			(0, eval)(compiler + '\n//# sourceURL=compiler/index.js@' + version);
 
-				fulfil_ready();
-				break;
-			}
+			fulfil_ready();
+			break;
+		}
 
-			case 'bundle': {
-				await ready;
-				const { uid, files } = event.data;
+		case 'bundle': {
+			await ready;
+			const { uid, files } = event.data;
 
-				if (files.length === 0) return;
+			if (files.length === 0) return;
 
-				current_id = uid;
+			current_id = uid;
 
-				setTimeout(async () => {
-					if (current_id !== uid) return;
+			setTimeout(async () => {
+				if (current_id !== uid) return;
 
-					const result = await bundle({ uid, files });
+				const result = await bundle({ uid, files });
 
-					if (JSON.stringify(result.error) === JSON.stringify(ABORT)) return;
-					if (result && uid === current_id) postMessage(result);
-				});
+				if (JSON.stringify(result.error) === JSON.stringify(ABORT)) return;
+				if (result && uid === current_id) postMessage(result);
+			});
 
-				break;
-			}
+			break;
 		}
 	}
-);
+});
 
-/** @type {Record<'client' | 'server', Map<string, { code: string, result: ReturnType<typeof svelte.compile> }>>} */
-let cached = {
+let cached: Record<
+	'client' | 'server',
+	Map<string, { code: string; result: ReturnType<typeof svelte.compile> }>
+> = {
 	client: new Map(),
 	server: new Map()
 };
 
 const ABORT = { aborted: true };
 
-/** @type {Map<string, Promise<{ url: string; body: string; }>>} */
-const FETCH_CACHE = new Map();
+const FETCH_CACHE: Map<string, Promise<{ url: string; body: string }>> = new Map();
 
-/**
- * @param {string} url
- * @param {number} uid
- */
-async function fetch_if_uncached(url, uid) {
+async function fetch_if_uncached(url: string, uid: number) {
 	if (FETCH_CACHE.has(url)) {
 		return FETCH_CACHE.get(url);
 	}
@@ -108,23 +98,12 @@ async function fetch_if_uncached(url, uid) {
 	return promise;
 }
 
-/**
- * @param {string} url
- * @param {number} uid
- */
-async function follow_redirects(url, uid) {
+async function follow_redirects(url: string, uid: number) {
 	const res = await fetch_if_uncached(url, uid);
 	return res?.url;
 }
 
-/**
- *
- * @param {number} major
- * @param {number} minor
- * @param {number} patch
- * @returns {number}
- */
-function compare_to_version(major, minor, patch) {
+function compare_to_version(major: number, minor: number, patch: number): number {
 	const v = svelte.VERSION.match(/^(\d+)\.(\d+)\.(\d+)/);
 
 	// @ts-ignore
@@ -147,14 +126,12 @@ function has_loopGuardTimeout_feature() {
 	return compare_to_version(3, 14, 0) >= 0;
 }
 
-/**
- *
- * @param {Record<string, unknown>} pkg
- * @param {string} subpath
- * @param {number} uid
- * @param {string} pkg_url_base
- */
-async function resolve_from_pkg(pkg, subpath, uid, pkg_url_base) {
+async function resolve_from_pkg(
+	pkg: Record<string, unknown>,
+	subpath: string,
+	uid: number,
+	pkg_url_base: string
+) {
 	// match legacy Rollup logic — pkg.svelte takes priority over pkg.exports
 	if (typeof pkg.svelte === 'string' && subpath === '.') {
 		return pkg.svelte;
@@ -218,30 +195,21 @@ async function resolve_from_pkg(pkg, subpath, uid, pkg_url_base) {
 	return subpath;
 }
 
-/**
- * @param {number} uid
- * @param {'client' | 'server'} mode
- * @param {typeof cached['client']} cache
- * @param {Map<string, import('$lib/types.js').File>} local_files_lookup
- */
-async function get_bundle(uid, mode, cache, local_files_lookup) {
+async function get_bundle(
+	uid: number,
+	mode: 'client' | 'server',
+	cache: (typeof cached)['client'],
+	local_files_lookup: Map<string, File>
+) {
 	let bundle;
 
 	/** A set of package names (without subpaths) to include in pkg.devDependencies when downloading an app */
-	/** @type {Set<string>} */
-	const imports = new Set();
+	const imports: Set<string> = new Set();
+	const warnings: Warning[] = [];
+	const all_warnings: Array<{ message: string }> = [];
+	const new_cache: typeof cache = new Map();
 
-	/** @type {import('$lib/types.js').Warning[]} */
-	const warnings = [];
-
-	/** @type {{ message: string }[]} */
-	const all_warnings = [];
-
-	/** @type {typeof cache} */
-	const new_cache = new Map();
-
-	/** @type {import('@rollup/browser').Plugin} */
-	const repl_plugin = {
+	const repl_plugin: Plugin = {
 		name: 'svelte-repl',
 		async resolveId(importee, importer) {
 			if (uid !== current_id) throw ABORT;
@@ -371,7 +339,7 @@ async function get_bundle(uid, mode, cache, local_files_lookup) {
 			const name = id.split('/').pop()?.split('.')[0];
 
 			const cached_id = cache.get(id);
-			let result;
+			let result: CompileResult;
 
 			if (cached_id && cached_id.code === code) {
 				result = cached_id.result;
@@ -416,8 +384,7 @@ async function get_bundle(uid, mode, cache, local_files_lookup) {
 				warnings.push(warning);
 			});
 
-			/** @type {import('@rollup/browser').TransformResult} */
-			const transform_result = {
+			const transform_result: TransformResult = {
 				code: result.js.code,
 				map: result.js.map
 			};
@@ -462,18 +429,13 @@ async function get_bundle(uid, mode, cache, local_files_lookup) {
 	}
 }
 
-/**
- * @param {{ uid: number; files: import('$lib/types.js').File[] }} param0
- * @returns
- */
-async function bundle({ uid, files }) {
+async function bundle({ uid, files }: { uid: number; files: File[] }) {
 	if (!DEV) {
 		console.clear();
 		console.log(`running Svelte compiler version %c${svelte.VERSION}`, 'font-weight: bold');
 	}
 
-	/** @type {Map<string, import('$lib/types').File>} */
-	const lookup = new Map();
+	const lookup: Map<string, import('$lib/types').File> = new Map();
 
 	lookup.set('./__entry.js', {
 		name: '__entry',
@@ -490,8 +452,12 @@ async function bundle({ uid, files }) {
 		lookup.set(path, file);
 	});
 
-	/** @type {Awaited<ReturnType<typeof get_bundle>>} */
-	let client = await get_bundle(uid, 'client', cached.client, lookup);
+	let client: Awaited<ReturnType<typeof get_bundle>> = await get_bundle(
+		uid,
+		'client',
+		cached.client,
+		lookup
+	);
 	let error;
 
 	try {
@@ -542,9 +508,8 @@ async function bundle({ uid, files }) {
 	} catch (err) {
 		console.error(err);
 
-		/** @type {Error} */
 		// @ts-ignore
-		const e = error || err;
+		const e: Error = error || err;
 
 		// @ts-ignore
 		delete e.toString;

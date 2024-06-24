@@ -1,63 +1,55 @@
-/// <reference lib="webworker" />
+import type { CompilerCommand, CompilerInput, CompilerOutput, MigrateInput } from '../workers';
+
 self.window = self; //TODO: still need?: egregious hack to get magic-string to work in a worker
 
-/** @type {(arg?: never) => void} */
-let fulfil_ready;
+let fulfil_ready: (arg?: never) => void;
 const ready = new Promise((f) => {
 	fulfil_ready = f;
 });
 
-self.addEventListener(
-	'message',
-	/** @param {MessageEvent<import("../workers").CompilerCommand>} event */
-	async (event) => {
-		switch (event.data.type) {
-			case 'init':
-				const { svelte_url } = event.data;
+self.addEventListener('message', async (event: MessageEvent<CompilerCommand>) => {
+	switch (event.data.type) {
+		case 'init':
+			const { svelte_url } = event.data;
 
-				const { version } = await fetch(`${svelte_url}/package.json`)
-					.then((r) => r.json())
-					.catch(() => ({ version: 'experimental' }));
+			const { version } = await fetch(`${svelte_url}/package.json`)
+				.then((r) => r.json())
+				.catch(() => ({ version: 'experimental' }));
 
-				const compiler = await fetch(`${svelte_url}/compiler/index.js`).then((r) => r.text());
-				(0, eval)(compiler + '\n//# sourceURL=compiler/index.js@' + version);
+			const compiler = await fetch(`${svelte_url}/compiler/index.js`).then((r) => r.text());
+			(0, eval)(compiler + '\n//# sourceURL=compiler/index.js@' + version);
 
-				fulfil_ready();
-				break;
+			fulfil_ready();
+			break;
 
-			case 'compile':
-				await ready;
+		case 'compile':
+			await ready;
 
-				postMessage({
-					id: event.data.id,
-					result: compile(event.data.payload)
-				});
+			postMessage({
+				id: event.data.id,
+				result: compile(event.data.payload)
+			});
 
-				break;
+			break;
 
-			case 'migrate':
-				await ready;
+		case 'migrate':
+			await ready;
 
-				postMessage({
-					id: event.data.id,
-					result: migrate(event.data.payload)
-				});
+			postMessage({
+				id: event.data.id,
+				result: migrate(event.data.payload)
+			});
 
-				break;
-		}
+			break;
 	}
-);
+});
 
 const common_options = {
 	dev: false,
 	css: false
 };
 
-/**
- * @param {import("../workers").CompilerInput} param0
- * @returns {import("../workers").CompilerOutput}
- */
-function compile({ source, options, return_ast }) {
+function compile({ source, options, return_ast }: CompilerInput): CompilerOutput {
 	try {
 		const css = `/* Select a component to see compiled CSS */`;
 
@@ -120,8 +112,7 @@ function compile({ source, options, return_ast }) {
 	}
 }
 
-/** @param {import("../workers").MigrateInput} param0 */
-function migrate({ source }) {
+function migrate({ source }: MigrateInput) {
 	try {
 		const result = svelte.migrate(source);
 

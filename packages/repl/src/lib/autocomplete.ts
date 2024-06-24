@@ -1,13 +1,14 @@
-import { snippetCompletion } from '@codemirror/autocomplete';
+import { CompletionContext, snippetCompletion } from '@codemirror/autocomplete';
 import { syntaxTree } from '@codemirror/language';
+import type { SyntaxNode } from '@lezer/common';
+import type { File } from './types';
 
-/** @typedef {(node: import('@lezer/common').SyntaxNode, context: import('@codemirror/autocomplete').CompletionContext, selected: import('./types').File) => boolean} Test */
+interface Test {
+	(node: SyntaxNode, context: CompletionContext, selected: File): boolean;
+}
 
-/**
- * Returns `true` if `$bindable()` is valid
- * @type {Test}
- */
-function is_bindable(node, context) {
+/** Returns `true` if `$bindable()` is valid */
+const is_bindable: Test = (node, context) => {
 	// disallow outside `let { x = $bindable }`
 	if (node.parent?.name !== 'PatternProperty') return false;
 	if (node.parent.parent?.name !== 'ObjectPattern') return false;
@@ -32,14 +33,13 @@ function is_bindable(node, context) {
 		last.firstChild?.name === 'VariableName' &&
 		context.state.sliceDoc(last.firstChild.from, last.firstChild.to) === '$props'
 	);
-}
+};
 
 /**
  * Returns `true` if `$props()` is valid
  * TODO only allow in `.svelte` files, and only at the top level
- * @type {Test}
  */
-function is_props(node, _, selected) {
+const is_props: Test = (node, _, selected) => {
 	if (selected.type !== 'svelte') return false;
 
 	return (
@@ -47,13 +47,12 @@ function is_props(node, _, selected) {
 		node.parent?.name === 'VariableDeclaration' &&
 		node.parent.parent?.name === 'Script'
 	);
-}
+};
 
 /**
  * Returns `true` is this is a valid place to declare state
- * @type {Test}
  */
-function is_state(node) {
+const is_state: Test = (node) => {
 	let parent = node.parent;
 
 	if (node.name === '.' || node.name === 'PropertyName') {
@@ -64,14 +63,13 @@ function is_state(node) {
 	if (!parent) return false;
 
 	return parent.name === 'VariableDeclaration' || parent.name === 'PropertyDeclaration';
-}
+};
 
 /**
  * Returns `true` if we're already in a valid call expression, e.g.
  * changing an existing `$state()` to `$state.frozen()`
- * @type {Test}
  */
-function is_state_call(node) {
+const is_state_call: Test = (node) => {
 	let parent = node.parent;
 
 	if (node.name === '.' || node.name === 'PropertyName') {
@@ -87,10 +85,9 @@ function is_state_call(node) {
 	if (!parent) return false;
 
 	return parent.name === 'VariableDeclaration' || parent.name === 'PropertyDeclaration';
-}
+};
 
-/** @type {Test} */
-function is_statement(node) {
+const is_statement: Test = (node) => {
 	if (node.name === 'VariableName') {
 		return node.parent?.name === 'ExpressionStatement';
 	}
@@ -100,10 +97,9 @@ function is_statement(node) {
 	}
 
 	return false;
-}
+};
 
-/** @type {Array<{ snippet: string, test?: Test }>} */
-const runes = [
+const runes: Array<{ snippet: string; test?: Test }> = [
 	{ snippet: '$state(${})', test: is_state },
 	{ snippet: '$state', test: is_state_call },
 	{ snippet: '$props()', test: is_props },
@@ -132,12 +128,7 @@ const options = runes.map(({ snippet, test }, i) => ({
 	test
 }));
 
-/**
- * @param {import('@codemirror/autocomplete').CompletionContext} context
- * @param {import('./types.js').File} selected
- * @param {import('./types.js').File[]} files
- */
-export function autocomplete(context, selected, files) {
+export function autocomplete(context: CompletionContext, selected: File, files: File[]) {
 	let node = syntaxTree(context.state).resolveInner(context.pos, -1);
 
 	if (node.name === 'String' && node.parent?.name === 'ImportDeclaration') {

@@ -1,10 +1,10 @@
-/** @param {string} str  */
-function escape(str) {
+import type { Plugin } from '@rollup/browser';
+
+function escape(str: string) {
 	return str.replace(/[-[\]/{}()*+?.\\^$|]/g, '\\$&');
 }
 
-/** @param {unknown} functionOrValue  */
-function ensureFunction(functionOrValue) {
+function ensureFunction(functionOrValue: unknown) {
 	if (typeof functionOrValue === 'function') {
 		return functionOrValue;
 	}
@@ -13,30 +13,18 @@ function ensureFunction(functionOrValue) {
 	};
 }
 
-/**
- * @param {string} a
- * @param {string} b
- */
-function longest(a, b) {
+function longest(a: string, b: string) {
 	return b.length - a.length;
 }
 
-/** @param {Record<string, unknown>} object */
-function mapToFunctions(object) {
-	return Object.keys(object).reduce(
-		/** @param {Record<string, Function>} functions */ function (functions, key) {
-			functions[key] = ensureFunction(object[key]);
-			return functions;
-		},
-		{}
-	);
+function mapToFunctions(object: Record<string, unknown>) {
+	return Object.keys(object).reduce(function (functions: Record<string, Function>, key) {
+		functions[key] = ensureFunction(object[key]);
+		return functions;
+	}, {});
 }
 
-/**
- * @param {Record<string, unknown>} options
- * @returns {import('@rollup/browser').Plugin}
- */
-function replace(options) {
+function replace(options: Record<string, unknown>): Plugin {
 	const functionValues = mapToFunctions(options);
 	const keys = Object.keys(functionValues).sort(longest).map(escape);
 
