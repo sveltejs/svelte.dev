@@ -1,15 +1,11 @@
-<script>
+<script lang="ts">
 	import { get_repl_context } from '$lib/context.js';
 	import CodeMirror from '../CodeMirror.svelte';
+	import type { CompileError, Warning } from 'svelte/compiler';
 
-	/** @type {import('svelte/compiler').CompileError} */
-	export let error;
-
-	/** @type {import('svelte/compiler').Warning[]} */
-	export let warnings;
-
-	/** @type {boolean} */
-	export let vim;
+	export let error: CompileError;
+	export let warnings: Warning[];
+	export let vim: boolean;
 
 	export function focus() {
 		$module_editor?.focus();

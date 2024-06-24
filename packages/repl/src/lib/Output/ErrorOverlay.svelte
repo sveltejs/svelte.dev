@@ -1,6 +1,7 @@
-<script>
-	/** @type {import('svelte/compiler').CompileError} */
-	export let error;
+<script lang="ts">
+	import type { CompileError } from 'svelte/compiler';
+
+	let { error }: { error: CompileError } = $props();
 </script>
 
 <div class="error-overlay">

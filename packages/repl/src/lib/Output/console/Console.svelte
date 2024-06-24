@@ -1,8 +1,8 @@
-<script>
+<script lang="ts">
 	import ConsoleLine from './ConsoleLine.svelte';
+	import type { Log } from './console';
 
-	/** @type {import('./console').Log[]} */
-	export let logs;
+	export let logs: Log[];
 </script>
 
 <div class="container">

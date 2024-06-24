@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { get_repl_context } from '$lib/context.js';
 	import { BROWSER } from 'esm-env';
 	import { onMount } from 'svelte';
@@ -9,45 +9,34 @@
 	import getLocationFromStack from './get-location-from-stack';
 	import srcdoc from './srcdoc/index.html?raw';
 	import ErrorOverlay from './ErrorOverlay.svelte';
+	import type { CompileError } from 'svelte/compiler';
+	import type { Bundle, MessageDetails } from '$lib/types';
+	import type { Log } from './console/console';
 
-	/** @type {import('$lib/types').MessageDetails | null} */
-	export let error;
-	/** @type {string | null} */
-	export let status;
+	export let error: MessageDetails | null;
+	export let status: string | null;
 	export let relaxed = false;
 	export let injectedJS = '';
 	export let injectedCSS = '';
-
-	/** @type {'light' | 'dark'} */
-	export let theme;
+	export let theme: 'light' | 'dark';
 
 	const { bundle } = get_repl_context();
 
-	/** @type {import('./console/console').Log[]} */
-	let logs = [];
-
-	/** @type {import('./console/console').Log[][]} */
-	let log_group_stack = [];
-
+	let logs: Log[] = [];
+	let log_group_stack: Log[][] = [];
 	let current_log_group = logs;
 
-	/** @type {HTMLIFrameElement} */
-	let iframe;
+	let iframe: HTMLIFrameElement;
 	let pending_imports = 0;
 	let pending = false;
 
-	/** @type {ReplProxy | null} */
-	let proxy = null;
-
+	let proxy: ReplProxy | null = null;
 	let ready = false;
 	let inited = false;
 
 	let log_height = 90;
-	/** @type {number} */
-	let prev_height;
-
-	/** @type {import('./console/console').Log} */
-	let last_console_event;
+	let prev_height: number;
+	let last_console_event: Log;
 
 	onMount(() => {
 		proxy = new ReplProxy(iframe, {
@@ -100,10 +89,7 @@
 
 	$: if (ready) proxy?.iframe_command('set_theme', { theme });
 
-	/**
-	 * @param {import('$lib/types').Bundle | null} $bundle
-	 */
-	async function apply_bundle($bundle) {
+	async function apply_bundle($bundle: Bundle | null) {
 		if (!$bundle) return;
 
 		try {
@@ -182,10 +168,7 @@
 		document.head.appendChild(style);
 	}`;
 
-	/**
-	 * @param {import('svelte/compiler').CompileError & { loc: { line: number; column: number } }} e
-	 */
-	function show_error(e) {
+	function show_error(e: CompileError & { loc: { line: number; column: number } }) {
 		const map = $bundle?.client?.map;
 
 		// @ts-ignore INVESTIGATE
@@ -198,16 +181,12 @@
 		error = e;
 	}
 
-	/**
-	 * @param {import('./console/console').Log} log
-	 */
-	function push_logs(log) {
+	function push_logs(log: Log) {
 		current_log_group.push((last_console_event = log));
 		logs = logs;
 	}
 
-	/** @param {import('./console/console').Log} log */
-	function group_logs(log) {
+	function group_logs(log: Log) {
 		log.logs = [];
 		current_log_group.push(log);
 		// TODO: Investigate

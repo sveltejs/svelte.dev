@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { get_repl_context } from '$lib/context.js';
 	import { marked } from 'marked';
 	import CodeMirror from '../CodeMirror.svelte';
@@ -6,40 +6,26 @@
 	import CompilerOptions from './CompilerOptions.svelte';
 	import PaneWithPanel from './PaneWithPanel.svelte';
 	import Viewer from './Viewer.svelte';
+	import type { File, MessageDetails } from '$lib/types';
+	import type { CompilerOutput } from '$lib/workers/workers';
 
-	/** @type {string | null} */
-	export let status;
-
-	/** @type {import('$lib/types').MessageDetails | null} */
-	export let runtimeError = null;
-
+	export let status: string | null;
+	export let runtimeError: MessageDetails | null = null;
 	export let embedded = false;
 	export let relaxed = false;
-
-	/** @type {string} */
-	export let injectedJS;
-
-	/** @type {string} */
-	export let injectedCSS;
-
-	// export let theme;
+	export let injectedJS: string;
+	export let injectedCSS: string;
 	export let showAst = false;
-
-	/** @type {'light' | 'dark'} */
-	export let previewTheme;
-
-	/** @type {import('../types').File | null} */
-	export let selected;
-
-	/** @type {import('../workers/workers').CompilerOutput | null} */
-	export let compiled;
+	export let previewTheme: 'light' | 'dark';
+	export let selected: File | null;
+	export let compiled: CompilerOutput | null;
 
 	$: if (selected && js_editor && css_editor) {
 		if (selected.type === 'json') {
 			js_editor.set({ code: `/* Select a component to see its compiled code */`, lang: 'js' });
 			css_editor.set({ code: `/* Select a component to see its compiled code */`, lang: 'css' });
 		} else if (selected.type === 'md') {
-			markdown = /** @type {string} */ (marked(selected.source));
+			markdown = marked(selected.source) as string;
 		} else if (compiled) {
 			js_editor.set({ code: compiled.js, lang: 'js' });
 			css_editor.set({ code: compiled.css, lang: 'css' });
@@ -48,14 +34,9 @@
 
 	const { module_editor } = get_repl_context();
 
-	/** @type {CodeMirror} */
-	let js_editor;
-
-	/** @type {CodeMirror} */
-	let css_editor;
-
-	/** @type {'result' | 'js' | 'css' | 'ast'} */
-	let view = 'result';
+	let js_editor: CodeMirror;
+	let css_editor: CodeMirror;
+	let view: 'result' | 'js' | 'css' | 'ast' = 'result';
 	let markdown = '';
 
 	$: ast = compiled?.ast;

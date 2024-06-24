@@ -1,10 +1,12 @@
-<script>
+<script lang="ts">
 	import Message from '../Message.svelte';
 	import AstNode from './AstNode.svelte';
 	import { cursorIndex } from '../CodeMirror.svelte';
+	import type { CompileResult } from 'svelte/compiler';
 
-	/** @type {import('svelte/compiler').CompileResult['ast']} */
-	export let ast;
+	type Ast = CompileResult['ast'];
+
+	export let ast: Ast;
 	export let autoscroll = true;
 
 	// $cursor_index may go over the max since ast computation is usually slower.
@@ -13,12 +15,7 @@
 
 	$: path_nodes = find_deepest_path(max_cursor_index, [ast]) || [];
 
-	/**
-	 * @param {number} cursor
-	 * @param {import('svelte/compiler').CompileResult['ast'][]} paths
-	 * @returns {import('svelte/compiler').CompileResult['ast'][] | undefined}
-	 */
-	function find_deepest_path(cursor, paths) {
+	function find_deepest_path(cursor: number, paths: Ast[]): Ast[] | undefined {
 		const value = paths[paths.length - 1];
 
 		if (!value) return;
@@ -42,11 +39,10 @@
 		}
 	}
 
-	/** @param {import('svelte/compiler').CompileResult['ast']} ast */
-	function get_ast_max_end(ast) {
+	function get_ast_max_end(ast: Ast) {
 		let max_end = 0;
 
-		for (const node of Object.values(ast)) {
+		for (const node of Object.values(ast) as any[]) {
 			if (node && typeof node.end === 'number' && node.end > max_end) {
 				max_end = node.end;
 			}

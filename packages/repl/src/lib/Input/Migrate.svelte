@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { get_repl_context } from '$lib/context.js';
 
 	const { migrate } = get_repl_context();

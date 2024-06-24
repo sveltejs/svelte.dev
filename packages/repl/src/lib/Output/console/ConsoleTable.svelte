@@ -1,21 +1,14 @@
-<script>
+<script lang="ts">
 	import JSONNode from 'svelte-json-tree';
 
-	/** @type {any} */
-	export let data;
-
-	/** @type {any} */
-	export let columns;
+	export let data: any;
+	export let columns: any;
 
 	$: table = create_table(data, columns);
 
-	/**
-	 * @param {any} data
-	 * @param {string[]} [custom_columns]
-	 */
-	function create_table(data, custom_columns) {
+	function create_table(data: any, custom_columns?: string[]) {
 		let has_non_object = false;
-		const columns = new Set();
+		const columns: Set<string> = new Set();
 
 		if (custom_columns) {
 			custom_columns.forEach((column) => columns.add(column));

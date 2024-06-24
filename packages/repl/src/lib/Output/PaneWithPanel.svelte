@@ -1,19 +1,17 @@
-<script>
+<script lang="ts">
 	import { spring } from 'svelte/motion';
 	import { SplitPane } from '@rich_harris/svelte-split-pane';
+	import type { ComponentProps } from 'svelte';
 
 	const UNIT_REGEX = /(\d+)(?:(px|rem|%|em))/i;
 
-	/** @type {string} */
-	export let panel;
+	export let panel: string;
 
-	/** @type {Exclude<import('svelte').ComponentProps<SplitPane>['pos'], undefined>} */
-	export let pos = '90%';
+	export let pos: Exclude<ComponentProps<SplitPane>['pos'], undefined> = '90%';
 
 	$: previous_pos = Math.min(+pos.replace(UNIT_REGEX, '$1'), 70);
 
-	/** @type {Exclude<import('svelte').ComponentProps<SplitPane>['max'], undefined>} */
-	let max = '90%';
+	let max: Exclude<ComponentProps<SplitPane>['max'], undefined> = '90%';
 
 	// we can't bind to the spring itself, but we
 	// can still use the spring to drive `pos`

@@ -1,19 +1,19 @@
-<script>
+<script lang="ts">
 	import { get_repl_context } from '$lib/context.js';
 	import { tick } from 'svelte';
+	import type { CompileResult } from 'svelte/compiler';
+
+	type Ast = CompileResult['ast'];
 
 	export let key = '';
-	/** @type {import('svelte/compiler').CompileResult['ast']} */
-	export let value;
+	export let value: Ast;
 	export let collapsed = true;
-	/** @type {import('svelte/compiler').CompileResult['ast'][]} */
-	export let path_nodes = [];
+	export let path_nodes: Ast[] = [];
 	export let autoscroll = true;
 
 	const { module_editor, toggleable } = get_repl_context();
 
-	/** @type {HTMLLIElement} */
-	let list_item_el;
+	let list_item_el: HTMLLIElement;
 
 	$: is_root = path_nodes[0] === value;
 	$: is_leaf = path_nodes[path_nodes.length - 1] === value;
@@ -51,8 +51,7 @@
 		});
 	}
 
-	/** @param {MouseEvent | FocusEvent} e */
-	function handle_mark_text(e) {
+	function handle_mark_text(e: MouseEvent | FocusEvent) {
 		if (is_markable) {
 			e.stopPropagation();
 
@@ -67,8 +66,7 @@
 		}
 	}
 
-	/** @param {MouseEvent} e */
-	function handle_unmark_text(e) {
+	function handle_unmark_text(e: MouseEvent) {
 		if (is_markable) {
 			e.stopPropagation();
 			$module_editor?.unmarkText();
