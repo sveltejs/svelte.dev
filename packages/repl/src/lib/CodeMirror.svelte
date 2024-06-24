@@ -2,7 +2,7 @@
 	export const cursorIndex = writable(0);
 </script>
 
-<script>
+<script lang="ts">
 	import { historyField } from '@codemirror/commands';
 	import { EditorState, Range, StateEffect, StateEffectType, StateField } from '@codemirror/state';
 	import { Decoration, EditorView } from '@codemirror/view';
@@ -15,33 +15,28 @@
 	import Message from './Message.svelte';
 	import { svelteTheme } from './theme.js';
 	import { autocomplete } from './autocomplete.js';
+	import type { LintSource } from '@codemirror/lint';
+	import type { Extension } from '@codemirror/state';
+	import { CompletionContext } from '@codemirror/autocomplete';
+	import type { Lang } from './types';
 
-	/** @type {import('@codemirror/lint').LintSource | undefined} */
-	export let diagnostics = undefined;
-
+	export let diagnostics: LintSource | undefined = undefined;
 	export let readonly = false;
 	export let tab = true;
 	export let vim = false;
 
-	/** @type {ReturnType<typeof createEventDispatcher<{ change: { value: string } }>>} */
-	const dispatch = createEventDispatcher();
+	const dispatch: ReturnType<typeof createEventDispatcher<{ change: { value: string } }>> =
+		createEventDispatcher();
 
 	let code = '';
 
-	/** @type {import('./types').Lang} */
-	let lang = 'svelte';
+	let lang: Lang = 'svelte';
 
-	/**
-	 * @param {{ code: string; lang: import('./types').Lang }} options
-	 */
-	export async function set(options) {
+	export async function set(options: { code: string; lang: Lang }) {
 		update(options);
 	}
 
-	/**
-	 * @param {{ code?: string; lang?: import('./types').Lang }} options
-	 */
-	export async function update(options) {
+	export async function update(options: { code?: string; lang?: Lang }) {
 		await isReady;
 
 		if (!$cmInstance.view) return;
@@ -65,15 +60,11 @@
 		}
 	}
 
-	/**
-	 * @param {number} pos
-	 */
-	export function setCursor(pos) {
+	export function setCursor(pos: number) {
 		cursor_pos = pos;
 	}
 
-	/** @type {(...val: any) => void} */
-	let fulfil_module_editor_ready;
+	let fulfil_module_editor_ready: (...val: any) => void;
 	export const isReady = new Promise((f) => (fulfil_module_editor_ready = f));
 
 	export function resize() {
@@ -88,10 +79,7 @@
 		return $cmInstance.view?.state.toJSON({ history: historyField });
 	}
 
-	/**
-	 * @param {any} state
-	 */
-	export function setEditorState(state) {
+	export function setEditorState(state: any) {
 		if (!$cmInstance.view) return;
 
 		$cmInstance.view.setState(
@@ -113,8 +101,7 @@
 		});
 	}
 
-	/** @type {StateEffectType<Range<Decoration>[]>} */
-	const addMarksDecoration = StateEffect.define();
+	const addMarksDecoration: StateEffectType<Range<Decoration>[]> = StateEffect.define();
 
 	// This value must be added to the set of extensions to enable this
 	const markField = StateField.define({
@@ -136,13 +123,15 @@
 		provide: (f) => EditorView.decorations.from(f)
 	});
 
-	/**
-	 * @param {object} param0
-	 * @param {number} param0.from
-	 * @param {number} param0.to
-	 * @param {string} [param0.className]
-	 */
-	export function markText({ from, to, className = 'mark-text' }) {
+	export function markText({
+		from,
+		to,
+		className = 'mark-text'
+	}: {
+		from: number;
+		to: number;
+		className?: string;
+	}) {
 		const executedMark = Decoration.mark({
 			class: className
 		});
@@ -163,23 +152,20 @@
 
 	const cmInstance = withCodemirrorInstance();
 
-	/** @type {number} */
-	let w;
-	/** @type {number} */
-	let h;
+	let w: number;
+	let h: number;
 
 	let marked = false;
 
 	let updating_externally = false;
 
-	/** @type {import('@codemirror/state').Extension[]} */
-	let extensions = [];
+	let extensions: Extension[] = [];
 
 	/**
 	 * update the extension if and when vim changes
-	 * @param {boolean} vimEnabled if vim it's included in the set of extensions
+	 * @param vimEnabled if vim it's included in the set of extensions
 	 */
-	async function getExtensions(vimEnabled) {
+	async function getExtensions(vimEnabled: boolean) {
 		let extensions = [watcher];
 		if (vimEnabled) {
 			const { vim } = await import('@replit/codemirror-vim').then((vimModule) => ({
@@ -221,13 +207,11 @@
 	const { files, selected } = get_repl_context();
 
 	const svelte_rune_completions = svelteLanguage.data.of({
-		/** @param {import('@codemirror/autocomplete').CompletionContext} context */
-		autocomplete: (context) => autocomplete(context, $selected, $files)
+		autocomplete: (context: CompletionContext) => autocomplete(context, $selected, $files)
 	});
 
 	const js_rune_completions = javascriptLanguage.data.of({
-		/** @param {import('@codemirror/autocomplete').CompletionContext} context */
-		autocomplete: (context) => autocomplete(context, $selected, $files)
+		autocomplete: (context: CompletionContext) => autocomplete(context, $selected, $files)
 	});
 </script>
 

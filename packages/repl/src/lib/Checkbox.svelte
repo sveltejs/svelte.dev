@@ -1,5 +1,5 @@
-<script>
-	export let checked = false;
+<script lang="ts">
+	let { checked = $bindable() }: { checked: boolean } = $props();
 </script>
 
 <input type="checkbox" bind:checked />

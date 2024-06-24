@@ -1,7 +1,7 @@
-<script>
-	export let checked = false;
-
+<script lang="ts">
 	import Checkbox from './Checkbox.svelte';
+
+	let { checked = $bindable() }: { checked: boolean } = $props();
 </script>
 
 <!-- svelte-ignore a11y_label_has_associated_control -->

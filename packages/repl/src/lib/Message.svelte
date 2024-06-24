@@ -1,22 +1,16 @@
-<script>
+<script lang="ts">
 	import { slide } from 'svelte/transition';
 	import { get_repl_context } from './context.js';
+	import type { MessageDetails } from './types.js';
 
-	/** @type {'info' | 'warning' | 'error'} */
-	export let kind = 'info';
-
-	/** @type {import('./types').MessageDetails | undefined} */
-	export let details = undefined;
-
-	/** @type {string | undefined} */
-	export let filename = undefined;
-
+	export let kind: 'info' | 'warning' | 'error' = 'info';
+	export let details: MessageDetails | undefined = undefined;
+	export let filename: string | undefined = undefined;
 	export let truncate = false;
 
 	const { go_to_warning_pos } = get_repl_context();
 
-	/** @param {import('./types').MessageDetails} details */
-	function message(details) {
+	function message(details: MessageDetails) {
 		let str = details.message || '[missing message]';
 
 		let loc = [];
