@@ -1,17 +1,14 @@
+import type { Handlers } from './proxy';
+
 let uid = 1;
 
 export default class ReplProxy {
-	/** @type {HTMLIFrameElement} */
-	iframe;
+	iframe: HTMLIFrameElement;
+	handlers: Handlers;
+	pending_cmds: Map<number, { resolve: (value: any) => void; reject: (value: any) => void }> =
+		new Map();
 
-	/** @type {import("./proxy").Handlers} */
-	handlers;
-
-	/** @type {Map<number, { resolve: (value: any) => void, reject: (value: any) => void }>} */
-	pending_cmds = new Map();
-
-	/** @param {MessageEvent<any>} event */
-	handle_event = (event) => {
+	handle_event = (event: MessageEvent<any>) => {
 		if (event.source !== this.iframe.contentWindow) return;
 
 		const { action, args } = event.data;
@@ -31,11 +28,7 @@ export default class ReplProxy {
 		}
 	};
 
-	/**
-	 * @param {HTMLIFrameElement} iframe
-	 * @param {import("./proxy").Handlers} handlers
-	 */
-	constructor(iframe, handlers) {
+	constructor(iframe: HTMLIFrameElement, handlers: Handlers) {
 		this.iframe = iframe;
 		this.handlers = handlers;
 
@@ -46,11 +39,7 @@ export default class ReplProxy {
 		window.removeEventListener('message', this.handle_event);
 	}
 
-	/**
-	 * @param {string} action
-	 * @param {any} args
-	 */
-	iframe_command(action, args) {
+	iframe_command(action: string, args: any) {
 		return new Promise((resolve, reject) => {
 			const cmd_id = uid++;
 
@@ -60,10 +49,13 @@ export default class ReplProxy {
 		});
 	}
 
-	/**
-	 * @param {{ action: string; cmd_id: number; message: string; stack: any; args: any; }} cmd_data
-	 */
-	handle_command_message(cmd_data) {
+	handle_command_message(cmd_data: {
+		action: string;
+		cmd_id: number;
+		message: string;
+		stack: any;
+		args: any;
+	}) {
 		let action = cmd_data.action;
 		let id = cmd_data.cmd_id;
 		let handler = this.pending_cmds.get(id);
@@ -85,8 +77,7 @@ export default class ReplProxy {
 		}
 	}
 
-	/** @param {string} script */
-	eval(script) {
+	eval(script: string) {
 		return this.iframe_command('eval', { script });
 	}
 

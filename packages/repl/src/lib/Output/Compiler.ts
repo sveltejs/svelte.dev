@@ -1,18 +1,17 @@
+import type { File } from '$lib/types';
+import type { CompileOptions } from 'svelte/compiler';
 import Worker from '../workers/compiler/index.js?worker';
+import type { CompilerOutput, MigrateOutput } from '$lib/workers/workers';
 
 const workers = new Map();
 
 let uid = 1;
 
 export default class Compiler {
-	/** @type {Worker} */
-	worker;
+	worker: Worker;
+	handlers: Map<number, (...arg: any) => void> = new Map();
 
-	/** @type {Map<number, (...arg: any) => void>} */
-	handlers = new Map();
-
-	/** @param {string} svelte_url */
-	constructor(svelte_url) {
+	constructor(svelte_url: string) {
 		if (!workers.has(svelte_url)) {
 			const worker = new Worker();
 			worker.postMessage({ type: 'init', svelte_url });
@@ -21,30 +20,18 @@ export default class Compiler {
 
 		this.worker = workers.get(svelte_url);
 
-		this.worker.addEventListener(
-			'message',
-			/**
-			 * @param {MessageEvent<any>} event
-			 */
-			(event) => {
-				const handler = this.handlers.get(event.data.id);
+		this.worker.addEventListener('message', (event: MessageEvent<any>) => {
+			const handler = this.handlers.get(event.data.id);
 
-				if (handler) {
-					// if no handler, was meant for a different REPL
-					handler(event.data.result);
-					this.handlers.delete(event.data.id);
-				}
+			if (handler) {
+				// if no handler, was meant for a different REPL
+				handler(event.data.result);
+				this.handlers.delete(event.data.id);
 			}
-		);
+		});
 	}
 
-	/**
-	 * @param {import('$lib/types').File} file
-	 * @param {import('svelte/compiler').CompileOptions} options
-	 * @param {boolean} return_ast
-	 * @returns {Promise<import('$lib/workers/workers').CompilerOutput>}
-	 */
-	compile(file, options, return_ast) {
+	compile(file: File, options: CompileOptions, return_ast: boolean): Promise<CompilerOutput> {
 		return new Promise((fulfil) => {
 			const id = uid++;
 
@@ -69,11 +56,7 @@ export default class Compiler {
 		});
 	}
 
-	/**
-	 * @param {import('$lib/types').File} file
-	 * @returns {Promise<import('$lib/workers/workers').MigrateOutput>}
-	 */
-	migrate(file) {
+	migrate(file: File): Promise<MigrateOutput> {
 		return new Promise((fulfil) => {
 			const id = uid++;
 
