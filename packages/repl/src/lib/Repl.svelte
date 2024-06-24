@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { EditorState } from '@codemirror/state';
 	import { SplitPane } from '@rich_harris/svelte-split-pane';
 	import { BROWSER } from 'esm-env';
@@ -12,23 +12,23 @@
 	import { set_repl_context } from './context.js';
 	import { get_full_filename } from './utils.js';
 	import Compiler from './Output/Compiler.js';
+	import type { File, MessageDetails, ReplContext } from './types.js';
+	import type { CompileOptions } from 'svelte/compiler';
+	import type { CompilerOutput } from './workers/workers.js';
 
 	export let packagesUrl = 'https://unpkg.com';
 	export let svelteUrl = `${BROWSER ? location.origin : ''}/svelte`;
 	export let embedded = false;
-	/** @type {'columns' | 'rows'} */
-	export let orientation = 'columns';
+	export let orientation: 'columns' | 'rows' = 'columns';
 	export let relaxed = false;
 	export let fixed = false;
 	export let fixedPos = 50;
 	export let injectedJS = '';
 	export let injectedCSS = '';
-	/** @type {'light' | 'dark'} */
-	export let previewTheme = 'light';
+	export let previewTheme: 'light' | 'dark' = 'light';
 	export let showModified = false;
 	export let showAst = false;
-	/** @type {boolean} */
-	export let vim;
+	export let vim: boolean;
 
 	let runes = false;
 
@@ -39,10 +39,7 @@
 		};
 	}
 
-	/**
-	 * @param {{ files: import('./types').File[], css?: string }} data
-	 */
-	export async function set(data) {
+	export async function set(data: { files: File[]; css?: string }) {
 		$files = data.files;
 		$selected_name = 'App.svelte';
 
@@ -68,60 +65,39 @@
 		$files = $files.map((val) => ({ ...val, modified: false }));
 	}
 
-	/** @type {ReturnType<typeof createEventDispatcher<{ change: { files: import('./types').File[] } }>>} */
-	const dispatch = createEventDispatcher();
+	const dispatch: ReturnType<
+		typeof createEventDispatcher<{ change: { files: import('./types').File[] } }>
+	> = createEventDispatcher();
 
-	/**
-	 * @typedef {import('./types').ReplContext} ReplContext
-	 */
-
-	/** @type {import('svelte/compiler').CompileOptions} */
-	const DEFAULT_COMPILE_OPTIONS = {
+	const DEFAULT_COMPILE_OPTIONS: CompileOptions = {
 		generate: 'client',
 		dev: false
 	};
 
-	/** @type {Map<string, import('@codemirror/state').EditorState>} */
-	const EDITOR_STATE_MAP = new Map();
+	const EDITOR_STATE_MAP: Map<string, EditorState> = new Map();
+	const files: ReplContext['files'] = writable([]);
+	const selected_name: ReplContext['selected_name'] = writable('App.svelte');
+	const selected: ReplContext['selected'] = derived(
+		[files, selected_name],
+		([$files, $selected_name]) => {
+			return (
+				$files.find((val) => get_full_filename(val) === $selected_name) ?? {
+					name: '',
+					type: '',
+					source: '',
+					modified: false
+				}
+			);
+		}
+	);
 
-	/** @type {ReplContext['files']} */
-	const files = writable([]);
-
-	/** @type {ReplContext['selected_name']} */
-	const selected_name = writable('App.svelte');
-
-	/** @type {ReplContext['selected']} */
-	const selected = derived([files, selected_name], ([$files, $selected_name]) => {
-		return (
-			$files.find((val) => get_full_filename(val) === $selected_name) ?? {
-				name: '',
-				type: '',
-				source: '',
-				modified: false
-			}
-		);
-	});
-
-	/** @type {ReplContext['bundle']} */
-	const bundle = writable(null);
-
-	/** @type {ReplContext['compile_options']} */
-	const compile_options = writable(DEFAULT_COMPILE_OPTIONS);
-
-	/** @type {ReplContext['cursor_pos']} */
-	const cursor_pos = writable(0);
-
-	/** @type {ReplContext['module_editor']} */
-	const module_editor = writable(null);
-
-	/** @type {ReplContext['toggleable']} */
-	const toggleable = writable(false);
-
-	/** @type {ReplContext['bundler']} */
-	const bundler = writable(null);
-
-	/** @type {ReplContext['bundling']} */
-	const bundling = writable(new Promise(() => {}));
+	const bundle: ReplContext['bundle'] = writable(null);
+	const compile_options: ReplContext['compile_options'] = writable(DEFAULT_COMPILE_OPTIONS);
+	const cursor_pos: ReplContext['cursor_pos'] = writable(0);
+	const module_editor: ReplContext['module_editor'] = writable(null);
+	const toggleable: ReplContext['toggleable'] = writable(false);
+	const bundler: ReplContext['bundler'] = writable(null);
+	const bundling: ReplContext['bundling'] = writable(new Promise(() => {}));
 
 	set_repl_context({
 		files,
@@ -145,8 +121,7 @@
 		handle_select
 	});
 
-	/** @type {Symbol}  */
-	let current_token;
+	let current_token: Symbol;
 	async function rebundle() {
 		const token = (current_token = Symbol());
 		let resolver = () => {};
@@ -181,10 +156,7 @@
 
 	let is_select_changing = false;
 
-	/**
-	 * @param {string} filename
-	 */
-	async function handle_select(filename) {
+	async function handle_select(filename: string) {
 		is_select_changing = true;
 
 		$selected_name = filename;
@@ -202,10 +174,7 @@
 		is_select_changing = false;
 	}
 
-	/**
-	 * @param {CustomEvent<{ value: string }>} event
-	 */
-	async function handle_change(event) {
+	async function handle_change(event: CustomEvent<{ value: string }>) {
 		if (is_select_changing) return;
 
 		files.update(($files) => {
@@ -233,8 +202,7 @@
 		rebundle();
 	}
 
-	/** @param {import('./types').MessageDetails | undefined} item */
-	async function go_to_warning_pos(item) {
+	async function go_to_warning_pos(item: MessageDetails | undefined) {
 		if (!item) return;
 
 		// If its a bundler error, can't do anything about it
@@ -266,14 +234,9 @@
 
 	const compiler = BROWSER ? new Compiler(svelteUrl) : null;
 
-	/** @type {import('./workers/workers').CompilerOutput | null} */
-	let compiled = null;
+	let compiled: CompilerOutput | null = null;
 
-	/**
-	 * @param {import('./types').File | null} $selected
-	 * @param {import('svelte/compiler').CompileOptions} $compile_options
-	 */
-	async function recompile($selected, $compile_options) {
+	async function recompile($selected: File | null, $compile_options: CompileOptions) {
 		if (!compiler || !$selected) return;
 
 		if ($selected.type === 'svelte' || $selected.type === 'js') {
@@ -292,13 +255,9 @@
 
 	let width = 0;
 	let show_output = false;
-
-	/** @type {string | null} */
-	let status = null;
+	let status: string | null = null;
 	let status_visible = false;
-
-	/** @type {NodeJS.Timeout | undefined} */
-	let status_timeout = undefined;
+	let status_timeout: NodeJS.Timeout | undefined = undefined;
 
 	$bundler = BROWSER
 		? new Bundler({
@@ -324,10 +283,7 @@
 			})
 		: null;
 
-	/**
-	 * @param {BeforeUnloadEvent} event
-	 */
-	function before_unload(event) {
+	function before_unload(event: BeforeUnloadEvent) {
 		if (showModified && $files.find((file) => file.modified)) {
 			event.preventDefault();
 			event.returnValue = '';

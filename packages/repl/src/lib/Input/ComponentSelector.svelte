@@ -1,21 +1,20 @@
-<script>
+<script lang="ts">
 	import { get_repl_context } from '$lib/context.js';
 	import { get_full_filename } from '$lib/utils.js';
 	import { createEventDispatcher, tick } from 'svelte';
 	import RunesInfo from './RunesInfo.svelte';
 	import Migrate from './Migrate.svelte';
+	import type { File } from '$lib/types';
 
-	/** @type {boolean}  */
-	export let show_modified;
+	export let show_modified: boolean;
+	export let runes: boolean;
 
-	/** @type {boolean} */
-	export let runes;
-
-	/** @type {ReturnType<typeof createEventDispatcher<{
-	 * remove: { files: import('$lib/types').File[]; diff: import('$lib/types').File },
-	 * add: { files: import('$lib/types').File[]; diff: import('$lib/types').File },
-	 * }>>} */
-	const dispatch = createEventDispatcher();
+	const dispatch: ReturnType<
+		typeof createEventDispatcher<{
+			remove: { files: import('$lib/types').File[]; diff: import('$lib/types').File };
+			add: { files: import('$lib/types').File[]; diff: import('$lib/types').File };
+		}>
+	> = createEventDispatcher();
 
 	const {
 		files,
@@ -27,21 +26,17 @@
 		EDITOR_STATE_MAP
 	} = get_repl_context();
 
-	/** @type {string | null} */
-	let editing_name = null;
-
+	let editing_name: string | null = null;
 	let input_value = '';
 
-	/** @param {string} filename */
-	function select_file(filename) {
+	function select_file(filename: string) {
 		if ($selected_name !== filename) {
 			editing_name = null;
 			handle_select(filename);
 		}
 	}
 
-	/** @param {import('$lib/types').File} file */
-	function edit_tab(file) {
+	function edit_tab(file: File) {
 		if ($selected_name === get_full_filename(file)) {
 			editing_name = get_full_filename(file);
 			input_value = file.name;
@@ -110,10 +105,7 @@
 		rebundle();
 	}
 
-	/**
-	 * @param {string} filename
-	 */
-	function remove(filename) {
+	function remove(filename: string) {
 		const file = $files.find((val) => get_full_filename(val) === filename);
 		const idx = $files.findIndex((val) => get_full_filename(val) === filename);
 
@@ -133,8 +125,7 @@
 		handle_select($selected_name);
 	}
 
-	/** @param {FocusEvent & { currentTarget: HTMLInputElement }} event */
-	async function select_input(event) {
+	async function select_input(event: FocusEvent & { currentTarget: HTMLInputElement }) {
 		await tick();
 
 		event.currentTarget.select();
@@ -165,22 +156,17 @@
 		$files = $files;
 	}
 
-	/** @param {import('$lib/types').File} editing */
-	function is_file_name_used(editing) {
+	function is_file_name_used(editing: File) {
 		return $files.find(
 			(file) => JSON.stringify(file) !== JSON.stringify($selected) && file.name === editing.name
 		);
 	}
 
 	// drag and drop
-	/** @type {string | null} */
-	let from = null;
+	let from: string | null = null;
+	let over: string | null = null;
 
-	/** @type {string | null} */
-	let over = null;
-
-	/** @param {DragEvent & { currentTarget: HTMLDivElement }} event */
-	function dragStart(event) {
+	function dragStart(event: DragEvent & { currentTarget: HTMLDivElement }) {
 		from = event.currentTarget.id;
 	}
 
@@ -188,8 +174,7 @@
 		over = null;
 	}
 
-	/** @param {DragEvent & { currentTarget: HTMLDivElement }} event */
-	function dragOver(event) {
+	function dragOver(event: DragEvent & { currentTarget: HTMLDivElement }) {
 		over = event.currentTarget.id;
 	}
 
