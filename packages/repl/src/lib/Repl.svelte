@@ -12,7 +12,7 @@
 	import { set_repl_context } from './context.js';
 	import { get_full_filename } from './utils.js';
 	import Compiler from './Output/Compiler.js';
-	import type { File, MessageDetails, ReplContext } from './types.js';
+	import type { Bundle, File, MessageDetails, ReplContext } from './types.js';
 	import type { CompileOptions } from 'svelte/compiler';
 	import type { CompilerOutput } from './workers/workers.js';
 
@@ -129,7 +129,7 @@
 			resolver = resolve;
 		});
 		const result = await $bundler?.bundle($files);
-		if (result && token === current_token) $bundle = result;
+		if (result && token === current_token) $bundle = result as Bundle;
 		resolver();
 	}
 
