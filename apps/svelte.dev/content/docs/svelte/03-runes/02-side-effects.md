@@ -173,7 +173,7 @@ You might be tempted to do something convoluted with effects to link one value t
 
 <label>
 	<input type="range" bind:value={left} max={total} />
-	{left.value}/{total} left
+	{left}/{total} left
 </label>
 ```
 
@@ -310,7 +310,7 @@ import { tick } from 'svelte';
 
 export default function readable<T>(
 	initial_value: T,
-	start: (callback: (value: T) => void) => () => void
+	start: (callback: (update: (v: T) => T) => T) => () => void
 ) {
 	let value = $state(initial_value);
 
