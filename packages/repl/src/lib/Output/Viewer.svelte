@@ -13,26 +13,37 @@
 	import type { Bundle, MessageDetails } from '$lib/types';
 	import type { Log } from './console/console';
 
-	export let error: MessageDetails | null;
-	export let status: string | null;
-	export let relaxed = false;
-	export let injectedJS = '';
-	export let injectedCSS = '';
-	export let theme: 'light' | 'dark';
+	interface Props {
+		error: MessageDetails | null;
+		status: string | null;
+		relaxed?: boolean;
+		injectedJS?: string;
+		injectedCSS?: string;
+		theme: 'light' | 'dark';
+	}
+
+	let {
+		error = $bindable(),
+		status,
+		relaxed = false,
+		injectedJS = '',
+		injectedCSS = '',
+		theme
+	}: Props = $props();
 
 	const { bundle } = get_repl_context();
 
-	let logs: Log[] = [];
+	let logs: Log[] = $state([]);
 	let log_group_stack: Log[][] = [];
 	let current_log_group = logs;
 
-	let iframe: HTMLIFrameElement;
-	let pending_imports = 0;
+	let iframe: HTMLIFrameElement = $state();
+	let pending_imports = $state(0);
 	let pending = false;
 
-	let proxy: ReplProxy | null = null;
-	let ready = false;
-	let inited = false;
+	let proxy: ReplProxy | null = $state(null);
+	let ready = $state(false);
+	let inited = $state(false);
 
 	let log_height = 90;
 	let prev_height: number;
@@ -87,7 +98,9 @@
 		};
 	});
 
-	$: if (ready) proxy?.iframe_command('set_theme', { theme });
+	$effect(() => {
+		if (ready) proxy?.iframe_command('set_theme', { theme });
+	});
 
 	async function apply_bundle($bundle: Bundle | null) {
 		if (!$bundle) return;
@@ -158,15 +171,18 @@
 		inited = true;
 	}
 
-	$: if (ready) apply_bundle($bundle);
+	$effect(() => {
+		if (ready) apply_bundle($bundle);
+	});
 
-	$: styles =
+	let styles = $derived(
 		injectedCSS &&
-		`{
+			`{
 		const style = document.createElement('style');
 		style.textContent = ${JSON.stringify(injectedCSS)};
 		document.head.appendChild(style);
-	}`;
+	}`
+	);
 
 	function show_error(e: CompileError & { loc: { line: number; column: number } }) {
 		const map = $bundle?.client?.map;
@@ -254,7 +270,13 @@
 		</div>
 
 		<div slot="panel-header">
-			<button on:click|stopPropagation={clear_logs}>
+			<button
+				onclick={(event) => {
+					event.stopPropagation();
+
+					clear_logs?.();
+				}}
+			>
 				{#if logs.length > 0}
 					({logs.length})
 				{/if}
