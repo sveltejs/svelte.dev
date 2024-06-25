@@ -66,7 +66,6 @@
 
 <style>
 	.editor-wrapper {
-		z-index: 5;
 		background: var(--sk-back-3);
 		display: flex;
 		flex-direction: column;

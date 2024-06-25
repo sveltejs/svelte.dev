@@ -127,7 +127,6 @@
 	}
 	.repl-outer :global(.tab-content.visible) {
 		visibility: visible;
-		z-index: 1;
 	}
 
 	.zen-mode {
