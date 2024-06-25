@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { get_repl_context } from '$lib/context.js';
+	import { get_repl_context } from '../context';
 	import Checkbox from '../Checkbox.svelte';
 
 	const { compile_options } = get_repl_context();

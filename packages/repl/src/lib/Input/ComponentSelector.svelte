@@ -1,18 +1,18 @@
 <script lang="ts">
-	import { get_repl_context } from '$lib/context.js';
-	import { get_full_filename } from '$lib/utils.js';
+	import { get_repl_context } from '../context';
+	import { get_full_filename } from '../utils';
 	import { createEventDispatcher, tick } from 'svelte';
 	import RunesInfo from './RunesInfo.svelte';
 	import Migrate from './Migrate.svelte';
-	import type { File } from '$lib/types';
+	import type { File } from '../types';
 
 	export let show_modified: boolean;
 	export let runes: boolean;
 
 	const dispatch: ReturnType<
 		typeof createEventDispatcher<{
-			remove: { files: import('$lib/types').File[]; diff: import('$lib/types').File };
-			add: { files: import('$lib/types').File[]; diff: import('$lib/types').File };
+			remove: { files: File[]; diff: File };
+			add: { files: File[]; diff: File };
 		}>
 	> = createEventDispatcher();
 

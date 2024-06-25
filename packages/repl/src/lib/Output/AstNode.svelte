@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { get_repl_context } from '$lib/context.js';
+	import { get_repl_context } from '../context';
 	import { tick } from 'svelte';
 	import type { CompileResult } from 'svelte/compiler';
 

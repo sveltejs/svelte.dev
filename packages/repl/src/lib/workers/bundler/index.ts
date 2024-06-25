@@ -1,16 +1,16 @@
-import '../patch_window.js';
-import { sleep } from '$lib/utils';
+import '../patch_window';
+import { sleep } from '../../utils';
 import { rollup } from '@rollup/browser';
 import { DEV } from 'esm-env';
 import * as resolve from 'resolve.exports';
-import commonjs from './plugins/commonjs.js';
-import glsl from './plugins/glsl.js';
-import json from './plugins/json.js';
-import replace from './plugins/replace.js';
-import loop_protect from './plugins/loop-protect.js';
+import commonjs from './plugins/commonjs';
+import glsl from './plugins/glsl';
+import json from './plugins/json';
+import replace from './plugins/replace';
+import loop_protect from './plugins/loop-protect';
 import type { Plugin, TransformResult } from '@rollup/browser';
-import type { BundleMessageData } from '../workers.js';
-import type { File, Warning } from '$lib/types.js';
+import type { BundleMessageData } from '../workers';
+import type { File, Warning } from '../../types';
 import type { CompileResult } from 'svelte/compiler';
 
 let packages_url: string;
@@ -435,7 +435,7 @@ async function bundle({ uid, files }: { uid: number; files: File[] }) {
 		console.log(`running Svelte compiler version %c${svelte.VERSION}`, 'font-weight: bold');
 	}
 
-	const lookup: Map<string, import('$lib/types').File> = new Map();
+	const lookup: Map<string, File> = new Map();
 
 	lookup.set('./__entry.js', {
 		name: '__entry',

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { get_repl_context } from '$lib/context.js';
+	import { get_repl_context } from '../context';
 
 	const { migrate } = get_repl_context();
 </script>

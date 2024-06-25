@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { get_repl_context } from '$lib/context.js';
+	import { get_repl_context } from '../context';
 	import { BROWSER } from 'esm-env';
 	import { onMount } from 'svelte';
 	import Message from '../Message.svelte';
@@ -10,7 +10,7 @@
 	import srcdoc from './srcdoc/index.html?raw';
 	import ErrorOverlay from './ErrorOverlay.svelte';
 	import type { CompileError } from 'svelte/compiler';
-	import type { Bundle, MessageDetails } from '$lib/types';
+	import type { Bundle, MessageDetails } from '../types';
 	import type { Log } from './console/console';
 
 	export let error: MessageDetails | null;

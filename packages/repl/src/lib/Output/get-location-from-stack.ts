@@ -1,5 +1,5 @@
-import type { StartOrEnd } from '$lib/types';
 import { decode, type SourceMapMappings } from '@jridgewell/sourcemap-codec';
+import type { StartOrEnd } from '../types';
 
 export default function getLocationFromStack(stack: string, map: SourceMapMappings) {
 	if (!stack) return;

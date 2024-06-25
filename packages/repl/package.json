@@ -5,8 +5,8 @@
 		"dev": "vite dev",
 		"build": "vite build && npm run package",
 		"preview": "vite preview",
-		"package": "svelte-kit sync && svelte-package && publint",
-		"package:watch": "svelte-kit sync && svelte-package --watch",
+		"package": "echo \"package script has been disabled\"",
+		"package:watch": "echo \"package:watch script has been disabled\"",
 		"prepublishOnly": "npm run package",
 		"check": "svelte-kit sync && svelte-check",
 		"lint": "prettier --check .",
@@ -24,13 +24,11 @@
 	"homepage": "https://github.com/sveltejs/svelte.dev/tree/main/packages/repl/#readme",
 	"exports": {
 		".": {
-			"types": "./dist/Repl.svelte.d.ts",
-			"svelte": "./dist/Repl.svelte"
+			"svelte": "./src/lib/Repl.svelte"
 		},
 		"./theme": {
-			"types": "./dist/theme.d.ts",
-			"svelte": "./dist/theme.js",
-			"default": "./dist/theme.js"
+			"svelte": "./src/lib/theme.ts",
+			"default": "./src/lib/theme.ts"
 		}
 	},
 	"files": [

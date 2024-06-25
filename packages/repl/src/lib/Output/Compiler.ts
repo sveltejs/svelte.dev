@@ -1,7 +1,7 @@
-import type { File } from '$lib/types';
+import type { File } from '../types';
 import type { CompileOptions } from 'svelte/compiler';
 import Worker from '../workers/compiler/index.js?worker';
-import type { CompilerOutput, MigrateOutput } from '$lib/workers/workers';
+import type { CompilerOutput, MigrateOutput } from '../workers/workers';
 
 const workers = new Map();
 

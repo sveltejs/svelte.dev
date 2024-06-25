@@ -11,10 +11,10 @@
 	import { javascriptLanguage } from '@codemirror/lang-javascript';
 	import { createEventDispatcher, tick } from 'svelte';
 	import { writable } from 'svelte/store';
-	import { get_repl_context } from '$lib/context.js';
+	import { get_repl_context } from './context';
 	import Message from './Message.svelte';
-	import { svelteTheme } from './theme.js';
-	import { autocomplete } from './autocomplete.js';
+	import { svelteTheme } from './theme';
+	import { autocomplete } from './autocomplete';
 	import type { LintSource } from '@codemirror/lint';
 	import type { Extension } from '@codemirror/state';
 	import { CompletionContext } from '@codemirror/autocomplete';
