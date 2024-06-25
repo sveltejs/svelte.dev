@@ -3,9 +3,13 @@
 	import CodeMirror from '../CodeMirror.svelte';
 	import type { CompileError, Warning } from 'svelte/compiler';
 
-	export let error: CompileError;
-	export let warnings: Warning[];
-	export let vim: boolean;
+	interface Props {
+		error: CompileError;
+		warnings: Warning[];
+		vim: boolean;
+	}
+
+	let { error, warnings, vim }: Props = $props();
 
 	export function focus() {
 		$module_editor?.focus();

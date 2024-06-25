@@ -3,6 +3,8 @@
 </script>
 
 <script lang="ts">
+	import { run } from 'svelte/legacy';
+
 	import { historyField } from '@codemirror/commands';
 	import { EditorState, Range, StateEffect, StateEffectType, StateField } from '@codemirror/state';
 	import { Decoration, EditorView } from '@codemirror/view';
@@ -20,17 +22,21 @@
 	import { CompletionContext } from '@codemirror/autocomplete';
 	import type { Lang } from './types';
 
-	export let diagnostics: LintSource | undefined = undefined;
-	export let readonly = false;
-	export let tab = true;
-	export let vim = false;
+	interface Props {
+		diagnostics?: LintSource | undefined;
+		readonly?: boolean;
+		tab?: boolean;
+		vim?: boolean;
+	}
+
+	let { diagnostics = undefined, readonly = false, tab = true, vim = false }: Props = $props();
 
 	const dispatch: ReturnType<typeof createEventDispatcher<{ change: { value: string } }>> =
 		createEventDispatcher();
 
-	let code = '';
+	let code = $state('');
 
-	let lang: Lang = 'svelte';
+	let lang: Lang = $state('svelte');
 
 	export async function set(options: { code: string; lang: Lang }) {
 		update(options);
@@ -155,11 +161,11 @@
 	let w: number;
 	let h: number;
 
-	let marked = false;
+	let marked = $state(false);
 
 	let updating_externally = false;
 
-	let extensions: Extension[] = [];
+	let extensions: Extension[] = $state([]);
 
 	/**
 	 * update the extension if and when vim changes
@@ -181,22 +187,30 @@
 		return extensions;
 	}
 
-	$: getExtensions(vim).then((ext) => {
-		extensions = ext;
+	run(() => {
+		getExtensions(vim).then((ext) => {
+			extensions = ext;
+		});
 	});
 
-	let cursor_pos = 0;
+	let cursor_pos = $state(0);
 
-	$: if ($cmInstance.view) {
-		fulfil_module_editor_ready();
-	}
+	run(() => {
+		if ($cmInstance.view) {
+			fulfil_module_editor_ready();
+		}
+	});
 
-	$: if ($cmInstance.view && w && h) resize();
+	run(() => {
+		if ($cmInstance.view && w && h) resize();
+	});
 
-	$: if (marked) {
-		unmarkText();
-		marked = false;
-	}
+	run(() => {
+		if (marked) {
+			unmarkText();
+			marked = false;
+		}
+	});
 
 	const watcher = EditorView.updateListener.of((viewUpdate) => {
 		if (viewUpdate.selectionSet) {
@@ -239,7 +253,7 @@
 		extensions: [svelte_rune_completions, js_rune_completions, watcher],
 		instanceStore: cmInstance
 	}}
-	on:codemirror:textChange={({ detail: value }) => {
+	oncodemirror:textChange={({ detail: value }) => {
 		code = value;
 		dispatch('change', { value: code });
 	}}

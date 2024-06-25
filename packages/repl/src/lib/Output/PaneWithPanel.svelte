@@ -1,15 +1,24 @@
 <script lang="ts">
 	import { spring } from 'svelte/motion';
 	import { SplitPane } from '@rich_harris/svelte-split-pane';
-	import type { ComponentProps } from 'svelte';
+	import type { ComponentProps, Snippet } from 'svelte';
 
 	const UNIT_REGEX = /(\d+)(?:(px|rem|%|em))/i;
 
-	export let panel: string;
+	interface Props {
+		panel: string;
+		pos?: Exclude<ComponentProps<SplitPane>['pos'], undefined>;
+		main?: Snippet;
+		panel_header?: Snippet;
+		panel_body?: Snippet;
+	}
 
-	export let pos: Exclude<ComponentProps<SplitPane>['pos'], undefined> = '90%';
+	let { panel, pos = $bindable('90%'), main, panel_header, panel_body }: Props = $props();
 
-	$: previous_pos = Math.min(+pos.replace(UNIT_REGEX, '$1'), 70);
+	let previous_pos;
+	$effect(() => {
+		previous_pos = Math.min(+pos.replace(UNIT_REGEX, '$1'), 70);
+	});
 
 	let max: Exclude<ComponentProps<SplitPane>['max'], undefined> = '90%';
 
@@ -20,8 +29,9 @@
 		damping: 0.5
 	});
 
-	// @ts-ignore
-	$: pos = $driver + '%';
+	$effect(() => {
+		pos = $driver + '%';
+	});
 
 	const toggle = () => {
 		const numeric_pos = +pos.replace(UNIT_REGEX, '$1');
@@ -39,17 +49,17 @@
 
 <SplitPane {max} min="10%" type="vertical" bind:pos priority="max">
 	<section slot="a">
-		<slot name="main" />
+		{@render main?.()}
 	</section>
 
 	<section slot="b">
 		<div class="panel-header">
-			<button class="panel-heading" on:click={toggle}>{panel}</button>
-			<slot name="panel-header" />
+			<button class="panel-heading" onclick={toggle}>{panel}</button>
+			{@render panel_header?.()}
 		</div>
 
 		<div class="panel-body">
-			<slot name="panel-body" />
+			{@render panel_body?.()}
 		</div>
 	</section>
 </SplitPane>

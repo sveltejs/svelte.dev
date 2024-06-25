@@ -6,14 +6,20 @@
 
 	type Ast = CompileResult['ast'];
 
-	export let ast: Ast;
-	export let autoscroll = true;
+	interface Props {
+		ast: Ast;
+		autoscroll?: boolean;
+	}
+
+	let { ast, autoscroll = true }: Props = $props();
 
 	// $cursor_index may go over the max since ast computation is usually slower.
 	// clamping this helps prevent the collapse view flashing
-	$: max_cursor_index = !ast ? $cursorIndex : Math.min($cursorIndex, get_ast_max_end(ast));
+	let max_cursor_index = $derived(
+		!ast ? $cursorIndex : Math.min($cursorIndex, get_ast_max_end(ast))
+	);
 
-	$: path_nodes = find_deepest_path(max_cursor_index, [ast]) || [];
+	let path_nodes = $derived(find_deepest_path(max_cursor_index, [ast]) || []);
 
 	function find_deepest_path(cursor: number, paths: Ast[]): Ast[] | undefined {
 		const value = paths[paths.length - 1];
