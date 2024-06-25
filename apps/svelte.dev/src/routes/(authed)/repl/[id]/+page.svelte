@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
 	import { afterNavigate, goto, replaceState } from '$app/navigation';
-	import Repl from '@sveltejs/repl';
+	import { Repl } from '@sveltejs/repl';
 	import { theme } from '@sveltejs/site-kit/stores';
 	import { onMount } from 'svelte';
 	import { mapbox_setup } from '../../../../config.js';

@@ -207,11 +207,11 @@
 	const { files, selected } = get_repl_context();
 
 	const svelte_rune_completions = svelteLanguage.data.of({
-		autocomplete: (context: CompletionContext) => autocomplete(context, $selected, $files)
+		autocomplete: (context: CompletionContext) => autocomplete(context, $selected!, $files)
 	});
 
 	const js_rune_completions = javascriptLanguage.data.of({
-		autocomplete: (context: CompletionContext) => autocomplete(context, $selected, $files)
+		autocomplete: (context: CompletionContext) => autocomplete(context, $selected!, $files)
 	});
 </script>
 

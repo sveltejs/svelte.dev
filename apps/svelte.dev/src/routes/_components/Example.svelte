@@ -1,12 +1,12 @@
 <script>
 	import IntersectionObserver from '$lib/components/IntersectionObserver.svelte';
 	import { process_example } from '$lib/utils/examples';
-	import Repl from '@sveltejs/repl';
+	import { Repl } from '@sveltejs/repl';
 	import { theme } from '@sveltejs/site-kit/stores';
 
 	export let id;
 
-	/** @type {import('@sveltejs/repl').default} */
+	/** @type {Repl} */
 	let repl;
 
 	$: {

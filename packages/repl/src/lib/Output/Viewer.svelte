@@ -10,10 +10,10 @@
 	import srcdoc from './srcdoc/index.html?raw';
 	import ErrorOverlay from './ErrorOverlay.svelte';
 	import type { CompileError } from 'svelte/compiler';
-	import type { Bundle, MessageDetails } from '../types';
+	import type { Bundle } from '../types';
 	import type { Log } from './console/console';
 
-	export let error: MessageDetails | null;
+	export let error: Error | null;
 	export let status: string | null;
 	export let relaxed = false;
 	export let injectedJS = '';

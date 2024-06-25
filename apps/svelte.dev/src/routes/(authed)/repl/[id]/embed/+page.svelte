@@ -2,7 +2,7 @@
 	import { browser } from '$app/environment';
 	import { afterNavigate } from '$app/navigation';
 	import { theme } from '@sveltejs/site-kit/stores';
-	import Repl from '@sveltejs/repl';
+	import { Repl } from '@sveltejs/repl';
 	import { mapbox_setup } from '../../../../../config.js';
 	import { onMount } from 'svelte';
 

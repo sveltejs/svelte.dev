@@ -10,7 +10,7 @@
 	import type { CompilerOutput } from '../workers/workers';
 
 	export let status: string | null;
-	export let runtimeError: MessageDetails | null = null;
+	export let runtimeError: Error | null = null;
 	export let embedded = false;
 	export let relaxed = false;
 	export let injectedJS: string;

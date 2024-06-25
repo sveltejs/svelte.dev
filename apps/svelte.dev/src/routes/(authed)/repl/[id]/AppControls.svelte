@@ -6,9 +6,10 @@
 	import downloadBlob from './downloadBlob.js';
 	import { enter } from '$lib/utils/events';
 	import { isMac } from '$lib/utils/compat.js';
-	import Repl from '@sveltejs/repl';
+	import { Repl } from '@sveltejs/repl';
 	import { get_app_context } from '../../app-context';
 	import type { Gist, User } from '$lib/db/types';
+	import type { File } from '@sveltejs/repl';
 
 	interface Props {
 		user: User | null;
@@ -52,7 +53,7 @@
 	async function fork(intentWasSave: boolean) {
 		saving = true;
 
-		const { files } = repl.toJSON();
+		const { files } = repl.toJSON() as { files: File[] };
 
 		try {
 			const r = await fetch(`/repl/create.json`, {
@@ -118,7 +119,7 @@
 		try {
 			// Send all files back to API
 			// ~> Any missing files are considered deleted!
-			const { files } = repl.toJSON();
+			const { files } = repl.toJSON() as { files: File[] };
 
 			const r = await fetch(`/repl/save/${gist.id}.json`, {
 				method: 'PUT',
@@ -159,7 +160,10 @@
 	async function download() {
 		downloading = true;
 
-		const { files: components, imports } = repl.toJSON();
+		const { files: components, imports } = repl.toJSON() as {
+			files: any[];
+			imports: string[];
+		};
 
 		const files = (await (await fetch('/svelte-app.json')).json()) as Array<{
 			path: string;

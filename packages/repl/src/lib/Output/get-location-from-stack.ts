@@ -1,7 +1,8 @@
-import { decode, type SourceMapMappings } from '@jridgewell/sourcemap-codec';
+import { decode } from '@jridgewell/sourcemap-codec';
 import type { StartOrEnd } from '../types';
+import type { SourceMap } from '@rollup/browser';
 
-export default function getLocationFromStack(stack: string, map: SourceMapMappings) {
+export default function getLocationFromStack(stack: string, map: SourceMap) {
 	if (!stack) return;
 	const last = stack.split('\n')[1];
 	const match = /<anonymous>:(\d+):(\d+)\)$/.exec(last);
@@ -14,7 +15,7 @@ export default function getLocationFromStack(stack: string, map: SourceMapMappin
 	return trace({ line, column }, map);
 }
 
-function trace(loc: Omit<StartOrEnd, 'character'>, map) {
+function trace(loc: Omit<StartOrEnd, 'character'>, map: SourceMap) {
 	const mappings = decode(map.mappings);
 	const segments = mappings[loc.line - 1];
 

@@ -4,7 +4,7 @@
 	import type { MessageDetails } from './types.js';
 
 	export let kind: 'info' | 'warning' | 'error' = 'info';
-	export let details: MessageDetails | undefined = undefined;
+	export let details: any | undefined = undefined;
 	export let filename: string | undefined = undefined;
 	export let truncate = false;
 

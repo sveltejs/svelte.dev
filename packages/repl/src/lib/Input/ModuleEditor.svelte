@@ -3,7 +3,7 @@
 	import CodeMirror from '../CodeMirror.svelte';
 	import type { CompileError, Warning } from 'svelte/compiler';
 
-	export let error: CompileError;
+	export let error: CompileError | undefined;
 	export let warnings: Warning[];
 	export let vim: boolean;
 
@@ -23,8 +23,8 @@
 					return [
 						{
 							severity: 'error',
-							from: error.position[0],
-							to: error.position[1],
+							from: error.position![0],
+							to: error.position![1],
 							message: error.message,
 							renderMessage: () => {
 								// TODO expose error codes, so we can link to docs in future
@@ -42,8 +42,8 @@
 				if (warnings) {
 					return warnings.map((warning) => ({
 						severity: 'warning',
-						from: warning.start.character,
-						to: warning.end.character,
+						from: warning.start!.character,
+						to: warning.end!.character,
 						message: warning.message,
 						renderMessage: () => {
 							const span = document.createElement('span');
