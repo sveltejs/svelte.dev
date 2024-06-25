@@ -122,6 +122,10 @@ Sometimes you might need to compare two values, one of which is a reactive `$sta
 
 This is handy when you might want to check if the object exists within a deeply reactive object/array.
 
+Under the hood, `$state.is` uses [`Object.is`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is) for comparing the values.
+
+> Use this as an escape hatch - most of the time you don't need this. Svelte will warn you at dev time if you happen to run into this problem
+
 ## `$derived`
 
 Derived state is declared with the `$derived` rune:
