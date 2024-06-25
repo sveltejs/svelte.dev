@@ -3,10 +3,21 @@
 	import { get_repl_context } from './context.js';
 	import type { MessageDetails } from './types.js';
 
-	export let kind: 'info' | 'warning' | 'error' = 'info';
-	export let details: MessageDetails | undefined = undefined;
-	export let filename: string | undefined = undefined;
-	export let truncate = false;
+	interface Props {
+		kind?: 'info' | 'warning' | 'error';
+		details?: MessageDetails | undefined;
+		filename?: string | undefined;
+		truncate?: boolean;
+		children?: import('svelte').Snippet;
+	}
+
+	let {
+		kind = 'info',
+		details = undefined,
+		filename = undefined,
+		truncate = false,
+		children
+	}: Props = $props();
 
 	const { go_to_warning_pos } = get_repl_context();
 
@@ -27,13 +38,13 @@
 	{#if details}
 		<button
 			class:navigable={details.filename}
-			on:click={() => go_to_warning_pos(details)}
-			on:keyup={(e) => e.key === ' ' && go_to_warning_pos(details)}
+			onclick={() => go_to_warning_pos(details)}
+			onkeyup={(e) => e.key === ' ' && go_to_warning_pos(details)}
 		>
 			{message(details)}
 		</button>
 	{:else}
-		<slot />
+		{@render children?.()}
 	{/if}
 </div>
 
