@@ -3,7 +3,7 @@
 	import { SplitPane } from '@rich_harris/svelte-split-pane';
 	import { BROWSER } from 'esm-env';
 	import { createEventDispatcher } from 'svelte';
-	import { derived, writable } from 'svelte/store';
+	import { derived as derived_store, writable } from 'svelte/store';
 	import Bundler from './Bundler.js';
 	import ComponentSelector from './Input/ComponentSelector.svelte';
 	import ModuleEditor from './Input/ModuleEditor.svelte';
@@ -16,21 +16,39 @@
 	import type { CompileOptions } from 'svelte/compiler';
 	import type { CompilerOutput } from './workers/workers.js';
 
-	export let packagesUrl = 'https://unpkg.com';
-	export let svelteUrl = `${BROWSER ? location.origin : ''}/svelte`;
-	export let embedded = false;
-	export let orientation: 'columns' | 'rows' = 'columns';
-	export let relaxed = false;
-	export let fixed = false;
-	export let fixedPos = 50;
-	export let injectedJS = '';
-	export let injectedCSS = '';
-	export let previewTheme: 'light' | 'dark' = 'light';
-	export let showModified = false;
-	export let showAst = false;
-	export let vim: boolean;
+	interface Props {
+		packagesUrl?: string;
+		svelteUrl?: any;
+		embedded?: boolean;
+		orientation?: 'columns' | 'rows';
+		relaxed?: boolean;
+		fixed?: boolean;
+		fixedPos?: number;
+		injectedJS?: string;
+		injectedCSS?: string;
+		previewTheme?: 'light' | 'dark';
+		showModified?: boolean;
+		showAst?: boolean;
+		vim: boolean;
+	}
 
-	let runes = false;
+	let {
+		packagesUrl = 'https://unpkg.com',
+		svelteUrl = `${BROWSER ? location.origin : ''}/svelte`,
+		embedded = false,
+		orientation = 'columns',
+		relaxed = false,
+		fixed = false,
+		fixedPos = 50,
+		injectedJS = '',
+		injectedCSS = $bindable(''),
+		previewTheme = 'light',
+		showModified = false,
+		showAst = false,
+		vim
+	}: Props = $props();
+
+	let runes = $state(false);
 
 	export function toJSON() {
 		return {
@@ -77,7 +95,7 @@
 	const EDITOR_STATE_MAP: Map<string, EditorState> = new Map();
 	const files: ReplContext['files'] = writable([]);
 	const selected_name: ReplContext['selected_name'] = writable('App.svelte');
-	const selected: ReplContext['selected'] = derived(
+	const selected: ReplContext['selected'] = derived_store(
 		[files, selected_name],
 		([$files, $selected_name]) => {
 			return (
@@ -234,7 +252,7 @@
 
 	const compiler = BROWSER ? new Compiler(svelteUrl) : null;
 
-	let compiled: CompilerOutput | null = null;
+	let compiled: CompilerOutput | null = $state(null);
 
 	async function recompile($selected: File | null, $compile_options: CompileOptions) {
 		if (!compiler || !$selected) return;
@@ -247,17 +265,21 @@
 		}
 	}
 
-	$: recompile($selected, $compile_options);
-
-	$: mobile = width < 540;
-
-	$: $toggleable = mobile && orientation === 'columns';
-
-	let width = 0;
-	let show_output = false;
-	let status: string | null = null;
-	let status_visible = false;
+	let width = $state(0);
+	let show_output = $state(false);
+	let status: string | null = $state(null);
+	let status_visible = $state(false);
 	let status_timeout: NodeJS.Timeout | undefined = undefined;
+
+	let mobile = $derived(width < 540);
+
+	$effect(() => {
+		recompile($selected, $compile_options);
+	});
+
+	$effect(() => {
+		$toggleable = mobile && orientation === 'columns';
+	});
 
 	$bundler = BROWSER
 		? new Bundler({
@@ -291,7 +313,7 @@
 	}
 </script>
 
-<svelte:window on:beforeunload={before_unload} />
+<svelte:window onbeforeunload={before_unload} />
 
 <div class="container" class:toggleable={$toggleable} bind:clientWidth={width}>
 	<div class="viewport" class:output={show_output}>
