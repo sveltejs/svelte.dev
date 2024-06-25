@@ -9,48 +9,65 @@
 	import type { File, MessageDetails } from '$lib/types';
 	import type { CompilerOutput } from '$lib/workers/workers';
 
-	export let status: string | null;
-	export let runtimeError: MessageDetails | null = null;
-	export let embedded = false;
-	export let relaxed = false;
-	export let injectedJS: string;
-	export let injectedCSS: string;
-	export let showAst = false;
-	export let previewTheme: 'light' | 'dark';
-	export let selected: File | null;
-	export let compiled: CompilerOutput | null;
-
-	$: if (selected && js_editor && css_editor) {
-		if (selected.type === 'json') {
-			js_editor.set({ code: `/* Select a component to see its compiled code */`, lang: 'js' });
-			css_editor.set({ code: `/* Select a component to see its compiled code */`, lang: 'css' });
-		} else if (selected.type === 'md') {
-			markdown = marked(selected.source) as string;
-		} else if (compiled) {
-			js_editor.set({ code: compiled.js, lang: 'js' });
-			css_editor.set({ code: compiled.css, lang: 'css' });
-		}
+	interface Props {
+		status: string | null;
+		runtimeError?: MessageDetails | null;
+		embedded?: boolean;
+		relaxed?: boolean;
+		injectedJS: string;
+		injectedCSS: string;
+		showAst?: boolean;
+		previewTheme: 'light' | 'dark';
+		selected: File | null;
+		compiled: CompilerOutput | null;
 	}
+
+	let {
+		status,
+		runtimeError = $bindable(null),
+		embedded = false,
+		relaxed = false,
+		injectedJS,
+		injectedCSS,
+		showAst = false,
+		previewTheme,
+		selected,
+		compiled
+	}: Props = $props();
+
+	$effect(() => {
+		if (selected && js_editor && css_editor) {
+			if (selected.type === 'json') {
+				js_editor.set({ code: `/* Select a component to see its compiled code */`, lang: 'js' });
+				css_editor.set({ code: `/* Select a component to see its compiled code */`, lang: 'css' });
+			} else if (selected.type === 'md') {
+				markdown = marked(selected.source) as string;
+			} else if (compiled) {
+				js_editor.set({ code: compiled.js, lang: 'js' });
+				css_editor.set({ code: compiled.css, lang: 'css' });
+			}
+		}
+	});
 
 	const { module_editor } = get_repl_context();
 
-	let js_editor: CodeMirror;
-	let css_editor: CodeMirror;
-	let view: 'result' | 'js' | 'css' | 'ast' = 'result';
-	let markdown = '';
+	let js_editor: CodeMirror = $state();
+	let css_editor: CodeMirror = $state();
+	let view: 'result' | 'js' | 'css' | 'ast' = $state('result');
+	let markdown = $state('');
 
-	$: ast = compiled?.ast;
+	let ast = $derived(compiled?.ast);
 </script>
 
 <div class="view-toggle">
 	{#if selected?.type === 'md'}
 		<button class="active">Markdown</button>
 	{:else}
-		<button class:active={view === 'result'} on:click={() => (view = 'result')}>Result</button>
-		<button class:active={view === 'js'} on:click={() => (view = 'js')}>JS output</button>
-		<button class:active={view === 'css'} on:click={() => (view = 'css')}>CSS output</button>
+		<button class:active={view === 'result'} onclick={() => (view = 'result')}>Result</button>
+		<button class:active={view === 'js'} onclick={() => (view = 'js')}>JS output</button>
+		<button class:active={view === 'css'} onclick={() => (view = 'css')}>CSS output</button>
 		{#if showAst}
-			<button class:active={view === 'ast'} on:click={() => (view = 'ast')}>AST output</button>
+			<button class:active={view === 'ast'} onclick={() => (view = 'ast')}>AST output</button>
 		{/if}
 	{/if}
 </div>
