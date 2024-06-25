@@ -94,6 +94,57 @@ An element or component can have multiple spread attributes, interspersed with r
 
 > Another example is `<img src="..." loading="lazy" />`. Svelte will set the img `src` before making the img element `loading="lazy"`, which is probably too late. Change this to `<img loading="lazy" src="...">` to make the image lazily loaded.
 
+## Events
+
+Listening to DOM events is possible by adding attributes to the element that start with `on`. For example, to listen to the `click` event, add the `onclick` attribute to a button:
+
+```svelte
+<button onclick={() => console.log('clicked')}>click me</button>
+```
+
+Event attributes are case sensitive. `onclick` listens to the `click` event, `onClick` listens to the `Click` event, which is different. This ensures you can listen to custom events that have uppercase characters in them.
+
+Because events are just attributes, the same rules as for attributes apply:
+
+- you can use the shorthand form: `<button {onclick}>click me</button>`
+- you can spread them: `<button {...thisSpreadContainsEventAttributes}>click me</button>`
+- component events are just (callback) properties and don't need a separate concept
+
+### Event delegation
+
+To reduce the memory footprint and increase performance, Svelte uses a technique called event delegation. This means that certain events are only listened to once at the application root, invoking a handler that then traverses the event call path and invokes listeners along the way.
+
+There are a few gotchas you need to be aware of when it comes to event delegation:
+
+- when you dispatch events manually, make sure to set the `{ bubbles: true }` option
+- when listening to events programmatically (i.e. not through `<button onclick={...}>` but through `node.addEventListener`), be careful to not call `stopPropagation` or else the delegated event handler won't be reached and handlers won't be invoked. For this reaon it's best to use `on` (which properly handles `stopPropagation`) from `svelte/events` instead of `addEventListener` to make sure the chain of events is preserved
+
+The following events are delegated:
+
+- `beforeinput`
+- `click`
+- `change`
+- `dblclick`
+- `contextmenu`
+- `focusin`
+- `focusout`
+- `input`
+- `keydown`
+- `keyup`
+- `mousedown`
+- `mousemove`
+- `mouseout`
+- `mouseover`
+- `mouseup`
+- `pointerdown`
+- `pointermove`
+- `pointerout`
+- `pointerover`
+- `pointerup`
+- `touchend`
+- `touchmove`
+- `touchstart`
+
 ## Text expressions
 
 A JavaScript expression can be included as text by surrounding it with curly braces.
