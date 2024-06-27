@@ -92,10 +92,6 @@
 			}
 		}
 	}
-
-	let bb = undefined;
-	// setTimeout(() => (bb = 1.5), 1000);
-	$: console.log(bb);
 </script>
 
 <div class="video-player">
@@ -108,7 +104,6 @@
 		bind:paused
 		bind:currentTime={t}
 		bind:duration={d}
-		bind:playbackRate={bb}
 		on:click={() => {
 			if (video.paused) {
 				video.play();

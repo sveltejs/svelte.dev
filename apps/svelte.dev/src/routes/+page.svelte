@@ -8,14 +8,15 @@
 	import Deployment from './_components/Deployment.svelte';
 	import Showcase from './_components/Showcase.svelte';
 	import './_components/common.css';
+	import HeroSvelteKit from './_components/HeroSvelteKit.svelte';
 </script>
 
 <svelte:head>
-	<title>Svelte • Cybernetically enhanced web apps</title>
+	<title>Svelte • Web development, but fun</title>
 
 	<meta name="twitter:title" content="Svelte" />
-	<meta name="twitter:description" content="Cybernetically enhanced web apps" />
-	<meta name="Description" content="Cybernetically enhanced web apps" />
+	<meta name="twitter:description" content="Web development, but fun" />
+	<meta name="Description" content="Web development, but fun" />
 </svelte:head>
 
 <div class="home">
@@ -26,30 +27,30 @@
 	<Blurb --background="var(--sk-back-1)">
 		{#snippet one()}
 			<div>
-				<h2>compiled</h2>
+				<h2>fast</h2>
 				<p>
 					Svelte shifts as much work as possible out of the browser and into your build step. No
-					more manual optimisations — just faster, more efficient apps.
+					more manual optimisations — just faster, smaller and more efficient apps.
 				</p>
 			</div>
 		{/snippet}
 
 		{#snippet two()}
 			<div>
-				<h2>compact</h2>
+				<h2>fun</h2>
 				<p>
-					Write breathtakingly concise components using languages you already know — HTML, CSS and
-					JavaScript. Oh, and your application bundles will be tiny as well.
+					Write concise components using languages you already know — HTML, CSS and JavaScript. Get
+					things done without fighting the framework. Code with joy.
 				</p>
 			</div>
 		{/snippet}
 
 		{#snippet three()}
 			<div>
-				<h2>complete</h2>
+				<h2>flexible</h2>
 				<p>
-					Built-in scoped styling, state management, motion primitives, form bindings and more —
-					don't waste time trawling npm for the bare essentials. It's all here.
+					Svelte scales from tiny widgets all the way to big full-stack applications. State
+					management, motion primitives, form bindings and more — all built-in.
 				</p>
 			</div>
 		{/snippet}
@@ -58,6 +59,8 @@
 	<TrySection />
 
 	<Svelte />
+
+	<HeroSvelteKit />
 
 	<Features />
 

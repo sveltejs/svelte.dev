@@ -10,7 +10,11 @@
 </script>
 
 <Section --background="var(--sk-back-2">
-	<p class="intro">Svelte is made possible by the work of hundreds of supporters.</p>
+	<h2>Svelte is here to stay</h2>
+	<p class="intro">
+		Backed by <a href="https://vercel.com" target="_blank" rel="noreferrer">Vercel</a> and countless
+		donors, developed by full-time and part-time maintainers, surrounded by a welcoming community.
+	</p>
 
 	<div class="layout">
 		<div class="contributors blurb">
@@ -59,7 +63,7 @@
 
 	.intro {
 		max-width: 28em; /* text balancing */
-		margin: 0 0 3.2rem 0;
+		margin: 1em 0 3.2rem 0;
 	}
 
 	.supporters-grid {
@@ -111,16 +115,8 @@
 			grid-row-gap: 1em;
 		}
 
-		.intro {
-			font-size: var(--sk-text-m);
-		}
-
 		h3 {
 			margin-top: 0.5rem;
-		}
-
-		p {
-			margin: 0;
 		}
 
 		.supporters-grid {

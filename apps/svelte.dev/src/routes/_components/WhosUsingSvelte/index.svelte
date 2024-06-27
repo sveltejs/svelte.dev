@@ -7,20 +7,9 @@
 </script>
 
 <Section --background={$theme.current === 'light' ? 'var(--sk-back-4)' : '#222'}>
-	<h3>loved by developers</h3>
+	<h2>loved by developers</h2>
 
-	<p>
-		We're proud that Svelte was recently voted the <a
-			href="https://survey.stackoverflow.co/2023/#section-admired-and-desired-web-frameworks-and-technologies"
-			>most admired JS web framework</a
-		>
-		in one industry survey while drawing the most interest in learning it in
-		<a
-			href="https://tsh.io/state-of-frontend/#which-of-the-following-frameworks-would-you-like-to-learn-in-the-future"
-			>two</a
-		> <a href="https://2022.stateofjs.com/en-US/libraries/front-end-frameworks/">others</a>. We
-		think you'll love it too.
-	</p>
+	<p>These and many more companies are using Svelte</p>
 
 	<section class="whos-using-svelte-container" class:dark={$theme.current === 'dark'}>
 		<div class="logos">
@@ -36,10 +25,6 @@
 </Section>
 
 <style>
-	h3 {
-		font-size: var(--sk-text-xl);
-	}
-
 	p {
 		max-width: 28em; /* text balancing */
 	}

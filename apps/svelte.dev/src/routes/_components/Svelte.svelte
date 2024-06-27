@@ -26,11 +26,9 @@
 
 		<div>
 			<p>
-				SvelteKit is built on Svelte, a UI framework that uses a compiler to let you write
-				breathtakingly concise components that do minimal work in the browser, using languages you
-				already know — HTML, CSS and JavaScript. <strong
-					>It's a love letter to web development.</strong
-				>
+				Svelte is a UI framework that uses a compiler to let you write breathtakingly concise
+				components that do minimal work in the browser, using languages you already know — HTML, CSS
+				and JavaScript. <strong>It's a love letter to web development.</strong>
 			</p>
 
 			<p>
@@ -38,7 +36,7 @@
 				<a
 					target="_blank"
 					rel="noreferrer"
-					href="https://insights.stackoverflow.com/survey/2021#section-most-loved-dreaded-and-wanted-web-frameworks"
+					href="https://survey.stackoverflow.co/2023/#section-admired-and-desired-web-frameworks-and-technologies"
 				>
 					most
 				</a>
@@ -52,7 +50,7 @@
 				<a
 					target="_blank"
 					rel="noreferrer"
-					href="https://2021.stateofjs.com/en-US/libraries/front-end-frameworks/"
+					href="https://2023.stateofjs.com/en-US/libraries/front-end-frameworks/"
 				>
 					about
 				</a>
