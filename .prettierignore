@@ -5,3 +5,4 @@ dist
 pnpm-lock.yaml
 .vercel
 _generated.md
+land-110m.json
