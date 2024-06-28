@@ -7,21 +7,20 @@
 	import pause from './pause.svg';
 	import vtt from './subtitles.vtt';
 	import { onMount } from 'svelte';
-	import { browser } from '$app/environment';
 
 	let video: HTMLVideoElement;
 
-	let paused = false;
-	let muted = true;
-	let captioned = true;
-	let has_used_controls = false;
+	let paused = $state(false);
+	let muted = $state(true);
+	let captioned = $state(true);
+	let has_used_controls = $state(false);
 
-	$: if (browser && video) {
+	$effect(() => {
 		video.textTracks[0].mode = captioned ? 'showing' : 'hidden';
-	}
+	});
 
-	let d = 0;
-	let t = 0;
+	let d = $state(0);
+	let t = $state(0);
 
 	onMount(() => {
 		// I think this binding is broken in SSR because the video already
@@ -95,7 +94,7 @@
 		bind:paused
 		bind:currentTime={t}
 		bind:duration={d}
-		on:click={() => {
+		onclick={() => {
 			if (video.paused) {
 				video.play();
 
@@ -120,7 +119,7 @@
 				class="visually-hidden"
 				type="checkbox"
 				bind:checked={captioned}
-				on:change={() => (has_used_controls = true)}
+				onchange={() => (has_used_controls = true)}
 			/>
 
 			<img style:display={captioned ? 'block' : 'none'} src={cc_on} alt="hide subtitles" />
@@ -132,7 +131,7 @@
 				class="visually-hidden"
 				type="checkbox"
 				bind:checked={muted}
-				on:change={() => (has_used_controls = true)}
+				onchange={() => (has_used_controls = true)}
 			/>
 
 			<img style:display={muted ? 'block' : 'none'} src={volume_off} alt="unmute" />
@@ -145,7 +144,7 @@
 			class="visually-hidden"
 			type="checkbox"
 			bind:checked={paused}
-			on:change={() => {
+			onchange={() => {
 				if (!has_used_controls) {
 					muted = false;
 				}
