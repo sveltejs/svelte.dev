@@ -1,14 +1,14 @@
 <script>
 	import { Blurb, Footer, TrySection } from '@sveltejs/site-kit/home';
-	import Hero from './_components/Hero.svelte';
-	import Supporters from './_components/Supporters/index.svelte';
-	import WhosUsingSvelte from './_components/WhosUsingSvelte/index.svelte';
-	import Svelte from './_components/Svelte.svelte';
-	import Features from './_components/Features.svelte';
-	import Deployment from './_components/Deployment.svelte';
-	import Showcase from './_components/Showcase.svelte';
-	import './_components/common.css';
-	import HeroSvelteKit from './_components/HeroSvelteKit.svelte';
+	import Hero from './_home/Hero.svelte';
+	import Supporters from './_home/Supporters/index.svelte';
+	import WhosUsingSvelte from './_home/WhosUsingSvelte/index.svelte';
+	import Svelte from './_home/Svelte.svelte';
+	import Features from './_home/Features.svelte';
+	import Deployment from './_home/Deployment.svelte';
+	import Showcase from './_home/Showcase.svelte';
+	import './_home/common.css';
+	import HeroSvelteKit from './_home/HeroSvelteKit.svelte';
 </script>
 
 <svelte:head>

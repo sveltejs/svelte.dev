@@ -10,7 +10,7 @@ const force = process.env.FORCE_UPDATE === 'true';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 process.chdir(__dirname);
 
-const outputFile = new URL(`../src/routes/_components/Supporters/donors.js`, import.meta.url);
+const outputFile = new URL(`../src/routes/_home/Supporters/donors.js`, import.meta.url);
 
 try {
 	if (!force && (await stat(outputFile))) {
@@ -59,7 +59,7 @@ try {
 	await sprite
 		.quality(80)
 		.writeAsync(
-			fileURLToPath(new URL(`../src/routes/_components/Supporters/donors.jpg`, import.meta.url))
+			fileURLToPath(new URL(`../src/routes/_home/Supporters/donors.jpg`, import.meta.url))
 		);
 
 	const str = `[\n\t${included.map((a) => `${JSON.stringify(a.backer.name)}`).join(',\n\t')}\n]`;
