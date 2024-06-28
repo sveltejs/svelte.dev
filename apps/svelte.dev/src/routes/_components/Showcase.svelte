@@ -27,6 +27,7 @@
 	<div class="showcase">
 		{#each showcase as { url, image }}
 			<a href="https://{url}" target="_blank" rel="noreferrer">
+				<!-- svelte-ignore element_invalid_self_closing_tag -->
 				<enhanced:img src={image} alt="" style="width:100%; height:100%; object-fit:cover" />
 				<span>{url}</span>
 			</a>

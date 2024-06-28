@@ -33,8 +33,8 @@ const path = geoPath(projection);
 /**
  * @param {string | null} lat
  * @param {string | null} lon
- * @param {string} city
- * @param {string} country
+ * @param {string | null} city
+ * @param {string | null} country
  */
 function render(lat, lon, city, country) {
 	const coords = lat && lon ? [+lon, +lat] : [-74, 40.7];
@@ -128,7 +128,8 @@ export function GET({ request, url }) {
 	const latitude = h.get('x-vercel-ip-latitude') ?? '';
 	const longitude = h.get('x-vercel-ip-longitude') ?? '';
 	const city = h.get('x-vercel-ip-city') ?? '';
-	const country = countries[h.get('x-vercel-ip-country')];
+	// @ts-expect-error string cannot be used to index type
+	const country = countries[h.get('x-vercel-ip-country')] ?? null;
 
 	const svg = render(latitude, longitude, decodeURIComponent(city), country).replace(
 		/\d\.\d+/g,

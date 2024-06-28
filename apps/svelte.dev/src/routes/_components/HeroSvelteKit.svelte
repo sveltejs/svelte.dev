@@ -19,6 +19,7 @@
 		</div>
 
 		<div class="hero-image-wrapper">
+			<!-- svelte-ignore element_invalid_self_closing_tag -->
 			<enhanced:img
 				src="./svelte-kit-machine.webp?w=1440;1080;768;640"
 				sizes="(min-width: 768px) min(100vw, 108rem), 64rem"

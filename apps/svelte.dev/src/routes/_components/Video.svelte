@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import volume_off from './volume-off.svg';
 	import volume_high from './volume-high.svg';
 	import cc_on from './cc-on.svg';
@@ -9,8 +9,7 @@
 	import { onMount } from 'svelte';
 	import { browser } from '$app/environment';
 
-	/** @type {HTMLVideoElement} */
-	let video;
+	let video: HTMLVideoElement;
 
 	let paused = false;
 	let muted = true;
@@ -55,13 +54,10 @@
 		};
 	});
 
-	/**
-	 * @param {HTMLTrackElement} node
-	 */
-	function handle_cues(node) {
+	function handle_cues(node: HTMLTrackElement) {
 		const cues = node.track.cues;
 		if (node.track.cues) {
-			set_cue_positions(cues);
+			set_cue_positions(cues!);
 		} else {
 			node.addEventListener('load', handle_load, { once: true });
 		}
@@ -72,22 +68,17 @@
 			}
 		};
 
-		/**
-		 * @param {Event} e
-		 */
-		function handle_load(e) {
-			/** @type {HTMLTrackElement} */
-			const track_el = e.target;
-			set_cue_positions(track_el.track.cues);
+		function handle_load(e: Event) {
+			const track_el = e.target as HTMLTrackElement;
+			set_cue_positions(track_el.track.cues!);
 		}
 
-		/**
-		 * @param {TextTrackCueList} cues
-		 */
-		function set_cue_positions(cues) {
+		function set_cue_positions(cues: TextTrackCueList) {
 			for (let i = 0; i < cues.length; i++) {
 				// https://developer.mozilla.org/en-US/docs/Web/API/WebVTT_API#cue_settings
+				// @ts-expect-error types not up to date
 				cues[i].line = -2; // second line from the bottom
+				// @ts-expect-error types not up to date
 				cues[i].size = 80; // width is 80% of the available space
 			}
 		}
