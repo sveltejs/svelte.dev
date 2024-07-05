@@ -1,5 +1,0 @@
----
-title: svelte
----
-
-<!-- @include svelte -->

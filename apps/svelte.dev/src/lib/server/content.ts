@@ -2,34 +2,42 @@ import { read } from '$app/server';
 import { create_index } from '@sveltejs/site-kit/server/content';
 
 // https://github.com/vitejs/vite/issues/17453
-const strip_base = (records: Record<string, string>, base: string) => {
+const rekey = (records: Record<string, string>, fn: (key: string) => string) => {
 	const result: Record<string, string> = {};
 	for (const key in records) {
-		const stripped = key.slice(base.length + 1);
-		result[stripped] = records[key];
+		result[fn(key)] = records[key];
 	}
 	return result;
 };
 
-const documents = strip_base(
+const svelte_docs = rekey(
+	import.meta.glob<string>('../../../../../../svelte/documentation/docs/**/*.md', {
+		eager: true,
+		query: '?url',
+		import: 'default'
+	}),
+	(key) => 'docs/svelte/' + key.slice('../../../../../../svelte/documentation/docs/'.length)
+);
+
+const documents = rekey(
 	import.meta.glob<string>('../../../content/**/*.md', {
 		eager: true,
 		query: '?url',
 		import: 'default'
 	}),
-	'../../../content'
+	(key) => key.slice('../../../content/'.length)
 );
 
-const assets = strip_base(
+const assets = rekey(
 	import.meta.glob<string>('../../../content/**/+assets/**', {
 		eager: true,
 		query: '?url',
 		import: 'default'
 	}),
-	'../../../content'
+	(key) => key.slice('../../../content/'.length)
 );
 
-export const index = await create_index(documents, assets, read);
+export const index = await create_index({ ...svelte_docs, ...documents }, assets, read);
 
 const months = 'Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec'.split(' ');
 
