@@ -4,20 +4,18 @@ import type { Document } from '../../types';
 export async function create_index(
 	documents: Record<string, string>,
 	assets: Record<string, string>,
-	base: string,
 	read: (asset: string) => Response
 ): Promise<Record<string, Document>> {
 	const content: Record<string, Document> = {};
 
 	const roots: Document[] = [];
 
-	for (const key in documents) {
-		if (key.includes('+assets') || key.endsWith('/_generated.md')) continue;
+	for (const file in documents) {
+		if (file.includes('+assets') || file.endsWith('/_generated.md')) continue;
 
-		const file = key.slice(base.length + 1);
 		const slug = file.replace(/(^|\/)[\d-]+/g, '$1').replace(/(\/index)?\.md$/, '');
 
-		const text = await read(documents[key]).text();
+		const text = await read(documents[file]).text();
 		let { metadata, body } = extract_frontmatter(text);
 
 		if (!metadata.title) {
@@ -26,7 +24,7 @@ export async function create_index(
 
 		// Check if there's a generated file inside the same folder
 		// which contains content to include in this document.
-		const generated = documents[key.substring(0, key.lastIndexOf('/')) + '/_generated.md'];
+		const generated = documents[file.substring(0, file.lastIndexOf('/')) + '/_generated.md'];
 
 		if (generated) {
 			const generated_text = await read(generated).text();
@@ -84,14 +82,13 @@ export async function create_index(
 		}
 	}
 
-	for (const key in assets) {
-		const path = key.slice(base.length + 1);
+	for (const path in assets) {
 		const slug = path.slice(0, path.indexOf('+assets') - 1).replace(/(^|\/)\d+-/g, '$1');
 		const file = path.slice(path.indexOf('+assets') + 8);
 
 		const document = content[slug];
 
-		(document.assets ??= {})[file] = assets[key];
+		(document.assets ??= {})[file] = assets[path];
 	}
 
 	let prev: Document | null = null;
