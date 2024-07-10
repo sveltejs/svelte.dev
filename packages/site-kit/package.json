@@ -48,7 +48,7 @@
 		"@sveltejs/kit": "^1.20.0",
 		"svelte": "^4.0.0 || ^5.0.0-next.1"
 	},
-	"types": "./dist/types.d.ts",
+	"types": "./src/lib/types.d.ts",
 	"exports": {
 		".": {
 			"types": "./src/lib/types.d.ts"
@@ -96,9 +96,5 @@
 		"./styles/index.css": "./src/lib/styles/index.css",
 		"./styles/text.css": "./src/lib/styles/text.css",
 		"./styles/tokens.css": "./src/lib/styles/tokens.css"
-	},
-	"files": [
-		"dist",
-		"src/lib/types.d.ts"
-	]
+	}
 }
