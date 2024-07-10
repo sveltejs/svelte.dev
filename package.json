@@ -18,7 +18,7 @@
 		"lint": "pnpm -r lint",
 		"format": "pnpm -r format",
 		"test": "pnpm -r test",
-		"sync": "cd /apps/svelte.dev && svelte-kit sync && scripts/sync-repos.js",
+		"sync": "./apps/svelte.dev/scripts/sync-repos.js",
 		"build": "pnpm -r build",
 		"changeset:version": "changeset version && pnpm -r generate:version && git add --all",
 		"changeset:publish": "changeset publish"
