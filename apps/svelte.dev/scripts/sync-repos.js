@@ -18,6 +18,6 @@ function cloneRepo(repo) {
 
 function invoke(cmd, args) {
 	const child = spawn(cmd, args);
-	child.stdout.on('data', console.log);
-	child.stderr.on('data', console.error);
+	child.stdout.on('data', (data) => console.log(data.toString()));
+	child.stderr.on('data', (data) => console.error(data.toString()));
 }
