@@ -5,8 +5,9 @@
 	"type": "module",
 	"scripts": {
 		"dev": "vite dev",
+		"build": "vite build && npm run package",
 		"check": "svelte-kit sync && svelte-check",
-		"package": "svelte-kit sync",
+		"package": "svelte-kit sync && svelte-package && publint",
 		"lint": "prettier --check .",
 		"format": "prettier --write ."
 	},
@@ -27,12 +28,15 @@
 	},
 	"devDependencies": {
 		"@sveltejs/kit": "^2.5.7",
+		"@sveltejs/package": "^2.0.0",
+		"@sveltejs/vite-plugin-svelte": "^3.0.0",
 		"@types/node": "^20.12.11",
 		"flexsearch": "^0.7.43",
 		"magic-string": "^0.30.10",
 		"marked": "^12.0.2",
 		"prettier": "^3.3.2",
 		"prettier-plugin-svelte": "^3.2.4",
+		"publint": "^0.1.9",
 		"shiki-twoslash": "^3.1.2",
 		"svelte": "^5.0.0-next.160",
 		"svelte-check": "^3.8.2",
@@ -59,34 +63,34 @@
 		},
 		"./branding/svelte-logo.svg": "./src/lib/branding/svelte-logo.svg",
 		"./components": {
-			"default": "./src/lib/components/index.ts",
-			"svelte": "./src/lib/components/index.ts"
+			"svelte": "./src/lib/components/index.ts",
+			"default": "./src/lib/components/index.ts"
 		},
 		"./home": {
-			"default": "./src/lib/home/index.ts",
-			"svelte": "./src/lib/home/index.ts"
+			"svelte": "./src/lib/home/index.ts",
+			"default": "./src/lib/home/index.ts"
 		},
 		"./docs": {
-			"default": "./src/lib/docs/index.ts",
-			"svelte": "./src/lib/docs/index.ts"
+			"svelte": "./src/lib/docs/index.ts",
+			"default": "./src/lib/docs/index.ts"
 		},
 		"./markdown": {
-			"default": "./src/lib/markdown/index.ts",
-			"svelte": "./src/lib/markdown/index.ts"
+			"svelte": "./src/lib/markdown/index.ts",
+			"default": "./src/lib/markdown/index.ts"
 		},
 		"./nav": {
-			"default": "./src/lib/nav/index.ts",
-			"svelte": "./src/lib/nav/index.ts"
+			"svelte": "./src/lib/nav/index.ts",
+			"default": "./src/lib/nav/index.ts"
 		},
 		"./icons/link.svg": "./src/lib/icons/link.svg",
 		"./icons/search.svg": "./src/lib/icons/search.svg",
 		"./search": {
-			"default": "./src/lib/search/index.ts",
-			"svelte": "./src/lib/search/index.ts"
+			"svelte": "./src/lib/search/index.ts",
+			"default": "./src/lib/search/index.ts"
 		},
 		"./server/content": {
-			"default": "./src/lib/server/content/index.ts",
-			"svelte": "./src/lib/server/content/index.ts"
+			"svelte": "./src/lib/server/content/index.ts",
+			"default": "./src/lib/server/content/index.ts"
 		},
 		"./styles/base.css": "./src/lib/styles/base.css",
 		"./styles/code.css": "./src/lib/styles/code.css",
@@ -96,6 +100,7 @@
 		"./styles/tokens.css": "./src/lib/styles/tokens.css"
 	},
 	"files": [
-		"dist"
+		"dist",
+		"src/lib/types.d.ts"
 	]
 }
