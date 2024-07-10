@@ -24,4 +24,9 @@ function invoke(cmd, args) {
 	const child = spawn(cmd, args);
 	child.stdout.on('data', (data) => console.log(data.toString()));
 	child.stderr.on('data', (data) => console.error(data.toString()));
+	child.on('close', (code) => {
+		if (!code) {
+			console.log(`${[cmd, ...args].join(' ')} successfully completed`);
+		}
+	});
 }
