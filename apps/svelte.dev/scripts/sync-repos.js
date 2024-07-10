@@ -9,16 +9,16 @@ while ((cwd.match(/svelte.dev/g) || []).length > 0) {
 	cwd = process.cwd();
 }
 
-cloneRepo('git@github.com:sveltejs/svelte.git');
-cloneRepo('git@github.com:sveltejs/kit.git');
+cloneRepo('https://github.com/sveltejs/svelte.git');
+cloneRepo('https://github.com/sveltejs/kit.git');
 
 /**
  * @param {string} repo
  */
 function cloneRepo(repo) {
-	const regex_result = /git@github.com:\w+\/(\w+).git/.exec(repo);
+	const regex_result = /https:\/\/github.com\/\w+\/(\w+).git/.exec(repo);
 	if (!regex_result || regex_result.length < 2) {
-		throw new Error(`Expected git@github.com:xxx/xxx.git, but got ${repo}`);
+		throw new Error(`Expected https://github.com/xxx/xxx.git, but got ${repo}`);
 	}
 	const dirname = regex_result[1];
 	if (existsSync(dirname)) {
