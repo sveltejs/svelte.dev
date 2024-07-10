@@ -17,7 +17,7 @@ function cloneRepo(repo) {
 	if (existsSync(dirname)) {
 		return console.log(`${dirname} exists. skipping git clone`);
 	}
-	invoke('git', ['clone', repo]);
+	invoke('git', ['clone', '--depth', '1', repo]);
 }
 
 function invoke(cmd, args) {
