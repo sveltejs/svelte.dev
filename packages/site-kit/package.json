@@ -7,7 +7,7 @@
 		"dev": "vite dev",
 		"build": "pnpm run package",
 		"check": "svelte-kit sync && svelte-check",
-		"package": "svelte-kit sync && publint",
+		"package": "svelte-kit sync",
 		"lint": "prettier --check .",
 		"format": "prettier --write ."
 	},
@@ -35,7 +35,6 @@
 		"marked": "^12.0.2",
 		"prettier": "^3.3.2",
 		"prettier-plugin-svelte": "^3.2.4",
-		"publint": "^0.1.9",
 		"shiki-twoslash": "^3.1.2",
 		"svelte": "^5.0.0-next.160",
 		"svelte-check": "^3.8.2",
