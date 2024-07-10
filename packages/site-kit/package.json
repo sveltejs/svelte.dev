@@ -5,9 +5,9 @@
 	"type": "module",
 	"scripts": {
 		"dev": "vite dev",
-		"build": "vite build && npm run package",
+		"build": "pnpm run package",
 		"check": "svelte-kit sync && svelte-check",
-		"package": "svelte-kit sync && svelte-package && publint",
+		"package": "svelte-kit sync && publint",
 		"lint": "prettier --check .",
 		"format": "prettier --write ."
 	},
