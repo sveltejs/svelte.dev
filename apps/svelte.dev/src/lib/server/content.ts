@@ -19,6 +19,15 @@ const svelte_docs = rekey(
 	(key) => 'docs/svelte/' + key.slice('../../../../../../svelte/documentation/docs/'.length)
 );
 
+const kit_docs = rekey(
+	import.meta.glob<string>('../../../../../../kit/documentation/docs/**/*.md', {
+		eager: true,
+		query: '?url',
+		import: 'default'
+	}),
+	(key) => 'docs/kit/' + key.slice('../../../../../../kit/documentation/docs/'.length)
+);
+
 const documents = rekey(
 	import.meta.glob<string>('../../../content/**/*.md', {
 		eager: true,
@@ -37,7 +46,7 @@ const assets = rekey(
 	(key) => key.slice('../../../content/'.length)
 );
 
-export const index = await create_index({ ...svelte_docs, ...documents }, assets, read);
+export const index = await create_index({ ...svelte_docs, ...kit_docs, ...documents }, assets, read);
 
 const months = 'Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec'.split(' ');
 
