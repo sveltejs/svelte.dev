@@ -46,7 +46,11 @@ const assets = rekey(
 	(key) => key.slice('../../../content/'.length)
 );
 
-export const index = await create_index({ ...svelte_docs, ...kit_docs, ...documents }, assets, read);
+export const index = await create_index(
+	{ ...svelte_docs, ...kit_docs, ...documents },
+	assets,
+	read
+);
 
 const months = 'Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec'.split(' ');
 
