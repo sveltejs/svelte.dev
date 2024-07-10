@@ -1,9 +1,11 @@
 import { sveltekit } from '@sveltejs/kit/vite';
+import { enhancedImages } from '@sveltejs/enhanced-img';
 import type { PluginOption, UserConfig } from 'vite';
 import { browserslistToTargets } from 'lightningcss';
 import browserslist from 'browserslist';
 
 const plugins: PluginOption[] = [
+	enhancedImages(),
 	// apply cross-origin isolation headers for tutorial when previewing locally
 	{
 		name: 'cross-origin-isolation-for-preview',

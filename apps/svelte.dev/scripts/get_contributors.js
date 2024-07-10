@@ -10,8 +10,8 @@ const force = process.env.FORCE_UPDATE === 'true';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 process.chdir(__dirname);
 
-// ../src/routes/_components/Supporters/contributors.js
-const outputFile = new URL(`../src/routes/_components/Supporters/contributors.js`, import.meta.url);
+// ../src/routes/_home/Supporters/contributors.js
+const outputFile = new URL(`../src/routes/_home/Supporters/contributors.js`, import.meta.url);
 
 try {
 	if (!force && (await stat(outputFile))) {
@@ -65,9 +65,7 @@ try {
 	await sprite
 		.quality(80)
 		.writeAsync(
-			fileURLToPath(
-				new URL(`../src/routes/_components/Supporters/contributors.jpg`, import.meta.url)
-			)
+			fileURLToPath(new URL(`../src/routes/_home/Supporters/contributors.jpg`, import.meta.url))
 		);
 
 	const str = `[\n\t${authors.map((a) => `'${a.login}'`).join(',\n\t')}\n]`;

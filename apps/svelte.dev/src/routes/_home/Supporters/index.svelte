@@ -10,7 +10,11 @@
 </script>
 
 <Section --background="var(--sk-back-2">
-	<p class="intro">Svelte is made possible by the work of hundreds of supporters.</p>
+	<h2>Svelte is here to stay</h2>
+	<p class="intro">
+		Backed by <a href="https://vercel.com" target="_blank" rel="noreferrer">Vercel</a> and countless
+		donors, developed by full-time and part-time maintainers, surrounded by a welcoming community.
+	</p>
 
 	<div class="layout">
 		<div class="contributors blurb">
@@ -20,7 +24,7 @@
 			</p>
 		</div>
 
-		<div class="contributors grid">
+		<div class="contributors supporters-grid">
 			{#each contributors as contributor, i}
 				<a
 					class="supporter"
@@ -38,7 +42,7 @@
 			<p><a href="https://opencollective.com/svelte">Support us on OpenCollective</a></p>
 		</div>
 
-		<div class="donors grid">
+		<div class="donors supporters-grid">
 			{#each donors as donor, i}
 				<a
 					class="supporter"
@@ -59,17 +63,17 @@
 
 	.intro {
 		max-width: 28em; /* text balancing */
-		margin: 0 0 3.2rem 0;
+		margin: 1em 0 3.2rem 0;
 	}
 
-	.grid {
+	.supporters-grid {
 		position: relative;
 		display: grid;
 		grid-template-columns: repeat(6, minmax(0, 1fr));
 		grid-gap: 1em;
 	}
 
-	.contributors.grid {
+	.contributors.supporters-grid {
 		margin: 0 0 2em 0;
 	}
 
@@ -93,13 +97,13 @@
 	}
 
 	@media (min-width: 480px) {
-		.grid {
+		.supporters-grid {
 			grid-template-columns: repeat(8, minmax(0, 1fr));
 		}
 	}
 
 	@media (min-width: 720px) {
-		.grid {
+		.supporters-grid {
 			grid-template-columns: repeat(12, minmax(0, 1fr));
 		}
 	}
@@ -111,19 +115,11 @@
 			grid-row-gap: 1em;
 		}
 
-		.intro {
-			font-size: var(--sk-text-m);
-		}
-
 		h3 {
 			margin-top: 0.5rem;
 		}
 
-		p {
-			margin: 0;
-		}
-
-		.grid {
+		.supporters-grid {
 			position: relative;
 			display: grid;
 			grid-template-columns: repeat(6, minmax(0, 1fr));
@@ -132,13 +128,13 @@
 	}
 
 	@media (min-width: 880px) {
-		.grid {
+		.supporters-grid {
 			grid-template-columns: repeat(8, minmax(0, 1fr));
 		}
 	}
 
 	@media (min-width: 1100px) {
-		.grid {
+		.supporters-grid {
 			grid-template-columns: repeat(12, minmax(0, 1fr));
 		}
 	}

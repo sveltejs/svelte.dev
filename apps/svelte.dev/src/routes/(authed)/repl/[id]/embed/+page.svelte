@@ -57,7 +57,7 @@
 	<title>{data.gist.name} • REPL • Svelte</title>
 
 	<meta name="twitter:title" content="{data.gist.name} • REPL • Svelte" />
-	<meta name="twitter:description" content="Cybernetically enhanced web apps" />
+	<meta name="twitter:description" content="Web development, but fun" />
 	<meta name="Description" content="Interactive Svelte playground" />
 </svelte:head>
 

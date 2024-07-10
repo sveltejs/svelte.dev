@@ -2,6 +2,8 @@
 /.vercel
 /package
 /src/lib/generated
-/src/routes/_components/Supporters/contributors.js
-/src/routes/_components/Supporters/donors.js
+/src/routes/_home/Supporters/contributors.jpg
+/src/routes/_home/Supporters/contributors.js
+/src/routes/_home/Supporters/donors.jpg
+/src/routes/_home/Supporters/donors.js
 /static/svelte-app.json

@@ -1,5 +1,4 @@
 <script>
-	import { Icon } from '@sveltejs/site-kit/components';
 	import SvelteLogotype from './svelte-logotype.svg';
 
 	// @ts-ignore
@@ -12,7 +11,7 @@
 	<div class="hero-content">
 		<img alt="Svelte logotype" class="logotype" src={SvelteLogotype} width="300" height="56" />
 		<strong>
-			<span style="white-space: nowrap">Cybernetically enhanced</span> <br /> web apps
+			<span style="white-space: nowrap">Web development</span> <br /> but fun
 		</strong>
 		<div class="buttons">
 			<a href="/tutorial" class="cta">tutorial</a>
