@@ -2,15 +2,11 @@
 
 import { spawn } from 'node:child_process';
 import { existsSync } from 'node:fs';
-import { join } from 'node:path'
 
-const cwd = process.cwd();
-if (cwd.endsWith(join('apps', 'svelte.dev'))) {
-	process.chdir('../../..');
-} else if (cwd.endsWith('svelte.dev')) {
+let cwd = process.cwd();
+while ((cwd.match(/svelte.dev/g) || []).length > 0) {
 	process.chdir('..');
-} else {
-	throw new Error('script run from unsupported directory');
+	cwd = process.cwd();
 }
 
 cloneRepo('git@github.com:sveltejs/svelte.git');
