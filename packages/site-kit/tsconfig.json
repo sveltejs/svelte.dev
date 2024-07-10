@@ -4,7 +4,7 @@
 		"allowJs": true,
 		"checkJs": true,
 		"strict": true,
-		"allowSyntheticDefaultImports": true,
+		"allowSyntheticDefaultImports": true
 	},
 	"include": ["./src/**/*.js", "./src/**/*.ts", "./src/**/*.svelte"]
 }
