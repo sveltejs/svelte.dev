@@ -1,13 +1,20 @@
 #!/usr/bin/env node
 
 import { spawn } from 'node:child_process';
-import { existsSync, readFileSync } from 'node:fs';
+import { existsSync, mkdirSync } from 'node:fs';
 
 let cwd = process.cwd();
-while ((cwd.match(/svelte.dev/g) || []).length > 0) {
+while ((cwd.match(/svelte.dev/g) || []).length > 1 || !cwd.endsWith('svelte.dev')) {
 	process.chdir('..');
 	cwd = process.cwd();
 }
+
+try {
+	mkdirSync('repos');
+} catch {
+	// ignore if it already exists
+}
+process.chdir('repos');
 
 cloneRepo('https://github.com/sveltejs/svelte.git');
 cloneRepo('https://github.com/sveltejs/kit.git');

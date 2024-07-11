@@ -11,21 +11,21 @@ const rekey = (records: Record<string, string>, fn: (key: string) => string) => 
 };
 
 const svelte_docs = rekey(
-	import.meta.glob<string>('../../../../../../svelte/documentation/docs/**/*.md', {
+	import.meta.glob<string>('../../../../../repos/svelte/documentation/docs/**/*.md', {
 		eager: true,
 		query: '?url',
 		import: 'default'
 	}),
-	(key) => 'docs/svelte/' + key.slice('../../../../../../svelte/documentation/docs/'.length)
+	(key) => 'docs/svelte/' + key.slice('../../../../../repos/svelte/documentation/docs/'.length)
 );
 
 const kit_docs = rekey(
-	import.meta.glob<string>('../../../../../../kit/documentation/docs/**/*.md', {
+	import.meta.glob<string>('../../../../../repos/kit/documentation/docs/**/*.md', {
 		eager: true,
 		query: '?url',
 		import: 'default'
 	}),
-	(key) => 'docs/kit/' + key.slice('../../../../../../kit/documentation/docs/'.length)
+	(key) => 'docs/kit/' + key.slice('../../../../../repos/kit/documentation/docs/'.length)
 );
 
 const documents = rekey(

@@ -4,3 +4,6 @@ node_modules/
 .svelte-kit
 .vercel
 .env.local
+
+# location to check out docs from other repos
+/repos/
