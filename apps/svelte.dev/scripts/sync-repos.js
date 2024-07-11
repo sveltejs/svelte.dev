@@ -3,12 +3,17 @@
 import { spawn } from 'node:child_process';
 import { existsSync, mkdirSync } from 'node:fs';
 
+// allow running this script from multiple locations
 let cwd = process.cwd();
+console.log(`beginning working directory is ${cwd}`)
 while ((cwd.match(/svelte.dev/g) || []).length > 1 || !cwd.endsWith('svelte.dev')) {
 	process.chdir('..');
 	cwd = process.cwd();
+	console.log(`changed working directory to ${cwd}`)
 }
 
+// we need to checkout the repos within an ignored directory of this one
+// we cannot create files outside the root of this project on the vercel deployment host
 try {
 	mkdirSync('repos');
 } catch {
