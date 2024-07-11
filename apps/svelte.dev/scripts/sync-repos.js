@@ -5,11 +5,13 @@ import { existsSync, mkdirSync } from 'node:fs';
 
 // allow running this script from multiple locations
 let cwd = process.cwd();
-console.log(`beginning working directory is ${cwd}`)
-while ((cwd.match(/svelte.dev/g) || []).length > 1 || !cwd.endsWith('svelte.dev')) {
+
+while (
+	(cwd.match(/svelte.dev/g) || []).length > 1 ||
+	(!cwd.endsWith('svelte.dev') && !cwd.includes('/vercel/'))
+) {
 	process.chdir('..');
 	cwd = process.cwd();
-	console.log(`changed working directory to ${cwd}`)
 }
 
 // we need to checkout the repos within an ignored directory of this one
