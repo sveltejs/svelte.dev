@@ -8,7 +8,7 @@ let cwd = process.cwd();
 
 while (
 	(cwd.match(/svelte.dev/g) || []).length > 1 ||
-	(!cwd.endsWith('svelte.dev') && !cwd.includes('/vercel/'))
+	(!cwd.endsWith('svelte.dev') && !process.env.CI)
 ) {
 	process.chdir('..');
 	cwd = process.cwd();
