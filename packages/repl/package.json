@@ -3,10 +3,10 @@
 	"version": "0.6.0",
 	"scripts": {
 		"dev": "vite dev",
-		"build": "vite build && npm run package",
+		"build": "vite build && pnpm run package",
 		"preview": "vite preview",
 		"package": "svelte-kit sync",
-		"prepublishOnly": "npm run package",
+		"prepublishOnly": "pnpm run package",
 		"check": "svelte-kit sync && svelte-check",
 		"lint": "prettier --check .",
 		"format": "prettier --write ."
