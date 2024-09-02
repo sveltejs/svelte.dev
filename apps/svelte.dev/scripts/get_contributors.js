@@ -61,12 +61,11 @@ try {
 		sprite.composite(image, i * SIZE, 0);
 	}
 
-	await sprite
-		.write(
-			// @ts-expect-error
-			fileURLToPath(new URL(`../src/routes/_home/Supporters/contributors.jpg`, import.meta.url)),
-			{ quality: 80 }
-		);
+	await sprite.write(
+		// @ts-expect-error
+		fileURLToPath(new URL(`../src/routes/_home/Supporters/contributors.jpg`, import.meta.url)),
+		{ quality: 80 }
+	);
 
 	const str = `[\n\t${authors.map((a) => `'${a.login}'`).join(',\n\t')}\n]`;
 

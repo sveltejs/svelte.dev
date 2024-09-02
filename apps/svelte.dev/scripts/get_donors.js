@@ -57,12 +57,11 @@ try {
 		sprite.composite(included[i].image, i * SIZE, 0);
 	}
 
-	await sprite
-		.write(
-			// @ts-expect-error
-			fileURLToPath(new URL(`../src/routes/_home/Supporters/donors.jpg`, import.meta.url)),
-			{ quality: 80 }
-		);
+	await sprite.write(
+		// @ts-expect-error
+		fileURLToPath(new URL(`../src/routes/_home/Supporters/donors.jpg`, import.meta.url)),
+		{ quality: 80 }
+	);
 
 	const str = `[\n\t${included.map((a) => `${JSON.stringify(a.backer.name)}`).join(',\n\t')}\n]`;
 
