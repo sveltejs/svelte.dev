@@ -72,7 +72,7 @@
 		"degit": "^2.8.4",
 		"dotenv": "^16.4.5",
 		"esbuild": "^0.20.2",
-		"jimp": "^0.22.12",
+		"jimp": "^1.1.0",
 		"lightningcss": "^1.25.1",
 		"magic-string": "^0.30.10",
 		"marked": "^12.0.2",

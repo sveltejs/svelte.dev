@@ -1,6 +1,6 @@
 // @ts-check
 import 'dotenv/config';
-import Jimp from 'jimp';
+import { Jimp } from 'jimp';
 import { stat, writeFile } from 'node:fs/promises';
 import { dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -42,24 +42,26 @@ try {
 		try {
 			const image_data = await fetch(backer.image);
 			const buffer = await image_data.arrayBuffer();
-			// @ts-ignore
-			const image = await Jimp.read(buffer);
-			image.resize(SIZE, SIZE);
+			const image = await Jimp.fromBuffer(buffer);
+
+			image.resize({ w: SIZE, h: SIZE });
+
 			included.push({ backer, image });
 		} catch (err) {
 			console.log(`Skipping ${backer.name}: no image data`);
 		}
 	}
 
-	const sprite = new Jimp(SIZE * included.length, SIZE);
+	const sprite = new Jimp({ width: SIZE * included.length, height: SIZE });
 	for (let i = 0; i < included.length; i += 1) {
 		sprite.composite(included[i].image, i * SIZE, 0);
 	}
 
 	await sprite
-		.quality(80)
-		.writeAsync(
-			fileURLToPath(new URL(`../src/routes/_home/Supporters/donors.jpg`, import.meta.url))
+		.write(
+			// @ts-expect-error
+			fileURLToPath(new URL(`../src/routes/_home/Supporters/donors.jpg`, import.meta.url)),
+			{ quality: 80 }
 		);
 
 	const str = `[\n\t${included.map((a) => `${JSON.stringify(a.backer.name)}`).join(',\n\t')}\n]`;

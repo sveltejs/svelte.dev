@@ -1,6 +1,6 @@
 // @ts-check
 import 'dotenv/config';
-import Jimp from 'jimp';
+import { Jimp } from 'jimp';
 import { stat, writeFile } from 'node:fs/promises';
 import { dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -46,7 +46,7 @@ try {
 		.sort((a, b) => b.contributions - a.contributions)
 		.slice(0, MAX);
 
-	const sprite = new Jimp(SIZE * authors.length, SIZE);
+	const sprite = new Jimp({ width: SIZE * authors.length, height: SIZE });
 
 	for (let i = 0; i < authors.length; i += 1) {
 		const author = authors[i];
@@ -54,18 +54,18 @@ try {
 
 		const image_data = await fetch(author.avatar_url);
 		const buffer = await image_data.arrayBuffer();
+		const image = await Jimp.fromBuffer(buffer);
 
-		// @ts-ignore
-		const image = await Jimp.read(buffer);
-		image.resize(SIZE, SIZE);
+		image.resize({ w: SIZE, h: SIZE });
 
 		sprite.composite(image, i * SIZE, 0);
 	}
 
 	await sprite
-		.quality(80)
-		.writeAsync(
-			fileURLToPath(new URL(`../src/routes/_home/Supporters/contributors.jpg`, import.meta.url))
+		.write(
+			// @ts-expect-error
+			fileURLToPath(new URL(`../src/routes/_home/Supporters/contributors.jpg`, import.meta.url)),
+			{ quality: 80 }
 		);
 
 	const str = `[\n\t${authors.map((a) => `'${a.login}'`).join(',\n\t')}\n]`;
