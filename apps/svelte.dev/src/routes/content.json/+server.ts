@@ -2,6 +2,7 @@ import { index } from '$lib/server/content';
 import { json } from '@sveltejs/kit';
 import { markedTransform, normalizeSlugify, removeMarkdown } from '@sveltejs/site-kit/markdown';
 import type { Block } from '@sveltejs/site-kit/search';
+import { docs as _docs } from '../docs/content.server';
 
 export const prerender = true;
 
@@ -19,7 +20,7 @@ async function content() {
 	const blocks: Block[] = [];
 	const breadcrumbs: string[] = [];
 	// We want the actual contents: docs -> docs/svelte etc -> docs/svelte/overview etc -> docs/svelte/overview/introduction etc
-	let docs = index.docs.children.flatMap((topic) =>
+	let docs = Object.values(_docs).flatMap((topic) =>
 		topic.children.flatMap((section) => section.children)
 	);
 	docs = docs.concat(

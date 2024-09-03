@@ -1,6 +1,7 @@
 import { json } from '@sveltejs/kit';
 import { blog_posts, index } from '$lib/server/content';
 import type { NavigationLink } from '@sveltejs/site-kit';
+import { docs as _docs } from '../docs/content.server';
 
 export const prerender = true;
 
@@ -9,16 +10,18 @@ export const GET = async () => {
 };
 
 async function get_nav_list(): Promise<NavigationLink[]> {
-	const docs = index.docs.children.map((topic) => ({
-		title: topic.metadata.title,
-		sections: topic.children.map((section) => ({
-			title: section.metadata.title,
-			sections: section.children.map((page) => ({
-				title: page.metadata.title,
-				path: '/' + page.slug
+	const docs = Object.values(_docs)
+		.filter((entry) => entry.slug.split('/').length === 2)
+		.map((topic) => ({
+			title: topic.metadata.title,
+			sections: topic.children.map((section) => ({
+				title: section.metadata.title,
+				sections: section.children.map((page) => ({
+					title: page.metadata.title,
+					path: '/' + page.slug
+				}))
 			}))
-		}))
-	}));
+		}));
 
 	const blog = [
 		{

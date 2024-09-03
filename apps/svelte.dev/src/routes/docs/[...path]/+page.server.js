@@ -1,9 +1,9 @@
-import { index } from '$lib/server/content';
 import { render_content } from '$lib/server/renderer';
 import { error, redirect } from '@sveltejs/kit';
+import { docs } from '../content.server';
 
 export async function load({ params }) {
-	const document = index[`docs/${params.path}`];
+	const document = docs[`docs/${params.path}`];
 
 	if (!document) {
 		error(404);
