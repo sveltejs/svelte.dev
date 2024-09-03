@@ -13,6 +13,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 	import Separator from './Separator.svelte';
 	import type { NavigationLink } from '../types';
 	import type { Snippet } from 'svelte';
+	import LinksDropdown from '../components/LinksDropdown.svelte';
 
 	interface Props {
 		home_title?: string;
@@ -103,12 +104,16 @@ Top navigation bar for the application. It provides a slot for the left side, th
 
 		<div class="menu">
 			{#each links as link}
-				<a
-					href={link.pathname}
-					aria-current={$page.url.pathname.startsWith(`/${link.prefix}`) ? 'page' : null}
-				>
-					{link.title}
-				</a>
+				{#if link.sections?.[0].path}
+					<LinksDropdown links={link} prefix={link.prefix} />
+				{:else}
+					<a
+						href={link.pathname}
+						aria-current={$page.url.pathname.startsWith(`/${link.prefix}`) ? 'page' : null}
+					>
+						{link.title}
+					</a>
+				{/if}
 			{/each}
 
 			<Separator />

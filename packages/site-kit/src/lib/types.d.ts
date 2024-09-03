@@ -4,8 +4,10 @@ export interface NavigationLink {
 	pathname: string;
 	sections?: {
 		title: string;
+		path?: string;
 		sections: {
 			title: string;
+			path?: string;
 			sections: {
 				title: string;
 				path: string;

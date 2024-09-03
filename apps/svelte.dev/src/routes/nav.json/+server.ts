@@ -11,6 +11,7 @@ export const GET = async () => {
 async function get_nav_list(): Promise<NavigationLink[]> {
 	const docs = index.docs.children.map((topic) => ({
 		title: topic.metadata.title,
+		path: '/' + topic.slug, // this will make the UI show a flyout menu for the docs nav entry
 		sections: topic.children.map((section) => ({
 			title: section.metadata.title,
 			sections: section.children.map((page) => ({
