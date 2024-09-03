@@ -18,6 +18,5 @@
 				}
 			]
 		}
-	],
-	"buildCommand": "cd ../../packages/repl && pnpm package && cd ../site-kit && pnpm package && cd ../../apps/svelte.dev && pnpm build"
+	]
 }
