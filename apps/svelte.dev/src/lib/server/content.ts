@@ -53,39 +53,58 @@ export const blog_posts = index.blog.children
 	})
 	.sort((a, b) => (a.date < b.date ? 1 : -1));
 
-export function remove_section_from_slug(slug: string) {
-	return slug.replace(/\/[^/]+(\/[^/]+)$/g, '$1');
-}
-
 /**
  * Create docs index, which is basically the same structure as the original index
- * but with adjusted slugs: The section part is omitted for cleaner URLs.
+ * but with adjusted slugs (the section part is omitted for cleaner URLs), separated
+ * topics/pages and next/prev adjusted so that they don't point to different topics.
  */
 function create_docs() {
-	let docs: Record<string, Document> = {};
+	function remove_section(slug: string) {
+		return slug.replace(/\/[^/]+(\/[^/]+)$/g, '$1');
+	}
+
+	function remove_docs(slugs: string) {
+		return slugs.replace(/^docs\//, '');
+	}
+
+	let docs: {
+		/** The top level entries/packages: svelte/kit/etc. Key is the topic */
+		topics: Record<string, Document>;
+		/** The docs pages themselves. Key is the topic + page */
+		pages: Record<string, Document>;
+	} = { topics: {}, pages: {} };
 
 	for (const topic of index.docs.children) {
+		const pkg = topic.slug.split('/')[1];
 		const sections = topic.children;
-		docs[topic.slug] = { ...topic, children: [] };
+		const transformed_topic: Document = (docs.topics[remove_docs(topic.slug)] = {
+			...topic,
+			children: []
+		});
 
 		for (const section of sections) {
 			const pages = section.children;
-			docs[section.slug] = { ...section, children: [] };
-			docs[topic.slug].children.push(docs[section.slug]);
+			const transformed_section: Document = {
+				...section,
+				children: []
+			};
+
+			transformed_topic.children.push(transformed_section);
 
 			for (const page of pages) {
-				const slug = remove_section_from_slug(page.slug);
-				docs[slug] = {
+				const slug = remove_section(page.slug);
+				const transformed_page: Document = (docs.pages[remove_docs(slug)] = {
 					...page,
-					slug: remove_section_from_slug(page.slug),
-					next: page.next
-						? { slug: remove_section_from_slug(page.next.slug), title: page.next.title }
+					slug,
+					next: page.next?.slug.startsWith(`docs/${pkg}/`)
+						? { slug: remove_section(page.next.slug), title: page.next.title }
 						: null,
-					prev: page.prev
-						? { slug: remove_section_from_slug(page.prev.slug), title: page.prev.title }
+					prev: page.prev?.slug.startsWith(`docs/${pkg}/`)
+						? { slug: remove_section(page.prev.slug), title: page.prev.title }
 						: null
-				};
-				docs[section.slug].children.push(docs[slug]);
+				});
+
+				transformed_section.children.push(transformed_page);
 			}
 		}
 	}
