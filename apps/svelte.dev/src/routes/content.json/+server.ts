@@ -1,4 +1,4 @@
-import { index } from '$lib/server/content';
+import { index, docs as _docs } from '$lib/server/content';
 import { json } from '@sveltejs/kit';
 import { markedTransform, normalizeSlugify, removeMarkdown } from '@sveltejs/site-kit/markdown';
 import type { Block } from '@sveltejs/site-kit/search';
@@ -18,11 +18,7 @@ function get_href(parts: string[]) {
 async function content() {
 	const blocks: Block[] = [];
 	const breadcrumbs: string[] = [];
-	// We want the actual contents: docs -> docs/svelte etc -> docs/svelte/overview etc -> docs/svelte/overview/introduction etc
-	let docs = index.docs.children.flatMap((topic) =>
-		topic.children.flatMap((section) => section.children)
-	);
-	docs = docs.concat(
+	const docs = Object.values(_docs.pages).concat(
 		index.tutorial.children.flatMap((topic) =>
 			topic.children.flatMap((section) =>
 				section.children.map((entry) => ({
