@@ -15,10 +15,8 @@
 </script>
 
 <div class="dropdown">
-	<a
-		href={links[0].path}
-		class="main-action"
-		aria-current={$page.url.pathname.startsWith(`/${prefix}`) ? 'page' : null}>{links[0].title}</a
+	<a href={links[0].path} aria-current={$page.url.pathname.startsWith(`/${prefix}`) ? 'page' : null}
+		>{links[0].title}</a
 	>
 	<nav class="dropdown-content">
 		{#each links.slice(1) as link}
@@ -36,11 +34,13 @@
 	.dropdown-content {
 		display: none;
 		position: absolute;
+		left: -1rem;
 		background-color: var(--sk-back-1);
 		min-width: 10rem;
-		box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 		z-index: 1;
 		animation: flyout 0.3s ease-in-out;
+		box-shadow: var(--sk-shadow);
+		border-radius: 0 0 var(--sk-border-radius) var(--sk-border-radius);
 	}
 
 	@keyframes flyout {
@@ -60,10 +60,14 @@
 
 	.dropdown-content a {
 		color: var(--sk-text-3);
-		padding: 12px 16px;
+		padding: 1.3rem;
 		text-decoration: none;
 		display: block;
 		margin: 0 !important;
+
+		&:last-of-type {
+			border-radius: 0 0 var(--sk-border-radius) var(--sk-border-radius);
+		}
 	}
 
 	.dropdown-content a:hover {

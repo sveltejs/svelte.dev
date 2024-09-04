@@ -3,7 +3,7 @@
 	import { click_outside, focus_outside } from '@sveltejs/site-kit/actions';
 	import { Icon } from '@sveltejs/site-kit/components';
 	import { open_nav } from '@sveltejs/site-kit/nav';
-	import { mql, reduced_motion, theme } from '@sveltejs/site-kit/stores';
+	import { mql, reduced_motion } from '@sveltejs/site-kit/stores';
 	import { expoOut } from 'svelte/easing';
 	import { slide } from 'svelte/transition';
 
@@ -27,7 +27,6 @@
 
 <div
 	class="container"
-	class:dark={$theme.current === 'dark'}
 	use:focus_outside={() => (is_open = false)}
 	use:click_outside={() => (is_open = false)}
 >
@@ -155,8 +154,6 @@
 
 <style>
 	.container {
-		--shadow: 0px 0px 14px rgba(0, 0, 0, 0.1);
-
 		position: relative;
 
 		display: flex;
@@ -171,10 +168,6 @@
 
 		isolation: isolate;
 		z-index: 4;
-	}
-
-	.container.dark {
-		--shadow: 0 0 0 1px var(--sk-back-4);
 	}
 
 	header {
@@ -229,7 +222,7 @@
 		background-color: var(--sk-back-2);
 
 		border-radius: var(--sk-border-radius);
-		box-shadow: var(--shadow);
+		box-shadow: var(--sk-shadow);
 
 		cursor: pointer;
 	}
@@ -306,7 +299,7 @@
 		max-height: 70vh;
 		background: var(--sk-back-2);
 		z-index: -1;
-		box-shadow: var(--shadow);
+		box-shadow: var(--sk-shadow);
 		border-radius: 0 0 var(--sk-border-radius) var(--sk-border-radius);
 		display: flex;
 		flex-direction: column;

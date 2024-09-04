@@ -4,7 +4,7 @@
 	import { page } from '$app/stores';
 	import { click_outside, focus_outside, root_scroll } from '../actions';
 	import Icon from '../components/Icon.svelte';
-	import { mql, nav_open, on_this_page_open, overlay_open, reduced_motion, theme } from '../stores';
+	import { mql, nav_open, on_this_page_open, overlay_open, reduced_motion } from '../stores';
 	import { createEventDispatcher, onMount, tick } from 'svelte';
 	import { expoOut } from 'svelte/easing';
 	import { readable } from 'svelte/store';
@@ -175,7 +175,6 @@
 	<aside
 		class="on-this-page"
 		class:mobile={$is_mobile}
-		class:dark={$theme.current === 'dark'}
 		style:z-index={mobile_z_index}
 		bind:this={containerEl}
 		use:click_outside={() => $is_mobile && ($on_this_page_open = false)}
@@ -332,7 +331,6 @@
 	}
 
 	.on-this-page.mobile {
-		--shadow: 0px 0px 14px rgba(0, 0, 0, 0.1);
 		position: relative;
 		top: 0;
 		left: 0;
@@ -347,10 +345,6 @@
 		margin: 5rem 0;
 
 		overflow-y: initial;
-	}
-
-	.on-this-page.mobile.dark {
-		--shadow: 0 0 0 1px var(--sk-back-4);
 	}
 
 	.on-this-page.mobile .desktop-only-heading {
@@ -369,7 +363,7 @@
 
 		z-index: 2;
 
-		box-shadow: var(--shadow);
+		box-shadow: var(--sk-shadow);
 		border-radius: var(--sk-border-radius);
 		box-sizing: border-box;
 
@@ -410,7 +404,7 @@
 		background-color: var(--sk-back-3);
 
 		border-radius: 0 0 var(--sk-border-radius) var(--sk-border-radius);
-		box-shadow: var(--shadow);
+		box-shadow: var(--sk-shadow);
 	}
 
 	.on-this-page.mobile ul {
