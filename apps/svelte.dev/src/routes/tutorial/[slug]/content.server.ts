@@ -114,12 +114,10 @@ export async function load_exercise(slug: string): Promise<Exercise> {
 	const b: Record<string, string> = {};
 
 	for (const key in assets.a) {
-		console.log('key', key, assets.a[key]);
 		a[key] = await get(assets.a, key);
 	}
 
 	for (const key in assets.b) {
-		console.log('key', key);
 		b[key] = await get(assets.b, key);
 	}
 
