@@ -84,7 +84,7 @@
 		"shiki": "^1.6.4",
 		"shiki-twoslash": "^3.1.2",
 		"svelte": "5.0.0-next.243",
-		"svelte-check": "^3.8.2",
+		"svelte-check": "^4.0.0",
 		"svelte-preprocess": "^5.1.4",
 		"tiny-glob": "^0.2.9",
 		"typescript": "^5.5.4",
