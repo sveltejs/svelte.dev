@@ -1,4 +1,4 @@
-<script context="module">
+<script module>
 	const open_store = writable(false);
 
 	const current_menu_view = writable<NavigationLink | undefined>(undefined);

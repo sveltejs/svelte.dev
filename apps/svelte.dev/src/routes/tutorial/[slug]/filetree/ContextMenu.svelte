@@ -1,7 +1,7 @@
 <!-- @component
      A context menu for the tutorial's file tree
 -->
-<script context="module">
+<script module>
 	import { writable } from 'svelte/store';
 
 	/**

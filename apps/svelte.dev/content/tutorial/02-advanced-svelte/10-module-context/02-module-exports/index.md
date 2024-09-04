@@ -2,11 +2,11 @@
 title: Exports
 ---
 
-Anything exported from a `context="module"` script block becomes an export from the module itself. Let's export a `stopAll` function:
+Anything exported from a `module` script block becomes an export from the module itself. Let's export a `stopAll` function:
 
 ```svelte
 /// file: AudioPlayer.svelte
-<script context="module">
+<script module>
 	let current;
 
 +++	export function stopAll() {

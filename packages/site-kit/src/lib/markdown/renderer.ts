@@ -298,7 +298,7 @@ async function generate_ts_from_js(markdown: string) {
 			return match;
 		}
 
-		// Assumption: no context="module" blocks
+		// Assumption: no module blocks
 		const script = code.match(/<script>([\s\S]+?)<\/script>/);
 		if (!script) return match;
 

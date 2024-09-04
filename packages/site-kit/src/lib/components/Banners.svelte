@@ -1,4 +1,4 @@
-<script context="module">
+<script module>
 	type BannerScope = 'svelte.dev' | 'kit.svelte.dev' | 'learn.svelte.dev';
 	interface BannerData {
 		id: string;
