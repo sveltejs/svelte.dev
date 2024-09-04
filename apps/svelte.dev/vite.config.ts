@@ -5,7 +5,7 @@ import { browserslistToTargets } from 'lightningcss';
 import browserslist from 'browserslist';
 
 const plugins: PluginOption[] = [
-	enhancedImages(),
+	// enhancedImages(),
 	// apply cross-origin isolation headers for tutorial when previewing locally
 	{
 		name: 'cross-origin-isolation-for-preview',
