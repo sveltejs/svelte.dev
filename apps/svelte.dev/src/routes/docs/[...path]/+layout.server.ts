@@ -1,5 +1,5 @@
+import { docs } from '$lib/server/content';
 import { error } from '@sveltejs/kit';
-import { docs } from '../content.server';
 
 export const prerender = true;
 

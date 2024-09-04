@@ -1,7 +1,6 @@
 import { json } from '@sveltejs/kit';
-import { blog_posts, index } from '$lib/server/content';
+import { blog_posts, docs as _docs, index } from '$lib/server/content';
 import type { NavigationLink } from '@sveltejs/site-kit';
-import { docs as _docs } from '../docs/content.server';
 
 export const prerender = true;
 

@@ -1,8 +1,7 @@
-import { index } from '$lib/server/content';
+import { index, docs as _docs } from '$lib/server/content';
 import { json } from '@sveltejs/kit';
 import { markedTransform, normalizeSlugify, removeMarkdown } from '@sveltejs/site-kit/markdown';
 import type { Block } from '@sveltejs/site-kit/search';
-import { docs as _docs } from '../docs/content.server';
 
 export const prerender = true;
 

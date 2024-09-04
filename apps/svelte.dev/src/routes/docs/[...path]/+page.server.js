@@ -1,6 +1,6 @@
+import { docs } from '$lib/server/content';
 import { render_content } from '$lib/server/renderer';
 import { error, redirect } from '@sveltejs/kit';
-import { docs } from '../content.server';
 
 export async function load({ params }) {
 	const document = docs[`docs/${params.path}`];
