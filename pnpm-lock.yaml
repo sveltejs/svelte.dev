@@ -145,8 +145,8 @@ importers:
         specifier: ^5.4.3
         version: 5.4.3(@sveltejs/kit@2.5.25(@sveltejs/vite-plugin-svelte@4.0.0-next.6(svelte@5.0.0-next.243)(vite@5.4.3(@types/node@20.14.2)(lightningcss@1.25.1)))(svelte@5.0.0-next.243)(vite@5.4.3(@types/node@20.14.2)(lightningcss@1.25.1)))
       '@sveltejs/enhanced-img':
-        specifier: ^0.3.0
-        version: 0.3.0(rollup@4.21.2)(svelte@5.0.0-next.243)
+        specifier: ^0.3.4
+        version: 0.3.4(rollup@4.21.2)(svelte@5.0.0-next.243)(vite@5.4.3(@types/node@20.14.2)(lightningcss@1.25.1))
       '@sveltejs/kit':
         specifier: ^2.5.25
         version: 2.5.25(@sveltejs/vite-plugin-svelte@4.0.0-next.6(svelte@5.0.0-next.243)(vite@5.4.3(@types/node@20.14.2)(lightningcss@1.25.1)))(svelte@5.0.0-next.243)(vite@5.4.3(@types/node@20.14.2)(lightningcss@1.25.1))
@@ -226,8 +226,8 @@ importers:
         specifier: ^5.4.3
         version: 5.4.3(@types/node@20.14.2)(lightningcss@1.25.1)
       vite-imagetools:
-        specifier: ^7.0.2
-        version: 7.0.2(rollup@4.21.2)
+        specifier: ^7.0.4
+        version: 7.0.4(rollup@4.21.2)
 
   packages/repl:
     dependencies:
@@ -1174,8 +1174,11 @@ packages:
     peerDependencies:
       '@sveltejs/kit': ^2.4.0
 
-  '@sveltejs/enhanced-img@0.3.0':
-    resolution: {integrity: sha512-o8FdEUyJR/+LjUUl4sgB9QeM9rSGpOzTO6/CH0AmO/FgwWkcJdj/MwVNtr2F/AtaPgNfzvRpnExjklmuuDOtPA==}
+  '@sveltejs/enhanced-img@0.3.4':
+    resolution: {integrity: sha512-eX+ob5uWr0bTLMKeG9nhhM84aR88hqiLiyEfWZPX7ijhk/wlmYSUX9nOiaVHh2ct1U+Ju9Hhb90Copw+ZNOB8w==}
+    peerDependencies:
+      svelte: ^4.0.0 || ^5.0.0-next.0
+      vite: '>= 5.0.0'
 
   '@sveltejs/kit@2.5.25':
     resolution: {integrity: sha512-5hBSEN8XEjDZ5+2bHkFh8Z0QyOk0C187cyb12aANe1c8aeKbfu5ZD5XaC2vEH4h0alJFDXPdUkXQBmeeXeMr1A==}
@@ -1787,8 +1790,8 @@ packages:
   image-q@4.0.0:
     resolution: {integrity: sha512-PfJGVgIfKQJuq3s0tTDOKtztksibuUEbJQIYT3by6wctQo+Rdlh7ef4evJ5NCdxY4CfMbvFkocEwbl4BF8RlJw==}
 
-  imagetools-core@7.0.0:
-    resolution: {integrity: sha512-6fYbD7u4VIOt6fqKrOlbF77JXgUVyUmEJIPlfYVTuR/S2Ig9cX3gukGiLEU0aSetcfE7CYnhLTPtTEu4mLwhCw==}
+  imagetools-core@7.0.1:
+    resolution: {integrity: sha512-XDUx3Ac1VrZ4XF5eAJNYdHbFXRPNyebHFrwJsZ4WHb7X2MitOVW23cFphSDByT3MH5rdWdxKr4edSW2agChvDg==}
     engines: {node: '>=18.0.0'}
 
   import-meta-resolve@4.1.0:
@@ -2588,8 +2591,8 @@ packages:
   util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
 
-  vite-imagetools@7.0.2:
-    resolution: {integrity: sha512-sA98fIhfIqPdt5qKAMMrQtBzdqK44dlmv4jEUlJMmn4GzR8CdXjKGiyU/GKUFxjReuPi0fK/dd0JhiZixZt06A==}
+  vite-imagetools@7.0.4:
+    resolution: {integrity: sha512-C9C7b2p/8/TCN2g26tE9haoer2i8K4x0v2RXUiHsIjiz221vQuKItCQ+VyiVCsUMPXfJC/tlZsmCZVBz5jh7uA==}
     engines: {node: '>=18.0.0'}
 
   vite@5.4.3:
@@ -3650,14 +3653,15 @@ snapshots:
       - encoding
       - supports-color
 
-  '@sveltejs/enhanced-img@0.3.0(rollup@4.21.2)(svelte@5.0.0-next.243)':
+  '@sveltejs/enhanced-img@0.3.4(rollup@4.21.2)(svelte@5.0.0-next.243)(vite@5.4.3(@types/node@20.14.2)(lightningcss@1.25.1))':
     dependencies:
       magic-string: 0.30.11
+      svelte: 5.0.0-next.243
       svelte-parse-markup: 0.1.5(svelte@5.0.0-next.243)
-      vite-imagetools: 7.0.2(rollup@4.21.2)
+      vite: 5.4.3(@types/node@20.14.2)(lightningcss@1.25.1)
+      vite-imagetools: 7.0.4(rollup@4.21.2)
     transitivePeerDependencies:
       - rollup
-      - svelte
 
   '@sveltejs/kit@2.5.25(@sveltejs/vite-plugin-svelte@4.0.0-next.6(svelte@5.0.0-next.243)(vite@5.4.3(@types/node@20.12.11)(lightningcss@1.25.1)))(svelte@5.0.0-next.243)(vite@5.4.3(@types/node@20.12.11)(lightningcss@1.25.1))':
     dependencies:
@@ -4311,9 +4315,7 @@ snapshots:
     dependencies:
       '@types/node': 16.9.1
 
-  imagetools-core@7.0.0:
-    dependencies:
-      sharp: 0.33.4
+  imagetools-core@7.0.1: {}
 
   import-meta-resolve@4.1.0: {}
 
@@ -5087,10 +5089,11 @@ snapshots:
 
   util-deprecate@1.0.2: {}
 
-  vite-imagetools@7.0.2(rollup@4.21.2):
+  vite-imagetools@7.0.4(rollup@4.21.2):
     dependencies:
       '@rollup/pluginutils': 5.1.0(rollup@4.21.2)
-      imagetools-core: 7.0.0
+      imagetools-core: 7.0.1
+      sharp: 0.33.4
     transitivePeerDependencies:
       - rollup
 
