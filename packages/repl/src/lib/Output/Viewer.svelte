@@ -178,6 +178,7 @@
 			e.loc = { line: loc.line, column: loc.column ?? 0 };
 		}
 
+		// @ts-ignore name is there, just not part of public API
 		error = e;
 	}
 
