@@ -2,22 +2,17 @@
 	import { page } from '$app/stores';
 	import type { NavigationLink } from '../types';
 
-	let { links: _links, prefix }: { links: string[] | NavigationLink; prefix: string } = $props();
+	let { links: _links, prefix }: { links: NavigationLink; prefix: string } = $props();
 
-	const links = $derived(
-		Array.isArray(_links)
-			? _links.map((l) => ({ title: l, path: l }))
-			: [
-					{ title: _links.title, path: _links.pathname },
-					..._links.sections!.map((s) => ({ title: s.title, path: s.path! }))
-				]
-	);
+	const links = $derived([
+		{ title: _links.title, path: _links.pathname },
+		..._links.sections!.map((s) => ({ title: s.title, path: s.path! }))
+	]);
+	const current = $derived($page.url.pathname.startsWith(`/${prefix}`) ? 'page' : null);
 </script>
 
 <div class="dropdown">
-	<a href={links[0].path} aria-current={$page.url.pathname.startsWith(`/${prefix}`) ? 'page' : null}
-		>{links[0].title}</a
-	>
+	<a href={links[0].path} aria-current={current}>{links[0].title}</a>
 	<nav class="dropdown-content">
 		{#each links.slice(1) as link}
 			<a href={link.path}>{link.title}</a>
