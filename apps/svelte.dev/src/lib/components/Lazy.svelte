@@ -8,11 +8,11 @@
 		this: () => Promise<Component>;
 	} = $props();
 
-	let constructor = $state() as Component;
+	let Comp = $state() as Component;
 
 	onMount(async () => {
-		constructor = await importer();
+		Comp = await importer();
 	});
 </script>
 
-<svelte:component this={constructor} {...rest} />
+<Comp {...rest} />
