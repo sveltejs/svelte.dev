@@ -1,5 +1,5 @@
-import type { CompileError, CompileResult, Warning } from 'svelte/compiler';
-import type { CompileOptions, File } from '../types';
+import type { CompileError, CompileOptions, CompileResult, Warning } from 'svelte/compiler';
+import type { File } from '../types';
 
 export type CompilerCommand =
 	| {
