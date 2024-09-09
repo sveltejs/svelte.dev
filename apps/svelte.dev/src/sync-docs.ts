@@ -27,12 +27,8 @@ import glob from 'tiny-glob/sync';
 const use_git = true;
 /** The path to your local Svelte repository (only relevant if `use_git` is `false`) */
 let svelte_repo_path = '../../../svelte';
-/** Which version of the Svelte docs to create */
-const svelte_version: string = 'v05';
 /** The path to your local SvelteKit repository (only relevant if `use_git` is `false`) */
 let sveltekit_repo_path = '../../../svelte-kit';
-/** Which version of the SvelteKit docs to create */
-const sveltekit_version: string = 'v02';
 
 /**
  * Depending on your setup, this will either clone the Svelte and SvelteKit repositories
@@ -50,45 +46,30 @@ export async function sync_docs() {
 
 		const cwd = process.cwd();
 		process.chdir('repos');
-
-		// TODO we can probably make this a bit nicer/more generic
-		{
-			let branch;
-			if (svelte_version === 'v03') {
-				branch = 'version-3';
-			} else if (svelte_version === 'v04') {
-				branch = 'svelte-4';
-			}
-			await cloneRepo('https://github.com/sveltejs/svelte.git', branch);
-		}
-		{
-			let branch;
-			if (sveltekit_version === 'v01') {
-				branch = 'version-1';
-			}
-			await cloneRepo('https://github.com/sveltejs/kit.git', branch);
-		}
-
+		await Promise.all([
+			cloneRepo('https://github.com/sveltejs/svelte.git'),
+			cloneRepo('https://github.com/sveltejs/kit.git')
+		]);
 		process.chdir(cwd);
 
 		svelte_repo_path = 'repos/svelte';
 		sveltekit_repo_path = 'repos/kit';
 	}
 
-	await sync_svelte_docs(svelte_version);
-	await sync_kit_docs(sveltekit_version);
+	await sync_svelte_docs();
+	await sync_kit_docs();
 }
 
-async function sync_svelte_docs(version: string) {
+async function sync_svelte_docs() {
 	cpSync(
 		new URL(`../${svelte_repo_path}/documentation/docs`, import.meta.url).pathname.slice(1),
-		`content/docs/svelte/${version}`,
+		'content/docs/svelte',
 		{ recursive: true }
 	);
-	migrate_meta_json(`content/docs/svelte/${version}`);
+	migrate_meta_json('content/docs/svelte');
 
 	const svelte_modules = await read_svelte_types();
-	const files = glob(`content/docs/svelte/${version}/**/*.md`);
+	const files = glob('content/docs/svelte/**/*.md');
 
 	for (const file of files) {
 		let content = readFileSync(file, 'utf-8');
@@ -106,13 +87,13 @@ async function sync_svelte_docs(version: string) {
 	}
 }
 
-async function sync_kit_docs(version: string) {
+async function sync_kit_docs() {
 	cpSync(
 		new URL(`../${sveltekit_repo_path}/documentation/docs`, import.meta.url).pathname.slice(1),
-		`content/docs/kit/${version}`,
+		'content/docs/kit',
 		{ recursive: true }
 	);
-	migrate_meta_json(`content/docs/kit/${version}`);
+	migrate_meta_json('content/docs/kit');
 
 	const sveltekit_modules = await read_kit_types();
 
@@ -144,7 +125,7 @@ async function sync_kit_docs(version: string) {
 		(t) => t.name !== 'Config' && t.name !== 'KitConfig'
 	);
 
-	const kit_files = glob(`content/docs/kit/${version}/**/*.md`);
+	const kit_files = glob('content/docs/kit/**/*.md');
 
 	for (const file of kit_files) {
 		let content = readFileSync(file, 'utf-8');
@@ -179,7 +160,7 @@ function replace_strings(obj: any, replace: (str: string) => string) {
 	}
 }
 
-async function cloneRepo(repo: string, branch?: string) {
+async function cloneRepo(repo: string) {
 	const regex_result = /https:\/\/github.com\/\w+\/(\w+).git/.exec(repo);
 	if (!regex_result || regex_result.length < 2) {
 		throw new Error(`Expected https://github.com/xxx/xxx.git, but got ${repo}`);
@@ -191,11 +172,7 @@ async function cloneRepo(repo: string, branch?: string) {
 		rmdirSync(dirname, { recursive: true });
 	}
 
-	if (branch) {
-		await invoke('git', ['clone', '--depth', '1', '-b', branch, repo]);
-	} else {
-		await invoke('git', ['clone', '--depth', '1', repo]);
-	}
+	await invoke('git', ['clone', '--depth', '1', repo]);
 }
 
 function invoke(cmd: string, args: string[]) {
