@@ -9,17 +9,19 @@ export const GET = async () => {
 };
 
 async function get_nav_list(): Promise<NavigationLink[]> {
-	const docs = Object.values(_docs.topics).map((topic) => ({
-		title: topic.metadata.title,
-		path: '/' + topic.slug, // this will make the UI show a flyout menu for the docs nav entry
-		sections: topic.children.map((section) => ({
-			title: section.metadata.title,
-			sections: section.children.map((page) => ({
-				title: page.metadata.title,
-				path: '/' + page.slug
+	const docs = Object.values(_docs.topics)
+		.map((topic) => ({
+			title: topic.metadata.title,
+			path: '/' + topic.slug, // this will make the UI show a flyout menu for the docs nav entry
+			sections: topic.children.map((section) => ({
+				title: section.metadata.title,
+				sections: section.children.map((page) => ({
+					title: page.metadata.title,
+					path: '/' + page.slug
+				}))
 			}))
 		}))
-	}));
+		.sort((a, b) => a.title.localeCompare(b.title)); // Svelte first
 
 	const blog = [
 		{
