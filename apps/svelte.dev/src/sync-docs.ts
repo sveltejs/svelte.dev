@@ -1,11 +1,4 @@
-import {
-	stringify_expanded_type,
-	replace_export_type_placeholders,
-	stringify_module,
-	stringify_type,
-	type ModuleChild,
-	type Modules
-} from '@sveltejs/site-kit/markdown';
+import { replace_export_type_placeholders, type Modules } from '@sveltejs/site-kit/markdown';
 import { spawn } from 'node:child_process';
 import {
 	cpSync,
@@ -24,7 +17,7 @@ import glob from 'tiny-glob/sync';
 // Adjust the following variables as needed for your local setup
 
 /** If `true`, will checkout the docs from Git. If `false`, will use the `..._repo_path` vars to get content from your local file system */
-const use_git = true;
+const use_git = false;
 /** The path to your local Svelte repository (only relevant if `use_git` is `false`) */
 let svelte_repo_path = '../../../svelte';
 /** The path to your local SvelteKit repository (only relevant if `use_git` is `false`) */
@@ -72,16 +65,10 @@ async function sync_svelte_docs() {
 	const files = glob('content/docs/svelte/**/*.md');
 
 	for (const file of files) {
-		let content = readFileSync(file, 'utf-8');
-
-		// TODO if we settle on the sync approach we can remove this and use the > XXX syntax in the doc files again
-		content = content.replace(/<!-- @include (.+?) -->/g, (match, moduleName) => {
-			const module = svelte_modules.find((m: any) => m.name === moduleName);
-			if (!module) throw new Error('Reference not found in generated types: ' + moduleName);
-			return stringify_module(module);
-		});
-
-		content = await replace_export_type_placeholders(content, svelte_modules);
+		const content = await replace_export_type_placeholders(
+			readFileSync(file, 'utf-8'),
+			svelte_modules
+		);
 
 		writeFileSync(file, content);
 	}
@@ -120,31 +107,27 @@ async function sync_kit_docs() {
 	const svelte_kit_types = sveltekit_modules.find((m) => m.name === '@sveltejs/kit')!.types!;
 	const config = svelte_kit_types.find((t) => t.name === 'Config')!;
 	const kit_config = svelte_kit_types.find((t) => t.name === 'KitConfig')!;
+	const full_config = { ...config };
+	const full_kit_config = { ...kit_config };
 
-	sveltekit_modules.find((m) => m.name === '@sveltejs/kit')!.types = svelte_kit_types.filter(
-		(t) => t.name !== 'Config' && t.name !== 'KitConfig'
-	);
+	// special case — we want these to be on a separate page
+	config.children = kit_config.children = undefined;
+	config.bullets = kit_config.bullets = undefined;
+	config.snippet = kit_config.snippet = '';
+	config.comment = kit_config.comment =
+		'See the [configuration reference](/docs/kit/configuration) for details.';
 
 	const kit_files = glob('content/docs/kit/**/*.md');
 
 	for (const file of kit_files) {
-		let content = readFileSync(file, 'utf-8');
-
-		// TODO if we settle on the sync approach we can remove this and use the > XXX syntax in the doc files again
-		content = content.replace(/<!-- @include (.+?) -->/g, (match, moduleName) => {
-			if (moduleName === 'Config') {
-				return stringify_type(config as ModuleChild);
-			}
-			if (moduleName === 'KitConfig') {
-				return stringify_expanded_type(kit_config);
-			}
-
-			const module = sveltekit_modules.find((m) => m.name === moduleName);
-			if (!module) throw new Error('Reference not found in generated types: ' + moduleName);
-			return stringify_module(module as any);
-		});
-
-		content = await replace_export_type_placeholders(content, sveltekit_modules);
+		const content = await replace_export_type_placeholders(
+			readFileSync(file, 'utf-8'),
+			!file.includes('configuration')
+				? sveltekit_modules
+				: sveltekit_modules.map((m) =>
+						m.name === '@sveltejs/kit' ? { ...m, types: [full_config, full_kit_config] } : m
+					)
+		);
 
 		writeFileSync(file, content);
 	}

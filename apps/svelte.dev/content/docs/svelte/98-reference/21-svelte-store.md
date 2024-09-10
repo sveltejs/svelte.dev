@@ -186,4 +186,140 @@ function writable<T>(
 
 </div>
 
+## Readable
+
+Readable interface for subscribing.
+
+<div class="ts-block">
+
+```dts
+interface Readable<T> {/*…*/}
+```
+
+<div class="ts-block-property">
+
+```dts
+subscribe(this: void, run: Subscriber<T>, invalidate?: () => void): Unsubscriber;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- `run` subscription callback
+- `invalidate` cleanup callback
+
+</div>
+
+Subscribe on value changes.
+
+</div>
+</div>
+</div>
+
+## StartStopNotifier
+
+Start and stop notification callbacks.
+This function is called when the first subscriber subscribes.
+
+<div class="ts-block">
+
+```dts
+type StartStopNotifier<T> = (
+	set: (value: T) => void,
+	update: (fn: Updater<T>) => void
+) => void | (() => void);
+```
+
+
+</div>
+
+## Subscriber
+
+Callback to inform of a value updates.
+
+<div class="ts-block">
+
+```dts
+type Subscriber<T> = (value: T) => void;
+```
+
+
+</div>
+
+## Unsubscriber
+
+Unsubscribes from value updates.
+
+<div class="ts-block">
+
+```dts
+type Unsubscriber = () => void;
+```
+
+
+</div>
+
+## Updater
+
+Callback to update a value.
+
+<div class="ts-block">
+
+```dts
+type Updater<T> = (value: T) => T;
+```
+
+
+</div>
+
+## Writable
+
+Writable interface for both updating and subscribing.
+
+<div class="ts-block">
+
+```dts
+interface Writable<T> extends Readable<T> {/*…*/}
+```
+
+<div class="ts-block-property">
+
+```dts
+set(this: void, value: T): void;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- `value` to set
+
+</div>
+
+Set value and inform subscribers.
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+update(this: void, updater: Updater<T>): void;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- `updater` callback
+
+</div>
+
+Update value using callback and inform subscribers.
+
+</div>
+</div>
+</div>
+
 

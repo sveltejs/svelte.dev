@@ -814,6 +814,10 @@ Compress files in `directory` with gzip and brotli, where appropriate. Generates
 </div>
 </div>
 
+## Config
+
+See the [configuration reference](/docs/kit/configuration) for details.
+
 ## Cookies
 
 <div class="ts-block">
@@ -1084,6 +1088,10 @@ The content of the error.
 </div>
 </div>
 </div>
+
+## KitConfig
+
+See the [configuration reference](/docs/kit/configuration) for details.
 
 ## LessThan
 

@@ -1,9 +1,6 @@
 export {
 	render_content_markdown as renderContentMarkdown,
-	replace_export_type_placeholders,
-	stringify_module,
-	stringify_type,
-	stringify_expanded_type
+	replace_export_type_placeholders
 } from './renderer';
 
 export {

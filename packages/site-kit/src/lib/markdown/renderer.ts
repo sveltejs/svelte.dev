@@ -520,10 +520,17 @@ export async function convert_to_ts(js_code: string, indent = '', offset = '') {
  */
 export async function replace_export_type_placeholders(content: string, modules: Modules) {
 	const REGEXES = {
+		/** Render a specific type from a module with more details. Example: `> EXPANDED_TYPES: svelte#compile` */
 		EXPANDED_TYPES: /> EXPANDED_TYPES: (.+?)#(.+)$/gm,
+		/** Render types from a specific module. Example: `> TYPES: svelte` */
 		TYPES: /> TYPES: (.+?)(?:#(.+))?$/gm,
+		/** Render all exports and types from a specific module. Example: `> MODULE: svelte` */
+		MODULE: /> MODULE: (.+?)$/gm,
+		/** Render the snippet of a specific export. Example: `> EXPORT_SNIPPET: svelte#compile` */
 		EXPORT_SNIPPET: /> EXPORT_SNIPPET: (.+?)#(.+)?$/gm,
+		/** Render all modules. Example: `> MODULES` */
 		MODULES: /> MODULES/g, //! /g is VERY IMPORTANT, OR WILL CAUSE INFINITE LOOP
+		/** Render all value exports from a specific module. Example: `> EXPORTS: svelte` */
 		EXPORTS: /> EXPORTS: (.+)/
 	};
 
@@ -542,32 +549,9 @@ export async function replace_export_type_placeholders(content: string, modules:
 
 		const type = module.types.find((t) => t.name === id);
 
-		if (!type) return '';
+		if (!type) throw new Error(`Could not find type ${name}#${id}`);
 
-		return (
-			type.comment +
-			type.children
-				?.map((child) => {
-					let section = `### ${child.name}`;
-
-					if (child.bullets) {
-						section += `\n\n<div class="ts-block-property-bullets">\n\n${child.bullets.join(
-							'\n'
-						)}\n\n</div>`;
-					}
-
-					section += `\n\n${child.comment}`;
-
-					if (child.children) {
-						section += `\n\n<div class="ts-block-property-children">\n\n${child.children
-							.map((v) => stringify(v))
-							.join('\n')}\n\n</div>`;
-					}
-
-					return section;
-				})
-				.join('\n\n')
-		);
+		return stringify_expanded_type(type);
 	});
 
 	content = await async_replace(content, REGEXES.TYPES, async ([_, name, id]) => {
@@ -578,35 +562,17 @@ export async function replace_export_type_placeholders(content: string, modules:
 		if (id) {
 			const type = module.types.find((t) => t.name === id);
 
-			if (!type) return '';
+			if (!type) throw new Error(`Could not find type ${name}#${id}`);
 
-			return (
-				`<div class="ts-block">${fence(type.snippet, 'dts')}` +
-				type.children?.map((v) => stringify(v)).join('\n\n') +
-				`</div>`
-			);
+			return stringify_type(type);
 		}
 
-		return `${module.comment}\n\n${(
-			await Promise.all(
-				module.types.map(async (t) => {
-					let children = t.children?.map((val) => stringify(val, 'dts')).join('\n\n');
-					if (t.name === 'Config' || t.name === 'KitConfig') {
-						// special case — we want these to be on a separate page
-						children =
-							'<div class="ts-block-property-details">\n\nSee the [configuration reference](/docs/configuration) for details.</div>';
-					}
+		let comment = '';
+		if (module.comment) {
+			comment += `${module.comment}\n\n`;
+		}
 
-					const deprecated = t.deprecated
-						? ` <blockquote class="tag deprecated">${await transform(t.deprecated)}</blockquote>`
-						: '';
-
-					const markdown = `<div class="ts-block">${fence(t.snippet, 'dts')}` + children + `</div>`;
-
-					return `### ${t.name}\n\n${deprecated}\n\n${t.comment ?? ''}\n\n${markdown}\n\n`;
-				})
-			)
-		).join('')}`;
+		return comment + module.types.map((t) => `## ${t.name}\n\n${stringify_type(t)}`).join('');
 	});
 
 	content = await async_replace(content, REGEXES.EXPORT_SNIPPET, async ([_, name, id]) => {
@@ -624,6 +590,13 @@ export async function replace_export_type_placeholders(content: string, modules:
 				?.map((exportVal) => `<div class="ts-block">${fence(exportVal.snippet, 'dts')}</div>`)
 				.join('\n\n') ?? ''
 		);
+	});
+
+	content = await async_replace(content, REGEXES.MODULE, async ([_, name]) => {
+		const module = modules.find((module) => module.name === name);
+		if (!module) throw new Error(`Could not find module ${name}`);
+
+		return stringify_module(module);
 	});
 
 	content = await async_replace(content, REGEXES.MODULES, async () => {
@@ -698,7 +671,7 @@ export async function replace_export_type_placeholders(content: string, modules:
 /**
  * Takes a module and returns a markdown string.
  */
-export function stringify_module(module: Modules[0]) {
+function stringify_module(module: Modules[0]) {
 	let content = '';
 
 	if (module.exports && module.exports.length > 0) {
@@ -726,20 +699,13 @@ export function stringify_module(module: Modules[0]) {
 	}
 
 	for (const t of module.types || []) {
-		if (module.name === '@sveltejs/kit' && (t.name === 'Config' || t.name === 'KitConfig')) {
-			// special case — we want these to be on a separate page
-			content +=
-				`## ${t.name}\n\n` +
-				'See the [configuration reference](/docs/reference/configuration) for details.\n\n';
-		} else {
-			content += `## ${t.name}\n\n` + stringify_type(t);
-		}
+		content += `## ${t.name}\n\n` + stringify_type(t);
 	}
 
 	return content;
 }
 
-export function stringify_type(t: ModuleChild) {
+function stringify_type(t: ModuleChild) {
 	let content = '';
 
 	if (t.deprecated) {
@@ -750,12 +716,14 @@ export function stringify_type(t: ModuleChild) {
 		content += `${t.comment}\n\n`;
 	}
 
-	const children = t.children?.map((val) => stringify(val, 'dts')).join('\n\n');
-	content += `<div class="ts-block">${fence(t.snippet, 'dts')}` + children + `\n</div>\n\n`;
+	if (t.children || t.snippet) {
+		const children = t.children?.map((val) => stringify(val, 'dts')).join('\n\n');
+		content += `<div class="ts-block">${fence(t.snippet, 'dts')}` + children + `\n</div>\n\n`;
+	}
 	return content;
 }
 
-export function stringify_expanded_type(type: ModuleChild) {
+function stringify_expanded_type(type: ModuleChild) {
 	return (
 		type.comment +
 		type.children

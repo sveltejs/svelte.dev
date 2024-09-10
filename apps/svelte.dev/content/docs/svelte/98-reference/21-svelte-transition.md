@@ -193,4 +193,402 @@ function slide(
 
 </div>
 
+## BlurParams
+
+<div class="ts-block">
+
+```dts
+interface BlurParams {/*…*/}
+```
+
+<div class="ts-block-property">
+
+```dts
+delay?: number;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+duration?: number;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+easing?: EasingFunction;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+amount?: number | string;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+opacity?: number;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+</div>
+
+## CrossfadeParams
+
+<div class="ts-block">
+
+```dts
+interface CrossfadeParams {/*…*/}
+```
+
+<div class="ts-block-property">
+
+```dts
+delay?: number;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+duration?: number | ((len: number) => number);
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+easing?: EasingFunction;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+</div>
+
+## DrawParams
+
+<div class="ts-block">
+
+```dts
+interface DrawParams {/*…*/}
+```
+
+<div class="ts-block-property">
+
+```dts
+delay?: number;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+speed?: number;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+duration?: number | ((len: number) => number);
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+easing?: EasingFunction;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+</div>
+
+## EasingFunction
+
+<div class="ts-block">
+
+```dts
+type EasingFunction = (t: number) => number;
+```
+
+
+</div>
+
+## FadeParams
+
+<div class="ts-block">
+
+```dts
+interface FadeParams {/*…*/}
+```
+
+<div class="ts-block-property">
+
+```dts
+delay?: number;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+duration?: number;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+easing?: EasingFunction;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+</div>
+
+## FlyParams
+
+<div class="ts-block">
+
+```dts
+interface FlyParams {/*…*/}
+```
+
+<div class="ts-block-property">
+
+```dts
+delay?: number;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+duration?: number;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+easing?: EasingFunction;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+x?: number | string;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+y?: number | string;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+opacity?: number;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+</div>
+
+## ScaleParams
+
+<div class="ts-block">
+
+```dts
+interface ScaleParams {/*…*/}
+```
+
+<div class="ts-block-property">
+
+```dts
+delay?: number;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+duration?: number;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+easing?: EasingFunction;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+start?: number;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+opacity?: number;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+</div>
+
+## SlideParams
+
+<div class="ts-block">
+
+```dts
+interface SlideParams {/*…*/}
+```
+
+<div class="ts-block-property">
+
+```dts
+delay?: number;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+duration?: number;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+easing?: EasingFunction;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+axis?: 'x' | 'y';
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+</div>
+
+## TransitionConfig
+
+<div class="ts-block">
+
+```dts
+interface TransitionConfig {/*…*/}
+```
+
+<div class="ts-block-property">
+
+```dts
+delay?: number;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+duration?: number;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+easing?: EasingFunction;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+css?: (t: number, u: number) => string;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+tick?: (t: number, u: number) => void;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+</div>
+
 
