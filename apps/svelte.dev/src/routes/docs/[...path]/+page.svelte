@@ -1,6 +1,6 @@
 <script>
 	import { Icon } from '@sveltejs/site-kit/components';
-	import { copy_code_descendants } from '@sveltejs/site-kit/actions';
+	import { copy_code_descendants, ts_js_select } from '@sveltejs/site-kit/actions';
 	import { DocsOnThisPage, setupDocsHovers } from '@sveltejs/site-kit/docs';
 
 	let { data } = $props();
@@ -19,7 +19,7 @@
 	<meta name="Description" content="{data.document.metadata.title} • Svelte documentation" />
 </svelte:head>
 
-<div class="text" id="docs-content" use:copy_code_descendants>
+<div class="text" id="docs-content" use:ts_js_select use:copy_code_descendants>
 	<a
 		class="edit"
 		href="https://github.com/sveltejs/svelte.dev/edit/main/apps/svelte.dev/content/{data.document

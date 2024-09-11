@@ -8,7 +8,7 @@
 		show_ts_toggle?: boolean;
 	}
 
-	let { contents, show_ts_toggle = true }: Props = $props();
+	let { contents, show_ts_toggle = false }: Props = $props();
 </script>
 
 <nav aria-label="Docs">
