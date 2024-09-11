@@ -20,16 +20,16 @@
 
 		<!-- add inline style and blocking script to prevent content flash/jump -->
 		<style>
-			.ts-version {
+			.js-version {
 				display: none;
 			}
-			.prefers-ts .js-version {
-				display: none;
-			}
-			.prefers-ts .ts-version {
+			.prefers-js .js-version {
 				display: block;
 			}
-			.no-js .ts-toggle {
+			.prefers-js .ts-version {
+				display: none;
+			}
+			.hide-legacy-notes blockquote.legacy {
 				display: none;
 			}
 		</style>

@@ -30,7 +30,7 @@
 	.container {
 		--sidebar-menu-width: 28rem;
 		--sidebar-width: var(--sidebar-menu-width);
-		--ts-toggle-height: 4.2rem;
+		--legacy-toggle-height: 4.2rem;
 
 		display: flex;
 		flex-direction: column;

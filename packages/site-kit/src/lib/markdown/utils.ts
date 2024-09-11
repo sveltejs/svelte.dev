@@ -100,6 +100,11 @@ const default_renderer: Partial<Renderer> = {
 	},
 
 	blockquote(quote) {
+		if (quote.startsWith('<p>!LEGACY')) {
+			quote = quote.replace('<p>!LEGACY', '<p>');
+			return '<blockquote class="legacy">\n' + quote + '</blockquote>\n';
+		}
+
 		return '<blockquote>\n' + quote + '</blockquote>\n';
 	},
 

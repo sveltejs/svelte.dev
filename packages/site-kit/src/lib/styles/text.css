@@ -324,7 +324,7 @@
 	margin-bottom: 0;
 }
 
-.text :where(blockquote.deprecated) {
+.text :where(blockquote.deprecated, blockquote.legacy) {
 	--primary-hsl: var(--sk-text-warning-hsl);
 	--color: var(--primary-hsl);
 }
@@ -333,8 +333,13 @@
 	content: 'Deprecated';
 }
 
-.text :where(blockquote.deprecated a) {
+.text :where(blockquote.deprecated a),
+.text :where(blockquote.legacy a) {
 	--color: var(--primary-hsl);
+}
+
+.text :where(blockquote.legacy)::before {
+	content: 'In Svelte 4 / Legacy mode';
 }
 
 .text :where(section a code) {

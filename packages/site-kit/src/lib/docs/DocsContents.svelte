@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import TSToggle from './TSToggle.svelte';
+	import LegacyToggle from './LegacyToggle.svelte';
 	import type { Document } from '../types';
 
 	interface Props {
@@ -8,7 +8,7 @@
 		show_ts_toggle?: boolean;
 	}
 
-	let { contents, show_ts_toggle = false }: Props = $props();
+	let { contents }: Props = $props();
 </script>
 
 <nav aria-label="Docs">
@@ -38,11 +38,9 @@
 	</ul>
 </nav>
 
-{#if show_ts_toggle}
-	<div class="ts-toggle">
-		<TSToggle />
-	</div>
-{/if}
+<div class="legacy-toggle">
+	<LegacyToggle />
+</div>
 
 <style>
 	nav {
@@ -108,7 +106,7 @@
 		margin: 0;
 	}
 
-	.ts-toggle {
+	.legacy-toggle {
 		position: fixed;
 		width: var(--sidebar-width);
 		bottom: var(--sk-banner-bottom-height);
@@ -151,7 +149,7 @@
 			font-weight: 400;
 		}
 
-		.ts-toggle {
+		.legacy-toggle {
 			display: none;
 		}
 	}
@@ -167,7 +165,7 @@
 		}
 
 		nav {
-			max-height: calc(100vh - var(--ts-toggle-height) - var(--sk-nav-height));
+			max-height: calc(100vh - var(--legacy-toggle-height) - var(--sk-nav-height));
 			overflow-x: hidden;
 			overflow-y: auto;
 		}
