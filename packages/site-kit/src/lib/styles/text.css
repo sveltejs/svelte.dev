@@ -344,3 +344,16 @@
 .text :where(ul ul) {
 	margin-bottom: 0;
 }
+
+details.legacy {
+	background-color: hsla(var(--sk-text-warning-hsl), 0.02);
+	border-radius: var(--sk-border-radius);
+	padding: 1rem;
+	margin: 1rem 0;
+	& > summary {
+		color: hsl(var(--sk-text-warning-hsl));
+		font-size: 1.4rem;
+		font-weight: 600;
+		cursor: pointer;
+	}
+}

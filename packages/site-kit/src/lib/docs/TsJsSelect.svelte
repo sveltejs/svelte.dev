@@ -7,7 +7,7 @@
 
 	if (browser) {
 		prefers_ts.subscribe((ts) => {
-			document.body.classList.toggle('prefers-ts', ts);
+			document.body.classList.toggle('prefers-js', !ts);
 		});
 	}
 </script>

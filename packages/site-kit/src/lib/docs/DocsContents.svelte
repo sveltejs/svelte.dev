@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import TSToggle from './TSToggle.svelte';
 	import type { Document } from '../types';
 
 	interface Props {
@@ -8,7 +7,7 @@
 		show_ts_toggle?: boolean;
 	}
 
-	let { contents, show_ts_toggle = false }: Props = $props();
+	let { contents }: Props = $props();
 </script>
 
 <nav aria-label="Docs">
@@ -37,12 +36,6 @@
 		{/each}
 	</ul>
 </nav>
-
-{#if show_ts_toggle}
-	<div class="ts-toggle">
-		<TSToggle />
-	</div>
-{/if}
 
 <style>
 	nav {
@@ -108,18 +101,6 @@
 		margin: 0;
 	}
 
-	.ts-toggle {
-		position: fixed;
-		width: var(--sidebar-width);
-		bottom: var(--sk-banner-bottom-height);
-		left: 0;
-		z-index: 1;
-		margin-right: 0;
-		border-top: 1px solid var(--sk-back-4);
-		border-right: 1px solid var(--sk-back-5);
-		background-color: var(--sk-back-3);
-	}
-
 	@media (max-width: 831px) {
 		.sidebar {
 			padding: 1rem;
@@ -150,10 +131,6 @@
 			color: var(--sk-theme-1) !important;
 			font-weight: 400;
 		}
-
-		.ts-toggle {
-			display: none;
-		}
 	}
 
 	@media (min-width: 832px) {
@@ -167,7 +144,7 @@
 		}
 
 		nav {
-			max-height: calc(100vh - var(--ts-toggle-height) - var(--sk-nav-height));
+			max-height: calc(100vh - var(--sk-nav-height));
 			overflow-x: hidden;
 			overflow-y: auto;
 		}
