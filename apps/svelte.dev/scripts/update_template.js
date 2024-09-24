@@ -1,43 +1,42 @@
 // @ts-check
-import { lstat, readFile, stat, writeFile } from 'node:fs/promises';
-import path, { dirname } from 'node:path';
+import fs from 'node:fs';
 import { fileURLToPath } from 'node:url';
-import sh from 'shelljs';
+import { execSync } from 'node:child_process';
+import glob from 'tiny-glob/sync.js';
 
 const force = process.env.FORCE_UPDATE === 'true';
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
-sh.cd(path.join(__dirname, '..'));
+const dir = fileURLToPath(new URL('./svelte-app', import.meta.url));
 
 const outputFile = 'static/svelte-app.json';
 
 try {
-	if (!force && (await stat(outputFile))) {
+	if (!force && fs.existsSync(outputFile)) {
 		console.info(`[update/template] ${outputFile} exists. Skipping`);
 		process.exit(0);
 	}
 } catch {
 	// fetch svelte app
-	sh.rm('-rf', 'scripts/svelte-app');
-	sh.exec('npx degit sveltejs/template scripts/svelte-app');
+	fs.rmdirSync(dir);
+	execSync(`npx degit sveltejs/template ${dir}`);
 
 	// remove src (will be recreated client-side) and node_modules
-	sh.rm('-rf', 'scripts/svelte-app/src');
-	sh.rm('-rf', 'scripts/svelte-app/node_modules');
+	fs.rmdirSync(`${dir}/src`);
+	fs.rmdirSync(`${dir}/node_modules`);
 
 	// build svelte-app.json
-	const appPath = 'scripts/svelte-app';
+	const appPath = dir;
 	const files = [];
 
-	for (const path of sh.find(appPath)) {
+	for (const path of glob(`${dir}/**`)) {
 		// Skip directories
-		if (!(await lstat(path)).isFile()) continue;
+		if (!fs.lstatSync(path).isFile()) continue;
 
-		const bytes = await readFile(path);
+		const bytes = fs.readFileSync(path);
 		const string = bytes.toString();
 		const data = bytes.compare(Buffer.from(string)) === 0 ? string : [...bytes];
 		files.push({ path: path.slice(appPath.length + 1), data });
 	}
 
-	writeFile(outputFile, JSON.stringify(files));
+	fs.writeFileSync(outputFile, JSON.stringify(files));
 }
