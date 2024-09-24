@@ -11,20 +11,6 @@
 	injectSpeedInsights();
 
 	let { data, children: layout_children } = $props();
-
-	/** @type {import('@sveltejs/site-kit/components').Shell} */
-	let shell;
-
-	export const snapshot = {
-		capture() {
-			return {
-				shell: shell.snapshot.capture()
-			};
-		},
-		restore(data) {
-			shell.snapshot.restore(data?.shell);
-		}
-	};
 </script>
 
 <svelte:head>
@@ -35,7 +21,7 @@
 	{/if}
 </svelte:head>
 
-<Shell nav_visible={$page.route.id !== '/(authed)/repl/[id]/embed'} bind:this={shell}>
+<Shell nav_visible={$page.route.id !== '/(authed)/repl/[id]/embed'}>
 	{#snippet top_nav()}
 		<Nav title={data.nav_title} links={data.nav_links}>
 			{#snippet search()}

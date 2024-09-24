@@ -3,7 +3,6 @@ The main shell of the application. It provides a slot for the top navigation, th
 -->
 
 <script lang="ts">
-	import { afterNavigate } from '$app/navigation';
 	import { navigating } from '$app/stores';
 	import { overlay_open } from '../stores';
 	import PreloadingIndicator from '../nav/PreloadingIndicator.svelte';
@@ -11,7 +10,6 @@ The main shell of the application. It provides a slot for the top navigation, th
 	import '../styles/index.css';
 	import Icons from './Icons.svelte';
 	import type { Snippet } from 'svelte';
-	import type { Snapshot } from '@sveltejs/kit';
 
 	let {
 		nav_visible = true,
@@ -24,29 +22,6 @@ The main shell of the application. It provides a slot for the top navigation, th
 		children?: Snippet;
 		banner_bottom?: Snippet;
 	} = $props();
-
-	let main_el = $state() as HTMLElement;
-	let scroll_restored = false;
-
-	afterNavigate(() => {
-		if (!scroll_restored) {
-			main_el.scrollTop = 0;
-		}
-		scroll_restored = false;
-	});
-
-	export const snapshot: Snapshot<number> = {
-		capture() {
-			return main_el.scrollTop;
-		},
-		restore(scroll_top) {
-			main_el.scrollTop = scroll_top;
-
-			// Restore is not called for the first navigation to a page,
-			// use this flag to track whether to reset the scroll to top or not in afterNavigate
-			scroll_restored = true;
-		}
-	};
 </script>
 
 <Icons />
@@ -63,7 +38,7 @@ The main shell of the application. It provides a slot for the top navigation, th
 
 <div class="modal-overlay" class:visible={$overlay_open} aria-hidden="true"></div>
 
-<main id="main" bind:this={main_el}>
+<main id="main">
 	{@render children?.()}
 </main>
 
@@ -99,8 +74,6 @@ The main shell of the application. It provides a slot for the top navigation, th
 		margin: 0 auto;
 		padding-top: var(--sk-nav-height);
 		padding-bottom: var(--sk-banner-bottom-height);
-		overflow: hidden;
-		overflow-y: auto;
 		height: 100%;
 	}
 
