@@ -207,17 +207,21 @@ Top navigation bar for the application. It provides a slot for the left side, th
 	.menu :global(a) {
 		color: var(--sk-text-2);
 		line-height: 1;
-		margin: 0 0.3em;
+		padding: 0 0.3em;
 		white-space: nowrap;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		text-decoration: none;
+
+		&:hover {
+			box-shadow: inset 0 -1px 0 0 var(--sk-back-5);
+		}
 	}
 
 	.menu :global(a[aria-current='page']) {
 		color: var(--sk-theme-1);
-		box-shadow: inset 0 -1px 0 0 var(--sk-theme-1);
-	}
-
-	.menu :global(a[aria-current='page']:hover) {
-		text-decoration: none;
+		box-shadow: inset 0 -1px 0 0 currentColor;
 	}
 
 	.home-link {
@@ -231,7 +235,6 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		align-items: center;
 		padding-left: calc(var(--sk-page-padding-side) + 4rem);
 		padding-top: 5px; /* center vertically relative to logo */
-		text-decoration: none;
 		text-transform: uppercase;
 		letter-spacing: 0.05em;
 		font-size: 1.8rem;
