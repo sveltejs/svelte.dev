@@ -5,11 +5,8 @@ import { get } from 'svelte/store';
 const show_legacy = persisted('svelte:show-legacy', true);
 
 export function legacy_details(node: HTMLElement) {
-	let details: NodeListOf<HTMLDetailsElement>;
-
 	function update() {
-		/** @type {HTMLElement | null} */
-		let scroll_parent = node;
+		let scroll_parent: HTMLElement | null = node;
 
 		while ((scroll_parent = scroll_parent.parentElement)) {
 			if (/^(scroll|auto)$/.test(getComputedStyle(scroll_parent).overflowY)) {
@@ -17,7 +14,7 @@ export function legacy_details(node: HTMLElement) {
 			}
 		}
 
-		details = /** @type {NodeListOf<HTMLDetailsElement>} */ node.querySelectorAll('details.legacy');
+		const details = node.querySelectorAll('details.legacy') as NodeListOf<HTMLDetailsElement>;
 		const show = get(show_legacy);
 
 		/** Whether the toggle was initiated by user action or `element.open = !element.open` */
@@ -45,7 +42,7 @@ export function legacy_details(node: HTMLElement) {
 
 				if (delta !== 0) {
 					// whichever element the user interacted with should stay in the same position
-					scroll_parent.scrollBy(0, delta);
+					(scroll_parent ?? document.body).scrollBy(0, delta);
 				}
 
 				setTimeout(() => {
