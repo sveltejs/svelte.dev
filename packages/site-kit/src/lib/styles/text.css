@@ -350,15 +350,25 @@ details.legacy {
 	border-radius: var(--sk-border-radius);
 	padding: 1rem;
 	margin: 1rem 0;
+
 	& > summary {
 		color: hsl(var(--sk-text-warning-hsl));
 		font-size: 1.4rem;
 		font-weight: 600;
 		cursor: pointer;
+
+		&::after {
+			content: 'show all';
+			float: right;
+		}
 	}
 
 	&[open] > summary {
 		margin-bottom: 1.4rem;
+
+		&::after {
+			content: 'hide all'
+		}
 	}
 
 	> :last-child {
