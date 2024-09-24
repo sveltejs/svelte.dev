@@ -150,18 +150,19 @@
 		}
 
 		.active::after {
-			--size: 1rem;
+			--size: 1.8rem;
 			content: '';
 			position: absolute;
 			width: var(--size);
 			height: var(--size);
-			top: -0.1rem;
+			top: calc(0.8rem - var(--size) * 0.5);
 			right: calc(-0.5 * var(--size));
 			background-color: var(--sk-back-1);
-			border-left: 1px solid var(--sk-back-5);
-			border-bottom: 1px solid var(--sk-back-5);
-			transform: translateY(0.2rem) rotate(45deg);
 			z-index: 2;
+			position: absolute;
+			rotate: 45deg;
+			/** needed to synchronise with transition on `*` in `base.css` */
+			transition: background-color 0.5s var(--quint-out);
 		}
 	}
 </style>

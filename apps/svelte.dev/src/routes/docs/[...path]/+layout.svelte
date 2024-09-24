@@ -75,16 +75,6 @@
 			overflow: hidden;
 		}
 
-		.toc-container::before {
-			content: '';
-			position: fixed;
-			width: 0;
-			height: 100%;
-			top: 0;
-			left: calc(var(--sidebar-width) - 1px);
-			border-right: 1px solid var(--sk-back-5);
-		}
-
 		.page {
 			padding-left: calc(var(--sidebar-width) + var(--sk-page-padding-side));
 		}
