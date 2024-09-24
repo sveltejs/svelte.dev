@@ -45,5 +45,13 @@
 		</script>
 
 		<div style="height: 100%">%sveltekit.body%</div>
+
+		<script>
+			if (localStorage.getItem('svelte:show-legacy') !== 'false') {
+				for (const node of document.querySelectorAll('details.legacy')) {
+					node.open = true;
+				}
+			}
+		</script>
 	</body>
 </html>
