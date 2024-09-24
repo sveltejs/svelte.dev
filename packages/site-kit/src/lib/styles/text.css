@@ -357,6 +357,10 @@ details.legacy {
 		cursor: pointer;
 	}
 
+	&[open] > summary {
+		margin-bottom: 1.4rem;
+	}
+
 	> :last-child {
 		margin-bottom: 0;
 	}
