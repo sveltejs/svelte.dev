@@ -1,4 +1,4 @@
-import { fork } from 'node:child_process/promises';
+import { fork } from 'node:child_process';
 import { fileURLToPath } from 'url';
 
 const dir = fileURLToPath(new URL('.', import.meta.url));
