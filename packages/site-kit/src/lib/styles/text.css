@@ -356,4 +356,8 @@ details.legacy {
 		font-weight: 600;
 		cursor: pointer;
 	}
+
+	> :last-child {
+		margin-bottom: 0;
+	}
 }

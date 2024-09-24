@@ -41,7 +41,7 @@ class Todo {
 ```
 
 <details class="legacy">
-<summary>In Svelte 4 / Legacy Mode</summary>
+<summary>Legacy mode</summary>
 
 In Svelte 4, state was implicitly reactive if the variable was declared at the top level
 
@@ -79,7 +79,7 @@ The expression inside `$derived(...)` should be free of side-effects. Svelte wil
 As with `$state`, you can mark class fields as `$derived`.
 
 <details class="legacy">
-<summary>In Svelte 4 / Legacy Mode</summary>
+<summary>Legacy mode</summary>
 In Svelte 4, you could use reactive statements for this.
 
 ```svelte
@@ -126,7 +126,7 @@ To run _side-effects_ when the component is mounted to the DOM, and when values 
 The function passed to `$effect` will run when the component mounts, and will re-run after any changes to the values it reads that were declared with `$state` or `$derived` (including those passed in with `$props`). Re-runs are batched (i.e. changing `color` and `size` in the same moment won't cause two separate runs), and happen after any DOM updates have been applied.
 
 <details class="legacy">
-<summary>In Svelte 4 / Legacy Mode</summary>
+<summary>Legacy mode</summary>
 In Svelte 4, you could use reactive statements for this.
 
 ```svelte
