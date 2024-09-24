@@ -19,8 +19,6 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		home_title?: string;
 		title: string | undefined;
 		links: NavigationLink[];
-		home_large?: Snippet;
-		home_small?: Snippet;
 		search?: Snippet;
 		external_links?: Snippet;
 		theme_label?: Snippet;
@@ -30,8 +28,6 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		home_title = 'Homepage',
 		title,
 		links,
-		home_large,
-		home_small,
 		search,
 		external_links,
 		theme_label
@@ -82,13 +78,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 	aria-label="Primary"
 >
 	<a class="home-link" href="/" title={home_title}>
-		<span class="home-large">
-			{@render home_large?.()}
-		</span>
-
-		<span class="home-small">
-			{@render home_small?.()}
-		</span>
+		<strong>svelte</strong>
 	</a>
 
 	{#if title}
@@ -230,28 +220,21 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		background-size: auto 70%;
 		align-items: center;
 		padding-left: calc(var(--sk-page-padding-side) + 4rem);
-		padding-top: 5px; /* center vertically relative to logo */
 		text-decoration: none;
 		text-transform: uppercase;
 		letter-spacing: 0.05em;
 		font-size: 1.8rem;
 		color: var(--sk-text-4);
-	}
 
-	.home-small {
-		display: none;
+		strong {
+			position: relative;
+			color: var(--sk-text-1);
+			font-weight: inherit;
 
-		margin-left: -0.75rem;
-	}
-
-	.home-large {
-		display: block;
-		color: var(--sk-text-4);
-	}
-
-	.home-link :global(strong) {
-		color: var(--sk-text-1);
-		font-weight: inherit;
+			@media (min-width: 800px) {
+				top: 1px;
+			}
+		}
 	}
 
 	.mobile-menu {
@@ -302,14 +285,6 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		nav {
 			top: unset;
 			bottom: 0;
-		}
-
-		.home-small {
-			display: block;
-		}
-
-		.home-large {
-			display: none;
 		}
 
 		.menu {

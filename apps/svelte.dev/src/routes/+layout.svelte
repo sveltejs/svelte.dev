@@ -38,14 +38,6 @@
 <Shell nav_visible={$page.route.id !== '/(authed)/repl/[id]/embed'} bind:this={shell}>
 	{#snippet top_nav()}
 		<Nav title={data.nav_title} links={data.nav_links}>
-			{#snippet home_large()}
-				<strong>svelte</strong>.dev
-			{/snippet}
-
-			{#snippet home_small()}
-				<strong>svelte</strong>
-			{/snippet}
-
 			{#snippet search()}
 				{#if $page.url.pathname !== '/search'}
 					<Search />
