@@ -24,48 +24,42 @@
 	.dropdown {
 		position: relative;
 		display: inline-block;
+		height: 100%;
 	}
 
 	.dropdown-content {
-		display: none;
+		opacity: 0;
+		pointer-events: none;
 		position: absolute;
 		left: -1rem;
-		background-color: var(--sk-back-1);
+		top: calc(100% - 1rem);
+		background-color: var(--sk-back-2);
 		min-width: 10rem;
 		z-index: 1;
-		animation: flyout 0.3s ease-in-out;
 		box-shadow: var(--sk-shadow);
-		border-radius: 0 0 var(--sk-border-radius) var(--sk-border-radius);
-	}
+		border-radius: var(--sk-border-radius);
 
-	@keyframes flyout {
-		from {
-			opacity: 0;
-			transform: translateY(-10px);
+		a {
+			color: var(--sk-text-3);
+			padding: 1.3rem !important;
+			text-decoration: none;
+			display: block;
+			margin: 0 !important;
+			box-shadow: none !important;
+
+			&:last-of-type {
+				border-radius: var(--sk-border-radius);
+			}
 		}
-		to {
-			opacity: 1;
-			transform: translateY(0);
-		}
-	}
 
-	.dropdown:hover .dropdown-content {
-		display: block;
-	}
-
-	.dropdown-content a {
-		color: var(--sk-text-3);
-		padding: 1.3rem;
-		text-decoration: none;
-		display: block;
-		margin: 0 !important;
-
-		&:last-of-type {
-			border-radius: 0 0 var(--sk-border-radius) var(--sk-border-radius);
+		a:hover {
+			background-color: var(--sk-back-4);
 		}
 	}
 
-	.dropdown-content a:hover {
-		background-color: var(--sk-back-4);
+	.dropdown:hover .dropdown-content,
+	.dropdown:focus-within .dropdown-content {
+		opacity: 1;
+		pointer-events: all;
 	}
 </style>
