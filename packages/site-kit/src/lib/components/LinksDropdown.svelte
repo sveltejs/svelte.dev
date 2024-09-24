@@ -28,7 +28,8 @@
 	}
 
 	.dropdown-content {
-		display: none;
+		opacity: 0;
+		pointer-events: none;
 		position: absolute;
 		left: -1rem;
 		top: calc(100% - 1rem);
@@ -58,6 +59,7 @@
 
 	.dropdown:hover .dropdown-content,
 	.dropdown:focus-within .dropdown-content {
-		display: block;
+		opacity: 1;
+		pointer-events: all;
 	}
 </style>
