@@ -367,7 +367,7 @@ details.legacy {
 		margin-bottom: 1.4rem;
 
 		&::after {
-			content: 'hide all'
+			content: 'hide all';
 		}
 	}
 
