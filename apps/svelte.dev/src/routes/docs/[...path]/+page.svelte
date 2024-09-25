@@ -25,14 +25,6 @@
 <div class="text" id="docs-content" use:ts_js_select use:copy_code_descendants use:legacy_details>
 	<header>
 		<h1>{data.document.metadata.title}</h1>
-
-		<a
-			class="edit"
-			href="https://github.com/sveltejs/svelte.dev/edit/main/apps/svelte.dev/content/{data.document
-				.file}"
-		>
-			<Icon size={50} name="edit" /> Edit this page on GitHub
-		</a>
 	</header>
 
 	<OnThisPage {content} document={data.document} />
@@ -40,6 +32,16 @@
 	<div class="content" bind:this={content}>
 		{@html data.document.body}
 	</div>
+
+	<p class="edit">
+		<a
+			class="edit"
+			href="https://github.com/sveltejs/svelte.dev/edit/main/apps/svelte.dev/content/{data.document
+				.file}"
+		>
+			<Icon size={50} name="edit" /> Edit this page on GitHub
+		</a>
+	</p>
 </div>
 
 <div class="controls">
@@ -65,15 +67,20 @@
 		font-size: 1.4rem;
 		line-height: 1;
 		z-index: 2;
-	}
+		margin: 6rem 0 0 0;
 
-	.edit :global(.icon) {
-		position: relative;
-		top: -0.1rem;
-		left: 0.3rem;
-		width: 1.4rem;
-		height: 1.4rem;
-		margin-right: 0.5rem;
+		a {
+			text-decoration: none;
+		}
+
+		:global(.icon) {
+			position: relative;
+			top: -0.1rem;
+			left: 0.3rem;
+			width: 1.4rem;
+			height: 1.4rem;
+			margin-right: 0.5rem;
+		}
 	}
 
 	.controls {
@@ -82,7 +89,7 @@
 		padding: 1rem 0 0 0;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		margin: 6rem 0 0 0;
+		margin: 1rem 0 0 0;
 	}
 
 	.controls > :first-child {
