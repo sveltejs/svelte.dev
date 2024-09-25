@@ -50,9 +50,7 @@ export function escape(html: string, encode = false) {
 export function slugify(title: string) {
 	return title
 		.toLowerCase()
-		.replace(/&#39;/g, '')
-		.replace(/&lt;/g, '')
-		.replace(/&gt;/g, '')
+		.replace(/&.+;/g, '')
 		.replace(/[^a-z0-9-$]/g, '-')
 		.replace(/-{2,}/g, '-')
 		.replace(/^-/, '')

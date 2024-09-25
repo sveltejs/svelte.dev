@@ -25,7 +25,7 @@ export async function create_index(
 		}
 
 		const sections = Array.from(body.matchAll(/^##\s+(.*)$/gm)).map((match) => {
-			const title = match[1];
+			const title = match[1].replace(/`/g, '').replace(/&lt;/g, '<').replace(/&gt;/g, '>');
 			const slug = slugify(title);
 
 			return { slug, title };
