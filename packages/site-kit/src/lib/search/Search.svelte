@@ -141,9 +141,5 @@ Renders a search widget which when clicked (or the corresponding keyboard shortc
 		.search-container {
 			width: 32rem;
 		}
-
-		input::placeholder {
-			opacity: 1;
-		}
 	}
 </style>
