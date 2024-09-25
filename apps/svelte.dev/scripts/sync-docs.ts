@@ -1,5 +1,6 @@
 import { replace_export_type_placeholders, type Modules } from '@sveltejs/site-kit/markdown';
 import { spawn, type SpawnOptions } from 'node:child_process';
+import path from 'node:path';
 import {
 	cpSync,
 	existsSync,
@@ -14,15 +15,18 @@ import ts from 'typescript';
 import glob from 'tiny-glob/sync';
 import { fileURLToPath } from 'node:url';
 
+const dirname = fileURLToPath(new URL('.', import.meta.url));
+const REPOS = path.join(dirname, '../repos');
+
 // Adjust the following variables as needed for your local setup
 
 /** If `true`, will checkout the docs from Git. If `false`, will use the `..._repo_path` vars to get content from your local file system */
 const use_git = process.env.USE_GIT === 'true';
 
 /** The path to your local Svelte repository (only relevant if `use_git` is `false`) */
-let svelte_repo_path = '../../../svelte';
+let svelte_repo_path = path.join(dirname, '../../../../svelte');
 /** The path to your local SvelteKit repository (only relevant if `use_git` is `false`) */
-let sveltekit_repo_path = '../../../svelte-kit';
+let sveltekit_repo_path = path.join(dirname, '../../../../svelte-kit');
 
 /**
  * Depending on your setup, this will either clone the Svelte and SvelteKit repositories
@@ -33,7 +37,7 @@ let sveltekit_repo_path = '../../../svelte-kit';
 export async function sync_docs() {
 	if (use_git) {
 		try {
-			mkdirSync('repos');
+			mkdirSync(REPOS);
 		} catch {
 			// ignore if it already exists
 		}
@@ -43,8 +47,8 @@ export async function sync_docs() {
 			cloneRepo('https://github.com/sveltejs/kit.git')
 		]);
 
-		svelte_repo_path = 'repos/svelte';
-		sveltekit_repo_path = 'repos/kit';
+		svelte_repo_path = `${REPOS}/svelte`;
+		sveltekit_repo_path = `${REPOS}/kit`;
 	}
 
 	await sync_svelte_docs();
@@ -52,11 +56,7 @@ export async function sync_docs() {
 }
 
 async function sync_svelte_docs() {
-	cpSync(
-		fileURLToPath(new URL(`../${svelte_repo_path}/documentation/docs`, import.meta.url)),
-		'content/docs/svelte',
-		{ recursive: true }
-	);
+	cpSync(`${svelte_repo_path}/documentation/docs`, 'content/docs/svelte', { recursive: true });
 	migrate_meta_json('content/docs/svelte');
 
 	const svelte_modules = await read_svelte_types();
@@ -73,11 +73,7 @@ async function sync_svelte_docs() {
 }
 
 async function sync_kit_docs() {
-	cpSync(
-		fileURLToPath(new URL(`../${sveltekit_repo_path}/documentation/docs`, import.meta.url)),
-		'content/docs/kit',
-		{ recursive: true }
-	);
+	cpSync(`${sveltekit_repo_path}/documentation/docs`, 'content/docs/kit', { recursive: true });
 	migrate_meta_json('content/docs/kit');
 
 	const sveltekit_modules = await read_kit_types();
@@ -147,14 +143,14 @@ async function cloneRepo(repo: string) {
 		throw new Error(`Expected https://github.com/xxx/xxx.git, but got ${repo}`);
 	}
 
-	const dirname = `repos/${regex_result[1]}`;
+	const dirname = `${REPOS}/${regex_result[1]}`;
 	if (existsSync(dirname)) {
 		// TODO skip if we detect that same branch is already cloned
 		rmSync(dirname, { recursive: true });
 	}
 
 	await invoke('git', ['clone', '--depth', '1', repo], {
-		cwd: 'repos'
+		cwd: REPOS
 	});
 }
 
