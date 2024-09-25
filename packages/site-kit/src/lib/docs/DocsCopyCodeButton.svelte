@@ -41,7 +41,7 @@
 	}
 </script>
 
-<button id="copy-to-clipboard-button" onclick={copy}>
+<button class="copy-to-clipboard-button" onclick={copy}>
 	{#if copying}
 		<span transition:fade={{ easing: cubicOut, duration: 400 }}>
 			<Icon name="copy-to-clipboard-filled" />
@@ -55,7 +55,7 @@
 </button>
 
 <style>
-	:global(.code-block #copy-to-clipboard-button) {
+	:global(.code-block .copy-to-clipboard-button) {
 		top: 5px;
 	}
 

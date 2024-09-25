@@ -1,11 +1,15 @@
-<script>
+<script lang="ts">
 	import { Icon } from '@sveltejs/site-kit/components';
 	import { copy_code_descendants, legacy_details, ts_js_select } from '@sveltejs/site-kit/actions';
 	import { DocsOnThisPage, setupDocsHovers } from '@sveltejs/site-kit/docs';
+	import { afterNavigate } from '$app/navigation';
+	import OnThisPage from './OnThisPage.svelte';
 
 	let { data } = $props();
 
 	setupDocsHovers();
+
+	let content: HTMLElement = $state();
 </script>
 
 <svelte:head>
@@ -20,21 +24,23 @@
 </svelte:head>
 
 <div class="text" id="docs-content" use:ts_js_select use:copy_code_descendants use:legacy_details>
-	<a
-		class="edit"
-		href="https://github.com/sveltejs/svelte.dev/edit/main/apps/svelte.dev/content/{data.document
-			.file}"
-	>
-		<Icon size={50} name="edit" /> Edit this page on GitHub
-	</a>
+	<header>
+		<h1>{data.document.metadata.title}</h1>
 
-	<DocsOnThisPage
-		title={data.document.metadata.title}
-		path="/{data.document.slug}"
-		sections={data.document.sections}
-	/>
+		<a
+			class="edit"
+			href="https://github.com/sveltejs/svelte.dev/edit/main/apps/svelte.dev/content/{data.document
+				.file}"
+		>
+			<Icon size={50} name="edit" /> Edit this page on GitHub
+		</a>
+	</header>
 
-	{@html data.document.body}
+	<OnThisPage {content} document={data.document} />
+
+	<div class="content" bind:this={content}>
+		{@html data.document.body}
+	</div>
 </div>
 
 <div class="controls">
@@ -55,6 +61,11 @@
 </div>
 
 <style>
+	/* .text {
+		display: grid;
+		grid-template-columns: 1fr var(--sidebar-width);
+	} */
+
 	.edit {
 		position: relative;
 		font-size: 1.4rem;

@@ -355,7 +355,6 @@ details.legacy {
 		color: hsl(var(--sk-text-warning-hsl));
 		font-size: 1.4rem;
 		font-weight: 600;
-		cursor: pointer;
 
 		&::after {
 			content: 'show all';

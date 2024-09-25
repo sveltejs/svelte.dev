@@ -1,12 +1,7 @@
 <script>
-	import { page } from '$app/stores';
 	import { DocsContents } from '@sveltejs/site-kit/docs';
 
 	let { data, children } = $props();
-
-	const pageData = $derived($page.data.document);
-	const title = $derived(pageData?.metadata.title);
-	const category = $derived(pageData?.category);
 </script>
 
 <div class="container">
@@ -15,13 +10,6 @@
 	</div>
 
 	<div class="page content">
-		{#if category}
-			<p class="category">{category}</p>
-		{/if}
-		{#if title}
-			<h1>{title}</h1>
-		{/if}
-
 		{@render children()}
 	</div>
 </div>
@@ -43,14 +31,6 @@
 
 	.page :global(:where(h2, h3) code) {
 		all: unset;
-	}
-
-	.category {
-		font: 700 var(--sk-text-s) var(--sk-font);
-		text-transform: uppercase;
-		letter-spacing: 0.12em;
-		margin: 0 0 0.5em;
-		color: var(--sk-text-3);
 	}
 
 	@media (min-width: 832px) {
@@ -82,7 +62,16 @@
 
 	@media (min-width: 1200px) {
 		.container {
-			--sidebar-width: max(28rem, 23vw);
+			--sidebar-width: max(
+				28rem,
+				calc(
+					0.5 *
+						(
+							100vw - var(--sk-line-max-width) - var(--sk-page-padding-side) -
+								var(--sk-page-padding-side)
+						)
+				)
+			);
 			flex-direction: row;
 		}
 
@@ -90,7 +79,6 @@
 			--on-this-page-display: block;
 			padding: var(--sk-page-padding-top) calc(var(--sidebar-width) + var(--sk-page-padding-side));
 			margin: 0 auto;
-			width: var(--sk-line-max-width);
 			box-sizing: content-box;
 		}
 	}
