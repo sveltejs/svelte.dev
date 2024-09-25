@@ -18,7 +18,8 @@ import { fileURLToPath } from 'node:url';
 // Adjust the following variables as needed for your local setup
 
 /** If `true`, will checkout the docs from Git. If `false`, will use the `..._repo_path` vars to get content from your local file system */
-const use_git = false;
+const use_git = process.env.USE_GIT === 'true';
+
 /** The path to your local Svelte repository (only relevant if `use_git` is `false`) */
 let svelte_repo_path = '../../../svelte';
 /** The path to your local SvelteKit repository (only relevant if `use_git` is `false`) */
