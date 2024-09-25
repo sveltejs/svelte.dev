@@ -88,10 +88,6 @@ Top navigation bar for the application. It provides a slot for the left side, th
 	{/if}
 
 	<div class="desktop">
-		<div class="center-area">
-			{@render search?.()}
-		</div>
-
 		<div class="menu">
 			{#each links as link}
 				{#if link.sections?.[0].path}
@@ -116,6 +112,8 @@ Top navigation bar for the application. It provides a slot for the left side, th
 				>
 				<ThemeToggle />
 			</div>
+
+			{@render search?.()}
 		</div>
 	</div>
 
@@ -317,17 +315,10 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		}
 	}
 
-	.desktop .center-area {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex: 1;
-	}
-
 	@media (min-width: 800px) {
 		nav {
 			display: grid;
-			grid-template-columns: auto 1fr 1fr;
+			grid-template-columns: 1fr auto;
 		}
 
 		nav::after {
@@ -355,13 +346,6 @@ Top navigation bar for the application. It provides a slot for the left side, th
 
 		nav :global(.small) {
 			display: none;
-		}
-	}
-
-	@media (min-width: 1240px) {
-		nav {
-			display: grid;
-			grid-template-columns: 1fr auto 1fr;
 		}
 	}
 </style>
