@@ -21,12 +21,7 @@
 				<ul>
 					{#each section.children as { metadata, slug }}
 						<li>
-							<a
-								data-sveltekit-preload-data
-								class="page"
-								class:active={`/${slug}` === $page.url.pathname}
-								href="/{slug}"
-							>
+							<a class="page" class:active={`/${slug}` === $page.url.pathname} href="/{slug}">
 								{metadata.title}
 							</a>
 						</li>

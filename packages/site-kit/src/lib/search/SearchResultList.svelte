@@ -37,7 +37,6 @@
 	{#each results as result (result.href)}
 		<li>
 			<a
-				data-sveltekit-preload-data
 				href={result.href}
 				onclick={() => onselect?.(result.href)}
 				data-has-node={result.node ? true : undefined}
