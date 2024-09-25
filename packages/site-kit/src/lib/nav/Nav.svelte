@@ -210,6 +210,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		background-size: auto 70%;
 		align-items: center;
 		padding-left: calc(var(--sk-page-padding-side) + 4rem);
+		padding-right: 2rem;
 		text-decoration: none;
 		text-transform: uppercase;
 		letter-spacing: 0.05em;
