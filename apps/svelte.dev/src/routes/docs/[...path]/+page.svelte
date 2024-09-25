@@ -1,15 +1,14 @@
 <script lang="ts">
 	import { Icon } from '@sveltejs/site-kit/components';
 	import { copy_code_descendants, legacy_details, ts_js_select } from '@sveltejs/site-kit/actions';
-	import { DocsOnThisPage, setupDocsHovers } from '@sveltejs/site-kit/docs';
-	import { afterNavigate } from '$app/navigation';
+	import { setupDocsHovers } from '@sveltejs/site-kit/docs';
 	import OnThisPage from './OnThisPage.svelte';
 
 	let { data } = $props();
 
 	setupDocsHovers();
 
-	let content: HTMLElement = $state();
+	let content = $state() as HTMLElement;
 </script>
 
 <svelte:head>

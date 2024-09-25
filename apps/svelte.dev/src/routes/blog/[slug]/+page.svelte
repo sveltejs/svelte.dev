@@ -1,7 +1,7 @@
 <script>
 	import { page } from '$app/stores';
 	import { copy_code_descendants, ts_js_select } from '@sveltejs/site-kit/actions';
-	import { DocsOnThisPage, setupDocsHovers } from '@sveltejs/site-kit/docs';
+	import { setupDocsHovers } from '@sveltejs/site-kit/docs';
 
 	export let data;
 
@@ -37,12 +37,12 @@
 			<time datetime={data.date}>{data.date_formatted}</time>
 		</p>
 
-		<DocsOnThisPage
+		<!-- <DocsOnThisPage
 			title={data.title}
 			path={data.path}
 			sections={data.sections}
 			orientation="inline"
-		/>
+		/> -->
 
 		{@html data.body}
 	</article>
