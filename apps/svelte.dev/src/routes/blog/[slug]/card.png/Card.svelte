@@ -1,5 +1,5 @@
 <script lang="ts">
-	let { title, date_formatted }: { title: string; date_formatted: string } = $props();
+	let { title, date }: { title: string; date: string } = $props();
 </script>
 
 <div class="card">
@@ -7,7 +7,7 @@
 
 	<div class="text">
 		<h1>{title}</h1>
-		<p class="date">{date_formatted}</p>
+		<p class="date">{date}</p>
 	</div>
 </div>
 

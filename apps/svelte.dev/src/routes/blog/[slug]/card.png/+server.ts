@@ -27,7 +27,7 @@ export async function GET({ params }) {
 
 	if (!post) error(404);
 
-	const result = render(Card, { props: post });
+	const result = render(Card, { props: { title: post.metadata.title, date: post.date_formatted } });
 	const element = toReactNode(`${result.body}<style>${CardCSS}</style>`);
 
 	const svg = await satori(element, {
