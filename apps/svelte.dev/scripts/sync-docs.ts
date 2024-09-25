@@ -13,6 +13,7 @@ import {
 import { format } from 'prettier';
 import ts from 'typescript';
 import glob from 'tiny-glob/sync';
+import { fileURLToPath } from 'node:url';
 
 // Adjust the following variables as needed for your local setup
 
@@ -55,7 +56,7 @@ export async function sync_docs() {
 
 async function sync_svelte_docs() {
 	cpSync(
-		new URL(`../${svelte_repo_path}/documentation/docs`, import.meta.url).pathname.slice(1),
+		fileURLToPath(new URL(`../${svelte_repo_path}/documentation/docs`, import.meta.url)),
 		'content/docs/svelte',
 		{ recursive: true }
 	);
@@ -76,7 +77,7 @@ async function sync_svelte_docs() {
 
 async function sync_kit_docs() {
 	cpSync(
-		new URL(`../${sveltekit_repo_path}/documentation/docs`, import.meta.url).pathname.slice(1),
+		fileURLToPath(new URL(`../${sveltekit_repo_path}/documentation/docs`, import.meta.url)),
 		'content/docs/kit',
 		{ recursive: true }
 	);
