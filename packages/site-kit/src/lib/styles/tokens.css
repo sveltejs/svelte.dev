@@ -105,7 +105,7 @@ body {
 		--sk-theme-3-hsl: 204, 100%, 63%;
 		--sk-text-1: hsla(0, 0%, 0%, 0.87);
 		--sk-text-2: hsla(0, 0%, 0%, 0.73);
-		--sk-text-3: hsla(0, 0%, 0%, 0.60);
+		--sk-text-3: hsla(0, 0%, 0%, 0.6);
 		--sk-text-4: hsla(0, 0%, 0%, 0.35);
 		--sk-scrollbar: rgba(0, 0, 0, 0.3);
 		--sk-shadow: 0px 0px 14px rgba(0, 0, 0, 0.1);
@@ -167,7 +167,7 @@ body {
 		--sk-theme-3-hsl: 204, 100%, 63%;
 		--sk-text-1: hsla(0, 0%, 0%, 0.87);
 		--sk-text-2: hsla(0, 0%, 0%, 0.73);
-		--sk-text-3: hsla(0, 0%, 0%, 0.60);
+		--sk-text-3: hsla(0, 0%, 0%, 0.6);
 		--sk-text-4: hsla(0, 0%, 0%, 0.35);
 		--sk-scrollbar: rgba(0, 0, 0, 0.3);
 		--sk-shadow: 0px 0px 14px rgba(0, 0, 0, 0.1);
