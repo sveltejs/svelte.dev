@@ -285,6 +285,9 @@ importers:
       '@sveltejs/site-kit':
         specifier: workspace:*
         version: link:../site-kit
+      '@sveltejs/svelte-json-tree':
+        specifier: ^2.2.0
+        version: 2.2.0(svelte@5.0.0-next.243)
       acorn:
         specifier: ^8.11.3
         version: 8.11.3
@@ -1351,6 +1354,11 @@ packages:
     hasBin: true
     peerDependencies:
       svelte: ^3.44.0 || ^4.0.0 || ^5.0.0-next.1
+
+  '@sveltejs/svelte-json-tree@2.2.0':
+    resolution: {integrity: sha512-Ohgv6m5d1M9xNbo2fVzYKtI0VzKA1DBh2isZ/NarEriNxICQNVVfJtNjUCryFNvcg1XsdrmfV4VGTzFWO57pCw==}
+    peerDependencies:
+      svelte: ^4.0.0
 
   '@sveltejs/vite-plugin-svelte-inspector@3.0.0-next.2':
     resolution: {integrity: sha512-Yl9BWvEj+1j+8mICIAA04/Sx0wEHNL0n9pSIZFM8n4NWgLFmR3v41qX2k54J/r4LWE2YHTeNNH2WJqEUb3geEA==}
@@ -3976,6 +3984,10 @@ snapshots:
       svelte2tsx: 0.7.8(svelte@5.0.0-next.243)(typescript@5.5.4)
     transitivePeerDependencies:
       - typescript
+
+  '@sveltejs/svelte-json-tree@2.2.0(svelte@5.0.0-next.243)':
+    dependencies:
+      svelte: 5.0.0-next.243
 
   '@sveltejs/vite-plugin-svelte-inspector@3.0.0-next.2(@sveltejs/vite-plugin-svelte@4.0.0-next.6(svelte@5.0.0-next.243)(vite@5.4.3(@types/node@20.12.11)(lightningcss@1.25.1)))(svelte@5.0.0-next.243)(vite@5.4.3(@types/node@20.12.11)(lightningcss@1.25.1))':
     dependencies:

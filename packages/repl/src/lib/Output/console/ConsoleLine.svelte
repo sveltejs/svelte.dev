@@ -1,5 +1,5 @@
 <script lang="ts">
-	import JSONNode from 'svelte-json-tree';
+	import JSONNode from '@sveltejs/svelte-json-tree';
 	import ConsoleTable from './ConsoleTable.svelte';
 	import type { Log } from './console';
 

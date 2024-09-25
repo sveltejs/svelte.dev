@@ -1,5 +1,5 @@
 <script lang="ts">
-	import JSONNode from 'svelte-json-tree';
+	import JSONNode from '@sveltejs/svelte-json-tree';
 
 	export let data: any;
 	export let columns: any;
