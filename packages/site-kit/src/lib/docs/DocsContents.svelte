@@ -21,7 +21,11 @@
 				<ul>
 					{#each section.children as { metadata, slug }}
 						<li>
-							<a class="page" class:active={`/${slug}` === $page.url.pathname} href="/{slug}">
+							<a
+								class="page"
+								aria-current={`/${slug}` === $page.url.pathname ? 'page' : undefined}
+								href="/{slug}"
+							>
 								{metadata.title}
 							</a>
 						</li>
@@ -77,6 +81,7 @@
 		text-transform: uppercase;
 		letter-spacing: 0.1em;
 		font-weight: 600;
+		color: var(--sk-text-2);
 	}
 
 	.page {
@@ -86,8 +91,8 @@
 		padding-bottom: 0.6em;
 	}
 
-	.active {
-		font-weight: 700;
+	[aria-current='page'] {
+		/* font-weight: 700; */
 		color: var(--sk-text-1);
 	}
 
@@ -121,7 +126,7 @@
 			background-color: var(--sk-back-4);
 		}
 
-		.active {
+		[aria-current='page'] {
 			background-color: hsla(var(--sk-theme-1-hsl), 0.1) !important;
 			color: var(--sk-theme-1) !important;
 			font-weight: 400;
@@ -144,7 +149,7 @@
 			overflow-y: auto;
 		}
 
-		.active::after {
+		[aria-current='page']::after {
 			--size: 1.8rem;
 			content: '';
 			position: absolute;

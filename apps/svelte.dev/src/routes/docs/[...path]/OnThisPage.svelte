@@ -59,7 +59,7 @@
 
 			a {
 				display: block;
-				color: inherit;
+				color: var(--sk-text-3);
 				box-shadow: none; /* unfortunate hack to unset some other CSS */
 
 				/* Only show the title link if it's in the sidebar */
@@ -156,15 +156,8 @@
 					display: block;
 				}
 
-				a.active::before {
-					content: '';
-					position: absolute;
-					left: -2rem;
-					top: calc(50% - 0.6em);
-					height: 1em;
-					width: 1em;
-					background: url($lib/icons/arrow-left.svg);
-					background-size: contain;
+				a.active {
+					color: var(--sk-text-1);
 				}
 			}
 		}
