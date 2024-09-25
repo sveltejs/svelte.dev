@@ -67,7 +67,7 @@
 		font-size: 1.4rem;
 		line-height: 1;
 		z-index: 2;
-		margin: 6rem 0 0 0;
+		margin: 6rem 0 2rem 0;
 
 		a {
 			text-decoration: none;
