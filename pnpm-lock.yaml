@@ -306,9 +306,6 @@ importers:
       svelte:
         specifier: ^5.0.0-next.243
         version: 5.0.0-next.243
-      svelte-json-tree:
-        specifier: ^2.2.0
-        version: 2.2.0(svelte@5.0.0-next.243)
       zimmerframe:
         specifier: ^1.1.2
         version: 1.1.2
@@ -2596,11 +2593,6 @@ packages:
     peerDependencies:
       svelte: ^4.0.0 || ^5.0.0-next.0
       typescript: '>=5.0.0'
-
-  svelte-json-tree@2.2.0:
-    resolution: {integrity: sha512-zcfepTrJ6xhpdgRZEujmiFh+ainRw7HO4Bsoh8PMAsm7fkgUPtnrZi3An8tmCFY8jajYhMrauHsd1S1XTeuiCw==}
-    peerDependencies:
-      svelte: ^4.0.0
 
   svelte-parse-markup@0.1.5:
     resolution: {integrity: sha512-T6mqZrySltPCDwfKXWQ6zehipVLk4GWfH1zCMGgRtLlOIFPuw58ZxVYxVvotMJgJaurKi1i14viB2GIRKXeJTQ==}
@@ -5258,10 +5250,6 @@ snapshots:
       typescript: 5.5.4
     transitivePeerDependencies:
       - picomatch
-
-  svelte-json-tree@2.2.0(svelte@5.0.0-next.243):
-    dependencies:
-      svelte: 5.0.0-next.243
 
   svelte-parse-markup@0.1.5(svelte@5.0.0-next.243):
     dependencies:
