@@ -162,8 +162,6 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		transition: 0.4s var(--quint-out);
 		transition-property: transform, background;
 		isolation: isolate;
-		--nav-max-width: calc(var(--sk-line-max-width) + var(--sk-page-padding-side) + 64rem);
-		padding: 0 calc(0.5 * (100vw - var(--nav-max-width)));
 	}
 
 	nav::after {
