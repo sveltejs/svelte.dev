@@ -142,21 +142,21 @@
 			mix-blend-mode: screen;
 		}
 
-		:global(body.light) .hero {
+		:global(html.light) .hero {
 			background: var(--gradient);
 		}
 
-		:global(body.light) .hero-text :global(svg) {
+		:global(html.light) .hero-text :global(svg) {
 			mix-blend-mode: initial;
 		}
 	}
 
-	:global(body.dark) .hero {
+	:global(html.dark) .hero {
 		background: hsl(210, 7%, 20%);
 		background: var(--dark-gradient);
 	}
 
-	:global(body.dark) .hero-text :global(svg) {
+	:global(html.dark) .hero-text :global(svg) {
 		mix-blend-mode: screen;
 	}
 </style>

@@ -35,7 +35,7 @@
 		--background-2: var(--sk-back-4);
 	}
 
-	:global(body.dark .try-container) {
+	:global(html.dark .try-container) {
 		--background-2: #444;
 	}
 
@@ -44,7 +44,7 @@
 			--background-2: #444;
 		}
 
-		:global(body.light .try-container) {
+		:global(html.light .try-container) {
 			--background-2: var(--sk-back-4) !important;
 		}
 	}

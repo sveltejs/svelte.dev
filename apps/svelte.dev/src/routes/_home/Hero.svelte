@@ -164,7 +164,7 @@
 		}
 	}
 
-	:global(body.dark) .hero {
+	:global(html.dark) .hero {
 		background: radial-gradient(
 				64.14% 72.25% at 47.58% 31.75%,
 				hsl(209deg 6% 47% / 52%) 0%,
@@ -179,7 +179,7 @@
 			linear-gradient(0deg, hsl(204, 38%, 20%), hsl(204, 10%, 90%));
 	}
 
-	:global(body.dark) .logotype {
+	:global(html.dark) .logotype {
 		filter: invert(4) brightness(1.2);
 	}
 </style>
