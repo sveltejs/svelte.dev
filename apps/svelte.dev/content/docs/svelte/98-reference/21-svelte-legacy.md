@@ -6,7 +6,21 @@ title: svelte/legacy
 
 ```js
 // @noErrors
-import { asClassComponent, createClassComponent, run } from 'svelte/legacy';
+import {
+	asClassComponent,
+	createBubbler,
+	createClassComponent,
+	handlers,
+	nonpassive,
+	once,
+	passive,
+	preventDefault,
+	run,
+	self,
+	stopImmediatePropagation,
+	stopPropagation,
+	trusted
+} from 'svelte/legacy';
 ```
 
 ## asClassComponent
@@ -29,6 +43,21 @@ function asClassComponent<
 ): ComponentType<
 	SvelteComponent<Props, Events, Slots> & Exports
 >;
+```
+
+</div>
+
+## createBubbler
+
+Function to create a `bubble` function that mimic the behavior of `on:click` without handler available in svelte 4.
+
+<div class="ts-block">
+
+```ts
+// @noErrors
+function createBubbler(): (
+	type: string
+) => (event: Event) => boolean;
 ```
 
 </div>
@@ -57,6 +86,89 @@ function createClassComponent<
 
 </div>
 
+## handlers
+
+Function to mimic the multiple listeners available in svelte 4
+
+<div class="ts-block">
+
+```ts
+// @noErrors
+function handlers(
+	...handlers: EventListener[]
+): EventListener;
+```
+
+</div>
+
+## nonpassive
+
+Substitute for the `nonpassive` event modifier, implemented as an action
+
+<div class="ts-block">
+
+```ts
+// @noErrors
+function nonpassive(
+	node: HTMLElement,
+	[event, handler]: [
+		event: string,
+		handler: () => EventListener
+	]
+): void;
+```
+
+</div>
+
+## once
+
+Substitute for the `once` event modifier
+
+<div class="ts-block">
+
+```ts
+// @noErrors
+function once(
+	fn: (event: Event, ...args: Array<unknown>) => void
+): (event: Event, ...args: unknown[]) => void;
+```
+
+</div>
+
+## passive
+
+Substitute for the `passive` event modifier, implemented as an action
+
+<div class="ts-block">
+
+```ts
+// @noErrors
+function passive(
+	node: HTMLElement,
+	[event, handler]: [
+		event: string,
+		handler: () => EventListener
+	]
+): void;
+```
+
+</div>
+
+## preventDefault
+
+Substitute for the `preventDefault` event modifier
+
+<div class="ts-block">
+
+```ts
+// @noErrors
+function preventDefault(
+	fn: (event: Event, ...args: Array<unknown>) => void
+): (event: Event, ...args: unknown[]) => void;
+```
+
+</div>
+
 ## run
 
 Runs the given function once immediately on the server, and works like `$effect.pre` on the client.
@@ -66,6 +178,66 @@ Runs the given function once immediately on the server, and works like `$effect.
 ```ts
 // @noErrors
 function run(fn: () => void | (() => void)): void;
+```
+
+</div>
+
+## self
+
+Substitute for the `self` event modifier
+
+<div class="ts-block">
+
+```ts
+// @noErrors
+function self(
+	fn: (event: Event, ...args: Array<unknown>) => void
+): (event: Event, ...args: unknown[]) => void;
+```
+
+</div>
+
+## stopImmediatePropagation
+
+Substitute for the `stopImmediatePropagation` event modifier
+
+<div class="ts-block">
+
+```ts
+// @noErrors
+function stopImmediatePropagation(
+	fn: (event: Event, ...args: Array<unknown>) => void
+): (event: Event, ...args: unknown[]) => void;
+```
+
+</div>
+
+## stopPropagation
+
+Substitute for the `stopPropagation` event modifier
+
+<div class="ts-block">
+
+```ts
+// @noErrors
+function stopPropagation(
+	fn: (event: Event, ...args: Array<unknown>) => void
+): (event: Event, ...args: unknown[]) => void;
+```
+
+</div>
+
+## trusted
+
+Substitute for the `trusted` event modifier
+
+<div class="ts-block">
+
+```ts
+// @noErrors
+function trusted(
+	fn: (event: Event, ...args: Array<unknown>) => void
+): (event: Event, ...args: unknown[]) => void;
 ```
 
 </div>
