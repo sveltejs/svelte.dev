@@ -1,11 +1,13 @@
 /*
 
-!IMPORTANT: The tokens for light and dark mode are duplicated, if you change a token for dark mode, 
+!IMPORTANT: The tokens for light and dark mode are duplicated, if you change a token for dark mode,
 !you should change that for the other dark mode too
 
 */
 
 :root {
+	color-scheme: light;
+
 	--sk-back-h: 206;
 	--sk-selection-color: hsla(204, 100%, 63%, 0.3);
 
@@ -30,9 +32,7 @@
 	--sk-text-s: 1.6rem;
 	--sk-text-xs: 1.3rem;
 	--sk-line-max-width: 84rem;
-}
 
-body {
 	--sk-focus-outline: 0 0 0 2px hsla(var(--sk-theme-1-hsl), 0.6);
 
 	/* Base colors */
@@ -40,166 +40,56 @@ body {
 	--sk-theme-2: hsl(var(--sk-theme-2-hsl));
 	--sk-theme-3: hsl(var(--sk-theme-3-hsl));
 
-	--sk-back-3: hsla(var(--sk-back-3-hsl), 1);
 	--sk-back-2: hsla(var(--sk-back-2-hsl), 1);
+	--sk-back-3: hsla(var(--sk-back-3-hsl), 1);
 
 	--sk-code-bg: var(--sk-back-3);
 
 	--sk-text-warning: hsl(var(--sk-text-warning-hsl));
-}
 
-@media only screen and (prefers-color-scheme: dark) {
-	:root {
-		color-scheme: dark;
+	--sk-back-3-hsl: 206, 64%, 98%;
+	--sk-back-2-hsl: 0, 0%, 100%;
 
-		--sk-back-3-hsl: 0, 0%, 14%;
-		--sk-back-2-hsl: 0, 0%, 18%;
+	--sk-back-1: hsl(0, 0%, 100%);
+	--sk-back-4: hsl(210, 75%, 97%);
+	--sk-back-5: hsl(206, 20%, 80%);
+	--sk-theme-1-hsl: 12, 93%, 43%;
+	--sk-theme-2-hsl: 240, 8%, 44%;
+	--sk-theme-3-hsl: 204, 100%, 63%;
+	--sk-text-1: hsla(0, 0%, 0%, 0.95);
+	--sk-text-2: hsla(0, 0%, 0%, 0.73);
+	--sk-text-3: hsla(0, 0%, 0%, 0.55);
+	--sk-text-4: hsla(0, 0%, 0%, 0.35);
+	--sk-scrollbar: rgba(0, 0, 0, 0.3);
+	--sk-shadow: 0px 0px 14px rgba(0, 0, 0, 0.1);
 
-		--sk-back-1: hsl(0, 0%, 10%);
-		--sk-back-4: hsl(0, 0%, 22%);
-		--sk-back-5: hsl(0, 0%, 40%);
-		--sk-back-translucent: hsla(0, 0%, 100%, 0.1);
-		--sk-theme-1-hsl: 12, 94%, 62%;
-		--sk-theme-2-hsl: 240, 8%, 44%;
-		--sk-theme-3-hsl: 204, 100%, 63%;
-		--sk-text-1: hsl(0, 0%, 90%);
-		--sk-text-2: hsl(0, 0%, 80%);
-		--sk-text-3: hsl(0, 0%, 65%);
-		--sk-text-4: hsl(0, 0%, 45%);
-		--sk-text-translucent: hsla(0, 0%, 100%, 0.9);
-		--sk-scrollbar: rgba(255, 255, 255, 0.3);
-		--sk-shadow: 0px 0px 0 1px var(--sk-back-4);
+	/* same in light mode, different in dark mode */
+	--sk-theme-1-variant: hsl(15, 100%, 50%);
+	--sk-theme-2-variant: hsl(240, 8%, 44%);
+	--sk-theme-3-variant: hsl(204, 100%, 63%);
 
-		--sk-theme-1-variant: hsl(15, 100%, 40%);
-		--sk-theme-2-variant: hsl(240, 8%, 35%);
-		--sk-theme-3-variant: hsl(204, 100%, 50%);
+	--sk-code-ts-bg: var(--sk-back-1);
+	--sk-code-base: hsl(45, 7%, 35%);
+	--sk-code-comment: hsl(0, 0%, 41%);
+	--sk-code-keyword: hsl(204, 88%, 35%);
+	--sk-code-function: hsl(19, 67%, 44%);
+	--sk-code-string: hsl(41, 37%, 38%);
+	--sk-code-number: hsl(120, 100%, 25%);
+	--sk-code-template-string: hsl(2, 80%, 47%);
+	--sk-code-tags: var(--sk-code-function);
+	--sk-code-important: var(--sk-code-string);
+	--sk-code-diff-base: hsla(0, 0%, 0%, 0.6);
+	--sk-code-diff-inserted: hsl(120, 100%, 25%);
+	--sk-code-diff-removed: hsl(2, 80%, 47%);
 
-		--sk-text-warning-hsl: 32, 67%, 56%;
+	--sk-text-warning-hsl: 32, 95%, 44%;
 
-		--sk-code-ts-bg: hsl(var(--sk-back-2-hsl));
-		--sk-code-base: hsl(45, 7%, 75%);
-		--sk-code-comment: hsl(0, 0%, 55%);
-		--sk-code-keyword: hsl(204, 88%, 65%);
-		--sk-code-function: hsl(19, 67%, 75%);
-		--sk-code-string: hsl(41, 37%, 68%);
-		--sk-code-number: hsl(120, 100%, 25%);
-		--sk-code-template-string: hsl(2, 80%, 47%);
-		--sk-code-tags: var(--sk-code-function);
-		--sk-code-important: var(--sk-code-string);
-		--sk-code-diff-base: hsla(0, 0%, 100%, 0.5);
-		--sk-code-diff-inserted: hsl(120, 46%, 48%);
-		--sk-code-diff-removed: hsl(2, 64%, 70%);
-	}
+	/* used for coloured backgrounds e.g. blockquotes */
+	--sk-back-translucent: hsla(0, 0%, 0%, 0.1);
+	--sk-text-translucent: hsla(0, 0%, 0%, 0.7);
 
-	body.light {
+	&.dark {
 		color-scheme: light;
-
-		--sk-back-3-hsl: 206, 64%, 98%;
-		--sk-back-2-hsl: 0, 0%, 100%;
-
-		--sk-back-1: hsl(0, 0%, 100%);
-		--sk-back-4: hsl(210, 75%, 97%);
-		--sk-back-5: hsl(206, 20%, 80%);
-		--sk-theme-1-hsl: 12, 93%, 43%;
-		--sk-theme-2-hsl: 240, 8%, 44%;
-		--sk-theme-3-hsl: 204, 100%, 63%;
-		--sk-text-1: hsla(0, 0%, 0%, 0.95);
-		--sk-text-2: hsla(0, 0%, 0%, 0.73);
-		--sk-text-3: hsla(0, 0%, 0%, 0.55);
-		--sk-text-4: hsla(0, 0%, 0%, 0.35);
-		--sk-scrollbar: rgba(0, 0, 0, 0.3);
-		--sk-shadow: 0px 0px 14px rgba(0, 0, 0, 0.1);
-
-		/* same in light mode, different in dark mode */
-		--sk-theme-1-variant: hsl(15, 100%, 50%);
-		--sk-theme-2-variant: hsl(240, 8%, 44%);
-		--sk-theme-3-variant: hsl(204, 100%, 63%);
-
-		--sk-code-ts-bg: var(--sk-back-1);
-		--sk-code-base: hsl(45, 7%, 35%);
-		--sk-code-comment: hsl(0, 0%, 41%);
-		--sk-code-keyword: hsl(204, 88%, 35%);
-		--sk-code-function: hsl(19, 67%, 44%);
-		--sk-code-string: hsl(41, 37%, 38%);
-		--sk-code-number: hsl(120, 100%, 25%);
-		--sk-code-template-string: hsl(2, 80%, 47%);
-		--sk-code-tags: var(--sk-code-function);
-		--sk-code-important: var(--sk-code-string);
-		--sk-code-diff-base: hsla(0, 0%, 0%, 0.6);
-		--sk-code-diff-inserted: hsl(120, 100%, 25%);
-		--sk-code-diff-removed: hsl(2, 80%, 47%);
-
-		--sk-text-warning-hsl: 32, 95%, 44%;
-
-		/* used for coloured backgrounds e.g. blockquotes */
-		--sk-back-translucent: hsla(0, 0%, 0%, 0.1);
-		--sk-text-translucent: hsla(0, 0%, 0%, 0.7);
-	}
-}
-
-@media screen and (min-width: 480px) {
-	:root {
-		--sk-page-padding-side: 3.2rem;
-	}
-}
-
-@media screen and (min-width: 768px) {
-	:root {
-		--sk-text-xxl: 5.4rem;
-		--sk-text-xl: 3.6rem;
-		--sk-page-padding-top: 8rem;
-		--sk-page-padding-side: 4.8rem;
-	}
-}
-
-@media screen and (prefers-color-scheme: light) {
-	:root {
-		color-scheme: light;
-
-		--sk-back-3-hsl: 206, 64%, 98%;
-		--sk-back-2-hsl: 0, 0%, 100%;
-
-		--sk-back-1: hsl(0, 0%, 100%);
-		--sk-back-4: hsl(210, 75%, 97%);
-		--sk-back-5: hsl(206, 20%, 80%);
-		--sk-theme-1-hsl: 12, 93%, 43%;
-		--sk-theme-2-hsl: 240, 8%, 44%;
-		--sk-theme-3-hsl: 204, 100%, 63%;
-		--sk-text-1: hsla(0, 0%, 0%, 0.95);
-		--sk-text-2: hsla(0, 0%, 0%, 0.73);
-		--sk-text-3: hsla(0, 0%, 0%, 0.55);
-		--sk-text-4: hsla(0, 0%, 0%, 0.35);
-		--sk-scrollbar: rgba(0, 0, 0, 0.3);
-		--sk-shadow: 0px 0px 14px rgba(0, 0, 0, 0.1);
-
-		/* same in light mode, different in dark mode */
-		--sk-theme-1-variant: hsl(15, 100%, 50%);
-		--sk-theme-2-variant: hsl(240, 8%, 44%);
-		--sk-theme-3-variant: hsl(204, 100%, 63%);
-
-		--sk-code-ts-bg: var(--sk-back-1);
-		--sk-code-base: hsl(45, 7%, 35%);
-		--sk-code-comment: hsl(0, 0%, 41%);
-		--sk-code-keyword: hsl(204, 88%, 35%);
-		--sk-code-function: hsl(19, 67%, 44%);
-		--sk-code-string: hsl(41, 37%, 38%);
-		--sk-code-number: hsl(120, 100%, 25%);
-		--sk-code-template-string: hsl(2, 80%, 47%);
-		--sk-code-tags: var(--sk-code-function);
-		--sk-code-important: var(--sk-code-string);
-		--sk-code-diff-base: hsla(0, 0%, 0%, 0.4);
-		--sk-code-diff-inserted: hsl(120, 100%, 25%);
-		--sk-code-diff-removed: hsl(2, 80%, 47%);
-
-		--sk-text-warning-hsl: 32, 95%, 44%;
-
-		/* used for coloured backgrounds e.g. blockquotes */
-		--sk-back-translucent: hsla(0, 0%, 0%, 0.1);
-		--sk-text-translucent: hsla(0, 0%, 0%, 0.7);
-	}
-
-	body.dark {
-		color-scheme: dark;
 
 		--sk-back-3-hsl: 0, 0%, 14%;
 		--sk-back-2-hsl: 0, 0%, 18%;
@@ -239,5 +129,21 @@ body {
 		--sk-code-diff-base: hsla(0, 0%, 100%, 0.5);
 		--sk-code-diff-inserted: hsl(120, 46%, 48%);
 		--sk-code-diff-removed: hsl(2, 64%, 70%);
+	}
+}
+
+
+@media screen and (min-width: 480px) {
+	:root {
+		--sk-page-padding-side: 3.2rem;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	:root {
+		--sk-text-xxl: 5.4rem;
+		--sk-text-xl: 3.6rem;
+		--sk-page-padding-top: 8rem;
+		--sk-page-padding-side: 4.8rem;
 	}
 }
