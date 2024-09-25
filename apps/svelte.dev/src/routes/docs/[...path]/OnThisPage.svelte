@@ -54,25 +54,7 @@
 
 <style>
 	.on-this-page {
-		margin: 4rem 0;
-		background: var(--sk-back-3);
-		padding: 1rem;
-
-		label {
-			position: relative;
-		}
-
-		input {
-			appearance: none;
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			left: 0;
-			top: 0;
-		}
-
 		nav {
-			display: none;
 			padding-top: 0.8rem;
 
 			a {
@@ -90,28 +72,56 @@
 		label {
 			text-transform: uppercase;
 			display: block;
-
-			&::before {
-				content: '';
-				position: absolute;
-				right: 0;
-				top: calc(50% - 0.5em);
-				width: 1em;
-				height: 1em;
-				background: url($lib/icons/chevron.svg);
-				background-size: contain;
-				rotate: 0deg;
-				transition: rotate 0.2s;
-			}
 		}
 
-		label:has(:checked) {
-			&::before {
-				rotate: -90deg;
+		@media (max-width: 1199px) {
+			margin: 4rem 0;
+			background: var(--sk-back-3);
+			padding: 1rem;
+
+			&:not(:has(a:nth-child(2))) {
+				/* hide widget if there are no subheadings */
+				display: none;
 			}
 
-			& + nav {
-				display: block;
+			label {
+				position: relative;
+
+				&::before {
+					content: '';
+					position: absolute;
+					right: 0;
+					top: calc(50% - 0.5em);
+					width: 1em;
+					height: 1em;
+					background: url($lib/icons/chevron.svg);
+					background-size: contain;
+					rotate: 0deg;
+					transition: rotate 0.2s;
+				}
+			}
+
+			label:has(:checked) {
+				&::before {
+					rotate: -90deg;
+				}
+
+				& + nav {
+					display: block;
+				}
+			}
+
+			input {
+				appearance: none;
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				left: 0;
+				top: 0;
+			}
+
+			nav {
+				display: none;
 			}
 		}
 
@@ -119,11 +129,9 @@
 			position: fixed;
 			top: 14rem;
 			right: 0;
-			margin: 0;
 			width: var(--sidebar-width);
 			padding: 0 var(--sk-page-padding-side) 0 0;
 			box-sizing: border-box;
-			background: none;
 
 			input {
 				display: none;
