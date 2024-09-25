@@ -21,17 +21,9 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		links: NavigationLink[];
 		search?: Snippet;
 		external_links?: Snippet;
-		theme_label?: Snippet;
 	}
 
-	let {
-		home_title = 'Homepage',
-		title,
-		links,
-		search,
-		external_links,
-		theme_label
-	}: Props = $props();
+	let { home_title = 'Homepage', title, links, search, external_links }: Props = $props();
 
 	let visible = $state(true);
 
@@ -101,19 +93,17 @@ Top navigation bar for the application. It provides a slot for the left side, th
 					</a>
 				{/if}
 			{/each}
+		</div>
 
-			<Separator />
-
+		<div class="menu">
 			{@render external_links?.()}
 
+			{@render search?.()}
+
 			<div class="appearance">
-				<span class="caption"
-					>{#if theme_label}{@render theme_label()}{:else}Theme{/if}</span
-				>
+				<span class="caption">Theme</span>
 				<ThemeToggle />
 			</div>
-
-			{@render search?.()}
 		</div>
 	</div>
 
@@ -136,9 +126,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 			<Separator />
 
 			<div class="appearance">
-				<span class="caption"
-					>{#if theme_label}{@render theme_label()}{:else}Theme{/if}</span
-				>
+				<span class="caption">Theme</span>
 				<ThemeToggle />
 			</div>
 		</Menu>
@@ -318,7 +306,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 	@media (min-width: 800px) {
 		nav {
 			display: grid;
-			grid-template-columns: 1fr auto;
+			grid-template-columns: auto 1fr 1fr;
 		}
 
 		nav::after {
@@ -333,6 +321,9 @@ Top navigation bar for the application. It provides a slot for the left side, th
 			height: 100%;
 			align-items: center;
 			padding: 0 var(--sk-page-padding-side) 0 0;
+		}
+
+		.menu:last-child {
 			justify-content: end;
 		}
 
