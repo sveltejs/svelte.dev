@@ -17,6 +17,7 @@ import { fileURLToPath } from 'node:url';
 
 const dirname = fileURLToPath(new URL('.', import.meta.url));
 const REPOS = path.join(dirname, '../repos');
+const DOCS = path.join(dirname, '../content/docs');
 
 // Adjust the following variables as needed for your local setup
 
@@ -56,11 +57,11 @@ export async function sync_docs() {
 }
 
 async function sync_svelte_docs() {
-	cpSync(`${svelte_repo_path}/documentation/docs`, 'content/docs/svelte', { recursive: true });
-	migrate_meta_json('content/docs/svelte');
+	cpSync(`${svelte_repo_path}/documentation/docs`, `${DOCS}/svelte`, { recursive: true });
+	migrate_meta_json(`${DOCS}/svelte`);
 
 	const svelte_modules = await read_svelte_types();
-	const files = glob('content/docs/svelte/**/*.md');
+	const files = glob(`${DOCS}/svelte/**/*.md`);
 
 	for (const file of files) {
 		const content = await replace_export_type_placeholders(
@@ -73,8 +74,8 @@ async function sync_svelte_docs() {
 }
 
 async function sync_kit_docs() {
-	cpSync(`${sveltekit_repo_path}/documentation/docs`, 'content/docs/kit', { recursive: true });
-	migrate_meta_json('content/docs/kit');
+	cpSync(`${sveltekit_repo_path}/documentation/docs`, `${DOCS}/kit`, { recursive: true });
+	migrate_meta_json(`${DOCS}/kit`);
 
 	const sveltekit_modules = await read_kit_types();
 
@@ -111,7 +112,7 @@ async function sync_kit_docs() {
 	config.comment = kit_config.comment =
 		'See the [configuration reference](/docs/kit/configuration) for details.';
 
-	const kit_files = glob('content/docs/kit/**/*.md');
+	const kit_files = glob(`${DOCS}/kit/**/*.md`);
 
 	for (const file of kit_files) {
 		const content = await replace_export_type_placeholders(
