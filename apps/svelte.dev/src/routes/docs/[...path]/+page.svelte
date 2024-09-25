@@ -60,11 +60,6 @@
 </div>
 
 <style>
-	/* .text {
-		display: grid;
-		grid-template-columns: 1fr var(--sidebar-width);
-	} */
-
 	.edit {
 		position: relative;
 		font-size: 1.4rem;
