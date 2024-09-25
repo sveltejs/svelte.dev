@@ -163,6 +163,7 @@
 			rotate: 45deg;
 			/** needed to synchronise with transition on `*` in `base.css` */
 			transition: background-color 0.5s var(--quint-out);
+			box-shadow: 0 0 3px rgba(0, 0, 0, 0.12);
 		}
 	}
 </style>

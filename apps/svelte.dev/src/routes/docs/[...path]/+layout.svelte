@@ -53,6 +53,16 @@
 			left: 0;
 			top: var(--sk-nav-height);
 			overflow: hidden;
+
+			&::after {
+				content: '';
+				position: absolute;
+				right: 0;
+				top: 0;
+				width: 3px;
+				height: 100%;
+				background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.03));
+			}
 		}
 
 		.page {
