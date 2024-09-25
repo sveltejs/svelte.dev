@@ -58,10 +58,9 @@ Renders a search widget which when clicked (or the corresponding keyboard shortc
 	input {
 		position: relative;
 		padding: 0.5em 0.5em 0.4em 2em;
-		border: 1px solid var(--sk-back-translucent);
+		border: none;
 		font-family: inherit;
 		font-size: 1.4rem;
-		/* text-align: center; */
 		appearance: none;
 		-webkit-appearance: none;
 		width: 100%;
@@ -69,7 +68,7 @@ Renders a search widget which when clicked (or the corresponding keyboard shortc
 		border-radius: 3.5rem;
 		background:
 			no-repeat 1rem 50% / 1em 1em url(../icons/search.svg),
-			var(--sk-back-3);
+			var(--sk-back-4);
 		color: var(--sk-text-3);
 	}
 
@@ -79,7 +78,7 @@ Renders a search widget which when clicked (or the corresponding keyboard shortc
 
 	input::placeholder {
 		font-size: 1.2rem;
-		text-transform: uppercase;
+		text-transform: lowercase;
 		color: var(--sk-text-3);
 		transform: translateY(-1px);
 	}
@@ -99,13 +98,9 @@ Renders a search widget which when clicked (or the corresponding keyboard shortc
 
 	kbd {
 		display: none;
-		background: var(--sk-back-2);
-		border: 1px solid var(--sk-back-translucent);
-		padding: 0.2rem 0.2rem 0rem 0.2rem;
 		color: var(--sk-text-3);
 		font-size: inherit;
 		font-family: inherit;
-		border-radius: 2px;
 	}
 
 	@media (min-width: 800px) {
@@ -135,6 +130,16 @@ Renders a search widget which when clicked (or the corresponding keyboard shortc
 	@media (min-width: 960px) {
 		.search-container {
 			width: 19rem;
+		}
+
+		input::placeholder {
+			opacity: 1;
+		}
+	}
+
+	@media (min-width: 1240px) {
+		.search-container {
+			width: 32rem;
 		}
 
 		input::placeholder {
