@@ -73,6 +73,7 @@
 
 		nav {
 			display: none;
+			padding-top: 0.8rem;
 
 			a {
 				display: block;
@@ -83,25 +84,30 @@
 				&:first-child {
 					display: none;
 				}
-
-				&.active {
-					font-weight: bold;
-				}
 			}
 		}
 
 		label {
-			display: block;
 			text-transform: uppercase;
+			display: block;
 
 			&::before {
-				content: '▶';
+				content: '';
+				position: absolute;
+				right: 0;
+				top: calc(50% - 0.5em);
+				width: 1em;
+				height: 1em;
+				background: url($lib/icons/chevron.svg);
+				background-size: contain;
+				rotate: 0deg;
+				transition: rotate 0.2s;
 			}
 		}
 
 		label:has(:checked) {
 			&::before {
-				content: '▼';
+				rotate: -90deg;
 			}
 
 			& + nav {
@@ -124,6 +130,12 @@
 			}
 
 			& label {
+				font-size: var(--sk-text-s);
+
+				letter-spacing: 0.1em;
+				font-weight: 600;
+				display: block;
+
 				&::before {
 					content: none !important;
 				}
@@ -134,6 +146,17 @@
 
 				a:first-child {
 					display: block;
+				}
+
+				a.active::before {
+					content: '';
+					position: absolute;
+					left: -2rem;
+					top: calc(50% - 0.6em);
+					height: 1em;
+					width: 1em;
+					background: url($lib/icons/arrow-left.svg);
+					background-size: contain;
 				}
 			}
 		}
