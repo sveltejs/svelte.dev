@@ -1,5 +1,5 @@
 import { replace_export_type_placeholders, type Modules } from '@sveltejs/site-kit/markdown';
-import { spawn } from 'node:child_process';
+import { spawn, type SpawnOptions } from 'node:child_process';
 import {
 	cpSync,
 	existsSync,
@@ -7,7 +7,6 @@ import {
 	readFileSync,
 	readdirSync,
 	rmSync,
-	rmdirSync,
 	writeFileSync
 } from 'node:fs';
 import { format } from 'prettier';
@@ -39,13 +38,10 @@ export async function sync_docs() {
 			// ignore if it already exists
 		}
 
-		const cwd = process.cwd();
-		process.chdir('repos');
 		await Promise.all([
 			cloneRepo('https://github.com/sveltejs/svelte.git'),
 			cloneRepo('https://github.com/sveltejs/kit.git')
 		]);
-		process.chdir(cwd);
 
 		svelte_repo_path = 'repos/svelte';
 		sveltekit_repo_path = 'repos/kit';
@@ -151,19 +147,20 @@ async function cloneRepo(repo: string) {
 		throw new Error(`Expected https://github.com/xxx/xxx.git, but got ${repo}`);
 	}
 
-	const dirname = regex_result[1];
+	const dirname = `repos/${regex_result[1]}`;
 	if (existsSync(dirname)) {
 		// TODO skip if we detect that same branch is already cloned
-		rmdirSync(dirname, { recursive: true });
+		rmSync(dirname, { recursive: true });
 	}
 
-	await invoke('git', ['clone', '--depth', '1', repo]);
+	await invoke('git', ['clone', '--depth', '1', repo], {
+		cwd: 'repos'
+	});
 }
 
-function invoke(cmd: string, args: string[]) {
-	const child = spawn(cmd, args);
-	child.stdout.on('data', (data) => console.log(data.toString()));
-	child.stderr.on('data', (data) => console.error(data.toString()));
+function invoke(cmd: string, args: string[], opts: SpawnOptions) {
+	const child = spawn(cmd, args, { ...opts, stdio: 'inherit' });
+
 	return new Promise<void>((resolve) => {
 		child.on('close', (code) => {
 			if (!code) {
