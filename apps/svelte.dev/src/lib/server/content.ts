@@ -42,13 +42,10 @@ export const blog_posts = index.blog.children
 		const date = post.metadata.date ?? post.file.split('/').pop()!.slice(0, 10);
 
 		return {
-			title: post.metadata.title,
+			...post,
 			date,
 			date_formatted: format_date(date),
-			description: post.metadata.description,
-			draft: post.metadata.draft,
-			authors,
-			...post
+			authors
 		};
 	})
 	.sort((a, b) => (a.date < b.date ? 1 : -1));

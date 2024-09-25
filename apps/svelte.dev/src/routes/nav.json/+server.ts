@@ -1,5 +1,5 @@
 import { json } from '@sveltejs/kit';
-import { blog_posts, docs as _docs, index } from '$lib/server/content';
+import { docs as _docs, index } from '$lib/server/content';
 import type { NavigationLink } from '@sveltejs/site-kit';
 
 export const prerender = true;
@@ -22,18 +22,6 @@ async function get_nav_list(): Promise<NavigationLink[]> {
 			}))
 		}))
 		.sort((a, b) => a.title.localeCompare(b.title)); // Svelte first
-
-	const blog = [
-		{
-			title: '',
-			sections: blog_posts.map(({ title, slug, date }) => ({
-				title,
-				path: '/' + slug,
-				// Put a NEW badge on blog posts that are less than 14 days old
-				badge: (+new Date() - +new Date(date)) / (1000 * 60 * 60 * 24) < 14 ? 'NEW' : undefined
-			}))
-		}
-	];
 
 	const tutorial = index.tutorial.children.map((topic) => ({
 		title: topic.metadata.title,
@@ -67,13 +55,7 @@ async function get_nav_list(): Promise<NavigationLink[]> {
 		{
 			title: 'Blog',
 			prefix: 'blog',
-			pathname: '/blog',
-			sections: [
-				{
-					title: 'BLOG',
-					sections: blog
-				}
-			]
+			pathname: '/blog'
 		}
 	];
 }

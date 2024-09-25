@@ -5,22 +5,16 @@ import { render_content } from '$lib/server/renderer';
 export const prerender = true;
 
 export async function load({ params }) {
-	const post = blog_posts.find((post) => post.slug === `blog/${params.slug}`);
+	const document = blog_posts.find((document) => document.slug === `blog/${params.slug}`);
 
-	if (!post) error(404);
+	if (!document) error(404);
 
 	// forgive me — terrible hack necessary to get diffs looking sensible
 	// on the `runes` blog post
-	post.body = post.body.replace(/(    )+/gm, (match) => '  '.repeat(match.length / 4));
+	const markdown = document.body.replace(/(    )+/gm, (match) => '  '.repeat(match.length / 4));
 
 	return {
-		title: post.title,
-		description: post.description,
-		path: `/${post.slug}`,
-		date: post.date,
-		date_formatted: post.date_formatted,
-		body: await render_content(post.file, post.body),
-		authors: post.authors,
-		sections: post.sections
+		...document,
+		body: await render_content(document.file, markdown)
 	};
 }

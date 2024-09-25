@@ -4,6 +4,10 @@ export const prerender = true;
 
 export async function load() {
 	return {
-		posts: blog_posts
+		posts: blog_posts.map((document) => ({
+			metadata: document.metadata,
+			date: document.date,
+			slug: document.slug
+		}))
 	};
 }

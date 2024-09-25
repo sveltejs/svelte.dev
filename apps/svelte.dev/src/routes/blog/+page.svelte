@@ -19,11 +19,11 @@
 <h1 class="visually-hidden">Blog</h1>
 <div class="posts stretch">
 	{#each data.posts as post}
-		{#if !post.draft}
+		{#if !post.metadata.draft}
 			<article class="post" data-pubdate={post.date}>
 				<a class="no-underline" href="/{post.slug}" title="Read the article »">
-					<h2>{post.title}</h2>
-					<p>{post.description}</p>
+					<h2>{post.metadata.title}</h2>
+					<p>{post.metadata.description}</p>
 				</a>
 			</article>
 		{/if}

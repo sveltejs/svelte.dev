@@ -1,20 +1,22 @@
-<script>
+<script lang="ts">
 	import { page } from '$app/stores';
 	import { copy_code_descendants, ts_js_select } from '@sveltejs/site-kit/actions';
 	import { setupDocsHovers } from '@sveltejs/site-kit/docs';
 
-	export let data;
+	let { data } = $props();
+
+	let content = $state() as HTMLElement;
 
 	setupDocsHovers();
 </script>
 
 <svelte:head>
-	<title>{data.title}</title>
+	<title>{data.metadata.title}</title>
 
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content={data.title} />
-	<meta name="twitter:description" content={data.description} />
-	<meta name="Description" content={data.description} />
+	<meta name="twitter:title" content={data.metadata.title} />
+	<meta name="twitter:description" content={data.metadata.description} />
+	<meta name="Description" content={data.metadata.description} />
 
 	<meta name="twitter:image" content="https://svelte.dev/blog/{$page.params.slug}/card.png" />
 	<meta name="og:image" content="https://svelte.dev/blog/{$page.params.slug}/card.png" />
@@ -22,8 +24,8 @@
 
 <div class="content">
 	<article class="post listify text" use:ts_js_select use:copy_code_descendants>
-		<h1>{data.title}</h1>
-		<p class="standfirst">{data.description}</p>
+		<h1>{data.metadata.title}</h1>
+		<p class="standfirst">{data.metadata.description}</p>
 
 		<p class="byline">
 			{#each data.authors as author, i}
@@ -37,14 +39,9 @@
 			<time datetime={data.date}>{data.date_formatted}</time>
 		</p>
 
-		<!-- <DocsOnThisPage
-			title={data.title}
-			path={data.path}
-			sections={data.sections}
-			orientation="inline"
-		/> -->
-
-		{@html data.body}
+		<div class="content" bind:this={content}>
+			{@html data.body}
+		</div>
 	</article>
 </div>
 
