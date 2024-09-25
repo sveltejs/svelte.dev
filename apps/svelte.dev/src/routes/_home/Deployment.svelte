@@ -287,11 +287,11 @@
 		}
 	}
 
-	:global(body.dark) .platforms .invert img {
+	:global(html.dark) .platforms .invert img {
 		--invert: 1;
 	}
 
-	:global(body.dark) .platforms .invert-hover img {
+	:global(html.dark) .platforms .invert-hover img {
 		--invert-hover: 1;
 	}
 </style>

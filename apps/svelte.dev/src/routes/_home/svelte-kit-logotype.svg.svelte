@@ -27,20 +27,20 @@
 			fill: #8d8d93;
 		}
 
-		:global(body.light) .svelte {
+		:global(html.light) .svelte {
 			fill: hsl(0, 0%, 27%);
 		}
 
-		:global(body.light) .kit {
+		:global(html.light) .kit {
 			fill: #8d8d93;
 		}
 	}
 
-	:global(body.dark) .svelte {
+	:global(html.dark) .svelte {
 		fill: hsl(0, 0%, 80%);
 	}
 
-	:global(body.dark) .kit {
+	:global(html.dark) .kit {
 		fill: #8d8d93;
 	}
 </style>

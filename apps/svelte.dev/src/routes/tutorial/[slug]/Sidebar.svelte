@@ -143,7 +143,7 @@
 		--color: rgba(255, 0, 0, 0.1);
 	}
 
-	:global(body.dark) .text :global(pre) :global(.highlight.remove) {
+	:global(html.dark) .text :global(pre) :global(.highlight.remove) {
 		--color: rgba(255, 0, 0, 0.27);
 	}
 
