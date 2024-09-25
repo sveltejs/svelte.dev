@@ -13,7 +13,7 @@
 		"check": "node scripts/update.js && svelte-kit sync && svelte-check",
 		"format": "prettier --write .",
 		"lint": "prettier --check .",
-		"sync-docs": "tsx src/sync-docs.ts"
+		"sync-docs": "tsx scripts/sync-docs.ts"
 	},
 	"dependencies": {
 		"@codemirror/autocomplete": "^6.9.0",
