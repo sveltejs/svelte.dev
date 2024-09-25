@@ -44,8 +44,8 @@ export async function sync_docs() {
 		}
 
 		await Promise.all([
-			cloneRepo('https://github.com/sveltejs/svelte.git'),
-			cloneRepo('https://github.com/sveltejs/kit.git')
+			clone_repo('https://github.com/sveltejs/svelte.git'),
+			clone_repo('https://github.com/sveltejs/kit.git')
 		]);
 
 		svelte_repo_path = `${REPOS}/svelte`;
@@ -138,7 +138,7 @@ function replace_strings(obj: any, replace: (str: string) => string) {
 	}
 }
 
-async function cloneRepo(repo: string) {
+async function clone_repo(repo: string) {
 	const regex_result = /https:\/\/github.com\/\w+\/(\w+).git/.exec(repo);
 	if (!regex_result || regex_result.length < 2) {
 		throw new Error(`Expected https://github.com/xxx/xxx.git, but got ${repo}`);
