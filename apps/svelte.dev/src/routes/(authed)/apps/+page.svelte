@@ -102,7 +102,7 @@
 			<ul class:selecting>
 				{#each data.gists as gist}
 					<li class:selected={selected.includes(gist.id)}>
-						<a href={selecting ? undefined : `/repl/${gist.id}`}>
+						<a href={selecting ? undefined : `/playground/${gist.id}`}>
 							<h2>{gist.name}</h2>
 							<span>updated {format(gist.updated_at || gist.created_at)}</span>
 						</a>
@@ -130,7 +130,7 @@
 				{/if}
 			</div>
 		{:else}
-			<p>No apps here. <a href="/repl">Go make one!</a></p>
+			<p>No apps here. <a href="/playground">Go make one!</a></p>
 		{/if}
 	{:else}
 		<p>

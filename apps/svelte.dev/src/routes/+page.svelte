@@ -84,8 +84,8 @@
 					href: '/tutorial'
 				},
 				{
-					title: 'repl',
-					href: '/repl'
+					title: 'playground',
+					href: '/playground'
 				},
 				{
 					title: 'blog',

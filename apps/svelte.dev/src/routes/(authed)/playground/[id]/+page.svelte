@@ -23,7 +23,9 @@
 		}
 
 		const url =
-			params.length > 0 ? `/repl/${data.gist.id}?${params.join('&')}` : `/repl/${data.gist.id}`;
+			params.length > 0
+				? `/playground/${data.gist.id}?${params.join('&')}`
+				: `/playground/${data.gist.id}`;
 
 		history.replaceState({}, 'x', url);
 	});
@@ -47,7 +49,7 @@
 
 	function handle_fork(event: CustomEvent) {
 		console.log('> handle_fork', event);
-		goto(`/repl/${event.detail.gist.id}?version=${version}`);
+		goto(`/playground/${event.detail.gist.id}?version=${version}`);
 	}
 
 	function handle_change(event: CustomEvent) {
@@ -56,7 +58,7 @@
 
 	const svelteUrl = $derived(
 		browser && version === 'local'
-			? `${location.origin}/repl/local`
+			? `${location.origin}/playground/local`
 			: `https://unpkg.com/svelte@${version}`
 	);
 
@@ -64,9 +66,9 @@
 </script>
 
 <svelte:head>
-	<title>{name} • REPL • Svelte</title>
+	<title>{name} • Playground • Svelte</title>
 
-	<meta name="twitter:title" content="{data.gist.name} • REPL • Svelte" />
+	<meta name="twitter:title" content="{data.gist.name} • Playground • Svelte" />
 	<meta name="twitter:description" content="Web development, but fun" />
 	<meta name="Description" content="Interactive Svelte playground" />
 </svelte:head>

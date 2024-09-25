@@ -48,9 +48,9 @@ async function get_nav_list(): Promise<NavigationLink[]> {
 			sections: tutorial
 		},
 		{
-			title: 'REPL',
-			prefix: 'repl',
-			pathname: '/repl'
+			title: 'Playground',
+			prefix: 'playground',
+			pathname: '/playground'
 		},
 		{
 			title: 'Blog',

@@ -17,7 +17,7 @@ export const load = async ({ url, fetch }) => {
 function get_nav_title(url) {
 	const list = new Map([
 		[/^docs/, 'Docs'],
-		[/^repl/, 'REPL'],
+		[/^playground/, 'Playground'],
 		[/^blog/, 'Blog'],
 		[/^faq/, 'FAQ'],
 		[/^tutorial/, 'Tutorial'],

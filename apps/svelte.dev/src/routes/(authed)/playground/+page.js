@@ -17,5 +17,5 @@ export function load({ url }) {
 	const q = new URLSearchParams();
 	if (version) q.set('version', version);
 	if (vim) q.set('vim', vim);
-	redirect(301, `/repl/${id}?${q}`);
+	redirect(301, `/playground/${id}?${q}`);
 }

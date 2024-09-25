@@ -33,7 +33,7 @@ function munge(files) {
 
 export async function GET({ params }) {
 	// Currently, these pages(that are in examples/) are prerendered. To avoid making any FS requests,
-	// We prerender examples pages during build time. That means, when something like `/repl/hello-world.json`
+	// We prerender examples pages during build time. That means, when something like `/playground/hello-world.json`
 	// is accessed, this function won't be run at all, as it will be served from the filesystem
 
 	const example = get_example(examples_data, params.id);
@@ -50,7 +50,7 @@ export async function GET({ params }) {
 	if (dev && !client) {
 		// in dev with no local Supabase configured, proxy to production
 		// this lets us at least load saved REPLs
-		const res = await fetch(`https://svelte.dev/repl/api/${params.id}.json`);
+		const res = await fetch(`https://svelte.dev/playground/api/${params.id}.json`);
 
 		// returning the response directly results in a bizarre
 		// content encoding error, so we create a new one

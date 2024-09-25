@@ -21,7 +21,7 @@
 	{/if}
 </svelte:head>
 
-<Shell nav_visible={$page.route.id !== '/(authed)/repl/[id]/embed'}>
+<Shell nav_visible={$page.route.id !== '/(authed)/playground/[id]/embed'}>
 	{#snippet top_nav()}
 		<Nav title={data.nav_title} links={data.nav_links}>
 			{#snippet search()}

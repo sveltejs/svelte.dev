@@ -18,8 +18,8 @@
 
 		const url =
 			params.length > 0
-				? `/repl/${data.gist.id}/embed?${params.join('&')}`
-				: `/repl/${data.gist.id}/embed`;
+				? `/playground/${data.gist.id}/embed?${params.join('&')}`
+				: `/playground/${data.gist.id}/embed`;
 
 		history.replaceState({}, 'x', url);
 	}
@@ -46,7 +46,7 @@
 
 	const svelteUrl = $derived(
 		browser && version === 'local'
-			? `${location.origin}/repl/local`
+			? `${location.origin}/playground/local`
 			: `https://unpkg.com/svelte@${version}`
 	);
 
@@ -54,9 +54,9 @@
 </script>
 
 <svelte:head>
-	<title>{data.gist.name} • REPL • Svelte</title>
+	<title>{data.gist.name} • Playground • Svelte</title>
 
-	<meta name="twitter:title" content="{data.gist.name} • REPL • Svelte" />
+	<meta name="twitter:title" content="{data.gist.name} • Playground • Svelte" />
 	<meta name="twitter:description" content="Web development, but fun" />
 	<meta name="Description" content="Interactive Svelte playground" />
 </svelte:head>

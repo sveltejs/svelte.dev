@@ -56,7 +56,7 @@
 		const { files } = repl.toJSON() as { files: File[] };
 
 		try {
-			const r = await fetch(`/repl/create.json`, {
+			const r = await fetch(`/playground/create.json`, {
 				method: 'POST',
 				credentials: 'include',
 				headers: {
@@ -121,7 +121,7 @@
 			// ~> Any missing files are considered deleted!
 			const { files } = repl.toJSON() as { files: File[] };
 
-			const r = await fetch(`/repl/save/${gist.id}.json`, {
+			const r = await fetch(`/playground/save/${gist.id}.json`, {
 				method: 'PUT',
 				credentials: 'include',
 				headers: {
