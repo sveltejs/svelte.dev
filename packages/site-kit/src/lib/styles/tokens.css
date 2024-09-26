@@ -47,26 +47,20 @@
 	--sk-focus-outline: 0 0 0 2px hsla(var(--sk-theme-1-hsl), 0.6);
 
 	/* Base colors */
+	--sk-theme-1-hsl: 12, 93%, 43%;
+	--sk-theme-2-hsl: 240, 8%, 44%;
+	--sk-theme-3-hsl: 204, 100%, 63%;
+
 	--sk-theme-1: hsl(var(--sk-theme-1-hsl));
 	--sk-theme-2: hsl(var(--sk-theme-2-hsl));
 	--sk-theme-3: hsl(var(--sk-theme-3-hsl));
 
-	--sk-back-2: hsla(var(--sk-back-2-hsl), 1);
-	--sk-back-3: hsla(var(--sk-back-3-hsl), 1);
-
-	--sk-code-bg: var(--sk-back-3);
-
-	--sk-text-warning: hsl(var(--sk-text-warning-hsl));
-
-	--sk-back-3-hsl: 206, 64%, 98%;
-	--sk-back-2-hsl: 0, 0%, 100%;
-
 	--sk-back-1: hsl(0, 0%, 100%);
-	--sk-back-4: hsl(210, 75%, 97%);
-	--sk-back-5: hsl(206, 20%, 80%);
-	--sk-theme-1-hsl: 12, 93%, 43%;
-	--sk-theme-2-hsl: 240, 8%, 44%;
-	--sk-theme-3-hsl: 204, 100%, 63%;
+	--sk-back-2: hsla(0, 0%, 100%, 1);
+	--sk-back-3: hsla(206, 0%, 99%, 1);
+	--sk-back-4: hsl(210, 0%, 95%);
+	--sk-back-5: hsl(206, 0%, 80%);
+
 	--sk-text-1: hsla(0, 0%, 0%, 0.95);
 	--sk-text-2: hsla(0, 0%, 0%, 0.73);
 	--sk-text-3: hsla(0, 0%, 0%, 0.55);
@@ -77,8 +71,8 @@
 	/* same in light mode, different in dark mode */
 	--sk-theme-1-variant: hsl(15, 100%, 50%);
 	--sk-theme-2-variant: hsl(240, 8%, 44%);
-	--sk-theme-3-variant: hsl(204, 100%, 63%);
 
+	--sk-code-bg: var(--sk-back-3);
 	--sk-code-ts-bg: var(--sk-back-1);
 	--sk-code-base: hsl(45, 7%, 35%);
 	--sk-code-comment: hsl(0, 0%, 41%);
@@ -94,6 +88,7 @@
 	--sk-code-diff-removed: hsl(2, 80%, 47%);
 
 	--sk-text-warning-hsl: 32, 95%, 44%;
+	--sk-text-warning: hsl(var(--sk-text-warning-hsl));
 
 	/* used for coloured backgrounds e.g. blockquotes */
 	--sk-back-translucent: hsla(0, 0%, 0%, 0.1);
@@ -102,10 +97,9 @@
 	&.dark {
 		color-scheme: light;
 
-		--sk-back-3-hsl: 0, 0%, 14%;
-		--sk-back-2-hsl: 0, 0%, 18%;
-
-		--sk-back-1: hsl(0, 0%, 10%);
+		--sk-back-1: hsl(0, 14%, 1%);
+		--sk-back-2: hsla(0, 0%, 18%, 1);
+		--sk-back-3: hsla(0, 0%, 14%, 1);
 		--sk-back-4: hsl(0, 0%, 22%);
 		--sk-back-5: hsl(0, 0%, 40%);
 		--sk-back-translucent: hsla(0, 0%, 100%, 0.1);
@@ -120,10 +114,8 @@
 		--sk-scrollbar: rgba(255, 255, 255, 0.3);
 		--sk-shadow: 0px 0px 0 1px var(--sk-back-4);
 
-		--sk-back-3-hsl: 0, 0%, 14%;
 		--sk-theme-1-variant: hsl(15, 100%, 40%);
 		--sk-theme-2-variant: hsl(240, 8%, 35%);
-		--sk-theme-3-variant: hsl(204, 100%, 50%);
 
 		--sk-text-warning-hsl: 32, 67%, 56%;
 
