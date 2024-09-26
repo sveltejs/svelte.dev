@@ -140,7 +140,6 @@
 			padding-right: 0;
 			padding-top: var(--sk-page-padding-top);
 			width: var(--sidebar-menu-width);
-			margin: 0 0 0 auto;
 		}
 
 		nav {

@@ -47,7 +47,6 @@
 	@media (min-width: 832px) {
 		.toc-container {
 			display: block;
-			width: var(--sidebar-width);
 			height: calc(100vh - var(--sk-nav-height) - var(--sk-banner-bottom-height));
 			position: fixed;
 			left: 0;
