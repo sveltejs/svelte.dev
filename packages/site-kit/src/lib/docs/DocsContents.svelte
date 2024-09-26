@@ -93,7 +93,7 @@
 
 	[aria-current='page'] {
 		/* font-weight: 700; */
-		color: var(--sk-text-1);
+		color: var(--sk-theme-1);
 	}
 
 	ul ul,
@@ -147,23 +147,6 @@
 			max-height: calc(100vh - var(--sk-nav-height));
 			overflow-x: hidden;
 			overflow-y: auto;
-		}
-
-		[aria-current='page']::after {
-			--size: 1.8rem;
-			content: '';
-			position: absolute;
-			width: var(--size);
-			height: var(--size);
-			top: calc(0.8rem - var(--size) * 0.5);
-			right: calc(-0.5 * var(--size));
-			background-color: var(--sk-back-1);
-			z-index: 2;
-			position: absolute;
-			rotate: 45deg;
-			/** needed to synchronise with transition on `*` in `base.css` */
-			transition: background-color 0.5s var(--quint-out);
-			box-shadow: 0 0 3px rgba(0, 0, 0, 0.12);
 		}
 	}
 </style>
