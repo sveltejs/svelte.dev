@@ -296,7 +296,7 @@
 		.cm-tooltip {
 			border: none;
 			background: var(--sk-back-3);
-			font-family: var(--sk-font);
+			font-family: var(--sk-font-body);
 			max-width: calc(100vw - 10em);
 			position: relative;
 			filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.1));
@@ -369,7 +369,7 @@
 		}
 
 		.cm-diagnostic :not(code) {
-			font-family: var(--sk-font);
+			font-family: var(--sk-font-body);
 		}
 
 		.cm-diagnosticText {

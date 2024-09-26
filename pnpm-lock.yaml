@@ -349,6 +349,12 @@ importers:
 
   packages/site-kit:
     dependencies:
+      '@fontsource/cardo':
+        specifier: ^5.1.0
+        version: 5.1.0
+      '@fontsource/oswald':
+        specifier: ^5.1.0
+        version: 5.1.0
       esm-env:
         specifier: ^1.0.0
         version: 1.0.0
@@ -789,6 +795,12 @@ packages:
     engines: {node: '>=18'}
     cpu: [x64]
     os: [win32]
+
+  '@fontsource/cardo@5.1.0':
+    resolution: {integrity: sha512-ylOb2t/CgQV2mNovSVya6r/jC9Q0w3cKHQOO7iycXLHRsgCGF82Oy/Je3GmdoGVKRNF6CDA3pc85Tw1078nQwQ==}
+
+  '@fontsource/oswald@5.1.0':
+    resolution: {integrity: sha512-MwHMRCNCeTvaUWk15AHVfUi84T4TB4dshJrCOcfBYqUkY0V8IxKEwqFzSgGBG7zIfTZ0Diu+/CKpiktKqo5Gkg==}
 
   '@fontsource/roboto-mono@5.0.18':
     resolution: {integrity: sha512-hKuwk/cy3i6fWPzazT5xjgWq4YNqZWDHVbJh2Wwj3KYvWGi2v3ToBw/4LKQ+ggEkPLcIG6VU8GpCT3Xtf+mbbA==}
@@ -3289,6 +3301,10 @@ snapshots:
 
   '@esbuild/win32-x64@0.23.1':
     optional: true
+
+  '@fontsource/cardo@5.1.0': {}
+
+  '@fontsource/oswald@5.1.0': {}
 
   '@fontsource/roboto-mono@5.0.18': {}
 

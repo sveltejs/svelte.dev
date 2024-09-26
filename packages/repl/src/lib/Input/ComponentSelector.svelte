@@ -304,7 +304,7 @@
 	.add-new {
 		position: relative;
 		display: inline-block;
-		font: 400 12px/1.5 var(--sk-font);
+		font: 400 12px/1.5 var(--sk-font-body);
 		background: var(--sk-back-1);
 		border: none;
 		border-bottom: 3px solid transparent;
@@ -339,7 +339,7 @@
 		width: 100%;
 		left: 16px;
 		top: 12px;
-		font: 400 12px/1.5 var(--sk-font);
+		font: 400 12px/1.5 var(--sk-font-body);
 		border: none;
 		color: var(--sk-theme-3);
 		outline: none;

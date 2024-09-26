@@ -69,7 +69,7 @@
 	}
 
 	.panel-heading {
-		font: 700 12px/1.5 var(--sk-font);
+		font: 700 12px/1.5 var(--sk-font-body);
 		color: var(--sk-text-1, #333);
 		flex: 1;
 		text-align: left;
