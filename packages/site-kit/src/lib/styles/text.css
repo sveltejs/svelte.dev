@@ -9,6 +9,7 @@
 
 .text :where(p, ol, ul) {
 	margin: 1em 0;
+	font-size: var(--sk-text-s);
 }
 
 .text :where(section) {
