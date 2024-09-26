@@ -85,7 +85,7 @@
 
 	.page {
 		display: block;
-		font-size: 1.6rem;
+		font-size: var(--sk-text-s);
 		font-family: var(--sk-font-body);
 		padding-bottom: 0.6em;
 	}
