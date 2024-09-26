@@ -18,7 +18,7 @@ body {
 }
 
 body {
-	font-size: 1.6rem;
+	font-size: var(--sk-text-s);
 	font-family: var(--sk-font-body);
 	line-height: 1.618;
 	color: var(--sk-text-2);

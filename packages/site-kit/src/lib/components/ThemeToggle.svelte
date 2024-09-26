@@ -47,11 +47,10 @@
 
 <style>
 	button {
-		width: 2rem;
-		height: 2rem;
+		width: 2.3rem;
+		height: 2.3rem;
 		background: red;
-		background: url($lib/icons/theme-light.svg);
-		background-size: contain;
+		background: url($lib/icons/theme-light.svg) no-repeat 50% 50% / contain;
 		opacity: 0.6;
 
 		:global(.dark) & {
