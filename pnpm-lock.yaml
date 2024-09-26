@@ -352,6 +352,9 @@ importers:
       '@fontsource/cardo':
         specifier: ^5.1.0
         version: 5.1.0
+      '@fontsource/yantramanav':
+        specifier: ^5.1.0
+        version: 5.1.0
       esm-env:
         specifier: ^1.0.0
         version: 1.0.0
@@ -798,6 +801,9 @@ packages:
 
   '@fontsource/roboto-mono@5.0.18':
     resolution: {integrity: sha512-hKuwk/cy3i6fWPzazT5xjgWq4YNqZWDHVbJh2Wwj3KYvWGi2v3ToBw/4LKQ+ggEkPLcIG6VU8GpCT3Xtf+mbbA==}
+
+  '@fontsource/yantramanav@5.1.0':
+    resolution: {integrity: sha512-wSmYmoGhFbYF4XUXouudROqTn6GREe0HTV/HqcnRLYbQJNa3kmqbcebIm9PxPDQ0l3y2speJAlbOoDGM2DN9dg==}
 
   '@img/sharp-darwin-arm64@0.33.4':
     resolution: {integrity: sha512-p0suNqXufJs9t3RqLBO6vvrgr5OhgbWp76s5gTRvdmxmuv9E1rcaqGUsl3l4mKVmXPkTkTErXediAui4x+8PSA==}
@@ -3299,6 +3305,8 @@ snapshots:
   '@fontsource/cardo@5.1.0': {}
 
   '@fontsource/roboto-mono@5.0.18': {}
+
+  '@fontsource/yantramanav@5.1.0': {}
 
   '@img/sharp-darwin-arm64@0.33.4':
     optionalDependencies:
