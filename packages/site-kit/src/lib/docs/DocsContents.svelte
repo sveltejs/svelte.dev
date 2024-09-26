@@ -77,11 +77,9 @@
 	.section {
 		display: block;
 		padding-bottom: 0.8rem;
-		font-size: var(--sk-text-s);
+		font-size: var(--sk-text-m);
 		font-family: var(--sk-font-heading);
-		text-transform: uppercase;
-		letter-spacing: 0.1em;
-		font-weight: 600;
+		font-weight: 500;
 		color: var(--sk-text-2);
 	}
 

@@ -68,6 +68,7 @@
 		line-height: 1;
 		z-index: 2;
 		margin: 6rem 0 2rem 0;
+		font-family: var(--sk-font-heading);
 
 		a {
 			text-decoration: none;
@@ -102,9 +103,10 @@
 
 	.controls span {
 		display: block;
-		font-size: 1.2rem;
+		font-size: var(--sk-text-s);
 		text-transform: uppercase;
-		font-weight: 600;
+		font-weight: 400;
+		font-family: var(--sk-font-heading);
 		color: var(--sk-text-3);
 	}
 

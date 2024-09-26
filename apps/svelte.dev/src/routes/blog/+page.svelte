@@ -64,6 +64,7 @@
 	.post:where(:first-child, :nth-child(2))::before {
 		content: 'Latest post • ' attr(data-pubdate);
 		color: var(--sk-theme-3);
+		font-family: var(--sk-font-heading);
 		font-size: var(--sk-text-xs);
 		font-weight: 400;
 		letter-spacing: 0.05em;

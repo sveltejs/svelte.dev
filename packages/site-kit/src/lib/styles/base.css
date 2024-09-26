@@ -147,7 +147,7 @@ blockquote :last-child {
 
 /*  buttons -------------------------------- */
 button {
-	font-family: inherit;
+	font-family: var(--sk-font-heading);
 	font-size: inherit;
 	background-color: transparent;
 	border: none;
