@@ -46,7 +46,7 @@
 
 	.sidebar {
 		padding: 3.2rem;
-		font-family: var(--sk-font);
+		font-family: var(--sk-font-body);
 		height: 100%;
 		bottom: auto;
 		width: 100%;
@@ -77,17 +77,16 @@
 	.section {
 		display: block;
 		padding-bottom: 0.8rem;
-		font-size: var(--sk-text-s);
-		text-transform: uppercase;
-		letter-spacing: 0.1em;
-		font-weight: 600;
+		font-size: var(--sk-text-m);
+		font-family: var(--sk-font-heading);
+		font-weight: 500;
 		color: var(--sk-text-2);
 	}
 
 	.page {
 		display: block;
 		font-size: 1.6rem;
-		font-family: var(--sk-font);
+		font-family: var(--sk-font-body);
 		padding-bottom: 0.6em;
 	}
 

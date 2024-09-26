@@ -349,6 +349,15 @@ importers:
 
   packages/site-kit:
     dependencies:
+      '@fontsource/cardo':
+        specifier: ^5.1.0
+        version: 5.1.0
+      '@fontsource/fira-mono':
+        specifier: ^5.1.0
+        version: 5.1.0
+      '@fontsource/yantramanav':
+        specifier: ^5.1.0
+        version: 5.1.0
       esm-env:
         specifier: ^1.0.0
         version: 1.0.0
@@ -790,8 +799,17 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@fontsource/cardo@5.1.0':
+    resolution: {integrity: sha512-ylOb2t/CgQV2mNovSVya6r/jC9Q0w3cKHQOO7iycXLHRsgCGF82Oy/Je3GmdoGVKRNF6CDA3pc85Tw1078nQwQ==}
+
+  '@fontsource/fira-mono@5.1.0':
+    resolution: {integrity: sha512-6+nftSKApXyN0I9FC5GJuG5TUCh+in5OehtrXRIsHJvq38Pm//oA1kZZYNdXv99JYzLzJ3lzsTAavmS+xGLGDw==}
+
   '@fontsource/roboto-mono@5.0.18':
     resolution: {integrity: sha512-hKuwk/cy3i6fWPzazT5xjgWq4YNqZWDHVbJh2Wwj3KYvWGi2v3ToBw/4LKQ+ggEkPLcIG6VU8GpCT3Xtf+mbbA==}
+
+  '@fontsource/yantramanav@5.1.0':
+    resolution: {integrity: sha512-wSmYmoGhFbYF4XUXouudROqTn6GREe0HTV/HqcnRLYbQJNa3kmqbcebIm9PxPDQ0l3y2speJAlbOoDGM2DN9dg==}
 
   '@img/sharp-darwin-arm64@0.33.4':
     resolution: {integrity: sha512-p0suNqXufJs9t3RqLBO6vvrgr5OhgbWp76s5gTRvdmxmuv9E1rcaqGUsl3l4mKVmXPkTkTErXediAui4x+8PSA==}
@@ -3290,7 +3308,13 @@ snapshots:
   '@esbuild/win32-x64@0.23.1':
     optional: true
 
+  '@fontsource/cardo@5.1.0': {}
+
+  '@fontsource/fira-mono@5.1.0': {}
+
   '@fontsource/roboto-mono@5.0.18': {}
+
+  '@fontsource/yantramanav@5.1.0': {}
 
   '@img/sharp-darwin-arm64@0.33.4':
     optionalDependencies:

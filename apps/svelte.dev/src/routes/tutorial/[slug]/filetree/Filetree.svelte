@@ -179,7 +179,7 @@
 
 <style>
 	.filetree {
-		--font-size: 1.4rem;
+		--font-size: var(--sk-text-s);
 		flex: 1;
 		overflow-y: auto;
 		overflow-x: hidden;

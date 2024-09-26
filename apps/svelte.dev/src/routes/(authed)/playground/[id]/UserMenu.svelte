@@ -63,7 +63,7 @@
 	.name {
 		line-height: 1;
 		display: none;
-		font-family: var(--sk-font);
+		font-family: var(--sk-font-heading);
 		font-size: 1.6rem;
 	}
 
@@ -99,7 +99,7 @@
 	.menu button,
 	.menu a {
 		background-color: transparent;
-		font-family: var(--sk-font);
+		font-family: var(--sk-font-body);
 		font-size: 1.6rem;
 		opacity: 0.7;
 		padding: 0.4rem 0;

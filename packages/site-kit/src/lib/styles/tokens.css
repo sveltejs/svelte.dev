@@ -1,3 +1,13 @@
+@import '@fontsource/cardo';
+@import '@fontsource/fira-mono';
+/* TODO figure out which weights we actually need */
+@import '@fontsource/yantramanav/100.css';
+@import '@fontsource/yantramanav/300.css';
+@import '@fontsource/yantramanav/400.css';
+@import '@fontsource/yantramanav/500.css';
+@import '@fontsource/yantramanav/700.css';
+@import '@fontsource/yantramanav/900.css';
+
 /*
 
 !IMPORTANT: The tokens for light and dark mode are duplicated, if you change a token for dark mode,
@@ -22,8 +32,9 @@
 	--sk-banner-bottom-height: 0px;
 
 	/* typography */
-	--sk-font: 'Overpass', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
-		Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+	--sk-font-heading: 'Yantramanav', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+		Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+	--sk-font-body: Cardo, 'Big Caslon', Palatino, 'Book Antiqua', Cambria, serif;
 	--sk-font-mono: 'Fira Mono', monospace;
 	--sk-text-xxl: 3.6rem;
 	--sk-text-xl: 3rem;

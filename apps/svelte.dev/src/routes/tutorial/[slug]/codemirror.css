@@ -7,7 +7,7 @@
 }
 
 .cm-editor .cm-scroller {
-	font-family: var(--font-mono);
+	font-family: var(--sk-font-mono);
 	font-size: 1.3rem;
 	line-height: 2rem;
 }

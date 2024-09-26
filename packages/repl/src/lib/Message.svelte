@@ -46,7 +46,7 @@
 		position: relative;
 		color: white;
 		padding: 12px 16px 12px 44px;
-		font: 400 12px/1.7 var(--sk-font);
+		font: 400 var(--sk-text-s) / 1.8rem var(--sk-font-body);
 		margin: 0;
 		border-top: 1px solid white;
 	}
