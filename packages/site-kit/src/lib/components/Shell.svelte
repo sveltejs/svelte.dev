@@ -85,6 +85,6 @@ The main shell of the application. It provides a slot for the top navigation, th
 	}
 
 	:global(body) {
-		font-size: 1.6rem !important;
+		font-size: var(--sk-text-s) !important;
 	}
 </style>
