@@ -134,6 +134,7 @@
 		justify-content: center;
 		background: var(--sk-back-2);
 		user-select: none;
+		font-family: var(--sk-font-heading);
 	}
 
 	.progress-container {

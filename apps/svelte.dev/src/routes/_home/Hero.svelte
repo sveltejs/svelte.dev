@@ -74,7 +74,7 @@
 	strong {
 		font-size: var(--sk-text-l);
 		text-align: center;
-		font-family: var(--sk-font);
+		font-family: var(--sk-font-heading);
 		text-transform: lowercase;
 		font-weight: 400;
 		color: var(--sk-text-2);

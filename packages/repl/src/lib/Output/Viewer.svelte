@@ -300,7 +300,8 @@
 
 	button {
 		color: var(--sk-text-2, #999);
-		font-size: 12px;
+		font-size: var(--sk-text-s);
+		font-family: var(--sk-font-heading);
 		text-transform: uppercase;
 		display: block;
 	}

@@ -118,7 +118,7 @@
 		background: var(--sk-back-1, white);
 		text-align: left;
 		position: relative;
-		font: 400 12px/1.5 var(--sk-font);
+		font: 300 var(--sk-text-s) / 1.8rem var(--sk-font-heading);
 		border: none;
 		border-bottom: 3px solid transparent;
 		padding: 12px 12px 8px 12px;

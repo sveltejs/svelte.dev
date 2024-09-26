@@ -68,7 +68,7 @@
 		background-color: var(--sk-theme-2);
 		color: white;
 		padding: 12px 16px;
-		font: 600 16px/1.7 var(--sk-font);
+		font: 600 16px/1.7 var(--sk-font-body);
 		border-radius: 2px;
 	}
 </style>

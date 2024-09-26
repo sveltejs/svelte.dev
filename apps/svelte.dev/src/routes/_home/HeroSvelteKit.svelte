@@ -82,7 +82,7 @@
 		font-weight: 200;
 		line-height: 1.2;
 		color: var(--sk-text-2);
-		font-family: var(--sk-font);
+		font-family: var(--sk-font-body);
 		margin-bottom: 2rem;
 		/* max-width: 12em; */
 		/* margin: 0 auto; */

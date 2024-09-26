@@ -77,7 +77,7 @@
 	nav {
 		padding: 0.29rem;
 		padding-top: 0;
-		font-family: var(--sk-font);
+		font-family: var(--sk-font-body);
 		overflow-y: auto;
 
 		height: 100%;
@@ -174,7 +174,7 @@
 		font-size: 1.1rem;
 		font-weight: 600;
 		letter-spacing: 1px;
-		font-family: var(--sk-font);
+		font-family: var(--sk-font-body);
 		line-height: 1;
 		color: var(--sk-theme-1);
 		background: hsla(var(--sk-theme-1-hsl), 0.1);
