@@ -53,13 +53,13 @@
 					top: '-9999px'
 				});
 
-				document.body.appendChild(div);
+				document.body.append(div);
 
 				document.documentElement.classList.add(
 					div.offsetWidth - div.clientWidth > 0 ? 'scrollbars-visible' : 'scrollbars-invisible'
 				);
 
-				document.documentElement.classList.remove(div);
+				div.remove();
 			}
 		</script>
 
