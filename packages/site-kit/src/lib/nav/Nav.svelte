@@ -205,11 +205,11 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		height: 100%;
 		display: flex;
 		background-image: url(../branding/svelte-logo.svg);
-		background-position: calc(var(--sk-page-padding-side) - 1rem) 50%;
+		background-position: calc(var(--sk-page-padding-side) - 2rem) 50%;
 		background-repeat: no-repeat;
 		background-size: auto 70%;
 		align-items: center;
-		padding-left: calc(var(--sk-page-padding-side) + 4rem);
+		padding-left: calc(var(--sk-page-padding-side) + 3rem);
 		padding-right: 2rem;
 		text-decoration: none;
 		text-transform: uppercase;
@@ -308,6 +308,8 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		nav {
 			display: grid;
 			grid-template-columns: auto 1fr 1fr;
+			--nav-max-width: calc(var(--sk-line-max-width) + var(--sk-page-padding-side) + 64rem);
+			padding: 0 calc(0.5 * (100vw - var(--nav-max-width)));
 		}
 
 		nav::after {
