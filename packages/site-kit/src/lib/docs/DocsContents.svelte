@@ -136,7 +136,7 @@
 	@media (min-width: 832px) {
 		.sidebar {
 			columns: 1;
-			padding-left: 3.2rem;
+			padding-left: 4.5rem;
 			padding-right: 0;
 			padding-top: var(--sk-page-padding-top);
 			width: var(--sidebar-menu-width);
