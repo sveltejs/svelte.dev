@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { afterNavigate } from '$app/navigation';
 	import { page } from '$app/stores';
 	import type { Document } from '../types';
 
@@ -9,28 +8,9 @@
 	}
 
 	let { contents }: Props = $props();
-
-	let nav: HTMLElement;
-
-	afterNavigate(({ from, to }) => {
-		console.log(from, to);
-
-		// TODO the fact that we're referencing route IDs from the app indicates
-		// that this doesn't belong in site-kit, but that's a problem for another day
-		if (from?.route.id !== '/docs/[...path]') {
-			return;
-		}
-
-		const from_package = from.params!.path.split('/')[0];
-		const to_package = to!.params!.path.split('/')[0];
-
-		if (from_package !== to_package) {
-			nav.scrollTo(0, 0);
-		}
-	});
 </script>
 
-<nav aria-label="Docs" bind:this={nav}>
+<nav aria-label="Docs">
 	<ul class="sidebar">
 		{#each contents ?? [] as section}
 			<li>
