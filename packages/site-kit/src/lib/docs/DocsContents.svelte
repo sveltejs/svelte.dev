@@ -13,8 +13,6 @@
 	let nav: HTMLElement;
 
 	afterNavigate(({ from, to }) => {
-		console.log(from, to);
-
 		// TODO the fact that we're referencing route IDs from the app indicates
 		// that this doesn't belong in site-kit, but that's a problem for another day
 		if (from?.route.id !== '/docs/[...path]') {
