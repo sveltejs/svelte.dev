@@ -32,18 +32,37 @@
 		</style>
 
 		<script>
-			const themeValue = JSON.parse(localStorage.getItem('svelte:theme'))?.current;
-			const systemPreferredTheme = window.matchMedia('(prefers-color-scheme: dark)').matches
-				? 'dark'
-				: 'light';
-
-			document.documentElement.classList.remove('light', 'dark');
-			document.documentElement.classList.add(themeValue ?? systemPreferredTheme);
+			document.documentElement.classList.add(
+				JSON.parse(localStorage.getItem('svelte:theme'))?.current ??
+					(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+			);
 		</script>
 
 		%sveltekit.head%
 	</head>
 	<body data-sveltekit-preload-data="hover">
+		<script>
+			{
+				const div = document.createElement('div');
+
+				Object.assign(div.style, {
+					width: '100px',
+					height: '100px',
+					overflow: 'scroll',
+					position: 'absolute',
+					top: '-9999px'
+				});
+
+				document.body.appendChild(div);
+
+				document.documentElement.classList.add(
+					div.offsetWidth - div.clientWidth > 0 ? 'scrollbars-visible' : 'scrollbars-invisible'
+				);
+
+				document.documentElement.classList.remove(div);
+			}
+		</script>
+
 		<div style="height: 100%">%sveltekit.body%</div>
 
 		<script>

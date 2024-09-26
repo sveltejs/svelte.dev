@@ -148,7 +148,7 @@
 			overflow-y: auto;
 		}
 
-		[aria-current='page']::after {
+		:global(.scrollbars-invisible) [aria-current='page']::after {
 			--size: 1.8rem;
 			content: '';
 			position: absolute;
