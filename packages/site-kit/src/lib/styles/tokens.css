@@ -1,4 +1,5 @@
 @import '@fontsource/cardo';
+@import '@fontsource/cardo/400-italic.css';
 @import '@fontsource/fira-mono';
 /* TODO figure out which weights we actually need */
 @import '@fontsource/yantramanav/100.css';
