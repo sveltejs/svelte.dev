@@ -57,9 +57,9 @@
 
 	--sk-back-1: hsl(0, 0%, 100%);
 	--sk-back-2: hsla(0, 0%, 100%, 1);
-	--sk-back-3: hsla(206, 0%, 99%, 1);
-	--sk-back-4: hsl(210, 0%, 95%);
-	--sk-back-5: hsl(206, 0%, 80%);
+	--sk-back-3: hsla(0, 0%, 99%, 1);
+	--sk-back-4: hsl(0, 0%, 95%);
+	--sk-back-5: hsl(0, 0%, 80%);
 
 	--sk-text-1: hsla(0, 0%, 0%, 0.95);
 	--sk-text-2: hsla(0, 0%, 0%, 0.73);

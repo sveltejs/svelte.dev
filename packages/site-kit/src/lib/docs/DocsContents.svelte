@@ -70,7 +70,7 @@
 		transition: color 0.2s;
 		border-bottom: none;
 		padding: 0;
-		color: var(--sk-text-3);
+		color: var(--sk-text-2);
 		user-select: none;
 	}
 
@@ -80,7 +80,7 @@
 		font-size: var(--sk-text-m);
 		font-family: var(--sk-font-heading);
 		font-weight: 500;
-		color: var(--sk-text-2);
+		color: var(--sk-text-1);
 	}
 
 	.page {
@@ -92,7 +92,7 @@
 
 	[aria-current='page'] {
 		/* font-weight: 700; */
-		color: var(--sk-text-1);
+		color: var(--sk-theme-1);
 	}
 
 	ul ul,
