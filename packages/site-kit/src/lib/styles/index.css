@@ -1,3 +1,17 @@
+@import '@fontsource/cardo';
+@import '@fontsource/fira-mono';
+
+/* TODO figure out which weights we actually need */
+@import '@fontsource/inter-tight/100.css';
+@import '@fontsource/inter-tight/200.css';
+@import '@fontsource/inter-tight/300.css';
+@import '@fontsource/inter-tight/400.css';
+@import '@fontsource/inter-tight/500.css';
+@import '@fontsource/inter-tight/600.css';
+@import '@fontsource/inter-tight/700.css';
+@import '@fontsource/inter-tight/800.css';
+@import '@fontsource/inter-tight/900.css';
+
 @import './tokens.css';
 @import './base.css';
 @import './text.css';
