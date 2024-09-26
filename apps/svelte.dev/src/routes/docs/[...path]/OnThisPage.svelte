@@ -70,7 +70,7 @@
 		}
 
 		label {
-			text-transform: uppercase;
+			font-family: var(--sk-font-heading);
 			display: block;
 		}
 
@@ -138,10 +138,9 @@
 			}
 
 			& label {
-				font-size: var(--sk-text-s);
+				font-size: var(--sk-text-m);
 
-				letter-spacing: 0.1em;
-				font-weight: 600;
+				font-weight: 500;
 				display: block;
 
 				&::before {

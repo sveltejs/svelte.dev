@@ -96,9 +96,9 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		</div>
 
 		<div class="menu">
-			{@render external_links?.()}
-
 			{@render search?.()}
+
+			{@render external_links?.()}
 
 			<div class="appearance">
 				<span class="caption">Theme</span>
@@ -143,11 +143,12 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		height: var(--sk-nav-height);
 		margin: 0 auto;
 		background-color: var(--sk-back-2);
-		font-family: var(--sk-font);
+		font-family: var(--sk-font-body);
 		user-select: none;
 		transition: 0.4s var(--quint-out);
 		transition-property: transform, background;
 		isolation: isolate;
+		font-family: var(--sk-font-heading);
 	}
 
 	nav::after {
@@ -262,14 +263,14 @@ Top navigation bar for the application. It provides a slot for the left side, th
 	.appearance {
 		display: flex;
 		align-items: center;
-		margin-left: 0.75rem;
+		margin-left: 1.5rem;
 	}
 
 	.appearance .caption {
 		display: none;
 		font-size: var(--sk-text-xs);
 		line-height: 1;
-		margin-right: 0.5rem;
+		margin-right: 0rem;
 	}
 
 	@media (max-width: 799px) {

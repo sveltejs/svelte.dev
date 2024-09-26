@@ -9,11 +9,13 @@
 </div>
 
 <style>
+	/* TODO this is duplicated with RunesInfo.svelte */
 	button {
 		position: relative;
 		display: flex;
 		text-transform: uppercase;
-		font-size: 1.4rem;
+		font-weight: 300;
+		font-size: var(--sk-text-s);
 		padding: 0.8rem;
 		gap: 0.5rem;
 		margin-right: 0.3rem;

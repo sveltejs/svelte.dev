@@ -191,7 +191,7 @@
 
 	header strong,
 	h1 {
-		font-size: var(--sk-text-xs);
+		font-size: var(--sk-text-s);
 	}
 
 	.menu {
@@ -251,6 +251,7 @@
 		text-align: center;
 		color: var(--sk-text-2);
 		font-weight: 400;
+		font-size: var(--sk-text-s);
 	}
 
 	h1 .desktop {

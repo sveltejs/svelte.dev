@@ -119,6 +119,8 @@
 		background-size: 1.2rem 1.2rem;
 		background-position: 0 45%;
 		background-repeat: no-repeat;
+		font-family: var(--sk-font-heading);
+		font-size: var(--sk-text-s);
 	}
 
 	:focus-visible {
@@ -133,7 +135,6 @@
 		margin: 0 0.5rem 0 calc(0.5rem + var(--inset));
 		padding: 0 0.5rem;
 		font-size: var(--font-size);
-		font-family: inherit;
 	}
 
 	.basename {
@@ -142,7 +143,6 @@
 		margin: 0;
 		padding: 0 1rem 0 calc(1rem + var(--inset));
 		font-size: var(--font-size);
-		font-family: inherit;
 		color: inherit;
 		flex: 1;
 		height: 100%;

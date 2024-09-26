@@ -258,7 +258,7 @@
 
 	.meta {
 		color: var(--sk-text-2, #666);
-		font-family: var(--sk-font) !important;
+		font-family: var(--sk-font-body) !important;
 		font-size: 12px;
 	}
 

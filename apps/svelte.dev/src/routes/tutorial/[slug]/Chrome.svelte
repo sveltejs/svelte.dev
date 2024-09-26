@@ -67,6 +67,7 @@
 	input {
 		flex: 1;
 		padding: 0.5rem 1rem 0.4rem 1rem;
+		border: none;
 		background-color: var(--sk-back-3);
 		color: var(--sk-text-1);
 		font-family: inherit;
