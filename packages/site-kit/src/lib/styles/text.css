@@ -300,7 +300,8 @@
 	padding: 0 0 0 4.5rem;
 	font-style: italic;
 
-	em, i {
+	em,
+	i {
 		font-style: normal;
 	}
 
@@ -318,7 +319,6 @@
 	left: 0.5rem;
 	top: 0;
 	background: url($lib/icons/lightbulb.svg) no-repeat 50% 50% / contain;
-
 }
 
 .text :where(blockquote):first-child {
