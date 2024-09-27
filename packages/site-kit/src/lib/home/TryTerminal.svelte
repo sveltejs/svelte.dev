@@ -6,9 +6,7 @@
 		<span class="title">terminal</span>
 	</div>
 	<pre><code
-			><span class="line"
-				>npx <span class="orange-highlight">sv</span> create my-app</span
-			>
+			><span class="line">npx <span class="orange-highlight">sv</span> create my-app</span>
 <span class="line">cd my-app</span>
 <span class="line">npm install</span>
 <span class="line">npm run dev -- --open</span></code
