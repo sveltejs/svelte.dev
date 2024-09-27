@@ -34,14 +34,19 @@
 	position: relative;
 }
 
+.text :where(.copy-code-block) {
+	box-shadow: 1px 2px 1rem hsla(0 0 0 / 0.08);
+}
+
 .text :where(pre) {
 	position: relative;
 	margin: 1em 0;
 	width: 100%;
 	padding: 1rem;
-	box-shadow: inset 1px 1px 6px hsla(205.7, 63.6%, 30.8%, 0.06);
+
+	/* box-shadow: inset 1px 1px 6px hsla(205.7, 63.6%, 30.8%, 0.06); */
 	box-sizing: border-box;
-	background-color: var(--sk-code-bg);
+	/* background-color: var(--sk-code-bg); */
 	color: var(--sk-code-base);
 	border-radius: var(--sk-border-radius);
 	font-size: var(--sk-text-s);

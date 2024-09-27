@@ -84,14 +84,17 @@
 	--sk-back-translucent: hsla(0, 0%, 0%, 0.1);
 	--sk-text-translucent: hsla(0, 0%, 0%, 0.7);
 
-	&.dark {
-		color-scheme: light;
+	/* overrides */
+	--shiki-color-background: var(--sk-back-2);
 
-		--sk-back-1: hsl(0, 14%, 1%);
-		--sk-back-2: hsla(0, 0%, 18%, 1);
-		--sk-back-3: hsla(0, 0%, 14%, 1);
-		--sk-back-4: hsl(0, 0%, 22%);
-		--sk-back-5: hsl(0, 0%, 40%);
+	&.dark {
+		color-scheme: dark;
+
+		--sk-back-1: hsl(0 0 1);
+		--sk-back-2: hsl(0 0 18);
+		--sk-back-3: hsl(0 0 12);
+		--sk-back-4: hsl(0 0 22);
+		--sk-back-5: hsl(0 0 40);
 		--sk-back-translucent: hsla(0, 0%, 100%, 0.1);
 		--sk-theme-1-hsl: 12, 94%, 62%;
 		--sk-theme-2-hsl: 240, 8%, 44%;
@@ -122,6 +125,9 @@
 		--sk-code-diff-base: hsla(0, 0%, 100%, 0.5);
 		--sk-code-diff-inserted: hsl(120, 46%, 48%);
 		--sk-code-diff-removed: hsl(2, 64%, 70%);
+
+		/* overrides */
+		--shiki-color-background: var(--sk-back-3);
 	}
 }
 
