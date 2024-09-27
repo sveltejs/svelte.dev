@@ -2,20 +2,27 @@
 	import { page } from '$app/stores';
 	import type { NavigationLink } from '../types';
 
-	let { links: _links, prefix }: { links: NavigationLink; prefix: string } = $props();
-
-	const links = $derived([
-		{ title: _links.title, path: _links.pathname },
-		..._links.sections!.map((s) => ({ title: s.title, path: s.path! }))
-	]);
-	const current = $derived($page.url.pathname.startsWith(`/${prefix}`) ? 'page' : null);
+	let { link }: { link: NavigationLink } = $props();
 </script>
 
 <div class="dropdown">
-	<a href={links[0].path} aria-current={current}>{links[0].title}</a>
+	<a
+		href={link.pathname}
+		aria-current={$page.url.pathname.startsWith(`/${link.prefix}`) ? 'page' : undefined}
+	>
+		{link.title}
+	</a>
+
 	<nav class="dropdown-content">
-		{#each links.slice(1) as link}
-			<a href={link.path}>{link.title}</a>
+		{#each link.sections! as section}
+			<a
+				href={section.path}
+				aria-current={$page.url.pathname === section.path || $page.url.pathname.startsWith(section.path!)
+					? 'page'
+					: undefined}
+			>
+				{section.title}
+			</a>
 		{/each}
 	</nav>
 </div>
@@ -46,10 +53,6 @@
 			display: block;
 			margin: 0 !important;
 			box-shadow: none !important;
-
-			&:last-of-type {
-				border-radius: var(--sk-border-radius);
-			}
 		}
 
 		a:hover {

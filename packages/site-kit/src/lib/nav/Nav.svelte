@@ -83,7 +83,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		<div class="menu">
 			{#each links as link}
 				{#if link.sections?.[0].path}
-					<LinksDropdown links={link} prefix={link.prefix} />
+					<LinksDropdown {link} />
 				{:else}
 					<a
 						href={link.pathname}
