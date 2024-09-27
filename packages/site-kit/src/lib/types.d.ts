@@ -24,6 +24,7 @@ export interface Document {
 		title: string;
 		[key: string]: any;
 	};
+	breadcrumbs: Array<{ title: string }>;
 	body: string;
 	sections: Section[];
 	children: Document[];

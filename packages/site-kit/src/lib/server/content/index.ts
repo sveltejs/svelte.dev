@@ -35,6 +35,7 @@ export async function create_index(
 			slug,
 			file,
 			metadata: metadata as { title: string; [key: string]: any },
+			breadcrumbs: [],
 			body,
 			sections,
 			children: [],
@@ -52,10 +53,16 @@ export async function create_index(
 		if (parts.length === 0) {
 			roots.push(document);
 		} else {
-			const parent = content[parts.join('/')];
+			let parent = content[parts.join('/')];
 
 			if (parent) {
 				parent.children.push(document);
+
+				while (parts.length) {
+					document.breadcrumbs.unshift({ title: parent.metadata.title });
+					parts.pop();
+					parent = content[parts.join('/')];
+				}
 			} else {
 				roots.push(document);
 			}
