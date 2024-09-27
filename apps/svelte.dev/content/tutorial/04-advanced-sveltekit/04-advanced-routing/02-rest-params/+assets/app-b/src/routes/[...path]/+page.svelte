@@ -3,8 +3,8 @@
 
 	let words = ['how', 'deep', 'does', 'the', 'rabbit', 'hole', 'go'];
 
-	$: depth = $page.params.path.split('/').filter(Boolean).length;
-	$: next = depth === words.length ? '/' : `/${words.slice(0, depth + 1).join('/')}`;
+	let depth = $derived($page.params.path.split('/').filter(Boolean).length);
+	let next = $derived(depth === words.length ? '/' : `/${words.slice(0, depth + 1).join('/')}`);
 </script>
 
 <div class="flex">

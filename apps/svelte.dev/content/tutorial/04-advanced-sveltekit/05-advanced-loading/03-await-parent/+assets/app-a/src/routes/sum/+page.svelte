@@ -1,5 +1,5 @@
 <script>
-	export let data;
+	let { data } = $props();
 </script>
 
 <p>{data.a} + {data.b} = {data.c}</p>

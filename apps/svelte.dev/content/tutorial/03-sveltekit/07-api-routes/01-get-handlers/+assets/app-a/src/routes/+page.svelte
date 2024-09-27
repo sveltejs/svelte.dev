@@ -1,6 +1,6 @@
 <script>
 	/** @type {number} */
-	let number;
+	let number = $state();
 
 	async function roll() {
 		const response = await fetch('/roll');
@@ -8,7 +8,7 @@
 	}
 </script>
 
-<button on:click={roll}>Roll the dice</button>
+<button onclick={roll}>Roll the dice</button>
 
 {#if number !== undefined}
 	<p>You rolled a {number}</p>

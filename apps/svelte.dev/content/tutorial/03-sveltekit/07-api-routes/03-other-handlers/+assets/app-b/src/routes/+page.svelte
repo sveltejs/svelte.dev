@@ -1,5 +1,5 @@
 <script>
-	export let data;
+	let { data = $bindable() } = $props();
 </script>
 
 <div class="centered">
@@ -10,7 +10,7 @@
 		<input
 			type="text"
 			autocomplete="off"
-			on:keydown={async (e) => {
+			onkeydown={async (e) => {
 				if (e.key !== 'Enter') return;
 
 				const input = e.currentTarget;
@@ -43,7 +43,7 @@
 					<input
 						type="checkbox"
 						checked={todo.done}
-						on:change={async (e) => {
+						onchange={async (e) => {
 							const done = e.currentTarget.checked;
 
 							await fetch(`/todo/${todo.id}`, {
@@ -58,7 +58,7 @@
 					<span>{todo.description}</span>
 					<button
 						aria-label="Mark as complete"
-						on:click={async (e) => {
+						onclick={async (e) => {
 							await fetch(`/todo/${todo.id}`, {
 								method: 'DELETE'
 							});

@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 	import { invalidateAll } from '$app/navigation';
 
-	export let data;
+	let { data } = $props();
 
 	onMount(() => {
 		const interval = setInterval(() => {

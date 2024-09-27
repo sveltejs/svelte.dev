@@ -2,8 +2,7 @@
 	import { fly, slide } from 'svelte/transition';
 	import { enhance } from '$app/forms';
 
-	export let data;
-	export let form;
+	let { data, form } = $props();
 </script>
 
 <div class="centered">
