@@ -22,14 +22,14 @@
 	<meta name="Description" content="{data.document.metadata.title} • Svelte documentation" />
 </svelte:head>
 
-<div class="text" id="docs-content" use:ts_js_select use:copy_code_descendants use:legacy_details>
+<div id="docs-content" use:ts_js_select use:copy_code_descendants use:legacy_details>
 	<header>
 		<h1>{data.document.metadata.title}</h1>
 	</header>
 
 	<OnThisPage {content} document={data.document} />
 
-	<div class="content" bind:this={content}>
+	<div class="text content" bind:this={content}>
 		{@html data.document.body}
 	</div>
 

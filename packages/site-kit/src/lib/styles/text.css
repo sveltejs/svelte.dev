@@ -90,16 +90,9 @@
 }
 
 .text :where(a:not(.permalink)) {
-	--color: var(--primary-hsl, var(--sk-theme-1-hsl));
-
-	color: hsl(var(--color));
-	box-shadow: inset 0 -1px 0 0 hsl(var(--color));
+	color: inherit;
+	text-decoration: underline;
 	transition: box-shadow 0.1s ease-in-out;
-}
-
-.text :where(a:not(.permalink)):hover {
-	text-decoration: none;
-	box-shadow: inset 0 -2px 0 0px hsl(var(--color));
 }
 
 .text :where(a:not(.permalink) code) {

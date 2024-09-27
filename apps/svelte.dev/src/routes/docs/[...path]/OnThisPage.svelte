@@ -157,6 +157,7 @@
 
 				a.active {
 					color: var(--sk-text-1);
+					text-decoration: underline;
 				}
 			}
 		}

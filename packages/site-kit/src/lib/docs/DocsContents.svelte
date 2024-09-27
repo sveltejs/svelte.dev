@@ -111,6 +111,7 @@
 	[aria-current='page'] {
 		/* font-weight: 700; */
 		color: var(--sk-theme-1);
+		text-decoration: underline;
 	}
 
 	ul ul,
