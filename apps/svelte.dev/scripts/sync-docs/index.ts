@@ -16,8 +16,8 @@ import glob from 'tiny-glob/sync';
 import { fileURLToPath } from 'node:url';
 
 const dirname = fileURLToPath(new URL('.', import.meta.url));
-const REPOS = path.join(dirname, '../repos');
-const DOCS = path.join(dirname, '../content/docs');
+const REPOS = path.join(dirname, '../../repos');
+const DOCS = path.join(dirname, '../../content/docs');
 
 // Adjust the following variables as needed for your local setup
 
@@ -25,9 +25,9 @@ const DOCS = path.join(dirname, '../content/docs');
 const use_git = process.env.USE_GIT === 'true';
 
 /** The path to your local Svelte repository (only relevant if `use_git` is `false`) */
-let svelte_repo_path = path.join(dirname, '../../../../svelte');
+let svelte_repo_path = path.join(dirname, '../../../../../svelte');
 /** The path to your local SvelteKit repository (only relevant if `use_git` is `false`) */
-let sveltekit_repo_path = path.join(dirname, '../../../../svelte-kit');
+let sveltekit_repo_path = path.join(dirname, '../../../../../svelte-kit');
 
 /**
  * Depending on your setup, this will either clone the Svelte and SvelteKit repositories
