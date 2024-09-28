@@ -750,7 +750,7 @@ function stringify_expanded_type(type: ModuleChild) {
 	);
 }
 
-function fence(code: string, lang: keyof typeof SHIKI_LANGUAGE_MAP = 'ts') {
+export function fence(code: string, lang: keyof typeof SHIKI_LANGUAGE_MAP = 'ts') {
 	return (
 		'\n\n```' +
 		lang +

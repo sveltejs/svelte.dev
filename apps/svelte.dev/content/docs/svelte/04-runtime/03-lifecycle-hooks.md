@@ -45,13 +45,7 @@ If a function is returned from `onMount`, it will be called when the component i
 
 ## `onDestroy`
 
-<div class="ts-block">
-
-```dts
-function onDestroy(fn: () => any): void;
-```
-
-</div>
+@include svelte/svelte/+exports/onDestroy.md
 
 Schedules a callback to run immediately before the component is unmounted.
 
