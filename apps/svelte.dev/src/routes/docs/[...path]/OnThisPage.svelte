@@ -36,13 +36,12 @@
 
 <aside class="on-this-page">
 	<label>
-		<input type="checkbox" checked aria-label="Toggle 'on this page' menu" />
+		<input type="checkbox" aria-label="Toggle 'on this page' menu" />
 		On this page
 	</label>
 
 	<nav>
 		<ul>
-			<!-- TODO hide top link on mobile -->
 			<li>
 				<a href="/{document.slug}" class:active={current === ''}>
 					{document.metadata.title}
@@ -85,15 +84,11 @@
 
 		@media (max-width: 1199px) {
 			margin: 4rem 0;
-			/* background: var(--sk-back-3); */
-			/* padding: 1rem; */
 
 			&:not(:has(li:nth-child(2))) {
 				/* hide widget if there are no subheadings */
 				display: none;
 			}
-
-			font-family: var(--sk-font-heading);
 
 			label {
 				position: relative;
@@ -143,10 +138,6 @@
 			nav {
 				display: none;
 				padding: 0 0 0 3rem;
-			}
-
-			li::before {
-				content: '• ';
 			}
 		}
 
