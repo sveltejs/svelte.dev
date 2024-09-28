@@ -44,9 +44,6 @@ importers:
       '@codemirror/view':
         specifier: ^6.17.1
         version: 6.26.3
-      '@fontsource/roboto-mono':
-        specifier: ^5.0.8
-        version: 5.0.18
       '@jridgewell/sourcemap-codec':
         specifier: ^1.4.15
         version: 1.4.15
@@ -804,9 +801,6 @@ packages:
 
   '@fontsource/fira-mono@5.1.0':
     resolution: {integrity: sha512-6+nftSKApXyN0I9FC5GJuG5TUCh+in5OehtrXRIsHJvq38Pm//oA1kZZYNdXv99JYzLzJ3lzsTAavmS+xGLGDw==}
-
-  '@fontsource/roboto-mono@5.0.18':
-    resolution: {integrity: sha512-hKuwk/cy3i6fWPzazT5xjgWq4YNqZWDHVbJh2Wwj3KYvWGi2v3ToBw/4LKQ+ggEkPLcIG6VU8GpCT3Xtf+mbbA==}
 
   '@fontsource/yantramanav@5.1.0':
     resolution: {integrity: sha512-wSmYmoGhFbYF4XUXouudROqTn6GREe0HTV/HqcnRLYbQJNa3kmqbcebIm9PxPDQ0l3y2speJAlbOoDGM2DN9dg==}
@@ -3311,8 +3305,6 @@ snapshots:
   '@fontsource/cardo@5.1.0': {}
 
   '@fontsource/fira-mono@5.1.0': {}
-
-  '@fontsource/roboto-mono@5.0.18': {}
 
   '@fontsource/yantramanav@5.1.0': {}
 

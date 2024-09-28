@@ -26,7 +26,6 @@
 		"@codemirror/search": "^6.5.2",
 		"@codemirror/state": "^6.2.1",
 		"@codemirror/view": "^6.17.1",
-		"@fontsource/roboto-mono": "^5.0.8",
 		"@jridgewell/sourcemap-codec": "^1.4.15",
 		"@lezer/common": "^1.0.4",
 		"@lezer/highlight": "^1.1.6",
