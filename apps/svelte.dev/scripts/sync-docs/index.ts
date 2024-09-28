@@ -1,4 +1,4 @@
-import { replace_export_type_placeholders, type Modules } from '@sveltejs/site-kit/markdown';
+import { type Modules } from '@sveltejs/site-kit/markdown';
 import path from 'node:path';
 import { cpSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import ts from 'typescript';
@@ -159,6 +159,7 @@ for (const pkg of packages) {
 	for (const module of modules) {
 		write(`${INCLUDES}/${pkg.name}/${module.name}/index.md`, stringify_module(module));
 
+		// TODO this is only actually used in one place AFAICT, we probably don't need these includes
 		for (const exported of module.exports ?? []) {
 			write(
 				`${INCLUDES}/${pkg.name}/${module.name}/+exports/${exported.name}.md`,
@@ -171,7 +172,6 @@ for (const pkg of packages) {
 	const files = glob(`${DOCS}/${pkg.name}/**/*.md`);
 
 	for (const file of files) {
-		// const content = await replace_export_type_placeholders(readFileSync(file, 'utf-8'), modules);
 		const content = readFileSync(file, 'utf-8')
 			.replace(/> MODULE: (.+)/g, `@include ${pkg.name}/$1/index.md`)
 			.replace(/> EXPORT_SNIPPET: (.+?)#(.+)?$/gm, `@include ${pkg.name}/$1/+exports/$2.md`);

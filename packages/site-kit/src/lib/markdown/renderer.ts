@@ -516,6 +516,7 @@ export async function convert_to_ts(js_code: string, indent = '', offset = '') {
 }
 
 /**
+ * TODO this is likely no longer needed
  * Replace module/export information placeholders in the docs.
  */
 export async function replace_export_type_placeholders(content: string, modules: Modules) {
