@@ -258,7 +258,14 @@ async function parse({
 			)}<a href="#${slug}" class="permalink"><span class="visually-hidden">permalink</span></a></h${level}>`;
 		},
 		code: (source, language) => code(source, language ?? 'js', current),
-		codespan
+		codespan,
+		blockquote: (content) => {
+			if (content.includes('[!LEGACY]')) {
+				content = `<details class="legacy"><summary>Legacy mode</summary>${content.replace('[!LEGACY]', '')}</details>`;
+			}
+
+			return `<blockquote>${content}</blockquote>`;
+		}
 	});
 
 	return content;

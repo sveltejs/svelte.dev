@@ -351,27 +351,54 @@
 }
 
 details.legacy {
-	background-color: hsla(var(--sk-text-warning-hsl), 0.02);
-	border-radius: var(--sk-border-radius);
-	padding: 1rem;
-	margin: 1rem 0;
+	&::after {
+		content: '';
+		background: url(../icons/chevron.svg);
+		background-size: contain;
+		position: absolute;
+		right: 0.5rem;
+		top: 0.5rem;
+		width: 2rem;
+		height: 2rem;
+		rotate: -90deg;
+		transition: rotate 0.2s;
+		pointer-events: none;
+	}
 
 	& > summary {
-		color: hsl(var(--sk-text-warning-hsl));
+		position: relative;
+		display: flex;
+		align-items: center;
+		height: 3rem;
+		color: var(--sk-text-4);
+		font-family: var(--sk-font-heading);
+		font-style: normal;
 		font-size: 1.4rem;
-		font-weight: 600;
+		user-select: none;
 
 		&::after {
+			position: absolute;
+			display: flex;
+			align-items: center;
+			right: 3rem;
+			top: 0;
+			height: 100%;
 			content: 'show all';
 			float: right;
 		}
 	}
 
-	&[open] > summary {
-		margin-bottom: 1.4rem;
-
+	&[open] {
 		&::after {
-			content: 'hide all';
+			rotate: 90deg;
+		}
+
+		& > summary {
+			margin-bottom: 1.4rem;
+
+			&::after {
+				content: 'hide all';
+			}
 		}
 	}
 
