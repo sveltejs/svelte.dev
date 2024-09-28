@@ -1,6 +1,6 @@
 import { type Modules } from '@sveltejs/site-kit/markdown';
 import path from 'node:path';
-import { cpSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
+import fs from 'node:fs';
 import ts from 'typescript';
 import glob from 'tiny-glob/sync';
 import { fileURLToPath } from 'node:url';
@@ -67,7 +67,7 @@ const packages: Package[] = [
 			}
 
 			const dir = kit_base + 'src/types/synthetic';
-			for (const file of readdirSync(dir)) {
+			for (const file of fs.readdirSync(dir)) {
 				if (!file.endsWith('.md')) continue;
 
 				const comment = strip_origin(read_d_ts_file(`${dir}/${file}`));
@@ -141,7 +141,7 @@ const packages: Package[] = [
  */
 if (process.env.USE_GIT === 'true') {
 	try {
-		mkdirSync(REPOS);
+		fs.mkdirSync(REPOS);
 	} catch {
 		// ignore if it already exists
 	}
@@ -151,7 +151,8 @@ if (process.env.USE_GIT === 'true') {
 
 for (const pkg of packages) {
 	for (const file of glob('**/*.md', { cwd: `${pkg.local}/${pkg.docs}` })) {
-		const content = readFileSync(`${pkg.local}/${pkg.docs}/${file}`, 'utf-8')
+		const content = fs
+			.readFileSync(`${pkg.local}/${pkg.docs}/${file}`, 'utf-8')
 			.replace(/> MODULE: (.+)/g, `@include ${pkg.name}/$1/index.md`)
 			.replace(/> EXPORT_SNIPPET: (.+?)#(.+)?$/gm, `@include ${pkg.name}/$1/+exports/$2.md`);
 
@@ -161,7 +162,7 @@ for (const pkg of packages) {
 	// Older versions of the documentation used meta.json instead of index.md
 	// TODO do we still need this?
 	for (const file of glob('**/meta.json', { cwd: `${pkg.local}/${pkg.docs}` })) {
-		const json = readFileSync(`${pkg.local}/${pkg.docs}/${file}`, 'utf-8');
+		const json = fs.readFileSync(`${pkg.local}/${pkg.docs}/${file}`, 'utf-8');
 		const meta = JSON.parse(json);
 
 		const content = `---\n${Object.entries(meta)
