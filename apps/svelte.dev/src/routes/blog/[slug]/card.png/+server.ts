@@ -5,9 +5,7 @@ import { read } from '$app/server';
 import satori from 'satori';
 import { html as toReactNode } from 'satori-html';
 import Card from './Card.svelte';
-// @ts-expect-error no types for the query exist
-import CardCSS from './Card.svelte?raw&svelte&type=style';
-import OverpassRegular from './Overpass-Regular.ttf?url';
+import YantramanavRegular from './Yantramanav-Regular.ttf?url';
 import { blog_posts } from '$lib/server/content';
 
 export const prerender = true;
@@ -20,7 +18,7 @@ export function entries() {
 
 const height = 630;
 const width = 1200;
-const data = await read(OverpassRegular).arrayBuffer();
+const data = await read(YantramanavRegular).arrayBuffer();
 
 export async function GET({ params }) {
 	const post = blog_posts.find((post) => post.slug === `blog/${params.slug}`);
@@ -28,7 +26,7 @@ export async function GET({ params }) {
 	if (!post) error(404);
 
 	const result = render(Card, { props: { title: post.metadata.title, date: post.date_formatted } });
-	const element = toReactNode(`${result.body}<style>${CardCSS}</style>`);
+	const element = toReactNode(`<head>${result.head}</head>${result.body}`);
 
 	const svg = await satori(element, {
 		fonts: [

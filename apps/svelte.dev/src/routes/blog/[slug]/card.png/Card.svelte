@@ -1,3 +1,5 @@
+<svelte:options css="injected" />
+
 <script lang="ts">
 	let { title, date }: { title: string; date: string } = $props();
 </script>
@@ -16,7 +18,7 @@
 		display: flex;
 		width: 100%;
 		height: 100%;
-		font-family: 'Overpass';
+		font-family: 'Yantramanav';
 		background: white;
 	}
 
