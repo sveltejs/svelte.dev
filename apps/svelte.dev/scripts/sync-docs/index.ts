@@ -21,11 +21,10 @@ const dirname = fileURLToPath(new URL('.', import.meta.url));
 const REPOS = path.join(dirname, '../../repos');
 const DOCS = path.join(dirname, '../../content/docs');
 
-// TODO make `local` configurable
 const packages: Package[] = [
 	{
 		name: 'svelte',
-		local: path.join(dirname, '../../../../../svelte'),
+		local: `${REPOS}/svelte`,
 		repo: 'sveltejs/svelte',
 		pkg: 'packages/svelte',
 		docs: 'documentation/docs',
@@ -59,7 +58,7 @@ const packages: Package[] = [
 	},
 	{
 		name: 'kit',
-		local: path.join(dirname, '../../../../../svelte-kit'),
+		local: `${REPOS}/kit`,
 		repo: 'sveltejs/kit',
 		pkg: 'packages/kit',
 		docs: 'documentation/docs',
@@ -164,10 +163,6 @@ if (process.env.USE_GIT === 'true') {
 	}
 
 	await Promise.all(packages.map((pkg) => clone_repo(`https://github.com/${pkg.repo}.git`, REPOS)));
-
-	for (const pkg of packages) {
-		pkg.local = `${REPOS}/${pkg.name}`;
-	}
 }
 
 for (const pkg of packages) {
