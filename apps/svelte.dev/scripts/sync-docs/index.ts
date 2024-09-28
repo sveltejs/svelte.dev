@@ -4,8 +4,9 @@ import { cpSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 'nod
 import ts from 'typescript';
 import glob from 'tiny-glob/sync';
 import { fileURLToPath } from 'node:url';
-import { clone_repo, migrate_meta_json, replace_strings, strip_origin } from './utils';
+import { clone_repo, migrate_meta_json, replace_strings, strip_origin, write } from './utils';
 import { get_types, read_d_ts_file, read_types } from './types';
+import { stringify_module } from '../../../../packages/site-kit/src/lib/markdown/renderer';
 
 interface Package {
 	name: string;
@@ -19,6 +20,7 @@ interface Package {
 const dirname = fileURLToPath(new URL('.', import.meta.url));
 const REPOS = path.join(dirname, '../../repos');
 const DOCS = path.join(dirname, '../../content/docs');
+const INCLUDES = path.join(dirname, '../../includes');
 
 const packages: Package[] = [
 	{
@@ -116,7 +118,15 @@ const packages: Package[] = [
 			config.comment = kit_config.comment =
 				'See the [configuration reference](/docs/kit/configuration) for details.';
 
-			svelte_kit_module!.types = [full_config, full_kit_config];
+			modules.push({
+				name: '__configuration',
+				comment: '',
+				exempt: false,
+				types: [full_config, full_kit_config],
+				exports: []
+			});
+
+			// svelte_kit_module!.types = [full_config, full_kit_config];
 
 			return modules;
 		}
@@ -145,6 +155,10 @@ for (const pkg of packages) {
 
 	const modules = await pkg.process_modules(await read_types(`${pkg.local}/${pkg.pkg}/`, []), pkg);
 	modules.sort((a, b) => (a.name! < b.name! ? -1 : 1));
+
+	for (const module of modules) {
+		write(`${INCLUDES}/${pkg.name}/${module.name}/index.md`, stringify_module(module));
+	}
 
 	const files = glob(`${DOCS}/${pkg.name}/**/*.md`);
 

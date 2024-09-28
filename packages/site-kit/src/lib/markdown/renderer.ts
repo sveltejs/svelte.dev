@@ -671,7 +671,7 @@ export async function replace_export_type_placeholders(content: string, modules:
 /**
  * Takes a module and returns a markdown string.
  */
-function stringify_module(module: Modules[0]) {
+export function stringify_module(module: Modules[0]) {
 	let content = '';
 
 	if (module.exports && module.exports.length > 0) {

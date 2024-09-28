@@ -2,20 +2,41 @@ import { read } from '$app/server';
 import type { Document } from '@sveltejs/site-kit';
 import { create_index } from '@sveltejs/site-kit/server/content';
 
-const documents = import.meta.glob<string>('../../../content/**/*.md', {
-	eager: true,
-	query: '?url',
-	import: 'default'
-});
-
-const assets = import.meta.glob<string>('../../../content/**/+assets/**', {
-	eager: true,
-	query: '?url',
-	import: 'default'
-});
-
 // https://github.com/vitejs/vite/issues/17453
-export const index = await create_index(documents, assets, '../../../content', read);
+const strip_prefix = (prefix: string, collection: Record<string, string>) => {
+	return Object.fromEntries(
+		Object.entries(collection).map(([key, value]) => [key.replace(prefix, ''), value])
+	);
+};
+
+const documents = strip_prefix(
+	'../../../content/',
+	import.meta.glob<string>('../../../content/**/*.md', {
+		eager: true,
+		query: '?url',
+		import: 'default'
+	})
+);
+
+const assets = strip_prefix(
+	'../../../content/',
+	import.meta.glob<string>('../../../content/**/+assets/**', {
+		eager: true,
+		query: '?url',
+		import: 'default'
+	})
+);
+
+const includes = strip_prefix(
+	'../../../includes/',
+	import.meta.glob<string>('../../../includes/**/*.md', {
+		eager: true,
+		query: '?url',
+		import: 'default'
+	})
+);
+
+export const index = await create_index(documents, assets, includes, read);
 
 const months = 'Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec'.split(' ');
 

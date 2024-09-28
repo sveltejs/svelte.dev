@@ -1,4 +1,5 @@
 import { spawn, type SpawnOptions } from 'node:child_process';
+import path from 'node:path';
 import fs from 'node:fs';
 import glob from 'tiny-glob/sync';
 
@@ -66,4 +67,14 @@ export function migrate_meta_json(path: string) {
  */
 export function strip_origin(str: string) {
 	return str.replace(/https:\/\/(kit\.)?svelte\.dev/g, '');
+}
+
+export function write(file: string, content: string) {
+	try {
+		fs.mkdirSync(path.dirname(file), { recursive: true });
+	} catch {
+		// ignore
+	}
+
+	fs.writeFileSync(file, content);
 }
