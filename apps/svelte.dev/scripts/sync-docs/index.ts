@@ -4,7 +4,7 @@ import { cpSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 'nod
 import ts from 'typescript';
 import glob from 'tiny-glob/sync';
 import { fileURLToPath } from 'node:url';
-import { clone_repo, migrate_meta_json, replace_strings, strip_origin, write } from './utils';
+import { clone_repo, replace_strings, strip_origin, write } from './utils';
 import { get_types, read_d_ts_file, read_types } from './types';
 import { fence, stringify_module } from '../../../../packages/site-kit/src/lib/markdown/renderer';
 
@@ -150,11 +150,28 @@ if (process.env.USE_GIT === 'true') {
 }
 
 for (const pkg of packages) {
-	cpSync(`${pkg.local}/${pkg.docs}`, `${DOCS}/${pkg.name}`, { recursive: true });
-	migrate_meta_json(`${DOCS}/${pkg.name}`);
+	for (const file of glob('**/*.md', { cwd: `${pkg.local}/${pkg.docs}` })) {
+		const content = readFileSync(`${pkg.local}/${pkg.docs}/${file}`, 'utf-8')
+			.replace(/> MODULE: (.+)/g, `@include ${pkg.name}/$1/index.md`)
+			.replace(/> EXPORT_SNIPPET: (.+?)#(.+)?$/gm, `@include ${pkg.name}/$1/+exports/$2.md`);
+
+		write(`${DOCS}/${pkg.name}/${file}`, content);
+	}
+
+	// Older versions of the documentation used meta.json instead of index.md
+	// TODO do we still need this?
+	for (const file of glob('**/meta.json', { cwd: `${pkg.local}/${pkg.docs}` })) {
+		const json = readFileSync(`${pkg.local}/${pkg.docs}/${file}`, 'utf-8');
+		const meta = JSON.parse(json);
+
+		const content = `---\n${Object.entries(meta)
+			.map(([key, value]) => `${key}: ${JSON.stringify(value)}`)
+			.join('\n')}\n---`;
+
+		write(`${DOCS}/${pkg.name}/${file.replace('meta.json', 'index.md')}`, content);
+	}
 
 	const modules = await pkg.process_modules(await read_types(`${pkg.local}/${pkg.pkg}/`, []), pkg);
-	modules.sort((a, b) => (a.name! < b.name! ? -1 : 1));
 
 	for (const module of modules) {
 		write(`${INCLUDES}/${pkg.name}/${module.name}/index.md`, stringify_module(module));
@@ -166,16 +183,5 @@ for (const pkg of packages) {
 				`<div class="ts-block">${fence(exported.snippet, 'dts')}</div>`
 			);
 		}
-	}
-
-	// TODO instead of copying then globbing, glob first then replace-on-copy
-	const files = glob(`${DOCS}/${pkg.name}/**/*.md`);
-
-	for (const file of files) {
-		const content = readFileSync(file, 'utf-8')
-			.replace(/> MODULE: (.+)/g, `@include ${pkg.name}/$1/index.md`)
-			.replace(/> EXPORT_SNIPPET: (.+?)#(.+)?$/gm, `@include ${pkg.name}/$1/+exports/$2.md`);
-
-		writeFileSync(file, content);
 	}
 }

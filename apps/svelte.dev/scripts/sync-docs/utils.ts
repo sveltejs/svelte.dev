@@ -45,20 +45,6 @@ export function replace_strings(obj: any, replace: (str: string) => string) {
 	}
 }
 
-/** Older versions of the documentation did use meta.json instead of index.md */
-export function migrate_meta_json(path: string) {
-	const files = glob(`${path}/**/meta.json`);
-	for (const file of files) {
-		const content = fs.readFileSync(file, 'utf-8');
-		const meta = JSON.parse(content);
-		const new_content = `---\n${Object.entries(meta)
-			.map(([key, value]) => `${key}: ${JSON.stringify(value)}`)
-			.join('\n')}\n---`;
-		fs.rmSync(file);
-		fs.writeFileSync(file.replace('meta.json', 'index.md'), new_content);
-	}
-}
-
 /**
  * Type declarations include fully qualified URLs so that they become links when
  * you hover over names in an editor with TypeScript enabled. We need to remove
