@@ -14,7 +14,6 @@ interface Package {
 	pkg: string;
 	docs: string;
 	process_modules: (modules: Modules, pkg: Package) => Promise<Modules>;
-	write: (modules: Modules) => Promise<void>;
 }
 
 const dirname = fileURLToPath(new URL('.', import.meta.url));
@@ -42,18 +41,6 @@ const packages: Package[] = [
 			}
 
 			return modules;
-		},
-		write: async (modules: Modules) => {
-			const files = glob(`${DOCS}/svelte/**/*.md`);
-
-			for (const file of files) {
-				const content = await replace_export_type_placeholders(
-					readFileSync(file, 'utf-8'),
-					modules
-				);
-
-				writeFileSync(file, content);
-			}
 		}
 	},
 	{
@@ -92,9 +79,6 @@ const packages: Package[] = [
 				});
 			}
 
-			return modules;
-		},
-		write: async (modules) => {
 			// TODO JSdoc points to kit.svelte.dev structure, rewrite those for now
 			for (const module of modules) {
 				replace_strings(module, (str) =>
@@ -118,7 +102,8 @@ const packages: Package[] = [
 				);
 			}
 
-			const svelte_kit_types = modules.find((m) => m.name === '@sveltejs/kit')!.types!;
+			const svelte_kit_module = modules.find((m) => m.name === '@sveltejs/kit');
+			const svelte_kit_types = svelte_kit_module!.types!;
 			const config = svelte_kit_types.find((t) => t.name === 'Config')!;
 			const kit_config = svelte_kit_types.find((t) => t.name === 'KitConfig')!;
 			const full_config = { ...config };
@@ -131,20 +116,9 @@ const packages: Package[] = [
 			config.comment = kit_config.comment =
 				'See the [configuration reference](/docs/kit/configuration) for details.';
 
-			const kit_files = glob(`${DOCS}/kit/**/*.md`);
+			svelte_kit_module!.types = [full_config, full_kit_config];
 
-			for (const file of kit_files) {
-				const content = await replace_export_type_placeholders(
-					readFileSync(file, 'utf-8'),
-					!file.includes('configuration')
-						? modules
-						: modules.map((m) =>
-								m.name === '@sveltejs/kit' ? { ...m, types: [full_config, full_kit_config] } : m
-							)
-				);
-
-				writeFileSync(file, content);
-			}
+			return modules;
 		}
 	}
 ];
@@ -171,5 +145,12 @@ for (const pkg of packages) {
 
 	const modules = await pkg.process_modules(await read_types(`${pkg.local}/${pkg.pkg}/`, []), pkg);
 	modules.sort((a, b) => (a.name! < b.name! ? -1 : 1));
-	await pkg.write(modules);
+
+	const files = glob(`${DOCS}/${pkg.name}/**/*.md`);
+
+	for (const file of files) {
+		const content = await replace_export_type_placeholders(readFileSync(file, 'utf-8'), modules);
+
+		writeFileSync(file, content);
+	}
 }
