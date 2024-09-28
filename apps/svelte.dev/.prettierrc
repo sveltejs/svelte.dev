@@ -16,6 +16,12 @@
 			"options": {
 				"requirePragma": true
 			}
+		},
+		{
+			"files": "includes/**",
+			"options": {
+				"requirePragma": true
+			}
 		}
 	]
 }
