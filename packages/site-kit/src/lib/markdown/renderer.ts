@@ -519,19 +519,24 @@ export async function convert_to_ts(js_code: string, indent = '', offset = '') {
  * Replace module/export information placeholders in the docs.
  */
 export async function replace_export_type_placeholders(content: string, modules: Modules) {
+	//! 'g' flag is VERY IMPORTANT, OR WILL CAUSE INFINITE LOOP
+	const create_regex = (tag: string) =>
+		new RegExp(`(<!-- start ${tag}(?:: (.+?))? -->)[\\s\\S]+?(<!-- end ${tag} -->)`, 'gm');
+
+	/** Regexes for `<!-- start <TAG>: <argument> -->...<!-- end <TAG> --> */
 	const REGEXES = {
-		/** Render a specific type from a module with more details. Example: `> EXPANDED_TYPES: svelte#compile` */
-		EXPANDED_TYPES: /> EXPANDED_TYPES: (.+?)#(.+)$/gm,
-		/** Render types from a specific module. Example: `> TYPES: svelte` */
-		TYPES: /> TYPES: (.+?)(?:#(.+))?$/gm,
-		/** Render all exports and types from a specific module. Example: `> MODULE: svelte` */
-		MODULE: /> MODULE: (.+?)$/gm,
-		/** Render the snippet of a specific export. Example: `> EXPORT_SNIPPET: svelte#compile` */
-		EXPORT_SNIPPET: /> EXPORT_SNIPPET: (.+?)#(.+)?$/gm,
-		/** Render all modules. Example: `> MODULES` */
-		MODULES: /> MODULES/g, //! /g is VERY IMPORTANT, OR WILL CAUSE INFINITE LOOP
+		/** Render a specific type from a module with more details. Example: `EXPANDED_TYPES: svelte#compile` */
+		EXPANDED_TYPES: create_regex('EXPANDED_TYPES'),
+		/** Render types from a specific module. Example: `TYPES: svelte` */
+		TYPES: create_regex('TYPES'),
+		/** Render all exports and types from a specific module. Example: `MODULE: svelte` */
+		MODULE: create_regex('MODULE'),
+		/** Render the snippet of a specific export. Example: `EXPORT_SNIPPET: svelte#compile` */
+		EXPORT_SNIPPET: create_regex('EXPORT_SNIPPET'),
+		/** Render all modules. Example: `MODULES` */
+		MODULES: create_regex('MODULES'),
 		/** Render all value exports from a specific module. Example: `> EXPORTS: svelte` */
-		EXPORTS: /> EXPORTS: (.+)/
+		EXPORTS: create_regex('EXPORTS')
 	};
 
 	if (!modules || modules.length === 0) {
@@ -542,7 +547,9 @@ export async function replace_export_type_placeholders(content: string, modules:
 			.replace(REGEXES.MODULES, '')
 			.replace(REGEXES.EXPORTS, '');
 	}
-	content = await async_replace(content, REGEXES.EXPANDED_TYPES, async ([_, name, id]) => {
+	content = await async_replace(content, REGEXES.EXPANDED_TYPES, async ([_, start, value, end]) => {
+		const [name, id] = value.split('#');
+
 		const module = modules.find((module) => module.name === name);
 		if (!module) throw new Error(`Could not find module ${name}`);
 		if (!module.types) return '';
@@ -551,20 +558,22 @@ export async function replace_export_type_placeholders(content: string, modules:
 
 		if (!type) throw new Error(`Could not find type ${name}#${id}`);
 
-		return stringify_expanded_type(type);
+		return start + stringify_expanded_type(type) + end;
 	});
 
-	content = await async_replace(content, REGEXES.TYPES, async ([_, name, id]) => {
+	content = await async_replace(content, REGEXES.TYPES, async ([_, start, value, end]) => {
+		const [name, id] = value.split('#');
+
 		const module = modules.find((module) => module.name === name);
 		if (!module) throw new Error(`Could not find module ${name}`);
-		if (!module.types) return '';
+		if (!module.types) return start + end;
 
 		if (id) {
 			const type = module.types.find((t) => t.name === id);
 
 			if (!type) throw new Error(`Could not find type ${name}#${id}`);
 
-			return stringify_type(type);
+			return start + stringify_type(type) + end;
 		}
 
 		let comment = '';
@@ -572,10 +581,17 @@ export async function replace_export_type_placeholders(content: string, modules:
 			comment += `${module.comment}\n\n`;
 		}
 
-		return comment + module.types.map((t) => `## ${t.name}\n\n${stringify_type(t)}`).join('');
+		return (
+			start +
+			comment +
+			module.types.map((t) => `## ${t.name}\n\n${stringify_type(t)}`).join('') +
+			end
+		);
 	});
 
-	content = await async_replace(content, REGEXES.EXPORT_SNIPPET, async ([_, name, id]) => {
+	content = await async_replace(content, REGEXES.EXPORT_SNIPPET, async ([_, start, value, end]) => {
+		const [name, id] = value.split('#');
+
 		const module = modules.find((module) => module.name === name);
 		if (!module) throw new Error(`Could not find module ${name} for EXPORT_SNIPPET clause`);
 
@@ -586,59 +602,65 @@ export async function replace_export_type_placeholders(content: string, modules:
 		const exported = module.exports?.filter((t) => t.name === id);
 
 		return (
-			exported
+			start +
+			(exported
 				?.map((exportVal) => `<div class="ts-block">${fence(exportVal.snippet, 'dts')}</div>`)
-				.join('\n\n') ?? ''
+				.join('\n\n') ?? '') +
+			end
 		);
 	});
 
-	content = await async_replace(content, REGEXES.MODULE, async ([_, name]) => {
+	content = await async_replace(content, REGEXES.MODULE, async ([_, start, name, end]) => {
 		const module = modules.find((module) => module.name === name);
 		if (!module) throw new Error(`Could not find module ${name}`);
 
-		return stringify_module(module);
+		return start + stringify_module(module) + end;
 	});
 
-	content = await async_replace(content, REGEXES.MODULES, async () => {
-		return modules
-			.map((module) => {
-				if (!module.exports) return;
+	content = await async_replace(content, REGEXES.MODULES, async ([_, start, value, end]) => {
+		return (
+			start +
+			modules
+				.map((module) => {
+					if (!module.exports) return;
 
-				if (module.exports.length === 0 && !module.exempt) return '';
+					if (module.exports.length === 0 && !module.exempt) return '';
 
-				let import_block = '';
+					let import_block = '';
 
-				if (module.exports.length > 0) {
-					// deduplication is necessary for now, because of `error()` overload
-					const exports = Array.from(new Set(module.exports?.map((x) => x.name)));
+					if (module.exports.length > 0) {
+						// deduplication is necessary for now, because of `error()` overload
+						const exports = Array.from(new Set(module.exports?.map((x) => x.name)));
 
-					let declaration = `import { ${exports.join(', ')} } from '${module.name}';`;
-					if (declaration.length > 80) {
-						declaration = `import {\n\t${exports.join(',\n\t')}\n} from '${module.name}';`;
+						let declaration = `import { ${exports.join(', ')} } from '${module.name}';`;
+						if (declaration.length > 80) {
+							declaration = `import {\n\t${exports.join(',\n\t')}\n} from '${module.name}';`;
+						}
+
+						import_block = fence(declaration, 'js');
 					}
 
-					import_block = fence(declaration, 'js');
-				}
-
-				return `## ${module.name}\n\n${import_block}\n\n${module.comment}\n\n${module.exports
-					.map((type) => {
-						const markdown =
-							`<div class="ts-block">${fence(type.snippet)}` +
-							type.children?.map((v) => stringify(v)).join('\n\n') +
-							`</div>`;
-						return `### ${type.name}\n\n${type.comment}\n\n${markdown}`;
-					})
-					.join('\n\n')}`;
-			})
-			.join('\n\n');
+					return `## ${module.name}\n\n${import_block}\n\n${module.comment}\n\n${module.exports
+						.map((type) => {
+							const markdown =
+								`<div class="ts-block">${fence(type.snippet)}` +
+								type.children?.map((v) => stringify(v)).join('\n\n') +
+								`</div>`;
+							return `### ${type.name}\n\n${type.comment}\n\n${markdown}`;
+						})
+						.join('\n\n')}`;
+				})
+				.join('\n\n') +
+			end
+		);
 	});
 
-	content = await async_replace(content, REGEXES.EXPORTS, async ([_, name]) => {
+	content = await async_replace(content, REGEXES.EXPORTS, async ([_, start, name, end]) => {
 		const module = modules.find((module) => module.name === name);
 		if (!module) throw new Error(`Could not find module ${name} for EXPORTS: clause`);
-		if (!module.exports) return '';
+		if (!module.exports) return start + end;
 
-		if (module.exports.length === 0 && !module.exempt) return '';
+		if (module.exports.length === 0 && !module.exempt) return start + end;
 
 		let import_block = '';
 
@@ -654,15 +676,19 @@ export async function replace_export_type_placeholders(content: string, modules:
 			import_block = fence(declaration, 'js');
 		}
 
-		return `${import_block}\n\n${module.comment}\n\n${module.exports
-			.map((type) => {
-				const markdown =
-					`<div class="ts-block">${fence(type.snippet, 'dts')}` +
-					type.children?.map((val) => stringify(val, 'dts')).join('\n\n') +
-					`</div>`;
-				return `### ${type.name}\n\n${type.comment}\n\n${markdown}`;
-			})
-			.join('\n\n')}`;
+		return (
+			start +
+			`${import_block}\n\n${module.comment}\n\n${module.exports
+				.map((type) => {
+					const markdown =
+						`<div class="ts-block">${fence(type.snippet, 'dts')}` +
+						type.children?.map((val) => stringify(val, 'dts')).join('\n\n') +
+						`</div>`;
+					return `### ${type.name}\n\n${type.comment}\n\n${markdown}`;
+				})
+				.join('\n\n')}` +
+			end
+		);
 	});
 
 	return content;
