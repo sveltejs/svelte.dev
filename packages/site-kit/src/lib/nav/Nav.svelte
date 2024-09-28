@@ -207,6 +207,10 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		background: url(../branding/svelte.svg) no-repeat var(--sk-page-padding-side) 50% /
 			calc(100% - var(--sk-page-padding-side) - var(--padding-right)) auto;
 		padding: 0 var(--padding-right) 0 calc(var(--sk-page-padding-side) + 0rem);
+
+		:global(.dark) & {
+			background-image: url(../branding/svelte-dark.svg);
+		}
 	}
 
 	.mobile-menu {
