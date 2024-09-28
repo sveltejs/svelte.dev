@@ -43,7 +43,7 @@ import {
 
 ## backIn
 
-https://svelte.dev/docs/svelte-easing
+
 
 <div class="ts-block">
 
@@ -56,7 +56,7 @@ function backIn(t: number): number;
 
 ## backInOut
 
-https://svelte.dev/docs/svelte-easing
+
 
 <div class="ts-block">
 
@@ -69,7 +69,7 @@ function backInOut(t: number): number;
 
 ## backOut
 
-https://svelte.dev/docs/svelte-easing
+
 
 <div class="ts-block">
 
@@ -82,7 +82,7 @@ function backOut(t: number): number;
 
 ## bounceIn
 
-https://svelte.dev/docs/svelte-easing
+
 
 <div class="ts-block">
 
@@ -95,7 +95,7 @@ function bounceIn(t: number): number;
 
 ## bounceInOut
 
-https://svelte.dev/docs/svelte-easing
+
 
 <div class="ts-block">
 
@@ -108,7 +108,7 @@ function bounceInOut(t: number): number;
 
 ## bounceOut
 
-https://svelte.dev/docs/svelte-easing
+
 
 <div class="ts-block">
 
@@ -121,7 +121,7 @@ function bounceOut(t: number): number;
 
 ## circIn
 
-https://svelte.dev/docs/svelte-easing
+
 
 <div class="ts-block">
 
@@ -134,7 +134,7 @@ function circIn(t: number): number;
 
 ## circInOut
 
-https://svelte.dev/docs/svelte-easing
+
 
 <div class="ts-block">
 
@@ -147,7 +147,7 @@ function circInOut(t: number): number;
 
 ## circOut
 
-https://svelte.dev/docs/svelte-easing
+
 
 <div class="ts-block">
 
@@ -160,7 +160,7 @@ function circOut(t: number): number;
 
 ## cubicIn
 
-https://svelte.dev/docs/svelte-easing
+
 
 <div class="ts-block">
 
@@ -173,7 +173,7 @@ function cubicIn(t: number): number;
 
 ## cubicInOut
 
-https://svelte.dev/docs/svelte-easing
+
 
 <div class="ts-block">
 
@@ -186,7 +186,7 @@ function cubicInOut(t: number): number;
 
 ## cubicOut
 
-https://svelte.dev/docs/svelte-easing
+
 
 <div class="ts-block">
 
@@ -199,7 +199,7 @@ function cubicOut(t: number): number;
 
 ## elasticIn
 
-https://svelte.dev/docs/svelte-easing
+
 
 <div class="ts-block">
 
@@ -212,7 +212,7 @@ function elasticIn(t: number): number;
 
 ## elasticInOut
 
-https://svelte.dev/docs/svelte-easing
+
 
 <div class="ts-block">
 
@@ -225,7 +225,7 @@ function elasticInOut(t: number): number;
 
 ## elasticOut
 
-https://svelte.dev/docs/svelte-easing
+
 
 <div class="ts-block">
 
@@ -238,7 +238,7 @@ function elasticOut(t: number): number;
 
 ## expoIn
 
-https://svelte.dev/docs/svelte-easing
+
 
 <div class="ts-block">
 
@@ -251,7 +251,7 @@ function expoIn(t: number): number;
 
 ## expoInOut
 
-https://svelte.dev/docs/svelte-easing
+
 
 <div class="ts-block">
 
@@ -264,7 +264,7 @@ function expoInOut(t: number): number;
 
 ## expoOut
 
-https://svelte.dev/docs/svelte-easing
+
 
 <div class="ts-block">
 
@@ -277,7 +277,7 @@ function expoOut(t: number): number;
 
 ## linear
 
-https://svelte.dev/docs/svelte-easing
+
 
 <div class="ts-block">
 
@@ -290,7 +290,7 @@ function linear(t: number): number;
 
 ## quadIn
 
-https://svelte.dev/docs/svelte-easing
+
 
 <div class="ts-block">
 
@@ -303,7 +303,7 @@ function quadIn(t: number): number;
 
 ## quadInOut
 
-https://svelte.dev/docs/svelte-easing
+
 
 <div class="ts-block">
 
@@ -316,7 +316,7 @@ function quadInOut(t: number): number;
 
 ## quadOut
 
-https://svelte.dev/docs/svelte-easing
+
 
 <div class="ts-block">
 
@@ -329,7 +329,7 @@ function quadOut(t: number): number;
 
 ## quartIn
 
-https://svelte.dev/docs/svelte-easing
+
 
 <div class="ts-block">
 
@@ -342,7 +342,7 @@ function quartIn(t: number): number;
 
 ## quartInOut
 
-https://svelte.dev/docs/svelte-easing
+
 
 <div class="ts-block">
 
@@ -355,7 +355,7 @@ function quartInOut(t: number): number;
 
 ## quartOut
 
-https://svelte.dev/docs/svelte-easing
+
 
 <div class="ts-block">
 
@@ -368,7 +368,7 @@ function quartOut(t: number): number;
 
 ## quintIn
 
-https://svelte.dev/docs/svelte-easing
+
 
 <div class="ts-block">
 
@@ -381,7 +381,7 @@ function quintIn(t: number): number;
 
 ## quintInOut
 
-https://svelte.dev/docs/svelte-easing
+
 
 <div class="ts-block">
 
@@ -394,7 +394,7 @@ function quintInOut(t: number): number;
 
 ## quintOut
 
-https://svelte.dev/docs/svelte-easing
+
 
 <div class="ts-block">
 
@@ -407,7 +407,7 @@ function quintOut(t: number): number;
 
 ## sineIn
 
-https://svelte.dev/docs/svelte-easing
+
 
 <div class="ts-block">
 
@@ -420,7 +420,7 @@ function sineIn(t: number): number;
 
 ## sineInOut
 
-https://svelte.dev/docs/svelte-easing
+
 
 <div class="ts-block">
 
@@ -433,7 +433,7 @@ function sineInOut(t: number): number;
 
 ## sineOut
 
-https://svelte.dev/docs/svelte-easing
+
 
 <div class="ts-block">
 

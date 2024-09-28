@@ -36,8 +36,6 @@ const VERSION: string;
 
 `compile` converts your `.svelte` source code into a JavaScript module that exports a component
 
-https://svelte.dev/docs/svelte-compiler#svelte-compile
-
 <div class="ts-block">
 
 ```ts
@@ -53,8 +51,6 @@ function compile(
 ## compileModule
 
 `compileModule` takes your JavaScript source code containing runes, and turns it into a JavaScript module.
-
-https://svelte.dev/docs/svelte-compiler#svelte-compile
 
 <div class="ts-block">
 
@@ -91,8 +87,6 @@ The parse function parses a component, returning only its abstract syntax tree.
 The `modern` option (`false` by default in Svelte 5) makes the parser return a modern AST instead of the legacy AST.
 `modern` will become `true` by default in Svelte 6, and the option will be removed in Svelte 7.
 
-https://svelte.dev/docs/svelte-compiler#svelte-parse
-
 <div class="ts-block">
 
 ```ts
@@ -115,8 +109,6 @@ The parse function parses a component, returning only its abstract syntax tree.
 The `modern` option (`false` by default in Svelte 5) makes the parser return a modern AST instead of the legacy AST.
 `modern` will become `true` by default in Svelte 6, and the option will be removed in Svelte 7.
 
-https://svelte.dev/docs/svelte-compiler#svelte-parse
-
 <div class="ts-block">
 
 ```ts
@@ -138,8 +130,6 @@ function parse(
 
 The preprocess function provides convenient hooks for arbitrarily transforming component source code.
 For example, it can be used to convert a <style lang="sass"> block into vanilla CSS.
-
-https://svelte.dev/docs/svelte-compiler#svelte-preprocess
 
 <div class="ts-block">
 

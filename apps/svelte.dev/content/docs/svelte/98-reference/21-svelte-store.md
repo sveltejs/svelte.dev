@@ -22,8 +22,6 @@ import {
 Derived value store by synchronizing one or more readable stores and
 applying an aggregation function over its input values.
 
-https://svelte.dev/docs/svelte-store#derived
-
 <div class="ts-block">
 
 ```ts
@@ -45,8 +43,6 @@ function derived<S extends Stores, T>(
 
 Derived value store by synchronizing one or more readable stores and
 applying an aggregation function over its input values.
-
-https://svelte.dev/docs/svelte-store#derived
 
 <div class="ts-block">
 
@@ -95,8 +91,6 @@ function fromStore<V>(store: Readable<V>): {
 
 Get the current value from a store by subscribing and immediately unsubscribing.
 
-https://svelte.dev/docs/svelte-store#get
-
 <div class="ts-block">
 
 ```ts
@@ -109,8 +103,6 @@ function get<T>(store: Readable<T>): T;
 ## readable
 
 Creates a `Readable` store that allows reading by subscription.
-
-https://svelte.dev/docs/svelte-store#readable
 
 <div class="ts-block">
 
@@ -127,8 +119,6 @@ function readable<T>(
 ## readonly
 
 Takes a store and returns a new one derived from the old one that is readable.
-
-https://svelte.dev/docs/svelte-store#readonly
 
 <div class="ts-block">
 
@@ -171,8 +161,6 @@ function toStore<V>(get: () => V): Readable<V>;
 ## writable
 
 Create a `Writable` store that allows both updating and reading by subscription.
-
-https://svelte.dev/docs/svelte-store#writable
 
 <div class="ts-block">
 

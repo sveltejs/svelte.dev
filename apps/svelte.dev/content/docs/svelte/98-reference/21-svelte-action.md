@@ -18,8 +18,6 @@ export const myAction: Action<HTMLDivElement, { someProperty: boolean } | undefi
 You can return an object with methods `update` and `destroy` from the function and type which additional attributes and events it has.
 See interface `ActionReturn` for more details.
 
-Docs: https://svelte.dev/docs/svelte-action
-
 <div class="ts-block">
 
 ```dts
@@ -73,8 +71,6 @@ export function myAction(node: HTMLElement, parameter: Parameter): ActionReturn<
 	};
 }
 ```
-
-Docs: https://svelte.dev/docs/svelte-action
 
 <div class="ts-block">
 

@@ -34,8 +34,6 @@ The first time the callback runs will be after the initial `onMount`.
 
 In runes mode use `$effect` instead.
 
-https://svelte.dev/docs/svelte#afterupdate
-
 <div class="ts-block">
 
 ```ts
@@ -52,8 +50,6 @@ Schedules a callback to run immediately before the component is updated after an
 The first time the callback runs will be before the initial `onMount`.
 
 In runes mode use `$effect.pre` instead.
-
-https://svelte.dev/docs/svelte#beforeupdate
 
 <div class="ts-block">
 
@@ -83,8 +79,6 @@ const dispatch = createEventDispatcher<{
  optional: number | null; // takes an optional detail argument of type number
 }>();
 ```
-
-https://svelte.dev/docs/svelte#createeventdispatcher
 
 <div class="ts-block">
 
@@ -134,8 +128,6 @@ Retrieves the whole context map that belongs to the closest parent component.
 Must be called during component initialisation. Useful, for example, if you
 programmatically create a component and want to pass the existing context to it.
 
-https://svelte.dev/docs/svelte#getallcontexts
-
 <div class="ts-block">
 
 ```ts
@@ -152,8 +144,6 @@ function getAllContexts<
 Retrieves the context that belongs to the closest parent component with the specified `key`.
 Must be called during component initialisation.
 
-https://svelte.dev/docs/svelte#getcontext
-
 <div class="ts-block">
 
 ```ts
@@ -167,8 +157,6 @@ function getContext<T>(key: any): T;
 
 Checks whether a given `key` has been set in the context of a parent component.
 Must be called during component initialisation.
-
-https://svelte.dev/docs/svelte#hascontext
 
 <div class="ts-block">
 
@@ -261,8 +249,6 @@ Schedules a callback to run immediately before the component is unmounted.
 Out of `onMount`, `beforeUpdate`, `afterUpdate` and `onDestroy`, this is the
 only one that runs inside a server-side component.
 
-https://svelte.dev/docs/svelte#ondestroy
-
 <div class="ts-block">
 
 ```ts
@@ -281,8 +267,6 @@ it can be called from an external module).
 If a function is returned _synchronously_ from `onMount`, it will be called when the component is unmounted.
 
 `onMount` does not run inside a [server-side component](https://svelte.dev/docs#run-time-server-side-component-api).
-
-https://svelte.dev/docs/svelte#onmount
 
 <div class="ts-block">
 
@@ -305,8 +289,6 @@ and returns that object. The context is then available to children of the compon
 (including slotted content) with `getContext`.
 
 Like lifecycle functions, this must be called during component initialisation.
-
-https://svelte.dev/docs/svelte#setcontext
 
 <div class="ts-block">
 

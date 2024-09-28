@@ -14,8 +14,6 @@ import { flip } from 'svelte/animate';
 The flip function calculates the start and end position of an element and animates between them, translating the x and y values.
 `flip` stands for [First, Last, Invert, Play](https://aerotwist.com/blog/flip-your-animations/).
 
-https://svelte.dev/docs/svelte-animate#flip
-
 <div class="ts-block">
 
 ```ts

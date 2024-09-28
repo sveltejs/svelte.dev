@@ -13,8 +13,6 @@ import { spring, tweened } from 'svelte/motion';
 
 The spring function in Svelte creates a store whose value is animated, with a motion that simulates the behavior of a spring. This means when the value changes, instead of transitioning at a steady rate, it "bounces" like a spring would, depending on the physics parameters provided. This adds a level of realism to the transitions and can enhance the user experience.
 
-https://svelte.dev/docs/svelte-motion#spring
-
 <div class="ts-block">
 
 ```ts
@@ -30,8 +28,6 @@ function spring<T = any>(
 ## tweened
 
 A tweened store in Svelte is a special type of store that provides smooth transitions between state values over time.
-
-https://svelte.dev/docs/svelte-motion#tweened
 
 <div class="ts-block">
 
