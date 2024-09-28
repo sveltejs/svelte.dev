@@ -1,5 +1,3 @@
-
-
 ```js
 // @noErrors
 import { installPolyfills } from '@sveltejs/kit/node/polyfills';
@@ -8,6 +6,7 @@ import { installPolyfills } from '@sveltejs/kit/node/polyfills';
 ## installPolyfills
 
 Make various web APIs available as globals:
+
 - `crypto`
 - `File`
 
@@ -19,4 +18,3 @@ function installPolyfills(): void;
 ```
 
 </div>
-

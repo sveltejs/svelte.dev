@@ -16,7 +16,7 @@ id: string;
 
 A string that uniquely identifies an HTTP service (e.g. serverless function) and is used for deduplication.
 For example, `/foo/a-[b]` and `/foo/[c]` are different routes, but would both
-be represented in a Netlify _redirects file as `/foo/:param`, so they share an ID
+be represented in a Netlify \_redirects file as `/foo/:param`, so they share an ID
 
 </div>
 </div>
@@ -33,6 +33,7 @@ A function that compares the candidate route with the current route to determine
 if it should be grouped with the current route.
 
 Use cases:
+
 - Fallback pages: `/foo/[c]` is a fallback for `/foo/a-[b]`, and `/[...catchall]` is a fallback for all routes
 - Grouping routes that share a common `config`: `/foo` should be deployed to the edge, `/bar` and `/baz` should be deployed to a serverless function
 
@@ -96,7 +97,6 @@ namespace Csp {
 	type Sources = Source[];
 }
 ```
-
 
 </div>
 
@@ -375,7 +375,7 @@ sandbox?: Array<
 
 <div class="ts-block-property-bullets">
 
-- <span class="tag deprecated">deprecated</span> 
+- <span class="tag deprecated">deprecated</span>
 
 </div>
 
@@ -392,7 +392,7 @@ sandbox?: Array<
 
 <div class="ts-block-property-bullets">
 
-- <span class="tag deprecated">deprecated</span> 
+- <span class="tag deprecated">deprecated</span>
 
 </div>
 
@@ -409,7 +409,7 @@ sandbox?: Array<
 
 <div class="ts-block-property-bullets">
 
-- <span class="tag deprecated">deprecated</span> 
+- <span class="tag deprecated">deprecated</span>
 
 </div>
 
@@ -436,7 +436,7 @@ referrer?: Array<
 
 <div class="ts-block-property-bullets">
 
-- <span class="tag deprecated">deprecated</span> 
+- <span class="tag deprecated">deprecated</span>
 
 </div>
 
@@ -458,7 +458,6 @@ type HttpMethod =
 	| 'PATCH'
 	| 'OPTIONS';
 ```
-
 
 </div>
 
@@ -533,7 +532,6 @@ info(msg: string): void;
 type MaybePromise<T> = T | Promise<T>;
 ```
 
-
 </div>
 
 ## PrerenderEntryGeneratorMismatchHandler
@@ -565,7 +563,6 @@ type PrerenderEntryGeneratorMismatchHandlerValue =
 	| 'ignore'
 	| PrerenderEntryGeneratorMismatchHandler;
 ```
-
 
 </div>
 
@@ -605,7 +602,6 @@ type PrerenderHttpErrorHandlerValue =
 	| PrerenderHttpErrorHandler;
 ```
 
-
 </div>
 
 ## PrerenderMap
@@ -615,7 +611,6 @@ type PrerenderHttpErrorHandlerValue =
 ```dts
 type PrerenderMap = Map<string, PrerenderOption>;
 ```
-
 
 </div>
 
@@ -649,7 +644,6 @@ type PrerenderMissingIdHandlerValue =
 	| PrerenderMissingIdHandler;
 ```
 
-
 </div>
 
 ## PrerenderOption
@@ -659,7 +653,6 @@ type PrerenderMissingIdHandlerValue =
 ```dts
 type PrerenderOption = boolean | 'auto';
 ```
-
 
 </div>
 
@@ -813,6 +806,4 @@ rest: boolean;
 type TrailingSlash = 'never' | 'always' | 'ignore';
 ```
 
-
 </div>
-

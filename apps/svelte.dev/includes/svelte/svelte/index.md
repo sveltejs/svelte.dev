@@ -1,5 +1,3 @@
-
-
 ```js
 // @noErrors
 import {
@@ -72,11 +70,12 @@ The `detail` argument corresponds to the [CustomEvent.detail](https://developer.
 property and can contain any type of data.
 
 The event dispatcher can be typed to narrow the allowed event names and the type of the `detail` argument:
+
 ```ts
 const dispatch = createEventDispatcher<{
- loaded: never; // does not take a detail argument
- change: string; // takes a detail argument of type string, which is required
- optional: number | null; // takes an optional detail argument of type number
+	loaded: never; // does not take a detail argument
+	change: string; // takes a detail argument of type string, which is required
+	optional: number | null; // takes an optional detail argument of type number
 }>();
 ```
 
@@ -271,7 +270,7 @@ function onDestroy(fn: () => any): void;
 ## onMount
 
 The `onMount` function schedules a callback to run as soon as the component has been mounted to the DOM.
-It must be called during the component's initialisation (but doesn't need to live *inside* the component;
+It must be called during the component's initialisation (but doesn't need to live _inside_ the component;
 it can be called from an external module).
 
 If a function is returned _synchronously_ from `onMount`, it will be called when the component is unmounted.
@@ -363,13 +362,16 @@ Can be used to create strongly typed Svelte components.
 You have component library on npm called `component-library`, from which
 you export a component called `MyComponent`. For Svelte+TypeScript users,
 you want to provide typings. Therefore you create a `index.d.ts`:
+
 ```ts
 import type { Component } from 'svelte';
 export declare const MyComponent: Component<{ foo: string }> {}
 ```
+
 Typing this makes it possible for IDEs like VS Code with the Svelte extension
 to provide intellisense and to use the component like this in a Svelte file
 with TypeScript:
+
 ```svelte
 <script lang="ts">
 	import { MyComponent } from "component-library";
@@ -554,7 +556,6 @@ type ComponentEvents<Comp extends SvelteComponent> =
 		: never;
 ```
 
-
 </div>
 
 ## ComponentInternals
@@ -566,7 +567,6 @@ Internal implementation details that vary between environments
 ```dts
 type ComponentInternals = Branded<{}, 'ComponentInternals'>;
 ```
-
 
 </div>
 
@@ -593,7 +593,7 @@ import MyComponent from './MyComponent.svelte';
 function withProps<TComponent extends Component<any>>(
 	component: TComponent,
 	props: ComponentProps<TComponent>
-) {};
+) {}
 
 // Errors if the second argument is not the correct props expected by the component in the first argument.
 withProps(MyComponent, { foo: 'bar' });
@@ -611,7 +611,6 @@ type ComponentProps<
 			? Props
 			: never;
 ```
-
 
 </div>
 
@@ -639,7 +638,6 @@ type ComponentType<
 	element?: typeof HTMLElement;
 };
 ```
-
 
 </div>
 
@@ -672,9 +670,12 @@ interface EventDispatcher<
 ## Snippet
 
 The type of a `#snippet` block. You can use it to (for example) express that your component expects a snippet of a certain type:
+
 ```ts
-let { banner }: { banner: Snippet<[{ text: string }]> } = $props();
+let { banner }: { banner: Snippet<[{ text: string }]> } =
+	$props();
 ```
+
 You can only call a snippet through the `{@render ...}` tag.
 
 https://svelte-5-preview.vercel.app/docs/snippets
@@ -753,8 +754,8 @@ constructor(options: ComponentConstructorOptions<Properties<Props, Slots>>);
 <div class="ts-block-property-bullets">
 
 - <span class="tag deprecated">deprecated</span> This constructor only exists when using the `asClassComponent` compatibility helper, which
-is a stop-gap solution. Migrate towards using `mount` instead. See
-https://svelte-5-preview.vercel.app/docs/breaking-changes#components-are-no-longer-classes for more info.
+  is a stop-gap solution. Migrate towards using `mount` instead. See
+  https://svelte-5-preview.vercel.app/docs/breaking-changes#components-are-no-longer-classes for more info.
 
 </div>
 
@@ -772,8 +773,8 @@ $destroy(): void;
 <div class="ts-block-property-bullets">
 
 - <span class="tag deprecated">deprecated</span> This method only exists when using one of the legacy compatibility helpers, which
-is a stop-gap solution. See https://svelte-5-preview.vercel.app/docs/breaking-changes#components-are-no-longer-classes
-for more info.
+  is a stop-gap solution. See https://svelte-5-preview.vercel.app/docs/breaking-changes#components-are-no-longer-classes
+  for more info.
 
 </div>
 
@@ -794,8 +795,8 @@ $on<K extends Extract<keyof Events, string>>(
 <div class="ts-block-property-bullets">
 
 - <span class="tag deprecated">deprecated</span> This method only exists when using one of the legacy compatibility helpers, which
-is a stop-gap solution. See https://svelte-5-preview.vercel.app/docs/breaking-changes#components-are-no-longer-classes
-for more info.
+  is a stop-gap solution. See https://svelte-5-preview.vercel.app/docs/breaking-changes#components-are-no-longer-classes
+  for more info.
 
 </div>
 
@@ -813,8 +814,8 @@ $set(props: Partial<Props>): void;
 <div class="ts-block-property-bullets">
 
 - <span class="tag deprecated">deprecated</span> This method only exists when using one of the legacy compatibility helpers, which
-is a stop-gap solution. See https://svelte-5-preview.vercel.app/docs/breaking-changes#components-are-no-longer-classes
-for more info.
+  is a stop-gap solution. See https://svelte-5-preview.vercel.app/docs/breaking-changes#components-are-no-longer-classes
+  for more info.
 
 </div>
 
@@ -840,6 +841,4 @@ class SvelteComponentTyped<
 > extends SvelteComponent<Props, Events, Slots> {}
 ```
 
-
 </div>
-

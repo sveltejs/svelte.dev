@@ -1,5 +1,3 @@
-
-
 ```js
 // @noErrors
 import {
@@ -439,4 +437,3 @@ function sineOut(t: number): number;
 ```
 
 </div>
-

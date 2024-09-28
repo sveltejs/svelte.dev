@@ -1,5 +1,3 @@
-
-
 ```js
 // @noErrors
 import {
@@ -332,7 +330,6 @@ easing?: EasingFunction;
 type EasingFunction = (t: number) => number;
 ```
 
-
 </div>
 
 ## FadeParams
@@ -586,4 +583,3 @@ tick?: (t: number, u: number) => void;
 <div class="ts-block-property-details"></div>
 </div>
 </div>
-

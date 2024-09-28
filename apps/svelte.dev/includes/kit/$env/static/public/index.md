@@ -5,5 +5,3 @@ Values are replaced statically at build time.
 ```ts
 import { PUBLIC_BASE_URL } from '$env/static/public';
 ```
-
-

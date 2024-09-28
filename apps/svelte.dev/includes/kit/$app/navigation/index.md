@@ -1,5 +1,3 @@
-
-
 ```js
 // @noErrors
 import {
@@ -186,8 +184,9 @@ function preloadCode(pathname: string): Promise<void>;
 ## preloadData
 
 Programmatically preloads the given page, which means
- 1. ensuring that the code for the page is loaded, and
- 2. calling the page's load function with the appropriate options.
+
+1.  ensuring that the code for the page is loaded, and
+2.  calling the page's load function with the appropriate options.
 
 This is the same behaviour that SvelteKit triggers when the user taps or mouses over an `<a>` element with `data-sveltekit-preload-data`.
 If the next navigation is to `href`, the values returned from load will be used, making navigation instantaneous.
@@ -243,4 +242,3 @@ function replaceState(
 ```
 
 </div>
-

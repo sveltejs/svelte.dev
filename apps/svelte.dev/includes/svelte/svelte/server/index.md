@@ -1,5 +1,3 @@
-
-
 ```js
 // @noErrors
 import { render } from 'svelte/server';
@@ -41,4 +39,3 @@ function render<
 ```
 
 </div>
-

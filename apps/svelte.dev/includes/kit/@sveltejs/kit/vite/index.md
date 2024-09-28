@@ -1,5 +1,3 @@
-
-
 ```js
 // @noErrors
 import { sveltekit } from '@sveltejs/kit/vite';
@@ -17,4 +15,3 @@ function sveltekit(): Promise<import('vite').Plugin[]>;
 ```
 
 </div>
-

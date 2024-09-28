@@ -1,5 +1,3 @@
-
-
 ```js
 // @noErrors
 import {
@@ -15,8 +13,6 @@ import {
 ```
 
 ## VERSION
-
-
 
 <div class="ts-block">
 
@@ -206,7 +202,6 @@ type Action<
 ) => MaybePromise<OutputData>;
 ```
 
-
 </div>
 
 ## ActionFailure
@@ -250,6 +245,7 @@ data: T;
 ## ActionResult
 
 When calling a form action via fetch, the response will be one of these shapes.
+
 ```svelte
 <form method="post" use:enhance={() => {
 	return ({ result }) => {
@@ -275,7 +271,6 @@ type ActionResult<
 	| { type: 'error'; status?: number; error: any };
 ```
 
-
 </div>
 
 ## Actions
@@ -297,7 +292,6 @@ type Actions<
 	RouteId extends string | null = string | null
 > = Record<string, Action<Params, OutputData, RouteId>>;
 ```
-
 
 </div>
 
@@ -409,6 +403,7 @@ type: Exclude<NavigationType, 'leave'>;
 <div class="ts-block-property-details">
 
 The type of navigation:
+
 - `enter`: The app has hydrated
 - `form`: The user submitted a `<form>`
 - `link`: Navigation was triggered by a link click
@@ -447,7 +442,6 @@ type AwaitedActions<
 	}[keyof T]
 >;
 ```
-
 
 </div>
 
@@ -986,7 +980,6 @@ type Handle = (input: {
 }) => MaybePromise<Response>;
 ```
 
-
 </div>
 
 ## HandleClientError
@@ -1007,7 +1000,6 @@ type HandleClientError = (input: {
 }) => MaybePromise<void | App.Error>;
 ```
 
-
 </div>
 
 ## HandleFetch
@@ -1023,7 +1015,6 @@ type HandleFetch = (input: {
 	fetch: typeof fetch;
 }) => MaybePromise<Response>;
 ```
-
 
 </div>
 
@@ -1044,7 +1035,6 @@ type HandleServerError = (input: {
 	message: string;
 }) => MaybePromise<void | App.Error>;
 ```
-
 
 </div>
 
@@ -1102,7 +1092,6 @@ type LessThan<
 	: LessThan<TNumber, [...TArray, TArray['length']]>;
 ```
 
-
 </div>
 
 ## Load
@@ -1134,7 +1123,6 @@ type Load<
 	event: LoadEvent<Params, InputData, ParentData, RouteId>
 ) => MaybePromise<OutputData>;
 ```
-
 
 </div>
 
@@ -1285,11 +1273,13 @@ export async function load({ depends }) {
 
 	const increase = async () => {
 		await invalidate('increase:count');
-	}
+	};
 </script>
 
-<p>{data.count}<p>
-<button on:click={increase}>Increase Count</button>
+<p>{data.count}</p>
+<p>
+	<button on:click="{increase}">Increase Count</button>
+</p>
 ```
 
 </div>
@@ -1333,7 +1323,6 @@ type LoadProperties<
 		? input
 		: unknown;
 ```
-
 
 </div>
 
@@ -1380,6 +1369,7 @@ type: Exclude<NavigationType, 'enter'>;
 <div class="ts-block-property-details">
 
 The type of navigation:
+
 - `form`: The user submitted a `<form>`
 - `leave`: The app is being left either because the tab is being closed or a navigation to a different document is occurring
 - `link`: Navigation was triggered by a link click
@@ -1568,7 +1558,6 @@ type NavigationType =
 	| 'popstate';
 ```
 
-
 </div>
 
 ## NumericRange
@@ -1581,7 +1570,6 @@ type NumericRange<
 	TEnd extends number
 > = Exclude<TEnd | LessThan<TEnd>, LessThan<TStart>>;
 ```
-
 
 </div>
 
@@ -1604,6 +1592,7 @@ type: Exclude<NavigationType, 'enter' | 'leave'>;
 <div class="ts-block-property-details">
 
 The type of navigation:
+
 - `form`: The user submitted a `<form>`
 - `link`: Navigation was triggered by a link click
 - `goto`: Navigation was triggered by a `goto(...)` call or a redirect
@@ -1770,7 +1759,6 @@ The shape of a param matcher. See [matching](https://kit.svelte.dev/docs/advance
 type ParamMatcher = (param: string) => boolean;
 ```
 
-
 </div>
 
 ## PrerenderOption
@@ -1780,7 +1768,6 @@ type ParamMatcher = (param: string) => boolean;
 ```dts
 type PrerenderOption = boolean | 'auto';
 ```
-
 
 </div>
 
@@ -2052,7 +2039,6 @@ type RequestHandler<
 ) => MaybePromise<Response>;
 ```
 
-
 </div>
 
 ## Reroute
@@ -2064,7 +2050,6 @@ The [`reroute`](https://kit.svelte.dev/docs/hooks#universal-hooks-reroute) hook 
 ```dts
 type Reroute = (event: { url: URL }) => void | string;
 ```
-
 
 </div>
 
@@ -2424,7 +2409,6 @@ type ServerLoad<
 ) => MaybePromise<OutputData>;
 ```
 
-
 </div>
 
 ## ServerLoadEvent
@@ -2497,11 +2481,13 @@ export async function load({ depends }) {
 
 	const increase = async () => {
 		await invalidate('increase:count');
-	}
+	};
 </script>
 
-<p>{data.count}<p>
-<button on:click={increase}>Increase Count</button>
+<p>{data.count}</p>
+<p>
+	<button on:click="{increase}">Increase Count</button>
+</p>
 ```
 
 </div>
@@ -2600,6 +2586,4 @@ type SubmitFunction<
 >;
 ```
 
-
 </div>
-

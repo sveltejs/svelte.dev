@@ -1,5 +1,3 @@
-
-
 ```js
 // @noErrors
 import {
@@ -20,8 +18,6 @@ import {
 
 ## apply
 
-
-
 <div class="ts-block">
 
 ```ts
@@ -32,8 +28,6 @@ const apply: never;
 </div>
 
 ## arguments
-
-
 
 <div class="ts-block">
 
@@ -46,8 +40,6 @@ const arguments: never;
 
 ## bind
 
-
-
 <div class="ts-block">
 
 ```ts
@@ -58,8 +50,6 @@ const bind: never;
 </div>
 
 ## call
-
-
 
 <div class="ts-block">
 
@@ -72,8 +62,6 @@ const call: never;
 
 ## caller
 
-
-
 <div class="ts-block">
 
 ```ts
@@ -85,8 +73,6 @@ const caller: never;
 
 ## length
 
-
-
 <div class="ts-block">
 
 ```ts
@@ -97,8 +83,6 @@ const length: never;
 </div>
 
 ## name
-
-
 
 <div class="ts-block">
 
@@ -115,6 +99,7 @@ Runs code right before a component is mounted to the DOM, and then whenever its 
 The timing of the execution is right before the DOM is updated.
 
 Example:
+
 ```ts
 $effect.pre(() => console.log('The count is now ' + count));
 ```
@@ -136,8 +121,6 @@ function pre(fn: () => void | (() => void)): void;
 
 ## prototype
 
-
-
 <div class="ts-block">
 
 ```ts
@@ -154,6 +137,7 @@ nested effects that you want to manually control. This rune also allows for crea
 initialisation phase.
 
 Example:
+
 ```svelte
 <script>
 	let count = $state(0);
@@ -185,8 +169,6 @@ function root(fn: () => void | (() => void)): () => void;
 
 ## toString
 
-
-
 <div class="ts-block">
 
 ```ts
@@ -201,6 +183,7 @@ const toString: never;
 The `$effect.tracking` rune is an advanced feature that tells you whether or not the code is running inside a tracking context, such as an effect or inside your template.
 
 Example:
+
 ```svelte
 <script>
 	console.log('in component setup:', $effect.tracking()); // false
@@ -225,4 +208,3 @@ function tracking(): boolean;
 ```
 
 </div>
-

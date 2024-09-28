@@ -8,5 +8,3 @@ Dynamic environment variables cannot be used during prerendering.
 import { env } from '$env/dynamic/public';
 console.log(env.PUBLIC_DEPLOYMENT_SPECIFIC_VARIABLE);
 ```
-
-

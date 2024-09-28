@@ -1,13 +1,14 @@
-
-
 ```js
 // @noErrors
-import { getStores, navigating, page, updated } from '$app/stores';
+import {
+	getStores,
+	navigating,
+	page,
+	updated
+} from '$app/stores';
 ```
 
 ## getStores
-
-
 
 <div class="ts-block">
 
@@ -76,4 +77,3 @@ const updated: import('svelte/store').Readable<boolean> & {
 ```
 
 </div>
-

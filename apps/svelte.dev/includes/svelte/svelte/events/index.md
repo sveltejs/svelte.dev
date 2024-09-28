@@ -1,5 +1,3 @@
-
-
 ```js
 // @noErrors
 import { on } from 'svelte/events';
@@ -122,4 +120,3 @@ function on(
 ```
 
 </div>
-

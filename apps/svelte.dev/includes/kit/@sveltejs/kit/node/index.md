@@ -1,5 +1,3 @@
-
-
 ```js
 // @noErrors
 import {
@@ -24,8 +22,6 @@ function createReadableStream(file: string): ReadableStream;
 
 ## getRequest
 
-
-
 <div class="ts-block">
 
 ```ts
@@ -45,8 +41,6 @@ function getRequest({
 
 ## setResponse
 
-
-
 <div class="ts-block">
 
 ```ts
@@ -58,4 +52,3 @@ function setResponse(
 ```
 
 </div>
-

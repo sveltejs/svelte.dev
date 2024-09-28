@@ -1,5 +1,3 @@
-
-
 ```js
 // @noErrors
 import {
@@ -237,4 +235,3 @@ function trusted(
 ```
 
 </div>
-

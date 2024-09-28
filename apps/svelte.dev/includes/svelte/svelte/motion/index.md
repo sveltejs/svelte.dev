@@ -1,5 +1,3 @@
-
-
 ```js
 // @noErrors
 import { spring, tweened } from 'svelte/motion';
@@ -121,4 +119,3 @@ update(updater: Updater<T>, opts?: TweenedOptions<T>): Promise<void>;
 <div class="ts-block-property-details"></div>
 </div>
 </div>
-

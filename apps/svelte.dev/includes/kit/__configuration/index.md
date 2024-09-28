@@ -684,6 +684,7 @@ preloadStrategy?: 'modulepreload' | 'preload-js' | 'preload-mjs';
 
 SvelteKit will preload the JavaScript modules needed for the initial page to avoid import 'waterfalls', resulting in faster application startup. There
 are three strategies with different trade-offs:
+
 - `modulepreload` - uses `<link rel="modulepreload">`. This delivers the best results in Chromium-based browsers, in Firefox 115+, and Safari 17+. It is ignored in older browsers.
 - `preload-js` - uses `<link rel="preload">`. Prevents waterfalls in Chromium and Safari, but Chromium will parse each module twice (once as a script, once as a module). Causes modules to be requested twice in Firefox. This is a good setting if you want to maximise performance for users on iOS devices at the cost of a very slight degradation for Chromium users.
 - `preload-mjs` - uses `<link rel="preload">` but with the `.mjs` extension which prevents double-parsing in Chromium. Some static webservers will fail to serve .mjs files with a `Content-Type: application/javascript` header, which will cause your application to break. If that doesn't apply to you, this is the option that will deliver the best performance for the largest number of users, until `modulepreload` is more widely supported.
@@ -829,7 +830,7 @@ entries?: Array<'*' | `/${string}`>;
 
 </div>
 
-An array of pages to prerender, or start crawling from (if `crawl: true`). The `*` string includes all routes containing no required `[parameters]`  with optional parameters included as being empty (since SvelteKit doesn't know what value any parameters should have).
+An array of pages to prerender, or start crawling from (if `crawl: true`). The `*` string includes all routes containing no required `[parameters]` with optional parameters included as being empty (since SvelteKit doesn't know what value any parameters should have).
 
 </div>
 </div>
@@ -863,7 +864,10 @@ const config = {
 		prerender: {
 			handleHttpError: ({ path, referrer, message }) => {
 				// ignore deliberate link to shiny 404 page
-				if (path === '/not-found' && referrer === '/blog/how-we-built-our-404-page') {
+				if (
+					path === '/not-found' &&
+					referrer === '/blog/how-we-built-our-404-page'
+				) {
 					return;
 				}
 
@@ -1036,6 +1040,7 @@ Client-side navigation can be buggy if you deploy a new version of your app whil
 SvelteKit helps you solve this problem through version management.
 If SvelteKit encounters an error while loading the page and detects that a new version has been deployed (using the `name` specified here, which defaults to a timestamp of the build) it will fall back to traditional full-page navigation.
 Not all navigations will result in an error though, for example if the JavaScript for the next page is already loaded. If you still want to force a full-page navigation in these cases, use techniques such as setting the `pollInterval` and then using `beforeNavigate`:
+
 ```html
 /// file: +layout.svelte
 <script>
@@ -1072,7 +1077,10 @@ import * as child_process from 'node:child_process';
 export default {
 	kit: {
 		version: {
-			name: child_process.execSync('git rev-parse HEAD').toString().trim()
+			name: child_process
+				.execSync('git rev-parse HEAD')
+				.toString()
+				.trim()
 		}
 	}
 };
@@ -1102,4 +1110,3 @@ The interval in milliseconds to poll for version changes. If this is `0`, no pol
 </div>
 </div>
 </div>
-

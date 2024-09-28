@@ -4,6 +4,7 @@ import fs from 'node:fs';
 import ts from 'typescript';
 import glob from 'tiny-glob/sync';
 import { fileURLToPath } from 'node:url';
+import { format } from 'prettier';
 import { clone_repo, replace_strings, strip_origin, write } from './utils';
 import { get_types, read_d_ts_file, read_types } from './types';
 import { fence, stringify_module } from '../../../../packages/site-kit/src/lib/markdown/renderer';
@@ -175,7 +176,16 @@ for (const pkg of packages) {
 	const modules = await pkg.process_modules(await read_types(`${pkg.local}/${pkg.pkg}/`, []), pkg);
 
 	for (const module of modules) {
-		write(`${INCLUDES}/${pkg.name}/${module.name}/index.md`, stringify_module(module));
+		write(
+			`${INCLUDES}/${pkg.name}/${module.name}/index.md`,
+			await format(stringify_module(module), {
+				parser: 'markdown',
+				printWidth: 60,
+				useTabs: true,
+				singleQuote: true,
+				trailingComma: 'none'
+			})
+		);
 
 		// TODO this is only actually used in one place AFAICT, we probably don't need these includes
 		for (const exported of module.exports ?? []) {

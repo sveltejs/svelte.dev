@@ -1,5 +1,3 @@
-
-
 ```js
 // @noErrors
 import { flip } from 'svelte/animate';
@@ -120,4 +118,3 @@ easing?: (t: number) => number;
 <div class="ts-block-property-details"></div>
 </div>
 </div>
-

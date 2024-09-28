@@ -1,5 +1,3 @@
-
-
 ```js
 // @noErrors
 import { read } from '$app/server';
@@ -26,4 +24,3 @@ function read(asset: string): Response;
 ```
 
 </div>
-

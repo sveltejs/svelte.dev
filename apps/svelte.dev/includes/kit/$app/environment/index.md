@@ -1,8 +1,11 @@
-
-
 ```js
 // @noErrors
-import { browser, building, dev, version } from '$app/environment';
+import {
+	browser,
+	building,
+	dev,
+	version
+} from '$app/environment';
 ```
 
 ## browser
@@ -56,4 +59,3 @@ const version: string;
 ```
 
 </div>
-

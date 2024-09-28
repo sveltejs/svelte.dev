@@ -1,8 +1,12 @@
-
-
 ```js
 // @noErrors
-import { base, build, files, prerendered, version } from '$service-worker';
+import {
+	base,
+	build,
+	files,
+	prerendered,
+	version
+} from '$service-worker';
 ```
 
 This module is only available to [service workers](/docs/service-workers).
@@ -74,4 +78,3 @@ const version: string;
 ```
 
 </div>
-

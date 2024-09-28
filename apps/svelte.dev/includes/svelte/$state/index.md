@@ -1,5 +1,3 @@
-
-
 ```js
 // @noErrors
 import {
@@ -19,8 +17,6 @@ import {
 
 ## apply
 
-
-
 <div class="ts-block">
 
 ```ts
@@ -31,8 +27,6 @@ const apply: never;
 </div>
 
 ## arguments
-
-
 
 <div class="ts-block">
 
@@ -45,8 +39,6 @@ const arguments: never;
 
 ## bind
 
-
-
 <div class="ts-block">
 
 ```ts
@@ -57,8 +49,6 @@ const bind: never;
 </div>
 
 ## call
-
-
 
 <div class="ts-block">
 
@@ -71,8 +61,6 @@ const call: never;
 
 ## caller
 
-
-
 <div class="ts-block">
 
 ```ts
@@ -83,8 +71,6 @@ const caller: never;
 </div>
 
 ## length
-
-
 
 <div class="ts-block">
 
@@ -97,8 +83,6 @@ const length: never;
 
 ## name
 
-
-
 <div class="ts-block">
 
 ```ts
@@ -109,8 +93,6 @@ const name: never;
 </div>
 
 ## prototype
-
-
 
 <div class="ts-block">
 
@@ -127,6 +109,7 @@ Declares state that is _not_ made deeply reactive — instead of mutating it,
 you must reassign it.
 
 Example:
+
 ```ts
 <script>
 	let items = $state.raw([0]);
@@ -154,8 +137,6 @@ function raw<T>(initial: T): T;
 
 ## raw
 
-
-
 <div class="ts-block">
 
 ```ts
@@ -170,6 +151,7 @@ function raw<T>(): T | undefined;
 To take a static snapshot of a deeply reactive `$state` proxy, use `$state.snapshot`:
 
 Example:
+
 ```ts
 <script>
 	let counter = $state({ count: 0 });
@@ -193,8 +175,6 @@ function snapshot<T>(state: T): Snapshot<T>;
 </div>
 
 ## toString
-
-
 
 <div class="ts-block">
 
@@ -243,6 +223,4 @@ type Cloneable =
 	| VideoFrame;
 ```
 
-
 </div>
-

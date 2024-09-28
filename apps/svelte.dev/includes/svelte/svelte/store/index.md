@@ -1,5 +1,3 @@
-
-
 ```js
 // @noErrors
 import {
@@ -59,8 +57,6 @@ function derived<S extends Stores, T>(
 
 ## fromStore
 
-
-
 <div class="ts-block">
 
 ```ts
@@ -73,8 +69,6 @@ function fromStore<V>(store: Writable<V>): {
 </div>
 
 ## fromStore
-
-
 
 <div class="ts-block">
 
@@ -137,8 +131,6 @@ function readonly<T>(store: Readable<T>): Readable<T>;
 
 ## toStore
 
-
-
 <div class="ts-block">
 
 ```ts
@@ -152,8 +144,6 @@ function toStore<V>(
 </div>
 
 ## toStore
-
-
 
 <div class="ts-block">
 
@@ -227,7 +217,6 @@ type StartStopNotifier<T> = (
 ) => void | (() => void);
 ```
 
-
 </div>
 
 ## Subscriber
@@ -239,7 +228,6 @@ Callback to inform of a value updates.
 ```dts
 type Subscriber<T> = (value: T) => void;
 ```
-
 
 </div>
 
@@ -253,7 +241,6 @@ Unsubscribes from value updates.
 type Unsubscriber = () => void;
 ```
 
-
 </div>
 
 ## Updater
@@ -265,7 +252,6 @@ Callback to update a value.
 ```dts
 type Updater<T> = (value: T) => T;
 ```
-
 
 </div>
 
@@ -317,4 +303,3 @@ Update value using callback and inform subscribers.
 </div>
 </div>
 </div>
-

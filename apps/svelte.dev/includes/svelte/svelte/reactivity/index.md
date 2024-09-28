@@ -150,4 +150,3 @@ class SvelteURLSearchParams extends URLSearchParams {/*…*/}
 <div class="ts-block-property-details"></div>
 </div>
 </div>
-

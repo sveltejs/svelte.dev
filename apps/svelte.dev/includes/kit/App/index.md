@@ -28,7 +28,6 @@ The interface that defines `event.locals`, which can be accessed in [hooks](http
 interface Locals {}
 ```
 
-
 </div>
 
 ## PageData
@@ -43,7 +42,6 @@ Use optional properties for data that is only present on specific pages. Do not 
 interface PageData {}
 ```
 
-
 </div>
 
 ## PageState
@@ -55,7 +53,6 @@ The shape of the `$page.state` object, which can be manipulated using the [`push
 ```dts
 interface PageState {}
 ```
-
 
 </div>
 
@@ -69,6 +66,4 @@ If your adapter provides [platform-specific context](https://kit.svelte.dev/docs
 interface Platform {}
 ```
 
-
 </div>
-

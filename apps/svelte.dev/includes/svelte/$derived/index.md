@@ -1,5 +1,3 @@
-
-
 ```js
 // @noErrors
 import {
@@ -18,8 +16,6 @@ import {
 
 ## apply
 
-
-
 <div class="ts-block">
 
 ```ts
@@ -31,8 +27,6 @@ const apply: never;
 
 ## arguments
 
-
-
 <div class="ts-block">
 
 ```ts
@@ -43,8 +37,6 @@ const arguments: never;
 </div>
 
 ## bind
-
-
 
 <div class="ts-block">
 
@@ -61,11 +53,12 @@ Sometimes you need to create complex derivations that don't fit inside a short e
 In these cases, you can use `$derived.by` which accepts a function as its argument.
 
 Example:
+
 ```ts
 let total = $derived.by(() => {
 	let result = 0;
- for (const n of numbers) {
-	 result += n;
+	for (const n of numbers) {
+		result += n;
 	}
 	return result;
 });
@@ -84,8 +77,6 @@ function by<T>(fn: () => T): T;
 
 ## call
 
-
-
 <div class="ts-block">
 
 ```ts
@@ -96,8 +87,6 @@ const call: never;
 </div>
 
 ## caller
-
-
 
 <div class="ts-block">
 
@@ -110,8 +99,6 @@ const caller: never;
 
 ## length
 
-
-
 <div class="ts-block">
 
 ```ts
@@ -122,8 +109,6 @@ const length: never;
 </div>
 
 ## name
-
-
 
 <div class="ts-block">
 
@@ -136,8 +121,6 @@ const name: never;
 
 ## prototype
 
-
-
 <div class="ts-block">
 
 ```ts
@@ -149,8 +132,6 @@ const prototype: never;
 
 ## toString
 
-
-
 <div class="ts-block">
 
 ```ts
@@ -159,4 +140,3 @@ const toString: never;
 ```
 
 </div>
-
