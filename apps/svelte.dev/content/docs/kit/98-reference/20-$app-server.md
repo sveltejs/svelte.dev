@@ -2,7 +2,7 @@
 title: $app/server
 ---
 
-
+<!-- start MODULE: $app/server -->
 
 ```js
 // @noErrors
@@ -22,4 +22,4 @@ function read(asset: string): Response;
 
 </div>
 
-
+<!-- end MODULE -->
