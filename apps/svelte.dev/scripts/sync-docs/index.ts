@@ -6,7 +6,7 @@ import glob from 'tiny-glob/sync';
 import { fileURLToPath } from 'node:url';
 import { clone_repo, migrate_meta_json, replace_strings, strip_origin, write } from './utils';
 import { get_types, read_d_ts_file, read_types } from './types';
-import { stringify_module } from '../../../../packages/site-kit/src/lib/markdown/renderer';
+import { fence, stringify_module } from '../../../../packages/site-kit/src/lib/markdown/renderer';
 
 interface Package {
 	name: string;
@@ -158,12 +158,23 @@ for (const pkg of packages) {
 
 	for (const module of modules) {
 		write(`${INCLUDES}/${pkg.name}/${module.name}/index.md`, stringify_module(module));
+
+		for (const exported of module.exports ?? []) {
+			write(
+				`${INCLUDES}/${pkg.name}/${module.name}/+exports/${exported.name}.md`,
+				`<div class="ts-block">${fence(exported.snippet, 'dts')}</div>`
+			);
+		}
 	}
 
+	// TODO instead of copying then globbing, glob first then replace-on-copy
 	const files = glob(`${DOCS}/${pkg.name}/**/*.md`);
 
 	for (const file of files) {
-		const content = await replace_export_type_placeholders(readFileSync(file, 'utf-8'), modules);
+		// const content = await replace_export_type_placeholders(readFileSync(file, 'utf-8'), modules);
+		const content = readFileSync(file, 'utf-8')
+			.replace(/> MODULE: (.+)/g, `@include ${pkg.name}/$1/index.md`)
+			.replace(/> EXPORT_SNIPPET: (.+?)#(.+)?$/gm, `@include ${pkg.name}/$1/+exports/$2.md`);
 
 		writeFileSync(file, content);
 	}
