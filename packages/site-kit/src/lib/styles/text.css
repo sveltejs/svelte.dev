@@ -1,6 +1,5 @@
 .text :where(h2) {
 	margin-top: 7rem;
-	border-bottom: 1px solid var(--sk-back-4);
 }
 
 .text :where(h3) {
@@ -224,26 +223,25 @@
 	background-size: 1em 1em;
 	width: 1.4em;
 	height: 1em;
-	left: -1.3em;
-	opacity: 0;
-	transition: opacity 0.2s;
 	bottom: 0.25em;
-}
 
-@media (min-width: 768px) {
-	.text :where(a.permalink:focus),
-	.text :where(h2, h3, h4, h5, h6):hover a.permalink {
-		opacity: 1;
+	@media (max-width: 767px) {
+		right: 0;
+		scale: 0.8;
+	}
+
+	@media (min-width: 768px) {
+		left: -1.3em;
+		opacity: 0;
+		transition: opacity 0.2s;
+
+		:where(h2, h3, h4, h5, h6):hover & {
+			opacity: 1;
+		}
 	}
 }
 
 @media (max-width: 768px) {
-	.text :where(a.permalink) {
-		transform: scale(0.6);
-		opacity: 1;
-		left: -1em;
-	}
-
 	.text :where(blockquote *) {
 		word-break: break-word;
 	}
