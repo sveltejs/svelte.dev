@@ -97,8 +97,16 @@ export async function get_types(code: string, statements: ts.NodeArray<ts.Statem
 						comment = jsDoc.comment;
 					}
 
-					if (jsDoc?.tags?.[0]?.tagName?.escapedText === 'deprecated') {
-						deprecated_notice = jsDoc.tags[0].comment;
+					if (jsDoc.tags) {
+						for (const tag of jsDoc.tags) {
+							if (tag.tagName.escapedText === 'deprecated') {
+								deprecated_notice = tag.comment;
+							}
+
+							if (tag.tagName.escapedText === 'example') {
+								comment += `\n\n${tag.comment}`;
+							}
+						}
 					}
 
 					// @ts-ignore
