@@ -73,7 +73,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 
 	{#if title}
 		<div class="current-section mobile">
-			｜ {title}
+			{title}
 		</div>
 	{/if}
 
@@ -165,6 +165,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		font-size: 0.8em;
 		color: var(--sk-text-3);
 		margin-left: 0.4em;
+		padding: 0.1rem 0 0 0;
 	}
 
 	@media (max-width: 800px) {
@@ -200,8 +201,8 @@ Top navigation bar for the application. It provides a slot for the left side, th
 	}
 
 	.home-link {
-		--padding-right: 2rem;
-		width: 18rem;
+		--padding-right: 1rem;
+		width: 13rem;
 		height: 100%;
 		background: url(../branding/svelte.svg) no-repeat var(--sk-page-padding-side) 50% /
 			calc(100% - var(--sk-page-padding-side) - var(--padding-right)) auto;
@@ -285,6 +286,11 @@ Top navigation bar for the application. It provides a slot for the left side, th
 	}
 
 	@media (min-width: 800px) {
+		.home-link {
+			--padding-right: 2rem;
+			width: 18rem;
+		}
+
 		nav {
 			display: grid;
 			grid-template-columns: auto 1fr 1fr;
