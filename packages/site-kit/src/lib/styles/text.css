@@ -373,7 +373,7 @@ details.legacy {
 		color: var(--sk-text-4);
 		font-family: var(--sk-font-heading);
 		font-style: normal;
-		font-size: 1.4rem;
+		font-size: var(--sk-text-xs);
 		user-select: none;
 
 		&::after {

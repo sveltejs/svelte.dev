@@ -76,8 +76,8 @@
 
 		@media (max-width: 1199px) {
 			margin: 4rem 0;
-			background: var(--sk-back-3);
-			padding: 1rem;
+			/* background: var(--sk-back-3); */
+			/* padding: 1rem; */
 
 			&:not(:has(a:nth-child(2))) {
 				/* hide widget if there are no subheadings */
@@ -86,6 +86,14 @@
 
 			label {
 				position: relative;
+				display: flex;
+				align-items: center;
+				background: url($lib/icons/contents.svg) 0 50% no-repeat;
+				background-size: 2rem 2rem;
+				padding: 0.2rem 0 0 3rem;
+				height: 3rem;
+				font-size: var(--sk-text-xs);
+				color: var(--sk-text-4);
 
 				&::before {
 					content: '';
@@ -96,14 +104,14 @@
 					height: 1em;
 					background: url($lib/icons/chevron.svg);
 					background-size: contain;
-					rotate: 0deg;
+					rotate: -90deg;
 					transition: rotate 0.2s;
 				}
 			}
 
 			label:has(:checked) {
 				&::before {
-					rotate: -90deg;
+					rotate: 90deg;
 				}
 
 				& + nav {
@@ -122,6 +130,7 @@
 
 			nav {
 				display: none;
+				padding: 0 0 0 3rem;
 			}
 		}
 
