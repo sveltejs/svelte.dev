@@ -346,9 +346,6 @@ importers:
 
   packages/site-kit:
     dependencies:
-      '@fontsource/cardo':
-        specifier: ^5.1.0
-        version: 5.1.0
       '@fontsource/eb-garamond':
         specifier: ^5.1.0
         version: 5.1.0
@@ -798,9 +795,6 @@ packages:
     engines: {node: '>=18'}
     cpu: [x64]
     os: [win32]
-
-  '@fontsource/cardo@5.1.0':
-    resolution: {integrity: sha512-ylOb2t/CgQV2mNovSVya6r/jC9Q0w3cKHQOO7iycXLHRsgCGF82Oy/Je3GmdoGVKRNF6CDA3pc85Tw1078nQwQ==}
 
   '@fontsource/eb-garamond@5.1.0':
     resolution: {integrity: sha512-FEIWkPgBY9CEhZP1YmA36k/f5Hj4z1Tv2FxIiG8aYHmkKGZNVCVIeO345lCVtpG32ZVQKs8te+JpVtg/GCHXyg==}
@@ -3307,8 +3301,6 @@ snapshots:
 
   '@esbuild/win32-x64@0.23.1':
     optional: true
-
-  '@fontsource/cardo@5.1.0': {}
 
   '@fontsource/eb-garamond@5.1.0': {}
 
