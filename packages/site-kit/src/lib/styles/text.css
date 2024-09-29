@@ -1,5 +1,3 @@
-
-
 .language-diff :where(.inserted, .deleted) {
 	position: relative;
 }
@@ -97,7 +95,3 @@
 .ts-block-property ul:last-child {
 	margin-bottom: 0;
 }
-
-
-
-
