@@ -749,29 +749,33 @@ function stringify_type(t: Declaration) {
 	return content;
 }
 
-function stringify_expanded_type(type: TypeElement) {
+function stringify_expanded_type(type: Declaration) {
 	return (
 		type.comment +
-		type.children
-			?.map((child) => {
-				let section = `## ${child.name}`;
+		type.overloads
+			.map((overload) =>
+				overload.children
+					?.map((child) => {
+						let section = `## ${child.name}`;
 
-				if (child.bullets) {
-					section += `\n\n<div class="ts-block-property-bullets">\n\n${child.bullets.join(
-						'\n'
-					)}\n\n</div>`;
-				}
+						if (child.bullets) {
+							section += `\n\n<div class="ts-block-property-bullets">\n\n${child.bullets.join(
+								'\n'
+							)}\n\n</div>`;
+						}
 
-				section += `\n\n${child.comment}`;
+						section += `\n\n${child.comment}`;
 
-				if (child.children) {
-					section += `\n\n<div class="ts-block-property-children">\n\n${child.children
-						.map((v) => stringify(v))
-						.join('\n')}\n\n</div>`;
-				}
+						if (child.children) {
+							section += `\n\n<div class="ts-block-property-children">\n\n${child.children
+								.map((v) => stringify(v))
+								.join('\n')}\n\n</div>`;
+						}
 
-				return section;
-			})
+						return section;
+					})
+					.join('\n\n')
+			)
 			.join('\n\n')
 	);
 }
