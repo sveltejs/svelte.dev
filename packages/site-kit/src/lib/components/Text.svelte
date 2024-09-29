@@ -105,6 +105,10 @@
 			}
 		}
 
+		.ts-block pre {
+			margin: 0;
+		}
+
 		p code {
 			max-width: 100%;
 			display: inline-flex;
