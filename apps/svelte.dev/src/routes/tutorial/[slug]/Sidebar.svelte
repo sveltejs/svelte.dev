@@ -194,7 +194,7 @@
 
 	footer .edit {
 		color: var(--sk-text-2);
-		font-family: var(--sk-font-heading);
+		font-family: var(--sk-font-ui);
 		font-size: var(--sk-text-s);
 		padding: 0 0 0 1.4em;
 		background: url($lib/icons/file-edit.svg) no-repeat 0 calc(50% - 0.1em);

@@ -119,7 +119,7 @@
 		background-size: 1.2rem 1.2rem;
 		background-position: 0 45%;
 		background-repeat: no-repeat;
-		font-family: var(--sk-font-heading);
+		font-family: var(--sk-font-ui);
 		font-size: var(--sk-text-s);
 	}
 

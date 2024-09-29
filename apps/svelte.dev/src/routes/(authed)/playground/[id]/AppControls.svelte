@@ -288,7 +288,7 @@ export default app;`
 		padding: 0.2em;
 		opacity: 0.7;
 		transition: opacity 0.3s;
-		font-family: var(--sk-font-heading);
+		font-family: var(--sk-font-ui);
 		font-size: 1.6rem;
 		color: var(--sk-text-1);
 		line-height: 1;
@@ -310,7 +310,7 @@ export default app;`
 		background: transparent;
 		border: none;
 		color: currentColor;
-		font-family: var(--sk-font-heading);
+		font-family: var(--sk-font-ui);
 		font-size: var(--sk-text-m);
 		opacity: 0.7;
 		outline: none;

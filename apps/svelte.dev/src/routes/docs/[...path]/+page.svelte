@@ -73,7 +73,7 @@
 		line-height: 1;
 		z-index: 2;
 		margin: 6rem 0 2rem 0;
-		font-family: var(--sk-font-heading);
+		font-family: var(--sk-font-ui);
 
 		a {
 			text-decoration: none;
@@ -111,7 +111,7 @@
 		font-size: var(--sk-text-s);
 		text-transform: uppercase;
 		font-weight: 400;
-		font-family: var(--sk-font-heading);
+		font-family: var(--sk-font-ui);
 		color: var(--sk-text-3);
 	}
 

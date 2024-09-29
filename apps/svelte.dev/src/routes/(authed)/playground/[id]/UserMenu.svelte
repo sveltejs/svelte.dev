@@ -63,7 +63,7 @@
 	.name {
 		line-height: 1;
 		display: none;
-		font-family: var(--sk-font-heading);
+		font-family: var(--sk-font-ui);
 		font-size: 1.6rem;
 	}
 

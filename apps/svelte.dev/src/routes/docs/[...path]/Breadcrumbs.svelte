@@ -10,7 +10,7 @@
 
 <style>
 	.breadcrumbs {
-		font-family: var(--sk-font-heading);
+		font-family: var(--sk-font-ui);
 		font-size: var(--sk-text-xs);
 		color: var(--sk-text-4);
 		text-transform: uppercase;

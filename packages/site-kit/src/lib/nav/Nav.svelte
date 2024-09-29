@@ -146,7 +146,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		transition: 0.4s var(--quint-out);
 		transition-property: transform, background;
 		isolation: isolate;
-		font-family: var(--sk-font-heading);
+		font-family: var(--sk-font-ui);
 	}
 
 	nav::after {
