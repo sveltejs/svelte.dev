@@ -102,13 +102,17 @@
 				text-transform: uppercase;
 				color: var(--sk-text-4);
 
+				&:hover {
+					color: var(--sk-text-3);
+				}
+
 				&::before {
 					content: '';
 					position: absolute;
 					right: 0;
 					top: calc(50% - 0.5em);
-					width: 1em;
-					height: 1em;
+					width: 2rem;
+					height: 2rem;
 					background: url($lib/icons/chevron.svg);
 					background-size: contain;
 					rotate: -90deg;

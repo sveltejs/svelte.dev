@@ -374,6 +374,10 @@ details.legacy {
 		font-size: var(--sk-text-xs);
 		user-select: none;
 
+		&:hover {
+			color: var(--sk-text-3);
+		}
+
 		&::after {
 			position: absolute;
 			display: flex;
