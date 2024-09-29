@@ -7,31 +7,39 @@
 <div class="text">{@render children()}</div>
 
 <style>
-	:global {
-		.text :where(h2) {
+	.text :global {
+		h2 {
 			margin-top: 7rem;
 		}
 
-		.text :where(h3) {
+		h3 {
 			margin-top: 5rem;
 		}
 
-		.text :where(p, ol, ul) {
+		p,
+		ol,
+		ul {
 			margin: 1em 0;
 			font-size: var(--sk-text-s);
 		}
 
-		.text :where(section) {
+		/* TODO is this still used? don't think so */
+		section {
 			max-width: var(--sk-line-max-width);
 			padding: 0 0 0 1rem;
+
+			h2,
+			h3,
+			h4 {
+				margin-left: -1rem;
+			}
+
+			a code {
+				color: inherit;
+			}
 		}
 
-		.text :where(section) :where(h2, h3, h4) {
-			margin-left: -1rem;
-		}
-
-		/* code */
-		.text :where(code) {
+		code {
 			white-space: pre-wrap;
 			padding: 0.2rem 0.4rem;
 			margin: 0 0.2rem;
@@ -39,39 +47,65 @@
 			background: var(--sk-back-4);
 		}
 
-		.text :where(.code-block) {
+		.code-block {
 			position: relative;
+
+			.filename {
+				content: attr(data-file);
+				display: block;
+				width: 100%;
+				font-family: var(--sk-font-mono);
+				font-size: 1.2rem;
+				font-weight: 400;
+				padding: 1rem 1rem 0.8rem 1rem;
+				color: var(--sk-text-2);
+				background: var(--sk-back-4);
+				border-radius: var(--sk-border-radius) var(--sk-border-radius) 0 0;
+				box-sizing: border-box;
+			}
+
+			pre {
+				margin-top: 0;
+				border-radius: 0 0 var(--sk-border-radius) var(--sk-border-radius);
+			}
 		}
 
-		.text :where(.copy-code-block) {
-			box-shadow: 1px 2px 1rem hsla(0 0 0 / 0.08);
-		}
-
-		.text :where(pre) {
+		pre {
 			position: relative;
 			margin: 1em 0;
 			width: 100%;
 			padding: 1rem;
-
-			/* box-shadow: inset 1px 1px 6px hsla(205.7, 63.6%, 30.8%, 0.06); */
 			box-sizing: border-box;
-			/* background-color: var(--sk-code-bg); */
 			color: var(--sk-code-base);
 			border-radius: var(--sk-border-radius);
 			font-size: var(--sk-text-s);
 			overflow-x: auto;
+
+			code {
+				display: block;
+				padding: 0;
+				margin: 0;
+				top: 0;
+				width: 100%;
+				background: transparent;
+			}
+
+			a:hover {
+				border-bottom: 1px solid var(--sk-theme-1);
+				text-decoration: none;
+			}
+
+			/* TODO what is this for? */
+			&.border {
+				border-left: 5px solid var(--sk-theme-2);
+			}
+
+			&.language-diff code {
+				color: var(--sk-code-diff-base);
+			}
 		}
 
-		.text :where(pre code) {
-			display: block;
-			padding: 0;
-			margin: 0;
-			top: 0;
-			width: 100%;
-			background: transparent;
-		}
-
-		.text :where(p code) {
+		p code {
 			max-width: 100%;
 			display: inline-flex;
 			overflow-x: auto;
@@ -79,56 +113,30 @@
 			padding-bottom: 0;
 		}
 
-		.text :where(.code-block .filename) {
-			content: attr(data-file);
-			display: block;
-			width: 100%;
-			font-family: var(--sk-font-mono);
-			font-size: 1.2rem;
-			font-weight: 400;
-			padding: 1rem 1rem 0.8rem 1rem;
-			color: var(--sk-text-2);
-			background: var(--sk-back-4);
-			border-radius: var(--sk-border-radius) var(--sk-border-radius) 0 0;
-			box-sizing: border-box;
+		/* TODO what is this for? */
+		.copy-code-block {
+			box-shadow: 1px 2px 1rem hsla(0 0 0 / 0.08);
 		}
 
-		.text :where(.code-block pre) {
-			margin-top: 0;
-			border-radius: 0 0 var(--sk-border-radius) var(--sk-border-radius);
-		}
-
-		.text :where(a:not(.permalink)) {
+		a:not(.permalink) {
 			color: inherit;
 			text-decoration: underline;
 			transition: box-shadow 0.1s ease-in-out;
-		}
 
-		.text :where(a:not(.permalink) code) {
-			all: unset !important;
-			color: inherit;
-			background-color: transparent !important;
-		}
-
-		.text :where(pre a):hover {
-			border-bottom: 1px solid var(--sk-theme-1);
-			text-decoration: none;
-		}
-
-		.text :where(pre.border) {
-			border-left: 5px solid var(--sk-theme-2);
-		}
-
-		.text :where(pre.language-diff code) {
-			color: var(--sk-code-diff-base);
+			/* TODO what is this for? */
+			code {
+				all: unset !important;
+				color: inherit;
+				background-color: transparent !important;
+			}
 		}
 
 		/* permalinks */
-		.text :where([id]) {
+		[id] {
 			scroll-margin-top: calc(var(--sk-nav-height) + 4rem);
 		}
 
-		.text :where(a.permalink) {
+		a.permalink {
 			position: absolute !important;
 			display: block;
 			background: url(../icons/link.svg) 0 50% no-repeat;
@@ -153,50 +161,48 @@
 			}
 		}
 
-		@media (max-width: 768px) {
-			.text :where(blockquote *) {
-				word-break: break-word;
-			}
-		}
-
-		/* lists */
-		.text :where(ol, ul) {
+		ol,
+		ul {
 			--list-padding: 3rem;
 			margin-left: var(--list-padding);
 		}
 
-		.text :where(ul) {
+		ul {
 			list-style: none;
+
+			li::before {
+				content: '';
+				position: absolute;
+				margin-top: 0.8rem;
+				margin-left: -1.8rem;
+				background-color: var(--sk-back-5);
+				width: 0.6rem;
+				height: 0.6rem;
+				border-radius: 2px;
+				opacity: 0.7;
+			}
+
+			ul {
+				margin-bottom: 0;
+			}
 		}
 
-		.text :where(ol) {
+		ol {
 			list-style: decimal;
 		}
 
-		.text :where(li) {
+		li {
 			position: relative;
 			max-width: calc(var(--sk-line-max-width) - var(--list-padding));
 			line-height: 1.5;
 			margin: 0 0 0.5em 0;
 		}
 
-		.text :where(ul li)::before {
-			content: '';
-			position: absolute;
-			margin-top: 0.8rem;
-			margin-left: -1.8rem;
-			background-color: var(--sk-back-5);
-			width: 0.6rem;
-			height: 0.6rem;
-			border-radius: 2px;
-			opacity: 0.7;
-		}
-
-		.text :where(table) {
+		table {
 			margin: 1em 0;
 		}
 
-		.text :where(small) {
+		small {
 			font-size: var(--sk-text-s);
 			float: right;
 			pointer-events: all;
@@ -204,11 +210,43 @@
 			cursor: pointer;
 		}
 
-		.text :where(blockquote) {
+		blockquote {
 			--primary-hsl: var(--sk-theme-1-hsl);
 			color: var(--sk-text-1);
 			padding: 0 0 0 4.5rem;
 			font-style: italic;
+
+			&:first-child {
+				margin-top: 0;
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			&::before {
+				content: '';
+				display: block;
+				width: 3rem;
+				height: 3rem;
+				position: absolute;
+				left: 0.5rem;
+				top: 0;
+				background: url($lib/icons/lightbulb.svg) no-repeat 50% 50% / contain;
+			}
+
+			&.deprecated {
+				--primary-hsl: var(--sk-text-warning-hsl);
+				--color: var(--primary-hsl);
+
+				&::before {
+					content: 'Deprecated';
+				}
+
+				a {
+					--color: var(--primary-hsl);
+				}
+			}
 
 			em,
 			i {
@@ -218,46 +256,12 @@
 			code {
 				font-style: normal;
 			}
-		}
 
-		.text :where(blockquote)::before {
-			content: '';
-			display: block;
-			width: 3rem;
-			height: 3rem;
-			position: absolute;
-			left: 0.5rem;
-			top: 0;
-			background: url($lib/icons/lightbulb.svg) no-repeat 50% 50% / contain;
-		}
-
-		.text :where(blockquote):first-child {
-			margin-top: 0;
-		}
-
-		.text :where(blockquote):last-child {
-			margin-bottom: 0;
-		}
-
-		.text :where(blockquote.deprecated) {
-			--primary-hsl: var(--sk-text-warning-hsl);
-			--color: var(--primary-hsl);
-		}
-
-		.text :where(blockquote.deprecated)::before {
-			content: 'Deprecated';
-		}
-
-		.text :where(blockquote.deprecated a) {
-			--color: var(--primary-hsl);
-		}
-
-		.text :where(section a code) {
-			color: inherit;
-		}
-
-		.text :where(ul ul) {
-			margin-bottom: 0;
+			@media (max-width: 767px) {
+				* {
+					word-break: break-word;
+				}
+			}
 		}
 
 		details.legacy {
