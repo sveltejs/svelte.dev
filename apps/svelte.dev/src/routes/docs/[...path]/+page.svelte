@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Icon } from '@sveltejs/site-kit/components';
+	import { Icon, Text } from '@sveltejs/site-kit/components';
 	import { copy_code_descendants, legacy_details, ts_js_select } from '@sveltejs/site-kit/actions';
 	import { setupDocsHovers } from '@sveltejs/site-kit/docs';
 	import OnThisPage from './OnThisPage.svelte';
@@ -31,8 +31,11 @@
 
 	<OnThisPage {content} document={data.document} />
 
+	<!-- TODO emit scroll events from <Text> so we don't need the `bind:this` and can ditch the wrapper element -->
 	<div class="text content" bind:this={content}>
-		{@html data.document.body}
+		<Text>
+			{@html data.document.body}
+		</Text>
 	</div>
 
 	<p class="edit">
