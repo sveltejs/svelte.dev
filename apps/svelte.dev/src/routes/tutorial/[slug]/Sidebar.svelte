@@ -2,6 +2,7 @@
 	import { createEventDispatcher } from 'svelte';
 	import Modal from '$lib/components/Modal.svelte';
 	import Menu from './Menu.svelte';
+	import { Text } from '@sveltejs/site-kit/components';
 
 	/** @type {import('$lib/tutorial').PartStub[]} */
 	export let index;
@@ -62,7 +63,9 @@
 				}
 			}}
 		>
-			{@html exercise.html}
+			<Text>
+				{@html exercise.html}
+			</Text>
 		</div>
 
 		{#if exercise.next}
