@@ -50,13 +50,38 @@
 		.code-block {
 			position: relative;
 			box-shadow: 1px 2px 1rem hsla(0 0 0 / 0.08);
+			border-radius: var(--sk-border-radius);
+			overflow: hidden;
 			margin: 2rem 0;
 
 			.controls {
-				position: relative;
+				--height: 3.6rem;
+				display: flex;
+				align-items: center;
+				position: absolute;
+				top: 0;
+				height: var(--height);
 
-				.ts-toggle {
-					position: absolute;
+				&:has(.filename) {
+					position: relative;
+					background: var(--sk-back-4);
+				}
+
+				.filename {
+					content: attr(data-file);
+					display: block;
+					flex: 1;
+					font-family: var(--sk-font-mono);
+					font-size: 1.2rem;
+					font-weight: 400;
+					padding: 0 1rem;
+					color: var(--sk-text-2);
+				}
+
+				.copy-to-clipboard {
+					height: var(--height);
+					aspect-ratio: 1;
+					background: url(../icons/copy-to-clipboard-empty-light.svg) no-repeat 50% 50% / 2rem 2rem;
 				}
 			}
 
@@ -66,20 +91,6 @@
 
 			&:has(.ts-toggle:not(:checked)) [data-language='ts'] {
 				display: none;
-			}
-
-			.filename {
-				content: attr(data-file);
-				display: block;
-				width: 100%;
-				font-family: var(--sk-font-mono);
-				font-size: 1.2rem;
-				font-weight: 400;
-				padding: 1rem 1rem 0.8rem 1rem;
-				color: var(--sk-text-2);
-				background: var(--sk-back-4);
-				border-radius: var(--sk-border-radius) var(--sk-border-radius) 0 0;
-				box-sizing: border-box;
 			}
 
 			pre {
