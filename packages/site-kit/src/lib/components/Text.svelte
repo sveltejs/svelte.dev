@@ -61,6 +61,7 @@
 				position: absolute;
 				top: 0;
 				height: var(--height);
+				padding: 0.3rem;
 
 				&:has(.filename) {
 					position: relative;
@@ -78,10 +79,53 @@
 					color: var(--sk-text-2);
 				}
 
+				.ts-toggle {
+					appearance: none;
+					display: flex;
+					align-items: center;
+					height: calc(var(--height) - 0.6rem);
+					outline-offset: 0;
+					border-radius: var(--sk-border-radius);
+					padding: 0 0.4rem;
+
+					&::before,
+					&::after {
+						width: 2rem;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						font-size: 1.2rem;
+						font-weight: 600;
+						font-family: var(--sk-font-mono);
+					}
+
+					&::before {
+						content: 'JS';
+						opacity: 0.8;
+					}
+
+					&::after {
+						content: 'TS';
+						border-left: none;
+						opacity: 0.2;
+					}
+
+					&:checked {
+						&::before {
+							opacity: 0.2;
+						}
+
+						&::after {
+							opacity: 0.8;
+						}
+					}
+				}
+
 				.copy-to-clipboard {
-					height: var(--height);
+					height: calc(var(--height) - 0.6rem);
 					aspect-ratio: 1;
 					background: url(../icons/copy-to-clipboard-empty-light.svg) no-repeat 50% 50% / 2rem 2rem;
+					border-radius: var(--sk-border-radius);
 				}
 			}
 
