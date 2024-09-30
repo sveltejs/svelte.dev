@@ -1,11 +1,10 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import { copy_code_descendants, ts_js_select } from '@sveltejs/site-kit/actions';
+	import { Text } from '@sveltejs/site-kit/components';
 	import { setupDocsHovers } from '@sveltejs/site-kit/docs';
 
 	let { data } = $props();
-
-	let content = $state() as HTMLElement;
 
 	setupDocsHovers();
 </script>
@@ -39,9 +38,9 @@
 			<time datetime={data.date}>{data.date_formatted}</time>
 		</p>
 
-		<div class="content" bind:this={content}>
+		<Text>
 			{@html data.body}
-		</div>
+		</Text>
 	</article>
 </div>
 
