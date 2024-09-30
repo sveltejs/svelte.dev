@@ -95,28 +95,27 @@
 						justify-content: center;
 						align-items: center;
 						font-size: 1.2rem;
-						font-weight: 600;
 						font-family: var(--sk-font-mono);
+						color: var(--sk-text-2);
 					}
 
 					&::before {
 						content: 'JS';
-						opacity: 0.8;
 					}
 
 					&::after {
 						content: 'TS';
 						border-left: none;
-						opacity: 0.2;
+						opacity: 0.3;
 					}
 
 					&:checked {
 						&::before {
-							opacity: 0.2;
+							opacity: 0.3;
 						}
 
 						&::after {
-							opacity: 0.8;
+							opacity: 1;
 						}
 					}
 				}
