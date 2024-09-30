@@ -49,6 +49,24 @@
 
 		.code-block {
 			position: relative;
+			box-shadow: 1px 2px 1rem hsla(0 0 0 / 0.08);
+			margin: 2rem 0;
+
+			.controls {
+				position: relative;
+
+				.ts-toggle {
+					position: absolute;
+				}
+			}
+
+			&:has(.ts-toggle:checked) [data-language='js'] {
+				display: none;
+			}
+
+			&:has(.ts-toggle:not(:checked)) [data-language='ts'] {
+				display: none;
+			}
 
 			.filename {
 				content: attr(data-file);
@@ -65,48 +83,39 @@
 			}
 
 			pre {
-				margin-top: 0;
-				border-radius: 0 0 var(--sk-border-radius) var(--sk-border-radius);
-			}
-		}
-
-		pre {
-			position: relative;
-			margin: 1em 0;
-			width: 100%;
-			padding: 1rem;
-			box-sizing: border-box;
-			color: var(--sk-code-base);
-			border-radius: var(--sk-border-radius);
-			font-size: var(--sk-text-s);
-			overflow-x: auto;
-
-			code {
-				display: block;
-				padding: 0;
+				position: relative;
 				margin: 0;
-				top: 0;
 				width: 100%;
-				background: transparent;
-			}
+				padding: 1rem;
+				box-sizing: border-box;
+				color: var(--sk-code-base);
+				border-radius: var(--sk-border-radius);
+				font-size: var(--sk-text-s);
+				overflow-x: auto;
 
-			a:hover {
-				border-bottom: 1px solid var(--sk-theme-1);
-				text-decoration: none;
-			}
+				code {
+					display: block;
+					padding: 0;
+					margin: 0;
+					top: 0;
+					width: 100%;
+					background: transparent;
+				}
 
-			/* TODO what is this for? */
-			&.border {
-				border-left: 5px solid var(--sk-theme-2);
-			}
+				a:hover {
+					border-bottom: 1px solid var(--sk-theme-1);
+					text-decoration: none;
+				}
 
-			&.language-diff code {
-				color: var(--sk-code-diff-base);
-			}
-		}
+				/* TODO what is this for? */
+				&.border {
+					border-left: 5px solid var(--sk-theme-2);
+				}
 
-		.ts-block pre {
-			margin: 0;
+				&.language-diff code {
+					color: var(--sk-code-diff-base);
+				}
+			}
 		}
 
 		p code {
@@ -115,11 +124,6 @@
 			overflow-x: auto;
 			padding-top: 0;
 			padding-bottom: 0;
-		}
-
-		/* TODO what is this for? */
-		.copy-code-block {
-			box-shadow: 1px 2px 1rem hsla(0 0 0 / 0.08);
 		}
 
 		a:not(.permalink) {
