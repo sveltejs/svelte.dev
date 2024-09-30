@@ -142,11 +142,11 @@
 				}
 			}
 
-			&:has(.ts-toggle:checked) [data-language='js'] {
+			&:has(.ts-toggle:checked) pre:first-of-type {
 				display: none;
 			}
 
-			&:has(.ts-toggle:not(:checked)) [data-language='ts'] {
+			&:has(.ts-toggle:not(:checked)) pre:last-of-type {
 				display: none;
 			}
 
