@@ -18,9 +18,11 @@ As with any other store, you can reference its value in a component by prefixing
 
 ```svelte
 /// file: src/routes/+layout.svelte
-+++<script>
-	import { page } from '$app/stores';
-</script>+++
+<script>
+	+++import { page } from '$app/stores';+++
+
+	let { children } = $props();
+</script>
 
 <nav>
 	<a href="/" +++aria-current={$page.url.pathname === '/'}+++>
@@ -32,5 +34,5 @@ As with any other store, you can reference its value in a component by prefixing
 	</a>
 </nav>
 
-<slot></slot>
+{@render children()}
 ```
