@@ -16,14 +16,24 @@ export type Modules = Array<{
 	name?: string;
 	comment?: string;
 	exempt?: boolean;
-	types?: ModuleChild[];
-	exports?: ModuleChild[];
+	types?: Declaration[];
+	exports?: Declaration[];
 }>;
-export interface ModuleChild {
+
+export interface Declaration {
+	name: string;
+	comment: string;
+	deprecated?: string | null;
+	overloads: Array<{
+		snippet: string;
+		children: TypeElement[];
+	}>;
+}
+
+export interface TypeElement {
 	name: string;
 	snippet: string;
 	comment: string;
-	deprecated?: string;
-	bullets?: string[];
-	children?: ModuleChild[];
+	bullets: string[];
+	children: TypeElement[];
 }

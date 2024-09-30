@@ -20,7 +20,7 @@
 		ol,
 		ul {
 			margin: 1em 0;
-			font-size: var(--sk-text-s);
+			font-size: var(--sk-text-m);
 		}
 
 		/* TODO is this still used? don't think so */
@@ -103,6 +103,10 @@
 			&.language-diff code {
 				color: var(--sk-code-diff-base);
 			}
+		}
+
+		.ts-block pre {
+			margin: 0;
 		}
 
 		p code {

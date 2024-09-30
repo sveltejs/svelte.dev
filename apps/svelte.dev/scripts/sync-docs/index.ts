@@ -33,11 +33,12 @@ const packages: Package[] = [
 				m.types!.find((t) => t?.name === 'ActionReturn')
 			);
 			const new_children =
-				module_with_ActionReturn?.types![1].children!.filter((c) => c.name !== '$$_attributes') ||
-				[];
+				module_with_ActionReturn?.types![1].overloads[0].children!.filter(
+					(c) => c.name !== '$$_attributes'
+				) || [];
 
 			if (module_with_ActionReturn) {
-				module_with_ActionReturn.types![1].children = new_children;
+				module_with_ActionReturn.types![1].overloads[0].children = new_children;
 			}
 
 			return modules;

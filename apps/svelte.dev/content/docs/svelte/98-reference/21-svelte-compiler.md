@@ -102,13 +102,6 @@ function parse(
 
 </div>
 
-## parse
-
-The parse function parses a component, returning only its abstract syntax tree.
-
-The `modern` option (`false` by default in Svelte 5) makes the parser return a modern AST instead of the legacy AST.
-`modern` will become `true` by default in Svelte 6, and the option will be removed in Svelte 7.
-
 <div class="ts-block">
 
 ```ts

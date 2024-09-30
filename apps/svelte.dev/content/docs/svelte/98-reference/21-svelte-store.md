@@ -39,11 +39,6 @@ function derived<S extends Stores, T>(
 
 </div>
 
-## derived
-
-Derived value store by synchronizing one or more readable stores and
-applying an aggregation function over its input values.
-
 <div class="ts-block">
 
 ```ts
@@ -71,10 +66,6 @@ function fromStore<V>(store: Writable<V>): {
 ```
 
 </div>
-
-## fromStore
-
-
 
 <div class="ts-block">
 
@@ -144,10 +135,6 @@ function toStore<V>(
 ```
 
 </div>
-
-## toStore
-
-
 
 <div class="ts-block">
 

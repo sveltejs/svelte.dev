@@ -4,7 +4,7 @@ import { mkdir, readFile, readdir, stat, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import ts from 'typescript';
 import { SHIKI_LANGUAGE_MAP, escape, normalizeSlugify, transform } from './utils';
-import type { ModuleChild, Modules } from '.';
+import type { Declaration, TypeElement, Modules } from './index';
 
 type MetadataKeys = 'file' | 'link' | 'copy';
 type SnippetOptions = Record<MetadataKeys, string | boolean | number | null>;
@@ -119,7 +119,7 @@ export async function render_content_markdown(
 	{
 		twoslashBanner,
 		modules = [],
-		cacheCodeSnippets = true,
+		cacheCodeSnippets = false,
 		resolveTypeLinks
 	}: RenderContentOptions = {}
 ) {
@@ -593,7 +593,11 @@ export async function replace_export_type_placeholders(content: string, modules:
 
 		return (
 			exported
-				?.map((exportVal) => `<div class="ts-block">${fence(exportVal.snippet, 'dts')}</div>`)
+				?.map((declaration) =>
+					declaration.overloads
+						.map((overload) => `<div class="ts-block">${fence(overload.snippet, 'dts')}</div>`)
+						.join('\n\n')
+				)
 				.join('\n\n') ?? ''
 		);
 	});
@@ -627,12 +631,16 @@ export async function replace_export_type_placeholders(content: string, modules:
 				}
 
 				return `## ${module.name}\n\n${import_block}\n\n${module.comment}\n\n${module.exports
-					.map((type) => {
-						const markdown =
-							`<div class="ts-block">${fence(type.snippet)}` +
-							type.children?.map((v) => stringify(v)).join('\n\n') +
-							`</div>`;
-						return `### ${type.name}\n\n${type.comment}\n\n${markdown}`;
+					.map((declaration) => {
+						const markdown = declaration.overloads
+							.map(
+								(overload) =>
+									`<div class="ts-block">${fence(overload.snippet)}` +
+									overload.children?.map((v) => stringify(v)).join('\n\n') +
+									`</div>`
+							)
+							.join('\n\n');
+						return `### ${declaration.name}\n\n${declaration.comment}\n\n${markdown}`;
 					})
 					.join('\n\n')}`;
 			})
@@ -661,12 +669,16 @@ export async function replace_export_type_placeholders(content: string, modules:
 		}
 
 		return `${import_block}\n\n${module.comment}\n\n${module.exports
-			.map((type) => {
-				const markdown =
-					`<div class="ts-block">${fence(type.snippet, 'dts')}` +
-					type.children?.map((val) => stringify(val, 'dts')).join('\n\n') +
-					`</div>`;
-				return `### ${type.name}\n\n${type.comment}\n\n${markdown}`;
+			.map((declaration) => {
+				const markdown = declaration.overloads
+					.map(
+						(overload) =>
+							`<div class="ts-block">${fence(overload.snippet, 'dts')}` +
+							overload.children?.map((val) => stringify(val, 'dts')).join('\n\n') +
+							`</div>`
+					)
+					.join('\n\n');
+				return `### ${declaration.name}\n\n${declaration.comment}\n\n${markdown}`;
 			})
 			.join('\n\n')}`;
 	});
@@ -696,12 +708,16 @@ function stringify_module(module: Modules[0]) {
 		content += `${module.comment}\n\n`;
 	}
 
-	for (const e of module.exports || []) {
-		const markdown =
-			`<div class="ts-block">${fence(e.snippet)}` +
-			e.children?.map((v) => stringify(v)).join('\n\n') +
-			`</div>`;
-		content += `## ${e.name}\n\n${e.comment}\n\n${markdown}\n\n`;
+	for (const declaration of module.exports || []) {
+		const markdown = declaration.overloads
+			.map(
+				(overload) =>
+					`<div class="ts-block">${fence(overload.snippet)}` +
+					overload.children?.map((v) => stringify(v)).join('\n\n') +
+					`</div>`
+			)
+			.join('\n\n');
+		content += `## ${declaration.name}\n\n${declaration.comment}\n\n${markdown}\n\n`;
 	}
 
 	for (const t of module.types || []) {
@@ -711,7 +727,7 @@ function stringify_module(module: Modules[0]) {
 	return content;
 }
 
-function stringify_type(t: ModuleChild) {
+function stringify_type(t: Declaration) {
 	let content = '';
 
 	if (t.deprecated) {
@@ -722,36 +738,44 @@ function stringify_type(t: ModuleChild) {
 		content += `${t.comment}\n\n`;
 	}
 
-	if (t.children || t.snippet) {
-		const children = t.children?.map((val) => stringify(val, 'dts')).join('\n\n');
-		content += `<div class="ts-block">${fence(t.snippet, 'dts')}` + children + `\n</div>\n\n`;
+	for (const overload of t.overloads) {
+		if (overload.children || overload.snippet) {
+			const children = overload.children?.map((val) => stringify(val, 'dts')).join('\n\n');
+			content +=
+				`<div class="ts-block">${fence(overload.snippet, 'dts')}` + children + `\n</div>\n\n`;
+		}
 	}
+
 	return content;
 }
 
-function stringify_expanded_type(type: ModuleChild) {
+function stringify_expanded_type(type: Declaration) {
 	return (
 		type.comment +
-		type.children
-			?.map((child) => {
-				let section = `## ${child.name}`;
+		type.overloads
+			.map((overload) =>
+				overload.children
+					?.map((child) => {
+						let section = `## ${child.name}`;
 
-				if (child.bullets) {
-					section += `\n\n<div class="ts-block-property-bullets">\n\n${child.bullets.join(
-						'\n'
-					)}\n\n</div>`;
-				}
+						if (child.bullets) {
+							section += `\n\n<div class="ts-block-property-bullets">\n\n${child.bullets.join(
+								'\n'
+							)}\n\n</div>`;
+						}
 
-				section += `\n\n${child.comment}`;
+						section += `\n\n${child.comment}`;
 
-				if (child.children) {
-					section += `\n\n<div class="ts-block-property-children">\n\n${child.children
-						.map((v) => stringify(v))
-						.join('\n')}\n\n</div>`;
-				}
+						if (child.children) {
+							section += `\n\n<div class="ts-block-property-children">\n\n${child.children
+								.map((v) => stringify(v))
+								.join('\n')}\n\n</div>`;
+						}
 
-				return section;
-			})
+						return section;
+					})
+					.join('\n\n')
+			)
 			.join('\n\n')
 	);
 }
@@ -770,7 +794,7 @@ function fence(code: string, lang: keyof typeof SHIKI_LANGUAGE_MAP = 'ts') {
 /**
  * Helper function for {@link replace_export_type_placeholders}. Renders specifiv members to their markdown/html representation.
  */
-function stringify(member: ModuleChild, lang: keyof typeof SHIKI_LANGUAGE_MAP = 'ts'): string {
+function stringify(member: TypeElement, lang: keyof typeof SHIKI_LANGUAGE_MAP = 'ts'): string {
 	if (!member) return '';
 
 	// It's important to always use two newlines after a dom tag or else markdown does not render it properly

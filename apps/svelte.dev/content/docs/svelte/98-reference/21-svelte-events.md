@@ -32,12 +32,6 @@ function on<Type extends keyof WindowEventMap>(
 
 </div>
 
-## on
-
-Attaches an event handler to the document and returns a function that removes the handler. Using this
-rather than `addEventListener` will preserve the correct order relative to handlers added declaratively
-(with attributes like `onclick`), which use event delegation for performance reasons
-
 <div class="ts-block">
 
 ```ts
@@ -54,12 +48,6 @@ function on<Type extends keyof DocumentEventMap>(
 ```
 
 </div>
-
-## on
-
-Attaches an event handler to an element and returns a function that removes the handler. Using this
-rather than `addEventListener` will preserve the correct order relative to handlers added declaratively
-(with attributes like `onclick`), which use event delegation for performance reasons
 
 <div class="ts-block">
 
@@ -81,12 +69,6 @@ function on<
 
 </div>
 
-## on
-
-Attaches an event handler to an element and returns a function that removes the handler. Using this
-rather than `addEventListener` will preserve the correct order relative to handlers added declaratively
-(with attributes like `onclick`), which use event delegation for performance reasons
-
 <div class="ts-block">
 
 ```ts
@@ -106,12 +88,6 @@ function on<
 ```
 
 </div>
-
-## on
-
-Attaches an event handler to an element and returns a function that removes the handler. Using this
-rather than `addEventListener` will preserve the correct order relative to handlers added declaratively
-(with attributes like `onclick`), which use event delegation for performance reasons
 
 <div class="ts-block">
 

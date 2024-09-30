@@ -1,6 +1,7 @@
 {
 	"name": "@sveltejs/repl",
 	"version": "0.6.0",
+	"sideEffects": false,
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build && npm run package",

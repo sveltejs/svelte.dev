@@ -1,18 +1,8 @@
 import fs from 'node:fs';
 import ts from 'typescript';
 import { format } from 'prettier';
-import { type Modules } from '@sveltejs/site-kit/markdown';
 import { strip_origin } from './utils';
-
-interface Extracted {
-	name: string;
-	comment: string;
-	markdown?: string;
-	snippet: string;
-	deprecated?: string | null;
-	children: Extracted[];
-	bullets?: string[];
-}
+import type { Modules, Declaration, TypeElement } from '@sveltejs/site-kit/markdown';
 
 export async function read_types(base: string, modules: Modules) {
 	{
@@ -51,8 +41,8 @@ export async function read_types(base: string, modules: Modules) {
 }
 
 export async function get_types(code: string, statements: ts.NodeArray<ts.Statement>) {
-	const exports: Extracted[] = [];
-	const types: Extracted[] = [];
+	const exports: Declaration[] = [];
+	const types: Declaration[] = [];
 
 	if (statements) {
 		for (const statement of statements) {
@@ -116,7 +106,7 @@ export async function get_types(code: string, statements: ts.NodeArray<ts.Statem
 				const i = code.indexOf('export', start);
 				start = i + 6;
 
-				let children: Extracted[] = [];
+				let children: TypeElement[] = [];
 
 				let snippet_unformatted = code.slice(start, statement.end).trim();
 
@@ -162,12 +152,31 @@ export async function get_types(code: string, statements: ts.NodeArray<ts.Statem
 						? exports
 						: types;
 
-				collection.push({
-					name,
-					comment: cleanup_comment(comment),
+				let declaration = collection.find((statement) => statement.name === name);
+
+				if (declaration) {
+					// TODO tidy these up in the source
+					if (cleanup_comment(comment) !== declaration.comment) {
+						console.warn(`${name} overload has mismatched comment`);
+					}
+
+					if (deprecated_notice !== declaration.deprecated) {
+						console.warn(`${name} overload has mismatched deprecation notices`);
+					}
+				} else {
+					declaration = {
+						name,
+						comment: cleanup_comment(comment),
+						deprecated: deprecated_notice,
+						overloads: []
+					};
+
+					collection.push(declaration);
+				}
+
+				declaration.overloads.push({
 					snippet,
-					children,
-					deprecated: deprecated_notice
+					children
 				});
 			}
 		}
@@ -179,13 +188,13 @@ export async function get_types(code: string, statements: ts.NodeArray<ts.Statem
 	return { types, exports };
 }
 
-function munge_type_element(member: ts.TypeElement, depth = 1): Extracted | undefined {
+function munge_type_element(member: ts.TypeElement, depth = 1): TypeElement | undefined {
 	// @ts-ignore
 	const doc = member.jsDoc?.[0];
 
 	if (/private api|DO NOT USE/i.test(doc?.comment)) return;
 
-	const children: Extracted[] = [];
+	const children: TypeElement[] = [];
 
 	// @ts-ignore
 	const name = member.name?.escapedText ?? member.name?.getText() ?? 'unknown';
