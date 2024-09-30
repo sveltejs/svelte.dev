@@ -134,13 +134,11 @@ export async function render_content_markdown(
 	return parse({
 		body: await generate_ts_from_js(await replace_export_type_placeholders(body, modules)),
 		type_links,
-		code: (source, language, current) => {
-			const cached_snippet = SNIPPET_CACHE.get(source + language + current);
+		code: (raw, language, current) => {
+			const cached_snippet = SNIPPET_CACHE.get(raw + language + current);
 			if (cached_snippet.code) return cached_snippet.code;
 
-			const options: SnippetOptions = { file: null, link: null, copy: true };
-
-			source = collect_options(source, options);
+			let { source, options } = parse_options(raw);
 			source = adjust_tab_indentation(source, language);
 
 			let version_class: 'ts-version' | 'js-version' | '' = '';
@@ -949,8 +947,10 @@ function create_type_links(
 	return { type_regex, type_links };
 }
 
-function collect_options(source: string, options: SnippetOptions) {
+function parse_options(source: string) {
 	METADATA_REGEX.lastIndex = 0;
+
+	const options: SnippetOptions = { file: null, link: null, copy: true };
 
 	let copy_value = 'true';
 	source = source.replace(METADATA_REGEX, (_, key, value) => {
@@ -964,7 +964,7 @@ function collect_options(source: string, options: SnippetOptions) {
 	options.link = options.link === 'true';
 	options.copy = copy_value === 'true' || (options.file && copy_value !== 'false');
 
-	return source;
+	return { source, options };
 }
 
 /**
