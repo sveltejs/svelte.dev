@@ -474,7 +474,8 @@ export async function convert_to_ts(js_code: string, indent = '', offset = '') {
 		printWidth: 100,
 		parser: 'typescript',
 		useTabs: true,
-		singleQuote: true
+		singleQuote: true,
+		trailingComma: 'none'
 	});
 
 	// Indent transformed's each line by 2
