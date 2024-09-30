@@ -996,8 +996,6 @@ function syntax_highlight({
 }) {
 	let html = '';
 
-	console.log({ source });
-
 	if (/^(dts|yaml|yml)/.test(language)) {
 		html = replace_blank_lines(
 			twoslash_module.renderCodeToHTML(
