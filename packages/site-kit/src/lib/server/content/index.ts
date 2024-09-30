@@ -1,4 +1,4 @@
-import { extract_frontmatter, slugify } from '../../markdown/utils';
+import { extract_frontmatter, slugify, smart_quotes } from '../../markdown/utils';
 import type { Document } from '../../types';
 
 export async function create_index(
@@ -23,6 +23,9 @@ export async function create_index(
 		if (!metadata.title) {
 			throw new Error(`Missing title in ${slug} frontmatter`);
 		}
+
+		metadata.title = smart_quotes(metadata.title);
+		if (metadata.description) metadata.description = smart_quotes(metadata.description);
 
 		const sections = Array.from(body.matchAll(/^##\s+(.*)$/gm)).map((match) => {
 			const title = match[1].replace(/`/g, '').replace(/&lt;/g, '<').replace(/&gt;/g, '>');

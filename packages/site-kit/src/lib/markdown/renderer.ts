@@ -3,7 +3,7 @@ import { createHash } from 'node:crypto';
 import { mkdir, readFile, readdir, stat, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import ts from 'typescript';
-import { SHIKI_LANGUAGE_MAP, escape, normalizeSlugify, transform } from './utils';
+import { SHIKI_LANGUAGE_MAP, escape, normalizeSlugify, smart_quotes, transform } from './utils';
 import type { Declaration, TypeElement, Modules } from './index';
 
 type MetadataKeys = 'file' | 'link' | 'copy';
@@ -235,6 +235,7 @@ async function parse({
 
 	/** @type {string} */
 	const content = await transform(body, {
+		text: smart_quotes,
 		heading(html, level, raw) {
 			const title = html
 				.replace(/<\/?code>/g, '')
