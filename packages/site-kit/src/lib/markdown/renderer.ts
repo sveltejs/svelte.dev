@@ -967,24 +967,16 @@ function collect_options(source: string, options: SnippetOptions) {
 	return source;
 }
 
+/**
+ * `marked` replaces tabs with four spaces, which is unhelpful.
+ * This function turns them back into tabs (plus leftover spaces for e.g. `\t * some JSDoc`)
+ */
 function adjust_tab_indentation(source: string, language: string) {
-	return (
-		source
-			// TODO: what exactly is going on here? The regex finds spaces and replaces them with spaces again?
-			.replace(/^([\-\+])?((?:    )+)/gm, (match, prefix = '', spaces) => {
-				if ((prefix && language !== 'diff') || language === 'yaml') return match;
+	return source.replace(/^([\-\+])?((?:    )+)/gm, (match, prefix = '', spaces) => {
+		if ((prefix && language !== 'diff') || language === 'yaml') return match;
 
-				// for no good reason at all, marked replaces tabs with spaces
-				let i = 0;
-				let tabs = '';
-				for (; i < spaces.length; i += 4) {
-					tabs += '\t';
-				}
-				tabs += ' '.repeat(i % 4);
-				return prefix + tabs;
-			})
-			.replace(/\*\\\//g, '*/')
-	);
+		return prefix + '\t'.repeat(spaces.length / 4) + ' '.repeat(spaces.length % 4);
+	});
 }
 
 function replace_blank_lines(html: string) {
