@@ -65,6 +65,7 @@
 				width: 100%;
 				z-index: 2;
 				justify-content: end;
+				box-sizing: border-box;
 
 				&:has(.filename) {
 					position: relative;
@@ -80,6 +81,16 @@
 					font-weight: 400;
 					padding: 0 1rem;
 					color: var(--sk-text-2);
+
+					&::after {
+						content: attr(data-ext);
+					}
+				}
+
+				&:has(.ts-toggle:checked) {
+					.filename[data-ext='.js']::after {
+						content: '.ts';
+					}
 				}
 
 				.ts-toggle {

@@ -6,14 +6,19 @@ import ts from 'typescript';
 import { SHIKI_LANGUAGE_MAP, escape, normalizeSlugify, smart_quotes, transform } from './utils';
 import type { Declaration, TypeElement, Modules } from './index';
 
-type MetadataKeys = 'file' | 'link' | 'copy';
-type SnippetOptions = Record<MetadataKeys, string | boolean | number | null>;
+interface SnippetOptions {
+	file: string | null;
+	link: boolean;
+	copy: boolean;
+}
+
 type TwoslashBanner = (
 	filename: string,
 	content: string,
 	language: string,
 	options: SnippetOptions
 ) => string;
+
 interface RenderContentOptions {
 	twoslashBanner?: TwoslashBanner;
 	modules?: Modules;
@@ -159,7 +164,10 @@ export async function render_content_markdown(
 			let html = '<div class="code-block"><div class="controls">';
 
 			if (options.file) {
-				html += `<span class="filename">${options.file}</span>`;
+				const ext = options.file.slice(options.file.lastIndexOf('.'));
+				if (!ext) throw new Error(`Missing file extension: ${options.file}`);
+
+				html += `<span class="filename" data-ext="${ext}">${options.file.slice(0, -ext.length)}</span>`;
 			}
 
 			if (converted) {
@@ -945,19 +953,31 @@ function create_type_links(
 function parse_options(source: string) {
 	METADATA_REGEX.lastIndex = 0;
 
-	const options: SnippetOptions = { file: null, link: null, copy: true };
+	const options: SnippetOptions = { file: null, link: false, copy: true };
 
-	let copy_value = 'true';
+	let copy_value = '';
+
 	source = source.replace(METADATA_REGEX, (_, key, value) => {
-		if (key === 'copy') {
-			copy_value = value;
+		switch (key) {
+			case 'file':
+				options.file = value;
+				break;
+
+			case 'link':
+				options.link = value === 'true';
+
+			case 'copy':
+				copy_value = value;
+				break;
+
+			default:
+				throw new Error(`Unrecognised option ${key}`);
 		}
-		options[key as MetadataKeys] = value;
+
 		return '';
 	});
 
-	options.link = options.link === 'true';
-	options.copy = copy_value === 'true' || (options.file && copy_value !== 'false');
+	options.copy = copy_value === 'true' || (options.file !== null && copy_value !== 'false');
 
 	return { source, options };
 }
