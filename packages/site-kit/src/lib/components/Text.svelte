@@ -62,6 +62,9 @@
 				top: 0;
 				height: var(--height);
 				padding: 0.3rem;
+				width: 100%;
+				z-index: 2;
+				justify-content: end;
 
 				&:has(.filename) {
 					position: relative;
