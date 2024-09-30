@@ -7,4 +7,4 @@
 	<a href="/about">about</a>
 </nav>
 
-{@render children?.()}
+{@render children()}

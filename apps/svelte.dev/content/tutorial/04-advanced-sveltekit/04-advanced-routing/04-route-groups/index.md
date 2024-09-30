@@ -16,7 +16,7 @@ import { redirect } from '@sveltejs/kit';
 
 export function load({ cookies, url }) {
 	if (!cookies.get('logged_in')) {
-		throw redirect(303, `/login?redirectTo=${url.pathname}`);
+		redirect(303, `/login?redirectTo=${url.pathname}`);
 	}
 }
 ```
@@ -27,7 +27,9 @@ We can also add some UI to these two routes by adding a `src/routes/(authed)/+la
 
 ```svelte
 /// file: src/routes/(authed)/+layout.svelte
-<slot></slot>
+<script>
+	let { children } = $props();
+</script>
 
 <form method="POST" action="/logout">
 	<button>log out</button>

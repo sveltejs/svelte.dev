@@ -21,6 +21,6 @@
 	<a href="/about">about</a>
 </nav>
 
-{@render children?.()}
+{@render children()}
 
 <p>the page has been open for {seconds} seconds</p>

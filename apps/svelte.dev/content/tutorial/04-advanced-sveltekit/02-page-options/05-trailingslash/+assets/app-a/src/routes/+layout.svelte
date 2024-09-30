@@ -11,4 +11,4 @@
 	<a href="/never/">/never/</a>
 </nav>
 
-{@render children?.()}
+{@render children()}

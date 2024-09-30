@@ -7,4 +7,4 @@
 	<a href="/blog">blog</a>
 </nav>
 
-{@render children?.()}
+{@render children()}

@@ -27,11 +27,10 @@ When we create or delete items, it now takes a full second before the UI updates
 	import { fly, slide } from 'svelte/transition';
 	import { enhance } from '$app/forms';
 
-	export let data;
-	export let form;
+	let { data, form } = $props();
 
-+++	let creating = false;
-	let deleting = [];+++
++++	let creating = $state(false);
+	let deleting = $state([]);+++
 </script>
 ```
 

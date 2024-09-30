@@ -23,7 +23,7 @@ You can manually check for new versions, regardless of `pollInterval`, by callin
 		<p>
 			A new version of the app is available
 
-			<button on:click={() => location.reload()}>
+			<button onclick={() => location.reload()}>
 				reload the page
 			</button>
 		</p>

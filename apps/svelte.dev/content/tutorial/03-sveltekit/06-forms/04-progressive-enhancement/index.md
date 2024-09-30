@@ -13,8 +13,7 @@ Import the `enhance` function from `$app/forms`...
 <script>
 	+++import { enhance } from '$app/forms';+++
 
-	export let data;
-	export let form;
+	let { data, form } = $props();
 </script>
 ```
 
@@ -45,8 +44,7 @@ Now that we're updating the page rather than reloading it, we can get fancy with
 	+++import { fly, slide } from 'svelte/transition';+++
 	import { enhance } from '$app/forms';
 
-	export let data;
-	export let form;
+	let { data, form } = $props();
 </script>
 ```
 

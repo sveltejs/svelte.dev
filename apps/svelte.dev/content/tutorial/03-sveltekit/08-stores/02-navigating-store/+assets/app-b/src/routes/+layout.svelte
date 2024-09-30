@@ -17,4 +17,4 @@
 	{/if}
 </nav>
 
-{@render children?.()}
+{@render children()}

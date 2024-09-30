@@ -4,7 +4,7 @@
 
 <div class="layout">
 	<main>
-		{@render children?.()}
+		{@render children()}
 	</main>
 
 	<aside>

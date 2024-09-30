@@ -3,5 +3,5 @@
 </script>
 
 <div class="layout" data-name="b">
-	{@render children?.()}
+	{@render children()}
 </div>

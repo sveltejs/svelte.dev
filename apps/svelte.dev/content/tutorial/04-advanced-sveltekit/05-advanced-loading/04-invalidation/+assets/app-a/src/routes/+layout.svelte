@@ -14,4 +14,4 @@
 	<a href="/America/Los_Angeles">Los Angeles</a>
 </nav>
 
-{@render children?.()}
+{@render children()}

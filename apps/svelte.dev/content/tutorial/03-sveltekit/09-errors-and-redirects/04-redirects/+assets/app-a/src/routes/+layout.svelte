@@ -8,4 +8,4 @@
 	<a href="/b">b</a>
 </nav>
 
-{@render children?.()}
+{@render children()}

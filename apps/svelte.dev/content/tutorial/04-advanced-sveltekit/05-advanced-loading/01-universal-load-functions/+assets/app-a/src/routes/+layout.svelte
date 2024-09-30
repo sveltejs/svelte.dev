@@ -14,7 +14,7 @@
 	<a href="/blue">blue</a>
 </nav>
 
-{@render children?.()}
+{@render children()}
 
 <style>
 	nav.has-color,

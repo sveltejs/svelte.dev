@@ -9,7 +9,7 @@
 	{/each}
 </nav>
 
-{@render children?.()}
+{@render children()}
 
 <style>
 	a {

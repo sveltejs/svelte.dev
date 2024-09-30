@@ -8,4 +8,4 @@
 	<a href="/unexpected">page with unexpected error</a>
 </nav>
 
-{@render children?.()}
+{@render children()}

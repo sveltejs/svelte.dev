@@ -2,7 +2,7 @@ import { redirect, fail } from '@sveltejs/kit';
 
 export function load({ cookies }) {
 	if (cookies.get('allowed')) {
-		throw redirect(307, '/welcome');
+		redirect(307, '/welcome');
 	}
 }
 
@@ -15,7 +15,7 @@ export const actions = {
 				path: '/'
 			});
 
-			throw redirect(303, '/welcome');
+			redirect(303, '/welcome');
 		}
 
 		return fail(403, {

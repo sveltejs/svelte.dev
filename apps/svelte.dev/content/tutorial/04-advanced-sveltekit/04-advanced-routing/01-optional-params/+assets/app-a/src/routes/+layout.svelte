@@ -9,4 +9,4 @@
 	<a href="/fr">french</a>
 </nav>
 
-{@render children?.()}
+{@render children()}

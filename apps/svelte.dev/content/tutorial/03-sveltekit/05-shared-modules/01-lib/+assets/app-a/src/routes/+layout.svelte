@@ -7,4 +7,4 @@
 	<a href="/a/deeply/nested/route">a deeply nested route</a>
 </nav>
 
-{@render children?.()}
+{@render children()}

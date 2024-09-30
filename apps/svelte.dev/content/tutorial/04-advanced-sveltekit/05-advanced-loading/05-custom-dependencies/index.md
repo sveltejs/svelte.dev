@@ -28,7 +28,7 @@ Now, update the `invalidate` call in `src/routes/[...timezone]/+page.svelte`:
 	import { onMount } from 'svelte';
 	import { invalidate } from '$app/navigation';
 
-	export let data;
+	let { data } = $props();
 
 	onMount(() => {
 		const interval = setInterval(() => {

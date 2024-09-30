@@ -17,7 +17,7 @@
 	{/if}
 </nav>
 
-{@render children?.()}
+{@render children()}
 
 <div class="toast">
 	<p>

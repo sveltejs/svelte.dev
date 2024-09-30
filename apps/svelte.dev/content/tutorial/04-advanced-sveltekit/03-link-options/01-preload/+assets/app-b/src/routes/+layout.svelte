@@ -24,7 +24,7 @@
 	<a href="/slow-b">slow-b</a>
 </nav>
 
-{@render children?.()}
+{@render children()}
 
 {#if previous && end}
 <p>navigated from {previous.from.url.pathname} to {previous.to.url.pathname} in <strong>{end - start}ms</strong></p>

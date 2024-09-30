@@ -8,4 +8,4 @@
 	<a href="/the-bad-place">the bad place</a>
 </nav>
 
-{@render children?.()}
+{@render children()}

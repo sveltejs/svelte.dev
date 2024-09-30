@@ -34,7 +34,7 @@ We can access this data in `src/routes/blog/+page.svelte` via the `data` prop:
 ```svelte
 /// file: src/routes/blog/+page.svelte
 +++<script>
-	export let data;
+	let { data } = $props();
 </script>+++
 
 <h1>blog</h1>
@@ -67,7 +67,7 @@ export function load({ params }) {
 ```svelte
 /// file: src/routes/blog/[slug]/+page.svelte
 +++<script>
-	export let data;
+	let { data } = $props();
 </script>+++
 
 ---<h1>blog post</h1>---
@@ -85,7 +85,7 @@ import { posts } from '../data.js';
 export function load({ params }) {
 	const post = posts.find((post) => post.slug === params.slug);
 
-	+++if (!post) throw error(404);+++
+	+++if (!post) error(404);+++
 
 	return {
 		post

@@ -78,8 +78,7 @@ In `src/routes/+page.svelte`, we can access the returned value via the `form` pr
 ```svelte
 /// file: src/routes/+page.svelte
 <script>
-	export let data;
-	+++export let form;+++
+	let { data, +++form+++ } = $props();
 </script>
 
 <div class="centered">

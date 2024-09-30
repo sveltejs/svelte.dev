@@ -12,4 +12,4 @@
 	</a>
 </nav>
 
-{@render children?.()}
+{@render children()}

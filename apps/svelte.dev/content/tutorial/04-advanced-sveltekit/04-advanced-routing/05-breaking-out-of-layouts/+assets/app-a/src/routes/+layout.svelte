@@ -10,7 +10,7 @@
 </nav>
 
 <div class="layout" data-name="root">
-	{@render children?.()}
+	{@render children()}
 </div>
 
 <style>

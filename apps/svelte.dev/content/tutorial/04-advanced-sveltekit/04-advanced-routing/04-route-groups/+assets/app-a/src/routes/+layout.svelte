@@ -9,4 +9,4 @@
 	<a href="/app">app</a>
 </nav>
 
-{@render children?.()}
+{@render children()}
