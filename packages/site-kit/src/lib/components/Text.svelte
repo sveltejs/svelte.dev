@@ -1,10 +1,31 @@
 <script lang="ts">
+	import { afterNavigate } from '$app/navigation';
 	import type { Snippet } from 'svelte';
+	import { prefers_ts } from '../stores/prefers_ts';
 
 	let { children }: { children: Snippet } = $props();
+
+	let container: HTMLElement;
+
+	afterNavigate(update);
+
+	function update() {
+		const inputs = container.querySelectorAll('.ts-toggle') as NodeListOf<HTMLInputElement>;
+
+		for (const input of inputs) {
+			input.checked = $prefers_ts;
+		}
+	}
+
+	function toggle(e: Event) {
+		if ((e.target as HTMLElement).classList.contains('ts-toggle')) {
+			$prefers_ts = (e.target as HTMLInputElement).checked;
+			update();
+		}
+	}
 </script>
 
-<div class="text">{@render children()}</div>
+<div onchangecapture={toggle} bind:this={container} class="text">{@render children()}</div>
 
 <style>
 	.text :global {
