@@ -158,7 +158,8 @@
 				.copy-to-clipboard {
 					height: calc(var(--height) - 0.6rem);
 					aspect-ratio: 1;
-					background: url(../icons/copy-to-clipboard-empty-light.svg) no-repeat 50% 50% / 2rem 2rem;
+					background: url(../icons/copy-to-clipboard-empty-light.svg) no-repeat 50% 50% / 1.6rem
+						1.6rem;
 					border-radius: var(--sk-border-radius);
 				}
 			}
