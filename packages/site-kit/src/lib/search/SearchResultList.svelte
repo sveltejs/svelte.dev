@@ -70,7 +70,7 @@
 			position: sticky;
 			top: 0;
 			display: block;
-			background: var(--sk-back-1);
+			background: var(--sk-back-2);
 			color: var(--sk-text-4);
 			text-transform: uppercase;
 			padding: 1rem 1rem 0.5rem 1rem;
@@ -102,7 +102,7 @@
 	}
 
 	a {
-		--background: var(--sk-back-1);
+		--background: var(--sk-back-2);
 		display: block;
 		text-decoration: none;
 		line-height: 1;
