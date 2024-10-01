@@ -96,7 +96,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 
 	$effect(() => {
 		if (ready) {
-			worker.postMessage({ type: 'recents', payload: $search_recent });
+			worker.postMessage({ type: 'recents', payload: $state.snapshot($search_recent) });
 		}
 	});
 
