@@ -24,7 +24,7 @@
 	/* typography */
 	--sk-font-ui: 'Yantramanav', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
 		Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-	--sk-font-body: 'freight-text-pro', 'Big Caslon', Palatino, 'Book Antiqua', Cambria, serif;
+	--sk-font-body: 'garamond-atf-text', 'Big Caslon', Palatino, 'Book Antiqua', Cambria, serif;
 	--sk-font-heading: var(--sk-font-body);
 	--sk-font-mono: 'Fira Mono', monospace;
 	--sk-text-xxl: 3.6rem;
