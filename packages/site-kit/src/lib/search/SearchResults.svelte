@@ -30,7 +30,7 @@ Renders a list of search results
 
 <style>
 	.info {
-		padding: 1rem;
+		padding: var(--padding);
 		font-size: 1.2rem;
 		font-weight: normal;
 		text-transform: uppercase;

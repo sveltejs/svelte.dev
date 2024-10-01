@@ -70,6 +70,8 @@
 	}
 
 	details {
+		padding: 0.5rem 0;
+
 		summary {
 			position: sticky;
 			top: 0;
@@ -77,7 +79,7 @@
 			background: var(--sk-back-2);
 			color: var(--sk-text-4);
 			text-transform: uppercase;
-			padding: 1rem 1rem 0.5rem 1rem;
+			padding: 0.5rem var(--padding);
 			font-size: var(--sk-text-xs);
 			z-index: 2;
 			user-select: none;
@@ -110,7 +112,7 @@
 		display: block;
 		text-decoration: none;
 		line-height: 1;
-		padding: 1rem 1rem 1rem 5rem;
+		padding: 1.2rem var(--padding) 1.2rem calc(4rem + var(--padding));
 		overflow: hidden;
 		background: var(--background);
 
@@ -170,8 +172,8 @@
 
 		.excerpt {
 			position: relative;
-			width: calc(100% + 1.4rem);
-			left: -0.7rem;
+			width: calc(100% + 1rem);
+			left: -0.5rem;
 			overflow: hidden;
 			color: var(--sk-text-1);
 

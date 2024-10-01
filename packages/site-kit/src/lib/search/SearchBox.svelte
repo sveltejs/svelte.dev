@@ -263,10 +263,46 @@ It appears when the user clicks on the `Search` component or presses the corresp
 		z-index: 100;
 	}
 
+	.modal {
+		position: fixed;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		pointer-events: none;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 9999;
+	}
+
+	.search-box {
+		--padding: 1rem;
+		position: relative;
+		height: calc(100% - 2rem);
+		width: calc(100vw - 2rem);
+		max-width: 64rem;
+		max-height: 64rem;
+		filter: drop-shadow(2px 4px 16px rgba(0, 0, 0, 0.2));
+		border-radius: var(--sk-border-radius);
+		display: flex;
+		flex-direction: column;
+		overflow: hidden;
+		font-family: var(--sk-font-ui);
+
+		@media (min-width: 800px) {
+			--padding: 1.6rem;
+		}
+
+		& > * {
+			pointer-events: all;
+		}
+	}
+
 	input {
 		font-size: var(--sk-text-l);
 		width: 100%;
-		padding: 1rem 5rem 0.5rem 1rem;
+		padding: var(--padding) 5rem var(--padding) var(--padding);
 		height: 6rem;
 		border: none;
 		border-bottom: 1px solid var(--sk-back-3);
@@ -315,37 +351,6 @@ It appears when the user clicks on the `Search` component or presses the corresp
 		margin: 0;
 	}
 
-	.modal {
-		position: fixed;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		pointer-events: none;
-		left: 0;
-		top: 0;
-		width: 100%;
-		height: 100%;
-		z-index: 9999;
-	}
-
-	.search-box {
-		position: relative;
-		height: calc(100% - 2rem);
-		width: calc(100vw - 2rem);
-		max-width: 64rem;
-		max-height: 64rem;
-		filter: drop-shadow(2px 4px 16px rgba(0, 0, 0, 0.2));
-		border-radius: var(--sk-border-radius);
-		display: flex;
-		flex-direction: column;
-		overflow: hidden;
-		font-family: var(--sk-font-ui);
-
-		& > * {
-			pointer-events: all;
-		}
-	}
-
 	.results {
 		overflow: auto;
 		overscroll-behavior-y: none;
@@ -358,7 +363,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 	}
 
 	.info {
-		padding: 1rem;
+		padding: var(--padding);
 		font-family: var(--sk-font-ui);
 		font-size: 1.2rem;
 		font-weight: normal;
@@ -376,7 +381,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 		display: block;
 		text-decoration: none;
 		line-height: 1;
-		padding: 1rem 5rem 1rem 1rem;
+		padding: 1rem calc(4rem + var(--padding)) 1rem var(--padding);
 
 		&:hover {
 			background: rgba(0, 0, 0, 0.05);
