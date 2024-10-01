@@ -418,6 +418,10 @@
 				}
 			}
 
+			p {
+				color: var(--sk-text-3);
+			}
+
 			em,
 			i {
 				font-style: normal;
