@@ -156,11 +156,47 @@
 				}
 
 				.copy-to-clipboard {
+					position: relative;
 					height: calc(var(--height) - 0.6rem);
 					aspect-ratio: 1;
-					background: url(../icons/copy-to-clipboard-empty-light.svg) no-repeat 50% 50% / 1.6rem
-						1.6rem;
 					border-radius: var(--sk-border-radius);
+
+					&[disabled] {
+						opacity: 1;
+					}
+
+					&::before,
+					&::after {
+						content: '';
+						display: block;
+						position: absolute;
+						width: 100%;
+						height: 100%;
+						left: 0;
+						top: 0;
+						background: url(../icons/check.svg) no-repeat 50% 50% / 1.6rem 1.6rem;
+						transition: opacity 0.2s;
+						transition-delay: 0.6s;
+					}
+
+					&::before {
+						background-image: url(../icons/copy-to-clipboard-empty-light.svg);
+					}
+
+					&::after {
+						background-image: url(../icons/check.svg);
+						opacity: 0;
+					}
+
+					&:active::before {
+						opacity: 0;
+						transition: none;
+					}
+
+					&:active::after {
+						opacity: 1;
+						transition: none;
+					}
 				}
 			}
 

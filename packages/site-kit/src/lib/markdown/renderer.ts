@@ -171,11 +171,11 @@ export async function render_content_markdown(
 			}
 
 			if (converted) {
-				html += `<input class="ts-toggle" type="checkbox" aria-label="Toggle JS/TS">`;
+				html += `<input class="ts-toggle" title="Toggle language" type="checkbox" aria-label="Toggle JS/TS">`;
 			}
 
 			if (options.copy) {
-				html += `<button class="copy-to-clipboard" aria-label="Copy to clipboard"></button>`;
+				html += `<button class="copy-to-clipboard" title="Copy to clipboard" aria-label="Copy to clipboard"></button>`;
 			}
 
 			html += '</div>';
