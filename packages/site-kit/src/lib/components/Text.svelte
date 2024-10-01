@@ -2,6 +2,7 @@
 	import { afterNavigate } from '$app/navigation';
 	import type { Snippet } from 'svelte';
 	import { prefers_ts } from '../stores/prefers_ts';
+	import { fix_position } from '../actions/utils';
 
 	let { children }: { children: Snippet } = $props();
 
@@ -19,8 +20,9 @@
 
 	function toggle(e: Event) {
 		if ((e.target as HTMLElement).classList.contains('ts-toggle')) {
-			$prefers_ts = (e.target as HTMLInputElement).checked;
-			update();
+			const input = e.target as HTMLInputElement;
+			$prefers_ts = input.checked;
+			fix_position(input, update);
 		}
 	}
 

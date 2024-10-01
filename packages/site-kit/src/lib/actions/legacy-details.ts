@@ -1,6 +1,7 @@
 import { page } from '$app/stores';
 import { persisted } from 'svelte-persisted-store';
 import { get } from 'svelte/store';
+import { fix_position } from './utils';
 
 const show_legacy = persisted('svelte:show-legacy', true);
 
@@ -30,20 +31,13 @@ export function legacy_details(node: HTMLElement) {
 
 				show_legacy.set(detail.open);
 
-				const top = detail.getBoundingClientRect().top;
-
-				for (const other of details) {
-					if (other !== detail) {
-						other.open = detail.open;
+				fix_position(detail, () => {
+					for (const other of details) {
+						if (other !== detail) {
+							other.open = detail.open;
+						}
 					}
-				}
-
-				const delta = detail.getBoundingClientRect().top - top;
-
-				if (delta !== 0) {
-					// whichever element the user interacted with should stay in the same position
-					(scroll_parent ?? document.body).scrollBy(0, delta);
-				}
+				});
 
 				setTimeout(() => {
 					secondary = false;
