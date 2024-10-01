@@ -246,7 +246,7 @@
 				position: relative;
 				margin: 0;
 				width: 100%;
-				padding: 1rem;
+				padding: 0.7rem 1rem;
 				box-sizing: border-box;
 				color: var(--sk-code-base);
 				border-radius: var(--sk-border-radius);
