@@ -134,7 +134,7 @@ export async function render_content_markdown(
 	const highlighter = await twoslash_module.createShikiHighlighter({ theme: 'css-variables' });
 
 	const { type_links, type_regex } = create_type_links(modules, resolveTypeLinks);
-	const SNIPPET_CACHE = await create_snippet_cache(false);
+	const SNIPPET_CACHE = await create_snippet_cache(cacheCodeSnippets);
 
 	body = await replace_export_type_placeholders(body, modules);
 
