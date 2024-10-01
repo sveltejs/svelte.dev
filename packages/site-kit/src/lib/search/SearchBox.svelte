@@ -265,36 +265,34 @@ It appears when the user clicks on the `Search` component or presses the corresp
 	}
 
 	input {
-		font-family: inherit;
 		font-size: 1.6rem;
 		width: 100%;
 		padding: 1rem 6rem 0.5rem 1rem;
 		height: 5rem;
 		border: none;
 		border-bottom: 1px solid var(--sk-back-3);
-		font-weight: 600;
 		flex-shrink: 0;
 		background: var(--sk-back-2);
 		color: var(--sk-text-1);
-	}
 
-	input::selection {
-		background-color: var(--sk-back-translucent);
-	}
+		&::selection {
+			background-color: var(--sk-back-translucent);
+		}
 
-	input::placeholder {
-		color: var(--sk-text-3);
-		opacity: 0.3;
-	}
+		&::placeholder {
+			color: var(--sk-text-3);
+			opacity: 0.3;
+		}
 
-	input:focus-visible {
-		background: var(--sk-theme-2);
-		color: white;
-		outline: none;
-	}
+		&:focus-visible {
+			background: var(--sk-theme-2);
+			color: white;
+			outline: none;
+		}
 
-	input:focus-visible::placeholder {
-		color: rgba(255, 255, 255, 0.5);
+		&:focus-visible::placeholder {
+			color: rgba(255, 255, 255, 0.5);
+		}
 	}
 
 	button[aria-label='Close'] {
@@ -306,16 +304,16 @@ It appears when the user clicks on the `Search` component or presses the corresp
 		height: 5rem;
 		background: none;
 		color: var(--sk-text-2);
-	}
 
-	button[aria-label='Close']:focus-visible {
-		background: var(--sk-theme-2);
-		color: var(--sk-back-1);
-		outline: none;
-	}
+		&:focus-visible {
+			background: var(--sk-theme-2);
+			color: var(--sk-back-1);
+			outline: none;
+		}
 
-	input:focus-visible + button[aria-label='Close'] {
-		color: var(--sk-back-1);
+		input:focus-visible + & {
+			color: var(--sk-back-1);
+		}
 	}
 
 	ul {
@@ -324,18 +322,15 @@ It appears when the user clicks on the `Search` component or presses the corresp
 
 	.modal {
 		position: fixed;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		pointer-events: none;
 		left: 0;
 		top: 0;
 		width: 100%;
 		height: 100%;
 		z-index: 9999;
-	}
-
-	.modal {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		pointer-events: none;
 	}
 
 	.search-box {
@@ -349,10 +344,10 @@ It appears when the user clicks on the `Search` component or presses the corresp
 		display: flex;
 		flex-direction: column;
 		overflow: hidden;
-	}
 
-	.search-box > * {
-		pointer-events: all;
+		& > * {
+			pointer-events: all;
+		}
 	}
 
 	.results {
@@ -384,54 +379,54 @@ It appears when the user clicks on the `Search` component or presses the corresp
 		text-decoration: none;
 		line-height: 1;
 		padding: 1rem;
-	}
 
-	a:hover {
-		background: rgba(0, 0, 0, 0.05);
-	}
+		&:hover {
+			background: rgba(0, 0, 0, 0.05);
+		}
 
-	a:focus {
-		background: var(--sk-theme-2);
-		color: var(--sk-back-1);
-		outline: none;
-	}
+		&:focus {
+			background: var(--sk-theme-2);
+			color: var(--sk-back-1);
+			outline: none;
+		}
 
-	a small,
-	a strong {
-		display: block;
-		white-space: nowrap;
-		overflow: hidden;
-		text-overflow: ellipsis;
-		line-height: 1;
-	}
+		& small,
+		& strong {
+			display: block;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			line-height: 1;
+		}
 
-	a small {
-		font-size: 1rem;
-		text-transform: uppercase;
-		font-weight: 600;
-		color: var(--sk-text-3);
-	}
+		& small {
+			font-size: 1rem;
+			text-transform: uppercase;
+			font-weight: 600;
+			color: var(--sk-text-3);
+		}
 
-	a strong {
-		font-size: 1.6rem;
-		color: var(--sk-text-2);
-		margin: 0.4rem 0;
-	}
+		& strong {
+			font-size: 1.6rem;
+			color: var(--sk-text-2);
+			margin: 0.4rem 0;
+		}
 
-	a:focus small {
-		color: white;
-		opacity: 0.6;
-	}
+		&:focus small {
+			color: white;
+			opacity: 0.6;
+		}
 
-	a:focus strong {
-		color: white;
-	}
+		&:focus strong {
+			color: white;
+		}
 
-	a strong :global(mark) {
-		background: var(--sk-theme-2);
-		color: var(--sk-text-3);
-		text-decoration: none;
-		border-radius: 1px;
+		& strong :global(mark) {
+			background: var(--sk-theme-2);
+			color: var(--sk-text-3);
+			text-decoration: none;
+			border-radius: 1px;
+		}
 	}
 
 	li {
@@ -446,21 +441,21 @@ It appears when the user clicks on the `Search` component or presses the corresp
 		height: 100%;
 		color: var(--sk-text-2);
 		opacity: 0.1;
-	}
 
-	a:focus + [aria-label='Delete'] {
-		color: var(--sk-back-1);
-	}
+		&:hover {
+			opacity: 1;
+			outline: none;
+		}
 
-	button[aria-label='Delete']:hover {
-		opacity: 1;
-		outline: none;
-	}
+		&:focus-visible {
+			background: var(--sk-theme-2);
+			color: var(--sk-text-1);
+			opacity: 1;
+			outline: none;
+		}
 
-	button[aria-label='Delete']:focus-visible {
-		background: var(--sk-theme-2);
-		color: var(--sk-text-1);
-		opacity: 1;
-		outline: none;
+		a:focus + & {
+			color: var(--sk-back-1);
+		}
 	}
 </style>
