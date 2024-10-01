@@ -59,8 +59,8 @@
 				}
 			}
 
-			if (localStorage.getItem('svelte:prefers-ts') !== 'false') {
-				for (const node of document.querySelectorAll('.ts-toggle')) {
+			if (localStorage.getItem('svelte:prefers-ts') === 'false') {
+				for (const node of document.querySelectorAll('.js-toggle')) {
 					node.checked = true;
 				}
 			}

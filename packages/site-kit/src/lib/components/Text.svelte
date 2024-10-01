@@ -11,17 +11,17 @@
 	afterNavigate(update);
 
 	function update() {
-		const inputs = container.querySelectorAll('.ts-toggle') as NodeListOf<HTMLInputElement>;
+		const inputs = container.querySelectorAll('.js-toggle') as NodeListOf<HTMLInputElement>;
 
 		for (const input of inputs) {
-			input.checked = $prefers_ts;
+			input.checked = !$prefers_ts;
 		}
 	}
 
 	function toggle(e: Event) {
-		if ((e.target as HTMLElement).classList.contains('ts-toggle')) {
+		if ((e.target as HTMLElement).classList.contains('js-toggle')) {
 			const input = e.target as HTMLInputElement;
-			$prefers_ts = input.checked;
+			$prefers_ts = !input.checked;
 			fix_position(input, update);
 		}
 	}
@@ -32,7 +32,7 @@
 				.composedPath()
 				.find((node) => (node as HTMLElement).classList.contains('code-block')) as HTMLElement;
 
-			const ts = !!parent.querySelector('.ts-toggle:checked');
+			const ts = !parent.querySelector('.js-toggle:checked');
 			const code = parent.querySelector(`pre:${ts ? 'last' : 'first'}-of-type code`) as HTMLElement;
 
 			let result = '';
@@ -132,13 +132,13 @@
 					}
 				}
 
-				&:has(.ts-toggle:checked) {
-					.filename[data-ext='.js']::after {
-						content: '.ts';
+				&:has(.js-toggle:checked) {
+					.filename[data-ext='.ts']::after {
+						content: '.js';
 					}
 				}
 
-				.ts-toggle {
+				.js-toggle {
 					appearance: none;
 					display: flex;
 					align-items: center;
@@ -160,21 +160,21 @@
 
 					&::before {
 						content: 'JS';
+						opacity: 0.3;
 					}
 
 					&::after {
 						content: 'TS';
 						border-left: none;
-						opacity: 0.3;
 					}
 
 					&:checked {
 						&::before {
-							opacity: 0.3;
+							opacity: 1;
 						}
 
 						&::after {
-							opacity: 1;
+							opacity: 0.3;
 						}
 					}
 				}
@@ -236,11 +236,11 @@
 				}
 			}
 
-			&:has(.ts-toggle:checked) pre:first-of-type {
+			&:has(.js-toggle:not(:checked)) pre:first-of-type {
 				display: none;
 			}
 
-			&:has(.ts-toggle:not(:checked)) pre:last-of-type {
+			&:has(.js-toggle:checked) pre:last-of-type {
 				display: none;
 			}
 
