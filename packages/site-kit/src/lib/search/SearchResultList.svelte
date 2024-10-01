@@ -1,8 +1,8 @@
 <script lang="ts">
-	import type { Tree } from './types';
+	import type { BlockGroup } from './types';
 
 	interface Props {
-		results: Tree[];
+		results: BlockGroup[];
 		query: string;
 		onselect?: (href: string) => void;
 	}
@@ -16,41 +16,45 @@
 	function excerpt(content: string, query: string) {
 		const index = content.toLowerCase().indexOf(query.toLowerCase());
 		if (index === -1) {
-			return escape(content.slice(0, 100));
+			return `${escape(content.slice(0, 150))}`;
 		}
 
-		const prefix = index > 20 ? `…${content.slice(index - 15, index)}` : content.slice(0, index);
-		const suffix = content.slice(
-			index + query.length,
-			index + query.length + (80 - (prefix.length + query.length))
+		const prefix =
+			index > 20
+				? `${escape(content.slice(index - 15, index))}`
+				: `<span class="spacer"></span>${escape(content.slice(0, index))}`;
+		const suffix = escape(
+			content.slice(
+				index + query.length,
+				index + query.length + (130 - (prefix.length + query.length))
+			)
 		);
 
-		return (
-			escape(prefix) +
-			`<mark>${escape(content.slice(index, index + query.length))}</mark>` +
-			escape(suffix)
-		);
+		return prefix + `<mark>${escape(content.slice(index, index + query.length))}</mark>` + suffix;
 	}
 </script>
 
 <ul>
-	{#each results as result (result.href)}
+	{#each results as group (group.breadcrumbs.join('::'))}
 		<li>
-			<a
-				href={result.href}
-				onclick={() => onselect?.(result.href)}
-				data-has-node={result.node ? true : undefined}
-			>
-				<strong>{@html excerpt(result.breadcrumbs[result.breadcrumbs.length - 1], query)}</strong>
+			<details open>
+				<summary>
+					{#each group.breadcrumbs as breadcrumb}<span>{breadcrumb}</span>{/each}
+				</summary>
+				<ul>
+					{#each group.blocks as block (block.href)}
+						<a href={block.href} onclick={() => onselect?.(block.href)}>
+							<strong>{@html block.breadcrumbs.slice(2).join(' • ')}</strong>
 
-				{#if result.node?.content}
-					<span>{@html excerpt(result.node.content, query)}</span>
-				{/if}
-			</a>
-
-			{#if result.children.length > 0}
-				<svelte:self results={result.children} {query} {onselect} />
-			{/if}
+							{#if block?.content}
+								<div class="excerpt">
+									<span>{@html excerpt(block.content, query)}</span>
+								</div>
+							{/if}
+						</a>
+					{/each}
+				</ul>
+			</details>
 		</li>
 	{/each}
 </ul>
@@ -61,91 +65,128 @@
 		margin: 0;
 	}
 
-	ul :global(ul) {
-		margin-left: 0.8em !important;
-		padding-left: 0em;
-		border-left: 1px solid var(--sk-back-5);
-	}
+	details {
+		summary {
+			position: sticky;
+			top: 0;
+			display: block;
+			background: var(--sk-back-1);
+			color: var(--sk-text-4);
+			text-transform: uppercase;
+			padding: 1rem 1rem 0.5rem 1rem;
+			font-size: var(--sk-text-xs);
+			z-index: 2;
+			user-select: none;
 
-	li {
-		list-style: none;
-		margin-bottom: 1em;
-	}
+			&::after {
+				content: '';
+				position: absolute;
+				right: 1rem;
+				top: calc(50% - 1rem);
+				width: 2rem;
+				height: 2rem;
+				background: url($lib/icons/chevron.svg);
+				background-size: contain;
+				rotate: -90deg;
+				transition: rotate 0.2s;
+			}
 
-	li:last-child {
-		margin-bottom: 0;
+			[open] &::after {
+				rotate: 90deg;
+			}
+
+			span:not(:last-child)::after {
+				content: ' • ';
+			}
+		}
 	}
 
 	a {
+		--background: var(--sk-back-1);
 		display: block;
 		text-decoration: none;
 		line-height: 1;
 		padding: 1rem;
-	}
-
-	a:hover {
-		background: rgba(0, 0, 0, 0.05);
-	}
-
-	a:focus {
-		background: var(--sk-theme-2);
-		color: white;
-		outline: none;
-	}
-
-	a strong,
-	a span {
-		display: block;
-		white-space: nowrap;
-		line-height: 1;
 		overflow: hidden;
-		text-overflow: ellipsis;
-	}
+		background: var(--background);
 
-	a strong {
-		font-size: 1.6rem;
-		color: var(--sk-text-2);
-	}
+		&:hover {
+			--background: var(--sk-back-4);
+		}
 
-	a span {
-		font-size: 1.2rem;
-		color: #737373;
-		margin: 0.4rem 0 0 0;
-	}
+		&:focus {
+			border-radius: var(--sk-border-radius);
+			outline-offset: -3px;
+		}
 
-	a :global(mark) {
-		--highlight-color: rgba(255, 255, 0, 0.2);
-	}
+		strong,
+		span {
+			display: block;
+			white-space: nowrap;
+			line-height: 1;
+			/* overflow: hidden; */
+			/* overflow-x: hidden; */
+			text-overflow: ellipsis;
+			font-weight: 400;
+		}
 
-	a span :global(mark) {
-		background: none;
-		color: var(--sk-text-1);
-		background: var(--highlight-color);
-		outline: 2px solid var(--highlight-color);
-		border-top: 2px solid var(--highlight-color);
-		/* mix-blend-mode: darken; */
-	}
+		strong {
+			/* font-family: var(--sk-font-heading); */
+			/* font-weight: 500; */
+			width: 100%;
+			overflow: hidden;
+			font-size: var(--sk-text-s);
+			color: var(--sk-text-2);
+		}
 
-	a:focus span {
-		color: rgba(255, 255, 255, 0.6);
-	}
+		.excerpt {
+			position: relative;
+			width: calc(100% + 1.4rem);
+			left: -0.7rem;
+			overflow: hidden;
+			color: var(--sk-text-4);
+			opacity: 0.7;
 
-	a:focus strong {
-		color: white;
-	}
+			&::before,
+			&::after {
+				content: '';
+				position: absolute;
+				width: 1rem;
+				top: 0;
+				height: 100%;
+			}
 
-	a:focus span :global(mark),
-	a:focus strong :global(mark) {
-		--highlight-color: hsl(240, 8%, 54%);
-		mix-blend-mode: lighten;
-		color: white;
-	}
+			&::before {
+				left: 0;
+				background: linear-gradient(to left, transparent, var(--background));
+			}
 
-	a strong :global(mark) {
-		color: var(--sk-text-1);
-		background: var(--highlight-color);
-		outline: 2px solid var(--highlight-color);
-		/* border-top: 2px solid var(--highlight-color); */
-		border-radius: 1px;
+			&::after {
+				right: 0;
+
+				background: linear-gradient(to right, transparent, var(--background));
+			}
+
+			:global(.spacer) {
+				display: inline-block;
+				width: 0.7rem;
+				height: 1rem;
+			}
+		}
+
+		span {
+			font-size: var(--sk-text-xs);
+			color: #737373;
+			margin: 0.4rem 0 0 0;
+			/* font-family: var(--sk-font-body); */
+		}
+
+		:global(mark) {
+			--highlight-color: rgba(255, 255, 0, 0.4);
+			background: none;
+			color: var(--sk-text-1);
+			background: var(--highlight-color);
+			outline: 2px solid var(--highlight-color);
+		}
 	}
 </style>

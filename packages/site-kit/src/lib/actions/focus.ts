@@ -1,7 +1,7 @@
 export function focusable_children(node: HTMLElement) {
 	const nodes: HTMLElement[] = Array.from(
 		node.querySelectorAll(
-			'a[href], button, input, textarea, select, details, [tabindex]:not([tabindex="-1"])'
+			'a[href], button, input, textarea, select, [tabindex]:not([tabindex="-1"])'
 		)
 	);
 

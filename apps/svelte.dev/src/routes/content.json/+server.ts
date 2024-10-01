@@ -31,6 +31,7 @@ async function content() {
 
 	for (const document of docs) {
 		const { slug, body, metadata } = document;
+		const breadcrumbs = document.breadcrumbs.map((x) => x.title);
 
 		const sections = body.trim().split(/^## /m);
 		const intro = sections?.shift()?.trim()!;

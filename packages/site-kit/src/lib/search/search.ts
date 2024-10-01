@@ -1,5 +1,5 @@
 import flexsearch, { type Index as FlexSearchIndex } from 'flexsearch';
-import type { Block, Tree } from './types';
+import type { Block, BlockGroup, Tree } from './types';
 
 // @ts-expect-error
 const Index = (flexsearch.Index as FlexSearchIndex) ?? flexsearch;
@@ -47,7 +47,7 @@ export function init(blocks: Block[]) {
 /**
  * Search for a given query in the existing index
  */
-export function search(query: string): Tree[] {
+export function search(query: string): BlockGroup[] {
 	const escaped = query.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
 	const regex = new RegExp(`(^|\\b)${escaped}`, 'i');
 
@@ -70,9 +70,24 @@ export function search(query: string): Tree[] {
 		})
 		.map(({ block }) => block);
 
-	const results = tree([], blocks).children;
+	const groups: Record<string, BlockGroup> = {};
 
-	return results;
+	for (const block of blocks) {
+		const breadcrumbs = block.breadcrumbs.slice(0, 2);
+
+		const group = (groups[breadcrumbs.join('::')] ??= {
+			breadcrumbs,
+			blocks: []
+		});
+
+		group.blocks.push(block);
+	}
+
+	return Object.values(groups);
+
+	// const results = tree([], blocks).children;
+
+	return blocks;
 }
 
 /**

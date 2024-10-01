@@ -5,6 +5,11 @@ export interface Block {
 	rank: number;
 }
 
+export interface BlockGroup {
+	breadcrumbs: string[];
+	blocks: Block[];
+}
+
 export interface Tree {
 	breadcrumbs: string[];
 	href: string;
