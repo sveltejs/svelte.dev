@@ -23,9 +23,31 @@
 			update();
 		}
 	}
+
+	async function copy(e: Event) {
+		if ((e.target as HTMLButtonElement).classList.contains('copy-to-clipboard')) {
+			const parent = e
+				.composedPath()
+				.find((node) => (node as HTMLElement).classList.contains('code-block')) as HTMLElement;
+
+			const ts = !!parent.querySelector('.ts-toggle:checked');
+			const code = parent.querySelector(`pre:${ts ? 'last' : 'first'}-of-type code`) as HTMLElement;
+
+			let result = '';
+			for (const node of code.childNodes ?? []) {
+				if (!(node as HTMLElement).classList.contains('deleted')) {
+					result += node.textContent!.trimEnd() + '\n';
+				}
+			}
+
+			navigator.clipboard.writeText(result.trim());
+		}
+	}
 </script>
 
-<div onchangecapture={toggle} bind:this={container} class="text">{@render children()}</div>
+<div onclickcapture={copy} onchangecapture={toggle} bind:this={container} class="text">
+	{@render children()}
+</div>
 
 <style>
 	.text :global {
