@@ -1,0 +1,89 @@
+<script lang="ts">
+	import { browser } from '$app/environment';
+	// @ts-expect-error TODO types
+	import Viewer from '@sveltejs/repl/viewer';
+	import { theme } from '@sveltejs/site-kit/stores';
+	import Chrome from './Chrome.svelte';
+	import Loading from './Loading.svelte';
+	import { bundle, logs, progress } from './adapter.js';
+
+	let initial = $state(true);
+	let terminal_visible = $state(false);
+</script>
+
+<!-- TODO: refresh iframe somehow? somehow use terminal instead of console view of REPL viewer? -->
+<Chrome />
+
+<div class="content">
+	{#if browser}
+		<Viewer {bundle} theme={$theme.current} />
+	{/if}
+
+	{#if $progress.value !== 1}
+		<!-- TODO is there any startup error we should worry about and forward to the Loading component? -->
+		<Loading {initial} progress={$progress.value} status={$progress.text} />
+	{/if}
+
+	<div class="terminal" class:visible={terminal_visible}>
+		{#each $logs as log}
+			<div>{@html log}</div>
+		{/each}
+	</div>
+</div>
+
+<style>
+	.content {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		min-height: 0;
+		height: 100%;
+		max-height: 100%;
+		background: var(--sk-back-2);
+		--menu-width: 5.4rem;
+	}
+
+	.terminal {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		height: 80%;
+		font-family: var(--font-mono);
+		font-size: var(--sk-text-xs);
+		padding: 1rem;
+		background: rgba(255, 255, 255, 0.5);
+		transform: translate(0, 100%);
+		transition: transform 0.3s;
+		backdrop-filter: blur(3px);
+		overflow-y: auto;
+	}
+
+	.terminal::after {
+		--thickness: 6px;
+		--shadow: transparent;
+		content: '';
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: var(--thickness);
+		left: 0;
+		top: calc(-1 * var(--thickness));
+		background-image: linear-gradient(to bottom, transparent, var(--shadow));
+		pointer-events: none;
+	}
+
+	.terminal.visible {
+		transform: none;
+	}
+
+	.terminal.visible::after {
+		--shadow: rgba(0, 0, 0, 0.05);
+	}
+
+	@media (prefers-color-scheme: dark) {
+		.terminal {
+			background: rgba(0, 0, 0, 0.5);
+		}
+	}
+</style>

@@ -191,9 +191,6 @@
 			// could be false if onMount returned early
 			select_state($selected_name);
 		}
-
-		// clear warnings
-		warnings.set({});
 	});
 </script>
 

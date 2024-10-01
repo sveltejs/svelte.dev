@@ -12,15 +12,23 @@
 	import type { CompileError } from 'svelte/compiler';
 	import type { Bundle } from '../types';
 	import type { Log } from './console/console';
+	import type { Writable } from 'svelte/store';
 
 	export let error: Error | null;
+	/** status by Bundler class instance */
 	export let status: string | null;
+	/** sandbox allow-same-origin */
 	export let relaxed = false;
+	/** Any additional JS you may want to inject */
 	export let injectedJS = '';
+	/** Any additional CSS you may want to inject */
 	export let injectedCSS = '';
 	export let theme: 'light' | 'dark';
+	/** A store containing the current bundle result. Takes precedence over REPL context, if set */
+	export let bundle: Writable<any> | undefined = undefined;
 
-	const { bundle } = get_repl_context();
+	const context = get_repl_context();
+	bundle = bundle ?? context?.bundle;
 
 	let logs: Log[] = [];
 	let log_group_stack: Log[][] = [];

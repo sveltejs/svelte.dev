@@ -1,4 +1,5 @@
 import type { File } from './types';
+import type { BundleResult } from './workers/bundler';
 import Worker from './workers/bundler/index.js?worker';
 import type { BundleMessageData } from './workers/workers';
 
@@ -48,8 +49,8 @@ export default class Bundler {
 		});
 	}
 
-	bundle(files: File[]) {
-		return new Promise((fulfil) => {
+	bundle(files: File[]): Promise<BundleResult> {
+		return new Promise<any>((fulfil) => {
 			this.handlers.set(uid, fulfil);
 
 			this.worker.postMessage({

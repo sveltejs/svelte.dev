@@ -346,7 +346,8 @@ async function get_bundle(
 			} else if (id.endsWith('.svelte')) {
 				result = svelte.compile(code, {
 					filename: name + '.svelte',
-					generate: 'client',
+					// @ts-expect-error
+					generate: Number(svelte.VERSION.split('.')[0]) >= 5 ? 'client' : 'dom',
 					dev: true
 				});
 
@@ -429,6 +430,8 @@ async function get_bundle(
 	}
 }
 
+export type BundleResult = ReturnType<typeof bundle>;
+
 async function bundle({ uid, files }: { uid: number; files: File[] }) {
 	if (!DEV) {
 		console.clear();
@@ -502,7 +505,8 @@ async function bundle({ uid, files }: { uid: number; files: File[] }) {
 			client: client_result,
 			server: server_result,
 			imports: client.imports,
-			warnings: client.warnings,
+			// Svelte 5 returns warnings as error objects with a toJSON method, prior versions return a POJO
+			warnings: client.warnings.map((w: any) => w.toJSON?.() ?? w),
 			error: null
 		};
 	} catch (err) {

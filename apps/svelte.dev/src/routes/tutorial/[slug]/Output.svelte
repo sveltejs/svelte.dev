@@ -116,15 +116,15 @@
 	{path}
 	{loading}
 	href={$base && $base + path}
-	on:refresh={() => {
+	refresh={() => {
 		set_iframe_src($base + path);
 	}}
-	on:toggle_terminal={() => {
+	toggle_terminal={() => {
 		terminal_visible = !terminal_visible;
 	}}
-	on:change={(e) => {
+	change={(e) => {
 		if ($base) {
-			const url = new URL(e.detail.value, $base);
+			const url = new URL(e.value, $base);
 			path = url.pathname + url.search + url.hash;
 			set_iframe_src($base + path);
 		}
