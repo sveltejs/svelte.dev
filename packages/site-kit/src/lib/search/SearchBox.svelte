@@ -266,7 +266,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 	input {
 		font-size: var(--sk-text-l);
 		width: 100%;
-		padding: 1rem 6rem 0.5rem 1rem;
+		padding: 1rem 5rem 0.5rem 1rem;
 		height: 6rem;
 		border: none;
 		border-bottom: 1px solid var(--sk-back-3);
