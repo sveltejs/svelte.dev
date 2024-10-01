@@ -1,6 +1,8 @@
 @import '@fontsource/eb-garamond';
 @import '@fontsource/eb-garamond/500.css';
 @import '@fontsource/eb-garamond/400-italic.css';
+@import '@fontsource/baskervville';
+@import '@fontsource/baskervville/400-italic.css';
 @import '@fontsource/fira-mono';
 
 /* TODO figure out which weights we actually need */

@@ -47,6 +47,10 @@
 				);
 
 				div.remove();
+
+				if (/Macintosh/.test(navigator.userAgent)) {
+					document.documentElement.classList.add('mac');
+				}
 			}
 		</script>
 

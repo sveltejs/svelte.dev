@@ -24,8 +24,8 @@
 	/* typography */
 	--sk-font-ui: 'Yantramanav', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
 		Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-	--sk-font-body: 'EB Garamond', 'Big Caslon', Palatino, 'Book Antiqua', Cambria, serif;
-	--sk-font-heading: var(--sk-font-body);
+	--sk-font-body: 'Baskervville', 'Big Caslon', Palatino, 'Book Antiqua', Cambria, serif;
+	--sk-font-heading: 'EB Garamond', var(--sk-font-body);
 	--sk-font-mono: 'Fira Mono', monospace;
 	--sk-text-xxl: 3.6rem;
 	--sk-text-xl: 3rem;
@@ -34,6 +34,10 @@
 	--sk-text-s: 1.8rem;
 	--sk-text-xs: 1.4rem;
 	--sk-line-max-width: 84rem;
+
+	&.mac {
+		--sk-font-body: 'EB Garamond';
+	}
 
 	--sk-focus-outline: 0 0 0 2px hsla(var(--sk-theme-1-hsl), 0.6);
 
