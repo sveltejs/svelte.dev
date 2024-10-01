@@ -5,7 +5,10 @@
 	import { theme } from '@sveltejs/site-kit/stores';
 	import Chrome from './Chrome.svelte';
 	import Loading from './Loading.svelte';
-	import { bundle, logs, progress } from './adapter.js';
+	import { adapter_state } from './adapter.svelte';
+	import { toStore } from 'svelte/store';
+
+	const bundle = toStore(() => adapter_state.bundle);
 
 	let initial = $state(true);
 	let terminal_visible = $state(false);
@@ -19,13 +22,17 @@
 		<Viewer {bundle} theme={$theme.current} />
 	{/if}
 
-	{#if $progress.value !== 1}
+	{#if adapter_state.progress.value !== 1}
 		<!-- TODO is there any startup error we should worry about and forward to the Loading component? -->
-		<Loading {initial} progress={$progress.value} status={$progress.text} />
+		<Loading
+			{initial}
+			progress={adapter_state.progress.value}
+			status={adapter_state.progress.text}
+		/>
 	{/if}
 
 	<div class="terminal" class:visible={terminal_visible}>
-		{#each $logs as log}
+		{#each adapter_state.logs as log}
 			<div>{@html log}</div>
 		{/each}
 	</div>

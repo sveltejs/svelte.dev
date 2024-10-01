@@ -5,7 +5,13 @@
 	import { onMount } from 'svelte';
 	import Chrome from './Chrome.svelte';
 	import Loading from './Loading.svelte';
-	import { base, error, logs, progress, subscribe } from './adapter.js';
+	import { adapter_state, subscribe } from './adapter.svelte';
+	import { toStore } from 'svelte/store';
+
+	const base = toStore(() => adapter_state.base);
+	const error = toStore(() => adapter_state.error);
+	const logs = toStore(() => adapter_state.logs);
+	const progress = toStore(() => adapter_state.progress);
 
 	/** @type {import('$lib/tutorial').Exercise} */
 	export let exercise;

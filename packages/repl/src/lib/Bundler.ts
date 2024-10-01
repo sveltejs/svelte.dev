@@ -8,6 +8,7 @@ const workers = new Map();
 let uid = 1;
 
 export default class Bundler {
+	hash: string;
 	worker: Worker;
 	handlers: Map<number, (data: BundleMessageData) => void>;
 
@@ -20,15 +21,15 @@ export default class Bundler {
 		svelte_url: string;
 		onstatus: (val: string | null) => void;
 	}) {
-		const hash = `${packages_url}:${svelte_url}`;
+		this.hash = `${packages_url}:${svelte_url}`;
 
-		if (!workers.has(hash)) {
+		if (!workers.has(this.hash)) {
 			const worker = new Worker();
 			worker.postMessage({ type: 'init', packages_url, svelte_url });
-			workers.set(hash, worker);
+			workers.set(this.hash, worker);
 		}
 
-		this.worker = workers.get(hash);
+		this.worker = workers.get(this.hash);
 
 		this.handlers = new Map();
 
@@ -65,5 +66,6 @@ export default class Bundler {
 
 	destroy() {
 		this.worker.terminate();
+		workers.delete(this.hash);
 	}
 }

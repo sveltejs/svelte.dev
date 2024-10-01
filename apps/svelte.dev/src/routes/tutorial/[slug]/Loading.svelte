@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { load_webcontainer, reset } from './adapter.js';
+	import { load_webcontainer, reset } from './adapter.svelte';
 	import { files } from './state.js';
 
 	interface Props {

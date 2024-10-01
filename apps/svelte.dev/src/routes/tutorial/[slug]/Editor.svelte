@@ -13,10 +13,11 @@
 	import { svelteTheme } from '@sveltejs/repl/theme';
 	import { basicSetup } from 'codemirror';
 	import { onMount, tick } from 'svelte';
-	import { warnings } from './adapter.js';
+	import { adapter_state } from './adapter.svelte';
 	import { autocomplete_for_svelte } from './autocompletion.js';
 	import './codemirror.css';
 	import { files, selected_file, selected_name, update_file } from './state.js';
+	import { toStore } from 'svelte/store';
 
 	/** @type {HTMLDivElement} */
 	let container;
@@ -32,6 +33,8 @@
 
 	/** @type {import('@codemirror/view').EditorView} */
 	let editor_view;
+
+	const warnings = toStore(() => adapter_state.warnings);
 
 	const extensions = [
 		basicSetup,

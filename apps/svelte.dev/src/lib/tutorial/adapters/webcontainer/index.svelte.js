@@ -14,16 +14,23 @@ const converter = new AnsiToHtml({
 /** @type {import('@webcontainer/api').WebContainer} Web container singleton */
 let vm;
 
+export const state = new (class WCState {
+	progress = $state.raw({ value: 0, text: 'initialising' });
+	/** @type {string | null} */
+	base = $state.raw(null);
+	/** @type {Error | null} */
+	error = $state.raw(null);
+	/** @type {string[]} */
+	logs = $state.raw([]);
+	/** @type {Record<string, import('$lib/tutorial').Warning[]>} */
+	warnings = $state.raw({});
+})();
+
 /**
- * @param {import('svelte/store').Writable<string | null>} base
- * @param {import('svelte/store').Writable<Error | null>} error
- * @param {import('svelte/store').Writable<{ value: number, text: string }>} progress
- * @param {import('svelte/store').Writable<string[]>} logs
- * @param {import('svelte/store').Writable<Record<string, import('$lib/tutorial').Warning[]>>} warnings
  * @returns {Promise<import('$lib/tutorial').Adapter>}
  */
-export async function create(base, error, progress, logs, warnings) {
-	progress.set({ value: 0, text: 'loading files' });
+export async function create() {
+	state.progress = { value: 0, text: 'loading files' };
 
 	const q = yootils.queue(1);
 	/** @type {Map<string, Array<import('$lib/tutorial').FileStub>>} */
@@ -32,10 +39,10 @@ export async function create(base, error, progress, logs, warnings) {
 	/** Paths and contents of the currently loaded file stubs */
 	let current_stubs = stubs_to_map([]);
 
-	progress.set({ value: 1 / 5, text: 'booting webcontainer' });
+	state.progress = { value: 1 / 5, text: 'booting webcontainer' };
 	vm = await WebContainer.boot();
 
-	progress.set({ value: 2 / 5, text: 'writing virtual files' });
+	state.progress = { value: 2 / 5, text: 'writing virtual files' };
 	const common = await ready;
 	await vm.mount({
 		'common.zip': {
@@ -47,8 +54,7 @@ export async function create(base, error, progress, logs, warnings) {
 	});
 
 	/** @type {Record<string, import('$lib/tutorial').Warning[]>} */
-	let $warnings;
-	warnings.subscribe((value) => ($warnings = value));
+	let warnings = {};
 
 	/** @type {any} */
 	let timeout;
@@ -56,7 +62,7 @@ export async function create(base, error, progress, logs, warnings) {
 	/** @param {number} msec */
 	function schedule_to_update_warning(msec) {
 		clearTimeout(timeout);
-		timeout = setTimeout(() => warnings.set($warnings), msec);
+		timeout = setTimeout(() => (state.warnings = { ...warnings }), msec);
 	}
 
 	const log_stream = () =>
@@ -64,15 +70,15 @@ export async function create(base, error, progress, logs, warnings) {
 			write(chunk) {
 				if (chunk === '\x1B[1;1H') {
 					// clear screen
-					logs.set([]);
+					state.logs = [];
 				} else if (chunk?.startsWith('svelte:warnings:')) {
 					/** @type {import('$lib/tutorial').Warning} */
 					const warn = JSON.parse(chunk.slice(16));
 					const filename = warn.filename.startsWith('/') ? warn.filename : '/' + warn.filename;
-					const current = $warnings[filename];
+					const current = warnings[filename];
 
 					if (!current) {
-						$warnings[filename] = [warn];
+						warnings[filename] = [warn];
 						// the exact same warning may be given multiple times in a row
 					} else if (!current.some((s) => s.code === warn.code && s.pos === warn.pos)) {
 						current.push(warn);
@@ -81,12 +87,12 @@ export async function create(base, error, progress, logs, warnings) {
 					schedule_to_update_warning(100);
 				} else {
 					const log = converter.toHtml(escape_html(chunk)).replace(/\n/g, '<br>');
-					logs.update(($logs) => [...$logs, log]);
+					state.logs = [...state.logs, log];
 				}
 			}
 		});
 
-	progress.set({ value: 3 / 5, text: 'unzipping files' });
+	state.progress = { value: 3 / 5, text: 'unzipping files' };
 	const unzip = await vm.spawn('node', ['unzip.cjs']);
 	unzip.output.pipeTo(log_stream());
 	const code = await unzip.exit;
@@ -98,11 +104,11 @@ export async function create(base, error, progress, logs, warnings) {
 	await vm.spawn('chmod', ['a+x', 'node_modules/vite/bin/vite.js']);
 
 	vm.on('server-ready', (_port, url) => {
-		base.set(url);
+		state.base = url;
 	});
 
 	vm.on('error', ({ message }) => {
-		error.set(new Error(message));
+		state.error = new Error(message);
 	});
 
 	let launched = false;
@@ -111,7 +117,7 @@ export async function create(base, error, progress, logs, warnings) {
 		if (launched) return;
 		launched = true;
 
-		progress.set({ value: 4 / 5, text: 'starting dev server' });
+		state.progress = { value: 4 / 5, text: 'starting dev server' };
 
 		await new Promise(async (fulfil, reject) => {
 			const error_unsub = vm.on('error', (error) => {
@@ -121,7 +127,7 @@ export async function create(base, error, progress, logs, warnings) {
 
 			const ready_unsub = vm.on('server-ready', (_port, base) => {
 				ready_unsub();
-				progress.set({ value: 5 / 5, text: 'ready' });
+				state.progress = { value: 5 / 5, text: 'ready' };
 				fulfil(base); // this will be the last thing that happens if everything goes well
 			});
 
@@ -182,14 +188,14 @@ export async function create(base, error, progress, logs, warnings) {
 
 				// initialize warnings of written files
 				to_write
-					.filter((stub) => stub.type === 'file' && $warnings[stub.name])
-					.forEach((stub) => ($warnings[stub.name] = []));
+					.filter((stub) => stub.type === 'file' && warnings[stub.name])
+					.forEach((stub) => (warnings[stub.name] = []));
 				// remove warnings of deleted files
 				to_delete
-					.filter((stubname) => $warnings[stubname])
-					.forEach((stubname) => delete $warnings[stubname]);
+					.filter((stubname) => warnings[stubname])
+					.forEach((stubname) => delete warnings[stubname]);
 
-				warnings.set($warnings);
+				state.warnings = { ...warnings };
 
 				current_stubs = stubs_to_map(stubs);
 
@@ -260,7 +266,7 @@ export async function create(base, error, progress, logs, warnings) {
 					tree[basename] = to_file(file);
 
 					// initialize warnings of this file
-					$warnings[file.name] = [];
+					warnings[file.name] = [];
 					schedule_to_update_warning(100);
 
 					await vm.mount(root);
