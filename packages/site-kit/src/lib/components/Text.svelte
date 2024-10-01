@@ -174,18 +174,30 @@
 						height: 100%;
 						left: 0;
 						top: 0;
-						background: url(../icons/check.svg) no-repeat 50% 50% / 1.6rem 1.6rem;
+						background: no-repeat 50% 50% / 1.6rem 1.6rem;
 						transition: opacity 0.2s;
 						transition-delay: 0.6s;
 					}
 
 					&::before {
-						background-image: url(../icons/copy-to-clipboard-empty-light.svg);
+						background-image: url(../icons/copy-to-clipboard-light.svg);
 					}
 
 					&::after {
-						background-image: url(../icons/check.svg);
+						background-image: url(../icons/check-light.svg);
 						opacity: 0;
+
+						html.dark & {
+							background-image: url(../icons/check-dark.svg);
+						}
+					}
+
+					html.dark &::before {
+						background-image: url(../icons/copy-to-clipboard-dark.svg);
+					}
+
+					html.dark &::after {
+						background-image: url(../icons/check-dark.svg);
 					}
 
 					&:active::before {
