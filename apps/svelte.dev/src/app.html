@@ -18,19 +18,6 @@
 			title="Svelte"
 		/>
 
-		<!-- add inline style and blocking script to prevent content flash/jump -->
-		<style>
-			.js-version {
-				display: none;
-			}
-			.prefers-js .js-version {
-				display: block;
-			}
-			.prefers-js .ts-version {
-				display: none;
-			}
-		</style>
-
 		<script>
 			document.documentElement.classList.add(
 				JSON.parse(localStorage.getItem('svelte:theme'))?.current ??

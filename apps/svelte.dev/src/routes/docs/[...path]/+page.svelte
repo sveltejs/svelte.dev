@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Icon, Text } from '@sveltejs/site-kit/components';
-	import { copy_code_descendants, legacy_details, ts_js_select } from '@sveltejs/site-kit/actions';
+	import { copy_code_descendants, legacy_details } from '@sveltejs/site-kit/actions';
 	import { setupDocsHovers } from '@sveltejs/site-kit/docs';
 	import OnThisPage from './OnThisPage.svelte';
 	import Breadcrumbs from './Breadcrumbs.svelte';
@@ -23,7 +23,7 @@
 	<meta name="Description" content="{data.document.metadata.title} • Svelte documentation" />
 </svelte:head>
 
-<div id="docs-content" use:ts_js_select use:copy_code_descendants use:legacy_details>
+<div id="docs-content" use:copy_code_descendants use:legacy_details>
 	<header>
 		<Breadcrumbs breadcrumbs={data.document.breadcrumbs.slice(1)} />
 		<h1>{data.document.metadata.title}</h1>
