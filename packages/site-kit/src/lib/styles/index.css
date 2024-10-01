@@ -15,3 +15,20 @@
 @import './base.css';
 @import './text.css';
 @import './code.css';
+
+@font-face {
+	font-family: 'Tiempos Text';
+	src: url(./fonts/test-tiempos-text-regular.woff2);
+}
+
+@font-face {
+	font-family: 'Tiempos Text';
+	src: url(./fonts/test-tiempos-text-regular-italic.woff2);
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Tiempos Text';
+	src: url(./fonts/test-tiempos-text-medium.woff2);
+	font-weight: 500;
+}
