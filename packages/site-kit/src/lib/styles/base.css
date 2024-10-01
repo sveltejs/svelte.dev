@@ -73,7 +73,7 @@ h4 {
 	font-size: var(--sk-text-s);
 }
 h3 {
-	font-size: var(--sk-text-m);
+	font-size: var(--sk-text-body);
 }
 h2 {
 	font-size: var(--sk-text-l);

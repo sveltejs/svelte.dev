@@ -31,9 +31,14 @@
 	--sk-text-xl: 3rem;
 	--sk-text-l: 2.4rem;
 	--sk-text-m: 2rem;
+	--sk-text-body: 2.4rem;
 	--sk-text-s: 1.8rem;
 	--sk-text-xs: 1.4rem;
 	--sk-line-max-width: 84rem;
+
+	@media (min-resolution: 2x) {
+		--sk-text-body: 2rem;
+	}
 
 	--sk-focus-outline: 0 0 0 2px hsla(var(--sk-theme-1-hsl), 0.6);
 

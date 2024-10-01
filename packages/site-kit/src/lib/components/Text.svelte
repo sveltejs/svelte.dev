@@ -65,7 +65,7 @@
 		ol,
 		ul {
 			margin: 1em 0;
-			font-size: var(--sk-text-m);
+			font-size: var(--sk-text-body);
 		}
 
 		/* TODO is this still used? don't think so */
