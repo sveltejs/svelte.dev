@@ -47,8 +47,7 @@ import {
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function backIn(t: number): number;
 ```
 
@@ -60,8 +59,7 @@ function backIn(t: number): number;
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function backInOut(t: number): number;
 ```
 
@@ -73,8 +71,7 @@ function backInOut(t: number): number;
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function backOut(t: number): number;
 ```
 
@@ -86,8 +83,7 @@ function backOut(t: number): number;
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function bounceIn(t: number): number;
 ```
 
@@ -99,8 +95,7 @@ function bounceIn(t: number): number;
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function bounceInOut(t: number): number;
 ```
 
@@ -112,8 +107,7 @@ function bounceInOut(t: number): number;
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function bounceOut(t: number): number;
 ```
 
@@ -125,8 +119,7 @@ function bounceOut(t: number): number;
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function circIn(t: number): number;
 ```
 
@@ -138,8 +131,7 @@ function circIn(t: number): number;
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function circInOut(t: number): number;
 ```
 
@@ -151,8 +143,7 @@ function circInOut(t: number): number;
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function circOut(t: number): number;
 ```
 
@@ -164,8 +155,7 @@ function circOut(t: number): number;
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function cubicIn(t: number): number;
 ```
 
@@ -177,8 +167,7 @@ function cubicIn(t: number): number;
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function cubicInOut(t: number): number;
 ```
 
@@ -190,8 +179,7 @@ function cubicInOut(t: number): number;
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function cubicOut(t: number): number;
 ```
 
@@ -203,8 +191,7 @@ function cubicOut(t: number): number;
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function elasticIn(t: number): number;
 ```
 
@@ -216,8 +203,7 @@ function elasticIn(t: number): number;
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function elasticInOut(t: number): number;
 ```
 
@@ -229,8 +215,7 @@ function elasticInOut(t: number): number;
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function elasticOut(t: number): number;
 ```
 
@@ -242,8 +227,7 @@ function elasticOut(t: number): number;
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function expoIn(t: number): number;
 ```
 
@@ -255,8 +239,7 @@ function expoIn(t: number): number;
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function expoInOut(t: number): number;
 ```
 
@@ -268,8 +251,7 @@ function expoInOut(t: number): number;
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function expoOut(t: number): number;
 ```
 
@@ -281,8 +263,7 @@ function expoOut(t: number): number;
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function linear(t: number): number;
 ```
 
@@ -294,8 +275,7 @@ function linear(t: number): number;
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function quadIn(t: number): number;
 ```
 
@@ -307,8 +287,7 @@ function quadIn(t: number): number;
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function quadInOut(t: number): number;
 ```
 
@@ -320,8 +299,7 @@ function quadInOut(t: number): number;
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function quadOut(t: number): number;
 ```
 
@@ -333,8 +311,7 @@ function quadOut(t: number): number;
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function quartIn(t: number): number;
 ```
 
@@ -346,8 +323,7 @@ function quartIn(t: number): number;
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function quartInOut(t: number): number;
 ```
 
@@ -359,8 +335,7 @@ function quartInOut(t: number): number;
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function quartOut(t: number): number;
 ```
 
@@ -372,8 +347,7 @@ function quartOut(t: number): number;
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function quintIn(t: number): number;
 ```
 
@@ -385,8 +359,7 @@ function quintIn(t: number): number;
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function quintInOut(t: number): number;
 ```
 
@@ -398,8 +371,7 @@ function quintInOut(t: number): number;
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function quintOut(t: number): number;
 ```
 
@@ -411,8 +383,7 @@ function quintOut(t: number): number;
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function sineIn(t: number): number;
 ```
 
@@ -424,8 +395,7 @@ function sineIn(t: number): number;
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function sineInOut(t: number): number;
 ```
 
@@ -437,8 +407,7 @@ function sineInOut(t: number): number;
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function sineOut(t: number): number;
 ```
 

@@ -15,8 +15,7 @@ The spring function in Svelte creates a store whose value is animated, with a mo
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function spring<T = any>(
 	value?: T | undefined,
 	opts?: SpringOpts | undefined
@@ -31,8 +30,7 @@ A tweened store in Svelte is a special type of store that provides smooth transi
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function tweened<T>(
 	value?: T | undefined,
 	defaults?: TweenedOptions<T> | undefined

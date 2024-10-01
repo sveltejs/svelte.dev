@@ -141,7 +141,7 @@ export async function render_content_markdown(
 	const conversions = new Map<string, string>();
 
 	for (const [_, language, code] of body.matchAll(/```(js|svelte)\n([\s\S]+?)\n```/g)) {
-		let { source, options } = parse_options(code);
+		let { source, options } = parse_options(code, language);
 
 		const converted = await generate_ts_from_js(source, language as 'js' | 'svelte', options);
 		if (converted) {
@@ -156,7 +156,7 @@ export async function render_content_markdown(
 			const cached_snippet = SNIPPET_CACHE.get(raw + language + current);
 			if (cached_snippet.code) return cached_snippet.code;
 
-			let { source, options } = parse_options(raw);
+			let { source, options } = parse_options(raw, language);
 			source = adjust_tab_indentation(source, language);
 
 			const converted = conversions.get(source);
@@ -638,7 +638,7 @@ export async function replace_export_type_placeholders(content: string, modules:
 						const markdown = declaration.overloads
 							.map(
 								(overload) =>
-									`<div class="ts-block">${fence(overload.snippet)}` +
+									`<div class="ts-block">${fence(overload.snippet, 'dts')}` +
 									overload.children?.map((v) => stringify(v)).join('\n\n') +
 									`</div>`
 							)
@@ -715,7 +715,7 @@ function stringify_module(module: Modules[0]) {
 		const markdown = declaration.overloads
 			.map(
 				(overload) =>
-					`<div class="ts-block">${fence(overload.snippet)}` +
+					`<div class="ts-block">${fence(overload.snippet, 'dts')}` +
 					overload.children?.map((v) => stringify(v)).join('\n\n') +
 					`</div>`
 			)
@@ -951,12 +951,10 @@ function create_type_links(
 	return { type_regex, type_links };
 }
 
-function parse_options(source: string) {
+function parse_options(source: string, language: string) {
 	METADATA_REGEX.lastIndex = 0;
 
-	const options: SnippetOptions = { file: null, link: false, copy: true };
-
-	let copy_value = '';
+	const options: SnippetOptions = { file: null, link: false, copy: language !== 'dts' };
 
 	source = source.replace(METADATA_REGEX, (_, key, value) => {
 		switch (key) {
@@ -968,7 +966,7 @@ function parse_options(source: string) {
 				options.link = value === 'true';
 
 			case 'copy':
-				copy_value = value;
+				options.copy = value === 'true';
 				break;
 
 			default:
@@ -977,8 +975,6 @@ function parse_options(source: string) {
 
 		return '';
 	});
-
-	options.copy = copy_value === 'true' || (options.file !== null && copy_value !== 'false');
 
 	return { source, options };
 }

@@ -36,8 +36,7 @@ In runes mode use `$effect` instead.
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function afterUpdate(fn: () => void): void;
 ```
 
@@ -53,8 +52,7 @@ In runes mode use `$effect.pre` instead.
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function beforeUpdate(fn: () => void): void;
 ```
 
@@ -82,8 +80,7 @@ const dispatch = createEventDispatcher<{
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function createEventDispatcher<
 	EventMap extends Record<string, any> = any
 >(): EventDispatcher<EventMap>;
@@ -97,8 +94,7 @@ Create a snippet programmatically
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function createRawSnippet<Params extends unknown[]>(
 	fn: (...params: Getters<Params>) => {
 		render: () => string;
@@ -115,8 +111,7 @@ Synchronously flushes any pending state changes and those that result from it.
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function flushSync(fn?: (() => void) | undefined): void;
 ```
 
@@ -130,8 +125,7 @@ programmatically create a component and want to pass the existing context to it.
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function getAllContexts<
 	T extends Map<any, any> = Map<any, any>
 >(): T;
@@ -146,8 +140,7 @@ Must be called during component initialisation.
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function getContext<T>(key: any): T;
 ```
 
@@ -160,8 +153,7 @@ Must be called during component initialisation.
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function hasContext(key: any): boolean;
 ```
 
@@ -173,8 +165,7 @@ Hydrates a component on the given target and returns the exports and potentially
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function hydrate<
 	Props extends Record<string, any>,
 	Exports extends Record<string, any>
@@ -211,8 +202,7 @@ Transitions will play during the initial render unless the `intro` option is set
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function mount<
 	Props extends Record<string, any>,
 	Exports extends Record<string, any>
@@ -251,8 +241,7 @@ only one that runs inside a server-side component.
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function onDestroy(fn: () => any): void;
 ```
 
@@ -270,8 +259,7 @@ If a function is returned _synchronously_ from `onMount`, it will be called when
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function onMount<T>(
 	fn: () =>
 		| NotFunction<T>
@@ -292,8 +280,7 @@ Like lifecycle functions, this must be called during component initialisation.
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function setContext<T>(key: any, context: T): T;
 ```
 
@@ -305,8 +292,7 @@ Returns a promise that resolves once any pending state changes have been applied
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function tick(): Promise<void>;
 ```
 
@@ -318,8 +304,7 @@ Unmounts a component that was previously mounted using `mount` or `hydrate`.
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function unmount(component: Record<string, any>): void;
 ```
 
@@ -333,8 +318,7 @@ https://svelte-5-preview.vercel.app/docs/functions#untrack
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function untrack<T>(fn: () => T): T;
 ```
 

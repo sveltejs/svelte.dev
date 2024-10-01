@@ -23,8 +23,7 @@ Animates a `blur` filter alongside an element's opacity.
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function blur(
 	node: Element,
 	{
@@ -45,8 +44,7 @@ The `crossfade` function creates a pair of [transitions](https://svelte.dev/docs
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function crossfade({
 	fallback,
 	...defaults
@@ -80,8 +78,7 @@ Animates the stroke of an SVG element, like a snake in a tube. `in` transitions 
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function draw(
 	node: SVGElement & {
 		getTotalLength(): number;
@@ -103,8 +100,7 @@ Animates the opacity of an element from 0 to the current opacity for `in` transi
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function fade(
 	node: Element,
 	{ delay, duration, easing }?: FadeParams | undefined
@@ -119,8 +115,7 @@ Animates the x and y positions and the opacity of an element. `in` transitions a
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function fly(
 	node: Element,
 	{
@@ -142,8 +137,7 @@ Animates the opacity and scale of an element. `in` transitions animate from an e
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function scale(
 	node: Element,
 	{
@@ -164,8 +158,7 @@ Slides an element in and out.
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function slide(
 	node: Element,
 	{

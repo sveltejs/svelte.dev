@@ -71,6 +71,12 @@
 					node.open = true;
 				}
 			}
+
+			if (localStorage.getItem('svelte:prefers-ts') !== 'false') {
+				for (const node of document.querySelectorAll('.ts-toggle')) {
+					node.checked = true;
+				}
+			}
 		</script>
 	</body>
 </html>

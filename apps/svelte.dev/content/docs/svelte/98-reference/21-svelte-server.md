@@ -16,8 +16,7 @@ Takes a component and returns an object with `body` and `head` properties on it,
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function render<
 	Comp extends SvelteComponent<any> | Component<any>,
 	Props extends ComponentProps<Comp> = ComponentProps<Comp>

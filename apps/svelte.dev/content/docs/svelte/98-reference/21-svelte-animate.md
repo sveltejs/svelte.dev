@@ -16,8 +16,7 @@ The flip function calculates the start and end position of an element and animat
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function flip(
 	node: Element,
 	{

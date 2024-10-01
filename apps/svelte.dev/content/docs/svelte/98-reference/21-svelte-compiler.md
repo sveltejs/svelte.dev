@@ -25,8 +25,7 @@ https://svelte.dev/docs/svelte-compiler#svelte-version
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 const VERSION: string;
 ```
 
@@ -38,8 +37,7 @@ const VERSION: string;
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function compile(
 	source: string,
 	options: CompileOptions
@@ -54,8 +52,7 @@ function compile(
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function compileModule(
 	source: string,
 	options: ModuleCompileOptions
@@ -71,8 +68,7 @@ May throw an error if the code is too complex to migrate automatically.
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function migrate(source: string): {
 	code: string;
 };
@@ -89,8 +85,7 @@ The `modern` option (`false` by default in Svelte 5) makes the parser return a m
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function parse(
 	source: string,
 	options: {
@@ -104,8 +99,7 @@ function parse(
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function parse(
 	source: string,
 	options?:
@@ -126,8 +120,7 @@ For example, it can be used to convert a <style lang="sass"> block into vanilla 
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function preprocess(
 	source: string,
 	preprocessor: PreprocessorGroup | PreprocessorGroup[],
@@ -147,8 +140,7 @@ function preprocess(
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function walk(): never;
 ```
 

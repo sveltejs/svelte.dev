@@ -17,8 +17,7 @@ rather than `addEventListener` will preserve the correct order relative to handl
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function on<Type extends keyof WindowEventMap>(
 	window: Window,
 	type: Type,
@@ -34,8 +33,7 @@ function on<Type extends keyof WindowEventMap>(
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function on<Type extends keyof DocumentEventMap>(
 	document: Document,
 	type: Type,
@@ -51,8 +49,7 @@ function on<Type extends keyof DocumentEventMap>(
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function on<
 	Element extends HTMLElement,
 	Type extends keyof HTMLElementEventMap
@@ -71,8 +68,7 @@ function on<
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function on<
 	Element extends MediaQueryList,
 	Type extends keyof MediaQueryListEventMap
@@ -91,8 +87,7 @@ function on<
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function on(
 	element: EventTarget,
 	type: string,

@@ -24,8 +24,7 @@ applying an aggregation function over its input values.
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function derived<S extends Stores, T>(
 	stores: S,
 	fn: (
@@ -41,8 +40,7 @@ function derived<S extends Stores, T>(
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function derived<S extends Stores, T>(
 	stores: S,
 	fn: (values: StoresValues<S>) => T,
@@ -58,8 +56,7 @@ function derived<S extends Stores, T>(
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function fromStore<V>(store: Writable<V>): {
 	current: V;
 };
@@ -69,8 +66,7 @@ function fromStore<V>(store: Writable<V>): {
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function fromStore<V>(store: Readable<V>): {
 	readonly current: V;
 };
@@ -84,8 +80,7 @@ Get the current value from a store by subscribing and immediately unsubscribing.
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function get<T>(store: Readable<T>): T;
 ```
 
@@ -97,8 +92,7 @@ Creates a `Readable` store that allows reading by subscription.
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function readable<T>(
 	value?: T | undefined,
 	start?: StartStopNotifier<T> | undefined
@@ -113,8 +107,7 @@ Takes a store and returns a new one derived from the old one that is readable.
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function readonly<T>(store: Readable<T>): Readable<T>;
 ```
 
@@ -126,8 +119,7 @@ function readonly<T>(store: Readable<T>): Readable<T>;
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function toStore<V>(
 	get: () => V,
 	set: (v: V) => void
@@ -138,8 +130,7 @@ function toStore<V>(
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function toStore<V>(get: () => V): Readable<V>;
 ```
 
@@ -151,8 +142,7 @@ Create a `Writable` store that allows both updating and reading by subscription.
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function writable<T>(
 	value?: T | undefined,
 	start?: StartStopNotifier<T> | undefined
