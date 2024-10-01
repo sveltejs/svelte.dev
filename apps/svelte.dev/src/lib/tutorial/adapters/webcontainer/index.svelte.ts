@@ -1,40 +1,33 @@
-import { WebContainer } from '@webcontainer/api';
+import { WebContainer, type DirectoryNode, type FileSystemTree } from '@webcontainer/api';
 import base64 from 'base64-js';
 import AnsiToHtml from 'ansi-to-html';
 // @ts-ignore package exports don't have types
 import * as yootils from 'yootils';
-import { get_depth } from '../../../utils/path';
-import { escape_html } from '../../../utils/escape';
+import { get_depth } from '../../../utils/path.js';
+import { escape_html } from '../../../utils/escape.js';
 import { ready } from '../common/index.js';
+import type { Adapter, FileStub, Stub, Warning } from '$lib/tutorial';
 
 const converter = new AnsiToHtml({
 	fg: 'var(--sk-text-3)'
 });
 
-/** @type {import('@webcontainer/api').WebContainer} Web container singleton */
-let vm;
+/** Web container singleton */
+let vm: WebContainer;
 
 export const state = new (class WCState {
 	progress = $state.raw({ value: 0, text: 'initialising' });
-	/** @type {string | null} */
-	base = $state.raw(null);
-	/** @type {Error | null} */
-	error = $state.raw(null);
-	/** @type {string[]} */
-	logs = $state.raw([]);
-	/** @type {Record<string, import('$lib/tutorial').Warning[]>} */
-	warnings = $state.raw({});
+	base = $state.raw<string | null>(null);
+	error = $state.raw<Error | null>(null);
+	logs = $state.raw<string[]>([]);
+	warnings = $state.raw<Record<string, Warning[]>>({});
 })();
 
-/**
- * @returns {Promise<import('$lib/tutorial').Adapter>}
- */
-export async function create() {
+export async function create(): Promise<Adapter> {
 	state.progress = { value: 0, text: 'loading files' };
 
 	const q = yootils.queue(1);
-	/** @type {Map<string, Array<import('$lib/tutorial').FileStub>>} */
-	const q_per_file = new Map();
+	const q_per_file = new Map<string, Array<FileStub>>();
 
 	/** Paths and contents of the currently loaded file stubs */
 	let current_stubs = stubs_to_map([]);
@@ -53,14 +46,10 @@ export async function create() {
 		}
 	});
 
-	/** @type {Record<string, import('$lib/tutorial').Warning[]>} */
-	let warnings = {};
+	let warnings: Record<string, import('$lib/tutorial').Warning[]> = {};
+	let timeout: any;
 
-	/** @type {any} */
-	let timeout;
-
-	/** @param {number} msec */
-	function schedule_to_update_warning(msec) {
+	function schedule_to_update_warning(msec: number) {
 		clearTimeout(timeout);
 		timeout = setTimeout(() => (state.warnings = { ...warnings }), msec);
 	}
@@ -72,8 +61,7 @@ export async function create() {
 					// clear screen
 					state.logs = [];
 				} else if (chunk?.startsWith('svelte:warnings:')) {
-					/** @type {import('$lib/tutorial').Warning} */
-					const warn = JSON.parse(chunk.slice(16));
+					const warn: Warning = JSON.parse(chunk.slice(16));
 					const filename = warn.filename.startsWith('/') ? warn.filename : '/' + warn.filename;
 					const current = warnings[filename];
 
@@ -150,8 +138,7 @@ export async function create() {
 	return {
 		reset: (stubs) => {
 			return q.add(async () => {
-				/** @type {import('$lib/tutorial').Stub[]} */
-				const to_write = [];
+				const to_write: Stub[] = [];
 
 				const force_delete = [];
 
@@ -164,9 +151,7 @@ export async function create() {
 							continue;
 						}
 
-						const current = /** @type {import('$lib/tutorial').FileStub} */ (
-							current_stubs.get(stub.name)
-						);
+						const current = current_stubs.get(stub.name) as FileStub;
 
 						if (current?.contents !== stub.contents) {
 							to_write.push(stub);
@@ -235,32 +220,30 @@ export async function create() {
 			q_per_file.set(file.name, (queue = [file]));
 
 			return q.add(async () => {
-				/** @type {import('@webcontainer/api').FileSystemTree} */
-				const root = {};
+				const root: FileSystemTree = {};
 
 				let tree = root;
 
 				const path = file.name.split('/').slice(1);
-				const basename = /** @type {string} */ (path.pop());
+				const basename = path.pop()!;
 
 				for (const part of path) {
 					if (!tree[part]) {
-						/** @type {import('@webcontainer/api').FileSystemTree} */
-						const directory = {};
+						const directory: FileSystemTree = {};
 
 						tree[part] = {
 							directory
 						};
 					}
 
-					tree = /** @type {import('@webcontainer/api').DirectoryNode} */ (tree[part]).directory;
+					tree = (tree[part] as DirectoryNode).directory;
 				}
 
 				const will_restart = is_config(file);
 
 				while (queue && queue.length > 0) {
 					// if the file is updated many times rapidly, get the most recently updated one
-					const file = /** @type {import('$lib/tutorial').FileStub} */ (queue.pop());
+					const file = queue.pop()!;
 					queue.length = 0;
 
 					tree[basename] = to_file(file);
@@ -289,17 +272,11 @@ export async function create() {
 	};
 }
 
-/**
- * @param {import('$lib/tutorial').Stub} file
- */
-function is_config(file) {
+function is_config(file: Stub) {
 	return file.type === 'file' && is_config_path(file.name);
 }
 
-/**
- * @param {string} path
- */
-function is_config_path(path) {
+function is_config_path(path: string) {
 	return ['/vite.config.js', '/svelte.config.js', '/.env'].includes(path);
 }
 
@@ -322,13 +299,8 @@ function wait_for_restart_vite() {
 	});
 }
 
-/**
- * @param {import('$lib/tutorial').Stub[]} stubs
- * @returns {import('@webcontainer/api').FileSystemTree}
- */
-function convert_stubs_to_tree(stubs, depth = 1) {
-	/** @type {import('@webcontainer/api').FileSystemTree} */
-	const tree = {};
+function convert_stubs_to_tree(stubs: Stub[], depth = 1) {
+	const tree: FileSystemTree = {};
 
 	for (const stub of stubs) {
 		if (get_depth(stub.name) === depth) {
@@ -347,8 +319,7 @@ function convert_stubs_to_tree(stubs, depth = 1) {
 	return tree;
 }
 
-/** @param {import('$lib/tutorial').FileStub} file */
-function to_file(file) {
+function to_file(file: FileStub) {
 	// special case
 	if (file.name === '/src/app.html' || file.name === '/src/error.html') {
 		const contents = file.contents + '<script type="module" src="/src/__client.js"></script>';
@@ -365,11 +336,7 @@ function to_file(file) {
 	};
 }
 
-/**
- * @param {import('$lib/tutorial').Stub[]} files
- * @returns {Map<string, import('$lib/tutorial').Stub>}
- */
-function stubs_to_map(files, map = new Map()) {
+function stubs_to_map(files: Stub[], map = new Map<string, Stub>()) {
 	for (const file of files) {
 		map.set(file.name, file);
 	}
