@@ -81,7 +81,7 @@
 			&::after {
 				content: '';
 				position: absolute;
-				right: 1rem;
+				right: 1.6rem;
 				top: calc(50% - 1rem);
 				width: 2rem;
 				height: 2rem;

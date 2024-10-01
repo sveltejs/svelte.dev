@@ -181,7 +181,8 @@ It appears when the user clicks on the `Search` component or presses the corresp
 			/>
 
 			<button aria-label="Close" onclick={close}>
-				<Icon name="close" />
+				<!-- <Icon name="close" /> -->
+				<kbd>Esc</kbd>
 			</button>
 
 			<span id="search-description" class="visually-hidden">
@@ -304,6 +305,10 @@ It appears when the user clicks on the `Search` component or presses the corresp
 		&:focus-visible {
 			opacity: 1;
 			outline-offset: -3px;
+		}
+
+		kbd {
+			text-transform: uppercase;
 		}
 	}
 
