@@ -25,6 +25,12 @@ import {
 
 ## asClassComponent
 
+<blockquote class="tag deprecated">
+
+Use this only as a temporary solution to migrate your imperative component code to Svelte 5.
+
+</blockquote>
+
 Takes the component function and returns a Svelte 4 compatible component constructor.
 
 <div class="ts-block">
@@ -50,6 +56,12 @@ function asClassComponent<
 
 ## createBubbler
 
+<blockquote class="tag deprecated">
+
+Use this only as a temporary solution to migrate your automatically delegated events in Svelte 5.
+
+</blockquote>
+
 Function to create a `bubble` function that mimic the behavior of `on:click` without handler available in svelte 4.
 
 <div class="ts-block">
@@ -65,6 +77,12 @@ function createBubbler(): (
 
 
 ## createClassComponent
+
+<blockquote class="tag deprecated">
+
+Use this only as a temporary solution to migrate your imperative component code to Svelte 5.
+
+</blockquote>
 
 Takes the same options as a Svelte 4 component and the component function and returns a Svelte 4 compatible component.
 
@@ -178,6 +196,12 @@ function preventDefault(
 
 
 ## run
+
+<blockquote class="tag deprecated">
+
+Use this only as a temporary solution to migrate your component code to Svelte 5.
+
+</blockquote>
 
 Runs the given function once immediately on the server, and works like `$effect.pre` on the client.
 

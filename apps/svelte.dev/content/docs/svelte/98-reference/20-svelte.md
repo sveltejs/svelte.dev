@@ -28,6 +28,12 @@ import {
 
 ## afterUpdate
 
+<blockquote class="tag deprecated">
+
+Use `$effect` instead — see https://svelte-5-preview.vercel.app/docs/deprecations#beforeupdate-and-afterupdate
+
+</blockquote>
+
 Schedules a callback to run immediately after the component has been updated.
 
 The first time the callback runs will be after the initial `onMount`.
@@ -46,6 +52,12 @@ function afterUpdate(fn: () => void): void;
 
 ## beforeUpdate
 
+<blockquote class="tag deprecated">
+
+Use `$effect.pre` instead — see https://svelte-5-preview.vercel.app/docs/deprecations#beforeupdate-and-afterupdate
+
+</blockquote>
+
 Schedules a callback to run immediately before the component is updated after any state change.
 
 The first time the callback runs will be before the initial `onMount`.
@@ -63,6 +75,12 @@ function beforeUpdate(fn: () => void): void;
 
 
 ## createEventDispatcher
+
+<blockquote class="tag deprecated">
+
+Use callback props and/or the `$host()` rune instead — see https://svelte-5-preview.vercel.app/docs/deprecations#createeventdispatcher
+
+</blockquote>
 
 Creates an event dispatcher that can be used to dispatch [component events](https://svelte.dev/docs#template-syntax-component-directives-on-eventname).
 Event dispatchers are functions that can take two arguments: `name` and `detail`.

@@ -148,7 +148,11 @@ function preprocess(
 
 ## walk
 
+<blockquote class="tag deprecated">
 
+Replace this with `import { walk } from 'estree-walker'`
+
+</blockquote>
 
 <div class="ts-block">
 

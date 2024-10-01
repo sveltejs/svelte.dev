@@ -577,7 +577,7 @@ export async function replace_export_type_placeholders(content: string, modules:
 
 			if (!type) throw new Error(`Could not find type ${name}#${id}`);
 
-			return stringify_type(type);
+			return render_declaration(type, true);
 		}
 
 		let comment = '';
@@ -585,7 +585,9 @@ export async function replace_export_type_placeholders(content: string, modules:
 			comment += `${module.comment}\n\n`;
 		}
 
-		return comment + module.types.map((t) => `## ${t.name}\n\n${stringify_type(t)}`).join('');
+		return (
+			comment + module.types.map((t) => `## ${t.name}\n\n${render_declaration(t, true)}`).join('')
+		);
 	});
 
 	content = await async_replace(content, REGEXES.EXPORT_SNIPPET, async ([_, name, id]) => {
@@ -632,7 +634,7 @@ export async function replace_export_type_placeholders(content: string, modules:
 				return `## ${module.name}\n\n${import_block}\n\n${module.comment}\n\n${module.exports
 					.map((declaration) => {
 						const markdown = render_declaration(declaration, true);
-						return `### ${declaration.name}\n\n${declaration.comment}\n\n${markdown}`;
+						return `### ${declaration.name}\n\n${markdown}`;
 					})
 					.join('\n\n')}`;
 			})
@@ -663,7 +665,7 @@ export async function replace_export_type_placeholders(content: string, modules:
 		return `${import_block}\n\n${module.comment}\n\n${module.exports
 			.map((declaration) => {
 				const markdown = render_declaration(declaration, true);
-				return `### ${declaration.name}\n\n${declaration.comment}\n\n${markdown}`;
+				return `### ${declaration.name}\n\n${markdown}`;
 			})
 			.join('\n\n')}`;
 	});
@@ -672,15 +674,28 @@ export async function replace_export_type_placeholders(content: string, modules:
 }
 
 function render_declaration(declaration: Declaration, full: boolean) {
-	return declaration.overloads
-		.map((overload) => {
-			const children = full
-				? overload.children?.map((val) => stringify(val, 'dts')).join('\n\n')
-				: '';
+	let content = '';
 
-			return `<div class="ts-block">${fence(overload.snippet, 'dts')}${children}</div>\n\n`;
-		})
-		.join('');
+	if (declaration.deprecated) {
+		content += `<blockquote class="tag deprecated">\n\n${declaration.deprecated}\n\n</blockquote>\n\n`;
+	}
+
+	if (declaration.comment) {
+		content += declaration.comment + '\n\n';
+	}
+
+	return (
+		content +
+		declaration.overloads
+			.map((overload) => {
+				const children = full
+					? overload.children?.map((val) => stringify(val, 'dts')).join('\n\n')
+					: '';
+
+				return `<div class="ts-block">${fence(overload.snippet, 'dts')}${children}</div>\n\n`;
+			})
+			.join('')
+	);
 }
 
 /**
@@ -707,28 +722,12 @@ function stringify_module(module: Modules[0]) {
 
 	for (const declaration of module.exports || []) {
 		const markdown = render_declaration(declaration, true);
-		content += `## ${declaration.name}\n\n${declaration.comment}\n\n${markdown}\n\n`;
+		content += `## ${declaration.name}\n\n${markdown}\n\n`;
 	}
 
 	for (const t of module.types || []) {
-		content += `## ${t.name}\n\n` + stringify_type(t);
+		content += `## ${t.name}\n\n` + render_declaration(t, true);
 	}
-
-	return content;
-}
-
-function stringify_type(declaration: Declaration) {
-	let content = '';
-
-	if (declaration.deprecated) {
-		content += `<blockquote class="tag deprecated">\n\n${declaration.deprecated}\n\n</blockquote>\n\n`;
-	}
-
-	if (declaration.comment) {
-		content += `${declaration.comment}\n\n`;
-	}
-
-	content += render_declaration(declaration, true);
 
 	return content;
 }

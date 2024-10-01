@@ -54,8 +54,6 @@ function derived<S extends Stores, T>(
 
 ## fromStore
 
-
-
 <div class="ts-block">
 
 ```dts
@@ -124,8 +122,6 @@ function readonly<T>(store: Readable<T>): Readable<T>;
 
 
 ## toStore
-
-
 
 <div class="ts-block">
 
