@@ -272,7 +272,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 		border: none;
 		border-bottom: 1px solid var(--sk-back-3);
 		flex-shrink: 0;
-		background: var(--sk-back-2);
+		background: var(--sk-back-3);
 		color: var(--sk-text-1);
 
 		&::selection {
@@ -280,18 +280,13 @@ It appears when the user clicks on the `Search` component or presses the corresp
 		}
 
 		&::placeholder {
-			color: var(--sk-text-3);
+			color: var(--sk-text-2);
 			opacity: 0.3;
 		}
 
 		&:focus-visible {
-			background: var(--sk-theme-2);
-			color: white;
-			outline: none;
-		}
-
-		&:focus-visible::placeholder {
-			color: rgba(255, 255, 255, 0.5);
+			border-radius: var(--sk-border-radius);
+			outline-offset: -3px;
 		}
 	}
 
@@ -303,16 +298,13 @@ It appears when the user clicks on the `Search` component or presses the corresp
 		width: 5rem;
 		height: 5rem;
 		background: none;
+		border-radius: var(--sk-border-radius);
 		color: var(--sk-text-2);
+		opacity: 0.3;
 
 		&:focus-visible {
-			background: var(--sk-theme-2);
-			color: var(--sk-back-1);
-			outline: none;
-		}
-
-		input:focus-visible + & {
-			color: var(--sk-back-1);
+			opacity: 1;
+			outline-offset: -3px;
 		}
 	}
 
@@ -363,6 +355,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 
 	.info {
 		padding: 1rem;
+		font-family: var(--sk-font-ui);
 		font-size: 1.2rem;
 		font-weight: normal;
 		text-transform: uppercase;
