@@ -68,10 +68,11 @@ export async function create(base, error, progress, logs, warnings) {
 				} else if (chunk?.startsWith('svelte:warnings:')) {
 					/** @type {import('$lib/tutorial').Warning} */
 					const warn = JSON.parse(chunk.slice(16));
-					const current = $warnings[warn.filename];
+					const filename = warn.filename.startsWith('/') ? warn.filename : '/' + warn.filename;
+					const current = $warnings[filename];
 
 					if (!current) {
-						$warnings[warn.filename] = [warn];
+						$warnings[filename] = [warn];
 						// the exact same warning may be given multiple times in a row
 					} else if (!current.some((s) => s.code === warn.code && s.pos === warn.pos)) {
 						current.push(warn);
