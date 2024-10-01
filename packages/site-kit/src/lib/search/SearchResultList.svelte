@@ -67,6 +67,7 @@
 	ul {
 		position: relative;
 		margin: 0;
+		list-style: none;
 	}
 
 	details {
@@ -76,13 +77,18 @@
 			position: sticky;
 			top: 0;
 			display: block;
-			background: var(--sk-back-2);
+			background: var(--background);
 			color: var(--sk-text-4);
 			text-transform: uppercase;
 			padding: 0.5rem var(--padding);
 			font-size: var(--sk-text-xs);
 			z-index: 2;
 			user-select: none;
+
+			&:focus-visible {
+				border-radius: var(--sk-border-radius);
+				outline-offset: -3px;
+			}
 
 			&::after {
 				content: '';
@@ -108,7 +114,6 @@
 	}
 
 	a {
-		--background: var(--sk-back-2);
 		display: block;
 		text-decoration: none;
 		line-height: 1;
@@ -143,6 +148,7 @@
 
 		&:hover {
 			--background: var(--sk-back-4);
+			text-decoration: none;
 		}
 
 		&:focus {
