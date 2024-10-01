@@ -146,7 +146,8 @@ blockquote :last-child {
 }
 
 /*  buttons -------------------------------- */
-input, button {
+input,
+button {
 	font-family: var(--sk-font-ui);
 	font-size: inherit;
 }
