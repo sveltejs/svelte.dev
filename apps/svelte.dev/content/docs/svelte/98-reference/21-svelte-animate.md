@@ -32,6 +32,8 @@ function flip(
 
 </div>
 
+
+
 ## AnimationConfig
 
 <div class="ts-block">
@@ -83,8 +85,7 @@ tick?: (t: number, u: number) => void;
 ```
 
 <div class="ts-block-property-details"></div>
-</div>
-</div>
+</div></div>
 
 ## FlipParams
 
@@ -119,7 +120,6 @@ easing?: (t: number) => number;
 ```
 
 <div class="ts-block-property-details"></div>
-</div>
-</div>
+</div></div>
 
 

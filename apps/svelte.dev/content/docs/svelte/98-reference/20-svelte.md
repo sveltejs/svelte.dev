@@ -42,6 +42,8 @@ function afterUpdate(fn: () => void): void;
 
 </div>
 
+
+
 ## beforeUpdate
 
 Schedules a callback to run immediately before the component is updated after any state change.
@@ -57,6 +59,8 @@ function beforeUpdate(fn: () => void): void;
 ```
 
 </div>
+
+
 
 ## createEventDispatcher
 
@@ -88,6 +92,8 @@ function createEventDispatcher<
 
 </div>
 
+
+
 ## createRawSnippet
 
 Create a snippet programmatically
@@ -105,6 +111,8 @@ function createRawSnippet<Params extends unknown[]>(
 
 </div>
 
+
+
 ## flushSync
 
 Synchronously flushes any pending state changes and those that result from it.
@@ -116,6 +124,8 @@ function flushSync(fn?: (() => void) | undefined): void;
 ```
 
 </div>
+
+
 
 ## getAllContexts
 
@@ -133,6 +143,8 @@ function getAllContexts<
 
 </div>
 
+
+
 ## getContext
 
 Retrieves the context that belongs to the closest parent component with the specified `key`.
@@ -146,6 +158,8 @@ function getContext<T>(key: any): T;
 
 </div>
 
+
+
 ## hasContext
 
 Checks whether a given `key` has been set in the context of a parent component.
@@ -158,6 +172,8 @@ function hasContext(key: any): boolean;
 ```
 
 </div>
+
+
 
 ## hydrate
 
@@ -194,6 +210,8 @@ function hydrate<
 ```
 
 </div>
+
+
 
 ## mount
 
@@ -232,6 +250,8 @@ function mount<
 
 </div>
 
+
+
 ## onDestroy
 
 Schedules a callback to run immediately before the component is unmounted.
@@ -246,6 +266,8 @@ function onDestroy(fn: () => any): void;
 ```
 
 </div>
+
+
 
 ## onMount
 
@@ -270,6 +292,8 @@ function onMount<T>(
 
 </div>
 
+
+
 ## setContext
 
 Associates an arbitrary `context` object with the current component and the specified `key`
@@ -286,6 +310,8 @@ function setContext<T>(key: any, context: T): T;
 
 </div>
 
+
+
 ## tick
 
 Returns a promise that resolves once any pending state changes have been applied.
@@ -298,6 +324,8 @@ function tick(): Promise<void>;
 
 </div>
 
+
+
 ## unmount
 
 Unmounts a component that was previously mounted using `mount` or `hydrate`.
@@ -309,6 +337,8 @@ function unmount(component: Record<string, any>): void;
 ```
 
 </div>
+
+
 
 ## untrack
 
@@ -323,6 +353,8 @@ function untrack<T>(fn: () => T): T;
 ```
 
 </div>
+
+
 
 ## Component
 
@@ -403,8 +435,7 @@ element?: typeof HTMLElement;
 The custom element version of the component. Only present if compiled with the `customElement` compiler option
 
 </div>
-</div>
-</div>
+</div></div>
 
 ## ComponentConstructorOptions
 
@@ -504,8 +535,7 @@ $$inline?: boolean;
 ```
 
 <div class="ts-block-property-details"></div>
-</div>
-</div>
+</div></div>
 
 ## ComponentEvents
 
@@ -524,7 +554,6 @@ type ComponentEvents<Comp extends SvelteComponent> =
 		: never;
 ```
 
-
 </div>
 
 ## ComponentInternals
@@ -536,7 +565,6 @@ Internal implementation details that vary between environments
 ```dts
 type ComponentInternals = Branded<{}, 'ComponentInternals'>;
 ```
-
 
 </div>
 
@@ -582,7 +610,6 @@ type ComponentProps<
 			: never;
 ```
 
-
 </div>
 
 ## ComponentType
@@ -610,7 +637,6 @@ type ComponentType<
 };
 ```
 
-
 </div>
 
 ## EventDispatcher
@@ -636,8 +662,7 @@ interface EventDispatcher<
 ```
 
 <div class="ts-block-property-details"></div>
-</div>
-</div>
+</div></div>
 
 ## Snippet
 
@@ -670,8 +695,7 @@ interface Snippet<Parameters extends unknown[] = []> {/*…*/}
 ```
 
 <div class="ts-block-property-details"></div>
-</div>
-</div>
+</div></div>
 
 ## SvelteComponent
 
@@ -789,8 +813,7 @@ for more info.
 </div>
 
 </div>
-</div>
-</div>
+</div></div>
 
 ## SvelteComponentTyped
 
@@ -809,7 +832,6 @@ class SvelteComponentTyped<
 	Slots extends Record<string, any> = any
 > extends SvelteComponent<Props, Events, Slots> {}
 ```
-
 
 </div>
 

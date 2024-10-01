@@ -53,6 +53,8 @@ function backIn(t: number): number;
 
 </div>
 
+
+
 ## backInOut
 
 
@@ -64,6 +66,8 @@ function backInOut(t: number): number;
 ```
 
 </div>
+
+
 
 ## backOut
 
@@ -77,6 +81,8 @@ function backOut(t: number): number;
 
 </div>
 
+
+
 ## bounceIn
 
 
@@ -88,6 +94,8 @@ function bounceIn(t: number): number;
 ```
 
 </div>
+
+
 
 ## bounceInOut
 
@@ -101,6 +109,8 @@ function bounceInOut(t: number): number;
 
 </div>
 
+
+
 ## bounceOut
 
 
@@ -112,6 +122,8 @@ function bounceOut(t: number): number;
 ```
 
 </div>
+
+
 
 ## circIn
 
@@ -125,6 +137,8 @@ function circIn(t: number): number;
 
 </div>
 
+
+
 ## circInOut
 
 
@@ -136,6 +150,8 @@ function circInOut(t: number): number;
 ```
 
 </div>
+
+
 
 ## circOut
 
@@ -149,6 +165,8 @@ function circOut(t: number): number;
 
 </div>
 
+
+
 ## cubicIn
 
 
@@ -160,6 +178,8 @@ function cubicIn(t: number): number;
 ```
 
 </div>
+
+
 
 ## cubicInOut
 
@@ -173,6 +193,8 @@ function cubicInOut(t: number): number;
 
 </div>
 
+
+
 ## cubicOut
 
 
@@ -184,6 +206,8 @@ function cubicOut(t: number): number;
 ```
 
 </div>
+
+
 
 ## elasticIn
 
@@ -197,6 +221,8 @@ function elasticIn(t: number): number;
 
 </div>
 
+
+
 ## elasticInOut
 
 
@@ -208,6 +234,8 @@ function elasticInOut(t: number): number;
 ```
 
 </div>
+
+
 
 ## elasticOut
 
@@ -221,6 +249,8 @@ function elasticOut(t: number): number;
 
 </div>
 
+
+
 ## expoIn
 
 
@@ -232,6 +262,8 @@ function expoIn(t: number): number;
 ```
 
 </div>
+
+
 
 ## expoInOut
 
@@ -245,6 +277,8 @@ function expoInOut(t: number): number;
 
 </div>
 
+
+
 ## expoOut
 
 
@@ -256,6 +290,8 @@ function expoOut(t: number): number;
 ```
 
 </div>
+
+
 
 ## linear
 
@@ -269,6 +305,8 @@ function linear(t: number): number;
 
 </div>
 
+
+
 ## quadIn
 
 
@@ -280,6 +318,8 @@ function quadIn(t: number): number;
 ```
 
 </div>
+
+
 
 ## quadInOut
 
@@ -293,6 +333,8 @@ function quadInOut(t: number): number;
 
 </div>
 
+
+
 ## quadOut
 
 
@@ -304,6 +346,8 @@ function quadOut(t: number): number;
 ```
 
 </div>
+
+
 
 ## quartIn
 
@@ -317,6 +361,8 @@ function quartIn(t: number): number;
 
 </div>
 
+
+
 ## quartInOut
 
 
@@ -328,6 +374,8 @@ function quartInOut(t: number): number;
 ```
 
 </div>
+
+
 
 ## quartOut
 
@@ -341,6 +389,8 @@ function quartOut(t: number): number;
 
 </div>
 
+
+
 ## quintIn
 
 
@@ -352,6 +402,8 @@ function quintIn(t: number): number;
 ```
 
 </div>
+
+
 
 ## quintInOut
 
@@ -365,6 +417,8 @@ function quintInOut(t: number): number;
 
 </div>
 
+
+
 ## quintOut
 
 
@@ -376,6 +430,8 @@ function quintOut(t: number): number;
 ```
 
 </div>
+
+
 
 ## sineIn
 
@@ -389,6 +445,8 @@ function sineIn(t: number): number;
 
 </div>
 
+
+
 ## sineInOut
 
 
@@ -401,6 +459,8 @@ function sineInOut(t: number): number;
 
 </div>
 
+
+
 ## sineOut
 
 
@@ -412,5 +472,7 @@ function sineOut(t: number): number;
 ```
 
 </div>
+
+
 
 

@@ -50,6 +50,8 @@ function derived<S extends Stores, T>(
 
 </div>
 
+
+
 ## fromStore
 
 
@@ -74,6 +76,8 @@ function fromStore<V>(store: Readable<V>): {
 
 </div>
 
+
+
 ## get
 
 Get the current value from a store by subscribing and immediately unsubscribing.
@@ -85,6 +89,8 @@ function get<T>(store: Readable<T>): T;
 ```
 
 </div>
+
+
 
 ## readable
 
@@ -101,6 +107,8 @@ function readable<T>(
 
 </div>
 
+
+
 ## readonly
 
 Takes a store and returns a new one derived from the old one that is readable.
@@ -112,6 +120,8 @@ function readonly<T>(store: Readable<T>): Readable<T>;
 ```
 
 </div>
+
+
 
 ## toStore
 
@@ -136,6 +146,8 @@ function toStore<V>(get: () => V): Readable<V>;
 
 </div>
 
+
+
 ## writable
 
 Create a `Writable` store that allows both updating and reading by subscription.
@@ -150,6 +162,8 @@ function writable<T>(
 ```
 
 </div>
+
+
 
 ## Readable
 
@@ -179,8 +193,7 @@ subscribe(this: void, run: Subscriber<T>, invalidate?: () => void): Unsubscriber
 Subscribe on value changes.
 
 </div>
-</div>
-</div>
+</div></div>
 
 ## StartStopNotifier
 
@@ -196,7 +209,6 @@ type StartStopNotifier<T> = (
 ) => void | (() => void);
 ```
 
-
 </div>
 
 ## Subscriber
@@ -208,7 +220,6 @@ Callback to inform of a value updates.
 ```dts
 type Subscriber<T> = (value: T) => void;
 ```
-
 
 </div>
 
@@ -222,7 +233,6 @@ Unsubscribes from value updates.
 type Unsubscriber = () => void;
 ```
 
-
 </div>
 
 ## Updater
@@ -234,7 +244,6 @@ Callback to update a value.
 ```dts
 type Updater<T> = (value: T) => T;
 ```
-
 
 </div>
 
@@ -284,7 +293,6 @@ update(this: void, updater: Updater<T>): void;
 Update value using callback and inform subscribers.
 
 </div>
-</div>
-</div>
+</div></div>
 
 

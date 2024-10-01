@@ -31,6 +31,8 @@ const VERSION: string;
 
 </div>
 
+
+
 ## compile
 
 `compile` converts your `.svelte` source code into a JavaScript module that exports a component
@@ -45,6 +47,8 @@ function compile(
 ```
 
 </div>
+
+
 
 ## compileModule
 
@@ -61,6 +65,8 @@ function compileModule(
 
 </div>
 
+
+
 ## migrate
 
 Does a best-effort migration of Svelte code towards using runes, event attributes and render tags.
@@ -75,6 +81,8 @@ function migrate(source: string): {
 ```
 
 </div>
+
+
 
 ## parse
 
@@ -113,6 +121,8 @@ function parse(
 
 </div>
 
+
+
 ## preprocess
 
 The preprocess function provides convenient hooks for arbitrarily transforming component source code.
@@ -134,6 +144,8 @@ function preprocess(
 
 </div>
 
+
+
 ## walk
 
 
@@ -145,6 +157,8 @@ function walk(): never;
 ```
 
 </div>
+
+
 
 ## AST
 
@@ -510,7 +524,6 @@ namespace AST {
 }
 ```
 
-
 </div>
 
 ## CompileError
@@ -520,7 +533,6 @@ namespace AST {
 ```dts
 interface CompileError extends ICompileDiagnostic {}
 ```
-
 
 </div>
 
@@ -875,8 +887,7 @@ If `true`, returns the modern version of the AST.
 Will become `true` by default in Svelte 6, and the option will be removed in Svelte 7.
 
 </div>
-</div>
-</div>
+</div></div>
 
 ## CompileResult
 
@@ -998,8 +1009,7 @@ ast: any;
 The AST
 
 </div>
-</div>
-</div>
+</div></div>
 
 ## MarkupPreprocessor
 
@@ -1019,7 +1029,6 @@ type MarkupPreprocessor = (options: {
 	filename?: string;
 }) => Processed | void | Promise<Processed | void>;
 ```
-
 
 </div>
 
@@ -1115,8 +1124,7 @@ A function that gets a `Warning` as an argument and returns a boolean.
 Use this to filter out warnings. Return `true` to keep the warning, `false` to discard it.
 
 </div>
-</div>
-</div>
+</div></div>
 
 ## Preprocessor
 
@@ -1144,7 +1152,6 @@ type Preprocessor = (options: {
 	filename?: string;
 }) => Processed | void | Promise<Processed | void>;
 ```
-
 
 </div>
 
@@ -1196,8 +1203,7 @@ script?: Preprocessor;
 ```
 
 <div class="ts-block-property-details"></div>
-</div>
-</div>
+</div></div>
 
 ## Processed
 
@@ -1268,8 +1274,7 @@ toString?: () => string;
 ```
 
 <div class="ts-block-property-details"></div>
-</div>
-</div>
+</div></div>
 
 ## Warning
 
@@ -1278,7 +1283,6 @@ toString?: () => string;
 ```dts
 interface Warning extends ICompileDiagnostic {}
 ```
-
 
 </div>
 
