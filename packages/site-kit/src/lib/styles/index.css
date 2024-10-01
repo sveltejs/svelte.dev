@@ -28,12 +28,6 @@
 }
 
 @font-face {
-	font-family: 'Tiempos Text';
-	src: url(./fonts/test-tiempos-text-medium.woff2);
-	font-weight: 500;
-}
-
-@font-face {
 	font-family: 'Tiempos Headline';
 	src: url(./fonts/test-tiempos-headline-medium.woff2);
 	font-weight: 500;
