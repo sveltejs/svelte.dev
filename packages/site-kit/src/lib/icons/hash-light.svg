@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #000000e0;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.6.0, SVG Export Plug-In . SVG Version: 1.2.0 Build 709)  -->
+  <g>
+    <g id="Layer_1">
+      <line class="cls-1" x1="8.5" y1="2" x2="8.5" y2="22"/>
+      <line class="cls-1" x1="15.5" y1="2" x2="15.5" y2="22"/>
+      <line class="cls-1" x1="4" y1="8.5" x2="20" y2="8.4"/>
+      <line class="cls-1" x1="4" y1="15.5" x2="20" y2="15.4"/>
+    </g>
+  </g>
+</svg>

@@ -1,5 +1,5 @@
 import flexsearch, { type Index as FlexSearchIndex } from 'flexsearch';
-import type { Block, BlockGroup, Tree } from './types';
+import type { Block, BlockGroup } from './types';
 
 // @ts-expect-error
 const Index = (flexsearch.Index as FlexSearchIndex) ?? flexsearch;
@@ -84,10 +84,6 @@ export function search(query: string): BlockGroup[] {
 	}
 
 	return Object.values(groups);
-
-	// const results = tree([], blocks).children;
-
-	return blocks;
 }
 
 /**
@@ -95,27 +91,4 @@ export function search(query: string): BlockGroup[] {
  */
 export function lookup(href: string) {
 	return map.get(href);
-}
-
-function tree(breadcrumbs: string[], blocks: Block[]): Tree {
-	const depth = breadcrumbs.length;
-
-	const node = blocks.find((block) => {
-		if (block.breadcrumbs.length !== depth) return false;
-		return breadcrumbs.every((part, i) => block.breadcrumbs[i] === part);
-	});
-
-	const descendants = blocks.filter((block) => {
-		if (block.breadcrumbs.length <= depth) return false;
-		return breadcrumbs.every((part, i) => block.breadcrumbs[i] === part);
-	});
-
-	const child_parts = Array.from(new Set(descendants.map((block) => block.breadcrumbs[depth])));
-
-	return {
-		breadcrumbs,
-		href: hrefs.get(breadcrumbs.join('::'))!,
-		node: node!,
-		children: child_parts.map((part) => tree([...breadcrumbs, part], descendants))
-	};
 }

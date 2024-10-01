@@ -43,8 +43,12 @@
 				</summary>
 				<ul>
 					{#each group.blocks as block (block.href)}
-						<a href={block.href} onclick={() => onselect?.(block.href)}>
-							<strong>{@html block.breadcrumbs.slice(2).join(' • ')}</strong>
+						<a
+							class:fragment={block.breadcrumbs.length > 4}
+							href={block.href}
+							onclick={() => onselect?.(block.href)}
+						>
+							<strong>{block.breadcrumbs.slice(2).join(' • ')}</strong>
 
 							{#if block?.content}
 								<div class="excerpt">
@@ -106,9 +110,34 @@
 		display: block;
 		text-decoration: none;
 		line-height: 1;
-		padding: 1rem;
+		padding: 1rem 1rem 1rem 5rem;
 		overflow: hidden;
 		background: var(--background);
+
+		&::before {
+			content: '';
+			position: absolute;
+			width: 5rem;
+			top: 0;
+			left: 0;
+			height: 100%;
+			background: url(../icons/document-light.svg) no-repeat 50% 50%;
+			background-size: 2rem;
+		}
+
+		&.fragment::before {
+			background-image: url(../icons/hash-light.svg);
+		}
+
+		:root.dark & {
+			&::before {
+				background-image: url(../icons/document-dark.svg);
+			}
+
+			&.fragment::before {
+				background-image: url(../icons/hash-dark.svg);
+			}
+		}
 
 		&:hover {
 			--background: var(--sk-back-4);
@@ -144,8 +173,7 @@
 			width: calc(100% + 1.4rem);
 			left: -0.7rem;
 			overflow: hidden;
-			color: var(--sk-text-4);
-			opacity: 0.7;
+			color: var(--sk-text-1);
 
 			&::before,
 			&::after {
@@ -167,6 +195,10 @@
 				background: linear-gradient(to right, transparent, var(--background));
 			}
 
+			span {
+				color: var(--sk-text-3);
+			}
+
 			:global(.spacer) {
 				display: inline-block;
 				width: 0.7rem;
@@ -178,7 +210,6 @@
 			font-size: var(--sk-text-xs);
 			color: #737373;
 			margin: 0.4rem 0 0 0;
-			/* font-family: var(--sk-font-body); */
 		}
 
 		:global(mark) {

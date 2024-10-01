@@ -9,10 +9,3 @@ export interface BlockGroup {
 	breadcrumbs: string[];
 	blocks: Block[];
 }
-
-export interface Tree {
-	breadcrumbs: string[];
-	href: string;
-	node: Block;
-	children: Tree[];
-}
