@@ -352,6 +352,9 @@ importers:
       '@fontsource/fira-mono':
         specifier: ^5.1.0
         version: 5.1.0
+      '@fontsource/newsreader':
+        specifier: ^5.1.0
+        version: 5.1.0
       '@fontsource/yantramanav':
         specifier: ^5.1.0
         version: 5.1.0
@@ -801,6 +804,9 @@ packages:
 
   '@fontsource/fira-mono@5.1.0':
     resolution: {integrity: sha512-6+nftSKApXyN0I9FC5GJuG5TUCh+in5OehtrXRIsHJvq38Pm//oA1kZZYNdXv99JYzLzJ3lzsTAavmS+xGLGDw==}
+
+  '@fontsource/newsreader@5.1.0':
+    resolution: {integrity: sha512-wBq4mtWkq7dM0hCQ58DGyTdnmNiNiC69amo/+/oGRDQxyLMR9QNWng+nGH/BZJne/l5i3CiK7UhxIU1FrcU/Og==}
 
   '@fontsource/yantramanav@5.1.0':
     resolution: {integrity: sha512-wSmYmoGhFbYF4XUXouudROqTn6GREe0HTV/HqcnRLYbQJNa3kmqbcebIm9PxPDQ0l3y2speJAlbOoDGM2DN9dg==}
@@ -3305,6 +3311,8 @@ snapshots:
   '@fontsource/eb-garamond@5.1.0': {}
 
   '@fontsource/fira-mono@5.1.0': {}
+
+  '@fontsource/newsreader@5.1.0': {}
 
   '@fontsource/yantramanav@5.1.0': {}
 
