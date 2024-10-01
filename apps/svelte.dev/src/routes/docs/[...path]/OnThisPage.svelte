@@ -160,7 +160,7 @@
 			& label {
 				font-size: var(--sk-text-m);
 
-				font-weight: 500;
+				font-weight: 600;
 				display: block;
 
 				&::before {
