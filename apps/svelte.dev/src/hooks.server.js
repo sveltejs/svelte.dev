@@ -36,9 +36,5 @@ export async function handle({ event, resolve }) {
 		preload: ({ type }) => type === 'js' || type === 'css' || type === 'font'
 	});
 
-	response.headers.set('cross-origin-opener-policy', 'same-origin');
-	response.headers.set('cross-origin-embedder-policy', 'require-corp');
-	response.headers.set('cross-origin-resource-policy', 'cross-origin');
-
 	return response;
 }
