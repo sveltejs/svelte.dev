@@ -33,17 +33,19 @@ async function content() {
 	return { blocks };
 }
 
+// TODO is this still used?
+
 /** @param {string} markdown */
 async function plaintext(markdown) {
-	/** @param {unknown} text */
-	const block = (text) => `${text}\n`;
+	/** @param {any} token */
+	const block = ({ text }) => `${text}\n`;
 
-	/** @param {string} text */
-	const inline = (text) => text;
+	/** @param {any} token */
+	const inline = ({ text }) => text;
 
 	return (
 		await markedTransform(markdown, {
-			code: (source) => source.split('// ---cut---\n').pop() ?? '',
+			code: ({ text }) => text.split('// ---cut---\n').pop() ?? '',
 			blockquote: block,
 			html: () => '\n',
 			heading: (text) => `${text}\n`,
@@ -54,7 +56,7 @@ async function plaintext(markdown) {
 			paragraph: (text) => `${text}\n\n`,
 			table: block,
 			tablerow: block,
-			tablecell: (text, opts) => {
+			tablecell: ({ text }) => {
 				return text + ' ';
 			},
 			strong: inline,
@@ -62,8 +64,8 @@ async function plaintext(markdown) {
 			codespan: inline,
 			br: () => '',
 			del: inline,
-			link: (href, title, text) => text,
-			image: (href, title, text) => text,
+			link: inline,
+			image: inline,
 			text: inline
 		})
 	)
