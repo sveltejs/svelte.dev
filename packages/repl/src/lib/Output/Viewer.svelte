@@ -5,13 +5,12 @@
 	import Message from '../Message.svelte';
 	import PaneWithPanel from './PaneWithPanel.svelte';
 	import ReplProxy from './ReplProxy.js';
-	import Console from './console/Console.svelte';
+	import Console, { type Log } from './console/Console.svelte';
 	import getLocationFromStack from './get-location-from-stack';
 	import srcdoc from './srcdoc/index.html?raw';
 	import ErrorOverlay from './ErrorOverlay.svelte';
 	import type { CompileError } from 'svelte/compiler';
 	import type { Bundle } from '../types';
-	import type { Log } from './console/console';
 	import type { Writable } from 'svelte/store';
 
 	export let error: Error | null;
@@ -26,6 +25,8 @@
 	export let theme: 'light' | 'dark';
 	/** A store containing the current bundle result. Takes precedence over REPL context, if set */
 	export let bundle: Writable<any> | undefined = undefined;
+	/** Called everytime a log is pushed. If this is set, the built-in console coming with the Viewer isn't shown */
+	export let onLog: ((logs: Log[]) => void) | undefined = undefined;
 
 	const context = get_repl_context();
 	bundle = bundle ?? context?.bundle;
@@ -193,6 +194,7 @@
 	function push_logs(log: Log) {
 		current_log_group.push((last_console_event = log));
 		logs = logs;
+		onLog?.(logs);
 	}
 
 	function group_logs(log: Log) {
@@ -202,6 +204,7 @@
 		log_group_stack.push(current_log_group);
 		current_log_group = log.logs;
 		logs = logs;
+		onLog?.(logs);
 	}
 
 	function ungroup_logs() {
@@ -216,6 +219,7 @@
 		if (last_log) {
 			last_log.count = (last_log.count || 1) + 1;
 			logs = logs;
+			onLog?.(logs);
 		} else {
 			last_console_event.count = 1;
 			push_logs(last_console_event);
@@ -233,48 +237,77 @@
 
 	function clear_logs() {
 		current_log_group = logs = [];
+		onLog?.(logs);
 	}
 </script>
 
+{#snippet main()}
+	<iframe
+		title="Result"
+		class:inited
+		bind:this={iframe}
+		sandbox={[
+			'allow-popups-to-escape-sandbox',
+			'allow-scripts',
+			'allow-popups',
+			'allow-forms',
+			'allow-pointer-lock',
+			'allow-top-navigation',
+			'allow-modals',
+			relaxed ? 'allow-same-origin' : ''
+		].join(' ')}
+		class={error || pending || pending_imports ? 'greyed-out' : ''}
+		srcdoc={BROWSER ? srcdoc : ''}
+	></iframe>
+
+	{#if $bundle?.error}
+		<ErrorOverlay error={$bundle.error} />
+	{/if}
+{/snippet}
+
 <div class="iframe-container">
-	<PaneWithPanel pos="90%" panel="Console">
-		<div slot="main">
-			<iframe
-				title="Result"
-				class:inited
-				bind:this={iframe}
-				sandbox={[
-					'allow-popups-to-escape-sandbox',
-					'allow-scripts',
-					'allow-popups',
-					'allow-forms',
-					'allow-pointer-lock',
-					'allow-top-navigation',
-					'allow-modals',
-					relaxed ? 'allow-same-origin' : ''
-				].join(' ')}
-				class={error || pending || pending_imports ? 'greyed-out' : ''}
-				srcdoc={BROWSER ? srcdoc : ''}
-			></iframe>
+	{#if !onLog}
+		<PaneWithPanel pos="90%" panel="Console">
+			<div slot="main">
+				<iframe
+					title="Result"
+					class:inited
+					bind:this={iframe}
+					sandbox={[
+						'allow-popups-to-escape-sandbox',
+						'allow-scripts',
+						'allow-popups',
+						'allow-forms',
+						'allow-pointer-lock',
+						'allow-top-navigation',
+						'allow-modals',
+						relaxed ? 'allow-same-origin' : ''
+					].join(' ')}
+					class={error || pending || pending_imports ? 'greyed-out' : ''}
+					srcdoc={BROWSER ? srcdoc : ''}
+				></iframe>
 
-			{#if $bundle?.error}
-				<ErrorOverlay error={$bundle.error} />
-			{/if}
-		</div>
-
-		<div slot="panel-header">
-			<button on:click|stopPropagation={clear_logs}>
-				{#if logs.length > 0}
-					({logs.length})
+				{#if $bundle?.error}
+					<ErrorOverlay error={$bundle.error} />
 				{/if}
-				Clear
-			</button>
-		</div>
+			</div>
 
-		<section slot="panel-body">
-			<Console {logs} />
-		</section>
-	</PaneWithPanel>
+			<div slot="panel-header">
+				<button on:click|stopPropagation={clear_logs}>
+					{#if logs.length > 0}
+						({logs.length})
+					{/if}
+					Clear
+				</button>
+			</div>
+
+			<section slot="panel-body">
+				<Console {logs} />
+			</section>
+		</PaneWithPanel>
+	{:else}
+		{@render main()}
+	{/if}
 
 	<div class="overlay">
 		{#if error}

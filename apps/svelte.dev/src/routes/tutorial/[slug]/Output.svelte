@@ -187,6 +187,7 @@
 		font-family: var(--font-mono);
 		font-size: var(--sk-text-xs);
 		padding: 1rem;
+		border-top: 1px solid var(--sk-text-4);
 		background: rgba(255, 255, 255, 0.5);
 		transform: translate(0, 100%);
 		transition: transform 0.3s;

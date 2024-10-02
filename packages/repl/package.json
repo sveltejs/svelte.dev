@@ -36,6 +36,9 @@
 		},
 		"./viewer": {
 			"svelte": "./src/lib/Output/Viewer.svelte"
+		},
+		"./console": {
+			"svelte": "./src/lib/Output/console/Console.svelte"
 		}
 	},
 	"files": [

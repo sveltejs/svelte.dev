@@ -2,6 +2,8 @@
 	import { browser } from '$app/environment';
 	// @ts-expect-error TODO types
 	import Viewer from '@sveltejs/repl/viewer';
+	// @ts-expect-error TODO types
+	import Console, { type Log } from '@sveltejs/repl/console';
 	import { theme } from '@sveltejs/site-kit/stores';
 	import Chrome from './Chrome.svelte';
 	import Loading from './Loading.svelte';
@@ -11,14 +13,15 @@
 	const bundle = toStore(() => adapter_state.bundle);
 
 	let terminal_visible = $state(false);
+	let logs = $state<Log[]>([]);
 </script>
 
-<!-- TODO: refresh iframe somehow? somehow use terminal instead of console view of REPL viewer? -->
-<Chrome />
+<!-- TODO: refresh iframe somehow? -->
+<Chrome toggle_terminal={() => (terminal_visible = !terminal_visible)} />
 
 <div class="content">
 	{#if browser}
-		<Viewer {bundle} theme={$theme.current} />
+		<Viewer onLog={(l: Log[]) => logs = l} {bundle} theme={$theme.current} />
 	{/if}
 
 	{#if adapter_state.progress.value !== 1}
@@ -31,9 +34,7 @@
 	{/if}
 
 	<div class="terminal" class:visible={terminal_visible}>
-		{#each adapter_state.logs as log}
-			<div>{@html log}</div>
-		{/each}
+		<Console {logs} />
 	</div>
 </div>
 
@@ -58,10 +59,10 @@
 		font-family: var(--font-mono);
 		font-size: var(--sk-text-xs);
 		padding: 1rem;
-		background: rgba(255, 255, 255, 0.5);
+		background: var(--sk-back-1);
+		border-top: 1px solid var(--sk-text-4);
 		transform: translate(0, 100%);
 		transition: transform 0.3s;
-		backdrop-filter: blur(3px);
 		overflow-y: auto;
 	}
 
