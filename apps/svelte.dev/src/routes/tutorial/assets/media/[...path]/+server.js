@@ -1,3 +1,5 @@
+// We have to set some policy headers due to web containers, which in turn doesn't allow us to load media files from github.
+// We therefore have to proxy them through here to add the needed headers.
 export async function GET({ request, params, fetch }) {
 	const request_headers = new Headers();
 
