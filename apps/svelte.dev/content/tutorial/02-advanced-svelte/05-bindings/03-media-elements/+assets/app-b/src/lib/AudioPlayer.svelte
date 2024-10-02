@@ -20,6 +20,7 @@
 <div class="player" class:paused>
 	<audio
 		{src}
+		crossorigin="anonymous"
 		bind:currentTime={time}
 		bind:duration
 		bind:paused
@@ -28,7 +29,7 @@
 			time = 0;
 		}}
 	></audio>
-	
+
 	<button
 		class="play"
 		aria-label={paused ? 'play' : 'pause'}

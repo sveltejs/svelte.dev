@@ -20,6 +20,7 @@
 <div class="player" class:paused>
 	<audio
 		src={src}
+		crossorigin="anonymous"
 		bind:currentTime={time}
 		bind:duration
 		bind:paused
