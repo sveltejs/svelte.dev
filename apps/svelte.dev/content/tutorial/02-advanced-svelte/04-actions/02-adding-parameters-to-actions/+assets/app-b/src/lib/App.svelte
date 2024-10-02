@@ -1,7 +1,5 @@
 <script>
 	import tippy from 'tippy.js';
-	import 'tippy.js/dist/tippy.css';
-	import 'tippy.js/themes/material.css';
 
 	let content = 'Hello!';
 
@@ -21,6 +19,13 @@
 
 <input bind:value={content} />
 
-<button use:tooltip={{ content, theme: 'material' }}>
+<button use:tooltip={{ content }}>
 	Hover me
 </button>
+
+<style>
+	:global([data-tippy-root]) {
+		background-color: var(--bg-2);
+		padding: 0.5em;
+	}
+</style>

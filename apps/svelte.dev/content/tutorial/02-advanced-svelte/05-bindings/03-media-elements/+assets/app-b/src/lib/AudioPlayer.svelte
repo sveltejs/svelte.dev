@@ -104,11 +104,11 @@
 	}
 	
 	[aria-label="pause"] {
-		background-image: url(./pause.svg);
+		background-image: url('/tutorial/icons/pause.svg');
 	}
 
 	[aria-label="play"] {
-		background-image: url(./play.svg);
+		background-image: url('/tutorial/icons/play.svg');
 	}
 
 	.info {

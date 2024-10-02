@@ -47,10 +47,6 @@
 		cursor: pointer;
 	}
 
-	.card.flipped {
-		transform: rotateY(0);
-	}
-
 	.front, .back {
 		display: flex;
 		align-items: center;
@@ -68,7 +64,7 @@
 	}
 
 	.front {
-		background: url(./svelte-logo.svg) no-repeat 5em 5em, url(./svelte-logo.svg) no-repeat calc(100% - 5em) calc(100% - 5em);
+		background: url('/svelte-logo.svg') no-repeat 5em 5em, url('/svelte-logo.svg') no-repeat calc(100% - 5em) calc(100% - 5em);
 		background-size: 8em 8em, 8em 8em;
 	}
 

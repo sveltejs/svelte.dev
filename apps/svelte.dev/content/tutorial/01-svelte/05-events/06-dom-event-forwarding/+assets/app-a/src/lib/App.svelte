@@ -1,9 +1,8 @@
 <script>
 	import BigRedButton from './BigRedButton.svelte';
-	import horn from './horn.mp3';
 
 	const audio = new Audio();
-	audio.src = horn;
+	audio.src = '/tutorial/horn.mp3';
 
 	function handleClick() {
 		audio.load();

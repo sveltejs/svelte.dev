@@ -1,6 +1,4 @@
 <script>
-	import kitten from './kitten.png';
-
 	let hereKitty = false;
 </script>
 
@@ -13,7 +11,7 @@
 <img
 	class:curious={hereKitty}
 	alt="Kitten wants to know what's going on"
-	src={kitten}
+	src="/tutorial/kitten.png"
 />
 
 <style>
@@ -28,9 +26,5 @@
 
 	.curious {
 		transform: translate(-15%, 0) rotate(0deg);
-	}
-
-	:global(body) {
-		overflow: hidden;
 	}
 </style>
