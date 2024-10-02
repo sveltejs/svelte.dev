@@ -97,7 +97,7 @@
 		padding-bottom: 0.8rem;
 		font-size: var(--sk-text-m);
 		font-family: var(--sk-font-heading);
-		font-weight: 600;
+		font-weight: 700;
 		color: var(--sk-text-1);
 	}
 
