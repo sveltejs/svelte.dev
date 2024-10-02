@@ -108,8 +108,6 @@
 				await proxy?.eval(`
 					${injectedJS}
 
-					${styles}
-
 					{
 						const styles = document.querySelectorAll('style[id^=svelte-]');
 
@@ -169,13 +167,15 @@
 
 	$: if (ready) apply_bundle($bundle);
 
-	$: styles =
-		injectedCSS &&
-		`{
-		const style = document.createElement('style');
-		style.textContent = ${JSON.stringify(injectedCSS)};
-		document.head.appendChild(style);
-	}`;
+	$: if (injectedCSS && proxy && ready) {
+		proxy.eval(
+			`{
+				const style = document.createElement('style');
+				style.textContent = ${JSON.stringify(injectedCSS)};
+				document.head.appendChild(style);
+			}`
+		);
+	}
 
 	function show_error(e: CompileError & { loc: { line: number; column: number } }) {
 		const map = $bundle?.client?.map;

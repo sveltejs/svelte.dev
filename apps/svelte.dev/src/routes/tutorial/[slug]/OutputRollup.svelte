@@ -32,7 +32,12 @@
 
 <div class="content">
 	{#if browser}
-		<Viewer onLog={(l: Log[]) => logs = l} {bundle} theme={$theme.current} />
+		<Viewer
+			onLog={(l: Log[]) => logs = l}
+			{bundle}
+			theme={$theme.current}
+			injectedCSS="@import '/tutorial/shared.css';"
+		/>
 	{/if}
 
 	{#if adapter_state.progress.value !== 1}
