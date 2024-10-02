@@ -279,6 +279,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 	.search-box {
 		--padding: 1rem;
 		--background: var(--sk-back-2);
+		background: var(--background);
 		position: relative;
 		height: calc(100% - 2rem);
 		width: calc(100vw - 2rem);
@@ -358,7 +359,6 @@ It appears when the user clicks on the `Search` component or presses the corresp
 	}
 
 	.results-container {
-		background: var(--background);
 		border-radius: 0 0 var(--sk-border-radius) var(--sk-border-radius);
 		pointer-events: all;
 	}
@@ -369,7 +369,6 @@ It appears when the user clicks on the `Search` component or presses the corresp
 		font-size: 1.2rem;
 		font-weight: normal;
 		text-transform: uppercase;
-		background-color: var(--background);
 		pointer-events: all;
 	}
 

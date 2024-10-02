@@ -77,7 +77,6 @@
 			position: sticky;
 			top: 0;
 			display: block;
-			background: var(--background);
 			color: var(--sk-text-4);
 			text-transform: uppercase;
 			padding: 0.5rem var(--padding);
