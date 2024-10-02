@@ -1,11 +1,13 @@
 <script lang="ts">
 	import { afterNavigate } from '$app/navigation';
 	import type { Document } from '@sveltejs/site-kit';
+	import { tick } from 'svelte';
 
 	let { content, document }: { content: HTMLElement; document: Document } = $props();
 
 	let headings: NodeListOf<HTMLHeadingElement>;
 	let current = $state('');
+	let element: HTMLElement;
 
 	afterNavigate(() => {
 		current = location.hash.slice(1);
@@ -26,6 +28,14 @@
 				next.getBoundingClientRect().top > threshold
 			) {
 				current = heading.id;
+
+				tick().then(() => {
+					const active = element.querySelector('.active');
+					active?.scrollIntoView({
+						block: 'center'
+					});
+				});
+
 				break;
 			}
 		}
@@ -40,7 +50,7 @@
 		On this page
 	</label>
 
-	<nav>
+	<nav bind:this={element}>
 		<ul>
 			<li>
 				<a href="/{document.slug}" class:active={current === ''}>
@@ -146,12 +156,19 @@
 		}
 
 		@media (min-width: 1200px) {
-			position: fixed;
-			top: 14rem;
-			right: 0;
-			width: var(--sidebar-width);
-			padding: 0 var(--sk-page-padding-side) 0 0;
+			width: calc(var(--sidebar-width) - var(--sk-page-padding-side));
+			padding: 0;
 			box-sizing: border-box;
+			position: fixed;
+			display: flex;
+			flex-direction: column;
+			top: 14rem;
+			left: calc(
+				var(--sk-page-padding-side) + var(--sidebar-width) + var(--sk-line-max-width) +
+					var(--sk-page-padding-side)
+			);
+			height: calc(100vh - 20rem);
+			overflow: hidden;
 
 			input {
 				display: none;
@@ -170,6 +187,8 @@
 
 			nav {
 				display: block;
+				height: 100%;
+				overflow-y: auto;
 
 				li:first-child {
 					display: list-item;
