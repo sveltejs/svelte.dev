@@ -91,126 +91,6 @@ export function smart_quotes(str: string) {
 	});
 }
 
-const default_renderer: Partial<Renderer> = {
-	code(code, infostring, escaped) {
-		const lang = infostring?.match(/\S*/)?.[0];
-
-		code = code.replace(/\n$/, '') + '\n';
-
-		if (!lang) {
-			return '<pre><code>' + (escaped ? code : escape(code, true)) + '</code></pre>\n';
-		}
-
-		return (
-			'<pre><code class="language-' +
-			escape(lang, true) +
-			'">' +
-			(escaped ? code : escape(code, true)) +
-			'</code></pre>\n'
-		);
-	},
-
-	blockquote(quote) {
-		return '<blockquote>\n' + quote + '</blockquote>\n';
-	},
-
-	html(html) {
-		return html;
-	},
-
-	heading(text, level) {
-		return '<h' + level + '>' + text + '</h' + level + '>\n';
-	},
-
-	hr() {
-		return '<hr>\n';
-	},
-
-	list(body, ordered, start) {
-		const type = ordered ? 'ol' : 'ul',
-			startatt = ordered && start !== 1 ? ' start="' + start + '"' : '';
-		return '<' + type + startatt + '>\n' + body + '</' + type + '>\n';
-	},
-
-	listitem(text) {
-		return '<li>' + text + '</li>\n';
-	},
-
-	checkbox(checked) {
-		return '<input ' + (checked ? 'checked="" ' : '') + 'disabled="" type="checkbox"' + '' + '> ';
-	},
-
-	paragraph(text) {
-		return '<p>' + text + '</p>\n';
-	},
-
-	table(header, body) {
-		if (body) body = '<tbody>' + body + '</tbody>';
-
-		return '<table>\n' + '<thead>\n' + header + '</thead>\n' + body + '</table>\n';
-	},
-
-	tablerow(content) {
-		return '<tr>\n' + content + '</tr>\n';
-	},
-
-	tablecell(content, flags) {
-		const type = flags.header ? 'th' : 'td';
-		const tag = flags.align ? '<' + type + ' align="' + flags.align + '">' : '<' + type + '>';
-		return tag + content + '</' + type + '>\n';
-	},
-
-	// span level renderer
-	strong(text) {
-		return '<strong>' + text + '</strong>';
-	},
-
-	em(text) {
-		return '<em>' + text + '</em>';
-	},
-
-	codespan(text) {
-		return '<code>' + text + '</code>';
-	},
-
-	br() {
-		return '<br>';
-	},
-
-	del(text) {
-		return '<del>' + text + '</del>';
-	},
-
-	link(href, title, text) {
-		if (href === null) {
-			return text;
-		}
-		let out = '<a href="' + escape(href) + '"';
-		if (title) {
-			out += ' title="' + title + '"';
-		}
-		out += '>' + text + '</a>';
-		return out;
-	},
-
-	image(href, title, text) {
-		if (href === null) {
-			return text;
-		}
-
-		let out = '<img src="' + href + '" alt="' + text + '"';
-		if (title) {
-			out += ' title="' + title + '"';
-		}
-		out += '>';
-		return out;
-	},
-
-	text(text) {
-		return text;
-	}
-};
-
 const tokenizer: TokenizerObject = {
 	url(src) {
 		// if `src` is a package version string, eg: adapter-auto@1.2.3
@@ -225,10 +105,7 @@ const tokenizer: TokenizerObject = {
 
 export async function transform(markdown: string, renderer: Partial<Renderer> = {}) {
 	const marked = new Marked({
-		renderer: {
-			...default_renderer,
-			...renderer
-		},
+		renderer,
 		tokenizer
 	});
 
