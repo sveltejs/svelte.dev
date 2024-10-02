@@ -19,7 +19,7 @@
 			]
 		},
 		{
-			"source": "/tutorial/(.*)\\.(.*)",
+			"source": "tutorial/(.*)\\.(.*)",
 			"headers": [
 				{
 					"key": "cross-origin-opener-policy",
@@ -36,7 +36,7 @@
 			]
 		},
 		{
-			"source": "/svelte-logo(.*)",
+			"source": "svelte-logo(.*)",
 			"headers": [
 				{
 					"key": "cross-origin-opener-policy",
