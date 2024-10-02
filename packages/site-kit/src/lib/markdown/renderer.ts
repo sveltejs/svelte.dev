@@ -260,10 +260,20 @@ async function parse({
 	let current = '';
 
 	return await transform(body, {
-		text({ text }) {
-			return smart_quotes(text);
+		text(token) {
+			// @ts-expect-error I think this is a bug in marked — some text tokens have children,
+			// but that's not reflected in the types. In these cases we can't just use `token.tokens`
+			// because that will result in e.g. `<code>` elements not being generated
+			if (token.tokens) {
+				// @ts-expect-error
+				return this.parser!.parseInline(token.tokens);
+			}
+
+			return smart_quotes(token.text);
 		},
-		heading({ text, depth, raw }) {
+		heading({ tokens, depth, raw }) {
+			const text = this.parser!.parseInline(tokens);
+
 			const title = text
 				.replace(/<\/?code>/g, '')
 				.replace(/&quot;/g, '"')
