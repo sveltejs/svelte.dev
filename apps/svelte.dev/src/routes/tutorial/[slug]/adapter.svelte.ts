@@ -1,30 +1,36 @@
 import { browser } from '$app/environment';
 import { page } from '$app/stores';
-import type { state as wc_state } from '$lib/tutorial/adapters/webcontainer/index.svelte';
-import type { state as rollup_state } from '$lib/tutorial/adapters/rollup/index.svelte';
+import type { state as WCState } from '$lib/tutorial/adapters/webcontainer/index.svelte';
+import type { state as RollupState } from '$lib/tutorial/adapters/rollup/index.svelte';
 import type { Adapter, FileStub, Stub } from '$lib/tutorial';
 
 let initial_load = true;
 let use_rollup = $state(true);
 
-export const adapter_state = new (class {
-	rollup_state = $state.raw<typeof rollup_state>({} as any);
-	wc_state = $state.raw<typeof wc_state>({} as any);
-	internal_error = $state.raw<Error | null>(null);
+let rollup_state = $state.raw<typeof RollupState>({} as any);
+let wc_state = $state.raw<typeof WCState>({} as any);
+let internal_error = $state.raw<Error | null>(null);
 
-	base = $derived(this.wc_state.base);
-	bundle = $derived(this.rollup_state.bundle);
-	error = $derived(
-		(use_rollup ? this.rollup_state.error : this.wc_state.error) || this.internal_error
-	);
-	logs = $derived((use_rollup ? this.rollup_state.logs : this.wc_state.logs) || []);
+export const adapter_state = new (class {
+	/** URL to the web container instance. Irrelevant for Rollup */
+	base = $derived(wc_state.base);
+	/** Errors from within the web container instance. Irrelevant for Rollup */
+	error = $derived(wc_state.error || internal_error);
+	/** Logs from the web container instance. Irrelevant for Rollup */
+	logs = $derived(wc_state.logs || []);
+
+	/** Result of a rollup compile. Irrelevant for web containers */
+	bundle = $derived(rollup_state.bundle);
+
+	/** Startup progress */
 	progress = $derived(
-		(use_rollup ? this.rollup_state.progress : this.wc_state.progress) || {
+		(use_rollup ? rollup_state.progress : wc_state.progress) || {
 			value: 0,
 			status: 'initialising'
 		}
 	);
-	warnings = $derived((use_rollup ? this.rollup_state.warnings : this.wc_state.warnings) || {});
+	/** Compiler warnings */
+	warnings = $derived((use_rollup ? rollup_state.warnings : wc_state.warnings) || {});
 })();
 
 if (browser) {
@@ -58,7 +64,7 @@ export function load_webcontainer(force = false) {
 			}
 
 			const module = await import('$lib/tutorial/adapters/webcontainer/index.svelte');
-			adapter_state.wc_state = module.state;
+			wc_state = module.state;
 			const adapter = await module.create();
 
 			fulfil(adapter);
@@ -77,7 +83,7 @@ export function load_rollup(force = false) {
 	rollup_ready = new Promise(async (fulfil, reject) => {
 		try {
 			const module = await import('$lib/tutorial/adapters/rollup/index.svelte');
-			adapter_state.rollup_state = module.state;
+			rollup_state = module.state;
 			const adapter = await module.create();
 
 			fulfil(adapter);
@@ -113,9 +119,9 @@ export async function reset(files: Stub[]) {
 			publish('reload');
 		}
 
-		adapter_state.internal_error = null;
+		internal_error = null;
 	} catch (e) {
-		adapter_state.internal_error = e as Error;
+		internal_error = e as Error;
 	}
 }
 

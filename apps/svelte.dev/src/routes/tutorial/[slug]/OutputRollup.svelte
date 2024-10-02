@@ -25,7 +25,6 @@
 	{/if}
 
 	{#if adapter_state.progress.value !== 1}
-		<!-- TODO is there any startup error we should worry about and forward to the Loading component? -->
 		<Loading
 			initial={false}
 			progress={adapter_state.progress.value}

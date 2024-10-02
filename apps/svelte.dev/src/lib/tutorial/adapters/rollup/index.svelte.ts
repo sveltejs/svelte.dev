@@ -9,8 +9,6 @@ let bundler: Bundler;
 export const state = new (class RollupState {
 	progress = $state.raw({ value: 0, text: 'initialising' });
 	bundle = $state.raw<any>(null);
-	error = $state.raw<Error | null>(null); // TODO wire this up? Is this the correct place?
-	logs = $state.raw<string[]>([]); // TODO wire this up?
 	warnings = $state.raw<Record<string, Warning[]>>({});
 })();
 
