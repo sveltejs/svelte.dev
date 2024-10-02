@@ -17,7 +17,7 @@
 		line-height: 1.35;
 
 		span:not(:last-child)::after {
-			content: ' • ';
+			content: ' / ';
 		}
 	}
 </style>

@@ -183,7 +183,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 	.menu :global(a) {
 		color: var(--sk-text-2);
 		line-height: 1;
-		padding: 0.1rem 0.5rem 0 0.5rem;
+		padding: 0rem 0.5rem 0 0.5rem;
 		white-space: nowrap;
 		height: 100%;
 		display: flex;

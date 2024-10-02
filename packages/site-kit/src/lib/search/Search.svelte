@@ -59,7 +59,7 @@ Renders a search widget which when clicked (or the corresponding keyboard shortc
 
 	input {
 		position: relative;
-		padding: 0.5em 0.5em 0.4em 2em;
+		padding: 0.3em 0.5em 0.4em 2em;
 		border: none;
 		font-family: inherit;
 		font-size: 1em;
@@ -72,15 +72,15 @@ Renders a search widget which when clicked (or the corresponding keyboard shortc
 			no-repeat 0.6em 55% / 1.2em 1.2em url(../icons/search.svg),
 			var(--sk-back-4);
 		color: var(--sk-text-3);
+
+		&::placeholder {
+			text-transform: lowercase;
+			color: var(--sk-text-3);
+		}
 	}
 
 	input:focus + .shortcut {
 		display: none;
-	}
-
-	input::placeholder {
-		text-transform: lowercase;
-		color: var(--sk-text-3);
 	}
 
 	.shortcut {
@@ -97,10 +97,12 @@ Renders a search widget which when clicked (or the corresponding keyboard shortc
 	}
 
 	kbd {
+		position: relative;
 		display: none;
 		color: var(--sk-text-3);
 		font-size: inherit;
 		font-family: inherit;
+		top: -0.1rem;
 	}
 
 	@media (min-width: 800px) {
