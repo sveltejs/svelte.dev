@@ -22,8 +22,10 @@
 	},
 	"homepage": "https://github.com/sveltejs/svelte.dev/tree/main/packages/site-kit#readme",
 	"dependencies": {
+		"@fontsource/dm-serif-display": "^5.1.0",
 		"@fontsource/eb-garamond": "^5.1.0",
 		"@fontsource/fira-mono": "^5.1.0",
+		"@fontsource/playfair-display": "^5.1.0",
 		"@fontsource/yantramanav": "^5.1.0",
 		"esm-env": "^1.0.0",
 		"json5": "^2.2.3",

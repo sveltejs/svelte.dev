@@ -74,7 +74,7 @@
 
 	li {
 		display: block;
-		line-height: 1.2;
+		/* line-height: 1.2; */
 		margin: 0;
 		margin-bottom: 4rem;
 	}
@@ -105,7 +105,6 @@
 		display: block;
 		font-size: var(--sk-text-s);
 		font-family: var(--sk-font-body);
-		padding-bottom: 0.6em;
 	}
 
 	[aria-current='page'] {

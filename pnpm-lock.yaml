@@ -346,10 +346,16 @@ importers:
 
   packages/site-kit:
     dependencies:
+      '@fontsource/dm-serif-display':
+        specifier: ^5.1.0
+        version: 5.1.0
       '@fontsource/eb-garamond':
         specifier: ^5.1.0
         version: 5.1.0
       '@fontsource/fira-mono':
+        specifier: ^5.1.0
+        version: 5.1.0
+      '@fontsource/playfair-display':
         specifier: ^5.1.0
         version: 5.1.0
       '@fontsource/yantramanav':
@@ -796,11 +802,17 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@fontsource/dm-serif-display@5.1.0':
+    resolution: {integrity: sha512-8IGBpTOn2XRA09plE6iAlZajL09iwCdSTd60FiM9NsD7VV4Nqseo9tgqiZLyuLC9D1jht5i39I2IYI/o2+Q0Kg==}
+
   '@fontsource/eb-garamond@5.1.0':
     resolution: {integrity: sha512-FEIWkPgBY9CEhZP1YmA36k/f5Hj4z1Tv2FxIiG8aYHmkKGZNVCVIeO345lCVtpG32ZVQKs8te+JpVtg/GCHXyg==}
 
   '@fontsource/fira-mono@5.1.0':
     resolution: {integrity: sha512-6+nftSKApXyN0I9FC5GJuG5TUCh+in5OehtrXRIsHJvq38Pm//oA1kZZYNdXv99JYzLzJ3lzsTAavmS+xGLGDw==}
+
+  '@fontsource/playfair-display@5.1.0':
+    resolution: {integrity: sha512-O4Ph7IwM2sH4IpSgYKP1ZdOuaYd22+eXdT1jU8/kDM6gIABV2RoqJM34Z+WD364+mO1noXPcF1ZtA4aRfcFZLA==}
 
   '@fontsource/yantramanav@5.1.0':
     resolution: {integrity: sha512-wSmYmoGhFbYF4XUXouudROqTn6GREe0HTV/HqcnRLYbQJNa3kmqbcebIm9PxPDQ0l3y2speJAlbOoDGM2DN9dg==}
@@ -3300,9 +3312,13 @@ snapshots:
   '@esbuild/win32-x64@0.23.1':
     optional: true
 
+  '@fontsource/dm-serif-display@5.1.0': {}
+
   '@fontsource/eb-garamond@5.1.0': {}
 
   '@fontsource/fira-mono@5.1.0': {}
+
+  '@fontsource/playfair-display@5.1.0': {}
 
   '@fontsource/yantramanav@5.1.0': {}
 

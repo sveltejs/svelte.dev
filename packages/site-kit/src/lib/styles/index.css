@@ -1,6 +1,11 @@
 @import '@fontsource/eb-garamond';
 @import '@fontsource/eb-garamond/500.css';
 @import '@fontsource/eb-garamond/400-italic.css';
+@import '@fontsource/playfair-display/600.css';
+@import '@fontsource/dm-serif-display';
+@import '@fontsource/libre-bodoni';
+@import '@fontsource/inter-tight';
+@import '@fontsource/inter-tight/500.css';
 @import '@fontsource/fira-mono';
 
 /* TODO figure out which weights we actually need */

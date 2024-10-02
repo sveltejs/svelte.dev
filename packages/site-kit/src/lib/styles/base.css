@@ -20,7 +20,7 @@ body {
 body {
 	font-size: var(--sk-text-s);
 	font-family: var(--sk-font-body);
-	line-height: 1.618;
+	line-height: 1.5;
 	color: var(--sk-text-2);
 	background-color: var(--sk-back-1);
 	width: 100%;
