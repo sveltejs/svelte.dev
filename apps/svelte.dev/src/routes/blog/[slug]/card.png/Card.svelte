@@ -5,7 +5,11 @@
 </script>
 
 <div class="card">
-	<img src="https://sveltejs.github.io/assets/artwork/svelte-machine.png" alt="Svelte Machine" />
+	<img
+		crossorigin="anonymous"
+		src="https://sveltejs.github.io/assets/artwork/svelte-machine.png"
+		alt="Svelte Machine"
+	/>
 
 	<div class="text">
 		<h1>{title}</h1>
