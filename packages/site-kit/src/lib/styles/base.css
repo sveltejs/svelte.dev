@@ -86,7 +86,7 @@ h1 {
 	position: relative;
 	font-family: var(--sk-font-heading);
 	font-weight: 600;
-	line-height: 1.35;
+	line-height: 1.2;
 	color: var(--sk-text-1);
 }
 
@@ -146,9 +146,13 @@ blockquote :last-child {
 }
 
 /*  buttons -------------------------------- */
+input,
 button {
 	font-family: var(--sk-font-ui);
 	font-size: inherit;
+}
+
+button {
 	background-color: transparent;
 	border: none;
 	color: currentColor;

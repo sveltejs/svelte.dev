@@ -43,8 +43,6 @@ import {
 
 ## backIn
 
-
-
 <div class="ts-block">
 
 ```dts
@@ -53,9 +51,9 @@ function backIn(t: number): number;
 
 </div>
 
+
+
 ## backInOut
-
-
 
 <div class="ts-block">
 
@@ -65,9 +63,9 @@ function backInOut(t: number): number;
 
 </div>
 
+
+
 ## backOut
-
-
 
 <div class="ts-block">
 
@@ -77,9 +75,9 @@ function backOut(t: number): number;
 
 </div>
 
+
+
 ## bounceIn
-
-
 
 <div class="ts-block">
 
@@ -89,9 +87,9 @@ function bounceIn(t: number): number;
 
 </div>
 
+
+
 ## bounceInOut
-
-
 
 <div class="ts-block">
 
@@ -101,9 +99,9 @@ function bounceInOut(t: number): number;
 
 </div>
 
+
+
 ## bounceOut
-
-
 
 <div class="ts-block">
 
@@ -113,9 +111,9 @@ function bounceOut(t: number): number;
 
 </div>
 
+
+
 ## circIn
-
-
 
 <div class="ts-block">
 
@@ -125,9 +123,9 @@ function circIn(t: number): number;
 
 </div>
 
+
+
 ## circInOut
-
-
 
 <div class="ts-block">
 
@@ -137,9 +135,9 @@ function circInOut(t: number): number;
 
 </div>
 
+
+
 ## circOut
-
-
 
 <div class="ts-block">
 
@@ -149,9 +147,9 @@ function circOut(t: number): number;
 
 </div>
 
+
+
 ## cubicIn
-
-
 
 <div class="ts-block">
 
@@ -161,9 +159,9 @@ function cubicIn(t: number): number;
 
 </div>
 
+
+
 ## cubicInOut
-
-
 
 <div class="ts-block">
 
@@ -173,9 +171,9 @@ function cubicInOut(t: number): number;
 
 </div>
 
+
+
 ## cubicOut
-
-
 
 <div class="ts-block">
 
@@ -185,9 +183,9 @@ function cubicOut(t: number): number;
 
 </div>
 
+
+
 ## elasticIn
-
-
 
 <div class="ts-block">
 
@@ -197,9 +195,9 @@ function elasticIn(t: number): number;
 
 </div>
 
+
+
 ## elasticInOut
-
-
 
 <div class="ts-block">
 
@@ -209,9 +207,9 @@ function elasticInOut(t: number): number;
 
 </div>
 
+
+
 ## elasticOut
-
-
 
 <div class="ts-block">
 
@@ -221,9 +219,9 @@ function elasticOut(t: number): number;
 
 </div>
 
+
+
 ## expoIn
-
-
 
 <div class="ts-block">
 
@@ -233,9 +231,9 @@ function expoIn(t: number): number;
 
 </div>
 
+
+
 ## expoInOut
-
-
 
 <div class="ts-block">
 
@@ -245,9 +243,9 @@ function expoInOut(t: number): number;
 
 </div>
 
+
+
 ## expoOut
-
-
 
 <div class="ts-block">
 
@@ -257,9 +255,9 @@ function expoOut(t: number): number;
 
 </div>
 
+
+
 ## linear
-
-
 
 <div class="ts-block">
 
@@ -269,9 +267,9 @@ function linear(t: number): number;
 
 </div>
 
+
+
 ## quadIn
-
-
 
 <div class="ts-block">
 
@@ -281,9 +279,9 @@ function quadIn(t: number): number;
 
 </div>
 
+
+
 ## quadInOut
-
-
 
 <div class="ts-block">
 
@@ -293,9 +291,9 @@ function quadInOut(t: number): number;
 
 </div>
 
+
+
 ## quadOut
-
-
 
 <div class="ts-block">
 
@@ -305,9 +303,9 @@ function quadOut(t: number): number;
 
 </div>
 
+
+
 ## quartIn
-
-
 
 <div class="ts-block">
 
@@ -317,9 +315,9 @@ function quartIn(t: number): number;
 
 </div>
 
+
+
 ## quartInOut
-
-
 
 <div class="ts-block">
 
@@ -329,9 +327,9 @@ function quartInOut(t: number): number;
 
 </div>
 
+
+
 ## quartOut
-
-
 
 <div class="ts-block">
 
@@ -341,9 +339,9 @@ function quartOut(t: number): number;
 
 </div>
 
+
+
 ## quintIn
-
-
 
 <div class="ts-block">
 
@@ -353,9 +351,9 @@ function quintIn(t: number): number;
 
 </div>
 
+
+
 ## quintInOut
-
-
 
 <div class="ts-block">
 
@@ -365,9 +363,9 @@ function quintInOut(t: number): number;
 
 </div>
 
+
+
 ## quintOut
-
-
 
 <div class="ts-block">
 
@@ -377,9 +375,9 @@ function quintOut(t: number): number;
 
 </div>
 
+
+
 ## sineIn
-
-
 
 <div class="ts-block">
 
@@ -389,9 +387,9 @@ function sineIn(t: number): number;
 
 </div>
 
+
+
 ## sineInOut
-
-
 
 <div class="ts-block">
 
@@ -401,9 +399,9 @@ function sineInOut(t: number): number;
 
 </div>
 
+
+
 ## sineOut
-
-
 
 <div class="ts-block">
 
@@ -412,5 +410,7 @@ function sineOut(t: number): number;
 ```
 
 </div>
+
+
 
 

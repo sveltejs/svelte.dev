@@ -75,6 +75,8 @@ It appears when the user clicks on the `Search` component or presses the corresp
 			document.body.focus();
 			document.body.removeAttribute('tabindex');
 			window.scrollTo(0, scroll);
+
+			$search_query = '';
 		}
 
 		search = null;
@@ -96,7 +98,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 
 	$effect(() => {
 		if (ready) {
-			worker.postMessage({ type: 'recents', payload: $search_recent });
+			worker.postMessage({ type: 'recents', payload: $state.snapshot($search_recent) });
 		}
 	});
 
@@ -110,11 +112,8 @@ It appears when the user clicks on the `Search` component or presses the corresp
 			document.body.style.position = 'fixed';
 
 			$overlay_open = true;
-			resetSearchQuery();
 		}
 	});
-
-	const resetSearchQuery = () => ($search_query = '');
 </script>
 
 <svelte:window
@@ -181,7 +180,8 @@ It appears when the user clicks on the `Search` component or presses the corresp
 			/>
 
 			<button aria-label="Close" onclick={close}>
-				<Icon name="close" />
+				<!-- <Icon name="close" /> -->
+				<kbd>Esc</kbd>
 			</button>
 
 			<span id="search-description" class="visually-hidden">
@@ -217,8 +217,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 								{#each recent_searches as search}
 									<li class="recent">
 										<a onclick={() => navigate(search.href)} href={search.href}>
-											<small>{search.breadcrumbs.join('/')}</small>
-											<strong>{search.breadcrumbs.at(-1)}</strong>
+											{search.breadcrumbs.at(-1)}
 										</a>
 
 										<button
@@ -264,37 +263,68 @@ It appears when the user clicks on the `Search` component or presses the corresp
 		z-index: 100;
 	}
 
-	input {
-		font-family: inherit;
-		font-size: 1.6rem;
+	.modal {
+		position: fixed;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		pointer-events: none;
+		left: 0;
+		top: 0;
 		width: 100%;
-		padding: 1rem 6rem 0.5rem 1rem;
-		height: 5rem;
+		height: 100%;
+		z-index: 9999;
+	}
+
+	.search-box {
+		--padding: 1rem;
+		--background: var(--sk-back-2);
+		background: var(--background);
+		position: relative;
+		height: calc(100% - 2rem);
+		width: calc(100vw - 2rem);
+		max-width: 64rem;
+		max-height: 64rem;
+		filter: drop-shadow(2px 4px 16px rgba(0, 0, 0, 0.2));
+		border-radius: var(--sk-border-radius);
+		display: flex;
+		flex-direction: column;
+		overflow: hidden;
+		font-family: var(--sk-font-ui);
+
+		@media (min-width: 800px) {
+			--padding: 1.6rem;
+		}
+
+		& > * {
+			pointer-events: all;
+		}
+	}
+
+	input {
+		font-size: var(--sk-text-l);
+		width: 100%;
+		padding: var(--padding) 5rem var(--padding) var(--padding);
+		height: 6rem;
 		border: none;
 		border-bottom: 1px solid var(--sk-back-3);
-		font-weight: 600;
 		flex-shrink: 0;
-		background: var(--sk-back-2);
+		background: var(--sk-back-3);
 		color: var(--sk-text-1);
-	}
 
-	input::selection {
-		background-color: var(--sk-back-translucent);
-	}
+		&::selection {
+			background-color: var(--sk-back-translucent);
+		}
 
-	input::placeholder {
-		color: var(--sk-text-3);
-		opacity: 0.3;
-	}
+		&::placeholder {
+			color: var(--sk-text-2);
+			opacity: 0.3;
+		}
 
-	input:focus-visible {
-		background: var(--sk-theme-2);
-		color: white;
-		outline: none;
-	}
-
-	input:focus-visible::placeholder {
-		color: rgba(255, 255, 255, 0.5);
+		&:focus-visible {
+			border-radius: var(--sk-border-radius);
+			outline-offset: -3px;
+		}
 	}
 
 	button[aria-label='Close'] {
@@ -303,56 +333,24 @@ It appears when the user clicks on the `Search` component or presses the corresp
 		top: 0;
 		right: 0;
 		width: 5rem;
-		height: 5rem;
+		height: 6rem;
 		background: none;
+		border-radius: var(--sk-border-radius);
 		color: var(--sk-text-2);
-	}
+		opacity: 0.3;
 
-	button[aria-label='Close']:focus-visible {
-		background: var(--sk-theme-2);
-		color: var(--sk-back-1);
-		outline: none;
-	}
+		&:focus-visible {
+			opacity: 1;
+			outline-offset: -3px;
+		}
 
-	input:focus-visible + button[aria-label='Close'] {
-		color: var(--sk-back-1);
+		kbd {
+			text-transform: uppercase;
+		}
 	}
 
 	ul {
 		margin: 0;
-	}
-
-	.modal {
-		position: fixed;
-		left: 0;
-		top: 0;
-		width: 100%;
-		height: 100%;
-		z-index: 9999;
-	}
-
-	.modal {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		pointer-events: none;
-	}
-
-	.search-box {
-		position: relative;
-		height: calc(100% - 2rem);
-		width: calc(100vw - 2rem);
-		max-width: 50rem;
-		max-height: 50rem;
-		filter: drop-shadow(2px 4px 16px rgba(0, 0, 0, 0.2));
-		border-radius: var(--sk-border-radius);
-		display: flex;
-		flex-direction: column;
-		overflow: hidden;
-	}
-
-	.search-box > * {
-		pointer-events: all;
 	}
 
 	.results {
@@ -361,17 +359,16 @@ It appears when the user clicks on the `Search` component or presses the corresp
 	}
 
 	.results-container {
-		background: var(--sk-back-2);
 		border-radius: 0 0 var(--sk-border-radius) var(--sk-border-radius);
 		pointer-events: all;
 	}
 
 	.info {
-		padding: 1rem;
+		padding: var(--padding);
+		font-family: var(--sk-font-ui);
 		font-size: 1.2rem;
 		font-weight: normal;
 		text-transform: uppercase;
-		background-color: var(--sk-back-2);
 		pointer-events: all;
 	}
 
@@ -380,58 +377,20 @@ It appears when the user clicks on the `Search` component or presses the corresp
 	}
 
 	a {
-		display: block;
-		text-decoration: none;
-		line-height: 1;
-		padding: 1rem;
-	}
-
-	a:hover {
-		background: rgba(0, 0, 0, 0.05);
-	}
-
-	a:focus {
-		background: var(--sk-theme-2);
-		color: var(--sk-back-1);
-		outline: none;
-	}
-
-	a small,
-	a strong {
-		display: block;
-		white-space: nowrap;
-		overflow: hidden;
-		text-overflow: ellipsis;
-		line-height: 1;
-	}
-
-	a small {
-		font-size: 1rem;
-		text-transform: uppercase;
-		font-weight: 600;
-		color: var(--sk-text-3);
-	}
-
-	a strong {
-		font-size: 1.6rem;
 		color: var(--sk-text-2);
-		margin: 0.4rem 0;
-	}
-
-	a:focus small {
-		color: white;
-		opacity: 0.6;
-	}
-
-	a:focus strong {
-		color: white;
-	}
-
-	a strong :global(mark) {
-		background: var(--sk-theme-2);
-		color: var(--sk-text-3);
+		display: block;
 		text-decoration: none;
-		border-radius: 1px;
+		line-height: 1;
+		padding: 1rem calc(4rem + var(--padding)) 1rem var(--padding);
+
+		&:hover {
+			background: rgba(0, 0, 0, 0.05);
+		}
+
+		&:focus {
+			border-radius: var(--sk-border-radius);
+			outline-offset: -3px;
+		}
 	}
 
 	li {
@@ -446,21 +405,16 @@ It appears when the user clicks on the `Search` component or presses the corresp
 		height: 100%;
 		color: var(--sk-text-2);
 		opacity: 0.1;
-	}
 
-	a:focus + [aria-label='Delete'] {
-		color: var(--sk-back-1);
-	}
+		&:hover {
+			opacity: 1;
+			outline: none;
+		}
 
-	button[aria-label='Delete']:hover {
-		opacity: 1;
-		outline: none;
-	}
-
-	button[aria-label='Delete']:focus-visible {
-		background: var(--sk-theme-2);
-		color: var(--sk-text-1);
-		opacity: 1;
-		outline: none;
+		&:focus-visible {
+			opacity: 1;
+			border-radius: var(--sk-border-radius);
+			outline-offset: -3px;
+		}
 	}
 </style>

@@ -42,8 +42,7 @@ interface Action<
 ```
 
 <div class="ts-block-property-details"></div>
-</div>
-</div>
+</div></div>
 
 ## ActionReturn
 
@@ -100,7 +99,6 @@ destroy?: () => void;
 ```
 
 <div class="ts-block-property-details"></div>
-</div>
-</div>
+</div></div>
 
 

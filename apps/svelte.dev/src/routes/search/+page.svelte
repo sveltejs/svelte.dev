@@ -9,7 +9,6 @@
 </svelte:head>
 
 <main>
-	<h1>Search</h1>
 	<form>
 		<input
 			name="q"
@@ -26,17 +25,18 @@
 
 <style>
 	main {
-		max-width: 48rem;
+		--padding: 1rem;
+		max-width: 64rem;
 		margin: 0 auto;
 		padding: 8rem 1rem;
+		font-family: var(--sk-font-ui);
 	}
 
 	form {
-		--size: 4rem;
+		--size: 2rem;
 		position: relative;
 		width: 100%;
-		height: var(--size);
-		margin: 0 0 2em 0;
+		margin: 0 0 2rem 0;
 	}
 
 	input {
@@ -44,12 +44,12 @@
 		width: 100%;
 		height: 100%;
 		font-family: inherit;
-		font-size: inherit;
-		border: 1px solid var(--sk-back-5);
+		font-size: var(--sk-text-xl);
+		border: none;
+		/* border: 1px solid var(--sk-back-5); */
 		border-radius: var(--sk-border-radius);
-		padding-left: var(--size);
-		border-radius: var(--size);
-		background: no-repeat 1rem 50% / 2rem 2rem url(/icons/search.svg);
+		padding: 2rem 2rem 2rem 5rem;
+		background: no-repeat 1rem 50% / 3rem 3rem url(/icons/search.svg);
 		color: var(--sk-text-1);
 	}
 </style>

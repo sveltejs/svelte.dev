@@ -4,10 +4,10 @@ Renders a list of search results
 <script lang="ts">
 	import SearchResultList from './SearchResultList.svelte';
 	import type { Snippet } from 'svelte';
-	import type { Tree } from './types';
+	import type { BlockGroup } from './types';
 
 	interface Props {
-		results: Tree[];
+		results: BlockGroup[];
 		query: string;
 		onselect?: (href: string) => void;
 		children?: Snippet;
@@ -30,7 +30,7 @@ Renders a list of search results
 
 <style>
 	.info {
-		padding: 1rem;
+		padding: var(--padding);
 		font-size: 1.2rem;
 		font-weight: normal;
 		text-transform: uppercase;

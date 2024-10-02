@@ -38,6 +38,8 @@ function blur(
 
 </div>
 
+
+
 ## crossfade
 
 The `crossfade` function creates a pair of [transitions](https://svelte.dev/docs#template-syntax-element-directives-transition-fn) called `send` and `receive`. When an element is 'sent', it looks for a corresponding element being 'received', and generates a transition that transforms the element to its counterpart's position and fades it out. When an element is 'received', the reverse happens. If there is no counterpart, the `fallback` transition is used.
@@ -72,6 +74,8 @@ function crossfade({
 
 </div>
 
+
+
 ## draw
 
 Animates the stroke of an SVG element, like a snake in a tube. `in` transitions begin with the path invisible and draw the path to the screen over time. `out` transitions start in a visible state and gradually erase the path. `draw` only works with elements that have a `getTotalLength` method, like `<path>` and `<polyline>`.
@@ -94,6 +98,8 @@ function draw(
 
 </div>
 
+
+
 ## fade
 
 Animates the opacity of an element from 0 to the current opacity for `in` transitions and from the current opacity to 0 for `out` transitions.
@@ -108,6 +114,8 @@ function fade(
 ```
 
 </div>
+
+
 
 ## fly
 
@@ -131,6 +139,8 @@ function fly(
 
 </div>
 
+
+
 ## scale
 
 Animates the opacity and scale of an element. `in` transitions animate from an element's current (default) values to the provided values, passed as parameters. `out` transitions animate from the provided values to an element's default values.
@@ -152,6 +162,8 @@ function scale(
 
 </div>
 
+
+
 ## slide
 
 Slides an element in and out.
@@ -171,6 +183,8 @@ function slide(
 ```
 
 </div>
+
+
 
 ## BlurParams
 
@@ -223,8 +237,7 @@ opacity?: number;
 ```
 
 <div class="ts-block-property-details"></div>
-</div>
-</div>
+</div></div>
 
 ## CrossfadeParams
 
@@ -259,8 +272,7 @@ easing?: EasingFunction;
 ```
 
 <div class="ts-block-property-details"></div>
-</div>
-</div>
+</div></div>
 
 ## DrawParams
 
@@ -304,8 +316,7 @@ easing?: EasingFunction;
 ```
 
 <div class="ts-block-property-details"></div>
-</div>
-</div>
+</div></div>
 
 ## EasingFunction
 
@@ -314,7 +325,6 @@ easing?: EasingFunction;
 ```dts
 type EasingFunction = (t: number) => number;
 ```
-
 
 </div>
 
@@ -351,8 +361,7 @@ easing?: EasingFunction;
 ```
 
 <div class="ts-block-property-details"></div>
-</div>
-</div>
+</div></div>
 
 ## FlyParams
 
@@ -414,8 +423,7 @@ opacity?: number;
 ```
 
 <div class="ts-block-property-details"></div>
-</div>
-</div>
+</div></div>
 
 ## ScaleParams
 
@@ -468,8 +476,7 @@ opacity?: number;
 ```
 
 <div class="ts-block-property-details"></div>
-</div>
-</div>
+</div></div>
 
 ## SlideParams
 
@@ -513,8 +520,7 @@ axis?: 'x' | 'y';
 ```
 
 <div class="ts-block-property-details"></div>
-</div>
-</div>
+</div></div>
 
 ## TransitionConfig
 
@@ -567,7 +573,6 @@ tick?: (t: number, u: number) => void;
 ```
 
 <div class="ts-block-property-details"></div>
-</div>
-</div>
+</div></div>
 
 

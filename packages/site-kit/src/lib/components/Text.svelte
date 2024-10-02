@@ -409,8 +409,15 @@
 				--primary-hsl: var(--sk-text-warning-hsl);
 				--color: var(--primary-hsl);
 
-				&::before {
-					content: 'Deprecated';
+				p:first-child::before {
+					content: 'Deprecated ';
+					display: block;
+					/* text-transform: uppercase; */
+					font-style: normal;
+					/* font-family: var(--sk-font-ui); */
+					font-size: var(--sk-text-m);
+					font-weight: 500;
+					/* color: var(--sk-text-4); */
 				}
 
 				a {

@@ -26,8 +26,7 @@ constructor(...params: any[]);
 ```
 
 <div class="ts-block-property-details"></div>
-</div>
-</div>
+</div></div>
 
 ## SvelteMap
 
@@ -62,8 +61,7 @@ set(key: K, value: V): this;
 ```
 
 <div class="ts-block-property-details"></div>
-</div>
-</div>
+</div></div>
 
 ## SvelteSet
 
@@ -98,8 +96,7 @@ add(value: T): this;
 ```
 
 <div class="ts-block-property-details"></div>
-</div>
-</div>
+</div></div>
 
 ## SvelteURL
 
@@ -125,8 +122,7 @@ get searchParams(): SvelteURLSearchParams;
 ```
 
 <div class="ts-block-property-details"></div>
-</div>
-</div>
+</div></div>
 
 ## SvelteURLSearchParams
 
@@ -152,7 +148,6 @@ class SvelteURLSearchParams extends URLSearchParams {/*…*/}
 ```
 
 <div class="ts-block-property-details"></div>
-</div>
-</div>
+</div></div>
 
 

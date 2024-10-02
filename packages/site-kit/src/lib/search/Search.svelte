@@ -12,9 +12,10 @@ Renders a search widget which when clicked (or the corresponding keyboard shortc
 	<input
 		value={q}
 		oninput={(e) => {
-			$searching = true;
 			$search_query = e.currentTarget.value;
+			$searching = true;
 			e.currentTarget.value = '';
+			e.currentTarget.blur();
 		}}
 		onmousedown={(event) => {
 			event.preventDefault();

@@ -1,7 +1,7 @@
 export function focusable_children(node: HTMLElement) {
 	const nodes: HTMLElement[] = Array.from(
 		node.querySelectorAll(
-			'a[href], button, input, textarea, select, details, [tabindex]:not([tabindex="-1"])'
+			'a[href], button, input, textarea, select, summary, [tabindex]:not([tabindex="-1"])'
 		)
 	);
 
@@ -15,27 +15,29 @@ export function focusable_children(node: HTMLElement) {
 		nodes[i].focus();
 	};
 
+	function traverse(d: number, selector?: string) {
+		const reordered = [...nodes.slice(index), ...nodes.slice(0, index)];
+
+		let i = (reordered.length + d) % reordered.length;
+		let node;
+
+		while ((node = reordered[i])) {
+			i += d;
+
+			if (node.matches('details:not([open]) *')) {
+				continue;
+			}
+
+			if (!selector || node.matches(selector)) {
+				node.focus();
+				return;
+			}
+		}
+	}
+
 	return {
-		next: (selector?: string) => {
-			const reordered = [...nodes.slice(index + 1), ...nodes.slice(0, index + 1)];
-
-			for (let i = 0; i < reordered.length; i += 1) {
-				if (!selector || reordered[i].matches(selector)) {
-					reordered[i].focus();
-					return;
-				}
-			}
-		},
-		prev: (selector?: string) => {
-			const reordered = [...nodes.slice(index + 1), ...nodes.slice(0, index + 1)];
-
-			for (let i = reordered.length - 2; i >= 0; i -= 1) {
-				if (!selector || reordered[i].matches(selector)) {
-					reordered[i].focus();
-					return;
-				}
-			}
-		},
+		next: (selector?: string) => traverse(1, selector),
+		prev: (selector?: string) => traverse(-1, selector),
 		update
 	};
 }
