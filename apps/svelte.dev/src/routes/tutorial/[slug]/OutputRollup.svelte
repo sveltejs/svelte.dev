@@ -33,6 +33,7 @@
 <div class="content">
 	{#if browser}
 		<Viewer
+			relaxed
 			onLog={(l: Log[]) => logs = l}
 			{bundle}
 			theme={$theme.current}
