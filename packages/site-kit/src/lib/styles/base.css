@@ -26,6 +26,7 @@ body {
 	width: 100%;
 	tab-size: 2;
 	-moz-tab-size: 2;
+	scrollbar-gutter: stable;
 }
 
 * {
