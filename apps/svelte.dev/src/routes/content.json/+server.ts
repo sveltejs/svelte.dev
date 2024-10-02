@@ -91,13 +91,13 @@ async function content() {
 }
 
 async function plaintext(markdown: string) {
-	const block = (text: unknown) => `${text}\n`;
+	const block = ({ text }: any) => `${text}\n`;
 
-	const inline = (text: string) => text;
+	const inline = ({ text }: any) => text;
 
 	return (
 		await markedTransform(markdown, {
-			code: (source) => source.split('// ---cut---\n').pop() || 'ERROR: ---cut--- not found',
+			code: ({ text }) => text.split('// ---cut---\n').pop() || 'ERROR: ---cut--- not found',
 			blockquote: block,
 			html: () => '\n',
 			heading: (text) => `${text}\n`,
@@ -108,7 +108,7 @@ async function plaintext(markdown: string) {
 			paragraph: (text) => `${text}\n\n`,
 			table: block,
 			tablerow: block,
-			tablecell: (text, opts) => {
+			tablecell: ({ text }) => {
 				return text + ' ';
 			},
 			strong: inline,
@@ -116,8 +116,8 @@ async function plaintext(markdown: string) {
 			codespan: inline,
 			br: () => '',
 			del: inline,
-			link: (href, title, text) => text,
-			image: (href, title, text) => text,
+			link: inline,
+			image: inline,
 			text: inline
 		})
 	)

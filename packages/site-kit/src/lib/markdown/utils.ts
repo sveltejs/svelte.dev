@@ -105,6 +105,7 @@ const tokenizer: TokenizerObject = {
 
 export async function transform(markdown: string, renderer: Partial<Renderer> = {}) {
 	const marked = new Marked({
+		useNewRenderer: true,
 		renderer,
 		tokenizer
 	});

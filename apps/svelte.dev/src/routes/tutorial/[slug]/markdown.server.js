@@ -115,6 +115,7 @@ const default_renderer = {
  */
 export async function transform(markdown, options) {
 	const marked = new Marked({
+		useNewRenderer: true,
 		renderer: {
 			...default_renderer,
 			...options
