@@ -6,7 +6,7 @@ export const prerender = true;
 
 export async function load({ params }) {
 	const topic = params.path.split('/')[0];
-	const document = docs.topics[topic];
+	const document = docs.topics[`docs/${topic}`];
 
 	if (!document) {
 		error(404, 'Not found');
