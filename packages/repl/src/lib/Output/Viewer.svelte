@@ -24,12 +24,12 @@
 	export let injectedCSS = '';
 	export let theme: 'light' | 'dark';
 	/** A store containing the current bundle result. Takes precedence over REPL context, if set */
-	export let bundle: Writable<Bundle> | undefined = undefined;
+	export let bundle: Writable<Bundle | null> | undefined = undefined;
 	/** Called everytime a log is pushed. If this is set, the built-in console coming with the Viewer isn't shown */
 	export let onLog: ((logs: Log[]) => void) | undefined = undefined;
 
 	const context = get_repl_context();
-	bundle = bundle ?? context?.bundle;
+	bundle = bundle ?? context.bundle;
 
 	let logs: Log[] = [];
 	let log_group_stack: Log[][] = [];
@@ -98,7 +98,7 @@
 
 	$: if (ready) proxy?.iframe_command('set_theme', { theme });
 
-	async function apply_bundle($bundle: Bundle | null) {
+	async function apply_bundle($bundle: Bundle | null | undefined) {
 		if (!$bundle) return;
 
 		try {
