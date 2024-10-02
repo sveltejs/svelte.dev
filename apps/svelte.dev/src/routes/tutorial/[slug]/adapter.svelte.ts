@@ -1,6 +1,6 @@
 import { browser } from '$app/environment';
 import { page } from '$app/stores';
-import type { state as wc_state } from '$lib/tutorial/adapters/webcontainer/index.svelte.js';
+import type { state as wc_state } from '$lib/tutorial/adapters/webcontainer/index.svelte';
 import type { state as rollup_state } from '$lib/tutorial/adapters/rollup/index.svelte';
 import type { Adapter, FileStub, Stub } from '$lib/tutorial';
 
@@ -57,7 +57,7 @@ export function load_webcontainer(force = false) {
 				throw new Error('iOS does not support WebContainers');
 			}
 
-			const module = await import('$lib/tutorial/adapters/webcontainer/index.svelte.js');
+			const module = await import('$lib/tutorial/adapters/webcontainer/index.svelte');
 			adapter_state.wc_state = module.state;
 			const adapter = await module.create();
 

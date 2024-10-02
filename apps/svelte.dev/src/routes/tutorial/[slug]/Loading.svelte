@@ -94,7 +94,7 @@
 			/>
 		</svg>
 
-		{#if initial}
+		{#if initial || progress < 1}
 			<div class="progress-container">
 				<div class="progress" style="width: {progress * 100}%;"></div>
 			</div>

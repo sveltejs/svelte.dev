@@ -10,7 +10,6 @@
 
 	const bundle = toStore(() => adapter_state.bundle);
 
-	let initial = $state(true);
 	let terminal_visible = $state(false);
 </script>
 
@@ -25,7 +24,7 @@
 	{#if adapter_state.progress.value !== 1}
 		<!-- TODO is there any startup error we should worry about and forward to the Loading component? -->
 		<Loading
-			{initial}
+			initial={false}
 			progress={adapter_state.progress.value}
 			status={adapter_state.progress.text}
 		/>
