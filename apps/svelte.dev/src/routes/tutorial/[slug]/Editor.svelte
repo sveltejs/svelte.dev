@@ -50,25 +50,21 @@
 
 	$: if (editor_view) {
 		if ($selected_name) {
-			const current_warnings = $warnings[$selected_name];
+			const current_warnings = $warnings[$selected_name] || [];
+			const diagnostics = current_warnings.map((warning) => {
+				/** @type {import('@codemirror/lint').Diagnostic} */
+				const diagnostic = {
+					from: warning.start.character,
+					to: warning.end.character,
+					severity: 'warning',
+					message: warning.message
+				};
 
-			if (current_warnings) {
-				const diagnostics = current_warnings.map((warning) => {
-					/** @type {import('@codemirror/lint').Diagnostic} */
-					const diagnostic = {
-						from: warning.start.character,
-						to: warning.end.character,
-						severity: 'warning',
-						message: warning.message
-					};
+				return diagnostic;
+			});
+			const transaction = setDiagnostics(editor_view.state, diagnostics);
 
-					return diagnostic;
-				});
-
-				const transaction = setDiagnostics(editor_view.state, diagnostics);
-
-				editor_view.dispatch(transaction);
-			}
+			editor_view.dispatch(transaction);
 		}
 	}
 
