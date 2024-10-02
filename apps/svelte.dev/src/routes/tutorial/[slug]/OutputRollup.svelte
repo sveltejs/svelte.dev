@@ -7,7 +7,7 @@
 	import { theme } from '@sveltejs/site-kit/stores';
 	import Chrome from './Chrome.svelte';
 	import Loading from './Loading.svelte';
-	import { adapter_state } from './adapter.svelte';
+	import { adapter_state, update } from './adapter.svelte';
 	import { toStore } from 'svelte/store';
 
 	const bundle = toStore(() => adapter_state.bundle);
@@ -16,8 +16,19 @@
 	let logs = $state<Log[]>([]);
 </script>
 
-<!-- TODO: refresh iframe somehow? -->
-<Chrome toggle_terminal={() => (terminal_visible = !terminal_visible)} />
+<Chrome
+	refresh={() => {
+		// Add bogus file to trigger a refresh
+		update({
+			text: true,
+			type: 'file',
+			basename: '__generated__.svelte',
+			name: '__generated__.svelte',
+			contents: ''
+		});
+	}}
+	toggle_terminal={() => (terminal_visible = !terminal_visible)}
+/>
 
 <div class="content">
 	{#if browser}

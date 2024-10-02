@@ -50,7 +50,7 @@ if (browser) {
 	});
 }
 
-let wc_ready: Promise<Adapter> | undefined;
+let wc_ready: Promise<Adapter> | undefined = undefined;
 
 export function load_webcontainer(force = false) {
 	if (!force && wc_ready) return wc_ready;
@@ -75,7 +75,7 @@ export function load_webcontainer(force = false) {
 	return wc_ready;
 }
 
-let rollup_ready: Promise<Adapter> | undefined;
+let rollup_ready: Promise<Adapter> | undefined = undefined;
 
 export function load_rollup(force = false) {
 	if (!force && rollup_ready) return rollup_ready;
