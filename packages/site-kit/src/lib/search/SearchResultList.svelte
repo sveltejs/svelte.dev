@@ -83,7 +83,7 @@
 			color: var(--sk-text-4);
 			text-transform: uppercase;
 			padding: 0.5rem var(--padding);
-			font-size: var(--sk-text-xs);
+			font-size: var(--sk-font-size-ui-medium);
 			z-index: 2;
 			user-select: none;
 
@@ -168,7 +168,7 @@
 		strong {
 			width: 100%;
 			overflow: hidden;
-			font-size: var(--sk-text-s);
+			font-size: var(--sk-font-size-ui-medium);
 			color: var(--sk-text-2);
 
 			span {
@@ -178,7 +178,7 @@
 					content: ' • ';
 					position: relative;
 					color: var(--sk-text-4);
-					font-size: var(--sk-text-xs);
+					font-size: var(--sk-font-size-ui-small);
 					top: -0.1rem;
 				}
 			}
@@ -213,8 +213,7 @@
 
 			span {
 				color: var(--sk-text-3);
-				font-size: var(--sk-text-xs);
-				color: #170a0a;
+				font-size: var(--sk-font-size-ui-small);
 				margin: 0.4rem 0 0 0;
 			}
 

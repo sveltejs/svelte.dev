@@ -34,28 +34,23 @@
 	{#if contents}
 		{#each contents as { sections, title }, index}
 			<section>
-				<h3>{title}</h3>
+				<h2>{title}</h2>
 
 				{#if sections.length !== 0}
 					<ul>
 						{#each sections as { title, sections: subsections }}
 							<li>
 								{#if title}
-									<h4>
+									<h3>
 										{title}
-									</h4>
+									</h3>
 								{/if}
 
 								<ul>
-									{#each subsections as { path, title, badge }}
+									{#each subsections as { path, title }}
 										<li>
 											<a href={path} aria-current={path === $page.url.pathname}>
 												{title}
-
-												{#if badge}
-													<span style="flex: 1 1 auto"></span>
-													<span class="badge">{badge}</span>
-												{/if}
 											</a>
 										</li>
 									{/each}
@@ -77,7 +72,7 @@
 	nav {
 		padding: 0.29rem;
 		padding-top: 0;
-		font-family: var(--sk-font-body);
+		font-family: var(--sk-font-ui);
 		overflow-y: auto;
 
 		height: 100%;
@@ -86,7 +81,6 @@
 	section > ul {
 		padding: 1rem;
 		padding-bottom: 0rem;
-
 		margin-bottom: 0;
 	}
 
@@ -104,28 +98,25 @@
 		transform: translateX(2.5%);
 	}
 
-	h3,
-	h4 {
+	h2,
+	h3 {
 		display: block;
 
 		padding-bottom: 0.8rem;
 
-		font-size: var(--sk-text-xs);
+		font-family: var(--sk-font-ui);
+		font-size: var(--sk-font-size-ui-medium);
 		text-transform: uppercase;
 		letter-spacing: 0.1em;
 		font-weight: 600;
 		color: var(--sk-text-3);
 	}
 
-	h3 {
+	h2 {
 		position: sticky;
 		top: -1px;
 		z-index: 1;
-
-		font-size: var(--sk-text-s);
-
 		background-color: var(--sk-back-3);
-
 		width: 98%;
 		padding: 1rem 1rem 1rem 4px;
 		margin-left: 4px;
@@ -147,9 +138,8 @@
 		display: flex;
 		align-items: center;
 		border-radius: var(--sk-border-radius);
-		line-height: 1;
 		color: var(--sk-text-2);
-		padding: 0.9rem 0.75rem !important;
+		padding: 0 0.75rem !important;
 		transition: 0.1s ease;
 		transition-property: background-color, color;
 	}
@@ -160,23 +150,8 @@
 	}
 
 	[aria-current='true'] {
-		background-color: hsla(var(--sk-theme-1-hsl), 0.1) !important;
+		/* background-color: hsla(var(--sk-theme-1-hsl), 0.1) !important; */
 		color: var(--sk-theme-1) !important;
 		font-weight: 400;
-	}
-
-	.badge {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		padding: 0.5rem 0.75rem;
-		border-radius: 30px;
-		font-size: 1.1rem;
-		font-weight: 600;
-		letter-spacing: 1px;
-		font-family: var(--sk-font-body);
-		line-height: 1;
-		color: var(--sk-theme-1);
-		background: hsla(var(--sk-theme-1-hsl), 0.1);
 	}
 </style>

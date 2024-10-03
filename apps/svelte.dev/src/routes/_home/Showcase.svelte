@@ -39,8 +39,6 @@
 	h2 {
 		color: white;
 		margin-bottom: 1em;
-		text-transform: uppercase;
-		font-size: var(--sk-text-s);
 		text-align: center;
 	}
 
@@ -81,7 +79,6 @@
 		backdrop-filter: blur(3px);
 		opacity: 0;
 		transition: opacity 0.2s;
-		font-size: var(--sk-text-s);
 		filter: drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.5));
 	}
 

@@ -38,15 +38,13 @@
 		padding: var(--sk-page-padding-top) var(--sk-page-padding-side) 6rem var(--sk-page-padding-side);
 		max-width: var(--sk-page-main-width);
 		margin: 0 auto;
+		text-wrap: balance;
 	}
 
 	h2 {
 		display: inline-block;
-		/* margin: 3.2rem 0 0.4rem 0; */
 		color: var(--sk-text-2);
-		max-width: 18em;
-		font-size: var(--sk-text-m);
-		font-weight: 400;
+		font-size: var(--sk-font-size-h3);
 	}
 
 	.post {
@@ -56,7 +54,7 @@
 			content: 'Latest post • ' attr(data-pubdate);
 			color: var(--sk-text-4);
 			font-family: var(--sk-font-ui);
-			font-size: var(--sk-text-xs);
+			font-size: var(--sk-font-size-ui-small);
 			font-weight: 400;
 			text-transform: uppercase;
 		}
@@ -86,7 +84,7 @@
 		}
 
 		p {
-			font-size: var(--sk-text-s);
+			font-size: var(--sk-font-size-body-small);
 			color: var(--sk-text-3);
 			margin: 0;
 		}

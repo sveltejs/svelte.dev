@@ -11,7 +11,7 @@
 <style>
 	.breadcrumbs {
 		font-family: var(--sk-font-ui);
-		font-size: var(--sk-text-xs);
+		font-size: var(--sk-font-size-ui-small);
 		color: var(--sk-text-4);
 		text-transform: uppercase;
 		line-height: 1.35;

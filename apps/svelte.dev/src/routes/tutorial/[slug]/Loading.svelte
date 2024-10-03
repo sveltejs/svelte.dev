@@ -160,7 +160,8 @@
 	}
 
 	h2 {
-		font-size: var(--sk-text-xl);
+		font-family: var(--sk-font-ui);
+		font-size: var(--sk-font-size-ui-large);
 	}
 
 	p {
@@ -178,7 +179,7 @@
 	}
 
 	small {
-		font-size: var(--sk-text-xs);
+		font-size: var(--sk-font-size-ui-small);
 		color: var(--sk-text-3);
 		text-transform: uppercase;
 	}

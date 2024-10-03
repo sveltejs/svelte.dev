@@ -108,7 +108,7 @@
 
 	.controls span {
 		display: block;
-		font-size: var(--sk-text-s);
+		font-size: var(--sk-font-size-ui-medium);
 		text-transform: uppercase;
 		font-weight: 400;
 		font-family: var(--sk-font-ui);

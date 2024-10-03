@@ -367,7 +367,7 @@
 		justify-content: start;
 		gap: 1rem;
 
-		font-size: 0.9em;
+		font-size: var(--sk-font-size-ui-medium);
 		color: var(--sk-text-3);
 
 		background-color: var(--sk-back-3);
@@ -430,10 +430,6 @@
 		padding-left: 1rem;
 	}
 
-	.viewport :global(a[aria-current='true']) {
-		background-color: hsla(var(--sk-theme-1-hsl), 0.05);
-	}
-
 	.viewport :global(a:hover),
 	.related-menu-arrow:hover {
 		border-radius: var(--sk-border-radius);
@@ -441,10 +437,5 @@
 		text-decoration: none;
 
 		background-color: var(--sk-back-4);
-	}
-
-	.viewport :global(a[aria-current='true']:hover) {
-		background-color: hsla(var(--sk-theme-1-hsl), 0.05);
-		color: var(--sk-theme-1);
 	}
 </style>

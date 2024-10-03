@@ -120,13 +120,3 @@
 		{/snippet}
 	</Footer>
 </div>
-
-<style>
-	h2 {
-		line-height: 1.05;
-	}
-
-	p {
-		font-size: var(--sk-text-m);
-	}
-</style>

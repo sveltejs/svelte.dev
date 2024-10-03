@@ -311,7 +311,6 @@ export default app;`
 		border: none;
 		color: currentColor;
 		font-family: var(--sk-font-ui);
-		font-size: var(--sk-text-m);
 		opacity: 0.7;
 		outline: none;
 		flex: 1;

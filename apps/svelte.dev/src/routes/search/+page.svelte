@@ -44,9 +44,8 @@
 		width: 100%;
 		height: 100%;
 		font-family: inherit;
-		font-size: var(--sk-text-xl);
+		font-size: var(--sk-font-size-h2);
 		border: none;
-		/* border: 1px solid var(--sk-back-5); */
 		border-radius: var(--sk-border-radius);
 		padding: 2rem 2rem 2rem 5rem;
 		background: no-repeat 1rem 50% / 3rem 3rem url(/icons/search.svg);

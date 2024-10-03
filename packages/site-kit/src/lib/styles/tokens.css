@@ -27,15 +27,18 @@
 	--sk-font-body: 'EB Garamond', 'Big Caslon', Palatino, 'Book Antiqua', Cambria, serif;
 	--sk-font-heading: 'DM Serif Display';
 	--sk-font-mono: 'Fira Mono', monospace;
-	--sk-text-xxl: 3.6rem;
-	--sk-text-xl: 3rem;
-	--sk-text-l: 2.4rem;
-	--sk-text-m: 2.1rem;
-	--sk-text-s: 1.8rem;
-	--sk-text-xs: 1.4rem;
-	--sk-line-max-width: 84rem;
 
-	--sk-focus-outline: 0 0 0 2px hsla(var(--sk-theme-1-hsl), 0.6);
+	--sk-font-size-h1: 3.6rem;
+	--sk-font-size-h2: 3rem;
+	--sk-font-size-h3: 2.4rem;
+	--sk-font-size-body: 2.1rem;
+	--sk-font-size-body-small: 1.8rem;
+	--sk-font-size-ui-small: 1.4rem;
+	--sk-font-size-ui-medium: 1.8rem;
+	--sk-font-size-ui-large: 3rem; /* TODO add regular/small */
+	--sk-font-size-code: 1.4rem;
+
+	--sk-line-max-width: 84rem;
 
 	/* Base colors */
 	--sk-theme-1-hsl: 12, 93%, 43%;
@@ -136,8 +139,7 @@
 
 @media screen and (min-width: 768px) {
 	:root {
-		--sk-text-xxl: 5.4rem;
-		--sk-text-xl: 3.6rem;
+		--sk-font-size-h1: 5.4rem;
 		--sk-page-padding-top: 8rem;
 		--sk-page-padding-side: 4.8rem;
 	}

@@ -62,7 +62,6 @@
 	.try {
 		width: 100%;
 		margin: 0 auto;
-		font-size: var(--sk-text-m);
 		color: var(--sk-text-1);
 	}
 
@@ -74,7 +73,6 @@
 		display: inline-block;
 		width: 25rem;
 		margin: 0 0 1rem;
-		font-size: var(--sk-text-xl);
 	}
 
 	@media (min-width: 900px) {

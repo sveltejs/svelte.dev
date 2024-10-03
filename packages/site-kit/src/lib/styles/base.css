@@ -18,7 +18,7 @@ body {
 }
 
 body {
-	font-size: var(--sk-text-s);
+	font-size: var(--sk-font-size-body-small);
 	font-family: var(--sk-font-body);
 	line-height: 1.5;
 	color: var(--sk-text-2);
@@ -48,6 +48,7 @@ body {
 p,
 ul,
 ol {
+	font-size: var(--sk-font-size-body);
 	margin: 1em 0;
 }
 
@@ -62,26 +63,19 @@ a:hover {
 	text-decoration: underline;
 }
 
-h6 {
-	font-size: var(--sk-text-xs);
-}
-h5 {
-	font-size: var(--sk-text-s);
-}
-h4 {
-	font-size: var(--sk-text-s);
-}
-h3 {
-	font-size: var(--sk-text-m);
-}
-h2 {
-	font-size: var(--sk-text-l);
-}
 h1 {
-	font-size: var(--sk-text-xxl);
+	font-size: var(--sk-font-size-h1);
 }
 
-:where(h1, h2, h3, h4, h5, h6) {
+h2 {
+	font-size: var(--sk-font-size-h2);
+}
+
+h3 {
+	font-size: var(--sk-font-size-h3);
+}
+
+:where(h1, h2, h3) {
 	position: relative;
 	font-family: var(--sk-font-heading);
 	font-weight: 500;
@@ -95,12 +89,11 @@ strong {
 
 code,
 kbd {
-	font-size: var(--sk-text-xs);
 	font-family: var(--sk-font-mono);
-	line-height: 1.7;
 }
 
 code {
+	font-size: var(--sk-font-size-code);
 	position: relative;
 	border-radius: 0.3em;
 	white-space: nowrap;
@@ -110,6 +103,7 @@ code {
 	margin: 0 0.2rem;
 	top: -0.1rem;
 	background: var(--sk-back-4);
+	line-height: 1.7;
 }
 
 pre {
@@ -137,7 +131,7 @@ blockquote {
 }
 
 blockquote :where(p, ul) {
-	font-size: var(--sk-text-s);
+	font-size: var(--sk-font-size-body-small);
 }
 
 blockquote :last-child {
@@ -209,7 +203,7 @@ a {
 /*  tables --------------------------------- */
 table {
 	width: 100%;
-	font-size: var(--sk-text-s);
+	font-size: var(--sk-font-size-body-small);
 }
 
 td,

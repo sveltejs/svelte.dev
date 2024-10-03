@@ -247,7 +247,6 @@
 
 	h2 {
 		color: var(--sk-text-2);
-		font-size: var(--sk-text-s);
 		font-weight: 400;
 		overflow: hidden;
 		text-overflow: ellipsis;

@@ -65,23 +65,6 @@
 		ol,
 		ul {
 			margin: 1em 0;
-			font-size: var(--sk-text-m);
-		}
-
-		/* TODO is this still used? don't think so */
-		section {
-			max-width: var(--sk-line-max-width);
-			padding: 0 0 0 1rem;
-
-			h2,
-			h3,
-			h4 {
-				margin-left: -1rem;
-			}
-
-			a code {
-				color: inherit;
-			}
 		}
 
 		code {
@@ -251,7 +234,6 @@
 				box-sizing: border-box;
 				color: var(--sk-code-base);
 				border-radius: var(--sk-border-radius);
-				font-size: var(--sk-text-s);
 				overflow-x: auto;
 
 				code {
@@ -324,7 +306,7 @@
 				opacity: 0;
 				transition: opacity 0.2s;
 
-				:where(h2, h3, h4, h5, h6):hover & {
+				:where(h2, h3):hover & {
 					opacity: 1;
 				}
 			}
@@ -371,7 +353,7 @@
 		}
 
 		small {
-			font-size: var(--sk-text-s);
+			font-size: var(--sk-font-size-body-small);
 			float: right;
 			pointer-events: all;
 			color: var(--sk-theme-1);
@@ -410,12 +392,7 @@
 				p:first-child::before {
 					content: 'Deprecated ';
 					display: block;
-					/* text-transform: uppercase; */
 					font-style: normal;
-					/* font-family: var(--sk-font-ui); */
-					font-size: var(--sk-text-m);
-					font-weight: 500;
-					/* color: var(--sk-text-4); */
 				}
 
 				a {
@@ -460,9 +437,9 @@
 				align-items: center;
 				height: 3rem;
 				color: var(--sk-text-4);
-				font-family: var(--sk-font-heading);
+				font-family: var(--sk-font-ui);
 				font-style: normal;
-				font-size: var(--sk-text-xs);
+				font-size: var(--sk-font-size-ui-small);
 				user-select: none;
 
 				&:hover {

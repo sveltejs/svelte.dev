@@ -62,7 +62,7 @@
 	}
 
 	h1 {
-		font-size: var(--sk-text-xxl);
+		font-size: var(--sk-font-size-h1);
 		margin: 0 0 0.5em 0;
 	}
 

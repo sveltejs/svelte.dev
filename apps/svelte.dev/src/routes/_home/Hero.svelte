@@ -72,7 +72,7 @@
 	}
 
 	strong {
-		font-size: var(--sk-text-l);
+		font-size: var(--sk-font-size-h2);
 		text-align: center;
 		font-family: var(--sk-font-heading);
 		text-transform: lowercase;
@@ -93,7 +93,7 @@
 		gap: 0.1rem;
 		background: var(--sk-theme-1);
 		padding: 0.35em 0.8em;
-		font-size: var(--sk-text-s);
+		font-family: var(--sk-font-ui);
 		letter-spacing: 0.05em;
 		font-weight: 600;
 		white-space: nowrap;
@@ -142,7 +142,6 @@
 
 		strong {
 			text-align: left;
-			font-size: calc(0.04 * var(--width));
 		}
 
 		.hero {

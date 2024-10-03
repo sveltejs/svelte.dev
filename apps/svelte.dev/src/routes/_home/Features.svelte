@@ -34,10 +34,7 @@
 				<strong>Deploy anywhere</strong> with adapters.
 			</p>
 
-			<p>
-				SvelteKit is the framework that
-				<strong>grows with you</strong>, whatever you end up building.
-			</p>
+			<p>SvelteKit is the framework that grows with you, whatever you end up building.</p>
 		</div>
 	</div>
 </Section>
@@ -67,16 +64,17 @@
 
 	.wall {
 		margin: 0;
-		font-size: var(--sk-text-xs);
+		font-family: var(--sk-font-ui);
+		font-size: var(--sk-font-size-ui-small);
+		color: var(--sk-text-4);
+
+		strong {
+			color: var(--sk-text-1);
+		}
 	}
 
 	p + p {
 		margin-top: 1em;
-	}
-
-	p,
-	strong {
-		color: var(--sk-text-3);
 	}
 
 	@media (min-width: 600px) {
@@ -107,10 +105,6 @@
 
 		h2 {
 			margin-top: 0.1em;
-		}
-
-		p {
-			font-size: var(--sk-text-s);
 		}
 
 		.features {

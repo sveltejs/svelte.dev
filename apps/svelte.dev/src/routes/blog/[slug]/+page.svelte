@@ -56,7 +56,7 @@
 	}
 
 	.standfirst {
-		font-size: var(--sk-text-s);
+		font-size: var(--sk-font-size-body-small);
 		color: var(--sk-text-3);
 		margin: 0 0 1em 0;
 	}
@@ -65,7 +65,7 @@
 		margin: 0 0 4rem 0;
 		padding: 1rem 0 0 0;
 		font-family: var(--sk-font-ui);
-		font-size: var(--sk-text-xs);
+		font-size: var(--sk-font-size-ui-small);
 		text-transform: uppercase;
 	}
 

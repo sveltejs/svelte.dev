@@ -5,8 +5,10 @@
 
 <Section --background="var(--background-1)">
 	<p class="definition">
-		<em>/ˈsvɛlt/</em> <span class="adjective">adjective</span>
-		<span class="description">attractively thin, graceful and stylish</span>
+		<em>/ˈsvɛlt/</em>
+		<span class="description">
+			<span class="adjective">adjective</span> attractively thin, graceful and stylish
+		</span>
 	</p>
 
 	<div class="grid" style="--columns: 3">
@@ -68,42 +70,39 @@
 </Section>
 
 <style>
-	p {
-		font-size: var(--sk-text-s);
-	}
-
 	.definition {
-		font-size: var(--sk-text-l);
-	}
+		display: flex;
+		align-items: baseline;
 
-	.definition em {
-		font-style: normal;
-		font-size: var(--sk-text-xxl);
-		color: var(--sk-theme-1);
-	}
+		em {
+			font-style: normal;
+			font-size: var(--sk-font-size-h1);
+			color: var(--sk-theme-1);
+		}
 
-	.definition .adjective {
-		position: relative;
-		top: -0.15em;
-		padding: 0.25em 0.5em 0.1em;
-		line-height: 1;
-		margin: 0 1em;
-		text-transform: uppercase;
-		font-size: var(--sk-text-s);
-		background: var(--sk-text-2);
-		border-radius: var(--sk-border-radius);
-		color: var(--sk-back-2);
-	}
+		.description {
+			position: relative;
+			font-family: var(--sk-font-ui);
+			display: flex;
+			align-items: center;
+			bottom: 0.2em;
 
-	.definition .description {
-		display: block;
+			.adjective {
+				position: relative;
+				padding: 0.25em 0.5em 0.1em;
+				line-height: 1;
+				margin: 0 1em;
+				text-transform: uppercase;
+				font-size: var(--sk-font-size-ui-medium);
+				background: var(--sk-text-2);
+				border-radius: var(--sk-border-radius);
+				font-family: var(--sk-font-ui);
+				color: var(--sk-back-2);
+			}
+		}
 	}
 
 	@media (min-width: 900px) {
-		.definition .description {
-			display: inline;
-		}
-
 		.video-container {
 			order: 2;
 			grid-column: 2 / 4;
