@@ -79,7 +79,7 @@
 
 		label {
 			font-family: var(--sk-font-ui);
-			font-size: var(--sk-font-size-ui-tiny);
+			font-size: var(--sk-font-size-ui-small);
 			display: block;
 		}
 

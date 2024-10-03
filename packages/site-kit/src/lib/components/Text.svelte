@@ -437,9 +437,9 @@
 				align-items: center;
 				height: 3rem;
 				color: var(--sk-text-4);
-				font-family: var(--sk-font-heading);
+				font-family: var(--sk-font-ui);
 				font-style: normal;
-				font-size: var(--sk-text-xs);
+				font-size: var(--sk-font-size-ui-small);
 				user-select: none;
 
 				&:hover {

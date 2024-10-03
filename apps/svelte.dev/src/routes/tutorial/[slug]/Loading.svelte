@@ -179,7 +179,7 @@
 	}
 
 	small {
-		font-size: var(--sk-text-xs);
+		font-size: var(--sk-font-size-ui-small);
 		color: var(--sk-text-3);
 		text-transform: uppercase;
 	}

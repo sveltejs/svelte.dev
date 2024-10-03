@@ -110,6 +110,11 @@
 </li>
 
 <style>
+	* {
+		font-family: var(--sk-font-mono);
+		font-size: var(--sk-font-size-code);
+	}
+
 	ul {
 		padding: 0 0 0 2ch;
 		margin: 0;
@@ -120,13 +125,10 @@
 		background-color: var(--sk-highlight-color);
 	}
 
-	.preview {
-		opacity: 0.8;
-		font-style: italic;
-	}
-
-	button:hover {
-		text-decoration: underline;
+	button {
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 
 	.ast-toggle {

@@ -105,7 +105,7 @@
 		padding-bottom: 0.8rem;
 
 		font-family: var(--sk-font-ui);
-		font-size: var(--sk-font-size-ui-small);
+		font-size: var(--sk-font-size-ui-medium);
 		text-transform: uppercase;
 		letter-spacing: 0.1em;
 		font-weight: 600;

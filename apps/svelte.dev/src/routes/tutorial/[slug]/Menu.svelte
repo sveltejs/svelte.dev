@@ -193,11 +193,11 @@
 	header strong,
 	h1 {
 		font-family: inherit;
-		font-size: var(--sk-font-size-ui-small);
+		font-size: var(--sk-font-size-ui-medium);
 	}
 
 	.menu {
-		font-size: var(--sk-font-size-ui-small);
+		font-size: var(--sk-font-size-ui-medium);
 		border: none;
 	}
 
@@ -449,12 +449,12 @@
 
 		h1 :where(.part-title, .chapter-title) {
 			grid-row: 2 / span 1;
-			font-size: var(--sk-text-xs);
+			font-size: var(--sk-font-size-ui-small);
 			color: var(--sk-text-3);
 		}
 
 		h1 strong {
-			font-size: var(--sk-font-size-ui-small) !important;
+			font-size: var(--sk-font-size-ui-medium) !important;
 			line-height: 1;
 		}
 	}

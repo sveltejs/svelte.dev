@@ -55,7 +55,6 @@
 
 	.terminal pre {
 		padding: 1em;
-		font-size: var(--sk-text-xs);
 	}
 
 	.line::before {
@@ -70,11 +69,5 @@
 
 	.orange-highlight {
 		color: hsl(15, 100%, 65%);
-	}
-
-	@media (min-width: 440px) {
-		.terminal pre {
-			font-size: var(--sk-font-size-ui);
-		}
 	}
 </style>

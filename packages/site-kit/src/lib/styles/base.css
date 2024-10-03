@@ -89,12 +89,11 @@ strong {
 
 code,
 kbd {
-	font-size: var(--sk-text-xs);
 	font-family: var(--sk-font-mono);
-	line-height: 1.7;
 }
 
 code {
+	font-size: var(--sk-font-size-code);
 	position: relative;
 	border-radius: 0.3em;
 	white-space: nowrap;
@@ -104,6 +103,7 @@ code {
 	margin: 0 0.2rem;
 	top: -0.1rem;
 	background: var(--sk-back-4);
+	line-height: 1.7;
 }
 
 pre {

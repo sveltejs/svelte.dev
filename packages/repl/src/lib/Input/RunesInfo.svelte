@@ -70,7 +70,7 @@
 		display: flex;
 		text-transform: uppercase;
 		font-weight: 300;
-		font-size: var(--sk-text-s);
+		font-size: var(--sk-font-size-ui-small);
 		padding: 0.8rem;
 		gap: 0.5rem;
 		margin-right: 0.3rem;

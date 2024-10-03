@@ -54,7 +54,7 @@
 			content: 'Latest post • ' attr(data-pubdate);
 			color: var(--sk-text-4);
 			font-family: var(--sk-font-ui);
-			font-size: var(--sk-font-size-ui-tiny);
+			font-size: var(--sk-font-size-ui-small);
 			font-weight: 400;
 			text-transform: uppercase;
 		}
