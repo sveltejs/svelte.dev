@@ -42,7 +42,6 @@ body {
 
 *:focus-visible {
 	outline: 2px solid hsla(var(--sk-theme-1-hsl), 0.6);
-	/* box-shadow: var(--sk-focus-outline); */
 	transition: 0.1s ease;
 }
 
@@ -174,8 +173,6 @@ button > svg {
 
 /*  links ------------------------------------- */
 a {
-	position: relative;
-	padding: 0 0 1px 0;
 	color: var(--sk-theme-1);
 }
 
