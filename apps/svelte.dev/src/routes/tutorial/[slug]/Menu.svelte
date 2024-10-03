@@ -193,11 +193,9 @@
 	header strong,
 	h1 {
 		font-family: inherit;
-		font-size: var(--sk-font-size-ui-medium);
 	}
 
 	.menu {
-		font-size: var(--sk-font-size-ui-medium);
 		border: none;
 	}
 
@@ -252,7 +250,7 @@
 		text-overflow: ellipsis;
 		text-align: center;
 		color: var(--sk-text-2);
-		font-weight: 400;
+		font-size: var(--sk-font-size-ui-small);
 	}
 
 	h1 .desktop {
@@ -451,11 +449,6 @@
 			grid-row: 2 / span 1;
 			font-size: var(--sk-font-size-ui-small);
 			color: var(--sk-text-3);
-		}
-
-		h1 strong {
-			font-size: var(--sk-font-size-ui-medium) !important;
-			line-height: 1;
 		}
 	}
 </style>
