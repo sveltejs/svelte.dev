@@ -171,7 +171,7 @@ export async function render_content_markdown(
 			}
 
 			if (converted) {
-				html += `<input class="ts-toggle" title="Toggle language" type="checkbox" aria-label="Toggle JS/TS">`;
+				html += `<input class="ts-toggle" checked title="Toggle language" type="checkbox" aria-label="Toggle JS/TS">`;
 			}
 
 			if (options.copy) {
