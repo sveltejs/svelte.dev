@@ -160,7 +160,8 @@
 	}
 
 	h2 {
-		font-size: var(--sk-text-xl);
+		font-family: var(--sk-font-ui);
+		font-size: var(--sk-font-size-ui-large);
 	}
 
 	p {

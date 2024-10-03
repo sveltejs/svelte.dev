@@ -78,7 +78,7 @@
 
 	.definition em {
 		font-style: normal;
-		font-size: var(--sk-text-xxl);
+		font-size: var(--sk-font-size-h1);
 		color: var(--sk-theme-1);
 	}
 

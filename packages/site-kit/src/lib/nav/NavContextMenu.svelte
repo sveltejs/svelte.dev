@@ -34,16 +34,16 @@
 	{#if contents}
 		{#each contents as { sections, title }, index}
 			<section>
-				<h3>{title}</h3>
+				<h2>{title}</h2>
 
 				{#if sections.length !== 0}
 					<ul>
 						{#each sections as { title, sections: subsections }}
 							<li>
 								{#if title}
-									<h4>
+									<h3>
 										{title}
-									</h4>
+									</h3>
 								{/if}
 
 								<ul>
@@ -77,7 +77,7 @@
 	nav {
 		padding: 0.29rem;
 		padding-top: 0;
-		font-family: var(--sk-font-body);
+		font-family: var(--sk-font-ui);
 		overflow-y: auto;
 
 		height: 100%;
@@ -86,7 +86,6 @@
 	section > ul {
 		padding: 1rem;
 		padding-bottom: 0rem;
-
 		margin-bottom: 0;
 	}
 
@@ -104,8 +103,8 @@
 		transform: translateX(2.5%);
 	}
 
-	h3,
-	h4 {
+	h2,
+	h3 {
 		display: block;
 
 		padding-bottom: 0.8rem;
@@ -117,7 +116,7 @@
 		color: var(--sk-text-3);
 	}
 
-	h3 {
+	h2 {
 		position: sticky;
 		top: -1px;
 		z-index: 1;
@@ -160,7 +159,7 @@
 	}
 
 	[aria-current='true'] {
-		background-color: hsla(var(--sk-theme-1-hsl), 0.1) !important;
+		/* background-color: hsla(var(--sk-theme-1-hsl), 0.1) !important; */
 		color: var(--sk-theme-1) !important;
 		font-weight: 400;
 	}
@@ -174,7 +173,7 @@
 		font-size: 1.1rem;
 		font-weight: 600;
 		letter-spacing: 1px;
-		font-family: var(--sk-font-body);
+		font-family: var(--sk-font-ui);
 		line-height: 1;
 		color: var(--sk-theme-1);
 		background: hsla(var(--sk-theme-1-hsl), 0.1);

@@ -62,26 +62,19 @@ a:hover {
 	text-decoration: underline;
 }
 
-h6 {
-	font-size: var(--sk-text-xs);
+h1 {
+	font-size: var(--sk-font-size-h1);
 }
-h5 {
-	font-size: var(--sk-text-s);
+
+h2 {
+	font-size: var(--sk-font-size-h2);
 }
-h4 {
-	font-size: var(--sk-text-s);
-}
+
 h3 {
 	font-size: var(--sk-text-m);
 }
-h2 {
-	font-size: var(--sk-text-l);
-}
-h1 {
-	font-size: var(--sk-text-xxl);
-}
 
-:where(h1, h2, h3, h4, h5, h6) {
+:where(h1, h2, h3) {
 	position: relative;
 	font-family: var(--sk-font-heading);
 	font-weight: 500;

@@ -68,22 +68,6 @@
 			font-size: var(--sk-text-m);
 		}
 
-		/* TODO is this still used? don't think so */
-		section {
-			max-width: var(--sk-line-max-width);
-			padding: 0 0 0 1rem;
-
-			h2,
-			h3,
-			h4 {
-				margin-left: -1rem;
-			}
-
-			a code {
-				color: inherit;
-			}
-		}
-
 		code {
 			white-space: pre-wrap;
 			padding: 0.2rem 0.4rem;
@@ -324,7 +308,7 @@
 				opacity: 0;
 				transition: opacity 0.2s;
 
-				:where(h2, h3, h4, h5, h6):hover & {
+				:where(h2, h3):hover & {
 					opacity: 1;
 				}
 			}

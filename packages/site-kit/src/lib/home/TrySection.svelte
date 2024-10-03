@@ -74,7 +74,6 @@
 		display: inline-block;
 		width: 25rem;
 		margin: 0 0 1rem;
-		font-size: var(--sk-text-xl);
 	}
 
 	@media (min-width: 900px) {

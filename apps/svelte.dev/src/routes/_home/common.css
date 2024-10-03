@@ -7,11 +7,6 @@
 	--background-2: var(--sk-theme-2);
 }
 
-.home h2 {
-	font-size: var(--sk-text-xl);
-	line-height: 1.2;
-}
-
 .home .grid {
 	display: grid;
 	gap: 1em;
@@ -23,10 +18,6 @@
 }
 
 @media (min-width: 900px) {
-	.home h2 {
-		font-size: var(--sk-text-xxl);
-	}
-
 	.home .grid {
 		grid-template-columns: repeat(var(--columns), 1fr);
 		gap: 7rem;
