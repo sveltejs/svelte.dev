@@ -269,7 +269,7 @@ async function parse({
 				return this.parser!.parseInline(token.tokens);
 			}
 
-			return smart_quotes(token.text);
+			return smart_quotes(token.text, true);
 		},
 		heading({ tokens, depth, raw }) {
 			const text = this.parser!.parseInline(tokens);
