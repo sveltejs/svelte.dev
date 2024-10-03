@@ -317,6 +317,7 @@ export default app;`
 		margin: 0 0.2em 0 0.4rem;
 		padding-top: 0.2em;
 		border-bottom: 1px solid transparent;
+		font-size: var(--sk-font-size-ui-medium);
 	}
 
 	input:hover {

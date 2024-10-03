@@ -115,6 +115,10 @@
 		color: var(--sk-text-3);
 	}
 
+	.controls a {
+		font-size: var(--sk-font-size-body-small);
+	}
+
 	.controls span.faded {
 		opacity: 0.4;
 	}

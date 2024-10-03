@@ -67,11 +67,11 @@
 
 	.copy {
 		text-align: left;
+		font-size: var(--sk-font-size-body);
 	}
 
 	h2 {
 		display: inline-block;
-		width: 25rem;
 		margin: 0 0 1rem;
 	}
 

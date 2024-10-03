@@ -18,7 +18,6 @@
 		display: flex;
 		width: 100%;
 		height: 100%;
-		font-family: 'Yantramanav';
 		background: white;
 	}
 
@@ -49,6 +48,7 @@
 		font-weight: 400;
 		line-height: 80px;
 		margin: 0 0 0.5em 0;
+		font-family: 'DM Serif Display';
 	}
 
 	.date {
@@ -56,5 +56,6 @@
 		margin: 0;
 		color: #555;
 		text-transform: uppercase;
+		font-family: 'Fira Sans';
 	}
 </style>
