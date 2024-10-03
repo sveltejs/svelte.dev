@@ -48,7 +48,9 @@
 							href={block.href}
 							onclick={() => onselect?.(block.href)}
 						>
-							<strong>{block.breadcrumbs.slice(2).join(' • ')}</strong>
+							<strong>
+								{#each block.breadcrumbs.slice(2) as t}<span>{t}</span>{/each}
+							</strong>
 
 							{#if block?.content}
 								<div class="excerpt">
@@ -75,6 +77,7 @@
 
 		summary {
 			position: sticky;
+			background: var(--background);
 			top: 0;
 			display: block;
 			color: var(--sk-text-4);
@@ -160,19 +163,27 @@
 			display: block;
 			white-space: nowrap;
 			line-height: 1;
-			/* overflow: hidden; */
-			/* overflow-x: hidden; */
 			text-overflow: ellipsis;
 			font-weight: 400;
 		}
 
 		strong {
-			/* font-family: var(--sk-font-heading); */
-			/* font-weight: 500; */
 			width: 100%;
 			overflow: hidden;
 			font-size: var(--sk-text-s);
 			color: var(--sk-text-2);
+
+			span {
+				display: inline;
+
+				&:not(:last-child)::after {
+					content: ' • ';
+					position: relative;
+					color: var(--sk-text-4);
+					font-size: var(--sk-text-xs);
+					top: -0.1rem;
+				}
+			}
 		}
 
 		.excerpt {
@@ -204,6 +215,9 @@
 
 			span {
 				color: var(--sk-text-3);
+				font-size: var(--sk-text-xs);
+				color: #170a0a;
+				margin: 0.4rem 0 0 0;
 			}
 
 			:global(.spacer) {
@@ -211,12 +225,6 @@
 				width: 0.7rem;
 				height: 1rem;
 			}
-		}
-
-		span {
-			font-size: var(--sk-text-xs);
-			color: #737373;
-			margin: 0.4rem 0 0 0;
 		}
 
 		:global(mark) {
