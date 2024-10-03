@@ -302,7 +302,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 	}
 
 	input {
-		font-size: var(--sk-text-l);
+		font-size: var(--sk-font-size-ui-large);
 		width: 100%;
 		padding: var(--padding) 5rem var(--padding) var(--padding);
 		height: 6rem;

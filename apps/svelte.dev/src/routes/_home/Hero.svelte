@@ -72,7 +72,7 @@
 	}
 
 	strong {
-		font-size: var(--sk-text-l);
+		font-size: var(--sk-font-size-h2);
 		text-align: center;
 		font-family: var(--sk-font-heading);
 		text-transform: lowercase;
@@ -142,7 +142,6 @@
 
 		strong {
 			text-align: left;
-			font-size: calc(0.04 * var(--width));
 		}
 
 		.hero {

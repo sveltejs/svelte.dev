@@ -5,7 +5,7 @@
 <section class="hero">
 	<div class="hero-contents">
 		<div class="hero-text">
-			<div class="tagline">Go full-stack with</div>
+			<h3 class="tagline">Go full-stack with</h3>
 			<div class="logotype" role="img" aria-label="SvelteKit">
 				<Logotype />
 			</div>
@@ -78,14 +78,9 @@
 	}
 
 	.hero .tagline {
-		font-size: var(--sk-text-l);
-		font-weight: 200;
-		line-height: 1.2;
+		font-size: var(--sk-font-size-h2);
 		color: var(--sk-text-2);
-		font-family: var(--sk-font-body);
 		margin-bottom: 2rem;
-		/* max-width: 12em; */
-		/* margin: 0 auto; */
 	}
 
 	.logotype :global(svg) {
