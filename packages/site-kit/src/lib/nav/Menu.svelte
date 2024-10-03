@@ -396,6 +396,7 @@
 		margin: 0.3rem 0;
 		height: 4rem;
 		color: var(--sk-text-2);
+		font-size: var(--sk-font-size-ui-medium);
 	}
 
 	.universal .contents,
