@@ -1,15 +1,12 @@
 <script>
-	import SvelteLogotype from './svelte-logotype.svg';
-
-	// @ts-ignore
+	// @ts-expect-error
 	import MachineDesktop from './svelte-machine-desktop.png?w=1200;2000;2800;4400&format=avif;webp;png;&as=picture';
-	// @ts-ignore
+	// @ts-expect-error
 	import MachineMobile from './svelte-machine-mobile.png?w=960&format=avif;webp;png;&as=picture';
 </script>
 
 <div class="hero">
 	<div class="hero-content">
-		<!-- <img alt="Svelte logotype" class="logotype" src={SvelteLogotype} width="300" height="56" /> -->
 		<h1>web development for the rest of us</h1>
 		<a href="/docs" class="cta basic">get started</a>
 	</div>
@@ -122,10 +119,6 @@
 	}
 
 	@media (min-width: 1400px) {
-		.hero-content {
-			/* top: 6vw; */
-		}
-
 		.hero {
 			height: calc(10rem + 20vw);
 			padding: 10rem 0 0 0;
