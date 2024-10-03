@@ -48,6 +48,7 @@ body {
 p,
 ul,
 ol {
+	font-size: var(--sk-font-size-body);
 	margin: 1em 0;
 }
 

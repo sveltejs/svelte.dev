@@ -62,7 +62,6 @@
 	.try {
 		width: 100%;
 		margin: 0 auto;
-		font-size: var(--sk-text-m);
 		color: var(--sk-text-1);
 	}
 

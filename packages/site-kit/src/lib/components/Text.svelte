@@ -65,7 +65,6 @@
 		ol,
 		ul {
 			margin: 1em 0;
-			font-size: var(--sk-text-m);
 		}
 
 		code {
@@ -394,12 +393,7 @@
 				p:first-child::before {
 					content: 'Deprecated ';
 					display: block;
-					/* text-transform: uppercase; */
 					font-style: normal;
-					/* font-family: var(--sk-font-ui); */
-					font-size: var(--sk-text-m);
-					font-weight: 500;
-					/* color: var(--sk-text-4); */
 				}
 
 				a {

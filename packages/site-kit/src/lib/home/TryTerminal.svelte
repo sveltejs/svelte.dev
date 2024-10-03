@@ -50,6 +50,7 @@
 		padding-top: 0.4rem;
 		align-items: center;
 		justify-content: center;
+		font-family: var(--sk-font-ui);
 	}
 
 	.terminal pre {
@@ -73,13 +74,7 @@
 
 	@media (min-width: 440px) {
 		.terminal pre {
-			font-size: var(--sk-text-s);
-		}
-	}
-
-	@media (min-width: 1080px) {
-		.terminal pre {
-			font-size: var(--sk-text-m);
+			font-size: var(--sk-font-size-ui);
 		}
 	}
 </style>
