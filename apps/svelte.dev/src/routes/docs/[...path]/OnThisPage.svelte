@@ -158,7 +158,7 @@
 			}
 
 			& label {
-				font-size: var(--sk-text-m);
+				font-size: var(--sk-font-size-h3);
 
 				font-weight: 500;
 				display: block;

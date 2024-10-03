@@ -71,7 +71,7 @@ h2 {
 }
 
 h3 {
-	font-size: var(--sk-text-m);
+	font-size: var(--sk-text-h3);
 }
 
 :where(h1, h2, h3) {

@@ -60,7 +60,7 @@
 	}
 
 	footer h2 {
-		font-size: var(--sk-text-m);
+		font-size: var(--sk-font-size-h3);
 		padding-bottom: 1rem;
 	}
 
