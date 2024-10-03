@@ -311,8 +311,8 @@
 			background: url(../icons/link.svg) 0 50% no-repeat;
 			background-size: 1em 1em;
 			width: 1.4em;
-			height: 1em;
-			bottom: 0.25em;
+			height: 1.2em;
+			top: 0;
 
 			@media (max-width: 767px) {
 				right: 0;
