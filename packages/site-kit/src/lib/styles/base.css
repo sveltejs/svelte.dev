@@ -42,7 +42,7 @@ body {
 
 *:focus-visible {
 	outline: 2px solid hsla(var(--sk-theme-1-hsl), 0.6);
-	transition: 0.1s ease;
+	border-radius: var(--sk-border-radius);
 }
 
 p,

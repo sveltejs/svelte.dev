@@ -68,13 +68,11 @@
 		height: 100%;
 		bottom: auto;
 		width: 100%;
-		/* columns: 2; */
 		margin: 0;
 	}
 
 	li {
 		display: block;
-		/* line-height: 1.2; */
 		margin: 0;
 		margin-bottom: 4rem;
 	}
@@ -108,7 +106,6 @@
 	}
 
 	[aria-current='page'] {
-		/* font-weight: 700; */
 		color: var(--sk-theme-1);
 		text-decoration: underline;
 	}

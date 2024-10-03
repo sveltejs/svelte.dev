@@ -189,6 +189,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		display: flex;
 		align-items: center;
 		text-decoration: none;
+		outline-offset: -2px;
 
 		&:hover {
 			box-shadow: inset 0 -1px 0 0 var(--sk-back-5);

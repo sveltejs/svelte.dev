@@ -88,7 +88,6 @@
 			user-select: none;
 
 			&:focus-visible {
-				border-radius: var(--sk-border-radius);
 				outline-offset: -3px;
 			}
 
@@ -154,7 +153,6 @@
 		}
 
 		&:focus {
-			border-radius: var(--sk-border-radius);
 			outline-offset: -3px;
 		}
 

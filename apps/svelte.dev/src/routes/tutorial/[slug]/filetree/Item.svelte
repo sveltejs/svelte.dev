@@ -125,7 +125,6 @@
 
 	:focus-visible {
 		outline-offset: -2px;
-		border-radius: 2px;
 	}
 
 	input {

@@ -77,7 +77,6 @@
 	a:focus-visible,
 	button:focus-visible,
 	input:focus-visible {
-		border-radius: var(--sk-border-radius);
 		outline-offset: -2px;
 	}
 

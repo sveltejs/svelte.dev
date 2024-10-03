@@ -404,7 +404,6 @@
 	a:focus-visible,
 	.exercises button:focus-visible {
 		outline-offset: -2px;
-		border-radius: var(--sk-border-radius);
 	}
 
 	@media screen and (max-width: 800px) {

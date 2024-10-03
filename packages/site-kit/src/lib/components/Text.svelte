@@ -144,7 +144,6 @@
 					align-items: center;
 					height: calc(var(--height) - 0.6rem);
 					outline-offset: 0;
-					border-radius: var(--sk-border-radius);
 					padding: 0 0.4rem;
 
 					&::before,
