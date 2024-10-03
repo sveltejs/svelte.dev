@@ -25,18 +25,12 @@
 				</p>
 			{:else}
 				<h1>Yikes!</h1>
-				<p>Something went wrong when we tried to render this page.</p>
-				{#if $page.error?.message}
-					<p class="error">{$page.status}: {$page.error.message}</p>
-				{:else}
-					<p class="error">Encountered a {$page.status} error.</p>
-				{/if}
-				<p>Please try reloading the page.</p>
+
+				<p>Something went wrong when we tried to render this page. Please try reloading.</p>
+
 				<p>
-					If the error persists, please drop by the
-					<a href="/chat"> Discord chatroom </a>
-					and let us know, or raise an issue on
-					<a href="https://github.com/sveltejs/sites">GitHub</a>. Thanks!
+					If the error persists, please let us know on <a href="/chat">Discord</a> or
+					<a href="https://github.com/sveltejs/svelte.dev/issues">GitHub</a>. Thanks!
 				</p>
 			{/if}
 		{:else}
@@ -58,7 +52,7 @@
 	}
 
 	.inner {
-		max-width: 50rem;
+		max-width: 48rem;
 		text-align: center;
 		text-wrap: balance;
 
@@ -67,26 +61,12 @@
 		}
 	}
 
-	h1,
-	p {
-		margin: 0 auto;
-	}
-
 	h1 {
-		font-size: 2.8em;
-		font-weight: 300;
+		font-size: var(--sk-text-xxl);
 		margin: 0 0 0.5em 0;
 	}
 
 	p {
 		margin: 1em auto;
-	}
-
-	.error {
-		background-color: var(--sk-theme-2);
-		color: white;
-		padding: 12px 16px;
-		font: 600 16px/1.7 var(--sk-font-body);
-		border-radius: 2px;
 	}
 </style>
