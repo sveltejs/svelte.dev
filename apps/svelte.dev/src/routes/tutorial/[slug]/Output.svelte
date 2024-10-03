@@ -175,8 +175,8 @@
 		bottom: 0;
 		width: 100%;
 		height: 80%;
-		font-family: var(--font-mono);
-		font-size: var(--sk-text-xs);
+		font-family: var(--sk-font-mono);
+		font-size: var(--sk-font-size-ui-small); /* TODO this should use a mono size */
 		padding: 1rem;
 		background: rgba(255, 255, 255, 0.5);
 		transform: translate(0, 100%);

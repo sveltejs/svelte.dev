@@ -36,11 +36,6 @@
 		grid-gap: 1rem;
 	}
 
-	.grid :global(h2) {
-		font-size: var(--sk-text-xl);
-		line-height: 1.2;
-	}
-
 	.grid {
 		display: grid;
 		gap: 1em;
@@ -52,10 +47,6 @@
 	}
 
 	@media (min-width: 900px) {
-		.grid :global(h2) {
-			font-size: var(--sk-text-xl);
-		}
-
 		.grid {
 			--columns: 3;
 

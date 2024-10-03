@@ -77,18 +77,28 @@ export const normalizeSlugify = (str: string) => {
 	return slugify(removeHTMLEntities(removeMarkdown(str))).replace(/(<([^>]+)>)/gi, '');
 };
 
-export function smart_quotes(str: string) {
+export function smart_quotes(str: string, html: boolean = false) {
 	// replace dumb quotes with smart quotes. This isn't a perfect algorithm — it
 	// wouldn't correctly handle `That '70s show` or `My country 'tis of thee`
 	// but a) it's very unlikely they'll occur in our docs, and
 	// b) they can be dealt with manually
-	return str.replace(/(.|^)(&#39;|&quot;)(.|$)/g, (m, before, quote, after) => {
-		const left = !before.trim();
-		const double = quote === '&quot;';
-		const entity = `&${left ? 'l' : 'r'}${double ? 'd' : 's'}quo;`;
+	return str.replace(
+		html ? /(.|^)(&#39;|&quot;)(.|$)/g : /(.|^)('|")(.|$)/g,
+		(m, before, quote, after) => {
+			const left = !before.trim();
+			let replacement = '';
 
-		return (before ?? '') + entity + (after ?? '');
-	});
+			if (html) {
+				const double = quote === '&quot;';
+				replacement = `&${left ? 'l' : 'r'}${double ? 'd' : 's'}quo;`;
+			} else {
+				const double = quote === '"';
+				replacement = double ? (left ? '“' : '”') : left ? '‘' : '’';
+			}
+
+			return (before ?? '') + replacement + (after ?? '');
+		}
+	);
 }
 
 const tokenizer: TokenizerObject = {

@@ -77,8 +77,7 @@
 	a:focus-visible,
 	button:focus-visible,
 	input:focus-visible {
-		outline: none;
-		border: 2px solid var(--sk-theme-3);
+		outline-offset: -2px;
 	}
 
 	.icon,

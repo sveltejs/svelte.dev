@@ -59,9 +59,9 @@
 				}
 			}
 
-			if (localStorage.getItem('svelte:prefers-ts') !== 'false') {
+			if (localStorage.getItem('svelte:prefers-ts') === 'false') {
 				for (const node of document.querySelectorAll('.ts-toggle')) {
-					node.checked = true;
+					node.checked = false;
 				}
 			}
 		</script>

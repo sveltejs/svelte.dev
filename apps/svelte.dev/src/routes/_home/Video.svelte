@@ -246,6 +246,5 @@
 	.video-player input:focus-visible ~ img {
 		outline: 2px solid var(--sk-theme-1);
 		outline-offset: 2px;
-		border-radius: var(--sk-border-radius);
 	}
 </style>

@@ -65,23 +65,6 @@
 		ol,
 		ul {
 			margin: 1em 0;
-			font-size: var(--sk-text-m);
-		}
-
-		/* TODO is this still used? don't think so */
-		section {
-			max-width: var(--sk-line-max-width);
-			padding: 0 0 0 1rem;
-
-			h2,
-			h3,
-			h4 {
-				margin-left: -1rem;
-			}
-
-			a code {
-				color: inherit;
-			}
 		}
 
 		code {
@@ -144,7 +127,6 @@
 					align-items: center;
 					height: calc(var(--height) - 0.6rem);
 					outline-offset: 0;
-					border-radius: var(--sk-border-radius);
 					padding: 0 0.4rem;
 
 					&::before,
@@ -252,7 +234,6 @@
 				box-sizing: border-box;
 				color: var(--sk-code-base);
 				border-radius: var(--sk-border-radius);
-				font-size: var(--sk-text-s);
 				overflow-x: auto;
 
 				code {
@@ -312,8 +293,8 @@
 			background: url(../icons/link.svg) 0 50% no-repeat;
 			background-size: 1em 1em;
 			width: 1.4em;
-			height: 1em;
-			bottom: 0.25em;
+			height: 1.2em;
+			top: 0;
 
 			@media (max-width: 767px) {
 				right: 0;
@@ -325,7 +306,7 @@
 				opacity: 0;
 				transition: opacity 0.2s;
 
-				:where(h2, h3, h4, h5, h6):hover & {
+				:where(h2, h3):hover & {
 					opacity: 1;
 				}
 			}
@@ -343,12 +324,12 @@
 			li::before {
 				content: '';
 				position: absolute;
-				margin-top: 0.8rem;
-				margin-left: -1.8rem;
+				top: 1.4rem;
+				left: -1.8rem;
 				background-color: var(--sk-back-5);
 				width: 0.6rem;
 				height: 0.6rem;
-				border-radius: 2px;
+				border-radius: 50%;
 				opacity: 0.7;
 			}
 
@@ -364,7 +345,6 @@
 		li {
 			position: relative;
 			max-width: calc(var(--sk-line-max-width) - var(--list-padding));
-			line-height: 1.5;
 			margin: 0 0 0.5em 0;
 		}
 
@@ -373,7 +353,7 @@
 		}
 
 		small {
-			font-size: var(--sk-text-s);
+			font-size: var(--sk-font-size-body-small);
 			float: right;
 			pointer-events: all;
 			color: var(--sk-theme-1);
@@ -412,12 +392,7 @@
 				p:first-child::before {
 					content: 'Deprecated ';
 					display: block;
-					/* text-transform: uppercase; */
 					font-style: normal;
-					/* font-family: var(--sk-font-ui); */
-					font-size: var(--sk-text-m);
-					font-weight: 500;
-					/* color: var(--sk-text-4); */
 				}
 
 				a {
@@ -462,9 +437,9 @@
 				align-items: center;
 				height: 3rem;
 				color: var(--sk-text-4);
-				font-family: var(--sk-font-heading);
+				font-family: var(--sk-font-ui);
 				font-style: normal;
-				font-size: var(--sk-text-xs);
+				font-size: var(--sk-font-size-ui-small);
 				user-select: none;
 
 				&:hover {

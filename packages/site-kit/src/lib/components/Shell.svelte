@@ -75,6 +75,7 @@ The main shell of the application. It provides a slot for the top navigation, th
 		padding-top: var(--sk-nav-height);
 		padding-bottom: var(--sk-banner-bottom-height);
 		height: 100%;
+		overflow-x: hidden;
 	}
 
 	@media (max-width: 800px) {
@@ -82,9 +83,5 @@ The main shell of the application. It provides a slot for the top navigation, th
 			padding-top: var(--sk-banner-bottom-height);
 			padding-bottom: 0;
 		}
-	}
-
-	:global(body) {
-		font-size: var(--sk-text-s) !important;
 	}
 </style>

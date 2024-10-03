@@ -50,11 +50,11 @@
 		padding-top: 0.4rem;
 		align-items: center;
 		justify-content: center;
+		font-family: var(--sk-font-ui);
 	}
 
 	.terminal pre {
 		padding: 1em;
-		font-size: var(--sk-text-xs);
 	}
 
 	.line::before {
@@ -69,17 +69,5 @@
 
 	.orange-highlight {
 		color: hsl(15, 100%, 65%);
-	}
-
-	@media (min-width: 440px) {
-		.terminal pre {
-			font-size: var(--sk-text-s);
-		}
-	}
-
-	@media (min-width: 1080px) {
-		.terminal pre {
-			font-size: var(--sk-text-m);
-		}
 	}
 </style>

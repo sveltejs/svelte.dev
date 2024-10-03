@@ -300,7 +300,7 @@
 
 	button {
 		color: var(--sk-text-2, #999);
-		font-size: var(--sk-text-s);
+		font-size: var(--sk-font-size-ui-small);
 		font-family: var(--sk-font-ui);
 		text-transform: uppercase;
 		display: block;

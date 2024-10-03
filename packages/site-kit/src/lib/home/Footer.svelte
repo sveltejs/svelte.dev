@@ -60,13 +60,13 @@
 	}
 
 	footer h2 {
-		font-size: var(--sk-text-m);
+		font-size: var(--sk-font-size-h3);
 		padding-bottom: 1rem;
 	}
 
 	.links a {
 		color: var(--sk-text-2);
-		font-size: var(--sk-text-s);
+		font-size: var(--sk-font-size-body-small);
 		display: block;
 		line-height: 1.8;
 	}

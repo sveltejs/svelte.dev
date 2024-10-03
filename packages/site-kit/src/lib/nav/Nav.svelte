@@ -189,6 +189,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		display: flex;
 		align-items: center;
 		text-decoration: none;
+		outline-offset: -2px;
 
 		&:hover {
 			box-shadow: inset 0 -1px 0 0 var(--sk-back-5);
@@ -252,7 +253,6 @@ Top navigation bar for the application. It provides a slot for the left side, th
 
 	.appearance .caption {
 		display: none;
-		font-size: var(--sk-text-xs);
 		line-height: 1;
 		margin-right: 0rem;
 	}
@@ -275,13 +275,12 @@ Top navigation bar for the application. It provides a slot for the left side, th
 			position: relative;
 			display: flex;
 			padding: 1.5rem 0;
+			margin: 0 1rem;
 			justify-content: space-between;
 		}
 
 		.appearance .caption {
 			display: block;
-
-			font-size: var(--sk-text-s);
 		}
 
 		nav :global(.large) {

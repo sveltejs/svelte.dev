@@ -171,7 +171,7 @@ export async function render_content_markdown(
 			}
 
 			if (converted) {
-				html += `<input class="ts-toggle" title="Toggle language" type="checkbox" aria-label="Toggle JS/TS">`;
+				html += `<input class="ts-toggle" checked title="Toggle language" type="checkbox" aria-label="Toggle JS/TS">`;
 			}
 
 			if (options.copy) {
@@ -269,7 +269,7 @@ async function parse({
 				return this.parser!.parseInline(token.tokens);
 			}
 
-			return smart_quotes(token.text);
+			return smart_quotes(token.text, true);
 		},
 		heading({ tokens, depth, raw }) {
 			const text = this.parser!.parseInline(tokens);
