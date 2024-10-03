@@ -57,13 +57,6 @@
 	color: var(--sk-text-2);
 }
 
-.cm-editor.cm-focused .cm-selectionBackground,
-.cm-editor .cm-selectionBackground,
-.cm-editor .cm-content ::selection {
-	background: var(--sk-theme-3);
-	opacity: 0.3;
-}
-
 .cm-editor .cm-tooltip {
 	background: var(--sk-back-2);
 	color: var(--sk-text-1);

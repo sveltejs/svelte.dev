@@ -378,8 +378,8 @@
 
 	li button {
 		position: relative;
-
 		display: flex;
+		width: 100%;
 		gap: 0.5rem;
 	}
 
@@ -403,8 +403,8 @@
 
 	a:focus-visible,
 	.exercises button:focus-visible {
-		outline: none;
-		border: 2px solid var(--sk-theme-3);
+		outline-offset: -2px;
+		border-radius: var(--sk-border-radius);
 	}
 
 	@media screen and (max-width: 800px) {

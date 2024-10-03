@@ -40,11 +40,9 @@
 	/* Base colors */
 	--sk-theme-1-hsl: 12, 93%, 43%;
 	--sk-theme-2-hsl: 240, 8%, 44%;
-	--sk-theme-3-hsl: 204, 100%, 63%;
 
 	--sk-theme-1: hsl(var(--sk-theme-1-hsl));
 	--sk-theme-2: hsl(var(--sk-theme-2-hsl));
-	--sk-theme-3: hsl(var(--sk-theme-3-hsl));
 
 	--sk-back-1: hsl(0, 0%, 100%);
 	--sk-back-2: hsla(0, 0%, 100%, 1);
@@ -98,7 +96,6 @@
 		--sk-back-translucent: hsla(0, 0%, 100%, 0.1);
 		--sk-theme-1-hsl: 12, 94%, 62%;
 		--sk-theme-2-hsl: 240, 8%, 44%;
-		--sk-theme-3-hsl: 204, 100%, 63%;
 		--sk-text-1: hsl(0, 0%, 90%);
 		--sk-text-2: hsl(0, 0%, 80%);
 		--sk-text-3: hsl(0, 0%, 65%);
