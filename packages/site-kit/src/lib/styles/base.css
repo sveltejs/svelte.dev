@@ -171,6 +171,36 @@ button > svg {
 	stroke: currentColor !important;
 }
 
+.raised {
+	--highlight: hsl(0 0 100 / 0.8);
+	--highlight-active: hsl(0 0 100 / 1);
+	--shadow: hsl(0 0 0 / 0.1);
+	--shadow-active: hsl(0 0 0 / 0.15);
+
+	.dark & {
+		--highlight: hsl(0 0 100 / 0.15);
+		--highlight-active: hsl(0 0 100 / 0.15);
+		--shadow: hsl(0 0 0 / 0.2);
+		--shadow-active: hsl(0 0 0 / 0.3);
+	}
+
+
+	border-radius: var(--sk-border-radius);
+	box-shadow: 2px 2px 4px var(--shadow), -1px -1px 3px var(--highlight);
+
+	&:hover {
+		box-shadow: 2px 2px 5px var(--shadow-active), -1px -1px 4px var(--highlight-active);
+	}
+
+	&:active {
+		box-shadow: inset -1px -1px 3px var(--highlight-active), inset 1px 1px 3px var(--shadow-active);
+	}
+
+	&:disabled {
+		box-shadow: none;
+	}
+}
+
 /*  links ------------------------------------- */
 a {
 	color: var(--sk-theme-1);

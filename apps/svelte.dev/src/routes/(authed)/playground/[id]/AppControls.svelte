@@ -215,7 +215,7 @@ export default app;`
 	/>
 
 	<div class="buttons">
-		<button class="icon" onclick={() => (zen_mode = !zen_mode)} title="fullscreen editor">
+		<button class="raised icon" onclick={() => (zen_mode = !zen_mode)} title="fullscreen editor">
 			{#if zen_mode}
 				<Icon name="close" />
 			{:else}
@@ -223,11 +223,11 @@ export default app;`
 			{/if}
 		</button>
 
-		<button class="icon" disabled={downloading} onclick={download} title="download zip file">
+		<button class="raised icon" disabled={downloading} onclick={download} title="download zip file">
 			<Icon name="download" />
 		</button>
 
-		<button class="icon" disabled={saving || !user} onclick={() => fork(false)} title="fork">
+		<button class="raised icon" disabled={saving || !user} onclick={() => fork(false)} title="fork">
 			{#if justForked}
 				<Icon name="check" />
 			{:else}
@@ -235,7 +235,7 @@ export default app;`
 			{/if}
 		</button>
 
-		<button class="icon" disabled={saving || !user} onclick={save} title="save">
+		<button class="raised icon" disabled={saving || !user} onclick={save} title="save">
 			{#if justSaved}
 				<Icon name="check" />
 			{:else}
@@ -249,7 +249,7 @@ export default app;`
 		{#if user}
 			<UserMenu {user} />
 		{:else}
-			<button class="icon" onclick={(e) => (e.preventDefault(), login())}>
+			<button class="raised icon" onclick={(e) => (e.preventDefault(), login())}>
 				<Icon name="log-in" />
 				<span>&nbsp;Log in to save</span>
 			</button>
@@ -285,7 +285,7 @@ export default app;`
 	.icon {
 		transform: translateY(0.1rem);
 		display: inline-block;
-		padding: 0.2em;
+		padding: 0.4em;
 		opacity: 0.7;
 		transition: opacity 0.3s;
 		font-family: var(--sk-font-ui);

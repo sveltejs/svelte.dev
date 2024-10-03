@@ -38,24 +38,56 @@
 	onDestroy(() => query?.removeEventListener('change', cb));
 </script>
 
-<button
-	onclick={toggle}
-	type="button"
-	aria-pressed={$theme.current === 'dark' ? 'true' : 'false'}
-	aria-label={label}
-></button>
+<div class="appearance">
+	<span class="caption">Theme</span>
+	<button
+		onclick={toggle}
+		class="raised"
+		type="button"
+		aria-pressed={$theme.current === 'dark' ? 'true' : 'false'}
+		aria-label={label}
+	></button>
+</div>
 
 <style>
 	button {
-		width: 2.3rem;
-		height: 2.3rem;
+		width: 4rem;
+		height: 4rem;
 		background: red;
-		background: url($lib/icons/theme-light.svg) no-repeat 50% 50% / contain;
+		background: url($lib/icons/theme-light.svg) no-repeat 50% 50% / 2.3rem 2.3rem;
 		opacity: 0.6;
 
 		:global(.dark) & {
-			background: url($lib/icons/theme-dark.svg);
+			background-image: url($lib/icons/theme-dark.svg);
 			opacity: 0.8;
+		}
+	}
+
+	.appearance {
+		display: flex;
+		align-items: center;
+		margin-left: 1.5rem;
+
+		.caption {
+			display: none;
+			font-size: var(--sk-text-xs);
+			line-height: 1;
+			margin-right: 0rem;
+		}
+	}
+
+	@media (max-width: 799px) {
+		.appearance {
+			position: relative;
+			display: flex;
+			padding: 1.5rem 0;
+			justify-content: space-between;
+		}
+
+		.appearance .caption {
+			display: block;
+
+			font-size: var(--sk-text-s);
 		}
 	}
 </style>
