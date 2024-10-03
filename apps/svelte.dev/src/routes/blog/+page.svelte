@@ -52,6 +52,19 @@
 	.post {
 		margin: 2em 0;
 
+		&:where(:first-child, :nth-child(2))::before {
+			content: 'Latest post • ' attr(data-pubdate);
+			color: var(--sk-text-4);
+			font-family: var(--sk-font-ui);
+			font-size: var(--sk-text-xs);
+			font-weight: 400;
+			text-transform: uppercase;
+		}
+
+		&:nth-child(2)::before {
+			content: 'Older posts';
+		}
+
 		&:first-child {
 			margin: 0 0 2rem 0;
 			padding: 0 0 4rem 0;
@@ -74,27 +87,8 @@
 
 		p {
 			font-size: var(--sk-text-s);
-			max-width: 30em;
 			color: var(--sk-text-3);
 			margin: 0;
 		}
 	}
-
-	.post:where(:first-child, :nth-child(2))::before {
-		content: 'Latest post • ' attr(data-pubdate);
-		color: var(--sk-text-4);
-		font-family: var(--sk-font-ui);
-		font-size: var(--sk-text-xs);
-		font-weight: 400;
-		text-transform: uppercase;
-	}
-
-	.post:nth-child(2)::before {
-		content: 'Older posts';
-	}
-
-	/* .posts a:hover,
-	.posts a:hover > h2 {
-		color: var(--sk-theme-3);
-	} */
 </style>
