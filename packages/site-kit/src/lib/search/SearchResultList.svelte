@@ -168,7 +168,7 @@
 		strong {
 			width: 100%;
 			overflow: hidden;
-			font-size: var(--sk-text-s);
+			font-size: var(--sk-font-size-ui);
 			color: var(--sk-text-2);
 
 			span {
@@ -214,7 +214,6 @@
 			span {
 				color: var(--sk-text-3);
 				font-size: var(--sk-text-xs);
-				color: #170a0a;
 				margin: 0.4rem 0 0 0;
 			}
 

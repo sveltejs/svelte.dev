@@ -101,7 +101,7 @@
 
 	.page {
 		display: block;
-		font-size: var(--sk-text-s);
+		font-size: var(--sk-font-size-body-small);
 		font-family: var(--sk-font-body);
 	}
 

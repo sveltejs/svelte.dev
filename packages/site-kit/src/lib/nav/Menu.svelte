@@ -367,7 +367,7 @@
 		justify-content: start;
 		gap: 1rem;
 
-		font-size: 0.9em;
+		font-size: var(--sk-font-size-ui-small);
 		color: var(--sk-text-3);
 
 		background-color: var(--sk-back-3);

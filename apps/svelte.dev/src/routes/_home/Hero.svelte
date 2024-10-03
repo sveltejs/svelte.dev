@@ -93,7 +93,7 @@
 		gap: 0.1rem;
 		background: var(--sk-theme-1);
 		padding: 0.35em 0.8em;
-		font-size: var(--sk-text-s);
+		font-family: var(--sk-font-ui);
 		letter-spacing: 0.05em;
 		font-weight: 600;
 		white-space: nowrap;

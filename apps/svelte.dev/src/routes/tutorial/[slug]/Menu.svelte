@@ -173,6 +173,7 @@
 	header {
 		position: relative;
 		/* z-index: 2; */
+		font-family: var(--sk-font-ui);
 
 		display: grid;
 		grid-template-columns: 4rem minmax(0, 1fr) 4rem;
@@ -191,11 +192,12 @@
 
 	header strong,
 	h1 {
-		font-size: var(--sk-text-s);
+		font-family: inherit;
+		font-size: var(--sk-font-size-ui-small);
 	}
 
 	.menu {
-		font-size: var(--sk-text-s);
+		font-size: var(--sk-font-size-ui-small);
 		border: none;
 	}
 
@@ -251,7 +253,6 @@
 		text-align: center;
 		color: var(--sk-text-2);
 		font-weight: 400;
-		font-size: var(--sk-text-s);
 	}
 
 	h1 .desktop {
@@ -263,10 +264,6 @@
 	h1 .mobile {
 		display: none;
 	}
-
-	/* .expand-icon {
-		padding: 0.5rem;
-	} */
 
 	.expand-icon :global(svg) {
 		transition: transform 0.4s var(--quint-out);
@@ -457,7 +454,7 @@
 		}
 
 		h1 strong {
-			font-size: var(--sk-text-s) !important;
+			font-size: var(--sk-font-size-ui-small) !important;
 			line-height: 1;
 		}
 	}

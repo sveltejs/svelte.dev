@@ -234,7 +234,6 @@
 				box-sizing: border-box;
 				color: var(--sk-code-base);
 				border-radius: var(--sk-border-radius);
-				font-size: var(--sk-text-s);
 				overflow-x: auto;
 
 				code {
@@ -354,7 +353,7 @@
 		}
 
 		small {
-			font-size: var(--sk-text-s);
+			font-size: var(--sk-font-size-body-small);
 			float: right;
 			pointer-events: all;
 			color: var(--sk-theme-1);

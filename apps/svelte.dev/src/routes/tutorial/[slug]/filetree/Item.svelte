@@ -121,7 +121,6 @@
 		background-position: 0 45%;
 		background-repeat: no-repeat;
 		font-family: var(--sk-font-ui);
-		font-size: var(--sk-text-s);
 	}
 
 	:focus-visible {

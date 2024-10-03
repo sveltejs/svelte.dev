@@ -47,15 +47,10 @@
 								{/if}
 
 								<ul>
-									{#each subsections as { path, title, badge }}
+									{#each subsections as { path, title }}
 										<li>
 											<a href={path} aria-current={path === $page.url.pathname}>
 												{title}
-
-												{#if badge}
-													<span style="flex: 1 1 auto"></span>
-													<span class="badge">{badge}</span>
-												{/if}
 											</a>
 										</li>
 									{/each}
@@ -109,7 +104,8 @@
 
 		padding-bottom: 0.8rem;
 
-		font-size: var(--sk-text-xs);
+		font-family: var(--sk-font-ui);
+		font-size: var(--sk-font-size-ui-small);
 		text-transform: uppercase;
 		letter-spacing: 0.1em;
 		font-weight: 600;
@@ -120,11 +116,7 @@
 		position: sticky;
 		top: -1px;
 		z-index: 1;
-
-		font-size: var(--sk-text-s);
-
 		background-color: var(--sk-back-3);
-
 		width: 98%;
 		padding: 1rem 1rem 1rem 4px;
 		margin-left: 4px;
@@ -146,9 +138,8 @@
 		display: flex;
 		align-items: center;
 		border-radius: var(--sk-border-radius);
-		line-height: 1;
 		color: var(--sk-text-2);
-		padding: 0.9rem 0.75rem !important;
+		padding: 0 0.75rem !important;
 		transition: 0.1s ease;
 		transition-property: background-color, color;
 	}
@@ -162,20 +153,5 @@
 		/* background-color: hsla(var(--sk-theme-1-hsl), 0.1) !important; */
 		color: var(--sk-theme-1) !important;
 		font-weight: 400;
-	}
-
-	.badge {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		padding: 0.5rem 0.75rem;
-		border-radius: 30px;
-		font-size: 1.1rem;
-		font-weight: 600;
-		letter-spacing: 1px;
-		font-family: var(--sk-font-ui);
-		line-height: 1;
-		color: var(--sk-theme-1);
-		background: hsla(var(--sk-theme-1-hsl), 0.1);
 	}
 </style>

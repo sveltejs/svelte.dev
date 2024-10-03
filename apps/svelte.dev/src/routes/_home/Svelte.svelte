@@ -70,10 +70,6 @@
 </Section>
 
 <style>
-	p {
-		font-size: var(--sk-text-s);
-	}
-
 	.definition {
 		display: flex;
 		align-items: baseline;
@@ -93,12 +89,11 @@
 
 			.adjective {
 				position: relative;
-				/* top: -0.15em; */
 				padding: 0.25em 0.5em 0.1em;
 				line-height: 1;
 				margin: 0 1em;
 				text-transform: uppercase;
-				font-size: var(--sk-text-s);
+				font-size: var(--sk-font-size-ui-small);
 				background: var(--sk-text-2);
 				border-radius: var(--sk-border-radius);
 				font-family: var(--sk-font-ui);

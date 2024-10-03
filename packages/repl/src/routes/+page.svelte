@@ -32,5 +32,6 @@
 
 	main {
 		height: 100vh;
+		overflow-x: hidden;
 	}
 </style>
