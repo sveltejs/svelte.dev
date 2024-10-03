@@ -78,7 +78,7 @@ The main shell of the application. It provides a slot for the top navigation, th
 		overflow-x: hidden;
 	}
 
-	@media (max-width: 800px) {
+	@media (max-width: 799px) {
 		main {
 			padding-top: var(--sk-banner-bottom-height);
 			padding-bottom: 0;

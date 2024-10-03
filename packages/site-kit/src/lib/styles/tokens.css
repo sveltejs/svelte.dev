@@ -136,7 +136,7 @@
 	}
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 800px) {
 	:root {
 		--sk-font-size-h1: 5.4rem;
 		--sk-page-padding-top: 8rem;

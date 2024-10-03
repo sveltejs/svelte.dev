@@ -24,7 +24,7 @@
 
 	<Hero />
 
-	<Blurb --background="var(--sk-back-1)">
+	<Blurb>
 		{#snippet one()}
 			<div>
 				<h2>fast</h2>
