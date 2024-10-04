@@ -305,12 +305,12 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		nav {
 			display: grid;
 			grid-template-columns: auto 1fr 1fr;
-		}
 
-		nav::after {
-			top: auto;
-			bottom: -4px;
-			background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), transparent);
+			&.shadow::after {
+				top: auto;
+				bottom: -4px;
+				background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), transparent);
+			}
 		}
 
 		.menu {

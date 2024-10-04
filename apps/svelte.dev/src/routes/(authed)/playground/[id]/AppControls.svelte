@@ -281,6 +281,7 @@ export default app;`
 			width: 100%;
 			height: 4px;
 			z-index: 2;
+			background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), transparent);
 		}
 
 		@media (min-width: 800px) {

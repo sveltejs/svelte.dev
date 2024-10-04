@@ -26,7 +26,7 @@
 		<Nav
 			title={data.nav_title}
 			links={data.nav_links}
-			shadow={!$page.route.id?.startsWith('/playground')}
+			shadow={!$page.route.id?.startsWith('/(authed)/playground')}
 		>
 			{#snippet search()}
 				<Search />
