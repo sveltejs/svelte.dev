@@ -58,7 +58,12 @@
 			max-width: 100%;
 			text-overflow: ellipsis;
 			overflow: hidden;
-			padding-right: 1em;
+			padding: 0 1em 0 0;
+
+			@media (min-width: 768px) {
+				margin: 0 0 0 -2em;
+				padding: 0 1em 0 2em;
+			}
 		}
 
 		h2 {
@@ -300,8 +305,8 @@
 			background: url(../icons/link.svg) 50% 50% no-repeat;
 			background-size: 1em 1em;
 			width: 1.2em;
-			height: 1.2em;
-			top: 0;
+			height: 0.8em;
+			top: 0.2em;
 
 			@media (max-width: 767px) {
 				right: 0;
@@ -309,7 +314,7 @@
 			}
 
 			@media (min-width: 768px) {
-				left: -1.3em;
+				left: 0.7em;
 				opacity: 0;
 				transition: opacity 0.2s;
 
