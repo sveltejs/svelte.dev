@@ -147,8 +147,6 @@
 		}
 
 		@media (min-width: 1200px) {
-			padding: 0;
-			box-sizing: border-box;
 			position: fixed;
 			display: flex;
 			flex-direction: column;
@@ -174,7 +172,6 @@
 
 			nav {
 				display: block;
-				height: 100%;
 				overflow-y: auto;
 				scrollbar-width: none;
 				margin-left: -1rem; /* negative margin avoids focus rings being cut off */
