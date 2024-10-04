@@ -123,67 +123,65 @@
 		padding: 2.2rem 3rem;
 		border-right: 1px solid var(--sk-back-4);
 		background: var(--sk-back-3);
-	}
 
-	.text :global(pre) {
-		background: var(--sk-back-1);
-		box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.1);
-		border-radius: var(--sk-border-radius);
-	}
+		:global {
+			pre {
+				background: var(--sk-back-1);
+				box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.1);
+				border-radius: var(--sk-border-radius);
 
-	.text :global(pre) :global(.highlight) {
-		--color: rgba(220, 220, 0, 0.2);
-		background: var(--color);
-		outline: 2px solid var(--color);
-		border-radius: 2px;
-	}
+				.highlight {
+					--color: rgba(220, 220, 0, 0.2);
+					background: var(--color);
+					outline: 2px solid var(--color);
+					border-radius: 2px;
 
-	.text :global(pre) :global(.highlight.add) {
-		--color: rgba(0, 255, 0, 0.18);
-	}
+					&.add {
+						--color: rgba(0, 255, 0, 0.18);
+					}
 
-	.text :global(pre) :global(.highlight.remove) {
-		--color: rgba(255, 0, 0, 0.1);
-	}
+					&.remove {
+						--color: rgba(255, 0, 0, 0.1);
 
-	:global(html.dark) .text :global(pre) :global(.highlight.remove) {
-		--color: rgba(255, 0, 0, 0.27);
-	}
+						:root.dark & {
+							--color: rgba(255, 0, 0, 0.27);
+						}
+					}
+				}
+			}
 
-	/** this probably belongs in site-kit */
-	.text :global(p) :global(a) :global(code) {
-		color: var(--sk-theme-1);
-		background: rgba(255, 62, 0, 0.1);
-	}
+			p a code {
+				color: var(--sk-theme-1);
+				background: rgba(255, 62, 0, 0.1);
+			}
 
-	.text :global([data-file]),
-	.text :global(.filename) {
-		cursor: pointer;
-		background-image: url($lib/icons/file-edit.svg);
-		background-repeat: no-repeat;
-	}
+			[data-file],
+			.filename {
+				cursor: pointer;
+				background-image: url($lib/icons/file-edit.svg);
+				background-repeat: no-repeat;
 
-	.text :global([data-file]) {
-		background-position: 0.5rem 50%;
-		background-size: 1rem 1rem;
-		padding-left: 2rem;
-	}
+				:root.dark & {
+					background-image: url($lib/icons/file-edit-inline-dark.svg);
+				}
+			}
 
-	.text :global(.filename) {
-		background-position: 1rem 54%;
-		background-size: 1rem 1rem;
-		padding-left: 2.5rem !important;
-	}
+			[data-file] {
+				background-position: 0.5rem 50%;
+				background-size: 1rem 1rem;
+				padding-left: 2rem;
+			}
 
-	@media (prefers-color-scheme: dark) {
-		.text :global([data-file]),
-		.text :global(.filename) {
-			background-image: url($lib/icons/file-edit-inline-dark.svg);
+			.filename {
+				background-position: 1rem 54%;
+				background-size: 1rem 1rem;
+				padding-left: 2.5rem !important;
+			}
+
+			.desktop {
+				display: none;
+			}
 		}
-	}
-
-	.text :global(.desktop) {
-		display: none;
 	}
 
 	footer {
@@ -193,38 +191,40 @@
 		background: var(--sk-back-3);
 		border-top: 1px solid var(--sk-back-4);
 		border-right: 1px solid var(--sk-back-4);
+
+		.edit {
+			color: var(--sk-text-2);
+			font-family: var(--sk-font-ui);
+			font-size: var(--sk-font-size-ui-medium);
+			padding: 0 0 0 1.4em;
+			background: url($lib/icons/file-edit.svg) no-repeat 0 calc(50% - 0.1em);
+			background-size: 1em 1em;
+		}
 	}
 
-	footer .edit {
-		color: var(--sk-text-2);
-		font-family: var(--sk-font-ui);
-		font-size: var(--sk-font-size-ui-medium);
-		padding: 0 0 0 1.4em;
-		background: url($lib/icons/file-edit.svg) no-repeat 0 calc(50% - 0.1em);
-		background-size: 1em 1em;
+	.modal-contents {
+		h2 {
+			font-size: 2.4rem;
+			margin: 0 0 0.5em 0;
+		}
+
+		label {
+			user-select: none;
+		}
+
+		button {
+			display: block;
+			background-color: var(--sk-theme-1);
+			color: white;
+			padding: 1rem;
+			width: 10em;
+			margin: 1em 0 0 0;
+			border-radius: var(--sk-border-radius);
+			line-height: 1;
+		}
 	}
 
-	.modal-contents h2 {
-		font-size: 2.4rem;
-		margin: 0 0 0.5em 0;
-	}
-
-	.modal-contents label {
-		user-select: none;
-	}
-
-	.modal-contents button {
-		display: block;
-		background-color: var(--sk-theme-1);
-		color: white;
-		padding: 1rem;
-		width: 10em;
-		margin: 1em 0 0 0;
-		border-radius: var(--sk-border-radius);
-		line-height: 1;
-	}
-
-	@media (max-width: 800px) {
+	@media (max-width: 799px) {
 		.text {
 			border-right: none;
 		}

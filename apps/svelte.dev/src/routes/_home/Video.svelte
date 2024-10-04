@@ -218,8 +218,7 @@
 	.captions {
 		line-height: 1;
 		color: white;
-		font-size: 2rem;
-		font-weight: 700;
+		font-size: var(--sk-font-size-ui-medium);
 		filter: var(--control-filter);
 	}
 

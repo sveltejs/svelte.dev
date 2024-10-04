@@ -43,6 +43,7 @@
 		z-index: 2;
 		margin: 0 auto;
 		box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.07);
+		font-size: var(--sk-font-size-ui-small);
 	}
 
 	@media (min-width: 832px) {

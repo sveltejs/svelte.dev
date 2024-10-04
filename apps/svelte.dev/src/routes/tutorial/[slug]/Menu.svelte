@@ -186,17 +186,9 @@
 		width: 100%;
 	}
 
-	.menu.open {
-		border-radius: var(--sk-border-radius) var(--sk-border-radius) 0 0;
-	}
-
 	header strong,
 	h1 {
 		font-family: inherit;
-	}
-
-	.menu {
-		border: none;
 	}
 
 	header strong {
@@ -225,15 +217,19 @@
 		box-shadow: var(--sk-shadow);
 
 		cursor: pointer;
-	}
 
-	.menu > button {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		gap: 0.4ch;
-		width: 100%;
-		height: 100%;
+		&.open {
+			border-radius: var(--sk-border-radius) var(--sk-border-radius) 0 0;
+		}
+
+		& > button {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 0.4ch;
+			width: 100%;
+			height: 100%;
+		}
 	}
 
 	h1 {
@@ -251,16 +247,16 @@
 		text-align: center;
 		color: var(--sk-text-2);
 		font-size: var(--sk-font-size-ui-small);
-	}
 
-	h1 .desktop {
-		display: flex;
-		gap: 0.5ch;
-		align-items: center;
-	}
+		.desktop {
+			display: flex;
+			gap: 0.5ch;
+			align-items: center;
+		}
 
-	h1 .mobile {
-		display: none;
+		.mobile {
+			display: none;
+		}
 	}
 
 	.expand-icon :global(svg) {
@@ -342,17 +338,8 @@
 		stroke-width: 0 !important;
 	}
 
-	li.expanded > button {
-		font-weight: bold;
-	}
-
 	li.expanded > button > :global(svg) {
 		transform: rotate(90deg);
-	}
-
-	li a::before,
-	li a::after {
-		position: absolute;
 	}
 
 	.exercise {
@@ -364,11 +351,11 @@
 	button {
 		color: var(--sk-text-2);
 		padding: 0 0 0 0.5rem;
-		margin: 0 0.5rem 0 0;
 		display: block;
 		font-variant-numeric: tabular-nums;
-		border: 2px solid transparent;
 		box-sizing: border-box;
+		font-size: var(--sk-font-size-ui-medium);
+		line-height: 1.5;
 	}
 
 	li button {
