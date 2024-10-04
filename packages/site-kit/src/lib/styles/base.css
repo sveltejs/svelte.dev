@@ -74,16 +74,19 @@ h3 {
 	font-size: var(--sk-font-size-h3);
 }
 
-:where(h1, h2, h3) {
+h1,
+h2,
+h3 {
 	position: relative;
 	font-family: var(--sk-font-heading);
 	font-weight: 500;
 	line-height: 1.2;
+	text-wrap: balance;
 	color: var(--sk-text-1);
 }
 
 strong {
-	font-weight: 600;
+	font-weight: 400;
 }
 
 code,

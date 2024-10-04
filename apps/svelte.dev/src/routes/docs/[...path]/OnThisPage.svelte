@@ -174,6 +174,10 @@
 					display: list-item;
 				}
 
+				li {
+					font-size: var(--sk-font-size-body-small);
+				}
+
 				a.active {
 					color: var(--sk-text-1);
 					text-decoration: underline;
