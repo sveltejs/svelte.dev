@@ -27,6 +27,14 @@ export default defineConfig({ /* ... */ })
 You can now write unit tests for code inside your `.js/.ts` files:
 
 ```js
+// @filename: multiplier.d.ts
+export declare function multiplier(a: number, b: number): {
+	value: number;
+	set(value: number): void;
+};
+
+// @filename: index.js
+// ---cut---
 /// file: multiplier.svelte.test.js
 import { flushSync } from 'svelte';
 import { expect, test } from 'vitest';
@@ -48,6 +56,11 @@ test('Multiplier', () => {
 It is possible to use runes inside your test files. First ensure your bundler knows to route the file through the Svelte compiler before running the test by adding `.svelte` to the filename (e.g `multiplier.svelte.test.js`). After that, you can use runes inside your tests.
 
 ```js
+// @filename: multiplier.svelte.d.ts
+export declare function multiplier(fn: () => number, b: number): { value: number };
+
+// @filename: index.js
+// ---cut---
 /// file: multiplier.svelte.test.js
 import { flushSync } from 'svelte';
 import { expect, test } from 'vitest';
@@ -68,6 +81,11 @@ test('Multiplier', () => {
 If the code being tested uses effects, you need to wrap the test inside `$effect.root`:
 
 ```js
+// @filename: logger.svelte.d.ts
+export declare function logger(fn: () => any): { value: number };
+
+// @filename: index.js
+// ---cut---
 /// file: logger.svelte.test.js
 import { flushSync } from 'svelte';
 import { expect, test } from 'vitest';
@@ -135,6 +153,7 @@ export default defineConfig({
 After that, you can create a test file in which you import the component to test, interact with it programmatically and write expectations about the results:
 
 ```js
+// ---cut---
 /// file: component.test.js
 import { flushSync, mount, unmount } from 'svelte';
 import { expect, test } from 'vitest';
@@ -150,7 +169,7 @@ test('Component', () => {
 	expect(document.body.innerHTML).toBe('<button>0</button>');
 
 	// Click the button, then flush the changes so you can synchronously write expectations
-	document.body.querySelector('button').click();
+	document.body.querySelector('button')?.click();
 	flushSync();
 
 	expect(document.body.innerHTML).toBe('<button>1</button>');
@@ -164,7 +183,8 @@ While the process is very straightforward, it is also low level and somewhat bri
 
 ```js
 /// file: component.test.js
-import { render, screen } from '@testing-library/svelte';
+import { render } from '@testing-library/svelte';
+import { screen } from '@testing-library/dom';
 import userEvent from '@testing-library/user-event';
 import { expect, test } from 'vitest';
 import Component from './Component.svelte';
@@ -208,6 +228,7 @@ export default config;
 You can now start writing tests. These are totally unaware of Svelte as a framework, so you mainly interact with the DOM and write assertions.
 
 ```js
+// @errors: 2307 7031
 /// file: tests/hello-world.spec.js
 import { expect, test } from '@playwright/test';
 
