@@ -110,7 +110,7 @@
 	.options a {
 		display: block;
 		color: var(--sk-text-2);
-		margin: 2em -2em;
+		margin: 1em -2em;
 		padding: 2em;
 		background-color: var(--sk-back-2);
 		border-radius: var(--sk-border-radius);
