@@ -6,6 +6,7 @@ import * as resolve from 'resolve.exports';
 import commonjs from './plugins/commonjs';
 import glsl from './plugins/glsl';
 import json from './plugins/json';
+import mp3 from './plugins/mp3';
 import svg from './plugins/svg';
 import replace from './plugins/replace';
 import loop_protect from './plugins/loop-protect';
@@ -415,6 +416,7 @@ async function get_bundle(
 				commonjs,
 				json,
 				svg,
+				mp3,
 				glsl,
 				loop_protect,
 				replace({
