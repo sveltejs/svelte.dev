@@ -94,6 +94,7 @@
 	.page {
 		padding: var(--sk-page-padding-top) var(--sk-page-padding-side);
 		max-width: var(--sk-page-main-width);
+		box-sizing: content-box;
 		margin: auto;
 		text-wrap: balance;
 	}

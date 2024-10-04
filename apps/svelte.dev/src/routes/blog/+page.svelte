@@ -37,6 +37,7 @@
 		min-height: calc(100vh - var(--sk-nav-height) - var(--sk-banner-bottom-height));
 		padding: var(--sk-page-padding-top) var(--sk-page-padding-side) 6rem var(--sk-page-padding-side);
 		max-width: var(--sk-page-main-width);
+		box-sizing: content-box;
 		margin: 0 auto;
 		text-wrap: balance;
 	}
