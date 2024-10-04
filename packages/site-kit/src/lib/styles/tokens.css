@@ -22,29 +22,29 @@
 	--sk-banner-bottom-height: 0px;
 
 	/* typography */
-	--sk-font-ui: 'Yantramanav', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
-		Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-	--sk-font-body: 'EB Garamond', 'Big Caslon', Palatino, 'Book Antiqua', Cambria, serif;
-	--sk-font-heading: var(--sk-font-body);
+	--sk-font-ui: 'Fira Sans', -apple-system, sans-serif;
+	--sk-font-body: 'EB Garamond', Georgia, serif;
+	--sk-font-heading: 'DM Serif Display', Georgia, serif;
 	--sk-font-mono: 'Fira Mono', monospace;
-	--sk-text-xxl: 3.6rem;
-	--sk-text-xl: 3rem;
-	--sk-text-l: 2.4rem;
-	--sk-text-m: 2rem;
-	--sk-text-s: 1.8rem;
-	--sk-text-xs: 1.4rem;
-	--sk-line-max-width: 84rem;
 
-	--sk-focus-outline: 0 0 0 2px hsla(var(--sk-theme-1-hsl), 0.6);
+	--sk-font-size-h1: 3.6rem;
+	--sk-font-size-h2: 3rem;
+	--sk-font-size-h3: 2.4rem;
+	--sk-font-size-body: 2.1rem;
+	--sk-font-size-body-small: 1.8rem;
+	--sk-font-size-ui-small: 1.4rem;
+	--sk-font-size-ui-medium: 1.8rem;
+	--sk-font-size-ui-large: 3rem; /* TODO add regular/small */
+	--sk-font-size-code: 1.4rem;
+
+	--sk-line-max-width: 84rem;
 
 	/* Base colors */
 	--sk-theme-1-hsl: 12, 93%, 43%;
 	--sk-theme-2-hsl: 240, 8%, 44%;
-	--sk-theme-3-hsl: 204, 100%, 63%;
 
 	--sk-theme-1: hsl(var(--sk-theme-1-hsl));
 	--sk-theme-2: hsl(var(--sk-theme-2-hsl));
-	--sk-theme-3: hsl(var(--sk-theme-3-hsl));
 
 	--sk-back-1: hsl(0, 0%, 100%);
 	--sk-back-2: hsla(0, 0%, 100%, 1);
@@ -98,7 +98,6 @@
 		--sk-back-translucent: hsla(0, 0%, 100%, 0.1);
 		--sk-theme-1-hsl: 12, 94%, 62%;
 		--sk-theme-2-hsl: 240, 8%, 44%;
-		--sk-theme-3-hsl: 204, 100%, 63%;
 		--sk-text-1: hsl(0, 0%, 90%);
 		--sk-text-2: hsl(0, 0%, 80%);
 		--sk-text-3: hsl(0, 0%, 65%);
@@ -137,10 +136,9 @@
 	}
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 800px) {
 	:root {
-		--sk-text-xxl: 5.4rem;
-		--sk-text-xl: 3.6rem;
+		--sk-font-size-h1: 5.4rem;
 		--sk-page-padding-top: 8rem;
 		--sk-page-padding-side: 4.8rem;
 	}

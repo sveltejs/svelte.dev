@@ -195,10 +195,6 @@
 		}
 	}
 
-	.group {
-		font-weight: 700;
-	}
-
 	.log {
 		padding: 0.5rem 1rem 0.5rem calc(1rem + var(--indent));
 		display: flex;

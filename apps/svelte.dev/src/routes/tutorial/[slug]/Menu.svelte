@@ -13,7 +13,7 @@
 	/** @type {import('$lib/tutorial').Exercise} */
 	export let current;
 
-	const is_mobile = mql('(max-width: 800px)');
+	const is_mobile = mql('(max-width: 799px)');
 
 	const duration = $reduced_motion ? 0 : 200;
 
@@ -173,6 +173,7 @@
 	header {
 		position: relative;
 		/* z-index: 2; */
+		font-family: var(--sk-font-ui);
 
 		display: grid;
 		grid-template-columns: 4rem minmax(0, 1fr) 4rem;
@@ -185,18 +186,9 @@
 		width: 100%;
 	}
 
-	.menu.open {
-		border-radius: var(--sk-border-radius) var(--sk-border-radius) 0 0;
-	}
-
 	header strong,
 	h1 {
-		font-size: var(--sk-text-s);
-	}
-
-	.menu {
-		font-size: var(--sk-text-s);
-		border: none;
+		font-family: inherit;
 	}
 
 	header strong {
@@ -225,15 +217,19 @@
 		box-shadow: var(--sk-shadow);
 
 		cursor: pointer;
-	}
 
-	.menu > button {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		gap: 0.4ch;
-		width: 100%;
-		height: 100%;
+		&.open {
+			border-radius: var(--sk-border-radius) var(--sk-border-radius) 0 0;
+		}
+
+		& > button {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 0.4ch;
+			width: 100%;
+			height: 100%;
+		}
 	}
 
 	h1 {
@@ -250,23 +246,18 @@
 		text-overflow: ellipsis;
 		text-align: center;
 		color: var(--sk-text-2);
-		font-weight: 400;
-		font-size: var(--sk-text-s);
-	}
+		font-size: var(--sk-font-size-ui-small);
 
-	h1 .desktop {
-		display: flex;
-		gap: 0.5ch;
-		align-items: center;
-	}
+		.desktop {
+			display: flex;
+			gap: 0.5ch;
+			align-items: center;
+		}
 
-	h1 .mobile {
-		display: none;
+		.mobile {
+			display: none;
+		}
 	}
-
-	/* .expand-icon {
-		padding: 0.5rem;
-	} */
 
 	.expand-icon :global(svg) {
 		transition: transform 0.4s var(--quint-out);
@@ -347,17 +338,8 @@
 		stroke-width: 0 !important;
 	}
 
-	li.expanded > button {
-		font-weight: bold;
-	}
-
 	li.expanded > button > :global(svg) {
 		transform: rotate(90deg);
-	}
-
-	li a::before,
-	li a::after {
-		position: absolute;
 	}
 
 	.exercise {
@@ -369,17 +351,17 @@
 	button {
 		color: var(--sk-text-2);
 		padding: 0 0 0 0.5rem;
-		margin: 0 0.5rem 0 0;
 		display: block;
 		font-variant-numeric: tabular-nums;
-		border: 2px solid transparent;
 		box-sizing: border-box;
+		font-size: var(--sk-font-size-ui-medium);
+		line-height: 1.5;
 	}
 
 	li button {
 		position: relative;
-
 		display: flex;
+		width: 100%;
 		gap: 0.5rem;
 	}
 
@@ -403,11 +385,10 @@
 
 	a:focus-visible,
 	.exercises button:focus-visible {
-		outline: none;
-		border: 2px solid var(--sk-theme-3);
+		outline-offset: -2px;
 	}
 
-	@media screen and (max-width: 800px) {
+	@media screen and (max-width: 799px) {
 		.container {
 			border-right: none;
 		}
@@ -453,13 +434,8 @@
 
 		h1 :where(.part-title, .chapter-title) {
 			grid-row: 2 / span 1;
-			font-size: var(--sk-text-xs);
+			font-size: var(--sk-font-size-ui-small);
 			color: var(--sk-text-3);
-		}
-
-		h1 strong {
-			font-size: var(--sk-text-s) !important;
-			line-height: 1;
 		}
 	}
 </style>

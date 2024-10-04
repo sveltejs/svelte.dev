@@ -78,7 +78,8 @@
 		}
 
 		label {
-			font-family: var(--sk-font-heading);
+			font-family: var(--sk-font-ui);
+			font-size: var(--sk-font-size-ui-small);
 			display: block;
 		}
 
@@ -98,7 +99,6 @@
 				background-size: 2rem 2rem;
 				padding: 0.2rem 0 0 3rem;
 				height: 3rem;
-				font-size: var(--sk-text-xs);
 				text-transform: uppercase;
 				color: var(--sk-text-4);
 
@@ -148,7 +148,7 @@
 		@media (min-width: 1200px) {
 			position: fixed;
 			top: 14rem;
-			right: 0;
+			left: calc(100dvw - var(--sidebar-width));
 			width: var(--sidebar-width);
 			padding: 0 var(--sk-page-padding-side) 0 0;
 			box-sizing: border-box;
@@ -158,9 +158,8 @@
 			}
 
 			& label {
-				font-size: var(--sk-text-m);
-
-				font-weight: 500;
+				font-family: var(--sk-font-heading);
+				font-size: var(--sk-font-size-h3);
 				display: block;
 
 				&::before {
@@ -173,6 +172,10 @@
 
 				li:first-child {
 					display: list-item;
+				}
+
+				li {
+					font-size: var(--sk-font-size-body-small);
 				}
 
 				a.active {

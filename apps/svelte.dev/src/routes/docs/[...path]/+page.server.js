@@ -1,15 +1,11 @@
 import { docs } from '$lib/server/content';
 import { render_content } from '$lib/server/renderer';
-import { error, redirect } from '@sveltejs/kit';
+import { error } from '@sveltejs/kit';
 
 export async function load({ params }) {
-	const document = docs.pages[params.path];
+	const document = docs.pages[`docs/${params.path}`];
 
 	if (!document) {
-		const topic = docs.topics[params.path];
-		if (topic) {
-			redirect(307, `/${topic.children[0].children[0].slug}`);
-		}
 		error(404);
 	}
 

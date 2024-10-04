@@ -25,6 +25,12 @@ import {
 
 ## asClassComponent
 
+<blockquote class="tag deprecated">
+
+Use this only as a temporary solution to migrate your imperative component code to Svelte 5.
+
+</blockquote>
+
 Takes the component function and returns a Svelte 4 compatible component constructor.
 
 <div class="ts-block">
@@ -46,7 +52,15 @@ function asClassComponent<
 
 </div>
 
+
+
 ## createBubbler
+
+<blockquote class="tag deprecated">
+
+Use this only as a temporary solution to migrate your automatically delegated events in Svelte 5.
+
+</blockquote>
 
 Function to create a `bubble` function that mimic the behavior of `on:click` without handler available in svelte 4.
 
@@ -60,7 +74,15 @@ function createBubbler(): (
 
 </div>
 
+
+
 ## createClassComponent
+
+<blockquote class="tag deprecated">
+
+Use this only as a temporary solution to migrate your imperative component code to Svelte 5.
+
+</blockquote>
 
 Takes the same options as a Svelte 4 component and the component function and returns a Svelte 4 compatible component.
 
@@ -83,6 +105,8 @@ function createClassComponent<
 
 </div>
 
+
+
 ## handlers
 
 Function to mimic the multiple listeners available in svelte 4
@@ -96,6 +120,8 @@ function handlers(
 ```
 
 </div>
+
+
 
 ## nonpassive
 
@@ -115,6 +141,8 @@ function nonpassive(
 
 </div>
 
+
+
 ## once
 
 Substitute for the `once` event modifier
@@ -128,6 +156,8 @@ function once(
 ```
 
 </div>
+
+
 
 ## passive
 
@@ -147,6 +177,8 @@ function passive(
 
 </div>
 
+
+
 ## preventDefault
 
 Substitute for the `preventDefault` event modifier
@@ -161,7 +193,15 @@ function preventDefault(
 
 </div>
 
+
+
 ## run
+
+<blockquote class="tag deprecated">
+
+Use this only as a temporary solution to migrate your component code to Svelte 5.
+
+</blockquote>
 
 Runs the given function once immediately on the server, and works like `$effect.pre` on the client.
 
@@ -172,6 +212,8 @@ function run(fn: () => void | (() => void)): void;
 ```
 
 </div>
+
+
 
 ## self
 
@@ -187,6 +229,8 @@ function self(
 
 </div>
 
+
+
 ## stopImmediatePropagation
 
 Substitute for the `stopImmediatePropagation` event modifier
@@ -200,6 +244,8 @@ function stopImmediatePropagation(
 ```
 
 </div>
+
+
 
 ## stopPropagation
 
@@ -215,6 +261,8 @@ function stopPropagation(
 
 </div>
 
+
+
 ## trusted
 
 Substitute for the `trusted` event modifier
@@ -228,5 +276,7 @@ function trusted(
 ```
 
 </div>
+
+
 
 

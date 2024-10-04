@@ -58,12 +58,11 @@
 <style>
 	h3 {
 		color: var(--sk-text-2);
-		font-size: var(--sk-text-l);
 	}
 
 	.intro {
-		max-width: 28em; /* text balancing */
 		margin: 1em 0 3.2rem 0;
+		text-wrap: balance;
 	}
 
 	.supporters-grid {

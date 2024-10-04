@@ -117,7 +117,7 @@
 		display: none;
 	}
 
-	@media screen and (max-width: 800px) {
+	@media screen and (max-width: 799px) {
 		.banner-bottom {
 			bottom: initial;
 			top: 0;

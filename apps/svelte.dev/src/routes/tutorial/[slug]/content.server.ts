@@ -149,7 +149,7 @@ export async function load_exercise(slug: string): Promise<Exercise> {
 		next,
 		markdown: exercise.body,
 		html: await transform(exercise.body, {
-			codespan: (text) =>
+			codespan: ({ text }) =>
 				filenames.size > 1 && filenames.has(text)
 					? `<code data-file="${scope.prefix + text}">${text}</code>`
 					: `<code>${text}</code>`

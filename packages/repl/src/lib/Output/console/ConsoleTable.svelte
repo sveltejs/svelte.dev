@@ -104,6 +104,7 @@
 	table {
 		border-collapse: collapse;
 		line-height: 1;
+		font-family: var(--sk-font-mono);
 	}
 
 	th {

@@ -18,9 +18,8 @@ body {
 }
 
 body {
-	font-size: var(--sk-text-s);
 	font-family: var(--sk-font-body);
-	line-height: 1.618;
+	line-height: 1.5;
 	color: var(--sk-text-2);
 	background-color: var(--sk-back-1);
 	width: 100%;
@@ -42,13 +41,13 @@ body {
 
 *:focus-visible {
 	outline: 2px solid hsla(var(--sk-theme-1-hsl), 0.6);
-	/* box-shadow: var(--sk-focus-outline); */
-	transition: 0.1s ease;
+	border-radius: var(--sk-border-radius);
 }
 
 p,
 ul,
 ol {
+	font-size: var(--sk-font-size-body);
 	margin: 1em 0;
 }
 
@@ -63,45 +62,40 @@ a:hover {
 	text-decoration: underline;
 }
 
-h6 {
-	font-size: var(--sk-text-xs);
-}
-h5 {
-	font-size: var(--sk-text-s);
-}
-h4 {
-	font-size: var(--sk-text-s);
-}
-h3 {
-	font-size: var(--sk-text-m);
-}
-h2 {
-	font-size: var(--sk-text-l);
-}
 h1 {
-	font-size: var(--sk-text-xxl);
+	font-size: var(--sk-font-size-h1);
 }
 
-:where(h1, h2, h3, h4, h5, h6) {
+h2 {
+	font-size: var(--sk-font-size-h2);
+}
+
+h3 {
+	font-size: var(--sk-font-size-h3);
+}
+
+h1,
+h2,
+h3 {
 	position: relative;
 	font-family: var(--sk-font-heading);
 	font-weight: 500;
-	line-height: 1.35;
+	line-height: 1.2;
+	text-wrap: balance;
 	color: var(--sk-text-1);
 }
 
 strong {
-	font-weight: 600;
+	font-weight: 400;
 }
 
 code,
 kbd {
-	font-size: var(--sk-text-xs);
 	font-family: var(--sk-font-mono);
-	line-height: 1.7;
 }
 
 code {
+	font-size: var(--sk-font-size-code);
 	position: relative;
 	border-radius: 0.3em;
 	white-space: nowrap;
@@ -111,6 +105,7 @@ code {
 	margin: 0 0.2rem;
 	top: -0.1rem;
 	background: var(--sk-back-4);
+	line-height: 1.7;
 }
 
 pre {
@@ -138,7 +133,7 @@ blockquote {
 }
 
 blockquote :where(p, ul) {
-	font-size: var(--sk-text-s);
+	font-size: var(--sk-font-size-body-small);
 }
 
 blockquote :last-child {
@@ -146,9 +141,13 @@ blockquote :last-child {
 }
 
 /*  buttons -------------------------------- */
+input,
 button {
 	font-family: var(--sk-font-ui);
 	font-size: inherit;
+}
+
+button {
 	background-color: transparent;
 	border: none;
 	color: currentColor;
@@ -170,15 +169,13 @@ button > svg {
 
 /*  links ------------------------------------- */
 a {
-	position: relative;
-	padding: 0 0 1px 0;
 	color: var(--sk-theme-1);
 }
 
 /*  tables --------------------------------- */
 table {
 	width: 100%;
-	font-size: var(--sk-text-s);
+	font-size: var(--sk-font-size-body-small);
 }
 
 td,

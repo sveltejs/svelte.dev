@@ -12,63 +12,61 @@
 	<title>{$page.status}</title>
 </svelte:head>
 
-<div class="container">
-	{#if online}
-		{#if $page.status === 404}
-			<h1>Not found!</h1>
-			<p>
-				If you were expecting to find something here, please drop by the
-				<a href="/chat"> Discord chatroom </a>
-				and let us know, or raise an issue on
-				<a href="https://github.com/sveltejs/sites">GitHub</a>. Thanks!
-			</p>
-		{:else}
-			<h1>Yikes!</h1>
-			<p>Something went wrong when we tried to render this page.</p>
-			{#if $page.error?.message}
-				<p class="error">{$page.status}: {$page.error.message}</p>
+<div class="outer">
+	<div class="inner">
+		{#if online}
+			{#if $page.status === 404}
+				<h1>Not found!</h1>
+				<p>
+					If you were expecting to find something here, please drop by the
+					<a href="/chat"> Discord chatroom </a>
+					and let us know, or raise an issue on
+					<a href="https://github.com/sveltejs/sites">GitHub</a>. Thanks!
+				</p>
 			{:else}
-				<p class="error">Encountered a {$page.status} error.</p>
+				<h1>Yikes!</h1>
+
+				<p>Something went wrong when we tried to render this page. Please try reloading.</p>
+
+				<p>
+					If the error persists, please let us know on <a href="/chat">Discord</a> or
+					<a href="https://github.com/sveltejs/svelte.dev/issues">GitHub</a>. Thanks!
+				</p>
 			{/if}
-			<p>Please try reloading the page.</p>
-			<p>
-				If the error persists, please drop by the
-				<a href="/chat"> Discord chatroom </a>
-				and let us know, or raise an issue on
-				<a href="https://github.com/sveltejs/sites">GitHub</a>. Thanks!
-			</p>
+		{:else}
+			<h1>It looks like you're offline</h1>
+			<p>Reload the page once you've found the internet.</p>
 		{/if}
-	{:else}
-		<h1>It looks like you're offline</h1>
-		<p>Reload the page once you've found the internet.</p>
-	{/if}
+	</div>
 </div>
 
 <style>
-	.container {
-		padding: var(--sk-page-padding-top) var(--sk-page-padding-side) 6rem var(--sk-page-padding-side);
+	.outer {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 0 var(--sk-page-padding-side) 6rem var(--sk-page-padding-side);
+		width: 100%;
+		height: 100%;
 	}
 
-	h1,
-	p {
-		margin: 0 auto;
+	.inner {
+		max-width: 48rem;
+		text-align: center;
+		text-wrap: balance;
+
+		a {
+			text-wrap: nowrap;
+		}
 	}
 
 	h1 {
-		font-size: 2.8em;
-		font-weight: 300;
+		font-size: var(--sk-font-size-h1);
 		margin: 0 0 0.5em 0;
 	}
 
 	p {
 		margin: 1em auto;
-	}
-
-	.error {
-		background-color: var(--sk-theme-2);
-		color: white;
-		padding: 12px 16px;
-		font: 600 16px/1.7 var(--sk-font-body);
-		border-radius: 2px;
 	}
 </style>

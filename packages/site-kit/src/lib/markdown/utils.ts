@@ -49,9 +49,8 @@ export function escape(html: string, encode = false) {
 
 export function slugify(title: string) {
 	return title
-		.toLowerCase()
 		.replace(/&.+;/g, '')
-		.replace(/[^a-z0-9-$(.):<>]/g, '-')
+		.replace(/[^a-zA-Z0-9-$(.):]/g, '-')
 		.replace(/-{2,}/g, '-')
 		.replace(/^-/, '')
 		.replace(/-$/, '');
@@ -78,139 +77,29 @@ export const normalizeSlugify = (str: string) => {
 	return slugify(removeHTMLEntities(removeMarkdown(str))).replace(/(<([^>]+)>)/gi, '');
 };
 
-export function smart_quotes(str: string) {
+export function smart_quotes(str: string, html: boolean = false) {
 	// replace dumb quotes with smart quotes. This isn't a perfect algorithm — it
 	// wouldn't correctly handle `That '70s show` or `My country 'tis of thee`
 	// but a) it's very unlikely they'll occur in our docs, and
 	// b) they can be dealt with manually
-	return str.replace(/(.|^)(&#39;|&quot;)(.|$)/g, (m, before, quote, after) => {
-		const left = !before.trim();
-		const double = quote === '&quot;';
-		const entity = `&${left ? 'l' : 'r'}${double ? 'd' : 's'}quo;`;
+	return str.replace(
+		html ? /(.|^)(&#39;|&quot;)(.|$)/g : /(.|^)('|")(.|$)/g,
+		(m, before, quote, after) => {
+			const left = !before.trim();
+			let replacement = '';
 
-		return (before ?? '') + entity + (after ?? '');
-	});
+			if (html) {
+				const double = quote === '&quot;';
+				replacement = `&${left ? 'l' : 'r'}${double ? 'd' : 's'}quo;`;
+			} else {
+				const double = quote === '"';
+				replacement = double ? (left ? '“' : '”') : left ? '‘' : '’';
+			}
+
+			return (before ?? '') + replacement + (after ?? '');
+		}
+	);
 }
-
-const default_renderer: Partial<Renderer> = {
-	code(code, infostring, escaped) {
-		const lang = infostring?.match(/\S*/)?.[0];
-
-		code = code.replace(/\n$/, '') + '\n';
-
-		if (!lang) {
-			return '<pre><code>' + (escaped ? code : escape(code, true)) + '</code></pre>\n';
-		}
-
-		return (
-			'<pre><code class="language-' +
-			escape(lang, true) +
-			'">' +
-			(escaped ? code : escape(code, true)) +
-			'</code></pre>\n'
-		);
-	},
-
-	blockquote(quote) {
-		return '<blockquote>\n' + quote + '</blockquote>\n';
-	},
-
-	html(html) {
-		return html;
-	},
-
-	heading(text, level) {
-		return '<h' + level + '>' + text + '</h' + level + '>\n';
-	},
-
-	hr() {
-		return '<hr>\n';
-	},
-
-	list(body, ordered, start) {
-		const type = ordered ? 'ol' : 'ul',
-			startatt = ordered && start !== 1 ? ' start="' + start + '"' : '';
-		return '<' + type + startatt + '>\n' + body + '</' + type + '>\n';
-	},
-
-	listitem(text) {
-		return '<li>' + text + '</li>\n';
-	},
-
-	checkbox(checked) {
-		return '<input ' + (checked ? 'checked="" ' : '') + 'disabled="" type="checkbox"' + '' + '> ';
-	},
-
-	paragraph(text) {
-		return '<p>' + text + '</p>\n';
-	},
-
-	table(header, body) {
-		if (body) body = '<tbody>' + body + '</tbody>';
-
-		return '<table>\n' + '<thead>\n' + header + '</thead>\n' + body + '</table>\n';
-	},
-
-	tablerow(content) {
-		return '<tr>\n' + content + '</tr>\n';
-	},
-
-	tablecell(content, flags) {
-		const type = flags.header ? 'th' : 'td';
-		const tag = flags.align ? '<' + type + ' align="' + flags.align + '">' : '<' + type + '>';
-		return tag + content + '</' + type + '>\n';
-	},
-
-	// span level renderer
-	strong(text) {
-		return '<strong>' + text + '</strong>';
-	},
-
-	em(text) {
-		return '<em>' + text + '</em>';
-	},
-
-	codespan(text) {
-		return '<code>' + text + '</code>';
-	},
-
-	br() {
-		return '<br>';
-	},
-
-	del(text) {
-		return '<del>' + text + '</del>';
-	},
-
-	link(href, title, text) {
-		if (href === null) {
-			return text;
-		}
-		let out = '<a href="' + escape(href) + '"';
-		if (title) {
-			out += ' title="' + title + '"';
-		}
-		out += '>' + text + '</a>';
-		return out;
-	},
-
-	image(href, title, text) {
-		if (href === null) {
-			return text;
-		}
-
-		let out = '<img src="' + href + '" alt="' + text + '"';
-		if (title) {
-			out += ' title="' + title + '"';
-		}
-		out += '>';
-		return out;
-	},
-
-	text(text) {
-		return text;
-	}
-};
 
 const tokenizer: TokenizerObject = {
 	url(src) {
@@ -226,10 +115,7 @@ const tokenizer: TokenizerObject = {
 
 export async function transform(markdown: string, renderer: Partial<Renderer> = {}) {
 	const marked = new Marked({
-		renderer: {
-			...default_renderer,
-			...renderer
-		},
+		renderer,
 		tokenizer
 	});
 
@@ -247,10 +133,7 @@ export function extract_frontmatter(markdown: string) {
 
 	// Prettier might split things awkwardly, so we can't just go line-by-line
 
-	/** @type {string} */
 	let key = '';
-
-	/** @type {string} */
 	let value = '';
 
 	for (const line of frontmatter.split('\n')) {

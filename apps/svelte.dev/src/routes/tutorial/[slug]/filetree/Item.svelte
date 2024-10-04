@@ -42,7 +42,8 @@
 <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 <li
 	aria-current={selected ? 'true' : undefined}
-	style="--depth: {depth}; --icon: url('{icon}');"
+	style:--depth={depth}
+	style:--icon="url(&quot;{icon}&quot;)"
 	on:keydown
 >
 	{#if renaming}
@@ -120,13 +121,10 @@
 		background-position: 0 45%;
 		background-repeat: no-repeat;
 		font-family: var(--sk-font-ui);
-		font-size: var(--sk-text-s);
 	}
 
 	:focus-visible {
-		outline: none;
-		border: 2px solid var(--sk-theme-3) !important;
-		border-radius: 2px;
+		outline-offset: -2px;
 	}
 
 	input {

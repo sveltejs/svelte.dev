@@ -1,15 +1,10 @@
 @import '@fontsource/eb-garamond';
 @import '@fontsource/eb-garamond/500.css';
 @import '@fontsource/eb-garamond/400-italic.css';
-@import '@fontsource/fira-mono';
-
-/* TODO figure out which weights we actually need */
-@import '@fontsource/yantramanav/100.css';
-@import '@fontsource/yantramanav/300.css';
+@import '@fontsource/dm-serif-display';
 @import '@fontsource/yantramanav/400.css';
-@import '@fontsource/yantramanav/500.css';
-@import '@fontsource/yantramanav/700.css';
-@import '@fontsource/yantramanav/900.css';
+@import '@fontsource/fira-mono';
+@import '@fontsource/fira-sans';
 
 @import './tokens.css';
 @import './base.css';

@@ -272,7 +272,7 @@
 
 	.codemirror-container :global {
 		* {
-			font: 400 var(--sk-text-xs) / 1.7 var(--sk-font-mono);
+			font: 400 var(--sk-font-size-code) / 1.7 var(--sk-font-mono);
 		}
 
 		.mark-text {
@@ -389,7 +389,6 @@
 
 		.cm-diagnosticText strong {
 			font-size: 0.9em;
-			/* font-weight: 700; */
 			font-family: var(--sk-font-mono);
 			opacity: 0.7;
 		}

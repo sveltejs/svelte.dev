@@ -145,7 +145,6 @@ for (const pkg of packages) {
 	migrate_meta_json(`${DOCS}/${pkg.name}`);
 
 	const modules = await pkg.process_modules(await read_types(`${pkg.local}/${pkg.pkg}/`, []), pkg);
-	modules.sort((a, b) => (a.name! < b.name! ? -1 : 1));
 
 	const files = glob(`${DOCS}/${pkg.name}/**/*.md`);
 

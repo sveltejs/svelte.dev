@@ -5,7 +5,8 @@ import { read } from '$app/server';
 import satori from 'satori';
 import { html as toReactNode } from 'satori-html';
 import Card from './Card.svelte';
-import YantramanavRegular from './Yantramanav-Regular.ttf?url';
+import DMSerifDisplay from './DMSerifDisplay-Regular.ttf?url';
+import FiraSans from './FiraSans-Regular.ttf?url';
 import { blog_posts } from '$lib/server/content';
 
 export const prerender = true;
@@ -18,7 +19,8 @@ export function entries() {
 
 const height = 630;
 const width = 1200;
-const data = await read(YantramanavRegular).arrayBuffer();
+const dm_serif_display = await read(DMSerifDisplay).arrayBuffer();
+const fira_sans = await read(FiraSans).arrayBuffer();
 
 export async function GET({ params }) {
 	const post = blog_posts.find((post) => post.slug === `blog/${params.slug}`);
@@ -31,8 +33,14 @@ export async function GET({ params }) {
 	const svg = await satori(element, {
 		fonts: [
 			{
-				name: 'Overpass',
-				data,
+				name: 'DMSerif Display',
+				data: dm_serif_display,
+				style: 'normal',
+				weight: 400
+			},
+			{
+				name: 'Fira Sans',
+				data: fira_sans,
 				style: 'normal',
 				weight: 400
 			}

@@ -24,6 +24,8 @@ function spring<T = any>(
 
 </div>
 
+
+
 ## tweened
 
 A tweened store in Svelte is a special type of store that provides smooth transitions between state values over time.
@@ -38,6 +40,8 @@ function tweened<T>(
 ```
 
 </div>
+
+
 
 ## Spring
 
@@ -90,8 +94,7 @@ stiffness: number;
 ```
 
 <div class="ts-block-property-details"></div>
-</div>
-</div>
+</div></div>
 
 ## Tweened
 
@@ -117,7 +120,6 @@ update(updater: Updater<T>, opts?: TweenedOptions<T>): Promise<void>;
 ```
 
 <div class="ts-block-property-details"></div>
-</div>
-</div>
+</div></div>
 
 

@@ -25,9 +25,7 @@
 	{#snippet top_nav()}
 		<Nav title={data.nav_title} links={data.nav_links}>
 			{#snippet search()}
-				{#if $page.url.pathname !== '/search'}
-					<Search />
-				{/if}
+				<Search />
 			{/snippet}
 
 			{#snippet external_links()}

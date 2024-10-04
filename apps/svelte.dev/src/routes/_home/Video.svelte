@@ -219,8 +219,7 @@
 	.captions {
 		line-height: 1;
 		color: white;
-		font-size: 2rem;
-		font-weight: 700;
+		font-size: var(--sk-font-size-ui-medium);
 		filter: var(--control-filter);
 	}
 
@@ -247,6 +246,5 @@
 	.video-player input:focus-visible ~ img {
 		outline: 2px solid var(--sk-theme-1);
 		outline-offset: 2px;
-		border-radius: var(--sk-border-radius);
 	}
 </style>
