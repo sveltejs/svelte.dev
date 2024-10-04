@@ -21,7 +21,6 @@ It's now possible for the components to 'talk' to each other without any state m
 /// file: AudioPlayer.svelte
 <audio
 	src={src}
-	crossorigin="anonymous"
 	bind:currentTime={time}
 	bind:duration
 	bind:paused
