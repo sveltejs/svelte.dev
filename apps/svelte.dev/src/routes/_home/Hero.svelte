@@ -52,7 +52,7 @@
 			width: 100%;
 			height: 200%;
 			left: 0;
-			top: 0;
+			top: -8rem; /* prevent cutoff on overscroll */
 			background: linear-gradient(to bottom, transparent, var(--sk-back-1)),
 				radial-gradient(circle at 40% 30%, rgb(235, 243, 249), rgb(214, 222, 228));
 		}

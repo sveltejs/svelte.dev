@@ -268,10 +268,27 @@ export default app;`
 		align-items: center;
 		justify-content: space-between;
 		padding: 0.6rem var(--sk-page-padding-side);
-		background-color: var(--sk-back-4);
+		background-color: var(--sk-back-2);
 		color: var(--sk-text-1);
 		white-space: nowrap;
 		flex: 0;
+		gap: 2rem;
+
+		&::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: -4px;
+			width: 100%;
+			height: 4px;
+			z-index: 2;
+			background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), transparent);
+		}
+
+		@media (min-width: 800px) {
+			padding-top: 0;
+			padding-bottom: 1rem;
+		}
 	}
 
 	.buttons {
@@ -311,22 +328,10 @@ export default app;`
 		border: none;
 		color: currentColor;
 		font-family: var(--sk-font-ui);
-		opacity: 0.7;
-		outline: none;
 		flex: 1;
-		margin: 0 0.2em 0 0.4rem;
-		padding-top: 0.2em;
-		border-bottom: 1px solid transparent;
+		margin: 0 0.2em 0 0rem;
+		padding: 0.2rem;
 		font-size: var(--sk-font-size-ui-medium);
-	}
-
-	input:hover {
-		border-bottom: 1px solid currentColor;
-		opacity: 1;
-	}
-	input:focus {
-		border-bottom: 1px solid currentColor;
-		opacity: 1;
 	}
 
 	button span {

@@ -21,9 +21,10 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		links: NavigationLink[];
 		search?: Snippet;
 		external_links?: Snippet;
+		shadow: boolean;
 	}
 
-	let { home_title = 'Homepage', title, links, search, external_links }: Props = $props();
+	let { home_title = 'Homepage', title, links, search, external_links, shadow }: Props = $props();
 
 	let visible = $state(true);
 
@@ -66,6 +67,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 	class:visible={visible || $nav_open}
 	class:$nav_open
 	class:dark={$theme.current === 'dark'}
+	class:shadow
 	style:z-index={$overlay_open && ($searching || $on_this_page_open) ? 80 : null}
 	aria-label="Primary"
 >
@@ -143,20 +145,18 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		background-color: var(--sk-back-2);
 		font-family: var(--sk-font-body);
 		user-select: none;
-		transition: 0.4s var(--quint-out);
-		transition-property: transform, background;
 		isolation: isolate;
 		font-family: var(--sk-font-ui);
-	}
 
-	nav::after {
-		content: '';
-		position: absolute;
-		left: 0;
-		top: -4px;
-		width: 100%;
-		height: 4px;
-		background: linear-gradient(to top, rgba(0, 0, 0, 0.05), transparent);
+		&.shadow::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: -4px;
+			width: 100%;
+			height: 4px;
+			background: linear-gradient(to top, rgba(0, 0, 0, 0.05), transparent);
+		}
 	}
 
 	a {
@@ -303,12 +303,12 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		nav {
 			display: grid;
 			grid-template-columns: auto 1fr 1fr;
-		}
 
-		nav::after {
-			top: auto;
-			bottom: -4px;
-			background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), transparent);
+			&.shadow::after {
+				top: auto;
+				bottom: -4px;
+				background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), transparent);
+			}
 		}
 
 		.menu {

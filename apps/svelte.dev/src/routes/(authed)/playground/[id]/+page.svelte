@@ -106,7 +106,7 @@
 		position: relative;
 		height: calc(100% - var(--sk-nav-height) - var(--sk-banner-bottom-height));
 		height: calc(100dvh - var(--sk-nav-height) - var(--sk-banner-bottom-height));
-		--app-controls-h: 5.6rem;
+		--app-controls-h: 5rem;
 		--pane-controls-h: 4.2rem;
 		overflow: hidden;
 		background-color: var(--sk-back-1);
@@ -115,6 +115,10 @@
 		box-sizing: border-box;
 		display: flex;
 		flex-direction: column;
+
+		@media (min-width: 800px) {
+			--app-controls-h: 4rem;
+		}
 	}
 
 	/* temp fix for #2499 and #2550 while waiting for a fix for https://github.com/sveltejs/svelte-repl/issues/8 */
