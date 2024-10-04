@@ -14,6 +14,7 @@
 		margin: -1rem;
 		background: url('./deepsea.webp');
 		background-size: cover;
+		padding: 1em;
 	}
 
 	span {
