@@ -12,7 +12,7 @@
 	main {
 		height: 400vw;
 		margin: -1rem;
-		background: url('/tutorial/deepsea.webp');
+		background: url('./deepsea.webp');
 		background-size: cover;
 	}
 

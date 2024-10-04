@@ -1,4 +1,6 @@
 <script>
+	import kitten from './kitten.png';
+
 	let hereKitty = false;
 </script>
 
@@ -6,12 +8,17 @@
 
 <!-- creative commons BY-NC http://www.pngall.com/kitten-png/download/7247 -->
 <img
+	class="kitten"
 	class:curious={hereKitty}
 	alt="Kitten wants to know what's going on"
-	src="/tutorial/kitten.png"
+	src={kitten}
 />
 
 <style>
+	:global(body):has(.kitten) {
+		overflow: hidden;
+	}
+
 	img {
 		position: absolute;
 		left: 0;
