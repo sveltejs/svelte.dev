@@ -13,7 +13,7 @@
 	/** @type {import('$lib/tutorial').Exercise} */
 	export let current;
 
-	const is_mobile = mql('(max-width: 800px)');
+	const is_mobile = mql('(max-width: 799px)');
 
 	const duration = $reduced_motion ? 0 : 200;
 
@@ -388,7 +388,7 @@
 		outline-offset: -2px;
 	}
 
-	@media screen and (max-width: 800px) {
+	@media screen and (max-width: 799px) {
 		.container {
 			border-right: none;
 		}

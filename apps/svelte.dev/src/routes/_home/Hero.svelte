@@ -1,22 +1,14 @@
 <script>
-	import SvelteLogotype from './svelte-logotype.svg';
-
-	// @ts-ignore
+	// @ts-expect-error
 	import MachineDesktop from './svelte-machine-desktop.png?w=1200;2000;2800;4400&format=avif;webp;png;&as=picture';
-	// @ts-ignore
+	// @ts-expect-error
 	import MachineMobile from './svelte-machine-mobile.png?w=960&format=avif;webp;png;&as=picture';
 </script>
 
 <div class="hero">
 	<div class="hero-content">
-		<img alt="Svelte logotype" class="logotype" src={SvelteLogotype} width="300" height="56" />
-		<strong>
-			<span style="white-space: nowrap">Web development</span> <br /> but fun
-		</strong>
-		<div class="buttons">
-			<a href="/tutorial" class="cta">tutorial</a>
-			<a href="/docs" class="cta basic">read the docs</a>
-		</div>
+		<h1>web development for the rest of us</h1>
+		<a href="/docs" class="cta basic">get started</a>
 	</div>
 
 	<picture class="machine">
@@ -51,9 +43,48 @@
 <style>
 	.hero {
 		position: relative;
-		background: radial-gradient(circle at 40% 30%, rgb(235, 243, 249), rgb(214, 222, 228));
 		padding: 6rem 0 34vw 0;
 		margin-bottom: 3rem;
+
+		&::before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 200%;
+			left: 0;
+			top: 0;
+			background: linear-gradient(to bottom, transparent, var(--sk-back-1)),
+				radial-gradient(circle at 40% 30%, rgb(235, 243, 249), rgb(214, 222, 228));
+		}
+
+		:root.dark &::before {
+			background: linear-gradient(to bottom, transparent, var(--sk-back-1)),
+				radial-gradient(
+					64.14% 72.25% at 47.58% 31.75%,
+					hsl(209deg 6% 47% / 52%) 0%,
+					hsla(0, 0%, 100%, 0) 100%
+				),
+				linear-gradient(
+					92.4deg,
+					hsl(210, 7%, 16%) 14.67%,
+					hsl(0deg 0% 0% / 48%) 54.37%,
+					hsla(207, 22%, 13%, 0.62) 92.49%
+				),
+				linear-gradient(0deg, hsl(204, 38%, 20%), hsl(204, 10%, 90%));
+		}
+	}
+
+	.hero-content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1rem;
+		margin-bottom: 4rem;
+		text-align: center;
+	}
+
+	h1 {
+		max-width: 9em;
 	}
 
 	.machine img {
@@ -63,84 +94,21 @@
 		height: auto;
 	}
 
-	.hero-content {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 1rem;
-		margin-bottom: 4rem;
-	}
-
-	strong {
-		font-size: var(--sk-font-size-h2);
-		text-align: center;
-		font-family: var(--sk-font-heading);
-		text-transform: lowercase;
-		font-weight: 400;
-		color: var(--sk-text-2);
-		line-height: 1.2;
-	}
-
-	.buttons {
-		display: flex;
-		gap: 1rem;
-		align-items: center;
-	}
-
 	.cta {
-		display: flex;
-		align-items: center;
-		gap: 0.1rem;
-		background: var(--sk-theme-1);
-		padding: 0.35em 0.8em;
 		font-family: var(--sk-font-ui);
 		font-size: var(--sk-font-size-ui-medium);
-		font-weight: 600;
-		white-space: nowrap;
-		border-radius: var(--sk-border-radius);
-		box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.08);
-		color: #fff;
-		transition: 0.5s var(--quint-out);
-		transition-property: box-shadow, color;
-	}
-
-	.cta:hover {
-		text-decoration: none;
-		box-shadow:
-			0px 0.8px 3.8px rgba(0, 0, 0, 0.115),
-			0px 6px 30px rgba(0, 0, 0, 0.23);
-	}
-
-	.cta.basic {
-		background-color: var(--sk-back-5);
-		color: var(--sk-text-1);
-	}
-
-	.logotype {
-		width: min(45vw, 40em);
-		height: auto;
+		color: var(--sk-theme-1);
+		text-transform: uppercase;
 	}
 
 	@media (min-width: 800px) {
 		.hero-content {
 			--width: clamp(60rem, 50vw, 80rem);
+			align-items: start;
 			position: absolute;
-			display: grid;
-			grid-template-columns: 1fr 1fr;
-			grid-column-gap: 4rem;
-			grid-row-gap: 2rem;
 			width: var(--width);
 			left: calc(0.5 * (100% - min(100vw, 120rem)) + var(--sk-page-padding-side));
-			top: 6rem;
-			font-size: 0.9em;
-		}
-
-		.logotype {
-			width: 100%;
-			justify-self: end;
-		}
-
-		strong {
+			top: calc(8vw - 2rem);
 			text-align: left;
 		}
 
@@ -151,34 +119,9 @@
 	}
 
 	@media (min-width: 1400px) {
-		.hero-content {
-			grid-template-columns: 1fr;
-			width: calc(0.5 * var(--width));
-			top: 6vw;
-		}
-
 		.hero {
 			height: calc(10rem + 20vw);
 			padding: 10rem 0 0 0;
 		}
-	}
-
-	:global(html.dark) .hero {
-		background: radial-gradient(
-				64.14% 72.25% at 47.58% 31.75%,
-				hsl(209deg 6% 47% / 52%) 0%,
-				hsla(0, 0%, 100%, 0) 100%
-			),
-			linear-gradient(
-				92.4deg,
-				hsl(210, 7%, 16%) 14.67%,
-				hsl(0deg 0% 0% / 48%) 54.37%,
-				hsla(207, 22%, 13%, 0.62) 92.49%
-			),
-			linear-gradient(0deg, hsl(204, 38%, 20%), hsl(204, 10%, 90%));
-	}
-
-	:global(html.dark) .logotype {
-		filter: invert(4) brightness(1.2);
 	}
 </style>

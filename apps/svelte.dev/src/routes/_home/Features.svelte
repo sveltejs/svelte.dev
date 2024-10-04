@@ -2,7 +2,7 @@
 	import { Section } from '@sveltejs/site-kit/components';
 </script>
 
-<Section --background="var(--sk-back-1)">
+<Section>
 	<div class="container">
 		<div class="features">
 			<h2><span>features? we got 'em.</span></h2>
