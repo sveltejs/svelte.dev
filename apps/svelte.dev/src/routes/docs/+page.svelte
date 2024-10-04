@@ -87,6 +87,14 @@
 				share them with other people.
 			</p>
 		</a>
+
+		<a href="/chat" class="external">
+			<h2>Help! I'm stuck</h2>
+			<p>
+				Join our Discord server where you can hang out with fellow Svelte users and ask them
+				questions. It's like an LLM but with people.
+			</p>
+		</a>
 	</div>
 </div>
 
@@ -120,6 +128,11 @@
 			padding-right: 4rem;
 			background: url(./arrow-right.svg) no-repeat 100% 50%;
 			background-size: 3rem;
+
+			.external & {
+				background-image: url(./external-link.svg);
+				background-size: 3rem;
+			}
 		}
 
 		p:last-child {
