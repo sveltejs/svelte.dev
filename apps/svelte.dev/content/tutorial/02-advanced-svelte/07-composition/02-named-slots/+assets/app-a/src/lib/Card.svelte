@@ -4,7 +4,7 @@
 
 <style>
 	@font-face {
-		src: url('/tutorial/business-bard/Garamond Classico SC Regular.woff2') format('woff2');
+		src: url('/Garamond Classico SC Regular.woff2') format('woff2');
 		font-family: 'Silian Rail';
 		font-style: normal;
 		font-weight: 400;
@@ -19,7 +19,7 @@
 		font-family: 'Silian Rail';
 		width: 24em;
 		aspect-ratio: 3.5 / 2.0;
-		background: url('/tutorial/business-card/paper.svg') no-repeat 50% 50%;
+		background: url(./paper.svg) no-repeat 50% 50%;
 		background-size: cover;
 		border-radius: 2px;
 		filter: drop-shadow(0.1em 0.1em 0.1em rgba(0, 0, 0, 0.2));

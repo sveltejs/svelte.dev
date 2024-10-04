@@ -35,6 +35,6 @@
 	}
 
 	button {
-		background-image: url('/tutorial/icons/remove.svg');
+		background-image: url(./remove.svg);
 	}
 </style>

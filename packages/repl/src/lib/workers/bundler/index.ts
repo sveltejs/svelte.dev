@@ -6,6 +6,7 @@ import * as resolve from 'resolve.exports';
 import commonjs from './plugins/commonjs';
 import glsl from './plugins/glsl';
 import json from './plugins/json';
+import svg from './plugins/svg';
 import replace from './plugins/replace';
 import loop_protect from './plugins/loop-protect';
 import type { Plugin, TransformResult } from '@rollup/browser';
@@ -352,6 +353,18 @@ async function get_bundle(
 				});
 
 				if (result.css) {
+					// resolve local files by inlining them
+					result.css.code = result.css.code.replace(
+						/url\(['"]?(\..+?\.svg)['"]?\)/g,
+						(match, $1) => {
+							if (local_files_lookup.has($1)) {
+								return `url('data:image/svg+xml;base64,${btoa(local_files_lookup.get($1)?.source)}')`;
+							} else {
+								return match;
+							}
+						}
+					);
+					// add the CSS via injecting a style tag
 					result.js.code +=
 						'\n\n' +
 						`
@@ -401,6 +414,7 @@ async function get_bundle(
 				repl_plugin,
 				commonjs,
 				json,
+				svg,
 				glsl,
 				loop_protect,
 				replace({

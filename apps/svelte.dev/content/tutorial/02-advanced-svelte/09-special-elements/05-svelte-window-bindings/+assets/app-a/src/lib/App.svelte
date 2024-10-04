@@ -4,15 +4,12 @@
 
 <svelte:window />
 
-<main>
-	<span>depth: {y}px</span>
-</main>
+<span>depth: {y}px</span>
 
 <style>
-	main {
+	:global(body) {
 		height: 400vw;
-		margin: -1rem;
-		background: url('/tutorial/deepsea.webp');
+		background: url(./deepsea.webp);
 		background-size: cover;
 	}
 
