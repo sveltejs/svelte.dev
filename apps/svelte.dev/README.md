@@ -1,14 +1,14 @@
 # svelte.dev
 
-This is the app behind svelte.dev, the official Svelte site.
+This is the app behind [svelte.dev](https://svelte.dev), the official Svelte site.
 
 ## Development
 
 ### Tutorial
 
-The tutorial consists of two technically different parts: The Svelte tutorial and the SvelteKit tutorial. The SvelteKit tutorial uses Stackblitz WebContainers under the hood in order to boot up a Node runtime in the browser. The Svelte tutorial uses Rollup in a web worker - it does not use WebContainers because a simple web worker is both faster and more reliable (there are known issues with iOS mobile).
+The tutorial consists of two technically different parts: The Svelte tutorial and the SvelteKit tutorial. The SvelteKit tutorial uses [WebContainers](https://webcontainers.io/) under the hood in order to boot up a Node runtime in the browser. The Svelte tutorial uses Rollup in a web worker - it does not use WebContainers because a simple web worker is both faster and more reliable (there are known issues with iOS mobile).
 
-WebContainers make use of certain features that are only available when certain security-related cors headers are set, namely these two:
+WebContainers require [cross-origin isolation](https://webcontainers.io/guides/quickstart#cross-origin-isolation), which means the document needs to have these headers:
 
 ```
 Cross-Origin-Embedder-Policy: require-corp
