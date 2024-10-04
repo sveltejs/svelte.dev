@@ -77,10 +77,12 @@
 
 		.code-block {
 			position: relative;
-			box-shadow: 1px 2px 1rem hsla(0 0 0 / 0.08);
+			background: var(--sk-back-2);
+			border: 1px solid var(--sk-back-5);
 			border-radius: var(--sk-border-radius);
 			overflow: hidden;
 			margin: 2rem 0;
+			/* background: var(--sk-back-3); */
 
 			.controls {
 				--height: 3.6rem;
@@ -89,7 +91,8 @@
 				position: absolute;
 				top: 0;
 				height: var(--height);
-				padding: 0.3rem;
+				padding: 0.3rem 0.5rem 0.3rem 1rem;
+				gap: 0.5rem;
 				width: 100%;
 				z-index: 2;
 				justify-content: end;
@@ -97,7 +100,7 @@
 
 				&:has(.filename) {
 					position: relative;
-					background: var(--sk-back-4);
+					border-bottom: 1px solid var(--sk-back-4);
 				}
 
 				.filename {
@@ -106,7 +109,6 @@
 					flex: 1;
 					font-family: var(--sk-font-mono);
 					font-size: var(--sk-font-size-code);
-					padding: 0 1rem;
 					color: var(--sk-text-2);
 
 					&::after {
@@ -124,9 +126,9 @@
 					appearance: none;
 					display: flex;
 					align-items: center;
-					height: calc(var(--height) - 0.6rem);
+					height: calc(var(--height) - 1rem);
 					outline-offset: 0;
-					padding: 0 0.4rem;
+					padding: 0 0.6rem;
 
 					&::before,
 					&::after {
@@ -162,7 +164,7 @@
 
 				.copy-to-clipboard {
 					position: relative;
-					height: calc(var(--height) - 0.6rem);
+					height: calc(var(--height) - 1rem);
 					aspect-ratio: 1;
 					border-radius: var(--sk-border-radius);
 
