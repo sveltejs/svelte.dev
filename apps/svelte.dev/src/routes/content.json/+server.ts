@@ -97,7 +97,14 @@ async function plaintext(markdown: string) {
 
 	return (
 		await markedTransform(markdown, {
-			code: ({ text }) => text.split('// ---cut---\n').pop() || 'ERROR: ---cut--- not found',
+			code: ({ text }) => {
+				const raw = text.split('// ---cut---\n').pop() ?? '';
+
+				return raw
+					.replace(/^\/\/ @noErrors.*$/gm, ' ')
+					.replace(/^\/\/ @errors.+$/gm, ' ')
+					.replace(/^\/\/\/ file:.+$/gm, ' ');
+			},
 			blockquote: block,
 			html: () => '\n',
 			heading: ({ text }) => `${text}\n`,
@@ -105,7 +112,9 @@ async function plaintext(markdown: string) {
 			list: block,
 			listitem: block,
 			checkbox: block,
-			paragraph: ({ text }) => `${text}\n\n`,
+			paragraph({ tokens }) {
+				return this.parser!.parseInline(tokens);
+			},
 			table: block,
 			tablerow: block,
 			tablecell: ({ text }) => {

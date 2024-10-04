@@ -20,8 +20,8 @@
 		}
 
 		const prefix =
-			index > 20
-				? `${escape(content.slice(index - 15, index))}`
+			index > 40 && content.length > 70
+				? `${escape(content.slice(index - 35, index))}`
 				: `<span class="spacer"></span>${escape(content.slice(0, index))}`;
 		const suffix = escape(
 			content.slice(
@@ -73,7 +73,7 @@
 	}
 
 	details {
-		padding: 0.5rem 0;
+		padding: calc(0.5 * var(--padding)) 0;
 
 		summary {
 			position: sticky;
@@ -82,7 +82,7 @@
 			display: block;
 			color: var(--sk-text-4);
 			text-transform: uppercase;
-			padding: 0.5rem var(--padding);
+			padding: calc(0.5 * var(--padding)) var(--padding);
 			font-size: var(--sk-font-size-ui-medium);
 			z-index: 2;
 			user-select: none;

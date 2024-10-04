@@ -31,7 +31,8 @@ Renders a list of search results
 <style>
 	.info {
 		padding: var(--padding);
-		font-size: 1.2rem;
+		font-size: var(--sk-font-size-ui-medium);
+		color: var(--sk-text-4);
 		font-weight: normal;
 		text-transform: uppercase;
 		background-color: var(--sk-back-2);

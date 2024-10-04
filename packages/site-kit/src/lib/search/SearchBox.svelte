@@ -160,24 +160,26 @@ It appears when the user clicks on the `Search` component or presses the corresp
 		use:trap
 	>
 		<div class="search-box">
-			<!-- svelte-ignore a11y_autofocus -->
-			<input
-				autofocus
-				onkeydown={(e) => {
+			<div style="background: var(--background)">
+				<!-- svelte-ignore a11y_autofocus -->
+				<input
+					autofocus
+					onkeydown={(e) => {
 					if (e.key === 'Enter' && !e.isComposing) {
 						const element = modal.querySelector('a[data-has-node]') as HTMLElement | undefined;
 						element?.click();
 					}
 				}}
-				oninput={(e) => {
-					$search_query = e.currentTarget.value;
-				}}
-				value={$search_query}
-				{placeholder}
-				aria-describedby="search-description"
-				aria-label={placeholder}
-				spellcheck="false"
-			/>
+					oninput={(e) => {
+						$search_query = e.currentTarget.value;
+					}}
+					value={$search_query}
+					{placeholder}
+					aria-describedby="search-description"
+					aria-label={placeholder}
+					spellcheck="false"
+				/>
+			</div>
 
 			<button aria-label="Close" onclick={close}>
 				<!-- <Icon name="close" /> -->
@@ -204,18 +206,19 @@ It appears when the user clicks on the `Search` component or presses the corresp
 						/>
 					</div>
 				{:else}
-					<h2 class="info" class:empty={recent_searches.length === 0}>
+					<span class="info" class:empty={recent_searches.length === 0}>
 						{#if idle}
 							{@render idle(recent_searches.length)}
 						{:else}
 							{recent_searches.length ? 'Recent searches' : 'No recent searches'}
 						{/if}
-					</h2>
+					</span>
+
 					{#if recent_searches.length}
 						<div class="results-container">
-							<ul>
+							<ul class="recent">
 								{#each recent_searches as search}
-									<li class="recent">
+									<li>
 										<a onclick={() => navigate(search.href)} href={search.href}>
 											{search.breadcrumbs.at(-1)}
 										</a>
@@ -279,7 +282,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 	.search-box {
 		--padding: 1rem;
 		--background: var(--sk-back-2);
-		background: var(--background);
+		/* background: var(--background); */
 		position: relative;
 		height: calc(100% - 2rem);
 		width: calc(100vw - 2rem);
@@ -360,9 +363,57 @@ It appears when the user clicks on the `Search` component or presses the corresp
 	.results-container {
 		border-radius: 0 0 var(--sk-border-radius) var(--sk-border-radius);
 		pointer-events: all;
+		background: var(--background);
+
+		li {
+			position: relative;
+
+			a {
+				color: var(--sk-text-2);
+				display: block;
+				text-decoration: none;
+				padding: 0.5rem calc(4rem + var(--padding)) 0.5rem var(--padding);
+
+				&:hover {
+					background: rgba(0, 0, 0, 0.05);
+				}
+
+				&:focus {
+					outline-offset: -3px;
+				}
+			}
+
+			button[aria-label='Delete'] {
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 5rem;
+				height: 100%;
+				color: var(--sk-text-2);
+				opacity: 0.1;
+
+				&:hover {
+					opacity: 1;
+					outline: none;
+				}
+
+				&:focus-visible {
+					opacity: 1;
+					outline-offset: -3px;
+				}
+			}
+		}
+
+		.recent {
+			a {
+				font-size: var(--sk-font-size-ui-medium);
+			}
+		}
 	}
 
 	.info {
+		display: block;
+		background: var(--background);
 		padding: var(--padding);
 		font-family: var(--sk-font-ui);
 		font-size: var(--sk-font-size-ui-medium);
@@ -370,49 +421,9 @@ It appears when the user clicks on the `Search` component or presses the corresp
 		font-weight: normal;
 		text-transform: uppercase;
 		pointer-events: all;
-	}
 
-	.info.empty {
-		border-radius: 0 0 var(--sk-border-radius) var(--sk-border-radius);
-	}
-
-	a {
-		color: var(--sk-text-2);
-		display: block;
-		text-decoration: none;
-		line-height: 1;
-		padding: 1rem calc(4rem + var(--padding)) 1rem var(--padding);
-
-		&:hover {
-			background: rgba(0, 0, 0, 0.05);
-		}
-
-		&:focus {
-			outline-offset: -3px;
-		}
-	}
-
-	li {
-		position: relative;
-	}
-
-	button[aria-label='Delete'] {
-		position: absolute;
-		top: 0;
-		right: 0;
-		width: 5rem;
-		height: 100%;
-		color: var(--sk-text-2);
-		opacity: 0.1;
-
-		&:hover {
-			opacity: 1;
-			outline: none;
-		}
-
-		&:focus-visible {
-			opacity: 1;
-			outline-offset: -3px;
+		&.empty {
+			border-radius: 0 0 var(--sk-border-radius) var(--sk-border-radius);
 		}
 	}
 </style>
