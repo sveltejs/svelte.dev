@@ -5,7 +5,7 @@
 	let { one, two, three }: { one?: Snippet; two?: Snippet; three?: Snippet } = $props();
 </script>
 
-<Section --background="var(--sk-back-1)">
+<Section>
 	<div class="grid">
 		{#if one}
 			<div>

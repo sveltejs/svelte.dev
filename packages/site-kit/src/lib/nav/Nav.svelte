@@ -172,7 +172,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		font-size: var(--sk-font-size-ui-small);
 	}
 
-	@media (max-width: 800px) {
+	@media (max-width: 799px) {
 		nav:not(.visible):not(:focus-within) {
 			transform: translate(0, calc(var(--sk-nav-height)));
 		}
