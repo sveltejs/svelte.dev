@@ -1,3 +1,11 @@
+/* only used in the Svelte tutorial */
+@font-face {
+	src: url('/tutorial/Garamond Classico SC Regular.woff2') format('woff2');
+	font-family: 'Silian Rail';
+	font-style: normal;
+	font-weight: 400;
+}
+
 /* this file is duplicated in the SvelteKit tutorial static assets. If you change it here, you should also change it there. */
 html {
 	--bg-1: hsl(0, 0%, 100%);
