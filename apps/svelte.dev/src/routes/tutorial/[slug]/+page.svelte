@@ -384,6 +384,7 @@
 		background: var(--sk-back-2);
 		display: flex;
 		flex-direction: column;
+		font-size: var(--sk-font-size-ui-small);
 	}
 
 	.navigator .solve {

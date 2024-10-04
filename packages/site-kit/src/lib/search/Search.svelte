@@ -19,10 +19,12 @@ Renders a search widget which when clicked (or the corresponding keyboard shortc
 		}}
 		onmousedown={(event) => {
 			event.preventDefault();
+			event.currentTarget.blur();
 			$searching = true;
 		}}
 		ontouchend={(event) => {
 			event.preventDefault();
+			event.currentTarget.blur();
 			$searching = true;
 		}}
 		type="search"

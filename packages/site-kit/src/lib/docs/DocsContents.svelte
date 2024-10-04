@@ -95,7 +95,6 @@
 		padding-bottom: 0.8rem;
 		font-size: var(--sk-font-size-h3);
 		font-family: var(--sk-font-heading);
-		font-weight: 500;
 		color: var(--sk-text-1);
 	}
 
@@ -138,12 +137,6 @@
 			text-decoration: none;
 
 			background-color: var(--sk-back-4);
-		}
-
-		[aria-current='page'] {
-			background-color: hsla(var(--sk-theme-1-hsl), 0.1) !important;
-			color: var(--sk-theme-1) !important;
-			font-weight: 400;
 		}
 	}
 

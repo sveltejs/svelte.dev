@@ -51,8 +51,7 @@
 	}
 
 	h1 {
-		font-size: 4rem;
-		font-weight: 500;
+		font-size: var(--sk-font-size-h1);
 	}
 
 	.standfirst {
