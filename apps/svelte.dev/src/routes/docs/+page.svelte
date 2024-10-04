@@ -65,7 +65,7 @@
 
 	<div class="options">
 		<a href="/tutorial">
-			<h2>I'm brand new here</h2>
+			<h2>I&rsquo;m brand new here</h2>
 			<p>
 				We recommend starting with the interactive tutorial, which will teach you how to use Svelte
 				right here in your browser.
@@ -73,10 +73,10 @@
 		</a>
 
 		<a href="/docs/svelte/migrating">
-			<h2>I'm migrating an app from Svelte 4</h2>
+			<h2>I&rsquo;m migrating an app from Svelte 4</h2>
 			<p>
-				If you're already experienced with an older version of Svelte, the migration guide will
-				bring you up to speed on the changes in Svelte 5.
+				If you&rsquo;re already experienced with an older version of Svelte, the migration guide
+				will bring you up to speed on the changes in Svelte 5.
 			</p>
 		</a>
 
