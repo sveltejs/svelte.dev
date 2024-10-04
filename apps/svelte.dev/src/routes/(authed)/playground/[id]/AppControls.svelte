@@ -272,6 +272,7 @@ export default app;`
 		color: var(--sk-text-1);
 		white-space: nowrap;
 		flex: 0;
+		gap: 2rem;
 
 		&::after {
 			content: '';
@@ -327,22 +328,11 @@ export default app;`
 		border: none;
 		color: currentColor;
 		font-family: var(--sk-font-ui);
-		opacity: 0.7;
-		outline: none;
 		flex: 1;
-		margin: 0 0.2em 0 0.4rem;
-		padding-top: 0.2em;
+		margin: 0 0.2em 0 0rem;
+		padding: 0.2rem;
 		border-bottom: 1px solid transparent;
 		font-size: var(--sk-font-size-ui-medium);
-	}
-
-	input:hover {
-		border-bottom: 1px solid currentColor;
-		opacity: 1;
-	}
-	input:focus {
-		border-bottom: 1px solid currentColor;
-		opacity: 1;
 	}
 
 	button span {
