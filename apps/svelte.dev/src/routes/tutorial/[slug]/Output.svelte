@@ -1,35 +1,38 @@
-<script>
+<script module>
+	let initial = $state(true);
+</script>
+
+<script lang="ts">
 	import { browser, dev } from '$app/environment';
 	import { afterNavigate } from '$app/navigation';
-	import { theme } from '@sveltejs/site-kit/stores';
+	import { theme, type Theme } from '@sveltejs/site-kit/stores';
 	import { onMount } from 'svelte';
 	import Chrome from './Chrome.svelte';
 	import Loading from './Loading.svelte';
-	import { base, error, logs, progress, subscribe } from './adapter.js';
+	import { adapter_state, subscribe } from './adapter.svelte';
+	import type { Exercise } from '$lib/tutorial';
 
-	/** @type {import('$lib/tutorial').Exercise} */
-	export let exercise;
+	interface Props {
+		exercise: Exercise;
+		paused: boolean;
+	}
 
-	/** @type {boolean} */
-	export let paused;
+	let { exercise, paused }: Props = $props();
 
-	/** @type {HTMLIFrameElement} */
-	let iframe;
-	let loading = true;
-	let initial = true;
-	let terminal_visible = false;
+	let iframe = $state() as HTMLIFrameElement;
+	let loading = $state(true);
+	let terminal_visible = $state(false);
 
 	// reset `path` to `exercise.path` each time, but allow it to be controlled by the iframe
-	let path = exercise.path;
-
-	$: if ($base) set_iframe_src($base + (path = exercise.path));
+	let path = $state(exercise.path);
 
 	onMount(() => {
 		const unsubscribe = subscribe('reload', () => {
-			set_iframe_src($base + path);
+			set_iframe_src(adapter_state.base + path);
 		});
 
 		return () => {
+			initial = false;
 			unsubscribe();
 		};
 	});
@@ -38,27 +41,22 @@
 		clearTimeout(timeout);
 	});
 
-	/** @param {typeof $theme} $theme */
-	function change_theme($theme) {
+	function change_theme(theme: Theme) {
 		if (!iframe) return;
 
 		try {
 			const url = new URL(iframe.src);
 
-			url.searchParams.set('theme', $theme.current);
+			url.searchParams.set('theme', theme.current);
 
 			iframe.src = url.href;
 		} catch {}
 	}
 
-	$: change_theme($theme);
+	let timeout: any;
 
-	/** @type {any} */
-	let timeout;
-
-	/** @param {MessageEvent} e */
-	async function handle_message(e) {
-		if (e.origin !== $base) return;
+	async function handle_message(e: MessageEvent) {
+		if (e.origin !== adapter_state.base) return;
 
 		if (paused) return;
 
@@ -73,7 +71,7 @@
 
 				// we lost contact, refresh the page
 				loading = true;
-				set_iframe_src($base + path);
+				set_iframe_src(adapter_state.base + path);
 				loading = false;
 			}, 1000);
 		} else if (e.data.type === 'ping-pause') {
@@ -81,8 +79,7 @@
 		}
 	}
 
-	/** @param {string} src */
-	function set_iframe_src(src) {
+	function set_iframe_src(src: string) {
 		if (!iframe) return; // HMR
 
 		// To prevent iframe flickering.
@@ -109,39 +106,51 @@
 			iframe.style.visibility = 'visible';
 		}
 	}
+
+	$effect(() => {
+		if (adapter_state.base) set_iframe_src(adapter_state.base + (path = exercise.path));
+	});
+	$effect(() => {
+		change_theme($theme);
+	});
 </script>
 
-<svelte:window on:message={handle_message} />
+<svelte:window onmessage={handle_message} />
 <Chrome
 	{path}
 	{loading}
-	href={$base && $base + path}
-	on:refresh={() => {
-		set_iframe_src($base + path);
+	href={adapter_state.base && adapter_state.base + path}
+	refresh={() => {
+		set_iframe_src(adapter_state.base + path);
 	}}
-	on:toggle_terminal={() => {
+	toggle_terminal={() => {
 		terminal_visible = !terminal_visible;
 	}}
-	on:change={(e) => {
-		if ($base) {
-			const url = new URL(e.detail.value, $base);
+	change={(e) => {
+		if (adapter_state.base) {
+			const url = new URL(e.value, adapter_state.base);
 			path = url.pathname + url.search + url.hash;
-			set_iframe_src($base + path);
+			set_iframe_src(adapter_state.base + path);
 		}
 	}}
 />
 
 <div class="content">
 	{#if browser}
-		<iframe bind:this={iframe} title="Output" on:load={set_iframe_visible}></iframe>
+		<iframe bind:this={iframe} title="Output" onload={set_iframe_visible}></iframe>
 	{/if}
 
-	{#if paused || loading || $error}
-		<Loading {initial} error={$error} progress={$progress.value} status={$progress.text} />
+	{#if paused || loading || adapter_state.error}
+		<Loading
+			{initial}
+			error={adapter_state.error}
+			progress={adapter_state.progress.value}
+			status={adapter_state.progress.text}
+		/>
 	{/if}
 
 	<div class="terminal" class:visible={terminal_visible}>
-		{#each $logs as log}
+		{#each adapter_state.logs as log}
 			<div>{@html log}</div>
 		{/each}
 	</div>
@@ -178,6 +187,7 @@
 		font-family: var(--sk-font-mono);
 		font-size: var(--sk-font-size-ui-small); /* TODO this should use a mono size */
 		padding: 1rem;
+		border-top: 1px solid var(--sk-text-4);
 		background: rgba(255, 255, 255, 0.5);
 		transform: translate(0, 100%);
 		transition: transform 0.3s;

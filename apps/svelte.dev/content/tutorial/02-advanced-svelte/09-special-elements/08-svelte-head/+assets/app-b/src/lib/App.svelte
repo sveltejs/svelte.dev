@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-	<link rel="stylesheet" href="/stylesheets/{selected}.css" />
+	<link rel="stylesheet" href="/tutorial/stylesheets/{selected}.css" />
 </svelte:head>
 
 <h1>Welcome to my site!</h1>

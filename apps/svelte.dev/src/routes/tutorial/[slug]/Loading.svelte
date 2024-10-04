@@ -1,22 +1,15 @@
-<script>
-	import { page } from '$app/stores';
-	import { Icon } from '@sveltejs/site-kit/components';
-	import { load_webcontainer, reset } from './adapter.js';
+<script lang="ts">
+	import { load_webcontainer, reset } from './adapter.svelte';
 	import { files } from './state.js';
 
-	/** @type {boolean} */
-	export let initial;
+	interface Props {
+		initial: boolean;
+		error?: Error | null;
+		progress: number;
+		status: string;
+	}
 
-	/** @type {Error | null} */
-	export let error;
-
-	/** @type {number} */
-	export let progress;
-
-	/** @type {string} */
-	export let status;
-
-	$: is_svelte = /Part (1|2)/.test($page.data.exercise.part.title);
+	let { initial, error = null, progress, status }: Props = $props();
 </script>
 
 <div class="loading">
@@ -73,9 +66,9 @@
 					<p>
 						If this is not the case, you can try loading it by <button
 							type="button"
-							on:click={async () => {
+							onclick={async () => {
 								error = null;
-								load_webcontainer();
+								load_webcontainer(true);
 								await reset($files);
 							}}>clicking here</button
 						>.
@@ -84,12 +77,6 @@
 					<p>
 						We couldn't start the app. Please ensure third party cookies are enabled for this site.
 					</p>
-				{/if}
-
-				{#if is_svelte}
-					<a href="https://svelte.dev/tutorial/{$page.data.exercise.slug}">
-						Or go to the legacy svelte tutorial instead <Icon name="arrow-right" />
-					</a>
 				{/if}
 			</div>
 
@@ -107,7 +94,7 @@
 			/>
 		</svg>
 
-		{#if initial}
+		{#if initial || progress < 1}
 			<div class="progress-container">
 				<div class="progress" style="width: {progress * 100}%;"></div>
 			</div>

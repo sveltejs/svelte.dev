@@ -148,10 +148,12 @@
 
 		@media (min-width: 1200px) {
 			position: fixed;
+			display: flex;
+			flex-direction: column;
 			top: 14rem;
+			height: calc(100vh - 14rem);
 			left: calc(100dvw - var(--sidebar-width));
 			width: var(--sidebar-width);
-			padding: 0 var(--sk-page-padding-side) 0 0;
 			box-sizing: border-box;
 
 			input {
@@ -170,6 +172,10 @@
 
 			nav {
 				display: block;
+				overflow-y: auto;
+				scrollbar-width: none;
+				margin-left: -1rem; /* negative margin avoids focus rings being cut off */
+				padding: 0 0 var(--sk-page-padding-top) 1rem;
 
 				li:first-child {
 					display: list-item;

@@ -19,8 +19,7 @@ const plugin: Plugin = {
 				ecmaVersion: 'latest'
 			});
 
-			/** @type {string[]}  */
-			const requires = [];
+			const requires: string[] = [];
 
 			walk(ast as Node, null, {
 				CallExpression: (node) => {

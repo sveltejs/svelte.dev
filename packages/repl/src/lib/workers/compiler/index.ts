@@ -69,7 +69,8 @@ function compile({ source, options, return_ast }: CompilerInput): CompilerOutput
 				js: js.code,
 				css: css?.code || `/* Add a <sty` + `le> tag to see compiled CSS */`,
 				error: null,
-				warnings,
+				// Svelte 5 returns warnings as error objects with a toJSON method, prior versions return a POJO
+				warnings: compiled.warnings.map((w: any) => w.toJSON?.() ?? w),
 				metadata,
 				ast
 			};
@@ -85,7 +86,8 @@ function compile({ source, options, return_ast }: CompilerInput): CompilerOutput
 					js: compiled.js.code,
 					css,
 					error: null,
-					warnings: compiled.warnings,
+					// Svelte 5 returns warnings as error objects with a toJSON method
+					warnings: compiled.warnings.map((w: any) => w.toJSON()),
 					metadata: compiled.metadata
 				};
 			}

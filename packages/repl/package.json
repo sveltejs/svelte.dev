@@ -30,6 +30,15 @@
 		"./theme": {
 			"svelte": "./src/lib/theme.ts",
 			"default": "./src/lib/theme.ts"
+		},
+		"./bundler": {
+			"default": "./src/lib/Bundler.ts"
+		},
+		"./viewer": {
+			"svelte": "./src/lib/Output/Viewer.svelte"
+		},
+		"./console": {
+			"svelte": "./src/lib/Output/console/Console.svelte"
 		}
 	},
 	"files": [

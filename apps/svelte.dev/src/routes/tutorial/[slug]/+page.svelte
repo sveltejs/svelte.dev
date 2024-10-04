@@ -2,7 +2,7 @@
 	import { afterNavigate, beforeNavigate } from '$app/navigation';
 	import { SplitPane } from '@rich_harris/svelte-split-pane';
 	import { Icon } from '@sveltejs/site-kit/components';
-	import { reset } from './adapter.js';
+	import { reset } from './adapter.svelte';
 	import Editor from './Editor.svelte';
 	import ContextMenu from './filetree/ContextMenu.svelte';
 	import Filetree from './filetree/Filetree.svelte';
@@ -20,6 +20,8 @@
 		solution
 	} from './state.js';
 	import { text_files } from './shared';
+	import OutputRollup from './OutputRollup.svelte';
+	import { page } from '$app/stores';
 
 	export let data;
 
@@ -315,7 +317,11 @@
 					</section>
 
 					<section slot="b" class="preview">
-						<Output exercise={data.exercise} {paused} />
+						{#if /svelte$/.test($page.data.exercise.part.slug)}
+							<OutputRollup />
+						{:else}
+							<Output exercise={data.exercise} {paused} />
+						{/if}
 					</section>
 				</SplitPane>
 			</section>
