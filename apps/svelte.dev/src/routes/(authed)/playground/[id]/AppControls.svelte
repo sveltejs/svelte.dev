@@ -331,7 +331,6 @@ export default app;`
 		flex: 1;
 		margin: 0 0.2em 0 0rem;
 		padding: 0.2rem;
-		border-bottom: 1px solid transparent;
 		font-size: var(--sk-font-size-ui-medium);
 	}
 
