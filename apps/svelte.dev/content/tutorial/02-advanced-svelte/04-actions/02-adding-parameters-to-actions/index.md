@@ -25,7 +25,7 @@ Then, we need to pass some options into the action:
 
 ```svelte
 /// file: App.svelte
-<button use:tooltip+++={{ content, theme: 'material' }}+++>
+<button use:tooltip+++={{ content }}+++>
 	Hover me
 </button>
 ```

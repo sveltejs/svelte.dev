@@ -217,6 +217,7 @@
 				on:drop|preventDefault={dragEnd}
 			>
 				<i class="drag-handle"></i>
+
 				{#if file.name === 'App' && filename !== editing_name}
 					<div class="uneditable">
 						App.svelte{#if show_modified && file.modified}*{/if}
@@ -226,7 +227,9 @@
 
 					{#if editing_file}
 						<span class="input-sizer">
-							{input_value + (/\./.test(input_value) ? '' : `.${editing_file.type}`)}
+							<span style="color: transparent">{input_value}</span>
+							{#if !/\./.test(input_value)}.{editing_file.type}{/if}
+							<!-- {input_value + (/\./.test(input_value) ? '' : `.${editing_file.type}`)} -->
 						</span>
 
 						<!-- svelte-ignore a11y_autofocus -->
@@ -272,12 +275,12 @@
 		{/each}
 	</div>
 
-	<button class="add-new" on:click={add_new} title="add new component">
-		<svg width="12" height="12" viewBox="0 0 24 24">
-			<line stroke="#999" x1="12" y1="5" x2="12" y2="19" />
-			<line stroke="#999" x1="5" y1="12" x2="19" y2="12" />
-		</svg>
-	</button>
+	<button
+		class="add-new"
+		on:click={add_new}
+		aria-label="add new component"
+		title="add new component"
+	></button>
 
 	<div class="runes-info"><RunesInfo {runes} /></div>
 
@@ -287,9 +290,19 @@
 <style>
 	.component-selector {
 		position: relative;
-		border-bottom: 1px solid var(--sk-text-4);
-		/* overflow: hidden; */
 		display: flex;
+		padding: 0 1rem 0 0;
+
+		/* fake border (allows tab borders to appear above it) */
+		&::before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 1px;
+			bottom: 0px;
+			left: 0;
+			background-color: var(--sk-back-4);
+		}
 	}
 
 	.file-tabs {
@@ -303,22 +316,43 @@
 	.file-tabs .button,
 	.add-new {
 		position: relative;
-		display: inline-block;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
 		font: var(--sk-font-size-ui-small) / 1.8rem var(--sk-font-ui);
-		background: var(--sk-back-1);
 		border: none;
-		border-bottom: 3px solid transparent;
-		padding: 12px 14px 8px 16px;
+		padding: 0 1rem;
+		height: 100%;
+		aspect-ratio: 1;
 		margin: 0;
 		color: var(--sk-text-3);
 		border-radius: 0;
 		cursor: pointer;
 	}
 
-	.file-tabs .button.active {
-		/* color: var(--second); */
-		color: var(--sk-text-2, #333);
-		border-bottom: 3px solid var(--sk-theme-1);
+	.add-new {
+		background: url(./file-new.svg) 50% 50% no-repeat;
+		background-size: 1em;
+	}
+
+	.file-tabs .button {
+		padding: 0 1rem 0 2em;
+
+		.drag-handle {
+			cursor: move;
+			width: 2em;
+			height: 100%;
+			position: absolute;
+			left: 0em;
+			top: 0;
+			background: url(./file.svg) 50% 50% no-repeat;
+			background-size: 1em;
+		}
+
+		&.active {
+			color: var(--sk-text-2, #333);
+			border-bottom: 1px solid var(--sk-theme-1);
+		}
 	}
 
 	.editable,
@@ -331,19 +365,27 @@
 	}
 
 	.input-sizer {
+		display: flex;
 		color: var(--sk-text-3, #ccc);
 	}
 
 	input {
 		position: absolute;
 		width: 100%;
-		left: 16px;
-		top: 12px;
-		font: 400 12px/1.5 var(--sk-font-body);
 		border: none;
-		color: var(--sk-theme-3);
+		color: var(--sk-theme-1);
 		outline: none;
 		background-color: transparent;
+		top: 0;
+		left: 0;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-family: var(--sk-font-ui);
+		font-size: var(--sk-font-size-ui-small);
+		padding: 0 1rem 1px 2em;
+		box-sizing: border-box;
 	}
 
 	.duplicate {
@@ -404,27 +446,6 @@
 		display: flex;
 		align-items: center;
 		justify-content: flex-end;
-	}
-
-	.drag-handle {
-		cursor: move;
-		width: 5px;
-		height: 25px;
-		position: absolute;
-		left: 5px;
-		top: 9px;
-		--drag-handle-color: #dedede;
-		background: linear-gradient(
-			to right,
-			var(--sk-back-4, --drag-handle-color) 1px,
-			var(--sk-back-1, white) 1px,
-			var(--sk-back-1, white) 2px,
-			var(--sk-back-4, --drag-handle-color) 2px,
-			var(--sk-back-4, --drag-handle-color) 3px,
-			var(--sk-back-1, white) 3px,
-			var(--sk-back-1, white) 4px,
-			var(--sk-back-4, --drag-handle-color) 4px
-		);
 	}
 
 	svg {

@@ -43,6 +43,7 @@
 <style>
 	footer {
 		max-width: 120rem;
+		font-size: var(--sk-font-size-body-small);
 		padding: 0 var(--sk-page-padding-side);
 		margin: 0 auto;
 		display: grid;

@@ -108,7 +108,6 @@
 		font-size: var(--sk-font-size-ui-medium);
 		text-transform: uppercase;
 		letter-spacing: 0.1em;
-		font-weight: 600;
 		color: var(--sk-text-3);
 	}
 
@@ -142,16 +141,14 @@
 		padding: 0 0.75rem !important;
 		transition: 0.1s ease;
 		transition-property: background-color, color;
+
+		&[aria-current='true'] {
+			color: var(--sk-theme-1) !important;
+		}
 	}
 
 	a:hover {
 		text-decoration: none;
 		background-color: var(--sk-back-4);
-	}
-
-	[aria-current='true'] {
-		/* background-color: hsla(var(--sk-theme-1-hsl), 0.1) !important; */
-		color: var(--sk-theme-1) !important;
-		font-weight: 400;
 	}
 </style>

@@ -1,37 +1,38 @@
-<script>
-	import { createEventDispatcher } from 'svelte';
+<script lang="ts">
+	interface Props {
+		path?: string;
+		loading?: boolean;
+		href?: string | null;
+		change?: (value: { value: string }) => void;
+		refresh?: () => void;
+		toggle_terminal?: () => void;
+	}
 
-	/** @type {string} */
-	export let path;
-
-	/** @type {boolean} */
-	export let loading;
-
-	/** @type {string | null} */
-	export let href;
-
-	const dispatch = createEventDispatcher();
+	let {
+		path = '/',
+		loading = false,
+		href = null,
+		change,
+		refresh,
+		toggle_terminal
+	}: Props = $props();
 </script>
 
-<div class="chrome" class:loading>
-	<button
-		disabled={loading}
-		class="reload icon"
-		on:click={() => dispatch('refresh')}
-		aria-label="reload"
+<div class="chrome">
+	<button disabled={loading || !refresh} class="reload icon" onclick={refresh} aria-label="reload"
 	></button>
 
 	<input
-		disabled={loading}
+		disabled={loading || !change}
 		aria-label="URL"
 		value={path}
-		on:change={(e) => {
-			dispatch('change', { value: e.currentTarget.value });
+		onchange={(e) => {
+			change?.({ value: e.currentTarget.value });
 		}}
-		on:keydown={(e) => {
+		onkeydown={(e) => {
 			if (e.key !== 'Enter') return;
 
-			dispatch('change', { value: e.currentTarget.value });
+			change?.({ value: e.currentTarget.value });
 			e.currentTarget.blur();
 		}}
 	/>
@@ -45,9 +46,9 @@
 	></a>
 
 	<button
-		disabled={loading}
+		disabled={loading || !toggle_terminal}
 		class="terminal icon"
-		on:click={() => dispatch('toggle_terminal')}
+		onclick={() => toggle_terminal?.()}
 		aria-label="toggle terminal"
 	></button>
 </div>
@@ -89,7 +90,7 @@
 		background-size: 2rem;
 	}
 
-	.loading a {
+	a:not([href]) {
 		opacity: 0.5;
 	}
 

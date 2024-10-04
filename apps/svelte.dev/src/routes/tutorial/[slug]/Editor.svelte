@@ -13,10 +13,11 @@
 	import { svelteTheme } from '@sveltejs/repl/theme';
 	import { basicSetup } from 'codemirror';
 	import { onMount, tick } from 'svelte';
-	import { warnings } from './adapter.js';
+	import { adapter_state } from './adapter.svelte';
 	import { autocomplete_for_svelte } from './autocompletion.js';
 	import './codemirror.css';
 	import { files, selected_file, selected_name, update_file } from './state.js';
+	import { toStore } from 'svelte/store';
 
 	/** @type {HTMLDivElement} */
 	let container;
@@ -33,6 +34,8 @@
 	/** @type {import('@codemirror/view').EditorView} */
 	let editor_view;
 
+	const warnings = toStore(() => adapter_state.warnings);
+
 	const extensions = [
 		basicSetup,
 		EditorState.tabSize.of(2),
@@ -47,25 +50,21 @@
 
 	$: if (editor_view) {
 		if ($selected_name) {
-			const current_warnings = $warnings[$selected_name];
+			const current_warnings = $warnings[$selected_name] || [];
+			const diagnostics = current_warnings.map((warning) => {
+				/** @type {import('@codemirror/lint').Diagnostic} */
+				const diagnostic = {
+					from: warning.start.character,
+					to: warning.end.character,
+					severity: 'warning',
+					message: warning.message
+				};
 
-			if (current_warnings) {
-				const diagnostics = current_warnings.map((warning) => {
-					/** @type {import('@codemirror/lint').Diagnostic} */
-					const diagnostic = {
-						from: warning.start.character,
-						to: warning.end.character,
-						severity: 'warning',
-						message: warning.message
-					};
+				return diagnostic;
+			});
+			const transaction = setDiagnostics(editor_view.state, diagnostics);
 
-					return diagnostic;
-				});
-
-				const transaction = setDiagnostics(editor_view.state, diagnostics);
-
-				editor_view.dispatch(transaction);
-			}
+			editor_view.dispatch(transaction);
 		}
 	}
 
@@ -191,9 +190,6 @@
 			// could be false if onMount returned early
 			select_state($selected_name);
 		}
-
-		// clear warnings
-		warnings.set({});
 	});
 </script>
 

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import JSONNode from '@sveltejs/svelte-json-tree';
 	import ConsoleTable from './ConsoleTable.svelte';
-	import type { Log } from './console';
+	import type { Log } from './Console.svelte';
 
 	export let log: Log;
 	export let depth = 0;
@@ -193,10 +193,6 @@
 		& + :global(&) {
 			border-top: none;
 		}
-	}
-
-	.group {
-		font-weight: 700;
 	}
 
 	.log {

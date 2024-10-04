@@ -43,13 +43,13 @@
 {/each}
 
 <style>
-	:global(body) {
-		overflow: hidden;
-	}
-
 	span {
 		position: absolute;
 		font-size: 5vw;
 		user-select: none;
+	}
+
+	:global(body) {
+		overflow: hidden;
 	}
 </style>

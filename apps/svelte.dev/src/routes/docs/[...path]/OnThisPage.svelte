@@ -75,6 +75,7 @@
 			ul {
 				margin: 0;
 				list-style: none;
+				font-size: var(--sk-font-size-body-small);
 			}
 
 			/* Only show the title link if it's in the sidebar */
@@ -191,6 +192,10 @@
 
 				li:first-child {
 					display: list-item;
+				}
+
+				li {
+					font-size: var(--sk-font-size-body-small);
 				}
 
 				a.active {

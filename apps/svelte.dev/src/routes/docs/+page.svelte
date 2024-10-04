@@ -86,4 +86,8 @@
 			max-width: 50rem;
 		}
 	}
+
+	a {
+		font-size: var(--sk-font-size-body-small);
+	}
 </style>

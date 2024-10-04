@@ -1,7 +1,7 @@
 import { BROWSER } from 'esm-env';
 import { persisted } from 'svelte-persisted-store';
 
-interface Theme {
+export interface Theme {
 	preference: 'light' | 'dark' | 'system';
 	current: 'light' | 'dark';
 }

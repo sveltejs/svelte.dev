@@ -32,7 +32,24 @@ const svelteThemeStyles = EditorView.theme(
 		},
 
 		'.cm-content': {
+			// ensure no gap between top of editor and highlighted first/last line
+			paddingTop: '0px',
+			paddingBottom: '0px',
 			caretColor: 'var(--sk-theme-3)'
+		},
+
+		'.cm-content .cm-line:first-child': {
+			paddingTop: '4px'
+		},
+
+		'.cm-content .cm-line:last-child': {
+			paddingBottom: '4px'
+		},
+
+		'.cm-lineNumbers .cm-gutterElement:not(:last-child)': {
+			display: 'flex',
+			justifyContent: 'end',
+			alignItems: 'end'
 		},
 
 		'.cm-cursor, .cm-dropCursor': { borderLeftColor: 'var(--sk-theme-3)' },

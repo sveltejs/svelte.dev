@@ -81,7 +81,7 @@
 		"satori-html": "^0.3.2",
 		"shiki": "^1.6.4",
 		"shiki-twoslash": "^3.1.2",
-		"svelte": "5.0.0-next.243",
+		"svelte": "5.0.0-next.260",
 		"svelte-check": "^4.0.0",
 		"svelte-preprocess": "^5.1.4",
 		"tiny-glob": "^0.2.9",

@@ -4,6 +4,7 @@
 @import '@fontsource/dm-serif-display';
 @import '@fontsource/yantramanav/400.css';
 @import '@fontsource/fira-mono';
+@import '@fontsource/fira-sans';
 
 @import './tokens.css';
 @import './base.css';

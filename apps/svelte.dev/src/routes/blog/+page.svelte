@@ -55,7 +55,6 @@
 			color: var(--sk-text-4);
 			font-family: var(--sk-font-ui);
 			font-size: var(--sk-font-size-ui-small);
-			font-weight: 400;
 			text-transform: uppercase;
 		}
 
@@ -68,8 +67,7 @@
 			padding: 0 0 4rem 0;
 
 			h2 {
-				font-size: 4rem;
-				font-weight: 400;
+				font-size: var(--sk-font-size-h1);
 				color: var(--sk-text-2);
 			}
 		}

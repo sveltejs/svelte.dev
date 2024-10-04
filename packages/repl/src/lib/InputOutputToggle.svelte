@@ -24,7 +24,7 @@
 		align-items: center;
 		justify-content: center;
 		width: 100%;
-		height: 42px;
+		height: var(--pane-controls-h);
 		border-top: 1px solid var(--sk-theme-2);
 		z-index: 2;
 	}
