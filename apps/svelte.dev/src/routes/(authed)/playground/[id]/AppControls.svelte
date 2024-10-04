@@ -280,7 +280,6 @@ export default app;`
 			bottom: -4px;
 			width: 100%;
 			height: 4px;
-			background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), transparent);
 			z-index: 2;
 		}
 
