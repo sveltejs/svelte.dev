@@ -25,7 +25,8 @@
 			if (
 				next &&
 				heading.getBoundingClientRect().top < threshold &&
-				next.getBoundingClientRect().top > threshold
+				next.getBoundingClientRect().top > threshold &&
+				current !== heading.id
 			) {
 				current = heading.id;
 
@@ -157,14 +158,13 @@
 		}
 
 		@media (min-width: 1200px) {
-			width: calc(var(--sidebar-width) - var(--sk-page-padding-side));
 			padding: 0;
 			box-sizing: border-box;
 			position: fixed;
 			display: flex;
 			flex-direction: column;
 			top: 14rem;
-			height: calc(100vh - 20rem);
+			height: calc(100vh - 14rem);
 			overflow: hidden;
 			left: calc(100dvw - var(--sidebar-width));
 			width: var(--sidebar-width);
@@ -189,6 +189,7 @@
 				display: block;
 				height: 100%;
 				overflow-y: auto;
+				scrollbar-width: none;
 
 				li:first-child {
 					display: list-item;
