@@ -53,6 +53,14 @@
 
 <style>
 	.text :global {
+		h2,
+		h3 {
+			max-width: 100%;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			padding-right: 1em;
+		}
+
 		h2 {
 			margin-top: 7rem;
 		}
@@ -289,9 +297,9 @@
 		a.permalink {
 			position: absolute !important;
 			display: block;
-			background: url(../icons/link.svg) 0 50% no-repeat;
+			background: url(../icons/link.svg) 50% 50% no-repeat;
 			background-size: 1em 1em;
-			width: 1.4em;
+			width: 1.2em;
 			height: 1.2em;
 			top: 0;
 
@@ -305,7 +313,8 @@
 				opacity: 0;
 				transition: opacity 0.2s;
 
-				:where(h2, h3):hover & {
+				:where(h2, h3):hover &,
+				&:focus {
 					opacity: 1;
 				}
 			}
