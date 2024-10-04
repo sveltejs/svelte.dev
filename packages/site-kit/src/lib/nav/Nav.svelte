@@ -145,8 +145,6 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		background-color: var(--sk-back-2);
 		font-family: var(--sk-font-body);
 		user-select: none;
-		transition: 0.4s var(--quint-out);
-		transition-property: transform, background;
 		isolation: isolate;
 		font-family: var(--sk-font-ui);
 
