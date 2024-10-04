@@ -335,6 +335,7 @@
 		width: 100%;
 		height: calc(100dvh - var(--sk-nav-height));
 		background: var(--sk-back-1);
+		padding: 1rem 0 0 0;
 	}
 
 	.container :global(section) {

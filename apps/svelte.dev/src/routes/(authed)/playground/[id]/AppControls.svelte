@@ -268,10 +268,26 @@ export default app;`
 		align-items: center;
 		justify-content: space-between;
 		padding: 0.6rem var(--sk-page-padding-side);
-		background-color: var(--sk-back-4);
+		background-color: var(--sk-back-2);
 		color: var(--sk-text-1);
 		white-space: nowrap;
 		flex: 0;
+
+		&::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: -4px;
+			width: 100%;
+			height: 4px;
+			background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), transparent);
+			z-index: 2;
+		}
+
+		@media (min-width: 800px) {
+			padding-top: 0;
+			padding-bottom: 1rem;
+		}
 	}
 
 	.buttons {
