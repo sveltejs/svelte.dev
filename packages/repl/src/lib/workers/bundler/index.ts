@@ -385,9 +385,11 @@ async function get_bundle(
 					result.js.code +=
 						'\n\n' +
 						`
+					import { styles as $$_styles } from './__shared.js';
 					const $$__style = document.createElement('style');
 					$$__style.textContent = ${JSON.stringify(result.css.code)};
 					document.head.append($$__style);
+					$$_styles.push($$__style);
 				`.replace(/\t/g, '');
 				}
 			} else if (id.endsWith('.svelte.js')) {
@@ -476,8 +478,23 @@ async function bundle({ uid, files }: { uid: number; files: File[] }) {
 	lookup.set('./__entry.js', {
 		name: '__entry',
 		source: `
-			export { mount, unmount, untrack } from 'svelte';
+			import { unmount as u } from 'svelte';
+			import { styles } from './__shared.js';
+			export { mount, untrack } from 'svelte';
 			export {default as App} from './App.svelte';
+			export function unmount(component) {
+				u(component);
+				styles.forEach(style => style.remove());
+			}
+		`,
+		type: 'js',
+		modified: false
+	});
+
+	lookup.set('./__shared.js', {
+		name: '__entry',
+		source: `
+			export let styles = [];
 		`,
 		type: 'js',
 		modified: false

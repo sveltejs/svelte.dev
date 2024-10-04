@@ -8,17 +8,12 @@
 
 <!-- creative commons BY-NC http://www.pngall.com/kitten-png/download/7247 -->
 <img
-	class="kitten"
 	class:curious={hereKitty}
 	alt="Kitten wants to know what's going on"
 	src={kitten}
 />
 
 <style>
-	:global(body):has(.kitten) {
-		overflow: hidden;
-	}
-
 	img {
 		position: absolute;
 		left: 0;
@@ -30,5 +25,9 @@
 
 	.curious {
 		transform: translate(-15%, 0) rotate(0deg);
+	}
+
+	:global(body) {
+		overflow: hidden;
 	}
 </style>

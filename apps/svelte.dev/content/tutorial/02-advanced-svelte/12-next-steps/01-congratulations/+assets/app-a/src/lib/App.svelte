@@ -48,4 +48,8 @@
 		font-size: 5vw;
 		user-select: none;
 	}
+
+	:global(body) {
+		overflow: hidden;
+	}
 </style>
