@@ -1,13 +1,11 @@
 <script lang="ts">
 	import { afterNavigate } from '$app/navigation';
 	import type { Document } from '@sveltejs/site-kit';
-	import { tick } from 'svelte';
 
 	let { content, document }: { content: HTMLElement; document: Document } = $props();
 
 	let headings: NodeListOf<HTMLHeadingElement>;
 	let current = $state('');
-	let element: HTMLElement;
 
 	afterNavigate(() => {
 		current = location.hash.slice(1);
@@ -25,18 +23,9 @@
 			if (
 				next &&
 				heading.getBoundingClientRect().top < threshold &&
-				next.getBoundingClientRect().top > threshold &&
-				current !== heading.id
+				next.getBoundingClientRect().top > threshold
 			) {
 				current = heading.id;
-
-				tick().then(() => {
-					const active = element.querySelector('.active');
-					active?.scrollIntoView({
-						block: 'center'
-					});
-				});
-
 				break;
 			}
 		}
@@ -51,7 +40,7 @@
 		On this page
 	</label>
 
-	<nav bind:this={element}>
+	<nav>
 		<ul>
 			<li>
 				<a href="/{document.slug}" class:active={current === ''}>
@@ -190,6 +179,7 @@
 				height: 100%;
 				overflow-y: auto;
 				scrollbar-width: none;
+				padding-bottom: var(--sk-page-padding-top);
 
 				li:first-child {
 					display: list-item;
