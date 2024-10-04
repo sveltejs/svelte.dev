@@ -112,10 +112,11 @@
 		color: var(--sk-text-2);
 		margin: 1em -2em;
 		padding: 2em;
-		background-color: var(--sk-back-2);
+		background-color: var(--sk-back-1);
 		border-radius: var(--sk-border-radius);
 
 		&:hover {
+			background-color: var(--sk-back-2);
 			filter: drop-shadow(1px 2px 4px rgb(0 0 0 / 0.1));
 			text-decoration: none;
 
