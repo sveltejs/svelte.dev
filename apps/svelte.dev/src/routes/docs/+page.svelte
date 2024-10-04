@@ -57,37 +57,72 @@
 </script>
 
 <div class="page">
-	<div>
-		<h2>Svelte</h2>
-		<p>Svelte is a compiler-based framework for creating fast and efficient UIs.</p>
-		<a href="/docs/svelte">read the docs</a>
-	</div>
-	<div>
-		<h2>SvelteKit</h2>
-		<p>
-			SvelteKit is a framework for rapidly developing robust, performant web applications using
-			Svelte
-		</p>
-		<a href="/docs/kit">read the docs</a>
+	<h1>Documentation</h1>
+	<p>
+		Head to the <a href="/docs/svelte">Svelte</a> or <a href="/docs/kit">SvelteKit</a> reference docs,
+		or choose your adventure:
+	</p>
+
+	<div class="options">
+		<a href="/tutorial">
+			<h2>I'm brand new here</h2>
+			<p>
+				We recommend starting with the interactive tutorial, which will teach you how to use Svelte
+				right here in your browser.
+			</p>
+		</a>
+
+		<a href="/docs/svelte/migrating">
+			<h2>I'm migrating an app from Svelte 4</h2>
+			<p>
+				If you're already experienced with an older version of Svelte, the migration guide will
+				bring you up to speed on the changes in Svelte 5.
+			</p>
+		</a>
+
+		<a href="/playground">
+			<h2>I just want to try it out</h2>
+			<p>
+				Head over to the playground to see examples, create your own Svelte apps in the browser, and
+				share them with other people.
+			</p>
+		</a>
 	</div>
 </div>
 
 <style>
 	.page {
 		padding: var(--sk-page-padding-top) var(--sk-page-padding-side);
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-		justify-items: center;
-		max-width: 100rem;
+		max-width: var(--sk-page-main-width);
 		margin: auto;
-
-		& > div {
-			padding: 2rem;
-			max-width: 50rem;
-		}
+		text-wrap: balance;
 	}
 
-	a {
-		font-size: var(--sk-font-size-body-small);
+	.options a {
+		display: block;
+		color: var(--sk-text-2);
+		margin: 2em -2em;
+		padding: 2em;
+		background-color: var(--sk-back-2);
+		border-radius: var(--sk-border-radius);
+
+		&:hover {
+			filter: drop-shadow(1px 2px 4px rgb(0 0 0 / 0.1));
+			text-decoration: none;
+
+			h2 {
+				text-decoration: underline;
+			}
+		}
+
+		h2 {
+			padding-right: 2rem;
+			background: url(./arrow-right.svg) no-repeat 100% 50%;
+			background-size: 3rem;
+		}
+
+		p:last-child {
+			margin-bottom: 0;
+		}
 	}
 </style>

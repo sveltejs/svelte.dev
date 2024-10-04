@@ -45,7 +45,7 @@
 
 <style>
 	.post {
-		padding: var(--sk-page-padding-top) var(--sk-page-padding-side) 6rem var(--sk-page-padding-side);
+		padding: var(--sk-page-padding-top) var(--sk-page-padding-side);
 		max-width: var(--sk-page-main-width);
 		margin: 0 auto;
 	}
