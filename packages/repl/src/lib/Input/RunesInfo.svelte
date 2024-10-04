@@ -69,7 +69,6 @@
 		position: relative;
 		display: flex;
 		text-transform: uppercase;
-		font-weight: 300;
 		font-size: var(--sk-font-size-ui-small);
 		padding: 0.8rem;
 		gap: 0.5rem;

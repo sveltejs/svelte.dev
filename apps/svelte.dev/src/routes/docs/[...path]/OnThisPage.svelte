@@ -148,7 +148,7 @@
 		@media (min-width: 1200px) {
 			position: fixed;
 			top: 14rem;
-			right: 0;
+			left: calc(100dvw - var(--sidebar-width));
 			width: var(--sidebar-width);
 			padding: 0 var(--sk-page-padding-side) 0 0;
 			box-sizing: border-box;
@@ -172,6 +172,10 @@
 
 				li:first-child {
 					display: list-item;
+				}
+
+				li {
+					font-size: var(--sk-font-size-body-small);
 				}
 
 				a.active {

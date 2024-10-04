@@ -54,6 +54,7 @@
 	}
 
 	.terminal pre {
+		font-size: var(--sk-font-size-code);
 		padding: 1em;
 	}
 

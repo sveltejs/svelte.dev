@@ -389,7 +389,6 @@
 
 		.cm-diagnosticText strong {
 			font-size: 0.9em;
-			/* font-weight: 700; */
 			font-family: var(--sk-font-mono);
 			opacity: 0.7;
 		}

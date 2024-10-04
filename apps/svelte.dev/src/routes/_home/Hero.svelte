@@ -94,7 +94,7 @@
 		background: var(--sk-theme-1);
 		padding: 0.35em 0.8em;
 		font-family: var(--sk-font-ui);
-		letter-spacing: 0.05em;
+		font-size: var(--sk-font-size-ui-medium);
 		font-weight: 600;
 		white-space: nowrap;
 		border-radius: var(--sk-border-radius);

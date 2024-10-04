@@ -22,10 +22,9 @@
 	--sk-banner-bottom-height: 0px;
 
 	/* typography */
-	--sk-font-ui: 'Yantramanav', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
-		Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-	--sk-font-body: 'EB Garamond', 'Big Caslon', Palatino, 'Book Antiqua', Cambria, serif;
-	--sk-font-heading: 'DM Serif Display';
+	--sk-font-ui: 'Fira Sans', -apple-system, sans-serif;
+	--sk-font-body: 'EB Garamond', Georgia, serif;
+	--sk-font-heading: 'DM Serif Display', Georgia, serif;
 	--sk-font-mono: 'Fira Mono', monospace;
 
 	--sk-font-size-h1: 3.6rem;

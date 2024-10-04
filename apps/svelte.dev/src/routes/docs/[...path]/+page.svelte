@@ -110,9 +110,12 @@
 		display: block;
 		font-size: var(--sk-font-size-ui-medium);
 		text-transform: uppercase;
-		font-weight: 400;
 		font-family: var(--sk-font-ui);
 		color: var(--sk-text-3);
+	}
+
+	.controls a {
+		font-size: var(--sk-font-size-body-small);
 	}
 
 	.controls span.faded {

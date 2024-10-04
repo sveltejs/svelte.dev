@@ -159,13 +159,17 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		background: linear-gradient(to top, rgba(0, 0, 0, 0.05), transparent);
 	}
 
+	a {
+		font-size: var(--sk-font-size-ui-medium);
+	}
+
 	.current-section {
 		display: flex;
 		align-items: center;
-		font-size: 0.8em;
 		color: var(--sk-text-3);
 		margin-left: 0.4em;
 		padding: 0.1rem 0 0 0;
+		font-size: var(--sk-font-size-ui-small);
 	}
 
 	@media (max-width: 800px) {
@@ -183,6 +187,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 	.menu :global(a) {
 		color: var(--sk-text-2);
 		line-height: 1;
+		font-size: var(--sk-font-size-ui-medium);
 		padding: 0.1rem 0.5rem 0 0.5rem;
 		white-space: nowrap;
 		height: 100%;
@@ -281,6 +286,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 
 		.appearance .caption {
 			display: block;
+			font-size: var(--sk-font-size-ui-medium);
 		}
 
 		nav :global(.large) {

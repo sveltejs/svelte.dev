@@ -135,6 +135,7 @@
 		background: var(--sk-back-2);
 		user-select: none;
 		font-family: var(--sk-font-ui);
+		font-size: var(--sk-font-size-ui-small);
 	}
 
 	.progress-container {
@@ -162,10 +163,12 @@
 	h2 {
 		font-family: var(--sk-font-ui);
 		font-size: var(--sk-font-size-ui-large);
+		margin: 0 0 0.5em 0;
 	}
 
 	p {
 		margin: 0 0 1em 0;
+		font-size: var(--sk-font-size-ui-medium);
 	}
 
 	button {

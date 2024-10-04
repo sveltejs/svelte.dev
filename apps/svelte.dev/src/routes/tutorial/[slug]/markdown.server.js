@@ -42,8 +42,6 @@ const default_renderer = {
 		/** @type {Record<string, string>} */
 		const options = {};
 
-		let html = '';
-
 		let source = text
 			.replace(/\/\/\/ (.+?)(?:: (.+))?\n/gm, (_, key, value) => {
 				options[key] = value;
@@ -64,6 +62,14 @@ const default_renderer = {
 			})
 			.replace(/\*\\\//g, '*/');
 
+		let html = '<div class="code-block"><div class="controls">';
+
+		if (options.file) {
+			html += `<span class="filename">${options.file}</span>`;
+		}
+
+		html += '</div>';
+
 		if (lang === 'diff') {
 			const lines = source.split('\n').map((content) => {
 				let type = null;
@@ -78,22 +84,22 @@ const default_renderer = {
 				};
 			});
 
-			html = `<div class="code-block"><pre class="language-diff"><code>${lines
+			html += `<pre class="language-diff"><code>${lines
 				.map((line) => {
 					if (line.type) return `<span class="${line.type}">${line.content}\n</span>`;
 					return line.content + '\n';
 				})
-				.join('')}</code></pre></div>`;
+				.join('')}</code></pre>`;
 		} else {
 			const plang = languages[/** @type {keyof languages} */ (lang)];
 			const highlighted = plang
 				? PrismJS.highlight(source, PrismJS.languages[plang], lang)
 				: escape_html(source);
 
-			html = `<div class="code-block">${
-				options.file ? `<span class="filename">${options.file}</span>` : ''
-			}<pre class='language-${plang}'><code>${highlighted}</code></pre></div>`;
+			html += `<pre class='language-${plang}'><code>${highlighted}</code></pre>`;
 		}
+
+		html += '</div>';
 
 		return html
 			.replace(/ {13}([^ ][^]+?) {13}/g, (_, content) => {
