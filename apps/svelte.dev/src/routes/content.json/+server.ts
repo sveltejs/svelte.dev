@@ -31,6 +31,7 @@ async function content() {
 
 	for (const document of docs) {
 		const { slug, body, metadata } = document;
+		const breadcrumbs = document.breadcrumbs.map((x) => removeMarkdown(x.title));
 
 		const sections = body.trim().split(/^## /m);
 		const intro = sections?.shift()?.trim()!;
@@ -90,24 +91,33 @@ async function content() {
 }
 
 async function plaintext(markdown: string) {
-	const block = (text: unknown) => `${text}\n`;
+	const block = ({ text }: any) => `${text}\n`;
 
-	const inline = (text: string) => text;
+	const inline = ({ text }: any) => text;
 
 	return (
 		await markedTransform(markdown, {
-			code: (source) => source.split('// ---cut---\n').pop() || 'ERROR: ---cut--- not found',
+			code: ({ text }) => {
+				const raw = text.split('// ---cut---\n').pop() ?? '';
+
+				return raw
+					.replace(/^\/\/ @noErrors.*$/gm, ' ')
+					.replace(/^\/\/ @errors.+$/gm, ' ')
+					.replace(/^\/\/\/ file:.+$/gm, ' ');
+			},
 			blockquote: block,
 			html: () => '\n',
-			heading: (text) => `${text}\n`,
+			heading: ({ text }) => `${text}\n`,
 			hr: () => '',
 			list: block,
 			listitem: block,
 			checkbox: block,
-			paragraph: (text) => `${text}\n\n`,
+			paragraph({ tokens }) {
+				return this.parser!.parseInline(tokens);
+			},
 			table: block,
 			tablerow: block,
-			tablecell: (text, opts) => {
+			tablecell: ({ text }) => {
 				return text + ' ';
 			},
 			strong: inline,
@@ -115,8 +125,8 @@ async function plaintext(markdown: string) {
 			codespan: inline,
 			br: () => '',
 			del: inline,
-			link: (href, title, text) => text,
-			image: (href, title, text) => text,
+			link: inline,
+			image: inline,
 			text: inline
 		})
 	)

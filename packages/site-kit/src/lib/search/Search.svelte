@@ -12,16 +12,19 @@ Renders a search widget which when clicked (or the corresponding keyboard shortc
 	<input
 		value={q}
 		oninput={(e) => {
-			$searching = true;
 			$search_query = e.currentTarget.value;
+			$searching = true;
 			e.currentTarget.value = '';
+			e.currentTarget.blur();
 		}}
 		onmousedown={(event) => {
 			event.preventDefault();
+			event.currentTarget.blur();
 			$searching = true;
 		}}
 		ontouchend={(event) => {
 			event.preventDefault();
+			event.currentTarget.blur();
 			$searching = true;
 		}}
 		type="search"
@@ -53,23 +56,23 @@ Renders a search widget which when clicked (or the corresponding keyboard shortc
 		display: flex;
 		align-items: center;
 		width: 100%;
+		font-size: 1.4rem;
 	}
 
 	input {
 		position: relative;
 		padding: 0.5em 0.5em 0.4em 2em;
-		border: 1px solid var(--sk-back-translucent);
+		border: none;
 		font-family: inherit;
-		font-size: 1.4rem;
-		/* text-align: center; */
+		font-size: 1em;
 		appearance: none;
 		-webkit-appearance: none;
 		width: 100%;
 		height: 4.2rem;
 		border-radius: 3.5rem;
 		background:
-			no-repeat 1rem 50% / 1em 1em url(../icons/search.svg),
-			var(--sk-back-3);
+			no-repeat 0.6em 55% / 1.2em 1.2em url(../icons/search.svg),
+			var(--sk-back-4);
 		color: var(--sk-text-3);
 	}
 
@@ -78,10 +81,8 @@ Renders a search widget which when clicked (or the corresponding keyboard shortc
 	}
 
 	input::placeholder {
-		font-size: 1.2rem;
-		text-transform: uppercase;
+		text-transform: lowercase;
 		color: var(--sk-text-3);
-		transform: translateY(-1px);
 	}
 
 	.shortcut {
@@ -99,18 +100,15 @@ Renders a search widget which when clicked (or the corresponding keyboard shortc
 
 	kbd {
 		display: none;
-		background: var(--sk-back-2);
-		border: 1px solid var(--sk-back-translucent);
-		padding: 0.2rem 0.2rem 0rem 0.2rem;
 		color: var(--sk-text-3);
 		font-size: inherit;
 		font-family: inherit;
-		border-radius: 2px;
 	}
 
 	@media (min-width: 800px) {
 		.search-container {
 			width: 11rem;
+			margin: 0 2rem;
 		}
 
 		.shortcut {
@@ -139,6 +137,12 @@ Renders a search widget which when clicked (or the corresponding keyboard shortc
 
 		input::placeholder {
 			opacity: 1;
+		}
+	}
+
+	@media (min-width: 1240px) {
+		.search-container {
+			width: 19rem;
 		}
 	}
 </style>

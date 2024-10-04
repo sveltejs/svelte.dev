@@ -1,10 +1,9 @@
 @import './base.css';
 
 body,
-body.light,
-body.dark {
+html.light,
+html.dark {
 	--shiki-color-text: var(--sk-code-base);
-	--shiki-color-background: hsl(var(--sk-back-3-hsl));
 	--shiki-token-constant: var(--sk-code-base);
 	--shiki-token-string: var(--sk-code-string);
 	--shiki-token-comment: var(--sk-code-comment);

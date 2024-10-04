@@ -1,5 +1,6 @@
 <script>
 	import { page, navigating } from '$app/stores';
+	let { children } = $props();
 </script>
 
 <nav>
@@ -16,4 +17,4 @@
 	{/if}
 </nav>
 
-<slot />
+{@render children()}

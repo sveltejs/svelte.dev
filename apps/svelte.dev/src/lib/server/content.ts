@@ -42,13 +42,10 @@ export const blog_posts = index.blog.children
 		const date = post.metadata.date ?? post.file.split('/').pop()!.slice(0, 10);
 
 		return {
-			title: post.metadata.title,
+			...post,
 			date,
 			date_formatted: format_date(date),
-			description: post.metadata.description,
-			draft: post.metadata.draft,
-			authors,
-			...post
+			authors
 		};
 	})
 	.sort((a, b) => (a.date < b.date ? 1 : -1));
@@ -63,10 +60,6 @@ function create_docs() {
 		return slug.replace(/\/[^/]+(\/[^/]+)$/g, '$1');
 	}
 
-	function remove_docs(slugs: string) {
-		return slugs.replace(/^docs\//, '');
-	}
-
 	let docs: {
 		/** The top level entries/packages: svelte/kit/etc. Key is the topic */
 		topics: Record<string, Document>;
@@ -77,7 +70,7 @@ function create_docs() {
 	for (const topic of index.docs.children) {
 		const pkg = topic.slug.split('/')[1];
 		const sections = topic.children;
-		const transformed_topic: Document = (docs.topics[remove_docs(topic.slug)] = {
+		const transformed_topic: Document = (docs.topics[topic.slug] = {
 			...topic,
 			children: []
 		});
@@ -93,7 +86,12 @@ function create_docs() {
 
 			for (const page of pages) {
 				const slug = remove_section(page.slug);
-				const transformed_page: Document = (docs.pages[remove_docs(slug)] = {
+
+				if (Object.hasOwn(docs.pages, slug)) {
+					throw new Error(`${docs.pages[slug].file} conflicts with ${page.file}`);
+				}
+
+				const transformed_page: Document = (docs.pages[slug] = {
 					...page,
 					slug,
 					next: page.next?.slug.startsWith(`docs/${pkg}/`)

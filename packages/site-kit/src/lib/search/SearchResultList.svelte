@@ -1,8 +1,8 @@
 <script lang="ts">
-	import type { Tree } from './types';
+	import type { BlockGroup } from './types';
 
 	interface Props {
-		results: Tree[];
+		results: BlockGroup[];
 		query: string;
 		onselect?: (href: string) => void;
 	}
@@ -16,42 +16,51 @@
 	function excerpt(content: string, query: string) {
 		const index = content.toLowerCase().indexOf(query.toLowerCase());
 		if (index === -1) {
-			return escape(content.slice(0, 100));
+			return `${escape(content.slice(0, 150))}`;
 		}
 
-		const prefix = index > 20 ? `…${content.slice(index - 15, index)}` : content.slice(0, index);
-		const suffix = content.slice(
-			index + query.length,
-			index + query.length + (80 - (prefix.length + query.length))
+		const prefix =
+			index > 40 && content.length > 70
+				? `${escape(content.slice(index - 35, index))}`
+				: `<span class="spacer"></span>${escape(content.slice(0, index))}`;
+		const suffix = escape(
+			content.slice(
+				index + query.length,
+				index + query.length + (130 - (prefix.length + query.length))
+			)
 		);
 
-		return (
-			escape(prefix) +
-			`<mark>${escape(content.slice(index, index + query.length))}</mark>` +
-			escape(suffix)
-		);
+		return prefix + `<mark>${escape(content.slice(index, index + query.length))}</mark>` + suffix;
 	}
 </script>
 
 <ul>
-	{#each results as result (result.href)}
+	{#each results as group (group.breadcrumbs.join('::'))}
 		<li>
-			<a
-				data-sveltekit-preload-data
-				href={result.href}
-				onclick={() => onselect?.(result.href)}
-				data-has-node={result.node ? true : undefined}
-			>
-				<strong>{@html excerpt(result.breadcrumbs[result.breadcrumbs.length - 1], query)}</strong>
+			<details open>
+				<summary>
+					{#each group.breadcrumbs as breadcrumb}<span>{breadcrumb}</span>{/each}
+				</summary>
+				<ul>
+					{#each group.blocks as block (block.href)}
+						<a
+							class:fragment={block.breadcrumbs.length > 4}
+							href={block.href}
+							onclick={() => onselect?.(block.href)}
+						>
+							<strong>
+								{#each block.breadcrumbs.slice(2) as t}<span>{t}</span>{/each}
+							</strong>
 
-				{#if result.node?.content}
-					<span>{@html excerpt(result.node.content, query)}</span>
-				{/if}
-			</a>
-
-			{#if result.children.length > 0}
-				<svelte:self results={result.children} {query} {onselect} />
-			{/if}
+							{#if block?.content}
+								<div class="excerpt">
+									<span>{@html excerpt(block.content, query)}</span>
+								</div>
+							{/if}
+						</a>
+					{/each}
+				</ul>
+			</details>
 		</li>
 	{/each}
 </ul>
@@ -60,93 +69,166 @@
 	ul {
 		position: relative;
 		margin: 0;
-	}
-
-	ul :global(ul) {
-		margin-left: 0.8em !important;
-		padding-left: 0em;
-		border-left: 1px solid var(--sk-back-5);
-	}
-
-	li {
 		list-style: none;
-		margin-bottom: 1em;
 	}
 
-	li:last-child {
-		margin-bottom: 0;
+	details {
+		padding: calc(0.5 * var(--padding)) 0;
+
+		summary {
+			position: sticky;
+			background: var(--background);
+			top: 0;
+			display: block;
+			color: var(--sk-text-4);
+			text-transform: uppercase;
+			padding: calc(0.5 * var(--padding)) var(--padding);
+			font-size: var(--sk-font-size-ui-medium);
+			z-index: 2;
+			user-select: none;
+
+			&:focus-visible {
+				outline-offset: -3px;
+			}
+
+			&::after {
+				content: '';
+				position: absolute;
+				right: 1.6rem;
+				top: calc(50% - 1rem);
+				width: 2rem;
+				height: 2rem;
+				background: url($lib/icons/chevron.svg);
+				background-size: contain;
+				rotate: -90deg;
+				transition: rotate 0.2s;
+			}
+
+			[open] &::after {
+				rotate: 90deg;
+			}
+
+			span:not(:last-child)::after {
+				content: ' • ';
+			}
+		}
 	}
 
 	a {
 		display: block;
 		text-decoration: none;
 		line-height: 1;
-		padding: 1rem;
-	}
-
-	a:hover {
-		background: rgba(0, 0, 0, 0.05);
-	}
-
-	a:focus {
-		background: var(--sk-theme-2);
-		color: white;
-		outline: none;
-	}
-
-	a strong,
-	a span {
-		display: block;
-		white-space: nowrap;
-		line-height: 1;
+		padding: 1.2rem var(--padding) 1.2rem calc(4rem + var(--padding));
 		overflow: hidden;
-		text-overflow: ellipsis;
-	}
+		background: var(--background);
 
-	a strong {
-		font-size: 1.6rem;
-		color: var(--sk-text-2);
-	}
+		&::before {
+			content: '';
+			position: absolute;
+			width: 5rem;
+			top: 0;
+			left: 0;
+			height: 100%;
+			background: url(../icons/document-light.svg) no-repeat 50% 50%;
+			background-size: 2rem;
+		}
 
-	a span {
-		font-size: 1.2rem;
-		color: #737373;
-		margin: 0.4rem 0 0 0;
-	}
+		&.fragment::before {
+			background-image: url(../icons/hash-light.svg);
+		}
 
-	a :global(mark) {
-		--highlight-color: rgba(255, 255, 0, 0.2);
-	}
+		:root.dark & {
+			&::before {
+				background-image: url(../icons/document-dark.svg);
+			}
 
-	a span :global(mark) {
-		background: none;
-		color: var(--sk-text-1);
-		background: var(--highlight-color);
-		outline: 2px solid var(--highlight-color);
-		border-top: 2px solid var(--highlight-color);
-		/* mix-blend-mode: darken; */
-	}
+			&.fragment::before {
+				background-image: url(../icons/hash-dark.svg);
+			}
+		}
 
-	a:focus span {
-		color: rgba(255, 255, 255, 0.6);
-	}
+		&:hover {
+			--background: var(--sk-back-4);
+			text-decoration: none;
+		}
 
-	a:focus strong {
-		color: white;
-	}
+		&:focus {
+			outline-offset: -3px;
+		}
 
-	a:focus span :global(mark),
-	a:focus strong :global(mark) {
-		--highlight-color: hsl(240, 8%, 54%);
-		mix-blend-mode: lighten;
-		color: white;
-	}
+		strong,
+		span {
+			display: block;
+			white-space: nowrap;
+			line-height: 1;
+			text-overflow: ellipsis;
+		}
 
-	a strong :global(mark) {
-		color: var(--sk-text-1);
-		background: var(--highlight-color);
-		outline: 2px solid var(--highlight-color);
-		/* border-top: 2px solid var(--highlight-color); */
-		border-radius: 1px;
+		strong {
+			width: 100%;
+			overflow: hidden;
+			font-size: var(--sk-font-size-ui-medium);
+			color: var(--sk-text-2);
+
+			span {
+				display: inline;
+
+				&:not(:last-child)::after {
+					content: ' • ';
+					position: relative;
+					color: var(--sk-text-4);
+					font-size: var(--sk-font-size-ui-small);
+					top: -0.1rem;
+				}
+			}
+		}
+
+		.excerpt {
+			position: relative;
+			width: calc(100% + 1rem);
+			left: -0.5rem;
+			overflow: hidden;
+			color: var(--sk-text-1);
+
+			&::before,
+			&::after {
+				content: '';
+				position: absolute;
+				width: 1rem;
+				top: 0;
+				height: 100%;
+			}
+
+			&::before {
+				left: 0;
+				background: linear-gradient(to left, transparent, var(--background));
+			}
+
+			&::after {
+				right: 0;
+
+				background: linear-gradient(to right, transparent, var(--background));
+			}
+
+			span {
+				color: var(--sk-text-3);
+				font-size: var(--sk-font-size-ui-small);
+				margin: 0.4rem 0 0 0;
+			}
+
+			:global(.spacer) {
+				display: inline-block;
+				width: 0.7rem;
+				height: 1rem;
+			}
+		}
+
+		:global(mark) {
+			--highlight-color: rgba(255, 255, 0, 0.4);
+			background: none;
+			color: var(--sk-text-1);
+			background: var(--highlight-color);
+			outline: 2px solid var(--highlight-color);
+		}
 	}
 </style>

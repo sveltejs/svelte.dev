@@ -1,5 +1,6 @@
 <script>
 	import { page, navigating } from '$app/stores';
+	let { children } = $props();
 </script>
 
 <nav>
@@ -16,13 +17,13 @@
 	{/if}
 </nav>
 
-<slot />
+{@render children()}
 
 <div class="toast">
 	<p>
 		A new version of the app is available
 
-		<button on:click={() => location.reload()}>
+		<button onclick={() => location.reload()}>
 			reload the page
 		</button>
 	</p>

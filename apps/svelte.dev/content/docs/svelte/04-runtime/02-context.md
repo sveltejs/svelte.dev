@@ -23,8 +23,8 @@ export const myGlobalState = $state({
 ```svelte
 <!--- file: App.svelte --->
 <script>
-    import { myGlobalState } from './state.svelte';
-    // ...
+	import { myGlobalState } from './state.svelte';
+	// ...
 </script>
 ```
 
@@ -71,7 +71,7 @@ Context is not inherently reactive. If you need reactive values in context then 
 <script>
 	import { setContext } from 'svelte';
 
-    let value = $state({ count: 0 });
+	let value = $state({ count: 0 });
 	setContext('counter', value);
 </script>
 

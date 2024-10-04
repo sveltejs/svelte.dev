@@ -7,7 +7,7 @@
 }
 
 .cm-editor .cm-scroller {
-	font-family: var(--font-mono);
+	font-family: var(--sk-font-mono);
 	font-size: 1.3rem;
 	line-height: 2rem;
 }
@@ -55,13 +55,6 @@
 .cm-editor .cm-selectionMatch {
 	background: var(--selection-color);
 	color: var(--sk-text-2);
-}
-
-.cm-editor.cm-focused .cm-selectionBackground,
-.cm-editor .cm-selectionBackground,
-.cm-editor .cm-content ::selection {
-	background: var(--sk-theme-3);
-	opacity: 0.3;
 }
 
 .cm-editor .cm-tooltip {

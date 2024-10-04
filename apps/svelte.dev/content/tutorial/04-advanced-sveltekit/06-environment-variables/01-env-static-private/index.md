@@ -26,7 +26,7 @@ import { redirect, fail } from '@sveltejs/kit';
 
 export function load({ cookies }) {
 	if (cookies.get('allowed')) {
-		throw redirect(307, '/welcome');
+		redirect(307, '/welcome');
 	}
 }
 
@@ -39,7 +39,7 @@ export const actions = {
 				path: '/'
 			});
 
-			throw redirect(303, '/welcome');
+			redirect(303, '/welcome');
 		}
 
 		return fail(403, {
@@ -61,7 +61,7 @@ SvelteKit makes it easy to prevent this from happening. Notice what happens if w
 /// file: src/routes/+page.svelte
 <script>
 	+++import { PASSPHRASE } from '$env/static/private';+++
-	export let form;
+	let { form } = $props();
 </script>
 ```
 

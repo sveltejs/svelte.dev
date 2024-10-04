@@ -1,3 +1,7 @@
+<script>
+	let { children } = $props();
+</script>
+
 <nav>
 	<a href="/America/New_York">New York</a>
 	<a href="/America/Sao_Paulo">São Paulo</a>
@@ -10,4 +14,4 @@
 	<a href="/America/Los_Angeles">Los Angeles</a>
 </nav>
 
-<slot />
+{@render children()}

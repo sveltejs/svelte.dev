@@ -331,31 +331,46 @@
 
 <style>
 	.container {
+		--pane-controls-h: 4.2rem;
 		position: relative;
 		width: 100%;
 		height: calc(100dvh - var(--sk-nav-height));
 		background: var(--sk-back-1);
-	}
+		padding: 1rem 0 0 0;
 
-	.container :global(section) {
-		position: relative;
-		padding: 42px 0 0 0;
-		height: 100%;
-		box-sizing: border-box;
-	}
+		:global {
+			section {
+				position: relative;
+				padding: var(--pane-controls-h) 0 0 0;
+				height: 100%;
+				box-sizing: border-box;
 
-	.container :global(section) > :global(*):first-child {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 42px;
-		box-sizing: border-box;
-	}
+				& > :first-child {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: var(--pane-controls-h);
+					box-sizing: border-box;
+				}
 
-	.container :global(section) > :global(*):last-child {
-		width: 100%;
-		height: 100%;
+				& > :last-child {
+					width: 100%;
+					height: 100%;
+				}
+			}
+
+			.divider::after {
+				background-color: var(--sk-text-1);
+				filter: drop-shadow(0 0 3px hsl(0 0 0 / 0.5));
+				opacity: 0.1;
+			}
+
+			[data-pane='main'] > .divider::after {
+				height: calc(100% - var(--pane-controls-h));
+				top: var(--pane-controls-h);
+			}
+		}
 	}
 
 	.viewport {
@@ -364,7 +379,7 @@
 
 	.toggleable .viewport {
 		width: 200%;
-		height: calc(100% - 42px);
+		height: calc(100% - var(--pane-controls-h));
 		transition: transform 0.3s;
 	}
 
@@ -374,16 +389,18 @@
 
 	/* on mobile, override the <SplitPane> controls */
 	@media (max-width: 799px) {
-		:global([data-pane='main']) {
-			--pos: 50% !important;
-		}
+		:global {
+			[data-pane='main'] {
+				--pos: 50% !important;
+			}
 
-		:global([data-pane='editor']) {
-			--pos: 5.4rem !important;
-		}
+			[data-pane='editor'] {
+				--pos: 5.4rem !important;
+			}
 
-		:global([data-pane]) :global(.divider) {
-			cursor: default;
+			[data-pane] .divider {
+				cursor: default;
+			}
 		}
 	}
 </style>

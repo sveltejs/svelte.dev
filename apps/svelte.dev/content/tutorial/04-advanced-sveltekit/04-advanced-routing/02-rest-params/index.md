@@ -21,6 +21,6 @@ Rename `src/routes/[path]` to `src/routes/[...path]`. The route now matches any 
 > +│ │ └ +page.server.js
 > ```
 >
-> Inside the `+page.server.js` file, `throw error(404)` inside `load`.
+> Inside the `+page.server.js` file, `error(404)` inside `load`.
 
 Rest parameters do _not_ need to go at the end — a route like `/items/[...path]/edit` or `/items/[...path].json` is totally valid.

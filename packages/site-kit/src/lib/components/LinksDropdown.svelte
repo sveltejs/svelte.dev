@@ -2,20 +2,43 @@
 	import { page } from '$app/stores';
 	import type { NavigationLink } from '../types';
 
-	let { links: _links, prefix }: { links: NavigationLink; prefix: string } = $props();
-
-	const links = $derived([
-		{ title: _links.title, path: _links.pathname },
-		..._links.sections!.map((s) => ({ title: s.title, path: s.path! }))
-	]);
-	const current = $derived($page.url.pathname.startsWith(`/${prefix}`) ? 'page' : null);
+	let { link }: { link: NavigationLink } = $props();
 </script>
 
 <div class="dropdown">
-	<a href={links[0].path} aria-current={current}>{links[0].title}</a>
+	<a
+		href={link.pathname}
+		aria-current={$page.url.pathname.startsWith(`/${link.prefix}`) ? 'page' : undefined}
+	>
+		{link.title}
+
+		<svg
+			width="1.8rem"
+			height="1.8rem"
+			viewBox="0 0 24 24"
+			fill="none"
+			xmlns="http://www.w3.org/2000/svg"
+		>
+			<path
+				d="M6 9.5L12 15.5L18 9.5"
+				stroke="currentColor"
+				stroke-width="1.5"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+			/>
+		</svg>
+	</a>
+
 	<nav class="dropdown-content">
-		{#each links.slice(1) as link}
-			<a href={link.path}>{link.title}</a>
+		{#each link.sections! as section}
+			<a
+				href={section.path}
+				aria-current={$page.url.pathname === section.path || $page.url.pathname.startsWith(section.path!)
+					? 'page'
+					: undefined}
+			>
+				{section.title}
+			</a>
 		{/each}
 	</nav>
 </div>
@@ -24,48 +47,38 @@
 	.dropdown {
 		position: relative;
 		display: inline-block;
+		height: 100%;
 	}
 
 	.dropdown-content {
-		display: none;
+		opacity: 0;
+		pointer-events: none;
 		position: absolute;
 		left: -1rem;
-		background-color: var(--sk-back-1);
+		top: calc(100% - 1rem);
+		background-color: var(--sk-back-2);
 		min-width: 10rem;
 		z-index: 1;
-		animation: flyout 0.3s ease-in-out;
 		box-shadow: var(--sk-shadow);
-		border-radius: 0 0 var(--sk-border-radius) var(--sk-border-radius);
-	}
+		border-radius: var(--sk-border-radius);
 
-	@keyframes flyout {
-		from {
-			opacity: 0;
-			transform: translateY(-10px);
+		a {
+			color: var(--sk-text-3);
+			padding: 1.3rem !important;
+			text-decoration: none;
+			display: block;
+			margin: 0 !important;
+			box-shadow: none !important;
 		}
-		to {
-			opacity: 1;
-			transform: translateY(0);
-		}
-	}
 
-	.dropdown:hover .dropdown-content {
-		display: block;
-	}
-
-	.dropdown-content a {
-		color: var(--sk-text-3);
-		padding: 1.3rem;
-		text-decoration: none;
-		display: block;
-		margin: 0 !important;
-
-		&:last-of-type {
-			border-radius: 0 0 var(--sk-border-radius) var(--sk-border-radius);
+		a:hover {
+			background-color: var(--sk-back-4);
 		}
 	}
 
-	.dropdown-content a:hover {
-		background-color: var(--sk-back-4);
+	.dropdown:hover .dropdown-content,
+	.dropdown:focus-within .dropdown-content {
+		opacity: 1;
+		pointer-events: all;
 	}
 </style>

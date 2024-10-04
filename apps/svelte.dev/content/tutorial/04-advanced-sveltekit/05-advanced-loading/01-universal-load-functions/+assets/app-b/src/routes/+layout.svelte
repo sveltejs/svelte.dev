@@ -1,5 +1,7 @@
 <script>
 	import { page } from '$app/stores';
+
+	let { children } = $props();
 </script>
 
 <nav
@@ -12,11 +14,12 @@
 	<a href="/blue">blue</a>
 
 	{#if $page.data.component}
-		<svelte:component this={$page.data.component} />
+		{@const Component = $page.data.component}
+		<Component />
 	{/if}
 </nav>
 
-<slot />
+{@render children()}
 
 <style>
 	nav.has-color,

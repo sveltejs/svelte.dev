@@ -1,4 +1,4 @@
-import { extract_frontmatter, slugify } from '../../markdown/utils';
+import { extract_frontmatter, slugify, smart_quotes } from '../../markdown/utils';
 import type { Document } from '../../types';
 
 export async function create_index(
@@ -12,7 +12,7 @@ export async function create_index(
 	const roots: Document[] = [];
 
 	for (const key in documents) {
-		if (key.includes('+assets') || key.endsWith('/_generated.md')) continue;
+		if (key.includes('+assets')) continue;
 
 		const file = key.slice(base.length + 1);
 		const slug = file.replace(/(^|\/)[\d-]+/g, '$1').replace(/(\/index)?\.md$/, '');
@@ -24,30 +24,11 @@ export async function create_index(
 			throw new Error(`Missing title in ${slug} frontmatter`);
 		}
 
-		// Check if there's a generated file inside the same folder
-		// which contains content to include in this document.
-		const generated = documents[key.substring(0, key.lastIndexOf('/')) + '/_generated.md'];
-
-		if (generated) {
-			const generated_text = await read(generated).text();
-
-			body = body.replaceAll(/<!-- @include (.+?) -->/g, (_, name) => {
-				const include_start = `<!-- @include_start ${name} -->`;
-				const snippet = generated_text.slice(
-					generated_text.indexOf(include_start) + include_start.length,
-					generated_text.indexOf(`<!-- @include_end ${name} -->`)
-				);
-
-				if (!snippet) {
-					throw new Error(`Could not find include for ${name}`);
-				}
-
-				return snippet;
-			});
-		}
+		metadata.title = smart_quotes(metadata.title);
+		if (metadata.description) metadata.description = smart_quotes(metadata.description);
 
 		const sections = Array.from(body.matchAll(/^##\s+(.*)$/gm)).map((match) => {
-			const title = match[1];
+			const title = match[1].replace(/`/g, '').replace(/&lt;/g, '<').replace(/&gt;/g, '>');
 			const slug = slugify(title);
 
 			return { slug, title };
@@ -57,6 +38,7 @@ export async function create_index(
 			slug,
 			file,
 			metadata: metadata as { title: string; [key: string]: any },
+			breadcrumbs: [],
 			body,
 			sections,
 			children: [],
@@ -74,10 +56,16 @@ export async function create_index(
 		if (parts.length === 0) {
 			roots.push(document);
 		} else {
-			const parent = content[parts.join('/')];
+			let parent = content[parts.join('/')];
 
 			if (parent) {
 				parent.children.push(document);
+
+				while (parts.length) {
+					document.breadcrumbs.unshift({ title: parent.metadata.title });
+					parts.pop();
+					parent = content[parts.join('/')];
+				}
 			} else {
 				roots.push(document);
 			}

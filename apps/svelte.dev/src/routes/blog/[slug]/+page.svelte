@@ -1,29 +1,29 @@
-<script>
+<script lang="ts">
 	import { page } from '$app/stores';
-	import { copy_code_descendants } from '@sveltejs/site-kit/actions';
-	import { DocsOnThisPage, setupDocsHovers } from '@sveltejs/site-kit/docs';
+	import { Text } from '@sveltejs/site-kit/components';
+	import { setupDocsHovers } from '@sveltejs/site-kit/docs';
 
-	export let data;
+	let { data } = $props();
 
 	setupDocsHovers();
 </script>
 
 <svelte:head>
-	<title>{data.title}</title>
+	<title>{data.metadata.title}</title>
 
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content={data.title} />
-	<meta name="twitter:description" content={data.description} />
-	<meta name="Description" content={data.description} />
+	<meta name="twitter:title" content={data.metadata.title} />
+	<meta name="twitter:description" content={data.metadata.description} />
+	<meta name="Description" content={data.metadata.description} />
 
 	<meta name="twitter:image" content="https://svelte.dev/blog/{$page.params.slug}/card.png" />
 	<meta name="og:image" content="https://svelte.dev/blog/{$page.params.slug}/card.png" />
 </svelte:head>
 
 <div class="content">
-	<article class="post listify text" use:copy_code_descendants>
-		<h1>{data.title}</h1>
-		<p class="standfirst">{data.description}</p>
+	<article class="post listify text">
+		<h1>{data.metadata.title}</h1>
+		<p class="standfirst">{data.metadata.description}</p>
 
 		<p class="byline">
 			{#each data.authors as author, i}
@@ -37,14 +37,9 @@
 			<time datetime={data.date}>{data.date_formatted}</time>
 		</p>
 
-		<DocsOnThisPage
-			title={data.title}
-			path={data.path}
-			sections={data.sections}
-			orientation="inline"
-		/>
-
-		{@html data.body}
+		<Text>
+			{@html data.body}
+		</Text>
 	</article>
 </div>
 
@@ -56,21 +51,20 @@
 	}
 
 	h1 {
-		font-size: 4rem;
-		font-weight: 400;
+		font-size: var(--sk-font-size-h1);
 	}
 
 	.standfirst {
-		font-size: var(--sk-text-s);
+		font-size: var(--sk-font-size-body-small);
 		color: var(--sk-text-3);
 		margin: 0 0 1em 0;
 	}
 
 	.byline {
-		margin: 0 0 1rem 0;
-		padding: 1.6rem 0 0 0;
-		border-top: var(--sk-thick-border-width) solid #6767785b;
-		font-size: var(--sk-text-xs);
+		margin: 0 0 4rem 0;
+		padding: 1rem 0 0 0;
+		font-family: var(--sk-font-ui);
+		font-size: var(--sk-font-size-ui-small);
 		text-transform: uppercase;
 	}
 
@@ -83,7 +77,7 @@
 	}
 
 	.post :global(figcaption) {
-		color: var(--sk-theme-2);
+		color: var(--sk-text-4);
 		text-align: left;
 	}
 
@@ -95,7 +89,7 @@
 		float: right;
 		margin: 0 0 1em 1em;
 		width: 16rem;
-		color: var(--sk-theme-2);
+		color: var(--sk-text-4);
 		z-index: 2;
 	}
 
@@ -108,7 +102,7 @@
 		height: 420px;
 		margin: 2em 0;
 		border-radius: var(--sk-border-radius);
-		border: 0.8rem solid var(--sk-theme-2);
+		border: 0.8rem solid var(--sk-theme-4);
 	}
 
 	@media (min-width: 910px) {

@@ -8,7 +8,7 @@
 	export let filename: string | undefined = undefined;
 	export let truncate = false;
 
-	const { go_to_warning_pos } = get_repl_context();
+	const context = get_repl_context();
 
 	function message(details: MessageDetails) {
 		let str = details.message || '[missing message]';
@@ -27,8 +27,8 @@
 	{#if details}
 		<button
 			class:navigable={details.filename}
-			on:click={() => go_to_warning_pos(details)}
-			on:keyup={(e) => e.key === ' ' && go_to_warning_pos(details)}
+			on:click={() => context?.go_to_warning_pos(details)}
+			on:keyup={(e) => e.key === ' ' && context?.go_to_warning_pos(details)}
 		>
 			{message(details)}
 		</button>
@@ -46,7 +46,7 @@
 		position: relative;
 		color: white;
 		padding: 12px 16px 12px 44px;
-		font: 400 12px/1.7 var(--sk-font);
+		font: 400 var(--sk-font-size-ui-small) / 1.8rem var(--sk-font-body);
 		margin: 0;
 		border-top: 1px solid white;
 	}

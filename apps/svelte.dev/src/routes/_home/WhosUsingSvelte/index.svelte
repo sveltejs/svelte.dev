@@ -95,7 +95,7 @@
 		}
 	}
 
-	:global(body.dark) .logos a {
+	:global(html.dark) .logos a {
 		--invert: 1;
 		filter: grayscale(1) contrast(4) opacity(0.7) invert(var(--invert, 0));
 	}

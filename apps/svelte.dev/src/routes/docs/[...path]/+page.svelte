@@ -1,11 +1,15 @@
-<script>
-	import { Icon } from '@sveltejs/site-kit/components';
-	import { copy_code_descendants } from '@sveltejs/site-kit/actions';
-	import { DocsOnThisPage, setupDocsHovers } from '@sveltejs/site-kit/docs';
+<script lang="ts">
+	import { Icon, Text } from '@sveltejs/site-kit/components';
+	import { legacy_details } from '@sveltejs/site-kit/actions';
+	import { setupDocsHovers } from '@sveltejs/site-kit/docs';
+	import OnThisPage from './OnThisPage.svelte';
+	import Breadcrumbs from './Breadcrumbs.svelte';
 
 	let { data } = $props();
 
 	setupDocsHovers();
+
+	let content = $state() as HTMLElement;
 </script>
 
 <svelte:head>
@@ -19,22 +23,30 @@
 	<meta name="Description" content="{data.document.metadata.title} • Svelte documentation" />
 </svelte:head>
 
-<div class="text" id="docs-content" use:copy_code_descendants>
-	<a
-		class="edit"
-		href="https://github.com/sveltejs/svelte.dev/edit/main/apps/svelte.dev/content/{data.document
-			.file}"
-	>
-		<Icon size={50} name="edit" /> Edit this page on GitHub
-	</a>
+<div id="docs-content" use:legacy_details>
+	<header>
+		<Breadcrumbs breadcrumbs={data.document.breadcrumbs.slice(1)} />
+		<h1>{data.document.metadata.title}</h1>
+	</header>
 
-	<DocsOnThisPage
-		title={data.document.metadata.title}
-		path="/{data.document.slug}"
-		sections={data.document.sections}
-	/>
+	<OnThisPage {content} document={data.document} />
 
-	{@html data.document.body}
+	<!-- TODO emit scroll events from <Text> so we don't need the `bind:this` and can ditch the wrapper element -->
+	<div class="text content" bind:this={content}>
+		<Text>
+			{@html data.document.body}
+		</Text>
+	</div>
+
+	<p class="edit">
+		<a
+			class="edit"
+			href="https://github.com/sveltejs/svelte.dev/edit/main/apps/svelte.dev/content/{data.document
+				.file}"
+		>
+			<Icon size={50} name="edit" /> Edit this page on GitHub
+		</a>
+	</p>
 </div>
 
 <div class="controls">
@@ -60,15 +72,21 @@
 		font-size: 1.4rem;
 		line-height: 1;
 		z-index: 2;
-	}
+		margin: 6rem 0 2rem 0;
+		font-family: var(--sk-font-ui);
 
-	.edit :global(.icon) {
-		position: relative;
-		top: -0.1rem;
-		left: 0.3rem;
-		width: 1.4rem;
-		height: 1.4rem;
-		margin-right: 0.5rem;
+		a {
+			text-decoration: none;
+		}
+
+		:global(.icon) {
+			position: relative;
+			top: -0.1rem;
+			left: 0.3rem;
+			width: 1.4rem;
+			height: 1.4rem;
+			margin-right: 0.5rem;
+		}
 	}
 
 	.controls {
@@ -77,7 +95,7 @@
 		padding: 1rem 0 0 0;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		margin: 6rem 0 0 0;
+		margin: 1rem 0 0 0;
 	}
 
 	.controls > :first-child {
@@ -90,10 +108,14 @@
 
 	.controls span {
 		display: block;
-		font-size: 1.2rem;
+		font-size: var(--sk-font-size-ui-medium);
 		text-transform: uppercase;
-		font-weight: 600;
+		font-family: var(--sk-font-ui);
 		color: var(--sk-text-3);
+	}
+
+	.controls a {
+		font-size: var(--sk-font-size-body-small);
 	}
 
 	.controls span.faded {

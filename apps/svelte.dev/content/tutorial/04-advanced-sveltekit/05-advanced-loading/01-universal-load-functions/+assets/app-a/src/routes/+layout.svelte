@@ -1,5 +1,7 @@
 <script>
 	import { page } from '$app/stores';
+
+	let { children } = $props();
 </script>
 
 <nav
@@ -12,7 +14,7 @@
 	<a href="/blue">blue</a>
 </nav>
 
-<slot />
+{@render children()}
 
 <style>
 	nav.has-color,

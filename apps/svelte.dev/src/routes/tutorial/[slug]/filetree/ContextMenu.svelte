@@ -52,7 +52,7 @@
 		margin: 0;
 		padding: 0;
 		background-color: var(--sk-back-3);
-		border: 1px solid hsl(var(--sk-theme-1-hsl));
+		border: 1px solid var(--sk-theme-1);
 	}
 
 	li {

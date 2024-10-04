@@ -1,3 +1,7 @@
+<script>
+	let { children } = $props();
+</script>
+
 <nav>
 	<a href="/">home</a>
 	<a href="/a">a</a>
@@ -6,7 +10,7 @@
 </nav>
 
 <div class="layout" data-name="root">
-	<slot />
+	{@render children()}
 </div>
 
 <style>

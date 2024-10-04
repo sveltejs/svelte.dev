@@ -19,11 +19,11 @@
 <h1 class="visually-hidden">Blog</h1>
 <div class="posts stretch">
 	{#each data.posts as post}
-		{#if !post.draft}
+		{#if !post.metadata.draft}
 			<article class="post" data-pubdate={post.date}>
-				<a class="no-underline" href="/{post.slug}" title="Read the article »">
-					<h2>{post.title}</h2>
-					<p>{post.description}</p>
+				<a href="/{post.slug}" title="Read the article »">
+					<h2>{post.metadata.title}</h2>
+					<p>{post.metadata.description}</p>
 				</a>
 			</article>
 		{/if}
@@ -38,54 +38,53 @@
 		padding: var(--sk-page-padding-top) var(--sk-page-padding-side) 6rem var(--sk-page-padding-side);
 		max-width: var(--sk-page-main-width);
 		margin: 0 auto;
+		text-wrap: balance;
 	}
 
 	h2 {
 		display: inline-block;
-		margin: 3.2rem 0 0.4rem 0;
 		color: var(--sk-text-2);
-		max-width: 18em;
-		font-size: var(--sk-text-m);
-		font-weight: 400;
+		font-size: var(--sk-font-size-h3);
 	}
 
-	.post:first-child {
-		margin: 0 0 2rem 0;
-		padding: 0 0 4rem 0;
-		border-bottom: var(--sk-thick-border-width) solid #6767785b; /* based on --second */
-	}
+	.post {
+		margin: 2em 0;
 
-	.post:first-child h2 {
-		font-size: 4rem;
-		font-weight: 400;
-		color: var(--sk-text-2);
-	}
+		&:where(:first-child, :nth-child(2))::before {
+			content: 'Latest post • ' attr(data-pubdate);
+			color: var(--sk-text-4);
+			font-family: var(--sk-font-ui);
+			font-size: var(--sk-font-size-ui-small);
+			text-transform: uppercase;
+		}
 
-	.post:where(:first-child, :nth-child(2))::before {
-		content: 'Latest post • ' attr(data-pubdate);
-		color: var(--sk-theme-3);
-		font-size: var(--sk-text-xs);
-		font-weight: 400;
-		letter-spacing: 0.05em;
-		text-transform: uppercase;
-	}
+		&:nth-child(2)::before {
+			content: 'Older posts';
+		}
 
-	.post:nth-child(2)::before {
-		content: 'Older posts';
-	}
+		&:first-child {
+			margin: 0 0 2rem 0;
+			padding: 0 0 4rem 0;
 
-	.post p {
-		font-size: var(--sk-text-s);
-		max-width: 30em;
-		color: var(--sk-text-3);
-	}
+			h2 {
+				font-size: var(--sk-font-size-h1);
+				color: var(--sk-text-2);
+			}
+		}
 
-	.post > a {
-		display: block;
-	}
+		a {
+			display: block;
+			text-decoration: none;
 
-	.posts a:hover,
-	.posts a:hover > h2 {
-		color: var(--sk-theme-3);
+			&:hover h2 {
+				text-decoration: underline;
+			}
+		}
+
+		p {
+			font-size: var(--sk-font-size-body-small);
+			color: var(--sk-text-3);
+			margin: 0;
+		}
 	}
 </style>

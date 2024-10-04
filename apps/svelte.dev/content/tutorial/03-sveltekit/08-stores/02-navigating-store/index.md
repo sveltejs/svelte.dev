@@ -15,6 +15,8 @@ It can be used to show a loading indicator for long-running navigations. In this
 /// file: src/routes/+layout.svelte
 <script>
 	import { page, +++navigating+++ } from '$app/stores';
+
+	let { children } = $props();
 </script>
 
 <nav>
@@ -31,5 +33,5 @@ It can be used to show a loading indicator for long-running navigations. In this
 	{/if}+++
 </nav>
 
-<slot></slot>
+{@render children()}
 ```

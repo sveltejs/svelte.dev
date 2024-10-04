@@ -6,9 +6,7 @@
 		<span class="title">terminal</span>
 	</div>
 	<pre><code
-			><span class="line"
-				>npm create <span class="orange-highlight">svelte</span>@latest my-app</span
-			>
+			><span class="line">npx <span class="orange-highlight">sv</span> create my-app</span>
 <span class="line">cd my-app</span>
 <span class="line">npm install</span>
 <span class="line">npm run dev -- --open</span></code
@@ -52,11 +50,12 @@
 		padding-top: 0.4rem;
 		align-items: center;
 		justify-content: center;
+		font-family: var(--sk-font-ui);
 	}
 
 	.terminal pre {
+		font-size: var(--sk-font-size-code);
 		padding: 1em;
-		font-size: var(--sk-text-xs);
 	}
 
 	.line::before {
@@ -71,17 +70,5 @@
 
 	.orange-highlight {
 		color: hsl(15, 100%, 65%);
-	}
-
-	@media (min-width: 440px) {
-		.terminal pre {
-			font-size: var(--sk-text-s);
-		}
-	}
-
-	@media (min-width: 1080px) {
-		.terminal pre {
-			font-size: var(--sk-text-m);
-		}
 	}
 </style>

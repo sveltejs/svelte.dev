@@ -1,7 +1,9 @@
 <script>
 	import { onMount } from 'svelte';
 
-	let seconds = 0;
+	let { children } = $props();
+
+	let seconds = $state(0);
 
 	onMount(() => {
 		const interval = setInterval(() => {
@@ -19,6 +21,6 @@
 	<a href="/about">about</a>
 </nav>
 
-<slot />
+{@render children()}
 
 <p>the page has been open for {seconds} seconds</p>

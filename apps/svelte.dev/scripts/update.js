@@ -1,9 +1,12 @@
-import sh from 'shelljs';
+import { fork } from 'node:child_process';
+import { fileURLToPath } from 'url';
 
-sh.env['FORCE_UPDATE'] = process.argv.includes('--force=true');
+const dir = fileURLToPath(new URL('.', import.meta.url));
 
-Promise.all([
-	sh.exec('node ./scripts/get_contributors.js'),
-	sh.exec('node ./scripts/get_donors.js'),
-	sh.exec('node ./scripts/update_template.js')
-]);
+const env = {
+	FORCE_UPDATE: process.argv.includes('--force=true') || ''
+};
+
+fork(`${dir}/get_contributors.js`, { env });
+fork(`${dir}/get_donors.js`, { env });
+fork(`${dir}/update_template.js`);

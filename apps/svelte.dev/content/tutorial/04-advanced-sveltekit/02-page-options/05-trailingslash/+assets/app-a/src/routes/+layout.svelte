@@ -1,3 +1,7 @@
+<script>
+	let { children } = $props();
+</script>
+
 <nav>
 	<a href="/always">/always</a>
 	<a href="/always/">/always/</a>
@@ -7,4 +11,4 @@
 	<a href="/never/">/never/</a>
 </nav>
 
-<slot />
+{@render children()}

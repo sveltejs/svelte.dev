@@ -1,10 +1,10 @@
 <script>
-	export let data;
+	let { data, children } = $props();
 </script>
 
 <div class="layout">
 	<main>
-		<slot />
+		{@render children()}
 	</main>
 </div>
 

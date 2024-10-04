@@ -24,7 +24,7 @@
 
 	<Hero />
 
-	<Blurb --background="var(--sk-back-1)">
+	<Blurb>
 		{#snippet one()}
 			<div>
 				<h2>fast</h2>
@@ -84,8 +84,8 @@
 					href: '/tutorial'
 				},
 				{
-					title: 'repl',
-					href: '/repl'
+					title: 'playground',
+					href: '/playground'
 				},
 				{
 					title: 'blog',
@@ -120,13 +120,3 @@
 		{/snippet}
 	</Footer>
 </div>
-
-<style>
-	h2 {
-		line-height: 1.05;
-	}
-
-	p {
-		font-size: var(--sk-text-m);
-	}
-</style>

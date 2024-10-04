@@ -11,7 +11,7 @@ Inside the `keydown` event handler of the 'add a todo' `<input>`, let's post som
 <input
 	type="text"
 	autocomplete="off"
-	on:keydown={async (e) => {
+	onkeydown={async (e) => {
 		if (e.key !== 'Enter') return;
 
 		const input = e.currentTarget;
@@ -58,7 +58,7 @@ We're returning a response with a [201 Created](https://http.dog/201) status and
 <input
 	type="text"
 	autocomplete="off"
-	on:keydown={async (e) => {
+	onkeydown={async (e) => {
 		if (e.key !== 'Enter') return;
 
 		const input = e.currentTarget;

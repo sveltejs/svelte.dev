@@ -19,23 +19,12 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		home_title?: string;
 		title: string | undefined;
 		links: NavigationLink[];
-		home_large?: Snippet;
-		home_small?: Snippet;
 		search?: Snippet;
 		external_links?: Snippet;
-		theme_label?: Snippet;
+		shadow: boolean;
 	}
 
-	let {
-		home_title = 'Homepage',
-		title,
-		links,
-		home_large,
-		home_small,
-		search,
-		external_links,
-		theme_label
-	}: Props = $props();
+	let { home_title = 'Homepage', title, links, search, external_links, shadow }: Props = $props();
 
 	let visible = $state(true);
 
@@ -78,34 +67,23 @@ Top navigation bar for the application. It provides a slot for the left side, th
 	class:visible={visible || $nav_open}
 	class:$nav_open
 	class:dark={$theme.current === 'dark'}
+	class:shadow
 	style:z-index={$overlay_open && ($searching || $on_this_page_open) ? 80 : null}
 	aria-label="Primary"
 >
-	<a class="home-link" href="/" title={home_title}>
-		<span class="home-large">
-			{@render home_large?.()}
-		</span>
-
-		<span class="home-small">
-			{@render home_small?.()}
-		</span>
-	</a>
+	<a class="home-link" href="/" title={home_title} aria-label="Svelte"></a>
 
 	{#if title}
 		<div class="current-section mobile">
-			｜ {title}
+			{title}
 		</div>
 	{/if}
 
 	<div class="desktop">
-		<div class="center-area">
-			{@render search?.()}
-		</div>
-
 		<div class="menu">
 			{#each links as link}
 				{#if link.sections?.[0].path}
-					<LinksDropdown links={link} prefix={link.prefix} />
+					<LinksDropdown {link} />
 				{:else}
 					<a
 						href={link.pathname}
@@ -115,15 +93,15 @@ Top navigation bar for the application. It provides a slot for the left side, th
 					</a>
 				{/if}
 			{/each}
+		</div>
 
-			<Separator />
+		<div class="menu">
+			{@render search?.()}
 
 			{@render external_links?.()}
 
 			<div class="appearance">
-				<span class="caption"
-					>{#if theme_label}{@render theme_label()}{:else}Theme{/if}</span
-				>
+				<span class="caption">Theme</span>
 				<ThemeToggle />
 			</div>
 		</div>
@@ -148,9 +126,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 			<Separator />
 
 			<div class="appearance">
-				<span class="caption"
-					>{#if theme_label}{@render theme_label()}{:else}Theme{/if}</span
-				>
+				<span class="caption">Theme</span>
 				<ThemeToggle />
 			</div>
 		</Menu>
@@ -167,32 +143,36 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		height: var(--sk-nav-height);
 		margin: 0 auto;
 		background-color: var(--sk-back-2);
-		font-family: var(--sk-font);
+		font-family: var(--sk-font-body);
 		user-select: none;
-		transition: 0.4s var(--quint-out);
-		transition-property: transform, background;
 		isolation: isolate;
+		font-family: var(--sk-font-ui);
+
+		&.shadow::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: -4px;
+			width: 100%;
+			height: 4px;
+			background: linear-gradient(to top, rgba(0, 0, 0, 0.05), transparent);
+		}
 	}
 
-	nav::after {
-		content: '';
-		position: absolute;
-		left: 0;
-		top: -4px;
-		width: 100%;
-		height: 4px;
-		background: linear-gradient(to top, rgba(0, 0, 0, 0.05), transparent);
+	a {
+		font-size: var(--sk-font-size-ui-medium);
 	}
 
 	.current-section {
 		display: flex;
 		align-items: center;
-		font-size: 0.8em;
 		color: var(--sk-text-3);
 		margin-left: 0.4em;
+		padding: 0.1rem 0 0 0;
+		font-size: var(--sk-font-size-ui-small);
 	}
 
-	@media (max-width: 800px) {
+	@media (max-width: 799px) {
 		nav:not(.visible):not(:focus-within) {
 			transform: translate(0, calc(var(--sk-nav-height)));
 		}
@@ -207,51 +187,36 @@ Top navigation bar for the application. It provides a slot for the left side, th
 	.menu :global(a) {
 		color: var(--sk-text-2);
 		line-height: 1;
-		margin: 0 0.3em;
+		font-size: var(--sk-font-size-ui-medium);
+		padding: 0.1rem 0.5rem 0 0.5rem;
 		white-space: nowrap;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		text-decoration: none;
+		outline-offset: -2px;
+
+		&:hover {
+			box-shadow: inset 0 -1px 0 0 var(--sk-back-5);
+		}
 	}
 
 	.menu :global(a[aria-current='page']) {
 		color: var(--sk-theme-1);
-		box-shadow: inset 0 -1px 0 0 var(--sk-theme-1);
-	}
-
-	.menu :global(a[aria-current='page']:hover) {
-		text-decoration: none;
+		box-shadow: inset 0 -1px 0 0 currentColor;
 	}
 
 	.home-link {
-		max-width: max-content;
+		--padding-right: 1rem;
+		width: 13rem;
 		height: 100%;
-		display: flex;
-		background-image: url(../branding/svelte-logo.svg);
-		background-position: calc(var(--sk-page-padding-side) - 1rem) 50%;
-		background-repeat: no-repeat;
-		background-size: auto 70%;
-		align-items: center;
-		padding-left: calc(var(--sk-page-padding-side) + 4rem);
-		padding-top: 5px; /* center vertically relative to logo */
-		text-decoration: none;
-		text-transform: uppercase;
-		letter-spacing: 0.05em;
-		font-size: 1.8rem;
-		color: var(--sk-text-4);
-	}
+		background: url(../branding/svelte.svg) no-repeat var(--sk-page-padding-side) 50% /
+			calc(100% - var(--sk-page-padding-side) - var(--padding-right)) auto;
+		padding: 0 var(--padding-right) 0 calc(var(--sk-page-padding-side) + 0rem);
 
-	.home-small {
-		display: none;
-
-		margin-left: -0.75rem;
-	}
-
-	.home-large {
-		display: block;
-		color: var(--sk-text-4);
-	}
-
-	.home-link :global(strong) {
-		color: var(--sk-text-1);
-		font-weight: inherit;
+		:global(.dark) & {
+			background-image: url(../branding/svelte-dark.svg);
+		}
 	}
 
 	.mobile-menu {
@@ -288,28 +253,19 @@ Top navigation bar for the application. It provides a slot for the left side, th
 	.appearance {
 		display: flex;
 		align-items: center;
-		margin-left: 0.75rem;
+		margin-left: 1.5rem;
 	}
 
 	.appearance .caption {
 		display: none;
-		font-size: var(--sk-text-xs);
 		line-height: 1;
-		margin-right: 0.5rem;
+		margin-right: 0rem;
 	}
 
 	@media (max-width: 799px) {
 		nav {
 			top: unset;
 			bottom: 0;
-		}
-
-		.home-small {
-			display: block;
-		}
-
-		.home-large {
-			display: none;
 		}
 
 		.menu {
@@ -324,13 +280,13 @@ Top navigation bar for the application. It provides a slot for the left side, th
 			position: relative;
 			display: flex;
 			padding: 1.5rem 0;
+			margin: 0 1rem;
 			justify-content: space-between;
 		}
 
 		.appearance .caption {
 			display: block;
-
-			font-size: var(--sk-text-s);
+			font-size: var(--sk-font-size-ui-medium);
 		}
 
 		nav :global(.large) {
@@ -338,23 +294,21 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		}
 	}
 
-	.desktop .center-area {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex: 1;
-	}
-
 	@media (min-width: 800px) {
+		.home-link {
+			--padding-right: 2rem;
+			width: 18rem;
+		}
+
 		nav {
 			display: grid;
 			grid-template-columns: auto 1fr 1fr;
-		}
 
-		nav::after {
-			top: auto;
-			bottom: -4px;
-			background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), transparent);
+			&.shadow::after {
+				top: auto;
+				bottom: -4px;
+				background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), transparent);
+			}
 		}
 
 		.menu {
@@ -363,6 +317,9 @@ Top navigation bar for the application. It provides a slot for the left side, th
 			height: 100%;
 			align-items: center;
 			padding: 0 var(--sk-page-padding-side) 0 0;
+		}
+
+		.menu:last-child {
 			justify-content: end;
 		}
 
@@ -376,13 +333,6 @@ Top navigation bar for the application. It provides a slot for the left side, th
 
 		nav :global(.small) {
 			display: none;
-		}
-	}
-
-	@media (min-width: 1240px) {
-		nav {
-			display: grid;
-			grid-template-columns: 1fr auto 1fr;
 		}
 	}
 </style>

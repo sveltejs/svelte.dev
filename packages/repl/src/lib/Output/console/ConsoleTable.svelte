@@ -1,5 +1,5 @@
 <script lang="ts">
-	import JSONNode from 'svelte-json-tree';
+	import JSONNode from '@sveltejs/svelte-json-tree';
 
 	export let data: any;
 	export let columns: any;
@@ -104,6 +104,7 @@
 	table {
 		border-collapse: collapse;
 		line-height: 1;
+		font-family: var(--sk-font-mono);
 	}
 
 	th {

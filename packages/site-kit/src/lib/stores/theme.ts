@@ -1,7 +1,7 @@
 import { BROWSER } from 'esm-env';
 import { persisted } from 'svelte-persisted-store';
 
-interface Theme {
+export interface Theme {
 	preference: 'light' | 'dark' | 'system';
 	current: 'light' | 'dark';
 }
@@ -18,6 +18,6 @@ export const theme = persisted<Theme>('svelte:theme', {
 theme.subscribe(($theme) => {
 	if (!BROWSER) return;
 
-	document.body.classList.remove('light', 'dark');
-	document.body.classList.add($theme.current);
+	document.documentElement.classList.remove('light', 'dark');
+	document.documentElement.classList.add($theme.current);
 });

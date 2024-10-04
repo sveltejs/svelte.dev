@@ -17,7 +17,7 @@ In `src/routes/[...timezone]/+page.svelte`, add an `onMount` callback that calls
 	+++import { onMount } from 'svelte';+++
 	+++import { invalidate } from '$app/navigation';+++
 
-	export let data;
+	let { data } = $props();
 
 +++	onMount(() => {
 		const interval = setInterval(() => {

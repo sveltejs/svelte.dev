@@ -1,4 +1,4 @@
----
+﻿---
 title: Bindings
 ---
 
@@ -42,25 +42,34 @@ Numeric input values are coerced; even though `input.value` is a string as far a
 <input type="range" bind:value={num} />
 ```
 
-On `<input>` elements with `type="file"`, you can use `bind:files` to get the [`FileList` of selected files](https://developer.mozilla.org/en-US/docs/Web/API/FileList). It is readonly.
+On `<input>` elements with `type="file"`, you can use `bind:files` to get the [`FileList` of selected files](https://developer.mozilla.org/en-US/docs/Web/API/FileList). When you want to update the files programmatically, you always need to use a `FileList` object. Currently `FileList` objects cannot be constructed directly, so you need to create a new [`DataTransfer`](https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer) object and get `files` from there.
 
 ```svelte
+<script>
+	let files = $state();
+
+	function clear() {
+		files = new DataTransfer().files; // null or undefined does not work
+	}
+</script>
+
 <label for="avatar">Upload a picture:</label>
 <input accept="image/png, image/jpeg" bind:files id="avatar" name="avatar" type="file" />
+<button onclick={clear}>clear</button>
 ```
 
-If you're using `bind:` directives together with `on:` directives, the order that they're defined in affects the value of the bound variable when the event handler is called.
+`FileList` objects also cannot be modified, so if you want to e.g. delete a single file from the list, you need to create a new `DataTransfer` object and add the files you want to keep.
+
+> `DataTransfer` may not be available in server-side JS runtimes. Leaving the state that is bound to `files` uninitialized prevents potential errors if components are server-side rendered.
+
+If you're using `bind:` directives together with `on` event attributes, the binding will always fire before the event attribute.
 
 ```svelte
 <script>
 	let value = 'Hello World';
 </script>
 
-<input
-	on:input={() => console.log('Old value:', value)}
-	bind:value
-	on:input={() => console.log('New value:', value)}
-/>
+<input oninput={() => console.log('New value:', value)} bind:value />
 ```
 
 Here we were binding to the value of a text input, which uses the `input` event. Bindings on other elements may use different events such as `change`.
@@ -261,10 +270,10 @@ Components also support `bind:this`, allowing you to interact with component ins
 ```svelte
 <!--- ShoppingCart.svelte --->
 <script>
-    // All instance exports are available on the instance object
-    export function empty() {
-        // ...
-    }
+	// All instance exports are available on the instance object
+	export function empty() {
+		// ...
+	}
 </script>
 ```
 
@@ -288,7 +297,7 @@ To mark a property as bindable, use the `$bindable` rune:
 
 ```svelte
 <script>
-    let { readonlyProperty, bindableProperty = $bindable() } = $props();
+	let { readonlyProperty, bindableProperty = $bindable() } = $props();
 </script>
 ```
 
@@ -298,7 +307,7 @@ Bindable properties can have a fallback value:
 
 ```svelte
 <script>
-    let { bindableProperty = $bindable('fallback value') } = $props();
+	let { bindableProperty = $bindable('fallback value') } = $props();
 </script>
 ```
 

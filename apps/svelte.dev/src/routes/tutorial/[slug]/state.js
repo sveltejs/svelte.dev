@@ -1,5 +1,5 @@
 import { derived, writable } from 'svelte/store';
-import * as adapter from './adapter.js';
+import * as adapter from './adapter.svelte';
 
 /**
  * @template T

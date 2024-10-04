@@ -6,6 +6,9 @@ import * as resolve from 'resolve.exports';
 import commonjs from './plugins/commonjs';
 import glsl from './plugins/glsl';
 import json from './plugins/json';
+import mp3 from './plugins/mp3';
+import image from './plugins/image';
+import svg from './plugins/svg';
 import replace from './plugins/replace';
 import loop_protect from './plugins/loop-protect';
 import type { Plugin, TransformResult } from '@rollup/browser';
@@ -320,7 +323,18 @@ async function get_bundle(
 			}
 
 			const cached_file = local_files_lookup.get(resolved);
-			if (cached_file) return cached_file.source;
+			if (cached_file) {
+				let code = cached_file.source;
+
+				// rather than remembering to add this attribute to every <audio>
+				// element, and having to explain it in the exercise text, we
+				// automate the cross-origin isolation requirement
+				if (cached_file.type === 'svelte') {
+					code = code.replace(/<audio/g, '<audio crossorigin="anonymous"');
+				}
+
+				return code;
+			}
 
 			if (!FETCH_CACHE.has(resolved)) {
 				self.postMessage({ type: 'status', uid, message: `fetching ${resolved}` });
@@ -346,17 +360,36 @@ async function get_bundle(
 			} else if (id.endsWith('.svelte')) {
 				result = svelte.compile(code, {
 					filename: name + '.svelte',
-					generate: 'client',
+					// @ts-expect-error
+					generate: Number(svelte.VERSION.split('.')[0]) >= 5 ? 'client' : 'dom',
 					dev: true
 				});
 
 				if (result.css) {
+					// resolve local files by inlining them
+					result.css.code = result.css.code.replace(
+						/url\(['"]?(\..+?\.(svg|webp|png))['"]?\)/g,
+						(match, $1, $2) => {
+							if (local_files_lookup.has($1)) {
+								if ($2 === 'svg') {
+									return `url('data:image/svg+xml;base64,${btoa(local_files_lookup.get($1)!.source)}')`;
+								} else {
+									return `url('data:image/${$2};base64,${local_files_lookup.get($1)!.source}')`;
+								}
+							} else {
+								return match;
+							}
+						}
+					);
+					// add the CSS via injecting a style tag
 					result.js.code +=
 						'\n\n' +
 						`
+					import { styles as $$_styles } from './__shared.js';
 					const $$__style = document.createElement('style');
 					$$__style.textContent = ${JSON.stringify(result.css.code)};
 					document.head.append($$__style);
+					$$_styles.push($$__style);
 				`.replace(/\t/g, '');
 				}
 			} else if (id.endsWith('.svelte.js')) {
@@ -400,6 +433,9 @@ async function get_bundle(
 				repl_plugin,
 				commonjs,
 				json,
+				svg,
+				mp3,
+				image,
 				glsl,
 				loop_protect,
 				replace({
@@ -429,6 +465,8 @@ async function get_bundle(
 	}
 }
 
+export type BundleResult = ReturnType<typeof bundle>;
+
 async function bundle({ uid, files }: { uid: number; files: File[] }) {
 	if (!DEV) {
 		console.clear();
@@ -440,8 +478,23 @@ async function bundle({ uid, files }: { uid: number; files: File[] }) {
 	lookup.set('./__entry.js', {
 		name: '__entry',
 		source: `
-			export { mount, unmount, untrack } from 'svelte';
+			import { unmount as u } from 'svelte';
+			import { styles } from './__shared.js';
+			export { mount, untrack } from 'svelte';
 			export {default as App} from './App.svelte';
+			export function unmount(component) {
+				u(component);
+				styles.forEach(style => style.remove());
+			}
+		`,
+		type: 'js',
+		modified: false
+	});
+
+	lookup.set('./__shared.js', {
+		name: '__entry',
+		source: `
+			export let styles = [];
 		`,
 		type: 'js',
 		modified: false
@@ -502,7 +555,8 @@ async function bundle({ uid, files }: { uid: number; files: File[] }) {
 			client: client_result,
 			server: server_result,
 			imports: client.imports,
-			warnings: client.warnings,
+			// Svelte 5 returns warnings as error objects with a toJSON method, prior versions return a POJO
+			warnings: client.warnings.map((w: any) => w.toJSON?.() ?? w),
 			error: null
 		};
 	} catch (err) {

@@ -1,4 +1,5 @@
 <script>
+	let { children } = $props();
 	const colors = ['ff3e00', '676779', '42b4ff', 'invalid'];
 </script>
 
@@ -8,7 +9,7 @@
 	{/each}
 </nav>
 
-<slot />
+{@render children()}
 
 <style>
 	a {

@@ -1,7 +1,7 @@
 <script>
 	import { browser } from '$app/environment';
 
-	let count = 0;
+	let count = $state(0);
 
 	function increment() {
 		count += 1;
@@ -10,6 +10,6 @@
 
 <h1>Rendered {browser ? 'in the browser' : 'on the server'}</h1>
 
-<button on:click={increment}>
+<button onclick={increment}>
 	Clicks: {count}
 </button>

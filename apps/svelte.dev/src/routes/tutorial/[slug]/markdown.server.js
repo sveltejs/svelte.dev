@@ -38,19 +38,17 @@ function highlight_spans(content, classname) {
 
 /** @type {Partial<import('marked').Renderer>} */
 const default_renderer = {
-	code: (source, language = '') => {
+	code: ({ text, lang = '' }) => {
 		/** @type {Record<string, string>} */
 		const options = {};
 
-		let html = '';
-
-		source = source
+		let source = text
 			.replace(/\/\/\/ (.+?)(?:: (.+))?\n/gm, (_, key, value) => {
 				options[key] = value;
 				return '';
 			})
 			.replace(/^([\-\+])?((?:    )+)/gm, (match, prefix = '', spaces) => {
-				if (prefix && language !== 'diff') return match;
+				if (prefix && lang !== 'diff') return match;
 
 				// for no good reason at all, marked replaces tabs with spaces
 				let tabs = '';
@@ -64,7 +62,15 @@ const default_renderer = {
 			})
 			.replace(/\*\\\//g, '*/');
 
-		if (language === 'diff') {
+		let html = '<div class="code-block"><div class="controls">';
+
+		if (options.file) {
+			html += `<span class="filename">${options.file}</span>`;
+		}
+
+		html += '</div>';
+
+		if (lang === 'diff') {
 			const lines = source.split('\n').map((content) => {
 				let type = null;
 				if (/^[\+\-]/.test(content)) {
@@ -78,23 +84,22 @@ const default_renderer = {
 				};
 			});
 
-			html = `<div class="code-block"><pre class="language-diff"><code>${lines
+			html += `<pre class="language-diff"><code>${lines
 				.map((line) => {
 					if (line.type) return `<span class="${line.type}">${line.content}\n</span>`;
 					return line.content + '\n';
 				})
-				.join('')}</code></pre></div>`;
+				.join('')}</code></pre>`;
 		} else {
-			const lang = /** @type {keyof languages} */ (language);
-			const plang = languages[lang];
+			const plang = languages[/** @type {keyof languages} */ (lang)];
 			const highlighted = plang
-				? PrismJS.highlight(source, PrismJS.languages[plang], language)
+				? PrismJS.highlight(source, PrismJS.languages[plang], lang)
 				: escape_html(source);
 
-			html = `<div class="code-block">${
-				options.file ? `<span class="filename">${options.file}</span>` : ''
-			}<pre class='language-${plang}'><code>${highlighted}</code></pre></div>`;
+			html += `<pre class='language-${plang}'><code>${highlighted}</code></pre>`;
 		}
+
+		html += '</div>';
 
 		return html
 			.replace(/ {13}([^ ][^]+?) {13}/g, (_, content) => {

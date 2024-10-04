@@ -14,12 +14,12 @@ Now, add a sidebar in the layout for the post page:
 ```svelte
 /// file: src/routes/blog/[slug]/+layout.svelte
 <script>
-	export let data;
+	let { data, children } = $props();
 </script>
 
 <div class="layout">
 	<main>
-		<slot></slot>
+		{@render children()}
 	</main>
 
 +++	<aside>

@@ -1,3 +1,7 @@
+<script>
+	let { children } = $props();
+</script>
+
 <nav>
 	<a href="/">default</a>
 	<a href="/en">english</a>
@@ -5,4 +9,4 @@
 	<a href="/fr">french</a>
 </nav>
 
-<slot />
+{@render children()}

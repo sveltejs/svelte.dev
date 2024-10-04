@@ -1,3 +1,7 @@
+<script>
+	let { children } = $props();
+</script>
+
 <div class="layout" data-name="c">
-	<slot />
+	{@render children()}
 </div>

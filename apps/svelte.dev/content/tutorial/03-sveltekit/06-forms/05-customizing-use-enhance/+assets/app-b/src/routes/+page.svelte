@@ -2,11 +2,10 @@
 	import { fly, slide } from 'svelte/transition';
 	import { enhance } from '$app/forms';
 
-	export let data;
-	export let form;
+	let { data, form } = $props();
 
-	let creating = false;
-	let deleting = [];
+	let creating = $state(false);
+	let deleting = $state([]);
 </script>
 
 <div class="centered">

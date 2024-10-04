@@ -35,7 +35,7 @@
 		--background-2: var(--sk-back-4);
 	}
 
-	:global(body.dark .try-container) {
+	:global(html.dark .try-container) {
 		--background-2: #444;
 	}
 
@@ -44,7 +44,7 @@
 			--background-2: #444;
 		}
 
-		:global(body.light .try-container) {
+		:global(html.light .try-container) {
 			--background-2: var(--sk-back-4) !important;
 		}
 	}
@@ -62,19 +62,17 @@
 	.try {
 		width: 100%;
 		margin: 0 auto;
-		font-size: var(--sk-text-m);
 		color: var(--sk-text-1);
 	}
 
 	.copy {
 		text-align: left;
+		font-size: var(--sk-font-size-body);
 	}
 
 	h2 {
 		display: inline-block;
-		width: 25rem;
 		margin: 0 0 1rem;
-		font-size: var(--sk-text-xl);
 	}
 
 	@media (min-width: 900px) {

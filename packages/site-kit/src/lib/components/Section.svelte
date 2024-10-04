@@ -10,8 +10,9 @@
 
 <style>
 	section {
+		position: relative;
 		padding: 6rem 0;
-		background: var(--background, white);
+		background: var(--background, transparent);
 	}
 
 	section::after {

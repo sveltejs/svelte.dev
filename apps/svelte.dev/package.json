@@ -13,7 +13,7 @@
 		"check": "node scripts/update.js && svelte-kit sync && svelte-check",
 		"format": "prettier --write .",
 		"lint": "prettier --check .",
-		"sync-docs": "node scripts/sync-docs.js"
+		"sync-docs": "tsx scripts/sync-docs/index.ts"
 	},
 	"dependencies": {
 		"@codemirror/autocomplete": "^6.9.0",
@@ -26,7 +26,6 @@
 		"@codemirror/search": "^6.5.2",
 		"@codemirror/state": "^6.2.1",
 		"@codemirror/view": "^6.17.1",
-		"@fontsource/roboto-mono": "^5.0.8",
 		"@jridgewell/sourcemap-codec": "^1.4.15",
 		"@lezer/common": "^1.0.4",
 		"@lezer/highlight": "^1.1.6",
@@ -35,7 +34,6 @@
 		"@replit/codemirror-lang-svelte": "^6.0.0",
 		"@replit/codemirror-vim": "^6.0.14",
 		"@rich_harris/svelte-split-pane": "^1.1.3",
-		"@supabase/supabase-js": "^2.43.4",
 		"@sveltejs/repl": "workspace:*",
 		"@types/d3-geo": "^3.1.0",
 		"@vercel/speed-insights": "^1.0.0",
@@ -60,6 +58,7 @@
 	},
 	"devDependencies": {
 		"@resvg/resvg-js": "^2.6.2",
+		"@supabase/supabase-js": "^2.43.4",
 		"@sveltejs/adapter-vercel": "^5.4.3",
 		"@sveltejs/enhanced-img": "^0.3.4",
 		"@sveltejs/kit": "^2.5.25",
@@ -75,20 +74,20 @@
 		"jimp": "^1.1.1",
 		"lightningcss": "^1.25.1",
 		"magic-string": "^0.30.11",
-		"marked": "^12.0.2",
+		"marked": "^14.1.2",
 		"prettier": "^3.3.2",
 		"prettier-plugin-svelte": "^3.2.4",
 		"satori": "^0.10.13",
 		"satori-html": "^0.3.2",
-		"shelljs": "^0.8.5",
 		"shiki": "^1.6.4",
 		"shiki-twoslash": "^3.1.2",
-		"svelte": "5.0.0-next.243",
+		"svelte": "5.0.0-next.260",
 		"svelte-check": "^4.0.0",
 		"svelte-preprocess": "^5.1.4",
 		"tiny-glob": "^0.2.9",
+		"tsx": "^4.19.0",
 		"typescript": "^5.5.4",
-		"vite": "^5.4.3",
+		"vite": "^5.4.7",
 		"vite-imagetools": "^7.0.4"
 	}
 }

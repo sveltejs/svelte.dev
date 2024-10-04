@@ -2,7 +2,7 @@
 	"$schema": "https://openapi.vercel.sh/vercel.json",
 	"headers": [
 		{
-			"source": "_app/immutable/workers/(.*)",
+			"source": "/(.*)",
 			"headers": [
 				{
 					"key": "cross-origin-opener-policy",

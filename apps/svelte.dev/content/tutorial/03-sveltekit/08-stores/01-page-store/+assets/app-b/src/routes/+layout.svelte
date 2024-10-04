@@ -1,5 +1,6 @@
 <script>
 	import { page } from '$app/stores';
+	let { children } = $props();
 </script>
 
 <nav>
@@ -12,4 +13,4 @@
 	</a>
 </nav>
 
-<slot />
+{@render children()}

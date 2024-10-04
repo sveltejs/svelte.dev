@@ -6,8 +6,8 @@ Fetching data is a fundamental part of apps interacting with the outside world. 
 
 ```svelte
 <script>
-    let response = $state();
-    fetch('/api/data').then(async (r) => response = r.json());
+	let response = $state();
+	fetch('/api/data').then(async (r) => (response = r.json()));
 </script>
 ```
 

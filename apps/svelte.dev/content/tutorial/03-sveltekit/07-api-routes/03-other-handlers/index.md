@@ -34,7 +34,7 @@ We can now interact with this endpoint inside our event handlers:
 	<input
 		type="checkbox"
 		checked={todo.done}
-		on:change={async (e) => {
+		onchange={async (e) => {
 			const done = e.currentTarget.checked;
 
 +++			await fetch(`/todo/${todo.id}`, {
@@ -49,7 +49,7 @@ We can now interact with this endpoint inside our event handlers:
 	<span>{todo.description}</span>
 	<button
 		aria-label="Mark as complete"
-		on:click={async (e) => {
+		onclick={async (e) => {
 +++			await fetch(`/todo/${todo.id}`, {
 				method: 'DELETE'
 			});

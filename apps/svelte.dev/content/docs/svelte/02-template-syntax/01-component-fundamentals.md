@@ -53,7 +53,7 @@ To get all properties, use rest syntax:
 
 ```svelte
 <script>
-    let { a, b, c, ...everythingElse } = $props();
+	let { a, b, c, ...everythingElse } = $props();
 </script>
 ```
 
@@ -71,14 +71,32 @@ If you're using TypeScript, you can declare the prop types:
 
 ```svelte
 <script lang="ts">
-    interface Props {
-        a: number;
-        b: boolean;
-        c: string;
-        [key: string]: unknown;
-    }
+	interface Props {
+		required: string;
+		optional?: number;
+		[key: string]: unknown;
+	}
 
-    let { a, b, c, ...everythingElse }: Props = $props();
+	let { required, optional, ...everythingElse }: Props = $props();
+</script>
+```
+
+If you're using JavaScript, you can declare the prop types using JSDoc:
+
+```svelte
+<script>
+	/** @type {{ x: string }} */
+	let { x } = $props();
+
+	// or use @typedef if you want to document the properties:
+
+	/**
+	 * @typedef {Object} MyProps
+	 * @property {string} y Some documentation
+	 */
+
+	/** @type {MyProps} */
+	let { y } = $props();
 </script>
 ```
 
@@ -131,28 +149,28 @@ If you'd like to react to changes to a prop, use the `$derived` or `$effect` run
 <script>
 	let count = $state(0);
 
-    let double = $derived(count * 2);
+	let double = $derived(count * 2);
 
-    $effect(() => {
-        if (count > 10) {
-            alert('Too high!');
-        }
-    });
+	$effect(() => {
+		if (count > 10) {
+			alert('Too high!');
+		}
+	});
 </script>
 ```
 
 For more information on reactivity, read the documentation around runes.
 
-## &lt;script context="module"&gt;
+## &lt;script module&gt;
 
-A `<script>` tag with a `context="module"` attribute runs once when the module first evaluates, rather than for each component instance. Values declared in this block are accessible from a regular `<script>` (and the component markup) but not vice versa.
+A `<script>` tag with a `module` attribute runs once when the module first evaluates, rather than for each component instance. Values declared in this block are accessible from a regular `<script>` (and the component markup) but not vice versa.
 
 You can `export` bindings from this block, and they will become exports of the compiled module.
 
 You cannot `export default`, since the default export is the component itself.
 
 ```svelte
-<script context="module">
+<script module>
 	let totalComponents = 0;
 
 	// the export keyword allows this function to imported with e.g.

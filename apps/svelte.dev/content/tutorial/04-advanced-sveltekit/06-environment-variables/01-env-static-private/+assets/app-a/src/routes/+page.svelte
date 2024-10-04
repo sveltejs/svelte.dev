@@ -1,5 +1,5 @@
 <script>
-	export let form;
+	let { form } = $props();
 </script>
 
 <form method="POST">

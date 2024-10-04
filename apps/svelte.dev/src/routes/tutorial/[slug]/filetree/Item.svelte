@@ -42,7 +42,8 @@
 <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 <li
 	aria-current={selected ? 'true' : undefined}
-	style="--depth: {depth}; --icon: url('{icon}');"
+	style:--depth={depth}
+	style:--icon="url(&quot;{icon}&quot;)"
 	on:keydown
 >
 	{#if renaming}
@@ -119,12 +120,11 @@
 		background-size: 1.2rem 1.2rem;
 		background-position: 0 45%;
 		background-repeat: no-repeat;
+		font-family: var(--sk-font-ui);
 	}
 
 	:focus-visible {
-		outline: none;
-		border: 2px solid var(--sk-theme-3) !important;
-		border-radius: 2px;
+		outline-offset: -2px;
 	}
 
 	input {
@@ -133,7 +133,6 @@
 		margin: 0 0.5rem 0 calc(0.5rem + var(--inset));
 		padding: 0 0.5rem;
 		font-size: var(--font-size);
-		font-family: inherit;
 	}
 
 	.basename {
@@ -142,7 +141,6 @@
 		margin: 0;
 		padding: 0 1rem 0 calc(1rem + var(--inset));
 		font-size: var(--font-size);
-		font-family: inherit;
 		color: inherit;
 		flex: 1;
 		height: 100%;

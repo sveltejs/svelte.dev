@@ -1,5 +1,5 @@
 import flexsearch, { type Index as FlexSearchIndex } from 'flexsearch';
-import type { Block, Tree } from './types';
+import type { Block, BlockGroup } from './types';
 
 // @ts-expect-error
 const Index = (flexsearch.Index as FlexSearchIndex) ?? flexsearch;
@@ -47,7 +47,7 @@ export function init(blocks: Block[]) {
 /**
  * Search for a given query in the existing index
  */
-export function search(query: string): Tree[] {
+export function search(query: string): BlockGroup[] {
 	const escaped = query.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
 	const regex = new RegExp(`(^|\\b)${escaped}`, 'i');
 
@@ -70,9 +70,20 @@ export function search(query: string): Tree[] {
 		})
 		.map(({ block }) => block);
 
-	const results = tree([], blocks).children;
+	const groups: Record<string, BlockGroup> = {};
 
-	return results;
+	for (const block of blocks) {
+		const breadcrumbs = block.breadcrumbs.slice(0, 2);
+
+		const group = (groups[breadcrumbs.join('::')] ??= {
+			breadcrumbs,
+			blocks: []
+		});
+
+		group.blocks.push(block);
+	}
+
+	return Object.values(groups);
 }
 
 /**
@@ -80,27 +91,4 @@ export function search(query: string): Tree[] {
  */
 export function lookup(href: string) {
 	return map.get(href);
-}
-
-function tree(breadcrumbs: string[], blocks: Block[]): Tree {
-	const depth = breadcrumbs.length;
-
-	const node = blocks.find((block) => {
-		if (block.breadcrumbs.length !== depth) return false;
-		return breadcrumbs.every((part, i) => block.breadcrumbs[i] === part);
-	});
-
-	const descendants = blocks.filter((block) => {
-		if (block.breadcrumbs.length <= depth) return false;
-		return breadcrumbs.every((part, i) => block.breadcrumbs[i] === part);
-	});
-
-	const child_parts = Array.from(new Set(descendants.map((block) => block.breadcrumbs[depth])));
-
-	return {
-		breadcrumbs,
-		href: hrefs.get(breadcrumbs.join('::'))!,
-		node: node!,
-		children: child_parts.map((part) => tree([...breadcrumbs, part], descendants))
-	};
 }

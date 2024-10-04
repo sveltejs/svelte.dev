@@ -1,13 +1,19 @@
+<svelte:options css="injected" />
+
 <script lang="ts">
-	let { title, date_formatted }: { title: string; date_formatted: string } = $props();
+	let { title, date }: { title: string; date: string } = $props();
 </script>
 
 <div class="card">
-	<img src="https://sveltejs.github.io/assets/artwork/svelte-machine.png" alt="Svelte Machine" />
+	<img
+		crossorigin="anonymous"
+		src="https://sveltejs.github.io/assets/artwork/svelte-machine.png"
+		alt="Svelte Machine"
+	/>
 
 	<div class="text">
 		<h1>{title}</h1>
-		<p class="date">{date_formatted}</p>
+		<p class="date">{date}</p>
 	</div>
 </div>
 
@@ -16,7 +22,6 @@
 		display: flex;
 		width: 100%;
 		height: 100%;
-		font-family: 'Overpass';
 		background: white;
 	}
 
@@ -47,6 +52,7 @@
 		font-weight: 400;
 		line-height: 80px;
 		margin: 0 0 0.5em 0;
+		font-family: 'DM Serif Display';
 	}
 
 	.date {
@@ -54,5 +60,6 @@
 		margin: 0;
 		color: #555;
 		text-transform: uppercase;
+		font-family: 'Fira Sans';
 	}
 </style>

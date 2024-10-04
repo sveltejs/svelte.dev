@@ -1,7 +1,7 @@
 <script lang="ts">
-	import JSONNode from 'svelte-json-tree';
+	import JSONNode from '@sveltejs/svelte-json-tree';
 	import ConsoleTable from './ConsoleTable.svelte';
-	import type { Log } from './console';
+	import type { Log } from './Console.svelte';
 
 	export let log: Log;
 	export let depth = 0;
@@ -195,10 +195,6 @@
 		}
 	}
 
-	.group {
-		font-weight: 700;
-	}
-
 	.log {
 		padding: 0.5rem 1rem 0.5rem calc(1rem + var(--indent));
 		display: flex;
@@ -258,7 +254,7 @@
 
 	.meta {
 		color: var(--sk-text-2, #666);
-		font-family: var(--sk-font) !important;
+		font-family: var(--sk-font-body) !important;
 		font-size: 12px;
 	}
 

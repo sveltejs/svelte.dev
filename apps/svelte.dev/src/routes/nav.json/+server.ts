@@ -1,5 +1,5 @@
 import { json } from '@sveltejs/kit';
-import { blog_posts, docs as _docs, index } from '$lib/server/content';
+import { docs as _docs, index } from '$lib/server/content';
 import type { NavigationLink } from '@sveltejs/site-kit';
 
 export const prerender = true;
@@ -9,29 +9,19 @@ export const GET = async () => {
 };
 
 async function get_nav_list(): Promise<NavigationLink[]> {
-	const docs = Object.values(_docs.topics).map((topic) => ({
-		title: topic.metadata.title,
-		path: '/' + topic.slug, // this will make the UI show a flyout menu for the docs nav entry
-		sections: topic.children.map((section) => ({
-			title: section.metadata.title,
-			sections: section.children.map((page) => ({
-				title: page.metadata.title,
-				path: '/' + page.slug
+	const docs = Object.values(_docs.topics)
+		.map((topic) => ({
+			title: topic.metadata.title,
+			path: '/' + topic.slug, // this will make the UI show a flyout menu for the docs nav entry
+			sections: topic.children.map((section) => ({
+				title: section.metadata.title,
+				sections: section.children.map((page) => ({
+					title: page.metadata.title,
+					path: '/' + page.slug
+				}))
 			}))
 		}))
-	}));
-
-	const blog = [
-		{
-			title: '',
-			sections: blog_posts.map(({ title, slug, date }) => ({
-				title,
-				path: '/' + slug,
-				// Put a NEW badge on blog posts that are less than 14 days old
-				badge: (+new Date() - +new Date(date)) / (1000 * 60 * 60 * 24) < 14 ? 'NEW' : undefined
-			}))
-		}
-	];
+		.sort((a, b) => a.title.localeCompare(b.title)); // Svelte first
 
 	const tutorial = index.tutorial.children.map((topic) => ({
 		title: topic.metadata.title,
@@ -58,20 +48,14 @@ async function get_nav_list(): Promise<NavigationLink[]> {
 			sections: tutorial
 		},
 		{
-			title: 'REPL',
-			prefix: 'repl',
-			pathname: '/repl'
+			title: 'Playground',
+			prefix: 'playground',
+			pathname: '/playground'
 		},
 		{
 			title: 'Blog',
 			prefix: 'blog',
-			pathname: '/blog',
-			sections: [
-				{
-					title: 'BLOG',
-					sections: blog
-				}
-			]
+			pathname: '/blog'
 		}
 	];
 }
