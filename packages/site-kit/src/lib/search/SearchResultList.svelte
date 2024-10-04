@@ -162,7 +162,6 @@
 			white-space: nowrap;
 			line-height: 1;
 			text-overflow: ellipsis;
-			font-weight: 400;
 		}
 
 		strong {

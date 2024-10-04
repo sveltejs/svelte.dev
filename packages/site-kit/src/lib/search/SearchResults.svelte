@@ -33,7 +33,6 @@ Renders a list of search results
 		padding: var(--padding);
 		font-size: var(--sk-font-size-ui-medium);
 		color: var(--sk-text-4);
-		font-weight: normal;
 		text-transform: uppercase;
 		background-color: var(--sk-back-2);
 		border-radius: 0 0 var(--sk-border-radius) var(--sk-border-radius);
