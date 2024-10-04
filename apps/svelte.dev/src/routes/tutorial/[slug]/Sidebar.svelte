@@ -172,7 +172,7 @@
 	.text :global(.filename) {
 		background-position: 1rem 54%;
 		background-size: 1rem 1rem;
-		padding-left: 2.5rem;
+		padding-left: 2.5rem !important;
 	}
 
 	@media (prefers-color-scheme: dark) {

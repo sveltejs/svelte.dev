@@ -105,7 +105,7 @@
 					display: block;
 					flex: 1;
 					font-family: var(--sk-font-mono);
-					font-size: 1.2rem;
+					font-size: var(--sk-font-size-code);
 					font-weight: 400;
 					padding: 0 1rem;
 					color: var(--sk-text-2);
