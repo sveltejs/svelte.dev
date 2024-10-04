@@ -116,7 +116,7 @@
 		}
 
 		h2 {
-			padding-right: 2rem;
+			padding-right: 4rem;
 			background: url(./arrow-right.svg) no-repeat 100% 50%;
 			background-size: 3rem;
 		}
