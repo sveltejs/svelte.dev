@@ -21,5 +21,5 @@ The result of setting these headers is that the site can no longer embed URLs fr
 
 When writing content for the tutorial, you need to be aware of the differences of loading content:
 
-- When using content like images for the Svelte tutorial, either place them in the `static/tutorial` folder, or if it's from a different domain, add the `crossorigin` attribute
-- When using content like images for the SvelteKit tutorial, either place them into a `static` folder right in that chapter and reference them, or import them like you can do when using Vite (e.g. `import Svg from './some.svg';`)
+- When using root-relative paths, for a SvelteKit exercise the 'root' is the `static` directory inside the exercise itself, but for a Svelte exercise it is the root of the app so assets should do inside `apps/svelte.dev/static/tutorial`.
+- When importing relative assets in a Svelte exercise, Rollup inlines them into the bundle as base64
