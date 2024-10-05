@@ -51,15 +51,15 @@
 			{/each}
 		</div>
 
-		<div class="feed posts">
+		<ul class="feed">
 			{#each whats_new as post}
-				<article data-pubdate={post.date}>
+				<li>
 					<a href="/{post.slug}" title="Read the article »">
 						{post.metadata.title.replace('What’s new in Svelte: ', '')}
 					</a>
-				</article>
+				</li>
 			{/each}
-		</div>
+		</ul>
 	</div>
 </div>
 
@@ -114,12 +114,6 @@
 		display: none;
 	}
 
-	/* @media (max-width: 799px) {
-		article:not(.feature) h2::before {
-			content: 'What’s new in Svelte: ';
-		}
-	} */
-
 	@media (min-width: 800px) {
 		.grid {
 			display: grid;
@@ -150,26 +144,28 @@
 		}
 
 		.feed {
+			position: relative;
 			display: block;
+			padding: 2em 0;
+			margin: 0;
+			list-style: none;
 
 			&::before {
 				content: 'Monthly updates';
+				position: absolute;
+				top: 0;
 				font-family: var(--sk-font-ui);
 				font-size: var(--sk-font-size-ui-medium);
 				text-transform: uppercase;
 				color: var(--sk-text-4);
 			}
 
-			article {
-				h2 {
-					font-family: var(--sk-font-body);
-					font-weight: 400;
-					font-size: var(--sk-font-size-body);
-				}
-
-				p {
-					display: none;
-				}
+			a {
+				display: block;
+				font-family: var(--sk-font-body);
+				font-weight: 400;
+				font-size: var(--sk-font-size-body);
+				color: var(--sk-text-2);
 			}
 		}
 	}
