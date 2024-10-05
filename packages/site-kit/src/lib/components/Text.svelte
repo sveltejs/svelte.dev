@@ -357,7 +357,7 @@
 
 		li {
 			position: relative;
-			max-width: calc(var(--sk-line-max-width) - var(--list-padding));
+			max-width: calc(var(--sk-page-content-width) - var(--list-padding));
 			margin: 0 0 0.5em 0;
 		}
 

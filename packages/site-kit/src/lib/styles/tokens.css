@@ -18,7 +18,7 @@
 	--sk-page-padding-side: 2.4rem;
 	--sk-thick-border-width: 0.3rem;
 	--sk-border-radius: 0.4rem;
-	--sk-page-main-width: 84rem;
+	--sk-page-content-width: 84rem;
 	--sk-banner-bottom-height: 0px;
 
 	/* typography */
@@ -36,8 +36,6 @@
 	--sk-font-size-ui-medium: 1.6rem;
 	--sk-font-size-ui-large: 3rem;
 	--sk-font-size-code: 1.4rem;
-
-	--sk-line-max-width: 84rem; /* TODO can this be merged with --sk-page-main-width?
 
 	/* Base colors */
 	--sk-theme-1-hsl: 12, 93%, 43%;

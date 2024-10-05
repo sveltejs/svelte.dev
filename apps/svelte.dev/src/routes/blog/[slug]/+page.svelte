@@ -46,7 +46,7 @@
 <style>
 	.post {
 		padding: var(--sk-page-padding-top) var(--sk-page-padding-side);
-		max-width: var(--sk-page-main-width);
+		max-width: var(--sk-page-content-width);
 		box-sizing: content-box;
 		margin: 0 auto;
 	}
@@ -109,7 +109,7 @@
 	@media (min-width: 910px) {
 		.post :global(.max) {
 			width: calc(100vw - 2 * var(--sk-page-padding-side));
-			margin: 0 calc(var(--sk-page-main-width) / 2 - 50vw);
+			margin: 0 calc(var(--sk-page-content-width) / 2 - 50vw);
 			text-align: center;
 		}
 

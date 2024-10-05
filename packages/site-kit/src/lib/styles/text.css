@@ -39,7 +39,7 @@
 	background: var(--sk-back-4);
 	padding: 1rem;
 	margin-bottom: 1rem;
-	max-width: var(--sk-line-max-width);
+	max-width: var(--sk-page-content-width);
 	border-radius: var(--sk-border-radius);
 }
 
