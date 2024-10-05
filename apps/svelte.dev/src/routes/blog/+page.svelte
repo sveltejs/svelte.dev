@@ -1,5 +1,8 @@
-<script>
-	export let data;
+<script lang="ts">
+	let { data } = $props();
+
+	const featured = data.posts.filter((post) => !post.metadata.title.startsWith('What’s new'));
+	const top = data.posts[0];
 </script>
 
 <svelte:head>
@@ -17,29 +20,62 @@
 </svelte:head>
 
 <h1 class="visually-hidden">Blog</h1>
-<div class="posts stretch">
-	{#each data.posts as post}
-		{#if !post.metadata.draft}
-			<article class="post" data-pubdate={post.date}>
-				<a href="/{post.slug}" title="Read the article »">
-					<h2>{post.metadata.title}</h2>
-					<p>{post.metadata.description}</p>
-				</a>
-			</article>
-		{/if}
-	{/each}
+
+<div class="container">
+	{#snippet article(post: any)}
+		<article class:feature={!post.metadata.title.startsWith('What’s new')} data-pubdate={post.date}>
+			<a href="/{post.slug}" title="Read the article »">
+				<h2>{post.metadata.title.replace('What’s new in Svelte: ', '')}</h2>
+				<p>{post.metadata.description}</p>
+			</a>
+		</article>
+	{/snippet}
+
+	<article class="top" data-pubdate={top.date}>
+		<a href="/{top.slug}" title="Read the article »">
+			<h2>{top.metadata.title}</h2>
+			<p>{top.metadata.description}</p>
+		</a>
+	</article>
+
+	<div class="grid">
+		<div class="featured posts">
+			{#each featured.slice(1) as post}
+				<article
+					class:feature={!post.metadata.title.startsWith('What’s new')}
+					data-pubdate={post.date}
+				>
+					<a href="/{post.slug}" title="Read the article »">
+						<h2>{post.metadata.title}</h2>
+						<p>{post.metadata.description}</p>
+					</a>
+				</article>
+			{/each}
+		</div>
+
+		<div class="feed posts">
+			{#each data.posts.filter((post) => post !== top) as post}
+				<article
+					class:feature={!post.metadata.title.startsWith('What’s new')}
+					data-pubdate={post.date}
+				>
+					<a href="/{post.slug}" title="Read the article »">
+						<h2>{post.metadata.title.replace('What’s new in Svelte: ', '')}</h2>
+						<p>{post.metadata.description}</p>
+					</a>
+				</article>
+			{/each}
+		</div>
+	</div>
 </div>
 
 <style>
-	.posts {
-		grid-template-columns: 1fr 1fr;
-		grid-gap: 1em;
-		min-height: calc(100vh - var(--sk-nav-height) - var(--sk-banner-bottom-height));
-		padding: var(--sk-page-padding-top) var(--sk-page-padding-side) 6rem var(--sk-page-padding-side);
+	.container {
 		max-width: var(--sk-page-content-width);
 		box-sizing: content-box;
 		margin: 0 auto;
 		text-wrap: balance;
+		padding: var(--sk-page-padding-top) var(--sk-page-padding-side);
 	}
 
 	h2 {
@@ -48,22 +84,11 @@
 		font-size: var(--sk-font-size-h3);
 	}
 
-	.post {
+	article {
 		margin: 2em 0;
 
-		&:where(:first-child, :nth-child(2))::before {
-			content: 'Latest post • ' attr(data-pubdate);
-			color: var(--sk-text-4);
-			font-family: var(--sk-font-ui);
-			font-size: var(--sk-font-size-ui-small);
-			text-transform: uppercase;
-		}
-
-		&:nth-child(2)::before {
-			content: 'Older posts';
-		}
-
-		&:first-child {
+		/* we need to use :global because snippets don't currently cause a deopt */
+		&.top {
 			margin: 0 0 2rem 0;
 			padding: 0 0 4rem 0;
 
@@ -86,6 +111,66 @@
 			font-size: var(--sk-font-size-body-small);
 			color: var(--sk-text-3);
 			margin: 0;
+		}
+	}
+
+	.featured {
+		display: none;
+	}
+
+	@media (max-width: 799px) {
+		article:not(.feature) h2::before {
+			content: 'What’s new in Svelte: ';
+		}
+	}
+
+	@media (min-width: 800px) {
+		.grid {
+			display: grid;
+			grid-template-columns: 2fr 1fr;
+			gap: 3em;
+		}
+
+		.featured {
+			display: block;
+
+			&::before {
+				content: 'Featured posts';
+				font-family: var(--sk-font-ui);
+				font-size: var(--sk-font-size-ui-medium);
+				text-transform: uppercase;
+				color: var(--sk-text-4);
+			}
+
+			article {
+				h2 {
+					font-size: var(--sk-font-size-h2);
+				}
+			}
+		}
+
+		.feed {
+			&::before {
+				content: 'What’s new';
+				font-family: var(--sk-font-ui);
+				font-size: var(--sk-font-size-ui-medium);
+				text-transform: uppercase;
+				color: var(--sk-text-4);
+			}
+
+			.feature {
+				display: none;
+			}
+
+			article {
+				h2 {
+					font-size: var(--sk-font-size-h3);
+				}
+
+				p {
+					display: none;
+				}
+			}
 		}
 	}
 </style>

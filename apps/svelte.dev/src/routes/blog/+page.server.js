@@ -4,10 +4,12 @@ export const prerender = true;
 
 export async function load() {
 	return {
-		posts: blog_posts.map((document) => ({
-			metadata: document.metadata,
-			date: document.date,
-			slug: document.slug
-		}))
+		posts: blog_posts
+			.map((document) => ({
+				metadata: document.metadata,
+				date: document.date,
+				slug: document.slug
+			}))
+			.filter((document) => !document.metadata.draft)
 	};
 }
