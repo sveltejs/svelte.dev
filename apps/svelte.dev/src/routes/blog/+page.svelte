@@ -1,7 +1,10 @@
 <script lang="ts">
+	import Byline from './Byline.svelte';
+
 	let { data } = $props();
 
 	const featured = data.posts.filter((post) => !post.metadata.title.startsWith('What’s new'));
+	const whats_new = data.posts.filter((post) => post.metadata.title.startsWith('What’s new'));
 	const top = data.posts[0];
 </script>
 
@@ -22,25 +25,18 @@
 <h1 class="visually-hidden">Blog</h1>
 
 <div class="container">
-	{#snippet article(post: any)}
-		<article class:feature={!post.metadata.title.startsWith('What’s new')} data-pubdate={post.date}>
-			<a href="/{post.slug}" title="Read the article »">
-				<h2>{post.metadata.title.replace('What’s new in Svelte: ', '')}</h2>
-				<p>{post.metadata.description}</p>
-			</a>
-		</article>
-	{/snippet}
-
 	<article class="top" data-pubdate={top.date}>
 		<a href="/{top.slug}" title="Read the article »">
 			<h2>{top.metadata.title}</h2>
 			<p>{top.metadata.description}</p>
 		</a>
+
+		<Byline post={top} />
 	</article>
 
 	<div class="grid">
 		<div class="featured posts">
-			{#each featured.slice(1) as post}
+			{#each data.posts.slice(1) as post}
 				<article
 					class:feature={!post.metadata.title.startsWith('What’s new')}
 					data-pubdate={post.date}
@@ -49,19 +45,17 @@
 						<h2>{post.metadata.title}</h2>
 						<p>{post.metadata.description}</p>
 					</a>
+
+					<Byline {post} />
 				</article>
 			{/each}
 		</div>
 
 		<div class="feed posts">
-			{#each data.posts.filter((post) => post !== top) as post}
-				<article
-					class:feature={!post.metadata.title.startsWith('What’s new')}
-					data-pubdate={post.date}
-				>
+			{#each whats_new as post}
+				<article data-pubdate={post.date}>
 					<a href="/{post.slug}" title="Read the article »">
-						<h2>{post.metadata.title.replace('What’s new in Svelte: ', '')}</h2>
-						<p>{post.metadata.description}</p>
+						{post.metadata.title.replace('What’s new in Svelte: ', '')}
 					</a>
 				</article>
 			{/each}
@@ -101,6 +95,8 @@
 		a {
 			display: block;
 			text-decoration: none;
+			color: var(--sk-text-2);
+			font-size: var(--sk-font-size-body);
 
 			&:hover h2 {
 				text-decoration: underline;
@@ -110,19 +106,19 @@
 		p {
 			font-size: var(--sk-font-size-body-small);
 			color: var(--sk-text-3);
-			margin: 0;
+			margin: 0 0 0.5em 0;
 		}
 	}
 
-	.featured {
+	.feed {
 		display: none;
 	}
 
-	@media (max-width: 799px) {
+	/* @media (max-width: 799px) {
 		article:not(.feature) h2::before {
 			content: 'What’s new in Svelte: ';
 		}
-	}
+	} */
 
 	@media (min-width: 800px) {
 		.grid {
@@ -143,6 +139,10 @@
 			}
 
 			article {
+				&:not(.feature) {
+					display: none;
+				}
+
 				h2 {
 					font-size: var(--sk-font-size-h2);
 				}
@@ -150,21 +150,21 @@
 		}
 
 		.feed {
+			display: block;
+
 			&::before {
-				content: 'What’s new';
+				content: 'Monthly updates';
 				font-family: var(--sk-font-ui);
 				font-size: var(--sk-font-size-ui-medium);
 				text-transform: uppercase;
 				color: var(--sk-text-4);
 			}
 
-			.feature {
-				display: none;
-			}
-
 			article {
 				h2 {
-					font-size: var(--sk-font-size-h3);
+					font-family: var(--sk-font-body);
+					font-weight: 400;
+					font-size: var(--sk-font-size-body);
 				}
 
 				p {

@@ -2,6 +2,7 @@
 	import { page } from '$app/stores';
 	import { Text } from '@sveltejs/site-kit/components';
 	import { setupDocsHovers } from '@sveltejs/site-kit/docs';
+	import Byline from '../Byline.svelte';
 
 	let { data } = $props();
 
@@ -25,17 +26,7 @@
 		<h1>{data.metadata.title}</h1>
 		<p class="standfirst">{data.metadata.description}</p>
 
-		<p class="byline">
-			{#each data.authors as author, i}
-				{@const show_comma = data.authors.length > 2 && i < data.authors.length - 1}
-				{@const show_and = i === data.authors.length - 2}
-				<svelte:element this={author.url ? 'a' : 'span'} href={author.url}
-					>{author.name}</svelte:element
-				>{#if show_comma},&nbsp;{/if}
-				{#if show_and}and&nbsp;{/if}
-			{/each}
-			<time datetime={data.date}>{data.date_formatted}</time>
-		</p>
+		<Byline post={data} />
 
 		<Text>
 			{@html data.body}
