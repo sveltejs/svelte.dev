@@ -48,7 +48,7 @@
 	--sk-back-2: hsla(0, 0%, 100%, 1);
 	--sk-back-3: hsla(0, 0%, 99%, 1);
 	--sk-back-4: hsl(0, 0%, 95%);
-	--sk-back-5: hsl(0, 0%, 80%);
+	--sk-back-5: hsl(0, 0%, 92%);
 
 	--sk-text-1: hsla(0, 0%, 0%, 0.95);
 	--sk-text-2: hsla(0, 0%, 0%, 0.88);
@@ -92,7 +92,7 @@
 		--sk-back-2: hsl(0 0 18);
 		--sk-back-3: hsl(0 0 12);
 		--sk-back-4: hsl(0 0 22);
-		--sk-back-5: hsl(0 0 40);
+		--sk-back-5: hsl(0 0 25);
 		--sk-back-translucent: hsla(0, 0%, 100%, 0.1);
 		--sk-theme-1-hsl: 12, 94%, 62%;
 		--sk-theme-2-hsl: 240, 8%, 44%;

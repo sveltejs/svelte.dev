@@ -148,7 +148,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		isolation: isolate;
 		font-family: var(--sk-font-ui);
 
-		&.shadow::after {
+		&::after {
 			content: '';
 			position: absolute;
 			left: 0;
@@ -168,7 +168,6 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		align-items: center;
 		color: var(--sk-text-3);
 		margin-left: 0.4em;
-		padding: 0.1rem 0 0 0;
 		font-size: var(--sk-font-size-ui-medium);
 	}
 

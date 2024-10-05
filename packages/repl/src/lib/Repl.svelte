@@ -361,9 +361,7 @@
 			}
 
 			.divider::after {
-				background-color: var(--sk-text-1);
-				filter: drop-shadow(0 0 3px hsl(0 0 0 / 0.5));
-				opacity: 0.1;
+				background-color: var(--sk-back-5);
 			}
 
 			[data-pane='main'] > .divider::after {
