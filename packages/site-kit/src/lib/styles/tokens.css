@@ -32,9 +32,9 @@
 	--sk-font-size-h3: 2.4rem;
 	--sk-font-size-body: 2.1rem;
 	--sk-font-size-body-small: 1.8rem;
-	--sk-font-size-ui-small: 1.4rem;
-	--sk-font-size-ui-medium: 1.8rem;
-	--sk-font-size-ui-large: 3rem; /* TODO add regular/small */
+	--sk-font-size-ui-small: 1.3rem;
+	--sk-font-size-ui-medium: 1.6rem;
+	--sk-font-size-ui-large: 3rem;
 	--sk-font-size-code: 1.4rem;
 
 	--sk-line-max-width: 84rem; /* TODO can this be merged with --sk-page-main-width?

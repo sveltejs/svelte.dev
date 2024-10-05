@@ -26,6 +26,8 @@
 		width: 100%;
 		height: var(--pane-controls-h);
 		border-top: 1px solid var(--sk-theme-2);
+		font-family: var(--sk-font-ui);
+		font-size: var(--sk-font-size-ui-small);
 		z-index: 2;
 	}
 
