@@ -117,7 +117,7 @@
 	@media (min-width: 800px) {
 		.grid {
 			display: grid;
-			grid-template-columns: 2fr 1fr;
+			grid-template-columns: 3fr 1fr;
 			gap: 3em;
 		}
 
