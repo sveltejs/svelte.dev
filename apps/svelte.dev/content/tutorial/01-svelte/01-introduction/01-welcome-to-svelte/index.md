@@ -18,12 +18,13 @@ You can build your entire app with Svelte (for example, using an application fra
 
 > You'll need to have basic familiarity with HTML, CSS and JavaScript to understand Svelte.
 
-This tutorial is split into four main parts:
+This tutorial is split into five main parts:
 
 - [Basic Svelte](/tutorial/welcome-to-svelte) (you are here)
 - [Advanced Svelte](/tutorial/tweens)
 - [Basic SvelteKit](/tutorial/introducing-sveltekit)
 - [Advanced SvelteKit](/tutorial/optional-params)
+- [Migrating from Svelte 4 to 5](/tutorial/migration-overview)
 
 Each section will present an exercise designed to illustrate a feature. Later exercises build on the knowledge gained in earlier ones, so it's recommended that you go from start to finish. If necessary, you can navigate via the menu above.
 

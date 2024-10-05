@@ -2,7 +2,7 @@
 	import { afterNavigate, beforeNavigate } from '$app/navigation';
 	import { SplitPane } from '@rich_harris/svelte-split-pane';
 	import { Icon } from '@sveltejs/site-kit/components';
-	import { reset } from './adapter.svelte';
+	import { needs_webcontainers, reset } from './adapter.svelte';
 	import Editor from './Editor.svelte';
 	import ContextMenu from './filetree/ContextMenu.svelte';
 	import Filetree from './filetree/Filetree.svelte';
@@ -317,7 +317,7 @@
 					</section>
 
 					<section slot="b" class="preview">
-						{#if /svelte$/.test($page.data.exercise.part.slug)}
+						{#if needs_webcontainers($page.data.exercise.part.slug)}
 							<OutputRollup />
 						{:else}
 							<Output exercise={data.exercise} {paused} />

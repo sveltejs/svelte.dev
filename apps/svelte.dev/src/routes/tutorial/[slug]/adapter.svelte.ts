@@ -33,11 +33,15 @@ export const adapter_state = new (class {
 	warnings = $derived((use_rollup ? rollup_state.warnings : wc_state.warnings) || {});
 })();
 
+export function needs_webcontainers(slug: string) {
+	return /svelte|to 5$/.test(slug);
+}
+
 if (browser) {
 	page.subscribe(($page) => {
 		const slug = $page.data?.exercise?.part?.slug;
 		if (slug) {
-			use_rollup = /svelte$/.test(slug);
+			use_rollup = needs_webcontainers(slug);
 
 			if (use_rollup) {
 				load_rollup();
