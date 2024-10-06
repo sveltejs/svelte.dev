@@ -101,7 +101,7 @@ Here's an equivalent component in Vue:
 ```
 
 <aside>
-	<p>I'm counting by copying the source code to the clipboard and running `pbpaste | wc -c` in my terminal</p>
+	<p>I'm counting by copying the source code to the clipboard and running <code>pbpaste | wc -c</code> in my terminal</p>
 </aside>
 
 In other words, it takes 442 characters in React, and 263 characters in Vue, to achieve something that takes 145 characters in Svelte. The React version is literally three times larger!

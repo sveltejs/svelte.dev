@@ -28,7 +28,7 @@ For the last several months, we've been hard at work rewriting Svelte from the g
 You can learn more about the new features from the [preview documentation](https://svelte-5-preview.vercel.app/docs), and by watching the presentation from the most recent [Svelte Summit](https://www.sveltesummit.com/):
 
 <div class="max">
-<figure style="max-width: 960px; margin: 0 auto">
+<figure style="max-width: 1040px; margin: 0 auto">
 <div style="aspect-ratio: 1.755; position: relative; margin: 0 auto;">
 	<iframe credentialless style="position: absolute; width: 100%; height: 100%; left: 0; top: 0; margin: 0;" src="https://www.youtube-nocookie.com/embed/xCeYmdukOKI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>

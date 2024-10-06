@@ -40,6 +40,58 @@
 		max-width: var(--sk-page-content-width);
 		box-sizing: content-box;
 		margin: 0 auto;
+
+		:global {
+			figure {
+				margin: 1.6rem 0 3.2rem 0;
+
+				img {
+					max-width: 100%;
+				}
+
+				figcaption {
+					color: var(--sk-text-4);
+					text-align: left;
+				}
+			}
+
+			video {
+				width: 100%;
+			}
+
+			aside {
+				float: right;
+				margin: 0 0 1em 1em;
+				width: 16rem;
+				z-index: 2;
+
+				p {
+					color: var(--sk-text-4);
+					font-family: var(--sk-font-body);
+					font-size: var(--sk-font-size-body-small);
+
+					&:first-child {
+						margin-top: 0;
+					}
+
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+
+			.max {
+				width: 100%;
+			}
+
+			iframe {
+				width: 100%;
+				height: 420px;
+				margin: 2em 0;
+				border-radius: var(--sk-border-radius);
+				border: 0.8rem solid var(--sk-theme-4);
+			}
+		}
 	}
 
 	h1 {
@@ -52,67 +104,25 @@
 		margin: 0 0 1em 0;
 	}
 
-	.byline {
-		margin: 0 0 4rem 0;
-		padding: 1rem 0 0 0;
-		font-family: var(--sk-font-ui);
-		font-size: var(--sk-font-size-ui-small);
-		text-transform: uppercase;
-	}
+	@media (min-width: 960px) {
+		.post :global {
+			.max {
+				width: 100vw;
+				/* padding: 0 var(--sk-page-padding-side); */
+				margin-left: calc(var(--sk-page-content-width) / 2 - 50vw);
+				text-align: center;
 
-	.post :global(figure) {
-		margin: 1.6rem 0 3.2rem 0;
-	}
+				& > * {
+					width: 100%;
+					max-width: 1200px;
+				}
+			}
 
-	.post :global(figure) :global(img) {
-		max-width: 100%;
-	}
-
-	.post :global(figcaption) {
-		color: var(--sk-text-4);
-		text-align: left;
-	}
-
-	.post :global(video) {
-		width: 100%;
-	}
-
-	.post :global(aside) {
-		float: right;
-		margin: 0 0 1em 1em;
-		width: 16rem;
-		color: var(--sk-text-4);
-		z-index: 2;
-	}
-
-	.post :global(.max) {
-		width: 100%;
-	}
-
-	.post :global(iframe) {
-		width: 100%;
-		height: 420px;
-		margin: 2em 0;
-		border-radius: var(--sk-border-radius);
-		border: 0.8rem solid var(--sk-theme-4);
-	}
-
-	@media (min-width: 910px) {
-		.post :global(.max) {
-			width: calc(100vw - 2 * var(--sk-page-padding-side));
-			margin: 0 calc(var(--sk-page-content-width) / 2 - 50vw);
-			text-align: center;
-		}
-
-		.post :global(.max) > :global(*) {
-			width: 100%;
-			max-width: 1200px;
-		}
-
-		.post :global(iframe) {
-			width: 100%;
-			max-width: 1100px;
-			margin: 2em auto;
+			iframe {
+				width: 100%;
+				max-width: 1100px;
+				margin: 2em auto;
+			}
 		}
 	}
 </style>
