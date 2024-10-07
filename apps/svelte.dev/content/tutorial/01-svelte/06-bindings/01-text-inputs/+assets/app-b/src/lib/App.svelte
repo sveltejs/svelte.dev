@@ -1,5 +1,5 @@
 <script>
-	let name = 'world';
+	let name = $state('world');
 </script>
 
 <input bind:value={name} />

@@ -1,6 +1,6 @@
 <script>
-	let a = 1;
-	let b = 2;
+	let a = $state(1);
+	let b = $state(2);
 </script>
 
 <label>

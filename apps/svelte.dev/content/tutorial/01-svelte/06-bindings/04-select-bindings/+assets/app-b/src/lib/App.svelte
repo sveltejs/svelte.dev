@@ -1,5 +1,5 @@
 <script>
-	let questions = [
+	let questions = $state([
 		{
 			id: 1,
 			text: `Where did you go to school?`
@@ -12,13 +12,15 @@
 			id: 3,
 			text: `What is another personal fact that an attacker could easily find with Google?`
 		}
-	];
+	]);
 
-	let selected;
+	let selected = $state();
 
-	let answer = '';
+	let answer = $state('');
 
-	function handleSubmit() {
+	function handleSubmit(e) {
+		e.preventDefault();
+
 		alert(
 			`answered question ${selected.id} (${selected.text}) with "${answer}"`
 		);
@@ -27,10 +29,10 @@
 
 <h2>Insecurity questions</h2>
 
-<form on:submit|preventDefault={handleSubmit}>
+<form onsubmit={handleSubmit}>
 	<select
 		bind:value={selected}
-		on:change={() => (answer = '')}
+		onchange={() => (answer = '')}
 	>
 		{#each questions as question}
 			<option value={question}>

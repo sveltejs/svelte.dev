@@ -2,7 +2,7 @@
 title: Numeric inputs
 ---
 
-In the DOM, everything is a string. That's unhelpful when you're dealing with numeric inputs — `type="number"` and `type="range"` — as it means you have to remember to coerce `input.value` before using it.
+In the DOM, every input value is a string. That's unhelpful when you're dealing with numeric inputs — `type="number"` and `type="range"` — as it means you have to remember to coerce `input.value` before using it.
 
 With `bind:value`, Svelte takes care of it for you:
 

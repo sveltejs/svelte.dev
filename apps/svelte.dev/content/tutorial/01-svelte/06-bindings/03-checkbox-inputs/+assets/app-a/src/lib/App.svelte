@@ -1,5 +1,5 @@
 <script>
-	let yes = false;
+	let yes = $state(false);
 </script>
 
 <label>
