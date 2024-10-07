@@ -95,7 +95,7 @@
 	-1px -1px 3px var(--sk-raised-highlight);
 	--sk-raised-hover: 1px 1px 3px var(--sk-raised-shadow-active),
 	-1px -1px 3px var(--sk-raised-highlight-active);
-	--sk-raised-active: box-shadow:
+	--sk-raised-active:
 	inset -1px -1px 2px var(--sk-raised-highlight-active),
 	inset 1px 1px 2px var(--sk-raised-shadow-active);
 

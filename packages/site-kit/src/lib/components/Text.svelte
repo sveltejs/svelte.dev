@@ -445,6 +445,10 @@
 				box-shadow: var(--sk-raised-hover);
 			}
 
+			&:has(summary:active)::before {
+				box-shadow: var(--sk-raised-active);
+			}
+
 			&::after {
 				background: url($lib/icons/chevron.svg) 50% 50% no-repeat;
 				background-size: 2rem;
