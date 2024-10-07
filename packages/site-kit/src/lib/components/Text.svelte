@@ -431,22 +431,26 @@
 				content: '';
 				position: absolute;
 				right: 0.6rem;
-				top: 0.2rem;
+				top: 0.1rem;
 				width: 2.4rem;
 				height: 2.4rem;
 				pointer-events: none;
 			}
 
 			&::before {
-				box-shadow: var(--sk-raised);
+				border-radius: var(--sk-border-radius);
+				border-style: solid;
+				border-color: var(--sk-raised-color);
+				border-width: var(--sk-raised-width);
 			}
 
 			&:hover::before {
-				box-shadow: var(--sk-raised-hover);
+				border-color: var(--sk-raised-hover-color);
 			}
 
 			&:has(summary:active)::before {
-				box-shadow: var(--sk-raised-active);
+				border-color: var(--sk-raised-active-color);
+				border-width: var(--sk-raised-active-width);
 			}
 
 			&::after {
@@ -455,6 +459,13 @@
 				rotate: -90deg;
 				transition: rotate 0.2s;
 				transition: rotate 0.2s;
+				top: 0.2rem;
+				right: 0.8rem;
+			}
+
+			&:has(summary:active)::after {
+				top: 0.3rem;
+				right: 0.7rem;
 			}
 
 			& > summary {

@@ -117,7 +117,7 @@
 		flex-direction: column;
 
 		@media (min-width: 800px) {
-			--app-controls-h: 4rem;
+			--app-controls-h: 4.4rem;
 		}
 	}
 

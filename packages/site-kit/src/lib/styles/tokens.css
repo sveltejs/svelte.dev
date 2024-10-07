@@ -49,6 +49,7 @@
 	--sk-back-3: hsla(0, 0%, 99%, 1);
 	--sk-back-4: hsl(0, 0%, 95%);
 	--sk-back-5: hsl(0, 0%, 92%);
+	--sk-back-6: hsl(0, 0%, 86%);
 
 	--sk-text-1: hsla(0, 0%, 0%, 0.95);
 	--sk-text-2: hsla(0, 0%, 0%, 0.88);
@@ -86,16 +87,11 @@
 	--shiki-color-background: var(--sk-back-2);
 
 	/* raised buttons */
-	--sk-raised-highlight: hsl(0 0 100 / 0.8);
-	--sk-raised-highlight-active: hsl(0 0 100 / 1);
-	--sk-raised-shadow: hsl(0 0 0 / 0.1);
-	--sk-raised-shadow-active: hsl(0 0 0 / 0.15);
-
-	--sk-raised: 1px 1px 3px var(--sk-raised-shadow), -1px -1px 3px var(--sk-raised-highlight);
-	--sk-raised-hover: 1px 1px 3px var(--sk-raised-shadow-active),
-		-1px -1px 3px var(--sk-raised-highlight-active);
-	--sk-raised-active: inset -1px -1px 2px var(--sk-raised-highlight-active),
-		inset 1px 1px 2px var(--sk-raised-shadow-active);
+	--sk-raised-color: var(--sk-back-4) var(--sk-back-5) var(--sk-back-5) var(--sk-back-4);
+	--sk-raised-width: 1px 2px 2px 1px;
+	--sk-raised-hover-color: var(--sk-back-5) var(--sk-back-6) var(--sk-back-6) var(--sk-back-5);
+	--sk-raised-active-color: var(--sk-back-6) var(--sk-back-5) var(--sk-back-5) var(--sk-back-6);
+	--sk-raised-active-width: 2px 1px 1px 2px;
 
 	&.dark {
 		color-scheme: dark;
@@ -105,6 +101,7 @@
 		--sk-back-3: hsl(0 0 12);
 		--sk-back-4: hsl(0 0 22);
 		--sk-back-5: hsl(0 0 25);
+		--sk-back-6: hsl(0 0 32);
 		--sk-back-translucent: hsla(0, 0%, 100%, 0.1);
 		--sk-theme-1-hsl: 12, 94%, 62%;
 		--sk-theme-2-hsl: 240, 8%, 44%;
@@ -139,10 +136,9 @@
 		--shiki-color-background: var(--sk-back-3);
 
 		/* raised buttons */
-		--sk-raised-highlight: hsl(0 0 100 / 0.1);
-		--sk-raised-highlight-active: hsl(0 0 100 / 0.15);
-		--sk-raised-shadow: hsl(0 0 0 / 0.3);
-		--sk-raised-shadow-active: hsl(0 0 0 / 0.22);
+		--sk-raised-color: var(--sk-back-5) var(--sk-back-3) var(--sk-back-3) var(--sk-back-5);
+		--sk-raised-hover-color: var(--sk-back-6) var(--sk-back-3) var(--sk-back-3) var(--sk-back-6);
+		--sk-raised-active-color: var(--sk-back-3) var(--sk-back-6) var(--sk-back-6) var(--sk-back-3);
 	}
 }
 

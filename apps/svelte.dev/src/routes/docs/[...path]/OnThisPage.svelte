@@ -112,23 +112,34 @@
 				}
 
 				&::before {
-					box-shadow: var(--sk-raised);
+					border-radius: var(--sk-border-radius);
+					border-style: solid;
+					border-color: var(--sk-raised-color);
+					border-width: var(--sk-raised-width);
 				}
 
 				&:hover::before {
-					box-shadow: var(--sk-raised-hover);
+					border-color: var(--sk-raised-hover-color);
 				}
 
 				&:active::before {
-					box-shadow: var(--sk-raised-active);
+					border-color: var(--sk-raised-active-color);
+					border-width: var(--sk-raised-active-width);
 				}
 
 				&::after {
 					background: url($lib/icons/chevron.svg) 50% 50% no-repeat;
 					background-size: 2rem;
+					top: 0.4rem;
+					right: 0.2rem;
 					rotate: -90deg;
 					transition: rotate 0.2s;
 					transition: rotate 0.2s;
+				}
+
+				&:active::after {
+					top: 0.5rem;
+					right: 0.1rem;
 				}
 
 				h3 {
