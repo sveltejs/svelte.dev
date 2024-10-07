@@ -426,18 +426,31 @@
 		}
 
 		details.legacy {
+			&::before,
 			&::after {
 				content: '';
-				background: url(../icons/chevron.svg);
-				background-size: contain;
 				position: absolute;
-				right: 0.5rem;
-				top: 0.5rem;
-				width: 2rem;
-				height: 2rem;
+				right: 0.6rem;
+				top: 0.2rem;
+				width: 2.4rem;
+				height: 2.4rem;
+				pointer-events: none;
+			}
+
+			&::before {
+				box-shadow: var(--sk-raised);
+			}
+
+			&:hover::before {
+				box-shadow: var(--sk-raised-hover);
+			}
+
+			&::after {
+				background: url($lib/icons/chevron.svg) 50% 50% no-repeat;
+				background-size: 2rem;
 				rotate: -90deg;
 				transition: rotate 0.2s;
-				pointer-events: none;
+				transition: rotate 0.2s;
 			}
 
 			& > summary {
@@ -459,7 +472,7 @@
 					position: absolute;
 					display: flex;
 					align-items: center;
-					right: 3rem;
+					right: 4rem;
 					top: 0;
 					height: 100%;
 					content: 'show all';
