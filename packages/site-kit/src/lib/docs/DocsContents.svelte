@@ -32,9 +32,9 @@
 	<ul class="sidebar">
 		{#each contents ?? [] as section}
 			<li>
-				<span class="section">
+				<h3>
 					{section.metadata.title}
-				</span>
+				</h3>
 
 				<ul>
 					{#each section.children as { metadata, slug }}
@@ -90,12 +90,8 @@
 		user-select: none;
 	}
 
-	.section {
-		display: block;
-		padding-bottom: 0.8rem;
-		font-size: var(--sk-font-size-h3);
-		font-family: var(--sk-font-heading);
-		color: var(--sk-text-1);
+	h3 {
+		margin: 0 0 0.3rem 0;
 	}
 
 	.page {
