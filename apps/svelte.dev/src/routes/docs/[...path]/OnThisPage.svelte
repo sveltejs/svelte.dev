@@ -107,22 +107,35 @@
 					color: var(--sk-text-3);
 				}
 
-				&::before {
+				&::before,
+				&::after {
 					content: '';
 					position: absolute;
 					right: 0;
-					top: calc(50% - 0.5em);
-					width: 2rem;
-					height: 2rem;
-					background: url($lib/icons/chevron.svg);
-					background-size: contain;
+					top: 0.3rem;
+					width: 2.4rem;
+					height: 2.4rem;
+				}
+
+				&::before {
+					box-shadow: var(--sk-raised);
+				}
+
+				&:hover::before {
+					box-shadow: var(--sk-raised-hover);
+				}
+
+				&::after {
+					background: url($lib/icons/chevron.svg) 50% 50% no-repeat;
+					background-size: 2rem;
 					rotate: -90deg;
+					transition: rotate 0.2s;
 					transition: rotate 0.2s;
 				}
 			}
 
 			label:has(:checked) {
-				&::before {
+				&::after {
 					rotate: 90deg;
 				}
 

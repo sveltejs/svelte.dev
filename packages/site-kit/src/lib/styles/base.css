@@ -168,33 +168,15 @@ button > svg {
 }
 
 .raised {
-	--highlight: hsl(0 0 100 / 0.8);
-	--highlight-active: hsl(0 0 100 / 1);
-	--shadow: hsl(0 0 0 / 0.1);
-	--shadow-active: hsl(0 0 0 / 0.15);
-
-	.dark & {
-		--highlight: hsl(0 0 100 / 0.1);
-		--highlight-active: hsl(0 0 100 / 0.15);
-		--shadow: hsl(0 0 0 / 0.3);
-		--shadow-active: hsl(0 0 0 / 0.22);
-	}
-
 	border-radius: var(--sk-border-radius);
-	box-shadow:
-		1px 1px 3px var(--shadow),
-		-1px -1px 3px var(--highlight);
+	box-shadow: var(--sk-raised);
 
 	&:hover {
-		box-shadow:
-			1px 1px 3px var(--shadow-active),
-			-1px -1px 3px var(--highlight-active);
+		box-shadow: var(--sk-raised-hover);
 	}
 
 	&:active {
-		box-shadow:
-			inset -1px -1px 2px var(--highlight-active),
-			inset 1px 1px 2px var(--shadow-active);
+		box-shadow: var(--sk-raised-active);
 	}
 
 	&:disabled {

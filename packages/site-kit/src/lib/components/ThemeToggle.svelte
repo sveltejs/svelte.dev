@@ -53,7 +53,6 @@
 	button {
 		width: 3.2rem;
 		aspect-ratio: 1;
-		border-radius: 50%;
 		background: red;
 		background: url($lib/icons/theme-light.svg) no-repeat 50% 50% / 2.3rem 2.3rem;
 		opacity: 0.6;

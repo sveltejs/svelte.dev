@@ -85,6 +85,20 @@
 	/* overrides */
 	--shiki-color-background: var(--sk-back-2);
 
+	/* raised buttons */
+	--sk-raised-highlight: hsl(0 0 100 / 0.8);
+	--sk-raised-highlight-active: hsl(0 0 100 / 1);
+	--sk-raised-shadow: hsl(0 0 0 / 0.1);
+	--sk-raised-shadow-active: hsl(0 0 0 / 0.15);
+
+	--sk-raised: 1px 1px 3px var(--sk-raised-shadow),
+	-1px -1px 3px var(--sk-raised-highlight);
+	--sk-raised-hover: 1px 1px 3px var(--sk-raised-shadow-active),
+	-1px -1px 3px var(--sk-raised-highlight-active);
+	--sk-raised-active: box-shadow:
+	inset -1px -1px 2px var(--sk-raised-highlight-active),
+	inset 1px 1px 2px var(--sk-raised-shadow-active);
+
 	&.dark {
 		color-scheme: dark;
 
@@ -125,6 +139,12 @@
 
 		/* overrides */
 		--shiki-color-background: var(--sk-back-3);
+
+		/* raised buttons */
+		--sk-raised-highlight: hsl(0 0 100 / 0.1);
+		--sk-raised-highlight-active: hsl(0 0 100 / 0.15);
+		--sk-raised-shadow: hsl(0 0 0 / 0.3);
+		--sk-raised-shadow-active: hsl(0 0 0 / 0.22);
 	}
 }
 
