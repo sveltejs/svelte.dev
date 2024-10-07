@@ -21,7 +21,6 @@ async function get_nav_list(): Promise<NavigationLink[]> {
 				}))
 			}))
 		}))
-		.sort((a, b) => a.title.localeCompare(b.title)); // Svelte first
 
 	const tutorial = index.tutorial.children.map((topic) => ({
 		title: topic.metadata.title,

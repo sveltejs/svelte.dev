@@ -22,7 +22,7 @@ const DOCS = path.join(dirname, '../../content/docs');
 
 const packages: Package[] = [
 	{
-		name: 'svelte',
+		name: '10-svelte',
 		local: `${REPOS}/svelte`,
 		repo: 'sveltejs/svelte',
 		pkg: 'packages/svelte',
@@ -45,7 +45,7 @@ const packages: Package[] = [
 		}
 	},
 	{
-		name: 'kit',
+		name: '20-kit',
 		local: `${REPOS}/kit`,
 		repo: 'sveltejs/kit',
 		pkg: 'packages/kit',
