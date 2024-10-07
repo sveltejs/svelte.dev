@@ -9,19 +9,18 @@ You can also declare event handlers inline:
 <script>
 	let m = { x: 0, y: 0 };
 
-	---function handleMove(event) {
+	---function onpointermove(event) {
 		m.x = event.clientX;
 		m.y = event.clientY;
 	}---
 </script>
 
 <div
-	on:pointermove={+++(e) => {
-		m = { x: e.clientX, y: e.clientY };
+	onpointermove={+++(e) => {
+		m.x = event.clientX;
+		m.y = event.clientY;
 	}+++}
 >
 	The pointer is at {m.x} x {m.y}
 </div>
 ```
-
-> In some frameworks you may see recommendations to avoid inline event handlers for performance reasons, particularly inside loops. That advice doesn't apply to Svelte — the compiler will always do the right thing, whichever form you choose.
