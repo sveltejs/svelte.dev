@@ -52,6 +52,7 @@
 				figcaption {
 					color: var(--sk-text-4);
 					text-align: left;
+					font-size: var(--sk-font-size-body-small);
 				}
 			}
 

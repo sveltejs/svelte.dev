@@ -193,10 +193,10 @@ table :where(code, span) {
 /* TODO this shoudl be moved */
 figcaption,
 .post aside {
-	max-width: none;
+	/* max-width: none;
 	margin: 0 auto;
 	padding: 1.6rem 0 0 0.8rem;
-	font: 1.2rem/1.6 var(--sk-font-mono);
+	font: 1.2rem/1.6 var(--sk-font-mono); */
 }
 
 /* visually hidden, but accessible to assistive tech */
