@@ -1,4 +1,8 @@
-<button on:click>
+<script>
+	let props = $props();
+</script>
+
+<button>
 	Push
 </button>
 

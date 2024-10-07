@@ -5,10 +5,10 @@
 	const audio = new Audio();
 	audio.src = horn;
 
-	function handleClick() {
+	function honk() {
 		audio.load();
 		audio.play();
 	}
 </script>
 
-<BigRedButton on:click={handleClick} />
+<BigRedButton onclick={honk} />

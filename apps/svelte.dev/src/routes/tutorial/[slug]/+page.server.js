@@ -8,7 +8,8 @@ const redirects = new Map([
 	['reactive-declarations', 'derived-state'],
 	['reactive-statements', 'effects'],
 	['updating-arrays-and-objects', 'deep-state'],
-	['event-modifiers', 'capturing']
+	['event-modifiers', 'capturing'],
+	['dom-event-forwarding', 'spreading-events']
 ]);
 
 export async function load({ params }) {
