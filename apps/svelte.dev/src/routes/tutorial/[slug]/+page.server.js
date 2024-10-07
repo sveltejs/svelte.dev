@@ -1,8 +1,14 @@
+import { redirect } from '@sveltejs/kit';
 import { load_exercise } from './content.server';
 
 export const prerender = true;
 
+const redirects = new Map([['reactive-assignments', 'state']]);
+
 export async function load({ params }) {
+	const r = redirects.get(params.slug);
+	if (r) redirect(307, r);
+
 	return {
 		exercise: await load_exercise(params.slug)
 	};

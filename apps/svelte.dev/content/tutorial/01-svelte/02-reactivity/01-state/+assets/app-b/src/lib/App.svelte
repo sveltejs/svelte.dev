@@ -1,12 +1,12 @@
 <script>
-	let count = 0;
+	let count = $state(0);
 
 	function increment() {
-		// event handler code goes here
+		count += 1;
 	}
 </script>
 
-<button>
+<button onclick={increment}>
 	Clicked {count}
 	{count === 1 ? 'time' : 'times'}
 </button>

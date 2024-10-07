@@ -2,11 +2,11 @@
 	let count = 0;
 
 	function increment() {
-		count += 1;
+		// event handler code goes here
 	}
 </script>
 
-<button on:click={increment}>
+<button onclick={increment}>
 	Clicked {count}
 	{count === 1 ? 'time' : 'times'}
 </button>
