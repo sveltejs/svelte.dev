@@ -89,6 +89,7 @@
 				width: 100%;
 				height: 420px;
 				margin: 2em 0;
+				box-shadow: 1px 2px 1rem hsla(0 0 0 / 0.08);
 				border-radius: var(--sk-border-radius);
 				border: 0.8rem solid var(--sk-theme-4);
 			}

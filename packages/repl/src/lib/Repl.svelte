@@ -293,7 +293,7 @@
 
 <svelte:window on:beforeunload={before_unload} />
 
-<div class="container" class:toggleable={$toggleable} bind:clientWidth={width}>
+<div class="container" class:embedded class:toggleable={$toggleable} bind:clientWidth={width}>
 	<div class="viewport" class:output={show_output}>
 		<SplitPane
 			--color="var(--sk-text-4)"
@@ -337,6 +337,10 @@
 		height: calc(100dvh - var(--sk-nav-height));
 		background: var(--sk-back-1);
 		padding: 1rem 0 0 0;
+
+		&.embedded {
+			height: 100%;
+		}
 
 		:global {
 			section {
