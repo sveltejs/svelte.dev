@@ -7,9 +7,9 @@ Most web applications have to deal with asynchronous data at some point. Svelte 
 ```svelte
 /// file: App.svelte
 +++{#await promise}+++
-	<p>...waiting</p>
+	<p>...rolling</p>
 +++{:then number}
-	<p>The number is {number}</p>
+	<p>you rolled a {number}!</p>
 {:catch error}
 	<p style="color: red">{error.message}</p>
 {/await}+++
@@ -22,6 +22,6 @@ If you know that your promise can't reject, you can omit the `catch` block. You 
 ```svelte
 /// no-file
 {#await promise then number}
-	<p>The number is {number}</p>
+	<p>you rolled a {number}!</p>
 {/await}
 ```
