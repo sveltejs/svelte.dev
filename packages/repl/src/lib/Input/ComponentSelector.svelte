@@ -1,20 +1,15 @@
 <script lang="ts">
 	import { get_repl_context } from '../context';
 	import { get_full_filename } from '../utils';
-	import { createEventDispatcher, tick } from 'svelte';
+	import { tick } from 'svelte';
 	import RunesInfo from './RunesInfo.svelte';
 	import Migrate from './Migrate.svelte';
 	import type { File } from '../types';
 
 	export let show_modified: boolean;
 	export let runes: boolean;
-
-	const dispatch: ReturnType<
-		typeof createEventDispatcher<{
-			remove: { files: File[]; diff: File };
-			add: { files: File[]; diff: File };
-		}>
-	> = createEventDispatcher();
+	export let remove: (value: { files: File[]; diff: File }) => void;
+	export let add: (value: { files: File[]; diff: File }) => void;
 
 	const {
 		files,
@@ -105,7 +100,7 @@
 		rebundle();
 	}
 
-	function remove(filename: string) {
+	function remove_file(filename: string) {
 		const file = $files.find((val) => get_full_filename(val) === filename);
 		const idx = $files.findIndex((val) => get_full_filename(val) === filename);
 
@@ -117,7 +112,7 @@
 
 		$files = $files.filter((file) => get_full_filename(file) !== filename);
 
-		dispatch('remove', { files: $files, diff: file });
+		remove({ files: $files, diff: file });
 
 		EDITOR_STATE_MAP.delete(get_full_filename(file));
 
@@ -151,7 +146,7 @@
 
 		rebundle();
 
-		dispatch('add', { files: $files, diff: file });
+		add({ files: $files, diff: file });
 
 		$files = $files;
 	}
@@ -262,8 +257,8 @@
 
 					<span
 						class="remove"
-						on:click={() => remove(filename)}
-						on:keyup={(e) => e.key === ' ' && remove(filename)}
+						on:click={() => remove_file(filename)}
+						on:keyup={(e) => e.key === ' ' && remove_file(filename)}
 					>
 						<svg width="12" height="12" viewBox="0 0 24 24">
 							<line stroke="#999" x1="18" y1="6" x2="6" y2="18" />

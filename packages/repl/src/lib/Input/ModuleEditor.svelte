@@ -6,6 +6,7 @@
 	export let error: CompileError | undefined;
 	export let warnings: Warning[];
 	export let vim: boolean;
+	export let blur: () => void;
 
 	export function focus() {
 		$module_editor?.focus();
@@ -14,7 +15,7 @@
 	const { handle_change, module_editor } = get_repl_context();
 </script>
 
-<div class="editor-wrapper">
+<div class="editor-wrapper" onblurcapture={blur}>
 	<div class="editor notranslate" translate="no">
 		<CodeMirror
 			bind:this={$module_editor}

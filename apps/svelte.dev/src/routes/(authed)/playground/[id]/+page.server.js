@@ -11,6 +11,6 @@ export async function load({ fetch, params, url }) {
 
 	return {
 		gist,
-		version: url.searchParams.get('version') || 'next'
+		version: url.searchParams.get('version') || 'next' // TODO replace with 'latest' when 5.0 is released
 	};
 }

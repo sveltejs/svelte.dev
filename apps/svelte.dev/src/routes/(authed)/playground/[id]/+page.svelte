@@ -1,66 +1,95 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
 	import { afterNavigate, goto, replaceState } from '$app/navigation';
-	import { Repl } from '@sveltejs/repl';
+	import type { Gist } from '$lib/db/types';
+	import { Repl, type File } from '@sveltejs/repl';
 	import { theme } from '@sveltejs/site-kit/stores';
 	import { onMount } from 'svelte';
 	import { mapbox_setup } from '../../../../config.js';
 	import AppControls from './AppControls.svelte';
+	import { compress_and_encode_text, decode_and_decompress_text } from './gzip.js';
 
 	let { data } = $props();
 
-	let version = $state(data.version);
 	let repl = $state() as Repl;
 	let name = $state(data.gist.name);
 	let zen_mode = $state(false);
 	let modified_count = $state(0);
-
-	$effect(() => {
-		const params = [];
-
-		if (version !== 'latest') {
-			params.push(`version=${version}`);
-		}
-
-		const url =
-			params.length > 0
-				? `/playground/${data.gist.id}?${params.join('&')}`
-				: `/playground/${data.gist.id}`;
-
-		history.replaceState({}, 'x', url);
-	});
+	let version = data.version;
+	let setting_hash: any = null;
 
 	onMount(() => {
-		if (data.version !== 'local') {
-			fetch(`https://unpkg.com/svelte@${data.version || 'next'}/package.json`)
+		if (version !== 'local') {
+			fetch(`https://unpkg.com/svelte@${version}/package.json`)
 				.then((r) => r.json())
 				.then((pkg) => {
-					version = pkg.version;
+					if (pkg.version !== version) {
+						version = pkg.version;
+
+						let url = `/playground/${data.gist.id}?version=${version}`;
+						if (location.hash) {
+							url += location.hash;
+						}
+						replaceState(url, {});
+					}
 				});
 		}
 	});
 
-	afterNavigate(() => {
-		repl?.set({
-			// TODO move the snapshotting elsewhere (but also... this shouldn't really be necessary?)
-			files: $state.snapshot(data.gist.components)
-		});
-	});
+	afterNavigate(set_files);
 
-	function handle_fork(event: CustomEvent) {
-		console.log('> handle_fork', event);
-		goto(`/playground/${event.detail.gist.id}?version=${version}`);
+	async function set_files() {
+		const hash = location.hash.slice(1);
+
+		if (!hash) {
+			repl?.set({
+				files: data.gist.components
+			});
+
+			return;
+		}
+
+		try {
+			const files = JSON.parse(await decode_and_decompress_text(hash)).files;
+			repl.set({ files });
+		} catch {
+			alert(`Couldn't load the code from the URL. Make sure you copied the link correctly.`);
+		}
 	}
 
-	function handle_change(event: CustomEvent) {
-		modified_count = event.detail.files.filter((c: any) => c.modified).length;
+	function handle_fork({ gist }: { gist: Gist }) {
+		goto(`/playground/${gist.id}?version=${version}`);
 	}
 
-	const svelteUrl = $derived(
+	function handle_save() {
+		// Hide hash from URL
+		const hash = location.hash.slice(1);
+		if (hash) {
+			change_hash();
+		}
+	}
+
+	async function change_hash(hash?: string) {
+		let url = `${location.pathname}${location.search}`;
+		if (hash) {
+			url += `#${await compress_and_encode_text(hash)}`;
+		}
+
+		clearTimeout(setting_hash);
+		replaceState(url, {});
+		setting_hash = setTimeout(() => {
+			setting_hash = null;
+		}, 500);
+	}
+
+	function handle_change({ files }: { files: File[] }) {
+		modified_count = files.filter((c) => c.modified).length;
+	}
+
+	const svelteUrl =
 		browser && version === 'local'
 			? `${location.origin}/playground/local`
-			: `https://unpkg.com/svelte@${version}`
-	);
+			: `https://unpkg.com/svelte@${version}`;
 
 	const relaxed = $derived(data.gist.relaxed || (data.user && data.user.id === data.gist.owner));
 </script>
@@ -73,15 +102,24 @@
 	<meta name="Description" content="Interactive Svelte playground" />
 </svelte:head>
 
+<svelte:window
+	on:hashchange={() => {
+		if (!setting_hash) {
+			set_files();
+		}
+	}}
+/>
+
 <div class="repl-outer {zen_mode ? 'zen-mode' : ''}">
 	<AppControls
 		user={data.user}
 		gist={data.gist}
+		forked={handle_fork}
+		saved={handle_save}
 		{repl}
 		bind:name
 		bind:zen_mode
 		bind:modified_count
-		on:forked={handle_fork}
 	/>
 
 	{#if browser}
@@ -93,9 +131,16 @@
 			injectedJS={mapbox_setup}
 			showModified
 			showAst
-			on:change={handle_change}
-			on:add={handle_change}
-			on:remove={handle_change}
+			change={handle_change}
+			add={handle_change}
+			remove={handle_change}
+			blur={() => {
+				// Only change hash on editor blur to not pollute everyone's browser history
+				if (modified_count !== 0) {
+					const json = JSON.stringify({ files: repl.toJSON().files });
+					change_hash(json);
+				}
+			}}
 			previewTheme={$theme.current}
 		/>
 	{/if}

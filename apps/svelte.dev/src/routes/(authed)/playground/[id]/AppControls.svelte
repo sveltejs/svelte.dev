@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { createEventDispatcher } from 'svelte';
 	import UserMenu from './UserMenu.svelte';
 	import { Icon } from '@sveltejs/site-kit/components';
 	import * as doNotZip from 'do-not-zip';
@@ -18,6 +17,8 @@
 		name: string;
 		zen_mode: boolean;
 		modified_count: number;
+		forked: (value: { gist: Gist }) => void;
+		saved: () => void;
 	}
 
 	let {
@@ -26,10 +27,11 @@
 		modified_count = $bindable(),
 		user,
 		repl,
-		gist
+		gist,
+		forked,
+		saved
 	}: Props = $props();
 
-	const dispatch = createEventDispatcher();
 	const { login } = get_app_context();
 
 	let saving = $state(false);
@@ -77,7 +79,7 @@
 			}
 
 			const gist = await r.json();
-			dispatch('forked', { gist });
+			forked({ gist });
 
 			modified_count = 0;
 			repl.markSaved();
@@ -143,6 +145,7 @@
 
 			modified_count = 0;
 			repl.markSaved();
+			saved();
 			justSaved = true;
 			await wait(600);
 			justSaved = false;

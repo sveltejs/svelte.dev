@@ -31,7 +31,7 @@
 		"svelte-persisted-store": "^0.9.2"
 	},
 	"devDependencies": {
-		"@sveltejs/kit": "^2.5.25",
+		"@sveltejs/kit": "^2.6.3",
 		"@types/node": "^20.12.11",
 		"flexsearch": "^0.7.43",
 		"magic-string": "^0.30.11",

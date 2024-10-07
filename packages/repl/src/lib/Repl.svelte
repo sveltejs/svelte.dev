@@ -2,7 +2,6 @@
 	import { EditorState } from '@codemirror/state';
 	import { SplitPane } from '@rich_harris/svelte-split-pane';
 	import { BROWSER } from 'esm-env';
-	import { createEventDispatcher } from 'svelte';
 	import { derived, writable } from 'svelte/store';
 	import Bundler from './Bundler.js';
 	import ComponentSelector from './Input/ComponentSelector.svelte';
@@ -29,6 +28,10 @@
 	export let showModified = false;
 	export let showAst = false;
 	export let vim: boolean;
+	export let remove: (value: { files: File[]; diff: File }) => void = () => {};
+	export let add: (value: { files: File[]; diff: File }) => void = () => {};
+	export let change: (value: { files: File[] }) => void = () => {};
+	export let blur: () => void = () => {};
 
 	let runes = false;
 
@@ -58,16 +61,12 @@
 		// after having loaded the files externally
 		populate_editor_state();
 
-		dispatch('change', { files: $files });
+		change({ files: $files });
 	}
 
 	export function markSaved() {
 		$files = $files.map((val) => ({ ...val, modified: false }));
 	}
-
-	const dispatch: ReturnType<
-		typeof createEventDispatcher<{ change: { files: import('./types').File[] } }>
-	> = createEventDispatcher();
 
 	const DEFAULT_COMPILE_OPTIONS: CompileOptions = {
 		generate: 'client',
@@ -195,7 +194,7 @@
 
 		EDITOR_STATE_MAP.set(get_full_filename($selected), $module_editor?.getEditorState());
 
-		dispatch('change', {
+		change({
 			files: $files
 		});
 
@@ -304,8 +303,8 @@
 			max="-4.1rem"
 		>
 			<section slot="a">
-				<ComponentSelector show_modified={showModified} {runes} on:add on:remove />
-				<ModuleEditor error={compiled?.error} warnings={compiled?.warnings ?? []} {vim} />
+				<ComponentSelector show_modified={showModified} {runes} {add} {remove} />
+				<ModuleEditor error={compiled?.error} warnings={compiled?.warnings ?? []} {vim} {blur} />
 			</section>
 
 			<section slot="b" style="height: 100%;">
