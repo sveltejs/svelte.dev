@@ -113,6 +113,7 @@
 
 				&:has(.filename) {
 					position: relative;
+					background: var(--sk-back-3);
 				}
 
 				.filename {
