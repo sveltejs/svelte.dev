@@ -7,11 +7,10 @@
 		egg: '🥚'
 	};
 
-	// the name is updated whenever the prop value changes...
-	export let name;
+	// `name` is updated whenever the prop value changes...
+	let { name } = $props();
 
-	// ...but the "emoji" variable is fixed upon initialisation
-	// of the component because it uses `const` instead of `$:`
+	// ...but `emoji` is fixed upon initialisation
 	const emoji = emojis[name];
 </script>
 
