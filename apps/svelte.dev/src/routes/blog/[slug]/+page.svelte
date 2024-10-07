@@ -108,6 +108,27 @@
 					color: var(--sk-text-4);
 				}
 			}
+
+			hr {
+				position: relative;
+				border: none;
+				height: 1px;
+				background: radial-gradient(circle at center, var(--sk-text-4), transparent);
+				margin: 7rem 0;
+				overflow: visible;
+
+				&::after {
+					content: '';
+					position: absolute;
+					width: 0.8rem;
+					height: 0.8rem;
+					left: 50%;
+					top: 2px;
+					transform: rotate(45deg) translate(-50%, -50%);
+					background: var(--sk-back-1);
+					border: 1px solid var(--sk-text-4);
+				}
+			}
 		}
 	}
 
