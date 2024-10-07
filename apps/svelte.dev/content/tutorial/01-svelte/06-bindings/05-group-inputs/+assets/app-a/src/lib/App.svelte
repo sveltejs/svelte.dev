@@ -1,6 +1,6 @@
 <script>
-	let scoops = 1;
-	let flavours = [];
+	let scoops = $state(1);
+	let flavours = $state([]);
 
 	const formatter = new Intl.ListFormat('en', { style: 'long', type: 'conjunction' });
 </script>
