@@ -92,6 +92,21 @@
 				border-radius: var(--sk-border-radius);
 				border: 0.8rem solid var(--sk-theme-4);
 			}
+
+			blockquote {
+				background: none;
+
+				&::before {
+					content: '“';
+					position: absolute;
+					font-size: 6.4em;
+					line-height: 1;
+					left: 0;
+					top: 0;
+					font-family: var(--sk-font-heading);
+					color: var(--sk-text-4);
+				}
+			}
 		}
 	}
 
