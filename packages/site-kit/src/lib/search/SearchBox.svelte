@@ -160,7 +160,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 		use:trap
 	>
 		<div class="search-box">
-			<div style="background: var(--background)">
+			<div style="background: var(--background); padding: 0.5rem">
 				<!-- svelte-ignore a11y_autofocus -->
 				<input
 					autofocus
@@ -307,7 +307,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 	input {
 		font-size: var(--sk-font-size-ui-large);
 		width: 100%;
-		padding: var(--padding) 5rem var(--padding) var(--padding);
+		padding: calc(var(--padding) - 0.5rem) 5rem calc(var(--padding) - 0.5rem) var(--padding);
 		height: 6rem;
 		border: none;
 		border-bottom: 1px solid var(--sk-back-3);
@@ -332,7 +332,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 	button[aria-label='Close'] {
 		--size: 2rem;
 		position: absolute;
-		top: 0;
+		top: 0.5rem;
 		right: 0;
 		width: 5rem;
 		height: 6rem;

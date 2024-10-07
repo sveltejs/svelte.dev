@@ -359,7 +359,7 @@
 
 		li {
 			position: relative;
-			max-width: calc(var(--sk-line-max-width) - var(--list-padding));
+			max-width: calc(var(--sk-page-content-width) - var(--list-padding));
 			margin: 0 0 0.5em 0;
 		}
 
@@ -380,6 +380,7 @@
 			color: var(--sk-text-1);
 			padding: 0 0 0 4.5rem;
 			font-style: italic;
+			background: url($lib/icons/lightbulb.svg) no-repeat 0.5rem 0 / 3rem;
 
 			&:first-child {
 				margin-top: 0;
@@ -387,17 +388,6 @@
 
 			&:last-child {
 				margin-bottom: 0;
-			}
-
-			&::before {
-				content: '';
-				display: block;
-				width: 3rem;
-				height: 3rem;
-				position: absolute;
-				left: 0.5rem;
-				top: 0;
-				background: url($lib/icons/lightbulb.svg) no-repeat 50% 50% / contain;
 			}
 
 			&.deprecated {
