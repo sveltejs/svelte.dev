@@ -8,7 +8,7 @@ To conditionally render some markup, we wrap it in an `if` block. Let's add some
 
 ```svelte
 /// file: App.svelte
-<button on:click={increment}>
+<button onclick={increment}>
 	Clicked {count}
 	{count === 1 ? 'time' : 'times'}
 </button>
@@ -18,4 +18,4 @@ To conditionally render some markup, we wrap it in an `if` block. Let's add some
 {/if}+++
 ```
 
-Try it — update the component, and click on the button.
+Try it — update the component, and click on the button a few times.
