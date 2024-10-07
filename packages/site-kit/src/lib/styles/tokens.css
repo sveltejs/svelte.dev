@@ -91,13 +91,11 @@
 	--sk-raised-shadow: hsl(0 0 0 / 0.1);
 	--sk-raised-shadow-active: hsl(0 0 0 / 0.15);
 
-	--sk-raised: 1px 1px 3px var(--sk-raised-shadow),
-	-1px -1px 3px var(--sk-raised-highlight);
+	--sk-raised: 1px 1px 3px var(--sk-raised-shadow), -1px -1px 3px var(--sk-raised-highlight);
 	--sk-raised-hover: 1px 1px 3px var(--sk-raised-shadow-active),
-	-1px -1px 3px var(--sk-raised-highlight-active);
-	--sk-raised-active:
-	inset -1px -1px 2px var(--sk-raised-highlight-active),
-	inset 1px 1px 2px var(--sk-raised-shadow-active);
+		-1px -1px 3px var(--sk-raised-highlight-active);
+	--sk-raised-active: inset -1px -1px 2px var(--sk-raised-highlight-active),
+		inset 1px 1px 2px var(--sk-raised-shadow-active);
 
 	&.dark {
 		color-scheme: dark;
