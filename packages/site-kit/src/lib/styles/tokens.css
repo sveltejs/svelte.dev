@@ -18,7 +18,7 @@
 	--sk-page-padding-side: 2.4rem;
 	--sk-thick-border-width: 0.3rem;
 	--sk-border-radius: 0.4rem;
-	--sk-page-main-width: 80rem;
+	--sk-page-content-width: 84rem;
 	--sk-banner-bottom-height: 0px;
 
 	/* typography */
@@ -32,12 +32,10 @@
 	--sk-font-size-h3: 2.4rem;
 	--sk-font-size-body: 2.1rem;
 	--sk-font-size-body-small: 1.8rem;
-	--sk-font-size-ui-small: 1.4rem;
-	--sk-font-size-ui-medium: 1.8rem;
-	--sk-font-size-ui-large: 3rem; /* TODO add regular/small */
+	--sk-font-size-ui-small: 1.3rem;
+	--sk-font-size-ui-medium: 1.6rem;
+	--sk-font-size-ui-large: 3rem;
 	--sk-font-size-code: 1.4rem;
-
-	--sk-line-max-width: 84rem;
 
 	/* Base colors */
 	--sk-theme-1-hsl: 12, 93%, 43%;
@@ -50,7 +48,7 @@
 	--sk-back-2: hsla(0, 0%, 100%, 1);
 	--sk-back-3: hsla(0, 0%, 99%, 1);
 	--sk-back-4: hsl(0, 0%, 95%);
-	--sk-back-5: hsl(0, 0%, 80%);
+	--sk-back-5: hsl(0, 0%, 92%);
 
 	--sk-text-1: hsla(0, 0%, 0%, 0.95);
 	--sk-text-2: hsla(0, 0%, 0%, 0.88);
@@ -94,7 +92,7 @@
 		--sk-back-2: hsl(0 0 18);
 		--sk-back-3: hsl(0 0 12);
 		--sk-back-4: hsl(0 0 22);
-		--sk-back-5: hsl(0 0 40);
+		--sk-back-5: hsl(0 0 25);
 		--sk-back-translucent: hsla(0, 0%, 100%, 0.1);
 		--sk-theme-1-hsl: 12, 94%, 62%;
 		--sk-theme-2-hsl: 240, 8%, 44%;

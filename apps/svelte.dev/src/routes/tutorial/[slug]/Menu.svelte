@@ -246,7 +246,7 @@
 		text-overflow: ellipsis;
 		text-align: center;
 		color: var(--sk-text-2);
-		font-size: var(--sk-font-size-ui-small);
+		font-size: var(--sk-font-size-ui-medium);
 
 		.desktop {
 			display: flex;

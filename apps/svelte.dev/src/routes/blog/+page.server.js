@@ -3,11 +3,17 @@ import { blog_posts } from '$lib/server/content';
 export const prerender = true;
 
 export async function load() {
-	return {
-		posts: blog_posts.map((document) => ({
+	const posts = blog_posts
+		.map((document) => ({
 			metadata: document.metadata,
 			date: document.date,
+			date_formatted: document.date_formatted,
+			authors: document.authors,
 			slug: document.slug
 		}))
+		.filter((document) => !document.metadata.draft);
+
+	return {
+		posts
 	};
 }

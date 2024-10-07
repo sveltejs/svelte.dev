@@ -17,7 +17,7 @@ Cross-Origin-Opener-Policy: same-origin
 
 Because we're doing soft navigation between pages, these headers need to be set for all responses, not just the ones from `/tutorial`.
 
-The result of setting these headers is that the site can no longer embed URLs from other sites (like images from another domain) without those domains either having a `cross-origin-resource-policy: cross-origin` header (which most don't) or us adding the `crossorigin="anonymous"` attribute to the elements that load those URLs.
+The result of setting these headers is that the site can no longer embed URLs from other sites (like images from another domain) without those domains either having a `cross-origin-resource-policy: cross-origin` header (which most don't) or us adding the `crossorigin="anonymous"` attribute (or the experimental-only-working-in-chrome `credentialless` for iframes) to the elements that load those URLs.
 
 When writing content for the tutorial, you need to be aware of the differences of loading content:
 

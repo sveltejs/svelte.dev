@@ -53,6 +53,19 @@
 
 <style>
 	.text :global {
+		h2,
+		h3 {
+			max-width: 100%;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			padding: 0 1em 0 0;
+
+			@media (min-width: 768px) {
+				margin: 0 0 0 -2em;
+				padding: 0 1em 0 2em;
+			}
+		}
+
 		h2 {
 			margin-top: 7rem;
 		}
@@ -289,11 +302,11 @@
 		a.permalink {
 			position: absolute !important;
 			display: block;
-			background: url(../icons/link.svg) 0 50% no-repeat;
+			background: url(../icons/link.svg) 50% 50% no-repeat;
 			background-size: 1em 1em;
-			width: 1.4em;
-			height: 1.2em;
-			top: 0;
+			width: 1.2em;
+			height: 0.8em;
+			top: 0.2em;
 
 			@media (max-width: 767px) {
 				right: 0;
@@ -301,11 +314,12 @@
 			}
 
 			@media (min-width: 768px) {
-				left: -1.3em;
+				left: 0.7em;
 				opacity: 0;
 				transition: opacity 0.2s;
 
-				:where(h2, h3):hover & {
+				:where(h2, h3):hover &,
+				&:focus {
 					opacity: 1;
 				}
 			}
@@ -343,7 +357,7 @@
 
 		li {
 			position: relative;
-			max-width: calc(var(--sk-line-max-width) - var(--list-padding));
+			max-width: calc(var(--sk-page-content-width) - var(--list-padding));
 			margin: 0 0 0.5em 0;
 		}
 
@@ -364,6 +378,7 @@
 			color: var(--sk-text-1);
 			padding: 0 0 0 4.5rem;
 			font-style: italic;
+			background: url($lib/icons/lightbulb.svg) no-repeat 0.5rem 0 / 3rem;
 
 			&:first-child {
 				margin-top: 0;
@@ -371,17 +386,6 @@
 
 			&:last-child {
 				margin-bottom: 0;
-			}
-
-			&::before {
-				content: '';
-				display: block;
-				width: 3rem;
-				height: 3rem;
-				position: absolute;
-				left: 0.5rem;
-				top: 0;
-				background: url($lib/icons/lightbulb.svg) no-repeat 50% 50% / contain;
 			}
 
 			&.deprecated {

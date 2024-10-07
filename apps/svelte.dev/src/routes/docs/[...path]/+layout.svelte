@@ -77,7 +77,7 @@
 				calc(
 					0.5 *
 						(
-							100vw - var(--sk-line-max-width) - var(--sk-page-padding-side) -
+							100vw - var(--sk-page-content-width) - var(--sk-page-padding-side) -
 								var(--sk-page-padding-side)
 						)
 				)

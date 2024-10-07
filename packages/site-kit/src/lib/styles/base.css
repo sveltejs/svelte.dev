@@ -129,7 +129,7 @@ blockquote {
 	position: relative;
 	margin: 2.4rem 0;
 	padding: 2rem 2.4rem 1.8rem 2.4rem;
-	max-width: var(--sk-line-max-width);
+	max-width: var(--sk-page-content-width);
 }
 
 blockquote :where(p, ul) {
@@ -190,12 +190,13 @@ table :where(code, span) {
 }
 
 /*	helper styles -------------------------- */
+/* TODO this shoudl be moved */
 figcaption,
 .post aside {
-	max-width: none;
+	/* max-width: none;
 	margin: 0 auto;
 	padding: 1.6rem 0 0 0.8rem;
-	font: 1.2rem/1.6 var(--sk-font-mono);
+	font: 1.2rem/1.6 var(--sk-font-mono); */
 }
 
 /* visually hidden, but accessible to assistive tech */

@@ -293,7 +293,7 @@
 
 <svelte:window on:beforeunload={before_unload} />
 
-<div class="container" class:toggleable={$toggleable} bind:clientWidth={width}>
+<div class="container" class:embedded class:toggleable={$toggleable} bind:clientWidth={width}>
 	<div class="viewport" class:output={show_output}>
 		<SplitPane
 			--color="var(--sk-text-4)"
@@ -338,6 +338,10 @@
 		background: var(--sk-back-1);
 		padding: 1rem 0 0 0;
 
+		&.embedded {
+			height: 100%;
+		}
+
 		:global {
 			section {
 				position: relative;
@@ -361,9 +365,7 @@
 			}
 
 			.divider::after {
-				background-color: var(--sk-text-1);
-				filter: drop-shadow(0 0 3px hsl(0 0 0 / 0.5));
-				opacity: 0.1;
+				background-color: var(--sk-back-5);
 			}
 
 			[data-pane='main'] > .divider::after {
