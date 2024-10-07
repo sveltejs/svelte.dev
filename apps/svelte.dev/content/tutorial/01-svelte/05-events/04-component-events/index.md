@@ -2,30 +2,28 @@
 title: Component events
 ---
 
-Components can also dispatch events. To do so, they must create an event dispatcher. Update `Inner.svelte`:
+You can pass event handlers to components like any other prop. In `Stepper.svelte`, add `increment` and `decrement` props...
 
 ```svelte
-/// file: Inner.svelte
+/// file: Stepper.svelte
 <script>
-	+++import { createEventDispatcher } from 'svelte';+++
-
-	+++const dispatch = createEventDispatcher();+++
-
-	function sayHello() {
-		dispatch('message', {
-			text: 'Hello!'
-		});
-	}
+	let { +++increment, decrement+++ } = $props();
 </script>
 ```
 
-> `createEventDispatcher` must be called when the component is first instantiated — you can't do it later inside e.g. a `setTimeout` callback. This links `dispatch` to the component instance.
-
-Then, add an `on:message` handler in `App.svelte`:
+...and wire them up:
 
 ```svelte
-/// file: App.svelte
-<Inner +++on:message={handleMessage}+++ />
+/// file: Stepper.svelte
+<button +++onclick={decrement}+++>-1</button>
+<button +++onclick={increment}+++>+1</button>
 ```
 
-> You can also try changing the event name to something else. For instance, change `dispatch('message', {...})` to `dispatch('greet', {...})` in `Inner.svelte` and change the attribute name from `on:message` to `on:greet` in `App.svelte`.
+In `App.svelte`, define the handlers:
+
+```svelte
+<Stepper
+	+++increment={() => value += 1}+++
+	+++decrement={() => value -= 1}+++
+/>
+```

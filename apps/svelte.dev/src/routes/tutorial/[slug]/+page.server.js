@@ -7,7 +7,8 @@ const redirects = new Map([
 	['reactive-assignments', 'state'],
 	['reactive-declarations', 'derived-state'],
 	['reactive-statements', 'effects'],
-	['updating-arrays-and-objects', 'deep-state']
+	['updating-arrays-and-objects', 'deep-state'],
+	['event-modifiers', 'capturing']
 ]);
 
 export async function load({ params }) {

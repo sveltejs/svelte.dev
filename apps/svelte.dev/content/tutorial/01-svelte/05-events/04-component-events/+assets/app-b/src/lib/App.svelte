@@ -1,9 +1,12 @@
 <script>
-	import Inner from './Inner.svelte';
+	import Stepper from './Stepper.svelte';
 
-	function handleMessage(event) {
-		alert(event.detail.text);
-	}
+	let value = $state(0);
 </script>
 
-<Inner on:message={handleMessage} />
+<p>The current value is {value}</p>
+
+<Stepper
+	increment={() => value += 1}
+	decrement={() => value -= 1}
+/>
