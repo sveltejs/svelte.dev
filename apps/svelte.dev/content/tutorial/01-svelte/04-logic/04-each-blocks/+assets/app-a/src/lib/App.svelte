@@ -1,30 +1,30 @@
 <script>
 	const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-	let selected = colors[0];
+	let selected = $state(colors[0]);
 </script>
 
 <h1 style="color: {selected}">Pick a colour</h1>
 
 <div>
 	<button
-		aria-current={selected === 'red'}
-		aria-label="red"
 		style="background: red"
-		on:click={() => selected = 'red'}
+		aria-label="red"
+		aria-current={selected === 'red'}
+		onclick={() => selected = 'red'}
 	></button>
 
 	<button
-		aria-current={selected === 'orange'}
-		aria-label="orange"
 		style="background: orange"
-		on:click={() => selected = 'orange'}
+		aria-label="orange"
+		aria-current={selected === 'orange'}
+		onclick={() => selected = 'orange'}
 	></button>
 
 	<button
-		aria-current={selected === 'yellow'}
-		aria-label="yellow"
 		style="background: yellow"
-		on:click={() => selected = 'yellow'}
+		aria-label="yellow"
+		aria-current={selected === 'yellow'}
+		onclick={() => selected = 'yellow'}
 	></button>
 
 	<!-- TODO add the rest of the colours -->

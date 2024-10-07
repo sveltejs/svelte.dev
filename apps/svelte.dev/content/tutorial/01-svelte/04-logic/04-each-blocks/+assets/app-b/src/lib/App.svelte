@@ -1,6 +1,6 @@
 <script>
 	const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-	let selected = colors[0];
+	let selected = $state(colors[0]);
 </script>
 
 <h1 style="color: {selected}">Pick a colour</h1>
@@ -8,10 +8,10 @@
 <div>
 	{#each colors as color, i}
 		<button
-			aria-current={selected === color}
-			aria-label={color}
 			style="background: {color}"
-			on:click={() => selected = color}
+			aria-label="{color}"
+			aria-current={selected === color}
+			onclick={() => selected = color}
 		>{i + 1}</button>
 	{/each}
 </div>

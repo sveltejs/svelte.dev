@@ -11,16 +11,16 @@ Instead of laboriously copying, pasting and editing, we can get rid of all but t
 <div>
 	+++{#each colors as color}+++
 		<button
-			aria-current={selected === 'red'}
-			aria-label="red"
 			style="background: red"
+			aria-label="red"
+			aria-current={selected === 'red'}
 			on:click={() => selected = 'red'}
 		></button>
 	+++{/each}+++
 </div>
 ```
 
-> The expression (`colors`, in this case) can be any array or array-like object (i.e. it has a `length` property). You can loop over generic iterables with `each [...iterable]`.
+> The expression (`colors`, in this case) can be any iterable or array-like object — in other words, anything that works with [`Array.from`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from).
 
 Now we need to use the `color` variable in place of `"red"`:
 
@@ -29,9 +29,9 @@ Now we need to use the `color` variable in place of `"red"`:
 <div>
 	{#each colors as color}
 		<button
-			aria-current={selected === +++color+++}
-			aria-label=+++{color}+++
 			style="background: +++{color}+++"
+			aria-label="+++{color}+++"
+			aria-current={selected === +++color+++}
 			on:click={() => selected = +++color+++}
 		></button>
 	{/each}
@@ -45,9 +45,9 @@ You can get the current _index_ as a second argument, like so:
 <div>
 	{#each colors as color, +++i}+++
 		<button
-			aria-current={selected === color}
-			aria-label={color}
 			style="background: {color}"
+			aria-label={color}
+			aria-current={selected === color}
 			on:click={() => selected = color}
 		>+++{i + 1}+++</button>
 	{/each}
