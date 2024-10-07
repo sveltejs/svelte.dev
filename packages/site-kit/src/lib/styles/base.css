@@ -190,6 +190,7 @@ table :where(code, span) {
 }
 
 /*	helper styles -------------------------- */
+/* TODO this shoudl be moved */
 figcaption,
 .post aside {
 	max-width: none;

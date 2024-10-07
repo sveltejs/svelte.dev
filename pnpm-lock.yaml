@@ -358,9 +358,6 @@ importers:
       '@fontsource/fira-sans':
         specifier: ^5.1.0
         version: 5.1.0
-      '@fontsource/yantramanav':
-        specifier: ^5.1.0
-        version: 5.1.0
       esm-env:
         specifier: ^1.0.0
         version: 1.0.0
@@ -810,9 +807,6 @@ packages:
 
   '@fontsource/fira-sans@5.1.0':
     resolution: {integrity: sha512-qfAjF5WcrL6qQh9eIWLK7lOh9wbCgCnVWh2Nu2gozrTgsUgYBLR8sbCGYwlK1K0yZoQsR2i9VSiQ16wwPCBkSw==}
-
-  '@fontsource/yantramanav@5.1.0':
-    resolution: {integrity: sha512-wSmYmoGhFbYF4XUXouudROqTn6GREe0HTV/HqcnRLYbQJNa3kmqbcebIm9PxPDQ0l3y2speJAlbOoDGM2DN9dg==}
 
   '@img/sharp-darwin-arm64@0.33.4':
     resolution: {integrity: sha512-p0suNqXufJs9t3RqLBO6vvrgr5OhgbWp76s5gTRvdmxmuv9E1rcaqGUsl3l4mKVmXPkTkTErXediAui4x+8PSA==}
@@ -3232,8 +3226,6 @@ snapshots:
   '@fontsource/fira-mono@5.1.0': {}
 
   '@fontsource/fira-sans@5.1.0': {}
-
-  '@fontsource/yantramanav@5.1.0': {}
 
   '@img/sharp-darwin-arm64@0.33.4':
     optionalDependencies:
