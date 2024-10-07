@@ -37,7 +37,7 @@
 <aside class="on-this-page">
 	<label>
 		<input type="checkbox" aria-label="Toggle 'on this page' menu" />
-		On this page
+		<h3>On this page</h3>
 	</label>
 
 	<nav>
@@ -78,12 +78,6 @@
 			}
 		}
 
-		label {
-			font-family: var(--sk-font-ui);
-			font-size: var(--sk-font-size-ui-small);
-			display: block;
-		}
-
 		@media (max-width: 1199px) {
 			margin: 4rem 0;
 
@@ -118,6 +112,14 @@
 					background-size: contain;
 					rotate: -90deg;
 					transition: rotate 0.2s;
+				}
+
+				h3 {
+					font-family: var(--sk-font-ui);
+					font-size: var(--sk-font-size-ui-small);
+					color: var(--sk-text-4);
+					margin: 0;
+					display: block;
 				}
 			}
 
@@ -167,6 +169,10 @@
 
 				&::before {
 					content: none !important;
+				}
+
+				h3 {
+					margin: 0 0 0.3rem 0;
 				}
 			}
 
