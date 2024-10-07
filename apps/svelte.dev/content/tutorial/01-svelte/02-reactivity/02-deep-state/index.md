@@ -1,46 +1,30 @@
 ---
-title: Updating arrays and objects
+title: Deep state
 ---
 
-Because Svelte's reactivity is triggered by assignments, using array methods like `push` and `splice` won't automatically cause updates. For example, clicking the 'Add a number' button doesn't currently do anything, even though we're calling `numbers.push(...)` inside `addNumber`.
+In addition to making _primitive_ values (like strings and numbers) reactive, the `$state` rune makes arrays and objects _deeply_ reactive.
 
-One way to fix that is to add an assignment that would otherwise be redundant:
+Make `numbers` a reactive array:
+
+```js
+/// file: App.svelte
+let numbers = +++$state([1, 2, 3, 4])+++;
+```
+
+Now, when we change the array...
 
 ```js
 /// file: App.svelte
 function addNumber() {
-	numbers.push(numbers.length + 1);
-	+++numbers = numbers;+++
+	+++numbers[numbers.length] = numbers.length + 1;+++
 }
 ```
 
-But there's a more idiomatic solution:
+...the component updates. Or better still, we can `push` to the array instead:
 
 ```js
 /// file: App.svelte
 function addNumber() {
-	numbers = +++[...numbers, numbers.length + 1];+++
+	+++numbers.push(numbers.length + 1);+++
 }
 ```
-
-You can use similar patterns to replace `pop`, `shift`, `unshift` and `splice`.
-
-Assignments to _properties_ of arrays and objects — e.g. `obj.foo += 1` or `array[i] = x` — work the same way as assignments to the values themselves.
-
-```js
-/// file: App.svelte
-function addNumber() {
-	numbers[numbers.length] = numbers.length + 1;
-}
-```
-
-A simple rule of thumb: the name of the updated variable must appear on the left hand side of the assignment. For example this...
-
-```js
-/// no-file
-const obj = { foo: { bar: 1 } };
-const foo = obj.foo;
-foo.bar = 2;
-```
-
-...won't trigger reactivity on `obj.foo.bar`, unless you follow it up with `obj = obj`.

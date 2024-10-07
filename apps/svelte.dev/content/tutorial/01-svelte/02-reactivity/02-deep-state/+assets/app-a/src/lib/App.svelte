@@ -2,14 +2,12 @@
 	let numbers = [1, 2, 3, 4];
 
 	function addNumber() {
-		numbers.push(numbers.length + 1);
+		// TODO implement
 	}
-
-	$: sum = numbers.reduce((total, currentNumber) => total + currentNumber, 0);
 </script>
 
-<p>{numbers.join(' + ')} = {sum}</p>
+<p>{numbers.join(' + ')} = ...</p>
 
-<button on:click={addNumber}>
+<button onclick={addNumber}>
 	Add a number
 </button>

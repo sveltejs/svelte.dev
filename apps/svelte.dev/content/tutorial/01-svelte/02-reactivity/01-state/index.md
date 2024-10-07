@@ -6,7 +6,7 @@ At the heart of Svelte is a powerful system of _reactivity_ for keeping the DOM 
 
 Make the `count` declaration reactive by wrapping the value with `$state(...)`:
 
-```svelte
+```js
 /// file: App.svelte
 let count = +++$state(0)+++;
 ```
