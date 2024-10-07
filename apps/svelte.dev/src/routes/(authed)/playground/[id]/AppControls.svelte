@@ -293,7 +293,6 @@ export default app;`
 
 	.buttons {
 		text-align: right;
-		margin-right: 0.4rem;
 		display: flex;
 		align-items: center;
 		gap: 0.2em;
