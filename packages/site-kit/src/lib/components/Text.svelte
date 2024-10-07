@@ -113,16 +113,20 @@
 
 				&:has(.filename) {
 					position: relative;
-					border-bottom: 1px solid var(--sk-back-4);
 				}
 
 				.filename {
 					content: attr(data-file);
 					display: block;
+					position: relative;
+					top: 0.1rem;
 					flex: 1;
-					font-family: var(--sk-font-mono);
-					font-size: var(--sk-font-size-code);
-					color: var(--sk-text-2);
+					font-family: var(--sk-font-ui);
+					font-size: var(--sk-font-size-ui-small);
+					color: var(--sk-text-4);
+					text-overflow: ellipsis;
+					overflow: hidden;
+					white-space: nowrap;
 
 					&::after {
 						content: attr(data-ext);
