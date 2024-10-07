@@ -4,7 +4,7 @@ title: Welcome to Svelte
 
 Welcome to the Svelte tutorial! This will teach you everything you need to know to easily build web applications of all sizes, with high performance and a small footprint.
 
-You can also consult the [API docs](https://svelte.dev/docs) and the [examples](https://svelte.dev/examples), or — if you're impatient to start hacking on your machine locally — create a project with `npm init svelte`.
+You can also consult the [API docs](https://svelte.dev/docs) and visit the [playground](https://svelte.dev/playground), or — if you're impatient to start hacking on your machine locally — create a project with `npx sv create`.
 
 ## What is Svelte?
 
@@ -12,7 +12,7 @@ Svelte is a tool for building web applications. Like other user interface framew
 
 These components are _compiled_ into small, efficient JavaScript modules that eliminate overhead traditionally associated with UI frameworks.
 
-You can build your entire app with Svelte (for example, using an application framework like [SvelteKit](https://kit.svelte.dev), which this tutorial will cover), or you can add it incrementally to an existing codebase. You can also ship components as standalone packages that work anywhere.
+You can build your entire app with Svelte (for example, using an application framework like [SvelteKit](/docs/kit), which this tutorial will cover), or you can add it incrementally to an existing codebase. You can also ship components as standalone packages that work anywhere.
 
 ## How to use this tutorial
 

@@ -13,7 +13,9 @@ Our image is missing a `src` — let's add one:
 
 That's better. But if you hover over the `<img>` in the editor, Svelte is giving us a warning:
 
-> A11y: &lt;img&gt; element should have an alt attribute
+```
+`<img>` element should have an alt attribute
+```
 
 When building web apps, it's important to make sure that they're _accessible_ to the broadest possible userbase, including people with (for example) impaired vision or motion, or people without powerful hardware or good internet connections. Accessibility (shortened to a11y) isn't always easy to get right, but Svelte will help by warning you if you write inaccessible markup.
 
