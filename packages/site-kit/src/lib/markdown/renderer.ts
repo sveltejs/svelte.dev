@@ -298,7 +298,7 @@ async function parse({
 		blockquote(token) {
 			let content = this.parser?.parse(token.tokens) ?? '';
 			if (content.includes('[!LEGACY]')) {
-				content = `<details class="legacy"><summary>Legacy mode</summary>${content.replace('[!LEGACY]', '')}</details>`;
+				content = `<details class="legacy"><summary><label>Legacy mode <button class="raised"></button></label></summary>${content.replace('[!LEGACY]', '')}</details>`;
 			}
 			return `<blockquote>${content}</blockquote>`;
 		}

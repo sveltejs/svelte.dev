@@ -34,9 +34,6 @@ body {
 	scrollbar-width: thin;
 	scrollbar-color: var(--sk-scrollbar) transparent;
 	-webkit-tap-highlight-color: hsla(var(--sk-theme-1-hsl), 0.1);
-
-	transition: 0.5s var(--quint-out);
-	transition-property: background, background-color, background-image, border;
 }
 
 *:focus-visible {
@@ -169,18 +166,22 @@ button > svg {
 
 .raised {
 	border-radius: var(--sk-border-radius);
-	box-shadow: var(--sk-raised);
+	border-style: solid;
+	border-color: var(--sk-raised-color);
+	border-width: var(--sk-raised-width);
 
 	&:hover {
-		box-shadow: var(--sk-raised-hover);
+		border-color: var(--sk-raised-hover-color);
 	}
 
 	&:active {
-		box-shadow: var(--sk-raised-active);
+		border-color: var(--sk-raised-active-color);
+		border-width: var(--sk-raised-active-width);
 	}
 
 	&:disabled {
-		box-shadow: none;
+		border-color: transparent;
+		border-width: 1px;
 	}
 }
 
