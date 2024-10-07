@@ -1,5 +1,5 @@
 <script>
-	let answer;
+	let { answer } = {};
 </script>
 
 <p>The answer is {answer}</p>

@@ -7,7 +7,7 @@ We can easily specify default values for props in `Nested.svelte`:
 ```svelte
 /// file: Nested.svelte
 <script>
-	export let answer +++= 'a mystery'+++;
+	let { answer +++= 'a mystery'+++ } = $props();
 </script>
 ```
 

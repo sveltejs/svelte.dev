@@ -2,16 +2,16 @@
 title: Spread props
 ---
 
-In this exercise, we've forgotten to specify the `version` prop expected by `PackageInfo.svelte`, meaning it shows 'version undefined'.
+In this exercise, we've forgotten to pass the `name` prop expected by `PackageInfo.svelte`, meaning the `<code>` element is empty and the npm link is broken.
 
-We _could_ fix it by adding the `version` prop...
+We _could_ fix it by adding the prop...
 
 ```svelte
 /// file: App.svelte
 <PackageInfo
-    name={pkg.name}
-	speed={pkg.speed}
-    +++version={pkg.version}+++
+	+++name={pkg.name}+++
+	version={pkg.version}
+	description={pkg.description}
 	website={pkg.website}
 />
 ```
@@ -23,4 +23,14 @@ We _could_ fix it by adding the `version` prop...
 <PackageInfo +++{...pkg}+++ />
 ```
 
-> Conversely, if you need to reference all the props that were passed into a component, including ones that weren't declared with `export`, you can do so by accessing `$$props` directly. It's not generally recommended, as it's difficult for Svelte to optimise, but it's useful in rare cases.
+> Conversely, you can get an object containing all the props that were passed into a component using a rest property...
+>
+> ```js
+> let { name, ...stuff } = $props();
+> ```
+>
+> ...or by skipping [destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) altogether:
+>
+> ```js
+> let stuff = $props();
+> ```

@@ -3,8 +3,8 @@
 
 	const pkg = {
 		name: 'svelte',
-		speed: 'blazing',
-		version: 4,
+		version: 5,
+		description: 'blazing fast',
 		website: 'https://svelte.dev'
 	};
 </script>
