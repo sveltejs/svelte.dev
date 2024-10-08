@@ -1,7 +1,6 @@
 import MagicString from 'magic-string';
 import { createHash } from 'node:crypto';
 import fs from 'node:fs';
-import { mkdir, readFile, readdir, stat, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import ts from 'typescript';
 import * as prettier from 'prettier';
@@ -31,8 +30,6 @@ interface RenderContentOptions {
 // Supports js, svelte, yaml files
 const METADATA_REGEX =
 	/(?:<!---\s*|\/\/\/\s*|###\s*)(?<key>file|link|copy):\s*(?<value>.*?)(?:\s*--->|$)\n/gm;
-
-const CACHE_MAP = new Map<string, string>();
 
 let twoslash_module: typeof import('shiki-twoslash');
 
@@ -798,17 +795,12 @@ function stringify(member: TypeElement, lang: keyof typeof SHIKI_LANGUAGE_MAP = 
 	);
 }
 
-async function find_nearest_node_modules(start_path: string): Promise<string | null> {
-	try {
-		if (await stat(path.join(start_path, 'node_modules'))) {
-			return path.resolve(start_path, 'node_modules');
-		}
-	} catch {
-		const parentDir = path.dirname(start_path);
+function find_nearest_node_modules(file: string): string | null {
+	let current = file;
 
-		if (start_path === parentDir) return null;
-
-		return find_nearest_node_modules(parentDir);
+	while (current !== (current = path.dirname(current))) {
+		const resolved = path.join(current, 'node_modules');
+		if (fs.existsSync(resolved)) return resolved;
 	}
 
 	return null;
@@ -830,7 +822,7 @@ async function find_nearest_node_modules(start_path: string): Promise<string | n
  */
 async function create_snippet_cache(should: boolean) {
 	const cache = new Map();
-	const directory = (await find_nearest_node_modules(import.meta.url)) + '/.snippets';
+	const directory = find_nearest_node_modules(import.meta.url) + '/.snippets';
 
 	function get_file(source: string) {
 		const hash = createHash('sha256');
