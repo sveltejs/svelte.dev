@@ -3,6 +3,7 @@ import { createHash } from 'node:crypto';
 import { mkdir, readFile, readdir, stat, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import ts from 'typescript';
+import * as prettier from 'prettier';
 import { SHIKI_LANGUAGE_MAP, escape, normalizeSlugify, smart_quotes, transform } from './utils';
 import type { Declaration, TypeElement, Modules } from './index';
 
@@ -33,7 +34,6 @@ const METADATA_REGEX =
 const CACHE_MAP = new Map<string, string>();
 
 let twoslash_module: typeof import('shiki-twoslash');
-let prettier_module: typeof import('prettier');
 
 /**
  * A super markdown renderer function. Renders svelte and kit docs specific specific markdown code to html.
@@ -129,7 +129,6 @@ export async function render_content_markdown(
 	}: RenderContentOptions = {}
 ) {
 	twoslash_module ??= await import('shiki-twoslash');
-	prettier_module ??= await import('prettier');
 
 	const highlighter = await twoslash_module.createShikiHighlighter({ theme: 'css-variables' });
 
@@ -478,7 +477,7 @@ export async function convert_to_ts(js_code: string, indent = '', offset = '') {
 		code.appendLeft(insertion_point, offset + import_statements + '\n');
 	}
 
-	let transformed = await prettier_module.format(code.toString(), {
+	let transformed = await prettier.format(code.toString(), {
 		printWidth: 100,
 		parser: 'typescript',
 		useTabs: true,
@@ -500,7 +499,7 @@ export async function convert_to_ts(js_code: string, indent = '', offset = '') {
 		let name = type_text?.slice(1, -1); // remove { }
 
 		const single_line_name = (
-			await prettier_module.format(name ?? '', {
+			await prettier.format(name ?? '', {
 				printWidth: 1000,
 				parser: 'typescript',
 				semi: false,
