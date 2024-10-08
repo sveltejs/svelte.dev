@@ -534,14 +534,10 @@ function get_mtime(file: string, seen = new Set<string>()) {
 	return mtime;
 }
 
-const mtime = get_mtime(fileURLToPath(import.meta.url));
-
-// rough-and-ready way to invalidate the snippet cache when we update this file
-// or utils.ts. A more complete solution would
-// const mtime = Math.max(
-// 	+fs.statSync(fileURLToPath(import.meta.url)).mtime,
-// 	+fs.statSync(fileURLToPath(new URL('./utils.ts', import.meta.url))).mtime
-// );
+const mtime = Math.max(
+	get_mtime(fileURLToPath(import.meta.url)),
+	+fs.statSync('../../pnpm-lock.yaml').mtime
+);
 
 /**
  * Utility function to work with code snippet caching.
