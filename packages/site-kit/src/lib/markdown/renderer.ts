@@ -710,39 +710,32 @@ async function syntax_highlight({
 			})
 		);
 	} else if (/^(js|ts)/.test(language)) {
-		try {
-			const banner = twoslashBanner?.(filename, source, language, options);
+		const banner = twoslashBanner?.(filename, source, language, options);
 
-			if (banner) {
-				if (source.includes('// @filename:')) {
-					source = source.replace('// @filename:', `${banner}\n\n// @filename:`);
-				} else {
-					source = source.replace(
-						/^(?!\/\/ @)/m,
-						`${banner}\n\n// @filename: index.${language}\n// ---cut---\n`
-					);
-				}
+		if (banner) {
+			if (source.includes('// @filename:')) {
+				source = source.replace('// @filename:', `${banner}\n\n// @filename:`);
+			} else {
+				source = source.replace(
+					/^(?!\/\/ @)/m,
+					`${banner}\n\n// @filename: index.${language}\n// ---cut---\n`
+				);
 			}
-
-			html = await codeToHtml(source, {
-				lang: 'ts',
-				theme,
-				transformers: [
-					transformerTwoslash({
-						twoslashOptions: {
-							compilerOptions: {
-								types: ['svelte', '@sveltejs/kit']
-							}
-						}
-					})
-				]
-			});
-		} catch (e) {
-			console.error(`Error compiling snippet in ${filename}`);
-			// @ts-ignore
-			console.error(e.code);
-			throw e;
 		}
+
+		html = await codeToHtml(source, {
+			lang: 'ts',
+			theme,
+			transformers: [
+				transformerTwoslash({
+					twoslashOptions: {
+						compilerOptions: {
+							types: ['svelte', '@sveltejs/kit']
+						}
+					}
+				})
+			]
+		});
 
 		html = replace_blank_lines(html);
 	} else if (language === 'diff') {

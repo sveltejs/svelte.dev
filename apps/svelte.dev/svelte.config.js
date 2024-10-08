@@ -8,13 +8,24 @@ const config = {
 		// See https://kit.svelte.dev/docs/adapters for more information about adapters.
 		adapter: adapter(),
 		prerender: {
-			// TODO remporary while not all docs are migrated
-			handleHttpError({ path }) {
-				return path === '/docs/service-workers' || path === '/docs/server-only-modules'
-					? 'warn'
-					: 'fail';
+			handleHttpError(error) {
+				// TODO fail the build
+				if (error.status === 500) {
+					console.error(`TODO fix ${error.path}`);
+					return;
+				}
+
+				console.error(`404 ${error.path}`);
 			},
-			handleMissingId: 'warn'
+			handleMissingId(warning) {
+				if (warning.id.startsWith('H4sIA')) {
+					// playground link — do nothing
+					return;
+				}
+
+				// TODO fail the build
+				console.warn(`${warning.path}#${warning.id}: ${warning.referrers.join(', ')}`);
+			}
 		}
 	}
 };
