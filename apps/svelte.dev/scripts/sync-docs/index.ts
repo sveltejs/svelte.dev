@@ -13,6 +13,7 @@ interface Package {
 	repo: string;
 	pkg: string;
 	docs: string;
+	types: string;
 	process_modules: (modules: Modules, pkg: Package) => Promise<Modules>;
 }
 
@@ -27,6 +28,7 @@ const packages: Package[] = [
 		repo: 'sveltejs/svelte',
 		pkg: 'packages/svelte',
 		docs: 'documentation/docs',
+		types: 'types',
 		process_modules: async (modules: Modules) => {
 			// Remove $$_attributes from ActionReturn
 			const module_with_ActionReturn = modules.find((m) =>
@@ -50,6 +52,7 @@ const packages: Package[] = [
 		repo: 'sveltejs/kit',
 		pkg: 'packages/kit',
 		docs: 'documentation/docs',
+		types: 'types',
 		process_modules: async (modules, pkg) => {
 			const kit_base = `${pkg.local}/${pkg.pkg}/`;
 
@@ -121,6 +124,17 @@ const packages: Package[] = [
 
 			return modules;
 		}
+	},
+	{
+		name: 'cli',
+		local: `${REPOS}/svelte-cli`,
+		repo: 'sveltejs/cli',
+		pkg: 'packages/cli',
+		docs: 'documentation/docs',
+		types: 'dist',
+		process_modules: async (modules: Modules) => {
+			return modules;
+		}
 	}
 ];
 
@@ -144,7 +158,10 @@ for (const pkg of packages) {
 	cpSync(`${pkg.local}/${pkg.docs}`, `${DOCS}/${pkg.name}`, { recursive: true });
 	migrate_meta_json(`${DOCS}/${pkg.name}`);
 
-	const modules = await pkg.process_modules(await read_types(`${pkg.local}/${pkg.pkg}/`, []), pkg);
+	const modules = await pkg.process_modules(
+		await read_types(`${pkg.local}/${pkg.pkg}/${pkg.types}/`, []),
+		pkg
+	);
 
 	const files = glob(`${DOCS}/${pkg.name}/**/*.md`);
 
