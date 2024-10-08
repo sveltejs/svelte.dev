@@ -1,5 +1,6 @@
 import MagicString from 'magic-string';
 import { createHash } from 'node:crypto';
+import fs from 'node:fs';
 import { mkdir, readFile, readdir, stat, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import ts from 'typescript';
@@ -133,11 +134,9 @@ export async function render_content_markdown(
 	const highlighter = await twoslash_module.createShikiHighlighter({ theme: 'css-variables' });
 
 	const { type_links, type_regex } = create_type_links(modules, resolveTypeLinks);
-	const SNIPPET_CACHE = await create_snippet_cache(cacheCodeSnippets);
+	const snippets = await create_snippet_cache(cacheCodeSnippets);
 
 	body = await replace_export_type_placeholders(body, modules);
-
-	const conversions = new Map<string, string>();
 
 	const headings: string[] = [];
 
@@ -147,13 +146,83 @@ export async function render_content_markdown(
 
 	return await transform(body, {
 		async walkTokens(token) {
-			if (token.type === 'code' && (token.lang === 'js' || token.lang === 'svelte')) {
-				let { source, options } = parse_options(token.text, token.lang);
+			if (token.type === 'heading') {
+				current = token.text;
+			}
 
-				const converted = await generate_ts_from_js(source, token.lang, options);
-				if (converted) {
-					conversions.set(source, converted);
+			if (token.type === 'code') {
+				if (snippets.get(token.text)) return;
+
+				let { source, options } = parse_options(token.text, token.lang);
+				source = adjust_tab_indentation(source, token.lang);
+
+				const converted =
+					token.lang === 'js' || token.lang === 'svelte'
+						? await generate_ts_from_js(source, token.lang, options)
+						: undefined;
+
+				let html = '<div class="code-block"><div class="controls">';
+
+				if (options.file) {
+					const ext = options.file.slice(options.file.lastIndexOf('.'));
+					if (!ext) throw new Error(`Missing file extension: ${options.file}`);
+
+					html += `<span class="filename" data-ext="${ext}">${options.file.slice(0, -ext.length)}</span>`;
 				}
+
+				if (converted) {
+					html += `<input class="ts-toggle raised" checked title="Toggle language" type="checkbox" aria-label="Toggle JS/TS">`;
+				}
+
+				if (options.copy) {
+					html += `<button class="copy-to-clipboard raised" title="Copy to clipboard" aria-label="Copy to clipboard"></button>`;
+				}
+
+				html += '</div>';
+
+				html += syntax_highlight({
+					filename,
+					highlighter,
+					language: token.lang,
+					source,
+					twoslashBanner,
+					options
+				});
+
+				if (converted) {
+					html += syntax_highlight({
+						filename,
+						highlighter,
+						language: token.lang === 'js' ? 'ts' : token.lang,
+						source: converted,
+						twoslashBanner,
+						options
+					});
+				}
+
+				html += '</div>';
+
+				// TODO this is currently disabled, we don't have access to `modules`
+				if (type_regex) {
+					type_regex.lastIndex = 0;
+
+					html = html.replace(type_regex, (match, prefix, name, pos, str) => {
+						const char_after = str.slice(pos + match.length, pos + match.length + 1);
+
+						if (!options.link || name === current || /(\$|\d|\w)/.test(char_after)) {
+							// we don't want e.g. RequestHandler to link to RequestHandler
+							return match;
+						}
+
+						const link = type_links?.get(name)
+							? `<a href="${type_links.get(name)?.relativeURL}">${name}</a>`
+							: '';
+						return `${prefix || ''}${link}`;
+					});
+				}
+
+				// Save everything locally now
+				snippets.save(token.text, html);
 			}
 		},
 		text(token) {
@@ -185,79 +254,8 @@ export async function render_content_markdown(
 				''
 			)}<a href="#${slug}" class="permalink"><span class="visually-hidden">permalink</span></a></h${depth}>`;
 		},
-		code({ text, lang = 'js' }) {
-			const cached_snippet = SNIPPET_CACHE.get(text + lang + current);
-			if (cached_snippet.code) return cached_snippet.code;
-
-			let { source, options } = parse_options(text, lang);
-			source = adjust_tab_indentation(source, lang);
-
-			const converted = conversions.get(source);
-
-			let html = '<div class="code-block"><div class="controls">';
-
-			if (options.file) {
-				const ext = options.file.slice(options.file.lastIndexOf('.'));
-				if (!ext) throw new Error(`Missing file extension: ${options.file}`);
-
-				html += `<span class="filename" data-ext="${ext}">${options.file.slice(0, -ext.length)}</span>`;
-			}
-
-			if (converted) {
-				html += `<input class="ts-toggle raised" checked title="Toggle language" type="checkbox" aria-label="Toggle JS/TS">`;
-			}
-
-			if (options.copy) {
-				html += `<button class="copy-to-clipboard raised" title="Copy to clipboard" aria-label="Copy to clipboard"></button>`;
-			}
-
-			html += '</div>';
-
-			html += syntax_highlight({
-				filename,
-				highlighter,
-				language: lang,
-				source,
-				twoslashBanner,
-				options
-			});
-
-			if (converted) {
-				html += syntax_highlight({
-					filename,
-					highlighter,
-					language: lang === 'js' ? 'ts' : lang,
-					source: converted,
-					twoslashBanner,
-					options
-				});
-			}
-
-			html += '</div>';
-
-			// TODO this is currently disabled, we don't have access to `modules`
-			if (type_regex) {
-				type_regex.lastIndex = 0;
-
-				html = html.replace(type_regex, (match, prefix, name, pos, str) => {
-					const char_after = str.slice(pos + match.length, pos + match.length + 1);
-
-					if (!options.link || name === current || /(\$|\d|\w)/.test(char_after)) {
-						// we don't want e.g. RequestHandler to link to RequestHandler
-						return match;
-					}
-
-					const link = type_links?.get(name)
-						? `<a href="${type_links.get(name)?.relativeURL}">${name}</a>`
-						: '';
-					return `${prefix || ''}${link}`;
-				});
-			}
-
-			// Save everything locally now
-			SNIPPET_CACHE.save(cached_snippet?.uid, html);
-
-			return html;
+		code({ text }) {
+			return snippets.get(text);
 		},
 		codespan({ text }) {
 			return (
@@ -831,57 +829,44 @@ async function find_nearest_node_modules(start_path: string): Promise<string | n
  * ```
  */
 async function create_snippet_cache(should: boolean) {
-	const snippet_cache = (await find_nearest_node_modules(import.meta.url)) + '/.snippets';
+	const cache = new Map();
+	const directory = (await find_nearest_node_modules(import.meta.url)) + '/.snippets';
 
-	// No local cache exists yet
-	if (!CACHE_MAP.size && should) {
-		try {
-			await mkdir(snippet_cache, { recursive: true });
-		} catch {}
-
-		// Read all the cache files and populate the CACHE_MAP
-		try {
-			const files = await readdir(snippet_cache);
-
-			const file_contents = await Promise.all(
-				files.map(async (file) => ({
-					file,
-					content: await readFile(`${snippet_cache}/${file}`, 'utf-8')
-				}))
-			);
-
-			for (const { file, content } of file_contents) {
-				const uid = file.replace(/\.html$/, '');
-				CACHE_MAP.set(uid, content);
-			}
-		} catch {}
-	}
-
-	function get(source: string) {
-		if (!should) return { uid: null, code: null };
-
+	function get_file(source: string) {
 		const hash = createHash('sha256');
 		hash.update(source);
 		const digest = hash.digest().toString('base64').replace(/\//g, '-');
 
-		try {
-			return {
-				uid: digest,
-				code: CACHE_MAP.get(digest)
-			};
-		} catch {}
-
-		return { uid: digest, code: null };
+		return `${directory}/${digest}.html`;
 	}
 
-	function save(uid: string | null, content: string) {
-		if (!should || !uid) return;
+	return {
+		get(source: string) {
+			if (!should) return;
 
-		CACHE_MAP.set(uid, content);
-		writeFile(`${snippet_cache}/${uid}.html`, content);
-	}
+			let snippet = cache.get(source);
 
-	return { get, save };
+			if (snippet === undefined) {
+				const file = get_file(source);
+
+				if (fs.existsSync(file)) {
+					snippet = fs.readFileSync(file, 'utf-8');
+					cache.set(source, snippet);
+				}
+			}
+
+			return snippet;
+		},
+		save(source: string, html: string) {
+			cache.set(source, html);
+
+			try {
+				fs.mkdirSync(directory);
+			} catch {}
+
+			fs.writeFileSync(get_file(source), html);
+		}
+	};
 }
 
 function create_type_links(
