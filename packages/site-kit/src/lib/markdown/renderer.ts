@@ -236,14 +236,7 @@ export async function render_content_markdown(
 		heading({ tokens, depth, raw }) {
 			const text = this.parser!.parseInline(tokens);
 
-			const title = text
-				.replace(/<\/?code>/g, '')
-				.replace(/&quot;/g, '"')
-				.replace(/&lt;/g, '<')
-				.replace(/&gt;/g, '>');
-			current = title;
-			const normalized = normalizeSlugify(raw);
-			headings[depth - 1] = normalized;
+			headings[depth - 1] = normalizeSlugify(raw);
 			headings.length = depth;
 			const slug = headings.filter(Boolean).join('-');
 			return `<h${depth} id="${slug}">${text.replace(
