@@ -148,110 +148,6 @@ export async function render_content_markdown(
 		}
 	}
 
-	return parse({
-		body,
-		type_links,
-		code: (raw, language, current) => {
-			const cached_snippet = SNIPPET_CACHE.get(raw + language + current);
-			if (cached_snippet.code) return cached_snippet.code;
-
-			let { source, options } = parse_options(raw, language);
-			source = adjust_tab_indentation(source, language);
-
-			const converted = conversions.get(source);
-
-			let html = '<div class="code-block"><div class="controls">';
-
-			if (options.file) {
-				const ext = options.file.slice(options.file.lastIndexOf('.'));
-				if (!ext) throw new Error(`Missing file extension: ${options.file}`);
-
-				html += `<span class="filename" data-ext="${ext}">${options.file.slice(0, -ext.length)}</span>`;
-			}
-
-			if (converted) {
-				html += `<input class="ts-toggle raised" checked title="Toggle language" type="checkbox" aria-label="Toggle JS/TS">`;
-			}
-
-			if (options.copy) {
-				html += `<button class="copy-to-clipboard raised" title="Copy to clipboard" aria-label="Copy to clipboard"></button>`;
-			}
-
-			html += '</div>';
-
-			html += syntax_highlight({
-				filename,
-				highlighter,
-				language,
-				source,
-				twoslashBanner,
-				options
-			});
-
-			if (converted) {
-				html += syntax_highlight({
-					filename,
-					highlighter,
-					language: language === 'js' ? 'ts' : language,
-					source: converted,
-					twoslashBanner,
-					options
-				});
-			}
-
-			html += '</div>';
-
-			// TODO this is currently disabled, we don't have access to `modules`
-			if (type_regex) {
-				type_regex.lastIndex = 0;
-
-				html = html.replace(type_regex, (match, prefix, name, pos, str) => {
-					const char_after = str.slice(pos + match.length, pos + match.length + 1);
-
-					if (!options.link || name === current || /(\$|\d|\w)/.test(char_after)) {
-						// we don't want e.g. RequestHandler to link to RequestHandler
-						return match;
-					}
-
-					const link = type_links?.get(name)
-						? `<a href="${type_links.get(name)?.relativeURL}">${name}</a>`
-						: '';
-					return `${prefix || ''}${link}`;
-				});
-			}
-
-			// Save everything locally now
-			SNIPPET_CACHE.save(cached_snippet?.uid, html);
-
-			return html;
-		},
-		codespan: (text) => {
-			return (
-				'<code>' +
-				(type_regex
-					? text.replace(type_regex, (_, prefix, name) => {
-							const link = type_links?.get(name)
-								? `<a href="${type_links.get(name)?.relativeURL}">${name}</a>`
-								: '';
-							return `${prefix || ''}${link}`;
-						})
-					: text) +
-				'</code>'
-			);
-		}
-	});
-}
-
-async function parse({
-	body,
-	code,
-	codespan
-}: {
-	body: string;
-	type_links: Map<string, { relativeURL: string; slug: string; page: string }> | null;
-	code: (source: string, language: string, current: string) => string;
-	codespan: (source: string) => string;
-}) {
 	const headings: string[] = [];
 
 	// this is a bit hacky, but it allows us to prevent type declarations
@@ -288,11 +184,93 @@ async function parse({
 				''
 			)}<a href="#${slug}" class="permalink"><span class="visually-hidden">permalink</span></a></h${depth}>`;
 		},
-		code({ text, lang }) {
-			return code(text, lang ?? 'js', current);
+		code({ text, lang = 'js' }) {
+			const cached_snippet = SNIPPET_CACHE.get(text + lang + current);
+			if (cached_snippet.code) return cached_snippet.code;
+
+			let { source, options } = parse_options(text, lang);
+			source = adjust_tab_indentation(source, lang);
+
+			const converted = conversions.get(source);
+
+			let html = '<div class="code-block"><div class="controls">';
+
+			if (options.file) {
+				const ext = options.file.slice(options.file.lastIndexOf('.'));
+				if (!ext) throw new Error(`Missing file extension: ${options.file}`);
+
+				html += `<span class="filename" data-ext="${ext}">${options.file.slice(0, -ext.length)}</span>`;
+			}
+
+			if (converted) {
+				html += `<input class="ts-toggle raised" checked title="Toggle language" type="checkbox" aria-label="Toggle JS/TS">`;
+			}
+
+			if (options.copy) {
+				html += `<button class="copy-to-clipboard raised" title="Copy to clipboard" aria-label="Copy to clipboard"></button>`;
+			}
+
+			html += '</div>';
+
+			html += syntax_highlight({
+				filename,
+				highlighter,
+				language: lang,
+				source,
+				twoslashBanner,
+				options
+			});
+
+			if (converted) {
+				html += syntax_highlight({
+					filename,
+					highlighter,
+					language: lang === 'js' ? 'ts' : lang,
+					source: converted,
+					twoslashBanner,
+					options
+				});
+			}
+
+			html += '</div>';
+
+			// TODO this is currently disabled, we don't have access to `modules`
+			if (type_regex) {
+				type_regex.lastIndex = 0;
+
+				html = html.replace(type_regex, (match, prefix, name, pos, str) => {
+					const char_after = str.slice(pos + match.length, pos + match.length + 1);
+
+					if (!options.link || name === current || /(\$|\d|\w)/.test(char_after)) {
+						// we don't want e.g. RequestHandler to link to RequestHandler
+						return match;
+					}
+
+					const link = type_links?.get(name)
+						? `<a href="${type_links.get(name)?.relativeURL}">${name}</a>`
+						: '';
+					return `${prefix || ''}${link}`;
+				});
+			}
+
+			// Save everything locally now
+			SNIPPET_CACHE.save(cached_snippet?.uid, html);
+
+			return html;
 		},
 		codespan({ text }) {
-			return codespan(text);
+			return (
+				'<code>' +
+				(type_regex
+					? text.replace(type_regex, (_, prefix, name) => {
+							const link = type_links?.get(name)
+								? `<a href="${type_links.get(name)?.relativeURL}">${name}</a>`
+								: '';
+							return `${prefix || ''}${link}`;
+						})
+					: text) +
+				'</code>'
+			);
 		},
 		blockquote(token) {
 			let content = this.parser?.parse(token.tokens) ?? '';
