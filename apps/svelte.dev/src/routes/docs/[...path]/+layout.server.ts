@@ -9,6 +9,10 @@ export async function load({ params }) {
 	const document = docs.topics[`docs/${topic}`];
 
 	if (!document) {
+		if (docs.pages[`docs/svelte/${params.path}`]) {
+			redirect(308, `/docs/svelte/${params.path}`);
+		}
+
 		error(404, 'Not found');
 	}
 
