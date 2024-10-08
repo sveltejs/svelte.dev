@@ -11,8 +11,7 @@ const examples = example_sections.flatMap((section) => section.children);
 
 const UUID_REGEX = /^[0-9a-f]{8}-?[0-9a-f]{4}-?[0-9a-f]{4}-?[0-9a-f]{4}-?[0-9a-f]{12}$/;
 
-/** @param {Record<string, string>} files  */
-async function munge(files) {
+async function munge(files: Record<string, string>) {
 	const result = [];
 
 	for (const [file, source] of Object.entries(files)) {
@@ -91,5 +90,5 @@ export async function GET({ params }) {
 }
 
 export async function entries() {
-	return examples.map((example) => ({ id: example.slug }));
+	return examples.map((example) => ({ id: example.slug.split('/').pop()! }));
 }
