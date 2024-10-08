@@ -18,7 +18,7 @@ But the new routing isn't the only new feature in SvelteKit...
 - `$app/stores` can now be used from anywhere on the browser (**1.0.0-next.428**, [PR](https://github.com/sveltejs/kit/pull/6100))
 - `config.kit.env.dir` is a new config that sets the directory to search for `.env` files (**1.0.0-next.430**, [PR](https://github.com/sveltejs/kit/pull/6175))
 
-**Breaking changes:**
+### Breaking changes:
 
 - The filesystem-based router and `load` API improves the way routes are managed. **Before installing version `@sveltejs/kit@1.0.0-next.406` or later, [follow this migration guide](https://github.com/sveltejs/kit/discussions/5774)** ([PR](https://github.com/sveltejs/kit/pull/5778), [Issue](https://github.com/sveltejs/kit/discussions/5748))
 - `event.session` has been removed from `load` along with the `session` store and `getSession`. Use `event.locals` instead (**1.0.0-next.415**, [PR](https://github.com/sveltejs/kit/pull/5946))
@@ -28,7 +28,7 @@ But the new routing isn't the only new feature in SvelteKit...
 
 For a full list of changes, check out kit's [CHANGELOG](https://github.com/sveltejs/kit/blob/master/packages/kit/CHANGELOG.md).
 
-**Updates to language tools**
+### Updates to language tools
 
 - TypeScript doesn't resolve imports to SvelteKit's $types very well, the latest version of Svelte's language tools makes it better (**105.21.0**, [#1592](https://github.com/sveltejs/language-tools/pull/1592))
 
@@ -36,7 +36,7 @@ For a full list of changes, check out kit's [CHANGELOG](https://github.com/svelt
 
 ## Community Showcase
 
-**Apps & Sites built with Svelte**
+### Apps & Sites built with Svelte
 
 - [canno](https://twitter.com/a_warnes/status/1556724034959818754?s=20&t=RyKWALPByqMT5A_PkLtUew) is a simple interactive 3d physics game with adjustable gravity, cannon power, and debug visualizer - made with threlte
 - [straw.page](https://straw.page/) is an extremely simple website builder that lets you create unique websites straight from your phone
@@ -49,7 +49,7 @@ For a full list of changes, check out kit's [CHANGELOG](https://github.com/svelt
 - [classes.wtf](https://github.com/ekzhang/classes.wtf) is a custom, distributed search engine written in Go and Svelte to make searching for Harvard courses much quicker than the standard course catalog
 - [Scrumpack](https://scrumpack.io/) is a set of tools to help agile/scrum teams with their ceremonies like Planning Poker and Retrospectives
 
-**Learning Resources**
+### Learning Resources
 
 _Starring the Svelte team_
 
@@ -81,7 +81,7 @@ _To Read_
 - [Creating a Figma Plugin with Svelte](https://www.lekoarts.de/javascript/creating-a-figma-plugin-with-svelte) by Lennart
 - [Svelte Video Blog: Vlog with Mux from your own SvelteKit Site](https://plus.rodneylab.com/tutorials/svelte-video-blog) and [Svelte Shy Header: Peekaboo Sticky Header with CSS](https://rodneylab.com/svelte-shy-header/) by Rodney Lab
 
-**Libraries, Tools & Components**
+### Libraries, Tools & Components
 
 - [@svelte-plugins/tooltips](https://github.com/svelte-plugins/tooltips) is a simple tooltip action and component designed for Svelte
 - [Lucia](https://github.com/pilcrowOnPaper/lucia-sveltekit) is a simple authentication library for SvelteKit that connects your SvelteKit app to your database

@@ -26,7 +26,7 @@ That's all for the new features! If you're looking for other patches and perform
 
 Threlte [is throwing a hackathon](https://threlte.xyz/hackathon) (**motion warning for the landing page** - it will respect Reduce Motion settings). The kickoff event is on Sunday, 15 October 2023 16:00 UTC.
 
-**Apps & Sites built with Svelte**
+### Apps & Sites built with Svelte
 
 - [game-of-life-svelte](https://github.com/StephenGunn/game-of-life-svelte) is a Conway's Game of Life implementation using SvelteKit tech
 - [Limey](https://limey.io/) is an easy-to-use website builder for simple sites and landing pages
@@ -37,7 +37,7 @@ Threlte [is throwing a hackathon](https://threlte.xyz/hackathon) (**motion warni
 - [Dithering](https://www.sigrist.dev/dithering) is a tool to dither photos with plenty of options
 - [Rocky Mountain Slam](https://www.rockymountainslam.com/) is an interactive map to follow Jason Heyn as he attempts to complete the first ever Rocky Mountain Slam ([code](https://github.com/martyheyn/rocky-mnt-slam))
 
-**Learning Resources**
+### Learning Resources
 
 _Featuring Svelte Contributors and Ambassadors_
 
@@ -70,7 +70,7 @@ _To Read_
 - [Integrate Storybook in Svelte: Doing it the Svelte-way](https://mainmatter.com/blog/2023/09/18/integrate-storybook-in-svelte-doing-it-the-svelte-way/) by Oscar Dominguez
 - [The Sveltekit tutorial: Part 1 | What, why, and how?](https://tntman.tech/posts/sveltekit-guide-part-1) by Suyashtnt
 
-**Libraries, Tools & Components**
+### Libraries, Tools & Components
 
 - [KitForStartups](https://github.com/okupter/kitforstartups) is an Open Source SvelteKit SaaS boilerplate
 - [SuperNavigation](https://github.com/0xDjole/super-navigation) is a mobile-like navigation UX for the web

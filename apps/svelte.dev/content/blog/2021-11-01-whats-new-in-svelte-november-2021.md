@@ -27,7 +27,7 @@ To see all updates to Svelte and SvelteKit, check out the [Svelte](https://githu
 
 ## Community Showcase
 
-**Apps & Sites**
+### Apps & Sites
 
 - [Tangent](http://tangentnotes.com/) is a clean and powerful notes app for Mac & Windows
 - [The Pudding](https://pudding.cool/) is a digital publication that explains ideas debated in culture with visual essays - rebuilt in SvelteKit
@@ -43,7 +43,7 @@ To see all updates to Svelte and SvelteKit, check out the [Svelte](https://githu
 - [Helvetikon](https://github.com/noahsalvi/helvetikon) is a community maintained dictionary for the Swiss German language
 - [Palitra App](https://palitra.app/) is a search-based color palette generator
 
-**Podcasts Featuring Svelte**
+### Podcasts Featuring Svelte
 
 - [Svelte Radio](https://www.svelteradio.com/episodes/svelte-summit-is-coming-up-and-svelte-is-growing) dives into the tech behind the recently released Svelte Summit website and a bunch of other fun stuff!
 - [PodRocket](https://podrocket.logrocket.com/rich-harris), LogRocket's podcast, talks Svelte with Rich Harris
@@ -51,7 +51,7 @@ To see all updates to Svelte and SvelteKit, check out the [Svelte](https://githu
 - [Web Rush](https://webrush.io/episodes/episode-153-single-page-application-vs-multi-page-application-with-rich-harris) and Rich Harris talk about the differences between a SPA and MPA, what role the server rendering plays, what client side hydration is, and the state of modern tooling for developing an SPA or MPA
 - [devtools.fm](https://devtools.fm/episode/15) talks with Rich Harris about developing engaging data visualizations and building the tools of tomorrow
 
-**Educational Content**
+### Educational Content
 
 - [Have Single-Page Apps Ruined the Web?](https://www.youtube.com/watch?v=860d8usGC0o) Rich Harris answers the controversial question at this year's Jamstack Conf
 - [Svelte vs SvelteKit - What's The Difference?](https://www.youtube.com/watch?v=IKhtnhQKjxQ) LevelUpTuts provides a quick guide to explaining the relationship between the two projects. You can check out the rest of Scott Tolinski's guides to Svelte in his new series, ["Weekly Svelte"](https://www.youtube.com/playlist?list=PLLnpHn493BHF-Onm1MQgKC1psvW-rJuYi)
@@ -62,7 +62,7 @@ To see all updates to Svelte and SvelteKit, check out the [Svelte](https://githu
 - [Svelte Snacks | Custom Events for Modal Actions](https://jeremydayslice.hashnode.dev/svelte-snacks-or-custom-events-for-modal-actions) walks through a solid implementation of Svelte's handy custom event system
 - [What Svelte's accessibility warnings won't tell you](https://geoffrich.net/posts/svelte-a11y-limits/) explains how Svelte's a11y warnings work and why you shouldn't count on them to make your app accessible
 
-**Libraries, Tools & Components**
+### Libraries, Tools & Components
 
 - [svelte-adapter-azure-swa](https://github.com/geoffrich/svelte-adapter-azure-swa) is an adapter for Svelte apps that creates an Azure Static Web App, using an Azure function for dynamic server rendering
 - [Inlang](https://docs.inlang.dev/getting-started/svelte-kit) is a localization and internationalization toolkit that now supports SvelteKit

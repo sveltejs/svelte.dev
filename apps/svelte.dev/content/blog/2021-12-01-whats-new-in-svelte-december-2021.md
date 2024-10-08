@@ -42,7 +42,7 @@ If you have feedback on the Svelte Summit, Kev is [looking for feedback on the S
 
 ## Community Showcase
 
-**Apps & Sites**
+### Apps & Sites
 
 - [pixeldrain](https://github.com/Fornaxian/pixeldrain_web) is a free-to-use file sharing platform
 - [LifeHash](http://lifehash.info/) generates beautiful visual hashes from Blockchain Commons
@@ -56,7 +56,7 @@ If you have feedback on the Svelte Summit, Kev is [looking for feedback on the S
 
 **Looking for a Svelte project to work on? Interested in helping make Svelte's presence on the web better?** Check out [the list of open issues](https://github.com/svelte-society/sveltesociety-2021/issues) if you'd like to contribute to the Svelte Society rewrite in SvelteKit.
 
-**Videos, Blogs and Podcasts**
+### Videos, Blogs and Podcasts
 
 - [How To Make and Publish a Svelte Library](https://www.youtube.com/watch?v=_TymiadmPrc)
 - [SvelteKit is now fully supported in WebContainers](https://blog.stackblitz.com/posts/sveltekit-supported-in-webcontainers/)
@@ -71,7 +71,7 @@ If you have feedback on the Svelte Summit, Kev is [looking for feedback on the S
 - [Web Rush: Svelte and Elder.js with Nick Reese](https://webrush.io/episodes/episode-158-svelte-and-elderjs-with-nick-reese)
 - [Building SvelteKit applications with Serverless Redis](https://blog.upstash.com/svelte-with-serverless-redis)
 
-**Libraries, Tools & Components**
+### Libraries, Tools & Components
 
 - [svelte-cubed](https://github.com/Rich-Harris/svelte-cubed) is a Three.js component library for Svelte - created by Rich Harris for his presentation at Svelte Summit Fall 2021
 - [svelte-fsm](https://github.com/kenkunz/svelte-fsm) is a tiny, simple, expressive, pragmatic Finite State Machine (FSM) library, optimized for Svelte

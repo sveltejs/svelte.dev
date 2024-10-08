@@ -21,7 +21,7 @@ Let's dive in!
 - `config.kit.alias` lets you more easily declare a custom alias to replace values in `import` statements ([Docs](https://kit.svelte.dev/docs/configuration#alias), [PR](https://github.com/sveltejs/kit/pull/4964))
 - Pages marked for prerendering will now fail during SSR at runtime ([PR](https://github.com/sveltejs/kit/pull/4812))
 
-**Breaking Changes**
+### Breaking Changes
 
 - Node 14 is no longer supported ([PR](https://github.com/sveltejs/kit/pull/4922))
 - Requests to `/favicon.ico` will no longer be suppressed and will instead be handled as a valid route ([PR](https://github.com/sveltejs/kit/pull/5046))
@@ -35,7 +35,7 @@ Let's dive in!
 
 ## Community Showcase
 
-**Apps & Sites built with Svelte**
+### Apps & Sites built with Svelte
 
 - [Plantarium](https://github.com/jim-fx/plantarium) is a tool for the procedural generation of 3D plants.
 - [SPATULA](https://github.com/AlexWarnes/lamina-spatula) is a tool for building shading materials that are exportable as code material in any project that uses lamina and threejs
@@ -51,7 +51,7 @@ Let's dive in!
 
 Looking for a great SvelteKit website to contribute to? [Help build the Svelte Society site](https://github.com/svelte-society/sveltesociety.dev/issues)!
 
-**Learning Resources**
+### Learning Resources
 
 _To Read_
 
@@ -92,7 +92,7 @@ _To Hear_
   - [Stores Galore](https://www.svelteradio.com/episodes/stores-galore)
 - [Svelte and the Future of Frontend Development (feat. Rich Harris)](https://thenewstack.io/svelte-and-the-future-of-front-end-development/) from The New Stack
 
-**Libraries, Tools & Components**
+### Libraries, Tools & Components
 
 - [vite-plugin-svelte-console-remover](https://github.com/jhubbardsf/vite-plugin-svelte-console-remover) is a Vite plugin that removes all console statements (log, group, dir, error, etc) from Svelte, JS, and TS files during build so they don't leak into production
 - [Svelte Headless Tables](https://github.com/bryanmylee/svelte-headless-table) is an unopinionated and extensible data tables for Svelte
@@ -103,7 +103,8 @@ _To Hear_
 - [svelte-keybinds](https://github.com/ThaUnknown/svelte-keybinds) is a minimalistic keybinding interface, with rebinding and saving
 - [svelte-speech-recognition](https://github.com/jhubbardsf/svelte-speech-recognition) converts speech from the microphone to text and makes it available to your Svelte components
 
-**Special Feature: Svelte Stores**
+### Special Feature: Svelte Stores
+
 There were lots of Svelte stores released this month from a number of authors...
 
 - [svelte-mutable-store](https://github.com/feltcoop/svelte-mutable-store) is a Svelte store for mutable values with the `immutable` compiler option

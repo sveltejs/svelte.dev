@@ -38,7 +38,7 @@ For all the changes in SvelteKit, including bug fixes and adapter-specific chang
 
 ## Community Showcase
 
-**Apps & Sites built with Svelte**
+### Apps & Sites built with Svelte
 
 - [notepad](https://www.usenotepad.com/) is a workspace for freelancers. Providing time tracking, tasks, reports, invoices and contacts all in one tool.
 - [Tokenbase](https://github.com/mateoroldos/tokenbase) is a free tool for creating, managing and distributing Design Tokens. Easily create your Design Systems and export them to code in a few clicks.
@@ -52,7 +52,7 @@ For all the changes in SvelteKit, including bug fixes and adapter-specific chang
 - [Routickr](https://www.routickr.com/) is a habit-tracking app with Firefox and Chrome extensions
 - [immich](https://immich.app/) is a self-hosted photo and video management solution
 
-**Learning Resources**
+### Learning Resources
 
 _Featuring Svelte Contributors and Ambassadors_
 
@@ -70,7 +70,7 @@ _To Read/Watch_
 - [How we built our 41kb SaaS Website](https://criticalmoments.io/blog/how_we_built_our_marketing_page) by Critical Moments
 - [Migrating a personal homepage to Svelte](https://jakeout.com/posts/2024-03-04-svelte) by Jake Ouelletee
 
-**Libraries, Tools & Components**
+### Libraries, Tools & Components
 
 - [Svisualize](https://svisualize.dev/) is a VS Code Extension that visualizes your components as you code
 - [Neel/UI](https://github.com/aidan-neel/neel-ui) is a shadcn-inspired set of customizable components that you can copy and paste into your SvelteKit apps

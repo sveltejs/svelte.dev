@@ -44,7 +44,7 @@ _Day Two_
 - Cloudflare Pages `_routes.json` specification is now supported by `adapter-cloudflare` ([#6530](https://github.com/sveltejs/kit/pull/6530))
 - Improved build performance by running asset and page compression in parallel ([#6710](https://github.com/sveltejs/kit/pull/6710))
 
-**Breaking changes:**
+### Breaking changes:
 
 - Node 16.14 is now the minimum version to run SvelteKit ([#6388](https://github.com/sveltejs/kit/pull/6388))
 - `App.PrivateEnv` and `App.PublicEnv` have been removed in favour of generated types ([#6413](https://github.com/sveltejs/kit/pull/6413))
@@ -80,7 +80,7 @@ It can be used for anything you may be trying to accomplish using Svelte includi
 
 ## Community Showcase
 
-**Apps & Sites built with Svelte**
+### Apps & Sites built with Svelte
 
 - [Timeflow](https://www.timeflow.site/) is a smart calendar & task manager that dynamically schedules your tasks between your events
 - [GeoQuest](https://github.com/woutdp/geoquest) is an open source geography game
@@ -96,7 +96,7 @@ It can be used for anything you may be trying to accomplish using Svelte includi
 - [Porter's Paints](https://shop.porterspaints.com/) is an eCommerce site for (you guessed it) paints built with Svelte
 - [CRAN/E](https://www.cran-e.com/) is a search engine for modern R-packages
 
-**Learning Resources**
+### Learning Resources
 
 _Starring the Svelte team_
 
@@ -122,7 +122,7 @@ _To Read_
 - [Deploying SvelteKit with NodeJS to a Server Using GitLab and PM2](https://abyteofcoding.com/blog/deploying-sveltekit-with-nodejs-pm2-to-server/) by A Byte of Coding
 - [Quality of Life Tips when using SvelteKit in VS Code](https://www.reddit.com/r/sveltejs/comments/xltgyp/quality_of_life_tips_when_using_sveltekit_in_vs/) by doa-doa
 
-**Libraries, Tools & Components**
+### Libraries, Tools & Components
 
 - [Svelte Fit](https://github.com/leveluptuts/svelte-fit) is an extremely simple, no dependency fit text library
 - [svelte-switch-case](https://github.com/l-portet/svelte-switch-case) is a switch case syntax for your Svelte components

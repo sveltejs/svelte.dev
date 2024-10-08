@@ -16,7 +16,7 @@ There's also a _huge_ showcase to cover... so let's jump in!
 - `goto` now has `invalidateAll` to (re-)run all `load` functions belonging to the new active page ([docs](https://kit.svelte.dev/docs/modules#$app-navigation-goto), [#7407](https://github.com/sveltejs/kit/pull/7407))
 - `config.kit.paths.base` is now used in adapters looking for static assets - fixing 404 issues across `adapter-netlify`, `adapter-vercel`, `adapter-cloudflare`, and `adapter-cloudflare-workers` ([#4448](https://github.com/sveltejs/kit/pull/4448))
 
-**Breaking changes:**
+### Breaking changes:
 
 - Errors will now be thrown when routes conflict ([#7051](https://github.com/sveltejs/kit/pull/7051))
 - The global `fetch` override has been removed when prerendering ([#7318](https://github.com/sveltejs/kit/pull/7318))
@@ -37,7 +37,7 @@ Tom Smykowski also released a great summary of [all the changes in 3.52.0](https
 
 ## Community Showcase
 
-**Apps & Sites built with Svelte**
+### Apps & Sites built with Svelte
 
 - [AttendZen](https://www.attendzen.io/) is an event management and marketing platform for in-person, virtual or hybrid events
 - [Gram Jam](https://gramjam.app/) is a challenging daily word game using SvelteKit
@@ -56,7 +56,7 @@ Tom Smykowski also released a great summary of [all the changes in 3.52.0](https
 - [splits](https://splits.best/) lets you track your splits, calculate your race pace, become a better athlete
 - [Weaver](https://jrende.xyz/weaver/) is an application for creating [weave drafts](https://www.gistyarn.com/blogs/how-to-weave/how-to-read-a-weaving-draft)
 
-**Learning Resources**
+### Learning Resources
 
 _To Watch_
 
@@ -81,7 +81,7 @@ _To Read_
 - [Creating a Svelte Tabs component with Slot props](https://blog.openreplay.com/creating-a-svelte-tabs-component-with-slot-props/) by Shinichi Okada
 - [Sky Cart: An Open Source, cloud-agnostic shopping cart using Stripe Checkout](https://dev.to/stripe/sky-cart-an-open-source-cloud-agnostic-shopping-cart-using-stripe-checkout-o5k) by Mike Bifulco for Stripe
 
-**Libraries, Tools & Components**
+### Libraries, Tools & Components
 
 - [Threlte](https://threlte.xyz/) is a component library for Svelte to build and render three.js scenes declaratively and state-driven in Svelte apps. It's being featured again to highlight the new "Playground" button in its examples
 - [Svelte Turnstile](https://github.com/ghostdevv/svelte-turnstile) is a library to integrate Cloudflare's Turnstile (a new CAPTCHA alternative) into a Svelte app

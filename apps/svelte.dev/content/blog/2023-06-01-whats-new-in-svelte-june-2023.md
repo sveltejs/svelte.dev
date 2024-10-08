@@ -37,7 +37,7 @@ For all the changes to the Svelte compiler, including unreleased changes, check 
 
 ## Community Showcase
 
-**Apps & Sites built with Svelte**
+### Apps & Sites built with Svelte
 
 - [a-maze](https://github.com/nedredmond/a-maze) is a simple maze generator (using DFS) with any dimensions between 5 cells and 75 cells
 - [Windows 11 in Svelte](https://github.com/yashash-pugalia/win11-svelte) attempts to replicate the Windows 11 desktop experience on web
@@ -54,7 +54,7 @@ For all the changes to the Svelte compiler, including unreleased changes, check 
 - [prcl](https://prcl.dev/) is a Pastebin-alternative focused on speed and simplicity
 - [md](https://github.com/rossrobino/md) is a web based markdown editor
 
-**Learning Resources**
+### Learning Resources
 
 _Featuring Svelte Contributors and Ambassadors_
 
@@ -88,7 +88,7 @@ _To Read_
 - [Performant Reactivity with Svelte-Kit](https://itnext.io/performant-reactivity-with-svelte-kit-47d11769c5f) by Erxk
 - [Svelte stores: the curious parts](https://blog.thoughtspile.tech/2023/04/22/svelte-stores/) by Valdimir Klepov
 
-**Libraries, Tools & Components**
+### Libraries, Tools & Components
 
 - [svelte-svg-transform](https://github.com/bartektelec/svelte-svg-transform) is a tiny library that makes it easier for you to add SVGs and transform them in your Svelte project
 - [sirens](https://github.com/spiegelgraphics/sirens) is a visualization of active air raid sirens in Ukraine by DER SPIEGEL

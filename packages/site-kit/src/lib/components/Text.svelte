@@ -113,6 +113,7 @@
 
 				&:has(.filename) {
 					position: relative;
+					background: var(--sk-back-3);
 				}
 
 				.filename {
@@ -123,7 +124,7 @@
 					flex: 1;
 					font-family: var(--sk-font-ui);
 					font-size: var(--sk-font-size-ui-small);
-					color: var(--sk-text-4);
+					color: var(--sk-text-3);
 					text-overflow: ellipsis;
 					overflow: hidden;
 					white-space: nowrap;

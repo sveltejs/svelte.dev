@@ -14,7 +14,7 @@ Welcome back to the "What's new in Svelte" series! This month, we're covering ne
 2. Slot forwarding (released in 3.29.0) should no longer hang during compilation (**3.29.3**, [Example](https://svelte.dev/repl/29959e70103f4868a6525c0734934936?version=3.29.3))
 3. Better typings for the `get` function in `svelte/store` and on lifecycle hooks (**3.29.1**)
 
-**What's going on in Sapper?**
+### What's going on in Sapper?
 
 Sapper got some new types in its `preload` function, which will make typing easier if you are using TypeScript. See the [Sapper docs](https://sapper.svelte.dev/docs#Typing_the_function) on how to use them. There also were fixes to `preload` links in exported sites. Route layouts got a few fixes too - including ensuring CSS is applied to nested route layouts. You can also better organize your files now that extensions with multiple dots are supported. (**0.28.10**)
 

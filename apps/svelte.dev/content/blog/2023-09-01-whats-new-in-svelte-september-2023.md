@@ -25,7 +25,7 @@ But that's just the new features! For all the patches and performance updates fr
 
 ## Community Showcase
 
-**Apps & Sites built with Svelte**
+### Apps & Sites built with Svelte
 
 - [Planet Of The Bugs](https://planetofthebugs.xyz/) allows developers to practice and hone their skill-sets by exposing them to an endless supply of unique, curated issues and bugs from popular open-source projects on Github
 - [Minesweeper](https://github.com/ProductionPanic/minesweeper/tree/main) is an Android game built with SvelteKit, Capacitor, TailwindCSS and DaisyUI (check it out on the [Google Play Store](https://play.google.com/store/apps/details?id=com.production.panic.minesweeper&pli=1))
@@ -39,7 +39,8 @@ But that's just the new features! For all the patches and performance updates fr
 - [Ubuntu 22.04 in Svelte](https://github.com/manhhungpc/ubuntu2204-svelte) aims to replicate the Ubuntu 22.04 desktop experience on the web
 - [My Queue](https://www.myqueue.so/) creates a playlist of written articles by turning them into audio stories
 
-**Learning Resources**
+### Learning Resources
+
 _Featuring Svelte Contributors and Ambassadors_
 
 - [Svelte Society - London August 2023](https://www.youtube.com/watch?v=90Psdk5rAnU)
@@ -83,7 +84,7 @@ _To Read_
 - [Type-safe User Authentication in SvelteKit with Lucia, Planetscale, and Upstash Redis](https://upstash.com/blog/lucia-sveltekit) by Chris Jayden
 - [Document Svelte Projects with HTML and JSDoc Comments](https://blog.robino.dev/posts/doc-comments-svelte) by Ross Robino
 
-**Libraries, Tools & Components**
+### Libraries, Tools & Components
 
 - [Carta](https://github.com/BearToCode/carta-md) is a lightweight, fast and extensible Svelte Markdown editor and viewer, based on Marked
 - [Threlte](https://threlte.xyz/), the 3D framework built from Svelte and Three.js has released version 6

@@ -1,20 +1,19 @@
 <script lang="ts">
 	import { invalidateAll } from '$app/navigation';
+	import { storage_key } from '../auth/_config';
 	import { set_app_context } from './app-context';
 
 	set_app_context({
-		login: () => {
-			const login_window = window.open(
-				`${window.location.origin}/auth/login`,
-				'login',
-				'width=600,height=400'
-			);
+		login: async () => {
+			window.open(`${window.location.origin}/auth/login`, 'login', 'width=600,height=400');
 
-			window.addEventListener('message', function handler(event) {
-				if (event.data.source !== 'svelte-auth') return;
-				login_window!.close();
-				window.removeEventListener('message', handler);
-				invalidateAll();
+			// we can't interact directly with opener, so we use localStorage as a side channel
+			window.addEventListener('storage', function handler(event) {
+				if (event.key === storage_key) {
+					invalidateAll();
+					window.removeEventListener('storage', handler);
+					this.localStorage.clearItem(storage_key);
+				}
 			});
 		},
 

@@ -37,7 +37,7 @@ Now let's jump into this month's changes...
 
 ## Community Showcase
 
-**Apps & Sites built with Svelte**
+### Apps & Sites built with Svelte
 
 - [win32.run](https://github.com/ducbao414/win32.run) is a version of Windows XP in the browser - with a File System, programs, XP-style File Picker and Saver dialogs, 3rd-party programs, and more
 - [Svelte Radial Menu](https://github.com/tglide/svelte-radial-menu) is a radial menu experiment - based on [Rauno's radial menu](https://rauno.me/craft/radial-menu)
@@ -52,7 +52,7 @@ Now let's jump into this month's changes...
 - [demo-threlte-scroller-rocinante](https://twitter.com/a_warnes/status/1629235313808744449) is a "scrolly telling" proof-of-concept that combines svelte-sequence with Threlte
 - [Phonics + Stuff](https://www.phonicsandstuff.com/) is a set of resources for learning & teaching phonics
 
-**Learning Resources**
+### Learning Resources
 
 _Featuring Svelte Contributors and Ambassadors_
 
@@ -84,7 +84,7 @@ _To Read_
 - [Add a sitemap to your server side rendered SvelteKit website](https://www.okupter.com/blog/sitemap-server-side-rendered-sveltekit-website) and [State in URL: the SvelteKit approach](https://www.okupter.com/blog/state-in-url-the-sveltekit-approach) by Justin Ahinon
 - [Display crypto data real-time in a chart using Sveltekit, Chart.js & coincap.io](https://medium.com/@Heesel/display-crypto-data-real-time-in-a-chart-using-sveltekit-chart-js-coincap-io-70b90d3aac90) by Hessel
 
-**Libraries, Tools & Components**
+### Libraries, Tools & Components
 
 _UI Kits and Components_
 

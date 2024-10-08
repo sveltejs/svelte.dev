@@ -33,7 +33,7 @@ For all the changes in SvelteKit, check out the [CHANGELOG](https://github.com/s
 
 ## Community Showcase
 
-**Apps & Sites built with Svelte**
+### Apps & Sites built with Svelte
 
 - [Wishgram](https://www.wishgram.xyz/) is a tool to generate handwritten wishing cards
 - [rfidify](https://github.com/jonathanjameswilliams26/rfidify) is a Raspberry PI RFID reader that plays things on Spotify
@@ -42,7 +42,7 @@ For all the changes in SvelteKit, check out the [CHANGELOG](https://github.com/s
 - [Photo Multitool](https://www.photomultitool.com/) is a free set of online tools for manipulating photos
 - [sveltekit-weather-app](https://github.com/maxjerry0107/sveltekit-weather-app) is a gorgeous weather app made with SvelteKit
 
-**Learning Resources**
+### Learning Resources
 
 _Featuring Svelte Contributors and Ambassadors_
 
@@ -60,7 +60,7 @@ _To Read/Watch_
 - [How to build an editable website in 15 minutes in 2024](https://www.svelteheadless.com/how-to-build-an-editable-website-in-15-minutes-in-2024) by Svelte Headless
 - [Local-First LiveView Svelte ToDo App](https://liveview-svelte-pwa.fly.dev/) by Tony Dang
 
-**Libraries, Tools & Components**
+### Libraries, Tools & Components
 
 - [PaneForge](https://github.com/svecosystem/paneforge) provides components that make it easy to create resizable panes in your Svelte apps
 - [Svelte UX](https://svelte-ux.techniq.dev/) and [LayerChart](https://www.layerchart.com/) now include theme support via semantic and state classes

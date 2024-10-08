@@ -20,7 +20,7 @@ Let's get to it!
 - `version` is now available via `$app/environment` ([#7689](https://github.com/sveltejs/kit/pull/7689), [#7694](https://github.com/sveltejs/kit/pull/7694))
 - `handleError` can now return a promise ([#7780](https://github.com/sveltejs/kit/pull/7780))
 
-**Breaking changes:**
+### Breaking changes:
 
 - `routeId` is now `route.id` ([#7450](https://github.com/sveltejs/kit/pull/7450))
 - 'load' has been renamed to 'enter' and 'unload' to 'leave' in the `beforeNavigate` and `afterNavigate` methods. `beforeNavigate` is now called once with type 'unload' on external navigation and will no longer run during redirects ([#7502](https://github.com/sveltejs/kit/pull/7502), [#7529](https://github.com/sveltejs/kit/pull/7529), [#7588](https://github.com/sveltejs/kit/pull/7588))
@@ -45,7 +45,7 @@ For all the changes to the Svelte compiler, including unreleased changes, check 
 
 ## Community Showcase
 
-**Apps & Sites built with Svelte**
+### Apps & Sites built with Svelte
 
 - [Appwrite's new console](https://github.com/appwrite/console) makes its secure backend server for web, mobile & Flutter developers available in the browser
 - [RepoMagic](https://www.repomagic.com/) is a search and analytics tool for GitHub
@@ -64,7 +64,7 @@ For all the changes to the Svelte compiler, including unreleased changes, check 
 - [SVGPS](https://svgps.app/) removes the burden of working with a cluster of SVG files by converting your icons into a single JSON file
 - [This 3D retro-themed asteroid shooter](https://photon-alexwarnes.vercel.app/showcase/asteroids) was made with threlte
 
-**Learning Resources**
+### Learning Resources
 
 _To Hear_
 
@@ -84,7 +84,7 @@ _To Read_
 - [Why I failed to create the "Solid.js's store" for Svelte, and announcing svelte-store-tree v0.3.1](https://dev.to/igrep/why-i-failed-to-create-the-solidjss-store-for-svelte-and-announcing-svelte-store-tree-v031-1am2) by YAMAMOTO Yuji
 - [Create an offline-first and installable PWA with SvelteKit and workbox-precaching](https://www.sarcevic.dev/offline-first-installable-pwa-sveltekit-workbox-precaching) by Antonio Sarcevic
 
-**Libraries, Tools & Components**
+### Libraries, Tools & Components
 
 - [Skeleton](https://www.skeleton.dev/) is a UI toolkit to build fast and reactive web interfaces using Svelte + Tailwind CSS
 - [svelte-svg-spinners](https://github.com/luluvia/svelte-svg-spinners) is a collection of SVG Spinners components

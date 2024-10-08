@@ -85,7 +85,8 @@ export function smart_quotes(str: string, html: boolean = false) {
 	return str.replace(
 		html ? /(.|^)(&#39;|&quot;)(.|$)/g : /(.|^)('|")(.|$)/g,
 		(m, before, quote, after) => {
-			const left = !before.trim();
+			const trimmed = before.trim();
+			const left = trimmed === '' || trimmed === '(';
 			let replacement = '';
 
 			if (html) {

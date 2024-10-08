@@ -92,7 +92,7 @@ kbd {
 }
 
 code {
-	font-size: var(--sk-font-size-code);
+	font-size: 0.666em;
 	position: relative;
 	border-radius: 0.3em;
 	white-space: nowrap;
@@ -100,7 +100,6 @@ code {
 	-webkit-font-smoothing: initial;
 	padding: 0.4rem;
 	margin: 0 0.2rem;
-	top: -0.1rem;
 	background: var(--sk-back-4);
 	line-height: 1.7;
 }
@@ -115,6 +114,7 @@ pre code {
 	background-color: transparent;
 	padding: 0;
 	margin: 0;
+	font-size: var(--sk-font-size-code);
 }
 
 ::selection {

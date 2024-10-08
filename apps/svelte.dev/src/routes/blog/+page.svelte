@@ -28,7 +28,7 @@
 	<article class="top" data-pubdate={top.date}>
 		<a href="/{top.slug}" title="Read the article »">
 			<h2>{top.metadata.title}</h2>
-			<p>{top.metadata.description}</p>
+			<p>{@html top.metadata.description}</p>
 		</a>
 
 		<Byline post={top} />

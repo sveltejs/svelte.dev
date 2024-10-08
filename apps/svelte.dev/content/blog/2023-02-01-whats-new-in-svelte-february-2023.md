@@ -38,7 +38,7 @@ Work in the Svelte ecosystem this month has been focused on SvelteKit bug fixes 
 
 ## Community Showcase
 
-**Apps & Sites built with Svelte**
+### Apps & Sites built with Svelte
 
 - [Titowest.com](https://titowest.com/) is a series of photographic films by the writer & photographer, Tito West
 - [Verve](https://github.com/ParthJadhav/verve) is a lightweight and blazingly fast launcher for accessing and opening applications, files and documents
@@ -52,7 +52,7 @@ Work in the Svelte ecosystem this month has been focused on SvelteKit bug fixes 
 - [Pixelicious](https://www.pixelicious.xyz/) converts your images into pixel art
 - [Apple Music](https://music.apple.com/us/browse) is now built with Svelte ([proof](https://twitter.com/BrittneyPostma/status/1615381017300271104))
 
-**Learning Resources**
+### Learning Resources
 
 _Featuring Svelte Contributors and Ambassadors_
 
@@ -91,7 +91,7 @@ _To Read_
 - [Tailwind + Sveltekit in 2023](https://medium.com/@gentmitch/tailwind-sveltkit-in-2023-44c19d91c8fd) by Mitch Gent
 - [Svelte Stores Tutorial: Share Data Between Multiple Components](https://learnjavascripts.com/development/web-development/frameworks/svelte/svelte-stores-tutorial-share-data-between-multiple-components/) by Vincent Widerberg
 
-**Libraries, Tools & Components**
+### Libraries, Tools & Components
 
 - [Sveltepress](https://sveltepress.site/) is a simple, easy to use, content centered site build tool with the full power of SvelteKit
 - [Svelte Form Helper](https://www.npmjs.com/package/svelte-form-helper) is a lightweight helper for form validation with Svelte

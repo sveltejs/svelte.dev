@@ -40,7 +40,7 @@ These will all get broken up into more sharable (and rewatchable) videos over ti
 
 ## Community Showcase
 
-**Apps & Sites built with Svelte**
+### Apps & Sites built with Svelte
 
 - [Collabwriting](https://www.reddit.com/r/sveltejs/comments/1c6zylc/weve_just_raised_12m_launched_new_product_2year/) just raised $1.2M and launched a new product - [Collabwriting for Teams](https://www.producthunt.com/posts/collabwriting-for-teams). Congrats!
 - [Skypix](https://github.com/GhostWalker562/css475-music-library) is a music library that allows users to create playlists, add songs to their library, and share their music with friends
@@ -53,7 +53,7 @@ These will all get broken up into more sharable (and rewatchable) videos over ti
 - [Fourplay](https://github.com/kilroyjones/fourplay) is a multiplayer word game written with Rust and Svelte
 - [how-long-is-a-click](https://www.how-long-is-a-click.com/) is a site that measures how long _exactly_ a click is on the web
 
-**Learning Resources**
+### Learning Resources
 
 _Featuring Svelte Contributors and Ambassadors_
 
@@ -92,7 +92,7 @@ _To Watch_
 - [Build the Ultimate Learning Platform with SvelteKit, PocketBase & TailwindCSS!](https://www.youtube.com/watch?v=b2ftRSX1iZ0&t=47s) and [Lets Build A Filtering System with Svelte 5 , Sveltekit 2, Tailwind, Upstash](https://www.youtube.com/watch?v=5urk4ui_l5o) by Lawal Adebola
 - [Porting a vanilla JavaScript library to Svelte 5](https://www.youtube.com/watch?v=apIJlWJ3HgQ) by Stanislav Khromov
 
-**Libraries, Tools & Components**
+### Libraries, Tools & Components
 
 - [sk-seo](https://github.com/TheDahoom/Sveltekit-seo/) is a dead simple, no dependencies, svelte component that automates a lot of the annoying SEO parts for you
 - [Svelte Lib Helpers](https://github.com/shinokada/svelte-lib-helpers) is a utility package designed to streamline various tasks when developing Svelte libraries

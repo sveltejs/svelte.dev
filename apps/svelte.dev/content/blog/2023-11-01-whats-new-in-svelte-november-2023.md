@@ -28,7 +28,7 @@ For a complete list of bug fixes and performance updates, check out the [SvelteK
 
 ## Community Showcase
 
-**Apps & Sites built with Svelte**
+### Apps & Sites built with Svelte
 
 - [4THSEX](https://4thsex.com/) is a creative website for the producer / creative director with the same name
 - [Syntax.fm](https://github.com/syntaxfm/website) has been redesigned from the ground up with SvelteKit
@@ -41,7 +41,7 @@ For a complete list of bug fixes and performance updates, check out the [SvelteK
 - [Sessionic](https://github.com/navorite/sessionic) is a web extension to easily save browser sessions and manage them
 - [Pilink](https://pil.ink/) is a "suckless" link shortener
 
-**Learning Resources**
+### Learning Resources
 
 _Featuring Svelte Contributors and Ambassadors_
 
@@ -76,7 +76,7 @@ _To Read_
 - [When and Where to Render](https://blog.robino.dev/posts/rendering-strategies) and [One Less Reason to Build a Native App](https://blog.robino.dev/posts/install-web-app) by Ross Robino
 - [Open Neovim From Your Browser - Integrating nvim with Svelte’s Inspector](https://theosteiner.de/open-neovim-from-your-browser-integrating-nvim-with-sveltes-inspector) by Theo Steiner
 
-**Libraries, Tools & Components**
+### Libraries, Tools & Components
 
 - Work to [support SvelteKit in Deno](https://github.com/denoland/deno/issues/17248) is ongoing and [Deno now supports](https://github.com/denoland/deno/pull/21026) creating SvelteKit projects out-of-the-box!
 - [Purplix](https://github.com/WardPearce/Purplix.io) is an open-source collection of tools dedicated to user privacy and creating trust with your audience

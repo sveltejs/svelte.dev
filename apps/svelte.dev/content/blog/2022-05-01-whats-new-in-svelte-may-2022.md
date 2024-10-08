@@ -25,7 +25,7 @@ With yesterday's Svelte Summit behind us, we've got a lot of news to share! Chec
 - Netlify Edge Functions ([#4657](https://github.com/sveltejs/kit/pull/4657)) and the Vercel build output API ([#4663](https://github.com/sveltejs/kit/pull/4663)) are now supported
 - Custom `load` dependencies, array of strings representing URLs the page depends on, are now available when loading routes ([Docs](https://kit.svelte.dev/docs/loading#output-dependencies), [#4536](https://github.com/sveltejs/kit/pull/4536))
 
-**Breaking Changes**
+### Breaking Changes
 
 - Validators are now called "matchers" ([Docs](https://kit.svelte.dev/docs/routing#advanced-routing-matching), [#4358](https://github.com/sveltejs/kit/pull/4358))
 - `__layout.reset` has been replaced by named layouts - which have much configurability for shared layout elements ([Docs](https://kit.svelte.dev/docs/layouts#named-layouts), [#4388](https://github.com/sveltejs/kit/pull/4388))
@@ -36,7 +36,7 @@ With yesterday's Svelte Summit behind us, we've got a lot of news to share! Chec
 
 ## Community Showcase
 
-**Apps & Sites built with Svelte**
+### Apps & Sites built with Svelte
 
 - [polySpectra AR](https://ar.polyspectra.com/) lets you prototype faster 3D Printing with seamless AR file handoffs ([video demo](https://www.youtube.com/watch?v=VhYCeVGcG3E))
 - [Pixel Art Together](https://github.com/liveblocks/pixel-art-together) is a free multiplayer pixel art editor powered by Liveblocks
@@ -51,7 +51,7 @@ With yesterday's Svelte Summit behind us, we've got a lot of news to share! Chec
 
 Want to contribute to a modern SvelteKit website? [Help build the Svelte Society site](https://github.com/svelte-society/sveltesociety.dev/issues)!
 
-**Learning Resources**
+### Learning Resources
 
 _To Read_
 
@@ -70,7 +70,7 @@ _To Watch or Hear_
 - [Implementing {@const} in if block](https://www.youtube.com/watch?v=f5iReGqjmG0) by lihautan
 - [Svelte and Contributing to Open-Source with Geoff Rich](https://podcast.20minjs.com/1952066/10417700-episode-6-svelte-and-contributing-to-open-source-with-geoff-rich) by 20minJS
 
-**Libraries, Tools & Components**
+### Libraries, Tools & Components
 
 - [KitDocs](https://github.com/svelteness/kit-docs) is a documentation integration for SvelteKit - like VitePress for Svelte.
 - [Svelte Copy](https://github.com/ghostdevv/svelte-copy) is a click/tap-to-copy library that makes it easy to copy to the clipboard

@@ -33,7 +33,7 @@ We will also be utilizing OpenCollective funds to allow Svelte core maintainers 
 
 ## Community Showcase
 
-**Apps & Sites built with Svelte**
+### Apps & Sites built with Svelte
 
 - [Virtual Maker](https://www.virtualmaker.net/) lets you make interactive 3D and VR scenes in your browser
 - [Apple Beta Music](https://www.reddit.com/r/sveltejs/comments/v7ic2s/apple_beta_music_uses_svelte/) appears to have been written in some combination of Svelte and web components
@@ -53,7 +53,7 @@ We will also be utilizing OpenCollective funds to allow Svelte core maintainers 
 
 Want to contribute to a site using the latest SvelteKit features? [Help build the Svelte Society site](https://github.com/svelte-society/sveltesociety.dev/issues)!
 
-**Learning Resources**
+### Learning Resources
 
 _Starring the Svelte team_
 
@@ -80,7 +80,7 @@ _To Read_
 - [SvelteKit Hooks. Everything You Need To Know](https://kudadam.com/blog/understanding-sveltekit-hooks) by Lucretius K. Biah
 - [3 tips for upgrading the performance of your Svelte stores](https://www.mathiaspicker.com/posts/3-tips-for-upgrading-the-performance-of-your-svelte-stores) by Mathias Picker
 
-**Libraries, Tools & Components**
+### Libraries, Tools & Components
 
 - [Svend3r](https://github.com/oslabs-beta/svend3r) is a plug and play D3 charting library for Svelte
 - [Svelte Hover Draw SVG](https://github.com/davipon/svelte-hover-draw-svg) is a lightweight Svelte component to draw SVG on hover

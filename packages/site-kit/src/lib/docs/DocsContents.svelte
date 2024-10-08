@@ -158,7 +158,7 @@
 			position: absolute;
 			width: var(--size);
 			height: var(--size);
-			top: calc(0.8rem - var(--size) * 0.5);
+			top: calc(1.4rem - var(--size) * 0.5);
 			right: calc(-0.5 * var(--size));
 			background-color: var(--sk-back-1);
 			z-index: 2;

@@ -28,7 +28,7 @@ Happy new year, Svelte Community! Lots to share this month across Svelte, Svelte
 
 ## Community Showcase
 
-**Apps & Sites**
+### Apps & Sites
 
 - [Discover Twitter Spaces](https://github.com/navneetsharmaui/discover-twitter-spaces) is a tool that helps you find the Twitter Spaces
 - [Modern Fluid Typography Editor](https://github.com/codeAdrian/modern-fluid-typography-editor) helps create beautiful fluid typography using CSS clamp
@@ -42,7 +42,7 @@ A lot of work this month has gone into migrating the Svelte main website and Sve
 
 If you're looking for a fun SvelteKit project to work on, [you can contribute to the Svelte Society site rewrite](https://github.com/svelte-society/sveltesociety-2021/issues) 💅
 
-**Learning and Listening**
+### Learning and Listening
 
 _To Read_
 
@@ -67,7 +67,7 @@ _To Listen To_
 - [Syntax podcast: How To Do Things In Svelte](https://podcasts.apple.com/ca/podcast/how-to-do-things-in-svelte/id1253186678?i=1000544796072)
 - [JS Party #205: So much Sveltey goodness (w/ Rich Harris)](https://changelog.com/jsparty/205)
 
-**Libraries, Tools & Components**
+### Libraries, Tools & Components
 
 - [svelte-headlessui](https://github.com/rgossiaux/svelte-headlessui) is an unofficial, complete Svelte port of the Headless UI component library
 - [svelte-forms v2](https://chainlist.github.io/svelte-forms/) has been released - the author is [looking for feedback](https://www.reddit.com/r/sveltejs/comments/r6354j/svelteforms_v2_has_been_released/)

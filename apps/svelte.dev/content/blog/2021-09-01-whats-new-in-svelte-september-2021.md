@@ -39,7 +39,7 @@ To see all updates to SvelteKit, check out the [SvelteKit changelog](https://git
 
 ## Community Showcase
 
-**Apps & Sites**
+### Apps & Sites
 
 - [macos-web](https://github.com/PuruVJ/macos-web) by @puruvjdev has been rebuilt with Svelte from the ground up. Check out all the details in this [Twitter thread](https://twitter.com/puruvjdev/status/1426267327687847939)
 - [Brave Search](https://search.brave.com/) is using Svelte
@@ -54,7 +54,7 @@ To see all updates to SvelteKit, check out the [SvelteKit changelog](https://git
 
 **Looking for a Svelte project to work on? Interested in helping make Svelte's presence on the web better?** Check out [the list of open issues](https://github.com/svelte-society/sveltesociety-2021/issues) if you'd like to contribute to the Svelte Society rewrite in SvelteKit.
 
-**Educational Content**
+### Educational Content
 
 - [Tauri with Standard Svelte or SvelteKit](https://medium.com/@cazanator/tauri-with-standard-svelte-or-sveltekit-ad7f103c37e7) walks through how to setup Svelte with Tauri, a new light-weight framework for developing cross-platform hybrid desktop applications
 - [Svelte - Web App Development Reimagined [An Intro to Svelte]](https://www.youtube.com/watch?v=4CGzFwHoD0A&list=PLEx5khR4g7PKSASVAXXiAhkyx02_OeruP) is a great intro talk from the goto; conference
@@ -62,7 +62,7 @@ To see all updates to SvelteKit, check out the [SvelteKit changelog](https://git
 - [State Management in Svelte Applications](https://auth0.com/blog/state-management-in-svelte-applications/) is a tutorial on how to use the Svelte state management store to manage state in Svelte applications
 - [Migrating from Sapper to SvelteKit](https://shipbit.de/blog/migrating-from-sapper-to-svelte-kit/) is a review and retrospective of ShipBit's migration from Sapper
 
-**Libraries, Tools & Components**
+### Libraries, Tools & Components
 
 - [svelte-stripe-js](https://github.com/joshnuss/svelte-stripe-js) is everything you need to add Stripe to your Svelte project. 100% SvelteKit compatible
 - [svelte-steps](https://github.com/shaozi/svelte-steps) is a customizable step component written in Svelte

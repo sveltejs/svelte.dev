@@ -18,7 +18,7 @@ More on that and other new features and fixes below!
 - Application versioning and update detection support lets you determine what to do when a route fails to load after an app update ([Issue](https://github.com/sveltejs/kit/issues/87), [PR](https://github.com/sveltejs/kit/pull/3412), [Docs](https://kit.svelte.dev/docs/configuration#version))
 - A new option in `npm init svelte@next` will now set up Playwright automatically for testing ([PR](https://github.com/sveltejs/kit/pull/4056))
 
-**Breaking Changes**
+### Breaking Changes
 
 - The `target` option is no longer available. Instead, the `init` script hydrates its `parentNode` ([#3674](https://github.com/sveltejs/kit/pull/3674))
 - App-level types now live in the `App` namespace which allows you to type global types like `Stuff` or `Session` ([#3670](https://github.com/sveltejs/kit/pull/3670))
@@ -34,7 +34,7 @@ More on that and other new features and fixes below!
 
 ## Community Showcase
 
-**Apps & Sites**
+### Apps & Sites
 
 - [SvelteStorm](https://github.com/open-source-labs/SvelteStorm) is specifically tailored to provide all of the essential tools a Svelte developer needs to build a Svelte application
 - [Supachat](https://github.com/Lleweraf/supachat) is a real-time chat app using Svelte and Supabase
@@ -50,7 +50,7 @@ More on that and other new features and fixes below!
 
 Want to work on a SvelteKit site with others? [Contribute to the Svelte Society site](https://github.com/svelte-society/sveltesociety.dev/issues)!
 
-**Learning Resources**
+### Learning Resources
 
 _To Read_
 
@@ -70,7 +70,7 @@ _To Watch_
 - [Testing For Beginners (Playlist)](https://www.youtube.com/watch?v=y53wwdBr5AI&list=PLA9WiRZ-IS_z7KpqhPELfEMbhAGRwZrzn) by Joy of Code
 - [KitQL - The native SvelteKit library for GraphQL](https://www.youtube.com/watch?v=6pH4fnFN70w) by Jean-Yves COUËT
 
-**Libraries, Tools & Components**
+### Libraries, Tools & Components
 
 - [gosvelte](https://github.com/sachinbhutani/gosvelte) is a proof of concept to serve Svelte-generated pages on GoLang HTTP server with server data being sent as props to svelte components
 - [svelte-ethers-store](https://www.npmjs.com/package/svelte-ethers-store) uses the ethers.js library as a collection of readable Svelte stores for Svelte, Sapper or SvelteKit

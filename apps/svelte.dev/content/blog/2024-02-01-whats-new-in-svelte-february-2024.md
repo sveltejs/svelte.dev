@@ -32,7 +32,7 @@ For all the bug fixes, chores and underlying work required to get Svelte 5 to re
 
 ## Community Showcase
 
-**Apps & Sites built with Svelte**
+### Apps & Sites built with Svelte
 
 - [Sprite Fusion](https://www.spritefusion.com/) is a free level design tool to craft beautiful 2D tilemaps right in your browser using any tileset
 - [TypeMeUp](https://github.com/bskdany/typemeup) a typing website that teaches you how to type faster
@@ -42,7 +42,7 @@ For all the bug fixes, chores and underlying work required to get Svelte 5 to re
 - [Nola Devs](https://www.noladevs.org/) is a vibrant and inclusive software developers group nestled in the heart of New Orleans. This site aggregates all their events across groups
 - [Startup Funding Simulator](https://www.fundingsimulator.com/) is a tool to help founders understand how modern fundraising (with safes) works, and how much dilution you can expect when raising money.
 
-**Learning Resources**
+### Learning Resources
 
 _Featuring Svelte Contributors and Ambassadors_
 
@@ -64,7 +64,7 @@ _To Read_
 - [Get Up and Running with Svelte on the Internet Computer](https://blog.icacademy.at/blog/svelte-ic-starter) by Roland BOLE
 - [SvelteKit + Socket.io server deployed on deno](https://devr.me/socket-io-deno) by Devr
 
-**Libraries, Tools & Components**
+### Libraries, Tools & Components
 
 - [Lucia](https://github.com/lucia-auth/lucia/discussions/1361) - an auth library written in TypeScript that abstracts away the complexity of handling sessions - has just released its 3.0 version
 - [Paraglide JS Adapter SvelteKit](https://inlang.com/m/dxnzrydw/library-inlang-paraglideJsAdapterSvelteKit) is a SvelteKit integration for ParaglideJS - a tool for i18n routing

@@ -24,7 +24,7 @@
 <div class="content">
 	<article class="post listify text">
 		<h1>{data.metadata.title}</h1>
-		<p class="standfirst">{data.metadata.description}</p>
+		<p class="standfirst">{@html data.metadata.description}</p>
 
 		<Byline post={data} />
 

@@ -41,7 +41,7 @@ For all the changes to the Svelte compiler, including unreleased changes, check 
 
 ## Community Showcase
 
-**Apps & Sites built with Svelte**
+### Apps & Sites built with Svelte
 
 - [Sound of War](https://soundofwar.art/) is a storytelling data visualization project to help understand the scale of destruction in Ukraine
 - [Syntax FM's swag shop](https://swag.syntax.fm/) is now built with SvelteKit, PlanetScale and Prisma
@@ -66,7 +66,7 @@ For all the changes to the Svelte compiler, including unreleased changes, check 
 - [Zero share](https://github.com/ntsd/zero-share) is a secure P2P file sharing using WebRTC
 - [Svelte lab](https://www.sveltelab.dev/) is a sandbox for creating and sharing SvelteKit projects
 
-**Learning Resources**
+### Learning Resources
 
 _Featuring Svelte Contributors and Ambassadors_
 
@@ -98,7 +98,7 @@ _To Read_
 - [Better Data Visualizations with Svelte](https://www.newline.co/courses/better-data-visualizations-with-svelte/welcome) by newline
 - [Offline App with SvelteKit + SQLite Part 1: Setup WebAssembly SQLite](https://www.youtube.com/watch?v=Uvnzwp72Ze8) by hartenfellerdev
 
-**Libraries, Tools & Components**
+### Libraries, Tools & Components
 
 - [Sveltris](https://github.com/mokshit06/sveltris) lets you intermix UI primitives like components, and state primitives like hooks between frameworks, without even noticing
 - [SwiftMarket](https://github.com/SwiftMarket/swiftmarket-sveltekit) is an E-Commerce solution built with SvelteKit, Pocketbase as a database and Stripe for payments

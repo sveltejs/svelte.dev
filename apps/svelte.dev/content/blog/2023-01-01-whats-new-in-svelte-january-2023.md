@@ -15,7 +15,7 @@ Let's dive into the details...
 - Improved support for Storybook and Histoire ([#7990](https://github.com/sveltejs/kit/pull/7990)). Work is ongoing to fully support those tools ([storybook#20239](https://github.com/storybookjs/storybook/pull/20239)).
 - `vitePreprocess` is now the default preprocessor. Please see [the docs](https://kit.svelte.dev/docs/integrations#preprocessors) for differences between `vitePreprocess` and `svelte-preprocess` ([#8036](https://github.com/sveltejs/kit/pull/8036)).
 
-**Breaking changes:**
+### Breaking changes:
 
 - Unknown exports (except when starting with an underscore) are no longer allowed from `+(layout|page)(.server)?.js` and `+server.js` files ([#7878](https://github.com/sveltejs/kit/pull/7878))
 - `__data.json` is now stripped from URL ([#7979](https://github.com/sveltejs/kit/pull/7979))
@@ -58,7 +58,7 @@ For all the changes to the Svelte compiler, including unreleased changes, check 
 
 ## Community Showcase
 
-**Apps & Sites built with Svelte**
+### Apps & Sites built with Svelte
 
 - [Svelte Recipes 🧑‍🍳](https://svelte.recipes/) provides code snippets for common data visualization problems
 - [Everything Svelte](https://www.everythingsvelte.com/) is a new course teaching everything you need to know to build a modern web application
@@ -70,7 +70,7 @@ For all the changes to the Svelte compiler, including unreleased changes, check 
 - [DeckDev](https://deckdev.com/) is a deck builder for Magic: The Gathering
 - [Default Shortcuts](https://www.defaultshortcuts.com/) is a tool for searching keyboard shortcuts across browsers.
 
-**Learning Resources**
+### Learning Resources
 
 _From Svelte Society_
 
@@ -95,7 +95,7 @@ _To Read_
 - [Chart.js 4.0](https://github.com/chartjs/Chart.js/discussions/10977) has been released, with updated Svelte support
 - [Creating A Custom Svelte Media Query Store](https://pqina.nl/blog/svelte-media-query-store/) by Rik Schennink
 
-**Libraries, Tools & Components**
+### Libraries, Tools & Components
 
 - [Konsta UI](https://konstaui.com/) is a library of pixel perfect mobile UI components built with Tailwind CSS for React, Vue & Svelte
 - [probablykasper/modal-svelte](https://github.com/probablykasper/modal-svelte) is a modal component for Svelte
