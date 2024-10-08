@@ -738,7 +738,7 @@ async function syntax_highlight({
 				]
 			});
 		} catch (e) {
-			console.error(e.message);
+			console.error((e as Error).message);
 			console.warn(source);
 			throw new Error(`Error compiling snippet in ${filename}`);
 		}
