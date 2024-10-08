@@ -536,6 +536,7 @@ function get_mtime(file: string, seen = new Set<string>()) {
 
 const mtime = Math.max(
 	get_mtime(fileURLToPath(import.meta.url)),
+	fs.statSync('node_modules').mtimeMs,
 	fs.statSync('../../pnpm-lock.yaml').mtimeMs
 );
 
