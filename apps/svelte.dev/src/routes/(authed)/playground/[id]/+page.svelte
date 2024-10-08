@@ -36,7 +36,10 @@
 		}
 	});
 
-	afterNavigate(set_files);
+	afterNavigate(() => {
+		name = data.gist.name;
+		set_files();
+	});
 
 	async function set_files() {
 		const hash = location.hash.slice(1);
@@ -112,6 +115,7 @@
 
 <div class="repl-outer {zen_mode ? 'zen-mode' : ''}">
 	<AppControls
+		examples={data.examples}
 		user={data.user}
 		gist={data.gist}
 		forked={handle_fork}

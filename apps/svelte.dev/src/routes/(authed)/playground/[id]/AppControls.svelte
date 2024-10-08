@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { goto } from '$app/navigation';
 	import UserMenu from './UserMenu.svelte';
 	import { Icon } from '@sveltejs/site-kit/components';
 	import * as doNotZip from 'do-not-zip';
@@ -9,8 +10,10 @@
 	import { get_app_context } from '../../app-context';
 	import type { Gist, User } from '$lib/db/types';
 	import type { File } from '@sveltejs/repl';
+	import type { Examples } from '../api/examples.json/+server';
 
 	interface Props {
+		examples: Examples;
 		user: User | null;
 		repl: Repl;
 		gist: Gist;
@@ -28,6 +31,7 @@
 		user,
 		repl,
 		gist,
+		examples,
 		forked,
 		saved
 	}: Props = $props();
@@ -44,6 +48,13 @@
 	}
 
 	const canSave = $derived(user && gist && gist.owner === user.id);
+	const select_value = $derived(
+		gist &&
+			gist.id !== 'hello-world' &&
+			examples.some((section) => section.examples.some((example) => example.slug === gist.id))
+			? gist.id
+			: ''
+	);
 
 	function handleKeydown(event: KeyboardEvent) {
 		if (event.key === 's' && (isMac ? event.metaKey : event.ctrlKey)) {
@@ -218,6 +229,22 @@ export default app;`
 	/>
 
 	<div class="buttons">
+		<select
+			value={select_value}
+			onchange={e => {
+			goto(`/playground/${(e.target as HTMLSelectElement).value}`);
+		}}
+		>
+			<option disabled selected value="">Examples</option>
+			{#each examples as section}
+				<optgroup label={section.title}>
+					{#each section.examples as example}
+						<option value={example.slug}>{example.title}</option>
+					{/each}
+				</optgroup>
+			{/each}
+		</select>
+
 		<button class="raised icon" onclick={() => (zen_mode = !zen_mode)} title="fullscreen editor">
 			{#if zen_mode}
 				<Icon name="close" />
@@ -299,6 +326,17 @@ export default app;`
 		display: flex;
 		align-items: center;
 		gap: 0.2em;
+	}
+
+	select {
+		padding: 0.5em;
+		width: 10em;
+		font-family: var(--sk-font-ui);
+		margin-top: 0.1em;
+		border-radius: var(--sk-border-radius);
+		border-style: solid;
+		border-color: var(--sk-raised-color);
+		border-width: var(--sk-raised-width);
 	}
 
 	.icon {
