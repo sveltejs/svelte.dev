@@ -8,6 +8,7 @@ import { codeToHtml, createCssVariablesTheme } from 'shiki';
 import { transformerTwoslash } from '@shikijs/twoslash';
 import { SHIKI_LANGUAGE_MAP, escape, normalizeSlugify, smart_quotes, transform } from './utils';
 import type { Modules } from './index';
+import { fileURLToPath } from 'node:url';
 
 interface SnippetOptions {
 	file: string | null;
@@ -509,6 +510,40 @@ function find_nearest_node_modules(file: string): string | null {
 }
 
 /**
+ * Get the `mtime` of the most recently modified file in a dependency graph,
+ * excluding imports from `node_modules`
+ */
+function get_mtime(file: string, seen = new Set<string>()) {
+	if (seen.has(file)) return -1;
+	seen.add(file);
+
+	let mtime = +fs.statSync(file).mtime;
+	const content = fs.readFileSync(file, 'utf-8');
+
+	for (const [_, source] of content.matchAll(/^import(?:.+?\s+from\s+)?['"](.+)['"];?$/gm)) {
+		if (source[0] !== '.') continue;
+
+		let resolved = path.resolve(file, '..', source);
+		if (!fs.existsSync(resolved)) resolved += '.ts';
+		if (!fs.existsSync(resolved))
+			throw new Error(`Could not resolve ${source} relative to ${file}`);
+
+		mtime = Math.max(mtime, get_mtime(resolved, seen));
+	}
+
+	return mtime;
+}
+
+const mtime = get_mtime(fileURLToPath(import.meta.url));
+
+// rough-and-ready way to invalidate the snippet cache when we update this file
+// or utils.ts. A more complete solution would
+// const mtime = Math.max(
+// 	+fs.statSync(fileURLToPath(import.meta.url)).mtime,
+// 	+fs.statSync(fileURLToPath(new URL('./utils.ts', import.meta.url))).mtime
+// );
+
+/**
  * Utility function to work with code snippet caching.
  *
  * @example
@@ -526,12 +561,26 @@ async function create_snippet_cache(should: boolean) {
 	const cache = new Map();
 	const directory = find_nearest_node_modules(import.meta.url) + '/.snippets';
 
+	if (fs.existsSync(directory)) {
+		for (const dir of fs.readdirSync(directory)) {
+			if (!fs.statSync(`${directory}/${dir}`).isDirectory() || +dir < mtime) {
+				fs.rmSync(`${directory}/${dir}`, { force: true, recursive: true });
+			}
+		}
+	} else {
+		fs.mkdirSync(directory);
+	}
+
+	try {
+		fs.mkdirSync(`${directory}/${mtime}`);
+	} catch {}
+
 	function get_file(source: string) {
 		const hash = createHash('sha256');
 		hash.update(source);
 		const digest = hash.digest().toString('base64').replace(/\//g, '-');
 
-		return `${directory}/${digest}.html`;
+		return `${directory}/${mtime}/${digest}.html`;
 	}
 
 	return {
