@@ -517,7 +517,7 @@ function get_mtime(file: string, seen = new Set<string>()) {
 	if (seen.has(file)) return -1;
 	seen.add(file);
 
-	let mtime = +fs.statSync(file).mtime;
+	let mtime = fs.statSync(file).mtimeMs;
 	const content = fs.readFileSync(file, 'utf-8');
 
 	for (const [_, source] of content.matchAll(/^import(?:.+?\s+from\s+)?['"](.+)['"];?$/gm)) {
@@ -536,7 +536,7 @@ function get_mtime(file: string, seen = new Set<string>()) {
 
 const mtime = Math.max(
 	get_mtime(fileURLToPath(import.meta.url)),
-	+fs.statSync('../../pnpm-lock.yaml').mtime
+	fs.statSync('../../pnpm-lock.yaml').mtimeMs
 );
 
 /**
