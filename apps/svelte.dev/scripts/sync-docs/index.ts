@@ -1,6 +1,6 @@
 import { preprocess } from '@sveltejs/site-kit/markdown/preprocess';
 import path from 'node:path';
-import { cpSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
+import fs from 'node:fs';
 import ts from 'typescript';
 import glob from 'tiny-glob/sync';
 import { fileURLToPath } from 'node:url';
@@ -67,7 +67,7 @@ const packages: Package[] = [
 			}
 
 			const dir = kit_base + 'src/types/synthetic';
-			for (const file of readdirSync(dir)) {
+			for (const file of fs.readdirSync(dir)) {
 				if (!file.endsWith('.md')) continue;
 
 				const comment = strip_origin(read_d_ts_file(`${dir}/${file}`));
@@ -133,7 +133,7 @@ const packages: Package[] = [
  */
 if (process.env.USE_GIT === 'true') {
 	try {
-		mkdirSync(REPOS);
+		fs.mkdirSync(REPOS);
 	} catch {
 		// ignore if it already exists
 	}
@@ -142,16 +142,19 @@ if (process.env.USE_GIT === 'true') {
 }
 
 for (const pkg of packages) {
-	cpSync(`${pkg.local}/${pkg.docs}`, `${DOCS}/${pkg.name}`, { recursive: true });
-	migrate_meta_json(`${DOCS}/${pkg.name}`);
+	const dest = `${DOCS}/${pkg.name}`;
+
+	fs.rmSync(dest, { force: true, recursive: true });
+	fs.cpSync(`${pkg.local}/${pkg.docs}`, dest, { recursive: true });
+	migrate_meta_json(dest);
 
 	const modules = await pkg.process_modules(await read_types(`${pkg.local}/${pkg.pkg}/`, []), pkg);
 
-	const files = glob(`${DOCS}/${pkg.name}/**/*.md`);
+	const files = glob(`${dest}/**/*.md`);
 
 	for (const file of files) {
-		const content = await preprocess(readFileSync(file, 'utf-8'), modules);
+		const content = await preprocess(fs.readFileSync(file, 'utf-8'), modules);
 
-		writeFileSync(file, content);
+		fs.writeFileSync(file, content);
 	}
 }
