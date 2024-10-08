@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
-	import { afterNavigate } from '$app/navigation';
+	import { afterNavigate, replaceState } from '$app/navigation';
 	import { theme } from '@sveltejs/site-kit/stores';
 	import { Repl } from '@sveltejs/repl';
 	import { mapbox_setup } from '../../../../../config.js';
@@ -8,32 +8,16 @@
 
 	let { data } = $props();
 
-	let version = $state(data.version);
 	let repl = $state() as Repl;
-
-	function update_query_string(version: string) {
-		const params = [];
-
-		if (version !== 'latest') params.push(`version=${version}`);
-
-		const url =
-			params.length > 0
-				? `/playground/${data.gist.id}/embed?${params.join('&')}`
-				: `/playground/${data.gist.id}/embed`;
-
-		history.replaceState({}, 'x', url);
-	}
-
-	$effect(() => {
-		update_query_string(version);
-	});
 
 	onMount(() => {
 		if (data.version !== 'local') {
-			fetch(`https://unpkg.com/svelte@${data.version || 'next'}/package.json`)
+			fetch(`https://unpkg.com/svelte@${data.version}/package.json`)
 				.then((r) => r.json())
 				.then((pkg) => {
-					version = pkg.version;
+					if (pkg.version !== data.version) {
+						replaceState(`/playground/${data.gist.id}/embed?version=${pkg.version}`, {});
+					}
 				});
 		}
 	});
@@ -44,11 +28,10 @@
 		});
 	});
 
-	const svelteUrl = $derived(
-		browser && version === 'local'
+	const svelteUrl =
+		browser && data.version === 'local'
 			? `${location.origin}/playground/local`
-			: `https://unpkg.com/svelte@${version}`
-	);
+			: `https://unpkg.com/svelte@${data.version}`;
 
 	const relaxed = $derived(data.gist.relaxed || (data.user && data.user.id === data.gist.owner));
 </script>

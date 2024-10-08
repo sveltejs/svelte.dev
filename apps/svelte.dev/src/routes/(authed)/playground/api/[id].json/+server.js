@@ -84,8 +84,6 @@ export async function GET({ params }) {
 }
 
 export async function entries() {
-	const { get_examples_list } = await import('$lib/server/examples/index.js');
-
 	return get_examples_list(examples_data)
 		.map(({ examples }) => examples)
 		.flatMap((val) => val.map(({ slug }) => ({ id: slug })));
