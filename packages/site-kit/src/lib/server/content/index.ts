@@ -25,7 +25,11 @@ export async function create_index(
 		}
 
 		metadata.title = smart_quotes(metadata.title);
-		if (metadata.description) metadata.description = smart_quotes(metadata.description);
+		if (metadata.description)
+			metadata.description = smart_quotes(metadata.description).replace(
+				/`(.+?)`/g,
+				'<code>$1</code>'
+			);
 
 		const sections = Array.from(body.matchAll(/^##\s+(.*)$/gm)).map((match) => {
 			const title = match[1].replace(/`/g, '').replace(/&lt;/g, '<').replace(/&gt;/g, '>');
