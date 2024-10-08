@@ -17,8 +17,7 @@ An absolute path that matches [`config.kit.paths.assets`](/docs/kit/reference/co
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 let assets:
 	| ''
 	| `https://${string}`
@@ -28,6 +27,8 @@ let assets:
 
 </div>
 
+
+
 ## base
 
 A string that matches [`config.kit.paths.base`](/docs/kit/reference/configuration#paths).
@@ -36,21 +37,32 @@ Example usage: `<a href="{base}/your-page">Link</a>`
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 let base: '' | `/${string}`;
 ```
 
 </div>
 
+
+
 ## resolveRoute
 
 Populate a route ID with params to resolve a pathname.
 
+```js
+// @errors: 7031
+resolveRoute(
+	`/blog/[slug]/[...somethingElse]`,
+	{
+		slug: 'hello-world',
+		somethingElse: 'something/else'
+	}
+); // `/blog/hello-world/something/else`
+```
+
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function resolveRoute(
 	id: string,
 	params: Record<string, string | undefined>
@@ -58,5 +70,7 @@ function resolveRoute(
 ```
 
 </div>
+
+
 
 

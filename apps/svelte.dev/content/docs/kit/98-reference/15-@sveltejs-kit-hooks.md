@@ -78,13 +78,14 @@ first post-processing
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function sequence(
 	...handlers: import('@sveltejs/kit').Handle[]
 ): import('@sveltejs/kit').Handle;
 ```
 
 </div>
+
+
 
 

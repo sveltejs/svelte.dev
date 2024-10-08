@@ -11,12 +11,9 @@ import { getStores, navigating, page, updated } from '$app/stores';
 
 ## getStores
 
-
-
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function getStores(): {
 	page: typeof page;
 
@@ -28,6 +25,8 @@ function getStores(): {
 
 </div>
 
+
+
 ## navigating
 
 A readable store.
@@ -38,14 +37,15 @@ On the server, this store can only be subscribed to during component initializat
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 const navigating: import('svelte/store').Readable<
 	import('@sveltejs/kit').Navigation | null
 >;
 ```
 
 </div>
+
+
 
 ## page
 
@@ -55,14 +55,15 @@ On the server, this store can only be subscribed to during component initializat
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 const page: import('svelte/store').Readable<
 	import('@sveltejs/kit').Page
 >;
 ```
 
 </div>
+
+
 
 ## updated
 
@@ -72,13 +73,14 @@ On the server, this store can only be subscribed to during component initializat
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 const updated: import('svelte/store').Readable<boolean> & {
 	check(): Promise<boolean>;
 };
 ```
 
 </div>
+
+
 
 

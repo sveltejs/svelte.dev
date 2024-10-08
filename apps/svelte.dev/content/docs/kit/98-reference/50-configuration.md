@@ -120,8 +120,7 @@ vitePlugin?: PluginOptions;
 Any additional options required by tooling that integrates with Svelte.
 
 </div>
-</div>
-</div>
+</div></div>
 
 
 

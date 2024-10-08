@@ -12,6 +12,7 @@ interface Package {
 	name: string;
 	local: string;
 	repo: string;
+	branch: string;
 	pkg: string;
 	docs: string;
 	process_modules: (modules: Modules, pkg: Package) => Promise<Modules>;
@@ -26,6 +27,7 @@ const packages: Package[] = [
 		name: 'svelte',
 		local: `${REPOS}/svelte`,
 		repo: 'sveltejs/svelte',
+		branch: 'main',
 		pkg: 'packages/svelte',
 		docs: 'documentation/docs',
 		process_modules: async (modules: Modules) => {
@@ -49,6 +51,7 @@ const packages: Package[] = [
 		name: 'kit',
 		local: `${REPOS}/kit`,
 		repo: 'sveltejs/kit',
+		branch: 'svelte-dev-adjusted-docs', // TODO update!
 		pkg: 'packages/kit',
 		docs: 'documentation/docs',
 		process_modules: async (modules, pkg) => {
@@ -138,7 +141,9 @@ if (process.env.USE_GIT === 'true') {
 		// ignore if it already exists
 	}
 
-	await Promise.all(packages.map((pkg) => clone_repo(`https://github.com/${pkg.repo}.git`, REPOS)));
+	await Promise.all(
+		packages.map((pkg) => clone_repo(`https://github.com/${pkg.repo}.git`, pkg.branch, REPOS))
+	);
 }
 
 for (const pkg of packages) {

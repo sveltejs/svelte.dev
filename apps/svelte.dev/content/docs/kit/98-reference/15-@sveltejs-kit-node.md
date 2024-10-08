@@ -19,21 +19,19 @@ Converts a file on disk to a readable stream
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function createReadableStream(file: string): ReadableStream;
 ```
 
 </div>
 
+
+
 ## getRequest
-
-
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function getRequest({
 	request,
 	base,
@@ -47,14 +45,13 @@ function getRequest({
 
 </div>
 
+
+
 ## setResponse
-
-
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function setResponse(
 	res: import('http').ServerResponse,
 	response: Response
@@ -62,5 +59,7 @@ function setResponse(
 ```
 
 </div>
+
+
 
 

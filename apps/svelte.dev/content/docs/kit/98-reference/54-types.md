@@ -171,8 +171,7 @@ message: string;
 ```
 
 <div class="ts-block-property-details"></div>
-</div>
-</div>
+</div></div>
 
 ## Locals
 
@@ -183,7 +182,6 @@ The interface that defines `event.locals`, which can be accessed in [hooks](http
 ```dts
 interface Locals {}
 ```
-
 
 </div>
 
@@ -199,7 +197,6 @@ Use optional properties for data that is only present on specific pages. Do not 
 interface PageData {}
 ```
 
-
 </div>
 
 ## PageState
@@ -212,7 +209,6 @@ The shape of the `$page.state` object, which can be manipulated using the [`push
 interface PageState {}
 ```
 
-
 </div>
 
 ## Platform
@@ -224,7 +220,6 @@ If your adapter provides [platform-specific context](https://kit.svelte.dev/docs
 ```dts
 interface Platform {}
 ```
-
 
 </div>
 

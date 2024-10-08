@@ -18,12 +18,13 @@ Note that there is a `base` but no `assets`, since service workers cannot be use
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 const base: string;
 ```
 
 </div>
+
+
 
 ## build
 
@@ -32,12 +33,13 @@ During development, this is an empty array.
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 const build: string[];
 ```
 
 </div>
+
+
 
 ## files
 
@@ -45,12 +47,13 @@ An array of URL strings representing the files in your static directory, or what
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 const files: string[];
 ```
 
 </div>
+
+
 
 ## prerendered
 
@@ -59,12 +62,13 @@ During development, this is an empty array.
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 const prerendered: string[];
 ```
 
 </div>
+
+
 
 ## version
 
@@ -72,11 +76,12 @@ See [`config.kit.version`](/docs/kit/reference/configuration#version). It's usef
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 const version: string;
 ```
 
 </div>
+
+
 
 
