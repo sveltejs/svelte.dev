@@ -1,5 +1,6 @@
 // @ts-expect-error has no types
 import PrismJS from 'prismjs';
+import 'prism-svelte';
 import { read } from '$app/server';
 import { index } from '$lib/server/content';
 import { markedTransform } from '@sveltejs/site-kit/markdown';
