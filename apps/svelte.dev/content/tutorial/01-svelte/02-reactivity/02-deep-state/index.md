@@ -2,7 +2,7 @@
 title: Deep state
 ---
 
-In addition to making _primitive_ values (like strings and numbers) reactive, the `$state` rune makes arrays and objects _deeply_ reactive.
+As we saw in the previous exercise, state reacts to _reassignments_. But it also reacts to _mutations_ — we call this _deep reactivity_.
 
 Make `numbers` a reactive array:
 
@@ -28,3 +28,5 @@ function addNumber() {
 	+++numbers.push(numbers.length + 1);+++
 }
 ```
+
+> Deep reactivity is implemented using [proxies](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy), and mutations to the proxy do not affect the original object.

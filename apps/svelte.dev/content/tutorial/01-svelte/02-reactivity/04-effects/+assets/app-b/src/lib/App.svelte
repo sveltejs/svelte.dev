@@ -1,17 +1,19 @@
 <script>
-	let count = 0;
+	let elapsed = $state(0);
+	let interval = $state(1000);
 
-	$: if (count >= 10) {
-		alert('count is dangerously high!');
-		count = 0;
-	}
+	$effect(() => {
+		const id = setInterval(() => {
+			elapsed += 1;
+		}, interval);
 
-	function handleClick() {
-		count += 1;
-	}
+		return () => {
+			clearInterval(id);
+		};
+	});
 </script>
 
-<button on:click={handleClick}>
-	Clicked {count}
-	{count === 1 ? 'time' : 'times'}
-</button>
+<button onclick={() => interval /= 2}>speed up</button>
+<button onclick={() => interval *= 2}>slow down</button>
+
+<p>elapsed: {elapsed}</p>

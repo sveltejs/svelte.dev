@@ -1,12 +1,9 @@
 <script>
-	let count = 0;
-
-	function handleClick() {
-		count += 1;
-	}
+	let elapsed = $state(0);
+	let interval = $state(1000);
 </script>
 
-<button on:click={handleClick}>
-	Clicked {count}
-	{count === 1 ? 'time' : 'times'}
-</button>
+<button onclick={() => interval /= 2}>speed up</button>
+<button onclick={() => interval *= 2}>slow down</button>
+
+<p>elapsed: {elapsed}</p>
