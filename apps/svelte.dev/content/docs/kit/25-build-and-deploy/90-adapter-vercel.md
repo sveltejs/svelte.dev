@@ -55,11 +55,9 @@ The following options apply to all functions:
 - `split`: if `true`, causes a route to be deployed as an individual function. If `split` is set to `true` at the adapter level, all routes will be deployed as individual functions
 
 Additionally, the following option applies to edge functions:
-
 - `external`: an array of dependencies that esbuild should treat as external when bundling functions. This should only be used to exclude optional dependencies that will not run outside Node
 
 And the following option apply to serverless functions:
-
 - `memory`: the amount of memory available to the function. Defaults to `1024` Mb, and can be decreased to `128` Mb or [increased](https://vercel.com/docs/concepts/limits/overview#serverless-function-memory) in 64Mb increments up to `3008` Mb on Pro or Enterprise accounts
 - `maxDuration`: [maximum execution duration](https://vercel.com/docs/functions/runtimes#max-duration) of the function. Defaults to `10` seconds for Hobby accounts, `15` for Pro and `900` for Enterprise
 - `isr`: configuration Incremental Static Regeneration, described below
@@ -96,14 +94,7 @@ Vercel supports [Incremental Static Regeneration](https://vercel.com/docs/increm
 To add ISR to a route, include the `isr` property in your `config` object:
 
 ```js
-/// file: blog/[slug]/+page.server.js
-// @filename: ambient.d.ts
-declare module '$env/static/private' {
-	export const BYPASS_TOKEN: string;
-}
-
-// @filename: index.js
-// ---cut---
+// @errors: 2664
 import { BYPASS_TOKEN } from '$env/static/private';
 
 export const config = {
@@ -132,14 +123,7 @@ The `expiration` property is required; all others are optional.
 Vercel makes a set of [deployment-specific environment variables](https://vercel.com/docs/concepts/projects/environment-variables#system-environment-variables) available. Like other environment variables, these are accessible from `$env/static/private` and `$env/dynamic/private` (sometimes — more on that later), and inaccessible from their public counterparts. To access one of these variables from the client:
 
 ```js
-/// file: blog/[slug]/+page.server.js
-// @filename: ambient.d.ts
-declare module '$env/static/private' {
-	export const VERCEL_COMMIT_REF: string;
-}
-
-// @filename: index.js
-// ---cut---
+// @errors: 2305
 /// file: +layout.server.js
 import { VERCEL_COMMIT_REF } from '$env/static/private';
 

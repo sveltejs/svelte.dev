@@ -2,6 +2,8 @@
 title: $app/paths
 ---
 
+
+
 ```js
 // @noErrors
 import { assets, base, resolveRoute } from '$app/paths';
@@ -25,6 +27,8 @@ let assets:
 
 </div>
 
+
+
 ## base
 
 A string that matches [`config.kit.paths.base`](/docs/kit/reference/configuration#paths).
@@ -39,17 +43,23 @@ let base: '' | `/${string}`;
 
 </div>
 
+
+
 ## resolveRoute
 
 Populate a route ID with params to resolve a pathname.
 
 ```js
+// @errors: 7031
 import { resolveRoute } from '$app/paths';
 
-resolveRoute(`/blog/[slug]/[...somethingElse]`, {
-	slug: 'hello-world',
-	somethingElse: 'something/else'
-}); // `/blog/hello-world/something/else`
+resolveRoute(
+	`/blog/[slug]/[...somethingElse]`,
+	{
+		slug: 'hello-world',
+		somethingElse: 'something/else'
+	}
+); // `/blog/hello-world/something/else`
 ```
 
 <div class="ts-block">
@@ -62,3 +72,7 @@ function resolveRoute(
 ```
 
 </div>
+
+
+
+

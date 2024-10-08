@@ -86,8 +86,7 @@ export const csr = false;
 
 ```html
 <html amp>
-	...
-</html>
+...
 ```
 
 ...and transforming the HTML using `transformPageChunk` along with `transform` imported from `@sveltejs/amp`:

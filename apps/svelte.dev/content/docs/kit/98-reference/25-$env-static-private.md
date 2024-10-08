@@ -7,13 +7,6 @@ Environment variables [loaded by Vite](https://vitejs.dev/guide/env-and-mode.htm
 _Unlike_ [`$env/dynamic/private`](/docs/kit/reference/$env-all#$env-dynamic-private), the values exported from this module are statically injected into your bundle at build time, enabling optimisations like dead code elimination.
 
 ```ts
-// @filename: ambient.d.ts
-declare module '$env/static/public' {
-	export const API_KEY: string;
-}
-
-// @filename: index.js
-// ---cut---
 import { API_KEY } from '$env/static/private';
 ```
 
@@ -28,3 +21,6 @@ You can override `.env` values from the command line like so:
 ```bash
 MY_FEATURE_FLAG="enabled" npm run dev
 ```
+
+
+

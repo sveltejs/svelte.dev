@@ -46,6 +46,17 @@ export const render_content = (filename: string, body: string) =>
 				injected.push(`// @filename: ambient-kit.d.ts`, `/// <reference types="@sveltejs/kit" />`);
 			}
 
+			if (source.includes('$env/')) {
+				// TODO we're hardcoding static env vars that are used in code examples
+				// in the types, which isn't... totally ideal, but will do for now
+				injected.push(
+					`declare module '$env/dynamic/private' { export const env: Record<string, string> }`,
+					`declare module '$env/dynamic/public' { export const env: Record<string, string> }`,
+					`declare module '$env/static/private' { export const API_KEY: string }`,
+					`declare module '$env/static/public' { export const PUBLIC_BASE_URL: string }`
+				);
+			}
+
 			if (source.includes('./$types') && !source.includes('@filename: $types.d.ts')) {
 				injected.push(
 					`// @filename: $types.d.ts`,

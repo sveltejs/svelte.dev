@@ -711,9 +711,11 @@ async function syntax_highlight({
 		);
 	} else if (/^(js|ts)$/.test(language)) {
 		try {
-			const banner = twoslashBanner?.(filename, source, language, options);
+			let banner = twoslashBanner?.(filename, source, language, options);
 
 			if (banner) {
+				banner = '// @filename: injected.d.ts\n' + banner;
+
 				if (source.includes('// @filename:')) {
 					source = source.replace('// @filename:', `${banner}\n\n// @filename:`);
 				} else {

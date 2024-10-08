@@ -9,15 +9,9 @@ Note that public dynamic environment variables must all be sent from the server 
 Dynamic environment variables cannot be used during prerendering.
 
 ```ts
-// @filename: ambient.d.ts
-declare module '$env/dynamic/public' {
-	export const env: {
-		[key: string]: string;
-	};
-}
-
-// @filename: index.js
-// ---cut---
 import { env } from '$env/dynamic/public';
 console.log(env.PUBLIC_DEPLOYMENT_SPECIFIC_VARIABLE);
 ```
+
+
+
