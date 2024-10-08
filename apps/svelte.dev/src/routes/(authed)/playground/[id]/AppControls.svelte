@@ -10,10 +10,9 @@
 	import { get_app_context } from '../../app-context';
 	import type { Gist, User } from '$lib/db/types';
 	import type { File } from '@sveltejs/repl';
-	import type { Examples } from '../api/examples/all.json/+server';
 
 	interface Props {
-		examples: Examples;
+		examples: Array<{ title: string; examples: any[] }>;
 		user: User | null;
 		repl: Repl;
 		gist: Gist;
