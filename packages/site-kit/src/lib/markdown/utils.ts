@@ -1,4 +1,4 @@
-import { Marked, Renderer, type TokenizerObject } from 'marked';
+import { Marked, Renderer, type TokenizerObject, type MarkedExtension } from 'marked';
 import json5 from 'json5';
 
 const escapeTest = /[&<>"']/;
@@ -114,10 +114,18 @@ const tokenizer: TokenizerObject = {
 	}
 };
 
-export async function transform(markdown: string, renderer: Partial<Renderer> = {}) {
+export async function transform(
+	markdown: string,
+	{
+		walkTokens,
+		...renderer
+	}: Partial<Renderer> & { walkTokens?: MarkedExtension['walkTokens'] } = {}
+) {
 	const marked = new Marked({
+		async: true,
 		renderer,
-		tokenizer
+		tokenizer,
+		walkTokens
 	});
 
 	return (await marked.parse(markdown)) ?? '';

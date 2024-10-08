@@ -139,15 +139,6 @@ export async function render_content_markdown(
 
 	const conversions = new Map<string, string>();
 
-	for (const [_, language, code] of body.matchAll(/```(js|svelte)\n([\s\S]+?)\n```/g)) {
-		let { source, options } = parse_options(code, language);
-
-		const converted = await generate_ts_from_js(source, language as 'js' | 'svelte', options);
-		if (converted) {
-			conversions.set(source, converted);
-		}
-	}
-
 	const headings: string[] = [];
 
 	// this is a bit hacky, but it allows us to prevent type declarations
@@ -155,6 +146,16 @@ export async function render_content_markdown(
 	let current = '';
 
 	return await transform(body, {
+		async walkTokens(token) {
+			if (token.type === 'code' && (token.lang === 'js' || token.lang === 'svelte')) {
+				let { source, options } = parse_options(token.text, token.lang);
+
+				const converted = await generate_ts_from_js(source, token.lang, options);
+				if (converted) {
+					conversions.set(source, converted);
+				}
+			}
+		},
 		text(token) {
 			// @ts-expect-error I think this is a bug in marked — some text tokens have children,
 			// but that's not reflected in the types. In these cases we can't just use `token.tokens`
