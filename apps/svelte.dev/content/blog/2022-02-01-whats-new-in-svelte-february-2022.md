@@ -25,18 +25,18 @@ Let's take a look...
 - `$page.stuff` provides a mechanism for pages to pass data 'upward' to layouts ([Docs](https://kit.svelte.dev/docs/loading#input-stuff), [#3252](https://github.com/sveltejs/kit/pull/3252))
 - Fallthrough routes let you specify where to route when an route can't be loaded ([Docs](https://kit.svelte.dev/docs/routing#advanced-routing-fallthrough-routes), [#3217](https://github.com/sveltejs/kit/pull/3217))
 
-**New configs**
+### New configs
 
 - Content Security Policy (CSP) is now supported for increased security when using inline javascript or stylesheets ([Docs](https://kit.svelte.dev/docs/configuration#csp), [#3499](https://github.com/sveltejs/kit/pull/3499))
 - `kit.routes` config allows you to customise public/private modules during build ([Docs](https://kit.svelte.dev/docs/configuration#routes), [#3576](https://github.com/sveltejs/kit/pull/3576))
 - `prerender.createIndexFiles` config lets you prerender index.html files as their subfolder's name ([Docs](https://kit.svelte.dev/docs/configuration#prerender), [#2632](https://github.com/sveltejs/kit/pull/2632))
 - HTTP methods can now be overridden using `kit.methodOverride` ([Docs](https://kit.svelte.dev/docs/routing#endpoints-http-method-overrides), [#2989](https://github.com/sveltejs/kit/pull/2989))
 
-**Config changes**
+### Config changes
 
 - `config.kit.hydrate` and `config.kit.router` are now nested under `config.kit.browser` ([Docs](https://kit.svelte.dev/docs/configuration#browser), [3578](https://github.com/sveltejs/kit/pull/3578))
 
-**Breaking change**
+### Breaking change
 
 - use `Request` and `Response` objects in endpoints and hooks ([#3384](https://github.com/sveltejs/kit/pull/3384))
 
@@ -44,7 +44,7 @@ Let's take a look...
 
 ## Community Showcase
 
-**Apps & Sites**
+### Apps & Sites
 
 - [timb(re)](https://paullj.github.io/timb) is a live music programming environment
 - [Music for Programming](https://musicforprogramming.net/latest/) is a series of mixes intended for listening while `${task}` to focus the brain and inspire the mind
@@ -64,7 +64,7 @@ Let's take a look...
 
 Want to work on a SvelteKit site with others, [try contributing to the Svelte Society site](https://github.com/svelte-society/sveltesociety-2021/issues)!
 
-**Learning and Listening**
+### Learning and Listening
 
 _To Read_
 
@@ -93,7 +93,7 @@ _To Listen To_
 - [So much Sveltey goodness (featuring Rich Harris)](https://changelog.com/jsparty/205) from JS Party
 - [The Other Side of Tech: A Documentarian Perspective (with Stefan Kingham)](https://codingcat.dev/podcast/2-4-the-other-side-of-tech-a-documentarian-perspective) from Purrfect.dev
 
-**Libraries, Tools & Components**
+### Libraries, Tools & Components
 
 - [threlte](https://github.com/grischaerbe/threlte) is a three.js component library for Svelte
 - [svelte-formify](https://github.com/nodify-at/svelte-formify) is a library to manage and validate forms that uses decorators to define validations

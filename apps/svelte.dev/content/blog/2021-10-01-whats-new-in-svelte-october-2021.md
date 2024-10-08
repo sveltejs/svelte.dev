@@ -45,7 +45,7 @@ To see all updates to SvelteKit, check out the [SvelteKit changelog](https://git
 
 ## Community Showcase
 
-**Apps & Sites**
+### Apps & Sites
 
 - [radiofrance](https://www.radiofrance.fr/) just migrated their website to SvelteKit
 - [FLAYKS](https://flayks.com/) is the portfolio site for Félix Péault made with SvelteKit, Sanity, and Anime.js
@@ -56,7 +56,7 @@ To see all updates to SvelteKit, check out the [SvelteKit changelog](https://git
 
 **Looking for a Svelte project to work on? Interested in helping make Svelte's presence on the web better?** Check out [the list of open issues](https://github.com/svelte-society/sveltesociety-2021/issues) if you'd like to contribute to the Svelte Society rewrite in SvelteKit.
 
-**Podcasts Featuring Svelte**
+### Podcasts Featuring Svelte
 
 - [Syntax Podcast: From React to SvelteKit](https://podcasts.apple.com/us/podcast/from-react-to-sveltekit/id1253186678?i=1000536276106) Scott talks with Wes about moving Level Up Tutorials from React to SvelteKit — why he did it, how, benefits, things to watch out for, and more!
 - [Web Rush Podcast: Svelte Tools and Svelte Society](https://www.webrush.io/episodes/episode-150-svelte-tools-and-svelte-society) Kevin Åberg Kultalahti talks about what Svelte Society is, what he's excited about with Svelte, how important documentation is to any product, and much _much_ more
@@ -65,7 +65,7 @@ To see all updates to SvelteKit, check out the [SvelteKit changelog](https://git
 - [Svelte Radio: Routify 3 with Jake and Willow](https://share.transistor.fm/s/10aa305c) the Svelte Radio crew sits down with the maintainers of Routify and discusses the just-released Routify 3
 - [JS Party: 1Password](https://twitter.com/geoffrich_/status/1441816829853253640?s=20) mentioned on the latest episode of The Changelog's JS Party that they use Svelte to power their in-page suggestions
 
-**Educational Content**
+### Educational Content
 
 - [How I built a blog with Svelte and SvelteKit](https://fantinel.dev/blog-development-sveltekit/) is an introduction to Svelte, SvelteKit and Progressive Enhancement with code examples
 - [I built a decentralized chat dapp](https://www.youtube.com/watch?v=J5x3OMXjgMc) is a tutorial on how to use popular web3 technologies like GUN to build a decentralized web app (dapp)
@@ -74,7 +74,7 @@ To see all updates to SvelteKit, check out the [SvelteKit changelog](https://git
 - [SvelteKit Hooks](https://www.youtube.com/watch?v=RarufLoEL08) shows how to use hooks.js in Sveltekit.. When you're done, check out [Part 2](https://www.youtube.com/watch?v=RmIBG3G0-VY)
 - [An early look at SvelteKit](https://www.infoworld.com/article/3630395/an-early-look-at-sveltekit.html) is a post from Infoworld walking through the features and onboarding of SvelteKit
 
-**Libraries, Tools & Components**
+### Libraries, Tools & Components
 
 - [sveltekit-netlify-cms](https://github.com/buhrmi/sveltekit-netlify-cms) is a SvelteKit skeleton app configured for use with Netlify CMS
 - [SvelteFireTS](https://github.com/jacobbowdoin/sveltefirets) is a SvelteKit + TypeScript + Firebase library inspired by Fireship.io

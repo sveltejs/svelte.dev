@@ -29,7 +29,7 @@ For all the patches and performance updates from this month, check out the [Svel
 
 ## Community Showcase
 
-**Apps & Sites built with Svelte**
+### Apps & Sites built with Svelte
 
 - [GitLight](https://github.com/ColinLienard/gitlight) brings GitHub & GitLab notifications to your desktop
 - [Days](https://github.com/paprikka/days) is paprikka's life in days, inspired by Buster Benson's Life in Weeks
@@ -45,7 +45,8 @@ For all the patches and performance updates from this month, check out the [Svel
 - [image-to-social-media-thumbnail](https://brody.fyi/tools/image-to-social-media-thumbnail) lets you convert any image to a social media thumbnail
 - [Svelte Capacitor Store](https://github.com/sdekna/svelte-capacitor-store) is a persistent store that uses capacitor (preferences) storage on native devices, and localStorage otherwise, making it ideal for multi-platform projects
 
-**Learning Resources**
+### Learning Resources
+
 _Featuring Svelte Contributors and Ambassadors_
 
 - [Exploring Svelte 4 w/ Kevin AK: Performance, Compatibility, & Web Component Support | Modern Web Pod](https://www.youtube.com/watch?v=YOL0HGGVib4) by This Dot Media
@@ -77,7 +78,7 @@ _To Read_
 - [Deploying Sveltekit on IIS](https://dev.to/nnutnonn/deploying-sveltekit-on-iis--5gf6) by Nutchapon Makelai
 - [Streamlined Authentication and Secrets Management](https://eman.hashnode.dev/streamlined-authentication-and-secrets-management) by Eman
 
-**Libraries, Tools & Components**
+### Libraries, Tools & Components
 
 - [Melt UI](https://github.com/melt-ui/melt-ui) is a set of headless, accessible component builders for Svelte
 - [MDsveX](https://github.com/pngwn/MDsveX/releases/tag/mdsvex%400.11.0) has been updated to work with Svelte 4

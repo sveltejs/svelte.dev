@@ -40,14 +40,14 @@ New changes to the Svelte Society website include [a new cheat sheet](https://sv
 
 ## Community Showcase
 
-**Apps & Sites**
+### Apps & Sites
 
 - [The official German vaccination dashboard](https://impfdashboard.de/) tracks the current COVID vaccine rollout and features some well-done dataviz.
 - [La neuva era de la educatión conectada](https://elfuturoesapasionante.vodafone.es/especiales/educacion-conectada/) is a Vodaphone site that highlights the ways that technology and COVID-19 has changed the education landscape
 - [sho.rest](https://github.com/Melonai/shorest) is a self-hostable url shortener
 - [night.fm](https://night.fm/) is a cyberpunk-themed radio station
 
-**Demos, Libraries & Components**
+### Demos, Libraries & Components
 
 - [Svelte Reactive Debugger](https://addons.mozilla.org/en-US/firefox/addon/svelte-reactive-debugger/) is a way to monitor Svelte reactive statements in Firefox devtools
 - [svelte-actions](https://github.com/sw-yx/svelte-actions) is a set of prototype Svelte actions for inclusion into official actions in future. [See RFC](https://github.com/sveltejs/rfcs/pull/24) and [Discuss High Level Policy](https://github.com/sw-yx/svelte-actions/issues/7).
@@ -59,7 +59,7 @@ New changes to the Svelte Society website include [a new cheat sheet](https://sv
 - [svelte-video-player](https://github.com/meigo/svelte-video-player) is a customizable `VideoPlayer` component
 - [svelte-readonly](https://github.com/Crisfole/svelte-readonly) is a very small store that exposes only a readable interface.
 
-**New Integrations & Starters**
+### New Integrations & Starters
 
 - [svelte-derver-starter](https://github.com/AlexxNB/svelte-derver-starter) is a starter for baking fullstack application with the client based on Svelte and server side powered by Derver.
 - [eleventy-plugin-embed-svelte](https://github.com/shalomscott/eleventy-plugin-embed-svelte) makes it easy to embed Svelte components into an 11ty site.
@@ -73,7 +73,7 @@ New changes to the Svelte Society website include [a new cheat sheet](https://sv
 
 **Want to share your Svelte Component with the world?** [Submit your own component](https://sveltesociety.dev/help/submitting?type=package) to the list of [packages](https://sveltesociety.dev/packages) on the Svelte Society site.
 
-**Learning Resources**
+### Learning Resources
 
 - [lihautan's Svelte Actions Playlist](https://www.youtube.com/watch?v=ciaMT_MswzE&list=PLoKaNN3BjQX3Gl14MBygFf8buPIw9pAeK) teaches how actions work and how they can help solve common problems when developing Svelte applications
 - [One-click Portfolio/Personal blog generator from dev.to API ](https://dev.to/shriji/one-click-portfolio-personal-blog-generator-from-dev-to-api-3apb) walks through creating a Sapper site that also fetches your articles from DEV.to using the API

@@ -41,7 +41,7 @@ To see all updates to SvelteKit, check out the [SvelteKit changelog](https://git
 
 ## Community Showcase
 
-**Apps & Sites**
+### Apps & Sites
 
 - [Parsnip](https://www.parsnip.ai/) is a mobile-first, progressive-web-app that helps you to learn to cook at home. Check out the [conversation on Reddit](https://www.reddit.com/r/sveltejs/comments/oearb9/learning_to_cook_at_home_with_parsnip_built/) for all the geeky details.
 - [Central Bank Digital Currency (CBDC) tracker](https://www.atlanticcouncil.org/cbdctracker/) is a site that keeps track of how countries around the world are adopting digital currencies.
@@ -50,7 +50,7 @@ To see all updates to SvelteKit, check out the [SvelteKit changelog](https://git
 
 **Looking for a Svelte project to work on? Interested in helping make Svelte's presence on the web better?** Check out [the list of open issues](https://github.com/svelte-society/sveltesociety-2021/issues) if you'd like to contribute to the Svelte Society rewrite in SvelteKit.
 
-**Educational Content**
+### Educational Content
 
 - [How I Built a Cross-Platform Desktop Application with Svelte, Redis, and Rust](https://css-tricks.com/how-i-built-a-cross-platform-desktop-application-with-svelte-redis-and-rust/) is a blog post by Luke Edwards, Svelte maintainer and Developer Advocate from Cloudflare.
 - [How to Create a Blog with SvelteKit and Strapi](https://strapi.io/blog/how-to-create-a-blog-with-svelte-kit-strapi) is a step-by-step tutorial by Aarnav Pai from Strapi
@@ -59,7 +59,7 @@ To see all updates to SvelteKit, check out the [SvelteKit changelog](https://git
 - [learn / graphql / svelte](https://hasura.io/learn/graphql/svelte-apollo/introduction/) is a free 2-hour GraphQL course from Hasura.
 - [How to add Magic Link to a SvelteKit application](https://magic.link/posts/magic-svelte) is a guide to the popular password-less login pattern.
 
-**Libraries, Tools & Components**
+### Libraries, Tools & Components
 
 - [Svelte-Capacitor](https://github.com/drannex42/svelte-capacitor/) just released v2.0.0 - making it even easier to build hybrid mobile apps for iOS and Android using Svelte and Capacitor with near native performance.
 - [svelte-remixicon](https://github.com/ABarnob/svelte-remixicon) is an icon library for Svelte based on Remix Icon, consisting of more than 2000 icons.

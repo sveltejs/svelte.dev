@@ -30,13 +30,13 @@ As the northern hemisphere heats up, Svelte has stayed cool with lots of perform
 
 ## Community Showcase
 
-**Apps & Sites**
+### Apps & Sites
 
 - [SvelteThemes](https://sveltethemes.dev/) is a curated list of Svelte themes and templates built using svelte, sveltekit, elderjs, routify etc.
 - [Beatbump](https://github.com/snuffyDev/Beatbump) is an alternative frontend for YouTube Music created using Svelte/SvelteKit.
 - [Sveltuir](https://github.com/webspaceadam/sveltuir) is an app help you memorize the guitar fretboard
 
-**Educational Content**
+### Educational Content
 
 - [Svelte Radio: A Jolly Good Svelte Summer](https://share.transistor.fm/s/60880542) is a conversation about what's new in Svelte and a celebration of Svelte Radio's 1-year anniversary
 - [Class properties in Svelte](https://navillus.dev/blog/svelte-class-props) is a refresher on the power of `class` for developers switching over to Svelte from React
@@ -48,7 +48,7 @@ As the northern hemisphere heats up, Svelte has stayed cool with lots of perform
 - [Render Katex with Svelte from zero to hero](https://www.youtube.com/watch?v=euowJs9CblA) demonstrates how to implement Katex in a Svelte project
 - [Using Custom Elements in Svelte](https://css-tricks.com/using-custom-elements-in-svelte/) shows some of the quirks to look out for when using custom elements in a Svelte site
 
-**Libraries, Tools & Components**
+### Libraries, Tools & Components
 
 - [svelte-pipeline](https://github.com/novacbn/svelte-pipeline) provides custom JavaScript contexts and the Svelte Compiler as Svelte Stores, for REPLs, Editors, etc.
 - [Sveltotron](https://github.com/Salemmous/sveltotron) is an Electron-based app made to inspect your Svelte app

@@ -45,7 +45,7 @@ For all the release notes going forward, check out [the CHANGELOG on main](https
 
 ## Community Showcase
 
-**Apps & Sites built with Svelte**
+### Apps & Sites built with Svelte
 
 - [eCourse](https://github.com/Ilyas-Codes/eCourse) is a sleek and customizable website template designed for effortless self-hosting of your online course
 - [Typogram](https://typogram.co/) is a brand design tool with "a sprinkle of AI"
@@ -58,7 +58,7 @@ For all the release notes going forward, check out [the CHANGELOG on main](https
 - [Lingotrack](https://lingotrack.com/) is a social platform for you as a language learner to track your progress and find engaging new media
 - [Lofi Flow](https://github.com/nico-mayer/lofi-flow) lets you save your best-loved YouTube lofi live radios and videos in one spot
 
-**Learning Resources**
+### Learning Resources
 
 _Featuring Svelte Contributors and Ambassadors_
 
@@ -87,7 +87,7 @@ _To Read_
 - [Svelte 5 is good, but runes need improvement](https://kylenazario.com/blog/svelte-5-runes-impressions) by Kyle Nazario
 - [Shader Park and 2D](https://untested.sonnet.io/Shader+Park+and+2D) by Untested
 
-**Libraries, Tools & Components**
+### Libraries, Tools & Components
 
 - [Routify](https://routify.dev/blog/routify-3-release-candidate), the popular routing library used in many Svelte apps, has its first Release Candidate for version 3
 - [Superforms v2](https://blog.encodeart.dev/superforms-v2-supporting-all-validation-libraries) is out now - supporting all validation libraries

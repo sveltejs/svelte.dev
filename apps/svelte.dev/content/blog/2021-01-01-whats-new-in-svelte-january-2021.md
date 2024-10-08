@@ -31,7 +31,7 @@ As cautioned in _[What's the deal with SvelteKit?](https://svelte.dev/blog/whats
 
 ## Community Showcase
 
-**Apps & Sites**
+### Apps & Sites
 
 - [manitu.me](https://manitu.me/) is a background sound / pomodoro timer for focus and relaxation
 - [Answer Socrates](https://answersocrates.com/) helps you find trending questions on the internet so that you can write the most relevant blog post, tweet, or billboard
@@ -45,7 +45,7 @@ As cautioned in _[What's the deal with SvelteKit?](https://svelte.dev/blog/whats
 - [Infinite Walking Bass Generator 2](https://github.com/elialbert/infinitewalkingbass2) is an online music player that generates a unique walking bass line
 - [ListenAddict](https://www.listenaddict.com/) is a site that notifies you whenever a person has a new talk/interview on podcast
 
-**Demos, Libraries & Components**
+### Demos, Libraries & Components
 
 - [svelte-tiny-virtual-list](https://github.com/Skayo/svelte-tiny-virtual-list) speeds up long lists by only rendering visible items
 - [svelte-query](https://github.com/TanStack/svelte-query) is a collection of helpful hooks for managing, caching and syncing asynchronous and remote data
@@ -59,7 +59,7 @@ As cautioned in _[What's the deal with SvelteKit?](https://svelte.dev/blog/whats
 
 **Have a component you'd like to share?** [Submit your own component](https://sveltesociety.dev/help/submitting?type=package) to the list of [packages](https://sveltesociety.dev/packages) on the Svelte Society site.
 
-**Learning Resources**
+### Learning Resources
 
 - [Using Svelte to create a scroll video effect](https://blog.koenvangilst.nl/tutorial-svelte-scroll-video/) showcases how the `bind` command can be used to create a cool scroll video effect with very little code
 - [How to make a flappybird game in svelte and typescript](https://www.youtube.com/watch?v=nhrYBoVI8pQ) is a video tutorial including docs and code for reference
@@ -73,7 +73,7 @@ As cautioned in _[What's the deal with SvelteKit?](https://svelte.dev/blog/whats
 - [Using Apollo Client in Sapper](https://bjornlu.com/blog/using-apollo-client-in-sapper/) explains the "simplest" solutions to integrate the Apollo query client into Sapper
 - [Reactive web apps with Crystal + Svelte](https://www.youtube.com/watch?v=i1xjLd6z7BU) explores how to build full-stack, server-rendered Svelte apps with a [Crystal](https://crystal-lang.org) backend
 
-**Related Projects**
+### Related Projects
 
 - [Snowpack's v3 release candidate](https://www.snowpack.dev/posts/2020-12-03-snowpack-3-release-candidate) is out now in preparation for a January 6 release date. Check out the [Getting Started with Svelte](https://www.snowpack.dev/tutorials/svelte) for more info on how to use Snowpack.
 - [Uppy](https://uppy.io/blog/2020/12/1.24/), the open source file uploader, announced Svelte support in its new version 1.24

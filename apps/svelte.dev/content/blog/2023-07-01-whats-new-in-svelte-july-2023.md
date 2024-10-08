@@ -29,7 +29,7 @@ For adapter-specific changes, check out the CHANGELOGs in each of [the `adapter`
 
 ## Community Showcase
 
-**Apps & Sites built with Svelte**
+### Apps & Sites built with Svelte
 
 - [Heerdle](https://github.com/DreaminDani/heerdle) is a remake of Spotify's now-defunct Heardle - the daily music guessing game
 - [Meoweler](https://meoweler.com/) is a travel site filled with cats and helpful facts about popular destinations
@@ -42,7 +42,7 @@ For adapter-specific changes, check out the CHANGELOGs in each of [the `adapter`
 - [md.robino.dev](https://github.com/rossrobino/md) is a web based markdown editor
 - [YABin](https://github.com/Yureien/YABin) is Yet Another Pastebin with some very specific features
 
-**Learning Resources**
+### Learning Resources
 
 - [Announcing Svelte 4 post](https://svelte.dev/blog/svelte-4)
 - [svelte.dev: A complete overhaul](https://svelte.dev/blog/svelte-dev-overhaul)
@@ -84,7 +84,7 @@ _To Read_
 - [Svelte Real‑time Multiplayer Game: User Presence](https://rodneylab.com/svelte-realtime-multiplayer-game/) and [SvelteKit PostCSS Tutorial: use Future CSS Today](https://rodneylab.com/sveltekit-postcss-tutorial/) by Rodney Lab
 - [SvelteKit’s World of Routing: Unleash power of your app using Dynamic Routes and Parameters](https://www.inow.dev/sveltekits-world-of-routing-unleash-power-of-your-app-using-dynamic-routes-and-parameters/) by Igor Nowosad
 
-**Libraries, Tools & Components**
+### Libraries, Tools & Components
 
 - [The Vercel AI SDK](https://vercel.com/blog/introducing-the-vercel-ai-sdk) is an interoperable, streaming-enabled, edge-ready software development kit for AI apps built with React and Svelte
 - [Superforms 1.0](https://superforms.rocks/) has been released. Check out the [migration guide](https://superforms.rocks/migration) and [new feature list](https://superforms.rocks/whats-new-v1) for more details

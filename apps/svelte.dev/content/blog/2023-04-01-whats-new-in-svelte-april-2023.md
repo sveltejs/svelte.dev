@@ -42,7 +42,7 @@ For all the changes to the Svelte compiler, including unreleased changes, check 
 
 ## Community Showcase
 
-**Apps & Sites built with Svelte**
+### Apps & Sites built with Svelte
 
 - [Peerbeer](https://peer.beer/) lets you share files peer-to-peer (p2p) without any third parties or data limits
 - [unplaneted](https://unplaneted.com/) is an interface for exploring very large space images
@@ -56,7 +56,7 @@ For all the changes to the Svelte compiler, including unreleased changes, check 
 - [Game On Or Not](https://gameonornot.com/) is a free web app that helps you organize sports with your friends
 - [Sveltia CMS](https://github.com/sveltia/sveltia-cms) is a Git-based lightweight headless CMS
 
-**Learning Resources**
+### Learning Resources
 
 _Featuring Svelte Contributors and Ambassadors_
 
@@ -94,7 +94,7 @@ _To Read_
 - [Understanding the structure of a SvelteKit project](https://www.inow.dev/understanding-the-structure-of-a-svelte-kit-project/) by Igor Nowosad
 - [Secure Authentication in Svelte using Hooks](https://dev.to/brewhousedigital/secure-authentication-in-svelte-using-hooks-k5j) by Brewhouse Digital
 
-**Libraries, Tools & Components**
+### Libraries, Tools & Components
 
 - [@vavite/node-loader](https://github.com/cyco130/vavite/tree/main/packages/node-loader) is a Node ESM loader that uses Vite to transpile modules to enable sourcemap and breakpoints support in SvelteKit (or any Vite) project
 - [Inlang](https://github.com/inlang/inlang) is building i18n for SvelteKit and is [looking for feedback](https://www.reddit.com/r/sveltejs/comments/11ydtui/sveltekit_and_i18n_lets_finally_solve_this_never/)

@@ -53,7 +53,7 @@ For a complete list of bug fixes and performance updates, check out the [SvelteK
 
 ## Community Showcase
 
-**Apps & Sites built with Svelte**
+### Apps & Sites built with Svelte
 
 - [MobileView](https://mobileview.io/) is a Chrome Extension for real-time, cross-device website simulation
 - [ClassroomIO](https://www.classroomio.com/) is an Open Source Platform for Tech Bootcamps
@@ -65,7 +65,7 @@ For a complete list of bug fixes and performance updates, check out the [SvelteK
 - [Teller](https://github.com/Valink-Solutions/teller) is a comprehensive Minecraft backup solution designed to facilitate both local backups and interfacing with the ChunkVault Backend
 - [Sudoku](https://github.com/betofigueiredo/sudoku) is a board created with SvelteKit, Typescript and Tailwind
 
-**Learning Resources**
+### Learning Resources
 
 _Featuring Svelte Contributors and Ambassadors_
 
@@ -98,7 +98,7 @@ _To Read_
 - [Svelte & WordPress Full Stack Course](https://www.udemy.com/course/svelte-wordpress-full-stack/) by Artneo Web Design on udemy
 - [Add a loading indicator to a Form Action in SvelteKit](https://snippets.khromov.se/add-a-loading-indicator-to-a-form-action-in-sveltekit/) by Useful Snippets (Stanislav Khromov)
 
-**Libraries, Tools & Components**
+### Libraries, Tools & Components
 
 - [sveltekit-view-transition](https://github.com/paoloricciuti/sveltekit-view-transition) provides a simplified `view-transition-api` for Sveltekit
 - [T18S](https://t18s.sigrist.dev/) aims to provide the best internationalization experience for SvelteKit, delivering typesafety, performance, and ease of use

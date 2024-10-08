@@ -22,7 +22,7 @@ Let's dive in!
 
 ## Community Showcase
 
-**Apps & Sites built with Svelte**
+### Apps & Sites built with Svelte
 
 - [Onlook](https://onlook.dev/) is a chrome extension that enables designers to contribute to their team's UI codebase
 - [Fluid Type Generator](https://fluid-type.tolin.ski/) is a modern fluid type generator built with Svelte 5
@@ -31,7 +31,7 @@ Let's dive in!
 - [Equimake](https://equimake.com/) is a collaborative real-time 3D platform for learners, gamers, artists, and coders
 - [svelte.dev-machine](https://github.com/Neosoulink/svelte.dev-machine) is a physical based animation to replicate the Svelte machine on the svelte.dev homepage
 
-**Learning Resources**
+### Learning Resources
 
 _Featuring Svelte Contributors and Ambassadors_
 
@@ -53,7 +53,7 @@ _To Watch_
 - [Svelte 5 Runes Demystified](https://www.youtube.com/playlist?list=PLBvLZ-dkskrKpA01nOZiQE_1SBFyFNB-6) by Peter Makes Websites Ltd
 - [How to Build an eCommerce Store with SvelteKit](https://www.youtube.com/watch?v=S1lK4eJH0tI&t=6s) by Crystallize
 
-**Libraries, Tools & Components**
+### Libraries, Tools & Components
 
 - [Floating UI Svelte](https://github.com/skeletonlabs/floating-ui-svelte) is a library for positioning floating elements and handling interaction
 - [Svelte Animated Pixels](https://github.com/tncrazvan/svelte-animated-pixels) provides an easy way to create pixelated canvas animations by just declaring maps of pixels a strings

@@ -15,13 +15,13 @@ More on that, and what else is new in Svelte, as we dive in...
 - Explicit redirects can now be handled directly from endpoints ([#4260](https://github.com/sveltejs/kit/pull/4260))
 - `svelte-kit sync` ([#4182](https://github.com/sveltejs/kit/pull/4182)), TypeScript 4.6 ([#4190](https://github.com/sveltejs/kit/pull/4190)) and Vite 2.9 were released - adding non-blocking dependency optimization and experimental CSS source maps in dev mode as well as a number of bug fixes contributed by the SvelteKit team ([#4468](https://github.com/sveltejs/kit/pull/4468))
 
-**New Config Options**
+### New Config Options
 
 - `outDir` fixes path issues in monorepos and other situations where the desired output directory is outside the project directory ([Docs](https://kit.svelte.dev/docs/configuration#outdir), [#4176](https://github.com/sveltejs/kit/pull/4176))
 - `endpointExtensions` prevents files other than .js and .ts files from being treated as endpoints, unless you specify endpointExtensions ([Docs](https://kit.svelte.dev/docs/configuration#endpointextensions), [#4197](https://github.com/sveltejs/kit/pull/4197))
 - `prerender.default` lets you prerender every page without having to write `export const prerender = true` in every page file ([Docs](https://kit.svelte.dev/docs/configuration#prerender), [#4192](https://github.com/sveltejs/kit/pull/4192))
 
-**Breaking Changes**
+### Breaking Changes
 
 - Fallthrough routes have been removed. For migration tips, check out the PR ([#4330](https://github.com/sveltejs/kit/pull/4330))
 - `tabindex="-1"` is only added to `<body>` during navigation ([#4140](https://github.com/sveltejs/kit/pull/4140) and [#4184](https://github.com/sveltejs/kit/pull/4184))
@@ -40,7 +40,7 @@ More on that, and what else is new in Svelte, as we dive in...
 
 ## Community Showcase
 
-**Apps & Sites built with Svelte**
+### Apps & Sites built with Svelte
 
 - [Launcher](https://launcher.team/) is an open-source app launcher powered by SvelteKit, Prisma, and Tailwind
 - [Paaster](https://paaster.io/) is a secure by default end to end encrypted pastebin built with Svelte, Vite, TypeScript, Python, Starlette, rclone & Docker.
@@ -60,7 +60,7 @@ More on that, and what else is new in Svelte, as we dive in...
 
 Itching to contribute to a modern SvelteKit website? [Help build the Svelte Society site](https://github.com/svelte-society/sveltesociety.dev/issues)!
 
-**Learning Resources**
+### Learning Resources
 
 _To Attend_
 
@@ -90,7 +90,7 @@ _To Watch_
 - [Fullstack SvelteKit Auth 🔐 with Firebase & Magic Links! 🪄](https://www.youtube.com/watch?v=MAHE4iQgh5Q) by Johnny Magrippis
 - [Firebase Authentication in SvelteKit! Full Stack App](https://www.youtube.com/watch?v=N6Y3hqhZvNI) by Ryan Boddy
 
-**Libraries, Tools & Components**
+### Libraries, Tools & Components
 
 - [SvelTable](https://sveltable.io/) is a feature rich, data table component built with Svelte
 - [svelte-cyberComp](https://github.com/Cybersteam00/svelte-cyberComp) is a powerful, lightweight component library written in Svelte and TypeScript

@@ -31,7 +31,7 @@ Last week, Svelte Summit blew us away with a mountain of content! [Check out the
 
 ## Community Showcase
 
-**Apps & Sites**
+### Apps & Sites
 
 - [gitpod.io](https://github.com/gitpod-io/website) recently rewrote its site with SvelteKit
 - [highlight eel](https://highlighteel.com/) is a web-based editor to mark your favorite parts of any YouTube video to clip and share with anyone
@@ -42,7 +42,7 @@ Last week, Svelte Summit blew us away with a mountain of content! [Check out the
 - [Frog Safety](https://frog-safety.vercel.app/) is a guide for African Dwarf Frogs and the API freshwater master kit
 - [Stardew Valley Character Preview](https://github.com/overscore-media/stardew-valley-character-preview) loads your character's attributes from your Stardew Valley savefile and lets you play around with different outfits, colours, and accessories.
 
-**Demos, Libraries, Tools & Components**
+### Demos, Libraries, Tools & Components
 
 - [svelte-parallax](https://github.com/kindoflew/svelte-parallax) is a spring-based parallax component for Svelte
 - [@svelte-plugins/viewable](https://github.com/svelte-plugins/viewable) is a simple rule-based approach to tracking element viewability.
@@ -51,7 +51,7 @@ Last week, Svelte Summit blew us away with a mountain of content! [Check out the
 
 **Want to contribute your own component?** [Submit your own component](https://sveltesociety.dev/help/submitting?type=package) to the list of [packages](https://sveltesociety.dev/packages) on the Svelte Society site.
 
-**Starters**
+### Starters
 
 - [How to use Vercel Analytics with SvelteKit](https://ivoberger.com/posts/using-vercel-analytics-with-svelte-kit) teaches how to track Web Vitals across your users' devices
 - [Asp.NETCore + Svelte + Vite](https://github.com/Kiho/aspcore-spa-cli/tree/master/samples/SviteSample) connects the three frameworks with SpaCliMiddleware (VS2019)
@@ -61,7 +61,7 @@ Last week, Svelte Summit blew us away with a mountain of content! [Check out the
 
 **Looking for a starter or integration?** Check out [svelte-adders](https://github.com/svelte-add/svelte-adders) and a number of other template examples at the community site [sveltesociety.dev](https://sveltesociety.dev/templates)
 
-**Learning Resources**
+### Learning Resources
 
 - [Amazing macOS Dock animation in Svelte](https://dev.to/puruvj/amazing-macos-dock-animation-in-svelte-5hfb) demonstrates how nice Svelte and popmotion look together
 - [Solving the Tower of Hanoi with recursive Svelte templates](https://geoffrich.net/posts/svelte-tower-of-hanoi/) incorporates the `<svelte:self>` element into a common computer science problem

@@ -37,7 +37,7 @@ This month, we saw lots of contributions to SvelteKit and its docs. The language
 
 ## Community Showcase
 
-**Apps & Sites**
+### Apps & Sites
 
 - [vidu](https://github.com/pa-nic/vidu) is a minimal web analytics collector and dashboard
 - [River Runner](https://river-runner.samlearner.com/) is a virtual way to follow rivers downstream - built with Mapbox and Svelte.
@@ -47,7 +47,7 @@ This month, we saw lots of contributions to SvelteKit and its docs. The language
 - [Greedy Goblin](https://greedygoblin-fe11c.web.app/) is a recipe app for old-school Runescape players.
 - [hashbrown.geopjr.dev](https://hashbrown.geopjr.dev/) is a GNOME-shell inspired webpage to learn about, explore the source code and download the Hashbrown GTK app ([link to source](https://github.com/GeopJr/Hashbrown/tree/website)).
 
-**Libraries, Tools & Components**
+### Libraries, Tools & Components
 
 - [svelte-image-crop](https://novacbn.github.io/svelte-image-crop/) is a simple click'n'drag image cropping library using Web APIs.
 - [svelte-datepicker](https://github.com/andrew-secret/svelte-datepicker) is a lightweight and inclusive date picker build with Svelte.

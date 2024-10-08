@@ -22,7 +22,7 @@ Now onto the rest of the updates...
 - Vercel's v3 build output API is now being used in `adapter-vercel` ([#5514](https://github.com/sveltejs/kit/pull/5514))
 - `vite-plugin-svelte` has reached 1.0 and now supports Vite 3. You'll notice new default ports for `dev` (port 5173) and `preview` (port 4173) ([#5005](https://github.com/sveltejs/kit/pull/5005), [vite-plugin-svelte CHANGELOG](https://github.com/sveltejs/vite-plugin-svelte/blob/main/packages/vite-plugin-svelte/CHANGELOG.md))
 
-**Breaking changes:**
+### Breaking changes:
 
 - `mode`, `prod` and `server` are no longer available in `$app/env` ([#5602](https://github.com/sveltejs/kit/pull/5602))
 - `svelte-kit` CLI commands are now run using the `vite` command and `vite.config.js` is required. This will allow first-class support with other projects in the Vite ecosystem like Vitest and Storybook ([#5332](https://github.com/sveltejs/kit/pull/5332), [Docs](https://kit.svelte.dev/docs/project-structure#project-files-vite-config-js))
@@ -47,7 +47,7 @@ For a full list of changes, check out kit's [CHANGELOG](https://github.com/svelt
 
 ## Community Showcase
 
-**Apps & Sites built with Svelte**
+### Apps & Sites built with Svelte
 
 - [PocketBase](https://github.com/pocketbase/pocketbase) is an open source Go backend with a single file and an admin dashboard built with Svelte
 - [Hondo](https://www.playhondo.com/how-to-play) is a word guessing game with multiple rounds
@@ -63,7 +63,7 @@ For a full list of changes, check out kit's [CHANGELOG](https://github.com/svelt
 - [Remind Me Again](https://github.com/probablykasper/remind-me-again) is an app for toggleable reminders on Mac, Linux and Windows
 - [Heyweek](https://heyweek.com/) is a timetracking app built for freelancers craving that extra pizzazz
 
-**Learning Resources**
+### Learning Resources
 
 _Starring the Svelte team_
 
@@ -100,7 +100,7 @@ _Tech Demos_
 - [Style your Svelte website faster with Stylify CSS](https://stylifycss.com/blog/style-your-svelte-website-faster-with-stylify-css/) by Stylify
 - [Revamped Auth Helpers for Supabase (with SvelteKit support)](https://supabase.com/blog/2022/07/13/supabase-auth-helpers-with-sveltekit-support) by Supabase
 
-**Libraries, Tools & Components**
+### Libraries, Tools & Components
 
 - [Lucia](https://github.com/pilcrowOnPaper/lucia-sveltekit) is a simple, JWT based authentication library for SvelteKit that connects your SvelteKit app with your database
 - [Skeleton](https://github.com/Brain-Bones/skeleton) is a UI component library for use with Svelte + Tailwind

@@ -24,7 +24,7 @@ Want to learn more about how to get started, what's different compared to Sapper
 
 ## Community Showcase
 
-**Apps & Sites**
+### Apps & Sites
 
 - [Nagato](https://nagato.app/) is a task management tool that connects popular time tracking and to-do tools all in one place.
 - [type-kana](https://type-kana.cass.moe/setup) is a quiz app to help you learn ひらがな (hiragana) and カタカナ (katakana), the Japanese syllabaries.
@@ -34,7 +34,7 @@ Want to learn more about how to get started, what's different compared to Sapper
 - [Svelte Game of Life](https://github.com/alanrsoares/svelte-game-of-life) is an educational implementation of Conway's Game of Life in TypeScript + Svelte
 - [foxql](https://github.com/foxql) is a peer to peer full text search engine that runs on your browser.
 
-**Demos, Libraries, Tools & Components**
+### Demos, Libraries, Tools & Components
 
 - [svelte-nodegui](https://github.com/nodegui/svelte-nodegui) is a way to build performant, native and cross-platform desktop applications with Node.js and Svelte
 - [Svelte Story Format](https://www.npmjs.com/package/@storybook/addon-svelte-csf) allows you to write your "stories" in Storybook using the Svelte syntax. More info in the [Storybook blog](https://storybook.js.org/blog/storybook-for-svelte/)
@@ -47,7 +47,7 @@ Want to learn more about how to get started, what's different compared to Sapper
 
 **Want to contribute your own component?** [Submit your own component](https://sveltesociety.dev/help/submitting?type=package) to the list of [packages](https://sveltesociety.dev/packages) on the Svelte Society site.
 
-**Starters**
+### Starters
 
 - [sveltekit-electron](https://github.com/FractalHQ/sveltekit-electron) is a starter kit for Electron using SvelteKit
 - [sveltekit-tailwindcss-external-api](https://github.com/acidlake/sveltekit-tailwindcss-external-api) is everything you need to build a Svelte project with TailwindCSS and an external API, powered by create-svelte.
@@ -55,7 +55,7 @@ Want to learn more about how to get started, what's different compared to Sapper
 
 **Looking for a particular starter?** Check out [svelte-adders](https://github.com/svelte-add/svelte-adders) and a number of other template examples at the community site [sveltesociety.dev](https://sveltesociety.dev/templates)
 
-**Learning Resources**
+### Learning Resources
 
 - [How to Build a Website with Svelte and SvelteKit](https://prismic.io/blog/svelte-sveltekit-tutorial) is a step-by-step tutorial walking through the new SvelteKit setup.
 - [A Svelte store for prefers-reduced-motion](https://geoffrich.net/posts/svelte-prefers-reduced-motion-store/) demonstrates how to make a custom Svelte store whose value will indicate whether the user has requested reduced motion and improve accessibility.

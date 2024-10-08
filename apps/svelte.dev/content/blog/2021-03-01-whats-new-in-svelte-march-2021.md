@@ -42,7 +42,7 @@ Haven't tried the language-tools yet? Check out [Svelte Extension for VSCode](ht
 
 ## Community Showcase
 
-**Apps & Sites**
+### Apps & Sites
 
 - [Tracking the Coronavirus](https://www.nytimes.com/interactive/2021/us/new-york-city-new-york-covid-cases.html) from NYTimes is an example of SvelteKit in production
 - [Budibase](https://github.com/Budibase/budibase) is an open-source low-code platform, helping developers and IT professionals build, automate, and ship internal tools 50x faster on their own infrastructure.
@@ -61,7 +61,7 @@ Haven't tried the language-tools yet? Check out [Svelte Extension for VSCode](ht
 - [weatherify](https://brdtheo-weatherify.netlify.app/) is a very pretty (and [open source](https://github.com/brdtheo/weatherify)) weather app
 - [DSN Live](https://dsn-live.netlify.app/#/) lets you monitor connections between NASA/JPL and interplanetary spacecraft missions in real time.
 
-**Demos, Libraries, Tools & Components**
+### Demos, Libraries, Tools & Components
 
 - [spc](https://github.com/khang-nd/spc) is a special characters picker component for the web
 - [svelte-injector](https://www.npmjs.com/package/svelte-injector) lets you inject Svelte components in React, Angular, Vue, jQuery, Vanilla JS.
@@ -84,7 +84,7 @@ Haven't tried the language-tools yet? Check out [Svelte Extension for VSCode](ht
 
 **Have your own Svelte Component to share?** [Submit your own component](https://sveltesociety.dev/help/submitting?type=package) to the list of [packages](https://sveltesociety.dev/packages) on the Svelte Society site.
 
-**Learning Resources & Starters**
+### Learning Resources & Starters
 
 - [The **unofficial** SvelteKit docs](https://sk-incognito.vercel.app/learn/what-is-sveltekit) were built using SvelteKit and are [open for contributions](https://github.com/GrygrFlzr/kit-docs)
 - [📦 Svelte Store](https://www.youtube.com/playlist?list=PLoKaNN3BjQX3fG-XOSwsPHtnV8FUY6lgK) course by lihautan covers the basics of Svelte Stores and best practices.
