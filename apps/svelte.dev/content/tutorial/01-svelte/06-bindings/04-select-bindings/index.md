@@ -8,7 +8,7 @@ We can also use `bind:value` with `<select>` elements:
 /// file: App.svelte
 <select
     +++bind:+++value={selected}
-    on:change={() => answer = ''}
+    onchange={() => answer = ''}
 >
 ```
 
