@@ -72,7 +72,7 @@
 			</p>
 		</a>
 
-		<a href="/docs/svelte/migrating">
+		<a href="/docs/svelte/v5-migration-guide">
 			<h2>I&rsquo;m migrating an app from Svelte 4</h2>
 			<p>
 				If you&rsquo;re already experienced with an older version of Svelte, the migration guide
