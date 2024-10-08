@@ -1,3 +1,3 @@
 ---
-title: "Inline handlers"
+title: 'Inline handlers'
 ---

@@ -1,3 +1,3 @@
 ---
-title: "Component bindings"
+title: 'Component bindings'
 ---

@@ -1,3 +1,3 @@
 ---
-title: "Deferred transitions"
+title: 'Deferred transitions'
 ---

@@ -1,3 +1,3 @@
 ---
-title: "bind:this={canvas}"
+title: 'bind:this={canvas}'
 ---

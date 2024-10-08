@@ -1,3 +1,3 @@
 ---
-title: "Select bindings"
+title: 'Select bindings'
 ---

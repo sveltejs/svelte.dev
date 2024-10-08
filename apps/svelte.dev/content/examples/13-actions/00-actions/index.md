@@ -1,3 +1,3 @@
 ---
-title: "The use directive"
+title: 'The use directive'
 ---

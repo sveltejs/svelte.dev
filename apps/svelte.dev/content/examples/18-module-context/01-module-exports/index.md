@@ -1,3 +1,3 @@
 ---
-title: "Named exports"
+title: 'Named exports'
 ---

@@ -1,3 +1,3 @@
 ---
-title: "Events"
+title: 'Events'
 ---

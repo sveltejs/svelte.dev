@@ -1,3 +1,3 @@
 ---
-title: "<svelte:window> bindings"
+title: '<svelte:window> bindings'
 ---

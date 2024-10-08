@@ -1,3 +1,3 @@
 ---
-title: "DOM event forwarding"
+title: 'DOM event forwarding'
 ---

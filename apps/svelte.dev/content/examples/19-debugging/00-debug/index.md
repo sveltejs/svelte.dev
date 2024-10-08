@@ -1,3 +1,3 @@
 ---
-title: "The @debug tag"
+title: 'The @debug tag'
 ---

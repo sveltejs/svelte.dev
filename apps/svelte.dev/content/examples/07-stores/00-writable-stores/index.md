@@ -1,3 +1,3 @@
 ---
-title: "Writable stores"
+title: 'Writable stores'
 ---

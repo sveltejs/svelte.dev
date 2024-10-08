@@ -1,3 +1,3 @@
 ---
-title: "Component events"
+title: 'Component events'
 ---

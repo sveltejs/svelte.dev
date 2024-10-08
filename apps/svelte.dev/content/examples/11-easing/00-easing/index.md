@@ -1,3 +1,3 @@
 ---
-title: "Ease Visualiser"
+title: 'Ease Visualiser'
 ---

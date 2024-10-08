@@ -1,3 +1,3 @@
 ---
-title: "Reactive statements"
+title: 'Reactive statements'
 ---

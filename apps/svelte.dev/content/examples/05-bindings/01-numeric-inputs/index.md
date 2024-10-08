@@ -1,3 +1,3 @@
 ---
-title: "Numeric inputs"
+title: 'Numeric inputs'
 ---

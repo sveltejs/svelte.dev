@@ -1,3 +1,3 @@
 ---
-title: "<svelte:window>"
+title: '<svelte:window>'
 ---

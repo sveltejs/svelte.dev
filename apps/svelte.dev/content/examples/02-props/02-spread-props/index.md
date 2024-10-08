@@ -1,3 +1,3 @@
 ---
-title: "Spread props"
+title: 'Spread props'
 ---

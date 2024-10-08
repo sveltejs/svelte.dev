@@ -1,3 +1,3 @@
 ---
-title: "<svelte:document>"
+title: '<svelte:document>'
 ---

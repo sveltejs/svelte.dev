@@ -1,3 +1,3 @@
 ---
-title: "Stores"
+title: 'Stores'
 ---

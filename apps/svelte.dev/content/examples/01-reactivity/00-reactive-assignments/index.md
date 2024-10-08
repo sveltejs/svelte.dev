@@ -1,3 +1,3 @@
 ---
-title: "Reactive assignments"
+title: 'Reactive assignments'
 ---

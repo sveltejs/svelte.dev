@@ -1,3 +1,3 @@
 ---
-title: "The class directive"
+title: 'The class directive'
 ---

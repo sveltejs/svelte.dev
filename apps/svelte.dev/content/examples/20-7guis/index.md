@@ -1,3 +1,3 @@
 ---
-title: "7GUIs"
+title: '7GUIs'
 ---

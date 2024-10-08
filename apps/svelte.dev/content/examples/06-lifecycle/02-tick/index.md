@@ -1,3 +1,3 @@
 ---
-title: "tick"
+title: 'tick'
 ---

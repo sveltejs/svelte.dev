@@ -1,3 +1,3 @@
 ---
-title: "Component composition"
+title: 'Component composition'
 ---

@@ -1,3 +1,3 @@
 ---
-title: "File inputs"
+title: 'File inputs'
 ---

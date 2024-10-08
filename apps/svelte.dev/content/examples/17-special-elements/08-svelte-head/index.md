@@ -1,3 +1,3 @@
 ---
-title: "<svelte:head>"
+title: '<svelte:head>'
 ---

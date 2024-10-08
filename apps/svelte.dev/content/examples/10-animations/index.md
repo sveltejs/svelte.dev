@@ -1,3 +1,3 @@
 ---
-title: "Animations"
+title: 'Animations'
 ---

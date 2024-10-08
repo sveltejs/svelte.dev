@@ -1,3 +1,3 @@
 ---
-title: "Custom JS transitions"
+title: 'Custom JS transitions'
 ---

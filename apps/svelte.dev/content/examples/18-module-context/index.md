@@ -1,3 +1,3 @@
 ---
-title: "Module context"
+title: 'Module context'
 ---

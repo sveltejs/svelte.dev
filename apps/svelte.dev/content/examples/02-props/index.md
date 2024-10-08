@@ -1,3 +1,3 @@
 ---
-title: "Props"
+title: 'Props'
 ---

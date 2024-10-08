@@ -1,3 +1,3 @@
 ---
-title: "Derived stores"
+title: 'Derived stores'
 ---

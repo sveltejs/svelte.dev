@@ -1,3 +1,3 @@
 ---
-title: "Declaring props"
+title: 'Declaring props'
 ---

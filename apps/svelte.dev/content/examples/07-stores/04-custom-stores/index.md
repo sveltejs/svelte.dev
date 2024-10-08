@@ -1,3 +1,3 @@
 ---
-title: "Custom stores"
+title: 'Custom stores'
 ---

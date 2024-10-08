@@ -1,3 +1,3 @@
 ---
-title: "Auto-subscriptions"
+title: 'Auto-subscriptions'
 ---

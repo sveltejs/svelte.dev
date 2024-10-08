@@ -1,3 +1,3 @@
 ---
-title: "Hacker News"
+title: 'Hacker News'
 ---

@@ -1,3 +1,3 @@
 ---
-title: "The transition directive"
+title: 'The transition directive'
 ---

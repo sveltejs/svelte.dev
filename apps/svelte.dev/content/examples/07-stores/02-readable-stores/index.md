@@ -1,3 +1,3 @@
 ---
-title: "Readable stores"
+title: 'Readable stores'
 ---

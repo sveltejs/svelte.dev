@@ -1,3 +1,3 @@
 ---
-title: "Each block bindings"
+title: 'Each block bindings'
 ---

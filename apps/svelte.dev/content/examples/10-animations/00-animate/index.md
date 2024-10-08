@@ -1,3 +1,3 @@
 ---
-title: "The animate directive"
+title: 'The animate directive'
 ---

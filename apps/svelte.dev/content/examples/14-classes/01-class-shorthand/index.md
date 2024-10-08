@@ -1,3 +1,3 @@
 ---
-title: "Shorthand class directive"
+title: 'Shorthand class directive'
 ---
