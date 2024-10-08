@@ -1,34 +1,40 @@
 import { dev } from '$app/environment';
+import { read } from '$app/server';
 import { client } from '$lib/db/client.js';
 import * as gist from '$lib/db/gist.js';
-import examples_data from '$lib/generated/examples-data.js';
-import { get_example, get_examples_list } from '$lib/server/examples/index.js';
+import { examples as example_sections } from '$lib/server/content';
 import { error, json } from '@sveltejs/kit';
 
 export const prerender = 'auto';
 
+const examples = example_sections.flatMap((section) => section.children);
+
 const UUID_REGEX = /^[0-9a-f]{8}-?[0-9a-f]{4}-?[0-9a-f]{4}-?[0-9a-f]{4}-?[0-9a-f]{12}$/;
 
-/** @param {import('$lib/server/examples/types').ExamplesData[number]['examples'][number]['files'][number][]} files  */
-function munge(files) {
-	return files
-		.map((file) => {
-			const dot = file.name.lastIndexOf('.');
-			let name = file.name.slice(0, dot);
-			let type = file.name.slice(dot + 1);
+/** @param {Record<string, string>} files  */
+async function munge(files) {
+	const result = [];
 
-			if (type === 'html') type = 'svelte';
-			// @ts-expect-error what is file.source? by @PuruVJ
-			return { name, type, source: file.source ?? file.content ?? '' };
-		})
-		.sort((a, b) => {
-			if (a.name === 'App' && a.type === 'svelte') return -1;
-			if (b.name === 'App' && b.type === 'svelte') return 1;
+	for (const [file, source] of Object.entries(files)) {
+		const dot = file.lastIndexOf('.');
+		let name = file.slice(0, dot);
+		let type = file.slice(dot + 1);
 
-			if (a.type !== b.type) return a.type === 'svelte' ? -1 : 1;
+		if (type === 'html') type = 'svelte'; // TODO do we still need this? Feels like ages-old code when Svelte files were named .html
 
-			return a.name < b.name ? -1 : 1;
-		});
+		result.push({ name, type, source: await read(source).text() });
+	}
+
+	result.sort((a, b) => {
+		if (a.name === 'App' && a.type === 'svelte') return -1;
+		if (b.name === 'App' && b.type === 'svelte') return 1;
+
+		if (a.type !== b.type) return a.type === 'svelte' ? -1 : 1;
+
+		return a.name < b.name ? -1 : 1;
+	});
+
+	return result;
 }
 
 export async function GET({ params }) {
@@ -36,14 +42,15 @@ export async function GET({ params }) {
 	// We prerender examples pages during build time. That means, when something like `/playground/hello-world.json`
 	// is accessed, this function won't be run at all, as it will be served from the filesystem
 
-	const example = get_example(examples_data, params.id);
-	if (example) {
+	const example = examples.find((example) => example.slug.split('/').pop() === params.id);
+
+	if (example?.assets) {
 		return json({
 			id: params.id,
-			name: example.title,
+			name: example.metadata.title,
 			owner: null,
 			relaxed: false, // TODO is this right? EDIT: It was example.relaxed before, which no example return to my knowledge. By @PuruVJ
-			components: munge(example.files)
+			components: await munge(example.assets)
 		});
 	}
 
@@ -84,7 +91,5 @@ export async function GET({ params }) {
 }
 
 export async function entries() {
-	return get_examples_list(examples_data)
-		.map(({ examples }) => examples)
-		.flatMap((val) => val.map(({ slug }) => ({ id: slug })));
+	return examples.map((example) => ({ id: example.slug }));
 }
