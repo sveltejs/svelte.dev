@@ -9,12 +9,11 @@ const config = {
 		adapter: adapter(),
 		prerender: {
 			handleHttpError(error) {
-				// TODO fail the build
 				if (error.status === 500) {
-					console.error(`TODO fix ${error.path}`);
-					return;
+					throw new Error(error.message);
 				}
 
+				// TODO fail the build
 				console.error(`404 ${error.path}`);
 			},
 			handleMissingId(warning) {
