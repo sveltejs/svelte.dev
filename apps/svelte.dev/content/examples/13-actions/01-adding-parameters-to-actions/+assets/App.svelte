@@ -1,8 +1,8 @@
 <script>
 	import { longpress } from './longpress.js';
 
-	let pressed = false;
-	let duration = 2000;
+	let pressed = $state(false);
+	let duration = $state(2000);
 </script>
 
 <label>
@@ -12,8 +12,8 @@
 
 <button
 	use:longpress={duration}
-	on:longpress={() => (pressed = true)}
-	on:mouseenter={() => (pressed = false)}>press and hold</button
+	onlongpress={() => (pressed = true)}
+	onmouseenter={() => (pressed = false)}>press and hold</button
 >
 
 {#if pressed}

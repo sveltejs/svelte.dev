@@ -7,11 +7,11 @@ radius of the selected circle.
 -->
 
 <script>
-	let i = 0;
-	let undoStack = [[]];
-	let circles = [];
-	let selected;
-	let adjusting = false;
+	let i = $state(0);
+	let undoStack = $state([[]]);
+	let circles = $state([]);
+	let selected = $state();
+	let adjusting = $state(false);
 	let adjusted = false;
 
 	function handleClick(event) {
@@ -66,19 +66,21 @@ radius of the selected circle.
 </script>
 
 <div class="controls">
-	<button on:click={() => travel(-1)} disabled={i === 0}>undo</button>
-	<button on:click={() => travel(+1)} disabled={i === undoStack.length - 1}>redo</button>
+	<button onclick={() => travel(-1)} disabled={i === 0}>undo</button>
+	<button onclick={() => travel(+1)} disabled={i === undoStack.length - 1}>redo</button>
 </div>
-<!-- svelte-ignore a11y-click-events-have-key-events a11y-no-static-element-interactions -->
-<svg on:click={handleClick}>
+<!-- svelte-ignore a11y_click_events_have_key_events, a11y_no_static_element_interactions -->
+<svg onclick={handleClick}>
 	{#each circles as circle}
-		<!-- svelte-ignore a11y-click-events-have-key-events -->
+		<!-- svelte-ignore a11y_click_events_have_key_events -->
 		<circle
 			cx={circle.cx}
 			cy={circle.cy}
 			r={circle.r}
-			on:click={(event) => select(circle, event)}
-			on:contextmenu|stopPropagation|preventDefault={() => {
+			onclick={(event) => select(circle, event)}
+			oncontextmenu={(e) => {
+				e.stopPropagation();
+				e.preventDefault();
 				adjusting = !adjusting;
 				if (adjusting) selected = circle;
 			}}
@@ -90,7 +92,7 @@ radius of the selected circle.
 {#if adjusting}
 	<div class="adjuster">
 		<p>adjust diameter of circle at {selected.cx}, {selected.cy}</p>
-		<input type="range" value={selected.r} on:input={adjust} />
+		<input type="range" value={selected.r} oninput={adjust} />
 	</div>
 {/if}
 

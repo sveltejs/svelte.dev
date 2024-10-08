@@ -4,7 +4,7 @@
 	import { expand } from './custom-transitions.js';
 	import { inner, outer } from './shape.js';
 
-	let visible = true;
+	let visible = $state(true);
 </script>
 
 {#if visible}

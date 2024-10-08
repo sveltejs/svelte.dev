@@ -7,8 +7,8 @@
 		fallback: scale
 	});
 
-	let selected = null;
-	let loading = null;
+	let selected = $state(null);
+	let loading = $state(null);
 
 	const ASSETS = `https://sveltejs.github.io/assets/crossfade`;
 
@@ -37,7 +37,7 @@
 					{#if selected !== image}
 						<button
 							style="background-color: {image.color};"
-							on:click={() => load(image)}
+							onclick={() => load(image)}
 							in:receive={{ key: image.id }}
 							out:send={{ key: image.id }}>{loading === image ? '...' : image.id}</button
 						>
@@ -49,8 +49,8 @@
 		{#if selected}
 			{#await selected then d}
 				<div class="photo" in:receive|global={{ key: d.id }} out:send|global={{ key: d.id }}>
-					<!-- svelte-ignore a11y-click-events-have-key-events a11y-no-noninteractive-element-interactions -->
-					<img alt={d.alt} src="{ASSETS}/{d.id}.jpg" on:click={() => (selected = null)} />
+					<!-- svelte-ignore a11y_click_events_have_key_events, a11y_no_noninteractive_element_interactions -->
+					<img alt={d.alt} src="{ASSETS}/{d.id}.jpg" onclick={() => (selected = null)} />
 
 					<p class="credit">
 						<a target="_blank" rel="noreferrer" href="https://www.flickr.com/photos/{d.path}"

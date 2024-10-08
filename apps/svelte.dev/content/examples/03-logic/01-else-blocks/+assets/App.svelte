@@ -1,5 +1,5 @@
 <script>
-	let user = { loggedIn: false };
+	let user = $state({ loggedIn: false });
 
 	function toggle() {
 		user.loggedIn = !user.loggedIn;
@@ -7,7 +7,7 @@
 </script>
 
 {#if user.loggedIn}
-	<button on:click={toggle}> Log out </button>
+	<button onclick={toggle}> Log out </button>
 {:else}
-	<button on:click={toggle}> Log in </button>
+	<button onclick={toggle}> Log in </button>
 {/if}

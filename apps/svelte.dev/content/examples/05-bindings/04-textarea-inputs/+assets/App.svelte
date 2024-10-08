@@ -1,9 +1,9 @@
 <script>
 	import { marked } from 'marked';
-	let text = `Some words are *italic*, some are **bold**`;
+	let text = $state(`Some words are *italic*, some are **bold**`);
 </script>
 
-<textarea bind:value={text} />
+<textarea bind:value={text}></textarea>
 
 {@html marked(text)}
 

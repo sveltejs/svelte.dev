@@ -1,4 +1,4 @@
-<script context="module">
+<script module>
 	const elements = new Set();
 
 	export function stopAll() {
@@ -11,13 +11,15 @@
 <script>
 	import { onMount } from 'svelte';
 
-	export let src;
-	export let title;
-	export let composer;
-	export let performer;
+	let {
+		src,
+		title,
+		composer,
+		performer
+	} = $props();
 
-	let audio;
-	let paused = true;
+	let audio = $state();
+	let paused = $state(true);
 
 	onMount(() => {
 		elements.add(audio);
@@ -35,7 +37,7 @@
 	<h2>{title}</h2>
 	<p><strong>{composer}</strong> / performed by {performer}</p>
 
-	<audio bind:this={audio} bind:paused on:play={stopOthers} controls {src} />
+	<audio crossorigin="anonymous" bind:this={audio} bind:paused onplay={stopOthers} controls {src}></audio>
 </article>
 
 <style>

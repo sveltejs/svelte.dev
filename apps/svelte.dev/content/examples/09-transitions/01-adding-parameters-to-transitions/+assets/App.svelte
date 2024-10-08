@@ -1,6 +1,6 @@
 <script>
 	import { fly } from 'svelte/transition';
-	let visible = true;
+	let visible = $state(true);
 </script>
 
 <label>

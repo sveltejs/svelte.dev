@@ -1,9 +1,9 @@
 <script>
-	let m = { x: 0, y: 0 };
+	let m = $state({ x: 0, y: 0 });
 </script>
 
-<!-- svelte-ignore a11y-no-static-element-interactions -->
-<div on:mousemove={(e) => (m = { x: e.clientX, y: e.clientY })}>
+<!-- svelte-ignore a11y_no_static_element_interactions -->
+<div onmousemove={(e) => (m = { x: e.clientX, y: e.clientY })}>
 	The mouse position is {m.x} x {m.y}
 </div>
 

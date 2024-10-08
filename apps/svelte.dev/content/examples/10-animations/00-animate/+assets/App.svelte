@@ -19,15 +19,16 @@
 		}
 	});
 
-	let todos = [
+	let todos = $state([
 		{ id: 1, done: false, description: 'write some docs' },
 		{ id: 2, done: false, description: 'start writing JSConf talk' },
 		{ id: 3, done: true, description: 'buy some milk' },
 		{ id: 4, done: false, description: 'mow the lawn' },
 		{ id: 5, done: false, description: 'feed the turtle' },
 		{ id: 6, done: false, description: 'fix some bugs' }
-	];
+	]);
 
+	// svelte-ignore state_referenced_locally
 	let uid = todos.length + 1;
 
 	function add(input) {
@@ -50,7 +51,7 @@
 	<input
 		class="new-todo"
 		placeholder="what needs to be done?"
-		on:keydown={(event) => event.key === 'Enter' && add(event.target)}
+		onkeydown={(event) => event.key === 'Enter' && add(event.target)}
 	/>
 
 	<div class="left">
@@ -59,7 +60,7 @@
 			<label in:receive={{ key: todo.id }} out:send={{ key: todo.id }} animate:flip>
 				<input type="checkbox" bind:checked={todo.done} />
 				{todo.description}
-				<button on:click={() => remove(todo)}>x</button>
+				<button onclick={() => remove(todo)}>x</button>
 			</label>
 		{/each}
 	</div>
@@ -70,7 +71,7 @@
 			<label in:receive={{ key: todo.id }} out:send={{ key: todo.id }} animate:flip>
 				<input type="checkbox" bind:checked={todo.done} />
 				{todo.description}
-				<button on:click={() => remove(todo)}>x</button>
+				<button onclick={() => remove(todo)}>x</button>
 			</label>
 		{/each}
 	</div>

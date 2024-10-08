@@ -14,23 +14,23 @@
 	const yTicks = [0, 5, 10, 15, 20];
 	const padding = { top: 20, right: 15, bottom: 20, left: 25 };
 
-	let width = 500;
-	let height = 200;
+	let width = $state(500);
+	let height = $state(200);
 
 	function formatMobile(tick) {
 		return "'" + tick.toString().slice(-2);
 	}
 
-	$: xScale = scaleLinear()
+	let xScale = $derived(scaleLinear()
 		.domain([0, xTicks.length])
-		.range([padding.left, width - padding.right]);
+		.range([padding.left, width - padding.right]));
 
-	$: yScale = scaleLinear()
+	let yScale = $derived(scaleLinear()
 		.domain([0, Math.max.apply(null, yTicks)])
-		.range([height - padding.bottom, padding.top]);
+		.range([height - padding.bottom, padding.top]));
 
-	$: innerWidth = width - (padding.left + padding.right);
-	$: barWidth = innerWidth / xTicks.length;
+	let innerWidth = $derived(width - (padding.left + padding.right));
+	let barWidth = $derived(innerWidth / xTicks.length);
 </script>
 
 <h2>US birthrate by year</h2>

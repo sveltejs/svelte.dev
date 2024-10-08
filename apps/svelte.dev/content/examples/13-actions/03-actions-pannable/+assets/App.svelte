@@ -31,13 +31,13 @@
 <div
 	class="box"
 	use:pannable
-	on:panstart={handlePanStart}
-	on:panmove={handlePanMove}
-	on:panend={handlePanEnd}
+	onpanstart={handlePanStart}
+	onpanmove={handlePanMove}
+	onpanend={handlePanEnd}
 	style="transform:
 		translate({$coords.x}px,{$coords.y}px)
 		rotate({$coords.x * 0.2}deg)"
-/>
+></div>
 
 <style>
 	.box {

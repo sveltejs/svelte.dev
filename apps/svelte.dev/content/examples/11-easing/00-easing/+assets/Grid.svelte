@@ -1,7 +1,7 @@
 <svelte:options namespace="svg" />
 
 <script>
-	export let x, y;
+	let { x, y } = $props();
 </script>
 
 <rect

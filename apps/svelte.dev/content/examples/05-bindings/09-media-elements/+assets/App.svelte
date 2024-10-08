@@ -1,10 +1,10 @@
 <script>
 	// These values are bound to properties of the video
-	let time = 0;
-	let duration;
-	let paused = true;
+	let time = $state(0);
+	let duration = $state();
+	let paused = $state(true);
 
-	let showControls = true;
+	let showControls = $state(true);
 	let showControlsTimeout;
 
 	// Used to track time of last mouse down event
@@ -56,10 +56,10 @@
 	<video
 		poster="https://sveltejs.github.io/assets/caminandes-llamigos.jpg"
 		src="https://sveltejs.github.io/assets/caminandes-llamigos.mp4"
-		on:mousemove={handleMove}
-		on:touchmove|preventDefault={handleMove}
-		on:mousedown={handleMousedown}
-		on:mouseup={handleMouseup}
+		onmousemove={handleMove}
+		ontouchmove={e => { e.preventDefault(); handleMove(); }}
+		onmousedown={handleMousedown}
+		onmouseup={handleMouseup}
 		bind:currentTime={time}
 		bind:duration
 		bind:paused
@@ -68,7 +68,7 @@
 	</video>
 
 	<div class="controls" style="opacity: {duration && showControls ? 1 : 0}">
-		<progress value={time / duration || 0} />
+		<progress value={time / duration || 0}></progress>
 
 		<div class="info">
 			<span class="time">{format(time)}</span>

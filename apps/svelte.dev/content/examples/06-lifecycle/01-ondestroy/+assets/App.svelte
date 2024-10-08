@@ -1,7 +1,7 @@
 <script>
 	import { onInterval } from './utils.js';
 
-	let seconds = 0;
+	let seconds = $state(0);
 	onInterval(() => (seconds += 1), 1000);
 </script>
 

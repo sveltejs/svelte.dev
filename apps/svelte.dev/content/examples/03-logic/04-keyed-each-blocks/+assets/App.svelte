@@ -1,20 +1,20 @@
 <script>
 	import Thing from './Thing.svelte';
 
-	let things = [
+	let things = $state([
 		{ id: 1, color: 'darkblue' },
 		{ id: 2, color: 'indigo' },
 		{ id: 3, color: 'deeppink' },
 		{ id: 4, color: 'salmon' },
 		{ id: 5, color: 'gold' }
-	];
+	]);
 
 	function handleClick() {
 		things = things.slice(1);
 	}
 </script>
 
-<button on:click={handleClick}> Remove first thing </button>
+<button onclick={handleClick}> Remove first thing </button>
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; grid-gap: 1em">
 	<div>

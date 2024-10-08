@@ -2,25 +2,25 @@
 	import { onMount } from 'svelte';
 	import { scaleLinear } from 'd3-scale';
 
-	export let points;
+	let { points } = $props();
 
-	let svg;
-	let width = 500;
-	let height = 200;
+	let svg = $state();
+	let width = $state(500);
+	let height = $state(200);
 
 	const padding = { top: 20, right: 40, bottom: 40, left: 25 };
 
-	$: xScale = scaleLinear()
+	let xScale = $derived(scaleLinear()
 		.domain([0, 20])
-		.range([padding.left, width - padding.right]);
+		.range([padding.left, width - padding.right]));
 
-	$: yScale = scaleLinear()
+	let yScale = $derived(scaleLinear()
 		.domain([0, 12])
-		.range([height - padding.bottom, padding.top]);
+		.range([height - padding.bottom, padding.top]));
 
-	$: xTicks = width > 180 ? [0, 4, 8, 12, 16, 20] : [0, 10, 20];
+	let xTicks = $derived(width > 180 ? [0, 4, 8, 12, 16, 20] : [0, 10, 20]);
 
-	$: yTicks = height > 180 ? [0, 2, 4, 6, 8, 10, 12] : [0, 4, 8, 12];
+	let yTicks = $derived(height > 180 ? [0, 2, 4, 6, 8, 10, 12] : [0, 4, 8, 12]);
 
 	onMount(resize);
 
@@ -29,7 +29,7 @@
 	}
 </script>
 
-<svelte:window on:resize={resize} />
+<svelte:window onresize={resize} />
 
 <svg bind:this={svg}>
 	<!-- y axis -->

@@ -1,8 +1,8 @@
 <script>
-	let w;
-	let h;
-	let size = 42;
-	let text = 'edit me';
+	let w = $state();
+	let h = $state();
+	let size = $state(42);
+	let text = $state('edit me');
 </script>
 
 <input type="range" bind:value={size} />

@@ -24,11 +24,11 @@
 	</label>
 </div>
 
-<!-- svelte-ignore a11y-no-static-element-interactions -->
+<!-- svelte-ignore a11y_no_static_element_interactions -->
 <svg
-	on:mousemove={(e) => coords.set({ x: e.clientX, y: e.clientY })}
-	on:mousedown={() => size.set(30)}
-	on:mouseup={() => size.set(10)}
+	onmousemove={(e) => coords.set({ x: e.clientX, y: e.clientY })}
+	onmousedown={() => size.set(30)}
+	onmouseup={() => size.set(10)}
 >
 	<circle cx={$coords.x} cy={$coords.y} r={$size} />
 </svg>

@@ -1,8 +1,10 @@
 <script>
-	export let name;
-	export let version;
-	export let speed;
-	export let website;
+	let {
+		name,
+		version,
+		speed,
+		website
+	} = $props();
 </script>
 
 <p>

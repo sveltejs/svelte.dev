@@ -6,25 +6,25 @@
 	const xTicks = [1980, 1990, 2000, 2010];
 	const padding = { top: 20, right: 15, bottom: 20, left: 25 };
 
-	let width = 500;
-	let height = 200;
+	let width = $state(500);
+	let height = $state(200);
 
-	$: xScale = scaleLinear()
-		.domain([minX, maxX])
-		.range([padding.left, width - padding.right]);
 
-	$: yScale = scaleLinear()
-		.domain([Math.min.apply(null, yTicks), Math.max.apply(null, yTicks)])
-		.range([height - padding.bottom, padding.top]);
 
-	$: minX = points[0].x;
-	$: maxX = points[points.length - 1].x;
-	$: path = `M${points.map((p) => `${xScale(p.x)},${yScale(p.y)}`).join('L')}`;
-	$: area = `${path}L${xScale(maxX)},${yScale(0)}L${xScale(minX)},${yScale(0)}Z`;
 
 	function formatMobile(tick) {
 		return "'" + tick.toString().slice(-2);
 	}
+	let minX = $derived(points[0].x);
+	let maxX = $derived(points[points.length - 1].x);
+	let xScale = $derived(scaleLinear()
+		.domain([minX, maxX])
+		.range([padding.left, width - padding.right]));
+	let yScale = $derived(scaleLinear()
+		.domain([Math.min.apply(null, yTicks), Math.max.apply(null, yTicks)])
+		.range([height - padding.bottom, padding.top]));
+	let path = $derived(`M${points.map((p) => `${xScale(p.x)},${yScale(p.y)}`).join('L')}`);
+	let area = $derived(`${path}L${xScale(maxX)},${yScale(0)}L${xScale(minX)},${yScale(0)}Z`);
 </script>
 
 <h2>Arctic sea ice minimum</h2>

@@ -1,22 +1,28 @@
 <script>
 	import { interpolateString as interpolate } from 'd3-interpolate';
 	import { tweened } from 'svelte/motion';
-
 	import Grid from './Grid.svelte';
 	import Controls from './Controls.svelte';
-
 	import { eases, types } from './eases.js';
 
-	let current_type = 'In';
-	let current_ease = 'sine';
-	let duration = 2000;
-	let current = eases.get(current_ease)[current_type];
-	let playing = false;
-	let width;
+	let current_type = $state('In');
+	let current_ease = $state('sine');
+	let duration = $state(2000);
+	let current = $state(eases.get(current_ease)[current_type]);
+	let playing = $state(false);
+	let width = $state();
 
 	const ease_path = tweened(current.shape, { interpolate });
 	const time = tweened(0);
 	const value = tweened(1000);
+
+	$effect(() => {
+		current = eases.get(current_ease)[current_type];
+	});
+
+	$effect(() => {
+		current && runAnimations();
+	});
 
 	async function runAnimations() {
 		playing = true;
@@ -32,9 +38,6 @@
 
 		playing = false;
 	}
-
-	$: current = eases.get(current_ease)[current_type];
-	$: current && runAnimations();
 </script>
 
 <div bind:offsetWidth={width} class="easing-vis">

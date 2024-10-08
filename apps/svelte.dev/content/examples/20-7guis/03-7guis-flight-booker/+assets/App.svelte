@@ -2,17 +2,18 @@
 <script>
 	const tomorrow = new Date(Date.now() + 86400000);
 
-	let start = [
+	let start = $state([
 		tomorrow.getFullYear(),
 		pad(tomorrow.getMonth() + 1, 2),
 		pad(tomorrow.getDate(), 2)
-	].join('-');
+	].join('-'));
 
-	let end = start;
-	let isReturn = false;
+	// svelte-ignore state_referenced_locally
+	let end = $state(start);
+	let isReturn = $state(false);
 
-	$: startDate = convertToDate(start);
-	$: endDate = convertToDate(end);
+	let startDate = $derived(convertToDate(start));
+	let endDate = $derived(convertToDate(end));
 
 	function bookFlight() {
 		const type = isReturn ? 'return' : 'one-way';
@@ -45,7 +46,7 @@
 <input type="date" bind:value={start} />
 <input type="date" bind:value={end} disabled={!isReturn} />
 
-<button on:click={bookFlight} disabled={isReturn && startDate >= endDate}>book</button>
+<button onclick={bookFlight} disabled={isReturn && startDate >= endDate}>book</button>
 
 <style>
 	select,

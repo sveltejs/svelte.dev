@@ -1,7 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 
-	let canvas;
+	let canvas = $state();
 
 	onMount(() => {
 		const ctx = canvas.getContext('2d');
@@ -38,7 +38,7 @@
 	});
 </script>
 
-<canvas bind:this={canvas} width={32} height={32} />
+<canvas bind:this={canvas} width={32} height={32}></canvas>
 
 <style>
 	canvas {

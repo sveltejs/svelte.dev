@@ -1,7 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 
-	let photos = [];
+	let photos = $state([]);
 
 	onMount(async () => {
 		const res = await fetch(`/tutorial/api/album`);

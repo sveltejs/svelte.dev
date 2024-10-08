@@ -6,4 +6,4 @@
 	}
 </script>
 
-<button on:click={increment}> + </button>
+<button onclick={increment}> + </button>

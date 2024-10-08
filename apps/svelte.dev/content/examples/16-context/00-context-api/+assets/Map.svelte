@@ -6,12 +6,15 @@
 		getMap: () => map
 	});
 
-	export let lat;
-	export let lon;
-	export let zoom;
+	let {
+		lat,
+		lon,
+		zoom,
+		children
+	} = $props();
 
-	let container;
-	let map;
+	let container = $state();
+	let map = $state();
 
 	function load() {
 		map = new mapbox.Map({
@@ -28,12 +31,12 @@
 </script>
 
 <svelte:head>
-	<link rel="stylesheet" href="https://unpkg.com/mapbox-gl/dist/mapbox-gl.css" on:load={load} />
+	<link rel="stylesheet" href="https://unpkg.com/mapbox-gl/dist/mapbox-gl.css" onload={load} />
 </svelte:head>
 
 <div bind:this={container}>
 	{#if map}
-		<slot />
+		{@render children?.()}
 	{/if}
 </div>
 

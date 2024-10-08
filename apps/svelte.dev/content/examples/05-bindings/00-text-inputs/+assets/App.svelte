@@ -1,5 +1,5 @@
 <script>
-	let name = '';
+	let name = $state('');
 </script>
 
 <input bind:value={name} placeholder="enter your name" />

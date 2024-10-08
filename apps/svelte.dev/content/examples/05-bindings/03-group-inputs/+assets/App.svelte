@@ -1,6 +1,6 @@
 <script>
-	let scoops = 1;
-	let flavours = ['Mint choc chip'];
+	let scoops = $state(1);
+	let flavours = $state(['Mint choc chip']);
 
 	let menu = ['Cookies and cream', 'Mint choc chip', 'Raspberry ripple'];
 

@@ -1,27 +1,28 @@
 <!-- https://eugenkiss.github.io/7guis/tasks#crud -->
 
 <script>
-	let people = [
+	let people = $state([
 		{ first: 'Hans', last: 'Emil' },
 		{ first: 'Max', last: 'Mustermann' },
 		{ first: 'Roman', last: 'Tisch' }
-	];
+	]);
 
-	let prefix = '';
-	let first = '';
-	let last = '';
-	let i = 0;
+	let prefix = $state('');
+	let first = $state('');
+	let last = $state('');
+	let i = $state(0);
 
-	$: filteredPeople = prefix
+	let filteredPeople = $derived(prefix
 		? people.filter((person) => {
 				const name = `${person.last}, ${person.first}`;
 				return name.toLowerCase().startsWith(prefix.toLowerCase());
 			})
-		: people;
+		: people);
+	let selected = $derived(filteredPeople[i]);
 
-	$: selected = filteredPeople[i];
-
-	$: reset_inputs(selected);
+	$effect(() => {
+		reset_inputs(selected);
+	});
 
 	function create() {
 		people = people.concat({ first, last });
@@ -62,9 +63,9 @@
 <label><input bind:value={last} placeholder="last" /></label>
 
 <div class="buttons">
-	<button on:click={create} disabled={!first || !last}>create</button>
-	<button on:click={update} disabled={!first || !last || !selected}>update</button>
-	<button on:click={remove} disabled={!selected}>delete</button>
+	<button onclick={create} disabled={!first || !last}>create</button>
+	<button onclick={update} disabled={!first || !last || !selected}>update</button>
+	<button onclick={remove} disabled={!selected}>delete</button>
 </div>
 
 <style>

@@ -5,9 +5,7 @@
 	const { getMap } = getContext(key);
 	const map = getMap();
 
-	export let lat;
-	export let lon;
-	export let label;
+	let { lat, lon, label } = $props();
 
 	const popup = new mapbox.Popup({ offset: 25 }).setText(label);
 

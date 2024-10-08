@@ -1,12 +1,12 @@
 <script>
-	let current = 'foo';
+	let current = $state('foo');
 </script>
 
-<button class:active={current === 'foo'} on:click={() => (current = 'foo')}>foo</button>
+<button class:active={current === 'foo'} onclick={() => (current = 'foo')}>foo</button>
 
-<button class:active={current === 'bar'} on:click={() => (current = 'bar')}>bar</button>
+<button class:active={current === 'bar'} onclick={() => (current = 'bar')}>bar</button>
 
-<button class:active={current === 'baz'} on:click={() => (current = 'baz')}>baz</button>
+<button class:active={current === 'baz'} onclick={() => (current = 'baz')}>baz</button>
 
 <style>
 	button {

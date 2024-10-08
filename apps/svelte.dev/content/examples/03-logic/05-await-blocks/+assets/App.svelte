@@ -1,5 +1,5 @@
 <script>
-	let promise = getRandomNumber();
+	let promise = $state(getRandomNumber());
 
 	async function getRandomNumber() {
 		const res = await fetch(`/tutorial/random-number`);
@@ -17,7 +17,7 @@
 	}
 </script>
 
-<button on:click={handleClick}> generate random number </button>
+<button onclick={handleClick}> generate random number </button>
 
 {#await promise}
 	<p>...waiting</p>

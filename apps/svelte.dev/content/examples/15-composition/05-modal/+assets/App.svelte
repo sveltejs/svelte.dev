@@ -1,16 +1,18 @@
 <script>
 	import Modal from './Modal.svelte';
 
-	let showModal = false;
+	let showModal = $state(false);
 </script>
 
-<button on:click={() => (showModal = true)}> show modal </button>
+<button onclick={() => (showModal = true)}> show modal </button>
 
 <Modal bind:showModal>
-	<h2 slot="header">
-		modal
-		<small><em>adjective</em> mod·al \ˈmō-dəl\</small>
-	</h2>
+	{#snippet header()}
+		<h2>
+			modal
+			<small><em>adjective</em> mod·al \ˈmō-dəl\</small>
+		</h2>
+	{/snippet}
 
 	<ol class="definition-list">
 		<li>of or relating to modality in logic</li>

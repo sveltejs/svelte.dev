@@ -1,5 +1,5 @@
 <script>
-	export let answer = 'a mystery';
+	let { answer = 'a mystery' } = $props();
 </script>
 
 <p>The answer is {answer}</p>

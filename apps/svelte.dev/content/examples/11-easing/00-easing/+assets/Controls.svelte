@@ -1,17 +1,19 @@
 <script>
 	import { createEventDispatcher } from 'svelte';
 
-	export let current_ease;
-	export let current_type;
-	export let eases;
-	export let types;
-	export let duration;
-	export let playing;
-	export let width;
+	let {
+		current_ease = $bindable(),
+		current_type = $bindable(),
+		eases,
+		types,
+		duration = $bindable(),
+		playing,
+		width
+	} = $props();
 
 	const dispatch = createEventDispatcher();
 
-	$: mobile = width && width < 600;
+	let mobile = $derived(width && width < 600);
 </script>
 
 <div class="easing-sidebar">
@@ -29,7 +31,7 @@
 			<ul>
 				{#each [...eases] as [name]}
 					<li class:selected={name === current_ease}>
-						<button on:click={() => (current_ease = name)}> {name}</button>
+						<button onclick={() => (current_ease = name)}> {name}</button>
 					</li>
 				{/each}
 			</ul>
@@ -47,7 +49,7 @@
 			<ul>
 				{#each types as [name, type]}
 					<li class:selected={type === current_type}>
-						<button on:click={() => (current_type = type)}> {name}</button>
+						<button onclick={() => (current_type = type)}> {name}</button>
 					</li>
 				{/each}
 			</ul>
@@ -57,10 +59,10 @@
 	<div class="duration">
 		<span>
 			<input type="number" bind:value={duration} min="0" step="100" />
-			<button class="number" on:click={() => (duration -= 100)}>-</button>
-			<button class="number" on:click={() => (duration += 100)}>+</button>
+			<button class="number" onclick={() => (duration -= 100)}>-</button>
+			<button class="number" onclick={() => (duration += 100)}>+</button>
 		</span>
-		<button class="play" on:click={() => dispatch('play')}>
+		<button class="play" onclick={() => dispatch('play')}>
 			{playing ? 'Restart' : 'Play'}
 		</button>
 	</div>

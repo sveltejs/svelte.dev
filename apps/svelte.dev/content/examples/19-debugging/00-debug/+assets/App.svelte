@@ -1,8 +1,8 @@
 <script>
-	let user = {
+	let user = $state({
 		firstname: 'Ada',
 		lastname: 'Lovelace'
-	};
+	});
 </script>
 
 <input bind:value={user.firstname} />
