@@ -4,6 +4,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import ts from 'typescript';
 import * as prettier from 'prettier';
+import { codeToHtml, createCssVariablesTheme } from 'shiki';
+import { transformerTwoslash } from '@shikijs/twoslash';
 import { SHIKI_LANGUAGE_MAP, escape, normalizeSlugify, smart_quotes, transform } from './utils';
 import type { Declaration, TypeElement, Modules } from './index';
 
@@ -31,7 +33,12 @@ interface RenderContentOptions {
 const METADATA_REGEX =
 	/(?:<!---\s*|\/\/\/\s*|###\s*)(?<key>file|link|copy):\s*(?<value>.*?)(?:\s*--->|$)\n/gm;
 
-let twoslash_module: typeof import('shiki-twoslash');
+const theme = createCssVariablesTheme({
+	name: 'css-variables',
+	variablePrefix: '--shiki-',
+	variableDefaults: {},
+	fontStyle: true
+});
 
 /**
  * A super markdown renderer function. Renders svelte and kit docs specific specific markdown code to html.
@@ -126,10 +133,6 @@ export async function render_content_markdown(
 		resolveTypeLinks
 	}: RenderContentOptions = {}
 ) {
-	twoslash_module ??= await import('shiki-twoslash');
-
-	const highlighter = await twoslash_module.createShikiHighlighter({ theme: 'css-variables' });
-
 	const { type_links, type_regex } = create_type_links(modules, resolveTypeLinks);
 	const snippets = await create_snippet_cache(cacheCodeSnippets);
 
@@ -177,9 +180,8 @@ export async function render_content_markdown(
 
 				html += '</div>';
 
-				html += syntax_highlight({
+				html += await syntax_highlight({
 					filename,
-					highlighter,
 					language: token.lang,
 					source,
 					twoslashBanner,
@@ -187,9 +189,8 @@ export async function render_content_markdown(
 				});
 
 				if (converted) {
-					html += syntax_highlight({
+					html += await syntax_highlight({
 						filename,
-						highlighter,
 						language: token.lang === 'js' ? 'ts' : token.lang,
 						source: converted,
 						twoslashBanner,
@@ -932,18 +933,16 @@ function replace_blank_lines(html: string) {
 	return html.replaceAll(/<div class='line'>(&nbsp;)?<\/div>/g, '<div class="line">\n</div>');
 }
 
-function syntax_highlight({
+async function syntax_highlight({
 	source,
 	filename,
 	language,
-	highlighter,
 	twoslashBanner,
 	options
 }: {
 	source: string;
 	filename: string;
 	language: string;
-	highlighter: Awaited<ReturnType<typeof import('shiki-twoslash').createShikiHighlighter>>;
 	twoslashBanner?: TwoslashBanner;
 	options: SnippetOptions;
 }) {
@@ -951,13 +950,10 @@ function syntax_highlight({
 
 	if (/^(dts|yaml|yml)/.test(language)) {
 		html = replace_blank_lines(
-			twoslash_module.renderCodeToHTML(
-				source,
-				language === 'dts' ? 'ts' : language,
-				{ twoslash: false },
-				{ themeName: 'css-variables' },
-				highlighter
-			)
+			await codeToHtml(source, {
+				lang: language === 'dts' ? 'ts' : language,
+				theme
+			})
 		);
 	} else if (/^(js|ts)/.test(language)) {
 		try {
@@ -974,40 +970,17 @@ function syntax_highlight({
 				}
 			}
 
-			const twoslash = twoslash_module.runTwoSlash(source, language, {
-				defaultCompilerOptions: {
-					allowJs: true,
-					checkJs: true,
-					target: ts.ScriptTarget.ES2022,
-					types: ['svelte', '@sveltejs/kit']
-				}
+			html = await codeToHtml(source, {
+				lang: 'ts',
+				theme,
+				transformers: [transformerTwoslash({})]
 			});
-
-			html = twoslash_module.renderCodeToHTML(
-				twoslash.code,
-				'ts',
-				{ twoslash: true },
-				// @ts-ignore Why shiki-twoslash requires a theme name?
-				{},
-				highlighter,
-				twoslash
-			);
 		} catch (e) {
 			console.error(`Error compiling snippet in ${filename}`);
 			// @ts-ignore
 			console.error(e.code);
 			throw e;
 		}
-
-		// we need to be able to inject the LSP attributes as HTML, not text, so we
-		// turn &lt; into &amp;lt;
-		html = html.replace(
-			/<data-lsp lsp='([^']*)'([^>]*)>(\w+)<\/data-lsp>/g,
-			(_, lsp, attrs, name) => {
-				if (!lsp) return name;
-				return `<data-lsp lsp='${lsp.replace(/&/g, '&amp;')}'${attrs}>${name}</data-lsp>`;
-			}
-		);
 
 		html = replace_blank_lines(html);
 	} else if (language === 'diff') {
@@ -1031,8 +1004,9 @@ function syntax_highlight({
 			})
 			.join('')}</code></pre>`;
 	} else {
-		const highlighted = highlighter.codeToHtml(source, {
-			lang: SHIKI_LANGUAGE_MAP[language as keyof typeof SHIKI_LANGUAGE_MAP]
+		const highlighted = await codeToHtml(source, {
+			lang: SHIKI_LANGUAGE_MAP[language as keyof typeof SHIKI_LANGUAGE_MAP],
+			theme
 		});
 
 		html = replace_blank_lines(highlighted);

@@ -58,15 +58,12 @@ html.dark {
 	display: none;
 }
 
-pre.twoslash :where(.error, .error-behind) {
-	display: none;
-}
+pre {
+	.twoslash-hover {
+		position: relative;
 
-pre.twoslash data-lsp {
-	transition: border-color 0.3s;
-	border-bottom: 1px dotted transparent;
-}
-
-pre.twoslash:hover data-lsp {
-	border-color: var(--sk-back-5);
+		.twoslash-popup-container {
+			display: none;
+		}
+	}
 }

@@ -9,7 +9,7 @@ export function setupDocsHovers() {
 		function over(event: MouseEvent) {
 			const target = event.target as HTMLElement;
 
-			if (target.tagName === 'DATA-LSP') {
+			if (target.classList?.contains('twoslash-hover')) {
 				clearTimeout(timeout);
 
 				if (tooltip) {
@@ -18,7 +18,7 @@ export function setupDocsHovers() {
 				}
 
 				const rect = target?.getBoundingClientRect();
-				const html = target?.getAttribute('lsp');
+				const html = target?.innerHTML;
 
 				const x = (rect.left + rect.right) / 2 + window.scrollX;
 				const y = rect.top + window.scrollY;
@@ -46,7 +46,7 @@ export function setupDocsHovers() {
 
 		function out(event: MouseEvent) {
 			const target = event.target as HTMLElement;
-			if (target.tagName === 'DATA-LSP') {
+			if (target.classList?.contains('twoslash-hover')) {
 				timeout = setTimeout(() => {
 					unmount(tooltip);
 					tooltip = null;
