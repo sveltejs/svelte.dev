@@ -41,6 +41,8 @@ $effect(() => {
 });
 ```
 
-The cleanup function is called immediately before the effect function re-runs when `interval` changes, and also when the component is destroyed. (If the effect function doesn't read any state when it runs, it will only run once, when the component mounts.)
+The cleanup function is called immediately before the effect function re-runs when `interval` changes, and also when the component is destroyed.
+
+If the effect function doesn't read any state when it runs, it will only run once, when the component mounts.
 
 > Effects do not run during server-side rendering.
