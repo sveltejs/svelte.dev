@@ -1,5 +1,8 @@
 // @ts-expect-error has no types
 import PrismJS from 'prismjs';
+import 'prismjs/components/prism-bash.js';
+import 'prismjs/components/prism-diff.js';
+import 'prismjs/components/prism-typescript.js';
 import 'prism-svelte';
 import { read } from '$app/server';
 import { index } from '$lib/server/content';

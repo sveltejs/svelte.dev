@@ -2,8 +2,6 @@
 title: @sveltejs/kit/hooks
 ---
 
-
-
 ```js
 // @noErrors
 import { sequence } from '@sveltejs/kit/hooks';
@@ -13,6 +11,7 @@ import { sequence } from '@sveltejs/kit/hooks';
 
 A helper function for sequencing multiple `handle` calls in a middleware-like manner.
 The behavior for the `handle` options is as follows:
+
 - `transformPageChunk` is applied in reverse order and merged
 - `preload` is applied in forward order, the first option "wins" and no `preload` options after it are called
 - `filterSerializedResponseHeaders` behaves the same as `preload`
@@ -34,6 +33,7 @@ async function first({ event, resolve }) {
 		preload: () => {
 			// this one wins as it's the first defined in the chain
 			console.log('first preload');
+			return true;
 		}
 	});
 	console.log('first post-processing');
@@ -50,10 +50,12 @@ async function second({ event, resolve }) {
 		},
 		preload: () => {
 			console.log('second preload');
+			return true;
 		},
 		filterSerializedResponseHeaders: () => {
 			// this one wins as it's the first defined in the chain
-	 		console.log('second filterSerializedResponseHeaders');
+			console.log('second filterSerializedResponseHeaders');
+			return true;
 		}
 	});
 	console.log('second post-processing');
@@ -85,7 +87,3 @@ function sequence(
 ```
 
 </div>
-
-
-
-

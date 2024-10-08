@@ -7,8 +7,12 @@ Similar to [`$env/static/private`](/docs/kit/reference/$env-all#$env-static-priv
 Values are replaced statically at build time.
 
 ```ts
+// @filename: ambient.d.ts
+declare module '$env/static/public' {
+	export const PUBLIC_BASE_URL: string;
+}
+
+// @filename: index.js
+// ---cut---
 import { PUBLIC_BASE_URL } from '$env/static/public';
 ```
-
-
-
