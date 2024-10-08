@@ -1,4 +1,4 @@
-import { replace_export_type_placeholders, type Modules } from '@sveltejs/site-kit/markdown';
+import { preprocess } from '@sveltejs/site-kit/markdown/preprocess';
 import path from 'node:path';
 import { cpSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import ts from 'typescript';
@@ -6,6 +6,7 @@ import glob from 'tiny-glob/sync';
 import { fileURLToPath } from 'node:url';
 import { clone_repo, migrate_meta_json, replace_strings, strip_origin } from './utils';
 import { get_types, read_d_ts_file, read_types } from './types';
+import type { Modules } from '@sveltejs/site-kit/markdown';
 
 interface Package {
 	name: string;
@@ -149,7 +150,7 @@ for (const pkg of packages) {
 	const files = glob(`${DOCS}/${pkg.name}/**/*.md`);
 
 	for (const file of files) {
-		const content = await replace_export_type_placeholders(readFileSync(file, 'utf-8'), modules);
+		const content = await preprocess(readFileSync(file, 'utf-8'), modules);
 
 		writeFileSync(file, content);
 	}
