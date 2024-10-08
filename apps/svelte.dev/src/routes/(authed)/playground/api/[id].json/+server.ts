@@ -1,55 +1,27 @@
 import { dev } from '$app/environment';
-import { read } from '$app/server';
 import { client } from '$lib/db/client.js';
 import * as gist from '$lib/db/gist.js';
-import { examples as example_sections } from '$lib/server/content';
+import { examples } from '$lib/server/content';
 import { error, json } from '@sveltejs/kit';
+import type { Examples } from '../examples/all.json/+server.js';
 
 export const prerender = 'auto';
 
-const examples = example_sections.flatMap((section) => section.children);
-
 const UUID_REGEX = /^[0-9a-f]{8}-?[0-9a-f]{4}-?[0-9a-f]{4}-?[0-9a-f]{4}-?[0-9a-f]{12}$/;
 
-async function munge(files: Record<string, string>) {
-	const result = [];
+export async function GET({ fetch, params }) {
+	const examples: Examples = await fetch('/playground/api/examples/all.json').then((r) => r.json());
+	const example = examples
+		.flatMap((section) => section.examples)
+		.find((example) => example.slug.split('/').pop() === params.id);
 
-	for (const [file, source] of Object.entries(files)) {
-		const dot = file.lastIndexOf('.');
-		let name = file.slice(0, dot);
-		let type = file.slice(dot + 1);
-
-		if (type === 'html') type = 'svelte'; // TODO do we still need this? Feels like ages-old code when Svelte files were named .html
-
-		result.push({ name, type, source: await read(source).text() });
-	}
-
-	result.sort((a, b) => {
-		if (a.name === 'App' && a.type === 'svelte') return -1;
-		if (b.name === 'App' && b.type === 'svelte') return 1;
-
-		if (a.type !== b.type) return a.type === 'svelte' ? -1 : 1;
-
-		return a.name < b.name ? -1 : 1;
-	});
-
-	return result;
-}
-
-export async function GET({ params }) {
-	// Currently, these pages(that are in examples/) are prerendered. To avoid making any FS requests,
-	// We prerender examples pages during build time. That means, when something like `/playground/hello-world.json`
-	// is accessed, this function won't be run at all, as it will be served from the filesystem
-
-	const example = examples.find((example) => example.slug.split('/').pop() === params.id);
-
-	if (example?.assets) {
+	if (example) {
 		return json({
 			id: params.id,
-			name: example.metadata.title,
+			name: example.title,
 			owner: null,
 			relaxed: false, // TODO is this right? EDIT: It was example.relaxed before, which no example return to my knowledge. By @PuruVJ
-			components: await munge(example.assets)
+			components: example.components
 		});
 	}
 
@@ -90,5 +62,7 @@ export async function GET({ params }) {
 }
 
 export async function entries() {
-	return examples.map((example) => ({ id: example.slug.split('/').pop()! }));
+	return examples
+		.flatMap((section) => section.children)
+		.map((example) => ({ id: example.slug.split('/').pop()! }));
 }
