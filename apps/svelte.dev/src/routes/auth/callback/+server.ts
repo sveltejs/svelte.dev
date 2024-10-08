@@ -1,14 +1,14 @@
-import { uneval } from 'devalue';
 import * as cookie from 'cookie';
 import * as session from '$lib/db/session';
-import { oauth, client_id, client_secret } from '../_config.js';
+import { oauth, storage_key } from '../_config.js';
+import { GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET } from '$env/static/private';
 
 export async function GET({ url }) {
 	// Trade "code" for "access_token"
 	const code = url.searchParams.get('code') || undefined;
 	const params = new URLSearchParams({
-		client_id,
-		client_secret
+		client_id: GITHUB_CLIENT_ID,
+		client_secret: GITHUB_CLIENT_SECRET
 	});
 	if (code) params.set('code', code);
 	const r1 = await fetch(`${oauth}/access_token?` + params.toString());
@@ -34,15 +34,9 @@ export async function GET({ url }) {
 	};
 	const { sessionid, expires } = await session.create(user);
 
+	// we can't interact directly with opener, so we use localStorage as a side channel
 	return new Response(
-		`
-		<script>
-			window.opener.postMessage({
-				source: 'svelte-auth',
-				user: ${uneval(user)}
-			}, window.location.origin);
-		</script>
-	`,
+		`<script>localStorage.setItem('${storage_key}', Date.now()); window.close()</script>`,
 		{
 			headers: {
 				'Set-Cookie': cookie.serialize('sid', sessionid, {
