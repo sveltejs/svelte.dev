@@ -726,7 +726,15 @@ async function syntax_highlight({
 			html = await codeToHtml(source, {
 				lang: 'ts',
 				theme,
-				transformers: [transformerTwoslash({})]
+				transformers: [
+					transformerTwoslash({
+						twoslashOptions: {
+							compilerOptions: {
+								types: ['svelte', '@sveltejs/kit']
+							}
+						}
+					})
+				]
 			});
 		} catch (e) {
 			console.error(`Error compiling snippet in ${filename}`);
