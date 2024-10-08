@@ -173,7 +173,8 @@ const default_renderer: Partial<Renderer> = {
 		} else {
 			const plang = languages[lang as keyof typeof languages];
 			const highlighted = plang
-				? PrismJS.highlight(source, PrismJS.languages[plang], lang)
+				? // TODO use shiki here rather than Prism?
+					PrismJS.highlight(source, PrismJS.languages[plang], lang)
 				: escape_html(source);
 
 			html += `<pre class='language-${plang}'><code>${highlighted}</code></pre>`;
