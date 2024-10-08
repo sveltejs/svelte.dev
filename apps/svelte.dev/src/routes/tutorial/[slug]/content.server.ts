@@ -1,10 +1,14 @@
+// @ts-expect-error has no types
+import PrismJS from 'prismjs';
 import { read } from '$app/server';
 import { index } from '$lib/server/content';
-import { transform } from './markdown.server';
+import { markedTransform } from '@sveltejs/site-kit/markdown';
 import type { Exercise, ExerciseStub, PartStub, Scope } from '$lib/tutorial';
 import { error } from '@sveltejs/kit';
 import { text_files } from './shared';
 import type { Document } from '@sveltejs/site-kit';
+import { escape_html } from '$lib/utils/escape';
+import type { Renderer } from 'marked';
 
 const lookup: Record<
 	string,
@@ -87,6 +91,108 @@ async function get(assets: Record<string, string>, key: string) {
 		: Buffer.from(await response.arrayBuffer()).toString('base64');
 }
 
+const languages = {
+	bash: 'bash',
+	env: 'bash',
+	html: 'markup',
+	svelte: 'svelte',
+	js: 'javascript',
+	css: 'css',
+	diff: 'diff',
+	ts: 'typescript',
+	'': ''
+};
+
+const delimiter_substitutes = {
+	'+++': '             ',
+	'---': '           ',
+	':::': '         '
+};
+
+function highlight_spans(content: string, classname: string) {
+	return `<span class="${classname}">${content}</span>`;
+	// return content.replace(/<span class="([^"]+)"/g, (_, classnames) => {
+	// 	return `<span class="${classname} ${classnames}"`;
+	// });
+}
+
+const default_renderer: Partial<Renderer> = {
+	code: ({ text, lang = '' }) => {
+		/** @type {Record<string, string>} */
+		const options: Record<string, string> = {};
+
+		let source = text
+			.replace(/\/\/\/ (.+?)(?:: (.+))?\n/gm, (_, key, value) => {
+				options[key] = value;
+				return '';
+			})
+			.replace(/^([\-\+])?((?:    )+)/gm, (match, prefix = '', spaces) => {
+				if (prefix && lang !== 'diff') return match;
+
+				// for no good reason at all, marked replaces tabs with spaces
+				let tabs = '';
+				for (let i = 0; i < spaces.length; i += 4) {
+					tabs += '\t';
+				}
+				return prefix + tabs;
+			})
+			.replace(/(\+\+\+|---|:::)/g, (_, delimiter: keyof typeof delimiter_substitutes) => {
+				return delimiter_substitutes[delimiter];
+			})
+			.replace(/\*\\\//g, '*/');
+
+		let html = '<div class="code-block"><div class="controls">';
+
+		if (options.file) {
+			html += `<span class="filename">${options.file}</span>`;
+		}
+
+		html += '</div>';
+
+		if (lang === 'diff') {
+			const lines = source.split('\n').map((content) => {
+				let type = null;
+				if (/^[\+\-]/.test(content)) {
+					type = content[0] === '+' ? 'inserted' : 'deleted';
+					content = content.slice(1);
+				}
+
+				return {
+					type,
+					content: escape_html(content)
+				};
+			});
+
+			html += `<pre class="language-diff"><code>${lines
+				.map((line) => {
+					if (line.type) return `<span class="${line.type}">${line.content}\n</span>`;
+					return line.content + '\n';
+				})
+				.join('')}</code></pre>`;
+		} else {
+			const plang = languages[lang as keyof typeof languages];
+			const highlighted = plang
+				? PrismJS.highlight(source, PrismJS.languages[plang], lang)
+				: escape_html(source);
+
+			html += `<pre class='language-${plang}'><code>${highlighted}</code></pre>`;
+		}
+
+		html += '</div>';
+
+		return html
+			.replace(/ {13}([^ ][^]+?) {13}/g, (_, content) => {
+				return highlight_spans(content, 'highlight add');
+			})
+			.replace(/ {11}([^ ][^]+?) {11}/g, (_, content) => {
+				return highlight_spans(content, 'highlight remove');
+			})
+			.replace(/ {9}([^ ][^]+?) {9}/g, (_, content) => {
+				return highlight_spans(content, 'highlight');
+			});
+	}
+};
+
 export async function load_exercise(slug: string): Promise<Exercise> {
 	if (!(slug in lookup)) {
 		error(404, 'No such tutorial found');
@@ -147,7 +253,8 @@ export async function load_exercise(slug: string): Promise<Exercise> {
 		prev: prev && { slug: prev.slug },
 		next,
 		markdown: exercise.body,
-		html: await transform(exercise.body, {
+		html: await markedTransform(exercise.body, {
+			...default_renderer,
 			codespan: ({ text }) =>
 				filenames.size > 1 && filenames.has(text)
 					? `<code data-file="${scope.prefix + text}">${text}</code>`
