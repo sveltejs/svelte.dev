@@ -33,6 +33,11 @@ let prev: null | { slug: string; title: string } = null;
 
 let files: Record<string, string> = {};
 
+export function get_slug(part: Document, exercise: Document) {
+	const topic = part.slug.split('/').pop()!.includes('sveltekit') ? 'kit' : 'svelte';
+	return `tutorial/${topic}/${exercise.slug.split('/').pop()}`;
+}
+
 export const parts: PartStub[] = index.tutorial.children.map((part) => {
 	return {
 		slug: part.slug,
@@ -42,7 +47,7 @@ export const parts: PartStub[] = index.tutorial.children.map((part) => {
 				slug: chapter.slug.split('/').pop()!,
 				title: chapter.metadata.title,
 				exercises: chapter.children.map((exercise) => {
-					const slug = exercise.slug.split('/').pop()!;
+					const slug = get_slug(part, exercise).slice('tutorial/'.length);
 
 					const stub: ExerciseStub = {
 						slug,

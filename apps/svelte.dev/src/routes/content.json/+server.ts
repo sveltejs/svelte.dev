@@ -2,6 +2,7 @@ import { index, docs as _docs, examples } from '$lib/server/content';
 import { json } from '@sveltejs/kit';
 import { markedTransform, normalizeSlugify, removeMarkdown } from '@sveltejs/site-kit/markdown';
 import type { Block } from '@sveltejs/site-kit/search';
+import { get_slug } from '../tutorial/[...slug]/content.server';
 
 export const prerender = true;
 
@@ -17,13 +18,12 @@ function get_href(parts: string[]) {
 
 async function content() {
 	const blocks: Block[] = [];
-	const breadcrumbs: string[] = [];
 	const docs = Object.values(_docs.pages).concat(
-		index.tutorial.children.flatMap((topic) =>
-			topic.children.flatMap((section) =>
-				section.children.map((entry) => ({
-					...entry,
-					slug: `tutorial/${entry.slug.split('/').pop()}`
+		index.tutorial.children.flatMap((part) =>
+			part.children.flatMap((chapter) =>
+				chapter.children.map((exercise) => ({
+					...exercise,
+					slug: get_slug(part, exercise)
 				}))
 			)
 		)

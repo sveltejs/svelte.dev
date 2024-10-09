@@ -8,7 +8,5 @@ We've already got a `handleKeydown` function declared — now all we need to do 
 
 ```svelte
 /// file: App.svelte
-<svelte:window +++on:keydown={handleKeydown}+++ />
+<svelte:window +++onkeydown={handleKeydown}+++ />
 ```
-
-> As with DOM elements, you can add [event modifiers](/tutorial/event-modifiers) like `preventDefault`.

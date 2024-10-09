@@ -17,7 +17,7 @@ First, in `.env`, add a new environment variable:
 PASSPHRASE=+++"open sesame"+++
 ```
 
-Open `src/routes/+page.server.js`. Import `PASSPHRASE` from `$env/static/private` and use it inside the [form action](/tutorial/the-form-element):
+Open `src/routes/+page.server.js`. Import `PASSPHRASE` from `$env/static/private` and use it inside the [form action](/tutorial/kit/the-form-element):
 
 ```js
 /// file: src/routes/+page.server.js
