@@ -282,10 +282,9 @@
 
 		p code {
 			max-width: 100%;
-			display: inline-flex;
 			overflow-x: auto;
-			padding-top: 0;
-			padding-bottom: 0;
+			padding-top: 0.2em;
+			padding-bottom: 0.2em;
 		}
 
 		a:not(.permalink) {
