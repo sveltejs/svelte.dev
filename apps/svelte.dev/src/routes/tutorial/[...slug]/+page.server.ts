@@ -14,7 +14,7 @@ const redirects = new Map([
 
 export async function load({ params }) {
 	if (!params.slug || params.slug === 'svelte') redirect(307, '/tutorial/svelte/welcome-to-svelte');
-	if (params.slug === 'kit') redirect(307, '/tutorial/introducing-sveltekit');
+	if (params.slug === 'kit') redirect(307, '/tutorial/kit/introducing-sveltekit');
 
 	const r = redirects.get(params.slug);
 	if (r) redirect(307, r);
@@ -28,16 +28,13 @@ export async function load({ params }) {
 export function entries() {
 	// These are not findable by the router, but we need to know about them for redirects
 
-	// Old tutorial/... to new tutorial/svelte/...
+	// So that old tutorial/... routes can redirect to new tutorial/svelte/...
 	const entries = parts
 		.filter((part) => !part.slug.includes('sveltekit'))
 		.flatMap((part) => part.chapters)
-		.flatMap((chapter) => {
-			return chapter.exercises.map((exercise) => {
-				const slug = exercise.slug.split('/').pop()!;
-				return { slug: redirects.get(slug) || slug };
-			});
-		});
+		.flatMap((chapter) =>
+			chapter.exercises.map((exercise) => ({ slug: exercise.slug.split('/').pop()! }))
+		);
 
 	// So that redirects from these URLs to /tutorial/<svelte/kit>/... work
 	entries.push({ slug: 'svelte' }, { slug: 'kit' });

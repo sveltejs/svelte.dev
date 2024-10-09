@@ -205,7 +205,6 @@ const default_renderer: Partial<Renderer> = {
 
 export async function load_exercise(slug: string): Promise<Exercise> {
 	if (!(slug in lookup)) {
-		console.log(slug, Object.keys(lookup));
 		error(404, 'No such tutorial found');
 	}
 
