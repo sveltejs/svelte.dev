@@ -86,7 +86,19 @@
 	}
 
 	function handle_change({ files }: { files: File[] }) {
+		const old_count = modified_count;
 		modified_count = files.filter((c) => c.modified).length;
+
+		if (
+			old_count === 0 &&
+			modified_count > 0 &&
+			name === data.gist.name &&
+			data.examples.some((section) =>
+				section.examples.some((example) => example.slug === data.gist.id)
+			)
+		) {
+			name = `${name} (edited)`;
+		}
 	}
 
 	const svelteUrl =
