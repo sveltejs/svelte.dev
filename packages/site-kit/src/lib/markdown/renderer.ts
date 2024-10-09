@@ -41,6 +41,8 @@ const theme = createCssVariablesTheme({
 	fontStyle: true
 });
 
+const snippets = await create_snippet_cache();
+
 /**
  * A super markdown renderer function. Renders svelte and kit docs specific specific markdown code to html.
  *
@@ -121,21 +123,14 @@ const theme = createCssVariablesTheme({
  * @param {object} options
  * @param {TwoslashBanner} [options.twoslashBanner] - A function that returns a string to be prepended to the code snippet before running the code with twoslash. Helps in adding imports from svelte or sveltekit or whichever modules are being globally referenced in all or most code snippets.
  * @param {import('.').Modules} [options.modules] Module info generated from type-gen script. Used to create type links and type information blocks
- * @param {boolean} [options.cacheCodeSnippets] Whether to cache code snippets or not. Defaults to true.
  * @param {Parameters<typeof create_type_links>['1']} [options.resolveTypeLinks] Resolve types into its slugs(used on the page itself).
  */
 export async function render_content_markdown(
 	filename: string,
 	body: string,
-	{
-		twoslashBanner,
-		modules = [],
-		cacheCodeSnippets = false,
-		resolveTypeLinks
-	}: RenderContentOptions = {}
+	{ twoslashBanner, modules = [], resolveTypeLinks }: RenderContentOptions = {}
 ) {
 	const { type_links, type_regex } = create_type_links(modules, resolveTypeLinks);
-	const snippets = await create_snippet_cache(cacheCodeSnippets);
 
 	const headings: string[] = [];
 
@@ -151,6 +146,8 @@ export async function render_content_markdown(
 
 			if (token.type === 'code') {
 				if (snippets.get(token.text)) return;
+
+				console.warn('rendering snippet');
 
 				let { source, options } = parse_options(token.text, token.lang);
 				source = adjust_tab_indentation(source, token.lang);
@@ -534,12 +531,6 @@ function get_mtime(file: string, seen = new Set<string>()) {
 	return mtime;
 }
 
-const mtime = Math.max(
-	get_mtime(fileURLToPath(import.meta.url)),
-	fs.statSync('node_modules').mtimeMs,
-	fs.statSync('../../pnpm-lock.yaml').mtimeMs
-);
-
 /**
  * Utility function to work with code snippet caching.
  *
@@ -554,13 +545,20 @@ const mtime = Math.max(
  * SNIPPETS_CACHE.save(uid, processed_code);
  * ```
  */
-async function create_snippet_cache(should: boolean) {
+async function create_snippet_cache() {
 	const cache = new Map();
 	const directory = find_nearest_node_modules(import.meta.url) + '/.snippets';
+
+	const mtime = Math.max(
+		get_mtime(fileURLToPath(import.meta.url)),
+		fs.statSync('node_modules').mtimeMs,
+		fs.statSync('../../pnpm-lock.yaml').mtimeMs
+	);
 
 	if (fs.existsSync(directory)) {
 		for (const dir of fs.readdirSync(directory)) {
 			if (!fs.statSync(`${directory}/${dir}`).isDirectory() || +dir < mtime) {
+				console.warn(`deleting stale snippet cache (${dir}  <${mtime})`);
 				fs.rmSync(`${directory}/${dir}`, { force: true, recursive: true });
 			}
 		}
@@ -582,8 +580,6 @@ async function create_snippet_cache(should: boolean) {
 
 	return {
 		get(source: string) {
-			if (!should) return;
-
 			let snippet = cache.get(source);
 
 			if (snippet === undefined) {
