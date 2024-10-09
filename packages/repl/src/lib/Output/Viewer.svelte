@@ -253,7 +253,6 @@
 			'allow-popups',
 			'allow-forms',
 			'allow-pointer-lock',
-			'allow-top-navigation-by-user-activation',
 			'allow-modals',
 			can_escape ? 'allow-popups-to-escape-sandbox' : '',
 			relaxed ? 'allow-same-origin' : ''
