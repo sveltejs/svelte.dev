@@ -8,6 +8,7 @@
 	import { mapbox_setup } from '../../../../config.js';
 	import AppControls from './AppControls.svelte';
 	import { compress_and_encode_text, decode_and_decompress_text } from './gzip.js';
+	import { page } from '$app/stores';
 
 	let { data } = $props();
 
@@ -17,6 +18,10 @@
 	let modified_count = $state(0);
 	let version = data.version;
 	let setting_hash: any = null;
+
+	// Hashed URLs are less safe (we can't delete malicious REPLs), therefore
+	// don't allow links to escape the sandbox restrictions
+	const can_escape = browser && !$page.url.hash;
 
 	onMount(() => {
 		if (version !== 'local') {
@@ -127,6 +132,7 @@
 			bind:this={repl}
 			{svelteUrl}
 			{relaxed}
+			{can_escape}
 			vim={data.vim}
 			injectedJS={mapbox_setup}
 			showModified
