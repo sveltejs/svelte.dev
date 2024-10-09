@@ -2,8 +2,6 @@
 	import { theme } from '../stores';
 	import { onDestroy } from 'svelte';
 
-	let { label = 'Dark mode' }: { label?: string } = $props();
-
 	function toggle() {
 		const upcoming_theme = $theme.current === 'light' ? 'dark' : 'light';
 
@@ -42,8 +40,8 @@
 	onclick={toggle}
 	class="raised"
 	type="button"
-	aria-pressed={$theme.current === 'dark' ? 'true' : 'false'}
-	aria-label={label}
+	aria-pressed={$theme.current === 'dark'}
+	aria-label="Toggle dark mode"
 ></button>
 
 <style>
