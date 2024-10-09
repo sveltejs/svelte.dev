@@ -37,7 +37,7 @@
 	<h2>{title}</h2>
 	<p><strong>{composer}</strong> / performed by {performer}</p>
 
-	<audio crossorigin="anonymous" bind:this={audio} bind:paused onplay={stopOthers} controls {src}></audio>
+	<audio bind:this={audio} bind:paused onplay={stopOthers} controls {src}></audio>
 </article>
 
 <style>

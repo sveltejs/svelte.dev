@@ -16,7 +16,7 @@ This was slightly tongue-in-cheek — as the talk explains, it's really more of 
 <div class="max">
 <figure style="max-width: 960px; margin: 0 auto">
 <div style="height: 0; padding: 0 0 57.1% 0; position: relative; margin: 0 auto;">
-	<iframe credentialless style="position: absolute; width: 100%; height: 100%; left: 0; top: 0; margin: 0;" src="https://www.youtube-nocookie.com/embed/qSfdtmcZ4d0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0; margin: 0;" src="https://www.youtube-nocookie.com/embed/qSfdtmcZ4d0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 <figcaption>'Futuristic Web Development' from <a href="https://sveltesummit.com/">Svelte Summit</a></figcaption>

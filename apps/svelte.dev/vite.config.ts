@@ -11,18 +11,22 @@ const plugins: PluginOption[] = [
 	{
 		name: 'cross-origin-isolation-for-preview',
 		configurePreviewServer: (server) => {
-			server.middlewares.use((_, res, next) => {
-				res.setHeader('cross-origin-opener-policy', 'same-origin');
-				res.setHeader('cross-origin-embedder-policy', 'require-corp');
-				res.setHeader('cross-origin-resource-policy', 'cross-origin');
+			server.middlewares.use((req, res, next) => {
+				if (req.url?.startsWith('/tutorial/kit')) {
+					res.setHeader('cross-origin-opener-policy', 'same-origin');
+					res.setHeader('cross-origin-embedder-policy', 'require-corp');
+					res.setHeader('cross-origin-resource-policy', 'cross-origin');
+				}
 				next();
 			});
 		},
 		configureServer: (server) => {
-			server.middlewares.use((_, res, next) => {
-				res.setHeader('cross-origin-opener-policy', 'same-origin');
-				res.setHeader('cross-origin-embedder-policy', 'require-corp');
-				res.setHeader('cross-origin-resource-policy', 'cross-origin');
+			server.middlewares.use((req, res, next) => {
+				if (req.url?.startsWith('/tutorial/kit')) {
+					res.setHeader('cross-origin-opener-policy', 'same-origin');
+					res.setHeader('cross-origin-embedder-policy', 'require-corp');
+					res.setHeader('cross-origin-resource-policy', 'cross-origin');
+				}
 				next();
 			});
 		}

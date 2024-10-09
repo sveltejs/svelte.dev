@@ -24,7 +24,7 @@ To make that possible we first needed to rethink the concept at the heart of mod
 <div class="max">
 <figure style="max-width: 960px; margin: 0 auto">
 <div style="height: 0; padding: 0 0 57.1% 0; position: relative; margin: 0 auto;">
-	<iframe credentialless style="position: absolute; width: 100%; height: 100%; left: 0; top: 0; margin: 0;" src="https://www.youtube-nocookie.com/embed/AdNJ3fydeao" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0; margin: 0;" src="https://www.youtube-nocookie.com/embed/AdNJ3fydeao" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 <figcaption>'Rethinking Reactivity' from <a href="https://www.israel.yglfconf.com/">You Gotta Love Frontend Code Camp</a></figcaption>
