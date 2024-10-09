@@ -34,6 +34,7 @@
 	{#if browser}
 		<Viewer
 			relaxed
+			can_escape
 			onLog={(l: Log[]) => logs = l}
 			{bundle}
 			theme={$theme.current}

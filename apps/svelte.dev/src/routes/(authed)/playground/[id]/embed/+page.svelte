@@ -50,6 +50,7 @@
 			bind:this={repl}
 			{svelteUrl}
 			{relaxed}
+			can_escape
 			injectedJS={mapbox_setup}
 			showModified
 			showAst

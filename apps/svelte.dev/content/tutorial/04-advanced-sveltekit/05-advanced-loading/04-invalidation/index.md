@@ -7,7 +7,7 @@ When the user navigates from one page to another, SvelteKit calls your `load` fu
 
 In this example, navigating between timezones causes the `load` function in `src/routes/[...timezone]/+page.js` to re-run because `params.timezone` is invalid. But the `load` function in `src/routes/+layout.js` does _not_ re-run, because as far as SvelteKit is concerned it wasn't invalidated by the navigation.
 
-We can fix that by manually invalidating it using the [`invalidate(...)`](https://kit.svelte.dev/docs/modules#$app-navigation-invalidate) function, which takes a URL and re-runs any `load` functions that depend on it. Because the `load` function in `src/routes/+layout.js` calls `fetch('/api/now')`, it depends on `/api/now`.
+We can fix that by manually invalidating it using the [`invalidate(...)`](https://kit.svelte.dev/docs/$app-navigation#invalidate) function, which takes a URL and re-runs any `load` functions that depend on it. Because the `load` function in `src/routes/+layout.js` calls `fetch('/api/now')`, it depends on `/api/now`.
 
 In `src/routes/[...timezone]/+page.svelte`, add an `onMount` callback that calls `invalidate('/api/now')` once a second:
 

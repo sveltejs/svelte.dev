@@ -244,29 +244,29 @@ export default app;`
 	<div class="buttons">
 		<button class="raised icon" onclick={() => (zen_mode = !zen_mode)} title="fullscreen editor">
 			{#if zen_mode}
-				<Icon name="close" />
+				<Icon size={18} name="close" />
 			{:else}
-				<Icon name="maximize" />
+				<Icon size={18} name="maximize" />
 			{/if}
 		</button>
 
 		<button class="raised icon" disabled={downloading} onclick={download} title="download zip file">
-			<Icon name="download" />
+			<Icon size={18} name="download" />
 		</button>
 
 		<button class="raised icon" disabled={saving || !user} onclick={() => fork(false)} title="fork">
 			{#if justForked}
-				<Icon name="check" />
+				<Icon size={18} name="check" />
 			{:else}
-				<Icon name="git-branch" />
+				<Icon size={18} name="git-branch" />
 			{/if}
 		</button>
 
 		<button class="raised icon" disabled={saving || !user} onclick={save} title="save">
 			{#if justSaved}
-				<Icon name="check" />
+				<Icon size={18} name="check" />
 			{:else}
-				<Icon name="save" />
+				<Icon size={18} name="save" />
 				{#if modified_count}
 					<div class="badge">{modified_count}</div>
 				{/if}
@@ -276,7 +276,11 @@ export default app;`
 		{#if user}
 			<UserMenu {user} />
 		{:else}
-			<button class="raised icon" onclick={(e) => (e.preventDefault(), login())}>
+			<button
+				class="raised icon"
+				onclick={(e) => (e.preventDefault(), login())}
+				style="width: auto; padding: 0 0.4rem"
+			>
 				<Icon name="log-in" />
 				<span>&nbsp;Log in to save</span>
 			</button>
@@ -299,7 +303,7 @@ export default app;`
 		color: var(--sk-text-1);
 		white-space: nowrap;
 		flex: 0;
-		gap: 2rem;
+		gap: 1rem;
 
 		&::after {
 			content: '';
@@ -344,15 +348,20 @@ export default app;`
 		font-family: var(--sk-font-ui);
 	}
 
+	button,
+	span.icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 3.2rem;
+		height: 3.2rem;
+	}
+
 	.icon {
-		transform: translateY(0.1rem);
-		display: inline-block;
-		padding: 0.4em;
-		opacity: 0.7;
-		transition: opacity 0.3s;
+		position: relative;
 		font-family: var(--sk-font-ui);
-		font-size: 1.6rem;
-		color: var(--sk-text-1);
+		font-size: var(--sk-font-size-ui-small);
+		color: var(--sk-text-3);
 		line-height: 1;
 	}
 
@@ -370,12 +379,13 @@ export default app;`
 
 	input {
 		background: transparent;
-		border: none;
+		border: 1px solid var(--sk-back-4);
+		border-radius: var(--sk-border-radius);
 		color: currentColor;
 		font-family: var(--sk-font-ui);
 		flex: 1;
-		margin: 0 0.2em 0 0rem;
-		padding: 0.2rem;
+		padding: 0.2rem 0.6rem;
+		height: 3.2rem;
 		font-size: var(--sk-font-size-ui-medium);
 	}
 

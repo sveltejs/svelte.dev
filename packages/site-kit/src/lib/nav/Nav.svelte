@@ -100,10 +100,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 
 			{@render external_links?.()}
 
-			<div class="appearance">
-				<span class="caption">Theme</span>
-				<ThemeToggle />
-			</div>
+			<ThemeToggle />
 		</div>
 	</div>
 

@@ -2,7 +2,9 @@
 title: page
 ---
 
-As we learned [earlier](writable-stores), Svelte stores are a place to put data that doesn't belong to an individual component.
+> TODO link to stores exercise
+
+As we learned earlier, Svelte stores are a place to put data that doesn't belong to an individual component.
 
 SvelteKit makes three readonly stores available via the `$app/stores` module — `page`, `navigating` and `updated`. The one you'll use most often is [`page`](https://kit.svelte.dev/docs/types#public-types-page), which provides information about the current page:
 

@@ -15,11 +15,12 @@ Returns the SvelteKit Vite plugins.
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function sveltekit(): Promise<import('vite').Plugin[]>;
 ```
 
 </div>
+
+
 
 

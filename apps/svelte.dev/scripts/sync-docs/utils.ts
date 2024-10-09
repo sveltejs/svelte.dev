@@ -2,7 +2,7 @@ import { spawn, type SpawnOptions } from 'node:child_process';
 import fs from 'node:fs';
 import glob from 'tiny-glob/sync';
 
-export async function clone_repo(repo: string, cwd: string) {
+export async function clone_repo(repo: string, branch: string, cwd: string) {
 	const regex_result = /https:\/\/github.com\/\w+\/(\w+).git/.exec(repo);
 	if (!regex_result || regex_result.length < 2) {
 		throw new Error(`Expected https://github.com/xxx/xxx.git, but got ${repo}`);
@@ -14,7 +14,7 @@ export async function clone_repo(repo: string, cwd: string) {
 		fs.rmSync(dirname, { recursive: true });
 	}
 
-	await invoke('git', ['clone', '--depth', '1', repo], {
+	await invoke('git', ['clone', '--depth', '1', '--branch', branch, repo], {
 		cwd
 	});
 }
@@ -65,5 +65,5 @@ export function migrate_meta_json(path: string) {
  * deployments and when developing locally
  */
 export function strip_origin(str: string) {
-	return str.replace(/https:\/\/(kit\.)?svelte\.dev/g, '');
+	return str.replaceAll('https://svelte.dev', '');
 }

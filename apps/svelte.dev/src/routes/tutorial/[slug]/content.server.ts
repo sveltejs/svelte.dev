@@ -1,5 +1,9 @@
 // @ts-expect-error has no types
 import PrismJS from 'prismjs';
+import 'prismjs/components/prism-bash.js';
+import 'prismjs/components/prism-diff.js';
+import 'prismjs/components/prism-typescript.js';
+import 'prism-svelte';
 import { read } from '$app/server';
 import { index } from '$lib/server/content';
 import { markedTransform } from '@sveltejs/site-kit/markdown';
@@ -172,7 +176,8 @@ const default_renderer: Partial<Renderer> = {
 		} else {
 			const plang = languages[lang as keyof typeof languages];
 			const highlighted = plang
-				? PrismJS.highlight(source, PrismJS.languages[plang], lang)
+				? // TODO use shiki here rather than Prism?
+					PrismJS.highlight(source, PrismJS.languages[plang], lang)
 				: escape_html(source);
 
 			html += `<pre class='language-${plang}'><code>${highlighted}</code></pre>`;
