@@ -41,7 +41,10 @@
 		}
 	});
 
-	afterNavigate(set_files);
+	afterNavigate(() => {
+		name = data.gist.name;
+		set_files();
+	});
 
 	async function set_files() {
 		const hash = location.hash.slice(1);
@@ -88,7 +91,19 @@
 	}
 
 	function handle_change({ files }: { files: File[] }) {
+		const old_count = modified_count;
 		modified_count = files.filter((c) => c.modified).length;
+
+		if (
+			old_count === 0 &&
+			modified_count > 0 &&
+			name === data.gist.name &&
+			data.examples.some((section) =>
+				section.examples.some((example) => example.slug === data.gist.id)
+			)
+		) {
+			name = `${name} (edited)`;
+		}
 	}
 
 	const svelteUrl =
@@ -117,6 +132,7 @@
 
 <div class="repl-outer {zen_mode ? 'zen-mode' : ''}">
 	<AppControls
+		examples={data.examples}
 		user={data.user}
 		gist={data.gist}
 		forked={handle_fork}
@@ -168,7 +184,7 @@
 		flex-direction: column;
 
 		@media (min-width: 800px) {
-			--app-controls-h: 4.8rem;
+			--app-controls-h: 5rem;
 		}
 	}
 

@@ -1,4 +1,4 @@
-import { index, docs as _docs } from '$lib/server/content';
+import { index, docs as _docs, examples } from '$lib/server/content';
 import { json } from '@sveltejs/kit';
 import { markedTransform, normalizeSlugify, removeMarkdown } from '@sveltejs/site-kit/markdown';
 import type { Block } from '@sveltejs/site-kit/search';
@@ -84,6 +84,17 @@ async function content() {
 					rank
 				});
 			}
+		}
+	}
+
+	for (const section of examples) {
+		for (const example of section.children) {
+			blocks.push({
+				breadcrumbs: ['Examples', section.metadata.title, example.metadata.title],
+				href: `/playground/${example.slug.split('/').pop()}`,
+				content: '',
+				rank: 10
+			});
 		}
 	}
 
