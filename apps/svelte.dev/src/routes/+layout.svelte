@@ -7,7 +7,7 @@
 	import { Search, SearchBox } from '@sveltejs/site-kit/search';
 	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
 	import { afterNavigate } from '$app/navigation';
-	import { needs_webcontainers } from './tutorial/[slug]/shared';
+	import { needs_webcontainers } from './tutorial/[...slug]/shared';
 	import type { Exercise } from '$lib/tutorial';
 
 	injectSpeedInsights();
