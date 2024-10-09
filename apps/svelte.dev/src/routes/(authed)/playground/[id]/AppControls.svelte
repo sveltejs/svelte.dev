@@ -223,7 +223,8 @@ export default app;`
 				goto(`/playground/${(e.target as HTMLSelectElement).value}`);
 			}}
 		>
-			<option disabled selected value="">Choose an example</option>
+			<option value="untitled">Create new</option>
+			<option disabled selected value="">or choose an example</option>
 			{#each examples as section}
 				<optgroup label={section.title}>
 					{#each section.examples as example}
