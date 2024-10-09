@@ -57,6 +57,11 @@ export function search(query: string): BlockGroup[] {
 		.map(lookup)
 		.map((block, rank) => ({ block: block as Block, rank }))
 		.sort((a, b) => {
+			// If rank is way lower, give that priority
+			if (Math.abs(a.rank - b.rank) > 3) {
+				return a.rank - b.rank;
+			}
+
 			const a_title_matches = regex.test(a.block.breadcrumbs.at(-1)!);
 			const b_title_matches = regex.test(b.block.breadcrumbs.at(-1)!);
 
