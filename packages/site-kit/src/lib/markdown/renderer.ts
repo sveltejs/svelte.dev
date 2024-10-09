@@ -120,35 +120,18 @@ const theme = createCssVariablesTheme({
  * @param {string} body
  * @param {object} options
  * @param {TwoslashBanner} [options.twoslashBanner] - A function that returns a string to be prepended to the code snippet before running the code with twoslash. Helps in adding imports from svelte or sveltekit or whichever modules are being globally referenced in all or most code snippets.
- * @param {import('.').Modules} [options.modules] Module info generated from type-gen script. Used to create type links and type information blocks
- * @param {boolean} [options.cacheCodeSnippets] Whether to cache code snippets or not. Defaults to true.
- * @param {Parameters<typeof create_type_links>['1']} [options.resolveTypeLinks] Resolve types into its slugs(used on the page itself).
  */
 export async function render_content_markdown(
 	filename: string,
 	body: string,
-	{
-		twoslashBanner,
-		modules = [],
-		cacheCodeSnippets = false,
-		resolveTypeLinks
-	}: RenderContentOptions = {}
+	{ twoslashBanner }: RenderContentOptions = {}
 ) {
-	const { type_links, type_regex } = create_type_links(modules, resolveTypeLinks);
-	const snippets = await create_snippet_cache(cacheCodeSnippets);
+	const snippets = await create_snippet_cache(true);
 
 	const headings: string[] = [];
 
-	// this is a bit hacky, but it allows us to prevent type declarations
-	// from linking to themselves
-	let current = '';
-
 	return await transform(body, {
 		async walkTokens(token) {
-			if (token.type === 'heading') {
-				current = token.text;
-			}
-
 			if (token.type === 'code') {
 				if (snippets.get(token.text)) return;
 
@@ -199,25 +182,6 @@ export async function render_content_markdown(
 
 				html += '</div>';
 
-				// TODO this is currently disabled, we don't have access to `modules`
-				if (type_regex) {
-					type_regex.lastIndex = 0;
-
-					html = html.replace(type_regex, (match, prefix, name, pos, str) => {
-						const char_after = str.slice(pos + match.length, pos + match.length + 1);
-
-						if (!options.link || name === current || /(\$|\d|\w)/.test(char_after)) {
-							// we don't want e.g. RequestHandler to link to RequestHandler
-							return match;
-						}
-
-						const link = type_links?.get(name)
-							? `<a href="${type_links.get(name)?.relativeURL}">${name}</a>`
-							: '';
-						return `${prefix || ''}${link}`;
-					});
-				}
-
 				// Save everything locally now
 				snippets.save(token.text, html);
 			}
@@ -246,20 +210,6 @@ export async function render_content_markdown(
 		},
 		code({ text }) {
 			return snippets.get(text);
-		},
-		codespan({ text }) {
-			return (
-				'<code>' +
-				(type_regex
-					? text.replace(type_regex, (_, prefix, name) => {
-							const link = type_links?.get(name)
-								? `<a href="${type_links.get(name)?.relativeURL}">${name}</a>`
-								: '';
-							return `${prefix || ''}${link}`;
-						})
-					: text) +
-				'</code>'
-			);
 		},
 		blockquote(token) {
 			let content = this.parser?.parse(token.tokens) ?? '';
