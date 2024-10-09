@@ -65,7 +65,7 @@ So far, so... boring. Let's add some randomness to the grid:
 </div>
 ```
 
-Like [lifecycle functions](/tutorial/onmount), `setContext` and `getContext` must be called during component initialisation. (The context key (`'canvas'` in this case) can be anything you like, including non-strings, which is useful for controlling who can access the context.)
+Like lifecycle functions such as `onMount`, `setContext` and `getContext` must be called during component initialisation. (The context key (`'canvas'` in this case) can be anything you like, including non-strings, which is useful for controlling who can access the context.)
 
 Your context object can include anything, including stores. This allows you to pass values that change over time to child components:
 
