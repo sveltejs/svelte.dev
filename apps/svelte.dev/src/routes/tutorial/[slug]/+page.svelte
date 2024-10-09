@@ -19,7 +19,7 @@
 		selected_name,
 		solution
 	} from './state.js';
-	import { text_files } from './shared';
+	import { needs_webcontainers, text_files } from './shared';
 	import OutputRollup from './OutputRollup.svelte';
 	import { page } from '$app/stores';
 
@@ -317,10 +317,10 @@
 					</section>
 
 					<section slot="b" class="preview">
-						{#if /svelte$/.test($page.data.exercise.part.slug)}
-							<OutputRollup />
-						{:else}
+						{#if needs_webcontainers($page.data.exercise)}
 							<Output exercise={data.exercise} {paused} />
+						{:else}
+							<OutputRollup />
 						{/if}
 					</section>
 				</SplitPane>

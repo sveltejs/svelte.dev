@@ -1,14 +1,35 @@
-<script>
+<script lang="ts">
 	import '@sveltejs/site-kit/styles/index.css';
-
 	import { browser } from '$app/environment';
 	import { page } from '$app/stores';
-	import { Icon, Shell, Banners } from '@sveltejs/site-kit/components';
-	import { Nav, Separator } from '@sveltejs/site-kit/nav';
+	import { Shell, Banners } from '@sveltejs/site-kit/components';
+	import { Nav } from '@sveltejs/site-kit/nav';
 	import { Search, SearchBox } from '@sveltejs/site-kit/search';
 	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
+	import { afterNavigate } from '$app/navigation';
+	import { needs_webcontainers } from './tutorial/[slug]/shared';
+	import type { Exercise } from '$lib/tutorial';
 
 	injectSpeedInsights();
+
+	let exercise: Exercise | undefined = undefined;
+
+	afterNavigate(() => {
+		// Make all navigations between SvelteKit-tutorial and non-SvelteKit-tutorial pages (and vice versa)
+		// a full page navigation to ensure webcontainers get the correct origin restriction headers while
+		// ensuring those headers don't interfere with the rest of the page. These headers would have bad
+		// consequences on how we have to handle integration of images etc from other domains for example.
+		if ($page.data?.exercise && needs_webcontainers($page.data.exercise)) {
+			document.body.setAttribute('data-sveltekit-reload', 'true');
+			if (!!exercise && !needs_webcontainers(exercise)) {
+				location.reload();
+			}
+		} else {
+			document.body.removeAttribute('data-sveltekit-reload');
+		}
+
+		exercise = $page.data?.exercise;
+	});
 
 	let { data, children: layout_children } = $props();
 </script>

@@ -3,6 +3,7 @@ import { page } from '$app/stores';
 import type { state as WCState } from '$lib/tutorial/adapters/webcontainer/index.svelte';
 import type { state as RollupState } from '$lib/tutorial/adapters/rollup/index.svelte';
 import type { Adapter, FileStub, Stub } from '$lib/tutorial';
+import { needs_webcontainers } from './shared';
 
 let initial_load = true;
 let use_rollup = $state(true);
@@ -35,9 +36,9 @@ export const adapter_state = new (class {
 
 if (browser) {
 	page.subscribe(($page) => {
-		const slug = $page.data?.exercise?.part?.slug;
-		if (slug) {
-			use_rollup = /svelte$/.test(slug);
+		const exercise = $page.data?.exercise;
+		if (exercise) {
+			use_rollup = !needs_webcontainers(exercise);
 
 			if (use_rollup) {
 				load_rollup();
