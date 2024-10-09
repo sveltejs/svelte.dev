@@ -11,7 +11,7 @@ const redirects = new Map([
 	['event-modifiers', 'svelte/capturing'],
 	['dom-event-forwarding', 'svelte/spreading-events']
 ]);
-
+//test
 export async function load({ params }) {
 	if (!params.slug || params.slug === 'svelte') redirect(307, '/tutorial/svelte/welcome-to-svelte');
 	if (params.slug === 'kit') redirect(307, '/tutorial/kit/introducing-sveltekit');
