@@ -371,6 +371,7 @@ export default app;`
 		border-radius: var(--sk-border-radius);
 		color: currentColor;
 		font-family: var(--sk-font-ui);
+		width: 0;
 		flex: 1;
 		padding: 0.2rem 0.6rem;
 		height: 3.2rem;
