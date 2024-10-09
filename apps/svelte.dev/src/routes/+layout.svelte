@@ -10,6 +10,10 @@
 
 	injectSpeedInsights();
 
+	// Make all navigations between SvelteKit-tutorial and non-SvelteKit-tutorial pages (and vice versa)
+	// a full page navigation to ensure webcontainers get the correct origin restriction headers while
+	// ensuring those headers don't interfere with the rest of the page. These headers would have bad
+	// consequences on how we have to handle integration of images etc from other domains for example.
 	beforeNavigate(({ from, to, cancel }) => {
 		if (!from || !to) return;
 
