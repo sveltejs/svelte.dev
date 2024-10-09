@@ -6,7 +6,7 @@ import ts from 'typescript';
 import * as prettier from 'prettier';
 import { codeToHtml, createCssVariablesTheme } from 'shiki';
 import { transformerTwoslash } from '@shikijs/twoslash';
-import { SHIKI_LANGUAGE_MAP, escape, normalizeSlugify, smart_quotes, transform } from './utils';
+import { SHIKI_LANGUAGE_MAP, escape, slugify, smart_quotes, transform } from './utils';
 import type { Modules } from './index';
 import { fileURLToPath } from 'node:url';
 
@@ -236,7 +236,7 @@ export async function render_content_markdown(
 		heading({ tokens, depth, raw }) {
 			const text = this.parser!.parseInline(tokens);
 
-			headings[depth - 1] = normalizeSlugify(raw);
+			headings[depth - 1] = slugify(raw);
 			headings.length = depth;
 			const slug = headings.filter(Boolean).join('-');
 			return `<h${depth} id="${slug}">${text.replace(

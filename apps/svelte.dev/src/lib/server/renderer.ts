@@ -1,7 +1,7 @@
-import { renderContentMarkdown } from '@sveltejs/site-kit/markdown';
+import { render_content_markdown } from '@sveltejs/site-kit/markdown';
 
 export const render_content = (filename: string, body: string) =>
-	renderContentMarkdown(filename, body, {
+	render_content_markdown(filename, body, {
 		cacheCodeSnippets: true,
 
 		// TODO these didn't work for a while in the old sites, too, investigate bringing back this functionality at some point

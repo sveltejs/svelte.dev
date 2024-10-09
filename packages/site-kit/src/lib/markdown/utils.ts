@@ -47,16 +47,10 @@ export function escape(html: string, encode = false) {
 	return html;
 }
 
-export function slugify(title: string) {
-	return title
-		.replace(/&.+;/g, '')
-		.replace(/[^a-zA-Z0-9-$(.):]/g, '-')
-		.replace(/-{2,}/g, '-')
-		.replace(/^-/, '')
-		.replace(/-$/, '');
-}
-
-export function removeMarkdown(markdown: string) {
+/**
+ * Strip styling/links etc from markdown
+ */
+export function clean(markdown: string) {
 	return markdown
 		.replace(/\*\*(.+?)\*\*/g, '$1') // bold
 		.replace(/_(.+?)_/g, '$1') // Italics
@@ -73,8 +67,14 @@ export function removeHTMLEntities(html: string) {
 	return html.replace(/&.+?;/g, '');
 }
 
-export const normalizeSlugify = (str: string) => {
-	return slugify(removeHTMLEntities(removeMarkdown(str))).replace(/(<([^>]+)>)/gi, '');
+export const slugify = (str: string) => {
+	return removeHTMLEntities(clean(str))
+		.replace(/&.+;/g, '')
+		.replace(/[^a-zA-Z0-9-$(.):]/g, '-')
+		.replace(/-{2,}/g, '-')
+		.replace(/^-/, '')
+		.replace(/-$/, '')
+		.replace(/(<([^>]+)>)/gi, '');
 };
 
 export function smart_quotes(str: string, html: boolean = false) {

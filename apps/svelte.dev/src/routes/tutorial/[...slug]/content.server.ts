@@ -6,7 +6,7 @@ import 'prismjs/components/prism-typescript.js';
 import 'prism-svelte';
 import { read } from '$app/server';
 import { index } from '$lib/server/content';
-import { markedTransform } from '@sveltejs/site-kit/markdown';
+import { transform } from '@sveltejs/site-kit/markdown';
 import type { Exercise, ExerciseStub, PartStub, Scope } from '$lib/tutorial';
 import { error } from '@sveltejs/kit';
 import { text_files } from './shared';
@@ -263,7 +263,7 @@ export async function load_exercise(slug: string): Promise<Exercise> {
 		prev: prev && { slug: prev.slug },
 		next,
 		markdown: exercise.body,
-		html: await markedTransform(exercise.body, {
+		html: await transform(exercise.body, {
 			...default_renderer,
 			codespan: ({ text }) =>
 				filenames.size > 1 && filenames.has(text)
