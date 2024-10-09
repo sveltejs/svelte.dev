@@ -187,7 +187,7 @@ interface Locals {}
 
 ## PageData
 
-Defines the common shape of the [$page.data store](/docs/kit/reference/$app-stores#page) - that is, the data that is shared between all pages.
+Defines the common shape of the [$page.data store](https://kit.svelte.dev/docs/modules#$app-stores-page) - that is, the data that is shared between all pages.
 The `Load` and `ServerLoad` functions in `./$types` will be narrowed accordingly.
 Use optional properties for data that is only present on specific pages. Do not add an index signature (`[key: string]: any`).
 
@@ -201,7 +201,7 @@ interface PageData {}
 
 ## PageState
 
-The shape of the `$page.state` object, which can be manipulated using the [`pushState`](/docs/kit/reference/$app-navigation#pushstate) and [`replaceState`](/docs/kit/reference/$app-navigation#replacestate) functions from `$app/navigation`.
+The shape of the `$page.state` object, which can be manipulated using the [`pushState`](https://kit.svelte.dev/docs/modules#$app-navigation-pushstate) and [`replaceState`](https://kit.svelte.dev/docs/modules#$app-navigation-replacestate) functions from `$app/navigation`.
 
 <div class="ts-block">
 

@@ -550,7 +550,7 @@ publicPrefix?: string;
 
 </div>
 
-A prefix that signals that an environment variable is safe to expose to client-side code. See [`$env/static/public`](/docs/kit/reference/$env-all#$env-static-public) and [`$env/dynamic/public`](/docs/kit/reference/$env-all#$env-dynamic-public). Note that Vite's [`envPrefix`](https://vitejs.dev/config/shared-options.html#envprefix) must be set separately if you are using Vite's environment variable handling - though use of that feature should generally be unnecessary.
+A prefix that signals that an environment variable is safe to expose to client-side code. See [`$env/static/public`](https://kit.svelte.dev/docs/modules#$env-static-public) and [`$env/dynamic/public`](https://kit.svelte.dev/docs/modules#$env-dynamic-public). Note that Vite's [`envPrefix`](https://vitejs.dev/config/shared-options.html#envprefix) must be set separately if you are using Vite's environment variable handling - though use of that feature should generally be unnecessary.
 
 </div>
 </div>
@@ -568,7 +568,7 @@ privatePrefix?: string;
 
 </div>
 
-A prefix that signals that an environment variable is unsafe to expose to client-side code. Environment variables matching neither the public nor the private prefix will be discarded completely. See [`$env/static/private`](/docs/kit/reference/$env-all#$env-static-private) and [`$env/dynamic/private`](/docs/kit/reference/$env-all#$env-dynamic-private).
+A prefix that signals that an environment variable is unsafe to expose to client-side code. Environment variables matching neither the public nor the private prefix will be discarded completely. See [`$env/static/private`](https://kit.svelte.dev/docs/modules#$env-static-private) and [`$env/dynamic/private`](https://kit.svelte.dev/docs/modules#$env-dynamic-private).
 
 </div>
 </div></div>
@@ -916,7 +916,7 @@ base?: '' | `/${string}`;
 
 </div>
 
-A root-relative path that must start, but not end with `/` (e.g. `/base-path`), unless it is the empty string. This specifies where your app is served from and allows the app to live on a non-root path. Note that you need to prepend all your root-relative links with the base value or they will point to the root of your domain, not your `base` (this is how the browser works). You can use [`base` from `$app/paths`](/docs/kit/reference/$app-paths#base) for that: `<a href="{base}/your-page">Link</a>`. If you find yourself writing this often, it may make sense to extract this into a reusable component.
+A root-relative path that must start, but not end with `/` (e.g. `/base-path`), unless it is the empty string. This specifies where your app is served from and allows the app to live on a non-root path. Note that you need to prepend all your root-relative links with the base value or they will point to the root of your domain, not your `base` (this is how the browser works). You can use [`base` from `$app/paths`](https://kit.svelte.dev/docs/modules#$app-paths-base) for that: `<a href="{base}/your-page">Link</a>`. If you find yourself writing this often, it may make sense to extract this into a reusable component.
 
 </div>
 </div>
@@ -1232,7 +1232,7 @@ Not all navigations will result in an error though, for example if the JavaScrip
 </script>
 ```
 
-If you set `pollInterval` to a non-zero value, SvelteKit will poll for new versions in the background and set the value of the [`updated`](/docs/kit/reference/$app-stores#updated) store to `true` when it detects one.
+If you set `pollInterval` to a non-zero value, SvelteKit will poll for new versions in the background and set the value of the [`updated`](https://kit.svelte.dev/docs/modules#$app-stores-updated) store to `true` when it detects one.
 
 <div class="ts-block-property-children"><div class="ts-block-property">
 

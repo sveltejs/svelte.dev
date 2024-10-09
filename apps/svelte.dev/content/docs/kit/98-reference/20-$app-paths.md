@@ -11,7 +11,7 @@ import { assets, base, resolveRoute } from '$app/paths';
 
 ## assets
 
-An absolute path that matches [`config.kit.paths.assets`](/docs/kit/reference/configuration#paths).
+An absolute path that matches [`config.kit.paths.assets`](https://kit.svelte.dev/docs/configuration#paths).
 
 > If a value for `config.kit.paths.assets` is specified, it will be replaced with `'/_svelte_kit_assets'` during `vite dev` or `vite preview`, since the assets don't yet live at their eventual URL.
 
@@ -31,7 +31,7 @@ let assets:
 
 ## base
 
-A string that matches [`config.kit.paths.base`](/docs/kit/reference/configuration#paths).
+A string that matches [`config.kit.paths.base`](https://kit.svelte.dev/docs/configuration#paths).
 
 Example usage: `<a href="{base}/your-page">Link</a>`
 

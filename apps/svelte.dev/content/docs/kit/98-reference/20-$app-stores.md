@@ -67,7 +67,7 @@ const page: import('svelte/store').Readable<
 
 ## updated
 
-A readable store whose initial value is `false`. If [`version.pollInterval`](/docs/kit/reference/configuration#version) is a non-zero value, SvelteKit will poll for new versions of the app and update the store value to `true` when it detects one. `updated.check()` will force an immediate check, regardless of polling.
+A readable store whose initial value is `false`. If [`version.pollInterval`](https://kit.svelte.dev/docs/configuration#version) is a non-zero value, SvelteKit will poll for new versions of the app and update the store value to `true` when it detects one. `updated.check()` will force an immediate check, regardless of polling.
 
 On the server, this store can only be subscribed to during component initialization. In the browser, it can be subscribed to at any time.
 
