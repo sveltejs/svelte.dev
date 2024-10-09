@@ -47,13 +47,6 @@
 	}
 
 	const canSave = $derived(user && gist && gist.owner === user.id);
-	const select_value = $derived(
-		gist &&
-			gist.id !== 'hello-world' &&
-			examples.some((section) => section.examples.some((example) => example.slug === gist.id))
-			? gist.id
-			: ''
-	);
 
 	function handleKeydown(event: KeyboardEvent) {
 		if (event.key === 's' && (isMac ? event.metaKey : event.ctrlKey)) {
@@ -221,20 +214,16 @@ export default app;`
 <svelte:window on:keydown={handleKeydown} />
 
 <div class="app-controls">
-	<input
-		bind:value={name}
-		onfocus={(e) => e.currentTarget.select()}
-		use:enter={(e) => (e.currentTarget as HTMLInputElement).blur()}
-	/>
-
-	<div class="buttons">
+	<div class="examples-select">
+		<span class="raised icon"><Icon name="menu" /></span>
 		<select
-			value={select_value}
+			title="examples"
+			value={gist.id}
 			onchange={e => {
-			goto(`/playground/${(e.target as HTMLSelectElement).value}`);
-		}}
+				goto(`/playground/${(e.target as HTMLSelectElement).value}`);
+			}}
 		>
-			<option disabled selected value="">Examples</option>
+			<option disabled selected value="">Choose an example</option>
 			{#each examples as section}
 				<optgroup label={section.title}>
 					{#each section.examples as example}
@@ -243,7 +232,15 @@ export default app;`
 				</optgroup>
 			{/each}
 		</select>
+	</div>
 
+	<input
+		bind:value={name}
+		onfocus={(e) => e.currentTarget.select()}
+		use:enter={(e) => (e.currentTarget as HTMLInputElement).blur()}
+	/>
+
+	<div class="buttons">
 		<button class="raised icon" onclick={() => (zen_mode = !zen_mode)} title="fullscreen editor">
 			{#if zen_mode}
 				<Icon name="close" />
@@ -327,15 +324,23 @@ export default app;`
 		gap: 0.2em;
 	}
 
-	select {
-		padding: 0.5em;
-		width: 10em;
-		font-family: var(--sk-font-ui);
-		margin-top: 0.1em;
+	.examples-select {
+		position: relative;
+	}
+
+	.examples-select:has(select:focus-visible) .raised.icon {
+		outline: 2px solid hsla(var(--sk-theme-1-hsl), 0.6);
 		border-radius: var(--sk-border-radius);
-		border-style: solid;
-		border-color: var(--sk-raised-color);
-		border-width: var(--sk-raised-width);
+	}
+
+	select {
+		opacity: 0.0001;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		font-family: var(--sk-font-ui);
 	}
 
 	.icon {
