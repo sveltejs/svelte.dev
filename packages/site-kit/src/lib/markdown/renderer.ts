@@ -175,7 +175,7 @@ export async function render_content_markdown(
 				}
 
 				if (options.copy) {
-					html += `<button class="copy-to-clipboard raised" title="Copy to clipboard" aria-label="Copy to clipboard"></button>`;
+					html += `<button class="copy-to-clipboard raised" title="Copyyyy to clipboard" aria-label="Copy to clipboard"></button>`;
 				}
 
 				html += '</div>';
