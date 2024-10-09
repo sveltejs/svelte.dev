@@ -95,7 +95,7 @@ export async function create_index(
 }
 
 function create_links(document: Document, prev: Document | null): Document | null {
-	if (document.body || document.sections.length === 0) {
+	if (document.body) {
 		link(prev, document);
 		prev = document;
 	}
