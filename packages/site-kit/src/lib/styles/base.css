@@ -156,14 +156,6 @@ button[disabled] {
 	pointer-events: none;
 }
 
-button > svg {
-	position: relative;
-	top: -0.1rem;
-	width: 2rem !important;
-	height: 2rem !important;
-	stroke: currentColor !important;
-}
-
 .raised {
 	border-radius: var(--sk-border-radius);
 	border-style: solid;

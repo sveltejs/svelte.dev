@@ -142,11 +142,11 @@ Others are required for SvelteKit to work properly, and should also be left unto
 
 ## $lib
 
-This is a simple alias to `src/lib`, or whatever directory is specified as [`config.kit.files.lib`](/docs/kit/reference/configuration#files). It allows you to access common components and utility modules without `../../../../` nonsense.
+This is a simple alias to `src/lib`, or whatever directory is specified as [`config.kit.files.lib`](configuration#files). It allows you to access common components and utility modules without `../../../../` nonsense.
 
 ### $lib/server
 
-A subdirectory of `$lib`. SvelteKit will prevent you from importing any modules in `$lib/server` into client-side code. See [server-only modules](/docs/server-only-modules).
+A subdirectory of `$lib`. SvelteKit will prevent you from importing any modules in `$lib/server` into client-side code. See [server-only modules](server-only-modules).
 
 ## app.d.ts
 
@@ -171,8 +171,7 @@ message: string;
 ```
 
 <div class="ts-block-property-details"></div>
-</div>
-</div>
+</div></div>
 
 ## Locals
 
@@ -184,12 +183,11 @@ The interface that defines `event.locals`, which can be accessed in [hooks](http
 interface Locals {}
 ```
 
-
 </div>
 
 ## PageData
 
-Defines the common shape of the [$page.data store](/docs/kit/reference/$app-stores#page) - that is, the data that is shared between all pages.
+Defines the common shape of the [$page.data store](https://kit.svelte.dev/docs/modules#$app-stores-page) - that is, the data that is shared between all pages.
 The `Load` and `ServerLoad` functions in `./$types` will be narrowed accordingly.
 Use optional properties for data that is only present on specific pages. Do not add an index signature (`[key: string]: any`).
 
@@ -199,19 +197,17 @@ Use optional properties for data that is only present on specific pages. Do not 
 interface PageData {}
 ```
 
-
 </div>
 
 ## PageState
 
-The shape of the `$page.state` object, which can be manipulated using the [`pushState`](/docs/kit/reference/$app-navigation#pushstate) and [`replaceState`](/docs/kit/reference/$app-navigation#replacestate) functions from `$app/navigation`.
+The shape of the `$page.state` object, which can be manipulated using the [`pushState`](https://kit.svelte.dev/docs/modules#$app-navigation-pushstate) and [`replaceState`](https://kit.svelte.dev/docs/modules#$app-navigation-replacestate) functions from `$app/navigation`.
 
 <div class="ts-block">
 
 ```dts
 interface PageState {}
 ```
-
 
 </div>
 
@@ -224,7 +220,6 @@ If your adapter provides [platform-specific context](https://kit.svelte.dev/docs
 ```dts
 interface Platform {}
 ```
-
 
 </div>
 

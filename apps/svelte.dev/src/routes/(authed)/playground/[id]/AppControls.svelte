@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { goto } from '$app/navigation';
 	import UserMenu from './UserMenu.svelte';
 	import { Icon } from '@sveltejs/site-kit/components';
 	import * as doNotZip from 'do-not-zip';
@@ -11,6 +12,7 @@
 	import type { File } from '@sveltejs/repl';
 
 	interface Props {
+		examples: Array<{ title: string; examples: any[] }>;
 		user: User | null;
 		repl: Repl;
 		gist: Gist;
@@ -28,6 +30,7 @@
 		user,
 		repl,
 		gist,
+		examples,
 		forked,
 		saved
 	}: Props = $props();
@@ -211,6 +214,27 @@ export default app;`
 <svelte:window on:keydown={handleKeydown} />
 
 <div class="app-controls">
+	<div class="examples-select">
+		<span class="raised icon"><Icon name="menu" /></span>
+		<select
+			title="examples"
+			value={gist.id}
+			onchange={e => {
+				goto(`/playground/${(e.target as HTMLSelectElement).value}`);
+			}}
+		>
+			<option value="untitled">Create new</option>
+			<option disabled selected value="">or choose an example</option>
+			{#each examples as section}
+				<optgroup label={section.title}>
+					{#each section.examples as example}
+						<option value={example.slug}>{example.title}</option>
+					{/each}
+				</optgroup>
+			{/each}
+		</select>
+	</div>
+
 	<input
 		bind:value={name}
 		onfocus={(e) => e.currentTarget.select()}
@@ -220,29 +244,29 @@ export default app;`
 	<div class="buttons">
 		<button class="raised icon" onclick={() => (zen_mode = !zen_mode)} title="fullscreen editor">
 			{#if zen_mode}
-				<Icon name="close" />
+				<Icon size={18} name="close" />
 			{:else}
-				<Icon name="maximize" />
+				<Icon size={18} name="maximize" />
 			{/if}
 		</button>
 
 		<button class="raised icon" disabled={downloading} onclick={download} title="download zip file">
-			<Icon name="download" />
+			<Icon size={18} name="download" />
 		</button>
 
 		<button class="raised icon" disabled={saving || !user} onclick={() => fork(false)} title="fork">
 			{#if justForked}
-				<Icon name="check" />
+				<Icon size={18} name="check" />
 			{:else}
-				<Icon name="git-branch" />
+				<Icon size={18} name="git-branch" />
 			{/if}
 		</button>
 
 		<button class="raised icon" disabled={saving || !user} onclick={save} title="save">
 			{#if justSaved}
-				<Icon name="check" />
+				<Icon size={18} name="check" />
 			{:else}
-				<Icon name="save" />
+				<Icon size={18} name="save" />
 				{#if modified_count}
 					<div class="badge">{modified_count}</div>
 				{/if}
@@ -252,7 +276,11 @@ export default app;`
 		{#if user}
 			<UserMenu {user} />
 		{:else}
-			<button class="raised icon" onclick={(e) => (e.preventDefault(), login())}>
+			<button
+				class="raised icon"
+				onclick={(e) => (e.preventDefault(), login())}
+				style="width: auto; padding: 0 0.4rem"
+			>
 				<Icon name="log-in" />
 				<span>&nbsp;Log in to save</span>
 			</button>
@@ -275,22 +303,10 @@ export default app;`
 		color: var(--sk-text-1);
 		white-space: nowrap;
 		flex: 0;
-		gap: 2rem;
-
-		&::after {
-			content: '';
-			position: absolute;
-			left: 0;
-			bottom: -4px;
-			width: 100%;
-			height: 4px;
-			z-index: 2;
-			background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), transparent);
-		}
+		gap: 1rem;
 
 		@media (min-width: 800px) {
-			padding-top: 0;
-			padding-bottom: 1rem;
+			padding-top: 1rem;
 		}
 	}
 
@@ -301,15 +317,39 @@ export default app;`
 		gap: 0.2em;
 	}
 
-	.icon {
-		transform: translateY(0.1rem);
-		display: inline-block;
-		padding: 0.4em;
-		opacity: 0.7;
-		transition: opacity 0.3s;
+	.examples-select {
+		position: relative;
+	}
+
+	.examples-select:has(select:focus-visible) .raised.icon {
+		outline: 2px solid hsla(var(--sk-theme-1-hsl), 0.6);
+		border-radius: var(--sk-border-radius);
+	}
+
+	select {
+		opacity: 0.0001;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
 		font-family: var(--sk-font-ui);
-		font-size: 1.6rem;
-		color: var(--sk-text-1);
+	}
+
+	button,
+	span.icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 3.2rem;
+		height: 3.2rem;
+	}
+
+	.icon {
+		position: relative;
+		font-family: var(--sk-font-ui);
+		font-size: var(--sk-font-size-ui-small);
+		color: var(--sk-text-3);
 		line-height: 1;
 	}
 
@@ -327,12 +367,14 @@ export default app;`
 
 	input {
 		background: transparent;
-		border: none;
+		border: 1px solid var(--sk-back-4);
+		border-radius: var(--sk-border-radius);
 		color: currentColor;
 		font-family: var(--sk-font-ui);
+		width: 0;
 		flex: 1;
-		margin: 0 0.2em 0 0rem;
-		padding: 0.2rem;
+		padding: 0.2rem 0.6rem;
+		height: 3.2rem;
 		font-size: var(--sk-font-size-ui-medium);
 	}
 

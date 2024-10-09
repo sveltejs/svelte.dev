@@ -75,7 +75,16 @@ May throw an error if the code is too complex to migrate automatically.
 <div class="ts-block">
 
 ```dts
-function migrate(source: string): {
+function migrate(
+	source: string,
+	{
+		filename
+	}?:
+		| {
+				filename?: string;
+		  }
+		| undefined
+): {
 	code: string;
 };
 ```

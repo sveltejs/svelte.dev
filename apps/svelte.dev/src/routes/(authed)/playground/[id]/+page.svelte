@@ -8,6 +8,7 @@
 	import { mapbox_setup } from '../../../../config.js';
 	import AppControls from './AppControls.svelte';
 	import { compress_and_encode_text, decode_and_decompress_text } from './gzip.js';
+	import { page } from '$app/stores';
 
 	let { data } = $props();
 
@@ -17,6 +18,10 @@
 	let modified_count = $state(0);
 	let version = data.version;
 	let setting_hash: any = null;
+
+	// Hashed URLs are less safe (we can't delete malicious REPLs), therefore
+	// don't allow links to escape the sandbox restrictions
+	const can_escape = browser && !$page.url.hash;
 
 	onMount(() => {
 		if (version !== 'local') {
@@ -36,7 +41,10 @@
 		}
 	});
 
-	afterNavigate(set_files);
+	afterNavigate(() => {
+		name = data.gist.name;
+		set_files();
+	});
 
 	async function set_files() {
 		const hash = location.hash.slice(1);
@@ -83,7 +91,19 @@
 	}
 
 	function handle_change({ files }: { files: File[] }) {
+		const old_count = modified_count;
 		modified_count = files.filter((c) => c.modified).length;
+
+		if (
+			old_count === 0 &&
+			modified_count > 0 &&
+			name === data.gist.name &&
+			data.examples.some((section) =>
+				section.examples.some((example) => example.slug === data.gist.id)
+			)
+		) {
+			name = `${name} (edited)`;
+		}
 	}
 
 	const svelteUrl =
@@ -112,6 +132,7 @@
 
 <div class="repl-outer {zen_mode ? 'zen-mode' : ''}">
 	<AppControls
+		examples={data.examples}
 		user={data.user}
 		gist={data.gist}
 		forked={handle_fork}
@@ -127,6 +148,7 @@
 			bind:this={repl}
 			{svelteUrl}
 			{relaxed}
+			{can_escape}
 			vim={data.vim}
 			injectedJS={mapbox_setup}
 			showModified
@@ -162,7 +184,7 @@
 		flex-direction: column;
 
 		@media (min-width: 800px) {
-			--app-controls-h: 4.4rem;
+			--app-controls-h: 6rem;
 		}
 	}
 

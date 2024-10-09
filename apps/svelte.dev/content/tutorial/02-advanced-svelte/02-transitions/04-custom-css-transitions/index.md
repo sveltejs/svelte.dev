@@ -21,7 +21,7 @@ The function takes two arguments — the node to which the transition is applied
 
 - `delay` — milliseconds before the transition begins
 - `duration` — length of the transition in milliseconds
-- `easing` — a `p => t` easing function (see the chapter on [tweening](/tutorial/tweens))
+- `easing` — a `p => t` easing function (see the chapter on [tweening](/tutorial/svelte/tweens))
 - `css` — a `(t, u) => css` function, where `u === 1 - t`
 - `tick` — a `(t, u) => {...}` function that has some effect on the node
 

@@ -9,6 +9,11 @@ export async function load({ params }) {
 	const document = docs.topics[`docs/${topic}`];
 
 	if (!document) {
+		// in many cases, https://svelte.dev/docs/foo is now https://svelte.dev/docs/svelte/foo
+		if (docs.pages[`docs/svelte/${params.path}`]) {
+			redirect(308, `/docs/svelte/${params.path}`);
+		}
+
 		error(404, 'Not found');
 	}
 

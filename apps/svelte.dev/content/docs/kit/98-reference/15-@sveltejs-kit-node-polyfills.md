@@ -17,11 +17,12 @@ Make various web APIs available as globals:
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function installPolyfills(): void;
 ```
 
 </div>
+
+
 
 

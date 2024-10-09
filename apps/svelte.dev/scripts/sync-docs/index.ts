@@ -1,16 +1,18 @@
-import { replace_export_type_placeholders, type Modules } from '@sveltejs/site-kit/markdown';
+import { preprocess } from '@sveltejs/site-kit/markdown/preprocess';
 import path from 'node:path';
-import { cpSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
+import fs from 'node:fs';
 import ts from 'typescript';
 import glob from 'tiny-glob/sync';
 import { fileURLToPath } from 'node:url';
 import { clone_repo, migrate_meta_json, replace_strings, strip_origin } from './utils';
 import { get_types, read_d_ts_file, read_types } from './types';
+import type { Modules } from '@sveltejs/site-kit/markdown';
 
 interface Package {
 	name: string;
 	local: string;
 	repo: string;
+	branch: string;
 	pkg: string;
 	docs: string;
 	types: string;
@@ -26,6 +28,7 @@ const packages: Package[] = [
 		name: 'svelte',
 		local: `${REPOS}/svelte`,
 		repo: 'sveltejs/svelte',
+		branch: 'docs-fixes',
 		pkg: 'packages/svelte',
 		docs: 'documentation/docs',
 		types: 'types',
@@ -50,6 +53,7 @@ const packages: Package[] = [
 		name: 'kit',
 		local: `${REPOS}/kit`,
 		repo: 'sveltejs/kit',
+		branch: 'svelte-dev-adjusted-docs', // TODO update!
 		pkg: 'packages/kit',
 		docs: 'documentation/docs',
 		types: 'types',
@@ -69,7 +73,7 @@ const packages: Package[] = [
 			}
 
 			const dir = kit_base + 'src/types/synthetic';
-			for (const file of readdirSync(dir)) {
+			for (const file of fs.readdirSync(dir)) {
 				if (!file.endsWith('.md')) continue;
 
 				const comment = strip_origin(read_d_ts_file(`${dir}/${file}`));
@@ -81,29 +85,6 @@ const packages: Package[] = [
 					types: [],
 					exempt: true
 				});
-			}
-
-			// TODO JSdoc points to kit.svelte.dev structure, rewrite those for now
-			for (const module of modules) {
-				replace_strings(module, (str) =>
-					str
-						.replace(/(https:\/\/kit.svelte.dev)?\/docs\/([^#)]+)/g, (_, __, slug) =>
-							slug === 'cli' || slug === 'modules' || slug === 'types' || slug === 'configuration'
-								? `/docs/kit/reference/${slug}`
-								: _
-						)
-						.replace(
-							/\/docs\/kit\/reference\/modules#([^-]+)-([^-]+)-([^-)]+)/g,
-							(_, p1, p2, p3) => {
-								if (p1 === '$env') {
-									return `/docs/kit/reference/$env-all#${p1}-${p2}-${p3}`;
-								} else {
-									return `/docs/kit/reference/${p1 === 'sveltejs' ? '@sveltejs' : p1}-${p2}#${p3}`;
-								}
-							}
-						)
-						.replace(/\/docs\/cli/g, '/docs/kit/reference/cli')
-				);
 			}
 
 			const svelte_kit_module = modules.find((m) => m.name === '@sveltejs/kit');
@@ -146,28 +127,33 @@ const packages: Package[] = [
  */
 if (process.env.USE_GIT === 'true') {
 	try {
-		mkdirSync(REPOS);
+		fs.mkdirSync(REPOS);
 	} catch {
 		// ignore if it already exists
 	}
 
-	await Promise.all(packages.map((pkg) => clone_repo(`https://github.com/${pkg.repo}.git`, REPOS)));
+	await Promise.all(
+		packages.map((pkg) => clone_repo(`https://github.com/${pkg.repo}.git`, pkg.branch, REPOS))
+	);
 }
 
 for (const pkg of packages) {
-	cpSync(`${pkg.local}/${pkg.docs}`, `${DOCS}/${pkg.name}`, { recursive: true });
-	migrate_meta_json(`${DOCS}/${pkg.name}`);
+	const dest = `${DOCS}/${pkg.name}`;
+
+	fs.rmSync(dest, { force: true, recursive: true });
+	fs.cpSync(`${pkg.local}/${pkg.docs}`, dest, { recursive: true });
+	migrate_meta_json(dest);
 
 	const modules = await pkg.process_modules(
 		await read_types(`${pkg.local}/${pkg.pkg}/${pkg.types}/`, []),
 		pkg
 	);
 
-	const files = glob(`${DOCS}/${pkg.name}/**/*.md`);
+	const files = glob(`${dest}/**/*.md`);
 
 	for (const file of files) {
-		const content = await replace_export_type_placeholders(readFileSync(file, 'utf-8'), modules);
+		const content = await preprocess(fs.readFileSync(file, 'utf-8'), modules);
 
-		writeFileSync(file, content);
+		fs.writeFileSync(file, content);
 	}
 }

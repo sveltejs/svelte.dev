@@ -2,11 +2,11 @@ import { redirect } from '@sveltejs/kit';
 
 export function load({ url }) {
 	if (url.searchParams.has('example')) {
-		redirect(308, construct_embed_url(url.searchParams, 'example'));
+		redirect(307, construct_embed_url(url.searchParams, 'example'));
 	} else if (url.searchParams.has('gist')) {
-		redirect(308, construct_embed_url(url.searchParams, 'gist'));
+		redirect(307, construct_embed_url(url.searchParams, 'gist'));
 	} else {
-		redirect(308, '/playground/hello-world/embed');
+		redirect(307, '/playground/hello-world/embed');
 	}
 }
 

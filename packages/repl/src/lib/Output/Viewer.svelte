@@ -18,6 +18,8 @@
 	export let status: string | null;
 	/** sandbox allow-same-origin */
 	export let relaxed = false;
+	/** sandbox allow-popups-to-escape-sandbox (i.e. links within the REPL to other pages work) */
+	export let can_escape = false;
 	/** Any additional JS you may want to inject */
 	export let injectedJS = '';
 	/** Any additional CSS you may want to inject */
@@ -247,13 +249,12 @@
 		class:inited
 		bind:this={iframe}
 		sandbox={[
-			'allow-popups-to-escape-sandbox',
 			'allow-scripts',
 			'allow-popups',
 			'allow-forms',
 			'allow-pointer-lock',
-			'allow-top-navigation',
 			'allow-modals',
+			can_escape ? 'allow-popups-to-escape-sandbox' : '',
 			relaxed ? 'allow-same-origin' : ''
 		].join(' ')}
 		class={error || pending || pending_imports ? 'greyed-out' : ''}
@@ -269,27 +270,7 @@
 	{#if !onLog}
 		<PaneWithPanel pos="90%" panel="Console">
 			<div slot="main">
-				<iframe
-					title="Result"
-					class:inited
-					bind:this={iframe}
-					sandbox={[
-						'allow-popups-to-escape-sandbox',
-						'allow-scripts',
-						'allow-popups',
-						'allow-forms',
-						'allow-pointer-lock',
-						'allow-top-navigation',
-						'allow-modals',
-						relaxed ? 'allow-same-origin' : ''
-					].join(' ')}
-					class={error || pending || pending_imports ? 'greyed-out' : ''}
-					srcdoc={BROWSER ? srcdoc : ''}
-				></iframe>
-
-				{#if $bundle?.error}
-					<ErrorOverlay error={$bundle.error} />
-				{/if}
+				{@render main()}
 			</div>
 
 			<div slot="panel-header">

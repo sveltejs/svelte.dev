@@ -1,14 +1,29 @@
-<script>
+<script lang="ts">
 	import '@sveltejs/site-kit/styles/index.css';
-
 	import { browser } from '$app/environment';
 	import { page } from '$app/stores';
-	import { Icon, Shell, Banners } from '@sveltejs/site-kit/components';
-	import { Nav, Separator } from '@sveltejs/site-kit/nav';
+	import { Shell, Banners } from '@sveltejs/site-kit/components';
+	import { Nav } from '@sveltejs/site-kit/nav';
 	import { Search, SearchBox } from '@sveltejs/site-kit/search';
 	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
+	import { beforeNavigate } from '$app/navigation';
 
 	injectSpeedInsights();
+
+	// Make all navigations between SvelteKit-tutorial and non-SvelteKit-tutorial pages (and vice versa)
+	// a full page navigation to ensure webcontainers get the correct origin restriction headers while
+	// ensuring those headers don't interfere with the rest of the page. These headers would have bad
+	// consequences on how we have to handle integration of images etc from other domains for example.
+	beforeNavigate(({ from, to, cancel }) => {
+		if (!from || !to) return;
+
+		if (
+			from.url.pathname.startsWith('/tutorial/kit/') !== to.url.pathname.startsWith('/tutorial/kit')
+		) {
+			cancel();
+			location.href = to.url.href;
+		}
+	});
 
 	let { data, children: layout_children } = $props();
 </script>
@@ -23,11 +38,7 @@
 
 <Shell nav_visible={$page.route.id !== '/(authed)/playground/[id]/embed'}>
 	{#snippet top_nav()}
-		<Nav
-			title={data.nav_title}
-			links={data.nav_links}
-			shadow={!$page.route.id?.startsWith('/(authed)/playground')}
-		>
+		<Nav title={data.nav_title} links={data.nav_links}>
 			{#snippet search()}
 				<Search />
 			{/snippet}

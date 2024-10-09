@@ -1,7 +1,4 @@
-export {
-	render_content_markdown as renderContentMarkdown,
-	replace_export_type_placeholders
-} from './renderer';
+export { render_content_markdown as renderContentMarkdown } from './renderer';
 
 export {
 	extract_frontmatter as extractFrontmatter,

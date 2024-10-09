@@ -2,7 +2,7 @@
 title: Route groups
 ---
 
-As we saw in the [routing introduction](/tutorial/layouts), layouts are a way to share UI and data loading logic between different routes.
+As we saw in the [routing introduction](/tutorial/kit/layouts), layouts are a way to share UI and data loading logic between different routes.
 
 Sometimes it's useful to use layouts without affecting the route — for example, you might need your `/app` and `/account` routes to be behind authentication, while your `/about` page is open to the world. We can do this with a _route group_, which is a directory in parentheses.
 

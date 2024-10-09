@@ -13,6 +13,7 @@
 	export let runtimeError: Error | null = null;
 	export let embedded = false;
 	export let relaxed = false;
+	export let can_escape = false;
 	export let injectedJS: string;
 	export let injectedCSS: string;
 	export let showAst = false;
@@ -61,6 +62,7 @@
 		bind:error={runtimeError}
 		{status}
 		{relaxed}
+		{can_escape}
 		{injectedJS}
 		{injectedCSS}
 		theme={previewTheme}
