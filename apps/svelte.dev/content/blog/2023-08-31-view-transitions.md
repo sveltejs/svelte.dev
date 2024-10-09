@@ -7,7 +7,7 @@ authorURL: https://geoffrich.net
 
 The [view transitions API](https://developer.chrome.com/docs/web-platform/view-transitions/) has been sweeping the web development world lately, and for good reason. It streamlines the process of animating between two page states, which is especially useful for page transitions.
 
-However, until now, you couldn’t easily use this API in a SvelteKit app, since it was difficult to slot into the right place in the navigation lifecycle. SvelteKit 1.24 brought a new [`onNavigate`](https://kit.svelte.dev/docs/modules#$app-navigation-onnavigate) lifecycle hook to make view transitions integration much easier – let’s dive in.
+However, until now, you couldn’t easily use this API in a SvelteKit app, since it was difficult to slot into the right place in the navigation lifecycle. SvelteKit 1.24 brought a new [`onNavigate`](https://kit.svelte.dev/docs/$app-navigation#onNavigate) lifecycle hook to make view transitions integration much easier – let’s dive in.
 
 ## How view transitions work
 
@@ -30,9 +30,9 @@ It’s important to note that view transitions is a browser API, not a SvelteKit
 
 ## How `onNavigate` works
 
-Before learning how to write view transitions, let's highlight the function that makes it all possible: [`onNavigate`](https://kit.svelte.dev/docs/modules#$app-navigation-onnavigate).
+Before learning how to write view transitions, let's highlight the function that makes it all possible: [`onNavigate`](https://kit.svelte.dev/docs/$app-navigation#onNavigate).
 
-Until recently, SvelteKit had two navigation lifecycle functions: [`beforeNavigate`](https://kit.svelte.dev/docs/modules#$app-navigation-beforenavigate), which fires before a navigation starts, and [`afterNavigate`](https://kit.svelte.dev/docs/modules#$app-navigation-afternavigate), which fires after the page has been updated following a navigation. SvelteKit 1.24 introduces a third: `onNavigate`, which will fire on every navigation, immediately before the new page is rendered. Importantly, it will run _after_ any data loading for the page has completed – since starting a view transition prevents any interaction with the page, we want to start it as late as possible.
+Until recently, SvelteKit had two navigation lifecycle functions: [`beforeNavigate`](https://kit.svelte.dev/docs/$app-navigation#beforeNavigate), which fires before a navigation starts, and [`afterNavigate`](https://kit.svelte.dev/docs/$app-navigation#afterNavigate), which fires after the page has been updated following a navigation. SvelteKit 1.24 introduces a third: `onNavigate`, which will fire on every navigation, immediately before the new page is rendered. Importantly, it will run _after_ any data loading for the page has completed – since starting a view transition prevents any interaction with the page, we want to start it as late as possible.
 
 You can also return a promise from `onNavigate`, which will suspend the navigation until it resolves. This will let us wait to complete the navigation until the view transition has started.
 

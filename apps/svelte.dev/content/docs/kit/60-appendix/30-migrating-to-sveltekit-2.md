@@ -20,7 +20,7 @@ import { error } from '@sveltejs/kit'
 
 `svelte-migrate` will do these changes automatically for you.
 
-If the error or redirect is thrown inside a `try {...}` block (hint: don't do this!), you can distinguish them from unexpected errors using [`isHttpError`](modules#sveltejs-kit-ishttperror) and [`isRedirect`](modules#sveltejs-kit-isredirect) imported from `@sveltejs/kit`.
+If the error or redirect is thrown inside a `try {...}` block (hint: don't do this!), you can distinguish them from unexpected errors using [`isHttpError`](@sveltejs-kit#isHttpError) and [`isRedirect`](@sveltejs-kit#isRedirect) imported from `@sveltejs/kit`.
 
 ## path is required when setting cookies
 
@@ -82,7 +82,7 @@ Previously it was possible to track URLs from `fetch`es on the server in order t
 
 ## `preloadCode` arguments must be prefixed with `base`
 
-SvelteKit exposes two functions, [`preloadCode`](modules#$app-navigation-preloadcode) and [`preloadData`](modules#$app-navigation-preloaddata), for programmatically loading the code and data associated with a particular path. In version 1, there was a subtle inconsistency — the path passed to `preloadCode` did not need to be prefixed with the `base` path (if set), while the path passed to `preloadData` did.
+SvelteKit exposes two functions, [`preloadCode`]($app-navigation#preloadCode) and [`preloadData`]($app-navigation#preloadData), for programmatically loading the code and data associated with a particular path. In version 1, there was a subtle inconsistency — the path passed to `preloadCode` did not need to be prefixed with the `base` path (if set), while the path passed to `preloadData` did.
 
 This is fixed in SvelteKit 2 — in both cases, the path should be prefixed with `base` if it is set.
 
