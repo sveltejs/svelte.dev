@@ -12,7 +12,7 @@ const escapeReplacements = {
 	'"': '&quot;',
 	"'": '&#39;'
 };
-
+//test
 /**
  * @param {string} ch
  */
