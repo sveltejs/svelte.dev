@@ -65,5 +65,5 @@ export function migrate_meta_json(path: string) {
  * deployments and when developing locally
  */
 export function strip_origin(str: string) {
-	return str.replace(/https:\/\/(kit\.)?svelte\.dev/g, '');
+	return str.replaceAll('https://svelte.dev', '');
 }

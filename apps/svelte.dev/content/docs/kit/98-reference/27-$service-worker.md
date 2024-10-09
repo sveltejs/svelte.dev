@@ -9,7 +9,7 @@ title: $service-worker
 import { base, build, files, prerendered, version } from '$service-worker';
 ```
 
-This module is only available to [service workers](/docs/service-workers).
+This module is only available to [service workers](https://kit.svelte.dev/docs/service-workers).
 
 ## base
 
