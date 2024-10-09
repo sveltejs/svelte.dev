@@ -92,7 +92,7 @@ async function content() {
 			blocks.push({
 				breadcrumbs: ['Examples', section.metadata.title, example.metadata.title],
 				href: `/playground/${example.slug.split('/').pop()}`,
-				content: `${section.metadata.title}: ${example.metadata.title}`,
+				content: '',
 				rank: 10
 			});
 		}
