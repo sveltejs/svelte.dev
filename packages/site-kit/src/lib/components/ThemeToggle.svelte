@@ -38,16 +38,13 @@
 	onDestroy(() => query?.removeEventListener('change', cb));
 </script>
 
-<div class="appearance">
-	<span class="caption">Theme</span>
-	<button
-		onclick={toggle}
-		class="raised"
-		type="button"
-		aria-pressed={$theme.current === 'dark' ? 'true' : 'false'}
-		aria-label={label}
-	></button>
-</div>
+<button
+	onclick={toggle}
+	class="raised"
+	type="button"
+	aria-pressed={$theme.current === 'dark' ? 'true' : 'false'}
+	aria-label={label}
+></button>
 
 <style>
 	button {
@@ -55,37 +52,11 @@
 		aspect-ratio: 1;
 		background: red;
 		background: url($lib/icons/theme-light.svg) no-repeat 50% 50% / 2.3rem 2.3rem;
+		margin-left: 1rem;
 
 		:global(.dark) & {
 			background-image: url($lib/icons/theme-dark.svg);
 			opacity: 0.8;
-		}
-	}
-
-	.appearance {
-		display: flex;
-		align-items: center;
-
-		.caption {
-			display: none;
-			font-size: var(--sk-text-xs);
-			line-height: 1;
-			margin-right: 0rem;
-		}
-	}
-
-	@media (max-width: 799px) {
-		.appearance {
-			position: relative;
-			display: flex;
-			padding: 1.5rem 0;
-			justify-content: space-between;
-		}
-
-		.appearance .caption {
-			display: block;
-
-			font-size: var(--sk-text-s);
 		}
 	}
 </style>
