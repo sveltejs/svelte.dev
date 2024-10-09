@@ -38,11 +38,7 @@
 
 <Shell nav_visible={$page.route.id !== '/(authed)/playground/[id]/embed'}>
 	{#snippet top_nav()}
-		<Nav
-			title={data.nav_title}
-			links={data.nav_links}
-			shadow={!$page.route.id?.startsWith('/(authed)/playground')}
-		>
+		<Nav title={data.nav_title} links={data.nav_links}>
 			{#snippet search()}
 				<Search />
 			{/snippet}
