@@ -9,6 +9,7 @@ import { transformerTwoslash } from '@shikijs/twoslash';
 import { SHIKI_LANGUAGE_MAP, escape, normalizeSlugify, smart_quotes, transform } from './utils';
 import type { Modules } from './index';
 import { fileURLToPath } from 'node:url';
+import { execSync } from 'node:child_process';
 
 interface SnippetOptions {
 	file: string | null;
@@ -510,15 +511,15 @@ function find_nearest_node_modules(file: string): string | null {
 }
 
 /**
- * Get the `mtime` of the most recently modified file in a dependency graph,
+ * Get the commit time of the most recently modified file in a dependency graph,
  * excluding imports from `node_modules`
  */
-function get_mtime(file: string, seen = new Set<string>()) {
-	if (seen.has(file)) return -1;
+function get_commit_time(file: string, seen = new Set<string>()) {
+	if (seen.has(file)) return 0;
 	seen.add(file);
 
-	let mtime = fs.statSync(file).mtimeMs;
 	const content = fs.readFileSync(file, 'utf-8');
+	let latest_commit_time = 0;
 
 	for (const [_, source] of content.matchAll(/^import(?:.+?\s+from\s+)?['"](.+)['"];?$/gm)) {
 		if (source[0] !== '.') continue;
@@ -528,16 +529,22 @@ function get_mtime(file: string, seen = new Set<string>()) {
 		if (!fs.existsSync(resolved))
 			throw new Error(`Could not resolve ${source} relative to ${file}`);
 
-		mtime = Math.max(mtime, get_mtime(resolved, seen));
+		const child_commit_time = get_commit_time(resolved, seen);
+		if (child_commit_time > latest_commit_time) {
+			latest_commit_time = child_commit_time;
+		}
 	}
 
-	return mtime;
+	const file_commit_time = parseInt(
+		execSync(`git log -n 1 --pretty=format:%ct -- ${file}`).toString().trim(),
+		10
+	);
+	return latest_commit_time > file_commit_time ? latest_commit_time : file_commit_time;
 }
 
-const mtime = Math.max(
-	get_mtime(fileURLToPath(import.meta.url)),
-	fs.statSync('node_modules').mtimeMs,
-	fs.statSync('../../pnpm-lock.yaml').mtimeMs
+const commit_time = Math.max(
+	get_commit_time(fileURLToPath(import.meta.url)),
+	get_commit_time('../../pnpm-lock.yaml')
 );
 
 /**
@@ -560,7 +567,7 @@ async function create_snippet_cache(should: boolean) {
 
 	if (fs.existsSync(directory)) {
 		for (const dir of fs.readdirSync(directory)) {
-			if (!fs.statSync(`${directory}/${dir}`).isDirectory() || +dir < mtime) {
+			if (!fs.statSync(`${directory}/${dir}`).isDirectory() || +dir < commit_time) {
 				fs.rmSync(`${directory}/${dir}`, { force: true, recursive: true });
 			}
 		}
@@ -569,7 +576,7 @@ async function create_snippet_cache(should: boolean) {
 	}
 
 	try {
-		fs.mkdirSync(`${directory}/${mtime}`);
+		fs.mkdirSync(`${directory}/${commit_time}`);
 	} catch {}
 
 	function get_file(source: string) {
@@ -577,7 +584,7 @@ async function create_snippet_cache(should: boolean) {
 		hash.update(source);
 		const digest = hash.digest().toString('base64').replace(/\//g, '-');
 
-		return `${directory}/${mtime}/${digest}.html`;
+		return `${directory}/${commit_time}/${digest}.html`;
 	}
 
 	return {
