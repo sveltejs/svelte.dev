@@ -9,7 +9,7 @@ title: $service-worker
 import { base, build, files, prerendered, version } from '$service-worker';
 ```
 
-This module is only available to [service workers](/docs/service-workers).
+This module is only available to [service workers](https://kit.svelte.dev/docs/service-workers).
 
 ## base
 
@@ -18,12 +18,13 @@ Note that there is a `base` but no `assets`, since service workers cannot be use
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 const base: string;
 ```
 
 </div>
+
+
 
 ## build
 
@@ -32,25 +33,27 @@ During development, this is an empty array.
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 const build: string[];
 ```
 
 </div>
 
+
+
 ## files
 
-An array of URL strings representing the files in your static directory, or whatever directory is specified by `config.kit.files.assets`. You can customize which files are included from `static` directory using [`config.kit.serviceWorker.files`](/docs/kit/reference/configuration)
+An array of URL strings representing the files in your static directory, or whatever directory is specified by `config.kit.files.assets`. You can customize which files are included from `static` directory using [`config.kit.serviceWorker.files`](https://kit.svelte.dev/docs/configuration)
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 const files: string[];
 ```
 
 </div>
+
+
 
 ## prerendered
 
@@ -59,24 +62,26 @@ During development, this is an empty array.
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 const prerendered: string[];
 ```
 
 </div>
 
+
+
 ## version
 
-See [`config.kit.version`](/docs/kit/reference/configuration#version). It's useful for generating unique cache names inside your service worker, so that a later deployment of your app can invalidate old caches.
+See [`config.kit.version`](https://kit.svelte.dev/docs/configuration#version). It's useful for generating unique cache names inside your service worker, so that a later deployment of your app can invalidate old caches.
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 const version: string;
 ```
 
 </div>
+
+
 
 

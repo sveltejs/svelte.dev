@@ -69,7 +69,10 @@ const config: UserConfig = {
 	optimizeDeps: {
 		exclude: ['@sveltejs/site-kit', '@sveltejs/repl', '@rollup/browser']
 	},
-	ssr: { noExternal: ['@sveltejs/site-kit', '@sveltejs/repl'] }
+	ssr: {
+		noExternal: ['@sveltejs/site-kit', '@sveltejs/repl'],
+		external: ['shiki', '@shikijs/twoslash']
+	}
 };
 
 export default config;

@@ -20,6 +20,7 @@
 	export let embedded = false;
 	export let orientation: 'columns' | 'rows' = 'columns';
 	export let relaxed = false;
+	export let can_escape = false;
 	export let fixed = false;
 	export let fixedPos = 50;
 	export let injectedJS = '';
@@ -312,6 +313,7 @@
 					status={status_visible ? status : null}
 					{embedded}
 					{relaxed}
+					{can_escape}
 					{injectedJS}
 					{injectedCSS}
 					{showAst}

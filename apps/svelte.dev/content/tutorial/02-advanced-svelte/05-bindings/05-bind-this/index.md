@@ -2,7 +2,9 @@
 title: This
 ---
 
-In a [previous exercise](onmount), we learned how to use the `onMount` lifecycle function to paint to a canvas.
+> TODO the next sentence is no longer true
+
+In a previous exercise, we learned how to use the `onMount` lifecycle function to paint to a canvas.
 
 But the example is buggy — it's using `document.querySelector('canvas')`, which will always return the first `<canvas>` found on the page, which might not be the one belonging to our component.
 

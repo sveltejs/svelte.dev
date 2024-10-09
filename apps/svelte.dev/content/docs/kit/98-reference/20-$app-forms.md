@@ -16,8 +16,7 @@ In case of an error, it redirects to the nearest error page.
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function applyAction<
 	Success extends Record<string, unknown> | undefined,
 	Failure extends Record<string, unknown> | undefined
@@ -30,6 +29,8 @@ function applyAction<
 ```
 
 </div>
+
+
 
 ## deserialize
 
@@ -53,8 +54,7 @@ async function handleSubmit(event) {
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function deserialize<
 	Success extends Record<string, unknown> | undefined,
 	Failure extends Record<string, unknown> | undefined
@@ -64,6 +64,8 @@ function deserialize<
 ```
 
 </div>
+
+
 
 ## enhance
 
@@ -86,8 +88,7 @@ If you provide a custom function with a callback and want to use the default beh
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function enhance<
 	Success extends Record<string, unknown> | undefined,
 	Failure extends Record<string, unknown> | undefined
@@ -103,5 +104,7 @@ function enhance<
 ```
 
 </div>
+
+
 
 

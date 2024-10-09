@@ -29,8 +29,7 @@ A lifecycle function that runs the supplied `callback` when the current componen
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function afterNavigate(
 	callback: (
 		navigation: import('@sveltejs/kit').AfterNavigate
@@ -39,6 +38,8 @@ function afterNavigate(
 ```
 
 </div>
+
+
 
 ## beforeNavigate
 
@@ -54,8 +55,7 @@ If the navigation will (if not cancelled) cause the document to unload — in ot
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function beforeNavigate(
 	callback: (
 		navigation: import('@sveltejs/kit').BeforeNavigate
@@ -65,6 +65,8 @@ function beforeNavigate(
 
 </div>
 
+
+
 ## disableScrollHandling
 
 If called when the page is being updated following a navigation (in `onMount` or `afterNavigate` or an action, for example), this disables SvelteKit's built-in scroll handling.
@@ -72,12 +74,13 @@ This is generally discouraged, since it breaks user expectations.
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function disableScrollHandling(): void;
 ```
 
 </div>
+
+
 
 ## goto
 
@@ -86,8 +89,7 @@ For external URLs, use `window.location = url` instead of calling `goto(url)`.
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function goto(
 	url: string | URL,
 	opts?:
@@ -103,6 +105,8 @@ function goto(
 ```
 
 </div>
+
+
 
 ## invalidate
 
@@ -123,8 +127,7 @@ invalidate((url) => url.pathname === '/path');
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function invalidate(
 	resource: string | URL | ((url: URL) => boolean)
 ): Promise<void>;
@@ -132,18 +135,21 @@ function invalidate(
 
 </div>
 
+
+
 ## invalidateAll
 
 Causes all `load` functions belonging to the currently active page to re-run. Returns a `Promise` that resolves when the page is subsequently updated.
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function invalidateAll(): Promise<void>;
 ```
 
 </div>
+
+
 
 ## onNavigate
 
@@ -157,8 +163,7 @@ If a function (or a `Promise` that resolves to a function) is returned from the 
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function onNavigate(
 	callback: (
 		navigation: import('@sveltejs/kit').OnNavigate
@@ -167,6 +172,8 @@ function onNavigate(
 ```
 
 </div>
+
+
 
 ## preloadCode
 
@@ -180,12 +187,13 @@ Returns a Promise that resolves when the modules have been imported.
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function preloadCode(pathname: string): Promise<void>;
 ```
 
 </div>
+
+
 
 ## preloadData
 
@@ -199,8 +207,7 @@ Returns a Promise that resolves with the result of running the new route's `load
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function preloadData(href: string): Promise<
 	| {
 			type: 'loaded';
@@ -216,14 +223,15 @@ function preloadData(href: string): Promise<
 
 </div>
 
+
+
 ## pushState
 
 Programmatically create a new history entry with the given `$page.state`. To use the current URL, you can pass `''` as the first argument. Used for [shallow routing](https://kit.svelte.dev/docs/shallow-routing).
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function pushState(
 	url: string | URL,
 	state: App.PageState
@@ -232,14 +240,15 @@ function pushState(
 
 </div>
 
+
+
 ## replaceState
 
 Programmatically replace the current history entry with the given `$page.state`. To use the current URL, you can pass `''` as the first argument. Used for [shallow routing](https://kit.svelte.dev/docs/shallow-routing).
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function replaceState(
 	url: string | URL,
 	state: App.PageState
@@ -247,5 +256,7 @@ function replaceState(
 ```
 
 </div>
+
+
 
 

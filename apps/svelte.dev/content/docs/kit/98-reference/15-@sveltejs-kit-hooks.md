@@ -34,6 +34,7 @@ async function first({ event, resolve }) {
 		preload: () => {
 			// this one wins as it's the first defined in the chain
 			console.log('first preload');
+			return true;
 		}
 	});
 	console.log('first post-processing');
@@ -50,10 +51,12 @@ async function second({ event, resolve }) {
 		},
 		preload: () => {
 			console.log('second preload');
+			return true;
 		},
 		filterSerializedResponseHeaders: () => {
 			// this one wins as it's the first defined in the chain
-	 		console.log('second filterSerializedResponseHeaders');
+			console.log('second filterSerializedResponseHeaders');
+			return true;
 		}
 	});
 	console.log('second post-processing');
@@ -78,13 +81,14 @@ first post-processing
 
 <div class="ts-block">
 
-```ts
-// @noErrors
+```dts
 function sequence(
 	...handlers: import('@sveltejs/kit').Handle[]
 ): import('@sveltejs/kit').Handle;
 ```
 
 </div>
+
+
 
 
