@@ -1,39 +1,24 @@
 <script lang="ts">
+	import { on } from 'svelte/events';
 	import { theme } from '../stores';
-	import { onDestroy } from 'svelte';
 
 	function toggle() {
-		const upcoming_theme = $theme.current === 'light' ? 'dark' : 'light';
+		const next = $theme.current === 'light' ? 'dark' : 'light';
+		const system = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 
-		if (
-			upcoming_theme ===
-			(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
-		) {
-			// Switch the preference to `system`
-			$theme.preference = 'system';
-		} else {
-			// Switch the preference to `light` or `dark`
-			$theme.preference = upcoming_theme;
-		}
-
-		$theme.current = upcoming_theme;
+		$theme.preference = next === system ? 'system' : next;
+		$theme.current = next;
 	}
 
-	const cb = (e: MediaQueryListEvent) =>
-		theme.set({ preference: $theme.preference, current: e.matches ? 'dark' : 'light' });
-
-	let query: MediaQueryList | undefined;
-
 	$effect(() => {
-		query?.removeEventListener('change', cb);
-
 		if ($theme.preference === 'system') {
-			query = window.matchMedia('(prefers-color-scheme: dark)');
-			query.addEventListener('change', cb);
+			const query = window.matchMedia('(prefers-color-scheme: dark)');
+
+			return on(query, 'change', (e) => {
+				$theme.current = e.matches ? 'dark' : 'light';
+			});
 		}
 	});
-
-	onDestroy(() => query?.removeEventListener('change', cb));
 </script>
 
 <button
