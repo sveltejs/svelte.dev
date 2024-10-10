@@ -549,39 +549,6 @@ function hash_graph(hash: Hash, file: string, seen = new Set<string>()) {
 	hash.update(content);
 }
 
-function create_type_links(
-	modules: Modules | undefined,
-	resolve_link?: (module_name: string, type_name: string) => { slug: string; page: string }
-): {
-	type_regex: RegExp | null;
-	type_links: Map<string, { slug: string; page: string; relativeURL: string }> | null;
-} {
-	if (!modules || modules.length === 0 || !resolve_link)
-		return { type_regex: null, type_links: null };
-
-	const type_regex = new RegExp(
-		`(import\\(&apos;(?:svelte|@sveltejs\\/kit)&apos;\\)\\.)?\\b(${modules
-			.flatMap((module) => module.types)
-			.map((type) => type?.name)
-			.join('|')})\\b`,
-		'g'
-	);
-
-	/** @type {Map<string, { slug: string; page: string; relativeURL: string; }>} */
-	const type_links = new Map();
-
-	for (const module of modules) {
-		if (!module || !module.name) continue;
-
-		for (const type of module.types ?? []) {
-			const link = resolve_link(module.name, type.name);
-			type_links.set(type.name, { ...link, relativeURL: link.page + '#' + link.slug });
-		}
-	}
-
-	return { type_regex, type_links };
-}
-
 function parse_options(source: string, language: string) {
 	METADATA_REGEX.lastIndex = 0;
 
