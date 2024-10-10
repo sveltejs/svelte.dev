@@ -34,6 +34,81 @@ const theme = createCssVariablesTheme({
 	fontStyle: true
 });
 
+const hash = createHash('sha256');
+hash.update(fs.readFileSync('../../pnpm-lock.yaml', 'utf-8'));
+hash_graph(hash, fileURLToPath(import.meta.url));
+const digest = hash.digest().toString('base64').replace(/\//g, '-');
+
+/**
+ * Utility function to work with code snippet caching.
+ *
+ * @example
+ *
+ * ```js
+ * const SNIPPETS_CACHE = create_snippet_cache(true);
+ *
+ * const { uid, code } = SNIPPETS_CACHE.get(source);
+ *
+ * // Later to save the code to the cache
+ * SNIPPETS_CACHE.save(uid, processed_code);
+ * ```
+ */
+async function create_snippet_cache() {
+	const cache = new Map();
+	const directory = find_nearest_node_modules(import.meta.url) + '/.snippets';
+	const current = `${directory}/${digest}`;
+
+	if (fs.existsSync(directory)) {
+		for (const dir of fs.readdirSync(directory)) {
+			if (dir !== digest) {
+				fs.rmSync(`${directory}/${dir}`, { force: true, recursive: true });
+			}
+		}
+	} else {
+		fs.mkdirSync(directory);
+	}
+
+	try {
+		fs.mkdirSync(`${directory}/${digest}`);
+	} catch {}
+
+	function get_file(source: string) {
+		const hash = createHash('sha256');
+		hash.update(source);
+		const digest = hash.digest().toString('base64').replace(/\//g, '-');
+
+		return `${current}/${digest}.html`;
+	}
+
+	return {
+		get(source: string) {
+			let snippet = cache.get(source);
+
+			if (snippet === undefined) {
+				const file = get_file(source);
+
+				if (fs.existsSync(file)) {
+					snippet = fs.readFileSync(file, 'utf-8');
+					cache.set(source, snippet);
+				}
+			}
+
+			return snippet;
+		},
+		save(source: string, html: string) {
+			cache.set(source, html);
+
+			try {
+				fs.mkdirSync(directory);
+			} catch {}
+
+			fs.writeFileSync(get_file(source), html);
+		}
+	};
+}
+
+const snippets = await create_snippet_cache();
+
 /**
  * A super markdown renderer function. Renders svelte and kit docs specific specific markdown code to html.
  *
@@ -119,8 +194,6 @@ export async function render_content_markdown(
 	body: string,
 	{ twoslashBanner }: { twoslashBanner?: TwoslashBanner } = {}
 ) {
-	const snippets = await create_snippet_cache(true);
-
 	const headings: string[] = [];
 
 	return await transform(body, {
@@ -474,81 +547,6 @@ function hash_graph(hash: Hash, file: string, seen = new Set<string>()) {
 	}
 
 	hash.update(content);
-}
-
-const hash = createHash('sha256');
-hash.update(fs.readFileSync('../../pnpm-lock.yaml', 'utf-8'));
-hash_graph(hash, fileURLToPath(import.meta.url));
-const digest = hash.digest().toString('base64').replace(/\//g, '-');
-
-/**
- * Utility function to work with code snippet caching.
- *
- * @example
- *
- * ```js
- * const SNIPPETS_CACHE = create_snippet_cache(true);
- *
- * const { uid, code } = SNIPPETS_CACHE.get(source);
- *
- * // Later to save the code to the cache
- * SNIPPETS_CACHE.save(uid, processed_code);
- * ```
- */
-async function create_snippet_cache(should: boolean) {
-	const cache = new Map();
-	const directory = find_nearest_node_modules(import.meta.url) + '/.snippets';
-	const current = `${directory}/${digest}`;
-
-	if (fs.existsSync(directory)) {
-		for (const dir of fs.readdirSync(directory)) {
-			if (dir !== digest) {
-				fs.rmSync(`${directory}/${dir}`, { force: true, recursive: true });
-			}
-		}
-	} else {
-		fs.mkdirSync(directory);
-	}
-
-	try {
-		fs.mkdirSync(`${directory}/${digest}`);
-	} catch {}
-
-	function get_file(source: string) {
-		const hash = createHash('sha256');
-		hash.update(source);
-		const digest = hash.digest().toString('base64').replace(/\//g, '-');
-
-		return `${current}/${digest}.html`;
-	}
-
-	return {
-		get(source: string) {
-			if (!should) return;
-
-			let snippet = cache.get(source);
-
-			if (snippet === undefined) {
-				const file = get_file(source);
-
-				if (fs.existsSync(file)) {
-					snippet = fs.readFileSync(file, 'utf-8');
-					cache.set(source, snippet);
-				}
-			}
-
-			return snippet;
-		},
-		save(source: string, html: string) {
-			cache.set(source, html);
-
-			try {
-				fs.mkdirSync(directory);
-			} catch {}
-
-			fs.writeFileSync(get_file(source), html);
-		}
-	};
 }
 
 function create_type_links(
