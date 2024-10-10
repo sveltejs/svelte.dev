@@ -324,16 +324,7 @@ async function get_bundle(
 
 			const cached_file = local_files_lookup.get(resolved);
 			if (cached_file) {
-				let code = cached_file.source;
-
-				// rather than remembering to add this attribute to every <audio>
-				// element, and having to explain it in the exercise text, we
-				// automate the cross-origin isolation requirement
-				if (cached_file.type === 'svelte') {
-					code = code.replace(/<audio/g, '<audio crossorigin="anonymous"');
-				}
-
-				return code;
+				return cached_file.source;
 			}
 
 			if (!FETCH_CACHE.has(resolved)) {

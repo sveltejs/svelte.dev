@@ -14,8 +14,7 @@
 
 	let repl = $state() as Repl;
 	let name = $state(data.gist.name);
-	let zen_mode = $state(false);
-	let modified_count = $state(0);
+	let modified = $state(false);
 	let version = data.version;
 	let setting_hash: any = null;
 
@@ -51,7 +50,7 @@
 
 		if (!hash) {
 			repl?.set({
-				files: data.gist.components
+				files: structuredClone(data.gist.components)
 			});
 
 			return;
@@ -91,12 +90,12 @@
 	}
 
 	function handle_change({ files }: { files: File[] }) {
-		const old_count = modified_count;
-		modified_count = files.filter((c) => c.modified).length;
+		const was_modified = modified;
+		modified = files.some((c) => c.modified);
 
 		if (
-			old_count === 0 &&
-			modified_count > 0 &&
+			!was_modified &&
+			modified &&
 			name === data.gist.name &&
 			data.examples.some((section) =>
 				section.examples.some((example) => example.slug === data.gist.id)
@@ -130,7 +129,7 @@
 	}}
 />
 
-<div class="repl-outer {zen_mode ? 'zen-mode' : ''}">
+<div class="repl-outer">
 	<AppControls
 		examples={data.examples}
 		user={data.user}
@@ -139,8 +138,7 @@
 		saved={handle_save}
 		{repl}
 		bind:name
-		bind:zen_mode
-		bind:modified_count
+		bind:modified
 	/>
 
 	{#if browser}
@@ -158,7 +156,7 @@
 			remove={handle_change}
 			blur={() => {
 				// Only change hash on editor blur to not pollute everyone's browser history
-				if (modified_count !== 0) {
+				if (modified) {
 					const json = JSON.stringify({ files: repl.toJSON().files });
 					change_hash(json);
 				}

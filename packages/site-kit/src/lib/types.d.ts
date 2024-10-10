@@ -1,7 +1,6 @@
 export interface NavigationLink {
 	title: string;
-	prefix: string;
-	pathname: string;
+	slug: string;
 	sections?: {
 		title: string;
 		path?: string;

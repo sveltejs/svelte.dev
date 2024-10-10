@@ -1,12 +1,12 @@
 import MagicString from 'magic-string';
-import { createHash } from 'node:crypto';
+import { createHash, Hash } from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
 import ts from 'typescript';
 import * as prettier from 'prettier';
 import { codeToHtml, createCssVariablesTheme } from 'shiki';
 import { transformerTwoslash } from '@shikijs/twoslash';
-import { SHIKI_LANGUAGE_MAP, escape, normalizeSlugify, smart_quotes, transform } from './utils';
+import { SHIKI_LANGUAGE_MAP, slugify, smart_quotes, transform } from './utils';
 import type { Modules } from './index';
 import { fileURLToPath } from 'node:url';
 
@@ -23,13 +23,6 @@ type TwoslashBanner = (
 	options: SnippetOptions
 ) => string;
 
-interface RenderContentOptions {
-	twoslashBanner?: TwoslashBanner;
-	modules?: Modules;
-	cacheCodeSnippets?: boolean;
-	resolveTypeLinks?: Parameters<typeof create_type_links>['1'];
-}
-
 // Supports js, svelte, yaml files
 const METADATA_REGEX =
 	/(?:<!---\s*|\/\/\/\s*|###\s*)(?<key>file|link|copy):\s*(?<value>.*?)(?:\s*--->|$)\n/gm;
@@ -40,6 +33,81 @@ const theme = createCssVariablesTheme({
 	variableDefaults: {},
 	fontStyle: true
 });
+
+const hash = createHash('sha256');
+hash.update(fs.readFileSync('../../pnpm-lock.yaml', 'utf-8'));
+hash_graph(hash, fileURLToPath(import.meta.url));
+const digest = hash.digest().toString('base64').replace(/\//g, '-');
+
+/**
+ * Utility function to work with code snippet caching.
+ *
+ * @example
+ *
+ * ```js
+ * const SNIPPETS_CACHE = create_snippet_cache(true);
+ *
+ * const { uid, code } = SNIPPETS_CACHE.get(source);
+ *
+ * // Later to save the code to the cache
+ * SNIPPETS_CACHE.save(uid, processed_code);
+ * ```
+ */
+async function create_snippet_cache() {
+	const cache = new Map();
+	const directory = find_nearest_node_modules(import.meta.url) + '/.snippets';
+	const current = `${directory}/${digest}`;
+
+	if (fs.existsSync(directory)) {
+		for (const dir of fs.readdirSync(directory)) {
+			if (dir !== digest) {
+				fs.rmSync(`${directory}/${dir}`, { force: true, recursive: true });
+			}
+		}
+	} else {
+		fs.mkdirSync(directory);
+	}
+
+	try {
+		fs.mkdirSync(`${directory}/${digest}`);
+	} catch {}
+
+	function get_file(source: string) {
+		const hash = createHash('sha256');
+		hash.update(source);
+		const digest = hash.digest().toString('base64').replace(/\//g, '-');
+
+		return `${current}/${digest}.html`;
+	}
+
+	return {
+		get(source: string) {
+			let snippet = cache.get(source);
+
+			if (snippet === undefined) {
+				const file = get_file(source);
+
+				if (fs.existsSync(file)) {
+					snippet = fs.readFileSync(file, 'utf-8');
+					cache.set(source, snippet);
+				}
+			}
+
+			return snippet;
+		},
+		save(source: string, html: string) {
+			cache.set(source, html);
+
+			try {
+				fs.mkdirSync(directory);
+			} catch {}
+
+			fs.writeFileSync(get_file(source), html);
+		}
+	};
+}
+
+const snippets = await create_snippet_cache();
 
 /**
  * A super markdown renderer function. Renders svelte and kit docs specific specific markdown code to html.
@@ -120,35 +188,16 @@ const theme = createCssVariablesTheme({
  * @param {string} body
  * @param {object} options
  * @param {TwoslashBanner} [options.twoslashBanner] - A function that returns a string to be prepended to the code snippet before running the code with twoslash. Helps in adding imports from svelte or sveltekit or whichever modules are being globally referenced in all or most code snippets.
- * @param {import('.').Modules} [options.modules] Module info generated from type-gen script. Used to create type links and type information blocks
- * @param {boolean} [options.cacheCodeSnippets] Whether to cache code snippets or not. Defaults to true.
- * @param {Parameters<typeof create_type_links>['1']} [options.resolveTypeLinks] Resolve types into its slugs(used on the page itself).
  */
 export async function render_content_markdown(
 	filename: string,
 	body: string,
-	{
-		twoslashBanner,
-		modules = [],
-		cacheCodeSnippets = false,
-		resolveTypeLinks
-	}: RenderContentOptions = {}
+	{ twoslashBanner }: { twoslashBanner?: TwoslashBanner } = {}
 ) {
-	const { type_links, type_regex } = create_type_links(modules, resolveTypeLinks);
-	const snippets = await create_snippet_cache(cacheCodeSnippets);
-
 	const headings: string[] = [];
-
-	// this is a bit hacky, but it allows us to prevent type declarations
-	// from linking to themselves
-	let current = '';
 
 	return await transform(body, {
 		async walkTokens(token) {
-			if (token.type === 'heading') {
-				current = token.text;
-			}
-
 			if (token.type === 'code') {
 				if (snippets.get(token.text)) return;
 
@@ -199,25 +248,6 @@ export async function render_content_markdown(
 
 				html += '</div>';
 
-				// TODO this is currently disabled, we don't have access to `modules`
-				if (type_regex) {
-					type_regex.lastIndex = 0;
-
-					html = html.replace(type_regex, (match, prefix, name, pos, str) => {
-						const char_after = str.slice(pos + match.length, pos + match.length + 1);
-
-						if (!options.link || name === current || /(\$|\d|\w)/.test(char_after)) {
-							// we don't want e.g. RequestHandler to link to RequestHandler
-							return match;
-						}
-
-						const link = type_links?.get(name)
-							? `<a href="${type_links.get(name)?.relativeURL}">${name}</a>`
-							: '';
-						return `${prefix || ''}${link}`;
-					});
-				}
-
 				// Save everything locally now
 				snippets.save(token.text, html);
 			}
@@ -236,7 +266,7 @@ export async function render_content_markdown(
 		heading({ tokens, depth, raw }) {
 			const text = this.parser!.parseInline(tokens);
 
-			headings[depth - 1] = normalizeSlugify(raw);
+			headings[depth - 1] = slugify(raw);
 			headings.length = depth;
 			const slug = headings.filter(Boolean).join('-');
 			return `<h${depth} id="${slug}">${text.replace(
@@ -247,24 +277,10 @@ export async function render_content_markdown(
 		code({ text }) {
 			return snippets.get(text);
 		},
-		codespan({ text }) {
-			return (
-				'<code>' +
-				(type_regex
-					? text.replace(type_regex, (_, prefix, name) => {
-							const link = type_links?.get(name)
-								? `<a href="${type_links.get(name)?.relativeURL}">${name}</a>`
-								: '';
-							return `${prefix || ''}${link}`;
-						})
-					: text) +
-				'</code>'
-			);
-		},
 		blockquote(token) {
 			let content = this.parser?.parse(token.tokens) ?? '';
 			if (content.includes('[!LEGACY]')) {
-				content = `<details class="legacy"><summary><label>Legacy mode <button class="raised"></button></label></summary>${content.replace('[!LEGACY]', '')}</details>`;
+				content = `<details class="legacy"><summary>Legacy mode</summary>${content.replace('[!LEGACY]', '')}</details>`;
 			}
 			return `<blockquote>${content}</blockquote>`;
 		}
@@ -510,14 +526,13 @@ function find_nearest_node_modules(file: string): string | null {
 }
 
 /**
- * Get the `mtime` of the most recently modified file in a dependency graph,
+ * Get the hash of a dependency graph,
  * excluding imports from `node_modules`
  */
-function get_mtime(file: string, seen = new Set<string>()) {
-	if (seen.has(file)) return -1;
+function hash_graph(hash: Hash, file: string, seen = new Set<string>()) {
+	if (seen.has(file)) return;
 	seen.add(file);
 
-	let mtime = fs.statSync(file).mtimeMs;
 	const content = fs.readFileSync(file, 'utf-8');
 
 	for (const [_, source] of content.matchAll(/^import(?:.+?\s+from\s+)?['"](.+)['"];?$/gm)) {
@@ -528,118 +543,10 @@ function get_mtime(file: string, seen = new Set<string>()) {
 		if (!fs.existsSync(resolved))
 			throw new Error(`Could not resolve ${source} relative to ${file}`);
 
-		mtime = Math.max(mtime, get_mtime(resolved, seen));
+		hash_graph(hash, resolved, seen);
 	}
 
-	return mtime;
-}
-
-const mtime = Math.max(
-	get_mtime(fileURLToPath(import.meta.url)),
-	fs.statSync('node_modules').mtimeMs,
-	fs.statSync('../../pnpm-lock.yaml').mtimeMs
-);
-
-/**
- * Utility function to work with code snippet caching.
- *
- * @example
- *
- * ```js
- * const SNIPPETS_CACHE = create_snippet_cache(true);
- *
- * const { uid, code } = SNIPPETS_CACHE.get(source);
- *
- * // Later to save the code to the cache
- * SNIPPETS_CACHE.save(uid, processed_code);
- * ```
- */
-async function create_snippet_cache(should: boolean) {
-	const cache = new Map();
-	const directory = find_nearest_node_modules(import.meta.url) + '/.snippets';
-
-	if (fs.existsSync(directory)) {
-		for (const dir of fs.readdirSync(directory)) {
-			if (!fs.statSync(`${directory}/${dir}`).isDirectory() || +dir < mtime) {
-				fs.rmSync(`${directory}/${dir}`, { force: true, recursive: true });
-			}
-		}
-	} else {
-		fs.mkdirSync(directory);
-	}
-
-	try {
-		fs.mkdirSync(`${directory}/${mtime}`);
-	} catch {}
-
-	function get_file(source: string) {
-		const hash = createHash('sha256');
-		hash.update(source);
-		const digest = hash.digest().toString('base64').replace(/\//g, '-');
-
-		return `${directory}/${mtime}/${digest}.html`;
-	}
-
-	return {
-		get(source: string) {
-			if (!should) return;
-
-			let snippet = cache.get(source);
-
-			if (snippet === undefined) {
-				const file = get_file(source);
-
-				if (fs.existsSync(file)) {
-					snippet = fs.readFileSync(file, 'utf-8');
-					cache.set(source, snippet);
-				}
-			}
-
-			return snippet;
-		},
-		save(source: string, html: string) {
-			cache.set(source, html);
-
-			try {
-				fs.mkdirSync(directory);
-			} catch {}
-
-			fs.writeFileSync(get_file(source), html);
-		}
-	};
-}
-
-function create_type_links(
-	modules: Modules | undefined,
-	resolve_link?: (module_name: string, type_name: string) => { slug: string; page: string }
-): {
-	type_regex: RegExp | null;
-	type_links: Map<string, { slug: string; page: string; relativeURL: string }> | null;
-} {
-	if (!modules || modules.length === 0 || !resolve_link)
-		return { type_regex: null, type_links: null };
-
-	const type_regex = new RegExp(
-		`(import\\(&apos;(?:svelte|@sveltejs\\/kit)&apos;\\)\\.)?\\b(${modules
-			.flatMap((module) => module.types)
-			.map((type) => type?.name)
-			.join('|')})\\b`,
-		'g'
-	);
-
-	/** @type {Map<string, { slug: string; page: string; relativeURL: string; }>} */
-	const type_links = new Map();
-
-	for (const module of modules) {
-		if (!module || !module.name) continue;
-
-		for (const type of module.types ?? []) {
-			const link = resolve_link(module.name, type.name);
-			type_links.set(type.name, { ...link, relativeURL: link.page + '#' + link.slug });
-		}
-	}
-
-	return { type_regex, type_links };
+	hash.update(content);
 }
 
 function parse_options(source: string, language: string) {
@@ -756,7 +663,7 @@ async function syntax_highlight({
 
 			return {
 				type,
-				content: escape(content)
+				content: content.replace(/</g, '&lt;')
 			};
 		});
 

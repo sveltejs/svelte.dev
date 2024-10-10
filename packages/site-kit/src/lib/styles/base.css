@@ -152,8 +152,7 @@ button {
 }
 
 button[disabled] {
-	opacity: 0.55;
-	pointer-events: none;
+	color: var(--sk-text-4);
 }
 
 .raised {
@@ -172,7 +171,7 @@ button[disabled] {
 	}
 
 	&:disabled {
-		border-color: transparent;
+		border-color: var(--sk-back-5);
 		border-width: 1px;
 	}
 }

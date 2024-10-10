@@ -1,17 +1,7 @@
-import { renderContentMarkdown } from '@sveltejs/site-kit/markdown';
+import { render_content_markdown } from '@sveltejs/site-kit/markdown';
 
 export const render_content = (filename: string, body: string) =>
-	renderContentMarkdown(filename, body, {
-		cacheCodeSnippets: true,
-
-		// TODO these didn't work for a while in the old sites, too, investigate bringing back this functionality at some point
-		// resolveTypeLinks: (module_name, type_name) => {
-		// 	return {
-		// 		page: `/docs/${slugify(module_name)}`,
-		// 		slug: `types-${slugify(type_name)}`
-		// 	};
-		// },
-
+	render_content_markdown(filename, body, {
 		twoslashBanner: (filename, source) => {
 			// TODO these are copied from Svelte and SvelteKit - adjust for new filenames
 			const injected = [];

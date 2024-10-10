@@ -1,24 +1,6 @@
 import { Marked, Renderer, type TokenizerObject, type MarkedExtension } from 'marked';
 import json5 from 'json5';
 
-const escapeTest = /[&<>"']/;
-const escapeReplace = /[&<>"']/g;
-const escapeTestNoEncode = /[<>"']|&(?!#?\w+;)/;
-const escapeReplaceNoEncode = /[<>"']|&(?!#?\w+;)/g;
-const escapeReplacements = {
-	'&': '&amp;',
-	'<': '&lt;',
-	'>': '&gt;',
-	'"': '&quot;',
-	"'": '&#39;'
-};
-
-/**
- * @param {string} ch
- */
-const getEscapeReplacement = (ch: string) =>
-	escapeReplacements[ch as keyof typeof escapeReplacements];
-
 export const SHIKI_LANGUAGE_MAP = {
 	bash: 'bash',
 	env: 'bash',
@@ -33,30 +15,10 @@ export const SHIKI_LANGUAGE_MAP = {
 	'': ''
 };
 
-export function escape(html: string, encode = false) {
-	if (encode) {
-		if (escapeTest.test(html)) {
-			return html.replace(escapeReplace, getEscapeReplacement);
-		}
-	} else {
-		if (escapeTestNoEncode.test(html)) {
-			return html.replace(escapeReplaceNoEncode, getEscapeReplacement);
-		}
-	}
-
-	return html;
-}
-
-export function slugify(title: string) {
-	return title
-		.replace(/&.+;/g, '')
-		.replace(/[^a-zA-Z0-9-$(.):]/g, '-')
-		.replace(/-{2,}/g, '-')
-		.replace(/^-/, '')
-		.replace(/-$/, '');
-}
-
-export function removeMarkdown(markdown: string) {
+/**
+ * Strip styling/links etc from markdown
+ */
+export function clean(markdown: string) {
 	return markdown
 		.replace(/\*\*(.+?)\*\*/g, '$1') // bold
 		.replace(/_(.+?)_/g, '$1') // Italics
@@ -69,12 +31,14 @@ export function removeMarkdown(markdown: string) {
 		.trim();
 }
 
-export function removeHTMLEntities(html: string) {
-	return html.replace(/&.+?;/g, '');
-}
-
-export const normalizeSlugify = (str: string) => {
-	return slugify(removeHTMLEntities(removeMarkdown(str))).replace(/(<([^>]+)>)/gi, '');
+export const slugify = (str: string) => {
+	return clean(str)
+		.replace(/&.+;/g, '')
+		.replace(/[^a-zA-Z0-9-$(.):]/g, '-')
+		.replace(/-{2,}/g, '-')
+		.replace(/^-/, '')
+		.replace(/-$/, '')
+		.replace(/(<([^>]+)>)/gi, '');
 };
 
 export function smart_quotes(str: string, html: boolean = false) {

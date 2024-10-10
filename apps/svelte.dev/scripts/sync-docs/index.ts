@@ -26,7 +26,7 @@ const packages: Package[] = [
 	{
 		name: 'svelte',
 		repo: 'sveltejs/svelte',
-		branch: 'docs-fixes',
+		branch: 'main',
 		pkg: 'packages/svelte',
 		docs: 'documentation/docs',
 		types: 'types',

@@ -1,6 +1,6 @@
 import { index, docs as _docs, examples } from '$lib/server/content';
 import { json } from '@sveltejs/kit';
-import { markedTransform, normalizeSlugify, removeMarkdown } from '@sveltejs/site-kit/markdown';
+import { transform, slugify, clean } from '@sveltejs/site-kit/markdown';
 import type { Block } from '@sveltejs/site-kit/search';
 import { get_slug } from '../tutorial/[...slug]/content.server';
 
@@ -31,14 +31,14 @@ async function content() {
 
 	for (const document of docs) {
 		const { slug, body, metadata } = document;
-		const breadcrumbs = document.breadcrumbs.map((x) => removeMarkdown(x.title));
+		const breadcrumbs = document.breadcrumbs.map((x) => clean(x.title));
 
 		const sections = body.trim().split(/^## /m);
 		const intro = sections?.shift()?.trim()!;
 		const rank = +metadata.rank;
 
 		blocks.push({
-			breadcrumbs: [...breadcrumbs, removeMarkdown(metadata.title ?? '')],
+			breadcrumbs: [...breadcrumbs, clean(metadata.title ?? '')],
 			href: get_href([slug]),
 			content: await plaintext(intro),
 			rank
@@ -57,8 +57,8 @@ async function content() {
 			const intro = subsections?.shift()?.trim();
 			if (intro) {
 				blocks.push({
-					breadcrumbs: [...breadcrumbs, removeMarkdown(metadata.title), removeMarkdown(h2)],
-					href: get_href([slug, normalizeSlugify(h2)]),
+					breadcrumbs: [...breadcrumbs, clean(metadata.title), clean(h2)],
+					href: get_href([slug, slugify(h2)]),
 					content: await plaintext(intro),
 					rank
 				});
@@ -73,13 +73,8 @@ async function content() {
 				}
 
 				blocks.push({
-					breadcrumbs: [
-						...breadcrumbs,
-						removeMarkdown(metadata.title),
-						removeMarkdown(h2),
-						removeMarkdown(h3)
-					],
-					href: get_href([slug, normalizeSlugify(h2) + '-' + normalizeSlugify(h3)]),
+					breadcrumbs: [...breadcrumbs, clean(metadata.title), clean(h2), clean(h3)],
+					href: get_href([slug, slugify(h2) + '-' + slugify(h3)]),
 					content: await plaintext(lines.join('\n').trim()),
 					rank
 				});
@@ -107,7 +102,7 @@ async function plaintext(markdown: string) {
 	const inline = ({ text }: any) => text;
 
 	return (
-		await markedTransform(markdown, {
+		await transform(markdown, {
 			code: ({ text }) => {
 				const raw = text.split('// ---cut---\n').pop() ?? '';
 

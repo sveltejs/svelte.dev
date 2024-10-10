@@ -1,14 +1,8 @@
-export { render_content_markdown as renderContentMarkdown } from './renderer';
+export { render_content_markdown } from './renderer';
 
-export {
-	extract_frontmatter as extractFrontmatter,
-	transform as markedTransform,
-	normalizeSlugify,
-	slugify,
-	removeMarkdown,
-	escape
-} from './utils';
+export { transform, slugify, clean } from './utils';
 
+// TODO none of these really belong here
 export type Modules = Array<{
 	name?: string;
 	comment?: string;
