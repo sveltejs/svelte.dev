@@ -18,14 +18,14 @@
 		repl: Repl;
 		gist: Gist;
 		name: string;
-		modified_count: number;
+		modified: boolean;
 		forked: (value: { gist: Gist }) => void;
 		saved: () => void;
 	}
 
 	let {
 		name = $bindable(),
-		modified_count = $bindable(),
+		modified = $bindable(),
 		user,
 		repl,
 		gist,
@@ -40,6 +40,7 @@
 	let downloading = $state(false);
 	let justSaved = $state(false);
 	let justForked = $state(false);
+	let select: HTMLSelectElement;
 
 	function wait(ms: number) {
 		return new Promise((f) => setTimeout(f, ms));
@@ -83,7 +84,7 @@
 			const gist = await r.json();
 			forked({ gist });
 
-			modified_count = 0;
+			modified = false;
 			repl.markSaved();
 
 			if (intentWasSave) {
@@ -145,7 +146,7 @@
 				throw new Error(`Received an HTTP ${r.status} response: ${error}`);
 			}
 
-			modified_count = 0;
+			modified = false;
 			repl.markSaved();
 			saved();
 			justSaved = true;
@@ -208,6 +209,14 @@ export default app;`
 
 		downloading = false;
 	}
+
+	// TODO modifying an app should reset the `<select>`, so that
+	// the example can be reselected. Right now that's a noop
+	$effect(() => {
+		if (modified) {
+			select.value = '';
+		}
+	});
 </script>
 
 <svelte:window on:keydown={handleKeydown} />
@@ -216,10 +225,17 @@ export default app;`
 	<div class="examples-select">
 		<span class="raised icon"><Icon name="menu" /></span>
 		<select
+			bind:this={select}
 			title="examples"
 			value={gist.id}
-			onchange={e => {
-				goto(`/playground/${(e.target as HTMLSelectElement).value}`);
+			onchange={(e) => {
+				const slug = e.currentTarget.value;
+
+				if (location.pathname === `/playground/${slug}`) {
+					// TODO reset
+				}
+
+				goto(`/playground/${slug}`);
 			}}
 		>
 			<option value="untitled">Create new</option>
@@ -236,6 +252,7 @@ export default app;`
 
 	<input
 		bind:value={name}
+		onchange={() => (modified = true)}
 		onfocus={(e) => e.currentTarget.select()}
 		use:enter={(e) => (e.currentTarget as HTMLInputElement).blur()}
 	/>
@@ -266,7 +283,7 @@ export default app;`
 				<Icon size={18} name="check" />
 			{:else}
 				<Icon size={18} name="save" />
-				{#if modified_count}
+				{#if modified}
 					<span class="badge"></span>
 				{/if}
 			{/if}
@@ -320,11 +337,15 @@ export default app;`
 
 	.examples-select {
 		position: relative;
-	}
 
-	.examples-select:has(select:focus-visible) .raised.icon {
-		outline: 2px solid hsla(var(--sk-theme-1-hsl), 0.6);
-		border-radius: var(--sk-border-radius);
+		&:has(select:focus-visible) .raised.icon {
+			outline: 2px solid hsla(var(--sk-theme-1-hsl), 0.6);
+			border-radius: var(--sk-border-radius);
+		}
+
+		span {
+			pointer-events: none;
+		}
 	}
 
 	select {
