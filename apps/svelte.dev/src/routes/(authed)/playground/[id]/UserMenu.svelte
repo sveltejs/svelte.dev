@@ -25,7 +25,7 @@
 	>
 		<span class="name">{name}</span>
 		<img alt="{name} avatar" src={user.github_avatar_url} />
-		<Icon name={showMenu ? 'chevron-up' : 'chevron-down'} />
+		<Icon size={18} name={showMenu ? 'chevron-up' : 'chevron-down'} />
 	</button>
 
 	{#if showMenu}
