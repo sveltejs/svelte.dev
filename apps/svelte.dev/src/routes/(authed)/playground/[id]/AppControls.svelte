@@ -240,10 +240,6 @@ export default app;`
 	/>
 
 	<div class="buttons">
-		<button class="raised icon" disabled={downloading} onclick={download} title="download zip file">
-			<Icon size={18} name="download" />
-		</button>
-
 		<button class="raised icon" disabled={saving || !user} onclick={() => fork(false)} title="fork">
 			{#if justForked}
 				<Icon size={18} name="check" />
@@ -261,6 +257,10 @@ export default app;`
 					<div class="badge">{modified_count}</div>
 				{/if}
 			{/if}
+		</button>
+
+		<button class="raised icon" disabled={downloading} onclick={download} title="download zip file">
+			<Icon size={18} name="download" />
 		</button>
 
 		{#if user}
@@ -333,6 +333,7 @@ export default app;`
 		justify-content: center;
 		width: 3.2rem;
 		height: 3.2rem;
+		user-select: none;
 	}
 
 	.icon {

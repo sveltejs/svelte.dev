@@ -172,7 +172,7 @@ button[disabled] {
 	}
 
 	&:disabled {
-		border-color: transparent;
+		border-color: var(--sk-back-5);
 		border-width: 1px;
 	}
 }
