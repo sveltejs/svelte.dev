@@ -17,7 +17,6 @@
 		repl: Repl;
 		gist: Gist;
 		name: string;
-		zen_mode: boolean;
 		modified_count: number;
 		forked: (value: { gist: Gist }) => void;
 		saved: () => void;
@@ -25,7 +24,6 @@
 
 	let {
 		name = $bindable(),
-		zen_mode = $bindable(),
 		modified_count = $bindable(),
 		user,
 		repl,
@@ -242,14 +240,6 @@ export default app;`
 	/>
 
 	<div class="buttons">
-		<button class="raised icon" onclick={() => (zen_mode = !zen_mode)} title="fullscreen editor">
-			{#if zen_mode}
-				<Icon size={18} name="close" />
-			{:else}
-				<Icon size={18} name="maximize" />
-			{/if}
-		</button>
-
 		<button class="raised icon" disabled={downloading} onclick={download} title="download zip file">
 			<Icon size={18} name="download" />
 		</button>

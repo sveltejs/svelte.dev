@@ -14,7 +14,6 @@
 
 	let repl = $state() as Repl;
 	let name = $state(data.gist.name);
-	let zen_mode = $state(false);
 	let modified_count = $state(0);
 	let version = data.version;
 	let setting_hash: any = null;
@@ -130,7 +129,7 @@
 	}}
 />
 
-<div class="repl-outer {zen_mode ? 'zen-mode' : ''}">
+<div class="repl-outer">
 	<AppControls
 		examples={data.examples}
 		user={data.user}
@@ -139,7 +138,6 @@
 		saved={handle_save}
 		{repl}
 		bind:name
-		bind:zen_mode
 		bind:modified_count
 	/>
 
