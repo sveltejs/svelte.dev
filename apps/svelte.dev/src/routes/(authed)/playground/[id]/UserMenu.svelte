@@ -1,16 +1,15 @@
-<script>
+<script lang="ts">
 	import { Icon } from '@sveltejs/site-kit/components';
 	import { click_outside, focus_outside } from '@sveltejs/site-kit/actions';
 	import { get_app_context } from '../../app-context';
+	import type { User } from '$lib/db/session';
 
 	const { logout } = get_app_context();
 
-	export let user;
+	let { user }: { user: User } = $props();
 
-	let showMenu = false;
-	let name;
-
-	$: name = user.github_name || user.github_login;
+	let showMenu = $state(false);
+	let name = $derived(user.github_name ?? user.github_login);
 </script>
 
 <div
@@ -19,20 +18,20 @@
 	use:click_outside={() => (showMenu = false)}
 >
 	<button
-		on:click={() => (showMenu = !showMenu)}
+		onclick={() => (showMenu = !showMenu)}
 		aria-expanded={showMenu}
 		class="trigger"
 		aria-label={name}
 	>
 		<span class="name">{name}</span>
-		<img alt="" src={user.github_avatar_url} />
+		<img alt="{name} avatar" src={user.github_avatar_url} />
 		<Icon name={showMenu ? 'chevron-up' : 'chevron-down'} />
 	</button>
 
 	{#if showMenu}
 		<div class="menu">
 			<a href="/apps">Your saved apps</a>
-			<button on:click={logout}>Log out</button>
+			<button onclick={logout}>Log out</button>
 		</div>
 	{/if}
 </div>
@@ -41,14 +40,13 @@
 	.user {
 		position: relative;
 		display: inline-block;
-		padding: 0em 0 0 0.3rem;
+		padding: 0em 0 0 0.4rem;
 		z-index: 99;
 	}
 
 	.trigger {
 		display: flex;
 		align-items: center;
-		gap: 0.75rem;
 		outline-offset: 2px;
 		transform: translateY(0.1rem);
 		--opacity: 0.7;
@@ -61,23 +59,27 @@
 	}
 
 	.name {
-		line-height: 1;
 		display: none;
 		font-family: var(--sk-font-ui);
-		font-size: 1.6rem;
+		font-size: var(--sk-font-size-ui-small);
 	}
 
-	.name,
-	.trigger :global(.icon) {
+	.name {
 		display: none;
 		opacity: var(--opacity);
+
+		@media (min-width: 600px) {
+			display: inline-block;
+			margin-right: 0.3rem;
+		}
 	}
 
 	img {
-		width: 2.1rem;
-		height: 2.1rem;
+		width: 2.3rem;
+		height: 2.3rem;
+		margin: 0 0.2rem 0 0.3rem;
 		border: 1px solid rgba(255, 255, 255, 0.3);
-		border-radius: 0.2rem;
+		border-radius: var(--sk-border-radius);
 		transform: translateY(-0.1rem);
 	}
 
@@ -115,21 +117,5 @@
 	.menu a:focus-visible {
 		opacity: 1;
 		color: inherit;
-	}
-
-	@media (min-width: 600px) {
-		.user {
-			padding: 0em 0 0 1.6rem;
-		}
-
-		img {
-			width: 2.4rem;
-			height: 2.4rem;
-		}
-
-		.name,
-		.trigger :global(.icon) {
-			display: inline-block;
-		}
 	}
 </style>
