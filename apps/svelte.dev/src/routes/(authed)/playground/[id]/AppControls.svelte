@@ -240,7 +240,12 @@ export default app;`
 	/>
 
 	<div class="buttons">
-		<button class="raised icon" disabled={saving || !user} onclick={() => fork(false)} title="fork">
+		<button
+			class="raised icon"
+			disabled={saving || !user}
+			onclick={() => fork(false)}
+			aria-label={user ? 'fork' : 'log in to fork'}
+		>
 			{#if justForked}
 				<Icon size={18} name="check" />
 			{:else}
@@ -248,7 +253,12 @@ export default app;`
 			{/if}
 		</button>
 
-		<button class="raised icon" disabled={saving || !user} onclick={save} title="save">
+		<button
+			class="raised icon"
+			disabled={saving || !user}
+			onclick={save}
+			aria-label={user ? 'save' : 'log in to save'}
+		>
 			{#if justSaved}
 				<Icon size={18} name="check" />
 			{:else}
@@ -259,20 +269,18 @@ export default app;`
 			{/if}
 		</button>
 
-		<button class="raised icon" disabled={downloading} onclick={download} title="download zip file">
-			<Icon size={18} name="download" />
-		</button>
+		<button
+			class="raised icon download"
+			disabled={downloading}
+			onclick={download}
+			aria-label="download zip file"
+		></button>
 
 		{#if user}
 			<UserMenu {user} />
 		{:else}
-			<button
-				class="raised icon"
-				onclick={(e) => (e.preventDefault(), login())}
-				style="width: auto; padding: 0 0.4rem"
-			>
-				<Icon name="log-in" />
-				<span>&nbsp;Log in to save</span>
+			<button class="raised icon login" onclick={login}>
+				<span>log in</span>
 			</button>
 		{/if}
 	</div>
@@ -342,18 +350,62 @@ export default app;`
 		font-size: var(--sk-font-size-ui-small);
 		color: var(--sk-text-3);
 		line-height: 1;
+		background: 50% 50% no-repeat;
+		background-size: 1.8rem;
+		z-index: 999;
+
+		&[aria-label]:hover::before {
+			content: '';
+			width: 1rem;
+			height: 1rem;
+			position: absolute;
+			background: var(--sk-text-3);
+			top: calc(100% + 0.5rem);
+			rotate: 45deg;
+		}
+
+		&[aria-label]:hover::after {
+			content: attr(aria-label);
+			position: absolute;
+			top: calc(100% + 1rem);
+			background: var(--sk-text-3);
+			color: var(--sk-back-4);
+			padding: 0.5em 0.5em;
+			border-radius: var(--sk-border-radius);
+		}
+
+		&.login {
+			width: auto;
+			background-image: url($lib/icons/user-light.svg);
+			background-position: 0.4rem 50%;
+			padding: 0 0.4rem 0 2.8rem;
+
+			:root.dark & {
+				background-image: url($lib/icons/user-dark.svg);
+			}
+		}
+
+		&.download {
+			background-image: url($lib/icons/download-light.svg);
+
+			:root.dark & {
+				background-image: url($lib/icons/download-dark.svg);
+			}
+		}
 	}
 
 	.icon:hover,
 	.icon:focus-visible {
 		opacity: 1;
 	}
-	.icon:disabled {
-		opacity: 0.3;
-	}
 
-	.icon[title^='fullscreen'] {
-		display: none;
+	/* TODO use lucide-svelte, so we don't need all this customisation? */
+	.icon:disabled {
+		color: #ccc;
+
+		:root.dark & {
+			color: #555;
+		}
 	}
 
 	input {

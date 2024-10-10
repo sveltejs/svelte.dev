@@ -152,8 +152,7 @@ button {
 }
 
 button[disabled] {
-	opacity: 0.55;
-	pointer-events: none;
+	color: var(--sk-text-4);
 }
 
 .raised {
