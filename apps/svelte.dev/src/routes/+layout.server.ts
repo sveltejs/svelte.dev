@@ -48,32 +48,31 @@ const nav_links: NavigationLink[] = [
 	}
 ];
 
+const sections = new Map([
+	[/^docs/, 'Docs'],
+	[/^playground/, 'Playground'],
+	[/^blog/, 'Blog'],
+	[/^faq/, 'FAQ'],
+	[/^tutorial/, 'Tutorial'],
+	[/^search/, 'Search'],
+	[/^examples/, 'Examples']
+]);
+
 export const load = async ({ url, fetch }) => {
 	const banner = await fetchBanner('svelte.dev', fetch);
 
+	let nav_title = '';
+
+	for (const [regex, title] of sections) {
+		if (regex.test(url.pathname.replace(/^\/(.+)/, '$1'))) {
+			nav_title = title;
+			break;
+		}
+	}
+
 	return {
-		nav_title: get_nav_title(url),
+		nav_title,
 		nav_links,
 		banner
 	};
 };
-
-function get_nav_title(url: URL) {
-	const list = new Map([
-		[/^docs/, 'Docs'],
-		[/^playground/, 'Playground'],
-		[/^blog/, 'Blog'],
-		[/^faq/, 'FAQ'],
-		[/^tutorial/, 'Tutorial'],
-		[/^search/, 'Search'],
-		[/^examples/, 'Examples']
-	]);
-
-	for (const [regex, title] of list) {
-		if (regex.test(url.pathname.replace(/^\/(.+)/, '$1'))) {
-			return title;
-		}
-	}
-
-	return '';
-}
