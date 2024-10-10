@@ -10,6 +10,7 @@
 	import { get_app_context } from '../../app-context';
 	import type { Gist, User } from '$lib/db/types';
 	import type { File } from '@sveltejs/repl';
+	import { browser } from '$app/environment';
 
 	interface Props {
 		examples: Array<{ title: string; examples: any[] }>;
@@ -257,7 +258,9 @@ export default app;`
 			class="raised icon"
 			disabled={saving || !user}
 			onclick={save}
-			aria-label={user ? 'save' : 'log in to save'}
+			aria-label={user
+				? `save (${browser && navigator.platform === 'MacIntel' ? '⌘' : 'Ctrl'}+S)`
+				: 'log in to save'}
 		>
 			{#if justSaved}
 				<Icon size={18} name="check" />
