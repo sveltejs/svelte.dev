@@ -31,6 +31,7 @@
 
 	.page :global(:where(h2, h3) code) {
 		all: unset;
+		font-family: var(--sk-font-mono);
 	}
 
 	@media (min-width: 832px) {
