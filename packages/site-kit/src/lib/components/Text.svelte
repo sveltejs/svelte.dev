@@ -409,6 +409,13 @@
 				}
 			}
 
+			&.note {
+				background: none;
+				margin-left: 0.2rem;
+				padding: 0 0 0 3.8rem;
+				border-left: 0.5rem solid var(--sk-back-5);
+			}
+
 			em,
 			i {
 				font-style: normal;

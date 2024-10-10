@@ -279,7 +279,12 @@ export async function render_content_markdown(
 			if (content.includes('[!LEGACY]')) {
 				content = `<details class="legacy"><summary>Legacy mode</summary>${content.replace('[!LEGACY]', '')}</details>`;
 			}
-			return `<blockquote>${content}</blockquote>`;
+
+			// TODO get a shared understanding of what kinds of blockquotes we have and how to name them. [!TIP] ? [!WARNING] ? [!QUOTE] ?
+			// Should the default be a generic blockquote that is just italic, without any icon?
+			// Should we rely on consistent class names everywhere instead of styling blockquotes one way on blogs and another way in the docs?
+			const klass = content.includes('[!NOTE]') ? ' class="note"' : '';
+			return `<blockquote${klass}>${content.replace('[!NOTE]', '')}</blockquote>`;
 		}
 	});
 }
