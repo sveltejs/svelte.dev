@@ -1,12 +1,36 @@
-import { json } from '@sveltejs/kit';
 import { docs as _docs, index } from '$lib/server/content';
+import { fetchBanner } from '@sveltejs/site-kit/components';
 import type { NavigationLink } from '@sveltejs/site-kit';
 
-export const prerender = true;
+export const load = async ({ url, fetch }) => {
+	const [nav_links, banner] = await Promise.all([get_nav_list(), fetchBanner('svelte.dev', fetch)]);
 
-export const GET = async () => {
-	return json(await get_nav_list());
+	return {
+		nav_title: get_nav_title(url),
+		nav_links,
+		banner
+	};
 };
+
+function get_nav_title(url: URL) {
+	const list = new Map([
+		[/^docs/, 'Docs'],
+		[/^playground/, 'Playground'],
+		[/^blog/, 'Blog'],
+		[/^faq/, 'FAQ'],
+		[/^tutorial/, 'Tutorial'],
+		[/^search/, 'Search'],
+		[/^examples/, 'Examples']
+	]);
+
+	for (const [regex, title] of list) {
+		if (regex.test(url.pathname.replace(/^\/(.+)/, '$1'))) {
+			return title;
+		}
+	}
+
+	return '';
+}
 
 async function get_nav_list(): Promise<NavigationLink[]> {
 	const docs = Object.values(_docs.topics)
