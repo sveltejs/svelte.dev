@@ -23,13 +23,6 @@ type TwoslashBanner = (
 	options: SnippetOptions
 ) => string;
 
-interface RenderContentOptions {
-	twoslashBanner?: TwoslashBanner;
-	modules?: Modules;
-	cacheCodeSnippets?: boolean;
-	resolveTypeLinks?: Parameters<typeof create_type_links>['1'];
-}
-
 // Supports js, svelte, yaml files
 const METADATA_REGEX =
 	/(?:<!---\s*|\/\/\/\s*|###\s*)(?<key>file|link|copy):\s*(?<value>.*?)(?:\s*--->|$)\n/gm;
@@ -124,7 +117,7 @@ const theme = createCssVariablesTheme({
 export async function render_content_markdown(
 	filename: string,
 	body: string,
-	{ twoslashBanner }: RenderContentOptions = {}
+	{ twoslashBanner }: { twoslashBanner?: TwoslashBanner } = {}
 ) {
 	const snippets = await create_snippet_cache(true);
 
