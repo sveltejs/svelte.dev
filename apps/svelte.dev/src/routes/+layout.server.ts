@@ -1,4 +1,4 @@
-import { docs as _docs, index } from '$lib/server/content';
+import { docs, index } from '$lib/server/content';
 import { fetchBanner } from '@sveltejs/site-kit/components';
 import type { NavigationLink } from '@sveltejs/site-kit';
 
@@ -7,7 +7,7 @@ const nav_links: NavigationLink[] = [
 		title: 'Docs',
 		prefix: 'docs',
 		pathname: '/docs',
-		sections: Object.values(_docs.topics)
+		sections: Object.values(docs.topics)
 			.map((topic) => ({
 				title: topic.metadata.title,
 				path: '/' + topic.slug, // this will make the UI show a flyout menu for the docs nav entry
