@@ -6,7 +6,8 @@ const mappings = new Map([
 	['/docs/special-tags', '/docs/svelte/basic-markup'], // TODO: find a new home for some of these?
 	['/docs/element-directives', '/docs/svelte/basic-markup'],
 	['/docs/component-directives', '/docs/svelte/component-fundamentals'],
-	['/docs/custom-elements-api', '/docs/svelte/custom-elements']
+	['/docs/custom-elements-api', '/docs/svelte/custom-elements'],
+	['/docs/accessibility-warnings', '/docs/svelte/compiler-warnings']
 ]);
 
 /** @type {import('@sveltejs/kit').Handle} */

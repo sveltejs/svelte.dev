@@ -35,7 +35,7 @@
 		['run-time-svelte', 'svelte'],
 		['run-time', 'svelte'],
 		['compile-time', 'svelte-compiler'],
-		['accessibility-warnings', 'TODO']
+		['accessibility-warnings', 'compiler-warnings']
 	];
 
 	function get_url_to_redirect_to() {
