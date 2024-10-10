@@ -14,7 +14,7 @@ interface Package {
 	branch: string;
 	pkg: string;
 	docs: string;
-	types: string;
+	types: string | null;
 	process_modules?: (modules: Modules, pkg: Package) => Promise<Modules>;
 }
 
@@ -109,7 +109,7 @@ const packages: Package[] = [
 		branch: 'chore/add-docs',
 		pkg: 'packages/cli',
 		docs: 'documentation/docs',
-		types: 'dist'
+		types: null
 	}
 ];
 
@@ -138,9 +138,12 @@ for (const pkg of packages) {
 	fs.cpSync(`${REPOS}/${pkg.name}/${pkg.docs}`, dest, { recursive: true });
 	migrate_meta_json(dest);
 
-	const modules = await read_types(`${REPOS}/${pkg.name}/${pkg.pkg}/${pkg.types}/`, []);
+	let modules: Modules = [];
 
-	await pkg.process_modules?.(modules, pkg);
+	if (pkg.types !== null) {
+		modules = await read_types(`${REPOS}/${pkg.name}/${pkg.pkg}/${pkg.types}/`, []);
+		await pkg.process_modules?.(modules, pkg);
+	}
 
 	for (const file of glob(`${dest}/**/*.md`)) {
 		const content = await preprocess(fs.readFileSync(file, 'utf-8'), modules);
