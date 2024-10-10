@@ -8,8 +8,8 @@
 
 <Dropdown>
 	<a
-		href={link.pathname}
-		aria-current={$page.url.pathname.startsWith(`/${link.prefix}`) ? 'page' : undefined}
+		href="/{link.slug}"
+		aria-current={$page.url.pathname.startsWith(`/${link.slug}`) ? 'page' : undefined}
 	>
 		{link.title}
 

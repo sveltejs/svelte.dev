@@ -5,8 +5,7 @@ import type { NavigationLink } from '@sveltejs/site-kit';
 const nav_links: NavigationLink[] = [
 	{
 		title: 'Docs',
-		prefix: 'docs',
-		pathname: '/docs',
+		slug: 'docs',
 		sections: Object.values(docs.topics)
 			.map((topic) => ({
 				title: topic.metadata.title,
@@ -23,8 +22,7 @@ const nav_links: NavigationLink[] = [
 	},
 	{
 		title: 'Tutorial',
-		prefix: 'tutorial',
-		pathname: '/tutorial',
+		slug: 'tutorial',
 		sections: index.tutorial.children.map((topic) => ({
 			title: topic.metadata.title,
 			sections: topic.children.map((section) => ({
@@ -38,13 +36,11 @@ const nav_links: NavigationLink[] = [
 	},
 	{
 		title: 'Playground',
-		prefix: 'playground',
-		pathname: '/playground'
+		slug: 'playground'
 	},
 	{
 		title: 'Blog',
-		prefix: 'blog',
-		pathname: '/blog'
+		slug: 'blog'
 	}
 ];
 

@@ -14,7 +14,7 @@
 			open_store.set(true);
 
 			const segment = get(page).url.pathname.split('/')[1];
-			current_menu_view.set(get(links_store).find((link) => link.prefix === segment));
+			current_menu_view.set(get(links_store).find((link) => link.slug === segment));
 
 			show_context_menu.set(!!get(current_menu_view)?.sections && !!get(current_menu_view));
 		}
@@ -188,7 +188,7 @@
 							<div class="contents" bind:clientHeight={universal_menu_inner_height}>
 								{#each links as link}
 									<div class="link-item" style:--button-width={link.sections ? '4rem' : '0'}>
-										<a href={link.pathname}>
+										<a href="/{link.slug}">
 											{link.title}
 										</a>
 

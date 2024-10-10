@@ -84,8 +84,8 @@ Top navigation bar for the application. It provides a slot for the left side, th
 					<LinksDropdown {link} />
 				{:else}
 					<a
-						href={link.pathname}
-						aria-current={$page.url.pathname.startsWith(`/${link.prefix}`) ? 'page' : null}
+						href="/{link.slug}"
+						aria-current={$page.url.pathname.startsWith(`/${link.slug}`) ? 'page' : null}
 					>
 						{link.title}
 					</a>
