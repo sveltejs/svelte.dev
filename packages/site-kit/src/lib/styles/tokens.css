@@ -45,16 +45,16 @@
 	--sk-theme-2: hsl(var(--sk-theme-2-hsl));
 
 	--sk-back-1: hsl(0, 0%, 100%);
-	--sk-back-2: hsla(0, 0%, 100%, 1);
-	--sk-back-3: hsla(0, 0%, 99%, 1);
+	--sk-back-2: hsl(0, 0%, 100%);
+	--sk-back-3: hsl(0, 0%, 99%);
 	--sk-back-4: hsl(0, 0%, 95%);
 	--sk-back-5: hsl(0, 0%, 92%);
 	--sk-back-6: hsl(0, 0%, 86%);
 
-	--sk-text-1: hsla(0, 0%, 0%, 0.95);
-	--sk-text-2: hsla(0, 0%, 0%, 0.88);
-	--sk-text-3: hsla(0, 0%, 0%, 0.73);
-	--sk-text-4: hsla(0, 0%, 0%, 0.55);
+	--sk-text-1: hsl(0 0 5);
+	--sk-text-2: hsl(0 0 12);
+	--sk-text-3: hsl(0 0 27);
+	--sk-text-4: hsl(0 0 45);
 	--sk-scrollbar: rgba(0, 0, 0, 0.3);
 	--sk-shadow: 0px 0px 14px rgba(0, 0, 0, 0.1);
 

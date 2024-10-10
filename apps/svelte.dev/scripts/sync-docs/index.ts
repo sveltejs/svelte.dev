@@ -27,7 +27,7 @@ const packages: Package[] = [
 		name: 'svelte',
 		local: `${REPOS}/svelte`,
 		repo: 'sveltejs/svelte',
-		branch: 'docs-fixes',
+		branch: 'main',
 		pkg: 'packages/svelte',
 		docs: 'documentation/docs',
 		process_modules: async (modules: Modules) => {

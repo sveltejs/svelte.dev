@@ -10,6 +10,7 @@
 	import { get_app_context } from '../../app-context';
 	import type { Gist, User } from '$lib/db/types';
 	import type { File } from '@sveltejs/repl';
+	import { browser } from '$app/environment';
 
 	interface Props {
 		examples: Array<{ title: string; examples: any[] }>;
@@ -17,16 +18,14 @@
 		repl: Repl;
 		gist: Gist;
 		name: string;
-		zen_mode: boolean;
-		modified_count: number;
+		modified: boolean;
 		forked: (value: { gist: Gist }) => void;
 		saved: () => void;
 	}
 
 	let {
 		name = $bindable(),
-		zen_mode = $bindable(),
-		modified_count = $bindable(),
+		modified = $bindable(),
 		user,
 		repl,
 		gist,
@@ -41,6 +40,7 @@
 	let downloading = $state(false);
 	let justSaved = $state(false);
 	let justForked = $state(false);
+	let select: HTMLSelectElement;
 
 	function wait(ms: number) {
 		return new Promise((f) => setTimeout(f, ms));
@@ -84,7 +84,7 @@
 			const gist = await r.json();
 			forked({ gist });
 
-			modified_count = 0;
+			modified = false;
 			repl.markSaved();
 
 			if (intentWasSave) {
@@ -146,7 +146,7 @@
 				throw new Error(`Received an HTTP ${r.status} response: ${error}`);
 			}
 
-			modified_count = 0;
+			modified = false;
 			repl.markSaved();
 			saved();
 			justSaved = true;
@@ -209,6 +209,14 @@ export default app;`
 
 		downloading = false;
 	}
+
+	// modifying an app should reset the `<select>`, so that
+	// the example can be reselected
+	$effect(() => {
+		if (modified) {
+			select.value = '';
+		}
+	});
 </script>
 
 <svelte:window on:keydown={handleKeydown} />
@@ -217,10 +225,11 @@ export default app;`
 	<div class="examples-select">
 		<span class="raised icon"><Icon name="menu" /></span>
 		<select
+			bind:this={select}
 			title="examples"
 			value={gist.id}
-			onchange={e => {
-				goto(`/playground/${(e.target as HTMLSelectElement).value}`);
+			onchange={(e) => {
+				goto(`/playground/${e.currentTarget.value}`);
 			}}
 		>
 			<option value="untitled">Create new</option>
@@ -237,24 +246,18 @@ export default app;`
 
 	<input
 		bind:value={name}
+		onchange={() => (modified = true)}
 		onfocus={(e) => e.currentTarget.select()}
 		use:enter={(e) => (e.currentTarget as HTMLInputElement).blur()}
 	/>
 
 	<div class="buttons">
-		<button class="raised icon" onclick={() => (zen_mode = !zen_mode)} title="fullscreen editor">
-			{#if zen_mode}
-				<Icon size={18} name="close" />
-			{:else}
-				<Icon size={18} name="maximize" />
-			{/if}
-		</button>
-
-		<button class="raised icon" disabled={downloading} onclick={download} title="download zip file">
-			<Icon size={18} name="download" />
-		</button>
-
-		<button class="raised icon" disabled={saving || !user} onclick={() => fork(false)} title="fork">
+		<button
+			class="raised icon"
+			disabled={saving || !user}
+			onclick={() => fork(false)}
+			aria-label={user ? 'fork' : 'log in to fork'}
+		>
 			{#if justForked}
 				<Icon size={18} name="check" />
 			{:else}
@@ -262,27 +265,36 @@ export default app;`
 			{/if}
 		</button>
 
-		<button class="raised icon" disabled={saving || !user} onclick={save} title="save">
+		<button
+			class="raised icon"
+			disabled={saving || !user}
+			onclick={save}
+			aria-label={user
+				? `save (${browser && navigator.platform === 'MacIntel' ? '⌘' : 'Ctrl'}+S)`
+				: 'log in to save'}
+		>
 			{#if justSaved}
 				<Icon size={18} name="check" />
 			{:else}
 				<Icon size={18} name="save" />
-				{#if modified_count}
-					<div class="badge">{modified_count}</div>
+				{#if modified}
+					<span class="badge"></span>
 				{/if}
 			{/if}
 		</button>
 
+		<button
+			class="raised icon download"
+			disabled={downloading}
+			onclick={download}
+			aria-label="download zip file"
+		></button>
+
 		{#if user}
 			<UserMenu {user} />
 		{:else}
-			<button
-				class="raised icon"
-				onclick={(e) => (e.preventDefault(), login())}
-				style="width: auto; padding: 0 0.4rem"
-			>
-				<Icon name="log-in" />
-				<span>&nbsp;Log in to save</span>
+			<button class="raised icon login" onclick={login}>
+				<span>log in</span>
 			</button>
 		{/if}
 	</div>
@@ -319,11 +331,15 @@ export default app;`
 
 	.examples-select {
 		position: relative;
-	}
 
-	.examples-select:has(select:focus-visible) .raised.icon {
-		outline: 2px solid hsla(var(--sk-theme-1-hsl), 0.6);
-		border-radius: var(--sk-border-radius);
+		&:has(select:focus-visible) .raised.icon {
+			outline: 2px solid hsla(var(--sk-theme-1-hsl), 0.6);
+			border-radius: var(--sk-border-radius);
+		}
+
+		span {
+			pointer-events: none;
+		}
 	}
 
 	select {
@@ -343,6 +359,7 @@ export default app;`
 		justify-content: center;
 		width: 3.2rem;
 		height: 3.2rem;
+		user-select: none;
 	}
 
 	.icon {
@@ -351,18 +368,62 @@ export default app;`
 		font-size: var(--sk-font-size-ui-small);
 		color: var(--sk-text-3);
 		line-height: 1;
+		background: 50% 50% no-repeat;
+		background-size: 1.8rem;
+		z-index: 999;
+
+		&[aria-label]:hover::before {
+			content: '';
+			width: 1rem;
+			height: 1rem;
+			position: absolute;
+			background: var(--sk-text-3);
+			top: calc(100% + 0.5rem);
+			rotate: 45deg;
+		}
+
+		&[aria-label]:hover::after {
+			content: attr(aria-label);
+			position: absolute;
+			top: calc(100% + 1rem);
+			background: var(--sk-text-3);
+			color: var(--sk-back-4);
+			padding: 0.5em 0.5em;
+			border-radius: var(--sk-border-radius);
+		}
+
+		&.login {
+			width: auto;
+			background-image: url($lib/icons/user-light.svg);
+			background-position: 0.4rem 50%;
+			padding: 0 0.4rem 0 2.8rem;
+
+			:root.dark & {
+				background-image: url($lib/icons/user-dark.svg);
+			}
+		}
+
+		&.download {
+			background-image: url($lib/icons/download-light.svg);
+
+			:root.dark & {
+				background-image: url($lib/icons/download-dark.svg);
+			}
+		}
 	}
 
 	.icon:hover,
 	.icon:focus-visible {
 		opacity: 1;
 	}
-	.icon:disabled {
-		opacity: 0.3;
-	}
 
-	.icon[title^='fullscreen'] {
-		display: none;
+	/* TODO use lucide-svelte, so we don't need all this customisation? */
+	.icon:disabled {
+		color: #ccc;
+
+		:root.dark & {
+			color: #555;
+		}
 	}
 
 	input {
@@ -378,30 +439,13 @@ export default app;`
 		font-size: var(--sk-font-size-ui-medium);
 	}
 
-	button span {
-		display: none;
-	}
-
 	.badge {
-		background: #ff3e00;
-		border-radius: 100%;
-		font-size: 10px;
-		padding: 0;
-		width: 15px;
-		height: 15px;
-		line-height: 15px;
 		position: absolute;
-		top: 10px;
-		right: 0px;
-	}
-
-	@media (min-width: 600px) {
-		.icon[title^='fullscreen'] {
-			display: inline;
-		}
-
-		button span {
-			display: inline-block;
-		}
+		background: var(--sk-theme-1);
+		border-radius: 50%;
+		width: 1rem;
+		height: 1rem;
+		top: -0.2rem;
+		right: -0.2rem;
 	}
 </style>
