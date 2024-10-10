@@ -1,16 +1,16 @@
 import { dev } from '$app/environment';
 import { client } from '$lib/db/client.js';
 import * as gist from '$lib/db/gist.js';
-import { examples } from '$lib/server/content';
+import { load_examples } from '$lib/server/content';
 import { error, json } from '@sveltejs/kit';
-import type { Examples } from '../examples/all.json/+server.js';
 
 export const prerender = 'auto';
 
 const UUID_REGEX = /^[0-9a-f]{8}-?[0-9a-f]{4}-?[0-9a-f]{4}-?[0-9a-f]{4}-?[0-9a-f]{12}$/;
 
+const examples = await load_examples();
+
 export async function GET({ fetch, params }) {
-	const examples: Examples = await fetch('/playground/api/examples/all.json').then((r) => r.json());
 	const example = examples
 		.flatMap((section) => section.examples)
 		.find((example) => example.slug.split('/').pop() === params.id);

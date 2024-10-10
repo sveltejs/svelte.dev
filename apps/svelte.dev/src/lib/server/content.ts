@@ -112,4 +112,48 @@ function create_docs() {
 
 export const docs = create_docs();
 
-export const examples = index.examples.children;
+export async function load_examples() {
+	const sections = [];
+
+	for (const section of index.examples.children) {
+		const examples = [];
+
+		for (const document of section.children) {
+			examples.push({
+				title: document.metadata.title,
+				slug: document.slug.split('/').pop()!,
+				components: await munge(document.assets!)
+			});
+		}
+
+		sections.push({
+			title: section.metadata.title,
+			examples
+		});
+	}
+
+	return sections;
+}
+
+async function munge(files: Record<string, string>) {
+	const result = [];
+
+	for (const [file, source] of Object.entries(files)) {
+		const dot = file.lastIndexOf('.');
+		let name = file.slice(0, dot);
+		let type = file.slice(dot + 1);
+
+		result.push({ name, type, source: await read(source).text() });
+	}
+
+	result.sort((a, b) => {
+		if (a.name === 'App' && a.type === 'svelte') return -1;
+		if (b.name === 'App' && b.type === 'svelte') return 1;
+
+		if (a.type !== b.type) return a.type === 'svelte' ? -1 : 1;
+
+		return a.name < b.name ? -1 : 1;
+	});
+
+	return result;
+}
