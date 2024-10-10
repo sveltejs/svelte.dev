@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import ts from 'typescript';
 import glob from 'tiny-glob/sync';
 import { fileURLToPath } from 'node:url';
-import { clone_repo, migrate_meta_json, replace_strings, strip_origin } from './utils';
+import { clone_repo, migrate_meta_json, strip_origin } from './utils';
 import { get_types, read_d_ts_file, read_types } from './types';
 import type { Modules } from '@sveltejs/site-kit/markdown';
 
