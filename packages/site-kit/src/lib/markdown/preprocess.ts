@@ -1,10 +1,14 @@
+import fs from 'node:fs';
+import path from 'node:path';
 import { SHIKI_LANGUAGE_MAP } from './utils';
 import type { Declaration, TypeElement, Modules } from './index';
 
 /**
  * Replace module/export placeholders during `sync-docs`
  */
-export async function preprocess(content: string, modules: Modules) {
+export async function preprocess(file: string, modules: Modules) {
+	let content = fs.readFileSync(file, 'utf-8');
+
 	const REGEXES = {
 		/** Render a specific type from a module with more details. Example: `> EXPANDED_TYPES: svelte#compile` */
 		EXPANDED_TYPES: /> EXPANDED_TYPES: (.+?)#(.+)$/gm,
@@ -16,22 +20,10 @@ export async function preprocess(content: string, modules: Modules) {
 		EXPORT_SNIPPET: /> EXPORT_SNIPPET: (.+?)#(.+)?$/gm,
 		/** Render all modules. Example: `> MODULES` */
 		MODULES: /> MODULES/g, //! /g is VERY IMPORTANT, OR WILL CAUSE INFINITE LOOP
-		/** Render all value exports from a specific module. Example: `> EXPORTS: svelte` */
-		EXPORTS: /> EXPORTS: (.+)/
+		/** Include the contents of another file */
+		INCLUDE: /@include (.+)/g
 	};
 
-	if (REGEXES.EXPORTS.test(content)) {
-		throw new Error('yes');
-	}
-
-	if (!modules || modules.length === 0) {
-		return content
-			.replace(REGEXES.EXPANDED_TYPES, '')
-			.replace(REGEXES.TYPES, '')
-			.replace(REGEXES.EXPORT_SNIPPET, '')
-			.replace(REGEXES.MODULES, '')
-			.replace(REGEXES.EXPORTS, '');
-	}
 	content = await async_replace(content, REGEXES.EXPANDED_TYPES, async ([_, name, id]) => {
 		const module = modules.find((module) => module.name === name);
 		if (!module) throw new Error(`Could not find module ${name}`);
@@ -118,33 +110,9 @@ export async function preprocess(content: string, modules: Modules) {
 			.join('\n\n');
 	});
 
-	content = await async_replace(content, REGEXES.EXPORTS, async ([_, name]) => {
-		const module = modules.find((module) => module.name === name);
-		if (!module) throw new Error(`Could not find module ${name} for EXPORTS: clause`);
-		if (!module.exports) return '';
-
-		if (module.exports.length === 0 && !module.exempt) return '';
-
-		let import_block = '';
-
-		if (module.exports.length > 0) {
-			// deduplication is necessary for now, because of `error()` overload
-			const exports = Array.from(new Set(module.exports.map((x) => x.name)));
-
-			let declaration = `import { ${exports.join(', ')} } from '${module.name}';`;
-			if (declaration.length > 80) {
-				declaration = `import {\n\t${exports.join(',\n\t')}\n} from '${module.name}';`;
-			}
-
-			import_block = fence(declaration, 'js');
-		}
-
-		return `${import_block}\n\n${module.comment}\n\n${module.exports
-			.map((declaration) => {
-				const markdown = render_declaration(declaration, true);
-				return `### ${declaration.name}\n\n${markdown}`;
-			})
-			.join('\n\n')}`;
+	content = await async_replace(content, REGEXES.INCLUDE, ([_, include]) => {
+		const resolved = path.resolve(path.dirname(file), include);
+		return preprocess(resolved, modules);
 	});
 
 	return content;
