@@ -1,5 +1,5 @@
 import MagicString from 'magic-string';
-import { createHash } from 'node:crypto';
+import { createHash, Hash } from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
 import ts from 'typescript';
@@ -453,14 +453,13 @@ function find_nearest_node_modules(file: string): string | null {
 }
 
 /**
- * Get the `mtime` of the most recently modified file in a dependency graph,
+ * Get the hash of a dependency graph,
  * excluding imports from `node_modules`
  */
-function get_mtime(file: string, seen = new Set<string>()) {
-	if (seen.has(file)) return -1;
+function hash_graph(hash: Hash, file: string, seen = new Set<string>()) {
+	if (seen.has(file)) return;
 	seen.add(file);
 
-	let mtime = fs.statSync(file).mtimeMs;
 	const content = fs.readFileSync(file, 'utf-8');
 
 	for (const [_, source] of content.matchAll(/^import(?:.+?\s+from\s+)?['"](.+)['"];?$/gm)) {
@@ -471,17 +470,16 @@ function get_mtime(file: string, seen = new Set<string>()) {
 		if (!fs.existsSync(resolved))
 			throw new Error(`Could not resolve ${source} relative to ${file}`);
 
-		mtime = Math.max(mtime, get_mtime(resolved, seen));
+		hash_graph(hash, resolved, seen);
 	}
 
-	return mtime;
+	hash.update(content);
 }
 
-const mtime = Math.max(
-	get_mtime(fileURLToPath(import.meta.url)),
-	fs.statSync('node_modules').mtimeMs,
-	fs.statSync('../../pnpm-lock.yaml').mtimeMs
-);
+const hash = createHash('sha256');
+hash.update(fs.readFileSync('../../pnpm-lock.yaml', 'utf-8'));
+hash_graph(hash, fileURLToPath(import.meta.url));
+const digest = hash.digest().toString('base64').replace(/\//g, '-');
 
 /**
  * Utility function to work with code snippet caching.
@@ -500,10 +498,11 @@ const mtime = Math.max(
 async function create_snippet_cache(should: boolean) {
 	const cache = new Map();
 	const directory = find_nearest_node_modules(import.meta.url) + '/.snippets';
+	const current = `${directory}/${digest}`;
 
 	if (fs.existsSync(directory)) {
 		for (const dir of fs.readdirSync(directory)) {
-			if (!fs.statSync(`${directory}/${dir}`).isDirectory() || +dir < mtime) {
+			if (dir !== digest) {
 				fs.rmSync(`${directory}/${dir}`, { force: true, recursive: true });
 			}
 		}
@@ -512,7 +511,7 @@ async function create_snippet_cache(should: boolean) {
 	}
 
 	try {
-		fs.mkdirSync(`${directory}/${mtime}`);
+		fs.mkdirSync(`${directory}/${digest}`);
 	} catch {}
 
 	function get_file(source: string) {
@@ -520,7 +519,7 @@ async function create_snippet_cache(should: boolean) {
 		hash.update(source);
 		const digest = hash.digest().toString('base64').replace(/\//g, '-');
 
-		return `${directory}/${mtime}/${digest}.html`;
+		return `${current}/${digest}.html`;
 	}
 
 	return {
