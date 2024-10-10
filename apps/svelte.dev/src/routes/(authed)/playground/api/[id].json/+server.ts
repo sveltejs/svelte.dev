@@ -1,14 +1,14 @@
 import { dev } from '$app/environment';
 import { client } from '$lib/db/client.js';
 import * as gist from '$lib/db/gist.js';
-import { load_examples } from '$lib/server/content';
+import { index, examples_promise } from '$lib/server/content';
 import { error, json } from '@sveltejs/kit';
 
 export const prerender = 'auto';
 
 const UUID_REGEX = /^[0-9a-f]{8}-?[0-9a-f]{4}-?[0-9a-f]{4}-?[0-9a-f]{4}-?[0-9a-f]{12}$/;
 
-const examples = await load_examples();
+const examples = await examples_promise;
 
 export async function GET({ fetch, params }) {
 	const example = examples
@@ -62,7 +62,7 @@ export async function GET({ fetch, params }) {
 }
 
 export async function entries() {
-	return examples
+	return index.examples.children
 		.flatMap((section) => section.children)
 		.map((example) => ({ id: example.slug.split('/').pop()! }));
 }

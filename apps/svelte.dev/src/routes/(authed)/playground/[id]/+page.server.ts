@@ -1,7 +1,7 @@
 import { error } from '@sveltejs/kit';
-import { load_examples } from '$lib/server/content.js';
+import { examples_promise } from '$lib/server/content.js';
 
-const examples = await load_examples();
+const examples = await examples_promise;
 
 export async function load({ fetch, params, url }) {
 	// TODO skip the .json indirection
