@@ -552,7 +552,11 @@ function hash_graph(hash: Hash, file: string, seen = new Set<string>()) {
 function parse_options(source: string, language: string) {
 	METADATA_REGEX.lastIndex = 0;
 
-	const options: SnippetOptions = { file: null, link: false, copy: language !== 'dts' };
+	const options: SnippetOptions = {
+		file: null,
+		link: false,
+		copy: language !== '' && language !== 'dts'
+	};
 
 	source = source.replace(METADATA_REGEX, (_, key, value) => {
 		switch (key) {
