@@ -63,12 +63,8 @@ export function clean(markdown: string) {
 		.trim();
 }
 
-export function removeHTMLEntities(html: string) {
-	return html.replace(/&.+?;/g, '');
-}
-
 export const slugify = (str: string) => {
-	return removeHTMLEntities(clean(str))
+	return clean(str)
 		.replace(/&.+;/g, '')
 		.replace(/[^a-zA-Z0-9-$(.):]/g, '-')
 		.replace(/-{2,}/g, '-')
