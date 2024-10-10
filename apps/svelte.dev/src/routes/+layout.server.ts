@@ -52,10 +52,8 @@ const sections: Record<string, string> = {
 	docs: 'Docs',
 	playground: 'Playground',
 	blog: 'Blog',
-	faq: 'FAQ',
 	tutorial: 'Tutorial',
-	search: 'Search',
-	examples: 'Examples'
+	search: 'Search'
 };
 
 export const load = async ({ url, fetch }) => {
