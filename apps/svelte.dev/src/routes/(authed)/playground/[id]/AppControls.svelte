@@ -210,8 +210,8 @@ export default app;`
 		downloading = false;
 	}
 
-	// TODO modifying an app should reset the `<select>`, so that
-	// the example can be reselected. Right now that's a noop
+	// modifying an app should reset the `<select>`, so that
+	// the example can be reselected
 	$effect(() => {
 		if (modified) {
 			select.value = '';
@@ -229,13 +229,7 @@ export default app;`
 			title="examples"
 			value={gist.id}
 			onchange={(e) => {
-				const slug = e.currentTarget.value;
-
-				if (location.pathname === `/playground/${slug}`) {
-					// TODO reset
-				}
-
-				goto(`/playground/${slug}`);
+				goto(`/playground/${e.currentTarget.value}`);
 			}}
 		>
 			<option value="untitled">Create new</option>

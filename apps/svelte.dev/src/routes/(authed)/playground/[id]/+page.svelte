@@ -50,7 +50,7 @@
 
 		if (!hash) {
 			repl?.set({
-				files: data.gist.components
+				files: structuredClone(data.gist.components)
 			});
 
 			return;
