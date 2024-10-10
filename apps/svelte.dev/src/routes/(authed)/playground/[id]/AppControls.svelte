@@ -264,7 +264,7 @@ export default app;`
 			{:else}
 				<Icon size={18} name="save" />
 				{#if modified_count}
-					<div class="badge">{modified_count}</div>
+					<span class="badge"></span>
 				{/if}
 			{/if}
 		</button>
@@ -421,30 +421,13 @@ export default app;`
 		font-size: var(--sk-font-size-ui-medium);
 	}
 
-	button span {
-		display: none;
-	}
-
 	.badge {
-		background: #ff3e00;
-		border-radius: 100%;
-		font-size: 10px;
-		padding: 0;
-		width: 15px;
-		height: 15px;
-		line-height: 15px;
 		position: absolute;
-		top: 10px;
-		right: 0px;
-	}
-
-	@media (min-width: 600px) {
-		.icon[title^='fullscreen'] {
-			display: inline;
-		}
-
-		button span {
-			display: inline-block;
-		}
+		background: var(--sk-theme-1);
+		border-radius: 50%;
+		width: 1rem;
+		height: 1rem;
+		top: -0.2rem;
+		right: -0.2rem;
 	}
 </style>
