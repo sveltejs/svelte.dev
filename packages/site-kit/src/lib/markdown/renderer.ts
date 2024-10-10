@@ -6,7 +6,7 @@ import ts from 'typescript';
 import * as prettier from 'prettier';
 import { codeToHtml, createCssVariablesTheme } from 'shiki';
 import { transformerTwoslash } from '@shikijs/twoslash';
-import { SHIKI_LANGUAGE_MAP, escape, slugify, smart_quotes, transform } from './utils';
+import { SHIKI_LANGUAGE_MAP, slugify, smart_quotes, transform } from './utils';
 import type { Modules } from './index';
 import { fileURLToPath } from 'node:url';
 
@@ -706,7 +706,7 @@ async function syntax_highlight({
 
 			return {
 				type,
-				content: escape(content)
+				content: content.replace(/</g, '&lt;')
 			};
 		});
 

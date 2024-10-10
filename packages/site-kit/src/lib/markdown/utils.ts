@@ -1,24 +1,6 @@
 import { Marked, Renderer, type TokenizerObject, type MarkedExtension } from 'marked';
 import json5 from 'json5';
 
-const escapeTest = /[&<>"']/;
-const escapeReplace = /[&<>"']/g;
-const escapeTestNoEncode = /[<>"']|&(?!#?\w+;)/;
-const escapeReplaceNoEncode = /[<>"']|&(?!#?\w+;)/g;
-const escapeReplacements = {
-	'&': '&amp;',
-	'<': '&lt;',
-	'>': '&gt;',
-	'"': '&quot;',
-	"'": '&#39;'
-};
-
-/**
- * @param {string} ch
- */
-const getEscapeReplacement = (ch: string) =>
-	escapeReplacements[ch as keyof typeof escapeReplacements];
-
 export const SHIKI_LANGUAGE_MAP = {
 	bash: 'bash',
 	env: 'bash',
@@ -32,20 +14,6 @@ export const SHIKI_LANGUAGE_MAP = {
 	ts: 'typescript',
 	'': ''
 };
-
-export function escape(html: string, encode = false) {
-	if (encode) {
-		if (escapeTest.test(html)) {
-			return html.replace(escapeReplace, getEscapeReplacement);
-		}
-	} else {
-		if (escapeTestNoEncode.test(html)) {
-			return html.replace(escapeReplaceNoEncode, getEscapeReplacement);
-		}
-	}
-
-	return html;
-}
 
 /**
  * Strip styling/links etc from markdown
