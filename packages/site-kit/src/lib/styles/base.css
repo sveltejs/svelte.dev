@@ -132,7 +132,7 @@ blockquote {
 	max-width: var(--sk-page-content-width);
 }
 
-blockquote :where(p, ul) {
+blockquote :where(p, ul, ol) {
 	font-size: var(--sk-font-size-body-small);
 }
 
@@ -156,27 +156,6 @@ button {
 
 button[disabled] {
 	color: var(--sk-text-4);
-}
-
-.raised {
-	border-radius: var(--sk-border-radius);
-	border-style: solid;
-	border-color: var(--sk-raised-color);
-	border-width: var(--sk-raised-width);
-
-	&:hover {
-		border-color: var(--sk-raised-hover-color);
-	}
-
-	&:active {
-		border-color: var(--sk-raised-active-color);
-		border-width: var(--sk-raised-active-width);
-	}
-
-	&:disabled {
-		border-color: var(--sk-back-5);
-		border-width: 1px;
-	}
 }
 
 /*  links ------------------------------------- */

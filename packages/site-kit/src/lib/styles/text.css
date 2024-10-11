@@ -35,30 +35,6 @@
 	min-height: 1.35em;
 }
 
-.api-section {
-	background: var(--sk-back-4);
-	padding: 1rem;
-	margin-bottom: 1rem;
-	max-width: var(--sk-page-content-width);
-	border-radius: var(--sk-border-radius);
-}
-
-.ts-block > pre {
-	--shiki-color-background: var(--sk-code-ts-bg);
-	margin: 0;
-	border-radius: 0;
-	box-shadow: none;
-	background: var(--sk-code-ts-bg);
-}
-
-.ts-block .ts-block-property p {
-	margin: 1rem 0;
-}
-
-.ts-block-property pre {
-	margin: 1rem 0;
-}
-
 .ts-block-property > pre {
 	margin: 0;
 	padding-left: 1rem;

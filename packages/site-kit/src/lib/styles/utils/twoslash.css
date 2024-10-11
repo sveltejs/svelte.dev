@@ -1,0 +1,7 @@
+.twoslash-hover {
+	position: relative;
+
+	.twoslash-popup-container {
+		display: none;
+	}
+}
