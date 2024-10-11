@@ -6,4 +6,6 @@ apps/svelte.dev/content/docs
 apps/svelte.dev/repos
 apps/svelte.dev/src/routes/edge.svg/land-110m.json
 apps/svelte.dev/static/svelte-app.json
+apps/svelte.dev/src/routes/_home/Supporters/contributors.js
+apps/svelte.dev/src/routes/_home/Supporters/donors.js
 pnpm-lock.yaml
