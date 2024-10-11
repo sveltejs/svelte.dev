@@ -279,9 +279,15 @@ export async function render_content_markdown(
 		},
 		blockquote(token) {
 			let content = this.parser?.parse(token.tokens) ?? '';
+
 			if (content.includes('[!LEGACY]')) {
 				content = `<details class="legacy"><summary>Legacy mode</summary>${content.replace('[!LEGACY]', '')}</details>`;
 			}
+
+			if (content.includes('[!NOTE]')) {
+				return `<blockquote class="note">${content.replace('[!NOTE]', '')}</blockquote>`;
+			}
+
 			return `<blockquote>${content}</blockquote>`;
 		}
 	});

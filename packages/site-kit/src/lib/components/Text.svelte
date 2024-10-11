@@ -378,7 +378,15 @@
 			color: var(--sk-text-1);
 			padding: 0 0 0 4.5rem;
 			font-style: italic;
-			background: url($lib/icons/lightbulb.svg) no-repeat 0.5rem 0 / 3rem;
+
+			&.note,
+			&:has(details.legacy) {
+				&::before {
+					content: none;
+				}
+
+				background: url($lib/icons/lightbulb.svg) no-repeat 0.5rem 0 / 3rem;
+			}
 
 			&:first-child {
 				margin-top: 0;
@@ -401,6 +409,17 @@
 				a {
 					--color: var(--primary-hsl);
 				}
+			}
+
+			&::before {
+				content: '“';
+				position: absolute;
+				font-size: 6.4em;
+				line-height: 1;
+				left: 0;
+				top: 0;
+				font-family: var(--sk-font-heading);
+				color: var(--sk-text-4);
 			}
 
 			em,
