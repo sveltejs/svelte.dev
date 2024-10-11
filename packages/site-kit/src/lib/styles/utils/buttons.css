@@ -18,3 +18,11 @@
 		border-width: 1px;
 	}
 }
+
+.icon {
+	width: 3.2rem;
+	height: 3.2rem;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: 2.3rem 2.3rem;
+}

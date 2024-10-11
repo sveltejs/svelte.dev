@@ -357,8 +357,6 @@ export default app;`
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		width: 3.2rem;
-		height: 3.2rem;
 		user-select: none;
 	}
 
@@ -368,7 +366,6 @@ export default app;`
 		font-size: var(--sk-font-size-ui-small);
 		color: var(--sk-text-3);
 		line-height: 1;
-		background: 50% 50% no-repeat;
 		background-size: 1.8rem;
 		z-index: 999;
 

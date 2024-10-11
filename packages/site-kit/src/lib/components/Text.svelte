@@ -404,7 +404,7 @@
 					content: none;
 				}
 
-				background: url($lib/icons/lightbulb.svg) no-repeat 0.5rem 0 / 3rem;
+				background: url($lib/icons/lightbulb.svg) no-repeat 0.5rem 0 / 2.6rem;
 			}
 
 			&:first-child {

@@ -13,12 +13,12 @@ use an svg icon that was provided through `Icons.svelte` from
 	} = $props();
 </script>
 
-<svg class="icon" width={size} height={size}>
+<svg width={size} height={size}>
 	<use xlink:href="#{name}" />
 </svg>
 
 <style>
-	.icon {
+	svg {
 		position: relative;
 		overflow: hidden;
 		vertical-align: middle;

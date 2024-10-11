@@ -23,7 +23,7 @@
 
 <button
 	onclick={toggle}
-	class="raised"
+	class="raised icon"
 	type="button"
 	aria-pressed={$theme.current === 'dark'}
 	aria-label="Toggle dark mode"
@@ -31,10 +31,7 @@
 
 <style>
 	button {
-		width: 3.2rem;
-		aspect-ratio: 1;
-		background: red;
-		background: url($lib/icons/theme-light.svg) no-repeat 50% 50% / 2.3rem 2.3rem;
+		background-image: url($lib/icons/theme-light.svg);
 		margin-left: 1rem;
 
 		:global(.dark) & {
