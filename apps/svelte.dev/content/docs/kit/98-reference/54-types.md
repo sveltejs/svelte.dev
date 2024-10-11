@@ -84,7 +84,7 @@ export async function load({ params, fetch }) {
 }
 ```
 
-> For this to work, your own `tsconfig.json` or `jsconfig.json` should extend from the generated `.svelte-kit/tsconfig.json` (where `.svelte-kit` is your [`outDir`](configuration#outdir)):
+> [!NOTE] For this to work, your own `tsconfig.json` or `jsconfig.json` should extend from the generated `.svelte-kit/tsconfig.json` (where `.svelte-kit` is your [`outDir`](configuration#outdir)):
 >
 > `{ "extends": "./.svelte-kit/tsconfig.json" }`
 
@@ -187,7 +187,7 @@ interface Locals {}
 
 ## PageData
 
-Defines the common shape of the [$page.data store](https://kit.svelte.dev/docs/modules#$app-stores-page) - that is, the data that is shared between all pages.
+Defines the common shape of the [$page.data store](https://kit.svelte.dev/docs/$app-stores#page) - that is, the data that is shared between all pages.
 The `Load` and `ServerLoad` functions in `./$types` will be narrowed accordingly.
 Use optional properties for data that is only present on specific pages. Do not add an index signature (`[key: string]: any`).
 
