@@ -379,7 +379,8 @@
 			padding: 0 0 0 4.5rem;
 			font-style: italic;
 
-			&.note {
+			&.note,
+			&:has(details.legacy) {
 				&::before {
 					content: none;
 				}
