@@ -15,14 +15,16 @@
 	},
 	"scripts": {
 		"check": "pnpm -r check",
-		"lint": "pnpm -r lint",
-		"format": "pnpm -r format",
+		"format": "prettier --write .",
+		"lint": "prettier --check .",
 		"test": "pnpm -r test",
 		"build": "cd ./packages/site-kit && pnpm package && cd ../repl && pnpm package && cd ../../apps/svelte.dev && pnpm build",
 		"changeset:version": "changeset version && pnpm -r generate:version && git add --all",
 		"changeset:publish": "changeset publish"
 	},
 	"devDependencies": {
-		"@changesets/cli": "^2.27.6"
+		"@changesets/cli": "^2.27.6",
+		"prettier": "^3.3.2",
+		"prettier-plugin-svelte": "^3.2.4"
 	}
 }

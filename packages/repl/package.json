@@ -8,9 +8,7 @@
 		"preview": "vite preview",
 		"package": "svelte-kit sync",
 		"prepublishOnly": "npm run package",
-		"check": "svelte-kit sync && svelte-check",
-		"lint": "prettier --check .",
-		"format": "prettier --write ."
+		"check": "svelte-kit sync && svelte-check"
 	},
 	"repository": {
 		"type": "git",

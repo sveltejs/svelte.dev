@@ -7,9 +7,7 @@
 	"scripts": {
 		"dev": "vite dev",
 		"check": "svelte-kit sync && svelte-check",
-		"package": "svelte-kit sync",
-		"lint": "prettier --check .",
-		"format": "prettier --write ."
+		"package": "svelte-kit sync"
 	},
 	"repository": {
 		"type": "git",

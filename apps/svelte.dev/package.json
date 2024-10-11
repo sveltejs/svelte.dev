@@ -11,8 +11,6 @@
 		"preview": "vite preview",
 		"start": "node build",
 		"check": "node scripts/update.js && svelte-kit sync && svelte-check",
-		"format": "prettier --write .",
-		"lint": "prettier --check .",
 		"sync-docs": "tsx scripts/sync-docs/index.ts"
 	},
 	"dependencies": {

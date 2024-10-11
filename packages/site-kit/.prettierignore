@@ -1,6 +1,0 @@
-.svelte-kit
-/dist
-node_modules
-pnpm-lock.yaml
-package-lock.json
-yarn.lock
