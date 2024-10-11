@@ -75,13 +75,19 @@
 		h2,
 		h3 {
 			max-width: 100%;
-			text-overflow: ellipsis;
-			overflow: hidden;
 			padding: 0 1em 0 0;
 
 			@media (min-width: 768px) {
 				margin: 0 0 0 -2em;
 				padding: 0 1em 0 2em;
+			}
+
+			/* we can't use `text-overflow` on the heading itself,
+			   because `overflow: hidden` defeats `scroll-margin` */
+			& > span {
+				display: block;
+				overflow: hidden;
+				text-overflow: ellipsis;
 			}
 		}
 

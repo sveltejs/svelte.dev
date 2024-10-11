@@ -269,10 +269,10 @@ export async function render_content_markdown(
 			headings[depth - 1] = slugify(raw);
 			headings.length = depth;
 			const slug = headings.filter(Boolean).join('-');
-			return `<h${depth} id="${slug}">${text.replace(
+			return `<h${depth} id="${slug}"><span>${text.replace(
 				/<\/?code>/g,
 				''
-			)}<a href="#${slug}" class="permalink"><span class="visually-hidden">permalink</span></a></h${depth}>`;
+			)}</span><a href="#${slug}" class="permalink"><span class="visually-hidden">permalink</span></a></h${depth}>`;
 		},
 		code({ text }) {
 			return snippets.get(text);
