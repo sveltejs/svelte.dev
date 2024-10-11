@@ -419,7 +419,9 @@
 			}
 		}
 
-		details.legacy {
+		details {
+			position: relative;
+
 			&::before,
 			&::after {
 				content: '';
@@ -468,16 +470,15 @@
 				align-items: center;
 				height: 3rem;
 				color: var(--sk-text-4);
-				font-family: var(--sk-font-ui);
 				font-style: normal;
-				font-size: var(--sk-font-size-ui-small);
+				font-size: var(--sk-font-size-body-small);
 				user-select: none;
 
 				&:hover {
 					color: var(--sk-text-3);
 				}
 
-				&::after {
+				.legacy &::after {
 					position: absolute;
 					display: flex;
 					align-items: center;
@@ -497,7 +498,7 @@
 				& > summary {
 					margin-bottom: 1.4rem;
 
-					&::after {
+					.legacy &::after {
 						content: 'hide all';
 					}
 				}

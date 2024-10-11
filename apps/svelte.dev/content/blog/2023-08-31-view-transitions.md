@@ -76,32 +76,28 @@ With that, every navigation that occurs will trigger a view transition. You can 
 
 <video src="https://sveltejs.github.io/assets/video/vt-demo-1.mp4" controls muted playsinline></video>
 
-<details>
-<summary>How the code works</summary>
-
-This code may look a bit intimidating – if you're curious, I can break it down line-by-line, but for now it’s enough to know that adding it will allow you to interact with the view transitions API during navigation.
-
-As mentioned above, the `onNavigate` callback will run immediately before the new page is rendered after a navigation. Inside the callback, we check if `document.startViewTransition` exists. If it doesn’t (i.e. the browser doesn’t support it), we exit early.
-
-We then return a promise to delay completing the navigation until the view transition has started. We use a [promise constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise) so that we can control when the promise resolves.
-
-```js
-// @errors: 1108
-return new Promise((resolve) => {
-	document.startViewTransition(async () => {
-		resolve();
-		await navigation.complete;
-	});
-});
-```
-
-Inside the promise constructor, we start the view transition. Inside the view transition callback we resolve the promise we just returned, which indicates to SvelteKit that it should finish the navigation. It’s important that the navigation waits to finish until _after_ we start the view transition – the browser needs to snapshot the old state so it can transition to the new state.
-
-Finally, inside the view transition callback we wait for SvelteKit to finish the navigation by awaiting `navigation.complete`. Once `navigation.complete` resolves, the new page has been loaded into the DOM and the browser can animate between the two states.
-
-It’s a bit of a mouthful, but by not abstracting it we allow you to interact with the view transition directly and make any customizations you require.
-
-</details>
+> [!DETAILS] How the code works
+> This code may look a bit intimidating – if you're curious, I can break it down line-by-line, but for now it’s enough to know that adding it will allow you to interact with the view transitions API during navigation.
+>
+> As mentioned above, the `onNavigate` callback will run immediately before the new page is rendered after a navigation. Inside the callback, we check if `document.startViewTransition` exists. If it doesn’t (i.e. the browser doesn’t support it), we exit early.
+>
+> We then return a promise to delay completing the navigation until the view transition has started. We use a [promise constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise) so that we can control when the promise resolves.
+>
+> ```js
+> // @errors: 1108
+> return new Promise((resolve) => {
+> 	document.startViewTransition(async () => {
+> 		resolve();
+> 		await navigation.complete;
+> 	});
+> });
+> ```
+>
+> Inside the promise constructor, we start the view transition. Inside the view transition callback we resolve the promise we just returned, which indicates to SvelteKit that it should finish the navigation. It’s important that the navigation waits to finish until > _after_ we start the view transition – the browser needs to snapshot the old state so it can transition to the new state.
+>
+> Finally, inside the view transition callback we wait for SvelteKit to finish the navigation by awaiting `navigation.complete`. Once `navigation.complete` resolves, the new page has been loaded into the DOM and the browser can animate between the two states.
+>
+> It’s a bit of a mouthful, but by not abstracting it we allow you to interact with the view transition directly and make any customizations you require.
 
 ## Customizing the transition with CSS
 
