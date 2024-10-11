@@ -284,6 +284,13 @@ export async function render_content_markdown(
 				content = `<details class="legacy"><summary>Legacy mode</summary>${content.replace('[!LEGACY]', '')}</details>`;
 			}
 
+			if (content.includes('[!DETAILS]')) {
+				const regex = /\[!DETAILS\] (.+)/;
+				const match = regex.exec(content)!;
+				content = `<details><summary>${match[1]}</summary>${content.replace(regex, '')}</details>`;
+				return `<blockquote class="note">${content}</blockquote>`;
+			}
+
 			if (content.includes('[!NOTE]')) {
 				return `<blockquote class="note">${content.replace('[!NOTE]', '')}</blockquote>`;
 			}

@@ -159,38 +159,34 @@ Now, the header will not transition in and out on navigation, but the rest of th
 
 <video src="https://sveltejs.github.io/assets/video/vt-demo-2.mp4" controls muted playsinline></video>
 
-<details>
-<summary>Fixing the types</summary>
-
-Since `startViewTransition` is not supported by all browsers, your IDE may not know that it exists. To make the errors go away and get the correct typings, add the following to your `app.d.ts`:
-
-```ts
-declare global {
-	// preserve any customizations you have here
-	namespace App {
-		// interface Error {}
-		// interface Locals {}
-		// interface PageData {}
-		// interface Platform {}
-	}
-
-	// add these lines
-	interface ViewTransition {
-		updateCallbackDone: Promise<void>;
-		ready: Promise<void>;
-		finished: Promise<void>;
-		skipTransition: () => void;
-	}
-
-	interface Document {
-		startViewTransition(updateCallback: () => Promise<void>): ViewTransition;
-	}
-}
-
-export {};
-```
-
-</details>
+> [!DETAILS] Fixing the types
+> Since `startViewTransition` is not supported by all browsers, your IDE may not know that it exists. To make the errors go away and get the correct typings, add the following to your `app.d.ts`:
+>
+> ```ts
+> declare global {
+> 	// preserve any customizations you have here
+> 	namespace App {
+> 		// interface Error {}
+> 		// interface Locals {}
+> 		// interface PageData {}
+> 		// interface Platform {}
+> 	}
+>
+> 	// add these lines
+> 	interface ViewTransition {
+> 		updateCallbackDone: Promise<void>;
+> 		ready: Promise<void>;
+> 		finished: Promise<void>;
+> 		skipTransition: () => void;
+> 	}
+>
+> 	interface Document {
+> 		startViewTransition(updateCallback: () => Promise<void>): ViewTransition;
+> 	}
+> }
+>
+> export {};
+> ```
 
 ## Transitioning individual elements
 
