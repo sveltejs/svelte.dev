@@ -118,12 +118,12 @@
 	<button
 		aria-label="Toggle menu"
 		aria-expanded={$open_store}
-		class="menu-toggle"
+		class="menu-toggle raised icon"
 		class:open
 		bind:this={menu_button}
 		onclick={open_nav}
 	>
-		<Icon name={$open_store ? 'close' : 'menu'} size="1em" />
+		<Icon name={$open_store ? 'close' : 'menu'} size={16} />
 	</button>
 
 	{#if $open_store}
@@ -267,14 +267,8 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-
-		height: 100%;
-		width: var(--sk-nav-height);
-
 		display: flex;
 		gap: 1.5rem;
-
-		line-height: 1;
 	}
 
 	.menu-background {

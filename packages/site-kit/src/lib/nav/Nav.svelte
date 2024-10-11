@@ -105,12 +105,12 @@ Top navigation bar for the application. It provides a slot for the left side, th
 	<div class="mobile mobile-menu">
 		<button
 			aria-label="Search"
-			class="search"
+			class="raised icon search"
 			onclick={() => {
 				$searching = true;
 			}}
 		>
-			<Icon name="search" size=".6em" />
+			<Icon name="search" size={16} />
 		</button>
 
 		<Menu bind:open={$nav_open} {links}>
@@ -137,6 +137,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		width: 100vw;
 		height: var(--sk-nav-height);
 		margin: 0 auto;
+		padding: 0 var(--sk-page-padding-side);
 		background-color: var(--sk-back-2);
 		font-family: var(--sk-font-body);
 		user-select: none;
@@ -208,10 +209,9 @@ Top navigation bar for the application. It provides a slot for the left side, th
 
 	.home-link {
 		--padding-right: 1rem;
-		width: 16rem;
+		width: 11.2rem;
 		height: 100%;
-		background: url(../branding/svelte.svg) no-repeat var(--sk-page-padding-side) 50% /
-			calc(100% - var(--sk-page-padding-side) - var(--padding-right)) auto;
+		background: url(../branding/svelte.svg) no-repeat 0 50% / calc(100% - var(--padding-right)) auto;
 		padding: 0 var(--padding-right) 0 calc(var(--sk-page-padding-side) + 0rem);
 
 		:global(.dark) & {
@@ -221,10 +221,10 @@ Top navigation bar for the application. It provides a slot for the left side, th
 
 	.mobile-menu {
 		display: flex;
-		position: absolute;
-		bottom: 0;
-		right: 0;
-		height: 100%;
+		flex: 1;
+		justify-content: end;
+		align-items: center;
+		gap: 0.5rem; /* TODO tokenize */
 	}
 
 	.desktop {
@@ -233,21 +233,6 @@ Top navigation bar for the application. It provides a slot for the left side, th
 
 	nav :global(.small) {
 		display: block;
-	}
-
-	button {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		height: 100%;
-		display: flex;
-		gap: 1.5rem;
-		padding: 0 1rem;
-		line-height: 1;
-	}
-
-	.search {
-		padding-left: 2rem;
 	}
 
 	.appearance {
@@ -297,7 +282,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 	@media (min-width: 800px) {
 		.home-link {
 			--padding-right: 2rem;
-			width: 18rem;
+			width: 13.2rem;
 		}
 
 		nav {
@@ -316,7 +301,6 @@ Top navigation bar for the application. It provides a slot for the left side, th
 			width: auto;
 			height: 100%;
 			align-items: center;
-			padding: 0 var(--sk-page-padding-side) 0 0;
 		}
 
 		.menu:last-child {
