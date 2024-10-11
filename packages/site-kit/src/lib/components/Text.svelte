@@ -35,15 +35,34 @@
 			const ts = !!parent.querySelector('.ts-toggle:checked');
 			const code = parent.querySelector(`pre:${ts ? 'last' : 'first'}-of-type code`) as HTMLElement;
 
-			let result = '';
-			for (const node of code.childNodes ?? []) {
-				if (!(node as HTMLElement).classList.contains('deleted')) {
-					result += node.textContent!.trimEnd() + '\n';
-				}
+			navigator.clipboard.writeText(get_text(code));
+		}
+	}
+
+	function get_text(node: HTMLElement) {
+		let result = '';
+
+		for (const child of node.childNodes ?? []) {
+			if (child.nodeType === 3) {
+				result += (child as Text).data;
 			}
 
-			navigator.clipboard.writeText(result.trim());
+			if (child.nodeType === 1) {
+				const classes = (child as HTMLElement).classList;
+
+				if (classes.contains('deleted') || classes.contains('twoslash-popup-container')) {
+					continue;
+				}
+
+				if (classes.contains('twoslash-meta-line') || classes.contains('twoslash-error-line')) {
+					result += '\n';
+				} else {
+					result += get_text(child as HTMLElement);
+				}
+			}
 		}
+
+		return result;
 	}
 </script>
 
