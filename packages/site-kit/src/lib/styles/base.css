@@ -86,22 +86,24 @@ strong {
 	font-weight: 400;
 }
 
-code,
-kbd {
-	font-family: var(--sk-font-mono);
+code, kbd {
+	font-size: 0.666em;
+	position: relative;
+	border-radius: var(--sk-border-radius);
+	white-space: nowrap;
+	color: var(--sk-text-2);
+	background: var(--sk-back-4);
+	line-height: 1.7;
 }
 
 code {
-	font-size: 0.666em;
-	position: relative;
-	border-radius: 0.3em;
-	white-space: nowrap;
-	color: var(--sk-text-2);
-	-webkit-font-smoothing: initial;
-	padding: 0.4rem;
+	font-family: var(--sk-font-mono);
 	margin: 0 0.2rem;
-	background: var(--sk-back-4);
-	line-height: 1.7;
+	padding: 0.4rem;
+}
+
+kbd {
+	font-family: var(--sk-font-ui);
 }
 
 pre {

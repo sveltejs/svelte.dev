@@ -80,7 +80,8 @@
 			margin: 1em 0;
 		}
 
-		code {
+		code,
+		kbd {
 			white-space: pre-wrap;
 			padding: 0.2rem 0.4rem;
 			margin: 0 0.2rem;
