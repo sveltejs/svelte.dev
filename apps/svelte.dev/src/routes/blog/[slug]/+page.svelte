@@ -96,21 +96,6 @@
 				box-shadow: 1px 2px 1rem hsla(0 0 0 / 0.08);
 			}
 
-			blockquote {
-				background: none;
-
-				&::before {
-					content: '“';
-					position: absolute;
-					font-size: 6.4em;
-					line-height: 1;
-					left: 0;
-					top: 0;
-					font-family: var(--sk-font-heading);
-					color: var(--sk-text-4);
-				}
-			}
-
 			hr {
 				position: relative;
 				border: none;
