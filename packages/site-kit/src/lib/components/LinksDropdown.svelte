@@ -44,3 +44,9 @@
 		{/each}
 	{/snippet}
 </Dropdown>
+
+<style>
+	.secondary {
+		box-shadow: none !important;
+	}
+</style>

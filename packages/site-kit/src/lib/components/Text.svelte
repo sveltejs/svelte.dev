@@ -291,13 +291,6 @@
 			color: inherit;
 			text-decoration: underline;
 			transition: box-shadow 0.1s ease-in-out;
-
-			/* TODO what is this for? */
-			code {
-				all: unset !important;
-				color: inherit;
-				background-color: transparent !important;
-			}
 		}
 
 		/* permalinks */

@@ -3,8 +3,9 @@ import path from 'node:path';
 import fs from 'node:fs';
 import ts from 'typescript';
 import glob from 'tiny-glob/sync';
+import chokidar from 'chokidar';
 import { fileURLToPath } from 'node:url';
-import { clone_repo, migrate_meta_json, replace_strings, strip_origin } from './utils';
+import { clone_repo, migrate_meta_json, strip_origin } from './utils';
 import { get_types, read_d_ts_file, read_types } from './types';
 import type { Modules } from '@sveltejs/site-kit/markdown';
 
@@ -123,7 +124,7 @@ if (process.env.USE_GIT === 'true') {
 	);
 }
 
-for (const pkg of packages) {
+async function sync(pkg: Package) {
 	const dest = `${DOCS}/${pkg.name}`;
 
 	fs.rmSync(dest, { force: true, recursive: true });
@@ -138,5 +139,19 @@ for (const pkg of packages) {
 		const content = await preprocess(file, modules);
 
 		fs.writeFileSync(file, content);
+	}
+}
+
+for (const pkg of packages) {
+	await sync(pkg);
+}
+
+if (process.argv.includes('-w') || process.argv.includes('--watch')) {
+	for (const pkg of packages) {
+		chokidar
+			.watch(`${REPOS}/${pkg.name}/${pkg.docs}`, { ignoreInitial: true })
+			.on('all', (event) => {
+				sync(pkg);
+			});
 	}
 }

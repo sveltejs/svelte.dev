@@ -34,16 +34,6 @@ export function invoke(cmd: string, args: string[], opts: SpawnOptions) {
 	});
 }
 
-export function replace_strings(obj: any, replace: (str: string) => string) {
-	for (let key in obj) {
-		if (typeof obj[key] === 'object') {
-			replace_strings(obj[key], replace);
-		} else if (typeof obj[key] === 'string') {
-			obj[key] = replace(obj[key]);
-		}
-	}
-}
-
 /** Older versions of the documentation did use meta.json instead of index.md */
 export function migrate_meta_json(path: string) {
 	const files = glob(`${path}/**/meta.json`);

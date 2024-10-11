@@ -74,6 +74,7 @@
 		"@types/node": "^20.14.2",
 		"@vercel/speed-insights": "^1.0.0",
 		"browserslist": "^4.23.1",
+		"chokidar": "^4.0.1",
 		"degit": "^2.8.4",
 		"dotenv": "^16.4.5",
 		"esbuild": "^0.21.5",
