@@ -349,7 +349,7 @@ async function generate_ts_from_js(
 
 	if (!ts) return;
 
-	return code.replace(outer, `<script lang="ts">\n\t${ts.trim()}\n</script>`);
+	return code.replace(outer, `<script lang="ts">${ts}</script>`);
 }
 
 function get_jsdoc(node: ts.Node) {
@@ -367,6 +367,15 @@ async function convert_to_ts(js_code: string, indent = '', offset = '') {
 		.replace(/(\/\/\/ .+?\.)js/, '$1ts')
 		// *\/ appears in some JsDoc comments in d.ts files due to the JSDoc-in-JSDoc problem
 		.replace(/\*\\\//g, '*/');
+
+	// TODO temp
+	if (js_code.includes('// ---cut---')) {
+		throw new Error('unexpected cut directive');
+	}
+
+	if (js_code.includes('/// file:')) {
+		throw new Error('unexpected file directive');
+	}
 
 	const ast = ts.createSourceFile(
 		'filename.ts',
@@ -411,7 +420,7 @@ async function convert_to_ts(js_code: string, indent = '', offset = '') {
 								);
 
 								code.appendLeft(node.body.getStart(), '=> ');
-								code.appendLeft(node.body.getEnd(), ')');
+								code.appendLeft(node.body.getEnd(), ');');
 
 								modified = true;
 							}
@@ -479,19 +488,20 @@ async function convert_to_ts(js_code: string, indent = '', offset = '') {
 				return `${indent}import type { ${Array.from(names).join(', ')} } from '${from}';`;
 			})
 			.join('\n');
-		const idxOfLastImport = [...ast.statements]
-			.reverse()
-			.find((statement) => ts.isImportDeclaration(statement))
-			?.getEnd();
-		const insertion_point = Math.max(
-			idxOfLastImport ? idxOfLastImport + 1 : 0,
-			js_code.includes('---cut---')
-				? js_code.indexOf('\n', js_code.indexOf('---cut---')) + 1
-				: js_code.includes('/// file:')
-					? js_code.indexOf('\n', js_code.indexOf('/// file:')) + 1
-					: 0
+
+		const last_import = [...ast.statements].findLast((statement) =>
+			ts.isImportDeclaration(statement)
 		);
-		code.appendLeft(insertion_point, offset + import_statements + '\n');
+
+		if (last_import) {
+			let i = last_import.getEnd();
+			while (js_code[i] !== '\n') i += 1;
+			i += 1;
+
+			code.appendLeft(i, import_statements + '\n');
+		} else {
+			code.prependLeft(0, offset + import_statements + '\n');
+		}
 	}
 
 	let transformed = code.toString();
@@ -640,6 +650,7 @@ async function syntax_highlight({
 	twoslashBanner,
 	options
 }: {
+	prelude: string;
 	source: string;
 	filename: string;
 	language: string;
