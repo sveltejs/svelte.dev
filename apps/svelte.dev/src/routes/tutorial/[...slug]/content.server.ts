@@ -249,7 +249,7 @@ export async function load_exercise(slug: string): Promise<Exercise> {
 		part: {
 			slug: part.slug,
 			title: part.metadata.title,
-			label: 'TODO' // 'Part 1' etc
+			label: part.metadata.label
 		},
 		chapter: {
 			slug: chapter.slug,
