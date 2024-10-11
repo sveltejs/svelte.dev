@@ -86,7 +86,8 @@ strong {
 	font-weight: 400;
 }
 
-code, kbd {
+code,
+kbd {
 	font-size: 0.666em;
 	position: relative;
 	border-radius: var(--sk-border-radius);
