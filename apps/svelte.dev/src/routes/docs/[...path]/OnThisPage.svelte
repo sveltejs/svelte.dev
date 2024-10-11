@@ -32,7 +32,30 @@
 	}
 </script>
 
-<svelte:window onscroll={update} onhashchange={() => (current = location.hash.slice(1))} />
+<svelte:window
+	onscroll={update}
+	onhashchange={() => {
+		current = location.hash.slice(1);
+		// Correct scroll position if needed
+		const active = [...headings.values()].find((entry) => entry.id === current);
+		if (active) {
+			const { top, bottom } = active.getBoundingClientRect();
+			const min = 100;
+			const max = window.innerHeight - 100;
+			if (top > max) {
+				window.scrollBy({
+					top: top - max,
+					left: 0
+				});
+			} else if (bottom < min) {
+				window.scrollBy({
+					top: bottom - min,
+					left: 0
+				});
+			}
+		}
+	}}
+/>
 
 <aside class="on-this-page">
 	<label>
