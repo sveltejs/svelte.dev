@@ -7,7 +7,6 @@ import * as prettier from 'prettier';
 import { codeToHtml, createCssVariablesTheme } from 'shiki';
 import { transformerTwoslash } from '@shikijs/twoslash';
 import { SHIKI_LANGUAGE_MAP, slugify, smart_quotes, transform } from './utils';
-import type { Modules } from './index';
 import { fileURLToPath } from 'node:url';
 
 interface SnippetOptions {
@@ -611,6 +610,19 @@ function replace_blank_lines(html: string) {
 	return html.replaceAll(/<div class='line'>(&nbsp;)?<\/div>/g, '<div class="line">\n</div>');
 }
 
+const delimiter_substitutes = {
+	'+++': '             ',
+	'---': '           ',
+	':::': '         '
+};
+
+function highlight_spans(content: string, classname: string) {
+	return content
+		.split('\n')
+		.map((line) => `<span class="${classname}">${line}</span>`)
+		.join('\n');
+}
+
 async function syntax_highlight({
 	source,
 	filename,
@@ -625,6 +637,13 @@ async function syntax_highlight({
 	options: SnippetOptions;
 }) {
 	let html = '';
+
+	source = source.replace(
+		/(\+\+\+|---|:::)/g,
+		(_, delimiter: keyof typeof delimiter_substitutes) => {
+			return delimiter_substitutes[delimiter];
+		}
+	);
 
 	if (/^(dts|yaml|yml)/.test(language)) {
 		html = replace_blank_lines(
@@ -698,6 +717,21 @@ async function syntax_highlight({
 
 		html = replace_blank_lines(highlighted);
 	}
+
+	// munge shiki output: put whitespace outside `<span>` elements, so that
+	// highlight delimiters fall outside tokens
+	html = html.replace(/(<span[^<]+?>)(\s+)/g, '$2$1').replace(/(\s+)(<\/span>)/g, '$2$1');
+
+	html = html
+		.replace(/ {13}([^ ][^]+?) {13}/g, (_, content) => {
+			return highlight_spans(content, 'highlight add');
+		})
+		.replace(/ {11}([^ ][^]+?) {11}/g, (_, content) => {
+			return highlight_spans(content, 'highlight remove');
+		})
+		.replace(/ {9}([^ ][^]+?) {9}/g, (_, content) => {
+			return highlight_spans(content, 'highlight');
+		});
 
 	return indent_multiline_comments(html)
 		.replace(/\/\*…\*\//g, '…')
