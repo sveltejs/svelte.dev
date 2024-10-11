@@ -3,7 +3,6 @@
 .vercel
 node_modules
 apps/svelte.dev/content/docs
-apps/svelte.dev/content/**/*.{css,html,js,svelte}
 apps/svelte.dev/repos
 apps/svelte.dev/src/routes/edge.svg/land-110m.json
 apps/svelte.dev/static/svelte-app.json
