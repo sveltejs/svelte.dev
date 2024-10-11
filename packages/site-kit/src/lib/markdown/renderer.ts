@@ -630,8 +630,8 @@ function replace_blank_lines(html: string) {
 }
 
 const delimiter_substitutes = {
-	'+++': '             ',
-	'---': '           ',
+	'---': '             ',
+	'+++': '           ',
 	':::': '         '
 };
 
@@ -683,7 +683,15 @@ async function syntax_highlight({
 				}
 			}
 
-			html = await codeToHtml(source, {
+			/** We need to stash code wrapped in `---` highlights, because otherwise TS will error on e.g. bad syntax, duplicate declarations */
+			const redactions: string[] = [];
+
+			const redacted = source.replace(/( {13}(?:[^ ][^]+?) {13})/g, (_, content) => {
+				redactions.push(content);
+				return ' '.repeat(content.length);
+			});
+
+			html = await codeToHtml(redacted, {
 				lang: 'ts',
 				theme,
 				transformers: [
@@ -696,6 +704,8 @@ async function syntax_highlight({
 					})
 				]
 			});
+
+			html = html.replace(/ {27,}/g, () => redactions.shift()!);
 		} catch (e) {
 			console.error((e as Error).message);
 			console.warn(source);
@@ -738,10 +748,10 @@ async function syntax_highlight({
 
 	html = html
 		.replace(/ {13}([^ ][^]+?) {13}/g, (_, content) => {
-			return highlight_spans(content, 'highlight add');
+			return highlight_spans(content, 'highlight remove');
 		})
 		.replace(/ {11}([^ ][^]+?) {11}/g, (_, content) => {
-			return highlight_spans(content, 'highlight remove');
+			return highlight_spans(content, 'highlight add');
 		})
 		.replace(/ {9}([^ ][^]+?) {9}/g, (_, content) => {
 			return highlight_spans(content, 'highlight');

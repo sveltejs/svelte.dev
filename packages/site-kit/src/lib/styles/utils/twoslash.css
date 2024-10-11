@@ -5,3 +5,8 @@
 		display: none;
 	}
 }
+
+.twoslash-error-line {
+	visibility: hidden;
+	height: 0;
+}
