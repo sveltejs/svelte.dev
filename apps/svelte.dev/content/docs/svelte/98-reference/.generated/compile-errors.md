@@ -1,7 +1,3 @@
----
-title: 'Compiler errors'
----
-
 ### animation_duplicate
 
 ```
@@ -947,4 +943,3 @@ Unexpected end of input
 ```
 Void elements cannot have children or closing tags
 ```
-
