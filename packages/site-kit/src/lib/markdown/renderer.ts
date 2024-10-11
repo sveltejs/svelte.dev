@@ -203,6 +203,17 @@ export async function render_content_markdown(
 				let { source, options } = parse_options(token.text, token.lang);
 				source = adjust_tab_indentation(source, token.lang);
 
+				const match = /((?:[\s\S]+)\/\/ ---cut---\n)?([\s\S]+)/.exec(source)!;
+
+				const prelude = match[1];
+
+				source = match[2].replace(
+					/(\+\+\+|---|:::)/g,
+					(_, delimiter: keyof typeof delimiter_substitutes) => {
+						return delimiter_substitutes[delimiter];
+					}
+				);
+
 				const converted =
 					token.lang === 'js' || token.lang === 'svelte'
 						? await generate_ts_from_js(source, token.lang, options)
@@ -228,6 +239,7 @@ export async function render_content_markdown(
 				html += '</div>';
 
 				html += await syntax_highlight({
+					prelude,
 					filename,
 					language: token.lang,
 					source,
@@ -237,6 +249,7 @@ export async function render_content_markdown(
 
 				if (converted) {
 					html += await syntax_highlight({
+						prelude,
 						filename,
 						language: token.lang === 'js' ? 'ts' : token.lang,
 						source: converted,
@@ -315,7 +328,16 @@ async function generate_ts_from_js(
 		// config files have no .ts equivalent
 		if (options.file === 'svelte.config.js') return;
 
-		return await convert_to_ts(code.replace(/\/\/\/ file: .+?\n/, ''));
+		let [before, after] = code.split('// ---cut---\n');
+
+		if (!after) {
+			after = before;
+			before = '';
+		}
+
+		const converted = await convert_to_ts(after.replace(/\/\/\/ file: .+?\n/, ''));
+
+		return converted && [before, converted].join('// ---cut---\n');
 	}
 
 	// Assumption: no module blocks
@@ -472,20 +494,7 @@ async function convert_to_ts(js_code: string, indent = '', offset = '') {
 		code.appendLeft(insertion_point, offset + import_statements + '\n');
 	}
 
-	let transformed = await prettier.format(code.toString(), {
-		printWidth: 100,
-		parser: 'typescript',
-		useTabs: true,
-		singleQuote: true,
-		trailingComma: 'none'
-	});
-
-	// Indent transformed's each line by 2
-	transformed = transformed
-		.replace(/\n$/, '')
-		.split('\n')
-		.map((line) => indent + line)
-		.join('\n');
+	let transformed = code.toString();
 
 	return transformed === js_code ? undefined : transformed.replace(/\n\s*\n\s*\n/g, '\n\n');
 
@@ -624,6 +633,7 @@ function highlight_spans(content: string, classname: string) {
 }
 
 async function syntax_highlight({
+	prelude,
 	source,
 	filename,
 	language,
@@ -638,13 +648,6 @@ async function syntax_highlight({
 }) {
 	let html = '';
 
-	source = source.replace(
-		/(\+\+\+|---|:::)/g,
-		(_, delimiter: keyof typeof delimiter_substitutes) => {
-			return delimiter_substitutes[delimiter];
-		}
-	);
-
 	if (/^(dts|yaml|yml)/.test(language)) {
 		html = replace_blank_lines(
 			await codeToHtml(source, {
@@ -657,7 +660,7 @@ async function syntax_highlight({
 			let banner = twoslashBanner?.(filename, source, language, options);
 
 			if (banner) {
-				banner = '// @filename: injected.d.ts\n' + banner;
+				banner = '// @filename: injected.d.ts\n' + banner + '\n' + prelude;
 
 				if (source.includes('// @filename:')) {
 					source = source.replace('// @filename:', `${banner}\n\n// @filename:`);
