@@ -275,13 +275,14 @@ export async function render_content_markdown(
 			return smart_quotes(token.text, true);
 		},
 		heading({ tokens, depth }) {
-			const text = this.parser!.parseInline(tokens).replace(/<\/?code>/g, '');
+			const text = this.parser!.parseInline(tokens);
+			const html = text.replace(/<\/?code>/g, '');
 
 			headings[depth - 1] = slugify(text);
 			headings.length = depth;
 			const slug = headings.filter(Boolean).join('-');
 
-			return `<h${depth} id="${slug}"><span>${text}</span><a href="#${slug}" class="permalink" aria-label="permalink"></a></h${depth}>`;
+			return `<h${depth} id="${slug}"><span>${html}</span><a href="#${slug}" class="permalink" aria-label="permalink"></a></h${depth}>`;
 		},
 		code({ text }) {
 			return snippets.get(text);
