@@ -51,8 +51,7 @@
 
 				figcaption {
 					color: var(--sk-text-4);
-					text-align: left;
-					font-size: var(--sk-font-size-body-small);
+					font: var(--sk-font-body-small);
 				}
 			}
 
@@ -66,20 +65,11 @@
 				width: 16rem;
 				z-index: 2;
 				color: var(--sk-text-4);
-				font-size: var(--sk-font-size-body-small);
+				font: var(--sk-font-body-small);
 
 				p {
 					color: var(--sk-text-4);
-					font-family: var(--sk-font-family-body);
-					font-size: var(--sk-font-size-body-small);
-
-					&:first-child {
-						margin-top: 0;
-					}
-
-					&:last-child {
-						margin-bottom: 0;
-					}
+					font: inherit;
 				}
 			}
 
@@ -124,7 +114,7 @@
 	}
 
 	.standfirst {
-		font-size: var(--sk-font-size-body-small);
+		font: var(--sk-font-body-small);
 		color: var(--sk-text-3);
 		margin: 0 0 1em 0;
 	}

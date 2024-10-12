@@ -112,7 +112,7 @@
 	}
 
 	.controls a {
-		font-size: var(--sk-font-size-body-small);
+		font: var(--sk-font-body-small);
 	}
 
 	.controls span.faded {

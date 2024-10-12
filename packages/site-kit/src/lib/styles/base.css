@@ -44,8 +44,16 @@ body {
 p,
 ul,
 ol {
-	font-size: var(--sk-font-size-body);
+	font: var(--sk-font-body);
 	margin: 1em 0;
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
 }
 
 a {
@@ -163,7 +171,7 @@ a {
 /*  tables --------------------------------- */
 table {
 	width: 100%;
-	font-size: var(--sk-font-size-body-small);
+	font: var(--sk-font-body-small);
 }
 
 td,

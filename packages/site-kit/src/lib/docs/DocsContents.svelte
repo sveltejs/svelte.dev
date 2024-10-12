@@ -96,8 +96,7 @@
 
 	.page {
 		display: block;
-		font-size: var(--sk-font-size-body-small);
-		font-family: var(--sk-font-family-body);
+		font: var(--sk-font-body-small);
 	}
 
 	[aria-current='page'] {

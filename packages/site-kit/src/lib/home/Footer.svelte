@@ -43,7 +43,7 @@
 <style>
 	footer {
 		max-width: 120rem;
-		font-size: var(--sk-font-size-body-small);
+		font: var(--sk-font-body-small);
 		padding: 0 var(--sk-page-padding-side);
 		margin: 0 auto;
 		display: grid;
@@ -67,9 +67,7 @@
 
 	.links a {
 		color: var(--sk-text-2);
-		font-size: var(--sk-font-size-body-small);
 		display: block;
-		line-height: 1.8;
 	}
 
 	.open-source {

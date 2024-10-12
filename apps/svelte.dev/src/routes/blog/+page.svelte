@@ -96,7 +96,6 @@
 			display: block;
 			text-decoration: none;
 			color: var(--sk-text-2);
-			font-size: var(--sk-font-size-body);
 
 			&:hover h2 {
 				text-decoration: underline;
@@ -104,7 +103,7 @@
 		}
 
 		p {
-			font-size: var(--sk-font-size-body-small);
+			font: var(--sk-font-body-small);
 			color: var(--sk-text-3);
 			margin: 0 0 0.5em 0;
 		}
@@ -162,9 +161,7 @@
 
 			a {
 				display: block;
-				font-family: var(--sk-font-family-body);
-				font-weight: 400;
-				font-size: var(--sk-font-size-body);
+				font: var(--sk-font-body);
 				color: var(--sk-text-2);
 			}
 		}

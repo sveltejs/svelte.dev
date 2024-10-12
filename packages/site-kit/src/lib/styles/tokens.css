@@ -41,6 +41,8 @@
 	--sk-font-h1: 500 var(--sk-font-size-h1) / 1.2 var(--sk-font-family-heading);
 	--sk-font-h2: 500 var(--sk-font-size-h2) / 1.2 var(--sk-font-family-heading);
 	--sk-font-h3: 500 var(--sk-font-size-h3) / 1.2 var(--sk-font-family-heading);
+	--sk-font-body: 400 var(--sk-font-size-body) / 1.5 var(--sk-font-family-body);
+	--sk-font-body-small: 400 var(--sk-font-size-body-small) / 1.5 var(--sk-font-family-body);
 
 	/* Base colors */
 	--sk-theme-1-hsl: 12, 93%, 43%;

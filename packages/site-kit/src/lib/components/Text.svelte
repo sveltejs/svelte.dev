@@ -99,12 +99,6 @@
 			margin-top: 5rem;
 		}
 
-		p,
-		ol,
-		ul {
-			margin: 1em 0;
-		}
-
 		code,
 		kbd {
 			white-space: pre-wrap;
@@ -406,7 +400,7 @@
 		}
 
 		small {
-			font-size: var(--sk-font-size-body-small);
+			font: var(--sk-font-body-small);
 			float: right;
 			pointer-events: all;
 			color: var(--sk-theme-1);
@@ -529,8 +523,7 @@
 				align-items: center;
 				height: 3rem;
 				color: var(--sk-text-4);
-				font-style: normal;
-				font-size: var(--sk-font-size-body-small);
+				font: var(--sk-font-body-small);
 				user-select: none;
 
 				&:hover {

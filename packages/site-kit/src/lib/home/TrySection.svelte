@@ -67,7 +67,7 @@
 
 	.copy {
 		text-align: left;
-		font-size: var(--sk-font-size-body);
+		font: var(--sk-font-body);
 	}
 
 	h2 {
