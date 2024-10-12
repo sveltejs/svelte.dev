@@ -666,32 +666,28 @@ async function syntax_highlight({
 				theme
 			})
 		);
-	} else if (/^(js|ts)$/.test(language)) {
+	} else if (language === 'js' || language === 'ts') {
+		let banner = twoslashBanner?.(filename, source, language, options);
+
+		if (banner) {
+			banner = '// @filename: injected.d.ts\n' + banner;
+		}
+
+		prelude = (banner ?? '') + '\n' + (prelude ?? '// ---cut---\n');
+
+		if (language === 'ts') {
+			prelude = prelude.replace(/(\/\/ @filename: .+)\.js$/gm, '$1.ts');
+		}
+
+		/** We need to stash code wrapped in `---` highlights, because otherwise TS will error on e.g. bad syntax, duplicate declarations */
+		const redactions: string[] = [];
+
+		const redacted = source.replace(/( {13}(?:[^ ][^]+?) {13})/g, (_, content) => {
+			redactions.push(content);
+			return ' '.repeat(content.length);
+		});
 		try {
-			let banner = twoslashBanner?.(filename, source, language, options);
-
-			if (banner) {
-				banner = '// @filename: injected.d.ts\n' + banner + '\n' + prelude;
-
-				if (source.includes('// @filename:')) {
-					source = source.replace('// @filename:', `${banner}\n\n// @filename:`);
-				} else {
-					source = source.replace(
-						/^(?!\/\/ @)/m,
-						`${banner}\n\n// @filename: index.${language}\n// ---cut---\n`
-					);
-				}
-			}
-
-			/** We need to stash code wrapped in `---` highlights, because otherwise TS will error on e.g. bad syntax, duplicate declarations */
-			const redactions: string[] = [];
-
-			const redacted = source.replace(/( {13}(?:[^ ][^]+?) {13})/g, (_, content) => {
-				redactions.push(content);
-				return ' '.repeat(content.length);
-			});
-
-			html = await codeToHtml(redacted, {
+			html = await codeToHtml(prelude + redacted, {
 				lang: 'ts',
 				theme,
 				transformers: [
@@ -708,7 +704,7 @@ async function syntax_highlight({
 			html = html.replace(/ {27,}/g, () => redactions.shift()!);
 		} catch (e) {
 			console.error((e as Error).message);
-			console.warn(source);
+			console.warn(prelude + redacted);
 			throw new Error(`Error compiling snippet in ${filename}`);
 		}
 
