@@ -84,4 +84,4 @@ We're returning a response with a [201 Created](https://http.dog/201) status and
 />
 ```
 
-> You should only mutate `data` in such a way that you'd get the same result by reloading the page.
+> [!NOTE] You should only mutate `data` in such a way that you'd get the same result by reloading the page.

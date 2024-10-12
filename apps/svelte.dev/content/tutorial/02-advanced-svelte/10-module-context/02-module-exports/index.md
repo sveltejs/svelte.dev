@@ -40,4 +40,4 @@ We can now import `stopAll` in `App.svelte`...
 </div>
 ```
 
-> You can't have a default export, because the component _is_ the default export.
+> [!NOTE] You can't have a default export, because the component _is_ the default export.

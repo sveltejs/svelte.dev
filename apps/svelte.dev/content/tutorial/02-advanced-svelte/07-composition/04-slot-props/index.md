@@ -50,4 +50,4 @@ Finally, get rid of the placeholder variable, which we no longer need:
 </script>
 ```
 
-> Named slots can also have props; use the `let` directive on an element with a `slot="..."` attribute, instead of on the component itself.
+> [!NOTE] Named slots can also have props; use the `let` directive on an element with a `slot="..."` attribute, instead of on the component itself.

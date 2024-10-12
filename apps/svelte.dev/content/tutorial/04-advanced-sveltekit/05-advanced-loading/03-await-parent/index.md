@@ -25,7 +25,7 @@ export async function load(+++{ parent }+++) {
 }
 ```
 
-> Notice that a [universal](/tutorial/kit/universal-load-functions) `load` function can get data from a parent _server_ `load` function. The reverse is not true — a server load function can only get parent data from another server load function.
+> [!NOTE] Notice that a [universal](/tutorial/kit/universal-load-functions) `load` function can get data from a parent _server_ `load` function. The reverse is not true — a server load function can only get parent data from another server load function.
 
 Finally, in `src/routes/sum/+page.js`, get parent data from both `load` functions:
 
@@ -37,4 +37,4 @@ export async function load(+++{ parent }+++) {
 }
 ```
 
-> Take care not to introduce waterfalls when using `await parent()`. If you can `fetch` other data that is not dependent on parent data, do that first.
+> [!NOTE] Take care not to introduce waterfalls when using `await parent()`. If you can `fetch` other data that is not dependent on parent data, do that first.

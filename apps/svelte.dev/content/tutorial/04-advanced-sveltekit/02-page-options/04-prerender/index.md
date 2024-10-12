@@ -19,4 +19,4 @@ Here in the tutorial, this won't have any observable effect, since the applicati
 
 Not all pages can be prerendered. The basic rule is this: for content to be prerenderable, any two users hitting it directly must get the same content from the server, and the page must not contain form actions. Pages with dynamic route parameters can be prerendered as long as they are specified in the [`prerender.entries`](https://kit.svelte.dev/docs/configuration#prerender) configuration or can be reached by following links from pages that _are_ in `prerender.entries`.
 
-> Setting `prerender` to `true` inside your root `+layout.server.js` effectively turns SvelteKit into a static site generator (SSG).
+> [!NOTE] Setting `prerender` to `true` inside your root `+layout.server.js` effectively turns SvelteKit into a static site generator (SSG).

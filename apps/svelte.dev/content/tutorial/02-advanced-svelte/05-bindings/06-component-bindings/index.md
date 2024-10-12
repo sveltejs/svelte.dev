@@ -14,4 +14,4 @@ Just as you can bind to properties of DOM elements, you can bind to component pr
 
 Now, when the user interacts with the keypad, the value of `pin` in the parent component is immediately updated.
 
-> Use component bindings sparingly. It can be difficult to track the flow of data around your application if you have too many of them, especially if there is no 'single source of truth'.
+> [!NOTE] Use component bindings sparingly. It can be difficult to track the flow of data around your application if you have too many of them, especially if there is no 'single source of truth'.

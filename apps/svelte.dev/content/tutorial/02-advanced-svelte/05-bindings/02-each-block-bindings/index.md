@@ -22,4 +22,4 @@ You can even bind to properties inside an `each` block.
 {/each}
 ```
 
-> Note that interacting with these `<input>` elements will mutate the array. If you prefer to work with immutable data, you should avoid these bindings and use event handlers instead.
+> [!NOTE] Note that interacting with these `<input>` elements will mutate the array. If you prefer to work with immutable data, you should avoid these bindings and use event handlers instead.

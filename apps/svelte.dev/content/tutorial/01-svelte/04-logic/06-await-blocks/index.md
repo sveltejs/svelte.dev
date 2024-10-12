@@ -15,7 +15,7 @@ Most web applications have to deal with asynchronous data at some point. Svelte 
 {/await}+++
 ```
 
-> Only the most recent `promise` is considered, meaning you don't need to worry about race conditions.
+> [!NOTE] Only the most recent `promise` is considered, meaning you don't need to worry about race conditions.
 
 If you know that your promise can't reject, you can omit the `catch` block. You can also omit the first block if you don't want to show anything until the promise resolves:
 

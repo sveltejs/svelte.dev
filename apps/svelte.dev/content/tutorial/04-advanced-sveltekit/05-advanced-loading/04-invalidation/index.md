@@ -38,4 +38,4 @@ In `src/routes/[...timezone]/+page.svelte`, add an `onMount` callback that calls
 </h1>
 ```
 
-> You can also pass a function to `invalidate`, in case you want to invalidate based on a pattern and not specific URLs
+> [!NOTE] You can also pass a function to `invalidate`, in case you want to invalidate based on a pattern and not specific URLs

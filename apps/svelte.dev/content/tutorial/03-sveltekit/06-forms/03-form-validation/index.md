@@ -101,4 +101,4 @@ In `src/routes/+page.svelte`, we can access the returned value via the `form` pr
 	</form>
 ```
 
-> You can also return data from an action _without_ wrapping it in `fail` — for example to show a 'success!' message when data was saved — and it will be available via the `form` prop.
+> [!NOTE] You can also return data from an action _without_ wrapping it in `fail` — for example to show a 'success!' message when data was saved — and it will be available via the `form` prop.

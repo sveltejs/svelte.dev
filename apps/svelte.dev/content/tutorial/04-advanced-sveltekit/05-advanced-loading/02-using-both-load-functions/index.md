@@ -22,4 +22,4 @@ export async function load(+++{ data }+++) {
 }
 ```
 
-> Note that the data isn't merged — we must explicitly return `message` from the universal `load` function.
+> [!NOTE] Note that the data isn't merged — we must explicitly return `message` from the universal `load` function.

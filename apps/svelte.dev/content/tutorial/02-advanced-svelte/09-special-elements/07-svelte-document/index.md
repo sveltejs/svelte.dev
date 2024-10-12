@@ -11,4 +11,4 @@ Add the `selectionchange` handler to the `<svelte:document>` tag:
 <svelte:document +++on:selectionchange={handleSelectionChange}+++ />
 ```
 
-> Avoid `mouseenter` and `mouseleave` handlers on this element, as these events are not fired on `document` in all browsers. Use `<svelte:body>` instead.
+> [!NOTE] Avoid `mouseenter` and `mouseleave` handlers on this element, as these events are not fired on `document` in all browsers. Use `<svelte:body>` instead.

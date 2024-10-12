@@ -16,7 +16,7 @@ You can build your entire app with Svelte (for example, using an application fra
 
 ## How to use this tutorial
 
-> You'll need to have basic familiarity with HTML, CSS and JavaScript to understand Svelte.
+> [!NOTE] You'll need to have basic familiarity with HTML, CSS and JavaScript to understand Svelte.
 
 This tutorial is split into four main parts:
 

@@ -15,4 +15,4 @@ We can achieve this with a _global_ transition, which plays when _any_ block con
 </div>
 ```
 
-> In Svelte 3, transitions were global by default and you had to use the `|local` modifier to make them local.
+> [!NOTE] In Svelte 3, transitions were global by default and you had to use the `|local` modifier to make them local.
