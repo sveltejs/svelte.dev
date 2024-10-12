@@ -99,7 +99,8 @@
 			top: 0;
 			filter: drop-shadow(0.2rem 0.4rem 2rem rgb(0 0 0 / 0.3));
 			overflow: hidden;
-			transition: scale 0.2s;
+			transition: 0.2s;
+			transition-property: scale, filter;
 
 			&:nth-child(1) {
 				top: 0%;
@@ -131,6 +132,11 @@
 			height: auto;
 			object-fit: contain;
 			border-radius: var(--sk-border-radius);
+			filter: grayscale(1);
+
+			a:hover & {
+				filter: none;
+			}
 		}
 	}
 
