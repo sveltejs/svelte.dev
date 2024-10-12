@@ -15,12 +15,7 @@ interface SnippetOptions {
 	copy: boolean;
 }
 
-type TwoslashBanner = (
-	filename: string,
-	content: string,
-	language: string,
-	options: SnippetOptions
-) => string;
+type TwoslashBanner = (filename: string, content: string) => string;
 
 // Supports js, svelte, yaml files
 const METADATA_REGEX =
@@ -209,11 +204,17 @@ export async function render_content_markdown(
 				let { source, options } = parse_options(token.text, token.lang);
 				source = adjust_tab_indentation(source, token.lang);
 
-				const match = /((?:[\s\S]+)\/\/ ---cut---\n)?([\s\S]+)/.exec(source)!;
+				let prelude = '';
 
-				const prelude = match[1];
+				if ((token.lang === 'js' || token.lang === 'ts') && check) {
+					const match = /((?:[\s\S]+)\/\/ ---cut---\n)?([\s\S]+)/.exec(source)!;
+					[, prelude = '// ---cut---\n', source] = match;
 
-				source = match[2].replace(
+					const banner = twoslashBanner?.(filename, source);
+					if (banner) prelude = '// @filename: injected.d.ts\n' + banner + '\n' + prelude;
+				}
+
+				source = source.replace(
 					/(\+\+\+|---|:::)/g,
 					(_, delimiter: keyof typeof delimiter_substitutes) => {
 						return delimiter_substitutes[delimiter];
@@ -244,26 +245,16 @@ export async function render_content_markdown(
 
 				html += '</div>';
 
-				html += await syntax_highlight({
-					prelude,
-					filename,
-					language: token.lang,
-					source,
-					twoslashBanner,
-					options,
-					check
-				});
+				html += await syntax_highlight({ filename, language: token.lang, prelude, source, check });
 
 				if (converted) {
-					html += await syntax_highlight({
-						prelude,
-						filename,
-						language: token.lang === 'js' ? 'ts' : token.lang,
-						source: converted,
-						twoslashBanner,
-						options,
-						check
-					});
+					const language = token.lang === 'js' ? 'ts' : token.lang;
+
+					if (language === 'ts') {
+						prelude = prelude.replace(/(\/\/ @filename: .+)\.js$/gm, '$1.ts');
+					}
+
+					html += await syntax_highlight({ filename, language, prelude, source: converted, check });
 				}
 
 				html += '</div>';
@@ -657,16 +648,12 @@ async function syntax_highlight({
 	source,
 	filename,
 	language,
-	twoslashBanner,
-	options,
 	check
 }: {
 	prelude: string;
 	source: string;
 	filename: string;
 	language: string;
-	twoslashBanner?: TwoslashBanner;
-	options: SnippetOptions;
 	check: boolean;
 }) {
 	let html = '';
@@ -679,18 +666,6 @@ async function syntax_highlight({
 			})
 		);
 	} else if (language === 'js' || language === 'ts') {
-		let banner = twoslashBanner?.(filename, source, language, options);
-
-		if (banner) {
-			banner = '// @filename: injected.d.ts\n' + banner;
-		}
-
-		prelude = (banner ?? '') + '\n' + (prelude ?? '// ---cut---\n');
-
-		if (language === 'ts') {
-			prelude = prelude.replace(/(\/\/ @filename: .+)\.js$/gm, '$1.ts');
-		}
-
 		/** We need to stash code wrapped in `---` highlights, because otherwise TS will error on e.g. bad syntax, duplicate declarations */
 		const redactions: string[] = [];
 
@@ -698,6 +673,7 @@ async function syntax_highlight({
 			redactions.push(content);
 			return ' '.repeat(content.length);
 		});
+
 		try {
 			html = await codeToHtml(prelude + redacted, {
 				lang: 'ts',
