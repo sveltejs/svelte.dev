@@ -10,7 +10,6 @@ export const SHIKI_LANGUAGE_MAP = {
 	js: 'javascript',
 	dts: 'typescript',
 	css: 'css',
-	diff: 'diff',
 	ts: 'typescript',
 	'': ''
 };

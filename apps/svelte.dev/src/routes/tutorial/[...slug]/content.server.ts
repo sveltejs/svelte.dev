@@ -107,7 +107,6 @@ const languages = {
 	svelte: 'svelte',
 	js: 'javascript',
 	css: 'css',
-	diff: 'diff',
 	ts: 'typescript',
 	'': ''
 };
@@ -135,16 +134,6 @@ const default_renderer: Partial<Renderer> = {
 				options[key] = value;
 				return '';
 			})
-			.replace(/^([\-\+])?((?:    )+)/gm, (match, prefix = '', spaces) => {
-				if (prefix && lang !== 'diff') return match;
-
-				// for no good reason at all, marked replaces tabs with spaces
-				let tabs = '';
-				for (let i = 0; i < spaces.length; i += 4) {
-					tabs += '\t';
-				}
-				return prefix + tabs;
-			})
 			.replace(/(\+\+\+|---|:::)/g, (_, delimiter: keyof typeof delimiter_substitutes) => {
 				return delimiter_substitutes[delimiter];
 			})
@@ -158,37 +147,13 @@ const default_renderer: Partial<Renderer> = {
 
 		html += '</div>';
 
-		if (lang === 'diff') {
-			const lines = source.split('\n').map((content) => {
-				let type = null;
-				if (/^[\+\-]/.test(content)) {
-					type = content[0] === '+' ? 'inserted' : 'deleted';
-					content = content.slice(1);
-				}
+		const plang = languages[lang as keyof typeof languages];
+		const highlighted = plang
+			? // TODO use shiki here rather than Prism?
+				PrismJS.highlight(source, PrismJS.languages[plang], lang)
+			: escape_html(source);
 
-				return {
-					type,
-					content: escape_html(content)
-				};
-			});
-
-			html += `<pre class="language-diff"><code>${lines
-				.map((line) => {
-					if (line.type) return `<span class="${line.type}">${line.content}\n</span>`;
-					return line.content + '\n';
-				})
-				.join('')}</code></pre>`;
-		} else {
-			const plang = languages[lang as keyof typeof languages];
-			const highlighted = plang
-				? // TODO use shiki here rather than Prism?
-					PrismJS.highlight(source, PrismJS.languages[plang], lang)
-				: escape_html(source);
-
-			html += `<pre class='language-${plang}'><code>${highlighted}</code></pre>`;
-		}
-
-		html += '</div>';
+		html += `<pre class='language-${plang}'><code>${highlighted}</code></pre></div>`;
 
 		return html
 			.replace(/ {13}([^ ][^]+?) {13}/g, (_, content) => {

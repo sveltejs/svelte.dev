@@ -200,6 +200,10 @@ export async function render_content_markdown(
 			if (token.type === 'code') {
 				if (snippets.get(token.text)) return;
 
+				if (token.lang === 'diff') {
+					throw new Error('Use +++ and --- annotations instead of diff blocks');
+				}
+
 				let { source, options } = parse_options(token.text, token.lang);
 				source = adjust_tab_indentation(source, token.lang);
 
@@ -619,10 +623,10 @@ function parse_options(source: string, language: string) {
  * This function turns them back into tabs (plus leftover spaces for e.g. `\t * some JSDoc`)
  */
 function adjust_tab_indentation(source: string, language: string) {
-	return source.replace(/^([\-\+])?((?:    )+)/gm, (match, prefix = '', spaces) => {
-		if ((prefix && language !== 'diff') || language === 'yaml') return match;
+	return source.replace(/^((?:    )+)/gm, (match, spaces) => {
+		if (language === 'yaml') return match;
 
-		return prefix + '\t'.repeat(spaces.length / 4) + ' '.repeat(spaces.length % 4);
+		return '\t'.repeat(spaces.length / 4) + ' '.repeat(spaces.length % 4);
 	});
 }
 
@@ -711,26 +715,6 @@ async function syntax_highlight({
 		}
 
 		html = replace_blank_lines(html);
-	} else if (language === 'diff') {
-		const lines = source.split('\n').map((content) => {
-			let type = null;
-			if (/^[\+\-]/.test(content)) {
-				type = content[0] === '+' ? 'inserted' : 'deleted';
-				content = content.slice(1);
-			}
-
-			return {
-				type,
-				content: content.replace(/</g, '&lt;')
-			};
-		});
-
-		html = `<pre class="language-diff" style="background-color: var(--shiki-color-background)"><code>${lines
-			.map((line) => {
-				if (line.type) return `<span class="${line.type}">${line.content}\n</span>`;
-				return line.content + '\n';
-			})
-			.join('')}</code></pre>`;
 	} else {
 		const highlighted = await codeToHtml(source, {
 			lang: SHIKI_LANGUAGE_MAP[language as keyof typeof SHIKI_LANGUAGE_MAP],
