@@ -10,15 +10,15 @@ Rename `src/routes/[path]` to `src/routes/[...path]`. The route now matches any 
 
 > Other, more specific routes will be tested first, making rest parameters useful as 'catch-all' routes. For example, if you needed a custom 404 page for pages inside `/categories/...`, you could add these files:
 >
-> ```diff
+> ```tree
 > src/routes/
 > ├ categories/
 > │ ├ animal/
 > │ ├ mineral/
 > │ ├ vegetable/
-> +│ ├ [...catchall]/
-> +│ │ ├ +error.svelte
-> +│ │ └ +page.server.js
+> +++│ ├ [...catchall]/
+> │ │ ├ +error.svelte
+> │ │ └ +page.server.js+++
 > ```
 >
 > Inside the `+page.server.js` file, `error(404)` inside `load`.
