@@ -300,10 +300,6 @@
 					border-left: 5px solid var(--sk-theme-2);
 				}
 
-				&.language-diff code {
-					color: var(--sk-code-diff-base);
-				}
-
 				.highlight {
 					--color: rgba(220, 220, 0, 0.2);
 					background: var(--color);
