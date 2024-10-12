@@ -22,9 +22,8 @@ In Svelte 4, a `let` declaration at the top level of a component was implicitly 
 
 Nothing else changes. `count` is still the number itself, and you read and write directly to it, without a wrapper like `.value` or `getCount()`.
 
-#### Why we did this
-
-`let` being implicitly reactive at the top level worked great, but it meant that reactivity was constrained - a `let` declaration anywhere else was not reactive. This forced you to resort to using stores when refactoring code out of the top level of components for reuse. This meant you had to learn an entirely separate reactivity model, and the result often wasn't as nice to work with. Because reactivity is more explicit in Svelte 5, you can keep using the same API in an outside the top level of components. Head to TODO LINK TO TUTORIAL to learn more.
+> [!DETAILS] Why we did this
+> `let` being implicitly reactive at the top level worked great, but it meant that reactivity was constrained - a `let` declaration anywhere else was not reactive. This forced you to resort to using stores when refactoring code out of the top level of components for reuse. This meant you had to learn an entirely separate reactivity model, and the result often wasn't as nice to work with. Because reactivity is more explicit in Svelte 5, you can keep using the same API in an outside the top level of components. Head to TODO LINK TO TUTORIAL to learn more.
 
 ### $: -> $derived/$effect
 
@@ -52,26 +51,25 @@ A `$:` statement could also be used to create side effects. In Svelte 5, this is
 </script>
 ```
 
-#### Why we did this
-
-`$:` was a great shorthand and easy to get started with: you could slap a `$:` in front of most code and it would somehow work. This intuitiveness was also its drawback the more complicated your code became, because it wasn't as easy to reason about. Was the intent of the code to create a derivation, or a side effect? With `$derived` and `$effect`, you have a bit more up-front decision making to do (spoiler alert: 90% of the time you want `$derived`), but future-you and other developers on your team will have an easier time.
-
-There were also gotchas that were hard to spot:
-
-- `$:` only updated directly before rendering, which meant you could read stale values in-between rerenders
-- `$:` only ran once per tick, which meant that statements may run less often than you think
-- `$:` dependencies were determined through static analysis of the dependencies. This worked in most cases, but could break in subtle ways during a refactoring where dependencies would be for example moved into a function and no longer be visible as a result
-- `$:` statements were also ordered by using static analysis of the dependencies. In some cases there could be ties and the ordering would be wrong as a result, needing manual interventions. Ordering could also break while refactoring code and some dependencies no longer being visible as a result.
-
-Lastly, it wasn't TypeScript-friendly (our editor tooling had to jump through some hoops to make it valid for TypeScript), which was a blocker for making Svelte's reactivity model truly universal.
-
-`$derived` and `$effect` fix all of these by
-
-- always returning the latest value
-- running as often as needed to be stable
-- determining the dependencies at runtime, and therefore being immune to refactorings
-- executing dependencies as needed and therefore being immune to ordering problems
-- being TypeScript-friendly
+> [!DETAILS] Why we did this
+> `$:` was a great shorthand and easy to get started with: you could slap a `$:` in front of most code and it would somehow work. This intuitiveness was also its drawback the more complicated your code became, because it wasn't as easy to reason about. Was the intent of the code to create a derivation, or a side effect? With `$derived` and `$effect`, you have a bit more up-front decision making to do (spoiler alert: 90% of the time you want `$derived`), but future-you and other developers on your team will have an easier time.
+>
+> There were also gotchas that were hard to spot:
+>
+> - `$:` only updated directly before rendering, which meant you could read stale values in-between rerenders
+> - `$:` only ran once per tick, which meant that statements may run less often than you think
+> - `$:` dependencies were determined through static analysis of the dependencies. This worked in most cases, but could break in subtle ways during a refactoring where dependencies would be > for example moved into a function and no longer be visible as a result
+> - `$:` statements were also ordered by using static analysis of the dependencies. In some cases there could be ties and the ordering would be wrong as a result, needing manual > interventions. Ordering could also break while refactoring code and some dependencies no longer being visible as a result.
+>
+> Lastly, it wasn't TypeScript-friendly (our editor tooling had to jump through some hoops to make it valid for TypeScript), which was a blocker for making Svelte's reactivity model truly > universal.
+>
+> `$derived` and `$effect` fix all of these by
+>
+> - always returning the latest value
+> - running as often as needed to be stable
+> - determining the dependencies at runtime, and therefore being immune to refactorings
+> - executing dependencies as needed and therefore being immune to ordering problems
+> - being TypeScript-friendly
 
 ### export let -> $props
 
@@ -112,11 +110,10 @@ In Svelte 5, the `$props` rune makes this straightforward without any additional
 <button {class} {...---$$restProps---+++rest+++}>click me</button>
 ```
 
-#### Why we did this
-
-`export let` was one of the more controversial API decisions, and there was a lot of debate about whether you should think about a property being `export`ed or `import`ed. `$props` doesn't have this trait. It's also in line with the other runes, and the general thinking reduces to "everything special to reactivity in Svelte is a rune".
-
-There were also a lot of limitations around `export let`, which required additional API, as shown above. `$props` unite this in one syntactical concept that leans heavily on regular JavaScript destructuring syntax.
+> [!DETAILS] Why we did this
+> `export let` was one of the more controversial API decisions, and there was a lot of debate about whether you should think about a property being `export`ed or `import`ed. `$props` doesn't have this trait. It's also in line with the other runes, and the general thinking reduces to "everything special to reactivity in Svelte is a rune".
+>
+> There were also a lot of limitations around `export let`, which required additional API, as shown above. `$props` unite this in one syntactical concept that leans heavily on regular JavaScript destructuring syntax.
 
 ## Event changes
 
@@ -314,30 +311,29 @@ When spreading props, local event handlers must go _after_ the spread, or they r
 </button>
 ```
 
-### Why we did this
-
-`createEventDispatcher` was always a bit boilerplate-y:
-
-- import the function
-- call the function to get a dispatch function
-- call said dispatch function with a string and possibly a payload
-- retrieve said payload on the other end through a `.details` property, because the event itself was always a `CustomEvent`
-
-It was always possible to use component callback props, but because you had to listen to dom events using `on:`, it made sense to use `createEventDispatcher` for component events due to syntactical consiscency. Now that we have event attributes (`onclick`), it's the other way around: Callback props are now the more sensible thing to do.
-
-The removal of event modifiers is arguably one of the changes that seems like a step back for those who've liked the shorthand syntax of event modifiers. Given that they are not used that frequently, we traded a smaller surface area for more explicitness. Modifiers also were inconsistent, because most of them were only useable on Dom elements.
-
-Multiple listeners for the same event are also no longer possible, but it was something of an anti-pattern anyway, since it impedes readability: if there are many attributes, it becomes harder to spot that there are two handlers unless they are right next to each other. It also implies that the two handlers are independent, when in fact something like `event.stopImmediatePropagation()` inside `one` would prevent `two` from being called.
-
-By deprecating `createEventDispatcher` and the `on:` directive in favour of callback props and normal element properties, we:
-
-- reduce Svelte's learning curve
-- remove boilerplate, particularly around `createEventDispatcher`
-- remove the overhead of creating `CustomEvent` objects for events that may not even have listeners
-- add the ability to spread event handlers
-- add the ability to know which event handlers were provided to a component
-- add the ability to express whether a given event handler is required or optional
-- increase type safety (previously, it was effectively impossible for Svelte to guarantee that a component didn't emit a particular event)
+> [!DETAILS] Why we did this
+> `createEventDispatcher` was always a bit boilerplate-y:
+>
+> - import the function
+> - call the function to get a dispatch function
+> - call said dispatch function with a string and possibly a payload
+> - retrieve said payload on the other end through a `.details` property, because the event itself was always a `CustomEvent`
+>
+> It was always possible to use component callback props, but because you had to listen to dom events using `on:`, it made sense to use `createEventDispatcher` for component events due to > syntactical consiscency. Now that we have event attributes (`onclick`), it's the other way around: Callback props are now the more sensible thing to do.
+>
+> The removal of event modifiers is arguably one of the changes that seems like a step back for those who've liked the shorthand syntax of event modifiers. Given that they are not used that > frequently, we traded a smaller surface area for more explicitness. Modifiers also were inconsistent, because most of them were only useable on Dom elements.
+>
+> Multiple listeners for the same event are also no longer possible, but it was something of an anti-pattern anyway, since it impedes readability: if there are many attributes, it becomes > harder to spot that there are two handlers unless they are right next to each other. It also implies that the two handlers are independent, when in fact something like `event.> stopImmediatePropagation()` inside `one` would prevent `two` from being called.
+>
+> By deprecating `createEventDispatcher` and the `on:` directive in favour of callback props and normal element properties, we:
+>
+> - reduce Svelte's learning curve
+> - remove boilerplate, particularly around `createEventDispatcher`
+> - remove the overhead of creating `CustomEvent` objects for events that may not even have listeners
+> - add the ability to spread event handlers
+> - add the ability to know which event handlers were provided to a component
+> - add the ability to express whether a given event handler is required or optional
+> - increase type safety (previously, it was effectively impossible for Svelte to guarantee that a component didn't emit a particular event)
 
 ## Snippets instead of slots
 
@@ -427,16 +423,15 @@ In Svelte 4, you would pass data to a `<slot />` and then retrieve it with `let:
 {/if}
 ```
 
-### Why we did this
-
-Slots were easy to get started with, but the more advanced the use case became, the more involved and confusing the syntax became:
-
-- the `let:` syntax was confusing to many people as it _creates_ a variable whereas all other `:` directives _receive_ a variable
-- the scope of a variable declared with `let:` wasn't clear. In the example above, it may look like you can use the `item` slot prop in the `empty` slot, but that's not true
-- named slots had to be applied to an element using the `slot` attribute. Sometimes you didn't want to create an element, so we had to add the `<svelte:fragment>` API
-- named slots could also be applied to a component, which changed the semantics of where `let:` directives are available (even today us maintainers often don't know which way around it works)
-
-Snippets solve all of these problems by being much more readable and clear. At the same time they're more powerful as they allow you to define sections of UI that you can render _anywhere_, not just passing them as props to a component.
+> [!DETAILS] Why we did this
+> Slots were easy to get started with, but the more advanced the use case became, the more involved and confusing the syntax became:
+>
+> - the `let:` syntax was confusing to many people as it _creates_ a variable whereas all other `:` directives _receive_ a variable
+> - the scope of a variable declared with `let:` wasn't clear. In the example above, it may look like you can use the `item` slot prop in the `empty` slot, but that's not true
+> - named slots had to be applied to an element using the `slot` attribute. Sometimes you didn't want to create an element, so we had to add the `<svelte:fragment>` API
+> - named slots could also be applied to a component, which changed the semantics of where `let:` directives are available (even today us maintainers often don't know which way around it > works)
+>
+> Snippets solve all of these problems by being much more readable and clear. At the same time they're more powerful as they allow you to define sections of UI that you can render _anywhere_, not just passing them as props to a component.
 
 ## Migration script
 
@@ -521,7 +516,7 @@ app.$on('event', callback);---
 +++const app = mount(App, { target: document.getElementById("app"), events: { event: callback } });+++
 ```
 
-> Note that using `events` is discouraged — instead, [use callbacks](https://svelte-5-preview.vercel.app/docs/event-handlers)
+> [!NOTE] Note that using `events` is discouraged — instead, [use callbacks](https://svelte-5-preview.vercel.app/docs/event-handlers)
 
 For `$set`, use `$state` instead to create a reactive property object and manipulate it. If you're doing this inside a `.js` or `.ts` file, adjust the ending to include `.svelte`, i.e. `.svelte.js` or `.svelte.ts`.
 
