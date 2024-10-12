@@ -1,9 +1,12 @@
-<script>
-	import { Section } from '@sveltejs/site-kit/components';
-</script>
-
 <div class="outer">
-	<div class="copy">
+	<p class="definition">
+		<em>/ˈsvɛlt/</em>
+		<span class="description">
+			<span class="adjective"></span> attractively thin, graceful and stylish
+		</span>
+	</p>
+
+	<div class="blurb">
 		<p>
 			Svelte is a UI framework that uses a compiler to let you write breathtakingly concise
 			components that do minimal work in the browser, using languages you already know — HTML, CSS
@@ -45,7 +48,7 @@
 	</div>
 
 	<!-- svelte-ignore a11y_consider_explicit_label (the <enhanced:img> alt takes care of it)-->
-	<div class="container">
+	<div class="screenshots">
 		<a href="https://survey.stackoverflow.co/2024/technology#2-web-frameworks-and-technologies">
 			<enhanced:img alt="Stack Overflow 2024 Developer Survey" src="./stack-overflow.png"
 			></enhanced:img>
@@ -61,36 +64,30 @@
 	</div>
 </div>
 
-<!-- <Section>
-	<div class="container">
-		<enhanced:img alt="State of JavaScript 2023 screenshot" src="./state-of-js-chart.png"
-		></enhanced:img>
-	</div>
-</Section> -->
-
 <style>
 	.outer {
 		position: relative;
-		display: grid;
 		max-width: 120rem;
 		margin: 4rem auto;
 		padding: 0 var(--sk-page-padding-side);
+		display: grid;
 		gap: 4rem;
-
-		@media (min-width: 960px) {
-			margin: 4em auto;
-			grid-template-columns: 2fr 1fr;
-			/* align-items: center; */
-			/* gap: 2rem; */
-
-			.copy {
-				/* order: 2; */
-				text-wrap: balance;
-			}
-		}
+		grid-template-areas:
+			'definition'
+			'blurb'
+			'screenshots';
 	}
 
-	.container {
+	.definition {
+		grid-area: definition;
+	}
+
+	.blurb {
+		grid-area: blurb;
+	}
+
+	.screenshots {
+		grid-area: screenshots;
 		position: relative;
 		width: 100%;
 		aspect-ratio: 16 / 10;
@@ -100,8 +97,9 @@
 			display: block;
 			width: 100%;
 			top: 0;
-			filter: drop-shadow(0.2rem 0.4rem 1rem rgb(0 0 0 / 0.1));
+			filter: drop-shadow(0.2rem 0.4rem 2rem rgb(0 0 0 / 0.3));
 			overflow: hidden;
+			transition: scale 0.2s;
 
 			&:nth-child(1) {
 				top: 0%;
@@ -122,22 +120,111 @@
 				width: 50%;
 				rotate: 1.5deg;
 			}
+
+			&:hover {
+				scale: 1.05;
+			}
 		}
 
 		img {
 			width: 100%;
 			height: auto;
-			border-radius: var(--sk-border-radius);
-
 			object-fit: contain;
-			/* mask-image: linear-gradient(to right, transparent, white),
-				linear-gradient(to top, transparent, white); */
-			/* mask-image: radial-gradient(ellipse 200% 400% at 100% 50%, white, white 20%, transparent);
-			mask-size: 100%; */
-			/* left: -10rem; */
 			border-radius: var(--sk-border-radius);
+		}
+	}
 
-			/* rotate: -2deg; */
+	.definition {
+		position: relative;
+		display: flex;
+		align-items: start;
+		justify-content: center;
+		margin: 0 auto;
+		gap: 1rem;
+		grid-column: 1 / 3;
+		width: 100%;
+
+		em {
+			font-style: normal;
+			font-size: var(--sk-font-size-h1);
+			color: var(--sk-theme-1);
+			text-wrap: nowrap;
+			line-height: 1;
+		}
+
+		.description {
+			position: relative;
+			font: var(--sk-font-ui-medium);
+			bottom: 0.2em;
+			text-wrap: balance;
+			width: 16rem;
+		}
+
+		.adjective {
+			position: relative;
+			padding: 0.25em 0.5em 0.1em;
+			line-height: 1;
+			text-transform: uppercase;
+			background: var(--sk-text-2);
+			border-radius: var(--sk-border-radius);
+			font: var(--sk-font-ui-small);
+			color: var(--sk-back-2);
+
+			&::after {
+				content: 'adj.';
+			}
+		}
+	}
+
+	@media (min-width: 800px) {
+		.definition {
+			align-items: baseline;
+			justify-content: start;
+
+			.description {
+				flex-direction: row;
+				gap: 1rem;
+				width: auto;
+			}
+
+			.adjective::after {
+				content: 'adjective';
+			}
+		}
+	}
+
+	@media (min-width: 960px) {
+		.outer {
+			display: grid;
+			margin: 4em auto;
+			grid-template-columns: 1fr 1fr;
+			grid-template-areas:
+				'definition definition'
+				'blurb      screenshots';
+
+			.blurb {
+				text-wrap: balance;
+			}
+		}
+	}
+
+	@media (min-width: 1140px) {
+		.outer {
+			grid-template-areas:
+				'definition screenshots'
+				'blurb      screenshots';
+		}
+
+		.definition {
+			grid-area: definition;
+		}
+
+		.blurb {
+			grid-area: blurb;
+		}
+
+		.screenshots {
+			grid-area: screenshots;
 		}
 	}
 </style>
