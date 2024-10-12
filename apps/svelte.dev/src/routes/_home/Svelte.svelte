@@ -93,7 +93,7 @@
 				line-height: 1;
 				margin: 0 1em;
 				text-transform: uppercase;
-				font-size: var(--sk-font-size-ui-medium);
+				font: var(--sk-font-ui-small);
 				background: var(--sk-text-2);
 				border-radius: var(--sk-border-radius);
 				font-family: var(--sk-font-family-ui);

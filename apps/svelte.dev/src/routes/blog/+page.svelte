@@ -120,15 +120,20 @@
 			gap: 3em;
 		}
 
+		.featured,
+		.feed {
+			&::before {
+				font: var(--sk-font-ui-medium);
+				text-transform: uppercase;
+				color: var(--sk-text-4);
+			}
+		}
+
 		.featured {
 			display: block;
 
 			&::before {
 				content: 'Featured posts';
-				font-family: var(--sk-font-family-ui);
-				font-size: var(--sk-font-size-ui-medium);
-				text-transform: uppercase;
-				color: var(--sk-text-4);
 			}
 
 			article {
@@ -153,10 +158,6 @@
 				content: 'Monthly updates';
 				position: absolute;
 				top: 0;
-				font-family: var(--sk-font-family-ui);
-				font-size: var(--sk-font-size-ui-medium);
-				text-transform: uppercase;
-				color: var(--sk-text-4);
 			}
 
 			a {

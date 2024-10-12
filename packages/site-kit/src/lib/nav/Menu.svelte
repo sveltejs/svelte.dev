@@ -361,7 +361,7 @@
 		justify-content: start;
 		gap: 1rem;
 
-		font-size: var(--sk-font-size-ui-medium);
+		font: var(--sk-font-ui-medium);
 		color: var(--sk-text-3);
 
 		background-color: var(--sk-back-3);
@@ -390,7 +390,7 @@
 		margin: 0.3rem 0;
 		height: 4rem;
 		color: var(--sk-text-2);
-		font-size: var(--sk-font-size-ui-medium);
+		font: var(--sk-font-ui-medium);
 	}
 
 	.universal .contents,

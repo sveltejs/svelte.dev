@@ -145,8 +145,7 @@
 		left: 0;
 		width: 100%;
 		color: var(--sk-text-3);
-		font-family: var(--sk-font-family-ui);
-		font-size: var(--sk-font-size-ui-medium);
+		font: var(--sk-font-ui-medium);
 	}
 
 	.globe span::before {
@@ -181,8 +180,7 @@
 	}
 
 	.platforms a span {
-		font-family: var(--sk-font-family-ui);
-		font-size: var(--sk-font-size-ui-medium);
+		font: var(--sk-font-ui-medium);
 		color: var(--sk-text-3);
 		text-align: center;
 	}

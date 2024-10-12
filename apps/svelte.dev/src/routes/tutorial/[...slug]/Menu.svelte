@@ -246,7 +246,7 @@
 		text-overflow: ellipsis;
 		text-align: center;
 		color: var(--sk-text-2);
-		font-size: var(--sk-font-size-ui-medium);
+		font: var(--sk-font-ui-medium);
 
 		.desktop {
 			display: flex;
@@ -329,8 +329,6 @@
 	}
 
 	li :global(svg) {
-		position: absolute;
-		/* left: -2rem; */
 		top: 0.1rem;
 		width: 2rem;
 		height: 2rem;
@@ -352,10 +350,9 @@
 		color: var(--sk-text-2);
 		padding: 0 0 0 0.5rem;
 		display: block;
-		font-variant-numeric: tabular-nums;
 		box-sizing: border-box;
-		font-size: var(--sk-font-size-ui-medium);
-		line-height: 1.5;
+		font: var(--sk-font-ui-medium);
+		font-variant-numeric: tabular-nums;
 	}
 
 	li button {

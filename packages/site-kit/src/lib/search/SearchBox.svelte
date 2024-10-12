@@ -421,8 +421,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 		display: block;
 		background: var(--background);
 		padding: var(--padding);
-		font-family: var(--sk-font-family-ui);
-		font-size: var(--sk-font-size-ui-medium);
+		font: var(--sk-font-ui-medium);
 		color: var(--sk-text-4);
 		text-transform: uppercase;
 		pointer-events: all;

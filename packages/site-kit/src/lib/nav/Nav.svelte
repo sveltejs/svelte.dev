@@ -156,7 +156,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 	}
 
 	a {
-		font-size: var(--sk-font-size-ui-medium);
+		font: var(--sk-font-ui-medium);
 	}
 
 	.current-section {
@@ -164,7 +164,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		align-items: center;
 		color: var(--sk-text-3);
 		margin-left: 0.4em;
-		font-size: var(--sk-font-size-ui-medium);
+		font: var(--sk-font-ui-medium);
 	}
 
 	@media (max-width: 799px) {
@@ -181,8 +181,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		:global {
 			a {
 				color: var(--sk-text-2);
-				line-height: 1;
-				font-size: var(--sk-font-size-ui-medium);
+				font: var(--sk-font-ui-medium);
 
 				white-space: nowrap;
 				height: 100%;
@@ -271,7 +270,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 
 		.appearance .caption {
 			display: block;
-			font-size: var(--sk-font-size-ui-medium);
+			font: var(--sk-font-ui-medium); /* TODO this should be inherited */
 		}
 
 		nav :global(.large) {

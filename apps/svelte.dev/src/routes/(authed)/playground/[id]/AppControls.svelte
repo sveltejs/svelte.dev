@@ -422,12 +422,11 @@ export default app;`
 		border: 1px solid var(--sk-back-4);
 		border-radius: var(--sk-border-radius);
 		color: currentColor;
-		font-family: var(--sk-font-family-ui);
 		width: 0;
 		flex: 1;
 		padding: 0.2rem 0.6rem;
 		height: 3.2rem;
-		font-size: var(--sk-font-size-ui-medium);
+		font: var(--sk-font-ui-medium);
 	}
 
 	.badge {

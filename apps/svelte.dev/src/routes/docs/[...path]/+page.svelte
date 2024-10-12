@@ -105,9 +105,8 @@
 
 	.controls span {
 		display: block;
-		font-size: var(--sk-font-size-ui-medium);
+		font: var(--sk-font-ui-medium);
 		text-transform: uppercase;
-		font-family: var(--sk-font-family-ui);
 		color: var(--sk-text-3);
 	}
 

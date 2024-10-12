@@ -101,11 +101,8 @@
 	h2,
 	h3 {
 		display: block;
-
 		padding-bottom: 0.8rem;
-
-		font-family: var(--sk-font-family-ui);
-		font-size: var(--sk-font-size-ui-medium);
+		font: var(--sk-font-ui-medium);
 		text-transform: uppercase;
 		letter-spacing: 0.1em;
 		color: var(--sk-text-3);

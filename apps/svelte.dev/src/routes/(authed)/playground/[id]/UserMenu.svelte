@@ -36,8 +36,7 @@
 
 	.name {
 		display: none;
-		font-family: var(--sk-font-family-ui);
-		font-size: var(--sk-font-size-ui-medium);
+		font: var(--sk-font-ui-medium);
 	}
 
 	.name {
