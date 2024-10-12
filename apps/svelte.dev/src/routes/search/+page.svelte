@@ -43,8 +43,7 @@
 		display: block;
 		width: 100%;
 		height: 100%;
-		font-family: inherit;
-		font-size: var(--sk-font-size-ui-large);
+		font: var(--sk-font-ui-large);
 		border: none;
 		border-radius: var(--sk-border-radius);
 		padding: 2rem 2rem 2rem 5rem;

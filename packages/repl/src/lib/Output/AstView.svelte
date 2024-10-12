@@ -83,7 +83,7 @@
 	code {
 		height: 100%;
 		block-size: 100%;
-		font: 400 var(--sk-font-size-mono) / 1.7 var(--sk-font-family-mono);
+		font: var(--sk-font-mono);
 	}
 
 	pre {

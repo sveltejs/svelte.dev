@@ -309,7 +309,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 	}
 
 	input {
-		font-size: var(--sk-font-size-ui-large);
+		font: var(--sk-font-ui-large);
 		width: 100%;
 		padding: calc(var(--padding) - 0.5rem) 5rem calc(var(--padding) - 0.5rem) var(--padding);
 		height: 6rem;

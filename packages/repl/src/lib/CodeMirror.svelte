@@ -272,7 +272,7 @@
 
 	.codemirror-container :global {
 		* {
-			font: 400 var(--sk-font-size-mono) / 1.7 var(--sk-font-family-mono);
+			font: var(--sk-font-mono);
 		}
 
 		.mark-text {
