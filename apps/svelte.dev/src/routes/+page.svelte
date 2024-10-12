@@ -10,6 +10,7 @@
 	import HeroSvelteKit from './_home/HeroSvelteKit.svelte';
 	import Testimonials from './_home/Testimonials.svelte';
 	import Companies from './_home/Companies.svelte';
+	import { Section } from '@sveltejs/site-kit/components';
 </script>
 
 <svelte:head>
@@ -29,12 +30,16 @@
 
 	<Companies />
 
-	<TrySection />
+	<Section><h2>TODO video</h2></Section>
+
+	<Section><h2>Community stuff, photos from Stockholm etc</h2></Section>
+
+	<!-- <TrySection /> -->
 
 	<!-- SvelteKit stuff -->
 	<!-- <HeroSvelteKit />
 	<Features /> -->
-	<Deployment />
+	<!-- <Deployment /> -->
 
 	<Supporters />
 
