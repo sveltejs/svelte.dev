@@ -191,9 +191,11 @@ const snippets = await create_snippet_cache();
 export async function render_content_markdown(
 	filename: string,
 	body: string,
-	{ twoslashBanner }: { twoslashBanner?: TwoslashBanner } = {}
+	options: { check?: boolean },
+	twoslashBanner?: TwoslashBanner
 ) {
 	const headings: string[] = [];
+	const { check = true } = options;
 
 	return await transform(body, {
 		async walkTokens(token) {
@@ -248,7 +250,8 @@ export async function render_content_markdown(
 					language: token.lang,
 					source,
 					twoslashBanner,
-					options
+					options,
+					check
 				});
 
 				if (converted) {
@@ -258,7 +261,8 @@ export async function render_content_markdown(
 						language: token.lang === 'js' ? 'ts' : token.lang,
 						source: converted,
 						twoslashBanner,
-						options
+						options,
+						check
 					});
 				}
 
@@ -654,7 +658,8 @@ async function syntax_highlight({
 	filename,
 	language,
 	twoslashBanner,
-	options
+	options,
+	check
 }: {
 	prelude: string;
 	source: string;
@@ -662,6 +667,7 @@ async function syntax_highlight({
 	language: string;
 	twoslashBanner?: TwoslashBanner;
 	options: SnippetOptions;
+	check: boolean;
 }) {
 	let html = '';
 
@@ -696,15 +702,17 @@ async function syntax_highlight({
 			html = await codeToHtml(prelude + redacted, {
 				lang: 'ts',
 				theme,
-				transformers: [
-					transformerTwoslash({
-						twoslashOptions: {
-							compilerOptions: {
-								types: ['svelte', '@sveltejs/kit']
-							}
-						}
-					})
-				]
+				transformers: check
+					? [
+							transformerTwoslash({
+								twoslashOptions: {
+									compilerOptions: {
+										types: ['svelte', '@sveltejs/kit']
+									}
+								}
+							})
+						]
+					: []
 			});
 
 			html = html.replace(/ {27,}/g, () => redactions.shift()!);

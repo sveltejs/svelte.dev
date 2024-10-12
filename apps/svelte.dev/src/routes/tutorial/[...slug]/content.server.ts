@@ -152,7 +152,7 @@ export async function load_exercise(slug: string): Promise<Exercise> {
 		prev: prev && { slug: prev.slug },
 		next,
 		markdown: exercise.body,
-		html: (await render_content(exercise.file, exercise.body)).replace(
+		html: (await render_content(exercise.file, exercise.body, { check: false })).replace(
 			/<code>(.+?)<\/code>/g,
 			(match, filename) => {
 				// TODO wire this up
