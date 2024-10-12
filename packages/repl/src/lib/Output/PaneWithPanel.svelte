@@ -69,9 +69,9 @@
 	}
 
 	.panel-heading {
-		font: 400 var(--sk-font-size-ui-small) / 1.8rem var(--sk-font-family-ui);
+		font: var(--sk-font-ui-small);
 		text-transform: uppercase;
-		color: var(--sk-text-1, #333);
+		color: var(--sk-text-1);
 		flex: 1;
 		text-align: left;
 	}

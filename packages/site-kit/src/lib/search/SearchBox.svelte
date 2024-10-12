@@ -351,7 +351,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 
 		kbd {
 			text-transform: uppercase;
-			font-size: var(--sk-font-size-ui-small);
+			font: var(--sk-font-ui-small);
 		}
 	}
 
@@ -412,7 +412,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 			padding-bottom: 1rem;
 
 			a {
-				font-size: var(--sk-font-size-ui-medium);
+				font: var(--sk-font-ui-medium);
 			}
 		}
 	}

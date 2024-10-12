@@ -390,7 +390,7 @@
 		background: var(--sk-back-2);
 		display: flex;
 		flex-direction: column;
-		font-size: var(--sk-font-size-ui-small);
+		font: var(--sk-font-ui-small);
 	}
 
 	.navigator .solve {
@@ -402,7 +402,7 @@
 		border-right: 1px solid var(--sk-back-4);
 		color: white;
 		opacity: 1;
-		font-size: var(--sk-font-size-ui-small);
+		font: var(--sk-font-ui-small);
 	}
 
 	.navigator .solve:disabled {

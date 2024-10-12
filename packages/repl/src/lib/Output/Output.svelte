@@ -130,7 +130,7 @@
 		background: transparent;
 		text-align: left;
 		position: relative;
-		font: var(--sk-font-size-ui-small) / 1.8rem var(--sk-font-family-ui);
+		font: var(--sk-font-ui-small); /* TODO should probably be a global button style */
 		border: none;
 		border-bottom: 1px solid transparent;
 		padding: 0 1rem;

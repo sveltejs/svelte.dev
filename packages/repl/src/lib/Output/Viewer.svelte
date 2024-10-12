@@ -321,15 +321,14 @@
 	}
 
 	button {
-		color: var(--sk-text-2, #999);
-		font-size: var(--sk-font-size-ui-small);
-		font-family: var(--sk-font-family-ui);
+		color: var(--sk-text-2);
+		font: var(--sk-font-ui-small);
 		text-transform: uppercase;
 		display: block;
-	}
 
-	button:hover {
-		color: var(--sk-text-1, #333);
+		&:hover {
+			color: var(--sk-text-1);
+		}
 	}
 
 	.overlay {

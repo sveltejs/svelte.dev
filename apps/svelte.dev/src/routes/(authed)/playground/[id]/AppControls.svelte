@@ -358,8 +358,6 @@ export default app;`
 
 	.icon {
 		position: relative;
-		font-family: var(--sk-font-family-ui);
-		font-size: var(--sk-font-size-ui-small);
 		color: var(--sk-text-3);
 		line-height: 1;
 		background-size: 1.8rem;

@@ -69,7 +69,7 @@
 		position: relative;
 		display: flex;
 		text-transform: uppercase;
-		font-size: var(--sk-font-size-ui-small);
+		font: var(--sk-font-ui-small);
 		padding: 0.8rem;
 		gap: 0.5rem;
 		margin-right: 0.3rem;

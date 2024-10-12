@@ -31,7 +31,6 @@
 		height: var(--size);
 		width: calc(100% - 0.6em);
 		max-width: calc(2 * var(--size));
-		top: -2px;
 		border-radius: 0.5em;
 		-webkit-appearance: none;
 		appearance: none;

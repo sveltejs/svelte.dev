@@ -64,8 +64,7 @@
 
 	.wall {
 		margin: 0;
-		font-family: var(--sk-font-family-ui);
-		font-size: var(--sk-font-size-ui-small);
+		font: var(--sk-font-ui-small);
 		color: var(--sk-text-4);
 
 		strong {

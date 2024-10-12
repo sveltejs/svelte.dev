@@ -132,7 +132,7 @@
 		color: var(--sk-text-1) !important;
 		margin: 0 0.5rem 0 calc(0.5rem + var(--inset));
 		padding: 0 0.5rem;
-		font-size: var(--font-size);
+		font: inherit;
 	}
 
 	.basename {
@@ -140,7 +140,6 @@
 		position: relative;
 		margin: 0;
 		padding: 0 1rem 0 calc(1rem + var(--inset));
-		font-size: var(--font-size);
 		color: inherit;
 		flex: 1;
 		height: 100%;

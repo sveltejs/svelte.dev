@@ -434,7 +434,7 @@
 
 		h1 :where(.part-title, .chapter-title) {
 			grid-row: 2 / span 1;
-			font-size: var(--sk-font-size-ui-small);
+			font: var(--sk-font-ui-small);
 			color: var(--sk-text-3);
 		}
 	}

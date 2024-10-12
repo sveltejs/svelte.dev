@@ -142,8 +142,7 @@
 					position: relative;
 					top: 0.1rem;
 					flex: 1;
-					font-family: var(--sk-font-family-ui);
-					font-size: var(--sk-font-size-ui-small);
+					font: var(--sk-font-ui-small);
 					color: var(--sk-text-3);
 					text-overflow: ellipsis;
 					overflow: hidden;
