@@ -417,7 +417,10 @@
 			--primary-hsl: var(--sk-theme-1-hsl);
 			color: var(--sk-text-1);
 			padding: 0 0 0 4.5rem;
-			font-style: italic;
+
+			&:not(:has(details)) {
+				font-style: italic;
+			}
 
 			&.note,
 			&:has(details.legacy) {
