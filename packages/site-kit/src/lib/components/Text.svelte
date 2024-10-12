@@ -148,7 +148,7 @@
 					position: relative;
 					top: 0.1rem;
 					flex: 1;
-					font-family: var(--sk-font-ui);
+					font-family: var(--sk-font-family-ui);
 					font-size: var(--sk-font-size-ui-small);
 					color: var(--sk-text-3);
 					text-overflow: ellipsis;
@@ -181,7 +181,7 @@
 						justify-content: center;
 						align-items: center;
 						font-size: 1.2rem;
-						font-family: var(--sk-font-mono);
+						font-family: var(--sk-font-family-mono);
 						color: var(--sk-text-2);
 					}
 
@@ -458,7 +458,7 @@
 				line-height: 1;
 				left: 0;
 				top: 0;
-				font-family: var(--sk-font-heading);
+				font-family: var(--sk-font-family-heading);
 				color: var(--sk-text-4);
 			}
 

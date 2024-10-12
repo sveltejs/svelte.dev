@@ -92,7 +92,7 @@
 <style>
 	.table {
 		--json-tree-font-size: 1.2rem;
-		--json-tree-font-family: var(--sk-font-mono);
+		--json-tree-font-family: var(--sk-font-family-mono);
 		margin: 8px;
 		overflow: auto;
 		max-height: 200px;
@@ -104,7 +104,7 @@
 	table {
 		border-collapse: collapse;
 		line-height: 1;
-		font-family: var(--sk-font-mono);
+		font-family: var(--sk-font-family-mono);
 	}
 
 	th {
@@ -118,7 +118,7 @@
 	}
 
 	td {
-		font-family: var(--sk-font-mono);
+		font-family: var(--sk-font-family-mono);
 		font-size: 1.2rem;
 		padding: 0.5rem 1rem;
 		border-bottom: none;

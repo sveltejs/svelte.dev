@@ -139,10 +139,10 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		margin: 0 auto;
 		padding: 0 var(--sk-page-padding-side);
 		background-color: var(--sk-back-2);
-		font-family: var(--sk-font-body);
+		font-family: var(--sk-font-family-body);
 		user-select: none;
 		isolation: isolate;
-		font-family: var(--sk-font-ui);
+		font-family: var(--sk-font-family-ui);
 
 		&::after {
 			content: '';

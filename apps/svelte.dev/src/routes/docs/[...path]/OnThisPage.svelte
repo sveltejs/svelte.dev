@@ -144,7 +144,7 @@
 				}
 
 				h3 {
-					font-family: var(--sk-font-ui);
+					font-family: var(--sk-font-family-ui);
 					font-size: var(--sk-font-size-ui-small);
 					color: var(--sk-text-4);
 					margin: 0;
@@ -192,8 +192,7 @@
 			}
 
 			& label {
-				font-family: var(--sk-font-heading);
-				font-size: var(--sk-font-size-h3);
+				font: var(--sk-font-h3);
 				display: block;
 
 				&::before {

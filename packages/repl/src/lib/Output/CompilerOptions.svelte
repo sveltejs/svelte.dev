@@ -29,7 +29,7 @@
 <style>
 	.options {
 		padding: 0 10px;
-		font-family: var(--sk-font-mono);
+		font-family: var(--sk-font-family-mono);
 		font-size: 13px;
 		color: var(--sk-text-2, #999);
 		line-height: 1.8;

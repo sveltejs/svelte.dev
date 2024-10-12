@@ -72,7 +72,7 @@
 	nav {
 		padding: 0.29rem;
 		padding-top: 0;
-		font-family: var(--sk-font-ui);
+		font-family: var(--sk-font-family-ui);
 		overflow-y: auto;
 
 		height: 100%;
@@ -104,7 +104,7 @@
 
 		padding-bottom: 0.8rem;
 
-		font-family: var(--sk-font-ui);
+		font-family: var(--sk-font-family-ui);
 		font-size: var(--sk-font-size-ui-medium);
 		text-transform: uppercase;
 		letter-spacing: 0.1em;

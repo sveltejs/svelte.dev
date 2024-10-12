@@ -323,7 +323,7 @@
 	button {
 		color: var(--sk-text-2, #999);
 		font-size: var(--sk-font-size-ui-small);
-		font-family: var(--sk-font-ui);
+		font-family: var(--sk-font-family-ui);
 		text-transform: uppercase;
 		display: block;
 	}

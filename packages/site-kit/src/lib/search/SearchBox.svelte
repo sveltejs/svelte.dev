@@ -297,7 +297,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 		display: flex;
 		flex-direction: column;
 		overflow: hidden;
-		font-family: var(--sk-font-ui);
+		font-family: var(--sk-font-family-ui);
 
 		@media (min-width: 800px) {
 			--padding: 1.6rem;
@@ -421,7 +421,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 		display: block;
 		background: var(--background);
 		padding: var(--padding);
-		font-family: var(--sk-font-ui);
+		font-family: var(--sk-font-family-ui);
 		font-size: var(--sk-font-size-ui-medium);
 		color: var(--sk-text-4);
 		text-transform: uppercase;

@@ -47,7 +47,7 @@
 				color: var(--sk-text-2);
 				padding: 1rem 1.3rem;
 				display: block;
-				font-family: var(--sk-font-ui);
+				font-family: var(--sk-font-family-ui);
 				font-size: var(--sk-font-size-ui-medium);
 				text-decoration: none;
 				line-height: 1;

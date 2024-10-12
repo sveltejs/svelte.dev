@@ -184,7 +184,7 @@
 		bottom: 0;
 		width: 100%;
 		height: 80%;
-		font-family: var(--sk-font-mono);
+		font-family: var(--sk-font-family-mono);
 		font-size: var(--sk-font-size-ui-small); /* TODO this should use a mono size */
 		padding: 1rem;
 		border-top: 1px solid var(--sk-text-4);

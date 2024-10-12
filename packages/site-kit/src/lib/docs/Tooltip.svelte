@@ -58,7 +58,7 @@
 		text-align: left;
 		padding: 0.4rem 0.6rem;
 		border-radius: var(--sk-border-radius);
-		font-family: var(--sk-font-mono);
+		font-family: var(--sk-font-family-mono);
 		font-size: 1.2rem;
 		white-space: pre-wrap;
 		z-index: 100;

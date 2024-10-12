@@ -22,11 +22,11 @@
 	--sk-page-content-width: 84rem;
 	--sk-banner-bottom-height: 0px;
 
-	/* typography */
-	--sk-font-ui: 'Fira Sans', -apple-system, sans-serif;
-	--sk-font-body: 'EB Garamond', Georgia, serif;
-	--sk-font-heading: 'DM Serif Display', Georgia, serif;
-	--sk-font-mono: 'Fira Mono', monospace;
+	/* typography (prefer `font: --sk-font-{x}` over `font-family` and `font-size` rules */
+	--sk-font-family-ui: 'Fira Sans', -apple-system, sans-serif;
+	--sk-font-family-body: 'EB Garamond', Georgia, serif;
+	--sk-font-family-heading: 'DM Serif Display', Georgia, serif;
+	--sk-font-family-mono: 'Fira Mono', monospace;
 
 	--sk-font-size-h1: 3.6rem;
 	--sk-font-size-h2: 3rem;
@@ -36,7 +36,11 @@
 	--sk-font-size-ui-small: 1.3rem;
 	--sk-font-size-ui-medium: 1.6rem;
 	--sk-font-size-ui-large: 3rem;
-	--sk-font-size-code: 1.4rem;
+	--sk-font-size-mono: 1.4rem;
+
+	--sk-font-h1: 500 var(--sk-font-size-h1) / 1.2 var(--sk-font-family-heading);
+	--sk-font-h2: 500 var(--sk-font-size-h2) / 1.2 var(--sk-font-family-heading);
+	--sk-font-h3: 500 var(--sk-font-size-h3) / 1.2 var(--sk-font-family-heading);
 
 	/* Base colors */
 	--sk-theme-1-hsl: 12, 93%, 43%;

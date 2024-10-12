@@ -111,8 +111,8 @@
 
 <style>
 	* {
-		font-family: var(--sk-font-mono);
-		font-size: var(--sk-font-size-code);
+		font-family: var(--sk-font-family-mono);
+		font-size: var(--sk-font-size-mono);
 	}
 
 	ul {

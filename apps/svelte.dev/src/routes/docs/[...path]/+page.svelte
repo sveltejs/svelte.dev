@@ -70,7 +70,7 @@
 		position: relative;
 		font-size: 1.4rem;
 		margin: 6rem 0 2rem 0;
-		font-family: var(--sk-font-ui);
+		font-family: var(--sk-font-family-ui);
 
 		a {
 			text-decoration: none;
@@ -107,7 +107,7 @@
 		display: block;
 		font-size: var(--sk-font-size-ui-medium);
 		text-transform: uppercase;
-		font-family: var(--sk-font-ui);
+		font-family: var(--sk-font-family-ui);
 		color: var(--sk-text-3);
 	}
 

@@ -272,7 +272,7 @@
 
 	.codemirror-container :global {
 		* {
-			font: 400 var(--sk-font-size-code) / 1.7 var(--sk-font-mono);
+			font: 400 var(--sk-font-size-mono) / 1.7 var(--sk-font-family-mono);
 		}
 
 		.mark-text {
@@ -296,7 +296,7 @@
 		.cm-tooltip {
 			border: none;
 			background: var(--sk-back-3);
-			font-family: var(--sk-font-body);
+			font-family: var(--sk-font-family-body);
 			max-width: calc(100vw - 10em);
 			position: relative;
 			filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.1));
@@ -369,7 +369,7 @@
 		}
 
 		.cm-diagnostic :not(code) {
-			font-family: var(--sk-font-body);
+			font-family: var(--sk-font-family-body);
 		}
 
 		.cm-diagnosticText {
@@ -389,7 +389,7 @@
 
 		.cm-diagnosticText strong {
 			font-size: 0.9em;
-			font-family: var(--sk-font-mono);
+			font-family: var(--sk-font-family-mono);
 			opacity: 0.7;
 		}
 	}
@@ -403,7 +403,7 @@
 		border: none;
 		padding: 4px 4px 4px 60px;
 		resize: none;
-		font-family: var(--sk-font-mono);
+		font-family: var(--sk-font-family-mono);
 		font-size: 13px;
 		line-height: 1.7;
 		user-select: none;

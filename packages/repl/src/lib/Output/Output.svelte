@@ -130,7 +130,7 @@
 		background: transparent;
 		text-align: left;
 		position: relative;
-		font: var(--sk-font-size-ui-small) / 1.8rem var(--sk-font-ui);
+		font: var(--sk-font-size-ui-small) / 1.8rem var(--sk-font-family-ui);
 		border: none;
 		border-bottom: 1px solid transparent;
 		padding: 0 1rem;

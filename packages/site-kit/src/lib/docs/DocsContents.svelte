@@ -64,7 +64,7 @@
 
 	.sidebar {
 		padding: 3.2rem;
-		font-family: var(--sk-font-body);
+		font-family: var(--sk-font-family-body);
 		height: 100%;
 		bottom: auto;
 		width: 100%;
@@ -97,7 +97,7 @@
 	.page {
 		display: block;
 		font-size: var(--sk-font-size-body-small);
-		font-family: var(--sk-font-body);
+		font-family: var(--sk-font-family-body);
 	}
 
 	[aria-current='page'] {

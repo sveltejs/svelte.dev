@@ -75,7 +75,7 @@
 	h2 {
 		display: inline-block;
 		color: var(--sk-text-2);
-		font-size: var(--sk-font-size-h3);
+		font: var(--sk-font-h3);
 	}
 
 	article {
@@ -87,7 +87,7 @@
 			padding: 0 0 4rem 0;
 
 			h2 {
-				font-size: var(--sk-font-size-h1);
+				font: var(--sk-font-h1);
 				color: var(--sk-text-2);
 			}
 		}
@@ -126,7 +126,7 @@
 
 			&::before {
 				content: 'Featured posts';
-				font-family: var(--sk-font-ui);
+				font-family: var(--sk-font-family-ui);
 				font-size: var(--sk-font-size-ui-medium);
 				text-transform: uppercase;
 				color: var(--sk-text-4);
@@ -138,7 +138,7 @@
 				}
 
 				h2 {
-					font-size: var(--sk-font-size-h2);
+					font: var(--sk-font-h2);
 				}
 			}
 		}
@@ -154,7 +154,7 @@
 				content: 'Monthly updates';
 				position: absolute;
 				top: 0;
-				font-family: var(--sk-font-ui);
+				font-family: var(--sk-font-family-ui);
 				font-size: var(--sk-font-size-ui-medium);
 				text-transform: uppercase;
 				color: var(--sk-text-4);
@@ -162,7 +162,7 @@
 
 			a {
 				display: block;
-				font-family: var(--sk-font-body);
+				font-family: var(--sk-font-family-body);
 				font-weight: 400;
 				font-size: var(--sk-font-size-body);
 				color: var(--sk-text-2);

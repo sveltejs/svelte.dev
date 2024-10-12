@@ -18,7 +18,7 @@ body {
 }
 
 body {
-	font-family: var(--sk-font-body);
+	font-family: var(--sk-font-family-body);
 	line-height: 1.5;
 	color: var(--sk-text-2);
 	background-color: var(--sk-back-1);
@@ -60,24 +60,21 @@ a:hover {
 }
 
 h1 {
-	font-size: var(--sk-font-size-h1);
+	font: var(--sk-font-h1);
 }
 
 h2 {
-	font-size: var(--sk-font-size-h2);
+	font: var(--sk-font-h2);
 }
 
 h3 {
-	font-size: var(--sk-font-size-h3);
+	font: var(--sk-font-h3);
 }
 
 h1,
 h2,
 h3 {
 	position: relative;
-	font-family: var(--sk-font-heading);
-	font-weight: 500;
-	line-height: 1.2;
 	text-wrap: balance;
 	color: var(--sk-text-1);
 }
@@ -98,13 +95,13 @@ kbd {
 }
 
 code {
-	font-family: var(--sk-font-mono);
+	font-family: var(--sk-font-family-mono);
 	margin: 0 0.2rem;
 	padding: 0.4rem;
 }
 
 kbd {
-	font-family: var(--sk-font-ui);
+	font-family: var(--sk-font-family-ui);
 }
 
 pre {
@@ -117,7 +114,7 @@ pre code {
 	background-color: transparent;
 	padding: 0;
 	margin: 0;
-	font-size: var(--sk-font-size-code);
+	font-size: var(--sk-font-size-mono);
 }
 
 ::selection {
@@ -143,7 +140,7 @@ blockquote :last-child {
 /*  buttons -------------------------------- */
 input,
 button {
-	font-family: var(--sk-font-ui);
+	font-family: var(--sk-font-family-ui);
 	font-size: inherit;
 }
 

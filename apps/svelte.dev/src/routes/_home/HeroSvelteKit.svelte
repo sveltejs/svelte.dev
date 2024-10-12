@@ -78,7 +78,7 @@
 	}
 
 	.hero .tagline {
-		font-size: var(--sk-font-size-h2);
+		font: var(--sk-font-h2);
 		color: var(--sk-text-2);
 		margin-bottom: 2rem;
 	}

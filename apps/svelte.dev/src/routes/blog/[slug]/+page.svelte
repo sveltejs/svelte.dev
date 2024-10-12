@@ -70,7 +70,7 @@
 
 				p {
 					color: var(--sk-text-4);
-					font-family: var(--sk-font-body);
+					font-family: var(--sk-font-family-body);
 					font-size: var(--sk-font-size-body-small);
 
 					&:first-child {
@@ -120,7 +120,7 @@
 	}
 
 	h1 {
-		font-size: var(--sk-font-size-h1);
+		font: var(--sk-font-h1);
 	}
 
 	.standfirst {

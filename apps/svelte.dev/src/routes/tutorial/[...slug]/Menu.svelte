@@ -173,7 +173,7 @@
 	header {
 		position: relative;
 		/* z-index: 2; */
-		font-family: var(--sk-font-ui);
+		font-family: var(--sk-font-family-ui);
 
 		display: grid;
 		grid-template-columns: 4rem minmax(0, 1fr) 4rem;
