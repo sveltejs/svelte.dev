@@ -32,12 +32,11 @@ export function clean(markdown: string) {
 
 export const slugify = (str: string) => {
 	return clean(str)
-		.replace(/&.+;/g, '')
-		.replace(/[^a-zA-Z0-9-$(.):]/g, '-')
+		.replace(/&.+?;/g, '')
+		.replace(/[^a-zA-Z0-9-$(.):']/g, '-')
 		.replace(/-{2,}/g, '-')
 		.replace(/^-/, '')
-		.replace(/-$/, '')
-		.replace(/(<([^>]+)>)/gi, '');
+		.replace(/-$/, '');
 };
 
 export function smart_quotes(str: string, html: boolean = false) {
