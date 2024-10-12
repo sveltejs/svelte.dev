@@ -13,6 +13,7 @@
 
 	/* dimensions */
 	--sk-nav-height: 6rem;
+	--sk-secondary-nav-height: 5rem;
 	--sk-page-padding-top: 6rem;
 	--sk-page-padding-bottom: 6rem;
 	--sk-page-padding-side: 2.4rem;
@@ -163,5 +164,6 @@
 		--sk-font-size-h1: 5.4rem;
 		--sk-page-padding-top: 8rem;
 		--sk-page-padding-side: 4.8rem;
+		--sk-secondary-nav-height: 6rem;
 	}
 }

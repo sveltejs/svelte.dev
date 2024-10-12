@@ -54,8 +54,6 @@
 		"flexsearch": "^0.7.43",
 		"flru": "^1.0.2",
 		"port-authority": "^2.0.1",
-		"prism-svelte": "^0.5.0",
-		"prismjs": "^1.29.0",
 		"shiki": "^1.22.0",
 		"topojson-client": "^3.1.0",
 		"vitest": "^2.1.2",

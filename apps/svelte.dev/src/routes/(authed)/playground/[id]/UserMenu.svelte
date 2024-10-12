@@ -30,7 +30,7 @@
 		display: flex;
 		align-items: center;
 		padding: 0em 0 0 0.4rem;
-		height: calc(var(--app-controls-h) - 1.5rem);
+		height: calc(var(--sk-secondary-nav-height) - 1.5rem);
 		z-index: 99;
 	}
 

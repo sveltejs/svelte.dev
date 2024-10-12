@@ -40,4 +40,4 @@ export async function load(---{ depends }---) {
 }
 ```
 
-> `invalidate(() => true)` and `invalidateAll` are _not_ the same. `invalidateAll` also re-runs `load` functions without any `url` dependencies, which `invalidate(() => true)` does not.
+> [!NOTE] `invalidate(() => true)` and `invalidateAll` are _not_ the same. `invalidateAll` also re-runs `load` functions without any `url` dependencies, which `invalidate(() => true)` does not.

@@ -50,7 +50,8 @@
 
 			{#each document.sections as section}
 				<li>
-					<a href="#{section.slug}" class:active={current === section.slug}>{section.title}</a>
+					<a href="#{section.slug}" class:active={current === section.slug}>{@html section.title}</a
+					>
 				</li>
 			{/each}
 		</ul>

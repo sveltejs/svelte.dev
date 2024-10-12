@@ -28,7 +28,7 @@ const database = {
 	}
 };
 // ---cut---
-// src/routes/blog/[slug]/+page.server.ts
+/// file: src/routes/blog/[slug]/+page.server.ts
 import type { ServerLoadEvent } from '@sveltejs/kit';
 
 export async function load(event: ServerLoadEvent) {
@@ -42,16 +42,16 @@ This works, but we can do better. Notice that we accidentally wrote `event.param
 
 This is where our automatic type generation comes in. Every route directory has a hidden `$types.d.ts` file with route-specific types:
 
-```diff
-// src/routes/blog/[slug]/+page.server.ts
--import type { ServerLoadEvent } from '@sveltejs/kit';
-+import type { PageServerLoadEvent } from './$types';
+```js
+/// file: src/routes/blog/[slug]/+page.server.ts
+---import type { ServerLoadEvent } from '@sveltejs/kit';---
++++import type { PageServerLoadEvent } from './$types';+++
 
 export async function load(event: PageServerLoadEvent) {
-    return {
--        post: await database.getPost(event.params.post)
-+        post: await database.getPost(event.params.slug)
-    };
+	return {
+		---post: await database.getPost(event.params.post)---
+		+++post: await database.getPost(event.params.slug)+++
+	};
 }
 ```
 
@@ -60,7 +60,7 @@ This reveals our typo, as it now errors on the `params.post` property access. Be
 After we have loaded our data, we want to display it in our `+page.svelte`. The same type generation mechanism ensures that the type of `data` is correct:
 
 ```svelte
-<!-- src/routes/blog/[slug]/+page.svelte -->
+/// file: src/routes/blog/[slug]/+page.svelte
 <script lang="ts">
 	import type { PageData } from './$types';
 
@@ -78,7 +78,7 @@ When running the dev server or the build, types are auto-generated. Thanks to th
 
 ```ts
 // @errors: 2344 2694 2307
-// $types.d.ts
+/// file: $types.d.ts
 import type * as Kit from '@sveltejs/kit';
 
 // types inferred from the routing tree
@@ -100,7 +100,7 @@ export type PageData = Kit.ReturnType<
 
 We don't actually write `$types.d.ts` into your `src` directory — that would be messy, and no-one likes messy code. Instead, we use a TypeScript feature called [`rootDirs`](https://www.typescriptlang.org/tsconfig#rootDirs), which lets us map ‘virtual’ directories to real ones. By setting `rootDirs` to the project root (the default) and additionally to `.svelte-kit/types` (the output folder of all the generated types) and then mirroring the route structure inside it we get the desired behavior:
 
-```
+```tree
 // on disk:
 .svelte-kit/
 ├ types/
@@ -115,8 +115,9 @@ src/
 │ │ ├ [slug]/
 │ │ │ ├ +page.server.ts
 │ │ │ └ +page.svelte
+```
 
-
+```tree
 // what TypeScript sees:
 src/
 ├ routes/
@@ -131,24 +132,23 @@ src/
 
 Thanks to the automatic type generation we get advanced type safety. Wouldn't it be great though if we could just omit writing the types at all? As of today you can do exactly that:
 
-```diff
-// src/routes/blog/[slug]/+page.server.ts
--import type { PageServerLoadEvent } from './$types';
+```js
+/// file: src/routes/blog/[slug]/+page.server.ts
+---import type { PageServerLoadEvent } from './$types';---
 
--export async function load(event: PageServerLoadEvent) {
-+export async function load(event) {
-    return {
-        post: await database.getPost(event.params.post)
-    };
+export async function load(event---: PageServerLoadEvent---) {
+	return {
+		post: await database.getPost(event.params.post)
+	};
 }
 ```
 
-```diff
-<!-- src/routes/blog/[slug]/+page.svelte -->
+```svelte
+/// file: src/routes/blog/[slug]/+page.svelte
 <script lang="ts">
--    import type { PageData } from './$types';
--    export let data: PageData;
-+    export let data;
+	---import type { PageData } from './$types';---
+	---export let data: PageData;---
+	+++export let data;+++
 </script>
 ```
 

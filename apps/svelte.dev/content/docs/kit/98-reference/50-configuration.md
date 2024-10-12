@@ -764,7 +764,7 @@ base?: '' | `/${string}`;
 
 </div>
 
-A root-relative path that must start, but not end with `/` (e.g. `/base-path`), unless it is the empty string. This specifies where your app is served from and allows the app to live on a non-root path. Note that you need to prepend all your root-relative links with the base value or they will point to the root of your domain, not your `base` (this is how the browser works). You can use [`base` from `$app/paths`](https://kit.svelte.dev/docs/$app-paths#base) for that: `<a href="{base}/your-page">Link</a>`. If you find yourself writing this often, it may make sense to extract this into a reusable component.
+A root-relative path that must start, but not end with `/` (e.g. `/base-path`), unless it is the empty string. This specifies where your app is served from and allows the app to live on a non-root path. Note that you need to prepend all your root-relative links with the base value or they will point to the root of your domain, not your `base` (this is how the browser works). You can use [`base` from `$app/paths`](https://kit.svelte.dev/docs/modules#$app-paths-base) for that: `<a href="{base}/your-page">Link</a>`. If you find yourself writing this often, it may make sense to extract this into a reusable component.
 
 </div>
 </div>
@@ -1097,7 +1097,7 @@ Not all navigations will result in an error though, for example if the JavaScrip
 </script>
 ```
 
-If you set `pollInterval` to a non-zero value, SvelteKit will poll for new versions in the background and set the value of the [`updated`](https://kit.svelte.dev/docs/$app-stores#updated) store to `true` when it detects one.
+If you set `pollInterval` to a non-zero value, SvelteKit will poll for new versions in the background and set the value of the [`updated`](https://kit.svelte.dev/docs/modules#$app-stores-updated) store to `true` when it detects one.
 
 <div class="ts-block-property-children">
 

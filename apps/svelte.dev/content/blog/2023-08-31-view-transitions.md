@@ -14,7 +14,7 @@ However, until now, you couldn’t easily use this API in a SvelteKit app, since
 You can trigger a view transition by calling `document.startViewTransition` and passing a callback that updates the DOM somehow. For our purposes today, SvelteKit will update the DOM as the user navigates. Once the callback finishes, the browser will transition to the new page state — by default, it does a crossfade between the old and the new states.
 
 ```js
-// @errors: 2339
+// @errors: 2339 2304
 const domUpdate = async () => {};
 // ---cut---
 document.startViewTransition(async () => {
@@ -162,7 +162,7 @@ Now, the header will not transition in and out on navigation, but the rest of th
 > [!DETAILS] Fixing the types
 > Since `startViewTransition` is not supported by all browsers, your IDE may not know that it exists. To make the errors go away and get the correct typings, add the following to your `app.d.ts`:
 >
-> ```ts
+> ```dts
 > declare global {
 > 	// preserve any customizations you have here
 > 	namespace App {

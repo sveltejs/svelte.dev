@@ -27,7 +27,7 @@ export function load() {
 }
 ```
 
-> For the sake of the tutorial, we're importing data from `src/routes/blog/data.js`. In a real app, you'd be more likely to load the data from a database or a CMS, but for now we'll do it like this.
+> [!NOTE] For the sake of the tutorial, we're importing data from `src/routes/blog/data.js`. In a real app, you'd be more likely to load the data from a database or a CMS, but for now we'll do it like this.
 
 We can access this data in `src/routes/blog/+page.svelte` via the `data` prop:
 

@@ -1,31 +1,5 @@
 /* TODO all this should probably be moved into Text.svelte */
 
-.language-diff :where(.inserted, .deleted) {
-	position: relative;
-}
-
-.language-diff :where(.inserted) {
-	color: var(--sk-code-diff-inserted);
-}
-
-.language-diff :where(.deleted) {
-	color: var(--sk-code-diff-removed);
-	user-select: none;
-}
-
-.language-diff :where(.inserted, .deleted)::before {
-	position: absolute;
-	left: -1ch;
-}
-
-.language-diff :where(.inserted)::before {
-	content: '+';
-}
-
-.language-diff :where(.deleted)::before {
-	content: '-';
-}
-
 /** make long comments wrap on mobile */
 :where(.token.comment.wrapped) {
 	display: block;

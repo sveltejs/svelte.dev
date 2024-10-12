@@ -334,8 +334,7 @@
 	.container {
 		--pane-controls-h: 4.2rem;
 		position: relative;
-		width: 100%;
-		height: calc(100dvh - var(--sk-nav-height));
+		flex: 1;
 		background: var(--sk-back-1);
 		padding: 0;
 

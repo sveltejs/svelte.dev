@@ -10,12 +10,12 @@ We highly recommend upgrading to the most recent 1.x version before upgrading to
 
 Previously, you had to `throw` the values returned from `error(...)` and `redirect(...)` yourself. In SvelteKit 2 this is no longer the case — calling the functions is sufficient.
 
-```diff
+```js
 import { error } from '@sveltejs/kit'
 
-...
-- throw error(500, 'something went wrong');
-+ error(500, 'something went wrong');
+// ...
+---throw error(500, 'something went wrong');---
++++error(500, 'something went wrong');+++
 ```
 
 `svelte-migrate` will do these changes automatically for you.
@@ -28,11 +28,11 @@ When receiving a `Set-Cookie` header that doesn't specify a `path`, browsers wil
 
 As of SvelteKit 2.0, you need to set a `path` when calling `cookies.set(...)`, `cookies.delete(...)` or `cookies.serialize(...)` so that there's no ambiguity. Most of the time, you probably want to use `path: '/'`, but you can set it to whatever you like, including relative paths — `''` means 'the current path', `'.'` means 'the current directory'.
 
-```diff
+```js
+/** @type {import('./$types').PageServerLoad} */
 export function load({ cookies }) {
--    cookies.set(name, value);
-+    cookies.set(name, value, { path: '/' });
-    return { response }
+	cookies.set(name, value, +++{ path: '/' }+++);
+	return { response }
 }
 ```
 
@@ -44,25 +44,37 @@ In SvelteKit version 1, if the top-level properties of the object returned from 
 
 As of version 2, SvelteKit no longer differentiates between top-level and non-top-level promises. To get back the blocking behavior, use `await` (with `Promise.all` to prevent waterfalls, where appropriate):
 
-```diff
+```js
+// @filename: ambient.d.ts
+declare const url: string;
+
+// @filename: index.js
+// ---cut---
 // If you have a single promise
-export function load({ fetch }) {
--    const response = fetch(...).then(r => r.json());
-+    const response = await fetch(...).then(r => r.json());
-    return { response }
+/** @type {import('./$types').PageServerLoad} */
+export +++async+++ function load({ fetch }) {
+	const response = +++await+++ fetch(url).then(r => r.json());
+	return { response }
 }
 ```
 
-```diff
+```js
+// @filename: ambient.d.ts
+declare const url1: string;
+declare const url2: string;
+
+// @filename: index.js
+// ---cut---
 // If you have multiple promises
-export function load({ fetch }) {
--    const a = fetch(...).then(r => r.json());
--    const b = fetch(...).then(r => r.json());
-+    const [a, b] = await Promise.all([
-+      fetch(...).then(r => r.json()),
-+      fetch(...).then(r => r.json()),
-+    ]);
-    return { a, b };
+/** @type {import('./$types').PageServerLoad} */
+export +++async+++ function load({ fetch }) {
+---	const a = fetch(url1).then(r => r.json());---
+---	const b = fetch(url2).then(r => r.json());---
++++	const [a, b] = await Promise.all([
+	  fetch(url1).then(r => r.json()),
+	  fetch(url2).then(r => r.json()),
+	]);+++
+	return { a, b };
 }
 ```
 
@@ -94,13 +106,13 @@ SvelteKit 1 included a function called `resolvePath` which allows you to resolve
 
 As such, SvelteKit 2 replaces `resolvePath` with a (slightly better named) function called `resolveRoute`, which is imported from `$app/paths` and which takes `base` into account.
 
-```diff
--import { resolvePath } from '@sveltejs/kit';
--import { base } from '$app/paths';
-+import { resolveRoute } from '$app/paths';
+```js
+---import { resolvePath } from '@sveltejs/kit';
+import { base } from '$app/paths';---
++++import { resolveRoute } from '$app/paths';+++
 
--const path = base + resolvePath('/blog/[slug]', { slug });
-+const path = resolveRoute('/blog/[slug]', { slug });
+---const path = base + resolvePath('/blog/[slug]', { slug });---
++++const path = resolveRoute('/blog/[slug]', { slug });+++
 ```
 
 `svelte-migrate` will do the method replacement for you, though if you later prepend the result with `base`, you need to remove that yourself.

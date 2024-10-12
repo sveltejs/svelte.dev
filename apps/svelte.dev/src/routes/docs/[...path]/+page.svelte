@@ -40,11 +40,10 @@
 
 	<p class="edit">
 		<a
-			class="edit"
 			href="https://github.com/sveltejs/svelte.dev/edit/main/apps/svelte.dev/content/{data.document
 				.file}"
 		>
-			<Icon size={50} name="edit" /> Edit this page on GitHub
+			<Icon name="edit" /> Edit this page on GitHub
 		</a>
 	</p>
 </div>
@@ -70,8 +69,6 @@
 	.edit {
 		position: relative;
 		font-size: 1.4rem;
-		line-height: 1;
-		z-index: 2;
 		margin: 6rem 0 2rem 0;
 		font-family: var(--sk-font-ui);
 
@@ -79,7 +76,7 @@
 			text-decoration: none;
 		}
 
-		:global(.icon) {
+		:global(svg) {
 			position: relative;
 			top: -0.1rem;
 			left: 0.3rem;

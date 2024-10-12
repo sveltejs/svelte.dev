@@ -6,7 +6,7 @@ So far we've talked about reactivity in terms of state. But that's only half of 
 
 The thing that reacts is called an _effect_. You've already encountered effects — the ones that Svelte creates on your behalf to update the DOM in response to state changes — but you can also create your own with the `$effect` rune.
 
-> Most of the time, you shouldn't. `$effect` is best thought of as an escape hatch, rather than something to use frequently. If you can put your side effects in an [event handler](dom-events), for example, that's almost always preferable.
+> [!NOTE] Most of the time, you shouldn't. `$effect` is best thought of as an escape hatch, rather than something to use frequently. If you can put your side effects in an [event handler](dom-events), for example, that's almost always preferable.
 
 Let's say we want to use `setInterval` to keep track of how long the component has been mounted. Create the effect:
 
@@ -45,4 +45,4 @@ The cleanup function is called immediately before the effect function re-runs wh
 
 If the effect function doesn't read any state when it runs, it will only run once, when the component mounts.
 
-> Effects do not run during server-side rendering.
+> [!NOTE] Effects do not run during server-side rendering.

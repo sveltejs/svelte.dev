@@ -43,6 +43,6 @@ The movement is a little slow in this case, so we can add a `duration` parameter
 >
 ```
 
-> `duration` can also be a `d => milliseconds` function, where `d` is the number of pixels the element has to travel
+> [!NOTE] `duration` can also be a `d => milliseconds` function, where `d` is the number of pixels the element has to travel
 
 Note that all the transitions and animations are being applied with CSS, rather than JavaScript, meaning they won't block (or be blocked by) the main thread.

@@ -300,8 +300,23 @@
 					border-left: 5px solid var(--sk-theme-2);
 				}
 
-				&.language-diff code {
-					color: var(--sk-code-diff-base);
+				.highlight {
+					--color: rgba(220, 220, 0, 0.2);
+					background: var(--color);
+					outline: 2px solid var(--color);
+					border-radius: 2px;
+
+					&.add {
+						--color: rgba(0, 255, 0, 0.18);
+					}
+
+					&.remove {
+						--color: rgba(255, 0, 0, 0.1);
+
+						:root.dark & {
+							--color: rgba(255, 0, 0, 0.27);
+						}
+					}
 				}
 			}
 		}

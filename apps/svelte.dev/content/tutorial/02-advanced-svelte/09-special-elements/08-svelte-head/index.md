@@ -20,4 +20,4 @@ Since those are quite hard to show in the context of this tutorial, we'll use it
 <h1>Welcome to my site!</h1>
 ```
 
-> In server-side rendering (SSR) mode, contents of `<svelte:head>` are returned separately from the rest of your HTML.
+> [!NOTE] In server-side rendering (SSR) mode, contents of `<svelte:head>` are returned separately from the rest of your HTML.

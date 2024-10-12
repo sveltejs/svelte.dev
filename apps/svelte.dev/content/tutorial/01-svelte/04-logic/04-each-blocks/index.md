@@ -20,7 +20,7 @@ Instead of laboriously copying, pasting and editing, we can get rid of all but t
 </div>
 ```
 
-> The expression (`colors`, in this case) can be any iterable or array-like object — in other words, anything that works with [`Array.from`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from).
+> [!NOTE] The expression (`colors`, in this case) can be any iterable or array-like object — in other words, anything that works with [`Array.from`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from).
 
 Now we need to use the `color` variable in place of `"red"`:
 

@@ -15,7 +15,7 @@ Add this to the top of `Todo.svelte`:
 <svelte:options immutable={true} />
 ```
 
-> You can shorten this to `<svelte:options immutable/>` if you prefer.
+> [!NOTE] You can shorten this to `<svelte:options immutable/>` if you prefer.
 
 Now, when you toggle todos by clicking on them, only the updated component flashes.
 
