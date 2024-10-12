@@ -516,7 +516,7 @@ app.$on('event', callback);---
 +++const app = mount(App, { target: document.getElementById("app"), events: { event: callback } });+++
 ```
 
-> [!NOTE] Note that using `events` is discouraged — instead, [use callbacks](https://svelte-5-preview.vercel.app/docs/event-handlers)
+> [!NOTE] Note that using `events` is discouraged — instead, [use callbacks](#Event-changes)
 
 For `$set`, use `$state` instead to create a reactive property object and manipulate it. If you're doing this inside a `.js` or `.ts` file, adjust the ending to include `.svelte`, i.e. `.svelte.js` or `.svelte.ts`.
 
@@ -650,7 +650,7 @@ The `legacy` compiler option, which generated bulkier but IE-friendly code, no l
 
 ## The `children` prop is reserved
 
-Content inside component tags becomes a [snippet prop](/docs/snippets) called `children`. You cannot have a separate prop by that name.
+Content inside component tags becomes a [snippet prop](/docs/svelte/snippets) called `children`. You cannot have a separate prop by that name.
 
 ## Dot notation indicates a component
 
@@ -672,7 +672,7 @@ Exports from runes mode components cannot be bound to directly. For example, hav
 
 ### Bindings need to be explicitly defined using `$bindable()`
 
-In Svelte 4 syntax, every property (declared via `export let`) is bindable, meaning you can `bind:` to it. In runes mode, properties are not bindable by default: you need to denote bindable props with the [`$bindable`](/docs/runes#$bindable) rune.
+In Svelte 4 syntax, every property (declared via `export let`) is bindable, meaning you can `bind:` to it. In runes mode, properties are not bindable by default: you need to denote bindable props with the [`$bindable`](/docs/svelte/bindings#bind:property-for-components) rune.
 
 If a bindable property has a default value (e.g. `let { foo = $bindable('bar') } = $props();`), you need to pass a non-`undefined` value to that property if you're binding to it. This prevents ambiguous behavior — the parent and child must have the same value — and results in better performance (in Svelte 4, the default value was reflected back to the parent, resulting in wasteful additional render cycles).
 
@@ -727,7 +727,7 @@ This is [no longer true in Svelte 5](/#H4sIAAAAAAAAE4WQwU7DMAyGX8VESANpXe8lq9Q8A
 
 When using `onwheel`, `onmousewheel`, `ontouchstart` and `ontouchmove` event attributes, the handlers are [passive](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener#using_passive_listeners) to align with browser defaults. This greatly improves responsiveness by allowing the browser to scroll the document immediately, rather than waiting to see if the event handler calls `event.preventDefault()`.
 
-In the very rare cases that you need to prevent these event defaults, you should use [`on`](https://svelte-5-preview.vercel.app/docs/imports#svelte-events) instead (for example inside an action).
+In the very rare cases that you need to prevent these event defaults, you should use [`on`](/docs/svelte/svelte-events#on) instead (for example inside an action).
 
 ### Attribute/prop syntax is stricter
 
@@ -836,7 +836,7 @@ In Svelte 4, it was possible to specify event attributes on HTML elements as a s
 <button onclick="alert('hello')">...</button>
 ```
 
-This is not recommended, and is no longer possible in Svelte 5, where properties like `onclick` replace `on:click` as the mechanism for adding [event handlers](/docs/event-handlers).
+This is not recommended, and is no longer possible in Svelte 5, where properties like `onclick` replace `on:click` as the mechanism for adding [event handlers](/docs/svelte/basic-markup#Events).
 
 ### `null` and `undefined` become the empty string
 
