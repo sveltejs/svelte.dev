@@ -11,6 +11,7 @@
 	import Testimonials from './_home/Testimonials.svelte';
 	import Companies from './_home/Companies.svelte';
 	import { Section } from '@sveltejs/site-kit/components';
+	import Video from './_home/Video.svelte';
 </script>
 
 <svelte:head>
@@ -30,7 +31,16 @@
 
 	<Companies />
 
-	<Section><h2>TODO video</h2></Section>
+	<Section>
+		<figure>
+			<Video />
+			<figcaption>
+				<a href="https://www.offerzen.com/community/svelte-origins-documentary"
+					>Watch the full Svelte Origins documentary</a
+				>
+			</figcaption>
+		</figure>
+	</Section>
 
 	<Section><h2>Community stuff, photos from Stockholm etc</h2></Section>
 
@@ -91,3 +101,9 @@
 		{/snippet}
 	</Footer>
 </div>
+
+<style>
+	figcaption {
+		font: var(--sk-font-body-small);
+	}
+</style>
