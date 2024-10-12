@@ -30,7 +30,6 @@
 		height: 1em;
 		padding: 0.3em 0.4em;
 		border-radius: var(--sk-border-radius);
-		line-height: 1em;
 		box-sizing: content-box;
 		color: var(--sk-text-3);
 		border: 1px solid var(--sk-back-3);

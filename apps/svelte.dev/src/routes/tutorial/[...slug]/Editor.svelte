@@ -249,12 +249,11 @@
 		grid-template-columns: 4rem 1fr;
 		grid-gap: 1rem;
 		padding: 1rem 0;
-		font-size: 1.3rem;
-		line-height: 2rem;
+		font: var(--sk-font-mono);
 	}
 
 	.fake * {
-		font-family: var(--font-mono) !important;
+		/* font-family: var(--font-mono) !important; */
 		color: #ccc;
 	}
 

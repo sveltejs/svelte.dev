@@ -82,7 +82,7 @@
 
 		.description {
 			position: relative;
-			font-family: var(--sk-font-family-ui);
+			font: var(--sk-font-ui-medium);
 			display: flex;
 			align-items: center;
 			bottom: 0.2em;
@@ -93,10 +93,9 @@
 				line-height: 1;
 				margin: 0 1em;
 				text-transform: uppercase;
-				font: var(--sk-font-ui-small);
 				background: var(--sk-text-2);
 				border-radius: var(--sk-border-radius);
-				font-family: var(--sk-font-family-ui);
+				font: var(--sk-font-ui-small);
 				color: var(--sk-back-2);
 			}
 		}

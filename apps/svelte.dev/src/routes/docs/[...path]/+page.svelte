@@ -68,9 +68,8 @@
 <style>
 	.edit {
 		position: relative;
-		font-size: 1.4rem;
 		margin: 6rem 0 2rem 0;
-		font-family: var(--sk-font-family-ui);
+		font: var(--sk-font-ui-small);
 
 		a {
 			text-decoration: none;

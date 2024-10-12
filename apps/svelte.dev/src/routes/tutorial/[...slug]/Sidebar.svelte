@@ -203,12 +203,17 @@
 
 	.modal-contents {
 		h2 {
-			font-size: 2.4rem;
+			font: var(--sk-font-ui-large);
 			margin: 0 0 0.5em 0;
+		}
+
+		p {
+			font: var(--sk-font-ui-medium);
 		}
 
 		label {
 			user-select: none;
+			font: var(--sk-font-ui-medium);
 		}
 
 		button {
@@ -220,6 +225,7 @@
 			margin: 1em 0 0 0;
 			border-radius: var(--sk-border-radius);
 			line-height: 1;
+			font: var(--sk-font-ui-small);
 		}
 	}
 

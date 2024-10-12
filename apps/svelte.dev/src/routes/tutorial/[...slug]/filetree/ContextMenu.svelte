@@ -42,7 +42,7 @@
 		display: inline-flex;
 		border: 1px solid rgba(0, 0, 0, 0.1);
 		background-color: var(--back);
-		border-radius: var(--border-r);
+		border-radius: var(--sk-border-radius);
 		overflow: hidden;
 		flex-direction: column;
 		filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.1));
@@ -70,7 +70,7 @@
 		text-align: left;
 		border: 0px;
 		padding: 0.4rem 1rem 0.2rem 1rem;
-		font-size: 1.4rem;
+		font: var(--sk-font-ui-small);
 	}
 
 	li:first-child button {

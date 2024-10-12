@@ -7,9 +7,7 @@
 }
 
 .cm-editor .cm-scroller {
-	font-family: var(--sk-font-family-mono);
-	font-size: 1.3rem;
-	line-height: 2rem;
+	font: var(--sk-font-mono);
 }
 
 .cm-editor .cm-gutters {
@@ -91,8 +89,7 @@
 }
 
 .cm-editor .cm-tooltip.cm-tooltip-autocomplete > ul {
-	font-family: var(--font-mono);
-	font-size: 1.3rem;
+	font: var(--sk-font-mono);
 }
 
 .cm-editor .cm-panels {

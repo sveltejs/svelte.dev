@@ -71,8 +71,7 @@
 		border: none;
 		background-color: var(--sk-back-3);
 		color: var(--sk-text-1);
-		font-family: inherit;
-		font-size: 1.6rem;
+		font: var(--sk-font-ui-medium);
 	}
 
 	a:focus-visible,

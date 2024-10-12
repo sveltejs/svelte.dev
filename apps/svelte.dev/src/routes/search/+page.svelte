@@ -29,7 +29,6 @@
 		max-width: 64rem;
 		margin: 0 auto;
 		padding: 8rem 1rem;
-		font-family: var(--sk-font-family-ui);
 	}
 
 	form {

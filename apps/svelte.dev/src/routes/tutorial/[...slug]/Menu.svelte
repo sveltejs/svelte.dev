@@ -172,8 +172,6 @@
 
 	header {
 		position: relative;
-		/* z-index: 2; */
-		font-family: var(--sk-font-family-ui);
 
 		display: grid;
 		grid-template-columns: 4rem minmax(0, 1fr) 4rem;
@@ -270,9 +268,8 @@
 
 	.separator {
 		position: relative;
-		font-size: 0.8em;
+		font: var(--sk-font-ui-small);
 		opacity: 0.3;
-		top: -0.1rem;
 		display: inline-block;
 	}
 
