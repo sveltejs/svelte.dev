@@ -313,7 +313,6 @@ export async function render_content_markdown(
 
 /**
  * Pre-render step. Takes in all the code snippets, and replaces them with TS snippets if possible
- * May replace the language labels (```js) to custom labels(```generated-ts, ```original-js, ```generated-svelte,```original-svelte)
  */
 async function generate_ts_from_js(
 	code: string,
@@ -323,32 +322,23 @@ async function generate_ts_from_js(
 	// No named file -> assume that the code is not meant to be shown in two versions
 	if (!options.file) return;
 
-	if (language === 'js') {
-		// config files have no .ts equivalent
-		if (options.file === 'svelte.config.js') return;
+	// config files have no .ts equivalent
+	if (options.file === 'svelte.config.js') return;
 
-		let [before, after] = code.split('// ---cut---\n');
+	if (language === 'svelte') {
+		// Assumption: no module blocks
+		const script = code.match(/<script>([\s\S]+?)<\/script>/);
+		if (!script) return;
 
-		if (!after) {
-			after = before;
-			before = '';
-		}
+		const [outer, inner] = script;
+		const ts = await convert_to_ts(inner, '\t', '\n');
 
-		const converted = await convert_to_ts(after.replace(/\/\/\/ file: .+?\n/, ''));
+		if (!ts) return;
 
-		return converted && [before, converted].join('// ---cut---\n');
+		return code.replace(outer, `<script lang="ts">${ts}</script>`);
 	}
 
-	// Assumption: no module blocks
-	const script = code.match(/<script>([\s\S]+?)<\/script>/);
-	if (!script) return;
-
-	const [outer, inner] = script;
-	const ts = await convert_to_ts(inner, '\t', '\n');
-
-	if (!ts) return;
-
-	return code.replace(outer, `<script lang="ts">${ts}</script>`);
+	return await convert_to_ts(code);
 }
 
 function get_jsdoc(node: ts.Node) {
@@ -366,15 +356,6 @@ async function convert_to_ts(js_code: string, indent = '', offset = '') {
 		.replace(/(\/\/\/ .+?\.)js/, '$1ts')
 		// *\/ appears in some JsDoc comments in d.ts files due to the JSDoc-in-JSDoc problem
 		.replace(/\*\\\//g, '*/');
-
-	// TODO temp
-	if (js_code.includes('// ---cut---')) {
-		throw new Error('unexpected cut directive');
-	}
-
-	if (js_code.includes('/// file:')) {
-		throw new Error('unexpected file directive');
-	}
 
 	const ast = ts.createSourceFile(
 		'filename.ts',
