@@ -15,7 +15,7 @@
 	import vercel from './logos/vercel.svg';
 </script>
 
-<Section --background="var(--background-1)">
+<Section>
 	<div class="grid" style="--columns: 3">
 		<h2>deploy anywhere</h2>
 		<div class="blurb">

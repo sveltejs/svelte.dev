@@ -9,6 +9,8 @@
 	import Showcase from './_home/Showcase.svelte';
 	import './_home/common.css';
 	import HeroSvelteKit from './_home/HeroSvelteKit.svelte';
+	import Testimonials from './_home/Testimonials.svelte';
+	import Companies from './_home/Companies.svelte';
 </script>
 
 <svelte:head>
@@ -24,51 +26,18 @@
 
 	<Hero />
 
-	<Blurb>
-		{#snippet one()}
-			<div>
-				<h2>fast</h2>
-				<p>
-					Svelte shifts as much work as possible out of the browser and into your build step. No
-					more manual optimisations — just faster, smaller and more efficient apps.
-				</p>
-			</div>
-		{/snippet}
+	<Svelte />
 
-		{#snippet two()}
-			<div>
-				<h2>fun</h2>
-				<p>
-					Write concise components using languages you already know — HTML, CSS and JavaScript. Get
-					things done without fighting the framework. Code with joy.
-				</p>
-			</div>
-		{/snippet}
+	<Testimonials />
 
-		{#snippet three()}
-			<div>
-				<h2>flexible</h2>
-				<p>
-					Svelte scales from tiny widgets all the way to big full-stack applications. State
-					management, motion primitives, form bindings and more — all built-in.
-				</p>
-			</div>
-		{/snippet}
-	</Blurb>
+	<Companies />
 
 	<TrySection />
 
-	<Svelte />
-
-	<HeroSvelteKit />
-
-	<Features />
-
+	<!-- SvelteKit stuff -->
+	<!-- <HeroSvelteKit />
+	<Features /> -->
 	<Deployment />
-
-	<Showcase />
-
-	<WhosUsingSvelte />
 
 	<Supporters />
 

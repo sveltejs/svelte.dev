@@ -32,35 +32,7 @@
 
 <style>
 	.hero {
-		--gradient: radial-gradient(
-				83.39% 117.39% at 47.58% 31.75%,
-				rgba(242, 249, 255, 0.52) 0%,
-				rgba(255, 255, 255, 0) 100%
-			),
-			linear-gradient(
-				125deg,
-				#e7f1fa 0%,
-				rgba(238, 247, 255, 0.48) 34.51%,
-				rgba(222, 234, 244, 0.62) 100%
-			);
-
-		--dark-gradient: radial-gradient(
-				64.14% 72.25% at 47.58% 31.75%,
-				hsl(209deg 6% 47% / 52%) 0%,
-				hsla(0, 0%, 100%, 0) 100%
-			),
-			linear-gradient(
-				92.4deg,
-				hsl(210, 7%, 16%) 14.67%,
-				hsl(0deg 0% 0% / 48%) 54.37%,
-				hsla(207, 22%, 13%, 0.62) 92.49%
-			),
-			linear-gradient(0deg, hsl(204, 38%, 20%), hsl(204, 10%, 90%));
-
 		max-width: 100vw;
-		background: hsl(210, 7%, 84%);
-		background: var(--gradient);
-		background-blend-mode: hard-light, multiply, normal;
 		position: relative;
 		padding: 8rem var(--sk-page-padding-side);
 		margin-bottom: 2rem;

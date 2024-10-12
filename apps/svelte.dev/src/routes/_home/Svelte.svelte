@@ -1,110 +1,69 @@
-<script>
-	import { Section } from '@sveltejs/site-kit/components';
-	import Video from './Video.svelte';
-</script>
-
-<Section --background="var(--background-1)">
-	<p class="definition">
-		<em>/ˈsvɛlt/</em>
-		<span class="description">
-			<span class="adjective">adjective</span> attractively thin, graceful and stylish
-		</span>
-	</p>
-
-	<div class="grid" style="--columns: 3">
-		<div class="video-container">
-			<Video />
-
-			<p>
-				<a
-					target="_blank"
-					rel="noreferrer"
-					href="https://www.offerzen.com/community/svelte-origins-documentary"
-				>
-					Watch the full Svelte Origins documentary
-				</a>
-			</p>
-		</div>
-
-		<div>
-			<p>
-				Svelte is a UI framework that uses a compiler to let you write breathtakingly concise
-				components that do minimal work in the browser, using languages you already know — HTML, CSS
-				and JavaScript. <strong>It's a love letter to web development.</strong>
-			</p>
-
-			<p>
-				But don't take our word for it. Developers consistently rank Svelte as the framework they're
-				<a
-					target="_blank"
-					rel="noreferrer"
-					href="https://survey.stackoverflow.co/2023/#section-admired-and-desired-web-frameworks-and-technologies"
-				>
-					most
-				</a>
-				<a
-					target="_blank"
-					rel="noreferrer"
-					href="https://tsh.io/state-of-frontend/#which-of-the-following-frameworks-would-you-like-to-learn-in-the-future"
-				>
-					excited
-				</a>
-				<a
-					target="_blank"
-					rel="noreferrer"
-					href="https://2023.stateofjs.com/en-US/libraries/front-end-frameworks/"
-				>
-					about
-				</a>
-
-				<a
-					target="_blank"
-					rel="noreferrer"
-					href="https://twitter.com/Rich_Harris/status/1589675637195042817"
-				>
-					using</a
-				>.
-			</p>
-		</div>
-	</div>
-</Section>
+<p class="definition">
+	<em>/ˈsvɛlt/</em>
+	<span class="description">
+		<span class="adjective"></span> attractively thin, graceful and stylish
+	</span>
+</p>
 
 <style>
 	.definition {
+		position: relative;
 		display: flex;
-		align-items: baseline;
+		/* align-items: baseline; */
+		align-items: start;
+		justify-content: center;
+		max-width: 120rem;
+		padding: 0 var(--sk-page-padding-side);
+		margin: 0 auto;
+		gap: 1rem;
 
 		em {
 			font-style: normal;
 			font-size: var(--sk-font-size-h1);
 			color: var(--sk-theme-1);
+			text-wrap: nowrap;
+			line-height: 1;
 		}
 
 		.description {
 			position: relative;
 			font: var(--sk-font-ui-medium);
-			display: flex;
-			align-items: center;
+			/* display: flex;
+			flex-direction: column; */
+			/* align-items: center; */
 			bottom: 0.2em;
+			text-wrap: balance;
+			width: 16rem;
+		}
 
-			.adjective {
-				position: relative;
-				padding: 0.25em 0.5em 0.1em;
-				line-height: 1;
-				margin: 0 1em;
-				text-transform: uppercase;
-				background: var(--sk-text-2);
-				border-radius: var(--sk-border-radius);
-				font: var(--sk-font-ui-small);
-				color: var(--sk-back-2);
+		.adjective {
+			position: relative;
+			padding: 0.25em 0.5em 0.1em;
+			line-height: 1;
+			text-transform: uppercase;
+			background: var(--sk-text-2);
+			border-radius: var(--sk-border-radius);
+			font: var(--sk-font-ui-small);
+			color: var(--sk-back-2);
+
+			&::after {
+				content: 'adj.';
 			}
 		}
-	}
 
-	@media (min-width: 900px) {
-		.video-container {
-			order: 2;
-			grid-column: 2 / 4;
+		@media (min-width: 800px) {
+			align-items: baseline;
+			justify-content: start;
+
+			.description {
+				flex-direction: row;
+				gap: 1rem;
+				width: auto;
+			}
+
+			.adjective::after {
+				content: 'adjective';
+			}
 		}
 	}
 </style>

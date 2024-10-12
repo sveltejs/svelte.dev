@@ -45,6 +45,7 @@
 		position: relative;
 		padding: 6rem 0 34vw 0;
 		margin-bottom: 3rem;
+		height: calc(22rem + 40vw);
 
 		&::before {
 			content: '';
@@ -112,14 +113,14 @@
 		}
 
 		.hero {
-			height: calc(14rem + 20vw);
+			height: calc(20rem + 20vw);
 			padding: 14rem 0 0 0;
 		}
 	}
 
 	@media (min-width: 1400px) {
 		.hero {
-			height: calc(10rem + 20vw);
+			height: calc(20rem + 20vw);
 			padding: 10rem 0 0 0;
 		}
 	}
