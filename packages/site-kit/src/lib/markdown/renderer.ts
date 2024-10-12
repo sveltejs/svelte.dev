@@ -431,7 +431,9 @@ async function convert_to_ts(js_code: string, indent = '', offset = '') {
 							const variable_statement = node.declarationList.declarations[0];
 
 							if (variable_statement.name.getText() === 'actions') {
-								code.appendLeft(variable_statement.getEnd(), ` satisfies ${name}`);
+								let i = variable_statement.getEnd();
+								while (code.original[i - 1] !== '}') i -= 1;
+								code.appendLeft(i, ` satisfies ${name}`);
 							} else {
 								code.appendLeft(
 									variable_statement.name.getEnd(),
