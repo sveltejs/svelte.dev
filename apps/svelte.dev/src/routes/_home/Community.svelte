@@ -28,7 +28,6 @@
 		position: relative;
 		top: max(-2vw, calc(-0.02 * (120rem + 2 * var(--sk-page-padding-side))));
 		font: var(--sk-font-body-small);
-		width: 120rem;
 		margin: 0 auto;
 		padding: 0 var(--sk-page-padding-side);
 		color: var(--sk-text-4);

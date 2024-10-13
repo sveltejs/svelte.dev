@@ -22,7 +22,7 @@ try {
 	const base = `https://api.github.com/repos/sveltejs/svelte/contributors`;
 	const { GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET } = process.env;
 
-	const MAX = 24;
+	const MAX = 48;
 	const SIZE = 128;
 
 	const contributors = [];
