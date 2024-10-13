@@ -13,6 +13,7 @@
 	import { browser } from '$app/environment';
 	import SelectIcon from '$lib/components/SelectIcon.svelte';
 	import { untrack } from 'svelte';
+	import SecondaryNav from '$lib/components/SecondaryNav.svelte';
 
 	interface Props {
 		examples: Array<{ title: string; examples: any[] }>;
@@ -228,7 +229,7 @@ export default app;`
 
 <svelte:window on:keydown={handleKeydown} />
 
-<div class="app-controls">
+<SecondaryNav>
 	<SelectIcon
 		bind:this={select}
 		title="examples"
@@ -302,27 +303,9 @@ export default app;`
 			</button>
 		{/if}
 	</div>
-</div>
+</SecondaryNav>
 
 <style>
-	.app-controls {
-		width: 100%;
-		height: var(--sk-secondary-nav-height);
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		padding: 0.6rem var(--sk-page-padding-side);
-		background-color: var(--sk-back-2);
-		color: var(--sk-text-1);
-		white-space: nowrap;
-		flex: 0;
-		gap: 1rem;
-
-		@media (min-width: 800px) {
-			padding-top: 1rem;
-		}
-	}
-
 	.buttons {
 		display: flex;
 		align-items: center;

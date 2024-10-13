@@ -22,6 +22,7 @@
 	import { needs_webcontainers, text_files } from './shared';
 	import OutputRollup from './OutputRollup.svelte';
 	import { page } from '$app/stores';
+	import Controls from './Controls.svelte';
 
 	export let data;
 
@@ -241,6 +242,7 @@
 <ContextMenu />
 
 <div class="container" class:mobile>
+	<Controls />
 	<div class="top" class:offset={show_editor}>
 		<SplitPane id="main" type="horizontal" min="360px" max="50%" pos="33%">
 			<section slot="a" class="content">
