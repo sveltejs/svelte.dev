@@ -11,6 +11,8 @@
 	import type { Gist, User } from '$lib/db/types';
 	import type { File } from '@sveltejs/repl';
 	import { browser } from '$app/environment';
+	import SelectIcon from '$lib/components/SelectIcon.svelte';
+	import { untrack } from 'svelte';
 
 	interface Props {
 		examples: Array<{ title: string; examples: any[] }>;
@@ -40,7 +42,7 @@
 	let downloading = $state(false);
 	let justSaved = $state(false);
 	let justForked = $state(false);
-	let select: HTMLSelectElement;
+	let select: any; // TODO why can't i do `select: SelectIcon`?
 
 	function wait(ms: number) {
 		return new Promise((f) => setTimeout(f, ms));
@@ -214,7 +216,12 @@ export default app;`
 	// the example can be reselected
 	$effect(() => {
 		if (modified) {
-			select.value = '';
+			// this is a little tricky, but: we need to wrap this in untrack
+			// because otherwise we'll read `select.value` and re-run this
+			// when we navigate, which we don't want
+			untrack(() => {
+				select.value = '';
+			});
 		}
 	});
 </script>
@@ -222,27 +229,24 @@ export default app;`
 <svelte:window on:keydown={handleKeydown} />
 
 <div class="app-controls">
-	<div class="examples-select">
-		<span class="raised icon"><Icon name="menu" /></span>
-		<select
-			bind:this={select}
-			title="examples"
-			value={gist.id}
-			onchange={(e) => {
-				goto(`/playground/${e.currentTarget.value}`);
-			}}
-		>
-			<option value="untitled">Create new</option>
-			<option disabled selected value="">or choose an example</option>
-			{#each examples as section}
-				<optgroup label={section.title}>
-					{#each section.examples as example}
-						<option value={example.slug}>{example.title}</option>
-					{/each}
-				</optgroup>
-			{/each}
-		</select>
-	</div>
+	<SelectIcon
+		bind:this={select}
+		title="examples"
+		value={gist.id}
+		onchange={async (e) => {
+			goto(`/playground/${e.currentTarget.value}`);
+		}}
+	>
+		<option value="untitled">Create new</option>
+		<option disabled selected value="">or choose an example</option>
+		{#each examples as section}
+			<optgroup label={section.title}>
+				{#each section.examples as example}
+					<option value={example.slug}>{example.title}</option>
+				{/each}
+			</optgroup>
+		{/each}
+	</SelectIcon>
 
 	<input
 		bind:value={name}
@@ -325,30 +329,7 @@ export default app;`
 		gap: 0.2rem;
 	}
 
-	.examples-select {
-		position: relative;
-
-		&:has(select:focus-visible) .raised.icon {
-			outline: 2px solid hsla(var(--sk-theme-1-hsl), 0.6);
-			border-radius: var(--sk-border-radius);
-		}
-
-		span {
-			pointer-events: none;
-		}
-	}
-
-	select {
-		opacity: 0.0001;
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-	}
-
-	button,
-	span.icon {
+	button {
 		display: flex;
 		align-items: center;
 		justify-content: center;
