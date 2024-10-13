@@ -2,12 +2,17 @@
 	import { goto } from '$app/navigation';
 	import SecondaryNav from '$lib/components/SecondaryNav.svelte';
 	import SelectIcon from '$lib/components/SelectIcon.svelte';
-	import type { Exercise, PartStub } from '$lib/tutorial';
+	import type { Exercise, PartStub, Stub } from '$lib/tutorial';
 	import { Icon } from '@sveltejs/site-kit/components';
 
-	let { index, exercise }: { index: PartStub[]; exercise: Exercise } = $props();
+	interface Props {
+		index: PartStub[];
+		exercise: Exercise;
+		completed: boolean;
+		toggle: () => void;
+	}
 
-	$inspect({ index, exercise });
+	let { index, exercise, completed, toggle }: Props = $props();
 
 	// TODO this really sucks, why is `exercise.slug` not the slug?
 	let actual_slug = $derived.by(() => {
@@ -55,7 +60,13 @@
 		<span>{exercise.title}</span>
 	</div>
 
-	<button class="raised"> solve </button>
+	<button class="raised" class:completed disabled={!exercise.has_solution} onclick={toggle}>
+		{#if completed && exercise.has_solution}
+			reset
+		{:else}
+			solve
+		{/if}
+	</button>
 </SecondaryNav>
 
 <style>

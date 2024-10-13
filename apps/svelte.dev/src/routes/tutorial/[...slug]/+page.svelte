@@ -242,7 +242,15 @@
 <ContextMenu />
 
 <div class="container" class:mobile>
-	<Controls index={data.index} exercise={data.exercise} />
+	<Controls
+		index={data.index}
+		exercise={data.exercise}
+		{completed}
+		toggle={() => {
+			reset_files(Object.values(completed ? a : b));
+		}}
+	/>
+
 	<div class="top" class:offset={show_editor}>
 		<SplitPane id="main" type="horizontal" min="360px" max="50%" pos="33%">
 			<section slot="a" class="content">
@@ -282,21 +290,6 @@
 										}}
 									/>
 								{/if}
-
-								<button
-									class="solve"
-									class:completed
-									disabled={!data.exercise.has_solution}
-									on:click={() => {
-										reset_files(Object.values(completed ? a : b));
-									}}
-								>
-									{#if completed && data.exercise.has_solution}
-										reset
-									{:else}
-										solve <Icon name="arrow-right" />
-									{/if}
-								</button>
 							</section>
 
 							<section class="editor-container" slot="b">
