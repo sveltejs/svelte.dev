@@ -12,7 +12,7 @@
 
 	<figure>
 		<enhanced:img
-			src="./summit.png"
+			src="./summit.png?w=800;1200;2000;2800;4400"
 			alt="Photos by Marcel Cutts from the 2022 Svelte Summit in Stockholm"
 		/>
 		<figcaption>Photos by <a href="https://x.com/marcelcutts">Marcel Cutts</a></figcaption>
