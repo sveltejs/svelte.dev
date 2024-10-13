@@ -110,7 +110,7 @@
 	}
 
 	a[href] {
-		color: color-mix(in srgb, var(--sk-theme-1) 90%, var(--sk-text-1) 15%);
+		/* color: color-mix(in srgb, var(--sk-theme-1) 90%, var(--sk-text-1) 15%); */
 	}
 
 	.supporter {
