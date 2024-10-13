@@ -1,18 +1,13 @@
 <script>
-	import { Blurb, Footer, TrySection } from '@sveltejs/site-kit/home';
+	import { Footer } from '@sveltejs/site-kit/home';
+	import { Section } from '@sveltejs/site-kit/components';
 	import Hero from './_home/Hero.svelte';
 	import Supporters from './_home/Supporters/index.svelte';
-	import WhosUsingSvelte from './_home/WhosUsingSvelte/index.svelte';
-	import Features from './_home/Features.svelte';
-	import Deployment from './_home/Deployment.svelte';
-	import Showcase from './_home/Showcase.svelte';
-	import './_home/common.css';
-	import HeroSvelteKit from './_home/HeroSvelteKit.svelte';
 	import Testimonials from './_home/Testimonials.svelte';
 	import Companies from './_home/Companies.svelte';
-	import { Section } from '@sveltejs/site-kit/components';
 	import Video from './_home/Video.svelte';
 	import Community from './_home/Community.svelte';
+	import './_home/common.css'; /* TODO wut */
 </script>
 
 <svelte:head>
