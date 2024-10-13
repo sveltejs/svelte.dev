@@ -12,6 +12,7 @@
 	import Companies from './_home/Companies.svelte';
 	import { Section } from '@sveltejs/site-kit/components';
 	import Video from './_home/Video.svelte';
+	import Community from './_home/Community.svelte';
 </script>
 
 <svelte:head>
@@ -42,68 +43,23 @@
 		</figure>
 	</Section>
 
-	<Section><h2>Community stuff, photos from Stockholm etc</h2></Section>
-
-	<!-- <TrySection /> -->
-
-	<!-- SvelteKit stuff -->
-	<!-- <HeroSvelteKit />
-	<Features /> -->
-	<!-- <Deployment /> -->
+	<Community />
 
 	<Supporters />
 
-	<Footer
-		links={{
-			resources: [
-				{
-					title: 'documentation',
-					href: '/docs'
-				},
-				{
-					title: 'tutorial',
-					href: '/tutorial'
-				},
-				{
-					title: 'playground',
-					href: '/playground'
-				},
-				{
-					title: 'blog',
-					href: '/blog'
-				}
-			],
-			connect: [
-				{
-					title: 'github',
-					href: 'https://github.com/sveltejs/svelte'
-				},
-				{
-					title: 'opencollective',
-					href: 'https://opencollective.com/svelte'
-				},
-				{
-					title: 'discord',
-					href: '/chat'
-				},
-				{
-					title: 'twitter',
-					href: 'https://twitter.com/sveltejs'
-				}
-			]
-		}}
-	>
-		{#snippet license()}
-			<span>
-				Svelte is <a href="https://github.com/sveltejs/svelte">free and open source software</a> released
-				under the MIT license
-			</span>
-		{/snippet}
-	</Footer>
+	<Footer />
 </div>
 
 <style>
 	figcaption {
 		font: var(--sk-font-body-small);
+	}
+
+	.home :global {
+		@media (min-width: 800px) {
+			h2 {
+				font: var(--sk-font-h1);
+			}
+		}
 	}
 </style>

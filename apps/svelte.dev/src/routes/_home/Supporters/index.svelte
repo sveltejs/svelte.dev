@@ -9,11 +9,11 @@
 	import donors_img from './donors.jpg?w=1200&format=webp';
 </script>
 
-<Section --background="var(--sk-back-2">
-	<h2>Svelte is here to stay</h2>
+<Section>
+	<!-- <h2>Svelte is here to stay</h2> -->
 	<p class="intro">
 		Backed by <a href="https://vercel.com" target="_blank" rel="noreferrer">Vercel</a> and countless
-		donors, developed by full-time and part-time maintainers, surrounded by a welcoming community.
+		donors, developed by full-time and part-time maintainers, Svelte is here to stay.
 	</p>
 
 	<div class="layout">
@@ -61,8 +61,10 @@
 	}
 
 	.intro {
-		margin: 1em 0 3.2rem 0;
+		margin: 1em auto 3.2rem auto;
 		text-wrap: balance;
+		text-align: center;
+		max-width: 23em;
 	}
 
 	.supporters-grid {
@@ -135,12 +137,6 @@
 	@media (min-width: 1100px) {
 		.supporters-grid {
 			grid-template-columns: repeat(12, minmax(0, 1fr));
-		}
-	}
-
-	@media (min-width: 1200px) {
-		.intro {
-			max-width: 600px;
 		}
 	}
 </style>

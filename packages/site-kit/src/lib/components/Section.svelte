@@ -22,7 +22,7 @@
 	}
 
 	.inner {
-		max-width: 120rem;
+		max-width: var(--max-width, 120rem);
 		padding: 0 var(--sk-page-padding-side);
 		margin: 0 auto;
 	}
