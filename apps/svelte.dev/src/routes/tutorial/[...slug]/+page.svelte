@@ -242,7 +242,7 @@
 <ContextMenu />
 
 <div class="container" class:mobile>
-	<Controls />
+	<Controls index={data.index} exercise={data.exercise} />
 	<div class="top" class:offset={show_editor}>
 		<SplitPane id="main" type="horizontal" min="360px" max="50%" pos="33%">
 			<section slot="a" class="content">

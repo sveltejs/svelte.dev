@@ -21,7 +21,7 @@
 	let show_modal = false;
 </script>
 
-<Menu {index} current={exercise} />
+<!-- <Menu {index} current={exercise} /> -->
 
 <section bind:this={sidebar}>
 	<div
