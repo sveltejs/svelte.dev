@@ -8,6 +8,7 @@
 			<enhanced:img src="./companies/light/ikea.svg" alt="Ikea logo" />
 			<enhanced:img src="./companies/light/mullvad.svg" alt="Mullvad logo" />
 			<enhanced:img src="./companies/light/stack-overflow.svg" alt="Mullvad logo" />
+			<enhanced:img src="./companies/light/yelp.svg" alt="New York Times logo" />
 			<enhanced:img src="./companies/light/square.svg" alt="Mullvad logo" />
 			<enhanced:img src="./companies/light/apple.svg" alt="Apple logo" />
 		</div>
@@ -16,7 +17,6 @@
 	<div class="wing">
 		<div class="logos">
 			<enhanced:img src="./companies/light/spotify.svg" alt="Spotify logo" />
-			<enhanced:img src="./companies/light/yelp.svg" alt="New York Times logo" />
 			<enhanced:img src="./companies/light/nyt.svg" alt="New York Times logo" />
 			<enhanced:img src="./companies/light/logitech.svg" alt="Logitech logo" />
 			<enhanced:img src="./companies/light/decathlon.svg" alt="Decathlon logo" />
@@ -29,15 +29,22 @@
 	.companies {
 		--h2-width: 12em;
 		display: grid;
-		grid-template-columns: 1fr auto 1fr;
+		gap: 1rem;
 		align-items: center;
-		margin: 6rem 0;
+		margin: 15rem 0 5rem 0;
+		mask-size: 100%;
+		mask-image: radial-gradient(ellipse 110rem 500%, white, white 70%, transparent);
 	}
 
 	h2 {
-		width: var(--h2-width);
+		/* width: var(--h2-width); */
+		width: 100%;
 		text-align: center;
 		margin: 0 auto;
+		position: absolute;
+		z-index: 2;
+		filter: drop-shadow(0 0 1rem var(--sk-back-1)) drop-shadow(0 0 1rem var(--sk-back-1));
+		padding: 0 var(--sk-page-padding-side);
 	}
 
 	.wing {
@@ -46,12 +53,12 @@
 	}
 
 	.logos {
-		position: absolute;
+		/* position: absolute; */
 		display: flex;
 		height: 100%;
 		align-items: center;
 		top: 0;
-		gap: 2rem;
+		gap: 4rem;
 		opacity: 0.5;
 
 		.wing:first-child & {
@@ -65,6 +72,22 @@
 		img {
 			height: 100%;
 			width: auto;
+		}
+	}
+
+	@media (min-width: 800px) {
+		.companies {
+			grid-template-columns: 1fr auto 1fr;
+			align-items: center;
+		}
+
+		h2 {
+			position: relative;
+			width: var(--h2-width);
+		}
+
+		.logos {
+			position: absolute;
 		}
 	}
 </style>
