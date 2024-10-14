@@ -1,11 +1,7 @@
 <script>
 	import { createEventDispatcher } from 'svelte';
 	import Modal from '$lib/components/Modal.svelte';
-	import Menu from './Menu.svelte';
 	import { Text } from '@sveltejs/site-kit/components';
-
-	/** @type {import('$lib/tutorial').PartStub[]} */
-	export let index;
 
 	/** @type {import('$lib/tutorial').Exercise} */
 	export let exercise;
@@ -20,8 +16,6 @@
 
 	let show_modal = false;
 </script>
-
-<!-- <Menu {index} current={exercise} /> -->
 
 <section bind:this={sidebar}>
 	<div

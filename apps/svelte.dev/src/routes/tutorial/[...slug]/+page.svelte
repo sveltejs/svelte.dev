@@ -256,7 +256,6 @@
 			<section slot="a" class="content">
 				<Sidebar
 					bind:sidebar
-					index={data.index}
 					exercise={data.exercise}
 					on:select={(e) => {
 						navigate_to_file(e.detail.file);
