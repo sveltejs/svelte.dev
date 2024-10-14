@@ -27,8 +27,9 @@
 		opacity: 0;
 		pointer-events: none;
 		position: absolute;
-		left: 0;
-		top: calc(100% - 1rem);
+		left: -1rem;
+		/* this is a bit of a kludge, but it ensures a contiguous hit area (50% + 50%) while also working for tall links like `Docs` (50% + 1.5rem) */
+		top: calc(50% + min(50%, 1.5rem));
 		background-color: var(--sk-back-2);
 		z-index: 1;
 		box-shadow: var(--sk-shadow);
@@ -38,7 +39,7 @@
 
 		&.align-right {
 			left: auto;
-			right: 0;
+			right: -1rem;
 		}
 
 		:global {

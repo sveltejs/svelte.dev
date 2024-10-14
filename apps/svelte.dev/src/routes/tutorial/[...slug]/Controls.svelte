@@ -2,7 +2,7 @@
 	import { goto } from '$app/navigation';
 	import SecondaryNav from '$lib/components/SecondaryNav.svelte';
 	import SelectIcon from '$lib/components/SelectIcon.svelte';
-	import type { Exercise, PartStub, Stub } from '$lib/tutorial';
+	import type { Exercise, PartStub } from '$lib/tutorial';
 	import { Icon } from '@sveltejs/site-kit/components';
 
 	interface Props {
