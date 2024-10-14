@@ -156,7 +156,6 @@ button {
 	background-color: transparent;
 	border: none;
 	color: currentColor;
-	cursor: pointer;
 }
 
 button[disabled] {

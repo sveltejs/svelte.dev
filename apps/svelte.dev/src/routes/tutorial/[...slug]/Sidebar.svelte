@@ -120,8 +120,8 @@
 
 	.text {
 		flex: 1 1 auto;
-		padding: 2.2rem 3rem;
-		border-right: 1px solid var(--sk-back-4);
+		padding: 2.2rem var(--sk-page-padding-side);
+		/* border-right: 1px solid var(--sk-back-5); */
 		background: var(--sk-back-1);
 
 		:global {

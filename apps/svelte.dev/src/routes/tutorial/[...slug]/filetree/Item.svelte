@@ -98,7 +98,7 @@
 
 <style>
 	li {
-		--bg: var(--sk-back-1);
+		--bg: var(--sk-back-3);
 		--inset: calc((var(--depth) * 1.2rem) + 1.5rem);
 		display: flex;
 		position: relative;
@@ -187,19 +187,6 @@
 
 	[aria-current='true'] {
 		color: var(--sk-theme-1);
-	}
-
-	[aria-current='true']::after {
-		content: '';
-		position: absolute;
-		width: 1rem;
-		height: 1rem;
-		top: 0.3rem;
-		right: calc(-0.6rem - 2px);
-		background-color: var(--sk-back-3);
-		border: 1px solid var(--sk-back-4);
-		transform: translate(0, 0.2rem) rotate(45deg);
-		z-index: 2;
 	}
 
 	[aria-current='true']:has(:focus-visible)::after,

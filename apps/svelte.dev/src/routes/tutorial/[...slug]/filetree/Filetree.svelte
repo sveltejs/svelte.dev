@@ -185,22 +185,12 @@
 		overflow-x: hidden;
 		padding: 1rem 0rem;
 		margin: 0;
-		background: var(--sk-back-1);
+		background: var(--sk-back-3);
 		list-style: none;
 	}
 
 	.filetree.mobile {
 		height: 100%;
-	}
-
-	.filetree:not(.mobile)::before {
-		content: '';
-		position: absolute;
-		width: 0;
-		height: 100%;
-		top: 0;
-		right: 0;
-		border-right: 1px solid var(--sk-back-4);
 	}
 
 	.modal-contents p {
