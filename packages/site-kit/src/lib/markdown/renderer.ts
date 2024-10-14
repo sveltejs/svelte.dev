@@ -368,103 +368,112 @@ async function convert_to_ts(js_code: string, indent = '', offset = '') {
 
 	async function walk(node: ts.Node) {
 		const jsdoc = get_jsdoc(node);
+
 		if (jsdoc) {
-			for (const comment of jsdoc) {
-				let modified = false;
+			// this isn't an exhaustive list of tags we could potentially encounter (no `@template` etc)
+			// but it's good enough to cover what's actually in the docs right now
+			let type: string | null = null;
+			let params: string[] = [];
+			let returns: string | null = null;
+			let satisfies: string | null = null;
 
-				let count = 0;
-				for (const tag of comment.tags ?? []) {
-					if (ts.isJSDocTypeTag(tag)) {
-						const [name, generics] = await get_type_info(tag);
+			if (jsdoc.length > 1) {
+				throw new Error('woah nelly');
+			}
 
-						if (ts.isFunctionDeclaration(node)) {
-							const is_export = node.modifiers?.some(
-								(modifier) => modifier.kind === ts.SyntaxKind.ExportKeyword
-							)
-								? 'export '
-								: '';
-							const is_async = node.modifiers?.some(
-								(modifier) => modifier.kind === ts.SyntaxKind.AsyncKeyword
-							);
+			const { comment, tags = [] } = jsdoc[0];
 
-							const type = generics !== undefined ? `${name}<${generics}>` : name;
-
-							if (node.name && node.body) {
-								code.overwrite(
-									node.getStart(),
-									node.name.getEnd(),
-									`${is_export ? 'export ' : ''}const ${node.name.getText()}: ${type} = (${
-										is_async ? 'async ' : ''
-									}`
-								);
-
-								code.appendLeft(node.body.getStart(), '=> ');
-								code.appendLeft(node.body.getEnd(), ');');
-
-								modified = true;
-							}
-						} else if (
-							ts.isVariableStatement(node) &&
-							node.declarationList.declarations.length === 1
-						) {
-							const variable_statement = node.declarationList.declarations[0];
-
-							if (variable_statement.name.getText() === 'actions') {
-								let i = variable_statement.getEnd();
-								while (code.original[i - 1] !== '}') i -= 1;
-								code.appendLeft(i, ` satisfies ${name}`);
-							} else {
-								code.appendLeft(
-									variable_statement.name.getEnd(),
-									`: ${name}${generics ? `<${generics}>` : ''}`
-								);
-							}
-
-							modified = true;
-						} else {
-							throw new Error('Unhandled @type JsDoc->TS conversion: ' + js_code);
-						}
-					} else if (ts.isJSDocParameterTag(tag) && ts.isFunctionDeclaration(node)) {
-						const sanitised_param = tag
-							.getFullText()
-							.replace(/\s+/g, '')
-							.replace(/(^\*|\*$)/g, '');
-
-						const [, param_type] = /@param{(.+)}(.+)/.exec(sanitised_param) ?? [];
-
-						let param_count = 0;
-						for (const param of node.parameters) {
-							if (count !== param_count) {
-								param_count++;
-								continue;
-							}
-
-							code.appendLeft(param.getEnd(), `: ${param_type}`);
-
-							param_count++;
-						}
-
-						modified = true;
-					}
-
-					count++;
+			for (const tag of tags) {
+				if (ts.isJSDocTypeTag(tag)) {
+					type = await get_type_info(tag.typeExpression);
+				} else if (ts.isJSDocParameterTag(tag)) {
+					params.push(await get_type_info(tag.typeExpression!));
+				} else if (ts.isJSDocReturnTag(tag)) {
+					returns = await get_type_info(tag.typeExpression!);
+				} else if (ts.isJSDocSatisfiesTag(tag)) {
+					satisfies = await get_type_info(tag.typeExpression!);
+				} else {
+					console.log(tag);
+					throw new Error('Unhandled tag');
 				}
 
-				if (modified) {
-					let start = comment.getStart();
-					let end = comment.getEnd();
+				let start = tag.getStart();
+				let end = tag.getEnd();
 
-					if (comment.comment) {
-						// preserve docs
-						start = comment.tags!.at(0)!.getStart();
-						end = comment.tags!.at(-1)!.getEnd();
+				while (start > 0 && code.original[start] !== '\n') start -= 1;
+				while (end > 0 && code.original[end] !== '\n') end -= 1;
+				code.remove(start, end);
+			}
 
-						while (code.original[start] !== '*') start -= 1;
-					}
+			if (type && satisfies) {
+				throw new Error('Cannot combine @type and @satisfies');
+			}
 
-					if (code.original[end] === '\n') end += 1;
-					code.overwrite(start, end, '');
+			if (ts.isFunctionDeclaration(node)) {
+				// convert function to a `const`
+				if (type || satisfies) {
+					const is_export = node.modifiers?.some(
+						(modifier) => modifier.kind === ts.SyntaxKind.ExportKeyword
+					);
+
+					const is_async = node.modifiers?.some(
+						(modifier) => modifier.kind === ts.SyntaxKind.AsyncKeyword
+					);
+
+					code.overwrite(
+						node.getStart(),
+						node.name!.getStart(),
+						is_export ? `export const ` : `const `
+					);
+
+					const modifier = is_async ? 'async ' : '';
+					code.appendLeft(
+						node.name!.getEnd(),
+						type ? `: ${type} = ${modifier}` : ` = ${modifier}(`
+					);
+
+					code.prependRight(node.body!.getStart(), '=> ');
+
+					code.appendLeft(node.getEnd(), satisfies ? `) satisfies ${satisfies};` : ';');
 				}
+
+				for (let i = 0; i < node.parameters.length; i += 1) {
+					if (params[i] !== undefined) {
+						code.appendLeft(node.parameters[i].getEnd(), `: ${params[i]}`);
+					}
+				}
+
+				if (returns) {
+					let start = node.body!.getStart();
+					while (code.original[start - 1] !== ')') start -= 1;
+					code.appendLeft(start, `: ${returns}`);
+				}
+			} else if (ts.isVariableStatement(node) && node.declarationList.declarations.length === 1) {
+				if (params.length > 0 || returns) {
+					throw new Error('TODO handle @params and @returns in variable declarations');
+				}
+
+				const declaration = node.declarationList.declarations[0];
+
+				if (type) {
+					code.appendLeft(declaration.name.getEnd(), `: ${type}`);
+				}
+
+				if (satisfies) {
+					// TODO form actions should use satisifies, not type
+					throw new Error('TODO');
+				}
+			} else {
+				throw new Error('Unhandled @type JsDoc->TS conversion: ' + js_code);
+			}
+
+			if (!comment) {
+				// remove the whole thing
+				let start = jsdoc[0].getStart();
+				let end = jsdoc[0].getEnd();
+
+				if (code.original[end] === '\n') end += 1;
+				code.overwrite(start, end, '');
 			}
 		}
 
@@ -501,18 +510,25 @@ async function convert_to_ts(js_code: string, indent = '', offset = '') {
 
 	return transformed === js_code ? undefined : transformed;
 
-	async function get_type_info(tag: ts.JSDocTypeTag | ts.JSDocParameterTag) {
-		const type_text = tag.typeExpression?.getText();
+	async function get_type_info(expression: ts.JSDocTypeExpression) {
+		const type_text = expression?.getText();
 		let name = type_text?.slice(1, -1); // remove { }
 
-		const single_line_name = (
-			await prettier.format(name ?? '', {
-				printWidth: 1000,
-				parser: 'typescript',
-				semi: false,
-				singleQuote: true
-			})
-		).replace('\n', '');
+		if (name.includes('\n')) {
+			throw new Error('multiline types');
+		}
+
+		// TODO
+		const single_line_name = name;
+
+		// const single_line_name = (
+		// 	await prettier.format(name ?? '', {
+		// 		printWidth: 1000,
+		// 		parser: 'typescript',
+		// 		semi: false,
+		// 		singleQuote: true
+		// 	})
+		// ).replace('\n', '');
 
 		const import_match = /import\('(.+?)'\)\.(\w+)(?:<(.+)>)?$/s.exec(single_line_name);
 
@@ -525,16 +541,16 @@ async function convert_to_ts(js_code: string, indent = '', offset = '') {
 			} else {
 				imports.set(from, new Set([name]));
 			}
+
 			if (generics !== undefined) {
-				return [
-					name,
-					generics
-						.replaceAll('*', '') // get rid of JSDoc asterisks
-						.replace('  }>', '}>') // unindent closing brace
-				];
+				const args = generics
+					.replaceAll('*', '') // get rid of JSDoc asterisks
+					.replace('  }>', '}>'); // unindent closing brace
+
+				return `${name}<${args}>`;
 			}
 		}
-		return [name];
+		return name;
 	}
 }
 
