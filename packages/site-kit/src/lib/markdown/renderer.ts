@@ -451,7 +451,11 @@ async function convert_to_ts(js_code: string, indent = '', offset = '') {
 				}
 
 				if (modified) {
-					code.overwrite(comment.getStart(), comment.getEnd(), '');
+					let start = comment.getStart();
+					let end = comment.getEnd();
+
+					if (code.original[end] === '\n') end += 1;
+					code.overwrite(start, end, '');
 				}
 			}
 		}
@@ -487,7 +491,7 @@ async function convert_to_ts(js_code: string, indent = '', offset = '') {
 
 	let transformed = code.toString();
 
-	return transformed === js_code ? undefined : transformed.replace(/\n\s*\n\s*\n/g, '\n\n');
+	return transformed === js_code ? undefined : transformed;
 
 	async function get_type_info(tag: ts.JSDocTypeTag | ts.JSDocParameterTag) {
 		const type_text = tag.typeExpression?.getText();
