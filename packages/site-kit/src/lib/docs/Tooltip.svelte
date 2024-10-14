@@ -16,12 +16,15 @@
 	let tooltip: HTMLDivElement;
 	let offset = $state(0);
 
+	// container starts out at maxium size, then shrinks to prevent page scrolling to the right
+	let width = $state('calc(100vw - 2 * var(--sk-page-padding-side))');
+
 	// bit of a gross hack but it works — this prevents the
 	// tooltip from disappearing off the side of the screen
 	$effect(() => {
 		(async () => {
 			// first, measure the window with the tooltip hidden
-			const width = window.innerWidth;
+			const window_width = window.innerWidth;
 
 			// then, display the tooltip
 			visible = true;
@@ -29,12 +32,14 @@
 
 			// then, figure out how much padding we need
 			const container_width = parseFloat(getComputedStyle(tooltip.parentElement!).width);
-			const padding = (width - container_width) / 2;
+			const padding = (window_width - container_width) / 2;
 
 			// then, calculate the necessary offset to ensure the
 			// right edge of the tooltip is inside the padding
 			const rect = tooltip.getBoundingClientRect();
-			offset = Math.min(width - padding - rect.right, -20);
+			offset = Math.min(window_width - padding - rect.right, -20);
+
+			width = rect.width + 'px';
 		})();
 	});
 </script>
@@ -45,6 +50,7 @@
 	role="tooltip"
 	class="tooltip-container"
 	class:visible
+	style:width
 	style:left="{x}px"
 	style:top="{y}px"
 	style:--offset="{offset}px"
@@ -65,7 +71,6 @@
 		transform: translate(var(--offset), calc(2rem + var(--arrow-size)));
 		z-index: 2;
 		filter: var(--sk-shadow);
-		width: calc(100vw - 2 * var(--sk-page-padding-side));
 
 		&.visible {
 			display: block;
