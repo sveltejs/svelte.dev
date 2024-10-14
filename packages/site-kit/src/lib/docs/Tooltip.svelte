@@ -61,7 +61,7 @@
 		text-align: left;
 		padding: 1.6rem;
 		border-radius: var(--sk-border-radius);
-		font-family: var(--sk-font-family-mono);
+		font: var(--sk-font-body-small);
 		/* font-size: 1.2rem; */
 		/* white-space: pre-wrap; */
 		z-index: 100;
@@ -75,6 +75,17 @@
 			ol,
 			ul {
 				font: var(--sk-font-body-small);
+			}
+
+			.tags {
+				display: grid;
+				grid-template-columns: 6rem 1fr;
+				align-items: baseline;
+
+				.tag,
+				.param {
+					font: var(--sk-font-mono);
+				}
 			}
 		}
 	}
