@@ -460,8 +460,9 @@ async function convert_to_ts(js_code: string, indent = '', offset = '') {
 				}
 
 				if (satisfies) {
-					// TODO form actions should use satisifies, not type
-					throw new Error('TODO');
+					let end = declaration.getEnd();
+					if (code.original[end - 1] === ';') end -= 1;
+					code.appendLeft(end, ` satisfies ${satisfies}`);
 				}
 			} else {
 				throw new Error('Unhandled @type JsDoc->TS conversion: ' + js_code);
