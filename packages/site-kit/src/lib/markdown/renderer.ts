@@ -385,15 +385,14 @@ async function convert_to_ts(js_code: string, indent = '', offset = '') {
 
 			for (const tag of tags) {
 				if (ts.isJSDocTypeTag(tag)) {
-					type = await get_type_info(tag.typeExpression);
+					type = get_type_info(tag.typeExpression);
 				} else if (ts.isJSDocParameterTag(tag)) {
-					params.push(await get_type_info(tag.typeExpression!));
+					params.push(get_type_info(tag.typeExpression!));
 				} else if (ts.isJSDocReturnTag(tag)) {
-					returns = await get_type_info(tag.typeExpression!);
+					returns = get_type_info(tag.typeExpression!);
 				} else if (ts.isJSDocSatisfiesTag(tag)) {
-					satisfies = await get_type_info(tag.typeExpression!);
+					satisfies = get_type_info(tag.typeExpression!);
 				} else {
-					console.log(tag);
 					throw new Error('Unhandled tag');
 				}
 
@@ -511,47 +510,23 @@ async function convert_to_ts(js_code: string, indent = '', offset = '') {
 
 	return transformed === js_code ? undefined : transformed;
 
-	async function get_type_info(expression: ts.JSDocTypeExpression) {
-		const type_text = expression?.getText();
-		let name = type_text?.slice(1, -1); // remove { }
+	function get_type_info(expression: ts.JSDocTypeExpression) {
+		const type = expression
+			?.getText()!
+			.slice(1, -1) // remove surrounding `{` and `}`
+			.replace(/ \* ?/gm, '')
+			.replace(/import\('(.+?)'\)\.(\w+)(?:(<.+>))?/gms, (_, source, name, args = '') => {
+				const existing = imports.get(source);
+				if (existing) {
+					existing.add(name);
+				} else {
+					imports.set(source, new Set([name]));
+				}
 
-		if (name.includes('\n')) {
-			throw new Error('multiline types');
-		}
+				return name + args;
+			});
 
-		// TODO
-		const single_line_name = name;
-
-		// const single_line_name = (
-		// 	await prettier.format(name ?? '', {
-		// 		printWidth: 1000,
-		// 		parser: 'typescript',
-		// 		semi: false,
-		// 		singleQuote: true
-		// 	})
-		// ).replace('\n', '');
-
-		const import_match = /import\('(.+?)'\)\.(\w+)(?:<(.+)>)?$/s.exec(single_line_name);
-
-		if (import_match) {
-			const [, from, _name, generics] = import_match;
-			name = _name;
-			const existing = imports.get(from);
-			if (existing) {
-				existing.add(name);
-			} else {
-				imports.set(from, new Set([name]));
-			}
-
-			if (generics !== undefined) {
-				const args = generics
-					.replaceAll('*', '') // get rid of JSDoc asterisks
-					.replace('  }>', '}>'); // unindent closing brace
-
-				return `${name}<${args}>`;
-			}
-		}
-		return name;
+		return type;
 	}
 }
 
@@ -719,7 +694,7 @@ async function syntax_highlight({
 
 	// munge shiki output: put whitespace outside `<span>` elements, so that
 	// highlight delimiters fall outside tokens
-	html = html.replace(/(<span[^<]+?>)(\s+)/g, '$2$1').replace(/(\s+)(<\/span>)/g, '$2$1');
+	html = html.replace(/(<span[^>]+?>)(\s+)/g, '$2$1').replace(/(\s+)(<\/span>)/g, '$2$1');
 
 	html = html
 		.replace(/ {13}([^ ][^]+?) {13}/g, (_, content) => {
