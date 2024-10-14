@@ -2,8 +2,6 @@
 	import { goto } from '$app/navigation';
 	import UserMenu from './UserMenu.svelte';
 	import { Icon } from '@sveltejs/site-kit/components';
-	import * as doNotZip from 'do-not-zip';
-	import downloadBlob from './downloadBlob.js';
 	import { enter } from '$lib/utils/events';
 	import { isMac } from '$lib/utils/compat.js';
 	import { Repl } from '@sveltejs/repl';
@@ -39,7 +37,6 @@
 	const { login } = get_app_context();
 
 	let saving = $state(false);
-	let downloading = $state(false);
 	let justSaved = $state(false);
 	let justForked = $state(false);
 	let select: any; // TODO why can't i do `select: SelectIcon`?
@@ -165,53 +162,6 @@
 		saving = false;
 	}
 
-	async function download() {
-		downloading = true;
-
-		const { files: components, imports } = repl.toJSON() as {
-			files: any[];
-			imports: string[];
-		};
-
-		const files = (await (await fetch('/svelte-app.json')).json()) as Array<{
-			path: string;
-			data: string;
-		}>;
-
-		if (imports.length > 0) {
-			const idx = files.findIndex(({ path }) => path === 'package.json');
-			const pkg = JSON.parse(files[idx].data);
-			const { devDependencies } = pkg;
-			imports.forEach((mod) => {
-				const match = /^(@[^/]+\/)?[^@/]+/.exec(mod)!;
-				devDependencies[match[0]] = 'latest';
-			});
-			pkg.devDependencies = devDependencies;
-			files[idx].data = JSON.stringify(pkg, null, '  ');
-		}
-
-		files.push(
-			...components.map((component) => ({
-				path: `src/${component.name}.${component.type}`,
-				data: component.source
-			}))
-		);
-		files.push({
-			path: `src/main.js`,
-			data: `import App from './App.svelte';
-
-var app = new App({
-	target: document.body
-});
-
-export default app;`
-		});
-
-		downloadBlob(doNotZip.toBlob(files), 'svelte-app.zip');
-
-		downloading = false;
-	}
-
 	// modifying an app should reset the `<select>`, so that
 	// the example can be reselected
 	$effect(() => {
@@ -286,13 +236,6 @@ export default app;`
 				{/if}
 			{/if}
 		</button>
-
-		<button
-			class="raised icon download"
-			disabled={downloading}
-			onclick={download}
-			aria-label="download zip file"
-		></button>
 
 		{#if user}
 			<UserMenu {user} />
