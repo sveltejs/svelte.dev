@@ -114,48 +114,17 @@
 	.text {
 		flex: 1 1 auto;
 		padding: 2.2rem var(--sk-page-padding-side);
-		/* border-right: 1px solid var(--sk-back-5); */
 		background: var(--sk-back-1);
 
 		:global {
-			pre {
-				background: var(--sk-back-1);
-				box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.1);
-				border-radius: var(--sk-border-radius);
-
-				.highlight {
-					--color: rgba(220, 220, 0, 0.2);
-					background: var(--color);
-					outline: 2px solid var(--color);
-					border-radius: 2px;
-
-					&.add {
-						--color: rgba(0, 255, 0, 0.18);
-					}
-
-					&.remove {
-						--color: rgba(255, 0, 0, 0.1);
-
-						:root.dark & {
-							--color: rgba(255, 0, 0, 0.27);
-						}
-					}
-				}
-			}
-
-			p a code {
-				color: var(--sk-theme-1);
-				background: rgba(255, 62, 0, 0.1);
-			}
-
 			[data-file],
 			.filename {
 				cursor: pointer;
-				background-image: url($lib/icons/file-edit.svg);
+				background-image: url($lib/icons/file.svg);
 				background-repeat: no-repeat;
 
 				:root.dark & {
-					background-image: url($lib/icons/file-edit-inline-dark.svg);
+					background-image: url($lib/icons/file-dark.svg);
 				}
 			}
 
@@ -166,9 +135,9 @@
 			}
 
 			.filename {
-				background-position: 1rem 54%;
+				background-position: 0 54%;
 				background-size: 1rem 1rem;
-				padding-left: 2.5rem !important;
+				padding-left: 1.5rem !important;
 			}
 
 			.desktop {

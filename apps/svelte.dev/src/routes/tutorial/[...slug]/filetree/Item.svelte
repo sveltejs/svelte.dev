@@ -130,6 +130,7 @@
 		background: var(--sk-back-1);
 		color: var(--sk-text-1) !important;
 		margin: 0 0.5rem 0 calc(0.5rem + var(--inset));
+		border: 1px solid var(--sk-back-5);
 		padding: 0 0.5rem;
 		font: inherit;
 	}
