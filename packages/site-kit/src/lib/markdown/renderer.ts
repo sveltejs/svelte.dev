@@ -439,7 +439,7 @@ async function convert_to_ts(js_code: string, indent = '', offset = '') {
 								continue;
 							}
 
-							code.appendLeft(param.getEnd(), `:${param_type}`);
+							code.appendLeft(param.getEnd(), `: ${param_type}`);
 
 							param_count++;
 						}
