@@ -1,7 +1,6 @@
 <script>
 	import { afterNavigate, beforeNavigate } from '$app/navigation';
 	import { SplitPane } from '@rich_harris/svelte-split-pane';
-	import { Icon } from '@sveltejs/site-kit/components';
 	import { reset } from './adapter.svelte';
 	import Editor from './Editor.svelte';
 	import ContextMenu from './filetree/ContextMenu.svelte';

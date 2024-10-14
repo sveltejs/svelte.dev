@@ -1,9 +1,10 @@
 <script lang="ts">
-	import { Icon, Text } from '@sveltejs/site-kit/components';
+	import { Text } from '@sveltejs/site-kit/components';
 	import { legacy_details } from '@sveltejs/site-kit/actions';
 	import { setupDocsHovers } from '@sveltejs/site-kit/docs';
 	import OnThisPage from './OnThisPage.svelte';
 	import Breadcrumbs from './Breadcrumbs.svelte';
+	import PageControls from '$lib/components/PageControls.svelte';
 
 	let { data } = $props();
 
@@ -38,82 +39,16 @@
 		</Text>
 	</div>
 
-	<p class="edit">
-		<a
-			href="https://github.com/sveltejs/svelte.dev/edit/main/apps/svelte.dev/content/{data.document
-				.file}"
-		>
-			<Icon name="edit" /> Edit this page on GitHub
-		</a>
-	</p>
+	<PageControls
+		repo="https://github.com/sveltejs/svelte.dev"
+		path="apps/svelte.dev/content/{data.document.file}"
+		prev={data.document.prev && {
+			title: data.document.prev.title,
+			path: `/${data.document.prev.slug}`
+		}}
+		next={data.document.next && {
+			title: data.document.next.title,
+			path: `/${data.document.next.slug}`
+		}}
+	/>
 </div>
-
-<div class="controls">
-	<div>
-		<span class:faded={!data.document.prev}>previous</span>
-
-		{#if data.document.prev}
-			<a href="/{data.document.prev.slug}">{data.document.prev.title}</a>
-		{/if}
-	</div>
-
-	<div>
-		<span class:faded={!data.document.next}>next</span>
-		{#if data.document.next}
-			<a href="/{data.document.next.slug}">{data.document.next.title}</a>
-		{/if}
-	</div>
-</div>
-
-<style>
-	.edit {
-		position: relative;
-		margin: 6rem 0 2rem 0;
-		font: var(--sk-font-ui-small);
-
-		a {
-			text-decoration: none;
-		}
-
-		:global(svg) {
-			position: relative;
-			top: -0.1rem;
-			left: 0.3rem;
-			width: 1.4rem;
-			height: 1.4rem;
-			margin-right: 0.5rem;
-		}
-	}
-
-	.controls {
-		max-width: calc(var(--sk-page-content-width) + 1rem);
-		border-top: 1px solid var(--sk-back-4);
-		padding: 1rem 0 0 0;
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		margin: 1rem 0 0 0;
-	}
-
-	.controls > :first-child {
-		text-align: left;
-	}
-
-	.controls > :last-child {
-		text-align: right;
-	}
-
-	.controls span {
-		display: block;
-		font: var(--sk-font-ui-medium);
-		text-transform: uppercase;
-		color: var(--sk-text-3);
-	}
-
-	.controls a {
-		font: var(--sk-font-body-small);
-	}
-
-	.controls span.faded {
-		opacity: 0.4;
-	}
-</style>

@@ -2,6 +2,7 @@
 	import { createEventDispatcher } from 'svelte';
 	import Modal from '$lib/components/Modal.svelte';
 	import { Text } from '@sveltejs/site-kit/components';
+	import PageControls from '$lib/components/PageControls.svelte';
 
 	/** @type {import('$lib/tutorial').Exercise} */
 	export let exercise;
@@ -62,21 +63,19 @@
 			</Text>
 		</div>
 
-		{#if exercise.next}
-			<p><a href="/tutorial/{exercise.next.slug}">Next: {exercise.next.title}</a></p>
-		{/if}
+		<PageControls
+			repo="https://github.com/sveltejs/svelte.dev"
+			path="apps/svelte.dev/content/{exercise.dir}"
+			prev={exercise.prev && {
+				title: exercise.prev.title,
+				path: `/tutorial/${exercise.prev.slug}`
+			}}
+			next={exercise.next && {
+				title: exercise.next.title,
+				path: `/tutorial/${exercise.next.slug}`
+			}}
+		/>
 	</div>
-
-	<footer>
-		<a
-			target="_blank"
-			rel="noreferrer"
-			class="edit"
-			href="https://github.com/sveltejs/svelte.dev/tree/main/apps/svelte.dev/content/{exercise.dir}"
-		>
-			Edit this page
-		</a>
-	</footer>
 </section>
 
 {#if show_modal}
@@ -175,23 +174,6 @@
 			.desktop {
 				display: none;
 			}
-		}
-	}
-
-	footer {
-		padding: 1rem 2.9rem;
-		display: flex;
-		justify-content: space-between;
-		background: var(--sk-back-3);
-		border-top: 1px solid var(--sk-back-4);
-		border-right: 1px solid var(--sk-back-4);
-
-		.edit {
-			color: var(--sk-text-2);
-			font: var(--sk-font-ui-small);
-			padding: 0 0 0 1.4em;
-			background: url($lib/icons/file-edit.svg) no-repeat 0 calc(50% - 0.1em);
-			background-size: 1em 1em;
 		}
 	}
 

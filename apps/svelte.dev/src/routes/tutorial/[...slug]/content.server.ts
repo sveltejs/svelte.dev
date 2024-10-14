@@ -149,7 +149,7 @@ export async function load_exercise(slug: string): Promise<Exercise> {
 		title: exercise.metadata.title,
 		path: (metadata.path as string) ?? '/',
 		slug: exercise.slug,
-		prev: prev && { slug: prev.slug },
+		prev,
 		next,
 		markdown: exercise.body,
 		html: (await render_content(exercise.file, exercise.body, { check: false })).replace(
