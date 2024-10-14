@@ -185,11 +185,11 @@ const snippets = await create_snippet_cache();
 export async function render_content_markdown(
 	filename: string,
 	body: string,
-	options: { check?: boolean },
+	options?: { check?: boolean },
 	twoslashBanner?: TwoslashBanner
 ) {
 	const headings: string[] = [];
-	const { check = true } = options;
+	const { check = true } = options ?? {};
 
 	return await transform(body, {
 		async walkTokens(token) {
@@ -675,6 +675,30 @@ async function syntax_highlight({
 			});
 
 			html = html.replace(/ {27,}/g, () => redactions.shift()!);
+
+			if (check) {
+				// munge the twoslash output so that it renders sensibly
+				const replacements: Array<{ start: number; end: number; content: string }> = [];
+
+				for (const match of html.matchAll(/<div class="twoslash-popup-docs">([^]+?)<\/div>/g)) {
+					replacements.push({
+						start: match.index,
+						end: match.index + match[0].length,
+						content: await render_content_markdown('<twoslash>', match[1], { check: false })
+					});
+				}
+
+				while (replacements.length > 0) {
+					const { start, end, content } = replacements.pop()!;
+
+					html =
+						html.slice(0, start) +
+						'<div class="twoslash-popup-docs">' +
+						content +
+						'</div>' +
+						html.slice(end);
+				}
+			}
 		} catch (e) {
 			console.error((e as Error).message);
 			console.warn(prelude + redacted);

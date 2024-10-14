@@ -99,7 +99,7 @@
 			margin-top: 5rem;
 		}
 
-		code,
+		code:not(pre *),
 		kbd {
 			white-space: pre-wrap;
 			padding: 0.2rem 0.4rem;

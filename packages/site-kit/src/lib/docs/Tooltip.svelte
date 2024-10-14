@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { tick } from 'svelte';
+	import Text from '../components/Text.svelte';
 
 	let {
 		html = '',
@@ -39,30 +40,43 @@
 	style:--offset="{Math.min(-10, window.innerWidth - (x + width + 10))}px"
 >
 	<div bind:this={tooltip} class="tooltip">
-		<span>{@html html}</span>
+		<Text>
+			<span>{@html html}</span>
+		</Text>
 	</div>
 </div>
 
 <style>
 	.tooltip-container {
-		--bg: var(--sk-theme-2);
+		--bg: var(--sk-back-2);
 		--arrow-size: 0.4rem;
 		position: absolute;
 		transform: translate(var(--offset), calc(2rem + var(--arrow-size)));
+		z-index: 2;
 	}
 
 	.tooltip {
 		margin: 0 2rem 0 0;
 		background-color: var(--bg);
-		color: #fff;
 		text-align: left;
-		padding: 0.4rem 0.6rem;
+		padding: 2rem;
 		border-radius: var(--sk-border-radius);
 		font-family: var(--sk-font-family-mono);
-		font-size: 1.2rem;
-		white-space: pre-wrap;
+		/* font-size: 1.2rem; */
+		/* white-space: pre-wrap; */
 		z-index: 100;
-		filter: drop-shadow(2px 4px 6px #67677866);
+		filter: var(--sk-shadow);
+		max-width: var(--sk-page-content-width);
+		max-height: 30rem;
+		overflow-y: auto;
+
+		:global {
+			p,
+			ol,
+			ul {
+				font: var(--sk-font-body-small);
+			}
+		}
 	}
 
 	.tooltip::after {
@@ -74,8 +88,14 @@
 		border-bottom-color: var(--bg);
 	}
 
-	.tooltip :global(a) {
+	/* .tooltip :global(a) {
 		color: white;
 		text-decoration: underline;
+	} */
+
+	span {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
 	}
 </style>

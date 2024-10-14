@@ -17,8 +17,8 @@ export function setupDocsHovers() {
 					tooltip = null;
 				}
 
-				const rect = target?.getBoundingClientRect();
-				const html = target?.innerHTML;
+				const rect = target.getBoundingClientRect();
+				const html = target.querySelector('.twoslash-popup-container')!.innerHTML;
 
 				const x = (rect.left + rect.right) / 2 + window.scrollX;
 				const y = rect.top + window.scrollY;
@@ -35,7 +35,7 @@ export function setupDocsHovers() {
 							},
 							onmouseleave: () => {
 								clearTimeout(timeout);
-								unmount(tooltip);
+								// unmount(tooltip);
 								tooltip = null;
 							}
 						}
@@ -48,7 +48,7 @@ export function setupDocsHovers() {
 			const target = event.target as HTMLElement;
 			if (target.classList?.contains('twoslash-hover')) {
 				timeout = setTimeout(() => {
-					unmount(tooltip);
+					// unmount(tooltip);
 					tooltip = null;
 				}, 200);
 			}
