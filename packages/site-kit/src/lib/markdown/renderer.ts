@@ -472,7 +472,7 @@ async function convert_to_ts(js_code: string, indent = '', offset = '') {
 				let start = jsdoc[0].getStart();
 				let end = jsdoc[0].getEnd();
 
-				if (code.original[end] === '\n') end += 1;
+				while (start > 0 && code.original[start] !== '\n') start -= 1;
 				code.overwrite(start, end, '');
 			}
 		}
