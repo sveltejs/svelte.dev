@@ -82,6 +82,8 @@
 	.breadcrumbs {
 		flex: 1;
 		font: var(--sk-font-ui-medium);
+		overflow: hidden;
+		text-overflow: ellipsis;
 
 		span:not(:last-child)::after {
 			content: ' / ';
