@@ -705,10 +705,18 @@ async function syntax_highlight({
 
 					let content = `<span class="tag">${tag}</span><span class="value">`;
 
-					if (tag === '@param') {
+					if (tag === '@param' || tag === '@throws') {
 						const words = value.split(' ');
-						const param = words.shift();
+						let param = words.shift()!;
 						value = words.join(' ');
+
+						if (tag === '@throws') {
+							if (param[0] !== '{' || param[param.length - 1] !== '}') {
+								throw new Error('TODO robustify @throws handling');
+							}
+
+							param = param.slice(1, -1);
+						}
 
 						content += `<span class="param">${param}</span> `;
 					}

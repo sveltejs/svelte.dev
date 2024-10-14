@@ -92,7 +92,7 @@
 
 			.tags {
 				display: grid;
-				grid-template-columns: 6rem 1fr;
+				grid-template-columns: 8rem 1fr;
 				align-items: baseline;
 
 				.tag,
