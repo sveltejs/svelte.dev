@@ -1,5 +1,6 @@
 export { default as Banners, defineBanner, fetchBanner } from './Banners.svelte';
 export { default as Dropdown } from './Dropdown.svelte';
+export { default as HoverMenu } from './HoverMenu.svelte';
 export { default as Icon } from './Icon.svelte';
 export { default as Icons } from './Icons.svelte';
 export { default as Section } from './Section.svelte';

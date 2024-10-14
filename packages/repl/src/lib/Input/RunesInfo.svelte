@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { Dropdown } from '@sveltejs/site-kit/components';
 	import { get_repl_context } from '../context';
 
 	let { runes }: { runes: boolean } = $props();
@@ -14,40 +15,35 @@
 	}}
 />
 
-<div class="container">
-	<button class:active={runes} class:open onclick={() => (open = !open)}>
-		<svg viewBox="0 0 24 24">
-			<path d="M9.4,1H19l-5.9,7.7h8L8.3,23L11,12.6H3.5L9.4,1z" />
-		</svg>
+<Dropdown align="right">
+	<div class="target">
+		<span class="lightning" class:active={runes} role="presentation"></span>
 
-		runes
-	</button>
+		<span>runes</span>
+	</div>
 
-	{#if open}
-		<!-- svelte-ignore a11y_click_events_have_key_events, a11y_no_static_element_interactions
-			(This is taken care of by the <svelte:window> above) -->
-		<div class="modal-backdrop" onclick={() => (open = false)}></div>
+	{#snippet dropdown()}
 		<div class="popup">
 			{#if $selected_name.endsWith('.svelte.js')}
 				<p>
 					Files with a <code>.svelte.js</code> extension are always in
-					<a href="https://svelte.dev/blog/runes">runes mode</a>.
+					<a href="/blog/runes">runes mode</a>.
 				</p>
 			{:else if $selected_name.endsWith('.js')}
 				<p>
-					To use <a href="https://svelte.dev/blog/runes">runes</a> in a JavaScript file, change the
-					extension to <code>.svelte.js</code>.
+					To use <a href="/blog/runes">runes</a> in a JavaScript file, change the extension to
+					<code>.svelte.js</code>.
 				</p>
 			{:else if $selected_name.endsWith('.svelte')}
 				{#if runes}
 					<p>
 						This component is in
-						<a href="https://svelte.dev/blog/runes">runes mode</a>.
+						<a href="/blog/runes">runes mode</a>.
 					</p>
 					<p>To disable runes mode, add the following to the top of your component:</p>
 					<pre><code>&lt;svelte:options runes={'{false}'} /&gt;</code></pre>
 				{:else}
-					<p>This component is not in <a href="https://svelte.dev/blog/runes">runes mode</a>.</p>
+					<p>This component is not in <a href="/blog/runes">runes mode</a>.</p>
 					<p>
 						To enable runes mode, either start using runes in your code, or add the following to the
 						top of your component:
@@ -57,85 +53,68 @@
 			{:else}
 				<p>
 					Edit a <code>.svelte</code>, <code>.svelte.js</code> or <code>.js</code> file to see
-					information on <a href="https://svelte.dev/blog/runes">runes mode</a>
+					information on <a href="/blog/runes">runes mode</a>
 				</p>
 			{/if}
 		</div>
-	{/if}
-</div>
+	{/snippet}
+</Dropdown>
 
 <style>
-	button {
-		position: relative;
-		display: flex;
+	.target {
 		text-transform: uppercase;
 		font: var(--sk-font-ui-small);
-		padding: 0.8rem;
+		position: relative;
+		display: flex;
+		align-items: center;
+
+		height: 100%;
+		padding: 0 0.8rem 0 3rem;
 		gap: 0.5rem;
-		margin-right: 0.3rem;
+	}
+
+	span.lightning {
+		--icon-size: 1.8rem;
+		width: 1.8rem;
+		height: 1.8rem;
 		z-index: 9999;
-	}
+		background: url(./runes-off-light.svg) no-repeat 50% 50%;
+		background-size: contain;
 
-	button.open {
-		background: var(--sk-back-3);
-	}
+		:root.dark &:not(.active) {
+			background-image: url(./runes-off-dark.svg);
+		}
 
-	svg {
-		width: 1.6rem !important;
-		height: 1.6rem !important;
-		top: 0.05rem;
-	}
-
-	path {
-		stroke: #ccc;
-		fill: transparent;
-		transition:
-			stroke 0.2s,
-			fill 0.2s;
-	}
-
-	.active svg {
-		animation: bump 0.4s;
-	}
-
-	.active path {
-		stroke: #ff3e00;
-		fill: #ff3e00;
+		&.active {
+			background-image: url(./runes-on-light.svg);
+			animation: bump 0.4s;
+		}
 	}
 
 	@keyframes bump {
 		0% {
-			transform: scale(1);
+			background-size: var(--icon-size);
 		}
 		50% {
-			transform: scale(1.3);
+			background-size: calc(1.3 * var(--icon-size));
 		}
 		100% {
-			transform: scale(1);
+			background-size: var(--icon-size);
 		}
-	}
-
-	.modal-backdrop {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100vw;
-		height: 100vh;
-		background: var(--sk-back-1);
-		opacity: 0.7;
-		backdrop-filter: blur(5px);
-		z-index: 9998;
 	}
 
 	.popup {
 		position: absolute;
-		top: 2.2em;
-		right: 0;
+		right: -6rem;
 		width: 100vw;
 		max-width: 320px;
 		z-index: 9999;
 		background: var(--sk-back-3);
 		padding: 1em;
+
+		p {
+			font: var(--sk-font-ui-medium);
+		}
 	}
 
 	.popup p:first-child {

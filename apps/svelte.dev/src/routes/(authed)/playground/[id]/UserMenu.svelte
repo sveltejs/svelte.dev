@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Dropdown, Icon } from '@sveltejs/site-kit/components';
+	import { Dropdown, HoverMenu, Icon } from '@sveltejs/site-kit/components';
 	import { get_app_context } from '../../app-context';
 	import type { User } from '$lib/db/session';
 
@@ -19,8 +19,10 @@
 	</div>
 
 	{#snippet dropdown()}
-		<a href="/apps">Your saved apps</a>
-		<button onclick={logout}>Log out</button>
+		<HoverMenu>
+			<a href="/apps">Your saved apps</a>
+			<button onclick={logout}>Log out</button>
+		</HoverMenu>
 	{/snippet}
 </Dropdown>
 

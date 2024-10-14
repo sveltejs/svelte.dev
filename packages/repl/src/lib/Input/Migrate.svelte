@@ -5,7 +5,9 @@
 </script>
 
 <div class="container">
-	<button on:click={migrate} title="Migrate this component towards the new syntax">migrate</button>
+	<button class="raised" on:click={migrate} title="Migrate this component towards the new syntax"
+		>migrate</button
+	>
 </div>
 
 <style>

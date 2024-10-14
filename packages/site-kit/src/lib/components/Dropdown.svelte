@@ -32,41 +32,13 @@
 		top: calc(50% + min(50%, 1.5rem));
 		background-color: var(--sk-back-2);
 		z-index: 1;
-		box-shadow: var(--sk-shadow);
+		filter: var(--sk-shadow);
 		border-radius: var(--sk-border-radius);
-		overflow: hidden;
 		z-index: 999;
 
 		&.align-right {
 			left: auto;
 			right: -1rem;
-		}
-
-		:global {
-			a,
-			button {
-				color: var(--sk-text-2);
-				padding: 1rem 1.3rem;
-				display: block;
-				font: var(--sk-font-ui-medium);
-				text-decoration: none;
-				line-height: 1;
-				width: 100%;
-				text-align: left;
-
-				&:first-child {
-					padding-top: 1.3rem;
-				}
-
-				&:last-child {
-					padding-bottom: 1.3rem;
-				}
-			}
-
-			a:hover,
-			button:hover {
-				background-color: var(--sk-back-4);
-			}
 		}
 	}
 

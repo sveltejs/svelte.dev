@@ -13,7 +13,8 @@ Top navigation bar for the application. It provides a slot for the left side, th
 	import Separator from './Separator.svelte';
 	import type { NavigationLink } from '../types';
 	import type { Snippet } from 'svelte';
-	import LinksDropdown from '../components/LinksDropdown.svelte';
+	import Dropdown from '../components/Dropdown.svelte';
+	import { HoverMenu } from '../components';
 
 	interface Props {
 		home_title?: string;
@@ -81,7 +82,32 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		<div class="menu">
 			{#each links as link}
 				{#if link.sections?.[0].path}
-					<LinksDropdown {link} />
+					<Dropdown>
+						<a
+							href="/{link.slug}"
+							aria-current={$page.url.pathname.startsWith(`/${link.slug}`) ? 'page' : undefined}
+						>
+							{link.title}
+
+							<Icon name="chevron-down" />
+						</a>
+
+						{#snippet dropdown()}
+							<HoverMenu>
+								{#each link.sections! as section}
+									<a
+										class="secondary"
+										href={section.path}
+										aria-current={$page.url.pathname === section.path || $page.url.pathname.startsWith(section.path!)
+									? 'page'
+									: undefined}
+									>
+										{section.title}
+									</a>
+								{/each}
+							</HoverMenu>
+						{/snippet}
+					</Dropdown>
 				{:else}
 					<a
 						href="/{link.slug}"
@@ -178,31 +204,35 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		display: flex;
 		width: 100%;
 
-		:global {
-			a {
-				color: var(--sk-text-2);
-				font: var(--sk-font-ui-medium);
+		/* :global { */
+		a {
+			color: var(--sk-text-2);
+			font: var(--sk-font-ui-medium);
 
-				white-space: nowrap;
-				height: 100%;
-				display: flex;
-				align-items: center;
-				text-decoration: none;
-				outline-offset: -2px;
+			white-space: nowrap;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			text-decoration: none;
+			outline-offset: -2px;
 
-				&:hover {
-					box-shadow: inset 0 -1px 0 0 var(--sk-back-5);
-				}
-
-				&[aria-current='page'] {
-					color: var(--sk-theme-1);
-					box-shadow: inset 0 -1px 0 0 currentColor;
-				}
+			&:hover {
+				box-shadow: inset 0 -1px 0 0 var(--sk-back-5);
 			}
 
-			& > a {
-				padding: 0.1rem 0.5rem 0 0.5rem;
+			&[aria-current='page'] {
+				color: var(--sk-theme-1);
+				box-shadow: inset 0 -1px 0 0 currentColor;
 			}
+
+			&.secondary {
+				box-shadow: none;
+				line-height: 1;
+			}
+		}
+
+		& > a {
+			padding: 0.1rem 0.8rem 0 0.8rem;
 		}
 	}
 
