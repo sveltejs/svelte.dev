@@ -43,7 +43,7 @@ export interface Exercise {
 	/** the initial path to navigate to */
 	path: string;
 	slug: string;
-	prev: { slug: string } | null;
+	prev: { slug: string; title: string } | null;
 	next: { slug: string; title: string } | null;
 	markdown: string;
 	html: string;
