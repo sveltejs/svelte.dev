@@ -277,9 +277,12 @@
 		title="add new component"
 	></button>
 
-	<div class="runes-info"><RunesInfo {runes} /></div>
+	<div class="runes">
+		<RunesInfo {runes} />
+		<Migrate />
+	</div>
 
-	<div class="migrate-info"><Migrate /></div>
+	<!-- <div class="migrate-info"></div> -->
 </div>
 
 <style>
@@ -429,15 +432,8 @@
 		color: var(--sk-theme-3) !important;
 	}
 
-	.runes-info {
+	.runes {
 		flex: 1;
-		display: flex;
-		align-items: center;
-		justify-content: flex-end;
-	}
-
-	.migrate-info {
-		flex: 0 1 0;
 		display: flex;
 		align-items: center;
 		justify-content: flex-end;

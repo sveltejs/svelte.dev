@@ -69,8 +69,9 @@
 		align-items: center;
 
 		height: 100%;
-		padding: 0 0.8rem 0 3rem;
+		padding: 0 0.8rem;
 		gap: 0.5rem;
+		z-index: 2;
 	}
 
 	span.lightning {

@@ -4,22 +4,18 @@
 	const { migrate } = get_repl_context();
 </script>
 
-<div class="container">
-	<button class="raised" on:click={migrate} title="Migrate this component towards the new syntax"
-		>migrate</button
-	>
-</div>
+<button class="raised" on:click={migrate} title="Migrate this component towards the new syntax">
+	migrate
+</button>
 
 <style>
-	/* TODO this is duplicated with RunesInfo.svelte */
 	button {
 		position: relative;
 		display: flex;
+		align-items: center;
 		text-transform: uppercase;
 		font: var(--sk-font-ui-small);
-		padding: 0.8rem;
-		gap: 0.5rem;
-		margin-right: 0.3rem;
-		z-index: 9999;
+		padding: 0 0.8rem;
+		height: 3.2rem;
 	}
 </style>
