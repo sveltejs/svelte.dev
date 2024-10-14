@@ -19,7 +19,11 @@
 </script>
 
 <div class="chrome">
-	<button disabled={loading || !refresh} class="reload icon" onclick={refresh} aria-label="reload"
+	<button
+		disabled={loading || !refresh}
+		class="reload icon raised"
+		onclick={refresh}
+		aria-label="reload"
 	></button>
 
 	<input
@@ -37,17 +41,18 @@
 		}}
 	/>
 
-	<a
+	<!-- TODO maybe reinstate in future, if we can make it work with non-webcontainer exercises -->
+	<!-- <a
 		{href}
 		class="new-tab icon"
 		target="_blank"
 		aria-label={href ? 'open in new tab' : undefined}
 		tabindex="0"
-	></a>
+	></a> -->
 
 	<button
 		disabled={loading || !toggle_terminal}
-		class="terminal icon"
+		class="terminal icon raised"
 		onclick={() => toggle_terminal?.()}
 		aria-label="toggle terminal"
 	></button>
@@ -59,6 +64,8 @@
 		height: 4rem;
 		display: flex;
 		border-top: 1px solid var(--sk-back-4);
+		padding: 0.2rem;
+		gap: 0.2rem;
 	}
 
 	button {
@@ -67,14 +74,15 @@
 
 	input {
 		flex: 1;
-		padding: 0.5rem 1rem 0.4rem 1rem;
-		border: none;
-		background-color: var(--sk-back-3);
+		padding: 0.2rem 0.6rem;
+		border: 1px solid var(--sk-back-4);
+		/* TODO this should apply to all buttons/inputs? */
+		border-radius: var(--sk-border-radius);
 		color: var(--sk-text-1);
 		font: var(--sk-font-ui-medium);
+		height: 3.2rem;
 	}
 
-	a:focus-visible,
 	button:focus-visible,
 	input:focus-visible {
 		outline-offset: -2px;
@@ -83,18 +91,9 @@
 	.icon,
 	.icon::after {
 		position: relative;
-		height: 100%;
+		width: 3.2rem;
 		aspect-ratio: 1;
-		background: var(--sk-back-4) no-repeat 50% 50%;
-		background-size: 2rem;
-	}
-
-	a:not([href]) {
-		opacity: 0.5;
-	}
-
-	.new-tab {
-		background-image: url($lib/icons/external.svg);
+		background-size: 1.8rem;
 	}
 
 	.terminal {
@@ -106,7 +105,8 @@
 		position: absolute;
 		left: 0;
 		top: 0;
-		background-image: url($lib/icons/refresh.svg);
+		background: url($lib/icons/refresh.svg) no-repeat 50% 50%;
+		background-size: 1.8rem;
 		transition: 0.2s ease-out;
 	}
 
