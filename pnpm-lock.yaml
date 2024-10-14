@@ -73,7 +73,7 @@ importers:
         version: 1.22.0(typescript@5.5.4)
       '@sveltejs/amp':
         specifier: ^1.1.3
-        version: 1.1.3(@sveltejs/kit@2.6.3(@sveltejs/vite-plugin-svelte@4.0.0-next.6(svelte@5.0.0-next.264)(vite@5.4.7(@types/node@20.14.2)(lightningcss@1.25.1)))(svelte@5.0.0-next.264)(vite@5.4.7(@types/node@20.14.2)(lightningcss@1.25.1)))
+        version: 1.1.3(@sveltejs/kit@2.7.0(@sveltejs/vite-plugin-svelte@4.0.0-next.6(svelte@5.0.0-next.264)(vite@5.4.7(@types/node@20.14.2)(lightningcss@1.25.1)))(svelte@5.0.0-next.264)(vite@5.4.7(@types/node@20.14.2)(lightningcss@1.25.1)))
       '@sveltejs/repl':
         specifier: workspace:*
         version: link:../../packages/repl
@@ -91,7 +91,7 @@ importers:
         version: 3.1.0
       '@vercel/speed-insights':
         specifier: ^1.0.0
-        version: 1.0.11(@sveltejs/kit@2.6.3(@sveltejs/vite-plugin-svelte@4.0.0-next.6(svelte@5.0.0-next.264)(vite@5.4.7(@types/node@20.14.2)(lightningcss@1.25.1)))(svelte@5.0.0-next.264)(vite@5.4.7(@types/node@20.14.2)(lightningcss@1.25.1)))(svelte@5.0.0-next.264)
+        version: 1.0.11(@sveltejs/kit@2.7.0(@sveltejs/vite-plugin-svelte@4.0.0-next.6(svelte@5.0.0-next.264)(vite@5.4.7(@types/node@20.14.2)(lightningcss@1.25.1)))(svelte@5.0.0-next.264)(vite@5.4.7(@types/node@20.14.2)(lightningcss@1.25.1)))(svelte@5.0.0-next.264)
       '@webcontainer/api':
         specifier: ^1.1.5
         version: 1.1.9
@@ -149,13 +149,13 @@ importers:
         version: 2.43.4
       '@sveltejs/adapter-vercel':
         specifier: ^5.4.3
-        version: 5.4.3(@sveltejs/kit@2.6.3(@sveltejs/vite-plugin-svelte@4.0.0-next.6(svelte@5.0.0-next.264)(vite@5.4.7(@types/node@20.14.2)(lightningcss@1.25.1)))(svelte@5.0.0-next.264)(vite@5.4.7(@types/node@20.14.2)(lightningcss@1.25.1)))
+        version: 5.4.3(@sveltejs/kit@2.7.0(@sveltejs/vite-plugin-svelte@4.0.0-next.6(svelte@5.0.0-next.264)(vite@5.4.7(@types/node@20.14.2)(lightningcss@1.25.1)))(svelte@5.0.0-next.264)(vite@5.4.7(@types/node@20.14.2)(lightningcss@1.25.1)))
       '@sveltejs/enhanced-img':
         specifier: ^0.3.4
         version: 0.3.4(rollup@4.21.2)(svelte@5.0.0-next.264)(vite@5.4.7(@types/node@20.14.2)(lightningcss@1.25.1))
       '@sveltejs/kit':
-        specifier: ^2.6.3
-        version: 2.6.3(@sveltejs/vite-plugin-svelte@4.0.0-next.6(svelte@5.0.0-next.264)(vite@5.4.7(@types/node@20.14.2)(lightningcss@1.25.1)))(svelte@5.0.0-next.264)(vite@5.4.7(@types/node@20.14.2)(lightningcss@1.25.1))
+        specifier: ^2.7.0
+        version: 2.7.0(@sveltejs/vite-plugin-svelte@4.0.0-next.6(svelte@5.0.0-next.264)(vite@5.4.7(@types/node@20.14.2)(lightningcss@1.25.1)))(svelte@5.0.0-next.264)(vite@5.4.7(@types/node@20.14.2)(lightningcss@1.25.1))
       '@sveltejs/site-kit':
         specifier: workspace:*
         version: link:../../packages/site-kit
@@ -1101,8 +1101,8 @@ packages:
     resolution: {integrity: sha512-oGB+UxlgWcgQkgwo8GcEGwemoTFt3FIO9ababBmaGwXIoBKZ+GTy0pP185beGg7Llih/NSHSV2XAs1lnznocSg==}
     engines: {node: '>= 8'}
 
-  '@polka/url@1.0.0-next.25':
-    resolution: {integrity: sha512-j7P6Rgr3mmtdkeDGTe0E/aYyWEWVtc5yFXtHCRHs28/jptDEWfaVOc5T7cblqy1XKPPfCxJc/8DwQ5YgLOZOVQ==}
+  '@polka/url@1.0.0-next.28':
+    resolution: {integrity: sha512-8LduaNlMZGwdZ6qWrKlfa+2M4gahzFkprZiAt2TF8uS0qQgBizKXpXURqvTJ4WtmupWxaLqjRb2UCTe72mu+Aw==}
 
   '@replit/codemirror-lang-svelte@6.0.0':
     resolution: {integrity: sha512-U2OqqgMM6jKelL0GNWbAmqlu1S078zZNoBqlJBW+retTc5M4Mha6/Y2cf4SVg6ddgloJvmcSpt4hHrVoM4ePRA==}
@@ -1373,6 +1373,15 @@ packages:
 
   '@sveltejs/kit@2.6.3':
     resolution: {integrity: sha512-baIAnmfMqAISrPtTC/22w6ay5kTEIQ/vq9bctiaQgRIoLCPBNhb6LEidTuWQS7OzPYCDBMuMX1t/fMvi4r3q/g==}
+    engines: {node: '>=18.13'}
+    hasBin: true
+    peerDependencies:
+      '@sveltejs/vite-plugin-svelte': ^3.0.0 || ^4.0.0-next.1
+      svelte: ^4.0.0 || ^5.0.0-next.0
+      vite: ^5.0.3
+
+  '@sveltejs/kit@2.7.0':
+    resolution: {integrity: sha512-4XyY1SCB/Eyz8E9G7SEBKViysYwVtDftuA7kyQ5bmuFNPWC1KZC4988rMvaJxhH2BbCTsbLPjNOZwiEGXt8/2g==}
     engines: {node: '>=18.13'}
     hasBin: true
     peerDependencies:
@@ -2694,6 +2703,9 @@ packages:
   set-cookie-parser@2.6.0:
     resolution: {integrity: sha512-RVnVQxTXuerk653XfuliOxBP81Sf0+qfQE73LIYKcyMYHG94AuH0kgrQpRDuTZnSmjpysHmzxJXKNfa6PjFhyQ==}
 
+  set-cookie-parser@2.7.0:
+    resolution: {integrity: sha512-lXLOiqpkUumhRdFF3k1osNXCy9akgx/dyPZ5p8qAg9seJzXr5ZrlqZuWIMuY6ejOsVLE6flJ5/h3lsn57fQ/PQ==}
+
   sharp@0.33.4:
     resolution: {integrity: sha512-7i/dt5kGl7qR4gwPRD2biwD2/SvBn3O04J77XKFgL2OnZtQw+AG9wnuS/csmu80nPRHLYE9E41fyEiG8nhH6/Q==}
     engines: {libvips: '>=8.15.2', node: ^18.17.0 || ^20.3.0 || >=21.0.0}
@@ -3934,7 +3946,7 @@ snapshots:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.17.1
 
-  '@polka/url@1.0.0-next.25': {}
+  '@polka/url@1.0.0-next.28': {}
 
   '@replit/codemirror-lang-svelte@6.0.0(@codemirror/autocomplete@6.16.0(@codemirror/language@6.10.1)(@codemirror/state@6.4.1)(@codemirror/view@6.28.0)(@lezer/common@1.2.2))(@codemirror/lang-css@6.2.1(@codemirror/view@6.28.0))(@codemirror/lang-html@6.4.9)(@codemirror/lang-javascript@6.2.2)(@codemirror/language@6.10.1)(@codemirror/state@6.4.1)(@codemirror/view@6.28.0)(@lezer/common@1.2.2)(@lezer/highlight@1.2.1)(@lezer/javascript@1.4.17)(@lezer/lr@1.4.1)':
     dependencies:
@@ -4170,18 +4182,18 @@ snapshots:
       '@sveltejs/kit': 2.6.3(@sveltejs/vite-plugin-svelte@4.0.0-next.6(svelte@5.0.0-next.260)(vite@5.4.7(@types/node@20.14.2)(lightningcss@1.25.1)))(svelte@5.0.0-next.260)(vite@5.4.7(@types/node@20.14.2)(lightningcss@1.25.1))
       import-meta-resolve: 4.1.0
 
-  '@sveltejs/adapter-vercel@5.4.3(@sveltejs/kit@2.6.3(@sveltejs/vite-plugin-svelte@4.0.0-next.6(svelte@5.0.0-next.264)(vite@5.4.7(@types/node@20.14.2)(lightningcss@1.25.1)))(svelte@5.0.0-next.264)(vite@5.4.7(@types/node@20.14.2)(lightningcss@1.25.1)))':
+  '@sveltejs/adapter-vercel@5.4.3(@sveltejs/kit@2.7.0(@sveltejs/vite-plugin-svelte@4.0.0-next.6(svelte@5.0.0-next.264)(vite@5.4.7(@types/node@20.14.2)(lightningcss@1.25.1)))(svelte@5.0.0-next.264)(vite@5.4.7(@types/node@20.14.2)(lightningcss@1.25.1)))':
     dependencies:
-      '@sveltejs/kit': 2.6.3(@sveltejs/vite-plugin-svelte@4.0.0-next.6(svelte@5.0.0-next.264)(vite@5.4.7(@types/node@20.14.2)(lightningcss@1.25.1)))(svelte@5.0.0-next.264)(vite@5.4.7(@types/node@20.14.2)(lightningcss@1.25.1))
+      '@sveltejs/kit': 2.7.0(@sveltejs/vite-plugin-svelte@4.0.0-next.6(svelte@5.0.0-next.264)(vite@5.4.7(@types/node@20.14.2)(lightningcss@1.25.1)))(svelte@5.0.0-next.264)(vite@5.4.7(@types/node@20.14.2)(lightningcss@1.25.1))
       '@vercel/nft': 0.27.2
       esbuild: 0.21.5
     transitivePeerDependencies:
       - encoding
       - supports-color
 
-  '@sveltejs/amp@1.1.3(@sveltejs/kit@2.6.3(@sveltejs/vite-plugin-svelte@4.0.0-next.6(svelte@5.0.0-next.264)(vite@5.4.7(@types/node@20.14.2)(lightningcss@1.25.1)))(svelte@5.0.0-next.264)(vite@5.4.7(@types/node@20.14.2)(lightningcss@1.25.1)))':
+  '@sveltejs/amp@1.1.3(@sveltejs/kit@2.7.0(@sveltejs/vite-plugin-svelte@4.0.0-next.6(svelte@5.0.0-next.264)(vite@5.4.7(@types/node@20.14.2)(lightningcss@1.25.1)))(svelte@5.0.0-next.264)(vite@5.4.7(@types/node@20.14.2)(lightningcss@1.25.1)))':
     dependencies:
-      '@sveltejs/kit': 2.6.3(@sveltejs/vite-plugin-svelte@4.0.0-next.6(svelte@5.0.0-next.264)(vite@5.4.7(@types/node@20.14.2)(lightningcss@1.25.1)))(svelte@5.0.0-next.264)(vite@5.4.7(@types/node@20.14.2)(lightningcss@1.25.1))
+      '@sveltejs/kit': 2.7.0(@sveltejs/vite-plugin-svelte@4.0.0-next.6(svelte@5.0.0-next.264)(vite@5.4.7(@types/node@20.14.2)(lightningcss@1.25.1)))(svelte@5.0.0-next.264)(vite@5.4.7(@types/node@20.14.2)(lightningcss@1.25.1))
 
   '@sveltejs/enhanced-img@0.3.4(rollup@4.21.2)(svelte@5.0.0-next.264)(vite@5.4.7(@types/node@20.14.2)(lightningcss@1.25.1))':
     dependencies:
@@ -4211,7 +4223,7 @@ snapshots:
       tiny-glob: 0.2.9
       vite: 5.4.7(@types/node@20.14.2)(lightningcss@1.25.1)
 
-  '@sveltejs/kit@2.6.3(@sveltejs/vite-plugin-svelte@4.0.0-next.6(svelte@5.0.0-next.264)(vite@5.4.7(@types/node@20.14.2)(lightningcss@1.25.1)))(svelte@5.0.0-next.264)(vite@5.4.7(@types/node@20.14.2)(lightningcss@1.25.1))':
+  '@sveltejs/kit@2.7.0(@sveltejs/vite-plugin-svelte@4.0.0-next.6(svelte@5.0.0-next.264)(vite@5.4.7(@types/node@20.14.2)(lightningcss@1.25.1)))(svelte@5.0.0-next.264)(vite@5.4.7(@types/node@20.14.2)(lightningcss@1.25.1))':
     dependencies:
       '@sveltejs/vite-plugin-svelte': 4.0.0-next.6(svelte@5.0.0-next.264)(vite@5.4.7(@types/node@20.14.2)(lightningcss@1.25.1))
       '@types/cookie': 0.6.0
@@ -4223,7 +4235,7 @@ snapshots:
       magic-string: 0.30.11
       mrmime: 2.0.0
       sade: 1.8.1
-      set-cookie-parser: 2.6.0
+      set-cookie-parser: 2.7.0
       sirv: 2.0.4
       svelte: 5.0.0-next.264
       tiny-glob: 0.2.9
@@ -4382,9 +4394,9 @@ snapshots:
       - encoding
       - supports-color
 
-  '@vercel/speed-insights@1.0.11(@sveltejs/kit@2.6.3(@sveltejs/vite-plugin-svelte@4.0.0-next.6(svelte@5.0.0-next.264)(vite@5.4.7(@types/node@20.14.2)(lightningcss@1.25.1)))(svelte@5.0.0-next.264)(vite@5.4.7(@types/node@20.14.2)(lightningcss@1.25.1)))(svelte@5.0.0-next.264)':
+  '@vercel/speed-insights@1.0.11(@sveltejs/kit@2.7.0(@sveltejs/vite-plugin-svelte@4.0.0-next.6(svelte@5.0.0-next.264)(vite@5.4.7(@types/node@20.14.2)(lightningcss@1.25.1)))(svelte@5.0.0-next.264)(vite@5.4.7(@types/node@20.14.2)(lightningcss@1.25.1)))(svelte@5.0.0-next.264)':
     optionalDependencies:
-      '@sveltejs/kit': 2.6.3(@sveltejs/vite-plugin-svelte@4.0.0-next.6(svelte@5.0.0-next.264)(vite@5.4.7(@types/node@20.14.2)(lightningcss@1.25.1)))(svelte@5.0.0-next.264)(vite@5.4.7(@types/node@20.14.2)(lightningcss@1.25.1))
+      '@sveltejs/kit': 2.7.0(@sveltejs/vite-plugin-svelte@4.0.0-next.6(svelte@5.0.0-next.264)(vite@5.4.7(@types/node@20.14.2)(lightningcss@1.25.1)))(svelte@5.0.0-next.264)(vite@5.4.7(@types/node@20.14.2)(lightningcss@1.25.1))
       svelte: 5.0.0-next.264
 
   '@vitest/expect@2.1.2':
@@ -5546,6 +5558,8 @@ snapshots:
 
   set-cookie-parser@2.6.0: {}
 
+  set-cookie-parser@2.7.0: {}
+
   sharp@0.33.4:
     dependencies:
       color: 4.2.3
@@ -5597,7 +5611,7 @@ snapshots:
 
   sirv@2.0.4:
     dependencies:
-      '@polka/url': 1.0.0-next.25
+      '@polka/url': 1.0.0-next.28
       mrmime: 2.0.0
       totalist: 3.0.1
 
