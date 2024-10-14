@@ -454,6 +454,14 @@ async function convert_to_ts(js_code: string, indent = '', offset = '') {
 					let start = comment.getStart();
 					let end = comment.getEnd();
 
+					if (comment.comment) {
+						// preserve docs
+						start = comment.tags!.at(0)!.getStart();
+						end = comment.tags!.at(-1)!.getEnd();
+
+						while (code.original[start] !== '*') start -= 1;
+					}
+
 					if (code.original[end] === '\n') end += 1;
 					code.overwrite(start, end, '');
 				}
