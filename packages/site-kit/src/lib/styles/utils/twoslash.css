@@ -1,6 +1,16 @@
 .twoslash-hover {
 	position: relative;
 
+	&.highlight::after {
+		/* ensure contiguous hover area */
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: calc(100% + 1rem);
+	}
+
 	.twoslash-popup-container {
 		display: none;
 	}

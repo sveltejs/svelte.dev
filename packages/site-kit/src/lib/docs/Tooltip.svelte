@@ -59,7 +59,7 @@
 		margin: 0 2rem 0 0;
 		background-color: var(--bg);
 		text-align: left;
-		padding: 2rem;
+		padding: 1.6rem;
 		border-radius: var(--sk-border-radius);
 		font-family: var(--sk-font-family-mono);
 		/* font-size: 1.2rem; */
