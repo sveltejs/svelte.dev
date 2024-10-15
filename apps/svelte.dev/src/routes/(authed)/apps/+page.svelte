@@ -275,13 +275,7 @@
 	}
 
 	ul:not(.selecting) li:hover a {
-		background-color: var(--sk-theme-2);
-		color: white;
-	}
-
-	ul:not(.selecting) li:hover h2,
-	ul:not(.selecting) li:hover span {
-		color: white;
+		background-color: var(--sk-back-4);
 	}
 
 	ul:not(.selecting) li:hover input {
