@@ -218,6 +218,7 @@
 							{#if current_menu_view}
 								<NavContextMenu
 									bind:this={nav_context_instance}
+									title={$current_menu_view?.title}
 									contents={$current_menu_view?.sections}
 								/>
 							{/if}
@@ -328,13 +329,9 @@
 
 		& :global(a) {
 			position: relative;
-			display: flex;
-			align-items: center;
 			padding: 0.3rem 0;
-			margin: 0.3rem 0;
-			color: var(--sk-text-2);
+			color: var(--sk-text-3);
 			font: var(--sk-font-ui-medium);
-			border-radius: var(--sk-border-radius);
 			width: 100%;
 			height: 100%;
 		}
@@ -347,6 +344,11 @@
 		padding: 1rem var(--sk-page-padding-side);
 		max-height: 70vh;
 		overflow-y: scroll;
+
+		button {
+			/* width: 2.6rem; */
+			height: 2.6rem;
+		}
 	}
 
 	.context {
