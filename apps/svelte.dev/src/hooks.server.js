@@ -13,7 +13,7 @@ const mappings = new Map([
 // selectively preload fonts
 const fonts = [
 	'dm-serif-display-latin-400-normal',
-	'eb-garamond-latin-ext-400-normal',
+	'eb-garamond-latin-400-normal',
 	'fira-sans-latin-400-normal'
 ];
 
