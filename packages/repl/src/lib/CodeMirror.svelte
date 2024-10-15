@@ -14,7 +14,7 @@
 	import { get_repl_context } from './context';
 	import Message from './Message.svelte';
 	import { svelteTheme } from './theme';
-	import { autocomplete } from './autocomplete';
+	import { completion_for_javascript } from '@sveltejs/site-kit/codemirror';
 	import type { LintSource } from '@codemirror/lint';
 	import type { Extension } from '@codemirror/state';
 	import { CompletionContext } from '@codemirror/autocomplete';
@@ -207,11 +207,11 @@
 	const { files, selected } = get_repl_context();
 
 	const svelte_rune_completions = svelteLanguage.data.of({
-		autocomplete: (context: CompletionContext) => autocomplete(context, $selected!, $files)
+		autocomplete: (context: CompletionContext) => completion_for_javascript(context, $selected!, $files)
 	});
 
 	const js_rune_completions = javascriptLanguage.data.of({
-		autocomplete: (context: CompletionContext) => autocomplete(context, $selected!, $files)
+		autocomplete: (context: CompletionContext) => completion_for_javascript(context, $selected!, $files)
 	});
 </script>
 

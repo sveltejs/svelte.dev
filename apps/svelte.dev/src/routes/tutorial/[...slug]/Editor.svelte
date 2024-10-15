@@ -14,10 +14,10 @@
 	import { basicSetup } from 'codemirror';
 	import { onMount, tick } from 'svelte';
 	import { adapter_state } from './adapter.svelte';
-	import { autocomplete_for_svelte } from './autocompletion.js';
 	import './codemirror.css';
 	import { files, selected_file, selected_name, update_file } from './state.js';
 	import { toStore } from 'svelte/store';
+	import { autocomplete_for_svelte } from '@sveltejs/site-kit/codemirror';
 
 	/** @type {HTMLDivElement} */
 	let container;
@@ -120,7 +120,7 @@
 				} else if (file.name.endsWith('.html')) {
 					lang = [html()];
 				} else if (file.name.endsWith('.svelte')) {
-					lang = [svelte(), ...autocomplete_for_svelte()];
+					lang = [svelte(), ...autocomplete_for_svelte($selected_file, $files)];
 				}
 
 				state = EditorState.create({

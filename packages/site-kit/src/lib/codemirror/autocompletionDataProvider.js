@@ -473,3 +473,122 @@ export const addAttributes = {
 		}
 	]
 };
+
+/**
+ * Returns `true` is this is a valid place to declare state
+ * @type {import("./types").Test}
+ */
+const is_state = (node) => {
+	let parent = node.parent;
+
+	if (node.name === '.' || node.name === 'PropertyName') {
+		if (parent?.name !== 'MemberExpression') return false;
+		parent = parent.parent;
+	}
+
+	if (!parent) return false;
+
+	return parent.name === 'VariableDeclaration' || parent.name === 'PropertyDeclaration';
+};
+
+/**
+ * Returns `true` if we're already in a valid call expression, e.g.
+ * changing an existing `$state()` to `$state.frozen()`
+ * @type {import("./types").Test}
+ */
+const is_state_call = (node) => {
+	let parent = node.parent;
+
+	if (node.name === '.' || node.name === 'PropertyName') {
+		if (parent?.name !== 'MemberExpression') return false;
+		parent = parent.parent;
+	}
+
+	if (parent?.name !== 'CallExpression') {
+		return false;
+	}
+
+	parent = parent.parent;
+	if (!parent) return false;
+
+	return parent.name === 'VariableDeclaration' || parent.name === 'PropertyDeclaration';
+};
+
+/** @type {import("./types").Test} */
+const is_statement = (node) => {
+	if (node.name === 'VariableName') {
+		return node.parent?.name === 'ExpressionStatement';
+	}
+
+	if (node.name === '.' || node.name === 'PropertyName') {
+		return node.parent?.parent?.name === 'ExpressionStatement';
+	}
+
+	return false;
+};
+
+/**
+ * Returns `true` if `$props()` is valid
+ * TODO only allow in `.svelte` files, and only at the top level
+ * @type {import("./types").Test}
+ */
+const is_props = (node, _, selected) => {
+	if (selected.type !== 'svelte') return false;
+
+	return (
+		node.name === 'VariableName' &&
+		node.parent?.name === 'VariableDeclaration' &&
+		node.parent.parent?.name === 'Script'
+	);
+};
+
+/**
+ * Returns `true` if `$bindable()` is valid
+ * @type {import("./types").Test}
+ * */
+const is_bindable = (node, context) => {
+	// disallow outside `let { x = $bindable }`
+	if (node.parent?.name !== 'PatternProperty') return false;
+	if (node.parent.parent?.name !== 'ObjectPattern') return false;
+	if (node.parent.parent.parent?.name !== 'VariableDeclaration') return false;
+
+	let last = node.parent.parent.parent.lastChild;
+	if (!last) return true;
+
+	// if the declaration is incomplete, assume the best
+	if (last.name === 'ObjectPattern' || last.name === 'Equals' || last.name === '⚠') {
+		return true;
+	}
+
+	if (last.name === ';') {
+		last = last.prevSibling;
+		if (!last || last.name === '⚠') return true;
+	}
+
+	// if the declaration is complete, only return true if it is a `$props()` declaration
+	return (
+		last.name === 'CallExpression' &&
+		last.firstChild?.name === 'VariableName' &&
+		context.state.sliceDoc(last.firstChild.from, last.firstChild.to) === '$props'
+	);
+};
+
+export const runes = [
+	{ snippet: '$state(${})', test: is_state },
+	{ snippet: '$state', test: is_state_call },
+	{ snippet: '$props()', test: is_props },
+	{ snippet: '$derived(${});', test: is_state },
+	{ snippet: '$derived', test: is_state_call },
+	{ snippet: '$derived.by(() => {\n\t${}\n});', test: is_state },
+	{ snippet: '$derived.by', test: is_state_call },
+	{ snippet: '$effect(() => {\n\t${}\n});', test: is_statement },
+	{ snippet: '$effect.pre(() => {\n\t${}\n});', test: is_statement },
+	{ snippet: '$state.frozen(${});', test: is_state },
+	{ snippet: '$state.frozen', test: is_state_call },
+	{ snippet: '$bindable()', test: is_bindable },
+	{ snippet: '$effect.root(() => {\n\t${}\n})' },
+	{ snippet: '$state.snapshot(${})' },
+	{ snippet: '$state.is(${})' },
+	{ snippet: '$effect.active()' },
+	{ snippet: '$inspect(${});', test: is_statement }
+];

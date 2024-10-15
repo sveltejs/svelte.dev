@@ -1,13 +1,14 @@
 import { svelteLanguage } from '@replit/codemirror-lang-svelte';
 import { javascriptLanguage } from '@codemirror/lang-javascript';
 import { syntaxTree } from '@codemirror/language';
-import { snippetCompletion } from '@codemirror/autocomplete';
+import { CompletionContext, snippetCompletion } from '@codemirror/autocomplete';
 import {
 	addAttributes,
 	svelteAttributes,
 	svelteTags,
 	sveltekitAttributes,
-	svelteEvents
+	svelteEvents,
+	runes
 } from './autocompletionDataProvider.js';
 
 const logic_block_snippets = [
@@ -213,23 +214,107 @@ function completion_for_markup(context) {
 	return null;
 }
 
+const options = runes.map(({ snippet, test }, i) => ({
+	option: snippetCompletion(snippet, {
+		type: 'keyword',
+		boost: runes.length - i,
+		label: snippet.includes('(') ? snippet.slice(0, snippet.indexOf('(')) : snippet
+	}),
+	test
+}));
+
 /**
  * @param {import('@codemirror/autocomplete').CompletionContext} context
- * @returns {import('@codemirror/autocomplete').CompletionResult | null}
+ * @param {any} selected
+ * @param {import('./types.js').File[]} files
+ * @returns {import('@codemirror/autocomplete').CompletionResult | null | false}
  */
-function completion_for_javascript(context) {
-	// TODO autocompletion for import source
+export function completion_for_javascript(context, selected, files) {
+	let node = syntaxTree(context.state).resolveInner(context.pos, -1);
+
+	if (node.name === 'String' && node.parent?.name === 'ImportDeclaration') {
+		const modules = [
+			'svelte',
+			'svelte/animate',
+			'svelte/easing',
+			'svelte/legacy',
+			'svelte/motion',
+			'svelte/reactivity',
+			'svelte/store',
+			'svelte/transition'
+		];
+
+		for (const file of files) {
+			if (file === selected) continue;
+			modules.push(`./${file.name}.${file.type}`);
+		}
+
+		return {
+			from: node.from + 1,
+			options: modules.map((label) => ({
+				label,
+				type: 'string'
+			}))
+		};
+	}
+
+	if (
+		selected.type !== 'svelte' &&
+		selected.type !== 'file' &&
+		(selected.type !== 'js' || !selected.name.endsWith('.svelte'))
+	) {
+		return false;
+	}
+
+	if (node.name === 'VariableName' || node.name === 'PropertyName' || node.name === '.') {
+		// special case — `$inspect(...).with(...)` is the only rune that 'returns'
+		// an 'object' with a 'method'
+		if (node.name === 'PropertyName' || node.name === '.') {
+			if (
+				node.parent?.name === 'MemberExpression' &&
+				node.parent.firstChild?.name === 'CallExpression' &&
+				node.parent.firstChild.firstChild?.name === 'VariableName' &&
+				context.state.sliceDoc(
+					node.parent.firstChild.firstChild.from,
+					node.parent.firstChild.firstChild.to
+				) === '$inspect'
+			) {
+				const open = context.matchBefore(/\.\w*/);
+				if (!open) return null;
+
+				return {
+					from: open.from,
+					options: [snippetCompletion('.with(${})', { type: 'keyword', label: '.with' })]
+				};
+			}
+		}
+
+		const open = context.matchBefore(/\$[\w\.]*/);
+		if (!open) return null;
+
+		return {
+			from: open.from,
+			options: options
+				.filter((option) => (option.test ? option.test(node, context, selected) : true))
+				.map((option) => option.option)
+		};
+	}
 
 	return null;
 }
 
-export function autocomplete_for_svelte() {
+/**
+ * @param {any} selected
+ * @param {import('./types.js').File[]} files
+ */
+export function autocomplete_for_svelte(selected, files) {
 	return [
 		svelteLanguage.data.of({
 			autocomplete: completion_for_markup
 		}),
 		javascriptLanguage.data.of({
-			autocomplete: completion_for_javascript
+			autocomplete: (/** @type {CompletionContext} */ context) =>
+				completion_for_javascript(context, selected, files)
 		})
 	];
 }

@@ -352,6 +352,36 @@ importers:
 
   packages/site-kit:
     dependencies:
+      '@codemirror/autocomplete':
+        specifier: ^6.9.0
+        version: 6.16.0(@codemirror/language@6.10.1)(@codemirror/state@6.4.1)(@codemirror/view@6.28.0)(@lezer/common@1.2.2)
+      '@codemirror/commands':
+        specifier: ^6.2.5
+        version: 6.5.0
+      '@codemirror/lang-css':
+        specifier: ^6.2.1
+        version: 6.2.1(@codemirror/view@6.28.0)
+      '@codemirror/lang-html':
+        specifier: ^6.4.6
+        version: 6.4.9
+      '@codemirror/lang-javascript':
+        specifier: ^6.2.1
+        version: 6.2.2
+      '@codemirror/language':
+        specifier: ^6.9.0
+        version: 6.10.1
+      '@codemirror/lint':
+        specifier: ^6.4.1
+        version: 6.7.0
+      '@codemirror/search':
+        specifier: ^6.5.2
+        version: 6.5.6
+      '@codemirror/state':
+        specifier: ^6.2.1
+        version: 6.4.1
+      '@codemirror/view':
+        specifier: ^6.17.1
+        version: 6.28.0
       '@fontsource/dm-serif-display':
         specifier: ^5.1.0
         version: 5.1.0
@@ -364,6 +394,12 @@ importers:
       '@fontsource/fira-sans':
         specifier: ^5.1.0
         version: 5.1.0
+      '@lezer/common':
+        specifier: ^1.0.4
+        version: 1.2.2
+      '@replit/codemirror-lang-svelte':
+        specifier: ^6.0.0
+        version: 6.0.0(@codemirror/autocomplete@6.16.0(@codemirror/language@6.10.1)(@codemirror/state@6.4.1)(@codemirror/view@6.28.0)(@lezer/common@1.2.2))(@codemirror/lang-css@6.2.1(@codemirror/view@6.28.0))(@codemirror/lang-html@6.4.9)(@codemirror/lang-javascript@6.2.2)(@codemirror/language@6.10.1)(@codemirror/state@6.4.1)(@codemirror/view@6.28.0)(@lezer/common@1.2.2)(@lezer/highlight@1.2.1)(@lezer/javascript@1.4.17)(@lezer/lr@1.4.1)
       '@shikijs/twoslash':
         specifier: ^1.22.0
         version: 1.22.0(typescript@5.5.4)
