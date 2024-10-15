@@ -50,16 +50,19 @@
 	<!-- svelte-ignore a11y_consider_explicit_label (the <enhanced:img> alt takes care of it)-->
 	<div class="screenshots">
 		<a href="https://survey.stackoverflow.co/2024/technology#2-web-frameworks-and-technologies">
-			<enhanced:img alt="Stack Overflow 2024 Developer Survey" src="./stack-overflow.png"
+			<enhanced:img
+				alt="Stack Overflow 2024 Developer Survey"
+				src="./stack-overflow.png?w=1200,1600"
 			></enhanced:img>
 		</a>
 
 		<a href="https://2023.stateofjs.com/en-US/libraries/front-end-frameworks/">
-			<enhanced:img alt="State of JavaScript 2023" src="./state-of-js-chart.png"></enhanced:img>
+			<enhanced:img alt="State of JavaScript 2023" src="./state-of-js-chart.png?w=1000,1400"
+			></enhanced:img>
 		</a>
 
 		<a href="https://x.com/flaviocopes/status/1730895911864189299">
-			<enhanced:img alt="Tweet from @flaviocopes" src="./flavio-light.png"></enhanced:img>
+			<enhanced:img alt="Tweet from @flaviocopes" src="./flavio-light.png?w=800"></enhanced:img>
 		</a>
 	</div>
 </div>
