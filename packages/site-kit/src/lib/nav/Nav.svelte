@@ -164,7 +164,9 @@ Top navigation bar for the application. It provides a slot for the left side, th
 </nav>
 
 {#if open}
-	<Menu {links} {current} onclose={() => (open = false)} />
+	<div class="mobile">
+		<Menu {links} {current} onclose={() => (open = false)} />
+	</div>
 {/if}
 
 <style>

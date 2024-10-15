@@ -38,16 +38,14 @@
 		});
 	});
 
-	function slide(node: HTMLElement, { duration = 400, easing = expoOut } = {}): TransitionConfig {
+	function popup(node: HTMLElement, { duration = 400, easing = expoOut } = {}): TransitionConfig {
 		const height = current ? node.clientHeight : universal_menu_inner_height;
 
 		return {
 			css: (t, u) =>
 				$reduced_motion
 					? `opacity: ${t}`
-					: `transform: translate3d(0, ${height * u}px, 0) scale3d(${0.9 + 0.1 * t}, ${
-							0.9 + 0.1 * t
-						}, 1)`,
+					: `transform: translate3d(0, ${(height * u) / 0.9}px, 0) scale(${0.9 + 0.1 * t})`,
 			easing,
 			duration
 		};
@@ -57,7 +55,7 @@
 <ModalOverlay {onclose} />
 
 <div class="menu" use:trap={{ reset_focus: false }}>
-	<div class="mobile-main-menu" transition:slide={{ duration: 3000, easing: quintOut }}>
+	<div class="mobile-main-menu" transition:popup={{ duration: 3000, easing: quintOut }}>
 		<div
 			class="menu-background"
 			class:ready
