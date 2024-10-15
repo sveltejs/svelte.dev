@@ -75,11 +75,11 @@
 		h2,
 		h3 {
 			max-width: 100%;
-			padding: 0 1em 0 0;
+			padding: 0 2.4rem 0 0;
 
 			@media (min-width: 768px) {
-				margin: 0 0 0 -2em;
-				padding: 0 1em 0 2em;
+				margin: 0 0 0 -4.8rem;
+				padding: 0 2.4rem 0 4.8rem;
 			}
 
 			/* we can't use `text-overflow` on the heading itself,
@@ -336,10 +336,10 @@
 			position: absolute !important;
 			display: block;
 			background: url(../icons/hash-light.svg) 50% 50% no-repeat;
-			background-size: 1em 1em;
-			width: 1.2em;
-			height: 0.8em;
-			top: 0.2em;
+			background-size: 2.4rem 2.4rem;
+			width: 2.6rem;
+			height: 2.2rem;
+			top: calc(50% - 1rem);
 
 			@media (max-width: 767px) {
 				right: 0;
@@ -351,7 +351,7 @@
 			}
 
 			@media (min-width: 768px) {
-				left: 0.7em;
+				left: 1.6rem;
 				opacity: 0;
 				transition: opacity 0.2s;
 
