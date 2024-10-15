@@ -25,7 +25,7 @@ export async function handle({ event, resolve }) {
 			if (type === 'font') {
 				// only preload header font, everything else is lower priority,
 				// otherwise it causes congestion that messes up LCP
-				return path.includes('dm-serif');
+				return path.includes('dm-serif-display-latin-400-normal') && path.endsWith('.woff2');
 			}
 
 			return true;
