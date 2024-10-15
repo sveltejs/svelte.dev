@@ -10,6 +10,13 @@ const mappings = new Map([
 	['/docs/accessibility-warnings', '/docs/svelte/compiler-warnings']
 ]);
 
+// selectively preload fonts
+const fonts = [
+	'dm-serif-display-latin-400-normal',
+	'eb-garamond-latin-ext-400-normal',
+	'fira-sans-latin-400-normal'
+];
+
 /** @type {import('@sveltejs/kit').Handle} */
 export async function handle({ event, resolve }) {
 	// Best effort to redirect from Svelte 4 docs to new docs
@@ -23,12 +30,11 @@ export async function handle({ event, resolve }) {
 	const response = await resolve(event, {
 		preload: ({ type, path }) => {
 			if (type === 'font') {
-				// only preload header font, everything else is lower priority,
-				// otherwise it causes congestion that messes up LCP
-				return path.includes('dm-serif-display-latin-400-normal') && path.endsWith('.woff2');
+				if (!path.endsWith('.woff2')) return false;
+				return fonts.some((font) => path.includes(font));
 			}
 
-			return true;
+			return type === 'js' || type === 'css'; // future-proof, if we add `assets` later
 		}
 	});
 
