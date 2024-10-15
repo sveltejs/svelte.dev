@@ -214,10 +214,10 @@
 		background: var(--background, var(--sk-back-2));
 		will-change: height;
 		transition: 0.4s var(--quint-out);
-		transition-property: background;
+		transition-property: none;
 
 		&.ready {
-			transition-property: height, background;
+			transition-property: height;
 		}
 
 		:root.dark & {
