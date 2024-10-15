@@ -3,9 +3,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 -->
 
 <script lang="ts">
-	import { root_scroll } from '../actions';
-	import { root_scroll_element } from '../actions/root-scroll';
-	import { overlay_open, searching, theme, nav_open, on_this_page_open } from '../stores';
+	import { overlay_open, searching, on_this_page_open } from '../stores';
 	import Icon from '../components/Icon.svelte';
 	import { page } from '$app/stores';
 	import ThemeToggle from '../components/ThemeToggle.svelte';
@@ -38,9 +36,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 
 	let last_scroll = 0;
 	function handle_scroll() {
-		if (!root_scroll_element) return;
-
-		const scroll = root_scroll_element.scrollTop;
+		const scroll = window.scrollY;
 		if (!hash_changed) {
 			visible = scroll === last_scroll ? visible : scroll < 50 || scroll < last_scroll;
 		}
@@ -48,25 +44,13 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		last_scroll = scroll;
 		hash_changed = false;
 	}
-
-	function handle_focus() {
-		if ($nav_open && !nav?.contains(document.activeElement)) {
-			$nav_open = false;
-		}
-	}
 </script>
 
-<svelte:window
-	use:root_scroll={handle_scroll}
-	onhashchange={handle_hashchange}
-	onfocusin={handle_focus}
-/>
+<svelte:window onscroll={handle_scroll} onhashchange={handle_hashchange} />
 
 <nav
 	bind:this={nav}
-	class:visible={visible || $nav_open}
-	class:$nav_open
-	class:dark={$theme.current === 'dark'}
+	class:visible
 	style:z-index={$overlay_open && ($searching || $on_this_page_open) ? 80 : null}
 	aria-label="Primary"
 >
@@ -143,7 +127,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 
 		<ThemeToggle />
 
-		<Menu bind:open={$nav_open} {links}>
+		<Menu {links}>
 			<Separator />
 
 			{@render external_links?.()}
@@ -191,6 +175,10 @@ Top navigation bar for the application. It provides a slot for the left side, th
 	}
 
 	@media (max-width: 799px) {
+		nav {
+			transition: transform 0.2s;
+		}
+
 		nav:not(.visible):not(:focus-within) {
 			transform: translate(0, calc(var(--sk-nav-height)));
 		}
@@ -251,7 +239,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		background: url(../branding/svelte.svg) no-repeat 0 50% / calc(100% - var(--padding-right)) auto;
 		padding: 0 var(--padding-right) 0 calc(var(--sk-page-padding-side) + 0rem);
 
-		:global(.dark) & {
+		:root.dark & {
 			background-image: url(../branding/svelte-dark.svg);
 		}
 	}

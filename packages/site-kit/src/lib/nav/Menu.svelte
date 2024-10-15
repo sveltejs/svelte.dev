@@ -1,21 +1,7 @@
 <script module>
-	const open_store = writable(false);
 	const current_menu_view = writable<NavigationLink | undefined>(undefined);
 	const show_context_menu = writable(false);
 	const links_store = writable<NavigationLink[]>([]);
-
-	export function open_nav() {
-		if (get(open_store)) {
-			open_store.set(false);
-		} else {
-			open_store.set(true);
-
-			const segment = get(page).url.pathname.split('/')[1];
-			current_menu_view.set(get(links_store).find((link) => link.slug === segment));
-
-			show_context_menu.set(!!get(current_menu_view)?.sections && !!get(current_menu_view));
-		}
-	}
 </script>
 
 <script lang="ts">
@@ -38,12 +24,9 @@
 		back_button?: Snippet;
 	}
 
-	let { open = $bindable(), links, children, back_button }: Props = $props();
+	let { links, children, back_button }: Props = $props();
 
-	$open_store = open;
-	$effect.pre(() => {
-		$open_store = open;
-	});
+	let open = $state(false);
 
 	$links_store = links;
 	$effect.pre(() => {
@@ -61,7 +44,6 @@
 
 	function close() {
 		open = false;
-		$open_store = open;
 	}
 
 	afterNavigate(close);
@@ -96,7 +78,7 @@
 	}
 
 	$effect.pre(() => {
-		$overlay_open = $open_store;
+		$overlay_open = open;
 	});
 </script>
 
@@ -114,16 +96,27 @@
 <div style="display: contents" use:click_outside={close} use:focus_outside={close}>
 	<button
 		aria-label="Toggle menu"
-		aria-expanded={$open_store}
+		aria-expanded={open}
 		class="menu-toggle raised icon"
 		class:open
 		bind:this={menu_button}
-		onclick={open_nav}
+		onclick={() => {
+			if (open) {
+				open = false;
+			} else {
+				open = true;
+
+				const segment = get(page).url.pathname.split('/')[1];
+				current_menu_view.set(get(links_store).find((link) => link.slug === segment));
+
+				show_context_menu.set(!!get(current_menu_view)?.sections && !!get(current_menu_view));
+			}
+		}}
 	>
-		<Icon name={$open_store ? 'close' : 'menu'} size={16} />
+		<Icon name={open ? 'close' : 'menu'} size={16} />
 	</button>
 
-	{#if $open_store}
+	{#if open}
 		<div class="menu" use:trap={{ reset_focus: false }}>
 			<div class="mobile-main-menu" in:slide out:slide={{ duration: 500, easing: quintOut }}>
 				<div
