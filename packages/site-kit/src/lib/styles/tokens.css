@@ -50,10 +50,9 @@
 
 	/* Base colors */
 	--sk-theme-1-hsl: 12, 93%, 43%;
-	--sk-theme-2-hsl: 240, 8%, 44%;
 
 	--sk-theme-1: hsl(var(--sk-theme-1-hsl));
-	--sk-theme-2: hsl(var(--sk-theme-2-hsl));
+	--sk-theme-2: hsl(240, 8%, 44%);
 
 	--sk-back-1: hsl(0, 0%, 100%);
 	--sk-back-2: hsl(0, 0%, 100%);
@@ -71,7 +70,6 @@
 
 	/* same in light mode, different in dark mode */
 	--sk-theme-1-variant: hsl(15, 100%, 50%);
-	--sk-theme-2-variant: hsl(240, 8%, 44%);
 
 	--sk-code-base: var(--sk-text-2);
 	--sk-code-comment: var(--sk-text-4);
@@ -125,7 +123,7 @@
 		--sk-back-6: hsl(0 0 32);
 		--sk-back-translucent: hsl(0 0 100 / 0.1);
 		--sk-theme-1-hsl: 12, 94%, 62%;
-		--sk-theme-2-hsl: 240, 8%, 44%;
+		--sk-theme-2: hsl(240, 8%, 44%);
 		--sk-text-1: hsl(0, 0%, 90%);
 		--sk-text-2: hsl(0, 0%, 80%);
 		--sk-text-3: hsl(0, 0%, 65%);
@@ -135,7 +133,6 @@
 		--sk-shadow: drop-shadow(1px 2px 16px rgb(0 0 0 / 0.5));
 
 		--sk-theme-1-variant: hsl(15, 100%, 40%);
-		--sk-theme-2-variant: hsl(240, 8%, 35%);
 
 		--sk-text-warning-hsl: 32, 67%, 56%;
 
