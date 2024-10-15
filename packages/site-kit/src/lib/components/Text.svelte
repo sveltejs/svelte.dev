@@ -370,7 +370,7 @@
 			li::before {
 				content: '';
 				position: absolute;
-				top: 1.4rem;
+				top: calc(50% - 0.3rem);
 				left: -1.8rem;
 				background-color: var(--sk-back-5);
 				width: 0.6rem;

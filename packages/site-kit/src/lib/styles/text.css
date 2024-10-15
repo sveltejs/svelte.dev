@@ -29,10 +29,18 @@
 	margin: 0rem -1rem 0rem 1rem;
 }
 
-.ts-block-property-bullets .tag {
-	font-size: 1.4rem;
-	text-transform: uppercase;
-	color: #666;
+.ts-block-property-bullets {
+	li {
+		&::before {
+			content: none !important;
+		}
+	}
+
+	.tag {
+		font: var(--sk-font-ui-medium);
+		text-transform: uppercase;
+		color: var(--sk-text-4);
+	}
 }
 
 .ts-block-property ul:last-child {

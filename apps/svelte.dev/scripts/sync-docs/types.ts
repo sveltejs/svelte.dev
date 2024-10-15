@@ -249,6 +249,10 @@ function munge_type_element(member: ts.TypeElement, depth = 1): TypeElement | un
 				bullets.push(`- <span class="tag deprecated">deprecated</span> ${tag.comment || ''}`);
 				break;
 
+			case 'since':
+				bullets.push(`- <span class="tag since">available since</span> v${tag.comment}`);
+				break;
+
 			default:
 				console.log(`unhandled JSDoc tag: ${type}`);
 		}
