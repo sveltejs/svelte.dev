@@ -21,7 +21,15 @@ export async function handle({ event, resolve }) {
 	}
 
 	const response = await resolve(event, {
-		preload: ({ type }) => type === 'js' || type === 'css' || type === 'font'
+		preload: ({ type, path }) => {
+			if (type === 'font') {
+				// only preload header font, everything else is lower priority,
+				// otherwise it causes congestion that messes up LCP
+				return path.includes('dm-serif');
+			}
+
+			return true;
+		}
 	});
 
 	return response;
