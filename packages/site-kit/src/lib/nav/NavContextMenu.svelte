@@ -101,7 +101,6 @@
 		position: sticky;
 		top: 0;
 		z-index: 1;
-		background-color: var(--sk-back-3);
 		padding: 1rem 0;
 	}
 

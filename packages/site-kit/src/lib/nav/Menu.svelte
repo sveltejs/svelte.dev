@@ -57,12 +57,11 @@
 <ModalOverlay {onclose} />
 
 <div class="menu" use:trap={{ reset_focus: false }}>
-	<div class="mobile-main-menu" transition:slide={{ duration: 300, easing: quintOut }}>
+	<div class="mobile-main-menu" transition:slide={{ duration: 3000, easing: quintOut }}>
 		<div
 			class="menu-background"
 			class:ready
-			style:height={show_context_menu ? '99%' : `${universal_menu_inner_height}px`}
-			style:--background={show_context_menu ? 'var(--sk-back-3)' : null}
+			style:height={show_context_menu ? '100%' : `${universal_menu_inner_height}px`}
 		></div>
 
 		<div
@@ -291,7 +290,7 @@
 
 	.context {
 		position: relative;
-		height: 99%;
+		height: 100%;
 		bottom: -7px;
 		padding-bottom: 2rem;
 	}
@@ -306,7 +305,7 @@
 		gap: 1rem;
 		font: var(--sk-font-ui-medium);
 		color: var(--sk-text-3);
-		background-color: var(--sk-back-3);
+		background-color: var(--sk-back-2);
 		width: 50%;
 		height: 4.8rem;
 		padding: 0 var(--sk-page-padding-side);
