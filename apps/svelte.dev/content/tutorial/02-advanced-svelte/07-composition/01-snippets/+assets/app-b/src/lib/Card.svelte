@@ -1,14 +1,9 @@
-<div class="card">
-	<header>
-		<slot name="telephone" />
-		<slot name="company" />
-	</header>
+<script>
+	const { children } = $props();
+</script>
 
-	<slot />
-		
-	<footer>
-		<slot name="address" />
-	</footer>
+<div class="card">
+	{@render children()}
 </div>
 
 <style>

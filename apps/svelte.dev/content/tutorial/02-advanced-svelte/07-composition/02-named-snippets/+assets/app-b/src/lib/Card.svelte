@@ -1,5 +1,18 @@
+<script>
+	const { children, address, company, telephone } = $props();
+</script>
+
 <div class="card">
-	<slot />
+	<header>
+	  {@render telephone()}
+		{@render company()}
+	</header>
+
+	{@render children()}
+
+	<footer>
+		{@render address()}
+	</footer>
 </div>
 
 <style>

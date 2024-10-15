@@ -1,23 +1,27 @@
 ---
-title: Named slots
+title: Named snippets
 ---
 
-The previous example contained a _default slot_, which renders the direct children of a component. Sometimes you will need more control over placement. In those cases, we can use _named slots_.
+The previous example contained a _default snippet_, which renders the direct children of a component. Sometimes you will need more control over placement. In those cases, we can use _named snippets_.
 
-Inside `App.svelte`, we're rendering a `<Card>` component that contains `<span slot="telephone">` and others for `company` and `address`. Let's add the corresponding named slots in `Card.svelte`:
+Inside `App.svelte`, we're rendering a `<Card>` component that contains `{#snippet telephone()}` and others for `company` and `address`. Let's add the corresponding named snippets in `Card.svelte`:
 
 ```svelte
 /// file: Card.svelte
+<script>
+	const { children+++, address, company, telephone+++ } = $props();
+</script>
+
 <div class="card">
 +++	<header>
-		<slot name="telephone"></slot>
-		<slot name="company"></slot>
+	  {@render telephone()}
+		{@render company()}
 	</header>+++
 
-	<slot></slot>
+	{@render children()}
 
 +++	<footer>
-		<slot name="address"></slot>
+		{@render address()}
 	</footer>+++
 </div>
 ```

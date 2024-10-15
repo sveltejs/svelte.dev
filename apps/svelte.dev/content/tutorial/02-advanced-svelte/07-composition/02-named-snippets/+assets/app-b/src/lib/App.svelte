@@ -7,14 +7,20 @@
 		<span>Patrick BATEMAN</span>
 		<span>Vice President</span>
 
-		<span slot="telephone">212 555 6342</span>
+		{#snippet telephone()}
+			<span>212 555 6342</span>
+		{/snippet}
 
-		<span slot="company">
-			Pierce &amp; Pierce
-			<small>Mergers and Aquisitions</small>
-		</span>
-		
-		<span slot="address">358 Exchange Place, New York, N.Y. 10099 fax 212 555 6390 telex 10 4534</span>
+		{#snippet company()}
+			<span>
+				Pierce &amp; Pierce
+				<small>Mergers and Aquisitions</small>
+			</span>
+		{/snippet}
+
+		{#snippet address()}
+			<span>358 Exchange Place, New York, N.Y. 10099 fax 212 555 6390 telex 10 4534</span>
+		{/snippet}
 	</Card>
 </main>
 
