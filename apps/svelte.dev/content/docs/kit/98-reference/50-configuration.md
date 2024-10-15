@@ -409,6 +409,7 @@ privatePrefix?: string;
 <div class="ts-block-property-bullets">
 
 - <span class="tag">default</span> `""`
+- <span class="tag since">available since</span> v1.21.0
 
 </div>
 
@@ -509,6 +510,7 @@ universal?: string;
 <div class="ts-block-property-bullets">
 
 - <span class="tag">default</span> `"src/hooks"`
+- <span class="tag since">available since</span> v2.3.0
 
 </div>
 
@@ -710,6 +712,7 @@ preloadStrategy?: 'modulepreload' | 'preload-js' | 'preload-mjs';
 <div class="ts-block-property-bullets">
 
 - <span class="tag">default</span> `"modulepreload"`
+- <span class="tag since">available since</span> v1.8.4
 
 </div>
 
@@ -786,6 +789,7 @@ relative?: boolean;
 <div class="ts-block-property-bullets">
 
 - <span class="tag">default</span> `true`
+- <span class="tag since">available since</span> v1.9.0
 
 </div>
 
@@ -886,6 +890,7 @@ handleHttpError?: PrerenderHttpErrorHandlerValue;
 <div class="ts-block-property-bullets">
 
 - <span class="tag">default</span> `"fail"`
+- <span class="tag since">available since</span> v1.15.7
 
 </div>
 
@@ -931,6 +936,7 @@ handleMissingId?: PrerenderMissingIdHandlerValue;
 <div class="ts-block-property-bullets">
 
 - <span class="tag">default</span> `"fail"`
+- <span class="tag since">available since</span> v1.15.7
 
 </div>
 
@@ -955,6 +961,7 @@ handleEntryGeneratorMismatch?: PrerenderEntryGeneratorMismatchHandlerValue;
 <div class="ts-block-property-bullets">
 
 - <span class="tag">default</span> `"fail"`
+- <span class="tag since">available since</span> v1.16.0
 
 </div>
 
@@ -1066,6 +1073,7 @@ config?: (config: Record<string, any>) => Record<string, any> | void;
 <div class="ts-block-property-bullets">
 
 - <span class="tag">default</span> `(config) => config`
+- <span class="tag since">available since</span> v1.3.0
 
 </div>
 
