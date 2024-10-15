@@ -12,6 +12,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 	import Dropdown from '../components/Dropdown.svelte';
 	import { HoverMenu } from '../components';
 	import Search from '../search/Search.svelte';
+	import { tick } from 'svelte';
 
 	interface Props {
 		home_title?: string;
@@ -22,6 +23,11 @@ Top navigation bar for the application. It provides a slot for the left side, th
 	let { home_title = 'Homepage', title, links }: Props = $props();
 
 	let visible = $state(true);
+
+	// mobile nav stuff
+	let open = $state(false);
+	let current = $state.raw<NavigationLink | undefined>();
+	let menu_button: HTMLButtonElement;
 
 	let nav: HTMLElement | undefined = $state();
 
@@ -43,7 +49,18 @@ Top navigation bar for the application. It provides a slot for the left side, th
 	}
 </script>
 
-<svelte:window onscroll={handle_scroll} onhashchange={handle_hashchange} />
+<svelte:window
+	onscroll={handle_scroll}
+	onhashchange={handle_hashchange}
+	onkeydown={(e) => {
+		if (open && e.key === 'Escape') {
+			open = false;
+			// we only manage focus when Esc is hit
+			// otherwise, the navigation will reset focus
+			tick().then(() => menu_button.focus());
+		}
+	}}
+/>
 
 <nav
 	bind:this={nav}
@@ -126,16 +143,36 @@ Top navigation bar for the application. It provides a slot for the left side, th
 
 		<ThemeToggle />
 
-		<Menu {links} />
+		<button
+			bind:this={menu_button}
+			aria-label="Toggle menu"
+			aria-expanded={open}
+			class="menu-toggle raised icon"
+			class:open
+			onclick={() => {
+				open = !open;
+
+				if (open) {
+					const segment = $page.url.pathname.split('/')[1];
+					current = links.find((link) => link.slug === segment);
+				}
+			}}
+		>
+			<Icon name={open ? 'close' : 'menu'} size={16} />
+		</button>
 	</div>
 </nav>
+
+{#if open}
+	<Menu {links} {current} onclose={() => (open = false)} />
+{/if}
 
 <style>
 	nav {
 		position: fixed;
 		display: flex;
 		top: 0;
-		z-index: 100;
+		z-index: 101;
 		width: 100vw;
 		height: var(--sk-nav-height);
 		margin: 0 auto;

@@ -10,6 +10,7 @@ The main shell of the application. It provides a slot for the top navigation, th
 	import '../styles/index.css';
 	import Icons from './Icons.svelte';
 	import type { Snippet } from 'svelte';
+	import ModalOverlay from './ModalOverlay.svelte';
 
 	let {
 		nav_visible = true,
@@ -36,7 +37,9 @@ The main shell of the application. It provides a slot for the top navigation, th
 	{@render top_nav?.()}
 {/if}
 
-<div class="modal-overlay" class:visible={$overlay_open} aria-hidden="true"></div>
+{#if $overlay_open}
+	<ModalOverlay />
+{/if}
 
 <main id="main">
 	{@render children?.()}
@@ -47,28 +50,6 @@ The main shell of the application. It provides a slot for the top navigation, th
 </div>
 
 <style>
-	.modal-overlay {
-		position: fixed;
-		top: 0;
-		left: 0;
-		z-index: 99;
-
-		opacity: 0;
-		pointer-events: none;
-
-		width: 100%;
-		height: 100%;
-		height: 100dvh;
-
-		background: var(--sk-back-1);
-		transition: opacity 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-	}
-
-	.modal-overlay.visible {
-		opacity: 0.7;
-		pointer-events: auto;
-	}
-
 	main {
 		position: relative;
 		margin: 0 auto;
