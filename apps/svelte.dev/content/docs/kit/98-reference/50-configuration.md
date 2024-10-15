@@ -26,6 +26,8 @@ const config = {
 export default config;
 ```
 
+## Config
+
 <div class="ts-block">
 
 ```dts
@@ -123,6 +125,8 @@ Any additional options required by tooling that integrates with Svelte.
 </div></div>
 
 
+
+## KitConfig
 
 The `kit` property configures SvelteKit, and can have the following properties:
 
