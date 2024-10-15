@@ -291,7 +291,7 @@
 							</section>
 
 							<section class="editor-container" slot="b">
-								<Editor />
+								<Editor exercise={data.exercise} />
 								<ImageViewer selected={$selected_file} />
 
 								{#if mobile && show_filetree}

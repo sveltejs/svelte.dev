@@ -19,6 +19,9 @@
 	import { toStore } from 'svelte/store';
 	import { autocomplete_for_svelte } from '@sveltejs/site-kit/codemirror';
 
+	/** @type {import('$lib/tutorial').Exercise}*/
+	export let exercise;
+
 	/** @type {HTMLDivElement} */
 	let container;
 
@@ -124,7 +127,11 @@
 						svelte(),
 						...autocomplete_for_svelte(
 							/** @type {import('$lib/tutorial').FileStub} */ ($selected_file).name,
-							$files.map((file) => file.name)
+							$files
+								.filter(
+									(file) => file.type === 'file' && file.name.startsWith(exercise.scope.prefix)
+								)
+								.map((file) => file.name)
 						)
 					];
 				}
