@@ -176,7 +176,7 @@
 						<div class="universal" inert={$show_context_menu} bind:this={universal_menu}>
 							<div class="contents" bind:clientHeight={universal_menu_inner_height}>
 								{#each links as link}
-									<div class="link-item" style:--button-width={link.sections ? '4rem' : '0'}>
+									<div class="link-item">
 										<a href="/{link.slug}">
 											{link.title}
 										</a>
@@ -381,13 +381,10 @@
 	}
 
 	.universal .link-item {
-		position: relative;
-		padding-right: var(--button-width);
+		display: flex;
 
-		button {
-			position: absolute;
-			right: 0;
-			top: 0;
+		a {
+			flex: 1;
 		}
 	}
 </style>
