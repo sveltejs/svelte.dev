@@ -1,10 +1,7 @@
 <script module>
 	const open_store = writable(false);
-
 	const current_menu_view = writable<NavigationLink | undefined>(undefined);
-
 	const show_context_menu = writable(false);
-
 	const links_store = writable<NavigationLink[]>([]);
 
 	export function open_nav() {
@@ -25,7 +22,7 @@
 	import { afterNavigate } from '$app/navigation';
 	import { page } from '$app/stores';
 	import { click_outside, focus_outside, trap } from '../actions';
-	import { overlay_open, reduced_motion, theme } from '../stores';
+	import { overlay_open, reduced_motion } from '../stores';
 	import { tick, type Snippet } from 'svelte';
 	import { expoOut, quintOut } from 'svelte/easing';
 	import type { TransitionConfig } from 'svelte/transition';
@@ -131,7 +128,6 @@
 			<div class="mobile-main-menu" in:slide out:slide={{ duration: 500, easing: quintOut }}>
 				<div
 					class="menu-background"
-					class:dark={$theme.current === 'dark'}
 					class:ready
 					style:height={$show_context_menu ? '99%' : `${universal_menu_inner_height}px`}
 					style:--background={$show_context_menu ? 'var(--sk-back-3)' : null}
@@ -282,14 +278,14 @@
 		transition: 0.4s var(--quint-out);
 		transition-property: background;
 		box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.19);
-	}
 
-	.menu-background.ready {
-		transition-property: height, background;
-	}
+		&.ready {
+			transition-property: height, background;
+		}
 
-	.menu-background.dark {
-		border-top: solid 1.1px hsla(0, 0%, 100%, 0.2);
+		:root.dark & {
+			border-top: solid 1.1px hsla(0, 0%, 100%, 0.2);
+		}
 	}
 
 	.mobile-main-menu {
@@ -316,15 +312,34 @@
 		grid-template-columns: 50% 50%;
 		transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 		grid-auto-rows: 100%;
-	}
 
-	.viewport.reduced-motion {
-		/* we still want the transition events to fire for focus management */
-		transition-duration: 0.01ms;
-	}
+		&.reduced-motion {
+			/* we still want the transition events to fire for focus management */
+			transition-duration: 0.01ms;
+		}
 
-	.viewport.offset {
-		transform: translate3d(-50%, 0, 0);
+		&.offset {
+			transform: translate3d(-50%, 0, 0);
+		}
+
+		& > * {
+			overflow-y: auto;
+			transition: inherit;
+			transition-property: transform, opacity;
+		}
+
+		& :global(a) {
+			position: relative;
+			display: flex;
+			align-items: center;
+			padding: 0.3rem 0;
+			margin: 0.3rem 0;
+			color: var(--sk-text-2);
+			font: var(--sk-font-ui-medium);
+			border-radius: var(--sk-border-radius);
+			width: 100%;
+			height: 100%;
+		}
 	}
 
 	.universal .contents {
@@ -334,12 +349,6 @@
 		padding: 1rem var(--sk-page-padding-side);
 		max-height: 70vh;
 		overflow-y: scroll;
-	}
-
-	.viewport > * {
-		overflow-y: auto;
-		transition: inherit;
-		transition-property: transform, opacity;
 	}
 
 	.context {
@@ -372,17 +381,6 @@
 		padding: 0 1.5rem;
 	}
 
-	.viewport :global(a) {
-		position: relative;
-		display: block;
-		align-items: center;
-		padding: 0.3rem 0;
-		margin: 0.3rem 0;
-		height: 4rem;
-		color: var(--sk-text-2);
-		font: var(--sk-font-ui-medium);
-	}
-
 	.universal .contents,
 	.context,
 	.back-button {
@@ -398,13 +396,5 @@
 			right: 0;
 			top: 0;
 		}
-	}
-
-	.viewport :global(a) {
-		display: flex;
-		align-items: center;
-		border-radius: var(--sk-border-radius);
-		width: 100%;
-		height: 100%;
 	}
 </style>
