@@ -222,8 +222,10 @@ const config = {
 			directives: {
 				'script-src': ['self']
 			},
+			// must be specified with either the `report-uri` or `report-to` directives, or both
 			reportOnly: {
-				'script-src': ['self']
+				'script-src': ['self'],
+				'report-uri': ['/']
 			}
 		}
 	}
