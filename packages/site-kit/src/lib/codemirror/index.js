@@ -268,7 +268,7 @@ export function completion_for_javascript(context, selected, files) {
 		};
 	}
 
-	if (!selected.endsWith('.js') && !selected.endsWith('.svelte')) {
+	if (!selected.endsWith('.svelte.js') && !selected.endsWith('.svelte')) {
 		return false;
 	}
 
@@ -310,8 +310,8 @@ export function completion_for_javascript(context, selected, files) {
 }
 
 /**
- * @param {string} selected
- * @param {string[]} files
+ * @param {() => string} selected
+ * @param {() => string[]} files
  */
 export function autocomplete_for_svelte(selected, files) {
 	return [
@@ -320,7 +320,7 @@ export function autocomplete_for_svelte(selected, files) {
 		}),
 		javascriptLanguage.data.of({
 			autocomplete: (/** @type {CompletionContext} */ context) =>
-				completion_for_javascript(context, selected, files)
+				completion_for_javascript(context, selected(), files())
 		})
 	];
 }

@@ -126,17 +126,18 @@
 					lang = [
 						svelte(),
 						...autocomplete_for_svelte(
-							/** @type {import('$lib/tutorial').FileStub} */ ($selected_file).name,
-							$files
-								.filter(
-									(file) =>
-										file.type === 'file' &&
-										file.name.startsWith('/src') &&
-										file.name.startsWith(exercise.scope.prefix) &&
-										file.name !== '/src/__client.js' &&
-										file.name !== '/src/app.html'
-								)
-								.map((file) => file.name)
+							() => /** @type {import('$lib/tutorial').FileStub} */ ($selected_file).name,
+							() =>
+								$files
+									.filter(
+										(file) =>
+											file.type === 'file' &&
+											file.name.startsWith('/src') &&
+											file.name.startsWith(exercise.scope.prefix) &&
+											file.name !== '/src/__client.js' &&
+											file.name !== '/src/app.html'
+									)
+									.map((file) => file.name)
 						)
 					];
 				}
