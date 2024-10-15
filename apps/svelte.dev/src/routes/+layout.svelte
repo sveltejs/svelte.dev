@@ -83,7 +83,7 @@
 			background: no-repeat 50% 50%;
 			background-size: calc(100% - 1rem) auto;
 			padding: 0 0.5rem;
-			opacity: 0.6;
+			height: 100%;
 
 			:global(.dark) & {
 				opacity: 0.8;
@@ -103,19 +103,19 @@
 
 		[data-icon='discord'] {
 			width: 3.4rem;
-			background-image: url($lib/icons/discord-black.svg);
+			background-image: url($lib/icons/discord-light.svg);
 
 			:global(.dark) & {
-				background-image: url($lib/icons/discord-white.svg);
+				background-image: url($lib/icons/discord-dark.svg);
 			}
 		}
 
 		[data-icon='github'] {
 			width: 3rem;
-			background-image: url($lib/icons/github-black.svg);
+			background-image: url($lib/icons/github-light.svg);
 
 			:global(.dark) & {
-				background-image: url($lib/icons/github-white.svg);
+				background-image: url($lib/icons/github-dark.svg);
 			}
 		}
 	}
