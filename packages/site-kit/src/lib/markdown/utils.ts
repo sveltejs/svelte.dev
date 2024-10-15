@@ -32,6 +32,7 @@ export function clean(markdown: string) {
 
 export const slugify = (str: string) => {
 	return clean(str)
+		.replace(/(’|&rsquo;)/g, "'")
 		.replace(/&.+?;/g, '')
 		.replace(/<\/?.+?>/g, '')
 		.replace(/\.\.\./g, '')

@@ -36,7 +36,7 @@ export const actions = {
 
 The `user` variable is shared by everyone who connects to this server. If Alice submitted an embarrassing secret, and Bob visited the page after her, Bob would know Alice's secret. In addition, when Alice returns to the site later in the day, the server may have restarted, losing her data.
 
-Instead, you should _authenticate_ the user using [`cookies`](load#cookies) and persist the data to a database.
+Instead, you should _authenticate_ the user using [`cookies`](load#Cookies) and persist the data to a database.
 
 ## No side-effects in load
 
@@ -76,7 +76,7 @@ export async function load({ fetch }) {
 }
 ```
 
-...and pass it around to the components that need it, or use [`$page.data`](load#$page-data).
+...and pass it around to the components that need it, or use [`$page.data`](load#$page.data).
 
 If you're not using SSR, then there's no risk of accidentally exposing one user's data to another. But you should still avoid side-effects in your `load` functions — your application will be much easier to reason about without them.
 
