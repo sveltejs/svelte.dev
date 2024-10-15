@@ -42,16 +42,6 @@
 			{#snippet search()}
 				<Search />
 			{/snippet}
-
-			{#snippet external_links()}
-				<a href="/chat" data-icon="discord" title="Discord Chat">
-					<span>Discord</span>
-				</a>
-
-				<a href="https://github.com/sveltejs/svelte" data-icon="github" title="GitHub Repo">
-					<span>GitHub</span>
-				</a>
-			{/snippet}
 		</Nav>
 	{/snippet}
 
@@ -69,50 +59,8 @@
 {/if}
 
 <style>
-	:global(:root) {
-		color-scheme: light dark;
-	}
-
 	:global(html, body) {
 		height: 100%;
 		width: 100%;
-	}
-
-	@media (min-width: 800px) {
-		[data-icon] {
-			background: no-repeat 50% 50%;
-			background-size: calc(100% - 1rem) auto;
-			padding: 0 0.5rem;
-			height: 100%;
-
-			/* visually hidden, but visible to screen readers */
-			span {
-				clip: rect(0 0 0 0);
-				clip-path: inset(50%);
-				height: 1px;
-				overflow: hidden;
-				position: absolute;
-				white-space: nowrap;
-				width: 1px;
-			}
-		}
-
-		[data-icon='discord'] {
-			width: 3.4rem;
-			background-image: url($lib/icons/discord-light.svg);
-
-			:global(.dark) & {
-				background-image: url($lib/icons/discord-dark.svg);
-			}
-		}
-
-		[data-icon='github'] {
-			width: 3rem;
-			background-image: url($lib/icons/github-light.svg);
-
-			:global(.dark) & {
-				background-image: url($lib/icons/github-dark.svg);
-			}
-		}
 	}
 </style>

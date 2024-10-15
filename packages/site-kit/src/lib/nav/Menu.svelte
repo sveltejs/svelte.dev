@@ -18,13 +18,11 @@
 	import type { NavigationLink } from '../types';
 
 	interface Props {
-		open: boolean;
 		links: NavigationLink[];
-		children?: Snippet;
 		back_button?: Snippet;
 	}
 
-	let { links, children, back_button }: Props = $props();
+	let { links, back_button }: Props = $props();
 
 	let open = $state(false);
 
@@ -175,37 +173,44 @@
 					>
 						<div class="universal" inert={$show_context_menu} bind:this={universal_menu}>
 							<div class="contents" bind:clientHeight={universal_menu_inner_height}>
-								{#each links as link}
-									<div class="link-item">
-										<a href="/{link.slug}">
-											{link.title}
-										</a>
+								<ul>
+									{#each links as link}
+										<li>
+											<a href="/{link.slug}">
+												{link.title}
+											</a>
 
-										{#if link.sections}
-											<button
-												class="raised icon"
-												onclick={async (event) => {
-													event.preventDefault();
+											{#if link.sections}
+												<button
+													class="raised icon"
+													onclick={async (event) => {
+														event.preventDefault();
 
-													$current_menu_view = link;
+														$current_menu_view = link;
 
-													await tick();
+														await tick();
 
-													$show_context_menu = true;
+														$show_context_menu = true;
 
-													await tick();
+														await tick();
 
-													nav_context_instance?.scrollToActive();
-												}}
-												aria-label="Show {link.title} submenu"
-											>
-												<Icon name="arrow-right-chevron" size={18} />
-											</button>
-										{/if}
-									</div>
-								{/each}
+														nav_context_instance?.scrollToActive();
+													}}
+													aria-label="Show {link.title} submenu"
+												>
+													<Icon name="arrow-right-chevron" size={18} />
+												</button>
+											{/if}
+										</li>
+									{/each}
+								</ul>
 
-								{@render children?.()}
+								<hr />
+
+								<ul>
+									<li><a href="/chat">Discord</a></li>
+									<li><a href="https://github.com/sveltejs/svelte">GitHub</a></li>
+								</ul>
 							</div>
 						</div>
 
@@ -380,11 +385,25 @@
 		pointer-events: all;
 	}
 
-	.universal .link-item {
-		display: flex;
+	.universal {
+		ul {
+			list-style: none;
+			margin: 0;
+		}
 
-		a {
-			flex: 1;
+		li {
+			display: flex;
+
+			a {
+				flex: 1;
+			}
+		}
+
+		hr {
+			margin: 0.5rem 0;
+			height: 1px;
+			background: var(--sk-back-6);
+			border: none;
 		}
 	}
 </style>

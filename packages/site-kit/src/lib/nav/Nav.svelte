@@ -8,7 +8,6 @@ Top navigation bar for the application. It provides a slot for the left side, th
 	import { page } from '$app/stores';
 	import ThemeToggle from '../components/ThemeToggle.svelte';
 	import Menu from './Menu.svelte';
-	import Separator from './Separator.svelte';
 	import type { NavigationLink } from '../types';
 	import type { Snippet } from 'svelte';
 	import Dropdown from '../components/Dropdown.svelte';
@@ -19,10 +18,9 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		title: string | undefined;
 		links: NavigationLink[];
 		search?: Snippet;
-		external_links?: Snippet;
 	}
 
-	let { home_title = 'Homepage', title, links, search, external_links }: Props = $props();
+	let { home_title = 'Homepage', title, links, search }: Props = $props();
 
 	let visible = $state(true);
 
@@ -107,7 +105,9 @@ Top navigation bar for the application. It provides a slot for the left side, th
 			{@render search?.()}
 
 			<div class="external-links">
-				{@render external_links?.()}
+				<a href="/chat" data-icon="discord" aria-label="Discord Chat"></a>
+				<a href="https://github.com/sveltejs/svelte" data-icon="github" aria-label="GitHub Repo"
+				></a>
 			</div>
 
 			<ThemeToggle />
@@ -127,11 +127,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 
 		<ThemeToggle />
 
-		<Menu {links}>
-			<Separator />
-
-			{@render external_links?.()}
-		</Menu>
+		<Menu {links} />
 	</div>
 </nav>
 
@@ -260,18 +256,6 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		display: block;
 	}
 
-	.appearance {
-		display: flex;
-		align-items: center;
-		margin-left: 1.5rem;
-	}
-
-	.appearance .caption {
-		display: none;
-		line-height: 1;
-		margin-right: 0rem;
-	}
-
 	@media (max-width: 799px) {
 		nav {
 			top: unset;
@@ -284,19 +268,6 @@ Top navigation bar for the application. It provides a slot for the left side, th
 			width: 100%;
 			background: var(--sk-back-1);
 			padding: 1rem var(--sk-page-padding-side);
-		}
-
-		.appearance {
-			position: relative;
-			display: flex;
-			padding: 1.5rem 0;
-			margin: 0 1rem;
-			justify-content: space-between;
-		}
-
-		.appearance .caption {
-			display: block;
-			font: var(--sk-font-ui-medium); /* TODO this should be inherited */
 		}
 
 		nav :global(.large) {
@@ -338,6 +309,31 @@ Top navigation bar for the application. It provides a slot for the left side, th
 
 		.desktop {
 			display: contents;
+
+			[data-icon] {
+				background: no-repeat 50% 50%;
+				background-size: calc(100% - 1rem) auto;
+				padding: 0 0.5rem;
+				height: 100%;
+			}
+
+			[data-icon='discord'] {
+				width: 3.4rem;
+				background-image: url($lib/icons/discord-light.svg);
+
+				:global(.dark) & {
+					background-image: url($lib/icons/discord-dark.svg);
+				}
+			}
+
+			[data-icon='github'] {
+				width: 3rem;
+				background-image: url($lib/icons/github-light.svg);
+
+				:global(.dark) & {
+					background-image: url($lib/icons/github-dark.svg);
+				}
+			}
 		}
 
 		nav :global(.small) {
