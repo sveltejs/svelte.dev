@@ -194,7 +194,7 @@
 
 										{#if link.sections}
 											<button
-												class="related-menu-arrow"
+												class="raised icon"
 												onclick={async (event) => {
 													event.preventDefault();
 
@@ -210,7 +210,7 @@
 												}}
 												aria-label="Show {link.title} submenu"
 											>
-												<Icon name="arrow-right-chevron" size="6rem" />
+												<Icon name="arrow-right-chevron" size={18} />
 											</button>
 										{/if}
 									</div>
@@ -230,12 +230,11 @@
 						</div>
 
 						<button
-							class="back-button"
-							class:dark={$theme.current === 'dark'}
+							class="back-button raised icon"
 							onclick={() => ($show_context_menu = false)}
 							inert={!show_context_menu}
 						>
-							<Icon name="arrow-left" size=".6em" />
+							<Icon name="arrow-left" size={18} />
 							<span
 								>{#if back_button}{@render back_button()}{:else}Back to main menu{/if}</span
 							>
@@ -332,7 +331,7 @@
 		position: absolute;
 		width: 50%;
 		bottom: 0;
-		padding: 1rem;
+		padding: 1rem var(--sk-page-padding-side);
 		max-height: 70vh;
 		overflow-y: scroll;
 	}
@@ -373,15 +372,6 @@
 		padding: 0 1.5rem;
 	}
 
-	.back-button.dark {
-		border-top: solid 1px var(--sk-back-4);
-		box-shadow: none;
-	}
-
-	.back-button :global(svg) {
-		transform: scale(0.8);
-	}
-
 	.viewport :global(a) {
 		position: relative;
 		display: block;
@@ -402,18 +392,12 @@
 	.universal .link-item {
 		position: relative;
 		padding-right: var(--button-width);
-	}
 
-	.universal .contents .link-item button {
-		position: absolute;
-		right: 0;
-		top: 0;
-		width: var(--button-width);
-		height: 100%;
-	}
-
-	.viewport .link-item :global(svg) {
-		stroke-width: 0;
+		button {
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
 	}
 
 	.viewport :global(a) {
@@ -422,15 +406,5 @@
 		border-radius: var(--sk-border-radius);
 		width: 100%;
 		height: 100%;
-		padding-left: 1rem;
-	}
-
-	.viewport :global(a:hover),
-	.related-menu-arrow:hover {
-		border-radius: var(--sk-border-radius);
-
-		text-decoration: none;
-
-		background-color: var(--sk-back-4);
 	}
 </style>
