@@ -29,6 +29,7 @@
 		margin: 15rem 0 5rem 0;
 		mask-size: 100%;
 		mask-image: radial-gradient(ellipse 110rem 500%, white, white 70%, transparent);
+		overflow: hidden;
 	}
 
 	h2 {

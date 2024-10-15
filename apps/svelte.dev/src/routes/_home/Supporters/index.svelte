@@ -13,31 +13,38 @@
 	developed by full-time and part-time maintainers, Svelte is here to stay.
 </p>
 
-<div class="layout">
-	<div class="contributors supporters-grid">
-		{#each contributors as contributor, i}
-			<a
-				class="supporter"
-				style="background-position: {(100 * i) / (contributors.length - 1)}% 0"
-				style:background-image="url({contributors_img})"
-				href="https://github.com/{contributor}"
-			>
-				{contributor}
-			</a>
-		{/each}
+<div class="wrapper">
+	<div class="layout">
+		<div class="supporters">
+			{#each contributors as contributor, i}
+				<a
+					class="supporter"
+					style="background-position: {(100 * i) / (contributors.length - 1)}% 0"
+					style:background-image="url({contributors_img})"
+					href="https://github.com/{contributor}"
+				>
+					{contributor}
+				</a>
+			{/each}
 
-		{#each donors as donor, i}
-			<a
-				class="supporter"
-				style="background-position: {(100 * i) / (donors.length - 1)}% 0"
-				style:background-image="url({donors_img})"
-				href="https://opencollective.com/svelte">{donor}</a
-			>
-		{/each}
+			{#each donors as donor, i}
+				<a
+					class="supporter"
+					style="background-position: {(100 * i) / (donors.length - 1)}% 0"
+					style:background-image="url({donors_img})"
+					href="https://opencollective.com/svelte">{donor}</a
+				>
+			{/each}
+		</div>
 	</div>
 </div>
 
 <style>
+	.wrapper {
+		width: 100%;
+		overflow: hidden;
+	}
+
 	.intro {
 		margin: 1em auto 3.2rem auto;
 		text-wrap: balance;
@@ -53,7 +60,7 @@
 		margin: 0 -1rem;
 	}
 
-	.supporters-grid {
+	.supporters {
 		position: relative;
 		display: grid;
 		grid-template-columns: repeat(12, minmax(0, 1fr));
