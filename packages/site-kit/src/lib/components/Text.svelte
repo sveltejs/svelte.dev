@@ -335,7 +335,7 @@
 		a.permalink {
 			position: absolute !important;
 			display: block;
-			background: url(../icons/link.svg) 50% 50% no-repeat;
+			background: url(../icons/hash-light.svg) 50% 50% no-repeat;
 			background-size: 1em 1em;
 			width: 1.2em;
 			height: 0.8em;
@@ -344,6 +344,10 @@
 			@media (max-width: 767px) {
 				right: 0;
 				scale: 0.8;
+			}
+
+			:root.dark & {
+				background: url(../icons/hash-dark.svg) 50% 50% no-repeat;
 			}
 
 			@media (min-width: 768px) {
