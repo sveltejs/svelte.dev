@@ -34,8 +34,7 @@ const svelteThemeStyles = EditorView.theme(
 		'.cm-content': {
 			// ensure no gap between top of editor and highlighted first/last line
 			paddingTop: '0px',
-			paddingBottom: '0px',
-			caretColor: 'var(--sk-theme-3)'
+			paddingBottom: '0px'
 		},
 
 		'.cm-content .cm-line:first-child': {
@@ -52,7 +51,6 @@ const svelteThemeStyles = EditorView.theme(
 			alignItems: 'end'
 		},
 
-		'.cm-cursor, .cm-dropCursor': { borderLeftColor: 'var(--sk-theme-3)' },
 		'&.cm-focused > .cm-scroller > .cm-selectionLayer .cm-selectionBackground, .cm-selectionBackground, .cm-content ::selection':
 			{ backgroundColor: 'var(--sk-selection-color)' },
 

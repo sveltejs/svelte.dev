@@ -402,10 +402,6 @@
 		cursor: pointer;
 	}
 
-	.remove:hover {
-		color: var(--sk-theme-3);
-	}
-
 	.file-tabs .button.active .editable {
 		cursor: text;
 	}
@@ -426,10 +422,6 @@
 		padding: 12px 10px 8px 8px;
 		height: 40px;
 		text-align: center;
-	}
-
-	.add-new:hover {
-		color: var(--sk-theme-3) !important;
 	}
 
 	.runes {
