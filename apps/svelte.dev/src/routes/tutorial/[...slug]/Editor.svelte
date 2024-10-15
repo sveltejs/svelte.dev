@@ -120,7 +120,13 @@
 				} else if (file.name.endsWith('.html')) {
 					lang = [html()];
 				} else if (file.name.endsWith('.svelte')) {
-					lang = [svelte(), ...autocomplete_for_svelte($selected_file, $files)];
+					lang = [
+						svelte(),
+						...autocomplete_for_svelte(
+							/** @type {import('$lib/tutorial').FileStub} */ ($selected_file).name,
+							$files.map((file) => file.name)
+						)
+					];
 				}
 
 				state = EditorState.create({

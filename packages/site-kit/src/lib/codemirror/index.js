@@ -225,8 +225,8 @@ const options = runes.map(({ snippet, test }, i) => ({
 
 /**
  * @param {import('@codemirror/autocomplete').CompletionContext} context
- * @param {any} selected
- * @param {import('./types.js').File[]} files
+ * @param {string} selected
+ * @param {string[]} files
  * @returns {import('@codemirror/autocomplete').CompletionResult | null | false}
  */
 export function completion_for_javascript(context, selected, files) {
@@ -246,7 +246,17 @@ export function completion_for_javascript(context, selected, files) {
 
 		for (const file of files) {
 			if (file === selected) continue;
-			modules.push(`./${file.name}.${file.type}`);
+
+			const from = selected.split('/');
+			const to = file.split('/');
+
+			while (from[0] === to[0]) {
+				from.shift();
+				to.shift();
+			}
+
+			const prefix = from.length === 1 ? './' : '../'.repeat(from.length - 1);
+			modules.push(prefix + to.join('/'));
 		}
 
 		return {
@@ -258,11 +268,7 @@ export function completion_for_javascript(context, selected, files) {
 		};
 	}
 
-	if (
-		selected.type !== 'svelte' &&
-		selected.type !== 'file' &&
-		(selected.type !== 'js' || !selected.name.endsWith('.svelte'))
-	) {
+	if (!selected.endsWith('.js') && !selected.endsWith('.svelte')) {
 		return false;
 	}
 
@@ -304,8 +310,8 @@ export function completion_for_javascript(context, selected, files) {
 }
 
 /**
- * @param {any} selected
- * @param {import('./types.js').File[]} files
+ * @param {string} selected
+ * @param {string[]} files
  */
 export function autocomplete_for_svelte(selected, files) {
 	return [

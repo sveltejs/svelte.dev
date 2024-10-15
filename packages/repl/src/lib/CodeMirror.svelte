@@ -18,7 +18,7 @@
 	import type { LintSource } from '@codemirror/lint';
 	import type { Extension } from '@codemirror/state';
 	import { CompletionContext } from '@codemirror/autocomplete';
-	import type { Lang } from './types';
+	import type { File, Lang } from './types';
 
 	export let diagnostics: LintSource | undefined = undefined;
 	export let readonly = false;
@@ -206,14 +206,18 @@
 
 	const { files, selected } = get_repl_context();
 
+	function get_basename(file: File) {
+		return `${file.name}.${file.type}`;
+	}
+
 	const svelte_rune_completions = svelteLanguage.data.of({
 		autocomplete: (context: CompletionContext) =>
-			completion_for_javascript(context, $selected!, $files)
+			completion_for_javascript(context, get_basename($selected!), $files.map(get_basename))
 	});
 
 	const js_rune_completions = javascriptLanguage.data.of({
 		autocomplete: (context: CompletionContext) =>
-			completion_for_javascript(context, $selected!, $files)
+			completion_for_javascript(context, get_basename($selected!), $files.map(get_basename))
 	});
 </script>
 
