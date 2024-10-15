@@ -71,7 +71,7 @@
 		margin: 4rem auto;
 		padding: 0 var(--sk-page-padding-side);
 		display: grid;
-		gap: 4rem;
+		row-gap: 4rem;
 		grid-template-areas:
 			'definition'
 			'blurb'
@@ -204,6 +204,7 @@
 			display: grid;
 			margin: 4em auto;
 			grid-template-columns: 1fr 1fr;
+			column-gap: 4rem;
 			grid-template-areas:
 				'definition definition'
 				'blurb      screenshots';
