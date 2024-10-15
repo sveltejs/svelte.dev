@@ -32,11 +32,9 @@
 <style>
 	button {
 		background-image: url($lib/icons/theme-light.svg);
-		margin-left: 1rem;
 
 		:global(.dark) & {
 			background-image: url($lib/icons/theme-dark.svg);
-			opacity: 0.8;
 		}
 	}
 </style>

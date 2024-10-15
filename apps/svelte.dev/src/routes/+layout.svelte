@@ -85,10 +85,6 @@
 			padding: 0 0.5rem;
 			height: 100%;
 
-			:global(.dark) & {
-				opacity: 0.8;
-			}
-
 			/* visually hidden, but visible to screen readers */
 			span {
 				clip: rect(0 0 0 0);

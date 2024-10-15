@@ -79,7 +79,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 	{/if}
 
 	<div class="desktop">
-		<div class="menu">
+		<div class="links">
 			{#each links as link}
 				{#if link.sections?.[0].path}
 					<Dropdown>
@@ -122,7 +122,9 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		<div class="menu">
 			{@render search?.()}
 
-			{@render external_links?.()}
+			<div class="external-links">
+				{@render external_links?.()}
+			</div>
 
 			<ThemeToggle />
 		</div>
@@ -139,17 +141,12 @@ Top navigation bar for the application. It provides a slot for the left side, th
 			<Icon name="search" size={16} />
 		</button>
 
+		<ThemeToggle />
+
 		<Menu bind:open={$nav_open} {links}>
 			<Separator />
 
 			{@render external_links?.()}
-
-			<Separator />
-
-			<div class="appearance">
-				<span class="caption">Theme</span>
-				<ThemeToggle />
-			</div>
 		</Menu>
 	</div>
 </nav>
@@ -199,12 +196,11 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		}
 	}
 
-	.menu {
-		position: relative;
+	.links {
 		display: flex;
 		width: 100%;
+		align-items: center;
 
-		/* :global { */
 		a {
 			color: var(--sk-text-2);
 			font: var(--sk-font-ui-medium);
@@ -233,6 +229,18 @@ Top navigation bar for the application. It provides a slot for the left side, th
 
 		& > a {
 			padding: 0.1rem 0.8rem 0 0.8rem;
+		}
+	}
+
+	.menu {
+		position: relative;
+		display: flex;
+		width: 100%;
+		gap: 1rem;
+
+		.external-links {
+			display: flex;
+			height: 100%;
 		}
 	}
 
