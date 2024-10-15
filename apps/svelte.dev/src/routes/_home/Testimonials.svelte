@@ -10,40 +10,12 @@
 		<p>
 			Svelte is a UI framework that uses a compiler to let you write breathtakingly concise
 			components that do minimal work in the browser, using languages you already know — HTML, CSS
-			and JavaScript. <strong>It's a love letter to web development.</strong>
+			and JavaScript. <strong>It’s a love letter to web development.</strong>
 		</p>
 
 		<p>
-			But don't take our word for it. Developers consistently rank Svelte as the framework they're
-			<a
-				target="_blank"
-				rel="noreferrer"
-				href="https://survey.stackoverflow.co/2023/#section-admired-and-desired-web-frameworks-and-technologies"
-			>
-				most
-			</a>
-			<a
-				target="_blank"
-				rel="noreferrer"
-				href="https://tsh.io/state-of-frontend/#which-of-the-following-frameworks-would-you-like-to-learn-in-the-future"
-			>
-				excited
-			</a>
-			<a
-				target="_blank"
-				rel="noreferrer"
-				href="https://2023.stateofjs.com/en-US/libraries/front-end-frameworks/"
-			>
-				about
-			</a>
-
-			<a
-				target="_blank"
-				rel="noreferrer"
-				href="https://twitter.com/Rich_Harris/status/1589675637195042817"
-			>
-				using</a
-			>.
+			But don’t take our word for it. Developers consistently rank Svelte as the framework they’re
+			most excited about using.
 		</p>
 	</div>
 
