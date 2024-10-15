@@ -30,19 +30,13 @@
 
 	afterNavigate(onclose);
 
-	function mounted(_: HTMLElement, fn: (current: boolean) => void) {
+	$effect(() => {
 		// this is necessary to ensure that the menu-background height
 		// is applied without an animation
 		setTimeout(() => {
-			fn(true);
+			ready = true;
 		});
-
-		return {
-			destroy() {
-				fn(false);
-			}
-		};
-	}
+	});
 
 	function slide(node: HTMLElement, { duration = 400, easing = expoOut } = {}): TransitionConfig {
 		const height = current ? node.clientHeight : universal_menu_inner_height;
@@ -69,7 +63,6 @@
 			class:ready
 			style:height={show_context_menu ? '99%' : `${universal_menu_inner_height}px`}
 			style:--background={show_context_menu ? 'var(--sk-back-3)' : null}
-			use:mounted={(mounted) => (ready = mounted)}
 		></div>
 
 		<div
