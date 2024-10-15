@@ -47,13 +47,16 @@
 
 				if (node.nodeName === 'CODE') {
 					const { file } = node.dataset;
+
 					if (file) {
 						dispatch('select', { file });
 					}
 				}
 
 				if (node.nodeName === 'SPAN' && node.classList.contains('filename')) {
-					const file = exercise.scope.prefix + node.textContent;
+					const ext = node.dataset.ext || '';
+					const file = exercise.scope.prefix + node.textContent + ext;
+
 					dispatch('select', { file });
 				}
 			}}
