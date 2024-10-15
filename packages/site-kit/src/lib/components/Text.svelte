@@ -347,7 +347,7 @@
 			}
 
 			:root.dark & {
-				background: url(../icons/hash-dark.svg) 50% 50% no-repeat;
+				background-image: url(../icons/hash-dark.svg);
 			}
 
 			@media (min-width: 768px) {
