@@ -7,7 +7,7 @@
 	import Filetree from './filetree/Filetree.svelte';
 	import ImageViewer from './ImageViewer.svelte';
 	import Output from './Output.svelte';
-	import ScreenToggle from './ScreenToggle.svelte';
+	import { ScreenToggle } from '@sveltejs/site-kit/components';
 	import Sidebar from './Sidebar.svelte';
 	import {
 		create_directories,
@@ -323,8 +323,10 @@
 
 	<div class="screen-toggle">
 		<ScreenToggle
-			on:change={(e) => {
-				show_editor = e.detail.pressed;
+			left="show text"
+			right="show editor"
+			onchange={(checked) => {
+				show_editor = checked;
 
 				const url = new URL(location.origin + location.pathname);
 
@@ -332,9 +334,9 @@
 					url.searchParams.set('file', $selected_name ?? '');
 				}
 
-				history.pushState({}, '', url);
+				history.pushState({}, '', url); // TODO use SvelteKit pushState
 			}}
-			pressed={show_editor}
+			checked={show_editor}
 		/>
 	</div>
 </div>
@@ -366,7 +368,7 @@
 	}
 
 	.screen-toggle {
-		height: 4.6rem;
+		height: var(--sk-pane-controls-height);
 	}
 
 	.content {

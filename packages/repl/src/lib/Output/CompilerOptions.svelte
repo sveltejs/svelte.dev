@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { get_repl_context } from '../context';
-	import Checkbox from '../Checkbox.svelte';
+	import { Checkbox } from '@sveltejs/site-kit/components';
 
 	const { compile_options } = get_repl_context();
 </script>

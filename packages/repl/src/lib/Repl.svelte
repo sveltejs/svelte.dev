@@ -1,12 +1,12 @@
 <script lang="ts">
 	import { EditorState } from '@codemirror/state';
 	import { SplitPane } from '@rich_harris/svelte-split-pane';
+	import { ScreenToggle } from '@sveltejs/site-kit/components';
 	import { BROWSER } from 'esm-env';
 	import { derived, writable } from 'svelte/store';
 	import Bundler from './Bundler.js';
 	import ComponentSelector from './Input/ComponentSelector.svelte';
 	import ModuleEditor from './Input/ModuleEditor.svelte';
-	import InputOutputToggle from './InputOutputToggle.svelte';
 	import Output from './Output/Output.svelte';
 	import { set_repl_context } from './context.js';
 	import { get_full_filename } from './utils.js';
@@ -326,13 +326,12 @@
 	</div>
 
 	{#if $toggleable}
-		<InputOutputToggle bind:checked={show_output} />
+		<ScreenToggle bind:checked={show_output} />
 	{/if}
 </div>
 
 <style>
 	.container {
-		--pane-controls-h: 4.2rem;
 		position: relative;
 		flex: 1;
 		background: var(--sk-back-1);
@@ -345,7 +344,7 @@
 		:global {
 			section {
 				position: relative;
-				padding: var(--pane-controls-h) 0 0 0;
+				padding: var(--sk-pane-controls-height) 0 0 0;
 				height: 100%;
 				box-sizing: border-box;
 
@@ -354,7 +353,7 @@
 					top: 0;
 					left: 0;
 					width: 100%;
-					height: var(--pane-controls-h);
+					height: var(--sk-pane-controls-height);
 					box-sizing: border-box;
 				}
 
@@ -369,8 +368,8 @@
 			}
 
 			[data-pane='main'] > .divider::after {
-				height: calc(100% - var(--pane-controls-h));
-				top: var(--pane-controls-h);
+				height: calc(100% - var(--sk-pane-controls-height));
+				top: var(--sk-pane-controls-height);
 			}
 		}
 	}
@@ -381,7 +380,7 @@
 
 	.toggleable .viewport {
 		width: 200%;
-		height: calc(100% - var(--pane-controls-h));
+		height: calc(100% - var(--sk-pane-controls-height));
 		transition: transform 0.3s;
 	}
 

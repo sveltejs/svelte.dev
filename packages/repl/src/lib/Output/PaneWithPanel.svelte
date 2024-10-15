@@ -56,7 +56,7 @@
 
 <style>
 	.panel-header {
-		height: var(--pane-controls-h);
+		height: var(--sk-pane-controls-height);
 		display: flex;
 		justify-content: space-between;
 		align-items: center;

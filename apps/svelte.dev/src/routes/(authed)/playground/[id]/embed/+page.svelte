@@ -71,7 +71,6 @@
 		background-color: var(--sk-back-1);
 		overflow: hidden;
 		box-sizing: border-box;
-		--pane-controls-h: 4.2rem;
 		display: flex;
 		flex-direction: column;
 	}

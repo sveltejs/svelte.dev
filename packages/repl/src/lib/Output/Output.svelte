@@ -108,7 +108,7 @@
 
 <style>
 	.view-toggle {
-		height: var(--pane-controls-h);
+		height: var(--sk-pane-controls-height);
 		overflow: hidden;
 		white-space: nowrap;
 		box-sizing: border-box;
@@ -150,7 +150,7 @@
 	.tab-content {
 		position: absolute;
 		width: 100%;
-		height: calc(100% - var(--pane-controls-h)) !important;
+		height: calc(100% - var(--sk-pane-controls-height)) !important;
 		visibility: hidden;
 		pointer-events: none;
 	}

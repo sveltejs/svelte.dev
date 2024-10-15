@@ -1,16 +1,32 @@
 <script lang="ts">
 	import Checkbox from './Checkbox.svelte';
 
-	let { checked = $bindable() }: { checked: boolean } = $props();
+	let {
+		left = 'input',
+		right = 'output',
+		checked = $bindable(),
+		onchange
+	}: {
+		left?: string;
+		right?: string;
+		checked: boolean;
+		onchange?: (checked: boolean) => void;
+	} = $props();
 </script>
 
 <!-- svelte-ignore a11y_label_has_associated_control -->
 <label class="input-output-toggle">
-	<span class:active={!checked} style="text-align: right">input</span>
+	<span class:active={!checked} style="text-align: right">{left}</span>
 	<span style="display:grid; place-items: center">
-		<Checkbox bind:checked />
+		<Checkbox
+			{checked}
+			onchange={(value) => {
+				checked = value;
+				onchange?.(checked);
+			}}
+		/>
 	</span>
-	<span class:active={checked}>output</span>
+	<span class:active={checked}>{right}</span>
 </label>
 
 <style>
@@ -19,12 +35,12 @@
 		display: grid;
 		user-select: none;
 		flex: 0;
-		grid-template-columns: 1fr 40px 1fr;
-		grid-gap: 0.5em;
+		grid-template-columns: 1fr 4rem 1fr;
+		grid-gap: 0.5rem;
 		align-items: center;
 		justify-content: center;
 		width: 100%;
-		height: var(--pane-controls-h);
+		height: var(--sk-pane-controls-height);
 		border-top: 1px solid var(--sk-back-5);
 		font: var(--sk-font-ui-small);
 		z-index: 2;

@@ -93,6 +93,6 @@
 	}
 
 	.info {
-		background-color: var(--sk-theme-2);
+		background-color: var(--sk-text-4);
 	}
 </style>

@@ -168,7 +168,6 @@
 
 <style>
 	.repl-outer {
-		--pane-controls-h: 4.2rem;
 		position: relative;
 		height: calc(100% - var(--sk-nav-height) - var(--sk-banner-bottom-height));
 		height: calc(100dvh - var(--sk-nav-height) - var(--sk-banner-bottom-height));
