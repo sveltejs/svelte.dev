@@ -9,18 +9,17 @@ Top navigation bar for the application. It provides a slot for the left side, th
 	import ThemeToggle from '../components/ThemeToggle.svelte';
 	import Menu from './Menu.svelte';
 	import type { NavigationLink } from '../types';
-	import type { Snippet } from 'svelte';
 	import Dropdown from '../components/Dropdown.svelte';
 	import { HoverMenu } from '../components';
+	import Search from '../search/Search.svelte';
 
 	interface Props {
 		home_title?: string;
 		title: string | undefined;
 		links: NavigationLink[];
-		search?: Snippet;
 	}
 
-	let { home_title = 'Homepage', title, links, search }: Props = $props();
+	let { home_title = 'Homepage', title, links }: Props = $props();
 
 	let visible = $state(true);
 
@@ -102,7 +101,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		</div>
 
 		<div class="menu">
-			{@render search?.()}
+			<Search />
 
 			<div class="external-links">
 				<a href="/chat" data-icon="discord" aria-label="Discord Chat"></a>

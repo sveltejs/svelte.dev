@@ -38,11 +38,7 @@
 
 <Shell nav_visible={$page.route.id !== '/(authed)/playground/[id]/embed'}>
 	{#snippet top_nav()}
-		<Nav title={data.nav_title} links={data.nav_links}>
-			{#snippet search()}
-				<Search />
-			{/snippet}
-		</Nav>
+		<Nav title={data.nav_title} links={data.nav_links} />
 	{/snippet}
 
 	{#snippet children()}
@@ -57,10 +53,3 @@
 {#if browser}
 	<SearchBox />
 {/if}
-
-<style>
-	:global(html, body) {
-		height: 100%;
-		width: 100%;
-	}
-</style>
