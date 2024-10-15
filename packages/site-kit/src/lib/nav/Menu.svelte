@@ -116,7 +116,7 @@
 
 	{#if open}
 		<div class="menu" use:trap={{ reset_focus: false }}>
-			<div class="mobile-main-menu" in:slide out:slide={{ duration: 500, easing: quintOut }}>
+			<div class="mobile-main-menu" transition:slide={{ duration: 300, easing: quintOut }}>
 				<div
 					class="menu-background"
 					class:ready
