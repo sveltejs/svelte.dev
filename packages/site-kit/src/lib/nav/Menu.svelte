@@ -224,16 +224,16 @@
 							{/if}
 						</div>
 
-						<button
-							class="back-button raised icon"
-							onclick={() => ($show_context_menu = false)}
-							inert={!show_context_menu}
-						>
-							<Icon name="arrow-left" size={18} />
-							<span
-								>{#if back_button}{@render back_button()}{:else}Back to main menu{/if}</span
+						<label class="back-button">
+							<button
+								class="raised icon"
+								onclick={() => ($show_context_menu = false)}
+								inert={!show_context_menu}
 							>
-						</button>
+								<Icon name="arrow-left" size={18} />
+							</button>
+							<span>Back to main menu</span>
+						</label>
 					</div>
 				</div>
 			</div>
@@ -360,25 +360,18 @@
 
 	.back-button {
 		position: absolute;
-		bottom: -1px;
+		bottom: 0;
 		right: 0;
-		z-index: 9;
-
 		display: flex;
 		align-items: center;
 		justify-content: start;
 		gap: 1rem;
-
 		font: var(--sk-font-ui-medium);
 		color: var(--sk-text-3);
-
 		background-color: var(--sk-back-3);
-
-		box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.19);
-
 		width: 50%;
-		height: 48px;
-		padding: 0 1.5rem;
+		height: 4.8rem;
+		padding: 0 var(--sk-page-padding-side);
 	}
 
 	.universal .contents,
