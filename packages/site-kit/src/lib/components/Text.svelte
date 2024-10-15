@@ -288,11 +288,6 @@
 					text-decoration: none;
 				}
 
-				/* TODO what is this for? */
-				&.border {
-					border-left: 5px solid var(--sk-theme-2);
-				}
-
 				.highlight {
 					--color: rgba(220, 220, 0, 0.2);
 					background: var(--color);

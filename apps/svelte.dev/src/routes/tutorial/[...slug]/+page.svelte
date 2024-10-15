@@ -387,30 +387,6 @@
 		font: var(--sk-font-ui-small);
 	}
 
-	.navigator .solve {
-		position: relative;
-		background: var(--sk-theme-2);
-		padding: 0.5rem;
-		width: 100%;
-		height: 4rem;
-		border-right: 1px solid var(--sk-back-4);
-		color: white;
-		opacity: 1;
-		font: var(--sk-font-ui-small);
-	}
-
-	.navigator .solve:disabled {
-		opacity: 0.5;
-	}
-
-	.navigator .solve:not(:disabled) {
-		background: var(--sk-theme-1);
-	}
-
-	.navigator .solve.completed {
-		background: var(--sk-theme-2);
-	}
-
 	.preview {
 		display: flex;
 		flex-direction: column;
@@ -439,14 +415,6 @@
 		/* put ellipsis at start */
 		direction: rtl;
 		text-align: left;
-	}
-
-	.mobile .navigator .solve {
-		width: 9rem;
-		height: auto;
-		padding: 0.2rem;
-		border-radius: 4rem;
-		border: none;
 	}
 
 	.mobile-filetree {

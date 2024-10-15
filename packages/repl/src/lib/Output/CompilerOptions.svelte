@@ -31,7 +31,7 @@
 		padding: 0 10px;
 		font-family: var(--sk-font-family-mono);
 		font-size: 13px;
-		color: var(--sk-text-2, #999);
+		color: var(--sk-text-2);
 		line-height: 1.8;
 	}
 
@@ -39,7 +39,7 @@
 		display: block;
 		padding: 0 0 0 1.25em;
 		white-space: nowrap;
-		color: var(--sk-text-3, #999);
+		color: var(--sk-text-3);
 		user-select: none;
 	}
 
@@ -49,12 +49,8 @@
 	}
 
 	.string {
-		color: hsl(41, 37%, 45%);
+		color: var(--sk-code-string);
 	}
-
-	/* .boolean {
-		color: hsl(45, 7%, 45%);
-	} */
 
 	label {
 		display: inline-block;
@@ -88,11 +84,6 @@
 		opacity: 1;
 	}
 
-	/* input[type=radio]:focus + label {
-		color: #00f;
-		outline: 1px dotted #00f;
-	} */
-
 	input[type='radio'] + label:before {
 		content: '';
 		background: #eee;
@@ -110,16 +101,16 @@
 	}
 
 	input[type='radio'] + label:before {
-		background-color: var(--sk-theme-2);
+		background-color: var(--sk-text-4);
 		border-radius: 100%;
 		box-shadow: inset 0 0 0 0.5em rgba(255, 255, 255, 0.95);
-		border: 1px solid var(--sk-theme-2);
+		border: 1px solid var(--sk-text-4);
 	}
 
 	input[type='radio']:checked + label:before {
 		background-color: var(--sk-theme-1);
 		box-shadow: inset 0 0 0 0.15em rgba(255, 255, 255, 0.95);
-		border: 1px solid var(--sk-theme-2);
+		border: 1px solid var(--sk-text-4);
 		transition: box-shadow 0.2s ease-out;
 	}
 </style>

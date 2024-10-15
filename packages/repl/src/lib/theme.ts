@@ -58,10 +58,6 @@ const svelteThemeStyles = EditorView.theme(
 		'.cm-panels.cm-panels-top': { borderBottom: '2px solid black' },
 		'.cm-panels.cm-panels-bottom': { borderTop: '2px solid black' },
 
-		'.cm-searchMatch': {
-			backgroundColor: 'var(--sk-theme-2)'
-			// outline: '1px solid #457dff',
-		},
 		'.cm-searchMatch.cm-searchMatch-selected': {
 			backgroundColor: '#6199ff2f'
 		},

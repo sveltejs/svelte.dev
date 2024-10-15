@@ -30,8 +30,7 @@
 		border-radius: 1em;
 		top: 0;
 		left: 0;
-		background: var(--sk-theme-2);
-		/* box-sizing: border-box; */
+		background: var(--sk-back-6);
 		box-sizing: content-box;
 	}
 
