@@ -1,5 +1,5 @@
 <div class="companies">
-	<div class="wing top">
+	<div class="wing">
 		<div class="logos">
 			<enhanced:img src="./companies/ikea.svg" alt="Ikea logo" />
 			<enhanced:img src="./companies/mullvad.svg" alt="Mullvad logo" />
@@ -10,7 +10,7 @@
 		</div>
 	</div>
 	<h2>used by companies you’ve heard of</h2>
-	<div class="wing bottom">
+	<div class="wing">
 		<div class="logos">
 			<enhanced:img src="./companies/spotify.svg" alt="Spotify logo" />
 			<enhanced:img src="./companies/nyt.svg" alt="New York Times logo" />
@@ -23,8 +23,10 @@
 
 <style>
 	.companies {
+		display: grid;
 		gap: 1rem;
 		align-items: center;
+		justify-content: center;
 		margin: 15rem 0 5rem 0;
 		mask-size: 100%;
 		mask-image: radial-gradient(ellipse 110rem 500%, white, white 70%, transparent);
@@ -34,7 +36,7 @@
 	h2 {
 		width: 12em;
 		text-align: center;
-		margin: 0 auto;
+		justify-self: center;
 		z-index: 2;
 		filter: drop-shadow(0 0 1rem var(--sk-back-1)) drop-shadow(0 0 1rem var(--sk-back-1));
 		padding: 0 var(--sk-page-padding-side);
@@ -68,19 +70,8 @@
 		}
 	}
 
-	@media (max-width: 800px) {
-		.top {
-			margin-bottom: 1.5rem;
-		}
-
-		.bottom {
-			margin-top: 1.5rem;
-		}
-	}
-
 	@media (min-width: 800px) {
 		.companies {
-			display: grid;
 			grid-template-columns: 1fr auto 1fr;
 			align-items: center;
 		}
