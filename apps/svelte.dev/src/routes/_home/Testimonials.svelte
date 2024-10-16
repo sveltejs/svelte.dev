@@ -108,7 +108,7 @@
 			object-fit: contain;
 			border-radius: var(--sk-border-radius);
 			filter: grayscale(1);
-
+			-webkit-transform: translate3d(0, 0, 0);
 			a:hover & {
 				filter: none;
 			}

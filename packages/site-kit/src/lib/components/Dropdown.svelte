@@ -35,6 +35,7 @@
 		filter: var(--sk-shadow);
 		border-radius: var(--sk-border-radius);
 		z-index: 999;
+		-webkit-transform: translate3d(0, 0, 0);
 
 		&.align-right {
 			left: auto;

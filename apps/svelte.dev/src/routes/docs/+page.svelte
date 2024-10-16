@@ -119,7 +119,7 @@
 			background-color: var(--sk-back-2);
 			filter: drop-shadow(1px 2px 4px rgb(0 0 0 / 0.1));
 			text-decoration: none;
-
+			-webkit-transform: translate3d(0, 0, 0);
 			h2 {
 				text-decoration: underline;
 			}

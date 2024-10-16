@@ -196,6 +196,7 @@
 		transform: translate(0, 100%);
 		transition: transform 0.3s;
 		backdrop-filter: blur(3px);
+		-webkit-transform: translate3d(0, 0, 0);
 		overflow-y: auto;
 	}
 
