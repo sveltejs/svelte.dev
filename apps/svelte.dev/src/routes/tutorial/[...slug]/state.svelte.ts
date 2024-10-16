@@ -40,7 +40,5 @@ export class Workspace {
 	}
 }
 
-export const workspace = new Workspace();
-
 // this is separate to the workspace
 export const solution = writable({} as Record<string, Stub>);

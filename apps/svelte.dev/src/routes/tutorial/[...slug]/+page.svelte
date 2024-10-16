@@ -9,7 +9,7 @@
 	import Output from './Output.svelte';
 	import { ScreenToggle } from '@sveltejs/site-kit/components';
 	import Sidebar from './Sidebar.svelte';
-	import { solution, workspace } from './state.svelte';
+	import { solution, Workspace } from './state.svelte';
 	import { create_directories } from './utils';
 	import { needs_webcontainers, text_files } from './shared';
 	import OutputRollup from './OutputRollup.svelte';
@@ -23,6 +23,8 @@
 	}
 
 	let { data }: Props = $props();
+
+	const workspace = new Workspace();
 
 	let path = data.exercise.path;
 	let show_editor = $state(false);
