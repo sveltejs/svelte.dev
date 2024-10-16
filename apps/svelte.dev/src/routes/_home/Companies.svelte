@@ -10,7 +10,7 @@
 		</div>
 	</div>
 	<h2>used by companies you’ve heard of</h2>
-	<div class="wing">
+	<div class="wing bottom">
 		<div class="logos">
 			<enhanced:img src="./companies/spotify.svg" alt="Spotify logo" />
 			<enhanced:img src="./companies/nyt.svg" alt="New York Times logo" />
