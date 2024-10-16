@@ -13,7 +13,7 @@
 	import { svelteTheme } from '@sveltejs/repl/theme';
 	import { basicSetup } from 'codemirror';
 	import { onMount, tick } from 'svelte';
-	import { update_file, workspace } from './state.svelte';
+	import { workspace } from './state.svelte';
 	import { autocomplete_for_svelte } from '@sveltejs/site-kit/codemirror';
 	import type { Diagnostic } from '@codemirror/lint';
 	import type { Exercise, Stub } from '$lib/tutorial';
@@ -149,7 +149,7 @@
 					skip_reset = true;
 
 					// TODO do we even need to update `workspace.files`? maintaining separate editor states is probably sufficient
-					update_file({
+					workspace.update_file({
 						...workspace.selected_file,
 						contents: editor_view.state.doc.toString()
 					});

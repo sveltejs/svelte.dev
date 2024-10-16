@@ -4,7 +4,7 @@
 	import Folder from './Folder.svelte';
 	import * as context from './context.js';
 	import Modal from '$lib/components/Modal.svelte';
-	import { solution, reset_files, workspace } from '../state.svelte';
+	import { solution, workspace } from '../state.svelte';
 	import { create_directories } from '../utils';
 	import { afterNavigate } from '$app/navigation';
 	import type { Exercise, Stub } from '$lib/tutorial';
@@ -59,7 +59,11 @@
 					? { type, name, basename, text: true, contents: '' }
 					: { type, name, basename };
 
-			reset_files([...workspace.files, ...create_directories(name, workspace.files), file]);
+			workspace.reset_files([
+				...workspace.files,
+				...create_directories(name, workspace.files),
+				file
+			]);
 
 			if (type === 'file') {
 				dispatch('select', { name });
@@ -101,7 +105,10 @@
 			to_rename.basename = new_full_name.split('/').pop()!;
 			to_rename.name = new_full_name;
 
-			reset_files([...workspace.files, ...create_directories(new_full_name, workspace.files)]);
+			workspace.reset_files([
+				...workspace.files,
+				...create_directories(new_full_name, workspace.files)
+			]);
 
 			if (was_selected) {
 				dispatch('select', { name: new_full_name });
@@ -118,7 +125,7 @@
 
 			dispatch('select', { name: null });
 
-			reset_files(
+			workspace.reset_files(
 				workspace.files.filter((f) => {
 					if (f === file) return false;
 					if (f.name.startsWith(file.name + '/')) return false;

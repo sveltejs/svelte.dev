@@ -9,7 +9,7 @@
 	import Output from './Output.svelte';
 	import { ScreenToggle } from '@sveltejs/site-kit/components';
 	import Sidebar from './Sidebar.svelte';
-	import { reset_files, solution, workspace } from './state.svelte';
+	import { solution, workspace } from './state.svelte';
 	import { create_directories } from './utils';
 	import { needs_webcontainers, text_files } from './shared';
 	import OutputRollup from './OutputRollup.svelte';
@@ -135,7 +135,7 @@
 			const new_directories = create_directories(name, workspace.files);
 
 			if (new_directories.length > 0) {
-				reset_files([...workspace.files, ...new_directories]);
+				workspace.reset_files([...workspace.files, ...new_directories]);
 			}
 
 			// find the parent directory
@@ -241,7 +241,7 @@
 		exercise={data.exercise}
 		{completed}
 		toggle={() => {
-			reset_files(Object.values(completed ? a : b));
+			workspace.reset_files(Object.values(completed ? a : b));
 		}}
 	/>
 
