@@ -254,84 +254,72 @@
 
 	<div class="top" class:offset={show_editor}>
 		<SplitPane id="main" type="horizontal" min="360px" max="50%" pos="33%">
-			{#snippet a()}
-				<section class="content">
-					<Sidebar
-						bind:sidebar
-						exercise={data.exercise}
-						on:select={(e) => {
-							navigate_to_file(e.detail.file);
-						}}
-					/>
-				</section>
-			{/snippet}
+			<section slot="a" class="content">
+				<Sidebar
+					bind:sidebar
+					exercise={data.exercise}
+					on:select={(e) => {
+						navigate_to_file(e.detail.file);
+					}}
+				/>
+			</section>
 
-			{#snippet b()}
-				<section>
-					<SplitPane type="vertical" min="100px" max="-4.1rem" pos="50%">
-						{#snippet a()}
-							<section>
-								<SplitPane
-									id="editor"
-									type={mobile ? 'vertical' : 'horizontal'}
-									min="120px"
-									max="300px"
-									pos="200px"
-								>
-									{#snippet a()}
-										<section class="navigator">
-											{#if mobile}
-												<button class="file" onclick={() => (show_filetree = !show_filetree)}>
-													{$selected_file?.name.replace(
-														data.exercise.scope.prefix,
-														data.exercise.scope.name + '/'
-													) ?? 'Files'}
-												</button>
-											{:else}
-												<Filetree
-													exercise={data.exercise}
-													on:select={(e) => {
-														select_file(e.detail.name);
-													}}
-												/>
-											{/if}
-										</section>
-									{/snippet}
-
-									{#snippet b()}
-										<section class="editor-container">
-											<Editor exercise={data.exercise} warnings={adapter_state.warnings} />
-											<ImageViewer selected={$selected_file} />
-
-											{#if mobile && show_filetree}
-												<div class="mobile-filetree">
-													<Filetree
-														mobile
-														exercise={data.exercise}
-														on:select={(e) => {
-															navigate_to_file(e.detail.name);
-														}}
-													/>
-												</div>
-											{/if}
-										</section>
-									{/snippet}
-								</SplitPane>
-							</section>
-						{/snippet}
-
-						{#snippet b()}
-							<section class="preview">
-								{#if needs_webcontainers($page.data.exercise)}
-									<Output exercise={data.exercise} {paused} />
+			<section slot="b">
+				<SplitPane type="vertical" min="100px" max="-4.1rem" pos="50%">
+					<section slot="a">
+						<SplitPane
+							id="editor"
+							type={mobile ? 'vertical' : 'horizontal'}
+							min="120px"
+							max="300px"
+							pos="200px"
+						>
+							<section slot="a" class="navigator">
+								{#if mobile}
+									<button class="file" onclick={() => (show_filetree = !show_filetree)}>
+										{$selected_file?.name.replace(
+											data.exercise.scope.prefix,
+											data.exercise.scope.name + '/'
+										) ?? 'Files'}
+									</button>
 								{:else}
-									<OutputRollup />
+									<Filetree
+										exercise={data.exercise}
+										on:select={(e) => {
+											select_file(e.detail.name);
+										}}
+									/>
 								{/if}
 							</section>
-						{/snippet}
-					</SplitPane>
-				</section>
-			{/snippet}
+
+							<section slot="b" class="editor-container">
+								<Editor exercise={data.exercise} warnings={adapter_state.warnings} />
+								<ImageViewer selected={$selected_file} />
+
+								{#if mobile && show_filetree}
+									<div class="mobile-filetree">
+										<Filetree
+											mobile
+											exercise={data.exercise}
+											on:select={(e) => {
+												navigate_to_file(e.detail.name);
+											}}
+										/>
+									</div>
+								{/if}
+							</section>
+						</SplitPane>
+					</section>
+
+					<section slot="b" class="preview">
+						{#if needs_webcontainers($page.data.exercise)}
+							<Output exercise={data.exercise} {paused} />
+						{:else}
+							<OutputRollup />
+						{/if}
+					</section>
+				</SplitPane>
+			</section>
 		</SplitPane>
 	</div>
 

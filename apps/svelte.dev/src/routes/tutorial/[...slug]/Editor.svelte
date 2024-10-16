@@ -200,8 +200,8 @@
 				const diagnostics = current_warnings.map((warning) => {
 					/** @type {import('@codemirror/lint').Diagnostic} */
 					const diagnostic: Diagnostic = {
-						from: warning.start.character,
-						to: warning.end.character,
+						from: warning.start!.character,
+						to: warning.end!.character,
 						severity: 'warning',
 						message: warning.message
 					};
