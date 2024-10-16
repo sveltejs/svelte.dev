@@ -1,8 +1,9 @@
-import type { Adapter, Warning } from '$lib/tutorial';
-import type { File, Item } from 'editor';
 import Bundler from '@sveltejs/repl/bundler';
 // @ts-ignore package exports don't have types
 import * as yootils from 'yootils';
+import type { Adapter } from '$lib/tutorial';
+import type { File, Item } from 'editor';
+import type { Warning } from 'svelte/compiler';
 
 /** Rollup bundler singleton */
 let bundler: Bundler;

@@ -6,8 +6,9 @@ import * as yootils from 'yootils';
 import { get_depth } from '../../../utils/path.js';
 import { escape_html } from '../../../utils/escape.js';
 import { ready } from '../common/index.js';
-import type { Adapter, Warning } from '$lib/tutorial';
+import type { Adapter } from '$lib/tutorial';
 import type { Item, File } from 'editor';
+import type { Warning } from 'svelte/compiler';
 
 const converter = new AnsiToHtml({
 	fg: 'var(--sk-text-3)'
@@ -47,7 +48,7 @@ export async function create(): Promise<Adapter> {
 		}
 	});
 
-	let warnings: Record<string, import('$lib/tutorial').Warning[]> = {};
+	let warnings: Record<string, import('svelte/compiler').Warning[]> = {};
 	let timeout: any;
 
 	function schedule_to_update_warning(msec: number) {
