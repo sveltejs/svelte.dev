@@ -24,6 +24,7 @@
 		"**/*.css"
 	],
 	"files": [
+		"src",
 		"dist",
 		"!dist/**/*.test.*",
 		"!dist/**/*.spec.*"
