@@ -110,7 +110,12 @@
 
 				state = EditorState.create({
 					doc: file.contents,
-					extensions: [...extensions, ...(lang || [])] // , EditorState.readOnly.of(true)
+					extensions: [
+						...extensions,
+						...(lang || []),
+						EditorState.readOnly.of(readonly),
+						EditorView.editable.of(!readonly)
+					]
 				});
 
 				editor_states.set(file.name, state);
