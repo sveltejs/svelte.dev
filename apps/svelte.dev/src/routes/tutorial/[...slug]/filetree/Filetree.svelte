@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { createEventDispatcher } from 'svelte';
 	import { writable } from 'svelte/store';
 	import Folder from './Folder.svelte';
@@ -7,9 +7,14 @@
 	import { files, solution, reset_files, workspace } from '../state.svelte';
 	import { create_directories } from '../utils';
 	import { afterNavigate } from '$app/navigation';
+	import type { Exercise, Stub } from '$lib/tutorial';
 
-	/** @type {{exercise: import('$lib/tutorial').Exercise, mobile?: boolean}} */
-	let { exercise, mobile = false } = $props();
+	interface Props {
+		exercise: Exercise;
+		mobile?: boolean;
+	}
+
+	let { exercise, mobile = false }: Props = $props();
 
 	const dispatch = createEventDispatcher();
 
@@ -17,8 +22,7 @@
 
 	let modal_text = $state('');
 
-	/** @type {import('svelte/store').Writable<Record<string, boolean>>}*/
-	const collapsed = writable({});
+	const collapsed = writable({} as Record<string, boolean>);
 
 	afterNavigate(() => {
 		collapsed.set({});
@@ -48,10 +52,9 @@
 				return;
 			}
 
-			const basename = /** @type {string} */ (name.split('/').pop());
+			const basename = name.split('/').pop()!;
 
-			/** @type {import('$lib/tutorial').Stub} */
-			const file =
+			const file: Stub =
 				type === 'file'
 					? { type, name, basename, text: true, contents: '' }
 					: { type, name, basename };
@@ -95,7 +98,7 @@
 
 			const was_selected = workspace.selected_name === to_rename.name;
 
-			to_rename.basename = /** @type {string} */ (new_full_name.split('/').pop());
+			to_rename.basename = new_full_name.split('/').pop()!;
 			to_rename.name = new_full_name;
 
 			reset_files([...$files, ...create_directories(new_full_name, $files)]);
@@ -129,8 +132,7 @@
 		}
 	});
 
-	/** @param {import('$lib/tutorial').Stub} file */
-	function is_deleted(file) {
+	function is_deleted(file: Stub) {
 		if (file.type === 'directory') return `${file.name}/__delete` in exercise.a;
 		if (file.text) return file.contents.startsWith('__delete');
 
@@ -146,7 +148,7 @@
 		if (e.key === 'ArrowUp' || e.key === 'ArrowDown') {
 			e.preventDefault();
 			const lis = Array.from(e.currentTarget.querySelectorAll('li'));
-			const focused = lis.findIndex((li) => li.contains(/** @type {HTMLElement} */ (e.target)));
+			const focused = lis.findIndex((li) => li.contains( (e.target as HTMLElement)));
 
 			const d = e.key === 'ArrowUp' ? -1 : +1;
 
