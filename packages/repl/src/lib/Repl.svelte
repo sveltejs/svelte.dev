@@ -11,6 +11,7 @@
 	import { set_repl_context } from './context.js';
 	import { get_full_filename } from './utils.js';
 	import Compiler from './Output/Compiler.js';
+	import { Workspace, Editor, type Item, type File as WorkspaceFile } from 'editor';
 	import type { Bundle, File, ReplContext } from './types.js';
 	import type { CompileOptions } from 'svelte/compiler';
 	import type { CompilerOutput } from './workers/workers.js';
@@ -34,6 +35,17 @@
 	export let change: (value: { files: File[] }) => void = () => {};
 	export let blur: () => void = () => {};
 
+	const workspace = new Workspace({
+		files: [],
+		selected_name: '',
+		onupdate(file) {
+			// TODO
+		},
+		onreset(items) {
+			// TODO
+		}
+	});
+
 	let runes = false;
 
 	export function toJSON() {
@@ -44,6 +56,17 @@
 	}
 
 	export async function set(data: { files: File[]; css?: string }) {
+		workspace.files = data.files.map((file) => {
+			const basename = `${file.name}.${file.type}`;
+			return {
+				type: 'file',
+				name: basename,
+				basename,
+				contents: file.source,
+				text: true
+			};
+		});
+
 		$files = data.files;
 		$selected_name = 'App.svelte';
 

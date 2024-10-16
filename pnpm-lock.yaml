@@ -343,6 +343,9 @@ importers:
       acorn:
         specifier: ^8.11.3
         version: 8.12.1
+      editor:
+        specifier: workspace:*
+        version: link:../editor
       esm-env:
         specifier: ^1.0.0
         version: 1.0.0

@@ -85,6 +85,7 @@
 		"@sveltejs/site-kit": "workspace:*",
 		"@sveltejs/svelte-json-tree": "^2.2.0",
 		"acorn": "^8.11.3",
+		"editor": "workspace:*",
 		"esm-env": "^1.0.0",
 		"esrap": "^1.2.2",
 		"marked": "^14.1.2",
