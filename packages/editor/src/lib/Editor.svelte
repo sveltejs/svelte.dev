@@ -12,7 +12,7 @@
 	import { svelte } from '@replit/codemirror-lang-svelte';
 	import { svelteTheme } from '@sveltejs/repl/theme';
 	import { basicSetup } from 'codemirror';
-	import { onMount, tick } from 'svelte';
+	import { tick } from 'svelte';
 	import { autocomplete_for_svelte } from '@sveltejs/site-kit/codemirror';
 	import type { Diagnostic } from '@codemirror/lint';
 	import { Workspace, type Item, type File } from './Workspace.svelte.js';
@@ -27,7 +27,7 @@
 
 	let { warnings, workspace, autocomplete_filter = () => true }: Props = $props();
 
-	let container = $state() as HTMLDivElement;
+	let container: HTMLDivElement;
 
 	let preserve_editor_focus = $state(false);
 	let skip_reset = true;
@@ -135,7 +135,7 @@
 		editor_view.setState(state);
 	}
 
-	onMount(() => {
+	$effect(() => {
 		editor_view = new EditorView({
 			parent: container,
 			async dispatch(transaction) {
@@ -175,7 +175,7 @@
 		await reset(workspace.files);
 
 		if (editor_view) {
-			// could be false if onMount returned early
+			// TODO is it possible to get here?
 			select_state(workspace.selected_name);
 		}
 	});
