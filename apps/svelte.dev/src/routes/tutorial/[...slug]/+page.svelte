@@ -226,6 +226,11 @@
 	});
 
 	let completed = $derived(is_completed(workspace.files, b));
+
+	$inspect({
+		errors: adapter.adapter_state.errors,
+		warnings: adapter.adapter_state.warnings
+	});
 </script>
 
 <svelte:head>

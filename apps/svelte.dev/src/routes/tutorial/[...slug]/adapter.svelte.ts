@@ -31,7 +31,9 @@ export const adapter_state = new (class {
 			status: 'initialising'
 		}
 	);
-	/** Compiler warnings */
+
+	/** Diagnostics */
+	errors = $derived((use_rollup ? rollup_state.errors : wc_state.errors) || {});
 	warnings = $derived((use_rollup ? rollup_state.warnings : wc_state.warnings) || {});
 })();
 

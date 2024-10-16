@@ -14,7 +14,7 @@ import loop_protect from './plugins/loop-protect';
 import type { Plugin, TransformResult } from '@rollup/browser';
 import type { BundleMessageData } from '../workers';
 import type { File, Warning } from '../../types';
-import type { CompileResult } from 'svelte/compiler';
+import type { CompileError, CompileResult } from 'svelte/compiler';
 
 let packages_url: string;
 let svelte_url: string;
@@ -502,7 +502,6 @@ async function bundle({ uid, files }: { uid: number; files: File[] }) {
 		cached.client,
 		lookup
 	);
-	let error;
 
 	try {
 		if (client.error) {
@@ -553,11 +552,7 @@ async function bundle({ uid, files }: { uid: number; files: File[] }) {
 	} catch (err) {
 		console.error(err);
 
-		// @ts-ignore
-		const e: Error = error || err;
-
-		// @ts-ignore
-		delete e.toString;
+		const e = err as CompileError;
 
 		return {
 			uid,
@@ -565,10 +560,7 @@ async function bundle({ uid, files }: { uid: number; files: File[] }) {
 			server: null,
 			imports: null,
 			warnings: client.warnings,
-			error: Object.assign({}, e, {
-				message: e.message,
-				stack: e.stack
-			})
+			error: { ...e }
 		};
 	}
 }

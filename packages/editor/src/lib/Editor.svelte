@@ -172,10 +172,18 @@
 		const diagnostics = current_warnings.map((warning) => {
 			/** @type {import('@codemirror/lint').Diagnostic} */
 			const diagnostic: Diagnostic = {
+				severity: 'warning',
 				from: warning.start!.character,
 				to: warning.end!.character,
-				severity: 'warning',
-				message: warning.message
+				message: warning.message,
+				renderMessage: () => {
+					const span = document.createElement('span');
+					span.innerHTML = `${warning.message
+						.replace(/&/g, '&amp;')
+						.replace(/</g, '&lt;')
+						.replace(/`(.+?)`/g, `<code>$1</code>`)} <strong>(${warning.code})</strong>`;
+					return span;
+				}
 			};
 
 			return diagnostic;
