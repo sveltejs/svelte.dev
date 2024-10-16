@@ -4,12 +4,13 @@ import type { FileStub, Stub } from '$lib/tutorial';
 
 // TODO convert to state
 
+class Workspace {
+	creating = $state.raw<{ parent: string; type: 'file' | 'directory' } | null>(null);
+}
+
+export const workspace = new Workspace();
+
 export const files = writable([] as Stub[]);
-
-export const solution = writable({} as Record<string, Stub>);
-
-export const creating: Writable<{ parent: string; type: 'file' | 'directory' } | null> =
-	writable(null);
 
 export const selected_name: Writable<string | null> = writable(null);
 
@@ -40,3 +41,6 @@ export function reset_files(new_files: Stub[]) {
 	files.set(new_files);
 	adapter.reset(new_files);
 }
+
+// this is separate to the workspace
+export const solution = writable({} as Record<string, Stub>);

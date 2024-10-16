@@ -10,12 +10,12 @@
 	import { ScreenToggle } from '@sveltejs/site-kit/components';
 	import Sidebar from './Sidebar.svelte';
 	import {
-		creating,
 		files,
 		reset_files,
 		selected_file,
 		selected_name,
-		solution
+		solution,
+		workspace
 	} from './state.svelte';
 	import { create_directories } from './utils';
 	import { needs_webcontainers, text_files } from './shared';
@@ -150,10 +150,10 @@
 			// find the parent directory
 			const parent = name.split('/').slice(0, -1).join('/');
 
-			creating.set({
+			workspace.creating = {
 				parent,
 				type: 'file'
-			});
+			};
 
 			show_filetree = true;
 		} else {

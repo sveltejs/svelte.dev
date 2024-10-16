@@ -5,7 +5,7 @@
 	import Item from './Item.svelte';
 	import folder_closed from '$lib/icons/folder.svg';
 	import folder_open from '$lib/icons/folder-open.svg';
-	import { files, solution, creating } from '../state.svelte';
+	import { files, solution, workspace } from '../state.svelte';
 
 	/** @type {import('$lib/tutorial').DirectoryStub} */
 	export let directory;
@@ -81,7 +81,7 @@
 				icon: 'file-new',
 				label: 'New file',
 				fn: () => {
-					creating.set({
+					workspace.creating = ({
 						parent: directory.name,
 						type: 'file'
 					});
@@ -91,7 +91,7 @@
 				icon: 'folder-new',
 				label: 'New folder',
 				fn: () => {
-					creating.set({
+					workspace.creating = ({
 						parent: directory.name,
 						type: 'directory'
 					});
@@ -142,7 +142,7 @@
 />
 
 {#if !$collapsed[directory.name]}
-	{#if $creating?.parent === directory.name && $creating.type === 'directory'}
+	{#if workspace.creating?.parent === directory.name && workspace.creating.type === 'directory'}
 		<Item
 			depth={depth + 1}
 			renaming
@@ -150,7 +150,7 @@
 				add(prefix + e.detail.basename, 'directory');
 			}}
 			on:cancel={() => {
-				creating.set(null);
+				workspace.creating = null;
 			}}
 		/>
 	{/if}
@@ -159,7 +159,7 @@
 		<svelte:self {directory} prefix={directory.name + '/'} depth={depth + 1} contents={children} />
 	{/each}
 
-	{#if $creating?.parent === directory.name && $creating.type === 'file'}
+	{#if workspace.creating?.parent === directory.name && workspace.creating.type === 'file'}
 		<Item
 			depth={depth + 1}
 			renaming
@@ -167,7 +167,7 @@
 				add(prefix + e.detail.basename, 'file');
 			}}
 			on:cancel={() => {
-				creating.set(null);
+				workspace.creating = null;
 			}}
 		/>
 	{/if}
