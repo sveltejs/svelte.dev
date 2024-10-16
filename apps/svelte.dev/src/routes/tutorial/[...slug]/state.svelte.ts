@@ -5,6 +5,7 @@ import type { FileStub, Stub } from '$lib/tutorial';
 // TODO convert to state
 
 class Workspace {
+	files = $state.raw<Stub[]>([]);
 	creating = $state.raw<{ parent: string; type: 'file' | 'directory' } | null>(null);
 
 	selected_name = $state<string | null>(null);
@@ -12,7 +13,11 @@ class Workspace {
 
 export const workspace = new Workspace();
 
-export const files = writable([] as Stub[]);
+// export const files = writable([] as Stub[]);
+export const files = toStore(
+	() => workspace.files,
+	(v) => (workspace.files = v)
+);
 
 const selected_name = toStore(
 	() => workspace.selected_name,
