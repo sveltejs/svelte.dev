@@ -51,11 +51,21 @@
 
 		if (!hash) {
 			repl?.set({
-				files: structuredClone(data.gist.components)
+				// TODO make this munging unnecessary
+				files: structuredClone(data.gist.components).map((file: any) => {
+					const basename = `${file.name}.${file.type}`;
+
+					return {
+						type: 'file',
+						name: basename,
+						basename,
+						contents: file.source,
+						text: true
+					};
+				})
 			});
 
 			modified = false;
-
 			return;
 		}
 
@@ -92,7 +102,7 @@
 		}, 500);
 	}
 
-	function handle_change({ files }: { files: File[] }) {
+	function handle_change() {
 		const was_modified = modified;
 		modified = true;
 

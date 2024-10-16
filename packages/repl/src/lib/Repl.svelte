@@ -49,22 +49,12 @@
 	export function toJSON() {
 		return {
 			imports: $bundle?.imports ?? [],
-			files: $files
+			files: workspace.files
 		};
 	}
 
-	export async function set(data: { files: File[]; css?: string }) {
-		workspace.files = data.files.map((file) => {
-			const basename = `${file.name}.${file.type}`;
-			return {
-				type: 'file',
-				name: basename,
-				basename,
-				contents: file.source,
-				text: true
-			};
-		});
-
+	export async function set(data: { files: WorkspaceFile[]; css?: string }) {
+		workspace.files = data.files;
 		workspace.selected_name = 'App.svelte';
 
 		editor.reset();
@@ -118,7 +108,9 @@
 
 		rebundle,
 		migrate,
-		handle_select
+		handle_select,
+
+		workspace
 	});
 
 	let current_token: Symbol;

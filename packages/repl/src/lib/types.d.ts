@@ -2,6 +2,7 @@ import type { EditorState } from '@codemirror/state';
 import { OutputChunk, RollupError } from '@rollup/browser';
 import type { Readable, Writable } from 'svelte/store';
 import type { CompileOptions, CompileError } from 'svelte/compiler';
+import type { Workspace } from 'editor';
 
 export type Lang = 'js' | 'svelte' | 'json' | 'md' | 'css' | (string & Record<never, never>);
 
@@ -60,6 +61,7 @@ export type ReplContext = {
 	cursor_pos: Writable<ReplState['cursor_pos']>;
 	toggleable: Writable<ReplState['toggleable']>;
 	module_editor: Writable<ReplState['module_editor']>;
+	workspace: Workspace;
 
 	// Methods
 	rebundle(): Promise<void>;
