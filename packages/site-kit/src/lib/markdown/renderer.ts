@@ -680,6 +680,13 @@ async function syntax_highlight({
 			if (check) {
 				// munge the twoslash output so that it renders sensibly. the order of operations
 				// here is important — we need to work backwards, to avoid corrupting the offsets
+
+				// first, strip out unwanted error lines
+				html = html.replace(
+					/<div class="twoslash-meta-line twoslash-error-line">[^]+?<\/div>/g,
+					'\n'
+				);
+
 				const replacements: Array<{ start: number; end: number; content: string }> = [];
 
 				for (const match of html.matchAll(/<div class="twoslash-popup-docs">([^]+?)<\/div>/g)) {
