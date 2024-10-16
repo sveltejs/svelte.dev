@@ -2,6 +2,8 @@ import { derived, writable, type Writable } from 'svelte/store';
 import * as adapter from './adapter.svelte';
 import type { FileStub, Stub } from '$lib/tutorial';
 
+// TODO convert to state
+
 export const files = writable([] as Stub[]);
 
 export const solution = writable({} as Record<string, Stub>);
