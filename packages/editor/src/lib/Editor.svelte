@@ -14,17 +14,18 @@
 	import { autocomplete_for_svelte } from '@sveltejs/site-kit/codemirror';
 	import type { Diagnostic } from '@codemirror/lint';
 	import { Workspace, type Item, type File } from './Workspace.svelte.js';
-	import type { Warning } from 'svelte/compiler';
+	import type { CompileError, Warning } from 'svelte/compiler';
 	import './codemirror.css';
 
 	interface Props {
-		warnings: Record<string, Warning[]>; // TODO this should include errors as well
+		errors: Record<string, CompileError>;
+		warnings: Record<string, Warning[]>;
 		workspace: Workspace;
 		onchange: (file: File, contents: string) => void;
 		autocomplete_filter?: (file: File) => boolean;
 	}
 
-	let { warnings, workspace, onchange, autocomplete_filter = () => true }: Props = $props();
+	let { errors, warnings, workspace, onchange, autocomplete_filter = () => true }: Props = $props();
 
 	let container: HTMLDivElement;
 
@@ -168,10 +169,31 @@
 	$effect(() => {
 		if (!editor_view || !workspace.selected_name) return;
 
+		const diagnostics: Diagnostic[] = [];
+
+		const error = null; // TODO should be `errors[workspace.selected_name]` but it's currently a Rollup plugin error...
 		const current_warnings = warnings[workspace.selected_name] || [];
-		const diagnostics = current_warnings.map((warning) => {
-			/** @type {import('@codemirror/lint').Diagnostic} */
-			const diagnostic: Diagnostic = {
+
+		if (error) {
+			diagnostics.push({
+				severity: 'error',
+				from: error.position![0],
+				to: error.position![1],
+				message: error.message,
+				renderMessage: () => {
+					// TODO expose error codes, so we can link to docs in future
+					const span = document.createElement('span');
+					span.innerHTML = `${error.message
+						.replace(/&/g, '&amp;')
+						.replace(/</g, '&lt;')
+						.replace(/`(.+?)`/g, `<code>$1</code>`)}`;
+					return span;
+				}
+			});
+		}
+
+		for (const warning of current_warnings) {
+			diagnostics.push({
 				severity: 'warning',
 				from: warning.start!.character,
 				to: warning.end!.character,
@@ -184,10 +206,8 @@
 						.replace(/`(.+?)`/g, `<code>$1</code>`)} <strong>(${warning.code})</strong>`;
 					return span;
 				}
-			};
-
-			return diagnostic;
-		});
+			});
+		}
 
 		const transaction = setDiagnostics(editor_view.state, diagnostics);
 		editor_view.dispatch(transaction);
