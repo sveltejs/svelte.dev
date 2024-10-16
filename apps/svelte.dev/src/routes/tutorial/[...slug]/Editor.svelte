@@ -16,7 +16,6 @@
 	import { adapter_state } from './adapter.svelte';
 	import './codemirror.css';
 	import { files, selected_file, selected_name, update_file } from './state.js';
-	import { toStore } from 'svelte/store';
 	import { autocomplete_for_svelte } from '@sveltejs/site-kit/codemirror';
 	import type { Diagnostic } from '@codemirror/lint';
 	import type { Exercise, Stub } from '$lib/tutorial';
@@ -37,8 +36,6 @@
 	let editor_states = new Map<string, EditorState>();
 
 	let editor_view = $state() as EditorView;
-
-	const warnings = toStore(() => adapter_state.warnings);
 
 	const extensions = [
 		basicSetup,
@@ -198,7 +195,7 @@
 	$effect(() => {
 		if (editor_view) {
 			if ($selected_name) {
-				const current_warnings = $warnings[$selected_name] || [];
+				const current_warnings = adapter_state.warnings[$selected_name] || [];
 				const diagnostics = current_warnings.map((warning) => {
 					/** @type {import('@codemirror/lint').Diagnostic} */
 					const diagnostic: Diagnostic = {
@@ -210,8 +207,8 @@
 
 					return diagnostic;
 				});
-				const transaction = setDiagnostics(editor_view.state, diagnostics);
 
+				const transaction = setDiagnostics(editor_view.state, diagnostics);
 				editor_view.dispatch(transaction);
 			}
 		}
