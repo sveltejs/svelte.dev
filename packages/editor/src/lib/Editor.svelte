@@ -175,7 +175,7 @@
 		await reset(workspace.files);
 
 		if (editor_view) {
-			// TODO is it possible to get here?
+			// TODO is it possible for `editor_view` to be falsy?
 			select_state(workspace.selected_name);
 		}
 	});
