@@ -1,33 +1,21 @@
-import { derived, writable } from 'svelte/store';
+import { derived, writable, type Writable } from 'svelte/store';
 import * as adapter from './adapter.svelte';
+import type { DirectoryStub, FileStub, Stub } from '$lib/tutorial';
 
-/**
- * @template T
- * @typedef {import('svelte/store').Writable<T>} Writable<T>
- */
+export const files = writable([] as Stub[]);
 
-/** @type {Writable<import('$lib/tutorial').Stub[]>} */
-export const files = writable([]);
+export const solution = writable({} as Record<string, Stub>);
 
-/** @type {Writable<Record<string, import('$lib/tutorial').Stub>>} */
-export const solution = writable({});
+export const creating: Writable<{ parent: string; type: 'file' | 'directory' } | null> =
+	writable(null);
 
-/** @type {Writable<{ parent: string, type: 'file' | 'directory' } | null>} */
-export const creating = writable(null);
-
-/** @type {Writable<string | null>} */
-export const selected_name = writable(null);
+export const selected_name: Writable<string | null> = writable(null);
 
 export const selected_file = derived([files, selected_name], ([$files, $selected_name]) => {
-	return (
-		/** @type{import('$lib/tutorial').FileStub | undefined} */ (
-			$files.find((stub) => stub.name === $selected_name)
-		) ?? null
-	);
+	return ($files.find((stub) => stub.name === $selected_name) as FileStub) ?? null;
 });
 
-/** @param {import('$lib/tutorial').FileStub} file */
-export function update_file(file) {
+export function update_file(file: FileStub) {
 	files.update(($files) => {
 		return $files.map((old) => {
 			if (old.name === file.name) {
@@ -40,8 +28,7 @@ export function update_file(file) {
 	adapter.update(file);
 }
 
-/** @param {import('$lib/tutorial').Stub[]} new_files */
-export function reset_files(new_files) {
+export function reset_files(new_files: Stub[]) {
 	// if the selected file no longer exists, clear it
 	selected_name.update(($selected_name) => {
 		const file = new_files.find((file) => file.name === $selected_name);
@@ -52,11 +39,7 @@ export function reset_files(new_files) {
 	adapter.reset(new_files);
 }
 
-/**
- * @param {string} name
- * @param {import('$lib/tutorial').Stub[]} files
- */
-export function create_directories(name, files) {
+export function create_directories(name: string, files: Stub[]) {
 	const existing = new Set();
 
 	for (const file of files) {
@@ -65,8 +48,7 @@ export function create_directories(name, files) {
 		}
 	}
 
-	/** @type {import('$lib/tutorial').DirectoryStub[]} */
-	const directories = [];
+	const directories: DirectoryStub[] = [];
 
 	const parts = name.split('/');
 	while (parts.length) {
@@ -80,7 +62,7 @@ export function create_directories(name, files) {
 		directories.push({
 			type: 'directory',
 			name: dir,
-			basename: /** @type {string} */ (parts.at(-1))
+			basename: parts.at(-1)!
 		});
 	}
 
