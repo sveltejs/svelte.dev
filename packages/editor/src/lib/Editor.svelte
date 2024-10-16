@@ -175,21 +175,21 @@
 		const current_warnings = warnings[workspace.selected_name] || [];
 
 		if (error) {
-			diagnostics.push({
-				severity: 'error',
-				from: error.position![0],
-				to: error.position![1],
-				message: error.message,
-				renderMessage: () => {
-					// TODO expose error codes, so we can link to docs in future
-					const span = document.createElement('span');
-					span.innerHTML = `${error.message
-						.replace(/&/g, '&amp;')
-						.replace(/</g, '&lt;')
-						.replace(/`(.+?)`/g, `<code>$1</code>`)}`;
-					return span;
-				}
-			});
+			// diagnostics.push({
+			// 	severity: 'error',
+			// 	from: error.position![0],
+			// 	to: error.position![1],
+			// 	message: error.message,
+			// 	renderMessage: () => {
+			// 		// TODO expose error codes, so we can link to docs in future
+			// 		const span = document.createElement('span');
+			// 		span.innerHTML = `${error.message
+			// 			.replace(/&/g, '&amp;')
+			// 			.replace(/</g, '&lt;')
+			// 			.replace(/`(.+?)`/g, `<code>$1</code>`)}`;
+			// 		return span;
+			// 	}
+			// });
 		}
 
 		for (const warning of current_warnings) {
