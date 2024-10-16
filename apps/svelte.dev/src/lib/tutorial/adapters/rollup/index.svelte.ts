@@ -40,7 +40,7 @@ export async function create(): Promise<Adapter> {
 	let current_stubs = stubs_to_map([]);
 
 	async function compile() {
-		const result = await bundler.bundle(
+		state.bundle = await bundler.bundle(
 			[...current_stubs.values()]
 				// TODO we can probably remove all the SvelteKit specific stuff from the tutorial content once this settles down
 				.filter((f): f is File => f.name.startsWith('/src/lib/') && f.type === 'file')
@@ -50,8 +50,6 @@ export async function create(): Promise<Adapter> {
 					type: f.name.split('.').pop() ?? 'svelte'
 				}))
 		);
-
-		state.bundle = result;
 	}
 
 	const q = yootils.queue(1);

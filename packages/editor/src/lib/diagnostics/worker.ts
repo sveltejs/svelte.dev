@@ -1,6 +1,8 @@
 import { compile, compileModule } from 'svelte/compiler';
 import type { File } from '../Workspace.svelte';
 
+// TODO need to handle Svelte 3/4 for playground
+
 addEventListener('message', (event) => {
 	const { id, file } = event.data as { id: number; file: File };
 
