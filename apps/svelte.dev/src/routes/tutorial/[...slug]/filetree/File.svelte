@@ -2,7 +2,7 @@
 	import * as context from './context.js';
 	import Item from './Item.svelte';
 	import file_icon from '$lib/icons/file.svg';
-	import { selected_name, solution } from '../state.js';
+	import { selected_name, solution } from '../state.svelte';
 
 	/** @type {import('$lib/tutorial').FileStub} */
 	export let file;

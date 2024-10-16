@@ -17,7 +17,7 @@
 		selected_file,
 		selected_name,
 		solution
-	} from './state.js';
+	} from './state.svelte';
 	import { needs_webcontainers, text_files } from './shared';
 	import OutputRollup from './OutputRollup.svelte';
 	import { page } from '$app/stores';

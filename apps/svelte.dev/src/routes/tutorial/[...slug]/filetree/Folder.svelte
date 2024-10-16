@@ -5,7 +5,7 @@
 	import Item from './Item.svelte';
 	import folder_closed from '$lib/icons/folder.svg';
 	import folder_open from '$lib/icons/folder-open.svg';
-	import { files, solution, creating } from '../state.js';
+	import { files, solution, creating } from '../state.svelte';
 
 	/** @type {import('$lib/tutorial').DirectoryStub} */
 	export let directory;

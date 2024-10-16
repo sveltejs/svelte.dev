@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { load_webcontainer, reset } from './adapter.svelte';
-	import { files } from './state.js';
+	import { files } from './state.svelte';
 
 	interface Props {
 		initial: boolean;

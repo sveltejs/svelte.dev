@@ -4,7 +4,7 @@
 	import Folder from './Folder.svelte';
 	import * as context from './context.js';
 	import Modal from '$lib/components/Modal.svelte';
-	import { files, solution, reset_files, create_directories, selected_name } from '../state.js';
+	import { files, solution, reset_files, create_directories, selected_name } from '../state.svelte';
 	import { afterNavigate } from '$app/navigation';
 
 	/** @type {import('$lib/tutorial').Exercise} */
