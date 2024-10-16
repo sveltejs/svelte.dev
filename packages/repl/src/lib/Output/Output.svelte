@@ -6,7 +6,7 @@
 	import CompilerOptions from './CompilerOptions.svelte';
 	import PaneWithPanel from './PaneWithPanel.svelte';
 	import Viewer from './Viewer.svelte';
-	import type { File, MessageDetails } from '../types';
+	import type { File } from '../types';
 	import type { CompilerOutput } from '../workers/workers';
 
 	export let status: string | null;
