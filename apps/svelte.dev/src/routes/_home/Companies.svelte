@@ -3,9 +3,9 @@
 		<div class="logos">
 			<enhanced:img src="./companies/ikea.svg" alt="Ikea logo" />
 			<enhanced:img src="./companies/mullvad.svg" alt="Mullvad logo" />
-			<enhanced:img src="./companies/stack-overflow.svg" alt="Mullvad logo" />
-			<enhanced:img src="./companies/yelp.svg" alt="New York Times logo" />
-			<enhanced:img src="./companies/square.svg" alt="Mullvad logo" />
+			<enhanced:img src="./companies/stack-overflow.svg" alt="Stack Overflow logo" />
+			<enhanced:img src="./companies/yelp.svg" alt="Yelp logo" />
+			<enhanced:img src="./companies/square.svg" alt="Square logo" />
 			<enhanced:img src="./companies/apple.svg" alt="Apple logo" />
 		</div>
 	</div>
@@ -34,7 +34,7 @@
 	}
 
 	h2 {
-		width: 12em;
+		width: 11.5em;
 		text-align: center;
 		justify-self: center;
 		z-index: 2;
@@ -55,14 +55,6 @@
 		gap: 4rem;
 		opacity: 0.5;
 
-		.wing:first-child & {
-			right: 0;
-		}
-
-		.wing:last-child & {
-			left: 0;
-		}
-
 		img {
 			height: 100%;
 			width: auto;
@@ -77,11 +69,14 @@
 
 		h2 {
 			position: relative;
-			width: 12em;
 		}
 
-		.wing {
-			left: auto;
+		.wing:first-child .logos {
+			right: 0;
+		}
+
+		.wing:last-child .logos {
+			left: 0;
 		}
 
 		.logos {
