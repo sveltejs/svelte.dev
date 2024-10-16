@@ -5,7 +5,6 @@ title: Custom CSS transitions
 The `svelte/transition` module has a handful of built-in transitions, but it's very easy to create your own. By way of example, this is the source of the `fade` transition:
 
 ```js
-/// no-file
 function fade(node, { delay = 0, duration = 400 }) {
 	const o = +getComputedStyle(node).opacity;
 
@@ -33,7 +32,6 @@ For example, the `fade` transition generates a CSS animation somewhat like this:
 
 <!-- prettier-ignore-start -->
 ```css
-/// no-file
 0% { opacity: 0 }
 10% { opacity: 0.1 }
 20% { opacity: 0.2 }

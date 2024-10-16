@@ -19,7 +19,6 @@ Notice that we're _not_ showing the error message to the user. That's because er
 
 <!-- prettier-ignore-start -->
 ```js
-/// no-file
 {
 	message: 'Internal Error' // or 'Not Found' for a 404
 }

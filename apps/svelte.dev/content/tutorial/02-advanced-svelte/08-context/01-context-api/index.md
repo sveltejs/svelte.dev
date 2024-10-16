@@ -70,7 +70,6 @@ Like lifecycle functions such as `onMount`, `setContext` and `getContext` must b
 Your context object can include anything, including stores. This allows you to pass values that change over time to child components:
 
 ```js
-/// no-file
 // in a parent component
 import { setContext } from 'svelte';
 import { writable } from 'svelte/store';
@@ -81,7 +80,6 @@ setContext('my-context', {
 ```
 
 ```js
-/// no-file
 // in a child component
 import { getContext } from 'svelte';
 

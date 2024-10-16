@@ -7,7 +7,6 @@ Congratulations! If you've made it the entire way through this tutorial, you can
 You can start building apps on your own machine with the [`create-svelte`](https://www.npmjs.com/package/create-svelte) package:
 
 ```bash
-/// no-file
 npm create svelte@latest
 ```
 

@@ -9,7 +9,6 @@ The next two parts of the tutorial will focus on SvelteKit, a full-fledged frame
 If you're suffering from information overload and aren't ready to go through the SvelteKit tutorial yet, don't worry! You can use your existing Svelte knowledge without learning all of SvelteKit. Just run this in your terminal and follow the prompts...
 
 ```bash
-/// no-file
 npm create svelte@latest
 ```
 

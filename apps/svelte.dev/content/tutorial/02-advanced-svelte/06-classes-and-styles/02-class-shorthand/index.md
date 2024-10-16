@@ -5,7 +5,6 @@ title: Shorthand class directive
 Often, the name of the class will be the same as the name of the value it depends on:
 
 ```svelte
-/// no-file
 <button
 	class="card"
 	class:flipped={flipped}
