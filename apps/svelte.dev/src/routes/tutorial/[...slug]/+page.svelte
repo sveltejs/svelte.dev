@@ -177,6 +177,7 @@
 
 	let sidebar = $state() as HTMLElement;
 
+	// TODO this doesn't seem to work any more?
 	export const snapshot: Snapshot<number> = {
 		capture: () => {
 			const scroll = sidebar.scrollTop;
