@@ -64,13 +64,20 @@ export async function create(): Promise<Adapter> {
 					state.logs = [];
 				} else if (chunk?.startsWith('svelte:warnings:')) {
 					const warn: Warning = JSON.parse(chunk.slice(16));
-					const filename = warn.filename.startsWith('/') ? warn.filename : '/' + warn.filename;
+					const filename = (warn.filename!.startsWith('/') ? warn.filename : '/' + warn.filename)!;
 					const current = warnings[filename];
 
 					if (!current) {
 						warnings[filename] = [warn];
 						// the exact same warning may be given multiple times in a row
-					} else if (!current.some((s) => s.code === warn.code && s.pos === warn.pos)) {
+					} else if (
+						!current.some(
+							(s) =>
+								s.code === warn.code &&
+								s.position![0] === warn.position![0] &&
+								s.position![1] === warn.position![1]
+						)
+					) {
 						current.push(warn);
 					}
 
