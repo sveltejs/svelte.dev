@@ -69,7 +69,7 @@
 		}
 	}
 
-	@media (min-width: 800px) {
+	@media (min-width: 600px) {
 		.companies {
 			grid-template-columns: 1fr auto 1fr;
 			align-items: center;
