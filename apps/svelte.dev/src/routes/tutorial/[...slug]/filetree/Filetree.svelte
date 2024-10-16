@@ -4,10 +4,11 @@
 	import Folder from './Folder.svelte';
 	import * as context from './context.js';
 	import Modal from '$lib/components/Modal.svelte';
-	import { solution, Workspace } from '../state.svelte';
+	import { solution } from '../state.svelte';
 	import { create_directories } from '../utils';
 	import { afterNavigate } from '$app/navigation';
-	import type { Exercise, Stub } from '$lib/tutorial';
+	import type { Exercise } from '$lib/tutorial';
+	import type { Workspace, Item } from 'editor';
 
 	interface Props {
 		exercise: Exercise;
@@ -55,7 +56,7 @@
 
 			const basename = name.split('/').pop()!;
 
-			const file: Stub =
+			const file: Item =
 				type === 'file'
 					? { type, name, basename, text: true, contents: '' }
 					: { type, name, basename };
@@ -142,7 +143,7 @@
 		workspace
 	});
 
-	function is_deleted(file: Stub) {
+	function is_deleted(file: Item) {
 		if (file.type === 'directory') return `${file.name}/__delete` in exercise.a;
 		if (file.text) return file.contents.startsWith('__delete');
 

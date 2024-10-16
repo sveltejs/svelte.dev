@@ -1,15 +1,15 @@
 <script lang="ts">
 	import { afterNavigate, beforeNavigate } from '$app/navigation';
 	import { SplitPane } from '@rich_harris/svelte-split-pane';
-	import { adapter_state, reset } from './adapter.svelte';
-	import Editor from './Editor.svelte';
+	import * as adapter from './adapter.svelte';
+	import { Editor, Workspace } from 'editor';
 	import ContextMenu from './filetree/ContextMenu.svelte';
 	import Filetree from './filetree/Filetree.svelte';
 	import ImageViewer from './ImageViewer.svelte';
 	import Output from './Output.svelte';
 	import { ScreenToggle } from '@sveltejs/site-kit/components';
 	import Sidebar from './Sidebar.svelte';
-	import { solution, Workspace } from './state.svelte';
+	import { solution } from './state.svelte';
 	import { create_directories } from './utils';
 	import { needs_webcontainers, text_files } from './shared';
 	import OutputRollup from './OutputRollup.svelte';
@@ -23,8 +23,6 @@
 	}
 
 	let { data }: Props = $props();
-
-	const workspace = new Workspace();
 
 	let path = data.exercise.path;
 	let show_editor = $state(false);
@@ -98,7 +96,7 @@
 		const will_delete = previous_files.some((file) => !(file.name in a));
 
 		if (data.exercise.path !== path || will_delete) paused = true;
-		await reset(workspace.files);
+		await adapter.reset(workspace.files);
 
 		path = data.exercise.path;
 		paused = false;
@@ -185,6 +183,19 @@
 	let a = $derived(create_files(data.exercise.a));
 	let b = $derived(create_files({ ...data.exercise.a, ...data.exercise.b }));
 
+	const workspace = new Workspace({
+		files: Object.values(a),
+		selected_name: data.exercise.focus,
+		onupdate(file) {
+			adapter.update(file);
+		},
+		onreset(items) {
+			adapter.reset(items);
+		}
+	});
+
+	solution.set(b);
+
 	// for the things we can't do with media queries
 	let mobile = $derived(w < 800);
 
@@ -197,7 +208,7 @@
 	});
 
 	$effect(() => {
-		workspace.selected_name = data.exercise.focus;
+		workspace.selected_name = data.exercise.focus; // TODO this probably belongs in afterNavigate
 	});
 
 	let completed = $derived(is_completed(workspace.files, b));
@@ -289,7 +300,11 @@
 							</section>
 
 							<section slot="b" class="editor-container">
-								<Editor exercise={data.exercise} warnings={adapter_state.warnings} {workspace} />
+								<Editor
+									exercise={data.exercise}
+									warnings={adapter.adapter_state.warnings}
+									{workspace}
+								/>
 								<ImageViewer selected={workspace.selected_file} />
 
 								{#if mobile && show_filetree}

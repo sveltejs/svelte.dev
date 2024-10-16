@@ -1,5 +1,6 @@
 import type { Writable } from 'svelte/store';
 
+/** @deprecated import type { File } from 'editor' */
 export interface FileStub {
 	type: 'file';
 	name: string;
@@ -8,12 +9,14 @@ export interface FileStub {
 	text: boolean;
 }
 
+/** @deprecated import type { Directory } from 'editor' */
 export interface DirectoryStub {
 	type: 'directory';
 	name: string;
 	basename: string;
 }
 
+/** @deprecated import type { Item } from 'editor' */
 export type Stub = FileStub | DirectoryStub;
 
 export interface Adapter {

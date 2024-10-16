@@ -13,16 +13,15 @@
 	import { svelteTheme } from '@sveltejs/repl/theme';
 	import { basicSetup } from 'codemirror';
 	import { onMount, tick } from 'svelte';
-	import { Workspace } from './state.svelte';
 	import { autocomplete_for_svelte } from '@sveltejs/site-kit/codemirror';
 	import type { Diagnostic } from '@codemirror/lint';
-	import type { Exercise, Stub } from '$lib/tutorial';
+	import { Workspace, type Item } from './Workspace.svelte.js';
 	import type { Warning } from 'svelte/compiler';
 	import './codemirror.css';
 
 	interface Props {
-		exercise: Exercise;
-		warnings: Record<string, Warning[]>;
+		exercise: any; // TODO this needs to be decoupled
+		warnings: Record<string, Warning[]>; // TODO this should include errors as well
 		workspace: Workspace;
 	}
 
@@ -49,7 +48,7 @@
 
 	let installed_vim = false;
 
-	async function reset(files: Stub[]) {
+	async function reset(files: Item[]) {
 		if (skip_reset) return;
 
 		let should_install_vim = localStorage.getItem('vim') === 'true';
