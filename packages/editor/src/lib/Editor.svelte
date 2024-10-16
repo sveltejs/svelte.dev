@@ -30,7 +30,7 @@
 	let container: HTMLDivElement;
 
 	let preserve_editor_focus = $state(false);
-	let skip_reset = true;
+	let skip_set_files = true;
 
 	let remove_focus_timeout = $state<any>();
 
@@ -48,9 +48,7 @@
 
 	let installed_vim = false;
 
-	async function reset(files: Item[]) {
-		if (skip_reset) return;
-
+	async function set_files(files: Item[]) {
 		let should_install_vim = localStorage.getItem('vim') === 'true';
 
 		const q = new URLSearchParams(location.search);
@@ -123,7 +121,7 @@
 	}
 
 	function select_state(selected_name: string | null) {
-		if (skip_reset) return;
+		if (skip_set_files) return;
 
 		const state =
 			(selected_name && editor_states.get(selected_name)) ||
@@ -142,9 +140,11 @@
 				editor_view.update([transaction]);
 
 				if (transaction.docChanged && workspace.selected_file) {
-					skip_reset = true;
+					// TODO this is necessary to prevent the `$effect` that observes
+					// `workspace.files` from refiring, but it would be better to
+					// have an API for updating files from the outside
+					skip_set_files = true;
 
-					// TODO do we even need to update `workspace.files`? maintaining separate editor states is probably sufficient
 					workspace.update_file({
 						...workspace.selected_file,
 						contents: editor_view.state.doc.toString()
@@ -154,7 +154,7 @@
 					editor_states.set(workspace.selected_file.name, editor_view.state);
 
 					await tick();
-					skip_reset = false;
+					skip_set_files = false;
 				}
 			}
 		});
@@ -165,23 +165,25 @@
 	});
 
 	beforeNavigate(() => {
-		skip_reset = true;
+		skip_set_files = true;
 	});
 
 	afterNavigate(async () => {
-		skip_reset = false;
+		skip_set_files = false;
 
 		editor_states.clear();
-		await reset(workspace.files);
+		await set_files(workspace.files);
 
 		if (editor_view) {
 			// TODO is it possible for `editor_view` to be falsy?
+			// TODO is this necessary, given the effect below?
 			select_state(workspace.selected_name);
 		}
 	});
 
 	$effect(() => {
-		reset(workspace.files);
+		const files = workspace.files; // capture the dependency. TODO don't use an effect here
+		if (!skip_set_files) set_files(files);
 	});
 
 	$effect(() => {
