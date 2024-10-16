@@ -86,10 +86,8 @@
 		return files;
 	}
 
-	// for the things we can't do with media queries
-
 	beforeNavigate(() => {
-		previous_files = $files;
+		previous_files = workspace.files;
 	});
 
 	afterNavigate(async () => {
@@ -98,7 +96,7 @@
 		const will_delete = previous_files.some((file) => !(file.name in a));
 
 		if (data.exercise.path !== path || will_delete) paused = true;
-		await reset($files);
+		await reset(workspace.files);
 
 		path = data.exercise.path;
 		paused = false;
@@ -130,14 +128,14 @@
 	}
 
 	function select_file(name: string | null) {
-		const file = name && $files.find((file) => file.name === name);
+		const file = name && workspace.files.find((file) => file.name === name);
 
 		if (!file && name) {
 			// trigger file creation input. first, create any intermediate directories
-			const new_directories = create_directories(name, $files);
+			const new_directories = create_directories(name, workspace.files);
 
 			if (new_directories.length > 0) {
-				reset_files([...$files, ...new_directories]);
+				reset_files([...workspace.files, ...new_directories]);
 			}
 
 			// find the parent directory
@@ -184,6 +182,8 @@
 
 	let a = $derived(create_files(data.exercise.a));
 	let b = $derived(create_files({ ...data.exercise.a, ...data.exercise.b }));
+
+	// for the things we can't do with media queries
 	let mobile = $derived(w < 800);
 
 	$effect(() => {
@@ -198,7 +198,7 @@
 		workspace.selected_name = data.exercise.focus;
 	});
 
-	let completed = $derived(is_completed($files, b));
+	let completed = $derived(is_completed(workspace.files, b));
 </script>
 
 <svelte:head>

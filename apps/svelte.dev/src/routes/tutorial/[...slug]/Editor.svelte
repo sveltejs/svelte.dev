@@ -48,8 +48,7 @@
 
 	let installed_vim = false;
 
-	/** @param {import('$lib/tutorial').Stub[]} $files */
-	async function reset($files: Stub[]) {
+	async function reset(files: Stub[]) {
 		if (skip_reset) return;
 
 		let should_install_vim = localStorage.getItem('vim') === 'true';
@@ -66,7 +65,7 @@
 			extensions.push(vim());
 		}
 
-		for (const file of $files) {
+		for (const file of files) {
 			if (file.type !== 'file') continue;
 
 			let state = editor_states.get(file.name);
@@ -103,7 +102,7 @@
 						...autocomplete_for_svelte(
 							() => $selected_file!.name,
 							() =>
-								$files
+								files
 									.filter(
 										(file) =>
 											file.type === 'file' &&
@@ -149,7 +148,7 @@
 				if (transaction.docChanged && $selected_file) {
 					skip_reset = true;
 
-					// TODO do we even need to update `$files`? maintaining separate editor states is probably sufficient
+					// TODO do we even need to update `workspace.files`? maintaining separate editor states is probably sufficient
 					update_file({
 						...$selected_file,
 						contents: editor_view.state.doc.toString()
@@ -177,7 +176,7 @@
 		skip_reset = false;
 
 		editor_states.clear();
-		await reset($files);
+		await reset(workspace.files);
 
 		if (editor_view) {
 			// could be false if onMount returned early
@@ -186,7 +185,7 @@
 	});
 
 	$effect(() => {
-		reset($files);
+		reset(workspace.files);
 	});
 
 	$effect(() => {
