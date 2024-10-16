@@ -168,65 +168,35 @@
 			--error: hsl(0 100% 70%);
 		}
 
-		.cm-tooltip-arrow::before {
-			border-top-color: transparent;
-			border-bottom-color: transparent;
+		&:has(.cm-diagnostic) {
+			background: transparent;
 		}
 
-		.cm-tooltip-arrow::after {
-			border-top-color: var(--sk-back-3);
-			border-bottom-color: var(--sk-back-3);
+		&:has(.cm-diagnostic-warning) {
+			--bg: var(--warning);
+			--fg: #222;
 		}
-	}
 
-	.cm-tooltip-section {
-		position: relative;
-		padding: 0.5em;
-		left: -13px;
-		background: var(--bg);
-		border-radius: 2px;
-		max-width: 64em;
-	}
+		&:has(.cm-diagnostic-error) {
+			--bg: var(--error);
+			--fg: #222;
+		}
 
-	.cm-tooltip-section::before {
-		content: '';
-		position: absolute;
-		left: 10px;
-		width: 8px;
-		height: 8px;
-		transform: rotate(45deg);
-		background-color: var(--bg);
-		border-radius: 2px;
-	}
+		.cm-tooltip-section {
+			position: relative;
+			left: -1rem;
+			background: var(--bg);
+			border-radius: 2px;
+			max-width: 64em;
+		}
 
-	.cm-tooltip-below .cm-tooltip-section {
-		top: 10px;
-	}
+		&.cm-tooltip-below .cm-tooltip-section {
+			top: 1rem;
+		}
 
-	.cm-tooltip-above .cm-tooltip-section {
-		bottom: 10px;
-	}
-
-	.cm-tooltip-below .cm-tooltip-section::before {
-		top: -4px;
-	}
-
-	.cm-tooltip-above .cm-tooltip-section::before {
-		bottom: -4px;
-	}
-
-	.cm-tooltip:has(.cm-diagnostic) {
-		background: transparent;
-	}
-
-	.cm-tooltip:has(.cm-diagnostic-warning) {
-		--bg: var(--warning);
-		--fg: #222;
-	}
-
-	.cm-tooltip:has(.cm-diagnostic-error) {
-		--bg: var(--error);
-		--fg: #222;
+		&.cm-tooltip-above .cm-tooltip-section {
+			bottom: 1rem;
+		}
 	}
 
 	.cm-diagnostic {
@@ -234,38 +204,38 @@
 		position: relative;
 		border: none;
 		border-radius: 2px;
-	}
 
-	.cm-diagnostic:not(:last-child) {
-		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-	}
+		&:not(:last-child) {
+			border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+		}
 
-	.cm-diagnostic-error {
-		border: none;
-		filter: drop-shadow(0px 0px 6px var(--error-bg));
-	}
+		&.cm-diagnostic-error {
+			border: none;
+			filter: drop-shadow(0px 0px 6px var(--error-bg));
+		}
 
-	.cm-diagnostic :not(code) {
-		font: var(--sk-font-ui-small);
-	}
+		:not(code) {
+			font: var(--sk-font-ui-small);
+		}
 
-	.cm-diagnosticText {
-		color: var(--fg);
-		position: relative;
-		z-index: 2;
-	}
+		.cm-diagnosticText {
+			color: var(--fg);
+			position: relative;
+			z-index: 2;
 
-	.cm-diagnosticText code {
-		color: inherit;
-		background-color: rgba(0, 0, 0, 0.05);
-		border-radius: 2px;
-		top: 0;
-		padding: 0.2em;
-		font-size: 1em;
-	}
+			code {
+				color: inherit;
+				background-color: rgba(0, 0, 0, 0.05);
+				border-radius: 2px;
+				top: 0;
+				padding: 0.2em;
+				font-size: 1em;
+			}
 
-	.cm-diagnosticText strong {
-		font: var(--sk-font-mono);
-		opacity: 0.7;
+			strong {
+				font: var(--sk-font-mono);
+				opacity: 0.7;
+			}
+		}
 	}
 }
