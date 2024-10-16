@@ -9,7 +9,6 @@
 	import AppControls from './AppControls.svelte';
 	import { compress_and_encode_text, decode_and_decompress_text } from './gzip.js';
 	import { page } from '$app/stores';
-	import type { File } from 'editor';
 
 	let { data } = $props();
 

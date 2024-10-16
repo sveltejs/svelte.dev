@@ -9,8 +9,8 @@
 	import { set_repl_context } from './context.js';
 	import { get_full_filename } from './utils.js';
 	import Compiler from './Output/Compiler.js';
-	import { Workspace, Editor, type File as WorkspaceFile } from 'editor';
-	import type { Bundle, File, ReplContext } from './types.js';
+	import { Workspace, Editor, type File } from 'editor';
+	import type { Bundle, ReplContext } from './types.js';
 	import type { CompileOptions } from 'svelte/compiler';
 	import type { CompilerOutput } from './workers/workers.js';
 
@@ -26,16 +26,16 @@
 	export let injectedCSS = '';
 	export let previewTheme: 'light' | 'dark' = 'light';
 	export let showAst = false;
-	export let remove: (value: { files: WorkspaceFile[]; diff: WorkspaceFile }) => void = () => {};
-	export let add: (value: { files: WorkspaceFile[]; diff: WorkspaceFile }) => void = () => {};
-	export let change: (value: { files: WorkspaceFile[]; diff: WorkspaceFile }) => void = () => {};
+	export let remove: (value: { files: File[]; diff: File }) => void = () => {};
+	export let add: (value: { files: File[]; diff: File }) => void = () => {};
+	export let change: (value: { files: File[]; diff: File }) => void = () => {};
 
 	const workspace = new Workspace({
 		files: [],
 		selected_name: '',
 		onupdate(file) {
 			rebundle();
-			change({ files: workspace.files as WorkspaceFile[], diff: file });
+			change({ files: workspace.files as File[], diff: file });
 		},
 		onreset(items) {
 			rebundle();
@@ -53,7 +53,7 @@
 		};
 	}
 
-	export async function set(data: { files: WorkspaceFile[]; css?: string }) {
+	export async function set(data: { files: File[]; css?: string }) {
 		workspace.files = data.files;
 		workspace.selected_name = 'App.svelte';
 
@@ -121,7 +121,7 @@
 		$bundling = new Promise((resolve) => {
 			resolver = resolve;
 		});
-		const result = await $bundler?.bundle(workspace.files as WorkspaceFile[]);
+		const result = await $bundler?.bundle(workspace.files as File[]);
 		if (result && token === current_token) $bundle = result as Bundle;
 		resolver();
 	}
