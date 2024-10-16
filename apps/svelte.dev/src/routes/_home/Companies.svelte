@@ -34,12 +34,11 @@
 	}
 
 	h2 {
-		width: 11.5em;
+		width: 10em;
 		text-align: center;
 		justify-self: center;
 		z-index: 2;
 		filter: drop-shadow(0 0 1rem var(--sk-back-1)) drop-shadow(0 0 1rem var(--sk-back-1));
-		padding: 0 var(--sk-page-padding-side);
 	}
 
 	.wing {
