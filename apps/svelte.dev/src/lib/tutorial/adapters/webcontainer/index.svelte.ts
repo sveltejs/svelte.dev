@@ -8,7 +8,7 @@ import { escape_html } from '../../../utils/escape.js';
 import { ready } from '../common/index.js';
 import type { Adapter } from '$lib/tutorial';
 import type { Item, File } from 'editor';
-import type { Warning } from 'svelte/compiler';
+import type { CompileError, Warning } from 'svelte/compiler';
 
 const converter = new AnsiToHtml({
 	fg: 'var(--sk-text-3)'
@@ -22,6 +22,7 @@ export const state = new (class WCState {
 	base = $state.raw<string | null>(null);
 	error = $state.raw<Error | null>(null);
 	logs = $state.raw<string[]>([]);
+	errors = $state.raw<Record<string, CompileError>>({});
 	warnings = $state.raw<Record<string, Warning[]>>({});
 })();
 
