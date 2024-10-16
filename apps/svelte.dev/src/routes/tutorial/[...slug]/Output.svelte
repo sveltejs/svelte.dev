@@ -9,7 +9,7 @@
 	import { onMount } from 'svelte';
 	import Chrome from './Chrome.svelte';
 	import Loading from './Loading.svelte';
-	import { adapter_state, subscribe } from './adapter.svelte';
+	import { adapter_state, subscribe, reset } from './adapter.svelte';
 	import type { Exercise } from '$lib/tutorial';
 	import type { Workspace } from './state.svelte';
 
@@ -148,7 +148,9 @@
 			error={adapter_state.error}
 			progress={adapter_state.progress.value}
 			status={adapter_state.progress.text}
-			{workspace}
+			onreset={() => {
+				reset(workspace.files);
+			}}
 		/>
 	{/if}
 
