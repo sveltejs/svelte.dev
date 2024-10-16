@@ -42,15 +42,16 @@
 
 		edited_file.name = match ? match[1] : input_value;
 
-		if (!$selected) return;
+		if (!workspace.selected_name) return;
 
-		if (is_file_name_used($selected)) {
+		if (is_file_name_used(workspace.selected_name)) {
 			let i = 1;
-			let name = $selected.name;
+			let name = workspace.selected_name;
 
 			do {
-				const file = workspace.files.find(
-					(val) => val.name === edited_file.name && val.contents === $selected.contents
+				const file = (workspace.files as WorkspaceFile[]).find(
+					(val) =>
+						val.name === edited_file.name && val.contents === workspace.selected_file.contents
 				);
 
 				if (!file) break;
@@ -98,9 +99,7 @@
 
 		workspace.files = workspace.files.filter((file) => file.name !== filename);
 
-		remove({ files: workspace.files, diff: file });
-
-		EDITOR_STATE_MAP.delete(get_full_filename(file));
+		remove({ files: workspace.files as WorkspaceFile[], diff: file as WorkspaceFile });
 
 		// TODO is one of these lines redundant?
 		workspace.selected_name = idx === 1 ? 'App.svelte' : get_full_filename(file);

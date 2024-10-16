@@ -67,5 +67,4 @@ export type ReplContext = {
 	rebundle(): Promise<void>;
 	migrate(): Promise<void>;
 	handle_select(filename: string): Promise<void>;
-	clear_state(): void;
 };

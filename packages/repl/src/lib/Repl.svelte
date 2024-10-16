@@ -73,7 +73,7 @@
 	}
 
 	export function markSaved() {
-		$files = $files.map((val) => ({ ...val, modified: false }));
+		// TODO mark everything in the workspace as unmodified
 	}
 
 	const DEFAULT_COMPILE_OPTIONS: CompileOptions = {
@@ -122,7 +122,6 @@
 
 		rebundle,
 		migrate,
-		clear_state,
 		handle_select
 	});
 
@@ -140,66 +139,29 @@
 	}
 
 	async function migrate() {
-		if (!compiler || $selected?.type !== 'svelte') return;
+		if (!compiler || !workspace.selected_name?.endsWith('.svelte')) return;
 
-		const result = await compiler.migrate($selected);
+		const result = await compiler.migrate(workspace.selected_file);
 		if (result.error) {
 			// TODO show somehow
 			return;
 		}
 
-		const new_files = $files.map((file) => {
-			if (file.name === $selected?.name) {
-				return {
-					...file,
-					source: result.result.code
-				};
-			}
-			return file;
+		workspace.update_file({
+			...workspace.selected_file,
+			contents: result.result.code
 		});
-		set({ files: new_files });
-	}
 
-	let is_select_changing = false;
+		rebundle();
+	}
 
 	async function handle_select(filename: string) {
 		workspace.selected_name = filename;
 	}
 
-	/** Deletes all editor state */
-	function clear_state() {
-		$module_editor?.clearEditorState();
-
-		EDITOR_STATE_MAP.clear();
-	}
-
-	function populate_editor_state() {
-		for (const file of $files) {
-			EDITOR_STATE_MAP.set(
-				get_full_filename(file),
-				EditorState.create({
-					doc: file.source
-				}).toJSON()
-			);
-		}
-	}
-
 	const compiler = BROWSER ? new Compiler(svelteUrl) : null;
 
 	let compiled: CompilerOutput | null = null;
-
-	async function recompile($selected: File | null, $compile_options: CompileOptions) {
-		if (!compiler || !$selected) return;
-
-		if ($selected.type === 'svelte' || $selected.type === 'js') {
-			compiled = await compiler.compile($selected, $compile_options, true);
-			runes = compiled.metadata?.runes ?? false;
-		} else {
-			runes = false;
-		}
-	}
-
-	$: recompile($selected, $compile_options);
 
 	$: mobile = width < 540;
 
@@ -236,6 +198,8 @@
 		: null;
 
 	function before_unload(event: BeforeUnloadEvent) {
+		// TODO
+
 		if (showModified && $files.find((file) => file.modified)) {
 			event.preventDefault();
 			event.returnValue = '';

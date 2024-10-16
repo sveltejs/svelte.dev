@@ -2,6 +2,7 @@ import type { File } from '../types';
 import type { CompileOptions } from 'svelte/compiler';
 import Worker from '../workers/compiler/index.js?worker';
 import type { CompilerOutput, MigrateOutput } from '../workers/workers';
+import type { File as WorkspaceFile } from 'editor';
 
 const workers = new Map();
 
@@ -56,7 +57,7 @@ export default class Compiler {
 		});
 	}
 
-	migrate(file: File): Promise<MigrateOutput> {
+	migrate(file: WorkspaceFile): Promise<MigrateOutput> {
 		return new Promise((fulfil) => {
 			const id = uid++;
 
@@ -66,7 +67,7 @@ export default class Compiler {
 				id,
 				type: 'migrate',
 				payload: {
-					source: file.source
+					source: file.contents
 				}
 			});
 		});
