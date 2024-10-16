@@ -29,13 +29,11 @@ export const selected_file = derived([files, selected_name], ([$files, $selected
 });
 
 export function update_file(file: FileStub) {
-	files.update(($files) => {
-		return $files.map((old) => {
-			if (old.name === file.name) {
-				return file;
-			}
-			return old;
-		});
+	workspace.files = workspace.files.map((old) => {
+		if (old.name === file.name) {
+			return file;
+		}
+		return old;
 	});
 
 	adapter.update(file);

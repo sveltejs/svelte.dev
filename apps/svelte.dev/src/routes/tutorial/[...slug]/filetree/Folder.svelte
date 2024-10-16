@@ -6,8 +6,8 @@
 	import Item from './Item.svelte';
 	import folder_closed from '$lib/icons/folder.svg';
 	import folder_open from '$lib/icons/folder-open.svg';
-	import { files, solution, workspace } from '../state.svelte';
-	import type { DirectoryStub, FileStub, Stub } from '$lib/tutorial';
+	import { solution, workspace } from '../state.svelte';
+	import type { DirectoryStub, FileStub, MenuItem, Stub } from '$lib/tutorial';
 
 	interface Props {
 		directory: DirectoryStub;
@@ -46,7 +46,7 @@
 
 		const child_prefixes = [];
 
-		for (const file of $files) {
+		for (const file of workspace.files) {
 			if (
 				file.type === 'directory' &&
 				file.name.startsWith(prefix) &&
@@ -59,8 +59,8 @@
 		for (const file of Object.values($solution)) {
 			if (!file.name.startsWith(prefix)) continue;
 
-			// if already exists in $files, bail
-			if ($files.find((f) => f.name === file.name)) continue;
+			// if already exists in workspace.files, bail
+			if (workspace.files.find((f) => f.name === file.name)) continue;
 
 			// if intermediate directory exists, bail
 			if (child_prefixes.some((prefix) => file.name.startsWith(prefix))) continue;
@@ -74,27 +74,26 @@
 	// fake root directory has no name
 	let can_remove = $derived(directory.name ? !$solution[directory.name] : false);
 
-	// prettier-ignore
-	let actions = (
-		/** @type {import('$lib/tutorial').MenuItem[]} */ ($derived([
+	let actions = $derived(
+		[
 			can_create.file && {
 				icon: 'file-new',
 				label: 'New file',
 				fn: () => {
-					workspace.creating = ({
+					workspace.creating = {
 						parent: directory.name,
 						type: 'file'
-					});
+					};
 				}
 			},
 			can_create.directory && {
 				icon: 'folder-new',
 				label: 'New folder',
 				fn: () => {
-					workspace.creating = ({
+					workspace.creating = {
 						parent: directory.name,
 						type: 'directory'
-					});
+					};
 				}
 			},
 			can_remove && {
@@ -111,8 +110,8 @@
 					remove(directory);
 				}
 			}
-		].filter(Boolean)))
-	);
+		].filter(Boolean)
+	) as MenuItem[];
 </script>
 
 <Item
@@ -156,7 +155,12 @@
 	{/if}
 
 	{#each child_directories as directory}
-		<Folder {directory} prefix={directory.name + '/'} depth={depth + 1} contents={children} />
+		<Folder
+			directory={directory as DirectoryStub}
+			prefix={directory.name + '/'}
+			depth={depth + 1}
+			contents={children}
+		/>
 	{/each}
 
 	{#if workspace.creating?.parent === directory.name && workspace.creating.type === 'file'}

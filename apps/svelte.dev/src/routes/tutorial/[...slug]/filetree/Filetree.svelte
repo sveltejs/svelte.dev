@@ -46,7 +46,7 @@
 				return;
 			}
 
-			const existing = $files.find((file) => file.name === name);
+			const existing = workspace.files.find((file) => file.name === name);
 			if (existing) {
 				modal_text = `A ${existing.type} already exists with this name`;
 				return;
@@ -59,7 +59,7 @@
 					? { type, name, basename, text: true, contents: '' }
 					: { type, name, basename };
 
-			reset_files([...$files, ...create_directories(name, $files), file]);
+			reset_files([...workspace.files, ...create_directories(name, workspace.files), file]);
 
 			if (type === 'file') {
 				dispatch('select', { name });
@@ -69,7 +69,7 @@
 		rename: async (to_rename, new_name) => {
 			const new_full_name = to_rename.name.slice(0, -to_rename.basename.length) + new_name;
 
-			if ($files.some((f) => f.name === new_full_name)) {
+			if (workspace.files.some((f) => f.name === new_full_name)) {
 				modal_text = `A file or folder named ${new_full_name} already exists`;
 				return;
 			}
@@ -89,7 +89,7 @@
 			}
 
 			if (to_rename.type === 'directory') {
-				for (const file of $files) {
+				for (const file of workspace.files) {
 					if (file.name.startsWith(to_rename.name + '/')) {
 						file.name = new_full_name + file.name.slice(to_rename.name.length);
 					}
@@ -101,7 +101,7 @@
 			to_rename.basename = new_full_name.split('/').pop()!;
 			to_rename.name = new_full_name;
 
-			reset_files([...$files, ...create_directories(new_full_name, $files)]);
+			reset_files([...workspace.files, ...create_directories(new_full_name, workspace.files)]);
 
 			if (was_selected) {
 				dispatch('select', { name: new_full_name });
@@ -119,7 +119,7 @@
 			dispatch('select', { name: null });
 
 			reset_files(
-				$files.filter((f) => {
+				workspace.files.filter((f) => {
 					if (f === file) return false;
 					if (f.name.startsWith(file.name + '/')) return false;
 					return true;
@@ -164,7 +164,7 @@
 			name: '',
 			basename: exercise.scope.name
 		}}
-		contents={$files.filter((file) => !hidden.has(file.basename) && !is_deleted(file))}
+		contents={workspace.files.filter((file) => !hidden.has(file.basename) && !is_deleted(file))}
 	/>
 </ul>
 

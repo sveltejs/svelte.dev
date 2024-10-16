@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { load_webcontainer, reset } from './adapter.svelte';
-	import { files } from './state.svelte';
+	import { workspace } from './state.svelte';
 
 	interface Props {
 		initial: boolean;
@@ -69,7 +69,7 @@
 							onclick={async () => {
 								error = null;
 								load_webcontainer(true);
-								await reset($files);
+								await reset(workspace.files);
 							}}>clicking here</button
 						>.
 					</p>
