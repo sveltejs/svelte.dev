@@ -22,7 +22,7 @@ export const state = new (class WCState {
 	base = $state.raw<string | null>(null);
 	error = $state.raw<Error | null>(null);
 	logs = $state.raw<string[]>([]);
-	errors = $state.raw<Record<string, CompileError>>({});
+	errors = $state.raw<Record<string, CompileError | null>>({});
 	warnings = $state.raw<Record<string, Warning[]>>({});
 })();
 

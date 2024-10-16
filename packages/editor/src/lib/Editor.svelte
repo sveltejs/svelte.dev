@@ -18,7 +18,7 @@
 	import './codemirror.css';
 
 	interface Props {
-		errors: Record<string, CompileError>;
+		errors: Record<string, CompileError | null>;
 		warnings: Record<string, Warning[]>;
 		workspace: Workspace;
 		onchange: (file: File, contents: string) => void;
