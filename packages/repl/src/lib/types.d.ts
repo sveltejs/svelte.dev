@@ -61,8 +61,6 @@ export type ReplContext = {
 	toggleable: Writable<ReplState['toggleable']>;
 	module_editor: Writable<ReplState['module_editor']>;
 
-	EDITOR_STATE_MAP: Map<string, EditorState>;
-
 	// Methods
 	rebundle(): Promise<void>;
 	migrate(): Promise<void>;

@@ -7,14 +7,12 @@
 	import type { File } from '../types';
 	import type { Workspace, File as WorkspaceFile } from 'editor';
 
-	export let show_modified: boolean;
 	export let runes: boolean;
 	export let remove: (value: { files: WorkspaceFile[]; diff: WorkspaceFile }) => void;
 	export let add: (value: { files: WorkspaceFile[]; diff: WorkspaceFile }) => void;
 	export let workspace: Workspace;
 
-	const { files, handle_select, module_editor, rebundle, selected, EDITOR_STATE_MAP } =
-		get_repl_context();
+	const { files, handle_select, module_editor, rebundle, selected } = get_repl_context();
 
 	let editing_name: string | null = null;
 	let input_value = '';
@@ -65,14 +63,6 @@
 
 		const idx = workspace.files.findIndex((val) => val.name === edited_file.name);
 		if (match?.[2]) $files[idx].type = match[2];
-
-		if (editing_name) {
-			const old_state = EDITOR_STATE_MAP.get(editing_name);
-			if (old_state) {
-				EDITOR_STATE_MAP.set(edited_file.name, old_state);
-				EDITOR_STATE_MAP.delete(editing_name);
-			}
-		}
 
 		editing_name = null;
 
@@ -205,7 +195,7 @@
 
 				{#if file.name === 'App' && filename !== editing_name}
 					<div class="uneditable">
-						App.svelte{#if show_modified && workspace.modified[file.name]}*{/if}
+						App.svelte{#if workspace.modified[file.name]}*{/if}
 					</div>
 				{:else if filename === editing_name}
 					{@const editing_file = workspace.files.find((file) => file.name === editing_name)}
@@ -242,7 +232,7 @@
 						on:click={() => edit_tab(file)}
 						on:keyup={(e) => e.key === ' ' && edit_tab(file)}
 					>
-						{file.name}{#if show_modified && workspace.modified[file.name]}*{/if}
+						{file.name}{#if workspace.modified[file.name]}*{/if}
 					</div>
 
 					<span

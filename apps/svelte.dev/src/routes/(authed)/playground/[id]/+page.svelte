@@ -2,13 +2,14 @@
 	import { browser } from '$app/environment';
 	import { afterNavigate, goto, replaceState } from '$app/navigation';
 	import type { Gist } from '$lib/db/types';
-	import { Repl, type File } from '@sveltejs/repl';
+	import { Repl } from '@sveltejs/repl';
 	import { theme } from '@sveltejs/site-kit/stores';
 	import { onMount } from 'svelte';
 	import { mapbox_setup } from '../../../../config.js';
 	import AppControls from './AppControls.svelte';
 	import { compress_and_encode_text, decode_and_decompress_text } from './gzip.js';
 	import { page } from '$app/stores';
+	import type { File } from 'editor';
 
 	let { data } = $props();
 
@@ -53,6 +54,8 @@
 				files: structuredClone(data.gist.components)
 			});
 
+			modified = false;
+
 			return;
 		}
 
@@ -91,7 +94,7 @@
 
 	function handle_change({ files }: { files: File[] }) {
 		const was_modified = modified;
-		modified = files.some((c) => c.modified);
+		modified = true;
 
 		if (
 			!was_modified &&
@@ -142,27 +145,29 @@
 	/>
 
 	{#if browser}
-		<Repl
-			bind:this={repl}
-			{svelteUrl}
-			{relaxed}
-			{can_escape}
-			vim={data.vim}
-			injectedJS={mapbox_setup}
-			showModified
-			showAst
-			change={handle_change}
-			add={handle_change}
-			remove={handle_change}
-			blur={() => {
+		<div
+			style="display: contents"
+			onfocusout={() => {
 				// Only change hash on editor blur to not pollute everyone's browser history
 				if (modified) {
 					const json = JSON.stringify({ files: repl.toJSON().files });
 					change_hash(json);
 				}
 			}}
-			previewTheme={$theme.current}
-		/>
+		>
+			<Repl
+				bind:this={repl}
+				{svelteUrl}
+				{relaxed}
+				{can_escape}
+				injectedJS={mapbox_setup}
+				showAst
+				change={handle_change}
+				add={handle_change}
+				remove={handle_change}
+				previewTheme={$theme.current}
+			/>
+		</div>
 	{/if}
 </div>
 
@@ -190,14 +195,6 @@
 	}
 	.repl-outer :global(.tab-content.visible) {
 		visibility: visible;
-	}
-
-	.zen-mode {
-		position: fixed;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		z-index: 111;
 	}
 
 	@keyframes fade-in {

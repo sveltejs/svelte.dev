@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { EditorState } from '@codemirror/state';
 	import { SplitPane } from '@rich_harris/svelte-split-pane';
 	import { ScreenToggle } from '@sveltejs/site-kit/components';
 	import { BROWSER } from 'esm-env';
@@ -26,17 +25,17 @@
 	export let injectedJS = '';
 	export let injectedCSS = '';
 	export let previewTheme: 'light' | 'dark' = 'light';
-	export let showModified = false;
 	export let showAst = false;
-	export let remove: (value: { files: File[]; diff: File }) => void = () => {};
-	export let add: (value: { files: File[]; diff: File }) => void = () => {};
-	export let change: (value: { files: File[] }) => void = () => {};
+	export let remove: (value: { files: WorkspaceFile[]; diff: WorkspaceFile }) => void = () => {};
+	export let add: (value: { files: WorkspaceFile[]; diff: WorkspaceFile }) => void = () => {};
+	export let change: (value: { files: WorkspaceFile[]; diff: WorkspaceFile }) => void = () => {};
 
 	const workspace = new Workspace({
 		files: [],
 		selected_name: '',
 		onupdate(file) {
 			rebundle();
+			change({ files: workspace.files as WorkspaceFile[], diff: file });
 		},
 		onreset(items) {
 			rebundle();
@@ -81,7 +80,6 @@
 		dev: false
 	};
 
-	const EDITOR_STATE_MAP: Map<string, EditorState> = new Map();
 	const files: ReplContext['files'] = writable([]);
 	const selected_name: ReplContext['selected_name'] = writable('App.svelte');
 	const selected: ReplContext['selected'] = derived(
@@ -117,8 +115,6 @@
 		cursor_pos,
 		module_editor,
 		toggleable,
-
-		EDITOR_STATE_MAP,
 
 		rebundle,
 		migrate,
@@ -198,7 +194,7 @@
 		: null;
 
 	function before_unload(event: BeforeUnloadEvent) {
-		if (showModified && Object.keys(workspace.modified).length > 0) {
+		if (Object.keys(workspace.modified).length > 0) {
 			event.preventDefault();
 			event.returnValue = '';
 		}
@@ -218,7 +214,7 @@
 			max="-4.1rem"
 		>
 			<section slot="a">
-				<ComponentSelector show_modified={showModified} {runes} {add} {remove} {workspace} />
+				<ComponentSelector {runes} {add} {remove} {workspace} />
 
 				<Editor
 					bind:this={editor}
