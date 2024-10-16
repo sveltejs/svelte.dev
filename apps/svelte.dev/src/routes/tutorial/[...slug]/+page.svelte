@@ -1,7 +1,7 @@
 <script>
 	import { afterNavigate, beforeNavigate } from '$app/navigation';
 	import { SplitPane } from '@rich_harris/svelte-split-pane';
-	import { reset } from './adapter.svelte';
+	import { adapter_state, reset } from './adapter.svelte';
 	import Editor from './Editor.svelte';
 	import ContextMenu from './filetree/ContextMenu.svelte';
 	import Filetree from './filetree/Filetree.svelte';
@@ -291,7 +291,7 @@
 							</section>
 
 							<section class="editor-container" slot="b">
-								<Editor exercise={data.exercise} />
+								<Editor exercise={data.exercise} warnings={adapter_state.warnings} />
 								<ImageViewer selected={$selected_file} />
 
 								{#if mobile && show_filetree}

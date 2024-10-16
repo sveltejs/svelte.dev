@@ -13,18 +13,19 @@
 	import { svelteTheme } from '@sveltejs/repl/theme';
 	import { basicSetup } from 'codemirror';
 	import { onMount, tick } from 'svelte';
-	import { adapter_state } from './adapter.svelte';
-	import './codemirror.css';
 	import { files, selected_file, selected_name, update_file } from './state.js';
 	import { autocomplete_for_svelte } from '@sveltejs/site-kit/codemirror';
 	import type { Diagnostic } from '@codemirror/lint';
 	import type { Exercise, Stub } from '$lib/tutorial';
+	import type { Warning } from 'svelte/compiler';
+	import './codemirror.css';
 
 	interface Props {
 		exercise: Exercise;
+		warnings: Record<string, Warning[]>;
 	}
 
-	let { exercise }: Props = $props();
+	let { exercise, warnings }: Props = $props();
 
 	let container = $state() as HTMLDivElement;
 
@@ -195,7 +196,7 @@
 	$effect(() => {
 		if (editor_view) {
 			if ($selected_name) {
-				const current_warnings = adapter_state.warnings[$selected_name] || [];
+				const current_warnings = warnings[$selected_name] || [];
 				const diagnostics = current_warnings.map((warning) => {
 					/** @type {import('@codemirror/lint').Diagnostic} */
 					const diagnostic: Diagnostic = {
