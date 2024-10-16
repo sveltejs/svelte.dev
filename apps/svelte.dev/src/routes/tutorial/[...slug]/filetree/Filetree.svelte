@@ -8,16 +8,14 @@
 	import { create_directories } from '../utils';
 	import { afterNavigate } from '$app/navigation';
 
-	/** @type {import('$lib/tutorial').Exercise} */
-	export let exercise;
-
-	export let mobile = false;
+	/** @type {{exercise: import('$lib/tutorial').Exercise, mobile?: boolean}} */
+	let { exercise, mobile = false } = $props();
 
 	const dispatch = createEventDispatcher();
 
 	const hidden = new Set(['__client.js', 'node_modules', '__delete']);
 
-	let modal_text = '';
+	let modal_text = $state('');
 
 	/** @type {import('svelte/store').Writable<Record<string, boolean>>}*/
 	const collapsed = writable({});
@@ -140,11 +138,11 @@
 	}
 </script>
 
-<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
 <ul
 	class="filetree"
 	class:mobile
-	on:keydown={(e) => {
+	onkeydown={(e) => {
 		if (e.key === 'ArrowUp' || e.key === 'ArrowDown') {
 			e.preventDefault();
 			const lis = Array.from(e.currentTarget.querySelectorAll('li'));
@@ -173,7 +171,7 @@
 		<div class="modal-contents">
 			<h2>This action is not allowed</h2>
 			<p>{modal_text}</p>
-			<button on:click={() => (modal_text = '')}>OK</button>
+			<button onclick={() => (modal_text = '')}>OK</button>
 		</div>
 	</Modal>
 {/if}
