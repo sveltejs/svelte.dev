@@ -6,7 +6,7 @@
 	import Item from './Item.svelte';
 	import folder_closed from '$lib/icons/folder.svg';
 	import folder_open from '$lib/icons/folder-open.svg';
-	import { solution, workspace } from '../state.svelte';
+	import { solution } from '../state.svelte';
 	import type { DirectoryStub, FileStub, MenuItem, Stub } from '$lib/tutorial';
 
 	interface Props {
@@ -20,7 +20,7 @@
 
 	let renaming = $state(false);
 
-	const { collapsed, rename, add, remove } = context.get();
+	const { collapsed, rename, add, remove, workspace } = context.get();
 
 	let segments = $derived(get_depth(prefix));
 

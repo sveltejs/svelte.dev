@@ -2,7 +2,7 @@
 	import * as context from './context.js';
 	import Item from './Item.svelte';
 	import file_icon from '$lib/icons/file.svg';
-	import { solution, workspace } from '../state.svelte';
+	import { solution } from '../state.svelte';
 	import type { FileStub, MenuItem } from '$lib/tutorial';
 
 	interface Props {
@@ -12,7 +12,7 @@
 
 	let { file, depth }: Props = $props();
 
-	const { rename, remove, select } = context.get();
+	const { rename, remove, select, workspace } = context.get();
 
 	let renaming = $state(false);
 

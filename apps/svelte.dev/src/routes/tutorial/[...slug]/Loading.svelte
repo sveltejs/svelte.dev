@@ -1,15 +1,16 @@
 <script lang="ts">
 	import { load_webcontainer, reset } from './adapter.svelte';
-	import { workspace } from './state.svelte';
+	import { Workspace } from './state.svelte';
 
 	interface Props {
 		initial: boolean;
 		error?: Error | null;
 		progress: number;
 		status: string;
+		workspace: Workspace;
 	}
 
-	let { initial, error = null, progress, status }: Props = $props();
+	let { initial, error = null, progress, status, workspace }: Props = $props();
 </script>
 
 <div class="loading">

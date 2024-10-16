@@ -7,6 +7,7 @@ import { setContext, getContext } from 'svelte';
  *   rename: (stub: import('$lib/tutorial').Stub, name: string) => Promise<void>;
  *   remove: (stub: import('$lib/tutorial').Stub) => Promise<void>;
  *   select: (name: string) => void;
+ *   workspace: import('../state.svelte').Workspace
  * }} FileTreeContext
  */
 

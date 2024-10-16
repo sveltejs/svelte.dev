@@ -4,7 +4,7 @@
 	import Folder from './Folder.svelte';
 	import * as context from './context.js';
 	import Modal from '$lib/components/Modal.svelte';
-	import { solution, workspace } from '../state.svelte';
+	import { solution, Workspace } from '../state.svelte';
 	import { create_directories } from '../utils';
 	import { afterNavigate } from '$app/navigation';
 	import type { Exercise, Stub } from '$lib/tutorial';
@@ -12,9 +12,10 @@
 	interface Props {
 		exercise: Exercise;
 		mobile?: boolean;
+		workspace: Workspace;
 	}
 
-	let { exercise, mobile = false }: Props = $props();
+	let { exercise, mobile = false, workspace }: Props = $props();
 
 	const dispatch = createEventDispatcher();
 
@@ -136,7 +137,9 @@
 
 		select: (name) => {
 			dispatch('select', { name });
-		}
+		},
+
+		workspace
 	});
 
 	function is_deleted(file: Stub) {

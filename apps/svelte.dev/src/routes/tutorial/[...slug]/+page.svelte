@@ -278,6 +278,7 @@
 								{:else}
 									<Filetree
 										exercise={data.exercise}
+										{workspace}
 										on:select={(e) => {
 											select_file(e.detail.name);
 										}}
@@ -286,7 +287,7 @@
 							</section>
 
 							<section slot="b" class="editor-container">
-								<Editor exercise={data.exercise} warnings={adapter_state.warnings} />
+								<Editor exercise={data.exercise} warnings={adapter_state.warnings} {workspace} />
 								<ImageViewer selected={workspace.selected_file} />
 
 								{#if mobile && show_filetree}
@@ -294,6 +295,7 @@
 										<Filetree
 											mobile
 											exercise={data.exercise}
+											{workspace}
 											on:select={(e) => {
 												navigate_to_file(e.detail.name);
 											}}
@@ -306,7 +308,7 @@
 
 					<section slot="b" class="preview">
 						{#if needs_webcontainers($page.data.exercise)}
-							<Output exercise={data.exercise} {paused} />
+							<Output exercise={data.exercise} {paused} {workspace} />
 						{:else}
 							<OutputRollup />
 						{/if}

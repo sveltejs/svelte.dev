@@ -2,7 +2,7 @@ import { writable } from 'svelte/store';
 import * as adapter from './adapter.svelte';
 import type { FileStub, Stub } from '$lib/tutorial';
 
-class Workspace {
+export class Workspace {
 	files = $state.raw<Stub[]>([]);
 	creating = $state.raw<{ parent: string; type: 'file' | 'directory' } | null>(null);
 	selected_name = $state<string | null>(null);

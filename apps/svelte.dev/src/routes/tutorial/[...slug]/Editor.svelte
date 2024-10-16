@@ -13,7 +13,7 @@
 	import { svelteTheme } from '@sveltejs/repl/theme';
 	import { basicSetup } from 'codemirror';
 	import { onMount, tick } from 'svelte';
-	import { workspace } from './state.svelte';
+	import { Workspace } from './state.svelte';
 	import { autocomplete_for_svelte } from '@sveltejs/site-kit/codemirror';
 	import type { Diagnostic } from '@codemirror/lint';
 	import type { Exercise, Stub } from '$lib/tutorial';
@@ -23,9 +23,10 @@
 	interface Props {
 		exercise: Exercise;
 		warnings: Record<string, Warning[]>;
+		workspace: Workspace;
 	}
 
-	let { exercise, warnings }: Props = $props();
+	let { exercise, warnings, workspace }: Props = $props();
 
 	let container = $state() as HTMLDivElement;
 
