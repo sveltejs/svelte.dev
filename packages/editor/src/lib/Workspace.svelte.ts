@@ -30,6 +30,10 @@ export class Workspace {
 
 	modified = $state<Record<string, boolean>>({});
 
+	compiler_options = $state.raw<{ generate: 'client' | 'server'; dev: boolean }>({
+		generate: 'client',
+		dev: false
+	});
 	compiled = $state<Record<string, Compiled>>({});
 
 	#onupdate: (file: File) => void;
@@ -55,16 +59,33 @@ export class Workspace {
 	}
 
 	#reset_diagnostics() {
-		this.compiled = {};
+		if (!BROWSER) return;
 
-		for (const file of this.files) {
+		const keys = Object.keys(this.compiled);
+		const seen: string[] = [];
+
+		let files = this.files;
+
+		// prioritise selected file
+		if (this.selected_file) {
+			const i = this.files.indexOf(this.selected_file!);
+			files = [this.selected_file, ...this.files.slice(0, i), ...this.files.slice(i + 1)];
+		}
+
+		for (const file of files) {
 			if (file.type !== 'file') continue;
 			if (!/\.svelte(\.|$)/.test(file.name)) continue;
 
-			if (BROWSER) {
-				compile_file(file).then((compiled) => {
-					this.compiled[file.name] = compiled;
-				});
+			seen.push(file.name);
+
+			compile_file(file, this.compiler_options).then((compiled) => {
+				this.compiled[file.name] = compiled;
+			});
+		}
+
+		for (const key of keys) {
+			if (!seen.includes(key)) {
+				delete this.compiled[key];
 			}
 		}
 	}
@@ -75,6 +96,10 @@ export class Workspace {
 		}
 
 		return null;
+	}
+
+	invalidate() {
+		this.#reset_diagnostics();
 	}
 
 	mark_saved() {
@@ -92,7 +117,7 @@ export class Workspace {
 		this.modified[file.name] = true;
 
 		if (BROWSER) {
-			compile_file(file).then((compiled) => {
+			compile_file(file, this.compiler_options).then((compiled) => {
 				this.compiled[file.name] = compiled;
 			});
 		}

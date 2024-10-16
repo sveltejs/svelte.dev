@@ -64,18 +64,11 @@
 		workspace.mark_saved();
 	}
 
-	const DEFAULT_COMPILE_OPTIONS: CompileOptions = {
-		generate: 'client',
-		dev: false
-	};
-
 	const bundle: ReplContext['bundle'] = writable(null);
-	const compile_options: ReplContext['compile_options'] = writable(DEFAULT_COMPILE_OPTIONS);
 	const toggleable: ReplContext['toggleable'] = writable(false);
 
 	set_repl_context({
 		bundle,
-		compile_options,
 		toggleable,
 
 		rebundle,

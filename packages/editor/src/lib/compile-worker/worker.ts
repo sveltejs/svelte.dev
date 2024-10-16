@@ -4,14 +4,17 @@ import type { File } from '../Workspace.svelte';
 // TODO need to handle Svelte 3/4 for playground
 
 addEventListener('message', (event) => {
-	const { id, file } = event.data as { id: number; file: File };
+	const { id, file, options } = event.data as {
+		id: number;
+		file: File;
+		options: { generate: 'client' | 'server'; dev: boolean };
+	};
 
 	const fn = file.name.endsWith('.svelte') ? compile : compileModule;
 
 	try {
-		const result = fn(file.contents, {
-			filename: file.name
-		});
+		// @ts-expect-error the CompileOptions types are wrong? idk man
+		const result = fn(file.contents, { ...options, filename: file.name });
 
 		postMessage({
 			id,

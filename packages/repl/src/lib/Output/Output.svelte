@@ -137,7 +137,7 @@
 			</div>
 
 			<div slot="panel-body">
-				<CompilerOptions />
+				<CompilerOptions {workspace} />
 			</div>
 		</PaneWithPanel>
 	{/if}

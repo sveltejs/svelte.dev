@@ -2,7 +2,11 @@
 	import { get_repl_context } from '../context';
 	import { Checkbox } from '@sveltejs/site-kit/components';
 
-	const { compile_options } = get_repl_context();
+	const { workspace } = get_repl_context();
+
+	function onchange() {
+		workspace.invalidate();
+	}
 </script>
 
 <div class="options">
@@ -10,18 +14,30 @@
 	<div class="option">
 		<span class="key">generate:</span>
 
-		<input id="client" type="radio" bind:group={$compile_options.generate} value="client" />
+		<input
+			id="client"
+			type="radio"
+			bind:group={workspace.compiler_options.generate}
+			value="client"
+			{onchange}
+		/>
 		<label for="client"><span class="string">"client"</span></label>
 
-		<input id="server" type="radio" bind:group={$compile_options.generate} value="server" />
+		<input
+			id="server"
+			type="radio"
+			bind:group={workspace.compiler_options.generate}
+			value="server"
+			{onchange}
+		/>
 		<label for="server"><span class="string">"server"</span>,</label>
 	</div>
 
 	<!-- svelte-ignore a11y_label_has_associated_control (TODO this warning should probably be disabled if there's a component)-->
 	<label class="option">
 		<span class="key">dev:</span>
-		<Checkbox bind:checked={$compile_options.dev!} />
-		<span class="boolean">{$compile_options.dev}</span>,
+		<Checkbox bind:checked={workspace.compiler_options.dev!} {onchange} />
+		<span class="boolean">{workspace.compiler_options.dev}</span>,
 	</label>
 	});
 </div>

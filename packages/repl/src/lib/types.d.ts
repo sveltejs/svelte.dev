@@ -1,7 +1,7 @@
 import type { EditorState } from '@codemirror/state';
 import { OutputChunk, RollupError } from '@rollup/browser';
 import type { Readable, Writable } from 'svelte/store';
-import type { CompileOptions, CompileError } from 'svelte/compiler';
+import type { CompileError } from 'svelte/compiler';
 import type { Workspace } from 'editor';
 
 export type Lang = 'js' | 'svelte' | 'json' | 'md' | 'css' | (string & Record<never, never>);
@@ -40,13 +40,11 @@ export type File = {
 export type ReplState = {
 	bundle: Bundle | null;
 	bundler: import('./Bundler').default | null;
-	compile_options: CompileOptions;
 	toggleable: boolean;
 };
 
 export type ReplContext = {
 	bundle: Writable<ReplState['bundle']>;
-	compile_options: Writable<ReplState['compile_options']>;
 	toggleable: Writable<ReplState['toggleable']>;
 
 	workspace: Workspace;
