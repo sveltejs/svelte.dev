@@ -1,4 +1,4 @@
-import { derived, writable, type Writable } from 'svelte/store';
+import { derived, toStore, writable, type Writable } from 'svelte/store';
 import * as adapter from './adapter.svelte';
 import type { FileStub, Stub } from '$lib/tutorial';
 
@@ -6,13 +6,18 @@ import type { FileStub, Stub } from '$lib/tutorial';
 
 class Workspace {
 	creating = $state.raw<{ parent: string; type: 'file' | 'directory' } | null>(null);
+
+	selected_name = $state<string | null>(null);
 }
 
 export const workspace = new Workspace();
 
 export const files = writable([] as Stub[]);
 
-export const selected_name: Writable<string | null> = writable(null);
+const selected_name = toStore(
+	() => workspace.selected_name,
+	(v) => (workspace.selected_name = v)
+);
 
 export const selected_file = derived([files, selected_name], ([$files, $selected_name]) => {
 	return ($files.find((stub) => stub.name === $selected_name) as FileStub) ?? null;
@@ -33,10 +38,9 @@ export function update_file(file: FileStub) {
 
 export function reset_files(new_files: Stub[]) {
 	// if the selected file no longer exists, clear it
-	selected_name.update(($selected_name) => {
-		const file = new_files.find((file) => file.name === $selected_name);
-		return file?.name ?? null;
-	});
+	if (!new_files.find((file) => file.name === workspace.selected_name)) {
+		workspace.selected_name = null;
+	}
 
 	files.set(new_files);
 	adapter.reset(new_files);

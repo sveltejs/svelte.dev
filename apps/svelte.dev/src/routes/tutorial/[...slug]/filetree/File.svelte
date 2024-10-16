@@ -2,7 +2,7 @@
 	import * as context from './context.js';
 	import Item from './Item.svelte';
 	import file_icon from '$lib/icons/file.svg';
-	import { selected_name, solution } from '../state.svelte';
+	import { solution, workspace } from '../state.svelte';
 
 	/** @type {import('$lib/tutorial').FileStub} */
 	export let file;
@@ -43,7 +43,7 @@
 	{renaming}
 	basename={file.basename}
 	icon={file_icon}
-	selected={file.name === $selected_name}
+	selected={file.name === workspace.selected_name}
 	{actions}
 	on:click={() => select(file.name)}
 	on:edit={() => {

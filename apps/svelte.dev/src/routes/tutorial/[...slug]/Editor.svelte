@@ -13,7 +13,7 @@
 	import { svelteTheme } from '@sveltejs/repl/theme';
 	import { basicSetup } from 'codemirror';
 	import { onMount, tick } from 'svelte';
-	import { files, selected_file, selected_name, update_file } from './state.svelte';
+	import { files, selected_file, update_file, workspace } from './state.svelte';
 	import { autocomplete_for_svelte } from '@sveltejs/site-kit/codemirror';
 	import type { Diagnostic } from '@codemirror/lint';
 	import type { Exercise, Stub } from '$lib/tutorial';
@@ -86,7 +86,7 @@
 					editor_states.set(file.name, transaction.state);
 					state = transaction.state;
 
-					if ($selected_name === file.name) {
+					if (workspace.selected_name === file.name) {
 						editor_view.setState(state);
 					}
 				}
@@ -127,11 +127,11 @@
 		}
 	}
 
-	function select_state($selected_name: string | null) {
+	function select_state(selected_name: string | null) {
 		if (skip_reset) return;
 
 		const state =
-			($selected_name && editor_states.get($selected_name)) ||
+			(selected_name && editor_states.get(selected_name)) ||
 			EditorState.create({
 				doc: '',
 				extensions: [EditorState.readOnly.of(true)]
@@ -181,7 +181,7 @@
 
 		if (editor_view) {
 			// could be false if onMount returned early
-			select_state($selected_name);
+			select_state(workspace.selected_name);
 		}
 	});
 
@@ -190,13 +190,13 @@
 	});
 
 	$effect(() => {
-		select_state($selected_name);
+		select_state(workspace.selected_name);
 	});
 
 	$effect(() => {
 		if (editor_view) {
-			if ($selected_name) {
-				const current_warnings = warnings[$selected_name] || [];
+			if (workspace.selected_name) {
+				const current_warnings = warnings[workspace.selected_name] || [];
 				const diagnostics = current_warnings.map((warning) => {
 					/** @type {import('@codemirror/lint').Diagnostic} */
 					const diagnostic: Diagnostic = {

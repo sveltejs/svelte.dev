@@ -9,14 +9,7 @@
 	import Output from './Output.svelte';
 	import { ScreenToggle } from '@sveltejs/site-kit/components';
 	import Sidebar from './Sidebar.svelte';
-	import {
-		files,
-		reset_files,
-		selected_file,
-		selected_name,
-		solution,
-		workspace
-	} from './state.svelte';
+	import { files, reset_files, selected_file, solution, workspace } from './state.svelte';
 	import { create_directories } from './utils';
 	import { needs_webcontainers, text_files } from './shared';
 	import OutputRollup from './OutputRollup.svelte';
@@ -158,19 +151,19 @@
 			show_filetree = true;
 		} else {
 			show_filetree = false;
-			selected_name.set(name);
+			workspace.selected_name = name;
 		}
 
 		show_editor = true;
 	}
 
 	function navigate_to_file(name: string) {
-		if (name === $selected_name) return;
+		if (name === workspace.selected_name) return;
 
 		select_file(name);
 
 		if (mobile) {
-			const q = new URLSearchParams({ file: $selected_name || '' });
+			const q = new URLSearchParams({ file: workspace.selected_name || '' });
 			history.pushState({}, '', `?${q}`);
 		}
 	}
@@ -202,7 +195,7 @@
 	});
 
 	$effect(() => {
-		selected_name.set(data.exercise.focus);
+		workspace.selected_name = data.exercise.focus;
 	});
 
 	let completed = $derived(is_completed($files, b));
@@ -333,7 +326,7 @@
 				const url = new URL(location.origin + location.pathname);
 
 				if (show_editor) {
-					url.searchParams.set('file', $selected_name ?? '');
+					url.searchParams.set('file', workspace.selected_name ?? '');
 				}
 
 				history.pushState({}, '', url); // TODO use SvelteKit pushState

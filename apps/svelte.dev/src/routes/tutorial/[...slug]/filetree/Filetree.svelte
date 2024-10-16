@@ -4,7 +4,7 @@
 	import Folder from './Folder.svelte';
 	import * as context from './context.js';
 	import Modal from '$lib/components/Modal.svelte';
-	import { files, solution, reset_files, selected_name } from '../state.svelte';
+	import { files, solution, reset_files, workspace } from '../state.svelte';
 	import { create_directories } from '../utils';
 	import { afterNavigate } from '$app/navigation';
 
@@ -95,7 +95,7 @@
 				}
 			}
 
-			const was_selected = $selected_name === to_rename.name;
+			const was_selected = workspace.selected_name === to_rename.name;
 
 			to_rename.basename = /** @type {string} */ (new_full_name.split('/').pop());
 			to_rename.name = new_full_name;
