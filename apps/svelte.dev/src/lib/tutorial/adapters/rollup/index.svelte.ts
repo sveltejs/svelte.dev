@@ -3,7 +3,6 @@ import Bundler from '@sveltejs/repl/bundler';
 import * as yootils from 'yootils';
 import type { Adapter } from '$lib/tutorial';
 import type { File, Item } from 'editor';
-import type { CompileError, Warning } from 'svelte/compiler';
 
 /** Rollup bundler singleton */
 let bundler: Bundler;
@@ -11,8 +10,6 @@ let bundler: Bundler;
 export const state = new (class RollupState {
 	progress = $state.raw({ value: 0, text: 'initialising' });
 	bundle = $state.raw<any>(null);
-	errors = $state.raw<Record<string, CompileError | null>>();
-	warnings = $state.raw<Record<string, Warning[]>>({});
 })();
 
 /**
@@ -55,21 +52,6 @@ export async function create(): Promise<Adapter> {
 		);
 
 		state.bundle = result;
-
-		// TODO this approach is insufficient — we need to get diagnostics for
-		// individual files, not just the bundle as a whole
-		state.errors = {};
-		state.warnings = {};
-
-		if (result.error) {
-			const file = '/src/lib/' + result.error.filename;
-			state.errors[file] = result.error;
-		}
-
-		for (const warning of result?.warnings ?? []) {
-			const file = '/src/lib/' + warning.filename;
-			(state.warnings[file] ??= []).push(warning);
-		}
 	}
 
 	const q = yootils.queue(1);

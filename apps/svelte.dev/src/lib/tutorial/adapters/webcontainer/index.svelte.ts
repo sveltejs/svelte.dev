@@ -8,7 +8,6 @@ import { escape_html } from '../../../utils/escape.js';
 import { ready } from '../common/index.js';
 import type { Adapter } from '$lib/tutorial';
 import type { Item, File } from 'editor';
-import type { CompileError, Warning } from 'svelte/compiler';
 
 const converter = new AnsiToHtml({
 	fg: 'var(--sk-text-3)'
@@ -22,8 +21,6 @@ export const state = new (class WCState {
 	base = $state.raw<string | null>(null);
 	error = $state.raw<Error | null>(null);
 	logs = $state.raw<string[]>([]);
-	errors = $state.raw<Record<string, CompileError | null>>({});
-	warnings = $state.raw<Record<string, Warning[]>>({});
 })();
 
 export async function create(): Promise<Adapter> {
@@ -49,14 +46,6 @@ export async function create(): Promise<Adapter> {
 		}
 	});
 
-	let warnings: Record<string, import('svelte/compiler').Warning[]> = {};
-	let timeout: any;
-
-	function schedule_to_update_warning(msec: number) {
-		clearTimeout(timeout);
-		timeout = setTimeout(() => (state.warnings = { ...warnings }), msec);
-	}
-
 	const log_stream = () =>
 		new WritableStream({
 			write(chunk) {
@@ -64,25 +53,7 @@ export async function create(): Promise<Adapter> {
 					// clear screen
 					state.logs = [];
 				} else if (chunk?.startsWith('svelte:warnings:')) {
-					const warn: Warning = JSON.parse(chunk.slice(16));
-					const filename = (warn.filename!.startsWith('/') ? warn.filename : '/' + warn.filename)!;
-					const current = warnings[filename];
-
-					if (!current) {
-						warnings[filename] = [warn];
-						// the exact same warning may be given multiple times in a row
-					} else if (
-						!current.some(
-							(s) =>
-								s.code === warn.code &&
-								s.position![0] === warn.position![0] &&
-								s.position![1] === warn.position![1]
-						)
-					) {
-						current.push(warn);
-					}
-
-					schedule_to_update_warning(100);
+					// TODO when does this happen?
 				} else {
 					const log = converter.toHtml(escape_html(chunk)).replace(/\n/g, '<br>');
 					state.logs = [...state.logs, log];
@@ -181,17 +152,6 @@ export async function create(): Promise<Adapter> {
 					...force_delete
 				];
 
-				// initialize warnings of written files
-				to_write
-					.filter((stub) => stub.type === 'file' && warnings[stub.name])
-					.forEach((stub) => (warnings[stub.name] = []));
-				// remove warnings of deleted files
-				to_delete
-					.filter((stubname) => warnings[stubname])
-					.forEach((stubname) => delete warnings[stubname]);
-
-				state.warnings = { ...warnings };
-
 				current_stubs = stubs_to_map(stubs);
 
 				// For some reason, server-ready is fired again when the vite dev server is restarted.
@@ -257,10 +217,6 @@ export async function create(): Promise<Adapter> {
 					queue.length = 0;
 
 					tree[basename] = to_file(file);
-
-					// initialize warnings of this file
-					warnings[file.name] = [];
-					schedule_to_update_warning(100);
 
 					await vm.mount(root);
 
