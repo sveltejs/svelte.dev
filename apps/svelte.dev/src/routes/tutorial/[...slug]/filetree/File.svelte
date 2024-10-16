@@ -1,40 +1,43 @@
-<script>
+<script lang="ts">
 	import * as context from './context.js';
 	import Item from './Item.svelte';
 	import file_icon from '$lib/icons/file.svg';
 	import { solution, workspace } from '../state.svelte';
+	import type { FileStub, MenuItem } from '$lib/tutorial';
 
-	/** @type {import('$lib/tutorial').FileStub} */
-	export let file;
+	interface Props {
+		file: FileStub;
+		depth: number;
+	}
 
-	/** @type {number} */
-	export let depth;
+	let { file, depth }: Props = $props();
 
 	const { rename, remove, select } = context.get();
 
-	let renaming = false;
+	let renaming = $state(false);
 
-	$: can_remove = !$solution[file.name];
+	let can_remove = $derived(!$solution[file.name]);
 
-	/** @type {import('$lib/tutorial').MenuItem[]} */
-	$: actions = can_remove
-		? [
-				{
-					icon: 'rename',
-					label: 'Rename',
-					fn: () => {
-						renaming = true;
+	let actions: MenuItem[] = $derived(
+		can_remove
+			? [
+					{
+						icon: 'rename',
+						label: 'Rename',
+						fn: () => {
+							renaming = true;
+						}
+					},
+					{
+						icon: 'delete',
+						label: 'Delete',
+						fn: () => {
+							remove(file);
+						}
 					}
-				},
-				{
-					icon: 'delete',
-					label: 'Delete',
-					fn: () => {
-						remove(file);
-					}
-				}
-			]
-		: [];
+				]
+			: []
+	);
 </script>
 
 <Item
