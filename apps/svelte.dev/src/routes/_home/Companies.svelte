@@ -1,5 +1,5 @@
 <div class="companies">
-	<div class="wing">
+	<div class="wing top">
 		<div class="logos">
 			<enhanced:img src="./companies/ikea.svg" alt="Ikea logo" />
 			<enhanced:img src="./companies/mullvad.svg" alt="Mullvad logo" />
@@ -9,8 +9,13 @@
 			<enhanced:img src="./companies/apple.svg" alt="Apple logo" />
 		</div>
 	</div>
+<<<<<<< Updated upstream
 	<h2>used by companies you’ve heard of</h2>
 	<div class="wing">
+=======
+	<h2><div>used by companies you've heard of</h2>
+	<div class="wing bottom">
+>>>>>>> Stashed changes
 		<div class="logos">
 			<enhanced:img src="./companies/spotify.svg" alt="Spotify logo" />
 			<enhanced:img src="./companies/nyt.svg" alt="New York Times logo" />
@@ -66,6 +71,26 @@
 		img {
 			height: 100%;
 			width: auto;
+		}
+	}
+
+	@media (max-width: 800px) {
+		.top {
+			margin-bottom: 1.5rem;
+		}
+
+		.bottom {
+			margin-top: 1.5rem;
+		}
+	}
+
+	@media (max-width: 540px) {
+		.top {
+			margin-bottom: 4rem;
+		}
+
+		.bottom {
+			margin-top: 4rem;
 		}
 	}
 
