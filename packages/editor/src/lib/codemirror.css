@@ -3,7 +3,26 @@
 }
 
 .cm-editor {
+	color: var(--sk-code-base);
+	background-color: transparent;
 	height: 100%;
+
+	&.cm-focused {
+		.cm-cursor {
+			border-left-color: var(--sk-text-3);
+		}
+
+		> .cm-scroller > .cm-selectionLayer .cm-selectionBackground,
+		.cm-selectionBackground,
+		.cm-content ::selection {
+			background-color: var(--sk-selection-color);
+		}
+
+		.cm-matchingBracket,
+		.cm-nonmatchingBracket {
+			background-color: #bad0f847;
+		}
+	}
 
 	.cm-scroller {
 		font: var(--sk-font-mono);
@@ -11,7 +30,7 @@
 
 	.cm-gutters {
 		background: var(--sk-back-3);
-		border-right: none;
+		border: none;
 		padding: 0;
 		width: 5rem;
 	}
@@ -26,19 +45,50 @@
 
 	.cm-lineNumbers {
 		flex: 1;
-		color: #237893;
+
+		.cm-gutterElement:not(:last-child) {
+			display: flex;
+			justify-content: end;
+			align-items: end;
+		}
 	}
 
 	.cm-foldGutter {
 		width: 1rem;
 	}
 
-	&.cm-focused .cm-cursor {
-		border-left-color: var(--sk-text-3);
+	.cm-foldPlaceholder {
+		background-color: transparent;
+		border: none;
+		color: #ddd;
+	}
+
+	.cm-lintRange {
+		background-position: left bottom;
+		background-repeat: repeat-x;
+		padding-bottom: 4px;
+
+		&.cm-lintRange-error {
+			/* TODO */
+		}
+
+		&.cm-lintRange-warning {
+			/* TODO */
+		}
 	}
 
 	.cm-content {
-		padding: 1rem 0;
+		/* ensure no gap between top of editor and highlighted first/last line */
+		padding-top: 0;
+		padding-bottom: 0;
+
+		.cm-line:first-child {
+			padding-top: 4px;
+		}
+
+		.cm-line:last-child {
+			padding-bottom: 4px;
+		}
 	}
 
 	.cm-line {
@@ -54,19 +104,29 @@
 		color: var(--sk-text-2);
 	}
 
-	.cm-tooltip.cm-tooltip-autocomplete > ul {
-		font: var(--sk-font-mono);
+	.cm-tooltip.cm-tooltip-autocomplete {
+		color: var(--sk-text-2) !important;
+		perspective: 1px;
+
+		& > ul > li[aria-selected] {
+			background-color: var(--sk-back-4);
+			color: var(--sk-text-1) !important;
+		}
+
+		& > ul {
+			font: var(--sk-font-mono);
+		}
 	}
 
 	.cm-panels {
 		background: var(--sk-back-4);
 		color: var(--sk-text-1);
-	}
 
-	.cm-panels.cm-panels-top,
-	.cm-panels.cm-panels-bottom {
-		border-top: 1px solid var(--sk-back-5);
-		border-bottom: 1px solid var(--sk-back-5);
+		&.cm-panels-top,
+		&.cm-panels-bottom {
+			border-top: 1px solid var(--sk-back-5);
+			border-bottom: 1px solid var(--sk-back-5);
+		}
 	}
 
 	.cm-button {
@@ -89,6 +149,10 @@
 		outline: 2px solid var(--flash);
 	}
 
+	.cm-searchMatch.cm-searchMatch-selected {
+		background-color: #6199ff2f;
+	}
+
 	.cm-tooltip {
 		--warning: hsl(40 100% 70%);
 		--error: hsl(0 100% 90%);
@@ -102,6 +166,16 @@
 		:root.dark {
 			--warning: hsl(40 100% 50%);
 			--error: hsl(0 100% 70%);
+		}
+
+		.cm-tooltip-arrow::before {
+			border-top-color: transparent;
+			border-bottom-color: transparent;
+		}
+
+		.cm-tooltip-arrow::after {
+			border-top-color: var(--sk-back-3);
+			border-bottom-color: var(--sk-back-3);
 		}
 	}
 

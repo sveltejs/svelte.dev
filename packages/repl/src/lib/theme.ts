@@ -1,122 +1,7 @@
 import { HighlightStyle, syntaxHighlighting } from '@codemirror/language';
-import { EditorView } from '@codemirror/view';
 import { tags as t } from '@lezer/highlight';
 
-const ERROR_HUE = 0;
-const WARNING_HUE = 40;
-
-const WARNING_FG = `hsl(${WARNING_HUE} 100% 60%)`;
-const WARNING_BG = `hsl(${WARNING_HUE} 100% 40% / 0.5)`;
-
-const ERROR_FG = `hsl(${ERROR_HUE} 100% 40%)`;
-const ERROR_BG = `hsl(${ERROR_HUE} 100% 40% / 0.5)`;
-
-function svg(content: string, attrs = `viewBox="0 0 40 40"`) {
-	return `url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" ${attrs}>${encodeURIComponent(
-		content
-	)}</svg>')`;
-}
-
-function underline(color: string) {
-	return svg(
-		`<path d="m0 3.5 l2 -1.5 l1 0 l2 1.5 l1 0" stroke="${color}" fill="none" stroke-width="1"/>`,
-		`width="6" height="4"`
-	);
-}
-
-const svelteThemeStyles = EditorView.theme(
-	{
-		'&': {
-			color: 'var(--sk-code-base)',
-			backgroundColor: 'transparent'
-		},
-
-		'.cm-content': {
-			// ensure no gap between top of editor and highlighted first/last line
-			paddingTop: '0px',
-			paddingBottom: '0px'
-		},
-
-		'.cm-content .cm-line:first-child': {
-			paddingTop: '4px'
-		},
-
-		'.cm-content .cm-line:last-child': {
-			paddingBottom: '4px'
-		},
-
-		'.cm-lineNumbers .cm-gutterElement:not(:last-child)': {
-			display: 'flex',
-			justifyContent: 'end',
-			alignItems: 'end'
-		},
-
-		'&.cm-focused > .cm-scroller > .cm-selectionLayer .cm-selectionBackground, .cm-selectionBackground, .cm-content ::selection':
-			{ backgroundColor: 'var(--sk-selection-color)' },
-
-		'.cm-panels': { backgroundColor: 'var(--sk-back-2)', color: 'var(--sk-text-2)' },
-		'.cm-panels.cm-panels-top': { borderBottom: '2px solid black' },
-		'.cm-panels.cm-panels-bottom': { borderTop: '2px solid black' },
-
-		'.cm-searchMatch.cm-searchMatch-selected': {
-			backgroundColor: '#6199ff2f'
-		},
-
-		'.cm-activeLine': { backgroundColor: '#6699ff0b' },
-		'.cm-selectionMatch': { backgroundColor: '#aafe661a' },
-
-		'&.cm-focused .cm-matchingBracket, &.cm-focused .cm-nonmatchingBracket': {
-			backgroundColor: '#bad0f847'
-		},
-
-		'.cm-gutters': {
-			backgroundColor: 'var(--sk-back-3)',
-			border: 'none'
-		},
-
-		'.cm-activeLineGutter': {
-			backgroundColor: 'var(--sk-back-4)'
-		},
-
-		'.cm-foldPlaceholder': {
-			backgroundColor: 'transparent',
-			border: 'none',
-			color: '#ddd'
-		},
-
-		// https://github.com/codemirror/lint/blob/271b35f5d31a7e3645eaccbfec608474022098e1/src/lint.ts#L620
-		'.cm-lintRange': {
-			backgroundPosition: 'left bottom',
-			backgroundRepeat: 'repeat-x',
-			paddingBottom: '4px'
-		},
-		'.cm-lintRange-error': {
-			backgroundImage: underline(ERROR_FG)
-		},
-		'.cm-lintRange-warning': {
-			backgroundImage: underline(WARNING_FG)
-		},
-		'.cm-tooltip .cm-tooltip-arrow:before': {
-			borderTopColor: 'transparent',
-			borderBottomColor: 'transparent'
-		},
-		'.cm-tooltip .cm-tooltip-arrow:after': {
-			borderTopColor: 'var(--sk-back-3)',
-			borderBottomColor: 'var(--sk-back-3)'
-		},
-		'.cm-tooltip-autocomplete': {
-			color: 'var(--sk-text-2) !important',
-			perspective: '1px',
-			'& > ul > li[aria-selected]': {
-				backgroundColor: 'var(--sk-back-4)',
-				color: 'var(--sk-text-1) !important'
-			}
-		}
-	},
-	{ dark: true }
-);
-
-/// The highlighting style for code in the One Dark theme.
+// TODO move this into the `editor` package
 const svelteHighlightStyle = HighlightStyle.define([
 	{ tag: t.keyword, color: 'var(--sk-code-keyword)' },
 	{
@@ -154,4 +39,4 @@ const svelteHighlightStyle = HighlightStyle.define([
 	{ tag: t.invalid, color: '#ff008c' }
 ]);
 
-export const svelteTheme = [svelteThemeStyles, syntaxHighlighting(svelteHighlightStyle)];
+export const svelteTheme = syntaxHighlighting(svelteHighlightStyle);
