@@ -1,7 +1,6 @@
 <script lang="ts">
 	import Message from '../Message.svelte';
 	import AstNode from './AstNode.svelte';
-	import { cursorIndex } from '../CodeMirror.svelte';
 	import type { CompileResult } from 'svelte/compiler';
 
 	type Ast = CompileResult['ast'];
@@ -11,7 +10,9 @@
 
 	// $cursor_index may go over the max since ast computation is usually slower.
 	// clamping this helps prevent the collapse view flashing
-	$: max_cursor_index = !ast ? $cursorIndex : Math.min($cursorIndex, get_ast_max_end(ast));
+	// TODO reimplement
+	let max_cursor_index = 0;
+	// $: max_cursor_index = !ast ? $cursorIndex : Math.min($cursorIndex, get_ast_max_end(ast));
 
 	$: path_nodes = find_deepest_path(max_cursor_index, [ast]) || [];
 

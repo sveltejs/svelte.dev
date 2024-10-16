@@ -1,13 +1,13 @@
 <script lang="ts">
 	import { get_repl_context } from '../context';
 	import { marked } from 'marked';
-	import CodeMirror from '../CodeMirror.svelte';
 	import AstView from './AstView.svelte';
 	import CompilerOptions from './CompilerOptions.svelte';
 	import PaneWithPanel from './PaneWithPanel.svelte';
 	import Viewer from './Viewer.svelte';
 	import type { File } from '../types';
 	import type { CompilerOutput } from '../workers/workers';
+	import { Editor, Workspace } from 'editor';
 
 	export let status: string | null;
 	export let runtimeError: Error | null = null;
@@ -41,6 +41,44 @@
 	let markdown = '';
 
 	$: ast = compiled?.ast;
+
+	const js_workspace = new Workspace({
+		files: [
+			{
+				type: 'file',
+				name: 'output.js',
+				basename: 'output.js',
+				contents: '/* TODO */',
+				text: true
+			}
+		],
+		selected_name: 'output.js',
+		onreset(items) {
+			// TODO
+		},
+		onupdate(items) {
+			// TODO
+		}
+	});
+
+	const css_workspace = new Workspace({
+		files: [
+			{
+				type: 'file',
+				name: 'output.css',
+				basename: 'output.css',
+				contents: '/* TODO */',
+				text: true
+			}
+		],
+		selected_name: 'output.css',
+		onreset(items) {
+			// TODO
+		},
+		onupdate(items) {
+			// TODO
+		}
+	});
 </script>
 
 <div class="view-toggle">
@@ -72,11 +110,13 @@
 <!-- js output -->
 <div class="tab-content" class:visible={selected?.type !== 'md' && view === 'js'}>
 	{#if embedded}
-		<CodeMirror bind:this={js_editor} readonly />
+		<!-- TODO make readonly -->
+		<Editor workspace={js_workspace} onchange={() => {}} />
 	{:else}
 		<PaneWithPanel pos="50%" panel="Compiler options">
 			<div slot="main">
-				<CodeMirror bind:this={js_editor} readonly />
+				<!-- TODO make readonly -->
+				<Editor workspace={js_workspace} onchange={() => {}} />
 			</div>
 
 			<div slot="panel-body">
@@ -88,7 +128,8 @@
 
 <!-- css output -->
 <div class="tab-content" class:visible={selected?.type !== 'md' && view === 'css'}>
-	<CodeMirror bind:this={css_editor} readonly />
+	<!-- TODO make readonly -->
+	<Editor workspace={css_workspace} onchange={() => {}} />
 </div>
 
 <!-- ast output -->
