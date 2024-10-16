@@ -11,7 +11,7 @@
 	import { set_repl_context } from './context.js';
 	import { get_full_filename } from './utils.js';
 	import Compiler from './Output/Compiler.js';
-	import type { Bundle, File, MessageDetails, ReplContext } from './types.js';
+	import type { Bundle, File, ReplContext } from './types.js';
 	import type { CompileOptions } from 'svelte/compiler';
 	import type { CompilerOutput } from './workers/workers.js';
 
