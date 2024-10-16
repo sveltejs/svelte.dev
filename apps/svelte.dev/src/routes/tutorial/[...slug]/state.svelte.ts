@@ -9,24 +9,17 @@ class Workspace {
 	creating = $state.raw<{ parent: string; type: 'file' | 'directory' } | null>(null);
 
 	selected_name = $state<string | null>(null);
+
+	get selected_file() {
+		for (const file of this.files) {
+			if (file.name === this.selected_name) return file as FileStub;
+		}
+
+		return null;
+	}
 }
 
 export const workspace = new Workspace();
-
-// export const files = writable([] as Stub[]);
-export const files = toStore(
-	() => workspace.files,
-	(v) => (workspace.files = v)
-);
-
-const selected_name = toStore(
-	() => workspace.selected_name,
-	(v) => (workspace.selected_name = v)
-);
-
-export const selected_file = derived([files, selected_name], ([$files, $selected_name]) => {
-	return ($files.find((stub) => stub.name === $selected_name) as FileStub) ?? null;
-});
 
 export function update_file(file: FileStub) {
 	workspace.files = workspace.files.map((old) => {
@@ -45,7 +38,7 @@ export function reset_files(new_files: Stub[]) {
 		workspace.selected_name = null;
 	}
 
-	files.set(new_files);
+	workspace.files = new_files;
 	adapter.reset(new_files);
 }
 

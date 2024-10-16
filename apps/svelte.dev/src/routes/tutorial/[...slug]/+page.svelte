@@ -9,7 +9,7 @@
 	import Output from './Output.svelte';
 	import { ScreenToggle } from '@sveltejs/site-kit/components';
 	import Sidebar from './Sidebar.svelte';
-	import { files, reset_files, selected_file, solution, workspace } from './state.svelte';
+	import { reset_files, solution, workspace } from './state.svelte';
 	import { create_directories } from './utils';
 	import { needs_webcontainers, text_files } from './shared';
 	import OutputRollup from './OutputRollup.svelte';
@@ -187,7 +187,7 @@
 	let mobile = $derived(w < 800);
 
 	$effect(() => {
-		files.set(Object.values(a));
+		workspace.files = Object.values(a);
 	});
 
 	$effect(() => {
@@ -270,7 +270,7 @@
 							<section slot="a" class="navigator">
 								{#if mobile}
 									<button class="file" onclick={() => (show_filetree = !show_filetree)}>
-										{$selected_file?.name.replace(
+										{workspace.selected_name?.replace(
 											data.exercise.scope.prefix,
 											data.exercise.scope.name + '/'
 										) ?? 'Files'}
@@ -287,7 +287,7 @@
 
 							<section slot="b" class="editor-container">
 								<Editor exercise={data.exercise} warnings={adapter_state.warnings} />
-								<ImageViewer selected={$selected_file} />
+								<ImageViewer selected={workspace.selected_file} />
 
 								{#if mobile && show_filetree}
 									<div class="mobile-filetree">

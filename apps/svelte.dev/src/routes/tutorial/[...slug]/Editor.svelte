@@ -13,7 +13,7 @@
 	import { svelteTheme } from '@sveltejs/repl/theme';
 	import { basicSetup } from 'codemirror';
 	import { onMount, tick } from 'svelte';
-	import { files, selected_file, update_file, workspace } from './state.svelte';
+	import { update_file, workspace } from './state.svelte';
 	import { autocomplete_for_svelte } from '@sveltejs/site-kit/codemirror';
 	import type { Diagnostic } from '@codemirror/lint';
 	import type { Exercise, Stub } from '$lib/tutorial';
@@ -100,7 +100,7 @@
 					lang = [
 						svelte(),
 						...autocomplete_for_svelte(
-							() => $selected_file!.name,
+							() => workspace.selected_name!,
 							() =>
 								files
 									.filter(
@@ -145,17 +145,17 @@
 			async dispatch(transaction) {
 				editor_view.update([transaction]);
 
-				if (transaction.docChanged && $selected_file) {
+				if (transaction.docChanged && workspace.selected_file) {
 					skip_reset = true;
 
 					// TODO do we even need to update `workspace.files`? maintaining separate editor states is probably sufficient
 					update_file({
-						...$selected_file,
+						...workspace.selected_file,
 						contents: editor_view.state.doc.toString()
 					});
 
 					// keep `editor_states` updated so that undo/redo history is preserved for files independently
-					editor_states.set($selected_file.name, editor_view.state);
+					editor_states.set(workspace.selected_file.name, editor_view.state);
 
 					await tick();
 					skip_reset = false;
@@ -244,15 +244,15 @@
 		}, 200);
 	}}
 >
-	{#if !browser && $selected_file}
+	{#if !browser && workspace.selected_file}
 		<div class="fake">
 			<div class="fake-gutter">
-				{#each $selected_file.contents.split('\n') as _, i}
+				{#each workspace.selected_file.contents.split('\n') as _, i}
 					<div class="fake-line">{i + 1}</div>
 				{/each}
 			</div>
 			<div class="fake-content">
-				{#each $selected_file.contents.split('\n') as line}
+				{#each workspace.selected_file.contents.split('\n') as line}
 					<pre>{line || ' '}</pre>
 				{/each}
 			</div>
