@@ -10,7 +10,6 @@
 	import { ScreenToggle } from '@sveltejs/site-kit/components';
 	import Sidebar from './Sidebar.svelte';
 	import {
-		create_directories,
 		creating,
 		files,
 		reset_files,
@@ -18,6 +17,7 @@
 		selected_name,
 		solution
 	} from './state.svelte';
+	import { create_directories } from './utils';
 	import { needs_webcontainers, text_files } from './shared';
 	import OutputRollup from './OutputRollup.svelte';
 	import { page } from '$app/stores';

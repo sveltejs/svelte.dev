@@ -1,6 +1,6 @@
 import { derived, writable, type Writable } from 'svelte/store';
 import * as adapter from './adapter.svelte';
-import type { DirectoryStub, FileStub, Stub } from '$lib/tutorial';
+import type { FileStub, Stub } from '$lib/tutorial';
 
 export const files = writable([] as Stub[]);
 
@@ -37,34 +37,4 @@ export function reset_files(new_files: Stub[]) {
 
 	files.set(new_files);
 	adapter.reset(new_files);
-}
-
-export function create_directories(name: string, files: Stub[]) {
-	const existing = new Set();
-
-	for (const file of files) {
-		if (file.type === 'directory') {
-			existing.add(file.name);
-		}
-	}
-
-	const directories: DirectoryStub[] = [];
-
-	const parts = name.split('/');
-	while (parts.length) {
-		parts.pop();
-
-		const dir = parts.join('/');
-		if (existing.has(dir)) {
-			break;
-		}
-
-		directories.push({
-			type: 'directory',
-			name: dir,
-			basename: parts.at(-1)!
-		});
-	}
-
-	return directories;
 }
