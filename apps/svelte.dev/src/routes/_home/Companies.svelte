@@ -77,16 +77,6 @@
 		}
 	}
 
-	@media (max-width: 540px) {
-		.top {
-			margin-bottom: 4rem;
-		}
-
-		.bottom {
-			margin-top: 4rem;
-		}
-	}
-
 	@media (min-width: 800px) {
 		.companies {
 			display: grid;
