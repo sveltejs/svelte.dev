@@ -1,3 +1,6 @@
+import type { CompileError, Warning } from 'svelte/compiler';
+import { get_diagnostics } from './diagnostics';
+
 export interface File {
 	type: 'file';
 	name: string;
@@ -14,10 +17,17 @@ export interface Directory {
 
 export type Item = File | Directory;
 
+export interface Diagnostics {
+	error: CompileError | null;
+	warnings: Warning[];
+}
+
 export class Workspace {
 	files = $state.raw<Item[]>([]);
 	creating = $state.raw<{ parent: string; type: 'file' | 'directory' } | null>(null);
 	selected_name = $state<string | null>(null);
+
+	diagnostics = $state<Record<string, Diagnostics>>({});
 
 	#onupdate: (file: File) => void;
 	#onreset: (items: Item[]) => void;
@@ -37,6 +47,21 @@ export class Workspace {
 		this.selected_name = selected_name;
 		this.#onupdate = onupdate;
 		this.#onreset = onreset;
+
+		this.#reset_diagnostics();
+	}
+
+	#reset_diagnostics() {
+		this.diagnostics = {};
+
+		for (const file of this.files) {
+			if (file.type !== 'file') continue;
+			if (!/\.svelte(\.|$)/.test(file.name)) continue;
+
+			get_diagnostics(file).then((diagnostics) => {
+				this.diagnostics[file.name] = diagnostics;
+			});
+		}
 	}
 
 	get selected_file() {
@@ -55,6 +80,10 @@ export class Workspace {
 			return old;
 		});
 
+		get_diagnostics(file).then((diagnostics) => {
+			this.diagnostics[file.name] = diagnostics;
+		});
+
 		this.#onupdate(file);
 	}
 
@@ -67,5 +96,6 @@ export class Workspace {
 		this.files = new_files;
 
 		this.#onreset(new_files);
+		this.#reset_diagnostics();
 	}
 }

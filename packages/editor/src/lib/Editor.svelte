@@ -14,18 +14,15 @@
 	import { autocomplete_for_svelte } from '@sveltejs/site-kit/codemirror';
 	import type { Diagnostic } from '@codemirror/lint';
 	import { Workspace, type Item, type File } from './Workspace.svelte.js';
-	import type { CompileError, Warning } from 'svelte/compiler';
 	import './codemirror.css';
 
 	interface Props {
-		errors: Record<string, CompileError | null>;
-		warnings: Record<string, Warning[]>;
 		workspace: Workspace;
 		onchange: (file: File, contents: string) => void;
 		autocomplete_filter?: (file: File) => boolean;
 	}
 
-	let { errors, warnings, workspace, onchange, autocomplete_filter = () => true }: Props = $props();
+	let { workspace, onchange, autocomplete_filter = () => true }: Props = $props();
 
 	let container: HTMLDivElement;
 
@@ -171,25 +168,25 @@
 
 		const diagnostics: Diagnostic[] = [];
 
-		const error = null; // TODO should be `errors[workspace.selected_name]` but it's currently a Rollup plugin error...
-		const current_warnings = warnings[workspace.selected_name] || [];
+		const error = workspace.diagnostics[workspace.selected_name]?.error;
+		const current_warnings = workspace.diagnostics[workspace.selected_name]?.warnings ?? [];
 
 		if (error) {
-			// diagnostics.push({
-			// 	severity: 'error',
-			// 	from: error.position![0],
-			// 	to: error.position![1],
-			// 	message: error.message,
-			// 	renderMessage: () => {
-			// 		// TODO expose error codes, so we can link to docs in future
-			// 		const span = document.createElement('span');
-			// 		span.innerHTML = `${error.message
-			// 			.replace(/&/g, '&amp;')
-			// 			.replace(/</g, '&lt;')
-			// 			.replace(/`(.+?)`/g, `<code>$1</code>`)}`;
-			// 		return span;
-			// 	}
-			// });
+			diagnostics.push({
+				severity: 'error',
+				from: error.position![0],
+				to: error.position![1],
+				message: error.message,
+				renderMessage: () => {
+					const span = document.createElement('span');
+					span.innerHTML = `${error.message
+						.replace(/&/g, '&amp;')
+						.replace(/</g, '&lt;')
+						.replace(/`(.+?)`/g, `<code>$1</code>`)} <strong>(${error.code})</strong>`;
+
+					return span;
+				}
+			});
 		}
 
 		for (const warning of current_warnings) {

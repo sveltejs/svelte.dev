@@ -316,8 +316,6 @@
 							<section slot="b" class="editor-container">
 								<Editor
 									bind:this={editor}
-									errors={adapter.adapter_state.errors}
-									warnings={adapter.adapter_state.warnings}
 									{workspace}
 									onchange={async (file, contents) => {
 										skip_set_files = true;
