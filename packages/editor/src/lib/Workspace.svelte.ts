@@ -27,6 +27,8 @@ export class Workspace {
 	creating = $state.raw<{ parent: string; type: 'file' | 'directory' } | null>(null);
 	selected_name = $state<string | null>(null);
 
+	modified = $state<Record<string, boolean>>({});
+
 	diagnostics = $state<Record<string, Diagnostics>>({});
 
 	#onupdate: (file: File) => void;
@@ -72,6 +74,10 @@ export class Workspace {
 		return null;
 	}
 
+	mark_saved() {
+		this.modified = {};
+	}
+
 	update_file(file: File) {
 		this.files = this.files.map((old) => {
 			if (old.name === file.name) {
@@ -79,6 +85,8 @@ export class Workspace {
 			}
 			return old;
 		});
+
+		this.modified[file.name] = true;
 
 		get_diagnostics(file).then((diagnostics) => {
 			this.diagnostics[file.name] = diagnostics;
@@ -94,6 +102,8 @@ export class Workspace {
 		}
 
 		this.files = new_files;
+
+		this.mark_saved();
 
 		this.#onreset(new_files);
 		this.#reset_diagnostics();

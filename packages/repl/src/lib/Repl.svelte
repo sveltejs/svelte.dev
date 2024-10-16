@@ -73,7 +73,7 @@
 	}
 
 	export function markSaved() {
-		// TODO mark everything in the workspace as unmodified
+		workspace.mark_saved();
 	}
 
 	const DEFAULT_COMPILE_OPTIONS: CompileOptions = {
@@ -198,9 +198,7 @@
 		: null;
 
 	function before_unload(event: BeforeUnloadEvent) {
-		// TODO
-
-		if (showModified && $files.find((file) => file.modified)) {
+		if (showModified && Object.keys(workspace.modified).length > 0) {
 			event.preventDefault();
 			event.returnValue = '';
 		}

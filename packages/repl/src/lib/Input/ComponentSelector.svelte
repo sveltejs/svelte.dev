@@ -205,7 +205,7 @@
 
 				{#if file.name === 'App' && filename !== editing_name}
 					<div class="uneditable">
-						App.svelte{#if show_modified && file.modified}*{/if}
+						App.svelte{#if show_modified && workspace.modified[file.name]}*{/if}
 					</div>
 				{:else if filename === editing_name}
 					{@const editing_file = workspace.files.find((file) => file.name === editing_name)}
@@ -242,7 +242,7 @@
 						on:click={() => edit_tab(file)}
 						on:keyup={(e) => e.key === ' ' && edit_tab(file)}
 					>
-						{file.name}{#if show_modified && file.modified}*{/if}
+						{file.name}{#if show_modified && workspace.modified[file.name]}*{/if}
 					</div>
 
 					<span
