@@ -9,13 +9,8 @@
 			<enhanced:img src="./companies/apple.svg" alt="Apple logo" />
 		</div>
 	</div>
-<<<<<<< Updated upstream
 	<h2>used by companies you’ve heard of</h2>
 	<div class="wing">
-=======
-	<h2><div>used by companies you've heard of</h2>
-	<div class="wing bottom">
->>>>>>> Stashed changes
 		<div class="logos">
 			<enhanced:img src="./companies/spotify.svg" alt="Spotify logo" />
 			<enhanced:img src="./companies/nyt.svg" alt="New York Times logo" />
