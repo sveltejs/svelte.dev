@@ -72,6 +72,5 @@ export type ReplContext = {
 			value: string;
 		}>
 	): Promise<void>;
-	go_to_warning_pos(item?: MessageDetails): Promise<void>;
 	clear_state(): void;
 };

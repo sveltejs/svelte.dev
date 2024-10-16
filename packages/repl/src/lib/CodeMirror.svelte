@@ -60,10 +60,6 @@
 		}
 	}
 
-	export function setCursor(pos: number) {
-		cursor_pos = pos;
-	}
-
 	let fulfil_module_editor_ready: (...val: any) => void;
 	export const isReady = new Promise((f) => (fulfil_module_editor_ready = f));
 
@@ -185,8 +181,6 @@
 		extensions = ext;
 	});
 
-	let cursor_pos = 0;
-
 	$: if ($cmInstance.view) {
 		fulfil_module_editor_ready();
 	}
@@ -230,7 +224,7 @@
 		tabSize: 2,
 		theme: svelteTheme,
 		readonly,
-		cursorPos: cursor_pos,
+		cursorPos: 0,
 		lang,
 		langMap: {
 			js: () => import('@codemirror/lang-javascript').then((m) => m.javascript()),
