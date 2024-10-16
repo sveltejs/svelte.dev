@@ -23,7 +23,6 @@
 
 <style>
 	.companies {
-		display: grid;
 		gap: 1rem;
 		align-items: center;
 		margin: 15rem 0 5rem 0;
@@ -33,10 +32,9 @@
 	}
 
 	h2 {
-		width: 100%;
+		width: 12em;
 		text-align: center;
 		margin: 0 auto;
-		position: absolute;
 		z-index: 2;
 		filter: drop-shadow(0 0 1rem var(--sk-back-1)) drop-shadow(0 0 1rem var(--sk-back-1));
 		padding: 0 var(--sk-page-padding-side);
@@ -91,6 +89,7 @@
 
 	@media (min-width: 800px) {
 		.companies {
+			display: grid;
 			grid-template-columns: 1fr auto 1fr;
 			align-items: center;
 		}
