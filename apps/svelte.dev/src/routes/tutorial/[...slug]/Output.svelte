@@ -194,9 +194,9 @@
 		border-top: 1px solid var(--sk-text-4);
 		background: rgba(255, 255, 255, 0.5);
 		transform: translate(0, 100%);
+		-webkit-transform: translate3d(0, 100%, 0);
 		transition: transform 0.3s;
 		backdrop-filter: blur(3px);
-		-webkit-transform: translate3d(0, 0, 0);
 		overflow-y: auto;
 	}
 
@@ -216,6 +216,7 @@
 
 	.terminal.visible {
 		transform: none;
+		-webkit-transform: none;
 	}
 
 	.terminal.visible::after {
