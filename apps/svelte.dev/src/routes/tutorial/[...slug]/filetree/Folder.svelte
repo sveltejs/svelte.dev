@@ -1,4 +1,5 @@
-<script>
+<script lang="ts">
+	import Folder from './Folder.svelte';
 	import File from './File.svelte';
 	import * as context from './context.js';
 	import { get_depth } from '$lib/utils/path.js';
@@ -6,45 +7,42 @@
 	import folder_closed from '$lib/icons/folder.svg';
 	import folder_open from '$lib/icons/folder-open.svg';
 	import { files, solution, workspace } from '../state.svelte';
+	import type { DirectoryStub, FileStub, Stub } from '$lib/tutorial';
 
-	/** @type {import('$lib/tutorial').DirectoryStub} */
-	export let directory;
+	interface Props {
+		directory: DirectoryStub;
+		prefix: string;
+		depth: number;
+		contents: Stub[];
+	}
 
-	/** @type {string} */
-	export let prefix;
+	let { directory, prefix, depth, contents }: Props = $props();
 
-	/** @type {number} */
-	export let depth;
-
-	/** @type {Array<import('$lib/tutorial').Stub>} */
-	export let contents;
-
-	let renaming = false;
+	let renaming = $state(false);
 
 	const { collapsed, rename, add, remove } = context.get();
 
-	$: segments = get_depth(prefix);
+	let segments = $derived(get_depth(prefix));
 
-	$: children = contents
-		.filter((file) => file.name.startsWith(prefix))
-		.sort((a, b) => (a.name < b.name ? -1 : 1));
-
-	$: child_directories = children.filter(
-		(child) => get_depth(child.name) === segments && child.type === 'directory'
+	let children = $derived(
+		contents
+			.filter((file) => file.name.startsWith(prefix))
+			.sort((a, b) => (a.name < b.name ? -1 : 1))
 	);
 
-	// prettier-ignore
-	$: child_files = (
-		/** @type {import('$lib/tutorial').FileStub[]} */ (
-			children.filter((child) => get_depth(child.name) === segments && child.type === 'file')
-		)
+	let child_directories = $derived(
+		children.filter((child) => get_depth(child.name) === segments && child.type === 'directory')
 	);
 
-	const can_create = { file: false, directory: false };
+	let child_files = $derived(
+		children.filter((child) => get_depth(child.name) === segments && child.type === 'file')
+	) as FileStub[];
 
-	$: {
-		can_create.file = false;
-		can_create.directory = false;
+	const can_create = $derived.by(() => {
+		const result = {
+			file: false,
+			directory: false
+		};
 
 		const child_prefixes = [];
 
@@ -67,16 +65,18 @@
 			// if intermediate directory exists, bail
 			if (child_prefixes.some((prefix) => file.name.startsWith(prefix))) continue;
 
-			can_create[file.type] = true;
+			result[file.type] = true;
 		}
-	}
+
+		return result;
+	});
 
 	// fake root directory has no name
-	$: can_remove = directory.name ? !$solution[directory.name] : false;
+	let can_remove = $derived(directory.name ? !$solution[directory.name] : false);
 
 	// prettier-ignore
-	$: actions = (
-		/** @type {import('$lib/tutorial').MenuItem[]} */ ([
+	let actions = (
+		/** @type {import('$lib/tutorial').MenuItem[]} */ ($derived([
 			can_create.file && {
 				icon: 'file-new',
 				label: 'New file',
@@ -111,7 +111,7 @@
 					remove(directory);
 				}
 			}
-		].filter(Boolean))
+		].filter(Boolean)))
 	);
 </script>
 
@@ -122,19 +122,19 @@
 	can_rename={can_remove}
 	{renaming}
 	{actions}
-	on:click={() => {
+	onclick={() => {
 		$collapsed[directory.name] = !$collapsed[directory.name];
 	}}
-	on:edit={() => {
+	onedit={() => {
 		renaming = true;
 	}}
-	on:rename={(e) => {
-		rename(directory, e.detail.basename);
+	onrename={(basename) => {
+		rename(directory, basename);
 	}}
-	on:cancel={() => {
+	oncancel={() => {
 		renaming = false;
 	}}
-	on:keydown={(e) => {
+	onkeydown={(e) => {
 		if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
 			$collapsed[directory.name] = e.key === 'ArrowLeft';
 		}
@@ -146,27 +146,27 @@
 		<Item
 			depth={depth + 1}
 			renaming
-			on:rename={(e) => {
-				add(prefix + e.detail.basename, 'directory');
+			onrename={(basename) => {
+				add(prefix + basename, 'directory');
 			}}
-			on:cancel={() => {
+			oncancel={() => {
 				workspace.creating = null;
 			}}
 		/>
 	{/if}
 
 	{#each child_directories as directory}
-		<svelte:self {directory} prefix={directory.name + '/'} depth={depth + 1} contents={children} />
+		<Folder {directory} prefix={directory.name + '/'} depth={depth + 1} contents={children} />
 	{/each}
 
 	{#if workspace.creating?.parent === directory.name && workspace.creating.type === 'file'}
 		<Item
 			depth={depth + 1}
 			renaming
-			on:rename={(e) => {
-				add(prefix + e.detail.basename, 'file');
+			onrename={(basename) => {
+				add(prefix + basename, 'file');
 			}}
-			on:cancel={() => {
+			oncancel={() => {
 				workspace.creating = null;
 			}}
 		/>
