@@ -197,6 +197,10 @@ importers:
         version: 7.0.4(rollup@4.21.2)
 
   packages/editor:
+    dependencies:
+      esm-env:
+        specifier: ^1.0.0
+        version: 1.0.0
     devDependencies:
       '@codemirror/autocomplete':
         specifier: ^6.9.0

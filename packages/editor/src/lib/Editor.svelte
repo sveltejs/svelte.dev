@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
+	import { BROWSER } from 'esm-env';
 	import { afterNavigate, beforeNavigate } from '$app/navigation';
 	import { acceptCompletion } from '@codemirror/autocomplete';
 	import { indentWithTab } from '@codemirror/commands';
@@ -240,7 +240,7 @@
 		}, 200);
 	}}
 >
-	{#if !browser && workspace.selected_file}
+	{#if !BROWSER && workspace.selected_file}
 		<div class="fake">
 			<div class="fake-gutter">
 				{#each workspace.selected_file.contents.split('\n') as _, i}
