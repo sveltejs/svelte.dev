@@ -1,7 +1,7 @@
-import type { File } from './types';
 import type { BundleResult } from './workers/bundler';
 import Worker from './workers/bundler/index.js?worker';
 import type { BundleMessageData } from './workers/workers';
+import type { File } from 'editor';
 
 const workers = new Map();
 

@@ -6,12 +6,11 @@
 	import { derived, writable } from 'svelte/store';
 	import Bundler from './Bundler.js';
 	import ComponentSelector from './Input/ComponentSelector.svelte';
-	import ModuleEditor from './Input/ModuleEditor.svelte';
 	import Output from './Output/Output.svelte';
 	import { set_repl_context } from './context.js';
 	import { get_full_filename } from './utils.js';
 	import Compiler from './Output/Compiler.js';
-	import { Workspace, Editor, type Item, type File as WorkspaceFile } from 'editor';
+	import { Workspace, Editor, type File as WorkspaceFile } from 'editor';
 	import type { Bundle, File, ReplContext } from './types.js';
 	import type { CompileOptions } from 'svelte/compiler';
 	import type { CompilerOutput } from './workers/workers.js';
@@ -29,22 +28,22 @@
 	export let previewTheme: 'light' | 'dark' = 'light';
 	export let showModified = false;
 	export let showAst = false;
-	export let vim: boolean;
 	export let remove: (value: { files: File[]; diff: File }) => void = () => {};
 	export let add: (value: { files: File[]; diff: File }) => void = () => {};
 	export let change: (value: { files: File[] }) => void = () => {};
-	export let blur: () => void = () => {};
 
 	const workspace = new Workspace({
 		files: [],
 		selected_name: '',
 		onupdate(file) {
-			// TODO
+			rebundle();
 		},
 		onreset(items) {
-			// TODO
+			rebundle();
 		}
 	});
+
+	let editor: any;
 
 	let runes = false;
 
@@ -67,25 +66,10 @@
 			};
 		});
 
-		$files = data.files;
-		$selected_name = 'App.svelte';
+		workspace.selected_name = 'App.svelte';
 
+		editor.reset();
 		rebundle();
-
-		// Wait for editors to be ready
-		await $module_editor?.isReady;
-
-		await $module_editor?.set({ code: data.files[0].source, lang: data.files[0].type });
-
-		injectedCSS = data.css || '';
-
-		// when we set new files we also populate the EDITOR_STATE_MAP
-		// with a new state for each file containing the source as docs
-		// this allows the editor to behave correctly when renaming a tab
-		// after having loaded the files externally
-		populate_editor_state();
-
-		change({ files: $files });
 	}
 
 	export function markSaved() {
@@ -139,18 +123,18 @@
 		rebundle,
 		migrate,
 		clear_state,
-		handle_change,
 		handle_select
 	});
 
 	let current_token: Symbol;
+
 	async function rebundle() {
 		const token = (current_token = Symbol());
 		let resolver = () => {};
 		$bundling = new Promise((resolve) => {
 			resolver = resolve;
 		});
-		const result = await $bundler?.bundle($files);
+		const result = await $bundler?.bundle(workspace.files as WorkspaceFile[]);
 		if (result && token === current_token) $bundle = result as Bundle;
 		resolver();
 	}
@@ -179,49 +163,7 @@
 	let is_select_changing = false;
 
 	async function handle_select(filename: string) {
-		is_select_changing = true;
-
-		$selected_name = filename;
-
-		if (!$selected) return;
-
-		await $module_editor?.set({ code: $selected.source, lang: $selected.type });
-
-		if (EDITOR_STATE_MAP.has(filename)) {
-			$module_editor?.setEditorState(EDITOR_STATE_MAP.get(filename));
-		} else {
-			$module_editor?.clearEditorState();
-		}
-
-		is_select_changing = false;
-	}
-
-	async function handle_change(event: CustomEvent<{ value: string }>) {
-		if (is_select_changing) return;
-
-		files.update(($files) => {
-			const file = { ...$selected };
-
-			file.source = event.detail.value;
-			file.modified = true;
-
-			const idx = $files.findIndex((val) => get_full_filename(val) === $selected_name);
-
-			// @ts-ignore
-			$files[idx] = file;
-
-			return $files;
-		});
-
-		if (!$selected) return;
-
-		EDITOR_STATE_MAP.set(get_full_filename($selected), $module_editor?.getEditorState());
-
-		change({
-			files: $files
-		});
-
-		rebundle();
+		workspace.selected_name = filename;
 	}
 
 	/** Deletes all editor state */
@@ -314,8 +256,16 @@
 			max="-4.1rem"
 		>
 			<section slot="a">
-				<ComponentSelector show_modified={showModified} {runes} {add} {remove} />
-				<ModuleEditor error={compiled?.error} warnings={compiled?.warnings ?? []} {vim} {blur} />
+				<ComponentSelector show_modified={showModified} {runes} {add} {remove} {workspace} />
+
+				<Editor
+					bind:this={editor}
+					{workspace}
+					onchange={(file, contents) => {
+						// TODO is this even necessary? Can it be implicit?
+						workspace.update_file({ ...file, contents });
+					}}
+				/>
 			</section>
 
 			<section slot="b" style="height: 100%;">

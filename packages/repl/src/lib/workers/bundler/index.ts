@@ -13,8 +13,9 @@ import replace from './plugins/replace';
 import loop_protect from './plugins/loop-protect';
 import type { Plugin, TransformResult } from '@rollup/browser';
 import type { BundleMessageData } from '../workers';
-import type { File, Warning } from '../../types';
+import type { Warning } from '../../types';
 import type { CompileError, CompileResult } from 'svelte/compiler';
+import type { File } from 'editor';
 
 let packages_url: string;
 let svelte_url: string;
@@ -324,7 +325,7 @@ async function get_bundle(
 
 			const cached_file = local_files_lookup.get(resolved);
 			if (cached_file) {
-				return cached_file.source;
+				return cached_file.contents;
 			}
 
 			if (!FETCH_CACHE.has(resolved)) {
@@ -363,9 +364,9 @@ async function get_bundle(
 						(match, $1, $2) => {
 							if (local_files_lookup.has($1)) {
 								if ($2 === 'svg') {
-									return `url('data:image/svg+xml;base64,${btoa(local_files_lookup.get($1)!.source)}')`;
+									return `url('data:image/svg+xml;base64,${btoa(local_files_lookup.get($1)!.contents)}')`;
 								} else {
-									return `url('data:image/${$2};base64,${local_files_lookup.get($1)!.source}')`;
+									return `url('data:image/${$2};base64,${local_files_lookup.get($1)!.contents}')`;
 								}
 							} else {
 								return match;
@@ -467,8 +468,10 @@ async function bundle({ uid, files }: { uid: number; files: File[] }) {
 	const lookup: Map<string, File> = new Map();
 
 	lookup.set('./__entry.js', {
-		name: '__entry',
-		source: `
+		type: 'file',
+		name: '__entry.js',
+		basename: '__entry.js',
+		contents: `
 			import { unmount as u } from 'svelte';
 			import { styles } from './__shared.js';
 			export { mount, untrack } from 'svelte';
@@ -478,21 +481,21 @@ async function bundle({ uid, files }: { uid: number; files: File[] }) {
 				styles.forEach(style => style.remove());
 			}
 		`,
-		type: 'js',
-		modified: false
+		text: true
 	});
 
 	lookup.set('./__shared.js', {
-		name: '__entry',
-		source: `
+		type: 'file',
+		name: '__shared.js',
+		basename: '__shared.js',
+		contents: `
 			export let styles = [];
 		`,
-		type: 'js',
-		modified: false
+		text: true
 	});
 
 	files.forEach((file) => {
-		const path = `./${file.name}.${file.type}`;
+		const path = `./${file.name}`;
 		lookup.set(path, file);
 	});
 

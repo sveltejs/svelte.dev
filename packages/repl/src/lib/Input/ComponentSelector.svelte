@@ -5,34 +5,29 @@
 	import RunesInfo from './RunesInfo.svelte';
 	import Migrate from './Migrate.svelte';
 	import type { File } from '../types';
+	import type { Workspace, File as WorkspaceFile } from 'editor';
 
 	export let show_modified: boolean;
 	export let runes: boolean;
-	export let remove: (value: { files: File[]; diff: File }) => void;
-	export let add: (value: { files: File[]; diff: File }) => void;
+	export let remove: (value: { files: WorkspaceFile[]; diff: WorkspaceFile }) => void;
+	export let add: (value: { files: WorkspaceFile[]; diff: WorkspaceFile }) => void;
+	export let workspace: Workspace;
 
-	const {
-		files,
-		handle_select,
-		module_editor,
-		rebundle,
-		selected,
-		selected_name,
-		EDITOR_STATE_MAP
-	} = get_repl_context();
+	const { files, handle_select, module_editor, rebundle, selected, EDITOR_STATE_MAP } =
+		get_repl_context();
 
 	let editing_name: string | null = null;
 	let input_value = '';
 
 	function select_file(filename: string) {
-		if ($selected_name !== filename) {
+		if (workspace.selected_name !== filename) {
 			editing_name = null;
 			handle_select(filename);
 		}
 	}
 
 	function edit_tab(file: File) {
-		if ($selected_name === get_full_filename(file)) {
+		if (workspace.selected_name === get_full_filename(file)) {
 			editing_name = get_full_filename(file);
 			input_value = file.name;
 		}
@@ -41,7 +36,7 @@
 	async function close_edit() {
 		const match = /(.+)\.(svelte|js|json|md|css)$/.exec(input_value ?? '');
 
-		const edited_file = $files.find((val) => get_full_filename(val) === editing_name);
+		const edited_file = workspace.files.find((val) => val.name === editing_name);
 
 		if (!edited_file) return;
 
@@ -54,11 +49,8 @@
 			let name = $selected.name;
 
 			do {
-				const file = $files.find(
-					(val) =>
-						get_full_filename(val) === get_full_filename(edited_file) &&
-						// @ts-ignore
-						val.source === $selected.source
+				const file = workspace.files.find(
+					(val) => val.name === edited_file.name && val.contents === $selected.contents
 				);
 
 				if (!file) break;
@@ -66,21 +58,17 @@
 				file.name = `${name}_${i++}`;
 			} while (is_file_name_used($selected));
 
-			const idx = $files.findIndex(
-				(val) => get_full_filename(val) === get_full_filename(edited_file)
-			);
-			$files[idx] = edited_file;
+			const idx = workspace.files.findIndex((val) => val.name === edited_file.name);
+			workspace.files[idx] = edited_file;
 		}
 
-		const idx = $files.findIndex(
-			(val) => get_full_filename(val) === get_full_filename(edited_file)
-		);
+		const idx = workspace.files.findIndex((val) => val.name === edited_file.name);
 		if (match?.[2]) $files[idx].type = match[2];
 
 		if (editing_name) {
 			const old_state = EDITOR_STATE_MAP.get(editing_name);
 			if (old_state) {
-				EDITOR_STATE_MAP.set(get_full_filename(edited_file), old_state);
+				EDITOR_STATE_MAP.set(edited_file.name, old_state);
 				EDITOR_STATE_MAP.delete(editing_name);
 			}
 		}
@@ -88,9 +76,7 @@
 		editing_name = null;
 
 		// re-select, in case the type changed
-		handle_select(get_full_filename(edited_file));
-
-		$files = $files;
+		handle_select(edited_file.name);
 
 		// focus the editor, but wait a beat (so key events aren't misdirected)
 		await tick();
@@ -101,23 +87,24 @@
 	}
 
 	function remove_file(filename: string) {
-		const file = $files.find((val) => get_full_filename(val) === filename);
-		const idx = $files.findIndex((val) => get_full_filename(val) === filename);
+		const file = workspace.files.find((val) => val.name === filename);
+		const idx = workspace.files.findIndex((val) => val.name === filename);
 
 		if (!file) return;
 
-		let result = confirm(`Are you sure you want to delete ${get_full_filename(file)}?`);
+		let result = confirm(`Are you sure you want to delete ${file.name}?`);
 
 		if (!result) return;
 
-		$files = $files.filter((file) => get_full_filename(file) !== filename);
+		workspace.files = workspace.files.filter((file) => file.name !== filename);
 
-		remove({ files: $files, diff: file });
+		remove({ files: workspace.files, diff: file });
 
 		EDITOR_STATE_MAP.delete(get_full_filename(file));
 
-		$selected_name = idx === 1 ? 'App.svelte' : get_full_filename(file);
-		handle_select($selected_name);
+		// TODO is one of these lines redundant?
+		workspace.selected_name = idx === 1 ? 'App.svelte' : get_full_filename(file);
+		handle_select(workspace.selected_name);
 	}
 
 	async function select_input(event: FocusEvent & { currentTarget: HTMLInputElement }) {
@@ -129,16 +116,19 @@
 	let uid = 1;
 
 	function add_new() {
-		const file = {
-			name: uid++ ? `Component${uid}` : 'Component1',
-			type: 'svelte',
-			source: '',
-			modified: true
+		const basename = `Component${uid++}`;
+
+		const file: WorkspaceFile = {
+			type: 'file',
+			name: basename,
+			basename,
+			contents: '',
+			text: true
 		};
 
-		$files = $files.concat(file);
+		workspace.files = workspace.files.concat(file);
 
-		editing_name = get_full_filename(file);
+		editing_name = file.name;
 
 		input_value = file.name;
 
@@ -146,13 +136,11 @@
 
 		rebundle();
 
-		add({ files: $files, diff: file });
-
-		$files = $files;
+		add({ files: workspace.files as WorkspaceFile[], diff: file });
 	}
 
-	function is_file_name_used(editing: File) {
-		return $files.find(
+	function is_file_name_used(editing: WorkspaceFile) {
+		return workspace.files.find(
 			(file) => JSON.stringify(file) !== JSON.stringify($selected) && file.name === editing.name
 		);
 	}
@@ -175,14 +163,17 @@
 
 	function dragEnd() {
 		if (from && over) {
-			const from_index = $files.findIndex((file) => file.name === from);
-			const to_index = $files.findIndex((file) => file.name === over);
+			const from_index = workspace.files.findIndex((file) => file.name === from);
+			const to_index = workspace.files.findIndex((file) => file.name === over);
 
-			const from_component = $files[from_index];
+			const from_component = workspace.files[from_index];
 
-			$files.splice(from_index, 1);
+			workspace.files.splice(from_index, 1);
 
-			$files = $files.slice(0, to_index).concat(from_component).concat($files.slice(to_index));
+			workspace.files = workspace.files
+				.slice(0, to_index)
+				.concat(from_component)
+				.concat(workspace.files.slice(to_index));
 		}
 
 		from = over = null;
@@ -192,14 +183,14 @@
 <div class="component-selector">
 	<!-- svelte-ignore a11y_no_static_element_interactions -->
 	<div class="file-tabs" on:dblclick={add_new}>
-		{#each $files as file, index (file.name)}
-			{@const filename = get_full_filename(file)}
+		{#each workspace.files as file, index (file.name)}
+			{@const filename = file.name}
 			<div
 				id={file.name}
 				class="button"
 				role="button"
 				tabindex="0"
-				class:active={filename === $selected_name}
+				class:active={filename === workspace.selected_name}
 				class:draggable={filename !== editing_name && index !== 0}
 				class:drag-over={over === file.name}
 				on:click={() => select_file(filename)}
@@ -218,7 +209,7 @@
 						App.svelte{#if show_modified && file.modified}*{/if}
 					</div>
 				{:else if filename === editing_name}
-					{@const editing_file = $files.find((file) => get_full_filename(file) === editing_name)}
+					{@const editing_file = workspace.files.find((file) => file.name === editing_name)}
 
 					{#if editing_file}
 						<span class="input-sizer">
@@ -252,7 +243,7 @@
 						on:click={() => edit_tab(file)}
 						on:keyup={(e) => e.key === ' ' && edit_tab(file)}
 					>
-						{file.name}.{file.type}{#if show_modified && file.modified}*{/if}
+						{file.name}{#if show_modified && file.modified}*{/if}
 					</div>
 
 					<span
