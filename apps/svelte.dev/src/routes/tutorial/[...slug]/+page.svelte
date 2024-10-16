@@ -15,7 +15,7 @@
 	import OutputRollup from './OutputRollup.svelte';
 	import { page } from '$app/stores';
 	import Controls from './Controls.svelte';
-	import type { Stub } from '$lib/tutorial';
+	import type { Item } from 'editor';
 	import type { Snapshot } from './$types.js';
 
 	interface Props {
@@ -30,10 +30,10 @@
 	let paused = $state(false);
 	let w = $state(1000);
 
-	let previous_files: Stub[] = [];
+	let previous_files: Item[] = [];
 
-	function create_files(map: Record<string, string>): Record<string, Stub> {
-		const files: Record<string, Stub> = {};
+	function create_files(map: Record<string, string>): Record<string, Item> {
+		const files: Record<string, Item> = {};
 
 		const to_delete: string[] = [];
 
@@ -102,7 +102,7 @@
 		paused = false;
 	});
 
-	function is_completed(files: Stub[], solution: Record<string, Stub> | null) {
+	function is_completed(files: Item[], solution: Record<string, Item> | null) {
 		if (!solution) return true;
 
 		for (const file of files) {

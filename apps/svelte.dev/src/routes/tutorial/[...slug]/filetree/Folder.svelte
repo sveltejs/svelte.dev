@@ -7,13 +7,14 @@
 	import folder_closed from '$lib/icons/folder.svg';
 	import folder_open from '$lib/icons/folder-open.svg';
 	import { solution } from '../state.svelte';
-	import type { DirectoryStub, FileStub, MenuItem, Stub } from '$lib/tutorial';
+	import type { MenuItem } from '$lib/tutorial';
+	import type { Directory, File as IFile, Item as IItem } from 'editor';
 
 	interface Props {
-		directory: DirectoryStub;
+		directory: Directory;
 		prefix: string;
 		depth: number;
-		contents: Stub[];
+		contents: IItem[];
 	}
 
 	let { directory, prefix, depth, contents }: Props = $props();
@@ -36,7 +37,7 @@
 
 	let child_files = $derived(
 		children.filter((child) => get_depth(child.name) === segments && child.type === 'file')
-	) as FileStub[];
+	) as IFile[];
 
 	const can_create = $derived.by(() => {
 		const result = {
@@ -156,7 +157,7 @@
 
 	{#each child_directories as directory}
 		<Folder
-			directory={directory as DirectoryStub}
+			directory={directory as Directory}
 			prefix={directory.name + '/'}
 			depth={depth + 1}
 			contents={children}

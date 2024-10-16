@@ -1,28 +1,10 @@
 import type { Writable } from 'svelte/store';
-
-/** @deprecated import type { File } from 'editor' */
-export interface FileStub {
-	type: 'file';
-	name: string;
-	basename: string;
-	contents: string;
-	text: boolean;
-}
-
-/** @deprecated import type { Directory } from 'editor' */
-export interface DirectoryStub {
-	type: 'directory';
-	name: string;
-	basename: string;
-}
-
-/** @deprecated import type { Item } from 'editor' */
-export type Stub = FileStub | DirectoryStub;
+import type { File, Directory, Item } from 'editor';
 
 export interface Adapter {
 	/** Returns `false` if the reset was in such a way that a reload of the iframe isn't needed */
-	reset(files: Array<Stub>): Promise<boolean>;
-	update(file: FileStub): Promise<boolean>;
+	reset(files: Array<Item>): Promise<boolean>;
+	update(file: File): Promise<boolean>;
 }
 
 export interface Scope {

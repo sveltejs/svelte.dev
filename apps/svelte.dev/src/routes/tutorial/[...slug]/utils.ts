@@ -1,6 +1,6 @@
-import type { DirectoryStub, Stub } from '$lib/tutorial';
+import type { Directory, Item } from 'editor';
 
-export function create_directories(name: string, files: Stub[]) {
+export function create_directories(name: string, files: Item[]) {
 	const existing = new Set();
 
 	for (const file of files) {
@@ -9,7 +9,7 @@ export function create_directories(name: string, files: Stub[]) {
 		}
 	}
 
-	const directories: DirectoryStub[] = [];
+	const directories: Directory[] = [];
 
 	const parts = name.split('/');
 	while (parts.length) {

@@ -1,4 +1,5 @@
-import type { Adapter, FileStub, Stub, Warning } from '$lib/tutorial';
+import type { Adapter, Warning } from '$lib/tutorial';
+import type { File, Item } from 'editor';
 import Bundler from '@sveltejs/repl/bundler';
 // @ts-ignore package exports don't have types
 import * as yootils from 'yootils';
@@ -43,7 +44,7 @@ export async function create(): Promise<Adapter> {
 		const result = await bundler.bundle(
 			[...current_stubs.values()]
 				// TODO we can probably remove all the SvelteKit specific stuff from the tutorial content once this settles down
-				.filter((f): f is FileStub => f.name.startsWith('/src/lib/') && f.type === 'file')
+				.filter((f): f is File => f.name.startsWith('/src/lib/') && f.type === 'file')
 				.map((f) => ({
 					name: f.name.slice(9).split('.').slice(0, -1).join('.'),
 					source: f.contents,
@@ -85,7 +86,7 @@ export async function create(): Promise<Adapter> {
 	};
 }
 
-function stubs_to_map(files: Stub[], map = new Map<string, Stub>()) {
+function stubs_to_map(files: Item[], map = new Map<string, Item>()) {
 	for (const file of files) {
 		map.set(file.name, file);
 	}

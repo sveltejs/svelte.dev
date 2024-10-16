@@ -3,10 +3,11 @@
 	import Item from './Item.svelte';
 	import file_icon from '$lib/icons/file.svg';
 	import { solution } from '../state.svelte';
-	import type { FileStub, MenuItem } from '$lib/tutorial';
+	import type { MenuItem } from '$lib/tutorial';
+	import type { File } from 'editor';
 
 	interface Props {
-		file: FileStub;
+		file: File;
 		depth: number;
 	}
 

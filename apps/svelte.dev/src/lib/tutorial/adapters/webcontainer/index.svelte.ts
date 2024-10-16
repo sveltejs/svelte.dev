@@ -6,7 +6,8 @@ import * as yootils from 'yootils';
 import { get_depth } from '../../../utils/path.js';
 import { escape_html } from '../../../utils/escape.js';
 import { ready } from '../common/index.js';
-import type { Adapter, FileStub, Stub, Warning } from '$lib/tutorial';
+import type { Adapter, Warning } from '$lib/tutorial';
+import type { Item, File } from 'editor';
 
 const converter = new AnsiToHtml({
 	fg: 'var(--sk-text-3)'
@@ -27,7 +28,7 @@ export async function create(): Promise<Adapter> {
 	state.progress = { value: 0, text: 'loading files' };
 
 	const q = yootils.queue(1);
-	const q_per_file = new Map<string, Array<FileStub>>();
+	const q_per_file = new Map<string, Array<File>>();
 
 	/** Paths and contents of the currently loaded file stubs */
 	let current_stubs = stubs_to_map([]);
@@ -138,7 +139,7 @@ export async function create(): Promise<Adapter> {
 	return {
 		reset: (stubs) => {
 			return q.add(async () => {
-				const to_write: Stub[] = [];
+				const to_write: Item[] = [];
 
 				const force_delete = [];
 
@@ -151,7 +152,7 @@ export async function create(): Promise<Adapter> {
 							continue;
 						}
 
-						const current = current_stubs.get(stub.name) as FileStub;
+						const current = current_stubs.get(stub.name) as File;
 
 						if (current?.contents !== stub.contents) {
 							to_write.push(stub);
@@ -272,7 +273,7 @@ export async function create(): Promise<Adapter> {
 	};
 }
 
-function is_config(file: Stub) {
+function is_config(file: Item) {
 	return file.type === 'file' && is_config_path(file.name);
 }
 
@@ -299,7 +300,7 @@ function wait_for_restart_vite() {
 	});
 }
 
-function convert_stubs_to_tree(stubs: Stub[], depth = 1) {
+function convert_stubs_to_tree(stubs: Item[], depth = 1) {
 	const tree: FileSystemTree = {};
 
 	for (const stub of stubs) {
@@ -319,7 +320,7 @@ function convert_stubs_to_tree(stubs: Stub[], depth = 1) {
 	return tree;
 }
 
-function to_file(file: FileStub) {
+function to_file(file: File) {
 	// special case
 	if (file.name === '/src/app.html' || file.name === '/src/error.html') {
 		const contents = file.contents + '<script type="module" src="/src/__client.js"></script>';
@@ -336,7 +337,7 @@ function to_file(file: FileStub) {
 	};
 }
 
-function stubs_to_map(files: Stub[], map = new Map<string, Stub>()) {
+function stubs_to_map(files: Item[], map = new Map<string, Item>()) {
 	for (const file of files) {
 		map.set(file.name, file);
 	}
