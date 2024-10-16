@@ -70,39 +70,18 @@
 		dev: false
 	};
 
-	const files: ReplContext['files'] = writable([]);
-	const selected_name: ReplContext['selected_name'] = writable('App.svelte');
-	const selected: ReplContext['selected'] = derived(
-		[files, selected_name],
-		([$files, $selected_name]) => {
-			return (
-				$files.find((val) => get_full_filename(val) === $selected_name) ?? {
-					name: '',
-					type: '',
-					source: '',
-					modified: false
-				}
-			);
-		}
-	);
-
 	const bundle: ReplContext['bundle'] = writable(null);
 	const compile_options: ReplContext['compile_options'] = writable(DEFAULT_COMPILE_OPTIONS);
-	const cursor_pos: ReplContext['cursor_pos'] = writable(0);
 	const module_editor: ReplContext['module_editor'] = writable(null);
 	const toggleable: ReplContext['toggleable'] = writable(false);
 	const bundler: ReplContext['bundler'] = writable(null);
 	const bundling: ReplContext['bundling'] = writable(new Promise(() => {}));
 
 	set_repl_context({
-		files,
-		selected_name,
-		selected,
 		bundle,
 		bundler,
 		bundling,
 		compile_options,
-		cursor_pos,
 		module_editor,
 		toggleable,
 
@@ -228,7 +207,6 @@
 					{injectedCSS}
 					{showAst}
 					{previewTheme}
-					selected={$selected}
 					{compiled}
 				/>
 			</section>

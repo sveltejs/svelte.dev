@@ -35,8 +35,8 @@
 
 	const { module_editor } = get_repl_context();
 
-	let js_editor: CodeMirror;
-	let css_editor: CodeMirror;
+	let js_editor: any;
+	let css_editor: any;
 	let view: 'result' | 'js' | 'css' | 'ast' = 'result';
 	let markdown = '';
 

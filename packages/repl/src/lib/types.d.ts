@@ -38,27 +38,19 @@ export type File = {
 };
 
 export type ReplState = {
-	files: File[];
-	selected_name: string;
-	selected: File | null;
 	bundle: Bundle | null;
 	bundling: Promise<void>;
 	bundler: import('./Bundler').default | null;
 	compile_options: CompileOptions;
-	cursor_pos: number;
 	toggleable: boolean;
 	module_editor: import('./CodeMirror.svelte').default | null;
 };
 
 export type ReplContext = {
-	files: Writable<ReplState['files']>;
-	selected_name: Writable<ReplState['selected_name']>;
-	selected: Readable<ReplState['selected']>;
 	bundle: Writable<ReplState['bundle']>;
 	bundling: Writable<ReplState['bundling']>;
 	bundler: Writable<ReplState['bundler']>;
 	compile_options: Writable<ReplState['compile_options']>;
-	cursor_pos: Writable<ReplState['cursor_pos']>;
 	toggleable: Writable<ReplState['toggleable']>;
 	module_editor: Writable<ReplState['module_editor']>;
 	workspace: Workspace;

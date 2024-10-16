@@ -12,7 +12,7 @@
 	export let add: (value: { files: WorkspaceFile[]; diff: WorkspaceFile }) => void;
 	export let workspace: Workspace;
 
-	const { files, handle_select, module_editor, rebundle, selected } = get_repl_context();
+	const { handle_select, module_editor, rebundle } = get_repl_context();
 
 	let editing_name: string | null = null;
 	let input_value = '';
@@ -55,14 +55,14 @@
 				if (!file) break;
 
 				file.name = `${name}_${i++}`;
-			} while (is_file_name_used($selected));
+			} while (is_file_name_used(workspace.selected_name));
 
 			const idx = workspace.files.findIndex((val) => val.name === edited_file.name);
 			workspace.files[idx] = edited_file;
 		}
 
 		const idx = workspace.files.findIndex((val) => val.name === edited_file.name);
-		if (match?.[2]) $files[idx].type = match[2];
+		// if (match?.[2]) $files[idx].type = match[2];
 
 		editing_name = null;
 
@@ -130,7 +130,9 @@
 
 	function is_file_name_used(editing: WorkspaceFile) {
 		return workspace.files.find(
-			(file) => JSON.stringify(file) !== JSON.stringify($selected) && file.name === editing.name
+			(file) =>
+				JSON.stringify(file) !== JSON.stringify(workspace.selected_file) &&
+				file.name === editing.name
 		);
 	}
 
