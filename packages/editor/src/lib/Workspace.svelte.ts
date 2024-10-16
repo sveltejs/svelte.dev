@@ -1,5 +1,6 @@
-import type { CompileError, Warning } from 'svelte/compiler';
-import { get_diagnostics } from './diagnostics';
+import type { CompileError, CompileResult } from 'svelte/compiler';
+import { compile_file } from './compile-worker';
+import { BROWSER } from 'esm-env';
 
 export interface File {
 	type: 'file';
@@ -17,9 +18,9 @@ export interface Directory {
 
 export type Item = File | Directory;
 
-export interface Diagnostics {
+export interface Compiled {
 	error: CompileError | null;
-	warnings: Warning[];
+	result: CompileResult;
 }
 
 export class Workspace {
@@ -29,7 +30,7 @@ export class Workspace {
 
 	modified = $state<Record<string, boolean>>({});
 
-	diagnostics = $state<Record<string, Diagnostics>>({});
+	compiled = $state<Record<string, Compiled>>({});
 
 	#onupdate: (file: File) => void;
 	#onreset: (items: Item[]) => void;
@@ -42,27 +43,29 @@ export class Workspace {
 	}: {
 		files: Item[];
 		selected_name: string;
-		onupdate: (file: File) => void;
-		onreset: (items: Item[]) => void;
+		onupdate?: (file: File) => void;
+		onreset?: (items: Item[]) => void;
 	}) {
 		this.files = files;
 		this.selected_name = selected_name;
-		this.#onupdate = onupdate;
-		this.#onreset = onreset;
+		this.#onupdate = onupdate ?? (() => {});
+		this.#onreset = onreset ?? (() => {});
 
 		this.#reset_diagnostics();
 	}
 
 	#reset_diagnostics() {
-		this.diagnostics = {};
+		this.compiled = {};
 
 		for (const file of this.files) {
 			if (file.type !== 'file') continue;
 			if (!/\.svelte(\.|$)/.test(file.name)) continue;
 
-			get_diagnostics(file).then((diagnostics) => {
-				this.diagnostics[file.name] = diagnostics;
-			});
+			if (BROWSER) {
+				compile_file(file).then((compiled) => {
+					this.compiled[file.name] = compiled;
+				});
+			}
 		}
 	}
 
@@ -88,9 +91,11 @@ export class Workspace {
 
 		this.modified[file.name] = true;
 
-		get_diagnostics(file).then((diagnostics) => {
-			this.diagnostics[file.name] = diagnostics;
-		});
+		if (BROWSER) {
+			compile_file(file).then((compiled) => {
+				this.compiled[file.name] = compiled;
+			});
+		}
 
 		this.#onupdate(file);
 	}

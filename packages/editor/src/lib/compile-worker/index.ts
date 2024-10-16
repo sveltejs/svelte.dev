@@ -1,15 +1,15 @@
 import { BROWSER } from 'esm-env';
-import DiagnosticsWorker from './worker?worker';
-import type { Diagnostics, File } from '../Workspace.svelte';
+import CompileWorker from './worker?worker';
+import type { Compiled, File } from '../Workspace.svelte';
 
-const callbacks = new Map<number, (diagnostics: Diagnostics) => void>();
+const callbacks = new Map<number, (compiled: Compiled) => void>();
 
 let worker: Worker;
 
 let uid = 1;
 
 if (BROWSER) {
-	worker = new DiagnosticsWorker();
+	worker = new CompileWorker();
 
 	worker.addEventListener('message', (event) => {
 		const callback = callbacks.get(event.data.id);
@@ -21,14 +21,9 @@ if (BROWSER) {
 	});
 }
 
-export function get_diagnostics(file: File): Promise<Diagnostics> {
-	if (!BROWSER) {
-		// TODO this is a bit janky
-		return Promise.resolve({
-			error: null,
-			warnings: []
-		});
-	}
+export function compile_file(file: File): Promise<Compiled> {
+	// @ts-expect-error
+	if (!BROWSER) return;
 
 	let id = uid++;
 

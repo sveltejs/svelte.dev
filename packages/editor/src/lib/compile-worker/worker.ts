@@ -17,8 +17,11 @@ addEventListener('message', (event) => {
 			id,
 			payload: {
 				error: null,
-				// @ts-expect-error https://github.com/sveltejs/svelte/issues/13628
-				warnings: result.warnings.map((w) => ({ message: w.message, ...w }))
+				result: {
+					...result,
+					// @ts-expect-error https://github.com/sveltejs/svelte/issues/13628
+					warnings: result.warnings.map((w) => ({ message: w.message, ...w }))
+				}
 			}
 		});
 	} catch (e) {
@@ -27,7 +30,7 @@ addEventListener('message', (event) => {
 			payload: {
 				// @ts-expect-error
 				error: { message: e.message, ...e },
-				warnings: []
+				result: null
 			}
 		});
 	}

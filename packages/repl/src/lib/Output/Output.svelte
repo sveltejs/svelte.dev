@@ -5,95 +5,114 @@
 	import CompilerOptions from './CompilerOptions.svelte';
 	import PaneWithPanel from './PaneWithPanel.svelte';
 	import Viewer from './Viewer.svelte';
-	import type { File } from '../types';
 	import type { CompilerOutput } from '../workers/workers';
-	import { Editor, Workspace } from 'editor';
+	import { Editor, Workspace, type File } from 'editor';
+	import { untrack } from 'svelte';
 
-	export let status: string | null;
-	export let runtimeError: Error | null = null;
-	export let embedded = false;
-	export let relaxed = false;
-	export let can_escape = false;
-	export let injectedJS: string;
-	export let injectedCSS: string;
-	export let showAst = false;
-	export let previewTheme: 'light' | 'dark';
-	export let selected: File | null;
-	export let compiled: CompilerOutput | null;
-
-	$: if (selected && js_editor && css_editor) {
-		if (selected.type === 'json') {
-			js_editor.set({ code: `/* Select a component to see its compiled code */`, lang: 'js' });
-			css_editor.set({ code: `/* Select a component to see its compiled code */`, lang: 'css' });
-		} else if (selected.type === 'md') {
-			markdown = marked(selected.source) as string;
-		} else if (compiled) {
-			js_editor.set({ code: compiled.js, lang: 'js' });
-			css_editor.set({ code: compiled.css, lang: 'css' });
-		}
+	interface Props {
+		status: string | null;
+		runtimeError?: Error | null;
+		embedded?: boolean;
+		relaxed?: boolean;
+		can_escape?: boolean;
+		injectedJS: string;
+		injectedCSS: string;
+		showAst?: boolean;
+		previewTheme: 'light' | 'dark';
+		selected: File | null;
+		compiled: CompilerOutput | null;
+		workspace: Workspace;
 	}
+
+	let {
+		status,
+		runtimeError = $bindable(null),
+		embedded = false,
+		relaxed = false,
+		can_escape = false,
+		injectedJS,
+		injectedCSS,
+		showAst = false,
+		previewTheme,
+		selected,
+		compiled,
+		workspace
+	}: Props = $props();
 
 	let js_editor: any;
 	let css_editor: any;
-	let view: 'result' | 'js' | 'css' | 'ast' = 'result';
-	let markdown = '';
-
-	$: ast = compiled?.ast;
+	let view: 'result' | 'js' | 'css' | 'ast' = $state('result');
+	let markdown = $state('');
 
 	const js_workspace = new Workspace({
-		files: [
-			{
-				type: 'file',
-				name: 'output.js',
-				basename: 'output.js',
-				contents: '/* TODO */',
-				text: true
-			}
-		],
-		selected_name: 'output.js',
-		onreset(items) {
-			// TODO
-		},
-		onupdate(items) {
-			// TODO
-		}
+		files: [],
+		selected_name: 'output.js'
 	});
 
 	const css_workspace = new Workspace({
-		files: [
-			{
+		files: [],
+		selected_name: 'output.css'
+	});
+
+	let is_markdown = $derived(workspace.selected_name?.endsWith('.md'));
+
+	// TODO this effect is a bit of a code smell
+	$effect(() => {
+		const compiled = workspace.compiled[workspace.selected_name];
+
+		untrack(() => {
+			let js_contents = `/* Select a component to see its compiled code */`;
+			let css_contents = js_contents;
+
+			if (compiled) {
+				if (compiled.error) {
+					js_contents = css_contents = `/* ${compiled.error.message} */`;
+				} else {
+					js_contents = compiled.result.js.code;
+					css_contents =
+						compiled.result.css?.code ?? `/* Add a <style> tag to see the CSS output */`;
+				}
+			}
+
+			const js: File = {
+				type: 'file',
+				name: 'output.js',
+				basename: 'output.js',
+				contents: js_contents,
+				text: true
+			};
+
+			const css: File = {
 				type: 'file',
 				name: 'output.css',
 				basename: 'output.css',
-				contents: '/* TODO */',
+				contents: css_contents,
 				text: true
-			}
-		],
-		selected_name: 'output.css',
-		onreset(items) {
-			// TODO
-		},
-		onupdate(items) {
-			// TODO
-		}
+			};
+
+			js_workspace.reset_files([js]);
+			css_workspace.reset_files([css]);
+		});
 	});
+
+	let ast = $derived(compiled?.ast);
 </script>
 
 <div class="view-toggle">
-	{#if selected?.type === 'md'}
+	{#if workspace.selected_name?.endsWith('.md')}
 		<button class="active">Markdown</button>
 	{:else}
-		<button class:active={view === 'result'} on:click={() => (view = 'result')}>Result</button>
-		<button class:active={view === 'js'} on:click={() => (view = 'js')}>JS output</button>
-		<button class:active={view === 'css'} on:click={() => (view = 'css')}>CSS output</button>
+		<button class:active={view === 'result'} onclick={() => (view = 'result')}>Result</button>
+		<button class:active={view === 'js'} onclick={() => (view = 'js')}>JS output</button>
+		<button class:active={view === 'css'} onclick={() => (view = 'css')}>CSS output</button>
 		{#if showAst}
-			<button class:active={view === 'ast'} on:click={() => (view = 'ast')}>AST output</button>
+			<button class:active={view === 'ast'} onclick={() => (view = 'ast')}>AST output</button>
 		{/if}
 	{/if}
 </div>
 
 <!-- component viewer -->
-<div class="tab-content" class:visible={selected?.type !== 'md' && view === 'result'}>
+<div class="tab-content" class:visible={!is_markdown && view === 'result'}>
 	<Viewer
 		bind:error={runtimeError}
 		{status}
@@ -106,15 +125,15 @@
 </div>
 
 <!-- js output -->
-<div class="tab-content" class:visible={selected?.type !== 'md' && view === 'js'}>
+<div class="tab-content" class:visible={!is_markdown && view === 'js'}>
 	{#if embedded}
 		<!-- TODO make readonly -->
-		<Editor workspace={js_workspace} onchange={() => {}} />
+		<Editor workspace={js_workspace} readonly />
 	{:else}
 		<PaneWithPanel pos="50%" panel="Compiler options">
 			<div slot="main">
 				<!-- TODO make readonly -->
-				<Editor workspace={js_workspace} onchange={() => {}} />
+				<Editor workspace={js_workspace} readonly />
 			</div>
 
 			<div slot="panel-body">
@@ -125,20 +144,20 @@
 </div>
 
 <!-- css output -->
-<div class="tab-content" class:visible={selected?.type !== 'md' && view === 'css'}>
+<div class="tab-content" class:visible={!is_markdown && view === 'css'}>
 	<!-- TODO make readonly -->
-	<Editor workspace={css_workspace} onchange={() => {}} />
+	<Editor workspace={css_workspace} readonly />
 </div>
 
 <!-- ast output -->
 {#if showAst && ast}
-	<div class="tab-content" class:visible={selected?.type !== 'md' && view === 'ast'}>
-		<AstView {ast} autoscroll={selected?.type !== 'md' && view === 'ast'} />
+	<div class="tab-content" class:visible={!is_markdown && view === 'ast'}>
+		<AstView {ast} autoscroll={!is_markdown && view === 'ast'} />
 	</div>
 {/if}
 
 <!-- markdown output -->
-<div class="tab-content" class:visible={selected?.type === 'md'}>
+<div class="tab-content" class:visible={is_markdown}>
 	<iframe title="Markdown" srcdoc={markdown}></iframe>
 </div>
 

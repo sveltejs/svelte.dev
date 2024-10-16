@@ -53,7 +53,7 @@
 	}
 
 	export async function set(data: { files: File[]; css?: string }) {
-		workspace.files = data.files;
+		workspace.reset_files(data.files);
 		workspace.selected_name = 'App.svelte';
 
 		editor.reset();
@@ -196,6 +196,7 @@
 					{showAst}
 					{previewTheme}
 					{compiled}
+					{workspace}
 				/>
 			</section>
 		</SplitPane>
