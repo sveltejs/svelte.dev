@@ -33,8 +33,6 @@
 		}
 	}
 
-	const { module_editor } = get_repl_context();
-
 	let js_editor: any;
 	let css_editor: any;
 	let view: 'result' | 'js' | 'css' | 'ast' = 'result';
@@ -135,10 +133,7 @@
 <!-- ast output -->
 {#if showAst && ast}
 	<div class="tab-content" class:visible={selected?.type !== 'md' && view === 'ast'}>
-		<!-- ast view interacts with the module editor, wait for it first -->
-		{#if $module_editor}
-			<AstView {ast} autoscroll={selected?.type !== 'md' && view === 'ast'} />
-		{/if}
+		<AstView {ast} autoscroll={selected?.type !== 'md' && view === 'ast'} />
 	</div>
 {/if}
 

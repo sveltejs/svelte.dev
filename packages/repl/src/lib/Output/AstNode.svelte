@@ -11,7 +11,7 @@
 	export let path_nodes: Ast[] = [];
 	export let autoscroll = true;
 
-	const { module_editor, toggleable } = get_repl_context();
+	const { toggleable } = get_repl_context();
 
 	let list_item_el: HTMLLIElement;
 
@@ -61,7 +61,8 @@
 				typeof value.start === 'number' &&
 				typeof value.end === 'number'
 			) {
-				$module_editor?.markText({ from: value.start ?? 0, to: value.end ?? 0 });
+				// TODO
+				// $module_editor?.markText({ from: value.start ?? 0, to: value.end ?? 0 });
 			}
 		}
 	}
@@ -69,7 +70,8 @@
 	function handle_unmark_text(e: MouseEvent) {
 		if (is_markable) {
 			e.stopPropagation();
-			$module_editor?.unmarkText();
+			// TODO
+			// $module_editor?.unmarkText();
 		}
 	}
 </script>

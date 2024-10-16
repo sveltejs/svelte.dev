@@ -2,12 +2,11 @@
 	import { SplitPane } from '@rich_harris/svelte-split-pane';
 	import { ScreenToggle } from '@sveltejs/site-kit/components';
 	import { BROWSER } from 'esm-env';
-	import { derived, writable } from 'svelte/store';
+	import { writable } from 'svelte/store';
 	import Bundler from './Bundler.js';
 	import ComponentSelector from './Input/ComponentSelector.svelte';
 	import Output from './Output/Output.svelte';
 	import { set_repl_context } from './context.js';
-	import { get_full_filename } from './utils.js';
 	import Compiler from './Output/Compiler.js';
 	import { Workspace, Editor, type File } from 'editor';
 	import type { Bundle, ReplContext } from './types.js';
@@ -72,17 +71,11 @@
 
 	const bundle: ReplContext['bundle'] = writable(null);
 	const compile_options: ReplContext['compile_options'] = writable(DEFAULT_COMPILE_OPTIONS);
-	const module_editor: ReplContext['module_editor'] = writable(null);
 	const toggleable: ReplContext['toggleable'] = writable(false);
-	const bundler: ReplContext['bundler'] = writable(null);
-	const bundling: ReplContext['bundling'] = writable(new Promise(() => {}));
 
 	set_repl_context({
 		bundle,
-		bundler,
-		bundling,
 		compile_options,
-		module_editor,
 		toggleable,
 
 		rebundle,
@@ -96,13 +89,8 @@
 
 	async function rebundle() {
 		const token = (current_token = Symbol());
-		let resolver = () => {};
-		$bundling = new Promise((resolve) => {
-			resolver = resolve;
-		});
-		const result = await $bundler?.bundle(workspace.files as File[]);
-		if (result && token === current_token) $bundle = result as Bundle;
-		resolver();
+		const result = await bundler!.bundle(workspace.files as File[]);
+		if (token === current_token) $bundle = result as Bundle;
 	}
 
 	async function migrate() {
@@ -140,7 +128,7 @@
 	let status_visible = false;
 	let status_timeout: NodeJS.Timeout | undefined = undefined;
 
-	$bundler = BROWSER
+	const bundler = BROWSER
 		? new Bundler({
 				packages_url: packagesUrl,
 				svelte_url: svelteUrl,

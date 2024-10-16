@@ -39,20 +39,16 @@ export type File = {
 
 export type ReplState = {
 	bundle: Bundle | null;
-	bundling: Promise<void>;
 	bundler: import('./Bundler').default | null;
 	compile_options: CompileOptions;
 	toggleable: boolean;
-	module_editor: import('./CodeMirror.svelte').default | null;
 };
 
 export type ReplContext = {
 	bundle: Writable<ReplState['bundle']>;
-	bundling: Writable<ReplState['bundling']>;
-	bundler: Writable<ReplState['bundler']>;
 	compile_options: Writable<ReplState['compile_options']>;
 	toggleable: Writable<ReplState['toggleable']>;
-	module_editor: Writable<ReplState['module_editor']>;
+
 	workspace: Workspace;
 
 	// Methods

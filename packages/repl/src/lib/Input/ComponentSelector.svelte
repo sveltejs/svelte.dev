@@ -12,7 +12,7 @@
 	export let add: (value: { files: WorkspaceFile[]; diff: WorkspaceFile }) => void;
 	export let workspace: Workspace;
 
-	const { handle_select, module_editor, rebundle } = get_repl_context();
+	const { handle_select, rebundle } = get_repl_context();
 
 	let editing_name: string | null = null;
 	let input_value = '';
@@ -71,8 +71,6 @@
 
 		// focus the editor, but wait a beat (so key events aren't misdirected)
 		await tick();
-
-		$module_editor?.focus();
 
 		rebundle();
 	}
