@@ -30,6 +30,8 @@
 	let paused = $state(false);
 	let w = $state(1000);
 
+	let editor: any; // TODO
+
 	let previous_files: Item[] = [];
 
 	function create_files(map: Record<string, string>): Record<string, Item> {
@@ -301,7 +303,7 @@
 
 							<section slot="b" class="editor-container">
 								<Editor
-									exercise={data.exercise}
+									bind:this={editor}
 									warnings={adapter.adapter_state.warnings}
 									{workspace}
 									autocomplete_filter={(file) => {
