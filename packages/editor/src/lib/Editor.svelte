@@ -15,17 +15,17 @@
 	import { onMount, tick } from 'svelte';
 	import { autocomplete_for_svelte } from '@sveltejs/site-kit/codemirror';
 	import type { Diagnostic } from '@codemirror/lint';
-	import { Workspace, type Item } from './Workspace.svelte.js';
+	import { Workspace, type Item, type File } from './Workspace.svelte.js';
 	import type { Warning } from 'svelte/compiler';
 	import './codemirror.css';
 
 	interface Props {
-		exercise: any; // TODO this needs to be decoupled
 		warnings: Record<string, Warning[]>; // TODO this should include errors as well
 		workspace: Workspace;
+		autocomplete_filter?: (file: File) => boolean;
 	}
 
-	let { exercise, warnings, workspace }: Props = $props();
+	let { warnings, workspace, autocomplete_filter = () => true }: Props = $props();
 
 	let container = $state() as HTMLDivElement;
 
@@ -103,14 +103,10 @@
 							() => workspace.selected_name!,
 							() =>
 								files
-									.filter(
-										(file) =>
-											file.type === 'file' &&
-											file.name.startsWith('/src') &&
-											file.name.startsWith(exercise.scope.prefix) &&
-											file.name !== '/src/__client.js' &&
-											file.name !== '/src/app.html'
-									)
+									.filter((file) => {
+										if (file.type !== 'file') return false;
+										return autocomplete_filter(file);
+									})
 									.map((file) => file.name)
 						)
 					];

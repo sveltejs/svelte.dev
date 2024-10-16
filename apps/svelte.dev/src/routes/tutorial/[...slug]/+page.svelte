@@ -304,6 +304,14 @@
 									exercise={data.exercise}
 									warnings={adapter.adapter_state.warnings}
 									{workspace}
+									autocomplete_filter={(file) => {
+										return (
+											file.name.startsWith('/src') &&
+											file.name.startsWith(data.exercise.scope.prefix) &&
+											file.name !== '/src/__client.js' &&
+											file.name !== '/src/app.html'
+										);
+									}}
 								/>
 								<ImageViewer selected={workspace.selected_file} />
 
