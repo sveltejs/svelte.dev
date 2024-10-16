@@ -17,6 +17,7 @@
 	import Controls from './Controls.svelte';
 	import type { Item } from 'editor';
 	import type { Snapshot } from './$types.js';
+	import { tick } from 'svelte';
 
 	interface Props {
 		data: any;
@@ -31,6 +32,7 @@
 	let w = $state(1000);
 
 	let editor: any; // TODO
+	let skip_set_files = true;
 
 	let previous_files: Item[] = [];
 
@@ -87,22 +89,6 @@
 
 		return files;
 	}
-
-	beforeNavigate(() => {
-		previous_files = workspace.files;
-	});
-
-	afterNavigate(async () => {
-		w = window.innerWidth;
-
-		const will_delete = previous_files.some((file) => !(file.name in a));
-
-		if (data.exercise.path !== path || will_delete) paused = true;
-		await adapter.reset(workspace.files);
-
-		path = data.exercise.path;
-		paused = false;
-	});
 
 	function is_completed(files: Item[], solution: Record<string, Item> | null) {
 		if (!solution) return true;
@@ -213,6 +199,32 @@
 		workspace.selected_name = data.exercise.focus; // TODO this probably belongs in afterNavigate
 	});
 
+	beforeNavigate(() => {
+		skip_set_files = true;
+		previous_files = workspace.files;
+	});
+
+	afterNavigate(async () => {
+		skip_set_files = false;
+
+		editor.reset();
+
+		w = window.innerWidth;
+
+		const will_delete = previous_files.some((file) => !(file.name in a));
+
+		if (data.exercise.path !== path || will_delete) paused = true;
+		await adapter.reset(workspace.files);
+
+		path = data.exercise.path;
+		paused = false;
+	});
+
+	$effect(() => {
+		const files = workspace.files; // capture the dependency. TODO don't use an effect here
+		if (!skip_set_files) editor.update_files(files);
+	});
+
 	let completed = $derived(is_completed(workspace.files, b));
 </script>
 
@@ -306,6 +318,14 @@
 									bind:this={editor}
 									warnings={adapter.adapter_state.warnings}
 									{workspace}
+									onchange={async (file, contents) => {
+										skip_set_files = true;
+
+										workspace.update_file({ ...file, contents });
+
+										await tick();
+										skip_set_files = false;
+									}}
 									autocomplete_filter={(file) => {
 										return (
 											file.name.startsWith('/src') &&
