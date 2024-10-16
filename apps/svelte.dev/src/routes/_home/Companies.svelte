@@ -43,6 +43,7 @@
 	.wing {
 		position: relative;
 		height: 4rem;
+		left: -1rem;
 	}
 
 	.logos {
@@ -87,6 +88,10 @@
 		h2 {
 			position: relative;
 			width: 12em;
+		}
+
+		.wing {
+			left: auto;
 		}
 
 		.logos {
