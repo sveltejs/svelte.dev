@@ -19,23 +19,23 @@
 	import { toStore } from 'svelte/store';
 	import { autocomplete_for_svelte } from '@sveltejs/site-kit/codemirror';
 
-	/** @type {import('$lib/tutorial').Exercise}*/
-	export let exercise;
+	/** @type {{exercise: import('$lib/tutorial').Exercise}} */
+	let { exercise } = $props();
 
 	/** @type {HTMLDivElement} */
-	let container;
+	let container = $state();
 
-	let preserve_editor_focus = false;
+	let preserve_editor_focus = $state(false);
 	let skip_reset = true;
 
 	/** @type {any} */
-	let remove_focus_timeout;
+	let remove_focus_timeout = $state();
 
 	/** @type {Map<string, import('@codemirror/state').EditorState>} */
 	let editor_states = new Map();
 
 	/** @type {import('@codemirror/view').EditorView} */
-	let editor_view;
+	let editor_view = $state();
 
 	const warnings = toStore(() => adapter_state.warnings);
 
@@ -46,30 +46,6 @@
 		indentUnit.of('\t'),
 		svelteTheme
 	];
-
-	$: reset($files);
-
-	$: select_state($selected_name);
-
-	$: if (editor_view) {
-		if ($selected_name) {
-			const current_warnings = $warnings[$selected_name] || [];
-			const diagnostics = current_warnings.map((warning) => {
-				/** @type {import('@codemirror/lint').Diagnostic} */
-				const diagnostic = {
-					from: warning.start.character,
-					to: warning.end.character,
-					severity: 'warning',
-					message: warning.message
-				};
-
-				return diagnostic;
-			});
-			const transaction = setDiagnostics(editor_view.state, diagnostics);
-
-			editor_view.dispatch(transaction);
-		}
-	}
 
 	let installed_vim = false;
 
@@ -210,15 +186,45 @@
 			select_state($selected_name);
 		}
 	});
+
+	$effect(() => {
+		reset($files);
+	});
+
+	$effect(() => {
+		select_state($selected_name);
+	});
+
+	$effect(() => {
+		if (editor_view) {
+			if ($selected_name) {
+				const current_warnings = $warnings[$selected_name] || [];
+				const diagnostics = current_warnings.map((warning) => {
+					/** @type {import('@codemirror/lint').Diagnostic} */
+					const diagnostic = {
+						from: warning.start.character,
+						to: warning.end.character,
+						severity: 'warning',
+						message: warning.message
+					};
+
+					return diagnostic;
+				});
+				const transaction = setDiagnostics(editor_view.state, diagnostics);
+
+				editor_view.dispatch(transaction);
+			}
+		}
+	});
 </script>
 
 <svelte:window
-	on:pointerdown={(e) => {
+	onpointerdown={(e) => {
 		if (!container.contains(/** @type {HTMLElement} */ (e.target))) {
 			preserve_editor_focus = false;
 		}
 	}}
-	on:message={(e) => {
+	onmessage={(e) => {
 		if (preserve_editor_focus && e.data.type === 'iframe_took_focus') {
 			editor_view.focus();
 		}
@@ -228,11 +234,11 @@
 <div
 	class="container"
 	bind:this={container}
-	on:focusin={() => {
+	onfocusin={() => {
 		clearTimeout(remove_focus_timeout);
 		preserve_editor_focus = true;
 	}}
-	on:focusout={() => {
+	onfocusout={() => {
 		// Heuristic: user did refocus themmselves if iframe_took_focus
 		// doesn't happen in the next few miliseconds. Needed
 		// because else navigations inside the iframe refocus the editor.
