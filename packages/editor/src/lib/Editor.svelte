@@ -166,25 +166,23 @@
 	});
 
 	$effect(() => {
-		if (editor_view) {
-			if (workspace.selected_name) {
-				const current_warnings = warnings[workspace.selected_name] || [];
-				const diagnostics = current_warnings.map((warning) => {
-					/** @type {import('@codemirror/lint').Diagnostic} */
-					const diagnostic: Diagnostic = {
-						from: warning.start!.character,
-						to: warning.end!.character,
-						severity: 'warning',
-						message: warning.message
-					};
+		if (!editor_view || !workspace.selected_name) return;
 
-					return diagnostic;
-				});
+		const current_warnings = warnings[workspace.selected_name] || [];
+		const diagnostics = current_warnings.map((warning) => {
+			/** @type {import('@codemirror/lint').Diagnostic} */
+			const diagnostic: Diagnostic = {
+				from: warning.start!.character,
+				to: warning.end!.character,
+				severity: 'warning',
+				message: warning.message
+			};
 
-				const transaction = setDiagnostics(editor_view.state, diagnostics);
-				editor_view.dispatch(transaction);
-			}
-		}
+			return diagnostic;
+		});
+
+		const transaction = setDiagnostics(editor_view.state, diagnostics);
+		editor_view.dispatch(transaction);
 	});
 </script>
 
