@@ -45,7 +45,6 @@
 	.wing {
 		position: relative;
 		height: 4rem;
-		left: -1rem;
 	}
 
 	.logos {
