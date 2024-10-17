@@ -95,7 +95,9 @@
 		});
 	});
 
-	let ast = $derived(compiled?.ast);
+	let ast = $derived(workspace.compiled[workspace.selected_name]?.result.ast);
+
+	$inspect(ast);
 </script>
 
 <div class="view-toggle">
