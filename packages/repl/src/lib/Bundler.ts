@@ -51,7 +51,7 @@ export default class Bundler {
 		});
 	}
 
-	bundle(files: File[], options: CompileOptions): Promise<BundleResult> {
+	bundle(files: File[], options: CompileOptions = {}): Promise<BundleResult> {
 		return new Promise<any>((fulfil) => {
 			this.handlers.set(uid, fulfil);
 
