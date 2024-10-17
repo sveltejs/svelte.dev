@@ -409,7 +409,6 @@
 			--primary-hsl: var(--sk-theme-1-hsl);
 			color: var(--sk-text-1);
 			padding: 0 0 0 4.5rem;
-			font-style: italic;
 
 			&.note,
 			&:has(details.legacy) {
@@ -452,15 +451,6 @@
 				top: 0;
 				font-family: var(--sk-font-family-heading);
 				color: var(--sk-text-4);
-			}
-
-			em,
-			i {
-				font-style: normal;
-			}
-
-			code {
-				font-style: normal;
 			}
 
 			@media (max-width: 767px) {
