@@ -1,4 +1,6 @@
 <script>
+	const MAX_SIZE = 200;
+
 	class Box {
 		width = $state(0);
 		height = $state(0);
@@ -19,12 +21,12 @@
 </script>
 
 <label>
-	<input type="range" bind:value={box.width} min={0} max={500} />
+	<input type="range" bind:value={box.width} min={0} max={MAX_SIZE} />
 	{box.width}
 </label>
 
 <label>
-	<input type="range" bind:value={box.height} min={0} max={500} />
+	<input type="range" bind:value={box.height} min={0} max={MAX_SIZE} />
 	{box.height}
 </label>
 

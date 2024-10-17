@@ -2,13 +2,29 @@
 	const MAX_SIZE = 200;
 
 	class Box {
-		width = 0;
-		height = 0;
-		area = 0;
+		#width = $state(0);
+		#height = $state(0);
+		area = $derived(this.#width * this.#height);
 
 		constructor(width, height) {
-			this.width = width;
-			this.height = height;
+			this.#width = width;
+			this.#height = height;
+		}
+
+		get width() {
+			return this.#width;
+		}
+
+		get height() {
+			return this.#height;
+		}
+
+		set width(value) {
+			this.#width = Math.max(0, Math.min(MAX_SIZE, value));
+		}
+
+		set height(value) {
+			this.#height = Math.max(0, Math.min(MAX_SIZE, value));
 		}
 
 		embiggen(amount) {
