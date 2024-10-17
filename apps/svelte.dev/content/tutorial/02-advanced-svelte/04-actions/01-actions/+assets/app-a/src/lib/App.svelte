@@ -2,10 +2,10 @@
 	import Canvas from './Canvas.svelte';
 
 	const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet', 'white', 'black'];
-	let selected = colors[0];
-	let size = 10;
 
-	let showMenu = true;
+	let selected = $state(colors[0]);
+	let size = $state(10);
+	let showMenu = $state(true);
 </script>
 
 <div class="container">
@@ -13,10 +13,17 @@
 
 	{#if showMenu}
 		<div
+			role="presentation"
 			class="modal-background"
-			on:click|self={() => showMenu = false}
-			on:keydown={(e) => {
-				if (e.key === 'Escape') showMenu = false;
+			onclick={(event) => {
+				if (event.target === event.currentTarget) {
+					showMenu = false;
+				}
+			}}
+			onkeydown={(e) => {
+				if (e.key === 'Escape') {
+					showMenu = false;
+				}
 			}}
 		>
 			<div class="menu">
@@ -27,7 +34,7 @@
 							aria-label={color}
 							aria-current={selected === color}
 							style="--color: {color}"
-							on:click={() => {
+							onclick={() => {
 								selected = color;
 							}}
 						></button>
@@ -44,7 +51,7 @@
 	{/if}
 
 	<div class="controls">
-		<button class="show-menu" on:click={() => showMenu = !showMenu}>
+		<button class="show-menu" onclick={() => showMenu = !showMenu}>
 			{showMenu ? 'close' : 'menu'}
 		</button>
 	</div>

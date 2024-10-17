@@ -20,10 +20,10 @@ We can fix that with an action. Import `trapFocus` from `actions.js`...
 	+++import { trapFocus } from './actions.js';+++
 
 	const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet', 'white', 'black'];
-	let selected = colors[0];
-	let size = 10;
 
-	let showMenu = true;
+	let selected = $state(colors[0]);
+	let size = $state(10);
+	let showMenu = $state(true);
 </script>
 ```
 
