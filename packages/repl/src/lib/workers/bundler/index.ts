@@ -14,7 +14,7 @@ import loop_protect from './plugins/loop-protect';
 import type { Plugin, TransformResult } from '@rollup/browser';
 import type { BundleMessageData } from '../workers';
 import type { Warning } from '../../types';
-import type { CompileError, CompileResult } from 'svelte/compiler';
+import type { CompileError, CompileOptions, CompileResult } from 'svelte/compiler';
 import type { File } from 'editor';
 
 let packages_url: string;
@@ -43,7 +43,7 @@ self.addEventListener('message', async (event: MessageEvent<BundleMessageData>) 
 
 		case 'bundle': {
 			await ready;
-			const { uid, files } = event.data;
+			const { uid, files, options } = event.data;
 
 			if (files.length === 0) return;
 
@@ -52,7 +52,7 @@ self.addEventListener('message', async (event: MessageEvent<BundleMessageData>) 
 			setTimeout(async () => {
 				if (current_id !== uid) return;
 
-				const result = await bundle({ uid, files });
+				const result = await bundle({ uid, files, options });
 
 				if (JSON.stringify(result.error) === JSON.stringify(ABORT)) return;
 				if (result && uid === current_id) postMessage(result);
@@ -203,7 +203,8 @@ async function get_bundle(
 	uid: number,
 	mode: 'client' | 'server',
 	cache: (typeof cached)['client'],
-	local_files_lookup: Map<string, File>
+	local_files_lookup: Map<string, File>,
+	options: CompileOptions
 ) {
 	let bundle;
 
@@ -351,6 +352,7 @@ async function get_bundle(
 				result = cached_id.result;
 			} else if (id.endsWith('.svelte')) {
 				result = svelte.compile(code, {
+					...options,
 					filename: name + '.svelte',
 					// @ts-expect-error
 					generate: Number(svelte.VERSION.split('.')[0]) >= 5 ? 'client' : 'dom',
@@ -459,7 +461,15 @@ async function get_bundle(
 
 export type BundleResult = ReturnType<typeof bundle>;
 
-async function bundle({ uid, files }: { uid: number; files: File[] }) {
+async function bundle({
+	uid,
+	files,
+	options
+}: {
+	uid: number;
+	files: File[];
+	options: CompileOptions;
+}) {
 	if (!DEV) {
 		console.clear();
 		console.log(`running Svelte compiler version %c${svelte.VERSION}`, 'font-weight: bold');
@@ -503,7 +513,8 @@ async function bundle({ uid, files }: { uid: number; files: File[] }) {
 		uid,
 		'client',
 		cached.client,
-		lookup
+		lookup,
+		options
 	);
 
 	try {
@@ -522,7 +533,7 @@ async function bundle({ uid, files }: { uid: number; files: File[] }) {
 		)?.output[0];
 
 		const server = false // TODO how can we do SSR?
-			? await get_bundle(uid, 'server', cached.server, lookup)
+			? await get_bundle(uid, 'server', cached.server, lookup, options)
 			: null;
 
 		if (server) {

@@ -55,6 +55,7 @@ export type BundleMessageData = {
 	packages_url: string;
 	svelte_url: string;
 	files: File[];
+	options: CompileOptions;
 };
 
 declare global {
