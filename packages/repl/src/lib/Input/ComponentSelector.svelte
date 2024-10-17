@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { stopPropagation, preventDefault } from 'svelte/legacy';
 	import { forcefocus } from '@sveltejs/site-kit/actions';
 	import { get_repl_context } from '../context';
 	import { tick } from 'svelte';
@@ -131,10 +130,13 @@
 	}
 
 	function dragOver(event: DragEvent & { currentTarget: HTMLDivElement }) {
+		event.preventDefault();
 		over = event.currentTarget.id;
 	}
 
-	function dragEnd() {
+	function dragEnd(event: DragEvent) {
+		event.preventDefault();
+
 		if (from && over) {
 			const from_index = workspace.files.findIndex((file) => file.name === from);
 			const to_index = workspace.files.findIndex((file) => file.name === over);
@@ -155,7 +157,7 @@
 
 <div class="component-selector">
 	<!-- svelte-ignore a11y_no_static_element_interactions -->
-	<div class="file-tabs" ondblclick={add_new}>
+	<div class="file-tabs">
 		{#each workspace.files as File[] as file, index (file.name)}
 			<div
 				id={file.name}
@@ -167,12 +169,11 @@
 				class:drag-over={over === file.name}
 				onclick={() => select_file(file.name)}
 				onkeyup={(e) => e.key === ' ' && select_file(file.name)}
-				ondblclick={stopPropagation(() => {})}
 				draggable={file.name !== editing_name}
 				ondragstart={dragStart}
-				ondragover={preventDefault(dragOver)}
+				ondragover={dragOver}
 				ondragleave={dragLeave}
-				ondrop={preventDefault(dragEnd)}
+				ondrop={dragEnd}
 			>
 				<i class="drag-handle"></i>
 
@@ -231,8 +232,6 @@
 		<RunesInfo {runes} />
 		<Migrate />
 	</div>
-
-	<!-- <div class="migrate-info"></div> -->
 </div>
 
 <style>
