@@ -44,7 +44,10 @@ export async function create(): Promise<Adapter> {
 			[...current_stubs.values()]
 				// TODO we can probably remove all the SvelteKit specific stuff from the tutorial content once this settles down
 				.filter((f): f is File => f.name.startsWith('/src/lib/') && f.type === 'file')
-				.map((f) => ({ ...f, name: f.name.slice(9) }))
+				.map((f) => ({ ...f, name: f.name.slice(9) })),
+			{
+				runes: true
+			}
 		);
 	}
 
