@@ -1,5 +1,5 @@
 <script>
-	let visible = true;
+	let visible = $state(true);
 </script>
 
 <label>

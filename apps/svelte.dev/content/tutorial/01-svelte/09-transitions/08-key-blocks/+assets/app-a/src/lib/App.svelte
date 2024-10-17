@@ -1,11 +1,10 @@
 <script>
-	import { onMount } from 'svelte';
 	import { typewriter } from './transition.js';
 	import { messages } from './loading-messages.js';
 
-	let i = -1;
+	let i = $state(-1);
 
-	onMount(() => {
+	$effect(() => {
 		const interval = setInterval(() => {
 			i += 1;
 			i %= messages.length;

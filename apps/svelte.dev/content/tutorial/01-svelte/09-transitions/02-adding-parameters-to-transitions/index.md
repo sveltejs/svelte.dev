@@ -8,7 +8,8 @@ Transition functions can accept parameters. Replace the `fade` transition with `
 /// file: App.svelte
 <script>
 	import { +++fly+++ } from 'svelte/transition';
-	let visible = true;
+
+	let visible = $state(true);
 </script>
 ```
 

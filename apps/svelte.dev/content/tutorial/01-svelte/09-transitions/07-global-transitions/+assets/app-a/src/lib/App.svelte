@@ -1,9 +1,10 @@
 <script>
 	import { slide } from 'svelte/transition';
 
-	let showItems = true;
-	let i = 5;
 	let items = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'];
+
+	let showItems = $state(true);
+	let i = $state(5);
 </script>
 
 <label>

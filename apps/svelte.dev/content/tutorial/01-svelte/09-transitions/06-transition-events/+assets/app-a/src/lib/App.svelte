@@ -1,8 +1,8 @@
 <script>
 	import { fly } from 'svelte/transition';
 
-	let visible = true;
-	let status = 'waiting...';
+	let visible = $state(true);
+	let status = $state('waiting...');
 </script>
 
 <p>status: {status}</p>
@@ -13,7 +13,9 @@
 </label>
 
 {#if visible}
-	<p transition:fly={{ y: 200, duration: 2000 }}>
+	<p
+		transition:fly={{ y: 200, duration: 2000 }}
+	>
 		Flies in and out
 	</p>
 {/if}

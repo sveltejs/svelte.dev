@@ -1,7 +1,7 @@
 <script>
 	import { fade } from 'svelte/transition';
 
-	let visible = true;
+	let visible = $state(true);
 
 	function spin(node, { duration }) {
 		return {

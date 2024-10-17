@@ -10,7 +10,8 @@ First, import the `fade` function from `svelte/transition`...
 /// file: App.svelte
 <script>
 	+++import { fade } from 'svelte/transition';+++
-	let visible = true;
+
+	let visible = $state(true);
 </script>
 ```
 
