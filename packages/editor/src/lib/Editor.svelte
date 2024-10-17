@@ -15,7 +15,6 @@
 	import type { Diagnostic } from '@codemirror/lint';
 	import { Workspace, type Item, type File } from './Workspace.svelte.js';
 	import './codemirror.css';
-	import { untrack } from 'svelte';
 
 	interface Props {
 		workspace: Workspace;

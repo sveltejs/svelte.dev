@@ -42,7 +42,6 @@
 	let js_editor: any;
 	let css_editor: any;
 	let view: 'result' | 'js' | 'css' | 'ast' = $state('result');
-	let markdown = $state('');
 
 	const js_workspace = new Workspace({
 		files: [],
@@ -55,6 +54,7 @@
 	});
 
 	let is_markdown = $derived(workspace.selected_name?.endsWith('.md'));
+	let markdown = $derived(is_markdown ? marked.parse(workspace.selected_file.contents) : '');
 
 	// TODO this effect is a bit of a code smell
 	$effect(() => {

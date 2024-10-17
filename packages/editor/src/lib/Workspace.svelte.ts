@@ -23,6 +23,10 @@ export interface Compiled {
 	result: CompileResult;
 }
 
+function is_svelte_file(file: File) {
+	return /\.svelte(\.|$)/.test(file.name);
+}
+
 export class Workspace {
 	files = $state.raw<Item[]>([]);
 	creating = $state.raw<{ parent: string; type: 'file' | 'directory' } | null>(null);
@@ -74,7 +78,7 @@ export class Workspace {
 
 		for (const file of files) {
 			if (file.type !== 'file') continue;
-			if (!/\.svelte(\.|$)/.test(file.name)) continue;
+			if (!is_svelte_file(file)) continue;
 
 			seen.push(file.name);
 
@@ -116,7 +120,7 @@ export class Workspace {
 
 		this.modified[file.name] = true;
 
-		if (BROWSER) {
+		if (BROWSER && is_svelte_file(file)) {
 			compile_file(file, this.compiler_options).then((compiled) => {
 				this.compiled[file.name] = compiled;
 			});
