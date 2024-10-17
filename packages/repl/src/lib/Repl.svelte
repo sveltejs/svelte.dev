@@ -221,6 +221,7 @@
 	.container {
 		position: relative;
 		flex: 1;
+		height: 100%;
 		background: var(--sk-back-1);
 		padding: 0;
 
