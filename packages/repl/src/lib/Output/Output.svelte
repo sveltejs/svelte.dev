@@ -56,48 +56,45 @@
 	let is_markdown = $derived(workspace.selected_name?.endsWith('.md'));
 	let markdown = $derived(is_markdown ? marked.parse(workspace.selected_file.contents) : '');
 
+	let current = $derived(workspace.compiled[workspace.selected_name]);
+
 	// TODO this effect is a bit of a code smell
 	$effect(() => {
-		const compiled = workspace.compiled[workspace.selected_name];
+		let js_contents = `/* Select a component to see its compiled code */`;
+		let css_contents = js_contents;
+
+		if (current) {
+			if (current.error) {
+				js_contents = css_contents = `/* ${current.error.message} */`;
+			} else {
+				js_contents = current.result.js.code;
+				css_contents = current.result.css?.code ?? `/* Add a <style> tag to see the CSS output */`;
+			}
+		}
+
+		const js: File = {
+			type: 'file',
+			name: 'output.js',
+			basename: 'output.js',
+			contents: js_contents,
+			text: true
+		};
+
+		const css: File = {
+			type: 'file',
+			name: 'output.css',
+			basename: 'output.css',
+			contents: css_contents,
+			text: true
+		};
 
 		untrack(() => {
-			let js_contents = `/* Select a component to see its compiled code */`;
-			let css_contents = js_contents;
-
-			if (compiled) {
-				if (compiled.error) {
-					js_contents = css_contents = `/* ${compiled.error.message} */`;
-				} else {
-					js_contents = compiled.result.js.code;
-					css_contents =
-						compiled.result.css?.code ?? `/* Add a <style> tag to see the CSS output */`;
-				}
-			}
-
-			const js: File = {
-				type: 'file',
-				name: 'output.js',
-				basename: 'output.js',
-				contents: js_contents,
-				text: true
-			};
-
-			const css: File = {
-				type: 'file',
-				name: 'output.css',
-				basename: 'output.css',
-				contents: css_contents,
-				text: true
-			};
-
 			js_workspace.reset_files([js]);
 			css_workspace.reset_files([css]);
 		});
 	});
 
-	let ast = $derived(workspace.compiled[workspace.selected_name]?.result.ast);
-
-	$inspect(ast);
+	let ast = $derived(current?.result?.ast);
 </script>
 
 <div class="view-toggle">

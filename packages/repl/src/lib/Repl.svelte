@@ -12,37 +12,57 @@
 	import type { Bundle, ReplContext } from './types.js';
 	import type { CompilerOutput } from './workers/workers.js';
 
-	export let packagesUrl = 'https://unpkg.com';
-	export let svelteUrl = `${BROWSER ? location.origin : ''}/svelte`;
-	export let embedded = false;
-	export let orientation: 'columns' | 'rows' = 'columns';
-	export let relaxed = false;
-	export let can_escape = false;
-	export let fixed = false;
-	export let fixedPos = 50;
-	export let injectedJS = '';
-	export let injectedCSS = '';
-	export let previewTheme: 'light' | 'dark' = 'light';
-	export let showAst = false;
-	export let remove: () => void = () => {};
-	export let add: () => void = () => {};
-	export let change: () => void = () => {};
+	interface Props {
+		packagesUrl?: string;
+		svelteUrl?: any;
+		embedded?: boolean;
+		orientation?: 'columns' | 'rows';
+		relaxed?: boolean;
+		can_escape?: boolean;
+		fixed?: boolean;
+		fixedPos?: number;
+		injectedJS?: string;
+		injectedCSS?: string;
+		previewTheme?: 'light' | 'dark';
+		showAst?: boolean;
+		remove?: () => void;
+		add?: () => void;
+		change?: () => void;
+	}
 
-	const workspace = new Workspace({
-		files: [],
-		selected_name: '',
-		onupdate(file) {
-			rebundle();
-			change();
-		},
-		onreset(items) {
-			rebundle();
-		}
-	});
+	let {
+		packagesUrl = 'https://unpkg.com',
+		svelteUrl = `${BROWSER ? location.origin : ''}/svelte`,
+		embedded = false,
+		orientation = 'columns',
+		relaxed = false,
+		can_escape = false,
+		fixed = false,
+		fixedPos = 50,
+		injectedJS = '',
+		injectedCSS = '',
+		previewTheme = 'light',
+		showAst = false,
+		remove = () => {},
+		add = () => {},
+		change = () => {}
+	}: Props = $props();
 
-	let editor: any;
+	const workspace = $state(
+		new Workspace({
+			files: [],
+			selected_name: '',
+			onupdate() {
+				rebundle();
+				change();
+			},
+			onreset() {
+				rebundle();
+			}
+		})
+	);
 
-	let runes = false;
+	let editor: any = $state();
 
 	export function toJSON() {
 		return {
@@ -110,14 +130,10 @@
 
 	let compiled: CompilerOutput | null = null;
 
-	$: mobile = width < 540;
-
-	$: $toggleable = mobile && orientation === 'columns';
-
-	let width = 0;
-	let show_output = false;
-	let status: string | null = null;
-	let status_visible = false;
+	let width = $state(0);
+	let show_output = $state(false);
+	let status: string | null = $state(null);
+	let status_visible = $state(false);
 	let status_timeout: NodeJS.Timeout | undefined = undefined;
 
 	const bundler = BROWSER
@@ -150,9 +166,16 @@
 			event.returnValue = '';
 		}
 	}
+	let mobile = $derived(width < 540);
+
+	$effect(() => {
+		$toggleable = mobile && orientation === 'columns';
+	});
+
+	let runes = $derived(workspace.compiled[workspace.selected_name]?.result.metadata.runes ?? false);
 </script>
 
-<svelte:window on:beforeunload={before_unload} />
+<svelte:window onbeforeunload={before_unload} />
 
 <div class="container" class:embedded class:toggleable={$toggleable} bind:clientWidth={width}>
 	<div class="viewport" class:output={show_output}>
