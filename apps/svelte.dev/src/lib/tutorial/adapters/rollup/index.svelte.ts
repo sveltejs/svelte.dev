@@ -44,11 +44,7 @@ export async function create(): Promise<Adapter> {
 			[...current_stubs.values()]
 				// TODO we can probably remove all the SvelteKit specific stuff from the tutorial content once this settles down
 				.filter((f): f is File => f.name.startsWith('/src/lib/') && f.type === 'file')
-				.map((f) => ({
-					name: f.name.slice(9).split('.').slice(0, -1).join('.'),
-					source: f.contents,
-					type: f.name.split('.').pop() ?? 'svelte'
-				}))
+				.map((f) => ({ ...f, name: f.name.slice(9) }))
 		);
 	}
 
