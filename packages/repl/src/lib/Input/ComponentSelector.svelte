@@ -11,9 +11,10 @@
 		remove: () => void;
 		add: () => void;
 		workspace: Workspace;
+		can_migrate: boolean;
 	}
 
-	let { runes, remove, add, workspace = $bindable() }: Props = $props();
+	let { runes, remove, add, workspace, can_migrate }: Props = $props();
 
 	const { handle_select, rebundle } = get_repl_context();
 
@@ -230,7 +231,7 @@
 
 	<div class="runes">
 		<RunesInfo {runes} />
-		<Migrate />
+		<Migrate {can_migrate} />
 	</div>
 </div>
 

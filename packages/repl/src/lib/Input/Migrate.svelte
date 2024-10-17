@@ -1,10 +1,17 @@
 <script lang="ts">
 	import { get_repl_context } from '../context';
 
+	let { can_migrate }: { can_migrate: boolean } = $props();
+
 	const { migrate } = get_repl_context();
 </script>
 
-<button class="raised" on:click={migrate} title="Migrate this component towards the new syntax">
+<button
+	class="raised"
+	disabled={!can_migrate}
+	onclick={migrate}
+	title="Migrate this component towards the new syntax"
+>
 	migrate
 </button>
 

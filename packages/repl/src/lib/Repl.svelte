@@ -7,7 +7,6 @@
 	import ComponentSelector from './Input/ComponentSelector.svelte';
 	import Output from './Output/Output.svelte';
 	import { set_repl_context } from './context.js';
-	import Compiler from './Output/Compiler.js';
 	import { Workspace, Editor, type File } from 'editor';
 	import type { Bundle, ReplContext } from './types.js';
 	import type { CompilerOutput } from './workers/workers.js';
@@ -106,17 +105,11 @@
 	}
 
 	async function migrate() {
-		if (!compiler || !workspace.selected_name?.endsWith('.svelte')) return;
-
-		const result = await compiler.migrate(workspace.selected_file);
-		if (result.error) {
-			// TODO show somehow
-			return;
-		}
+		if (!can_migrate) return; // belt and braces — button is already disabled
 
 		workspace.update_file({
 			...workspace.selected_file,
-			contents: result.result.code
+			contents: migration.code
 		});
 
 		rebundle();
@@ -125,8 +118,6 @@
 	async function handle_select(filename: string) {
 		workspace.selected_name = filename;
 	}
-
-	const compiler = BROWSER ? new Compiler(svelteUrl) : null;
 
 	let compiled: CompilerOutput | null = null;
 
@@ -172,7 +163,15 @@
 		$toggleable = mobile && orientation === 'columns';
 	});
 
-	let runes = $derived(workspace.compiled[workspace.selected_name]?.result.metadata.runes ?? false);
+	let runes = $derived(
+		workspace.selected_name?.endsWith('.svelte.js') ||
+			(workspace.compiled[workspace.selected_name]?.result.metadata.runes ?? false)
+	);
+
+	let migration = $derived(workspace.compiled[workspace.selected_name]?.migration);
+	let can_migrate = $derived(
+		migration ? migration.code !== workspace.selected_file.contents : false
+	);
 </script>
 
 <svelte:window onbeforeunload={before_unload} />
@@ -188,7 +187,7 @@
 			max="-4.1rem"
 		>
 			<section slot="a">
-				<ComponentSelector {runes} {add} {remove} {workspace} />
+				<ComponentSelector {runes} {add} {remove} {workspace} {can_migrate} />
 
 				<Editor
 					bind:this={editor}

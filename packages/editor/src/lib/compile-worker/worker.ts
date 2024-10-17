@@ -1,4 +1,4 @@
-import { compile, compileModule } from 'svelte/compiler';
+import { compile, compileModule, migrate } from 'svelte/compiler';
 import type { File } from '../Workspace.svelte';
 
 // TODO need to handle Svelte 3/4 for playground
@@ -12,6 +12,14 @@ addEventListener('message', (event) => {
 
 	const fn = file.name.endsWith('.svelte') ? compile : compileModule;
 
+	let migration = null;
+
+	try {
+		migration = migrate(file.contents, { filename: file.name });
+	} catch (e) {
+		// can this happen?
+	}
+
 	try {
 		// @ts-expect-error the CompileOptions types are wrong? idk man
 		const result = fn(file.contents, { ...options, filename: file.name });
@@ -24,7 +32,8 @@ addEventListener('message', (event) => {
 					...result,
 					// @ts-expect-error https://github.com/sveltejs/svelte/issues/13628
 					warnings: result.warnings.map((w) => ({ message: w.message, ...w }))
-				}
+				},
+				migration
 			}
 		});
 	} catch (e) {
@@ -33,7 +42,8 @@ addEventListener('message', (event) => {
 			payload: {
 				// @ts-expect-error
 				error: { message: e.message, ...e },
-				result: null
+				result: null,
+				migration: null
 			}
 		});
 	}

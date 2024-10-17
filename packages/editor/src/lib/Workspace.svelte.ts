@@ -21,6 +21,9 @@ export type Item = File | Directory;
 export interface Compiled {
 	error: CompileError | null;
 	result: CompileResult;
+	migration: {
+		code: string;
+	};
 }
 
 function is_svelte_file(file: File) {
