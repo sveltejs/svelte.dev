@@ -120,8 +120,6 @@
 				editor_states.set(file.name, state);
 			}
 		}
-
-		select_state(workspace.selected_name);
 	}
 
 	/**
@@ -132,6 +130,7 @@
 	export async function reset() {
 		editor_states.clear();
 		await update_files(workspace.files);
+		select_state(workspace.selected_name);
 	}
 
 	function select_state(selected_name: string | null) {
