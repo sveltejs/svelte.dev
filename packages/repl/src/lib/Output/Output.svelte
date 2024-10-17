@@ -1,11 +1,9 @@
 <script lang="ts">
-	import { get_repl_context } from '../context';
 	import { marked } from 'marked';
 	import AstView from './AstView.svelte';
 	import CompilerOptions from './CompilerOptions.svelte';
 	import PaneWithPanel from './PaneWithPanel.svelte';
 	import Viewer from './Viewer.svelte';
-	import type { CompilerOutput } from '../workers/workers';
 	import { Editor, Workspace, type File } from 'editor';
 	import { untrack } from 'svelte';
 
@@ -17,10 +15,7 @@
 		can_escape?: boolean;
 		injectedJS: string;
 		injectedCSS: string;
-		showAst?: boolean;
 		previewTheme: 'light' | 'dark';
-		selected: File | null;
-		compiled: CompilerOutput | null;
 		workspace: Workspace;
 	}
 
@@ -32,15 +27,10 @@
 		can_escape = false,
 		injectedJS,
 		injectedCSS,
-		showAst = false,
 		previewTheme,
-		selected,
-		compiled,
 		workspace
 	}: Props = $props();
 
-	let js_editor: any;
-	let css_editor: any;
 	let view: 'result' | 'js' | 'css' | 'ast' = $state('result');
 
 	const js_workspace = new Workspace({
@@ -54,9 +44,12 @@
 	});
 
 	let is_markdown = $derived(workspace.selected_name?.endsWith('.md'));
-	let markdown = $derived(is_markdown ? marked.parse(workspace.selected_file.contents) : '');
 
-	let current = $derived(workspace.compiled[workspace.selected_name]);
+	let markdown = $derived(
+		is_markdown ? (marked.parse(workspace.selected_file!.contents) as string) : ''
+	);
+
+	let current = $derived(workspace.compiled[workspace.selected_name!]);
 
 	// TODO this effect is a bit of a code smell
 	$effect(() => {
@@ -68,7 +61,8 @@
 				js_contents = css_contents = `/* ${current.error.message} */`;
 			} else {
 				js_contents = current.result.js.code;
-				css_contents = current.result.css?.code ?? `/* Add a <style> tag to see the CSS output */`;
+				css_contents =
+					current.result.css?.code ?? `/* Add a <st` + `yle> tag to see the CSS output */`;
 			}
 		}
 
@@ -104,9 +98,7 @@
 		<button class:active={view === 'result'} onclick={() => (view = 'result')}>Result</button>
 		<button class:active={view === 'js'} onclick={() => (view = 'js')}>JS output</button>
 		<button class:active={view === 'css'} onclick={() => (view = 'css')}>CSS output</button>
-		{#if showAst}
-			<button class:active={view === 'ast'} onclick={() => (view = 'ast')}>AST output</button>
-		{/if}
+		<button class:active={view === 'ast'} onclick={() => (view = 'ast')}>AST output</button>
 	{/if}
 </div>
 
@@ -149,7 +141,7 @@
 </div>
 
 <!-- ast output -->
-{#if showAst && ast}
+{#if ast}
 	<div class="tab-content" class:visible={!is_markdown && view === 'ast'}>
 		<AstView {ast} autoscroll={!is_markdown && view === 'ast'} />
 	</div>

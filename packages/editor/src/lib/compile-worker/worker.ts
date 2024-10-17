@@ -21,7 +21,6 @@ addEventListener('message', (event) => {
 	}
 
 	try {
-		// @ts-expect-error the CompileOptions types are wrong? idk man
 		const result = fn(file.contents, { ...options, filename: file.name });
 
 		postMessage({

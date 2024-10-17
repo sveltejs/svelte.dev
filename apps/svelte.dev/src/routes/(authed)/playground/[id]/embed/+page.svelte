@@ -52,7 +52,6 @@
 			{relaxed}
 			can_escape
 			injectedJS={mapbox_setup}
-			showAst
 			previewTheme={$theme.current}
 			embedded
 		/>

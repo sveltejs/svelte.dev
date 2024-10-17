@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { get_repl_context } from '../context';
+	import type { Workspace } from 'editor';
 	import { Checkbox } from '@sveltejs/site-kit/components';
 
-	const { workspace } = get_repl_context();
+	let { workspace }: { workspace: Workspace } = $props();
 
 	function onchange() {
 		workspace.invalidate();

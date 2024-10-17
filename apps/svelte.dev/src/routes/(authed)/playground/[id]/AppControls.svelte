@@ -4,19 +4,18 @@
 	import { Icon } from '@sveltejs/site-kit/components';
 	import { enter } from '$lib/utils/events';
 	import { isMac } from '$lib/utils/compat.js';
-	import { Repl } from '@sveltejs/repl';
 	import { get_app_context } from '../../app-context';
 	import type { Gist, User } from '$lib/db/types';
-	import type { File } from '@sveltejs/repl';
 	import { browser } from '$app/environment';
 	import SelectIcon from '$lib/components/SelectIcon.svelte';
 	import { untrack } from 'svelte';
 	import SecondaryNav from '$lib/components/SecondaryNav.svelte';
+	import type { File } from 'editor';
 
 	interface Props {
 		examples: Array<{ title: string; examples: any[] }>;
 		user: User | null;
-		repl: Repl;
+		repl: any; // TODO
 		gist: Gist;
 		name: string;
 		modified: boolean;
@@ -70,8 +69,8 @@
 				body: JSON.stringify({
 					name,
 					files: files.map((file) => ({
-						name: `${file.name}.${file.type}`,
-						source: file.source
+						name: file.name,
+						source: file.contents
 					}))
 				})
 			});
@@ -135,8 +134,8 @@
 				body: JSON.stringify({
 					name,
 					files: files.map((file) => ({
-						name: `${file.name}.${file.type}`,
-						source: file.source
+						name: file.name,
+						source: file.contents
 					}))
 				})
 			});

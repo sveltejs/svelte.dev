@@ -85,11 +85,6 @@
 		handle_select(workspace.selected_name);
 	}
 
-	async function select_input(event: FocusEvent & { target: HTMLInputElement }) {
-		await tick();
-		event.target.select();
-	}
-
 	function add_new() {
 		const basename = deconflict(`Component.svelte`);
 
@@ -112,10 +107,6 @@
 		rebundle();
 
 		add();
-	}
-
-	function is_file_name_used(editing: File) {
-		return workspace.files.find((file) => file.name === editing.name);
 	}
 
 	// drag and drop
@@ -192,7 +183,11 @@
 						use:forcefocus
 						spellcheck={false}
 						bind:value={input_value}
-						onfocus={select_input}
+						onfocus={async (event) => {
+							const input = event.currentTarget;
+							await tick();
+							input.select();
+						}}
 						onblur={close_edit}
 						onkeydown={(e) => {
 							if (e.key === 'Enter') {

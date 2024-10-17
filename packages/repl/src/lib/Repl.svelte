@@ -23,7 +23,6 @@
 		injectedJS?: string;
 		injectedCSS?: string;
 		previewTheme?: 'light' | 'dark';
-		showAst?: boolean;
 		remove?: () => void;
 		add?: () => void;
 		change?: () => void;
@@ -41,7 +40,6 @@
 		injectedJS = '',
 		injectedCSS = '',
 		previewTheme = 'light',
-		showAst = false,
 		remove = () => {},
 		add = () => {},
 		change = () => {}
@@ -108,7 +106,7 @@
 		if (!can_migrate) return; // belt and braces — button is already disabled
 
 		workspace.update_file({
-			...workspace.selected_file,
+			...workspace.selected_file!,
 			contents: migration.code
 		});
 
@@ -165,12 +163,12 @@
 
 	let runes = $derived(
 		workspace.selected_name?.endsWith('.svelte.js') ||
-			(workspace.compiled[workspace.selected_name]?.result.metadata.runes ?? false)
+			(workspace.compiled[workspace.selected_name!]?.result.metadata.runes ?? false)
 	);
 
-	let migration = $derived(workspace.compiled[workspace.selected_name]?.migration);
+	let migration = $derived(workspace.compiled[workspace.selected_name!]?.migration);
 	let can_migrate = $derived(
-		migration ? migration.code !== workspace.selected_file.contents : false
+		migration ? migration.code !== workspace.selected_file?.contents : false
 	);
 </script>
 
@@ -207,9 +205,7 @@
 					{can_escape}
 					{injectedJS}
 					{injectedCSS}
-					{showAst}
 					{previewTheme}
-					{compiled}
 					{workspace}
 				/>
 			</section>

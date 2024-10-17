@@ -170,7 +170,6 @@
 				{relaxed}
 				{can_escape}
 				injectedJS={mapbox_setup}
-				showAst
 				change={handle_change}
 				add={handle_change}
 				remove={handle_change}
