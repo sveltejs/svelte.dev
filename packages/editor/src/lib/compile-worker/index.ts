@@ -26,7 +26,7 @@ export function compile_file(
 	file: File,
 	options: { generate: 'client' | 'server'; dev: boolean }
 ): Promise<Compiled> {
-	// @ts-expect-error
+	// @ts-ignore
 	if (!BROWSER) return;
 
 	let id = uid++;

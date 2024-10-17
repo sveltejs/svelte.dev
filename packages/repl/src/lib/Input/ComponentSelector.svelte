@@ -83,6 +83,8 @@
 		// TODO is one of these lines redundant?
 		workspace.selected_name = idx === 1 ? 'App.svelte' : file.name;
 		handle_select(workspace.selected_name);
+
+		rebundle();
 	}
 
 	function add_new() {
