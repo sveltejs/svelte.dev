@@ -89,11 +89,16 @@ function completion_for_block(context, node) {
 	return null;
 }
 
-const options_for_svelte_events = svelteEvents.map((event) =>
+const options_for_svelte_events = [
+	...svelteEvents.map((e) => ({ ...e, boost: 1, name: e.name.replace(':', '') })),
+	...svelteEvents
+].map((event) =>
 	snippetCompletion(event.name + '={${}}', {
 		label: event.name,
 		info: event.description,
-		type: 'keyword'
+		type: 'keyword',
+		// @ts-ignore
+		boost: event.boost || 0
 	})
 );
 
