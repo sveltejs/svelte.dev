@@ -118,12 +118,10 @@
 <!-- js output -->
 <div class="tab-content" class:visible={!is_markdown && view === 'js'}>
 	{#if embedded}
-		<!-- TODO make readonly -->
 		<Editor workspace={js_workspace} readonly />
 	{:else}
 		<PaneWithPanel pos="50%" panel="Compiler options">
 			<div slot="main">
-				<!-- TODO make readonly -->
 				<Editor workspace={js_workspace} readonly />
 			</div>
 
@@ -136,7 +134,6 @@
 
 <!-- css output -->
 <div class="tab-content" class:visible={!is_markdown && view === 'css'}>
-	<!-- TODO make readonly -->
 	<Editor workspace={css_workspace} readonly />
 </div>
 
