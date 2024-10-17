@@ -1,6 +1,6 @@
 <script>
 	import Canvas from './Canvas.svelte';
-	import { trapFocus } from './actions.js';
+	import { trapFocus } from './actions.svelte.js';
 
 	const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet', 'white', 'black'];
 

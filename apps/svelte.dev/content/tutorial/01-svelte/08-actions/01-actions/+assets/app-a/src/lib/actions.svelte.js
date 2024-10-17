@@ -25,7 +25,8 @@ export function trapFocus(node) {
 		}
 	}
 
-	focusable()[0]?.focus();
-
-	// TODO finish writing the action
+	$effect(() => {
+		focusable()[0]?.focus();
+		// TODO finish writing the action
+	});
 }
