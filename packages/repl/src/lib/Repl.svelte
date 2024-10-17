@@ -10,7 +10,6 @@
 	import Compiler from './Output/Compiler.js';
 	import { Workspace, Editor, type File } from 'editor';
 	import type { Bundle, ReplContext } from './types.js';
-	import type { CompileOptions } from 'svelte/compiler';
 	import type { CompilerOutput } from './workers/workers.js';
 
 	export let packagesUrl = 'https://unpkg.com';
@@ -25,16 +24,16 @@
 	export let injectedCSS = '';
 	export let previewTheme: 'light' | 'dark' = 'light';
 	export let showAst = false;
-	export let remove: (value: { files: File[]; diff: File }) => void = () => {};
-	export let add: (value: { files: File[]; diff: File }) => void = () => {};
-	export let change: (value: { files: File[]; diff: File }) => void = () => {};
+	export let remove: () => void = () => {};
+	export let add: () => void = () => {};
+	export let change: () => void = () => {};
 
 	const workspace = new Workspace({
 		files: [],
 		selected_name: '',
 		onupdate(file) {
 			rebundle();
-			change({ files: workspace.files as File[], diff: file });
+			change();
 		},
 		onreset(items) {
 			rebundle();

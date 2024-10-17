@@ -52,11 +52,9 @@
 			{relaxed}
 			can_escape
 			injectedJS={mapbox_setup}
-			showModified
 			showAst
 			previewTheme={$theme.current}
 			embedded
-			vim={false}
 		/>
 	{/if}
 </div>

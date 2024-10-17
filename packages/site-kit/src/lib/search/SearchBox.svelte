@@ -6,7 +6,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 	import { afterNavigate } from '$app/navigation';
 	import { overlay_open, search_query, search_recent, searching } from '../stores';
 	import { onMount, tick, type Snippet } from 'svelte';
-	import { focusable_children, trap } from '../actions/focus.js';
+	import { focusable_children, forcefocus, trap } from '../actions/focus.js';
 	import Icon from '../components/Icon.svelte';
 	import SearchResults from './SearchResults.svelte';
 	import SearchWorker from './search-worker.js?worker';
@@ -87,11 +87,6 @@ It appears when the user clicks on the `Search` component or presses the corresp
 		close();
 	}
 
-	/** The autofocus attribute is insufficient, we need to do this */
-	function autofocus(node: HTMLInputElement) {
-		tick().then(() => node.focus());
-	}
-
 	$effect(() => {
 		if (ready) {
 			const id = uid++;
@@ -167,7 +162,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 		<div class="search-box">
 			<div style="background: var(--background); padding: 0.5rem">
 				<input
-					use:autofocus
+					use:forcefocus
 					onkeydown={(e) => {
 					if (e.key === 'Enter' && !e.isComposing) {
 						const element = modal.querySelector('a[data-has-node]') as HTMLElement | undefined;

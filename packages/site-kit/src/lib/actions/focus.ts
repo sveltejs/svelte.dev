@@ -1,3 +1,10 @@
+import { tick } from 'svelte';
+
+/** Sometimes the autofocus attribute is insufficient, we need to do this */
+export function forcefocus(node: HTMLInputElement) {
+	tick().then(() => node.focus());
+}
+
 export function focusable_children(node: HTMLElement) {
 	const nodes: HTMLElement[] = Array.from(
 		node.querySelectorAll(

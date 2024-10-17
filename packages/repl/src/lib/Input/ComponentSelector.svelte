@@ -1,21 +1,25 @@
 <script lang="ts">
+	import { stopPropagation, preventDefault } from 'svelte/legacy';
+	import { forcefocus } from '@sveltejs/site-kit/actions';
 	import { get_repl_context } from '../context';
-	import { get_full_filename } from '../utils';
 	import { tick } from 'svelte';
 	import RunesInfo from './RunesInfo.svelte';
 	import Migrate from './Migrate.svelte';
-	import type { File } from '../types';
-	import type { Workspace, File as WorkspaceFile } from 'editor';
+	import type { Workspace, File } from 'editor';
 
-	export let runes: boolean;
-	export let remove: (value: { files: WorkspaceFile[]; diff: WorkspaceFile }) => void;
-	export let add: (value: { files: WorkspaceFile[]; diff: WorkspaceFile }) => void;
-	export let workspace: Workspace;
+	interface Props {
+		runes: boolean;
+		remove: () => void;
+		add: () => void;
+		workspace: Workspace;
+	}
+
+	let { runes, remove, add, workspace = $bindable() }: Props = $props();
 
 	const { handle_select, rebundle } = get_repl_context();
 
-	let editing_name: string | null = null;
-	let input_value = '';
+	let editing_name: string | null = $state(null);
+	let input_value = $state('');
 
 	function select_file(filename: string) {
 		if (workspace.selected_name !== filename) {
@@ -25,54 +29,41 @@
 	}
 
 	function edit_tab(file: File) {
-		if (workspace.selected_name === get_full_filename(file)) {
-			editing_name = get_full_filename(file);
+		if (workspace.selected_name === file.name) {
+			editing_name = file.name;
 			input_value = file.name;
 		}
 	}
 
 	async function close_edit() {
-		const match = /(.+)\.(svelte|js|json|md|css)$/.exec(input_value ?? '');
-
-		const edited_file = workspace.files.find((val) => val.name === editing_name);
-
-		if (!edited_file) return;
-
-		edited_file.name = match ? match[1] : input_value;
-
-		if (!workspace.selected_name) return;
-
-		if (is_file_name_used(workspace.selected_name)) {
-			let i = 1;
-			let name = workspace.selected_name;
-
-			do {
-				const file = (workspace.files as WorkspaceFile[]).find(
-					(val) =>
-						val.name === edited_file.name && val.contents === workspace.selected_file.contents
-				);
-
-				if (!file) break;
-
-				file.name = `${name}_${i++}`;
-			} while (is_file_name_used(workspace.selected_name));
-
-			const idx = workspace.files.findIndex((val) => val.name === edited_file.name);
-			workspace.files[idx] = edited_file;
+		if (input_value === editing_name) {
+			// nothing to do
+			editing_name = null;
+			return;
 		}
 
-		const idx = workspace.files.findIndex((val) => val.name === edited_file.name);
-		// if (match?.[2]) $files[idx].type = match[2];
+		const edited_file = (workspace.files as File[]).find((val) => val.name === editing_name);
+		if (!edited_file) return; // TODO can this happen?
+
+		const deconflicted = deconflict(input_value, edited_file);
+		edited_file.name = edited_file.basename = deconflicted;
+
+		handle_select(edited_file.name);
+		rebundle();
 
 		editing_name = null;
+	}
 
-		// re-select, in case the type changed
-		handle_select(edited_file.name);
+	function deconflict(name: string, file?: File) {
+		let deconflicted = name;
+		let i = 1;
 
-		// focus the editor, but wait a beat (so key events aren't misdirected)
-		await tick();
+		while (true) {
+			const existing = workspace.files.find((file) => file.name === deconflicted);
+			if (!existing || existing === file) return deconflicted;
 
-		rebundle();
+			deconflicted = name.replace(/(\.|$)/, `${i++}$1`);
+		}
 	}
 
 	function remove_file(filename: string) {
@@ -87,25 +78,22 @@
 
 		workspace.files = workspace.files.filter((file) => file.name !== filename);
 
-		remove({ files: workspace.files as WorkspaceFile[], diff: file as WorkspaceFile });
+		remove();
 
 		// TODO is one of these lines redundant?
-		workspace.selected_name = idx === 1 ? 'App.svelte' : get_full_filename(file);
+		workspace.selected_name = idx === 1 ? 'App.svelte' : file.name;
 		handle_select(workspace.selected_name);
 	}
 
-	async function select_input(event: FocusEvent & { currentTarget: HTMLInputElement }) {
+	async function select_input(event: FocusEvent & { target: HTMLInputElement }) {
 		await tick();
-
-		event.currentTarget.select();
+		event.target.select();
 	}
 
-	let uid = 1;
-
 	function add_new() {
-		const basename = `Component${uid++}`;
+		const basename = deconflict(`Component.svelte`);
 
-		const file: WorkspaceFile = {
+		const file: File = {
 			type: 'file',
 			name: basename,
 			basename,
@@ -123,20 +111,16 @@
 
 		rebundle();
 
-		add({ files: workspace.files as WorkspaceFile[], diff: file });
+		add();
 	}
 
-	function is_file_name_used(editing: WorkspaceFile) {
-		return workspace.files.find(
-			(file) =>
-				JSON.stringify(file) !== JSON.stringify(workspace.selected_file) &&
-				file.name === editing.name
-		);
+	function is_file_name_used(editing: File) {
+		return workspace.files.find((file) => file.name === editing.name);
 	}
 
 	// drag and drop
 	let from: string | null = null;
-	let over: string | null = null;
+	let over: string | null = $state(null);
 
 	function dragStart(event: DragEvent & { currentTarget: HTMLDivElement }) {
 		from = event.currentTarget.id;
@@ -171,74 +155,64 @@
 
 <div class="component-selector">
 	<!-- svelte-ignore a11y_no_static_element_interactions -->
-	<div class="file-tabs" on:dblclick={add_new}>
-		{#each workspace.files as file, index (file.name)}
-			{@const filename = file.name}
+	<div class="file-tabs" ondblclick={add_new}>
+		{#each workspace.files as File[] as file, index (file.name)}
 			<div
 				id={file.name}
 				class="button"
 				role="button"
 				tabindex="0"
-				class:active={filename === workspace.selected_name}
-				class:draggable={filename !== editing_name && index !== 0}
+				class:active={file.name === workspace.selected_name}
+				class:draggable={file.name !== editing_name && index !== 0}
 				class:drag-over={over === file.name}
-				on:click={() => select_file(filename)}
-				on:keyup={(e) => e.key === ' ' && select_file(filename)}
-				on:dblclick|stopPropagation={() => {}}
-				draggable={filename !== editing_name}
-				on:dragstart={dragStart}
-				on:dragover|preventDefault={dragOver}
-				on:dragleave={dragLeave}
-				on:drop|preventDefault={dragEnd}
+				onclick={() => select_file(file.name)}
+				onkeyup={(e) => e.key === ' ' && select_file(file.name)}
+				ondblclick={stopPropagation(() => {})}
+				draggable={file.name !== editing_name}
+				ondragstart={dragStart}
+				ondragover={preventDefault(dragOver)}
+				ondragleave={dragLeave}
+				ondrop={preventDefault(dragEnd)}
 			>
 				<i class="drag-handle"></i>
 
-				{#if file.name === 'App' && filename !== editing_name}
+				{#if file.name === 'App.svelte'}
 					<div class="uneditable">
 						App.svelte{#if workspace.modified[file.name]}*{/if}
 					</div>
-				{:else if filename === editing_name}
-					{@const editing_file = workspace.files.find((file) => file.name === editing_name)}
+				{:else if file.name === editing_name}
+					<span class="input-sizer">
+						<span style="color: transparent">{input_value}</span>
+					</span>
 
-					{#if editing_file}
-						<span class="input-sizer">
-							<span style="color: transparent">{input_value}</span>
-							{#if !/\./.test(input_value)}.{editing_file.type}{/if}
-							<!-- {input_value + (/\./.test(input_value) ? '' : `.${editing_file.type}`)} -->
-						</span>
-
-						<!-- svelte-ignore a11y_autofocus -->
-						<input
-							autofocus
-							spellcheck={false}
-							bind:value={input_value}
-							on:focus={select_input}
-							on:blur={close_edit}
-							on:keydown={(e) => {
-								if (e.key === 'Enter') {
-									e.preventDefault();
-									if (!is_file_name_used(editing_file)) {
-										e.currentTarget.blur();
-									}
-								}
-							}}
-							class:duplicate={is_file_name_used(editing_file)}
-						/>
-					{/if}
+					<!-- svelte-ignore a11y_autofocus -->
+					<input
+						use:forcefocus
+						spellcheck={false}
+						bind:value={input_value}
+						onfocus={select_input}
+						onblur={close_edit}
+						onkeydown={(e) => {
+							if (e.key === 'Enter') {
+								e.preventDefault();
+								e.currentTarget.blur();
+							}
+						}}
+					/>
 				{:else}
 					<div
 						class="editable"
 						title="edit component name"
-						on:click={() => edit_tab(file)}
-						on:keyup={(e) => e.key === ' ' && edit_tab(file)}
+						onclick={() => edit_tab(file)}
+						onkeyup={(e) => e.key === ' ' && edit_tab(file)}
 					>
 						{file.name}{#if workspace.modified[file.name]}*{/if}
 					</div>
 
 					<span
 						class="remove"
-						on:click={() => remove_file(filename)}
-						on:keyup={(e) => e.key === ' ' && remove_file(filename)}
+						onclick={() => remove_file(file.name)}
+						onkeyup={(e) => e.key === ' ' && remove_file(file.name)}
 					>
 						<svg width="12" height="12" viewBox="0 0 24 24">
 							<line stroke="#999" x1="18" y1="6" x2="6" y2="18" />
@@ -250,11 +224,7 @@
 		{/each}
 	</div>
 
-	<button
-		class="add-new"
-		on:click={add_new}
-		aria-label="add new component"
-		title="add new component"
+	<button class="add-new" onclick={add_new} aria-label="add new component" title="add new component"
 	></button>
 
 	<div class="runes">
