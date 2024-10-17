@@ -7,8 +7,8 @@ Like any other attribute, you can specify classes with a JavaScript attribute. H
 ```svelte
 /// file: App.svelte
 <button
-	class="card +++{flipped ? 'flipped' : ''}+++"
-	on:click={() => flipped = !flipped}
+	class="card {+++flipped ? 'flipped' : ''+++}"
+	onclick={() => flipped = !flipped}
 >
 ```
 
@@ -21,7 +21,7 @@ We can make it nicer though. Adding or removing a class based on some condition 
 <button
 	class="card"
 	+++class:flipped={flipped}+++
-	on:click={() => flipped = !flipped}
+	onclick={() => flipped = !flipped}
 >
 ```
 

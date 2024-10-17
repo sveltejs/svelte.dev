@@ -8,7 +8,7 @@ Often, the name of the class will be the same as the name of the value it depend
 <button
 	class="card"
 	class:flipped={flipped}
-	on:click={() => flipped = !flipped}
+	onclick={() => flipped = !flipped}
 >
 ```
 
@@ -19,6 +19,6 @@ In those cases we can use a shorthand form:
 <button
 	class="card"
 	+++class:flipped+++
-	on:click={() => flipped = !flipped}
+	onclick={() => flipped = !flipped}
 >
 ```

@@ -55,4 +55,12 @@ Any parent element (such as `<div class="boxes">`) can set the value of `--color
 
 The values can be dynamic, like any other attribute.
 
-This feature works by wrapping each component in a `<div style="display: contents">`, where needed, and applying the custom properties to it.
+> [!NOTE] This feature works by wrapping each component in an element with `display: contents`, where needed, and applying the custom properties to it. If you inspect the elements, you'll see markup like this:
+>
+> ```svelte
+> <svelte-css-wrapper style="display: contents; --color: red;">
+> 	<!-- contents -->
+> </svelte-css-wrapper>
+> ```
+>
+> Because of `display: contents` this won't affect your layout, but the extra element _can_ affect selectors like `.parent > .child`.

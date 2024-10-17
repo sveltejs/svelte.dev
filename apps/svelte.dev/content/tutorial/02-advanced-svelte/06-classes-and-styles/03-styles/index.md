@@ -9,7 +9,7 @@ As with `class`, you can write your inline `style` attributes literally, because
 <button
 	class="card"
 	+++style="transform: {flipped ? 'rotateY(0)' : ''}; --bg-1: palegoldenrod; --bg-2: black; --bg-3: goldenrod"+++
-	on:click={() => flipped = !flipped}
+	onclick={() => flipped = !flipped}
 >
 ```
 
@@ -23,6 +23,6 @@ When you have a lot of styles, it can start to look a bit wacky. We can tidy thi
 	style:--bg-1="palegoldenrod"
 	style:--bg-2="black"
 	style:--bg-3="goldenrod"+++
-	on:click={() => flipped = !flipped}
+	onclick={() => flipped = !flipped}
 >
 ```

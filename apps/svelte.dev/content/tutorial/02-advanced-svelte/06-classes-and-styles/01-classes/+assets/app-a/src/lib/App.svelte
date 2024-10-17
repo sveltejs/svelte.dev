@@ -1,12 +1,12 @@
 <script>
-	let flipped = false;
+	let flipped = $state(false);
 </script>
 
 <div class="container">
 	Flip the card
 	<button
 		class="card"
-		on:click={() => flipped = !flipped}
+		onclick={() => flipped = !flipped}
 	>
 		<div class="front">
 			<span class="symbol">♠</span>

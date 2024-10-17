@@ -1,5 +1,5 @@
 <script>
-	let flipped = false;
+	let flipped = $state(false);
 </script>
 
 <div class="container">
@@ -7,7 +7,7 @@
 	<button
 		class="card"
 		class:flipped
-		on:click={() => flipped = !flipped}
+		onclick={() => flipped = !flipped}
 	>
 		<div class="front">
 			<span class="symbol">♠</span>

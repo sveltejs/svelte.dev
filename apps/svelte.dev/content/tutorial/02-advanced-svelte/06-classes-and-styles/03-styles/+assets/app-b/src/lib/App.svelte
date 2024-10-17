@@ -1,5 +1,5 @@
 <script>
-	let flipped = false;
+	let flipped = $state(false);
 </script>
 
 <div class="container">
@@ -10,7 +10,7 @@
 		style:--bg-1="palegoldenrod"
 		style:--bg-2="black"
 		style:--bg-3="goldenrod"
-		on:click={() => flipped = !flipped}
+		onclick={() => flipped = !flipped}
 	>
 		<div class="front">
 			<span class="symbol">♠</span>
