@@ -1,16 +1,14 @@
 <script>
 	import tippy from 'tippy.js';
 
-	let content = 'Hello!';
+	let content = $state('Hello!');
 
 	function tooltip(node) {
-		const tooltip = tippy(node);
+		$effect(() => {
+			const tooltip = tippy(node);
 
-		return {
-			destroy() {
-				tooltip.destroy();
-			}
-		};
+			return tooltip.destroy;
+		});
 	}
 </script>
 

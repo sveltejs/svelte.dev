@@ -1,25 +1,20 @@
 <script>
 	import tippy from 'tippy.js';
 
-	let content = 'Hello!';
+	let content = $state('Hello!');
 
-	function tooltip(node, options) {
-		const tooltip = tippy(node, options);
+	function tooltip(node, fn) {
+		$effect(() => {
+			const tooltip = tippy(node, fn());
 
-		return {
-			update(options) {
-				tooltip.setProps(options);
-			},
-			destroy() {
-				tooltip.destroy();
-			}
-		};
+			return tooltip.destroy;
+		});
 	}
 </script>
 
 <input bind:value={content} />
 
-<button use:tooltip={{ content }}>
+<button use:tooltip={() => ({ content })}>
 	Hover me
 </button>
 

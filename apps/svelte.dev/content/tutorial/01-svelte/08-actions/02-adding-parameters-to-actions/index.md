@@ -6,44 +6,28 @@ Like transitions and animations, an action can take an argument, which the actio
 
 In this exercise, we want to add a tooltip to the `<button>` using the [`Tippy.js`](https://atomiks.github.io/tippyjs/) library. The action is already wired up with `use:tooltip`, but if you hover over the button (or focus it with the keyboard) the tooltip contains no content.
 
-First, the action needs to accept some options and pass them to Tippy:
+First, the action needs to accept a function that returns some options to pass to Tippy:
 
 ```js
 /// file: App.svelte
-function tooltip(node, +++options+++) {
-	const tooltip = tippy(node, +++options+++);
+function tooltip(node, +++fn+++) {
+	$effect(() => {
+		const tooltip = tippy(node, +++fn()+++);
 
-	return {
-		destroy() {
-			tooltip.destroy();
-		}
-	};
+		return tooltip.destroy;
+	});
 }
 ```
 
-Then, we need to pass some options into the action:
+> [!NOTE] We're passing in a function, rather than the options themselves, because the `tooltip` function does not re-run when the options change.
+
+Then, we need to pass the options into the action:
 
 ```svelte
 /// file: App.svelte
-<button use:tooltip+++={{ content }}+++>
+<button use:tooltip+++={() => ({ content })}+++>
 	Hover me
 </button>
 ```
 
-The tooltip now works — almost. If we change the text in the `<input>`, the tooltip will not reflect the new content. We can fix that by adding an `update` method to the returned object.
-
-```js
-/// file: App.svelte
-function tooltip(node, options) {
-	const tooltip = tippy(node, options);
-
-	return {
-+++		update(options) {
-			tooltip.setProps(options);
-		},+++
-		destroy() {
-			tooltip.destroy();
-		}
-	};
-}
-```
+> [!NOTE] In Svelte 4, actions returned an object with `update` and `destroy` methods. This still works but we recommend using `$effect` instead, as it provides more flexibility and granularity.
