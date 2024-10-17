@@ -198,6 +198,9 @@ importers:
 
   packages/editor:
     dependencies:
+      '@lezer/highlight':
+        specifier: ^1.2.1
+        version: 1.2.1
       esm-env:
         specifier: ^1.0.0
         version: 1.0.0

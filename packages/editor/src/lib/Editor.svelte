@@ -9,7 +9,7 @@
 	import { EditorState } from '@codemirror/state';
 	import { EditorView, keymap } from '@codemirror/view';
 	import { svelte } from '@replit/codemirror-lang-svelte';
-	import { svelteTheme } from '@sveltejs/repl/theme';
+	import { theme } from './theme';
 	import { basicSetup } from 'codemirror';
 	import { autocomplete_for_svelte } from '@sveltejs/site-kit/codemirror';
 	import type { Diagnostic } from '@codemirror/lint';
@@ -40,7 +40,7 @@
 		EditorState.tabSize.of(2),
 		keymap.of([{ key: 'Tab', run: acceptCompletion }, indentWithTab]),
 		indentUnit.of('\t'),
-		svelteTheme
+		theme
 	];
 
 	let installed_vim = false;

@@ -62,6 +62,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@lezer/highlight": "^1.2.1",
 		"esm-env": "^1.0.0"
 	}
 }

@@ -27,10 +27,6 @@
 			"svelte": "./src/lib/index.ts",
 			"default": "./src/lib/index.ts"
 		},
-		"./theme": {
-			"svelte": "./src/lib/theme.ts",
-			"default": "./src/lib/theme.ts"
-		},
 		"./bundler": {
 			"default": "./src/lib/Bundler.ts"
 		},
@@ -76,7 +72,6 @@
 		"@codemirror/state": "^6.4.1",
 		"@codemirror/view": "^6.26.3",
 		"@jridgewell/sourcemap-codec": "^1.4.15",
-		"@lezer/highlight": "^1.2.0",
 		"@replit/codemirror-lang-svelte": "^6.0.0",
 		"@replit/codemirror-vim": "^6.0.14",
 		"@rich_harris/svelte-split-pane": "^1.1.3",
