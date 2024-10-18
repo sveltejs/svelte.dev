@@ -171,7 +171,7 @@
 	});
 
 	let runes = $derived(
-		workspace.selected_name?.endsWith('.svelte.js') ||
+		workspace.selected_name.endsWith('.svelte.js') ||
 			(workspace.compiled[workspace.selected_name!]?.result?.metadata.runes ?? false)
 	);
 

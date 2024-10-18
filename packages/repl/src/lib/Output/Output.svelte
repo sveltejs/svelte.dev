@@ -59,7 +59,7 @@
 		selected_name: 'output.css' // TODO should be unnecessary
 	});
 
-	let is_markdown = $derived(workspace.selected_name?.endsWith('.md'));
+	let is_markdown = $derived(workspace.selected_name.endsWith('.md'));
 
 	let markdown = $derived(
 		is_markdown ? (marked.parse(workspace.selected_file!.contents) as string) : ''
@@ -92,7 +92,7 @@
 </script>
 
 <div class="view-toggle">
-	{#if workspace.selected_name?.endsWith('.md')}
+	{#if workspace.selected_name.endsWith('.md')}
 		<button class="active">Markdown</button>
 	{:else}
 		<button class:active={view === 'result'} onclick={() => (view = 'result')}>Result</button>

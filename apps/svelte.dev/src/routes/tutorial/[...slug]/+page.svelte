@@ -298,7 +298,7 @@
 							<section slot="a" class="navigator">
 								{#if mobile}
 									<button class="file" onclick={() => (show_filetree = !show_filetree)}>
-										{workspace.selected_name?.replace(
+										{workspace.selected_name.replace(
 											data.exercise.scope.prefix,
 											data.exercise.scope.name + '/'
 										) ?? 'Files'}

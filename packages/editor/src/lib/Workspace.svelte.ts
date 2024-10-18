@@ -33,7 +33,7 @@ function is_svelte_file(file: File) {
 export class Workspace {
 	files = $state.raw<Item[]>([]);
 	creating = $state.raw<{ parent: string; type: 'file' | 'directory' } | null>(null);
-	selected_name = $state<string | null>(null);
+	selected_name = $state() as string;
 
 	modified = $state<Record<string, boolean>>({});
 
