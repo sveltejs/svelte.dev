@@ -34,6 +34,7 @@ export class Workspace {
 	files = $state.raw<Item[]>([]);
 	creating = $state.raw<{ parent: string; type: 'file' | 'directory' } | null>(null);
 	#selected_name = $state() as string;
+	#current = $state.raw() as File;
 
 	modified = $state<Record<string, boolean>>({});
 
@@ -48,7 +49,7 @@ export class Workspace {
 
 	constructor({
 		files,
-		selected_name = files.find((file) => file.type === 'file')?.name,
+		selected_name,
 		onupdate,
 		onreset
 	}: {
@@ -57,12 +58,24 @@ export class Workspace {
 		onupdate?: (file: File) => void;
 		onreset?: (items: Item[]) => void;
 	}) {
-		if (!selected_name) {
+		const first = files.find((file) => file.type === 'file');
+
+		if (!first) {
 			throw new Error('Workspace must have at least one file');
 		}
 
+		if (selected_name) {
+			const file = files.find((file) => file.type === 'file' && file.name === selected_name);
+			if (!file) {
+				throw new Error(`Invalid selection ${selected_name}`);
+			}
+
+			this.#current = file as File;
+		} else {
+			this.#current = first;
+		}
+
 		this.files = files;
-		this.#selected_name = selected_name;
 		this.#onupdate = onupdate ?? (() => {});
 		this.#onreset = onreset ?? (() => {});
 
@@ -102,16 +115,11 @@ export class Workspace {
 	}
 
 	get selected_name() {
-		// TODO remove usages
-		return this.#selected_name;
+		return this.#current.name;
 	}
 
 	get current() {
-		for (const file of this.files) {
-			if (file.name === this.selected_name) return file as File;
-		}
-
-		return null;
+		return this.#current;
 	}
 
 	invalidate() {
@@ -171,7 +179,6 @@ export class Workspace {
 
 		this.#selected_name = name;
 
-		// TODO
-		// this.#current = file;
+		this.#current = file as File;
 	}
 }
