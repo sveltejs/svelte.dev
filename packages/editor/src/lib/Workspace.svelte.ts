@@ -32,7 +32,7 @@ function is_svelte_file(file: File) {
 }
 
 export class Workspace {
-	files = $state.raw<Item[]>([]);
+	#files = $state.raw<Item[]>([]);
 	creating = $state.raw<{ parent: string; type: 'file' | 'directory' } | null>(null);
 	#current = $state.raw() as File;
 
@@ -67,18 +67,22 @@ export class Workspace {
 		this.#reset_diagnostics();
 	}
 
+	get files() {
+		return this.#files;
+	}
+
 	#reset_diagnostics() {
 		if (!BROWSER) return;
 
 		const keys = Object.keys(this.compiled);
 		const seen: string[] = [];
 
-		let files = this.files;
+		let files = this.#files;
 
 		// prioritise selected file
 		if (this.current) {
-			const i = this.files.indexOf(this.current!);
-			files = [this.current, ...this.files.slice(0, i), ...this.files.slice(i + 1)];
+			const i = this.#files.indexOf(this.current!);
+			files = [this.current, ...this.#files.slice(0, i), ...this.#files.slice(i + 1)];
 		}
 
 		for (const file of files) {
@@ -112,7 +116,7 @@ export class Workspace {
 	}
 
 	update_file(file: File) {
-		this.files = this.files.map((old) => {
+		this.#files = this.#files.map((old) => {
 			if (old.name === file.name) {
 				return file;
 			}
@@ -148,7 +152,7 @@ export class Workspace {
 			this.#current = first;
 		}
 
-		this.files = files;
+		this.#files = files;
 	}
 
 	reset_files(new_files: Item[], selected?: string) {
@@ -170,7 +174,7 @@ export class Workspace {
 		// TODO if ($effect.tracking()) throw new Error('...');
 
 		untrack(() => {
-			const file = this.files.find((file) => file.type === 'file' && file.name === name);
+			const file = this.#files.find((file) => file.type === 'file' && file.name === name);
 
 			if (!file) {
 				throw new Error(`File ${name} does not exist in workspace`);
@@ -181,22 +185,22 @@ export class Workspace {
 	}
 
 	add(item: Item) {
-		this.files = this.files.concat(item);
+		this.#files = this.#files.concat(item);
 		if (item.type === 'file') this.#current = item;
 		return item;
 	}
 
 	move(from: Item, to: Item) {
-		const from_index = this.files.indexOf(from);
-		const to_index = this.files.indexOf(to);
+		const from_index = this.#files.indexOf(from);
+		const to_index = this.#files.indexOf(to);
 
-		this.files.splice(from_index, 1);
+		this.#files.splice(from_index, 1);
 
-		this.files = this.files.slice(0, to_index).concat(from).concat(this.files.slice(to_index));
+		this.#files = this.#files.slice(0, to_index).concat(from).concat(this.#files.slice(to_index));
 	}
 
 	remove(item: Item) {
-		const index = this.files.indexOf(item);
+		const index = this.#files.indexOf(item);
 
 		if (index === -1) {
 			throw new Error('Tried to remove a file that does not exist in the workspace');
@@ -206,8 +210,8 @@ export class Workspace {
 
 		if (next === item) {
 			const file =
-				this.files.slice(0, index).findLast((file) => file.type === 'file') ??
-				this.files.slice(index + 1).find((file) => file.type === 'file');
+				this.#files.slice(0, index).findLast((file) => file.type === 'file') ??
+				this.#files.slice(index + 1).find((file) => file.type === 'file');
 
 			if (!file) {
 				throw new Error('Cannot delete the only file');
@@ -216,7 +220,7 @@ export class Workspace {
 			next = file;
 		}
 
-		this.files = this.files.filter((f) => {
+		this.#files = this.#files.filter((f) => {
 			if (f === item) return false;
 			if (f.name.startsWith(item.name + '/')) return false;
 			return true;
