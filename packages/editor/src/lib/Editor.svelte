@@ -118,7 +118,7 @@
 				});
 
 				editor_states.set(file.name, state);
-				select_state(file.name);
+				// select_state(file.name);
 			}
 		}
 	}
@@ -141,6 +141,7 @@
 				doc: '',
 				extensions: [EditorState.readOnly.of(true)]
 			});
+
 		editor_view.setState(state);
 	}
 
