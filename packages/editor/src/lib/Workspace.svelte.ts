@@ -129,7 +129,7 @@ export class Workspace {
 		this.#onupdate(file);
 	}
 
-	#set_files(files: Item[], selected = this.#current.name) {
+	#set_files(files: Item[], selected = this.#current?.name) {
 		const first = files.find((file) => file.type === 'file');
 
 		if (!first) {
