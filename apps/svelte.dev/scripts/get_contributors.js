@@ -46,10 +46,21 @@ try {
 		.sort((a, b) => b.contributions - a.contributions)
 		.slice(0, MAX);
 
+	const sorted = [];
+
+	for (let i = 0; i < authors.length; i++) {
+		const author = authors[i];
+		if (i % 2) {
+			sorted.push(author);
+		} else {
+			sorted.unshift(author);
+		}
+	}
+
 	const sprite = new Jimp({ width: SIZE * authors.length, height: SIZE });
 
-	for (let i = 0; i < authors.length; i += 1) {
-		const author = authors[i];
+	for (let i = 0; i < sorted.length; i += 1) {
+		const author = sorted[i];
 		console.log(`${i + 1} / ${authors.length}: ${author.login}`);
 
 		const image_data = await fetch(author.avatar_url);
@@ -67,7 +78,7 @@ try {
 		{ quality: 80 }
 	);
 
-	const str = `[\n\t${authors.map((a) => `'${a.login}'`).join(',\n\t')}\n]`;
+	const str = `[\n\t${sorted.map((a) => `'${a.login}'`).join(',\n\t')}\n]`;
 
 	writeFile(outputFile, `export default ${str};`);
 }
