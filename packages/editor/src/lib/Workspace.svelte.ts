@@ -32,10 +32,8 @@ function is_svelte_file(file: File) {
 }
 
 export class Workspace {
-	#files = $state.raw<Item[]>([]);
+	// TODO this stuff should all be readonly
 	creating = $state.raw<{ parent: string; type: 'file' | 'directory' } | null>(null);
-	#current = $state.raw() as File;
-
 	modified = $state<Record<string, boolean>>({});
 
 	compiler_options = $state.raw<{ generate: 'client' | 'server'; dev: boolean }>({
@@ -43,6 +41,9 @@ export class Workspace {
 		dev: false
 	});
 	compiled = $state<Record<string, Compiled>>({});
+
+	#files = $state.raw<Item[]>([]);
+	#current = $state.raw() as File;
 
 	#onupdate: (file: File) => void;
 	#onreset: (items: Item[]) => void;
@@ -71,40 +72,14 @@ export class Workspace {
 		return this.#files;
 	}
 
-	#reset_diagnostics() {
-		if (!BROWSER) return;
-
-		const keys = Object.keys(this.compiled);
-		const seen: string[] = [];
-
-		let files = this.#files;
-
-		// prioritise selected file
-		if (this.current) {
-			const i = this.#files.indexOf(this.current!);
-			files = [this.current, ...this.#files.slice(0, i), ...this.#files.slice(i + 1)];
-		}
-
-		for (const file of files) {
-			if (file.type !== 'file') continue;
-			if (!is_svelte_file(file)) continue;
-
-			seen.push(file.name);
-
-			compile_file(file, this.compiler_options).then((compiled) => {
-				this.compiled[file.name] = compiled;
-			});
-		}
-
-		for (const key of keys) {
-			if (!seen.includes(key)) {
-				delete this.compiled[key];
-			}
-		}
-	}
-
 	get current() {
 		return this.#current;
+	}
+
+	add(item: Item) {
+		this.#files = this.#files.concat(item);
+		if (item.type === 'file') this.#current = item;
+		return item;
 	}
 
 	invalidate() {
@@ -113,81 +88,6 @@ export class Workspace {
 
 	mark_saved() {
 		this.modified = {};
-	}
-
-	update_file(file: File) {
-		this.#files = this.#files.map((old) => {
-			if (old.name === file.name) {
-				return file;
-			}
-			return old;
-		});
-
-		this.modified[file.name] = true;
-
-		if (BROWSER && is_svelte_file(file)) {
-			compile_file(file, this.compiler_options).then((compiled) => {
-				this.compiled[file.name] = compiled;
-			});
-		}
-
-		this.#onupdate(file);
-	}
-
-	#set_files(files: Item[], selected = this.#current?.name) {
-		const first = files.find((file) => file.type === 'file');
-
-		if (!first) {
-			throw new Error('Workspace must have at least one file');
-		}
-
-		if (selected) {
-			const file = files.find((file) => file.type === 'file' && file.name === selected);
-			if (!file) {
-				throw new Error(`Invalid selection ${selected}`);
-			}
-
-			this.#current = file as File;
-		} else {
-			this.#current = first;
-		}
-
-		this.#files = files;
-	}
-
-	reset_files(new_files: Item[], selected?: string) {
-		// untrack in case this is called in an effect
-		// TODO if ($effect.tracking()) throw new Error('...');
-
-		untrack(() => {
-			this.#set_files(new_files, selected);
-
-			this.mark_saved();
-
-			this.#onreset(new_files);
-			this.#reset_diagnostics();
-		});
-	}
-
-	select(name: string) {
-		// untrack in case this is called in an effect
-		// TODO if ($effect.tracking()) throw new Error('...');
-
-		untrack(() => {
-			const file = this.#files.find((file) => file.type === 'file' && file.name === name);
-
-			if (!file) {
-				throw new Error(`File ${name} does not exist in workspace`);
-			}
-
-			this.#current = file as File;
-		});
-	}
-
-	add(item: Item) {
-		this.#files = this.#files.concat(item);
-		if (item.type === 'file') this.#current = item;
-		return item;
 	}
 
 	move(from: Item, to: Item) {
@@ -227,5 +127,106 @@ export class Workspace {
 		});
 
 		this.#current = next;
+	}
+
+	reset_files(new_files: Item[], selected?: string) {
+		// untrack in case this is called in an effect
+		// TODO if ($effect.tracking()) throw new Error('...');
+
+		untrack(() => {
+			this.#set_files(new_files, selected);
+
+			this.mark_saved();
+
+			this.#onreset(new_files);
+			this.#reset_diagnostics();
+		});
+	}
+
+	select(name: string) {
+		// untrack in case this is called in an effect
+		// TODO if ($effect.tracking()) throw new Error('...');
+
+		untrack(() => {
+			const file = this.#files.find((file) => file.type === 'file' && file.name === name);
+
+			if (!file) {
+				throw new Error(`File ${name} does not exist in workspace`);
+			}
+
+			this.#current = file as File;
+		});
+	}
+
+	update_file(file: File) {
+		this.#files = this.#files.map((old) => {
+			if (old.name === file.name) {
+				return file;
+			}
+			return old;
+		});
+
+		this.modified[file.name] = true;
+
+		if (BROWSER && is_svelte_file(file)) {
+			compile_file(file, this.compiler_options).then((compiled) => {
+				this.compiled[file.name] = compiled;
+			});
+		}
+
+		this.#onupdate(file);
+	}
+
+	#reset_diagnostics() {
+		if (!BROWSER) return;
+
+		const keys = Object.keys(this.compiled);
+		const seen: string[] = [];
+
+		let files = this.#files;
+
+		// prioritise selected file
+		if (this.current) {
+			const i = this.#files.indexOf(this.current!);
+			files = [this.current, ...this.#files.slice(0, i), ...this.#files.slice(i + 1)];
+		}
+
+		for (const file of files) {
+			if (file.type !== 'file') continue;
+			if (!is_svelte_file(file)) continue;
+
+			seen.push(file.name);
+
+			compile_file(file, this.compiler_options).then((compiled) => {
+				this.compiled[file.name] = compiled;
+			});
+		}
+
+		for (const key of keys) {
+			if (!seen.includes(key)) {
+				delete this.compiled[key];
+			}
+		}
+	}
+
+	#set_files(files: Item[], selected = this.#current?.name) {
+		const first = files.find((file) => file.type === 'file');
+
+		if (!first) {
+			throw new Error('Workspace must have at least one file');
+		}
+
+		if (selected) {
+			const file = files.find((file) => file.type === 'file' && file.name === selected);
+			if (!file) {
+				throw new Error(`Invalid selection ${selected}`);
+			}
+
+			this.#current = file as File;
+		} else {
+			this.#current = first;
+		}
+
+		this.#files = files;
 	}
 }
