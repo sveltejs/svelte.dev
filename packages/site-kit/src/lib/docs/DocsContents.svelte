@@ -74,7 +74,7 @@
 	li {
 		display: block;
 		margin: 0;
-		margin-bottom: 4rem;
+		margin-bottom: 3.5rem;
 	}
 
 	li:last-child {
@@ -88,6 +88,7 @@
 		padding: 0;
 		color: var(--sk-text-2);
 		user-select: none;
+		padding: 0.15rem 0;
 	}
 
 	h3 {
