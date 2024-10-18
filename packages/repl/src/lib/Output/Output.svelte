@@ -33,14 +33,30 @@
 
 	let view: 'result' | 'js' | 'css' | 'ast' = $state('result');
 
+	const js: File = {
+		type: 'file',
+		name: 'output.js',
+		basename: 'output.js',
+		contents: '',
+		text: true
+	};
+
+	const css: File = {
+		type: 'file',
+		name: 'output.css',
+		basename: 'output.css',
+		contents: '',
+		text: true
+	};
+
 	const js_workspace = new Workspace({
-		files: [],
-		selected_name: 'output.js'
+		files: [js],
+		selected_name: 'output.js' // TODO should be unnecessary
 	});
 
 	const css_workspace = new Workspace({
-		files: [],
-		selected_name: 'output.css'
+		files: [css],
+		selected_name: 'output.css' // TODO should be unnecessary
 	});
 
 	let is_markdown = $derived(workspace.selected_name?.endsWith('.md'));
@@ -53,38 +69,22 @@
 
 	// TODO this effect is a bit of a code smell
 	$effect(() => {
-		let js_contents = `/* Select a component to see its compiled code */`;
-		let css_contents = js_contents;
-
 		if (current) {
 			if (current.error) {
-				js_contents = css_contents = `/* ${current.error.message} */`;
+				js.contents = css.contents = `/* ${current.error.message} */`;
 			} else {
-				js_contents = current.result.js.code;
-				css_contents =
+				js.contents = current.result.js.code;
+				css.contents =
 					current.result.css?.code ?? `/* Add a <st` + `yle> tag to see the CSS output */`;
 			}
+		} else {
+			js.contents = css.contents = `/* Select a component to see its compiled code */`;
 		}
 
-		const js: File = {
-			type: 'file',
-			name: 'output.js',
-			basename: 'output.js',
-			contents: js_contents,
-			text: true
-		};
-
-		const css: File = {
-			type: 'file',
-			name: 'output.css',
-			basename: 'output.css',
-			contents: css_contents,
-			text: true
-		};
-
+		// TODO the untrack should probably go in update_file
 		untrack(() => {
-			js_workspace.reset_files([js]);
-			css_workspace.reset_files([css]);
+			js_workspace.update_file(js);
+			css_workspace.update_file(css);
 		});
 	});
 
