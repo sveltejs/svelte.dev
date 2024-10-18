@@ -49,13 +49,8 @@
 		text: true
 	};
 
-	const js_workspace = new Workspace({
-		files: [js]
-	});
-
-	const css_workspace = new Workspace({
-		files: [css]
-	});
+	const js_workspace = new Workspace([js]);
+	const css_workspace = new Workspace([css]);
 
 	let is_markdown = $derived(workspace.current.name.endsWith('.md'));
 

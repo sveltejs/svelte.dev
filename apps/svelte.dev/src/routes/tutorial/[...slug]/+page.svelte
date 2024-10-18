@@ -172,9 +172,8 @@
 	let a = $derived(create_files(data.exercise.a));
 	let b = $derived(create_files({ ...data.exercise.a, ...data.exercise.b }));
 
-	const workspace = new Workspace({
-		files: Object.values(a),
-		selected_name: data.exercise.focus,
+	const workspace = new Workspace(Object.values(a), {
+		initial: data.exercise.focus,
 		onupdate(file) {
 			adapter.update(file);
 		},

@@ -45,19 +45,18 @@
 		change = () => {}
 	}: Props = $props();
 
+	// TODO pass in real data
+	const dummy: File = {
+		type: 'file',
+		name: 'App.svelte',
+		basename: 'App.svelte',
+		contents: '',
+		text: true
+	};
+
 	const workspace = $state(
-		new Workspace({
-			// TODO pass in real data
-			files: [
-				{
-					type: 'file',
-					name: 'App.svelte',
-					basename: 'App.svelte',
-					contents: '',
-					text: true
-				}
-			],
-			selected_name: 'App.svelte',
+		new Workspace([dummy], {
+			initial: 'App.svelte',
 			onupdate() {
 				rebundle();
 				change();

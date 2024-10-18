@@ -46,18 +46,19 @@ export class Workspace {
 	#onupdate: (file: File) => void;
 	#onreset: (items: Item[]) => void;
 
-	constructor({
-		files,
-		selected_name,
-		onupdate,
-		onreset
-	}: {
-		files: Item[];
-		selected_name?: string;
-		onupdate?: (file: File) => void;
-		onreset?: (items: Item[]) => void;
-	}) {
-		this.#set_files(files, selected_name);
+	constructor(
+		files: Item[],
+		{
+			initial,
+			onupdate,
+			onreset
+		}: {
+			initial?: string;
+			onupdate?: (file: File) => void;
+			onreset?: (items: Item[]) => void;
+		} = {}
+	) {
+		this.#set_files(files, initial);
 
 		this.#onupdate = onupdate ?? (() => {});
 		this.#onreset = onreset ?? (() => {});
