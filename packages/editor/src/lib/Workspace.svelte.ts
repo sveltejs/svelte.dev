@@ -33,7 +33,7 @@ function is_svelte_file(file: File) {
 export class Workspace {
 	files = $state.raw<Item[]>([]);
 	creating = $state.raw<{ parent: string; type: 'file' | 'directory' } | null>(null);
-	selected_name = $state() as string;
+	#selected_name = $state() as string;
 
 	modified = $state<Record<string, boolean>>({});
 
@@ -62,7 +62,7 @@ export class Workspace {
 		}
 
 		this.files = files;
-		this.selected_name = selected_name;
+		this.#selected_name = selected_name;
 		this.#onupdate = onupdate ?? (() => {});
 		this.#onreset = onreset ?? (() => {});
 
@@ -99,6 +99,11 @@ export class Workspace {
 				delete this.compiled[key];
 			}
 		}
+	}
+
+	get selected_name() {
+		// TODO remove usages
+		return this.#selected_name;
 	}
 
 	get selected_file() {
@@ -149,11 +154,24 @@ export class Workspace {
 		}
 
 		this.files = new_files;
-		this.selected_name = selected_name;
+		this.#selected_name = selected_name;
 
 		this.mark_saved();
 
 		this.#onreset(new_files);
 		this.#reset_diagnostics();
+	}
+
+	select(name: string) {
+		const file = this.files.find((file) => file.type === 'file' && file.name === name);
+
+		if (!file) {
+			throw new Error(`File ${name} does not exist in workspace`);
+		}
+
+		this.#selected_name = name;
+
+		// TODO
+		// this.#current = file;
 	}
 }

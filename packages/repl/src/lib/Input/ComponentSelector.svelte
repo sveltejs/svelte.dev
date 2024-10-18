@@ -16,7 +16,7 @@
 
 	let { runes, remove, add, workspace, can_migrate }: Props = $props();
 
-	const { handle_select, rebundle } = get_repl_context();
+	const { rebundle } = get_repl_context();
 
 	let editing_name: string | null = $state(null);
 	let input_value = $state('');
@@ -24,7 +24,7 @@
 	function select_file(filename: string) {
 		if (workspace.selected_name !== filename) {
 			editing_name = null;
-			handle_select(filename);
+			workspace.select(filename);
 		}
 	}
 
@@ -48,7 +48,7 @@
 		const deconflicted = deconflict(input_value, edited_file);
 		edited_file.name = edited_file.basename = deconflicted;
 
-		handle_select(edited_file.name);
+		workspace.select(edited_file.name);
 		rebundle();
 
 		editing_name = null;
@@ -81,8 +81,7 @@
 		remove();
 
 		// TODO is one of these lines redundant?
-		workspace.selected_name = idx === 1 ? 'App.svelte' : file.name;
-		handle_select(workspace.selected_name);
+		workspace.select(idx === 1 ? 'App.svelte' : file.name);
 
 		rebundle();
 	}
@@ -104,7 +103,7 @@
 
 		input_value = file.name;
 
-		handle_select(editing_name);
+		workspace.select(editing_name);
 
 		rebundle();
 

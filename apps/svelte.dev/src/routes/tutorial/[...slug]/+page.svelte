@@ -138,7 +138,7 @@
 			show_filetree = true;
 		} else {
 			show_filetree = false;
-			workspace.selected_name = name;
+			workspace.select(name);
 		}
 
 		show_editor = true;
@@ -197,7 +197,7 @@
 	});
 
 	$effect(() => {
-		workspace.selected_name = data.exercise.focus; // TODO this probably belongs in afterNavigate
+		workspace.select(data.exercise.focus); // TODO this probably belongs in afterNavigate
 	});
 
 	beforeNavigate(() => {

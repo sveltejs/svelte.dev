@@ -78,8 +78,7 @@
 	}
 
 	export async function set(data: { files: File[]; css?: string }) {
-		workspace.reset_files(data.files);
-		workspace.selected_name = 'App.svelte';
+		workspace.reset_files(data.files, 'App.svelte');
 
 		editor.reset();
 		rebundle();
@@ -98,7 +97,6 @@
 
 		rebundle,
 		migrate,
-		handle_select,
 
 		workspace
 	});
@@ -121,12 +119,6 @@
 
 		rebundle();
 	}
-
-	async function handle_select(filename: string) {
-		workspace.selected_name = filename;
-	}
-
-	let compiled: CompilerOutput | null = null;
 
 	let width = $state(0);
 	let show_output = $state(false);
