@@ -79,24 +79,18 @@
 	function add_new() {
 		const basename = deconflict(`Component.svelte`);
 
-		const file: File = {
+		const file = workspace.add({
 			type: 'file',
 			name: basename,
 			basename,
 			contents: '',
 			text: true
-		};
-
-		workspace.files = workspace.files.concat(file);
+		});
 
 		editing_name = file.name;
-
 		input_value = file.name;
 
-		workspace.select(editing_name);
-
-		rebundle();
-
+		rebundle(); // TODO should be handled by #onupdate
 		add();
 	}
 

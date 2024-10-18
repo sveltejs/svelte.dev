@@ -152,12 +152,17 @@ export class Workspace {
 	}
 
 	reset_files(new_files: Item[], selected?: string) {
-		this.#set_files(new_files, selected);
+		// untrack in case this is called in an effect
+		// TODO if ($effect.tracking()) throw new Error('...');
 
-		this.mark_saved();
+		untrack(() => {
+			this.#set_files(new_files, selected);
 
-		this.#onreset(new_files);
-		this.#reset_diagnostics();
+			this.mark_saved();
+
+			this.#onreset(new_files);
+			this.#reset_diagnostics();
+		});
 	}
 
 	select(name: string) {
@@ -173,6 +178,12 @@ export class Workspace {
 
 			this.#current = file as File;
 		});
+	}
+
+	add(item: Item) {
+		this.files = this.files.concat(item);
+		if (item.type === 'file') this.#current = item;
+		return item;
 	}
 
 	move(from: Item, to: Item) {

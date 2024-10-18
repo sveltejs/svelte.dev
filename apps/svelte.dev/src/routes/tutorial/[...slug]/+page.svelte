@@ -188,7 +188,7 @@
 	let mobile = $derived(w < 800);
 
 	$effect(() => {
-		workspace.files = Object.values(a);
+		workspace.reset_files(Object.values(a));
 	});
 
 	$effect(() => {
