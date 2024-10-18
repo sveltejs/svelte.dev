@@ -115,18 +115,20 @@
 	&.dark {
 		color-scheme: dark;
 
-		--sk-back-1: hsl(0 0 1);
-		--sk-back-2: hsl(0 0 15);
-		--sk-back-3: hsl(0 0 12);
-		--sk-back-4: hsl(0 0 22);
-		--sk-back-5: hsl(0 0 25);
-		--sk-back-6: hsl(0 0 32);
+		--sk-back-hue: 220;
+
+		--sk-back-1: hsl(var(--sk-back-hue) 15 8);
+		--sk-back-2: hsl(var(--sk-back-hue) 15 15);
+		--sk-back-3: hsl(var(--sk-back-hue) 15 12);
+		--sk-back-4: hsl(var(--sk-back-hue) 15 22);
+		--sk-back-5: hsl(var(--sk-back-hue) 15 25);
+		--sk-back-6: hsl(var(--sk-back-hue) 15 32);
 		--sk-back-translucent: hsl(0 0 100 / 0.1);
 		--sk-theme-1-hsl: 12, 94%, 62%;
-		--sk-text-1: hsl(0, 0%, 90%);
-		--sk-text-2: hsl(0, 0%, 80%);
-		--sk-text-3: hsl(0, 0%, 65%);
-		--sk-text-4: hsl(0, 0%, 45%);
+		--sk-text-1: hsl(var(--sk-back-hue) 10 90%);
+		--sk-text-2: hsl(var(--sk-back-hue) 10 70%);
+		--sk-text-3: hsl(var(--sk-back-hue) 10 65%);
+		--sk-text-4: hsl(var(--sk-back-hue) 10 45%);
 		--sk-text-translucent: hsla(0, 0%, 100%, 0.9);
 		--sk-scrollbar: rgba(255, 255, 255, 0.3);
 		--sk-shadow: drop-shadow(1px 2px 16px rgb(0 0 0 / 0.5));
