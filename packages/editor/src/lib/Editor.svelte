@@ -108,7 +108,7 @@
 				}
 
 				state = EditorState.create({
-					doc: '\n',
+					doc: file.contents,
 					extensions: [
 						...extensions,
 						...(lang || []),
