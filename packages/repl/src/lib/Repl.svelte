@@ -47,8 +47,17 @@
 
 	const workspace = $state(
 		new Workspace({
-			files: [],
-			selected_name: '',
+			// TODO pass in real data
+			files: [
+				{
+					type: 'file',
+					name: 'App.svelte',
+					basename: 'App.svelte',
+					contents: '',
+					text: true
+				}
+			],
+			selected_name: 'App.svelte',
 			onupdate() {
 				rebundle();
 				change();

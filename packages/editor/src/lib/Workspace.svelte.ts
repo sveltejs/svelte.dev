@@ -48,15 +48,19 @@ export class Workspace {
 
 	constructor({
 		files,
-		selected_name,
+		selected_name = files.find((file) => file.type === 'file')?.name,
 		onupdate,
 		onreset
 	}: {
 		files: Item[];
-		selected_name: string;
+		selected_name?: string;
 		onupdate?: (file: File) => void;
 		onreset?: (items: Item[]) => void;
 	}) {
+		if (!selected_name) {
+			throw new Error('Workspace must have at least one file');
+		}
+
 		this.files = files;
 		this.selected_name = selected_name;
 		this.#onupdate = onupdate ?? (() => {});
@@ -132,13 +136,20 @@ export class Workspace {
 		this.#onupdate(file);
 	}
 
-	reset_files(new_files: Item[]) {
+	reset_files(new_files: Item[], selected_name = this.selected_name) {
+		const first = new_files.find((file) => file.type === 'file');
+
+		if (!first) {
+			throw new Error('Workspace must have at least one file');
+		}
+
 		// if the selected file no longer exists, clear it
-		if (!new_files.find((file) => file.name === this.selected_name)) {
-			this.selected_name = null;
+		if (!new_files.find((file) => file.name === selected_name)) {
+			selected_name = first.name;
 		}
 
 		this.files = new_files;
+		this.selected_name = selected_name;
 
 		this.mark_saved();
 
