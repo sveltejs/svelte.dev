@@ -50,20 +50,18 @@
 	};
 
 	const js_workspace = new Workspace({
-		files: [js],
-		selected_name: 'output.js' // TODO should be unnecessary
+		files: [js]
 	});
 
 	const css_workspace = new Workspace({
-		files: [css],
-		selected_name: 'output.css' // TODO should be unnecessary
+		files: [css]
 	});
 
-	let is_markdown = $derived(workspace.selected_name.endsWith('.md'));
+	let is_markdown = $derived(workspace.current.name.endsWith('.md'));
 
 	let markdown = $derived(is_markdown ? (marked.parse(workspace.current!.contents) as string) : '');
 
-	let current = $derived(workspace.compiled[workspace.selected_name!]);
+	let current = $derived(workspace.compiled[workspace.current.name!]);
 
 	// TODO this effect is a bit of a code smell
 	$effect(() => {
@@ -90,7 +88,7 @@
 </script>
 
 <div class="view-toggle">
-	{#if workspace.selected_name.endsWith('.md')}
+	{#if workspace.current.name.endsWith('.md')}
 		<button class="active">Markdown</button>
 	{:else}
 		<button class:active={view === 'result'} onclick={() => (view = 'result')}>Result</button>

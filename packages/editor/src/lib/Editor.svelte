@@ -80,7 +80,7 @@
 					editor_states.set(file.name, transaction.state);
 					state = transaction.state;
 
-					if (workspace.selected_name === file.name) {
+					if (workspace.current.name === file.name) {
 						editor_view.setState(state);
 					}
 				}
@@ -95,7 +95,7 @@
 					lang = [
 						svelte(),
 						...autocomplete_for_svelte(
-							() => workspace.selected_name!,
+							() => workspace.current.name,
 							() =>
 								files
 									.filter((file) => {
@@ -130,7 +130,7 @@
 	export async function reset() {
 		editor_states.clear();
 		await update_files(workspace.files);
-		select_state(workspace.selected_name);
+		select_state(workspace.current.name);
 	}
 
 	function select_state(selected_name: string | null) {
@@ -165,7 +165,7 @@
 	});
 
 	$effect(() => {
-		select_state(workspace.selected_name);
+		select_state(workspace.current.name);
 	});
 
 	$effect(() => {
@@ -175,12 +175,10 @@
 	});
 
 	$effect(() => {
-		if (!workspace.selected_name) return;
-
 		const diagnostics: Diagnostic[] = [];
 
-		const error = workspace.compiled[workspace.selected_name]?.error;
-		const current_warnings = workspace.compiled[workspace.selected_name]?.result?.warnings ?? [];
+		const error = workspace.compiled[workspace.current.name]?.error;
+		const current_warnings = workspace.compiled[workspace.current.name]?.result?.warnings ?? [];
 
 		if (error) {
 			diagnostics.push({

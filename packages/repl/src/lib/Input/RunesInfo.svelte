@@ -24,17 +24,17 @@
 
 	{#snippet dropdown()}
 		<div class="popup">
-			{#if workspace.selected_name.endsWith('.svelte.js')}
+			{#if workspace.current.name.endsWith('.svelte.js')}
 				<p>
 					Files with a <code>.svelte.js</code> extension are always in
 					<a href="/blog/runes">runes mode</a>.
 				</p>
-			{:else if workspace.selected_name.endsWith('.js')}
+			{:else if workspace.current.name.endsWith('.js')}
 				<p>
 					To use <a href="/blog/runes">runes</a> in a JavaScript file, change the extension to
 					<code>.svelte.js</code>.
 				</p>
-			{:else if workspace.selected_name.endsWith('.svelte')}
+			{:else if workspace.current.name.endsWith('.svelte')}
 				{#if runes}
 					<p>
 						This component is in

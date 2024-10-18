@@ -47,7 +47,7 @@
 	{renaming}
 	basename={file.basename}
 	icon={file_icon}
-	selected={file.name === workspace.selected_name}
+	selected={file.name === workspace.current.name}
 	{actions}
 	onclick={() => select(file.name)}
 	onedit={() => {

@@ -103,7 +103,7 @@
 				}
 			}
 
-			const was_selected = workspace.selected_name === to_rename.name;
+			const was_selected = workspace.current.name === to_rename.name;
 
 			to_rename.basename = new_full_name.split('/').pop()!;
 			to_rename.name = new_full_name;

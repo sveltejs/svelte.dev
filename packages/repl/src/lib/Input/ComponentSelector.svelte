@@ -22,14 +22,14 @@
 	let input_value = $state('');
 
 	function select_file(filename: string) {
-		if (workspace.selected_name !== filename) {
+		if (workspace.current.name !== filename) {
 			editing_name = null;
 			workspace.select(filename);
 		}
 	}
 
 	function edit_tab(file: File) {
-		if (workspace.selected_name === file.name) {
+		if (workspace.current.name === file.name) {
 			editing_name = file.name;
 			input_value = file.name;
 		}
@@ -157,7 +157,7 @@
 				class="button"
 				role="button"
 				tabindex="0"
-				class:active={file.name === workspace.selected_name}
+				class:active={file.name === workspace.current.name}
 				class:draggable={file.name !== editing_name && index !== 0}
 				class:drag-over={over === file.name}
 				onclick={() => select_file(file.name)}

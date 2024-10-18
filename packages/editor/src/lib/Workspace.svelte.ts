@@ -97,10 +97,6 @@ export class Workspace {
 		}
 	}
 
-	get selected_name() {
-		return this.#current.name;
-	}
-
 	get current() {
 		return this.#current;
 	}
@@ -132,17 +128,17 @@ export class Workspace {
 		this.#onupdate(file);
 	}
 
-	#set_files(files: Item[], selected_name?: string) {
+	#set_files(files: Item[], selected?: string) {
 		const first = files.find((file) => file.type === 'file');
 
 		if (!first) {
 			throw new Error('Workspace must have at least one file');
 		}
 
-		if (selected_name) {
-			const file = files.find((file) => file.type === 'file' && file.name === selected_name);
+		if (selected) {
+			const file = files.find((file) => file.type === 'file' && file.name === selected);
 			if (!file) {
-				throw new Error(`Invalid selection ${selected_name}`);
+				throw new Error(`Invalid selection ${selected}`);
 			}
 
 			this.#current = file as File;
@@ -153,8 +149,8 @@ export class Workspace {
 		this.files = files;
 	}
 
-	reset_files(new_files: Item[], selected_name = this.selected_name) {
-		this.#set_files(new_files, selected_name);
+	reset_files(new_files: Item[], selected = this.selected) {
+		this.#set_files(new_files, selected);
 
 		this.mark_saved();
 

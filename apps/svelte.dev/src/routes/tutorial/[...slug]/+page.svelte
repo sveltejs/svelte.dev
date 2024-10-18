@@ -145,12 +145,12 @@
 	}
 
 	function navigate_to_file(name: string) {
-		if (name === workspace.selected_name) return;
+		if (name === workspace.current.name) return;
 
 		select_file(name);
 
 		if (mobile) {
-			const q = new URLSearchParams({ file: workspace.selected_name || '' });
+			const q = new URLSearchParams({ file: workspace.current.name || '' });
 			history.pushState({}, '', `?${q}`);
 		}
 	}
@@ -298,7 +298,7 @@
 							<section slot="a" class="navigator">
 								{#if mobile}
 									<button class="file" onclick={() => (show_filetree = !show_filetree)}>
-										{workspace.selected_name.replace(
+										{workspace.current.name.replace(
 											data.exercise.scope.prefix,
 											data.exercise.scope.name + '/'
 										) ?? 'Files'}
@@ -375,7 +375,7 @@
 				const url = new URL(location.origin + location.pathname);
 
 				if (show_editor) {
-					url.searchParams.set('file', workspace.selected_name ?? '');
+					url.searchParams.set('file', workspace.current.name ?? '');
 				}
 
 				history.pushState({}, '', url); // TODO use SvelteKit pushState
