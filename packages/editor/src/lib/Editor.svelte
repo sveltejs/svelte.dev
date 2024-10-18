@@ -108,7 +108,7 @@
 				}
 
 				state = EditorState.create({
-					doc: file.contents,
+					doc: '\n',
 					extensions: [
 						...extensions,
 						...(lang || []),
@@ -118,6 +118,7 @@
 				});
 
 				editor_states.set(file.name, state);
+				select_state(file.name);
 			}
 		}
 	}
@@ -135,13 +136,11 @@
 
 	function select_state(selected_name: string | null) {
 		const state =
-			(selected_name && editor_states.get(selected_name)) ||
-			EditorState.create({
-				doc: '',
-				extensions: [EditorState.readOnly.of(true)]
-			});
+			(selected_name && editor_states.get(selected_name))
 
-		editor_view.setState(state);
+		if (state) {
+			editor_view.setState(state);
+		}
 	}
 
 	$effect(() => {
