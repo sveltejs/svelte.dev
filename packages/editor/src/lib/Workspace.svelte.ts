@@ -129,7 +129,7 @@ export class Workspace {
 		this.#onupdate(file);
 	}
 
-	#set_files(files: Item[], selected?: string) {
+	#set_files(files: Item[], selected = this.#current.name) {
 		const first = files.find((file) => file.type === 'file');
 
 		if (!first) {
@@ -150,7 +150,7 @@ export class Workspace {
 		this.files = files;
 	}
 
-	reset_files(new_files: Item[], selected = this.selected) {
+	reset_files(new_files: Item[], selected?: string) {
 		this.#set_files(new_files, selected);
 
 		this.mark_saved();
