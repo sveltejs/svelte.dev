@@ -49,8 +49,13 @@
 		text: true
 	};
 
-	const js_workspace = new Workspace([js]);
-	const css_workspace = new Workspace([css]);
+	const js_workspace = new Workspace([js], {
+		readonly: true
+	});
+
+	const css_workspace = new Workspace([css], {
+		readonly: true
+	});
 
 	let is_markdown = $derived(workspace.current.name.endsWith('.md'));
 
@@ -109,11 +114,11 @@
 <!-- js output -->
 <div class="tab-content" class:visible={!is_markdown && view === 'js'}>
 	{#if embedded}
-		<Editor workspace={js_workspace} readonly />
+		<Editor workspace={js_workspace} />
 	{:else}
 		<PaneWithPanel pos="50%" panel="Compiler options">
 			<div slot="main">
-				<Editor workspace={js_workspace} readonly />
+				<Editor workspace={js_workspace} />
 			</div>
 
 			<div slot="panel-body">
@@ -125,7 +130,7 @@
 
 <!-- css output -->
 <div class="tab-content" class:visible={!is_markdown && view === 'css'}>
-	<Editor workspace={css_workspace} readonly />
+	<Editor workspace={css_workspace} />
 </div>
 
 <!-- ast output -->

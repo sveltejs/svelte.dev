@@ -46,10 +46,10 @@
 		if (!edited_file) return; // TODO can this happen?
 
 		const deconflicted = deconflict(input_value, edited_file);
-		edited_file.name = edited_file.basename = deconflicted;
 
-		workspace.select(edited_file.name);
-		rebundle();
+		workspace.rename(edited_file, deconflicted);
+		workspace.focus();
+		rebundle(); // TODO should be handled by workspace.rename
 
 		editing_name = null;
 	}
@@ -166,7 +166,11 @@
 
 					<span
 						class="remove"
-						onclick={() => remove_file(file)}
+						onclick={(e) => {
+							// TODO make this a real button, get rid of the keyup listener
+							remove_file(file);
+							e.stopPropagation();
+						}}
 						onkeyup={(e) => e.key === ' ' && remove_file(file)}
 					>
 						<svg width="12" height="12" viewBox="0 0 24 24">

@@ -198,8 +198,6 @@
 		editor.reset();
 		workspace.reset_files(Object.values(a), data.exercise.focus);
 
-		w = window.innerWidth;
-
 		const will_delete = previous_files.some((file) => !(file.name in a));
 
 		if (data.exercise.path !== path || will_delete) paused = true;

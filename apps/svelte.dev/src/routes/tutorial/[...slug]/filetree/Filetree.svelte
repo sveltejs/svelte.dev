@@ -86,28 +86,8 @@
 				return;
 			}
 
-			if (to_rename.type === 'directory') {
-				for (const file of workspace.files) {
-					if (file.name.startsWith(to_rename.name + '/')) {
-						file.name = new_full_name + file.name.slice(to_rename.name.length);
-					}
-				}
-			}
-
-			const was_selected = workspace.current.name === to_rename.name;
-
-			to_rename.basename = new_full_name.split('/').pop()!;
-			to_rename.name = new_full_name;
-
-			// TODO add workspace.rename method
-			workspace.reset_files([
-				...workspace.files,
-				...create_directories(new_full_name, workspace.files)
-			]);
-
-			if (was_selected) {
-				dispatch('select', { name: new_full_name });
-			}
+			workspace.rename(to_rename, new_full_name);
+			workspace.focus();
 		},
 
 		remove: async (file) => {

@@ -46,7 +46,11 @@ function is_svelte_file(file: File) {
 	return /\.svelte(\.|$)/.test(file.name);
 }
 
-const extensions = [
+function file_type(file: Item) {
+	return file.name.split('.').pop();
+}
+
+const default_extensions = [
 	basicSetup,
 	EditorState.tabSize.of(2),
 	keymap.of([{ key: 'Tab', run: acceptCompletion }, indentWithTab]),
@@ -125,31 +129,20 @@ export class Workspace {
 	}
 
 	add(item: Item) {
-		// create intermediate directories as necessary
-		const parts = item.name.split('/');
-
-		while (parts.length > 1) {
-			parts.pop();
-			const joined = parts.join('/');
-
-			if (this.files.find((file) => file.name === joined)) {
-				break;
-			}
-
-			this.#files.push({
-				type: 'directory',
-				name: joined,
-				basename: joined.split('/').pop()! // TODO get rid of this basename nonsense, it's infuriating
-			});
-		}
-
+		this.#create_directories(item);
 		this.#files = this.#files.concat(item);
 
 		if (is_file(item)) {
-			this.select(item.name);
+			this.#select(item);
 		}
 
 		return item;
+	}
+
+	focus() {
+		setTimeout(() => {
+			this.#view?.focus();
+		});
 	}
 
 	invalidate() {
@@ -163,6 +156,8 @@ export class Workspace {
 	link(view: EditorView) {
 		if (this.#view) throw new Error('view is already linked');
 		this.#view = view;
+
+		view.setState(this.#get_state(this.#current));
 	}
 
 	move(from: Item, to: Item) {
@@ -203,6 +198,45 @@ export class Workspace {
 		this.#current = next;
 	}
 
+	rename(previous: Item, name: string) {
+		const index = this.files.indexOf(previous);
+		const was_current = previous === this.#current;
+
+		const state = this.states.get(previous.name);
+		this.states.delete(previous.name);
+
+		const new_item: Item = {
+			...previous,
+			name,
+			basename: name.split('/').pop()!
+		};
+
+		this.#create_directories(new_item);
+
+		this.#files = this.#files.map((item, i) => {
+			if (i === index) return new_item;
+
+			if (previous.type === 'directory' && item.name.startsWith(previous.name + '/')) {
+				return {
+					...item,
+					name: item.name.replace(previous.name, name)
+				};
+			}
+
+			return item;
+		});
+
+		// preserve state, unless the language changed (in which case
+		// it's simpler to just create a new editor state)
+		if (state && file_type(previous) === file_type(new_item)) {
+			this.states.set(name, state);
+		}
+
+		if (was_current) {
+			this.#select(new_item as File);
+		}
+	}
+
 	reset_files(new_files: Item[], selected?: string) {
 		// untrack in case this is called in an effect
 		// TODO if ($effect.tracking()) throw new Error('...');
@@ -228,8 +262,7 @@ export class Workspace {
 				throw new Error(`File ${name} does not exist in workspace`);
 			}
 
-			this.#current = file as File;
-			this.#view?.setState(this.#get_state(this.#current));
+			this.#select(file as File);
 		});
 	}
 
@@ -257,42 +290,68 @@ export class Workspace {
 		this.#onupdate(file);
 	}
 
+	#create_directories(item: Item) {
+		// create intermediate directories as necessary
+		const parts = item.name.split('/');
+
+		while (parts.length > 1) {
+			parts.pop();
+			const joined = parts.join('/');
+
+			if (this.files.find((file) => file.name === joined)) {
+				return;
+			}
+
+			this.#files.push({
+				type: 'directory',
+				name: joined,
+				basename: joined.split('/').pop()! // TODO get rid of this basename nonsense, it's infuriating
+			});
+		}
+	}
+
 	#get_state(file: File) {
 		let state = this.states.get(file.name);
 		if (state) return state;
 
-		let lang;
+		const extensions = [
+			...default_extensions,
+			EditorState.readOnly.of(this.#readonly),
+			EditorView.editable.of(!this.#readonly)
+		];
 
-		if (file.name.endsWith('.js') || file.name.endsWith('.json')) {
-			lang = [javascript()];
-		} else if (file.name.endsWith('.html')) {
-			lang = [html()];
-		} else if (file.name.endsWith('.svelte')) {
-			lang = [
-				svelte(),
-				...autocomplete_for_svelte(
-					() => this.current.name,
-					() =>
-						this.files
-							.filter((file) => {
-								if (file.type !== 'file') return false;
-								// TODO put autocomplete_filter on the workspace
-								// return autocomplete_filter(file);
-								return true;
-							})
-							.map((file) => file.name)
-				)
-			];
+		switch (file_type(file)) {
+			case 'js': // TODO autocomplete, including runes
+			case 'json':
+				extensions.push(javascript());
+				break;
+
+			case 'html':
+				extensions.push(html());
+				break;
+
+			case 'svelte':
+				extensions.push(
+					svelte(),
+					...autocomplete_for_svelte(
+						() => this.current.name,
+						() =>
+							this.files
+								.filter((file) => {
+									if (file.type !== 'file') return false;
+									// TODO put autocomplete_filter on the workspace
+									// return autocomplete_filter(file);
+									return true;
+								})
+								.map((file) => file.name)
+					)
+				);
+				break;
 		}
 
 		state = EditorState.create({
 			doc: file.contents,
-			extensions: [
-				...extensions,
-				...(lang || []),
-				EditorState.readOnly.of(this.#readonly),
-				EditorView.editable.of(!this.#readonly)
-			]
+			extensions
 		});
 
 		this.states.set(file.name, state);
@@ -330,6 +389,11 @@ export class Workspace {
 				delete this.compiled[key];
 			}
 		}
+	}
+
+	#select(file: File) {
+		this.#current = file as File;
+		this.#view?.setState(this.#get_state(this.#current));
 	}
 
 	#set_files(files: Item[], selected = this.#current?.name) {
