@@ -150,11 +150,11 @@
 			async dispatch(transaction) {
 				editor_view.update([transaction]);
 
-				if (transaction.docChanged && workspace.selected_file) {
-					onchange?.(workspace.selected_file, editor_view.state.doc.toString());
+				if (transaction.docChanged && workspace.current) {
+					onchange?.(workspace.current, editor_view.state.doc.toString());
 
 					// keep `editor_states` updated so that undo/redo history is preserved for files independently
-					editor_states.set(workspace.selected_file.name, editor_view.state);
+					editor_states.set(workspace.current.name, editor_view.state);
 				}
 			}
 		});
@@ -252,15 +252,15 @@
 		}, 200);
 	}}
 >
-	{#if !BROWSER && workspace.selected_file}
+	{#if !BROWSER && workspace.current}
 		<div class="fake">
 			<div class="fake-gutter">
-				{#each workspace.selected_file.contents.split('\n') as _, i}
+				{#each workspace.current.contents.split('\n') as _, i}
 					<div class="fake-line">{i + 1}</div>
 				{/each}
 			</div>
 			<div class="fake-content">
-				{#each workspace.selected_file.contents.split('\n') as line}
+				{#each workspace.current.contents.split('\n') as line}
 					<pre>{line || ' '}</pre>
 				{/each}
 			</div>

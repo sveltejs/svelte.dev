@@ -78,9 +78,9 @@ export class Workspace {
 		let files = this.files;
 
 		// prioritise selected file
-		if (this.selected_file) {
-			const i = this.files.indexOf(this.selected_file!);
-			files = [this.selected_file, ...this.files.slice(0, i), ...this.files.slice(i + 1)];
+		if (this.current) {
+			const i = this.files.indexOf(this.current!);
+			files = [this.current, ...this.files.slice(0, i), ...this.files.slice(i + 1)];
 		}
 
 		for (const file of files) {
@@ -106,7 +106,7 @@ export class Workspace {
 		return this.#selected_name;
 	}
 
-	get selected_file() {
+	get current() {
 		for (const file of this.files) {
 			if (file.name === this.selected_name) return file as File;
 		}

@@ -61,9 +61,7 @@
 
 	let is_markdown = $derived(workspace.selected_name.endsWith('.md'));
 
-	let markdown = $derived(
-		is_markdown ? (marked.parse(workspace.selected_file!.contents) as string) : ''
-	);
+	let markdown = $derived(is_markdown ? (marked.parse(workspace.current!.contents) as string) : '');
 
 	let current = $derived(workspace.compiled[workspace.selected_name!]);
 

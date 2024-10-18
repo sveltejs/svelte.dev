@@ -335,7 +335,7 @@
 										);
 									}}
 								/>
-								<ImageViewer selected={workspace.selected_file} />
+								<ImageViewer selected={workspace.current} />
 
 								{#if mobile && show_filetree}
 									<div class="mobile-filetree">

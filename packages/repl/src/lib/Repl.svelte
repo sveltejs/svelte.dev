@@ -113,7 +113,7 @@
 		if (!can_migrate) return; // belt and braces — button is already disabled
 
 		workspace.update_file({
-			...workspace.selected_file!,
+			...workspace.current!,
 			contents: migration.code
 		});
 
@@ -168,9 +168,7 @@
 	);
 
 	let migration = $derived(workspace.compiled[workspace.selected_name!]?.migration);
-	let can_migrate = $derived(
-		migration ? migration.code !== workspace.selected_file?.contents : false
-	);
+	let can_migrate = $derived(migration ? migration.code !== workspace.current?.contents : false);
 </script>
 
 <svelte:window onbeforeunload={before_unload} />
