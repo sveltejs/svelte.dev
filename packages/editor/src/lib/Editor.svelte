@@ -118,7 +118,7 @@
 				});
 
 				editor_states.set(file.name, state);
-				select_state(file.name);
+				editor_view.setState(state);
 			}
 		}
 	}
