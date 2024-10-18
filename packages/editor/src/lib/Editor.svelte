@@ -8,11 +8,10 @@
 
 	interface Props {
 		workspace: Workspace;
-		onchange?: (file: File, contents: string) => void;
 		autocomplete_filter?: (file: File) => boolean;
 	}
 
-	let { workspace, onchange, autocomplete_filter = () => true }: Props = $props();
+	let { workspace, autocomplete_filter = () => true }: Props = $props();
 
 	let container: HTMLDivElement;
 
@@ -38,17 +37,7 @@
 
 	$effect(() => {
 		editor_view = new EditorView({
-			parent: container,
-			async dispatch(transaction) {
-				editor_view.update([transaction]);
-
-				if (transaction.docChanged) {
-					onchange?.(workspace.current, editor_view.state.doc.toString());
-
-					// keep `editor_states` updated so that undo/redo history is preserved for files independently
-					editor_states.set(workspace.current.name, editor_view.state);
-				}
-			}
+			parent: container
 		});
 
 		workspace.link(editor_view);

@@ -184,14 +184,7 @@
 			<section slot="a">
 				<ComponentSelector {runes} {add} {remove} {workspace} {can_migrate} />
 
-				<Editor
-					bind:this={editor}
-					{workspace}
-					onchange={(file, contents) => {
-						// TODO is this even necessary? Can it be implicit?
-						workspace.update_file({ ...file, contents });
-					}}
-				/>
+				<Editor bind:this={editor} {workspace} />
 			</section>
 
 			<section slot="b" style="height: 100%;">

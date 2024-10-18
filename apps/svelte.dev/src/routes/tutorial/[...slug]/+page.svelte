@@ -299,10 +299,6 @@
 								<Editor
 									bind:this={editor}
 									{workspace}
-									onchange={async (file, contents) => {
-										// TODO this should be implicit
-										workspace.update_file({ ...file, contents });
-									}}
 									autocomplete_filter={(file) => {
 										return (
 											file.name.startsWith('/src') &&

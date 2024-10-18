@@ -317,7 +317,20 @@ export class Workspace {
 		const extensions = [
 			...default_extensions,
 			EditorState.readOnly.of(this.#readonly),
-			EditorView.editable.of(!this.#readonly)
+			EditorView.editable.of(!this.#readonly),
+			EditorView.updateListener.of((update) => {
+				if (update.docChanged) {
+					const state = this.#view!.state!;
+
+					this.update_file({
+						...this.#current,
+						contents: state.doc.toString()
+					});
+
+					// preserve undo/redo across files
+					this.states.set(this.#current.name, state);
+				}
+			})
 		];
 
 		switch (file_type(file)) {
