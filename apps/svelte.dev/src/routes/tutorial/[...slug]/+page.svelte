@@ -10,7 +10,6 @@
 	import { ScreenToggle } from '@sveltejs/site-kit/components';
 	import Sidebar from './Sidebar.svelte';
 	import { solution } from './state.svelte';
-	import { create_directories } from './utils';
 	import { needs_webcontainers, text_files } from './shared';
 	import OutputRollup from './OutputRollup.svelte';
 	import { page } from '$app/stores';
@@ -117,16 +116,18 @@
 		const file = name && workspace.files.find((file) => file.name === name);
 
 		if (!file && name) {
-			// trigger file creation input. first, create any intermediate directories
-			const new_directories = create_directories(name, workspace.files);
-
-			if (new_directories.length > 0) {
-				// TODO don't use reset_files, just add the directories
-				workspace.reset_files([...workspace.files, ...new_directories]);
-			}
-
-			// find the parent directory
+			// create intermediate directories if necessary
 			const parent = name.split('/').slice(0, -1).join('/');
+
+			if (!workspace.files.some((item) => item.name === parent)) {
+				const basename = parent.split('/').pop()!;
+
+				workspace.add({
+					type: 'directory',
+					name: parent,
+					basename
+				});
+			}
 
 			workspace.creating = {
 				parent,
@@ -136,7 +137,10 @@
 			show_filetree = true;
 		} else {
 			show_filetree = false;
-			workspace.select(name);
+
+			if (name) {
+				workspace.select(name);
+			}
 		}
 
 		show_editor = true;
