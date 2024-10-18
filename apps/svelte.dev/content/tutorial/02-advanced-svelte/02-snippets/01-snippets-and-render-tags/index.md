@@ -44,6 +44,8 @@ Before we can use the snippet for the rest of our monkeys, we need to pass data 
 </tbody>
 ```
 
+> [!NOTE] You can also use destructured parameters, if you like.
+
 Add the rest of the monkeys:
 
 - `'🙈', 'see no evil'`
