@@ -61,16 +61,7 @@
 					? { type, name, basename, text: true, contents: '' }
 					: { type, name, basename };
 
-			// TODO add workspace.add method
-			workspace.reset_files([
-				...workspace.files,
-				...create_directories(name, workspace.files),
-				file
-			]);
-
-			if (type === 'file') {
-				dispatch('select', { name });
-			}
+			workspace.add(file);
 		},
 
 		rename: async (to_rename, new_name) => {

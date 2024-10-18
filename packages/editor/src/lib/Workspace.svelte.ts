@@ -3,7 +3,16 @@ import { EditorState } from '@codemirror/state';
 import { compile_file } from './compile-worker';
 import { BROWSER } from 'esm-env';
 import { untrack } from 'svelte';
-import type { EditorView } from 'codemirror';
+import { basicSetup, EditorView } from 'codemirror';
+import { javascript } from '@codemirror/lang-javascript';
+import { html } from '@codemirror/lang-html';
+import { svelte } from '@replit/codemirror-lang-svelte';
+import { autocomplete_for_svelte } from '@sveltejs/site-kit/codemirror';
+import { keymap } from '@codemirror/view';
+import { acceptCompletion } from '@codemirror/autocomplete';
+import { indentWithTab } from '@codemirror/commands';
+import { indentUnit } from '@codemirror/language';
+import { theme } from './theme';
 
 export interface File {
 	type: 'file';
@@ -37,6 +46,30 @@ function is_svelte_file(file: File) {
 	return /\.svelte(\.|$)/.test(file.name);
 }
 
+const extensions = [
+	basicSetup,
+	EditorState.tabSize.of(2),
+	keymap.of([{ key: 'Tab', run: acceptCompletion }, indentWithTab]),
+	indentUnit.of('\t'),
+	theme
+];
+
+// TODO add vim mode via a compartment (https://codemirror.net/examples/config/)
+// let installed_vim = false;
+// let should_install_vim = localStorage.getItem('vim') === 'true';
+
+// const q = new URLSearchParams(location.search);
+// if (q.has('vim')) {
+// 	should_install_vim = q.get('vim') === 'true';
+// 	localStorage.setItem('vim', should_install_vim.toString());
+// }
+
+// if (!installed_vim && should_install_vim) {
+// 	installed_vim = true;
+// 	const { vim } = await import('@replit/codemirror-vim');
+// 	extensions.push(vim());
+// }
+
 export class Workspace {
 	// TODO this stuff should all be readonly
 	creating = $state.raw<{ parent: string; type: 'file' | 'directory' } | null>(null);
@@ -48,6 +81,7 @@ export class Workspace {
 	});
 	compiled = $state<Record<string, Compiled>>({});
 
+	#readonly = false; // TODO do we need workspaces for readonly stuff?
 	#files = $state.raw<Item[]>([]);
 	#current = $state.raw() as File;
 
@@ -62,14 +96,18 @@ export class Workspace {
 		files: Item[],
 		{
 			initial,
+			readonly = false,
 			onupdate,
 			onreset
 		}: {
 			initial?: string;
+			readonly?: boolean;
 			onupdate?: (file: File) => void;
 			onreset?: (items: Item[]) => void;
 		} = {}
 	) {
+		this.#readonly = readonly;
+
 		this.#set_files(files, initial);
 
 		this.#onupdate = onupdate ?? (() => {});
@@ -87,8 +125,30 @@ export class Workspace {
 	}
 
 	add(item: Item) {
+		// create intermediate directories as necessary
+		const parts = item.name.split('/');
+
+		while (parts.length > 1) {
+			parts.pop();
+			const joined = parts.join('/');
+
+			if (this.files.find((file) => file.name === joined)) {
+				break;
+			}
+
+			this.#files.push({
+				type: 'directory',
+				name: joined,
+				basename: joined.split('/').pop()! // TODO get rid of this basename nonsense, it's infuriating
+			});
+		}
+
 		this.#files = this.#files.concat(item);
-		if (is_file(item)) this.#current = item;
+
+		if (is_file(item)) {
+			this.select(item.name);
+		}
+
 		return item;
 	}
 
@@ -169,8 +229,7 @@ export class Workspace {
 			}
 
 			this.#current = file as File;
-
-			this.#view?.setState(this.states.get(file.name)!);
+			this.#view?.setState(this.#get_state(this.#current));
 		});
 	}
 
@@ -196,6 +255,49 @@ export class Workspace {
 		}
 
 		this.#onupdate(file);
+	}
+
+	#get_state(file: File) {
+		let state = this.states.get(file.name);
+		if (state) return state;
+
+		let lang;
+
+		if (file.name.endsWith('.js') || file.name.endsWith('.json')) {
+			lang = [javascript()];
+		} else if (file.name.endsWith('.html')) {
+			lang = [html()];
+		} else if (file.name.endsWith('.svelte')) {
+			lang = [
+				svelte(),
+				...autocomplete_for_svelte(
+					() => this.current.name,
+					() =>
+						this.files
+							.filter((file) => {
+								if (file.type !== 'file') return false;
+								// TODO put autocomplete_filter on the workspace
+								// return autocomplete_filter(file);
+								return true;
+							})
+							.map((file) => file.name)
+				)
+			];
+		}
+
+		state = EditorState.create({
+			doc: file.contents,
+			extensions: [
+				...extensions,
+				...(lang || []),
+				EditorState.readOnly.of(this.#readonly),
+				EditorView.editable.of(!this.#readonly)
+			]
+		});
+
+		this.states.set(file.name, state);
+
+		return state;
 	}
 
 	#reset_diagnostics() {
