@@ -252,6 +252,10 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		& > a {
 			padding: 0.1rem 0.8rem 0 0.8rem;
 		}
+
+		& > .dropdown > a {
+			padding: 0.1rem 0.8rem 0 0.8rem;
+		}
 	}
 
 	.menu {
