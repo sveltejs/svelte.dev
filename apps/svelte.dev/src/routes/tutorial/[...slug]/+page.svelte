@@ -17,7 +17,6 @@
 	import Controls from './Controls.svelte';
 	import type { Item } from 'editor';
 	import type { Snapshot } from './$types.js';
-	import { tick } from 'svelte';
 
 	interface Props {
 		data: any;
@@ -32,7 +31,6 @@
 	let w = $state(1000);
 
 	let editor: any; // TODO
-	let skip_set_files = true;
 
 	let previous_files: Item[] = [];
 
@@ -193,13 +191,10 @@
 	});
 
 	beforeNavigate(() => {
-		skip_set_files = true;
 		previous_files = workspace.files;
 	});
 
 	afterNavigate(async () => {
-		skip_set_files = false;
-
 		editor.reset();
 		workspace.reset_files(Object.values(a), data.exercise.focus);
 
@@ -212,11 +207,6 @@
 
 		path = data.exercise.path;
 		paused = false;
-	});
-
-	$effect(() => {
-		const files = workspace.files; // capture the dependency. TODO don't use an effect here
-		if (!skip_set_files) editor.update_files(files);
 	});
 
 	let completed = $derived(is_completed(workspace.files, b));
@@ -312,12 +302,8 @@
 									bind:this={editor}
 									{workspace}
 									onchange={async (file, contents) => {
-										skip_set_files = true;
-
+										// TODO this should be implicit
 										workspace.update_file({ ...file, contents });
-
-										await tick();
-										skip_set_files = false;
 									}}
 									autocomplete_filter={(file) => {
 										return (
