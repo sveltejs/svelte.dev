@@ -33,7 +33,6 @@ function is_svelte_file(file: File) {
 export class Workspace {
 	files = $state.raw<Item[]>([]);
 	creating = $state.raw<{ parent: string; type: 'file' | 'directory' } | null>(null);
-	#selected_name = $state() as string;
 	#current = $state.raw() as File;
 
 	modified = $state<Record<string, boolean>>({});
@@ -58,24 +57,8 @@ export class Workspace {
 		onupdate?: (file: File) => void;
 		onreset?: (items: Item[]) => void;
 	}) {
-		const first = files.find((file) => file.type === 'file');
+		this.#set_files(files, selected_name);
 
-		if (!first) {
-			throw new Error('Workspace must have at least one file');
-		}
-
-		if (selected_name) {
-			const file = files.find((file) => file.type === 'file' && file.name === selected_name);
-			if (!file) {
-				throw new Error(`Invalid selection ${selected_name}`);
-			}
-
-			this.#current = file as File;
-		} else {
-			this.#current = first;
-		}
-
-		this.files = files;
 		this.#onupdate = onupdate ?? (() => {});
 		this.#onreset = onreset ?? (() => {});
 
@@ -149,20 +132,29 @@ export class Workspace {
 		this.#onupdate(file);
 	}
 
-	reset_files(new_files: Item[], selected_name = this.selected_name) {
-		const first = new_files.find((file) => file.type === 'file');
+	#set_files(files: Item[], selected_name?: string) {
+		const first = files.find((file) => file.type === 'file');
 
 		if (!first) {
 			throw new Error('Workspace must have at least one file');
 		}
 
-		// if the selected file no longer exists, clear it
-		if (!new_files.find((file) => file.name === selected_name)) {
-			selected_name = first.name;
+		if (selected_name) {
+			const file = files.find((file) => file.type === 'file' && file.name === selected_name);
+			if (!file) {
+				throw new Error(`Invalid selection ${selected_name}`);
+			}
+
+			this.#current = file as File;
+		} else {
+			this.#current = first;
 		}
 
-		this.files = new_files;
-		this.#selected_name = selected_name;
+		this.files = files;
+	}
+
+	reset_files(new_files: Item[], selected_name = this.selected_name) {
+		this.#set_files(new_files, selected_name);
 
 		this.mark_saved();
 
@@ -176,8 +168,6 @@ export class Workspace {
 		if (!file) {
 			throw new Error(`File ${name} does not exist in workspace`);
 		}
-
-		this.#selected_name = name;
 
 		this.#current = file as File;
 	}
