@@ -3,9 +3,9 @@
 	import donors from './donors.js';
 
 	// @ts-expect-error
-	import contributors_img from './contributors.jpg?w=1800&format=webp';
+	import contributors_img from './contributors.jpg?format=webp';
 	// @ts-expect-error
-	import donors_img from './donors.jpg?w=1800&format=webp';
+	import donors_img from './donors.jpg?format=webp';
 </script>
 
 <p class="intro">
