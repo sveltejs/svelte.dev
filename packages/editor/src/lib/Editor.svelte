@@ -19,21 +19,7 @@
 
 	let remove_focus_timeout = $state<any>();
 
-	// TODO encapsulate all this inside Workspace
-	let editor_states = workspace.states;
-
 	let editor_view: EditorView;
-
-	/**
-	 * Wipe the editor state clean, including all undo/redo history.
-	 * Typically this only happens when navigating, not when
-	 * updating files in-situ
-	 */
-	export async function reset() {
-		// TODO get rid
-
-		editor_states.clear();
-	}
 
 	$effect(() => {
 		editor_view = new EditorView({
@@ -48,6 +34,7 @@
 		};
 	});
 
+	// TODO move into workspace
 	$effect(() => {
 		const diagnostics: Diagnostic[] = [];
 

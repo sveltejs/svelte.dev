@@ -29,8 +29,6 @@
 	let paused = $state(false);
 	let w = $state(1000);
 
-	let editor: any; // TODO
-
 	let previous_files: Item[] = [];
 
 	function create_files(map: Record<string, string>): Record<string, Item> {
@@ -199,8 +197,7 @@
 	});
 
 	afterNavigate(async () => {
-		editor.reset();
-		workspace.reset_files(Object.values(a), data.exercise.focus);
+		workspace.reset(Object.values(a), data.exercise.focus);
 
 		const will_delete = previous_files.some((file) => !(file.name in a));
 
@@ -301,7 +298,6 @@
 
 							<section slot="b" class="editor-container">
 								<Editor
-									bind:this={editor}
 									{workspace}
 									autocomplete_filter={(file) => {
 										return (

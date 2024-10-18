@@ -66,8 +66,7 @@
 		})
 	);
 
-	let editor: any = $state();
-
+	// TODO get rid
 	export function toJSON() {
 		return {
 			imports: $bundle?.imports ?? [],
@@ -75,13 +74,12 @@
 		};
 	}
 
+	// TODO get rid
 	export async function set(data: { files: File[]; css?: string }) {
-		workspace.reset_files(data.files, 'App.svelte');
-
-		editor.reset();
-		rebundle();
+		workspace.reset(data.files, 'App.svelte');
 	}
 
+	// TODO get rid
 	export function markSaved() {
 		workspace.mark_saved();
 	}
@@ -184,7 +182,7 @@
 			<section slot="a">
 				<ComponentSelector {runes} {add} {remove} {workspace} {can_migrate} />
 
-				<Editor bind:this={editor} {workspace} />
+				<Editor {workspace} />
 			</section>
 
 			<section slot="b" style="height: 100%;">

@@ -237,11 +237,12 @@ export class Workspace {
 		}
 	}
 
-	reset_files(new_files: Item[], selected?: string) {
+	reset(new_files: Item[], selected?: string) {
 		// untrack in case this is called in an effect
 		// TODO if ($effect.tracking()) throw new Error('...');
 
 		untrack(() => {
+			this.states.clear();
 			this.set(new_files, selected);
 
 			this.mark_saved();
