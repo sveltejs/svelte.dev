@@ -27,6 +27,10 @@ export interface Compiled {
 	};
 }
 
+function is_file(item: Item): item is File {
+	return item.type === 'file';
+}
+
 function is_svelte_file(file: File) {
 	return /\.svelte(\.|$)/.test(file.name);
 }
@@ -78,7 +82,7 @@ export class Workspace {
 
 	add(item: Item) {
 		this.#files = this.#files.concat(item);
-		if (item.type === 'file') this.#current = item;
+		if (is_file(item)) this.#current = item;
 		return item;
 	}
 
@@ -110,8 +114,7 @@ export class Workspace {
 
 		if (next === item) {
 			const file =
-				this.#files.slice(0, index).findLast((file) => file.type === 'file') ??
-				this.#files.slice(index + 1).find((file) => file.type === 'file');
+				this.#files.slice(0, index).findLast(is_file) ?? this.#files.slice(index + 1).find(is_file);
 
 			if (!file) {
 				throw new Error('Cannot delete the only file');
@@ -148,7 +151,7 @@ export class Workspace {
 		// TODO if ($effect.tracking()) throw new Error('...');
 
 		untrack(() => {
-			const file = this.#files.find((file) => file.type === 'file' && file.name === name);
+			const file = this.#files.find((file) => is_file(file) && file.name === name);
 
 			if (!file) {
 				throw new Error(`File ${name} does not exist in workspace`);
@@ -210,14 +213,15 @@ export class Workspace {
 	}
 
 	#set_files(files: Item[], selected = this.#current?.name) {
-		const first = files.find((file) => file.type === 'file');
+		const first = files.find(is_file);
 
 		if (!first) {
 			throw new Error('Workspace must have at least one file');
 		}
 
 		if (selected) {
-			const file = files.find((file) => file.type === 'file' && file.name === selected);
+			const file = files.find((file) => is_file(file) && file.name === selected);
+
 			if (!file) {
 				throw new Error(`Invalid selection ${selected}`);
 			}
