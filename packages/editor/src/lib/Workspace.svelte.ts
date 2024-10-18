@@ -1,7 +1,9 @@
 import type { CompileError, CompileResult } from 'svelte/compiler';
+import { EditorState } from '@codemirror/state';
 import { compile_file } from './compile-worker';
 import { BROWSER } from 'esm-env';
 import { untrack } from 'svelte';
+import type { EditorView } from 'codemirror';
 
 export interface File {
 	type: 'file';
@@ -52,6 +54,10 @@ export class Workspace {
 	#onupdate: (file: File) => void;
 	#onreset: (items: Item[]) => void;
 
+	// CodeMirror stuff
+	states = new Map<string, EditorState>();
+	#view: EditorView | null = null;
+
 	constructor(
 		files: Item[],
 		{
@@ -92,6 +98,11 @@ export class Workspace {
 
 	mark_saved() {
 		this.modified = {};
+	}
+
+	link(view: EditorView) {
+		if (this.#view) throw new Error('view is already linked');
+		this.#view = view;
 	}
 
 	move(from: Item, to: Item) {
@@ -158,7 +169,14 @@ export class Workspace {
 			}
 
 			this.#current = file as File;
+
+			this.#view?.setState(this.states.get(file.name)!);
 		});
+	}
+
+	unlink(view: EditorView) {
+		if (this.#view !== view) throw new Error('Wrong editor view');
+		this.#view = null;
 	}
 
 	update_file(file: File) {

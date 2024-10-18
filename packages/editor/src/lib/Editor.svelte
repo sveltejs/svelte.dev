@@ -31,9 +31,10 @@
 
 	let remove_focus_timeout = $state<any>();
 
-	let editor_states = new Map<string, EditorState>();
+	// TODO encapsulate all this inside Workspace
+	let editor_states = workspace.states;
 
-	let editor_view = $state() as EditorView;
+	let editor_view: EditorView;
 
 	const extensions = [
 		basicSetup,
@@ -150,7 +151,7 @@
 			async dispatch(transaction) {
 				editor_view.update([transaction]);
 
-				if (transaction.docChanged && workspace.current) {
+				if (transaction.docChanged) {
 					onchange?.(workspace.current, editor_view.state.doc.toString());
 
 					// keep `editor_states` updated so that undo/redo history is preserved for files independently
@@ -159,13 +160,12 @@
 			}
 		});
 
+		workspace.link(editor_view);
+
 		return () => {
+			workspace.unlink(editor_view);
 			editor_view.destroy();
 		};
-	});
-
-	$effect(() => {
-		select_state(workspace.current.name);
 	});
 
 	$effect(() => {
