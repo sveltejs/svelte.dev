@@ -135,14 +135,12 @@
 	}
 
 	function select_state(selected_name: string | null) {
-		const state =
-			(selected_name && editor_states.get(selected_name)) ||
-			EditorState.create({
-				doc: '',
-				extensions: [EditorState.readOnly.of(true)]
-			});
+		const state = (selected_name && editor_states.get(selected_name));
 
-		editor_view.setState(state);
+
+		if (state) {
+			editor_view.setState(state);
+		}
 	}
 
 	$effect(() => {
