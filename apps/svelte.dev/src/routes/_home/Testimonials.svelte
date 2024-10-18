@@ -21,19 +21,22 @@
 
 	<!-- svelte-ignore a11y_consider_explicit_label (the <enhanced:img> alt takes care of it)-->
 	<div class="screenshots">
-		<a href="https://survey.stackoverflow.co/2024/technology#2-web-frameworks-and-technologies">
+		<a
+			href="https://survey.stackoverflow.co/2024/technology#2-web-frameworks-and-technologies"
+			target="_blank"
+		>
 			<enhanced:img
 				alt="Stack Overflow 2024 Developer Survey"
 				src="./stack-overflow.png?w=1200,1600"
 			></enhanced:img>
 		</a>
 
-		<a href="https://2023.stateofjs.com/en-US/libraries/front-end-frameworks/">
+		<a href="https://2023.stateofjs.com/en-US/libraries/front-end-frameworks/" target="_blank">
 			<enhanced:img alt="State of JavaScript 2023" src="./state-of-js-chart.png?w=1000,1400"
 			></enhanced:img>
 		</a>
 
-		<a href="https://x.com/flaviocopes/status/1730895911864189299">
+		<a href="https://x.com/flaviocopes/status/1730895911864189299" target="_blank">
 			<enhanced:img alt="Tweet from @flaviocopes" src="./flavio-light.png?w=800"></enhanced:img>
 		</a>
 	</div>

@@ -30,7 +30,7 @@
 		<figure>
 			<Video />
 			<figcaption>
-				<a href="https://www.offerzen.com/community/svelte-origins-documentary"
+				<a href="https://www.offerzen.com/community/svelte-origins-documentary" target="_blank"
 					>Watch the full Svelte Origins documentary</a
 				>
 			</figcaption>

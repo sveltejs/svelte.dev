@@ -22,6 +22,7 @@
 					style="background-position: {(100 * i) / (contributors.length - 1)}% 0"
 					style:background-image="url({contributors_img})"
 					href="https://github.com/{contributor}"
+					target="_blank"
 				>
 					{contributor}
 				</a>
@@ -32,7 +33,8 @@
 					class="supporter"
 					style="background-position: {(100 * i) / (donors.length - 1)}% 0"
 					style:background-image="url({donors_img})"
-					href="https://opencollective.com/svelte">{donor}</a
+					href="https://opencollective.com/svelte"
+					target="_blank">{donor}</a
 				>
 			{/each}
 		</div>
