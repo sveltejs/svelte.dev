@@ -250,7 +250,7 @@
 		exercise={data.exercise}
 		{completed}
 		toggle={() => {
-			workspace.reset_files(Object.values(completed ? a : b));
+			workspace.set(Object.values(completed ? a : b));
 		}}
 	/>
 

@@ -112,7 +112,7 @@ export class Workspace {
 	) {
 		this.#readonly = readonly;
 
-		this.#set_files(files, initial);
+		this.set(files, initial);
 
 		this.#onupdate = onupdate ?? (() => {});
 		this.#onreset = onreset ?? (() => {});
@@ -242,7 +242,7 @@ export class Workspace {
 		// TODO if ($effect.tracking()) throw new Error('...');
 
 		untrack(() => {
-			this.#set_files(new_files, selected);
+			this.set(new_files, selected);
 
 			this.mark_saved();
 
@@ -264,6 +264,51 @@ export class Workspace {
 
 			this.#select(file as File);
 		});
+	}
+
+	set(files: Item[], selected = this.#current?.name) {
+		const first = files.find(is_file);
+
+		if (!first) {
+			throw new Error('Workspace must have at least one file');
+		}
+
+		if (selected) {
+			const file = files.find((file) => is_file(file) && file.name === selected);
+
+			if (!file) {
+				throw new Error(`Invalid selection ${selected}`);
+			}
+
+			this.#current = file as File;
+		} else {
+			this.#current = first;
+		}
+
+		this.#files = files;
+
+		for (const [name, state] of this.states) {
+			const file = files.find((file) => file.name === name) as File;
+
+			if (file) {
+				const existing = state.doc.toString();
+				if (file.contents !== existing) {
+					const transaction = state.update({
+						changes: {
+							from: 0,
+							to: existing.length,
+							insert: file.contents
+						}
+					});
+
+					this.states.set(file.name, transaction.state);
+				}
+			} else {
+				this.states.delete(name);
+			}
+		}
+
+		this.#onreset?.(this.files);
 	}
 
 	unlink(view: EditorView) {
@@ -407,27 +452,5 @@ export class Workspace {
 	#select(file: File) {
 		this.#current = file as File;
 		this.#view?.setState(this.#get_state(this.#current));
-	}
-
-	#set_files(files: Item[], selected = this.#current?.name) {
-		const first = files.find(is_file);
-
-		if (!first) {
-			throw new Error('Workspace must have at least one file');
-		}
-
-		if (selected) {
-			const file = files.find((file) => is_file(file) && file.name === selected);
-
-			if (!file) {
-				throw new Error(`Invalid selection ${selected}`);
-			}
-
-			this.#current = file as File;
-		} else {
-			this.#current = first;
-		}
-
-		this.#files = files;
 	}
 }
