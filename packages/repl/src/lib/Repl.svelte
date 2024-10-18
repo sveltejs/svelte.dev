@@ -9,7 +9,6 @@
 	import { set_repl_context } from './context.js';
 	import { Workspace, Editor, type File } from 'editor';
 	import type { Bundle, ReplContext } from './types.js';
-	import type { CompilerOutput } from './workers/workers.js';
 
 	interface Props {
 		packagesUrl?: string;
