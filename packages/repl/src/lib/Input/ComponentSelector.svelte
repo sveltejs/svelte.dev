@@ -50,6 +50,7 @@
 
 		handle_select(edited_file.name);
 		rebundle();
+		workspace.invalidate();
 
 		editing_name = null;
 	}
