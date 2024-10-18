@@ -123,6 +123,7 @@
 			const new_directories = create_directories(name, workspace.files);
 
 			if (new_directories.length > 0) {
+				// TODO don't use reset_files, just add the directories
 				workspace.reset_files([...workspace.files, ...new_directories]);
 			}
 

@@ -61,6 +61,7 @@
 					? { type, name, basename, text: true, contents: '' }
 					: { type, name, basename };
 
+			// TODO add workspace.add method
 			workspace.reset_files([
 				...workspace.files,
 				...create_directories(name, workspace.files),
@@ -107,6 +108,7 @@
 			to_rename.basename = new_full_name.split('/').pop()!;
 			to_rename.name = new_full_name;
 
+			// TODO add workspace.rename method
 			workspace.reset_files([
 				...workspace.files,
 				...create_directories(new_full_name, workspace.files)
@@ -127,6 +129,7 @@
 
 			dispatch('select', { name: null });
 
+			// TODO add workspace.remove method
 			workspace.reset_files(
 				workspace.files.filter((f) => {
 					if (f === file) return false;
