@@ -66,24 +66,14 @@
 		}
 	}
 
-	function remove_file(filename: string) {
-		const file = workspace.files.find((val) => val.name === filename);
-		const idx = workspace.files.findIndex((val) => val.name === filename);
-
-		if (!file) return;
-
+	function remove_file(file: File) {
 		let result = confirm(`Are you sure you want to delete ${file.name}?`);
-
 		if (!result) return;
 
-		workspace.files = workspace.files.filter((file) => file.name !== filename);
+		workspace.remove(file);
 
 		remove();
-
-		// TODO is one of these lines redundant?
-		workspace.select(idx === 1 ? 'App.svelte' : file.name);
-
-		rebundle();
+		rebundle(); // TODO workspace.#onupdate should take care of this
 	}
 
 	function add_new() {
@@ -209,8 +199,8 @@
 
 					<span
 						class="remove"
-						onclick={() => remove_file(file.name)}
-						onkeyup={(e) => e.key === ' ' && remove_file(file.name)}
+						onclick={() => remove_file(file)}
+						onkeyup={(e) => e.key === ' ' && remove_file(file)}
 					>
 						<svg width="12" height="12" viewBox="0 0 24 24">
 							<line stroke="#999" x1="18" y1="6" x2="6" y2="18" />

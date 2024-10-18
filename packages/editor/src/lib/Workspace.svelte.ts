@@ -1,6 +1,7 @@
 import type { CompileError, CompileResult } from 'svelte/compiler';
 import { compile_file } from './compile-worker';
 import { BROWSER } from 'esm-env';
+import { untrack } from 'svelte';
 
 export interface File {
 	type: 'file';
@@ -160,12 +161,47 @@ export class Workspace {
 	}
 
 	select(name: string) {
-		const file = this.files.find((file) => file.type === 'file' && file.name === name);
+		// untrack in case this is called in an effect
+		// TODO if ($effect.tracking()) throw new Error('...');
 
-		if (!file) {
-			throw new Error(`File ${name} does not exist in workspace`);
+		untrack(() => {
+			const file = this.files.find((file) => file.type === 'file' && file.name === name);
+
+			if (!file) {
+				throw new Error(`File ${name} does not exist in workspace`);
+			}
+
+			this.#current = file as File;
+		});
+	}
+
+	remove(item: Item) {
+		const index = this.files.indexOf(item);
+
+		if (index === -1) {
+			throw new Error('Tried to remove a file that does not exist in the workspace');
 		}
 
-		this.#current = file as File;
+		let next = this.#current;
+
+		if (next === item) {
+			const file =
+				this.files.slice(0, index).findLast((file) => file.type === 'file') ??
+				this.files.slice(index + 1).find((file) => file.type === 'file');
+
+			if (!file) {
+				throw new Error('Cannot delete the only file');
+			}
+
+			next = file;
+		}
+
+		this.files = this.files.filter((f) => {
+			if (f === item) return false;
+			if (f.name.startsWith(item.name + '/')) return false;
+			return true;
+		});
+
+		this.#current = next;
 	}
 }

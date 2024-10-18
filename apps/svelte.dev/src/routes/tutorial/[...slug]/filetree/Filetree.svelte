@@ -127,16 +127,7 @@
 				return;
 			}
 
-			dispatch('select', { name: null });
-
-			// TODO add workspace.remove method
-			workspace.reset_files(
-				workspace.files.filter((f) => {
-					if (f === file) return false;
-					if (f.name.startsWith(file.name + '/')) return false;
-					return true;
-				})
-			);
+			workspace.remove(file);
 		},
 
 		select: (name) => {
