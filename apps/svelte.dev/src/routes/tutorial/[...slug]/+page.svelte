@@ -188,15 +188,8 @@
 	let mobile = $derived(w < 800);
 
 	$effect(() => {
-		workspace.reset_files(Object.values(a));
-	});
-
-	$effect(() => {
+		// TODO get rid of this store/effect
 		solution.set(b);
-	});
-
-	$effect(() => {
-		workspace.select(data.exercise.focus); // TODO this probably belongs in afterNavigate
 	});
 
 	beforeNavigate(() => {
@@ -208,6 +201,7 @@
 		skip_set_files = false;
 
 		editor.reset();
+		workspace.reset_files(Object.values(a), data.exercise.focus);
 
 		w = window.innerWidth;
 
