@@ -175,6 +175,15 @@ export class Workspace {
 		});
 	}
 
+	move(from: Item, to: Item) {
+		const from_index = this.files.indexOf(from);
+		const to_index = this.files.indexOf(to);
+
+		this.files.splice(from_index, 1);
+
+		this.files = this.files.slice(0, to_index).concat(from).concat(this.files.slice(to_index));
+	}
+
 	remove(item: Item) {
 		const index = this.files.indexOf(item);
 

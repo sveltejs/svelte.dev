@@ -101,41 +101,8 @@
 	}
 
 	// drag and drop
-	let from: string | null = null;
-	let over: string | null = $state(null);
-
-	function dragStart(event: DragEvent & { currentTarget: HTMLDivElement }) {
-		from = event.currentTarget.id;
-	}
-
-	function dragLeave() {
-		over = null;
-	}
-
-	function dragOver(event: DragEvent & { currentTarget: HTMLDivElement }) {
-		event.preventDefault();
-		over = event.currentTarget.id;
-	}
-
-	function dragEnd(event: DragEvent) {
-		event.preventDefault();
-
-		if (from && over) {
-			const from_index = workspace.files.findIndex((file) => file.name === from);
-			const to_index = workspace.files.findIndex((file) => file.name === over);
-
-			const from_component = workspace.files[from_index];
-
-			workspace.files.splice(from_index, 1);
-
-			workspace.files = workspace.files
-				.slice(0, to_index)
-				.concat(from_component)
-				.concat(workspace.files.slice(to_index));
-		}
-
-		from = over = null;
-	}
+	let dragging: File | null = null;
+	let dragover: File | null = $state.raw(null);
 </script>
 
 <div class="component-selector">
@@ -149,14 +116,20 @@
 				tabindex="0"
 				class:active={file.name === workspace.current.name}
 				class:draggable={file.name !== editing_name && index !== 0}
-				class:drag-over={over === file.name}
+				class:drag-over={file === dragover}
 				onclick={() => select_file(file.name)}
 				onkeyup={(e) => e.key === ' ' && select_file(file.name)}
 				draggable={file.name !== editing_name}
-				ondragstart={dragStart}
-				ondragover={dragOver}
-				ondragleave={dragLeave}
-				ondrop={dragEnd}
+				ondragstart={() => (dragging = file)}
+				ondragover={(e) => (e.preventDefault(), (dragover = file))}
+				ondragleave={(e) => (e.preventDefault(), (dragover = null))}
+				ondrop={() => {
+					if (dragging && dragover) {
+						workspace.move(dragging, dragover);
+					}
+
+					dragging = dragover = null;
+				}}
 			>
 				<i class="drag-handle"></i>
 
