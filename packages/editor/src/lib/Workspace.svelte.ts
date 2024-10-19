@@ -2,7 +2,6 @@ import type { CompileError, CompileResult } from 'svelte/compiler';
 import { EditorState } from '@codemirror/state';
 import { compile_file } from './compile-worker';
 import { BROWSER } from 'esm-env';
-import { untrack } from 'svelte';
 import { basicSetup, EditorView } from 'codemirror';
 import { javascript } from '@codemirror/lang-javascript';
 import { html } from '@codemirror/lang-html';
@@ -238,33 +237,23 @@ export class Workspace {
 	}
 
 	reset(new_files: Item[], selected?: string) {
-		// untrack in case this is called in an effect
-		// TODO if ($effect.tracking()) throw new Error('...');
+		this.states.clear();
+		this.set(new_files, selected);
 
-		untrack(() => {
-			this.states.clear();
-			this.set(new_files, selected);
+		this.mark_saved();
 
-			this.mark_saved();
-
-			this.#onreset(new_files);
-			this.#reset_diagnostics();
-		});
+		this.#onreset(new_files);
+		this.#reset_diagnostics();
 	}
 
 	select(name: string) {
-		// untrack in case this is called in an effect
-		// TODO if ($effect.tracking()) throw new Error('...');
+		const file = this.#files.find((file) => is_file(file) && file.name === name);
 
-		untrack(() => {
-			const file = this.#files.find((file) => is_file(file) && file.name === name);
+		if (!file) {
+			throw new Error(`File ${name} does not exist in workspace`);
+		}
 
-			if (!file) {
-				throw new Error(`File ${name} does not exist in workspace`);
-			}
-
-			this.#select(file as File);
-		});
+		this.#select(file as File);
 	}
 
 	set(files: Item[], selected = this.#current?.name) {
