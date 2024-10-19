@@ -1,14 +1,14 @@
 <script>
-	let key;
-	let keyCode;
+	let key = $state();
+	let keyCode = $state();
 
-	function handleKeydown(event) {
+	function onkeydown(event) {
 		key = event.key;
 		keyCode = event.keyCode;
 	}
 </script>
 
-<svelte:window on:keydown={handleKeydown} />
+<svelte:window {onkeydown} />
 
 <div style="text-align: center">
 	{#if key}

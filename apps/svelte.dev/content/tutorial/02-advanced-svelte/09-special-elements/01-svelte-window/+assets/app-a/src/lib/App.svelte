@@ -1,8 +1,8 @@
 <script>
-	let key;
-	let keyCode;
+	let key = $state();
+	let keyCode = $state();
 
-	function handleKeydown(event) {
+	function onkeydown(event) {
 		key = event.key;
 		keyCode = event.keyCode;
 	}
