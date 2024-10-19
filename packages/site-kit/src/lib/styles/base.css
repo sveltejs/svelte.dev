@@ -5,6 +5,7 @@ html {
 	-ms-overflow-style: -ms-autohiding-scrollbar;
 	box-sizing: border-box;
 	border-collapse: collapse;
+	-webkit-font-smoothing: antialiased;
 }
 
 html,
