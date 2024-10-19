@@ -1,10 +1,8 @@
 ---
-title: Tweens
+title: Tweened values
 ---
 
-Now that we've covered the basics, it's time to learn some advanced Svelte techniques, starting with _motion_.
-
-Setting values and watching the DOM update automatically is cool. Know what's even cooler? Tweening those values. Svelte includes tools to help you build slick user interfaces that use animation to communicate changes.
+Alongside the `writable` and `readable` stores, Svelte ships stores for adding motion to your user interfaces.
 
 Let's start by changing the `progress` store to a `tweened` store:
 

@@ -10,11 +10,11 @@
 </script>
 
 <svg
-	on:mousemove={(e) => {
+	onmousemove={(e) => {
 		coords.set({ x: e.clientX, y: e.clientY });
 	}}
-	on:mousedown={() => size.set(30)}
-	on:mouseup={() => size.set(10)}
+	onmousedown={() => size.set(30)}
+	onmouseup={() => size.set(10)}
 	role="presentation"
 >
 	<circle
