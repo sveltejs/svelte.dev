@@ -72,10 +72,9 @@
 			display: block;
 			width: 100%;
 			top: 0;
-			filter: drop-shadow(0.2rem 0.4rem 2rem rgb(0 0 0 / 0.3));
-			overflow: hidden;
+			overflow: visible;
 			transition: 0.2s;
-			transition-property: scale, filter;
+			transition-property: scale;
 
 			&:nth-child(1) {
 				top: 0%;
@@ -108,9 +107,15 @@
 			object-fit: contain;
 			border-radius: var(--sk-border-radius);
 			filter: grayscale(1);
+			transform: translate3d(0, 0, 0);
 			-webkit-transform: translate3d(0, 0, 0);
+			box-shadow: 0.2rem 0rem 2rem rgb(0 0 0 / 0.25);
+			transition: 0.2s;
+			transition-property: filter, box-shadow;
+			
 			a:hover & {
-				filter: none;
+				filter: grayscale(0);
+				box-shadow: 0.2rem 0rem 4rem rgb(0 0 0 / 0.2);
 			}
 		}
 	}
