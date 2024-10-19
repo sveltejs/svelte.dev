@@ -286,13 +286,7 @@
 										) ?? 'Files'}
 									</button>
 								{:else}
-									<Filetree
-										exercise={data.exercise}
-										{workspace}
-										on:select={(e) => {
-											select_file(e.detail.name);
-										}}
-									/>
+									<Filetree exercise={data.exercise} {workspace} />
 								{/if}
 							</section>
 
@@ -312,14 +306,7 @@
 
 								{#if mobile && show_filetree}
 									<div class="mobile-filetree">
-										<Filetree
-											mobile
-											exercise={data.exercise}
-											{workspace}
-											on:select={(e) => {
-												navigate_to_file(e.detail.name);
-											}}
-										/>
+										<Filetree mobile exercise={data.exercise} {workspace} />
 									</div>
 								{/if}
 							</section>

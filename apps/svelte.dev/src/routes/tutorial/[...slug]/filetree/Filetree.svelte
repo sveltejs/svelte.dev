@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { createEventDispatcher } from 'svelte';
 	import { writable } from 'svelte/store';
 	import Folder from './Folder.svelte';
 	import * as context from './context.js';
@@ -16,8 +15,6 @@
 	}
 
 	let { exercise, mobile = false, workspace }: Props = $props();
-
-	const dispatch = createEventDispatcher();
 
 	const hidden = new Set(['__client.js', 'node_modules', '__delete']);
 
@@ -101,7 +98,7 @@
 		},
 
 		select: (name) => {
-			dispatch('select', { name });
+			workspace.select(name);
 		},
 
 		workspace
