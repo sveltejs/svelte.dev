@@ -72,9 +72,11 @@
 			display: block;
 			width: 100%;
 			top: 0;
-			overflow: visible;
-			transition: 0.2s;
-			transition-property: scale;
+			overflow: hidden;
+			filter: drop-shadow(0.2rem 0.4rem 2rem rgb(0 0 0 / 0.3));
+			transform: translate3d(0, 0, 0);
+			transition-property: filter, scale;
+			transition-duration: 0.2s;
 
 			&:nth-child(1) {
 				top: 0%;
@@ -98,6 +100,7 @@
 
 			&:hover {
 				scale: 1.05;
+				filter: drop-shadow(0.2rem 0rem 4rem rgb(0 0 0 / 0.3));
 			}
 		}
 
@@ -107,15 +110,10 @@
 			object-fit: contain;
 			border-radius: var(--sk-border-radius);
 			filter: grayscale(1);
-			transform: translate3d(0, 0, 0);
-			-webkit-transform: translate3d(0, 0, 0);
-			box-shadow: 0.2rem 0rem 2rem rgb(0 0 0 / 0.25);
-			transition: 0.2s;
-			transition-property: filter, box-shadow;
-			
+			transition: filter 0.2s;
+
 			a:hover & {
 				filter: grayscale(0);
-				box-shadow: 0.2rem 0rem 4rem rgb(0 0 0 / 0.2);
 			}
 		}
 	}
