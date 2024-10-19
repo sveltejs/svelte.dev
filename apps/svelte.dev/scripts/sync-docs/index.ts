@@ -52,7 +52,7 @@ const packages: Package[] = [
 		name: 'kit',
 		local: `${REPOS}/kit`,
 		repo: 'sveltejs/kit',
-		branch: 'svelte-dev-adjusted-docs', // TODO update!
+		branch: 'main',
 		pkg: 'packages/kit',
 		docs: 'documentation/docs',
 		process_modules: async (modules, pkg) => {
