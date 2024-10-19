@@ -1,22 +1,11 @@
 <script>
-	import { onMount } from "svelte";
+	let { color, size } = $props();
 
-	export let color;
-	export let size;
+	let canvas = $state();
+	let context = $state();
+	let coords = $state();
 
-	let canvas;
-	let context;
-	let previous;
-
-	function get_coords(e) {
-		const { clientX, clientY } = e;
-		const { left, top } = canvas.getBoundingClientRect();
-		const x = clientX - left;
-		const y = clientY - top;
-		return { x, y };
-	}
-
-	onMount(() => {
+	$effect(() => {
 		context = canvas.getContext('2d');
 
 		function resize() {
@@ -33,24 +22,23 @@
 	});
 </script>
 
-
-
 <canvas
 	bind:this={canvas}
-	on:pointerdown={(e) => {
-		const coords = get_coords(e);
+	onpointerdown={(e) => {
+		coords = { x: e.offsetX, y: e.offsetY };
+
 		context.fillStyle = color;
 		context.beginPath();
 		context.arc(coords.x, coords.y, size / 2, 0, 2 * Math.PI);
 		context.fill();
+	}}
+	onpointerleave={() => {
+		coords = null;
+	}}
+	onpointermove={(e) => {
+		const previous = coords;
 
-		previous = coords;
-	}}
-	on:pointerleave={() => {
-		previous = null;
-	}}
-	on:pointermove={(e) => {
-		const coords = get_coords(e);
+		coords = { x: e.offsetX, y: e.offsetY };
 
 		if (e.buttons === 1) {
 			e.preventDefault();
@@ -63,15 +51,13 @@
 			context.lineTo(coords.x, coords.y);
 			context.stroke();
 		}
-
-		previous = coords;
 	}}
 ></canvas>
 
-{#if previous}
+{#if coords}
 	<div
 		class="preview"
-		style="--color: {color}; --size: {size}px; --x: {previous.x}px; --y: {previous.y}px" 
+		style="--color: {color}; --size: {size}px; --x: {coords.x}px; --y: {coords.y}px"
 	></div>
 {/if}
 

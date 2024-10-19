@@ -1,12 +1,12 @@
 <script>
 	import Canvas from './Canvas.svelte';
-	import { trapFocus } from './actions.js';
+	import { trapFocus } from './actions.svelte.js';
 
 	const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet', 'white', 'black'];
-	let selected = colors[0];
-	let size = 10;
 
-	let showMenu = true;
+	let selected = $state(colors[0]);
+	let size = $state(10);
+	let showMenu = $state(true);
 
 	let canvas;
 </script>
@@ -16,10 +16,17 @@
 
 	{#if showMenu}
 		<div
+			role="presentation"
 			class="modal-background"
-			on:click|self={() => showMenu = false}
-			on:keydown={(e) => {
-				if (e.key === 'Escape') showMenu = false;
+			onclick={(event) => {
+				if (event.target === event.currentTarget) {
+					showMenu = false;
+				}
+			}}
+			onkeydown={(e) => {
+				if (e.key === 'Escape') {
+					showMenu = false;
+				}
 			}}
 		>
 			<div class="menu" use:trapFocus>
@@ -30,7 +37,7 @@
 							aria-label={color}
 							aria-current={selected === color}
 							style="--color: {color}"
-							on:click={() => {
+							onclick={() => {
 								selected = color;
 							}}
 						></button>
@@ -47,11 +54,11 @@
 	{/if}
 
 	<div class="controls">
-		<button class="show-menu" on:click={() => showMenu = !showMenu}>
+		<button class="show-menu" onclick={() => showMenu = !showMenu}>
 			{showMenu ? 'close' : 'menu'}
 		</button>
 
-		<button on:click={() => canvas.clear()}>
+		<button onclick={() => canvas.clear()}>
 			clear
 		</button>
 	</div>

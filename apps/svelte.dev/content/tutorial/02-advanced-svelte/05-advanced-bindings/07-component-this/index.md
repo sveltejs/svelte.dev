@@ -10,8 +10,9 @@ First, let's export a function from `Canvas.svelte`:
 
 ```svelte
 /// file: Canvas.svelte
-export let color;
-export let size;
+let canvas = $state();
+let context = $state();
+let coords = $state();
 
 +++export function clear() {
 	context.clearRect(0, 0, canvas.width, canvas.height);
@@ -20,22 +21,18 @@ export let size;
 
 Then, create a reference to the component instance:
 
+```js
+/// file: App.svelte
+let selected = $state(colors[0]);
+let size = $state(10);
+let showMenu = $state(true);
+
++++let canvas;+++
+```
+
 ```svelte
 /// file: App.svelte
-<script>
-	import Canvas from './Canvas.svelte';
-	import { trapFocus } from './actions.js';
-
-	const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet', 'white', 'black'];
-	let selected = colors[0];
-	let size = 10;
-
-	let showMenu = true;
-	+++let canvas;+++
-</script>
-
-<div class="container">
-	<Canvas +++bind:this={canvas}+++ color={selected} size={size} />
+<Canvas +++bind:this={canvas}+++ color={selected} size={size} />
 ```
 
 Finally, add a button that calls the `clear` function:
@@ -43,11 +40,11 @@ Finally, add a button that calls the `clear` function:
 ```svelte
 /// file: App.svelte
 <div class="controls">
-	<button class="show-menu" on:click={() => showMenu = !showMenu}>
+	<button class="show-menu" onclick={() => showMenu = !showMenu}>
 		{showMenu ? 'close' : 'menu'}
 	</button>
 
-+++	<button on:click={() => canvas.clear()}>
++++	<button onclick={() => canvas.clear()}>
 		clear
 	</button>+++
 </div>

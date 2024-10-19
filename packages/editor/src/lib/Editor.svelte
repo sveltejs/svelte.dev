@@ -90,6 +90,7 @@
 	}}
 	onmessage={(e) => {
 		if (preserve_editor_focus && e.data.type === 'iframe_took_focus') {
+			console.log('reclaiming focus');
 			editor_view.focus();
 		}
 	}}

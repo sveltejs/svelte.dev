@@ -25,14 +25,13 @@ export function trapFocus(node) {
 		}
 	}
 
-	focusable()[0]?.focus();
+	$effect(() => {
+		focusable()[0]?.focus();
+		node.addEventListener('keydown', handleKeydown);
 
-	node.addEventListener('keydown', handleKeydown);
-
-	return {
-		destroy() {
+		return () => {
 			node.removeEventListener('keydown', handleKeydown);
 			previous?.focus();
-		}
-	};
+		};
+	});
 }
