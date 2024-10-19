@@ -135,19 +135,19 @@ export const svelteAttributes = [
 	},
 	{
 		name: 'bind:clientWidth',
-		description: 'Available for block level elements. (read-only)'
+		description: 'Available on all visible elements. (read-only)'
 	},
 	{
 		name: 'bind:clientHeight',
-		description: 'Available for block level elements. (read-only)'
+		description: 'Available on all visible elements. (read-only)'
 	},
 	{
 		name: 'bind:offsetWidth',
-		description: 'Available for block level elements. (read-only)'
+		description: 'Available on all visible elements. (read-only)'
 	},
 	{
 		name: 'bind:offsetHeight',
-		description: 'Available for block level elements. (read-only)'
+		description: 'Available on all visible elements. (read-only)'
 	},
 	{
 		name: 'bind:this',

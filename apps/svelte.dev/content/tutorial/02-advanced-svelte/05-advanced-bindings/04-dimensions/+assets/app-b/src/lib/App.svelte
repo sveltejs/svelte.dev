@@ -1,8 +1,7 @@
 <script>
-	let w;
-	let h;
-	let size = 42;
-	let text = 'edit this text';
+	let w = $state();
+	let h = $state();
+	let size = $state(42);
 </script>
 
 <label>
@@ -11,7 +10,10 @@
 </label>
 
 <div bind:clientWidth={w} bind:clientHeight={h}>
-	<span style="font-size: {size}px" contenteditable>{text}</span>
+	<span style="font-size: {size}px" contenteditable>
+		edit this text
+	</span>
+
 	<span class="size">{w} x {h}px</span>
 </div>
 
