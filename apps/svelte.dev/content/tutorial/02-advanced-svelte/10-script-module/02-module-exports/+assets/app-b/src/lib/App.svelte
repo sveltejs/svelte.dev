@@ -8,7 +8,7 @@
 		<AudioPlayer {...track} />
 	{/each}
 
-	<button on:click={stopAll}>
+	<button onclick={stopAll}>
 		stop all
 	</button>
 </div>
