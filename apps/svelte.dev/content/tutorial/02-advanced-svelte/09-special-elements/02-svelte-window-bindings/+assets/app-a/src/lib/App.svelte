@@ -1,5 +1,5 @@
 <script>
-	let y = 0;
+	let y = $state(0);
 </script>
 
 <svelte:window />

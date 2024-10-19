@@ -1,10 +1,12 @@
 <script>
-	let selection = '';
+	let selection = $state('');
 
-	const handleSelectionChange = (e) => selection = document.getSelection();
+	const onselectionchange = (e) => {
+		selection = document.getSelection().toString();
+	};
 </script>
 
-<svelte:document on:selectionchange={handleSelectionChange} />
+<svelte:document {onselectionchange} />
 
 <h1>Select this text to fire events</h1>
 <p>Selection: {selection}</p>

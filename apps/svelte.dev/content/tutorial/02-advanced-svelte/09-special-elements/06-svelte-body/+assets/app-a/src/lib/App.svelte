@@ -1,7 +1,7 @@
 <script>
 	import kitten from './kitten.png';
 
-	let hereKitty = false;
+	let hereKitty = $state(false);
 </script>
 
 <svelte:body />

@@ -1,7 +1,9 @@
 <script>
-	let selection = '';
+	let selection = $state('');
 
-	const handleSelectionChange = (e) => selection = document.getSelection();
+	const onselectionchange = (e) => {
+		selection = document.getSelection().toString();
+	};
 </script>
 
 <svelte:document />

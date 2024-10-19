@@ -1,12 +1,12 @@
 <script>
 	import kitten from './kitten.png';
 
-	let hereKitty = false;
+	let hereKitty = $state(false);
 </script>
 
 <svelte:body
-	on:mouseenter={() => hereKitty = true}
-	on:mouseleave={() => hereKitty = false}
+	onmouseenter={() => hereKitty = true}
+	onmouseleave={() => hereKitty = false}
 />
 
 <!-- creative commons BY-NC http://www.pngall.com/kitten-png/download/7247 -->
