@@ -1,6 +1,6 @@
 <script>
 	const themes = ['margaritaville', 'retrowave', 'spaaaaace', 'halloween'];
-	let selected = themes[0];
+	let selected = $state(themes[0]);
 </script>
 
 <svelte:head>

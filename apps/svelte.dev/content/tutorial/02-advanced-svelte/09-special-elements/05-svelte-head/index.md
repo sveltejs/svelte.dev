@@ -10,7 +10,7 @@ Since those are quite hard to show in the context of this tutorial, we'll use it
 /// file: App.svelte
 <script>
 	const themes = ['margaritaville', 'retrowave', 'spaaaaace', 'halloween'];
-	let selected = themes[0];
+	let selected = $state(themes[0]);
 </script>
 
 +++<svelte:head>
