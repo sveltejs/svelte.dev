@@ -8,7 +8,7 @@
 	const mappings = [
 		['before-we-begin', 'overview'],
 		['getting-started', 'getting-started'],
-		['component-format', 'component-fundamentals'],
+		['component-format', 'svelte-files'],
 		['template-syntax-if', 'control-flow'],
 		['template-syntax-each', 'control-flow'],
 		['template-syntax-await', 'control-flow'],

@@ -1,11 +1,11 @@
 import { redirect } from '@sveltejs/kit';
 
 const mappings = new Map([
-	['/docs/svelte-components', '/docs/svelte/component-fundamentals'],
+	['/docs/svelte-components', '/docs/svelte/svelte-files'],
 	['/docs/logic-blocks', '/docs/svelte/control-flow'],
 	['/docs/special-tags', '/docs/svelte/basic-markup'], // TODO: find a new home for some of these?
 	['/docs/element-directives', '/docs/svelte/basic-markup'],
-	['/docs/component-directives', '/docs/svelte/component-fundamentals'],
+	['/docs/component-directives', '/docs/svelte/svelte-files'],
 	['/docs/custom-elements-api', '/docs/svelte/custom-elements'],
 	['/docs/accessibility-warnings', '/docs/svelte/compiler-warnings']
 ]);
