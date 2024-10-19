@@ -1,5 +1,5 @@
 <script>
-	let html = '<p>Write some text!</p>';
+	let html = $state('<p>Write some text!</p>');
 </script>
 
 <div contenteditable></div>

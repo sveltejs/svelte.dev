@@ -29,7 +29,7 @@ Next, add an event handler to the `<button>` that toggles `paused`:
 <button
 	class="play"
 	aria-label={paused ? 'play' : 'pause'}
-	+++on:click={() => paused = !paused}+++
+	+++onclick={() => paused = !paused}+++
 ></button>
 ```
 
@@ -57,7 +57,7 @@ When the track ends, be kind — rewind:
 	bind:currentTime={time}
 	bind:duration
 	bind:paused
-+++	on:ended={() => {
++++	onended={() => {
 		time = 0;
 	}}+++
 ></audio>
@@ -65,13 +65,13 @@ When the track ends, be kind — rewind:
 
 The complete set of bindings for `<audio>` and `<video>` is as follows — seven _readonly_ bindings...
 
-- `duration` (readonly) — the total duration, in seconds
-- `buffered` (readonly) — an array of `{start, end}` objects
-- `seekable` (readonly) — ditto
-- `played` (readonly) — ditto
-- `seeking` (readonly) — boolean
-- `ended` (readonly) — boolean
-- `readyState` (readonly) — number between (and including) 0 and 4
+- `duration` — the total duration, in seconds
+- `buffered` — an array of `{start, end}` objects
+- `seekable` — ditto
+- `played` — ditto
+- `seeking` — boolean
+- `ended` — boolean
+- `readyState` — number between (and including) 0 and 4
 
 ...and five _two-way_ bindings:
 

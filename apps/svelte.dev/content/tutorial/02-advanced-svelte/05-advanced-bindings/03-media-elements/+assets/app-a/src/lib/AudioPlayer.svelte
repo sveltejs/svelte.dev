@@ -1,11 +1,9 @@
 <script>
-	export let src;
-	export let title;
-	export let artist;
+	let { src, title, artist } = $props();
 
-	let time = 0;
-	let duration = 0;
-	let paused = true;
+	let time = $state(0);
+	let duration = $state(0);
+	let paused = $state(true);
 
 	function format(time) {
 		if (isNaN(time)) return '...';
@@ -33,16 +31,16 @@
 			<span>{format(time)}</span>
 			<div
 				class="slider"
-				on:pointerdown={e => {
+				onpointerdown={e => {
 					const div = e.currentTarget;
-					
+
 					function seek(e) {
 						const { left, width } = div.getBoundingClientRect();
 
 						let p = (e.clientX - left) / width;
 						if (p < 0) p = 0;
 						if (p > 1) p = 1;
-						
+
 						// TODO update the time
 					}
 
@@ -82,7 +80,7 @@
 		color: var(--fg-1);
 		filter: drop-shadow(0.5em 0.5em 1em rgba(0,0,0,0.1));
 	}
-	
+
 	button {
 		width: 100%;
 		aspect-ratio: 1;
@@ -90,7 +88,7 @@
 		background-position: 50% 50%;
 		border-radius: 50%;
 	}
-	
+
 	[aria-label="pause"] {
 		background-image: url(./pause.svg);
 	}

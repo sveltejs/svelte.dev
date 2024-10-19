@@ -1,12 +1,12 @@
 <script>
-	let todos = [
+	let todos = $state([
 		{ done: false, text: 'finish Svelte tutorial' },
 		{ done: false, text: 'build an app' },
 		{ done: false, text: 'world domination' }
-	];
+	]);
 
 	function add() {
-		todos = todos.concat({
+		todos.push({
 			done: false,
 			text: ''
 		});
@@ -16,7 +16,7 @@
 		todos = todos.filter((t) => !t.done);
 	}
 
-	$: remaining = todos.filter((t) => !t.done).length;
+	let remaining = $derived(todos.filter((t) => !t.done).length);
 </script>
 
 <div class="centered">
@@ -41,11 +41,11 @@
 
 	<p>{remaining} remaining</p>
 
-	<button on:click={add}>
+	<button onclick={add}>
 		Add new
 	</button>
 
-	<button on:click={clear}>
+	<button onclick={clear}>
 		Clear completed
 	</button>
 </div>
