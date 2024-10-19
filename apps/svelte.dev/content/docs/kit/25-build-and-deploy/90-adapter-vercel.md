@@ -118,6 +118,8 @@ export const config = {
 
 The `expiration` property is required; all others are optional.
 
+> Pages that are  [prerendered](page-options#prerender) will ignore ISR configuration.
+
 ## Environment variables
 
 Vercel makes a set of [deployment-specific environment variables](https://vercel.com/docs/concepts/projects/environment-variables#system-environment-variables) available. Like other environment variables, these are accessible from `$env/static/private` and `$env/dynamic/private` (sometimes — more on that later), and inaccessible from their public counterparts. To access one of these variables from the client:
@@ -173,4 +175,4 @@ You can't use `fs` in edge functions.
 
 You _can_ use it in serverless functions, but it won't work as expected, since files are not copied from your project into your deployment. Instead, use the `read` function from `$app/server` to access your files. `read` does not work inside routes deployed as edge functions (this may change in future).
 
-Alternatively, you can [prerender](https://kit.svelte.dev/docs/page-options#prerender) the routes in question.
+Alternatively, you can [prerender](page-options#prerender) the routes in question.

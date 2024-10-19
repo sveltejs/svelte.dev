@@ -27,46 +27,19 @@
 		opacity: 0;
 		pointer-events: none;
 		position: absolute;
-		left: 0;
-		top: calc(100% - 1rem);
+		left: -1rem;
+		/* this is a bit of a kludge, but it ensures a contiguous hit area (50% + 50%) while also working for tall links like `Docs` (50% + 1.5rem) */
+		top: calc(50% + min(50%, 1.5rem));
 		background-color: var(--sk-back-2);
 		z-index: 1;
-		box-shadow: var(--sk-shadow);
+		filter: var(--sk-shadow);
 		border-radius: var(--sk-border-radius);
-		overflow: hidden;
 		z-index: 999;
+		-webkit-transform: translate3d(0, 0, 0);
 
 		&.align-right {
 			left: auto;
-			right: 0;
-		}
-
-		:global {
-			a,
-			button {
-				color: var(--sk-text-2);
-				padding: 1rem 1.3rem;
-				display: block;
-				font-family: var(--sk-font-ui);
-				font-size: var(--sk-font-size-ui-medium);
-				text-decoration: none;
-				line-height: 1;
-				width: 100%;
-				text-align: left;
-
-				&:first-child {
-					padding-top: 1.3rem;
-				}
-
-				&:last-child {
-					padding-bottom: 1.3rem;
-				}
-			}
-
-			a:hover,
-			button:hover {
-				background-color: var(--sk-back-4);
-			}
+			right: -1rem;
 		}
 	}
 

@@ -9,15 +9,17 @@
 	import { onMount } from 'svelte';
 	import Chrome from './Chrome.svelte';
 	import Loading from './Loading.svelte';
-	import { adapter_state, subscribe } from './adapter.svelte';
+	import { adapter_state, subscribe, reset } from './adapter.svelte';
 	import type { Exercise } from '$lib/tutorial';
+	import type { Workspace } from 'editor';
 
 	interface Props {
 		exercise: Exercise;
 		paused: boolean;
+		workspace: Workspace;
 	}
 
-	let { exercise, paused }: Props = $props();
+	let { exercise, paused, workspace }: Props = $props();
 
 	let iframe = $state() as HTMLIFrameElement;
 	let loading = $state(true);
@@ -146,6 +148,9 @@
 			error={adapter_state.error}
 			progress={adapter_state.progress.value}
 			status={adapter_state.progress.text}
+			onreset={() => {
+				reset(workspace.files);
+			}}
 		/>
 	{/if}
 
@@ -184,12 +189,12 @@
 		bottom: 0;
 		width: 100%;
 		height: 80%;
-		font-family: var(--sk-font-mono);
-		font-size: var(--sk-font-size-ui-small); /* TODO this should use a mono size */
+		font: var(--sk-font-mono);
 		padding: 1rem;
 		border-top: 1px solid var(--sk-text-4);
 		background: rgba(255, 255, 255, 0.5);
 		transform: translate(0, 100%);
+		-webkit-transform: translate3d(0, 100%, 0);
 		transition: transform 0.3s;
 		backdrop-filter: blur(3px);
 		overflow-y: auto;
@@ -211,6 +216,7 @@
 
 	.terminal.visible {
 		transform: none;
+		-webkit-transform: none;
 	}
 
 	.terminal.visible::after {

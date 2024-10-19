@@ -9,4 +9,3 @@ const env = {
 
 fork(`${dir}/get_contributors.js`, { env });
 fork(`${dir}/get_donors.js`, { env });
-fork(`${dir}/update_template.js`);

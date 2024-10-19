@@ -1,11 +1,8 @@
 <script>
 	import { createEventDispatcher } from 'svelte';
 	import Modal from '$lib/components/Modal.svelte';
-	import Menu from './Menu.svelte';
 	import { Text } from '@sveltejs/site-kit/components';
-
-	/** @type {import('$lib/tutorial').PartStub[]} */
-	export let index;
+	import PageControls from '$lib/components/PageControls.svelte';
 
 	/** @type {import('$lib/tutorial').Exercise} */
 	export let exercise;
@@ -20,8 +17,6 @@
 
 	let show_modal = false;
 </script>
-
-<Menu {index} current={exercise} />
 
 <section bind:this={sidebar}>
 	<div
@@ -52,13 +47,16 @@
 
 				if (node.nodeName === 'CODE') {
 					const { file } = node.dataset;
+
 					if (file) {
 						dispatch('select', { file });
 					}
 				}
 
 				if (node.nodeName === 'SPAN' && node.classList.contains('filename')) {
-					const file = exercise.scope.prefix + node.textContent;
+					const ext = node.dataset.ext || '';
+					const file = exercise.scope.prefix + node.textContent + ext;
+
 					dispatch('select', { file });
 				}
 			}}
@@ -68,21 +66,19 @@
 			</Text>
 		</div>
 
-		{#if exercise.next}
-			<p><a href="/tutorial/{exercise.next.slug}">Next: {exercise.next.title}</a></p>
-		{/if}
+		<PageControls
+			repo="https://github.com/sveltejs/svelte.dev"
+			path="apps/svelte.dev/content/{exercise.dir}"
+			prev={exercise.prev && {
+				title: exercise.prev.title,
+				path: `/tutorial/${exercise.prev.slug}`
+			}}
+			next={exercise.next && {
+				title: exercise.next.title,
+				path: `/tutorial/${exercise.next.slug}`
+			}}
+		/>
 	</div>
-
-	<footer>
-		<a
-			target="_blank"
-			rel="noreferrer"
-			class="edit"
-			href="https://github.com/sveltejs/svelte.dev/tree/main/apps/svelte.dev/content/{exercise.dir}"
-		>
-			Edit this page
-		</a>
-	</footer>
 </section>
 
 {#if show_modal}
@@ -120,49 +116,18 @@
 
 	.text {
 		flex: 1 1 auto;
-		padding: 2.2rem 3rem;
-		border-right: 1px solid var(--sk-back-4);
-		background: var(--sk-back-3);
+		padding: 2.2rem var(--sk-page-padding-side);
+		background: var(--sk-back-1);
 
 		:global {
-			pre {
-				background: var(--sk-back-1);
-				box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.1);
-				border-radius: var(--sk-border-radius);
-
-				.highlight {
-					--color: rgba(220, 220, 0, 0.2);
-					background: var(--color);
-					outline: 2px solid var(--color);
-					border-radius: 2px;
-
-					&.add {
-						--color: rgba(0, 255, 0, 0.18);
-					}
-
-					&.remove {
-						--color: rgba(255, 0, 0, 0.1);
-
-						:root.dark & {
-							--color: rgba(255, 0, 0, 0.27);
-						}
-					}
-				}
-			}
-
-			p a code {
-				color: var(--sk-theme-1);
-				background: rgba(255, 62, 0, 0.1);
-			}
-
 			[data-file],
 			.filename {
 				cursor: pointer;
-				background-image: url($lib/icons/file-edit.svg);
+				background-image: url($lib/icons/file.svg);
 				background-repeat: no-repeat;
 
 				:root.dark & {
-					background-image: url($lib/icons/file-edit-inline-dark.svg);
+					background-image: url($lib/icons/file-dark.svg);
 				}
 			}
 
@@ -173,9 +138,9 @@
 			}
 
 			.filename {
-				background-position: 1rem 54%;
+				background-position: 0 54%;
 				background-size: 1rem 1rem;
-				padding-left: 2.5rem !important;
+				padding-left: 1.5rem !important;
 			}
 
 			.desktop {
@@ -184,32 +149,19 @@
 		}
 	}
 
-	footer {
-		padding: 1rem 2.9rem;
-		display: flex;
-		justify-content: space-between;
-		background: var(--sk-back-3);
-		border-top: 1px solid var(--sk-back-4);
-		border-right: 1px solid var(--sk-back-4);
-
-		.edit {
-			color: var(--sk-text-2);
-			font-family: var(--sk-font-ui);
-			font-size: var(--sk-font-size-ui-medium);
-			padding: 0 0 0 1.4em;
-			background: url($lib/icons/file-edit.svg) no-repeat 0 calc(50% - 0.1em);
-			background-size: 1em 1em;
-		}
-	}
-
 	.modal-contents {
 		h2 {
-			font-size: 2.4rem;
+			font: var(--sk-font-ui-large);
 			margin: 0 0 0.5em 0;
+		}
+
+		p {
+			font: var(--sk-font-ui-medium);
 		}
 
 		label {
 			user-select: none;
+			font: var(--sk-font-ui-medium);
 		}
 
 		button {
@@ -221,6 +173,7 @@
 			margin: 1em 0 0 0;
 			border-radius: var(--sk-border-radius);
 			line-height: 1;
+			font: var(--sk-font-ui-small);
 		}
 	}
 

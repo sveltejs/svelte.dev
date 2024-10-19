@@ -108,7 +108,6 @@ Renders a search widget which when clicked (or the corresponding keyboard shortc
 	@media (min-width: 800px) {
 		.search-container {
 			width: 11rem;
-			margin: 0 2rem;
 		}
 
 		.shortcut {

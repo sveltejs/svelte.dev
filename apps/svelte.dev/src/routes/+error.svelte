@@ -61,11 +61,6 @@
 		}
 	}
 
-	h1 {
-		font-size: var(--sk-font-size-h1);
-		margin: 0 0 0.5em 0;
-	}
-
 	p {
 		margin: 1em auto;
 	}

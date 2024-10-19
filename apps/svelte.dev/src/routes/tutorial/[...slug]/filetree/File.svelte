@@ -1,40 +1,44 @@
-<script>
+<script lang="ts">
 	import * as context from './context.js';
 	import Item from './Item.svelte';
 	import file_icon from '$lib/icons/file.svg';
-	import { selected_name, solution } from '../state.js';
+	import { solution } from '../state.svelte';
+	import type { MenuItem } from '$lib/tutorial';
+	import type { File } from 'editor';
 
-	/** @type {import('$lib/tutorial').FileStub} */
-	export let file;
+	interface Props {
+		file: File;
+		depth: number;
+	}
 
-	/** @type {number} */
-	export let depth;
+	let { file, depth }: Props = $props();
 
-	const { rename, remove, select } = context.get();
+	const { rename, remove, select, workspace } = context.get();
 
-	let renaming = false;
+	let renaming = $state(false);
 
-	$: can_remove = !$solution[file.name];
+	let can_remove = $derived(!$solution[file.name]);
 
-	/** @type {import('$lib/tutorial').MenuItem[]} */
-	$: actions = can_remove
-		? [
-				{
-					icon: 'rename',
-					label: 'Rename',
-					fn: () => {
-						renaming = true;
+	let actions: MenuItem[] = $derived(
+		can_remove
+			? [
+					{
+						icon: 'rename',
+						label: 'Rename',
+						fn: () => {
+							renaming = true;
+						}
+					},
+					{
+						icon: 'delete',
+						label: 'Delete',
+						fn: () => {
+							remove(file);
+						}
 					}
-				},
-				{
-					icon: 'delete',
-					label: 'Delete',
-					fn: () => {
-						remove(file);
-					}
-				}
-			]
-		: [];
+				]
+			: []
+	);
 </script>
 
 <Item
@@ -43,16 +47,16 @@
 	{renaming}
 	basename={file.basename}
 	icon={file_icon}
-	selected={file.name === $selected_name}
+	selected={file.name === workspace.current.name}
 	{actions}
-	on:click={() => select(file.name)}
-	on:edit={() => {
+	onclick={() => select(file.name)}
+	onedit={() => {
 		renaming = true;
 	}}
-	on:rename={(e) => {
-		rename(file, e.detail.basename);
+	onrename={(basename) => {
+		rename(file, basename);
 	}}
-	on:cancel={() => {
+	oncancel={() => {
 		renaming = false;
 	}}
 />

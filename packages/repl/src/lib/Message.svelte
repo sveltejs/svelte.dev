@@ -1,14 +1,22 @@
 <script lang="ts">
 	import { slide } from 'svelte/transition';
-	import { get_repl_context } from './context.js';
 	import type { MessageDetails } from './types.js';
 
-	export let kind: 'info' | 'warning' | 'error' = 'info';
-	export let details: any | undefined = undefined;
-	export let filename: string | undefined = undefined;
-	export let truncate = false;
+	interface Props {
+		kind?: 'info' | 'error';
+		details?: any | undefined;
+		filename?: string | undefined;
+		truncate?: boolean;
+		children?: import('svelte').Snippet;
+	}
 
-	const context = get_repl_context();
+	let {
+		kind = 'info',
+		details = undefined,
+		filename = undefined,
+		truncate = false,
+		children
+	}: Props = $props();
 
 	function message(details: MessageDetails) {
 		let str = details.message || '[missing message]';
@@ -23,36 +31,28 @@
 	}
 </script>
 
-<div transition:slide={{ duration: 100 }} class="message {kind}" class:truncate>
+<div
+	transition:slide={{ duration: 100 }}
+	class="message"
+	class:info={kind === 'info'}
+	class:error={kind === 'error'}
+	class:truncate
+>
 	{#if details}
-		<button
-			class:navigable={details.filename}
-			on:click={() => context?.go_to_warning_pos(details)}
-			on:keyup={(e) => e.key === ' ' && context?.go_to_warning_pos(details)}
-		>
-			{message(details)}
-		</button>
+		{message(details)}
 	{:else}
-		<slot />
+		{@render children?.()}
 	{/if}
 </div>
 
 <style>
-	button {
-		white-space: pre;
-	}
-
 	.message {
 		position: relative;
 		color: white;
 		padding: 12px 16px 12px 44px;
-		font: 400 var(--sk-font-size-ui-small) / 1.8rem var(--sk-font-body);
+		font: var(--sk-font-ui-small);
 		margin: 0;
 		border-top: 1px solid white;
-	}
-
-	.navigable {
-		cursor: pointer;
 	}
 
 	.message::before {
@@ -79,20 +79,11 @@
 		text-overflow: ellipsis;
 	}
 
-	button {
-		margin: 0;
-		text-align: start;
-	}
-
 	.error {
 		background-color: #da106e;
 	}
 
-	.warning {
-		background-color: #e47e0a;
-	}
-
 	.info {
-		background-color: var(--sk-theme-2);
+		background-color: var(--sk-text-4);
 	}
 </style>

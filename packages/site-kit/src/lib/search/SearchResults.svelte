@@ -31,7 +31,7 @@ Renders a list of search results
 <style>
 	.info {
 		padding: var(--padding);
-		font-size: var(--sk-font-size-ui-medium);
+		font: var(--sk-font-ui-medium);
 		color: var(--sk-text-4);
 		text-transform: uppercase;
 		background-color: var(--sk-back-2);

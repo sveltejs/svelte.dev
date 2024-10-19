@@ -10,11 +10,9 @@
 
 <style>
 	.breadcrumbs {
-		font-family: var(--sk-font-ui);
-		font-size: var(--sk-font-size-ui-small);
+		font: var(--sk-font-ui-small);
 		color: var(--sk-text-4);
 		text-transform: uppercase;
-		line-height: 1.35;
 
 		span:not(:last-child)::after {
 			content: ' • ';

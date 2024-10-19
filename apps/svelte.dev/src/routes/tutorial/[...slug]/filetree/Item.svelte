@@ -1,31 +1,44 @@
-<script>
-	import { createEventDispatcher, tick } from 'svelte';
+<script lang="ts">
+	import { tick } from 'svelte';
 	import { open } from './ContextMenu.svelte';
+	import type { MenuItem } from '$lib/tutorial';
 
-	export let basename = '';
-	export let icon = '';
-	export let depth = 0;
+	interface Props {
+		basename?: string;
+		icon?: string;
+		depth?: number;
+		selected?: boolean;
+		can_rename?: boolean;
+		renaming: boolean;
+		actions?: MenuItem[];
+		onclick?: (e: MouseEvent) => void;
+		onkeydown?: (e: KeyboardEvent) => void;
+		onrename?: (basename: string) => void;
+		oncancel?: () => void;
+		onedit?: () => void;
+	}
 
-	export let selected = false;
+	let {
+		basename = '',
+		icon = '',
+		depth = 0,
+		selected = false,
+		can_rename = false,
+		renaming,
+		actions = [],
+		onclick,
+		onkeydown,
+		onrename,
+		oncancel,
+		onedit
+	}: Props = $props();
 
-	/** @type {boolean} */
-	export let can_rename = false;
+	let cancelling = $state(false);
 
-	/** @type {boolean} */
-	export let renaming;
-
-	/** @type {import('$lib/tutorial').MenuItem[]} */
-	export let actions = [];
-
-	const dispatch = createEventDispatcher();
-
-	let cancelling = false;
-
-	/** @param {Event} e */
-	function commit(e) {
-		const input = /** @type {HTMLInputElement} */ (e.target);
+	function commit(e: Event) {
+		const input = e.target as HTMLInputElement;
 		if (input.value && input.value !== basename) {
-			dispatch('rename', { basename: input.value });
+			onrename?.(input.value);
 		}
 
 		cancel();
@@ -33,33 +46,33 @@
 
 	async function cancel() {
 		cancelling = true;
-		dispatch('cancel');
+		oncancel?.();
 		await tick();
 		cancelling = false;
 	}
 </script>
 
-<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
 <li
 	aria-current={selected ? 'true' : undefined}
 	style:--depth={depth}
 	style:--icon="url(&quot;{icon}&quot;)"
-	on:keydown
+	{onkeydown}
 >
 	{#if renaming}
-		<!-- svelte-ignore a11y-autofocus -->
+		<!-- svelte-ignore a11y_autofocus -->
 		<input
 			type="text"
 			autofocus
 			autocomplete="off"
 			spellcheck="false"
 			value={basename}
-			on:blur={(e) => {
+			onblur={(e) => {
 				if (!cancelling) {
 					commit(e);
 				}
 			}}
-			on:keyup={(e) => {
+			onkeyup={(e) => {
 				if (e.key === 'Enter') {
 					commit(e);
 				}
@@ -72,13 +85,14 @@
 	{:else}
 		<button
 			class="basename"
-			on:click
-			on:dblclick={() => {
+			{onclick}
+			ondblclick={() => {
 				if (can_rename) {
-					dispatch('edit');
+					onedit?.();
 				}
 			}}
-			on:contextmenu|preventDefault={(e) => {
+			oncontextmenu={(e) => {
+				e.preventDefault();
 				open(e.clientX, e.clientY, actions);
 			}}
 		>
@@ -88,8 +102,7 @@
 		{#if actions.length > 0}
 			<div class="actions">
 				{#each actions as action}
-					<button aria-label={action.label} class="icon {action.icon}" on:click={action.fn}
-					></button>
+					<button aria-label={action.label} class="icon {action.icon}" onclick={action.fn}></button>
 				{/each}
 			</div>
 		{/if}
@@ -98,7 +111,7 @@
 
 <style>
 	li {
-		--bg: var(--sk-back-1);
+		--bg: var(--sk-back-3);
 		--inset: calc((var(--depth) * 1.2rem) + 1.5rem);
 		display: flex;
 		position: relative;
@@ -120,7 +133,6 @@
 		background-size: 1.2rem 1.2rem;
 		background-position: 0 45%;
 		background-repeat: no-repeat;
-		font-family: var(--sk-font-ui);
 	}
 
 	:focus-visible {
@@ -131,8 +143,9 @@
 		background: var(--sk-back-1);
 		color: var(--sk-text-1) !important;
 		margin: 0 0.5rem 0 calc(0.5rem + var(--inset));
+		border: 1px solid var(--sk-back-5);
 		padding: 0 0.5rem;
-		font-size: var(--font-size);
+		font: inherit;
 	}
 
 	.basename {
@@ -140,7 +153,6 @@
 		position: relative;
 		margin: 0;
 		padding: 0 1rem 0 calc(1rem + var(--inset));
-		font-size: var(--font-size);
 		color: inherit;
 		flex: 1;
 		height: 100%;
@@ -189,19 +201,6 @@
 
 	[aria-current='true'] {
 		color: var(--sk-theme-1);
-	}
-
-	[aria-current='true']::after {
-		content: '';
-		position: absolute;
-		width: 1rem;
-		height: 1rem;
-		top: 0.3rem;
-		right: calc(-0.6rem - 2px);
-		background-color: var(--sk-back-3);
-		border: 1px solid var(--sk-back-4);
-		transform: translate(0, 0.2rem) rotate(45deg);
-		z-index: 2;
 	}
 
 	[aria-current='true']:has(:focus-visible)::after,

@@ -1,5 +1,5 @@
 <script>
-	/** @type {import('$lib/tutorial').FileStub | null} */
+	/** @type {import('editor').File | null} */
 	export let selected;
 
 	const image_types = new Map([

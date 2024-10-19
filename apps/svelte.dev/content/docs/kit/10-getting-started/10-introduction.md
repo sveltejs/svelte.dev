@@ -4,7 +4,7 @@ title: Introduction
 
 ## Before we begin
 
-> If you're new to Svelte or SvelteKit we recommend checking out the [interactive tutorial](https://learn.svelte.dev).
+> [!NOTE] If you're new to Svelte or SvelteKit we recommend checking out the [interactive tutorial](https://learn.svelte.dev).
 >
 > If you get stuck, reach out for help in the [Discord chatroom](https://svelte.dev/chat).
 
@@ -12,7 +12,7 @@ title: Introduction
 
 SvelteKit is a framework for rapidly developing robust, performant web applications using [Svelte](https://svelte.dev/). If you're coming from React, SvelteKit is similar to Next. If you're coming from Vue, SvelteKit is similar to Nuxt.
 
-To learn more about the kinds of applications you can build with SvelteKit, see the [FAQ](faq#what-can-i-make-with-sveltekit).
+To learn more about the kinds of applications you can build with SvelteKit, see the [FAQ](faq#What-can-I-make-with-SvelteKit).
 
 ## What is Svelte?
 

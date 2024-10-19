@@ -56,7 +56,7 @@
 
 <style>
 	.panel-header {
-		height: var(--pane-controls-h);
+		height: var(--sk-pane-controls-height);
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -69,9 +69,9 @@
 	}
 
 	.panel-heading {
-		font: 400 var(--sk-font-size-ui-small) / 1.8rem var(--sk-font-ui);
+		font: var(--sk-font-ui-small);
 		text-transform: uppercase;
-		color: var(--sk-text-1, #333);
+		color: var(--sk-text-1);
 		flex: 1;
 		text-align: left;
 	}

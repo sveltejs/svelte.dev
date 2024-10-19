@@ -6,7 +6,7 @@ Service workers act as proxy servers that handle network requests inside your ap
 
 In SvelteKit, if you have a `src/service-worker.js` file (or `src/service-worker/index.js`) it will be bundled and automatically registered. You can change the [location of your service worker](configuration#files) if you need to.
 
-You can [disable automatic registration](configuration#serviceworker) if you need to register the service worker with your own logic or use another solution. The default registration looks something like this:
+You can [disable automatic registration](configuration#serviceWorker) if you need to register the service worker with your own logic or use another solution. The default registration looks something like this:
 
 ```js
 if ('serviceWorker' in navigator) {
@@ -106,7 +106,7 @@ self.addEventListener('fetch', (event) => {
 });
 ```
 
-> Be careful when caching! In some cases, stale data might be worse than data that's unavailable while offline. Since browsers will empty caches if they get too full, you should also be careful about caching large assets like video files.
+> [!NOTE] Be careful when caching! In some cases, stale data might be worse than data that's unavailable while offline. Since browsers will empty caches if they get too full, you should also be careful about caching large assets like video files.
 
 ## During development
 
@@ -120,7 +120,7 @@ navigator.serviceWorker.register('/service-worker.js', {
 });
 ```
 
-> `build` and `prerendered` are empty arrays during development
+> [!NOTE] `build` and `prerendered` are empty arrays during development
 
 ## Type safety
 

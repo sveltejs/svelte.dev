@@ -1,49 +1,40 @@
-<script>
+<script lang="ts">
 	import { afterNavigate, beforeNavigate } from '$app/navigation';
 	import { SplitPane } from '@rich_harris/svelte-split-pane';
-	import { Icon } from '@sveltejs/site-kit/components';
-	import { reset } from './adapter.svelte';
-	import Editor from './Editor.svelte';
+	import * as adapter from './adapter.svelte';
+	import { Editor, Workspace } from 'editor';
 	import ContextMenu from './filetree/ContextMenu.svelte';
 	import Filetree from './filetree/Filetree.svelte';
 	import ImageViewer from './ImageViewer.svelte';
 	import Output from './Output.svelte';
-	import ScreenToggle from './ScreenToggle.svelte';
+	import { ScreenToggle } from '@sveltejs/site-kit/components';
 	import Sidebar from './Sidebar.svelte';
-	import {
-		create_directories,
-		creating,
-		files,
-		reset_files,
-		selected_file,
-		selected_name,
-		solution
-	} from './state.js';
+	import { solution } from './state.svelte';
 	import { needs_webcontainers, text_files } from './shared';
 	import OutputRollup from './OutputRollup.svelte';
 	import { page } from '$app/stores';
+	import Controls from './Controls.svelte';
+	import type { Item } from 'editor';
+	import type { Snapshot } from './$types.js';
 
-	export let data;
+	interface Props {
+		data: any;
+	}
+
+	let { data }: Props = $props();
 
 	let path = data.exercise.path;
-	let show_editor = false;
-	let show_filetree = false;
-	let paused = false;
-	let w = 1000;
+	let show_editor = $state(false);
+	let show_filetree = $state(false);
+	let paused = $state(false);
+	let w = $state(1000);
 
-	/** @type {import('$lib/tutorial').Stub[]} */
-	let previous_files = [];
+	let previous_files: Item[] = [];
 
-	/**
-	 * @param {Record<string, string>} map
-	 * @returns {Record<string, import('$lib/tutorial').Stub>}
-	 */
-	function create_files(map) {
-		/** @type {Record<string, import('$lib/tutorial').Stub>} */
-		const files = {};
+	function create_files(map: Record<string, string>): Record<string, Item> {
+		const files: Record<string, Item> = {};
 
-		/** @type {string[]} */
-		const to_delete = [];
+		const to_delete: string[] = [];
 
 		for (const key in map) {
 			const contents = map[key];
@@ -53,7 +44,7 @@
 			}
 
 			const parts = key.split('/');
-			const basename = /** @type {string} */ (parts.pop());
+			const basename = parts.pop()!;
 			const ext = basename.slice(basename.lastIndexOf('.'));
 
 			if (basename === '__delete') {
@@ -63,7 +54,7 @@
 
 			while (parts.length > 0) {
 				const dir = `/${parts.join('/')}`;
-				const basename = /** @type {string} */ (parts.pop());
+				const basename = parts.pop()!;
 
 				files[dir] ??= {
 					type: 'directory',
@@ -94,36 +85,7 @@
 		return files;
 	}
 
-	$: a = create_files(data.exercise.a);
-	$: b = create_files({ ...data.exercise.a, ...data.exercise.b });
-
-	$: mobile = w < 800; // for the things we can't do with media queries
-	$: files.set(Object.values(a));
-	$: solution.set(b);
-	$: selected_name.set(data.exercise.focus);
-	$: completed = is_completed($files, b);
-
-	beforeNavigate(() => {
-		previous_files = $files;
-	});
-
-	afterNavigate(async () => {
-		w = window.innerWidth;
-
-		const will_delete = previous_files.some((file) => !(file.name in a));
-
-		if (data.exercise.path !== path || will_delete) paused = true;
-		await reset($files);
-
-		path = data.exercise.path;
-		paused = false;
-	});
-
-	/**
-	 * @param {import('$lib/tutorial').Stub[]} files
-	 * @param {Record<string, import('$lib/tutorial').Stub> | null} solution
-	 */
-	function is_completed(files, solution) {
+	function is_completed(files: Item[], solution: Record<string, Item> | null) {
 		if (!solution) return true;
 
 		for (const file of files) {
@@ -143,58 +105,60 @@
 		return true;
 	}
 
-	/** @param {string} code */
-	function normalise(code) {
+	function normalise(code: string) {
 		// TODO think about more sophisticated normalisation (e.g. truncate multiple newlines)
 		return code.replace(/\s+/g, ' ').trim();
 	}
 
-	/** @param {string | null} name */
-	function select_file(name) {
-		const file = name && $files.find((file) => file.name === name);
+	function select_file(name: string | null) {
+		const file = name && workspace.files.find((file) => file.name === name);
 
 		if (!file && name) {
-			// trigger file creation input. first, create any intermediate directories
-			const new_directories = create_directories(name, $files);
-
-			if (new_directories.length > 0) {
-				reset_files([...$files, ...new_directories]);
-			}
-
-			// find the parent directory
+			// create intermediate directories if necessary
 			const parent = name.split('/').slice(0, -1).join('/');
 
-			creating.set({
+			if (!workspace.files.some((item) => item.name === parent)) {
+				const basename = parent.split('/').pop()!;
+
+				workspace.add({
+					type: 'directory',
+					name: parent,
+					basename
+				});
+			}
+
+			workspace.creating = {
 				parent,
 				type: 'file'
-			});
+			};
 
 			show_filetree = true;
 		} else {
 			show_filetree = false;
-			selected_name.set(name);
+
+			if (name) {
+				workspace.select(name);
+			}
 		}
 
 		show_editor = true;
 	}
 
-	/** @param {string} name */
-	function navigate_to_file(name) {
-		if (name === $selected_name) return;
+	function navigate_to_file(name: string) {
+		if (name === workspace.current.name) return;
 
 		select_file(name);
 
 		if (mobile) {
-			const q = new URLSearchParams({ file: $selected_name || '' });
+			const q = new URLSearchParams({ file: workspace.current.name || '' });
 			history.pushState({}, '', `?${q}`);
 		}
 	}
 
-	/** @type {HTMLElement} */
-	let sidebar;
+	let sidebar = $state() as HTMLElement;
 
-	/** @type {import('./$types').Snapshot<number>} */
-	export const snapshot = {
+	// TODO this doesn't seem to work any more?
+	export const snapshot: Snapshot<number> = {
 		capture: () => {
 			const scroll = sidebar.scrollTop;
 			sidebar.scrollTop = 0;
@@ -204,6 +168,47 @@
 			sidebar.scrollTop = scroll;
 		}
 	};
+
+	let a = $derived(create_files(data.exercise.a));
+	let b = $derived(create_files({ ...data.exercise.a, ...data.exercise.b }));
+
+	const workspace = new Workspace(Object.values(a), {
+		initial: data.exercise.focus,
+		onupdate(file) {
+			adapter.update(file);
+		},
+		onreset(items) {
+			adapter.reset(items);
+		}
+	});
+
+	solution.set(b);
+
+	// for the things we can't do with media queries
+	let mobile = $derived(w < 800);
+
+	$effect(() => {
+		// TODO get rid of this store/effect
+		solution.set(b);
+	});
+
+	beforeNavigate(() => {
+		previous_files = workspace.files;
+	});
+
+	afterNavigate(async () => {
+		workspace.reset(Object.values(a), data.exercise.focus);
+
+		const will_delete = previous_files.some((file) => !(file.name in a));
+
+		if (data.exercise.path !== path || will_delete) paused = true;
+		await adapter.reset(workspace.files);
+
+		path = data.exercise.path;
+		paused = false;
+	});
+
+	let completed = $derived(is_completed(workspace.files, b));
 </script>
 
 <svelte:head>
@@ -225,7 +230,7 @@
 
 <svelte:window
 	bind:innerWidth={w}
-	on:popstate={(e) => {
+	onpopstate={(e) => {
 		const q = new URLSearchParams(location.search);
 		const file = q.get('file');
 
@@ -241,12 +246,20 @@
 <ContextMenu />
 
 <div class="container" class:mobile>
+	<Controls
+		index={data.index}
+		exercise={data.exercise}
+		{completed}
+		toggle={() => {
+			workspace.set(Object.values(completed ? a : b));
+		}}
+	/>
+
 	<div class="top" class:offset={show_editor}>
 		<SplitPane id="main" type="horizontal" min="360px" max="50%" pos="33%">
 			<section slot="a" class="content">
 				<Sidebar
 					bind:sidebar
-					index={data.index}
 					exercise={data.exercise}
 					on:select={(e) => {
 						navigate_to_file(e.detail.file);
@@ -264,52 +277,36 @@
 							max="300px"
 							pos="200px"
 						>
-							<section class="navigator" slot="a">
+							<section slot="a" class="navigator">
 								{#if mobile}
-									<button class="file" on:click={() => (show_filetree = !show_filetree)}>
-										{$selected_file?.name.replace(
+									<button class="file" onclick={() => (show_filetree = !show_filetree)}>
+										{workspace.current.name.replace(
 											data.exercise.scope.prefix,
 											data.exercise.scope.name + '/'
 										) ?? 'Files'}
 									</button>
 								{:else}
-									<Filetree
-										exercise={data.exercise}
-										on:select={(e) => {
-											select_file(e.detail.name);
-										}}
-									/>
+									<Filetree exercise={data.exercise} {workspace} />
 								{/if}
-
-								<button
-									class="solve"
-									class:completed
-									disabled={!data.exercise.has_solution}
-									on:click={() => {
-										reset_files(Object.values(completed ? a : b));
-									}}
-								>
-									{#if completed && data.exercise.has_solution}
-										reset
-									{:else}
-										solve <Icon name="arrow-right" />
-									{/if}
-								</button>
 							</section>
 
-							<section class="editor-container" slot="b">
-								<Editor />
-								<ImageViewer selected={$selected_file} />
+							<section slot="b" class="editor-container">
+								<Editor
+									{workspace}
+									autocomplete_filter={(file) => {
+										return (
+											file.name.startsWith('/src') &&
+											file.name.startsWith(data.exercise.scope.prefix) &&
+											file.name !== '/src/__client.js' &&
+											file.name !== '/src/app.html'
+										);
+									}}
+								/>
+								<ImageViewer selected={workspace.current} />
 
 								{#if mobile && show_filetree}
 									<div class="mobile-filetree">
-										<Filetree
-											mobile
-											exercise={data.exercise}
-											on:select={(e) => {
-												navigate_to_file(e.detail.name);
-											}}
-										/>
+										<Filetree mobile exercise={data.exercise} {workspace} />
 									</div>
 								{/if}
 							</section>
@@ -318,7 +315,7 @@
 
 					<section slot="b" class="preview">
 						{#if needs_webcontainers($page.data.exercise)}
-							<Output exercise={data.exercise} {paused} />
+							<Output exercise={data.exercise} {paused} {workspace} />
 						{:else}
 							<OutputRollup />
 						{/if}
@@ -330,18 +327,20 @@
 
 	<div class="screen-toggle">
 		<ScreenToggle
-			on:change={(e) => {
-				show_editor = e.detail.pressed;
+			left="show text"
+			right="show editor"
+			onchange={(checked) => {
+				show_editor = checked;
 
 				const url = new URL(location.origin + location.pathname);
 
 				if (show_editor) {
-					url.searchParams.set('file', $selected_name ?? '');
+					url.searchParams.set('file', workspace.current.name ?? '');
 				}
 
-				history.pushState({}, '', url);
+				history.pushState({}, '', url); // TODO use SvelteKit pushState
 			}}
-			pressed={show_editor}
+			checked={show_editor}
 		/>
 	</div>
 </div>
@@ -365,6 +364,7 @@
 		/* we transform the default state, rather than the editor state, because otherwise
 		   the positioning of tooltips is wrong (doesn't take into account transforms) */
 		transform: translate(50%, 0);
+		border-top: 1px solid var(--sk-back-5);
 	}
 
 	.top.offset {
@@ -372,7 +372,7 @@
 	}
 
 	.screen-toggle {
-		height: 4.6rem;
+		height: var(--sk-pane-controls-height);
 	}
 
 	.content {
@@ -390,31 +390,7 @@
 		background: var(--sk-back-2);
 		display: flex;
 		flex-direction: column;
-		font-size: var(--sk-font-size-ui-small);
-	}
-
-	.navigator .solve {
-		position: relative;
-		background: var(--sk-theme-2);
-		padding: 0.5rem;
-		width: 100%;
-		height: 4rem;
-		border-right: 1px solid var(--sk-back-4);
-		color: white;
-		opacity: 1;
-		font-size: var(--sk-font-size-ui-small);
-	}
-
-	.navigator .solve:disabled {
-		opacity: 0.5;
-	}
-
-	.navigator .solve:not(:disabled) {
-		background: var(--sk-theme-1);
-	}
-
-	.navigator .solve.completed {
-		background: var(--sk-theme-2);
+		font: var(--sk-font-ui-small);
 	}
 
 	.preview {
@@ -445,14 +421,6 @@
 		/* put ellipsis at start */
 		direction: rtl;
 		text-align: left;
-	}
-
-	.mobile .navigator .solve {
-		width: 9rem;
-		height: auto;
-		padding: 0.2rem;
-		border-radius: 4rem;
-		border: none;
 	}
 
 	.mobile-filetree {

@@ -56,8 +56,12 @@ export async function GET({ fetch, params }) {
 		// @ts-ignore
 		owner: app.userid,
 		relaxed: false,
-		// @ts-expect-error app.files has a `source` property
-		components: munge(app.files)
+		components: app.files!.map((file) => {
+			const dot = file.name.lastIndexOf('.');
+			let name = file.name.slice(0, dot);
+			let type = file.name.slice(dot + 1);
+			return { name, type, source: file.source };
+		})
 	});
 }
 

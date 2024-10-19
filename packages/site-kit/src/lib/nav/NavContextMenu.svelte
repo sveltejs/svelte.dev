@@ -3,7 +3,7 @@
 	import type { NavigationLink } from '../types';
 	import { onMount } from 'svelte';
 
-	let { contents = [] }: { contents?: NavigationLink['sections'] } = $props();
+	let { title, contents = [] }: { title: string; contents: NavigationLink['sections'] } = $props();
 
 	let nav = $state() as HTMLElement;
 
@@ -31,106 +31,77 @@
 </script>
 
 <nav bind:this={nav}>
-	{#if contents}
-		{#each contents as { sections, title }, index}
-			<section>
-				<h2>{title}</h2>
+	{#each contents as section}
+		<section>
+			<h2>{title} • {section.title}</h2>
 
-				{#if sections.length !== 0}
-					<ul>
-						{#each sections as { title, sections: subsections }}
-							<li>
-								{#if title}
-									<h3>
-										{title}
-									</h3>
-								{/if}
+			{#if section.sections.length !== 0}
+				<ul>
+					{#each section.sections as { title, sections: subsections }}
+						<li>
+							{#if title}
+								<h3>
+									{title}
+								</h3>
+							{/if}
 
-								<ul>
-									{#each subsections as { path, title }}
-										<li>
-											<a href={path} aria-current={path === $page.url.pathname}>
-												{title}
-											</a>
-										</li>
-									{/each}
-								</ul>
-							</li>
-						{/each}
-					</ul>
-				{/if}
-
-				{#if contents.length !== 1 && index !== contents.length - 1}
-					<hr />
-				{/if}
-			</section>
-		{/each}
-	{/if}
+							<ul>
+								{#each subsections as { path, title }}
+									<li>
+										<a href={path} aria-current={path === $page.url.pathname ? 'page' : undefined}>
+											{title}
+										</a>
+									</li>
+								{/each}
+							</ul>
+						</li>
+					{/each}
+				</ul>
+			{/if}
+		</section>
+	{/each}
 </nav>
 
 <style>
 	nav {
-		padding: 0.29rem;
-		padding-top: 0;
-		font-family: var(--sk-font-ui);
+		padding: 0 0 3rem 0;
+		font-family: var(--sk-font-family-ui);
 		overflow-y: auto;
-
 		height: 100%;
 	}
 
-	section > ul {
-		padding: 1rem;
-		padding-bottom: 0rem;
-		margin-bottom: 0;
-	}
+	section {
+		padding: 1rem var(--sk-page-padding-side);
 
-	section:not(:first-child) {
-		padding-top: 1.5rem;
-	}
+		& > ul {
+			margin-bottom: 0 0 2rem 0;
+		}
 
-	hr {
-		border: none;
-		border-top: 1px solid var(--sk-back-5);
-		margin: 0;
-		margin-top: 1rem;
-		margin-bottom: 1rem;
-		width: 95%;
-		transform: translateX(2.5%);
+		ul {
+			list-style-type: none;
+			margin: 0;
+			margin-bottom: 2.5rem;
+		}
+
+		li {
+			display: block;
+		}
 	}
 
 	h2,
 	h3 {
 		display: block;
-
 		padding-bottom: 0.8rem;
-
-		font-family: var(--sk-font-ui);
-		font-size: var(--sk-font-size-ui-medium);
+		font: var(--sk-font-ui-medium);
 		text-transform: uppercase;
-		letter-spacing: 0.1em;
-		color: var(--sk-text-3);
+		color: var(--sk-text-1);
 	}
 
 	h2 {
 		position: sticky;
-		top: -1px;
+		top: 0;
 		z-index: 1;
-		background-color: var(--sk-back-3);
-		width: 98%;
-		padding: 1rem 1rem 1rem 4px;
-		margin-left: 4px;
-
-		border-radius: 1rem 1rem 0 0;
-	}
-
-	ul {
-		list-style-type: none;
-		margin: 0;
-		margin-bottom: 2.5rem;
-	}
-
-	li {
-		display: block;
+		padding: 1rem 0;
 	}
 
 	a {
@@ -138,17 +109,11 @@
 		align-items: center;
 		border-radius: var(--sk-border-radius);
 		color: var(--sk-text-2);
-		padding: 0 0.75rem !important;
 		transition: 0.1s ease;
 		transition-property: background-color, color;
 
-		&[aria-current='true'] {
+		&[aria-current='page'] {
 			color: var(--sk-theme-1) !important;
 		}
-	}
-
-	a:hover {
-		text-decoration: none;
-		background-color: var(--sk-back-4);
 	}
 </style>

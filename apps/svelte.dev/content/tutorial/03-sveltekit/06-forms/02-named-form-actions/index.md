@@ -21,7 +21,7 @@ export const actions = {
 };
 ```
 
-> Default actions cannot coexist with named actions.
+> [!NOTE] Default actions cannot coexist with named actions.
 
 The `<form>` element has an optional `action` attribute, which is similar to an `<a>` element's `href` attribute. Update the existing form so that it points to the new `create` action:
 
@@ -38,7 +38,7 @@ The `<form>` element has an optional `action` attribute, which is similar to an 
 </form>
 ```
 
-> The `action` attribute can be any URL — if the action was defined on another page, you might have something like `/todos?/create`. Since the action is on _this_ page, we can omit the pathname altogether, hence the leading `?` character.
+> [!NOTE] The `action` attribute can be any URL — if the action was defined on another page, you might have something like `/todos?/create`. Since the action is on _this_ page, we can omit the pathname altogether, hence the leading `?` character.
 
 Next, we want to create a form for each todo, complete with a hidden `<input>` that uniquely identifies it:
 

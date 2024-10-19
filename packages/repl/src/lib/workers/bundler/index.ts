@@ -13,8 +13,9 @@ import replace from './plugins/replace';
 import loop_protect from './plugins/loop-protect';
 import type { Plugin, TransformResult } from '@rollup/browser';
 import type { BundleMessageData } from '../workers';
-import type { File, Warning } from '../../types';
-import type { CompileResult } from 'svelte/compiler';
+import type { Warning } from '../../types';
+import type { CompileError, CompileOptions, CompileResult } from 'svelte/compiler';
+import type { File } from 'editor';
 
 let packages_url: string;
 let svelte_url: string;
@@ -42,7 +43,7 @@ self.addEventListener('message', async (event: MessageEvent<BundleMessageData>) 
 
 		case 'bundle': {
 			await ready;
-			const { uid, files } = event.data;
+			const { uid, files, options } = event.data;
 
 			if (files.length === 0) return;
 
@@ -51,7 +52,7 @@ self.addEventListener('message', async (event: MessageEvent<BundleMessageData>) 
 			setTimeout(async () => {
 				if (current_id !== uid) return;
 
-				const result = await bundle({ uid, files });
+				const result = await bundle({ uid, files, options });
 
 				if (JSON.stringify(result.error) === JSON.stringify(ABORT)) return;
 				if (result && uid === current_id) postMessage(result);
@@ -202,7 +203,8 @@ async function get_bundle(
 	uid: number,
 	mode: 'client' | 'server',
 	cache: (typeof cached)['client'],
-	local_files_lookup: Map<string, File>
+	local_files_lookup: Map<string, File>,
+	options: CompileOptions
 ) {
 	let bundle;
 
@@ -324,7 +326,7 @@ async function get_bundle(
 
 			const cached_file = local_files_lookup.get(resolved);
 			if (cached_file) {
-				return cached_file.source;
+				return cached_file.contents;
 			}
 
 			if (!FETCH_CACHE.has(resolved)) {
@@ -350,6 +352,7 @@ async function get_bundle(
 				result = cached_id.result;
 			} else if (id.endsWith('.svelte')) {
 				result = svelte.compile(code, {
+					...options,
 					filename: name + '.svelte',
 					// @ts-expect-error
 					generate: Number(svelte.VERSION.split('.')[0]) >= 5 ? 'client' : 'dom',
@@ -363,9 +366,9 @@ async function get_bundle(
 						(match, $1, $2) => {
 							if (local_files_lookup.has($1)) {
 								if ($2 === 'svg') {
-									return `url('data:image/svg+xml;base64,${btoa(local_files_lookup.get($1)!.source)}')`;
+									return `url('data:image/svg+xml;base64,${btoa(local_files_lookup.get($1)!.contents)}')`;
 								} else {
-									return `url('data:image/${$2};base64,${local_files_lookup.get($1)!.source}')`;
+									return `url('data:image/${$2};base64,${local_files_lookup.get($1)!.contents}')`;
 								}
 							} else {
 								return match;
@@ -458,7 +461,15 @@ async function get_bundle(
 
 export type BundleResult = ReturnType<typeof bundle>;
 
-async function bundle({ uid, files }: { uid: number; files: File[] }) {
+async function bundle({
+	uid,
+	files,
+	options
+}: {
+	uid: number;
+	files: File[];
+	options: CompileOptions;
+}) {
 	if (!DEV) {
 		console.clear();
 		console.log(`running Svelte compiler version %c${svelte.VERSION}`, 'font-weight: bold');
@@ -467,8 +478,10 @@ async function bundle({ uid, files }: { uid: number; files: File[] }) {
 	const lookup: Map<string, File> = new Map();
 
 	lookup.set('./__entry.js', {
-		name: '__entry',
-		source: `
+		type: 'file',
+		name: '__entry.js',
+		basename: '__entry.js',
+		contents: `
 			import { unmount as u } from 'svelte';
 			import { styles } from './__shared.js';
 			export { mount, untrack } from 'svelte';
@@ -478,21 +491,21 @@ async function bundle({ uid, files }: { uid: number; files: File[] }) {
 				styles.forEach(style => style.remove());
 			}
 		`,
-		type: 'js',
-		modified: false
+		text: true
 	});
 
 	lookup.set('./__shared.js', {
-		name: '__entry',
-		source: `
+		type: 'file',
+		name: '__shared.js',
+		basename: '__shared.js',
+		contents: `
 			export let styles = [];
 		`,
-		type: 'js',
-		modified: false
+		text: true
 	});
 
 	files.forEach((file) => {
-		const path = `./${file.name}.${file.type}`;
+		const path = `./${file.name}`;
 		lookup.set(path, file);
 	});
 
@@ -500,9 +513,9 @@ async function bundle({ uid, files }: { uid: number; files: File[] }) {
 		uid,
 		'client',
 		cached.client,
-		lookup
+		lookup,
+		options
 	);
-	let error;
 
 	try {
 		if (client.error) {
@@ -520,7 +533,7 @@ async function bundle({ uid, files }: { uid: number; files: File[] }) {
 		)?.output[0];
 
 		const server = false // TODO how can we do SSR?
-			? await get_bundle(uid, 'server', cached.server, lookup)
+			? await get_bundle(uid, 'server', cached.server, lookup, options)
 			: null;
 
 		if (server) {
@@ -553,11 +566,7 @@ async function bundle({ uid, files }: { uid: number; files: File[] }) {
 	} catch (err) {
 		console.error(err);
 
-		// @ts-ignore
-		const e: Error = error || err;
-
-		// @ts-ignore
-		delete e.toString;
+		const e = err as CompileError;
 
 		return {
 			uid,
@@ -565,10 +574,7 @@ async function bundle({ uid, files }: { uid: number; files: File[] }) {
 			server: null,
 			imports: null,
 			warnings: client.warnings,
-			error: Object.assign({}, e, {
-				message: e.message,
-				stack: e.stack
-			})
+			error: { ...e }
 		};
 	}
 }

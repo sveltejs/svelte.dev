@@ -1,7 +1,8 @@
-import type { Adapter, FileStub, Stub, Warning } from '$lib/tutorial';
 import Bundler from '@sveltejs/repl/bundler';
 // @ts-ignore package exports don't have types
 import * as yootils from 'yootils';
+import type { Adapter } from '$lib/tutorial';
+import type { File, Item } from 'editor';
 
 /** Rollup bundler singleton */
 let bundler: Bundler;
@@ -9,7 +10,6 @@ let bundler: Bundler;
 export const state = new (class RollupState {
 	progress = $state.raw({ value: 0, text: 'initialising' });
 	bundle = $state.raw<any>(null);
-	warnings = $state.raw<Record<string, Warning[]>>({});
 })();
 
 /**
@@ -37,57 +37,38 @@ export async function create(): Promise<Adapter> {
 	state.progress = { value: 0.5, text: 'loading svelte compiler' };
 
 	/** Paths and contents of the currently loaded file stubs */
-	let current_stubs = stubs_to_map([]);
+	let current_files: Item[] = [];
 
 	async function compile() {
-		const result = await bundler.bundle(
-			[...current_stubs.values()]
+		state.bundle = await bundler.bundle(
+			current_files
 				// TODO we can probably remove all the SvelteKit specific stuff from the tutorial content once this settles down
-				.filter((f): f is FileStub => f.name.startsWith('/src/lib/') && f.type === 'file')
-				.map((f) => ({
-					name: f.name.slice(9).split('.').slice(0, -1).join('.'),
-					source: f.contents,
-					type: f.name.split('.').pop() ?? 'svelte'
-				}))
+				.filter((f): f is File => f.name.startsWith('/src/lib/') && f.type === 'file')
+				.map((f) => ({ ...f, name: f.name.slice(9) })),
+			{
+				runes: true
+			}
 		);
-		state.bundle = result;
-
-		const _warnings: Record<string, any> = {};
-		for (const warning of result?.warnings ?? []) {
-			const file = '/src/lib/' + warning.filename;
-			_warnings[file] = _warnings[file] || [];
-			_warnings[file].push(warning);
-		}
-		state.warnings = _warnings;
 	}
 
 	const q = yootils.queue(1);
 
 	return {
-		reset: (stubs) => {
+		reset: (files) => {
 			return q.add(async () => {
-				current_stubs = stubs_to_map(stubs, current_stubs);
+				current_files = files;
 
 				await compile();
-
 				return false;
 			});
 		},
 		update: (file) => {
 			return q.add(async () => {
-				current_stubs.set(file.name, file);
+				current_files = current_files.map((old) => (old.name === file.name ? file : old));
 
 				await compile();
-
 				return false;
 			});
 		}
 	};
-}
-
-function stubs_to_map(files: Stub[], map = new Map<string, Stub>()) {
-	for (const file of files) {
-		map.set(file.name, file);
-	}
-	return map;
 }

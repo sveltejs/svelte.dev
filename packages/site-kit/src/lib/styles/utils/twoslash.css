@@ -1,0 +1,38 @@
+.twoslash-hover {
+	position: relative;
+
+	&.highlight::after {
+		/* ensure contiguous hover area */
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: calc(100% + 1rem);
+	}
+
+	.twoslash-popup-container {
+		display: none;
+	}
+}
+
+.twoslash-error-line {
+	visibility: hidden;
+	height: 0;
+}
+
+.twoslash-popup-container {
+	display: flex;
+	flex-direction: column;
+	font: var(--sk-font-mono);
+	gap: 1rem;
+}
+
+.twoslash-popup-code {
+	background: transparent !important;
+	margin: 0 !important;
+	font: var(--sk-font-mono);
+	display: block;
+	width: 100%;
+	padding: 0 !important;
+}

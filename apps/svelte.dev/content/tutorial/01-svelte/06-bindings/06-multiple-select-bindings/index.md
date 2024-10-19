@@ -19,4 +19,4 @@ Replace the checkboxes with a `<select multiple>`:
 
 Note that we're able to omit the `value` attribute on the `<option>`, since the value is identical to the element's contents.
 
-> Press and hold the `control` key (or the `command` key on MacOS) to select multiple options.
+> [!NOTE] Press and hold the `control` key (or the `command` key on MacOS) to select multiple options.

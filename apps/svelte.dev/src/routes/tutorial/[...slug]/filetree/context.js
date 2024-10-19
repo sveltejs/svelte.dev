@@ -4,9 +4,10 @@ import { setContext, getContext } from 'svelte';
  * @typedef {{
  *   collapsed: import('svelte/store').Writable<Record<string, boolean>>;
  *   add: (name: string, type: 'file' | 'directory') => Promise<void>;
- *   rename: (stub: import('$lib/tutorial').Stub, name: string) => Promise<void>;
- *   remove: (stub: import('$lib/tutorial').Stub) => Promise<void>;
+ *   rename: (stub: import('editor').Item, name: string) => Promise<void>;
+ *   remove: (stub: import('editor').Item) => Promise<void>;
  *   select: (name: string) => void;
+ *   workspace: import('editor').Workspace
  * }} FileTreeContext
  */
 

@@ -1,25 +1,10 @@
 import type { Writable } from 'svelte/store';
-
-export interface FileStub {
-	type: 'file';
-	name: string;
-	basename: string;
-	contents: string;
-	text: boolean;
-}
-
-export interface DirectoryStub {
-	type: 'directory';
-	name: string;
-	basename: string;
-}
-
-export type Stub = FileStub | DirectoryStub;
+import type { File, Directory, Item } from 'editor';
 
 export interface Adapter {
 	/** Returns `false` if the reset was in such a way that a reload of the iframe isn't needed */
-	reset(files: Array<Stub>): Promise<boolean>;
-	update(file: FileStub): Promise<boolean>;
+	reset(files: Array<Item>): Promise<boolean>;
+	update(file: File): Promise<boolean>;
 }
 
 export interface Scope {
@@ -43,7 +28,7 @@ export interface Exercise {
 	/** the initial path to navigate to */
 	path: string;
 	slug: string;
-	prev: { slug: string } | null;
+	prev: { slug: string; title: string } | null;
 	next: { slug: string; title: string } | null;
 	markdown: string;
 	html: string;
@@ -77,17 +62,6 @@ export interface PartStub {
 export interface EditingConstraints {
 	create: Set<string>;
 	remove: Set<string>;
-}
-
-// TODO replace with `Warning` from `svelte/compiler`
-export interface Warning {
-	code: string;
-	start: { line: number; column: number; character: number };
-	end: { line: number; column: number; character: number };
-	pos: number;
-	filename: string;
-	frame: string;
-	message: string;
 }
 
 export interface MenuItem {

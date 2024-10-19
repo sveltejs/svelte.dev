@@ -9,11 +9,13 @@
 		repl.set({
 			files: [
 				{
-					name: 'App',
-					type: 'svelte',
-					source:
+					type: 'file',
+					name: 'App.svelte',
+					basename: 'App.svelte',
+					contents:
 						'<script>\n\tlet count = $state(0);\n\n\tfunction increment() {\n\t\tcount += 1;\n\t}\n</scr' +
-						'ipt>\n\n<button onclick={increment}>\n\tclicks: {count}\n</button>'
+						'ipt>\n\n<button onclick={increment}>\n\tclicks: {count}\n</button>',
+					text: true
 				}
 			]
 		});
@@ -21,7 +23,7 @@
 </script>
 
 <main>
-	<Repl vim bind:this={repl} showAst />
+	<Repl bind:this={repl} />
 </main>
 
 <style>

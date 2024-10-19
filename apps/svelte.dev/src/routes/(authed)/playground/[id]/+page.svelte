@@ -2,7 +2,7 @@
 	import { browser } from '$app/environment';
 	import { afterNavigate, goto, replaceState } from '$app/navigation';
 	import type { Gist } from '$lib/db/types';
-	import { Repl, type File } from '@sveltejs/repl';
+	import { Repl } from '@sveltejs/repl';
 	import { theme } from '@sveltejs/site-kit/stores';
 	import { onMount } from 'svelte';
 	import { mapbox_setup } from '../../../../config.js';
@@ -50,9 +50,21 @@
 
 		if (!hash) {
 			repl?.set({
-				files: structuredClone(data.gist.components)
+				// TODO make this munging unnecessary
+				files: structuredClone(data.gist.components).map((file: any) => {
+					const basename = `${file.name}.${file.type}`;
+
+					return {
+						type: 'file',
+						name: basename,
+						basename,
+						contents: file.source,
+						text: true
+					};
+				})
 			});
 
+			modified = false;
 			return;
 		}
 
@@ -89,9 +101,9 @@
 		}, 500);
 	}
 
-	function handle_change({ files }: { files: File[] }) {
+	function onchange() {
 		const was_modified = modified;
-		modified = files.some((c) => c.modified);
+		modified = true;
 
 		if (
 			!was_modified &&
@@ -142,27 +154,26 @@
 	/>
 
 	{#if browser}
-		<Repl
-			bind:this={repl}
-			{svelteUrl}
-			{relaxed}
-			{can_escape}
-			vim={data.vim}
-			injectedJS={mapbox_setup}
-			showModified
-			showAst
-			change={handle_change}
-			add={handle_change}
-			remove={handle_change}
-			blur={() => {
+		<div
+			style="display: contents"
+			onfocusout={() => {
 				// Only change hash on editor blur to not pollute everyone's browser history
 				if (modified) {
 					const json = JSON.stringify({ files: repl.toJSON().files });
 					change_hash(json);
 				}
 			}}
-			previewTheme={$theme.current}
-		/>
+		>
+			<Repl
+				bind:this={repl}
+				{svelteUrl}
+				{relaxed}
+				{can_escape}
+				injectedJS={mapbox_setup}
+				{onchange}
+				previewTheme={$theme.current}
+			/>
+		</div>
 	{/if}
 </div>
 
@@ -171,19 +182,11 @@
 		position: relative;
 		height: calc(100% - var(--sk-nav-height) - var(--sk-banner-bottom-height));
 		height: calc(100dvh - var(--sk-nav-height) - var(--sk-banner-bottom-height));
-		--app-controls-h: 5rem;
-		--pane-controls-h: 4.2rem;
 		overflow: hidden;
 		background-color: var(--sk-back-1);
-		padding: var(--app-controls-h) 0 0 0;
-		/* margin: 0 calc(var(--side-nav) * -1); */
 		box-sizing: border-box;
 		display: flex;
 		flex-direction: column;
-
-		@media (min-width: 800px) {
-			--app-controls-h: 6rem;
-		}
 	}
 
 	/* temp fix for #2499 and #2550 while waiting for a fix for https://github.com/sveltejs/svelte-repl/issues/8 */
@@ -198,14 +201,6 @@
 	}
 	.repl-outer :global(.tab-content.visible) {
 		visibility: visible;
-	}
-
-	.zen-mode {
-		position: fixed;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		z-index: 111;
 	}
 
 	@keyframes fade-in {

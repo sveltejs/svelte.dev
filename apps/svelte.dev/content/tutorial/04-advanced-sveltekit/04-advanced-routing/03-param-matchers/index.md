@@ -18,4 +18,4 @@ Then, to use the new matcher, rename `src/routes/colors/[color]` to `src/routes/
 
 Now, whenever someone navigates to that route, SvelteKit will verify that `color` is a valid `hex` value. If not, SvelteKit will try to match other routes, before eventually returning a 404.
 
-> Matchers run both on the server and in the browser.
+> [!NOTE] Matchers run both on the server and in the browser.

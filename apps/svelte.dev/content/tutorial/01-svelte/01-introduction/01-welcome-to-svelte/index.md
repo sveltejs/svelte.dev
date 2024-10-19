@@ -16,7 +16,7 @@ You can build your entire app with Svelte (for example, using an application fra
 
 ## How to use this tutorial
 
-> You'll need to have basic familiarity with HTML, CSS and JavaScript to understand Svelte.
+> [!NOTE] You'll need to have basic familiarity with HTML, CSS and JavaScript to understand Svelte.
 
 This tutorial is split into four main parts:
 
@@ -27,4 +27,4 @@ This tutorial is split into four main parts:
 
 Each section will present an exercise designed to illustrate a feature. Later exercises build on the knowledge gained in earlier ones, so it's recommended that you go from start to finish. If necessary, you can navigate via the menu above.
 
-If you get stuck, you can click the `solve` button <span class="desktop">to the left of the editor</span><span class="mobile">in the top right of the editor view</span>. (<span class="mobile">Use the toggle below to switch between tutorial and editor views. </span>The `solve` button is disabled on sections like this one that don't include an exercise.) Try not to rely on it too much; you will learn faster by figuring out where to put each suggested code block and manually typing it in to the editor.
+If you get stuck, you can click the `solve` button in the top right of the screen. (The `solve` button is disabled on sections like this one that don't include an exercise.) Try not to rely on it too much; you will learn faster by figuring out where to put each suggested code block and manually typing it in to the editor.

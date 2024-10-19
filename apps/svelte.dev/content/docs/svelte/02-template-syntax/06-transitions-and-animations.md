@@ -79,7 +79,7 @@ Transitions are local by default. Local transitions only play when the block the
 {/if}
 ```
 
-> By default intro transitions will not play on first render. You can modify this behaviour by setting `intro: true` when you [create a component](imperative-component-api) and marking the transition as `global`.
+> [!NOTE] By default intro transitions will not play on first render. You can modify this behaviour by setting `intro: true` when you [create a component](imperative-component-api) and marking the transition as `global`.
 
 ## Transition parameters
 
@@ -132,7 +132,7 @@ The function is called repeatedly _before_ the transition begins, with different
 
 A custom transition function can also return a `tick` function, which is called _during_ the transition with the same `t` and `u` arguments.
 
-> If it's possible to use `css` instead of `tick`, do so — CSS animations can run off the main thread, preventing jank on slower devices.
+> [!NOTE] If it's possible to use `css` instead of `tick`, do so — CSS animations can run off the main thread, preventing jank on slower devices.
 
 ```svelte
 <!--- file: App.svelte --->
@@ -312,7 +312,7 @@ DOMRect {
 
 An animation is triggered when the contents of a [keyed each block](control-flow#each) are re-ordered. Animations do not run when an element is added or removed, only when the index of an existing data item within the each block changes. Animate directives must be on an element that is an _immediate_ child of a keyed each block.
 
-Animations can be used with Svelte's [built-in animation functions](svelte-animate) or [custom animation functions](#custom-animation-functions).
+Animations can be used with Svelte's [built-in animation functions](svelte-animate) or [custom animation functions](#Custom-animation-functions).
 
 ```svelte
 <!-- When `list` is reordered the animation will run-->
@@ -377,7 +377,7 @@ The function is called repeatedly _before_ the animation begins, with different 
 
 A custom animation function can also return a `tick` function, which is called _during_ the animation with the same `t` and `u` arguments.
 
-> If it's possible to use `css` instead of `tick`, do so — CSS animations can run off the main thread, preventing jank on slower devices.
+> [!NOTE] If it's possible to use `css` instead of `tick`, do so — CSS animations can run off the main thread, preventing jank on slower devices.
 
 ```svelte
 <!--- file: App.svelte --->

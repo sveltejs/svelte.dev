@@ -3,11 +3,10 @@ import { createHash, Hash } from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
 import ts from 'typescript';
-import * as prettier from 'prettier';
+import * as marked from 'marked';
 import { codeToHtml, createCssVariablesTheme } from 'shiki';
 import { transformerTwoslash } from '@shikijs/twoslash';
 import { SHIKI_LANGUAGE_MAP, slugify, smart_quotes, transform } from './utils';
-import type { Modules } from './index';
 import { fileURLToPath } from 'node:url';
 
 interface SnippetOptions {
@@ -16,12 +15,7 @@ interface SnippetOptions {
 	copy: boolean;
 }
 
-type TwoslashBanner = (
-	filename: string,
-	content: string,
-	language: string,
-	options: SnippetOptions
-) => string;
+type TwoslashBanner = (filename: string, content: string) => string;
 
 // Supports js, svelte, yaml files
 const METADATA_REGEX =
@@ -192,17 +186,40 @@ const snippets = await create_snippet_cache();
 export async function render_content_markdown(
 	filename: string,
 	body: string,
-	{ twoslashBanner }: { twoslashBanner?: TwoslashBanner } = {}
+	options?: { check?: boolean },
+	twoslashBanner?: TwoslashBanner
 ) {
 	const headings: string[] = [];
+	const { check = true } = options ?? {};
 
 	return await transform(body, {
 		async walkTokens(token) {
 			if (token.type === 'code') {
 				if (snippets.get(token.text)) return;
 
+				if (token.lang === 'diff') {
+					throw new Error('Use +++ and --- annotations instead of diff blocks');
+				}
+
 				let { source, options } = parse_options(token.text, token.lang);
 				source = adjust_tab_indentation(source, token.lang);
+
+				let prelude = '';
+
+				if ((token.lang === 'js' || token.lang === 'ts') && check) {
+					const match = /((?:[\s\S]+)\/\/ ---cut---\n)?([\s\S]+)/.exec(source)!;
+					[, prelude = '// ---cut---\n', source] = match;
+
+					const banner = twoslashBanner?.(filename, source);
+					if (banner) prelude = '// @filename: injected.d.ts\n' + banner + '\n' + prelude;
+				}
+
+				source = source.replace(
+					/(\+\+\+|---|:::)/g,
+					(_, delimiter: keyof typeof delimiter_substitutes) => {
+						return delimiter_substitutes[delimiter];
+					}
+				);
 
 				const converted =
 					token.lang === 'js' || token.lang === 'svelte'
@@ -228,22 +245,16 @@ export async function render_content_markdown(
 
 				html += '</div>';
 
-				html += await syntax_highlight({
-					filename,
-					language: token.lang,
-					source,
-					twoslashBanner,
-					options
-				});
+				html += await syntax_highlight({ filename, language: token.lang, prelude, source, check });
 
 				if (converted) {
-					html += await syntax_highlight({
-						filename,
-						language: token.lang === 'js' ? 'ts' : token.lang,
-						source: converted,
-						twoslashBanner,
-						options
-					});
+					const language = token.lang === 'js' ? 'ts' : token.lang;
+
+					if (language === 'ts') {
+						prelude = prelude.replace(/(\/\/ @filename: .+)\.js$/gm, '$1.ts');
+					}
+
+					html += await syntax_highlight({ filename, language, prelude, source: converted, check });
 				}
 
 				html += '</div>';
@@ -263,25 +274,37 @@ export async function render_content_markdown(
 
 			return smart_quotes(token.text, true);
 		},
-		heading({ tokens, depth, raw }) {
+		heading({ tokens, depth }) {
 			const text = this.parser!.parseInline(tokens);
+			const html = text.replace(/<\/?code>/g, '');
 
-			headings[depth - 1] = slugify(raw);
+			headings[depth - 1] = slugify(text);
 			headings.length = depth;
 			const slug = headings.filter(Boolean).join('-');
-			return `<h${depth} id="${slug}">${text.replace(
-				/<\/?code>/g,
-				''
-			)}<a href="#${slug}" class="permalink"><span class="visually-hidden">permalink</span></a></h${depth}>`;
+
+			return `<h${depth} id="${slug}"><span>${html}</span><a href="#${slug}" class="permalink" aria-label="permalink"></a></h${depth}>`;
 		},
 		code({ text }) {
 			return snippets.get(text);
 		},
 		blockquote(token) {
 			let content = this.parser?.parse(token.tokens) ?? '';
+
 			if (content.includes('[!LEGACY]')) {
 				content = `<details class="legacy"><summary>Legacy mode</summary>${content.replace('[!LEGACY]', '')}</details>`;
 			}
+
+			if (content.includes('[!DETAILS]')) {
+				const regex = /\[!DETAILS\] (.+)/;
+				const match = regex.exec(content)!;
+				content = `<details><summary>${match[1]}</summary>${content.replace(regex, '')}</details>`;
+				return `<blockquote class="note">${content}</blockquote>`;
+			}
+
+			if (content.includes('[!NOTE]')) {
+				return `<blockquote class="note">${content.replace('[!NOTE]', '')}</blockquote>`;
+			}
+
 			return `<blockquote>${content}</blockquote>`;
 		}
 	});
@@ -289,7 +312,6 @@ export async function render_content_markdown(
 
 /**
  * Pre-render step. Takes in all the code snippets, and replaces them with TS snippets if possible
- * May replace the language labels (```js) to custom labels(```generated-ts, ```original-js, ```generated-svelte,```original-svelte)
  */
 async function generate_ts_from_js(
 	code: string,
@@ -299,23 +321,23 @@ async function generate_ts_from_js(
 	// No named file -> assume that the code is not meant to be shown in two versions
 	if (!options.file) return;
 
-	if (language === 'js') {
-		// config files have no .ts equivalent
-		if (options.file === 'svelte.config.js') return;
+	// config files have no .ts equivalent
+	if (options.file === 'svelte.config.js') return;
 
-		return await convert_to_ts(code.replace(/\/\/\/ file: .+?\n/, ''));
+	if (language === 'svelte') {
+		// Assumption: no module blocks
+		const script = code.match(/<script>([\s\S]+?)<\/script>/);
+		if (!script) return;
+
+		const [outer, inner] = script;
+		const ts = await convert_to_ts(inner, '\t', '\n');
+
+		if (!ts) return;
+
+		return code.replace(outer, `<script lang="ts">${ts}</script>`);
 	}
 
-	// Assumption: no module blocks
-	const script = code.match(/<script>([\s\S]+?)<\/script>/);
-	if (!script) return;
-
-	const [outer, inner] = script;
-	const ts = await convert_to_ts(inner, '\t', '\n');
-
-	if (!ts) return;
-
-	return code.replace(outer, `<script lang="ts">\n\t${ts.trim()}\n</script>`);
+	return await convert_to_ts(code);
 }
 
 function get_jsdoc(node: ts.Node) {
@@ -346,89 +368,112 @@ async function convert_to_ts(js_code: string, indent = '', offset = '') {
 
 	async function walk(node: ts.Node) {
 		const jsdoc = get_jsdoc(node);
+
 		if (jsdoc) {
-			for (const comment of jsdoc) {
-				let modified = false;
+			// this isn't an exhaustive list of tags we could potentially encounter (no `@template` etc)
+			// but it's good enough to cover what's actually in the docs right now
+			let type: string | null = null;
+			let params: string[] = [];
+			let returns: string | null = null;
+			let satisfies: string | null = null;
 
-				let count = 0;
-				for (const tag of comment.tags ?? []) {
-					if (ts.isJSDocTypeTag(tag)) {
-						const [name, generics] = await get_type_info(tag);
+			if (jsdoc.length > 1) {
+				throw new Error('woah nelly');
+			}
 
-						if (ts.isFunctionDeclaration(node)) {
-							const is_export = node.modifiers?.some(
-								(modifier) => modifier.kind === ts.SyntaxKind.ExportKeyword
-							)
-								? 'export '
-								: '';
-							const is_async = node.modifiers?.some(
-								(modifier) => modifier.kind === ts.SyntaxKind.AsyncKeyword
-							);
+			const { comment, tags = [] } = jsdoc[0];
 
-							const type = generics !== undefined ? `${name}<${generics}>` : name;
+			for (const tag of tags) {
+				if (ts.isJSDocTypeTag(tag)) {
+					type = get_type_info(tag.typeExpression);
+				} else if (ts.isJSDocParameterTag(tag)) {
+					params.push(get_type_info(tag.typeExpression!));
+				} else if (ts.isJSDocReturnTag(tag)) {
+					returns = get_type_info(tag.typeExpression!);
+				} else if (ts.isJSDocSatisfiesTag(tag)) {
+					satisfies = get_type_info(tag.typeExpression!);
+				} else {
+					throw new Error('Unhandled tag');
+				}
 
-							if (node.name && node.body) {
-								code.overwrite(
-									node.getStart(),
-									node.name.getEnd(),
-									`${is_export ? 'export ' : ''}const ${node.name.getText()}: ${type} = (${
-										is_async ? 'async ' : ''
-									}`
-								);
+				let start = tag.getStart();
+				let end = tag.getEnd();
 
-								code.appendLeft(node.body.getStart(), '=> ');
-								code.appendLeft(node.body.getEnd(), ')');
+				while (start > 0 && code.original[start] !== '\n') start -= 1;
+				while (end > 0 && code.original[end] !== '\n') end -= 1;
+				code.remove(start, end);
+			}
 
-								modified = true;
-							}
-						} else if (
-							ts.isVariableStatement(node) &&
-							node.declarationList.declarations.length === 1
-						) {
-							const variable_statement = node.declarationList.declarations[0];
+			if (type && satisfies) {
+				throw new Error('Cannot combine @type and @satisfies');
+			}
 
-							if (variable_statement.name.getText() === 'actions') {
-								code.appendLeft(variable_statement.getEnd(), ` satisfies ${name}`);
-							} else {
-								code.appendLeft(
-									variable_statement.name.getEnd(),
-									`: ${name}${generics ? `<${generics}>` : ''}`
-								);
-							}
+			if (ts.isFunctionDeclaration(node)) {
+				// convert function to a `const`
+				if (type || satisfies) {
+					const is_export = node.modifiers?.some(
+						(modifier) => modifier.kind === ts.SyntaxKind.ExportKeyword
+					);
 
-							modified = true;
-						} else {
-							throw new Error('Unhandled @type JsDoc->TS conversion: ' + js_code);
-						}
-					} else if (ts.isJSDocParameterTag(tag) && ts.isFunctionDeclaration(node)) {
-						const sanitised_param = tag
-							.getFullText()
-							.replace(/\s+/g, '')
-							.replace(/(^\*|\*$)/g, '');
+					const is_async = node.modifiers?.some(
+						(modifier) => modifier.kind === ts.SyntaxKind.AsyncKeyword
+					);
 
-						const [, param_type] = /@param{(.+)}(.+)/.exec(sanitised_param) ?? [];
+					code.overwrite(
+						node.getStart(),
+						node.name!.getStart(),
+						is_export ? `export const ` : `const `
+					);
 
-						let param_count = 0;
-						for (const param of node.parameters) {
-							if (count !== param_count) {
-								param_count++;
-								continue;
-							}
+					const modifier = is_async ? 'async ' : '';
+					code.appendLeft(
+						node.name!.getEnd(),
+						type ? `: ${type} = ${modifier}` : ` = ${modifier}(`
+					);
 
-							code.appendLeft(param.getEnd(), `:${param_type}`);
+					code.prependRight(node.body!.getStart(), '=> ');
 
-							param_count++;
-						}
+					code.appendLeft(node.getEnd(), satisfies ? `) satisfies ${satisfies};` : ';');
+				}
 
-						modified = true;
+				for (let i = 0; i < node.parameters.length; i += 1) {
+					if (params[i] !== undefined) {
+						code.appendLeft(node.parameters[i].getEnd(), `: ${params[i]}`);
 					}
-
-					count++;
 				}
 
-				if (modified) {
-					code.overwrite(comment.getStart(), comment.getEnd(), '');
+				if (returns) {
+					let start = node.body!.getStart();
+					while (code.original[start - 1] !== ')') start -= 1;
+					code.appendLeft(start, `: ${returns}`);
 				}
+			} else if (ts.isVariableStatement(node) && node.declarationList.declarations.length === 1) {
+				if (params.length > 0 || returns) {
+					throw new Error('TODO handle @params and @returns in variable declarations');
+				}
+
+				const declaration = node.declarationList.declarations[0];
+
+				if (type) {
+					code.appendLeft(declaration.name.getEnd(), `: ${type}`);
+				}
+
+				if (satisfies) {
+					let end = declaration.getEnd();
+					if (code.original[end - 1] === ';') end -= 1;
+					code.appendLeft(end, ` satisfies ${satisfies}`);
+				}
+			} else {
+				throw new Error('Unhandled @type JsDoc->TS conversion: ' + js_code);
+			}
+
+			if (!comment) {
+				// remove the whole thing
+				let start = jsdoc[0].getStart();
+				let end = jsdoc[0].getEnd();
+
+				while (start > 0 && code.original[start] !== '\n') start -= 1;
+				code.overwrite(start, end, '');
 			}
 		}
 
@@ -445,72 +490,43 @@ async function convert_to_ts(js_code: string, indent = '', offset = '') {
 				return `${indent}import type { ${Array.from(names).join(', ')} } from '${from}';`;
 			})
 			.join('\n');
-		const idxOfLastImport = [...ast.statements]
-			.reverse()
-			.find((statement) => ts.isImportDeclaration(statement))
-			?.getEnd();
-		const insertion_point = Math.max(
-			idxOfLastImport ? idxOfLastImport + 1 : 0,
-			js_code.includes('---cut---')
-				? js_code.indexOf('\n', js_code.indexOf('---cut---')) + 1
-				: js_code.includes('/// file:')
-					? js_code.indexOf('\n', js_code.indexOf('/// file:')) + 1
-					: 0
+
+		const last_import = [...ast.statements].findLast((statement) =>
+			ts.isImportDeclaration(statement)
 		);
-		code.appendLeft(insertion_point, offset + import_statements + '\n');
+
+		if (last_import) {
+			let i = last_import.getEnd();
+			while (js_code[i] !== '\n') i += 1;
+			i += 1;
+
+			code.appendLeft(i, import_statements + '\n');
+		} else {
+			code.prependLeft(0, offset + import_statements + '\n');
+		}
 	}
 
-	let transformed = await prettier.format(code.toString(), {
-		printWidth: 100,
-		parser: 'typescript',
-		useTabs: true,
-		singleQuote: true,
-		trailingComma: 'none'
-	});
+	let transformed = code.toString();
 
-	// Indent transformed's each line by 2
-	transformed = transformed
-		.replace(/\n$/, '')
-		.split('\n')
-		.map((line) => indent + line)
-		.join('\n');
+	return transformed === js_code ? undefined : transformed;
 
-	return transformed === js_code ? undefined : transformed.replace(/\n\s*\n\s*\n/g, '\n\n');
+	function get_type_info(expression: ts.JSDocTypeExpression) {
+		const type = expression
+			?.getText()!
+			.slice(1, -1) // remove surrounding `{` and `}`
+			.replace(/ \* ?/gm, '')
+			.replace(/import\('(.+?)'\)\.(\w+)(?:(<.+>))?/gms, (_, source, name, args = '') => {
+				const existing = imports.get(source);
+				if (existing) {
+					existing.add(name);
+				} else {
+					imports.set(source, new Set([name]));
+				}
 
-	async function get_type_info(tag: ts.JSDocTypeTag | ts.JSDocParameterTag) {
-		const type_text = tag.typeExpression?.getText();
-		let name = type_text?.slice(1, -1); // remove { }
+				return name + args;
+			});
 
-		const single_line_name = (
-			await prettier.format(name ?? '', {
-				printWidth: 1000,
-				parser: 'typescript',
-				semi: false,
-				singleQuote: true
-			})
-		).replace('\n', '');
-
-		const import_match = /import\('(.+?)'\)\.(\w+)(?:<(.+)>)?$/s.exec(single_line_name);
-
-		if (import_match) {
-			const [, from, _name, generics] = import_match;
-			name = _name;
-			const existing = imports.get(from);
-			if (existing) {
-				existing.add(name);
-			} else {
-				imports.set(from, new Set([name]));
-			}
-			if (generics !== undefined) {
-				return [
-					name,
-					generics
-						.replaceAll('*', '') // get rid of JSDoc asterisks
-						.replace('  }>', '}>') // unindent closing brace
-				];
-			}
-		}
-		return [name];
+		return type;
 	}
 }
 
@@ -552,7 +568,11 @@ function hash_graph(hash: Hash, file: string, seen = new Set<string>()) {
 function parse_options(source: string, language: string) {
 	METADATA_REGEX.lastIndex = 0;
 
-	const options: SnippetOptions = { file: null, link: false, copy: language !== 'dts' };
+	const options: SnippetOptions = {
+		file: null,
+		link: false,
+		copy: language !== '' && language !== 'dts'
+	};
 
 	source = source.replace(METADATA_REGEX, (_, key, value) => {
 		switch (key) {
@@ -582,10 +602,10 @@ function parse_options(source: string, language: string) {
  * This function turns them back into tabs (plus leftover spaces for e.g. `\t * some JSDoc`)
  */
 function adjust_tab_indentation(source: string, language: string) {
-	return source.replace(/^([\-\+])?((?:    )+)/gm, (match, prefix = '', spaces) => {
-		if ((prefix && language !== 'diff') || language === 'yaml') return match;
+	return source.replace(/^((?:    )+)/gm, (match, spaces) => {
+		if (language === 'yaml') return match;
 
-		return prefix + '\t'.repeat(spaces.length / 4) + ' '.repeat(spaces.length % 4);
+		return '\t'.repeat(spaces.length / 4) + ' '.repeat(spaces.length % 4);
 	});
 }
 
@@ -594,18 +614,31 @@ function replace_blank_lines(html: string) {
 	return html.replaceAll(/<div class='line'>(&nbsp;)?<\/div>/g, '<div class="line">\n</div>');
 }
 
+const delimiter_substitutes = {
+	'---': '             ',
+	'+++': '           ',
+	':::': '         '
+};
+
+function highlight_spans(content: string, classname: string) {
+	return content
+		.split('\n')
+		.map((line) => `<span class="${classname}">${line}</span>`)
+		.join('\n');
+}
+
 async function syntax_highlight({
+	prelude,
 	source,
 	filename,
 	language,
-	twoslashBanner,
-	options
+	check
 }: {
+	prelude: string;
 	source: string;
 	filename: string;
 	language: string;
-	twoslashBanner?: TwoslashBanner;
-	options: SnippetOptions;
+	check: boolean;
 }) {
 	let html = '';
 
@@ -616,63 +649,107 @@ async function syntax_highlight({
 				theme
 			})
 		);
-	} else if (/^(js|ts)$/.test(language)) {
+	} else if (language === 'js' || language === 'ts') {
+		/** We need to stash code wrapped in `---` highlights, because otherwise TS will error on e.g. bad syntax, duplicate declarations */
+		const redactions: string[] = [];
+
+		const redacted = source.replace(/( {13}(?:[^ ][^]+?) {13})/g, (_, content) => {
+			redactions.push(content);
+			return ' '.repeat(content.length);
+		});
+
 		try {
-			let banner = twoslashBanner?.(filename, source, language, options);
-
-			if (banner) {
-				banner = '// @filename: injected.d.ts\n' + banner;
-
-				if (source.includes('// @filename:')) {
-					source = source.replace('// @filename:', `${banner}\n\n// @filename:`);
-				} else {
-					source = source.replace(
-						/^(?!\/\/ @)/m,
-						`${banner}\n\n// @filename: index.${language}\n// ---cut---\n`
-					);
-				}
-			}
-
-			html = await codeToHtml(source, {
+			html = await codeToHtml(prelude + redacted, {
 				lang: 'ts',
 				theme,
-				transformers: [
-					transformerTwoslash({
-						twoslashOptions: {
-							compilerOptions: {
-								types: ['svelte', '@sveltejs/kit']
-							}
-						}
-					})
-				]
+				transformers: check
+					? [
+							transformerTwoslash({
+								twoslashOptions: {
+									compilerOptions: {
+										types: ['svelte', '@sveltejs/kit']
+									}
+								}
+							})
+						]
+					: []
 			});
+
+			html = html.replace(/ {27,}/g, () => redactions.shift()!);
+
+			if (check) {
+				// munge the twoslash output so that it renders sensibly. the order of operations
+				// here is important — we need to work backwards, to avoid corrupting the offsets
+
+				// first, strip out unwanted error lines
+				html = html.replace(
+					/<div class="twoslash-meta-line twoslash-error-line">[^]+?<\/div>/g,
+					'\n'
+				);
+
+				const replacements: Array<{ start: number; end: number; content: string }> = [];
+
+				for (const match of html.matchAll(/<div class="twoslash-popup-docs">([^]+?)<\/div>/g)) {
+					const content = await render_content_markdown('<twoslash>', match[1], { check: false });
+
+					replacements.push({
+						start: match.index,
+						end: match.index + match[0].length,
+						content: '<div class="twoslash-popup-docs">' + content + '</div>'
+					});
+				}
+
+				while (replacements.length > 0) {
+					const { start, end, content } = replacements.pop()!;
+					html = html.slice(0, start) + content + html.slice(end);
+				}
+
+				for (const match of html.matchAll(
+					/<span class="twoslash-popup-docs-tag"><span class="twoslash-popup-docs-tag-name">([^]+?)<\/span><span class="twoslash-popup-docs-tag-value">([^]+?)<\/span><\/span>/g
+				)) {
+					const tag = match[1];
+					let value = match[2];
+
+					let content = `<span class="tag">${tag}</span><span class="value">`;
+
+					if (tag === '@param' || tag === '@throws') {
+						const words = value.split(' ');
+						let param = words.shift()!;
+						value = words.join(' ');
+
+						if (tag === '@throws') {
+							if (param[0] !== '{' || param[param.length - 1] !== '}') {
+								throw new Error('TODO robustify @throws handling');
+							}
+
+							param = param.slice(1, -1);
+						}
+
+						content += `<span class="param">${param}</span> `;
+					}
+
+					content += marked.parseInline(value);
+					content += '</span>';
+
+					replacements.push({
+						start: match.index,
+						end: match.index + match[0].length,
+						content: '<div class="tags">' + content + '</div>'
+					});
+				}
+
+				while (replacements.length > 0) {
+					const { start, end, content } = replacements.pop()!;
+					html = html.slice(0, start) + content + html.slice(end);
+				}
+			}
 		} catch (e) {
 			console.error((e as Error).message);
-			console.warn(source);
+			console.warn(prelude + redacted);
 			throw new Error(`Error compiling snippet in ${filename}`);
 		}
 
 		html = replace_blank_lines(html);
-	} else if (language === 'diff') {
-		const lines = source.split('\n').map((content) => {
-			let type = null;
-			if (/^[\+\-]/.test(content)) {
-				type = content[0] === '+' ? 'inserted' : 'deleted';
-				content = content.slice(1);
-			}
-
-			return {
-				type,
-				content: content.replace(/</g, '&lt;')
-			};
-		});
-
-		html = `<pre class="language-diff" style="background-color: var(--shiki-color-background)"><code>${lines
-			.map((line) => {
-				if (line.type) return `<span class="${line.type}">${line.content}\n</span>`;
-				return line.content + '\n';
-			})
-			.join('')}</code></pre>`;
 	} else {
 		const highlighted = await codeToHtml(source, {
 			lang: SHIKI_LANGUAGE_MAP[language as keyof typeof SHIKI_LANGUAGE_MAP],
@@ -681,6 +758,21 @@ async function syntax_highlight({
 
 		html = replace_blank_lines(highlighted);
 	}
+
+	// munge shiki output: put whitespace outside `<span>` elements, so that
+	// highlight delimiters fall outside tokens
+	html = html.replace(/(<span[^>]+?>)(\s+)/g, '$2$1').replace(/(\s+)(<\/span>)/g, '$2$1');
+
+	html = html
+		.replace(/ {13}([^ ][^]+?) {13}/g, (_, content) => {
+			return highlight_spans(content, 'highlight remove');
+		})
+		.replace(/ {11}([^ ][^]+?) {11}/g, (_, content) => {
+			return highlight_spans(content, 'highlight add');
+		})
+		.replace(/ {9}([^ ][^]+?) {9}/g, (_, content) => {
+			return highlight_spans(content, 'highlight');
+		});
 
 	return indent_multiline_comments(html)
 		.replace(/\/\*…\*\//g, '…')

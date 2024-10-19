@@ -6,7 +6,8 @@ import * as yootils from 'yootils';
 import { get_depth } from '../../../utils/path.js';
 import { escape_html } from '../../../utils/escape.js';
 import { ready } from '../common/index.js';
-import type { Adapter, FileStub, Stub, Warning } from '$lib/tutorial';
+import type { Adapter } from '$lib/tutorial';
+import type { Item, File } from 'editor';
 
 const converter = new AnsiToHtml({
 	fg: 'var(--sk-text-3)'
@@ -20,14 +21,13 @@ export const state = new (class WCState {
 	base = $state.raw<string | null>(null);
 	error = $state.raw<Error | null>(null);
 	logs = $state.raw<string[]>([]);
-	warnings = $state.raw<Record<string, Warning[]>>({});
 })();
 
 export async function create(): Promise<Adapter> {
 	state.progress = { value: 0, text: 'loading files' };
 
 	const q = yootils.queue(1);
-	const q_per_file = new Map<string, Array<FileStub>>();
+	const q_per_file = new Map<string, Array<File>>();
 
 	/** Paths and contents of the currently loaded file stubs */
 	let current_stubs = stubs_to_map([]);
@@ -46,14 +46,6 @@ export async function create(): Promise<Adapter> {
 		}
 	});
 
-	let warnings: Record<string, import('$lib/tutorial').Warning[]> = {};
-	let timeout: any;
-
-	function schedule_to_update_warning(msec: number) {
-		clearTimeout(timeout);
-		timeout = setTimeout(() => (state.warnings = { ...warnings }), msec);
-	}
-
 	const log_stream = () =>
 		new WritableStream({
 			write(chunk) {
@@ -61,18 +53,7 @@ export async function create(): Promise<Adapter> {
 					// clear screen
 					state.logs = [];
 				} else if (chunk?.startsWith('svelte:warnings:')) {
-					const warn: Warning = JSON.parse(chunk.slice(16));
-					const filename = warn.filename.startsWith('/') ? warn.filename : '/' + warn.filename;
-					const current = warnings[filename];
-
-					if (!current) {
-						warnings[filename] = [warn];
-						// the exact same warning may be given multiple times in a row
-					} else if (!current.some((s) => s.code === warn.code && s.pos === warn.pos)) {
-						current.push(warn);
-					}
-
-					schedule_to_update_warning(100);
+					// TODO when does this happen?
 				} else {
 					const log = converter.toHtml(escape_html(chunk)).replace(/\n/g, '<br>');
 					state.logs = [...state.logs, log];
@@ -138,7 +119,7 @@ export async function create(): Promise<Adapter> {
 	return {
 		reset: (stubs) => {
 			return q.add(async () => {
-				const to_write: Stub[] = [];
+				const to_write: Item[] = [];
 
 				const force_delete = [];
 
@@ -151,7 +132,7 @@ export async function create(): Promise<Adapter> {
 							continue;
 						}
 
-						const current = current_stubs.get(stub.name) as FileStub;
+						const current = current_stubs.get(stub.name) as File;
 
 						if (current?.contents !== stub.contents) {
 							to_write.push(stub);
@@ -170,17 +151,6 @@ export async function create(): Promise<Adapter> {
 					...Array.from(current_stubs.keys()).filter((s) => !s.startsWith('/node_modules')),
 					...force_delete
 				];
-
-				// initialize warnings of written files
-				to_write
-					.filter((stub) => stub.type === 'file' && warnings[stub.name])
-					.forEach((stub) => (warnings[stub.name] = []));
-				// remove warnings of deleted files
-				to_delete
-					.filter((stubname) => warnings[stubname])
-					.forEach((stubname) => delete warnings[stubname]);
-
-				state.warnings = { ...warnings };
 
 				current_stubs = stubs_to_map(stubs);
 
@@ -248,10 +218,6 @@ export async function create(): Promise<Adapter> {
 
 					tree[basename] = to_file(file);
 
-					// initialize warnings of this file
-					warnings[file.name] = [];
-					schedule_to_update_warning(100);
-
 					await vm.mount(root);
 
 					if (will_restart) await wait_for_restart_vite();
@@ -272,7 +238,7 @@ export async function create(): Promise<Adapter> {
 	};
 }
 
-function is_config(file: Stub) {
+function is_config(file: Item) {
 	return file.type === 'file' && is_config_path(file.name);
 }
 
@@ -299,7 +265,7 @@ function wait_for_restart_vite() {
 	});
 }
 
-function convert_stubs_to_tree(stubs: Stub[], depth = 1) {
+function convert_stubs_to_tree(stubs: Item[], depth = 1) {
 	const tree: FileSystemTree = {};
 
 	for (const stub of stubs) {
@@ -319,7 +285,7 @@ function convert_stubs_to_tree(stubs: Stub[], depth = 1) {
 	return tree;
 }
 
-function to_file(file: FileStub) {
+function to_file(file: File) {
 	// special case
 	if (file.name === '/src/app.html' || file.name === '/src/error.html') {
 		const contents = file.contents + '<script type="module" src="/src/__client.js"></script>';
@@ -336,7 +302,7 @@ function to_file(file: FileStub) {
 	};
 }
 
-function stubs_to_map(files: Stub[], map = new Map<string, Stub>()) {
+function stubs_to_map(files: Item[], map = new Map<string, Item>()) {
 	for (const file of files) {
 		map.set(file.name, file);
 	}

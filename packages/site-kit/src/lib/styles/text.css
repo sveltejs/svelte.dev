@@ -1,31 +1,5 @@
 /* TODO all this should probably be moved into Text.svelte */
 
-.language-diff :where(.inserted, .deleted) {
-	position: relative;
-}
-
-.language-diff :where(.inserted) {
-	color: var(--sk-code-diff-inserted);
-}
-
-.language-diff :where(.deleted) {
-	color: var(--sk-code-diff-removed);
-	user-select: none;
-}
-
-.language-diff :where(.inserted, .deleted)::before {
-	position: absolute;
-	left: -1ch;
-}
-
-.language-diff :where(.inserted)::before {
-	content: '+';
-}
-
-.language-diff :where(.deleted)::before {
-	content: '-';
-}
-
 /** make long comments wrap on mobile */
 :where(.token.comment.wrapped) {
 	display: block;
@@ -33,30 +7,6 @@
 	padding-left: calc(var(--indent) + 2ch);
 	text-indent: calc(-1 * var(--indent) - 2ch);
 	min-height: 1.35em;
-}
-
-.api-section {
-	background: var(--sk-back-4);
-	padding: 1rem;
-	margin-bottom: 1rem;
-	max-width: var(--sk-page-content-width);
-	border-radius: var(--sk-border-radius);
-}
-
-.ts-block > pre {
-	--shiki-color-background: var(--sk-code-ts-bg);
-	margin: 0;
-	border-radius: 0;
-	box-shadow: none;
-	background: var(--sk-code-ts-bg);
-}
-
-.ts-block .ts-block-property p {
-	margin: 1rem 0;
-}
-
-.ts-block-property pre {
-	margin: 1rem 0;
 }
 
 .ts-block-property > pre {
@@ -79,10 +29,18 @@
 	margin: 0rem -1rem 0rem 1rem;
 }
 
-.ts-block-property-bullets .tag {
-	font-size: 1.4rem;
-	text-transform: uppercase;
-	color: #666;
+.ts-block-property-bullets {
+	li {
+		&::before {
+			content: none !important;
+		}
+	}
+
+	.tag {
+		font: var(--sk-font-ui-medium);
+		text-transform: uppercase;
+		color: var(--sk-text-4);
+	}
 }
 
 .ts-block-property ul:last-child {

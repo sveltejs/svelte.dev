@@ -83,7 +83,7 @@
 			color: var(--sk-text-4);
 			text-transform: uppercase;
 			padding: calc(0.5 * var(--padding)) var(--padding);
-			font-size: var(--sk-font-size-ui-medium);
+			font: var(--sk-font-ui-medium);
 			z-index: 2;
 			user-select: none;
 
@@ -121,6 +121,7 @@
 		padding: 1.2rem var(--padding) 1.2rem calc(4rem + var(--padding));
 		overflow: hidden;
 		background: var(--background);
+		font: var(--sk-font-ui-medium);
 
 		&::before {
 			content: '';
@@ -167,7 +168,7 @@
 		strong {
 			width: 100%;
 			overflow: hidden;
-			font-size: var(--sk-font-size-ui-medium);
+			font: var(--sk-font-ui-medium);
 			color: var(--sk-text-2);
 
 			span {
@@ -177,7 +178,7 @@
 					content: ' • ';
 					position: relative;
 					color: var(--sk-text-4);
-					font-size: var(--sk-font-size-ui-small);
+					font: var(--sk-font-ui-small);
 					top: -0.1rem;
 				}
 			}
@@ -212,7 +213,7 @@
 
 			span {
 				color: var(--sk-text-3);
-				font-size: var(--sk-font-size-ui-small);
+				font: var(--sk-font-ui-small);
 				margin: 0.4rem 0 0 0;
 			}
 

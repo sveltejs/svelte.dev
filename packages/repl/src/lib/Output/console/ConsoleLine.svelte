@@ -201,7 +201,7 @@
 		gap: 1rem;
 		width: 100%;
 		font-size: 1.2rem;
-		font-family: var(--sk-font-mono);
+		font-family: var(--sk-font-family-mono);
 		align-items: center;
 	}
 
@@ -219,7 +219,7 @@
 		grid-template-columns: minmax(0, auto) minmax(auto, 1fr);
 		grid-gap: 0 2rem;
 		font-size: 1.2rem;
-		font-family: var(--sk-font-mono);
+		font-family: var(--sk-font-family-mono);
 		margin: 0 1rem 0.4rem calc(1em + var(--indent));
 		overflow: hidden;
 
@@ -254,7 +254,7 @@
 
 	.meta {
 		color: var(--sk-text-2, #666);
-		font-family: var(--sk-font-body) !important;
+		font-family: var(--sk-font-family-body) !important;
 		font-size: 12px;
 	}
 

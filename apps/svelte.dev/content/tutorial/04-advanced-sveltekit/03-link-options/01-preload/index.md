@@ -20,7 +20,6 @@ Navigating to `/slow-a` will now be noticeably faster. Starting navigation on ho
 You can put the attribute on individual links, or on any element that _contains_ links. The default project template includes the attribute on the `<body>` element:
 
 ```html
-/// no-file
 <body data-sveltekit-preload-data>
 	%sveltekit.body%
 </body>
@@ -43,7 +42,6 @@ Using `data-sveltekit-preload-data` may sometimes result in false positives - i
 You can also initiate preloading programmatically with `preloadCode` and `preloadData` imported from `$app/navigation`:
 
 ```js
-/// no-file
 import { preloadCode, preloadData } from '$app/navigation';
 
 // preload the code and data needed to navigate to /foo

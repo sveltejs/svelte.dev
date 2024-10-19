@@ -89,17 +89,21 @@ const packages: Package[] = [
 			const svelte_kit_types = svelte_kit_module!.types!;
 			const config = svelte_kit_types.find((t) => t.name === 'Config')!;
 			const kit_config = svelte_kit_types.find((t) => t.name === 'KitConfig')!;
-			const full_config = { ...config };
-			const full_kit_config = { ...kit_config };
+			const full_config = structuredClone(config);
+			const full_kit_config = structuredClone(kit_config);
 
 			// special case — we want these to be on a separate page
-			config.children = kit_config.children = undefined;
-			config.bullets = kit_config.bullets = undefined;
-			config.snippet = kit_config.snippet = '';
+			config.overloads = kit_config.overloads = [];
 			config.comment = kit_config.comment =
 				'See the [configuration reference](/docs/kit/configuration) for details.';
 
-			svelte_kit_module!.types = [full_config, full_kit_config];
+			modules.push({
+				name: 'Configuration',
+				comment: '',
+				exports: [],
+				types: [full_config, full_kit_config],
+				exempt: false
+			});
 
 			return modules;
 		}

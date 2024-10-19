@@ -1,14 +1,12 @@
 <script>
-	import { Blurb, Footer, TrySection } from '@sveltejs/site-kit/home';
+	import { Footer } from '@sveltejs/site-kit/home';
+	import { Section } from '@sveltejs/site-kit/components';
 	import Hero from './_home/Hero.svelte';
 	import Supporters from './_home/Supporters/index.svelte';
-	import WhosUsingSvelte from './_home/WhosUsingSvelte/index.svelte';
-	import Svelte from './_home/Svelte.svelte';
-	import Features from './_home/Features.svelte';
-	import Deployment from './_home/Deployment.svelte';
-	import Showcase from './_home/Showcase.svelte';
-	import './_home/common.css';
-	import HeroSvelteKit from './_home/HeroSvelteKit.svelte';
+	import Testimonials from './_home/Testimonials.svelte';
+	import Companies from './_home/Companies.svelte';
+	import Video from './_home/Video.svelte';
+	import Community from './_home/Community.svelte';
 </script>
 
 <svelte:head>
@@ -24,99 +22,38 @@
 
 	<Hero />
 
-	<Blurb>
-		{#snippet one()}
-			<div>
-				<h2>fast</h2>
-				<p>
-					Svelte shifts as much work as possible out of the browser and into your build step. No
-					more manual optimisations — just faster, smaller and more efficient apps.
-				</p>
-			</div>
-		{/snippet}
+	<Testimonials />
 
-		{#snippet two()}
-			<div>
-				<h2>fun</h2>
-				<p>
-					Write concise components using languages you already know — HTML, CSS and JavaScript. Get
-					things done without fighting the framework. Code with joy.
-				</p>
-			</div>
-		{/snippet}
+	<Companies />
 
-		{#snippet three()}
-			<div>
-				<h2>flexible</h2>
-				<p>
-					Svelte scales from tiny widgets all the way to big full-stack applications. State
-					management, motion primitives, form bindings and more — all built-in.
-				</p>
-			</div>
-		{/snippet}
-	</Blurb>
+	<Section>
+		<figure>
+			<Video />
+			<figcaption>
+				<a href="https://www.offerzen.com/community/svelte-origins-documentary"
+					>Watch the full Svelte Origins documentary</a
+				>
+			</figcaption>
+		</figure>
+	</Section>
 
-	<TrySection />
-
-	<Svelte />
-
-	<HeroSvelteKit />
-
-	<Features />
-
-	<Deployment />
-
-	<Showcase />
-
-	<WhosUsingSvelte />
+	<Community />
 
 	<Supporters />
 
-	<Footer
-		links={{
-			resources: [
-				{
-					title: 'documentation',
-					href: '/docs'
-				},
-				{
-					title: 'tutorial',
-					href: '/tutorial'
-				},
-				{
-					title: 'playground',
-					href: '/playground'
-				},
-				{
-					title: 'blog',
-					href: '/blog'
-				}
-			],
-			connect: [
-				{
-					title: 'github',
-					href: 'https://github.com/sveltejs/svelte'
-				},
-				{
-					title: 'opencollective',
-					href: 'https://opencollective.com/svelte'
-				},
-				{
-					title: 'discord',
-					href: '/chat'
-				},
-				{
-					title: 'twitter',
-					href: 'https://twitter.com/sveltejs'
-				}
-			]
-		}}
-	>
-		{#snippet license()}
-			<span>
-				Svelte is <a href="https://github.com/sveltejs/svelte">free and open source software</a> released
-				under the MIT license
-			</span>
-		{/snippet}
-	</Footer>
+	<Footer />
 </div>
+
+<style>
+	figcaption {
+		font: var(--sk-font-body-small);
+	}
+
+	.home :global {
+		@media (min-width: 800px) {
+			h2 {
+				font: var(--sk-font-h1);
+			}
+		}
+	}
+</style>

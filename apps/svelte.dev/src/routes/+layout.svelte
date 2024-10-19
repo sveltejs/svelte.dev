@@ -38,21 +38,7 @@
 
 <Shell nav_visible={$page.route.id !== '/(authed)/playground/[id]/embed'}>
 	{#snippet top_nav()}
-		<Nav title={data.nav_title} links={data.nav_links}>
-			{#snippet search()}
-				<Search />
-			{/snippet}
-
-			{#snippet external_links()}
-				<a href="/chat" data-icon="discord" title="Discord Chat">
-					<span>Discord</span>
-				</a>
-
-				<a href="https://github.com/sveltejs/svelte" data-icon="github" title="GitHub Repo">
-					<span>GitHub</span>
-				</a>
-			{/snippet}
-		</Nav>
+		<Nav title={data.nav_title} links={data.nav_links} />
 	{/snippet}
 
 	{#snippet children()}
@@ -67,56 +53,3 @@
 {#if browser}
 	<SearchBox />
 {/if}
-
-<style>
-	:global(:root) {
-		color-scheme: light dark;
-	}
-
-	:global(html, body) {
-		height: 100%;
-		width: 100%;
-	}
-
-	@media (min-width: 800px) {
-		[data-icon] {
-			background: no-repeat 50% 50%;
-			background-size: calc(100% - 1rem) auto;
-			padding: 0 0.5rem;
-			opacity: 0.6;
-
-			:global(.dark) & {
-				opacity: 0.8;
-			}
-
-			/* visually hidden, but visible to screen readers */
-			span {
-				clip: rect(0 0 0 0);
-				clip-path: inset(50%);
-				height: 1px;
-				overflow: hidden;
-				position: absolute;
-				white-space: nowrap;
-				width: 1px;
-			}
-		}
-
-		[data-icon='discord'] {
-			width: 3.4rem;
-			background-image: url($lib/icons/discord-black.svg);
-
-			:global(.dark) & {
-				background-image: url($lib/icons/discord-white.svg);
-			}
-		}
-
-		[data-icon='github'] {
-			width: 3rem;
-			background-image: url($lib/icons/github-black.svg);
-
-			:global(.dark) & {
-				background-image: url($lib/icons/github-white.svg);
-			}
-		}
-	}
-</style>

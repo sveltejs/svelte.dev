@@ -2,7 +2,8 @@ import { browser } from '$app/environment';
 import { page } from '$app/stores';
 import type { state as WCState } from '$lib/tutorial/adapters/webcontainer/index.svelte';
 import type { state as RollupState } from '$lib/tutorial/adapters/rollup/index.svelte';
-import type { Adapter, FileStub, Stub } from '$lib/tutorial';
+import type { Adapter } from '$lib/tutorial';
+import type { File, Item } from 'editor';
 import { needs_webcontainers } from './shared';
 
 let initial_load = true;
@@ -30,8 +31,6 @@ export const adapter_state = new (class {
 			status: 'initialising'
 		}
 	);
-	/** Compiler warnings */
-	warnings = $derived((use_rollup ? rollup_state.warnings : wc_state.warnings) || {});
 })();
 
 if (browser) {
@@ -111,7 +110,7 @@ function publish(event: EventName) {
 	subscriptions.get(event)?.forEach((fn) => fn());
 }
 
-export async function reset(files: Stub[]) {
+export async function reset(files: Item[]) {
 	try {
 		const adapter = await get_adapter();
 		const should_reload = await adapter.reset(files);
@@ -126,7 +125,7 @@ export async function reset(files: Stub[]) {
 	}
 }
 
-export async function update(file: FileStub) {
+export async function update(file: File) {
 	const adapter = await get_adapter();
 	const should_reload = await adapter.update(file);
 

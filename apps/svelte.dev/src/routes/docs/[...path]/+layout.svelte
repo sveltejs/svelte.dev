@@ -24,7 +24,7 @@
 	}
 
 	.page {
-		padding: var(--sk-page-padding-top) var(--sk-page-padding-side);
+		padding: var(--sk-page-padding-top) var(--sk-page-padding-side) var(--sk-page-padding-bottom);
 
 		min-width: 0 !important;
 	}

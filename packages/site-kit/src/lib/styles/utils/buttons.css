@@ -1,0 +1,28 @@
+.raised {
+	border-radius: var(--sk-border-radius);
+	border-style: solid;
+	border-color: var(--sk-raised-color);
+	border-width: var(--sk-raised-width);
+
+	&:hover {
+		border-color: var(--sk-raised-hover-color);
+	}
+
+	&:active {
+		border-color: var(--sk-raised-active-color);
+		border-width: var(--sk-raised-active-width);
+	}
+
+	&:disabled {
+		border-color: var(--sk-back-5);
+		border-width: 1px;
+	}
+}
+
+.icon {
+	width: 3.2rem;
+	height: 3.2rem;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: 2.3rem 2.3rem;
+}

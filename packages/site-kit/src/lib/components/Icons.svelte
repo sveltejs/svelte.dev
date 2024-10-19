@@ -137,16 +137,12 @@ Provides a list of svg icons that can be referenced through the `Icon` component
 			/>
 		</symbol>
 
-		<symbol id="chevron" class="icon" viewBox="0 0 24 24">
-			<path d="M2,7 L12,17 L20,7" />
-		</symbol>
-
 		<symbol id="chevron-up" class="icon" viewBox="0 0 24 24">
 			<polyline points="18 15 12 9 6 15" />
 		</symbol>
 
 		<symbol id="chevron-down" class="icon" viewBox="0 0 24 24">
-			<polyline points="6 9 12 15 18 9" />
+			<path d="m6 9 6 6 6-6" />
 		</symbol>
 
 		<symbol id="delete" class="icon" viewBox="0 0 24 24">

@@ -29,7 +29,6 @@
 		max-width: 64rem;
 		margin: 0 auto;
 		padding: 8rem 1rem;
-		font-family: var(--sk-font-ui);
 	}
 
 	form {
@@ -43,8 +42,7 @@
 		display: block;
 		width: 100%;
 		height: 100%;
-		font-family: inherit;
-		font-size: var(--sk-font-size-h2);
+		font: var(--sk-font-ui-large);
 		border: none;
 		border-radius: var(--sk-border-radius);
 		padding: 2rem 2rem 2rem 5rem;

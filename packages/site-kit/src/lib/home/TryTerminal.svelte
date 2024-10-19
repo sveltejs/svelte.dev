@@ -50,11 +50,11 @@
 		padding-top: 0.4rem;
 		align-items: center;
 		justify-content: center;
-		font-family: var(--sk-font-ui);
+		font-family: var(--sk-font-family-ui);
 	}
 
 	.terminal pre {
-		font-size: var(--sk-font-size-code);
+		font: var(--sk-font-mono);
 		padding: 1em;
 	}
 

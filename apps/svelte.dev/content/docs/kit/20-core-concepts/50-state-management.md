@@ -20,7 +20,7 @@ export function load() {
 	return { user };
 }
 
-/** @type {import('./$types').Actions} */
+/** @satisfies {import('./$types').Actions} */
 export const actions = {
 	default: async ({ request }) => {
 		const data = await request.formData();
@@ -36,7 +36,7 @@ export const actions = {
 
 The `user` variable is shared by everyone who connects to this server. If Alice submitted an embarrassing secret, and Bob visited the page after her, Bob would know Alice's secret. In addition, when Alice returns to the site later in the day, the server may have restarted, losing her data.
 
-Instead, you should _authenticate_ the user using [`cookies`](load#cookies) and persist the data to a database.
+Instead, you should _authenticate_ the user using [`cookies`](load#Cookies) and persist the data to a database.
 
 ## No side-effects in load
 
@@ -64,18 +64,19 @@ export async function load({ fetch }) {
 
 As with the previous example, this puts one user's information in a place that is shared by _all_ users. Instead, just return the data...
 
-```diff
+```js
 /// file: +page.js
+/** @type {import('./$types').PageServerLoad} */
 export async function load({ fetch }) {
 	const response = await fetch('/api/user');
 
-+	return {
-+		user: await response.json()
-+	};
++++	return {
+		user: await response.json()
+	};+++
 }
 ```
 
-...and pass it around to the components that need it, or use [`$page.data`](load#$page-data).
+...and pass it around to the components that need it, or use [`$page.data`](load#$page.data).
 
 If you're not using SSR, then there's no risk of accidentally exposing one user's data to another. But you should still avoid side-effects in your `load` functions — your application will be much easier to reason about without them.
 
@@ -144,18 +145,18 @@ When you navigate around your application, SvelteKit reuses existing layout and 
 
 Instead, we need to make the value [_reactive_](https://learn.svelte.dev/tutorial/reactive-assignments):
 
-```diff
+```svelte
 /// file: src/routes/blog/[slug]/+page.svelte
 <script>
 	/** @type {import('./$types').PageData} */
 	export let data;
 
-+	$: wordCount = data.content.split(' ').length;
-+	$: estimatedReadingTime = wordCount / 250;
++++	$: wordCount = data.content.split(' ').length;
+	$: estimatedReadingTime = wordCount / 250;+++
 </script>
 ```
 
-> If your code in `onMount` and `onDestroy` has to run again after navigation you can use [afterNavigate]($app-navigation#afterNavigate) and [beforeNavigate]($app-navigation#beforeNavigate) respectively.
+> [!NOTE] If your code in `onMount` and `onDestroy` has to run again after navigation you can use [afterNavigate]($app-navigation#afterNavigate) and [beforeNavigate]($app-navigation#beforeNavigate) respectively.
 
 Reusing components like this means that things like sidebar scroll state are preserved, and you can easily animate between changing values. In the case that you do need to completely destroy and remount a component on navigation, you can use this pattern:
 

@@ -14,8 +14,7 @@ const config = {
 					return;
 				}
 
-				// TODO fail the build
-				console.warn(`${warning.path}#${warning.id}: ${warning.referrers.join(', ')}`);
+				throw new Error(warning.message);
 			}
 		}
 	}

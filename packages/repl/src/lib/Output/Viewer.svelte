@@ -110,6 +110,35 @@
 				await proxy?.eval(`
 					${injectedJS}
 
+					if (!window.__setup_focus_handling) {
+						console.log('setting up focus handling');
+
+						let can_focus = false;
+
+						window.addEventListener('pointerdown', (e) => (can_focus = true));
+						window.addEventListener('pointerup', (e) => (can_focus = false));
+						window.addEventListener('keydown', (e) => (can_focus = true));
+						window.addEventListener('keyup', (e) => (can_focus = false));
+
+						/**
+						 * The iframe sometimes takes focus control in ways we can't prevent
+						 * while the editor is focused. Refocus the editor in these cases.
+						 */
+						window.addEventListener('focusin', (e) => {
+							// if focusin happened as a result of a mouse/keyboard event, allow it
+							if (can_focus) return;
+
+							// if \`e.target\` is the \`<body>\` and there's a \`relatedTarget\`,
+							// assume the focusin was the result of a user navigation — allow it
+							if (e.target.tagName === 'BODY' && e.relatedTarget) return;
+
+							// otherwise, broadcast an event that causes the editor to reclaim focus
+							parent.postMessage({ type: 'iframe_took_focus' }, '*');
+						});
+
+						window.__setup_focus_handling = true;
+					}
+
 					{
 						const styles = document.querySelectorAll('style[id^=svelte-]');
 
@@ -321,15 +350,14 @@
 	}
 
 	button {
-		color: var(--sk-text-2, #999);
-		font-size: var(--sk-font-size-ui-small);
-		font-family: var(--sk-font-ui);
+		color: var(--sk-text-2);
+		font: var(--sk-font-ui-small);
 		text-transform: uppercase;
 		display: block;
-	}
 
-	button:hover {
-		color: var(--sk-text-1, #333);
+		&:hover {
+			color: var(--sk-text-1);
+		}
 	}
 
 	.overlay {

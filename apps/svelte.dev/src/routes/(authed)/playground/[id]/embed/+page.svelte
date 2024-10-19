@@ -52,11 +52,8 @@
 			{relaxed}
 			can_escape
 			injectedJS={mapbox_setup}
-			showModified
-			showAst
 			previewTheme={$theme.current}
 			embedded
-			vim={false}
 		/>
 	{/if}
 </div>
@@ -71,7 +68,6 @@
 		background-color: var(--sk-back-1);
 		overflow: hidden;
 		box-sizing: border-box;
-		--pane-controls-h: 4.2rem;
 		display: flex;
 		flex-direction: column;
 	}

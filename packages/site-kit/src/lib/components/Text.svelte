@@ -35,15 +35,34 @@
 			const ts = !!parent.querySelector('.ts-toggle:checked');
 			const code = parent.querySelector(`pre:${ts ? 'last' : 'first'}-of-type code`) as HTMLElement;
 
-			let result = '';
-			for (const node of code.childNodes ?? []) {
-				if (!(node as HTMLElement).classList.contains('deleted')) {
-					result += node.textContent!.trimEnd() + '\n';
-				}
+			navigator.clipboard.writeText(get_text(code));
+		}
+	}
+
+	function get_text(node: HTMLElement) {
+		let result = '';
+
+		for (const child of node.childNodes ?? []) {
+			if (child.nodeType === 3) {
+				result += (child as Text).data;
 			}
 
-			navigator.clipboard.writeText(result.trim());
+			if (child.nodeType === 1) {
+				const classes = (child as HTMLElement).classList;
+
+				if (classes.contains('deleted') || classes.contains('twoslash-popup-container')) {
+					continue;
+				}
+
+				if (classes.contains('twoslash-meta-line') || classes.contains('twoslash-error-line')) {
+					result += '\n';
+				} else {
+					result += get_text(child as HTMLElement);
+				}
+			}
 		}
+
+		return result;
 	}
 </script>
 
@@ -56,13 +75,19 @@
 		h2,
 		h3 {
 			max-width: 100%;
-			text-overflow: ellipsis;
-			overflow: hidden;
-			padding: 0 1em 0 0;
+			padding: 0 2.4rem 0 0;
 
 			@media (min-width: 768px) {
-				margin: 0 0 0 -2em;
-				padding: 0 1em 0 2em;
+				margin: 0 0 0 -4.8rem;
+				padding: 0 2.4rem 0 4.8rem;
+			}
+
+			/* we can't use `text-overflow` on the heading itself,
+			   because `overflow: hidden` defeats `scroll-margin` */
+			& > span {
+				display: block;
+				overflow: hidden;
+				text-overflow: ellipsis;
 			}
 		}
 
@@ -74,13 +99,8 @@
 			margin-top: 5rem;
 		}
 
-		p,
-		ol,
-		ul {
-			margin: 1em 0;
-		}
-
-		code {
+		code:not(pre *),
+		kbd {
 			white-space: pre-wrap;
 			padding: 0.2rem 0.4rem;
 			margin: 0 0.2rem;
@@ -122,8 +142,7 @@
 					position: relative;
 					top: 0.1rem;
 					flex: 1;
-					font-family: var(--sk-font-ui);
-					font-size: var(--sk-font-size-ui-small);
+					font: var(--sk-font-ui-small);
 					color: var(--sk-text-3);
 					text-overflow: ellipsis;
 					overflow: hidden;
@@ -155,7 +174,7 @@
 						justify-content: center;
 						align-items: center;
 						font-size: 1.2rem;
-						font-family: var(--sk-font-mono);
+						font-family: var(--sk-font-family-mono);
 						color: var(--sk-text-2);
 					}
 
@@ -269,13 +288,23 @@
 					text-decoration: none;
 				}
 
-				/* TODO what is this for? */
-				&.border {
-					border-left: 5px solid var(--sk-theme-2);
-				}
+				.highlight {
+					--color: rgba(220, 220, 0, 0.2);
+					background: var(--color);
+					outline: 2px solid var(--color);
+					border-radius: 2px;
 
-				&.language-diff code {
-					color: var(--sk-code-diff-base);
+					&.add {
+						--color: rgba(0, 255, 0, 0.18);
+					}
+
+					&.remove {
+						--color: rgba(255, 0, 0, 0.1);
+
+						:root.dark & {
+							--color: rgba(255, 0, 0, 0.27);
+						}
+					}
 				}
 			}
 		}
@@ -301,19 +330,23 @@
 		a.permalink {
 			position: absolute !important;
 			display: block;
-			background: url(../icons/link.svg) 50% 50% no-repeat;
-			background-size: 1em 1em;
-			width: 1.2em;
-			height: 0.8em;
-			top: 0.2em;
+			background: url(../icons/hash-light.svg) 50% 50% no-repeat;
+			background-size: 2.4rem 2.4rem;
+			width: 2.6rem;
+			height: 2.2rem;
+			top: calc(50% - 1rem);
 
 			@media (max-width: 767px) {
 				right: 0;
 				scale: 0.8;
 			}
 
+			:root.dark & {
+				background-image: url(../icons/hash-dark.svg);
+			}
+
 			@media (min-width: 768px) {
-				left: 0.7em;
+				left: 1.6rem;
 				opacity: 0;
 				transition: opacity 0.2s;
 
@@ -336,7 +369,7 @@
 			li::before {
 				content: '';
 				position: absolute;
-				top: 1.4rem;
+				top: calc(50% - 0.3rem);
 				left: -1.8rem;
 				background-color: var(--sk-back-5);
 				width: 0.6rem;
@@ -365,7 +398,7 @@
 		}
 
 		small {
-			font-size: var(--sk-font-size-body-small);
+			font: var(--sk-font-body-small);
 			float: right;
 			pointer-events: all;
 			color: var(--sk-theme-1);
@@ -376,8 +409,15 @@
 			--primary-hsl: var(--sk-theme-1-hsl);
 			color: var(--sk-text-1);
 			padding: 0 0 0 4.5rem;
-			font-style: italic;
-			background: url($lib/icons/lightbulb.svg) no-repeat 0.5rem 0 / 3rem;
+
+			&.note,
+			&:has(details.legacy) {
+				&::before {
+					content: none;
+				}
+
+				background: url($lib/icons/lightbulb.svg) no-repeat 0.5rem 0 / 2.6rem;
+			}
 
 			&:first-child {
 				margin-top: 0;
@@ -402,13 +442,15 @@
 				}
 			}
 
-			em,
-			i {
-				font-style: normal;
-			}
-
-			code {
-				font-style: normal;
+			&::before {
+				content: '“';
+				position: absolute;
+				font-size: 6.4em;
+				line-height: 1;
+				left: 0;
+				top: 0;
+				font-family: var(--sk-font-family-heading);
+				color: var(--sk-text-4);
 			}
 
 			@media (max-width: 767px) {
@@ -418,7 +460,9 @@
 			}
 		}
 
-		details.legacy {
+		details {
+			position: relative;
+
 			&::before,
 			&::after {
 				content: '';
@@ -467,16 +511,14 @@
 				align-items: center;
 				height: 3rem;
 				color: var(--sk-text-4);
-				font-family: var(--sk-font-ui);
-				font-style: normal;
-				font-size: var(--sk-font-size-ui-small);
+				font: var(--sk-font-body-small);
 				user-select: none;
 
 				&:hover {
 					color: var(--sk-text-3);
 				}
 
-				&::after {
+				.legacy &::after {
 					position: absolute;
 					display: flex;
 					align-items: center;
@@ -496,7 +538,7 @@
 				& > summary {
 					margin-bottom: 1.4rem;
 
-					&::after {
+					.legacy &::after {
 						content: 'hide all';
 					}
 				}

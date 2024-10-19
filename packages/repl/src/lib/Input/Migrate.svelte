@@ -1,23 +1,28 @@
 <script lang="ts">
 	import { get_repl_context } from '../context';
 
+	let { can_migrate }: { can_migrate: boolean } = $props();
+
 	const { migrate } = get_repl_context();
 </script>
 
-<div class="container">
-	<button on:click={migrate} title="Migrate this component towards the new syntax">migrate</button>
-</div>
+<button
+	class="raised"
+	disabled={!can_migrate}
+	onclick={migrate}
+	title="Migrate this component towards the new syntax"
+>
+	migrate
+</button>
 
 <style>
-	/* TODO this is duplicated with RunesInfo.svelte */
 	button {
 		position: relative;
 		display: flex;
+		align-items: center;
 		text-transform: uppercase;
-		font-size: var(--sk-font-size-ui-small);
-		padding: 0.8rem;
-		gap: 0.5rem;
-		margin-right: 0.3rem;
-		z-index: 9999;
+		font: var(--sk-font-ui-small);
+		padding: 0 0.8rem;
+		height: 3.2rem;
 	}
 </style>

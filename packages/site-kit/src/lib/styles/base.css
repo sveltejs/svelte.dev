@@ -18,7 +18,7 @@ body {
 }
 
 body {
-	font-family: var(--sk-font-body);
+	font-family: var(--sk-font-family-body);
 	line-height: 1.5;
 	color: var(--sk-text-2);
 	background-color: var(--sk-back-1);
@@ -44,8 +44,16 @@ body {
 p,
 ul,
 ol {
-	font-size: var(--sk-font-size-body);
+	font: var(--sk-font-body);
 	margin: 1em 0;
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
 }
 
 a {
@@ -60,24 +68,21 @@ a:hover {
 }
 
 h1 {
-	font-size: var(--sk-font-size-h1);
+	font: var(--sk-font-h1);
 }
 
 h2 {
-	font-size: var(--sk-font-size-h2);
+	font: var(--sk-font-h2);
 }
 
 h3 {
-	font-size: var(--sk-font-size-h3);
+	font: var(--sk-font-h3);
 }
 
 h1,
 h2,
 h3 {
 	position: relative;
-	font-family: var(--sk-font-heading);
-	font-weight: 500;
-	line-height: 1.2;
 	text-wrap: balance;
 	color: var(--sk-text-1);
 }
@@ -88,20 +93,23 @@ strong {
 
 code,
 kbd {
-	font-family: var(--sk-font-mono);
+	font-size: 0.666em;
+	position: relative;
+	border-radius: var(--sk-border-radius);
+	white-space: nowrap;
+	color: var(--sk-text-2);
+	background: var(--sk-back-4);
+	line-height: 1.7;
 }
 
 code {
-	font-size: 0.666em;
-	position: relative;
-	border-radius: 0.3em;
-	white-space: nowrap;
-	color: var(--sk-text-2);
-	-webkit-font-smoothing: initial;
-	padding: 0.4rem;
+	font-family: var(--sk-font-family-mono);
 	margin: 0 0.2rem;
-	background: var(--sk-back-4);
-	line-height: 1.7;
+	padding: 0.4rem;
+}
+
+kbd {
+	font-family: var(--sk-font-family-ui);
 }
 
 pre {
@@ -114,7 +122,11 @@ pre code {
 	background-color: transparent;
 	padding: 0;
 	margin: 0;
-	font-size: var(--sk-font-size-code);
+	font-size: var(--sk-font-size-mono);
+}
+
+header {
+	margin-bottom: 4rem;
 }
 
 ::selection {
@@ -129,7 +141,7 @@ blockquote {
 	max-width: var(--sk-page-content-width);
 }
 
-blockquote :where(p, ul) {
+blockquote :where(p, ul, ol) {
 	font-size: var(--sk-font-size-body-small);
 }
 
@@ -140,7 +152,7 @@ blockquote :last-child {
 /*  buttons -------------------------------- */
 input,
 button {
-	font-family: var(--sk-font-ui);
+	font-family: var(--sk-font-family-ui);
 	font-size: inherit;
 }
 
@@ -148,32 +160,10 @@ button {
 	background-color: transparent;
 	border: none;
 	color: currentColor;
-	cursor: pointer;
 }
 
 button[disabled] {
 	color: var(--sk-text-4);
-}
-
-.raised {
-	border-radius: var(--sk-border-radius);
-	border-style: solid;
-	border-color: var(--sk-raised-color);
-	border-width: var(--sk-raised-width);
-
-	&:hover {
-		border-color: var(--sk-raised-hover-color);
-	}
-
-	&:active {
-		border-color: var(--sk-raised-active-color);
-		border-width: var(--sk-raised-active-width);
-	}
-
-	&:disabled {
-		border-color: var(--sk-back-5);
-		border-width: 1px;
-	}
 }
 
 /*  links ------------------------------------- */
@@ -184,7 +174,7 @@ a {
 /*  tables --------------------------------- */
 table {
 	width: 100%;
-	font-size: var(--sk-font-size-body-small);
+	font: var(--sk-font-body-small);
 }
 
 td,

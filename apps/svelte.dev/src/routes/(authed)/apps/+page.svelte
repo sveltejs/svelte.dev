@@ -147,13 +147,8 @@
 		margin: 0 auto;
 	}
 
-	header {
-		margin: 0 0 1em 0;
-	}
-
 	h1 {
-		font-size: 4rem;
-		font-weight: 400;
+		font: var(--sk-font-h1);
 	}
 
 	.user {
@@ -162,16 +157,17 @@
 		position: relative;
 		margin: 1rem 0;
 		color: var(--sk-text-2);
-	}
+		font: var(--sk-font-ui-medium);
 
-	.avatar {
-		position: absolute;
-		left: 0;
-		top: 0.1rem;
-		width: 2.4rem;
-		height: 2.4rem;
-		border: 1px solid rgba(0, 0, 0, 0.3);
-		border-radius: 0.2rem;
+		.avatar {
+			position: absolute;
+			left: 0;
+			top: 0.1rem;
+			width: 2.4rem;
+			height: 2.4rem;
+			border: 1px solid rgba(0, 0, 0, 0.3);
+			border-radius: var(--sk-border-radius);
+		}
 	}
 
 	.controls {
@@ -182,7 +178,7 @@
 		width: 100%;
 		height: 4rem;
 		margin: 0 0 2rem 0;
-		font-size: 1.6rem;
+		font: var(--sk-font-ui-medium);
 		z-index: 2;
 		justify-content: space-between;
 		outline: 1rem solid var(--sk-back-1);
@@ -204,8 +200,6 @@
 
 	.controls input,
 	.controls button {
-		font-family: inherit;
-		font-size: inherit;
 	}
 
 	.controls input[type='search'] {
@@ -218,6 +212,7 @@
 		border: 1px solid var(--sk-back-5);
 		border-radius: var(--sk-border-radius);
 		z-index: 2;
+		font: var(--sk-font-ui-large);
 	}
 
 	.controls button {
@@ -247,7 +242,7 @@
 
 	h2 {
 		color: var(--sk-text-2);
-		font-weight: 400;
+		font: var(--sk-font-ui-medium);
 		overflow: hidden;
 		text-overflow: ellipsis;
 	}
@@ -263,7 +258,7 @@
 	}
 
 	li span {
-		font-size: 12px;
+		font: var(--sk-font-ui-small);
 		color: var(--sk-text-3);
 	}
 
@@ -280,13 +275,7 @@
 	}
 
 	ul:not(.selecting) li:hover a {
-		background-color: var(--sk-theme-2);
-		color: white;
-	}
-
-	ul:not(.selecting) li:hover h2,
-	ul:not(.selecting) li:hover span {
-		color: white;
+		background-color: var(--sk-back-4);
 	}
 
 	ul:not(.selecting) li:hover input {
@@ -295,6 +284,7 @@
 
 	li.selected {
 		filter: drop-shadow(1px 2px 4px hsla(205.7, 63.6%, 30.8%, 0.1));
+		-webkit-transform: translate3d(0, 0, 0);
 	}
 
 	li.selected input {

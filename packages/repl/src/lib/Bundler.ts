@@ -1,7 +1,8 @@
-import type { File } from './types';
+import type { CompileOptions } from 'svelte/compiler';
 import type { BundleResult } from './workers/bundler';
 import Worker from './workers/bundler/index.js?worker';
 import type { BundleMessageData } from './workers/workers';
+import type { File } from 'editor';
 
 const workers = new Map();
 
@@ -50,14 +51,15 @@ export default class Bundler {
 		});
 	}
 
-	bundle(files: File[]): Promise<BundleResult> {
+	bundle(files: File[], options: CompileOptions = {}): Promise<BundleResult> {
 		return new Promise<any>((fulfil) => {
 			this.handlers.set(uid, fulfil);
 
 			this.worker.postMessage({
 				uid,
 				type: 'bundle',
-				files
+				files,
+				options
 			});
 
 			uid += 1;

@@ -73,12 +73,12 @@
 		bottom: 0;
 		width: 100%;
 		height: 80%;
-		font-family: var(--font-mono);
-		font-size: var(--sk-text-xs);
+		font: var(--sk-font-mono);
 		padding: 1rem;
 		background: var(--sk-back-1);
 		border-top: 1px solid var(--sk-text-4);
 		transform: translate(0, 100%);
+		-webkit-transform: translate3d(0, 100%, 0);
 		transition: transform 0.3s;
 		overflow-y: auto;
 	}
@@ -99,6 +99,7 @@
 
 	.terminal.visible {
 		transform: none;
+		-webkit-transform: none;
 	}
 
 	.terminal.visible::after {

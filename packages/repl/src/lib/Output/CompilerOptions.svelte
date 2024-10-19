@@ -1,8 +1,12 @@
 <script lang="ts">
-	import { get_repl_context } from '../context';
-	import Checkbox from '../Checkbox.svelte';
+	import type { Workspace } from 'editor';
+	import { Checkbox } from '@sveltejs/site-kit/components';
 
-	const { compile_options } = get_repl_context();
+	let { workspace }: { workspace: Workspace } = $props();
+
+	function onchange() {
+		workspace.invalidate();
+	}
 </script>
 
 <div class="options">
@@ -10,18 +14,30 @@
 	<div class="option">
 		<span class="key">generate:</span>
 
-		<input id="client" type="radio" bind:group={$compile_options.generate} value="client" />
+		<input
+			id="client"
+			type="radio"
+			bind:group={workspace.compiler_options.generate}
+			value="client"
+			{onchange}
+		/>
 		<label for="client"><span class="string">"client"</span></label>
 
-		<input id="server" type="radio" bind:group={$compile_options.generate} value="server" />
+		<input
+			id="server"
+			type="radio"
+			bind:group={workspace.compiler_options.generate}
+			value="server"
+			{onchange}
+		/>
 		<label for="server"><span class="string">"server"</span>,</label>
 	</div>
 
 	<!-- svelte-ignore a11y_label_has_associated_control (TODO this warning should probably be disabled if there's a component)-->
 	<label class="option">
 		<span class="key">dev:</span>
-		<Checkbox bind:checked={$compile_options.dev!} />
-		<span class="boolean">{$compile_options.dev}</span>,
+		<Checkbox bind:checked={workspace.compiler_options.dev!} {onchange} />
+		<span class="boolean">{workspace.compiler_options.dev}</span>,
 	</label>
 	});
 </div>
@@ -29,9 +45,9 @@
 <style>
 	.options {
 		padding: 0 10px;
-		font-family: var(--sk-font-mono);
+		font-family: var(--sk-font-family-mono);
 		font-size: 13px;
-		color: var(--sk-text-2, #999);
+		color: var(--sk-text-2);
 		line-height: 1.8;
 	}
 
@@ -39,7 +55,7 @@
 		display: block;
 		padding: 0 0 0 1.25em;
 		white-space: nowrap;
-		color: var(--sk-text-3, #999);
+		color: var(--sk-text-3);
 		user-select: none;
 	}
 
@@ -49,12 +65,8 @@
 	}
 
 	.string {
-		color: hsl(41, 37%, 45%);
+		color: var(--sk-code-string);
 	}
-
-	/* .boolean {
-		color: hsl(45, 7%, 45%);
-	} */
 
 	label {
 		display: inline-block;
@@ -88,11 +100,6 @@
 		opacity: 1;
 	}
 
-	/* input[type=radio]:focus + label {
-		color: #00f;
-		outline: 1px dotted #00f;
-	} */
-
 	input[type='radio'] + label:before {
 		content: '';
 		background: #eee;
@@ -110,16 +117,16 @@
 	}
 
 	input[type='radio'] + label:before {
-		background-color: var(--sk-theme-2);
+		background-color: var(--sk-text-4);
 		border-radius: 100%;
 		box-shadow: inset 0 0 0 0.5em rgba(255, 255, 255, 0.95);
-		border: 1px solid var(--sk-theme-2);
+		border: 1px solid var(--sk-text-4);
 	}
 
 	input[type='radio']:checked + label:before {
 		background-color: var(--sk-theme-1);
 		box-shadow: inset 0 0 0 0.15em rgba(255, 255, 255, 0.95);
-		border: 1px solid var(--sk-theme-2);
+		border: 1px solid var(--sk-text-4);
 		transition: box-shadow 0.2s ease-out;
 	}
 </style>

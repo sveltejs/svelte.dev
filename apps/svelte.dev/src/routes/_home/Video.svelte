@@ -176,13 +176,12 @@
 	}
 
 	video::cue {
-		font-size: 1.25rem;
-		line-height: 1.3;
+		font: var(--sk-font-ui-small);
 	}
 
 	@media (min-width: 600px) {
 		video::cue {
-			font-size: 1.75rem;
+			font: var(--sk-font-ui-medium);
 		}
 	}
 
@@ -218,7 +217,7 @@
 	.captions {
 		line-height: 1;
 		color: white;
-		font-size: var(--sk-font-size-ui-medium);
+		font: var(--sk-font-ui-medium);
 		filter: var(--control-filter);
 	}
 

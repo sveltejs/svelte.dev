@@ -6,8 +6,16 @@ const mappings = new Map([
 	['/docs/special-tags', '/docs/svelte/basic-markup'], // TODO: find a new home for some of these?
 	['/docs/element-directives', '/docs/svelte/basic-markup'],
 	['/docs/component-directives', '/docs/svelte/component-fundamentals'],
-	['/docs/custom-elements-api', '/docs/svelte/custom-elements']
+	['/docs/custom-elements-api', '/docs/svelte/custom-elements'],
+	['/docs/accessibility-warnings', '/docs/svelte/compiler-warnings']
 ]);
+
+// selectively preload fonts
+const fonts = [
+	'dm-serif-display-latin-400-normal',
+	'eb-garamond-latin-400-normal',
+	'fira-sans-latin-400-normal'
+];
 
 /** @type {import('@sveltejs/kit').Handle} */
 export async function handle({ event, resolve }) {
@@ -20,7 +28,14 @@ export async function handle({ event, resolve }) {
 	}
 
 	const response = await resolve(event, {
-		preload: ({ type }) => type === 'js' || type === 'css' || type === 'font'
+		preload: ({ type, path }) => {
+			if (type === 'font') {
+				if (!path.endsWith('.woff2')) return false;
+				return fonts.some((font) => path.includes(font));
+			}
+
+			return type === 'js' || type === 'css'; // future-proof, if we add `assets` later
+		}
 	});
 
 	return response;

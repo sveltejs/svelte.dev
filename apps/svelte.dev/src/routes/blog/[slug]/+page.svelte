@@ -21,22 +21,19 @@
 	<meta name="og:image" content="https://svelte.dev/blog/{$page.params.slug}/card.png" />
 </svelte:head>
 
-<div class="content">
-	<article class="post listify text">
+<article>
+	<header>
 		<h1>{data.metadata.title}</h1>
 		<p class="standfirst">{@html data.metadata.description}</p>
-
 		<Byline post={data} />
+	</header>
 
-		<Text>
-			{@html data.body}
-		</Text>
-	</article>
-</div>
+	<Text>{@html data.body}</Text>
+</article>
 
 <style>
-	.post {
-		padding: var(--sk-page-padding-top) var(--sk-page-padding-side);
+	article {
+		padding: var(--sk-page-padding-top) var(--sk-page-padding-side) var(--sk-page-padding-bottom);
 		max-width: var(--sk-page-content-width);
 		box-sizing: content-box;
 		margin: 0 auto;
@@ -51,8 +48,7 @@
 
 				figcaption {
 					color: var(--sk-text-4);
-					text-align: left;
-					font-size: var(--sk-font-size-body-small);
+					font: var(--sk-font-body-small);
 				}
 			}
 
@@ -66,20 +62,11 @@
 				width: 16rem;
 				z-index: 2;
 				color: var(--sk-text-4);
-				font-size: var(--sk-font-size-body-small);
+				font: var(--sk-font-body-small);
 
 				p {
 					color: var(--sk-text-4);
-					font-family: var(--sk-font-body);
-					font-size: var(--sk-font-size-body-small);
-
-					&:first-child {
-						margin-top: 0;
-					}
-
-					&:last-child {
-						margin-bottom: 0;
-					}
+					font: inherit;
 				}
 			}
 
@@ -94,21 +81,6 @@
 				border-radius: var(--sk-border-radius);
 				border: 0.8rem solid var(--sk-theme-4);
 				box-shadow: 1px 2px 1rem hsla(0 0 0 / 0.08);
-			}
-
-			blockquote {
-				background: none;
-
-				&::before {
-					content: '“';
-					position: absolute;
-					font-size: 6.4em;
-					line-height: 1;
-					left: 0;
-					top: 0;
-					font-family: var(--sk-font-heading);
-					color: var(--sk-text-4);
-				}
 			}
 
 			hr {
@@ -135,17 +107,17 @@
 	}
 
 	h1 {
-		font-size: var(--sk-font-size-h1);
+		font: var(--sk-font-h1);
 	}
 
 	.standfirst {
-		font-size: var(--sk-font-size-body-small);
+		font: var(--sk-font-body-small);
 		color: var(--sk-text-3);
 		margin: 0 0 1em 0;
 	}
 
 	@media (min-width: 960px) {
-		.post :global {
+		article :global {
 			.max {
 				width: 100vw;
 				/* padding: 0 var(--sk-page-padding-side); */

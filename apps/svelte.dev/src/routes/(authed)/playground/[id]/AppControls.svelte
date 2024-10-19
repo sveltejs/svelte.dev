@@ -2,20 +2,20 @@
 	import { goto } from '$app/navigation';
 	import UserMenu from './UserMenu.svelte';
 	import { Icon } from '@sveltejs/site-kit/components';
-	import * as doNotZip from 'do-not-zip';
-	import downloadBlob from './downloadBlob.js';
 	import { enter } from '$lib/utils/events';
 	import { isMac } from '$lib/utils/compat.js';
-	import { Repl } from '@sveltejs/repl';
 	import { get_app_context } from '../../app-context';
 	import type { Gist, User } from '$lib/db/types';
-	import type { File } from '@sveltejs/repl';
 	import { browser } from '$app/environment';
+	import SelectIcon from '$lib/components/SelectIcon.svelte';
+	import { untrack } from 'svelte';
+	import SecondaryNav from '$lib/components/SecondaryNav.svelte';
+	import type { File } from 'editor';
 
 	interface Props {
 		examples: Array<{ title: string; examples: any[] }>;
 		user: User | null;
-		repl: Repl;
+		repl: any; // TODO
 		gist: Gist;
 		name: string;
 		modified: boolean;
@@ -37,10 +37,9 @@
 	const { login } = get_app_context();
 
 	let saving = $state(false);
-	let downloading = $state(false);
 	let justSaved = $state(false);
 	let justForked = $state(false);
-	let select: HTMLSelectElement;
+	let select: any; // TODO why can't i do `select: SelectIcon`?
 
 	function wait(ms: number) {
 		return new Promise((f) => setTimeout(f, ms));
@@ -70,8 +69,8 @@
 				body: JSON.stringify({
 					name,
 					files: files.map((file) => ({
-						name: `${file.name}.${file.type}`,
-						source: file.source
+						name: file.name,
+						source: file.contents
 					}))
 				})
 			});
@@ -135,8 +134,8 @@
 				body: JSON.stringify({
 					name,
 					files: files.map((file) => ({
-						name: `${file.name}.${file.type}`,
-						source: file.source
+						name: file.name,
+						source: file.contents
 					}))
 				})
 			});
@@ -163,86 +162,41 @@
 		saving = false;
 	}
 
-	async function download() {
-		downloading = true;
-
-		const { files: components, imports } = repl.toJSON() as {
-			files: any[];
-			imports: string[];
-		};
-
-		const files = (await (await fetch('/svelte-app.json')).json()) as Array<{
-			path: string;
-			data: string;
-		}>;
-
-		if (imports.length > 0) {
-			const idx = files.findIndex(({ path }) => path === 'package.json');
-			const pkg = JSON.parse(files[idx].data);
-			const { devDependencies } = pkg;
-			imports.forEach((mod) => {
-				const match = /^(@[^/]+\/)?[^@/]+/.exec(mod)!;
-				devDependencies[match[0]] = 'latest';
-			});
-			pkg.devDependencies = devDependencies;
-			files[idx].data = JSON.stringify(pkg, null, '  ');
-		}
-
-		files.push(
-			...components.map((component) => ({
-				path: `src/${component.name}.${component.type}`,
-				data: component.source
-			}))
-		);
-		files.push({
-			path: `src/main.js`,
-			data: `import App from './App.svelte';
-
-var app = new App({
-	target: document.body
-});
-
-export default app;`
-		});
-
-		downloadBlob(doNotZip.toBlob(files), 'svelte-app.zip');
-
-		downloading = false;
-	}
-
 	// modifying an app should reset the `<select>`, so that
 	// the example can be reselected
 	$effect(() => {
 		if (modified) {
-			select.value = '';
+			// this is a little tricky, but: we need to wrap this in untrack
+			// because otherwise we'll read `select.value` and re-run this
+			// when we navigate, which we don't want
+			untrack(() => {
+				select.value = '';
+			});
 		}
 	});
 </script>
 
 <svelte:window on:keydown={handleKeydown} />
 
-<div class="app-controls">
-	<div class="examples-select">
-		<span class="raised icon"><Icon name="menu" /></span>
-		<select
-			bind:this={select}
-			title="examples"
-			value={gist.id}
-			onchange={(e) => {
-				goto(`/playground/${e.currentTarget.value}`);
-			}}
-		>
-			<option value="untitled">Create new</option>
-			<option disabled selected value="">or choose an example</option>
-			{#each examples as section}
-				<optgroup label={section.title}>
-					{#each section.examples as example}
-						<option value={example.slug}>{example.title}</option>
-					{/each}
-				</optgroup>
-			{/each}
-		</select>
-	</div>
+<SecondaryNav>
+	<SelectIcon
+		bind:this={select}
+		title="examples"
+		value={gist.id}
+		onchange={async (e) => {
+			goto(`/playground/${e.currentTarget.value}`);
+		}}
+	>
+		<option value="untitled">Create new</option>
+		<option disabled selected value="">or choose an example</option>
+		{#each examples as section}
+			<optgroup label={section.title}>
+				{#each section.examples as example}
+					<option value={example.slug}>{example.title}</option>
+				{/each}
+			</optgroup>
+		{/each}
+	</SelectIcon>
 
 	<input
 		bind:value={name}
@@ -283,13 +237,6 @@ export default app;`
 			{/if}
 		</button>
 
-		<button
-			class="raised icon download"
-			disabled={downloading}
-			onclick={download}
-			aria-label="download zip file"
-		></button>
-
 		{#if user}
 			<UserMenu {user} />
 		{:else}
@@ -298,77 +245,26 @@ export default app;`
 			</button>
 		{/if}
 	</div>
-</div>
+</SecondaryNav>
 
 <style>
-	.app-controls {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: var(--app-controls-h);
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		padding: 0.6rem var(--sk-page-padding-side);
-		background-color: var(--sk-back-2);
-		color: var(--sk-text-1);
-		white-space: nowrap;
-		flex: 0;
-		gap: 1rem;
-
-		@media (min-width: 800px) {
-			padding-top: 1rem;
-		}
-	}
-
 	.buttons {
-		text-align: right;
 		display: flex;
 		align-items: center;
-		gap: 0.2em;
+		gap: 0.2rem;
 	}
 
-	.examples-select {
-		position: relative;
-
-		&:has(select:focus-visible) .raised.icon {
-			outline: 2px solid hsla(var(--sk-theme-1-hsl), 0.6);
-			border-radius: var(--sk-border-radius);
-		}
-
-		span {
-			pointer-events: none;
-		}
-	}
-
-	select {
-		opacity: 0.0001;
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		font-family: var(--sk-font-ui);
-	}
-
-	button,
-	span.icon {
+	button {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		width: 3.2rem;
-		height: 3.2rem;
 		user-select: none;
 	}
 
 	.icon {
 		position: relative;
-		font-family: var(--sk-font-ui);
-		font-size: var(--sk-font-size-ui-small);
 		color: var(--sk-text-3);
 		line-height: 1;
-		background: 50% 50% no-repeat;
 		background-size: 1.8rem;
 		z-index: 999;
 
@@ -431,12 +327,11 @@ export default app;`
 		border: 1px solid var(--sk-back-4);
 		border-radius: var(--sk-border-radius);
 		color: currentColor;
-		font-family: var(--sk-font-ui);
 		width: 0;
 		flex: 1;
 		padding: 0.2rem 0.6rem;
 		height: 3.2rem;
-		font-size: var(--sk-font-size-ui-medium);
+		font: var(--sk-font-ui-medium);
 	}
 
 	.badge {

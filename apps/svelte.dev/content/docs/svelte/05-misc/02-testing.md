@@ -16,10 +16,10 @@ npm install -D vitest
 
 Then adjust your `vite.config.js`:
 
-```diff
+<!-- prettier-ignore -->
+```js
 /// file: vite.config.js
-- import { defineConfig } from 'vite';
-+ import { defineConfig } from 'vitest/config';
+import { defineConfig } from +++'vitest/config'+++;
 
 export default defineConfig({ /* ... */ })
 ```
@@ -99,7 +99,7 @@ test('Effect', () => {
 
 It is possible to test your components in isolation using Vitest.
 
-> Before writing component tests, think about whether you actually need to test the component, or if it's more about the logic _inside_ the component. If so, consider extracting out that logic to test it in isolation, without the overhead of a component
+> [!NOTE] Before writing component tests, think about whether you actually need to test the component, or if it's more about the logic _inside_ the component. If so, consider extracting out that logic to test it in isolation, without the overhead of a component
 
 To get started, install jsdom (a library that shims DOM APIs):
 

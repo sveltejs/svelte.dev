@@ -6,7 +6,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 	import { afterNavigate } from '$app/navigation';
 	import { overlay_open, search_query, search_recent, searching } from '../stores';
 	import { onMount, type Snippet } from 'svelte';
-	import { focusable_children, trap } from '../actions/focus.js';
+	import { focusable_children, forcefocus, trap } from '../actions/focus.js';
 	import Icon from '../components/Icon.svelte';
 	import SearchResults from './SearchResults.svelte';
 	import SearchWorker from './search-worker.js?worker';
@@ -161,9 +161,8 @@ It appears when the user clicks on the `Search` component or presses the corresp
 	>
 		<div class="search-box">
 			<div style="background: var(--background); padding: 0.5rem">
-				<!-- svelte-ignore a11y_autofocus -->
 				<input
-					autofocus
+					use:forcefocus
 					onkeydown={(e) => {
 					if (e.key === 'Enter' && !e.isComposing) {
 						const element = modal.querySelector('a[data-has-node]') as HTMLElement | undefined;
@@ -293,7 +292,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 		display: flex;
 		flex-direction: column;
 		overflow: hidden;
-		font-family: var(--sk-font-ui);
+		font-family: var(--sk-font-family-ui);
 
 		@media (min-width: 800px) {
 			--padding: 1.6rem;
@@ -305,7 +304,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 	}
 
 	input {
-		font-size: var(--sk-font-size-ui-large);
+		font: var(--sk-font-ui-large);
 		width: 100%;
 		padding: calc(var(--padding) - 0.5rem) 5rem calc(var(--padding) - 0.5rem) var(--padding);
 		height: 6rem;
@@ -347,7 +346,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 
 		kbd {
 			text-transform: uppercase;
-			font-size: var(--sk-font-size-ui-small);
+			font: var(--sk-font-ui-small);
 		}
 	}
 
@@ -408,7 +407,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 			padding-bottom: 1rem;
 
 			a {
-				font-size: var(--sk-font-size-ui-medium);
+				font: var(--sk-font-ui-medium);
 			}
 		}
 	}
@@ -417,8 +416,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 		display: block;
 		background: var(--background);
 		padding: var(--padding);
-		font-family: var(--sk-font-ui);
-		font-size: var(--sk-font-size-ui-medium);
+		font: var(--sk-font-ui-medium);
 		color: var(--sk-text-4);
 		text-transform: uppercase;
 		pointer-events: all;

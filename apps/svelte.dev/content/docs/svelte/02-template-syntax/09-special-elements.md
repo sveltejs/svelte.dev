@@ -110,7 +110,7 @@ All except `scrollX` and `scrollY` are readonly.
 <svelte:window bind:scrollY={y} />
 ```
 
-> Note that the page will not be scrolled to the initial value to avoid accessibility issues. Only subsequent changes to the bound variable of `scrollX` and `scrollY` will cause scrolling. However, if the scrolling behaviour is desired, call `scrollTo()` in `onMount()`.
+> [!NOTE] Note that the page will not be scrolled to the initial value to avoid accessibility issues. Only subsequent changes to the bound variable of `scrollX` and `scrollY` will cause scrolling. However, if the scrolling behaviour is desired, call `scrollTo()` in `onMount()`.
 
 ## `<svelte:document>`
 
@@ -183,7 +183,7 @@ The `<svelte:options>` element provides a place to specify per-component compile
 - `accessors={true}` — adds getters and setters for the component's props
 - `accessors={false}` — the default
 - `namespace="..."` — the namespace where this component will be used, most commonly "svg"; use the "foreign" namespace to opt out of case-insensitive attribute names and HTML-specific warnings
-- `customElement={...}` — the [options](custom-elements#component-options) to use when compiling this component as a custom element. If a string is passed, it is used as the `tag` option
+- `customElement={...}` — the [options](custom-elements#Component-options) to use when compiling this component as a custom element. If a string is passed, it is used as the `tag` option
 
 ```svelte
 <svelte:options customElement="my-custom-element" />

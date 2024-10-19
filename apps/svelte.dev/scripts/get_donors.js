@@ -18,7 +18,7 @@ try {
 		process.exit(0);
 	}
 } catch {
-	const MAX = 24;
+	const MAX = 48;
 	const SIZE = 128;
 
 	const res = await fetch('https://opencollective.com/svelte/members/all.json');

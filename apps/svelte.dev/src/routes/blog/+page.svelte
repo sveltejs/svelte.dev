@@ -43,7 +43,7 @@
 				>
 					<a href="/{post.slug}" title="Read the article »">
 						<h2>{post.metadata.title}</h2>
-						<p>{post.metadata.description}</p>
+						<p>{@html post.metadata.description}</p>
 					</a>
 
 					<Byline {post} />
@@ -75,11 +75,11 @@
 	h2 {
 		display: inline-block;
 		color: var(--sk-text-2);
-		font-size: var(--sk-font-size-h3);
+		font: var(--sk-font-h3);
 	}
 
 	article {
-		margin: 2em 0;
+		margin: 0 0 4rem 0;
 
 		/* we need to use :global because snippets don't currently cause a deopt */
 		&.top {
@@ -87,7 +87,7 @@
 			padding: 0 0 4rem 0;
 
 			h2 {
-				font-size: var(--sk-font-size-h1);
+				font: var(--sk-font-h1);
 				color: var(--sk-text-2);
 			}
 		}
@@ -96,7 +96,6 @@
 			display: block;
 			text-decoration: none;
 			color: var(--sk-text-2);
-			font-size: var(--sk-font-size-body);
 
 			&:hover h2 {
 				text-decoration: underline;
@@ -104,7 +103,7 @@
 		}
 
 		p {
-			font-size: var(--sk-font-size-body-small);
+			font: var(--sk-font-body-small);
 			color: var(--sk-text-3);
 			margin: 0 0 0.5em 0;
 		}
@@ -121,15 +120,25 @@
 			gap: 3em;
 		}
 
+		.featured,
+		.feed {
+			padding: 4rem 0;
+			position: relative;
+
+			&::before {
+				position: absolute;
+				top: 0;
+				font: var(--sk-font-ui-medium);
+				text-transform: uppercase;
+				color: var(--sk-text-4);
+			}
+		}
+
 		.featured {
 			display: block;
 
 			&::before {
 				content: 'Featured posts';
-				font-family: var(--sk-font-ui);
-				font-size: var(--sk-font-size-ui-medium);
-				text-transform: uppercase;
-				color: var(--sk-text-4);
 			}
 
 			article {
@@ -138,33 +147,23 @@
 				}
 
 				h2 {
-					font-size: var(--sk-font-size-h2);
+					font: var(--sk-font-h2);
 				}
 			}
 		}
 
 		.feed {
-			position: relative;
 			display: block;
-			padding: 2em 0;
 			margin: 0;
 			list-style: none;
 
 			&::before {
 				content: 'Monthly updates';
-				position: absolute;
-				top: 0;
-				font-family: var(--sk-font-ui);
-				font-size: var(--sk-font-size-ui-medium);
-				text-transform: uppercase;
-				color: var(--sk-text-4);
 			}
 
 			a {
 				display: block;
-				font-family: var(--sk-font-body);
-				font-weight: 400;
-				font-size: var(--sk-font-size-body);
+				font: var(--sk-font-body);
 				color: var(--sk-text-2);
 			}
 		}
