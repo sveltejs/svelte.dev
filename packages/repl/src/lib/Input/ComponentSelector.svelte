@@ -84,7 +84,7 @@
 		editing_name = file.name;
 		input_value = file.name;
 
-		onchange(); // TODO do we need this
+		onchange();
 	}
 
 	// drag and drop
