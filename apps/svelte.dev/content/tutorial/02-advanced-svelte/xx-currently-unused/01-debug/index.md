@@ -8,7 +8,7 @@ One approach is to use `console.log(...)` inside your markup. If you want to pau
 
 ```svelte
 /// file: App.svelte
-{@debug user}
++++{@debug user}+++
 
 <h1>Hello {user.firstname}!</h1>
 ```

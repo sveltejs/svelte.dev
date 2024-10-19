@@ -1,12 +1,14 @@
 <script>
-	export let name;
-	$: type = name.slice(name.lastIndexOf('.') + 1);
+	let { name } = $props();
+
+	let type = $derived(name.slice(name.lastIndexOf('.') + 1));
 </script>
 
 <span
 	style="background-image: url(/tutorial/icons/{type}.svg)"
-	>{name}</span
 >
+	{name}
+</span>
 
 <style>
 	span {

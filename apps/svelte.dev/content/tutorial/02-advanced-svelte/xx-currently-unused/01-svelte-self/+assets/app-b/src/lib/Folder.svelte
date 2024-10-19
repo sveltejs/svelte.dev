@@ -1,23 +1,22 @@
 <script>
+	import Folder from './Folder.svelte';
 	import File from './File.svelte';
 
-	export let expanded = false;
-	export let name;
-	export let files;
+	let { expanded = $bindable(false), name, files } = $props();
 
 	function toggle() {
 		expanded = !expanded;
 	}
 </script>
 
-<button class:expanded on:click={toggle}>{name}</button>
+<button class:expanded onclick={toggle}>{name}</button>
 
 {#if expanded}
 	<ul>
 		{#each files as file}
 			<li>
 				{#if file.files}
-					<span>TODO subfolders</span>
+					<Folder {...file} />
 				{:else}
 					<File {...file} />
 				{/if}
