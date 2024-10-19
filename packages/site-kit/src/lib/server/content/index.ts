@@ -57,6 +57,8 @@ export async function create_index(
 	}
 
 	for (const slug in content) {
+		if (slug.includes('xx-')) continue;
+
 		const parts = slug.split('/');
 		parts.pop();
 
