@@ -2,28 +2,21 @@
 	import { flip } from 'svelte/animate';
 	import { send, receive } from './transition.js';
 
-	export let store;
-	export let done;
+	let { todos, remove } = $props();
 </script>
 
 <ul class="todos">
-	{#each $store.filter((todo) => todo.done === done) as todo (todo.id)}
+	{#each todos as todo (todo)}
 		<li
-			class:done
+			class:done={todo.done}
 			in:receive={{ key: todo.id }}
 			out:send={{ key: todo.id }}
 			animate:flip={{ duration: 200 }}
 		>
 			<label>
-				<input
-					type="checkbox"
-					checked={todo.done}
-					on:change={(e) => store.mark(todo, e.currentTarget.checked)}
-				/>
-
+				<input type="checkbox" bind:checked={todo.done}/>
 				<span>{todo.description}</span>
-
-				<button on:click={() => store.remove(todo)} aria-label="Remove"></button>
+				<button onclick={() => remove(todo)} aria-label="Remove"></button>
 			</label>
 		</li>
 	{/each}
@@ -34,10 +27,6 @@
 		width: 100%;
 		height: 100%;
 		display: flex;
-	}
-
-	.done {
-		opacity: 0.5;
 	}
 
 	span {

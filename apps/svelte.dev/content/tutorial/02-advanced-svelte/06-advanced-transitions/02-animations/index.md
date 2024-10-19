@@ -1,5 +1,5 @@
 ---
-title: The animate directive
+title: Animations
 ---
 
 In the [previous chapter](/tutorial/svelte/deferred-transitions), we used deferred transitions to create the illusion of motion as elements move from one todo list to the other.
@@ -14,8 +14,7 @@ First, import the `flip` function — flip stands for ['First, Last, Invert, Pla
 	+++import { flip } from 'svelte/animate';+++
 	import { send, receive } from './transition.js';
 
-	export let store;
-	export let done;
+	let { todos, remove } = $props();
 </script>
 ```
 

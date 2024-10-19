@@ -15,8 +15,7 @@ Open `TodoList.svelte`. First, import the `send` and `receive` transitions from 
 <script>
 	+++import { send, receive } from './transition.js';+++
 
-	export let store;
-	export let done;
+	let { todos, remove } = $props();
 </script>
 ```
 
