@@ -24,7 +24,7 @@ It's now possible for the components to 'talk' to each other without any state m
 	bind:currentTime={time}
 	bind:duration
 	bind:paused
-+++	on:play={(e) => {
++++	onplay={(e) => {
 		const audio = e.currentTarget;
 
 		if (audio !== current) {
@@ -32,7 +32,7 @@ It's now possible for the components to 'talk' to each other without any state m
 			current = audio;
 		}
 	}}+++
-	on:ended={() => {
+	onended={() => {
 		time = 0;
 	}}
 />

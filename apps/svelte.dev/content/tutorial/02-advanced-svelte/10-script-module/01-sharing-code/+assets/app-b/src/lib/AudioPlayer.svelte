@@ -3,13 +3,11 @@
 </script>
 
 <script>
-	export let src;
-	export let title;
-	export let artist;
+	let { src, title, artist } = $props();
 
-	let time = 0;
-	let duration = 0;
-	let paused = true;
+	let time = $state(0);
+	let duration = $state(0);
+	let paused = $state(true);
 
 	function format(time) {
 		if (isNaN(time)) return '...';
@@ -23,11 +21,11 @@
 
 <div class="player" class:paused>
 	<audio
-		src={src}
+		{src}
 		bind:currentTime={time}
 		bind:duration
 		bind:paused
-		on:play={(e) => {
+		onplay={(e) => {
 			const audio = e.currentTarget;
 
 			if (audio !== current) {
@@ -35,7 +33,7 @@
 				current = audio;
 			}
 		}}
-		on:ended={() => {
+		onended={() => {
 			time = 0;
 		}}
 	></audio>
@@ -43,7 +41,7 @@
 	<button
 		class="play"
 		aria-label={paused ? 'play' : 'pause'}
-		on:click={() => paused = !paused}
+		onclick={() => paused = !paused}
 	></button>
 
 	<div class="info">
@@ -56,7 +54,7 @@
 			<span>{format(time)}</span>
 			<div
 				class="slider"
-				on:pointerdown={e => {
+				onpointerdown={e => {
 					const div = e.currentTarget;
 
 					function seek(e) {
