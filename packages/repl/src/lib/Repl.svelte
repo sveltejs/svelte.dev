@@ -37,7 +37,7 @@
 		injectedJS = '',
 		injectedCSS = '',
 		previewTheme = 'light',
-		onchange
+		onchange = () => {}
 	}: Props = $props();
 
 	// TODO pass in real data
