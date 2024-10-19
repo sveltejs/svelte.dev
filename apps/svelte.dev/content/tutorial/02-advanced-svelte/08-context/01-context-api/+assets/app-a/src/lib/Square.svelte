@@ -1,8 +1,5 @@
 <script>
-	export let x;
-	export let y;
-	export let size;
-	export let rotate;
+	let { x, y, size, rotate } = $props();
 
 	function draw(ctx) {
 		ctx.save();

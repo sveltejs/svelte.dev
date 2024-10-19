@@ -1,42 +1,28 @@
 <script>
-	import { afterUpdate, onMount, tick } from 'svelte';
+	import { SvelteSet } from 'svelte/reactivity';
 
-	export let width = 100;
-	export let height = 100;
+	let { width = 100, height = 100, children } = $props();
 
-	let canvas, ctx;
-	let items = new Set();
-	let scheduled = false;
-
-	onMount(() => {
-		ctx = canvas.getContext('2d');
-	});
+	let canvas;
+	let items = new SvelteSet();
 
 	function addItem(fn) {
-		onMount(() => {
+		$effect(() => {
 			items.add(fn);
 			return () => items.delete(fn);
 		});
-		
-		afterUpdate(async () => {
-			if (scheduled) return;
-			
-			scheduled = true;
-			await tick();
-			scheduled = false;
-
-			draw();
-		});
 	}
 
-	function draw() {
+	$effect(() => {
+		const ctx = canvas.getContext('2d');
+
 		ctx.clearRect(0, 0, width, height);
 		items.forEach(fn => fn(ctx));
-	}
+	});
 </script>
 
 <canvas bind:this={canvas} {width} {height}>
-	<slot />
+	{@render children()}
 </canvas>
 
 <style>

@@ -1,10 +1,7 @@
 <script>
 	import { getContext } from 'svelte';
 
-	export let x;
-	export let y;
-	export let size;
-	export let rotate;
+	let { x, y, size, rotate } = $props();
 
 	getContext('canvas').addItem(draw);
 

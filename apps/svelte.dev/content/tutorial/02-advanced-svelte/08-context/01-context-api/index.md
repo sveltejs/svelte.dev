@@ -6,43 +6,35 @@ The context API provides a mechanism for components to 'talk' to each other with
 
 Inside `Canvas.svelte`, there's an `addItem` function that adds an item to the canvas. We can make it available to components inside `<Canvas>`, like `<Square>`, with `setContext`:
 
-```svelte
+```js
 /// file: Canvas.svelte
-<script>
-	import { +++setContext+++, afterUpdate, onMount, tick } from 'svelte';
++++import { setContext } from 'svelte';+++
+import { SvelteSet } from 'svelte/reactivity';
 
-	// ...
+let { width = 100, height = 100, children } = $props();
 
-	onMount(() => {
-		ctx = canvas.getContext('2d');
+let canvas;
+let items = new SvelteSet();
+
++++setContext('canvas', { addItem });+++
+
+function addItem(fn) {
+	$effect(() => {
+		items.add(fn);
+		return () => items.delete(fn);
 	});
-
-+++	setContext('canvas', {
-		addItem
-	});+++
-
-	function addItem(fn) {...}
-
-	function draw() {...}
-</script>
+}
 ```
 
 Inside child components, we can now get the context with, well, `getContext`:
 
-```svelte
+```js
 /// file: Square.svelte
-<script>
-	+++import { getContext } from 'svelte';+++
++++import { getContext } from 'svelte';+++
 
-	export let x;
-	export let y;
-	export let size;
-	export let rotate;
+let { x, y, size, rotate } = $props();
 
-	+++getContext('canvas').addItem(draw);+++
-
-	function draw(ctx) {...}
-</script>
++++getContext('canvas').addItem(draw);+++
 ```
 
 So far, so... boring. Let's add some randomness to the grid:
@@ -65,25 +57,21 @@ So far, so... boring. Let's add some randomness to the grid:
 </div>
 ```
 
-Like lifecycle functions such as `onMount`, `setContext` and `getContext` must be called during component initialisation. (The context key (`'canvas'` in this case) can be anything you like, including non-strings, which is useful for controlling who can access the context.)
+`setContext` and `getContext` must be called during component initialisation, so that the context can be correctly bound. The key — `'canvas'` in this case — can be anything you like, including non-strings, which is useful for controlling who can access the context.
 
-Your context object can include anything, including stores. This allows you to pass values that change over time to child components:
-
-```js
-// in a parent component
-import { setContext } from 'svelte';
-import { writable } from 'svelte/store';
-
-setContext('my-context', {
-	count: writable(0)
-});
-```
-
-```js
-// in a child component
-import { getContext } from 'svelte';
-
-const { count } = getContext('my-context');
-
-$: console.log({ count: $count });
-```
+> [!NOTE] Your context object can include anything, including reactive state. This allows you to pass values that change over time to child components:
+>
+> ```js
+> // in a parent component
+> import { setContext } from 'svelte';
+>
+> let context = $state({...});
+> setContext('my-context', context);
+> ```
+>
+> ```js
+> // in a child component
+> import { getContext } from 'svelte';
+>
+> const context = getContext('my-context');
+> ```
