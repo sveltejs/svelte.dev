@@ -2,16 +2,21 @@
 title: <svelte:element>
 ---
 
-Similarly, we don't always know in advance what kind of DOM element to render. `<svelte:element>` comes in handy here. As with the [previous exercise](svelte-component), we can replace a long sequence of `if` blocks with a single dynamic element:
+Sometimes you don't know in advance which element needs to be rendered. Rather than having a long list of `{#if ...}` blocks...
 
 ```svelte
 /// file: App.svelte
-<select bind:value={selected}>
-	{#each options as option}
-		<option value={option}>{option}</option>
-	{/each}
-</select>
+{#if selected === 'h1'}
+	<h1>I'm a <code>&lt;h1&gt;</code> element</h1>
+{:else}
+	<p>TODO others</p>
+{/if}
+```
 
+...we can use `<svelte:element>`:
+
+```svelte
+/// file: App.svelte
 +++<svelte:element this={selected}>
 	I'm a <code>&lt;{selected}&gt;</code> element
 </svelte:element>+++

@@ -1,6 +1,6 @@
 <script>
 	const options = ['h1', 'h2', 'h3', 'p', 'marquee'];
-	let selected = options[0];
+	let selected = $state(options[0]);
 </script>
 
 <select bind:value={selected}>
