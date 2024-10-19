@@ -2,40 +2,28 @@
 title: This
 ---
 
-> TODO the next sentence is no longer true
+You can use the special `bind:this` directive to get a readonly binding to an element in your component.
 
-In a previous exercise, we learned how to use the `onMount` lifecycle function to paint to a canvas.
-
-But the example is buggy — it's using `document.querySelector('canvas')`, which will always return the first `<canvas>` found on the page, which might not be the one belonging to our component.
-
-Instead, we can use the readonly `this` binding to get a reference to the element:
-
-```js
-/// file: App.svelte
-+++let canvas;+++
-
-onMount(() => {
-	---const canvas = document.querySelector('canvas')---
-	const context = canvas.getContext('2d');
-
-	let frame = requestAnimationFrame(function loop(t) {
-		frame = requestAnimationFrame(loop);
-		paint(context, t);
-	});
-
-	return () => {
-		cancelAnimationFrame(frame);
-	};
-});
-```
+The `$effect` in this exercise attempts to create a canvas context, but `canvas` is `undefined`. Begin by declaring it at the top level of the component...
 
 ```svelte
 /// file: App.svelte
-<canvas
-	+++bind:this={canvas}+++
-	width={32}
-	height={32}
-></canvas>
+<script>
+	import { paint } from './gradient.js';
+
+	+++let canvas;+++
+
+	$effect(() => {
+		// ...
+	});
+</script>
 ```
 
-Note that the value of `canvas` will be `undefined` until the component has mounted.
+...then add the directive to the `<canvas>` element:
+
+```svelte
+/// file: App.svelte
+<canvas +++bind:this={canvas}+++ width={32} height={32}></canvas>
+```
+
+Note that the value of `canvas` will remain `undefined` until the component has mounted — in other words you can't access it until the `$effect` runs.

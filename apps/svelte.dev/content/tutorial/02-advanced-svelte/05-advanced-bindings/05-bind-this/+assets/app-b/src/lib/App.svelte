@@ -1,10 +1,9 @@
 <script>
-	import { onMount } from 'svelte';
 	import { paint } from './gradient.js';
 
 	let canvas;
 
-	onMount(() => {
+	$effect(() => {
 		const context = canvas.getContext('2d');
 
 		let frame = requestAnimationFrame(function loop(t) {
@@ -18,11 +17,7 @@
 	});
 </script>
 
-<canvas
-	bind:this={canvas}
-	width={32}
-	height={32}
-></canvas>
+<canvas bind:this={canvas} width={32} height={32}></canvas>
 
 <style>
 	canvas {
