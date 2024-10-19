@@ -151,7 +151,7 @@ async function sync(pkg: Package) {
 	}
 
 	for (const file of glob(`${dest}/**/*.md`)) {
-		const content = await preprocess(fs.readFileSync(file, 'utf-8'), modules);
+		const content = await preprocess(file, modules);
 
 		fs.writeFileSync(file, content);
 	}
