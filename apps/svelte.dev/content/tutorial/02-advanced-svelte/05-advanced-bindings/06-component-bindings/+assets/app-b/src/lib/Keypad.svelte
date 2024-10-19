@@ -1,5 +1,5 @@
 <script>
-	let { value, onsubmit } = $props();
+	let { value = $bindable(), onsubmit } = $props();
 
 	const select = (num) => () => (value += num);
 	const clear = () => (value = '');

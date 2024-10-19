@@ -1,12 +1,13 @@
 <script>
 	import Keypad from './Keypad.svelte';
 
-	let pin;
-	$: view = pin
-		? pin.replace(/\d(?!$)/g, '•')
-		: 'enter your pin';
+	let pin = $state('');
 
-	function handleSubmit() {
+	let view = $derived(pin
+		? pin.replace(/\d(?!$)/g, '•')
+		: 'enter your pin');
+
+	function onsubmit() {
 		alert(`submitted ${pin}`);
 	}
 </script>
@@ -15,7 +16,4 @@
 	{view}
 </h1>
 
-<Keypad
-	bind:value={pin}
-	on:submit={handleSubmit}
-/>
+<Keypad bind:value={pin} {onsubmit} />
