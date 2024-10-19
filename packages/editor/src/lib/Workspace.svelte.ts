@@ -286,18 +286,7 @@ export class Workspace {
 			const file = files.find((file) => file.name === name) as File;
 
 			if (file) {
-				const existing = state.doc.toString();
-				if (file.contents !== existing) {
-					const transaction = state.update({
-						changes: {
-							from: 0,
-							to: existing.length,
-							insert: file.contents
-						}
-					});
-
-					this.states.set(file.name, transaction.state);
-				}
+				this.#update_state(file, state);
 			} else {
 				this.states.delete(name);
 			}
@@ -312,6 +301,10 @@ export class Workspace {
 	}
 
 	update_file(file: File) {
+		if (file.name === this.#current.name) {
+			this.#current = file;
+		}
+
 		this.#files = this.#files.map((old) => {
 			if (old.name === file.name) {
 				return file;
@@ -325,6 +318,11 @@ export class Workspace {
 			compile_file(file, this.compiler_options).then((compiled) => {
 				this.compiled[file.name] = compiled;
 			});
+		}
+
+		const state = this.states.get(file.name);
+		if (state) {
+			this.#update_state(file, state);
 		}
 
 		this.#onupdate(file);
@@ -447,5 +445,25 @@ export class Workspace {
 	#select(file: File) {
 		this.#current = file as File;
 		this.#view?.setState(this.#get_state(this.#current));
+	}
+
+	#update_state(file: File, state: EditorState) {
+		const existing = state.doc.toString();
+
+		if (file.contents !== existing) {
+			const transaction = state.update({
+				changes: {
+					from: 0,
+					to: existing.length,
+					insert: file.contents
+				}
+			});
+
+			this.states.set(file.name, transaction.state);
+
+			if (file === this.#current) {
+				this.#view?.setState(transaction.state);
+			}
+		}
 	}
 }
