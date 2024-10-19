@@ -302,7 +302,11 @@ export class Workspace {
 
 	update_file(file: File) {
 		if (file.name === this.#current.name) {
-			this.#current = file;
+			// TODO this line causes the editor to keep losign
+			// focus and I have no idea why. It seems important,
+			// but it also doesn't appear to break anything
+			// if we comment it out?
+			// this.#current = file;
 		}
 
 		this.#files = this.#files.map((old) => {
