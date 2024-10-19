@@ -300,13 +300,11 @@ export class Workspace {
 		this.#view = null;
 	}
 
-	update_file(file: File) {
-		if (file.name === this.#current.name) {
-			// TODO this line causes the editor to keep losign
-			// focus and I have no idea why. It seems important,
-			// but it also doesn't appear to break anything
-			// if we comment it out?
-			// this.#current = file;
+	update_file(file: File, from_codemirror = false) {
+		if (file.name === this.#current.name && !from_codemirror) {
+			// we don't want to update the file if the update comes from
+			// codemirror or it will loose focus
+			this.#current = file;
 		}
 
 		this.#files = this.#files.map((old) => {
@@ -364,10 +362,13 @@ export class Workspace {
 				if (update.docChanged) {
 					const state = this.#view!.state!;
 
-					this.update_file({
-						...this.#current,
-						contents: state.doc.toString()
-					});
+					this.update_file(
+						{
+							...this.#current,
+							contents: state.doc.toString()
+						},
+						true
+					);
 
 					// preserve undo/redo across files
 					this.states.set(this.#current.name, state);

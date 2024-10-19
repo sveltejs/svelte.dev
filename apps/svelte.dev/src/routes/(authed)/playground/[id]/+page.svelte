@@ -12,7 +12,7 @@
 
 	let { data } = $props();
 
-	let repl = $state() as Repl;
+	let repl = $state() as ReturnType<typeof Repl>;
 	let name = $state(data.gist.name);
 	let modified = $state(false);
 	let version = data.version;
