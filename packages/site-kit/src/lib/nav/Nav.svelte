@@ -243,18 +243,14 @@ Top navigation bar for the application. It provides a slot for the left side, th
 				box-shadow: inset 0 -1px 0 0 currentColor;
 			}
 
+			&:not(.secondary) {
+				padding: 0.1rem 0.8rem 0 0.8rem;
+			}
+
 			&.secondary {
 				box-shadow: none;
 				line-height: 1;
 			}
-		}
-
-		& > a {
-			padding: 0.1rem 0.8rem 0 0.8rem;
-		}
-
-		& > .dropdown > a {
-			padding: 0.1rem 0.8rem 0 0.8rem;
 		}
 	}
 
