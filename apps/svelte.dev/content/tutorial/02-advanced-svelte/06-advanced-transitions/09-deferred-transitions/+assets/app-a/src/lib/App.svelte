@@ -1,8 +1,7 @@
 <script>
-	import { createTodoStore } from './todos.js';
 	import TodoList from './TodoList.svelte';
 
-	const todos = createTodoStore([
+	const todos = $state([
 		{ done: false, description: 'write some docs' },
 		{ done: false, description: 'start writing blog post' },
 		{ done: true, description: 'buy some milk' },
@@ -10,27 +9,36 @@
 		{ done: false, description: 'feed the turtle' },
 		{ done: false, description: 'fix some bugs' }
 	]);
+
+	function remove(todo) {
+		const index = todos.indexOf(todo);
+		todos.splice(index, 1);
+	}
 </script>
 
 <div class="board">
 	<input
 		placeholder="what needs to be done?"
-		on:keydown={(e) => {
+		onkeydown={(e) => {
 			if (e.key !== 'Enter') return;
 
-			todos.add(e.currentTarget.value);
+			todos.push({
+				done: false,
+				text: e.currentTarget.value
+			});
+
 			e.currentTarget.value = '';
 		}}
 	/>
 
 	<div class="todo">
 		<h2>todo</h2>
-		<TodoList store={todos} done={false} />
+		<TodoList todos={todos.filter((t) => !t.done)} {remove} />
 	</div>
 
 	<div class="done">
 		<h2>done</h2>
-		<TodoList store={todos} done={true} />
+		<TodoList todos={todos.filter((t) => t.done)} {remove} />
 	</div>
 </div>
 
