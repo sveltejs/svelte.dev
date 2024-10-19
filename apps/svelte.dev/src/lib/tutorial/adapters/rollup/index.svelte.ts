@@ -57,23 +57,16 @@ export async function create(): Promise<Adapter> {
 		reset: (files) => {
 			return q.add(async () => {
 				current_files = files;
-				await compile();
 
+				await compile();
 				return false;
 			});
 		},
 		update: (file) => {
 			return q.add(async () => {
-				current_files = current_files.map((old) => {
-					if (old.name === file.name) {
-						return file;
-					}
-
-					return old;
-				});
+				current_files = current_files.map((old) => (old.name === file.name ? file : old));
 
 				await compile();
-
 				return false;
 			});
 		}
