@@ -16,8 +16,6 @@
 
 	let { runes, remove, add, workspace, can_migrate }: Props = $props();
 
-	const { rebundle } = get_repl_context();
-
 	let editing_name: string | null = $state(null);
 	let input_value = $state('');
 
@@ -49,7 +47,6 @@
 
 		workspace.rename(edited_file, deconflicted);
 		workspace.focus();
-		rebundle(); // TODO should be handled by workspace.rename
 
 		editing_name = null;
 	}
@@ -72,8 +69,7 @@
 
 		workspace.remove(file);
 
-		remove();
-		rebundle(); // TODO workspace.#onupdate should take care of this
+		remove(); // TODO do we need this
 	}
 
 	function add_new() {
@@ -90,8 +86,7 @@
 		editing_name = file.name;
 		input_value = file.name;
 
-		rebundle(); // TODO should be handled by #onupdate
-		add();
+		add(); // TODO do we need this
 	}
 
 	// drag and drop

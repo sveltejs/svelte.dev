@@ -133,6 +133,7 @@ export class Workspace {
 
 		if (is_file(item)) {
 			this.#select(item);
+			this.#onreset?.(this.#files);
 		}
 
 		return item;
@@ -195,6 +196,8 @@ export class Workspace {
 		});
 
 		this.#current = next;
+
+		this.#onreset?.(this.#files);
 	}
 
 	rename(previous: Item, name: string) {
@@ -234,6 +237,8 @@ export class Workspace {
 		if (was_current) {
 			this.#select(new_item as File);
 		}
+
+		this.#onreset?.(this.#files);
 	}
 
 	reset(new_files: Item[], selected?: string) {

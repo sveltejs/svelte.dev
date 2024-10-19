@@ -91,7 +91,6 @@
 		bundle,
 		toggleable,
 
-		rebundle,
 		migrate,
 
 		workspace

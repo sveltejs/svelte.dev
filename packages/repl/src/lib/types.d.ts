@@ -50,6 +50,5 @@ export type ReplContext = {
 	workspace: Workspace;
 
 	// Methods
-	rebundle(): Promise<void>;
 	migrate(): Promise<void>;
 };
