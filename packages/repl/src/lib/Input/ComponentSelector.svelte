@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { forcefocus } from '@sveltejs/site-kit/actions';
-	import { get_repl_context } from '../context';
 	import { tick } from 'svelte';
 	import RunesInfo from './RunesInfo.svelte';
 	import Migrate from './Migrate.svelte';
@@ -8,13 +7,12 @@
 
 	interface Props {
 		runes: boolean;
-		remove: () => void;
-		add: () => void;
+		onchange: () => void;
 		workspace: Workspace;
 		can_migrate: boolean;
 	}
 
-	let { runes, remove, add, workspace, can_migrate }: Props = $props();
+	let { runes, onchange, workspace, can_migrate }: Props = $props();
 
 	let editing_name: string | null = $state(null);
 	let input_value = $state('');
@@ -69,7 +67,7 @@
 
 		workspace.remove(file);
 
-		remove(); // TODO do we need this
+		onchange();
 	}
 
 	function add_new() {
@@ -86,7 +84,7 @@
 		editing_name = file.name;
 		input_value = file.name;
 
-		add(); // TODO do we need this
+		onchange(); // TODO do we need this
 	}
 
 	// drag and drop

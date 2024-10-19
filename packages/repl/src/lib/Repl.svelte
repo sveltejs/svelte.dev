@@ -22,9 +22,7 @@
 		injectedJS?: string;
 		injectedCSS?: string;
 		previewTheme?: 'light' | 'dark';
-		remove?: () => void;
-		add?: () => void;
-		change?: () => void;
+		onchange?: () => void;
 	}
 
 	let {
@@ -39,9 +37,7 @@
 		injectedJS = '',
 		injectedCSS = '',
 		previewTheme = 'light',
-		remove = () => {},
-		add = () => {},
-		change = () => {}
+		onchange
 	}: Props = $props();
 
 	// TODO pass in real data
@@ -58,7 +54,7 @@
 			initial: 'App.svelte',
 			onupdate() {
 				rebundle();
-				change();
+				onchange?.();
 			},
 			onreset() {
 				rebundle();
@@ -179,7 +175,7 @@
 			max="-4.1rem"
 		>
 			<section slot="a">
-				<ComponentSelector {runes} {add} {remove} {workspace} {can_migrate} />
+				<ComponentSelector {runes} {onchange} {workspace} {can_migrate} />
 
 				<Editor {workspace} />
 			</section>

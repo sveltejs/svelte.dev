@@ -101,7 +101,7 @@
 		}, 500);
 	}
 
-	function handle_change() {
+	function onchange() {
 		const was_modified = modified;
 		modified = true;
 
@@ -170,9 +170,7 @@
 				{relaxed}
 				{can_escape}
 				injectedJS={mapbox_setup}
-				change={handle_change}
-				add={handle_change}
-				remove={handle_change}
+				{onchange}
 				previewTheme={$theme.current}
 			/>
 		</div>
