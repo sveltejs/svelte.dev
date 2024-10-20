@@ -196,7 +196,7 @@ export class Workspace {
 			return true;
 		});
 
-		this.#current = next;
+		this.#select(next);
 
 		this.#onreset?.(this.#files);
 	}
@@ -275,10 +275,9 @@ export class Workspace {
 			if (!file) {
 				throw new Error(`Invalid selection ${selected}`);
 			}
-
-			this.#current = file as File;
+			this.#select(file as File);
 		} else {
-			this.#current = first;
+			this.#select(first);
 		}
 
 		this.#files = files;
@@ -452,11 +451,17 @@ export class Workspace {
 		const existing = state.doc.toString();
 
 		if (file.contents !== existing) {
+			const current_cursor_position = this.#view?.state.selection.ranges[0].from!;
+
 			const transaction = state.update({
 				changes: {
 					from: 0,
 					to: existing.length,
 					insert: file.contents
+				},
+				selection: {
+					anchor: current_cursor_position,
+					head: current_cursor_position
 				}
 			});
 
