@@ -30,7 +30,7 @@
 		"!dist/**/*.spec.*"
 	],
 	"peerDependencies": {
-		"svelte": "^5.0.0-next.1"
+		"svelte": "^5.0.0"
 	},
 	"devDependencies": {
 		"@codemirror/autocomplete": "^6.9.0",
@@ -50,12 +50,12 @@
 		"@sveltejs/package": "^2.0.0",
 		"@sveltejs/repl": "workspace:*",
 		"@sveltejs/site-kit": "workspace:*",
-		"@sveltejs/vite-plugin-svelte": "^4.0.0-next.6",
+		"@sveltejs/vite-plugin-svelte": "^4.0.0",
 		"codemirror": "^6.0.1",
 		"prettier": "^3.1.1",
 		"prettier-plugin-svelte": "^3.1.2",
 		"publint": "^0.2.0",
-		"svelte": "^5.0.0-next.1",
+		"svelte": "^5.0.1",
 		"svelte-check": "^4.0.0",
 		"typescript": "^5.0.0",
 		"vite": "^5.0.11"
