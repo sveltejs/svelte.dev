@@ -12,6 +12,7 @@ import { acceptCompletion } from '@codemirror/autocomplete';
 import { indentWithTab } from '@codemirror/commands';
 import { indentUnit } from '@codemirror/language';
 import { theme } from './theme';
+import { untrack } from 'svelte';
 
 export interface File {
 	type: 'file';
@@ -157,7 +158,7 @@ export class Workspace {
 		if (this.#view) throw new Error('view is already linked');
 		this.#view = view;
 
-		view.setState(this.#get_state(this.#current));
+		view.setState(this.#get_state(untrack(() => this.#current)));
 	}
 
 	move(from: Item, to: Item) {
@@ -300,10 +301,8 @@ export class Workspace {
 		this.#view = null;
 	}
 
-	update_file(file: File, from_codemirror = false) {
-		if (file.name === this.#current.name && !from_codemirror) {
-			// we don't want to update the file if the update comes from
-			// codemirror or it will loose focus
+	update_file(file: File) {
+		if (file.name === this.#current.name) {
 			this.#current = file;
 		}
 
@@ -362,13 +361,10 @@ export class Workspace {
 				if (update.docChanged) {
 					const state = this.#view!.state!;
 
-					this.update_file(
-						{
-							...this.#current,
-							contents: state.doc.toString()
-						},
-						true
-					);
+					this.update_file({
+						...this.#current,
+						contents: state.doc.toString()
+					});
 
 					// preserve undo/redo across files
 					this.states.set(this.#current.name, state);
