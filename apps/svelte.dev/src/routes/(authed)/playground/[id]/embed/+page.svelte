@@ -8,7 +8,7 @@
 
 	let { data } = $props();
 
-	let repl = $state() as Repl;
+	let repl = $state() as ReturnType<typeof Repl>;
 
 	onMount(() => {
 		if (data.version !== 'local') {
