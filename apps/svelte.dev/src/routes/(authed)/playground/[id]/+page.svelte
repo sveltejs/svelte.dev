@@ -9,6 +9,7 @@
 	import AppControls from './AppControls.svelte';
 	import { compress_and_encode_text, decode_and_decompress_text } from './gzip.js';
 	import { page } from '$app/stores';
+	import type { File } from 'editor';
 
 	let { data } = $props();
 
@@ -45,23 +46,26 @@
 		set_files();
 	});
 
+	// TODO make this munging unnecessary
+	function munge(data: any): File {
+		const basename = `${data.name}.${data.type}`;
+
+		return {
+			type: 'file',
+			name: basename,
+			basename,
+			contents: data.source,
+			text: true
+		};
+	}
+
 	async function set_files() {
 		const hash = location.hash.slice(1);
 
 		if (!hash) {
 			repl?.set({
 				// TODO make this munging unnecessary
-				files: structuredClone(data.gist.components).map((file: any) => {
-					const basename = `${file.name}.${file.type}`;
-
-					return {
-						type: 'file',
-						name: basename,
-						basename,
-						contents: file.source,
-						text: true
-					};
-				})
+				files: structuredClone(data.gist.components).map(munge)
 			});
 
 			modified = false;
@@ -69,7 +73,12 @@
 		}
 
 		try {
-			const files = JSON.parse(await decode_and_decompress_text(hash)).files;
+			let files = JSON.parse(await decode_and_decompress_text(hash)).files;
+
+			if (files[0]?.source) {
+				files = files.map(munge);
+			}
+
 			repl.set({ files });
 		} catch {
 			alert(`Couldn't load the code from the URL. Make sure you copied the link correctly.`);
