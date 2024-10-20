@@ -73,7 +73,7 @@
 			width: 100%;
 			top: 0;
 			overflow: hidden;
-			filter: drop-shadow(0.2rem 0.4rem 2rem rgb(0 0 0 / 0.3));
+			filter: drop-shadow(0.2rem 0.4rem 1.6rem rgb(0 0 0 / 0.2));
 			transform: translate3d(0, 0, 0);
 			transition-property: filter, scale;
 			transition-duration: 0.2s;
@@ -100,7 +100,7 @@
 
 			&:hover {
 				scale: 1.05;
-				filter: drop-shadow(0.2rem 0rem 4rem rgb(0 0 0 / 0.3));
+				filter: drop-shadow(0.2rem 0.4rem 2.4rem rgb(0 0 0 / 0.2));
 			}
 		}
 
