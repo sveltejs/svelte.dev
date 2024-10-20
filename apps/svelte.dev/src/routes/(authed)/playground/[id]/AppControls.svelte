@@ -15,7 +15,7 @@
 	interface Props {
 		examples: Array<{ title: string; examples: any[] }>;
 		user: User | null;
-		repl: any; // TODO
+		repl: ReturnType<typeof Repl>;
 		gist: Gist;
 		name: string;
 		modified: boolean;
@@ -39,7 +39,7 @@
 	let saving = $state(false);
 	let justSaved = $state(false);
 	let justForked = $state(false);
-	let select: any; // TODO why can't i do `select: SelectIcon`?
+	let select: ReturnType<typeof SelectIcon>;
 
 	function wait(ms: number) {
 		return new Promise((f) => setTimeout(f, ms));

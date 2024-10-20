@@ -12,6 +12,7 @@ import { acceptCompletion } from '@codemirror/autocomplete';
 import { indentWithTab } from '@codemirror/commands';
 import { indentUnit } from '@codemirror/language';
 import { theme } from './theme';
+import { untrack } from 'svelte';
 
 export interface File {
 	type: 'file';
@@ -157,7 +158,7 @@ export class Workspace {
 		if (this.#view) throw new Error('view is already linked');
 		this.#view = view;
 
-		view.setState(this.#get_state(this.#current));
+		view.setState(this.#get_state(untrack(() => this.#current)));
 	}
 
 	move(from: Item, to: Item) {
@@ -195,7 +196,7 @@ export class Workspace {
 			return true;
 		});
 
-		this.#current = next;
+		this.#select(next);
 
 		this.#onreset?.(this.#files);
 	}
@@ -274,10 +275,9 @@ export class Workspace {
 			if (!file) {
 				throw new Error(`Invalid selection ${selected}`);
 			}
-
-			this.#current = file as File;
+			this.#select(file as File);
 		} else {
-			this.#current = first;
+			this.#select(first);
 		}
 
 		this.#files = files;
@@ -302,11 +302,7 @@ export class Workspace {
 
 	update_file(file: File) {
 		if (file.name === this.#current.name) {
-			// TODO this line causes the editor to keep losign
-			// focus and I have no idea why. It seems important,
-			// but it also doesn't appear to break anything
-			// if we comment it out?
-			// this.#current = file;
+			this.#current = file;
 		}
 
 		this.#files = this.#files.map((old) => {
@@ -455,11 +451,17 @@ export class Workspace {
 		const existing = state.doc.toString();
 
 		if (file.contents !== existing) {
+			const current_cursor_position = this.#view?.state.selection.ranges[0].from!;
+
 			const transaction = state.update({
 				changes: {
 					from: 0,
 					to: existing.length,
 					insert: file.contents
+				},
+				selection: {
+					anchor: current_cursor_position,
+					head: current_cursor_position
 				}
 			});
 
