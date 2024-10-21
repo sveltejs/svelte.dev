@@ -1,10 +1,16 @@
-@import '@fontsource/cardo';
-@import '@fontsource/crimson-pro';
-@import '@fontsource/newsreader';
-@import '@fontsource/noto-serif';
-@import '@fontsource/petrona';
-@import '@fontsource/scope-one';
-@import '@fontsource/source-serif-4';
+@import '@fontsource/cardo/400.css';
+@import '@fontsource/cardo/400-italic.css';
+@import '@fontsource/crimson-pro/400.css';
+@import '@fontsource/crimson-pro/400-italic.css';
+@import '@fontsource/newsreader/400.css';
+@import '@fontsource/newsreader/400-italic.css';
+@import '@fontsource/noto-serif/400.css';
+@import '@fontsource/noto-serif/400-italic.css';
+@import '@fontsource/petrona/400.css';
+@import '@fontsource/petrona/400-italic.css';
+@import '@fontsource/scope-one/400.css';
+@import '@fontsource/source-serif-4/400.css';
+@import '@fontsource/source-serif-4/400-italic.css';
 
 :root {
 	&.font-cardo {
