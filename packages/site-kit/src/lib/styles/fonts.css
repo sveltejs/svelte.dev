@@ -83,11 +83,13 @@
 
 	&.font-lora {
 		--sk-font-family-body: 'Lora';
+		--sk-font-size-body: 1.8rem;
+		--sk-font-size-body-small: 1.7rem;
 	}
 
 	&.font-maitree {
 		--sk-font-family-body: 'Maitree';
-		--sk-font-size-body: 2rem;
+		--sk-font-size-body: 1.8rem;
 		--sk-font-size-body-small: 1.7rem;
 	}
 }
