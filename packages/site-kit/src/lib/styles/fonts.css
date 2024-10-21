@@ -1,0 +1,50 @@
+@import '@fontsource/cardo';
+@import '@fontsource/crimson-pro';
+@import '@fontsource/newsreader';
+@import '@fontsource/noto-serif';
+@import '@fontsource/petrona';
+@import '@fontsource/scope-one';
+@import '@fontsource/source-serif-4';
+
+:root {
+	&.font-cardo {
+		--sk-font-family-body: Cardo;
+		--sk-font-size-body: 2rem;
+		--sk-font-size-body-small: 1.7rem;
+	}
+
+	&.font-crimson-pro {
+		--sk-font-family-body: 'Crimson Pro';
+	}
+
+	&.font-newsreader {
+		--sk-font-family-body: Newsreader;
+		--sk-font-size-body: 2rem;
+		--sk-font-size-body-small: 1.7rem;
+		--sk-line-height-body: 1.6;
+	}
+
+	&.font-noto-serif {
+		--sk-font-family-body: 'Noto Serif';
+		--sk-font-size-body: 2rem;
+		--sk-font-size-body-small: 1.7rem;
+	}
+
+	&.font-petrona {
+		--sk-font-family-body: Petrona;
+		--sk-font-size-body: 2rem;
+		--sk-font-size-body-small: 1.7rem;
+	}
+
+	&.font-scope-one {
+		--sk-font-family-body: 'Scope One';
+		--sk-font-size-body: 2rem;
+		--sk-font-size-body-small: 1.7rem;
+	}
+
+	&.font-source-serif-4 {
+		--sk-font-family-body: 'Source Serif 4';
+		--sk-font-size-body: 1.9rem;
+		--sk-font-size-body-small: 1.6rem;
+	}
+}

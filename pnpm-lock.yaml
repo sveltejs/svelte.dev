@@ -428,6 +428,12 @@ importers:
       '@codemirror/view':
         specifier: ^6.17.1
         version: 6.34.1
+      '@fontsource/cardo':
+        specifier: ^5.1.0
+        version: 5.1.0
+      '@fontsource/crimson-pro':
+        specifier: ^5.1.0
+        version: 5.1.0
       '@fontsource/dm-serif-display':
         specifier: ^5.1.0
         version: 5.1.0
@@ -438,6 +444,21 @@ importers:
         specifier: ^5.1.0
         version: 5.1.0
       '@fontsource/fira-sans':
+        specifier: ^5.1.0
+        version: 5.1.0
+      '@fontsource/newsreader':
+        specifier: ^5.1.0
+        version: 5.1.0
+      '@fontsource/noto-serif':
+        specifier: ^5.1.0
+        version: 5.1.0
+      '@fontsource/petrona':
+        specifier: ^5.1.0
+        version: 5.1.0
+      '@fontsource/scope-one':
+        specifier: ^5.1.0
+        version: 5.1.0
+      '@fontsource/source-serif-4':
         specifier: ^5.1.0
         version: 5.1.0
       '@lezer/common':
@@ -899,6 +920,12 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@fontsource/cardo@5.1.0':
+    resolution: {integrity: sha512-ylOb2t/CgQV2mNovSVya6r/jC9Q0w3cKHQOO7iycXLHRsgCGF82Oy/Je3GmdoGVKRNF6CDA3pc85Tw1078nQwQ==}
+
+  '@fontsource/crimson-pro@5.1.0':
+    resolution: {integrity: sha512-YWWa5CJNH+b48VfD57+hf6OUaChAkGMR083Xp7HXnUfIbSRenn8QqM4q9AiU5QrVDZcBeCHrpU3tDLdCnVAnsg==}
+
   '@fontsource/dm-serif-display@5.1.0':
     resolution: {integrity: sha512-8IGBpTOn2XRA09plE6iAlZajL09iwCdSTd60FiM9NsD7VV4Nqseo9tgqiZLyuLC9D1jht5i39I2IYI/o2+Q0Kg==}
 
@@ -910,6 +937,21 @@ packages:
 
   '@fontsource/fira-sans@5.1.0':
     resolution: {integrity: sha512-qfAjF5WcrL6qQh9eIWLK7lOh9wbCgCnVWh2Nu2gozrTgsUgYBLR8sbCGYwlK1K0yZoQsR2i9VSiQ16wwPCBkSw==}
+
+  '@fontsource/newsreader@5.1.0':
+    resolution: {integrity: sha512-wBq4mtWkq7dM0hCQ58DGyTdnmNiNiC69amo/+/oGRDQxyLMR9QNWng+nGH/BZJne/l5i3CiK7UhxIU1FrcU/Og==}
+
+  '@fontsource/noto-serif@5.1.0':
+    resolution: {integrity: sha512-C/rancPr6kcRGNAut7g8CAZNhB1kOWB6VRQDCo6ZoUnW2Mja962ZcrU0nD7nFeSMJiSeyX5phCrajMaUJE3SGg==}
+
+  '@fontsource/petrona@5.1.0':
+    resolution: {integrity: sha512-8Q8WYMnRH700Y1ZgBDkJ17zZ/abZHU2u+H4hLEnJJYCjKxNY5/gDWR/0FaUNSYCM/u9CAn6IHQEUjrvVvdYW8Q==}
+
+  '@fontsource/scope-one@5.1.0':
+    resolution: {integrity: sha512-+nfvn/pKq3+LheaapNQSdwMvtKMB2HGO6T4G//ec8Ltvvn8tKKOfjRn5RFDq18k+YcBoSpTjIZI2wrNMbZuu9w==}
+
+  '@fontsource/source-serif-4@5.1.0':
+    resolution: {integrity: sha512-QhUshnNeb8TRUi2s1NH/UFOnRbY2LDejtIy//VHcG9w2dAwkMxAYIwuNplG0zpkcYiME8tzev0xNkbiSeuEtjw==}
 
   '@img/sharp-darwin-arm64@0.33.4':
     resolution: {integrity: sha512-p0suNqXufJs9t3RqLBO6vvrgr5OhgbWp76s5gTRvdmxmuv9E1rcaqGUsl3l4mKVmXPkTkTErXediAui4x+8PSA==}
@@ -3641,6 +3683,10 @@ snapshots:
   '@esbuild/win32-x64@0.23.1':
     optional: true
 
+  '@fontsource/cardo@5.1.0': {}
+
+  '@fontsource/crimson-pro@5.1.0': {}
+
   '@fontsource/dm-serif-display@5.1.0': {}
 
   '@fontsource/eb-garamond@5.1.0': {}
@@ -3648,6 +3694,16 @@ snapshots:
   '@fontsource/fira-mono@5.1.0': {}
 
   '@fontsource/fira-sans@5.1.0': {}
+
+  '@fontsource/newsreader@5.1.0': {}
+
+  '@fontsource/noto-serif@5.1.0': {}
+
+  '@fontsource/petrona@5.1.0': {}
+
+  '@fontsource/scope-one@5.1.0': {}
+
+  '@fontsource/source-serif-4@5.1.0': {}
 
   '@img/sharp-darwin-arm64@0.33.4':
     optionalDependencies:

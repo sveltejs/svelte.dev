@@ -23,6 +23,35 @@
 				JSON.parse(localStorage.getItem('svelte:theme'))?.current ??
 					(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
 			);
+
+			window.fonts = [
+				'cardo',
+				'crimson-pro',
+				'newsreader',
+				'noto-serif',
+				'petrona',
+				'scope-one',
+				'source-serif-4'
+			];
+
+			window.set_font = (font) => {
+				for (const font of window.fonts) {
+					document.documentElement.classList.remove(`font-${font}`);
+				}
+
+				if (font) {
+					document.documentElement.classList.add(`font-${font}`);
+				}
+
+				localStorage.setItem('font', font);
+			};
+
+			if (localStorage.font) {
+				document.documentElement.classList.add(`font-${localStorage.font}`);
+			}
+
+			const font = new URLSearchParams(location.search).get('font');
+			if (font) set_font(font);
 		</script>
 
 		%sveltekit.head%
