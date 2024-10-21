@@ -114,6 +114,7 @@
 
 	&.dark {
 		color-scheme: dark;
+		-webkit-font-smoothing: antialiased;
 
 		--sk-back-hue: 220;
 
@@ -126,7 +127,7 @@
 		--sk-back-translucent: hsl(0 0 100 / 0.1);
 		--sk-theme-1-hsl: 12, 94%, 62%;
 		--sk-text-1: hsl(var(--sk-back-hue) 10 90%);
-		--sk-text-2: hsl(var(--sk-back-hue) 10 70%);
+		--sk-text-2: hsl(var(--sk-back-hue) 10 80%);
 		--sk-text-3: hsl(var(--sk-back-hue) 10 65%);
 		--sk-text-4: hsl(var(--sk-back-hue) 10 45%);
 		--sk-text-translucent: hsla(0, 0%, 100%, 0.9);
