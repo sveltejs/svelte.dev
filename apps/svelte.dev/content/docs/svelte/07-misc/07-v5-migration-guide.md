@@ -525,7 +525,7 @@ For `$set`, use `$state` instead to create a reactive property object and manipu
 import App from './App.svelte'
 
 ---const app = new App({ target: document.getElementById("app"), props: { foo: 'bar' } });
-app.$set('event', { foo: 'baz' });---
+app.$set({ foo: 'baz' });---
 +++const props = $state({ foo: 'bar' });
 const app = mount(App, { target: document.getElementById("app"), props });
 props.foo = 'baz';+++
