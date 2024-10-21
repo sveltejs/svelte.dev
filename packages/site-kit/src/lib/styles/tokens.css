@@ -25,25 +25,36 @@
 
 	/* typography (prefer `font: --sk-font-{x}` over `font-family` and `font-size` rules */
 	--sk-font-family-ui: 'Fira Sans', -apple-system, sans-serif;
-	--sk-font-family-body: 'EB Garamond', Georgia, serif;
+	--sk-font-family-body: Georgia, serif;
 	--sk-font-family-heading: 'DM Serif Display', Georgia, serif;
 	--sk-font-family-mono: 'Fira Mono', monospace;
 
 	--sk-font-size-h1: 3.6rem;
 	--sk-font-size-h2: 3rem;
 	--sk-font-size-h3: 2.4rem;
-	--sk-font-size-body: 2.1rem;
-	--sk-font-size-body-small: 1.8rem;
+	--sk-font-size-body: 1.8rem;
+	--sk-font-size-body-small: 1.6rem;
 	--sk-font-size-ui-small: 1.3rem;
 	--sk-font-size-ui-medium: 1.6rem;
 	--sk-font-size-ui-large: 3rem;
 	--sk-font-size-mono: 1.4rem;
 
+	--sk-line-height-body: 1.7;
+
+	@media (resolution: 2x) {
+		--sk-font-family-body: 'EB Garamond', Georgia, serif;
+		--sk-font-size-body: 2.1rem;
+		--sk-font-size-body-small: 1.8rem;
+		--sk-line-height-body: 1.5;
+	}
+
 	--sk-font-h1: 500 var(--sk-font-size-h1) / 1.2 var(--sk-font-family-heading);
 	--sk-font-h2: 500 var(--sk-font-size-h2) / 1.2 var(--sk-font-family-heading);
 	--sk-font-h3: 500 var(--sk-font-size-h3) / 1.2 var(--sk-font-family-heading);
-	--sk-font-body: 400 var(--sk-font-size-body) / 1.5 var(--sk-font-family-body);
-	--sk-font-body-small: 400 var(--sk-font-size-body-small) / 1.5 var(--sk-font-family-body);
+	--sk-font-body: 400 var(--sk-font-size-body) / var(--sk-line-height-body)
+		var(--sk-font-family-body);
+	--sk-font-body-small: 400 var(--sk-font-size-body-small) / var(--sk-line-height-body)
+		var(--sk-font-family-body);
 	--sk-font-ui-small: 400 var(--sk-font-size-ui-small) / 1.5 var(--sk-font-family-ui);
 	--sk-font-ui-medium: 400 var(--sk-font-size-ui-medium) / 1.5 var(--sk-font-family-ui);
 	--sk-font-ui-large: 400 var(--sk-font-size-ui-large) / 1.5 var(--sk-font-family-ui);
