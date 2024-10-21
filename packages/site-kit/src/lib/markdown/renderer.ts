@@ -226,7 +226,13 @@ export async function render_content_markdown(
 						? await generate_ts_from_js(source, token.lang, options)
 						: undefined;
 
-				let html = '<div class="code-block"><div class="controls">';
+				let html = '<div class="code-block">';
+
+				const needs_controls = options.link || options.copy || converted;
+
+				if (needs_controls) {
+					html += '<div class="controls">';
+				}
 
 				if (options.file) {
 					const ext = options.file.slice(options.file.lastIndexOf('.'));
@@ -243,7 +249,9 @@ export async function render_content_markdown(
 					html += `<button class="copy-to-clipboard raised" title="Copy to clipboard" aria-label="Copy to clipboard"></button>`;
 				}
 
-				html += '</div>';
+				if (needs_controls) {
+					html += '</div>';
+				}
 
 				html += await syntax_highlight({ filename, language: token.lang, prelude, source, check });
 
