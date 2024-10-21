@@ -428,6 +428,9 @@ importers:
       '@codemirror/view':
         specifier: ^6.17.1
         version: 6.34.1
+      '@fontsource/amethysta':
+        specifier: ^5.1.0
+        version: 5.1.0
       '@fontsource/cardo':
         specifier: ^5.1.0
         version: 5.1.0
@@ -446,6 +449,18 @@ importers:
       '@fontsource/fira-sans':
         specifier: ^5.1.0
         version: 5.1.0
+      '@fontsource/gelasio':
+        specifier: ^5.1.0
+        version: 5.1.0
+      '@fontsource/halant':
+        specifier: ^5.1.0
+        version: 5.1.0
+      '@fontsource/lora':
+        specifier: ^5.1.0
+        version: 5.1.0
+      '@fontsource/maitree':
+        specifier: ^5.1.0
+        version: 5.1.0
       '@fontsource/newsreader':
         specifier: ^5.1.0
         version: 5.1.0
@@ -453,6 +468,9 @@ importers:
         specifier: ^5.1.0
         version: 5.1.0
       '@fontsource/petrona':
+        specifier: ^5.1.0
+        version: 5.1.0
+      '@fontsource/pt-serif':
         specifier: ^5.1.0
         version: 5.1.0
       '@fontsource/scope-one':
@@ -920,6 +938,9 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@fontsource/amethysta@5.1.0':
+    resolution: {integrity: sha512-Zj8kJTQMLzbjzzxc5GKpIznvGD8UH/q5NJGYUnd3riKfCbgtTM6EfhMW2rwV1I3TlluE88glIac3a46gahJ1Jg==}
+
   '@fontsource/cardo@5.1.0':
     resolution: {integrity: sha512-ylOb2t/CgQV2mNovSVya6r/jC9Q0w3cKHQOO7iycXLHRsgCGF82Oy/Je3GmdoGVKRNF6CDA3pc85Tw1078nQwQ==}
 
@@ -938,6 +959,18 @@ packages:
   '@fontsource/fira-sans@5.1.0':
     resolution: {integrity: sha512-qfAjF5WcrL6qQh9eIWLK7lOh9wbCgCnVWh2Nu2gozrTgsUgYBLR8sbCGYwlK1K0yZoQsR2i9VSiQ16wwPCBkSw==}
 
+  '@fontsource/gelasio@5.1.0':
+    resolution: {integrity: sha512-wnG7L68olCnCTV7j1kWKS9vy3bOkQlgaq88sTdvrcZr2LZHxAHPrOR0ebHWpuz1IqPvgvon/iGGRxccwecpebg==}
+
+  '@fontsource/halant@5.1.0':
+    resolution: {integrity: sha512-oK2L8NRpnqsFgOztiGLQ+ezgfILPPzxsEjR0WKXWuf+LqFcbpmpVtEV5q+yzML2iJgjRF9DtSBt93JgJ8x2GWA==}
+
+  '@fontsource/lora@5.1.0':
+    resolution: {integrity: sha512-kHhtKc/ETrNN0X+TsfSAqeE/WQcazkSa97Sxzkg/Uo2rZ+O3kCts595Cmu116O5gw4z0Bc37voD67rEA6iRv/w==}
+
+  '@fontsource/maitree@5.1.0':
+    resolution: {integrity: sha512-sJgOlbaqiB58NH8fsS2FfLt+5fr4yKNQz2+DTTHc+2VX53RZ/0ArLb4gm0RxVz0FSjIzhFM42dHnwiwSRpbZmA==}
+
   '@fontsource/newsreader@5.1.0':
     resolution: {integrity: sha512-wBq4mtWkq7dM0hCQ58DGyTdnmNiNiC69amo/+/oGRDQxyLMR9QNWng+nGH/BZJne/l5i3CiK7UhxIU1FrcU/Og==}
 
@@ -946,6 +979,9 @@ packages:
 
   '@fontsource/petrona@5.1.0':
     resolution: {integrity: sha512-8Q8WYMnRH700Y1ZgBDkJ17zZ/abZHU2u+H4hLEnJJYCjKxNY5/gDWR/0FaUNSYCM/u9CAn6IHQEUjrvVvdYW8Q==}
+
+  '@fontsource/pt-serif@5.1.0':
+    resolution: {integrity: sha512-ehu4JaYBu8+gfsPAo1vpi7KN+JPm10mNRUwm9ehR5g+LlVWWxnXomFPkBe7OA0BHnljSsjLohs0OuCC37KAXrw==}
 
   '@fontsource/scope-one@5.1.0':
     resolution: {integrity: sha512-+nfvn/pKq3+LheaapNQSdwMvtKMB2HGO6T4G//ec8Ltvvn8tKKOfjRn5RFDq18k+YcBoSpTjIZI2wrNMbZuu9w==}
@@ -3683,6 +3719,8 @@ snapshots:
   '@esbuild/win32-x64@0.23.1':
     optional: true
 
+  '@fontsource/amethysta@5.1.0': {}
+
   '@fontsource/cardo@5.1.0': {}
 
   '@fontsource/crimson-pro@5.1.0': {}
@@ -3695,11 +3733,21 @@ snapshots:
 
   '@fontsource/fira-sans@5.1.0': {}
 
+  '@fontsource/gelasio@5.1.0': {}
+
+  '@fontsource/halant@5.1.0': {}
+
+  '@fontsource/lora@5.1.0': {}
+
+  '@fontsource/maitree@5.1.0': {}
+
   '@fontsource/newsreader@5.1.0': {}
 
   '@fontsource/noto-serif@5.1.0': {}
 
   '@fontsource/petrona@5.1.0': {}
+
+  '@fontsource/pt-serif@5.1.0': {}
 
   '@fontsource/scope-one@5.1.0': {}
 

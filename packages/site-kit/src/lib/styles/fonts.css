@@ -12,6 +12,16 @@
 @import '@fontsource/source-serif-4/400.css';
 @import '@fontsource/source-serif-4/400-italic.css';
 
+@import '@fontsource/pt-serif/400.css';
+@import '@fontsource/pt-serif/400-italic.css';
+@import '@fontsource/gelasio/400.css';
+@import '@fontsource/gelasio/400-italic.css';
+@import '@fontsource/halant/400.css';
+@import '@fontsource/amethysta/400.css';
+@import '@fontsource/lora/400.css';
+@import '@fontsource/lora/400-italic.css';
+@import '@fontsource/maitree/400.css';
+
 :root {
 	&.font-cardo {
 		--sk-font-family-body: Cardo;
@@ -53,5 +63,31 @@
 		--sk-font-size-body: 1.9rem;
 		--sk-font-size-body-small: 1.6rem;
 		--sk-font-weight-body: 400;
+	}
+
+	&.font-pt-serif {
+		--sk-font-family-body: 'PT Serif';
+	}
+
+	&.font-gelasio {
+		--sk-font-family-body: 'Gelasio';
+	}
+
+	&.font-halant {
+		--sk-font-family-body: 'Halant';
+	}
+
+	&.font-amethysta {
+		--sk-font-family-body: 'Amethysta';
+	}
+
+	&.font-lora {
+		--sk-font-family-body: 'Lora';
+	}
+
+	&.font-maitree {
+		--sk-font-family-body: 'Maitree';
+		--sk-font-size-body: 2rem;
+		--sk-font-size-body-small: 1.7rem;
 	}
 }
