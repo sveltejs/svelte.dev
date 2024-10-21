@@ -34,7 +34,7 @@
 		"@codemirror/state": "^6.2.1",
 		"@codemirror/view": "^6.17.1",
 		"@fontsource/dm-serif-display": "^5.1.0",
-		"@fontsource/eb-garamond": "^5.1.0",
+		"@fontsource/crimson-pro": "^5.1.0",
 		"@fontsource/fira-mono": "^5.1.0",
 		"@fontsource/fira-sans": "^5.1.0",
 		"@shikijs/twoslash": "^1.22.0",

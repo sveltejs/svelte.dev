@@ -25,7 +25,7 @@
 
 	/* typography (prefer `font: --sk-font-{x}` over `font-family` and `font-size` rules */
 	--sk-font-family-ui: 'Fira Sans', -apple-system, sans-serif;
-	--sk-font-family-body: 'EB Garamond', Georgia, serif;
+	--sk-font-family-body: 'Crimson Pro', Georgia, serif;
 	--sk-font-family-heading: 'DM Serif Display', Georgia, serif;
 	--sk-font-family-mono: 'Fira Mono', monospace;
 
