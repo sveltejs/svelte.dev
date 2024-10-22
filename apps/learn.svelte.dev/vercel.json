@@ -27,19 +27,19 @@
 		},
 		{
 			"source": "/tutorial/reactive-assignments",
-			"destination": "https://svelte.dev/tutorial/svelte/reactive-assignments"
+			"destination": "https://svelte.dev/tutorial/svelte/state"
 		},
 		{
 			"source": "/tutorial/reactive-declarations",
-			"destination": "https://svelte.dev/tutorial/svelte/reactive-declarations"
+			"destination": "https://svelte.dev/tutorial/svelte/derived-state"
 		},
 		{
 			"source": "/tutorial/reactive-statements",
-			"destination": "https://svelte.dev/tutorial/svelte/reactive-statements"
+			"destination": "https://svelte.dev/tutorial/svelte/effects"
 		},
 		{
 			"source": "/tutorial/updating-arrays-and-objects",
-			"destination": "https://svelte.dev/tutorial/svelte/updating-arrays-and-objects"
+			"destination": "https://svelte.dev/tutorial/svelte/deep-state"
 		},
 		{
 			"source": "/tutorial/declaring-props",
@@ -87,7 +87,7 @@
 		},
 		{
 			"source": "/tutorial/event-modifiers",
-			"destination": "https://svelte.dev/tutorial/svelte/event-modifiers"
+			"destination": "https://svelte.dev/tutorial/svelte/capturing"
 		},
 		{
 			"source": "/tutorial/component-events",
@@ -99,7 +99,7 @@
 		},
 		{
 			"source": "/tutorial/dom-event-forwarding",
-			"destination": "https://svelte.dev/tutorial/svelte/dom-event-forwarding"
+			"destination": "https://svelte.dev/tutorial/svelte/spreading-events"
 		},
 		{
 			"source": "/tutorial/text-inputs",
