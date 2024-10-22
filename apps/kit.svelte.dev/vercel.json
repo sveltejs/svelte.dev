@@ -1,0 +1,29 @@
+{
+	"$schema": "https://openapi.vercel.sh/vercel.json",
+	"redirects": [
+		{
+			"source": "/",
+			"destination": "https://svelte.dev/",
+			"permanent": true
+		},
+		{
+			"source": "/docs/modules",
+			"destination": "https://svelte.dev/docs/kit/@sveltejs-kit",
+			"permanent": true
+		},
+		{
+			"source": "/docs/types",
+			"destination": "https://svelte.dev/docs/kit/@sveltejs-kit",
+			"permanent": true
+		},
+		{
+			"source": "/docs/(.*)",
+			"destination": "https://svelte.dev/docs/kit/$1",
+			"permanent": true
+		},
+		{
+			"source": "/(.*)",
+			"destination": "https://svelte.dev"
+		}
+	]
+}
