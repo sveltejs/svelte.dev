@@ -50,6 +50,9 @@ A `<script>` tag with a `module` attribute runs once when the module first evalu
 
 You can `export` bindings from this block, and they will become exports of the compiled module. You cannot `export default`, since the default export is the component itself.
 
+> [!LEGACY]
+> In Svelte 4, this script tag was created using `<script context="module">`
+
 ## `<style>`
 
 CSS inside a `<style>` block will be scoped to that component.
@@ -63,4 +66,4 @@ CSS inside a `<style>` block will be scoped to that component.
 </style>
 ```
 
-For more information regarding styling, read the documentation around [styles and classes](styles-and-classes).
+For more information, head to the section on [styling](scoped-styles).

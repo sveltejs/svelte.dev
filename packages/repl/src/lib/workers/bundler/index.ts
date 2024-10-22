@@ -19,6 +19,7 @@ import type { File } from 'editor';
 
 let packages_url: string;
 let svelte_url: string;
+let version: string;
 let current_id: number;
 
 let fulfil_ready: (arg?: never) => void;
@@ -31,11 +32,18 @@ self.addEventListener('message', async (event: MessageEvent<BundleMessageData>) 
 		case 'init': {
 			({ packages_url, svelte_url } = event.data);
 
-			const { version } = await fetch(`${svelte_url}/package.json`).then((r) => r.json());
+			({ version } = await fetch(`${svelte_url}/package.json`).then((r) => r.json()));
 			console.log(`Using Svelte compiler version ${version}`);
 
-			const compiler = await fetch(`${svelte_url}/compiler/index.js`).then((r) => r.text());
-			(0, eval)(compiler + '\n//# sourceURL=compiler/index.js@' + version);
+			if (version.startsWith('4.')) {
+				// unpkg doesn't set the correct MIME type for .cjs files
+				// https://github.com/mjackson/unpkg/issues/355
+				const compiler = await fetch(`${svelte_url}/compiler.cjs`).then((r) => r.text());
+				(0, eval)(compiler + '\n//# sourceURL=compiler.cjs@' + version);
+			} else {
+				const compiler = await fetch(`${svelte_url}/compiler/index.js`).then((r) => r.text());
+				(0, eval)(compiler + '\n//# sourceURL=compiler/index.js@' + version);
+			}
 
 			fulfil_ready();
 			break;
@@ -359,7 +367,7 @@ async function get_bundle(
 					dev: true
 				});
 
-				if (result.css) {
+				if (result.css?.code) {
 					// resolve local files by inlining them
 					result.css.code = result.css.code.replace(
 						/url\(['"]?(\..+?\.(svg|webp|png))['"]?\)/g,
@@ -481,7 +489,9 @@ async function bundle({
 		type: 'file',
 		name: '__entry.js',
 		basename: '__entry.js',
-		contents: `
+		contents:
+			version.split('.')[0] >= '5'
+				? `
 			import { unmount as u } from 'svelte';
 			import { styles } from './__shared.js';
 			export { mount, untrack } from 'svelte';
@@ -489,6 +499,20 @@ async function bundle({
 			export function unmount(component) {
 				u(component);
 				styles.forEach(style => style.remove());
+			}
+		`
+				: `
+			import { styles } from './__shared.js';
+			export {default as App} from './App.svelte';
+			export function mount(component, options) {
+				return new component(options);
+			}
+			export function unmount(component) {
+				component.$destroy();
+				styles.forEach(style => style.remove());
+			}
+			export function untrack(fn) {
+				return fn();
 			}
 		`,
 		text: true
