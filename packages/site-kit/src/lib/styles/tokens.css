@@ -41,13 +41,6 @@
 
 	--sk-line-height-body: 1.7;
 
-	@media (resolution: 2x) {
-		--sk-font-family-body: 'EB Garamond', Georgia, serif;
-		--sk-font-size-body: 2.1rem;
-		--sk-font-size-body-small: 1.8rem;
-		--sk-line-height-body: 1.5;
-	}
-
 	--sk-font-h1: 500 var(--sk-font-size-h1) / 1.2 var(--sk-font-family-heading);
 	--sk-font-h2: 500 var(--sk-font-size-h2) / 1.2 var(--sk-font-family-heading);
 	--sk-font-h3: 500 var(--sk-font-size-h3) / 1.2 var(--sk-font-family-heading);
@@ -72,8 +65,8 @@
 	--sk-back-5: hsl(0, 0%, 92%);
 	--sk-back-6: hsl(0, 0%, 86%);
 
-	--sk-text-1: hsl(0, 0%, 15%);
-	--sk-text-2: hsl(0, 0%, 22%);
+	--sk-text-1: hsl(0, 0%, 12%);
+	--sk-text-2: hsl(0, 0%, 20%);
 	--sk-text-3: hsl(0, 0%, 30%);
 	--sk-text-4: hsl(0, 0%, 45%);
 	--sk-scrollbar: rgba(0, 0, 0, 0.3);
@@ -122,6 +115,16 @@
 	--sk-raised-hover-color: var(--sk-back-5) var(--sk-back-6) var(--sk-back-6) var(--sk-back-5);
 	--sk-raised-active-color: var(--sk-back-6) var(--sk-back-5) var(--sk-back-5) var(--sk-back-6);
 	--sk-raised-active-width: 2px 1px 1px 2px;
+
+	@media (resolution: 2x) {
+		--sk-font-family-body: 'EB Garamond', Georgia, serif;
+		--sk-font-size-body: 2.1rem;
+		--sk-font-size-body-small: 1.8rem;
+		--sk-line-height-body: 1.5;
+		--sk-text-1: hsl(0, 0%, 5%);
+		--sk-text-2: hsl(0, 0%, 12%);
+		--sk-text-3: hsl(0, 0%, 27%);
+	}
 
 	&.dark {
 		color-scheme: dark;
