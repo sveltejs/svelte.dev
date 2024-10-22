@@ -100,7 +100,7 @@
 				enable copy-and-paste for the duration of this session
 			</label>
 
-			<button on:click={() => (show_modal = false)}>OK</button>
+			<button class="raised primary" on:click={() => (show_modal = false)}>OK</button>
 		</div>
 	</Modal>
 {/if}
@@ -166,12 +166,9 @@
 
 		button {
 			display: block;
-			background-color: var(--sk-theme-1);
-			color: white;
 			padding: 1rem;
-			width: 10em;
+			width: 10rem;
 			margin: 1em 0 0 0;
-			border-radius: var(--sk-border-radius);
 			line-height: 1;
 			font: var(--sk-font-ui-small);
 		}
