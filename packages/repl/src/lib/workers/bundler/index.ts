@@ -27,7 +27,7 @@ const ready = new Promise((f) => {
 	fulfil_ready = f;
 });
 
-console.log(self.btoa, window.btoa);
+console.log(self.btoa, self.window, typeof window === 'undefined' ? 'no window' : window.btoa);
 
 self.addEventListener('message', async (event: MessageEvent<BundleMessageData>) => {
 	switch (event.data.type) {
