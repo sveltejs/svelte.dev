@@ -157,14 +157,12 @@
 
 	let sidebar = $state() as HTMLElement;
 
-	// TODO this doesn't seem to work any more?
 	export const snapshot: Snapshot<number> = {
 		capture: () => {
-			const scroll = sidebar.scrollTop;
-			sidebar.scrollTop = 0;
-			return scroll;
+			return sidebar.scrollTop;
 		},
 		restore: (scroll) => {
+			scroll_was_restored = true;
 			sidebar.scrollTop = scroll;
 		}
 	};
@@ -192,11 +190,18 @@
 		solution.set(b);
 	});
 
+	let scroll_was_restored = false;
+
 	beforeNavigate(() => {
+		scroll_was_restored = false;
 		previous_files = workspace.files;
 	});
 
 	afterNavigate(async () => {
+		if (!scroll_was_restored) {
+			sidebar.scrollTop = 0;
+		}
+
 		workspace.reset(Object.values(a), data.exercise.focus);
 
 		const will_delete = previous_files.some((file) => !(file.name in a));
