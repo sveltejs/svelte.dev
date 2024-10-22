@@ -87,6 +87,7 @@
 
 	h1 {
 		max-width: 9em;
+		margin-bottom: 0.5em;
 	}
 
 	.machine img {
