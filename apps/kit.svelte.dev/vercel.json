@@ -20,6 +20,10 @@
 			"source": "/docs/(.*)",
 			"destination": "https://svelte.dev/docs/kit/$1",
 			"permanent": true
+		},
+		{
+			"source": "/(.*)",
+			"destination": "https://svelte.dev"
 		}
 	]
 }
