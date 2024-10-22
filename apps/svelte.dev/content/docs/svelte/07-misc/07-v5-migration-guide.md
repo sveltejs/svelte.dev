@@ -723,6 +723,8 @@ This is no longer true in Svelte 5:
 <svelte:component this={Thing} />
 ```
 
+Keep in mind that your user-defined component's name should be capitalized (`Thing`) to distinguish it from a normal HTML element and avoid incorrect types.
+
 ### Touch and wheel events are passive
 
 When using `onwheel`, `onmousewheel`, `ontouchstart` and `ontouchmove` event attributes, the handlers are [passive](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener#using_passive_listeners) to align with browser defaults. This greatly improves responsiveness by allowing the browser to scroll the document immediately, rather than waiting to see if the event handler calls `event.preventDefault()`.
