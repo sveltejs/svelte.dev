@@ -27,6 +27,8 @@ const ready = new Promise((f) => {
 	fulfil_ready = f;
 });
 
+console.log(self.btoa, window.btoa);
+
 self.addEventListener('message', async (event: MessageEvent<BundleMessageData>) => {
 	switch (event.data.type) {
 		case 'init': {
