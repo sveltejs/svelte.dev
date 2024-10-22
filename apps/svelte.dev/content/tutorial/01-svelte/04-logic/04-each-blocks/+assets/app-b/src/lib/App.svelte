@@ -9,7 +9,7 @@
 	{#each colors as color, i}
 		<button
 			style="background: {color}"
-			aria-label="{color}"
+			aria-label={color}
 			aria-current={selected === color}
 			onclick={() => selected = color}
 		>{i + 1}</button>
