@@ -110,8 +110,8 @@
 	--sk-text-warning: var(--sk-text-warning-hsl);
 
 	/* used for coloured backgrounds e.g. blockquotes */
-	--sk-back-translucent: rgba(0, 0%, 0%, 0.1);
-	--sk-text-translucent: rgba(0, 0%, 0%, 0.7);
+	--sk-back-translucent: rgba(0, 0, 0, 0.1);
+	--sk-text-translucent: rgba(0, 0, 0, 0.7);
 
 	/* overrides */
 	--shiki-color-background: var(--sk-back-2);
