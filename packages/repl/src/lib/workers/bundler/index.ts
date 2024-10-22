@@ -17,7 +17,9 @@ import type { Warning } from '../../types';
 import type { CompileError, CompileOptions, CompileResult } from 'svelte/compiler';
 import type { File } from 'editor';
 
-self.window = self; // hack for magic-sring and rollup inline sourcemaps
+// hack for magic-sring and rollup inline sourcemaps
+// do not put this into a separate module and import it, would be treeshaking in prod
+self.window = self;
 
 let packages_url: string;
 let svelte_url: string;
@@ -28,8 +30,6 @@ let fulfil_ready: (arg?: never) => void;
 const ready = new Promise((f) => {
 	fulfil_ready = f;
 });
-
-console.log(self.btoa, self.window, typeof window === 'undefined' ? 'no window' : window.btoa);
 
 self.addEventListener('message', async (event: MessageEvent<BundleMessageData>) => {
 	switch (event.data.type) {
