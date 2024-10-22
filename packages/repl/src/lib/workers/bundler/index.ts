@@ -17,6 +17,8 @@ import type { Warning } from '../../types';
 import type { CompileError, CompileOptions, CompileResult } from 'svelte/compiler';
 import type { File } from 'editor';
 
+self.window = self; // hack for magic-sring and rollup inline sourcemaps
+
 let packages_url: string;
 let svelte_url: string;
 let version: string;
