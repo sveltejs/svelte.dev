@@ -1,18 +1,14 @@
 import { browser } from '$app/environment';
+import { redirect } from '@sveltejs/kit';
 
-export function load({ data, url }) {
-	// initialize vim with the search param
-	const vim_search_params = url.searchParams.get('vim');
-	let vim = vim_search_params !== null && vim_search_params !== 'false';
-	// when in the browser check if there's a local storage entry and eventually override
-	// vim if there's not a search params otherwise update the local storage
+export function load() {
+	// redirect old svelte-5-preview.vercel.app playground links,
+	// which all have a hash that starts with this pattern
 	if (browser) {
-		const vim_local_storage = window.localStorage.getItem('svelte:vim-enabled');
-		if (vim_search_params !== null) {
-			window.localStorage.setItem('svelte:vim-enabled', vim.toString());
-		} else if (vim_local_storage) {
-			vim = vim_local_storage !== 'false';
+		if (location.hash) {
+			redirect(307, `https://svelte.dev/${location.pathname}#${location.hash}`);
+		} else {
+			redirect(307, `https://svelte.dev/${location.pathname}`);
 		}
 	}
-	return { ...data, vim };
 }

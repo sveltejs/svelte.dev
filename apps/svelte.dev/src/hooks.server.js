@@ -19,24 +19,9 @@ const fonts = [
 
 /** @type {import('@sveltejs/kit').Handle} */
 export async function handle({ event, resolve }) {
-	// Best effort to redirect from Svelte 4 docs to new docs
-	if (event.url.pathname.startsWith('/docs')) {
-		const destination = mappings.get(event.url.pathname);
-		if (destination) {
-			redirect(307, destination); // TODO make 301 once we're sure
-		}
+	if (!event.url.pathname.startsWith('/playground')) {
+		redirect(301, 'https://svelte.dev/' + event.url.pathname);
 	}
 
-	const response = await resolve(event, {
-		preload: ({ type, path }) => {
-			if (type === 'font') {
-				if (!path.endsWith('.woff2')) return false;
-				return fonts.some((font) => path.includes(font));
-			}
-
-			return type === 'js' || type === 'css'; // future-proof, if we add `assets` later
-		}
-	});
-
-	return response;
+	return resolve(event);
 }
