@@ -3,7 +3,6 @@
 
 	interface Props {
 		repo: string;
-		path: string;
 		prev: null | {
 			path: string;
 			title: string;
@@ -14,11 +13,11 @@
 		};
 	}
 
-	let { repo, path, prev, next }: Props = $props();
+	let { repo, prev, next }: Props = $props();
 </script>
 
 <p class="edit">
-	<a href="{repo}/edit/main/{path}">
+	<a href={repo}>
 		<Icon name="edit" /> Edit this page on GitHub
 	</a>
 </p>

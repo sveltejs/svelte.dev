@@ -67,8 +67,7 @@
 		</div>
 
 		<PageControls
-			repo="https://github.com/sveltejs/svelte.dev"
-			path="apps/svelte.dev/content/{exercise.dir}"
+			repo="https://github.com/sveltejs/svelte.dev/edit/main/apps/svelte.dev/content/{exercise.dir}"
 			prev={exercise.prev && {
 				title: exercise.prev.title,
 				path: `/tutorial/${exercise.prev.slug}`

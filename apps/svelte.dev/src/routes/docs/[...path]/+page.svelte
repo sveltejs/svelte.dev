@@ -11,6 +11,12 @@
 	setupDocsHovers();
 
 	let content = $state() as HTMLElement;
+
+	const repo = $derived.by(() => {
+		const name = data.document.slug.split('/')[1];
+		const link = 'docs/' + data.document.file.split('/').slice(2).join('/');
+		return `https://github.com/sveltejs/${name}/edit/main/documentation/${link}`;
+	});
 </script>
 
 <svelte:head>
@@ -40,8 +46,7 @@
 	</div>
 
 	<PageControls
-		repo="https://github.com/sveltejs/svelte.dev"
-		path="apps/svelte.dev/content/{data.document.file}"
+		{repo}
 		prev={data.document.prev && {
 			title: data.document.prev.title,
 			path: `/${data.document.prev.slug}`
