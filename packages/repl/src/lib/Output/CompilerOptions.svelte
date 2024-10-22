@@ -10,7 +10,7 @@
 	<div class="option">
 		<span class="key">generate:</span>
 
-		{#each ['client', 'server'] as generate}
+		{#each ['client', 'server'] as const as generate}
 			<input
 				id={generate}
 				type="radio"

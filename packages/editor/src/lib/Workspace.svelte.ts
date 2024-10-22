@@ -74,12 +74,17 @@ const default_extensions = [
 // 	extensions.push(vim());
 // }
 
+interface ExposedCompilerOptions {
+	generate: 'client' | 'server';
+	dev: boolean;
+}
+
 export class Workspace {
 	// TODO this stuff should all be readonly
 	creating = $state.raw<{ parent: string; type: 'file' | 'directory' } | null>(null);
 	modified = $state<Record<string, boolean>>({});
 
-	#compiler_options = $state.raw<{ generate: 'client' | 'server'; dev: boolean }>({
+	#compiler_options = $state.raw<ExposedCompilerOptions>({
 		generate: 'client',
 		dev: false
 	});
@@ -304,7 +309,7 @@ export class Workspace {
 		this.#view = null;
 	}
 
-	update_compiler_options(options: CompileOptions) {
+	update_compiler_options(options: Partial<ExposedCompilerOptions>) {
 		this.#compiler_options = { ...this.#compiler_options, ...options };
 		this.#reset_diagnostics();
 	}
