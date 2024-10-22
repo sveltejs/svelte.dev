@@ -1,0 +1,12 @@
+{
+	"redirects": [
+		{
+			"source": "/docs/:path*",
+			"destination": "https://svelte.dev/docs/kit/:path*"
+		},
+		{
+			"source": "/(.*)",
+			"destination": "https://svelte.dev/"
+		}
+	]
+}
