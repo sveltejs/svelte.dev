@@ -48,6 +48,7 @@ addEventListener('message', async (event) => {
 		// .svelte.js file compiled with Svelte 3/4 compiler
 		postMessage({
 			id,
+			filename: file.name,
 			payload: {
 				error: null,
 				result: null,
@@ -72,6 +73,7 @@ addEventListener('message', async (event) => {
 
 		postMessage({
 			id,
+			filename: file.name,
 			payload: {
 				error: null,
 				result: {
@@ -91,6 +93,7 @@ addEventListener('message', async (event) => {
 	} catch (e) {
 		postMessage({
 			id,
+			filename: file.name,
 			payload: {
 				// @ts-expect-error
 				error: { message: e.message, ...e },
