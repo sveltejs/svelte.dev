@@ -84,9 +84,9 @@
 
 	--sk-code-base: var(--sk-text-2);
 	--sk-code-comment: var(--sk-text-4);
-	--sk-code-keyword: hsl(204 100% 38%);
+	--sk-code-keyword: hsl(204, 100%, 38%);
 	--sk-code-function: var(--sk-theme-1);
-	--sk-code-string: hsl(30 100% 30%);
+	--sk-code-string: hsl(30, 100%, 30%);
 	--sk-code-number: hsl(120, 100%, 25%);
 	--sk-code-template-string: hsl(2, 80%, 47%);
 	--sk-code-tags: var(--sk-code-function);
