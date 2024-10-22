@@ -13,9 +13,11 @@ Despite all that, Svelte is almost completely backwards-compatible with Svelte 4
 
 ```json
 {
-	“devDependencies”: {
----		“svelte”: “^4”,---
-+++		“svelte”: “^5”,+++
+	"devDependencies": {
+---		"@sveltejs/vite-plugin-svelte": "^3.0.0",---
+---		"svelte": "^4",---
++++		"@sveltejs/vite-plugin-svelte": "^4.0.0",+++
++++		"svelte": "^5",+++
 		// …
 	}
 }
