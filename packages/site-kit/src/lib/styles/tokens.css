@@ -9,7 +9,7 @@
 	color-scheme: light;
 
 	--sk-back-h: 206;
-	--sk-selection-color: hsla(204, 100%, 63%, 0.3);
+	--sk-selection-color: rgba(66, 180, 255, 0.3);
 
 	/* dimensions */
 	--sk-nav-height: 6rem;
@@ -50,39 +50,39 @@
 	--sk-font-mono: 400 var(--sk-font-size-mono) / 1.7 var(--sk-font-family-mono);
 
 	/* Base colors */
-	--sk-theme-1-hsl: 12, 93%, 43%;
+	--sk-theme-1-hsl: #D43008;
 
-	--sk-theme-1: hsl(var(--sk-theme-1-hsl));
+	--sk-theme-1: var(--sk-theme-1-hsl);
 
-	--sk-back-1: hsl(0, 0%, 100%);
-	--sk-back-2: hsl(0, 0%, 100%);
-	--sk-back-3: hsl(0, 0%, 99%);
-	--sk-back-4: hsl(0, 0%, 95%);
-	--sk-back-5: hsl(0, 0%, 92%);
-	--sk-back-6: hsl(0, 0%, 86%);
+	--sk-back-1: #FFFFFF;
+	--sk-back-2: #FFFFFF;
+	--sk-back-3: #FCFCFC;
+	--sk-back-4: #F2F2F2;
+	--sk-back-5: #EBEBEB;
+	--sk-back-6: #DBDBDB;
 
-	--sk-text-1: hsl(0 0 5);
-	--sk-text-2: hsl(0 0 12);
-	--sk-text-3: hsl(0 0 27);
-	--sk-text-4: hsl(0 0 45);
+	--sk-text-1: #0D0D0D;
+	--sk-text-2: #1F1F1F;
+	--sk-text-3: #454545;
+	--sk-text-4: #737373;
 	--sk-scrollbar: rgba(0, 0, 0, 0.3);
 	--sk-shadow: drop-shadow(0px 0px 14px rgba(0 0 0 / 0.1));
 
 	/* same in light mode, different in dark mode */
-	--sk-theme-1-variant: hsl(15, 100%, 50%);
+	--sk-theme-1-variant: #FF4000;
 
 	--sk-code-base: var(--sk-text-2);
 	--sk-code-comment: var(--sk-text-4);
-	--sk-code-keyword: hsl(204 100 38);
+	--sk-code-keyword: #0074C2;
 	--sk-code-function: var(--sk-theme-1);
-	--sk-code-string: hsl(30 100 30);
-	--sk-code-number: hsl(120, 100%, 25%);
-	--sk-code-template-string: hsl(2, 80%, 47%);
+	--sk-code-string: #994D00;
+	--sk-code-number: #008000;
+	--sk-code-template-string: #D81E18;
 	--sk-code-tags: var(--sk-code-function);
 	--sk-code-important: var(--sk-code-string);
-	--sk-code-diff-base: hsla(0, 0%, 0%, 0.6);
-	--sk-code-diff-inserted: hsl(120, 100%, 25%);
-	--sk-code-diff-removed: hsl(2, 80%, 47%);
+	--sk-code-diff-base: rgba(0, 0, 0, 0.6);
+	--sk-code-diff-inserted: #008000;
+	--sk-code-diff-removed: #D81E18;
 
 	--shiki-color-text: var(--sk-code-base);
 	--shiki-token-constant: var(--sk-code-base);
@@ -96,11 +96,11 @@
 	--shiki-token-link: var(--sk-code-keyword);
 
 	--sk-text-warning-hsl: 32, 95%, 44%;
-	--sk-text-warning: hsl(var(--sk-text-warning-hsl));
+	--sk-text-warning: var(--sk-text-warning-hsl);
 
 	/* used for coloured backgrounds e.g. blockquotes */
-	--sk-back-translucent: hsla(0, 0%, 0%, 0.1);
-	--sk-text-translucent: hsla(0, 0%, 0%, 0.7);
+	--sk-back-translucent: rgba(0, 0%, 0%, 0.1);
+	--sk-text-translucent: rgba(0, 0%, 0%, 0.7);
 
 	/* overrides */
 	--shiki-color-background: var(--sk-back-2);
@@ -117,39 +117,39 @@
 
 		--sk-back-hue: 220;
 
-		--sk-back-1: hsl(var(--sk-back-hue) 15 8);
-		--sk-back-2: hsl(var(--sk-back-hue) 15 15);
-		--sk-back-3: hsl(var(--sk-back-hue) 15 12);
-		--sk-back-4: hsl(var(--sk-back-hue) 15 22);
-		--sk-back-5: hsl(var(--sk-back-hue) 15 25);
-		--sk-back-6: hsl(var(--sk-back-hue) 15 32);
-		--sk-back-translucent: hsl(0 0 100 / 0.1);
-		--sk-theme-1-hsl: 12, 94%, 62%;
-		--sk-text-1: hsl(var(--sk-back-hue) 10 90%);
-		--sk-text-2: hsl(var(--sk-back-hue) 10 70%);
-		--sk-text-3: hsl(var(--sk-back-hue) 10 65%);
-		--sk-text-4: hsl(var(--sk-back-hue) 10 45%);
-		--sk-text-translucent: hsla(0, 0%, 100%, 0.9);
+		--sk-back-1: #111317;
+		--sk-back-2: #21242C;
+		--sk-back-3: #1A1D23;
+		--sk-back-4: #303541;
+		--sk-back-5: #363D49;
+		--sk-back-6: #454E5E;
+		--sk-back-translucent: rgba(255, 255, 255, 0.1);
+		--sk-theme-1-hsl: #F96743;
+		--sk-text-1: #E3E5E8;
+		--sk-text-2: #ABB0BA;
+		--sk-text-3: #9DA3AF;
+		--sk-text-4: #676F7E;
+		--sk-text-translucent: rgba(255, 255, 255, 0.9);
 		--sk-scrollbar: rgba(255, 255, 255, 0.3);
 		--sk-shadow: drop-shadow(1px 2px 16px rgb(0 0 0 / 0.5));
 
-		--sk-theme-1-variant: hsl(15, 100%, 40%);
+		--sk-theme-1-variant: #CC3300;
 
 		--sk-text-warning-hsl: 32, 67%, 56%;
 
-		--sk-code-base: hsl(45 7 75);
-		--sk-code-comment: hsl(0 0 55);
-		--sk-code-keyword: hsl(204 88 65);
-		--sk-code-function: hsl(19 67 75);
-		--sk-code-string: hsl(41 37 68);
-		--sk-code-number: hsl(120 100 25);
-		--sk-code-template-string: hsl(2 80 47);
+		--sk-code-base: #C4C1BB;
+		--sk-code-comment: #8C8C8C;
+		--sk-code-keyword: #57B5F4;
+		--sk-code-function: #EAB095;
+		--sk-code-string: #CCB88F;
+		--sk-code-number: #008000;
+		--sk-code-template-string: #D81E18;
 		--sk-code-tags: var(--sk-code-function);
 		--sk-code-important: var(--sk-code-string);
 
-		--sk-code-diff-base: hsla(0 0 100 / 0.5);
-		--sk-code-diff-inserted: hsl(120 46 48);
-		--sk-code-diff-removed: hsl(2 64 70);
+		--sk-code-diff-base: rgba(255, 255, 255, 0.5);
+		--sk-code-diff-inserted: #42B342;
+		--sk-code-diff-removed: #E38582;
 
 		/* overrides */
 		--shiki-color-background: var(--sk-back-3);
