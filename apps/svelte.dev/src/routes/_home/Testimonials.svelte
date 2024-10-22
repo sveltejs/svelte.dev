@@ -126,9 +126,7 @@
 			height: auto;
 			object-fit: contain;
 			border-radius: var(--sk-border-radius);
-			filter: grayscale(1);
 			transition: filter 0.2s;
-			-webkit-transform: translate3d(0, 0, 0);
 
 			a:hover & {
 				filter: grayscale(0);
