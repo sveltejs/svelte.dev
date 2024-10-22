@@ -1,0 +1,17 @@
+{
+	"$schema": "https://openapi.vercel.sh/vercel.json",
+	"redirects": [
+		{
+			"source": "/",
+			"destination": "https://svelte.dev/playground/untitled"
+		},
+		{
+			"source": "/docs/(.*)",
+			"destination": "https://svelte.dev/docs/svelte"
+		},
+		{
+			"source": "/(.*)",
+			"destination": "https://svelte.dev"
+		}
+	]
+}
