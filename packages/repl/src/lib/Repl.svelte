@@ -104,7 +104,7 @@
 
 		workspace.update_file({
 			...workspace.current!,
-			contents: migration.code
+			contents: migration!.code
 		});
 
 		rebundle();
