@@ -44,6 +44,9 @@ self.addEventListener('message', async (event: MessageEvent<BundleMessageData>) 
 				// https://github.com/mjackson/unpkg/issues/355
 				const compiler = await fetch(`${svelte_url}/compiler.cjs`).then((r) => r.text());
 				(0, eval)(compiler + '\n//# sourceURL=compiler.cjs@' + version);
+			} else if (version.startsWith('3.')) {
+				const compiler = await fetch(`${svelte_url}/compiler.js`).then((r) => r.text());
+				(0, eval)(compiler + '\n//# sourceURL=compiler.js@' + version);
 			} else {
 				const compiler = await fetch(`${svelte_url}/compiler/index.js`).then((r) => r.text());
 				(0, eval)(compiler + '\n//# sourceURL=compiler/index.js@' + version);
