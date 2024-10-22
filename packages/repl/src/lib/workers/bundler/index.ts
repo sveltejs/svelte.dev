@@ -17,8 +17,8 @@ import type { Warning } from '../../types';
 import type { CompileError, CompileOptions, CompileResult } from 'svelte/compiler';
 import type { File } from 'editor';
 
-// hack for magic-sring and rollup inline sourcemaps
-// do not put this into a separate module and import it, would be treeshaking in prod
+// hack for magic-string and rollup inline sourcemaps
+// do not put this into a separate module and import it, would be treeshaken in prod
 self.window = self;
 
 let packages_url: string;
@@ -399,7 +399,7 @@ async function get_bundle(
 				`.replace(/\t/g, '');
 				}
 			} else if (id.endsWith('.svelte.js')) {
-				result = svelte.compileModule(code, {
+				result = svelte.compileModule?.(code, {
 					filename: name + '.js',
 					generate: 'client',
 					dev: true
