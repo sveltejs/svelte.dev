@@ -3,11 +3,11 @@
 </script>
 
 <Profile>
-	{#snippet}Bob{/snippet}
+	{#snippet name()}Bob{/snippet}
 	{#snippet email()}bob@email.com{/snippet}
 </Profile>
 
 <Profile>
-	{#snippet}Alice{/snippet}
+	{#snippet name()}Alice{/snippet}
 	{#snippet phone()}12345678{/snippet}
 </Profile>
