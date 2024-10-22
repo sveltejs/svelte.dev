@@ -24,7 +24,7 @@ export async function create(): Promise<Adapter> {
 
 	bundler = new Bundler({
 		packages_url: 'https://unpkg.com',
-		svelte_url: `https://unpkg.com/svelte@next`, // TODO remove @next once 5.0 is released
+		svelte_url: `https://unpkg.com/svelte`,
 		// svelte_url: `${browser ? location.origin : ''}/svelte`, // TODO think about bringing back main-build for Playground?
 		onstatus(val) {
 			if (!done && val === null) {
