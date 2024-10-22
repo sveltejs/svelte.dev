@@ -77,7 +77,7 @@
 	--sk-text-3: hsl(0 0% 27%);
 	--sk-text-4: hsl(0 0% 45%);
 	--sk-scrollbar: rgba(0, 0, 0, 0.3);
-	--sk-shadow: drop-shadow(0px 0px 14px rgba(0 0 0 / 0.1));
+	--sk-shadow: drop-shadow(0px 0px 14px rgba(0, 0, 0, 0.1));
 
 	/* same in light mode, different in dark mode */
 	--sk-theme-1-variant: hsl(15, 100%, 50%);
@@ -135,7 +135,7 @@
 		--sk-back-4: hsl(var(--sk-back-hue) 15% 22%);
 		--sk-back-5: hsl(var(--sk-back-hue) 15% 25%);
 		--sk-back-6: hsl(var(--sk-back-hue) 15% 32%);
-		--sk-back-translucent: hsl(0 0% 100% / 0.1);
+		--sk-back-translucent: hsla(0, 0%, 100%, 0.1);
 		--sk-theme-1-hsl: 12, 94%, 62%;
 		--sk-text-1: hsl(var(--sk-back-hue) 10% 90%);
 		--sk-text-2: hsl(var(--sk-back-hue) 10% 80%);
@@ -143,7 +143,7 @@
 		--sk-text-4: hsl(var(--sk-back-hue) 10% 45%);
 		--sk-text-translucent: hsla(0, 0%, 100%, 0.9);
 		--sk-scrollbar: rgba(255, 255, 255, 0.3);
-		--sk-shadow: drop-shadow(1px 2px 16px rgb(0 0 0 / 0.5));
+		--sk-shadow: drop-shadow(1px 2px 16px rgba(0, 0, 0, 0.5));
 
 		--sk-theme-1-variant: hsl(15, 100%, 40%);
 
@@ -159,7 +159,7 @@
 		--sk-code-tags: var(--sk-code-function);
 		--sk-code-important: var(--sk-code-string);
 
-		--sk-code-diff-base: hsla(0 0% 100% / 0.5);
+		--sk-code-diff-base: hsla(0, 0%, 100%, 0.5);
 		--sk-code-diff-inserted: hsl(120 46% 48%);
 		--sk-code-diff-removed: hsl(2 64% 70%);
 
