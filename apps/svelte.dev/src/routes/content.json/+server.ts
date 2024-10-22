@@ -4,8 +4,6 @@ import { transform, slugify, clean } from '@sveltejs/site-kit/markdown';
 import type { Block } from '@sveltejs/site-kit/search';
 import { get_slug } from '../tutorial/[...slug]/content.server';
 
-export const prerender = true;
-
 export async function GET() {
 	return json({
 		blocks: await content()

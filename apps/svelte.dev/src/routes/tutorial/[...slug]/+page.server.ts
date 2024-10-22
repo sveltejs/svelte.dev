@@ -1,8 +1,6 @@
 import { redirect } from '@sveltejs/kit';
 import { load_exercise, parts } from './content.server';
 
-export const prerender = true;
-
 const redirects = new Map([
 	['reactive-assignments', 'svelte/state'],
 	['reactive-declarations', 'svelte/derived-state'],

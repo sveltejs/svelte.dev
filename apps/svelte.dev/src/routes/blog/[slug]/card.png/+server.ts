@@ -9,8 +9,6 @@ import DMSerifDisplay from './DMSerifDisplay-Regular.ttf?url';
 import FiraSans from './FiraSans-Regular.ttf?url';
 import { blog_posts } from '$lib/server/content';
 
-export const prerender = true;
-
 export function entries() {
 	return blog_posts.map((post) => ({
 		slug: post.slug.slice(5) // remove 'blog/' prefix

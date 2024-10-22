@@ -2,8 +2,6 @@ import { docs } from '$lib/server/content';
 import { redirect } from '@sveltejs/kit';
 import { error } from '@sveltejs/kit';
 
-export const prerender = true;
-
 export async function load({ params }) {
 	const topic = params.path.split('/')[0];
 	const document = docs.topics[`docs/${topic}`];

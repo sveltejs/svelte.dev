@@ -11,8 +11,6 @@ export type Examples = Array<{
 	}>;
 }>;
 
-export const prerender = true;
-
 async function munge(files: Record<string, string>) {
 	const result = [];
 
