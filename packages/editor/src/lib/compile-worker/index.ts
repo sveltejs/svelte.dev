@@ -1,7 +1,6 @@
 import { BROWSER } from 'esm-env';
 import CompileWorker from './worker?worker';
 import type { Compiled, File } from '../Workspace.svelte';
-import type { CompileOptions } from 'svelte/compiler';
 
 const callbacks = new Map<number, (compiled: Compiled) => void>();
 
@@ -24,6 +23,7 @@ if (BROWSER) {
 
 export function compile_file(
 	file: File,
+	version: string,
 	options: { generate: 'client' | 'server'; dev: boolean }
 ): Promise<Compiled> {
 	// @ts-ignore
@@ -31,7 +31,7 @@ export function compile_file(
 
 	let id = uid++;
 
-	worker.postMessage({ id, file, options });
+	worker.postMessage({ id, file, version, options });
 
 	return new Promise((fulfil) => {
 		callbacks.set(id, fulfil);

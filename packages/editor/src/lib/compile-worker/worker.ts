@@ -1,23 +1,68 @@
-import { compile, compileModule, migrate } from 'svelte/compiler';
 import type { File } from '../Workspace.svelte';
 
-// TODO need to handle Svelte 3/4 for playground
+// hack for magic-string and Svelte 4 compiler
+// do not put this into a separate module and import it, would be treeshaken in prod
+self.window = self;
 
-addEventListener('message', (event) => {
+declare var self: Window & typeof globalThis & { svelte: typeof import('svelte/compiler') };
+
+let inited = false;
+let fulfil_ready: (arg?: never) => void;
+const ready = new Promise((f) => {
+	fulfil_ready = f;
+});
+
+addEventListener('message', async (event) => {
+	if (!inited) {
+		inited = true;
+		const svelte_url = `https://unpkg.com/svelte@${event.data.version}`;
+		const { version } = await fetch(`${svelte_url}/package.json`).then((r) => r.json());
+
+		if (version.startsWith('4.')) {
+			// unpkg doesn't set the correct MIME type for .cjs files
+			// https://github.com/mjackson/unpkg/issues/355
+			const compiler = await fetch(`${svelte_url}/compiler.cjs`).then((r) => r.text());
+			(0, eval)(compiler + '\n//# sourceURL=compiler.cjs@' + version);
+		} else {
+			// importScripts(`${svelte_url}/compiler.js`);
+			const compiler = await fetch(`${svelte_url}/compiler/index.js`).then((r) => r.text());
+			(0, eval)(compiler + '\n//# sourceURL=compiler/index.js@' + version);
+		}
+
+		fulfil_ready();
+	}
+
+	await ready;
+
 	const { id, file, options } = event.data as {
 		id: number;
 		file: File;
 		options: { generate: 'client' | 'server'; dev: boolean };
 	};
 
-	const fn = file.name.endsWith('.svelte') ? compile : compileModule;
+	const fn = file.name.endsWith('.svelte') ? self.svelte.compile : self.svelte.compileModule;
+
+	if (!fn) {
+		// .svelte.js file compiled with Svelte 3/4 compiler
+		postMessage({
+			id,
+			payload: {
+				error: null,
+				result: null,
+				migration: null
+			}
+		});
+		return;
+	}
 
 	let migration = null;
 
-	try {
-		migration = migrate(file.contents, { filename: file.name });
-	} catch (e) {
-		// can this happen?
+	if (self.svelte.migrate) {
+		try {
+			migration = self.svelte.migrate(file.contents, { filename: file.name });
+		} catch (e) {
+			// can this happen?
+		}
 	}
 
 	try {
@@ -28,9 +73,15 @@ addEventListener('message', (event) => {
 			payload: {
 				error: null,
 				result: {
+					// @ts-expect-error Svelte 3/4 doesn't contain this field
+					metadata: { runes: false },
 					...result,
-					// @ts-expect-error https://github.com/sveltejs/svelte/issues/13628
-					warnings: result.warnings.map((w) => ({ message: w.message, ...w }))
+					warnings: result.warnings.map((w) => {
+						// @ts-expect-error This exists on Svelte 3/4 and is required to be deleted, otherwise postMessage won't work
+						delete w.toString;
+						// @ts-expect-error https://github.com/sveltejs/svelte/issues/13628 (fixed in 5.0, but was like that for most of the preview phase)
+						return { message: w.message, ...w };
+					})
 				},
 				migration
 			}

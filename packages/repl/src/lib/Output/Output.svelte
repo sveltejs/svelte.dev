@@ -65,7 +65,7 @@
 
 	// TODO this effect is a bit of a code smell
 	$effect(() => {
-		if (current) {
+		if (current && (current.error || current.result)) {
 			if (current.error) {
 				js.contents = css.contents = `/* ${current.error.message} */`;
 			} else {

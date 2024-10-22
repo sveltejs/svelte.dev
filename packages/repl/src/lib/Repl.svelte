@@ -49,18 +49,17 @@
 		text: true
 	};
 
-	const workspace = $state(
-		new Workspace([dummy], {
-			initial: 'App.svelte',
-			onupdate() {
-				rebundle();
-				onchange?.();
-			},
-			onreset() {
-				rebundle();
-			}
-		})
-	);
+	const workspace = new Workspace([dummy], {
+		initial: 'App.svelte',
+		svelte_version: svelteUrl.split('@')[1],
+		onupdate() {
+			rebundle();
+			onchange?.();
+		},
+		onreset() {
+			rebundle();
+		}
+	});
 
 	// TODO get rid
 	export function toJSON() {
