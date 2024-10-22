@@ -123,6 +123,10 @@
 	--sk-raised-active-color: var(--sk-back-6) var(--sk-back-5) var(--sk-back-5) var(--sk-back-6);
 	--sk-raised-active-width: 2px 1px 1px 2px;
 
+	/* this is necessary for elements with filters on safari, because safari is a uniquely awful piece of software.
+	   the 0.01 prevents Vite from optimising it to `translate(0, 0)`, which doesn't fix anything */
+	--safari-fix: translate3d(0, 0, 0.01);
+
 	&.dark {
 		color-scheme: dark;
 		-webkit-font-smoothing: antialiased;
