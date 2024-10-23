@@ -23,7 +23,10 @@ const mappings = new Map([
 	['/docs/svelte-components', '/docs/svelte/svelte-files'],
 	['/docs/svelte-easing', '/docs/svelte/svelte-easing'],
 	['/docs/svelte-motion', '/docs/svelte/svelte-motion'],
-	['/docs/svelte-register', 'https://github.com/sveltejs/svelte/blob/svelte-4/documentation/docs/06-legacy/01-svelte-register.md'],
+	[
+		'/docs/svelte-register',
+		'https://github.com/sveltejs/svelte/blob/svelte-4/documentation/docs/06-legacy/01-svelte-register.md'
+	],
 	['/docs/svelte-store', '/docs/svelte/svelte-store'],
 	['/docs/svelte-transition', '/docs/svelte/svelte-transition'],
 	['/docs/typescript', '/docs/svelte/typescript'],
