@@ -384,7 +384,7 @@ In turn, annotating the `load` function with `PageLoad`, `PageServerLoad`, `Layo
 
 If you're using VS Code or any IDE that supports the language server protocol and TypeScript plugins then you can omit these types _entirely_! Svelte's IDE tooling will insert the correct types for you, so you'll get type checking without writing them yourself. It also works with our command line tool `svelte-check`.
 
-You can read more about omitting `$types` in our [blog post](https://svelte.dev/blog/zero-config-type-safety) about it.
+You can read more about omitting `$types` in our [blog post](/blog/zero-config-type-safety) about it.
 
 ## Other files
 
@@ -394,6 +394,6 @@ If components and modules are needed by multiple routes, it's a good idea to put
 
 ## Further reading
 
-- [Tutorial: Routing](https://learn.svelte.dev/tutorial/pages)
-- [Tutorial: API routes](https://learn.svelte.dev/tutorial/get-handlers)
+- [Tutorial: Routing](/tutorial/kit/pages)
+- [Tutorial: API routes](/tutorial/kit/get-handlers)
 - [Docs: Advanced routing](advanced-routing)

@@ -8,12 +8,15 @@
 		},
 		{
 			"source": "/docs/modules",
-			"destination": "https://svelte.dev/docs/kit/@sveltejs-kit",
-			"permanent": true
+			"destination": "https://svelte.dev/docs/kit/@sveltejs-kit"
 		},
 		{
 			"source": "/docs/types",
-			"destination": "https://svelte.dev/docs/kit/@sveltejs-kit",
+			"destination": "https://svelte.dev/docs/kit/@sveltejs-kit"
+		},
+		{
+			"source": "/docs",
+			"destination": "https://svelte.dev/docs/kit",
 			"permanent": true
 		},
 		{
