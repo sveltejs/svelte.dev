@@ -509,7 +509,7 @@ Some forms don't need to `POST` data to the server — search inputs, for exampl
 <form action="/search">
 	<label>
 		Search
-		<input name="q">
+		<input name="q" />
 	</label>
 </form>
 ```

@@ -6,7 +6,7 @@ title: What are runes?
 >
 > A letter or mark used as a mystical or magic symbol.
 
-Runes are symbols that you use in `.svelte` and `.svelte.js`/`.svelte.ts` files to control the Svelte compiler. If you think of Svelte as a language, runes are part of the syntax — they are _keywords_.
+Runes are symbols that you use in `.svelte` and `.svelte.js` / `.svelte.ts` files to control the Svelte compiler. If you think of Svelte as a language, runes are part of the syntax — they are _keywords_.
 
 Runes have a `$` prefix and look like functions:
 

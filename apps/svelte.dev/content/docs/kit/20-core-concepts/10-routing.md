@@ -14,9 +14,9 @@ Each route directory contains one or more _route files_, which can be identified
 
 We'll introduce these files in a moment in more detail, but here are a few simple rules to help you remember how SvelteKit's routing works:
 
-* All files can run on the server
-* All files run on the client except `+server` files
-* `+layout` and `+error` files apply to subdirectories as well as the directory they live in
+- All files can run on the server
+- All files run on the client except `+server` files
+- `+layout` and `+error` files apply to subdirectories as well as the directory they live in
 
 ## +page
 
@@ -291,7 +291,7 @@ If an error is thrown (either `error(...)` or an unexpected error), the response
 
 ### Receiving data
 
-By exporting `POST`/`PUT`/`PATCH`/`DELETE`/`OPTIONS`/`HEAD` handlers, `+server.js` files can be used to create a complete API:
+By exporting `POST` / `PUT` / `PATCH` / `DELETE` / `OPTIONS` / `HEAD` handlers, `+server.js` files can be used to create a complete API:
 
 ```svelte
 <!--- file: src/routes/add/+page.svelte --->
@@ -362,8 +362,8 @@ export async function fallback({ request }) {
 
 `+server.js` files can be placed in the same directory as `+page` files, allowing the same route to be either a page or an API endpoint. To determine which, SvelteKit applies the following rules:
 
-- `PUT`/`PATCH`/`DELETE`/`OPTIONS` requests are always handled by `+server.js` since they do not apply to pages
-- `GET`/`POST`/`HEAD` requests are treated as page requests if the `accept` header prioritises `text/html` (in other words, it's a browser page request), else they are handled by `+server.js`.
+- `PUT` / `PATCH` / `DELETE` / `OPTIONS` requests are always handled by `+server.js` since they do not apply to pages
+- `GET` / `POST` / `HEAD` requests are treated as page requests if the `accept` header prioritises `text/html` (in other words, it's a browser page request), else they are handled by `+server.js`.
 - Responses to `GET` requests will include a `Vary: Accept` header, so that proxies and browsers cache HTML and JSON responses separately.
 
 ## $types

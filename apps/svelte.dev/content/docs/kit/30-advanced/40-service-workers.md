@@ -32,7 +32,7 @@ const CACHE = `cache-${version}`;
 
 const ASSETS = [
 	...build, // the app itself
-	...files  // everything in `static`
+	...files // everything in `static`
 ];
 
 self.addEventListener('install', (event) => {
@@ -64,7 +64,7 @@ self.addEventListener('fetch', (event) => {
 		const url = new URL(event.request.url);
 		const cache = await caches.open(CACHE);
 
-		// `build`/`files` can always be served from the cache
+		// `build` / `files` can always be served from the cache
 		if (ASSETS.includes(url.pathname)) {
 			const response = await cache.match(url.pathname);
 
@@ -134,6 +134,7 @@ Setting up proper types for service workers requires some manual setup. Inside y
 
 const sw = /** @type {ServiceWorkerGlobalScope} */ (/** @type {unknown} */ (self));
 ```
+
 ```generated-ts
 /// <reference types="@sveltejs/kit" />
 /// <reference no-default-lib="true"/>
