@@ -43,7 +43,7 @@ if (!fs.existsSync(original_file)) {
 			process.cwd()
 	);
 }
-hash_graph(hash, fileURLToPath(original_file));
+hash_graph(hash, original_file);
 const digest = hash.digest().toString('base64').replace(/\//g, '-');
 
 /**
