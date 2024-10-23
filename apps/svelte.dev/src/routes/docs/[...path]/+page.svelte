@@ -2,8 +2,11 @@
 	import { Text } from '@sveltejs/site-kit/components';
 	import { legacy_details } from '@sveltejs/site-kit/actions';
 	import { setupDocsHovers } from '@sveltejs/site-kit/docs';
+	import { onMount } from 'svelte';
 	import OnThisPage from './OnThisPage.svelte';
 	import Breadcrumbs from './Breadcrumbs.svelte';
+	import { goto } from '$app/navigation';
+	import { page } from '$app/stores';
 	import PageControls from '$lib/components/PageControls.svelte';
 
 	let { data } = $props();
@@ -16,6 +19,35 @@
 		const name = data.document.slug.split('/')[1];
 		const link = 'docs/' + data.document.file.split('/').slice(2).join('/');
 		return `https://github.com/sveltejs/${name}/edit/main/documentation/${link}`;
+	});
+
+	// make hash case-insensitive
+	// hash was lowercase in v4 docs and varying case in v5 docs
+	function get_url_to_redirect_to() {
+		const hash = $page.url.hash.slice(1);
+		if (hash === '') return;
+
+		// if there's an exact match, use that. no need to redirect
+		// also semi-handles the case where one appears twice with difference casing
+		// e.g. https://svelte.dev/docs/kit/@sveltejs-kit#redirect vs https://svelte.dev/docs/kit/@sveltejs-kit#Redirect
+		// but browsers make it impossible to really do: https://github.com/sveltejs/svelte.dev/issues/590
+		if (document.querySelector(`[id="${hash}"]`)) {
+			return;
+		}
+
+		const heading = document.querySelector(`[id="${hash}" i]`);
+		if (heading) {
+			const url = new URL($page.url);
+			url.hash = heading.id;
+			return url;
+		}
+	}
+
+	onMount(() => {
+		const redirect = get_url_to_redirect_to();
+		if (redirect) {
+			goto(redirect, { replaceState: true });
+		}
 	});
 </script>
 
