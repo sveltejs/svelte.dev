@@ -24,7 +24,7 @@
 	// make hash case-insensitive
 	// hash was lowercase in v4 docs and varying case in v5 docs
 	function get_url_to_redirect_to() {
-		const hash = $page.url.hash.replace(/^#/i, '');
+		const hash = $page.url.hash.slice(1);
 		if (!hash) return;
 
 		// if there's an exact match, use that. no need to redirect
