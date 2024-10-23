@@ -9,7 +9,7 @@ After two years in development, [SvelteKit](https://kit.svelte.dev) has finally 
 
 We’re so excited to share this release with you. It’s the culmination of thousands of hours of work, both from the Svelte core team and the wider community, and we think it’s the most enjoyable way to build production-grade websites, whether you’re a solo developer working on a small project or part of a large team.
 
-To get started, run `npm create svelte@latest`, and visit the [docs](https://kit.svelte.dev/docs) and (experimental!) [interactive tutorial](https://learn.svelte.dev).
+To get started, run `npm create svelte@latest`, and visit the [docs](https://kit.svelte.dev/docs) and (experimental!) [interactive tutorial](/tutorial).
 
 <div class="max">
 <figure style="max-width: 960px; margin: 0 auto">
@@ -88,7 +88,7 @@ Back in early 2021, when we adopted Vite, we were the first major application fr
 
 We’ve had terrific support from teams at [Vercel](https://vercel.com), [Netlify](https://netlify.app/) and [Cloudflare](https://www.cloudflare.com/) to make zero-config deployments for those platforms possible.
 
-Our friends at [StackBlitz](https://stackblitz.com/) worked feverishly to make [learn.svelte.dev](https://learn.svelte.dev), our first-of-its-kind [WebContainer](https://blog.stackblitz.com/posts/introducing-webcontainers/)-powered interactive tutorial, a reality.
+Our friends at [StackBlitz](https://stackblitz.com/) worked feverishly to make [our new tutorial](/tutorial), the first-of-its-kind [WebContainer](https://blog.stackblitz.com/posts/introducing-webcontainers/)-powered interactive tutorial, a reality.
 
 Finally, none of this could have happened without the project’s financial supporters. This includes hundreds of backers on [Open Collective](https://opencollective.com/svelte), and Vercel, which employs two core developers ([Rich](https://twitter.com/Rich_Harris/) and [Simon](https://twitter.com/dummdidumm_/)) to work on Svelte full time and supports the project in many other ways, such as [Steph’s](https://twitter.com/steph_dietz_) [Beginner SvelteKit](https://vercel.com/docs/beginner-sveltekit) course.
 
