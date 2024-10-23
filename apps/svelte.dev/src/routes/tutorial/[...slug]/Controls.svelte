@@ -97,4 +97,9 @@
 		padding: 0 1rem;
 		font: var(--sk-font-ui-small);
 	}
+
+	option:disabled {
+		color: var(--sk-text-1);
+		font-weight: bold;
+	}
 </style>
