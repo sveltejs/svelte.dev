@@ -65,14 +65,12 @@
 
 	// TODO this effect is a bit of a code smell
 	$effect(() => {
-		if (current) {
-			if (current.error) {
-				js.contents = css.contents = `/* ${current.error.message} */`;
-			} else {
-				js.contents = current.result.js.code;
-				css.contents =
-					current.result.css?.code ?? `/* Add a <st` + `yle> tag to see the CSS output */`;
-			}
+		if (current?.error) {
+			js.contents = css.contents = `/* ${current.error.message} */`;
+		} else if (current?.result) {
+			js.contents = current.result.js.code;
+			css.contents =
+				current.result.css?.code ?? `/* Add a <st` + `yle> tag to see the CSS output */`;
 		} else {
 			js.contents = css.contents = `/* Select a component to see its compiled code */`;
 		}

@@ -284,7 +284,7 @@
 
 	li.selected {
 		filter: drop-shadow(1px 2px 4px hsla(205.7, 63.6%, 30.8%, 0.1));
-		-webkit-transform: translate3d(0, 0, 0);
+		-webkit-transform: var(--safari-fix);
 	}
 
 	li.selected input {

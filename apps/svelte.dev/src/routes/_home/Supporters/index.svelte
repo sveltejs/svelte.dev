@@ -97,7 +97,7 @@
 		background: no-repeat;
 		background-size: auto 102%;
 		filter: grayscale(1) opacity(0.7);
-		-webkit-transform: translate3d(0, 0, 0);
+		-webkit-transform: var(--safari-fix);
 	}
 
 	.supporter:hover {

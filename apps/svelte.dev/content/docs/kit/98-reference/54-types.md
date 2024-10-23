@@ -175,7 +175,7 @@ message: string;
 
 ## Locals
 
-The interface that defines `event.locals`, which can be accessed in [hooks](https://kit.svelte.dev/docs/hooks) (`handle`, and `handleError`), server-only `load` functions, and `+server.js` files.
+The interface that defines `event.locals`, which can be accessed in [hooks](https://svelte.dev/docs/kit/hooks) (`handle`, and `handleError`), server-only `load` functions, and `+server.js` files.
 
 <div class="ts-block">
 
@@ -187,7 +187,7 @@ interface Locals {}
 
 ## PageData
 
-Defines the common shape of the [$page.data store](https://kit.svelte.dev/docs/modules#$app-stores-page) - that is, the data that is shared between all pages.
+Defines the common shape of the [$page.data store](https://svelte.dev/docs/kit/$app-stores#page) - that is, the data that is shared between all pages.
 The `Load` and `ServerLoad` functions in `./$types` will be narrowed accordingly.
 Use optional properties for data that is only present on specific pages. Do not add an index signature (`[key: string]: any`).
 
@@ -201,7 +201,7 @@ interface PageData {}
 
 ## PageState
 
-The shape of the `$page.state` object, which can be manipulated using the [`pushState`](https://kit.svelte.dev/docs/modules#$app-navigation-pushstate) and [`replaceState`](https://kit.svelte.dev/docs/modules#$app-navigation-replacestate) functions from `$app/navigation`.
+The shape of the `$page.state` object, which can be manipulated using the [`pushState`](https://svelte.dev/docs/kit/$app-navigation#pushState) and [`replaceState`](https://svelte.dev/docs/kit/$app-navigation#replaceState) functions from `$app/navigation`.
 
 <div class="ts-block">
 
@@ -213,7 +213,7 @@ interface PageState {}
 
 ## Platform
 
-If your adapter provides [platform-specific context](https://kit.svelte.dev/docs/adapters#platform-specific-context) via `event.platform`, you can specify it here.
+If your adapter provides [platform-specific context](https://svelte.dev/docs/kit/adapters#platform-specific-context) via `event.platform`, you can specify it here.
 
 <div class="ts-block">
 

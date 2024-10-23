@@ -78,7 +78,7 @@
 		background: var(--sk-back-1);
 		border-top: 1px solid var(--sk-text-4);
 		transform: translate(0, 100%);
-		-webkit-transform: translate3d(0, 100%, 0);
+		-webkit-transform: translate3d(0, 100%, 0.01);
 		transition: transform 0.3s;
 		overflow-y: auto;
 	}

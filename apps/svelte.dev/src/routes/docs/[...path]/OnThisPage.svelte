@@ -81,7 +81,8 @@
 		@media (max-width: 1199px) {
 			margin: 4rem 0;
 
-			&:not(:has(li:nth-child(2))) {
+			/* TODO remove :global once https://github.com/sveltejs/svelte/issues/13779 is fixed */
+			:global(&:not(:has(li:nth-child(2)))) {
 				/* hide widget if there are no subheadings */
 				display: none;
 			}
@@ -155,7 +156,8 @@
 					rotate: 90deg;
 				}
 
-				& + nav {
+				/* TODO remove :global once https://github.com/sveltejs/svelte/issues/13779 is fixed */
+				:global(& + nav) {
 					display: block;
 				}
 			}

@@ -14,8 +14,10 @@ overlay_open.subscribe((value) => {
 	if (value) {
 		// Disable root from scrolling
 		document.documentElement.style.overflow = 'hidden';
+		document.documentElement.style.scrollbarGutter = 'stable';
 	} else {
 		// Enable root to scroll
 		document.documentElement.style.overflow = '';
+		document.documentElement.style.scrollbarGutter = '';
 	}
 });

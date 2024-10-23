@@ -1,4 +1,4 @@
-import type { CompileError, CompileResult } from 'svelte/compiler';
+import type { CompileError, CompileOptions, CompileResult } from 'svelte/compiler';
 import { EditorState } from '@codemirror/state';
 import { compile_file } from './compile-worker';
 import { BROWSER } from 'esm-env';
@@ -32,10 +32,10 @@ export type Item = File | Directory;
 
 export interface Compiled {
 	error: CompileError | null;
-	result: CompileResult;
+	result: CompileResult | null;
 	migration: {
 		code: string;
-	};
+	} | null;
 }
 
 function is_file(item: Item): item is File {
@@ -74,17 +74,23 @@ const default_extensions = [
 // 	extensions.push(vim());
 // }
 
+interface ExposedCompilerOptions {
+	generate: 'client' | 'server';
+	dev: boolean;
+}
+
 export class Workspace {
 	// TODO this stuff should all be readonly
 	creating = $state.raw<{ parent: string; type: 'file' | 'directory' } | null>(null);
 	modified = $state<Record<string, boolean>>({});
 
-	compiler_options = $state.raw<{ generate: 'client' | 'server'; dev: boolean }>({
+	#compiler_options = $state.raw<ExposedCompilerOptions>({
 		generate: 'client',
 		dev: false
 	});
 	compiled = $state<Record<string, Compiled>>({});
 
+	#svelte_version: string;
 	#readonly = false; // TODO do we need workspaces for readonly stuff?
 	#files = $state.raw<Item[]>([]);
 	#current = $state.raw() as File;
@@ -99,17 +105,20 @@ export class Workspace {
 	constructor(
 		files: Item[],
 		{
+			svelte_version = 'latest',
 			initial,
 			readonly = false,
 			onupdate,
 			onreset
 		}: {
+			svelte_version?: string;
 			initial?: string;
 			readonly?: boolean;
 			onupdate?: (file: File) => void;
 			onreset?: (items: Item[]) => void;
 		} = {}
 	) {
+		this.#svelte_version = svelte_version;
 		this.#readonly = readonly;
 
 		this.set(files, initial);
@@ -122,6 +131,10 @@ export class Workspace {
 
 	get files() {
 		return this.#files;
+	}
+
+	get compiler_options() {
+		return this.#compiler_options;
 	}
 
 	get current() {
@@ -144,10 +157,6 @@ export class Workspace {
 		setTimeout(() => {
 			this.#view?.focus();
 		});
-	}
-
-	invalidate() {
-		this.#reset_diagnostics();
 	}
 
 	mark_saved() {
@@ -300,6 +309,11 @@ export class Workspace {
 		this.#view = null;
 	}
 
+	update_compiler_options(options: Partial<ExposedCompilerOptions>) {
+		this.#compiler_options = { ...this.#compiler_options, ...options };
+		this.#reset_diagnostics();
+	}
+
 	update_file(file: File) {
 		if (file.name === this.#current.name) {
 			this.#current = file;
@@ -315,7 +329,7 @@ export class Workspace {
 		this.modified[file.name] = true;
 
 		if (BROWSER && is_svelte_file(file)) {
-			compile_file(file, this.compiler_options).then((compiled) => {
+			compile_file(file, this.#svelte_version, this.compiler_options).then((compiled) => {
 				this.compiled[file.name] = compiled;
 			});
 		}
@@ -430,7 +444,7 @@ export class Workspace {
 
 			seen.push(file.name);
 
-			compile_file(file, this.compiler_options).then((compiled) => {
+			compile_file(file, this.#svelte_version, this.compiler_options).then((compiled) => {
 				this.compiled[file.name] = compiled;
 			});
 		}

@@ -1,6 +1,11 @@
 <div class="outer">
 	<p class="definition">
-		<em>/ˈsvɛlt/</em>
+		<enhanced:img
+			class="pronunciation"
+			alt="Svelte pronunciation guide"
+			src="./svelte-pronunciation.svg"
+		/>
+
 		<span class="description">
 			<span class="adjective"></span> attractively thin, graceful and stylish
 		</span>
@@ -23,18 +28,23 @@
 	<div class="screenshots">
 		<a href="https://survey.stackoverflow.co/2024/technology#2-web-frameworks-and-technologies">
 			<enhanced:img
+				class="screenshot"
 				alt="Stack Overflow 2024 Developer Survey"
 				src="./stack-overflow.png?w=1200,1600"
 			></enhanced:img>
 		</a>
 
 		<a href="https://2023.stateofjs.com/en-US/libraries/front-end-frameworks/">
-			<enhanced:img alt="State of JavaScript 2023" src="./state-of-js-chart.png?w=1000,1400"
+			<enhanced:img
+				class="screenshot"
+				alt="State of JavaScript 2023"
+				src="./state-of-js-chart.png?w=1000,1400"
 			></enhanced:img>
 		</a>
 
 		<a href="https://x.com/flaviocopes/status/1730895911864189299">
-			<enhanced:img alt="Tweet from @flaviocopes" src="./flavio-light.png?w=800"></enhanced:img>
+			<enhanced:img class="screenshot" alt="Tweet from @flaviocopes" src="./flavio-light.png?w=800"
+			></enhanced:img>
 		</a>
 	</div>
 </div>
@@ -55,6 +65,13 @@
 
 	.definition {
 		grid-area: definition;
+	}
+
+	.pronunciation {
+		position: relative;
+		aspect-ratio: 457.4 / 138.8;
+		height: var(--sk-font-size-h1);
+		bottom: -0.3em;
 	}
 
 	.blurb {
@@ -104,13 +121,14 @@
 			}
 		}
 
-		img {
+		.screenshot {
 			width: 100%;
 			height: auto;
 			object-fit: contain;
 			border-radius: var(--sk-border-radius);
 			filter: grayscale(1);
 			transition: filter 0.2s;
+			-webkit-transform: var(--safari-fix);
 
 			a:hover & {
 				filter: grayscale(0);
@@ -125,16 +143,8 @@
 		justify-content: center;
 		margin: 0 auto;
 		gap: 1rem;
-		grid-column: 1 / 3;
-		width: 100%;
 
-		em {
-			font-style: normal;
-			font-size: var(--sk-font-size-h1);
-			color: var(--sk-theme-1);
-			text-wrap: nowrap;
-			line-height: 1;
-		}
+		width: 100%;
 
 		.description {
 			position: relative;
