@@ -101,6 +101,7 @@
 
 		code:not(pre *),
 		kbd {
+			line-break: normal;
 			white-space: pre-wrap;
 			padding: 0.2rem 0.4rem;
 			margin: 0 0.2rem;
