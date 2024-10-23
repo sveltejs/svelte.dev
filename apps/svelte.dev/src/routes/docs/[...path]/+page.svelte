@@ -38,7 +38,7 @@
 		}
 		for (const el of elements) {
 			if (el.id.toLocaleLowerCase() === hash.toLocaleLowerCase()) {
-				const url = $page.url;
+				const url = new URL($page.url);
 				url.hash = el.id;
 				return url;
 			}
