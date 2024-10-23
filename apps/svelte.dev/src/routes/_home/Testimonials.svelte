@@ -133,10 +133,11 @@
 			-webkit-transform: var(--safari-fix);
 
 			@media all and not (hover: none) {
-				filter: grayscale(1);
+				/* the additional `contrast(1)` is necessary for safari 18 to not behave stupidly */
+				filter: grayscale(1) contrast(1);
 
 				a:hover & {
-					filter: grayscale(0);
+					filter: grayscale(0) contrast(1);
 				}
 			}
 		}
