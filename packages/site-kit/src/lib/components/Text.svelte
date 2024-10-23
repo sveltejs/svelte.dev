@@ -204,6 +204,7 @@
 					height: calc(var(--height) - 1rem);
 					aspect-ratio: 1;
 					border-radius: var(--sk-border-radius);
+					background-color: var(--sk-back-2);
 
 					&[disabled] {
 						opacity: 1;

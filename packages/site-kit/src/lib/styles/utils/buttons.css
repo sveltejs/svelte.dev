@@ -3,6 +3,7 @@
 	border-style: solid;
 	border-color: var(--sk-raised-color);
 	border-width: var(--sk-raised-width);
+	background-color: inherit;
 
 	&:hover {
 		border-color: var(--sk-raised-hover-color);
