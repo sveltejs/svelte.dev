@@ -570,6 +570,10 @@
 			"destination": "https://svelte.dev/tutorial/kit/next-steps"
 		},
 		{
+			"source": "/",
+			"destination": "https://svelte.dev/tutorial"
+		},
+		{
 			"source": "/(.*)",
 			"destination": "https://svelte.dev/$1"
 		}
