@@ -29,6 +29,8 @@
 
 		const elements = document.querySelectorAll('*[id]');
 		// if there's an exact match, use that. no need to redirect
+		// also handles the case where one appears twice with difference casing
+		// e.g. https://svelte.dev/docs/kit/@sveltejs-kit#redirect vs https://svelte.dev/docs/kit/@sveltejs-kit#Redirect
 		for (const el of elements) {
 			if (el.id === hash) {
 				return;
