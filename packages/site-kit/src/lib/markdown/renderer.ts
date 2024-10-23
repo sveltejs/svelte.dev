@@ -296,7 +296,7 @@ export async function render_content_markdown(
 				// @ts-expect-error
 				const after = token.tokens[slash_index + 1];
 
-				if (before.type === 'codespan' && after.type === 'codespan') {
+				if (before?.type === 'codespan' && after?.type === 'codespan') {
 					// @ts-expect-error
 					token.tokens[slash_index].raw = token.tokens[slash_index].text = ' / ';
 				}
