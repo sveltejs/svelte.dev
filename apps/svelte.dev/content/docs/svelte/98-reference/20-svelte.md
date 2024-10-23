@@ -344,7 +344,7 @@ function unmount(component: Record<string, any>): void;
 
 ## untrack
 
-Use `untrack` to prevent something from being treated as an `$effect` / `$derived` dependency.
+Use `untrack` to prevent something from being treated as an `$effect`/`$derived` dependency.
 
 https://svelte-5-preview.vercel.app/docs/functions#untrack
 

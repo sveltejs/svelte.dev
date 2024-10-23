@@ -177,7 +177,7 @@ export function GET({ params, url }) {
 }
 ```
 
-(Note that you may also need to proxy `POST` / `PATCH` etc requests, and forward `request.headers`, depending on your needs.)
+(Note that you may also need to proxy `POST`/`PATCH` etc requests, and forward `request.headers`, depending on your needs.)
 
 ### How do I use middleware?
 

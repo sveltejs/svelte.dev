@@ -75,7 +75,7 @@ const config = {
 export default config;
 ```
 
-...disabling `csr` in your root `+layout.js` / `+layout.server.js`...
+...disabling `csr` in your root `+layout.js`/`+layout.server.js`...
 
 ```js
 /// file: src/routes/+layout.server.js
