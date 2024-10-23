@@ -16,7 +16,7 @@ You can also declare event handlers inline:
 </script>
 
 <div
-	onpointermove={+++(e) => {
+	onpointermove={+++(event) => {
 		m.x = event.clientX;
 		m.y = event.clientY;
 	}+++}
