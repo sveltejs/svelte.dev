@@ -283,6 +283,24 @@ export async function render_content_markdown(
 				// Save everything locally now
 				snippets.save(token.text, html);
 			}
+
+			// ensure that `foo`/`bar` is transformed to `foo` / `bar`
+			// https://github.com/sveltejs/svelte.dev/pull/577
+			const slash_index =
+				// @ts-expect-error
+				token.tokens?.findIndex((token) => token.type === 'text' && token.text === '/') ?? -1;
+
+			if (slash_index !== -1) {
+				// @ts-expect-error
+				const before = token.tokens[slash_index - 1];
+				// @ts-expect-error
+				const after = token.tokens[slash_index + 1];
+
+				if (before.type === 'codespan' && after.type === 'codespan') {
+					// @ts-expect-error
+					token.tokens[slash_index].raw = token.tokens[slash_index].text = ' / ';
+				}
+			}
 		},
 		text(token) {
 			// @ts-expect-error I think this is a bug in marked — some text tokens have children,
