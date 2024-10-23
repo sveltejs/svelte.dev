@@ -1,4 +1,5 @@
 <script>
+	import { Icon } from '@sveltejs/site-kit/components';
 	// @ts-expect-error
 	import MachineDesktop from './svelte-machine-desktop.png?w=1200;2000;2800;4400&format=avif;webp;png;&as=picture';
 	// @ts-expect-error
@@ -8,7 +9,7 @@
 <div class="hero">
 	<div class="hero-content">
 		<h1>web development for the rest of us</h1>
-		<a href="/docs" class="cta basic">get started</a>
+		<a href="/docs" class="cta">get started <Icon name="arrow-right" /></a>
 	</div>
 
 	<picture class="machine">
@@ -86,6 +87,7 @@
 
 	h1 {
 		max-width: 9em;
+		margin-bottom: 0.5em;
 	}
 
 	.machine img {
@@ -97,8 +99,12 @@
 
 	.cta {
 		font: var(--sk-font-ui-medium);
+		font-size: 2rem;
 		color: var(--sk-theme-1);
 		text-transform: uppercase;
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
 	}
 
 	@media (min-width: 800px) {

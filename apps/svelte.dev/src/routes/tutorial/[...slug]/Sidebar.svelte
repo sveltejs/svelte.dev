@@ -145,6 +145,10 @@
 			.desktop {
 				display: none;
 			}
+
+			.copy-to-clipboard {
+				display: none;
+			}
 		}
 	}
 

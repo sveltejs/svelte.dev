@@ -204,6 +204,7 @@
 		position: relative;
 		flex: 1;
 		height: 100%;
+		min-height: 0;
 		background: var(--sk-back-1);
 		padding: 0;
 

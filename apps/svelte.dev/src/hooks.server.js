@@ -1,13 +1,14 @@
 import { redirect } from '@sveltejs/kit';
 
 const mappings = new Map([
-	['/docs/svelte-components', '/docs/svelte/svelte-files'],
-	['/docs/logic-blocks', '/docs/svelte/control-flow'],
-	['/docs/special-tags', '/docs/svelte/basic-markup'], // TODO: find a new home for some of these?
-	['/docs/element-directives', '/docs/svelte/basic-markup'],
+	['/docs/accessibility-warnings', '/docs/svelte/compiler-warnings'],
 	['/docs/component-directives', '/docs/svelte/svelte-files'],
 	['/docs/custom-elements-api', '/docs/svelte/custom-elements'],
-	['/docs/accessibility-warnings', '/docs/svelte/compiler-warnings']
+	['/docs/element-directives', '/docs/svelte/basic-markup'],
+	['/docs/logic-blocks', '/docs/svelte/basic-markup'],
+	['/docs/svelte-components', '/docs/svelte/svelte-files'],
+	['/docs/special-tags', '/docs/svelte/basic-markup'],
+	['/faq', '/docs/svelte/faq']
 ]);
 
 // selectively preload fonts
@@ -20,11 +21,10 @@ const fonts = [
 /** @type {import('@sveltejs/kit').Handle} */
 export async function handle({ event, resolve }) {
 	// Best effort to redirect from Svelte 4 docs to new docs
-	if (event.url.pathname.startsWith('/docs')) {
-		const destination = mappings.get(event.url.pathname);
-		if (destination) {
-			redirect(307, destination); // TODO make 301 once we're sure
-		}
+	const destination = mappings.get(event.url.pathname);
+	if (destination) {
+		// TODO: change to `dev ? 307 : 308` if no reports of incorrect redirects
+		redirect(307, destination);
 	}
 
 	const response = await resolve(event, {

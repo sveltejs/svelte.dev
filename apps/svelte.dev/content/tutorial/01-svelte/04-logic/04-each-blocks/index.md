@@ -30,7 +30,7 @@ Now we need to use the `color` variable in place of `"red"`:
 	{#each colors as color}
 		<button
 			style="background: +++{color}+++"
-			aria-label="+++{color}+++"
+			aria-label=+++{color}+++
 			aria-current={selected === +++color+++}
 			on:click={() => selected = +++color+++}
 		></button>
