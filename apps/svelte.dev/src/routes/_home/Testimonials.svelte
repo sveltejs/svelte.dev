@@ -94,6 +94,7 @@
 			transform: translate3d(0, 0, 0);
 			transition-property: filter, scale;
 			transition-duration: 0.2s;
+			user-select: none;
 
 			&:nth-child(1) {
 				top: 0%;
@@ -115,9 +116,11 @@
 				rotate: 1.5deg;
 			}
 
-			&:hover {
-				scale: 1.05;
-				filter: drop-shadow(0.2rem 0.4rem 2.4rem rgb(0 0 0 / 0.2));
+			@media all and not (hover: none) {
+				&:hover {
+					scale: 1.05;
+					filter: drop-shadow(0.2rem 0.4rem 2.4rem rgb(0 0 0 / 0.2));
+				}
 			}
 		}
 
@@ -126,18 +129,15 @@
 			height: auto;
 			object-fit: contain;
 			border-radius: var(--sk-border-radius);
-			filter: grayscale(1);
 			transition: filter 0.2s;
 			-webkit-transform: var(--safari-fix);
 
-			a:hover & {
-				filter: grayscale(0);
-			}
-		}
+			@media all and not (hover: none) {
+				filter: grayscale(1);
 
-		@media (hover: none) {
-			.screenshot {
-				filter: grayscale(0);
+				a:hover & {
+					filter: grayscale(0);
+				}
 			}
 		}
 	}
