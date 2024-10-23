@@ -384,7 +384,7 @@ during dev, build and prerendering
 
 ## AfterNavigate
 
-The argument passed to [`afterNavigate`](https://svelte.dev/docs/kit/modules#$app-navigation-afternavigate) callbacks.
+The argument passed to [`afterNavigate`](https://svelte.dev/docs/kit/$app-navigation#afterNavigate) callbacks.
 
 <div class="ts-block">
 
@@ -443,7 +443,7 @@ type AwaitedActions<
 
 ## BeforeNavigate
 
-The argument passed to [`beforeNavigate`](https://svelte.dev/docs/kit/modules#$app-navigation-beforenavigate) callbacks.
+The argument passed to [`beforeNavigate`](https://svelte.dev/docs/kit/$app-navigation#beforeNavigate) callbacks.
 
 <div class="ts-block">
 
@@ -626,7 +626,7 @@ generateManifest(opts: { relativePath: string; routes?: RouteDefinition[] }): st
 
 </div>
 
-Generate a server-side manifest to initialise the SvelteKit [server](https://svelte.dev/docs/kit/types#public-types-server) with.
+Generate a server-side manifest to initialise the SvelteKit [server](https://svelte.dev/docs/kit/@sveltejs-kit#Server) with.
 
 </div>
 </div>
@@ -1032,7 +1032,7 @@ type HandleServerError = (input: {
 
 ## HttpError
 
-The object returned by the [`error`](https://svelte.dev/docs/kit/modules#sveltejs-kit-error) function.
+The object returned by the [`error`](https://svelte.dev/docs/kit/@sveltejs-kit#error) function.
 
 <div class="ts-block">
 
@@ -1087,7 +1087,7 @@ type LessThan<
 
 ## Load
 
-The generic form of `PageLoad` and `LayoutLoad`. You should import those from `./$types` (see [generated types](https://svelte.dev/docs/kit/types#generated-types))
+The generic form of `PageLoad` and `LayoutLoad`. You should import those from `./$types` (see [generated types](https://svelte.dev/docs/kit/types#Generated-types))
 rather than using `Load` directly.
 
 <div class="ts-block">
@@ -1119,7 +1119,7 @@ type Load<
 
 ## LoadEvent
 
-The generic form of `PageLoadEvent` and `LayoutLoadEvent`. You should import those from `./$types` (see [generated types](https://svelte.dev/docs/kit/types#generated-types))
+The generic form of `PageLoadEvent` and `LayoutLoadEvent`. You should import those from `./$types` (see [generated types](https://svelte.dev/docs/kit/types#Generated-types))
 rather than using `LoadEvent` directly.
 
 <div class="ts-block">
@@ -1203,7 +1203,7 @@ export async function load({ fetch, setHeaders }) {
 
 Setting the same header multiple times (even in separate `load` functions) is an error — you can only set a given header once.
 
-You cannot add a `set-cookie` header with `setHeaders` — use the [`cookies`](https://svelte.dev/docs/kit/types#public-types-cookies) API in a server-only `load` function instead.
+You cannot add a `set-cookie` header with `setHeaders` — use the [`cookies`](https://svelte.dev/docs/kit/@sveltejs-kit#Cookies) API in a server-only `load` function instead.
 
 `setHeaders` has no effect when a `load` function runs in the browser.
 
@@ -1234,7 +1234,7 @@ depends(...deps: Array<`${string}:${string}`>): void;
 
 <div class="ts-block-property-details">
 
-This function declares that the `load` function has a _dependency_ on one or more URLs or custom identifiers, which can subsequently be used with [`invalidate()`](https://svelte.dev/docs/kit/modules#$app-navigation-invalidate) to cause `load` to rerun.
+This function declares that the `load` function has a _dependency_ on one or more URLs or custom identifiers, which can subsequently be used with [`invalidate()`](https://svelte.dev/docs/kit/$app-navigation#invalidate) to cause `load` to rerun.
 
 Most of the time you won't need this, as `fetch` calls `depends` on your behalf — it's only necessary if you're using a custom API client that bypasses `fetch`.
 
@@ -1559,7 +1559,7 @@ type NumericRange<
 
 ## OnNavigate
 
-The argument passed to [`onNavigate`](https://svelte.dev/docs/kit/modules#$app-navigation-onnavigate) callbacks.
+The argument passed to [`onNavigate`](https://svelte.dev/docs/kit/$app-navigation#onNavigate) callbacks.
 
 <div class="ts-block">
 
@@ -1712,7 +1712,7 @@ state: App.PageState;
 
 <div class="ts-block-property-details">
 
-The page state, which can be manipulated using the [`pushState`](https://svelte.dev/docs/kit/modules#$app-navigation-pushstate) and [`replaceState`](https://svelte.dev/docs/kit/modules#$app-navigation-replacestate) functions from `$app/navigation`.
+The page state, which can be manipulated using the [`pushState`](https://svelte.dev/docs/kit/$app-navigation#pushState) and [`replaceState`](https://svelte.dev/docs/kit/$app-navigation#replaceState) functions from `$app/navigation`.
 
 </div>
 </div>
@@ -1754,7 +1754,7 @@ type PrerenderOption = boolean | 'auto';
 
 ## Redirect
 
-The object returned by the [`redirect`](https://svelte.dev/docs/kit/modules#sveltejs-kit-redirect) function
+The object returned by the [`redirect`](https://svelte.dev/docs/kit/@sveltejs-kit#redirect) function
 
 <div class="ts-block">
 
@@ -1954,7 +1954,7 @@ export async function load({ fetch, setHeaders }) {
 
 Setting the same header multiple times (even in separate `load` functions) is an error — you can only set a given header once.
 
-You cannot add a `set-cookie` header with `setHeaders` — use the [`cookies`](https://svelte.dev/docs/kit/types#public-types-cookies) API instead.
+You cannot add a `set-cookie` header with `setHeaders` — use the [`cookies`](https://svelte.dev/docs/kit/@sveltejs-kit#Cookies) API instead.
 
 </div>
 </div>
@@ -2003,7 +2003,7 @@ isSubRequest: boolean;
 
 A `(event: RequestEvent) => Response` function exported from a `+server.js` file that corresponds to an HTTP verb (`GET`, `PUT`, `PATCH`, etc) and handles requests with that method.
 
-It receives `Params` as the first generic argument, which you can skip by using [generated types](https://svelte.dev/docs/kit/types#generated-types) instead.
+It receives `Params` as the first generic argument, which you can skip by using [generated types](https://svelte.dev/docs/kit/types#Generated-types) instead.
 
 <div class="ts-block">
 
@@ -2359,7 +2359,7 @@ A function that turns an asset filename into a `ReadableStream`. Required for th
 
 ## ServerLoad
 
-The generic form of `PageServerLoad` and `LayoutServerLoad`. You should import those from `./$types` (see [generated types](https://svelte.dev/docs/kit/types#generated-types))
+The generic form of `PageServerLoad` and `LayoutServerLoad`. You should import those from `./$types` (see [generated types](https://svelte.dev/docs/kit/types#Generated-types))
 rather than using `ServerLoad` directly.
 
 <div class="ts-block">
@@ -2425,7 +2425,7 @@ depends(...deps: string[]): void;
 
 <div class="ts-block-property-details">
 
-This function declares that the `load` function has a _dependency_ on one or more URLs or custom identifiers, which can subsequently be used with [`invalidate()`](https://svelte.dev/docs/kit/modules#$app-navigation-invalidate) to cause `load` to rerun.
+This function declares that the `load` function has a _dependency_ on one or more URLs or custom identifiers, which can subsequently be used with [`invalidate()`](https://svelte.dev/docs/kit/$app-navigation#invalidate) to cause `load` to rerun.
 
 Most of the time you won't need this, as `fetch` calls `depends` on your behalf — it's only necessary if you're using a custom API client that bypasses `fetch`.
 

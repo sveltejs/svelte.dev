@@ -246,23 +246,7 @@ function mount<
 	component:
 		| ComponentType<SvelteComponent<Props>>
 		| Component<Props, Exports, any>,
-	options: {} extends Props
-		? {
-				target: Document | Element | ShadowRoot;
-				anchor?: Node;
-				props?: Props;
-				events?: Record<string, (e: any) => any>;
-				context?: Map<any, any>;
-				intro?: boolean;
-			}
-		: {
-				target: Document | Element | ShadowRoot;
-				props: Props;
-				anchor?: Node;
-				events?: Record<string, (e: any) => any>;
-				context?: Map<any, any>;
-				intro?: boolean;
-			}
+	options: MountOptions<Props>
 ): Exports;
 ```
 
@@ -681,6 +665,53 @@ interface EventDispatcher<
 
 <div class="ts-block-property-details"></div>
 </div></div>
+
+## MountOptions
+
+Defines the options accepted by the `mount()` function.
+
+<div class="ts-block">
+
+```dts
+type MountOptions<
+	Props extends Record<string, any> = Record<string, any>
+> = {
+	/**
+	 * Target element where the component will be mounted.
+	 */
+	target: Document | Element | ShadowRoot;
+	/**
+	 * Optional node inside `target` and when specified, it is used to render the component immediately before it.
+	 */
+	anchor?: Node;
+	/**
+	 * Allows the specification of events.
+	 */
+	events?: Record<string, (e: any) => any>;
+	/**
+	 * Used to define context at the component level.
+	 */
+	context?: Map<any, any>;
+	/**
+	 * Used to control transition playback on initial render.  The default value is `true` to run transitions.
+	 */
+	intro?: boolean;
+} & ({} extends Props
+	? {
+			/**
+			 * Component properties.
+			 */
+			props?: Props;
+		}
+	: {
+			/**
+			 * Component properties.
+			 */
+			props: Props;
+		});
+```
+
+</div>
 
 ## Snippet
 
