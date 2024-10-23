@@ -124,6 +124,8 @@ Any additional options required by tooling that integrates with Svelte.
 </div>
 </div></div>
 
+
+
 ## KitConfig
 
 The `kit` property configures SvelteKit, and can have the following properties:
@@ -139,6 +141,8 @@ The `kit` property configures SvelteKit, and can have the following properties:
 Your [adapter](https://kit.svelte.dev/docs/adapters) is run when executing `vite build`. It determines how the output is converted for different platforms.
 
 <div class="ts-block-property-children">
+
+
 
 </div>
 
@@ -180,6 +184,8 @@ const config = {
 
 <div class="ts-block-property-children">
 
+
+
 </div>
 
 ## appDir
@@ -196,11 +202,15 @@ If `paths.assets` is specified, there will be two app directories — `${paths.a
 
 <div class="ts-block-property-children">
 
+
+
 </div>
 
 ## csp
 
 <div class="ts-block-property-bullets">
+
+
 
 </div>
 
@@ -288,6 +298,8 @@ Directives that will be added to `Content-Security-Policy-Report-Only` headers.
 
 <div class="ts-block-property-bullets">
 
+
+
 </div>
 
 Protection against [cross-site request forgery (CSRF)](https://owasp.org/www-community/attacks/csrf) attacks.
@@ -331,11 +343,15 @@ Note that it is generally not supported to embed multiple SvelteKit apps on the 
 
 <div class="ts-block-property-children">
 
+
+
 </div>
 
 ## env
 
 <div class="ts-block-property-bullets">
+
+
 
 </div>
 
@@ -407,6 +423,8 @@ A prefix that signals that an environment variable is unsafe to expose to client
 ## files
 
 <div class="ts-block-property-bullets">
+
+
 
 </div>
 
@@ -634,6 +652,8 @@ Inline CSS inside a `<style>` block at the head of the HTML. This option is a nu
 
 <div class="ts-block-property-children">
 
+
+
 </div>
 
 ## moduleExtensions
@@ -647,6 +667,8 @@ Inline CSS inside a `<style>` block at the head of the HTML. This option is a nu
 An array of file extensions that SvelteKit will treat as modules. Files with extensions that match neither `config.extensions` nor `config.kit.moduleExtensions` will be ignored by the router.
 
 <div class="ts-block-property-children">
+
+
 
 </div>
 
@@ -662,11 +684,15 @@ The directory that SvelteKit writes files to during `dev` and `build`. You shoul
 
 <div class="ts-block-property-children">
 
+
+
 </div>
 
 ## output
 
 <div class="ts-block-property-bullets">
+
+
 
 </div>
 
@@ -692,7 +718,6 @@ preloadStrategy?: 'modulepreload' | 'preload-js' | 'preload-mjs';
 
 SvelteKit will preload the JavaScript modules needed for the initial page to avoid import 'waterfalls', resulting in faster application startup. There
 are three strategies with different trade-offs:
-
 - `modulepreload` - uses `<link rel="modulepreload">`. This delivers the best results in Chromium-based browsers, in Firefox 115+, and Safari 17+. It is ignored in older browsers.
 - `preload-js` - uses `<link rel="preload">`. Prevents waterfalls in Chromium and Safari, but Chromium will parse each module twice (once as a script, once as a module). Causes modules to be requested twice in Firefox. This is a good setting if you want to maximise performance for users on iOS devices at the cost of a very slight degradation for Chromium users.
 - `preload-mjs` - uses `<link rel="preload">` but with the `.mjs` extension which prevents double-parsing in Chromium. Some static webservers will fail to serve .mjs files with a `Content-Type: application/javascript` header, which will cause your application to break. If that doesn't apply to you, this is the option that will deliver the best performance for the largest number of users, until `modulepreload` is more widely supported.
@@ -706,7 +731,11 @@ are three strategies with different trade-offs:
 
 <div class="ts-block-property-bullets">
 
+
+
 </div>
+
+
 
 <div class="ts-block-property-children">
 
@@ -784,6 +813,8 @@ In 1.0, `undefined` was a valid value, which was set by default. In that case, i
 
 <div class="ts-block-property-bullets">
 
+
+
 </div>
 
 See [Prerendering](https://kit.svelte.dev/docs/page-options#prerender).
@@ -843,7 +874,7 @@ entries?: Array<'*' | `/${string}`>;
 
 </div>
 
-An array of pages to prerender, or start crawling from (if `crawl: true`). The `*` string includes all routes containing no required `[parameters]` with optional parameters included as being empty (since SvelteKit doesn't know what value any parameters should have).
+An array of pages to prerender, or start crawling from (if `crawl: true`). The `*` string includes all routes containing no required `[parameters]`  with optional parameters included as being empty (since SvelteKit doesn't know what value any parameters should have).
 
 </div>
 </div>
@@ -969,7 +1000,11 @@ The value of `url.origin` during prerendering; useful if it is included in rende
 
 <div class="ts-block-property-bullets">
 
+
+
 </div>
+
+
 
 <div class="ts-block-property-children">
 
@@ -1018,7 +1053,11 @@ Determine which files in your `static` directory will be available in `$service-
 
 <div class="ts-block-property-bullets">
 
+
+
 </div>
+
+
 
 <div class="ts-block-property-children">
 
@@ -1050,13 +1089,14 @@ This is useful for extending a shared `tsconfig.json` in a monorepo root, for ex
 
 <div class="ts-block-property-bullets">
 
+
+
 </div>
 
 Client-side navigation can be buggy if you deploy a new version of your app while people are using it. If the code for the new page is already loaded, it may have stale content; if it isn't, the app's route manifest may point to a JavaScript file that no longer exists.
 SvelteKit helps you solve this problem through version management.
 If SvelteKit encounters an error while loading the page and detects that a new version has been deployed (using the `name` specified here, which defaults to a timestamp of the build) it will fall back to traditional full-page navigation.
 Not all navigations will result in an error though, for example if the JavaScript for the next page is already loaded. If you still want to force a full-page navigation in these cases, use techniques such as setting the `pollInterval` and then using `beforeNavigate`:
-
 ```html
 /// file: +layout.svelte
 <script>

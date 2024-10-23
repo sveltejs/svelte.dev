@@ -80,9 +80,9 @@ If you encounter an error like 'The following routes were marked as prerenderabl
 
 Since these routes cannot be dynamically server-rendered, this will cause errors when people try to access the route in question. There are a few ways to fix it:
 
-- Ensure that SvelteKit can find the route by following links from [`config.kit.prerender.entries`](configuration#prerender) or the [`entries`](#entries) page option. Add links to dynamic routes (i.e. pages with `[parameters]` ) to this option if they are not found through crawling the other entry points, else they are not prerendered because SvelteKit doesn't know what value the parameters should have. Pages not marked as prerenderable will be ignored and their links to other pages will not be crawled, even if some of them would be prerenderable.
-- Ensure that SvelteKit can find the route by discovering a link to it from one of your other prerendered pages that have server-side rendering enabled.
-- Change `export const prerender = true` to `export const prerender = 'auto'`. Routes with `'auto'` can be dynamically server rendered
+* Ensure that SvelteKit can find the route by following links from [`config.kit.prerender.entries`](configuration#prerender) or the [`entries`](#entries) page option. Add links to dynamic routes (i.e. pages with `[parameters]` ) to this option if they are not found through crawling the other entry points, else they are not prerendered because SvelteKit doesn't know what value the parameters should have. Pages not marked as prerenderable will be ignored and their links to other pages will not be crawled, even if some of them would be prerenderable.
+* Ensure that SvelteKit can find the route by discovering a link to it from one of your other prerendered pages that have server-side rendering enabled.
+* Change `export const prerender = true` to `export const prerender = 'auto'`. Routes with `'auto'` can be dynamically server rendered
 
 ## entries
 
@@ -104,7 +104,10 @@ This can be done with [`config.kit.prerender.entries`](configuration#prerender),
 /// file: src/routes/blog/[slug]/+page.server.js
 /** @type {import('./$types').EntryGenerator} */
 export function entries() {
-	return [{ slug: 'hello-world' }, { slug: 'another-blog-post' }];
+	return [
+		{ slug: 'hello-world' },
+		{ slug: 'another-blog-post' }
+	];
 }
 
 export const prerender = true;
@@ -136,11 +139,11 @@ export const csr = false;
 
 Disabling CSR does not ship any JavaScript to the client. This means:
 
-- The webpage should work with HTML and CSS only.
-- `<script>` tags inside all Svelte components are removed.
-- `<form>` elements cannot be [progressively enhanced](form-actions#Progressive-enhancement).
-- Links are handled by the browser with a full-page navigation.
-- Hot Module Replacement (HMR) will be disabled.
+* The webpage should work with HTML and CSS only.
+* `<script>` tags inside all Svelte components are removed.
+* `<form>` elements cannot be [progressively enhanced](form-actions#Progressive-enhancement).
+* Links are handled by the browser with a full-page navigation.
+* Hot Module Replacement (HMR) will be disabled.
 
 You can enable `csr` during development (for example to take advantage of HMR) like so:
 
@@ -197,7 +200,7 @@ export const config = {
 	foo: {
 		bar: true
 	}
-};
+}
 ```
 
 ...is overridden by this page configuration...
@@ -209,7 +212,7 @@ export const config = {
 	foo: {
 		baz: true
 	}
-};
+}
 ```
 
 ...which results in the config value `{ runtime: 'edge', regions: ['us1', 'us2'], foo: { baz: true } }` for that page.

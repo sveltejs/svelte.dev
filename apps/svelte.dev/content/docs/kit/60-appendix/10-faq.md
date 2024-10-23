@@ -142,7 +142,6 @@ onMount(() => {
 ```
 
 Finally, you may also consider using an `{#await}` block:
-
 ```svelte
 <!--- file: index.svelte --->
 <script>
@@ -178,7 +177,7 @@ export function GET({ params, url }) {
 }
 ```
 
-(Note that you may also need to proxy `POST` / `PATCH` etc requests, and forward `request.headers`, depending on your needs.)
+(Note that you may also need to proxy `POST`/`PATCH` etc requests, and forward `request.headers`, depending on your needs.)
 
 ### How do I use middleware?
 
