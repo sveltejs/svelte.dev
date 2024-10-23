@@ -3,9 +3,9 @@
 </script>
 
 <div
-	onpointermove={(e) => {
-		m.x = e.clientX;
-		m.y = e.clientY;
+	onpointermove={(event) => {
+		m.x = event.clientX;
+		m.y = event.clientY;
 	}}
 >
 	The pointer is at {Math.round(m.x)} x {Math.round(m.y)}
