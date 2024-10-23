@@ -35,10 +35,10 @@
 			return;
 		}
 
-		const elements = document.querySelector(`[id="${id}" i]`);
-		if (elements.length) {
+		const heading = document.querySelector(`[id="${hash}" i]`);
+		if (heading) {
 			const url = new URL($page.url);
-			url.hash = elements[0].id;
+			url.hash = heading.id;
 			return url;
 		}
 	}
