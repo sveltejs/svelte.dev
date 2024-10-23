@@ -34,7 +34,7 @@ We can now import `stopAll` in `App.svelte`...
 		<AudioPlayer {...track} />
 	{/each}
 
-+++	<button on:click={stopAll}>
++++	<button onclick={stopAll}>
 		stop all
 	</button>+++
 </div>

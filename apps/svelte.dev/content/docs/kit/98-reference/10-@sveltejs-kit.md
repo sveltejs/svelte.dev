@@ -184,7 +184,7 @@ function text(
 ## Action
 
 Shape of a form action method that is part of `export const actions = {..}` in `+page.server.js`.
-See [form actions](https://kit.svelte.dev/docs/form-actions) for more information.
+See [form actions](https://svelte.dev/docs/kit/form-actions) for more information.
 
 <div class="ts-block">
 
@@ -275,7 +275,7 @@ type ActionResult<
 ## Actions
 
 Shape of the `export const actions = {..}` object in `+page.server.js`.
-See [form actions](https://kit.svelte.dev/docs/form-actions) for more information.
+See [form actions](https://svelte.dev/docs/kit/form-actions) for more information.
 
 <div class="ts-block">
 
@@ -296,7 +296,7 @@ type Actions<
 
 ## Adapter
 
-[Adapters](https://kit.svelte.dev/docs/adapters) are responsible for taking the production build and turning it into something that can be deployed to a platform of your choosing.
+[Adapters](https://svelte.dev/docs/kit/adapters) are responsible for taking the production build and turning it into something that can be deployed to a platform of your choosing.
 
 <div class="ts-block">
 
@@ -384,7 +384,7 @@ during dev, build and prerendering
 
 ## AfterNavigate
 
-The argument passed to [`afterNavigate`](https://kit.svelte.dev/docs/modules#$app-navigation-afternavigate) callbacks.
+The argument passed to [`afterNavigate`](https://svelte.dev/docs/kit/$app-navigation#afterNavigate) callbacks.
 
 <div class="ts-block">
 
@@ -443,7 +443,7 @@ type AwaitedActions<
 
 ## BeforeNavigate
 
-The argument passed to [`beforeNavigate`](https://kit.svelte.dev/docs/modules#$app-navigation-beforenavigate) callbacks.
+The argument passed to [`beforeNavigate`](https://svelte.dev/docs/kit/$app-navigation#beforeNavigate) callbacks.
 
 <div class="ts-block">
 
@@ -626,7 +626,7 @@ generateManifest(opts: { relativePath: string; routes?: RouteDefinition[] }): st
 
 </div>
 
-Generate a server-side manifest to initialise the SvelteKit [server](https://kit.svelte.dev/docs/types#public-types-server) with.
+Generate a server-side manifest to initialise the SvelteKit [server](https://svelte.dev/docs/kit/@sveltejs-kit#Server) with.
 
 </div>
 </div>
@@ -955,8 +955,8 @@ and returns an `App.Platform` object
 
 ## Handle
 
-The [`handle`](https://kit.svelte.dev/docs/hooks#Server-hooks-handle) hook runs every time the SvelteKit server receives a [request](https://kit.svelte.dev/docs/web-standards#Fetch-APIs-Request) and
-determines the [response](https://kit.svelte.dev/docs/web-standards#Fetch-APIs-Response).
+The [`handle`](https://svelte.dev/docs/kit/hooks#Server-hooks-handle) hook runs every time the SvelteKit server receives a [request](https://svelte.dev/docs/kit/web-standards#Fetch-APIs-Request) and
+determines the [response](https://svelte.dev/docs/kit/web-standards#Fetch-APIs-Response).
 It receives an `event` object representing the request and a function called `resolve`, which renders the route and generates a `Response`.
 This allows you to modify response headers or bodies, or bypass SvelteKit entirely (for implementing routes programmatically, for example).
 
@@ -976,7 +976,7 @@ type Handle = (input: {
 
 ## HandleClientError
 
-The client-side [`handleError`](https://kit.svelte.dev/docs/hooks#shared-hooks-handleError) hook runs when an unexpected error is thrown while navigating.
+The client-side [`handleError`](https://svelte.dev/docs/kit/hooks#shared-hooks-handleError) hook runs when an unexpected error is thrown while navigating.
 
 If an unexpected error is thrown during loading or the following render, this function will be called with the error and the event.
 Make sure that this function _never_ throws an error.
@@ -996,7 +996,7 @@ type HandleClientError = (input: {
 
 ## HandleFetch
 
-The [`handleFetch`](https://kit.svelte.dev/docs/hooks#server-hooks-handleFetch) hook allows you to modify (or replace) a `fetch` request that happens inside a `load` function that runs on the server (or during pre-rendering)
+The [`handleFetch`](https://svelte.dev/docs/kit/hooks#server-hooks-handleFetch) hook allows you to modify (or replace) a `fetch` request that happens inside a `load` function that runs on the server (or during pre-rendering)
 
 <div class="ts-block">
 
@@ -1012,7 +1012,7 @@ type HandleFetch = (input: {
 
 ## HandleServerError
 
-The server-side [`handleError`](https://kit.svelte.dev/docs/hooks#shared-hooks-handleError) hook runs when an unexpected error is thrown while responding to a request.
+The server-side [`handleError`](https://svelte.dev/docs/kit/hooks#shared-hooks-handleError) hook runs when an unexpected error is thrown while responding to a request.
 
 If an unexpected error is thrown during loading or rendering, this function will be called with the error and the event.
 Make sure that this function _never_ throws an error.
@@ -1032,7 +1032,7 @@ type HandleServerError = (input: {
 
 ## HttpError
 
-The object returned by the [`error`](https://kit.svelte.dev/docs/modules#sveltejs-kit-error) function.
+The object returned by the [`error`](https://svelte.dev/docs/kit/@sveltejs-kit#error) function.
 
 <div class="ts-block">
 
@@ -1087,7 +1087,7 @@ type LessThan<
 
 ## Load
 
-The generic form of `PageLoad` and `LayoutLoad`. You should import those from `./$types` (see [generated types](https://kit.svelte.dev/docs/types#generated-types))
+The generic form of `PageLoad` and `LayoutLoad`. You should import those from `./$types` (see [generated types](https://svelte.dev/docs/kit/types#Generated-types))
 rather than using `Load` directly.
 
 <div class="ts-block">
@@ -1119,7 +1119,7 @@ type Load<
 
 ## LoadEvent
 
-The generic form of `PageLoadEvent` and `LayoutLoadEvent`. You should import those from `./$types` (see [generated types](https://kit.svelte.dev/docs/types#generated-types))
+The generic form of `PageLoadEvent` and `LayoutLoadEvent`. You should import those from `./$types` (see [generated types](https://svelte.dev/docs/kit/types#Generated-types))
 rather than using `LoadEvent` directly.
 
 <div class="ts-block">
@@ -1154,10 +1154,10 @@ fetch: typeof fetch;
 - It can be used to make credentialed requests on the server, as it inherits the `cookie` and `authorization` headers for the page request.
 - It can make relative requests on the server (ordinarily, `fetch` requires a URL with an origin when used in a server context).
 - Internal requests (e.g. for `+server.js` routes) go directly to the handler function when running on the server, without the overhead of an HTTP call.
-- During server-side rendering, the response will be captured and inlined into the rendered HTML by hooking into the `text` and `json` methods of the `Response` object. Note that headers will _not_ be serialized, unless explicitly included via [`filterSerializedResponseHeaders`](https://kit.svelte.dev/docs/hooks#Server-hooks-handle)
+- During server-side rendering, the response will be captured and inlined into the rendered HTML by hooking into the `text` and `json` methods of the `Response` object. Note that headers will _not_ be serialized, unless explicitly included via [`filterSerializedResponseHeaders`](https://svelte.dev/docs/kit/hooks#Server-hooks-handle)
 - During hydration, the response will be read from the HTML, guaranteeing consistency and preventing an additional network request.
 
-You can learn more about making credentialed requests with cookies [here](https://kit.svelte.dev/docs/load#cookies)
+You can learn more about making credentialed requests with cookies [here](https://svelte.dev/docs/kit/load#Cookies)
 
 </div>
 </div>
@@ -1203,7 +1203,7 @@ export async function load({ fetch, setHeaders }) {
 
 Setting the same header multiple times (even in separate `load` functions) is an error — you can only set a given header once.
 
-You cannot add a `set-cookie` header with `setHeaders` — use the [`cookies`](https://kit.svelte.dev/docs/types#public-types-cookies) API in a server-only `load` function instead.
+You cannot add a `set-cookie` header with `setHeaders` — use the [`cookies`](https://svelte.dev/docs/kit/@sveltejs-kit#Cookies) API in a server-only `load` function instead.
 
 `setHeaders` has no effect when a `load` function runs in the browser.
 
@@ -1234,7 +1234,7 @@ depends(...deps: Array<`${string}:${string}`>): void;
 
 <div class="ts-block-property-details">
 
-This function declares that the `load` function has a _dependency_ on one or more URLs or custom identifiers, which can subsequently be used with [`invalidate()`](https://kit.svelte.dev/docs/modules#$app-navigation-invalidate) to cause `load` to rerun.
+This function declares that the `load` function has a _dependency_ on one or more URLs or custom identifiers, which can subsequently be used with [`invalidate()`](https://svelte.dev/docs/kit/$app-navigation#invalidate) to cause `load` to rerun.
 
 Most of the time you won't need this, as `fetch` calls `depends` on your behalf — it's only necessary if you're using a custom API client that bypasses `fetch`.
 
@@ -1559,7 +1559,7 @@ type NumericRange<
 
 ## OnNavigate
 
-The argument passed to [`onNavigate`](https://kit.svelte.dev/docs/modules#$app-navigation-onnavigate) callbacks.
+The argument passed to [`onNavigate`](https://svelte.dev/docs/kit/$app-navigation#onNavigate) callbacks.
 
 <div class="ts-block">
 
@@ -1712,7 +1712,7 @@ state: App.PageState;
 
 <div class="ts-block-property-details">
 
-The page state, which can be manipulated using the [`pushState`](https://kit.svelte.dev/docs/modules#$app-navigation-pushstate) and [`replaceState`](https://kit.svelte.dev/docs/modules#$app-navigation-replacestate) functions from `$app/navigation`.
+The page state, which can be manipulated using the [`pushState`](https://svelte.dev/docs/kit/$app-navigation#pushState) and [`replaceState`](https://svelte.dev/docs/kit/$app-navigation#replaceState) functions from `$app/navigation`.
 
 </div>
 </div>
@@ -1725,14 +1725,14 @@ form: any;
 
 <div class="ts-block-property-details">
 
-Filled only after a form submission. See [form actions](https://kit.svelte.dev/docs/form-actions) for more info.
+Filled only after a form submission. See [form actions](https://svelte.dev/docs/kit/form-actions) for more info.
 
 </div>
 </div></div>
 
 ## ParamMatcher
 
-The shape of a param matcher. See [matching](https://kit.svelte.dev/docs/advanced-routing#matching) for more info.
+The shape of a param matcher. See [matching](https://svelte.dev/docs/kit/advanced-routing#Matching) for more info.
 
 <div class="ts-block">
 
@@ -1754,7 +1754,7 @@ type PrerenderOption = boolean | 'auto';
 
 ## Redirect
 
-The object returned by the [`redirect`](https://kit.svelte.dev/docs/modules#sveltejs-kit-redirect) function
+The object returned by the [`redirect`](https://svelte.dev/docs/kit/@sveltejs-kit#redirect) function
 
 <div class="ts-block">
 
@@ -1827,10 +1827,10 @@ fetch: typeof fetch;
 - It can be used to make credentialed requests on the server, as it inherits the `cookie` and `authorization` headers for the page request.
 - It can make relative requests on the server (ordinarily, `fetch` requires a URL with an origin when used in a server context).
 - Internal requests (e.g. for `+server.js` routes) go directly to the handler function when running on the server, without the overhead of an HTTP call.
-- During server-side rendering, the response will be captured and inlined into the rendered HTML by hooking into the `text` and `json` methods of the `Response` object. Note that headers will _not_ be serialized, unless explicitly included via [`filterSerializedResponseHeaders`](https://kit.svelte.dev/docs/hooks#Server-hooks-handle)
+- During server-side rendering, the response will be captured and inlined into the rendered HTML by hooking into the `text` and `json` methods of the `Response` object. Note that headers will _not_ be serialized, unless explicitly included via [`filterSerializedResponseHeaders`](https://svelte.dev/docs/kit/hooks#Server-hooks-handle)
 - During hydration, the response will be read from the HTML, guaranteeing consistency and preventing an additional network request.
 
-You can learn more about making credentialed requests with cookies [here](https://kit.svelte.dev/docs/load#cookies)
+You can learn more about making credentialed requests with cookies [here](https://svelte.dev/docs/kit/load#Cookies)
 
 </div>
 </div>
@@ -1856,7 +1856,7 @@ locals: App.Locals;
 
 <div class="ts-block-property-details">
 
-Contains custom data that was added to the request within the [`handle hook`](https://kit.svelte.dev/docs/hooks#Server-hooks-handle).
+Contains custom data that was added to the request within the [`handle hook`](https://svelte.dev/docs/kit/hooks#Server-hooks-handle).
 
 </div>
 </div>
@@ -1954,7 +1954,7 @@ export async function load({ fetch, setHeaders }) {
 
 Setting the same header multiple times (even in separate `load` functions) is an error — you can only set a given header once.
 
-You cannot add a `set-cookie` header with `setHeaders` — use the [`cookies`](https://kit.svelte.dev/docs/types#public-types-cookies) API instead.
+You cannot add a `set-cookie` header with `setHeaders` — use the [`cookies`](https://svelte.dev/docs/kit/@sveltejs-kit#Cookies) API instead.
 
 </div>
 </div>
@@ -2003,7 +2003,7 @@ isSubRequest: boolean;
 
 A `(event: RequestEvent) => Response` function exported from a `+server.js` file that corresponds to an HTTP verb (`GET`, `PUT`, `PATCH`, etc) and handles requests with that method.
 
-It receives `Params` as the first generic argument, which you can skip by using [generated types](https://kit.svelte.dev/docs/types#generated-types) instead.
+It receives `Params` as the first generic argument, which you can skip by using [generated types](https://svelte.dev/docs/kit/types#Generated-types) instead.
 
 <div class="ts-block">
 
@@ -2022,7 +2022,7 @@ type RequestHandler<
 
 ## Reroute
 
-The [`reroute`](https://kit.svelte.dev/docs/hooks#universal-hooks-reroute) hook allows you to modify the URL before it is used to determine which route to render.
+The [`reroute`](https://svelte.dev/docs/kit/hooks#Universal-hooks-reroute) hook allows you to modify the URL before it is used to determine which route to render.
 
 <div class="ts-block">
 
@@ -2359,7 +2359,7 @@ A function that turns an asset filename into a `ReadableStream`. Required for th
 
 ## ServerLoad
 
-The generic form of `PageServerLoad` and `LayoutServerLoad`. You should import those from `./$types` (see [generated types](https://kit.svelte.dev/docs/types#generated-types))
+The generic form of `PageServerLoad` and `LayoutServerLoad`. You should import those from `./$types` (see [generated types](https://svelte.dev/docs/kit/types#Generated-types))
 rather than using `ServerLoad` directly.
 
 <div class="ts-block">
@@ -2425,7 +2425,7 @@ depends(...deps: string[]): void;
 
 <div class="ts-block-property-details">
 
-This function declares that the `load` function has a _dependency_ on one or more URLs or custom identifiers, which can subsequently be used with [`invalidate()`](https://kit.svelte.dev/docs/modules#$app-navigation-invalidate) to cause `load` to rerun.
+This function declares that the `load` function has a _dependency_ on one or more URLs or custom identifiers, which can subsequently be used with [`invalidate()`](https://svelte.dev/docs/kit/$app-navigation#invalidate) to cause `load` to rerun.
 
 Most of the time you won't need this, as `fetch` calls `depends` on your behalf — it's only necessary if you're using a custom API client that bypasses `fetch`.
 

@@ -123,10 +123,10 @@
 				align-items: center;
 				position: absolute;
 				top: 0;
+				right: 0;
 				height: var(--height);
 				padding: 0.3rem 0.5rem 0.3rem 1rem;
 				gap: 0.5rem;
-				width: 100%;
 				z-index: 2;
 				justify-content: end;
 				box-sizing: border-box;
