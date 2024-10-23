@@ -200,7 +200,6 @@
 				}
 
 				.copy-to-clipboard {
-					display: none;
 					position: relative;
 					height: calc(var(--height) - 1rem);
 					aspect-ratio: 1;
