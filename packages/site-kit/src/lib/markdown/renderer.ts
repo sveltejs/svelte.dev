@@ -32,6 +32,7 @@ const hash = createHash('sha256');
 hash.update(fs.readFileSync('../../pnpm-lock.yaml', 'utf-8'));
 hash_graph(hash, fileURLToPath(import.meta.url));
 const digest = hash.digest().toString('base64').replace(/\//g, '-');
+console.log('hash is', digest);
 
 /**
  * Utility function to work with code snippet caching.
@@ -84,6 +85,8 @@ async function create_snippet_cache() {
 				if (fs.existsSync(file)) {
 					snippet = fs.readFileSync(file, 'utf-8');
 					cache.set(source, snippet);
+				} else {
+					console.log('cache miss');
 				}
 			}
 
@@ -192,7 +195,9 @@ export async function render_content_markdown(
 	const headings: string[] = [];
 	const { check = true } = options ?? {};
 
-	return await transform(body, {
+	const time = Date.now();
+
+	const res = await transform(body, {
 		async walkTokens(token) {
 			if (token.type === 'code') {
 				if (snippets.get(token.text)) return;
@@ -316,6 +321,11 @@ export async function render_content_markdown(
 			return `<blockquote>${content}</blockquote>`;
 		}
 	});
+
+	if (!filename.startsWith('<two'))
+		console.log('rendering ', filename, 'took', Date.now() - time, 'ms');
+
+	return res;
 }
 
 /**
