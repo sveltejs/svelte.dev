@@ -566,6 +566,7 @@ function find_nearest_node_modules(file: string): string | null {
 function hash_graph(hash: Hash, file: string, seen = new Set<string>()) {
 	if (seen.has(file)) return;
 	seen.add(file);
+	console.log('including', file, 'in hash');
 
 	const content = fs.readFileSync(file, 'utf-8');
 
