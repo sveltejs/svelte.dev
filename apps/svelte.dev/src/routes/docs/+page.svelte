@@ -7,22 +7,24 @@
 	// This mapping does a best effort to redirect to the new docs.
 	const mappings = [
 		['before-we-begin', 'overview'],
-		['getting-started', 'getting-started'],
+		['getting-started', 'overview'],
 		['component-format', 'svelte-files'],
-		['template-syntax-if', 'control-flow'],
-		['template-syntax-each', 'control-flow'],
-		['template-syntax-await', 'control-flow'],
-		['template-syntax-key', 'control-flow'],
+		['template-syntax-if', 'if'],
+		['template-syntax-each', 'each'],
+		['template-syntax-await', 'await'],
+		['template-syntax-key', 'key'],
 		['template-syntax-element-directives', 'basic-markup'],
 		['template-syntax-element-directives-bind', 'bindings'],
-		['template-syntax-element-directives-class', 'styles-and-classes'],
-		['template-syntax-element-directives-style', 'styles-and-classes'],
-		['template-syntax-element-directives-use-action', 'actions'],
-		['template-syntax-element-directives-transition-fn', 'transitions-and-animations'],
-		['template-syntax-element-directives-in-fn-out-fn', 'transitions-and-animations'],
-		['template-syntax-element-directives-animate-fn', 'transitions-and-animations'],
-		['template-syntax-component-directives', 'component fundamentals'],
-		['template-syntax-svelte', 'special-elements'],
+		['template-syntax-element-directives-class', 'class'],
+		['template-syntax-element-directives-style', 'style'],
+		['template-syntax-element-directives-use-action', 'use'],
+		['template-syntax-element-directives-transition-fn', 'transition'],
+		['template-syntax-element-directives-in-fn-out-fn', 'in-and-out'],
+		['template-syntax-element-directives-animate-fn', 'animate'],
+		['template-syntax-component-directives', 'basic-markup'],
+		// not sure what lived here
+		// if I guessed right, there's not a great one for this
+		['template-syntax-svelte', 'svelte-window'],
 		['template-syntax', 'basic-markup'],
 		['run-time-svelte-store', 'svelte-store'],
 		['run-time-svelte-motion', 'svelte-motion'],
@@ -44,7 +46,7 @@
 		if (!hash) return;
 
 		for (const [old_id, new_id] of mappings) {
-			if (hash.startsWith(old_id)) return `/docs/svelte/${new_id}`;
+			if (hash === old_id) return `/docs/svelte/${new_id}`;
 		}
 	}
 
