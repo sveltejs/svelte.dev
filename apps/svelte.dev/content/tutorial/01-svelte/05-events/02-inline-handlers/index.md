@@ -7,7 +7,7 @@ You can also declare event handlers inline:
 ```svelte
 /// file: App.svelte
 <script>
-	let m = { x: 0, y: 0 };
+	let m = $state({ x: 0, y: 0 });
 
 	---function onpointermove(event) {
 		m.x = event.clientX;
