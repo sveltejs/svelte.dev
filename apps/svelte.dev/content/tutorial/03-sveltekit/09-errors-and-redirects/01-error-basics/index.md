@@ -4,7 +4,7 @@ title: Basics
 
 There are two types of errors in SvelteKit — _expected_ errors and _unexpected_ errors.
 
-An expected error is one that was thrown via the [`error`](https://svelte.dev/docs/kit/modules#sveltejs-kit-error) helper from `@sveltejs/kit`, as in `src/routes/expected/+page.server.js`:
+An expected error is one that was thrown via the [`error`](/docs/kit/modules#sveltejs-kit-error) helper from `@sveltejs/kit`, as in `src/routes/expected/+page.server.js`:
 
 ```js
 /// file: src/routes/expected/+page.server.js

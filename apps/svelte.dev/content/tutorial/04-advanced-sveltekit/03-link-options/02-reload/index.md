@@ -14,4 +14,4 @@ In rare cases, you might want to disable this behaviour. You can do so by adding
 </nav>
 ```
 
-For more information on available link options and their values, consult the [link options documentation](https://svelte.dev/docs/kit/link-options).
+For more information on available link options and their values, consult the [link options documentation](/docs/kit/link-options).
