@@ -315,31 +315,12 @@ export class Workspace {
 	}
 
 	update_file(file: File) {
-		if (file.name === this.#current.name) {
-			this.#current = file;
-		}
-
-		this.#files = this.#files.map((old) => {
-			if (old.name === file.name) {
-				return file;
-			}
-			return old;
-		});
-
-		this.modified[file.name] = true;
-
-		if (BROWSER && is_svelte_file(file)) {
-			compile_file(file, this.#svelte_version, this.compiler_options).then((compiled) => {
-				this.compiled[file.name] = compiled;
-			});
-		}
+		this.#update_file(file);
 
 		const state = this.states.get(file.name);
 		if (state) {
 			this.#update_state(file, state);
 		}
-
-		this.#onupdate(file);
 	}
 
 	#create_directories(item: Item) {
@@ -374,7 +355,7 @@ export class Workspace {
 				if (update.docChanged) {
 					const state = this.#view!.state!;
 
-					this.update_file({
+					this.#update_file({
 						...this.#current,
 						contents: state.doc.toString()
 					});
@@ -459,6 +440,29 @@ export class Workspace {
 	#select(file: File) {
 		this.#current = file as File;
 		this.#view?.setState(this.#get_state(this.#current));
+	}
+
+	#update_file(file: File) {
+		if (file.name === this.#current.name) {
+			this.#current = file;
+		}
+
+		this.#files = this.#files.map((old) => {
+			if (old.name === file.name) {
+				return file;
+			}
+			return old;
+		});
+
+		this.modified[file.name] = true;
+
+		if (BROWSER && is_svelte_file(file)) {
+			compile_file(file, this.#svelte_version, this.compiler_options).then((compiled) => {
+				this.compiled[file.name] = compiled;
+			});
+		}
+
+		this.#onupdate(file);
 	}
 
 	#update_state(file: File, state: EditorState) {
