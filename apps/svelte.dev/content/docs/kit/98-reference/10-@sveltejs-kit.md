@@ -1157,7 +1157,7 @@ fetch: typeof fetch;
 - During server-side rendering, the response will be captured and inlined into the rendered HTML by hooking into the `text` and `json` methods of the `Response` object. Note that headers will _not_ be serialized, unless explicitly included via [`filterSerializedResponseHeaders`](https://svelte.dev/docs/kit/hooks#Server-hooks-handle)
 - During hydration, the response will be read from the HTML, guaranteeing consistency and preventing an additional network request.
 
-You can learn more about making credentialed requests with cookies [here](https://svelte.dev/docs/kit/load#cookies)
+You can learn more about making credentialed requests with cookies [here](https://svelte.dev/docs/kit/load#Cookies)
 
 </div>
 </div>
@@ -1732,7 +1732,7 @@ Filled only after a form submission. See [form actions](https://svelte.dev/docs/
 
 ## ParamMatcher
 
-The shape of a param matcher. See [matching](https://svelte.dev/docs/kit/advanced-routing#matching) for more info.
+The shape of a param matcher. See [matching](https://svelte.dev/docs/kit/advanced-routing#Matching) for more info.
 
 <div class="ts-block">
 
@@ -1830,7 +1830,7 @@ fetch: typeof fetch;
 - During server-side rendering, the response will be captured and inlined into the rendered HTML by hooking into the `text` and `json` methods of the `Response` object. Note that headers will _not_ be serialized, unless explicitly included via [`filterSerializedResponseHeaders`](https://svelte.dev/docs/kit/hooks#Server-hooks-handle)
 - During hydration, the response will be read from the HTML, guaranteeing consistency and preventing an additional network request.
 
-You can learn more about making credentialed requests with cookies [here](https://svelte.dev/docs/kit/load#cookies)
+You can learn more about making credentialed requests with cookies [here](https://svelte.dev/docs/kit/load#Cookies)
 
 </div>
 </div>
@@ -2022,7 +2022,7 @@ type RequestHandler<
 
 ## Reroute
 
-The [`reroute`](https://svelte.dev/docs/kit/hooks#universal-hooks-reroute) hook allows you to modify the URL before it is used to determine which route to render.
+The [`reroute`](https://svelte.dev/docs/kit/hooks#Universal-hooks-reroute) hook allows you to modify the URL before it is used to determine which route to render.
 
 <div class="ts-block">
 
