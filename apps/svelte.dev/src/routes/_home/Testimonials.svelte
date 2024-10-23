@@ -134,6 +134,12 @@
 				filter: grayscale(0);
 			}
 		}
+
+		@media (hover: none) {
+			.screenshot {
+				filter: grayscale(0);
+			}
+		}
 	}
 
 	.definition {
