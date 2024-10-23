@@ -31,7 +31,7 @@
 		// also semi-handles the case where one appears twice with difference casing
 		// e.g. https://svelte.dev/docs/kit/@sveltejs-kit#redirect vs https://svelte.dev/docs/kit/@sveltejs-kit#Redirect
 		// but browsers make it impossible to really do: https://github.com/sveltejs/svelte.dev/issues/590
-		if (document.querySelector(`[id="${hash}"]`).length) {
+		if (document.querySelector(`[id="${hash}"]`)) {
 			return;
 		}
 
