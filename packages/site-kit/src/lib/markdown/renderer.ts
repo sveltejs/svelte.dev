@@ -28,11 +28,17 @@ const theme = createCssVariablesTheme({
 	fontStyle: true
 });
 
+// Hash the contents of this file and its dependencies so that we get a new cache in case we have changed
+// how the markdown is rendered (whose logic live here). This is to avoid serving stale code snippets.
 const hash = createHash('sha256');
 hash.update(fs.readFileSync('../../pnpm-lock.yaml', 'utf-8'));
-hash_graph(hash, fileURLToPath(import.meta.url));
+// CAREFUL: update this URL in case you ever move this file or start the dev/build process from another directory
+const original_file = '../../packages/site-kit/src/lib/markdown/renderer.ts';
+if (fs.existsSync(original_file)) {
+	throw new Error('Update the path to the markdown renderer code. Current value: ' + original_file);
+}
+hash_graph(hash, fileURLToPath(original_file));
 const digest = hash.digest().toString('base64').replace(/\//g, '-');
-console.log('hash is', digest);
 
 /**
  * Utility function to work with code snippet caching.
@@ -85,8 +91,6 @@ async function create_snippet_cache() {
 				if (fs.existsSync(file)) {
 					snippet = fs.readFileSync(file, 'utf-8');
 					cache.set(source, snippet);
-				} else {
-					console.log('cache miss');
 				}
 			}
 
@@ -195,9 +199,7 @@ export async function render_content_markdown(
 	const headings: string[] = [];
 	const { check = true } = options ?? {};
 
-	const time = Date.now();
-
-	const res = await transform(body, {
+	return await transform(body, {
 		async walkTokens(token) {
 			if (token.type === 'code') {
 				if (snippets.get(token.text)) return;
@@ -321,11 +323,6 @@ export async function render_content_markdown(
 			return `<blockquote>${content}</blockquote>`;
 		}
 	});
-
-	if (!filename.startsWith('<two'))
-		console.log('rendering ', filename, 'took', Date.now() - time, 'ms');
-
-	return res;
 }
 
 /**
@@ -566,7 +563,6 @@ function find_nearest_node_modules(file: string): string | null {
 function hash_graph(hash: Hash, file: string, seen = new Set<string>()) {
 	if (seen.has(file)) return;
 	seen.add(file);
-	console.log('including', file, 'in hash');
 
 	const content = fs.readFileSync(file, 'utf-8');
 
