@@ -27,21 +27,19 @@
 		const hash = $page.url.hash.replace(/^#/i, '');
 		if (!hash) return;
 
-		const elements = document.querySelectorAll('*[id]');
 		// if there's an exact match, use that. no need to redirect
-		// also handles the case where one appears twice with difference casing
+		// also semi-handles the case where one appears twice with difference casing
 		// e.g. https://svelte.dev/docs/kit/@sveltejs-kit#redirect vs https://svelte.dev/docs/kit/@sveltejs-kit#Redirect
-		for (const el of elements) {
-			if (el.id === hash) {
-				return;
-			}
+		// but browsers make it impossible to really do: https://github.com/sveltejs/svelte.dev/issues/590
+		if (document.querySelector(`[id="${hash}"]`).length) {
+			return;
 		}
-		for (const el of elements) {
-			if (el.id.toLocaleLowerCase() === hash.toLocaleLowerCase()) {
-				const url = new URL($page.url);
-				url.hash = el.id;
-				return url;
-			}
+
+		const elements = document.querySelector(`[id="${id}" i]`);
+		if (elements.length) {
+			const url = new URL($page.url);
+			url.hash = elements[0].id;
+			return url;
 		}
 	}
 
