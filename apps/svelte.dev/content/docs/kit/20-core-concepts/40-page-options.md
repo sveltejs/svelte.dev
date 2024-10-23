@@ -94,7 +94,7 @@ SvelteKit will discover pages to prerender automatically, by starting at _entry 
 /blog/[slug]  # dynamic, because of `[slug]`
 ```
 
-...SvelteKit will prerender `/` and `/blog`, and in the process discover links like `<a href="/blog/hello-world">` which give it new pages to prerender.
+...SvelteKit will prerender ` / ` and `/blog`, and in the process discover links like `<a href="/blog/hello-world">` which give it new pages to prerender.
 
 Most of the time, that's enough. In some situations, links to pages like `/blog/hello-world` might not exist (or might not exist on prerendered pages), in which case we need to tell SvelteKit about their existence.
 

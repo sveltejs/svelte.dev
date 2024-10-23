@@ -83,7 +83,7 @@ class Todo {
 }
 ```
 
-> [!NOTE] The compiler transforms `done` and `text` into `get`/`set` methods on the class prototype referencing private fields.
+> [!NOTE] The compiler transforms `done` and `text` into `get` / `set` methods on the class prototype referencing private fields.
 
 ## `$state.raw`
 

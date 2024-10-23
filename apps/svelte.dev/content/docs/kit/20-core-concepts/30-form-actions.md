@@ -68,7 +68,7 @@ export const actions = {
 };
 ```
 
-To invoke a named action, add a query parameter with the name prefixed by a `/` character:
+To invoke a named action, add a query parameter with the name prefixed by a ` / ` character:
 
 ```svelte
 <!--- file: src/routes/login/+page.svelte --->
