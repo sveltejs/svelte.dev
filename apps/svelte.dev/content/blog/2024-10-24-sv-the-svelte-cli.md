@@ -7,7 +7,7 @@ authorURL: https://www.benmccann.com/
 
 We’ve just released [sv](https://npmjs.com/package/sv), a new Command Line Interface (CLI) for creating, enhancing, and upgrading Svelte projects.
 
-One of the most common question we hear is "how to I set up Tailwind on my new project?" Tailwind has SvelteKit documentation, but it lists eight steps. While the community-led `svelte-add` project could automate it, few knew about it.
+One of the most common question we hear is "how to I set up Tailwind on my new project?" Tailwind has [SvelteKit documentation](https://tailwindcss.com/docs/guides/sveltekit), but it lists eight steps. While the community-led `svelte-add` project could automate it, few knew about it.
 
 <div class="max">
 <figure style="max-width: 960px; margin: 0 auto">
