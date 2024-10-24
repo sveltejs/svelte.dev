@@ -35,11 +35,15 @@
 			return;
 		}
 
-		const heading = document.querySelector(`[id="${hash}" i]`);
-		if (heading) {
-			const url = new URL($page.url);
-			url.hash = heading.id;
-			return url;
+		const headings = document.querySelectorAll('h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]');
+		const id = hash.toLowerCase();
+		for (const heading of headings) {
+			// e.g. we want to redirect progressive-enhancement-use-enhance to Progressive-enhancement-use:enhance
+			if (heading.id.toLowerCase().replaceAll(':', '-') === id) {
+				const url = new URL($page.url);
+				url.hash = heading.id;
+				return url;
+			}
 		}
 	}
 
