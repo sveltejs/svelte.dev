@@ -178,6 +178,24 @@
 		--sk-raised-hover-color: var(--sk-back-6) var(--sk-back-3) var(--sk-back-3) var(--sk-back-6);
 		--sk-raised-active-color: var(--sk-back-3) var(--sk-back-6) var(--sk-back-6) var(--sk-back-3);
 	}
+
+	&.font-boring {
+		--sk-font-family-body: system-ui;
+		--sk-font-size-body: 1.8rem;
+
+		code {
+			font-size: 0.75em;
+		}
+	}
+
+	&.font-accessible {
+		--sk-font-family-body: 'OpenDyslexic';
+		--sk-font-size-body: 1.6rem;
+
+		code {
+			font-size: 0.9em;
+		}
+	}
 }
 
 @media screen and (min-width: 480px) {

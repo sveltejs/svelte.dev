@@ -13,6 +13,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 	import { HoverMenu } from '../components';
 	import Search from '../search/Search.svelte';
 	import { tick } from 'svelte';
+	import FontDropdown from '../components/FontDropdown.svelte';
 
 	interface Props {
 		home_title?: string;
@@ -130,11 +131,15 @@ Top navigation bar for the application. It provides a slot for the left side, th
 				></a>
 			</div>
 
+			<FontDropdown />
+
 			<ThemeToggle />
 		</div>
 	</div>
 
 	<div class="mobile mobile-menu">
+		<FontDropdown top />
+
 		<button
 			aria-label="Search"
 			class="raised icon search"
