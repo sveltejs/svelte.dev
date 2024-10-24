@@ -13,7 +13,7 @@ Let's dive into the details...
 
 - `@sveltejs/kit` 1.0 is out! All future releases will follow semver and changes will be listed as major/minor/patch in the [CHANGELOG](https://github.com/sveltejs/kit/blob/master/packages/kit/CHANGELOG.md#100).
 - Improved support for Storybook and Histoire ([#7990](https://github.com/sveltejs/kit/pull/7990)). Work is ongoing to fully support those tools ([storybook#20239](https://github.com/storybookjs/storybook/pull/20239)).
-- `vitePreprocess` is now the default preprocessor. Please see [the docs](/docs/kit/integrations#preprocessors) for differences between `vitePreprocess` and `svelte-preprocess` ([#8036](https://github.com/sveltejs/kit/pull/8036)).
+- `vitePreprocess` is now the default preprocessor. Please see [the docs](/docs/kit/integrations#vitePreprocess) for differences between `vitePreprocess` and `svelte-preprocess` ([#8036](https://github.com/sveltejs/kit/pull/8036)).
 
 ### Breaking changes:
 
