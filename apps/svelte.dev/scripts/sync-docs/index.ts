@@ -11,12 +11,12 @@ import type { Modules } from '@sveltejs/site-kit/markdown';
 
 interface Package {
 	name: string;
-	local: string;
 	repo: string;
 	branch: string;
 	pkg: string;
 	docs: string;
-	process_modules: (modules: Modules, pkg: Package) => Promise<Modules>;
+	types: string | null;
+	process_modules?: (modules: Modules, pkg: Package) => Promise<Modules>;
 }
 
 const dirname = fileURLToPath(new URL('.', import.meta.url));
@@ -26,11 +26,11 @@ const DOCS = path.join(dirname, '../../content/docs');
 const packages: Package[] = [
 	{
 		name: 'svelte',
-		local: `${REPOS}/svelte`,
 		repo: 'sveltejs/svelte',
 		branch: 'main',
 		pkg: 'packages/svelte',
 		docs: 'documentation/docs',
+		types: 'types',
 		process_modules: async (modules: Modules) => {
 			// Remove $$_attributes from ActionReturn
 			const module_with_ActionReturn = modules.find((m) =>
@@ -50,13 +50,13 @@ const packages: Package[] = [
 	},
 	{
 		name: 'kit',
-		local: `${REPOS}/kit`,
 		repo: 'sveltejs/kit',
 		branch: 'main',
 		pkg: 'packages/kit',
 		docs: 'documentation/docs',
+		types: 'types',
 		process_modules: async (modules, pkg) => {
-			const kit_base = `${pkg.local}/${pkg.pkg}/`;
+			const kit_base = `${REPOS}/${pkg.name}/${pkg.pkg}/`;
 
 			{
 				const code = read_d_ts_file(kit_base + 'src/types/private.d.ts');
@@ -107,6 +107,14 @@ const packages: Package[] = [
 
 			return modules;
 		}
+	},
+	{
+		name: 'cli',
+		repo: 'sveltejs/cli',
+		branch: 'chore/add-docs',
+		pkg: 'packages/cli',
+		docs: 'documentation/docs',
+		types: null
 	}
 ];
 
@@ -132,14 +140,17 @@ async function sync(pkg: Package) {
 	const dest = `${DOCS}/${pkg.name}`;
 
 	fs.rmSync(dest, { force: true, recursive: true });
-	fs.cpSync(`${pkg.local}/${pkg.docs}`, dest, { recursive: true });
+	fs.cpSync(`${REPOS}/${pkg.name}/${pkg.docs}`, dest, { recursive: true });
 	migrate_meta_json(dest);
 
-	const modules = await pkg.process_modules(await read_types(`${pkg.local}/${pkg.pkg}/`, []), pkg);
+	let modules: Modules = [];
 
-	const files = glob(`${dest}/**/*.md`);
+	if (pkg.types !== null) {
+		modules = await read_types(`${REPOS}/${pkg.name}/${pkg.pkg}/${pkg.types}/`, []);
+		await pkg.process_modules?.(modules, pkg);
+	}
 
-	for (const file of files) {
+	for (const file of glob(`${dest}/**/*.md`)) {
 		const content = await preprocess(file, modules);
 
 		fs.writeFileSync(file, content);
