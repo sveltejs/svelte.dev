@@ -8,11 +8,10 @@ const mappings = new Map([
 	['/docs/custom-elements-api', '/docs/svelte/custom-elements'],
 	['/docs/element-directives', '/docs/svelte/basic-markup'], // no good mapping for this one
 	['/docs/introduction', '/docs/svelte/overview'],
-	['/docs/logic-blocks', '/docs/svelte/basic-markup'], // no good mapping for this one
 	['/docs/server-side-component-api', '/docs/svelte/legacy-component-api'],
 	['/docs/special-elements', '/docs/svelte/svelte-window'], // no good mapping for this one
 	['/docs/special-tags', '/docs/svelte/basic-markup'],
-	// can't map this, as this is now a redirect to the overview page: ['/docs/svelte', '/docs/svelte/svelte'],
+	// ['/docs/svelte', '/docs/svelte/svelte'], - can't map this. /docs/svelte is now a redirect to the overview page
 	['/docs/svelte-action', '/docs/svelte/svelte-action'],
 	['/docs/svelte-animate', '/docs/svelte/svelte-animate'],
 	['/docs/svelte-compiler', '/docs/svelte/svelte-compiler'],
