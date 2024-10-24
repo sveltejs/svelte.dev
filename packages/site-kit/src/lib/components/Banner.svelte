@@ -1,50 +1,52 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import { quintOut } from 'svelte/easing';
 	import { fade } from 'svelte/transition';
+	import { persisted } from 'svelte-persisted-store';
 	import Icon from './Icon.svelte';
+	import type { BannerData } from '../types';
+	import { browser } from '$app/environment';
 
-	interface Props {
-		/** Whether to show an arrow at the end */
-		arrow?: boolean;
-		/** Link to the event. It must be an absolute path (https://svelte.dev/blog/runes instead of /blog/runes) */
-		href: string;
-		content: {
-			lg?: string;
-			sm?: string;
-		};
-		close?: () => void;
-	}
+	let { banner }: { banner: BannerData } = $props();
 
-	let { arrow = false, href, content }: Props = $props();
+	const hidden = persisted<Record<string, boolean>>('svelte:hidden-banners', {});
+	const time = +new Date();
 
-	let show = $state(false);
-	onMount(() => {
-		setTimeout(() => {
-			show = true;
-		}, 300);
+	let visible = $derived(
+		browser && !$hidden[banner.id] && time > +banner.start && time < +banner.end
+	);
+
+	$effect(() => {
+		document.documentElement.style.setProperty(
+			'--sk-banner-bottom-height',
+			visible ? '41.9px' : '0px'
+		);
 	});
 </script>
 
-{#if show}
+{#if visible}
 	<div class="banner-bottom" transition:fade={{ duration: 400, easing: quintOut }}>
 		<div class="main-area">
-			<a {href}>
-				{#if content.lg}
-					<span class="lg">{content.lg}</span>
+			<a href={banner.href}>
+				{#if banner.content.lg}
+					<span class="lg">{banner.content.lg}</span>
 				{/if}
 
-				{#if content.sm}
-					<span class="sm">{content.sm}</span>
+				{#if banner.content.sm}
+					<span class="sm">{banner.content.sm}</span>
 				{/if}
 			</a>
 
-			{#if arrow}
+			{#if banner.arrow}
 				<Icon name="arrow-right" size="1.2em" />
 			{/if}
 		</div>
 
-		<button class="close-button" onclick={() => close?.()}>
+		<button
+			class="close-button"
+			onclick={() => {
+				$hidden[banner.id] = true;
+			}}
+		>
 			<Icon name="close" />
 		</button>
 	</div>
