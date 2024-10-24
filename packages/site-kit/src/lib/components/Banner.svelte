@@ -76,7 +76,7 @@
 		padding: 8px;
 	}
 
-	.banner :global(a) {
+	.banner a {
 		color: hsl(0, 0%, 99%);
 	}
 
