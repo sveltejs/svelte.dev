@@ -2,7 +2,7 @@
 title: The RequestEvent object
 ---
 
-The `event` object passed into `handle` is the same object — an instance of a [`RequestEvent`](https://kit.svelte.dev/docs/types#public-types-requestevent) — that is passed into [API routes](get-handlers) in `+server.js` files, [form actions](the-form-element) in `+page.server.js` files, and `load` functions in `+page.server.js` and `+layout.server.js`.
+The `event` object passed into `handle` is the same object — an instance of a [`RequestEvent`](/docs/kit/@sveltejs-kit#RequestEvent) — that is passed into [API routes](get-handlers) in `+server.js` files, [form actions](the-form-element) in `+page.server.js` files, and `load` functions in `+page.server.js` and `+layout.server.js`.
 
 It contains a number of useful properties and methods, some of which we've already encountered:
 

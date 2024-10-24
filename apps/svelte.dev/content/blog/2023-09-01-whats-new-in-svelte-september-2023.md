@@ -15,9 +15,9 @@ Before we jump in, a warm welcome to the new Svelte Ambassadors: [@cainux](https
 
 ## What's new in SvelteKit
 
-- `URL` is now accepted in the `redirect` function (**1.23.0**, [Docs](https://kit.svelte.dev/docs/modules#sveltejs-kit-redirect), [#10570](https://github.com/sveltejs/kit/pull/10570))
+- `URL` is now accepted in the `redirect` function (**1.23.0**, [Docs](/docs/kit/@sveltejs-kit#redirect), [#10570](https://github.com/sveltejs/kit/pull/10570))
 - Mistyped route filenames will now throw a warning (**1.23.0**, [#10558](https://github.com/sveltejs/kit/pull/10558))
-- The new `onNavigate` lifecycle function enables view transitions - Check out the [blog post](https://svelte.dev/blog/view-transitions) for more info (**1.24.0**, [Docs](https://kit.svelte.dev/docs/modules#app-navigation-onnavigate), [#9605](https://github.com/sveltejs/kit/pull/9605))
+- The new `onNavigate` lifecycle function enables view transitions - Check out the [blog post](https://svelte.dev/blog/view-transitions) for more info (**1.24.0**, [Docs](/docs/kit/$app-navigation#onNavigate), [#9605](https://github.com/sveltejs/kit/pull/9605))
 
 But that's just the new features! For all the patches and performance updates from this month, check out the [SvelteKit CHANGELOG](https://github.com/sveltejs/kit/blob/master/packages/kit/CHANGELOG.md). You can also find adapter-specific CHANGELOGs in each of [the `adapter` directories](https://github.com/sveltejs/kit/tree/master/packages).
 
