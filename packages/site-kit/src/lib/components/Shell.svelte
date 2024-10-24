@@ -52,13 +52,13 @@ The main shell of the application. It provides a slot for the top navigation, th
 		position: relative;
 		margin: 0 auto;
 		padding-top: var(--sk-nav-height);
-		padding-bottom: var(--sk-banner-bottom-height);
+		padding-bottom: var(--sk-banner-height);
 		height: 100%;
 	}
 
 	@media (max-width: 799px) {
 		main {
-			padding-top: var(--sk-banner-bottom-height);
+			padding-top: var(--sk-banner-height);
 			padding-bottom: 0;
 		}
 	}

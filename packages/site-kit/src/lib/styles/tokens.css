@@ -20,7 +20,7 @@
 	--sk-thick-border-width: 0.3rem;
 	--sk-border-radius: 0.4rem;
 	--sk-page-content-width: 84rem;
-	--sk-banner-bottom-height: 0px;
+	--sk-banner-height: 0px;
 	--sk-pane-controls-height: 4.2rem;
 
 	/* typography (prefer `font: --sk-font-{x}` over `font-family` and `font-size` rules */
