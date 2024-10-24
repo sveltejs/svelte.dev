@@ -1,11 +1,11 @@
 ---
 title: "What's new in Svelte: January 2023"
-description: 'SvelteKit 1.0, learn.svelte.dev, and type definitions for Svelte elements.'
+description: 'SvelteKit 1.0, tutorial, and type definitions for Svelte elements.'
 author: Dani Sandoval
 authorURL: https://dreamindani.com
 ---
 
-It's been just two weeks since the release of [SvelteKit 1.0](https://svelte.dev/blog/announcing-sveltekit-1.0)! If you haven't yet, check out the [livestream](https://www.youtube.com/watch?v=N4BRVkQVoMc), [new website](https://kit.svelte.dev/) and [learn.svelte.dev](https://learn.svelte.dev/) to learn all the features of SvelteKit step-by-step.
+It's been just two weeks since the release of [SvelteKit 1.0](https://svelte.dev/blog/announcing-sveltekit-1.0)! If you haven't yet, check out the [livestream](https://www.youtube.com/watch?v=N4BRVkQVoMc), [new website](https://kit.svelte.dev/) and [tutorial](/tutorial) to learn all the features of SvelteKit step-by-step.
 
 Let's dive into the details...
 
