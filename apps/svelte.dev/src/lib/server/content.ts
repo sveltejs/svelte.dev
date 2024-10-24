@@ -112,4 +112,49 @@ function create_docs() {
 
 export const docs = create_docs();
 
-export const examples = index.examples.children;
+export const examples_promise: ReturnType<typeof load_examples> = new Promise(async (fulfil) =>
+	fulfil(await load_examples())
+);
+
+async function load_examples() {
+	const sections = [];
+
+	for (const section of index.examples.children) {
+		const examples = [];
+
+		for (const document of section.children) {
+			// TODO 'components' is a misnomer, this can include other files
+			const components = [];
+
+			for (const [file, source] of Object.entries(document.assets!)) {
+				const dot = file.lastIndexOf('.');
+				let name = file.slice(0, dot);
+				let type = file.slice(dot + 1);
+
+				components.push({ name, type, source: await read(source).text() });
+			}
+
+			components.sort((a, b) => {
+				if (a.name === 'App' && a.type === 'svelte') return -1;
+				if (b.name === 'App' && b.type === 'svelte') return 1;
+
+				if (a.type !== b.type) return a.type === 'svelte' ? -1 : 1;
+
+				return a.name < b.name ? -1 : 1;
+			});
+
+			examples.push({
+				title: document.metadata.title,
+				slug: document.slug.split('/').pop()!,
+				components
+			});
+		}
+
+		sections.push({
+			title: section.metadata.title,
+			examples
+		});
+	}
+
+	return sections;
+}

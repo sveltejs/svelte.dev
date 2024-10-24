@@ -1,18 +1,21 @@
 import { error } from '@sveltejs/kit';
-import type { Examples } from '../api/examples/all.json/+server.js';
+import { examples_promise } from '$lib/server/content.js';
+
+const examples = await examples_promise;
 
 export async function load({ fetch, params, url }) {
-	const examples_res = fetch('/playground/api/examples/all.json').then((r) => r.json());
+	// TODO skip the .json indirection
 	const res = await fetch(`/playground/api/${params.id}.json`);
 
 	if (!res.ok) {
 		error(res.status);
 	}
 
-	const [gist, examples] = await Promise.all([res.json(), examples_res as Promise<Examples>]);
+	const gist = await res.json();
 
 	return {
 		gist,
+		// TODO do this work in layout instead
 		examples: examples
 			.filter((section) => !section.title.includes('Embeds'))
 			.map((section) => ({

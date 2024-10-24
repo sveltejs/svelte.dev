@@ -1,16 +1,16 @@
 import { dev } from '$app/environment';
 import { client } from '$lib/db/client.js';
 import * as gist from '$lib/db/gist.js';
-import { examples } from '$lib/server/content';
+import { index, examples_promise } from '$lib/server/content';
 import { error, json } from '@sveltejs/kit';
-import type { Examples } from '../examples/all.json/+server.js';
 
 export const prerender = 'auto';
 
 const UUID_REGEX = /^[0-9a-f]{8}-?[0-9a-f]{4}-?[0-9a-f]{4}-?[0-9a-f]{4}-?[0-9a-f]{12}$/;
 
+const examples = await examples_promise;
+
 export async function GET({ fetch, params }) {
-	const examples: Examples = await fetch('/playground/api/examples/all.json').then((r) => r.json());
 	const example = examples
 		.flatMap((section) => section.examples)
 		.find((example) => example.slug.split('/').pop() === params.id);
@@ -22,21 +22,6 @@ export async function GET({ fetch, params }) {
 			owner: null,
 			relaxed: false, // TODO is this right? EDIT: It was example.relaxed before, which no example return to my knowledge. By @PuruVJ
 			components: example.components
-		});
-	}
-
-	if (dev && !client) {
-		// in dev with no local Supabase configured, proxy to production
-		// this lets us at least load saved REPLs
-		const res = await fetch(`https://svelte.dev/playground/api/${params.id}.json`);
-
-		// returning the response directly results in a bizarre
-		// content encoding error, so we create a new one
-		return new Response(await res.text(), {
-			status: res.status,
-			headers: {
-				'content-type': 'application/json'
-			}
 		});
 	}
 
@@ -66,7 +51,7 @@ export async function GET({ fetch, params }) {
 }
 
 export async function entries() {
-	return examples
+	return index.examples.children
 		.flatMap((section) => section.children)
 		.map((example) => ({ id: example.slug.split('/').pop()! }));
 }

@@ -1,4 +1,4 @@
-import { index, docs as _docs, examples } from '$lib/server/content';
+import { index, docs as _docs } from '$lib/server/content';
 import { json } from '@sveltejs/kit';
 import { transform, slugify, clean } from '@sveltejs/site-kit/markdown';
 import type { Block } from '@sveltejs/site-kit/search';
@@ -82,7 +82,7 @@ async function content() {
 		}
 	}
 
-	for (const section of examples) {
+	for (const section of index.examples.children) {
 		for (const example of section.children) {
 			blocks.push({
 				breadcrumbs: ['Examples', section.metadata.title, example.metadata.title],
