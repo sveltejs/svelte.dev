@@ -49,7 +49,7 @@ _Day Two_
 - Node 16.14 is now the minimum version to run SvelteKit ([#6388](https://github.com/sveltejs/kit/pull/6388))
 - `App.PrivateEnv` and `App.PublicEnv` have been removed in favour of generated types ([#6413](https://github.com/sveltejs/kit/pull/6413))
 - `%sveltekit.message%` has been replaced with `%sveltekit.error.message%` ([6659](https://github.com/sveltejs/kit/pull/6659))
-- `App.PageError` is now `App.Error` - check for it in your hooks ([Docs](/docs/kit/hooks#Shared-hooks-handleerror), [#6963](https://github.com/sveltejs/kit/pull/6963))
+- `App.PageError` is now `App.Error` - check for it in your hooks ([Docs](/docs/kit/hooks#Shared-hooks-handleError), [#6963](https://github.com/sveltejs/kit/pull/6963))
 - `externalFetch` is now `handleFetch` and will run for all fetch calls in `load` that run on the server ([#6565](https://github.com/sveltejs/kit/pull/6565))
 
 For a full list of changes, check out SvelteKit's [CHANGELOG](https://github.com/sveltejs/kit/blob/master/packages/kit/CHANGELOG.md).
