@@ -2,7 +2,7 @@
 	import Dropdown from './Dropdown.svelte';
 	import Icon from './Icon.svelte';
 
-	let { top }: { top: boolean } = $props();
+	let { top = false }: { top?: boolean } = $props();
 
 	let font = $state('elegant');
 
