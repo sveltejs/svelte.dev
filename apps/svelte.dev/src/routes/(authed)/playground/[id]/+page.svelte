@@ -100,7 +100,9 @@
 	async function change_hash(hash?: string) {
 		let url = `${location.pathname}${location.search}`;
 		if (hash) {
-			url += `#${await compress_and_encode_text(hash)}`;
+			const compressed = `#${await compress_and_encode_text(hash)}`;
+			if (compressed === location.hash) return;
+			url += compressed;
 		}
 
 		clearTimeout(setting_hash);
@@ -109,6 +111,8 @@
 			setting_hash = null;
 		}, 500);
 	}
+
+	let idle_timeout: any;
 
 	function onchange() {
 		const was_modified = modified;
@@ -124,6 +128,13 @@
 		) {
 			name = `${name} (edited)`;
 		}
+
+		// Only change after 5 seconds of inactivity to not pollute browser history
+		clearTimeout(idle_timeout);
+		idle_timeout = setTimeout(() => {
+			const json = JSON.stringify({ files: repl.toJSON().files });
+			change_hash(json);
+		}, 5000);
 	}
 
 	const svelteUrl =
@@ -166,7 +177,7 @@
 		<div
 			style="display: contents"
 			onfocusout={() => {
-				// Only change hash on editor blur to not pollute everyone's browser history
+				// Only change hash on editor blur to not pollute browser history
 				if (modified) {
 					const json = JSON.stringify({ files: repl.toJSON().files });
 					change_hash(json);
