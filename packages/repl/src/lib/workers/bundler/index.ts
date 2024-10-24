@@ -287,13 +287,14 @@ async function get_bundle(
 				// fetch from unpkg
 				self.postMessage({ type: 'status', uid, message: `resolving ${importee}` });
 
-				const match = /^((?:@[^/]+\/)?[^/]+)(\/.+)?$/.exec(importee);
+				const match = /^((?:@[^/]+\/)?[^/@]+)(?:@([^/]+))?(\/.+)?$/.exec(importee);
 				if (!match) {
 					return console.error(`Invalid import "${importee}"`);
 				}
 
 				const pkg_name = match[1];
-				const subpath = `.${match[2] ?? ''}`;
+				const version = pkg_name === 'svelte' ? svelte.VERSION : match[2] ?? 'latest';
+				const subpath = `.${match[3] ?? ''}`;
 
 				// if this was imported by one of our files, add it to the `imports` set
 				if (importer && local_files_lookup.has(importer)) {
@@ -302,7 +303,6 @@ async function get_bundle(
 
 				const fetch_package_info = async () => {
 					try {
-						const version = pkg_name === 'svelte' ? svelte.VERSION : 'latest';
 						const pkg_url = await follow_redirects(
 							`${packages_url}/${pkg_name}@${version}/package.json`,
 							uid
