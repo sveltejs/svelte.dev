@@ -15,7 +15,7 @@ Let's jump in...
 
 With its 2.0 release, SvelteKit is now more capable than ever. Be sure to check out the docs links in each update for more info on how to use each feature as well as the new [Performance](/docs/kit/performance) page - which explains how SvelteKit works to make your applications as performant as possible.
 
-- `resolvePath` has been replaced by `resolveRoute` in `$app/paths`. Use it to populate a route ID with params to resolve a pathname (**1.29.0**, [Docs](/docs/kit/modules#app-paths-resolveroute), [#11261](https://github.com/sveltejs/kit/pull/11261))
+- `resolvePath` has been replaced by `resolveRoute` in `$app/paths`. Use it to populate a route ID with params to resolve a pathname (**1.29.0**, [Docs](/docs/kit/$app-paths#resolveRoute), [#11261](https://github.com/sveltejs/kit/pull/11261))
 - `response.arrayBuffer()` will now be inlined during SSR (**1.30.0**, [Docs](/docs/kit/load#making-fetch-requests), [#10535](https://github.com/sveltejs/kit/pull/10535))
 - [SvelteKit 2.0.0](https://github.com/sveltejs/kit/blob/main/packages/kit/CHANGELOG.md#200) adds:
   - `untrack` to `load` to opt-out of invalidation ([Docs](/docs/kit/load#rerunning-load-functions-untracking-dependencies), [#11311](https://github.com/sveltejs/kit/pull/11311))

@@ -31,7 +31,7 @@ For all the changes to the Svelte compiler, including unreleased changes, check 
 - URLs in `<meta>` tags are now crawled to make programmatic social-images much easier (**1.17.0**, [Docs](/docs/kit/seo#manual-setup-title-and-meta), [#9900](https://github.com/sveltejs/kit/pull/9900))
 - `data` and `form` have been renamed to `formData` and `formElement` respectively in the `enhance` function. Using them through the old names will log a deprecation warning and they'll be removed in a future version. (**1.17.0**, [Docs](/docs/kit/form-actions#progressive-enhancement-use-enhance), [#9902](https://github.com/sveltejs/kit/pull/9902))
 - Link options can now be set to `true` and `false` (**1.19.0**, [Docs](/docs/kit/link-options#disabling-options), [#10039](https://github.com/sveltejs/kit/pull/10039))
-- The new `resolvePath` export can be used to build relative paths from route IDs and parameters (**1.19.0**, [Docs](/docs/kit/modules#sveltejs-kit-resolvepath), [#9949](https://github.com/sveltejs/kit/pull/9949))
+- The new `resolvePath` export can be used to build relative paths from route IDs and parameters (**1.19.0**, [#9949](https://github.com/sveltejs/kit/pull/9949))
 
 ---
 

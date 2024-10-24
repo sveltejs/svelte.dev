@@ -21,7 +21,7 @@ This month there were lots of awesome [bug fixes](https://github.com/sveltejs/ki
 
 - The new `event.isSubRequest` boolean indicates whether this is a same-origin fetch request to one of the app's own APIs during a server request (**1.21.0**, [Docs](/docs/kit/types#public-types-requestevent), [#10170](https://github.com/sveltejs/kit/pull/10170))
 - A new config option, `config.kit.env.privatePrefix` will set a private prefix on environment variables. This defaults to `''` (**1.21.0**, [Docs](/docs/kit/configuration), [#9996](https://github.com/sveltejs/kit/pull/9996))
-- `VERSION` is now exported and accessible via `@sveltejs/kit`. This can be used for feature detection or anything else that requires knowledge of the current version of SvelteKit (**1.21.0**, [Docs](/docs/kit/modules#sveltejs-kit-version), [#9969](https://github.com/sveltejs/kit/pull/9969))
+- `VERSION` is now exported and accessible via `@sveltejs/kit`. This can be used for feature detection or anything else that requires knowledge of the current version of SvelteKit (**1.21.0**, [Docs](/docs/kit/@sveltejs-kit#VERSION), [#9969](https://github.com/sveltejs/kit/pull/9969))
 
 For adapter-specific changes, check out the CHANGELOGs in each of [the `adapter` directories](https://github.com/sveltejs/kit/tree/master/packages).
 
