@@ -5,7 +5,7 @@ author: Geoff Rich, Rich Harris
 authorURL: https://geoffrich.net, https://twitter.com/Rich_Harris
 ---
 
-The Svelte team has been hard at work since the release of SvelteKit 1.0. Let’s talk about some of the major new features that have shipped since launch: [streaming non-essential data](/docs/kit/load#streaming-with-promises), [snapshots](/docs/kit/snapshots), and [route-level config](/docs/kit/page-options#config).
+The Svelte team has been hard at work since the release of SvelteKit 1.0. Let’s talk about some of the major new features that have shipped since launch: [streaming non-essential data](/docs/kit/load#Streaming-with-promises), [snapshots](/docs/kit/snapshots), and [route-level config](/docs/kit/page-options#config).
 
 ## Stream non-essential data in load functions
 
@@ -180,11 +180,11 @@ npm i @sveltejs/kit@latest
 npm i @sveltejs/adapter-auto@latest # or @sveltejs/adapter-vercel@latest
 ```
 
-For now, only the [Vercel adapter](/docs/kit/adapter-vercel#deployment-configuration) implements route-specific config, but the building blocks are there to implement this for other platforms. If you’re an adapter author, see the changes in [the PR](https://github.com/sveltejs/kit/pull/8740) to see what is required.
+For now, only the [Vercel adapter](/docs/kit/adapter-vercel#Deployment-configuration) implements route-specific config, but the building blocks are there to implement this for other platforms. If you’re an adapter author, see the changes in [the PR](https://github.com/sveltejs/kit/pull/8740) to see what is required.
 
 ## Incremental static regeneration on Vercel
 
-Route-level config also unlocked another much-requested feature – you can now use [incremental static regeneration](/docs/kit/adapter-vercel#incremental-static-regeneration) (ISR) with SvelteKit apps deployed to Vercel. ISR provides the performance and cost advantages of prerendered content with the flexibility of dynamically rendered content.
+Route-level config also unlocked another much-requested feature – you can now use [incremental static regeneration](/docs/kit/adapter-vercel#Incremental-static-regeneration) (ISR) with SvelteKit apps deployed to Vercel. ISR provides the performance and cost advantages of prerendered content with the flexibility of dynamically rendered content.
 
 To add ISR to a route, include the `isr` property in your `config` object:
 

@@ -17,7 +17,7 @@ More on that, and what else is new in Svelte, as we dive in...
 
 ### New Config Options
 
-- `outDir` fixes path issues in monorepos and other situations where the desired output directory is outside the project directory ([Docs](/docs/kit/configuration#outdir), [#4176](https://github.com/sveltejs/kit/pull/4176))
+- `outDir` fixes path issues in monorepos and other situations where the desired output directory is outside the project directory ([Docs](/docs/kit/configuration#outDir), [#4176](https://github.com/sveltejs/kit/pull/4176))
 - `endpointExtensions` prevents files other than .js and .ts files from being treated as endpoints, unless you specify `endpointExtensions` ([Docs](https://kit.svelte.dev/docs/configuration#endpointextensions), [#4197](https://github.com/sveltejs/kit/pull/4197))
 - `prerender.default` lets you prerender every page without having to write `export const prerender = true` in every page file ([Docs](/docs/kit/configuration#prerender), [#4192](https://github.com/sveltejs/kit/pull/4192))
 

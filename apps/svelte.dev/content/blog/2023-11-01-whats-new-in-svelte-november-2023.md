@@ -18,7 +18,7 @@ Let's take a closer look 👀...
 
 ## What's new in SvelteKit
 
-- Route parameter types will now be inferred from the applicable matcher's guard check (**kit@1.26.0**, [Docs](/docs/kit/advanced-routing#matching), [#10755](https://github.com/sveltejs/kit/pull/10755))
+- Route parameter types will now be inferred from the applicable matcher's guard check (**kit@1.26.0**, [Docs](/docs/kit/advanced-routing#Matching), [#10755](https://github.com/sveltejs/kit/pull/10755))
 - The new `invalidateAll` boolean option lets you turn on and off the `invalidateAll()` form function within the `enhance` callback (**kit@1.27.0**, [Docs](/docs/kit/form-actions#Progressive-enhancement-use:enhance), [#9476](https://github.com/sveltejs/kit/issues/9476))
 - The output of the project creation wizard will now reflect which package manager you're using (**create-svelte@5.1.1**, [#10811](https://github.com/sveltejs/kit/pull/10811))
 
