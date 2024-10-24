@@ -183,7 +183,7 @@
 		--sk-font-family-body: system-ui;
 		--sk-font-size-body: 1.8rem;
 
-		code {
+		p code {
 			font-size: 0.75em;
 		}
 	}
@@ -192,7 +192,7 @@
 		--sk-font-family-body: 'OpenDyslexic';
 		--sk-font-size-body: 1.6rem;
 
-		code {
+		p code {
 			font-size: 0.9em;
 		}
 	}
