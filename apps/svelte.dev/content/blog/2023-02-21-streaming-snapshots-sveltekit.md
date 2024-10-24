@@ -121,7 +121,7 @@ Because promises are natively supported in this way, you can put them anywhere i
 
 One caveat: this feature needs JavaScript. Because of this, we recommend that you only stream in non-essential data so that the core of the experience is available to all users.
 
-For more on this feature, see [the documentation](/docs/kit/load#streaming-with-promises). You can see a demo at [sveltekit-on-the-edge.vercel.app](https://sveltekit-on-the-edge.vercel.app/edge) (the location data is artificially delayed and streamed in) or [deploy your own on Vercel](https://vercel.com/templates/svelte/sveltekit-edge-functions), where streaming is supported in both Edge Functions and Serverless Functions.
+For more on this feature, see [the documentation](/docs/kit/load#Streaming-with-promises). You can see a demo at [sveltekit-on-the-edge.vercel.app](https://sveltekit-on-the-edge.vercel.app/edge) (the location data is artificially delayed and streamed in) or [deploy your own on Vercel](https://vercel.com/templates/svelte/sveltekit-edge-functions), where streaming is supported in both Edge Functions and Serverless Functions.
 
 We're grateful for the inspiration from prior implementations of this idea including Qwik, Remix, Solid, Marko, React and many others.
 
