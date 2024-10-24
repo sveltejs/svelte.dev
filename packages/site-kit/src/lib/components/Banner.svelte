@@ -62,6 +62,8 @@
 		justify-content: center;
 		align-items: center;
 
+		font-size: 1.7em;
+
 		overflow-y: auto;
 
 		width: 100%;
