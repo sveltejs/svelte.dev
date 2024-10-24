@@ -105,11 +105,6 @@
 		transform: translateX(40%);
 	}
 
-	div :global(a[href]) {
-		text-decoration: none;
-		padding: 0;
-	}
-
 	a .lg {
 		display: initial;
 	}
