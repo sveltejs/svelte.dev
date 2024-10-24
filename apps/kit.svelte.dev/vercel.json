@@ -7,6 +7,11 @@
 			"permanent": true
 		},
 		{
+			"source": "/docs/layouts",
+			"destination": "https://svelte.dev/docs/kit/routing",
+			"permanent": true
+		},
+		{
 			"source": "/docs/loading",
 			"destination": "https://svelte.dev/docs/kit/load",
 			"permanent": true

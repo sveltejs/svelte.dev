@@ -28,7 +28,7 @@ With yesterday's Svelte Summit behind us, we've got a lot of news to share! Chec
 ### Breaking Changes
 
 - Validators are now called "matchers" ([Docs](/docs/kit/routing#advanced-routing-matching), [#4358](https://github.com/sveltejs/kit/pull/4358))
-- `__layout.reset` has been replaced by named layouts - which have much configurability for shared layout elements ([Docs](/docs/kit/layouts#named-layouts), [#4388](https://github.com/sveltejs/kit/pull/4388))
+- `__layout.reset` has been replaced by named layouts - which have much configurability for shared layout elements ([Docs](/docs/kit/advanced-routing#Advanced-layouts-layout), [#4388](https://github.com/sveltejs/kit/pull/4388))
 - Prerendering is now skipped for `rel="external"` links ([#4545](https://github.com/sveltejs/kit/pull/4545))
 - `maxage` is now `cache` in `LoadOutput` ([#4690](https://github.com/sveltejs/kit/pull/4690))
 
