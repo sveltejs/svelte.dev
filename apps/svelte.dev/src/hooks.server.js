@@ -4,19 +4,15 @@ const mappings = new Map([
 	['/docs/accessibility-warnings', '/docs/svelte/compiler-warnings'],
 	['/docs/basic-markup', '/docs/svelte/basic-markup'],
 	['/docs/client-side-component-api', '/docs/svelte/legacy-component-api'],
-	// no good mapping for this one
-	['/docs/component-directives', '/docs/svelte/svelte-files'],
+	['/docs/component-directives', '/docs/svelte/svelte-files'], // no good mapping for this one
 	['/docs/custom-elements-api', '/docs/svelte/custom-elements'],
-	// no good mapping for this one
-	['/docs/element-directives', '/docs/svelte/basic-markup'],
+	['/docs/element-directives', '/docs/svelte/basic-markup'], // no good mapping for this one
 	['/docs/introduction', '/docs/svelte/overview'],
-	// no good mapping for this one
-	['/docs/logic-blocks', '/docs/svelte/basic-markup'],
+	['/docs/logic-blocks', '/docs/svelte/basic-markup'], // no good mapping for this one
 	['/docs/server-side-component-api', '/docs/svelte/legacy-component-api'],
-	// no good mapping for this one
-	['/docs/special-elements', '/docs/svelte/svelte-window'],
+	['/docs/special-elements', '/docs/svelte/svelte-window'], // no good mapping for this one
 	['/docs/special-tags', '/docs/svelte/basic-markup'],
-	['/docs/svelte', '/docs/svelte/svelte'],
+	// can't map this, as this is now a redirect to the overview page: ['/docs/svelte', '/docs/svelte/svelte'],
 	['/docs/svelte-action', '/docs/svelte/svelte-action'],
 	['/docs/svelte-animate', '/docs/svelte/svelte-animate'],
 	['/docs/svelte-compiler', '/docs/svelte/svelte-compiler'],
