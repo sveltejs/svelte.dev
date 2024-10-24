@@ -31,7 +31,7 @@ Now onto the rest of the updates...
 - %-encoded filenames are now allowed. If you had a `%` in your route, you must now encode it with `%25` ([#5056](https://github.com/sveltejs/kit/pull/5056))
 - Endpoint method names are now uppercased to match HTTP specifications ([#5513](https://github.com/sveltejs/kit/pull/5513), [Docs](/docs/kit/routing#server))
 - `writeStatic` has been removed to align with Vite's config ([#5618](https://github.com/sveltejs/kit/pull/5618))
-- `transformPage` is now `transformPageChunk` ([#5657](https://github.com/sveltejs/kit/pull/5657), [Docs](/docs/kit/hooks#handle))
+- `transformPage` is now `transformPageChunk` ([#5657](https://github.com/sveltejs/kit/pull/5657), [Docs](/docs/kit/hooks#Server-hooks-handle))
 - The `prepare` script is no longer needed in `package.json` ([#5760](https://github.com/sveltejs/kit/pull/5760))
 - `adapter-node` no longer does any compression while we wait for a [bug fix in the `compression` library](https://github.com/expressjs/compression/pull/183) ([#5560](https://github.com/sveltejs/kit/pull/5506))
 
