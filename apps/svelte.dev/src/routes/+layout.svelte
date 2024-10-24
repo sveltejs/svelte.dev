@@ -45,7 +45,7 @@
 		{@render layout_children()}
 	{/snippet}
 
-	{#snippet banner_bottom()}
+	{#snippet banner()}
 		{#if data.banner}
 			<Banner banner={data.banner} />
 		{/if}
