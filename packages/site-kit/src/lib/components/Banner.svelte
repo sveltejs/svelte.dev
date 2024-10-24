@@ -21,7 +21,7 @@
 </script>
 
 {#if visible}
-	<div class="banner-bottom" transition:fade={{ duration: 400, easing: quintOut }}>
+	<div class="banner" transition:fade={{ duration: 400, easing: quintOut }}>
 		<div class="main-area">
 			<a href={banner.href}>
 				{#if banner.content.lg}
@@ -50,7 +50,7 @@
 {/if}
 
 <style>
-	.banner-bottom {
+	.banner {
 		position: fixed;
 		bottom: 0;
 		left: 0;
@@ -69,14 +69,14 @@
 		height: max-content;
 	}
 
-	.banner-bottom {
+	.banner {
 		text-align: center;
 		background: var(--sk-theme-1-variant);
 		color: white;
 		padding: 8px;
 	}
 
-	.banner-bottom :global(a) {
+	.banner :global(a) {
 		color: hsl(0, 0%, 99%);
 	}
 
@@ -119,7 +119,7 @@
 	}
 
 	@media screen and (max-width: 799px) {
-		.banner-bottom {
+		.banner {
 			bottom: initial;
 			top: 0;
 		}
