@@ -81,9 +81,9 @@ If you're on mobile, you can already see it at the bottom. If you're on desktop,
 
 ## Unification of Svelte websites
 
-Now [svelte.dev](https://svelte.dev), [kit.svelte.dev](https://kit.svelte.dev), and [the tutorial](/tutorial) all use the same design system and are more consistent with each other. This makes it easier to navigate between the websites and also makes it easier to maintain them. We have a package shared across the sites called `@sveltejs/site-kit`, which went through rigorous changes over last 4 months as we have been moving all common code into this package.
+Now [svelte.dev](https://svelte.dev), [kit.svelte.dev](https://kit.svelte.dev), and [learn.svelte.dev](https://learn.svelte.dev) all use the same design system and are more consistent with each other. This makes it easier to navigate between the websites and also makes it easier to maintain them. We have a package shared across the sites called `@sveltejs/site-kit`, which went through rigorous changes over last 4 months as we have been moving all common code into this package.
 
-For example, we implemented the dark mode toggle in `@sveltejs/site-kit`. We then simply updated the package for [the tutorial](/tutorial) and [kit.svelte.dev](https://kit.svelte.dev) and those sites got the dark mode toggle automatically (this is also the reason why those sites got the dark mode toggle before the [svelte.dev](https://svelte.dev) relaunch).
+For example, we implemented the dark mode toggle in `@sveltejs/site-kit`. We then simply updated the package for [learn.svelte.dev](https://learn.svelte.dev) and [kit.svelte.dev](https://kit.svelte.dev) and those sites got the dark mode toggle automatically (this is also the reason why those sites got the dark mode toggle before the [svelte.dev](https://svelte.dev) relaunch).
 
 ## What's next
 
