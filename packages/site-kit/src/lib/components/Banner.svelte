@@ -62,7 +62,7 @@
 		justify-content: center;
 		align-items: center;
 
-		font-size: 1.7em;
+		font: var(--sk-font-ui-medium);
 
 		overflow-y: auto;
 
