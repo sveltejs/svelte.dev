@@ -27,7 +27,7 @@ Let's dive in!
 - Requests to `/favicon.ico` will no longer be suppressed and will instead be handled as a valid route ([PR](https://github.com/sveltejs/kit/pull/5046))
 - AMP support has been moved to a separate `@sveltejs/amp` package ([Docs](/docs/kit/seo#Manual-setup-AMP), [PR](https://github.com/sveltejs/kit/pull/4710))
 - Generated types are now written to `_types` directories - update your imports accordingly ([PR](https://github.com/sveltejs/kit/pull/4705))
-- `%svelte.head%` and `%svelte.body%` are now `%sveltekit.head%` and `%sveltekit.body%` in `app.html` ([Docs](/docs/kit/migrating#Project-files-src-template-html), [PR](https://github.com/sveltejs/kit/pull/5016/))
+- `%svelte.head%` and `%svelte.body%` are now `%sveltekit.head%` and `%sveltekit.body%` in `app.html` ([PR](https://github.com/sveltejs/kit/pull/5016/))
 - `LoadInput` is now `LoadEvent`
 - Dropped support for Wrangler 1 in favor of Wrangler 2 ([PR](https://github.com/sveltejs/kit/pull/4887))
 
