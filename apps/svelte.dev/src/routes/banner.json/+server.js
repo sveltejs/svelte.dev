@@ -17,7 +17,7 @@ export const GET = async () => {
 					lg: 'Svelte Hack 2024 (Runes edition) is here!',
 					sm: 'Svelte Hack 2024'
 				},
-				href: 'https://advent.sveltesociety.dev/'
+				href: 'https://hack.sveltesociety.dev/2024'
 			}
 		])
 	);
