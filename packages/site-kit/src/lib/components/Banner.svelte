@@ -125,10 +125,6 @@
 			top: 0;
 		}
 
-		.main-area :global(svg) {
-			display: none;
-		}
-
 		a .lg {
 			display: none;
 		}
