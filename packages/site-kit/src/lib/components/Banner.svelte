@@ -22,24 +22,23 @@
 
 {#if visible}
 	<div class="banner" transition:fade={{ duration: 400, easing: quintOut }}>
-		<div class="main-area">
-			<a href={banner.href}>
-				{#if banner.content.lg}
-					<span class="lg">{banner.content.lg}</span>
-				{/if}
+		<a href={banner.href}>
+			{#if banner.content.lg}
+				<span class="large">{banner.content.lg}</span>
+			{/if}
 
-				{#if banner.content.sm}
-					<span class="sm">{banner.content.sm}</span>
-				{/if}
-			</a>
+			{#if banner.content.sm}
+				<span class="small">{banner.content.sm}</span>
+			{/if}
 
 			{#if banner.arrow}
 				<Icon name="arrow-right" size="1.2em" />
 			{/if}
-		</div>
+		</a>
 
 		<button
 			class="close-button"
+			aria-label="Dismiss"
 			onclick={() => {
 				$hidden[banner.id] = true;
 			}}
@@ -52,79 +51,58 @@
 <style>
 	.banner {
 		position: fixed;
-		bottom: 0;
+		top: 0;
 		left: 0;
 		right: 0;
 		z-index: 80;
-
 		display: flex;
 		justify-content: center;
 		align-items: center;
-
 		font: var(--sk-font-ui-medium);
-
 		overflow-y: auto;
-
 		width: 100%;
-		height: max-content;
-	}
-
-	.banner {
-		text-align: center;
+		height: var(--sk-banner-height);
 		background: var(--sk-theme-1-variant);
 		color: white;
-		padding: 8px;
-	}
-
-	.banner a {
-		color: hsl(0, 0%, 99%);
+		padding: 0 3rem;
 	}
 
 	button {
 		position: absolute;
 		top: 0;
 		right: 1rem;
-
-		display: flex;
-		align-items: center;
-
 		height: 100%;
 	}
 
-	.main-area {
-		display: flex;
-		align-items: center;
-		gap: 0.6rem;
+	a {
+		color: inherit;
+		width: 100%;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: pre;
+		text-align: center;
 	}
 
-	.main-area :global(svg) {
-		transition: transform 0.2s var(--quint-out);
-	}
-
-	.main-area:hover :global(svg) {
-		transform: translateX(40%);
-	}
-
-	a .lg {
-		display: initial;
-	}
-
-	a .sm {
+	.large {
 		display: none;
 	}
 
-	@media screen and (max-width: 799px) {
+	.small {
+		display: initial;
+	}
+
+	@media (min-width: 800px) {
 		.banner {
-			bottom: initial;
-			top: 0;
+			top: initial;
+			bottom: 0;
 		}
 
-		a .lg {
-			display: none;
-		}
-
-		a .sm {
+		.large {
 			display: initial;
+		}
+
+		.small {
+			display: none;
 		}
 	}
 </style>
