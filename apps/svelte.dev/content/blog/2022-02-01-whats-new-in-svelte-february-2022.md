@@ -28,13 +28,13 @@ Let's take a look...
 ### New configs
 
 - Content Security Policy (CSP) is now supported for increased security when using inline javascript or stylesheets ([Docs](/docs/kit/configuration#csp), [#3499](https://github.com/sveltejs/kit/pull/3499))
-- `kit.routes` config allows you to customise public/private modules during build ([Docs](/docs/kit/configuration#routes), [#3576](https://github.com/sveltejs/kit/pull/3576))
-- `prerender.createIndexFiles` config lets you prerender index.html files as their subfolder's name ([Docs](/docs/kit/configuration#prerender), [#2632](https://github.com/sveltejs/kit/pull/2632))
+- `kit.routes` config allows you to customise public/private modules during build ([#3576](https://github.com/sveltejs/kit/pull/3576))
+- `prerender.createIndexFiles` config lets you prerender index.html files as their subfolder's name ([#2632](https://github.com/sveltejs/kit/pull/2632))
 - HTTP methods can now be overridden using `kit.methodOverride` ([Docs](https://kit.svelte.dev/docs/routing#endpoints-http-method-overrides), [#2989](https://github.com/sveltejs/kit/pull/2989))
 
 ### Config changes
 
-- `config.kit.hydrate` and `config.kit.router` are now nested under `config.kit.browser` ([Docs](/docs/kit/configuration#browser), [3578](https://github.com/sveltejs/kit/pull/3578))
+- `config.kit.hydrate` and `config.kit.router` are now nested under `config.kit.browser` ([3578](https://github.com/sveltejs/kit/pull/3578))
 
 ### Breaking change
 
