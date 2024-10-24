@@ -49,7 +49,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 	}
 
 	$effect(() => {
-		document.body.style.overflow = open ? 'hidden' : 'scroll';
+		document.body.style.overflow = open ? 'hidden' : '';
 	});
 </script>
 
