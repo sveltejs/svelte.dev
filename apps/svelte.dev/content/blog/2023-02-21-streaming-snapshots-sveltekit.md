@@ -200,7 +200,7 @@ export const config = {
 
 - The [OPTIONS method](/docs/kit/routing#server) is now supported in `+server.js` files
 - Better error messages when you [export something that belongs in a different file](https://github.com/sveltejs/kit/pull/9055) or [forget to put a slot](https://github.com/sveltejs/kit/pull/8475) in your +layout.svelte.
-- You can now [access public environment variables in app.html](/docs/kit/project-structure#project-files-src)
+- You can now [access public environment variables in app.html](/docs/kit/project-structure#Project-files-src)
 - A new [text helper](/docs/kit/@sveltejs-kit#text) for creating responses
 - And a ton of bug fixes – see [the changelog](https://github.com/sveltejs/kit/blob/master/packages/kit/CHANGELOG.md) for the full release notes.
 

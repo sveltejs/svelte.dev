@@ -14,7 +14,7 @@ More on that and other new features and fixes below!
 ## What's new in SvelteKit
 
 - The docs are now searchable and multipage with type definitions and hoverable code examples - Check them out at [svelte.dev/docs/kit](/docs/kit/)
-- Page endpoints significantly decrease the boilerplate needed when loading a page ([Issue](https://github.com/sveltejs/kit/issues/3532), [PR](https://github.com/sveltejs/kit/pull/3679), [Docs](/docs/kit/routing#endpoints-page-endpoints))
+- Page endpoints significantly decrease the boilerplate needed when loading a page ([Issue](https://github.com/sveltejs/kit/issues/3532), [PR](https://github.com/sveltejs/kit/pull/3679), [Docs](/docs/kit/routing#server))
 - Application versioning and update detection support lets you determine what to do when a route fails to load after an app update ([Issue](https://github.com/sveltejs/kit/issues/87), [PR](https://github.com/sveltejs/kit/pull/3412), [Docs](/docs/kit/configuration#version))
 - A new option in `npm init svelte@next` will now set up Playwright automatically for testing ([PR](https://github.com/sveltejs/kit/pull/4056))
 

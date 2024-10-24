@@ -20,7 +20,7 @@ Now let's jump into this month's changes...
 - The new snapshot mechanism preserves ephemeral DOM state even after navigation and page reloads (**1.5.0**,[Docs](/docs/kit/snapshots), [#8710](https://github.com/sveltejs/kit/pull/8710))
 - `OPTIONS` are now available within the server method (**1.6.0**, [Docs](/docs/kit/routing#server), [#8731](https://github.com/sveltejs/kit/pull/8731))
 - Richer error messages have been added for invalid exports (**1.7.0**, [#9055](https://github.com/sveltejs/kit/pull/9055))
-- Streaming promises are now available for server load functions (**1.8.0**, [Docs](/docs/kit/load#streaming-with-promises), [#8901](https://github.com/sveltejs/kit/pull/8901))
+- Streaming promises are now available for server load functions (**1.8.0**, [Docs](/docs/kit/load#Streaming-with-promises), [#8901](https://github.com/sveltejs/kit/pull/8901))
 - A new configuration option, `preloadStrategy`, helps tune preloading to avoid import 'waterfalls' on certain browsers (**1.8.4**, [Docs](/docs/kit/configuration#output), [#9179](https://github.com/sveltejs/kit/pull/9179))
 - The new `paths.relative` option can control interpretation of `paths.assets` and `paths.base` (**1.9.0**, [Docs](/docs/kit/configuration#paths), [#9220](https://github.com/sveltejs/kit/pull/9220))
 
