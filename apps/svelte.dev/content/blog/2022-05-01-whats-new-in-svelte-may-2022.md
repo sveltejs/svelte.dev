@@ -23,7 +23,7 @@ With yesterday's Svelte Summit behind us, we've got a lot of news to share! Chec
 
 - Files and directories can now be named `__tests__` and `__test__` in the routes directory ([#4438](https://github.com/sveltejs/kit/pull/4438))
 - Netlify Edge Functions ([#4657](https://github.com/sveltejs/kit/pull/4657)) and the Vercel build output API ([#4663](https://github.com/sveltejs/kit/pull/4663)) are now supported
-- Custom `load` dependencies, array of strings representing URLs the page depends on, are now available when loading routes ([Docs](/docs/kit/loading#output-dependencies), [#4536](https://github.com/sveltejs/kit/pull/4536))
+- Custom `load` dependencies, array of strings representing URLs the page depends on, are now available when loading routes ([Docs](/docs/kit/load#Rerunning-load-functions), [#4536](https://github.com/sveltejs/kit/pull/4536))
 
 ### Breaking Changes
 

@@ -22,7 +22,7 @@ Let's take a look...
 - `beforeNavigate`/`afterNavigate` lifecycle functions lets you add functionality before or after a page navigation ([Docs](/docs/kit/$app-navigation), [#3293](https://github.com/sveltejs/kit/pull/3293))
 - Platform context can now be passed from adapters ([Docs](/docs/kit/adapters#supported-environments-platform-specific-context), [#3429](https://github.com/sveltejs/kit/pull/3429))
 - Hooks now have an `ssr` parameter in `resolve` to make it easier to skip SSR, when needed ([Docs](/docs/kit/hooks#handle), [#2804](https://github.com/sveltejs/kit/pull/2804))
-- `$page.stuff` provides a mechanism for pages to pass data 'upward' to layouts ([Docs](/docs/kit/loading#input-stuff), [#3252](https://github.com/sveltejs/kit/pull/3252))
+- `$page.stuff` provides a mechanism for pages to pass data 'upward' to layouts ([Docs](https://kit.svelte.dev/docs/loading#input-stuff), [#3252](https://github.com/sveltejs/kit/pull/3252))
 - Fallthrough routes let you specify where to route when an route can't be loaded ([Docs](/docs/kit/routing#advanced-routing-fallthrough-routes), [#3217](https://github.com/sveltejs/kit/pull/3217))
 
 ### New configs

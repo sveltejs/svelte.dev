@@ -19,7 +19,7 @@ Last week, Svelte Summit blew us away with a mountain of content! [Check out the
 - Disable Server-side Rendering (SSR) app-wide or on a page-by-page basis ([PR](https://github.com/sveltejs/kit/pull/713))
 - Error messages thrown during pre-rendering are now much more informative and readable ([PR](https://github.com/sveltejs/kit/pull/1062), [Docs](/docs/kit/layouts#error-pages))
 - Layouts can now be reset to prevent pages from inheriting the root layout. This is useful if you have a specific layout for a page or i18n variation ([PR](https://github.com/sveltejs/kit/pull/1061), [Docs](/docs/kit/layouts#resets))
-- `fetch` in SvelteKit code will now use the environment-provided implementation, whenever possible. If `fetch` is unavailable, it will be polyfilled by adapters ([PR](https://github.com/sveltejs/kit/pull/1066), [Docs](/docs/kit/loading#input-fetch))
+- `fetch` in SvelteKit code will now use the environment-provided implementation, whenever possible. If `fetch` is unavailable, it will be polyfilled by adapters ([PR](https://github.com/sveltejs/kit/pull/1066), [Docs](/docs/kit/load#Making-fetch-requests))
 
 ## New in Svelte & Language Tools
 
