@@ -3,7 +3,6 @@
 	border-style: solid;
 	border-color: var(--sk-raised-color);
 	border-width: var(--sk-raised-width);
-	background-color: inherit;
 
 	&.primary {
 		--sk-raised-color: hsla(12, 93%, 60%) hsla(12, 93%, 35%) hsla(12, 93%, 35%) hsla(12, 93%, 60%);

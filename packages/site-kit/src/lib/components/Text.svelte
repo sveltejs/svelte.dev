@@ -127,7 +127,7 @@
 				top: 0;
 				right: 0;
 				height: var(--height);
-				padding: 0.3rem 0.5rem 0.3rem 1rem;
+				padding: 0.3rem 0.5rem;
 				gap: 0.5rem;
 				z-index: 2;
 				justify-content: end;
@@ -136,6 +136,11 @@
 				&:has(.filename) {
 					position: relative;
 					background: var(--sk-back-3);
+					padding-left: 1rem;
+				}
+
+				&:not(:has(.filename)) {
+					background: inherit;
 				}
 
 				.filename {
@@ -206,7 +211,6 @@
 					height: calc(var(--height) - 1rem);
 					aspect-ratio: 1;
 					border-radius: var(--sk-border-radius);
-					background-color: var(--sk-back-2);
 
 					&[disabled] {
 						opacity: 1;
