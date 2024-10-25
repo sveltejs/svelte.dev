@@ -178,7 +178,8 @@
 
 	&.font-boring {
 		--sk-font-family-body: 'Atkinson Hyperlegible', sans-serif;
-		--sk-font-size-body: 1.8rem;
+		--sk-font-size-body: 2rem;
+		--sk-font-size-body-small: 1.8rem;
 
 		p code {
 			font-size: 0.75em;
