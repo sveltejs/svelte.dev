@@ -1,7 +1,5 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import { goto } from '$app/navigation';
-	import { page } from '$app/stores';
 	import { Text } from '@sveltejs/site-kit/components';
 
 	interface Props {
@@ -10,8 +8,8 @@
 
 	const { docs }: Props = $props();
 
-	onMount(() => {
-		const hash = $page.url.hash.slice(1);
+	$effect(() => {
+		const hash = location.hash.slice(1);
 		if (hash === '') return;
 
 		const new_docs = docs.get(hash);
@@ -46,14 +44,9 @@
 
 <style>
 	.page {
-		padding: var(--sk-page-padding-top) var(--sk-page-padding-side);
+		padding: var(--sk-page-padding-top) var(--sk-page-padding-side) var(--sk-page-padding-bottom);
 		max-width: var(--sk-page-content-width);
 		box-sizing: content-box;
 		margin: auto;
-		text-wrap: balance;
-	}
-
-	ul {
-		list-style-type: none;
 	}
 </style>
