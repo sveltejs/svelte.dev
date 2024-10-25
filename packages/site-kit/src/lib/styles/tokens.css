@@ -122,8 +122,8 @@
 
 	@media (resolution: 2x) {
 		--sk-font-family-body: 'EB Garamond', Georgia, serif;
-		--sk-font-size-body: 2.1rem;
-		--sk-font-size-body-small: 1.8rem;
+		--sk-font-size-body: 2.3rem;
+		--sk-font-size-body-small: 2rem;
 		--sk-line-height-body: 1.5;
 		--sk-text-1: hsl(0, 0%, 5%);
 		--sk-text-2: hsl(0, 0%, 12%);
