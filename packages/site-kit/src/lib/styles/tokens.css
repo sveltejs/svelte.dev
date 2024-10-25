@@ -185,15 +185,6 @@
 			font-size: 0.75em;
 		}
 	}
-
-	&.font-accessible {
-		--sk-font-family-body: 'OpenDyslexic', sans-serif;
-		--sk-font-size-body: 1.6rem;
-
-		p code {
-			font-size: 0.9em;
-		}
-	}
 }
 
 @media screen and (min-width: 480px) {
