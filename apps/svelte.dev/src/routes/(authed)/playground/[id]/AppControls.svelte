@@ -199,7 +199,7 @@
 
 	<input
 		bind:value={name}
-		onchange={() => (modified = true)}
+		oninput={() => (modified = true)}
 		onfocus={(e) => e.currentTarget.select()}
 		onkeydown={(e) => e.key === 'Enter' && e.currentTarget.blur()}
 	/>
