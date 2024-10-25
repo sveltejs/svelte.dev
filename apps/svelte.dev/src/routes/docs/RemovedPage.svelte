@@ -10,18 +10,13 @@
 
 	const { docs }: Props = $props();
 
-	function get_url_to_redirect_to() {
+	onMount(() => {
 		const hash = $page.url.hash.slice(1);
 		if (hash === '') return;
 
 		const new_docs = docs.get(hash);
-		return new_docs && new_docs[1];
-	}
-
-	onMount(() => {
-		const redirect = get_url_to_redirect_to();
-		if (redirect) {
-			goto(redirect, { replaceState: true });
+		if (new_docs) {
+			goto(new_docs[1], { replaceState: true });
 		}
 	});
 </script>
@@ -39,10 +34,10 @@
 		<p>You may be looking for one of the following:</p>
 
 		<ul>
-			{#each docs as doc}
+			{#each docs.values() as [title, href]}
 				<li>
-					<span style="font-weight:bold">{doc[1][0]}</span> is now
-					<a href={doc[1][1]}>here</a>
+					<span style="font-weight:bold">{title}</span> is now
+					<a {href}>here</a>
 				</li>
 			{/each}
 		</ul>
