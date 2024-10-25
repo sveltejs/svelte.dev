@@ -76,10 +76,16 @@
 		}
 
 		try {
-			let files = JSON.parse(saved ?? (await decode_and_decompress_text(hash))).files;
+			const recovered = JSON.parse(saved ?? (await decode_and_decompress_text(hash)));
+			let files = recovered.files;
 
 			if (files[0]?.source) {
 				files = files.map(munge);
+			}
+
+			// older hashes may be missing a name
+			if (recovered.name) {
+				name = recovered.name;
 			}
 
 			repl.set({ files });
@@ -108,7 +114,7 @@
 	async function update_hash() {
 		// Only change hash when necessary to avoid polluting everyone's browser history
 		if (modified) {
-			const json = JSON.stringify({ files: repl.toJSON().files });
+			const json = JSON.stringify({ name, files: repl.toJSON().files });
 			await set_hash(json);
 		}
 	}
@@ -168,7 +174,7 @@
 		if (modified) {
 			// we can't save to the hash because it's an async operation, so we use
 			// a short-lived sessionStorage value instead
-			const json = JSON.stringify({ files: repl.toJSON().files });
+			const json = JSON.stringify({ name, files: repl.toJSON().files });
 			sessionStorage.setItem(STORAGE_KEY, json);
 		}
 	}}
