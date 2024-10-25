@@ -36,3 +36,15 @@ export interface Section {
 	slug: string;
 	title: string;
 }
+
+export interface BannerData {
+	id: string;
+	start: Date;
+	end: Date;
+	arrow: boolean;
+	href: string;
+	content: {
+		lg?: string;
+		sm?: string;
+	};
+}

@@ -1,4 +1,4 @@
-export { default as Banners, defineBanner, fetchBanner } from './Banners.svelte';
+export { default as Banner } from './Banner.svelte';
 export { default as Checkbox } from './Checkbox.svelte';
 export { default as Dropdown } from './Dropdown.svelte';
 export { default as HoverMenu } from './HoverMenu.svelte';

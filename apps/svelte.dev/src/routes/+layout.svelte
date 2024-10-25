@@ -2,9 +2,9 @@
 	import '@sveltejs/site-kit/styles/index.css';
 	import { browser } from '$app/environment';
 	import { page } from '$app/stores';
-	import { Shell, Banners } from '@sveltejs/site-kit/components';
+	import { Shell, Banner } from '@sveltejs/site-kit/components';
 	import { Nav } from '@sveltejs/site-kit/nav';
-	import { Search, SearchBox } from '@sveltejs/site-kit/search';
+	import { SearchBox } from '@sveltejs/site-kit/search';
 	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
 	import { beforeNavigate } from '$app/navigation';
 
@@ -45,8 +45,10 @@
 		{@render layout_children()}
 	{/snippet}
 
-	{#snippet banner_bottom()}
-		<Banners data={data.banner} />
+	{#snippet banner()}
+		{#if data.banner}
+			<Banner banner={data.banner} />
+		{/if}
 	{/snippet}
 </Shell>
 

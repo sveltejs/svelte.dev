@@ -20,7 +20,7 @@
 	--sk-thick-border-width: 0.3rem;
 	--sk-border-radius: 0.4rem;
 	--sk-page-content-width: 84rem;
-	--sk-banner-bottom-height: 0px;
+	--sk-banner-height: 0px;
 	--sk-pane-controls-height: 4.2rem;
 
 	/* typography (prefer `font: --sk-font-{x}` over `font-family` and `font-size` rules */
@@ -73,7 +73,7 @@
 	--sk-shadow: drop-shadow(0px 0px 14px rgba(0, 0, 0, 0.1));
 
 	/* same in light mode, different in dark mode */
-	--sk-theme-1-variant: hsl(15, 100%, 50%);
+	--sk-theme-1-variant: var(--sk-theme-1);
 
 	--sk-code-base: var(--sk-text-2);
 	--sk-code-comment: var(--sk-text-4);
@@ -152,7 +152,7 @@
 		--sk-scrollbar: rgba(255, 255, 255, 0.3);
 		--sk-shadow: drop-shadow(1px 2px 16px rgba(0, 0, 0, 0.5));
 
-		--sk-theme-1-variant: hsl(15, 100%, 40%);
+		--sk-theme-1-variant: hsl(15, 100%, 35%);
 
 		--sk-text-warning-hsl: 32, 67%, 56%;
 
