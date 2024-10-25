@@ -5,8 +5,6 @@
 	import { onMount } from 'svelte';
 	import OnThisPage from './OnThisPage.svelte';
 	import Breadcrumbs from './Breadcrumbs.svelte';
-	import { goto } from '$app/navigation';
-	import { page } from '$app/stores';
 	import PageControls from '$lib/components/PageControls.svelte';
 
 	let { data } = $props();
@@ -21,36 +19,26 @@
 		return `https://github.com/sveltejs/${name}/edit/main/documentation/${link}`;
 	});
 
-	// make hash case-insensitive
-	// hash was lowercase in v4 docs and varying case in v5 docs
-	function get_url_to_redirect_to() {
-		const hash = $page.url.hash.slice(1);
-		if (hash === '') return;
+	onMount(() => {
+		// hash was lowercase in v4 docs and varying case in v5 docs
+		const hash = location.hash.slice(1);
 
-		// if there's an exact match, use that. no need to redirect
+		// if there's no hash, or an exact match, no need to redirect
 		// also semi-handles the case where one appears twice with difference casing
 		// e.g. https://svelte.dev/docs/kit/@sveltejs-kit#redirect vs https://svelte.dev/docs/kit/@sveltejs-kit#Redirect
 		// but browsers make it impossible to really do: https://github.com/sveltejs/svelte.dev/issues/590
-		if (document.querySelector(`[id="${hash}"]`)) {
+		if (hash === '' || content.querySelector(`[id="${hash}"]`)) {
 			return;
 		}
 
-		const headings = document.querySelectorAll('h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]');
-		const id = hash.toLowerCase();
-		for (const heading of headings) {
+		const id = hash.toLowerCase().replaceAll(':', '-');
+
+		for (const heading of content.querySelectorAll('[id]')) {
 			// e.g. we want to redirect progressive-enhancement-use-enhance to Progressive-enhancement-use:enhance
 			if (heading.id.toLowerCase().replaceAll(':', '-') === id) {
-				const url = new URL($page.url);
-				url.hash = heading.id;
-				return url;
+				location.hash = heading.id;
+				break;
 			}
-		}
-	}
-
-	onMount(() => {
-		const redirect = get_url_to_redirect_to();
-		if (redirect) {
-			goto(redirect, { replaceState: true });
 		}
 	});
 </script>
