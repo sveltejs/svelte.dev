@@ -12,7 +12,7 @@ One of the most common question we hear is "how do I set up Tailwind on my new p
 <div class="max">
 <figure style="max-width: 960px; margin: 0 auto">
 <div style="aspect-ratio: 1.777777778; position: relative; margin: 0 auto;">
-	<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0; margin: 0;" src="https://www.youtube.com/embed/fAPFsRP-mbc?si=oD7SoqDd6FGr0uD3&amp;start=11743" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0; margin: 0;" src="https://www.youtube.com/embed/cJjNIsZ0yfw?si=sAu-8-F_aORj8y-K" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 <figcaption>Introducing <code>sv</code> at <a href="https://www.sveltesummit.com/">Svelte Summit Fall 2024</a></figcaption>
