@@ -55,11 +55,11 @@ const sections: Record<string, string> = {
 const banner: BannerData = {
 	id: 'sveltehack2024',
 	start: new Date('22 Oct, 2024 00:00:00 UTC'),
-	end: new Date('10 January, 2025 23:59:59 UTC'),
+	end: new Date('15 December, 2024 23:59:59 UTC'),
 	arrow: true,
 	content: {
-		lg: 'Celebrating the release of Svelte 5 with Svelte Hack 2024!',
-		sm: 'Svelte Hack 2024'
+		lg: 'Cast runes, win prizes: SvelteHack 2024',
+		sm: 'SvelteHack 2024'
 	},
 	href: 'https://hack.sveltesociety.dev/2024'
 };
