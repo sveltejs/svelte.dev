@@ -37,7 +37,6 @@
 		"@fontsource/eb-garamond": "^5.1.0",
 		"@fontsource/fira-mono": "^5.1.0",
 		"@fontsource/fira-sans": "^5.1.0",
-		"@fontsource/opendyslexic": "^5.1.0",
 		"@lezer/common": "^1.0.4",
 		"@replit/codemirror-lang-svelte": "^6.0.0",
 		"@shikijs/twoslash": "^1.22.0",

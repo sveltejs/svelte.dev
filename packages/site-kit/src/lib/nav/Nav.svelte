@@ -138,8 +138,6 @@ Top navigation bar for the application. It provides a slot for the left side, th
 	</div>
 
 	<div class="mobile mobile-menu">
-		<FontDropdown top />
-
 		<button
 			aria-label="Search"
 			class="raised icon search"
@@ -147,8 +145,10 @@ Top navigation bar for the application. It provides a slot for the left side, th
 				$searching = true;
 			}}
 		>
-			<Icon name="search" size={16} />
+			<Icon name="search" size={18} />
 		</button>
+
+		<FontDropdown top />
 
 		<ThemeToggle />
 
@@ -227,6 +227,10 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		}
 	}
 
+	button {
+		color: var(--sk-text-3);
+	}
+
 	.links {
 		display: flex;
 		width: 100%;
@@ -267,11 +271,12 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		position: relative;
 		display: flex;
 		width: 100%;
-		gap: 1rem;
+		gap: 0.5rem;
 
 		.external-links {
 			display: flex;
 			height: 100%;
+			margin: 0 0.5rem;
 		}
 	}
 

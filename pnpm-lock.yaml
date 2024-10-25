@@ -443,9 +443,6 @@ importers:
       '@fontsource/fira-sans':
         specifier: ^5.1.0
         version: 5.1.0
-      '@fontsource/opendyslexic':
-        specifier: ^5.1.0
-        version: 5.1.0
       '@lezer/common':
         specifier: ^1.0.4
         version: 1.2.2
@@ -919,9 +916,6 @@ packages:
 
   '@fontsource/fira-sans@5.1.0':
     resolution: {integrity: sha512-qfAjF5WcrL6qQh9eIWLK7lOh9wbCgCnVWh2Nu2gozrTgsUgYBLR8sbCGYwlK1K0yZoQsR2i9VSiQ16wwPCBkSw==}
-
-  '@fontsource/opendyslexic@5.1.0':
-    resolution: {integrity: sha512-iSTONezI2CrG5/nzUGopn0gIpBLa1d3ZMh5L1TGaBOLJxaunYpTVUGpQxDmQi2KMQE6akuGb+xwnFmYh/o1k+Q==}
 
   '@img/sharp-darwin-arm64@0.33.4':
     resolution: {integrity: sha512-p0suNqXufJs9t3RqLBO6vvrgr5OhgbWp76s5gTRvdmxmuv9E1rcaqGUsl3l4mKVmXPkTkTErXediAui4x+8PSA==}
@@ -3662,8 +3656,6 @@ snapshots:
   '@fontsource/fira-mono@5.1.0': {}
 
   '@fontsource/fira-sans@5.1.0': {}
-
-  '@fontsource/opendyslexic@5.1.0': {}
 
   '@img/sharp-darwin-arm64@0.33.4':
     optionalDependencies:

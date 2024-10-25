@@ -1,13 +1,11 @@
 @import '@fontsource/eb-garamond/400.css';
 @import '@fontsource/eb-garamond/500.css';
 @import '@fontsource/eb-garamond/400-italic.css';
+@import '@fontsource/atkinson-hyperlegible/400.css';
 @import '@fontsource/dm-serif-display/400.css';
 @import '@fontsource/dm-serif-display/400-italic.css';
 @import '@fontsource/fira-mono/400.css';
 @import '@fontsource/fira-sans/400.css';
-
-@import '@fontsource/atkinson-hyperlegible/400.css';
-@import '@fontsource/opendyslexic/400.css';
 
 @import './tokens.css';
 @import './base.css';
