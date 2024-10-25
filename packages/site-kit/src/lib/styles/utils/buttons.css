@@ -4,6 +4,16 @@
 	border-color: var(--sk-raised-color);
 	border-width: var(--sk-raised-width);
 
+	&.primary {
+		--sk-raised-color: hsla(12, 93%, 60%) hsla(12, 93%, 35%) hsla(12, 93%, 35%) hsla(12, 93%, 60%);
+		--sk-raised-hover-color: hsla(12, 93%, 70%) hsla(12, 93%, 30%) hsla(12, 93%, 30%)
+			hsla(12, 93%, 70%);
+		--sk-raised-active-color: hsla(12, 93%, 30%) hsla(12, 93%, 70%) hsla(12, 93%, 70%)
+			hsla(12, 93%, 30%);
+		background: var(--sk-theme-1);
+		color: white;
+	}
+
 	&:hover {
 		border-color: var(--sk-raised-hover-color);
 	}
