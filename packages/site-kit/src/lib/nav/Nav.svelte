@@ -277,14 +277,11 @@ Top navigation bar for the application. It provides a slot for the left side, th
 
 	.home-link {
 		--padding-right: 1rem;
-		width: 11.2rem;
+		width: 3.4rem;
 		height: 100%;
-		background: url(../branding/svelte.svg) no-repeat 0 50% / calc(100% - var(--padding-right)) auto;
+		background: url(../branding/svelte-logo.svg) no-repeat 0 50% / calc(100% - var(--padding-right))
+			auto;
 		padding: 0 var(--padding-right) 0 calc(var(--sk-page-padding-side) + 0rem);
-
-		:root.dark & {
-			background-image: url(../branding/svelte-dark.svg);
-		}
 	}
 
 	.mobile-menu {
@@ -319,6 +316,19 @@ Top navigation bar for the application. It provides a slot for the left side, th
 
 		nav :global(.large) {
 			display: none;
+		}
+	}
+
+	@media (min-width: 480px) {
+		.home-link {
+			width: 11.2rem;
+			background: url(../branding/svelte.svg) no-repeat 0 50% / calc(100% - var(--padding-right))
+				auto;
+			padding: 0 var(--padding-right) 0 calc(var(--sk-page-padding-side) + 0rem);
+
+			:root.dark & {
+				background-image: url(../branding/svelte-dark.svg);
+			}
 		}
 	}
 
