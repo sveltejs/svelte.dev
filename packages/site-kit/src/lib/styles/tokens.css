@@ -120,7 +120,7 @@
 	   the 0.01 prevents Vite from optimising it to `translate(0, 0)`, which doesn't fix anything */
 	--safari-fix: translate3d(0, 0, 0.01);
 
-	@media (resolution: 2x) {
+	@media (resolution: 1.75x) {
 		--sk-font-family-body: 'EB Garamond', Georgia, serif;
 		--sk-font-size-body: 2.2rem;
 		--sk-font-size-body-small: 2rem;
