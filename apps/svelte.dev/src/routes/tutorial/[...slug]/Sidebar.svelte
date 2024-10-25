@@ -153,27 +153,12 @@
 	}
 
 	.modal-contents {
-		h2 {
-			font: var(--sk-font-ui-large);
-			margin: 0 0 0.5em 0;
-		}
-
-		p {
-			font: var(--sk-font-ui-medium);
-		}
-
 		label {
 			user-select: none;
 			font: var(--sk-font-ui-medium);
-		}
-
-		button {
-			display: block;
-			padding: 1rem;
-			width: 10rem;
-			margin: 1em 0 0 0;
-			line-height: 1;
-			font: var(--sk-font-ui-small);
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
 		}
 	}
 
