@@ -428,6 +428,9 @@ importers:
       '@codemirror/view':
         specifier: ^6.17.1
         version: 6.34.1
+      '@fontsource/atkinson-hyperlegible':
+        specifier: ^5.1.0
+        version: 5.1.0
       '@fontsource/dm-serif-display':
         specifier: ^5.1.0
         version: 5.1.0
@@ -901,6 +904,9 @@ packages:
     engines: {node: '>=18'}
     cpu: [x64]
     os: [win32]
+
+  '@fontsource/atkinson-hyperlegible@5.1.0':
+    resolution: {integrity: sha512-2qT7mpgHWYM0bB3+5zbcfy49PD5xil/8t3maXxdgFpJo2dFaD9qBgk5u72KgK7ZtmGOWbCjCoAk5e+vpOIqfvA==}
 
   '@fontsource/dm-serif-display@5.1.0':
     resolution: {integrity: sha512-8IGBpTOn2XRA09plE6iAlZajL09iwCdSTd60FiM9NsD7VV4Nqseo9tgqiZLyuLC9D1jht5i39I2IYI/o2+Q0Kg==}
@@ -3646,6 +3652,8 @@ snapshots:
 
   '@esbuild/win32-x64@0.23.1':
     optional: true
+
+  '@fontsource/atkinson-hyperlegible@5.1.0': {}
 
   '@fontsource/dm-serif-display@5.1.0': {}
 

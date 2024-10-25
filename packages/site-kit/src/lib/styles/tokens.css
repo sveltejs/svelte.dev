@@ -180,7 +180,7 @@
 	}
 
 	&.font-boring {
-		--sk-font-family-body: system-ui;
+		--sk-font-family-body: 'Atkinson Hyperlegible', sans-serif;
 		--sk-font-size-body: 1.8rem;
 
 		p code {
@@ -189,7 +189,7 @@
 	}
 
 	&.font-accessible {
-		--sk-font-family-body: 'OpenDyslexic';
+		--sk-font-family-body: 'OpenDyslexic', sans-serif;
 		--sk-font-size-body: 1.6rem;
 
 		p code {
