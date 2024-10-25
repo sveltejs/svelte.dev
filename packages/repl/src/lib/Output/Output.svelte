@@ -149,6 +149,7 @@
 		overflow: hidden;
 		white-space: nowrap;
 		box-sizing: border-box;
+		font: var(--sk-font-ui-small);
 
 		/* fake border (allows tab borders to appear above it) */
 		&::before {
