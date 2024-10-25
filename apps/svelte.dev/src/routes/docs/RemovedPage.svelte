@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
+	import { Text } from '@sveltejs/site-kit/components';
 
 	interface Props {
 		docs: Map<string, string[]>;
@@ -30,18 +31,22 @@
 </svelte:head>
 
 <div class="page">
-	<h1>This page no longer exists</h1>
+	<header>
+		<h1>This page no longer exists</h1>
+	</header>
 
-	<h2>You may be looking for:</h2>
+	<Text>
+		<p>You may be looking for one of the following:</p>
 
-	<ul>
-		{#each docs as doc}
-			<li>
-				<span style="font-weight:bold">{doc[1][0]}</span> is now located at
-				<a href={doc[1][1]}>{doc[1][1]}</a>
-			</li>
-		{/each}
-	</ul>
+		<ul>
+			{#each docs as doc}
+				<li>
+					<span style="font-weight:bold">{doc[1][0]}</span> is now
+					<a href={doc[1][1]}>here</a>
+				</li>
+			{/each}
+		</ul>
+	</Text>
 </div>
 
 <style>
@@ -51,10 +56,6 @@
 		box-sizing: content-box;
 		margin: auto;
 		text-wrap: balance;
-	}
-
-	h1 {
-		padding-bottom: 2rem;
 	}
 
 	ul {
