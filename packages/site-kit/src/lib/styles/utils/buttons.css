@@ -10,8 +10,16 @@
 			hsla(12, 93%, 70%);
 		--sk-raised-active-color: hsla(12, 93%, 30%) hsla(12, 93%, 70%) hsla(12, 93%, 70%)
 			hsla(12, 93%, 30%);
-		background: var(--sk-theme-1);
+		background: var(--sk-theme-1-variant);
 		color: white;
+
+		:root.dark & {
+			--sk-raised-color: hsla(12, 93%, 60%) hsla(12, 93%, 30%) hsla(12, 93%, 30%) hsla(12, 93%, 60%);
+			--sk-raised-hover-color: hsla(12, 93%, 65%) hsla(12, 93%, 27%) hsla(12, 93%, 27%)
+				hsla(12, 93%, 65%);
+			--sk-raised-active-color: hsla(12, 93%, 25%) hsla(12, 93%, 70%) hsla(12, 93%, 70%)
+				hsla(12, 93%, 25%);
+		}
 	}
 
 	&:hover {

@@ -38,6 +38,7 @@
 
 		<button
 			aria-label="Dismiss"
+			class="raised primary"
 			onclick={() => {
 				$hidden[banner.id] = true;
 			}}
@@ -63,14 +64,15 @@
 		height: var(--sk-banner-height);
 		background: var(--sk-theme-1-variant);
 		color: white;
-		padding: 0 3rem;
+		padding: 0 4rem;
 	}
 
 	button {
 		position: absolute;
-		top: 0;
-		right: 1rem;
+		right: var(--sk-page-padding-side);
 		height: 100%;
+		width: 3.2rem;
+		height: 3.2rem;
 	}
 
 	a {
@@ -101,6 +103,10 @@
 		.banner {
 			top: initial;
 			bottom: 0;
+		}
+
+		button {
+			right: 1rem;
 		}
 
 		.large {
