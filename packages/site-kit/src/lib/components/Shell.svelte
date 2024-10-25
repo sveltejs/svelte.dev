@@ -16,12 +16,12 @@ The main shell of the application. It provides a slot for the top navigation, th
 		nav_visible = true,
 		top_nav,
 		children,
-		banner_bottom
+		banner
 	}: {
 		nav_visible?: boolean;
 		top_nav?: Snippet;
 		children?: Snippet;
-		banner_bottom?: Snippet;
+		banner?: Snippet;
 	} = $props();
 </script>
 
@@ -45,22 +45,20 @@ The main shell of the application. It provides a slot for the top navigation, th
 	{@render children?.()}
 </main>
 
-<div class="banner-bottom">
-	{@render banner_bottom?.()}
-</div>
+{@render banner?.()}
 
 <style>
 	main {
 		position: relative;
 		margin: 0 auto;
 		padding-top: var(--sk-nav-height);
-		padding-bottom: var(--sk-banner-bottom-height);
+		padding-bottom: var(--sk-banner-height);
 		height: 100%;
 	}
 
 	@media (max-width: 799px) {
 		main {
-			padding-top: var(--sk-banner-bottom-height);
+			padding-top: var(--sk-banner-height);
 			padding-bottom: 0;
 		}
 	}

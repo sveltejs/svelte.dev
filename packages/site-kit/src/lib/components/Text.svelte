@@ -33,7 +33,9 @@
 				.find((node) => (node as HTMLElement).classList.contains('code-block')) as HTMLElement;
 
 			const ts = !!parent.querySelector('.ts-toggle:checked');
-			const code = parent.querySelector(`pre:${ts ? 'last' : 'first'}-of-type code`) as HTMLElement;
+			const code = parent.querySelector(
+				`pre[data-language]:${ts ? 'last' : 'first'}-of-type code`
+			) as HTMLElement;
 
 			navigator.clipboard.writeText(get_text(code));
 		}
@@ -125,7 +127,7 @@
 				top: 0;
 				right: 0;
 				height: var(--height);
-				padding: 0.3rem 0.5rem 0.3rem 1rem;
+				padding: 0.3rem 0.5rem;
 				gap: 0.5rem;
 				z-index: 2;
 				justify-content: end;
@@ -134,6 +136,11 @@
 				&:has(.filename) {
 					position: relative;
 					background: var(--sk-back-3);
+					padding-left: 1rem;
+				}
+
+				&:not(:has(.filename)) {
+					background: inherit;
 				}
 
 				.filename {

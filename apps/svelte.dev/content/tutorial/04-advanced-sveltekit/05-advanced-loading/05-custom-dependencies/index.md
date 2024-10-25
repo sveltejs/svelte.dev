@@ -3,7 +3,7 @@ title: Custom dependencies
 path: /Europe/London
 ---
 
-Calling `fetch(url)` inside a `load` function registers `url` as a dependency. Sometimes it's not appropriate to use `fetch`, in which case you can specify a dependency manually with the [`depends(url)`](https://kit.svelte.dev/docs/load#invalidation-manual-invalidation) function.
+Calling `fetch(url)` inside a `load` function registers `url` as a dependency. Sometimes it's not appropriate to use `fetch`, in which case you can specify a dependency manually with the [`depends(url)`](/docs/kit/load#Rerunning-load-functions-Manual-invalidation) function.
 
 Since any string that begins with an `[a-z]+:` pattern is a valid URL, we can create custom invalidation keys like `data:now`.
 

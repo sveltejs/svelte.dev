@@ -9,7 +9,7 @@ After two years in development, [SvelteKit](https://kit.svelte.dev) has finally 
 
 We’re so excited to share this release with you. It’s the culmination of thousands of hours of work, both from the Svelte core team and the wider community, and we think it’s the most enjoyable way to build production-grade websites, whether you’re a solo developer working on a small project or part of a large team.
 
-To get started, run `npm create svelte@latest`, and visit the [docs](https://kit.svelte.dev/docs) and (experimental!) [interactive tutorial](https://learn.svelte.dev).
+To get started, run `npm create svelte@latest`, and visit the [docs](/docs/kit) and (experimental!) [interactive tutorial](https://learn.svelte.dev).
 
 <div class="max">
 <figure style="max-width: 960px; margin: 0 auto">
@@ -70,7 +70,7 @@ And of course you have access to everything [npm](https://npmjs.com/) has to off
 
 Anywhere! The SvelteKit CLI needs Node.js installed locally, but the framework itself has no dependencies on any platform. This means you can deploy it wherever JavaScript runs.
 
-This is made possible by [adapters](https://kit.svelte.dev/docs/adapters). The default adapter, [adapter-auto](https://github.com/sveltejs/kit/tree/master/packages/adapter-auto), provides zero-config support for Vercel, Netlify, Cloudflare Pages and Azure Static Web Apps, with more platforms coming in the future. Community-provided adapters add support for Deno, Bun, Firebase, App Engine, AWS Lambda and many others.
+This is made possible by [adapters](/docs/kit/adapters). The default adapter, [adapter-auto](https://github.com/sveltejs/kit/tree/master/packages/adapter-auto), provides zero-config support for Vercel, Netlify, Cloudflare Pages and Azure Static Web Apps, with more platforms coming in the future. Community-provided adapters add support for Deno, Bun, Firebase, App Engine, AWS Lambda and many others.
 
 You can also deploy your app as a Node.js server using [adapter-node](https://github.com/sveltejs/kit/tree/master/packages/adapter-node).
 

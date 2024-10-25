@@ -20,7 +20,7 @@ Work in the Svelte ecosystem this month has been focused on SvelteKit bug fixes 
 - A warning will now indicated that hydration may break if comments are removed from HTML (**1.0.11**, [#8423](https://github.com/sveltejs/kit/pull/8423))
 - A warning will occur when of page options are used in `.svelte` files or a missing `<slot />` in layout is detected (**1.1.0**, [#8475](https://github.com/sveltejs/kit/pull/8475))
 - The new `text(...)` helper makes it easy to generate text responses (**1.2.0**, [#8371](https://github.com/sveltejs/kit/pull/8371))
-- The public env can now be accessed within app.html (**1.2.0**, [Docs](https://kit.svelte.dev/docs/project-structure#project-files-src), [#8449](https://github.com/sveltejs/kit/pull/8449))
+- The public env can now be accessed within app.html (**1.2.0**, [Docs](/docs/kit/project-structure#Project-files-src), [#8449](https://github.com/sveltejs/kit/pull/8449))
 - An error will now be thrown if cookie exceeds size limit (**1.2.1**, [#8591](https://github.com/sveltejs/kit/pull/8591))
 - The generated `tsconfig` can now be modified (**1.3.0**, [#8606](https://github.com/sveltejs/kit/pull/8606))
 

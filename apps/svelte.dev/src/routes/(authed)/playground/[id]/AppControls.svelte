@@ -2,7 +2,6 @@
 	import { goto } from '$app/navigation';
 	import UserMenu from './UserMenu.svelte';
 	import { Icon } from '@sveltejs/site-kit/components';
-	import { enter } from '$lib/utils/events';
 	import { isMac } from '$lib/utils/compat.js';
 	import { get_app_context } from '../../app-context';
 	import type { Gist, User } from '$lib/db/types';
@@ -200,9 +199,9 @@
 
 	<input
 		bind:value={name}
-		onchange={() => (modified = true)}
+		oninput={() => (modified = true)}
 		onfocus={(e) => e.currentTarget.select()}
-		use:enter={(e) => (e.currentTarget as HTMLInputElement).blur()}
+		onkeydown={(e) => e.key === 'Enter' && e.currentTarget.blur()}
 	/>
 
 	<div class="buttons">

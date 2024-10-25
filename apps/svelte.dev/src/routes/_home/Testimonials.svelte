@@ -188,8 +188,12 @@
 				width: auto;
 			}
 
-			.adjective::after {
-				content: 'adjective';
+			.adjective {
+				margin-right: 0.5rem;
+
+				&::after {
+					content: 'adjective';
+				}
 			}
 		}
 	}
@@ -211,22 +215,8 @@
 	}
 
 	@media (min-width: 1140px) {
-		.outer {
-			grid-template-areas:
-				'definition screenshots'
-				'blurb      screenshots';
-		}
-
-		.definition {
-			grid-area: definition;
-		}
-
-		.blurb {
-			grid-area: blurb;
-		}
-
 		.screenshots {
-			grid-area: screenshots;
+			top: -7em;
 		}
 	}
 </style>

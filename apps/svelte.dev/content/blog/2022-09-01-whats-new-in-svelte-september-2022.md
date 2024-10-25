@@ -22,7 +22,7 @@ But the new routing isn't the only new feature in SvelteKit...
 
 - The filesystem-based router and `load` API improves the way routes are managed. **Before installing version `@sveltejs/kit@1.0.0-next.406` or later, [follow this migration guide](https://github.com/sveltejs/kit/discussions/5774)** ([PR](https://github.com/sveltejs/kit/pull/5778), [Issue](https://github.com/sveltejs/kit/discussions/5748))
 - `event.session` has been removed from `load` along with the `session` store and `getSession`. Use `event.locals` instead (**1.0.0-next.415**, [PR](https://github.com/sveltejs/kit/pull/5946))
-- Named layouts have been removed in favor of `(groups)` (**1.0.0-next.432**, [Docs](https://kit.svelte.dev/docs/advanced-routing#advanced-layouts), [PR & Migration Instructions](https://github.com/sveltejs/kit/pull/6174))
+- Named layouts have been removed in favor of `(groups)` (**1.0.0-next.432**, [Docs](/docs/kit/advanced-routing#Advanced-layouts), [PR & Migration Instructions](https://github.com/sveltejs/kit/pull/6174))
 - `event.clientAddress` is now `event.getClientAddress()` (**1.0.0-next.438**, [PR](https://github.com/sveltejs/kit/pull/6237))
 - `$app/env` has been renamed to `$app/environment`, to disambiguate with `$env/...` (**1.0.0-next.445**, [PR](https://github.com/sveltejs/kit/pull/6334))
 

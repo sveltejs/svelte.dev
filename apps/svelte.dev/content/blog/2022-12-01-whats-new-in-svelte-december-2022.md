@@ -16,7 +16,7 @@ Let's get to it!
 - Linking to `<a name="hash">` tags is now supported ([#7596](https://github.com/sveltejs/kit/pull/7596))
 - Throwing redirects in the `handle` hook is now supported ([#7612](https://github.com/sveltejs/kit/pull/7612))
 - A fallback component will now be added automatically for layouts without one ([#7619](https://github.com/sveltejs/kit/pull/7619))
-- The new `preload` function within the `resolve` hook determines what files should be added to the <head> tag to preload it ([Docs](https://kit.svelte.dev/docs/hooks#server-hooks-handle), [#4963](https://github.com/sveltejs/kit/pull/4963), [#7704](https://github.com/sveltejs/kit/pull/7704))
+- The new `preload` function within the `resolve` hook determines what files should be added to the <head> tag to preload it ([Docs](/docs/kit/hooks#Server-hooks-handle), [#4963](https://github.com/sveltejs/kit/pull/4963), [#7704](https://github.com/sveltejs/kit/pull/7704))
 - `version` is now available via `$app/environment` ([#7689](https://github.com/sveltejs/kit/pull/7689), [#7694](https://github.com/sveltejs/kit/pull/7694))
 - `handleError` can now return a promise ([#7780](https://github.com/sveltejs/kit/pull/7780))
 

@@ -1,11 +1,11 @@
 ---
 title: "What's new in Svelte: January 2023"
-description: 'SvelteKit 1.0, learn.svelte.dev, and type definitions for Svelte elements.'
+description: 'SvelteKit 1.0, tutorial, and type definitions for Svelte elements.'
 author: Dani Sandoval
 authorURL: https://dreamindani.com
 ---
 
-It's been just two weeks since the release of [SvelteKit 1.0](https://svelte.dev/blog/announcing-sveltekit-1.0)! If you haven't yet, check out the [livestream](https://www.youtube.com/watch?v=N4BRVkQVoMc), [new website](https://kit.svelte.dev/) and [learn.svelte.dev](https://learn.svelte.dev/) to learn all the features of SvelteKit step-by-step.
+It's been just two weeks since the release of [SvelteKit 1.0](https://svelte.dev/blog/announcing-sveltekit-1.0)! If you haven't yet, check out the [livestream](https://www.youtube.com/watch?v=N4BRVkQVoMc), [new website](https://kit.svelte.dev/) and [tutorial](/tutorial) to learn all the features of SvelteKit step-by-step.
 
 Let's dive into the details...
 
@@ -13,14 +13,14 @@ Let's dive into the details...
 
 - `@sveltejs/kit` 1.0 is out! All future releases will follow semver and changes will be listed as major/minor/patch in the [CHANGELOG](https://github.com/sveltejs/kit/blob/master/packages/kit/CHANGELOG.md#100).
 - Improved support for Storybook and Histoire ([#7990](https://github.com/sveltejs/kit/pull/7990)). Work is ongoing to fully support those tools ([storybook#20239](https://github.com/storybookjs/storybook/pull/20239)).
-- `vitePreprocess` is now the default preprocessor. Please see [the docs](https://kit.svelte.dev/docs/integrations#preprocessors) for differences between `vitePreprocess` and `svelte-preprocess` ([#8036](https://github.com/sveltejs/kit/pull/8036)).
+- `vitePreprocess` is now the default preprocessor. Please see [the docs](/docs/kit/integrations#vitePreprocess) for differences between `vitePreprocess` and `svelte-preprocess` ([#8036](https://github.com/sveltejs/kit/pull/8036)).
 
 ### Breaking changes:
 
 - Unknown exports (except when starting with an underscore) are no longer allowed from `+(layout|page)(.server)?.js` and `+server.js` files ([#7878](https://github.com/sveltejs/kit/pull/7878))
 - `__data.json` is now stripped from URL ([#7979](https://github.com/sveltejs/kit/pull/7979))
 - `sveltekit()` will now return a promise for an array of Vite plugins ([#7994](https://github.com/sveltejs/kit/pull/7994))
-- A new `embedded` option, turned off by default, helps with link clicks when embedding SvelteKit ([docs](https://kit.svelte.dev/docs/configuration), [#7969](https://github.com/sveltejs/kit/pull/7969))
+- A new `embedded` option, turned off by default, helps with link clicks when embedding SvelteKit ([docs](/docs/kit/configuration), [#7969](https://github.com/sveltejs/kit/pull/7969))
 - Automatic fallback generation has been replaced with `builder.generateFallback(fallback)` ([#8013](https://github.com/sveltejs/kit/pull/8013))
 - `invalid()` is now `fail()` and `ValidationError` is now `ActionFailure` ([#8012](https://github.com/sveltejs/kit/pull/8012))
 - SvelteKit will now throw an error on invalid load response ([#8003](https://github.com/sveltejs/kit/pull/8003))
