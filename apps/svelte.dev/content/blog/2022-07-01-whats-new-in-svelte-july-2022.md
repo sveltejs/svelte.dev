@@ -17,7 +17,7 @@ We will also be utilizing OpenCollective funds to allow Svelte core maintainers 
 
 ## What's new in Svelte & Language Tools
 
-- [learn.svelte.dev](https://learn.svelte.dev/) is a new way to learn Svelte and SvelteKit from the ground up that is currently in development
+- [The tutorial](/tutorial) is a new way to learn Svelte and SvelteKit from the ground up that is currently in development
 - Faster SSR is coming in the next Svelte release. A PR two years in the making, resulting in up to 3x faster rendering in some benchmarking tests! ([PR](https://github.com/sveltejs/svelte/pull/5701))
 - "Find File References" ([0.14.28](https://github.com/sveltejs/language-tools/releases/tag/language-server-0.14.28)) and "Find Component References" ([0.14.29](https://github.com/sveltejs/language-tools/releases/tag/language-server-0.14.29)) in the latest versions of the Svelte extension shows where Svelte files and components have been imported and used ([Demo](https://twitter.com/dummdidumm_/status/1532459709604716544/photo/1))
 - The Svelte extension now supports CSS path completion ([0.14.29](https://github.com/sveltejs/language-tools/releases/tag/language-server-0.14.29))

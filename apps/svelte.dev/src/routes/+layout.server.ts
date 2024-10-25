@@ -1,6 +1,5 @@
 import { docs, index } from '$lib/server/content';
-import { fetchBanner } from '@sveltejs/site-kit/components';
-import type { NavigationLink } from '@sveltejs/site-kit';
+import type { BannerData, NavigationLink } from '@sveltejs/site-kit';
 
 const nav_links: NavigationLink[] = [
 	{
@@ -52,8 +51,19 @@ const sections: Record<string, string> = {
 	search: 'Search'
 };
 
+const banner: BannerData = {
+	id: 'sveltehack2024',
+	start: new Date('22 Oct, 2024 00:00:00 UTC'),
+	end: new Date('15 December, 2024 23:59:59 UTC'),
+	arrow: true,
+	content: {
+		lg: 'Cast runes, win prizes: SvelteHack 2024',
+		sm: 'SvelteHack 2024'
+	},
+	href: 'https://hack.sveltesociety.dev/2024'
+};
+
 export const load = async ({ url, fetch }) => {
-	const banner = await fetchBanner('svelte.dev', fetch);
 	const nav_title = sections[url.pathname.split('/')[1]!] ?? '';
 
 	return {

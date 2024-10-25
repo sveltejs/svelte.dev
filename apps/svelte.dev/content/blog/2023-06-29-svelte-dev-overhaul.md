@@ -92,5 +92,5 @@ We have many more things planned to do post-launch. Some of them are:
 - Redesigned blog page
 - Improved search
 - Playground: a unified REPL and Examples page
-- Unify the infrastructure of the Svelte REPL and [learn.svelte.dev](https://learn.svelte.dev) by creating a webcontainer-based REPL with rollup as a fallback
+- Unify the infrastructure of the Svelte REPL and [the tutorial](/tutorial) by creating a webcontainer-based REPL with rollup as a fallback
 - Address any feedback
