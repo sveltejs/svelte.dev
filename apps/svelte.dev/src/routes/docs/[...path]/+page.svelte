@@ -6,6 +6,7 @@
 	import OnThisPage from './OnThisPage.svelte';
 	import Breadcrumbs from './Breadcrumbs.svelte';
 	import PageControls from '$lib/components/PageControls.svelte';
+	import { goto } from '$app/navigation';
 
 	let { data } = $props();
 
@@ -36,7 +37,10 @@
 		for (const heading of content.querySelectorAll('[id]')) {
 			// e.g. we want to redirect progressive-enhancement-use-enhance to Progressive-enhancement-use:enhance
 			if (heading.id.toLowerCase().replaceAll(':', '-') === id) {
-				location.hash = heading.id;
+				goto(`#${heading.id}`, {
+					replaceState: true
+				});
+
 				break;
 			}
 		}
