@@ -3,10 +3,6 @@
 	import { Checkbox } from '@sveltejs/site-kit/components';
 
 	let { workspace }: { workspace: Workspace } = $props();
-
-	function onchange() {
-		workspace.invalidate();
-	}
 </script>
 
 <div class="options">
@@ -14,29 +10,29 @@
 	<div class="option">
 		<span class="key">generate:</span>
 
-		<input
-			id="client"
-			type="radio"
-			bind:group={workspace.compiler_options.generate}
-			value="client"
-			{onchange}
-		/>
-		<label for="client"><span class="string">"client"</span></label>
-
-		<input
-			id="server"
-			type="radio"
-			bind:group={workspace.compiler_options.generate}
-			value="server"
-			{onchange}
-		/>
-		<label for="server"><span class="string">"server"</span>,</label>
+		{#each ['client', 'server'] as const as generate}
+			<input
+				id={generate}
+				type="radio"
+				checked={workspace.compiler_options.generate === generate}
+				value={generate}
+				onchange={() => {
+					workspace.update_compiler_options({ generate });
+				}}
+			/>
+			<label for={generate}><span class="string">"{generate}"</span></label>
+		{/each}
 	</div>
 
 	<!-- svelte-ignore a11y_label_has_associated_control (TODO this warning should probably be disabled if there's a component)-->
 	<label class="option">
 		<span class="key">dev:</span>
-		<Checkbox bind:checked={workspace.compiler_options.dev!} {onchange} />
+		<Checkbox
+			checked={workspace.compiler_options.dev!}
+			onchange={(dev) => {
+				workspace.update_compiler_options({ dev });
+			}}
+		/>
 		<span class="boolean">{workspace.compiler_options.dev}</span>,
 	</label>
 	});

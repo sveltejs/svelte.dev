@@ -18,23 +18,23 @@ Let's take a look...
 
 ## What's new in SvelteKit
 
-- `inlineStyleThreshold` allows you to specify where inline stylesheets are inserted into the page ([Docs](https://kit.svelte.dev/docs/configuration#inlinestylethreshold), [#2620](https://github.com/sveltejs/kit/pull/2620))
-- `beforeNavigate`/`afterNavigate` lifecycle functions lets you add functionality before or after a page navigation ([Docs](https://kit.svelte.dev/docs/modules#$app-navigation), [#3293](https://github.com/sveltejs/kit/pull/3293))
-- Platform context can now be passed from adapters ([Docs](https://kit.svelte.dev/docs/adapters#supported-environments-platform-specific-context), [#3429](https://github.com/sveltejs/kit/pull/3429))
-- Hooks now have an `ssr` parameter in `resolve` to make it easier to skip SSR, when needed ([Docs](https://kit.svelte.dev/docs/hooks#handle), [#2804](https://github.com/sveltejs/kit/pull/2804))
+- `inlineStyleThreshold` allows you to specify where inline stylesheets are inserted into the page ([Docs](/docs/kit/configuration#inlineStyleThreshold), [#2620](https://github.com/sveltejs/kit/pull/2620))
+- `beforeNavigate`/`afterNavigate` lifecycle functions lets you add functionality before or after a page navigation ([Docs](/docs/kit/$app-navigation), [#3293](https://github.com/sveltejs/kit/pull/3293))
+- Platform context can now be passed from adapters ([Docs](/docs/kit/adapters#Platform-specific-context), [#3429](https://github.com/sveltejs/kit/pull/3429))
+- Hooks now have an `ssr` parameter in `resolve` to make it easier to skip SSR, when needed ([Docs](/docs/kit/hooks#Server-hooks-handle), [#2804](https://github.com/sveltejs/kit/pull/2804))
 - `$page.stuff` provides a mechanism for pages to pass data 'upward' to layouts ([Docs](https://kit.svelte.dev/docs/loading#input-stuff), [#3252](https://github.com/sveltejs/kit/pull/3252))
-- Fallthrough routes let you specify where to route when an route can't be loaded ([Docs](https://kit.svelte.dev/docs/routing#advanced-routing-fallthrough-routes), [#3217](https://github.com/sveltejs/kit/pull/3217))
+- Fallthrough routes let you specify where to route when an route can't be loaded ([#3217](https://github.com/sveltejs/kit/pull/3217))
 
 ### New configs
 
-- Content Security Policy (CSP) is now supported for increased security when using inline javascript or stylesheets ([Docs](https://kit.svelte.dev/docs/configuration#csp), [#3499](https://github.com/sveltejs/kit/pull/3499))
-- `kit.routes` config allows you to customise public/private modules during build ([Docs](https://kit.svelte.dev/docs/configuration#routes), [#3576](https://github.com/sveltejs/kit/pull/3576))
-- `prerender.createIndexFiles` config lets you prerender index.html files as their subfolder's name ([Docs](https://kit.svelte.dev/docs/configuration#prerender), [#2632](https://github.com/sveltejs/kit/pull/2632))
+- Content Security Policy (CSP) is now supported for increased security when using inline javascript or stylesheets ([Docs](/docs/kit/configuration#csp), [#3499](https://github.com/sveltejs/kit/pull/3499))
+- `kit.routes` config allows you to customise public/private modules during build ([#3576](https://github.com/sveltejs/kit/pull/3576))
+- `prerender.createIndexFiles` config lets you prerender index.html files as their subfolder's name ([#2632](https://github.com/sveltejs/kit/pull/2632))
 - HTTP methods can now be overridden using `kit.methodOverride` ([Docs](https://kit.svelte.dev/docs/routing#endpoints-http-method-overrides), [#2989](https://github.com/sveltejs/kit/pull/2989))
 
 ### Config changes
 
-- `config.kit.hydrate` and `config.kit.router` are now nested under `config.kit.browser` ([Docs](https://kit.svelte.dev/docs/configuration#browser), [3578](https://github.com/sveltejs/kit/pull/3578))
+- `config.kit.hydrate` and `config.kit.router` are now nested under `config.kit.browser` ([3578](https://github.com/sveltejs/kit/pull/3578))
 
 ### Breaking change
 

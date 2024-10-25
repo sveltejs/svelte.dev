@@ -6,3 +6,4 @@ pnpm-lock.yaml
 .vercel
 _generated.md
 land-110m.json
+/apps/svelte.dev/content/docs

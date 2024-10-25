@@ -40,7 +40,7 @@
 	<title>{data.gist.name} • Playground • Svelte</title>
 
 	<meta name="twitter:title" content="{data.gist.name} • Playground • Svelte" />
-	<meta name="twitter:description" content="Web development, but fun" />
+	<meta name="twitter:description" content="Web development for the rest of us" />
 	<meta name="Description" content="Interactive Svelte playground" />
 </svelte:head>
 

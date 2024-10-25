@@ -33,7 +33,9 @@
 				.find((node) => (node as HTMLElement).classList.contains('code-block')) as HTMLElement;
 
 			const ts = !!parent.querySelector('.ts-toggle:checked');
-			const code = parent.querySelector(`pre:${ts ? 'last' : 'first'}-of-type code`) as HTMLElement;
+			const code = parent.querySelector(
+				`pre[data-language]:${ts ? 'last' : 'first'}-of-type code`
+			) as HTMLElement;
 
 			navigator.clipboard.writeText(get_text(code));
 		}
@@ -123,10 +125,10 @@
 				align-items: center;
 				position: absolute;
 				top: 0;
+				right: 0;
 				height: var(--height);
 				padding: 0.3rem 0.5rem 0.3rem 1rem;
 				gap: 0.5rem;
-				width: 100%;
 				z-index: 2;
 				justify-content: end;
 				box-sizing: border-box;

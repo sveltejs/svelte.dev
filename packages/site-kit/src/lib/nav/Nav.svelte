@@ -47,6 +47,10 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		last_scroll = scroll;
 		hash_changed = false;
 	}
+
+	$effect(() => {
+		document.body.style.overflow = open ? 'hidden' : '';
+	});
 </script>
 
 <svelte:window

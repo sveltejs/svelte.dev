@@ -23,12 +23,12 @@ With yesterday's Svelte Summit behind us, we've got a lot of news to share! Chec
 
 - Files and directories can now be named `__tests__` and `__test__` in the routes directory ([#4438](https://github.com/sveltejs/kit/pull/4438))
 - Netlify Edge Functions ([#4657](https://github.com/sveltejs/kit/pull/4657)) and the Vercel build output API ([#4663](https://github.com/sveltejs/kit/pull/4663)) are now supported
-- Custom `load` dependencies, array of strings representing URLs the page depends on, are now available when loading routes ([Docs](https://kit.svelte.dev/docs/loading#output-dependencies), [#4536](https://github.com/sveltejs/kit/pull/4536))
+- Custom `load` dependencies, array of strings representing URLs the page depends on, are now available when loading routes ([Docs](/docs/kit/load#Rerunning-load-functions), [#4536](https://github.com/sveltejs/kit/pull/4536))
 
 ### Breaking Changes
 
-- Validators are now called "matchers" ([Docs](https://kit.svelte.dev/docs/routing#advanced-routing-matching), [#4358](https://github.com/sveltejs/kit/pull/4358))
-- `__layout.reset` has been replaced by named layouts - which have much configurability for shared layout elements ([Docs](https://kit.svelte.dev/docs/layouts#named-layouts), [#4388](https://github.com/sveltejs/kit/pull/4388))
+- Validators are now called "matchers" ([Docs](/docs/kit/advanced-routing#Matching), [#4358](https://github.com/sveltejs/kit/pull/4358))
+- `__layout.reset` has been replaced by named layouts - which have much configurability for shared layout elements ([Docs](/docs/kit/advanced-routing#Advanced-layouts-layout), [#4388](https://github.com/sveltejs/kit/pull/4388))
 - Prerendering is now skipped for `rel="external"` links ([#4545](https://github.com/sveltejs/kit/pull/4545))
 - `maxage` is now `cache` in `LoadOutput` ([#4690](https://github.com/sveltejs/kit/pull/4690))
 

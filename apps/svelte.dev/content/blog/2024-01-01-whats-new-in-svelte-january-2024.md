@@ -13,18 +13,18 @@ Let's jump in...
 
 ## What's new in SvelteKit (2.0 and more!)
 
-With its 2.0 release, SvelteKit is now more capable than ever. Be sure to check out the docs links in each update for more info on how to use each feature as well as the new [Performance](https://kit.svelte.dev/docs/performance) page - which explains how SvelteKit works to make your applications as performant as possible.
+With its 2.0 release, SvelteKit is now more capable than ever. Be sure to check out the docs links in each update for more info on how to use each feature as well as the new [Performance](/docs/kit/performance) page - which explains how SvelteKit works to make your applications as performant as possible.
 
-- `resolvePath` has been replaced by `resolveRoute` in `$app/paths`. Use it to populate a route ID with params to resolve a pathname (**1.29.0**, [Docs](https://kit.svelte.dev/docs/modules#app-paths-resolveroute), [#11261](https://github.com/sveltejs/kit/pull/11261))
-- `response.arrayBuffer()` will now be inlined during SSR (**1.30.0**, [Docs](https://kit.svelte.dev/docs/load#making-fetch-requests), [#10535](https://github.com/sveltejs/kit/pull/10535))
+- `resolvePath` has been replaced by `resolveRoute` in `$app/paths`. Use it to populate a route ID with params to resolve a pathname (**1.29.0**, [Docs](/docs/kit/$app-paths#resolveRoute), [#11261](https://github.com/sveltejs/kit/pull/11261))
+- `response.arrayBuffer()` will now be inlined during SSR (**1.30.0**, [Docs](/docs/kit/load#Making-fetch-requests), [#10535](https://github.com/sveltejs/kit/pull/10535))
 - [SvelteKit 2.0.0](https://github.com/sveltejs/kit/blob/main/packages/kit/CHANGELOG.md#200) adds:
-  - `untrack` to `load` to opt-out of invalidation ([Docs](https://kit.svelte.dev/docs/load#rerunning-load-functions-untracking-dependencies), [#11311](https://github.com/sveltejs/kit/pull/11311))
-  - shallow routing to create history entries without navigating ([Docs](https://kit.svelte.dev/docs/shallow-routing), [#11307](https://github.com/sveltejs/kit/pull/11307))
+  - `untrack` to `load` to opt-out of invalidation ([Docs](/docs/kit/load#Rerunning-load-functions-Untracking-dependencies), [#11311](https://github.com/sveltejs/kit/pull/11311))
+  - shallow routing to create history entries without navigating ([Docs](/docs/kit/shallow-routing), [#11307](https://github.com/sveltejs/kit/pull/11307))
   - html typings ([#11222](https://github.com/sveltejs/kit/pull/11222))
   - redacted internal stack traces when reporting config errors ([#11292](https://github.com/sveltejs/kit/pull/11292))
-  - fine grained invalidation of search params ([Docs](https://kit.svelte.dev/docs/load#rerunning-load-functions), [#11258](https://github.com/sveltejs/kit/pull/11258))
+  - fine grained invalidation of search params ([Docs](/docs/kit/load#Rerunning-load-functions), [#11258](https://github.com/sveltejs/kit/pull/11258))
 
-You can find a migration guide for SvelteKit 2.0 [on the SvelteKit docs](https://kit.svelte.dev/docs/migrating-to-sveltekit-2). Things should be pretty seamless with the `svelte-migrate` command doing much (if not all) for you!
+You can find a migration guide for SvelteKit 2.0 [on the SvelteKit docs](/docs/kit/migrating-to-sveltekit-2). Things should be pretty seamless with the `svelte-migrate` command doing much (if not all) for you!
 
 ## What's new in Svelte
 

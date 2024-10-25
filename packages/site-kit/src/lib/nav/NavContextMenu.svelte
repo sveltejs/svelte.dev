@@ -102,6 +102,7 @@
 		top: 0;
 		z-index: 1;
 		padding: 1rem 0;
+		background-color: var(--sk-back-2);
 	}
 
 	a {

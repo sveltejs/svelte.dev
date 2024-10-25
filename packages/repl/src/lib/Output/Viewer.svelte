@@ -111,8 +111,6 @@
 					${injectedJS}
 
 					if (!window.__setup_focus_handling) {
-						console.log('setting up focus handling');
-
 						let can_focus = false;
 
 						window.addEventListener('pointerdown', (e) => (can_focus = true));

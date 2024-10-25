@@ -24,7 +24,7 @@
 
 			todos.push({
 				done: false,
-				text: e.currentTarget.value
+				description: e.currentTarget.value
 			});
 
 			e.currentTarget.value = '';
