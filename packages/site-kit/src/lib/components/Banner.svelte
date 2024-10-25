@@ -16,7 +16,7 @@
 	);
 
 	$effect(() => {
-		document.documentElement.style.setProperty('--sk-banner-height', visible ? '41.9px' : '0px');
+		document.documentElement.style.setProperty('--sk-banner-height', visible ? '4.2rem' : '0px');
 	});
 </script>
 
