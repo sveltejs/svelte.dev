@@ -6,9 +6,9 @@
 	<h2>join our friendly community</h2>
 	<p>
 		Our sister organisation, <a href="https://www.sveltesociety.dev/">Svelte Society</a>, organises
-		events around the globe.
+		events around the globe. Find your chapter and join us in
+		<a href="/chat">our Discord server</a>.
 	</p>
-	<p>Find your chapter and join us in <a href="/chat">our Discord server</a>.</p>
 
 	<figure>
 		<enhanced:img
@@ -48,5 +48,11 @@
 	h2,
 	p {
 		text-align: center;
+	}
+
+	p {
+		max-width: 28em;
+		margin-left: auto;
+		margin-right: auto;
 	}
 </style>
