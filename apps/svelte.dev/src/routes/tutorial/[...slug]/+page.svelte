@@ -354,7 +354,7 @@
 	.container {
 		display: flex;
 		flex-direction: column;
-		height: calc(100dvh - var(--sk-nav-height));
+		height: calc(100dvh - var(--sk-nav-height) - var(--sk-banner-height));
 		/** necessary for innerWidth to be correct, so we can determine `mobile` */
 		width: 100vw;
 		overflow: hidden;
