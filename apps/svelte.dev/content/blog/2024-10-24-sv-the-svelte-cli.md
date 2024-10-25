@@ -1,6 +1,6 @@
 ---
-title: Terminal velocity
-description: Introducing `sv`, the brand new Svelte CLI
+title: Introducing the new Svelte CLI
+description: Tailwind, auth, databases and more — just an `npx sv` away
 author: Ben McCann
 authorURL: https://www.benmccann.com/
 ---
@@ -23,10 +23,6 @@ Now, we're offering that functionality via our own CLI, directly within the proj
 
 ```
 $ npx sv create
-
-Need to install the following packages:
-sv@0.5.8
-Ok to proceed? (y)
 
 ┌  Welcome to the Svelte CLI! (v0.5.8)
 │
