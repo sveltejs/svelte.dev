@@ -19,8 +19,8 @@ In addition to supporting SvelteKit's new `HEAD` server method, Svelte's languag
 
 ## What's new in SvelteKit
 
-- The `HEAD` server method is now available in API routes (**1.22.0**, [Docs](https://kit.svelte.dev/docs/routing#server), [#9753](https://github.com/sveltejs/kit/pull/9753))
-- Responses with `Vary` headers are now cached, too (except for `Vary: *`) (**1.22.0**, [Docs](https://kit.svelte.dev/docs/routing#server-content-negotiation), [#9993](https://github.com/sveltejs/kit/pull/9993))
+- The `HEAD` server method is now available in API routes (**1.22.0**, [Docs](/docs/kit/routing#server), [#9753](https://github.com/sveltejs/kit/pull/9753))
+- Responses with `Vary` headers are now cached, too (except for `Vary: *`) (**1.22.0**, [Docs](/docs/kit/routing#server-Content-negotiation), [#9993](https://github.com/sveltejs/kit/pull/9993))
 - There's now a more helpful error for preview if SvelteKit's build output doesn't exist (**1.22.2**, [#10337](https://github.com/sveltejs/kit/pull/10337))
 
 For all the patches and performance updates from this month, check out the [SvelteKit CHANGELOG](https://github.com/sveltejs/kit/blob/master/packages/kit/CHANGELOG.md). You can also find adapter-specific CHANGELOGs in each of [the `adapter` directories](https://github.com/sveltejs/kit/tree/master/packages).

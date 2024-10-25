@@ -5,11 +5,11 @@ author: Geoff Rich, Rich Harris
 authorURL: https://geoffrich.net, https://twitter.com/Rich_Harris
 ---
 
-The Svelte team has been hard at work since the release of SvelteKit 1.0. Let’s talk about some of the major new features that have shipped since launch: [streaming non-essential data](https://kit.svelte.dev/docs/load#streaming-with-promises), [snapshots](https://kit.svelte.dev/docs/snapshots), and [route-level config](https://kit.svelte.dev/docs/page-options#config).
+The Svelte team has been hard at work since the release of SvelteKit 1.0. Let’s talk about some of the major new features that have shipped since launch: [streaming non-essential data](/docs/kit/load#Streaming-with-promises), [snapshots](/docs/kit/snapshots), and [route-level config](/docs/kit/page-options#config).
 
 ## Stream non-essential data in load functions
 
-SvelteKit uses [load functions](https://kit.svelte.dev/docs/load) to retrieve data for a given route. When navigating between pages, it first fetches the data, and then renders the page with the result. This could be a problem if some of the data for the page takes longer to load than others, especially if the data isn’t essential – the user won’t see any part of the new page until all the data is ready.
+SvelteKit uses [load functions](/docs/kit/load) to retrieve data for a given route. When navigating between pages, it first fetches the data, and then renders the page with the result. This could be a problem if some of the data for the page takes longer to load than others, especially if the data isn’t essential – the user won’t see any part of the new page until all the data is ready.
 
 There were ways to work around this. In particular, you could fetch the slow data in the component itself, so it first renders with the data from `load` and then starts fetching the slow data. But this was not ideal: the data is even more delayed since you don’t start fetching until the client renders, and you’re also having to break SvelteKit’s `load` convention.
 
@@ -121,7 +121,7 @@ Because promises are natively supported in this way, you can put them anywhere i
 
 One caveat: this feature needs JavaScript. Because of this, we recommend that you only stream in non-essential data so that the core of the experience is available to all users.
 
-For more on this feature, see [the documentation](https://kit.svelte.dev/docs/load#streaming-with-promises). You can see a demo at [sveltekit-on-the-edge.vercel.app](https://sveltekit-on-the-edge.vercel.app/edge) (the location data is artificially delayed and streamed in) or [deploy your own on Vercel](https://vercel.com/templates/svelte/sveltekit-edge-functions), where streaming is supported in both Edge Functions and Serverless Functions.
+For more on this feature, see [the documentation](/docs/kit/load#Streaming-with-promises). You can see a demo at [sveltekit-on-the-edge.vercel.app](https://sveltekit-on-the-edge.vercel.app/edge) (the location data is artificially delayed and streamed in) or [deploy your own on Vercel](https://vercel.com/templates/svelte/sveltekit-edge-functions), where streaming is supported in both Edge Functions and Serverless Functions.
 
 We're grateful for the inspiration from prior implementations of this idea including Qwik, Remix, Solid, Marko, React and many others.
 
@@ -154,11 +154,11 @@ For example, here is how you would capture and restore the value of a textarea:
 
 While things like form input values and scroll positions are common examples, you can store any JSON-serializable data you like in a snapshot. The snapshot data is stored in [sessionStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage), so it will persist even when the page is reloaded, or if the user navigates to a different site entirely. Because it’s in `sessionStorage`, you won’t be able to access it during server-side rendering.
 
-For more, see [the documentation](https://kit.svelte.dev/docs/snapshots).
+For more, see [the documentation](/docs/kit/snapshots).
 
 ## Route-level deployment configuration
 
-SvelteKit uses platform-specific [adapters](https://kit.svelte.dev/docs/adapters) to transform your app code for deployment to production. Until now, you had to configure your deployment on an app-wide level. For instance, you could either deploy your app as an edge function or a serverless function, but not both. This made it impossible to take advantage of the edge for parts of your app – if any route needed Node APIs, then you couldn’t deploy any of it to the edge. The same is true for other aspects of deployment configuration, such as regions and allocated memory: you had to choose one value that applied to every route in your entire app.
+SvelteKit uses platform-specific [adapters](/docs/kit/adapters) to transform your app code for deployment to production. Until now, you had to configure your deployment on an app-wide level. For instance, you could either deploy your app as an edge function or a serverless function, but not both. This made it impossible to take advantage of the edge for parts of your app – if any route needed Node APIs, then you couldn’t deploy any of it to the edge. The same is true for other aspects of deployment configuration, such as regions and allocated memory: you had to choose one value that applied to every route in your entire app.
 
 Now, you can export a `config` object in your `+server.js`, `+page(.server).js` and `+layout(.server).js` files to control how those routes are deployed. Doing so in a `+layout.js` will apply the configuration to all child pages. The type of `config` is unique to each adapter, since it depends on the environment you’re deploying to.
 
@@ -171,7 +171,7 @@ export const config: Config = {
 };
 ```
 
-Configs are merged at the top level, so you can override values set in a layout for pages further down the tree. For more details, see [the documentation](https://kit.svelte.dev/docs/page-options#config).
+Configs are merged at the top level, so you can override values set in a layout for pages further down the tree. For more details, see [the documentation](/docs/kit/page-options#config).
 
 If you deploy to Vercel, you can take advantage of this feature by installing the latest versions of SvelteKit and your adapter. This will require a major upgrade to your adapter version, since adapters supporting route-level config require SvelteKit 1.5 or later.
 
@@ -180,11 +180,11 @@ npm i @sveltejs/kit@latest
 npm i @sveltejs/adapter-auto@latest # or @sveltejs/adapter-vercel@latest
 ```
 
-For now, only the [Vercel adapter](https://kit.svelte.dev/docs/adapter-vercel#deployment-configuration) implements route-specific config, but the building blocks are there to implement this for other platforms. If you’re an adapter author, see the changes in [the PR](https://github.com/sveltejs/kit/pull/8740) to see what is required.
+For now, only the [Vercel adapter](/docs/kit/adapter-vercel#Deployment-configuration) implements route-specific config, but the building blocks are there to implement this for other platforms. If you’re an adapter author, see the changes in [the PR](https://github.com/sveltejs/kit/pull/8740) to see what is required.
 
 ## Incremental static regeneration on Vercel
 
-Route-level config also unlocked another much-requested feature – you can now use [incremental static regeneration](https://kit.svelte.dev/docs/adapter-vercel#incremental-static-regeneration) (ISR) with SvelteKit apps deployed to Vercel. ISR provides the performance and cost advantages of prerendered content with the flexibility of dynamically rendered content.
+Route-level config also unlocked another much-requested feature – you can now use [incremental static regeneration](/docs/kit/adapter-vercel#Incremental-Static-Regeneration) (ISR) with SvelteKit apps deployed to Vercel. ISR provides the performance and cost advantages of prerendered content with the flexibility of dynamically rendered content.
 
 To add ISR to a route, include the `isr` property in your `config` object:
 
@@ -198,10 +198,10 @@ export const config = {
 
 ## And much more...
 
-- The [OPTIONS method](https://kit.svelte.dev/docs/routing#server) is now supported in `+server.js` files
+- The [OPTIONS method](/docs/kit/routing#server) is now supported in `+server.js` files
 - Better error messages when you [export something that belongs in a different file](https://github.com/sveltejs/kit/pull/9055) or [forget to put a slot](https://github.com/sveltejs/kit/pull/8475) in your +layout.svelte.
-- You can now [access public environment variables in app.html](https://kit.svelte.dev/docs/project-structure#project-files-src)
-- A new [text helper](https://kit.svelte.dev/docs/modules#sveltejs-kit-text) for creating responses
+- You can now [access public environment variables in app.html](/docs/kit/project-structure#Project-files-src)
+- A new [text helper](/docs/kit/@sveltejs-kit#text) for creating responses
 - And a ton of bug fixes – see [the changelog](https://github.com/sveltejs/kit/blob/master/packages/kit/CHANGELOG.md) for the full release notes.
 
 Thank you to everyone who has contributed and uses SvelteKit in their projects. We’ve said it before, but Svelte is a community project, and it wouldn’t be possible without your feedback and contributions.

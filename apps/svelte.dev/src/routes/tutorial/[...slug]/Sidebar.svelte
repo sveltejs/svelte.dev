@@ -99,7 +99,7 @@
 				enable copy-and-paste for the duration of this session
 			</label>
 
-			<button on:click={() => (show_modal = false)}>OK</button>
+			<button class="raised primary" on:click={() => (show_modal = false)}>OK</button>
 		</div>
 	</Modal>
 {/if}
@@ -153,30 +153,12 @@
 	}
 
 	.modal-contents {
-		h2 {
-			font: var(--sk-font-ui-large);
-			margin: 0 0 0.5em 0;
-		}
-
-		p {
-			font: var(--sk-font-ui-medium);
-		}
-
 		label {
 			user-select: none;
 			font: var(--sk-font-ui-medium);
-		}
-
-		button {
-			display: block;
-			background-color: var(--sk-theme-1);
-			color: white;
-			padding: 1rem;
-			width: 10em;
-			margin: 1em 0 0 0;
-			border-radius: var(--sk-border-radius);
-			line-height: 1;
-			font: var(--sk-font-ui-small);
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
 		}
 	}
 

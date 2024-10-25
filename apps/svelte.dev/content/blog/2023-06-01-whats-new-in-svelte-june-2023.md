@@ -27,11 +27,11 @@ For all the changes to the Svelte compiler, including unreleased changes, check 
 
 ## What's new in SvelteKit
 
-- Route-level entry generators allow exporting an entries function from `+page`, `+page.server`, and `+server` files to supply possible values for params for prerendering (**1.16.0**, [Docs](https://kit.svelte.dev/docs/page-options#entries), [#9571](https://github.com/sveltejs/kit/pull/9571))
-- URLs in `<meta>` tags are now crawled to make programmatic social-images much easier (**1.17.0**, [Docs](https://kit.svelte.dev/docs/seo#manual-setup-title-and-meta), [#9900](https://github.com/sveltejs/kit/pull/9900))
-- `data` and `form` have been renamed to `formData` and `formElement` respectively in the `enhance` function. Using them through the old names will log a deprecation warning and they'll be removed in a future version. (**1.17.0**, [Docs](https://kit.svelte.dev/docs/form-actions#progressive-enhancement-use-enhance), [#9902](https://github.com/sveltejs/kit/pull/9902))
-- Link options can now be set to `true` and `false` (**1.19.0**, [Docs](https://kit.svelte.dev/docs/link-options#disabling-options), [#10039](https://github.com/sveltejs/kit/pull/10039))
-- The new `resolvePath` export can be used to build relative paths from route IDs and parameters (**1.19.0**, [Docs](https://kit.svelte.dev/docs/modules#sveltejs-kit-resolvepath), [#9949](https://github.com/sveltejs/kit/pull/9949))
+- Route-level entry generators allow exporting an entries function from `+page`, `+page.server`, and `+server` files to supply possible values for params for prerendering (**1.16.0**, [Docs](/docs/kit/page-options#entries), [#9571](https://github.com/sveltejs/kit/pull/9571))
+- URLs in `<meta>` tags are now crawled to make programmatic social-images much easier (**1.17.0**, [Docs](/docs/kit/seo#Manual-setup-title-and-meta), [#9900](https://github.com/sveltejs/kit/pull/9900))
+- `data` and `form` have been renamed to `formData` and `formElement` respectively in the `enhance` function. Using them through the old names will log a deprecation warning and they'll be removed in a future version. (**1.17.0**, [Docs](/docs/kit/form-actions#Progressive-enhancement-use:enhance), [#9902](https://github.com/sveltejs/kit/pull/9902))
+- Link options can now be set to `true` and `false` (**1.19.0**, [Docs](/docs/kit/link-options#Disabling-options), [#10039](https://github.com/sveltejs/kit/pull/10039))
+- The new `resolvePath` export can be used to build relative paths from route IDs and parameters (**1.19.0**, [#9949](https://github.com/sveltejs/kit/pull/9949))
 
 ---
 

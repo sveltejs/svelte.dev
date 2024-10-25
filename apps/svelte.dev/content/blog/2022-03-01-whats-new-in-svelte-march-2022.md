@@ -13,9 +13,9 @@ More on that and other new features and fixes below!
 
 ## What's new in SvelteKit
 
-- The docs are now searchable and multipage with type definitions and hoverable code examples - Check them out at [kit.svelte.dev/docs](https://kit.svelte.dev/docs/)
-- Page endpoints significantly decrease the boilerplate needed when loading a page ([Issue](https://github.com/sveltejs/kit/issues/3532), [PR](https://github.com/sveltejs/kit/pull/3679), [Docs](https://kit.svelte.dev/docs/routing#endpoints-page-endpoints))
-- Application versioning and update detection support lets you determine what to do when a route fails to load after an app update ([Issue](https://github.com/sveltejs/kit/issues/87), [PR](https://github.com/sveltejs/kit/pull/3412), [Docs](https://kit.svelte.dev/docs/configuration#version))
+- The docs are now searchable and multipage with type definitions and hoverable code examples - Check them out at [svelte.dev/docs/kit](/docs/kit/)
+- Page endpoints significantly decrease the boilerplate needed when loading a page ([Issue](https://github.com/sveltejs/kit/issues/3532), [PR](https://github.com/sveltejs/kit/pull/3679), [Docs](/docs/kit/routing#server))
+- Application versioning and update detection support lets you determine what to do when a route fails to load after an app update ([Issue](https://github.com/sveltejs/kit/issues/87), [PR](https://github.com/sveltejs/kit/pull/3412), [Docs](/docs/kit/configuration#version))
 - A new option in `npm init svelte@next` will now set up Playwright automatically for testing ([PR](https://github.com/sveltejs/kit/pull/4056))
 
 ### Breaking Changes
@@ -24,7 +24,7 @@ More on that and other new features and fixes below!
 - App-level types now live in the `App` namespace which allows you to type global types like `Stuff` or `Session` ([#3670](https://github.com/sveltejs/kit/pull/3670))
 - `JSONString` is now `JSONValue` ([#3683](https://github.com/sveltejs/kit/pull/3683))
 - `createIndexFiles` has been removed — it is now controlled by the `trailingSlash` option ([#3801](https://github.com/sveltejs/kit/pull/3801))
-- SvelteKit will no longer exclude root-relative external links from prerendering, which will cause 404s if these URLs are intended to be served by a separate app. Use a custom [`prerender.onError`](https://kit.svelte.dev/docs/configuration#prerender) handler if you need to ignore them ([#3826](https://github.com/sveltejs/kit/pull/3826))
+- SvelteKit will no longer exclude root-relative external links from prerendering, which will cause 404s if these URLs are intended to be served by a separate app. Use a custom [`prerender.onError`](/docs/kit/configuration#prerender) handler if you need to ignore them ([#3826](https://github.com/sveltejs/kit/pull/3826))
 
 ## New in Language Tools
 

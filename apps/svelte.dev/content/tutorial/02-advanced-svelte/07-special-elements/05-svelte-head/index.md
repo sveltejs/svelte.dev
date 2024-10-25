@@ -14,7 +14,7 @@ Since those are quite hard to show in the context of this tutorial, we'll use it
 </script>
 
 +++<svelte:head>
-	<link rel="stylesheet" href="/stylesheets/{selected}.css" />
+	<link rel="stylesheet" href="/tutorial/stylesheets/{selected}.css" />
 </svelte:head>+++
 
 <h1>Welcome to my site!</h1>
