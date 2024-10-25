@@ -37,7 +37,6 @@
 		</a>
 
 		<button
-			class="close-button"
 			aria-label="Dismiss"
 			onclick={() => {
 				$hidden[banner.id] = true;
@@ -75,12 +74,19 @@
 	}
 
 	a {
+		position: relative;
 		color: inherit;
 		width: 100%;
 		overflow: hidden;
 		text-overflow: ellipsis;
 		white-space: pre;
 		text-align: center;
+		line-height: 1;
+	}
+
+	span {
+		position: relative;
+		top: 0.05em;
 	}
 
 	.large {
