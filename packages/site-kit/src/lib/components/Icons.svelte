@@ -195,5 +195,14 @@ Provides a list of svg icons that can be referenced through the `Icon` component
 				d="M5 22q-.825 0-1.413-.588T3 20V6h2v14h11v2H5Zm4-4q-.825 0-1.413-.588T7 16V4q0-.825.588-1.413T9 2h9q.825 0 1.413.588T20 4v12q0 .825-.588 1.413T18 18H9Z"
 			/>
 		</symbol>
+
+		<symbol viewBox="0 0 24 24" id="font-toggle">
+			<g stroke="currentColor">
+				<path d="m3 15 4-8 4 8" />
+				<path d="M4 13h6" />
+				<circle cx="18" cy="12" r="3" />
+				<path d="M21 9v6" />
+			</g>
+		</symbol>
 	</svg>
 </div>

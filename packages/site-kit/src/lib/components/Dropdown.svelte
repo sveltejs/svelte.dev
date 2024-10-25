@@ -4,14 +4,15 @@
 	let {
 		children,
 		dropdown,
-		align = 'left'
-	}: { children: Snippet; dropdown: Snippet; align?: 'left' | 'right' } = $props();
+		align = 'left',
+		top = false
+	}: { children: Snippet; dropdown: Snippet; align?: 'left' | 'right'; top?: boolean } = $props();
 </script>
 
 <div class="dropdown">
 	{@render children()}
 
-	<nav class="dropdown-content" class:align-right={align === 'right'}>
+	<nav class="dropdown-content" class:align-right={align === 'right'} class:top>
 		{@render dropdown()}
 	</nav>
 </div>
@@ -40,6 +41,11 @@
 		&.align-right {
 			left: auto;
 			right: -1rem;
+		}
+
+		&.top {
+			top: auto;
+			bottom: calc(50% + min(50%, 1.5rem));
 		}
 	}
 

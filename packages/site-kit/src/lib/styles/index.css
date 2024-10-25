@@ -6,6 +6,8 @@
 @import '@fontsource/fira-mono/400.css';
 @import '@fontsource/fira-sans/400.css';
 
+@import '@fontsource/opendyslexic/400.css';
+
 @import './tokens.css';
 @import './base.css';
 @import './text.css';
