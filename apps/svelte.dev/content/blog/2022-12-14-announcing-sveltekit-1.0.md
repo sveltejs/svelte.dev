@@ -88,7 +88,7 @@ Back in early 2021, when we adopted Vite, we were the first major application fr
 
 We’ve had terrific support from teams at [Vercel](https://vercel.com), [Netlify](https://netlify.app/) and [Cloudflare](https://www.cloudflare.com/) to make zero-config deployments for those platforms possible.
 
-Our friends at [StackBlitz](https://stackblitz.com/) worked feverishly to make [our new tutorial](/tutorial), the first-of-its-kind [WebContainer](https://blog.stackblitz.com/posts/introducing-webcontainers/)-powered interactive tutorial, a reality.
+Our friends at [StackBlitz](https://stackblitz.com/) worked feverishly to make [learn.svelte.dev](https://learn.svelte.dev), our first-of-its-kind [WebContainer](https://blog.stackblitz.com/posts/introducing-webcontainers/)-powered interactive tutorial, a reality.
 
 Finally, none of this could have happened without the project’s financial supporters. This includes hundreds of backers on [Open Collective](https://opencollective.com/svelte), and Vercel, which employs two core developers ([Rich](https://twitter.com/Rich_Harris/) and [Simon](https://twitter.com/dummdidumm_/)) to work on Svelte full time and supports the project in many other ways, such as [Steph’s](https://twitter.com/steph_dietz_) [Beginner SvelteKit](https://vercel.com/docs/beginner-sveltekit) course.
 
