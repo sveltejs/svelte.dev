@@ -16,7 +16,7 @@ Login to [Supabase](https://supabase.com) and create a database. Once done, you 
 - `SUPABASE_URL`: The config URL
 - `SUPABASE_KEY`: The public API key
 
-Then, navigate to your database's "SQL Editor", click on "New query", and paste in [setup.sql](./setup.sql). Run this SQL to seed the database and you're good to go.
+Then, navigate to your database's "SQL Editor", click on "New query", and paste in [setup.sql](./apps/svelte.dev/setup.sql). Run this SQL to seed the database and you're good to go.
 
 ## Tutorial
 
