@@ -4,7 +4,6 @@ const mappings = new Map([
 	['/docs/accessibility-warnings', '/docs/svelte/compiler-warnings'],
 	['/docs/basic-markup', '/docs/svelte/basic-markup'],
 	['/docs/client-side-component-api', '/docs/svelte/legacy-component-api'],
-	['/docs/component-directives', '/docs/svelte/svelte-files'], // no good mapping for this one
 	['/docs/custom-elements-api', '/docs/svelte/custom-elements'],
 	['/docs/element-directives', '/docs/svelte/basic-markup'], // no good mapping for this one
 	['/docs/introduction', '/docs/svelte/overview'],
