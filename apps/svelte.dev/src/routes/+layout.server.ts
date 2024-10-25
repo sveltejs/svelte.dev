@@ -1,5 +1,4 @@
 import { docs, index } from '$lib/server/content';
-import { fetchBanner } from '@sveltejs/site-kit/components';
 import type { BannerData, NavigationLink } from '@sveltejs/site-kit';
 
 const nav_links: NavigationLink[] = [
