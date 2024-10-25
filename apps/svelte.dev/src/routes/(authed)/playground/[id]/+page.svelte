@@ -106,7 +106,7 @@
 	}
 
 	async function update_hash() {
-		// Only change hash on editor blur to not pollute everyone's browser history
+		// Only change hash when necessary to avoid polluting everyone's browser history
 		if (modified) {
 			const json = JSON.stringify({ files: repl.toJSON().files });
 			await set_hash(json);
