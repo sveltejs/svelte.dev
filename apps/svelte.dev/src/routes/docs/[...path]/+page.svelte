@@ -32,10 +32,18 @@
 			return;
 		}
 
-		const id = hash.toLowerCase().replaceAll(':', '-');
+		// kit/svelte4 replaced `:` character
+		// e.g. we want to redirect progressive-enhancement-use-enhance to Progressive-enhancement-use:enhance
+		// kit docs also had types in URL that we want to replace. e.g.
+		// https://kit.svelte.dev/docs/types#public-types-loadevent
+		// https://kit.svelte.dev/docs/types#private-types-cspdirectives
+		const id = hash
+			.toLowerCase()
+			.replaceAll(':', '-')
+			.replaceAll('public-types-', '')
+			.replaceAll('private-types-', '');
 
 		for (const heading of content.querySelectorAll('[id]')) {
-			// e.g. we want to redirect progressive-enhancement-use-enhance to Progressive-enhancement-use:enhance
 			if (heading.id.toLowerCase().replaceAll(':', '-') === id) {
 				goto(`#${heading.id}`, {
 					replaceState: true
