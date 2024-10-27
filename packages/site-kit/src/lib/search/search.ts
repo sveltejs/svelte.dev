@@ -48,6 +48,11 @@ export function init(blocks: Block[]) {
  * Search for a given query in the existing index
  */
 export function search(query: string): BlockGroup[] {
+	const isDocsSearch = query.toLowerCase().startsWith('docs:');
+	if (isDocsSearch) {
+		query = query.slice(5).trimStart();
+	}
+
 	const escaped = query.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
 	const regex = new RegExp(`(^|\\b)${escaped}`, 'i');
 
@@ -56,6 +61,8 @@ export function search(query: string): BlockGroup[] {
 		// @ts-expect-error flexsearch types are wrong i think?
 		.map(lookup)
 		.map((block, rank) => ({ block: block as Block, rank }))
+		// If docs filter is used, only show docs results
+		.filter(({ block }) => !isDocsSearch || block.breadcrumbs[0] === 'Docs')
 		.sort((a, b) => {
 			// If rank is way lower, give that priority
 			if (Math.abs(a.rank - b.rank) > 3) {
@@ -79,7 +86,6 @@ export function search(query: string): BlockGroup[] {
 
 	for (const block of blocks) {
 		const breadcrumbs = block.breadcrumbs.slice(0, 2);
-
 		const group = (groups[breadcrumbs.join('::')] ??= {
 			breadcrumbs,
 			blocks: []
