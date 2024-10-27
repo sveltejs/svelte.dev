@@ -86,6 +86,7 @@ export function search(query: string): BlockGroup[] {
 
 	for (const block of blocks) {
 		const breadcrumbs = block.breadcrumbs.slice(0, 2);
+
 		const group = (groups[breadcrumbs.join('::')] ??= {
 			breadcrumbs,
 			blocks: []
