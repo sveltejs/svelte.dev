@@ -28,6 +28,7 @@ body {
 }
 
 * {
+	transition: color 0.5s, background 0.5s;
 	box-sizing: inherit;
 	margin: 0;
 	padding: 0;
