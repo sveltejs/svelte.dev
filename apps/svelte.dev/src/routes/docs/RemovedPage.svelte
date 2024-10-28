@@ -34,8 +34,7 @@
 		<ul>
 			{#each docs.values() as [title, href]}
 				<li>
-					<span style="font-weight:bold">{title}</span> is now
-					<a {href}>here</a>
+					<a {href}>{title}</a>
 				</li>
 			{/each}
 		</ul>
