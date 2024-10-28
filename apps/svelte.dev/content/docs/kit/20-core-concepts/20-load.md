@@ -24,13 +24,16 @@ export function load({ params }) {
 ```svelte
 <!--- file: src/routes/blog/[slug]/+page.svelte --->
 <script>
-	/** @type {import('./$types').PageData} */
-	export let data;
+	/** @type {{ data: import('./$types').PageData }} */
+	let { data } = $props();
 </script>
 
 <h1>{data.post.title}</h1>
 <div>{@html data.post.content}</div>
 ```
+
+> [!LEGACY] In Svelte 4
+> In Svelte 4, you'd use `export let data` instead
 
 Thanks to the generated `$types` module, we get full type safety.
 
@@ -85,13 +88,13 @@ export async function load() {
 ```svelte
 <!--- file: src/routes/blog/[slug]/+layout.svelte --->
 <script>
-	/** @type {import('./$types').LayoutData} */
-	export let data;
+	/** @type {{ data: import('./$types').LayoutData, children: Snippet }} */
+	let { data, children } = $props();
 </script>
 
 <main>
-	<!-- +page.svelte is rendered in this <slot> -->
-	<slot />
+	<!-- +page.svelte is `@render`ed here -->
+	{@render children()}
 </main>
 
 <aside>
@@ -115,13 +118,13 @@ Data returned from layout `load` functions is available to child `+layout.svelte
 <script>
 	+++import { page } from '$app/stores';+++
 
-	/** @type {import('./$types').PageData} */
-	export let data;
+	/** @type {{ data: import('./$types').PageData }} */
+	let { data } = $props();
 
 +++	// we can access `data.posts` because it's returned from
 	// the parent layout `load` function
 	let index = $derived(data.posts.findIndex(post => post.slug === $page.params.slug));
-	let next = $derived(data.posts[index - 1];)+++
+	let next = $derived(data.posts[index + 1]);+++
 </script>
 
 <h1>{data.post.title}</h1>
@@ -330,7 +333,7 @@ export async function load({ fetch, setHeaders }) {
 }
 ```
 
-Setting the same header multiple times (even in separate `load` functions) is an error — you can only set a given header once. You cannot add a `set-cookie` header with `setHeaders` — use `cookies.set(name, value, options)` instead.
+Setting the same header multiple times (even in separate `load` functions) is an error. You can only set a given header once using the `setHeaders` function. You cannot add a `set-cookie` header with `setHeaders` — use `cookies.set(name, value, options)` instead.
 
 ## Using parent data
 
@@ -365,8 +368,8 @@ export async function load({ parent }) {
 ```svelte
 <!--- file: src/routes/abc/+page.svelte --->
 <script>
-	/** @type {import('./$types').PageData} */
-	export let data;
+	/** @type {{ data: import('./$types').PageData }} */
+	let { data } = $props();
 </script>
 
 <!-- renders `1 + 2 = 3` -->
@@ -504,8 +507,8 @@ This is useful for creating skeleton loading states, for example:
 ```svelte
 <!--- file: src/routes/blog/[slug]/+page.svelte --->
 <script>
-	/** @type {import('./$types').PageData} */
-	export let data;
+	/** @type {{ data: import('./$types').PageData }} */
+	let { data } = $props();
 </script>
 
 <h1>{data.post.title}</h1>
@@ -645,8 +648,8 @@ export async function load({ fetch, depends }) {
 <script>
 	import { invalidate, invalidateAll } from '$app/navigation';
 
-	/** @type {import('./$types').PageData} */
-	export let data;
+	/** @type {{ data: import('./$types').PageData }} */
+	let { data } = $props();
 
 	function rerunLoadFunction() {
 		// any of these will cause the `load` function to rerun

@@ -1260,7 +1260,7 @@ export async function load({ depends }) {
 <script>
 	import { invalidate } from '$app/navigation';
 
-	export let data;
+	let { data } = $props();
 
 	const increase = async () => {
 		await invalidate('increase:count');
@@ -1856,7 +1856,7 @@ locals: App.Locals;
 
 <div class="ts-block-property-details">
 
-Contains custom data that was added to the request within the [`handle hook`](https://svelte.dev/docs/kit/hooks#Server-hooks-handle).
+Contains custom data that was added to the request within the [`server handle hook`](https://svelte.dev/docs/kit/hooks#Server-hooks-handle).
 
 </div>
 </div>
@@ -2451,7 +2451,7 @@ export async function load({ depends }) {
 <script>
 	import { invalidate } from '$app/navigation';
 
-	export let data;
+	let { data } = $props();
 
 	const increase = async () => {
 		await invalidate('increase:count');
