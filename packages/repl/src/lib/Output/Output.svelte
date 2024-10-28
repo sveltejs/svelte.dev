@@ -61,7 +61,7 @@
 
 	let markdown = $derived(is_markdown ? (marked.parse(workspace.current!.contents) as string) : '');
 
-	let current = $derived(workspace.compiled[workspace.current.name!]);
+	let current = $derived(workspace.current_compiled);
 
 	// TODO this effect is a bit of a code smell
 	$effect(() => {
