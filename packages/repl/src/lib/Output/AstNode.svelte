@@ -24,7 +24,7 @@
 
 	const { toggleable } = get_repl_context();
 
-	let list_item_el: HTMLLIElement = $state();
+	let list_item_el = $state() as HTMLLIElement;
 
 	let is_root = $derived(path_nodes[0] === value);
 	let is_leaf = $derived(path_nodes[path_nodes.length - 1] === value);
