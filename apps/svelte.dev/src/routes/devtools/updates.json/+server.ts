@@ -1,15 +1,23 @@
+import { error, json } from '@sveltejs/kit';
+import type { ServerlessConfig } from '@sveltejs/adapter-vercel';
+
+export const config: ServerlessConfig = {
+	isr: {
+		expiration: 300
+	}
+};
+
 // We manage FF extension by ourselves through GH releases and this acts as `update_url`
 // for our users to automatically update their extension when a new version is released
 // https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings#update_url
-
-import { json } from '@sveltejs/kit';
-
-export const prerender = true;
-
 export async function GET({ fetch }) {
-	const gh: Array<{ name: string }> = await fetch(
-		'https://api.github.com/repos/sveltejs/svelte-devtools/tags'
-	).then((r) => r.json());
+	const response = await fetch('https://api.github.com/repos/sveltejs/svelte-devtools/tags');
+
+	if (!response.ok) {
+		error(response.status);
+	}
+
+	const gh: Array<{ name: string }> = await response.json();
 
 	// v2.2.0 is the first version that has the Firefox extension
 	const tags = gh.reverse().slice(gh.findIndex((t) => t.name === 'v2.2.0'));
