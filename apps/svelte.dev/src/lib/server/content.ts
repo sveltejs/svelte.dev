@@ -24,6 +24,9 @@ function format_date(date: string) {
 	return `${months[+m - 1]} ${+d} ${y}`;
 }
 
+const now = new Date();
+const today = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
+
 export const blog_posts = index.blog.children
 	.map((post) => {
 		const authors: Array<{ name: string; url: string }> = [];
@@ -45,10 +48,17 @@ export const blog_posts = index.blog.children
 			...post,
 			date,
 			date_formatted: format_date(date),
-			authors
+			authors,
+			pinned: post.metadata.pinnedUntil ? post.metadata.pinnedUntil > today : false
 		};
 	})
-	.sort((a, b) => (a.date < b.date ? 1 : -1));
+	.sort((a, b) => {
+		if (!!a.pinned !== !!b.pinned) {
+			return a.pinned ? -1 : 1;
+		}
+
+		return a.date < b.date ? 1 : -1;
+	});
 
 /**
  * Create docs index, which is basically the same structure as the original index
