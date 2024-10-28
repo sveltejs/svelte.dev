@@ -159,7 +159,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 		use:trap
 	>
 		<div class="search-box">
-			<div style="background: var(--background); padding: 0.5rem">
+			<div class="controls">
 				<input
 					use:forcefocus
 					onkeydown={(e) => {
@@ -177,12 +177,12 @@ It appears when the user clicks on the `Search` component or presses the corresp
 					aria-label={placeholder}
 					spellcheck="false"
 				/>
-			</div>
 
-			<button aria-label="Close" onclick={close}>
-				<!-- <Icon name="close" /> -->
-				<kbd>Esc</kbd>
-			</button>
+				<button class="raised" aria-label="Close" onclick={close}>
+					<!-- <Icon name="close" /> -->
+					<kbd>Esc</kbd>
+				</button>
+			</div>
 
 			<span id="search-description" class="visually-hidden">
 				{#if search_description}
@@ -302,16 +302,22 @@ It appears when the user clicks on the `Search` component or presses the corresp
 		}
 	}
 
+	.controls {
+		background: var(--background);
+		padding: 0.5rem;
+		display: flex;
+		gap: 1rem;
+	}
+
 	input {
 		font: var(--sk-font-ui-large);
-		width: 100%;
-		padding: calc(var(--padding) - 0.5rem) 5rem calc(var(--padding) - 0.5rem) var(--padding);
+		flex: 1;
+		padding: var(--padding) calc(var(--padding) - 0.5rem);
 		height: 6rem;
 		border: none;
-		border-bottom: 1px solid var(--sk-back-3);
 		flex-shrink: 0;
-		background: var(--sk-back-3);
 		color: var(--sk-text-1);
+		border-bottom: 1px solid var(--sk-back-6);
 
 		&::selection {
 			background-color: var(--sk-back-translucent);
@@ -323,20 +329,15 @@ It appears when the user clicks on the `Search` component or presses the corresp
 		}
 
 		&:focus-visible {
-			outline-offset: -3px;
+			outline-offset: -2px;
 		}
 	}
 
 	button[aria-label='Close'] {
-		--size: 2rem;
-		position: absolute;
-		top: 0.5rem;
-		right: 0;
-		width: 5rem;
-		height: 6rem;
+		height: 100%;
+		aspect-ratio: 1;
 		background: none;
 		color: var(--sk-text-2);
-		opacity: 0.3;
 
 		&:focus-visible {
 			opacity: 1;
@@ -344,8 +345,15 @@ It appears when the user clicks on the `Search` component or presses the corresp
 		}
 
 		kbd {
+			display: flex;
+			align-items: center;
+			justify-content: center;
 			text-transform: uppercase;
-			font: var(--sk-font-ui-small);
+			background: none;
+			font: var(--sk-font-ui-medium);
+			color: var(--sk-text-4);
+			width: 100%;
+			height: 100%;
 		}
 	}
 
