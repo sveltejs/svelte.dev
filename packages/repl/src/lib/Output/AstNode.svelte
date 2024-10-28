@@ -1,55 +1,72 @@
 <script lang="ts">
+	import AstNode from './AstNode.svelte';
 	import { get_repl_context } from '../context';
 	import { tick } from 'svelte';
 	import type { CompileResult } from 'svelte/compiler';
 
 	type Ast = CompileResult['ast'];
 
-	export let key = '';
-	export let value: Ast;
-	export let collapsed = true;
-	export let path_nodes: Ast[] = [];
-	export let autoscroll = true;
+	interface Props {
+		key?: string;
+		value: Ast;
+		collapsed?: boolean;
+		path_nodes?: Ast[];
+		autoscroll?: boolean;
+	}
+
+	let {
+		key = '',
+		value,
+		collapsed = $bindable(true),
+		path_nodes = [],
+		autoscroll = true
+	}: Props = $props();
 
 	const { toggleable } = get_repl_context();
 
-	let list_item_el: HTMLLIElement;
+	let list_item_el: HTMLLIElement = $state();
 
-	$: is_root = path_nodes[0] === value;
-	$: is_leaf = path_nodes[path_nodes.length - 1] === value;
-	$: is_ast_array = Array.isArray(value);
-	$: is_collapsable = value && typeof value === 'object';
-	$: is_markable =
+	let is_root = $derived(path_nodes[0] === value);
+	let is_leaf = $derived(path_nodes[path_nodes.length - 1] === value);
+	let is_ast_array = $derived(Array.isArray(value));
+	let is_collapsable = $derived(value && typeof value === 'object');
+	let is_markable = $derived(
 		is_collapsable &&
-		'start' in value &&
-		'end' in value &&
-		typeof value.start === 'number' &&
-		typeof value.end === 'number';
-	$: key_text = key ? `${key}:` : '';
+			'start' in value &&
+			'end' in value &&
+			typeof value.start === 'number' &&
+			typeof value.end === 'number'
+	);
+	let key_text = $derived(key ? `${key}:` : '');
 
-	let preview_text = '';
-	$: {
-		if (!is_collapsable || !collapsed) break $;
+	let preview_text = $state('');
+
+	$effect(() => {
+		if (!is_collapsable || !collapsed) return;
 
 		if (is_ast_array) {
-			if (!('length' in value)) break $;
+			if (!('length' in value)) return;
 
 			preview_text = `[ ${value.length} element${value.length === 1 ? '' : 's'} ]`;
 		} else {
 			preview_text = `{ ${Object.keys(value).join(', ')} }`;
 		}
-	}
+	});
 
-	$: collapsed = !path_nodes.includes(value);
+	$effect(() => {
+		collapsed = !path_nodes.includes(value);
+	});
 
-	$: if (autoscroll && is_leaf && !$toggleable) {
-		// wait for all nodes to render before scroll
-		tick().then(() => {
-			if (list_item_el) {
-				list_item_el.scrollIntoView();
-			}
-		});
-	}
+	$effect(() => {
+		if (autoscroll && is_leaf && !$toggleable) {
+			// wait for all nodes to render before scroll
+			tick().then(() => {
+				if (list_item_el) {
+					list_item_el.scrollIntoView();
+				}
+			});
+		}
+	});
 
 	function handle_mark_text(e: MouseEvent | FocusEvent) {
 		if (is_markable) {
@@ -79,12 +96,12 @@
 <li
 	bind:this={list_item_el}
 	class:marked={!is_root && is_leaf}
-	on:mouseover={handle_mark_text}
-	on:focus={handle_mark_text}
-	on:mouseleave={handle_unmark_text}
+	onmouseover={handle_mark_text}
+	onfocus={handle_mark_text}
+	onmouseleave={handle_unmark_text}
 >
 	{#if !is_root && is_collapsable}
-		<button class="ast-toggle" class:open={!collapsed} on:click={() => (collapsed = !collapsed)}>
+		<button class="ast-toggle" class:open={!collapsed} onclick={() => (collapsed = !collapsed)}>
 			{key_text}
 		</button>
 	{:else if key_text}
@@ -92,14 +109,14 @@
 	{/if}
 	{#if is_collapsable}
 		{#if collapsed && !is_root}
-			<button class="preview" on:click={() => (collapsed = !collapsed)}>
+			<button class="preview" onclick={() => (collapsed = !collapsed)}>
 				{preview_text}
 			</button>
 		{:else}
 			<span>{is_ast_array ? '[' : '{'}</span>
 			<ul>
 				{#each Object.entries(value) as [k, v]}
-					<svelte:self key={is_ast_array ? '' : k} value={v} {path_nodes} {autoscroll} />
+					<AstNode key={is_ast_array ? '' : k} value={v} {path_nodes} {autoscroll} />
 				{/each}
 			</ul>
 			<span>{is_ast_array ? ']' : '}'}</span>
