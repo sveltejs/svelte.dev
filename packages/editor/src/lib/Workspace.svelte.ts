@@ -78,6 +78,7 @@ const default_extensions = [
 interface ExposedCompilerOptions {
 	generate: 'client' | 'server';
 	dev: boolean;
+	modernAst: boolean;
 }
 
 export class Workspace {
@@ -87,7 +88,8 @@ export class Workspace {
 
 	#compiler_options = $state.raw<ExposedCompilerOptions>({
 		generate: 'client',
-		dev: false
+		dev: false,
+		modernAst: true
 	});
 	compiled = $state<Record<string, Compiled>>({});
 

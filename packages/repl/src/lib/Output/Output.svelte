@@ -81,8 +81,6 @@
 			css_workspace.update_file(css);
 		});
 	});
-
-	let ast = $derived(current?.result?.ast);
 </script>
 
 <div class="view-toggle">
@@ -132,9 +130,9 @@
 </div>
 
 <!-- ast output -->
-{#if ast}
+{#if current?.result}
 	<div class="tab-content" class:visible={!is_markdown && view === 'ast'}>
-		<AstView {ast} autoscroll={!is_markdown && view === 'ast'} />
+		<AstView {workspace} ast={current.result.ast} autoscroll={!is_markdown && view === 'ast'} />
 	</div>
 {/if}
 

@@ -3,11 +3,17 @@
 	import Message from '../Message.svelte';
 	import AstNode from './AstNode.svelte';
 	import type { CompileResult } from 'svelte/compiler';
+	import type { Workspace } from 'editor';
 
 	type Ast = CompileResult['ast'];
 
-	export let ast: Ast;
-	export let autoscroll = true;
+	interface Props {
+		workspace: Workspace;
+		ast: Ast;
+		autoscroll?: boolean;
+	}
+
+	let { workspace, ast, autoscroll = true }: Props = $props();
 
 	// $cursor_index may go over the max since ast computation is usually slower.
 	// clamping this helps prevent the collapse view flashing
@@ -15,7 +21,7 @@
 	let max_cursor_index = 0;
 	// $: max_cursor_index = !ast ? $cursorIndex : Math.min($cursorIndex, get_ast_max_end(ast));
 
-	$: path_nodes = find_deepest_path(max_cursor_index, [ast]) || [];
+	let path_nodes = $derived(find_deepest_path(max_cursor_index, [ast]) || []);
 
 	function find_deepest_path(cursor: number, paths: Ast[]): Ast[] | undefined {
 		const value = paths[paths.length - 1];
@@ -72,11 +78,10 @@
 	<label>
 		modern
 
-		<!-- TODO wire up -->
 		<Checkbox
-			checked={false}
-			onchange={(value) => {
-				// TODO
+			checked={workspace.compiler_options.modernAst}
+			onchange={(modernAst) => {
+				workspace.update_compiler_options({ modernAst });
 			}}
 		/>
 	</label>
