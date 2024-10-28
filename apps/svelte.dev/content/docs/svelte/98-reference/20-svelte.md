@@ -30,7 +30,7 @@ import {
 
 <blockquote class="tag deprecated">
 
-Use `$effect` instead — see https://svelte-5-preview.vercel.app/docs/deprecations#beforeupdate-and-afterupdate
+Use `$effect` instead — see https://svelte.dev/docs/svelte/$effect
 
 </blockquote>
 
@@ -54,7 +54,7 @@ function afterUpdate(fn: () => void): void;
 
 <blockquote class="tag deprecated">
 
-Use `$effect.pre` instead — see https://svelte-5-preview.vercel.app/docs/deprecations#beforeupdate-and-afterupdate
+Use `$effect.pre` instead — see https://svelte.dev/docs/svelte/$effect#$effect.pre
 
 </blockquote>
 
@@ -78,11 +78,11 @@ function beforeUpdate(fn: () => void): void;
 
 <blockquote class="tag deprecated">
 
-Use callback props and/or the `$host()` rune instead — see https://svelte-5-preview.vercel.app/docs/deprecations#createeventdispatcher
+Use callback props and/or the `$host()` rune instead — see https://svelte.dev/docs/svelte/v5-migration-guide#Event-changes-Component-events
 
 </blockquote>
 
-Creates an event dispatcher that can be used to dispatch [component events](https://svelte.dev/docs#template-syntax-component-directives-on-eventname).
+Creates an event dispatcher that can be used to dispatch [component events](https://svelte.dev/docs/svelte/legacy-on#Component-events).
 Event dispatchers are functions that can take two arguments: `name` and `detail`.
 
 Component events created with `createEventDispatcher` create a
@@ -279,7 +279,7 @@ it can be called from an external module).
 
 If a function is returned _synchronously_ from `onMount`, it will be called when the component is unmounted.
 
-`onMount` does not run inside a [server-side component](https://svelte.dev/docs#run-time-server-side-component-api).
+`onMount` does not run inside [server-side components](https://svelte.dev/docs/svelte/svelte-server#render).
 
 <div class="ts-block">
 
@@ -346,8 +346,6 @@ function unmount(component: Record<string, any>): void;
 
 Use `untrack` to prevent something from being treated as an `$effect`/`$derived` dependency.
 
-https://svelte-5-preview.vercel.app/docs/functions#untrack
-
 <div class="ts-block">
 
 ```dts
@@ -401,13 +399,13 @@ interface Component<
 ): {
 	/**
 	 * @deprecated This method only exists when using one of the legacy compatibility helpers, which
-	 * is a stop-gap solution. See https://svelte-5-preview.vercel.app/docs/breaking-changes#components-are-no-longer-classes
+	 * is a stop-gap solution. See https://svelte.dev/docs/svelte/v5-migration-guide#Components-are-no-longer-classes
 	 * for more info.
 	 */
 	$on?(type: string, callback: (e: any) => void): () => void;
 	/**
 	 * @deprecated This method only exists when using one of the legacy compatibility helpers, which
-	 * is a stop-gap solution. See https://svelte-5-preview.vercel.app/docs/breaking-changes#components-are-no-longer-classes
+	 * is a stop-gap solution. See https://svelte.dev/docs/svelte/v5-migration-guide#Components-are-no-longer-classes
 	 * for more info.
 	 */
 	$set?(props: Partial<Props>): void;
@@ -445,7 +443,7 @@ The custom element version of the component. Only present if compiled with the `
 
 In Svelte 4, components are classes. In Svelte 5, they are functions.
 Use `mount` instead to instantiate components.
-See [breaking changes](https://svelte-5-preview.vercel.app/docs/breaking-changes#components-are-no-longer-classes)
+See [migration guide](https://svelte.dev/docs/svelte/v5-migration-guide#Components-are-no-longer-classes)
 for more info.
 
 </blockquote>
@@ -725,7 +723,7 @@ let { banner }: { banner: Snippet<[{ text: string }]> } = $props();
 ```
 You can only call a snippet through the `{@render ...}` tag.
 
-https://svelte-5-preview.vercel.app/docs/snippets
+https://svelte.dev/docs/svelte/snippet
 
 <div class="ts-block">
 
@@ -755,7 +753,7 @@ interface Snippet<Parameters extends unknown[] = []> {/*…*/}
 This was the base class for Svelte components in Svelte 4. Svelte 5+ components
 are completely different under the hood. For typing, use `Component` instead.
 To instantiate components, use `mount` instead`.
-See [breaking changes documentation](https://svelte-5-preview.vercel.app/docs/breaking-changes#components-are-no-longer-classes) for more info.
+See [migration guide](https://svelte.dev/docs/svelte/v5-migration-guide#Components-are-no-longer-classes) for more info.
 
 <div class="ts-block">
 
@@ -801,7 +799,7 @@ constructor(options: ComponentConstructorOptions<Properties<Props, Slots>>);
 
 - <span class="tag deprecated">deprecated</span> This constructor only exists when using the `asClassComponent` compatibility helper, which
 is a stop-gap solution. Migrate towards using `mount` instead. See
-https://svelte-5-preview.vercel.app/docs/breaking-changes#components-are-no-longer-classes for more info.
+https://svelte.dev/docs/svelte/v5-migration-guide#Components-are-no-longer-classes for more info.
 
 </div>
 
@@ -819,7 +817,7 @@ $destroy(): void;
 <div class="ts-block-property-bullets">
 
 - <span class="tag deprecated">deprecated</span> This method only exists when using one of the legacy compatibility helpers, which
-is a stop-gap solution. See https://svelte-5-preview.vercel.app/docs/breaking-changes#components-are-no-longer-classes
+is a stop-gap solution. See https://svelte.dev/docs/svelte/v5-migration-guide#Components-are-no-longer-classes
 for more info.
 
 </div>
@@ -841,7 +839,7 @@ $on<K extends Extract<keyof Events, string>>(
 <div class="ts-block-property-bullets">
 
 - <span class="tag deprecated">deprecated</span> This method only exists when using one of the legacy compatibility helpers, which
-is a stop-gap solution. See https://svelte-5-preview.vercel.app/docs/breaking-changes#components-are-no-longer-classes
+is a stop-gap solution. See https://svelte.dev/docs/svelte/v5-migration-guide#Components-are-no-longer-classes
 for more info.
 
 </div>
@@ -860,7 +858,7 @@ $set(props: Partial<Props>): void;
 <div class="ts-block-property-bullets">
 
 - <span class="tag deprecated">deprecated</span> This method only exists when using one of the legacy compatibility helpers, which
-is a stop-gap solution. See https://svelte-5-preview.vercel.app/docs/breaking-changes#components-are-no-longer-classes
+is a stop-gap solution. See https://svelte.dev/docs/svelte/v5-migration-guide#Components-are-no-longer-classes
 for more info.
 
 </div>
@@ -872,7 +870,7 @@ for more info.
 
 <blockquote class="tag deprecated">
 
-Use `Component` instead. See [breaking changes documentation](https://svelte-5-preview.vercel.app/docs/breaking-changes#components-are-no-longer-classes) for more information.
+Use `Component` instead. See [migration guide](https://svelte.dev/docs/svelte/v5-migration-guide#Components-are-no-longer-classes) for more information.
 
 </blockquote>
 
