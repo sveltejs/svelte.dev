@@ -13,6 +13,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 	import { HoverMenu } from '../components';
 	import Search from '../search/Search.svelte';
 	import { tick } from 'svelte';
+	import FontToggle from '../components/FontToggle.svelte';
 
 	interface Props {
 		home_title?: string;
@@ -47,6 +48,10 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		last_scroll = scroll;
 		hash_changed = false;
 	}
+
+	$effect(() => {
+		document.body.style.overflow = open ? 'hidden' : '';
+	});
 </script>
 
 <svelte:window
@@ -126,6 +131,8 @@ Top navigation bar for the application. It provides a slot for the left side, th
 				></a>
 			</div>
 
+			<FontToggle />
+
 			<ThemeToggle />
 		</div>
 	</div>
@@ -138,8 +145,10 @@ Top navigation bar for the application. It provides a slot for the left side, th
 				$searching = true;
 			}}
 		>
-			<Icon name="search" size={16} />
+			<Icon name="search" size={18} />
 		</button>
+
+		<FontToggle />
 
 		<ThemeToggle />
 
@@ -208,7 +217,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		font: var(--sk-font-ui-medium);
 	}
 
-	@media (max-width: 799px) {
+	@media (max-width: 831px) {
 		nav {
 			transition: transform 0.2s;
 		}
@@ -216,6 +225,10 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		nav:not(.visible):not(:focus-within) {
 			transform: translate(0, calc(var(--sk-nav-height)));
 		}
+	}
+
+	button {
+		color: var(--sk-text-3);
 	}
 
 	.links {
@@ -258,24 +271,22 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		position: relative;
 		display: flex;
 		width: 100%;
-		gap: 1rem;
+		gap: 0.5rem;
 
 		.external-links {
 			display: flex;
 			height: 100%;
+			margin: 0 0.5rem;
 		}
 	}
 
 	.home-link {
 		--padding-right: 1rem;
-		width: 11.2rem;
+		width: 3.4rem;
 		height: 100%;
-		background: url(../branding/svelte.svg) no-repeat 0 50% / calc(100% - var(--padding-right)) auto;
+		background: url(../branding/svelte-logo.svg) no-repeat 0 50% / calc(100% - var(--padding-right))
+			auto;
 		padding: 0 var(--padding-right) 0 calc(var(--sk-page-padding-side) + 0rem);
-
-		:root.dark & {
-			background-image: url(../branding/svelte-dark.svg);
-		}
 	}
 
 	.mobile-menu {
@@ -294,7 +305,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		display: block;
 	}
 
-	@media (max-width: 799px) {
+	@media (max-width: 831px) {
 		nav {
 			top: unset;
 			bottom: 0;
@@ -313,7 +324,20 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		}
 	}
 
-	@media (min-width: 800px) {
+	@media (min-width: 480px) {
+		.home-link {
+			width: 11.2rem;
+			background: url(../branding/svelte.svg) no-repeat 0 50% / calc(100% - var(--padding-right))
+				auto;
+			padding: 0 var(--padding-right) 0 calc(var(--sk-page-padding-side) + 0rem);
+
+			:root.dark & {
+				background-image: url(../branding/svelte-dark.svg);
+			}
+		}
+	}
+
+	@media (min-width: 832px) {
 		.home-link {
 			--padding-right: 2rem;
 			width: 13.2rem;

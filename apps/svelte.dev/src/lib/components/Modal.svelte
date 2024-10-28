@@ -74,4 +74,24 @@
 		filter: drop-shadow(3px 5px 10px rgba(0, 0, 0, 0.1));
 		z-index: 99999;
 	}
+
+	.modal :global {
+		h2 {
+			font: var(--sk-font-ui-large);
+			margin: 0 0 0.5em 0;
+		}
+
+		p {
+			font: var(--sk-font-ui-medium);
+		}
+
+		button {
+			display: block;
+			padding: 1rem;
+			width: 10rem;
+			margin: 1em 0 0 0;
+			line-height: 1;
+			font: var(--sk-font-ui-small);
+		}
+	}
 </style>

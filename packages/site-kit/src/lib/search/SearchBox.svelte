@@ -26,6 +26,8 @@ It appears when the user clicks on the `Search` component or presses the corresp
 	let search: any = $state(null);
 	let recent_searches: any[] = $state([]);
 
+	let last_scroll_position: number | null = null;
+
 	let worker: Worker;
 	let ready = $state(false);
 
@@ -68,9 +70,9 @@ It appears when the user clicks on the `Search` component or presses the corresp
 	async function close() {
 		if ($searching) {
 			$searching = false;
-			const scroll = -parseInt(document.body.style.top || '0');
+			const scroll = last_scroll_position || 0;
+			last_scroll_position = null;
 			document.body.style.position = '';
-			document.body.style.top = '';
 			document.body.tabIndex = -1;
 			document.body.focus();
 			document.body.removeAttribute('tabindex');
@@ -108,10 +110,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 
 	$effect(() => {
 		if ($searching) {
-			document.body.style.top = `-${window.scrollY}px`;
-			document.body.style.position = 'fixed';
-
-			$overlay_open = true;
+			last_scroll_position = window.scrollY;
 		}
 	});
 </script>

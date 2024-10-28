@@ -1,6 +1,11 @@
 <div class="outer">
 	<p class="definition">
-		<em>/ˈsvɛlt/</em>
+		<enhanced:img
+			class="pronunciation"
+			alt="Svelte pronunciation guide"
+			src="./svelte-pronunciation.svg"
+		/>
+
 		<span class="description">
 			<span class="adjective"></span> attractively thin, graceful and stylish
 		</span>
@@ -23,18 +28,23 @@
 	<div class="screenshots">
 		<a href="https://survey.stackoverflow.co/2024/technology#2-web-frameworks-and-technologies">
 			<enhanced:img
+				class="screenshot"
 				alt="Stack Overflow 2024 Developer Survey"
 				src="./stack-overflow.png?w=1200,1600"
 			></enhanced:img>
 		</a>
 
 		<a href="https://2023.stateofjs.com/en-US/libraries/front-end-frameworks/">
-			<enhanced:img alt="State of JavaScript 2023" src="./state-of-js-chart.png?w=1000,1400"
+			<enhanced:img
+				class="screenshot"
+				alt="State of JavaScript 2023"
+				src="./state-of-js-chart.png?w=1000,1400"
 			></enhanced:img>
 		</a>
 
 		<a href="https://x.com/flaviocopes/status/1730895911864189299">
-			<enhanced:img alt="Tweet from @flaviocopes" src="./flavio-light.png?w=800"></enhanced:img>
+			<enhanced:img class="screenshot" alt="Tweet from @flaviocopes" src="./flavio-light.png?w=800"
+			></enhanced:img>
 		</a>
 	</div>
 </div>
@@ -57,6 +67,13 @@
 		grid-area: definition;
 	}
 
+	.pronunciation {
+		position: relative;
+		aspect-ratio: 457.4 / 138.8;
+		height: var(--sk-font-size-h1);
+		bottom: -0.3em;
+	}
+
 	.blurb {
 		grid-area: blurb;
 	}
@@ -72,10 +89,12 @@
 			display: block;
 			width: 100%;
 			top: 0;
-			filter: drop-shadow(0.2rem 0.4rem 2rem rgb(0 0 0 / 0.3));
 			overflow: hidden;
-			transition: 0.2s;
-			transition-property: scale, filter;
+			filter: drop-shadow(0.2rem 0.4rem 1.6rem rgb(0 0 0 / 0.2));
+			transform: translate3d(0, 0, 0);
+			transition-property: filter, scale;
+			transition-duration: 0.2s;
+			user-select: none;
 
 			&:nth-child(1) {
 				top: 0%;
@@ -97,20 +116,29 @@
 				rotate: 1.5deg;
 			}
 
-			&:hover {
-				scale: 1.05;
+			@media all and not (hover: none) {
+				&:hover {
+					scale: 1.05;
+					filter: drop-shadow(0.2rem 0.4rem 2.4rem rgb(0 0 0 / 0.2));
+				}
 			}
 		}
 
-		img {
+		.screenshot {
 			width: 100%;
 			height: auto;
 			object-fit: contain;
 			border-radius: var(--sk-border-radius);
-			filter: grayscale(1);
-			-webkit-transform: translate3d(0, 0, 0);
-			a:hover & {
-				filter: none;
+			transition: filter 0.2s;
+			-webkit-transform: var(--safari-fix);
+
+			@media all and not (hover: none) {
+				/* the additional `contrast(1)` is necessary for safari 18 to not behave stupidly */
+				filter: grayscale(1) contrast(1);
+
+				a:hover & {
+					filter: grayscale(0) contrast(1);
+				}
 			}
 		}
 	}
@@ -122,16 +150,8 @@
 		justify-content: center;
 		margin: 0 auto;
 		gap: 1rem;
-		grid-column: 1 / 3;
-		width: 100%;
 
-		em {
-			font-style: normal;
-			font-size: var(--sk-font-size-h1);
-			color: var(--sk-theme-1);
-			text-wrap: nowrap;
-			line-height: 1;
-		}
+		width: 100%;
 
 		.description {
 			position: relative;
@@ -168,8 +188,12 @@
 				width: auto;
 			}
 
-			.adjective::after {
-				content: 'adjective';
+			.adjective {
+				margin-right: 0.5rem;
+
+				&::after {
+					content: 'adjective';
+				}
 			}
 		}
 	}
@@ -191,22 +215,8 @@
 	}
 
 	@media (min-width: 1140px) {
-		.outer {
-			grid-template-areas:
-				'definition screenshots'
-				'blurb      screenshots';
-		}
-
-		.definition {
-			grid-area: definition;
-		}
-
-		.blurb {
-			grid-area: blurb;
-		}
-
 		.screenshots {
-			grid-area: screenshots;
+			top: -7em;
 		}
 	}
 </style>

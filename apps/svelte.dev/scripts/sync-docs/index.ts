@@ -51,7 +51,7 @@ const packages: Package[] = [
 	{
 		name: 'kit',
 		repo: 'sveltejs/kit',
-		branch: 'svelte-dev-adjusted-docs', // TODO update!
+		branch: 'main',
 		pkg: 'packages/kit',
 		docs: 'documentation/docs',
 		types: 'types',

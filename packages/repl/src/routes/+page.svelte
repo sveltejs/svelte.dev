@@ -3,7 +3,7 @@
 	import { onMount } from 'svelte';
 	import '@sveltejs/site-kit/styles/index.css';
 
-	let repl: Repl;
+	let repl: ReturnType<typeof Repl>;
 
 	onMount(() => {
 		repl.set({

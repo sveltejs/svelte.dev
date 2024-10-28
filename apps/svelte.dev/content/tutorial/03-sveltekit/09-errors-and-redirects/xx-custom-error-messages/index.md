@@ -49,6 +49,6 @@ export function handleError(+++{ error }+++) {
 
 You could also call your error reporting service in these hooks.
 
-Note that you can return more than an error message if you like. Whatever object shape you return will be available in `$page.error`, the only requirement is a `message` property. You can read more about this (and how to make it type-safe!) in the [error docs](https://kit.svelte.dev/docs/errors).
+Note that you can return more than an error message if you like. Whatever object shape you return will be available in `$page.error`, the only requirement is a `message` property. You can read more about this (and how to make it type-safe!) in the [error docs](/docs/kit/errors).
 
 > [!NOTE] When handling errors, be careful to not assume it's an `Error` object, anything could be thrown. Also make sure not to expose senstive data by forwarding too much information

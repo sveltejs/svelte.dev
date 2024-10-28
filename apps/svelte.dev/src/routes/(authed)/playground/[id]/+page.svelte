@@ -9,10 +9,13 @@
 	import AppControls from './AppControls.svelte';
 	import { compress_and_encode_text, decode_and_decompress_text } from './gzip.js';
 	import { page } from '$app/stores';
+	import type { File } from 'editor';
 
 	let { data } = $props();
 
-	let repl = $state() as Repl;
+	const STORAGE_KEY = 'svelte:playground';
+
+	let repl = $state() as ReturnType<typeof Repl>;
 	let name = $state(data.gist.name);
 	let modified = $state(false);
 	let version = data.version;
@@ -45,23 +48,27 @@
 		set_files();
 	});
 
+	// TODO make this munging unnecessary
+	function munge(data: any): File {
+		const basename = `${data.name}.${data.type}`;
+
+		return {
+			type: 'file',
+			name: basename,
+			basename,
+			contents: data.source,
+			text: true
+		};
+	}
+
 	async function set_files() {
+		const saved = sessionStorage.getItem(STORAGE_KEY);
 		const hash = location.hash.slice(1);
 
-		if (!hash) {
+		if (!hash && !saved) {
 			repl?.set({
 				// TODO make this munging unnecessary
-				files: structuredClone(data.gist.components).map((file: any) => {
-					const basename = `${file.name}.${file.type}`;
-
-					return {
-						type: 'file',
-						name: basename,
-						basename,
-						contents: file.source,
-						text: true
-					};
-				})
+				files: structuredClone(data.gist.components).map(munge)
 			});
 
 			modified = false;
@@ -69,10 +76,26 @@
 		}
 
 		try {
-			const files = JSON.parse(await decode_and_decompress_text(hash)).files;
+			const recovered = JSON.parse(saved ?? (await decode_and_decompress_text(hash)));
+			let files = recovered.files;
+
+			if (files[0]?.source) {
+				files = files.map(munge);
+			}
+
+			// older hashes may be missing a name
+			if (recovered.name) {
+				name = recovered.name;
+			}
+
 			repl.set({ files });
 		} catch {
 			alert(`Couldn't load the code from the URL. Make sure you copied the link correctly.`);
+		}
+
+		if (saved) {
+			sessionStorage.removeItem(STORAGE_KEY);
+			set_hash(saved);
 		}
 	}
 
@@ -84,11 +107,19 @@
 		// Hide hash from URL
 		const hash = location.hash.slice(1);
 		if (hash) {
-			change_hash();
+			set_hash();
 		}
 	}
 
-	async function change_hash(hash?: string) {
+	async function update_hash() {
+		// Only change hash when necessary to avoid polluting everyone's browser history
+		if (modified) {
+			const json = JSON.stringify({ name, files: repl.toJSON().files });
+			await set_hash(json);
+		}
+	}
+
+	async function set_hash(hash?: string) {
 		let url = `${location.pathname}${location.search}`;
 		if (hash) {
 			url += `#${await compress_and_encode_text(hash)}`;
@@ -129,17 +160,27 @@
 	<title>{name} • Playground • Svelte</title>
 
 	<meta name="twitter:title" content="{data.gist.name} • Playground • Svelte" />
-	<meta name="twitter:description" content="Web development, but fun" />
+	<meta name="twitter:description" content="Web development for the rest of us" />
 	<meta name="Description" content="Interactive Svelte playground" />
 </svelte:head>
 
 <svelte:window
-	on:hashchange={() => {
+	onhashchange={() => {
 		if (!setting_hash) {
 			set_files();
 		}
 	}}
+	onbeforeunload={() => {
+		if (modified) {
+			// we can't save to the hash because it's an async operation, so we use
+			// a short-lived sessionStorage value instead
+			const json = JSON.stringify({ name, files: repl.toJSON().files });
+			sessionStorage.setItem(STORAGE_KEY, json);
+		}
+	}}
 />
+
+<svelte:body onmouseleave={update_hash} />
 
 <div class="repl-outer">
 	<AppControls
@@ -154,16 +195,7 @@
 	/>
 
 	{#if browser}
-		<div
-			style="display: contents"
-			onfocusout={() => {
-				// Only change hash on editor blur to not pollute everyone's browser history
-				if (modified) {
-					const json = JSON.stringify({ files: repl.toJSON().files });
-					change_hash(json);
-				}
-			}}
-		>
+		<div style="display: contents" onfocusout={update_hash}>
 			<Repl
 				bind:this={repl}
 				{svelteUrl}
@@ -180,8 +212,8 @@
 <style>
 	.repl-outer {
 		position: relative;
-		height: calc(100% - var(--sk-nav-height) - var(--sk-banner-bottom-height));
-		height: calc(100dvh - var(--sk-nav-height) - var(--sk-banner-bottom-height));
+		height: calc(100% - var(--sk-nav-height) - var(--sk-banner-height));
+		height: calc(100dvh - var(--sk-nav-height) - var(--sk-banner-height));
 		overflow: hidden;
 		background-color: var(--sk-back-1);
 		box-sizing: border-box;

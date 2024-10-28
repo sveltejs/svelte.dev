@@ -1,4 +1,4 @@
-import type { CompileError, CompileResult } from 'svelte/compiler';
+import type { CompileError, CompileOptions, CompileResult } from 'svelte/compiler';
 import { EditorState } from '@codemirror/state';
 import { compile_file } from './compile-worker';
 import { BROWSER } from 'esm-env';
@@ -12,6 +12,7 @@ import { acceptCompletion } from '@codemirror/autocomplete';
 import { indentWithTab } from '@codemirror/commands';
 import { indentUnit } from '@codemirror/language';
 import { theme } from './theme';
+import { untrack } from 'svelte';
 
 export interface File {
 	type: 'file';
@@ -31,10 +32,10 @@ export type Item = File | Directory;
 
 export interface Compiled {
 	error: CompileError | null;
-	result: CompileResult;
+	result: CompileResult | null;
 	migration: {
 		code: string;
-	};
+	} | null;
 }
 
 function is_file(item: Item): item is File {
@@ -73,17 +74,23 @@ const default_extensions = [
 // 	extensions.push(vim());
 // }
 
+interface ExposedCompilerOptions {
+	generate: 'client' | 'server';
+	dev: boolean;
+}
+
 export class Workspace {
 	// TODO this stuff should all be readonly
 	creating = $state.raw<{ parent: string; type: 'file' | 'directory' } | null>(null);
 	modified = $state<Record<string, boolean>>({});
 
-	compiler_options = $state.raw<{ generate: 'client' | 'server'; dev: boolean }>({
+	#compiler_options = $state.raw<ExposedCompilerOptions>({
 		generate: 'client',
 		dev: false
 	});
 	compiled = $state<Record<string, Compiled>>({});
 
+	#svelte_version: string;
 	#readonly = false; // TODO do we need workspaces for readonly stuff?
 	#files = $state.raw<Item[]>([]);
 	#current = $state.raw() as File;
@@ -98,17 +105,20 @@ export class Workspace {
 	constructor(
 		files: Item[],
 		{
+			svelte_version = 'latest',
 			initial,
 			readonly = false,
 			onupdate,
 			onreset
 		}: {
+			svelte_version?: string;
 			initial?: string;
 			readonly?: boolean;
 			onupdate?: (file: File) => void;
 			onreset?: (items: Item[]) => void;
 		} = {}
 	) {
+		this.#svelte_version = svelte_version;
 		this.#readonly = readonly;
 
 		this.set(files, initial);
@@ -121,6 +131,10 @@ export class Workspace {
 
 	get files() {
 		return this.#files;
+	}
+
+	get compiler_options() {
+		return this.#compiler_options;
 	}
 
 	get current() {
@@ -145,10 +159,6 @@ export class Workspace {
 		});
 	}
 
-	invalidate() {
-		this.#reset_diagnostics();
-	}
-
 	mark_saved() {
 		this.modified = {};
 	}
@@ -157,7 +167,7 @@ export class Workspace {
 		if (this.#view) throw new Error('view is already linked');
 		this.#view = view;
 
-		view.setState(this.#get_state(this.#current));
+		view.setState(this.#get_state(untrack(() => this.#current)));
 	}
 
 	move(from: Item, to: Item) {
@@ -195,7 +205,7 @@ export class Workspace {
 			return true;
 		});
 
-		this.#current = next;
+		this.#select(next);
 
 		this.#onreset?.(this.#files);
 	}
@@ -274,10 +284,9 @@ export class Workspace {
 			if (!file) {
 				throw new Error(`Invalid selection ${selected}`);
 			}
-
-			this.#current = file as File;
+			this.#select(file as File);
 		} else {
-			this.#current = first;
+			this.#select(first);
 		}
 
 		this.#files = files;
@@ -300,32 +309,18 @@ export class Workspace {
 		this.#view = null;
 	}
 
+	update_compiler_options(options: Partial<ExposedCompilerOptions>) {
+		this.#compiler_options = { ...this.#compiler_options, ...options };
+		this.#reset_diagnostics();
+	}
+
 	update_file(file: File) {
-		if (file.name === this.#current.name) {
-			this.#current = file;
-		}
-
-		this.#files = this.#files.map((old) => {
-			if (old.name === file.name) {
-				return file;
-			}
-			return old;
-		});
-
-		this.modified[file.name] = true;
-
-		if (BROWSER && is_svelte_file(file)) {
-			compile_file(file, this.compiler_options).then((compiled) => {
-				this.compiled[file.name] = compiled;
-			});
-		}
+		this.#update_file(file);
 
 		const state = this.states.get(file.name);
 		if (state) {
 			this.#update_state(file, state);
 		}
-
-		this.#onupdate(file);
 	}
 
 	#create_directories(item: Item) {
@@ -360,7 +355,7 @@ export class Workspace {
 				if (update.docChanged) {
 					const state = this.#view!.state!;
 
-					this.update_file({
+					this.#update_file({
 						...this.#current,
 						contents: state.doc.toString()
 					});
@@ -430,7 +425,7 @@ export class Workspace {
 
 			seen.push(file.name);
 
-			compile_file(file, this.compiler_options).then((compiled) => {
+			compile_file(file, this.#svelte_version, this.compiler_options).then((compiled) => {
 				this.compiled[file.name] = compiled;
 			});
 		}
@@ -447,15 +442,44 @@ export class Workspace {
 		this.#view?.setState(this.#get_state(this.#current));
 	}
 
+	#update_file(file: File) {
+		if (file.name === this.#current.name) {
+			this.#current = file;
+		}
+
+		this.#files = this.#files.map((old) => {
+			if (old.name === file.name) {
+				return file;
+			}
+			return old;
+		});
+
+		this.modified[file.name] = true;
+
+		if (BROWSER && is_svelte_file(file)) {
+			compile_file(file, this.#svelte_version, this.compiler_options).then((compiled) => {
+				this.compiled[file.name] = compiled;
+			});
+		}
+
+		this.#onupdate(file);
+	}
+
 	#update_state(file: File, state: EditorState) {
 		const existing = state.doc.toString();
 
 		if (file.contents !== existing) {
+			const current_cursor_position = this.#view?.state.selection.ranges[0].from!;
+
 			const transaction = state.update({
 				changes: {
 					from: 0,
 					to: existing.length,
 					insert: file.contents
+				},
+				selection: {
+					anchor: current_cursor_position,
+					head: current_cursor_position
 				}
 			});
 

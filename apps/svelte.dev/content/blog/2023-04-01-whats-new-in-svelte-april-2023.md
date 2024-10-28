@@ -33,8 +33,8 @@ For all the changes to the Svelte compiler, including unreleased changes, check 
 
 ## What's new in SvelteKit
 
-- You can now get all cookies for a request with `cookies.getAll` (**1.10.0**, [#9287](https://github.com/sveltejs/kit/pull/9287), [Docs](https://kit.svelte.dev/docs/types#public-types-cookies))
-- Easily manage the submission status of (multiple) forms with the new exposed `submitter` parameter in `use:enhance` (**1.12.0**, [#9425](https://github.com/sveltejs/kit/pull/9425), [Docs](https://kit.svelte.dev/docs/types#public-types-submitfunction))
+- You can now get all cookies for a request with `cookies.getAll` (**1.10.0**, [#9287](https://github.com/sveltejs/kit/pull/9287), [Docs](/docs/kit/@sveltejs-kit#Cookies))
+- Easily manage the submission status of (multiple) forms with the new exposed `submitter` parameter in `use:enhance` (**1.12.0**, [#9425](https://github.com/sveltejs/kit/pull/9425), [Docs](/docs/kit/@sveltejs-kit#SubmitFunction))
 - The default error page now has dark mode styles (**1.13.0**, [#9460](https://github.com/sveltejs/kit/pull/9460))
 - You can now omit types on all methods and variables with special meaning to SvelteKit and still benefit from full type safety! Read more about it in the [announcement blog post](https://svelte.dev/blog/zero-config-type-safety)
 

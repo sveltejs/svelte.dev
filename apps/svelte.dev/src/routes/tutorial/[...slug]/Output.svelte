@@ -194,7 +194,7 @@
 		border-top: 1px solid var(--sk-text-4);
 		background: rgba(255, 255, 255, 0.5);
 		transform: translate(0, 100%);
-		-webkit-transform: translate3d(0, 100%, 0);
+		-webkit-transform: translate3d(0, 100%, 0.01);
 		transition: transform 0.3s;
 		backdrop-filter: blur(3px);
 		overflow-y: auto;

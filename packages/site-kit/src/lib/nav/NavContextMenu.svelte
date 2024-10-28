@@ -102,15 +102,13 @@
 		top: 0;
 		z-index: 1;
 		padding: 1rem 0;
+		background-color: var(--sk-back-2);
 	}
 
 	a {
 		display: flex;
 		align-items: center;
-		border-radius: var(--sk-border-radius);
 		color: var(--sk-text-2);
-		transition: 0.1s ease;
-		transition-property: background-color, color;
 
 		&[aria-current='page'] {
 			color: var(--sk-theme-1) !important;

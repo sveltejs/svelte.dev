@@ -14,7 +14,7 @@ Svelte 5 isn't out yet (you can, however, [preview it now](https://svelte-5-prev
 
 ## What's new in SvelteKit
 
-- `+server.js` now has a catch-all handler that handles all unimplemented valid server requests. Just export a `fallback` function! (**1.25.0**, [Docs](https://kit.svelte.dev/docs/routing#server-fallback-method-handler), [#9755](https://github.com/sveltejs/kit/pull/9755))
+- `+server.js` now has a catch-all handler that handles all unimplemented valid server requests. Just export a `fallback` function! (**1.25.0**, [Docs](/docs/kit/routing#server-Fallback-method-handler), [#9755](https://github.com/sveltejs/kit/pull/9755))
 
 That's all for the new features! If you're looking for other patches and performance updates, check out the [SvelteKit CHANGELOG](https://github.com/sveltejs/kit/blob/master/packages/kit/CHANGELOG.md). You can also find adapter-specific CHANGELOGs in each of [the `adapter` directories](https://github.com/sveltejs/kit/tree/master/packages).
 

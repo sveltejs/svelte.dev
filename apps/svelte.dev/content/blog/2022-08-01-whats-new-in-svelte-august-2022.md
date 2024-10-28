@@ -18,20 +18,20 @@ Now onto the rest of the updates...
 - Lots of improvements to error handling ([#4665](https://github.com/sveltejs/kit/pull/4665), [#5622](https://github.com/sveltejs/kit/pull/5622), [#5619](https://github.com/sveltejs/kit/pull/5619), [#5616](https://github.com/sveltejs/kit/pull/5616))
 - Custom Vite modes are now respected in SSR builds ([#5602](https://github.com/sveltejs/kit/pull/5602))
 - Custom Vite config locations are now supported ([#5705](https://github.com/sveltejs/kit/pull/5705))
-- Private environment variables (aka "secrets") are now much more secure. Now if you accidentally import them to client-side code, you'll see an error ([#5663](https://github.com/sveltejs/kit/pull/5663), [Docs](https://kit.svelte.dev/docs/configuration#env))
+- Private environment variables (aka "secrets") are now much more secure. Now if you accidentally import them to client-side code, you'll see an error ([#5663](https://github.com/sveltejs/kit/pull/5663), [Docs](/docs/kit/configuration#env))
 - Vercel's v3 build output API is now being used in `adapter-vercel` ([#5514](https://github.com/sveltejs/kit/pull/5514))
 - `vite-plugin-svelte` has reached 1.0 and now supports Vite 3. You'll notice new default ports for `dev` (port 5173) and `preview` (port 4173) ([#5005](https://github.com/sveltejs/kit/pull/5005), [vite-plugin-svelte CHANGELOG](https://github.com/sveltejs/vite-plugin-svelte/blob/main/packages/vite-plugin-svelte/CHANGELOG.md))
 
 ### Breaking changes:
 
 - `mode`, `prod` and `server` are no longer available in `$app/env` ([#5602](https://github.com/sveltejs/kit/pull/5602))
-- `svelte-kit` CLI commands are now run using the `vite` command and `vite.config.js` is required. This will allow first-class support with other projects in the Vite ecosystem like Vitest and Storybook ([#5332](https://github.com/sveltejs/kit/pull/5332), [Docs](https://kit.svelte.dev/docs/project-structure#project-files-vite-config-js))
-- `endpointExtensions` is now `moduleExtensions` and can be used to filter param matchers ([#5085](https://github.com/sveltejs/kit/pull/5085), [Docs](https://kit.svelte.dev/docs/configuration#moduleextensions))
+- `svelte-kit` CLI commands are now run using the `vite` command and `vite.config.js` is required. This will allow first-class support with other projects in the Vite ecosystem like Vitest and Storybook ([#5332](https://github.com/sveltejs/kit/pull/5332), [Docs](/docs/kit/project-structure#Project-files-vite.config.js))
+- `endpointExtensions` is now `moduleExtensions` and can be used to filter param matchers ([#5085](https://github.com/sveltejs/kit/pull/5085), [Docs](/docs/kit/configuration#moduleExtensions))
 - Node 16.9 is now the minimum version for SvelteKit ([#5395](https://github.com/sveltejs/kit/pull/5395))
 - %-encoded filenames are now allowed. If you had a `%` in your route, you must now encode it with `%25` ([#5056](https://github.com/sveltejs/kit/pull/5056))
-- Endpoint method names are now uppercased to match HTTP specifications ([#5513](https://github.com/sveltejs/kit/pull/5513), [Docs](https://kit.svelte.dev/docs/routing#endpoints))
+- Endpoint method names are now uppercased to match HTTP specifications ([#5513](https://github.com/sveltejs/kit/pull/5513), [Docs](/docs/kit/routing#server))
 - `writeStatic` has been removed to align with Vite's config ([#5618](https://github.com/sveltejs/kit/pull/5618))
-- `transformPage` is now `transformPageChunk` ([#5657](https://github.com/sveltejs/kit/pull/5657), [Docs](https://kit.svelte.dev/docs/hooks#handle))
+- `transformPage` is now `transformPageChunk` ([#5657](https://github.com/sveltejs/kit/pull/5657), [Docs](/docs/kit/hooks#Server-hooks-handle))
 - The `prepare` script is no longer needed in `package.json` ([#5760](https://github.com/sveltejs/kit/pull/5760))
 - `adapter-node` no longer does any compression while we wait for a [bug fix in the `compression` library](https://github.com/expressjs/compression/pull/183) ([#5560](https://github.com/sveltejs/kit/pull/5506))
 

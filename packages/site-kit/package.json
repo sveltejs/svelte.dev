@@ -22,7 +22,6 @@
 	},
 	"homepage": "https://github.com/sveltejs/svelte.dev/tree/main/packages/site-kit#readme",
 	"dependencies": {
-		"@lezer/common": "^1.0.4",
 		"@codemirror/autocomplete": "^6.9.0",
 		"@codemirror/commands": "^6.2.5",
 		"@codemirror/lang-css": "^6.2.1",
@@ -33,16 +32,18 @@
 		"@codemirror/search": "^6.5.2",
 		"@codemirror/state": "^6.2.1",
 		"@codemirror/view": "^6.17.1",
+		"@fontsource/atkinson-hyperlegible": "^5.1.0",
 		"@fontsource/dm-serif-display": "^5.1.0",
 		"@fontsource/eb-garamond": "^5.1.0",
 		"@fontsource/fira-mono": "^5.1.0",
 		"@fontsource/fira-sans": "^5.1.0",
+		"@lezer/common": "^1.0.4",
+		"@replit/codemirror-lang-svelte": "^6.0.0",
 		"@shikijs/twoslash": "^1.22.0",
 		"esm-env": "^1.0.0",
 		"json5": "^2.2.3",
 		"shiki": "^1.22.0",
-		"svelte-persisted-store": "^0.9.2",
-		"@replit/codemirror-lang-svelte": "^6.0.0"
+		"svelte-persisted-store": "^0.9.2"
 	},
 	"devDependencies": {
 		"@sveltejs/kit": "^2.6.3",

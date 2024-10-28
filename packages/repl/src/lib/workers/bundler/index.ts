@@ -17,8 +17,13 @@ import type { Warning } from '../../types';
 import type { CompileError, CompileOptions, CompileResult } from 'svelte/compiler';
 import type { File } from 'editor';
 
+// hack for magic-string and rollup inline sourcemaps
+// do not put this into a separate module and import it, would be treeshaken in prod
+self.window = self;
+
 let packages_url: string;
 let svelte_url: string;
+let version: string;
 let current_id: number;
 
 let fulfil_ready: (arg?: never) => void;
@@ -31,11 +36,21 @@ self.addEventListener('message', async (event: MessageEvent<BundleMessageData>) 
 		case 'init': {
 			({ packages_url, svelte_url } = event.data);
 
-			const { version } = await fetch(`${svelte_url}/package.json`).then((r) => r.json());
+			({ version } = await fetch(`${svelte_url}/package.json`).then((r) => r.json()));
 			console.log(`Using Svelte compiler version ${version}`);
 
-			const compiler = await fetch(`${svelte_url}/compiler/index.js`).then((r) => r.text());
-			(0, eval)(compiler + '\n//# sourceURL=compiler/index.js@' + version);
+			if (version.startsWith('4.')) {
+				// unpkg doesn't set the correct MIME type for .cjs files
+				// https://github.com/mjackson/unpkg/issues/355
+				const compiler = await fetch(`${svelte_url}/compiler.cjs`).then((r) => r.text());
+				(0, eval)(compiler + '\n//# sourceURL=compiler.cjs@' + version);
+			} else if (version.startsWith('3.')) {
+				const compiler = await fetch(`${svelte_url}/compiler.js`).then((r) => r.text());
+				(0, eval)(compiler + '\n//# sourceURL=compiler.js@' + version);
+			} else {
+				const compiler = await fetch(`${svelte_url}/compiler/index.js`).then((r) => r.text());
+				(0, eval)(compiler + '\n//# sourceURL=compiler/index.js@' + version);
+			}
 
 			fulfil_ready();
 			break;
@@ -241,6 +256,8 @@ async function get_bundle(
 				}
 			}
 
+			if (importee === shared_file) return importee;
+
 			// importing from another file in REPL
 			if (local_files_lookup.has(importee) && (!importer || local_files_lookup.has(importer)))
 				return importee;
@@ -270,13 +287,14 @@ async function get_bundle(
 				// fetch from unpkg
 				self.postMessage({ type: 'status', uid, message: `resolving ${importee}` });
 
-				const match = /^((?:@[^/]+\/)?[^/]+)(\/.+)?$/.exec(importee);
+				const match = /^((?:@[^/]+\/)?[^/@]+)(?:@([^/]+))?(\/.+)?$/.exec(importee);
 				if (!match) {
 					return console.error(`Invalid import "${importee}"`);
 				}
 
 				const pkg_name = match[1];
-				const subpath = `.${match[2] ?? ''}`;
+				const version = pkg_name === 'svelte' ? svelte.VERSION : match[2] ?? 'latest';
+				const subpath = `.${match[3] ?? ''}`;
 
 				// if this was imported by one of our files, add it to the `imports` set
 				if (importer && local_files_lookup.has(importer)) {
@@ -285,7 +303,6 @@ async function get_bundle(
 
 				const fetch_package_info = async () => {
 					try {
-						const version = pkg_name === 'svelte' ? svelte.VERSION : 'latest';
 						const pkg_url = await follow_redirects(
 							`${packages_url}/${pkg_name}@${version}/package.json`,
 							uid
@@ -359,7 +376,7 @@ async function get_bundle(
 					dev: true
 				});
 
-				if (result.css) {
+				if (result.css?.code) {
 					// resolve local files by inlining them
 					result.css.code = result.css.code.replace(
 						/url\(['"]?(\..+?\.(svg|webp|png))['"]?\)/g,
@@ -379,7 +396,7 @@ async function get_bundle(
 					result.js.code +=
 						'\n\n' +
 						`
-					import { styles as $$_styles } from './__shared.js';
+					import { styles as $$_styles } from '${shared_file}';
 					const $$__style = document.createElement('style');
 					$$__style.textContent = ${JSON.stringify(result.css.code)};
 					document.head.append($$__style);
@@ -387,7 +404,7 @@ async function get_bundle(
 				`.replace(/\t/g, '');
 				}
 			} else if (id.endsWith('.svelte.js')) {
-				result = svelte.compileModule(code, {
+				result = svelte.compileModule?.(code, {
 					filename: name + '.js',
 					generate: 'client',
 					dev: true
@@ -461,6 +478,8 @@ async function get_bundle(
 
 export type BundleResult = ReturnType<typeof bundle>;
 
+const shared_file = '$$__shared__.js';
+
 async function bundle({
 	uid,
 	files,
@@ -481,23 +500,39 @@ async function bundle({
 		type: 'file',
 		name: '__entry.js',
 		basename: '__entry.js',
-		contents: `
+		contents:
+			version.split('.')[0] >= '5'
+				? `
 			import { unmount as u } from 'svelte';
-			import { styles } from './__shared.js';
+			import { styles } from '${shared_file}';
 			export { mount, untrack } from 'svelte';
 			export {default as App} from './App.svelte';
 			export function unmount(component) {
 				u(component);
 				styles.forEach(style => style.remove());
 			}
+		`
+				: `
+			import { styles } from '${shared_file}';
+			export {default as App} from './App.svelte';
+			export function mount(component, options) {
+				return new component(options);
+			}
+			export function unmount(component) {
+				component.$destroy();
+				styles.forEach(style => style.remove());
+			}
+			export function untrack(fn) {
+				return fn();
+			}
 		`,
 		text: true
 	});
 
-	lookup.set('./__shared.js', {
+	lookup.set(shared_file, {
 		type: 'file',
-		name: '__shared.js',
-		basename: '__shared.js',
+		name: shared_file,
+		basename: shared_file,
 		contents: `
 			export let styles = [];
 		`,

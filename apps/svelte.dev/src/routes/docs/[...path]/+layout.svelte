@@ -48,7 +48,7 @@
 		.toc-container {
 			display: block;
 			width: var(--sidebar-width);
-			height: calc(100vh - var(--sk-nav-height) - var(--sk-banner-bottom-height));
+			height: calc(100vh - var(--sk-nav-height) - var(--sk-banner-height));
 			position: fixed;
 			left: 0;
 			top: var(--sk-nav-height);
