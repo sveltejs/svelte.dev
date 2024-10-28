@@ -74,7 +74,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 			last_scroll_position = null;
 			document.body.style.position = '';
 			document.body.tabIndex = -1;
-			document.body.focus();
+			(document.activeElement as HTMLElement)?.blur();
 			document.body.removeAttribute('tabindex');
 			window.scrollTo(0, scroll);
 
