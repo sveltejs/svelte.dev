@@ -63,7 +63,7 @@
 	}
 
 	.sidebar {
-		padding: 3.2rem;
+		padding: 3.2rem 3.2rem calc(3.2rem + var(--sk-banner-height)) 3.2rem;
 		font-family: var(--sk-font-family-body);
 		height: 100%;
 		bottom: auto;
