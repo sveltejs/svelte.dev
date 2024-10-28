@@ -109,32 +109,6 @@
 		margin: 0;
 	}
 
-	@media (max-width: 831px) {
-		.sidebar {
-			padding: 1rem;
-			padding-top: 1rem;
-		}
-
-		li {
-			margin-bottom: 2.5rem;
-		}
-
-		a {
-			border-radius: var(--sk-border-radius);
-			line-height: 1;
-			vertical-align: center;
-			padding: 0.9rem 0.75rem !important;
-			transition: 0.1s ease;
-			transition-property: background-color, color;
-		}
-
-		a:hover {
-			text-decoration: none;
-
-			background-color: var(--sk-back-4);
-		}
-	}
-
 	@media (min-width: 832px) {
 		.sidebar {
 			columns: 1;
@@ -163,8 +137,6 @@
 			z-index: 2;
 			position: absolute;
 			rotate: 45deg;
-			/** needed to synchronise with transition on `*` in `base.css` */
-			transition: background-color 0.5s var(--quint-out);
 			box-shadow: 0 0 3px rgba(0, 0, 0, 0.12);
 		}
 	}

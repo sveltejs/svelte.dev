@@ -108,10 +108,7 @@
 	a {
 		display: flex;
 		align-items: center;
-		border-radius: var(--sk-border-radius);
 		color: var(--sk-text-2);
-		transition: 0.1s ease;
-		transition-property: background-color, color;
 
 		&[aria-current='page'] {
 			color: var(--sk-theme-1) !important;

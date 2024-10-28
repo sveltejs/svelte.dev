@@ -99,7 +99,7 @@
 		display: initial;
 	}
 
-	@media (min-width: 800px) {
+	@media (min-width: 832px) {
 		.banner {
 			top: initial;
 			bottom: 0;

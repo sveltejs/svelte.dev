@@ -217,7 +217,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		font: var(--sk-font-ui-medium);
 	}
 
-	@media (max-width: 799px) {
+	@media (max-width: 831px) {
 		nav {
 			transition: transform 0.2s;
 		}
@@ -305,7 +305,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		display: block;
 	}
 
-	@media (max-width: 799px) {
+	@media (max-width: 831px) {
 		nav {
 			top: unset;
 			bottom: 0;
@@ -337,7 +337,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		}
 	}
 
-	@media (min-width: 800px) {
+	@media (min-width: 832px) {
 		.home-link {
 			--padding-right: 2rem;
 			width: 13.2rem;
