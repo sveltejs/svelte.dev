@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { Checkbox } from '@sveltejs/site-kit/components';
 	import Message from '../Message.svelte';
 	import AstNode from './AstNode.svelte';
 	import type { CompileResult } from 'svelte/compiler';
@@ -65,7 +66,20 @@
 			{/if}
 		</code>
 	</pre>
+
 	<Message kind="info">The AST is not public API and may change at any point in time</Message>
+
+	<label>
+		modern
+
+		<!-- TODO wire up -->
+		<Checkbox
+			checked={false}
+			onchange={(value) => {
+				// TODO
+			}}
+		/>
+	</label>
 </div>
 
 <style>
@@ -98,5 +112,15 @@
 		padding: 0;
 		margin: 0;
 		list-style-type: none;
+	}
+
+	label {
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+		display: inline-flex;
+		gap: 1rem;
+		align-items: center;
+		font: var(--sk-font-ui-small);
 	}
 </style>

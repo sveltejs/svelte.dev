@@ -12,8 +12,7 @@
 		/* display: block; */
 		position: relative;
 		height: 1em;
-		width: calc(100% - 0.6em);
-		max-width: 2em;
+		width: 2em;
 		top: -2px;
 		border-radius: 0.5em;
 		-webkit-appearance: none;
