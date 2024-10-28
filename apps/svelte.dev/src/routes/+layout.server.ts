@@ -5,8 +5,8 @@ const nav_links: NavigationLink[] = [
 	{
 		title: 'Docs',
 		slug: 'docs',
-		sections: Object.values(docs.topics)
-			.map((topic) => ({
+		sections: [docs.topics['docs/svelte'], docs.topics['docs/kit'], docs.topics['docs/cli']].map(
+			(topic) => ({
 				title: topic.metadata.title,
 				path: '/' + topic.slug, // this will make the UI show a flyout menu for the docs nav entry
 				sections: topic.children.map((section) => ({
@@ -16,8 +16,8 @@ const nav_links: NavigationLink[] = [
 						path: '/' + page.slug
 					}))
 				}))
-			}))
-			.sort((a, b) => a.title.localeCompare(b.title)) // Svelte first
+			})
+		)
 	},
 	{
 		title: 'Tutorial',
