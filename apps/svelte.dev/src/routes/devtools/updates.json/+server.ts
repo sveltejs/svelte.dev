@@ -1,3 +1,7 @@
+// We manage FF extension by ourselves through GH releases and this acts as `update_url`
+// for our users to automatically update their extension when a new version is released
+// https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings#update_url
+
 import { json } from '@sveltejs/kit';
 
 export const prerender = true;
