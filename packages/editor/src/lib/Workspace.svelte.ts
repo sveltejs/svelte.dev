@@ -13,6 +13,7 @@ import { indentWithTab } from '@codemirror/commands';
 import { indentUnit } from '@codemirror/language';
 import { theme } from './theme';
 import { untrack } from 'svelte';
+import type { Diagnostic } from '@codemirror/lint';
 
 export interface File {
 	type: 'file';
@@ -102,6 +103,51 @@ export class Workspace {
 	states = new Map<string, EditorState>();
 	#view: EditorView | null = null;
 
+	diagnostics = $derived.by(() => {
+		const diagnostics: Diagnostic[] = [];
+
+		const error = this.current_compiled?.error;
+		const warnings = this.current_compiled?.result?.warnings ?? [];
+
+		if (error) {
+			diagnostics.push({
+				severity: 'error',
+				from: error.position![0],
+				to: error.position![1],
+				message: error.message,
+				renderMessage: () => {
+					const span = document.createElement('span');
+					span.innerHTML = `${error.message
+						.replace(/&/g, '&amp;')
+						.replace(/</g, '&lt;')
+						.replace(/`(.+?)`/g, `<code>$1</code>`)} <strong>(${error.code})</strong>`;
+
+					return span;
+				}
+			});
+		}
+
+		for (const warning of warnings) {
+			diagnostics.push({
+				severity: 'warning',
+				from: warning.start!.character,
+				to: warning.end!.character,
+				message: warning.message,
+				renderMessage: () => {
+					const span = document.createElement('span');
+					span.innerHTML = `${warning.message
+						.replace(/&/g, '&amp;')
+						.replace(/</g, '&lt;')
+						.replace(/`(.+?)`/g, `<code>$1</code>`)} <strong>(${warning.code})</strong>`;
+
+					return span;
+				}
+			});
+		}
+
+		return diagnostics;
+	});
+
 	constructor(
 		files: Item[],
 		{
@@ -139,6 +185,14 @@ export class Workspace {
 
 	get current() {
 		return this.#current;
+	}
+
+	get current_compiled() {
+		if (this.#current.name in this.compiled) {
+			return this.compiled[this.#current.name];
+		}
+
+		return null;
 	}
 
 	add(item: Item) {

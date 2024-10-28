@@ -2,7 +2,6 @@
 	import { BROWSER } from 'esm-env';
 	import { setDiagnostics } from '@codemirror/lint';
 	import { EditorView } from '@codemirror/view';
-	import type { Diagnostic } from '@codemirror/lint';
 	import { Workspace, type File } from './Workspace.svelte.js';
 	import './codemirror.css';
 
@@ -34,50 +33,8 @@
 		};
 	});
 
-	// TODO move into workspace
 	$effect(() => {
-		const diagnostics: Diagnostic[] = [];
-
-		const error = workspace.compiled[workspace.current.name]?.error;
-		const current_warnings = workspace.compiled[workspace.current.name]?.result?.warnings ?? [];
-
-		if (error) {
-			diagnostics.push({
-				severity: 'error',
-				from: error.position![0],
-				to: error.position![1],
-				message: error.message,
-				renderMessage: () => {
-					const span = document.createElement('span');
-					span.innerHTML = `${error.message
-						.replace(/&/g, '&amp;')
-						.replace(/</g, '&lt;')
-						.replace(/`(.+?)`/g, `<code>$1</code>`)} <strong>(${error.code})</strong>`;
-
-					return span;
-				}
-			});
-		}
-
-		for (const warning of current_warnings) {
-			diagnostics.push({
-				severity: 'warning',
-				from: warning.start!.character,
-				to: warning.end!.character,
-				message: warning.message,
-				renderMessage: () => {
-					const span = document.createElement('span');
-					span.innerHTML = `${warning.message
-						.replace(/&/g, '&amp;')
-						.replace(/</g, '&lt;')
-						.replace(/`(.+?)`/g, `<code>$1</code>`)} <strong>(${warning.code})</strong>`;
-
-					return span;
-				}
-			});
-		}
-
-		const transaction = setDiagnostics(editor_view.state, diagnostics);
+		const transaction = setDiagnostics(editor_view.state, workspace.diagnostics);
 		editor_view.dispatch(transaction);
 	});
 </script>
