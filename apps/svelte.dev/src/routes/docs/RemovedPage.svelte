@@ -17,6 +17,10 @@
 			goto(new_docs[1], { replaceState: true });
 		}
 	});
+
+	function render(title: string) {
+		return title.replace(/`(.+?)`/g, (_, text) => `<code>${text.replaceAll('<', '&lt;')}</code>`);
+	}
 </script>
 
 <svelte:head>
@@ -34,7 +38,7 @@
 		<ul>
 			{#each docs.values() as [title, href]}
 				<li>
-					<a {href}>{title}</a>
+					<a {href}>{@html render(title)}</a>
 				</li>
 			{/each}
 		</ul>
@@ -47,5 +51,13 @@
 		max-width: var(--sk-page-content-width);
 		box-sizing: content-box;
 		margin: auto;
+
+		a {
+			text-decoration: none !important;
+
+			&:hover {
+				text-decoration: underline !important;
+			}
+		}
 	}
 </style>

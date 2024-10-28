@@ -4,124 +4,115 @@
 	const docs = new Map([
 		[
 			'$app-environment-browser',
-			['browser in $app/environment', '/docs/kit/$app-environment#browser']
+			['`$app/environment#browser`', '/docs/kit/$app-environment#browser']
 		],
 		[
 			'$app-environment-building',
-			['building in $app/environment', '/docs/kit/$app-environment#building']
+			['`$app/environment#building`', '/docs/kit/$app-environment#building']
 		],
-		['$app-environment-dev', ['dev in $app/environment', '/docs/kit/$app-environment#dev']],
+		['$app-environment-dev', ['`$app/environment#dev`', '/docs/kit/$app-environment#dev']],
 		[
 			'$app-environment-version',
-			['version in $app/environment', '/docs/kit/$app-environment#version']
+			['`$app/environment#version`', '/docs/kit/$app-environment#version']
 		],
-		['$app-forms-applyaction', ['applyAction in $app/forms', '/docs/kit/$app-forms#applyAction']],
-		['$app-forms-deserialize', ['deserialize in $app/forms', '/docs/kit/$app-forms#deserialize']],
-		['$app-forms-enhance', ['enhance in $app/forms', '/docs/kit/$app-forms#enhance']],
+		['$app-forms-applyaction', ['`$app/forms#applyAction`', '/docs/kit/$app-forms#applyAction']],
+		['$app-forms-deserialize', ['`$app/forms#deserialize`', '/docs/kit/$app-forms#deserialize']],
+		['$app-forms-enhance', ['`$app/forms#enhance`', '/docs/kit/$app-forms#enhance']],
 		[
 			'$app-navigation-afternavigate',
-			['afternavigate in $app/navigation', '/docs/kit/$app-navigation#afterNavigate']
+			['`$app/navigation#afternavigate`', '/docs/kit/$app-navigation#afterNavigate']
 		],
 		[
 			'$app-navigation-beforenavigate',
-			['beforeNavigate in $app/navigation', '/docs/kit/$app-navigation#beforeNavigate']
+			['`$app/navigation#beforeNavigate`', '/docs/kit/$app-navigation#beforeNavigate']
 		],
 		[
 			'$app-navigation-disablescrollhandling',
-			[
-				'disableScrollHandling in $app/navigation',
-				'/docs/kit/$app-navigation#disableScrollHandling'
-			]
+			['`$app/navigation#disableScrollHandling`', '/docs/kit/$app-navigation#disableScrollHandling']
 		],
-		['$app-navigation-goto', ['goto in $app/navigation', '/docs/kit/$app-navigation#goto']],
+		['$app-navigation-goto', ['`$app/navigation#goto`', '/docs/kit/$app-navigation#goto']],
 		[
 			'$app-navigation-invalidate',
-			['invalidate in $app/navigation', '/docs/kit/$app-navigation#invalidate']
+			['`$app/navigation#invalidate`', '/docs/kit/$app-navigation#invalidate']
 		],
 		[
 			'$app-navigation-invalidateall',
-			['invalidateAll in $app/navigation', '/docs/kit/$app-navigation#invalidateAll']
+			['`$app/navigation#invalidateAll`', '/docs/kit/$app-navigation#invalidateAll']
 		],
 		[
 			'$app-navigation-onnavigate',
-			['onNavigate in $app/navigation', '/docs/kit/$app-navigation#onNavigate']
+			['`$app/navigation#onNavigate`', '/docs/kit/$app-navigation#onNavigate']
 		],
 		[
 			'$app-navigation-preloadcode',
-			['preloadCode in $app/navigation', '/docs/kit/$app-navigation#preloadCode']
+			['`$app/navigation#preloadCode`', '/docs/kit/$app-navigation#preloadCode']
 		],
 		[
 			'$app-navigation-preloaddata',
-			['preloadData in $app/navigation', '/docs/kit/$app-navigation#preloadData']
+			['`$app/navigation#preloadData`', '/docs/kit/$app-navigation#preloadData']
 		],
 		[
 			'$app-navigation-pushstate',
-			['pushState in $app/navigation', '/docs/kit/$app-navigation#pushState']
+			['`$app/navigation#pushState`', '/docs/kit/$app-navigation#pushState']
 		],
 		[
 			'$app-navigation-replacestate',
-			['replaceState in $app/navigation', '/docs/kit/$app-navigation#replaceState']
+			['`$app/navigation#replaceState`', '/docs/kit/$app-navigation#replaceState']
 		],
-		['$app-paths-assets', ['assets in $app/paths', '/docs/kit/$app-paths#assets']],
-		['$app-paths-base', ['base in $app/paths', '/docs/kit/$app-paths#base']],
-		[
-			'$app-paths-resolveroute',
-			['resolveRoute in $app-paths', '/docs/kit/$app-paths#resolveRoute']
-		],
-		['$app-server-read', ['read in $app/paths', '/docs/kit/$app-paths#read']],
-		['$app-stores-getstores', ['getStores in $app/stores', '/docs/kit/$app-stores#getStores']],
-		['$app-stores-navigating', ['assets in $app/stores', '/docs/kit/$app-stores#assets']],
-		['$app-stores-page', ['page in $app/stores', '/docs/kit/$app-stores#page']],
-		['$app-stores-updated', ['updated in $app/stores', '/docs/kit/$app-stores#updated']],
-		['$lib-$lib-server', ['$lib', '/docs/kit/$lib']],
-		['$service-worker-base', ['base in $service-worker', '/docs/kit/$service-worker#base']],
-		['$service-worker-build', ['build in $service-worker', '/docs/kit/$service-worker#build']],
-		['$service-worker-files', ['files in $service-worker', '/docs/kit/$service-worker#files']],
+		['$app-paths-assets', ['`$app/paths#assets`', '/docs/kit/$app-paths#assets']],
+		['$app-paths-base', ['`$app/paths#base`', '/docs/kit/$app-paths#base']],
+		['$app-paths-resolveroute', ['`$app-paths#resolveRoute`', '/docs/kit/$app-paths#resolveRoute']],
+		['$app-server-read', ['`$app/paths#read`', '/docs/kit/$app-paths#read']],
+		['$app-stores-getstores', ['`$app/stores#getStores`', '/docs/kit/$app-stores#getStores']],
+		['$app-stores-navigating', ['`$app/stores#assets`', '/docs/kit/$app-stores#assets']],
+		['$app-stores-page', ['`$app/stores#page`', '/docs/kit/$app-stores#page']],
+		['$app-stores-updated', ['`$app/stores#updated`', '/docs/kit/$app-stores#updated']],
+		['$lib-$lib-server', ['`$lib`', '/docs/kit/$lib']],
+		['$service-worker-base', ['`$service-worker#base`', '/docs/kit/$service-worker#base']],
+		['$service-worker-build', ['`$service-worker#build`', '/docs/kit/$service-worker#build']],
+		['$service-worker-files', ['`$service-worker#files`', '/docs/kit/$service-worker#files']],
 		[
 			'$service-worker-prerendered',
-			['prerendered in $service-worker', '/docs/kit/$service-worker#prerendered']
+			['`$service-worker#prerendered`', '/docs/kit/$service-worker#prerendered']
 		],
-		[
-			'$service-worker-version',
-			['version in $service-worker', '/docs/kit/$service-worker#version']
-		],
-		['sveltejs-kit-version', ['VERSION in @sveltejs/kit', '/@sveltejs-kit#VERSION']],
-		['sveltejs-kit-error', ['error in @sveltejs/kit', '/@sveltejs-kit#error']],
-		['sveltejs-kit-fail', ['fail in @sveltejs/kit', '/@sveltejs-kit#fail']],
-		['sveltejs-kit-ishttperror', ['isHttpError in @sveltejs/kit', '/@sveltejs-kit#isHttpError']],
-		['sveltejs-kit-isredirect', ['isRedirect in @sveltejs/kit', '/@sveltejs-kit#isRedirect']],
-		['sveltejs-kit-json', ['json in @sveltejs/kit', '/@sveltejs-kit#json']],
-		['sveltejs-kit-redirect', ['redirect in @sveltejs/kit', '/@sveltejs-kit#redirect']],
-		['sveltejs-kit-text', ['text in @sveltejs/kit', '/@sveltejs-kit#text']],
+		['$service-worker-version', ['`$service-worker#version`', '/docs/kit/$service-worker#version']],
+		['sveltejs-kit-version', ['`@sveltejs/kit#VERSION`', '/@sveltejs-kit#VERSION']],
+		['sveltejs-kit-error', ['`@sveltejs/kit#error`', '/@sveltejs-kit#error']],
+		['sveltejs-kit-fail', ['`@sveltejs/kit#fail`', '/@sveltejs-kit#fail']],
+		['sveltejs-kit-ishttperror', ['`@sveltejs/kit#isHttpError`', '/@sveltejs-kit#isHttpError']],
+		['sveltejs-kit-isredirect', ['`@sveltejs/kit#isRedirect`', '/@sveltejs-kit#isRedirect']],
+		['sveltejs-kit-json', ['`@sveltejs/kit#json`', '/@sveltejs-kit#json']],
+		['sveltejs-kit-redirect', ['`@sveltejs/kit#redirect`', '/@sveltejs-kit#redirect']],
+		['sveltejs-kit-text', ['`@sveltejs/kit#text`', '/@sveltejs-kit#text']],
 		[
 			'sveltejs-kit-hooks-sequence',
-			['sequence in @sveltejs/kit/hooks', '/docs/kit/@sveltejs-kit-hooks#sequence']
+			['`@sveltejs/kit/hooks#sequence`', '/docs/kit/@sveltejs-kit-hooks#sequence']
 		],
 		[
 			'sveltejs-kit-node-createreadablestream',
 			[
-				'createReadableStream in @sveltejs/kit/node',
+				'`@sveltejs/kit/node#createReadableStream`',
 				'/docs/kit/@sveltejs-kit-node#createReadableStream'
 			]
 		],
 		[
 			'sveltejs-kit-node-getrequest',
-			['getRequest in @sveltejs/kit/node', '/docs/kit/@sveltejs-kit-node#getRequest']
+			['`@sveltejs/kit/node#getRequest`', '/docs/kit/@sveltejs-kit-node#getRequest']
 		],
 		[
 			'sveltejs-kit-node-setresponse',
-			['setResponse in @sveltejs/kit/node', '/docs/kit/@sveltejs-kit-node#setResponse']
+			['`@sveltejs/kit/node#setResponse`', '/docs/kit/@sveltejs-kit-node#setResponse']
 		],
 		[
 			'sveltejs-kit-node-polyfills-installpolyfills',
 			[
-				'installPolyfills in @sveltejs/kit/node/polyfills',
+				'`@sveltejs/kit/node/polyfills#installPolyfills`',
 				'/docs/kit/@sveltejs-kit-node-polyfills#installPolyfills'
 			]
 		],
 		[
 			'sveltejs-kit-vite-sveltekit',
-			['sveltekit in @sveltejs/kit/vite', '/docs/kit/@sveltejs-kit-vite#sveltekit']
+			['`@sveltejs/kit/vite#sveltekit`', '/docs/kit/@sveltejs-kit-vite#sveltekit']
 		]
 	]);
 </script>
