@@ -9,20 +9,16 @@
 	interface Props {
 		key?: string;
 		value: Ast;
-		collapsed?: boolean;
+		root?: boolean;
 		path_nodes?: Ast[];
 		autoscroll?: boolean;
 	}
 
-	let {
-		key = '',
-		value,
-		collapsed = $bindable(true),
-		path_nodes = [],
-		autoscroll = true
-	}: Props = $props();
+	let { key = '', value, root = false, path_nodes = [], autoscroll = true }: Props = $props();
 
 	const { toggleable } = get_repl_context();
+
+	let collapsed = $state(!root);
 
 	let list_item_el = $state() as HTMLLIElement;
 
