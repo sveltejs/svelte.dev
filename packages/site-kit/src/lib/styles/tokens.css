@@ -39,7 +39,7 @@
 	--sk-font-size-ui-large: 3rem;
 	--sk-font-size-mono: 1.4rem;
 
-	--sk-line-height-body: 1.7;
+	--sk-line-height-body: 1.5;
 
 	--sk-font-h1: 500 var(--sk-font-size-h1) / 1.2 var(--sk-font-family-heading);
 	--sk-font-h2: 500 var(--sk-font-size-h2) / 1.2 var(--sk-font-family-heading);
@@ -125,7 +125,16 @@
 		--sk-font-family-body: 'EB Garamond', Georgia, serif;
 		--sk-font-size-body: 2.2rem;
 		--sk-font-size-body-small: 2rem;
-		--sk-line-height-body: 1.5;
+	}
+
+	&.font-boring {
+		--sk-font-family-body: 'Atkinson Hyperlegible', sans-serif;
+		--sk-font-size-body: 2rem;
+		--sk-font-size-body-small: 1.8rem;
+
+		p code {
+			font-size: 0.75em;
+		}
 	}
 
 	&.dark {
@@ -175,16 +184,6 @@
 		--sk-raised-color: var(--sk-back-5) var(--sk-back-3) var(--sk-back-3) var(--sk-back-5);
 		--sk-raised-hover-color: var(--sk-back-6) var(--sk-back-3) var(--sk-back-3) var(--sk-back-6);
 		--sk-raised-active-color: var(--sk-back-3) var(--sk-back-6) var(--sk-back-6) var(--sk-back-3);
-	}
-
-	&.font-boring {
-		--sk-font-family-body: 'Atkinson Hyperlegible', sans-serif;
-		--sk-font-size-body: 2rem;
-		--sk-font-size-body-small: 1.8rem;
-
-		p code {
-			font-size: 0.75em;
-		}
 	}
 }
 
