@@ -11,7 +11,7 @@ export async function load({ url, fetch }) {
 
 	const query = url.searchParams.get('q') ?? '';
 
-	const results = query ? search(query) : [];
+	const results = query ? search(query, '') : [];
 
 	return {
 		query,
