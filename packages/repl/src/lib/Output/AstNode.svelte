@@ -22,12 +22,11 @@
 
 	let list_item_el = $state() as HTMLLIElement;
 
-	let is_root = $derived(path_nodes[0] === value);
 	let is_leaf = $derived(path_nodes[path_nodes.length - 1] === value);
-	let is_ast_array = $derived(Array.isArray(value));
-	let is_collapsable = $derived(value && typeof value === 'object');
+	let is_array = $derived(Array.isArray(value));
+	let is_primitive = $derived(value === null || typeof value !== 'object');
 	let is_markable = $derived(
-		is_collapsable &&
+		!is_primitive &&
 			'start' in value &&
 			'end' in value &&
 			typeof value.start === 'number' &&
@@ -38,9 +37,9 @@
 	let preview_text = $state('');
 
 	$effect(() => {
-		if (!is_collapsable || !collapsed) return;
+		if (is_primitive || !collapsed) return;
 
-		if (is_ast_array) {
+		if (is_array) {
 			if (!('length' in value)) return;
 
 			preview_text = `[ ${value.length} element${value.length === 1 ? '' : 's'} ]`;
@@ -91,36 +90,35 @@
 
 <li
 	bind:this={list_item_el}
-	class:marked={!is_root && is_leaf}
+	class:marked={!root && is_leaf}
 	onmouseover={handle_mark_text}
 	onfocus={handle_mark_text}
 	onmouseleave={handle_unmark_text}
 >
-	{#if !is_root && is_collapsable}
+	{#if !root && !is_primitive}
 		<button class="ast-toggle" class:open={!collapsed} onclick={() => (collapsed = !collapsed)}>
 			{key_text}
 		</button>
 	{:else if key_text}
 		<span>{key_text}</span>
 	{/if}
-	{#if is_collapsable}
-		{#if collapsed && !is_root}
-			<button class="preview" onclick={() => (collapsed = !collapsed)}>
-				{preview_text}
-			</button>
-		{:else}
-			<span>{is_ast_array ? '[' : '{'}</span>
-			<ul>
-				{#each Object.entries(value) as [k, v]}
-					<AstNode key={is_ast_array ? '' : k} value={v} {path_nodes} {autoscroll} />
-				{/each}
-			</ul>
-			<span>{is_ast_array ? ']' : '}'}</span>
-		{/if}
-	{:else}
+
+	{#if is_primitive}
 		<span class="token {typeof value}">
 			{JSON.stringify(value)}
 		</span>
+	{:else if collapsed && !root}
+		<button class="preview" onclick={() => (collapsed = !collapsed)}>
+			{preview_text}
+		</button>
+	{:else}
+		<span>{is_array ? '[' : '{'}</span>
+		<ul>
+			{#each Object.entries(value) as [k, v]}
+				<AstNode key={is_array ? '' : k} value={v} {path_nodes} {autoscroll} />
+			{/each}
+		</ul>
+		<span>{is_array ? ']' : '}'}</span>
 	{/if}
 </li>
 
