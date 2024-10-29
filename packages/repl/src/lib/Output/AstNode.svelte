@@ -118,7 +118,13 @@
 
 			<ul>
 				{#each Object.entries(value) as [k, v]}
-					<AstNode key={!is_array && k} value={v} {path_nodes} {autoscroll} depth={depth + 1} />
+					<AstNode
+						key={is_array ? undefined : k}
+						value={v}
+						{path_nodes}
+						{autoscroll}
+						depth={depth + 1}
+					/>
 				{/each}
 			</ul>
 
