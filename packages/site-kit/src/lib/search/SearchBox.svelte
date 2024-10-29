@@ -329,6 +329,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 			flex-shrink: 0;
 			color: var(--sk-text-1);
 			border-bottom: 1px solid var(--sk-back-6);
+			background: inherit;
 
 			&::selection {
 				background-color: var(--sk-back-translucent);
@@ -404,14 +405,15 @@ It appears when the user clicks on the `Search` component or presses the corresp
 		pointer-events: all;
 		background: var(--background);
 
-		ul {
-			padding: 0 var(--padding);
-		}
-
 		li {
 			position: relative;
 			display: flex;
+			padding: 0.2rem var(--padding);
 			gap: 1rem;
+
+			&:hover {
+				background: var(--sk-back-3);
+			}
 
 			a {
 				color: var(--sk-text-2);
@@ -420,10 +422,6 @@ It appears when the user clicks on the `Search` component or presses the corresp
 				margin: 0 -0.5rem;
 				padding: 0.5rem;
 				flex: 1;
-
-				&:hover {
-					background: rgba(0, 0, 0, 0.05);
-				}
 
 				&:focus {
 					outline-offset: -3px;
@@ -434,6 +432,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 				width: 3.2rem;
 				height: 3.2rem;
 				color: var(--sk-text-4);
+				background-color: var(--sk-back-2);
 
 				&:hover {
 					outline: none;
