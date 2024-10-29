@@ -119,6 +119,10 @@
 			margin: 2rem 0;
 			/* background: var(--sk-back-3); */
 
+			@media (min-width: 767px) {
+				margin: 3rem 0;
+			}
+
 			.controls {
 				--height: 3.6rem;
 				display: flex;
@@ -376,7 +380,7 @@
 			li::before {
 				content: '';
 				position: absolute;
-				top: 1.43rem;
+				top: 1.1rem;
 				left: -1.8rem;
 				background-color: var(--sk-text-4);
 				width: 0.6rem;
