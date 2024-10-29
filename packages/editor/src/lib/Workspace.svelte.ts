@@ -1,5 +1,5 @@
 import type { CompileError, CompileOptions, CompileResult } from 'svelte/compiler';
-import { EditorState } from '@codemirror/state';
+import { Compartment, EditorState } from '@codemirror/state';
 import { compile_file } from './compile-worker';
 import { BROWSER } from 'esm-env';
 import { basicSetup, EditorView } from 'codemirror';
@@ -51,10 +51,12 @@ function file_type(file: Item) {
 	return file.name.split('.').pop();
 }
 
+const tab_behaviour = new Compartment();
+
 const default_extensions = [
 	basicSetup,
 	EditorState.tabSize.of(2),
-	keymap.of([{ key: 'Tab', run: acceptCompletion }, indentWithTab]),
+	tab_behaviour.of(keymap.of([{ key: 'Tab', run: acceptCompletion }])),
 	indentUnit.of('\t'),
 	theme
 ];
@@ -207,6 +209,20 @@ export class Workspace {
 		}
 
 		return item;
+	}
+
+	disable_tab_indent() {
+		this.#view?.dispatch({
+			effects: tab_behaviour.reconfigure(keymap.of([{ key: 'Tab', run: acceptCompletion }]))
+		});
+	}
+
+	enable_tab_indent() {
+		this.#view?.dispatch({
+			effects: tab_behaviour.reconfigure(
+				keymap.of([{ key: 'Tab', run: acceptCompletion }, indentWithTab])
+			)
+		});
 	}
 
 	focus() {
