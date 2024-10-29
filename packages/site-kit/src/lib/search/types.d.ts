@@ -8,4 +8,5 @@ export interface Block {
 export interface BlockGroup {
 	breadcrumbs: string[];
 	blocks: Block[];
+	score: number;
 }
