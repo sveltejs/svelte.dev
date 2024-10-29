@@ -380,11 +380,11 @@
 			li::before {
 				content: '';
 				position: absolute;
-				top: calc((var(--sk-font-size-body) / var(--sk-line-height-body)) - 0.05lh);
+				top: 0.65em;
 				left: -1.8rem;
 				background-color: var(--sk-text-4);
-				width: 0.2lh;
-				height: 0.2lh;
+				width: 0.3em;
+				height: 0.3em;
 				border-radius: 50%;
 				opacity: 0.7;
 			}
