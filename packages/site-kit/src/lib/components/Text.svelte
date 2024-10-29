@@ -116,11 +116,11 @@
 			border: 1px solid var(--sk-back-5);
 			border-radius: var(--sk-border-radius);
 			overflow: hidden;
-			margin: 2rem 0;
+			margin: calc(0.5 * var(--sk-line-height-body)) 0;
 			/* background: var(--sk-back-3); */
 
 			@media (min-width: 767px) {
-				margin: 3rem 0;
+				margin: var(--sk-line-height-body) 0;
 			}
 
 			.controls {

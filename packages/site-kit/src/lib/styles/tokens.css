@@ -39,7 +39,9 @@
 	--sk-font-size-ui-large: 3rem;
 	--sk-font-size-mono: 1.4rem;
 
-	--sk-line-height-body: 1.5;
+	/* doing it this way (rather than just `1.5`) means it has a unit, and can be used elsewhere */
+	--sk-line-height-body: calc(1.5 * var(--sk-font-size-body));
+	--sk-line-height-body-small: calc(1.5 * var(--sk-font-size-body-small));
 
 	--sk-font-h1: 500 var(--sk-font-size-h1) / 1.2 var(--sk-font-family-heading);
 	--sk-font-h2: 500 var(--sk-font-size-h2) / 1.2 var(--sk-font-family-heading);
