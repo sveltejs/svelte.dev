@@ -116,21 +116,13 @@
 				{/if}
 			</summary>
 
-			{#if is_array}
-				<ul>
-					{#each value as v}
-						<AstNode value={v} {path_nodes} {autoscroll} depth={depth + 1} />
-					{/each}
-				</ul>
-				<span>]</span>
-			{:else}
-				<ul>
-					{#each Object.entries(value) as [k, v]}
-						<AstNode key={k} value={v} {path_nodes} {autoscroll} depth={depth + 1} />
-					{/each}
-				</ul>
-				<span>}</span>
-			{/if}
+			<ul>
+				{#each Object.entries(value) as [k, v]}
+					<AstNode key={!is_array && k} value={v} {path_nodes} {autoscroll} depth={depth + 1} />
+				{/each}
+			</ul>
+
+			<span>{is_array ? ']' : '}'}</span>
 		</details>
 	{/if}
 </li>
