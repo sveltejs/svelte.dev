@@ -9,16 +9,17 @@
 	interface Props {
 		key?: string;
 		value: Ast;
-		root?: boolean;
 		path_nodes?: Ast[];
 		autoscroll?: boolean;
+		depth?: number;
 	}
 
-	let { key = '', value, root = false, path_nodes = [], autoscroll = true }: Props = $props();
+	let { key = '', value, path_nodes = [], autoscroll = true, depth = 0 }: Props = $props();
 
 	const { toggleable } = get_repl_context();
 
-	let collapsed = $state(!root);
+	let root = depth === 0;
+	let open = $state(root);
 
 	let list_item_el = $state() as HTMLLIElement;
 
@@ -34,22 +35,8 @@
 	);
 	let key_text = $derived(key ? `${key}:` : '');
 
-	let preview_text = $state('');
-
 	$effect(() => {
-		if (is_primitive || !collapsed) return;
-
-		if (is_array) {
-			if (!('length' in value)) return;
-
-			preview_text = `[ ${value.length} element${value.length === 1 ? '' : 's'} ]`;
-		} else {
-			preview_text = `{ ${Object.keys(value).join(', ')} }`;
-		}
-	});
-
-	$effect(() => {
-		collapsed = !path_nodes.includes(value);
+		open = path_nodes.includes(value);
 	});
 
 	$effect(() => {
@@ -95,30 +82,56 @@
 	onfocus={handle_mark_text}
 	onmouseleave={handle_unmark_text}
 >
-	{#if !root && !is_primitive}
-		<button class="ast-toggle" class:open={!collapsed} onclick={() => (collapsed = !collapsed)}>
-			{key_text}
-		</button>
-	{:else if key_text}
-		<span>{key_text}</span>
-	{/if}
+	{#if is_primitive || (is_array && value.length === 0)}
+		<span class="value">
+			{#if key_text}
+				<span>{key_text}</span>
+			{/if}
 
-	{#if is_primitive}
-		<span class="token {typeof value}">
-			{JSON.stringify(value)}
+			{#if value == undefined}
+				<span class="token comment">{String(value)}</span>
+			{:else}
+				<span class="token {typeof value}">
+					{JSON.stringify(value)}
+				</span>
+			{/if}
 		</span>
-	{:else if collapsed && !root}
-		<button class="preview" onclick={() => (collapsed = !collapsed)}>
-			{preview_text}
-		</button>
 	{:else}
-		<span>{is_array ? '[' : '{'}</span>
-		<ul>
-			{#each Object.entries(value) as [k, v]}
-				<AstNode key={is_array ? '' : k} value={v} {path_nodes} {autoscroll} />
-			{/each}
-		</ul>
-		<span>{is_array ? ']' : '}'}</span>
+		<details bind:open>
+			<summary>
+				{#if key}
+					<span class="key">{key}</span>:
+				{/if}
+
+				{#if is_array}
+					[{#if !open}
+						<span class="token comment">...</span>]
+						<span class="token comment">({value.length})</span>
+					{/if}
+				{:else}
+					{#if value.type}
+						<span class="token comment">{value.type}</span>
+					{/if}
+					{'{'}{#if !open}<span class="token comment">...</span>}{/if}
+				{/if}
+			</summary>
+
+			{#if is_array}
+				<ul>
+					{#each value as v}
+						<AstNode value={v} {path_nodes} {autoscroll} depth={depth + 1} />
+					{/each}
+				</ul>
+				<span>]</span>
+			{:else}
+				<ul>
+					{#each Object.entries(value) as [k, v]}
+						<AstNode key={k} value={v} {path_nodes} {autoscroll} depth={depth + 1} />
+					{/each}
+				</ul>
+				<span>}</span>
+			{/if}
+		</details>
 	{/if}
 </li>
 
@@ -137,26 +150,18 @@
 		background-color: var(--sk-highlight-color);
 	}
 
-	button {
-		&:hover {
+	summary {
+		position: relative;
+		display: block;
+		cursor: pointer;
+
+		.key {
 			text-decoration: underline;
 		}
-	}
 
-	.ast-toggle {
-		position: relative;
-	}
-
-	.ast-toggle::before {
-		content: '\25B6';
-		position: absolute;
-		bottom: 0;
-		left: -1.3rem;
-		opacity: 0.7;
-	}
-
-	.ast-toggle.open::before {
-		content: '\25BC';
+		&:hover .key {
+			text-decoration: underline;
+		}
 	}
 
 	.token {
@@ -169,5 +174,9 @@
 
 	.token.number {
 		color: var(--sk-code-number);
+	}
+
+	.token.comment {
+		color: var(--sk-code-comment);
 	}
 </style>

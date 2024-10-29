@@ -65,7 +65,7 @@
 		<code>
 			{#if typeof ast === 'object'}
 				<ul>
-					<AstNode value={ast} {path_nodes} {autoscroll} root />
+					<AstNode value={ast} {path_nodes} {autoscroll} />
 				</ul>
 			{:else}
 				<p>No AST available</p>
