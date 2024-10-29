@@ -56,15 +56,6 @@ ol {
 	}
 }
 
-ul,
-ol {
-	margin-top: 1rem;
-}
-
-p:has(+ ul, + ol) {
-	margin-bottom: 1rem;
-}
-
 a {
 	position: relative;
 	text-decoration: none;
