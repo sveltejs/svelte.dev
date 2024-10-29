@@ -50,6 +50,12 @@ const WORD_MATCH_BOOST = 4;
 const NEAR_MATCH_BOOST = 2;
 const BREADCRUMB_LENGTH_BOOST = 0.2;
 
+interface Entry {
+	block: Block;
+	score: number;
+	rank: number;
+}
+
 /**
  * Search for a given query in the existing index
  */
@@ -65,7 +71,7 @@ export function search(query: string, path: string): BlockGroup[] {
 		.flatMap((index) => index.search(query))
 		// @ts-expect-error flexsearch types are wrong i think?
 		.map(lookup)
-		.map((block) => {
+		.map((block, rank) => {
 			const block_parts = block.href.split('/');
 
 			// prioritise current section
@@ -85,25 +91,39 @@ export function search(query: string, path: string): BlockGroup[] {
 			// prioritise branches over leaves
 			score -= block.breadcrumbs.length * BREADCRUMB_LENGTH_BOOST;
 
-			return { block, score };
+			const entry: Entry = { block, score, rank };
+
+			return entry;
 		});
 
-	const groups: Record<string, BlockGroup> = {};
+	const grouped: Record<string, { breadcrumbs: string[]; entries: Entry[] }> = {};
 
-	for (const { score, block } of blocks) {
-		const breadcrumbs = block.breadcrumbs.slice(0, 2);
-
-		const group = (groups[breadcrumbs.join('::')] ??= {
+	for (const entry of blocks) {
+		const breadcrumbs = entry.block.breadcrumbs.slice(0, 2);
+		const group = (grouped[breadcrumbs.join('::')] ??= {
 			breadcrumbs,
-			blocks: [],
-			score: 0
+			entries: []
 		});
 
-		group.score = Math.max(score, group.score);
-		group.blocks.push(block);
+		group.entries.push(entry);
 	}
 
-	return Object.values(groups).sort((a, b) => b.score - a.score);
+	const sorted = Object.values(grouped);
+
+	// sort blocks within groups...
+	for (const group of sorted) {
+		group.entries.sort((a, b) => b.score - a.score || a.rank - b.rank);
+	}
+
+	// ...then sort groups
+	sorted.sort((a, b) => b.entries[0].score - a.entries[0].score);
+
+	return sorted.map((group) => {
+		return {
+			breadcrumbs: group.breadcrumbs,
+			blocks: group.entries.map((entry) => entry.block)
+		};
+	});
 }
 
 /**
