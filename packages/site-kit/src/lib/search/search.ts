@@ -47,9 +47,11 @@ export function init(blocks: Block[]) {
 /**
  * Search for a given query in the existing index
  */
-export function search(query: string): BlockGroup[] {
+export function search(query: string, path: string): BlockGroup[] {
 	const escaped = query.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
 	const regex = new RegExp(`(^|\\b)${escaped}`, 'i');
+
+	const parts = path.split('/');
 
 	const blocks = indexes
 		.flatMap((index) => index.search(query))
@@ -57,9 +59,24 @@ export function search(query: string): BlockGroup[] {
 		.map(lookup)
 		.map((block, rank) => ({ block: block as Block, rank }))
 		.sort((a, b) => {
-			// If rank is way lower, give that priority
-			if (Math.abs(a.rank - b.rank) > 3) {
-				return a.rank - b.rank;
+			// prioritise current section
+			const a_parts = a.block.href.split('/');
+			const b_parts = b.block.href.split('/');
+
+			for (let i = 0; i < parts.length; i += 1) {
+				const a_part_matches = a_parts[i] === parts[i];
+				const b_part_matches = b_parts[i] === parts[i];
+
+				if (!a_part_matches || !b_part_matches) {
+					if (a_part_matches !== b_part_matches) {
+						if (i > 1) {
+							console.log('here', a, b);
+						}
+						return a_part_matches ? -1 : 1;
+					}
+
+					break;
+				}
 			}
 
 			const a_title_matches = regex.test(a.block.breadcrumbs.at(-1)!);

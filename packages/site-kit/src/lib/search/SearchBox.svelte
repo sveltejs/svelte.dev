@@ -10,6 +10,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 	import Icon from '../components/Icon.svelte';
 	import SearchResults from './SearchResults.svelte';
 	import SearchWorker from './search-worker.js?worker';
+	import { page } from '$app/stores';
 
 	interface Props {
 		placeholder?: string;
@@ -94,7 +95,14 @@ It appears when the user clicks on the `Search` component or presses the corresp
 			const id = uid++;
 			pending.add(id);
 
-			worker.postMessage({ type: 'query', id, payload: $search_query });
+			worker.postMessage({
+				type: 'query',
+				id,
+				payload: {
+					query: $search_query,
+					path: $page.url.pathname
+				}
+			});
 		}
 	});
 

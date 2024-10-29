@@ -12,8 +12,8 @@ addEventListener('message', async (event) => {
 	}
 
 	if (type === 'query') {
-		const query = payload;
-		const results = search(query);
+		const { query, path } = payload;
+		const results = search(query, path);
 
 		postMessage({ type: 'results', payload: { results, query } });
 	}
