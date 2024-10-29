@@ -149,7 +149,7 @@
 		}
 
 		&:hover {
-			--background: var(--sk-back-4);
+			--background: var(--sk-back-3);
 			text-decoration: none;
 		}
 

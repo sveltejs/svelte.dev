@@ -32,14 +32,16 @@
 	--sk-font-size-h1: 3.6rem;
 	--sk-font-size-h2: 3rem;
 	--sk-font-size-h3: 2.4rem;
-	--sk-font-size-body: 2rem;
-	--sk-font-size-body-small: 1.8rem;
+	--sk-font-size-body: 1.8rem;
+	--sk-font-size-body-small: 1.6rem;
 	--sk-font-size-ui-small: 1.3rem;
 	--sk-font-size-ui-medium: 1.6rem;
 	--sk-font-size-ui-large: 3rem;
 	--sk-font-size-mono: 1.4rem;
 
-	--sk-line-height-body: 1.7;
+	/* doing it this way (rather than just `1.5`) means it has a unit, and can be used elsewhere */
+	--sk-line-height-body: calc(1.5 * var(--sk-font-size-body));
+	--sk-line-height-body-small: calc(1.5 * var(--sk-font-size-body-small));
 
 	--sk-font-h1: 500 var(--sk-font-size-h1) / 1.2 var(--sk-font-family-heading);
 	--sk-font-h2: 500 var(--sk-font-size-h2) / 1.2 var(--sk-font-family-heading);
@@ -125,7 +127,16 @@
 		--sk-font-family-body: 'EB Garamond', Georgia, serif;
 		--sk-font-size-body: 2.2rem;
 		--sk-font-size-body-small: 2rem;
-		--sk-line-height-body: 1.5;
+	}
+
+	&.font-boring {
+		--sk-font-family-body: 'Atkinson Hyperlegible', sans-serif;
+		--sk-font-size-body: 1.9rem;
+		--sk-font-size-body-small: 1.7rem;
+
+		p code {
+			font-size: 0.75em;
+		}
 	}
 
 	&.dark {
@@ -175,16 +186,6 @@
 		--sk-raised-color: var(--sk-back-5) var(--sk-back-3) var(--sk-back-3) var(--sk-back-5);
 		--sk-raised-hover-color: var(--sk-back-6) var(--sk-back-3) var(--sk-back-3) var(--sk-back-6);
 		--sk-raised-active-color: var(--sk-back-3) var(--sk-back-6) var(--sk-back-6) var(--sk-back-3);
-	}
-
-	&.font-boring {
-		--sk-font-family-body: 'Atkinson Hyperlegible', sans-serif;
-		--sk-font-size-body: 2rem;
-		--sk-font-size-body-small: 1.8rem;
-
-		p code {
-			font-size: 0.75em;
-		}
 	}
 }
 

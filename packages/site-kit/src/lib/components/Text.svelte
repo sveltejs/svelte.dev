@@ -116,8 +116,12 @@
 			border: 1px solid var(--sk-back-5);
 			border-radius: var(--sk-border-radius);
 			overflow: hidden;
-			margin: 2rem 0;
+			margin: calc(0.5 * var(--sk-line-height-body)) 0;
 			/* background: var(--sk-back-3); */
+
+			@media (min-width: 767px) {
+				margin: var(--sk-line-height-body) 0;
+			}
 
 			.controls {
 				--height: 3.6rem;
@@ -376,11 +380,11 @@
 			li::before {
 				content: '';
 				position: absolute;
-				top: 1.43rem;
+				top: 0.65em;
 				left: -1.8rem;
 				background-color: var(--sk-text-4);
-				width: 0.6rem;
-				height: 0.6rem;
+				width: 0.3em;
+				height: 0.3em;
 				border-radius: 50%;
 				opacity: 0.7;
 			}

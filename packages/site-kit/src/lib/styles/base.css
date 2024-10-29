@@ -45,7 +45,7 @@ p,
 ul,
 ol {
 	font: var(--sk-font-body);
-	margin: 1lh 0;
+	margin: 0.5lh 0;
 
 	&:first-child {
 		margin-top: 0;
@@ -136,8 +136,7 @@ header {
 /*	opinionated styles --------------------- */
 blockquote {
 	position: relative;
-	margin: 2.4rem 0;
-	padding: 2rem 2.4rem 1.8rem 2.4rem;
+	margin: var(--sk-line-height-body) 0;
 	max-width: var(--sk-page-content-width);
 }
 
