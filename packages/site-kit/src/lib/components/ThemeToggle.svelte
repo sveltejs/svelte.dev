@@ -32,6 +32,7 @@
 <style>
 	button {
 		background-image: url($lib/icons/theme-dark.svg);
+		background-size: 2rem;
 
 		:global(.dark) & {
 			background-image: url($lib/icons/theme-light.svg);
