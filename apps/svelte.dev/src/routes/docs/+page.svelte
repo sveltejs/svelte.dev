@@ -112,8 +112,8 @@
 	.options a {
 		display: block;
 		color: var(--sk-text-2);
-		margin: 1em -2em;
-		padding: 2em;
+		margin: 1em -1.6rem;
+		padding: 1.6rem;
 		background-color: var(--sk-back-1);
 		border-radius: var(--sk-border-radius);
 
@@ -140,6 +140,11 @@
 
 		p:last-child {
 			margin-bottom: 0;
+		}
+
+		@media (min-width: 480px) {
+			margin: 1em -2.4rem;
+			padding: 2.4rem;
 		}
 	}
 </style>
