@@ -19,11 +19,11 @@ export const SHIKI_LANGUAGE_MAP = {
  */
 export function clean(markdown: string) {
 	return markdown
-		.replace(/\*\*(.+?)\*\*/g, '$1') // bold
-		.replace(/_(.+?)_/g, '$1') // Italics
-		.replace(/\*(.+?)\*/g, '$1') // Italics
-		.replace(/`(.+?)`/g, '$1') // Inline code
-		.replace(/~~(.+?)~~/g, '$1') // Strikethrough
+		.replace(/(?:^|b)\*\*(.+?)\*\*(?:\b|$)/g, '$1') // bold
+		.replace(/(?:^|b)_(.+?)_(?:\b|$)/g, '$1') // Italics
+		.replace(/(?:^|b)\*(.+?)\*(?:\b|$)/g, '$1') // Italics
+		.replace(/(?:^|b)`(.+?)`(?:\b|$)/g, '$1') // Inline code
+		.replace(/(?:^|b)~~(.+?)~~(?:\b|$)/g, '$1') // Strikethrough
 		.replace(/\[(.+?)\]\(.+?\)/g, '$1') // Link
 		.replace(/\n/g, ' ') // New line
 		.replace(/ {2,}/g, ' ')
@@ -36,7 +36,7 @@ export const slugify = (str: string) => {
 		.replace(/&.+?;/g, '')
 		.replace(/<\/?.+?>/g, '')
 		.replace(/\.\.\./g, '')
-		.replace(/[^a-zA-Z0-9-$(.):']/g, '-')
+		.replace(/[^a-zA-Z0-9-$(.):'_]/g, '-')
 		.replace(/-{2,}/g, '-')
 		.replace(/^-/, '')
 		.replace(/-$/, '');

@@ -37,7 +37,11 @@
 		<source srcset={MachineMobile.sources.avif} width="2208" height="936" type="image/avif" />
 		<source srcset={MachineMobile.sources.webp} width="2208" height="936" type="image/webp" />
 		<source srcset={MachineMobile.sources.png} width="2208" height="936" type="image/png" />
-		<img alt="The Svelte compiler packaging up your component code" src={MachineMobile.img.src} />
+		<img
+			alt="The Svelte compiler packaging up your component code"
+			src={MachineMobile.img.src}
+			fetchpriority="high"
+		/>
 	</picture>
 </div>
 

@@ -52,14 +52,25 @@
 	}}
 />
 
+<!-- svelte-ignore a11y_no_static_element_interactions -->
 <div
 	class="container"
 	bind:this={container}
-	onfocusin={() => {
+	onpointerdown={() => {
+		workspace.enable_tab_indent();
+	}}
+	onkeydown={(e) => {
+		if (e.key !== 'Tab') {
+			workspace.enable_tab_indent();
+		}
+	}}
+	onfocusin={(e) => {
 		clearTimeout(remove_focus_timeout);
 		preserve_editor_focus = true;
 	}}
 	onfocusout={() => {
+		workspace.disable_tab_indent();
+
 		// Heuristic: user did refocus themmselves if iframe_took_focus
 		// doesn't happen in the next few miliseconds. Needed
 		// because else navigations inside the iframe refocus the editor.
