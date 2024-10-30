@@ -7,10 +7,10 @@
 </script>
 
 <button
-	class="raised"
+	class="raised tooltip-left"
 	disabled={!can_migrate}
 	onclick={migrate}
-	title="Migrate this component towards the new syntax"
+	aria-label="Convert syntax from Svelte 4 to 5 if possible"
 >
 	migrate
 </button>

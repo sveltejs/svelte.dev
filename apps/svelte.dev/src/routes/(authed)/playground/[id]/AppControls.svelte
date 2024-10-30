@@ -206,7 +206,7 @@
 
 	<div class="buttons">
 		<button
-			class="raised icon"
+			class="raised icon tooltip"
 			disabled={saving || !user}
 			onclick={() => fork(false)}
 			aria-label={user ? 'fork' : 'log in to fork'}
@@ -219,7 +219,7 @@
 		</button>
 
 		<button
-			class="raised icon"
+			class="raised icon tooltip"
 			disabled={saving || !user}
 			onclick={save}
 			aria-label={user
@@ -266,26 +266,6 @@
 		line-height: 1;
 		background-size: 1.8rem;
 		z-index: 999;
-
-		&[aria-label]:hover::before {
-			content: '';
-			width: 1rem;
-			height: 1rem;
-			position: absolute;
-			background: var(--sk-text-3);
-			top: calc(100% + 0.5rem);
-			rotate: 45deg;
-		}
-
-		&[aria-label]:hover::after {
-			content: attr(aria-label);
-			position: absolute;
-			top: calc(100% + 1rem);
-			background: var(--sk-text-3);
-			color: var(--sk-back-4);
-			padding: 0.5em 0.5em;
-			border-radius: var(--sk-border-radius);
-		}
 
 		&.login {
 			width: auto;

@@ -44,3 +44,37 @@
 	background-position: 50% 50%;
 	background-size: 2.3rem 2.3rem;
 }
+
+button:where(.tooltip, .tooltip-left)[aria-label]:where(:hover, :focus) {
+	--arrow-size: 1rem;
+
+	&::before {
+		content: '';
+		width: var(--arrow-size);
+		height: var(--arrow-size);
+		position: absolute;
+		background: var(--sk-text-3);
+		top: calc(100% + var(--arrow-size) * 0.5);
+		left: calc(50% - var(--arrow-size) * 0.5);
+		rotate: 45deg;
+	}
+
+	&::after {
+		content: attr(aria-label);
+		position: absolute;
+		top: calc(100% + var(--arrow-size));
+		left: 50%;
+		translate: -50% 0;
+		background: var(--sk-text-3);
+		color: var(--sk-back-4);
+		padding: 0.5em 0.8em;
+		border-radius: var(--sk-border-radius);
+		font: var(--sk-font-ui-small);
+		text-transform: none;
+		white-space: pre;
+	}
+
+	&.tooltip-left::after {
+		translate: calc(-100% + 2rem) 0;
+	}
+}
