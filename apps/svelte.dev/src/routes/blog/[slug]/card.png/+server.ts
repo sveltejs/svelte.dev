@@ -8,8 +8,13 @@ import Card from './Card.svelte';
 import DMSerifDisplay from './DMSerifDisplay-Regular.ttf?url';
 import FiraSans from './FiraSans-Regular.ttf?url';
 import { blog_posts } from '$lib/server/content';
+import type { ServerlessConfig } from '@sveltejs/adapter-vercel';
 
-export const prerender = true;
+export const config: ServerlessConfig = {
+	isr: {
+		expiration: false
+	}
+};
 
 export function entries() {
 	return blog_posts.map((post) => ({
