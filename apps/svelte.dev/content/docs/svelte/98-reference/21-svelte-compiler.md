@@ -78,10 +78,12 @@ May throw an error if the code is too complex to migrate automatically.
 function migrate(
 	source: string,
 	{
-		filename
+		filename,
+		use_ts
 	}?:
 		| {
 				filename?: string;
+				use_ts?: boolean;
 		  }
 		| undefined
 ): {

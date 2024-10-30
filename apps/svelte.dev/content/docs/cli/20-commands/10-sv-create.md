@@ -2,7 +2,7 @@
 title: sv create
 ---
 
-`sv create` sets up a new SvelteKit project, with options to [setup additional functionality](sv-add#Official-add-ons).
+`sv create` sets up a new SvelteKit project, with options to [setup additional functionality](sv-add#Official-integrations).
 
 ## Usage
 
