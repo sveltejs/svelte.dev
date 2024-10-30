@@ -128,7 +128,7 @@ const packages: Package[] = [
 	{
 		name: 'cli',
 		repo: 'sveltejs/cli',
-		branch: 'chore/add-docs',
+		branch: 'main',
 		pkg: 'packages/cli',
 		docs: 'documentation/docs',
 		types: null
@@ -199,4 +199,6 @@ if (parsed.values.watch) {
 				sync(pkg);
 			});
 	}
+
+	console.log(`\nwatching for changes in ${parsed.positionals.join(', ')}`);
 }
