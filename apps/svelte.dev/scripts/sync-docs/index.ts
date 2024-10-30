@@ -1,6 +1,7 @@
 import { preprocess } from '@sveltejs/site-kit/markdown/preprocess';
 import path from 'node:path';
 import fs from 'node:fs';
+import { parseArgs } from 'node:util';
 import ts from 'typescript';
 import glob from 'tiny-glob/sync';
 import chokidar from 'chokidar';
@@ -18,6 +19,22 @@ interface Package {
 	types: string | null;
 	process_modules?: (modules: Modules, pkg: Package) => Promise<Modules>;
 }
+
+const parsed = parseArgs({
+	args: process.argv.slice(2),
+	options: {
+		watch: {
+			type: 'boolean',
+			short: 'w'
+		},
+		pull: {
+			type: 'boolean',
+			short: 'p'
+		}
+	},
+	strict: true,
+	allowPositionals: true
+});
 
 const dirname = fileURLToPath(new URL('.', import.meta.url));
 const REPOS = path.join(dirname, '../../repos');
@@ -118,22 +135,35 @@ const packages: Package[] = [
 	}
 ];
 
+const unknown = parsed.positionals.filter((name) => !packages.some((pkg) => pkg.name === name));
+
+if (unknown.length > 0) {
+	throw new Error(
+		`Valid repos are ${packages.map((pkg) => pkg.name).join(', ')} (saw ${unknown.join(', ')})`
+	);
+}
+
+const filtered =
+	parsed.positionals.length === 0
+		? packages
+		: packages.filter((pkg) => parsed.positionals.includes(pkg.name));
+
 /**
  * Depending on your setup, this will either clone the Svelte and SvelteKit repositories
  * or use the local paths you provided above to read the documentation files.
  * It will then copy them into the `content/docs` directory and process them to replace
  * placeholders for types with content from the generated types.
  */
-if (process.env.USE_GIT === 'true') {
+if (parsed.values.pull) {
 	try {
 		fs.mkdirSync(REPOS);
 	} catch {
 		// ignore if it already exists
 	}
 
-	await Promise.all(
-		packages.map((pkg) => clone_repo(`https://github.com/${pkg.repo}.git`, pkg.branch, REPOS))
-	);
+	for (const pkg of filtered) {
+		await clone_repo(`https://github.com/${pkg.repo}.git`, pkg.name, pkg.branch, REPOS);
+	}
 }
 
 async function sync(pkg: Package) {
@@ -157,12 +187,12 @@ async function sync(pkg: Package) {
 	}
 }
 
-for (const pkg of packages) {
+for (const pkg of filtered) {
 	await sync(pkg);
 }
 
-if (process.argv.includes('-w') || process.argv.includes('--watch')) {
-	for (const pkg of packages) {
+if (parsed.values.watch) {
+	for (const pkg of filtered) {
 		chokidar
 			.watch(`${REPOS}/${pkg.name}/${pkg.docs}`, { ignoreInitial: true })
 			.on('all', (event) => {
