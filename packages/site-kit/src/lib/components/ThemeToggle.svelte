@@ -31,10 +31,10 @@
 
 <style>
 	button {
-		background-image: url($lib/icons/theme-light.svg);
+		background-image: url($lib/icons/theme-dark.svg);
 
 		:global(.dark) & {
-			background-image: url($lib/icons/theme-dark.svg);
+			background-image: url($lib/icons/theme-light.svg);
 		}
 	}
 </style>
