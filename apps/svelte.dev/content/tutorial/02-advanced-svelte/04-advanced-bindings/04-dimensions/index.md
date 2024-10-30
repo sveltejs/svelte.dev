@@ -2,7 +2,7 @@
 title: Dimensions
 ---
 
-You can add `clientWidth`, `clientHeight`, `offsetWidth` and `offsetHeight` bindings to any element:
+You can add `clientWidth`, `clientHeight`, `offsetWidth` and `offsetHeight` bindings to any element, and Svelte will update the bound values using a [`ResizeObserver`](https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver):
 
 ```svelte
 /// file: App.svelte
