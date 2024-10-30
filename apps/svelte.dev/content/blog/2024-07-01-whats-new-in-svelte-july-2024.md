@@ -24,7 +24,7 @@ Below, you'll find the highlights from the Svelte 5 release notes (now in [Relea
 
 The node and Cloudflare adapters got a few upgrades this month:
 
-- The `BODY_SIZE_LIMIT` environment variable adds unit suffixes support to the adapter-node - making it easier to write and comprehend large byte values (**adapter-node@5.2.0**, [Docs](/docs/kit/adapter-node#Environment-variables-BODYSIZELIMIT), [#11680](https://github.com/sveltejs/kit/pull/11680))
+- The `BODY_SIZE_LIMIT` environment variable adds unit suffixes support to the adapter-node - making it easier to write and comprehend large byte values (**adapter-node@5.2.0**, [Docs](/docs/kit/adapter-node#Environment-variables-BODY_SIZE_LIMIT), [#11680](https://github.com/sveltejs/kit/pull/11680))
 - Node servers can now listen to the `sveltekit:shutdown` event (replacing the more abrupt `exit`) that is emitted after the HTTP server has closed all connections (**adapter-node@5.1.0**, [Docs](/docs/kit/adapter-node#Graceful-shutdown), [#12153](https://github.com/sveltejs/kit/pull/12153))
 - The Cloudflare adapter will now only throw a `_routes.json` error when the file exists but there are no configured routes in svelte.config (**adapter-cloudflare@4.5.0**, [#12360](https://github.com/sveltejs/kit/pull/12360))
 
