@@ -1,14 +1,16 @@
 <script lang="ts">
 	import '@sveltejs/site-kit/styles/index.css';
-	import { browser } from '$app/environment';
+	import { browser, dev } from '$app/environment';
 	import { page } from '$app/stores';
 	import { Shell, Banner } from '@sveltejs/site-kit/components';
 	import { Nav } from '@sveltejs/site-kit/nav';
 	import { SearchBox } from '@sveltejs/site-kit/search';
 	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
+	import { inject } from '@vercel/analytics';
 	import { beforeNavigate } from '$app/navigation';
 
 	injectSpeedInsights();
+	inject({ mode: dev ? 'development' : 'production' });
 
 	// Make all navigations between SvelteKit-tutorial and non-SvelteKit-tutorial pages (and vice versa)
 	// a full page navigation to ensure webcontainers get the correct origin restriction headers while
