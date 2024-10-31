@@ -1,3 +1,25 @@
+:root {
+	/* raised buttons */
+	--sk-raised-color: var(--sk-border-light) var(--sk-border-medium) var(--sk-border-medium)
+		var(--sk-border-light);
+	--sk-raised-hover-color: var(--sk-border-medium) var(--sk-border-dark) var(--sk-border-dark)
+		var(--sk-border-medium);
+	--sk-raised-active-color: var(--sk-border-dark) var(--sk-border-medium) var(--sk-border-medium)
+		var(--sk-border-dark);
+	--sk-raised-width: 1px 2px 2px 1px;
+	--sk-raised-active-width: 2px 1px 1px 2px;
+
+	&.dark {
+		/* raised buttons */
+		--sk-raised-color: var(--sk-border-medium) var(--sk-border-dark) var(--sk-border-dark)
+			var(--sk-border-medium);
+		--sk-raised-hover-color: var(--sk-border-light) var(--sk-border-dark) var(--sk-border-dark)
+			var(--sk-border-light);
+		--sk-raised-active-color: var(--sk-border-dark) var(--sk-border-light) var(--sk-border-light)
+			var(--sk-border-dark);
+	}
+}
+
 .raised {
 	border-radius: var(--sk-border-radius);
 	border-style: solid;
