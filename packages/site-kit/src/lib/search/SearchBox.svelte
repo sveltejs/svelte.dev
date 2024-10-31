@@ -136,7 +136,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 			}
 		}
 
-		if (e.code === 'Escape') {
+		if (e.key === 'Escape') {
 			close();
 		}
 	}}
