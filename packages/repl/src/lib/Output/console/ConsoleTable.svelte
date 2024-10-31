@@ -96,7 +96,7 @@
 		margin: 8px;
 		overflow: auto;
 		max-height: 200px;
-		border: 1px solid var(--sk-bg-4);
+		border: 1px solid var(--sk-border-medium);
 		border-radius: 2px;
 		overscroll-behavior: none;
 	}

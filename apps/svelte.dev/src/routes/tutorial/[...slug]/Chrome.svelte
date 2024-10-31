@@ -63,7 +63,6 @@
 		width: 100%;
 		height: 4rem;
 		display: flex;
-		border-top: 1px solid var(--sk-bg-4);
 		padding: 0.2rem;
 		gap: 0.2rem;
 	}
@@ -75,7 +74,7 @@
 	input {
 		flex: 1;
 		padding: 0.2rem 0.6rem;
-		border: 1px solid var(--sk-bg-4);
+		border: 1px solid var(--sk-border-medium);
 		/* TODO this should apply to all buttons/inputs? */
 		border-radius: var(--sk-border-radius);
 		color: var(--sk-fg-1);

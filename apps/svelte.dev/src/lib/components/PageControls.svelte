@@ -61,7 +61,7 @@
 
 	.controls {
 		max-width: calc(var(--sk-page-content-width) + 1rem);
-		border-top: 1px solid var(--sk-bg-4);
+		border-top: 1px solid var(--sk-border-medium);
 		padding: 1rem 0 0 0;
 		margin: 1rem 0 0 0;
 		text-wrap: balance;

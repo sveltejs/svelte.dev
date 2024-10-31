@@ -32,7 +32,7 @@
 	}
 
 	&:disabled {
-		border-color: var(--sk-border-light);
+		border-color: var(--sk-border-medium);
 		border-width: 1px;
 	}
 }

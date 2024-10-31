@@ -303,7 +303,7 @@
 
 	input {
 		background: transparent;
-		border: 1px solid var(--sk-bg-4);
+		border: 1px solid var(--sk-border-medium);
 		border-radius: var(--sk-border-radius);
 		color: currentColor;
 		width: 0;
