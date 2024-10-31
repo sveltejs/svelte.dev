@@ -39,6 +39,7 @@ if (BROWSER) {
 export function compile_file(
 	file: File,
 	version: string,
+	is_pkg_pr_new: boolean,
 	options: { generate: 'client' | 'server'; dev: boolean }
 ): Promise<Compiled> {
 	// @ts-ignore
@@ -53,7 +54,7 @@ export function compile_file(
 
 	const file_callbacks = callbacks.get(filename)!;
 
-	worker.postMessage({ id, file, version, options });
+	worker.postMessage({ id, file, version, options, is_pkg_pr_new });
 
 	return new Promise((fulfil) => {
 		file_callbacks.set(id, fulfil);

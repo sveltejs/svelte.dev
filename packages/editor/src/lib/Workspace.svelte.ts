@@ -96,6 +96,7 @@ export class Workspace {
 	compiled = $state<Record<string, Compiled>>({});
 
 	#svelte_version: string;
+	#is_pkg_pr_new: boolean;
 	#readonly = false; // TODO do we need workspaces for readonly stuff?
 	#files = $state.raw<Item[]>([]);
 	#current = $state.raw() as File;
@@ -156,12 +157,14 @@ export class Workspace {
 		files: Item[],
 		{
 			svelte_version = 'latest',
+			is_pkg_pr_new = false,
 			initial,
 			readonly = false,
 			onupdate,
 			onreset
 		}: {
 			svelte_version?: string;
+			is_pkg_pr_new?: boolean;
 			initial?: string;
 			readonly?: boolean;
 			onupdate?: (file: File) => void;
@@ -169,6 +172,7 @@ export class Workspace {
 		} = {}
 	) {
 		this.#svelte_version = svelte_version;
+		this.#is_pkg_pr_new = is_pkg_pr_new;
 		this.#readonly = readonly;
 
 		this.set(files, initial);
@@ -497,9 +501,11 @@ export class Workspace {
 
 			seen.push(file.name);
 
-			compile_file(file, this.#svelte_version, this.compiler_options).then((compiled) => {
-				this.compiled[file.name] = compiled;
-			});
+			compile_file(file, this.#svelte_version, this.#is_pkg_pr_new, this.compiler_options).then(
+				(compiled) => {
+					this.compiled[file.name] = compiled;
+				}
+			);
 		}
 
 		for (const key of keys) {
@@ -529,9 +535,11 @@ export class Workspace {
 		this.modified[file.name] = true;
 
 		if (BROWSER && is_svelte_file(file)) {
-			compile_file(file, this.#svelte_version, this.compiler_options).then((compiled) => {
-				this.compiled[file.name] = compiled;
-			});
+			compile_file(file, this.#svelte_version, this.#is_pkg_pr_new, this.compiler_options).then(
+				(compiled) => {
+					this.compiled[file.name] = compiled;
+				}
+			);
 		}
 
 		this.#onupdate(file);

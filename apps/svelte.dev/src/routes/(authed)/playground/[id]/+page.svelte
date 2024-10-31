@@ -26,7 +26,7 @@
 	const can_escape = browser && !$page.url.hash;
 
 	onMount(() => {
-		if (version !== 'local') {
+		if (version !== 'local' && !data.is_pkg_pr_new) {
 			fetch(`https://unpkg.com/svelte@${version}/package.json`)
 				.then((r) => r.json())
 				.then((pkg) => {
@@ -151,7 +151,9 @@
 	const svelteUrl =
 		browser && version === 'local'
 			? `${location.origin}/playground/local`
-			: `https://unpkg.com/svelte@${version}`;
+			: data.is_pkg_pr_new
+				? version
+				: `https://unpkg.com/svelte@${version}`;
 
 	const relaxed = $derived(data.gist.relaxed || (data.user && data.user.id === data.gist.owner));
 </script>
@@ -203,6 +205,7 @@
 				{can_escape}
 				injectedJS={mapbox_setup}
 				{onchange}
+				isPkgPrNew={data.is_pkg_pr_new}
 				previewTheme={$theme.current}
 			/>
 		</div>

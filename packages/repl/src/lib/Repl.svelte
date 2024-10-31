@@ -22,6 +22,7 @@
 		injectedJS?: string;
 		injectedCSS?: string;
 		previewTheme?: 'light' | 'dark';
+		isPkgPrNew?: boolean;
 		onchange?: () => void;
 	}
 
@@ -37,7 +38,8 @@
 		injectedJS = '',
 		injectedCSS = '',
 		previewTheme = 'light',
-		onchange = () => {}
+		onchange = () => {},
+		isPkgPrNew
 	}: Props = $props();
 
 	// TODO pass in real data
@@ -51,7 +53,8 @@
 
 	const workspace = new Workspace([dummy], {
 		initial: 'App.svelte',
-		svelte_version: svelteUrl.split('@')[1],
+		svelte_version: isPkgPrNew ? svelteUrl : svelteUrl.split('@')[1],
+		is_pkg_pr_new: isPkgPrNew,
 		onupdate() {
 			rebundle();
 			onchange?.();
@@ -120,6 +123,7 @@
 		? new Bundler({
 				packages_url: packagesUrl,
 				svelte_url: svelteUrl,
+				is_pkg_pr_new: isPkgPrNew,
 				onstatus: (message) => {
 					if (message) {
 						// show bundler status, but only after time has elapsed, to

@@ -16,6 +16,7 @@ import type { BundleMessageData } from '../workers';
 import type { Warning } from '../../types';
 import type { CompileError, CompileOptions, CompileResult } from 'svelte/compiler';
 import type { File } from 'editor';
+import { parseTar } from 'tarparser';
 
 // hack for magic-string and rollup inline sourcemaps
 // do not put this into a separate module and import it, would be treeshaken in prod
@@ -31,24 +32,50 @@ const ready = new Promise((f) => {
 	fulfil_ready = f;
 });
 
+let files: Map<string, () => string>;
+let package_json;
+
 self.addEventListener('message', async (event: MessageEvent<BundleMessageData>) => {
 	switch (event.data.type) {
 		case 'init': {
 			({ packages_url, svelte_url } = event.data);
 
-			({ version } = await fetch(`${svelte_url}/package.json`).then((r) => r.json()));
+			if (event.data.is_pkg_pr_new) {
+				let local_files;
+
+				const maybe_tar = await fetch(svelte_url);
+				if (maybe_tar.headers.get('content-type') === 'application/tar+gzip') {
+					const buffer = await maybe_tar.arrayBuffer();
+					local_files = await parseTar(buffer);
+					files = new Map(
+						local_files.map((file) => [file.name.substring('package'.length), () => file.text])
+					);
+					const package_json_content = files.get('/package.json')();
+					if (package_json_content) {
+						package_json = JSON.parse(package_json_content);
+					}
+				}
+			}
+			({ version } =
+				package_json ?? (await fetch(`${svelte_url}/package.json`).then((r) => r.json())));
 			console.log(`Using Svelte compiler version ${version}`);
 
 			if (version.startsWith('4.')) {
 				// unpkg doesn't set the correct MIME type for .cjs files
 				// https://github.com/mjackson/unpkg/issues/355
-				const compiler = await fetch(`${svelte_url}/compiler.cjs`).then((r) => r.text());
+				const compiler =
+					files.get('/compiler.cjs')() ??
+					(await fetch(`${svelte_url}/compiler.cjs`).then((r) => r.text()));
 				(0, eval)(compiler + '\n//# sourceURL=compiler.cjs@' + version);
 			} else if (version.startsWith('3.')) {
-				const compiler = await fetch(`${svelte_url}/compiler.js`).then((r) => r.text());
+				const compiler =
+					files.get('/compiler.js')() ??
+					(await fetch(`${svelte_url}/compiler.js`).then((r) => r.text()));
 				(0, eval)(compiler + '\n//# sourceURL=compiler.js@' + version);
 			} else {
-				const compiler = await fetch(`${svelte_url}/compiler/index.js`).then((r) => r.text());
+				const compiler =
+					files.get('/compiler/index.js')() ??
+					(await fetch(`${svelte_url}/compiler/index.js`).then((r) => r.text()));
 				(0, eval)(compiler + '\n//# sourceURL=compiler/index.js@' + version);
 			}
 
@@ -278,10 +305,13 @@ async function get_bundle(
 					return;
 				} else {
 					// relative import in an external file
-					const url = new URL(importee, importer).href;
-					self.postMessage({ type: 'status', uid, message: `resolving ${url}` });
+					const url = new URL(importee, importer);
+					if (url.protocol === 'file:') {
+						return url.toString();
+					}
 
-					return await follow_redirects(url, uid);
+					self.postMessage({ type: 'status', uid, message: `resolving ${url}` });
+					return await follow_redirects(url.href, uid);
 				}
 			} else {
 				// fetch from unpkg
@@ -324,7 +354,13 @@ async function get_bundle(
 					}
 				};
 
-				const { pkg, pkg_url_base } = await fetch_package_info();
+				let pkg;
+				let pkg_url_base = 'file:';
+				if (importee.startsWith(`svelte`)) {
+					pkg = package_json;
+				} else {
+					({ pkg, pkg_url_base } = await fetch_package_info());
+				}
 
 				try {
 					const resolved_id = await resolve_from_pkg(pkg, subpath, uid, pkg_url_base);
@@ -340,6 +376,14 @@ async function get_bundle(
 			if (resolved === 'esm-env') {
 				return `export const BROWSER = true; export const DEV = true`;
 			}
+
+			try {
+				const resolved_url = new URL(resolved);
+
+				if (resolved_url.protocol === 'file:') {
+					return files.get(resolved_url.pathname)();
+				}
+			} catch {}
 
 			const cached_file = local_files_lookup.get(resolved);
 			if (cached_file) {

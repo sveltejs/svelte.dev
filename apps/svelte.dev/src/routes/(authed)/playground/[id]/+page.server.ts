@@ -11,6 +11,15 @@ export async function load({ fetch, params, url }) {
 
 	const [gist, examples] = await Promise.all([res.json(), examples_res as Promise<Examples>]);
 
+	let version = url.searchParams.get('version') || 'latest';
+
+	let is_pkg_pr_new = false;
+
+	try {
+		const url = new URL(version);
+		is_pkg_pr_new = url.origin === 'https://pkg.pr.new';
+	} catch {}
+
 	return {
 		gist,
 		examples: examples
@@ -22,6 +31,7 @@ export async function load({ fetch, params, url }) {
 					slug: example.slug
 				}))
 			})),
-		version: url.searchParams.get('version') || 'latest'
+		version: url.searchParams.get('version') || 'latest',
+		is_pkg_pr_new
 	};
 }

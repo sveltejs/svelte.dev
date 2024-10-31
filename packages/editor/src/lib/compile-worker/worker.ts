@@ -1,4 +1,5 @@
 import type { File } from '../Workspace.svelte';
+import { parseTar } from 'tarparser';
 
 // hack for magic-string and Svelte 4 compiler
 // do not put this into a separate module and import it, would be treeshaken in prod
@@ -16,18 +17,39 @@ addEventListener('message', async (event) => {
 	if (!inited) {
 		inited = true;
 		const svelte_url = `https://unpkg.com/svelte@${event.data.version}`;
-		const { version } = await fetch(`${svelte_url}/package.json`).then((r) => r.json());
-
+		let local_files;
+		let package_json;
+		if (event.data.is_pkg_pr_new) {
+			const maybe_tar = await fetch(event.data.version);
+			if (maybe_tar.headers.get('content-type') === 'application/tar+gzip') {
+				const buffer = await maybe_tar.arrayBuffer();
+				local_files = await parseTar(buffer);
+				const package_json_content = local_files.find(
+					(file) => file.name === 'package/package.json'
+				)?.text;
+				if (package_json_content) {
+					package_json = JSON.parse(package_json_content);
+				}
+			}
+		}
+		const { version } =
+			package_json ?? (await fetch(`${svelte_url}/package.json`).then((r) => r.json()));
 		if (version.startsWith('4.')) {
 			// unpkg doesn't set the correct MIME type for .cjs files
 			// https://github.com/mjackson/unpkg/issues/355
-			const compiler = await fetch(`${svelte_url}/compiler.cjs`).then((r) => r.text());
+			const compiler =
+				local_files?.find((file) => file.name === 'package/compiler.cjs')?.text ??
+				(await fetch(`${svelte_url}/compiler.cjs`).then((r) => r.text()));
 			(0, eval)(compiler + '\n//# sourceURL=compiler.cjs@' + version);
 		} else if (version.startsWith('3.')) {
-			const compiler = await fetch(`${svelte_url}/compiler.js`).then((r) => r.text());
+			const compiler =
+				local_files?.find((file) => file.name === 'package/compiler.js')?.text ??
+				(await fetch(`${svelte_url}/compiler.js`).then((r) => r.text()));
 			(0, eval)(compiler + '\n//# sourceURL=compiler.js@' + version);
 		} else {
-			const compiler = await fetch(`${svelte_url}/compiler/index.js`).then((r) => r.text());
+			const compiler =
+				local_files?.find((file) => file.name === 'package/compiler/index.js')?.text ??
+				(await fetch(`${svelte_url}/compiler/index.js`).then((r) => r.text()));
 			(0, eval)(compiler + '\n//# sourceURL=compiler/index.js@' + version);
 		}
 
