@@ -4,160 +4,129 @@ title: 'Runtime warnings'
 
 ## Client errors
 
-### bind_invalid_checkbox_value
+### binding_property_non_reactive
 
 ```
-Using `bind:value` together with a checkbox input is not allowed. Use `bind:checked` instead
-```
-
-### bind_invalid_export
-
-```
-Component %component% has an export named `%key%` that a consumer component is trying to access using `bind:%key%`, which is disallowed. Instead, use `bind:this` (e.g. `<%name% bind:this={component} />`) and then access the property on the bound component instance (e.g. `component.%key%`)
-```
-
-### bind_not_bindable
-
-```
-A component is attempting to bind to a non-bindable property `%key%` belonging to %component% (i.e. `<%name% bind:%key%={...}>`). To mark a property as bindable: `let { %key% = $bindable() } = $props()`
-```
-
-### component_api_changed
-
-```
-%parent% called `%method%` on an instance of %component%, which is no longer valid in Svelte 5. See https://svelte.dev/docs/svelte/v5-migration-guide#Components-are-no-longer-classes for more information
-```
-
-### component_api_invalid_new
-
-```
-Attempted to instantiate %component% with `new %name%`, which is no longer valid in Svelte 5. If this component is not under your control, set the `compatibility.componentApi` compiler option to `4` to keep it working. See https://svelte.dev/docs/svelte/v5-migration-guide#Components-are-no-longer-classes for more information
-```
-
-### derived_references_self
-
-```
-A derived value cannot reference itself recursively
-```
-
-### each_key_duplicate
-
-```
-Keyed each block has duplicate key at indexes %a% and %b%
+`%binding%` is binding to a non-reactive property
 ```
 
 ```
-Keyed each block has duplicate key `%value%` at indexes %a% and %b%
+`%binding%` (%location%) is binding to a non-reactive property
 ```
 
-### effect_in_teardown
+### console_log_state
 
 ```
-`%rune%` cannot be used inside an effect cleanup function
+Your `console.%method%` contained `$state` proxies. Consider using `$inspect(...)` or `$state.snapshot(...)` instead
 ```
 
-### effect_in_unowned_derived
+When logging a [proxy](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy), browser devtools will log the proxy itself rather than the value it represents. In the case of Svelte, the 'target' of a `$state` proxy might not resemble its current value, which can be confusing.
+
+The easiest way to log a value as it changes over time is to use the [`$inspect`](https://svelte.dev/docs/svelte/$inspect) rune. Alternatively, to log things on a one-off basis (for example, inside an event handler) you can use [`$state.snapshot`](https://svelte.dev/docs/svelte/$state#$state.snapshot) to take a snapshot of the current value.
+
+### event_handler_invalid
 
 ```
-Effect cannot be created inside a `$derived` value that was not itself created inside an effect
+%handler% should be a function. Did you mean to %suggestion%?
 ```
 
-### effect_orphan
+### hydration_attribute_changed
 
 ```
-`%rune%` can only be used inside an effect (e.g. during component initialisation)
+The `%attribute%` attribute on `%html%` changed its value between server and client renders. The client value, `%value%`, will be ignored in favour of the server value
 ```
 
-### effect_update_depth_exceeded
+### hydration_html_changed
 
 ```
-Maximum update depth exceeded. This can happen when a reactive block or effect repeatedly sets a new value. Svelte limits the number of nested updates to prevent infinite loops
+The value of an `{@html ...}` block changed between server and client renders. The client value will be ignored in favour of the server value
 ```
 
-### hydration_failed
-
 ```
-Failed to hydrate the application
+The value of an `{@html ...}` block %location% changed between server and client renders. The client value will be ignored in favour of the server value
 ```
 
-### invalid_snippet
+### hydration_mismatch
 
 ```
-Could not `{@render}` snippet due to the expression being `null` or `undefined`. Consider using optional chaining `{@render snippet?.()}`
+Hydration failed because the initial UI does not match what was rendered on the server
 ```
 
-### lifecycle_legacy_only
-
 ```
-`%name%(...)` cannot be used in runes mode
+Hydration failed because the initial UI does not match what was rendered on the server. The error occurred near %location%
 ```
 
-### props_invalid_value
+### invalid_raw_snippet_render
 
 ```
-Cannot do `bind:%key%={undefined}` when `%key%` has a fallback value
+The `render` function passed to `createRawSnippet` should return HTML for a single element
 ```
 
-### props_rest_readonly
+### legacy_recursive_reactive_block
 
 ```
-Rest element properties of `$props()` such as `%property%` are readonly
+Detected a migrated `$:` reactive block in `%filename%` that both accesses and updates the same reactive value. This may cause recursive updates when converted to an `$effect`.
 ```
 
-### rune_outside_svelte
+### lifecycle_double_unmount
 
 ```
-The `%rune%` rune is only available inside `.svelte` and `.svelte.js/ts` files
+Tried to unmount a component that was not mounted
 ```
 
-### state_descriptors_fixed
+### ownership_invalid_binding
 
 ```
-Property descriptors defined on `$state` objects must contain `value` and always be `enumerable`, `configurable` and `writable`.
+%parent% passed a value to %child% with `bind:`, but the value is owned by %owner%. Consider creating a binding between %owner% and %parent%
 ```
 
-### state_prototype_fixed
+### ownership_invalid_mutation
 
 ```
-Cannot set prototype of `$state` object
+Mutating a value outside the component that created it is strongly discouraged. Consider passing values to child components with `bind:`, or use a callback instead
 ```
 
-### state_unsafe_local_read
-
 ```
-Reading state that was created inside the same derived is forbidden. Consider using `untrack` to read locally created state
+%component% mutated a value owned by %owner%. This is strongly discouraged. Consider passing values to child components with `bind:`, or use a callback instead
 ```
 
-### state_unsafe_mutation
+### state_proxy_equality_mismatch
 
 ```
-Updating state inside a derived or a template expression is forbidden. If the value should not be reactive, declare it without `$state`
+Reactive `$state(...)` proxies and the values they proxy have different identities. Because of this, comparisons with `%operator%` will produce unexpected results
 ```
+
+`$state(...)` creates a [proxy](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy) of the value it is passed. The proxy and the value have different identities, meaning equality checks will always return `false`:
+
+```svelte
+<script>
+	let value = { foo: 'bar' };
+	let proxy = $state(value);
+
+	value === proxy; // always false
+</script>
+```
+
+To resolve this, ensure you're comparing values where both values were created with `$state(...)`, or neither were. Note that `$state.raw(...)` will _not_ create a state proxy.
 
 
 ## Shared errors
 
-### invalid_default_snippet
+### dynamic_void_element_content
 
 ```
-Cannot use `{@render children(...)}` if the parent component uses `let:` directives. Consider using a named snippet instead
+`<svelte:element this="%tag%">` is a void element — it cannot have content
 ```
 
-### lifecycle_outside_component
+### state_snapshot_uncloneable
 
 ```
-`%name%(...)` can only be used during component initialisation
+Value cannot be cloned with `$state.snapshot` — the original value was returned
 ```
 
-### store_invalid_shape
-
 ```
-`%name%` is not a store with a `subscribe` method
-```
+The following properties cannot be cloned with `$state.snapshot` — the return value contains the originals:
 
-### svelte_element_invalid_this_value
-
-```
-The `this` prop on `<svelte:element>` must be a string, if defined
+%properties%
 ```
 
