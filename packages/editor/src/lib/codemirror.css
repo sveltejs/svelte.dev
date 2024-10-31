@@ -36,7 +36,12 @@
 	}
 
 	.cm-activeLine {
-		background: var(--sk-bg-3);
+		/* this must be translucent, or it will obscure the selection */
+		background: hsl(0, 0%, 0%, 0.04);
+
+		:root.dark & {
+			background: hsl(0, 0%, 100%, 0.04);
+		}
 	}
 
 	.cm-activeLineGutter {
