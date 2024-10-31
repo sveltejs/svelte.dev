@@ -95,6 +95,7 @@
 			transition-property: filter, scale;
 			transition-duration: 0.2s;
 			user-select: none;
+			will-change: filter, transform;
 
 			&:nth-child(1) {
 				top: 0%;
