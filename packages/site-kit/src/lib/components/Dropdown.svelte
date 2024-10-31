@@ -36,6 +36,7 @@
 		border-radius: var(--sk-border-radius);
 		z-index: 999;
 		-webkit-transform: var(--safari-fix);
+		will-change: opacity;
 
 		&.align-right {
 			left: auto;
