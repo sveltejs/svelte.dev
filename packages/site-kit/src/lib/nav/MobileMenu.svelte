@@ -6,7 +6,7 @@
 	import { expoOut, quintOut } from 'svelte/easing';
 	import type { TransitionConfig } from 'svelte/transition';
 	import Icon from '../components/Icon.svelte';
-	import NavContextMenu from './NavContextMenu.svelte';
+	import MobileSubMenu from './MobileSubMenu.svelte';
 	import type { NavigationLink } from '../types';
 	import ModalOverlay from '../components/ModalOverlay.svelte';
 
@@ -20,7 +20,7 @@
 
 	let show_context_menu = $state(!!current?.sections);
 
-	let nav_context_instance: NavContextMenu | undefined = $state();
+	let nav_context_instance: ReturnType<typeof MobileSubMenu> | undefined = $state();
 
 	let menu_height = $state(0);
 	let universal_menu_inner_height = $state(0);
@@ -153,7 +153,7 @@
 
 				<div class="context" inert={!show_context_menu}>
 					{#if current}
-						<NavContextMenu
+						<MobileSubMenu
 							bind:this={nav_context_instance}
 							title={current.title}
 							contents={current.sections}

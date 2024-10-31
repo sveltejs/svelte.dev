@@ -7,7 +7,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 	import Icon from '../components/Icon.svelte';
 	import { page } from '$app/stores';
 	import ThemeToggle from '../components/ThemeToggle.svelte';
-	import Menu from './Menu.svelte';
+	import MobileMenu from './MobileMenu.svelte';
 	import type { NavigationLink } from '../types';
 	import Dropdown from '../components/Dropdown.svelte';
 	import { HoverMenu } from '../components';
@@ -174,7 +174,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 
 {#if open}
 	<div class="mobile">
-		<Menu {links} {current} onclose={() => (open = false)} />
+		<MobileMenu {links} {current} onclose={() => (open = false)} />
 	</div>
 {/if}
 
