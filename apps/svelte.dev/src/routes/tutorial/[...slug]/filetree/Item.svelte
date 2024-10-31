@@ -143,7 +143,7 @@
 		background: var(--sk-bg-1);
 		color: var(--sk-fg-1) !important;
 		margin: 0 0.5rem 0 calc(0.5rem + var(--inset));
-		border: 1px solid var(--sk-bg-5);
+		border: 2px solid transparent;
 		padding: 0 0.5rem;
 		font: inherit;
 	}

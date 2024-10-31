@@ -209,7 +209,7 @@
 		padding: 0.5rem 1rem;
 		line-height: 1;
 		display: flex;
-		border: 1px solid var(--sk-bg-5);
+		border: 1px solid var(--sk-border-medium);
 		border-radius: var(--sk-border-radius);
 		z-index: 2;
 		font: var(--sk-font-ui-large);

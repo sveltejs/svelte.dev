@@ -332,7 +332,7 @@
 		hr {
 			margin: 0.5rem 0;
 			height: 1px;
-			background: var(--sk-bg-6);
+			background: var(--sk-border-dark);
 			border: none;
 		}
 	}

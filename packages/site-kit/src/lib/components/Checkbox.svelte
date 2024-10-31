@@ -32,7 +32,7 @@
 		border-radius: 1em;
 		top: 0;
 		left: 0;
-		background: var(--sk-bg-6);
+		background: var(--sk-bg-5);
 		box-sizing: content-box;
 	}
 

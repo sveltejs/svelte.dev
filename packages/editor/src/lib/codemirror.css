@@ -36,7 +36,7 @@
 	}
 
 	.cm-activeLine {
-		background: var(--sk-bg-translucent);
+		background: var(--sk-bg-3);
 	}
 
 	.cm-activeLineGutter {
@@ -124,8 +124,8 @@
 
 		&.cm-panels-top,
 		&.cm-panels-bottom {
-			border-top: 1px solid var(--sk-bg-5);
-			border-bottom: 1px solid var(--sk-bg-5);
+			border-top: 1px solid var(--sk-border-medium);
+			border-bottom: 1px solid var(--sk-border-medium);
 		}
 	}
 

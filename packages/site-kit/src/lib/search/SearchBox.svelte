@@ -336,12 +336,8 @@ It appears when the user clicks on the `Search` component or presses the corresp
 			border: none;
 			flex-shrink: 0;
 			color: var(--sk-fg-1);
-			border-bottom: 1px solid var(--sk-bg-6);
+			border-bottom: 1px solid var(--sk-border-dark);
 			background: inherit;
-
-			&::selection {
-				background-color: var(--sk-bg-translucent);
-			}
 
 			&::placeholder {
 				color: var(--sk-fg-2);
