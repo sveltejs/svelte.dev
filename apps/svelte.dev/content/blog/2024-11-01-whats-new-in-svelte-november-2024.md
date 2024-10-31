@@ -32,7 +32,7 @@ To see all the amazing work that has gone into making the Svelte compiler better
 
 ## Community Showcase
 
-**Apps & Sites built with Svelte**
+### Apps & Sites built with Svelte
 
 - [DocumentCloud](https://github.com/MuckRock/documentcloud-frontend/tree/sveltekit) is an all-in-one platform used by newsrooms around the world to manage primary source documents
 - [Chord](https://chord.fm/) is an app for recording podcasts and interviews in high quality
@@ -42,7 +42,7 @@ To see all the amazing work that has gone into making the Svelte compiler better
 - [Multy](https://multy.me/) is a simple tool that allows you to create a list of URLs, and share it with a single link
 - [BlackJack](https://github.com/baterson/blackjack-svelte-5) is a card game built with Svelte 5, showcasing Svelte features for educational and demonstration purposes
 
-**Learning Resources**
+### Learning Resources
 
 _Featuring Svelte Contributors and Ambassadors_
 
@@ -69,7 +69,7 @@ _To Watch_
 - [Svelte 5 Is Like React, But Better](https://www.youtube.com/watch?v=31CyquY8RNE) by Theo - t3․gg
 - [JavaScript framework reinvents itself… Did "runes" just ruin Svelte?](https://www.youtube.com/watch?v=aYyZUDFZTrM) by Fireship
 
-**Libraries, Tools & Components**
+### Libraries, Tools & Components
 
 - [Svelte 5 testing example](https://github.com/PaoloTorregroza/weather-testing) is a good example project demonstrating how to test Svelte 5 applications with Vitest
 - [Origin UI - Svelte](https://originui-svelte.pages.dev/) is an extensive collection of copy-and-paste components for quickly building app UIs
