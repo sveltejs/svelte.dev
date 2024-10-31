@@ -68,3 +68,12 @@ Similarly, if you only want to show the error state, you can omit the `then` blo
 	<p>The error is {error}</p>
 {/await}
 ```
+
+> [!NOTE] You can use `#await` with [`import(...)`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/import) to render components lazily:
+>
+> ```svelte
+> {#await import('./Component.svelte') then { default: Component }}
+> 	<Component />
+> {/await}
+> ```
+
