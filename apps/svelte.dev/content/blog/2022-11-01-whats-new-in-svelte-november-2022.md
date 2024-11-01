@@ -77,7 +77,7 @@ _To Read_
 - [Using Sequelize with SvelteKit](https://cherrific.io/0xedB00816FB204b4CD9bCb45FF2EF693E99723484/story/23) by MetaZebre
 - [Implementing Maintenance mode on a SvelteKit site](https://blog.encodeart.dev/implementing-maintenance-mode-on-a-sveltekit-site) by Andreas Söderlund
 - [ActionStore: Real-time Svelte stores for Rails](https://dev.to/buhrmi/actionstore-real-time-svelte-stores-for-rails-4jhg) by Stefan Buhrmester
-- [Svelte CSS Image Slider: with Bouncy Overscroll](https://rodneylab.com/svelte-css-image-slider/) and [SvelteKit Local Edge Functions: Edge on Localhost](https://rodneylab.com/sveltekit-local-edge-functions/) by Rodney Lab
+- [Svelte CSS Image Slider: with Bouncy Overscroll](https://rodneylab.com/svelte-css-image-slider/) and [SvelteKit Local Edge Functions: Edge on Localhost](https://rodneylab.com/sveltekit-local-edge-functions/) by Rodney Lab
 - [Creating a Svelte Tabs component with Slot props](https://blog.openreplay.com/creating-a-svelte-tabs-component-with-slot-props/) by Shinichi Okada
 - [Sky Cart: An Open Source, cloud-agnostic shopping cart using Stripe Checkout](https://dev.to/stripe/sky-cart-an-open-source-cloud-agnostic-shopping-cart-using-stripe-checkout-o5k) by Mike Bifulco for Stripe
 
