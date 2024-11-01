@@ -248,7 +248,6 @@
 		}
 
 		&.active {
-			color: var(--sk-fg-2, #333);
 			border-bottom: 1px solid var(--sk-fg-accent);
 		}
 	}

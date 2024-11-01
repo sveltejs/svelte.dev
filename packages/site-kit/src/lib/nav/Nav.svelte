@@ -237,7 +237,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		align-items: center;
 
 		a {
-			color: var(--sk-fg-2);
+			color: inherit;
 			font: var(--sk-font-ui-medium);
 
 			white-space: nowrap;

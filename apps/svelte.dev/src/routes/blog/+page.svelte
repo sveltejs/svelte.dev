@@ -74,7 +74,7 @@
 
 	h2 {
 		display: inline-block;
-		color: var(--sk-fg-2);
+		color: var(--sk-fg-1);
 		font: var(--sk-font-h3);
 	}
 
@@ -87,14 +87,14 @@
 
 			h2 {
 				font: var(--sk-font-h1);
-				color: var(--sk-fg-2);
+				color: var(--sk-fg-1);
 			}
 		}
 
 		a {
 			display: block;
 			text-decoration: none;
-			color: var(--sk-fg-2);
+			color: inherit;
 
 			&:hover h2 {
 				text-decoration: underline;
@@ -163,7 +163,7 @@
 			a {
 				display: block;
 				font: var(--sk-font-body);
-				color: var(--sk-fg-2);
+				color: inherit;
 			}
 		}
 	}

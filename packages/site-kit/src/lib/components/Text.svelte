@@ -186,7 +186,7 @@
 						align-items: center;
 						font-size: 1.2rem;
 						font-family: var(--sk-font-family-mono);
-						color: var(--sk-fg-2);
+						color: inherit;
 					}
 
 					&::before {

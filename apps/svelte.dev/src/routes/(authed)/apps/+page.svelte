@@ -156,7 +156,6 @@
 		padding: 0 0 0 3.2rem;
 		position: relative;
 		margin: 1rem 0;
-		color: var(--sk-fg-2);
 		font: var(--sk-font-ui-medium);
 
 		.avatar {

@@ -121,11 +121,6 @@
 		background: var(--bg) var(--icon) no-repeat;
 		background-position: calc(var(--inset) - 0.5rem) 50%;
 		background-size: 1.2rem;
-		color: var(--sk-fg-2);
-	}
-
-	li:hover {
-		--bg: var(--sk-bg-3);
 	}
 
 	button,
@@ -141,7 +136,6 @@
 
 	input {
 		background: var(--sk-bg-1);
-		color: var(--sk-fg-2) !important;
 		margin: 0 0.5rem 0 calc(0.5rem + var(--inset));
 		border: 2px solid transparent;
 		padding: 0 0.5rem;

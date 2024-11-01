@@ -96,7 +96,6 @@ kbd {
 	position: relative;
 	border-radius: var(--sk-border-radius);
 	white-space: nowrap;
-	color: var(--sk-fg-2);
 	background: var(--sk-bg-4);
 	line-height: 1.7;
 }

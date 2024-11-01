@@ -166,6 +166,7 @@
 	.line {
 		--bg: var(--sk-bg-1);
 		--border: var(--sk-bg-3);
+		font: var(--sk-font-mono);
 		display: block;
 		position: relative;
 		width: 100%;
@@ -201,7 +202,6 @@
 		gap: 1rem;
 		width: 100%;
 		font-size: 1.2rem;
-		font-family: var(--sk-font-family-mono);
 		align-items: center;
 	}
 
@@ -219,7 +219,6 @@
 		grid-template-columns: minmax(0, auto) minmax(auto, 1fr);
 		grid-gap: 0 2rem;
 		font-size: 1.2rem;
-		font-family: var(--sk-font-family-mono);
 		margin: 0 1rem 0.4rem calc(1em + var(--indent));
 		overflow: hidden;
 
@@ -247,15 +246,14 @@
 		height: 1.4em;
 		padding: 0.5em;
 		border-radius: 0.4rem;
-		background-color: var(--sk-fg-3, #777);
+		background-color: var(--sk-fg-3);
 		color: var(--sk-bg-1);
 		font-size: 1rem;
 	}
 
 	.meta {
-		color: var(--sk-fg-2, #666);
-		font-family: var(--sk-font-family-body) !important;
-		font-size: 12px;
+		color: var(--sk-fg-4);
+		font: var(--sk-font-ui-small);
 	}
 
 	.meta-error {

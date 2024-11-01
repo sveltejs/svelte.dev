@@ -340,8 +340,8 @@ It appears when the user clicks on the `Search` component or presses the corresp
 			background: inherit;
 
 			&::placeholder {
-				color: var(--sk-fg-2);
-				opacity: 0.3;
+				color: var(--sk-fg-4);
+				opacity: 0.5;
 			}
 
 			&:focus-visible {
@@ -420,7 +420,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 			}
 
 			a {
-				color: var(--sk-fg-2);
+				color: inherit;
 				display: block;
 				text-decoration: none;
 				margin: 0 -0.5rem;

@@ -15,7 +15,7 @@
 		:global {
 			a,
 			button {
-				color: var(--sk-fg-2);
+				color: inherit;
 				padding: 1rem;
 				display: block;
 				font: var(--sk-font-ui-medium);

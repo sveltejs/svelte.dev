@@ -86,7 +86,7 @@
 		transition: color 0.2s;
 		border-bottom: none;
 		padding: 0;
-		color: var(--sk-fg-2);
+		color: inherit;
 		user-select: none;
 	}
 

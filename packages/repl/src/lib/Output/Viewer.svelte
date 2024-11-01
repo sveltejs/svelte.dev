@@ -349,7 +349,6 @@
 
 	/* TODO this stuff should live in global styles */
 	button {
-		color: var(--sk-fg-2);
 		font: var(--sk-font-ui-small);
 		text-transform: uppercase;
 		display: block;

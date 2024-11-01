@@ -23,7 +23,7 @@
 
 {#if $menu_items}
 	<nav style="position: fixed; z-index: 5; top:{$menu_items.y}px; left:{$menu_items.x}px">
-		<div class="navbar" id="navbar">
+		<div class="context-menu">
 			<ul>
 				{#each $menu_items.items as item}
 					<li>
@@ -38,50 +38,39 @@
 <svelte:window on:click={() => menu_items.set(null)} />
 
 <style>
-	.navbar {
+	.context-menu {
 		display: inline-flex;
-		border: 1px solid rgba(0, 0, 0, 0.1);
-		background-color: var(--back);
+		background-color: var(--sk-bg-2);
 		border-radius: var(--sk-border-radius);
 		overflow: hidden;
 		flex-direction: column;
-		filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.1));
+		filter: var(--sk-shadow);
 	}
 
 	ul {
 		margin: 0;
-		padding: 0;
-		background-color: var(--sk-bg-3);
-		border: 1px solid var(--sk-fg-accent);
+		padding: 0.5rem;
+		background-color: var(--sk-bg-2);
 	}
 
 	li {
 		display: block;
 		list-style-type: none;
-		width: 1fr;
-	}
-	li:hover {
-		background-color: var(--sk-bg-accent);
+
+		&:hover {
+			background-color: var(--sk-bg-4);
+		}
 	}
 
 	button {
-		color: var(--sk-fg-2);
+		display: block;
 		width: 100%;
+		height: 100%;
 		text-align: left;
 		border: 0px;
-		padding: 0.4rem 1rem 0.2rem 1rem;
+		padding: 1rem;
 		font: var(--sk-font-ui-small);
-	}
-
-	li:first-child button {
-		padding-top: 0.5rem;
-	}
-
-	li:last-child button {
-		padding-bottom: 0.4rem;
-	}
-
-	button:hover {
-		background-color: var(--back-api);
+		line-height: 1;
+		border-radius: var(--sk-border-radius);
 	}
 </style>

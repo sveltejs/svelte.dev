@@ -67,7 +67,6 @@
 		width: calc(100vw - 2rem);
 		max-width: 56rem;
 		background: var(--sk-bg-2);
-		color: var(--sk-fg-2);
 		padding: 2rem;
 		border: none;
 		border-radius: 0.5rem;

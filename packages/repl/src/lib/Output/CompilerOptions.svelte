@@ -40,11 +40,8 @@
 
 <style>
 	.options {
-		padding: 0 10px;
-		font-family: var(--sk-font-family-mono);
-		font-size: 13px;
-		color: var(--sk-fg-2);
-		line-height: 1.8;
+		padding: 0 1rem;
+		font: var(--sk-font-mono);
 	}
 
 	.option {

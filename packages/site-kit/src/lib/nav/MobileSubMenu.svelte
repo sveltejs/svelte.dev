@@ -107,7 +107,6 @@
 	a {
 		display: flex;
 		align-items: center;
-		color: var(--sk-fg-2);
 
 		&[aria-current='page'] {
 			color: var(--sk-fg-accent) !important;

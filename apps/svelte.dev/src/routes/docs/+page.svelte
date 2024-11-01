@@ -111,7 +111,7 @@
 
 	.options a {
 		display: block;
-		color: var(--sk-fg-2);
+		color: inherit;
 		margin: 1em -1.6rem;
 		padding: 1.6rem;
 		background-color: var(--sk-bg-1);
