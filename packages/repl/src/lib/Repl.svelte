@@ -234,10 +234,6 @@
 				}
 			}
 
-			.divider::after {
-				background-color: var(--sk-bg-5);
-			}
-
 			[data-pane='main'] > .divider::after {
 				height: calc(100% - var(--sk-pane-controls-height));
 				top: var(--sk-pane-controls-height);

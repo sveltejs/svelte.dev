@@ -113,7 +113,7 @@
 		.code-block {
 			position: relative;
 			background: var(--sk-bg-2);
-			border: 1px solid var(--sk-border-medium);
+			border: 1px solid var(--sk-border);
 			border-radius: var(--sk-border-radius);
 			overflow: hidden;
 			margin: calc(0.5 * var(--sk-line-height-body)) 0;

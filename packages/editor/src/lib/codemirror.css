@@ -129,8 +129,8 @@
 
 		&.cm-panels-top,
 		&.cm-panels-bottom {
-			border-top: 1px solid var(--sk-border-medium);
-			border-bottom: 1px solid var(--sk-border-medium);
+			border-top: 1px solid var(--sk-border);
+			border-bottom: 1px solid var(--sk-border);
 		}
 	}
 

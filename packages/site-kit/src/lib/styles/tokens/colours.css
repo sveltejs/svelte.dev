@@ -36,9 +36,9 @@
 	--sk-bg-selection: hsla(204, 100%, 63%, 0.3);
 
 	/* Border colors */
-	--sk-border-light: hsl(0, 0%, 95%);
-	--sk-border-medium: hsl(0, 0%, 92%);
-	--sk-border-dark: hsl(0, 0%, 86%);
+	--sk-border-highlight: hsl(0, 0%, 95%);
+	--sk-border: hsl(0, 0%, 92%);
+	--sk-border-shadow: hsl(0, 0%, 86%);
 
 	/* Misc */
 	--sk-scrollbar: rgba(0, 0, 0, 0.3);
@@ -75,9 +75,9 @@
 	--sk-bg-accent: hsl(15, 100%, 35%);
 
 	/* Border colours */
-	--sk-border-light: hsl(var(--sk-bg-hue), 15%, 32%);
-	--sk-border-medium: var(--sk-bg-5);
-	--sk-border-dark: var(--sk-bg-3);
+	--sk-border-highlight: hsl(var(--sk-bg-hue), 15%, 32%);
+	--sk-border: var(--sk-bg-5);
+	--sk-border-shadow: var(--sk-bg-3);
 
 	/* Misc */
 	--sk-scrollbar: rgba(255, 255, 255, 0.3);

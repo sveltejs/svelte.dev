@@ -1,6 +1,6 @@
 .divider {
 	z-index: 2;
 	&::after {
-		background-color: var(--sk-bg-5) !important;
+		background-color: var(--sk-border) !important;
 	}
 }
