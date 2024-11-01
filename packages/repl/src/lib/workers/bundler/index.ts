@@ -40,10 +40,10 @@ self.addEventListener('message', async (event: MessageEvent<BundleMessageData>) 
 		case 'init': {
 			({ packages_url, svelte_url } = event.data);
 
-			if (svelte_url.startsWith('ref:')) {
+			if (svelte_url.startsWith('pr-')) {
 				let local_files: Awaited<ReturnType<typeof parseTar>>;
 
-				const ref = svelte_url.substring('ref:'.length);
+				const ref = svelte_url.substring('pr-'.length);
 
 				const maybe_tar = await fetch(`https://pkg.pr.new/svelte@${ref}`);
 				if (maybe_tar.headers.get('content-type') === 'application/tar+gzip') {

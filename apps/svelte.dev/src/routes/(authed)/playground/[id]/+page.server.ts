@@ -13,7 +13,7 @@ export async function load({ fetch, params, url }) {
 
 	let version = url.searchParams.get('version') || 'latest';
 
-	let is_ref_version = version.startsWith('ref:');
+	let is_pr_version = version.startsWith('pr-');
 
 	return {
 		gist,
@@ -27,6 +27,6 @@ export async function load({ fetch, params, url }) {
 				}))
 			})),
 		version: url.searchParams.get('version') || 'latest',
-		is_ref_version
+		is_pr_version
 	};
 }
