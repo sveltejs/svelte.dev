@@ -1,5 +1,4 @@
 <script>
-	import { Footer } from '@sveltejs/site-kit/home';
 	import { Section } from '@sveltejs/site-kit/components';
 	import Hero from './_home/Hero.svelte';
 	import Supporters from './_home/Supporters/index.svelte';
@@ -7,6 +6,7 @@
 	import Companies from './_home/Companies.svelte';
 	import Video from './_home/Video.svelte';
 	import Community from './_home/Community.svelte';
+	import Footer from './_home/Footer.svelte';
 </script>
 
 <svelte:head>

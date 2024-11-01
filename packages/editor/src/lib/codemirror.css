@@ -110,12 +110,12 @@
 	}
 
 	.cm-tooltip.cm-tooltip-autocomplete {
-		color: var(--sk-fg-2) !important;
+		color: var(--sk-fg-3) !important;
 		perspective: 1px;
 
 		& > ul > li[aria-selected] {
 			background-color: var(--sk-bg-4);
-			color: var(--sk-fg-1) !important;
+			color: var(--sk-fg-2) !important;
 		}
 
 		& > ul {
@@ -126,7 +126,7 @@
 	.cm-panels {
 		font: var(--sk-font-ui-small);
 		background: var(--sk-bg-2);
-		color: var(--sk-fg-1);
+		color: var(--sk-fg-2);
 
 		&.cm-panels-top,
 		&.cm-panels-bottom {
@@ -178,7 +178,7 @@
 			.cm-textfield {
 				font: inherit;
 				background: inherit;
-				color: var(--sk-fg-1);
+				color: inherit;
 				border: 1px solid var(--sk-border);
 				border-radius: var(--sk-border-radius);
 				margin: 0;

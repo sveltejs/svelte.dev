@@ -84,10 +84,6 @@
 			"default": "./src/lib/components/index.ts",
 			"svelte": "./src/lib/components/index.ts"
 		},
-		"./home": {
-			"default": "./src/lib/home/index.ts",
-			"svelte": "./src/lib/home/index.ts"
-		},
 		"./docs": {
 			"default": "./src/lib/docs/index.ts",
 			"svelte": "./src/lib/docs/index.ts"

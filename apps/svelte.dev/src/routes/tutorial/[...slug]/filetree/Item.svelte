@@ -141,7 +141,7 @@
 
 	input {
 		background: var(--sk-bg-1);
-		color: var(--sk-fg-1) !important;
+		color: var(--sk-fg-2) !important;
 		margin: 0 0.5rem 0 calc(0.5rem + var(--inset));
 		border: 2px solid transparent;
 		padding: 0 0.5rem;

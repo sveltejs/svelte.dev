@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Section from '../components/Section.svelte';
+	import { Section } from '@sveltejs/site-kit/components';
 </script>
 
 <Section>

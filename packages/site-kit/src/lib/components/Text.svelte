@@ -417,7 +417,6 @@
 		}
 
 		blockquote {
-			color: var(--sk-fg-1);
 			padding: 0 0 0 4.5rem;
 
 			&.note,

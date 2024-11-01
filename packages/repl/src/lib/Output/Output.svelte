@@ -87,10 +87,10 @@
 	{#if workspace.current.name.endsWith('.md')}
 		<button class="active">Markdown</button>
 	{:else}
-		<button class:active={view === 'result'} onclick={() => (view = 'result')}>Result</button>
-		<button class:active={view === 'js'} onclick={() => (view = 'js')}>JS output</button>
-		<button class:active={view === 'css'} onclick={() => (view = 'css')}>CSS output</button>
-		<button class:active={view === 'ast'} onclick={() => (view = 'ast')}>AST output</button>
+		<button aria-current={view === 'result'} onclick={() => (view = 'result')}>Result</button>
+		<button aria-current={view === 'js'} onclick={() => (view = 'js')}>JS output</button>
+		<button aria-current={view === 'css'} onclick={() => (view = 'css')}>CSS output</button>
+		<button aria-current={view === 'ast'} onclick={() => (view = 'ast')}>AST output</button>
 	{/if}
 </div>
 
@@ -170,13 +170,12 @@
 		border: none;
 		border-bottom: 1px solid transparent;
 		padding: 0 1rem;
-		color: var(--sk-fg-2, #999);
+		color: var(--sk-fg-2);
 		border-radius: 0;
-	}
 
-	button.active {
-		border-bottom: 1px solid var(--sk-fg-accent, --prime);
-		color: var(--sk-fg-1, #333);
+		&[aria-current="true"] {
+			border-bottom: 1px solid var(--sk-fg-accent);
+		}
 	}
 
 	div[slot] {
