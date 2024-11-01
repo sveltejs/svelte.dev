@@ -140,7 +140,8 @@
 			gap: 0.5rem;
 			padding: 0.5rem 4.2rem 0.5rem 0.5rem;
 
-			.cm-button, button[aria-label="close"] {
+			.cm-button,
+			button[aria-label='close'] {
 				margin: 0;
 				font: inherit;
 				background: inherit;
@@ -161,7 +162,7 @@
 				}
 			}
 
-			button[aria-label="close"] {
+			button[aria-label='close'] {
 				aspect-ratio: 1;
 				top: 0.5rem;
 				right: 0.5rem;
