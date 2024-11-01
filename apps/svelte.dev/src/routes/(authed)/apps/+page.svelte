@@ -50,7 +50,7 @@
 </script>
 
 <svelte:head>
-	<title>Your apps • Svelte</title>
+	<title>Your apps • Svelte</title>
 </svelte:head>
 
 <div class="apps">

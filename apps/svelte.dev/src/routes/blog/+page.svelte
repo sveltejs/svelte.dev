@@ -9,7 +9,7 @@
 </script>
 
 <svelte:head>
-	<title>Blog • Svelte</title>
+	<title>Blog • Svelte</title>
 	<link
 		rel="alternate"
 		type="application/rss+xml"
@@ -81,7 +81,6 @@
 	article {
 		margin: 0 0 4rem 0;
 
-		/* we need to use :global because snippets don't currently cause a deopt */
 		&.top {
 			margin: 0 0 2rem 0;
 			padding: 0 0 4rem 0;
