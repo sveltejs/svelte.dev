@@ -173,7 +173,7 @@
 		color: var(--sk-fg-2);
 		border-radius: 0;
 
-		&[aria-current="true"] {
+		&[aria-current='true'] {
 			border-bottom: 1px solid var(--sk-fg-accent);
 		}
 	}
