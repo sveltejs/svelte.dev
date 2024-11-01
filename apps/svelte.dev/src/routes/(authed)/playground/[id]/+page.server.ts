@@ -13,7 +13,7 @@ export async function load({ fetch, params, url }) {
 
 	let version = url.searchParams.get('version') || 'latest';
 
-	let is_pr_version = version.startsWith('pr-');
+	let is_pr_or_commit_version = version.startsWith('pr-') || version.startsWith('commit-');
 
 	return {
 		gist,
@@ -27,6 +27,6 @@ export async function load({ fetch, params, url }) {
 				}))
 			})),
 		version: url.searchParams.get('version') || 'latest',
-		is_pr_version
+		is_pr_or_commit_version
 	};
 }

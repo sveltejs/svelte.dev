@@ -19,8 +19,13 @@ addEventListener('message', async (event) => {
 		const svelte_url = `https://unpkg.com/svelte@${event.data.version}`;
 		let local_files: Awaited<ReturnType<typeof parseTar>> | undefined;
 		let package_json;
-		if (event.data.version.startsWith('pr-')) {
-			const ref = event.data.version.substring('pr-'.length);
+		let local_version = event.data.version;
+		const starts_with_pr = local_version.startsWith('pr-');
+		const starts_with_commit = local_version.startsWith('commit-');
+		if (starts_with_pr || starts_with_commit) {
+			const ref = starts_with_pr
+				? local_version.substring('pr-'.length)
+				: local_version.substring('commit-'.length);
 
 			const maybe_tar = await fetch(`https://pkg.pr.new/svelte@${ref}`);
 			if (maybe_tar.headers.get('content-type') === 'application/tar+gzip') {

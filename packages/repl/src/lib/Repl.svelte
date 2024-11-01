@@ -51,7 +51,10 @@
 
 	const workspace = new Workspace([dummy], {
 		initial: 'App.svelte',
-		svelte_version: svelteUrl.startsWith('pr-') ? svelteUrl : svelteUrl.split('@')[1],
+		svelte_version:
+			svelteUrl.startsWith('pr-') || svelteUrl.startsWith('commit-')
+				? svelteUrl
+				: svelteUrl.split('@')[1],
 		onupdate() {
 			rebundle();
 			onchange?.();

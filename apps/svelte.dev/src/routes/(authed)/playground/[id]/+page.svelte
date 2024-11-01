@@ -26,7 +26,7 @@
 	const can_escape = browser && !$page.url.hash;
 
 	onMount(() => {
-		if (version !== 'local' && !data.is_pr_version) {
+		if (version !== 'local' && !data.is_pr_or_commit_version) {
 			fetch(`https://unpkg.com/svelte@${version}/package.json`)
 				.then((r) => r.json())
 				.then((pkg) => {
@@ -151,7 +151,7 @@
 	const svelteUrl =
 		browser && version === 'local'
 			? `${location.origin}/playground/local`
-			: data.is_pr_version
+			: data.is_pr_or_commit_version
 				? version
 				: `https://unpkg.com/svelte@${version}`;
 
