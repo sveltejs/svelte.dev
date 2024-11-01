@@ -20,10 +20,10 @@
 		/* raised buttons */
 		--sk-raised-color: var(--sk-raised-border) var(--sk-raised-shadow) var(--sk-raised-shadow)
 			var(--sk-raised-border);
-		--sk-raised-hover-color: var(--sk-raised-highlight) var(--sk-raised-shadow) var(--sk-raised-shadow)
-			var(--sk-raised-highlight);
-		--sk-raised-active-color: var(--sk-raised-shadow) var(--sk-raised-highlight) var(--sk-raised-highlight)
-			var(--sk-raised-shadow);
+		--sk-raised-hover-color: var(--sk-raised-highlight) var(--sk-raised-shadow)
+			var(--sk-raised-shadow) var(--sk-raised-highlight);
+		--sk-raised-active-color: var(--sk-raised-shadow) var(--sk-raised-highlight)
+			var(--sk-raised-highlight) var(--sk-raised-shadow);
 	}
 }
 
