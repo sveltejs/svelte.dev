@@ -1,22 +1,29 @@
 :root {
+	--sk-raised-border: var(--sk-border);
+	--sk-raised-highlight: hsl(0, 0%, 95%);
+	--sk-raised-shadow: hsl(0, 0%, 86%);
+
 	/* raised buttons */
-	--sk-raised-color: var(--sk-border-highlight) var(--sk-border) var(--sk-border)
-		var(--sk-border-highlight);
-	--sk-raised-hover-color: var(--sk-border) var(--sk-border-shadow) var(--sk-border-shadow)
-		var(--sk-border);
-	--sk-raised-active-color: var(--sk-border-shadow) var(--sk-border) var(--sk-border)
-		var(--sk-border-shadow);
+	--sk-raised-color: var(--sk-raised-highlight) var(--sk-raised-border) var(--sk-raised-border)
+		var(--sk-raised-highlight);
+	--sk-raised-hover-color: var(--sk-raised-border) var(--sk-raised-shadow) var(--sk-raised-shadow)
+		var(--sk-raised-border);
+	--sk-raised-active-color: var(--sk-raised-shadow) var(--sk-raised-border) var(--sk-raised-border)
+		var(--sk-raised-shadow);
 	--sk-raised-width: 1px 2px 2px 1px;
 	--sk-raised-active-width: 2px 1px 1px 2px;
 
 	&.dark {
+		--sk-raised-highlight: hsl(var(--sk-bg-hue), 15%, 32%);
+		--sk-raised-shadow: var(--sk-bg-3);
+
 		/* raised buttons */
-		--sk-raised-color: var(--sk-border) var(--sk-border-shadow) var(--sk-border-shadow)
-			var(--sk-border);
-		--sk-raised-hover-color: var(--sk-border-highlight) var(--sk-border-shadow) var(--sk-border-shadow)
-			var(--sk-border-highlight);
-		--sk-raised-active-color: var(--sk-border-shadow) var(--sk-border-highlight) var(--sk-border-highlight)
-			var(--sk-border-shadow);
+		--sk-raised-color: var(--sk-raised-border) var(--sk-raised-shadow) var(--sk-raised-shadow)
+			var(--sk-raised-border);
+		--sk-raised-hover-color: var(--sk-raised-highlight) var(--sk-raised-shadow) var(--sk-raised-shadow)
+			var(--sk-raised-highlight);
+		--sk-raised-active-color: var(--sk-raised-shadow) var(--sk-raised-highlight) var(--sk-raised-highlight)
+			var(--sk-raised-shadow);
 	}
 }
 
@@ -54,7 +61,7 @@
 	}
 
 	&:disabled {
-		border-color: var(--sk-border);
+		border-color: var(--sk-raised-border);
 		border-width: 1px;
 	}
 }
