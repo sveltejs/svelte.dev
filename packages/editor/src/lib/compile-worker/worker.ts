@@ -17,7 +17,7 @@ addEventListener('message', async (event) => {
 	if (!inited) {
 		inited = true;
 		const svelte_url = `https://unpkg.com/svelte@${event.data.version}`;
-		let local_files: Awaited<ReturnType<typeof parseTar>>;
+		let local_files: Awaited<ReturnType<typeof parseTar>> | undefined;
 		let package_json;
 		if (event.data.version.startsWith('ref:')) {
 			const ref = event.data.version.substring('ref:'.length);
