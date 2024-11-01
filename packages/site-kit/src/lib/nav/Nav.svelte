@@ -212,7 +212,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 	.current-section {
 		display: flex;
 		align-items: center;
-		color: var(--sk-fg-3);
+		color: inherit;
 		margin-left: 0.4em;
 		font: var(--sk-font-ui-medium);
 	}
@@ -225,10 +225,6 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		nav:not(.visible):not(:focus-within) {
 			transform: translate(0, calc(var(--sk-nav-height)));
 		}
-	}
-
-	button {
-		color: var(--sk-fg-3);
 	}
 
 	.links {
