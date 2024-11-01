@@ -46,7 +46,7 @@
 		z-index: 2;
 	}
 
-	span[aria-current="false"] {
+	span[aria-current='false'] {
 		color: var(--sk-fg-4);
 	}
 </style>
