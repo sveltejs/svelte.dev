@@ -2,7 +2,7 @@
 title: Passing snippets to components
 ---
 
-Since snippets — like functions — are just values, they can be passed to components as props.
+Since snippets — like functions — are just values, they can be passed to components as props.
 
 Take this `<FilteredList>` component. Its job is to filter the `data` that gets passed into it, but it has no opinions about how that data should be rendered — that's the responsibility of the parent component.
 

@@ -11,13 +11,13 @@ We think you're going to love it.
 
 ## What is Svelte?
 
-Svelte is a component framework — like React or Vue — but with an important difference. Traditional frameworks allow you to write _declarative_ state-driven code, but there's a penalty: the browser must do extra work to convert those declarative structures into DOM operations, using techniques like [virtual DOM diffing](/blog/virtual-dom-is-pure-overhead) that eat into your frame budget and tax the garbage collector.
+Svelte is a component framework — like React or Vue — but with an important difference. Traditional frameworks allow you to write _declarative_ state-driven code, but there's a penalty: the browser must do extra work to convert those declarative structures into DOM operations, using techniques like [virtual DOM diffing](/blog/virtual-dom-is-pure-overhead) that eat into your frame budget and tax the garbage collector.
 
 Instead, Svelte runs at _build time_, converting your components into highly efficient _imperative_ code that surgically updates the DOM. As a result, you're able to write ambitious applications with excellent performance characteristics.
 
 The first version of Svelte was all about [testing a hypothesis](/blog/frameworks-without-the-framework) — that a purpose-built compiler could generate rock-solid code that delivered a great user experience. The second was a small upgrade that tidied things up a bit.
 
-Version 3 is a significant overhaul. Our focus for the last five or six months has been on delivering an outstanding _developer_ experience. It's now possible to write components with [significantly less boilerplate](/blog/write-less-code) than you'll find elsewhere. Try the brand new [tutorial](/tutorial) and see what we mean — if you're familiar with other frameworks we think you'll be pleasantly surprised.
+Version 3 is a significant overhaul. Our focus for the last five or six months has been on delivering an outstanding _developer_ experience. It's now possible to write components with [significantly less boilerplate](/blog/write-less-code) than you'll find elsewhere. Try the brand new [tutorial](/tutorial) and see what we mean — if you're familiar with other frameworks we think you'll be pleasantly surprised.
 
 To make that possible we first needed to rethink the concept at the heart of modern UI frameworks: reactivity.
 

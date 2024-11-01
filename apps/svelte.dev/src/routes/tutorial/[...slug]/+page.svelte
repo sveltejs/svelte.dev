@@ -369,7 +369,7 @@
 		/* we transform the default state, rather than the editor state, because otherwise
 		   the positioning of tooltips is wrong (doesn't take into account transforms) */
 		transform: translate(50%, 0);
-		border-top: 1px solid var(--sk-border-medium);
+		border-top: 1px solid var(--sk-border);
 	}
 
 	.top.offset {

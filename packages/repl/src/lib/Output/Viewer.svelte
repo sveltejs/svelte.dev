@@ -301,7 +301,7 @@
 			</div>
 
 			<div slot="panel-header">
-				<button on:click|stopPropagation={clear_logs}>
+				<button class="raised" disabled={logs.length === 0} on:click|stopPropagation={clear_logs}>
 					{#if logs.length > 0}
 						({logs.length})
 					{/if}
@@ -347,14 +347,16 @@
 		opacity: 0.25;
 	}
 
+	/* TODO this stuff should live in global styles */
 	button {
 		color: var(--sk-fg-2);
 		font: var(--sk-font-ui-small);
 		text-transform: uppercase;
 		display: block;
+		padding: 0.3rem 0.8rem;
 
-		&:hover {
-			color: var(--sk-fg-1);
+		&:disabled {
+			color: var(--sk-fg-4);
 		}
 	}
 

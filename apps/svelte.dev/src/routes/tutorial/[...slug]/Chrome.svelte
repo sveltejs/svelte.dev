@@ -74,10 +74,10 @@
 	input {
 		flex: 1;
 		padding: 0.2rem 0.6rem;
-		border: 1px solid var(--sk-border-medium);
+		border: 1px solid var(--sk-border);
 		/* TODO this should apply to all buttons/inputs? */
 		border-radius: var(--sk-border-radius);
-		color: var(--sk-fg-1);
+		color: var(--sk-fg-2);
 		font: var(--sk-font-ui-medium);
 		height: 3.2rem;
 	}

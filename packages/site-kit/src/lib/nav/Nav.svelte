@@ -248,7 +248,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 			outline-offset: -2px;
 
 			&:hover {
-				box-shadow: inset 0 -1px 0 0 var(--sk-bg-5);
+				box-shadow: inset 0 -1px 0 0 var(--sk-border);
 			}
 
 			&[aria-current='page'] {

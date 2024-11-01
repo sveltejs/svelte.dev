@@ -60,7 +60,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: 0 0.5em;
+		padding: 0.5rem 0.5rem 0.5rem 1rem;
 		cursor: pointer;
 	}
 
@@ -71,7 +71,7 @@
 	.panel-heading {
 		font: var(--sk-font-ui-small);
 		text-transform: uppercase;
-		color: var(--sk-fg-1);
+		color: var(--sk-fg-2);
 		flex: 1;
 		text-align: left;
 	}

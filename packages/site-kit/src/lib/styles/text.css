@@ -14,7 +14,7 @@
 	padding-left: 1rem;
 	border-radius: 0;
 	box-shadow: none;
-	border-top: 1px solid var(--sk-bg-4);
+	border-top: 1px solid var(--sk-border);
 }
 
 .ts-block-property-details {

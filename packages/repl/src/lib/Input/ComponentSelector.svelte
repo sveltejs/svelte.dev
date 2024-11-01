@@ -199,7 +199,7 @@
 			height: 1px;
 			bottom: 0px;
 			left: 0;
-			background-color: var(--sk-bg-4);
+			background-color: var(--sk-border);
 		}
 	}
 

@@ -65,7 +65,7 @@ export const render_content = (
 			);
 		}
 
-		// special case — we need to make allowances for code snippets coming
+		// special case — we need to make allowances for code snippets coming
 		// from e.g. ambient.d.ts
 		if (filename.endsWith('$env-all.md') || filename.endsWith('$app-forms.md')) {
 			injected.push('// @errors: 7006 7031');

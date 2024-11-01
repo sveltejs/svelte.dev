@@ -94,7 +94,6 @@
 		padding-bottom: 0.8rem;
 		font: var(--sk-font-ui-medium);
 		text-transform: uppercase;
-		color: var(--sk-fg-1);
 	}
 
 	h2 {

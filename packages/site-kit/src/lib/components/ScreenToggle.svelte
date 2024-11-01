@@ -41,7 +41,7 @@
 		justify-content: center;
 		width: 100%;
 		height: var(--sk-pane-controls-height);
-		border-top: 1px solid var(--sk-border-medium);
+		border-top: 1px solid var(--sk-border);
 		font: var(--sk-font-ui-small);
 		z-index: 2;
 	}
