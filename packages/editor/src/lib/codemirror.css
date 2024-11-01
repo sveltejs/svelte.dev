@@ -124,7 +124,8 @@
 	}
 
 	.cm-panels {
-		background: var(--sk-bg-4);
+		font: var(--sk-font-ui-small);
+		background: var(--sk-bg-2);
 		color: var(--sk-fg-1);
 
 		&.cm-panels-top,
@@ -132,26 +133,73 @@
 			border-top: 1px solid var(--sk-border-medium);
 			border-bottom: 1px solid var(--sk-border-medium);
 		}
-	}
 
-	.cm-button {
-		background: var(--sk-bg-5);
-		border: 2px solid transparent;
-	}
+		.cm-panel {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 0.5rem;
+			padding: 0.5rem 4.2rem 0.5rem 0.5rem;
 
-	.cm-textfield {
-		background: var(--sk-bg-1);
-		color: var(--sk-fg-1);
-		border: 2px solid transparent;
-	}
+			.cm-button, button[aria-label="close"] {
+				margin: 0;
+				font: inherit;
+				background: inherit;
+				height: 3.2rem;
+				padding: 0 0.8rem;
+				border-style: solid;
+				border-width: var(--sk-raised-width);
+				border-color: var(--sk-raised-color);
+				border-radius: var(--sk-border-radius);
 
-	.cm-search button:focus-visible,
-	.cm-search input:focus-visible {
-		border: 2px solid var(--flash);
-	}
+				&:hover {
+					border-color: var(--sk-raised-hover-color);
+				}
 
-	.cm-search input[type='checkbox']:focus-visible {
-		outline: 2px solid var(--flash);
+				&:active {
+					border-color: var(--sk-raised-active-color);
+					border-width: var(--sk-raised-active-width);
+				}
+			}
+
+			button[aria-label="close"] {
+				aspect-ratio: 1;
+				top: 0.5rem;
+				right: 0.5rem;
+				color: transparent;
+				background: url(./close-light.svg) 50% 50% no-repeat;
+				background-size: 1.8rem;
+
+				:root.dark & {
+					background-image: url(./close-dark.svg);
+				}
+			}
+
+			.cm-textfield {
+				font: inherit;
+				background: inherit;
+				color: var(--sk-fg-1);
+				border: 1px solid var(--sk-border-medium);
+				border-radius: var(--sk-border-radius);
+				margin: 0;
+			}
+
+			.cm-search button:focus-visible,
+			.cm-search input:focus-visible {
+				border: 2px solid var(--flash);
+			}
+
+			.cm-search input[type='checkbox']:focus-visible {
+				outline: 2px solid var(--flash);
+			}
+
+			label {
+				font: inherit;
+				display: inline-flex;
+				gap: 0.5rem;
+				align-items: center;
+				margin: 0 0 0 0.5rem;
+			}
+		}
 	}
 
 	.cm-searchMatch.cm-searchMatch-selected {
