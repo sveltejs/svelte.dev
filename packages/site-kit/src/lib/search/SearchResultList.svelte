@@ -189,7 +189,6 @@
 			width: calc(100% + 1rem);
 			left: -0.5rem;
 			overflow: hidden;
-			color: var(--sk-fg-1);
 
 			&::before,
 			&::after {
@@ -227,7 +226,6 @@
 		:global(mark) {
 			--highlight-color: rgba(255, 255, 0, 0.4);
 			background: none;
-			color: var(--sk-fg-1);
 			background: var(--highlight-color);
 			outline: 2px solid var(--highlight-color);
 		}
