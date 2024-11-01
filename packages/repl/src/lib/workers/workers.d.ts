@@ -54,7 +54,6 @@ export type BundleMessageData = {
 	message: string;
 	packages_url: string;
 	svelte_url: string;
-	is_pkg_pr_new: boolean;
 	files: File[];
 	options: CompileOptions;
 };

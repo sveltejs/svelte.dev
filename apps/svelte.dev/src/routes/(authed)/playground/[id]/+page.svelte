@@ -26,7 +26,7 @@
 	const can_escape = browser && !$page.url.hash;
 
 	onMount(() => {
-		if (version !== 'local' && !data.is_pkg_pr_new) {
+		if (version !== 'local' && !data.is_ref_version) {
 			fetch(`https://unpkg.com/svelte@${version}/package.json`)
 				.then((r) => r.json())
 				.then((pkg) => {
@@ -151,7 +151,7 @@
 	const svelteUrl =
 		browser && version === 'local'
 			? `${location.origin}/playground/local`
-			: data.is_pkg_pr_new
+			: data.is_ref_version
 				? version
 				: `https://unpkg.com/svelte@${version}`;
 
@@ -205,7 +205,6 @@
 				{can_escape}
 				injectedJS={mapbox_setup}
 				{onchange}
-				isPkgPrNew={data.is_pkg_pr_new}
 				previewTheme={$theme.current}
 			/>
 		</div>

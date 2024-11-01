@@ -33,24 +33,26 @@ const ready = new Promise((f) => {
 });
 
 let files: Map<string, () => string>;
-let package_json;
+let package_json: any;
 
 self.addEventListener('message', async (event: MessageEvent<BundleMessageData>) => {
 	switch (event.data.type) {
 		case 'init': {
 			({ packages_url, svelte_url } = event.data);
 
-			if (event.data.is_pkg_pr_new) {
-				let local_files;
+			if (svelte_url.startsWith('ref:')) {
+				let local_files: Awaited<ReturnType<typeof parseTar>>;
 
-				const maybe_tar = await fetch(svelte_url);
+				const ref = svelte_url.substring('ref:'.length);
+
+				const maybe_tar = await fetch(`https://pkg.pr.new/svelte@${ref}`);
 				if (maybe_tar.headers.get('content-type') === 'application/tar+gzip') {
 					const buffer = await maybe_tar.arrayBuffer();
 					local_files = await parseTar(buffer);
 					files = new Map(
 						local_files.map((file) => [file.name.substring('package'.length), () => file.text])
 					);
-					const package_json_content = files.get('/package.json')();
+					const package_json_content = files.get('/package.json')?.();
 					if (package_json_content) {
 						package_json = JSON.parse(package_json_content);
 					}
@@ -64,17 +66,17 @@ self.addEventListener('message', async (event: MessageEvent<BundleMessageData>) 
 				// unpkg doesn't set the correct MIME type for .cjs files
 				// https://github.com/mjackson/unpkg/issues/355
 				const compiler =
-					files.get('/compiler.cjs')() ??
+					files.get('/compiler.cjs')?.() ??
 					(await fetch(`${svelte_url}/compiler.cjs`).then((r) => r.text()));
 				(0, eval)(compiler + '\n//# sourceURL=compiler.cjs@' + version);
 			} else if (version.startsWith('3.')) {
 				const compiler =
-					files.get('/compiler.js')() ??
+					files.get('/compiler.js')?.() ??
 					(await fetch(`${svelte_url}/compiler.js`).then((r) => r.text()));
 				(0, eval)(compiler + '\n//# sourceURL=compiler.js@' + version);
 			} else {
 				const compiler =
-					files.get('/compiler/index.js')() ??
+					files.get('/compiler/index.js')?.() ??
 					(await fetch(`${svelte_url}/compiler/index.js`).then((r) => r.text()));
 				(0, eval)(compiler + '\n//# sourceURL=compiler/index.js@' + version);
 			}
@@ -354,7 +356,7 @@ async function get_bundle(
 					}
 				};
 
-				let pkg;
+				let pkg: any;
 				let pkg_url_base = 'file:';
 				if (importee.startsWith(`svelte`)) {
 					pkg = package_json;
@@ -381,7 +383,7 @@ async function get_bundle(
 				const resolved_url = new URL(resolved);
 
 				if (resolved_url.protocol === 'file:') {
-					return files.get(resolved_url.pathname)();
+					return files.get(resolved_url.pathname)?.();
 				}
 			} catch {}
 

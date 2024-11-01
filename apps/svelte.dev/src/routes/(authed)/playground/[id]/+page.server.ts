@@ -13,12 +13,7 @@ export async function load({ fetch, params, url }) {
 
 	let version = url.searchParams.get('version') || 'latest';
 
-	let is_pkg_pr_new = false;
-
-	try {
-		const url = new URL(version);
-		is_pkg_pr_new = url.origin === 'https://pkg.pr.new';
-	} catch {}
+	let is_ref_version = version.startsWith('ref:');
 
 	return {
 		gist,
@@ -32,6 +27,6 @@ export async function load({ fetch, params, url }) {
 				}))
 			})),
 		version: url.searchParams.get('version') || 'latest',
-		is_pkg_pr_new
+		is_ref_version
 	};
 }

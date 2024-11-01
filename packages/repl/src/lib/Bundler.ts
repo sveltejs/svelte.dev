@@ -12,25 +12,21 @@ export default class Bundler {
 	hash: string;
 	worker: Worker;
 	handlers: Map<number, (data: BundleMessageData) => void>;
-	#is_pkg_pr_new: boolean;
 
 	constructor({
 		packages_url,
 		svelte_url,
-		onstatus,
-		is_pkg_pr_new
+		onstatus
 	}: {
 		packages_url: string;
 		svelte_url: string;
 		onstatus: (val: string | null) => void;
-		is_pkg_pr_new?: boolean;
 	}) {
 		this.hash = `${packages_url}:${svelte_url}`;
-		this.#is_pkg_pr_new = is_pkg_pr_new;
 
 		if (!workers.has(this.hash)) {
 			const worker = new Worker();
-			worker.postMessage({ type: 'init', packages_url, svelte_url, is_pkg_pr_new });
+			worker.postMessage({ type: 'init', packages_url, svelte_url });
 			workers.set(this.hash, worker);
 		}
 
@@ -62,8 +58,7 @@ export default class Bundler {
 				uid,
 				type: 'bundle',
 				files,
-				options,
-				is_pkg_pr_new: this.#is_pkg_pr_new
+				options
 			});
 
 			uid += 1;
