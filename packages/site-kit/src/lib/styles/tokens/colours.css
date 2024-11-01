@@ -35,8 +35,8 @@
 	--sk-bg-selection: hsla(204, 100%, 63%, 0.3);
 
 	/* Border colors */
-	--sk-border-highlight: hsl(0, 0%, 95%);
 	--sk-border: hsl(0, 0%, 92%);
+	--sk-border-highlight: hsl(0, 0%, 95%);
 	--sk-border-shadow: hsl(0, 0%, 86%);
 
 	/* Misc */
@@ -73,8 +73,8 @@
 	--sk-bg-accent: hsl(15, 100%, 35%);
 
 	/* Border colours */
-	--sk-border-highlight: hsl(var(--sk-bg-hue), 15%, 32%);
 	--sk-border: hsl(var(--sk-bg-hue), 15%, 25%);
+	--sk-border-highlight: hsl(var(--sk-bg-hue), 15%, 32%);
 	--sk-border-shadow: var(--sk-bg-3);
 
 	/* Misc */
