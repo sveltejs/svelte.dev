@@ -21,7 +21,7 @@
 				}}
 			/>
 			<label for={generate}><span class="string">"{generate}"</span></label>
-		{/each}
+		{/each},
 	</div>
 
 	<!-- svelte-ignore a11y_label_has_associated_control (TODO this warning should probably be disabled if there's a component)-->
@@ -33,7 +33,7 @@
 				workspace.update_compiler_options({ dev });
 			}}
 		/>
-		<span class="boolean">{workspace.compiler_options.dev}</span>,
+		<span class="boolean">{workspace.compiler_options.dev}</span>
 	</label>
 	});
 </div>
@@ -57,7 +57,7 @@
 
 	.key {
 		display: inline-block;
-		width: 9em;
+		width: 6em;
 	}
 
 	.string {
