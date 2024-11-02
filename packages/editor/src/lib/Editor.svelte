@@ -105,26 +105,20 @@
 		display: grid;
 		grid-template-columns: 4rem 1fr;
 		grid-gap: 1rem;
-		padding: 1rem 0;
-		font: var(--sk-font-mono);
+		padding: 0.4rem 0;
 	}
 
 	.fake * {
-		color: #ccc;
+		color: var(--sk-fg-4);
+		font: var(--sk-font-mono);
 	}
 
 	.fake-gutter {
 		text-align: right;
-		padding-right: 3px;
+		padding-right: 0.7rem;
 	}
 
 	.fake-content {
 		padding: 0 1rem;
-	}
-
-	@media (prefers-color-scheme: dark) {
-		.fake * {
-			color: #666;
-		}
 	}
 </style>

@@ -100,12 +100,12 @@
 				height: 2rem;
 				background: url($lib/icons/chevron.svg);
 				background-size: contain;
-				rotate: -90deg;
+				rotate: 0deg;
 				transition: rotate 0.2s;
 			}
 
 			[open] &::after {
-				rotate: 90deg;
+				rotate: 180deg;
 			}
 
 			span:not(:last-child)::after {

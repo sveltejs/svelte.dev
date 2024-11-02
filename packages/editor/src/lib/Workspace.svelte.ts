@@ -1,4 +1,4 @@
-import type { CompileError, CompileOptions, CompileResult } from 'svelte/compiler';
+import type { CompileError, CompileResult } from 'svelte/compiler';
 import { Compartment, EditorState } from '@codemirror/state';
 import { compile_file } from './compile-worker';
 import { BROWSER } from 'esm-env';
@@ -77,7 +77,7 @@ const default_extensions = [
 // 	extensions.push(vim());
 // }
 
-interface ExposedCompilerOptions {
+export interface ExposedCompilerOptions {
 	generate: 'client' | 'server';
 	dev: boolean;
 	modernAst: boolean;
@@ -124,7 +124,10 @@ export class Workspace {
 					span.innerHTML = `${error.message
 						.replace(/&/g, '&amp;')
 						.replace(/</g, '&lt;')
-						.replace(/`(.+?)`/g, `<code>$1</code>`)} <strong>(${error.code})</strong>`;
+						.replace(
+							/`(.+?)`/g,
+							`<code>$1</code>`
+						)} (<a href="/docs/svelte/compiler-errors#${error.code}">${error.code}</a>)`;
 
 					return span;
 				}
@@ -142,7 +145,10 @@ export class Workspace {
 					span.innerHTML = `${warning.message
 						.replace(/&/g, '&amp;')
 						.replace(/</g, '&lt;')
-						.replace(/`(.+?)`/g, `<code>$1</code>`)} <strong>(${warning.code})</strong>`;
+						.replace(
+							/`(.+?)`/g,
+							`<code>$1</code>`
+						)} (<a href="/docs/svelte/compiler-warnings#${warning.code}">${warning.code}</a>)`;
 
 					return span;
 				}
@@ -206,6 +212,8 @@ export class Workspace {
 		if (is_file(item)) {
 			this.#select(item);
 			this.#onreset?.(this.#files);
+
+			this.modified[item.name] = true;
 		}
 
 		return item;
@@ -318,6 +326,11 @@ export class Workspace {
 
 		if (was_current) {
 			this.#select(new_item as File);
+		}
+
+		if (this.modified[previous.name]) {
+			delete this.modified[previous.name];
+			this.modified[name] = true;
 		}
 
 		this.#onreset?.(this.#files);

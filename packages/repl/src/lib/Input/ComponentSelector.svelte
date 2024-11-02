@@ -1,9 +1,8 @@
 <script lang="ts">
-	import { forcefocus } from '@sveltejs/site-kit/actions';
-	import { tick } from 'svelte';
 	import RunesInfo from './RunesInfo.svelte';
 	import Migrate from './Migrate.svelte';
 	import type { Workspace, File } from 'editor';
+	import { tick } from 'svelte';
 
 	interface Props {
 		runes: boolean;
@@ -14,39 +13,20 @@
 
 	let { runes, onchange, workspace, can_migrate }: Props = $props();
 
-	let editing_name: string | null = $state(null);
-	let input_value = $state('');
+	let input = $state() as HTMLInputElement;
+	let input_value = $state(workspace.current.name);
 
-	function select_file(filename: string) {
-		if (workspace.current.name !== filename) {
-			editing_name = null;
-			workspace.select(filename);
-		}
-	}
-
-	function edit_tab(file: File) {
-		if (workspace.current.name === file.name) {
-			editing_name = file.name;
-			input_value = file.name;
-		}
-	}
-
-	async function close_edit() {
-		if (input_value === editing_name) {
+	async function close_edit(file: File) {
+		if (input_value === file.name || input_value === '') {
 			// nothing to do
-			editing_name = null;
+			input_value = file.name;
 			return;
 		}
 
-		const edited_file = (workspace.files as File[]).find((val) => val.name === editing_name);
-		if (!edited_file) return; // TODO can this happen?
+		const deconflicted = deconflict(input_value, file);
 
-		const deconflicted = deconflict(input_value, edited_file);
-
-		workspace.rename(edited_file, deconflicted);
+		workspace.rename(file, deconflicted);
 		workspace.focus();
-
-		editing_name = null;
 	}
 
 	function deconflict(name: string, file?: File) {
@@ -70,7 +50,7 @@
 		onchange();
 	}
 
-	function add_new() {
+	async function add_new() {
 		const basename = deconflict(`Component.svelte`);
 
 		const file = workspace.add({
@@ -81,10 +61,11 @@
 			text: true
 		});
 
-		editing_name = file.name;
 		input_value = file.name;
-
 		onchange();
+
+		await tick();
+		input.focus();
 	}
 
 	// drag and drop
@@ -97,16 +78,18 @@
 	<div class="file-tabs">
 		{#each workspace.files as File[] as file, index (file.name)}
 			<div
-				id={file.name}
 				class="button"
+				class:editable={file.name !== 'App.svelte'}
 				role="button"
 				tabindex="0"
-				class:active={file.name === workspace.current.name}
-				class:draggable={file.name !== editing_name && index !== 0}
+				aria-current={file === workspace.current}
 				class:drag-over={file === dragover}
-				onclick={() => select_file(file.name)}
-				onkeyup={(e) => e.key === ' ' && select_file(file.name)}
-				draggable={file.name !== editing_name}
+				onclick={() => {
+					workspace.select(file.name);
+					input_value = file.name;
+				}}
+				onkeyup={(e) => e.key === ' ' && workspace.select(file.name)}
+				draggable="true"
 				ondragstart={() => (dragging = file)}
 				ondragover={(e) => (e.preventDefault(), (dragover = file))}
 				ondragleave={(e) => (e.preventDefault(), (dragover = null))}
@@ -120,42 +103,36 @@
 			>
 				<i class="drag-handle"></i>
 
-				{#if file.name === 'App.svelte'}
-					<div class="uneditable">
-						App.svelte{#if workspace.modified[file.name]}*{/if}
-					</div>
-				{:else if file.name === editing_name}
-					<span class="input-sizer">
-						<span style="color: transparent">{input_value}</span>
-					</span>
+				<span class="filename">
+					{(file === workspace.current && file.name !== 'App.svelte' ? input_value : file.name) +
+						(workspace.modified[file.name] ? '*' : '') || ' '}
+				</span>
 
+				{#if file === workspace.current && file.name !== 'App.svelte'}
 					<!-- svelte-ignore a11y_autofocus -->
 					<input
-						use:forcefocus
 						spellcheck={false}
+						bind:this={input}
 						bind:value={input_value}
 						onfocus={async (event) => {
 							const input = event.currentTarget;
-							await tick();
-							input.select();
+							setTimeout(() => {
+								input.select();
+							});
 						}}
-						onblur={close_edit}
+						onblur={() => close_edit(file)}
 						onkeydown={(e) => {
 							if (e.key === 'Enter') {
 								e.preventDefault();
 								e.currentTarget.blur();
 							}
+
+							if (e.key === 'Escape') {
+								input_value = file.name;
+								e.currentTarget.blur();
+							}
 						}}
 					/>
-				{:else}
-					<div
-						class="editable"
-						title="edit component name"
-						onclick={() => edit_tab(file)}
-						onkeyup={(e) => e.key === ' ' && edit_tab(file)}
-					>
-						{file.name}{#if workspace.modified[file.name]}*{/if}
-					</div>
 
 					<span
 						class="remove"
@@ -166,7 +143,7 @@
 						}}
 						onkeyup={(e) => e.key === ' ' && remove_file(file)}
 					>
-						<svg width="12" height="12" viewBox="0 0 24 24">
+						<svg viewBox="0 0 24 24">
 							<line stroke="#999" x1="18" y1="6" x2="6" y2="18" />
 							<line stroke="#999" x1="6" y1="6" x2="18" y2="18" />
 						</svg>
@@ -176,7 +153,11 @@
 		{/each}
 	</div>
 
-	<button class="add-new" onclick={add_new} aria-label="add new component" title="add new component"
+	<button
+		class="raised add-new"
+		onclick={add_new}
+		aria-label="add new component"
+		title="add new component"
 	></button>
 
 	<div class="runes">
@@ -189,6 +170,8 @@
 	.component-selector {
 		position: relative;
 		display: flex;
+		gap: 0.5rem;
+		align-items: center;
 		padding: 0 1rem 0 0;
 
 		/* fake border (allows tab borders to appear above it) */
@@ -206,13 +189,13 @@
 	.file-tabs {
 		border: none;
 		margin: 0;
+		height: 100%;
 		white-space: nowrap;
 		overflow-x: auto;
 		overflow-y: hidden;
 	}
 
-	.file-tabs .button,
-	.add-new {
+	.file-tabs .button {
 		position: relative;
 		display: inline-flex;
 		align-items: center;
@@ -221,19 +204,17 @@
 		border: none;
 		padding: 0 1rem;
 		height: 100%;
-		aspect-ratio: 1;
-		margin: 0;
-		border-radius: 0;
 		cursor: pointer;
 	}
 
-	.add-new {
-		background: url(./file-new.svg) 50% 50% no-repeat;
-		background-size: 1em;
-	}
-
 	.file-tabs .button {
-		padding: 0 1rem 0 2em;
+		--padding-left: 2.6rem;
+		--padding-right: 1.4rem;
+		padding: 0 var(--padding-right) 0 var(--padding-left);
+
+		&.editable {
+			--padding-right: 1.8rem;
+		}
 
 		.drag-handle {
 			cursor: move;
@@ -246,75 +227,66 @@
 			background-size: 1em;
 		}
 
-		&.active {
-			border-bottom: 1px solid var(--sk-fg-accent);
-		}
-	}
+		.remove {
+			position: absolute;
+			display: none;
+			top: 0;
+			right: 0;
+			padding: 0 0.2rem;
+			width: 1.6rem;
+			height: 100%;
+			cursor: pointer;
 
-	.editable,
-	.uneditable,
-	.input-sizer,
-	input {
-		display: inline-block;
-		position: relative;
-		line-height: 1;
+			svg {
+				width: 100%;
+				height: 100%;
+			}
+		}
+
+		&.drag-over {
+			background: var(--sk-bg-4);
+		}
+
+		&[aria-current='true'] {
+			border-bottom: 1px solid var(--sk-fg-accent);
+
+			&.editable .filename {
+				cursor: text;
+			}
+
+			.remove {
+				display: block;
+			}
+		}
 	}
 
 	input {
 		position: absolute;
-		width: 100%;
+		width: calc(100% - var(--padding-left) - var(--padding-right));
 		border: none;
-		color: var(--sk-fg-accent);
 		outline: none;
-		background-color: transparent;
+		background-color: inherit;
+		color: inherit;
 		top: 0;
-		left: 0;
+		left: var(--padding-left);
 		height: 100%;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		font-family: var(--sk-font-family-ui);
 		font: var(--sk-font-ui-small); /* TODO can we just inherit */
-		padding: 0 1rem 1px 2em;
 		box-sizing: border-box;
-	}
 
-	.duplicate {
-		color: var(--sk-fg-accent);
-	}
-
-	.remove {
-		position: absolute;
-		display: none;
-		right: 1px;
-		top: 4px;
-		width: 16px;
-		text-align: right;
-		padding: 12px 0 12px 5px;
-		font-size: 8px;
-		cursor: pointer;
-	}
-
-	.file-tabs .button.active .editable {
-		cursor: text;
-	}
-
-	.file-tabs .button.active .remove {
-		display: block;
-	}
-
-	.file-tabs .button.drag-over {
-		background: #67677814;
-	}
-
-	.file-tabs .button.drag-over {
-		cursor: move;
+		&:focus {
+			color: var(--sk-fg-accent);
+		}
 	}
 
 	.add-new {
-		padding: 12px 10px 8px 8px;
-		height: 40px;
-		text-align: center;
+		height: 3.2rem;
+		aspect-ratio: 1;
+		background: url(./file-new.svg) 50% 50% no-repeat;
+		background-size: 1em;
 	}
 
 	.runes {

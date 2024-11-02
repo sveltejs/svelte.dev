@@ -495,7 +495,7 @@
 			&::after {
 				background: url($lib/icons/chevron.svg) 50% 50% no-repeat;
 				background-size: 2rem;
-				rotate: -90deg;
+				rotate: 0deg;
 				transition: rotate 0.2s;
 				transition: rotate 0.2s;
 				top: 0.2rem;
@@ -534,7 +534,7 @@
 
 			&[open] {
 				&::after {
-					rotate: 90deg;
+					rotate: 180deg;
 				}
 
 				& > summary {

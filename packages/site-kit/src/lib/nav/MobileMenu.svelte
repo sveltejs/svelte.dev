@@ -218,7 +218,7 @@
 		}
 
 		:root.dark & {
-			border-top: solid 1.1px hsla(0, 0%, 100%, 0.2);
+			border-top: solid 1px var(--sk-raised-highlight);
 		}
 	}
 

@@ -129,7 +129,7 @@
 					background-size: 2rem;
 					top: 0.4rem;
 					right: 0.2rem;
-					rotate: -90deg;
+					rotate: 0deg;
 					transition: rotate 0.2s;
 					transition: rotate 0.2s;
 				}
@@ -153,7 +153,7 @@
 
 			label:has(:checked) {
 				&::after {
-					rotate: 90deg;
+					rotate: 180deg;
 				}
 
 				/* TODO remove :global once https://github.com/sveltejs/svelte/issues/13779 is fixed */

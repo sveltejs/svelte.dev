@@ -30,8 +30,6 @@ Top navigation bar for the application. It provides a slot for the left side, th
 	let current = $state.raw<NavigationLink | undefined>();
 	let menu_button: HTMLButtonElement;
 
-	let nav: HTMLElement | undefined = $state();
-
 	// Prevents navbar to show/hide when clicking in docs sidebar
 	let hash_changed = false;
 	function handle_hashchange() {
@@ -68,7 +66,6 @@ Top navigation bar for the application. It provides a slot for the left side, th
 />
 
 <nav
-	bind:this={nav}
 	class:visible
 	style:z-index={$overlay_open && ($searching || $on_this_page_open) ? 80 : null}
 	aria-label="Primary"
