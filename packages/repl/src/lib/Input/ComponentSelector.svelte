@@ -221,15 +221,6 @@
 		}
 	}
 
-	.editable,
-	.uneditable,
-	.input-sizer,
-	input {
-		display: inline-block;
-		position: relative;
-		line-height: 1;
-	}
-
 	input {
 		position: absolute;
 		width: 100%;
