@@ -30,6 +30,10 @@ const parsed = parseArgs({
 		pull: {
 			type: 'boolean',
 			short: 'p'
+		},
+		owner: {
+			type: 'string',
+			default: 'sveltejs'
 		}
 	},
 	strict: true,
@@ -40,11 +44,23 @@ const dirname = fileURLToPath(new URL('.', import.meta.url));
 const REPOS = path.join(dirname, '../../repos');
 const DOCS = path.join(dirname, '../../content/docs');
 
+const branches = {};
+
+for (const option of parsed.positionals) {
+	const [name, ...rest] = option.split('#');
+
+	if (branches[name]) {
+		throw new Error(`Duplicate branches for ${name}`);
+	}
+
+	branches[name] = rest.join('#') || 'main';
+}
+
 const packages: Package[] = [
 	{
 		name: 'svelte',
-		repo: 'sveltejs/svelte',
-		branch: 'main',
+		repo: `${parsed.values.owner}/svelte`,
+		branch: branches['svelte'] ?? 'main',
 		pkg: 'packages/svelte',
 		docs: 'documentation/docs',
 		types: 'types',
@@ -67,8 +83,8 @@ const packages: Package[] = [
 	},
 	{
 		name: 'kit',
-		repo: 'sveltejs/kit',
-		branch: 'main',
+		repo: `${parsed.values.owner}/kit`,
+		branch: branches['kit'] ?? 'main',
 		pkg: 'packages/kit',
 		docs: 'documentation/docs',
 		types: 'types',
@@ -127,15 +143,15 @@ const packages: Package[] = [
 	},
 	{
 		name: 'cli',
-		repo: 'sveltejs/cli',
-		branch: 'main',
+		repo: `${parsed.values.owner}/cli`,
+		branch: branches['cli'] ?? 'main',
 		pkg: 'packages/cli',
 		docs: 'documentation/docs',
 		types: null
 	}
 ];
 
-const unknown = parsed.positionals.filter((name) => !packages.some((pkg) => pkg.name === name));
+const unknown = Object.keys(branches).filter((name) => !packages.some((pkg) => pkg.name === name));
 
 if (unknown.length > 0) {
 	throw new Error(
@@ -144,9 +160,7 @@ if (unknown.length > 0) {
 }
 
 const filtered =
-	parsed.positionals.length === 0
-		? packages
-		: packages.filter((pkg) => parsed.positionals.includes(pkg.name));
+	parsed.positionals.length === 0 ? packages : packages.filter((pkg) => !!branches[pkg.name]);
 
 /**
  * Depending on your setup, this will either clone the Svelte and SvelteKit repositories

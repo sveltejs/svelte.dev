@@ -8,6 +8,10 @@ export async function clone_repo(repo: string, name: string, branch: string, cwd
 	if (fs.existsSync(dir)) {
 		const opts = { cwd: dir };
 
+		if (!repo.startsWith('sveltejs/')) {
+			console.warn('Ignoring --owner flag for already-cloned repo');
+		}
+
 		if (execSync('git status -s', opts).toString() !== '') {
 			throw new Error(`${name} repo is dirty — aborting`);
 		}
