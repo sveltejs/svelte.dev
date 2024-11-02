@@ -40,7 +40,7 @@
 	}
 
 	.toc-container {
-		background: var(--sk-bg-3);
+		background: var(--sk-bg-2);
 		display: none;
 	}
 
