@@ -23,7 +23,7 @@ Then add it to the `<li>` elements:
 ```svelte
 /// file: TodoList.svelte
 <li
-	class:done
+	class:done={todo.done}
 	in:receive={{ key: todo.id }}
 	out:send={{ key: todo.id }}
 	+++animate:flip+++
@@ -35,7 +35,7 @@ The movement is a little slow in this case, so we can add a `duration` parameter
 ```svelte
 /// file: TodoList.svelte
 <li
-	class:done
+	class:done={todo.done}
 	in:receive={{ key: todo.id }}
 	out:send={{ key: todo.id }}
 	animate:flip+++={{ duration: 200 }}+++
