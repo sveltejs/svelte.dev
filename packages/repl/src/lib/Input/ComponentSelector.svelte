@@ -74,6 +74,7 @@
 		{#each workspace.files as File[] as file, index (file.name)}
 			<div
 				class="button"
+				class:editable={file.name !== 'App.svelte'}
 				role="button"
 				tabindex="0"
 				class:active={file === workspace.current}
@@ -98,7 +99,7 @@
 			>
 				<i class="drag-handle"></i>
 
-				<span class:editable={file.name !== 'App.svelte'}>
+				<span class="filename">
 					{(file === workspace.current && file.name !== 'App.svelte' ? input_value : file.name) +
 						(workspace.modified[file.name] ? '*' : '') || ' '}
 				</span>
@@ -137,7 +138,7 @@
 						}}
 						onkeyup={(e) => e.key === ' ' && remove_file(file)}
 					>
-						<svg width="12" height="12" viewBox="0 0 24 24">
+						<svg viewBox="0 0 24 24">
 							<line stroke="#999" x1="18" y1="6" x2="6" y2="18" />
 							<line stroke="#999" x1="6" y1="6" x2="18" y2="18" />
 						</svg>
@@ -204,7 +205,12 @@
 	}
 
 	.file-tabs .button {
-		padding: 0 1rem 0 2em;
+		--padding: 0 1.4rem 0 2.6rem;
+		padding: var(--padding);
+
+		&.editable {
+			--padding: 0 1.8rem 0 2.6rem;
+		}
 
 		.drag-handle {
 			cursor: move;
@@ -220,13 +226,17 @@
 		.remove {
 			position: absolute;
 			display: none;
-			right: 1px;
-			top: 4px;
-			width: 16px;
-			text-align: right;
-			padding: 12px 0 12px 5px;
-			font-size: 8px;
+			top: 0;
+			right: 0;
+			padding: 0 0.2rem;
+			width: 1.6rem;
+			height: 100%;
 			cursor: pointer;
+
+			svg {
+				width: 100%;
+				height: 100%;
+			}
 		}
 
 		&.drag-over {
@@ -237,7 +247,7 @@
 		&.active {
 			border-bottom: 1px solid var(--sk-fg-accent);
 
-			.editable {
+			&.editable .filename {
 				cursor: text;
 			}
 
@@ -262,7 +272,7 @@
 		justify-content: center;
 		font-family: var(--sk-font-family-ui);
 		font: var(--sk-font-ui-small); /* TODO can we just inherit */
-		padding: 0 1rem 0 2em;
+		padding: var(--padding);
 		box-sizing: border-box;
 
 		&:focus {
