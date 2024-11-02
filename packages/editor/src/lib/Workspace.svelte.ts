@@ -1,4 +1,4 @@
-import type { CompileError, CompileOptions, CompileResult } from 'svelte/compiler';
+import type { CompileError, CompileResult } from 'svelte/compiler';
 import { Compartment, EditorState } from '@codemirror/state';
 import { compile_file } from './compile-worker';
 import { BROWSER } from 'esm-env';
@@ -77,7 +77,7 @@ const default_extensions = [
 // 	extensions.push(vim());
 // }
 
-interface ExposedCompilerOptions {
+export interface ExposedCompilerOptions {
 	generate: 'client' | 'server';
 	dev: boolean;
 	modernAst: boolean;
