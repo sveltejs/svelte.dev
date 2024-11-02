@@ -216,8 +216,33 @@
 			background-size: 1em;
 		}
 
+		.remove {
+			position: absolute;
+			display: none;
+			right: 1px;
+			top: 4px;
+			width: 16px;
+			text-align: right;
+			padding: 12px 0 12px 5px;
+			font-size: 8px;
+			cursor: pointer;
+		}
+
+		&.drag-over {
+			background: #67677814;
+			cursor: move;
+		}
+
 		&.active {
 			border-bottom: 1px solid var(--sk-fg-accent);
+
+			.editable {
+				cursor: text;
+			}
+
+			.remove {
+				display: block;
+			}
 		}
 	}
 
@@ -242,34 +267,6 @@
 		&:focus {
 			color: var(--sk-fg-accent);
 		}
-	}
-
-	.remove {
-		position: absolute;
-		display: none;
-		right: 1px;
-		top: 4px;
-		width: 16px;
-		text-align: right;
-		padding: 12px 0 12px 5px;
-		font-size: 8px;
-		cursor: pointer;
-	}
-
-	.file-tabs .button.active .editable {
-		cursor: text;
-	}
-
-	.file-tabs .button.active .remove {
-		display: block;
-	}
-
-	.file-tabs .button.drag-over {
-		background: #67677814;
-	}
-
-	.file-tabs .button.drag-over {
-		cursor: move;
 	}
 
 	.add-new {
