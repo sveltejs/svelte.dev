@@ -1,0 +1,27 @@
+name: Docs preview create
+
+on:
+  repository_dispatch:
+    types: [docs-preview-create]
+
+jobs:
+  Sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+
+      - name: Sync
+        run: cd apps/svelte.dev && pnpm sync-docs --owner="${{ github.event.client_payload.owner }}" -p "${{ github.event.client_payload.package }}#${{ github.event.client_payload.branch }}""
+
+      - name: Create branch
+        uses: peterjgrainger/action-create-branch@v3.0.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          branch: refs/heads/sync/${{ github.event.client_payload.package }}/${{ github.event.client_payload.owner }}/${{ github.event.client_payload.branch }}
