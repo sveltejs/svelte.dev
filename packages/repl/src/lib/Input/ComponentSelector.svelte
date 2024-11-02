@@ -2,6 +2,7 @@
 	import RunesInfo from './RunesInfo.svelte';
 	import Migrate from './Migrate.svelte';
 	import type { Workspace, File } from 'editor';
+	import { tick } from 'svelte';
 
 	interface Props {
 		runes: boolean;
@@ -12,6 +13,7 @@
 
 	let { runes, onchange, workspace, can_migrate }: Props = $props();
 
+	let input = $state() as HTMLInputElement;
 	let input_value = $state(workspace.current.name);
 
 	async function close_edit(file: File) {
@@ -48,7 +50,7 @@
 		onchange();
 	}
 
-	function add_new() {
+	async function add_new() {
 		const basename = deconflict(`Component.svelte`);
 
 		const file = workspace.add({
@@ -61,6 +63,9 @@
 
 		input_value = file.name;
 		onchange();
+
+		await tick();
+		input.focus();
 	}
 
 	// drag and drop
@@ -108,6 +113,7 @@
 					<!-- svelte-ignore a11y_autofocus -->
 					<input
 						spellcheck={false}
+						bind:this={input}
 						bind:value={input_value}
 						onfocus={async (event) => {
 							const input = event.currentTarget;
