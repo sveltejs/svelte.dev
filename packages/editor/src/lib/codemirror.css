@@ -46,39 +46,35 @@
 	}
 
 	.cm-activeLineGutter {
-		position: relative;
-
 		/* this must be translucent, or it will obscure the selection */
 		background: hsl(0, 0%, 0%, 0.04);
 
 		:root.dark & {
 			background: hsl(0, 0%, 100%, 0.04);
 		}
+	}
+
+	.cm-gutterElement {
+		position: relative;
+
+		&:where(:has([title='Fold line']), :has([title='Unfold line']))::after {
+			content: '';
+			position: absolute;
+			width: 100%;
+			right: 0;
+			top: 0;
+			height: 2.4rem;
+			background: url($lib/icons/chevron.svg) no-repeat 50% 50%;
+			background-size: contain;
+			transition: transform 0.2s;
+		}
+
+		&:has([title='Unfold line'])::after {
+			transform: rotate(-90deg);
+		}
 
 		span {
-			position: absolute;
-			display: block;
-			width: 100%;
-			height: 100%;
-			right: 0;
 			color: transparent;
-			user-select: none;
-
-			&::after {
-				content: '';
-				position: absolute;
-				top: 0.1rem;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				background: url($lib/icons/chevron.svg) no-repeat 50% 50%;
-				background-size: contain;
-				rotate: -90deg;
-			}
-
-			&[title='Fold line']::after {
-				rotate: 0deg;
-			}
 		}
 	}
 
@@ -113,17 +109,7 @@
 	}
 
 	.cm-content {
-		/* ensure no gap between top of editor and highlighted first/last line */
-		padding-top: 0;
-		padding-bottom: 0;
-
-		.cm-line:first-child {
-			padding-top: 4px;
-		}
-
-		.cm-line:last-child {
-			padding-bottom: 4px;
-		}
+		padding: 0.4rem 0;
 	}
 
 	.cm-line {
