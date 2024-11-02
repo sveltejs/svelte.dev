@@ -82,7 +82,7 @@
 				class:editable={file.name !== 'App.svelte'}
 				role="button"
 				tabindex="0"
-				class:active={file === workspace.current}
+				aria-current={file === workspace.current}
 				class:draggable={file !== workspace.current && index !== 0}
 				class:drag-over={file === dragover}
 				onclick={() => {
@@ -250,7 +250,7 @@
 			cursor: move;
 		}
 
-		&.active {
+		&[aria-current='true'] {
 			border-bottom: 1px solid var(--sk-fg-accent);
 
 			&.editable .filename {
