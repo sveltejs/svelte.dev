@@ -1,0 +1,28 @@
+name: Docs preview create
+
+on:
+  repository_dispatch:
+    types: [docs-preview-create]
+
+jobs:
+  Sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ github.GH_TOKEN }}
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+
+      - name: Checkout
+        run: git checkout -B refs/heads/sync/${{ github.event.client_payload.package }}/${{ github.event.client_payload.owner }}/${{ github.event.client_payload.branch }}
+
+      - name: Sync
+        run: cd apps/svelte.dev && pnpm sync-docs --owner="${{ github.event.client_payload.owner }}" -p "${{ github.event.client_payload.package }}#${{ github.event.client_payload.branch }}"
+
+      - name: Push
+        run: git add -A && git commit -m "sync docs" && git push -u origin sync/${{ github.event.client_payload.package }}/${{ github.event.client_payload.owner }}/${{ github.event.client_payload.branch }}
