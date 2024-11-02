@@ -83,14 +83,13 @@
 				role="button"
 				tabindex="0"
 				aria-current={file === workspace.current}
-				class:draggable={file !== workspace.current && index !== 0}
 				class:drag-over={file === dragover}
 				onclick={() => {
 					workspace.select(file.name);
 					input_value = file.name;
 				}}
 				onkeyup={(e) => e.key === ' ' && workspace.select(file.name)}
-				draggable={file !== workspace.current}
+				draggable="true"
 				ondragstart={() => (dragging = file)}
 				ondragover={(e) => (e.preventDefault(), (dragover = file))}
 				ondragleave={(e) => (e.preventDefault(), (dragover = null))}
@@ -211,11 +210,12 @@
 	}
 
 	.file-tabs .button {
-		--padding: 0 1.4rem 0 2.6rem;
-		padding: var(--padding);
+		--padding-left: 2.6rem;
+		--padding-right: 1.4rem;
+		padding: 0 var(--padding-right) 0 var(--padding-left);
 
 		&.editable {
-			--padding: 0 1.8rem 0 2.6rem;
+			--padding-right: 1.8rem;
 		}
 
 		.drag-handle {
@@ -247,7 +247,6 @@
 
 		&.drag-over {
 			background: var(--sk-bg-4);
-			cursor: move;
 		}
 
 		&[aria-current='true'] {
@@ -265,20 +264,19 @@
 
 	input {
 		position: absolute;
-		width: 100%;
+		width: calc(100% - var(--padding-left) - var(--padding-right));
 		border: none;
 		outline: none;
 		background-color: inherit;
 		color: inherit;
 		top: 0;
-		left: 0;
+		left: var(--padding-left);
 		height: 100%;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		font-family: var(--sk-font-family-ui);
 		font: var(--sk-font-ui-small); /* TODO can we just inherit */
-		padding: var(--padding);
 		box-sizing: border-box;
 
 		&:focus {
