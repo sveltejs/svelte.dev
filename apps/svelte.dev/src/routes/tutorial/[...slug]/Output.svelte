@@ -191,7 +191,7 @@
 		height: 80%;
 		font: var(--sk-font-mono);
 		padding: 1rem;
-		border-top: 1px solid var(--sk-fg-4);
+		border-top: 1px solid var(--sk-border);
 		background: rgba(255, 255, 255, 0.5);
 		transform: translate(0, 100%);
 		-webkit-transform: translate3d(0, 100%, 0.01);

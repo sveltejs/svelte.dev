@@ -512,13 +512,9 @@
 				display: flex;
 				align-items: center;
 				height: 3rem;
-				color: var(--sk-fg-4);
+				color: var(--sk-fg-3);
 				font: var(--sk-font-body-small);
 				user-select: none;
-
-				&:hover {
-					color: var(--sk-fg-3);
-				}
 
 				.legacy &::after {
 					position: absolute;
@@ -549,6 +545,11 @@
 			& > :last-child {
 				margin-bottom: 0;
 			}
+		}
+
+		figcaption {
+			font: var(--sk-font-ui-medium);
+			color: var(--sk-fg-3);
 		}
 	}
 </style>

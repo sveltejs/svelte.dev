@@ -27,10 +27,10 @@
 	figcaption {
 		position: relative;
 		top: max(-2vw, calc(-0.02 * (120rem + 2 * var(--sk-page-padding-side))));
-		font: var(--sk-font-body-small);
+		font: var(--sk-font-ui-medium);
 		margin: 0 auto;
 		padding: 0 var(--sk-page-padding-side);
-		color: var(--sk-fg-4);
+		color: var(--sk-fg-3);
 		text-align: center;
 
 		a {

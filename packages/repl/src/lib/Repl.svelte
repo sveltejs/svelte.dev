@@ -166,7 +166,6 @@
 <div class="container" class:embedded class:toggleable={$toggleable} bind:clientWidth={width}>
 	<div class="viewport" class:output={show_output}>
 		<SplitPane
-			--color="var(--sk-fg-4)"
 			id="main"
 			type={orientation === 'rows' ? 'vertical' : 'horizontal'}
 			pos="{mobile || fixed ? fixedPos : orientation === 'rows' ? 60 : 50}%"
