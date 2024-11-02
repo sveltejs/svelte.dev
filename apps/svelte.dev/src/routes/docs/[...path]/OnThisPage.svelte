@@ -146,8 +146,8 @@
 					display: block;
 
 					&:hover {
-					color: var(--sk-fg-3);
-				}
+						color: var(--sk-fg-3);
+					}
 				}
 			}
 
