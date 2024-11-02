@@ -229,7 +229,7 @@
 		}
 
 		&.drag-over {
-			background: #67677814;
+			background: var(--sk-bg-4);
 			cursor: move;
 		}
 
