@@ -42,6 +42,10 @@
 	.toc-container {
 		background: var(--sk-bg-2);
 		display: none;
+
+		:root.dark & {
+			background: var(--sk-bg-0);
+		}
 	}
 
 	@media (min-width: 832px) {

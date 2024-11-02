@@ -56,6 +56,7 @@
 	--sk-fg-accent: hsl(12, 94%, 62%);
 
 	/* Background colours */
+	--sk-bg-0: hsl(var(--sk-bg-hue), 8%, 10%); /* docs sidebar (dark mode only) */
 	--sk-bg-1: hsl(var(--sk-bg-hue), 10%, 12%);
 	--sk-bg-2: hsl(var(--sk-bg-hue), 12%, 14%);
 	--sk-bg-3: hsl(var(--sk-bg-hue), 14%, 16%);
