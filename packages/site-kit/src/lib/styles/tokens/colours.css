@@ -49,10 +49,10 @@
 	--sk-bg-hue: 220;
 
 	/* Foreground colours */
-	--sk-fg-1: hsl(var(--sk-bg-hue), 10%, 90%);
-	--sk-fg-2: hsl(var(--sk-bg-hue), 10%, 80%);
-	--sk-fg-3: hsl(var(--sk-bg-hue), 10%, 65%);
-	--sk-fg-4: hsl(var(--sk-bg-hue), 10%, 45%);
+	--sk-fg-1: hsl(var(--sk-bg-hue), 2%, 90%);
+	--sk-fg-2: hsl(var(--sk-bg-hue), 3%, 80%);
+	--sk-fg-3: hsl(var(--sk-bg-hue), 5%, 65%);
+	--sk-fg-4: hsl(var(--sk-bg-hue), 5%, 45%);
 	--sk-fg-accent: hsl(12, 94%, 62%);
 
 	/* Background colours */
