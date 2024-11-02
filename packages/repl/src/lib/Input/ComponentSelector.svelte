@@ -119,6 +119,11 @@
 								e.preventDefault();
 								e.currentTarget.blur();
 							}
+
+							if (e.key === 'Escape') {
+								input_value = file.name;
+								e.currentTarget.blur();
+							}
 						}}
 					/>
 
