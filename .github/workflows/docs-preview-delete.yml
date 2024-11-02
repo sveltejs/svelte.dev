@@ -1,0 +1,16 @@
+name: Docs preview delete
+
+on:
+  repository_dispatch:
+    types: [docs-preview-delete]
+
+jobs:
+  Sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_TOKEN }}
+
+      - name: Delete branch
+        run: git push origin :sync/${{ github.event.client_payload.package }}/${{ github.event.client_payload.owner }}/${{ github.event.client_payload.branch }}
