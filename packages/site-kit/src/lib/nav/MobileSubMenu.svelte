@@ -12,7 +12,7 @@
 	});
 
 	export async function scrollToActive() {
-		const active = nav.querySelector('[aria-current="true"]') as HTMLElement;
+		const active = nav.querySelector('[aria-current="page"]') as HTMLElement;
 
 		if (!active) {
 			nav.scrollTop = 0;
