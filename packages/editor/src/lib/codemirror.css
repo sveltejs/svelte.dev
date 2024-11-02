@@ -277,21 +277,15 @@
 						padding: 0.2rem 0.4rem;
 					}
 
-					strong {
+					a {
 						font: var(--sk-font-mono);
+						color: inherit;
 						font-size: 1em;
-						opacity: 0.7;
+						/* opacity: 0.7; */
+						text-decoration: underline;
 					}
 				}
 			}
-		}
-
-		&.cm-tooltip-below .cm-tooltip-section {
-			/* top: 1rem; */
-		}
-
-		&.cm-tooltip-above .cm-tooltip-section {
-			/* bottom: 1rem; */
 		}
 	}
 }

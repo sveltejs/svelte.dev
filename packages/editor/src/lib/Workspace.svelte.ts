@@ -124,7 +124,10 @@ export class Workspace {
 					span.innerHTML = `${error.message
 						.replace(/&/g, '&amp;')
 						.replace(/</g, '&lt;')
-						.replace(/`(.+?)`/g, `<code>$1</code>`)} <strong>(${error.code})</strong>`;
+						.replace(
+							/`(.+?)`/g,
+							`<code>$1</code>`
+						)} (<a href="/docs/svelte/compiler-errors#${error.code}">${error.code}</a>)`;
 
 					return span;
 				}
@@ -142,7 +145,10 @@ export class Workspace {
 					span.innerHTML = `${warning.message
 						.replace(/&/g, '&amp;')
 						.replace(/</g, '&lt;')
-						.replace(/`(.+?)`/g, `<code>$1</code>`)} <strong>(${warning.code})</strong>`;
+						.replace(
+							/`(.+?)`/g,
+							`<code>$1</code>`
+						)} (<a href="/docs/svelte/compiler-warnings#${warning.code}">${warning.code}</a>)`;
 
 					return span;
 				}
