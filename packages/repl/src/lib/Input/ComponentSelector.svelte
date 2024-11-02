@@ -1,6 +1,4 @@
 <script lang="ts">
-	import { forcefocus } from '@sveltejs/site-kit/actions';
-	import { tick } from 'svelte';
 	import RunesInfo from './RunesInfo.svelte';
 	import Migrate from './Migrate.svelte';
 	import type { Workspace, File } from 'editor';
@@ -14,39 +12,18 @@
 
 	let { runes, onchange, workspace, can_migrate }: Props = $props();
 
-	let editing_name: string | null = $state(null);
-	let input_value = $state('');
+	let input_value = $state(workspace.current.name);
 
-	function select_file(filename: string) {
-		if (workspace.current.name !== filename) {
-			editing_name = null;
-			workspace.select(filename);
-		}
-	}
-
-	function edit_tab(file: File) {
-		if (workspace.current.name === file.name) {
-			editing_name = file.name;
-			input_value = file.name;
-		}
-	}
-
-	async function close_edit() {
-		if (input_value === editing_name) {
+	async function close_edit(file: File) {
+		if (input_value === file.name) {
 			// nothing to do
-			editing_name = null;
 			return;
 		}
 
-		const edited_file = (workspace.files as File[]).find((val) => val.name === editing_name);
-		if (!edited_file) return; // TODO can this happen?
+		const deconflicted = deconflict(input_value, file);
 
-		const deconflicted = deconflict(input_value, edited_file);
-
-		workspace.rename(edited_file, deconflicted);
+		workspace.rename(file, deconflicted);
 		workspace.focus();
-
-		editing_name = null;
 	}
 
 	function deconflict(name: string, file?: File) {
@@ -81,9 +58,7 @@
 			text: true
 		});
 
-		editing_name = file.name;
 		input_value = file.name;
-
 		onchange();
 	}
 
@@ -97,16 +72,18 @@
 	<div class="file-tabs">
 		{#each workspace.files as File[] as file, index (file.name)}
 			<div
-				id={file.name}
 				class="button"
 				role="button"
 				tabindex="0"
-				class:active={file.name === workspace.current.name}
-				class:draggable={file.name !== editing_name && index !== 0}
+				class:active={file === workspace.current}
+				class:draggable={file !== workspace.current && index !== 0}
 				class:drag-over={file === dragover}
-				onclick={() => select_file(file.name)}
-				onkeyup={(e) => e.key === ' ' && select_file(file.name)}
-				draggable={file.name !== editing_name}
+				onclick={() => {
+					workspace.select(file.name);
+					input_value = file.name;
+				}}
+				onkeyup={(e) => e.key === ' ' && workspace.select(file.name)}
+				draggable={file !== workspace.current}
 				ondragstart={() => (dragging = file)}
 				ondragover={(e) => (e.preventDefault(), (dragover = file))}
 				ondragleave={(e) => (e.preventDefault(), (dragover = null))}
@@ -120,26 +97,23 @@
 			>
 				<i class="drag-handle"></i>
 
-				{#if file.name === 'App.svelte'}
-					<div class="uneditable">
-						App.svelte{#if workspace.modified[file.name]}*{/if}
-					</div>
-				{:else if file.name === editing_name}
-					<span class="input-sizer">
-						<span style="color: transparent">{input_value}</span>
-					</span>
+				<span class:editable={file.name !== 'App.svelte'}>
+					{(file === workspace.current && file.name !== 'App.svelte' ? input_value : file.name) +
+						(workspace.modified[file.name] ? '*' : '')}
+				</span>
 
+				{#if file === workspace.current && file.name !== 'App.svelte'}
 					<!-- svelte-ignore a11y_autofocus -->
 					<input
-						use:forcefocus
 						spellcheck={false}
 						bind:value={input_value}
 						onfocus={async (event) => {
 							const input = event.currentTarget;
-							await tick();
-							input.select();
+							setTimeout(() => {
+								input.select();
+							});
 						}}
-						onblur={close_edit}
+						onblur={() => close_edit(file)}
 						onkeydown={(e) => {
 							if (e.key === 'Enter') {
 								e.preventDefault();
@@ -147,15 +121,6 @@
 							}
 						}}
 					/>
-				{:else}
-					<div
-						class="editable"
-						title="edit component name"
-						onclick={() => edit_tab(file)}
-						onkeyup={(e) => e.key === ' ' && edit_tab(file)}
-					>
-						{file.name}{#if workspace.modified[file.name]}*{/if}
-					</div>
 
 					<span
 						class="remove"
@@ -264,9 +229,9 @@
 		position: absolute;
 		width: 100%;
 		border: none;
-		color: var(--sk-fg-accent);
 		outline: none;
-		background-color: transparent;
+		background-color: inherit;
+		color: inherit;
 		top: 0;
 		left: 0;
 		height: 100%;
@@ -275,12 +240,12 @@
 		justify-content: center;
 		font-family: var(--sk-font-family-ui);
 		font: var(--sk-font-ui-small); /* TODO can we just inherit */
-		padding: 0 1rem 1px 2em;
+		padding: 0 1rem 0 2em;
 		box-sizing: border-box;
-	}
 
-	.duplicate {
-		color: var(--sk-fg-accent);
+		&:focus {
+			color: var(--sk-fg-accent);
+		}
 	}
 
 	.remove {

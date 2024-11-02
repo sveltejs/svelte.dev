@@ -206,6 +206,8 @@ export class Workspace {
 		if (is_file(item)) {
 			this.#select(item);
 			this.#onreset?.(this.#files);
+
+			this.modified[item.name] = true;
 		}
 
 		return item;
@@ -318,6 +320,11 @@ export class Workspace {
 
 		if (was_current) {
 			this.#select(new_item as File);
+		}
+
+		if (this.modified[previous.name]) {
+			delete this.modified[previous.name];
+			this.modified[name] = true;
 		}
 
 		this.#onreset?.(this.#files);

@@ -8,6 +8,8 @@
 	height: 100%;
 
 	&.cm-focused {
+		outline: none;
+
 		.cm-cursor {
 			border-left-color: var(--sk-fg-3);
 		}
