@@ -15,8 +15,9 @@
 	let input_value = $state(workspace.current.name);
 
 	async function close_edit(file: File) {
-		if (input_value === file.name) {
+		if (input_value === file.name || input_value === '') {
 			// nothing to do
+			input_value = file.name;
 			return;
 		}
 
@@ -99,7 +100,7 @@
 
 				<span class:editable={file.name !== 'App.svelte'}>
 					{(file === workspace.current && file.name !== 'App.svelte' ? input_value : file.name) +
-						(workspace.modified[file.name] ? '*' : '')}
+						(workspace.modified[file.name] ? '*' : '') || ' '}
 				</span>
 
 				{#if file === workspace.current && file.name !== 'App.svelte'}
