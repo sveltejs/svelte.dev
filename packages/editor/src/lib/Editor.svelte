@@ -115,7 +115,7 @@
 
 	.fake-gutter {
 		text-align: right;
-		padding-right: 3px;
+		padding-right: 0.7rem;
 	}
 
 	.fake-content {
