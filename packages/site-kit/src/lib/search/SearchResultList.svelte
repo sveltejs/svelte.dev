@@ -122,6 +122,7 @@
 		overflow: hidden;
 		background: var(--background);
 		font: var(--sk-font-ui-medium);
+		color: inherit;
 
 		&::before {
 			content: '';
@@ -169,7 +170,6 @@
 			width: 100%;
 			overflow: hidden;
 			font: var(--sk-font-ui-medium);
-			color: var(--sk-fg-2);
 
 			span {
 				display: inline;

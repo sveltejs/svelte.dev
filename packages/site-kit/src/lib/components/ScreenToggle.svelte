@@ -16,7 +16,7 @@
 
 <!-- svelte-ignore a11y_label_has_associated_control -->
 <label class="input-output-toggle">
-	<span class:active={!checked} style="text-align: right">{left}</span>
+	<span aria-current={!checked} style="text-align: right">{left}</span>
 	<span style="display:grid; place-items: center">
 		<Checkbox
 			{checked}
@@ -26,7 +26,7 @@
 			}}
 		/>
 	</span>
-	<span class:active={checked}>{right}</span>
+	<span aria-current={checked}>{right}</span>
 </label>
 
 <style>
@@ -46,11 +46,7 @@
 		z-index: 2;
 	}
 
-	span {
+	span[aria-current='false'] {
 		color: var(--sk-fg-4);
-	}
-
-	.active {
-		color: var(--sk-fg-2);
 	}
 </style>

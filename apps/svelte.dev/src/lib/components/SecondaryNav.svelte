@@ -17,7 +17,6 @@
 		justify-content: space-between;
 		padding: 0.6rem var(--sk-page-padding-side);
 		background-color: var(--sk-bg-2);
-		color: var(--sk-fg-2);
 		white-space: nowrap;
 		flex: 0;
 		gap: 1rem;

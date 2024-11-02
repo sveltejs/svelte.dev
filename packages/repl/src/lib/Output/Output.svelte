@@ -170,7 +170,6 @@
 		border: none;
 		border-bottom: 1px solid transparent;
 		padding: 0 1rem;
-		color: var(--sk-fg-2);
 		border-radius: 0;
 
 		&[aria-current='true'] {

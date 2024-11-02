@@ -660,7 +660,7 @@ async function bundle({
 			server: null,
 			imports: null,
 			warnings: client.warnings,
-			error: { ...e }
+			error: { ...e, message: e.message } // not all Svelte versions return an enumerable message property
 		};
 	}
 }

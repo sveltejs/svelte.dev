@@ -126,7 +126,6 @@
 	.cm-panels {
 		font: var(--sk-font-ui-small);
 		background: var(--sk-bg-2);
-		color: var(--sk-fg-2);
 
 		&.cm-panels-top,
 		&.cm-panels-bottom {

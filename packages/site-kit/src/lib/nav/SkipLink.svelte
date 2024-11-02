@@ -16,7 +16,7 @@ Accessibility helper component to skip to the main content
 		display: flex;
 		align-items: center;
 		background: var(--sk-bg-1);
-		color: var(--sk-fg-2);
+		color: inherit;
 		height: calc(var(--sk-nav-height) - 2rem);
 		padding: 0 1rem;
 		position: absolute;

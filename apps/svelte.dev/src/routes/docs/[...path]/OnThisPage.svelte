@@ -96,11 +96,7 @@
 				padding: 0.2rem 0 0 3rem;
 				height: 3rem;
 				text-transform: uppercase;
-				color: var(--sk-fg-4);
-
-				&:hover {
-					color: var(--sk-fg-3);
-				}
+				user-select: none;
 
 				&::before,
 				&::after {
@@ -148,6 +144,10 @@
 					color: var(--sk-fg-4);
 					margin: 0;
 					display: block;
+
+					&:hover {
+						color: var(--sk-fg-3);
+					}
 				}
 			}
 
