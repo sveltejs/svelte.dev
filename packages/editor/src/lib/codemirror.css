@@ -67,6 +67,7 @@
 			background: url($lib/icons/chevron.svg) no-repeat 50% 50%;
 			background-size: contain;
 			transition: transform 0.2s;
+			cursor: pointer;
 		}
 
 		&:has([title='Unfold line'])::after {
