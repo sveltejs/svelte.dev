@@ -153,7 +153,11 @@
 		{/each}
 	</div>
 
-	<button class="add-new" onclick={add_new} aria-label="add new component" title="add new component"
+	<button
+		class="raised add-new"
+		onclick={add_new}
+		aria-label="add new component"
+		title="add new component"
 	></button>
 
 	<div class="runes">
@@ -166,6 +170,8 @@
 	.component-selector {
 		position: relative;
 		display: flex;
+		gap: 0.5rem;
+		align-items: center;
 		padding: 0 1rem 0 0;
 
 		/* fake border (allows tab borders to appear above it) */
@@ -183,13 +189,13 @@
 	.file-tabs {
 		border: none;
 		margin: 0;
+		height: 100%;
 		white-space: nowrap;
 		overflow-x: auto;
 		overflow-y: hidden;
 	}
 
-	.file-tabs .button,
-	.add-new {
+	.file-tabs .button {
 		position: relative;
 		display: inline-flex;
 		align-items: center;
@@ -198,15 +204,7 @@
 		border: none;
 		padding: 0 1rem;
 		height: 100%;
-		aspect-ratio: 1;
-		margin: 0;
-		border-radius: 0;
 		cursor: pointer;
-	}
-
-	.add-new {
-		background: url(./file-new.svg) 50% 50% no-repeat;
-		background-size: 1em;
 	}
 
 	.file-tabs .button {
@@ -285,9 +283,10 @@
 	}
 
 	.add-new {
-		padding: 12px 10px 8px 8px;
-		height: 40px;
-		text-align: center;
+		height: 3.2rem;
+		aspect-ratio: 1;
+		background: url(./file-new.svg) 50% 50% no-repeat;
+		background-size: 1em;
 	}
 
 	.runes {
