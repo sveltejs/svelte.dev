@@ -167,6 +167,11 @@ if (parsed.values.pull) {
 }
 
 async function sync(pkg: Package) {
+	if (!fs.existsSync(`${REPOS}/${pkg.name}/${pkg.docs}`)) {
+		console.warn(`No linked repo found for ${pkg.name}`);
+		return;
+	}
+
 	const dest = `${DOCS}/${pkg.name}`;
 
 	fs.rmSync(dest, { force: true, recursive: true });
