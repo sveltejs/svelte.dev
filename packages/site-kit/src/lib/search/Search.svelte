@@ -55,7 +55,7 @@ Renders a search widget which when clicked (or the corresponding keyboard shortc
 		position: relative;
 		display: flex;
 		align-items: center;
-		width: 100%;
+		width: 11rem;
 		font-size: 1.4rem;
 	}
 
@@ -68,12 +68,11 @@ Renders a search widget which when clicked (or the corresponding keyboard shortc
 		appearance: none;
 		-webkit-appearance: none;
 		width: 100%;
-		height: 4.2rem;
-		border-radius: 3.5rem;
+		height: 3.4rem;
+		border-radius: 5.6rem;
 		background:
 			no-repeat 0.6em 55% / 1.2em 1.2em url(../icons/search.svg),
 			var(--sk-bg-4);
-		color: var(--sk-fg-3);
 	}
 
 	input:focus + .shortcut {
@@ -82,14 +81,14 @@ Renders a search widget which when clicked (or the corresponding keyboard shortc
 
 	input::placeholder {
 		text-transform: lowercase;
-		color: var(--sk-fg-3);
+		color: var(--sk-fg-4);
+		opacity: 0;
 	}
 
 	.shortcut {
-		color: var(--sk-fg-3);
 		position: absolute;
 		top: calc(50% - 0.9rem);
-		right: 0;
+		right: 1.6rem;
 		width: 100%;
 		text-align: right;
 		pointer-events: none;
@@ -99,34 +98,9 @@ Renders a search widget which when clicked (or the corresponding keyboard shortc
 	}
 
 	kbd {
-		display: none;
-		color: var(--sk-fg-3);
+		color: var(--sk-fg-4);
 		font-size: inherit;
 		font-family: inherit;
-	}
-
-	@media (min-width: 800px) {
-		.search-container {
-			width: 11rem;
-		}
-
-		.shortcut {
-			padding: 0 1.6rem 0 0;
-		}
-
-		input {
-			height: 3.4rem;
-			border-radius: 5.6rem;
-		}
-
-		input::placeholder {
-			opacity: 0;
-		}
-
-		/* we're using media query as an imperfect proxy for mobile/desktop */
-		kbd {
-			display: inline;
-		}
 	}
 
 	@media (min-width: 960px) {
@@ -136,12 +110,6 @@ Renders a search widget which when clicked (or the corresponding keyboard shortc
 
 		input::placeholder {
 			opacity: 1;
-		}
-	}
-
-	@media (min-width: 1240px) {
-		.search-container {
-			width: 19rem;
 		}
 	}
 </style>

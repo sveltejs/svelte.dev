@@ -48,7 +48,6 @@
 		display: block;
 		padding: 0 0 0 1.25em;
 		white-space: nowrap;
-		color: var(--sk-fg-3);
 		user-select: none;
 	}
 

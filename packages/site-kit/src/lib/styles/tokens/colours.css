@@ -11,7 +11,7 @@
 	/* Foreground colours */
 	--sk-fg-1: hsl(0, 0%, 5%); /* for headings, and (very sparingly) as a highlight colour */
 	--sk-fg-2: hsl(0, 0%, 12%); /* most text should be this colour */
-	--sk-fg-3: hsl(0, 0%, 27%); /* secondary text (e.g. figcaptions) */
+	--sk-fg-3: hsl(0, 0%, 27%); /* secondary text (e.g. figcaptions) and icons */
 	--sk-fg-4: hsl(0, 0%, 45%); /* faded text (disabled buttons, comments etc) */
 	--sk-fg-accent: hsl(12, 93%, 43%);
 

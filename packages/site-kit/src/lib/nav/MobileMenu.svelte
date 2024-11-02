@@ -265,7 +265,7 @@
 		& :global(a) {
 			position: relative;
 			padding: 0.3rem 0;
-			color: var(--sk-fg-3);
+			color: inherit;
 			font: var(--sk-font-ui-medium);
 			width: 100%;
 			height: 100%;

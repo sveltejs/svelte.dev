@@ -223,7 +223,6 @@
 		height: 100%;
 		aspect-ratio: 1;
 		margin: 0;
-		color: var(--sk-fg-3);
 		border-radius: 0;
 		cursor: pointer;
 	}
@@ -259,11 +258,6 @@
 		display: inline-block;
 		position: relative;
 		line-height: 1;
-	}
-
-	.input-sizer {
-		display: flex;
-		color: var(--sk-fg-3, #ccc);
 	}
 
 	input {
