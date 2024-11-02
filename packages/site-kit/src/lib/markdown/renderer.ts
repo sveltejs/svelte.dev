@@ -281,34 +281,33 @@ export async function render_content_markdown(
 				snippets.save(token.text, html);
 			}
 
-			// ensure that `foo`/`bar` is transformed to `foo` / `bar`
-			// https://github.com/sveltejs/svelte.dev/pull/577
-			const slash_index =
-				// @ts-expect-error
-				token.tokens?.findIndex((token) => token.type === 'text' && token.text === '/') ?? -1;
+			const tokens = 'tokens' in token ? token.tokens : undefined;
 
-			if (slash_index !== -1) {
-				// @ts-expect-error
-				const before = token.tokens[slash_index - 1];
-				// @ts-expect-error
-				const after = token.tokens[slash_index + 1];
+			if (tokens) {
+				// ensure that `foo`/`bar` is transformed to `foo` / `bar`
+				// https://github.com/sveltejs/svelte.dev/pull/577
+				const slash_index =
+					tokens.findIndex((token) => token.type === 'text' && token.text === '/') ?? -1;
 
-				if (before?.type === 'codespan' && after?.type === 'codespan') {
-					// @ts-expect-error
-					token.tokens[slash_index].raw = token.tokens[slash_index].text = ' / ';
+				if (slash_index !== -1) {
+					const before = tokens[slash_index - 1];
+					const after = tokens[slash_index + 1];
+
+					if (before?.type === 'codespan' && after?.type === 'codespan') {
+						// @ts-expect-error
+						tokens[slash_index].raw = tokens[slash_index].text = ' / ';
+					}
+				}
+
+				// smart quotes
+				for (let i = 0; i < tokens.length; i += 1) {
+					const token = tokens[i];
+
+					if (token.type === 'text') {
+						token.text = smart_quotes(token.text, { first: i === 0, html: true });
+					}
 				}
 			}
-		},
-		text(token) {
-			// @ts-expect-error I think this is a bug in marked — some text tokens have children,
-			// but that's not reflected in the types. In these cases we can't just use `token.tokens`
-			// because that will result in e.g. `<code>` elements not being generated
-			if (token.tokens) {
-				// @ts-expect-error
-				return this.parser!.parseInline(token.tokens);
-			}
-
-			return smart_quotes(token.text, true);
 		},
 		heading({ tokens, depth }) {
 			const text = this.parser!.parseInline(tokens);
