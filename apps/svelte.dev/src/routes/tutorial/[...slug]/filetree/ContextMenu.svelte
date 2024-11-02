@@ -1,33 +1,25 @@
 <!-- @component
      A context menu for the tutorial's file tree
 -->
-<script module>
-	import { writable } from 'svelte/store';
+<script module lang="ts">
+	import type { MenuItem } from '$lib/tutorial';
 
-	/**
-	 * @type {import("svelte/store").Writable<{x: number; y: number; items: import('$lib/tutorial').MenuItem[]} | null>}
-	 */
-	let menu_items = writable(null);
+	let menu_items: { x: number; y: number; items: MenuItem[] } | null = $state(null);
 
-	/**
-	 * @param {number} x
-	 * @param {number} y
-	 * @param {import('$lib/tutorial').MenuItem[]} items
-	 */
-	export function open(x, y, items) {
+	export function open(x: number, y: number, items: MenuItem[]) {
 		if (items.length > 0) {
-			menu_items.set({ x, y, items });
+			menu_items = { x, y, items };
 		}
 	}
 </script>
 
-{#if $menu_items}
-	<nav style="position: fixed; z-index: 5; top:{$menu_items.y}px; left:{$menu_items.x}px">
+{#if menu_items}
+	<nav style="position: fixed; z-index: 5; top:{menu_items.y}px; left:{menu_items.x}px">
 		<div class="context-menu">
 			<ul>
-				{#each $menu_items.items as item}
+				{#each menu_items.items as item}
 					<li>
-						<button on:click={item.fn}>{item.label}</button>
+						<button onclick={item.fn}>{item.label}</button>
 					</li>
 				{/each}
 			</ul>
@@ -35,7 +27,7 @@
 	</nav>
 {/if}
 
-<svelte:window on:click={() => menu_items.set(null)} />
+<svelte:window onclick={() => (menu_items = null)} />
 
 <style>
 	.context-menu {

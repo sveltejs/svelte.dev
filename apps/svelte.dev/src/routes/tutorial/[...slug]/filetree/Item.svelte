@@ -2,6 +2,7 @@
 	import { tick } from 'svelte';
 	import { open } from './ContextMenu.svelte';
 	import type { MenuItem } from '$lib/tutorial';
+	import { forcefocus } from '@sveltejs/site-kit/actions';
 
 	interface Props {
 		basename?: string;
@@ -63,7 +64,7 @@
 		<!-- svelte-ignore a11y_autofocus -->
 		<input
 			type="text"
-			autofocus
+			use:forcefocus
 			autocomplete="off"
 			spellcheck="false"
 			value={basename}
@@ -135,7 +136,7 @@
 	}
 
 	input {
-		background: var(--sk-bg-1);
+		background: var(--sk-bg-3);
 		margin: 0 0.5rem 0 calc(0.5rem + var(--inset));
 		border: 2px solid transparent;
 		padding: 0 0.5rem;
