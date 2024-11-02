@@ -20,7 +20,7 @@ export default class Bundler {
 	}: {
 		packages_url: string;
 		svelte_url: string;
-		onstatus: (val: string | null) => void;
+		onstatus: (val: string | null, kind?: 'status' | 'error') => void;
 	}) {
 		this.hash = `${packages_url}:${svelte_url}`;
 
@@ -39,8 +39,8 @@ export default class Bundler {
 
 			if (handler) {
 				// if no handler, was meant for a different REPL
-				if (event.data.type === 'status') {
-					onstatus(event.data.message);
+				if (event.data.type === 'status' || event.data.type === 'error') {
+					onstatus(event.data.message, event.data.type);
 					return;
 				}
 

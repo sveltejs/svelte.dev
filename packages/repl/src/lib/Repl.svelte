@@ -116,6 +116,7 @@
 	let width = $state(0);
 	let show_output = $state(false);
 	let status: string | null = $state(null);
+	let runtime_error: Error | null = $state(null);
 	let status_visible = $state(false);
 	let status_timeout: NodeJS.Timeout | undefined = undefined;
 
@@ -123,7 +124,7 @@
 		? new Bundler({
 				packages_url: packagesUrl,
 				svelte_url: svelteUrl,
-				onstatus: (message) => {
+				onstatus: (message, kind) => {
 					if (message) {
 						// show bundler status, but only after time has elapsed, to
 						// prevent the banner flickering
@@ -137,8 +138,11 @@
 						status_visible = false;
 						status_timeout = undefined;
 					}
-
-					status = message;
+					if (kind === 'status') {
+						status = message;
+					} else {
+						runtime_error = new Error(message);
+					}
 				}
 			})
 		: null;
@@ -192,6 +196,7 @@
 					{injectedCSS}
 					{previewTheme}
 					{workspace}
+					runtimeError={status_visible ? runtime_error : null}
 				/>
 			</section>
 		</SplitPane>

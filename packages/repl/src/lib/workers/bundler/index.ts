@@ -28,8 +28,10 @@ let version: string;
 let current_id: number;
 
 let fulfil_ready: (arg?: never) => void;
-const ready = new Promise((f) => {
+let reject_ready: (arg?: Error) => void;
+const ready = new Promise((f, r) => {
 	fulfil_ready = f;
+	reject_ready = r;
 });
 
 let files: Map<string, () => string>;
@@ -49,18 +51,26 @@ self.addEventListener('message', async (event: MessageEvent<BundleMessageData>) 
 				const ref = starts_with_pr
 					? svelte_url.substring('pr-'.length)
 					: svelte_url.substring('commit-'.length);
-
-				const maybe_tar = await fetch(`https://pkg.pr.new/svelte@${ref}`);
-				if (maybe_tar.headers.get('content-type') === 'application/tar+gzip') {
-					const buffer = await maybe_tar.arrayBuffer();
-					local_files = await parseTar(buffer);
-					files = new Map(
-						local_files.map((file) => [file.name.substring('package'.length), () => file.text])
-					);
-					const package_json_content = files.get('/package.json')?.();
-					if (package_json_content) {
-						package_json = JSON.parse(package_json_content);
+				try {
+					const maybe_tar = await fetch(`https://pkg.pr.new/svelte@${ref}`);
+					if (!maybe_tar.ok)
+						throw new Error(
+							`impossible to fetch the compiler from this ${starts_with_pr ? 'PR' : 'commit'}`
+						);
+					if (maybe_tar.headers.get('content-type') === 'application/tar+gzip') {
+						const buffer = await maybe_tar.arrayBuffer();
+						local_files = await parseTar(buffer);
+						files = new Map(
+							local_files.map((file) => [file.name.substring('package'.length), () => file.text])
+						);
+						const package_json_content = files.get('/package.json')?.();
+						if (package_json_content) {
+							package_json = JSON.parse(package_json_content);
+						}
 					}
+				} catch (e) {
+					reject_ready(e);
+					return;
 				}
 			}
 			({ version } =
@@ -91,7 +101,15 @@ self.addEventListener('message', async (event: MessageEvent<BundleMessageData>) 
 		}
 
 		case 'bundle': {
-			await ready;
+			try {
+				await ready;
+			} catch (e) {
+				self.postMessage({
+					type: 'error',
+					uid: event.data.uid,
+					message: `Error loading the compiler: ${e.message}`
+				});
+			}
 			const { uid, files, options } = event.data;
 
 			if (files.length === 0) return;
