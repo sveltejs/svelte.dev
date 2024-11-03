@@ -71,12 +71,20 @@ addEventListener('message', async (event) => {
 		let result: CompileResult;
 
 		if (file.name.endsWith('.svelte')) {
-			result = self.svelte.compile(file.contents, {
-				generate: options.generate, // TODO do we need to adjust this for 3/4?
+			const is_svelte_3_or_4 = !self.svelte.compileModule;
+			const compilerOptions: any = {
+				generate: is_svelte_3_or_4
+					? options.generate === 'client'
+						? 'dom'
+						: 'ssr'
+					: options.generate,
 				dev: options.dev,
-				modernAst: options.modernAst,
 				filename: file.name
-			});
+			};
+			if (!is_svelte_3_or_4) {
+				compilerOptions.modernAst = options.modernAst; // else Svelte 3/4 will throw an "unknown option" error
+			}
+			result = self.svelte.compile(file.contents, compilerOptions);
 		} else {
 			result = self.svelte.compileModule(file.contents, {
 				generate: options.generate,
