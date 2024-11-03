@@ -33,4 +33,31 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Push
+        id: push
         run: git add -A && git commit -m "sync docs" && git push -u origin ${{ env.BRANCH }}
+
+      - name: Get preview deployment URL
+        id: url
+        run: echo "SLUG=$(echo ${BRANCH//\//})" >> $GITHUB_ENV
+
+      - name: Find comment
+        id: fc
+        if: steps.push.outcome == 'success'
+        uses: peter-evans/find-comment@v3
+        with:
+          token: ${{ secrets.COMMENTER_TOKEN }}
+          repository: ${{ github.event.client_payload.repo }}
+          issue-number: ${{ github.event.client_payload.pr }}
+          comment-author: 'github-actions[bot]'
+          body-includes: Build output
+
+      - name: Create comment
+        if: steps.fc.outputs.comment-id == ''
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          token: ${{ secrets.COMMENTER_TOKEN }}
+          repository: ${{ github.event.client_payload.repo }}
+          issue-number: ${{ github.event.client_payload.pr }}
+          body: |
+            Preview deployment: https://svelte-dev-git-${{ env.SLUG }}-svelte.vercel.app/
+          edit-mode: replace
