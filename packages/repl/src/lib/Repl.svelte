@@ -140,7 +140,7 @@
 					}
 					if (kind === 'status') {
 						status = message;
-					} else {
+					} else if (message) {
 						runtime_error = new Error(message);
 					}
 				}

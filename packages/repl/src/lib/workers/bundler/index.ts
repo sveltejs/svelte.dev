@@ -69,7 +69,7 @@ self.addEventListener('message', async (event: MessageEvent<BundleMessageData>) 
 						}
 					}
 				} catch (e) {
-					reject_ready(e);
+					reject_ready(e as Error);
 					return;
 				}
 			}
@@ -107,7 +107,7 @@ self.addEventListener('message', async (event: MessageEvent<BundleMessageData>) 
 				self.postMessage({
 					type: 'error',
 					uid: event.data.uid,
-					message: `Error loading the compiler: ${e.message}`
+					message: `Error loading the compiler: ${(e as Error).message}`
 				});
 			}
 			const { uid, files, options } = event.data;
