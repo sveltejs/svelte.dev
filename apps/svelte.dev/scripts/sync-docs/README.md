@@ -83,3 +83,72 @@ You will need to add a `SYNC_REQUEST_TOKEN` to the repo. First, create a persona
 - under 'Repository permissions', change 'Contents' to 'Read and write'
 
 Then, go to `https://github.com/<ORG>/<REPO>/settings/secrets/actions`, click 'New repository secret' and paste in your newly generated personal access token.
+
+## Previews
+
+Preview deployments will be created for pull requests to external repos that result in documentation changes. In the external repo, add a `.github/workflows/docs-preview-create-request.yml` workflow...
+
+```yml
+# https://github.com/sveltejs/svelte.dev/blob/main/apps/svelte.dev/scripts/sync-docs/README.md
+name: Docs preview create request
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repository Dispatch
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.SYNC_REQUEST_TOKEN }}
+          repository: sveltejs/svelte.dev
+          event-type: docs-preview-create
+          client-payload: |-
+            {
+              "package": "<YOUR_PACKAGE_NAME>",
+              "repo": "${{ github.repository }}",
+              "owner": "${{ github.event.pull_request.head.repo.owner.login }}",
+              "branch": "${{ github.event.pull_request.head.ref }}",
+              "pr": ${{ github.event.pull_request.number }}
+            }
+```
+
+...and a `.github/workflows/docs-preview-delete-request.yml` workflow:
+
+```yml
+# https://github.com/sveltejs/svelte.dev/blob/main/apps/svelte.dev/scripts/sync-docs/README.md
+name: Docs preview delete request
+
+on:
+  pull_request:
+    branches:
+      - main
+    types: [closed]
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repository Dispatch
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.SYNC_REQUEST_TOKEN }}
+          repository: sveltejs/svelte.dev
+          event-type: docs-preview-delete
+          client-payload: |-
+            {
+              "package": "cli",
+              "repo": "${{ github.repository }}",
+              "owner": "${{ github.event.pull_request.head.repo.owner.login }}",
+              "branch": "${{ github.event.pull_request.head.ref }}",
+              "pr": ${{ github.event.pull_request.number }}
+            }
+```
+
+These use the same `SYNC_REQUEST_TOKEN` as above.
+
+Inside _this_ repo, the [`docs-preview-create.yml`](../../../../.github/workflows/docs-preview-create.yml) workflow creates a comment on the PR once the branch has been created, inferring the eventual Vercel preview deployment URL. It uses this repo's `COMMENTER_TOKEN` secret, which is a [personal access token](https://github.com/settings/personal-access-tokens/new) with write permissions on issues and pull requests.
