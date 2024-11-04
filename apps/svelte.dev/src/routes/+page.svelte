@@ -46,7 +46,7 @@
 
 <style>
 	figcaption {
-		font: var(--sk-font-body-small);
+		font: var(--sk-font-ui-medium);
 	}
 
 	.home :global {

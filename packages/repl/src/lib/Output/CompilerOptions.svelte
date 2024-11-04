@@ -27,12 +27,14 @@
 	<!-- svelte-ignore a11y_label_has_associated_control (TODO this warning should probably be disabled if there's a component)-->
 	<label class="option">
 		<span class="key">dev:</span>
-		<Checkbox
-			checked={workspace.compiler_options.dev!}
-			onchange={(dev) => {
-				workspace.update_compiler_options({ dev });
-			}}
-		/>
+		<span style="font-size: 1.2rem">
+			<Checkbox
+				checked={workspace.compiler_options.dev!}
+				onchange={(dev) => {
+					workspace.update_compiler_options({ dev });
+				}}
+			/>
+		</span>
 		<span class="boolean">{workspace.compiler_options.dev}</span>
 	</label>
 	});
@@ -94,31 +96,27 @@
 
 	input[type='radio'] + label:before {
 		content: '';
-		background: #eee;
 		display: block;
 		box-sizing: border-box;
 		float: left;
-		width: 15px;
-		height: 15px;
+		width: 1.6rem;
+		height: 1.6rem;
 		margin-left: -21px;
 		margin-top: 4px;
 		/* vertical-align: top; */
 		cursor: pointer;
 		text-align: center;
-		transition: box-shadow 0.1s ease-out;
-	}
-
-	input[type='radio'] + label:before {
+		transition: box-shadow 0.05s ease-out;
 		background-color: var(--sk-fg-4);
 		border-radius: 100%;
-		box-shadow: inset 0 0 0 0.5em rgba(255, 255, 255, 0.95);
-		border: 1px solid var(--sk-fg-4);
+		box-shadow: inset 0 0 0 0.5em var(--sk-bg-2);
+		border: 1px solid var(--sk-border);
 	}
 
 	input[type='radio']:checked + label:before {
 		background-color: var(--sk-fg-accent);
-		box-shadow: inset 0 0 0 0.15em rgba(255, 255, 255, 0.95);
-		border: 1px solid var(--sk-fg-4);
+		box-shadow: inset 0 0 0 0.15em var(--sk-bg-2);
+		border: 1px solid var(--sk-fg-accent);
 		transition: box-shadow 0.2s ease-out;
 	}
 </style>

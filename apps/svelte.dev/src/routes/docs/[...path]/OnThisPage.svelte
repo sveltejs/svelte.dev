@@ -74,7 +74,7 @@
 			}
 
 			a {
-				color: var(--sk-fg-3);
+				color: var(--sk-fg-2);
 			}
 		}
 

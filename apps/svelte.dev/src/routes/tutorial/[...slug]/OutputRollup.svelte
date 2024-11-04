@@ -76,7 +76,7 @@
 		font: var(--sk-font-mono);
 		padding: 1rem;
 		background: var(--sk-bg-1);
-		border-top: 1px solid var(--sk-fg-4);
+		border-top: 1px solid var(--sk-border);
 		transform: translate(0, 100%);
 		-webkit-transform: translate3d(0, 100%, 0.01);
 		transition: transform 0.3s;

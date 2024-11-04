@@ -129,7 +129,7 @@
 				top: 0;
 				font: var(--sk-font-ui-medium);
 				text-transform: uppercase;
-				color: var(--sk-fg-4);
+				color: var(--sk-fg-3);
 			}
 		}
 

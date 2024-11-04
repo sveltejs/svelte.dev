@@ -185,7 +185,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		height: var(--sk-nav-height);
 		margin: 0 auto;
 		padding: 0 var(--sk-page-padding-side);
-		background-color: var(--sk-bg-2);
+		background-color: var(--sk-bg-1);
 		font-family: var(--sk-font-family-body);
 		user-select: none;
 		isolation: isolate;
@@ -199,6 +199,10 @@ Top navigation bar for the application. It provides a slot for the left side, th
 			width: 100%;
 			height: 4px;
 			background: linear-gradient(to top, rgba(0, 0, 0, 0.05), transparent);
+		}
+
+		:root.dark & {
+			background-color: var(--sk-bg-3);
 		}
 	}
 

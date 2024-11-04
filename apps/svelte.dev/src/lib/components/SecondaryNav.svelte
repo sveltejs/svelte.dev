@@ -16,7 +16,7 @@
 		align-items: center;
 		justify-content: space-between;
 		padding: 0.6rem var(--sk-page-padding-side);
-		background-color: var(--sk-bg-2);
+		background-color: var(--sk-bg-1);
 		white-space: nowrap;
 		flex: 0;
 		gap: 1rem;

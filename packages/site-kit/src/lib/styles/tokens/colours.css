@@ -9,17 +9,17 @@
 	color-scheme: light;
 
 	/* Foreground colours */
-	--sk-fg-1: hsl(0, 0%, 5%); /* for headings, and (very sparingly) as a highlight colour */
-	--sk-fg-2: hsl(0, 0%, 12%); /* most text should be this colour */
-	--sk-fg-3: hsl(0, 0%, 27%); /* secondary text (e.g. figcaptions) and icons */
-	--sk-fg-4: hsl(0, 0%, 45%); /* faded text (disabled buttons, comments etc) */
+	--sk-fg-1: hsl(0, 0%, 8%); /* for headings, and (very sparingly) as a highlight colour */
+	--sk-fg-2: hsl(0, 0%, 15%); /* most text should be this colour */
+	--sk-fg-3: hsl(0, 0%, 40%); /* secondary text (e.g. figcaptions) and icons */
+	--sk-fg-4: hsl(0, 0%, 50%); /* faded text (disabled buttons, comments etc) */
 	--sk-fg-accent: hsl(12, 93%, 43%);
 
 	/* Background colours */
 	--sk-bg-1: hsl(0, 0%, 100%);
-	--sk-bg-2: hsl(0, 0%, 100%);
-	--sk-bg-3: hsl(0, 0%, 99%);
-	--sk-bg-4: hsl(0, 0%, 95%);
+	--sk-bg-2: hsl(0, 0%, 99.3%);
+	--sk-bg-3: hsl(0, 0%, 98.2%);
+	--sk-bg-4: hsl(0, 0%, 95%); /* hover states and highlights */
 	--sk-bg-accent: var(--sk-fg-accent);
 	--sk-bg-selection: hsla(204, 100%, 63%, 0.3);
 
@@ -49,21 +49,22 @@
 	--sk-bg-hue: 220;
 
 	/* Foreground colours */
-	--sk-fg-1: hsl(var(--sk-bg-hue), 10%, 90%);
-	--sk-fg-2: hsl(var(--sk-bg-hue), 10%, 80%);
-	--sk-fg-3: hsl(var(--sk-bg-hue), 10%, 65%);
-	--sk-fg-4: hsl(var(--sk-bg-hue), 10%, 45%);
+	--sk-fg-1: hsl(var(--sk-bg-hue), 2%, 90%);
+	--sk-fg-2: hsl(var(--sk-bg-hue), 3%, 80%);
+	--sk-fg-3: hsl(var(--sk-bg-hue), 5%, 65%);
+	--sk-fg-4: hsl(var(--sk-bg-hue), 5%, 55%);
 	--sk-fg-accent: hsl(12, 94%, 62%);
 
 	/* Background colours */
-	--sk-bg-1: hsl(var(--sk-bg-hue), 15%, 8%);
-	--sk-bg-2: hsl(var(--sk-bg-hue), 15%, 15%);
-	--sk-bg-3: hsl(var(--sk-bg-hue), 15%, 12%);
-	--sk-bg-4: hsl(var(--sk-bg-hue), 15%, 22%);
+	--sk-bg-0: hsl(var(--sk-bg-hue), 8%, 10%); /* docs sidebar (dark mode only) */
+	--sk-bg-1: hsl(var(--sk-bg-hue), 10%, 12%);
+	--sk-bg-2: hsl(var(--sk-bg-hue), 12%, 14%);
+	--sk-bg-3: hsl(var(--sk-bg-hue), 14%, 16%);
+	--sk-bg-4: hsl(var(--sk-bg-hue), 15%, 21%);
 	--sk-bg-accent: hsl(15, 100%, 35%);
 
 	/* Border colour */
-	--sk-border: hsl(var(--sk-bg-hue), 15%, 25%);
+	--sk-border: hsl(var(--sk-bg-hue), 15%, 22%);
 
 	/* Syntax highlighting */
 	--shiki-color-text: hsl(45, 7%, 75%);

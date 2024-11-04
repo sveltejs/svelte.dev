@@ -45,11 +45,6 @@
 				img {
 					max-width: 100%;
 				}
-
-				figcaption {
-					color: var(--sk-fg-4);
-					font: var(--sk-font-body-small);
-				}
 			}
 
 			video {
@@ -65,7 +60,7 @@
 				font: var(--sk-font-body-small);
 
 				p {
-					color: var(--sk-fg-4);
+					color: inherit;
 					font: inherit;
 				}
 			}
