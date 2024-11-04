@@ -9,51 +9,52 @@ self.window = self;
 
 declare var self: Window & typeof globalThis & { svelte: typeof import('svelte/compiler') };
 
-let inited = false;
-let fulfil_ready: (arg?: never) => void;
-const ready = new Promise((f) => {
-	fulfil_ready = f;
-});
+let inited: PromiseWithResolvers<typeof self.svelte>;
+
+async function init(v: string) {
+	const svelte_url = `https://unpkg.com/svelte@${v}`;
+	const match = /^(?:pr|commit)-(.+)/.exec(v);
+
+	let tarball: FileDescription[] | undefined;
+	let version;
+
+	if (match) {
+		const response = await fetch(`https://pkg.pr.new/svelte@${match[1]}`);
+
+		if (!response.ok) {
+			throw new Error('Could not fetch tarball');
+		}
+
+		tarball = await parseTar(await response.arrayBuffer());
+
+		const json = tarball.find((file) => file.name === 'package/package.json')!.text;
+		version = JSON.parse(json).version;
+	} else {
+		version = (await fetch(`${svelte_url}/package.json`).then((r) => r.json())).version;
+	}
+
+	const entry = version.startsWith('3.')
+		? 'compiler.js'
+		: version.startsWith('4.')
+			? 'compiler.cjs'
+			: 'compiler/index.js';
+
+	const compiler = tarball
+		? tarball.find((file) => file.name === `package/${entry}`)!.text
+		: await fetch(`${svelte_url}/${entry}`).then((r) => r.text());
+
+	(0, eval)(compiler + `\n//# sourceURL=${entry}@` + version);
+
+	return self.svelte;
+}
 
 addEventListener('message', async (event) => {
 	if (!inited) {
-		inited = true;
-
-		const svelte_url = `https://unpkg.com/svelte@${event.data.version}`;
-		const match = /^(?:pr|commit)-(.+)/.exec(event.data.version);
-
-		let tarball: FileDescription[] | undefined;
-		let version;
-
-		if (match) {
-			const response = await fetch(`https://pkg.pr.new/svelte@${match[1]}`);
-
-			if (response.ok) {
-				tarball = await parseTar(await response.arrayBuffer());
-
-				const json = tarball.find((file) => file.name === 'package/package.json')!.text;
-				version = JSON.parse(json).version;
-			}
-		} else {
-			version = (await fetch(`${svelte_url}/package.json`).then((r) => r.json())).version;
-		}
-
-		const entry = version.startsWith('3.')
-			? 'compiler.js'
-			: version.startsWith('4.')
-				? 'compiler.cjs'
-				: 'compiler/index.js';
-
-		const compiler = tarball
-			? tarball.find((file) => file.name === `package/${entry}`)!.text
-			: await fetch(`${svelte_url}/${entry}`).then((r) => r.text());
-
-		(0, eval)(compiler + `\n//# sourceURL=${entry}@` + version);
-
-		fulfil_ready();
+		inited = Promise.withResolvers();
+		init(event.data.version).then(inited.resolve, inited.reject);
 	}
 
-	await ready;
+	const svelte = await inited.promise;
 
 	const { id, file, options } = event.data as {
 		id: number;
@@ -61,7 +62,7 @@ addEventListener('message', async (event) => {
 		options: ExposedCompilerOptions;
 	};
 
-	if (!file.name.endsWith('.svelte') && !self.svelte.compileModule) {
+	if (!file.name.endsWith('.svelte') && !svelte.compileModule) {
 		// .svelte.js file compiled with Svelte 3/4 compiler
 		postMessage({
 			id,
@@ -77,9 +78,9 @@ addEventListener('message', async (event) => {
 
 	let migration = null;
 
-	if (self.svelte.migrate) {
+	if (svelte.migrate) {
 		try {
-			migration = self.svelte.migrate(file.contents, { filename: file.name });
+			migration = svelte.migrate(file.contents, { filename: file.name });
 		} catch (e) {
 			// can this happen?
 		}
@@ -89,7 +90,7 @@ addEventListener('message', async (event) => {
 		let result: CompileResult;
 
 		if (file.name.endsWith('.svelte')) {
-			const is_svelte_3_or_4 = !self.svelte.compileModule;
+			const is_svelte_3_or_4 = !svelte.compileModule;
 			const compilerOptions: any = {
 				generate: is_svelte_3_or_4
 					? options.generate === 'client'
@@ -102,9 +103,9 @@ addEventListener('message', async (event) => {
 			if (!is_svelte_3_or_4) {
 				compilerOptions.modernAst = options.modernAst; // else Svelte 3/4 will throw an "unknown option" error
 			}
-			result = self.svelte.compile(file.contents, compilerOptions);
+			result = svelte.compile(file.contents, compilerOptions);
 		} else {
-			result = self.svelte.compileModule(file.contents, {
+			result = svelte.compileModule(file.contents, {
 				generate: options.generate,
 				dev: options.dev,
 				filename: file.name
