@@ -143,6 +143,7 @@
 	.cm-panels {
 		font: var(--sk-font-ui-small);
 		background: var(--sk-bg-2);
+		color: inherit;
 
 		&.cm-panels-top,
 		&.cm-panels-bottom {
