@@ -93,7 +93,7 @@ Preview deployments will be created for pull requests to external repos that res
 name: Docs preview create request
 
 on:
-  pull_request:
+  pull_request_target:
     branches:
       - main
 
@@ -124,7 +124,7 @@ jobs:
 name: Docs preview delete request
 
 on:
-  pull_request:
+  pull_request_target:
     branches:
       - main
     types: [closed]
