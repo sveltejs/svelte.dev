@@ -124,7 +124,7 @@
 		? new Bundler({
 				packages_url: packagesUrl,
 				svelte_url: svelteUrl,
-				onstatus: (message, kind) => {
+				onstatus: (message) => {
 					if (message) {
 						// show bundler status, but only after time has elapsed, to
 						// prevent the banner flickering
@@ -138,11 +138,10 @@
 						status_visible = false;
 						status_timeout = undefined;
 					}
-					if (kind === 'status') {
-						status = message;
-					} else if (message) {
-						runtime_error = new Error(message);
-					}
+					status = message;
+				},
+				onerror: (message) => {
+					runtime_error = new Error(message);
 				}
 			})
 		: null;

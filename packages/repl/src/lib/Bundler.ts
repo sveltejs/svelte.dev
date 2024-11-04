@@ -16,11 +16,13 @@ export default class Bundler {
 	constructor({
 		packages_url,
 		svelte_url,
-		onstatus
+		onstatus,
+		onerror
 	}: {
 		packages_url: string;
 		svelte_url: string;
-		onstatus: (val: string | null, kind?: 'status' | 'error') => void;
+		onstatus: (val: string | null) => void;
+		onerror?: (message: string) => void;
 	}) {
 		this.hash = `${packages_url}:${svelte_url}`;
 
@@ -39,8 +41,13 @@ export default class Bundler {
 
 			if (handler) {
 				// if no handler, was meant for a different REPL
-				if (event.data.type === 'status' || event.data.type === 'error') {
-					onstatus(event.data.message, event.data.type);
+				if (event.data.type === 'status') {
+					onstatus(event.data.message);
+					return;
+				}
+
+				if (event.data.type === 'error') {
+					onerror?.(event.data.message);
 					return;
 				}
 
