@@ -81,18 +81,19 @@ self.addEventListener('message', async (event: MessageEvent<BundleMessageData>) 
 				// unpkg doesn't set the correct MIME type for .cjs files
 				// https://github.com/mjackson/unpkg/issues/355
 				const compiler =
-					files.get('/compiler.cjs')?.() ??
+					files?.get('/compiler.cjs')?.() ??
 					(await fetch(`${svelte_url}/compiler.cjs`).then((r) => r.text()));
 				(0, eval)(compiler + '\n//# sourceURL=compiler.cjs@' + version);
 			} else if (version.startsWith('3.')) {
 				const compiler =
-					files.get('/compiler.js')?.() ??
+					files?.get('/compiler.js')?.() ??
 					(await fetch(`${svelte_url}/compiler.js`).then((r) => r.text()));
 				(0, eval)(compiler + '\n//# sourceURL=compiler.js@' + version);
 			} else {
 				const compiler =
-					files.get('/compiler/index.js')?.() ??
+					files?.get('/compiler/index.js')?.() ??
 					(await fetch(`${svelte_url}/compiler/index.js`).then((r) => r.text()));
+				console.log(compiler);
 				(0, eval)(compiler + '\n//# sourceURL=compiler/index.js@' + version);
 			}
 
@@ -381,7 +382,7 @@ async function get_bundle(
 
 				let pkg: any;
 				let pkg_url_base = 'file:';
-				if (importee.startsWith(`svelte`)) {
+				if (importee.startsWith(`svelte`) && package_json) {
 					pkg = package_json;
 				} else {
 					({ pkg, pkg_url_base } = await fetch_package_info());
