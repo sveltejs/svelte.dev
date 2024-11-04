@@ -1,6 +1,7 @@
 import { parseTar } from 'tarparser';
 import type { CompileResult } from 'svelte/compiler';
 import type { ExposedCompilerOptions, File } from '../Workspace.svelte';
+import type { FileDescription } from 'tarparser';
 
 // hack for magic-string and Svelte 4 compiler
 // do not put this into a separate module and import it, would be treeshaken in prod
@@ -18,19 +19,17 @@ addEventListener('message', async (event) => {
 	if (!inited) {
 		inited = true;
 		const svelte_url = `https://unpkg.com/svelte@${event.data.version}`;
-		let local_files: Awaited<ReturnType<typeof parseTar>> | undefined;
-		let package_json;
-		let local_version = event.data.version;
-		const starts_with_pr = local_version.startsWith('pr-');
-		const starts_with_commit = local_version.startsWith('commit-');
-		if (starts_with_pr || starts_with_commit) {
-			const ref = starts_with_pr
-				? local_version.substring('pr-'.length)
-				: local_version.substring('commit-'.length);
 
-			const maybe_tar = await fetch(`https://pkg.pr.new/svelte@${ref}`);
-			if (maybe_tar.headers.get('content-type') === 'application/tar+gzip') {
-				const buffer = await maybe_tar.arrayBuffer();
+		let local_files: FileDescription[] | undefined;
+		let package_json;
+
+		const match = /^(?:pr|commit)-(.+)/.exec(event.data.version);
+
+		if (match) {
+			const response = await fetch(`https://pkg.pr.new/svelte@${match[1]}`);
+
+			if (response.ok) {
+				const buffer = await response.arrayBuffer();
 				local_files = await parseTar(buffer);
 				const package_json_content = local_files.find(
 					(file) => file.name === 'package/package.json'
