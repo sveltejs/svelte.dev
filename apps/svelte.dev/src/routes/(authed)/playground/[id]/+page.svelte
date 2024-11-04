@@ -4,7 +4,6 @@
 	import type { Gist } from '$lib/db/types';
 	import { Repl } from '@sveltejs/repl';
 	import { theme } from '@sveltejs/site-kit/stores';
-	import { onMount } from 'svelte';
 	import { mapbox_setup } from '../../../../config.js';
 	import AppControls from './AppControls.svelte';
 	import { compress_and_encode_text, decode_and_decompress_text } from './gzip.js';
@@ -18,15 +17,17 @@
 	let repl = $state() as ReturnType<typeof Repl>;
 	let name = $state(data.gist.name);
 	let modified = $state(false);
-	let version = data.version;
 	let setting_hash: any = null;
+
+	let version = $page.url.searchParams.get('version') || 'latest';
+	let is_pr_or_commit_version = version.startsWith('pr-') || version.startsWith('commit-');
 
 	// Hashed URLs are less safe (we can't delete malicious REPLs), therefore
 	// don't allow links to escape the sandbox restrictions
 	const can_escape = browser && !$page.url.hash;
 
-	onMount(() => {
-		if (version !== 'local' && !data.is_pr_or_commit_version) {
+	if (version !== 'local' && !is_pr_or_commit_version) {
+		$effect(() => {
 			fetch(`https://unpkg.com/svelte@${version}/package.json`)
 				.then((r) => r.json())
 				.then((pkg) => {
@@ -40,8 +41,8 @@
 						replaceState(url, {});
 					}
 				});
-		}
-	});
+		});
+	}
 
 	afterNavigate(() => {
 		name = data.gist.name;
@@ -151,7 +152,7 @@
 	const svelteUrl =
 		browser && version === 'local'
 			? `${location.origin}/playground/local`
-			: data.is_pr_or_commit_version
+			: is_pr_or_commit_version
 				? version
 				: `https://unpkg.com/svelte@${version}`;
 

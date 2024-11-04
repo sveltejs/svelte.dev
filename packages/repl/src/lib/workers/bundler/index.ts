@@ -93,7 +93,6 @@ self.addEventListener('message', async (event: MessageEvent<BundleMessageData>) 
 				const compiler =
 					files?.get('/compiler/index.js')?.() ??
 					(await fetch(`${svelte_url}/compiler/index.js`).then((r) => r.text()));
-				console.log(compiler);
 				(0, eval)(compiler + '\n//# sourceURL=compiler/index.js@' + version);
 			}
 
