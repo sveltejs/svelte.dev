@@ -205,8 +205,8 @@ importers:
         specifier: ^1.0.0
         version: 1.0.0
       tarparser:
-        specifier: ^0.0.2
-        version: 0.0.2
+        specifier: ^0.0.4
+        version: 0.0.4
     devDependencies:
       '@codemirror/autocomplete':
         specifier: ^6.9.0
@@ -362,8 +362,8 @@ importers:
         specifier: 5.0.1
         version: 5.0.1
       tarparser:
-        specifier: ^0.0.2
-        version: 0.0.2
+        specifier: ^0.0.4
+        version: 0.0.4
       zimmerframe:
         specifier: ^1.1.2
         version: 1.1.2
@@ -2972,8 +2972,8 @@ packages:
     resolution: {integrity: sha512-DZ4yORTwrbTj/7MZYq2w+/ZFdI6OZ/f9SFHR+71gIVUZhOQPHzVCLpvRnPgyaMpfWxxk/4ONva3GQSyNIKRv6A==}
     engines: {node: '>=10'}
 
-  tarparser@0.0.2:
-    resolution: {integrity: sha512-4BdvHPDTQp1Tze9Jlt46djrtUIQ0ZgaIb+R69F79ahi8spOCT/a9EcJgQWVGwaWwJe9fioTkY0a+G1nYpgJBYg==}
+  tarparser@0.0.4:
+    resolution: {integrity: sha512-H3+VR6ys/N4eRBYbcyKuy4i0lKAxW/tx+wZANTFPfXjHLkz7UDs7V9g0rdGJDsVWYyqnmvmLM7YqWZ7yrtoReA==}
 
   term-size@2.2.1:
     resolution: {integrity: sha512-wK0Ri4fOGjv/XPy8SBHZChl8CM7uMc5VML7SqiQ0zG7+J5Vr+RMQDoHa2CNT6KHUnTGIXH34UDMkPzAUyapBZg==}
@@ -5950,7 +5950,7 @@ snapshots:
       mkdirp: 1.0.4
       yallist: 4.0.0
 
-  tarparser@0.0.2: {}
+  tarparser@0.0.4: {}
 
   term-size@2.2.1: {}
 
