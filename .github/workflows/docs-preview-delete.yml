@@ -4,6 +4,9 @@ on:
   repository_dispatch:
     types: [docs-preview-delete]
 
+env:
+  BRANCH: preview-${{ github.event.client_payload.package }}-${{ github.event.client_payload.pr }}
+
 jobs:
   Sync:
     runs-on: ubuntu-latest
@@ -13,4 +16,4 @@ jobs:
           token: ${{ secrets.GH_TOKEN }}
 
       - name: Delete branch
-        run: git push origin :sync/${{ github.event.client_payload.package }}/${{ github.event.client_payload.owner }}/${{ github.event.client_payload.branch }}
+        run: git push origin :${{ env.BRANCH }}

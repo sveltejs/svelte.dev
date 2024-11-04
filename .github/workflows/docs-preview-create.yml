@@ -5,7 +5,7 @@ on:
     types: [docs-preview-create]
 
 env:
-  BRANCH: sync/${{ github.event.client_payload.package }}/${{ github.event.client_payload.owner }}/${{ github.event.client_payload.branch }}
+  BRANCH: preview-${{ github.event.client_payload.package }}-${{ github.event.client_payload.pr }}
 
 jobs:
   Sync:
@@ -33,4 +33,28 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Push
+        id: push
         run: git add -A && git commit -m "sync docs" && git push -u origin ${{ env.BRANCH }}
+
+      - name: Find comment
+        id: fc
+        uses: peter-evans/find-comment@v3
+        with:
+          token: ${{ secrets.COMMENTER_TOKEN }}
+          repository: ${{ github.event.client_payload.repo }}
+          issue-number: ${{ github.event.client_payload.pr }}
+          comment-author: 'Rich-Harris' # it's using my personal access token, not sure if there's a way to comment as a bot instead
+          body-includes: _this is an automated message_
+
+      - name: Create comment
+        if: steps.fc.outputs.comment-id == ''
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          token: ${{ secrets.COMMENTER_TOKEN }}
+          repository: ${{ github.event.client_payload.repo }}
+          issue-number: ${{ github.event.client_payload.pr }}
+          body: |
+            preview: https://svelte-dev-git-${{ env.BRANCH }}-svelte.vercel.app/
+
+            _this is an automated message_
+          edit-mode: replace
