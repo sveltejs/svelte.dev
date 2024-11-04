@@ -38,17 +38,17 @@ addEventListener('message', async (event) => {
 			version = (await fetch(`${svelte_url}/package.json`).then((r) => r.json())).version;
 		}
 
-		const file = version.startsWith('3.')
+		const entry = version.startsWith('3.')
 			? 'compiler.js'
 			: version.startsWith('4.')
 				? 'compiler.cjs'
 				: 'compiler/index.js';
 
 		const compiler = tarball
-			? tarball.find((file) => file.name === `package/${file}`)!.text
-			: await fetch(`${svelte_url}/${file}`).then((r) => r.text());
+			? tarball.find((file) => file.name === `package/${entry}`)!.text
+			: await fetch(`${svelte_url}/${entry}`).then((r) => r.text());
 
-		(0, eval)(compiler + `\n//# sourceURL=${file}@` + version);
+		(0, eval)(compiler + `\n//# sourceURL=${entry}@` + version);
 
 		fulfil_ready();
 	}
