@@ -18,42 +18,37 @@ const ready = new Promise((f) => {
 addEventListener('message', async (event) => {
 	if (!inited) {
 		inited = true;
+
 		const svelte_url = `https://unpkg.com/svelte@${event.data.version}`;
-
-		let local_files: FileDescription[] | undefined;
-		let package_json;
-
 		const match = /^(?:pr|commit)-(.+)/.exec(event.data.version);
+
+		let tarball: FileDescription[] | undefined;
+		let version;
 
 		if (match) {
 			const response = await fetch(`https://pkg.pr.new/svelte@${match[1]}`);
 
 			if (response.ok) {
-				const buffer = await response.arrayBuffer();
-				local_files = await parseTar(buffer);
-				const package_json_content = local_files.find(
-					(file) => file.name === 'package/package.json'
-				)?.text;
-				if (package_json_content) {
-					package_json = JSON.parse(package_json_content);
-				}
+				tarball = await parseTar(await response.arrayBuffer());
+
+				const json = tarball.find((file) => file.name === 'package/package.json')!.text;
+				version = JSON.parse(json).version;
 			}
+		} else {
+			version = (await fetch(`${svelte_url}/package.json`).then((r) => r.json())).version;
 		}
 
-		const { version } =
-			package_json ?? (await fetch(`${svelte_url}/package.json`).then((r) => r.json()));
-
-		const compiler_file = version.startsWith('3.')
+		const file = version.startsWith('3.')
 			? 'compiler.js'
 			: version.startsWith('4.')
 				? 'compiler.cjs'
 				: 'compiler/index.js';
 
-		const compiler_text = local_files
-			? local_files.find((file) => file.name === `package/${compiler_file}`)!.text
-			: await fetch(`${svelte_url}/${compiler_file}`).then((r) => r.text());
+		const compiler = tarball
+			? tarball.find((file) => file.name === `package/${file}`)!.text
+			: await fetch(`${svelte_url}/${file}`).then((r) => r.text());
 
-		(0, eval)(compiler_text + `\n//# sourceURL=${compiler_file}@` + version);
+		(0, eval)(compiler + `\n//# sourceURL=${file}@` + version);
 
 		fulfil_ready();
 	}
