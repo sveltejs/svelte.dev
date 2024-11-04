@@ -40,26 +40,21 @@ addEventListener('message', async (event) => {
 				}
 			}
 		}
+
 		const { version } =
 			package_json ?? (await fetch(`${svelte_url}/package.json`).then((r) => r.json()));
-		if (version.startsWith('4.')) {
-			// unpkg doesn't set the correct MIME type for .cjs files
-			// https://github.com/mjackson/unpkg/issues/355
-			const compiler =
-				local_files?.find((file) => file.name === 'package/compiler.cjs')?.text ??
-				(await fetch(`${svelte_url}/compiler.cjs`).then((r) => r.text()));
-			(0, eval)(compiler + '\n//# sourceURL=compiler.cjs@' + version);
-		} else if (version.startsWith('3.')) {
-			const compiler =
-				local_files?.find((file) => file.name === 'package/compiler.js')?.text ??
-				(await fetch(`${svelte_url}/compiler.js`).then((r) => r.text()));
-			(0, eval)(compiler + '\n//# sourceURL=compiler.js@' + version);
-		} else {
-			const compiler =
-				local_files?.find((file) => file.name === 'package/compiler/index.js')?.text ??
-				(await fetch(`${svelte_url}/compiler/index.js`).then((r) => r.text()));
-			(0, eval)(compiler + '\n//# sourceURL=compiler/index.js@' + version);
-		}
+
+		const compiler_file = version.startsWith('3.')
+			? 'compiler.js'
+			: version.startsWith('4.')
+				? 'compiler.cjs'
+				: 'compiler/index.js';
+
+		const compiler_text = local_files
+			? local_files.find((file) => file.name === `package/${compiler_file}`)!.text
+			: await fetch(`${svelte_url}/${compiler_file}`).then((r) => r.text());
+
+		(0, eval)(compiler_text + `\n//# sourceURL=${compiler_file}@` + version);
 
 		fulfil_ready();
 	}
