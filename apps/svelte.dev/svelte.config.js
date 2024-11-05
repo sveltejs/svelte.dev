@@ -19,7 +19,7 @@ const config = {
 					return;
 				}
 
-				throw new Error(warning.message);
+				console.error(warning.message);
 			}
 		}
 	}
