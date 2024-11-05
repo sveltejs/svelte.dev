@@ -5,7 +5,7 @@ author: Dani Sandoval
 authorURL: https://dreamindani.com
 ---
 
-It's been just two weeks since the release of [SvelteKit 1.0](https://svelte.dev/blog/announcing-sveltekit-1.0)! If you haven't yet, check out the [livestream](https://www.youtube.com/watch?v=N4BRVkQVoMc), [new website](https://kit.svelte.dev/) and [tutorial](/tutorial) to learn all the features of SvelteKit step-by-step.
+It's been just two weeks since the release of [SvelteKit 1.0](/blog/announcing-sveltekit-1.0)! If you haven't yet, check out the [livestream](https://www.youtube.com/watch?v=N4BRVkQVoMc), [new website](https://kit.svelte.dev/) and [tutorial](/tutorial) to learn all the features of SvelteKit step-by-step.
 
 Let's dive into the details...
 

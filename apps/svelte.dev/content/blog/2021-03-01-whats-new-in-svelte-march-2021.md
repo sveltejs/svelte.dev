@@ -11,11 +11,11 @@ Let's dive into the news 🐬
 
 ## What's new in `sveltejs/svelte`
 
-- SSR store handling has been reworked to subscribe and unsubscribe as in DOM mode. SSR stores should work much more consistently now (**3.31.2**, see [custom stores](https://svelte.dev/examples/custom-stores) and [Server-side component API ](https://v4.svelte.dev/docs#run-time-server-side-component-api))
-- Multiple instances of the same action are now allowed on an element (**3.32.0**, [example](https://svelte.dev/repl/01a14375951749dab9579cb6860eccde?version=3.32.0))
+- SSR store handling has been reworked to subscribe and unsubscribe as in DOM mode. SSR stores should work much more consistently now (**3.31.2**, see [custom stores](/playground/custom-stores) and [Server-side component API ](https://v4.svelte.dev/docs#run-time-server-side-component-api))
+- Multiple instances of the same action are now allowed on an element (**3.32.0**, [example](/playground/01a14375951749dab9579cb6860eccde?version=3.32.0))
 - The new `foreign` namespace should make it easier for alternative compile targets (like Svelte Native and SvelteGUI) by disabling certain HTML5-specific behaviour and checks (**3.32.0**, [more info](https://github.com/sveltejs/svelte/pull/5652))
 - Support for inline comment sourcemaps in code from preprocessors (**3.32.0**)
-- Destructured defaults are now allowed to refer to other variables (**3.33.0**, [example](https://svelte.dev/repl/0ee7227e1b45465b9b47d7a5ae2d1252?version=3.33.0))
+- Destructured defaults are now allowed to refer to other variables (**3.33.0**, [example](/playground/0ee7227e1b45465b9b47d7a5ae2d1252?version=3.33.0))
 - Custom elements will now call `onMount` functions when connecting and clean up when disconnecting (**3.33.0**, checkout [this PR](https://github.com/sveltejs/svelte/pull/4522) for an interesting conversation on how folks are using Svelte with Web Components)
 - A `cssHash` option has been added to the compiler options to control the classname used for CSS scoping (**3.34.0**, [docs](https://v4.svelte.dev/docs#compile-time-svelte-compile))
 - Continued improvement to TypeScript definitions
@@ -76,9 +76,9 @@ Haven't tried the language-tools yet? Check out [Svelte Extension for VSCode](ht
 - [Svelte Dark](https://marketplace.visualstudio.com/items?itemName=NickScialli.svelte-dark) is a VSCode theme inspired by the svelte.dev REPL
 - [Import Cost](https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost) has been updated to support Svelte libraries and help developers keep their bundle size under control.
 - [Tree-sitter-svelte](https://github.com/Himujjal/tree-sitter-svelte) provides tree-sitter grammar for svelte
-- [Svelte Ripple](https://svelte.dev/repl/b73224a0fd4248178e3eab41943d41a9?version=3.31.2) is a Material Design ripple effect that doesn't depend on `@material/ripple` (made by @karakara in the Svelte Discord)
-- [Analog SVG Clock](https://svelte.dev/repl/270e83f43e7a48918d8f2d497760904f?version=3.32.1) is a great example of easing functions (made by @tonmcg in the Svelte Discord)
-- [Console Log Styler](https://svelte.dev/repl/11f609d0d90746f08da6d3d90bba84fc?version=3.32.0) lets you generate a styled console log using pseudo HTML and CSS (made by @EmNudge in the Svelte Discord)
+- [Svelte Ripple](/playground/b73224a0fd4248178e3eab41943d41a9?version=3.31.2) is a Material Design ripple effect that doesn't depend on `@material/ripple` (made by @karakara in the Svelte Discord)
+- [Analog SVG Clock](/playground/270e83f43e7a48918d8f2d497760904f?version=3.32.1) is a great example of easing functions (made by @tonmcg in the Svelte Discord)
+- [Console Log Styler](/playground/11f609d0d90746f08da6d3d90bba84fc?version=3.32.0) lets you generate a styled console log using pseudo HTML and CSS (made by @EmNudge in the Svelte Discord)
 - [svelte-heroicons](https://github.com/martinse/svelte-heroicons) is a handy wrapper for the Heroicons icon library
 - [supabase-ui-svelte](https://github.com/joshnuss/supabase-ui-svelte) are UI components for Supabase authentication
 

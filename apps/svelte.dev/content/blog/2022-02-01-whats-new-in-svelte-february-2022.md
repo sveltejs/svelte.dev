@@ -14,7 +14,7 @@ Let's take a look...
 - **3.45.0** brought a [new a11y warning `a11y-no-redundant-roles`](https://v4.svelte.dev/docs#accessibility-warnings-a11y-no-redundant-roles), destructuring and caching fixes
 - **3.46.0** added the much requested [`{@const}` tag](https://v4.svelte.dev/docs#template-syntax-const) and [`style:` directive](https://v4.svelte.dev/docs#template-syntax-element-directives-style-property)
 - Check out **3.46.1 - 3.46.3** for fixes to the `{@const}` tag and `style:` directive, along with a number of fixes to animations
-- [AST output is now available in the Svelte REPL](https://svelte.dev/repl/hello-world)
+- [AST output is now available in the Svelte REPL](/playground/hello-world)
 
 ## What's new in SvelteKit
 
@@ -68,7 +68,7 @@ Want to work on a SvelteKit site with others, [try contributing to the Svelte So
 
 _To Read_
 
-- [Accelerating Svelte's Development](https://svelte.dev/blog/accelerating-sveltes-development) by Ben McCann
+- [Accelerating Svelte's Development](/blog/accelerating-sveltes-development) by Ben McCann
 - [Storybook for Vite](https://storybook.js.org/blog/storybook-for-vite/)
 - [Let's learn SvelteKit by building a static Markdown blog from scratch](https://joshcollinsworth.com/blog/build-static-sveltekit-markdown-blog) by Josh Collinsworth
 - [Building an iOS app with Svelte, Capacitor and Firebase](https://harryherskowitz.com/2022/01/05/tapedrop-app.html) by Harry Herskowitz

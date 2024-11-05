@@ -5,7 +5,7 @@ author: Dani Sandoval
 authorURL: https://dreamindani.com
 ---
 
-March is _coming in hot_ with a number of essential features having been added to SvelteKit following its 1.0 launch. Check out [last week's blog post](https://svelte.dev/blog/streaming-snapshots-sveltekit) for more details.
+March is _coming in hot_ with a number of essential features having been added to SvelteKit following its 1.0 launch. Check out [last week's blog post](/blog/streaming-snapshots-sveltekit) for more details.
 
 Svelte Society also launched [SvelteHack](https://hack.sveltesociety.dev/) last month with over $12,000 in prizes - calling all Svelte developers, new and old, to make something awesome before the April 17th deadline!
 
@@ -56,7 +56,7 @@ Now let's jump into this month's changes...
 
 _Featuring Svelte Contributors and Ambassadors_
 
-- [Streaming, snapshots, and other new features since SvelteKit 1.0](https://svelte.dev/blog/streaming-snapshots-sveltekit) by Geoff Rich (on the Svelte Blog)
+- [Streaming, snapshots, and other new features since SvelteKit 1.0](/blog/streaming-snapshots-sveltekit) by Geoff Rich (on the Svelte Blog)
 - [View Transition Experiments with Svelte](https://geoffrich.net/posts/view-transition-experiments/) and [Native Page Transitions in SvelteKit (updated for 2023)](https://geoffrich.net/posts/page-transitions-1/) by Geoff Rich
 - [Ron Au's story and how to be whimsical!](https://www.svelteradio.com/episodes/ron-aus-story-and-how-to-be-whimsical) by Svelte Radio
 - [SvelteKit 1.0 with Rich Harris](https://podrocket.logrocket.com/sveltekit) by PodRocket

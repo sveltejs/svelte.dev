@@ -36,7 +36,7 @@ For all the changes to the Svelte compiler, including unreleased changes, check 
 - You can now get all cookies for a request with `cookies.getAll` (**1.10.0**, [#9287](https://github.com/sveltejs/kit/pull/9287), [Docs](/docs/kit/@sveltejs-kit#Cookies))
 - Easily manage the submission status of (multiple) forms with the new exposed `submitter` parameter in `use:enhance` (**1.12.0**, [#9425](https://github.com/sveltejs/kit/pull/9425), [Docs](/docs/kit/@sveltejs-kit#SubmitFunction))
 - The default error page now has dark mode styles (**1.13.0**, [#9460](https://github.com/sveltejs/kit/pull/9460))
-- You can now omit types on all methods and variables with special meaning to SvelteKit and still benefit from full type safety! Read more about it in the [announcement blog post](https://svelte.dev/blog/zero-config-type-safety)
+- You can now omit types on all methods and variables with special meaning to SvelteKit and still benefit from full type safety! Read more about it in the [announcement blog post](/blog/zero-config-type-safety)
 
 ---
 
@@ -60,7 +60,7 @@ For all the changes to the Svelte compiler, including unreleased changes, check 
 
 _Featuring Svelte Contributors and Ambassadors_
 
-- [Streaming, snapshots, and other new features since SvelteKit 1.0](https://svelte.dev/blog/streaming-snapshots-sveltekit) by Geoff Rich on the svelte.dev Blog
+- [Streaming, snapshots, and other new features since SvelteKit 1.0](/blog/streaming-snapshots-sveltekit) by Geoff Rich on the svelte.dev Blog
 - [Dev Vlog: Rich Harris shows us what's new in Svelte and Kit, March 2023](https://www.youtube.com/watch?v=vgXgex5E-8g) from Svelte Society
   - If you missed this one live, check out [the next one](https://www.youtube.com/watch?v=MJHO6FSioPI) - scheduled for April 5th
 - [Svelte Society - London February 2023](https://www.youtube.com/watch?v=RkQ_f7XxdMI)

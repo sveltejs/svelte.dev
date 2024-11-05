@@ -5,7 +5,7 @@ author: Dani Sandoval
 authorURL: https://dreamindani.com
 ---
 
-In case you missed the [announcement post](https://svelte.dev/blog/svelte-5-is-alive), the brand new [omnisite](https://svelte.dev/blog/the-omnisite) or the maintainers [shipping it LIVE during Svelte Summit](https://www.youtube.com/live/fAPFsRP-mbc?si=Atd1WNpoMddssSna&t=13084)... Svelte 5 is out!
+In case you missed the [announcement post](/blog/svelte-5-is-alive), the brand new [omnisite](/blog/the-omnisite) or the maintainers [shipping it LIVE during Svelte Summit](https://www.youtube.com/live/fAPFsRP-mbc?si=Atd1WNpoMddssSna&t=13084)... Svelte 5 is out!
 
 Also announced at Svelte Summit was [SvelteHack 2024: A Svelte Hackathon (with not-so-svelte prizes)](https://hack.sveltesociety.dev/2024). The submission period ends January 9 and only projects started after October 18th are eligible. So get those `$`s ready and start hacking!
 
@@ -25,7 +25,7 @@ To see all the amazing work that has gone into making the Svelte compiler better
 ## What's new in SvelteKit, Svelte CLI and Language Tools
 
 - `adapter-auto` now supports the Bun package manager (**3.3.1**, [#12854](https://github.com/sveltejs/kit/pull/12854))
-- The [Svelte CLI](https://svelte.dev/blog/sv-the-svelte-cli) now supports a number of add-ons for new and existing projects. You can find the entire list of add ons in [the CLI Repository](https://github.com/sveltejs/cli) or by running `npx sv create` from your command line.
+- The [Svelte CLI](/blog/sv-the-svelte-cli) now supports a number of add-ons for new and existing projects. You can find the entire list of add ons in [the CLI Repository](https://github.com/sveltejs/cli) or by running `npx sv create` from your command line.
 - The Svelte extension now provides a Svelte 5 component migration command (**extensions-109.1.0**)
 
 ---
