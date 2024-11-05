@@ -27,13 +27,9 @@ let svelte_url: string;
 let version: string;
 let current_id: number;
 
-let files: Map<string, string>;
-let package_json: any;
-
 let inited = Promise.withResolvers<typeof svelte>();
 
 async function init(v: string, packages_url: string) {
-	svelte_url = `${packages_url}/svelte@${v}`;
 	const match = /^(pr|commit)-(.+)/.exec(v);
 
 	let tarball: FileDescription[] | undefined;
@@ -48,13 +44,19 @@ async function init(v: string, packages_url: string) {
 		}
 
 		tarball = await parseTar(await response.arrayBuffer());
-		files = new Map(tarball.map((file) => [file.name.substring('package'.length), file.text]));
 
-		const json = files.get('/package.json')!;
-		package_json = JSON.parse(json);
-		version = package_json.version;
+		const json = tarball.find((file) => file.name === 'package/package.json')!.text;
+		version = JSON.parse(json).version;
+
+		svelte_url = `svelte://svelte@${version}`;
+
+		for (const file of tarball) {
+			const url = `${svelte_url}/${file.name.slice('package/'.length)}`;
+			FETCH_CACHE.set(url, Promise.resolve({ url, body: file.text }));
+		}
 	} else {
 		version = (await fetch(`${svelte_url}/package.json`).then((r) => r.json())).version;
+		svelte_url = `${packages_url}/svelte@${version}`;
 	}
 
 	console.log(`Using Svelte compiler version ${version}`);
@@ -297,13 +299,9 @@ async function get_bundle(
 					return;
 				} else {
 					// relative import in an external file
-					const url = new URL(importee, importer);
-					if (url.protocol === 'file:') {
-						return url.toString();
-					}
-
+					const url = new URL(importee, importer).href;
 					self.postMessage({ type: 'status', uid, message: `resolving ${url}` });
-					return await follow_redirects(url.href, uid);
+					return await follow_redirects(url, uid);
 				}
 			} else {
 				// fetch from unpkg
@@ -315,7 +313,10 @@ async function get_bundle(
 				}
 
 				const pkg_name = match[1];
-				const version = pkg_name === 'svelte' ? svelte.VERSION : match[2] ?? 'latest';
+				const pkg_url =
+					pkg_name === 'svelte'
+						? `${svelte_url}/package.json`
+						: `${packages_url}/${pkg_name}/package.json`;
 				const subpath = `.${match[3] ?? ''}`;
 
 				// if this was imported by one of our files, add it to the `imports` set
@@ -323,12 +324,9 @@ async function get_bundle(
 					imports.add(pkg_name);
 				}
 
-				const fetch_package_info = async () => {
+				const fetch_package_info = async (pkg_url) => {
 					try {
-						const pkg_url = await follow_redirects(
-							`${packages_url}/${pkg_name}@${version}/package.json`,
-							uid
-						);
+						pkg_url = await follow_redirects(pkg_url, uid);
 
 						if (!pkg_url) throw new Error();
 
@@ -346,13 +344,7 @@ async function get_bundle(
 					}
 				};
 
-				let pkg: any;
-				let pkg_url_base = 'file:';
-				if (importee.startsWith(`svelte`) && package_json) {
-					pkg = package_json;
-				} else {
-					({ pkg, pkg_url_base } = await fetch_package_info());
-				}
+				const { pkg, pkg_url_base } = await fetch_package_info(pkg_url);
 
 				try {
 					const resolved_id = await resolve_from_pkg(pkg, subpath, uid, pkg_url_base);
@@ -368,14 +360,6 @@ async function get_bundle(
 			if (resolved === 'esm-env') {
 				return `export const BROWSER = true; export const DEV = true`;
 			}
-
-			try {
-				const resolved_url = new URL(resolved);
-
-				if (resolved_url.protocol === 'file:') {
-					return files.get(resolved_url.pathname);
-				}
-			} catch {}
 
 			const cached_file = local_files_lookup.get(resolved);
 			if (cached_file) {
