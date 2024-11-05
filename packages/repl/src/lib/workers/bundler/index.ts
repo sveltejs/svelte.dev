@@ -16,7 +16,7 @@ import type { BundleMessageData } from '../workers';
 import type { Warning } from '../../types';
 import type { CompileError, CompileOptions, CompileResult } from 'svelte/compiler';
 import type { File } from 'editor';
-import { parseTar } from 'tarparser';
+import { parseTar, type FileDescription } from 'tarparser';
 
 // hack for magic-string and rollup inline sourcemaps
 // do not put this into a separate module and import it, would be treeshaken in prod
@@ -41,38 +41,34 @@ self.addEventListener('message', async (event: MessageEvent<BundleMessageData>) 
 	switch (event.data.type) {
 		case 'init': {
 			({ packages_url, svelte_url } = event.data);
+			const match = /^(pr|commit)-(.+)/.exec(svelte_url);
 
-			const starts_with_pr = svelte_url.startsWith('pr-');
-			const starts_with_commit = svelte_url.startsWith('commit-');
+			if (match) {
+				let local_files: FileDescription[];
 
-			if (starts_with_pr || starts_with_commit) {
-				let local_files: Awaited<ReturnType<typeof parseTar>>;
-
-				const ref = starts_with_pr
-					? svelte_url.substring('pr-'.length)
-					: svelte_url.substring('commit-'.length);
 				try {
-					const maybe_tar = await fetch(`https://pkg.pr.new/svelte@${ref}`);
-					if (!maybe_tar.ok)
+					const response = await fetch(`https://pkg.pr.new/svelte@${match[2]}`);
+
+					if (!response.ok) {
 						throw new Error(
-							`impossible to fetch the compiler from this ${starts_with_pr ? 'PR' : 'commit'}`
+							`impossible to fetch the compiler from this ${match[1] === 'pr' ? 'PR' : 'commit'}`
 						);
-					if (maybe_tar.headers.get('content-type') === 'application/tar+gzip') {
-						const buffer = await maybe_tar.arrayBuffer();
-						local_files = await parseTar(buffer);
-						files = new Map(
-							local_files.map((file) => [file.name.substring('package'.length), () => file.text])
-						);
-						const package_json_content = files.get('/package.json')?.();
-						if (package_json_content) {
-							package_json = JSON.parse(package_json_content);
-						}
+					}
+
+					local_files = await parseTar(await response.arrayBuffer());
+					files = new Map(
+						local_files.map((file) => [file.name.substring('package'.length), () => file.text])
+					);
+					const package_json_content = files.get('/package.json')?.();
+					if (package_json_content) {
+						package_json = JSON.parse(package_json_content);
 					}
 				} catch (e) {
 					reject_ready(e as Error);
 					return;
 				}
 			}
+
 			({ version } =
 				package_json ?? (await fetch(`${svelte_url}/package.json`).then((r) => r.json())));
 			console.log(`Using Svelte compiler version ${version}`);
