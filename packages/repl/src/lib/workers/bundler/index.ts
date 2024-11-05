@@ -55,7 +55,9 @@ async function init(v: string, packages_url: string) {
 			FETCH_CACHE.set(url, Promise.resolve({ url, body: file.text }));
 		}
 	} else {
-		version = (await fetch(`${svelte_url}/package.json`).then((r) => r.json())).version;
+		const response = await fetch(`${packages_url}/svelte@${v}/package.json`);
+		const pkg = await response.json();
+		version = pkg.version;
 		svelte_url = `${packages_url}/svelte@${version}`;
 	}
 
@@ -79,13 +81,8 @@ async function init(v: string, packages_url: string) {
 self.addEventListener('message', async (event: MessageEvent<BundleMessageData>) => {
 	switch (event.data.type) {
 		case 'init': {
-			const svelte_version = event.data.svelte_version;
-
 			packages_url = event.data.packages_url;
-			svelte_url = `${packages_url}/svelte@${svelte_version}`;
-
-			init(svelte_version, packages_url).then(inited.resolve, inited.reject);
-
+			init(event.data.svelte_version, packages_url).then(inited.resolve, inited.reject);
 			break;
 		}
 
