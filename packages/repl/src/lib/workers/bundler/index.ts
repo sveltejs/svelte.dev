@@ -300,14 +300,14 @@ async function get_bundle(
 
 				const fetch_package_info = async (pkg_url: string) => {
 					try {
-						pkg_url = await follow_redirects(pkg_url, uid);
+						const redirected = await follow_redirects(pkg_url, uid);
 
-						if (!pkg_url) throw new Error();
+						if (!redirected) throw new Error();
 
-						const pkg_json = (await fetch_if_uncached(pkg_url, uid))?.body;
+						const pkg_json = (await fetch_if_uncached(redirected, uid))?.body;
 						const pkg = JSON.parse(pkg_json ?? '""');
 
-						const pkg_url_base = pkg_url.replace(/\/package\.json$/, '');
+						const pkg_url_base = redirected.replace(/\/package\.json$/, '');
 
 						return {
 							pkg,
