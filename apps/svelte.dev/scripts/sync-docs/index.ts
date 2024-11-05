@@ -1,3 +1,4 @@
+import { strip_origin } from '@sveltejs/site-kit/markdown';
 import { preprocess } from '@sveltejs/site-kit/markdown/preprocess';
 import path from 'node:path';
 import fs from 'node:fs';
@@ -6,7 +7,7 @@ import ts from 'typescript';
 import glob from 'tiny-glob/sync';
 import chokidar from 'chokidar';
 import { fileURLToPath } from 'node:url';
-import { clone_repo, migrate_meta_json, strip_origin } from './utils';
+import { clone_repo, migrate_meta_json } from './utils';
 import { get_types, read_d_ts_file, read_types } from './types';
 import type { Modules } from '@sveltejs/site-kit/markdown';
 

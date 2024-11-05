@@ -184,7 +184,7 @@ function text(
 ## Action
 
 Shape of a form action method that is part of `export const actions = {..}` in `+page.server.js`.
-See [form actions](https://svelte.dev/docs/kit/form-actions) for more information.
+See [form actions](/docs/kit/form-actions) for more information.
 
 <div class="ts-block">
 
@@ -275,7 +275,7 @@ type ActionResult<
 ## Actions
 
 Shape of the `export const actions = {..}` object in `+page.server.js`.
-See [form actions](https://svelte.dev/docs/kit/form-actions) for more information.
+See [form actions](/docs/kit/form-actions) for more information.
 
 <div class="ts-block">
 
@@ -296,7 +296,7 @@ type Actions<
 
 ## Adapter
 
-[Adapters](https://svelte.dev/docs/kit/adapters) are responsible for taking the production build and turning it into something that can be deployed to a platform of your choosing.
+[Adapters](/docs/kit/adapters) are responsible for taking the production build and turning it into something that can be deployed to a platform of your choosing.
 
 <div class="ts-block">
 
@@ -384,7 +384,7 @@ during dev, build and prerendering
 
 ## AfterNavigate
 
-The argument passed to [`afterNavigate`](https://svelte.dev/docs/kit/$app-navigation#afterNavigate) callbacks.
+The argument passed to [`afterNavigate`](/docs/kit/$app-navigation#afterNavigate) callbacks.
 
 <div class="ts-block">
 
@@ -443,7 +443,7 @@ type AwaitedActions<
 
 ## BeforeNavigate
 
-The argument passed to [`beforeNavigate`](https://svelte.dev/docs/kit/$app-navigation#beforeNavigate) callbacks.
+The argument passed to [`beforeNavigate`](/docs/kit/$app-navigation#beforeNavigate) callbacks.
 
 <div class="ts-block">
 
@@ -955,8 +955,8 @@ and returns an `App.Platform` object
 
 ## Handle
 
-The [`handle`](https://svelte.dev/docs/kit/hooks#Server-hooks-handle) hook runs every time the SvelteKit server receives a [request](https://svelte.dev/docs/kit/web-standards#Fetch-APIs-Request) and
-determines the [response](https://svelte.dev/docs/kit/web-standards#Fetch-APIs-Response).
+The [`handle`](/docs/kit/hooks#Server-hooks-handle) hook runs every time the SvelteKit server receives a [request](/docs/kit/web-standards#Fetch-APIs-Request) and
+determines the [response](/docs/kit/web-standards#Fetch-APIs-Response).
 It receives an `event` object representing the request and a function called `resolve`, which renders the route and generates a `Response`.
 This allows you to modify response headers or bodies, or bypass SvelteKit entirely (for implementing routes programmatically, for example).
 
@@ -976,7 +976,7 @@ type Handle = (input: {
 
 ## HandleClientError
 
-The client-side [`handleError`](https://svelte.dev/docs/kit/hooks#Shared-hooks-handleError) hook runs when an unexpected error is thrown while navigating.
+The client-side [`handleError`](/docs/kit/hooks#Shared-hooks-handleError) hook runs when an unexpected error is thrown while navigating.
 
 If an unexpected error is thrown during loading or the following render, this function will be called with the error and the event.
 Make sure that this function _never_ throws an error.
@@ -996,7 +996,7 @@ type HandleClientError = (input: {
 
 ## HandleFetch
 
-The [`handleFetch`](https://svelte.dev/docs/kit/hooks#Server-hooks-handleFetch) hook allows you to modify (or replace) a `fetch` request that happens inside a `load` function that runs on the server (or during pre-rendering)
+The [`handleFetch`](/docs/kit/hooks#Server-hooks-handleFetch) hook allows you to modify (or replace) a `fetch` request that happens inside a `load` function that runs on the server (or during pre-rendering)
 
 <div class="ts-block">
 
@@ -1012,7 +1012,7 @@ type HandleFetch = (input: {
 
 ## HandleServerError
 
-The server-side [`handleError`](https://svelte.dev/docs/kit/hooks#Shared-hooks-handleError) hook runs when an unexpected error is thrown while responding to a request.
+The server-side [`handleError`](/docs/kit/hooks#Shared-hooks-handleError) hook runs when an unexpected error is thrown while responding to a request.
 
 If an unexpected error is thrown during loading or rendering, this function will be called with the error and the event.
 Make sure that this function _never_ throws an error.
@@ -1032,7 +1032,7 @@ type HandleServerError = (input: {
 
 ## HttpError
 
-The object returned by the [`error`](https://svelte.dev/docs/kit/@sveltejs-kit#error) function.
+The object returned by the [`error`](/docs/kit/@sveltejs-kit#error) function.
 
 <div class="ts-block">
 
@@ -1087,7 +1087,7 @@ type LessThan<
 
 ## Load
 
-The generic form of `PageLoad` and `LayoutLoad`. You should import those from `./$types` (see [generated types](https://svelte.dev/docs/kit/types#Generated-types))
+The generic form of `PageLoad` and `LayoutLoad`. You should import those from `./$types` (see [generated types](/docs/kit/types#Generated-types))
 rather than using `Load` directly.
 
 <div class="ts-block">
@@ -1119,7 +1119,7 @@ type Load<
 
 ## LoadEvent
 
-The generic form of `PageLoadEvent` and `LayoutLoadEvent`. You should import those from `./$types` (see [generated types](https://svelte.dev/docs/kit/types#Generated-types))
+The generic form of `PageLoadEvent` and `LayoutLoadEvent`. You should import those from `./$types` (see [generated types](/docs/kit/types#Generated-types))
 rather than using `LoadEvent` directly.
 
 <div class="ts-block">
@@ -1559,7 +1559,7 @@ type NumericRange<
 
 ## OnNavigate
 
-The argument passed to [`onNavigate`](https://svelte.dev/docs/kit/$app-navigation#onNavigate) callbacks.
+The argument passed to [`onNavigate`](/docs/kit/$app-navigation#onNavigate) callbacks.
 
 <div class="ts-block">
 
@@ -1732,7 +1732,7 @@ Filled only after a form submission. See [form actions](https://svelte.dev/docs/
 
 ## ParamMatcher
 
-The shape of a param matcher. See [matching](https://svelte.dev/docs/kit/advanced-routing#Matching) for more info.
+The shape of a param matcher. See [matching](/docs/kit/advanced-routing#Matching) for more info.
 
 <div class="ts-block">
 
@@ -1754,7 +1754,7 @@ type PrerenderOption = boolean | 'auto';
 
 ## Redirect
 
-The object returned by the [`redirect`](https://svelte.dev/docs/kit/@sveltejs-kit#redirect) function
+The object returned by the [`redirect`](/docs/kit/@sveltejs-kit#redirect) function
 
 <div class="ts-block">
 
@@ -2003,7 +2003,7 @@ isSubRequest: boolean;
 
 A `(event: RequestEvent) => Response` function exported from a `+server.js` file that corresponds to an HTTP verb (`GET`, `PUT`, `PATCH`, etc) and handles requests with that method.
 
-It receives `Params` as the first generic argument, which you can skip by using [generated types](https://svelte.dev/docs/kit/types#Generated-types) instead.
+It receives `Params` as the first generic argument, which you can skip by using [generated types](/docs/kit/types#Generated-types) instead.
 
 <div class="ts-block">
 
@@ -2022,7 +2022,7 @@ type RequestHandler<
 
 ## Reroute
 
-The [`reroute`](https://svelte.dev/docs/kit/hooks#Universal-hooks-reroute) hook allows you to modify the URL before it is used to determine which route to render.
+The [`reroute`](/docs/kit/hooks#Universal-hooks-reroute) hook allows you to modify the URL before it is used to determine which route to render.
 
 <div class="ts-block">
 
@@ -2359,7 +2359,7 @@ A function that turns an asset filename into a `ReadableStream`. Required for th
 
 ## ServerLoad
 
-The generic form of `PageServerLoad` and `LayoutServerLoad`. You should import those from `./$types` (see [generated types](https://svelte.dev/docs/kit/types#Generated-types))
+The generic form of `PageServerLoad` and `LayoutServerLoad`. You should import those from `./$types` (see [generated types](/docs/kit/types#Generated-types))
 rather than using `ServerLoad` directly.
 
 <div class="ts-block">

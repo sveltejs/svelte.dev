@@ -82,7 +82,7 @@ Use callback props and/or the `$host()` rune instead — see https://svelte.dev/
 
 </blockquote>
 
-Creates an event dispatcher that can be used to dispatch [component events](https://svelte.dev/docs/svelte/legacy-on#Component-events).
+Creates an event dispatcher that can be used to dispatch [component events](/docs/svelte/legacy-on#Component-events).
 Event dispatchers are functions that can take two arguments: `name` and `detail`.
 
 Component events created with `createEventDispatcher` create a
@@ -279,7 +279,7 @@ it can be called from an external module).
 
 If a function is returned _synchronously_ from `onMount`, it will be called when the component is unmounted.
 
-`onMount` does not run inside [server-side components](https://svelte.dev/docs/svelte/svelte-server#render).
+`onMount` does not run inside [server-side components](/docs/svelte/svelte-server#render).
 
 <div class="ts-block">
 
@@ -344,7 +344,7 @@ function unmount(component: Record<string, any>): void;
 
 ## untrack
 
-When used inside a [`$derived`](https://svelte.dev/docs/svelte/$derived) or [`$effect`](https://svelte.dev/docs/svelte/$effect),
+When used inside a [`$derived`](/docs/svelte/$derived) or [`$effect`](/docs/svelte/$effect),
 any state read inside `fn` will not be treated as a dependency.
 
 ```ts
@@ -733,7 +733,7 @@ let { banner }: { banner: Snippet<[{ text: string }]> } = $props();
 ```
 You can only call a snippet through the `{@render ...}` tag.
 
-https://svelte.dev/docs/svelte/snippet
+/docs/svelte/snippet
 
 <div class="ts-block">
 
@@ -763,7 +763,7 @@ interface Snippet<Parameters extends unknown[] = []> {/*…*/}
 This was the base class for Svelte components in Svelte 4. Svelte 5+ components
 are completely different under the hood. For typing, use `Component` instead.
 To instantiate components, use `mount` instead`.
-See [migration guide](https://svelte.dev/docs/svelte/v5-migration-guide#Components-are-no-longer-classes) for more info.
+See [migration guide](/docs/svelte/v5-migration-guide#Components-are-no-longer-classes) for more info.
 
 <div class="ts-block">
 

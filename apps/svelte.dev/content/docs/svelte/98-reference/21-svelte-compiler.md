@@ -21,7 +21,7 @@ import {
 
 The current version, as set in package.json.
 
-https://svelte.dev/docs/svelte-compiler#svelte-version
+/docs/svelte-compiler#svelte-version
 
 <div class="ts-block">
 
