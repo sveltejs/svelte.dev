@@ -43,9 +43,9 @@ self.addEventListener('message', async (event: MessageEvent<BundleMessageData>) 
 			({ packages_url, svelte_url } = event.data);
 			const match = /^(pr|commit)-(.+)/.exec(svelte_url);
 
-			if (match) {
-				let local_files: FileDescription[];
+			let tarball: FileDescription[] | undefined;
 
+			if (match) {
 				try {
 					const response = await fetch(`https://pkg.pr.new/svelte@${match[2]}`);
 
@@ -55,14 +55,12 @@ self.addEventListener('message', async (event: MessageEvent<BundleMessageData>) 
 						);
 					}
 
-					local_files = await parseTar(await response.arrayBuffer());
+					tarball = await parseTar(await response.arrayBuffer());
 					files = new Map(
-						local_files.map((file) => [file.name.substring('package'.length), file.text])
+						tarball.map((file) => [file.name.substring('package'.length), file.text])
 					);
 					const package_json_content = files.get('/package.json')!;
-					if (package_json_content) {
-						package_json = JSON.parse(package_json_content);
-					}
+					package_json = JSON.parse(package_json_content);
 				} catch (e) {
 					reject_ready(e as Error);
 					return;
@@ -73,24 +71,17 @@ self.addEventListener('message', async (event: MessageEvent<BundleMessageData>) 
 				package_json ?? (await fetch(`${svelte_url}/package.json`).then((r) => r.json())));
 			console.log(`Using Svelte compiler version ${version}`);
 
-			if (version.startsWith('4.')) {
-				// unpkg doesn't set the correct MIME type for .cjs files
-				// https://github.com/mjackson/unpkg/issues/355
-				const compiler =
-					files?.get('/compiler.cjs') ??
-					(await fetch(`${svelte_url}/compiler.cjs`).then((r) => r.text()));
-				(0, eval)(compiler + '\n//# sourceURL=compiler.cjs@' + version);
-			} else if (version.startsWith('3.')) {
-				const compiler =
-					files?.get('/compiler.js') ??
-					(await fetch(`${svelte_url}/compiler.js`).then((r) => r.text()));
-				(0, eval)(compiler + '\n//# sourceURL=compiler.js@' + version);
-			} else {
-				const compiler =
-					files?.get('/compiler/index.js') ??
-					(await fetch(`${svelte_url}/compiler/index.js`).then((r) => r.text()));
-				(0, eval)(compiler + '\n//# sourceURL=compiler/index.js@' + version);
-			}
+			const entry = version.startsWith('3.')
+				? 'compiler.js'
+				: version.startsWith('4.')
+					? 'compiler.cjs'
+					: 'compiler/index.js';
+
+			const compiler = tarball
+				? tarball.find((file) => file.name === `package/${entry}`)!.text
+				: await fetch(`${svelte_url}/${entry}`).then((r) => r.text());
+
+			(0, eval)(compiler + `\n//# sourceURL=${entry}@` + version);
 
 			fulfil_ready();
 			break;

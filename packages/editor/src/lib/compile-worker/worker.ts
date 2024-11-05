@@ -16,7 +16,7 @@ async function init(v: string) {
 	const match = /^(?:pr|commit)-(.+)/.exec(v);
 
 	let tarball: FileDescription[] | undefined;
-	let version;
+	let version: string;
 
 	if (match) {
 		const response = await fetch(`https://pkg.pr.new/svelte@${match[1]}`);
