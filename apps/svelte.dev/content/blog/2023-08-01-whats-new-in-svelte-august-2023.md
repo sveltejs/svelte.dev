@@ -13,7 +13,7 @@ More on all that down below...
 
 There's been a bunch of minor bugfixes since the Svelte 4 release. You can find them in the [CHANGELOG](https://github.com/sveltejs/svelte/blob/master/packages/svelte/CHANGELOG.md).
 
-The **4.1.0 release** added the ability to further customize the custom element class that wraps the underlying Svelte component. Check out the [Custom Elements API docs](https://svelte.dev/docs/custom-elements-api) or the [PR](https://github.com/sveltejs/svelte/pull/8991) for more info!
+The **4.1.0 release** added the ability to further customize the custom element class that wraps the underlying Svelte component. Check out the [Custom Elements API docs](/docs/svelte/custom-elements) or the [PR](https://github.com/sveltejs/svelte/pull/8991) for more info!
 
 In addition to supporting SvelteKit's new `HEAD` server method, Svelte's language tools now support Prettier v3 (**extensions-107.9.0**) and workspace trust settings are now used to support all settings in workspace (**extensions-107.8.0**).
 

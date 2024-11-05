@@ -13,12 +13,12 @@ Since the release of Svelte 5, there's already been one minor version to introdu
 
 ## What's new in Svelte
 
-If you've only recently [migrated to Svelte 5](https://svelte.dev/docs/svelte/v5-migration-guide), check out the last few months of updates for all the features that have gone into this release. For this month, you'll see some marked `-next.XXX`. These changes were in the 5.0 release.
+If you've only recently [migrated to Svelte 5](/docs/svelte/v5-migration-guide), check out the last few months of updates for all the features that have gone into this release. For this month, you'll see some marked `-next.XXX`. These changes were in the 5.0 release.
 
 - Snippets can now be used to fill slots (**5.0.0-next.262**, [#13427](https://github.com/sveltejs/svelte/pull/13427))
 - `hidden until-found` and `beforematch` are now available on DOM elements (**5.0.0-next.266**, [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/hidden#using_until-found), [#13612](https://github.com/sveltejs/svelte/pull/13612))
 - **Breaking:** State mutations are not allowed in logic block expressions (**5.0.0-next.269**, [#13625](https://github.com/sveltejs/svelte/pull/13625))
-- `getContext()` is now allowed within `$derived` runes (**5.1.0**, [Docs](https://svelte.dev/docs/svelte/derived), [#13830](https://github.com/sveltejs/svelte/pull/13830))
+- `getContext()` is now allowed within `$derived` runes (**5.1.0**, [Docs](/docs/svelte/$derived), [#13830](https://github.com/sveltejs/svelte/pull/13830))
 
 To see all the amazing work that has gone into making the Svelte compiler better - including everything that went into making migrations easier - check out the [CHANGELOG](https://github.com/sveltejs/svelte/blob/main/packages/svelte/CHANGELOG.md).
 
