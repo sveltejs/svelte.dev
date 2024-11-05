@@ -15,20 +15,20 @@ export default class Bundler {
 
 	constructor({
 		packages_url,
-		svelte_url,
+		svelte_version,
 		onstatus,
 		onerror
 	}: {
 		packages_url: string;
-		svelte_url: string;
+		svelte_version: string;
 		onstatus: (val: string | null) => void;
 		onerror?: (message: string) => void;
 	}) {
-		this.hash = `${packages_url}:${svelte_url}`;
+		this.hash = `${packages_url}:${svelte_version}`;
 
 		if (!workers.has(this.hash)) {
 			const worker = new Worker();
-			worker.postMessage({ type: 'init', packages_url, svelte_url });
+			worker.postMessage({ type: 'init', packages_url, svelte_version });
 			workers.set(this.hash, worker);
 		}
 

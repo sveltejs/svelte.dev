@@ -40,8 +40,11 @@ let package_json: any;
 self.addEventListener('message', async (event: MessageEvent<BundleMessageData>) => {
 	switch (event.data.type) {
 		case 'init': {
-			({ packages_url, svelte_url } = event.data);
-			const match = /^(pr|commit)-(.+)/.exec(svelte_url);
+			const svelte_version = event.data.svelte_version;
+			packages_url = event.data.packages_url;
+
+			svelte_url = `${packages_url}/svelte@${svelte_version}`;
+			const match = /^(pr|commit)-(.+)/.exec(svelte_version);
 
 			let tarball: FileDescription[] | undefined;
 

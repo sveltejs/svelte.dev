@@ -53,7 +53,7 @@ export type BundleMessageData = {
 	type: 'init' | 'bundle' | 'status' | 'error';
 	message: string;
 	packages_url: string;
-	svelte_url: string;
+	svelte_version: string;
 	files: File[];
 	options: CompileOptions;
 };

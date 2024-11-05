@@ -4,34 +4,33 @@
 	import { theme } from '@sveltejs/site-kit/stores';
 	import { Repl } from '@sveltejs/repl';
 	import { mapbox_setup } from '../../../../../config.js';
-	import { onMount } from 'svelte';
+	import { page } from '$app/stores';
 
 	let { data } = $props();
 
 	let repl = $state() as ReturnType<typeof Repl>;
 
-	onMount(() => {
-		if (data.version !== 'local') {
-			fetch(`https://unpkg.com/svelte@${data.version}/package.json`)
+	// svelte-ignore non_reactive_update
+	let version = $page.url.searchParams.get('version') || 'latest';
+	let is_pr_or_commit_version = version.startsWith('pr-') || version.startsWith('commit-');
+
+	if (version !== 'local' && !is_pr_or_commit_version) {
+		$effect(() => {
+			fetch(`https://unpkg.com/svelte@${version}/package.json`)
 				.then((r) => r.json())
 				.then((pkg) => {
 					if (pkg.version !== data.version) {
 						replaceState(`/playground/${data.gist.id}/embed?version=${pkg.version}`, {});
 					}
 				});
-		}
-	});
+		});
+	}
 
 	afterNavigate(() => {
 		repl?.set({
 			files: data.gist.components
 		});
 	});
-
-	const svelteUrl =
-		browser && data.version === 'local'
-			? `${location.origin}/playground/local`
-			: `https://unpkg.com/svelte@${data.version}`;
 
 	const relaxed = $derived(data.gist.relaxed || (data.user && data.user.id === data.gist.owner));
 </script>
@@ -48,7 +47,7 @@
 	{#if browser}
 		<Repl
 			bind:this={repl}
-			{svelteUrl}
+			svelteVersion={version}
 			{relaxed}
 			can_escape
 			injectedJS={mapbox_setup}

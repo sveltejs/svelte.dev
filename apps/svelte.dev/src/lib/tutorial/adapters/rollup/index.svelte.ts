@@ -24,8 +24,7 @@ export async function create(): Promise<Adapter> {
 
 	bundler = new Bundler({
 		packages_url: 'https://unpkg.com',
-		svelte_url: `https://unpkg.com/svelte`,
-		// svelte_url: `${browser ? location.origin : ''}/svelte`, // TODO think about bringing back main-build for Playground?
+		svelte_version: 'latest',
 		onstatus(val) {
 			if (!done && val === null) {
 				done = true;

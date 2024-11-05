@@ -12,7 +12,7 @@
 
 	interface Props {
 		packagesUrl?: string;
-		svelteUrl?: any;
+		svelteVersion?: string;
 		embedded?: boolean;
 		orientation?: 'columns' | 'rows';
 		relaxed?: boolean;
@@ -27,7 +27,7 @@
 
 	let {
 		packagesUrl = 'https://unpkg.com',
-		svelteUrl = `${BROWSER ? location.origin : ''}/svelte`,
+		svelteVersion = 'latest',
 		embedded = false,
 		orientation = 'columns',
 		relaxed = false,
@@ -51,10 +51,7 @@
 
 	const workspace = new Workspace([dummy], {
 		initial: 'App.svelte',
-		svelte_version:
-			svelteUrl.startsWith('pr-') || svelteUrl.startsWith('commit-')
-				? svelteUrl
-				: svelteUrl.split('@')[1],
+		svelte_version: svelteVersion,
 		onupdate() {
 			rebundle();
 			onchange?.();
@@ -123,7 +120,7 @@
 	const bundler = BROWSER
 		? new Bundler({
 				packages_url: packagesUrl,
-				svelte_url: svelteUrl,
+				svelte_version: svelteVersion,
 				onstatus: (message) => {
 					if (message) {
 						// show bundler status, but only after time has elapsed, to

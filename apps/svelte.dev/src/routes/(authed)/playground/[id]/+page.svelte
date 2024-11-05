@@ -19,6 +19,7 @@
 	let modified = $state(false);
 	let setting_hash: any = null;
 
+	// svelte-ignore non_reactive_update
 	let version = $page.url.searchParams.get('version') || 'latest';
 	let is_pr_or_commit_version = version.startsWith('pr-') || version.startsWith('commit-');
 
@@ -149,13 +150,6 @@
 		}
 	}
 
-	const svelteUrl =
-		browser && version === 'local'
-			? `${location.origin}/playground/local`
-			: is_pr_or_commit_version
-				? version
-				: `https://unpkg.com/svelte@${version}`;
-
 	const relaxed = $derived(data.gist.relaxed || (data.user && data.user.id === data.gist.owner));
 </script>
 
@@ -201,7 +195,7 @@
 		<div style="display: contents" onfocusout={update_hash}>
 			<Repl
 				bind:this={repl}
-				{svelteUrl}
+				svelteVersion={version}
 				{relaxed}
 				{can_escape}
 				injectedJS={mapbox_setup}
