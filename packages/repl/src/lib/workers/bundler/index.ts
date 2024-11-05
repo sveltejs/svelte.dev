@@ -27,72 +27,69 @@ let svelte_url: string;
 let version: string;
 let current_id: number;
 
-let fulfil_ready: (arg?: never) => void;
-let reject_ready: (arg?: Error) => void;
-const ready = new Promise((f, r) => {
-	fulfil_ready = f;
-	reject_ready = r;
-});
-
 let files: Map<string, string>;
 let package_json: any;
+
+let inited = Promise.withResolvers<typeof svelte>();
+
+async function init(v: string, packages_url: string) {
+	svelte_url = `${packages_url}/svelte@${v}`;
+	const match = /^(pr|commit)-(.+)/.exec(v);
+
+	let tarball: FileDescription[] | undefined;
+
+	if (match) {
+		const response = await fetch(`https://pkg.pr.new/svelte@${match[2]}`);
+
+		if (!response.ok) {
+			throw new Error(
+				`impossible to fetch the compiler from this ${match[1] === 'pr' ? 'PR' : 'commit'}`
+			);
+		}
+
+		tarball = await parseTar(await response.arrayBuffer());
+		files = new Map(tarball.map((file) => [file.name.substring('package'.length), file.text]));
+
+		const json = files.get('/package.json')!;
+		package_json = JSON.parse(json);
+		version = package_json.version;
+	} else {
+		version = (await fetch(`${svelte_url}/package.json`).then((r) => r.json())).version;
+	}
+
+	console.log(`Using Svelte compiler version ${version}`);
+
+	const entry = version.startsWith('3.')
+		? 'compiler.js'
+		: version.startsWith('4.')
+			? 'compiler.cjs'
+			: 'compiler/index.js';
+
+	const compiler = tarball
+		? tarball.find((file) => file.name === `package/${entry}`)!.text
+		: await fetch(`${svelte_url}/${entry}`).then((r) => r.text());
+
+	(0, eval)(compiler + `\n//# sourceURL=${entry}@` + version);
+
+	return svelte;
+}
 
 self.addEventListener('message', async (event: MessageEvent<BundleMessageData>) => {
 	switch (event.data.type) {
 		case 'init': {
 			const svelte_version = event.data.svelte_version;
+
 			packages_url = event.data.packages_url;
-
 			svelte_url = `${packages_url}/svelte@${svelte_version}`;
-			const match = /^(pr|commit)-(.+)/.exec(svelte_version);
 
-			let tarball: FileDescription[] | undefined;
+			init(svelte_version, packages_url).then(inited.resolve, inited.reject);
 
-			if (match) {
-				try {
-					const response = await fetch(`https://pkg.pr.new/svelte@${match[2]}`);
-
-					if (!response.ok) {
-						throw new Error(
-							`impossible to fetch the compiler from this ${match[1] === 'pr' ? 'PR' : 'commit'}`
-						);
-					}
-
-					tarball = await parseTar(await response.arrayBuffer());
-					files = new Map(
-						tarball.map((file) => [file.name.substring('package'.length), file.text])
-					);
-					const package_json_content = files.get('/package.json')!;
-					package_json = JSON.parse(package_json_content);
-				} catch (e) {
-					reject_ready(e as Error);
-					return;
-				}
-			}
-
-			({ version } =
-				package_json ?? (await fetch(`${svelte_url}/package.json`).then((r) => r.json())));
-			console.log(`Using Svelte compiler version ${version}`);
-
-			const entry = version.startsWith('3.')
-				? 'compiler.js'
-				: version.startsWith('4.')
-					? 'compiler.cjs'
-					: 'compiler/index.js';
-
-			const compiler = tarball
-				? tarball.find((file) => file.name === `package/${entry}`)!.text
-				: await fetch(`${svelte_url}/${entry}`).then((r) => r.text());
-
-			(0, eval)(compiler + `\n//# sourceURL=${entry}@` + version);
-
-			fulfil_ready();
 			break;
 		}
 
 		case 'bundle': {
 			try {
-				await ready;
+				await inited.promise;
 			} catch (e) {
 				self.postMessage({
 					type: 'error',
