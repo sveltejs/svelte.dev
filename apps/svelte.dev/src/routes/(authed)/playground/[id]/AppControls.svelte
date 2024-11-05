@@ -10,6 +10,7 @@
 	import { untrack } from 'svelte';
 	import SecondaryNav from '$lib/components/SecondaryNav.svelte';
 	import type { File } from 'editor';
+	import type { Repl } from '@sveltejs/repl';
 
 	interface Props {
 		examples: Array<{ title: string; examples: any[] }>;
@@ -169,6 +170,7 @@
 			// because otherwise we'll read `select.value` and re-run this
 			// when we navigate, which we don't want
 			untrack(() => {
+				// @ts-ignore not sure why this is erroring
 				select.value = '';
 			});
 		}
