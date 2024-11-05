@@ -160,29 +160,6 @@ async function follow_redirects(url: string, uid: number) {
 	return res?.url;
 }
 
-function compare_to_version(major: number, minor: number, patch: number): number {
-	const v = svelte.VERSION.match(/^(\d+)\.(\d+)\.(\d+)/);
-
-	// @ts-ignore
-	return +v[1] - major || +v[2] - minor || +v[3] - patch;
-}
-
-function is_v4() {
-	return compare_to_version(4, 0, 0) >= 0;
-}
-
-function is_v5() {
-	return compare_to_version(5, 0, 0) >= 0;
-}
-
-function is_legacy_package_structure() {
-	return compare_to_version(3, 4, 4) <= 0;
-}
-
-function has_loopGuardTimeout_feature() {
-	return compare_to_version(3, 14, 0) >= 0;
-}
-
 async function resolve_from_pkg(
 	pkg: Record<string, unknown>,
 	subpath: string,
