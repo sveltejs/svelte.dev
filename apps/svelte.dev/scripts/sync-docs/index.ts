@@ -219,5 +219,5 @@ if (parsed.values.watch) {
 			});
 	}
 
-	console.log(`\nwatching for changes in ${parsed.positionals.join(', ')}`);
+	console.log(`\nwatching for changes in ${filtered.map((pkg) => pkg.name).join(', ')}`);
 }
