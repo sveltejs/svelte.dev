@@ -124,6 +124,11 @@ Top navigation bar for the application. It provides a slot for the left side, th
 
 			<div class="external-links">
 				<a href="/chat" data-icon="discord" aria-label="Discord Chat"></a>
+				<a
+					href="https://bsky.app/profile/sveltesociety.dev"
+					data-icon="bluesky"
+					aria-label="Svelte Society on Bluesky"
+				></a>
 				<a href="https://github.com/sveltejs/svelte" data-icon="github" aria-label="GitHub Repo"
 				></a>
 			</div>
@@ -382,6 +387,15 @@ Top navigation bar for the application. It provides a slot for the left side, th
 
 				:global(.dark) & {
 					background-image: url($lib/icons/discord-dark.svg);
+				}
+			}
+
+			[data-icon='bluesky'] {
+				width: 3rem;
+				background-image: url($lib/icons/bluesky-light.svg);
+
+				:global(.dark) & {
+					background-image: url($lib/icons/bluesky-dark.svg);
 				}
 			}
 
