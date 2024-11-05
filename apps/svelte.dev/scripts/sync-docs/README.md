@@ -15,7 +15,14 @@ ln -s /path/to/wherever/you/cloned/sveltejs/kit repos/kit
 ln -s /path/to/wherever/you/cloned/sveltejs/cli repos/cli
 ```
 
-I have no idea what the equivalent Windows command would be.
+For windows powershell (requires administrator privileges):
+
+```bash
+cd apps/svelte.dev
+New-Item -Path .\repos\svelte -ItemType SymbolicLink -Value /path/to/wherever/you/cloned/sveltejs/svelte
+New-Item -Path .\repos\kit -ItemType SymbolicLink -Value /path/to/wherever/you/cloned/sveltejs/kit
+New-Item -Path .\repos\cli -ItemType SymbolicLink -Value /path/to/wherever/you/cloned/sveltejs/cli
+```
 
 ## Syncing
 
