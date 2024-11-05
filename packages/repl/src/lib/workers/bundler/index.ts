@@ -298,7 +298,7 @@ async function get_bundle(
 					imports.add(pkg_name);
 				}
 
-				const fetch_package_info = async (pkg_url) => {
+				const fetch_package_info = async (pkg_url: string) => {
 					try {
 						pkg_url = await follow_redirects(pkg_url, uid);
 
