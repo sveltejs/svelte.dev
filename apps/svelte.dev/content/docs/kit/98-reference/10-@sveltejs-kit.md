@@ -10,6 +10,7 @@ import {
 	VERSION,
 	error,
 	fail,
+	isActionFailure,
 	isHttpError,
 	isRedirect,
 	json,
@@ -80,6 +81,22 @@ function fail(status: number): ActionFailure<undefined>;
 function fail<
 	T extends Record<string, unknown> | undefined = undefined
 >(status: number, data: T): ActionFailure<T>;
+```
+
+</div>
+
+
+
+## isActionFailure
+
+Checks whether this is an action failure thrown by `fail`.
+
+<div class="ts-block">
+
+```dts
+function isActionFailure(
+	e: unknown
+): e is ActionFailure<undefined>;
 ```
 
 </div>
