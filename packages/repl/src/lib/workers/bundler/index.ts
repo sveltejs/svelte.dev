@@ -275,26 +275,6 @@ async function get_bundle(
 
 			if (importee === 'esm-env') return importee;
 
-			const v5 = is_v5();
-			const v4 = !v5 && is_v4();
-
-			if (!v5) {
-				// importing from Svelte
-				if (importee === `svelte`)
-					return v4 ? `${svelte_url}/src/runtime/index.js` : `${svelte_url}/index.mjs`;
-
-				if (importee.startsWith(`svelte/`)) {
-					const sub_path = importee.slice(7);
-					if (v4) {
-						return `${svelte_url}/src/runtime/${sub_path}/index.js`;
-					}
-
-					return is_legacy_package_structure()
-						? `${svelte_url}/${sub_path}.mjs`
-						: `${svelte_url}/${sub_path}/index.mjs`;
-				}
-			}
-
 			if (importee === shared_file) return importee;
 
 			// importing from another file in REPL
