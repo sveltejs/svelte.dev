@@ -555,7 +555,7 @@ params?: string;
 
 </div>
 
-a directory containing [parameter matchers](https://svelte.dev/docs/kit/advanced-routing#matching)
+a directory containing [parameter matchers](https://svelte.dev/docs/kit/advanced-routing#Matching)
 
 </div>
 </div>

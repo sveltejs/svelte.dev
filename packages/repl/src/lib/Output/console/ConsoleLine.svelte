@@ -202,7 +202,7 @@
 		gap: 1rem;
 		width: 100%;
 		font-size: 1.2rem;
-		align-items: center;
+		align-items: start;
 	}
 
 	.log.expandable {
@@ -221,6 +221,7 @@
 		font-size: 1.2rem;
 		margin: 0 1rem 0.4rem calc(1em + var(--indent));
 		overflow: hidden;
+		line-height: 1.5;
 
 		.location {
 			position: relative;
@@ -271,11 +272,11 @@
 		font-size: 0.9rem;
 		transition: 150ms;
 		transform-origin: 50% 50%;
-		transform: translateY(-1px);
+		transform: translateY(2px);
 	}
 
 	.arrow.expand {
-		transform: translateY(0px) rotateZ(90deg);
+		transform: translateY(2px) rotateZ(90deg);
 	}
 
 	.styled {
