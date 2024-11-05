@@ -34,7 +34,7 @@ const ready = new Promise((f, r) => {
 	reject_ready = r;
 });
 
-let files: Map<string, () => string>;
+let files: Map<string, string>;
 let package_json: any;
 
 self.addEventListener('message', async (event: MessageEvent<BundleMessageData>) => {
@@ -57,9 +57,9 @@ self.addEventListener('message', async (event: MessageEvent<BundleMessageData>) 
 
 					local_files = await parseTar(await response.arrayBuffer());
 					files = new Map(
-						local_files.map((file) => [file.name.substring('package'.length), () => file.text])
+						local_files.map((file) => [file.name.substring('package'.length), file.text])
 					);
-					const package_json_content = files.get('/package.json')?.();
+					const package_json_content = files.get('/package.json')!;
 					if (package_json_content) {
 						package_json = JSON.parse(package_json_content);
 					}
@@ -77,17 +77,17 @@ self.addEventListener('message', async (event: MessageEvent<BundleMessageData>) 
 				// unpkg doesn't set the correct MIME type for .cjs files
 				// https://github.com/mjackson/unpkg/issues/355
 				const compiler =
-					files?.get('/compiler.cjs')?.() ??
+					files?.get('/compiler.cjs') ??
 					(await fetch(`${svelte_url}/compiler.cjs`).then((r) => r.text()));
 				(0, eval)(compiler + '\n//# sourceURL=compiler.cjs@' + version);
 			} else if (version.startsWith('3.')) {
 				const compiler =
-					files?.get('/compiler.js')?.() ??
+					files?.get('/compiler.js') ??
 					(await fetch(`${svelte_url}/compiler.js`).then((r) => r.text()));
 				(0, eval)(compiler + '\n//# sourceURL=compiler.js@' + version);
 			} else {
 				const compiler =
-					files?.get('/compiler/index.js')?.() ??
+					files?.get('/compiler/index.js') ??
 					(await fetch(`${svelte_url}/compiler/index.js`).then((r) => r.text()));
 				(0, eval)(compiler + '\n//# sourceURL=compiler/index.js@' + version);
 			}
@@ -402,7 +402,7 @@ async function get_bundle(
 				const resolved_url = new URL(resolved);
 
 				if (resolved_url.protocol === 'file:') {
-					return files.get(resolved_url.pathname)?.();
+					return files.get(resolved_url.pathname);
 				}
 			} catch {}
 
