@@ -221,6 +221,7 @@
 		font-size: 1.2rem;
 		margin: 0 1rem 0.4rem calc(1em + var(--indent));
 		overflow: hidden;
+		line-height: 1.5;
 
 		.location {
 			position: relative;

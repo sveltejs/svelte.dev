@@ -37,8 +37,10 @@
 		--warning-border: rgb(242, 232, 163);
 		--json-tree-string-color: var(--shiki-token-string);
 		--json-tree-font-family: var(--sk-font-family-mono);
+		--json-tree-font-size: 1.2rem;
+		--json-tree-li-line-height: 1.5;
 
-		:global(.dark) & {
+		:root.dark & {
 			--error-fg: rgb(235, 78, 109);
 			--error-bg: rgb(71, 48, 54);
 			--error-border: rgb(109, 65, 76);
@@ -58,6 +60,16 @@
 			--json-tree-date-color: #9ca0a5;
 			--json-tree-operator-color: #e8eaed;
 			--json-tree-regex-color: #6cd1c7;
+		}
+
+		:global {
+			p,
+			ol,
+			ul {
+				font: var(--json-tree-font-family);
+				font-size: var(--json-tree-font-size);
+				line-height: 1.5;
+			}
 		}
 	}
 </style>
