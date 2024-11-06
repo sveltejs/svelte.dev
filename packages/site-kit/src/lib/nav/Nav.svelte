@@ -311,8 +311,11 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		nav {
 			top: unset;
 			bottom: 0;
-			padding-bottom: env(safe-area-inset-bottom);
-			height: calc(var(--sk-nav-height) + env(safe-area-inset-bottom));
+
+			&.visible, &:focus-within {
+				padding-bottom: env(safe-area-inset-bottom);
+				height: calc(var(--sk-nav-height) + env(safe-area-inset-bottom));
+			}
 		}
 
 		.menu {
