@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { SHIKI_LANGUAGE_MAP } from './utils';
+import { SHIKI_LANGUAGE_MAP, strip_origin } from './utils';
 import type { Declaration, TypeElement, Modules } from './index';
 
 /**
@@ -126,7 +126,7 @@ function render_declaration(declaration: Declaration, full: boolean) {
 	}
 
 	if (declaration.comment) {
-		content += declaration.comment + '\n\n';
+		content += strip_origin(declaration.comment) + '\n\n';
 	}
 
 	return (
@@ -194,7 +194,7 @@ function stringify_module(module: Modules[0]) {
 	}
 
 	if (module.comment) {
-		content += `${module.comment}\n\n`;
+		content += `${strip_origin(module.comment)}\n\n`;
 	}
 
 	for (const declaration of module.exports || []) {

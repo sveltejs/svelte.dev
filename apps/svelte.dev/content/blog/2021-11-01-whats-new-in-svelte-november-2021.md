@@ -13,7 +13,7 @@ Now onto what's new!
 
 ## New in Svelte and SvelteKit
 
-- [svelte.dev](https://svelte.dev/) now runs on SvelteKit alongside [sveltesociety.dev](https://sveltesociety.dev). svelte.dev is a relatively complicated site with live code editing, authentication, and a markdown-based blog - making it a great way for us to really test out SvelteKit
+- [svelte.dev](/) now runs on SvelteKit alongside [sveltesociety.dev](https://sveltesociety.dev). svelte.dev is a relatively complicated site with live code editing, authentication, and a markdown-based blog - making it a great way for us to really test out SvelteKit
 - A new compiler option, `enableSourcemap`, provides more control over the compiler output for JS and CSS sourcemaps (**3.44.0**). With this new feature, SvelteKit and the Vite Svelte plugin can now properly handle environment variables in `.svelte` templates (See [sveltejs/kit#720](https://github.com/sveltejs/kit/issues/720) and [sveltejs/vite-plugin-svelte#201](https://github.com/sveltejs/vite-plugin-svelte/pull/201))
 - The Svelte Language Tools now support reading the configuration of the VS Code CSS settings ([#1219](https://github.com/sveltejs/language-tools/issues/1219))
 - `vite-plugin-svelte` added a new `experimental.prebundleSvelteLibraries` option that makes it much faster to load Svelte libraries with many components like icon libraries and UI frameworks. The option can be set in the root of `svelte.config.js`. Please test it out and give us feedback!

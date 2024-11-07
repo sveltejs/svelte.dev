@@ -5,7 +5,7 @@ author: Dani Sandoval
 authorURL: https://dreamindani.com
 ---
 
-Mark your calendars! [Svelte Summit Fall](https://www.sveltesummit.com/2023/fall) is on November 11th. Join us on [YouTube](https://www.youtube.com/@SvelteSociety/streams) and in the [Discord](https://svelte.dev/chat) for hours of Svelte-focused fun 🎥
+Mark your calendars! [Svelte Summit Fall](https://www.sveltesummit.com/2023/fall) is on November 11th. Join us on [YouTube](https://www.youtube.com/@SvelteSociety/streams) and in the [Discord](/chat) for hours of Svelte-focused fun 🎥
 
 Every month, maintainers within the Svelte ecosystem fix bugs, improve performance and bring new features to Svelte, SvelteKit and the tooling around them. This month's releases brings an improved developer experience with better [block folding](https://code.visualstudio.com/docs/editor/codebasics#_folding), inferred types and configuration for `use:enhance`.
 

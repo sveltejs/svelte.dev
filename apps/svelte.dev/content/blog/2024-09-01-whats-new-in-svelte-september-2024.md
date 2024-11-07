@@ -69,7 +69,7 @@ _To Watch_
 
 ### Libraries, Tools & Components
 
-- [This gooey tooltip](https://svelte.dev/repl/790fd75f954846be83afaa9e5ea821a8?version=4.2.18) is fluid and satisfying
+- [This gooey tooltip](/playground/790fd75f954846be83afaa9e5ea821a8?version=4.2.18) is fluid and satisfying
 - [select-kit](https://github.com/snehalbaghel/select-kit) is a one-stop solution for all your select/combobox/autocomplete needs
 - [ssgoi](https://github.com/meursyphus/ssgoi) is a page transition library thats support animated page transition with every browser - including Safari
 - [@svelte-put/preaction](https://svelte-put-next.vnphanquang.com/docs/preaction) is a proof-of-concept Svelte preprocessor that allows usage of "preaction" - an extension to Svelte action with the ability to add static attributes on server-side

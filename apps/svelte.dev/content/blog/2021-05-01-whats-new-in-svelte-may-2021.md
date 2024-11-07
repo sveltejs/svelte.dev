@@ -9,7 +9,7 @@ Last week, Svelte Summit blew us away with a mountain of content! [Check out the
 
 ## New features in the Svelte Compiler
 
-- `:global()` is now supported as part of compound CSS selectors (**3.38.0**, [Example](https://svelte.dev/repl/54148fd2af484f2c84977c94e523c7c5?version=3.38.0))
+- `:global()` is now supported as part of compound CSS selectors (**3.38.0**, [Example](/playground/54148fd2af484f2c84977c94e523c7c5?version=3.38.0))
 - CSS custom properties can now be passed to components for use cases such as theming (**3.38.0**, [Docs coming soon](https://github.com/sveltejs/svelte/issues/6268))
 
 ## New in SvelteKit

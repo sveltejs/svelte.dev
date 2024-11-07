@@ -136,3 +136,13 @@ const parse = (str: string) => {
 		return str;
 	}
 };
+
+/**
+ * Type declarations include fully qualified URLs so that they become links when
+ * you hover over names in an editor with TypeScript enabled. We need to remove
+ * the origin so that they become root-relative, so that they work in preview
+ * deployments and when developing locally
+ */
+export function strip_origin(str: string) {
+	return str.replaceAll('https://svelte.dev', '');
+}

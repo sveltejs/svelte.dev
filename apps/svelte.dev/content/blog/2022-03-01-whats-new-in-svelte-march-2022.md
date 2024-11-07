@@ -42,7 +42,7 @@ More on that and other new features and fixes below!
 - [The Making Known](https://the-making-known.com/) is a narrated encounter with posters designed by the Nazi German government to communicate with the occupied nations of Belgium, France, and Luxembourg during the Second World War
 - [Svelte Kanban](https://github.com/V-Py/svelte-kanban) is a simple Svelte Kanban made in pure CSS
 - [fngrng](https://github.com/nvlgzr/fngrng) is a typing trainer focussed on accuracy over speed
-- [Generative grids](https://svelte.dev/repl/873988ce33db43f097c0ca69df57b3ac?version=3.46.4) is a neat little generative SVG grid in a Svelte REPL, with randomly generated color palettes and shapes
+- [Generative grids](/playground/873988ce33db43f097c0ca69df57b3ac?version=3.46.4) is a neat little generative SVG grid in a Svelte REPL, with randomly generated color palettes and shapes
 - [LifeHash](https://github.com/BlockchainCommons/lifehash.info) is a method of hash visualization that creates beautiful, deterministic icons
 - [TypedWebhook.tools](https://typedwebhook.tools/) is a webhook testing tool for checking payloads, with automatic type generation
 - [Speedskating](https://github.com/spiegelgraphics/speedskating) is an animation widget to show olympic speedskating runs. Built with Svelte, D3 and regl

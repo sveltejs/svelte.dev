@@ -10,8 +10,8 @@ Welcome back to the "What's new in Svelte" series! This month, we're covering ne
 ## New features & impactful bug fixes
 
 1. Destructuring Promises now works as expected by using the `{#await}` syntax
-   (**3.29.3**, [Example](https://svelte.dev/repl/3fd4e2cecfa14d629961478f1dac2445?version=3.29.3))
-2. Slot forwarding (released in 3.29.0) should no longer hang during compilation (**3.29.3**, [Example](https://svelte.dev/repl/29959e70103f4868a6525c0734934936?version=3.29.3))
+   (**3.29.3**, [Example](/playground/3fd4e2cecfa14d629961478f1dac2445?version=3.29.3))
+2. Slot forwarding (released in 3.29.0) should no longer hang during compilation (**3.29.3**, [Example](/playground/29959e70103f4868a6525c0734934936?version=3.29.3))
 3. Better typings for the `get` function in `svelte/store` and on lifecycle hooks (**3.29.1**)
 
 ### What's going on in Sapper?

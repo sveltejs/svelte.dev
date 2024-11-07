@@ -19,6 +19,6 @@ If you need inspiration when looking for an issue to fix, check out the [low han
 
 It's a good idea to communicate clearly and often about what you're trying to solve or take on. You can do this by commenting on the issues you intend to take on. This helps avoid duplicate work and ensures that your contribution is in line with the project's goals. Nobody likes to have their work rejected, so it's best to ask questions early and often!
 
-Join our [Discord](https://svelte.dev/chat) and ask questions in the dedicated `#hacktoberfest` channel. We're happy to help you get started!
+Join our [Discord](/chat) and ask questions in the dedicated `#hacktoberfest` channel. We're happy to help you get started!
 
 We're excited to see what you've got in store for SvelteKit! Happy hacking! 🎃

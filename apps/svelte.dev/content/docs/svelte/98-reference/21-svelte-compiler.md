@@ -21,7 +21,7 @@ import {
 
 The current version, as set in package.json.
 
-https://svelte.dev/docs/svelte-compiler#svelte-version
+/docs/svelte-compiler#svelte-version
 
 <div class="ts-block">
 
@@ -701,7 +701,7 @@ preserveComments?: boolean;
 
 </div>
 
-If `true`, your HTML comments will be preserved during server-side rendering. By default, they are stripped out.
+If `true`, your HTML comments will be preserved in the output. By default, they are stripped out.
 
 </div>
 </div>

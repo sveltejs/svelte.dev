@@ -5,7 +5,7 @@ author: Dani Sandoval
 authorURL: https://dreamindani.com
 ---
 
-In case you missed the [announcement post](https://svelte.dev/blog/svelte-5-is-alive), the brand new [omnisite](https://svelte.dev/blog/the-omnisite) or the maintainers [shipping it LIVE during Svelte Summit](https://www.youtube.com/live/fAPFsRP-mbc?si=Atd1WNpoMddssSna&t=13084)... Svelte 5 is out!
+In case you missed the [announcement post](/blog/svelte-5-is-alive), the brand new [omnisite](/blog/the-omnisite) or the maintainers [shipping it LIVE during Svelte Summit](https://www.youtube.com/live/fAPFsRP-mbc?si=Atd1WNpoMddssSna&t=13084)... Svelte 5 is out!
 
 Also announced at Svelte Summit was [SvelteHack 2024: A Svelte Hackathon (with not-so-svelte prizes)](https://hack.sveltesociety.dev/2024). The submission period ends January 9 and only projects started after October 18th are eligible. So get those `$`s ready and start hacking!
 
@@ -13,19 +13,19 @@ Since the release of Svelte 5, there's already been one minor version to introdu
 
 ## What's new in Svelte
 
-If you've only recently [migrated to Svelte 5](https://svelte.dev/docs/svelte/v5-migration-guide), check out the last few months of updates for all the features that have gone into this release. For this month, you'll see some marked `-next.XXX`. These changes were in the 5.0 release.
+If you've only recently [migrated to Svelte 5](/docs/svelte/v5-migration-guide), check out the last few months of updates for all the features that have gone into this release. For this month, you'll see some marked `-next.XXX`. These changes were in the 5.0 release.
 
 - Snippets can now be used to fill slots (**5.0.0-next.262**, [#13427](https://github.com/sveltejs/svelte/pull/13427))
 - `hidden until-found` and `beforematch` are now available on DOM elements (**5.0.0-next.266**, [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/hidden#using_until-found), [#13612](https://github.com/sveltejs/svelte/pull/13612))
 - **Breaking:** State mutations are not allowed in logic block expressions (**5.0.0-next.269**, [#13625](https://github.com/sveltejs/svelte/pull/13625))
-- `getContext()` is now allowed within `$derived` runes (**5.1.0**, [Docs](https://svelte.dev/docs/svelte/derived), [#13830](https://github.com/sveltejs/svelte/pull/13830))
+- `getContext()` is now allowed within `$derived` runes (**5.1.0**, [Docs](/docs/svelte/$derived), [#13830](https://github.com/sveltejs/svelte/pull/13830))
 
 To see all the amazing work that has gone into making the Svelte compiler better - including everything that went into making migrations easier - check out the [CHANGELOG](https://github.com/sveltejs/svelte/blob/main/packages/svelte/CHANGELOG.md).
 
 ## What's new in SvelteKit, Svelte CLI and Language Tools
 
 - `adapter-auto` now supports the Bun package manager (**3.3.1**, [#12854](https://github.com/sveltejs/kit/pull/12854))
-- The [Svelte CLI](https://svelte.dev/blog/sv-the-svelte-cli) now supports a number of add-ons for new and existing projects. You can find the entire list of add ons in [the CLI Repository](https://github.com/sveltejs/cli) or by running `npx sv create` from your command line.
+- The [Svelte CLI](/blog/sv-the-svelte-cli) now supports a number of add-ons for new and existing projects. You can find the entire list of add ons in [the CLI Repository](https://github.com/sveltejs/cli) or by running `npx sv create` from your command line.
 - The Svelte extension now provides a Svelte 5 component migration command (**extensions-109.1.0**)
 
 ---

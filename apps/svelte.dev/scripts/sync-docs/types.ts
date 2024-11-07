@@ -1,8 +1,12 @@
 import fs from 'node:fs';
 import ts from 'typescript';
 import { format } from 'prettier';
-import { strip_origin } from './utils';
-import type { Modules, Declaration, TypeElement } from '@sveltejs/site-kit/markdown';
+import {
+	type Modules,
+	type Declaration,
+	type TypeElement,
+	strip_origin
+} from '@sveltejs/site-kit/markdown';
 
 export async function read_types(base: string, modules: Modules) {
 	{

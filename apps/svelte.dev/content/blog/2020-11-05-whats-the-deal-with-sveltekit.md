@@ -91,4 +91,4 @@ Keep your eyes peeled for announcements about when we'll launch the public beta 
 
 ## Where can I learn more?
 
-Follow [@sveltejs](https://twitter.com/sveltejs) and [@SvelteSociety](https://twitter.com/SvelteSociety) on Twitter, and visit [svelte.dev/chat](https://svelte.dev/chat). You should also subscribe to [Svelte Radio](https://www.svelteradio.com/), where Kevin and his co-hosts will grill me about this project on an upcoming episode (and between now and next week when we record it, [reply to this Twitter thread](https://twitter.com/Rich_Harris/status/1323376048571121665) with your additional questions).
+Follow [@sveltejs](https://twitter.com/sveltejs) and [@SvelteSociety](https://twitter.com/SvelteSociety) on Twitter, and visit [svelte.dev/chat](/chat). You should also subscribe to [Svelte Radio](https://www.svelteradio.com/), where Kevin and his co-hosts will grill me about this project on an upcoming episode (and between now and next week when we record it, [reply to this Twitter thread](https://twitter.com/Rich_Harris/status/1323376048571121665) with your additional questions).

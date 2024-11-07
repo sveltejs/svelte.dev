@@ -25,5 +25,5 @@ jobs:
           commit-message: sync ${{ github.event.client_payload.package }} docs
           title: Sync `${{ github.event.client_payload.package }}` docs
           body: This is an automated pull request. See the [README](../tree/main/apps/svelte.dev/scripts/sync-docs/README.md) for more information
-          branch: sync/${{ github.event.client_payload.package }}
+          branch: sync-${{ github.event.client_payload.package }}
           base: main

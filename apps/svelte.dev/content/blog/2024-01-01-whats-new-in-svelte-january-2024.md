@@ -5,7 +5,7 @@ author: Dani Sandoval
 authorURL: https://dreamindani.com
 ---
 
-Happy New Year! It's been a busy month for the Svelte maintainers - with tons of new features dropping in the Svelte 5 preview and the [release of SvelteKit 2](https://svelte.dev/blog/sveltekit-2)!
+Happy New Year! It's been a busy month for the Svelte maintainers - with tons of new features dropping in the Svelte 5 preview and the [release of SvelteKit 2](/blog/sveltekit-2)!
 
 You can find all the new features in both projects below, along with a bunch of resources and sites built with Svelte in the Community Showcase.
 
@@ -53,7 +53,7 @@ For all the release notes going forward, check out [the CHANGELOG on main](https
   and common developer docs
 - [hintable](https://github.com/willuhmjs/hintable) is an exciting word guessing game
 - [domian.io](https://domian.io/) retrieves a list of the most likely misspellings for your domain, their availability, and an easy way to register them
-- [Story Scroller](https://svelte.dev/repl/6182be0c3ada4a15b5046f7d0d031727?version=4.2.8) is a REPL showcasing how Svelte can be used to make a scrollable cards list
+- [Story Scroller](/playground/6182be0c3ada4a15b5046f7d0d031727?version=4.2.8) is a REPL showcasing how Svelte can be used to make a scrollable cards list
 - [The Atlas of Sustainable Development Goals 2023](https://datatopics.worldbank.org/sdgatlas?lang=en) presents interactive storytelling and data visualizations about the 17 Sustainable Development Goals.
 - [Lingotrack](https://lingotrack.com/) is a social platform for you as a language learner to track your progress and find engaging new media
 - [Lofi Flow](https://github.com/nico-mayer/lofi-flow) lets you save your best-loved YouTube lofi live radios and videos in one spot

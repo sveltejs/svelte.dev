@@ -56,13 +56,3 @@ export function migrate_meta_json(path: string) {
 		fs.writeFileSync(file.replace('meta.json', 'index.md'), new_content);
 	}
 }
-
-/**
- * Type declarations include fully qualified URLs so that they become links when
- * you hover over names in an editor with TypeScript enabled. We need to remove
- * the origin so that they become root-relative, so that they work in preview
- * deployments and when developing locally
- */
-export function strip_origin(str: string) {
-	return str.replaceAll('https://svelte.dev', '');
-}
