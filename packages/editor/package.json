@@ -46,7 +46,7 @@
 		"@replit/codemirror-lang-svelte": "^6.0.0",
 		"@replit/codemirror-vim": "^6.0.14",
 		"@sveltejs/adapter-auto": "^3.0.0",
-		"@sveltejs/kit": "^2.7.7",
+		"@sveltejs/kit": "^2.8.0",
 		"@sveltejs/package": "^2.0.0",
 		"@sveltejs/repl": "workspace:*",
 		"@sveltejs/site-kit": "workspace:*",

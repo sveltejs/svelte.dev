@@ -39,5 +39,8 @@ export function entries() {
 	// So that redirects from these URLs to /tutorial/<svelte/kit>/... work
 	entries.push({ slug: 'svelte' }, { slug: 'kit' });
 
+	// So that /tutorial/ redirects to /tutorial
+	entries.push({ slug: '' });
+
 	return entries;
 }
