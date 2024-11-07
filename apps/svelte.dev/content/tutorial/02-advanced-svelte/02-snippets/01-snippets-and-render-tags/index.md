@@ -15,7 +15,7 @@ Begin by _declaring a snippet_:
 +++{#snippet monkey()}+++
 	<tr>
 		<td>{emoji}</td>
-		<td>see no evil</td>
+		<td>{description}</td>
 		<td>\u{emoji.charCodeAt(0).toString(16)}\u{emoji.charCodeAt(1).toString(16)}</td>
 		<td>&amp#{emoji.codePointAt(0)}</td>
 	</tr>
