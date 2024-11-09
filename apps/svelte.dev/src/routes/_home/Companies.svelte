@@ -8,7 +8,7 @@
 			<enhanced:img src="./companies/apple.svg" alt="Apple logo" />
 		</div>
 	</div>
-	<h2>used by companies you’ve heard of</h2>
+	<h2>used by companies you know</h2>
 	<div class="wing">
 		<div class="logos">
 			<enhanced:img src="./companies/spotify.svg" alt="Spotify logo" />
