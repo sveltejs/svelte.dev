@@ -13,9 +13,9 @@
 		<div class="logos">
 			<enhanced:img src="./companies/spotify.svg" alt="Spotify logo" />
 			<enhanced:img src="./companies/nyt.svg" alt="New York Times logo" />
-			<enhanced:img src="./companies/ikea.svg" alt="Ikea logo" />
+			<enhanced:img src="./companies/ikea.svg" alt="IKEA logo" />
 			<enhanced:img src="./companies/decathlon.svg" alt="Decathlon logo" />
-			<enhanced:img src="./companies/1password.svg" alt="1password logo" />
+			<enhanced:img src="./companies/1password.svg" alt="1Password logo" />
 		</div>
 	</div>
 </div>
