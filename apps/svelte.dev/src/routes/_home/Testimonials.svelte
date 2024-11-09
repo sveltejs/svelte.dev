@@ -7,7 +7,7 @@
 		/>
 
 		<span class="description">
-			<span class="adjective"></span> attractively thin, graceful and stylish
+			<span class="adjective"></span> attractively thin, elegant and stylish
 		</span>
 	</p>
 
