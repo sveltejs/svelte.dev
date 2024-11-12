@@ -28,7 +28,11 @@ const nav_links: NavigationLink[] = [
 				title: section.metadata.title,
 				sections: section.children.map((page) => ({
 					title: page.metadata.title,
-					path: '/tutorial/' + page.slug.split('/').pop()
+					path:
+						'/tutorial/' +
+						(page.slug.includes('sveltekit/') ? 'kit' : 'svelte') +
+						'/' +
+						page.slug.split('/').pop()
 				}))
 			}))
 		}))
