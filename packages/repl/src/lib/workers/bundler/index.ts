@@ -176,7 +176,7 @@ async function resolve_from_pkg(
 		try {
 			const resolved = resolve.exports(pkg, subpath, {
 				browser: true,
-				conditions: ['svelte', 'development']
+				conditions: ['svelte', 'module', 'browser', 'development']
 			});
 
 			return resolved?.[0];
