@@ -11,11 +11,10 @@ As we look forward to the next year, let's dive into what's new in the past mont
 
 ## What's new in Svelte
 
-The bugfix versions in 5.1.x addressed a bunch of issues reported by the community. So if you're noticing anything weird, make sure you upgrade to 5.1.17 or later and, as always, check out the [CHANGELOG](https://github.com/sveltejs/svelte/blob/main/packages/svelte/CHANGELOG.md) for all the bug fixes.
+The bugfix versions in 5.1.x and 5.2.x addressed a bunch of issues reported by the community. So if you're noticing anything weird, make sure you upgrade to the latest version and, as always, check out the [CHANGELOG](https://github.com/sveltejs/svelte/blob/main/packages/svelte/CHANGELOG.md) for all the bug fixes.
 
 The features since last month can be found below:
 
-- Static attributes are now inlined better in the compiled output (**5.2.0**, [#14269](https://github.com/sveltejs/svelte/pull/14269))
 - `ContentVisibilityAutoStateChangeEvent` has been added to element definitions (**5.2.5**, [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/API/ContentVisibilityAutoStateChangeEvent), [#14373](https://github.com/sveltejs/svelte/pull/14373))
 
 
@@ -51,11 +50,11 @@ The features since last month can be found below:
 
 _Featuring Svelte Contributors and Ambassadors_
 
-- [Svelte 🧡](https://bsky.app/profile/ricciuti.me/feed/svelte-feed) is a Bluesky feed to keep up to date on Svelte news in that application
+- [Svelte 🧡](https://bsky.app/profile/paolo.ricciuti.me/feed/svelte-feed) is a Bluesky feed to keep up to date on Svelte news in that application
 - [SvelteKit Streaming: The Complete Guide](https://khromov.se/sveltekit-streaming-the-complete-guide/) by Stanislav Khromov
 - [Remote Workshop: Svelte 5 & Runes](https://ti.to/mainmatter/svelte-5-runes-feb-2025) is taking place February 6-7th, 2025 and taught by Paolo Ricciuti
 - [Svelte 5: In Action | Build A Tasks App](https://www.youtube.com/watch?v=uSWMvDPpG0k) by Syntax
-- [Svelte Society London](https://www.youtube.com/watch?v=mxM208nCvHc) - featuring Paolo with his talk, *The joy of side projects ✨*
+- [Svelte Society London](https://www.youtube.com/watch?v=mxM208nCvHc) - featuring Paolo with his talk, *Herd your async tasks!*
 
 
 _This Week in Svelte_
@@ -94,6 +93,7 @@ _To Read_
 - [Tipex](https://www.npmjs.com/package/@friendofsvelte/tipex) is an advanced rich text editor based on Tiptap and Prosemirror
 - [svelte-bundle](https://github.com/uhteddy/svelte-bundle) is a tool for bundling Svelte components into a single HTML file
 - [svelte5-router](https://github.com/mateothegreat/svelte5-router) is an SPA router that allows you to divide & conquer your app with nested routers
+- [@sheepdog/svelte](https://github.com/main matter/sheepdog) is a library to manage async tasks and concurrency with ease.
 
 That's it for this huge month in Svelte! Let us know if we missed anything on [Reddit](https://www.reddit.com/r/sveltejs/) or [Discord](https://discord.gg/svelte).
 
