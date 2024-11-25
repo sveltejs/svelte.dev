@@ -370,7 +370,7 @@ function untrack<T>(fn: () => T): T;
 
 Can be used to create strongly typed Svelte components.
 
-#### Example:
+### Example:
 
 You have component library on npm called `component-library`, from which
 you export a component called `MyComponent`. For Svelte+TypeScript users,
@@ -732,8 +732,6 @@ The type of a `#snippet` block. You can use it to (for example) express that you
 let { banner }: { banner: Snippet<[{ text: string }]> } = $props();
 ```
 You can only call a snippet through the `{@render ...}` tag.
-
-/docs/svelte/snippet
 
 <div class="ts-block">
 
