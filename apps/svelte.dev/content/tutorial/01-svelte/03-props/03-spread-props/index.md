@@ -38,5 +38,5 @@ We _could_ fix it by adding the prop...
 > ...in which case you can access the properties by their object paths:
 >
 > ```js
-> console.log(stuff.name, stuff.version, stuff.description, stuff.website)
+> console.log(stuff.name, stuff.version, stuff.description, stuff.website);
 > ```
