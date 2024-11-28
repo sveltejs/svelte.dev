@@ -1,8 +1,5 @@
 <script>
-	import FlakyCounter from "./FlakyCounter.svelte";
-	import StableCounter from "./StableCounter.svelte";
+	import FlakyComponent from './FlakyComponent.svelte';
 </script>
 
-<StableCounter />
-
-<FlakyCounter />
+<FlakyComponent />

@@ -1,15 +1,13 @@
 <script>
-	import FlakyCounter from "./FlakyCounter.svelte";
-	import StableCounter from "./StableCounter.svelte";
+	import FlakyComponent from './FlakyComponent.svelte';
 </script>
 
-<StableCounter />
 
 <svelte:boundary onerror={error => console.log(error)}>
-	<FlakyCounter />
+	<FlakyComponent />
 
 	{#snippet failed(error, reset)}
-		<p>{error.message}</p>
-		<button onclick={reset}>Try again</button>
+		<p>Component crashed: {error.message}</p>
+		<button onclick={reset}>Reset</button>
 	{/snippet}
 </svelte:boundary>

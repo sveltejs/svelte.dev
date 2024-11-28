@@ -2,29 +2,29 @@
 title: <svelte:boundary>
 ---
 
-Some areas of your app might be susceptible to errors. To prevent such errors from crashing your app entirely, you can guard parts of your code with so-called error boundaries, using `<svelte:boundary>`.
+Some areas of your app might be susceptible to errors. To prevent such errors from putting your app in a broken state, you can guard parts of your code with so-called error boundaries, using `<svelte:boundary>`.
 
-The given example contains a boring counter, which will never fail, and a dangerous button, which throws an error 50% of the time. Right now, if such an error is thrown, the app as a whole crashes, without a way to recover.
+The given example contains a component that breaks after clicking its button, without a visual indicator that it crashed nor a way to recover from it.
 
-Let's change that by wrapping `<FlakyCounter />` with `<svelte:boundary>`:
+Let's change that by wrapping `<FlakyComponent />` with `<svelte:boundary>`:
 
 ```svelte
 <!--- file: App.svelte --->
 +++<svelte:boundary>+++
-	<FlakyCounter />
+	<FlakyComponent />
 +++</svelte:boundary>+++
 ```
 
-Now, when the counter errors, the boring counter continues to work — the error is contained within the boundary.
+Now, when the Component errors, the error is contained within the boundary.
 
-While the rest of the app is still functional, it would be good to show the user that something went wrong. For that, we add the `failed` snippet to the boundary:
+While the rest of the app is now safe from any unwanted side effects of the error, it would be good to show the user that something went wrong. For that, we add the `failed` snippet to the boundary:
 
 ```svelte
 <!--- file: App.svelte --->
 <svelte:boundary>
-	<FlakyCounter />
+	<FlakyComponent />
 	+++{#snippet failed(error)}
-		<p>{error.message}</p>
+		<p>Component crashed: {error.message}</p>
 	{/snippet}+++
 </svelte:boundary>
 ```
@@ -34,10 +34,10 @@ We can even reset the inner content to try again, by making use of the second ar
 ```svelte
 <!--- file: App.svelte --->
 <svelte:boundary>
-	<FlakyCounter />
+	<FlakyComponent />
 	{#snippet failed(error+++, reset+++)}
-		<p>{error.message}</p>
-		+++<button onclick={reset}>Try again</button>+++
+		<p>Component crashed: {error.message}</p>
+		+++<button onclick={reset}>Reset</button>+++
 	{/snippet}
 </svelte:boundary>
 ```
@@ -47,10 +47,10 @@ Lastly, we "record" the error to our system by listening to the `error` event an
 ```svelte
 <!--- file: App.svelte --->
 <svelte:boundary +++onerror={error => console.log(error)}+++>
-	<FlakyCounter />
+	<FlakyComponent />
 	{#snippet failed(error, reset)}
-		<p>{error.message}</p>
-		<button onclick={reset}>Try again</button>
+		<p>Component crashed: {error.message}</p>
+		<button onclick={reset}>Reset</button>
 	{/snippet}
 </svelte:boundary>
 ```
