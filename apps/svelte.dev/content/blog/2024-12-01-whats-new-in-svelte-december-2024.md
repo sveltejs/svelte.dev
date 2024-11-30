@@ -1,6 +1,6 @@
 ---
 title: "What's new in Svelte: December 2024"
-description: 'New features in Svelte 5 and a ton of new community libraries'
+description: 'A better CLI and a bunch of UI libraries now support Svelte 5'
 author: Dani Sandoval
 authorURL: https://dreamindani.com
 ---
