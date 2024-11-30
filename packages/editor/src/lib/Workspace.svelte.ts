@@ -52,30 +52,16 @@ function file_type(file: Item) {
 }
 
 const tab_behaviour = new Compartment();
+const vim_mode = new Compartment();
 
 const default_extensions = [
 	basicSetup,
 	EditorState.tabSize.of(2),
 	tab_behaviour.of(keymap.of([{ key: 'Tab', run: acceptCompletion }])),
 	indentUnit.of('\t'),
-	theme
+	theme,
+	vim_mode.of([])
 ];
-
-// TODO add vim mode via a compartment (https://codemirror.net/examples/config/)
-// let installed_vim = false;
-// let should_install_vim = localStorage.getItem('vim') === 'true';
-
-// const q = new URLSearchParams(location.search);
-// if (q.has('vim')) {
-// 	should_install_vim = q.get('vim') === 'true';
-// 	localStorage.setItem('vim', should_install_vim.toString());
-// }
-
-// if (!installed_vim && should_install_vim) {
-// 	installed_vim = true;
-// 	const { vim } = await import('@replit/codemirror-vim');
-// 	extensions.push(vim());
-// }
 
 export interface ExposedCompilerOptions {
 	generate: 'client' | 'server';
@@ -243,11 +229,27 @@ export class Workspace {
 		this.modified = {};
 	}
 
-	link(view: EditorView) {
+	async link(view: EditorView) {
 		if (this.#view) throw new Error('view is already linked');
 		this.#view = view;
 
 		view.setState(this.#get_state(untrack(() => this.#current)));
+
+		let should_install_vim = localStorage.getItem('vim') === 'true';
+
+		const q = new URLSearchParams(location.search);
+		if (q.has('vim')) {
+			should_install_vim = q.get('vim') === 'true';
+			localStorage.setItem('vim', should_install_vim.toString());
+		}
+
+		if (should_install_vim) {
+			const { vim } = await import('@replit/codemirror-vim');
+
+			this.#view?.dispatch({
+				effects: vim_mode.reconfigure(vim())
+			});
+		}
 	}
 
 	move(from: Item, to: Item) {

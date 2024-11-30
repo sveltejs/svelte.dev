@@ -17,7 +17,7 @@
 	// TODO this really sucks, why is `exercise.slug` not the slug?
 	let actual_slug = $derived.by(() => {
 		const parts = exercise.slug.split('/');
-		return `${parts[1]}/${parts[3]}`;
+		return `${parts[1].includes('kit') ? 'kit' : 'svelte'}/${parts[3]}`;
 	});
 </script>
 

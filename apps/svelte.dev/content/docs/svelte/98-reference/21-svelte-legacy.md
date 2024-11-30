@@ -281,4 +281,23 @@ function trusted(
 
 
 
+## LegacyComponentType
+
+Support using the component as both a class and function during the transition period
+
+<div class="ts-block">
+
+```dts
+type LegacyComponentType = {
+	new (o: ComponentConstructorOptions): SvelteComponent;
+	(
+		...args: Parameters<Component<Record<string, any>>>
+	): ReturnType<
+		Component<Record<string, any>, Record<string, any>>
+	>;
+};
+```
+
+</div>
+
 
