@@ -1,5 +1,5 @@
 ---
-title: "What's new in Svelte: November 2024"
+title: "What's new in Svelte: December 2024"
 description: 'New features in Svelte 5 and a ton of new community libraries'
 author: Dani Sandoval
 authorURL: https://dreamindani.com
