@@ -2,11 +2,11 @@
 title: <svelte:boundary>
 ---
 
-Some areas of your app might be susceptible to errors. To prevent such errors from putting your app in a broken state, you can guard parts of your code with so-called error boundaries, using `<svelte:boundary>`.
+To prevent errors from leaving your app in a broken state, you can contain them inside an _error boundary_ using the `<svelte:boundary>` element.
 
-The given example contains a component that breaks after clicking its button, without a visual indicator that it crashed nor a way to recover from it.
+In this example, `<FlakyComponent>` contains a bug — clicking the button will set `mouse` to `null`, meaning that the `{mouse.x}` and `{mouse.y}` expressions in the template will fail to render.
 
-Let's change that by wrapping `<FlakyComponent />` with `<svelte:boundary>`:
+In an ideal world we'd simply fix the bug. But that's not always an option — sometimes the component belongs to someone else, and sometimes you just need to guard against the unexpected. Begin by wrapping `<FlakyComponent />` with `<svelte:boundary>`:
 
 ```svelte
 <!--- file: App.svelte --->
@@ -15,42 +15,45 @@ Let's change that by wrapping `<FlakyComponent />` with `<svelte:boundary>`:
 +++</svelte:boundary>+++
 ```
 
-Now, when the Component errors, the error is contained within the boundary.
-
-While the rest of the app is now safe from any unwanted side effects of the error, it would be good to show the user that something went wrong. For that, we add the `failed` snippet to the boundary:
+So far, nothing has changed, because the boundary doesn't specify a handler. Add a `failed` [snippet](snippets-and-render-tags) to provide some UI to show when an error occurs:
 
 ```svelte
 <!--- file: App.svelte --->
 <svelte:boundary>
 	<FlakyComponent />
-	+++{#snippet failed(error)}
-		<p>Component crashed: {error.message}</p>
+
++++	{#snippet failed(error)}
+		<p>Oops! {error.message}</p>
 	{/snippet}+++
 </svelte:boundary>
 ```
 
-We can even reset the inner content to try again, by making use of the second argument passed to `failed`:
+Now, when we click the button, the contents of the boundary are replaced with the snippet. We can attempt to reset things by making use of the second argument passed to `failed`:
 
 ```svelte
 <!--- file: App.svelte --->
 <svelte:boundary>
 	<FlakyComponent />
+
 	{#snippet failed(error+++, reset+++)}
-		<p>Component crashed: {error.message}</p>
+		<p>Oops! {error.message}</p>
 		+++<button onclick={reset}>Reset</button>+++
 	{/snippet}
 </svelte:boundary>
 ```
 
-Lastly, we "record" the error to our system by listening to the `error` event and `console.log`ging it:
+We can also specify an `onerror` handler, which is called with the same arguments passed to the `failed` snippet:
 
 ```svelte
 <!--- file: App.svelte --->
-<svelte:boundary +++onerror={error => console.log(error)}+++>
+<svelte:boundary +++onerror={(e) => console.error(e)}+++>
 	<FlakyComponent />
+
 	{#snippet failed(error, reset)}
-		<p>Component crashed: {error.message}</p>
+		<p>Oops! {error.message}</p>
 		<button onclick={reset}>Reset</button>
 	{/snippet}
 </svelte:boundary>
 ```
+
+This is useful for sending information about the error to a reporting service, or adding UI outside the error boundary itself.
