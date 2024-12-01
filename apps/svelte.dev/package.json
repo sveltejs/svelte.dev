@@ -48,6 +48,7 @@
 		"yootils": "^0.3.1"
 	},
 	"devDependencies": {
+		"@cloudflare/workers-types": "^4.20241127.0",
 		"@resvg/resvg-js": "^2.6.2",
 		"@supabase/supabase-js": "^2.43.4",
 		"@sveltejs/adapter-vercel": "^5.4.7",

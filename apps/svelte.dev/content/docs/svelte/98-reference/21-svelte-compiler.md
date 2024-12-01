@@ -445,6 +445,11 @@ namespace AST {
 		name: 'svelte:fragment';
 	}
 
+	export interface SvelteBoundary extends BaseElement {
+		type: 'SvelteBoundary';
+		name: 'svelte:boundary';
+	}
+
 	export interface SvelteHead extends BaseElement {
 		type: 'SvelteHead';
 		name: 'svelte:head';
