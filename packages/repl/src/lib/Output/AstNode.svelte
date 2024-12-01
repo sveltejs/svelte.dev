@@ -12,9 +12,10 @@
 		path_nodes?: Ast[];
 		autoscroll?: boolean;
 		depth?: number;
+		onhover: (node: { type: string; start: number; end: number } | null) => void;
 	}
 
-	let { key = '', value, path_nodes = [], autoscroll = true, depth = 0 }: Props = $props();
+	let { key = '', value, path_nodes = [], autoscroll = true, onhover, depth = 0 }: Props = $props();
 
 	const { toggleable } = get_repl_context();
 
@@ -97,7 +98,14 @@
 			{/if}
 		</span>
 	{:else}
-		<details bind:open>
+		<!-- svelte-ignore a11y_mouse_events_have_key_events (seems like a false positive) -->
+		<details
+			bind:open
+			onfocusin={() => onhover(value)}
+			onfocusout={(e) => onhover(null)}
+			onmouseover={() => onhover(value)}
+			onmouseleave={() => onhover(null)}
+		>
 			<summary>
 				{#if key}
 					<span class="key">{key}</span>:
@@ -123,6 +131,7 @@
 						value={v}
 						{path_nodes}
 						{autoscroll}
+						{onhover}
 						depth={depth + 1}
 					/>
 				{/each}
