@@ -7,6 +7,8 @@ title: svelte
 ```js
 // @noErrors
 import {
+	SvelteComponent,
+	SvelteComponentTyped,
 	afterUpdate,
 	beforeUpdate,
 	createEventDispatcher,
@@ -25,6 +27,148 @@ import {
 	untrack
 } from 'svelte';
 ```
+
+## SvelteComponent
+
+This was the base class for Svelte components in Svelte 4. Svelte 5+ components
+are completely different under the hood. For typing, use `Component` instead.
+To instantiate components, use `mount` instead`.
+See [migration guide](/docs/svelte/v5-migration-guide#Components-are-no-longer-classes) for more info.
+
+<div class="ts-block">
+
+```dts
+class SvelteComponent<
+	Props extends Record<string, any> = Record<string, any>,
+	Events extends Record<string, any> = any,
+	Slots extends Record<string, any> = any
+> {/*…*/}
+```
+
+<div class="ts-block-property">
+
+```dts
+static element?: typeof HTMLElement;
+```
+
+<div class="ts-block-property-details">
+
+The custom element version of the component. Only present if compiled with the `customElement` compiler option
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+[prop: string]: any;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+constructor(options: ComponentConstructorOptions<Properties<Props, Slots>>);
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag deprecated">deprecated</span> This constructor only exists when using the `asClassComponent` compatibility helper, which
+is a stop-gap solution. Migrate towards using `mount` instead. See
+https://svelte.dev/docs/svelte/v5-migration-guide#Components-are-no-longer-classes for more info.
+
+</div>
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+$destroy(): void;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag deprecated">deprecated</span> This method only exists when using one of the legacy compatibility helpers, which
+is a stop-gap solution. See https://svelte.dev/docs/svelte/v5-migration-guide#Components-are-no-longer-classes
+for more info.
+
+</div>
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+$on<K extends Extract<keyof Events, string>>(
+	type: K,
+	callback: (e: Events[K]) => void
+): () => void;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag deprecated">deprecated</span> This method only exists when using one of the legacy compatibility helpers, which
+is a stop-gap solution. See https://svelte.dev/docs/svelte/v5-migration-guide#Components-are-no-longer-classes
+for more info.
+
+</div>
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+$set(props: Partial<Props>): void;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag deprecated">deprecated</span> This method only exists when using one of the legacy compatibility helpers, which
+is a stop-gap solution. See https://svelte.dev/docs/svelte/v5-migration-guide#Components-are-no-longer-classes
+for more info.
+
+</div>
+
+</div>
+</div></div>
+
+
+
+## SvelteComponentTyped
+
+<blockquote class="tag deprecated">
+
+Use `Component` instead. See [migration guide](https://svelte.dev/docs/svelte/v5-migration-guide#Components-are-no-longer-classes) for more information.
+
+</blockquote>
+
+<div class="ts-block">
+
+```dts
+class SvelteComponentTyped<
+	Props extends Record<string, any> = Record<string, any>,
+	Events extends Record<string, any> = any,
+	Slots extends Record<string, any> = any
+> extends SvelteComponent<Props, Events, Slots> {}
+```
+
+</div>
+
+
 
 ## afterUpdate
 
@@ -757,143 +901,5 @@ interface Snippet<Parameters extends unknown[] = []> {/*…*/}
 
 <div class="ts-block-property-details"></div>
 </div></div>
-
-## SvelteComponent
-
-This was the base class for Svelte components in Svelte 4. Svelte 5+ components
-are completely different under the hood. For typing, use `Component` instead.
-To instantiate components, use `mount` instead`.
-See [migration guide](/docs/svelte/v5-migration-guide#Components-are-no-longer-classes) for more info.
-
-<div class="ts-block">
-
-```dts
-class SvelteComponent<
-	Props extends Record<string, any> = Record<string, any>,
-	Events extends Record<string, any> = any,
-	Slots extends Record<string, any> = any
-> {/*…*/}
-```
-
-<div class="ts-block-property">
-
-```dts
-static element?: typeof HTMLElement;
-```
-
-<div class="ts-block-property-details">
-
-The custom element version of the component. Only present if compiled with the `customElement` compiler option
-
-</div>
-</div>
-
-<div class="ts-block-property">
-
-```dts
-[prop: string]: any;
-```
-
-<div class="ts-block-property-details"></div>
-</div>
-
-<div class="ts-block-property">
-
-```dts
-constructor(options: ComponentConstructorOptions<Properties<Props, Slots>>);
-```
-
-<div class="ts-block-property-details">
-
-<div class="ts-block-property-bullets">
-
-- <span class="tag deprecated">deprecated</span> This constructor only exists when using the `asClassComponent` compatibility helper, which
-is a stop-gap solution. Migrate towards using `mount` instead. See
-https://svelte.dev/docs/svelte/v5-migration-guide#Components-are-no-longer-classes for more info.
-
-</div>
-
-</div>
-</div>
-
-<div class="ts-block-property">
-
-```dts
-$destroy(): void;
-```
-
-<div class="ts-block-property-details">
-
-<div class="ts-block-property-bullets">
-
-- <span class="tag deprecated">deprecated</span> This method only exists when using one of the legacy compatibility helpers, which
-is a stop-gap solution. See https://svelte.dev/docs/svelte/v5-migration-guide#Components-are-no-longer-classes
-for more info.
-
-</div>
-
-</div>
-</div>
-
-<div class="ts-block-property">
-
-```dts
-$on<K extends Extract<keyof Events, string>>(
-	type: K,
-	callback: (e: Events[K]) => void
-): () => void;
-```
-
-<div class="ts-block-property-details">
-
-<div class="ts-block-property-bullets">
-
-- <span class="tag deprecated">deprecated</span> This method only exists when using one of the legacy compatibility helpers, which
-is a stop-gap solution. See https://svelte.dev/docs/svelte/v5-migration-guide#Components-are-no-longer-classes
-for more info.
-
-</div>
-
-</div>
-</div>
-
-<div class="ts-block-property">
-
-```dts
-$set(props: Partial<Props>): void;
-```
-
-<div class="ts-block-property-details">
-
-<div class="ts-block-property-bullets">
-
-- <span class="tag deprecated">deprecated</span> This method only exists when using one of the legacy compatibility helpers, which
-is a stop-gap solution. See https://svelte.dev/docs/svelte/v5-migration-guide#Components-are-no-longer-classes
-for more info.
-
-</div>
-
-</div>
-</div></div>
-
-## SvelteComponentTyped
-
-<blockquote class="tag deprecated">
-
-Use `Component` instead. See [migration guide](https://svelte.dev/docs/svelte/v5-migration-guide#Components-are-no-longer-classes) for more information.
-
-</blockquote>
-
-<div class="ts-block">
-
-```dts
-class SvelteComponentTyped<
-	Props extends Record<string, any> = Record<string, any>,
-	Events extends Record<string, any> = any,
-	Slots extends Record<string, any> = any
-> extends SvelteComponent<Props, Events, Slots> {}
-```
-
-</div>
 
 

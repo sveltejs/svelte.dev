@@ -7,6 +7,7 @@ title: @sveltejs/kit
 ```js
 // @noErrors
 import {
+	Server,
 	VERSION,
 	error,
 	fail,
@@ -18,6 +19,43 @@ import {
 	text
 } from '@sveltejs/kit';
 ```
+
+## Server
+
+<div class="ts-block">
+
+```dts
+class Server {/*…*/}
+```
+
+<div class="ts-block-property">
+
+```dts
+constructor(manifest: SSRManifest);
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+init(options: ServerInitOptions): Promise<void>;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+respond(request: Request, options: RequestOptions): Promise<Response>;
+```
+
+<div class="ts-block-property-details"></div>
+</div></div>
+
+
 
 ## VERSION
 
@@ -94,7 +132,9 @@ Checks whether this is an action failure thrown by `fail`.
 <div class="ts-block">
 
 ```dts
-function isActionFailure(e: unknown): e is ActionFailure;
+function isActionFailure(
+	e: unknown
+): e is ActionFailure<undefined>;
 ```
 
 </div>
@@ -2301,41 +2341,6 @@ A `[file]: size` map of all assets imported by server code
 </div></div>
 
 </div>
-</div></div>
-
-## Server
-
-<div class="ts-block">
-
-```dts
-class Server {/*…*/}
-```
-
-<div class="ts-block-property">
-
-```dts
-constructor(manifest: SSRManifest);
-```
-
-<div class="ts-block-property-details"></div>
-</div>
-
-<div class="ts-block-property">
-
-```dts
-init(options: ServerInitOptions): Promise<void>;
-```
-
-<div class="ts-block-property-details"></div>
-</div>
-
-<div class="ts-block-property">
-
-```dts
-respond(request: Request, options: RequestOptions): Promise<Response>;
-```
-
-<div class="ts-block-property-details"></div>
 </div></div>
 
 ## ServerInitOptions

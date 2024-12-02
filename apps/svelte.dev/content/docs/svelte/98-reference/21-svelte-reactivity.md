@@ -22,6 +22,19 @@ Svelte provides reactive versions of various built-ins like `SvelteMap`, `Svelte
 <input bind:value={url.href} />
 ```
 
+
+
+```js
+// @noErrors
+import {
+	SvelteDate,
+	SvelteMap,
+	SvelteSet,
+	SvelteURL,
+	SvelteURLSearchParams
+} from 'svelte/reactivity';
+```
+
 ## SvelteDate
 
 <div class="ts-block">
@@ -47,6 +60,8 @@ constructor(...params: any[]);
 
 <div class="ts-block-property-details"></div>
 </div></div>
+
+
 
 ## SvelteMap
 
@@ -83,6 +98,8 @@ set(key: K, value: V): this;
 <div class="ts-block-property-details"></div>
 </div></div>
 
+
+
 ## SvelteSet
 
 <div class="ts-block">
@@ -118,6 +135,8 @@ add(value: T): this;
 <div class="ts-block-property-details"></div>
 </div></div>
 
+
+
 ## SvelteURL
 
 <div class="ts-block">
@@ -144,6 +163,8 @@ get searchParams(): SvelteURLSearchParams;
 <div class="ts-block-property-details"></div>
 </div></div>
 
+
+
 ## SvelteURLSearchParams
 
 <div class="ts-block">
@@ -169,5 +190,7 @@ class SvelteURLSearchParams extends URLSearchParams {/*…*/}
 
 <div class="ts-block-property-details"></div>
 </div></div>
+
+
 
 
