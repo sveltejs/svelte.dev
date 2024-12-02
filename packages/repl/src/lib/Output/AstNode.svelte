@@ -92,7 +92,7 @@
 				<span class="token comment">{String(value)}</span>
 			{:else}
 				<span class="token {typeof value}">
-					{JSON.stringify(value)}
+					{typeof value === 'bigint' ? `${value}n` : JSON.stringify(value)}
 				</span>
 			{/if}
 		</span>
@@ -170,7 +170,8 @@
 		color: var(--shiki-token-string);
 	}
 
-	.token.number {
+	.token.number,
+	.token.bigint {
 		color: var(--shiki-token-constant);
 	}
 
