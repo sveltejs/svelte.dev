@@ -152,7 +152,9 @@ export async function get_types(code: string, statements: ts.NodeArray<ts.Statem
 					.trim();
 
 				const collection =
-					ts.isVariableStatement(statement) || ts.isFunctionDeclaration(statement)
+					ts.isVariableStatement(statement) ||
+					ts.isClassDeclaration(statement) ||
+					ts.isFunctionDeclaration(statement)
 						? exports
 						: types;
 
