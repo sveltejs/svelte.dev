@@ -7,7 +7,7 @@ authorURL: https://dreamindani.com
 
 I can't believe it's already the last newsletter of the year! So much has happened in the Svelte community - from two great Svelte Summits to the release Svelte 5 🎉
 
-As we look forward to the next year, let's dive into what's new in the past month...
+As we look forward to the next year and watch the Svelte team do [24 features in 24 days](advent-of-svelte), let's dive into what's new in the past month...
 
 ## What's new in Svelte
 
@@ -16,7 +16,6 @@ The bugfix versions in 5.1.x and 5.2.x addressed a bunch of issues reported by t
 The features since last month can be found below:
 
 - `ContentVisibilityAutoStateChangeEvent` has been added to element definitions (**5.2.5**, [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/API/ContentVisibilityAutoStateChangeEvent), [#14373](https://github.com/sveltejs/svelte/pull/14373))
-
 
 ## What's new in SvelteKit, Svelte CLI and Language Tools
 
@@ -54,15 +53,13 @@ _Featuring Svelte Contributors and Ambassadors_
 - [SvelteKit Streaming: The Complete Guide](https://khromov.se/sveltekit-streaming-the-complete-guide/) by Stanislav Khromov
 - [Remote Workshop: Svelte 5 & Runes](https://ti.to/mainmatter/svelte-5-runes-feb-2025) is taking place February 6-7th, 2025 and taught by Paolo Ricciuti
 - [Svelte 5: In Action | Build A Tasks App](https://www.youtube.com/watch?v=uSWMvDPpG0k) by Syntax
-- [Svelte Society London](https://www.youtube.com/watch?v=mxM208nCvHc) - featuring Paolo with his talk, *Herd your async tasks!*
-
+- [Svelte Society London](https://www.youtube.com/watch?v=mxM208nCvHc) - featuring Paolo with his talk, _Herd your async tasks!_
 
 _This Week in Svelte_
 
 - [Ep. 83](https://www.youtube.com/watch?v=1a-iKUCF5_g) — You might not need an effect
 - [Ep. 84](https://www.youtube.com/watch?v=kVbQyKf4Oe4) — manifest.build
 - [Ep. 85](https://www.youtube.com/watch?v=yY963ovcDQ0) — @sheepdog/svelte
-
 
 _To Read_
 
@@ -71,21 +68,23 @@ _To Read_
 - [Cross-Origin-Isolation with SvelteKit, Vite, and Firebase](https://www.captaincodeman.com/cross-origin-isolation-with-sveltekit-vite-and-firebase) by Captain Codeman
 - [The $effect.tracking rune](https://www.matsimon.dev/blog/svelte-in-depth-effect-tracking) by Matt Simon
 
-
 ### Libraries, Tools & Components
 
-*Component Libraries*
+_Component Libraries_
+
 - [shadcn-svelte](https://next.shadcn-svelte.com/) now supports Svelte 5 and has brand new docs to go with the update
 - [Zag](https://zagjs.com/overview/introduction) now supports Svelte 5
 - [Skeleton V3](https://github.com/skeletonlabs/skeleton/discussions/2919) is now in beta (and, as expected, supports Svelte 5)
 - [Storybook 8.4](https://www.reddit.com/r/sveltejs/comments/1gpqusy/storybook_84_release/) now supports Svelte 5 and CSF natively with component testing built-in
 
-*Icon Libraries*
+_Icon Libraries_
+
 - [svelicon](https://github.com/friendofsvelte/svelicon) converts Iconify SVG icons to type-safe components with one command
 - [moving icons](https://www.movingicons.dev/) is a collection of animated icons based on the lucide icon library
 - [Monicon](https://github.com/oktaysenkan/monicon) is an all-in-one icon library that provides 200,000+ icons from popular sets like Material Design, Feather, and Font Awesome
 
-*Everything Else*
+_Everything Else_
+
 - [Svelte Multitone Image](https://stephane-vanraes.github.io/svelte-multitoneimage/) is a simple image renderer to apply multitone effects for Svelte
 - [number-flow](https://github.com/barvian/number-flow) is a component to transition, format, and localize numbers
 - [sveltednd](https://github.com/thisuxhq/SvelteDnD) is a lightweight, flexible drag and drop library for Svelte 5 applications
