@@ -14,11 +14,17 @@ Follow [@svelte.dev](https://bsky.app/profile/svelte.dev) and [@sveltesociety.de
 
 ## Day 1: Error boundaries
 
-This is a long-awaited and much-requested feature, that allows you to isolate and recover from errors that occur during rendering. See the [docs](/docs/svelte/svelte-boundary) and [tutorial](/tutorial/svelte/svelte-boundary) for more.
+This is a long-awaited and much-requested feature, that allows you to isolate and recover from errors that occur during rendering.
 
-## Day 2
+- [docs](/docs/svelte/svelte-boundary)
+- [tutorial](/tutorial/svelte/svelte-boundary)
 
-Coming soon!
+## Day 2: `each` without `as`
+
+If you just want to render something in an `{#each ...}` block _n_ times, and don't care about the value, you can now omit the `as` part.
+
+- [docs](/docs/svelte/each#Each-blocks-without-an-item)
+- [demo](/playground/untitled#H4sIAAAAAAAAE3WR0W7CMAxFf8XKNAk0WsSeUEaRpn3Guoc0MbQiJFHiMlDVf18SOrZJ48259_jaVgZmxBEZZ28thgCNFV6xBdt1GgPj7wOji0t2EqI-wa_OleGEmpLWiID_6dIaQkMxhm1UdwKpRQhVzWSaVORJNdvWpqbhAYVsYQCNZk8thzWMC_DCHMZk3wPSThNQ088I3mghD9UwSwHwlLE5PMIzVFUFq3G7WUZ2OyUvU3JOuZU332wCXTRmtPy1NgzXZtUFp8WFw9536uWqpbIgPEaDsJBW90cTOHh0KGi2XsBq5-cT6-3nPauxXqHnsHJnCFZ3CvJVkyuCQ0mFF9TZyCQ162WGvteLKfG197Y3iv_pz_fmS68Hxt8iPBPj5HscP8YvCNX7uhYCAAA=)
 
 ## Day 3
 
