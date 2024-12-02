@@ -48,6 +48,7 @@
 		"yootils": "^0.3.1"
 	},
 	"devDependencies": {
+		"@cloudflare/workers-types": "^4.20241127.0",
 		"@resvg/resvg-js": "^2.6.2",
 		"@supabase/supabase-js": "^2.43.4",
 		"@sveltejs/adapter-vercel": "^5.4.7",
@@ -71,7 +72,7 @@
 		"prettier-plugin-svelte": "^3.2.4",
 		"satori": "^0.10.13",
 		"satori-html": "^0.3.2",
-		"svelte": "5.1.11",
+		"svelte": "5.3.0",
 		"svelte-check": "^4.0.0",
 		"svelte-preprocess": "^5.1.4",
 		"tiny-glob": "^0.2.9",
