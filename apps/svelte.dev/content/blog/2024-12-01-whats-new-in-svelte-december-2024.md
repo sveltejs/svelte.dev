@@ -93,7 +93,7 @@ _To Read_
 - [Tipex](https://www.npmjs.com/package/@friendofsvelte/tipex) is an advanced rich text editor based on Tiptap and Prosemirror
 - [svelte-bundle](https://github.com/uhteddy/svelte-bundle) is a tool for bundling Svelte components into a single HTML file
 - [svelte5-router](https://github.com/mateothegreat/svelte5-router) is an SPA router that allows you to divide & conquer your app with nested routers
-- [@sheepdog/svelte](https://github.com/main matter/sheepdog) is a library to manage async tasks and concurrency with ease.
+- [@sheepdog/svelte](https://github.com/mainmatter/sheepdog) is a library to manage async tasks and concurrency with ease.
 
 That's it for this huge month in Svelte! Let us know if we missed anything on [Reddit](https://www.reddit.com/r/sveltejs/) or [Discord](https://discord.gg/svelte).
 
