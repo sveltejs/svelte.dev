@@ -24,8 +24,7 @@ This is a long-awaited and much-requested feature, that allows you to isolate an
 If you just want to render something in an `{#each ...}` block _n_ times, and don't care about the value, you can now omit the `as` part.
 
 - [docs](/docs/svelte/each#Each-blocks-without-an-item)
-- [demo](/playground/untitled#H4sIAAAAAAAAE3WR0W7CMAxFf8XKNAk0WsSeUEaRpn3Guoc0MbQiJFHiMlDVf18SOrZJ48259_jaVgZmxBEZZ28thgCNFV6xBdt1GgPj7wOji0t2EqI-wa_OleGEmpLWiID_6dIaQkMxhm1UdwKpRQhVzWSaVORJNdvWpqbhAYVsYQCNZk8thzWMC_DCHMZk3wPSThNQ088I3mghD9UwSwHwlLE5PMIzVFUFq3G7WUZ2OyUvU3JOuZU332wCXTRmtPy1NgzXZtUFp8WFw9536uWqpbIgPEaDsJBW90cTOHh0KGi2XsBq5-cT6-3nPauxXqHnsHJnCFZ3CvJVkyuCQ0mFF9TZyCQ162WGvteLKfG197Y3iv_pz_fmS68Hxt8iPBPj5HscP8YvCNX7uhYCAAA=)
-
+- [demo](/playground/untitled#H4sIAAAAAAAAA3WP3WrDMAyFX0VoDFqWtGRXxWsKY4-x7MKx1SbUtY2tdi0h7z7s_myD9k6c8-lIZ0Ard4QCPzqKEVong8YC172hiOJzQD75ZCcBiyv87v0sHshw0loZ6Z6unGWyHFHgUvcHUEbGWDeo0qUyX2pw1diGhyeSqoMBDNkNdwIWMBYQpN2OyX4EpJ8uQMO_J0RrpNrWwyQFwEvGpvAMr1DXNVTjajnX_WF1SZ6n5JxyG2--XUY-Gcro7M_bMJyXdR-9kScBm9Drt7OWxpJp541kKpUz-52NAgJ5kjxZFFCtw_QuG9z3I7B1QVMQUPkjRGd6DbnjxZXRk-IySO6dgCqpWZ9l6Ppsw61U201we6vFv_3cPvc-18UCmY6MgsOexq_xBw8BVaUkAgAA)
 ## Day 3
 
 Coming soon!
