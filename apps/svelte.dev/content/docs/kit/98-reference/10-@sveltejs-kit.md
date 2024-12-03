@@ -132,9 +132,7 @@ Checks whether this is an action failure thrown by `fail`.
 <div class="ts-block">
 
 ```dts
-function isActionFailure(
-	e: unknown
-): e is ActionFailure<undefined>;
+function isActionFailure(e: unknown): e is ActionFailure;
 ```
 
 </div>
