@@ -69,8 +69,8 @@
 
 		if (!hash && !saved) {
 			repl?.set({
-				// TODO make this munging unnecessary
-				files: structuredClone(data.gist.components).map(munge)
+				// TODO make this munging unnecessary (using JSON instead of structuredClone for better browser compat)
+				files: JSON.parse(JSON.stringify(data.gist.components)).map(munge)
 			});
 
 			modified = false;

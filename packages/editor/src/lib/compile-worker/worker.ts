@@ -1,3 +1,4 @@
+import '@sveltejs/site-kit/polyfills';
 import { parseTar } from 'tarparser';
 import type { CompileResult } from 'svelte/compiler';
 import type { ExposedCompilerOptions, File } from '../Workspace.svelte';

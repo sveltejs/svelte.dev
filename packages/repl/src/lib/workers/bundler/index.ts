@@ -1,3 +1,4 @@
+import '@sveltejs/site-kit/polyfills';
 import '../patch_window';
 import { sleep } from '../../utils';
 import { rollup } from '@rollup/browser';
