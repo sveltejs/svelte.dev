@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { page } from '$app/stores';
 	import { goto } from '$app/navigation';
 	import UserMenu from './UserMenu.svelte';
 	import { Icon } from '@sveltejs/site-kit/components';
@@ -188,7 +189,30 @@
 			goto(`/playground/${e.currentTarget.value}`);
 		}}
 	>
-		<option value="untitled">Create new</option>
+		<div class="secondary-nav-dropdown">
+			<a class="create-new" href="/playground/untitled">Create new</a>
+
+			{#each examples as section}
+				<details>
+					<summary>{section.title}</summary>
+
+					<ul>
+						{#each section.examples as example}
+							<li>
+								<a
+									href="/playground/{example.slug}"
+									aria-current={$page.params.id === example.slug ? 'page' : undefined}
+								>
+									{example.title}
+								</a>
+							</li>
+						{/each}
+					</ul>
+				</details>
+			{/each}
+		</div>
+
+		<!-- <option value="untitled">Create new</option>
 		<option disabled selected value="">or choose an example</option>
 		{#each examples as section}
 			<optgroup label={section.title}>
@@ -196,7 +220,7 @@
 					<option value={example.slug}>{example.title}</option>
 				{/each}
 			</optgroup>
-		{/each}
+		{/each} -->
 	</SelectIcon>
 
 	<input
@@ -323,5 +347,9 @@
 		height: 1rem;
 		top: -0.2rem;
 		right: -0.2rem;
+	}
+
+	.create-new {
+		margin-bottom: 1rem;
 	}
 </style>
