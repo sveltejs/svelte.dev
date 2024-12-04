@@ -5,7 +5,7 @@
 <Section --max-width="200rem">
 	<h2>join our friendly community</h2>
 	<p>
-		Our sister organisation, <a href="https://www.sveltesociety.dev/">Svelte Society</a>, organises
+		Our sister organization, <a href="https://www.sveltesociety.dev/">Svelte Society</a>, organizes
 		events around the globe. Find your chapter and join us in
 		<a href="/chat">our Discord server</a>.
 	</p>
