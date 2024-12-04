@@ -31,11 +31,14 @@ If you just want to render something in an `{#each ...}` block _n_ times, and do
 You can now export snippets from a component's `<script module>`, for use in other components, as long as those snippets don't reference anything belonging to the component instance.
 
 - [docs](/docs/svelte/snippet#Exporting-snippets)
-- [demo](/playground/16b7dd7105c248e59ec8a437697f588d?version=5.5.0)
+- [demo](/playground/16b7dd7105c248e59ec8a437697f588d)
 
-## Day 4
+## Day 4: form control default values
 
-Coming soon!
+When you reset a form, the value of each `<input>` element reverts to its `defaultValue`. This is normally the empty string, but you can now control it directly in your template.
+
+- [docs](/docs/svelte/bind#input-bind:value)
+- [demo](/playground/b30cfac16c3c4a3ab3d76ad20a5925cf)
 
 ## Day 5
 
