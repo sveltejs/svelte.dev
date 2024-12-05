@@ -95,7 +95,7 @@ export async function get_types(code: string, statements: ts.NodeArray<ts.Statem
 					if (jsDoc.tags) {
 						for (const tag of jsDoc.tags) {
 							if (tag.tagName.escapedText === 'deprecated') {
-								deprecated_notice = tag.comment;
+								deprecated_notice = tag.comment && strip_origin(tag.comment);
 							}
 
 							if (tag.tagName.escapedText === 'since') {
