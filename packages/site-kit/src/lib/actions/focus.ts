@@ -58,7 +58,6 @@ export function trap(node: HTMLElement, { reset_focus = true }: { reset_focus?: 
 			if (e.shiftKey) {
 				group.prev();
 			} else {
-				console.log('next', group);
 				group.next();
 			}
 		}
