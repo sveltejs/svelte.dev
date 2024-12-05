@@ -1,7 +1,7 @@
 import { index } from '$lib/server/content';
 import { render_content } from '$lib/server/renderer';
 
-export const prerender = false; // TODO
+export const prerender = true;
 
 const months = ',Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec'.split(',');
 
