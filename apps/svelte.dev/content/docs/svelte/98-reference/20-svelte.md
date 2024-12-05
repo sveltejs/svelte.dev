@@ -150,7 +150,7 @@ for more info.
 
 ## SvelteComponentTyped
 
-<blockquote class="tag deprecated">
+<blockquote class="tag deprecated note">
 
 Use `Component` instead. See [migration guide](https://svelte.dev/docs/svelte/v5-migration-guide#Components-are-no-longer-classes) for more information.
 
@@ -172,7 +172,7 @@ class SvelteComponentTyped<
 
 ## afterUpdate
 
-<blockquote class="tag deprecated">
+<blockquote class="tag deprecated note">
 
 Use `$effect` instead — see https://svelte.dev/docs/svelte/$effect
 
@@ -196,7 +196,7 @@ function afterUpdate(fn: () => void): void;
 
 ## beforeUpdate
 
-<blockquote class="tag deprecated">
+<blockquote class="tag deprecated note">
 
 Use `$effect.pre` instead — see https://svelte.dev/docs/svelte/$effect#$effect.pre
 
@@ -220,7 +220,7 @@ function beforeUpdate(fn: () => void): void;
 
 ## createEventDispatcher
 
-<blockquote class="tag deprecated">
+<blockquote class="tag deprecated note">
 
 Use callback props and/or the `$host()` rune instead — see https://svelte.dev/docs/svelte/v5-migration-guide#Event-changes-Component-events
 
@@ -593,7 +593,7 @@ The custom element version of the component. Only present if compiled with the `
 
 ## ComponentConstructorOptions
 
-<blockquote class="tag deprecated">
+<blockquote class="tag deprecated note">
 
 In Svelte 4, components are classes. In Svelte 5, they are functions.
 Use `mount` instead to instantiate components.
@@ -693,7 +693,7 @@ $$inline?: boolean;
 
 ## ComponentEvents
 
-<blockquote class="tag deprecated">
+<blockquote class="tag deprecated note">
 
 The new `Component` type does not have a dedicated Events type. Use `ComponentProps` instead.
 
@@ -770,7 +770,7 @@ type ComponentProps<
 
 ## ComponentType
 
-<blockquote class="tag deprecated">
+<blockquote class="tag deprecated note">
 
 This type is obsolete when working with the new `Component` type.
 

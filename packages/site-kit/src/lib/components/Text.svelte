@@ -439,8 +439,9 @@
 			&.deprecated {
 				p:first-child::before {
 					content: 'Deprecated ';
-					display: block;
-					font-style: normal;
+					font: var(--sk-font-ui-medium);
+					text-transform: uppercase;
+					color: var(--sk-fg-4);
 				}
 			}
 
@@ -460,6 +461,12 @@
 					word-break: break-word;
 				}
 			}
+		}
+
+		.since p {
+			font: var(--sk-font-ui-medium);
+			text-transform: uppercase;
+			color: var(--sk-fg-4);
 		}
 
 		details {

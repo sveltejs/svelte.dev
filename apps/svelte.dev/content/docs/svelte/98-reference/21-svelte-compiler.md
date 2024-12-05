@@ -159,7 +159,7 @@ function preprocess(
 
 ## walk
 
-<blockquote class="tag deprecated">
+<blockquote class="tag deprecated note">
 
 Replace this with `import { walk } from 'estree-walker'`
 

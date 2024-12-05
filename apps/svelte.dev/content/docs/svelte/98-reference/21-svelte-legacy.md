@@ -27,7 +27,7 @@ import {
 
 ## asClassComponent
 
-<blockquote class="tag deprecated">
+<blockquote class="tag deprecated note">
 
 Use this only as a temporary solution to migrate your imperative component code to Svelte 5.
 
@@ -58,7 +58,7 @@ function asClassComponent<
 
 ## createBubbler
 
-<blockquote class="tag deprecated">
+<blockquote class="tag deprecated note">
 
 Use this only as a temporary solution to migrate your automatically delegated events in Svelte 5.
 
@@ -80,7 +80,7 @@ function createBubbler(): (
 
 ## createClassComponent
 
-<blockquote class="tag deprecated">
+<blockquote class="tag deprecated note">
 
 Use this only as a temporary solution to migrate your imperative component code to Svelte 5.
 
@@ -199,7 +199,7 @@ function preventDefault(
 
 ## run
 
-<blockquote class="tag deprecated">
+<blockquote class="tag deprecated note">
 
 Use this only as a temporary solution to migrate your component code to Svelte 5.
 
