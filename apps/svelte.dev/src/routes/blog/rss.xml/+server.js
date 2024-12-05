@@ -35,7 +35,7 @@ const get_rss = async (posts) => {
 		<item>
 			<title>${escapeHTML(post.metadata.title)}</title>
 			<link>https://svelte.dev/${post.slug}</link>
-		  <author>${escapeHTML(post.metadata.author)}</author>
+			<author>${escapeHTML(post.metadata.author)}</author>
 			<description>${escapeHTML(await render_content(post.file, post.body))}</description>
 			<pubDate>${formatPubdate(/** @type {string} */ (post.file.split('/').pop()).slice(0, 10))}</pubDate>
 		</item>
