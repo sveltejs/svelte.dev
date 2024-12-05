@@ -27,13 +27,82 @@ Svelte provides reactive versions of various built-ins like `SvelteMap`, `Svelte
 ```js
 // @noErrors
 import {
+	MediaQuery,
 	SvelteDate,
 	SvelteMap,
 	SvelteSet,
 	SvelteURL,
-	SvelteURLSearchParams
+	SvelteURLSearchParams,
+	createSubscriber
 } from 'svelte/reactivity';
 ```
+
+## MediaQuery
+
+<blockquote class="since note">
+
+Available since 5.7.0
+
+</blockquote>
+
+Creates a media query and provides a `current` property that reflects whether or not it matches.
+
+Use it carefully — during server-side rendering, there is no way to know what the correct value should be, potentially causing content to change upon hydration.
+If you can use the media query in CSS to achieve the same effect, do that.
+
+```svelte
+<script>
+	import { MediaQuery } from 'svelte/reactivity';
+
+	const large = new MediaQuery('min-width: 800px');
+</script>
+
+<h1>{large.current ? 'large screen' : 'small screen'}</h1>
+```
+
+<div class="ts-block">
+
+```dts
+class MediaQuery {/*…*/}
+```
+
+<div class="ts-block-property">
+
+```dts
+constructor(query: string, matches?: boolean | undefined);
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- `query` A media query string
+- `matches` Fallback value for the server
+
+</div>
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+get current(): boolean;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+#private;
+```
+
+<div class="ts-block-property-details"></div>
+</div></div>
+
+
 
 ## SvelteDate
 
@@ -190,6 +259,66 @@ class SvelteURLSearchParams extends URLSearchParams {/*…*/}
 
 <div class="ts-block-property-details"></div>
 </div></div>
+
+
+
+## createSubscriber
+
+<blockquote class="since note">
+
+Available since 5.7.0
+
+</blockquote>
+
+Returns a `subscribe` function that, if called in an effect (including expressions in the template),
+calls its `start` callback with an `update` function. Whenever `update` is called, the effect re-runs.
+
+If `start` returns a function, it will be called when the effect is destroyed.
+
+If `subscribe` is called in multiple effects, `start` will only be called once as long as the effects
+are active, and the returned teardown function will only be called when all effects are destroyed.
+
+It's best understood with an example. Here's an implementation of [`MediaQuery`](/docs/svelte/svelte-reactivity#MediaQuery):
+
+```js
+// @errors: 7031
+import { createSubscriber } from 'svelte/reactivity';
+import { on } from 'svelte/events';
+
+export class MediaQuery {
+	#query;
+	#subscribe;
+
+	constructor(query) {
+		this.#query = window.matchMedia(`(${query})`);
+
+		this.#subscribe = createSubscriber((update) => {
+			// when the `change` event occurs, re-run any effects that read `this.current`
+			const off = on(this.#query, 'change', update);
+
+			// stop listening when all the effects are destroyed
+			return () => off();
+		});
+	}
+
+	get current() {
+		this.#subscribe();
+
+		// Return the current state of the query, whether or not we're in an effect
+		return this.#query.matches;
+	}
+}
+```
+
+<div class="ts-block">
+
+```dts
+function createSubscriber(
+	start: (update: () => void) => (() => void) | void
+): () => void;
+```
+
+</div>
 
 
 
