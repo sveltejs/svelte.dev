@@ -40,9 +40,14 @@ When you reset a form, the value of each `<input>` element reverts to its `defau
 - [docs](/docs/svelte/bind#input-bind:value)
 - [demo](/playground/b30cfac16c3c4a3ab3d76ad20a5925cf)
 
-## Day 5
+## Day 5: `MediaQuery`, `prefersReducedMotion` and `createSubscriber`
 
-Coming soon!
+It's a three-in-one kind of day. `new MediaQuery(...)` gives you an object with a reactive `current` property that's true when the media query matches. `prefersReducedMotion` is an instance of `MediaQuery` that matches if the user has expressed a [preference for reduced motion](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion), helping you build accessible apps. Under the hood, both are using the `createSubscriber` mechanism, which gives you an easy way to set up event listeners when a value is read inside an effect.
+
+- [`createSubscriber` docs](/docs/svelte/svelte-reactivity#createSubscriber)
+- [`MediaQuery` docs](/docs/svelte/svelte-reactivity#MediaQuery)
+- [`prefersReducedMotion` docs](/docs/svelte/svelte-motion#prefersReducedMotion)
+- [demo](/playground/89f6f3bb738149fcb6e708cfce878e0f)
 
 ## Day 6
 
