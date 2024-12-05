@@ -1,13 +1,12 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import { goto } from '$app/navigation';
 	import UserMenu from './UserMenu.svelte';
 	import { Icon } from '@sveltejs/site-kit/components';
 	import { isMac } from '$lib/utils/compat.js';
 	import { get_app_context } from '../../app-context';
 	import type { Gist, User } from '$lib/db/types';
 	import { browser } from '$app/environment';
-	import SelectIcon from '$lib/components/SelectIcon.svelte';
+	import ModalDropdown from '$lib/components/ModalDropdown.svelte';
 	import { untrack } from 'svelte';
 	import SecondaryNav from '$lib/components/SecondaryNav.svelte';
 	import type { File } from 'editor';
@@ -40,7 +39,7 @@
 	let saving = $state(false);
 	let justSaved = $state(false);
 	let justForked = $state(false);
-	let select: ReturnType<typeof SelectIcon>;
+	let select: ReturnType<typeof ModalDropdown>;
 
 	function wait(ms: number) {
 		return new Promise((f) => setTimeout(f, ms));
@@ -181,7 +180,7 @@
 <svelte:window on:keydown={handleKeydown} />
 
 <SecondaryNav>
-	<SelectIcon label="Examples">
+	<ModalDropdown label="Examples">
 		<div class="secondary-nav-dropdown">
 			<a class="create-new" href="/playground/untitled">Create new</a>
 
@@ -214,7 +213,7 @@
 				{/each}
 			</optgroup>
 		{/each} -->
-	</SelectIcon>
+	</ModalDropdown>
 
 	<input
 		bind:value={name}

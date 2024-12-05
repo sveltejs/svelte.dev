@@ -86,7 +86,7 @@
 </details>
 
 <style>
-	.examples-select {
+	details {
 		position: relative;
 
 		&:has(:focus-visible) .raised.icon {
@@ -97,15 +97,6 @@
 		span {
 			pointer-events: none;
 		}
-	}
-
-	select {
-		opacity: 0.0001;
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
 	}
 
 	summary {

@@ -1,6 +1,7 @@
 .secondary-nav-dropdown {
 	max-height: 50rem;
 	width: 30rem;
+	max-width: calc(100vw - 2 * var(--sk-page-padding-side) - 2rem);
 	font: var(--sk-font-ui-medium);
 
 	details {

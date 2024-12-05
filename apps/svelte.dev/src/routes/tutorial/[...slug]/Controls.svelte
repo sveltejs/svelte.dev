@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import SecondaryNav from '$lib/components/SecondaryNav.svelte';
-	import SelectIcon from '$lib/components/SelectIcon.svelte';
+	import ModalDropdown from '$lib/components/ModalDropdown.svelte';
 	import type { Exercise, PartStub } from '$lib/tutorial';
 	import { Icon } from '@sveltejs/site-kit/components';
 
@@ -16,7 +16,7 @@
 </script>
 
 <SecondaryNav>
-	<SelectIcon label="Menu">
+	<ModalDropdown label="Menu">
 		<div class="secondary-nav-dropdown">
 			{#each index as part}
 				<details>
@@ -43,7 +43,7 @@
 				</details>
 			{/each}
 		</div>
-	</SelectIcon>
+	</ModalDropdown>
 
 	<a
 		href={exercise.prev ? `/tutorial/${exercise.prev?.slug}` : undefined}
