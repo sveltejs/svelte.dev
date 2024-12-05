@@ -1,4 +1,5 @@
 import { index } from '$lib/server/content';
+import { render_content } from '$lib/server/renderer';
 
 export const prerender = false; // TODO
 
@@ -25,8 +26,24 @@ function escapeHTML(html) {
 }
 
 /** @param {import('@sveltejs/site-kit').Document[]} posts */
-const get_rss = (posts) =>
+const get_rss = async (posts) => {
+	const renderedPosts = await Promise.all(
+		posts
+			.filter((post) => !post.metadata.draft)
+			.map(
+				async (post) => `
+		<item>
+			<title>${escapeHTML(post.metadata.title)}</title>
+			<link>https://svelte.dev/${post.slug}</link>
+		  <author>${escapeHTML(post.metadata.author)}</author>
+			<description>${escapeHTML(await render_content(post.file, post.body))}</description>
+			<pubDate>${formatPubdate(/** @type {string} */ (post.file.split('/').pop()).slice(0, 10))}</pubDate>
+		</item>
 	`
+			)
+	);
+
+	return `
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
 
@@ -39,19 +56,7 @@ const get_rss = (posts) =>
 		<title>Svelte</title>
 		<link>https://svelte.dev/blog</link>
 	</image>
-	${posts
-		.filter((post) => !post.metadata.draft)
-		.map(
-			(post) => `
-		<item>
-			<title>${escapeHTML(post.metadata.title)}</title>
-			<link>https://svelte.dev/${post.slug}</link>
-			<description>${escapeHTML(post.metadata.description)}</description>
-			<pubDate>${formatPubdate(/** @type {string} */ (post.file.split('/').pop()).slice(0, 10))}</pubDate>
-		</item>
-	`
-		)
-		.join('')}
+			${renderedPosts.join('')}
 </channel>
 
 </rss>
@@ -59,9 +64,10 @@ const get_rss = (posts) =>
 		.replace(/>[^\S]+/gm, '>')
 		.replace(/[^\S]+</gm, '<')
 		.trim();
+};
 
 export async function GET() {
-	return new Response(get_rss(index.blog.children), {
+	return new Response(await get_rss(index.blog.children), {
 		headers: {
 			'Cache-Control': `max-age=${30 * 60 * 1e3}`,
 			'Content-Type': 'application/rss+xml'
