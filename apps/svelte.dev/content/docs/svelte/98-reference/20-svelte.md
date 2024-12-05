@@ -79,7 +79,7 @@ constructor(options: ComponentConstructorOptions<Properties<Props, Slots>>);
 
 - <span class="tag deprecated">deprecated</span> This constructor only exists when using the `asClassComponent` compatibility helper, which
 is a stop-gap solution. Migrate towards using `mount` instead. See
-https://svelte.dev/docs/svelte/v5-migration-guide#Components-are-no-longer-classes for more info.
+[migration guide](https://svelte.dev/docs/svelte/v5-migration-guide#Components-are-no-longer-classes) for more info.
 
 </div>
 
@@ -97,7 +97,7 @@ $destroy(): void;
 <div class="ts-block-property-bullets">
 
 - <span class="tag deprecated">deprecated</span> This method only exists when using one of the legacy compatibility helpers, which
-is a stop-gap solution. See https://svelte.dev/docs/svelte/v5-migration-guide#Components-are-no-longer-classes
+is a stop-gap solution. See [migration guide](https://svelte.dev/docs/svelte/v5-migration-guide#Components-are-no-longer-classes)
 for more info.
 
 </div>
@@ -119,7 +119,7 @@ $on<K extends Extract<keyof Events, string>>(
 <div class="ts-block-property-bullets">
 
 - <span class="tag deprecated">deprecated</span> This method only exists when using one of the legacy compatibility helpers, which
-is a stop-gap solution. See https://svelte.dev/docs/svelte/v5-migration-guide#Components-are-no-longer-classes
+is a stop-gap solution. See [migration guide](https://svelte.dev/docs/svelte/v5-migration-guide#Components-are-no-longer-classes)
 for more info.
 
 </div>
@@ -138,7 +138,7 @@ $set(props: Partial<Props>): void;
 <div class="ts-block-property-bullets">
 
 - <span class="tag deprecated">deprecated</span> This method only exists when using one of the legacy compatibility helpers, which
-is a stop-gap solution. See https://svelte.dev/docs/svelte/v5-migration-guide#Components-are-no-longer-classes
+is a stop-gap solution. See [migration guide](https://svelte.dev/docs/svelte/v5-migration-guide#Components-are-no-longer-classes)
 for more info.
 
 </div>
@@ -174,7 +174,7 @@ class SvelteComponentTyped<
 
 <blockquote class="tag deprecated note">
 
-Use `$effect` instead — see https://svelte.dev/docs/svelte/$effect
+Use [`$effect`](https://svelte.dev/docs/svelte/$effect) instead
 
 </blockquote>
 
@@ -198,7 +198,7 @@ function afterUpdate(fn: () => void): void;
 
 <blockquote class="tag deprecated note">
 
-Use `$effect.pre` instead — see https://svelte.dev/docs/svelte/$effect#$effect.pre
+Use [`$effect.pre`](https://svelte.dev/docs/svelte/$effect#$effect.pre) instead
 
 </blockquote>
 
@@ -222,7 +222,7 @@ function beforeUpdate(fn: () => void): void;
 
 <blockquote class="tag deprecated note">
 
-Use callback props and/or the `$host()` rune instead — see https://svelte.dev/docs/svelte/v5-migration-guide#Event-changes-Component-events
+Use callback props and/or the `$host()` rune instead — see [migration guide](https://svelte.dev/docs/svelte/v5-migration-guide#Event-changes-Component-events)
 
 </blockquote>
 
@@ -553,13 +553,13 @@ interface Component<
 ): {
 	/**
 	 * @deprecated This method only exists when using one of the legacy compatibility helpers, which
-	 * is a stop-gap solution. See https://svelte.dev/docs/svelte/v5-migration-guide#Components-are-no-longer-classes
+	 * is a stop-gap solution. See [migration guide](https://svelte.dev/docs/svelte/v5-migration-guide#Components-are-no-longer-classes)
 	 * for more info.
 	 */
 	$on?(type: string, callback: (e: any) => void): () => void;
 	/**
 	 * @deprecated This method only exists when using one of the legacy compatibility helpers, which
-	 * is a stop-gap solution. See https://svelte.dev/docs/svelte/v5-migration-guide#Components-are-no-longer-classes
+	 * is a stop-gap solution. See [migration guide](https://svelte.dev/docs/svelte/v5-migration-guide#Components-are-no-longer-classes)
 	 * for more info.
 	 */
 	$set?(props: Partial<Props>): void;
