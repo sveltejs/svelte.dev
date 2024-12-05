@@ -77,9 +77,6 @@
 >
 	<summary class="raised icon" aria-label={label}><Icon name="menu" /></summary>
 
-	<!-- svelte-ignore a11y_click_events_have_key_events, a11y_no_static_element_interactions (handled by <svelte:window>) -->
-	<div class="modal-background" onclick={() => (open = false)}></div>
-
 	<div class="contents" use:trap>
 		{@render children()}
 	</div>
@@ -100,13 +97,15 @@
 	}
 
 	summary {
+		position: absolute;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		user-select: none;
 	}
 
-	.modal-background {
+	details[open] summary::before {
+		content: '';
 		position: fixed;
 		left: 0;
 		top: 0;
@@ -120,7 +119,7 @@
 	.contents {
 		position: absolute;
 		z-index: 9999;
-		background: white;
+		background: var(--sk-bg-2);
 		padding: 1rem;
 		border-radius: var(--sk-border-radius);
 		filter: var(--sk-shadow);
@@ -133,7 +132,7 @@
 		color: var(--sk-fg-3);
 		line-height: 1;
 		background-size: 1.8rem;
-		z-index: 999;
+		z-index: 9999;
 	}
 
 	.icon:hover,
