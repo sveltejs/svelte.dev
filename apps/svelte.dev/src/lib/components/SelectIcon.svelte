@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { afterNavigate } from '$app/navigation';
 	import { page } from '$app/stores';
-	import { trap } from '@sveltejs/site-kit/actions';
+	import { focusable_children, trap } from '@sveltejs/site-kit/actions';
 	import { Icon } from '@sveltejs/site-kit/components';
 	import type { Snippet } from 'svelte';
 
@@ -22,6 +22,7 @@
 	}}
 />
 
+<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
 <details
 	class="examples-select"
 	bind:open
@@ -35,29 +36,44 @@
 		details.scrollIntoView();
 	}}
 	ontoggle={(e) => {
-	const details = e.currentTarget;
-	if (!details.open) return;
+		const details = e.currentTarget;
+		if (!details.open) return;
 
-	// close all details elements...
-	for (const child of details.querySelectorAll('details[open]')) {
-		(child as HTMLDetailsElement).open = false;
-	}
-
-	// except parents of the current one
-	const current = details.querySelector(`[href="${$page.url.pathname}"]`) as HTMLAnchorElement | null;
-	if (!current) return;
-
-	let node = current as Element;
-
-	while ((node = (node.parentNode) as Element) && node !== details) {
-		if (node.nodeName === 'DETAILS') {
-			(node as HTMLDetailsElement).open = true;
+		// close all details elements...
+		for (const child of details.querySelectorAll('details[open]')) {
+			(child as HTMLDetailsElement).open = false;
 		}
-	}
 
-	current.scrollIntoView();
-	current.focus();
-}}
+		// except parents of the current one
+		const current = details.querySelector(`[href="${$page.url.pathname}"]`) as HTMLAnchorElement | null;
+		if (!current) return;
+
+		let node = current as Element;
+
+		while ((node = (node.parentNode) as Element) && node !== details) {
+			if (node.nodeName === 'DETAILS') {
+				(node as HTMLDetailsElement).open = true;
+			}
+		}
+
+		current.scrollIntoView();
+		current.focus();
+	}}
+	onkeydown={(e) => {
+		if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+			const children = focusable_children(e.currentTarget);
+
+			if (e.key === 'ArrowDown') {
+				children.next();
+			} else {
+				children.prev();
+			}
+		}
+
+		if (document.activeElement?.nodeName === 'SUMMARY' && (e.key === 'ArrowLeft' || e.key === 'ArrowRight')) {
+			(document.activeElement.parentNode as HTMLDetailsElement).open = e.key === 'ArrowRight';
+		}
+	}}
 >
 	<summary class="raised icon" aria-label={label}><Icon name="menu" /></summary>
 
