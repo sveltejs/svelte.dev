@@ -5,7 +5,7 @@
 	import { Icon } from '@sveltejs/site-kit/components';
 	import type { Snippet } from 'svelte';
 
-	let { children }: { children: Snippet } = $props();
+	let { children, label }: { children: Snippet; label: string } = $props();
 
 	let open = $state(false);
 
@@ -25,6 +25,15 @@
 <details
 	class="examples-select"
 	bind:open
+	ontogglecapture={(e) => {
+		const details = e.target as HTMLDetailsElement;
+
+		if (details === e.currentTarget || !details.open) {
+			return;
+		}
+
+		details.scrollIntoView();
+	}}
 	ontoggle={(e) => {
 	const details = e.currentTarget;
 	if (!details.open) return;
@@ -36,6 +45,7 @@
 
 	// except parents of the current one
 	const current = details.querySelector(`[href="${$page.url.pathname}"]`);
+	if (!current) return;
 
 	let node = current as Element;
 
@@ -44,9 +54,12 @@
 			(node as HTMLDetailsElement).open = true;
 		}
 	}
+
+	current.scrollIntoView();
+	current.focus();
 }}
 >
-	<summary class="raised icon"><Icon name="menu" /></summary>
+	<summary class="raised icon" aria-label={label}><Icon name="menu" /></summary>
 
 	<!-- svelte-ignore a11y_click_events_have_key_events, a11y_no_static_element_interactions (handled by <svelte:window>) -->
 	<div class="modal-background" onclick={() => (open = false)}></div>

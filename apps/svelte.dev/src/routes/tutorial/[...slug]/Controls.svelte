@@ -16,7 +16,7 @@
 </script>
 
 <SecondaryNav>
-	<SelectIcon>
+	<SelectIcon label="Menu">
 		<div class="secondary-nav-dropdown">
 			{#each index as part}
 				<details>

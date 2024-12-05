@@ -181,14 +181,7 @@
 <svelte:window on:keydown={handleKeydown} />
 
 <SecondaryNav>
-	<SelectIcon
-		bind:this={select}
-		title="examples"
-		value={gist.id}
-		onchange={async (e) => {
-			goto(`/playground/${e.currentTarget.value}`);
-		}}
-	>
+	<SelectIcon label="Examples">
 		<div class="secondary-nav-dropdown">
 			<a class="create-new" href="/playground/untitled">Create new</a>
 
