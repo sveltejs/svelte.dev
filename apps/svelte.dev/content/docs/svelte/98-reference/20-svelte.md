@@ -152,7 +152,7 @@ for more info.
 
 <blockquote class="tag deprecated note">
 
-Use `Component` instead. See [migration guide](https://svelte.dev/docs/svelte/v5-migration-guide#Components-are-no-longer-classes) for more information.
+Use `Component` instead. See [migration guide](/docs/svelte/v5-migration-guide#Components-are-no-longer-classes) for more information.
 
 </blockquote>
 
@@ -174,7 +174,7 @@ class SvelteComponentTyped<
 
 <blockquote class="tag deprecated note">
 
-Use [`$effect`](https://svelte.dev/docs/svelte/$effect) instead
+Use [`$effect`](/docs/svelte/$effect) instead
 
 </blockquote>
 
@@ -198,7 +198,7 @@ function afterUpdate(fn: () => void): void;
 
 <blockquote class="tag deprecated note">
 
-Use [`$effect.pre`](https://svelte.dev/docs/svelte/$effect#$effect.pre) instead
+Use [`$effect.pre`](/docs/svelte/$effect#$effect.pre) instead
 
 </blockquote>
 
@@ -222,7 +222,7 @@ function beforeUpdate(fn: () => void): void;
 
 <blockquote class="tag deprecated note">
 
-Use callback props and/or the `$host()` rune instead — see [migration guide](https://svelte.dev/docs/svelte/v5-migration-guide#Event-changes-Component-events)
+Use callback props and/or the `$host()` rune instead — see [migration guide](/docs/svelte/v5-migration-guide#Event-changes-Component-events)
 
 </blockquote>
 
@@ -597,7 +597,7 @@ The custom element version of the component. Only present if compiled with the `
 
 In Svelte 4, components are classes. In Svelte 5, they are functions.
 Use `mount` instead to instantiate components.
-See [migration guide](https://svelte.dev/docs/svelte/v5-migration-guide#Components-are-no-longer-classes)
+See [migration guide](/docs/svelte/v5-migration-guide#Components-are-no-longer-classes)
 for more info.
 
 </blockquote>
