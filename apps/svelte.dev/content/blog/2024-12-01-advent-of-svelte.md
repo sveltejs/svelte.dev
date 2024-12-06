@@ -49,9 +49,14 @@ It's a three-in-one kind of day. `new MediaQuery(...)` gives you an object with 
 - [`prefersReducedMotion` docs](/docs/svelte/svelte-motion#prefersReducedMotion)
 - [demo](/playground/89f6f3bb738149fcb6e708cfce878e0f)
 
-## Day 6
+## Day 6: `Spring` and `Tween`
 
-Coming soon!
+We now have modern state-based alternatives to the `spring` and `tweened` stores of old. Smooth!
+
+- [`Tween` tutorial](/tutorial/svelte/tweens)
+- [`Spring` tutorial](/tutorial/svelte/springs)
+- [docs](/docs/svelte/svelte-motion)
+- [demo](/playground/8a021b2ec2064230bde4a10b08464876?version=5.8.0)
 
 ## Day 7
 
