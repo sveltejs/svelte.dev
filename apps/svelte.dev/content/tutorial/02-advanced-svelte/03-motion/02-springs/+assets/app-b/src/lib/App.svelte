@@ -1,26 +1,26 @@
 <script>
-	import { spring } from 'svelte/motion';
+	import { Spring } from 'svelte/motion';
 
-	let coords = spring({ x: 50, y: 50 }, {
+	let coords = new Spring({ x: 50, y: 50 }, {
 		stiffness: 0.1,
 		damping: 0.25
 	});
 
-	let size = spring(10);
+	let size = new Spring(10);
 </script>
 
 <svg
 	onmousemove={(e) => {
-		coords.set({ x: e.clientX, y: e.clientY });
+		coords.target = { x: e.clientX, y: e.clientY };
 	}}
-	onmousedown={() => size.set(30)}
-	onmouseup={() => size.set(10)}
+	onmousedown={() => (size.target = 30)}
+	onmouseup={() => (size.target = 10)}
 	role="presentation"
 >
 	<circle
-		cx={$coords.x}
-		cy={$coords.y}
-		r={$size}
+		cx={coords.current.x}
+		cy={coords.current.y}
+		r={size.current}
 	/>
 </svg>
 

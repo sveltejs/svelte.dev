@@ -1,23 +1,21 @@
 <script>
-	import { writable } from 'svelte/store';
-
-	let coords = writable({ x: 50, y: 50 });
-	let size = writable(10);
+	let coords = $state({ x: 50, y: 50 });
+	let size = $state(10);
 </script>
 
 <svg
 	onmousemove={(e) => {
-		coords.set({ x: e.clientX, y: e.clientY });
+		coords = { x: e.clientX, y: e.clientY };
 	}}
-	onmousedown={() => size.set(30)}
-	onmouseup={() => size.set(10)}
+	onmousedown={() => (size = 30)}
+	onmouseup={() => (size = 10)}
 	role="presentation"
 >
 	<circle
-		cx={$coords.x}
-		cy={$coords.y}
-		r={$size}
-	/>
+		cx={coords.x}
+		cy={coords.y}
+		r={size}
+	></circle>
 </svg>
 
 <div class="controls">
