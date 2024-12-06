@@ -2075,6 +2075,12 @@ type RequestHandler<
 
 ## Reroute
 
+<blockquote class="since note">
+
+Available since 2.3.0
+
+</blockquote>
+
 The [`reroute`](/docs/kit/hooks#Universal-hooks-reroute) hook allows you to modify the URL before it is used to determine which route to render.
 
 <div class="ts-block">

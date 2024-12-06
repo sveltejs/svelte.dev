@@ -15,6 +15,12 @@ import {
 
 ## createReadableStream
 
+<blockquote class="since note">
+
+Available since 2.4.0
+
+</blockquote>
+
 Converts a file on disk to a readable stream
 
 <div class="ts-block">
