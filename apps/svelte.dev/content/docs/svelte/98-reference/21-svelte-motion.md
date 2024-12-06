@@ -17,6 +17,12 @@ import {
 
 ## Spring
 
+<blockquote class="since note">
+
+Available since 5.8.0
+
+</blockquote>
+
 A wrapper for a value that behaves in a spring-like fashion. Changes to `spring.target` will cause `spring.current` to
 move towards it over time, taking account of the `spring.stiffness` and `spring.damping` parameters.
 

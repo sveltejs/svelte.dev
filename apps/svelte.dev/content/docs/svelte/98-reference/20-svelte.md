@@ -20,6 +20,7 @@ import {
 	hydrate,
 	mount,
 	onDestroy,
+	onFrame,
 	onMount,
 	setContext,
 	tick,
@@ -409,6 +410,27 @@ only one that runs inside a server-side component.
 
 ```dts
 function onDestroy(fn: () => any): void;
+```
+
+</div>
+
+
+
+## onFrame
+
+The `onFrame` function schedules a callback to run on `requestAnimationFrame`. It must be called inside an effect (e.g. during component initialisation).
+
+`onFrame` does not run inside [server-side components](/docs/svelte/svelte-server#render).
+
+<div class="ts-block">
+
+```dts
+function onFrame<T>(
+	fn: () =>
+		| NotFunction<T>
+		| Promise<NotFunction<T>>
+		| (() => any)
+): void;
 ```
 
 </div>
