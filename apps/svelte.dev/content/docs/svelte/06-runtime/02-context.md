@@ -22,7 +22,7 @@ export const myGlobalState = $state({
 ```svelte
 <!--- file: App.svelte --->
 <script>
-	import { myGlobalState } from './state.svelte.js';
+	import { myGlobalState } from './state.svelte';
 	// ...
 </script>
 ```

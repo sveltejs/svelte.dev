@@ -49,7 +49,7 @@ export const userState = $state({
 ```svelte
 <!--- file: App.svelte --->
 <script>
-	import { userState } from './state.svelte.js';
+	import { userState } from './state.svelte';
 </script>
 
 <p>User name: {userState.name}</p>
