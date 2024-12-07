@@ -58,9 +58,11 @@ We now have modern state-based alternatives to the `spring` and `tweened` stores
 - [docs](/docs/svelte/svelte-motion)
 - [demo](/playground/8a021b2ec2064230bde4a10b08464876?version=5.8.0)
 
-## Day 7
+## Day 7: Better tutorial navigation
 
-Coming soon!
+A lot of you disliked the dropdown navigation for the tutorial — essentially a giant, unwieldy `<select>` element — so we've replaced it with a hierarchical menu. Because it's all just `<details>` and `<a>` elements, we get accessibility features for free. You can even navigate the tutorial with JavaScript disabled!
+
+- [tutorial](/tutorial/svelte/welcome-to-svelte)
 
 ## Day 8
 
