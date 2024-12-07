@@ -42,6 +42,7 @@
 		"flru": "^1.0.2",
 		"port-authority": "^2.0.1",
 		"shiki": "^1.22.0",
+		"svelte2tsx": "^0.7.30",
 		"topojson-client": "^3.1.0",
 		"vitest": "^2.1.2",
 		"ws": "^8.13.0",

@@ -92,6 +92,9 @@ importers:
       shiki:
         specifier: ^1.22.0
         version: 1.22.0
+      svelte2tsx:
+        specifier: ^0.7.30
+        version: 0.7.30(svelte@5.3.0)(typescript@5.5.4)
       topojson-client:
         specifier: ^3.1.0
         version: 3.1.0
@@ -479,9 +482,6 @@ importers:
       svelte-persisted-store:
         specifier: ^0.9.2
         version: 0.9.4(svelte@5.1.11)
-      svelte2tsx:
-        specifier: ^0.7.30
-        version: 0.7.30(svelte@5.1.11)(typescript@5.5.4)
     devDependencies:
       '@sveltejs/kit':
         specifier: ^2.8.0
@@ -2994,12 +2994,6 @@ packages:
       svelte: ^3.55 || ^4.0.0-next.0 || ^4.0 || ^5.0.0-next.0
       typescript: ^4.9.4 || ^5.0.0
 
-  svelte2tsx@0.7.8:
-    resolution: {integrity: sha512-ABK3RDFcy59AqAiU1N5Kxu1RnKrb1GDMrQjLgNgJfE8Q+coCKpjCAPtUVKQM2HnmuqeNWcT3NqfXbE+ZmN5Pow==}
-    peerDependencies:
-      svelte: ^3.55 || ^4.0.0-next.0 || ^4.0 || ^5.0.0-next.0
-      typescript: ^4.9.4 || ^5.0.0
-
   svelte@5.1.11:
     resolution: {integrity: sha512-XpPcUBKCg2c+L0nDTkv0ekc8LOHMzN328MNOeAHt4sRcX5AROU9tkqwL35VvE6srt8RpmnzsXBGDwyRB5TSbuw==}
     engines: {node: '>=18'}
@@ -4399,7 +4393,7 @@ snapshots:
       sade: 1.8.1
       semver: 7.6.2
       svelte: 5.1.11
-      svelte2tsx: 0.7.8(svelte@5.1.11)(typescript@5.5.4)
+      svelte2tsx: 0.7.30(svelte@5.1.11)(typescript@5.5.4)
     transitivePeerDependencies:
       - typescript
 
@@ -5908,11 +5902,11 @@ snapshots:
       svelte: 5.1.11
       typescript: 5.5.4
 
-  svelte2tsx@0.7.8(svelte@5.1.11)(typescript@5.5.4):
+  svelte2tsx@0.7.30(svelte@5.3.0)(typescript@5.5.4):
     dependencies:
       dedent-js: 1.0.1
       pascal-case: 3.1.2
-      svelte: 5.1.11
+      svelte: 5.3.0
       typescript: 5.5.4
 
   svelte@5.1.11:
