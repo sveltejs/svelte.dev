@@ -699,17 +699,19 @@ async function syntax_highlight({
 			html = await codeToHtml(prelude + redacted, {
 				lang: 'ts',
 				theme,
-				transformers: [
-					transformerTwoslash({
-						langs: ['svelte', 'js', 'ts'],
-						twoslasher: twoslasherSvelte,
-						twoslashOptions: {
-							compilerOptions: {
-								types: ['svelte', '@sveltejs/kit']
-							}
-						}
-					})
-				]
+				transformers: check
+					? [
+							transformerTwoslash({
+								langs: ['svelte', 'js', 'ts'],
+								twoslasher: twoslasherSvelte,
+								twoslashOptions: {
+									compilerOptions: {
+										types: ['svelte', '@sveltejs/kit']
+									}
+								}
+							})
+						]
+					: []
 			});
 
 			html = html.replace(/ {27,}/g, () => redactions.shift()!);
