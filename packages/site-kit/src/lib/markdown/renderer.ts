@@ -7,6 +7,7 @@ import ts from 'typescript';
 import * as marked from 'marked';
 import { codeToHtml, createCssVariablesTheme } from 'shiki';
 import { transformerTwoslash } from '@shikijs/twoslash';
+import { createTwoslasher } from '@hugokorte/twoslash-svelte';
 import { SHIKI_LANGUAGE_MAP, slugify, smart_quotes, transform } from './utils';
 
 interface SnippetOptions {
@@ -262,7 +263,6 @@ export async function render_content_markdown(
 				if (needs_controls) {
 					html += '</div>';
 				}
-
 				html += await syntax_highlight({ filename, language: token.lang, prelude, source, check });
 
 				if (converted) {
@@ -662,6 +662,8 @@ function highlight_spans(content: string, classname: string) {
 		.join('\n');
 }
 
+const twoslasherSvelte = createTwoslasher();
+
 async function syntax_highlight({
 	prelude,
 	source,
@@ -697,17 +699,17 @@ async function syntax_highlight({
 			html = await codeToHtml(prelude + redacted, {
 				lang: 'ts',
 				theme,
-				transformers: check
-					? [
-							transformerTwoslash({
-								twoslashOptions: {
-									compilerOptions: {
-										types: ['svelte', '@sveltejs/kit']
-									}
-								}
-							})
-						]
-					: []
+				transformers: [
+					transformerTwoslash({
+						langs: ['svelte', 'js', 'ts'],
+						twoslasher: twoslasherSvelte,
+						twoslashOptions: {
+							compilerOptions: {
+								types: ['svelte', '@sveltejs/kit']
+							}
+						}
+					})
+				]
 			});
 
 			html = html.replace(/ {27,}/g, () => redactions.shift()!);
