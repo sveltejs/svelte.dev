@@ -1,7 +1,7 @@
 import { error } from '@sveltejs/kit';
 import type { Examples } from '../api/examples/all.json/+server.js';
 
-export async function load({ fetch, params, url }) {
+export async function load({ fetch, params }) {
 	const examples_res = fetch('/playground/api/examples/all.json').then((r) => r.json());
 	const res = await fetch(`/playground/api/${params.id}.json`);
 
@@ -21,7 +21,6 @@ export async function load({ fetch, params, url }) {
 					title: example.title,
 					slug: example.slug
 				}))
-			})),
-		version: url.searchParams.get('version') || 'latest'
+			}))
 	};
 }

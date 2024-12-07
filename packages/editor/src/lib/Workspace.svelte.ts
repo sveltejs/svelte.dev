@@ -1,5 +1,5 @@
-import type { CompileError, CompileOptions, CompileResult } from 'svelte/compiler';
-import { EditorState } from '@codemirror/state';
+import type { CompileError, CompileResult } from 'svelte/compiler';
+import { Compartment, EditorState } from '@codemirror/state';
 import { compile_file } from './compile-worker';
 import { BROWSER } from 'esm-env';
 import { basicSetup, EditorView } from 'codemirror';
@@ -13,6 +13,7 @@ import { indentWithTab } from '@codemirror/commands';
 import { indentUnit } from '@codemirror/language';
 import { theme } from './theme';
 import { untrack } from 'svelte';
+import type { Diagnostic } from '@codemirror/lint';
 
 export interface File {
 	type: 'file';
@@ -50,33 +51,22 @@ function file_type(file: Item) {
 	return file.name.split('.').pop();
 }
 
+const tab_behaviour = new Compartment();
+const vim_mode = new Compartment();
+
 const default_extensions = [
 	basicSetup,
 	EditorState.tabSize.of(2),
-	keymap.of([{ key: 'Tab', run: acceptCompletion }, indentWithTab]),
+	tab_behaviour.of(keymap.of([{ key: 'Tab', run: acceptCompletion }])),
 	indentUnit.of('\t'),
-	theme
+	theme,
+	vim_mode.of([])
 ];
 
-// TODO add vim mode via a compartment (https://codemirror.net/examples/config/)
-// let installed_vim = false;
-// let should_install_vim = localStorage.getItem('vim') === 'true';
-
-// const q = new URLSearchParams(location.search);
-// if (q.has('vim')) {
-// 	should_install_vim = q.get('vim') === 'true';
-// 	localStorage.setItem('vim', should_install_vim.toString());
-// }
-
-// if (!installed_vim && should_install_vim) {
-// 	installed_vim = true;
-// 	const { vim } = await import('@replit/codemirror-vim');
-// 	extensions.push(vim());
-// }
-
-interface ExposedCompilerOptions {
+export interface ExposedCompilerOptions {
 	generate: 'client' | 'server';
 	dev: boolean;
+	modernAst: boolean;
 }
 
 export class Workspace {
@@ -86,7 +76,8 @@ export class Workspace {
 
 	#compiler_options = $state.raw<ExposedCompilerOptions>({
 		generate: 'client',
-		dev: false
+		dev: false,
+		modernAst: true
 	});
 	compiled = $state<Record<string, Compiled>>({});
 
@@ -101,6 +92,57 @@ export class Workspace {
 	// CodeMirror stuff
 	states = new Map<string, EditorState>();
 	#view: EditorView | null = null;
+
+	diagnostics = $derived.by(() => {
+		const diagnostics: Diagnostic[] = [];
+
+		const error = this.current_compiled?.error;
+		const warnings = this.current_compiled?.result?.warnings ?? [];
+
+		if (error) {
+			diagnostics.push({
+				severity: 'error',
+				from: error.position![0],
+				to: error.position![1],
+				message: error.message,
+				renderMessage: () => {
+					const span = document.createElement('span');
+					span.innerHTML = `${error.message
+						.replace(/&/g, '&amp;')
+						.replace(/</g, '&lt;')
+						.replace(
+							/`(.+?)`/g,
+							`<code>$1</code>`
+						)} (<a href="/docs/svelte/compiler-errors#${error.code}">${error.code}</a>)`;
+
+					return span;
+				}
+			});
+		}
+
+		for (const warning of warnings) {
+			diagnostics.push({
+				severity: 'warning',
+				from: warning.start!.character,
+				to: warning.end!.character,
+				message: warning.message,
+				renderMessage: () => {
+					const span = document.createElement('span');
+					span.innerHTML = `${warning.message
+						.replace(/&/g, '&amp;')
+						.replace(/</g, '&lt;')
+						.replace(
+							/`(.+?)`/g,
+							`<code>$1</code>`
+						)} (<a href="/docs/svelte/compiler-warnings#${warning.code}">${warning.code}</a>)`;
+
+					return span;
+				}
+			});
+		}
+
+		return diagnostics;
+	});
 
 	constructor(
 		files: Item[],
@@ -141,6 +183,14 @@ export class Workspace {
 		return this.#current;
 	}
 
+	get current_compiled() {
+		if (this.#current.name in this.compiled) {
+			return this.compiled[this.#current.name];
+		}
+
+		return null;
+	}
+
 	add(item: Item) {
 		this.#create_directories(item);
 		this.#files = this.#files.concat(item);
@@ -148,9 +198,25 @@ export class Workspace {
 		if (is_file(item)) {
 			this.#select(item);
 			this.#onreset?.(this.#files);
+
+			this.modified[item.name] = true;
 		}
 
 		return item;
+	}
+
+	disable_tab_indent() {
+		this.#view?.dispatch({
+			effects: tab_behaviour.reconfigure(keymap.of([{ key: 'Tab', run: acceptCompletion }]))
+		});
+	}
+
+	enable_tab_indent() {
+		this.#view?.dispatch({
+			effects: tab_behaviour.reconfigure(
+				keymap.of([{ key: 'Tab', run: acceptCompletion }, indentWithTab])
+			)
+		});
 	}
 
 	focus() {
@@ -163,11 +229,27 @@ export class Workspace {
 		this.modified = {};
 	}
 
-	link(view: EditorView) {
+	async link(view: EditorView) {
 		if (this.#view) throw new Error('view is already linked');
 		this.#view = view;
 
 		view.setState(this.#get_state(untrack(() => this.#current)));
+
+		let should_install_vim = localStorage.getItem('vim') === 'true';
+
+		const q = new URLSearchParams(location.search);
+		if (q.has('vim')) {
+			should_install_vim = q.get('vim') === 'true';
+			localStorage.setItem('vim', should_install_vim.toString());
+		}
+
+		if (should_install_vim) {
+			const { vim } = await import('@replit/codemirror-vim');
+
+			this.#view?.dispatch({
+				effects: vim_mode.reconfigure(vim())
+			});
+		}
 	}
 
 	move(from: Item, to: Item) {
@@ -246,6 +328,11 @@ export class Workspace {
 
 		if (was_current) {
 			this.#select(new_item as File);
+		}
+
+		if (this.modified[previous.name]) {
+			delete this.modified[previous.name];
+			this.modified[name] = true;
 		}
 
 		this.#onreset?.(this.#files);

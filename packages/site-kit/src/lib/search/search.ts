@@ -1,3 +1,4 @@
+import '@sveltejs/site-kit/polyfills';
 import flexsearch, { type Index as FlexSearchIndex } from 'flexsearch';
 import type { Block, BlockGroup } from './types';
 
@@ -44,56 +45,91 @@ export function init(blocks: Block[]) {
 	inited = true;
 }
 
+const CURRENT_SECTION_BOOST = 2;
+const EXACT_MATCH_BOOST = 10;
+const WORD_MATCH_BOOST = 4;
+const NEAR_MATCH_BOOST = 2;
+const BREADCRUMB_LENGTH_BOOST = 0.2;
+
+interface Entry {
+	block: Block;
+	score: number;
+	rank: number;
+}
+
 /**
  * Search for a given query in the existing index
  */
-export function search(query: string): BlockGroup[] {
+export function search(query: string, path: string): BlockGroup[] {
 	const escaped = query.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
-	const regex = new RegExp(`(^|\\b)${escaped}`, 'i');
+	const exact_match = new RegExp(`^${escaped}$`, 'i');
+	const word_match = new RegExp(`(^|\\b)${escaped}($|\\b)`, 'i');
+	const near_match = new RegExp(`(^|\\b)${escaped}`, 'i');
+
+	const parts = path.split('/');
 
 	const blocks = indexes
 		.flatMap((index) => index.search(query))
 		// @ts-expect-error flexsearch types are wrong i think?
 		.map(lookup)
-		.map((block, rank) => ({ block: block as Block, rank }))
-		.sort((a, b) => {
-			// If rank is way lower, give that priority
-			if (Math.abs(a.rank - b.rank) > 3) {
-				return a.rank - b.rank;
+		.map((block, rank) => {
+			const block_parts = block.href.split('/');
+
+			// prioritise current section
+			let score = block_parts.findIndex((part, i) => part !== parts[i]);
+			if (score === -1) score = block_parts.length;
+			score *= CURRENT_SECTION_BOOST;
+
+			if (block.breadcrumbs.some((text) => exact_match.test(text))) {
+				console.log('EXACT MATCH', block.breadcrumbs);
+				score += EXACT_MATCH_BOOST;
+			} else if (block.breadcrumbs.some((text) => word_match.test(text))) {
+				score += WORD_MATCH_BOOST;
+			} else if (block.breadcrumbs.some((text) => near_match.test(text))) {
+				score += NEAR_MATCH_BOOST;
 			}
 
-			const a_title_matches = regex.test(a.block.breadcrumbs.at(-1)!);
-			const b_title_matches = regex.test(b.block.breadcrumbs.at(-1)!);
+			// prioritise branches over leaves
+			score -= block.breadcrumbs.length * BREADCRUMB_LENGTH_BOOST;
 
-			// massage the order a bit, so that title matches
-			// are given higher priority
-			if (a_title_matches !== b_title_matches) {
-				return a_title_matches ? -1 : 1;
-			}
+			const entry: Entry = { block, score, rank };
 
-			return a.block.breadcrumbs.length - b.block.breadcrumbs.length || a.rank - b.rank;
-		})
-		.map(({ block }) => block);
-
-	const groups: Record<string, BlockGroup> = {};
-
-	for (const block of blocks) {
-		const breadcrumbs = block.breadcrumbs.slice(0, 2);
-
-		const group = (groups[breadcrumbs.join('::')] ??= {
-			breadcrumbs,
-			blocks: []
+			return entry;
 		});
 
-		group.blocks.push(block);
+	const grouped: Record<string, { breadcrumbs: string[]; entries: Entry[] }> = {};
+
+	for (const entry of blocks) {
+		const breadcrumbs = entry.block.breadcrumbs.slice(0, 2);
+		const group = (grouped[breadcrumbs.join('::')] ??= {
+			breadcrumbs,
+			entries: []
+		});
+
+		group.entries.push(entry);
 	}
 
-	return Object.values(groups);
+	const sorted = Object.values(grouped);
+
+	// sort blocks within groups...
+	for (const group of sorted) {
+		group.entries.sort((a, b) => b.score - a.score || a.rank - b.rank);
+	}
+
+	// ...then sort groups
+	sorted.sort((a, b) => b.entries[0].score - a.entries[0].score);
+
+	return sorted.map((group) => {
+		return {
+			breadcrumbs: group.breadcrumbs,
+			blocks: group.entries.map((entry) => entry.block)
+		};
+	});
 }
 
 /**
  * Get a block with details by its href
  */
 export function lookup(href: string) {
-	return map.get(href);
+	return map.get(href)!;
 }

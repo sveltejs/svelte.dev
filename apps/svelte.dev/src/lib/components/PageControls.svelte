@@ -61,7 +61,7 @@
 
 	.controls {
 		max-width: calc(var(--sk-page-content-width) + 1rem);
-		border-top: 1px solid var(--sk-back-4);
+		border-top: 1px solid var(--sk-border);
 		padding: 1rem 0 0 0;
 		margin: 1rem 0 0 0;
 		text-wrap: balance;
@@ -83,7 +83,7 @@
 		span {
 			font: var(--sk-font-ui-medium);
 			text-transform: uppercase;
-			color: var(--sk-text-3);
+			color: var(--sk-fg-3);
 
 			&.faded {
 				opacity: 0.4;

@@ -47,6 +47,6 @@
 		border-radius: var(--sk-border-radius);
 		padding: 2rem 2rem 2rem 5rem;
 		background: no-repeat 1rem 50% / 3rem 3rem url(/icons/search.svg);
-		color: var(--sk-text-1);
+		color: var(--sk-fg-1);
 	}
 </style>

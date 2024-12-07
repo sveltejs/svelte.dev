@@ -12,8 +12,7 @@
 		/* display: block; */
 		position: relative;
 		height: 1em;
-		width: calc(100% - 0.6em);
-		max-width: 2em;
+		width: 2em;
 		top: -2px;
 		border-radius: 0.5em;
 		-webkit-appearance: none;
@@ -33,12 +32,12 @@
 		border-radius: 1em;
 		top: 0;
 		left: 0;
-		background: var(--sk-back-6);
+		background: var(--sk-bg-4);
 		box-sizing: content-box;
 	}
 
 	input[type='checkbox']:checked::before {
-		background: var(--sk-theme-1);
+		background: var(--sk-fg-accent);
 	}
 
 	input[type='checkbox']::after {
@@ -50,7 +49,7 @@
 		top: 2px;
 		left: 2px;
 		border-radius: 1em;
-		background: white;
+		background: var(--sk-bg-1);
 		box-shadow:
 			0 0px 1px rgba(0, 0, 0, 0.4),
 			0 4px 2px rgba(0, 0, 0, 0.1);

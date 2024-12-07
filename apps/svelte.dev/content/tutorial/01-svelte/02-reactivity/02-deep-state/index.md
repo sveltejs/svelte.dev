@@ -2,7 +2,7 @@
 title: Deep state
 ---
 
-As we saw in the previous exercise, state reacts to _reassignments_. But it also reacts to _mutations_ — we call this _deep reactivity_.
+As we saw in the previous exercise, state reacts to _reassignments_. But it also reacts to _mutations_ — we call this _deep reactivity_.
 
 Make `numbers` a reactive array:
 

@@ -11,6 +11,12 @@ import { read } from '$app/server';
 
 ## read
 
+<blockquote class="since note">
+
+Available since 2.4.0
+
+</blockquote>
+
 Read the contents of an imported asset from the filesystem
 
 ```js

@@ -110,7 +110,7 @@
 		width: 100vw;
 		max-width: 320px;
 		z-index: 9999;
-		background: var(--sk-back-3);
+		background: var(--sk-bg-3);
 		padding: 1em;
 
 		p {

@@ -64,7 +64,7 @@
 
 <style>
 	.tooltip-container {
-		--bg: var(--sk-back-2);
+		--bg: var(--sk-bg-2);
 		--arrow-size: 0.6rem;
 		display: none;
 		position: absolute;

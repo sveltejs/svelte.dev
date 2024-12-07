@@ -58,12 +58,12 @@
 	nav {
 		top: 0;
 		left: 0;
-		color: var(--sk-text-3);
+		color: var(--sk-fg-2);
 		position: relative;
 	}
 
 	.sidebar {
-		padding: 3.2rem;
+		padding: 3.2rem 3.2rem calc(3.2rem + var(--sk-banner-height)) 3.2rem;
 		font-family: var(--sk-font-family-body);
 		height: 100%;
 		bottom: auto;
@@ -86,7 +86,7 @@
 		transition: color 0.2s;
 		border-bottom: none;
 		padding: 0;
-		color: var(--sk-text-2);
+		color: inherit;
 		user-select: none;
 	}
 
@@ -100,39 +100,13 @@
 	}
 
 	[aria-current='page'] {
-		color: var(--sk-theme-1);
+		color: var(--sk-fg-accent);
 		text-decoration: underline;
 	}
 
 	ul ul,
 	ul ul li {
 		margin: 0;
-	}
-
-	@media (max-width: 831px) {
-		.sidebar {
-			padding: 1rem;
-			padding-top: 1rem;
-		}
-
-		li {
-			margin-bottom: 2.5rem;
-		}
-
-		a {
-			border-radius: var(--sk-border-radius);
-			line-height: 1;
-			vertical-align: center;
-			padding: 0.9rem 0.75rem !important;
-			transition: 0.1s ease;
-			transition-property: background-color, color;
-		}
-
-		a:hover {
-			text-decoration: none;
-
-			background-color: var(--sk-back-4);
-		}
 	}
 
 	@media (min-width: 832px) {
@@ -159,12 +133,10 @@
 			height: var(--size);
 			top: calc(1.4rem - var(--size) * 0.5);
 			right: calc(-0.5 * var(--size));
-			background-color: var(--sk-back-1);
+			background-color: var(--sk-bg-1);
 			z-index: 2;
 			position: absolute;
 			rotate: 45deg;
-			/** needed to synchronise with transition on `*` in `base.css` */
-			transition: background-color 0.5s var(--quint-out);
 			box-shadow: 0 0 3px rgba(0, 0, 0, 0.12);
 		}
 	}

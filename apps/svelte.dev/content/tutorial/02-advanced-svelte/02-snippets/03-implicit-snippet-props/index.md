@@ -37,7 +37,7 @@ Any content inside a component that is _not_ part of a declared snippet becomes 
 
 ```svelte
 /// file: App.svelte
----(#snippet header()}---
+---{#snippet header()}---
 <header>
 	<span class="color"></span>
 	<span class="name">name</span>

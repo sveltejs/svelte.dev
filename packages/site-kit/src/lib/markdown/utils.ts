@@ -19,11 +19,11 @@ export const SHIKI_LANGUAGE_MAP = {
  */
 export function clean(markdown: string) {
 	return markdown
-		.replace(/\*\*(.+?)\*\*/g, '$1') // bold
-		.replace(/_(.+?)_/g, '$1') // Italics
-		.replace(/\*(.+?)\*/g, '$1') // Italics
-		.replace(/`(.+?)`/g, '$1') // Inline code
-		.replace(/~~(.+?)~~/g, '$1') // Strikethrough
+		.replace(/(?:^|b)\*\*(.+?)\*\*(?:\b|$)/g, '$1') // bold
+		.replace(/(?:^|b)_(.+?)_(?:\b|$)/g, '$1') // Italics
+		.replace(/(?:^|b)\*(.+?)\*(?:\b|$)/g, '$1') // Italics
+		.replace(/(?:^|b)`(.+?)`(?:\b|$)/g, '$1') // Inline code
+		.replace(/(?:^|b)~~(.+?)~~(?:\b|$)/g, '$1') // Strikethrough
 		.replace(/\[(.+?)\]\(.+?\)/g, '$1') // Link
 		.replace(/\n/g, ' ') // New line
 		.replace(/ {2,}/g, ' ')
@@ -36,13 +36,16 @@ export const slugify = (str: string) => {
 		.replace(/&.+?;/g, '')
 		.replace(/<\/?.+?>/g, '')
 		.replace(/\.\.\./g, '')
-		.replace(/[^a-zA-Z0-9-$(.):']/g, '-')
+		.replace(/[^a-zA-Z0-9-$(.):'_]/g, '-')
 		.replace(/-{2,}/g, '-')
 		.replace(/^-/, '')
 		.replace(/-$/, '');
 };
 
-export function smart_quotes(str: string, html: boolean = false) {
+export function smart_quotes(
+	str: string,
+	{ first = true, html = false }: { first?: boolean; html?: boolean } = {}
+) {
 	// replace dumb quotes with smart quotes. This isn't a perfect algorithm — it
 	// wouldn't correctly handle `That '70s show` or `My country 'tis of thee`
 	// but a) it's very unlikely they'll occur in our docs, and
@@ -50,8 +53,7 @@ export function smart_quotes(str: string, html: boolean = false) {
 	return str.replace(
 		html ? /(.|^)(&#39;|&quot;)(.|$)/g : /(.|^)('|")(.|$)/g,
 		(m, before, quote, after) => {
-			const trimmed = before.trim();
-			const left = trimmed === '' || trimmed === '(';
+			const left = (first && before === '') || [' ', '\n', '('].includes(before);
 			let replacement = '';
 
 			if (html) {
@@ -134,3 +136,13 @@ const parse = (str: string) => {
 		return str;
 	}
 };
+
+/**
+ * Type declarations include fully qualified URLs so that they become links when
+ * you hover over names in an editor with TypeScript enabled. We need to remove
+ * the origin so that they become root-relative, so that they work in preview
+ * deployments and when developing locally
+ */
+export function strip_origin(str: string) {
+	return str.replaceAll('https://svelte.dev', '');
+}

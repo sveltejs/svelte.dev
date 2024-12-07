@@ -100,6 +100,6 @@ If you have an app built with pre-release versions of SvelteKit, we recommend up
 
 SvelteKit 1.0 is the beginning, not the end. It’s ready for production use today, but we’re just getting started. Our roadmap includes built-in i18n support, incremental static regeneration, granular control over deployment region and runtime, image optimisation, and many other improvements. Next year we’ll also start work on Svelte 4 — more on that later.
 
-But don’t let us have the final word. Svelte is a community project, and many of our best ideas aren’t really ours at all — they’re yours. Subscribe to Svelte Society on [Twitter](https://twitter.com/SvelteSociety) and [YouTube](https://youtube.com/sveltesociety) to stay up to date, and join us in our [Discord server](https://svelte.dev/chat) and on [GitHub](https://github.com/sveltejs) to contribute back.
+But don’t let us have the final word. Svelte is a community project, and many of our best ideas aren’t really ours at all — they’re yours. Subscribe to Svelte Society on [Twitter](https://twitter.com/SvelteSociety) and [YouTube](https://youtube.com/sveltesociety) to stay up to date, and join us in our [Discord server](/chat) and on [GitHub](https://github.com/sveltejs) to contribute back.
 
 We can’t wait to see what you build.

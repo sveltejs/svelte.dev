@@ -1,36 +1,70 @@
+import { strip_origin } from '@sveltejs/site-kit/markdown';
 import { preprocess } from '@sveltejs/site-kit/markdown/preprocess';
 import path from 'node:path';
 import fs from 'node:fs';
+import { parseArgs } from 'node:util';
 import ts from 'typescript';
 import glob from 'tiny-glob/sync';
 import chokidar from 'chokidar';
 import { fileURLToPath } from 'node:url';
-import { clone_repo, migrate_meta_json, strip_origin } from './utils';
+import { clone_repo, migrate_meta_json } from './utils';
 import { get_types, read_d_ts_file, read_types } from './types';
 import type { Modules } from '@sveltejs/site-kit/markdown';
 
 interface Package {
 	name: string;
-	local: string;
 	repo: string;
 	branch: string;
 	pkg: string;
 	docs: string;
-	process_modules: (modules: Modules, pkg: Package) => Promise<Modules>;
+	types: string | null;
+	process_modules?: (modules: Modules, pkg: Package) => Promise<Modules>;
 }
+
+const parsed = parseArgs({
+	args: process.argv.slice(2),
+	options: {
+		watch: {
+			type: 'boolean',
+			short: 'w'
+		},
+		pull: {
+			type: 'boolean',
+			short: 'p'
+		},
+		owner: {
+			type: 'string',
+			default: 'sveltejs'
+		}
+	},
+	strict: true,
+	allowPositionals: true
+});
 
 const dirname = fileURLToPath(new URL('.', import.meta.url));
 const REPOS = path.join(dirname, '../../repos');
 const DOCS = path.join(dirname, '../../content/docs');
 
+const branches = {};
+
+for (const option of parsed.positionals) {
+	const [name, ...rest] = option.split('#');
+
+	if (branches[name]) {
+		throw new Error(`Duplicate branches for ${name}`);
+	}
+
+	branches[name] = rest.join('#') || 'main';
+}
+
 const packages: Package[] = [
 	{
 		name: 'svelte',
-		local: `${REPOS}/svelte`,
-		repo: 'sveltejs/svelte',
-		branch: 'main',
+		repo: `${parsed.values.owner}/svelte`,
+		branch: branches['svelte'] ?? 'main',
 		pkg: 'packages/svelte',
 		docs: 'documentation/docs',
+		types: 'types',
 		process_modules: async (modules: Modules) => {
 			// Remove $$_attributes from ActionReturn
 			const module_with_ActionReturn = modules.find((m) =>
@@ -50,13 +84,13 @@ const packages: Package[] = [
 	},
 	{
 		name: 'kit',
-		local: `${REPOS}/kit`,
-		repo: 'sveltejs/kit',
-		branch: 'main',
+		repo: `${parsed.values.owner}/kit`,
+		branch: branches['kit'] ?? 'main',
 		pkg: 'packages/kit',
 		docs: 'documentation/docs',
+		types: 'types',
 		process_modules: async (modules, pkg) => {
-			const kit_base = `${pkg.local}/${pkg.pkg}/`;
+			const kit_base = `${REPOS}/${pkg.name}/${pkg.pkg}/`;
 
 			{
 				const code = read_d_ts_file(kit_base + 'src/types/private.d.ts');
@@ -107,8 +141,27 @@ const packages: Package[] = [
 
 			return modules;
 		}
+	},
+	{
+		name: 'cli',
+		repo: `${parsed.values.owner}/cli`,
+		branch: branches['cli'] ?? 'main',
+		pkg: 'packages/cli',
+		docs: 'documentation/docs',
+		types: null
 	}
 ];
+
+const unknown = Object.keys(branches).filter((name) => !packages.some((pkg) => pkg.name === name));
+
+if (unknown.length > 0) {
+	throw new Error(
+		`Valid repos are ${packages.map((pkg) => pkg.name).join(', ')} (saw ${unknown.join(', ')})`
+	);
+}
+
+const filtered =
+	parsed.positionals.length === 0 ? packages : packages.filter((pkg) => !!branches[pkg.name]);
 
 /**
  * Depending on your setup, this will either clone the Svelte and SvelteKit repositories
@@ -116,46 +169,56 @@ const packages: Package[] = [
  * It will then copy them into the `content/docs` directory and process them to replace
  * placeholders for types with content from the generated types.
  */
-if (process.env.USE_GIT === 'true') {
+if (parsed.values.pull) {
 	try {
 		fs.mkdirSync(REPOS);
 	} catch {
 		// ignore if it already exists
 	}
 
-	await Promise.all(
-		packages.map((pkg) => clone_repo(`https://github.com/${pkg.repo}.git`, pkg.branch, REPOS))
-	);
+	for (const pkg of filtered) {
+		await clone_repo(`https://github.com/${pkg.repo}.git`, pkg.name, pkg.branch, REPOS);
+	}
 }
 
 async function sync(pkg: Package) {
+	if (!fs.existsSync(`${REPOS}/${pkg.name}/${pkg.docs}`)) {
+		console.warn(`No linked repo found for ${pkg.name}`);
+		return;
+	}
+
 	const dest = `${DOCS}/${pkg.name}`;
 
 	fs.rmSync(dest, { force: true, recursive: true });
-	fs.cpSync(`${pkg.local}/${pkg.docs}`, dest, { recursive: true });
+	fs.cpSync(`${REPOS}/${pkg.name}/${pkg.docs}`, dest, { recursive: true });
 	migrate_meta_json(dest);
 
-	const modules = await pkg.process_modules(await read_types(`${pkg.local}/${pkg.pkg}/`, []), pkg);
+	let modules: Modules = [];
 
-	const files = glob(`${dest}/**/*.md`);
+	if (pkg.types !== null) {
+		modules = await read_types(`${REPOS}/${pkg.name}/${pkg.pkg}/${pkg.types}/`, []);
+		await pkg.process_modules?.(modules, pkg);
+	}
 
-	for (const file of files) {
+	for (const file of glob(`${dest}/**/*.md`)) {
 		const content = await preprocess(file, modules);
 
 		fs.writeFileSync(file, content);
 	}
 }
 
-for (const pkg of packages) {
+for (const pkg of filtered) {
 	await sync(pkg);
 }
 
-if (process.argv.includes('-w') || process.argv.includes('--watch')) {
-	for (const pkg of packages) {
+if (parsed.values.watch) {
+	for (const pkg of filtered) {
 		chokidar
 			.watch(`${REPOS}/${pkg.name}/${pkg.docs}`, { ignoreInitial: true })
 			.on('all', (event) => {
 				sync(pkg);
 			});
 	}
+
+	console.log(`\nwatching for changes in ${filtered.map((pkg) => pkg.name).join(', ')}`);
 }

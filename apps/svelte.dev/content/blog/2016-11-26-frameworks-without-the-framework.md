@@ -32,7 +32,7 @@ The [Svelte implementation of TodoMVC](https://svelte-todomvc.surge.sh/) weighs 
 
 And once your app _is_ up and running, according to [js-framework-benchmark](https://github.com/krausest/js-framework-benchmark) **Svelte is fast as heck**. It's faster than React. It's faster than Vue. It's faster than Angular, or Ember, or Ractive, or Preact, or Riot, or Mithril. It's competitive with Inferno, which is probably the fastest UI framework in the world, for now, because [Dominic Gannaway](https://twitter.com/trueadm) is a wizard. (Svelte is slower at removing elements. We're [working on it](https://github.com/sveltejs/svelte/issues/26).)
 
-It's basically as fast as vanilla JS, which makes sense because it _is_ vanilla JS – just vanilla JS that you didn't have to write.
+It's basically as fast as vanilla JS, which makes sense because it _is_ vanilla JS – just vanilla JS that you didn't have to write.
 
 ## But that's not the important thing
 

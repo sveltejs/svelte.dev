@@ -1,6 +1,6 @@
 export { render_content_markdown } from './renderer';
 
-export { transform, slugify, clean } from './utils';
+export { transform, slugify, clean, strip_origin } from './utils';
 
 // TODO none of these really belong here
 export type Modules = Array<{
@@ -15,6 +15,7 @@ export interface Declaration {
 	name: string;
 	comment: string;
 	deprecated?: string | null;
+	since?: string | null;
 	overloads: Array<{
 		snippet: string;
 		children: TypeElement[];

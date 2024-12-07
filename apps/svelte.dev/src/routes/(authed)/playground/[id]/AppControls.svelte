@@ -1,15 +1,16 @@
 <script lang="ts">
-	import { goto } from '$app/navigation';
+	import { page } from '$app/stores';
 	import UserMenu from './UserMenu.svelte';
 	import { Icon } from '@sveltejs/site-kit/components';
 	import { isMac } from '$lib/utils/compat.js';
 	import { get_app_context } from '../../app-context';
 	import type { Gist, User } from '$lib/db/types';
 	import { browser } from '$app/environment';
-	import SelectIcon from '$lib/components/SelectIcon.svelte';
+	import ModalDropdown from '$lib/components/ModalDropdown.svelte';
 	import { untrack } from 'svelte';
 	import SecondaryNav from '$lib/components/SecondaryNav.svelte';
 	import type { File } from 'editor';
+	import type { Repl } from '@sveltejs/repl';
 
 	interface Props {
 		examples: Array<{ title: string; examples: any[] }>;
@@ -38,7 +39,7 @@
 	let saving = $state(false);
 	let justSaved = $state(false);
 	let justForked = $state(false);
-	let select: ReturnType<typeof SelectIcon>;
+	let select: ReturnType<typeof ModalDropdown>;
 
 	function wait(ms: number) {
 		return new Promise((f) => setTimeout(f, ms));
@@ -169,6 +170,7 @@
 			// because otherwise we'll read `select.value` and re-run this
 			// when we navigate, which we don't want
 			untrack(() => {
+				// @ts-ignore not sure why this is erroring
 				select.value = '';
 			});
 		}
@@ -178,15 +180,31 @@
 <svelte:window on:keydown={handleKeydown} />
 
 <SecondaryNav>
-	<SelectIcon
-		bind:this={select}
-		title="examples"
-		value={gist.id}
-		onchange={async (e) => {
-			goto(`/playground/${e.currentTarget.value}`);
-		}}
-	>
-		<option value="untitled">Create new</option>
+	<ModalDropdown label="Examples">
+		<div class="secondary-nav-dropdown">
+			<a class="create-new" href="/playground/untitled">Create new</a>
+
+			{#each examples as section}
+				<details>
+					<summary>{section.title}</summary>
+
+					<ul>
+						{#each section.examples as example}
+							<li>
+								<a
+									href="/playground/{example.slug}"
+									aria-current={$page.params.id === example.slug ? 'page' : undefined}
+								>
+									{example.title}
+								</a>
+							</li>
+						{/each}
+					</ul>
+				</details>
+			{/each}
+		</div>
+
+		<!-- <option value="untitled">Create new</option>
 		<option disabled selected value="">or choose an example</option>
 		{#each examples as section}
 			<optgroup label={section.title}>
@@ -194,8 +212,8 @@
 					<option value={example.slug}>{example.title}</option>
 				{/each}
 			</optgroup>
-		{/each}
-	</SelectIcon>
+		{/each} -->
+	</ModalDropdown>
 
 	<input
 		bind:value={name}
@@ -206,7 +224,7 @@
 
 	<div class="buttons">
 		<button
-			class="raised icon"
+			class="raised icon tooltip"
 			disabled={saving || !user}
 			onclick={() => fork(false)}
 			aria-label={user ? 'fork' : 'log in to fork'}
@@ -219,7 +237,7 @@
 		</button>
 
 		<button
-			class="raised icon"
+			class="raised icon tooltip"
 			disabled={saving || !user}
 			onclick={save}
 			aria-label={user
@@ -262,30 +280,10 @@
 
 	.icon {
 		position: relative;
-		color: var(--sk-text-3);
+		color: var(--sk-fg-3);
 		line-height: 1;
 		background-size: 1.8rem;
 		z-index: 999;
-
-		&[aria-label]:hover::before {
-			content: '';
-			width: 1rem;
-			height: 1rem;
-			position: absolute;
-			background: var(--sk-text-3);
-			top: calc(100% + 0.5rem);
-			rotate: 45deg;
-		}
-
-		&[aria-label]:hover::after {
-			content: attr(aria-label);
-			position: absolute;
-			top: calc(100% + 1rem);
-			background: var(--sk-text-3);
-			color: var(--sk-back-4);
-			padding: 0.5em 0.5em;
-			border-radius: var(--sk-border-radius);
-		}
 
 		&.login {
 			width: auto;
@@ -323,7 +321,7 @@
 
 	input {
 		background: transparent;
-		border: 1px solid var(--sk-back-4);
+		border: 1px solid var(--sk-border);
 		border-radius: var(--sk-border-radius);
 		color: currentColor;
 		width: 0;
@@ -335,11 +333,15 @@
 
 	.badge {
 		position: absolute;
-		background: var(--sk-theme-1);
+		background: var(--sk-fg-accent);
 		border-radius: 50%;
 		width: 1rem;
 		height: 1rem;
 		top: -0.2rem;
 		right: -0.2rem;
+	}
+
+	.create-new {
+		margin-bottom: 1rem;
 	}
 </style>

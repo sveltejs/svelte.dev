@@ -23,7 +23,7 @@ In Svelte 4, a `let` declaration at the top level of a component was implicitly 
 Nothing else changes. `count` is still the number itself, and you read and write directly to it, without a wrapper like `.value` or `getCount()`.
 
 > [!DETAILS] Why we did this
-> `let` being implicitly reactive at the top level worked great, but it meant that reactivity was constrained - a `let` declaration anywhere else was not reactive. This forced you to resort to using stores when refactoring code out of the top level of components for reuse. This meant you had to learn an entirely separate reactivity model, and the result often wasn't as nice to work with. Because reactivity is more explicit in Svelte 5, you can keep using the same API in an outside the top level of components. Head to [the tutorial](/tutorial) to learn more.
+> `let` being implicitly reactive at the top level worked great, but it meant that reactivity was constrained - a `let` declaration anywhere else was not reactive. This forced you to resort to using stores when refactoring code out of the top level of components for reuse. This meant you had to learn an entirely separate reactivity model, and the result often wasn't as nice to work with. Because reactivity is more explicit in Svelte 5, you can keep using the same API outside the top level of components. Head to [the tutorial](/tutorial) to learn more.
 
 ### $: -> $derived/$effect
 
@@ -36,7 +36,7 @@ In Svelte 4, a `$:` statement at the top level of a component could be used to d
 </script>
 ```
 
-As with `$state`, nothing else changes. `double` is still the number itself, and you read it directly, without a wrapper like `.value` or `getCount()`.
+As with `$state`, nothing else changes. `double` is still the number itself, and you read it directly, without a wrapper like `.value` or `getDouble()`.
 
 A `$:` statement could also be used to create side effects. In Svelte 5, this is achieved using the `$effect` rune:
 
@@ -58,10 +58,10 @@ A `$:` statement could also be used to create side effects. In Svelte 5, this is
 >
 > - `$:` only updated directly before rendering, which meant you could read stale values in-between rerenders
 > - `$:` only ran once per tick, which meant that statements may run less often than you think
-> - `$:` dependencies were determined through static analysis of the dependencies. This worked in most cases, but could break in subtle ways during a refactoring where dependencies would be > for example moved into a function and no longer be visible as a result
-> - `$:` statements were also ordered by using static analysis of the dependencies. In some cases there could be ties and the ordering would be wrong as a result, needing manual > interventions. Ordering could also break while refactoring code and some dependencies no longer being visible as a result.
+> - `$:` dependencies were determined through static analysis of the dependencies. This worked in most cases, but could break in subtle ways during a refactoring where dependencies would be for example moved into a function and no longer be visible as a result
+> - `$:` statements were also ordered by using static analysis of the dependencies. In some cases there could be ties and the ordering would be wrong as a result, needing manual interventions. Ordering could also break while refactoring code and some dependencies no longer being visible as a result.
 >
-> Lastly, it wasn't TypeScript-friendly (our editor tooling had to jump through some hoops to make it valid for TypeScript), which was a blocker for making Svelte's reactivity model truly > universal.
+> Lastly, it wasn't TypeScript-friendly (our editor tooling had to jump through some hoops to make it valid for TypeScript), which was a blocker for making Svelte's reactivity model truly universal.
 >
 > `$derived` and `$effect` fix all of these by
 >
@@ -107,7 +107,7 @@ In Svelte 5, the `$props` rune makes this straightforward without any additional
 	export { klass as class};---
 	+++let { class: klass, ...rest } = $props();+++
 </script>
-<button {class} {...---$$restProps---+++rest+++}>click me</button>
+<button class={klass} {...---$$restProps---+++rest+++}>click me</button>
 ```
 
 > [!DETAILS] Why we did this
@@ -169,11 +169,11 @@ This function is deprecated in Svelte 5. Instead, components should accept _call
 
 <Pump
 	---on:---inflate={(power) => {
-		size += power---.details---;
+		size += power---.detail---;
 		if (size > 75) burst = true;
 	}}
 	---on:---deflate={(power) => {
-		if (size > 0) size -= power---.details---;
+		if (size > 0) size -= power---.detail---;
 	}}
 />
 
@@ -317,11 +317,11 @@ When spreading props, local event handlers must go _after_ the spread, or they r
 > - import the function
 > - call the function to get a dispatch function
 > - call said dispatch function with a string and possibly a payload
-> - retrieve said payload on the other end through a `.details` property, because the event itself was always a `CustomEvent`
+> - retrieve said payload on the other end through a `.detail` property, because the event itself was always a `CustomEvent`
 >
-> It was always possible to use component callback props, but because you had to listen to dom events using `on:`, it made sense to use `createEventDispatcher` for component events due to syntactical consistency. Now that we have event attributes (`onclick`), it's the other way around: Callback props are now the more sensible thing to do.
+> It was always possible to use component callback props, but because you had to listen to DOM events using `on:`, it made sense to use `createEventDispatcher` for component events due to syntactical consistency. Now that we have event attributes (`onclick`), it's the other way around: Callback props are now the more sensible thing to do.
 >
-> The removal of event modifiers is arguably one of the changes that seems like a step back for those who've liked the shorthand syntax of event modifiers. Given that they are not used that frequently, we traded a smaller surface area for more explicitness. Modifiers also were inconsistent, because most of them were only useable on Dom elements.
+> The removal of event modifiers is arguably one of the changes that seems like a step back for those who've liked the shorthand syntax of event modifiers. Given that they are not used that frequently, we traded a smaller surface area for more explicitness. Modifiers also were inconsistent, because most of them were only useable on DOM elements.
 >
 > Multiple listeners for the same event are also no longer possible, but it was something of an anti-pattern anyway, since it impedes readability: if there are many attributes, it becomes harder to spot that there are two handlers unless they are right next to each other. It also implies that the two handlers are independent, when in fact something like `event.stopImmediatePropagation()` inside `one` would prevent `two` from being called.
 >
@@ -376,7 +376,7 @@ If you wanted multiple UI placeholders, you had to use named slots. In Svelte 5,
 </main>
 
 <footer>
-	---<slot name="header" />---
+	---<slot name="footer" />---
 	+++{@render footer()}+++
 </footer>
 ```
@@ -429,7 +429,7 @@ In Svelte 4, you would pass data to a `<slot />` and then retrieve it with `let:
 > - the `let:` syntax was confusing to many people as it _creates_ a variable whereas all other `:` directives _receive_ a variable
 > - the scope of a variable declared with `let:` wasn't clear. In the example above, it may look like you can use the `item` slot prop in the `empty` slot, but that's not true
 > - named slots had to be applied to an element using the `slot` attribute. Sometimes you didn't want to create an element, so we had to add the `<svelte:fragment>` API
-> - named slots could also be applied to a component, which changed the semantics of where `let:` directives are available (even today us maintainers often don't know which way around it > works)
+> - named slots could also be applied to a component, which changed the semantics of where `let:` directives are available (even today us maintainers often don't know which way around it works)
 >
 > Snippets solve all of these problems by being much more readable and clear. At the same time they're more powerful as they allow you to define sections of UI that you can render _anywhere_, not just passing them as props to a component.
 
@@ -441,7 +441,7 @@ We thought the same, which is why we provide a migration script to do most of th
 
 - bump core dependencies in your `package.json`
 - migrate to runes (`let` -> `$state` etc)
-- migrate to event attributes for Dom elements (`on:click` -> `onclick`)
+- migrate to event attributes for DOM elements (`on:click` -> `onclick`)
 - migrate slot creations to render tags (`<slot />` -> `{@render children()}`)
 - migrate slot usages to snippets (`<div slot="x">...</div>` -> `{#snippet x()}<div>...</div>{/snippet}`)
 - migrate obvious component creations (`new Component(...)` -> `mount(Component, ...)`)
@@ -599,13 +599,14 @@ To declare that a component of a certain type is required:
 
 ```svelte
 <script lang="ts">
-	import type { Component } from 'svelte';
+	import type { ---SvelteComponent--- +++Component+++ } from 'svelte';
 	import {
 		ComponentA,
 		ComponentB
 	} from 'component-library';
 
-	let component: Component<{ foo: string }> = $state(
+	---let component: typeof SvelteComponent<{ foo: string }>---
+	+++let component: Component<{ foo: string }>+++ = $state(
 		Math.random() ? ComponentA : ComponentB
 	);
 </script>
@@ -821,6 +822,8 @@ The `foreign` namespace was only useful for Svelte Native, which we're planning 
 `beforeUpdate` no longer runs twice on initial render if it modifies a variable referenced in the template.
 
 `afterUpdate` callbacks in a parent component will now run after `afterUpdate` callbacks in any child components.
+
+`beforeUpdate/afterUpdate` no longer run when the component contains a `<slot>` and its content is updated.
 
 Both functions are disallowed in runes mode — use `$effect.pre(...)` and `$effect(...)` instead.
 

@@ -25,9 +25,9 @@ There's also a _huge_ showcase to cover... so let's jump in!
 ## Svelte changes
 
 - New accessibility warnings, `a11y-click-events-have-key-events` and `a11y-no-noninteractive-tabindex`, will now warn when your components lack required key events or tabindex. While `a11y-role-has-required-aria-props` will no longer warn when elements match their semantic role (**3.51.0**)
-- `--style-props` are now supported on `<svelte:component>` and `<svg>` (**3.51.0**, Component Example: [Before](https://svelte.dev/repl/48984f20503f4959b70f24f4130d164b?version=3.47.0) and [After](https://svelte.dev/repl/48984f20503f4959b70f24f4130d164b?version=3.51.0), SVG Example: [Before](https://svelte.dev/repl/b7a3f94255914044b35462234ccaea43?version=3.50.0) and [After](https://svelte.dev/repl/b7a3f94255914044b35462234ccaea43?version=3.51.0))
-- "nullish" values for component event handlers are now supported (**3.51.0**, [Example](https://svelte.dev/repl/9228022922af4c76af68ce42349ccbf9?version=3.51.0))
-- Scoped styles can now be applied to `<svelte:element>` (**3.51.0**, [Example](https://svelte.dev/repl/23d982fc6f4f4f06a6aa227860fa2d84?version=3.51.0))
+- `--style-props` are now supported on `<svelte:component>` and `<svg>` (**3.51.0**, Component Example: [Before](/playground/48984f20503f4959b70f24f4130d164b?version=3.47.0) and [After](/playground/48984f20503f4959b70f24f4130d164b?version=3.51.0), SVG Example: [Before](/playground/b7a3f94255914044b35462234ccaea43?version=3.50.0) and [After](/playground/b7a3f94255914044b35462234ccaea43?version=3.51.0))
+- "nullish" values for component event handlers are now supported (**3.51.0**, [Example](/playground/9228022922af4c76af68ce42349ccbf9?version=3.51.0))
+- Scoped styles can now be applied to `<svelte:element>` (**3.51.0**, [Example](/playground/23d982fc6f4f4f06a6aa227860fa2d84?version=3.51.0))
 - You can now use `important` in inline style tags: `style:foo|important` (**3.52.0**, [#7365](https://github.com/sveltejs/svelte/issues/7365))
 - A warning will now be thrown when using `<a target="_blank">` without `rel="noreferrer"` (**3.52.0**, [#6188](https://github.com/sveltejs/svelte/issues/6188))
 
@@ -77,7 +77,7 @@ _To Read_
 - [Using Sequelize with SvelteKit](https://cherrific.io/0xedB00816FB204b4CD9bCb45FF2EF693E99723484/story/23) by MetaZebre
 - [Implementing Maintenance mode on a SvelteKit site](https://blog.encodeart.dev/implementing-maintenance-mode-on-a-sveltekit-site) by Andreas Söderlund
 - [ActionStore: Real-time Svelte stores for Rails](https://dev.to/buhrmi/actionstore-real-time-svelte-stores-for-rails-4jhg) by Stefan Buhrmester
-- [Svelte CSS Image Slider: with Bouncy Overscroll](https://rodneylab.com/svelte-css-image-slider/) and [SvelteKit Local Edge Functions: Edge on Localhost](https://rodneylab.com/sveltekit-local-edge-functions/) by Rodney Lab
+- [Svelte CSS Image Slider: with Bouncy Overscroll](https://rodneylab.com/svelte-css-image-slider/) and [SvelteKit Local Edge Functions: Edge on Localhost](https://rodneylab.com/sveltekit-local-edge-functions/) by Rodney Lab
 - [Creating a Svelte Tabs component with Slot props](https://blog.openreplay.com/creating-a-svelte-tabs-component-with-slot-props/) by Shinichi Okada
 - [Sky Cart: An Open Source, cloud-agnostic shopping cart using Stripe Checkout](https://dev.to/stripe/sky-cart-an-open-source-cloud-agnostic-shopping-cart-using-stripe-checkout-o5k) by Mike Bifulco for Stripe
 

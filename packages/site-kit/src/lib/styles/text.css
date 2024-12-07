@@ -14,7 +14,7 @@
 	padding-left: 1rem;
 	border-radius: 0;
 	box-shadow: none;
-	border-top: 1px solid var(--sk-back-4);
+	border-top: 1px solid var(--sk-border);
 }
 
 .ts-block-property-details {
@@ -39,7 +39,7 @@
 	.tag {
 		font: var(--sk-font-ui-medium);
 		text-transform: uppercase;
-		color: var(--sk-text-4);
+		color: var(--sk-fg-4);
 	}
 }
 

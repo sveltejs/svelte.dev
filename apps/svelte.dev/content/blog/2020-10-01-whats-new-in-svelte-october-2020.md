@@ -9,10 +9,10 @@ Welcome to the first edition of our "What's new in Svelte" series! We'll try to 
 
 ## New features
 
-1. `use:obj.method` allows functions defined within objects to be used within actions ([Example](https://svelte.dev/repl/c305722adb4a4545b27b198ea8ff9bde?version=3.27.0), **3.26.0**, warning removed in **3.27.0**)
-2. `_` is now supported as a "numerical separator", similar to a `.` or `,` ([Example](https://svelte.dev/repl/844c39e91d1248649fe54af839fab570?version=3.26.0), **3.26.0**)
-3. `import.meta` now works in template expressions ([Example](https://svelte.dev/repl/9630de41957a4c80a4fce264360a6bc7?version=3.26.0), **3.26.0**)
-4. CSS Selectors with `~` and `+` combinators are now supported ([Example](https://svelte.dev/repl/91ad9257d2d1430185a504a18cc60172?version=3.29.0), **3.27.0**, with a compiler fix in **3.29.0**)
+1. `use:obj.method` allows functions defined within objects to be used within actions ([Example](/playground/c305722adb4a4545b27b198ea8ff9bde?version=3.27.0), **3.26.0**, warning removed in **3.27.0**)
+2. `_` is now supported as a "numerical separator", similar to a `.` or `,` ([Example](/playground/844c39e91d1248649fe54af839fab570?version=3.26.0), **3.26.0**)
+3. `import.meta` now works in template expressions ([Example](/playground/9630de41957a4c80a4fce264360a6bc7?version=3.26.0), **3.26.0**)
+4. CSS Selectors with `~` and `+` combinators are now supported ([Example](/playground/91ad9257d2d1430185a504a18cc60172?version=3.29.0), **3.27.0**, with a compiler fix in **3.29.0**)
 5. The `{#key}` block is now available to key arbitrary content on an expression. Whenever the expression changes, the contents inside the `{#key}` block will be destroyed and recreated. For an in-depth explanation and to find out how it's implemented, check out the [new blog post](https://lihautan.com/contributing-to-svelte-implement-key-block/) of Svelte Team member Tan Li Hau. ([More info](https://github.com/sveltejs/svelte/issues/1469), **3.29.0**)
 6. Slots can now be forwarded through child components! This used to only be possible by adding extra wrapper `<div>`s ([More info](https://github.com/sveltejs/svelte/issues/2079), **3.29.0**)
 7. When using TypeScript, you can now type the `createEventDispatcher` method:
@@ -43,7 +43,7 @@ In addition, Sapper's CSS handling has been rewritten over the course of recent 
 
 ## Impactful bug fixes
 
-- CSS compilation will no longer remove rules for the `open` attribute on `<details>` elements ([Example](https://svelte.dev/repl/ab4c0c177d1f4fab92f46eb8539cea9a?version=3.26.0), **3.26.0**)
+- CSS compilation will no longer remove rules for the `open` attribute on `<details>` elements ([Example](/playground/ab4c0c177d1f4fab92f46eb8539cea9a?version=3.26.0), **3.26.0**)
 - `prettier-plugin-svelte` will do a better job now at dealing with whitespaces, especially around inline elements. It will also preserve formatting inside `<pre>` tags and will no longer format languages which are not supported by Prettier, like SASS, Pug or Stylus.
 
 ## Coming up
@@ -56,8 +56,8 @@ For all the features and bugfixes see the CHANGELOG for [Svelte](https://github.
 
 ## Svelte Showcase
 
-- [This CustomMenu example](https://svelte.dev/repl/3a33725c3adb4f57b46b597f9dade0c1?version=3.25.0) demos how to replace the OS right-click menu
-- [GitHub Tetris](https://svelte.dev/repl/cc1eaa7c66964fedb5e70e3ecbbaa0e1?version=3.25.1) lets you play a Tetris-like game in a git commit history
+- [This CustomMenu example](/playground/3a33725c3adb4f57b46b597f9dade0c1?version=3.25.0) demos how to replace the OS right-click menu
+- [GitHub Tetris](/playground/cc1eaa7c66964fedb5e70e3ecbbaa0e1?version=3.25.1) lets you play a Tetris-like game in a git commit history
 - [Who are my representatives?](https://whoaremyrepresentatives.us/) is a website built with Svelte to help US residents get more info on their congressional representatives
 - [Pick Palette](https://github.com/bluwy/pick-palette) is a color palette manager made with Svelte!
 
@@ -72,7 +72,7 @@ For all the features and bugfixes see the CHANGELOG for [Svelte](https://github.
 - [svelte-zoom](https://github.com/vaheqelyan/svelte-zoom) brings "nearly native" pan-and-zoom to images on desktop and mobile
 - [svelte-materialify](https://github.com/TheComputerM/svelte-materialify) is a Material component library for Svelte with over 50 components
 - [svelte-undoable](https://github.com/macfja/svelte-undoable) makes it easy to introduce undo and redo functionality using `bind:`
-- [This Tilt component](https://svelte.dev/repl/7b23ad9d2693424482cd411b0378b55b?version=3.24.1) implements a common UX pattern where the hovered element tilts to follow the mouse
+- [This Tilt component](/playground/7b23ad9d2693424482cd411b0378b55b?version=3.24.1) implements a common UX pattern where the hovered element tilts to follow the mouse
 
 ### Lots of examples of how use JS tech came out this month:
 

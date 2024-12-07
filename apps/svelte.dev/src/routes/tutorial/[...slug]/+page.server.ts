@@ -9,7 +9,8 @@ const redirects = new Map([
 	['reactive-statements', 'svelte/effects'],
 	['updating-arrays-and-objects', 'svelte/deep-state'],
 	['event-modifiers', 'svelte/capturing'],
-	['dom-event-forwarding', 'svelte/spreading-events']
+	['dom-event-forwarding', 'svelte/spreading-events'],
+	['svelte/introducing-stores', 'stores']
 ]);
 
 export async function load({ params }) {
@@ -38,6 +39,9 @@ export function entries() {
 
 	// So that redirects from these URLs to /tutorial/<svelte/kit>/... work
 	entries.push({ slug: 'svelte' }, { slug: 'kit' });
+
+	// So that /tutorial/ redirects to /tutorial
+	entries.push({ slug: '' });
 
 	return entries;
 }

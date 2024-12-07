@@ -1,6 +1,7 @@
 import * as cookie from 'cookie';
 import flru from 'flru';
 import { client } from './client.js';
+import { error } from '@sveltejs/kit';
 
 /** @typedef {import('./types').User} User */
 
@@ -13,27 +14,31 @@ const session_cache = flru(1000);
  * @param {import('./types').GitHubUser} user
  */
 export async function create(user) {
-	const { data, error } = await client.rpc('login', {
+	if (!client) {
+		error(500, 'Database client is not configured');
+	}
+
+	const result = await client.rpc('login', {
 		user_github_id: user.github_id,
 		user_github_name: user.github_name,
 		user_github_login: user.github_login,
 		user_github_avatar_url: user.github_avatar_url
 	});
 
-	if (error) {
-		throw new Error(error.message);
+	if (result.error) {
+		throw new Error(result.error.message);
 	}
 
-	session_cache.set(data.sessionid, {
-		id: data.userid,
+	session_cache.set(result.data.sessionid, {
+		id: result.data.userid,
 		github_name: user.github_name,
 		github_login: user.github_login,
 		github_avatar_url: user.github_avatar_url
 	});
 
 	return {
-		sessionid: data.sessionid,
-		expires: new Date(data.expires)
+		sessionid: result.data.sessionid,
+		expires: new Date(result.data.expires)
 	};
 }
 
@@ -42,7 +47,7 @@ export async function create(user) {
  * @returns {Promise<User | null>}
  */
 export async function read(sessionid) {
-	if (!sessionid) return null;
+	if (!sessionid || !client) return null;
 
 	if (!session_cache.get(sessionid)) {
 		session_cache.set(
@@ -63,10 +68,14 @@ export async function read(sessionid) {
 
 /** @param {string} sessionid */
 export async function destroy(sessionid) {
-	const { error } = await client.rpc('logout', { sessionid });
+	if (!client) {
+		error(500, 'Database client is not configured');
+	}
 
-	if (error) {
-		throw new Error(error.message);
+	const result = await client.rpc('logout', { sessionid });
+
+	if (result.error) {
+		throw new Error(result.error.message);
 	}
 
 	session_cache.set(sessionid, null);

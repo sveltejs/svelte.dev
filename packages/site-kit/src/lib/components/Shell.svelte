@@ -51,15 +51,15 @@ The main shell of the application. It provides a slot for the top navigation, th
 	main {
 		position: relative;
 		margin: 0 auto;
-		padding-top: var(--sk-nav-height);
-		padding-bottom: var(--sk-banner-height);
+		padding-top: var(--sk-banner-height);
+		padding-bottom: 0;
 		height: 100%;
 	}
 
-	@media (max-width: 799px) {
+	@media (min-width: 832px) {
 		main {
-			padding-top: var(--sk-banner-height);
-			padding-bottom: 0;
+			padding-top: var(--sk-nav-height);
+			padding-bottom: var(--sk-banner-height);
 		}
 	}
 </style>

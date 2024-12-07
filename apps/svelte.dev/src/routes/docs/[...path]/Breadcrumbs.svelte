@@ -11,7 +11,7 @@
 <style>
 	.breadcrumbs {
 		font: var(--sk-font-ui-small);
-		color: var(--sk-text-4);
+		color: var(--sk-fg-4);
 		text-transform: uppercase;
 
 		span:not(:last-child)::after {

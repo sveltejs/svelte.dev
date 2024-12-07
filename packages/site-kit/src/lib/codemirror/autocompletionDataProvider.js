@@ -493,7 +493,7 @@ const is_state = (node) => {
 
 /**
  * Returns `true` if we're already in a valid call expression, e.g.
- * changing an existing `$state()` to `$state.frozen()`
+ * changing an existing `$state()` to `$state.raw()`
  * @type {import("./types").Test}
  */
 const is_state_call = (node) => {

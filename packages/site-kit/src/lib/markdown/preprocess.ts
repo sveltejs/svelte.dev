@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { SHIKI_LANGUAGE_MAP } from './utils';
+import { SHIKI_LANGUAGE_MAP, strip_origin } from './utils';
 import type { Declaration, TypeElement, Modules } from './index';
 
 /**
@@ -122,11 +122,15 @@ function render_declaration(declaration: Declaration, full: boolean) {
 	let content = '';
 
 	if (declaration.deprecated) {
-		content += `<blockquote class="tag deprecated">\n\n${declaration.deprecated}\n\n</blockquote>\n\n`;
+		content += `<blockquote class="tag deprecated note">\n\n${declaration.deprecated}\n\n</blockquote>\n\n`;
+	}
+
+	if (declaration.since) {
+		content += `<blockquote class="since note">\n\nAvailable since ${declaration.since}\n\n</blockquote>\n\n`;
 	}
 
 	if (declaration.comment) {
-		content += declaration.comment + '\n\n';
+		content += strip_origin(declaration.comment) + '\n\n';
 	}
 
 	return (
@@ -194,7 +198,7 @@ function stringify_module(module: Modules[0]) {
 	}
 
 	if (module.comment) {
-		content += `${module.comment}\n\n`;
+		content += `${strip_origin(module.comment)}\n\n`;
 	}
 
 	for (const declaration of module.exports || []) {

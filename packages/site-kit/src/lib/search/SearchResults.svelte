@@ -32,9 +32,9 @@ Renders a list of search results
 	.info {
 		padding: var(--padding);
 		font: var(--sk-font-ui-medium);
-		color: var(--sk-text-4);
+		color: var(--sk-fg-4);
 		text-transform: uppercase;
-		background-color: var(--sk-back-2);
+		background-color: var(--sk-bg-2);
 		border-radius: 0 0 var(--sk-border-radius) var(--sk-border-radius);
 		pointer-events: all;
 		margin: 0;

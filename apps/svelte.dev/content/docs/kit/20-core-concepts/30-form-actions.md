@@ -140,11 +140,8 @@ export const actions = {
 ```svelte
 <!--- file: src/routes/login/+page.svelte --->
 <script>
-	/** @type {import('./$types').PageData} */
-	export let data;
-
-	/** @type {import('./$types').ActionData} */
-	export let form;
+	/** @type {{ data: import('./$types').PageData, form: import('./$types').ActionData }} */
+	let { data, form } = $props();
 </script>
 
 {#if form?.success}
@@ -154,9 +151,12 @@ export const actions = {
 {/if}
 ```
 
+> [!LEGACY]
+> In Svelte 4, you'd use `export let data` and `export let form` instead to declare properties
+
 ### Validation errors
 
-If the request couldn't be processed because of invalid data, you can return validation errors — along with the previously submitted form values — back to the user so that they can try again. The `fail` function lets you return an HTTP status code (typically 400 or 422, in the case of validation errors) along with the data. The status code is available through `$page.status` and the data through `form`:
+If the request couldn't be processed because of invalid data, you can return validation errors — along with the previously submitted form values — back to the user so that they can try again. The `fail` function lets you return an HTTP status code (typically 400 or 422, in the case of validation errors) along with the data. The status code is available through `$page.status` and the data through `form`:
 
 ```js
 /// file: src/routes/login/+page.server.js
@@ -195,7 +195,7 @@ export const actions = {
 };
 ```
 
-> [!NOTE] Note that as a precaution, we only return the email back to the page — not the password.
+> [!NOTE] Note that as a precaution, we only return the email back to the page — not the password.
 
 ```svelte
 /// file: src/routes/login/+page.svelte
@@ -339,8 +339,8 @@ The easiest way to progressively enhance a form is to add the `use:enhance` acti
 <script>
 	+++import { enhance } from '$app/forms';+++
 
-	/** @type {import('./$types').ActionData} */
-	export let form;
+	/** @type {{ form: import('./$types').ActionData }} */
+	let { form } = $props();
 </script>
 
 <form method="POST" +++use:enhance+++>
@@ -390,8 +390,8 @@ If you return a callback, you may need to reproduce part of the default `use:enh
 <script>
 	import { enhance, +++applyAction+++ } from '$app/forms';
 
-	/** @type {import('./$types').ActionData} */
-	export let form;
+	/** @type {{ form: import('./$types').ActionData }} */
+	let { form } = $props();
 </script>
 
 <form
@@ -427,11 +427,8 @@ We can also implement progressive enhancement ourselves, without `use:enhance`, 
 	import { invalidateAll, goto } from '$app/navigation';
 	import { applyAction, deserialize } from '$app/forms';
 
-	/** @type {import('./$types').ActionData} */
-	export let form;
-
-	/** @type {any} */
-	let error;
+	/** @type {{ form: import('./$types').ActionData }} */
+	let { form } = $props();
 
 	/** @param {{ currentTarget: EventTarget & HTMLFormElement}} event */
 	async function handleSubmit(event) {
@@ -454,7 +451,7 @@ We can also implement progressive enhancement ourselves, without `use:enhance`, 
 	}
 </script>
 
-<form method="POST" on:submit|preventDefault={handleSubmit}>
+<form method="POST" onsubmit|preventDefault={handleSubmit}>
 	<!-- content -->
 </form>
 ```
@@ -487,7 +484,7 @@ Form actions are the preferred way to send data to the server, since they can be
 	}
 </script>
 
-<button on:click={rerun}>Rerun CI</button>
+<button onclick={rerun}>Rerun CI</button>
 ```
 
 ```js

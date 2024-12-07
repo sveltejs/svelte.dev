@@ -30,4 +30,4 @@ Then, add them to the `<li>` element, using the `todo.id` property as a key to m
 >
 ```
 
-Now, when you toggle items, they move smoothly to their new location. The non-transitioning items still jump around awkwardly — we can fix that in the next exercise.
+Now, when you toggle items, they move smoothly to their new location. The non-transitioning items still jump around awkwardly — we can fix that in the next exercise.

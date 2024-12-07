@@ -158,7 +158,7 @@
 		overflow-x: hidden;
 		padding: 1rem 0rem;
 		margin: 0;
-		background: var(--sk-back-3);
+		background: var(--sk-bg-3);
 		list-style: none;
 	}
 

@@ -4,7 +4,6 @@
 	import type { Gist } from '$lib/db/types';
 	import { Repl } from '@sveltejs/repl';
 	import { theme } from '@sveltejs/site-kit/stores';
-	import { onMount } from 'svelte';
 	import { mapbox_setup } from '../../../../config.js';
 	import AppControls from './AppControls.svelte';
 	import { compress_and_encode_text, decode_and_decompress_text } from './gzip.js';
@@ -18,15 +17,18 @@
 	let repl = $state() as ReturnType<typeof Repl>;
 	let name = $state(data.gist.name);
 	let modified = $state(false);
-	let version = data.version;
 	let setting_hash: any = null;
+
+	// svelte-ignore non_reactive_update
+	let version = $page.url.searchParams.get('version') || 'latest';
+	let is_pr_or_commit_version = version.startsWith('pr-') || version.startsWith('commit-');
 
 	// Hashed URLs are less safe (we can't delete malicious REPLs), therefore
 	// don't allow links to escape the sandbox restrictions
 	const can_escape = browser && !$page.url.hash;
 
-	onMount(() => {
-		if (version !== 'local') {
+	if (version !== 'local' && !is_pr_or_commit_version) {
+		$effect(() => {
 			fetch(`https://unpkg.com/svelte@${version}/package.json`)
 				.then((r) => r.json())
 				.then((pkg) => {
@@ -40,8 +42,8 @@
 						replaceState(url, {});
 					}
 				});
-		}
-	});
+		});
+	}
 
 	afterNavigate(() => {
 		name = data.gist.name;
@@ -67,8 +69,8 @@
 
 		if (!hash && !saved) {
 			repl?.set({
-				// TODO make this munging unnecessary
-				files: structuredClone(data.gist.components).map(munge)
+				// TODO make this munging unnecessary (using JSON instead of structuredClone for better browser compat)
+				files: JSON.parse(JSON.stringify(data.gist.components)).map(munge)
 			});
 
 			modified = false;
@@ -148,11 +150,6 @@
 		}
 	}
 
-	const svelteUrl =
-		browser && version === 'local'
-			? `${location.origin}/playground/local`
-			: `https://unpkg.com/svelte@${version}`;
-
 	const relaxed = $derived(data.gist.relaxed || (data.user && data.user.id === data.gist.owner));
 </script>
 
@@ -198,7 +195,7 @@
 		<div style="display: contents" onfocusout={update_hash}>
 			<Repl
 				bind:this={repl}
-				{svelteUrl}
+				svelteVersion={version}
 				{relaxed}
 				{can_escape}
 				injectedJS={mapbox_setup}
@@ -215,7 +212,7 @@
 		height: calc(100% - var(--sk-nav-height) - var(--sk-banner-height));
 		height: calc(100dvh - var(--sk-nav-height) - var(--sk-banner-height));
 		overflow: hidden;
-		background-color: var(--sk-back-1);
+		background-color: var(--sk-bg-1);
 		box-sizing: border-box;
 		display: flex;
 		flex-direction: column;

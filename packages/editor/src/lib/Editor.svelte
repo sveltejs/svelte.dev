@@ -2,7 +2,6 @@
 	import { BROWSER } from 'esm-env';
 	import { setDiagnostics } from '@codemirror/lint';
 	import { EditorView } from '@codemirror/view';
-	import type { Diagnostic } from '@codemirror/lint';
 	import { Workspace, type File } from './Workspace.svelte.js';
 	import './codemirror.css';
 
@@ -34,50 +33,8 @@
 		};
 	});
 
-	// TODO move into workspace
 	$effect(() => {
-		const diagnostics: Diagnostic[] = [];
-
-		const error = workspace.compiled[workspace.current.name]?.error;
-		const current_warnings = workspace.compiled[workspace.current.name]?.result?.warnings ?? [];
-
-		if (error) {
-			diagnostics.push({
-				severity: 'error',
-				from: error.position![0],
-				to: error.position![1],
-				message: error.message,
-				renderMessage: () => {
-					const span = document.createElement('span');
-					span.innerHTML = `${error.message
-						.replace(/&/g, '&amp;')
-						.replace(/</g, '&lt;')
-						.replace(/`(.+?)`/g, `<code>$1</code>`)} <strong>(${error.code})</strong>`;
-
-					return span;
-				}
-			});
-		}
-
-		for (const warning of current_warnings) {
-			diagnostics.push({
-				severity: 'warning',
-				from: warning.start!.character,
-				to: warning.end!.character,
-				message: warning.message,
-				renderMessage: () => {
-					const span = document.createElement('span');
-					span.innerHTML = `${warning.message
-						.replace(/&/g, '&amp;')
-						.replace(/</g, '&lt;')
-						.replace(/`(.+?)`/g, `<code>$1</code>`)} <strong>(${warning.code})</strong>`;
-
-					return span;
-				}
-			});
-		}
-
-		const transaction = setDiagnostics(editor_view.state, diagnostics);
+		const transaction = setDiagnostics(editor_view.state, workspace.diagnostics);
 		editor_view.dispatch(transaction);
 	});
 </script>
@@ -95,14 +52,25 @@
 	}}
 />
 
+<!-- svelte-ignore a11y_no_static_element_interactions -->
 <div
 	class="container"
 	bind:this={container}
-	onfocusin={() => {
+	onpointerdown={() => {
+		workspace.enable_tab_indent();
+	}}
+	onkeydown={(e) => {
+		if (e.key !== 'Tab') {
+			workspace.enable_tab_indent();
+		}
+	}}
+	onfocusin={(e) => {
 		clearTimeout(remove_focus_timeout);
 		preserve_editor_focus = true;
 	}}
 	onfocusout={() => {
+		workspace.disable_tab_indent();
+
 		// Heuristic: user did refocus themmselves if iframe_took_focus
 		// doesn't happen in the next few miliseconds. Needed
 		// because else navigations inside the iframe refocus the editor.
@@ -137,26 +105,20 @@
 		display: grid;
 		grid-template-columns: 4rem 1fr;
 		grid-gap: 1rem;
-		padding: 1rem 0;
-		font: var(--sk-font-mono);
+		padding: 0.4rem 0;
 	}
 
 	.fake * {
-		color: #ccc;
+		color: var(--sk-fg-4);
+		font: var(--sk-font-mono);
 	}
 
 	.fake-gutter {
 		text-align: right;
-		padding-right: 3px;
+		padding-right: 0.7rem;
 	}
 
 	.fake-content {
 		padding: 0 1rem;
-	}
-
-	@media (prefers-color-scheme: dark) {
-		.fake * {
-			color: #666;
-		}
 	}
 </style>

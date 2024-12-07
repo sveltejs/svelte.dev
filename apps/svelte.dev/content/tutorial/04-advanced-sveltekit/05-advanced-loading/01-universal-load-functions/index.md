@@ -29,7 +29,8 @@ We can now use the `component` returned from these `load` functions like any oth
 	<a href="/blue">blue</a>
 
 +++	{#if $page.data.component}
-		<svelte:component this={$page.data.component} />
+		{@const Component = $page.data.component}
+		<Component />
 	{/if}+++
 </nav>
 ```

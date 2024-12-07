@@ -169,7 +169,7 @@
 		min-height: 0;
 		height: 100%;
 		max-height: 100%;
-		background: var(--sk-back-2);
+		background: var(--sk-bg-2);
 		--menu-width: 5.4rem;
 	}
 
@@ -180,7 +180,7 @@
 		resize: none;
 		box-sizing: border-box;
 		border: none;
-		background: var(--sk-back-2);
+		background: var(--sk-bg-2);
 	}
 
 	.terminal {
@@ -191,7 +191,7 @@
 		height: 80%;
 		font: var(--sk-font-mono);
 		padding: 1rem;
-		border-top: 1px solid var(--sk-text-4);
+		border-top: 1px solid var(--sk-border);
 		background: rgba(255, 255, 255, 0.5);
 		transform: translate(0, 100%);
 		-webkit-transform: translate3d(0, 100%, 0.01);

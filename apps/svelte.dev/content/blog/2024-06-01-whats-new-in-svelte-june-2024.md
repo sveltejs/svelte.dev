@@ -5,7 +5,7 @@ author: Dani Sandoval
 authorURL: https://dreamindani.com
 ---
 
-The maintainers have been hard at work getting the [Svelte 5 Release Candidate](https://svelte.dev/blog/svelte-5-release-candidate) ready for release. In this month's newsletter, you'll find highlights from the pre-release [CHANGELOG](https://github.com/sveltejs/svelte/blob/main/packages/svelte/CHANGELOG.md) and a host of items from our community showcase.
+The maintainers have been hard at work getting the [Svelte 5 Release Candidate](/blog/svelte-5-release-candidate) ready for release. In this month's newsletter, you'll find highlights from the pre-release [CHANGELOG](https://github.com/sveltejs/svelte/blob/main/packages/svelte/CHANGELOG.md) and a host of items from our community showcase.
 
 Let's dive in!
 

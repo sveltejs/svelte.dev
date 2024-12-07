@@ -1,0 +1,60 @@
+name: Docs preview create
+
+on:
+  repository_dispatch:
+    types: [docs-preview-create]
+
+env:
+  BRANCH: preview-${{ github.event.client_payload.package }}-${{ github.event.client_payload.pr }}
+
+jobs:
+  Sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_TOKEN }}
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+
+      - name: Checkout
+        run: git fetch origin ${{ env.BRANCH }} && git checkout ${{ env.BRANCH }} || git checkout -b ${{ env.BRANCH }}
+
+      - name: Sync
+        run: cd apps/svelte.dev && pnpm sync-docs --owner="${{ github.event.client_payload.owner }}" -p "${{ github.event.client_payload.package }}#${{ github.event.client_payload.branch }}"
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "GitHub Actions Bot"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Push
+        id: push
+        run: git add -A && git commit -m "sync docs" && git push -u origin ${{ env.BRANCH }}
+
+      - name: Find comment
+        id: fc
+        uses: peter-evans/find-comment@v3
+        with:
+          token: ${{ secrets.COMMENTER_TOKEN }}
+          repository: ${{ github.event.client_payload.repo }}
+          issue-number: ${{ github.event.client_payload.pr }}
+          comment-author: 'Rich-Harris' # it's using my personal access token, not sure if there's a way to comment as a bot instead
+          body-includes: _this is an automated message_
+
+      - name: Create comment
+        if: steps.fc.outputs.comment-id == ''
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          token: ${{ secrets.COMMENTER_TOKEN }}
+          repository: ${{ github.event.client_payload.repo }}
+          issue-number: ${{ github.event.client_payload.pr }}
+          body: |
+            preview: https://svelte-dev-git-${{ env.BRANCH }}-svelte.vercel.app/
+
+            _this is an automated message_
+          edit-mode: replace

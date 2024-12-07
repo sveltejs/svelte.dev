@@ -52,7 +52,7 @@
 		padding: 12px 16px 12px 44px;
 		font: var(--sk-font-ui-small);
 		margin: 0;
-		border-top: 1px solid white;
+		border-top: 1px solid var(--sk-border);
 	}
 
 	.message::before {
@@ -84,6 +84,6 @@
 	}
 
 	.info {
-		background-color: var(--sk-text-4);
+		background-color: var(--sk-fg-4);
 	}
 </style>

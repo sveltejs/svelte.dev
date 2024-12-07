@@ -119,7 +119,7 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		background: var(--sk-back-2);
+		background: var(--sk-bg-2);
 		user-select: none;
 		font: var(--sk-font-ui-small);
 	}
@@ -157,7 +157,7 @@
 	}
 
 	button {
-		color: var(--sk-theme-1);
+		color: var(--sk-fg-accent);
 		padding: 0 0 1px;
 		position: relative;
 	}
@@ -168,12 +168,12 @@
 
 	small {
 		font: var(--sk-font-ui-small);
-		color: var(--sk-text-3);
+		color: var(--sk-fg-3);
 		text-transform: uppercase;
 	}
 
 	span {
-		color: var(--sk-text-3);
+		color: var(--sk-fg-3);
 	}
 
 	svg {
@@ -184,6 +184,6 @@
 	:global(.dark) .loading {
 		--faded: #444;
 		--progress: #555;
-		--cutout: var(--sk-back-2);
+		--cutout: var(--sk-bg-2);
 	}
 </style>

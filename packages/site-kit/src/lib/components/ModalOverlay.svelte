@@ -22,6 +22,6 @@
 		width: 100%;
 		height: 100%;
 		height: 100dvh;
-		background: var(--sk-back-1);
+		background: var(--sk-bg-1);
 	}
 </style>

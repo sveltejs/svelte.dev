@@ -4,10 +4,10 @@ title: Next steps
 
 Congratulations! If you've made it the entire way through this tutorial, you can now consider yourself a Svelte and SvelteKit expert.
 
-You can start building apps on your own machine with the [`create-svelte`](https://www.npmjs.com/package/create-svelte) package:
+You can start building apps on your own machine with [Svelte CLI](https://www.npmjs.com/package/sv):
 
 ```bash
-npm create svelte@latest
+npx sv create
 ```
 
 Svelte and SvelteKit will continue to evolve, and so will this tutorial. Check back periodically for updates.

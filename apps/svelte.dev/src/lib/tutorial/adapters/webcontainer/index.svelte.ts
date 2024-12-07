@@ -10,7 +10,7 @@ import type { Adapter } from '$lib/tutorial';
 import type { Item, File } from 'editor';
 
 const converter = new AnsiToHtml({
-	fg: 'var(--sk-text-3)'
+	fg: 'var(--sk-fg-3)'
 });
 
 /** Web container singleton */

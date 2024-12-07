@@ -9,7 +9,7 @@ Happy new year from Svelte! In the last month we made progress on Sapper's upcom
 
 ## What's changed in Svelte?
 
-A new minor release replaces the `SvelteComponent` class with a `SvelteComponentTyped` class. This renaming should help with backwards compatibility. We've updated [last month's blog post](https://svelte.dev/blog/whats-new-in-svelte-december-2020) to avoid any confusion with the name change.
+A new minor release replaces the `SvelteComponent` class with a `SvelteComponentTyped` class. This renaming should help with backwards compatibility. We've updated [last month's blog post](/blog/whats-new-in-svelte-december-2020) to avoid any confusion with the name change.
 
 If you're using `SvelteComponent` or the new `SvelteComponentTyped` in your project or library, let us know what you're using it for and we'll add it to the showcase!
 
@@ -25,7 +25,7 @@ To avoid too much churn during development, SvelteKit is still being worked on i
 
 In the meantime, you can explore the current build by running `npm init svelte@next` from your command line.
 
-As cautioned in _[What's the deal with SvelteKit?](https://svelte.dev/blog/whats-the-deal-with-sveltekit)_, there are no docs or support available yet... So use at your own risk / for your own enjoyment!
+As cautioned in _[What's the deal with SvelteKit?](/blog/whats-the-deal-with-sveltekit)_, there are no docs or support available yet... So use at your own risk / for your own enjoyment!
 
 ---
 
@@ -55,7 +55,7 @@ As cautioned in _[What's the deal with SvelteKit?](https://svelte.dev/blog/whats
 - [svelte-standalone-router](https://github.com/hjalmar/svelte-standalone-router) is a standalone router with an API based on [standalone-router](https://github.com/hjalmar/standalone-router)
 - [svelte-datepicker](https://github.com/beyonk-adventures/svelte-datepicker) is a datepicker component with variations for time selection, date ranges and responsive themes
 - [svelte-slimscroll](https://github.com/MelihAltintas/svelte-slimscroll) is a action for Svelte.js, which can transforms any div into a scrollable area with a nice scrollbar.
-- [Svelte Zoomable](https://svelte.dev/repl/58dfe87756ee4db897c281b52fdef7b7?version=3.31.0) is a custom transition with a nice zoom effect
+- [Svelte Zoomable](/playground/58dfe87756ee4db897c281b52fdef7b7?version=3.31.0) is a custom transition with a nice zoom effect
 
 **Have a component you'd like to share?** [Submit your own component](https://sveltesociety.dev/help/submitting?type=package) to the list of [packages](https://sveltesociety.dev/packages) on the Svelte Society site.
 

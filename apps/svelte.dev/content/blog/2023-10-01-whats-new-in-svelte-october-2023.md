@@ -5,7 +5,7 @@ author: Dani Sandoval
 authorURL: https://dreamindani.com
 ---
 
-Svelte 5 isn't out yet (you can, however, [preview it now](https://svelte-5-preview.vercel.app/)), but that doesn't mean we don't get a sneak peek! Most notably are [Runes](https://svelte.dev/blog/runes) - a simpler way to manage reactive variables in Svelte code. There's lots of links the showcase section for deeper dives on all things Runes, but let's talk about what else been released this month...
+Svelte 5 isn't out yet (you can, however, [preview it now](https://svelte-5-preview.vercel.app/)), but that doesn't mean we don't get a sneak peek! Most notably are [Runes](/blog/runes) - a simpler way to manage reactive variables in Svelte code. There's lots of links the showcase section for deeper dives on all things Runes, but let's talk about what else been released this month...
 
 ## What's new in Svelte & Language Tools
 

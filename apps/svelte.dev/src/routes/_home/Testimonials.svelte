@@ -95,6 +95,7 @@
 			transition-property: filter, scale;
 			transition-duration: 0.2s;
 			user-select: none;
+			will-change: filter, transform;
 
 			&:nth-child(1) {
 				top: 0%;
@@ -166,10 +167,10 @@
 			padding: 0.25em 0.5em;
 			line-height: 1;
 			text-transform: uppercase;
-			background: var(--sk-text-2);
+			background: var(--sk-fg-2);
 			border-radius: var(--sk-border-radius);
 			font: var(--sk-font-ui-small);
-			color: var(--sk-back-2);
+			color: var(--sk-bg-2);
 
 			&::after {
 				content: 'adj.';

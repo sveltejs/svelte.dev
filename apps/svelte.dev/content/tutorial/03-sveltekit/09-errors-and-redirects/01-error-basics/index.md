@@ -15,7 +15,7 @@ export function load() {
 }
 ```
 
-Any other error — such as the one in `src/routes/unexpected/+page.server.js` — is treated as unexpected:
+Any other error — such as the one in `src/routes/unexpected/+page.server.js` — is treated as unexpected:
 
 ```js
 /// file: src/routes/unexpected/+page.server.js

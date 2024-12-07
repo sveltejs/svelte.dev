@@ -30,18 +30,18 @@
 	}
 
 	button[aria-pressed='true'] {
-		background-image: url(../icons/font-boring-light.svg);
-
-		:global(.dark) & {
-			background-image: url(../icons/font-boring-dark.svg);
-		}
-	}
-
-	button[aria-pressed='false'] {
 		background-image: url(../icons/font-elegant-light.svg);
 
 		:global(.dark) & {
 			background-image: url(../icons/font-elegant-dark.svg);
+		}
+	}
+
+	button[aria-pressed='false'] {
+		background-image: url(../icons/font-boring-light.svg);
+
+		:global(.dark) & {
+			background-image: url(../icons/font-boring-dark.svg);
 		}
 	}
 </style>

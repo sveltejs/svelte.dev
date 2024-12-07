@@ -1,0 +1,59 @@
+/* Note: prefer `font: --sk-font-{x}` over `font-family` and `font-size` rules */
+
+:root {
+	--sk-font-family-ui: 'Fira Sans', -apple-system, sans-serif;
+	--sk-font-family-body: Georgia, serif;
+	--sk-font-family-heading: 'DM Serif Display', Georgia, serif;
+	--sk-font-family-mono: 'Fira Mono', monospace;
+
+	--sk-font-size-h1: 3.6rem;
+	--sk-font-size-h2: 3rem;
+	--sk-font-size-h3: 2.4rem;
+	--sk-font-size-body: 1.8rem;
+	--sk-font-size-body-small: 1.6rem;
+	--sk-font-size-ui-small: 1.3rem;
+	--sk-font-size-ui-medium: 1.6rem;
+	--sk-font-size-ui-large: 3rem;
+	--sk-font-size-mono: 1.4rem;
+
+	/* doing it this way (rather than just `1.5`) means it has a unit, and can be used elsewhere */
+	--sk-line-height-body: calc(1.5 * var(--sk-font-size-body));
+	--sk-line-height-body-small: calc(1.5 * var(--sk-font-size-body-small));
+
+	--sk-font-h1: 500 var(--sk-font-size-h1) / 1.2 var(--sk-font-family-heading);
+	--sk-font-h2: 500 var(--sk-font-size-h2) / 1.2 var(--sk-font-family-heading);
+	--sk-font-h3: 500 var(--sk-font-size-h3) / 1.2 var(--sk-font-family-heading);
+	--sk-font-body: 400 var(--sk-font-size-body) / var(--sk-line-height-body)
+		var(--sk-font-family-body);
+	--sk-font-body-small: 400 var(--sk-font-size-body-small) / var(--sk-line-height-body-small)
+		var(--sk-font-family-body);
+	--sk-font-ui-small: 400 var(--sk-font-size-ui-small) / 1.5 var(--sk-font-family-ui);
+	--sk-font-ui-medium: 400 var(--sk-font-size-ui-medium) / 1.5 var(--sk-font-family-ui);
+	--sk-font-ui-large: 400 var(--sk-font-size-ui-large) / 1.5 var(--sk-font-family-ui);
+	--sk-font-mono: 400 var(--sk-font-size-mono) / 1.7 var(--sk-font-family-mono);
+
+	/* set at 1.75x so if you zoom +/-10% from common settings it won't switch your font */
+	@media (min-resolution: 1.75x) {
+		--sk-font-family-body: 'EB Garamond', Georgia, serif;
+		--sk-font-size-body: 2.2rem;
+		--sk-font-size-body-small: 2rem;
+	}
+
+	&.font-boring {
+		--sk-font-family-body: 'Atkinson Hyperlegible', sans-serif;
+		--sk-font-size-body: 1.9rem;
+		--sk-font-size-body-small: 1.7rem;
+
+		p code {
+			font-size: 0.75em;
+		}
+	}
+
+	&.dark {
+		-webkit-font-smoothing: antialiased;
+	}
+
+	@media screen and (min-width: 800px) {
+		--sk-font-size-h1: 5.4rem;
+	}
+}

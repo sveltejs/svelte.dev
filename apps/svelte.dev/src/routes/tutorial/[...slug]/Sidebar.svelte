@@ -116,7 +116,7 @@
 	.text {
 		flex: 1 1 auto;
 		padding: 2.2rem var(--sk-page-padding-side);
-		background: var(--sk-back-1);
+		background: var(--sk-bg-1);
 
 		:global {
 			[data-file],

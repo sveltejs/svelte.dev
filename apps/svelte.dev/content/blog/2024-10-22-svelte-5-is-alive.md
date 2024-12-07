@@ -3,6 +3,7 @@ title: Svelte 5 is alive
 description: Our biggest release yet
 author: The Svelte team
 authorURL: https://svelte.dev/
+pinnedUntil: 2024-11-15
 ---
 
 After almost 18 months of development, comprising thousands of commits from dozens of contributors, Svelte 5 is finally stable.

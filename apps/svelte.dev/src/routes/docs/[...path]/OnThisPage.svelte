@@ -10,24 +10,32 @@
 	afterNavigate(() => {
 		current = location.hash.slice(1);
 		headings = content.querySelectorAll('h2');
+		update(); // Ensure active link is set correctly on navigation
 	});
 
+	// Update function to activate the correct section link
 	function update() {
-		// a section is 'active' when it crosses the threshold
 		const threshold = (innerHeight * 1) / 3;
+		let found = false;
 
-		for (let i = 0; i < headings.length; i += 1) {
+		for (let i = 0; i < headings.length; i++) {
 			const heading = headings[i];
 			const next = headings[i + 1];
 
+			// If the current heading is above the threshold and the next heading is below it
 			if (
-				next &&
 				heading.getBoundingClientRect().top < threshold &&
-				next.getBoundingClientRect().top > threshold
+				(!next || next.getBoundingClientRect().top > threshold)
 			) {
 				current = heading.id;
+				found = true;
 				break;
 			}
+		}
+
+		// Handle case when scrolled to the top of the page
+		if (!found && scrollY === 0) {
+			current = '';
 		}
 	}
 </script>
@@ -74,7 +82,7 @@
 			}
 
 			a {
-				color: var(--sk-text-3);
+				color: var(--sk-fg-2);
 			}
 		}
 
@@ -96,11 +104,7 @@
 				padding: 0.2rem 0 0 3rem;
 				height: 3rem;
 				text-transform: uppercase;
-				color: var(--sk-text-4);
-
-				&:hover {
-					color: var(--sk-text-3);
-				}
+				user-select: none;
 
 				&::before,
 				&::after {
@@ -133,7 +137,7 @@
 					background-size: 2rem;
 					top: 0.4rem;
 					right: 0.2rem;
-					rotate: -90deg;
+					rotate: 0deg;
 					transition: rotate 0.2s;
 					transition: rotate 0.2s;
 				}
@@ -145,15 +149,19 @@
 
 				h3 {
 					font: var(--sk-font-ui-small);
-					color: var(--sk-text-4);
+					color: var(--sk-fg-4);
 					margin: 0;
 					display: block;
+
+					&:hover {
+						color: var(--sk-fg-3);
+					}
 				}
 			}
 
 			label:has(:checked) {
 				&::after {
-					rotate: 90deg;
+					rotate: 180deg;
 				}
 
 				/* TODO remove :global once https://github.com/sveltejs/svelte/issues/13779 is fixed */
@@ -216,7 +224,7 @@
 				}
 
 				a.active {
-					color: var(--sk-text-1);
+					color: var(--sk-fg-1);
 					text-decoration: underline;
 				}
 			}

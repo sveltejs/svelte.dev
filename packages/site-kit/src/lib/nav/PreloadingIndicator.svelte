@@ -57,7 +57,7 @@
 		left: 0;
 		top: 0;
 		height: 100%;
-		background-color: var(--sk-theme-1);
+		background-color: var(--sk-fg-accent);
 		transition: width 0.4s;
 	}
 

@@ -50,7 +50,7 @@
 </script>
 
 <svelte:head>
-	<title>Your apps • Svelte</title>
+	<title>Your apps • Svelte</title>
 </svelte:head>
 
 <div class="apps">
@@ -156,7 +156,6 @@
 		padding: 0 0 0 3.2rem;
 		position: relative;
 		margin: 1rem 0;
-		color: var(--sk-text-2);
 		font: var(--sk-font-ui-medium);
 
 		.avatar {
@@ -181,7 +180,7 @@
 		font: var(--sk-font-ui-medium);
 		z-index: 2;
 		justify-content: space-between;
-		outline: 1rem solid var(--sk-back-1);
+		outline: 1rem solid var(--sk-bg-1);
 	}
 
 	.controls::after {
@@ -190,7 +189,7 @@
 		width: 100%;
 		bottom: -2rem;
 		height: 2rem;
-		background: linear-gradient(to bottom, var(--sk-back-1) 0%, var(--sk-back-1) 50%, transparent);
+		background: linear-gradient(to bottom, var(--sk-bg-1) 0%, var(--sk-bg-1) 50%, transparent);
 	}
 
 	.controls form {
@@ -209,7 +208,7 @@
 		padding: 0.5rem 1rem;
 		line-height: 1;
 		display: flex;
-		border: 1px solid var(--sk-back-5);
+		border: 1px solid var(--sk-border);
 		border-radius: var(--sk-border-radius);
 		z-index: 2;
 		font: var(--sk-font-ui-large);
@@ -241,7 +240,7 @@
 	}
 
 	h2 {
-		color: var(--sk-text-2);
+		color: var(--sk-fg-2);
 		font: var(--sk-font-ui-medium);
 		overflow: hidden;
 		text-overflow: ellipsis;
@@ -249,7 +248,7 @@
 
 	li a {
 		display: block;
-		background: var(--sk-back-3);
+		background: var(--sk-bg-3);
 		padding: 1rem 3rem 1rem 1rem;
 		height: 100%;
 		line-height: 1;
@@ -259,7 +258,7 @@
 
 	li span {
 		font: var(--sk-font-ui-small);
-		color: var(--sk-text-3);
+		color: var(--sk-fg-3);
 	}
 
 	li label {
@@ -275,7 +274,7 @@
 	}
 
 	ul:not(.selecting) li:hover a {
-		background-color: var(--sk-back-4);
+		background-color: var(--sk-bg-4);
 	}
 
 	ul:not(.selecting) li:hover input {

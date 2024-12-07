@@ -1,0 +1,53 @@
+.secondary-nav-dropdown {
+	max-height: 50rem;
+	width: 30rem;
+	max-width: calc(100vw - 2 * var(--sk-page-padding-side) - 2rem);
+	font: var(--sk-font-ui-medium);
+
+	details {
+		padding-left: 1rem;
+
+		summary {
+			position: relative;
+			font: inherit;
+			display: block;
+			user-select: none;
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0.3rem;
+				left: -2rem;
+				width: 1.8rem;
+				height: 1.8rem;
+				background: url($lib/icons/chevron.svg) no-repeat 50% 50%;
+				background-size: 100%;
+				rotate: -90deg;
+			}
+
+			[open] > &::before {
+				rotate: none;
+			}
+		}
+
+		ul {
+			font: inherit;
+			list-style: none;
+			margin: 0;
+			padding-left: 1rem;
+		}
+	}
+
+	& > details {
+		padding-left: 2rem;
+	}
+
+	a:not([aria-current='page']) {
+		color: inherit;
+	}
+
+	/* necessary for reasons i don't fully understand */
+	& > details[open]:last-child:not(:has([aria-current='page'])) {
+		padding-bottom: 1rem;
+	}
+}

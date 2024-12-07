@@ -164,8 +164,9 @@
 
 <style>
 	.line {
-		--bg: var(--sk-back-1);
-		--border: var(--sk-back-3);
+		--bg: var(--sk-bg-1);
+		--border: var(--sk-bg-3);
+		font: var(--sk-font-mono);
 		display: block;
 		position: relative;
 		width: 100%;
@@ -201,8 +202,7 @@
 		gap: 1rem;
 		width: 100%;
 		font-size: 1.2rem;
-		font-family: var(--sk-font-family-mono);
-		align-items: center;
+		align-items: start;
 	}
 
 	.log.expandable {
@@ -219,9 +219,9 @@
 		grid-template-columns: minmax(0, auto) minmax(auto, 1fr);
 		grid-gap: 0 2rem;
 		font-size: 1.2rem;
-		font-family: var(--sk-font-family-mono);
 		margin: 0 1rem 0.4rem calc(1em + var(--indent));
 		overflow: hidden;
+		line-height: 1.5;
 
 		.location {
 			position: relative;
@@ -247,15 +247,14 @@
 		height: 1.4em;
 		padding: 0.5em;
 		border-radius: 0.4rem;
-		background-color: var(--sk-text-3, #777);
-		color: var(--sk-back-1);
+		background-color: var(--sk-fg-3);
+		color: var(--sk-bg-1);
 		font-size: 1rem;
 	}
 
 	.meta {
-		color: var(--sk-text-2, #666);
-		font-family: var(--sk-font-family-body) !important;
-		font-size: 12px;
+		color: var(--sk-fg-4);
+		font: var(--sk-font-ui-small);
 	}
 
 	.meta-error {
@@ -273,11 +272,11 @@
 		font-size: 0.9rem;
 		transition: 150ms;
 		transform-origin: 50% 50%;
-		transform: translateY(-1px);
+		transform: translateY(2px);
 	}
 
 	.arrow.expand {
-		transform: translateY(0px) rotateZ(90deg);
+		transform: translateY(2px) rotateZ(90deg);
 	}
 
 	.styled {

@@ -30,19 +30,19 @@
 		display: flex;
 		flex-direction: column;
 		gap: 1em;
-		background: var(--sk-back-1);
+		background: var(--sk-bg-1);
 		padding: 1em;
-		border-top: 4px solid var(--sk-theme-1);
+		border-top: 4px solid var(--sk-fg-accent);
 		border-radius: 4px;
 		filter: drop-shadow(2px 4px 8px rgba(0, 0, 0, 0.1));
 	}
 
 	pre {
 		padding: 0.5em;
-		background: var(--sk-back-3);
+		background: var(--sk-bg-3);
 	}
 
 	small {
-		color: var(--sk-text-4);
+		color: var(--sk-fg-4);
 	}
 </style>

@@ -21,8 +21,18 @@ Then adjust your `vite.config.js`:
 /// file: vite.config.js
 import { defineConfig } from +++'vitest/config'+++;
 
-export default defineConfig({ /* ... */ })
+export default defineConfig({
+	// ...
+	// Tell Vitest to use the `browser` entry points in `package.json` files, even though it's running in Node
+	resolve: process.env.VITEST
+		? {
+				conditions: ['browser']
+			}
+		: undefined
+});
 ```
+
+> [!NOTE] If loading the browser version of all your packages is undesirable, because (for example) you also test backend libraries, [you may need to resort to an alias configuration](https://github.com/testing-library/svelte-testing-library/issues/222#issuecomment-1909993331)
 
 You can now write unit tests for code inside your `.js/.ts` files:
 
@@ -187,7 +197,7 @@ When writing component tests that involve two-way bindings, context or snippet p
 
 E2E (short for 'end to end') tests allow you to test your full application through the eyes of the user. This section uses [Playwright](https://playwright.dev/) as an example, but you can also use other solutions like [Cypress](https://www.cypress.io/) or [NightwatchJS](https://nightwatchjs.org/).
 
-To get start with Playwright, either let you guide by [their VS Code extension](https://playwright.dev/docs/getting-started-vscode), or install it from the command line using `npm init playwright`. It is also part of the setup CLI when you run `npx sv create`.
+To get started with Playwright, either install it via [the VS Code extension](https://playwright.dev/docs/getting-started-vscode), or install it from the command line using `npm init playwright`. It is also part of the setup CLI when you run `npx sv create`.
 
 After you've done that, you should have a `tests` folder and a Playwright config. You may need to adjust that config to tell Playwright what to do before running the tests - mainly starting your application at a certain port:
 

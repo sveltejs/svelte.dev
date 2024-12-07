@@ -10,6 +10,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 	import Icon from '../components/Icon.svelte';
 	import SearchResults from './SearchResults.svelte';
 	import SearchWorker from './search-worker.js?worker';
+	import { page } from '$app/stores';
 
 	interface Props {
 		placeholder?: string;
@@ -74,7 +75,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 			last_scroll_position = null;
 			document.body.style.position = '';
 			document.body.tabIndex = -1;
-			document.body.focus();
+			(document.activeElement as HTMLElement)?.blur();
 			document.body.removeAttribute('tabindex');
 			window.scrollTo(0, scroll);
 
@@ -94,7 +95,14 @@ It appears when the user clicks on the `Search` component or presses the corresp
 			const id = uid++;
 			pending.add(id);
 
-			worker.postMessage({ type: 'query', id, payload: $search_query });
+			worker.postMessage({
+				type: 'query',
+				id,
+				payload: {
+					query: $search_query,
+					path: $page.url.pathname
+				}
+			});
 		}
 	});
 
@@ -128,7 +136,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 			}
 		}
 
-		if (e.code === 'Escape') {
+		if (e.key === 'Escape') {
 			close();
 		}
 	}}
@@ -159,30 +167,36 @@ It appears when the user clicks on the `Search` component or presses the corresp
 		use:trap
 	>
 		<div class="search-box">
-			<div style="background: var(--background); padding: 0.5rem">
-				<input
-					use:forcefocus
-					onkeydown={(e) => {
+			<div class="controls">
+				<div class="input-group">
+					<input
+						use:forcefocus
+						onkeydown={(e) => {
 					if (e.key === 'Enter' && !e.isComposing) {
 						const element = modal.querySelector('a[data-has-node]') as HTMLElement | undefined;
 						element?.click();
 					}
 				}}
-					oninput={(e) => {
-						$search_query = e.currentTarget.value;
-					}}
-					value={$search_query}
-					{placeholder}
-					aria-describedby="search-description"
-					aria-label={placeholder}
-					spellcheck="false"
-				/>
-			</div>
+						oninput={(e) => {
+							$search_query = e.currentTarget.value;
+						}}
+						value={$search_query}
+						{placeholder}
+						aria-describedby="search-description"
+						aria-label={placeholder}
+						spellcheck="false"
+					/>
 
-			<button aria-label="Close" onclick={close}>
-				<!-- <Icon name="close" /> -->
-				<kbd>Esc</kbd>
-			</button>
+					<button aria-label="Clear" onclick={() => ($search_query = '')}>
+						<Icon name="close" />
+					</button>
+				</div>
+
+				<button class="raised" aria-label="Close" onclick={close}>
+					<!-- <Icon name="close" /> -->
+					<kbd>Esc</kbd>
+				</button>
+			</div>
 
 			<span id="search-description" class="visually-hidden">
 				{#if search_description}
@@ -222,6 +236,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 										</a>
 
 										<button
+											class="raised icon"
 											aria-label="Delete"
 											onclick={(e) => {
 												$search_recent = $search_recent.filter((href) => href !== search.href);
@@ -229,7 +244,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 												e.preventDefault();
 											}}
 										>
-											<Icon name="delete" />
+											<Icon name="delete" size={16} />
 										</button>
 									</li>
 								{/each}
@@ -279,7 +294,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 
 	.search-box {
 		--padding: 1rem;
-		--background: var(--sk-back-2);
+		--background: var(--sk-bg-2);
 		/* background: var(--background); */
 		position: relative;
 		height: calc(100% - 2rem);
@@ -302,50 +317,81 @@ It appears when the user clicks on the `Search` component or presses the corresp
 		}
 	}
 
-	input {
-		font: var(--sk-font-ui-large);
-		width: 100%;
-		padding: calc(var(--padding) - 0.5rem) 5rem calc(var(--padding) - 0.5rem) var(--padding);
-		height: 6rem;
-		border: none;
-		border-bottom: 1px solid var(--sk-back-3);
-		flex-shrink: 0;
-		background: var(--sk-back-3);
-		color: var(--sk-text-1);
+	.controls {
+		background: var(--background);
+		padding: 0.5rem;
+		display: flex;
+		gap: 1rem;
+	}
 
-		&::selection {
-			background-color: var(--sk-back-translucent);
+	.input-group {
+		position: relative;
+		flex: 1;
+
+		input {
+			font: var(--sk-font-ui-large);
+			width: 100%;
+			padding: var(--padding) 6rem var(--padding) calc(var(--padding) - 0.5rem);
+			height: 6rem;
+			border: none;
+			flex-shrink: 0;
+			color: var(--sk-fg-1);
+			border-bottom: 1px solid var(--sk-border);
+			background: inherit;
+
+			&::placeholder {
+				color: var(--sk-fg-4);
+				opacity: 0.5;
+			}
+
+			&:focus-visible {
+				outline-offset: -2px;
+			}
 		}
 
-		&::placeholder {
-			color: var(--sk-text-2);
-			opacity: 0.3;
-		}
+		button {
+			position: absolute;
+			right: 0;
+			top: 0;
+			height: 100%;
+			aspect-ratio: 1;
+			color: var(--sk-fg-4);
 
-		&:focus-visible {
-			outline-offset: -3px;
+			&:hover,
+			&:focus {
+				color: var(--sk-fg-3);
+			}
+
+			&:focus-visible {
+				outline-offset: -2px;
+			}
 		}
 	}
 
 	button[aria-label='Close'] {
-		--size: 2rem;
-		position: absolute;
-		top: 0.5rem;
-		right: 0;
-		width: 5rem;
-		height: 6rem;
+		height: 100%;
+		aspect-ratio: 1;
 		background: none;
-		color: var(--sk-text-2);
-		opacity: 0.3;
+
+		&:hover,
+		&:focus {
+			color: var(--sk-fg-3);
+		}
 
 		&:focus-visible {
-			opacity: 1;
-			outline-offset: -3px;
+			outline-offset: -2px;
 		}
 
 		kbd {
+			display: flex;
+			align-items: center;
+			justify-content: center;
 			text-transform: uppercase;
-			font: var(--sk-font-ui-small);
+			background: none;
+			font: var(--sk-font-ui-medium);
+			color: var(--sk-fg-4);
+			width: 100%;
+			height: 100%;
 		}
 	}
 
@@ -365,16 +411,21 @@ It appears when the user clicks on the `Search` component or presses the corresp
 
 		li {
 			position: relative;
+			display: flex;
+			padding: 0.2rem var(--padding);
+			gap: 1rem;
+
+			&:hover {
+				background: var(--sk-bg-3);
+			}
 
 			a {
-				color: var(--sk-text-2);
+				color: inherit;
 				display: block;
 				text-decoration: none;
-				padding: 0.5rem calc(4rem + var(--padding)) 0.5rem var(--padding);
-
-				&:hover {
-					background: rgba(0, 0, 0, 0.05);
-				}
+				margin: 0 -0.5rem;
+				padding: 0.5rem;
+				flex: 1;
 
 				&:focus {
 					outline-offset: -3px;
@@ -382,21 +433,18 @@ It appears when the user clicks on the `Search` component or presses the corresp
 			}
 
 			button[aria-label='Delete'] {
-				position: absolute;
-				top: 0;
-				right: 0;
-				width: 5rem;
-				height: 100%;
-				color: var(--sk-text-2);
-				opacity: 0.1;
+				width: 3.2rem;
+				height: 3.2rem;
+				color: var(--sk-fg-4);
+				background-color: var(--sk-bg-2);
 
 				&:hover {
-					opacity: 1;
 					outline: none;
+					color: var(--sk-fg-3);
 				}
 
 				&:focus-visible {
-					opacity: 1;
+					color: var(--sk-fg-3);
 					outline-offset: -3px;
 				}
 			}
@@ -416,7 +464,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 		background: var(--background);
 		padding: var(--padding);
 		font: var(--sk-font-ui-medium);
-		color: var(--sk-text-4);
+		color: var(--sk-fg-4);
 		text-transform: uppercase;
 		pointer-events: all;
 

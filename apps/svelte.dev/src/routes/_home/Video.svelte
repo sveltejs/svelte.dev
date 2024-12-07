@@ -172,7 +172,7 @@
 	}
 
 	video:focus {
-		outline: 1px solid var(--sk-theme-1);
+		outline: 1px solid var(--sk-fg-accent);
 	}
 
 	video::cue {
@@ -190,7 +190,7 @@
 		left: 0;
 		bottom: 0;
 		height: 0.5rem;
-		background: var(--sk-theme-1);
+		background: var(--sk-fg-accent);
 		transition: height 0.2s;
 	}
 
@@ -242,7 +242,7 @@
 	}
 
 	.video-player input:focus-visible ~ img {
-		outline: 2px solid var(--sk-theme-1);
+		outline: 2px solid var(--sk-fg-accent);
 		outline-offset: 2px;
 	}
 </style>

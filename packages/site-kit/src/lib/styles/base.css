@@ -20,8 +20,8 @@ body {
 body {
 	font-family: var(--sk-font-family-body);
 	line-height: 1.5;
-	color: var(--sk-text-2);
-	background-color: var(--sk-back-1);
+	color: var(--sk-fg-2);
+	background-color: var(--sk-bg-1);
 	width: 100%;
 	tab-size: 2;
 	-moz-tab-size: 2;
@@ -33,11 +33,10 @@ body {
 	padding: 0;
 	scrollbar-width: thin;
 	scrollbar-color: var(--sk-scrollbar) transparent;
-	-webkit-tap-highlight-color: hsla(var(--sk-theme-1-hsl), 0.1);
 }
 
 *:focus-visible {
-	outline: 2px solid hsla(var(--sk-theme-1-hsl), 0.6);
+	outline: 2px solid var(--sk-fg-accent);
 	border-radius: var(--sk-border-radius);
 }
 
@@ -45,7 +44,7 @@ p,
 ul,
 ol {
 	font: var(--sk-font-body);
-	margin: 1lh 0;
+	margin: 0.5lh 0;
 
 	&:first-child {
 		margin-top: 0;
@@ -84,7 +83,7 @@ h2,
 h3 {
 	position: relative;
 	text-wrap: balance;
-	color: var(--sk-text-1);
+	color: var(--sk-fg-1);
 }
 
 strong {
@@ -97,8 +96,7 @@ kbd {
 	position: relative;
 	border-radius: var(--sk-border-radius);
 	white-space: nowrap;
-	color: var(--sk-text-2);
-	background: var(--sk-back-4);
+	background: var(--sk-bg-4);
 	line-height: 1.7;
 }
 
@@ -130,14 +128,13 @@ header {
 }
 
 ::selection {
-	background: var(--sk-selection-color);
+	background: var(--sk-bg-selection);
 }
 
 /*	opinionated styles --------------------- */
 blockquote {
 	position: relative;
-	margin: 2.4rem 0;
-	padding: 2rem 2.4rem 1.8rem 2.4rem;
+	margin: var(--sk-line-height-body) 0;
 	max-width: var(--sk-page-content-width);
 }
 
@@ -163,12 +160,12 @@ button {
 }
 
 button[disabled] {
-	color: var(--sk-text-4);
+	color: var(--sk-fg-4);
 }
 
 /*  links ------------------------------------- */
 a {
-	color: var(--sk-theme-1);
+	color: var(--sk-fg-accent);
 }
 
 /*  tables --------------------------------- */

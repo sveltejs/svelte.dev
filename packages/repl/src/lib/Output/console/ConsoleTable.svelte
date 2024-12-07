@@ -96,7 +96,7 @@
 		margin: 8px;
 		overflow: auto;
 		max-height: 200px;
-		border: 1px solid var(--sk-back-4);
+		border: 1px solid var(--sk-border);
 		border-radius: 2px;
 		overscroll-behavior: none;
 	}
@@ -108,7 +108,7 @@
 	}
 
 	th {
-		background: var(--sk-back-3);
+		background: var(--sk-bg-3);
 		padding: 0.5rem 1rem;
 		border: none;
 		position: sticky;
@@ -125,15 +125,15 @@
 	}
 
 	tr {
-		background: var(--sk-back-1);
+		background: var(--sk-bg-1);
 	}
 
 	tr:nth-child(2n) {
-		background: var(--sk-back-3);
+		background: var(--sk-bg-3);
 	}
 
 	th,
 	td {
-		border-right: 1px solid var(--sk-back-3);
+		border-right: 1px solid var(--sk-bg-3);
 	}
 </style>

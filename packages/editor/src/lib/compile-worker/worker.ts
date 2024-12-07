@@ -1,4 +1,8 @@
-import type { File } from '../Workspace.svelte';
+import '@sveltejs/site-kit/polyfills';
+import { parseTar } from 'tarparser';
+import type { CompileResult } from 'svelte/compiler';
+import type { ExposedCompilerOptions, File } from '../Workspace.svelte';
+import type { FileDescription } from 'tarparser';
 
 // hack for magic-string and Svelte 4 compiler
 // do not put this into a separate module and import it, would be treeshaken in prod
@@ -6,45 +10,60 @@ self.window = self;
 
 declare var self: Window & typeof globalThis & { svelte: typeof import('svelte/compiler') };
 
-let inited = false;
-let fulfil_ready: (arg?: never) => void;
-const ready = new Promise((f) => {
-	fulfil_ready = f;
-});
+let inited: PromiseWithResolvers<typeof self.svelte>;
+
+async function init(v: string) {
+	const svelte_url = `https://unpkg.com/svelte@${v}`;
+	const match = /^(?:pr|commit)-(.+)/.exec(v);
+
+	let tarball: FileDescription[] | undefined;
+	let version: string;
+
+	if (match) {
+		const response = await fetch(`https://pkg.pr.new/svelte@${match[1]}`);
+
+		if (!response.ok) {
+			throw new Error('Could not fetch tarball');
+		}
+
+		tarball = await parseTar(await response.arrayBuffer());
+
+		const json = tarball.find((file) => file.name === 'package/package.json')!.text;
+		version = JSON.parse(json).version;
+	} else {
+		version = (await fetch(`${svelte_url}/package.json`).then((r) => r.json())).version;
+	}
+
+	const entry = version.startsWith('3.')
+		? 'compiler.js'
+		: version.startsWith('4.')
+			? 'compiler.cjs'
+			: 'compiler/index.js';
+
+	const compiler = tarball
+		? tarball.find((file) => file.name === `package/${entry}`)!.text
+		: await fetch(`${svelte_url}/${entry}`).then((r) => r.text());
+
+	(0, eval)(compiler + `\n//# sourceURL=${entry}@` + version);
+
+	return self.svelte;
+}
 
 addEventListener('message', async (event) => {
 	if (!inited) {
-		inited = true;
-		const svelte_url = `https://unpkg.com/svelte@${event.data.version}`;
-		const { version } = await fetch(`${svelte_url}/package.json`).then((r) => r.json());
-
-		if (version.startsWith('4.')) {
-			// unpkg doesn't set the correct MIME type for .cjs files
-			// https://github.com/mjackson/unpkg/issues/355
-			const compiler = await fetch(`${svelte_url}/compiler.cjs`).then((r) => r.text());
-			(0, eval)(compiler + '\n//# sourceURL=compiler.cjs@' + version);
-		} else if (version.startsWith('3.')) {
-			const compiler = await fetch(`${svelte_url}/compiler.js`).then((r) => r.text());
-			(0, eval)(compiler + '\n//# sourceURL=compiler.js@' + version);
-		} else {
-			const compiler = await fetch(`${svelte_url}/compiler/index.js`).then((r) => r.text());
-			(0, eval)(compiler + '\n//# sourceURL=compiler/index.js@' + version);
-		}
-
-		fulfil_ready();
+		inited = Promise.withResolvers();
+		init(event.data.version).then(inited.resolve, inited.reject);
 	}
 
-	await ready;
+	const svelte = await inited.promise;
 
 	const { id, file, options } = event.data as {
 		id: number;
 		file: File;
-		options: { generate: 'client' | 'server'; dev: boolean };
+		options: ExposedCompilerOptions;
 	};
 
-	const fn = file.name.endsWith('.svelte') ? self.svelte.compile : self.svelte.compileModule;
-
-	if (!fn) {
+	if (!file.name.endsWith('.svelte') && !svelte.compileModule) {
 		// .svelte.js file compiled with Svelte 3/4 compiler
 		postMessage({
 			id,
@@ -60,16 +79,39 @@ addEventListener('message', async (event) => {
 
 	let migration = null;
 
-	if (self.svelte.migrate) {
+	if (svelte.migrate) {
 		try {
-			migration = self.svelte.migrate(file.contents, { filename: file.name });
+			migration = svelte.migrate(file.contents, { filename: file.name });
 		} catch (e) {
 			// can this happen?
 		}
 	}
 
 	try {
-		const result = fn(file.contents, { ...options, filename: file.name });
+		let result: CompileResult;
+
+		if (file.name.endsWith('.svelte')) {
+			const is_svelte_3_or_4 = !svelte.compileModule;
+			const compilerOptions: any = {
+				generate: is_svelte_3_or_4
+					? options.generate === 'client'
+						? 'dom'
+						: 'ssr'
+					: options.generate,
+				dev: options.dev,
+				filename: file.name
+			};
+			if (!is_svelte_3_or_4) {
+				compilerOptions.modernAst = options.modernAst; // else Svelte 3/4 will throw an "unknown option" error
+			}
+			result = svelte.compile(file.contents, compilerOptions);
+		} else {
+			result = svelte.compileModule(file.contents, {
+				generate: options.generate,
+				dev: options.dev,
+				filename: file.name
+			});
+		}
 
 		postMessage({
 			id,

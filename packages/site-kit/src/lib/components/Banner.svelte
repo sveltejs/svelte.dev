@@ -62,7 +62,7 @@
 		overflow-y: auto;
 		width: 100%;
 		height: var(--sk-banner-height);
-		background: var(--sk-theme-1-variant);
+		background: var(--sk-bg-accent);
 		color: white;
 		padding: 0 4rem;
 	}
@@ -99,7 +99,7 @@
 		display: initial;
 	}
 
-	@media (min-width: 800px) {
+	@media (min-width: 832px) {
 		.banner {
 			top: initial;
 			bottom: 0;

@@ -1,0 +1,79 @@
+/*
+
+!IMPORTANT: The tokens for light and dark mode are duplicated, if you change a token for dark mode,
+!you should change that for the other dark mode too
+
+*/
+
+:root {
+	color-scheme: light;
+
+	/* Foreground colours */
+	--sk-fg-1: hsl(0, 0%, 8%); /* for headings, and (very sparingly) as a highlight colour */
+	--sk-fg-2: hsl(0, 0%, 15%); /* most text should be this colour */
+	--sk-fg-3: hsl(0, 0%, 40%); /* secondary text (e.g. figcaptions) and icons */
+	--sk-fg-4: hsl(0, 0%, 50%); /* faded text (disabled buttons, comments etc) */
+	--sk-fg-accent: hsl(12, 93%, 43%);
+
+	/* Background colours */
+	--sk-bg-1: hsl(0, 0%, 100%);
+	--sk-bg-2: hsl(0, 0%, 99.3%);
+	--sk-bg-3: hsl(0, 0%, 98.2%);
+	--sk-bg-4: hsl(0, 0%, 95%); /* hover states and highlights */
+	--sk-bg-accent: var(--sk-fg-accent);
+	--sk-bg-selection: hsla(204, 100%, 63%, 0.3);
+
+	/* Border color — use this for all borders, except 'active' borders (e.g. current nav) which use `--sk-fg-accent`  */
+	--sk-border: hsl(0, 0%, 92%);
+
+	/* Syntax highlighting — these come from `createCssVariablesTheme`, but are used elsewhere as well */
+	--shiki-color-text: var(--sk-fg-2);
+	--shiki-token-constant: var(--shiki-color-text);
+	--shiki-token-string: hsl(30, 100%, 30%);
+	--shiki-token-comment: var(--sk-fg-4);
+	--shiki-token-keyword: hsl(204, 100%, 38%);
+	--shiki-token-parameter: var(--shiki-color-text);
+	--shiki-token-function: var(--sk-fg-accent);
+	--shiki-token-string-expression: var(--shiki-token-string);
+	--shiki-token-punctuation: var(--shiki-color-text);
+	--shiki-token-link: var(--shiki-token-keyword);
+
+	/* Misc */
+	--sk-scrollbar: rgba(0, 0, 0, 0.3);
+	--sk-shadow: drop-shadow(0px 0px 14px rgba(0, 0, 0, 0.1));
+}
+
+:root.dark {
+	color-scheme: dark;
+
+	--sk-bg-hue: 220;
+
+	/* Foreground colours */
+	--sk-fg-1: hsl(var(--sk-bg-hue), 2%, 90%);
+	--sk-fg-2: hsl(var(--sk-bg-hue), 3%, 80%);
+	--sk-fg-3: hsl(var(--sk-bg-hue), 5%, 65%);
+	--sk-fg-4: hsl(var(--sk-bg-hue), 5%, 55%);
+	--sk-fg-accent: hsl(12, 94%, 62%);
+
+	/* Background colours */
+	--sk-bg-0: hsl(var(--sk-bg-hue), 8%, 10%); /* docs sidebar (dark mode only) */
+	--sk-bg-1: hsl(var(--sk-bg-hue), 10%, 12%);
+	--sk-bg-2: hsl(var(--sk-bg-hue), 12%, 14%);
+	--sk-bg-3: hsl(var(--sk-bg-hue), 14%, 16%);
+	--sk-bg-4: hsl(var(--sk-bg-hue), 15%, 21%);
+	--sk-bg-accent: hsl(15, 100%, 35%);
+
+	/* Border colour */
+	--sk-border: hsl(var(--sk-bg-hue), 15%, 22%);
+
+	/* Syntax highlighting */
+	--shiki-color-text: hsl(45, 7%, 75%);
+	--shiki-token-comment: hsl(0, 0%, 55%);
+	--shiki-token-keyword: hsl(204, 88%, 65%);
+	--shiki-token-function: hsl(19, 67%, 75%);
+	--shiki-token-string: hsl(41, 37%, 68%);
+
+	/* Misc */
+	--sk-scrollbar: rgba(255, 255, 255, 0.3);
+	--sk-shadow: drop-shadow(1px 2px 16px rgba(0, 0, 0, 0.5));
+}

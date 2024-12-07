@@ -13,14 +13,17 @@ Accessibility helper component to skip to the main content
 
 <style>
 	a {
-		background: var(--sk-back-1);
-		color: var(--sk-text-2);
-		border: 2px solid var(--sk-text-1);
-		padding: 8px;
+		display: flex;
+		align-items: center;
+		background: var(--sk-bg-1);
+		color: inherit;
+		height: calc(var(--sk-nav-height) - 2rem);
+		padding: 0 1rem;
 		position: absolute;
-		inset-block-start: 0;
-		inset-inline-start: 0;
+		inset-block-start: 1rem;
+		inset-inline-start: 1rem;
 		transform: translateY(-999px);
+		font: var(--sk-font-ui-medium);
 		z-index: 1000; /* 1 more than the banner z-index */
 	}
 

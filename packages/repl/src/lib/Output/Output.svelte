@@ -61,7 +61,7 @@
 
 	let markdown = $derived(is_markdown ? (marked.parse(workspace.current!.contents) as string) : '');
 
-	let current = $derived(workspace.compiled[workspace.current.name!]);
+	let current = $derived(workspace.current_compiled);
 
 	// TODO this effect is a bit of a code smell
 	$effect(() => {
@@ -81,18 +81,16 @@
 			css_workspace.update_file(css);
 		});
 	});
-
-	let ast = $derived(current?.result?.ast);
 </script>
 
 <div class="view-toggle">
 	{#if workspace.current.name.endsWith('.md')}
 		<button class="active">Markdown</button>
 	{:else}
-		<button class:active={view === 'result'} onclick={() => (view = 'result')}>Result</button>
-		<button class:active={view === 'js'} onclick={() => (view = 'js')}>JS output</button>
-		<button class:active={view === 'css'} onclick={() => (view = 'css')}>CSS output</button>
-		<button class:active={view === 'ast'} onclick={() => (view = 'ast')}>AST output</button>
+		<button aria-current={view === 'result'} onclick={() => (view = 'result')}>Result</button>
+		<button aria-current={view === 'js'} onclick={() => (view = 'js')}>JS output</button>
+		<button aria-current={view === 'css'} onclick={() => (view = 'css')}>CSS output</button>
+		<button aria-current={view === 'ast'} onclick={() => (view = 'ast')}>AST output</button>
 	{/if}
 </div>
 
@@ -132,9 +130,9 @@
 </div>
 
 <!-- ast output -->
-{#if ast}
+{#if current?.result}
 	<div class="tab-content" class:visible={!is_markdown && view === 'ast'}>
-		<AstView {ast} autoscroll={!is_markdown && view === 'ast'} />
+		<AstView {workspace} ast={current.result.ast} autoscroll={!is_markdown && view === 'ast'} />
 	</div>
 {/if}
 
@@ -159,7 +157,7 @@
 			height: 1px;
 			bottom: 0px;
 			left: 0;
-			background-color: var(--sk-back-4);
+			background-color: var(--sk-border);
 		}
 	}
 
@@ -172,13 +170,11 @@
 		border: none;
 		border-bottom: 1px solid transparent;
 		padding: 0 1rem;
-		color: var(--sk-text-2, #999);
 		border-radius: 0;
-	}
 
-	button.active {
-		border-bottom: 1px solid var(--sk-theme-1, --prime);
-		color: var(--sk-text-1, #333);
+		&[aria-current='true'] {
+			border-bottom: 1px solid var(--sk-fg-accent);
+		}
 	}
 
 	div[slot] {

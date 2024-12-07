@@ -17,10 +17,6 @@
 			"permanent": true
 		},
 		{
-			"source": "/docs/modules",
-			"destination": "https://svelte.dev/docs/kit/@sveltejs-kit"
-		},
-		{
 			"source": "/docs/types",
 			"destination": "https://svelte.dev/docs/kit/@sveltejs-kit"
 		},

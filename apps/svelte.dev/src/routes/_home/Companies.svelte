@@ -37,7 +37,7 @@
 		text-align: center;
 		justify-self: center;
 		z-index: 2;
-		filter: drop-shadow(0 0 1rem var(--sk-back-1)) drop-shadow(0 0 1rem var(--sk-back-1));
+		filter: drop-shadow(0 0 1rem var(--sk-bg-1)) drop-shadow(0 0 1rem var(--sk-bg-1));
 	}
 
 	.wing {

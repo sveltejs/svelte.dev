@@ -15,18 +15,20 @@ export default class Bundler {
 
 	constructor({
 		packages_url,
-		svelte_url,
-		onstatus
+		svelte_version,
+		onstatus,
+		onerror
 	}: {
 		packages_url: string;
-		svelte_url: string;
+		svelte_version: string;
 		onstatus: (val: string | null) => void;
+		onerror?: (message: string) => void;
 	}) {
-		this.hash = `${packages_url}:${svelte_url}`;
+		this.hash = `${packages_url}:${svelte_version}`;
 
 		if (!workers.has(this.hash)) {
 			const worker = new Worker();
-			worker.postMessage({ type: 'init', packages_url, svelte_url });
+			worker.postMessage({ type: 'init', packages_url, svelte_version });
 			workers.set(this.hash, worker);
 		}
 
@@ -44,6 +46,11 @@ export default class Bundler {
 					return;
 				}
 
+				if (event.data.type === 'error') {
+					onerror?.(event.data.message);
+					return;
+				}
+
 				onstatus(null);
 				handler(event.data);
 				this.handlers.delete(event.data.uid);
@@ -54,7 +61,6 @@ export default class Bundler {
 	bundle(files: File[], options: CompileOptions = {}): Promise<BundleResult> {
 		return new Promise<any>((fulfil) => {
 			this.handlers.set(uid, fulfil);
-
 			this.worker.postMessage({
 				uid,
 				type: 'bundle',

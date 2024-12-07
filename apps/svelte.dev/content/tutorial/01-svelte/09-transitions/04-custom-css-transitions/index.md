@@ -48,7 +48,7 @@ We can get a lot more creative though. Let's make something truly gratuitous:
 	import { fade } from 'svelte/transition';
 	+++import { elasticOut } from 'svelte/easing';+++
 
-	let visible = true;
+	let visible = $state(true);
 
 	function spin(node, { duration }) {
 		return {

@@ -95,7 +95,7 @@
 		},
 		{
 			"source": "/tutorial/event-forwarding",
-			"destination": "https://svelte.dev/tutorial/svelte/event-forwarding"
+			"destination": "https://github.com/sveltejs/svelte/blob/ac6d8c0bf4534221818c634286c7c9b1b7fd91d3/documentation/tutorial/05-events/05-event-forwarding/app-b/App.svelte"
 		},
 		{
 			"source": "/tutorial/dom-event-forwarding",
@@ -131,47 +131,47 @@
 		},
 		{
 			"source": "/tutorial/marked",
-			"destination": "https://svelte.dev/tutorial/svelte/marked"
+			"destination": "https://svelte.dev/tutorial/svelte/textarea-inputs"
 		},
 		{
 			"source": "/tutorial/onmount",
-			"destination": "https://svelte.dev/tutorial/svelte/onmount"
+			"destination": "https://svelte.dev/docs/svelte/lifecycle-hooks"
 		},
 		{
 			"source": "/tutorial/update",
-			"destination": "https://svelte.dev/tutorial/svelte/update"
+			"destination": "https://svelte.dev/docs/svelte/lifecycle-hooks"
 		},
 		{
 			"source": "/tutorial/elizabot",
-			"destination": "https://svelte.dev/tutorial/svelte/elizabot"
+			"destination": "https://github.com/sveltejs/svelte/blob/ac6d8c0bf4534221818c634286c7c9b1b7fd91d3/documentation/tutorial/07-lifecycle/03-update/text.md"
 		},
 		{
 			"source": "/tutorial/tick",
-			"destination": "https://svelte.dev/tutorial/svelte/tick"
+			"destination": "https://svelte.dev/docs/svelte/lifecycle-hooks#tick"
 		},
 		{
 			"source": "/tutorial/writable-stores",
-			"destination": "https://svelte.dev/tutorial/svelte/writable-stores"
+			"destination": "https://svelte.dev/tutorial/svelte/introducing-stores"
 		},
 		{
 			"source": "/tutorial/auto-subscriptions",
-			"destination": "https://svelte.dev/tutorial/svelte/auto-subscriptions"
+			"destination": "https://svelte.dev/docs/svelte/stores"
 		},
 		{
 			"source": "/tutorial/readable-stores",
-			"destination": "https://svelte.dev/tutorial/svelte/readable-stores"
+			"destination": "https://svelte.dev/docs/svelte/stores"
 		},
 		{
 			"source": "/tutorial/derived-stores",
-			"destination": "https://svelte.dev/tutorial/svelte/derived-stores"
+			"destination": "https://svelte.dev/docs/svelte/stores"
 		},
 		{
 			"source": "/tutorial/custom-stores",
-			"destination": "https://svelte.dev/tutorial/svelte/custom-stores"
+			"destination": "https://svelte.dev/docs/svelte/stores"
 		},
 		{
 			"source": "/tutorial/store-bindings",
-			"destination": "https://svelte.dev/tutorial/svelte/store-bindings"
+			"destination": "https://github.com/sveltejs/svelte/blob/ac6d8c0bf4534221818c634286c7c9b1b7fd91d3/documentation/tutorial/08-stores/06-store-bindings/text.md"
 		},
 		{
 			"source": "/tutorial/tweens",
@@ -219,7 +219,7 @@
 		},
 		{
 			"source": "/tutorial/animate",
-			"destination": "https://svelte.dev/tutorial/svelte/animate"
+			"destination": "https://svelte.dev/tutorial/svelte/animations"
 		},
 		{
 			"source": "/tutorial/actions",
@@ -228,10 +228,6 @@
 		{
 			"source": "/tutorial/adding-parameters-to-actions",
 			"destination": "https://svelte.dev/tutorial/svelte/adding-parameters-to-actions"
-		},
-		{
-			"source": "/tutorial/core",
-			"destination": "https://svelte.dev/tutorial/svelte/core"
 		},
 		{
 			"source": "/tutorial/tippy.js",
@@ -283,23 +279,23 @@
 		},
 		{
 			"source": "/tutorial/slots",
-			"destination": "https://svelte.dev/tutorial/svelte/slots"
+			"destination": "https://svelte.dev/docs/svelte/legacy-slots"
 		},
 		{
 			"source": "/tutorial/named-slots",
-			"destination": "https://svelte.dev/tutorial/svelte/named-slots"
+			"destination": "https://svelte.dev/docs/svelte/legacy-slots"
 		},
 		{
 			"source": "/tutorial/slot-fallbacks",
-			"destination": "https://svelte.dev/tutorial/svelte/slot-fallbacks"
+			"destination": "https://svelte.dev/docs/svelte/legacy-slots"
 		},
 		{
 			"source": "/tutorial/slot-props",
-			"destination": "https://svelte.dev/tutorial/svelte/slot-props"
+			"destination": "https://svelte.dev/docs/svelte/legacy-slots"
 		},
 		{
 			"source": "/tutorial/optional-slots",
-			"destination": "https://svelte.dev/tutorial/svelte/optional-slots"
+			"destination": "https://svelte.dev/docs/svelte/legacy-$$slots"
 		},
 		{
 			"source": "/tutorial/context-api",
@@ -307,11 +303,11 @@
 		},
 		{
 			"source": "/tutorial/svelte-self",
-			"destination": "https://svelte.dev/tutorial/svelte/svelte-self"
+			"destination": "https://svelte.dev/docs/svelte/legacy-svelte-self"
 		},
 		{
 			"source": "/tutorial/svelte-component",
-			"destination": "https://svelte.dev/tutorial/svelte/svelte-component"
+			"destination": "https://svelte.dev/docs/svelte/legacy-svelte-component"
 		},
 		{
 			"source": "/tutorial/svelte-element",
@@ -339,11 +335,11 @@
 		},
 		{
 			"source": "/tutorial/svelte-options",
-			"destination": "https://svelte.dev/tutorial/svelte/svelte-options"
+			"destination": "https://svelte.dev/docs/svelte/svelte-options"
 		},
 		{
 			"source": "/tutorial/svelte-fragment",
-			"destination": "https://svelte.dev/tutorial/svelte/svelte-fragment"
+			"destination": "https://svelte.dev/docs/svelte/legacy-svelte-fragment"
 		},
 		{
 			"source": "/tutorial/sharing-code",
@@ -355,7 +351,7 @@
 		},
 		{
 			"source": "/tutorial/debug",
-			"destination": "https://svelte.dev/tutorial/svelte/debug"
+			"destination": "https://svelte.dev/docs/svelte/@debug"
 		},
 		{
 			"source": "/tutorial/congratulations",
@@ -456,10 +452,6 @@
 		{
 			"source": "/tutorial/redirects",
 			"destination": "https://svelte.dev/tutorial/kit/redirects"
-		},
-		{
-			"source": "/tutorial/xx-custom-error-messages",
-			"destination": "https://svelte.dev/tutorial/kit/xx-custom-error-messages"
 		},
 		{
 			"source": "/tutorial/handle",

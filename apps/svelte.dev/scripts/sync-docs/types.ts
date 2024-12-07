@@ -1,8 +1,12 @@
 import fs from 'node:fs';
 import ts from 'typescript';
 import { format } from 'prettier';
-import { strip_origin } from './utils';
-import type { Modules, Declaration, TypeElement } from '@sveltejs/site-kit/markdown';
+import {
+	type Modules,
+	type Declaration,
+	type TypeElement,
+	strip_origin
+} from '@sveltejs/site-kit/markdown';
 
 export async function read_types(base: string, modules: Modules) {
 	{
@@ -11,7 +15,7 @@ export async function read_types(base: string, modules: Modules) {
 			'svelte/types/compiler/preprocess', // legacy entrypoint
 			'svelte/types/compiler/interfaces' // legacy entrypoint
 		];
-		const code = read_d_ts_file(base + 'types/index.d.ts');
+		const code = read_d_ts_file(base + 'index.d.ts');
 		const node = ts.createSourceFile('index.d.ts', code, ts.ScriptTarget.Latest, true);
 
 		for (const statement of node.statements) {
@@ -72,6 +76,7 @@ export async function get_types(code: string, statements: ts.NodeArray<ts.Statem
 				let start = statement.pos;
 				let comment = '';
 				let deprecated_notice: string | null = null;
+				let since_notice: string | null = null;
 
 				// @ts-ignore i think typescript is bad at typescript
 				if (statement.jsDoc) {
@@ -90,7 +95,11 @@ export async function get_types(code: string, statements: ts.NodeArray<ts.Statem
 					if (jsDoc.tags) {
 						for (const tag of jsDoc.tags) {
 							if (tag.tagName.escapedText === 'deprecated') {
-								deprecated_notice = tag.comment;
+								deprecated_notice = tag.comment && strip_origin(tag.comment);
+							}
+
+							if (tag.tagName.escapedText === 'since') {
+								since_notice = tag.comment;
 							}
 
 							if (tag.tagName.escapedText === 'example') {
@@ -148,7 +157,9 @@ export async function get_types(code: string, statements: ts.NodeArray<ts.Statem
 					.trim();
 
 				const collection =
-					ts.isVariableStatement(statement) || ts.isFunctionDeclaration(statement)
+					ts.isVariableStatement(statement) ||
+					ts.isClassDeclaration(statement) ||
+					ts.isFunctionDeclaration(statement)
 						? exports
 						: types;
 
@@ -168,6 +179,7 @@ export async function get_types(code: string, statements: ts.NodeArray<ts.Statem
 						name,
 						comment: cleanup_comment(comment),
 						deprecated: deprecated_notice,
+						since: since_notice,
 						overloads: []
 					};
 
