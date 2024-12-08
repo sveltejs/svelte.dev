@@ -61,7 +61,6 @@
 		justify-content: space-between;
 		align-items: center;
 		padding: 0.5rem 0.5rem 0.5rem 1rem;
-		cursor: pointer;
 	}
 
 	.panel-body {
@@ -73,6 +72,7 @@
 		text-transform: uppercase;
 		flex: 1;
 		text-align: left;
+		cursor: pointer;
 	}
 
 	section {
