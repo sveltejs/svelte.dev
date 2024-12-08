@@ -92,6 +92,9 @@ importers:
       shiki:
         specifier: ^1.22.0
         version: 1.22.0
+      svelte2tsx:
+        specifier: ^0.7.30
+        version: 0.7.30(svelte@5.3.0)(typescript@5.5.4)
       topojson-client:
         specifier: ^3.1.0
         version: 3.1.0
@@ -455,6 +458,9 @@ importers:
       '@fontsource/fira-sans':
         specifier: ^5.1.0
         version: 5.1.0
+      '@hugokorte/twoslash-svelte':
+        specifier: ^0.0.2
+        version: 0.0.2(svelte2tsx@0.7.30(svelte@5.1.11)(typescript@5.5.4))(typescript@5.5.4)
       '@lezer/common':
         specifier: ^1.0.4
         version: 1.2.2
@@ -931,6 +937,12 @@ packages:
 
   '@fontsource/fira-sans@5.1.0':
     resolution: {integrity: sha512-qfAjF5WcrL6qQh9eIWLK7lOh9wbCgCnVWh2Nu2gozrTgsUgYBLR8sbCGYwlK1K0yZoQsR2i9VSiQ16wwPCBkSw==}
+
+  '@hugokorte/twoslash-svelte@0.0.2':
+    resolution: {integrity: sha512-QCQp+wNJgqIl2+hKnouqrqeGFBIrpsfE0lPgOUQ7sO/pjh4RI7jU8TMt6COHQxiFdkB+vrc9GxXOWIuCDRYGeg==}
+    peerDependencies:
+      svelte2tsx: '*'
+      typescript: '*'
 
   '@img/sharp-darwin-arm64@0.33.4':
     resolution: {integrity: sha512-p0suNqXufJs9t3RqLBO6vvrgr5OhgbWp76s5gTRvdmxmuv9E1rcaqGUsl3l4mKVmXPkTkTErXediAui4x+8PSA==}
@@ -1656,6 +1668,12 @@ packages:
 
   '@vitest/utils@2.1.2':
     resolution: {integrity: sha512-zMO2KdYy6mx56btx9JvAqAZ6EyS3g49krMPPrgOp1yxGZiA93HumGk+bZ5jIZtOg5/VBYl5eBmGRQHqq4FG6uQ==}
+
+  '@volar/language-core@2.4.10':
+    resolution: {integrity: sha512-hG3Z13+nJmGaT+fnQzAkS0hjJRa2FCeqZt6Bd+oGNhUkQ+mTFsDETg5rqUTxyzIh5pSOGY7FHCWUS8G82AzLCA==}
+
+  '@volar/source-map@2.4.10':
+    resolution: {integrity: sha512-OCV+b5ihV0RF3A7vEvNyHPi4G4kFa6ukPmyVocmqm5QzOd8r5yAtiNvaPEjl8dNvgC/lj4JPryeeHLdXd62rWA==}
 
   '@webcontainer/api@1.1.9':
     resolution: {integrity: sha512-Sp6PV0K9D/3f8fSbCubqhfmBFH8XbngZCBOCF+aExyGqnz2etmw+KYvbQ/JxYvYX5KPaSxM+asFQwoP2RHl5cg==}
@@ -2970,8 +2988,8 @@ packages:
       typescript:
         optional: true
 
-  svelte2tsx@0.7.8:
-    resolution: {integrity: sha512-ABK3RDFcy59AqAiU1N5Kxu1RnKrb1GDMrQjLgNgJfE8Q+coCKpjCAPtUVKQM2HnmuqeNWcT3NqfXbE+ZmN5Pow==}
+  svelte2tsx@0.7.30:
+    resolution: {integrity: sha512-sHXK/vw/sVJmFuPSq6zeKrtuZKvo0jJyEi8ybN0dfrqSYVvHu8zFbO0zQKAL8y/fYackYojH41EJGe6v8rd5fw==}
     peerDependencies:
       svelte: ^3.55 || ^4.0.0-next.0 || ^4.0 || ^5.0.0-next.0
       typescript: ^4.9.4 || ^5.0.0
@@ -3701,6 +3719,17 @@ snapshots:
 
   '@fontsource/fira-sans@5.1.0': {}
 
+  '@hugokorte/twoslash-svelte@0.0.2(svelte2tsx@0.7.30(svelte@5.1.11)(typescript@5.5.4))(typescript@5.5.4)':
+    dependencies:
+      '@jridgewell/sourcemap-codec': 1.5.0
+      '@volar/language-core': 2.4.10
+      svelte2tsx: 0.7.30(svelte@5.1.11)(typescript@5.5.4)
+      twoslash: 0.2.12(typescript@5.5.4)
+      twoslash-protocol: 0.2.12
+      typescript: 5.5.4
+    transitivePeerDependencies:
+      - supports-color
+
   '@img/sharp-darwin-arm64@0.33.4':
     optionalDependencies:
       '@img/sharp-libvips-darwin-arm64': 1.0.2
@@ -4364,7 +4393,7 @@ snapshots:
       sade: 1.8.1
       semver: 7.6.2
       svelte: 5.1.11
-      svelte2tsx: 0.7.8(svelte@5.1.11)(typescript@5.5.4)
+      svelte2tsx: 0.7.30(svelte@5.1.11)(typescript@5.5.4)
     transitivePeerDependencies:
       - typescript
 
@@ -4558,6 +4587,12 @@ snapshots:
       '@vitest/pretty-format': 2.1.2
       loupe: 3.1.1
       tinyrainbow: 1.2.0
+
+  '@volar/language-core@2.4.10':
+    dependencies:
+      '@volar/source-map': 2.4.10
+
+  '@volar/source-map@2.4.10': {}
 
   '@webcontainer/api@1.1.9': {}
 
@@ -5860,11 +5895,18 @@ snapshots:
       postcss: 8.4.45
       typescript: 5.5.4
 
-  svelte2tsx@0.7.8(svelte@5.1.11)(typescript@5.5.4):
+  svelte2tsx@0.7.30(svelte@5.1.11)(typescript@5.5.4):
     dependencies:
       dedent-js: 1.0.1
       pascal-case: 3.1.2
       svelte: 5.1.11
+      typescript: 5.5.4
+
+  svelte2tsx@0.7.30(svelte@5.3.0)(typescript@5.5.4):
+    dependencies:
+      dedent-js: 1.0.1
+      pascal-case: 3.1.2
+      svelte: 5.3.0
       typescript: 5.5.4
 
   svelte@5.1.11:
