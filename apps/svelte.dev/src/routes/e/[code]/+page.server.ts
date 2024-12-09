@@ -9,6 +9,12 @@ const reference = index['docs/svelte/reference'].children.filter(
 
 export const prerender = true;
 
+export function entries() {
+	return reference.flatMap((page) =>
+		[...page.body.matchAll(/(^|\n)### (\w+)/g)].map(([, , code]) => ({ code }))
+	);
+}
+
 export function load({ params }) {
 	// Since codes are not top level section we gotta jump through some hoops to get the right hash
 	for (const page of reference) {
