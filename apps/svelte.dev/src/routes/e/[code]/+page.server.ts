@@ -19,8 +19,8 @@ import { error, redirect } from '@sveltejs/kit';
 // }
 
 export async function load({ params, fetch }) {
-	const codes: Record<string, Record<string, string[]>> = await fetch('/e/codes.json').then((r) =>
-		r.json()
+	const codes: Record<string, Record<string, string[]>> = await fetch('/e/tmp/codes.json').then(
+		(r) => r.json()
 	);
 
 	for (const url of Object.keys(codes)) {

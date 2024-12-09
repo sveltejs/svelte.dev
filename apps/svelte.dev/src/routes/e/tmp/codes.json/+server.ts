@@ -2,6 +2,8 @@ import { index } from '$lib/server/content';
 import { json } from '@sveltejs/kit';
 
 // Temporary workaround for the problem described in [code]/+page.server.ts
+// In a nested folder because of https://github.com/sveltejs/kit/issues/12778
+
 const reference = index['docs/svelte/reference'].children.filter(
 	(child) => child.slug.endsWith('-errors') || child.slug.endsWith('-warnings')
 );
