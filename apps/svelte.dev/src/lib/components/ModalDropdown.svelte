@@ -102,6 +102,10 @@
 		align-items: center;
 		justify-content: center;
 		user-select: none;
+
+		&::-webkit-details-marker {
+			display: none;
+		}
 	}
 
 	details[open] summary::before {

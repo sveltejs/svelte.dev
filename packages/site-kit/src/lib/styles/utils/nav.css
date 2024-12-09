@@ -13,6 +13,10 @@
 			display: block;
 			user-select: none;
 
+			&::-webkit-details-marker {
+				display: none;
+			}
+
 			&::before {
 				content: '';
 				position: absolute;

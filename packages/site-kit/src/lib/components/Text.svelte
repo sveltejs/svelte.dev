@@ -523,6 +523,10 @@
 				font: var(--sk-font-body-small);
 				user-select: none;
 
+				&::-webkit-details-marker {
+					display: none;
+				}
+
 				.legacy &::after {
 					position: absolute;
 					display: flex;
