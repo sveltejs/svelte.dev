@@ -541,7 +541,7 @@ async function convert_to_ts(js_code: string, indent = '', offset = '') {
 		}
 	}
 
-	let transformed = code.toString();
+	let transformed = code.toString().trim();
 
 	return transformed === js_code ? undefined : transformed;
 
