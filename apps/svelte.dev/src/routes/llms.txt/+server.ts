@@ -1,8 +1,7 @@
-import { read } from '$app/server';
 import type { RequestHandler } from './$types';
 
 // Import all markdown files
-const docs = import.meta.glob<string>('../../../content/docs/**/*.md', {
+const docs = import.meta.glob<{ default: string }>('../../../content/docs/**/*.md', {
 	eager: true,
 	query: '?raw'
 });
@@ -48,7 +47,7 @@ export const GET: RequestHandler = async () => {
 
 		// Add file path and content
 		content += `File: ${path.replace('../../../content/', '')}\n\n`;
-		content += docs[path];
+		content += docs[path].default; // Access the default export to get the actual content
 		content += '\n\n-------------------\n\n';
 	}
 
