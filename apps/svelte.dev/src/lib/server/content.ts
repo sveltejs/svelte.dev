@@ -60,16 +60,16 @@ export const blog_posts = index.blog.children
 		return a.date < b.date ? 1 : -1;
 	});
 
+export function remove_section(slug: string) {
+	return slug.replace(/\/[^/]+(\/[^/]+)$/g, '$1');
+}
+
 /**
  * Create docs index, which is basically the same structure as the original index
  * but with adjusted slugs (the section part is omitted for cleaner URLs), separated
  * topics/pages and next/prev adjusted so that they don't point to different topics.
  */
 function create_docs() {
-	function remove_section(slug: string) {
-		return slug.replace(/\/[^/]+(\/[^/]+)$/g, '$1');
-	}
-
 	let docs: {
 		/** The top level entries/packages: svelte/kit/etc. Key is the topic */
 		topics: Record<string, Document>;
