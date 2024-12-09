@@ -1,5 +1,7 @@
 import type { RequestHandler } from './$types';
 
+const PREFIX = 'This is the complete developer documentation for Svelte and SvelteKit.';
+
 // Import all markdown files
 const docs = import.meta.glob<{ default: string }>('../../../content/docs/**/*.md', {
 	eager: true,
@@ -14,16 +16,32 @@ function getSectionPriority(path: string): number {
 	return 3;
 }
 
+function comparePaths(a: string, b: string): number {
+	// First compare by section
+	const priorityA = getSectionPriority(a);
+	const priorityB = getSectionPriority(b);
+	if (priorityA !== priorityB) return priorityA - priorityB;
+
+	// Get directory paths
+	const dirA = a.split('/').slice(0, -1).join('/');
+	const dirB = b.split('/').slice(0, -1).join('/');
+
+	// If in the same directory, prioritize index.md
+	if (dirA === dirB) {
+		if (a.endsWith('index.md')) return -1;
+		if (b.endsWith('index.md')) return 1;
+		return a.localeCompare(b);
+	}
+
+	// Otherwise sort by directory path
+	return dirA.localeCompare(dirB);
+}
+
 export const GET: RequestHandler = async () => {
-	let content = '';
+	let content = `${PREFIX}\n\n`;
 
 	// Get all file paths and sort them
-	const paths = Object.keys(docs).sort((a, b) => {
-		const priorityA = getSectionPriority(a);
-		const priorityB = getSectionPriority(b);
-		if (priorityA !== priorityB) return priorityA - priorityB;
-		return a.localeCompare(b);
-	});
+	const paths = Object.keys(docs).sort(comparePaths);
 
 	let currentSection = '';
 
@@ -31,24 +49,22 @@ export const GET: RequestHandler = async () => {
 	for (const path of paths) {
 		// Determine section
 		let section = '';
-		if (path.includes('/docs/svelte/')) section = 'SVELTE DOCS';
-		else if (path.includes('/docs/kit/')) section = 'SVELTEKIT DOCS';
-		else if (path.includes('/docs/cli/')) section = 'CLI DOCS';
+		if (path.includes('/docs/svelte/')) section = 'Svelte documentation';
+		else if (path.includes('/docs/kit/')) section = 'SvelteKit documentation';
+		else if (path.includes('/docs/cli/')) section = 'Svelte CLI documentation';
 		else continue; // Skip other content
 
 		// Add section header if we're entering a new section
 		if (section !== currentSection) {
-			if (currentSection) content += '\n\n';
-			content += '=====================================\n';
-			content += `============ ${section} ===========\n`;
-			content += '=====================================\n\n';
+			if (currentSection) content += '\n';
+			content += `# Start of ${section}\n\n`;
 			currentSection = section;
 		}
 
 		// Add file path and content
-		content += `File: ${path.replace('../../../content/', '')}\n\n`;
-		content += docs[path].default; // Access the default export to get the actual content
-		content += '\n\n-------------------\n\n';
+		content += `## ${path.replace('../../../content/', '')}\n\n`;
+		content += docs[path].default;
+		content += '\n';
 	}
 
 	const headers: HeadersInit = {
