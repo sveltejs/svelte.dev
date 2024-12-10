@@ -202,7 +202,7 @@ namespace AST {
 		options: SvelteOptions | null;
 		fragment: Fragment;
 		/** The parsed `<style>` element, if exists */
-		css: Css.StyleSheet | null;
+		css: AST.CSS.StyleSheet | null;
 		/** The parsed `<script>` element, if exists */
 		instance: Script | null;
 		/** The parsed `<script module>` element, if exists */
@@ -607,9 +607,9 @@ namespace AST {
 		| Node
 		| TemplateNode
 		| AST.Fragment
-		| Css.Node;
+		| _CSS.Node;
 
-	export type { Css };
+	export type { _CSS as CSS };
 }
 ```
 
