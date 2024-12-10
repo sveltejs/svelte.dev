@@ -130,17 +130,32 @@ export const docs = create_docs();
 
 export const examples = index.examples.children;
 
-function sortPaths(paths: string[]): string[] {
+function getSectionPriority(path: string): number {
+	if (path.includes('/docs/svelte/')) return 0;
+	if (path.includes('/docs/kit/')) return 1;
+	if (path.includes('/docs/cli/')) return 2;
+	return 3;
+}
+
+export function sortPaths(paths: string[]): string[] {
 	return paths.sort((a, b) => {
+		// First compare by section priority
+		const priorityA = getSectionPriority(a);
+		const priorityB = getSectionPriority(b);
+		if (priorityA !== priorityB) return priorityA - priorityB;
+
+		// Get directory paths
 		const dirA = a.split('/').slice(0, -1).join('/');
 		const dirB = b.split('/').slice(0, -1).join('/');
 
+		// If in the same directory, prioritize index.md
 		if (dirA === dirB) {
 			if (a.endsWith('index.md')) return -1;
 			if (b.endsWith('index.md')) return 1;
 			return a.localeCompare(b);
 		}
 
+		// Otherwise sort by directory path
 		return dirA.localeCompare(dirB);
 	});
 }

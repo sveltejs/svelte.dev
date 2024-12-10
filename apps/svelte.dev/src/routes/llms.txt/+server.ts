@@ -1,42 +1,13 @@
 import type { RequestHandler } from './$types';
-import { documentsContent } from '$lib/server/content';
+import { documentsContent, sortPaths } from '$lib/server/content';
 
 const PREFIX = 'This is the abridged developer documentation for Svelte and SvelteKit.';
-
-// Sort function to ensure correct order (svelte -> kit -> cli)
-function getSectionPriority(path: string): number {
-	if (path.includes('/docs/svelte/')) return 0;
-	if (path.includes('/docs/kit/')) return 1;
-	if (path.includes('/docs/cli/')) return 2;
-	return 3;
-}
-
-function comparePaths(a: string, b: string): number {
-	// First compare by section
-	const priorityA = getSectionPriority(a);
-	const priorityB = getSectionPriority(b);
-	if (priorityA !== priorityB) return priorityA - priorityB;
-
-	// Get directory paths
-	const dirA = a.split('/').slice(0, -1).join('/');
-	const dirB = b.split('/').slice(0, -1).join('/');
-
-	// If in the same directory, prioritize index.md
-	if (dirA === dirB) {
-		if (a.endsWith('index.md')) return -1;
-		if (b.endsWith('index.md')) return 1;
-		return a.localeCompare(b);
-	}
-
-	// Otherwise sort by directory path
-	return dirA.localeCompare(dirB);
-}
 
 export const GET: RequestHandler = async () => {
 	let content = `${PREFIX}\n\n`;
 
 	// Get all file paths and sort them
-	const paths = Object.keys(documentsContent).sort(comparePaths);
+	const paths = sortPaths(Object.keys(documentsContent));
 
 	let currentSection = '';
 
