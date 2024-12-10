@@ -853,7 +853,7 @@ Compress files in `directory` with gzip and brotli, where appropriate. Generates
 
 ## ClientInit
 
-The [`init`](/docs/kit/hooks#Shared-hooks-init) will be invoked once as the client side app is started.
+The [`init`](/docs/kit/hooks#Shared-hooks-init) will be invoked once the app starts in the browser
 
 <div class="ts-block">
 
@@ -2355,7 +2355,7 @@ A `[file]: size` map of all assets imported by server code
 
 ## ServerInit
 
-The [`init`](/docs/kit/hooks#Shared-hooks-init) will be invoked once as soon as the server is executed.
+The [`init`](/docs/kit/hooks#Shared-hooks-init) will be invoked before the server responds to its first request
 
 <div class="ts-block">
 
