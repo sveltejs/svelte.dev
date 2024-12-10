@@ -129,3 +129,59 @@ function create_docs() {
 export const docs = create_docs();
 
 export const examples = index.examples.children;
+
+function sortPaths(paths: string[]): string[] {
+	return paths.sort((a, b) => {
+		const dirA = a.split('/').slice(0, -1).join('/');
+		const dirB = b.split('/').slice(0, -1).join('/');
+
+		if (dirA === dirB) {
+			if (a.endsWith('index.md')) return -1;
+			if (b.endsWith('index.md')) return 1;
+			return a.localeCompare(b);
+		}
+
+		return dirA.localeCompare(dirB);
+	});
+}
+
+export const packages = ['svelte', 'kit', 'cli'] as const;
+export type Package = (typeof packages)[number];
+
+function getDocumentationTitle(type: Package): string {
+	const names = {
+		svelte: 'Svelte',
+		kit: 'SvelteKit',
+		cli: 'Svelte CLI'
+	};
+	return `This is the developer documentation for ${names[type]}.`;
+}
+
+export function filterDocsByPackage(
+	allDocs: Record<string, string>,
+	type: Package
+): Record<string, string> {
+	const filtered: Record<string, string> = {};
+
+	for (const [path, content] of Object.entries(allDocs)) {
+		if (path.toLowerCase().includes(`/docs/${type}/`)) {
+			filtered[path] = content;
+		}
+	}
+
+	return filtered;
+}
+
+export function generateLlmContent(filteredDocs: Record<string, string>, type: Package): string {
+	let content = `<SYSTEM>${getDocumentationTitle(type)}</SYSTEM>\n\n`;
+
+	const paths = sortPaths(Object.keys(filteredDocs));
+
+	for (const path of paths) {
+		content += `# ${path.replace('../../../content/', '')}\n\n`;
+		content += filteredDocs[path];
+		content += '\n';
+	}
+
+	return content;
+}
