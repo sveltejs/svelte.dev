@@ -1,12 +1,7 @@
 import type { RequestHandler } from './$types';
+import { documentsContent } from '$lib/server/content';
 
-const PREFIX = 'This is the complete developer documentation for Svelte and SvelteKit.';
-
-// Import all markdown files
-const docs = import.meta.glob<{ default: string }>('../../../content/docs/**/*.md', {
-	eager: true,
-	query: '?raw'
-});
+const PREFIX = 'This is the abridged developer documentation for Svelte and SvelteKit.';
 
 // Sort function to ensure correct order (svelte -> kit -> cli)
 function getSectionPriority(path: string): number {
@@ -41,7 +36,7 @@ export const GET: RequestHandler = async () => {
 	let content = `${PREFIX}\n\n`;
 
 	// Get all file paths and sort them
-	const paths = Object.keys(docs).sort(comparePaths);
+	const paths = Object.keys(documentsContent).sort(comparePaths);
 
 	let currentSection = '';
 
@@ -63,7 +58,7 @@ export const GET: RequestHandler = async () => {
 
 		// Add file path and content
 		content += `## ${path.replace('../../../content/', '')}\n\n`;
-		content += docs[path].default;
+		content += documentsContent[path];
 		content += '\n';
 	}
 
