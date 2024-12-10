@@ -205,3 +205,27 @@ export function generateLlmContent(filteredDocs: Record<string, string>, type: P
 
 	return content;
 }
+
+export function generateCombinedContent(documentsContent: Record<string, string>): string {
+	let content = '';
+	let currentSection = '';
+	const paths = sortPaths(Object.keys(documentsContent));
+
+	for (const path of paths) {
+		const docType = packages.find((pkg) => path.includes(`/docs/${pkg}/`));
+		if (!docType) continue;
+
+		const section = getDocumentationStartTitle(docType);
+		if (section !== currentSection) {
+			if (currentSection) content += '\n';
+			content += `${section}\n\n`;
+			currentSection = section;
+		}
+
+		content += `## ${path.replace('../../../content/', '')}\n\n`;
+		content += documentsContent[path];
+		content += '\n';
+	}
+
+	return content;
+}
