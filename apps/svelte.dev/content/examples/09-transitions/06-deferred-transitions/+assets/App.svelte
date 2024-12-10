@@ -7,8 +7,8 @@
 		fallback: scale
 	});
 
-	let selected = $state(null);
-	let loading = $state(null);
+	let selected = $state.raw(null);
+	let loading = $state.raw(null);
 
 	const ASSETS = `https://sveltejs.github.io/assets/crossfade`;
 
