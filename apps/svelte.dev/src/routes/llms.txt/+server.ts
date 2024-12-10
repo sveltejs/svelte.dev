@@ -4,7 +4,14 @@ import { documentsContent, generateCombinedContent } from '$lib/server/content';
 const PREFIX = 'This is the abridged developer documentation for Svelte and SvelteKit.';
 
 export const GET: RequestHandler = async () => {
-	const content = `${PREFIX}\n\n${generateCombinedContent(documentsContent)}`;
+	const content = `${PREFIX}\n\n${generateCombinedContent(documentsContent, {
+		removeLegacy: true,
+		removeNoteBlocks: true,
+		removeDetailsBlocks: true,
+		removePlaygroundLinks: true,
+		removePrettierIgnore: true,
+		normalizeWhitespace: true
+	})}`;
 
 	return new Response(content, {
 		status: 200,

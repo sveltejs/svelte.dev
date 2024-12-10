@@ -192,21 +192,111 @@ export function filterDocsByPackage(
 	return filtered;
 }
 
-export function generateLlmContent(filteredDocs: Record<string, string>, type: Package): string {
+interface MinimizeOptions {
+	removeLegacy: boolean;
+	removeNoteBlocks: boolean;
+	removeDetailsBlocks: boolean;
+	removePlaygroundLinks: boolean;
+	removePrettierIgnore: boolean;
+	normalizeWhitespace: boolean;
+}
+
+const defaultOptions: MinimizeOptions = {
+	removeLegacy: false,
+	removeNoteBlocks: false,
+	removeDetailsBlocks: false,
+	removePlaygroundLinks: false,
+	removePrettierIgnore: false,
+	normalizeWhitespace: false
+};
+
+function removeQuoteBlocks(content: string, blockType: string): string {
+	return content
+		.split('\n')
+		.reduce((acc: string[], line: string, index: number, lines: string[]) => {
+			// If we find a block (with or without additional text), skip it and all subsequent blockquote lines
+			if (line.trim().startsWith(`> [!${blockType}]`)) {
+				// Skip all subsequent lines that are part of the blockquote
+				let i = index;
+				while (i < lines.length && (lines[i].startsWith('>') || lines[i].trim() === '')) {
+					i++;
+				}
+				// Update the index to skip all these lines
+				index = i - 1;
+				return acc;
+			}
+
+			// Only add the line if it's not being skipped
+			acc.push(line);
+			return acc;
+		}, [])
+		.join('\n');
+}
+
+function minimizeContent(content: string, options?: Partial<MinimizeOptions>): string {
+	// Merge with defaults, but only for properties that are defined
+	const settings: MinimizeOptions = options ? { ...defaultOptions, ...options } : defaultOptions;
+
+	let minimized = content;
+
+	if (settings.removeLegacy) {
+		minimized = removeQuoteBlocks(minimized, 'LEGACY');
+	}
+
+	if (settings.removeNoteBlocks) {
+		minimized = removeQuoteBlocks(minimized, 'NOTE');
+	}
+
+	if (settings.removeDetailsBlocks) {
+		minimized = removeQuoteBlocks(minimized, 'DETAILS');
+	}
+
+	if (settings.removePlaygroundLinks) {
+		// Replace playground URLs with /[link] but keep the original link text
+		minimized = minimized.replace(/\[([^\]]+)\]\(\/playground[^)]+\)/g, '[$1](/REMOVED)');
+	}
+
+	if (settings.removePrettierIgnore) {
+		minimized = minimized
+			.split('\n')
+			.filter((line) => line.trim() !== '<!-- prettier-ignore -->')
+			.join('\n');
+	}
+
+	if (settings.normalizeWhitespace) {
+		minimized = minimized.replace(/\s+/g, ' ');
+	}
+
+	minimized = minimized.trim();
+
+	return minimized;
+}
+
+export function generateLlmContent(
+	filteredDocs: Record<string, string>,
+	type: Package,
+	minimizeOptions?: Partial<MinimizeOptions>
+): string {
 	let content = `<SYSTEM>${getDocumentationTitle(type)}</SYSTEM>\n\n`;
 
 	const paths = sortPaths(Object.keys(filteredDocs));
 
 	for (const path of paths) {
 		content += `# ${path.replace('../../../content/', '')}\n\n`;
-		content += filteredDocs[path];
+		const docContent = minimizeOptions
+			? minimizeContent(filteredDocs[path], minimizeOptions)
+			: filteredDocs[path];
+		content += docContent;
 		content += '\n';
 	}
 
 	return content;
 }
 
-export function generateCombinedContent(documentsContent: Record<string, string>): string {
+export function generateCombinedContent(
+	documentsContent: Record<string, string>,
+	minimizeOptions?: Partial<MinimizeOptions>
+): string {
 	let content = '';
 	let currentSection = '';
 	const paths = sortPaths(Object.keys(documentsContent));
@@ -223,7 +313,10 @@ export function generateCombinedContent(documentsContent: Record<string, string>
 		}
 
 		content += `## ${path.replace('../../../content/', '')}\n\n`;
-		content += documentsContent[path];
+		const docContent = minimizeOptions
+			? minimizeContent(documentsContent[path], minimizeOptions)
+			: documentsContent[path];
+		content += docContent;
 		content += '\n';
 	}
 
