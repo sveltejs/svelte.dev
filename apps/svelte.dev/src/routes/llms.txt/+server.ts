@@ -1,10 +1,5 @@
 import type { RequestHandler } from './$types';
-import {
-	documentsContent,
-	getDocumentationStartTitle,
-	getDocumentationTitle,
-	sortPaths
-} from '$lib/server/content';
+import { documentsContent, getDocumentationStartTitle, sortPaths } from '$lib/server/content';
 
 const PREFIX = 'This is the abridged developer documentation for Svelte and SvelteKit.';
 
@@ -17,9 +12,9 @@ export const GET: RequestHandler = async () => {
 
 	for (const path of paths) {
 		let section = '';
-		if (path.includes('/docs/svelte/')) section = `${getDocumentationStartTitle('svelte')}`;
-		else if (path.includes('/docs/kit/')) section = `${getDocumentationStartTitle('kit')}`;
-		else if (path.includes('/docs/cli/')) section = `${getDocumentationStartTitle('cli')}`;
+		if (path.includes('/docs/svelte/')) section = getDocumentationStartTitle('svelte');
+		else if (path.includes('/docs/kit/')) section = getDocumentationStartTitle('kit');
+		else if (path.includes('/docs/cli/')) section = getDocumentationStartTitle('cli');
 		else continue;
 
 		if (section !== currentSection) {
