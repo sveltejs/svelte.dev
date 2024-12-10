@@ -284,54 +284,48 @@ function shouldIncludeFile(filename: string, ignore: string[] = []): boolean {
 	return true;
 }
 
-export function generateLlmContent(
-	filteredDocs: Record<string, string>,
-	type: Package,
-	minimizeOptions?: Partial<MinimizeOptions>
-): string {
-	let content = `<SYSTEM>${getDocumentationTitle(type)}</SYSTEM>\n\n`;
-
-	const paths = sortPaths(Object.keys(filteredDocs));
-
-	for (const path of paths) {
-		content += `# ${path.replace('../../../content/', '')}\n\n`;
-		const docContent = minimizeOptions
-			? minimizeContent(filteredDocs[path], minimizeOptions)
-			: filteredDocs[path];
-		content += docContent;
-		content += '\n';
-	}
-
-	return content;
+interface GenerateContentOptions {
+	prefix?: string;
+	ignore?: string[];
+	minimize?: Partial<MinimizeOptions>;
+	package?: Package;
 }
 
-export function generateCombinedContent(
-	documentsContent: Record<string, string>,
-	ignore: string[] = [],
-	minimizeOptions?: Partial<MinimizeOptions>
+export function generateContent(
+	docs: Record<string, string>,
+	options: GenerateContentOptions = {}
 ): string {
+	const { prefix, ignore = [], minimize: minimizeOptions, package: pkg } = options;
+
 	let content = '';
+	if (prefix) {
+		content = `${prefix}\n\n`;
+	}
+
 	let currentSection = '';
-	const paths = sortPaths(Object.keys(documentsContent));
+	const paths = sortPaths(Object.keys(docs));
 
 	for (const path of paths) {
-		// Skip files that match ignore patterns
 		if (!shouldIncludeFile(path, ignore)) continue;
 
-		const docType = packages.find((pkg) => path.includes(`/docs/${pkg}/`));
-		if (!docType) continue;
+		// If a specific package is provided, only include its docs
+		if (pkg) {
+			if (!path.includes(`/docs/${pkg}/`)) continue;
+		} else {
+			// For combined content, only include paths that match any package
+			const docType = packages.find((p) => path.includes(`/docs/${p}/`));
+			if (!docType) continue;
 
-		const section = getDocumentationStartTitle(docType);
-		if (section !== currentSection) {
-			if (currentSection) content += '\n';
-			content += `${section}\n\n`;
-			currentSection = section;
+			const section = getDocumentationStartTitle(docType);
+			if (section !== currentSection) {
+				if (currentSection) content += '\n';
+				content += `${section}\n\n`;
+				currentSection = section;
+			}
 		}
 
 		content += `## ${path.replace('../../../content/', '')}\n\n`;
-		const docContent = minimizeOptions
-			? minimizeContent(documentsContent[path], minimizeOptions)
-			: documentsContent[path];
+		const docContent = minimizeOptions ? minimizeContent(docs[path], minimizeOptions) : docs[path];
 		content += docContent;
 		content += '\n';
 	}

@@ -4,7 +4,8 @@ import { error } from '@sveltejs/kit';
 import {
 	documentsContent,
 	filterDocsByPackage,
-	generateLlmContent,
+	generateContent,
+	getDocumentationTitle,
 	packages,
 	type Package
 } from '$lib/server/content';
@@ -28,7 +29,8 @@ export const GET: RequestHandler = async ({ params }) => {
 		error(404, 'No documentation found for this package');
 	}
 
-	const content = generateLlmContent(filteredDocs, packageType as Package);
+	const PREFIX = `<SYSTEM>${getDocumentationTitle(packageType)}</SYSTEM>`;
+	const content = `${PREFIX}\n\n${generateContent(filteredDocs)}`;
 
 	return new Response(content, {
 		status: 200,

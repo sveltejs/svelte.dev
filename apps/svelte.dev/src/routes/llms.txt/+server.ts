@@ -1,12 +1,12 @@
 import type { RequestHandler } from './$types';
-import { documentsContent, generateCombinedContent } from '$lib/server/content';
+import { documentsContent, generateContent } from '$lib/server/content';
 
-const PREFIX = 'This is the abridged developer documentation for Svelte and SvelteKit.';
+const PREFIX =
+	'<SYSTEM>This is the abridged developer documentation for Svelte and SvelteKit.</SYSTEM>';
 
 export const GET: RequestHandler = async () => {
-	const content = `${PREFIX}\n\n${generateCombinedContent(
-		documentsContent,
-		[
+	const content = `${PREFIX}\n\n${generateContent(documentsContent, {
+		ignore: [
 			// Svelte ignores
 			'../../../content/docs/svelte/07-misc/04-custom-elements.md',
 			'../../../content/docs/svelte/07-misc/06-v4-migration-guide.md',
@@ -28,7 +28,7 @@ export const GET: RequestHandler = async () => {
 			'../../../content/docs/kit/40-best-practices/05-performance.md',
 			'../../../content/docs/kit/60-appendix/**/*.md'
 		],
-		{
+		minimize: {
 			removeLegacy: true,
 			removeNoteBlocks: true,
 			removeDetailsBlocks: true,
@@ -36,7 +36,7 @@ export const GET: RequestHandler = async () => {
 			removePrettierIgnore: true,
 			normalizeWhitespace: true
 		}
-	)}`;
+	})}`;
 
 	return new Response(content, {
 		status: 200,
