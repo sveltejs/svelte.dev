@@ -341,8 +341,8 @@ importers:
         specifier: workspace:*
         version: link:../site-kit
       '@sveltejs/svelte-json-tree':
-        specifier: ^2.2.0
-        version: 2.2.0(svelte@5.1.11)
+        specifier: ^2.2.1
+        version: 2.2.1(svelte@5.1.11)
       acorn:
         specifier: ^8.11.3
         version: 8.14.0
@@ -1624,10 +1624,11 @@ packages:
     peerDependencies:
       svelte: ^3.44.0 || ^4.0.0 || ^5.0.0-next.1
 
-  '@sveltejs/svelte-json-tree@2.2.0':
-    resolution: {integrity: sha512-Ohgv6m5d1M9xNbo2fVzYKtI0VzKA1DBh2isZ/NarEriNxICQNVVfJtNjUCryFNvcg1XsdrmfV4VGTzFWO57pCw==}
+  '@sveltejs/svelte-json-tree@2.2.1':
+    resolution: {integrity: sha512-M8l23/R3y1fI2+RaOzfUzmkysTWWsw/NClUgGpvydl9vXRonPN1/btQQievaNyeWNfUj12tjPfh5yTrXWpaKkg==}
+    engines: {pnpm: ^9.0.0}
     peerDependencies:
-      svelte: ^4.0.0
+      svelte: ^4.0.0 || ^5.0.0
 
   '@sveltejs/vite-plugin-svelte-inspector@3.0.0-next.2':
     resolution: {integrity: sha512-Yl9BWvEj+1j+8mICIAA04/Sx0wEHNL0n9pSIZFM8n4NWgLFmR3v41qX2k54J/r4LWE2YHTeNNH2WJqEUb3geEA==}
@@ -4619,7 +4620,7 @@ snapshots:
     transitivePeerDependencies:
       - typescript
 
-  '@sveltejs/svelte-json-tree@2.2.0(svelte@5.1.11)':
+  '@sveltejs/svelte-json-tree@2.2.1(svelte@5.1.11)':
     dependencies:
       svelte: 5.1.11
 
