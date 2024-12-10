@@ -1,6 +1,8 @@
+import { dev } from '$app/environment';
 import { read } from '$app/server';
 import type { Document } from '@sveltejs/site-kit';
 import { create_index } from '@sveltejs/site-kit/server/content';
+import { minimatch } from 'minimatch';
 
 const documents = import.meta.glob<string>('../../../content/**/*.md', {
 	eager: true,
@@ -272,6 +274,16 @@ function minimizeContent(content: string, options?: Partial<MinimizeOptions>): s
 	return minimized;
 }
 
+function shouldIncludeFile(filename: string, ignore: string[] = []): boolean {
+	const shouldIgnore = ignore.some((pattern) => minimatch(filename, pattern));
+	if (shouldIgnore) {
+		if (dev) console.log(`❌ Ignored by pattern: ${filename}`);
+		return false;
+	}
+
+	return true;
+}
+
 export function generateLlmContent(
 	filteredDocs: Record<string, string>,
 	type: Package,
@@ -295,6 +307,7 @@ export function generateLlmContent(
 
 export function generateCombinedContent(
 	documentsContent: Record<string, string>,
+	ignore: string[] = [],
 	minimizeOptions?: Partial<MinimizeOptions>
 ): string {
 	let content = '';
@@ -302,6 +315,9 @@ export function generateCombinedContent(
 	const paths = sortPaths(Object.keys(documentsContent));
 
 	for (const path of paths) {
+		// Skip files that match ignore patterns
+		if (!shouldIncludeFile(path, ignore)) continue;
+
 		const docType = packages.find((pkg) => path.includes(`/docs/${pkg}/`));
 		if (!docType) continue;
 
