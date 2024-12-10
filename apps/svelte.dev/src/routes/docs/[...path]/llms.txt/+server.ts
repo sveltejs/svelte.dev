@@ -1,10 +1,15 @@
 import type { RequestHandler } from './$types';
+import type { EntryGenerator } from './$types';
 import { error } from '@sveltejs/kit';
-
-const PREFIX = 'This is the filtered developer documentation for Svelte and SvelteKit.';
 
 const packages = ['svelte', 'kit', 'cli'] as const;
 type Package = (typeof packages)[number];
+
+export const prerender = true;
+
+export const entries: EntryGenerator = () => {
+	return packages.map((type) => ({ path: type }));
+};
 
 const docs = import.meta.glob<string>('../../../../../content/docs/**/*.md', {
 	eager: true,
@@ -12,65 +17,58 @@ const docs = import.meta.glob<string>('../../../../../content/docs/**/*.md', {
 	import: 'default'
 });
 
-function filterDocs(allDocs: Record<string, string>, type: Package) {
-	const typePathMap = {
-		svelte: 'svelte',
-		kit: 'kit',
-		cli: 'cli'
-	} as const;
+function getPrefix(type: Package): string {
+	const names = {
+		svelte: 'Svelte',
+		kit: 'SvelteKit',
+		cli: 'Svelte CLI'
+	};
+	return `This is the developer documentation for ${names[type]}.`;
+}
 
-	return Object.entries(allDocs).reduce(
-		(filtered, [path, content]) => {
-			const normalizedPath = path.toLowerCase();
-			if (normalizedPath.includes(`/docs/${typePathMap[type]}/`)) {
-				filtered[path] = content;
-			}
-			return filtered;
-		},
-		{} as Record<string, string>
-	);
+function filterDocs(allDocs: Record<string, string>, type: Package): Record<string, string> {
+	const filtered: Record<string, string> = {};
+
+	for (const [path, content] of Object.entries(allDocs)) {
+		if (path.toLowerCase().includes(`/docs/${type}/`)) {
+			filtered[path] = content;
+		}
+	}
+
+	return filtered;
 }
 
 function sortPaths(paths: string[]): string[] {
 	return paths.sort((a, b) => {
-		// Get directory paths
 		const dirA = a.split('/').slice(0, -1).join('/');
 		const dirB = b.split('/').slice(0, -1).join('/');
 
-		// If in the same directory, prioritize index.md
 		if (dirA === dirB) {
 			if (a.endsWith('index.md')) return -1;
 			if (b.endsWith('index.md')) return 1;
 			return a.localeCompare(b);
 		}
 
-		// Otherwise sort by directory path
 		return dirA.localeCompare(dirB);
 	});
 }
 
 function generateContent(filteredDocs: Record<string, string>, type: Package): string {
-	let content = `${PREFIX}\n\n# ${type} Documentation\n\n`;
+	let content = `<SYSTEM>${getPrefix(type)}</SYSTEM>\n\n`;
 
-	// Get all file paths and sort them
 	const paths = sortPaths(Object.keys(filteredDocs));
 
-	// Log for debugging
-	console.log('Filtered paths:', paths);
-
-	// Process each file
 	for (const path of paths) {
-		content += `## ${path.replace('../../../../../content/', '')}\n\n`;
+		content += `# ${path.replace('../../../../../content/', '')}\n\n`;
 		content += filteredDocs[path];
-		content += '\n\n';
+		content += '\n';
 	}
 
 	return content;
 }
 
 export const GET: RequestHandler = async ({ params }) => {
-	// Extract the first part of the path (svelte, kit, or cli)
-	const [packageType] = params.path.split('/');
+	const packageType = params.path;
 
 	if (!packages.includes(packageType as Package)) {
 		error(404, 'Not Found');
@@ -92,5 +90,3 @@ export const GET: RequestHandler = async ({ params }) => {
 		}
 	});
 };
-
-export const prerender = true;
