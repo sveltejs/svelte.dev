@@ -8,7 +8,8 @@ type Package = (typeof packages)[number];
 
 const docs = import.meta.glob<string>('../../../../../content/docs/**/*.md', {
 	eager: true,
-	query: '?raw'
+	query: '?raw',
+	import: 'default'
 });
 
 function filterDocs(allDocs: Record<string, string>, type: Package) {
@@ -60,7 +61,7 @@ function generateContent(filteredDocs: Record<string, string>, type: Package): s
 	// Process each file
 	for (const path of paths) {
 		content += `## ${path.replace('../../../../../content/', '')}\n\n`;
-		content += filteredDocs[path].default;
+		content += filteredDocs[path];
 		content += '\n\n';
 	}
 
