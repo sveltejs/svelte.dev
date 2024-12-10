@@ -133,9 +133,7 @@ Checks whether this is an action failure thrown by `fail`.
 <div class="ts-block">
 
 ```dts
-function isActionFailure(
-	e: unknown
-): e is ActionFailure<undefined>;
+function isActionFailure(e: unknown): e is ActionFailure;
 ```
 
 </div>
@@ -853,24 +851,6 @@ Compress files in `directory` with gzip and brotli, where appropriate. Generates
 
 </div>
 </div></div>
-
-## ClientInit
-
-<blockquote class="since note">
-
-Available since 2.10.0
-
-</blockquote>
-
-The [`init`](/docs/kit/hooks#Shared-hooks-init) will be invoked once the app starts in the browser
-
-<div class="ts-block">
-
-```dts
-type ClientInit = () => MaybePromise<void>;
-```
-
-</div>
 
 ## Config
 
@@ -2367,24 +2347,6 @@ A `[file]: size` map of all assets imported by server code
 
 </div>
 </div></div>
-
-## ServerInit
-
-<blockquote class="since note">
-
-Available since 2.10.0
-
-</blockquote>
-
-The [`init`](/docs/kit/hooks#Shared-hooks-init) will be invoked before the server responds to its first request
-
-<div class="ts-block">
-
-```dts
-type ServerInit = () => MaybePromise<void>;
-```
-
-</div>
 
 ## ServerInitOptions
 
