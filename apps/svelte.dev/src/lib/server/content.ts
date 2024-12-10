@@ -14,6 +14,12 @@ const assets = import.meta.glob<string>('../../../content/**/+assets/**', {
 	import: 'default'
 });
 
+export const documentsContent = import.meta.glob<string>('../../../content/**/*.md', {
+	eager: true,
+	query: '?raw',
+	import: 'default'
+});
+
 // https://github.com/vitejs/vite/issues/17453
 export const index = await create_index(documents, assets, '../../../content', read);
 
