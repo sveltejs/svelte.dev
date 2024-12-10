@@ -19,6 +19,8 @@
 <style>
 	h1 {
 		transition: color 0.2s;
+		font-size: 2rem;
+		font-weight: 700;
 	}
 
 	div {
@@ -35,6 +37,9 @@
 		transform: translate(-2px,-2px);
 		filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.2));
 		transition: all 0.1s;
+		color: black;
+		font-weight: 700;
+		font-size: 2rem;
 	}
 
 	button[aria-current="true"] {
