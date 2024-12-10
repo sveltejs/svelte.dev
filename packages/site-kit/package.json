@@ -31,7 +31,7 @@
 		"@codemirror/lint": "^6.4.1",
 		"@codemirror/search": "^6.5.2",
 		"@codemirror/state": "^6.2.1",
-		"@codemirror/view": "^6.17.1",
+		"@codemirror/view": "^6.35.1",
 		"@fontsource/atkinson-hyperlegible": "^5.1.0",
 		"@fontsource/dm-serif-display": "^5.1.0",
 		"@fontsource/eb-garamond": "^5.1.0",
