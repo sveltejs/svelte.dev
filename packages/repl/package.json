@@ -49,14 +49,14 @@
 	"devDependencies": {
 		"@lezer/common": "^1.2.1",
 		"@sveltejs/adapter-auto": "^3.0.0",
-		"@sveltejs/kit": "^2.8.0",
+		"@sveltejs/kit": "^2.10.1",
 		"@sveltejs/package": "^2.0.0",
 		"@sveltejs/vite-plugin-svelte": "4.0.0",
 		"@types/estree": "^1.0.5",
 		"prettier": "^3.3.2",
 		"prettier-plugin-svelte": "^3.2.4",
 		"publint": "^0.1.9",
-		"svelte-check": "^4.0.0",
+		"svelte-check": "^4.1.1",
 		"typescript": "^5.5.4",
 		"vite": "^5.4.3"
 	},
