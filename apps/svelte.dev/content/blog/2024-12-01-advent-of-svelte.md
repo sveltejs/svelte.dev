@@ -71,13 +71,17 @@ You can now do `bind:value={get, set}` to validate and transform bound values. T
 - [docs](/docs/svelte/bind#Function-bindings)
 - [demo](/playground/1ddd82f573b94201b3c8fcab33bf0a46?version=5.9.0)
 
-## Day 9
+## Day 9: error and warning documentation
 
-Coming soon!
+When Svelte emits a warning or error (whether at build time, when the compiler is running, or when the app is running on the server or in the browser) it will now be accompanied by a link to the corresponding entry in the documentation containing a description (which is omitted from production builds, to save bytes) and — in some cases, with more to come — more details on why it happened and what you can do to fix it.
 
-## Day 10
+- [demo](/playground/8095884c1f5040ea846669b904083e25?version=5.10.0)
 
-Coming soon!
+## Day 10: SvelteKit `init` hooks
+
+A lot of you wanted a place to put asynchronous setup work that happens before your SvelteKit app starts up. You can now export an `init` function from `hooks.server.js` and `hooks.client.js` that will be awaited before any other stuff happens.
+
+- [docs](https://svelte.dev/docs/kit/hooks#Shared-hooks-init)
 
 ## Day 11
 
