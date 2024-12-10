@@ -163,13 +163,18 @@ export function sortPaths(paths: string[]): string[] {
 export const packages = ['svelte', 'kit', 'cli'] as const;
 export type Package = (typeof packages)[number];
 
-function getDocumentationTitle(type: Package): string {
-	const names = {
-		svelte: 'Svelte',
-		kit: 'SvelteKit',
-		cli: 'Svelte CLI'
-	};
-	return `This is the developer documentation for ${names[type]}.`;
+const documentationNames = {
+	svelte: 'Svelte',
+	kit: 'SvelteKit',
+	cli: 'Svelte CLI'
+};
+
+export function getDocumentationTitle(type: Package): string {
+	return `This is the developer documentation for ${documentationNames[type]}.`;
+}
+
+export function getDocumentationStartTitle(type: Package): string {
+	return `# Start of ${documentationNames[type]} documentation`;
 }
 
 export function filterDocsByPackage(
