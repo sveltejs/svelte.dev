@@ -71,7 +71,7 @@
 		"@codemirror/language": "^6.10.1",
 		"@codemirror/lint": "^6.7.0",
 		"@codemirror/state": "^6.4.1",
-		"@codemirror/view": "^6.35.1",
+		"@codemirror/view": "^6.26.3",
 		"@jridgewell/sourcemap-codec": "^1.4.15",
 		"@replit/codemirror-lang-svelte": "^6.0.0",
 		"@replit/codemirror-vim": "^6.0.14",
