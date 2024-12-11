@@ -8,7 +8,7 @@ const documents = import.meta.glob<string>('../../../content/**/*.md', {
 	import: 'default'
 });
 
-const assets = import.meta.glob<string>('../../../content/**/+assets/**', {
+const assets = import.meta.glob<string>(['../../../content/**/+assets/**', '../../../content/**/+assets/**/.env'], {
 	eager: true,
 	query: '?url',
 	import: 'default'
