@@ -130,39 +130,15 @@ function create_docs() {
 
 export const docs = create_docs();
 
-export const examples = index.examples.children;
+// Automatically determine packages from the docs directory structure
+export const packages = Array.from(
+	new Set(
+		Object.keys(docs.topics)
+			.map((topic) => topic.split('/')[1])
+			.filter(Boolean)
+	)
+) as const;
 
-function getDocumentationSectionPriority(path: string): number {
-	if (path.includes('/docs/svelte/')) return 0;
-	if (path.includes('/docs/kit/')) return 1;
-	if (path.includes('/docs/cli/')) return 2;
-	return 3;
-}
-
-export function sortDocumentationPaths(paths: string[]): string[] {
-	return paths.sort((a, b) => {
-		// First compare by section priority
-		const priorityA = getDocumentationSectionPriority(a);
-		const priorityB = getDocumentationSectionPriority(b);
-		if (priorityA !== priorityB) return priorityA - priorityB;
-
-		// Get directory paths
-		const dirA = a.split('/').slice(0, -1).join('/');
-		const dirB = b.split('/').slice(0, -1).join('/');
-
-		// If in the same directory, prioritize index.md
-		if (dirA === dirB) {
-			if (a.endsWith('index.md')) return -1;
-			if (b.endsWith('index.md')) return 1;
-			return a.localeCompare(b);
-		}
-
-		// Otherwise sort by directory path
-		return dirA.localeCompare(dirB);
-	});
-}
-
-export const packages = ['svelte', 'kit', 'cli'] as const;
 export type Package = (typeof packages)[number];
 
 const DOCUMENTATION_NAMES: Record<Package, string> = {
@@ -331,4 +307,34 @@ export function generateLlmContent(
 	}
 
 	return content;
+}
+
+function getDocumentationSectionPriority(path: string): number {
+	if (path.includes('/docs/svelte/')) return 0;
+	if (path.includes('/docs/kit/')) return 1;
+	if (path.includes('/docs/cli/')) return 2;
+	return 3;
+}
+
+export function sortDocumentationPaths(paths: string[]): string[] {
+	return paths.sort((a, b) => {
+		// First compare by section priority
+		const priorityA = getDocumentationSectionPriority(a);
+		const priorityB = getDocumentationSectionPriority(b);
+		if (priorityA !== priorityB) return priorityA - priorityB;
+
+		// Get directory paths
+		const dirA = a.split('/').slice(0, -1).join('/');
+		const dirB = b.split('/').slice(0, -1).join('/');
+
+		// If in the same directory, prioritize index.md
+		if (dirA === dirB) {
+			if (a.endsWith('index.md')) return -1;
+			if (b.endsWith('index.md')) return 1;
+			return a.localeCompare(b);
+		}
+
+		// Otherwise sort by directory path
+		return dirA.localeCompare(dirB);
+	});
 }
