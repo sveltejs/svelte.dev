@@ -130,34 +130,31 @@ function create_docs() {
 
 export const docs = create_docs();
 
-// Automatically determine packages from the docs directory structure
 export const packages = Array.from(
 	new Set(
 		Object.keys(docs.topics)
 			.map((topic) => topic.split('/')[1])
 			.filter(Boolean)
 	)
-) as const;
+);
 
-export type Package = (typeof packages)[number];
-
-const DOCUMENTATION_NAMES: Record<Package, string> = {
+const DOCUMENTATION_NAMES: Record<string, string> = {
 	svelte: 'Svelte',
 	kit: 'SvelteKit',
 	cli: 'Svelte CLI'
 };
 
-export function getDocumentationTitle(type: Package): string {
+export function getDocumentationTitle(type: string): string {
 	return `This is the developer documentation for ${DOCUMENTATION_NAMES[type]}.`;
 }
 
-export function getDocumentationStartTitle(type: Package): string {
+export function getDocumentationStartTitle(type: string): string {
 	return `# Start of ${DOCUMENTATION_NAMES[type]} documentation`;
 }
 
 export function filterDocsByPackage(
 	allDocs: Record<string, string>,
-	type: Package
+	type: string
 ): Record<string, string> {
 	const filtered: Record<string, string> = {};
 
