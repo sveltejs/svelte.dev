@@ -47,7 +47,7 @@ on Firefox and Safari it won't.
 
 ```dts
 const devicePixelRatio: {
-	get current(): number;
+	get current(): number | undefined;
 };
 ```
 
