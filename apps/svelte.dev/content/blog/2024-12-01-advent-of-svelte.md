@@ -83,9 +83,12 @@ A lot of you wanted a place to put asynchronous setup work that happens before y
 
 - [docs](https://svelte.dev/docs/kit/hooks#Shared-hooks-init)
 
-## Day 11
+## Day 11: `svelte/reactivity/window`
 
-Coming soon!
+Today we added a whole new module. `svelte/reactivity/window` exports a variety of reactive values like `innerWidth`, `innerHeight`, `scrollX`, `scrollY` and so on. Like the `MediaQuery` introduced on day 5 and `Spring` and `Tween` from day 6, these are class instances with a reactive `current` property that you can use in your template and in deriveds/effects. Behind the scenes, Svelte handles all the event listener stuff.
+
+- [docs](/docs/svelte/svelte-reactivity-window)
+- [demo](/playground/8ac86e10fdce485a99c29c95e0092df4?version=5.11.0)
 
 ## Day 12
 
