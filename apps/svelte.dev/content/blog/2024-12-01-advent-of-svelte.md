@@ -77,13 +77,18 @@ When Svelte emits a warning or error (whether at build time, when the compiler i
 
 - [demo](/playground/8095884c1f5040ea846669b904083e25?version=5.10.0)
 
-## Day 10
+## Day 10: SvelteKit `init` hooks
 
-Coming soon!
+A lot of you wanted a place to put asynchronous setup work that happens before your SvelteKit app starts up. You can now export an `init` function from `hooks.server.js` and `hooks.client.js` that will be awaited before any other stuff happens.
 
-## Day 11
+- [docs](https://svelte.dev/docs/kit/hooks#Shared-hooks-init)
 
-Coming soon!
+## Day 11: `svelte/reactivity/window`
+
+Today we added a whole new module. `svelte/reactivity/window` exports a variety of reactive values like `innerWidth`, `innerHeight`, `scrollX`, `scrollY` and so on. Like the `MediaQuery` introduced on day 5 and `Spring` and `Tween` from day 6, these are class instances with a reactive `current` property that you can use in your template and in deriveds/effects. Behind the scenes, Svelte handles all the event listener stuff.
+
+- [docs](/docs/svelte/svelte-reactivity-window)
+- [demo](/playground/8ac86e10fdce485a99c29c95e0092df4?version=5.11.0)
 
 ## Day 12
 
