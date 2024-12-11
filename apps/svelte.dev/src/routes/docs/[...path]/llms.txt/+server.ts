@@ -29,7 +29,7 @@ export const GET: RequestHandler = async ({ params }) => {
 		error(404, 'No documentation found for this package');
 	}
 
-	const PREFIX = `<SYSTEM>${getDocumentationTitle(packageType)}</SYSTEM>`;
+	const PREFIX = `<SYSTEM>${getDocumentationTitle(packageType as Package)}</SYSTEM>`;
 	const content = `${PREFIX}\n\n${generateLlmContent(filteredDocs)}`;
 
 	return new Response(content, {
