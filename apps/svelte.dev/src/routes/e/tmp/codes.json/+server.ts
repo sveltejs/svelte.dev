@@ -14,7 +14,11 @@ const codes: Record<string, Record<string, string[]>> = {};
 
 for (const page of reference) {
 	const grouped: Record<string, string[]> = {};
-	const sections = page.body.split(/(^|\n)## /g).slice(1);
+	const sections = page.body.split(/(^|\n)## /g);
+
+	if (sections.length > 1) {
+		sections.shift();
+	}
 
 	for (const section of sections) {
 		const lines = section.slice(section.startsWith('\n') ? 1 : 0).split('\n');
