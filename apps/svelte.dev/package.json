@@ -67,6 +67,7 @@
 		"lightningcss": "^1.25.1",
 		"magic-string": "^0.30.11",
 		"marked": "^14.1.2",
+		"minimatch": "^10.0.1",
 		"prettier": "^3.3.2",
 		"prettier-plugin-svelte": "^3.2.4",
 		"satori": "^0.10.13",

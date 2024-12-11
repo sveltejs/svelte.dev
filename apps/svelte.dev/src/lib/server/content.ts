@@ -1,6 +1,8 @@
+import { dev } from '$app/environment';
 import { read } from '$app/server';
 import type { Document } from '@sveltejs/site-kit';
 import { create_index } from '@sveltejs/site-kit/server/content';
+import { minimatch } from 'minimatch';
 
 const documents = import.meta.glob<string>('../../../content/**/*.md', {
 	eager: true,
@@ -16,6 +18,12 @@ const assets = import.meta.glob<string>(
 		import: 'default'
 	}
 );
+
+export const documentsContent = import.meta.glob<string>('../../../content/**/*.md', {
+	eager: true,
+	query: '?raw',
+	import: 'default'
+});
 
 // https://github.com/vitejs/vite/issues/17453
 export const index = await create_index(documents, assets, '../../../content', read);
@@ -124,5 +132,210 @@ function create_docs() {
 }
 
 export const docs = create_docs();
-
 export const examples = index.examples.children;
+
+export const packages = Array.from(
+	new Set(
+		Object.keys(docs.topics)
+			.map((topic) => topic.split('/')[1])
+			.filter(Boolean)
+	)
+);
+
+const DOCUMENTATION_NAMES: Record<string, string> = {
+	svelte: 'Svelte',
+	kit: 'SvelteKit',
+	cli: 'Svelte CLI'
+};
+
+export function getDocumentationTitle(type: string): string {
+	return `This is the developer documentation for ${DOCUMENTATION_NAMES[type]}.`;
+}
+
+export function getDocumentationStartTitle(type: string): string {
+	return `# Start of ${DOCUMENTATION_NAMES[type]} documentation`;
+}
+
+export function filterDocsByPackage(
+	allDocs: Record<string, string>,
+	type: string
+): Record<string, string> {
+	const filtered: Record<string, string> = {};
+
+	for (const [path, content] of Object.entries(allDocs)) {
+		if (path.toLowerCase().includes(`/docs/${type}/`)) {
+			filtered[path] = content;
+		}
+	}
+
+	return filtered;
+}
+
+interface MinimizeOptions {
+	removeLegacy: boolean;
+	removeNoteBlocks: boolean;
+	removeDetailsBlocks: boolean;
+	removePlaygroundLinks: boolean;
+	removePrettierIgnore: boolean;
+	normalizeWhitespace: boolean;
+}
+
+const defaultOptions: MinimizeOptions = {
+	removeLegacy: false,
+	removeNoteBlocks: false,
+	removeDetailsBlocks: false,
+	removePlaygroundLinks: false,
+	removePrettierIgnore: false,
+	normalizeWhitespace: false
+};
+
+function removeQuoteBlocks(content: string, blockType: string): string {
+	return content
+		.split('\n')
+		.reduce((acc: string[], line: string, index: number, lines: string[]) => {
+			// If we find a block (with or without additional text), skip it and all subsequent blockquote lines
+			if (line.trim().startsWith(`> [!${blockType}]`)) {
+				// Skip all subsequent lines that are part of the blockquote
+				let i = index;
+				while (i < lines.length && (lines[i].startsWith('>') || lines[i].trim() === '')) {
+					i++;
+				}
+				// Update the index to skip all these lines
+				index = i - 1;
+				return acc;
+			}
+
+			// Only add the line if it's not being skipped
+			acc.push(line);
+			return acc;
+		}, [])
+		.join('\n');
+}
+
+function minimizeContent(content: string, options?: Partial<MinimizeOptions>): string {
+	// Merge with defaults, but only for properties that are defined
+	const settings: MinimizeOptions = options ? { ...defaultOptions, ...options } : defaultOptions;
+
+	let minimized = content;
+
+	if (settings.removeLegacy) {
+		minimized = removeQuoteBlocks(minimized, 'LEGACY');
+	}
+
+	if (settings.removeNoteBlocks) {
+		minimized = removeQuoteBlocks(minimized, 'NOTE');
+	}
+
+	if (settings.removeDetailsBlocks) {
+		minimized = removeQuoteBlocks(minimized, 'DETAILS');
+	}
+
+	if (settings.removePlaygroundLinks) {
+		// Replace playground URLs with /[link] but keep the original link text
+		minimized = minimized.replace(/\[([^\]]+)\]\(\/playground[^)]+\)/g, '[$1](/REMOVED)');
+	}
+
+	if (settings.removePrettierIgnore) {
+		minimized = minimized
+			.split('\n')
+			.filter((line) => line.trim() !== '<!-- prettier-ignore -->')
+			.join('\n');
+	}
+
+	if (settings.normalizeWhitespace) {
+		minimized = minimized.replace(/\s+/g, ' ');
+	}
+
+	minimized = minimized.trim();
+
+	return minimized;
+}
+
+function shouldIncludeFileLlmDocs(filename: string, ignore: string[] = []): boolean {
+	const shouldIgnore = ignore.some((pattern) => minimatch(filename, pattern));
+	if (shouldIgnore) {
+		if (dev) console.log(`❌ Ignored by pattern: ${filename}`);
+		return false;
+	}
+
+	return true;
+}
+
+interface GenerateLlmContentOptions {
+	prefix?: string;
+	ignore?: string[];
+	minimize?: Partial<MinimizeOptions>;
+	package?: string;
+}
+
+export function generateLlmContent(
+	docs: Record<string, string>,
+	options: GenerateLlmContentOptions = {}
+): string {
+	const { prefix, ignore = [], minimize: minimizeOptions, package: pkg } = options;
+
+	let content = '';
+	if (prefix) {
+		content = `${prefix}\n\n`;
+	}
+
+	let currentSection = '';
+	const paths = sortDocumentationPaths(Object.keys(docs));
+
+	for (const path of paths) {
+		if (!shouldIncludeFileLlmDocs(path, ignore)) continue;
+
+		// If a specific package is provided, only include its docs
+		if (pkg) {
+			if (!path.includes(`/docs/${pkg}/`)) continue;
+		} else {
+			// For combined content, only include paths that match any package
+			const docType = packages.find((p) => path.includes(`/docs/${p}/`));
+			if (!docType) continue;
+
+			const section = getDocumentationStartTitle(docType);
+			if (section !== currentSection) {
+				if (currentSection) content += '\n';
+				content += `${section}\n\n`;
+				currentSection = section;
+			}
+		}
+
+		content += `## ${path.replace('../../../content/', '')}\n\n`;
+		const docContent = minimizeOptions ? minimizeContent(docs[path], minimizeOptions) : docs[path];
+		content += docContent;
+		content += '\n';
+	}
+
+	return content;
+}
+
+function getDocumentationSectionPriority(path: string): number {
+	if (path.includes('/docs/svelte/')) return 0;
+	if (path.includes('/docs/kit/')) return 1;
+	if (path.includes('/docs/cli/')) return 2;
+	return 3;
+}
+
+export function sortDocumentationPaths(paths: string[]): string[] {
+	return paths.sort((a, b) => {
+		// First compare by section priority
+		const priorityA = getDocumentationSectionPriority(a);
+		const priorityB = getDocumentationSectionPriority(b);
+		if (priorityA !== priorityB) return priorityA - priorityB;
+
+		// Get directory paths
+		const dirA = a.split('/').slice(0, -1).join('/');
+		const dirB = b.split('/').slice(0, -1).join('/');
+
+		// If in the same directory, prioritize index.md
+		if (dirA === dirB) {
+			if (a.endsWith('index.md')) return -1;
+			if (b.endsWith('index.md')) return 1;
+			return a.localeCompare(b);
+		}
+
+		// Otherwise sort by directory path
+		return dirA.localeCompare(dirB);
+	});
+}
