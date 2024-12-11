@@ -64,13 +64,13 @@ If you can use the media query in CSS to achieve the same effect, do that.
 <div class="ts-block">
 
 ```dts
-class MediaQuery {/*…*/}
+class MediaQuery extends ReactiveValue<boolean> {/*…*/}
 ```
 
 <div class="ts-block-property">
 
 ```dts
-constructor(query: string, matches?: boolean | undefined);
+constructor(query: string, fallback?: boolean | undefined);
 ```
 
 <div class="ts-block-property-details">
@@ -78,29 +78,11 @@ constructor(query: string, matches?: boolean | undefined);
 <div class="ts-block-property-bullets">
 
 - `query` A media query string
-- `matches` Fallback value for the server
+- `fallback` Fallback value for the server
 
 </div>
 
 </div>
-</div>
-
-<div class="ts-block-property">
-
-```dts
-get current(): boolean;
-```
-
-<div class="ts-block-property-details"></div>
-</div>
-
-<div class="ts-block-property">
-
-```dts
-#private;
-```
-
-<div class="ts-block-property-details"></div>
 </div></div>
 
 
