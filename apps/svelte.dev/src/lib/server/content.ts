@@ -8,11 +8,14 @@ const documents = import.meta.glob<string>('../../../content/**/*.md', {
 	import: 'default'
 });
 
-const assets = import.meta.glob<string>(['../../../content/**/+assets/**', '../../../content/**/+assets/**/.env'], {
-	eager: true,
-	query: '?url',
-	import: 'default'
-});
+const assets = import.meta.glob<string>(
+	['../../../content/**/+assets/**', '../../../content/**/+assets/**/.env'],
+	{
+		eager: true,
+		query: '?url',
+		import: 'default'
+	}
+);
 
 // https://github.com/vitejs/vite/issues/17453
 export const index = await create_index(documents, assets, '../../../content', read);
