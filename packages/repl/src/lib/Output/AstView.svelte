@@ -65,7 +65,19 @@
 		<code>
 			{#if typeof ast === 'object'}
 				<ul>
-					<AstNode value={ast} {path_nodes} {autoscroll} />
+					<AstNode
+						value={ast}
+						{path_nodes}
+						{autoscroll}
+						onhover={(node) => {
+							if (
+								node === null ||
+								(node.type !== undefined && node.start !== undefined && node.end !== undefined)
+							) {
+								workspace.highlight_range(node);
+							}
+						}}
+					/>
 				</ul>
 			{:else}
 				<p>No AST available</p>

@@ -1,5 +1,5 @@
 import type { CompileError, CompileResult } from 'svelte/compiler';
-import { Compartment, EditorState } from '@codemirror/state';
+import { Compartment, EditorState, StateEffect, StateField } from '@codemirror/state';
 import { compile_file } from './compile-worker';
 import { BROWSER } from 'esm-env';
 import { basicSetup, EditorView } from 'codemirror';
@@ -7,7 +7,7 @@ import { javascript } from '@codemirror/lang-javascript';
 import { html } from '@codemirror/lang-html';
 import { svelte } from '@replit/codemirror-lang-svelte';
 import { autocomplete_for_svelte } from '@sveltejs/site-kit/codemirror';
-import { keymap } from '@codemirror/view';
+import { Decoration, keymap, type DecorationSet } from '@codemirror/view';
 import { acceptCompletion } from '@codemirror/autocomplete';
 import { indentWithTab } from '@codemirror/commands';
 import { indentUnit } from '@codemirror/language';
@@ -51,6 +51,32 @@ function file_type(file: Item) {
 	return file.name.split('.').pop();
 }
 
+const set_highlight = StateEffect.define<{ start: number; end: number } | null>();
+
+const highlight_field = StateField.define<DecorationSet>({
+	create() {
+		return Decoration.none;
+	},
+	update(highlights, tr) {
+		// Apply the effect
+		for (let effect of tr.effects) {
+			if (effect.is(set_highlight)) {
+				if (effect.value) {
+					const { start, end } = effect.value;
+					const deco = Decoration.mark({ class: 'highlight' }).range(start, end);
+					return Decoration.set([deco]);
+				} else {
+					// Clear highlight
+					return Decoration.none;
+				}
+			}
+		}
+		// Map decorations for document changes
+		return highlights.map(tr.changes);
+	},
+	provide: (field) => EditorView.decorations.from(field)
+});
+
 const tab_behaviour = new Compartment();
 const vim_mode = new Compartment();
 
@@ -60,7 +86,8 @@ const default_extensions = [
 	tab_behaviour.of(keymap.of([{ key: 'Tab', run: acceptCompletion }])),
 	indentUnit.of('\t'),
 	theme,
-	vim_mode.of([])
+	vim_mode.of([]),
+	highlight_field
 ];
 
 export interface ExposedCompilerOptions {
@@ -222,6 +249,14 @@ export class Workspace {
 	focus() {
 		setTimeout(() => {
 			this.#view?.focus();
+		});
+	}
+
+	highlight_range(node: { start: number; end: number } | null) {
+		if (!this.#view) return;
+
+		this.#view.dispatch({
+			effects: set_highlight.of(node)
 		});
 	}
 
