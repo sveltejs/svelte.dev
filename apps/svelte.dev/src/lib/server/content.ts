@@ -129,6 +129,7 @@ function create_docs() {
 }
 
 export const docs = create_docs();
+export const examples = index.examples.children;
 
 export const packages = Array.from(
 	new Set(
@@ -261,7 +262,7 @@ interface GenerateLlmContentOptions {
 	prefix?: string;
 	ignore?: string[];
 	minimize?: Partial<MinimizeOptions>;
-	package?: Package;
+	package?: string;
 }
 
 export function generateLlmContent(
