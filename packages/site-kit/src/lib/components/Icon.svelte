@@ -14,7 +14,7 @@ use an svg icon that was provided through `Icons.svelte` from
 </script>
 
 <svg width={size} height={size}>
-	<use xlink:href="#{name}" />
+	<use href="#{name}" />
 </svg>
 
 <style>
