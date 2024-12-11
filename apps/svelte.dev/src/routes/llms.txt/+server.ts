@@ -1,11 +1,11 @@
 import type { RequestHandler } from './$types';
-import { documentsContent, generateContent } from '$lib/server/content';
+import { documentsContent, generateLlmContent } from '$lib/server/content';
 
 const PREFIX =
 	'<SYSTEM>This is the abridged developer documentation for Svelte and SvelteKit.</SYSTEM>';
 
 export const GET: RequestHandler = async () => {
-	const content = `${PREFIX}\n\n${generateContent(documentsContent, {
+	const content = `${PREFIX}\n\n${generateLlmContent(documentsContent, {
 		ignore: [
 			// Svelte ignores
 			'../../../content/docs/svelte/07-misc/04-custom-elements.md',

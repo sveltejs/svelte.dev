@@ -1,11 +1,11 @@
 import type { RequestHandler } from './$types';
-import { documentsContent, generateContent } from '$lib/server/content';
+import { documentsContent, generateLlmContent } from '$lib/server/content';
 
 const PREFIX =
 	'<SYSTEM>This is the full developer documentation for Svelte and SvelteKit.</SYSTEM>';
 
 export const GET: RequestHandler = async () => {
-	const content = `${PREFIX}\n\n${generateContent(documentsContent)}`;
+	const content = `${PREFIX}\n\n${generateLlmContent(documentsContent)}`;
 
 	return new Response(content, {
 		status: 200,

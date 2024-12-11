@@ -4,7 +4,7 @@ import { error } from '@sveltejs/kit';
 import {
 	documentsContent,
 	filterDocsByPackage,
-	generateContent,
+	generateLlmContent,
 	getDocumentationTitle,
 	packages,
 	type Package
@@ -30,7 +30,7 @@ export const GET: RequestHandler = async ({ params }) => {
 	}
 
 	const PREFIX = `<SYSTEM>${getDocumentationTitle(packageType)}</SYSTEM>`;
-	const content = `${PREFIX}\n\n${generateContent(filteredDocs)}`;
+	const content = `${PREFIX}\n\n${generateLlmContent(filteredDocs)}`;
 
 	return new Response(content, {
 		status: 200,

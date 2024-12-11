@@ -132,18 +132,18 @@ export const docs = create_docs();
 
 export const examples = index.examples.children;
 
-function getSectionPriority(path: string): number {
+function getDocumentationSectionPriority(path: string): number {
 	if (path.includes('/docs/svelte/')) return 0;
 	if (path.includes('/docs/kit/')) return 1;
 	if (path.includes('/docs/cli/')) return 2;
 	return 3;
 }
 
-export function sortPaths(paths: string[]): string[] {
+export function sortDocumentationPaths(paths: string[]): string[] {
 	return paths.sort((a, b) => {
 		// First compare by section priority
-		const priorityA = getSectionPriority(a);
-		const priorityB = getSectionPriority(b);
+		const priorityA = getDocumentationSectionPriority(a);
+		const priorityB = getDocumentationSectionPriority(b);
 		if (priorityA !== priorityB) return priorityA - priorityB;
 
 		// Get directory paths
@@ -274,7 +274,7 @@ function minimizeContent(content: string, options?: Partial<MinimizeOptions>): s
 	return minimized;
 }
 
-function shouldIncludeFile(filename: string, ignore: string[] = []): boolean {
+function shouldIncludeFileLlmDocs(filename: string, ignore: string[] = []): boolean {
 	const shouldIgnore = ignore.some((pattern) => minimatch(filename, pattern));
 	if (shouldIgnore) {
 		if (dev) console.log(`❌ Ignored by pattern: ${filename}`);
@@ -284,16 +284,16 @@ function shouldIncludeFile(filename: string, ignore: string[] = []): boolean {
 	return true;
 }
 
-interface GenerateContentOptions {
+interface GenerateLlmContentOptions {
 	prefix?: string;
 	ignore?: string[];
 	minimize?: Partial<MinimizeOptions>;
 	package?: Package;
 }
 
-export function generateContent(
+export function generateLlmContent(
 	docs: Record<string, string>,
-	options: GenerateContentOptions = {}
+	options: GenerateLlmContentOptions = {}
 ): string {
 	const { prefix, ignore = [], minimize: minimizeOptions, package: pkg } = options;
 
@@ -303,10 +303,10 @@ export function generateContent(
 	}
 
 	let currentSection = '';
-	const paths = sortPaths(Object.keys(docs));
+	const paths = sortDocumentationPaths(Object.keys(docs));
 
 	for (const path of paths) {
-		if (!shouldIncludeFile(path, ignore)) continue;
+		if (!shouldIncludeFileLlmDocs(path, ignore)) continue;
 
 		// If a specific package is provided, only include its docs
 		if (pkg) {
