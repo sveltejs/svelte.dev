@@ -128,13 +128,7 @@ function create_docs() {
 export const docs = create_docs();
 export const examples = index.examples.children;
 
-export const packages = Array.from(
-	new Set(
-		Object.keys(docs.topics)
-			.map((topic) => topic.split('/')[1])
-			.filter(Boolean)
-	)
-);
+export const packages = Object.keys(docs.topics).map((topic) => topic.split('/')[1]);
 
 export const DOCUMENTATION_NAMES: Record<string, string> = {
 	svelte: 'Svelte',
