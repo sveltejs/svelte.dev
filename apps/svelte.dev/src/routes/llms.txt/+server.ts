@@ -1,7 +1,7 @@
-import { documents_content, generate_llm_content } from '$lib/server/content';
+import { generate_llm_content } from '$lib/server/content';
 
 export function GET() {
-	const main_content = generate_llm_content(documents_content, {
+	const main_content = generate_llm_content({
 		ignore: [
 			// Svelte ignores
 			'../../../content/docs/svelte/07-misc/04-custom-elements.md',

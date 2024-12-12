@@ -19,12 +19,6 @@ const assets = import.meta.glob<string>(
 	}
 );
 
-export const documents_content = import.meta.glob<string>('../../../content/**/*.md', {
-	eager: true,
-	query: '?raw',
-	import: 'default'
-});
-
 // https://github.com/vitejs/vite/issues/17453
 export const index = await create_index(documents, assets, '../../../content', read);
 
@@ -156,21 +150,6 @@ export function get_documentation_start_title(type: string): string {
 	return `# Start of ${DOCUMENTATION_NAMES[type]} documentation`;
 }
 
-export function filter_docs_by_package(
-	allDocs: Record<string, string>,
-	type: string
-): Record<string, string> {
-	const filtered: Record<string, string> = {};
-
-	for (const [path, content] of Object.entries(allDocs)) {
-		if (path.toLowerCase().includes(`/docs/${type}/`)) {
-			filtered[path] = content;
-		}
-	}
-
-	return filtered;
-}
-
 interface MinimizeOptions {
 	removeLegacy: boolean;
 	removeNoteBlocks: boolean;
@@ -268,10 +247,7 @@ interface GenerateLlmContentOptions {
 	package?: string;
 }
 
-export function generate_llm_content(
-	docs: Record<string, string>,
-	options: GenerateLlmContentOptions = {}
-): string {
+export function generate_llm_content(options: GenerateLlmContentOptions = {}): string {
 	const { prefix, ignore = [], minimize: minimizeOptions, package: pkg } = options;
 
 	let content = '';
@@ -279,30 +255,34 @@ export function generate_llm_content(
 		content = `${prefix}\n\n`;
 	}
 
-	let currentSection = '';
-	const paths = sort_documentation_paths(Object.keys(docs));
+	let current_section = '';
+	const paths = sort_documentation_paths();
 
 	for (const path of paths) {
 		if (!should_include_file_llm_docs(path, ignore)) continue;
 
 		// If a specific package is provided, only include its docs
 		if (pkg) {
-			if (!path.includes(`/docs/${pkg}/`)) continue;
+			if (!path.includes(`docs/${pkg}/`)) continue;
 		} else {
 			// For combined content, only include paths that match any package
-			const docType = packages.find((p) => path.includes(`/docs/${p}/`));
-			if (!docType) continue;
+			const doc_type = packages.find((p) => path.includes(`docs/${p}/`));
+			if (!doc_type) continue;
 
-			const section = get_documentation_start_title(docType);
-			if (section !== currentSection) {
-				if (currentSection) content += '\n';
+			const section = get_documentation_start_title(doc_type);
+			if (section !== current_section) {
+				if (current_section) content += '\n';
 				content += `${section}\n\n`;
-				currentSection = section;
+				current_section = section;
 			}
 		}
 
-		content += `## ${path.replace('../../../content/', '')}\n\n`;
-		const docContent = minimizeOptions ? minimize_content(docs[path], minimizeOptions) : docs[path];
+		const docContent = minimizeOptions
+			? minimize_content(index[path].body, minimizeOptions)
+			: index[path].body;
+		if (docContent.trim() === '') continue;
+
+		content += `\n# ${index[path].metadata.title}\n\n`;
 		content += docContent;
 		content += '\n';
 	}
@@ -311,14 +291,16 @@ export function generate_llm_content(
 }
 
 function get_documentation_section_priority(path: string): number {
-	if (path.includes('/docs/svelte/')) return 0;
-	if (path.includes('/docs/kit/')) return 1;
-	if (path.includes('/docs/cli/')) return 2;
+	if (path.includes('docs/svelte/')) return 0;
+	if (path.includes('docs/kit/')) return 1;
+	if (path.includes('docs/cli/')) return 2;
 	return 3;
 }
 
-export function sort_documentation_paths(paths: string[]): string[] {
-	return paths.sort((a, b) => {
+function sort_documentation_paths(): string[] {
+	return Object.keys(index).sort((a, b) => {
+		a = index[a].file;
+		b = index[b].file;
 		// First compare by section priority
 		const priorityA = get_documentation_section_priority(a);
 		const priorityB = get_documentation_section_priority(b);

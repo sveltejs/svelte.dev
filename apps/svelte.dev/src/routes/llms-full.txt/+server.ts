@@ -1,9 +1,9 @@
-import { documents_content, generate_llm_content } from '$lib/server/content';
+import { generate_llm_content } from '$lib/server/content';
 
 export const prerender = true;
 
 export function GET() {
-	const content = `<SYSTEM>This is the full developer documentation for Svelte and SvelteKit.</SYSTEM>\n\n${generate_llm_content(documents_content)}`;
+	const content = `<SYSTEM>This is the full developer documentation for Svelte and SvelteKit.</SYSTEM>\n\n${generate_llm_content()}`;
 
 	return new Response(content, {
 		status: 200,
