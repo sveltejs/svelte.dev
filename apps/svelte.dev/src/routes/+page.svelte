@@ -39,8 +39,6 @@
 
 	<Community />
 
-	<Supporters />
-
 	<Footer />
 </div>
 
