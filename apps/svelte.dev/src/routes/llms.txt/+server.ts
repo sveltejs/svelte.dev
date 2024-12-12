@@ -1,11 +1,7 @@
-import type { RequestHandler } from './$types';
 import { documents_content, generate_llm_content } from '$lib/server/content';
 
-const PREFIX =
-	'<SYSTEM>This is the abridged developer documentation for Svelte and SvelteKit.</SYSTEM>';
-
-export const GET: RequestHandler = async () => {
-	const content = `${PREFIX}\n\n${generate_llm_content(documents_content, {
+export function GET() {
+	const main_content = generate_llm_content(documents_content, {
 		ignore: [
 			// Svelte ignores
 			'../../../content/docs/svelte/07-misc/04-custom-elements.md',
@@ -36,7 +32,8 @@ export const GET: RequestHandler = async () => {
 			removePrettierIgnore: true,
 			normalizeWhitespace: true
 		}
-	})}`;
+	});
+	const content = `<SYSTEM>This is the abridged developer documentation for Svelte and SvelteKit.</SYSTEM>\n\n${main_content}`;
 
 	return new Response(content, {
 		status: 200,
@@ -45,6 +42,6 @@ export const GET: RequestHandler = async () => {
 			'Cache-Control': 'public, max-age=3600'
 		}
 	});
-};
+}
 
 export const prerender = true;

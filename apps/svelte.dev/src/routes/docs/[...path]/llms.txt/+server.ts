@@ -1,5 +1,3 @@
-import type { RequestHandler } from './$types';
-import type { EntryGenerator } from './$types';
 import { error } from '@sveltejs/kit';
 import {
 	documents_content,
@@ -11,25 +9,25 @@ import {
 
 export const prerender = true;
 
-export const entries: EntryGenerator = () => {
+export function entries() {
 	return packages.map((type) => ({ path: type }));
-};
+}
 
-export const GET: RequestHandler = async ({ params }) => {
-	const packageType = params.path;
+export function GET({ params }) {
+	const package_type = params.path;
 
-	if (!packages.includes(packageType)) {
+	if (!packages.includes(package_type)) {
 		error(404, 'Not Found');
 	}
 
-	const filteredDocs = filter_docs_by_package(documents_content, packageType);
+	const filtered_docs = filter_docs_by_package(documents_content, package_type);
 
-	if (Object.keys(filteredDocs).length === 0) {
+	if (Object.keys(filtered_docs).length === 0) {
 		error(404, 'No documentation found for this package');
 	}
 
-	const PREFIX = `<SYSTEM>${get_documentation_title(packageType)}</SYSTEM>`;
-	const content = `${PREFIX}\n\n${generate_llm_content(filteredDocs)}`;
+	const prefix = `<SYSTEM>${get_documentation_title(package_type)}</SYSTEM>`;
+	const content = `${prefix}\n\n${generate_llm_content(filtered_docs)}`;
 
 	return new Response(content, {
 		status: 200,
@@ -38,4 +36,4 @@ export const GET: RequestHandler = async ({ params }) => {
 			'Cache-Control': 'public, max-age=3600'
 		}
 	});
-};
+}
