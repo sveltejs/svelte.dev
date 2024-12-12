@@ -1,21 +1,21 @@
 <div class="companies">
 	<div class="wing">
 		<div class="logos">
-			<enhanced:img src="./companies/mullvad.svg" alt="Mullvad logo" />
-			<enhanced:img src="./companies/stack-overflow.svg" alt="Stack Overflow logo" />
-			<enhanced:img src="./companies/yelp.svg" alt="Yelp logo" />
-			<enhanced:img src="./companies/square.svg" alt="Square logo" />
-			<enhanced:img src="./companies/apple.svg" alt="Apple logo" />
+			<enhanced:img src="./companies/mullvad.svg" loading="lazy" alt="Mullvad logo" />
+			<enhanced:img src="./companies/stack-overflow.svg" loading="lazy" alt="Stack Overflow logo" />
+			<enhanced:img src="./companies/yelp.svg" loading="lazy" alt="Yelp logo" />
+			<enhanced:img src="./companies/square.svg" loading="lazy" alt="Square logo" />
+			<enhanced:img src="./companies/apple.svg" loading="lazy" alt="Apple logo" />
 		</div>
 	</div>
 	<h2>used by companies you’ve heard of</h2>
 	<div class="wing">
 		<div class="logos">
-			<enhanced:img src="./companies/spotify.svg" alt="Spotify logo" />
-			<enhanced:img src="./companies/nyt.svg" alt="New York Times logo" />
-			<enhanced:img src="./companies/ikea.svg" alt="Ikea logo" />
-			<enhanced:img src="./companies/decathlon.svg" alt="Decathlon logo" />
-			<enhanced:img src="./companies/1password.svg" alt="1password logo" />
+			<enhanced:img src="./companies/spotify.svg" loading="lazy" alt="Spotify logo" />
+			<enhanced:img src="./companies/nyt.svg" loading="lazy" alt="New York Times logo" />
+			<enhanced:img src="./companies/ikea.svg" loading="lazy" alt="Ikea logo" />
+			<enhanced:img src="./companies/decathlon.svg" loading="lazy" alt="Decathlon logo" />
+			<enhanced:img src="./companies/1password.svg" loading="lazy" alt="1password logo" />
 		</div>
 	</div>
 </div>
