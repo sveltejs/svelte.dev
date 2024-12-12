@@ -97,6 +97,23 @@
 
 		return formatted;
 	}
+
+	const chars: Record<string, string> = {
+		'&': '&amp;',
+		'<': '&lt;',
+		'>': '&gt;'
+	};
+
+	function escape_html(html: string) {
+		return html.replace(/[&<>]/g, (c) => chars[c]);
+	}
+
+	function link(str: string) {
+		return str.replace(
+			/(http|ftp|https):\/\/([\w_-]+(?:(?:\.[\w_-]+)+))([\w.,@?^=%&:\/~+#-]*[\w@?^=%&\/~+#-])/g,
+			(m) => `<a target="_blank" href="${m}">${m}</a>`
+		);
+	}
 </script>
 
 {#if log.command === 'table'}
@@ -108,7 +125,7 @@
 	<div
 		role="button"
 		tabindex="0"
-		on:click={toggle_group_collapse}
+		onclick={toggle_group_collapse}
 		class="log"
 		class:expandable={log.stack || log.command === 'group'}
 	>
@@ -135,7 +152,10 @@
 					{/if}{#if part.type === 'value'}
 						<JSONNode value={part.value} defaultExpandedLevel={log.expanded ? 1 : 0} />
 					{:else}
-						<span class="styled" style={part.style}>{part.value}</span>
+						<!-- svelte-ignore a11y_no_static_element_interactions -->
+						<span class="styled" style={part.style} onclick={(e) => e.stopPropagation()}>
+							{@html link(escape_html(part.value))}
+						</span>
 					{/if}
 				{/each}
 			</span>

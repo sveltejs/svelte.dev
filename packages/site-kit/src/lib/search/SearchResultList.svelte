@@ -111,6 +111,10 @@
 			span:not(:last-child)::after {
 				content: ' • ';
 			}
+
+			&::-webkit-details-marker {
+				display: none;
+			}
 		}
 	}
 

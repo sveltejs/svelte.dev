@@ -49,33 +49,55 @@ It's a three-in-one kind of day. `new MediaQuery(...)` gives you an object with 
 - [`prefersReducedMotion` docs](/docs/svelte/svelte-motion#prefersReducedMotion)
 - [demo](/playground/89f6f3bb738149fcb6e708cfce878e0f)
 
-## Day 6
+## Day 6: `Spring` and `Tween`
 
-Coming soon!
+We now have modern state-based alternatives to the `spring` and `tweened` stores of old. Smooth!
 
-## Day 7
+- [`Tween` tutorial](/tutorial/svelte/tweens)
+- [`Spring` tutorial](/tutorial/svelte/springs)
+- [docs](/docs/svelte/svelte-motion)
+- [demo](/playground/8a021b2ec2064230bde4a10b08464876?version=5.8.0)
 
-Coming soon!
+## Day 7: better tutorial navigation
 
-## Day 8
+A lot of you disliked the dropdown navigation for the tutorial — essentially a giant, unwieldy `<select>` element — so we've replaced it with a hierarchical menu. Because it's all just `<details>` and `<a>` elements, we get accessibility features for free. You can even navigate the tutorial with JavaScript disabled!
 
-Coming soon!
+- [tutorial](/tutorial/svelte/welcome-to-svelte)
 
-## Day 9
+## Day 8: function bindings
 
-Coming soon!
+You can now do `bind:value={get, set}` to validate and transform bound values. This works for all bindings, even on components.
 
-## Day 10
+- [docs](/docs/svelte/bind#Function-bindings)
+- [demo](/playground/1ddd82f573b94201b3c8fcab33bf0a46?version=5.9.0)
 
-Coming soon!
+## Day 9: error and warning documentation
 
-## Day 11
+When Svelte emits a warning or error (whether at build time, when the compiler is running, or when the app is running on the server or in the browser) it will now be accompanied by a link to the corresponding entry in the documentation containing a description (which is omitted from production builds, to save bytes) and — in some cases, with more to come — more details on why it happened and what you can do to fix it.
 
-Coming soon!
+- [demo](/playground/8095884c1f5040ea846669b904083e25?version=5.10.0)
 
-## Day 12
+## Day 10: SvelteKit `init` hooks
 
-Coming soon!
+A lot of you wanted a place to put asynchronous setup work that happens before your SvelteKit app starts up. You can now export an `init` function from `hooks.server.js` and `hooks.client.js` that will be awaited before any other stuff happens.
+
+- [docs](https://svelte.dev/docs/kit/hooks#Shared-hooks-init)
+
+## Day 11: `svelte/reactivity/window`
+
+Today we added a whole new module. `svelte/reactivity/window` exports a variety of reactive values like `innerWidth`, `innerHeight`, `scrollX`, `scrollY` and so on. Like the `MediaQuery` introduced on day 5 and `Spring` and `Tween` from day 6, these are class instances with a reactive `current` property that you can use in your template and in deriveds/effects. Behind the scenes, Svelte handles all the event listener stuff.
+
+- [docs](/docs/svelte/svelte-reactivity-window)
+- [demo](/playground/8ac86e10fdce485a99c29c95e0092df4?version=5.11.0)
+
+## Day 12: custom type transport in SvelteKit
+
+A `load` function that runs on the server in your SvelteKit app isn't restricted to returning things that can be serialized as JSON. You can return Maps, Sets, Dates, objects with cyclical references, even Promises, and SvelteKit will handle the serialization on the server and deserialization in the browser.
+
+As of today, you can also return things that _aren't_ built in to the language, such as [classes containing state](/docs/svelte/$state#Classes), or classes returned by your database ORM library, or whatever — just export a `transport` object from your `hooks.js` that provides an `encode` and `decode` function.
+
+- [docs](/docs/kit/hooks#Universal-hooks-transport)
+- [demo](https://stackblitz.com/edit/sveltejs-kit-template-default-b5zbxomg?file=src%2Fhooks.js)
 
 ## Day 13
 
