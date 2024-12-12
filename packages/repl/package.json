@@ -55,7 +55,7 @@
 		"@types/estree": "^1.0.5",
 		"prettier": "^3.3.2",
 		"prettier-plugin-svelte": "^3.2.4",
-		"publint": "^0.1.9",
+		"publint": "^0.2.12",
 		"svelte-check": "^4.1.1",
 		"typescript": "^5.5.4",
 		"vite": "^5.4.3"
