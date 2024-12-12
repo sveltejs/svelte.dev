@@ -1,7 +1,6 @@
-import { VERCEL_URL } from '$env/static/private';
 import { get_documentation_title, packages, DOCUMENTATION_NAMES } from '$lib/server/content';
 
-const DOMAIN = VERCEL_URL ? `https://${VERCEL_URL}` : '';
+const DOMAIN = `https://svelte.dev`;
 
 export const prerender = true;
 
