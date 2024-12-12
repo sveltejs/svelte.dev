@@ -386,11 +386,11 @@ async function get_bundle(
 
 			const res = await fetch_if_uncached(resolved, uid);
 
-			let result = res.body;
+			let result = res?.body;
 
 			// gross, temporary hack
 			if (resolved.includes('@threlte/core')) {
-				return result.replace(`import './types.d.ts';`, '');
+				return result?.replace(`import './types.d.ts';`, '');
 			}
 
 			return result;
