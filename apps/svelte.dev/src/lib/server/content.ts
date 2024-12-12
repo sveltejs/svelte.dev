@@ -136,7 +136,7 @@ export const packages = Array.from(
 	)
 );
 
-const DOCUMENTATION_NAMES: Record<string, string> = {
+export const DOCUMENTATION_NAMES: Record<string, string> = {
 	svelte: 'Svelte',
 	kit: 'SvelteKit',
 	cli: 'Svelte CLI'
