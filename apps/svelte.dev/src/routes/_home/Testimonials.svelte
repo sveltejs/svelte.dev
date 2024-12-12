@@ -4,6 +4,8 @@
 			class="pronunciation"
 			alt="Svelte pronunciation guide"
 			src="./svelte-pronunciation.svg"
+			width="178"
+			height="54"
 		/>
 
 		<span class="description">
