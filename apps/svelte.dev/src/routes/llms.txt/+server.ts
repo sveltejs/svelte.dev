@@ -14,7 +14,7 @@ export function GET() {
 
 	const content = `# Svelte Documentation for LLMs
 
-> This directory contains various forms of the Svelte documentation formatted for Large Language Models (LLMs).
+> Svelte is a UI framework that uses a compiler to let you write breathtakingly concise components that do minimal work in the browser, using languages you already know — HTML, CSS and JavaScript.
 
 ## Documentation Sets
 
