@@ -22,7 +22,7 @@
 		"@lezer/lr": "^1.3.10",
 		"@rich_harris/svelte-split-pane": "^1.1.3",
 		"@shikijs/twoslash": "^1.22.0",
-		"@sveltejs/amp": "^1.1.3",
+		"@sveltejs/amp": "^1.1.4",
 		"@sveltejs/repl": "workspace:*",
 		"@testing-library/dom": "^10.4.0",
 		"@testing-library/svelte": "^5.2.3",
@@ -44,7 +44,7 @@
 		"shiki": "^1.22.0",
 		"topojson-client": "^3.1.0",
 		"vitest": "^2.1.2",
-		"ws": "^8.13.0",
+		"ws": "^8.18.0",
 		"yootils": "^0.3.1"
 	},
 	"devDependencies": {
@@ -53,15 +53,15 @@
 		"@supabase/supabase-js": "^2.43.4",
 		"@sveltejs/adapter-vercel": "^5.5.2",
 		"@sveltejs/enhanced-img": "^0.4.3",
-		"@sveltejs/kit": "^2.10.1",
+		"@sveltejs/kit": "^2.11.0",
 		"@sveltejs/site-kit": "workspace:*",
-		"@sveltejs/vite-plugin-svelte": "4.0.0-next.6",
+		"@sveltejs/vite-plugin-svelte": "4.0.3",
 		"@types/cookie": "^0.6.0",
 		"@types/node": "^20.14.2",
-		"browserslist": "^4.23.1",
+		"browserslist": "^4.24.2",
 		"chokidar": "^4.0.1",
 		"degit": "^2.8.4",
-		"dotenv": "^16.4.5",
+		"dotenv": "^16.4.7",
 		"esbuild": "^0.21.5",
 		"jimp": "^1.1.1",
 		"lightningcss": "^1.25.1",
@@ -77,7 +77,7 @@
 		"tiny-glob": "^0.2.9",
 		"tsx": "^4.19.0",
 		"typescript": "^5.5.4",
-		"vite": "^5.4.7",
+		"vite": "^5.4.11",
 		"vite-imagetools": "^7.0.4"
 	}
 }
