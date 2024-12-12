@@ -90,9 +90,14 @@ Today we added a whole new module. `svelte/reactivity/window` exports a variety 
 - [docs](/docs/svelte/svelte-reactivity-window)
 - [demo](/playground/8ac86e10fdce485a99c29c95e0092df4?version=5.11.0)
 
-## Day 12
+## Day 12: custom type transport in SvelteKit
 
-Coming soon!
+A `load` function that runs on the server in your SvelteKit app isn't restricted to returning things that can be serialized as JSON. You can return Maps, Sets, Dates, objects with cyclical references, even Promises, and SvelteKit will handle the serialization on the server and deserialization in the browser.
+
+As of today, you can also return things that _aren't_ built in to the language, such as [classes containing state](/docs/svelte/$state#Classes), or classes returned by your database ORM library, or whatever — just export a `transport` object from your `hooks.js` that provides an `encode` and `decode` function.
+
+- [docs](/docs/kit/hooks#Universal-hooks-transport)
+- [demo](https://stackblitz.com/edit/sveltejs-kit-template-default-b5zbxomg?file=src%2Fhooks.js)
 
 ## Day 13
 
