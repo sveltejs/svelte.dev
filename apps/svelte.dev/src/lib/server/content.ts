@@ -19,7 +19,7 @@ const assets = import.meta.glob<string>(
 	}
 );
 
-export const documentsContent = import.meta.glob<string>('../../../content/**/*.md', {
+export const documents_content = import.meta.glob<string>('../../../content/**/*.md', {
 	eager: true,
 	query: '?raw',
 	import: 'default'
@@ -148,15 +148,15 @@ const DOCUMENTATION_NAMES: Record<string, string> = {
 	cli: 'Svelte CLI'
 };
 
-export function getDocumentationTitle(type: string): string {
+export function get_documentation_title(type: string): string {
 	return `This is the developer documentation for ${DOCUMENTATION_NAMES[type]}.`;
 }
 
-export function getDocumentationStartTitle(type: string): string {
+export function get_documentation_start_title(type: string): string {
 	return `# Start of ${DOCUMENTATION_NAMES[type]} documentation`;
 }
 
-export function filterDocsByPackage(
+export function filter_docs_by_package(
 	allDocs: Record<string, string>,
 	type: string
 ): Record<string, string> {
@@ -189,7 +189,7 @@ const defaultOptions: MinimizeOptions = {
 	normalizeWhitespace: false
 };
 
-function removeQuoteBlocks(content: string, blockType: string): string {
+function remove_quote_blocks(content: string, blockType: string): string {
 	return content
 		.split('\n')
 		.reduce((acc: string[], line: string, index: number, lines: string[]) => {
@@ -212,22 +212,22 @@ function removeQuoteBlocks(content: string, blockType: string): string {
 		.join('\n');
 }
 
-function minimizeContent(content: string, options?: Partial<MinimizeOptions>): string {
+function minimize_content(content: string, options?: Partial<MinimizeOptions>): string {
 	// Merge with defaults, but only for properties that are defined
 	const settings: MinimizeOptions = options ? { ...defaultOptions, ...options } : defaultOptions;
 
 	let minimized = content;
 
 	if (settings.removeLegacy) {
-		minimized = removeQuoteBlocks(minimized, 'LEGACY');
+		minimized = remove_quote_blocks(minimized, 'LEGACY');
 	}
 
 	if (settings.removeNoteBlocks) {
-		minimized = removeQuoteBlocks(minimized, 'NOTE');
+		minimized = remove_quote_blocks(minimized, 'NOTE');
 	}
 
 	if (settings.removeDetailsBlocks) {
-		minimized = removeQuoteBlocks(minimized, 'DETAILS');
+		minimized = remove_quote_blocks(minimized, 'DETAILS');
 	}
 
 	if (settings.removePlaygroundLinks) {
@@ -251,7 +251,7 @@ function minimizeContent(content: string, options?: Partial<MinimizeOptions>): s
 	return minimized;
 }
 
-function shouldIncludeFileLlmDocs(filename: string, ignore: string[] = []): boolean {
+function should_include_file_llm_docs(filename: string, ignore: string[] = []): boolean {
 	const shouldIgnore = ignore.some((pattern) => minimatch(filename, pattern));
 	if (shouldIgnore) {
 		if (dev) console.log(`❌ Ignored by pattern: ${filename}`);
@@ -268,7 +268,7 @@ interface GenerateLlmContentOptions {
 	package?: string;
 }
 
-export function generateLlmContent(
+export function generate_llm_content(
 	docs: Record<string, string>,
 	options: GenerateLlmContentOptions = {}
 ): string {
@@ -280,10 +280,10 @@ export function generateLlmContent(
 	}
 
 	let currentSection = '';
-	const paths = sortDocumentationPaths(Object.keys(docs));
+	const paths = sort_documentation_paths(Object.keys(docs));
 
 	for (const path of paths) {
-		if (!shouldIncludeFileLlmDocs(path, ignore)) continue;
+		if (!should_include_file_llm_docs(path, ignore)) continue;
 
 		// If a specific package is provided, only include its docs
 		if (pkg) {
@@ -293,7 +293,7 @@ export function generateLlmContent(
 			const docType = packages.find((p) => path.includes(`/docs/${p}/`));
 			if (!docType) continue;
 
-			const section = getDocumentationStartTitle(docType);
+			const section = get_documentation_start_title(docType);
 			if (section !== currentSection) {
 				if (currentSection) content += '\n';
 				content += `${section}\n\n`;
@@ -302,7 +302,7 @@ export function generateLlmContent(
 		}
 
 		content += `## ${path.replace('../../../content/', '')}\n\n`;
-		const docContent = minimizeOptions ? minimizeContent(docs[path], minimizeOptions) : docs[path];
+		const docContent = minimizeOptions ? minimize_content(docs[path], minimizeOptions) : docs[path];
 		content += docContent;
 		content += '\n';
 	}
@@ -310,18 +310,18 @@ export function generateLlmContent(
 	return content;
 }
 
-function getDocumentationSectionPriority(path: string): number {
+function get_documentation_section_priority(path: string): number {
 	if (path.includes('/docs/svelte/')) return 0;
 	if (path.includes('/docs/kit/')) return 1;
 	if (path.includes('/docs/cli/')) return 2;
 	return 3;
 }
 
-export function sortDocumentationPaths(paths: string[]): string[] {
+export function sort_documentation_paths(paths: string[]): string[] {
 	return paths.sort((a, b) => {
 		// First compare by section priority
-		const priorityA = getDocumentationSectionPriority(a);
-		const priorityB = getDocumentationSectionPriority(b);
+		const priorityA = get_documentation_section_priority(a);
+		const priorityB = get_documentation_section_priority(b);
 		if (priorityA !== priorityB) return priorityA - priorityB;
 
 		// Get directory paths
