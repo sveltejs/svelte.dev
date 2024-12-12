@@ -385,7 +385,15 @@ async function get_bundle(
 			}
 
 			const res = await fetch_if_uncached(resolved, uid);
-			return res?.body;
+
+			let result = res.body;
+
+			// gross, temporary hack
+			if (resolved.includes('@threlte/core')) {
+				return result.replace(`import './types.d.ts';`, '');
+			}
+
+			return result;
 		},
 		transform(code, id) {
 			if (uid !== current_id) throw ABORT;
