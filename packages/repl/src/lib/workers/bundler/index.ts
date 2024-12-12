@@ -294,7 +294,7 @@ async function get_bundle(
 
 				let default_version = 'latest';
 
-				if (importer.startsWith(packages_url)) {
+				if (importer?.startsWith(packages_url)) {
 					const path = importer.slice(packages_url.length + 1);
 					const parts = path.split('/').slice(0, 2);
 					if (!parts[0].startsWith('@')) parts.pop();
