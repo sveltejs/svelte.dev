@@ -291,7 +291,7 @@ async function get_bundle(
 				const pkg_url =
 					pkg_name === 'svelte'
 						? `${svelte_url}/package.json`
-						: `${packages_url}/${pkg_name}/package.json`;
+						: `${packages_url}/${pkg_name}@${match[2] ?? 'latest'}/package.json`;
 				const subpath = `.${match[3] ?? ''}`;
 
 				// if this was imported by one of our files, add it to the `imports` set

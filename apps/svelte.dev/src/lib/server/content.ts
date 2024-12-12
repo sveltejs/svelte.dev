@@ -10,11 +10,14 @@ const documents = import.meta.glob<string>('../../../content/**/*.md', {
 	import: 'default'
 });
 
-const assets = import.meta.glob<string>('../../../content/**/+assets/**', {
-	eager: true,
-	query: '?url',
-	import: 'default'
-});
+const assets = import.meta.glob<string>(
+	['../../../content/**/+assets/**', '../../../content/**/+assets/**/.env'],
+	{
+		eager: true,
+		query: '?url',
+		import: 'default'
+	}
+);
 
 export const documentsContent = import.meta.glob<string>('../../../content/**/*.md', {
 	eager: true,
