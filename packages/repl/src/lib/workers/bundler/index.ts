@@ -299,26 +299,29 @@ async function get_bundle(
 					const parts = path.split('/').slice(0, 2);
 					if (!parts[0].startsWith('@')) parts.pop();
 
-					const importer_name = parts.join('/');
+					const importer_name_and_version = parts.join('/');
+					const importer_name = importer_name_and_version.slice(
+						0,
+						importer_name_and_version.indexOf('@', 1)
+					);
 
-					const default_versions = (versions[importer_name] ??= Object.create(null));
+					const default_versions = (versions[importer_name_and_version] ??= Object.create(null));
 
 					if (!default_versions[pkg_name]) {
-						const pkg_json_url = `${packages_url}/${importer_name}/package.json`;
+						const pkg_json_url = `${packages_url}/${importer_name_and_version}/package.json`;
 						const pkg_json = (await fetch_if_uncached(pkg_json_url, uid))?.body;
 						const pkg = JSON.parse(pkg_json ?? '""');
 
-						const version =
-							pkg.devDependencies?.[pkg_name] ??
-							pkg.peerDependencies?.[pkg_name] ??
-							pkg.dependencies?.[pkg_name];
+						if (importer_name === pkg_name) {
+							default_versions[pkg_name] = pkg.version;
+						} else {
+							const version =
+								pkg.devDependencies?.[pkg_name] ??
+								pkg.peerDependencies?.[pkg_name] ??
+								pkg.dependencies?.[pkg_name];
 
-						default_versions[pkg_name] = max(version);
-						console.log({
-							importee,
-							importer: parts.join('/'),
-							default_version: default_versions[pkg_name]
-						});
+							default_versions[pkg_name] = max(version);
+						}
 					}
 
 					default_version = default_versions[pkg_name];
