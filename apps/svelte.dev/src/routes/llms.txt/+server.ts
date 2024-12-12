@@ -1,6 +1,5 @@
+import { VERCEL_URL } from '$env/static/private';
 import { get_documentation_title, packages, DOCUMENTATION_NAMES } from '$lib/server/content';
-
-const DOMAIN = 'https://svelte.dev';
 
 export const prerender = true;
 
@@ -8,7 +7,7 @@ export function GET() {
 	const package_docs = packages
 		.map(
 			(pkg) =>
-				`- [${DOCUMENTATION_NAMES[pkg]} documentation](${DOMAIN}/docs/${pkg}/llms.txt): ${get_documentation_title(pkg)}`
+				`- [${DOCUMENTATION_NAMES[pkg]} documentation](${VERCEL_URL}/docs/${pkg}/llms.txt): ${get_documentation_title(pkg)}`
 		)
 		.join('\n');
 
@@ -18,8 +17,8 @@ export function GET() {
 
 ## Documentation Sets
 
-- [Abridged documentation](${DOMAIN}/llms-small.txt): A minimal version of the Svelte and SvelteKit documentation, with examples and non-essential content removed
-- [Complete documentation](${DOMAIN}/llms-full.txt): The complete Svelte and SvelteKit documentation including all examples and additional content
+- [Abridged documentation](${VERCEL_URL}/llms-small.txt): A minimal version of the Svelte and SvelteKit documentation, with examples and non-essential content removed
+- [Complete documentation](${VERCEL_URL}/llms-full.txt): The complete Svelte and SvelteKit documentation including all examples and additional content
 
 ## Individual Package Documentation
 
