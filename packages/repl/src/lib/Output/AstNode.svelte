@@ -10,12 +10,12 @@
 		key?: string;
 		value: Ast;
 		path_nodes?: Ast[];
-		autoscroll?: boolean;
+		active?: boolean;
 		depth?: number;
 		onhover: (node: { type: string; start: number; end: number } | null) => void;
 	}
 
-	let { key = '', value, path_nodes = [], autoscroll = true, onhover, depth = 0 }: Props = $props();
+	let { key = '', value, path_nodes = [], active = true, onhover, depth = 0 }: Props = $props();
 
 	const { toggleable, workspace } = get_repl_context();
 
@@ -32,8 +32,8 @@
 	let key_text = $derived(key ? `${key}:` : '');
 
 	$effect(() => {
-		if (typeof value === 'object' && value !== null) {
-			const offselect = workspace.onselect((from, to) => {
+		if (active && typeof value === 'object' && value !== null) {
+			workspace.onselect((from, to) => {
 				const nodes = value.type === 'Fragment' ? value.nodes : is_array ? value : [value];
 
 				const start = nodes[0]?.start;
@@ -51,10 +51,6 @@
 					});
 				}
 			});
-
-			return () => {
-				offselect();
-			};
 		}
 	});
 </script>
@@ -107,7 +103,7 @@
 						key={is_array ? undefined : k}
 						value={v}
 						{path_nodes}
-						{autoscroll}
+						{active}
 						{onhover}
 						depth={depth + 1}
 					/>

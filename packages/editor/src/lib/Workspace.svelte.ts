@@ -302,19 +302,23 @@ export class Workspace {
 	}
 
 	onhover(fn: (pos: number) => void) {
-		this.#handlers.hover.add(fn);
+		$effect(() => {
+			this.#handlers.hover.add(fn);
 
-		return () => {
-			this.#handlers.hover.delete(fn);
-		};
+			return () => {
+				this.#handlers.hover.delete(fn);
+			};
+		});
 	}
 
 	onselect(fn: (from: number, to: number) => void) {
-		this.#handlers.select.add(fn);
+		$effect(() => {
+			this.#handlers.select.add(fn);
 
-		return () => {
-			this.#handlers.select.delete(fn);
-		};
+			return () => {
+				this.#handlers.select.delete(fn);
+			};
+		});
 	}
 
 	remove(item: Item) {

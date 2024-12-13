@@ -10,10 +10,10 @@
 	interface Props {
 		workspace: Workspace;
 		ast: Ast;
-		autoscroll?: boolean;
+		active?: boolean;
 	}
 
-	let { workspace, ast, autoscroll = true }: Props = $props();
+	let { workspace, ast, active = true }: Props = $props();
 
 	let cursor = $state(0);
 
@@ -43,14 +43,8 @@
 		}
 	}
 
-	$effect(() => {
-		const offhover = workspace.onhover((pos) => {
-			cursor = pos;
-		});
-
-		return () => {
-			offhover();
-		};
+	workspace.onhover((pos) => {
+		cursor = pos;
 	});
 </script>
 
@@ -62,7 +56,7 @@
 					<AstNode
 						value={ast}
 						{path_nodes}
-						{autoscroll}
+						{active}
 						onhover={(node) => {
 							if (
 								node === null ||

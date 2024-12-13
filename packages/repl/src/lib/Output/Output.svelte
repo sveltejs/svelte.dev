@@ -6,6 +6,7 @@
 	import Viewer from './Viewer.svelte';
 	import { Editor, Workspace, type File } from 'editor';
 	import { untrack } from 'svelte';
+	import { decode } from '@jridgewell/sourcemap-codec';
 
 	interface Props {
 		status: string | null;
@@ -81,6 +82,26 @@
 			css_workspace.update_file(css);
 		});
 	});
+
+	$effect(() => {
+		if (!markdown && view === 'js') {
+			workspace.onhover((pos) => {
+				if (!current.result.js.map) return;
+
+				const lines = decode(current.result.js.map.mappings);
+
+				// TODO find the `line`/`column` corresponding to `pos`
+
+				for (const segments of lines) {
+					// TODO find the segment that corresponds to `line`/`column`
+				}
+			});
+
+			js_workspace.onhover((pos) => {
+				// TODO same in reverse
+			});
+		}
+	});
 </script>
 
 <div class="view-toggle">
@@ -132,7 +153,7 @@
 <!-- ast output -->
 {#if current?.result}
 	<div class="tab-content" class:visible={!is_markdown && view === 'ast'}>
-		<AstView {workspace} ast={current.result.ast} autoscroll={!is_markdown && view === 'ast'} />
+		<AstView {workspace} ast={current.result.ast} active={!is_markdown && view === 'ast'} />
 	</div>
 {/if}
 
