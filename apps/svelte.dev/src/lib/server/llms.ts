@@ -9,6 +9,15 @@ interface GenerateLlmContentOptions {
 	package?: string;
 }
 
+interface MinimizeOptions {
+	remove_legacy: boolean;
+	remove_note_blocks: boolean;
+	remove_details_blocks: boolean;
+	remove_playground_links: boolean;
+	remove_prettier_ignore: boolean;
+	normalize_whitespace: boolean;
+}
+
 export function generate_llm_content(options: GenerateLlmContentOptions = {}): string {
 	const { prefix, ignore = [], minimize: minimizeOptions, package: pkg } = options;
 
@@ -74,31 +83,31 @@ function minimize_content(content: string, options?: Partial<MinimizeOptions>): 
 
 	let minimized = content;
 
-	if (settings.removeLegacy) {
+	if (settings.remove_legacy) {
 		minimized = remove_quote_blocks(minimized, 'LEGACY');
 	}
 
-	if (settings.removeNoteBlocks) {
+	if (settings.remove_note_blocks) {
 		minimized = remove_quote_blocks(minimized, 'NOTE');
 	}
 
-	if (settings.removeDetailsBlocks) {
+	if (settings.remove_details_blocks) {
 		minimized = remove_quote_blocks(minimized, 'DETAILS');
 	}
 
-	if (settings.removePlaygroundLinks) {
+	if (settings.remove_playground_links) {
 		// Replace playground URLs with /[link] but keep the original link text
 		minimized = minimized.replace(/\[([^\]]+)\]\(\/playground[^)]+\)/g, '[$1](/REMOVED)');
 	}
 
-	if (settings.removePrettierIgnore) {
+	if (settings.remove_prettier_ignore) {
 		minimized = minimized
 			.split('\n')
 			.filter((line) => line.trim() !== '<!-- prettier-ignore -->')
 			.join('\n');
 	}
 
-	if (settings.normalizeWhitespace) {
+	if (settings.normalize_whitespace) {
 		minimized = minimized.replace(/\s+/g, ' ');
 	}
 
@@ -149,22 +158,13 @@ function sort_documentation_paths(): string[] {
 	});
 }
 
-interface MinimizeOptions {
-	removeLegacy: boolean;
-	removeNoteBlocks: boolean;
-	removeDetailsBlocks: boolean;
-	removePlaygroundLinks: boolean;
-	removePrettierIgnore: boolean;
-	normalizeWhitespace: boolean;
-}
-
 const defaultOptions: MinimizeOptions = {
-	removeLegacy: false,
-	removeNoteBlocks: false,
-	removeDetailsBlocks: false,
-	removePlaygroundLinks: false,
-	removePrettierIgnore: false,
-	normalizeWhitespace: false
+	remove_legacy: false,
+	remove_note_blocks: false,
+	remove_details_blocks: false,
+	remove_playground_links: false,
+	remove_prettier_ignore: false,
+	normalize_whitespace: false
 };
 
 function remove_quote_blocks(content: string, blockType: string): string {

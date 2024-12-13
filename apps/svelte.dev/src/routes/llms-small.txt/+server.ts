@@ -25,12 +25,12 @@ export function GET() {
 			'../../../content/docs/kit/60-appendix/**/*.md'
 		],
 		minimize: {
-			removeLegacy: true,
-			removeNoteBlocks: true,
-			removeDetailsBlocks: true,
-			removePlaygroundLinks: true,
-			removePrettierIgnore: true,
-			normalizeWhitespace: true
+			remove_legacy: true,
+			remove_note_blocks: true,
+			remove_details_blocks: true,
+			remove_playground_links: true,
+			remove_prettier_ignore: true,
+			normalize_whitespace: true
 		}
 	});
 	const content = `<SYSTEM>This is the abridged developer documentation for Svelte and SvelteKit.</SYSTEM>\n\n${main_content}`;
