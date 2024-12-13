@@ -85,11 +85,15 @@
 	});
 
 	$effect(() => {
-		if (!markdown && view === 'js') {
+		if (markdown) return;
+
+		if (view === 'js' || view === 'css') {
+			const output = view === 'js' ? js_workspace : css_workspace;
+
 			const highlight = (line: number, a: number[], b: number[]) => {
 				const split = {
 					original: workspace.current.contents.split('\n'),
-					generated: current.result.js.code.split('\n')
+					generated: current.result[view].code.split('\n')
 				};
 
 				const original = {
@@ -103,13 +107,18 @@
 				};
 
 				workspace.highlight_range(original);
-				js_workspace.highlight_range(generated);
+				output.highlight_range(generated);
+			};
+
+			const clear = () => {
+				workspace.highlight_range(null);
+				output.highlight_range(null);
 			};
 
 			workspace.onhover((pos) => {
-				if (!current?.result?.js.map) return;
+				if (!current?.result?.[view]?.map) return;
 
-				const mappings = decode(current.result.js.map.mappings);
+				const mappings = decode(current.result[view].map.mappings);
 
 				const { line, column } = locate(workspace.current.contents, pos)!;
 
@@ -133,17 +142,16 @@
 						return;
 					}
 
-					workspace.highlight_range(null);
-					js_workspace.highlight_range(null);
+					clear();
 				}
 			});
 
-			js_workspace.onhover((pos) => {
-				if (!current?.result?.js.map) return;
+			output.onhover((pos) => {
+				if (!current?.result?.[view]?.map) return;
 
-				const mappings = decode(current.result.js.map.mappings);
+				const mappings = decode(current.result[view].map.mappings);
 
-				const { line, column } = locate(current.result.js.code, pos)!;
+				const { line, column } = locate(current.result[view].code, pos)!;
 
 				const segments = mappings[line];
 
@@ -156,8 +164,7 @@
 						return;
 					}
 
-					workspace.highlight_range(null);
-					js_workspace.highlight_range(null);
+					clear();
 				}
 			});
 		}
