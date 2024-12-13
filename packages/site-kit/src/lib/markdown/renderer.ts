@@ -369,7 +369,7 @@ async function generate_ts_from_js(
 
 		if (!ts) return;
 
-		return code.replace(outer, `<script lang="ts">${ts}</script>`);
+		return code.replace(outer, `<script lang="ts">\n${ts}\n</script>`);
 	}
 
 	return await convert_to_ts(code);
