@@ -86,7 +86,7 @@
 	$effect(() => {
 		if (!markdown && view === 'js') {
 			workspace.onhover((pos) => {
-				if (!current.result.js.map) return;
+				if (!current?.result?.js.map) return;
 
 				const lines = decode(current.result.js.map.mappings);
 
