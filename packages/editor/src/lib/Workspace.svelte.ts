@@ -113,6 +113,11 @@ export class Workspace {
 	#files = $state.raw<Item[]>([]);
 	#current = $state.raw() as File;
 
+	#handlers = {
+		hover: new Set<(pos: number) => void>(),
+		select: new Set<(from: number, to: number) => void>()
+	};
+
 	#onupdate: (file: File) => void;
 	#onreset: (items: Item[]) => void;
 
@@ -296,6 +301,22 @@ export class Workspace {
 		this.#files = this.#files.slice(0, to_index).concat(from).concat(this.#files.slice(to_index));
 	}
 
+	onhover(fn: (pos: number) => void) {
+		this.#handlers.hover.add(fn);
+
+		return () => {
+			this.#handlers.hover.delete(fn);
+		};
+	}
+
+	onselect(fn: (from: number, to: number) => void) {
+		this.#handlers.select.add(fn);
+
+		return () => {
+			this.#handlers.select.delete(fn);
+		};
+	}
+
 	remove(item: Item) {
 		const index = this.#files.indexOf(item);
 
@@ -474,9 +495,9 @@ export class Workspace {
 			EditorState.readOnly.of(this.#readonly),
 			EditorView.editable.of(!this.#readonly),
 			EditorView.updateListener.of((update) => {
-				if (update.docChanged) {
-					const state = this.#view!.state!;
+				const state = this.#view!.state!;
 
+				if (update.docChanged) {
 					this.#update_file({
 						...this.#current,
 						contents: state.doc.toString()
@@ -484,6 +505,26 @@ export class Workspace {
 
 					// preserve undo/redo across files
 					this.states.set(this.#current.name, state);
+				}
+
+				if (update.selectionSet) {
+					if (state.selection.ranges.length === 1) {
+						for (const handler of this.#handlers.select) {
+							const { from, to } = state.selection.ranges[0];
+							handler(from, to);
+						}
+					}
+				}
+			}),
+			EditorView.domEventObservers({
+				mousemove: (event, view) => {
+					const pos = view.posAtCoords({ x: event.clientX, y: event.clientY });
+
+					if (pos !== null) {
+						for (const handler of this.#handlers.hover) {
+							handler(pos);
+						}
+					}
 				}
 			})
 		];

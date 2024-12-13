@@ -306,7 +306,7 @@
 	}
 
 	.highlight {
-		background: hsl(60, 100%, 80%);
+		background: var(--sk-bg-highlight);
 		padding: 4px 0;
 	}
 }

@@ -15,13 +15,9 @@
 
 	let { workspace, ast, autoscroll = true }: Props = $props();
 
-	// $cursor_index may go over the max since ast computation is usually slower.
-	// clamping this helps prevent the collapse view flashing
-	// TODO reimplement
-	let max_cursor_index = 0;
-	// $: max_cursor_index = !ast ? $cursorIndex : Math.min($cursorIndex, get_ast_max_end(ast));
+	let cursor = $state(0);
 
-	let path_nodes = $derived(find_deepest_path(max_cursor_index, [ast]) || []);
+	let path_nodes = $derived(find_deepest_path(cursor, [ast]) || []);
 
 	function find_deepest_path(cursor: number, paths: Ast[]): Ast[] | undefined {
 		const value = paths[paths.length - 1];
@@ -47,17 +43,15 @@
 		}
 	}
 
-	function get_ast_max_end(ast: Ast) {
-		let max_end = 0;
+	$effect(() => {
+		const offhover = workspace.onhover((pos) => {
+			cursor = pos;
+		});
 
-		for (const node of Object.values(ast) as any[]) {
-			if (node && typeof node.end === 'number' && node.end > max_end) {
-				max_end = node.end;
-			}
-		}
-
-		return max_end;
-	}
+		return () => {
+			offhover();
+		};
+	});
 </script>
 
 <div class="ast-view">
