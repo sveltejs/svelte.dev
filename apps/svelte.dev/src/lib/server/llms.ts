@@ -36,7 +36,7 @@ export function generate_llm_content(options: GenerateLlmContentOptions): string
 
 	for (const section of options.sections) {
 		if (options.sections.length > 1) {
-			content += `${get_documentation_start_title(section)}\n\n`;
+			content += `# Start of ${section.title} documentation\n\n`;
 		}
 
 		for (const [path, document] of Object.entries(index)) {
@@ -65,10 +65,6 @@ export const sections: Section[] = [
 
 export function get_documentation_title(section: Section): string {
 	return `This is the developer documentation for ${section.title}.`;
-}
-
-export function get_documentation_start_title(section: Section): string {
-	return `# Start of ${section.title} documentation`;
 }
 
 function minimize_content(content: string, options?: Partial<MinimizeOptions>): string {
