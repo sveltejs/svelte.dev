@@ -13,7 +13,7 @@ declare var self: Window & typeof globalThis & { svelte: typeof import('svelte/c
 let inited: PromiseWithResolvers<typeof self.svelte>;
 
 async function init(v: string) {
-	const svelte_url = `https://unpkg.com/svelte@${v}`;
+	const svelte_url = v === 'local' ? '/svelte' : `https://unpkg.com/svelte@${v}`;
 	const match = /^(?:pr|commit)-(.+)/.exec(v);
 
 	let tarball: FileDescription[] | undefined;

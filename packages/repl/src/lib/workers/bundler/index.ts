@@ -56,6 +56,9 @@ async function init(v: string, packages_url: string) {
 			const url = `${svelte_url}/${file.name.slice('package/'.length)}`;
 			FETCH_CACHE.set(url, Promise.resolve({ url, body: file.text }));
 		}
+	} else if (v === 'local') {
+		version = v;
+		svelte_url = `/svelte`;
 	} else {
 		const response = await fetch(`${packages_url}/svelte@${v}/package.json`);
 		const pkg = await response.json();
