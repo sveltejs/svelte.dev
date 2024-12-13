@@ -41,7 +41,11 @@ export function generate_llm_content(options: GenerateLlmContentOptions): string
 
 		for (const [path, document] of Object.entries(index)) {
 			if (!path.startsWith(`docs/${section.slug}`)) continue;
-			if (!should_include_file_llm_docs(path, options.ignore)) continue;
+
+			if (options.ignore?.some((pattern) => minimatch(path, pattern))) {
+				if (dev) console.log(`❌ Ignored by pattern: ${path}`);
+				continue;
+			}
 
 			const doc_content = options.minimize
 				? minimize_content(document.body, options.minimize)
@@ -104,15 +108,6 @@ function minimize_content(content: string, options?: Partial<MinimizeOptions>): 
 	minimized = minimized.trim();
 
 	return minimized;
-}
-
-function should_include_file_llm_docs(path: string, ignore: string[] = []): boolean {
-	if (ignore.some((pattern) => minimatch(path, pattern))) {
-		if (dev) console.log(`❌ Ignored by pattern: ${path}`);
-		return false;
-	}
-
-	return true;
 }
 
 function remove_quote_blocks(content: string, blockType: string): string {
