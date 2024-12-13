@@ -99,9 +99,13 @@ As of today, you can also return things that _aren't_ built in to the language, 
 - [docs](/docs/kit/hooks#Universal-hooks-transport)
 - [demo](https://stackblitz.com/edit/sveltejs-kit-template-default-b5zbxomg?file=src%2Fhooks.js)
 
-## Day 13
+## Day 13: rise of the robots
 
-Coming soon!
+For those of you using LLMs to help you write code — via Cursor or Copilot or Claude or Bolt or v0 or some other interface — we now publish the documentation in a selection of robot-friendly `llms.txt` files. This is experimental and will evolve over time, but by way of example here's a [snake game](/playground/0de3c1c1a31d47bdbb7c4aa3477a6b46) built by Sonnet 3.5 with no additional prompting.
+
+Thanks to [Didier Catz](https://x.com/didiercatz) and [Stanislav Khromov](https://bsky.app/profile/khromov.se) for building this!
+
+- [docs](/docs/llms)
 
 ## Day 14
 
