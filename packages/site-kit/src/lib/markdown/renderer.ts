@@ -686,7 +686,7 @@ async function syntax_highlight({
 				theme
 			})
 		);
-	} else if (language === 'js' || language === 'ts') {
+	} else if (['js', 'ts', 'svelte'].includes(language)) {
 		/** We need to stash code wrapped in `---` highlights, because otherwise TS will error on e.g. bad syntax, duplicate declarations */
 		const redactions: string[] = [];
 
@@ -697,7 +697,7 @@ async function syntax_highlight({
 
 		try {
 			html = await codeToHtml(prelude + redacted, {
-				lang: 'ts',
+				lang: language === 'svelte' ? language : 'ts',
 				theme,
 				transformers: check
 					? [

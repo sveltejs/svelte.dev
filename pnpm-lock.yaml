@@ -92,9 +92,6 @@ importers:
       shiki:
         specifier: ^1.22.0
         version: 1.22.0
-      svelte2tsx:
-        specifier: ^0.7.30
-        version: 0.7.30(svelte@5.3.0)(typescript@5.5.4)
       topojson-client:
         specifier: ^3.1.0
         version: 3.1.0
@@ -459,8 +456,8 @@ importers:
         specifier: ^5.1.0
         version: 5.1.0
       '@hugokorte/twoslash-svelte':
-        specifier: ^0.0.2
-        version: 0.0.2(svelte2tsx@0.7.30(svelte@5.1.11)(typescript@5.5.4))(typescript@5.5.4)
+        specifier: ^0.0.3
+        version: 0.0.3(svelte2tsx@0.7.30(svelte@5.1.11)(typescript@5.5.4))(typescript@5.5.4)
       '@lezer/common':
         specifier: ^1.0.4
         version: 1.2.2
@@ -938,8 +935,8 @@ packages:
   '@fontsource/fira-sans@5.1.0':
     resolution: {integrity: sha512-qfAjF5WcrL6qQh9eIWLK7lOh9wbCgCnVWh2Nu2gozrTgsUgYBLR8sbCGYwlK1K0yZoQsR2i9VSiQ16wwPCBkSw==}
 
-  '@hugokorte/twoslash-svelte@0.0.2':
-    resolution: {integrity: sha512-QCQp+wNJgqIl2+hKnouqrqeGFBIrpsfE0lPgOUQ7sO/pjh4RI7jU8TMt6COHQxiFdkB+vrc9GxXOWIuCDRYGeg==}
+  '@hugokorte/twoslash-svelte@0.0.3':
+    resolution: {integrity: sha512-bxV5ZIbUhlYLPaw2u6CAAkYNHDIQ08dcT5RUwChCM+ldiNU4U+QFzFEfks9kVlGtjHB6IG4paiYYxnoxX0uriQ==}
     peerDependencies:
       svelte2tsx: '*'
       typescript: '*'
@@ -3719,7 +3716,7 @@ snapshots:
 
   '@fontsource/fira-sans@5.1.0': {}
 
-  '@hugokorte/twoslash-svelte@0.0.2(svelte2tsx@0.7.30(svelte@5.1.11)(typescript@5.5.4))(typescript@5.5.4)':
+  '@hugokorte/twoslash-svelte@0.0.3(svelte2tsx@0.7.30(svelte@5.1.11)(typescript@5.5.4))(typescript@5.5.4)':
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.0
       '@volar/language-core': 2.4.10
@@ -5900,13 +5897,6 @@ snapshots:
       dedent-js: 1.0.1
       pascal-case: 3.1.2
       svelte: 5.1.11
-      typescript: 5.5.4
-
-  svelte2tsx@0.7.30(svelte@5.3.0)(typescript@5.5.4):
-    dependencies:
-      dedent-js: 1.0.1
-      pascal-case: 3.1.2
-      svelte: 5.3.0
       typescript: 5.5.4
 
   svelte@5.1.11:
