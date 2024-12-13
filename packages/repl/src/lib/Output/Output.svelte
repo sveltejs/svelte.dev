@@ -86,20 +86,39 @@
 
 	$effect(() => {
 		if (!markdown && view === 'js') {
+			const highlight = (line: number, a: number[], b: number[]) => {
+				const split = {
+					original: workspace.current.contents.split('\n'),
+					generated: current.result.js.code.split('\n')
+				};
+
+				const original = {
+					start: split.original.slice(0, a[2]).join('\n').length + 1 + a[3],
+					end: split.original.slice(0, b[2]).join('\n').length + 1 + b[3]
+				};
+
+				const generated = {
+					start: split.generated.slice(0, line).join('\n').length + 1 + a[0],
+					end: split.generated.slice(0, line).join('\n').length + 1 + b[0]
+				};
+
+				workspace.highlight_range(original);
+				js_workspace.highlight_range(generated);
+			};
+
 			workspace.onhover((pos) => {
 				if (!current?.result?.js.map) return;
 
-				const lines = decode(current.result.js.map.mappings);
+				const mappings = decode(current.result.js.map.mappings);
 
 				const { line, column } = locate(workspace.current.contents, pos)!;
 
-				for (let ai = 0; ai < lines.length; ai += 1) {
-					const segments = lines[ai];
-					for (let j = 0; j < segments.length; j += 1) {
-						let bi = ai;
-
+				for (let i = 0; i < mappings.length; i += 1) {
+					const segments = mappings[i];
+					for (let j = 0; j < segments.length - 1; j += 1) {
+						// segment is [generated_column, source_index, original_line, original_column]
 						const a = segments[j];
-						const b = segments[j + 1] ?? lines[++bi][0];
+						const b = segments[j + 1];
 
 						if (!b) continue;
 
@@ -110,23 +129,7 @@
 						if (b[2] === line && b[3] < column) continue;
 
 						// if we're still here, we have a match
-						const split = {
-							original: workspace.current.contents.split('\n'),
-							generated: current.result.js.code.split('\n')
-						};
-
-						const original = {
-							start: split.original.slice(0, a[2]).join('\n').length + 1 + a[3],
-							end: split.original.slice(0, b[2]).join('\n').length + 1 + b[3]
-						};
-
-						const generated = {
-							start: split.generated.slice(0, ai).join('\n').length + 1 + a[0],
-							end: split.generated.slice(0, bi).join('\n').length + 1 + b[0]
-						};
-
-						workspace.highlight_range(original);
-						js_workspace.highlight_range(generated);
+						highlight(i, a, b);
 						return;
 					}
 
@@ -136,7 +139,26 @@
 			});
 
 			js_workspace.onhover((pos) => {
-				// TODO same in reverse
+				if (!current?.result?.js.map) return;
+
+				const mappings = decode(current.result.js.map.mappings);
+
+				const { line, column } = locate(current.result.js.code, pos)!;
+
+				const segments = mappings[line];
+
+				for (let i = 0; i < segments.length - 1; i += 1) {
+					const a = segments[i];
+					const b = segments[i + 1];
+
+					if (a[0] <= column && b[0] >= column) {
+						highlight(line, a, b);
+						return;
+					}
+
+					workspace.highlight_range(null);
+					js_workspace.highlight_range(null);
+				}
 			});
 		}
 	});
