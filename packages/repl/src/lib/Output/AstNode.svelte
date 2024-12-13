@@ -101,7 +101,7 @@
 		<!-- svelte-ignore a11y_mouse_events_have_key_events (seems like a false positive) -->
 		<details
 			bind:open
-			onfocusin={() => onhover(value)}
+			onfocusin={(e) => (e.stopPropagation(), onhover(value))}
 			onfocusout={(e) => onhover(null)}
 			onmouseover={() => onhover(value)}
 			onmouseleave={() => onhover(null)}
