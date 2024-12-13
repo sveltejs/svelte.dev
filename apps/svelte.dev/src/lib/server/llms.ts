@@ -18,6 +18,15 @@ interface MinimizeOptions {
 	normalize_whitespace: boolean;
 }
 
+const defaults: MinimizeOptions = {
+	remove_legacy: false,
+	remove_note_blocks: false,
+	remove_details_blocks: false,
+	remove_playground_links: false,
+	remove_prettier_ignore: false,
+	normalize_whitespace: false
+};
+
 export function generate_llm_content(options: GenerateLlmContentOptions = {}): string {
 	let content = '';
 
@@ -47,13 +56,13 @@ export function generate_llm_content(options: GenerateLlmContentOptions = {}): s
 			}
 		}
 
-		const docContent = options.minimize
+		const doc_content = options.minimize
 			? minimize_content(index[path].body, options.minimize)
 			: index[path].body;
-		if (docContent.trim() === '') continue;
+		if (doc_content.trim() === '') continue;
 
 		content += `\n# ${index[path].metadata.title}\n\n`;
-		content += docContent;
+		content += doc_content;
 		content += '\n';
 	}
 
@@ -78,7 +87,7 @@ export function get_documentation_start_title(type: string): string {
 
 function minimize_content(content: string, options?: Partial<MinimizeOptions>): string {
 	// Merge with defaults, but only for properties that are defined
-	const settings: MinimizeOptions = options ? { ...defaultOptions, ...options } : defaultOptions;
+	const settings: MinimizeOptions = { ...defaults, ...options };
 
 	let minimized = content;
 
@@ -116,8 +125,7 @@ function minimize_content(content: string, options?: Partial<MinimizeOptions>): 
 }
 
 function should_include_file_llm_docs(filename: string, ignore: string[] = []): boolean {
-	const shouldIgnore = ignore.some((pattern) => minimatch(filename, pattern));
-	if (shouldIgnore) {
+	if (ignore.some((pattern) => minimatch(filename, pattern))) {
 		if (dev) console.log(`❌ Ignored by pattern: ${filename}`);
 		return false;
 	}
@@ -156,15 +164,6 @@ function sort_documentation_paths(): string[] {
 		return dirA.localeCompare(dirB);
 	});
 }
-
-const defaultOptions: MinimizeOptions = {
-	remove_legacy: false,
-	remove_note_blocks: false,
-	remove_details_blocks: false,
-	remove_playground_links: false,
-	remove_prettier_ignore: false,
-	normalize_whitespace: false
-};
 
 function remove_quote_blocks(content: string, blockType: string): string {
 	return content
