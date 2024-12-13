@@ -3,7 +3,6 @@ import { dev } from '$app/environment';
 import { index } from './content';
 
 interface GenerateLlmContentOptions {
-	prefix?: string;
 	ignore?: string[];
 	minimize?: Partial<MinimizeOptions>;
 	sections: Section[];
@@ -34,10 +33,6 @@ const defaults: MinimizeOptions = {
 
 export function generate_llm_content(options: GenerateLlmContentOptions): string {
 	let content = '';
-
-	if (options.prefix) {
-		content = `${options.prefix}\n\n`;
-	}
 
 	for (const section of options.sections) {
 		if (options.sections.length > 1) {
