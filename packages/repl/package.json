@@ -83,6 +83,7 @@
 		"editor": "workspace:*",
 		"esm-env": "^1.0.0",
 		"esrap": "^1.2.2",
+		"locate-character": "^3.0.0",
 		"marked": "^14.1.2",
 		"resolve.exports": "^2.0.2",
 		"svelte": "5.1.11",

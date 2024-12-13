@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { marked } from 'marked';
+	import { locate } from 'locate-character';
 	import AstView from './AstView.svelte';
 	import CompilerOptions from './CompilerOptions.svelte';
 	import PaneWithPanel from './PaneWithPanel.svelte';
@@ -90,10 +91,47 @@
 
 				const lines = decode(current.result.js.map.mappings);
 
-				// TODO find the `line`/`column` corresponding to `pos`
+				const { line, column } = locate(workspace.current.contents, pos)!;
 
-				for (const segments of lines) {
-					// TODO find the segment that corresponds to `line`/`column`
+				for (let ai = 0; ai < lines.length; ai += 1) {
+					const segments = lines[ai];
+					for (let j = 0; j < segments.length; j += 1) {
+						let bi = ai;
+
+						const a = segments[j];
+						const b = segments[j + 1] ?? lines[++bi][0];
+
+						if (!b) continue;
+
+						if (a[2] > line) continue;
+						if (b[2] < line) continue;
+
+						if (a[2] === line && a[3] > column) continue;
+						if (b[2] === line && b[3] < column) continue;
+
+						// if we're still here, we have a match
+						const split = {
+							original: workspace.current.contents.split('\n'),
+							generated: current.result.js.code.split('\n')
+						};
+
+						const original = {
+							start: split.original.slice(0, a[2]).join('\n').length + 1 + a[3],
+							end: split.original.slice(0, b[2]).join('\n').length + 1 + b[3]
+						};
+
+						const generated = {
+							start: split.generated.slice(0, ai).join('\n').length + 1 + a[0],
+							end: split.generated.slice(0, bi).join('\n').length + 1 + b[0]
+						};
+
+						workspace.highlight_range(original);
+						js_workspace.highlight_range(generated);
+						return;
+					}
+
+					workspace.highlight_range(null);
+					js_workspace.highlight_range(null);
 				}
 			});
 
