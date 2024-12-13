@@ -7,7 +7,7 @@
 	import Viewer from './Viewer.svelte';
 	import { Editor, Workspace, type File } from 'editor';
 	import { untrack } from 'svelte';
-	import { decode } from '@jridgewell/sourcemap-codec';
+	import { decode, type SourceMapSegment } from '@jridgewell/sourcemap-codec';
 
 	interface Props {
 		status: string | null;
@@ -88,17 +88,18 @@
 		if (markdown) return;
 
 		if (view === 'js' || view === 'css') {
-			const output = view === 'js' ? js_workspace : css_workspace;
+			const v = view; // so that TS doesn't think it could become something different
+			const output = v === 'js' ? js_workspace : css_workspace;
 
-			const highlight = (line: number, a: number[], b: number[]) => {
+			const highlight = (line: number, a: SourceMapSegment, b: SourceMapSegment) => {
 				const split = {
-					original: workspace.current.contents.split('\n'),
-					generated: current.result[view].code.split('\n')
+					original: workspace.current!.contents.split('\n'),
+					generated: current!.result![v]!.code.split('\n')
 				};
 
 				const original = {
-					start: split.original.slice(0, a[2]).join('\n').length + 1 + a[3],
-					end: split.original.slice(0, b[2]).join('\n').length + 1 + b[3]
+					start: split.original.slice(0, a[2]).join('\n').length + 1 + a[3]!,
+					end: split.original.slice(0, b[2]).join('\n').length + 1 + b[3]!
 				};
 
 				const generated = {
@@ -116,9 +117,9 @@
 			};
 
 			workspace.onhover((pos) => {
-				if (!current?.result?.[view]?.map) return;
+				if (!current?.result?.[v]?.map) return;
 
-				const mappings = decode(current.result[view].map.mappings);
+				const mappings = decode(current.result[v].map.mappings);
 
 				const { line, column } = locate(workspace.current.contents, pos)!;
 
@@ -129,13 +130,11 @@
 						const a = segments[j];
 						const b = segments[j + 1];
 
-						if (!b) continue;
+						if (a[2]! > line) continue;
+						if (b[2]! < line) continue;
 
-						if (a[2] > line) continue;
-						if (b[2] < line) continue;
-
-						if (a[2] === line && a[3] > column) continue;
-						if (b[2] === line && b[3] < column) continue;
+						if (a[2]! === line && a[3]! > column) continue;
+						if (b[2]! === line && b[3]! < column) continue;
 
 						// if we're still here, we have a match
 						highlight(i, a, b);
@@ -147,11 +146,11 @@
 			});
 
 			output.onhover((pos) => {
-				if (!current?.result?.[view]?.map) return;
+				if (!current?.result?.[v]?.map) return;
 
-				const mappings = decode(current.result[view].map.mappings);
+				const mappings = decode(current.result[v].map.mappings);
 
-				const { line, column } = locate(current.result[view].code, pos)!;
+				const { line, column } = locate(current.result[v].code, pos)!;
 
 				const segments = mappings[line];
 
