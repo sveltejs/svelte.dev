@@ -1,5 +1,5 @@
 export async function roll() {
-	// Fetch a random number between 0 and 6
+	// Fetch a random number from 1 to 6
 	// (with a delay, so that we can see it)
 	return new Promise((fulfil, reject) => {
 		setTimeout(() => {

@@ -541,7 +541,8 @@ async function convert_to_ts(js_code: string, indent = '', offset = '') {
 		}
 	}
 
-	let transformed = code.toString();
+	// remove leading/trailing newlines (not any whitespace, because that can signify diffs)
+	let transformed = code.toString().replace(/^\n+/, '').replace(/\n+$/, '');
 
 	return transformed === js_code ? undefined : transformed;
 

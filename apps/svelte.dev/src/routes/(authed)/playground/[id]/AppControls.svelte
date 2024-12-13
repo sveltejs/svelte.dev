@@ -1,12 +1,12 @@
 <script lang="ts">
-	import { goto } from '$app/navigation';
+	import { page } from '$app/stores';
 	import UserMenu from './UserMenu.svelte';
 	import { Icon } from '@sveltejs/site-kit/components';
 	import { isMac } from '$lib/utils/compat.js';
 	import { get_app_context } from '../../app-context';
 	import type { Gist, User } from '$lib/db/types';
 	import { browser } from '$app/environment';
-	import SelectIcon from '$lib/components/SelectIcon.svelte';
+	import ModalDropdown from '$lib/components/ModalDropdown.svelte';
 	import { untrack } from 'svelte';
 	import SecondaryNav from '$lib/components/SecondaryNav.svelte';
 	import type { File } from 'editor';
@@ -39,7 +39,7 @@
 	let saving = $state(false);
 	let justSaved = $state(false);
 	let justForked = $state(false);
-	let select: ReturnType<typeof SelectIcon>;
+	let select: ReturnType<typeof ModalDropdown>;
 
 	function wait(ms: number) {
 		return new Promise((f) => setTimeout(f, ms));
@@ -180,15 +180,31 @@
 <svelte:window on:keydown={handleKeydown} />
 
 <SecondaryNav>
-	<SelectIcon
-		bind:this={select}
-		title="examples"
-		value={gist.id}
-		onchange={async (e) => {
-			goto(`/playground/${e.currentTarget.value}`);
-		}}
-	>
-		<option value="untitled">Create new</option>
+	<ModalDropdown label="Examples">
+		<div class="secondary-nav-dropdown">
+			<a class="create-new" href="/playground/untitled">Create new</a>
+
+			{#each examples as section}
+				<details>
+					<summary>{section.title}</summary>
+
+					<ul>
+						{#each section.examples as example}
+							<li>
+								<a
+									href="/playground/{example.slug}"
+									aria-current={$page.params.id === example.slug ? 'page' : undefined}
+								>
+									{example.title}
+								</a>
+							</li>
+						{/each}
+					</ul>
+				</details>
+			{/each}
+		</div>
+
+		<!-- <option value="untitled">Create new</option>
 		<option disabled selected value="">or choose an example</option>
 		{#each examples as section}
 			<optgroup label={section.title}>
@@ -196,8 +212,8 @@
 					<option value={example.slug}>{example.title}</option>
 				{/each}
 			</optgroup>
-		{/each}
-	</SelectIcon>
+		{/each} -->
+	</ModalDropdown>
 
 	<input
 		bind:value={name}
@@ -323,5 +339,9 @@
 		height: 1rem;
 		top: -0.2rem;
 		right: -0.2rem;
+	}
+
+	.create-new {
+		margin-bottom: 1rem;
 	}
 </style>

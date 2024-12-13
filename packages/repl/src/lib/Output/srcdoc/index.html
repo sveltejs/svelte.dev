@@ -155,6 +155,11 @@
 								return { type: 'Set', value };
 							}
 
+							// if we don't handle bigints separately, they will cause JSON.stringify to blow up
+							if (typeof value === 'bigint') {
+								return { type: 'BigInt', value: value + '' };
+							}
+
 							return value;
 						});
 					} catch (error) {

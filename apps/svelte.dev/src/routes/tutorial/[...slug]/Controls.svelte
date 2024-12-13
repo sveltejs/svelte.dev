@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { goto } from '$app/navigation';
+	import { page } from '$app/stores';
 	import SecondaryNav from '$lib/components/SecondaryNav.svelte';
-	import SelectIcon from '$lib/components/SelectIcon.svelte';
+	import ModalDropdown from '$lib/components/ModalDropdown.svelte';
 	import type { Exercise, PartStub } from '$lib/tutorial';
 	import { Icon } from '@sveltejs/site-kit/components';
 
@@ -13,33 +13,37 @@
 	}
 
 	let { index, exercise, completed, toggle }: Props = $props();
-
-	// TODO this really sucks, why is `exercise.slug` not the slug?
-	let actual_slug = $derived.by(() => {
-		const parts = exercise.slug.split('/');
-		return `${parts[1].includes('kit') ? 'kit' : 'svelte'}/${parts[3]}`;
-	});
 </script>
 
 <SecondaryNav>
-	<SelectIcon
-		value={actual_slug}
-		onchange={(e) => {
-			goto(`/tutorial/${e.currentTarget.value}`);
-		}}
-	>
-		{#each index as part}
-			<optgroup label={part.title}>
-				{#each part.chapters as chapter}
-					<option disabled>{chapter.title}</option>
+	<ModalDropdown label="Menu">
+		<div class="secondary-nav-dropdown">
+			{#each index as part}
+				<details>
+					<summary>{part.title}</summary>
 
-					{#each chapter.exercises as exercise}
-						<option value={exercise.slug}>{exercise.title}</option>
+					{#each part.chapters as chapter}
+						<details>
+							<summary>{chapter.title}</summary>
+
+							<ul>
+								{#each chapter.exercises as exercise}
+									<li value={exercise.slug}>
+										<a
+											aria-current={$page.url.pathname === `/tutorial/${exercise.slug}`
+												? 'page'
+												: undefined}
+											href="/tutorial/{exercise.slug}">{exercise.title}</a
+										>
+									</li>
+								{/each}
+							</ul>
+						</details>
 					{/each}
-				{/each}
-			</optgroup>
-		{/each}
-	</SelectIcon>
+				</details>
+			{/each}
+		</div>
+	</ModalDropdown>
 
 	<a
 		href={exercise.prev ? `/tutorial/${exercise.prev?.slug}` : undefined}
@@ -76,6 +80,10 @@
 		&:not([href]) {
 			opacity: 0.1;
 			cursor: default;
+		}
+
+		&[aria-current='page'] {
+			color: var(--sk-fg-accent);
 		}
 	}
 

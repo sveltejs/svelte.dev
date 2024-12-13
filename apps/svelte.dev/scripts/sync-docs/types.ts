@@ -76,6 +76,7 @@ export async function get_types(code: string, statements: ts.NodeArray<ts.Statem
 				let start = statement.pos;
 				let comment = '';
 				let deprecated_notice: string | null = null;
+				let since_notice: string | null = null;
 
 				// @ts-ignore i think typescript is bad at typescript
 				if (statement.jsDoc) {
@@ -94,7 +95,11 @@ export async function get_types(code: string, statements: ts.NodeArray<ts.Statem
 					if (jsDoc.tags) {
 						for (const tag of jsDoc.tags) {
 							if (tag.tagName.escapedText === 'deprecated') {
-								deprecated_notice = tag.comment;
+								deprecated_notice = tag.comment && strip_origin(tag.comment);
+							}
+
+							if (tag.tagName.escapedText === 'since') {
+								since_notice = tag.comment;
 							}
 
 							if (tag.tagName.escapedText === 'example') {
@@ -152,7 +157,9 @@ export async function get_types(code: string, statements: ts.NodeArray<ts.Statem
 					.trim();
 
 				const collection =
-					ts.isVariableStatement(statement) || ts.isFunctionDeclaration(statement)
+					ts.isVariableStatement(statement) ||
+					ts.isClassDeclaration(statement) ||
+					ts.isFunctionDeclaration(statement)
 						? exports
 						: types;
 
@@ -172,6 +179,7 @@ export async function get_types(code: string, statements: ts.NodeArray<ts.Statem
 						name,
 						comment: cleanup_comment(comment),
 						deprecated: deprecated_notice,
+						since: since_notice,
 						overloads: []
 					};
 
