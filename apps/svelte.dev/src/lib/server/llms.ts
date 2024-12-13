@@ -19,22 +19,21 @@ interface MinimizeOptions {
 }
 
 export function generate_llm_content(options: GenerateLlmContentOptions = {}): string {
-	const { prefix, ignore = [], minimize: minimizeOptions, package: pkg } = options;
-
 	let content = '';
-	if (prefix) {
-		content = `${prefix}\n\n`;
+
+	if (options.prefix) {
+		content = `${options.prefix}\n\n`;
 	}
 
 	let current_section = '';
 	const paths = sort_documentation_paths();
 
 	for (const path of paths) {
-		if (!should_include_file_llm_docs(path, ignore)) continue;
+		if (!should_include_file_llm_docs(path, options.ignore)) continue;
 
 		// If a specific package is provided, only include its docs
-		if (pkg) {
-			if (!path.includes(`docs/${pkg}/`)) continue;
+		if (options.package) {
+			if (!path.includes(`docs/${options.package}/`)) continue;
 		} else {
 			// For combined content, only include paths that match any package
 			const doc_type = packages.find((p) => path.includes(`docs/${p}/`));
@@ -48,8 +47,8 @@ export function generate_llm_content(options: GenerateLlmContentOptions = {}): s
 			}
 		}
 
-		const docContent = minimizeOptions
-			? minimize_content(index[path].body, minimizeOptions)
+		const docContent = options.minimize
+			? minimize_content(index[path].body, options.minimize)
 			: index[path].body;
 		if (docContent.trim() === '') continue;
 
