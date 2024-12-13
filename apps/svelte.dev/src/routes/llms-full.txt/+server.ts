@@ -1,4 +1,4 @@
-import { generate_llm_content } from '$lib/server/content';
+import { generate_llm_content } from '$lib/server/llms';
 
 export const prerender = true;
 

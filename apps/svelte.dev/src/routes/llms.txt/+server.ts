@@ -1,4 +1,4 @@
-import { get_documentation_title, packages, DOCUMENTATION_NAMES } from '$lib/server/content';
+import { get_documentation_title, packages, DOCUMENTATION_NAMES } from '$lib/server/llms';
 
 const DOMAIN = `https://svelte.dev`;
 
