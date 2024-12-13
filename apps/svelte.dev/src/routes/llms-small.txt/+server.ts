@@ -4,25 +4,24 @@ export function GET() {
 	const main_content = generate_llm_content({
 		ignore: [
 			// Svelte ignores
-			'../../../content/docs/svelte/07-misc/04-custom-elements.md',
-			'../../../content/docs/svelte/07-misc/06-v4-migration-guide.md',
-			'../../../content/docs/svelte/07-misc/07-v5-migration-guide.md',
-			'../../../content/docs/svelte/07-misc/99-faq.md',
-			'../../../content/docs/svelte/07-misc/xx-reactivity-indepth.md',
-			'../../../content/docs/svelte/98-reference/21-svelte-legacy.md',
-			'../../../content/docs/svelte/99-legacy/**/*.md',
-			'../../../content/docs/svelte/98-reference/30-runtime-errors.md',
-			'../../../content/docs/svelte/98-reference/30-runtime-warnings.md',
-			'../../../content/docs/svelte/98-reference/30-compiler-errors.md',
-			'../../../content/docs/svelte/98-reference/30-compiler-warnings.md',
-			'**/xx-*.md',
+			'docs/svelte/legacy/**/*',
+			'docs/svelte/misc/custom-elements',
+			'docs/svelte/misc/v4-migration-guide',
+			'docs/svelte/misc/v5-migration-guide',
+			'docs/svelte/misc/faq',
+			'docs/svelte/reference/compiler-errors',
+			'docs/svelte/reference/compiler-warnings',
+			'docs/svelte/reference/runtime-errors',
+			'docs/svelte/reference/runtime-warnings',
+			'docs/svelte/reference/svelte-legacy',
+			'**/xx-*',
 
 			// SvelteKit ignores
-			'../../../content/docs/kit/25-build-and-deploy/*adapter-*.md',
-			'../../../content/docs/kit/25-build-and-deploy/99-writing-adapters.md',
-			'../../../content/docs/kit/30-advanced/70-packaging.md',
-			'../../../content/docs/kit/40-best-practices/05-performance.md',
-			'../../../content/docs/kit/60-appendix/**/*.md'
+			'docs/kit/advanced/packaging',
+			'docs/kit/appendix/**/*',
+			'docs/kit/best-practices/performance',
+			'docs/kit/build-and-deploy/*adapter-*',
+			'docs/kit/build-and-deploy/writing-adapters'
 		],
 		minimize: {
 			remove_legacy: true,

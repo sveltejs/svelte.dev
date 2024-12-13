@@ -124,9 +124,9 @@ function minimize_content(content: string, options?: Partial<MinimizeOptions>): 
 	return minimized;
 }
 
-function should_include_file_llm_docs(filename: string, ignore: string[] = []): boolean {
-	if (ignore.some((pattern) => minimatch(filename, pattern))) {
-		if (dev) console.log(`❌ Ignored by pattern: ${filename}`);
+function should_include_file_llm_docs(path: string, ignore: string[] = []): boolean {
+	if (ignore.some((pattern) => minimatch(path, pattern))) {
+		if (dev) console.log(`❌ Ignored by pattern: ${path}`);
 		return false;
 	}
 
