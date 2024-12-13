@@ -1,12 +1,12 @@
 import { minimatch } from 'minimatch';
 import { dev } from '$app/environment';
-import { docs, index } from './content';
+import { index } from './content';
 
 interface GenerateLlmContentOptions {
 	prefix?: string;
 	ignore?: string[];
 	minimize?: Partial<MinimizeOptions>;
-	package?: string;
+	sections: Section[];
 }
 
 interface MinimizeOptions {
@@ -18,6 +18,11 @@ interface MinimizeOptions {
 	normalize_whitespace: boolean;
 }
 
+interface Section {
+	slug: string;
+	title: string;
+}
+
 const defaults: MinimizeOptions = {
 	remove_legacy: false,
 	remove_note_blocks: false,
@@ -27,62 +32,48 @@ const defaults: MinimizeOptions = {
 	normalize_whitespace: false
 };
 
-export function generate_llm_content(options: GenerateLlmContentOptions = {}): string {
+export function generate_llm_content(options: GenerateLlmContentOptions): string {
 	let content = '';
 
 	if (options.prefix) {
 		content = `${options.prefix}\n\n`;
 	}
 
-	let current_section = '';
-	const paths = sort_documentation_paths();
-
-	for (const path of paths) {
-		if (!should_include_file_llm_docs(path, options.ignore)) continue;
-
-		// If a specific package is provided, only include its docs
-		if (options.package) {
-			if (!path.includes(`docs/${options.package}/`)) continue;
-		} else {
-			// For combined content, only include paths that match any package
-			const doc_type = packages.find((p) => path.includes(`docs/${p}/`));
-			if (!doc_type) continue;
-
-			const section = get_documentation_start_title(doc_type);
-			if (section !== current_section) {
-				if (current_section) content += '\n';
-				content += `${section}\n\n`;
-				current_section = section;
-			}
+	for (const section of options.sections) {
+		if (options.sections.length > 1) {
+			content += `${get_documentation_start_title(section)}\n\n`;
 		}
 
-		const doc_content = options.minimize
-			? minimize_content(index[path].body, options.minimize)
-			: index[path].body;
-		if (doc_content.trim() === '') continue;
+		for (const [path, document] of Object.entries(index)) {
+			if (!path.startsWith(`docs/${section.slug}`)) continue;
+			if (!should_include_file_llm_docs(path, options.ignore)) continue;
 
-		content += `\n# ${index[path].metadata.title}\n\n`;
-		content += doc_content;
-		content += '\n';
+			const doc_content = options.minimize
+				? minimize_content(document.body, options.minimize)
+				: document.body;
+			if (doc_content.trim() === '') continue;
+
+			content += `\n# ${document.metadata.title}\n\n`;
+			content += doc_content;
+			content += '\n';
+		}
 	}
 
 	return content;
 }
 
-export const packages = Object.keys(docs.topics).map((topic) => topic.split('/')[1]);
+export const sections: Section[] = [
+	{ slug: 'svelte', title: 'Svelte' },
+	{ slug: 'kit', title: 'SvelteKit' },
+	{ slug: 'cli', title: 'the Svelte CLI' }
+];
 
-export const DOCUMENTATION_NAMES: Record<string, string> = {
-	svelte: 'Svelte',
-	kit: 'SvelteKit',
-	cli: 'Svelte CLI'
-};
-
-export function get_documentation_title(type: string): string {
-	return `This is the developer documentation for ${DOCUMENTATION_NAMES[type]}.`;
+export function get_documentation_title(section: Section): string {
+	return `This is the developer documentation for ${section.title}.`;
 }
 
-export function get_documentation_start_title(type: string): string {
-	return `# Start of ${DOCUMENTATION_NAMES[type]} documentation`;
+export function get_documentation_start_title(section: Section): string {
+	return `# Start of ${section.title} documentation`;
 }
 
 function minimize_content(content: string, options?: Partial<MinimizeOptions>): string {
@@ -131,38 +122,6 @@ function should_include_file_llm_docs(path: string, ignore: string[] = []): bool
 	}
 
 	return true;
-}
-
-function get_documentation_section_priority(path: string): number {
-	if (path.includes('docs/svelte/')) return 0;
-	if (path.includes('docs/kit/')) return 1;
-	if (path.includes('docs/cli/')) return 2;
-	return 3;
-}
-
-function sort_documentation_paths(): string[] {
-	return Object.keys(index).sort((a, b) => {
-		a = index[a].file;
-		b = index[b].file;
-		// First compare by section priority
-		const priorityA = get_documentation_section_priority(a);
-		const priorityB = get_documentation_section_priority(b);
-		if (priorityA !== priorityB) return priorityA - priorityB;
-
-		// Get directory paths
-		const dirA = a.split('/').slice(0, -1).join('/');
-		const dirB = b.split('/').slice(0, -1).join('/');
-
-		// If in the same directory, prioritize index.md
-		if (dirA === dirB) {
-			if (a.endsWith('index.md')) return -1;
-			if (b.endsWith('index.md')) return 1;
-			return a.localeCompare(b);
-		}
-
-		// Otherwise sort by directory path
-		return dirA.localeCompare(dirB);
-	});
 }
 
 function remove_quote_blocks(content: string, blockType: string): string {

@@ -1,14 +1,14 @@
-import { get_documentation_title, packages, DOCUMENTATION_NAMES } from '$lib/server/llms';
+import { get_documentation_title, sections } from '$lib/server/llms';
 
 const DOMAIN = `https://svelte.dev`;
 
 export const prerender = true;
 
 export function GET() {
-	const package_docs = packages
+	const package_docs = sections
 		.map(
-			(pkg) =>
-				`- [${DOCUMENTATION_NAMES[pkg]} documentation](${DOMAIN}/docs/${pkg}/llms.txt): ${get_documentation_title(pkg)}`
+			(section) =>
+				`- [${section.title} documentation](${DOMAIN}/docs/${section.slug}/llms.txt): ${get_documentation_title(section)}`
 		)
 		.join('\n');
 
