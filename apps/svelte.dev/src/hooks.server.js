@@ -32,7 +32,10 @@ const mappings = new Map([
 	['/tutorial/updating-arrays-and-objects', '/tutorial/svelte/deep-state'],
 	['/tutorial/event-modifiers', '/tutorial/svelte/capturing'],
 	['/tutorial/dom-event-forwarding', '/tutorial/svelte/spreading-events'],
-	['/tutorial/svelte/introducing-stores', '/tutorial/svelte/stores']
+	['/tutorial/svelte/introducing-stores', '/tutorial/svelte/stores'],
+	['/tutorial/kit/app-store', '/tutorial/kit/app-state'],
+	['/tutorial/kit/navigating-store', '/tutorial/kit/navigating-state'],
+	['/tutorial/kit/updated-store', '/tutorial/kit/updated-state']
 ]);
 
 // selectively preload fonts

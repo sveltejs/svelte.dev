@@ -2,11 +2,7 @@
 title: page
 ---
 
-> TODO link to stores exercise
-
-As we learned earlier, Svelte stores are a place to put data that doesn't belong to an individual component.
-
-SvelteKit makes three readonly stores available via the `$app/stores` module — `page`, `navigating` and `updated`. The one you'll use most often is [`page`](/docs/kit/@sveltejs-kit#Page), which provides information about the current page:
+SvelteKit makes three readonly states available via the `$app/state` module — `page`, `navigating` and `updated`. The one you'll use most often is [`page`](/docs/kit/@sveltejs-kit#Page), which provides information about the current page:
 
 - `url` — the [URL](https://developer.mozilla.org/en-US/docs/Web/API/URL) of the current page
 - `params` — the current page's [parameters](params)
@@ -16,25 +12,27 @@ SvelteKit makes three readonly stores available via the `$app/stores` module —
 - `data` — the data for the current page, combining the return values of all `load` functions
 - `form` — the data returned from a [form action](the-form-element)
 
-As with any other store, you can reference its value in a component by prefixing its name with the `$` symbol. For example, we can access the current pathname as `$page.url.pathname`:
+Each of these properties is reactive, using `$state.raw` under the hood. Here's an example using `page.url.pathname`:
 
 ```svelte
 /// file: src/routes/+layout.svelte
 <script>
-	+++import { page } from '$app/stores';+++
+	+++import { page } from '$app/state';+++
 
 	let { children } = $props();
 </script>
 
 <nav>
-	<a href="/" +++aria-current={$page.url.pathname === '/'}+++>
+	<a href="/" +++aria-current={page.url.pathname === '/'}+++>
 		home
 	</a>
 
-	<a href="/about" +++aria-current={$page.url.pathname === '/about'}+++>
+	<a href="/about" +++aria-current={page.url.pathname === '/about'}+++>
 		about
 	</a>
 </nav>
 
 {@render children()}
 ```
+
+> [!NOTE] Prior to SvelteKit 2.12, you had to use `$app/stores` for this, which provides a `$page` store with the same information. If you're currently using `$app/stores`, we advice you do migrate towards `$app/state` (requires Svelte 5).
