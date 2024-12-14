@@ -111,6 +111,7 @@ function parse(
 	options: {
 		filename?: string;
 		modern: true;
+		loose?: boolean;
 	}
 ): AST.Root;
 ```
@@ -126,6 +127,7 @@ function parse(
 		| {
 				filename?: string;
 				modern?: false;
+				loose?: boolean;
 		  }
 		| undefined
 ): Record<string, any>;
