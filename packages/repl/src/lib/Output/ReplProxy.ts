@@ -24,6 +24,14 @@ export default class ReplProxy {
 			case 'unhandledrejection':
 				return this.handlers.on_unhandled_rejection(event.data);
 			case 'console':
+				if (event.data.command === 'info' && event.data.args[0]?.type === '__error') {
+					const data = event.data.args[0];
+					const e = new Error(data.message);
+					e.name = data.name;
+					e.stack = data.stack;
+					event.data.args[0] = e;
+				}
+
 				return this.handlers.on_console(event.data);
 		}
 	};
