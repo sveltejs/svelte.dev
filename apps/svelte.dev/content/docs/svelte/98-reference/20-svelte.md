@@ -477,10 +477,32 @@ function tick(): Promise<void>;
 
 Unmounts a component that was previously mounted using `mount` or `hydrate`.
 
+Since 5.13.0, if `options.outro` is `true`, [transitions](/docs/svelte/transition) will play before the component is removed from the DOM.
+
+Returns a `Promise` that resolves after transitions have completed if `options.outro` is true, or immediately otherwise (prior to 5.13.0, returns `void`).
+
+```js
+// @errors: 7031
+import { mount, unmount } from 'svelte';
+import App from './App.svelte';
+
+const app = mount(App, { target: document.body });
+
+// later...
+unmount(app, { outro: true });
+```
+
 <div class="ts-block">
 
 ```dts
-function unmount(component: Record<string, any>): void;
+function unmount(
+	component: Record<string, any>,
+	options?:
+		| {
+				outro?: boolean;
+		  }
+		| undefined
+): Promise<void>;
 ```
 
 </div>

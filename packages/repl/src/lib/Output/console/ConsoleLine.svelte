@@ -150,7 +150,11 @@
 					{#if !part.formatted}
 						{' '}
 					{/if}{#if part.type === 'value'}
-						<JSONNode value={part.value} defaultExpandedLevel={log.expanded ? 1 : 0} />
+						{#if part.value instanceof Error}
+							<pre>{part.value.name + '\n' + part.value.stack.replace(/^\n+/, '')}</pre>
+						{:else}
+							<JSONNode value={part.value} defaultExpandedLevel={log.expanded ? 1 : 0} />
+						{/if}
 					{:else}
 						<!-- svelte-ignore a11y_no_static_element_interactions -->
 						<span class="styled" style={part.style} onclick={(e) => e.stopPropagation()}>
