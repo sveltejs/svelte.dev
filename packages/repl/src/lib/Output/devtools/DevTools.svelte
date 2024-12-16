@@ -8,7 +8,7 @@
 			const iframe_window = iframe.contentWindow;
 			iframe_window.addEventListener('preview_ready', () => {
 				iframe_window.ChiiDevtoolsIframe = devtools_iframe;
-				iframe_window.initialize();
+				iframe_window.initialize_devtools();
 			});
 
 			window.addEventListener('message', (event) => {

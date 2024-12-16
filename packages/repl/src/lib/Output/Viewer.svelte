@@ -5,7 +5,7 @@
 	import Message from '../Message.svelte';
 	import PaneWithPanel from './PaneWithPanel.svelte';
 	import ReplProxy from './ReplProxy.js';
-	import Console, { type Log } from './console/Console.svelte';
+	import { type Log } from './console/Console.svelte';
 	import getLocationFromStack from './get-location-from-stack';
 	import srcdoc from './srcdoc/index.html?raw';
 	import ErrorOverlay from './ErrorOverlay.svelte';
@@ -28,8 +28,6 @@
 	export let theme: 'light' | 'dark';
 	/** A store containing the current bundle result. Takes precedence over REPL context, if set */
 	export let bundle: Writable<Bundle | null> | undefined = undefined;
-	/** Called everytime a log is pushed. If this is set, the built-in console coming with the Viewer isn't shown */
-	export let onLog: ((logs: Log[]) => void) | undefined = undefined;
 
 	const context = get_repl_context();
 	bundle = bundle ?? context.bundle;
@@ -172,8 +170,8 @@
 							}
 						};
 
-						if (!window.initialize) {
-							window.initialize = () => {
+						if (!window.initialize_devtools) {
+							window.initialize_devtools = () => {
 								var script = document.createElement('script');
 								script.src = 'https://cdn.jsdelivr.net/npm/chii@1.12.3/public/target.js';
 								script.setAttribute('embedded', 'true');
