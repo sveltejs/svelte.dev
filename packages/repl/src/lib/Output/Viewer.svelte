@@ -28,6 +28,8 @@
 	export let theme: 'light' | 'dark';
 	/** A store containing the current bundle result. Takes precedence over REPL context, if set */
 	export let bundle: Writable<Bundle | null> | undefined = undefined;
+		/** Called everytime a log is pushed. If this is set, the built-in console coming with the Viewer isn't shown */
+	export let onLog: ((logs: Log[]) => void) | undefined = undefined;
 
 	const context = get_repl_context();
 	bundle = bundle ?? context.bundle;
@@ -108,10 +110,6 @@
 			if (!$bundle.error) {
 				await proxy?.eval(`
 					${injectedJS}
-
-					const chobitsu_scr = document.createElement('script');
-					chobitsu_scr.src = 'https://cdn.jsdelivr.net/npm/chobitsu';
-					document.body.appendChild(chobitsu_scr);
 
 					if (!window.__setup_focus_handling) {
 						let can_focus = false;
