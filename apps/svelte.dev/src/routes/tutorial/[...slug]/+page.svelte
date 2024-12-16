@@ -12,7 +12,7 @@
 	import { solution } from './state.svelte';
 	import { needs_webcontainers, text_files } from './shared';
 	import OutputRollup from './OutputRollup.svelte';
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import Controls from './Controls.svelte';
 	import type { Item } from 'editor';
 	import type { Snapshot } from './$types.js';
@@ -319,7 +319,7 @@
 					</section>
 
 					<section slot="b" class="preview">
-						{#if needs_webcontainers($page.data.exercise)}
+						{#if needs_webcontainers(page.data.exercise)}
 							<Output exercise={data.exercise} {paused} {workspace} />
 						{:else}
 							<OutputRollup />

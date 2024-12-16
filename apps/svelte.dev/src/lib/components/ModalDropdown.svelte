@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { afterNavigate } from '$app/navigation';
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import { focusable_children, trap } from '@sveltejs/site-kit/actions';
 	import { Icon } from '@sveltejs/site-kit/components';
 	import type { Snippet } from 'svelte';
@@ -46,7 +46,7 @@
 
 		// except parents of the current one
 		const current = details.querySelector(
-			`[href="${$page.url.pathname}"]`
+			`[href="${page.url.pathname}"]`
 		) as HTMLAnchorElement | null;
 		if (!current) return;
 
