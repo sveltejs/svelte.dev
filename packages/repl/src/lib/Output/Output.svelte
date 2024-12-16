@@ -112,7 +112,7 @@
 	{#if embedded}
 		<Editor workspace={js_workspace} />
 	{:else}
-		<PaneWithPanel pos="50%" panel="Compiler options">
+		<PaneWithPanel pos="50%" max="-4.2rem" panel="Compiler options">
 			<div slot="main">
 				<Editor workspace={js_workspace} />
 			</div>

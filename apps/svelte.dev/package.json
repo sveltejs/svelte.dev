@@ -20,7 +20,7 @@
 		"@lezer/common": "^1.0.4",
 		"@lezer/javascript": "^1.4.7",
 		"@lezer/lr": "^1.3.10",
-		"@rich_harris/svelte-split-pane": "^1.1.3",
+		"@rich_harris/svelte-split-pane": "^2.0.0",
 		"@shikijs/twoslash": "^1.22.0",
 		"@sveltejs/amp": "^1.1.4",
 		"@sveltejs/repl": "workspace:*",

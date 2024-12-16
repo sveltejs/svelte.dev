@@ -27,8 +27,8 @@ importers:
         specifier: ^1.3.10
         version: 1.4.1
       '@rich_harris/svelte-split-pane':
-        specifier: ^1.1.3
-        version: 1.1.3(svelte@5.14.0)
+        specifier: ^2.0.0
+        version: 2.0.0(svelte@5.14.0)
       '@shikijs/twoslash':
         specifier: ^1.22.0
         version: 1.22.0(typescript@5.5.4)
@@ -335,8 +335,8 @@ importers:
         specifier: ^6.0.14
         version: 6.2.1(@codemirror/commands@6.5.0)(@codemirror/language@6.10.3)(@codemirror/search@6.5.6)(@codemirror/state@6.5.0)(@codemirror/view@6.35.3)
       '@rich_harris/svelte-split-pane':
-        specifier: ^1.1.3
-        version: 1.1.3(svelte@5.14.0)
+        specifier: ^2.0.0
+        version: 2.0.0(svelte@5.14.0)
       '@rollup/browser':
         specifier: ^4.17.2
         version: 4.17.2
@@ -1451,10 +1451,10 @@ packages:
     resolution: {integrity: sha512-xBaJish5OeGmniDj9cW5PRa/PtmuVU3ziqrbr5xJj901ZDN4TosrVaNZpEiLZAxdfnhAe7uQ7QFWfjPe9d9K2Q==}
     engines: {node: '>= 10'}
 
-  '@rich_harris/svelte-split-pane@1.1.3':
-    resolution: {integrity: sha512-eziKez1ncDfLqJQsViwLG2rYNfMEa3pYBKFUBfNTChgT5lUnofm5IDHxupAKklKvRpTXCVhQXb1MxLUfj5UgFQ==}
+  '@rich_harris/svelte-split-pane@2.0.0':
+    resolution: {integrity: sha512-mwdBUw59nlozluhoU3fbMO11YZlJ6IM48ZT6jxen8hAJbGbjTZMDKpMwD1neuK8gxgBM1QKAHJLZN7DpSY+hjA==}
     peerDependencies:
-      svelte: ^3.54.0 || ^4.0.0 || ^5.0.0-next.0
+      svelte: ^5
 
   '@rollup/browser@4.17.2':
     resolution: {integrity: sha512-a+efgpgQ7qODC0ltFcap0iPKT4hTmYUb6S7h8lXek2XVvfWJ5OmVI8FpbgZ5SJkTOk5G6lvP6vYC35xzhDy+ag==}
@@ -4274,7 +4274,7 @@ snapshots:
       '@resvg/resvg-js-win32-ia32-msvc': 2.6.2
       '@resvg/resvg-js-win32-x64-msvc': 2.6.2
 
-  '@rich_harris/svelte-split-pane@1.1.3(svelte@5.14.0)':
+  '@rich_harris/svelte-split-pane@2.0.0(svelte@5.14.0)':
     dependencies:
       svelte: 5.14.0
 

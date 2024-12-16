@@ -262,19 +262,21 @@
 
 	<div class="top" class:offset={show_editor}>
 		<SplitPane id="main" type="horizontal" min="360px" max="50%" pos="33%">
-			<section slot="a" class="content">
-				<Sidebar
-					bind:sidebar
-					exercise={data.exercise}
-					on:select={(e) => {
-						navigate_to_file(e.detail.file);
-					}}
-				/>
-			</section>
+			{#snippet a()}
+				<section class="content">
+					<Sidebar
+						bind:sidebar
+						exercise={data.exercise}
+						on:select={(e) => {
+							navigate_to_file(e.detail.file);
+						}}
+					/>
+				</section>
+			{/snippet}
 
-			<section slot="b">
+			{#snippet b()}
 				<SplitPane type="vertical" min="100px" max="-4.1rem" pos="50%">
-					<section slot="a">
+					{#snippet a()}
 						<SplitPane
 							id="editor"
 							type={mobile ? 'vertical' : 'horizontal'}
@@ -282,51 +284,57 @@
 							max="300px"
 							pos="200px"
 						>
-							<section slot="a" class="navigator">
-								{#if mobile}
-									<button class="file" onclick={() => (show_filetree = !show_filetree)}>
-										{workspace.current.name.replace(
-											data.exercise.scope.prefix,
-											data.exercise.scope.name + '/'
-										) ?? 'Files'}
-									</button>
-								{:else}
-									<Filetree exercise={data.exercise} {workspace} />
-								{/if}
-							</section>
+							{#snippet a()}
+								<section class="navigator">
+									{#if mobile}
+										<button class="file" onclick={() => (show_filetree = !show_filetree)}>
+											{workspace.current.name.replace(
+												data.exercise.scope.prefix,
+												data.exercise.scope.name + '/'
+											) ?? 'Files'}
+										</button>
+									{:else}
+										<Filetree exercise={data.exercise} {workspace} />
+									{/if}
+								</section>
+							{/snippet}
 
-							<section slot="b" class="editor-container">
-								<Editor
-									{workspace}
-									autocomplete_filter={(file) => {
-										return (
-											file.name.startsWith('/src') &&
-											file.name.startsWith(data.exercise.scope.prefix) &&
-											file.name !== '/src/__client.js' &&
-											file.name !== '/src/app.html'
-										);
-									}}
-								/>
-								<ImageViewer selected={workspace.current} />
+							{#snippet b()}
+								<section class="editor-container">
+									<Editor
+										{workspace}
+										autocomplete_filter={(file) => {
+											return (
+												file.name.startsWith('/src') &&
+												file.name.startsWith(data.exercise.scope.prefix) &&
+												file.name !== '/src/__client.js' &&
+												file.name !== '/src/app.html'
+											);
+										}}
+									/>
+									<ImageViewer selected={workspace.current} />
 
-								{#if mobile && show_filetree}
-									<div class="mobile-filetree">
-										<Filetree mobile exercise={data.exercise} {workspace} />
-									</div>
-								{/if}
-							</section>
+									{#if mobile && show_filetree}
+										<div class="mobile-filetree">
+											<Filetree mobile exercise={data.exercise} {workspace} />
+										</div>
+									{/if}
+								</section>
+							{/snippet}
 						</SplitPane>
-					</section>
+					{/snippet}
 
-					<section slot="b" class="preview">
-						{#if needs_webcontainers(page.data.exercise)}
-							<Output exercise={data.exercise} {paused} {workspace} />
-						{:else}
-							<OutputRollup />
-						{/if}
-					</section>
+					{#snippet b()}
+						<section class="preview">
+							{#if needs_webcontainers(page.data.exercise)}
+								<Output exercise={data.exercise} {paused} {workspace} />
+							{:else}
+								<OutputRollup />
+							{/if}
+						</section>
+					{/snippet}
 				</SplitPane>
-			</section>
+			{/snippet}
 		</SplitPane>
 	</div>
 
@@ -446,7 +454,7 @@
 			--pos: 5.4rem !important;
 		}
 
-		:global([data-pane]) :global(.divider) {
+		:global([data-pane]) :global(svelte-split-pane-divider) {
 			cursor: default;
 		}
 	}
