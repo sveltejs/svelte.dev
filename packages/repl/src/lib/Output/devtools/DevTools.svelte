@@ -1,7 +1,7 @@
-<script>
+<script lang="ts">
 	const { iframe } = $props();
 
-	let devtools_iframe;
+	let devtools_iframe: HTMLElement;
 
 	$effect(() => {
 		if (iframe) {
