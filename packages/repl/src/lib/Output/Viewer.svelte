@@ -164,26 +164,32 @@
 					{
 						const { mount, unmount, App } = __repl_exports;
 
+						const render_app = () => {
+							const component = mount(App, { target: document.body });
 
-						window.initialize = () => {
-							var script = document.createElement('script');
-							script.src = 'https://cdn.jsdelivr.net/npm/chii@1.12.3/public/target.js';
-							script.setAttribute('embedded', 'true');
-							script.setAttribute('cdn', 'https://cdn.jsdelivr.net/npm/chii/public');
-							document.head.appendChild(script);
-
-							script.onload = () => {
-								const component = mount(App, { target: document.body });
-
-								window.__unmount_previous = () => {
-									unmount(component);
-								}
-							};
+							window.__unmount_previous = () => {
+								unmount(component);
+							}
 						};
 
-						setTimeout(() => {
-							window.dispatchEvent(new Event('preview_ready'));
-						}, 0);
+						if (!window.initialize) {
+							window.initialize = () => {
+								var script = document.createElement('script');
+								script.src = 'https://cdn.jsdelivr.net/npm/chii@1.12.3/public/target.js';
+								script.setAttribute('embedded', 'true');
+								script.setAttribute('cdn', 'https://cdn.jsdelivr.net/npm/chii/public');
+								document.head.appendChild(script);
+
+								script.onload = render_app;
+							};
+
+							setTimeout(() => {
+								window.dispatchEvent(new Event('preview_ready'));
+							}, 0);
+						} else {
+						 render_app();
+						}
+
 					}
 					//# sourceURL=playground:output
 				`);
