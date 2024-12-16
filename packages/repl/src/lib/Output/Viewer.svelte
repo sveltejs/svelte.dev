@@ -165,9 +165,9 @@
 						const { mount, unmount, App } = __repl_exports;
 
 
-						window.initialize = (target_src) => {
+						window.initialize = () => {
 							var script = document.createElement('script');
-							script.src = target_src;
+							script.src = 'https://cdn.jsdelivr.net/npm/chii@1.12.3/public/target.js';
 							script.setAttribute('embedded', 'true');
 							script.setAttribute('cdn', 'https://cdn.jsdelivr.net/npm/chii/public');
 							document.head.appendChild(script);
@@ -182,7 +182,7 @@
 						};
 
 						setTimeout(() => {
-							window.dispatchEvent(new Event('devtools_ready'));
+							window.dispatchEvent(new Event('preview_ready'));
 						}, 0);
 					}
 					//# sourceURL=playground:output
