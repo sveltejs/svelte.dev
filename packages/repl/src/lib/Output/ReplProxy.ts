@@ -81,7 +81,6 @@ export default class ReplProxy {
 				handler.resolve(cmd_data.args);
 			}
 		} else {
-			debugger
 			console.error('command not found', id, cmd_data, [...this.pending_cmds.keys()]);
 		}
 	}
