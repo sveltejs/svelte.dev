@@ -107,13 +107,19 @@ Thanks to [Didier Catz](https://x.com/didiercatz) and [Stanislav Khromov](https:
 
 - [docs](/docs/llms)
 
-## Day 14
+## Day 14: unmount with outros
 
-Coming soon!
+Now, if you need to programmatically mount and unmount a component, you can now pass an `outro: true` option to `unmount` to play transitions before it is removed from the DOM.
 
-## Day 15
+- [docs](/docs/svelte/imperative-component-api#unmount)
+- [demo](/playground/a4ca332691204ccd887ec7b1df818182?version=5.13.0)
 
-Coming soon!
+## Day 15: debugging superpowers
+
+The new `$inspect.trace(...)` rune gives you detailed information about which state changes caused a derived or effect to re-run.
+
+- [docs](</docs/svelte/$inspect#$inspect.trace()>)
+- [demo](/playground/d135c6f00beb4fa391725e59d8061604?version=5.14.0)
 
 ## Day 16
 

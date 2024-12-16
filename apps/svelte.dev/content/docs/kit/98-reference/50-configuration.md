@@ -1102,17 +1102,17 @@ Not all navigations will result in an error though, for example if the JavaScrip
 /// file: +layout.svelte
 <script>
 	import { beforeNavigate } from '$app/navigation';
-	import { updated } from '$app/stores';
+	import { updated } from '$app/state';
 
 	beforeNavigate(({ willUnload, to }) => {
-		if ($updated && !willUnload && to?.url) {
+		if (updated.current && !willUnload && to?.url) {
 			location.href = to.url.href;
 		}
 	});
 </script>
 ```
 
-If you set `pollInterval` to a non-zero value, SvelteKit will poll for new versions in the background and set the value of the [`updated`](https://svelte.dev/docs/kit/$app-stores#updated) store to `true` when it detects one.
+If you set `pollInterval` to a non-zero value, SvelteKit will poll for new versions in the background and set the value of [`updated.current`](https://svelte.dev/docs/kit/$app-state#updated) `true` when it detects one.
 
 <div class="ts-block-property-children">
 

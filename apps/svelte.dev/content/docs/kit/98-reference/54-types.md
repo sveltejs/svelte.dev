@@ -188,7 +188,7 @@ interface Locals {}
 
 ## PageData
 
-Defines the common shape of the [$page.data store](/docs/kit/$app-stores#page) - that is, the data that is shared between all pages.
+Defines the common shape of the [page.data state](/docs/kit/$app-state#page) and [$page.data store](/docs/kit/$app-stores#page) - that is, the data that is shared between all pages.
 The `Load` and `ServerLoad` functions in `./$types` will be narrowed accordingly.
 Use optional properties for data that is only present on specific pages. Do not add an index signature (`[key: string]: any`).
 
@@ -202,7 +202,7 @@ interface PageData {}
 
 ## PageState
 
-The shape of the `$page.state` object, which can be manipulated using the [`pushState`](/docs/kit/$app-navigation#pushState) and [`replaceState`](/docs/kit/$app-navigation#replaceState) functions from `$app/navigation`.
+The shape of the `page.state` object, which can be manipulated using the [`pushState`](/docs/kit/$app-navigation#pushState) and [`replaceState`](/docs/kit/$app-navigation#replaceState) functions from `$app/navigation`.
 
 <div class="ts-block">
 
