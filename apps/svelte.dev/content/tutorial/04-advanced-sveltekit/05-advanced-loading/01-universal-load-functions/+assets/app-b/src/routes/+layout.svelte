@@ -13,10 +13,7 @@
 	<a href="/green">green</a>
 	<a href="/blue">blue</a>
 
-	{#if page.data.component}
-		{@const Component = page.data.component}
-		<Component />
-	{/if}
+	<page.data.component />
 </nav>
 
 {@render children()}

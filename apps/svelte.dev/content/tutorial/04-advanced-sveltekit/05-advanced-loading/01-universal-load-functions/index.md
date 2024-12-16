@@ -28,10 +28,7 @@ We can now use the `component` returned from these `load` functions like any oth
 	<a href="/green">green</a>
 	<a href="/blue">blue</a>
 
-+++	{#if page.data.component}
-		{@const Component = page.data.component}
-		<Component />
-	{/if}+++
++++	<page.data.component />+++
 </nav>
 ```
 
