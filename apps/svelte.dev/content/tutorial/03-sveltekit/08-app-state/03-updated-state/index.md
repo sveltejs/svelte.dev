@@ -31,4 +31,4 @@ You can manually check for new versions, regardless of `pollInterval`, by callin
 +++{/if}+++
 ```
 
-> [!NOTE] Prior to SvelteKit 2.12, you had to use `$app/stores` for this, which provides a `$updated` store with the same information. If you're currently using `$app/stores`, we advice you do migrate towards `$app/state` (requires Svelte 5).
+> [!NOTE] Prior to SvelteKit 2.12, you had to use `$app/stores` for this, which provides a `$updated` store with the same information. If you're currently using `$app/stores`, we advise you to migrate towards `$app/state` (requires Svelte 5).
