@@ -2,7 +2,7 @@
 title: page
 ---
 
-SvelteKit makes three readonly states available via the `$app/state` module — `page`, `navigating` and `updated`. The one you'll use most often is [`page`](/docs/kit/@sveltejs-kit#Page), which provides information about the current page:
+SvelteKit makes three readonly state objects available via the `$app/state` module — `page`, `navigating` and `updated`. The one you'll use most often is [`page`](/docs/kit/@sveltejs-kit#Page), which provides information about the current page:
 
 - `url` — the [URL](https://developer.mozilla.org/en-US/docs/Web/API/URL) of the current page
 - `params` — the current page's [parameters](params)
