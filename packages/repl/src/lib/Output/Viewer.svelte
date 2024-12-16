@@ -304,7 +304,7 @@
 			</div>
 
 			<section slot="panel-body">
-				<DevTools iframe={iframe} />
+				<DevTools {iframe} />
 			</section>
 		</PaneWithPanel>
 	{:else}
