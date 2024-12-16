@@ -7,8 +7,6 @@
 
 	export let panel: string;
 
-	export let header = true;
-
 	export let pos: Exclude<ComponentProps<SplitPane>['pos'], undefined> = '90%';
 
 	$: previous_pos = Math.min(+pos.replace(UNIT_REGEX, '$1'), 70);
