@@ -45,12 +45,14 @@
 		}
 
 		// except parents of the current one
-		const current = details.querySelector(`[href="${$page.url.pathname}"]`) as HTMLAnchorElement | null;
+		const current = details.querySelector(
+			`[href="${$page.url.pathname}"]`
+		) as HTMLAnchorElement | null;
 		if (!current) return;
 
 		let node = current as Element;
 
-		while ((node = (node.parentNode) as Element) && node !== details) {
+		while ((node = node.parentNode as Element) && node !== details) {
 			if (node.nodeName === 'DETAILS') {
 				(node as HTMLDetailsElement).open = true;
 			}
@@ -70,7 +72,10 @@
 			}
 		}
 
-		if (document.activeElement?.nodeName === 'SUMMARY' && (e.key === 'ArrowLeft' || e.key === 'ArrowRight')) {
+		if (
+			document.activeElement?.nodeName === 'SUMMARY' &&
+			(e.key === 'ArrowLeft' || e.key === 'ArrowRight')
+		) {
 			(document.activeElement.parentNode as HTMLDetailsElement).open = e.key === 'ArrowRight';
 		}
 	}}
