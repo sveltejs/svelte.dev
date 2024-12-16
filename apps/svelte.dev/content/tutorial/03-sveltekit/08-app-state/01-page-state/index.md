@@ -35,4 +35,4 @@ Each of these properties is reactive, using `$state.raw` under the hood. Here's 
 {@render children()}
 ```
 
-> [!NOTE] Prior to SvelteKit 2.12, you had to use `$app/stores` for this, which provides a `$page` store with the same information. If you're currently using `$app/stores`, we advice you do migrate towards `$app/state` (requires Svelte 5).
+> [!NOTE] Prior to SvelteKit 2.12, you had to use `$app/stores` for this, which provides a `$page` store with the same information. If you're currently using `$app/stores`, we advise you do migrate towards `$app/state` (requires Svelte 5).
