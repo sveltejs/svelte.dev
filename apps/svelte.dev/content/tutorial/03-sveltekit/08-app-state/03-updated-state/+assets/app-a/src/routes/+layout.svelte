@@ -12,8 +12,8 @@
 		about
 	</a>
 
-	{#if navigating.current}
-		navigating to {navigating.current.to.url.pathname}
+	{#if navigating.to}
+		navigating to {navigating.to.url.pathname}
 	{/if}
 </nav>
 

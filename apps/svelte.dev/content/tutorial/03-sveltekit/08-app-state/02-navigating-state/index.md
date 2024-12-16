@@ -2,7 +2,7 @@
 title: navigating
 ---
 
-The `navigating` object represents the current navigation. When a navigation starts — because of a link click, or a back/forward navigation, or a programmatic `goto` — the value of `navigating.current` will become an object with the following properties:
+The `navigating` object represents the current navigation. When a navigation starts — because of a link click, or a back/forward navigation, or a programmatic `goto` — the value of `navigating` will become an object with the following properties:
 
 - `from` and `to` — objects with `params`, `route` and `url` properties
 - `type` — the type of navigation, e.g. `link`, `popstate` or `goto`
@@ -28,8 +28,8 @@ It can be used to show a loading indicator for long-running navigations. In this
 		about
 	</a>
 
-+++	{#if navigating.current}
-		navigating to {navigating.current.to.url.pathname}
++++	{#if navigating.to}
+		navigating to {navigating.to.url.pathname}
 	{/if}+++
 </nav>
 
