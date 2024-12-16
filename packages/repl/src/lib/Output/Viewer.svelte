@@ -12,6 +12,7 @@
 	import type { CompileError } from 'svelte/compiler';
 	import type { Bundle } from '../types';
 	import type { Writable } from 'svelte/store';
+	import DevTools from './devtools/DevTools.svelte';
 
 	export let error: Error | null;
 	/** status by Bundler class instance */
@@ -110,6 +111,10 @@
 				await proxy?.eval(`
 					${injectedJS}
 
+					const chobitsu_scr = document.createElement('script');
+					chobitsu_scr.src = 'https://cdn.jsdelivr.net/npm/chobitsu';
+					document.body.appendChild(chobitsu_scr);
+
 					if (!window.__setup_focus_handling) {
 						let can_focus = false;
 
@@ -157,30 +162,28 @@
 
 					const __repl_exports = ${$bundle.client?.code};
 					{
-						const { mount, unmount, App, untrack } = __repl_exports;
+						const { mount, unmount, App } = __repl_exports;
 
-						const console_methods = ['log', 'error', 'trace', 'assert', 'warn', 'table', 'group'];
 
-						// The REPL hooks up to the console to provide a virtual console. However, the implementation
-						// needs to stringify the console to pass over a MessageChannel, which means that the object
-						// can get deeply read and tracked by accident when using the console. We can avoid this by
-						// ensuring we untrack the main console methods.
+						window.initialize = (target_src) => {
+							var script = document.createElement('script');
+							script.src = target_src;
+							script.setAttribute('embedded', 'true');
+							script.setAttribute('cdn', 'https://cdn.jsdelivr.net/npm/chii/public');
+							document.head.appendChild(script);
 
-						const original = {};
+							script.onload = () => {
+								const component = mount(App, { target: document.body });
 
-						for (const method of console_methods) {
-							original[method] = console[method];
-							console[method] = function (...v) {
-								return untrack(() => original[method].apply(this, v));
-							}
-						}
-						const component = mount(App, { target: document.body });
-						window.__unmount_previous = () => {
-							for (const method of console_methods) {
-								console[method] = original[method];
-							}
-							unmount(component);
-						}
+								window.__unmount_previous = () => {
+									unmount(component);
+								}
+							};
+						};
+
+						setTimeout(() => {
+							window.dispatchEvent(new Event('devtools_ready'));
+						}, 0);
 					}
 					//# sourceURL=playground:output
 				`);
@@ -282,7 +285,7 @@
 			'allow-pointer-lock',
 			'allow-modals',
 			can_escape ? 'allow-popups-to-escape-sandbox' : '',
-			relaxed ? 'allow-same-origin' : ''
+			'allow-same-origin'
 		].join(' ')}
 		class={error || pending || pending_imports ? 'greyed-out' : ''}
 		srcdoc={BROWSER ? srcdoc : ''}
@@ -295,22 +298,13 @@
 
 <div class="iframe-container">
 	{#if !onLog}
-		<PaneWithPanel pos="90%" panel="Console">
+		<PaneWithPanel pos="80%" panel="DevTools">
 			<div slot="main">
 				{@render main()}
 			</div>
 
-			<div slot="panel-header">
-				<button class="raised" disabled={logs.length === 0} on:click|stopPropagation={clear_logs}>
-					{#if logs.length > 0}
-						({logs.length})
-					{/if}
-					Clear
-				</button>
-			</div>
-
 			<section slot="panel-body">
-				<Console {logs} />
+				<DevTools iframe={iframe} />
 			</section>
 		</PaneWithPanel>
 	{:else}
