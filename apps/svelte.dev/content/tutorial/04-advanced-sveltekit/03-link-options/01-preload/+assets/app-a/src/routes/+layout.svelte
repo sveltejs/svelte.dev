@@ -8,7 +8,7 @@
 	let end = $state();
 
 	$effect(() => {
-		if (navigating) {
+		if (navigating.to) {
 			start = Date.now();
 			end = null;
 			previous = navigating;
