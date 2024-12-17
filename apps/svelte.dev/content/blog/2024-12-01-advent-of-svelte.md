@@ -134,9 +134,13 @@ npx sv migrate app-state
 - [docs](/docs/kit/$app-state)
 - [tutorial](/tutorial/kit/page-state)
 
-## Day 17
+## Day 17: better IntelliSense
 
-Coming soon!
+The parser used by the language tools that power things like the [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode) extension is the same one used by the Svelte compiler. Until today, it would fail if it encountered a syntax error, making it hard to provide things like autocomplete while you were in the middle of writing code.
+
+We just fixed that. Install the latest version of Svelte in your project, make sure your extensions are up to date, and feel the wind in your hair as you write your components.
+
+- [demo video](https://bsky.app/profile/svelte.dev/post/3ldjajjbkwc2n)
 
 ## Day 18
 
