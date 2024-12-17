@@ -112,7 +112,7 @@
 	{#if embedded}
 		<Editor workspace={js_workspace} />
 	{:else}
-		<PaneWithPanel pos="-18rem" panel="Compiler options">
+		<PaneWithPanel min="-18rem" pos="-18rem" panel="Compiler options">
 			{#snippet main()}
 				<Editor workspace={js_workspace} />
 			{/snippet}

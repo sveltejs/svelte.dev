@@ -7,13 +7,22 @@
 	interface Props {
 		panel: string;
 		pos?: Length;
+		min?: Length;
 		max?: Length;
 		main?: import('svelte').Snippet;
 		header?: import('svelte').Snippet;
 		body?: import('svelte').Snippet;
 	}
 
-	let { panel, pos = $bindable('90%'), max = '-4.2rem', main, header, body }: Props = $props();
+	let {
+		panel,
+		pos = $bindable('90%'),
+		min = '4.2rem',
+		max = '-4.2rem',
+		main,
+		header,
+		body
+	}: Props = $props();
 
 	let previous_pos = Math.min(normalize(pos), 70);
 
@@ -58,7 +67,7 @@
 </script>
 
 <div class="container" bind:this={container}>
-	<SplitPane {max} min="10%" type="vertical" bind:pos>
+	<SplitPane {min} {max} type="vertical" bind:pos>
 		{#snippet a()}
 			<section>
 				{@render main?.()}
