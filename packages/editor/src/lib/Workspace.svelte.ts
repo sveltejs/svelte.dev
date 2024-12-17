@@ -556,7 +556,10 @@ export class Workspace {
 		const existing = state.doc.toString();
 
 		if (file.contents !== existing) {
-			const current_cursor_position = this.#view?.state.selection.ranges[0].from!;
+			const current_cursor_position = Math.min(
+				this.#view?.state.selection.ranges[0].from!,
+				file.contents.length
+			);
 
 			const transaction = state.update({
 				changes: {
