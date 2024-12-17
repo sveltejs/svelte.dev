@@ -20,10 +20,10 @@
 	let path_nodes = $derived(find_deepest_path(cursor, [ast]) || []);
 
 	function find_deepest_path(cursor: number | null, paths: Ast[]): Ast[] | undefined {
-		if (cursor === null) return null;
+		if (cursor === null) return;
 		const value = paths[paths.length - 1];
 
-		if (!value) return null;
+		if (!value) return;
 
 		for (const v of Object.values(value)) {
 			if (typeof v === 'object') {
