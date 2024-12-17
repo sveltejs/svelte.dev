@@ -113,13 +113,13 @@
 		<Editor workspace={js_workspace} />
 	{:else}
 		<PaneWithPanel pos="-18rem" panel="Compiler options">
-			<div slot="main">
+			{#snippet main()}
 				<Editor workspace={js_workspace} />
-			</div>
+			{/snippet}
 
-			<div slot="body">
+			{#snippet body()}
 				<CompilerOptions {workspace} />
-			</div>
+			{/snippet}
 		</PaneWithPanel>
 	{/if}
 </div>

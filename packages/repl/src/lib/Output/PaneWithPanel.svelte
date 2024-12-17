@@ -4,15 +4,20 @@
 
 	const UNIT_REGEX = /(\d+)(?:(px|rem|%|em))/i;
 
-	export let panel: string;
+	interface Props {
+		panel: string;
+		pos?: Length;
+		max?: Length;
+		main?: import('svelte').Snippet;
+		header?: import('svelte').Snippet;
+		body?: import('svelte').Snippet;
+	}
 
-	export let pos: Length = '90%';
+	let { panel, pos = $bindable('90%'), max = '-4.2rem', main, header, body }: Props = $props();
 
 	let previous_pos = Math.min(normalize(pos), 70);
 
-	export let max: Length = '-4.2rem';
-
-	let container: HTMLElement;
+	let container: HTMLElement = $state();
 
 	// we can't bind to the spring itself, but we
 	// can still use the spring to drive `pos`
@@ -21,8 +26,9 @@
 		damping: 0.5
 	});
 
-	// @ts-ignore
-	$: pos = $driver + '%';
+	$effect(() => {
+		pos = $driver + '%';
+	});
 
 	const toggle = () => {
 		const pc = normalize(pos);
@@ -55,14 +61,14 @@
 	<SplitPane {max} min="10%" type="vertical" bind:pos>
 		{#snippet a()}
 			<section>
-				<slot name="main" />
+				{@render main?.()}
 			</section>
 		{/snippet}
 
 		{#snippet b()}
 			<section>
 				<div class="panel-header">
-					<button class="panel-heading raised" on:click={toggle}>
+					<button class="panel-heading raised" onclick={toggle}>
 						<svg
 							width="1.8rem"
 							height="1.8rem"
@@ -80,11 +86,11 @@
 						{panel}
 					</button>
 
-					<slot name="header" />
+					{@render header?.()}
 				</div>
 
 				<div class="panel-body">
-					<slot name="body" />
+					{@render body?.()}
 				</div>
 			</section>
 		{/snippet}
