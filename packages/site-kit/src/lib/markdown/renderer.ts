@@ -546,8 +546,8 @@ async function convert_to_ts(js_code: string, indent = '', offset = '') {
 
 	return transformed === js_code ? undefined : transformed;
 
-	function get_type_info(expressionText: string) {
-		const type = expressionText
+	function get_type_info(text: string) {
+		const type = text
 			.replace(/^\{|\}$/g, '') // remove surrounding `{` and `}`
 			.replace(/ \* ?/gm, '')
 			.replace(/import\('(.+?)'\)\.(\w+)(?:(<.+>))?/gms, (_, source, name, args = '') => {
@@ -564,8 +564,8 @@ async function convert_to_ts(js_code: string, indent = '', offset = '') {
 		return type;
 	}
 
-	function get_jsdoc_type_expression_text(jsdocText: string): string {
-		return jsdocText.replace(/^@type\s*/, '').trim();
+	function get_jsdoc_type_expression_text(text: string): string {
+		return text.replace(/^@type\s*/, '').trim();
 	}
 }
 
