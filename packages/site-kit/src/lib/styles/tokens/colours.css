@@ -63,6 +63,7 @@
 	--sk-bg-3: hsl(var(--sk-bg-hue), 14%, 16%);
 	--sk-bg-4: hsl(var(--sk-bg-hue), 15%, 21%);
 	--sk-bg-accent: hsl(15, 100%, 35%);
+	--sk-bg-highlight: hsl(60, 100%, 15%);
 
 	/* Border colour */
 	--sk-border: hsl(var(--sk-bg-hue), 15%, 22%);
