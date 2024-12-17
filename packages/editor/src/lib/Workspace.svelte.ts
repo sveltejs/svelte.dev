@@ -257,11 +257,17 @@ export class Workspace {
 		});
 	}
 
-	highlight_range(node: { start: number; end: number } | null) {
+	highlight_range(node: { start: number; end: number } | null, scroll = false) {
 		if (!this.#view) return;
 
+		const effects: StateEffect<any>[] = [set_highlight.of(node)];
+
+		if (scroll && node) {
+			effects.push(EditorView.scrollIntoView(node.start, { y: 'center' }));
+		}
+
 		this.#view.dispatch({
-			effects: set_highlight.of(node)
+			effects
 		});
 	}
 

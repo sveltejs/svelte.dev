@@ -91,7 +91,13 @@
 			const v = view; // so that TS doesn't think it could become something different
 			const output = v === 'js' ? js_workspace : css_workspace;
 
-			const highlight = (line: number, a: SourceMapSegment, b: SourceMapSegment) => {
+			const highlight = (
+				line: number,
+				a: SourceMapSegment,
+				b: SourceMapSegment,
+				scroll_input: boolean,
+				scroll_output: boolean
+			) => {
 				const split = {
 					original: workspace.current!.contents.split('\n'),
 					generated: current!.result![v]!.code.split('\n')
@@ -107,8 +113,8 @@
 					end: split.generated.slice(0, line).join('\n').length + 1 + b[0]
 				};
 
-				workspace.highlight_range(original);
-				output.highlight_range(generated);
+				workspace.highlight_range(original, scroll_input);
+				output.highlight_range(generated, scroll_output);
 			};
 
 			const clear = () => {
@@ -137,16 +143,7 @@
 						if (b[2]! === line && b[3]! < column) continue;
 
 						// if we're still here, we have a match
-						highlight(i, a, b);
-
-						if (should_scroll) {
-							tick().then(() => {
-								document.querySelector('#output .highlight').scrollIntoView({
-									block: 'center'
-								});
-							});
-						}
-
+						highlight(i, a, b, false, should_scroll);
 						return;
 					}
 
@@ -168,16 +165,7 @@
 					const b = segments[i + 1];
 
 					if (a[0] <= column && b[0] >= column) {
-						highlight(line, a, b);
-
-						if (should_scroll) {
-							tick().then(() => {
-								document.querySelector('#input .highlight').scrollIntoView({
-									block: 'center'
-								});
-							});
-						}
-
+						highlight(line, a, b, should_scroll, false);
 						return;
 					}
 
