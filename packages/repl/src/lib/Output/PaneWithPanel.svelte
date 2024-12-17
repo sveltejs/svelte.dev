@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { spring } from 'svelte/motion';
+	import { Spring } from 'svelte/motion';
 	import { SplitPane, type Length } from '@rich_harris/svelte-split-pane';
 
 	const UNIT_REGEX = /(\d+)(?:(px|rem|%|em))/i;
@@ -30,13 +30,13 @@
 
 	// we can't bind to the spring itself, but we
 	// can still use the spring to drive `pos`
-	const driver = spring(normalize(pos), {
+	const driver = new Spring(normalize(pos), {
 		stiffness: 0.2,
 		damping: 0.5
 	});
 
 	$effect(() => {
-		pos = $driver + '%';
+		pos = driver.current + '%';
 	});
 
 	const toggle = () => {
