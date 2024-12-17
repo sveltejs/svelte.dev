@@ -121,9 +121,18 @@ The new `$inspect.trace(...)` rune gives you detailed information about which st
 - [docs](</docs/svelte/$inspect#$inspect.trace()>)
 - [demo](/playground/d135c6f00beb4fa391725e59d8061604?version=5.14.0)
 
-## Day 16
+## Day 16: `$app/state`
 
-Coming soon!
+SvelteKit's `$app/stores` module, which gives you a way to access information about (for example) the current page, now has a modern Svelte 5 state-based counterpart: `$app/state`. It exposes all the same information, but using fine-grained state, and without the clunky `$` prefix. `$app/stores` is now deprecated, and will be removed in SvelteKit 3 next year.
+
+You can migrate automatically by running the following command in your SvelteKit app:
+
+```bash
+npx sv migrate app-state
+```
+
+- [docs](/docs/kit/$app-state)
+- [tutorial](/tutorial/kit/page-state)
 
 ## Day 17
 

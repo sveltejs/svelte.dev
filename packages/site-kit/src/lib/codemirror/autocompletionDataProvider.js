@@ -590,5 +590,6 @@ export const runes = [
 	{ snippet: '$state.snapshot(${})' },
 	{ snippet: '$effect.tracking()' },
 	{ snippet: '$inspect(${});', test: is_statement },
+	{ snippet: '$inspect.trace(${});', test: is_statement },
 	{ snippet: '$host()' }
 ];

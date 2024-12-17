@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import SecondaryNav from '$lib/components/SecondaryNav.svelte';
 	import ModalDropdown from '$lib/components/ModalDropdown.svelte';
 	import type { Exercise, PartStub } from '$lib/tutorial';
@@ -30,7 +30,7 @@
 								{#each chapter.exercises as exercise}
 									<li value={exercise.slug}>
 										<a
-											aria-current={$page.url.pathname === `/tutorial/${exercise.slug}`
+											aria-current={page.url.pathname === `/tutorial/${exercise.slug}`
 												? 'page'
 												: undefined}
 											href="/tutorial/{exercise.slug}">{exercise.title}</a

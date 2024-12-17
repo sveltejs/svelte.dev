@@ -20,7 +20,7 @@
 	});
 </script>
 
-<iframe title="Svelte Playground" bind:this={devtools_iframe}></iframe>
+<iframe title="Devtools" bind:this={devtools_iframe}></iframe>
 
 <style>
 	iframe {

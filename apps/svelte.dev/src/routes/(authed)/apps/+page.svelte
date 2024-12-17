@@ -82,7 +82,7 @@
 			{:else}
 				<form
 					onsubmit={(e) => {
-						e.preventDefault()
+						e.preventDefault();
 						const search = new FormData(e.target as HTMLFormElement).get('search');
 						goto(search ? `/apps?search=${encodeURIComponent(search.toString())}` : '/apps');
 					}}

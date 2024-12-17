@@ -1,17 +1,16 @@
 <script lang="ts">
 	import { spring } from 'svelte/motion';
-	import { SplitPane } from '@rich_harris/svelte-split-pane';
-	import type { ComponentProps } from 'svelte';
+	import { SplitPane, type Length } from '@rich_harris/svelte-split-pane';
 
 	const UNIT_REGEX = /(\d+)(?:(px|rem|%|em))/i;
 
 	export let panel: string;
 
-	export let pos: Exclude<ComponentProps<SplitPane>['pos'], undefined> = '90%';
+	export let pos: Length = '90%';
 
 	$: previous_pos = Math.min(+pos.replace(UNIT_REGEX, '$1'), 70);
 
-	let max: Exclude<ComponentProps<SplitPane>['max'], undefined> = '90%';
+	export let max: Length = '90%';
 
 	// we can't bind to the spring itself, but we
 	// can still use the spring to drive `pos`
@@ -32,26 +31,30 @@
 			driver.set(previous_pos);
 		} else {
 			previous_pos = numeric_pos;
-			driver.set(+max.replace(UNIT_REGEX, '$1'));
+			driver.set(100);
 		}
 	};
 </script>
 
-<SplitPane {max} min="10%" type="vertical" bind:pos priority="max">
-	<section slot="a">
-		<slot name="main" />
-	</section>
+<SplitPane {max} min="10%" type="vertical" bind:pos>
+	{#snippet a()}
+		<section>
+			<slot name="main" />
+		</section>
+	{/snippet}
 
-	<section slot="b">
-		<div class="panel-header">
-			<button class="panel-heading" on:click={toggle}>{panel}</button>
-			<slot name="panel-header" />
-		</div>
+	{#snippet b()}
+		<section>
+			<div class="panel-header">
+				<button class="panel-heading" on:click={toggle}>{panel}</button>
+				<slot name="panel-header" />
+			</div>
 
-		<div class="panel-body">
-			<slot name="panel-body" />
-		</div>
-	</section>
+			<div class="panel-body">
+				<slot name="panel-body" />
+			</div>
+		</section>
+	{/snippet}
 </SplitPane>
 
 <style>
