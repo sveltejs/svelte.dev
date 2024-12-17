@@ -1,37 +1,57 @@
 <script lang="ts">
-	import { spring } from 'svelte/motion';
+	import { Spring } from 'svelte/motion';
 	import { SplitPane, type Length } from '@rich_harris/svelte-split-pane';
 
 	const UNIT_REGEX = /(\d+)(?:(px|rem|%|em))/i;
 
-	export let panel: string;
+	interface Props {
+		panel: string;
+		pos?: Length;
+		min?: Length;
+		max?: Length;
+		main?: import('svelte').Snippet;
+		header?: import('svelte').Snippet;
+		body?: import('svelte').Snippet;
+	}
 
-	export let pos: Length = '90%';
+	let {
+		panel,
+		pos = $bindable('90%'),
+		min = '4.2rem',
+		max = '-4.2rem',
+		main,
+		header,
+		body
+	}: Props = $props();
 
-	$: previous_pos = Math.min(normalize(pos), 70);
+	let previous_pos = Math.min(normalize(pos), 70);
 
-	export let max: Length = '-4.2rem';
+	let container: HTMLElement;
 
 	// we can't bind to the spring itself, but we
 	// can still use the spring to drive `pos`
-	const driver = spring(normalize(pos), {
+	const driver = new Spring(normalize(pos), {
 		stiffness: 0.2,
 		damping: 0.5
 	});
 
-	// @ts-ignore
-	$: pos = $driver + '%';
+	$effect(() => {
+		pos = driver.current + '%';
+	});
 
 	const toggle = () => {
-		let numeric_pos = normalize(pos);
+		const pc = normalize(pos);
+		const px = pc * 0.01 * container.clientHeight;
 
-		driver.set(numeric_pos, { hard: true });
+		const open = container.clientHeight - px > 42;
 
-		if (numeric_pos > 80) {
-			driver.set(previous_pos);
-		} else {
-			previous_pos = numeric_pos;
+		driver.set(pc, { hard: true });
+
+		if (open) {
+			previous_pos = pc;
 			driver.set(100);
+		} else {
+			driver.set(previous_pos);
 		}
 	};
 
@@ -46,43 +66,52 @@
 	}
 </script>
 
-<SplitPane {max} min="10%" type="vertical" bind:pos>
-	{#snippet a()}
-		<section>
-			<slot name="main" />
-		</section>
-	{/snippet}
+<div class="container" bind:this={container}>
+	<SplitPane {min} {max} type="vertical" bind:pos>
+		{#snippet a()}
+			<section>
+				{@render main?.()}
+			</section>
+		{/snippet}
 
-	{#snippet b()}
-		<section>
-			<div class="panel-header">
-				<button class="panel-heading raised" on:click={toggle}>
-					<svg
-						width="1.8rem"
-						height="1.8rem"
-						viewBox="0 0 24 24"
-						fill="none"
-						stroke="currentColor"
-						stroke-width="2"
-						stroke-linecap="round"
-						stroke-linejoin="round"
-					>
-						<path d="m7 15 5 5 5-5" />
-						<path d="m7 9 5-5 5 5" />
-					</svg>
+		{#snippet b()}
+			<section>
+				<div class="panel-header">
+					<button class="panel-heading raised" onclick={toggle}>
+						<svg
+							width="1.8rem"
+							height="1.8rem"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						>
+							<path d="m7 15 5 5 5-5" />
+							<path d="m7 9 5-5 5 5" />
+						</svg>
 
-					{panel}
-				</button>
-			</div>
+						{panel}
+					</button>
 
-			<div class="panel-body">
-				<slot name="panel-body" />
-			</div>
-		</section>
-	{/snippet}
-</SplitPane>
+					{@render header?.()}
+				</div>
+
+				<div class="panel-body">
+					{@render body?.()}
+				</div>
+			</section>
+		{/snippet}
+	</SplitPane>
+</div>
 
 <style>
+	.container {
+		width: 100%;
+		height: 100%;
+	}
+
 	.panel-header {
 		height: var(--sk-pane-controls-height);
 		display: flex;

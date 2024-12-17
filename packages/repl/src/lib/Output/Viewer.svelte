@@ -300,14 +300,10 @@
 
 <div class="iframe-container">
 	{#if !onLog}
-		<PaneWithPanel pos="100%" panel="DevTools">
-			<div slot="main">
-				{@render main()}
-			</div>
-
-			<section slot="panel-body">
+		<PaneWithPanel pos="100%" panel="DevTools" {main}>
+			{#snippet body()}
 				<DevTools {iframe} />
-			</section>
+			{/snippet}
 		</PaneWithPanel>
 	{:else}
 		{@render main()}
