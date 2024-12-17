@@ -38,18 +38,22 @@
 
 <SplitPane {max} min="10%" type="vertical" bind:pos>
 	{#snippet a()}
-		<slot name="main" />
+		<section>
+			<slot name="main" />
+		</section>
 	{/snippet}
 
 	{#snippet b()}
-		<div class="panel-header">
-			<button class="panel-heading" on:click={toggle}>{panel}</button>
-			<slot name="panel-header" />
-		</div>
+		<section>
+			<div class="panel-header">
+				<button class="panel-heading" on:click={toggle}>{panel}</button>
+				<slot name="panel-header" />
+			</div>
 
-		<div class="panel-body">
-			<slot name="panel-body" />
-		</div>
+			<div class="panel-body">
+				<slot name="panel-body" />
+			</div>
+		</section>
 	{/snippet}
 </SplitPane>
 
@@ -72,5 +76,9 @@
 		text-transform: uppercase;
 		flex: 1;
 		text-align: left;
+	}
+
+	section {
+		overflow: hidden;
 	}
 </style>
