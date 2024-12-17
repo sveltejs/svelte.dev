@@ -8,13 +8,13 @@
 
 	export let pos: Length = '90%';
 
-	$: previous_pos = Math.min(+pos.replace(UNIT_REGEX, '$1'), 70);
+	$: previous_pos = Math.min(normalize(pos), 70);
 
-	export let max: Length = '90%';
+	export let max: Length = '-4.2rem';
 
 	// we can't bind to the spring itself, but we
 	// can still use the spring to drive `pos`
-	const driver = spring(+pos.replace(UNIT_REGEX, '$1'), {
+	const driver = spring(normalize(pos), {
 		stiffness: 0.2,
 		damping: 0.5
 	});
@@ -23,7 +23,7 @@
 	$: pos = $driver + '%';
 
 	const toggle = () => {
-		const numeric_pos = +pos.replace(UNIT_REGEX, '$1');
+		let numeric_pos = normalize(pos);
 
 		driver.set(numeric_pos, { hard: true });
 
@@ -34,6 +34,16 @@
 			driver.set(100);
 		}
 	};
+
+	function normalize(pos: string) {
+		let normalized = +pos.replace(UNIT_REGEX, '$1');
+
+		if (normalized < 0) {
+			normalized += 100;
+		}
+
+		return normalized;
+	}
 </script>
 
 <SplitPane {max} min="10%" type="vertical" bind:pos>
@@ -46,8 +56,23 @@
 	{#snippet b()}
 		<section>
 			<div class="panel-header">
-				<button class="panel-heading" on:click={toggle}>{panel}</button>
-				<slot name="panel-header" />
+				<button class="panel-heading raised" on:click={toggle}>
+					<svg
+						width="1.8rem"
+						height="1.8rem"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+					>
+						<path d="m7 15 5 5 5-5" />
+						<path d="m7 9 5-5 5 5" />
+					</svg>
+
+					{panel}
+				</button>
 			</div>
 
 			<div class="panel-body">
@@ -74,8 +99,13 @@
 	.panel-heading {
 		font: var(--sk-font-ui-small);
 		text-transform: uppercase;
-		flex: 1;
+		height: 3.2rem;
+		padding: 0 0.8rem;
+		/* flex: 1; */
 		text-align: left;
+		display: flex;
+		align-items: center;
+		gap: 0.4rem;
 	}
 
 	section {

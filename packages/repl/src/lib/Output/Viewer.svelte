@@ -300,7 +300,7 @@
 
 <div class="iframe-container">
 	{#if !onLog}
-		<PaneWithPanel pos="100%" max="-4.2rem" panel="DevTools">
+		<PaneWithPanel pos="100%" panel="DevTools">
 			<div slot="main">
 				{@render main()}
 			</div>
