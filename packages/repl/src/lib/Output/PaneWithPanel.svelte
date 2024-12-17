@@ -80,11 +80,11 @@
 						{panel}
 					</button>
 
-					<slot name="panel-header" />
+					<slot name="header" />
 				</div>
 
 				<div class="panel-body">
-					<slot name="panel-body" />
+					<slot name="body" />
 				</div>
 			</section>
 		{/snippet}

@@ -117,7 +117,7 @@
 				<Editor workspace={js_workspace} />
 			</div>
 
-			<div slot="panel-body">
+			<div slot="body">
 				<CompilerOptions {workspace} />
 			</div>
 		</PaneWithPanel>

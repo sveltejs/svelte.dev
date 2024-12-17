@@ -300,7 +300,7 @@
 				{@render main()}
 			</div>
 
-			<div slot="panel-header">
+			<div slot="header">
 				<button class="raised" disabled={logs.length === 0} on:click|stopPropagation={clear_logs}>
 					{#if logs.length > 0}
 						({logs.length})
@@ -309,7 +309,7 @@
 				</button>
 			</div>
 
-			<section slot="panel-body">
+			<section slot="body">
 				<Console {logs} />
 			</section>
 		</PaneWithPanel>
