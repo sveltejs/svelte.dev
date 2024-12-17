@@ -86,6 +86,9 @@
 			onmouseover={(e) => (e.stopPropagation(), onhover(value))}
 			onmouseleave={() => onhover(null)}
 			ontoggle={(e) => {
+				// toggle events can fire even when the AST output tab is hidden
+				if (!active) return;
+
 				if (e.currentTarget.open && value && typeof value.start === 'number') {
 					workspace.highlight_range(value, true);
 				}
