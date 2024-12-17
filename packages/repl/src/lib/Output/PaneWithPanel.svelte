@@ -26,7 +26,7 @@
 
 	let previous_pos = Math.min(normalize(pos), 70);
 
-	let container: HTMLElement = $state();
+	let container: HTMLElement;
 
 	// we can't bind to the spring itself, but we
 	// can still use the spring to drive `pos`
