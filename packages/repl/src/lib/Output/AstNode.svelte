@@ -46,9 +46,14 @@
 				// if node contains the current selection, open
 				if (start <= from && end >= to) {
 					open = true;
-					tick().then(() => {
-						li.scrollIntoView();
-					});
+
+					if (is_leaf) {
+						tick().then(() => {
+							li.scrollIntoView({
+								block: 'center'
+							});
+						});
+					}
 				}
 			});
 		}
