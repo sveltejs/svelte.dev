@@ -176,7 +176,7 @@
 			max="-4.1rem"
 		>
 			{#snippet a()}
-				<section>
+				<section id="input">
 					<ComponentSelector {runes} {onchange} {workspace} {can_migrate} />
 
 					<Editor {workspace} />
@@ -184,7 +184,7 @@
 			{/snippet}
 
 			{#snippet b()}
-				<section>
+				<section id="output">
 					<Output
 						status={status_visible ? status : null}
 						{embedded}

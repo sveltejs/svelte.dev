@@ -6,7 +6,7 @@
 	import PaneWithPanel from './PaneWithPanel.svelte';
 	import Viewer from './Viewer.svelte';
 	import { Editor, Workspace, type File } from 'editor';
-	import { untrack } from 'svelte';
+	import { tick, untrack } from 'svelte';
 	import { decode, type SourceMapSegment } from '@jridgewell/sourcemap-codec';
 
 	interface Props {
@@ -116,7 +116,7 @@
 				output.highlight_range(null);
 			};
 
-			workspace.onhover((pos) => {
+			const from_input = (pos: number, should_scroll: boolean) => {
 				if (!current?.result?.[v]?.map) return;
 
 				const mappings = decode(current.result[v].map.mappings);
@@ -138,14 +138,23 @@
 
 						// if we're still here, we have a match
 						highlight(i, a, b);
+
+						if (should_scroll) {
+							tick().then(() => {
+								document.querySelector('#output .highlight').scrollIntoView({
+									block: 'center'
+								});
+							});
+						}
+
 						return;
 					}
 
 					clear();
 				}
-			});
+			};
 
-			output.onhover((pos) => {
+			const from_output = (pos: number, should_scroll: boolean) => {
 				if (!current?.result?.[v]?.map) return;
 
 				const mappings = decode(current.result[v].map.mappings);
@@ -160,12 +169,27 @@
 
 					if (a[0] <= column && b[0] >= column) {
 						highlight(line, a, b);
+
+						if (should_scroll) {
+							tick().then(() => {
+								document.querySelector('#input .highlight').scrollIntoView({
+									block: 'center'
+								});
+							});
+						}
+
 						return;
 					}
 
 					clear();
 				}
-			});
+			};
+
+			workspace.onhover((pos) => from_input(pos, false));
+			workspace.onselect((from, to) => from === to && from_input(from, true));
+
+			output.onhover((pos) => from_output(pos, false));
+			output.onselect((from, to) => from === to && from_output(from, true));
 		}
 	});
 </script>
