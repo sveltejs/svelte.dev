@@ -15,14 +15,15 @@
 
 	let { workspace, ast, active = true }: Props = $props();
 
-	let cursor = $state(0);
+	let cursor = $state<number | null>(0);
 
 	let path_nodes = $derived(find_deepest_path(cursor, [ast]) || []);
 
-	function find_deepest_path(cursor: number, paths: Ast[]): Ast[] | undefined {
+	function find_deepest_path(cursor: number | null, paths: Ast[]): Ast[] | undefined {
+		if (cursor === null) return null;
 		const value = paths[paths.length - 1];
 
-		if (!value) return;
+		if (!value) return null;
 
 		for (const v of Object.values(value)) {
 			if (typeof v === 'object') {
@@ -43,8 +44,23 @@
 		}
 	}
 
-	workspace.onhover((pos) => {
-		cursor = pos;
+	$effect(() => {
+		if (active) {
+			workspace.onhover((pos) => {
+				cursor = pos;
+			});
+		}
+	});
+
+	$effect(() => {
+		if (active) {
+			const leaf = path_nodes.at(-1) ?? null;
+			workspace.highlight_range(leaf);
+		}
+
+		return () => {
+			workspace.highlight_range(null);
+		};
 	});
 </script>
 
@@ -62,6 +78,7 @@
 								node === null ||
 								(node.type !== undefined && node.start !== undefined && node.end !== undefined)
 							) {
+								cursor = node && node.start + 1;
 								workspace.highlight_range(node);
 							}
 						}}

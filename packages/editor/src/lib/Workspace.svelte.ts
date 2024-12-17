@@ -114,7 +114,7 @@ export class Workspace {
 	#current = $state.raw() as File;
 
 	#handlers = {
-		hover: new Set<(pos: number) => void>(),
+		hover: new Set<(pos: number | null) => void>(),
 		select: new Set<(from: number, to: number) => void>()
 	};
 
@@ -307,7 +307,7 @@ export class Workspace {
 		this.#files = this.#files.slice(0, to_index).concat(from).concat(this.#files.slice(to_index));
 	}
 
-	onhover(fn: (pos: number) => void) {
+	onhover(fn: (pos: number | null) => void) {
 		$effect(() => {
 			this.#handlers.hover.add(fn);
 
@@ -534,6 +534,11 @@ export class Workspace {
 						for (const handler of this.#handlers.hover) {
 							handler(pos);
 						}
+					}
+				},
+				mouseleave: (event, view) => {
+					for (const handler of this.#handlers.hover) {
+						handler(null);
 					}
 				}
 			})

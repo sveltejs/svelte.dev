@@ -173,10 +173,10 @@
 				}
 			};
 
-			workspace.onhover((pos) => from_input(pos, false));
+			workspace.onhover((pos) => (pos === null ? clear() : from_input(pos, false)));
 			workspace.onselect((from, to) => from === to && from_input(from, true));
 
-			output.onhover((pos) => from_output(pos, false));
+			output.onhover((pos) => (pos === null ? clear() : from_output(pos, false)));
 			output.onselect((from, to) => from === to && from_output(from, true));
 		}
 	});

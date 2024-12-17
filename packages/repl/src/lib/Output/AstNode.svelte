@@ -82,9 +82,14 @@
 		<details
 			bind:open
 			onfocusin={(e) => (e.stopPropagation(), onhover(value))}
-			onfocusout={(e) => onhover(null)}
-			onmouseover={() => onhover(value)}
+			onfocusout={() => onhover(null)}
+			onmouseover={(e) => (e.stopPropagation(), onhover(value))}
 			onmouseleave={() => onhover(null)}
+			ontoggle={(e) => {
+				if (e.currentTarget.open && value && typeof value.start === 'number') {
+					workspace.highlight_range(value, true);
+				}
+			}}
 		>
 			<summary>
 				{#if key}
@@ -104,7 +109,15 @@
 				{/if}
 			</summary>
 
-			<ul>
+			<!-- svelte-ignore a11y_click_events_have_key_events, a11y_no_noninteractive_element_interactions -->
+			<ul
+				onclick={(e) => {
+					if (value && typeof value.start === 'number') {
+						workspace.highlight_range(value, true);
+						e.stopPropagation();
+					}
+				}}
+			>
 				{#each Object.entries(value) as [k, v]}
 					<AstNode
 						key={is_array ? undefined : k}
