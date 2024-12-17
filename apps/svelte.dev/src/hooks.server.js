@@ -1,6 +1,7 @@
 import { redirect } from '@sveltejs/kit';
 
 const mappings = new Map([
+	// docs
 	['/docs/accessibility-warnings', '/docs/svelte/compiler-warnings'],
 	['/docs/basic-markup', '/docs/svelte/basic-markup'],
 	['/docs/client-side-component-api', '/docs/svelte/legacy-component-api'],
@@ -23,7 +24,18 @@ const mappings = new Map([
 	['/docs/svelte-transition', '/docs/svelte/svelte-transition'],
 	['/docs/typescript', '/docs/svelte/typescript'],
 	['/docs/v4-migration-guide', '/docs/svelte/v4-migration-guide'],
-	['/faq', '/docs/svelte/faq']
+	['/faq', '/docs/svelte/faq'],
+	// tutorial
+	['/tutorial/reactive-assignments', '/tutorial/svelte/state'],
+	['/tutorial/reactive-declarations', '/tutorial/svelte/derived-state'],
+	['/tutorial/reactive-statements', '/tutorial/svelte/effects'],
+	['/tutorial/updating-arrays-and-objects', '/tutorial/svelte/deep-state'],
+	['/tutorial/event-modifiers', '/tutorial/svelte/capturing'],
+	['/tutorial/dom-event-forwarding', '/tutorial/svelte/spreading-events'],
+	['/tutorial/svelte/introducing-stores', '/tutorial/svelte/stores'],
+	['/tutorial/kit/app-store', '/tutorial/kit/app-state'],
+	['/tutorial/kit/navigating-store', '/tutorial/kit/navigating-state'],
+	['/tutorial/kit/updated-store', '/tutorial/kit/updated-state']
 ]);
 
 // selectively preload fonts
@@ -39,7 +51,13 @@ export async function handle({ event, resolve }) {
 	const destination = mappings.get(event.url.pathname);
 	if (destination) {
 		// TODO: change to `dev ? 307 : 308` if no reports of incorrect redirects
+		// (update: should we ever? We would prohibit us from ever changing that structure later on)
 		redirect(307, destination);
+	}
+
+	// Best effort to redirect from Svelte 3 tutorial to new tutorial
+	if (event.url.pathname.startsWith('/tutorial/') && event.url.pathname.split('/').length === 2) {
+		redirect(307, event.url.pathname.replace('/tutorial/', '/tutorial/svelte/'));
 	}
 
 	const response = await resolve(event, {

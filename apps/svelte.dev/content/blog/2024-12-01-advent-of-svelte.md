@@ -99,25 +99,48 @@ As of today, you can also return things that _aren't_ built in to the language, 
 - [docs](/docs/kit/hooks#Universal-hooks-transport)
 - [demo](https://stackblitz.com/edit/sveltejs-kit-template-default-b5zbxomg?file=src%2Fhooks.js)
 
-## Day 13
+## Day 13: rise of the robots
 
-Coming soon!
+For those of you using LLMs to help you write code — via Cursor or Copilot or Claude or Bolt or v0 or some other interface — we now publish the documentation in a selection of robot-friendly `llms.txt` files. This is experimental and will evolve over time, but by way of example here's a [snake game](/playground/0de3c1c1a31d47bdbb7c4aa3477a6b46) built by Sonnet 3.5 with no additional prompting.
 
-## Day 14
+Thanks to [Didier Catz](https://x.com/didiercatz) and [Stanislav Khromov](https://bsky.app/profile/khromov.se) for building this!
 
-Coming soon!
+- [docs](/docs/llms)
 
-## Day 15
+## Day 14: unmount with outros
 
-Coming soon!
+Now, if you need to programmatically mount and unmount a component, you can now pass an `outro: true` option to `unmount` to play transitions before it is removed from the DOM.
 
-## Day 16
+- [docs](/docs/svelte/imperative-component-api#unmount)
+- [demo](/playground/a4ca332691204ccd887ec7b1df818182?version=5.13.0)
 
-Coming soon!
+## Day 15: debugging superpowers
 
-## Day 17
+The new `$inspect.trace(...)` rune gives you detailed information about which state changes caused a derived or effect to re-run.
 
-Coming soon!
+- [docs](</docs/svelte/$inspect#$inspect.trace()>)
+- [demo](/playground/d135c6f00beb4fa391725e59d8061604?version=5.14.0)
+
+## Day 16: `$app/state`
+
+SvelteKit's `$app/stores` module, which gives you a way to access information about (for example) the current page, now has a modern Svelte 5 state-based counterpart: `$app/state`. It exposes all the same information, but using fine-grained state, and without the clunky `$` prefix. `$app/stores` is now deprecated, and will be removed in SvelteKit 3 next year.
+
+You can migrate automatically by running the following command in your SvelteKit app:
+
+```bash
+npx sv migrate app-state
+```
+
+- [docs](/docs/kit/$app-state)
+- [tutorial](/tutorial/kit/page-state)
+
+## Day 17: better IntelliSense
+
+The parser used by the language tools that power things like the [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode) extension is the same one used by the Svelte compiler. Until today, it would fail if it encountered a syntax error, making it hard to provide things like autocomplete while you were in the middle of writing code.
+
+We just fixed that. Install the latest version of Svelte in your project, make sure your extensions are up to date, and feel the wind in your hair as you write your components.
+
+- [demo video](https://bsky.app/profile/svelte.dev/post/3ldjajjbkwc2n)
 
 ## Day 18
 

@@ -15,7 +15,7 @@ export function handleError({ event, error }) {
 
 If you navigate to `/the-bad-place`, you'll see this in action — the error page is shown, and if you open the terminal (using the button to the right of the URL bar), you'll see the message from `src/routes/the-bad-place/+page.server.js`.
 
-Notice that we're _not_ showing the error message to the user. That's because error messages can include sensitive information that at best will confuse your users, and at worst could benefit evildoers. Instead, the error object available to your application — represented as `$page.error` in your `+error.svelte` pages, or `%sveltekit.error%` in your `src/error.html` fallback — is just this:
+Notice that we're _not_ showing the error message to the user. That's because error messages can include sensitive information that at best will confuse your users, and at worst could benefit evildoers. Instead, the error object available to your application — represented as `page.error` in your `+error.svelte` pages, or `%sveltekit.error%` in your `src/error.html` fallback — is just this:
 
 <!-- prettier-ignore-start -->
 ```js
@@ -44,10 +44,10 @@ You can now reference properties other than `message` in a custom error page. Cr
 ```svelte
 /// file: src/routes/+error.svelte
 <script>
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 </script>
 
-<h1>{$page.status}</h1>
-<p>{$page.error.message}</p>
-<p>error code: {$page.error.code}</p>
+<h1>{page.status}</h1>
+<p>{page.error.message}</p>
+<p>error code: {page.error.code}</p>
 ```

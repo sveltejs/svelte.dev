@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import UserMenu from './UserMenu.svelte';
 	import { Icon } from '@sveltejs/site-kit/components';
 	import { isMac } from '$lib/utils/compat.js';
@@ -193,7 +193,7 @@
 							<li>
 								<a
 									href="/playground/{example.slug}"
-									aria-current={$page.params.id === example.slug ? 'page' : undefined}
+									aria-current={page.params.id === example.slug ? 'page' : undefined}
 								>
 									{example.title}
 								</a>

@@ -4,14 +4,13 @@
 	import { theme } from '@sveltejs/site-kit/stores';
 	import { Repl } from '@sveltejs/repl';
 	import { mapbox_setup } from '../../../../../config.js';
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 
 	let { data } = $props();
 
 	let repl = $state() as ReturnType<typeof Repl>;
 
-	// svelte-ignore non_reactive_update
-	let version = $page.url.searchParams.get('version') || 'latest';
+	let version = page.url.searchParams.get('version') || 'latest';
 	let is_pr_or_commit_version = version.startsWith('pr-') || version.startsWith('commit-');
 
 	if (version !== 'local' && !is_pr_or_commit_version) {

@@ -199,14 +199,14 @@
 	{#if embedded}
 		<Editor workspace={js_workspace} />
 	{:else}
-		<PaneWithPanel pos="50%" panel="Compiler options">
-			<div slot="main">
+		<PaneWithPanel min="-18rem" pos="-18rem" panel="Compiler options">
+			{#snippet main()}
 				<Editor workspace={js_workspace} />
-			</div>
+			{/snippet}
 
-			<div slot="panel-body">
+			{#snippet body()}
 				<CompilerOptions {workspace} />
-			</div>
+			{/snippet}
 		</PaneWithPanel>
 	{/if}
 </div>

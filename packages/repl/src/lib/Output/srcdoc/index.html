@@ -68,6 +68,21 @@
 		<script>
 			(function () {
 				function send(payload, origin = '*') {
+					if (payload.command === 'info' && payload.args[0] instanceof Error) {
+						const error = payload.args[0];
+
+						if (/^(CreatedAt|UpdatedAt|TracedAt)Error$/.test(error.name)) {
+							// structuredClone obliterates useful info
+							// TODO do this for all errors?
+							payload.args[0] = {
+								type: '__error',
+								name: error.name,
+								message: error.message,
+								stack: error.stack
+							};
+						}
+					}
+
 					parent.postMessage(payload, origin);
 				}
 
