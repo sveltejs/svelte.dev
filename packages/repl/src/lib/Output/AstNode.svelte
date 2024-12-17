@@ -17,7 +17,7 @@
 
 	let { key = '', value, path_nodes = [], active = true, onhover, depth = 0 }: Props = $props();
 
-	const { toggleable, workspace } = get_repl_context();
+	const { workspace } = get_repl_context();
 
 	let root = depth === 0;
 	let open = $state(root);
