@@ -729,7 +729,7 @@ are three strategies with different trade-offs:
 
 ```ts
 // @noErrors
-bundleStrategy?: 'split' | 'single';
+bundleStrategy?: 'split' | 'single' | 'inline';
 ```
 
 <div class="ts-block-property-details">
