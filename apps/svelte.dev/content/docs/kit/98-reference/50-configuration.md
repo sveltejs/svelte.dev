@@ -997,6 +997,44 @@ The value of `url.origin` during prerendering; useful if it is included in rende
 
 </div>
 
+## router
+
+<div class="ts-block-property-bullets">
+
+
+
+</div>
+
+
+
+<div class="ts-block-property-children">
+
+<div class="ts-block-property">
+
+```ts
+// @noErrors
+type?: 'history' | 'hash';
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `"history"`
+
+</div>
+
+What type of client-side router to use.
+- `'history'` means standard routing, pushing the URLs as-is to the browser history.
+- `'hash'` also uses the history API, but the URL is transformed such that the pathname becomes part of the hash.
+	For example if you navigate to `/about`, the URL will become `/#/about`.
+	This is useful in scenarios where you can't configure your server to serve the same content for all URLs.
+
+</div>
+</div>
+
+</div>
+
 ## serviceWorker
 
 <div class="ts-block-property-bullets">
