@@ -142,9 +142,14 @@ We just fixed that. Install the latest version of Svelte in your project, make s
 
 - [demo video](https://bsky.app/profile/svelte.dev/post/3ldjajjbkwc2n)
 
-## Day 18
+## Day 18: playground hovers
 
-Coming soon!
+If you've ever wondered how the Svelte compiler works, today's update is for you. If you go to the [playground](/playground) and open the AST output tab, you'll see the abstract syntax tree that the compiler operates on. As of today, hovering over code in the editor will highlight the corresponding section of the AST and vice versa. Clicking on a piece of code will expand the tree and scroll to the AST.
+
+The JS and CSS output tabs have also been upgraded — they now use sourcemaps to highlight the output code that corresponds to a given piece input, where applicable, and vice versa. We plan to use this to improve the sourcemaps themselves, which over time will result in smoother debugging when you're building Svelte apps.
+
+- [playground](/playground)
+- [demo video](https://bsky.app/profile/svelte.dev/post/3ldlkmce6oc2j)
 
 ## Day 19
 
