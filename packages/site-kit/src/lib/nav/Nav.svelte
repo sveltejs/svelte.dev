@@ -98,9 +98,10 @@ Top navigation bar for the application. It provides a slot for the left side, th
 									<a
 										class="secondary"
 										href={section.path}
-										aria-current={$page.url.pathname === section.path || $page.url.pathname.startsWith(section.path!)
-									? 'page'
-									: undefined}
+										aria-current={$page.url.pathname === section.path ||
+										$page.url.pathname.startsWith(section.path!)
+											? 'page'
+											: undefined}
 									>
 										{section.title}
 									</a>
