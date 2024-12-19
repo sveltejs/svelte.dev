@@ -112,6 +112,7 @@ export class Workspace {
 	#readonly = false; // TODO do we need workspaces for readonly stuff?
 	#files = $state.raw<Item[]>([]);
 	#current = $state.raw() as File;
+	#vim = $state(false);
 
 	#handlers = {
 		hover: new Set<(pos: number | null) => void>(),
@@ -281,21 +282,7 @@ export class Workspace {
 
 		view.setState(this.#get_state(untrack(() => this.#current)));
 
-		let should_install_vim = localStorage.getItem('vim') === 'true';
-
-		const q = new URLSearchParams(location.search);
-		if (q.has('vim')) {
-			should_install_vim = q.get('vim') === 'true';
-			localStorage.setItem('vim', should_install_vim.toString());
-		}
-
-		if (should_install_vim) {
-			const { vim } = await import('@replit/codemirror-vim');
-
-			this.#view?.dispatch({
-				effects: vim_mode.reconfigure(vim())
-			});
-		}
+		this.vim = localStorage.getItem('vim') === 'true';
 	}
 
 	move(from: Item, to: Item) {
@@ -473,6 +460,28 @@ export class Workspace {
 		const state = this.states.get(file.name);
 		if (state) {
 			this.#update_state(file, state);
+		}
+	}
+
+	get vim() {
+		return this.#vim;
+	}
+
+	set vim(value) {
+		this.#vim = value;
+
+		localStorage.setItem('vim', String(value));
+
+		if (value) {
+			import('@replit/codemirror-vim').then(({ vim }) => {
+				this.#view?.dispatch({
+					effects: vim_mode.reconfigure(vim())
+				});
+			});
+		} else {
+			this.#view?.dispatch({
+				effects: vim_mode.reconfigure([])
+			});
 		}
 	}
 

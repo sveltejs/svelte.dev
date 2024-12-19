@@ -4,16 +4,8 @@
 
 	let { runes }: { runes: boolean } = $props();
 
-	let open = $state(false);
-
 	const { workspace } = get_repl_context();
 </script>
-
-<svelte:window
-	onkeydown={(e) => {
-		if (e.key === 'Escape') open = false;
-	}}
-/>
 
 <Dropdown align="right">
 	<div class="target">
@@ -106,12 +98,13 @@
 
 	.popup {
 		position: absolute;
-		right: -6rem;
+		right: -4rem;
 		width: 100vw;
 		max-width: 320px;
 		z-index: 9999;
 		background: var(--sk-bg-3);
 		padding: 1em;
+		border-radius: var(--sk-border-radius);
 
 		p {
 			font: var(--sk-font-ui-medium);

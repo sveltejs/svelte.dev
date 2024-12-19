@@ -1,8 +1,8 @@
 <script lang="ts">
 	import RunesInfo from './RunesInfo.svelte';
-	import Migrate from './Migrate.svelte';
 	import type { Workspace, File } from 'editor';
 	import { tick } from 'svelte';
+	import Toolbox from './Toolbox.svelte';
 
 	interface Props {
 		runes: boolean;
@@ -162,7 +162,7 @@
 
 	<div class="runes">
 		<RunesInfo {runes} />
-		<Migrate {can_migrate} />
+		<Toolbox {can_migrate} />
 	</div>
 </div>
 

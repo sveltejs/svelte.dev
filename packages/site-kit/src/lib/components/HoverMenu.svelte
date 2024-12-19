@@ -11,10 +11,12 @@
 <style>
 	.hover-menu {
 		padding: 0.5rem;
+		white-space: nowrap;
 
 		:global {
 			a,
-			button {
+			button,
+			label {
 				color: inherit;
 				padding: 1rem;
 				display: block;
@@ -24,11 +26,14 @@
 				width: 100%;
 				text-align: left;
 				border-radius: var(--sk-border-radius-inner);
+
+				&:not(:disabled):hover {
+					background-color: var(--sk-bg-4);
+				}
 			}
 
-			a:hover,
-			button:hover {
-				background-color: var(--sk-bg-4);
+			button:disabled {
+				color: var(--sk-fg-4);
 			}
 		}
 	}
