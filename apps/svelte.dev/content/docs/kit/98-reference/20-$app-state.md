@@ -17,18 +17,22 @@ import { navigating, page, updated } from '$app/state';
 
 ## navigating
 
-An object with a reactive `current` property.
-When navigation starts, `current` is a `Navigation` object with `from`, `to`, `type` and (if `type === 'popstate'`) `delta` properties.
-When navigation finishes, `current` reverts to `null`.
-
-On the server, this value can only be read during rendering. In the browser, it can be read at any time.
+An object representing an in-progress navigation, with `from`, `to`, `type` and (if `type === 'popstate'`) `delta` properties.
+Values are `null` when no navigation is occurring, or during server rendering.
 
 <div class="ts-block">
 
 ```dts
-const navigating: {
-	get current(): import('@sveltejs/kit').Navigation | null;
-};
+const navigating:
+	| import('@sveltejs/kit').Navigation
+	| {
+			from: null;
+			to: null;
+			type: null;
+			willUnload: null;
+			delta: null;
+			complete: null;
+	  };
 ```
 
 </div>
