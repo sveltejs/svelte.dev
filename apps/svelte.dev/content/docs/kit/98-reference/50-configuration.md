@@ -725,6 +725,29 @@ are three strategies with different trade-offs:
 
 </div>
 </div>
+<div class="ts-block-property">
+
+```ts
+// @noErrors
+bundleStrategy?: 'split' | 'single';
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `'split'`
+- <span class="tag since">available since</span> v2.13.0
+
+</div>
+
+If `'split'`, splits the app up into multiple .js/.css files so that they are loaded lazily as the user navigates around the app. This is the default, and is recommended for most scenarios.
+If `'single'`, creates just one .js bundle and one .css file containing code for the entire app.
+
+When using `'split'`, you can also adjust the bundling behaviour by setting [`output.experimentalMinChunkSize`](https://rollupjs.org/configuration-options/#output-experimentalminchunksize) and [`output.manualChunks`](https://rollupjs.org/configuration-options/#output-manualchunks)inside your Vite config's [`build.rollupOptions`](https://vite.dev/config/build-options.html#build-rollupoptions).
+
+</div>
+</div>
 
 </div>
 
