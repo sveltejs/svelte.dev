@@ -25,6 +25,7 @@ import {
 	setContext,
 	tick,
 	unmount,
+	unsafe,
 	untrack
 } from 'svelte';
 ```
@@ -503,6 +504,21 @@ function unmount(
 		  }
 		| undefined
 ): Promise<void>;
+```
+
+</div>
+
+
+
+## unsafe
+
+When used inside a [`$derived`](/docs/svelte/$derived),
+any state updates to state is allowed.
+
+<div class="ts-block">
+
+```dts
+function unsafe<T>(fn: () => T): T;
 ```
 
 </div>
