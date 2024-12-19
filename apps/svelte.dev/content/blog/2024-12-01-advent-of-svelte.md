@@ -81,7 +81,7 @@ When Svelte emits a warning or error (whether at build time, when the compiler i
 
 A lot of you wanted a place to put asynchronous setup work that happens before your SvelteKit app starts up. You can now export an `init` function from `hooks.server.js` and `hooks.client.js` that will be awaited before any other stuff happens.
 
-- [docs](https://svelte.dev/docs/kit/hooks#Shared-hooks-init)
+- [docs](/docs/kit/hooks#Shared-hooks-init)
 
 ## Day 11: `svelte/reactivity/window`
 
@@ -157,7 +157,7 @@ By default, SvelteKit uses a technique called _code-splitting_ so that you only 
 
 In [some situations](https://github.com/sveltejs/kit/issues/3882), code-splitting is unhelpful — what you really want is a single .js file and a single .css file for your entire app. SvelteKit now supports this with the `output.bundleStrategy` option.
 
-- [docs](https://svelte.dev/docs/kit/configuration#output)
+- [docs](/docs/kit/configuration#output)
 - [example](https://bsky.app/profile/svelte.dev/post/3ldo633ht222p)
 
 ## Day 20
