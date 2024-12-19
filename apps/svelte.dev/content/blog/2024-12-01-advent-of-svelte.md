@@ -151,9 +151,14 @@ The JS and CSS output tabs have also been upgraded — they now use sourcemaps t
 - [playground](/playground)
 - [demo video](https://bsky.app/profile/svelte.dev/post/3ldlkmce6oc2j)
 
-## Day 19
+## Day 19: single-file SvelteKit bundles
 
-Coming soon!
+By default, SvelteKit uses a technique called _code-splitting_ so that you only load the JavaScript and CSS you need for the page you're currently on. This helps make sure your app loads fast even if it grows very large.
+
+In [some situations](https://github.com/sveltejs/kit/issues/3882), code-splitting is unhelpful — what you really want is a single .js file and a single .css file for your entire app. SvelteKit now supports this with the `output.bundleStrategy` option.
+
+- [docs](https://svelte.dev/docs/kit/configuration#output)
+- [example](https://bsky.app/profile/svelte.dev/post/3ldo633ht222p)
 
 ## Day 20
 
