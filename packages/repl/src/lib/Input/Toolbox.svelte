@@ -14,16 +14,14 @@
 	</div>
 
 	{#snippet dropdown()}
-		<div class="container">
-			<HoverMenu>
-				<label class="option">
-					<span>Toggle Vim mode</span>
-					<Checkbox bind:checked={workspace.vim}></Checkbox>
-				</label>
+		<HoverMenu>
+			<label class="option">
+				<span>Toggle Vim mode</span>
+				<Checkbox bind:checked={workspace.vim}></Checkbox>
+			</label>
 
-				<button disabled={!can_migrate} onclick={migrate}>Migrate to Svelte 5, if possible</button>
-			</HoverMenu>
-		</div>
+			<button disabled={!can_migrate} onclick={migrate}>Migrate to Svelte 5, if possible</button>
+		</HoverMenu>
 	{/snippet}
 </Dropdown>
 
@@ -52,11 +50,6 @@
 		:root.dark {
 			background-image: url(./wrench-light.svg);
 		}
-	}
-
-	.container {
-		position: relative;
-		right: -2rem;
 	}
 
 	label.option {
