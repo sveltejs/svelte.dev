@@ -3,16 +3,18 @@
 	import SecondaryNav from '$lib/components/SecondaryNav.svelte';
 	import ModalDropdown from '$lib/components/ModalDropdown.svelte';
 	import type { Exercise, PartStub } from '$lib/tutorial';
-	import { Icon } from '@sveltejs/site-kit/components';
+	import { Checkbox, Icon, Toolbox } from '@sveltejs/site-kit/components';
+	import type { Workspace } from 'editor';
 
 	interface Props {
 		index: PartStub[];
 		exercise: Exercise;
 		completed: boolean;
 		toggle: () => void;
+		workspace: Workspace;
 	}
 
-	let { index, exercise, completed, toggle }: Props = $props();
+	let { index, exercise, completed, toggle, workspace }: Props = $props();
 </script>
 
 <SecondaryNav>
@@ -71,6 +73,13 @@
 			solve
 		{/if}
 	</button>
+
+	<Toolbox>
+		<label class="option">
+			<span>Toggle Vim mode</span>
+			<Checkbox bind:checked={workspace.vim}></Checkbox>
+		</label>
+	</Toolbox>
 </SecondaryNav>
 
 <style>
