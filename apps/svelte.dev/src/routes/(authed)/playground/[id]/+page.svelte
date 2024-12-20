@@ -9,6 +9,7 @@
 	import { compress_and_encode_text, decode_and_decompress_text } from './gzip.js';
 	import { page } from '$app/state';
 	import type { File } from 'editor';
+	// @ts-expect-error this library was created way before TS conquered the world
 	import * as doNotZip from 'do-not-zip';
 
 	let { data } = $props();

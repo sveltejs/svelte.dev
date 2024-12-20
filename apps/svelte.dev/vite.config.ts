@@ -3,8 +3,6 @@ import { enhancedImages } from '@sveltejs/enhanced-img';
 import type { PluginOption, UserConfig } from 'vite';
 import { browserslistToTargets } from 'lightningcss';
 import browserslist from 'browserslist';
-import { fileURLToPath } from 'node:url';
-import { dirname } from 'node:path';
 
 const plugins: PluginOption[] = [
 	enhancedImages(),
@@ -64,9 +62,6 @@ const config: UserConfig = {
 		cssMinify: 'lightningcss'
 	},
 	server: {
-		watch: {
-			ignored: [dirname(fileURLToPath(import.meta.url)) + '/scripts/**']
-		},
 		fs: { allow: ['../../packages', '../../../KIT/kit/packages/kit'] },
 		// for SvelteKit tutorial
 		headers: {
