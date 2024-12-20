@@ -280,9 +280,10 @@ export class Workspace {
 		if (this.#view) throw new Error('view is already linked');
 		this.#view = view;
 
-		view.setState(this.#get_state(untrack(() => this.#current)));
-
-		this.vim = localStorage.getItem('vim') === 'true';
+		untrack(() => {
+			view.setState(this.#get_state(untrack(() => this.#current)));
+			this.vim = localStorage.getItem('vim') === 'true';
+		});
 	}
 
 	move(from: Item, to: Item) {
