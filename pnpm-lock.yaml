@@ -77,9 +77,6 @@ importers:
       d3-geo-projection:
         specifier: ^4.0.0
         version: 4.0.0
-      do-not-zip:
-        specifier: ^1.0.0
-        version: 1.0.0
       editor:
         specifier: workspace:*
         version: link:../../packages/editor
@@ -355,6 +352,9 @@ importers:
       acorn:
         specifier: ^8.11.3
         version: 8.14.0
+      do-not-zip:
+        specifier: ^1.0.0
+        version: 1.0.0
       editor:
         specifier: workspace:*
         version: link:../editor

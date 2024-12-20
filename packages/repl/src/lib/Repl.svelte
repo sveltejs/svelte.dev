@@ -1,4 +1,5 @@
 <script lang="ts">
+	import * as doNotZip from 'do-not-zip';
 	import { SplitPane } from '@rich_harris/svelte-split-pane';
 	import { ScreenToggle } from '@sveltejs/site-kit/components';
 	import { BROWSER } from 'esm-env';
@@ -107,6 +108,50 @@
 		rebundle();
 	}
 
+	async function download() {
+		const { files: components, imports } = toJSON();
+
+		const files: Array<{ path: string; data: string }> =
+			await // TODO this is a bit of a cyclic dependency: we assume that the site
+			// does provide a template at this position which matches our expectations
+			(
+				await fetch('/svelte-template.json')
+			).json();
+
+		if (imports.length > 0) {
+			const idx = files.findIndex(({ path }) => path === 'package.json');
+			const pkg = JSON.parse(files[idx].data);
+			const { devDependencies } = pkg;
+			imports.forEach((mod) => {
+				const match = /^(@[^/]+\/)?[^@/]+/.exec(mod)!;
+				devDependencies[match[0]] = 'latest';
+			});
+			pkg.devDependencies = devDependencies;
+			files[idx].data = JSON.stringify(pkg, null, '  ');
+		}
+
+		files.push(
+			...components.map((component) => ({
+				path: `src/routes/${component.name}`,
+				data: (component as File).contents
+			}))
+		);
+
+		const downloadBlob = (blob: any, filename: string) => {
+			const url = URL.createObjectURL(blob);
+			const link = document.createElement('a');
+			link.href = url;
+			link.download = filename;
+			link.style.display = 'none';
+			document.body.appendChild(link);
+			link.click();
+			URL.revokeObjectURL(url);
+			link.remove();
+		};
+
+		downloadBlob(doNotZip.toBlob(files), 'svelte-app.zip');
+	}
+
 	let width = $state(0);
 	let show_output = $state(false);
 	let status: string | null = $state(null);
@@ -174,7 +219,7 @@
 		>
 			{#snippet a()}
 				<section>
-					<ComponentSelector {runes} {onchange} {workspace} {can_migrate} {migrate} />
+					<ComponentSelector {runes} {onchange} {workspace} {can_migrate} {migrate} {download} />
 
 					<Editor {workspace} />
 				</section>
