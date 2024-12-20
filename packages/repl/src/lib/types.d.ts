@@ -46,9 +46,5 @@ export type ReplState = {
 export type ReplContext = {
 	bundle: Writable<ReplState['bundle']>;
 	toggleable: Writable<ReplState['toggleable']>;
-
 	workspace: Workspace;
-
-	// Methods
-	migrate(): Promise<void>;
 };

@@ -258,6 +258,7 @@
 		toggle={() => {
 			workspace.set(Object.values(completed ? a : b));
 		}}
+		{workspace}
 	/>
 
 	<div class="top" class:offset={show_editor}>

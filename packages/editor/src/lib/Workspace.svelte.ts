@@ -112,6 +112,7 @@ export class Workspace {
 	#readonly = false; // TODO do we need workspaces for readonly stuff?
 	#files = $state.raw<Item[]>([]);
 	#current = $state.raw() as File;
+	#vim = $state(false);
 
 	#handlers = {
 		hover: new Set<(pos: number | null) => void>(),
@@ -279,23 +280,10 @@ export class Workspace {
 		if (this.#view) throw new Error('view is already linked');
 		this.#view = view;
 
-		view.setState(this.#get_state(untrack(() => this.#current)));
-
-		let should_install_vim = localStorage.getItem('vim') === 'true';
-
-		const q = new URLSearchParams(location.search);
-		if (q.has('vim')) {
-			should_install_vim = q.get('vim') === 'true';
-			localStorage.setItem('vim', should_install_vim.toString());
-		}
-
-		if (should_install_vim) {
-			const { vim } = await import('@replit/codemirror-vim');
-
-			this.#view?.dispatch({
-				effects: vim_mode.reconfigure(vim())
-			});
-		}
+		untrack(() => {
+			view.setState(this.#get_state(untrack(() => this.#current)));
+			this.vim = localStorage.getItem('vim') === 'true';
+		});
 	}
 
 	move(from: Item, to: Item) {
@@ -476,6 +464,44 @@ export class Workspace {
 		}
 	}
 
+	get vim() {
+		return this.#vim;
+	}
+
+	set vim(value) {
+		this.#toggle_vim(value);
+	}
+
+	async #toggle_vim(value: boolean) {
+		this.#vim = value;
+
+		localStorage.setItem('vim', String(value));
+
+		// @ts-expect-error jfc CodeMirror is a struggle
+		let vim_extension_index = default_extensions.findIndex((ext) => ext.compartment === vim_mode);
+
+		let extension: any = [];
+
+		if (value) {
+			const { vim } = await import('@replit/codemirror-vim');
+			extension = vim();
+		}
+
+		default_extensions[vim_extension_index] = vim_mode.of(extension);
+
+		this.#view?.dispatch({
+			effects: vim_mode.reconfigure(extension)
+		});
+
+		// update all the other states
+		for (const file of this.#files) {
+			if (file.type !== 'file') continue;
+			if (file === this.#current) continue;
+
+			this.states.set(file.name, this.#create_state(file));
+		}
+	}
+
 	#create_directories(item: Item) {
 		// create intermediate directories as necessary
 		const parts = item.name.split('/');
@@ -497,9 +523,10 @@ export class Workspace {
 	}
 
 	#get_state(file: File) {
-		let state = this.states.get(file.name);
-		if (state) return state;
+		return this.states.get(file.name) ?? this.#create_state(file);
+	}
 
+	#create_state(file: File) {
 		const extensions = [
 			...default_extensions,
 			EditorState.readOnly.of(this.#readonly),
@@ -573,7 +600,7 @@ export class Workspace {
 				break;
 		}
 
-		state = EditorState.create({
+		const state = EditorState.create({
 			doc: file.contents,
 			extensions
 		});

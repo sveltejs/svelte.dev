@@ -160,9 +160,13 @@ In [some situations](https://github.com/sveltejs/kit/issues/3882), code-splittin
 - [docs](/docs/kit/configuration#output)
 - [example](https://bsky.app/profile/svelte.dev/post/3ldo633ht222p)
 
-## Day 20
+## Day 20: Vim mode
 
-Coming soon!
+The [playground](/playground) had a secret Vim mode that you could activate by appending `?vim=true` to the URL, but it was buggy. We've fixed it, and added a toggle to the playground and the tutorial that remembers your preference between visits. But don't worry: unlike normal Vim, you can quit by turning it off again (or closing the tab).
+
+- [playground](/playground)
+- [tutorial](/tutorial)
+- [demo video](https://bsky.app/profile/svelte.dev/post/3ldqli3lk4k2g)
 
 ## Day 21
 

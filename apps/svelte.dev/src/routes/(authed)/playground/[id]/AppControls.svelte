@@ -161,20 +161,6 @@
 
 		saving = false;
 	}
-
-	// modifying an app should reset the `<select>`, so that
-	// the example can be reselected
-	$effect(() => {
-		if (modified) {
-			// this is a little tricky, but: we need to wrap this in untrack
-			// because otherwise we'll read `select.value` and re-run this
-			// when we navigate, which we don't want
-			untrack(() => {
-				// @ts-ignore not sure why this is erroring
-				select.value = '';
-			});
-		}
-	});
 </script>
 
 <svelte:window on:keydown={handleKeydown} />
@@ -193,7 +179,7 @@
 							<li>
 								<a
 									href="/playground/{example.slug}"
-									aria-current={page.params.id === example.slug ? 'page' : undefined}
+									aria-current={page.params.id === example.slug && !modified ? 'page' : undefined}
 								>
 									{example.title}
 								</a>
