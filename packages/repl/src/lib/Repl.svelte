@@ -85,9 +85,6 @@
 	set_repl_context({
 		bundle,
 		toggleable,
-
-		migrate,
-
 		workspace
 	});
 
@@ -177,7 +174,7 @@
 		>
 			{#snippet a()}
 				<section>
-					<ComponentSelector {runes} {onchange} {workspace} {can_migrate} />
+					<ComponentSelector {runes} {onchange} {workspace} {can_migrate} {migrate} />
 
 					<Editor {workspace} />
 				</section>

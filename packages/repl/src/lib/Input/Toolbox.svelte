@@ -1,10 +1,8 @@
 <script lang="ts">
-	import { Checkbox, Dropdown, HoverMenu, Icon } from '@sveltejs/site-kit/components';
-	import { get_repl_context } from '../context';
+	import { Dropdown, HoverMenu, Icon } from '@sveltejs/site-kit/components';
+	import type { Snippet } from 'svelte';
 
-	let { can_migrate }: { can_migrate: boolean } = $props();
-
-	const { migrate, workspace } = get_repl_context();
+	let { children }: { children: Snippet } = $props();
 </script>
 
 <Dropdown align="right">
@@ -15,12 +13,7 @@
 
 	{#snippet dropdown()}
 		<HoverMenu>
-			<label class="option">
-				<span>Toggle Vim mode</span>
-				<Checkbox bind:checked={workspace.vim}></Checkbox>
-			</label>
-
-			<button disabled={!can_migrate} onclick={migrate}>Migrate to Svelte 5, if possible</button>
+			{@render children()}
 		</HoverMenu>
 	{/snippet}
 </Dropdown>
@@ -50,11 +43,5 @@
 		:root.dark & {
 			background-image: url(./wrench-dark.svg);
 		}
-	}
-
-	label.option {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
 	}
 </style>

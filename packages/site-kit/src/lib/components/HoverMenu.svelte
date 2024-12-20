@@ -32,6 +32,12 @@
 				}
 			}
 
+			label {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+			}
+
 			button:disabled {
 				color: var(--sk-fg-4);
 			}
