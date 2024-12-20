@@ -172,11 +172,11 @@ It appears when the user clicks on the `Search` component or presses the corresp
 					<input
 						use:forcefocus
 						onkeydown={(e) => {
-					if (e.key === 'Enter' && !e.isComposing) {
-						const element = modal.querySelector('a[data-has-node]') as HTMLElement | undefined;
-						element?.click();
-					}
-				}}
+							if (e.key === 'Enter' && !e.isComposing) {
+								const element = modal.querySelector('a[data-has-node]') as HTMLElement | undefined;
+								element?.click();
+							}
+						}}
 						oninput={(e) => {
 							$search_query = e.currentTarget.value;
 						}}

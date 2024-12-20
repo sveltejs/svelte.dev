@@ -41,7 +41,7 @@
 
 <svelte:window
 	onpointerdown={(e) => {
-		if (!container.contains((e.target as HTMLElement))) {
+		if (!container.contains(e.target as HTMLElement)) {
 			preserve_editor_focus = false;
 		}
 	}}

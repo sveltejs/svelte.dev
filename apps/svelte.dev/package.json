@@ -69,7 +69,7 @@
 		"marked": "^14.1.2",
 		"minimatch": "^10.0.1",
 		"prettier": "^3.3.2",
-		"prettier-plugin-svelte": "^3.2.4",
+		"prettier-plugin-svelte": "^3.3.2",
 		"satori": "^0.10.13",
 		"satori-html": "^0.3.2",
 		"svelte": "5.14.0",
