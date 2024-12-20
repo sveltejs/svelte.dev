@@ -2,8 +2,7 @@
 	import RunesInfo from './RunesInfo.svelte';
 	import type { Workspace, File } from 'editor';
 	import { tick } from 'svelte';
-	import Toolbox from './Toolbox.svelte';
-	import { Checkbox } from '@sveltejs/site-kit/components';
+	import { Checkbox, Toolbox } from '@sveltejs/site-kit/components';
 
 	interface Props {
 		runes: boolean;

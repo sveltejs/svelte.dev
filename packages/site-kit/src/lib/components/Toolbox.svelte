@@ -1,5 +1,7 @@
 <script lang="ts">
-	import { Dropdown, HoverMenu, Icon } from '@sveltejs/site-kit/components';
+	import Dropdown from './Dropdown.svelte';
+	import HoverMenu from './HoverMenu.svelte';
+	import Icon from './Icon.svelte';
 	import type { Snippet } from 'svelte';
 
 	let { children }: { children: Snippet } = $props();
@@ -37,11 +39,11 @@
 		width: 1.8rem;
 		height: 1.8rem;
 		z-index: 9999;
-		background: url(./wrench-light.svg) no-repeat 50% 50%;
+		background: url(../icons/wrench-light.svg) no-repeat 50% 50%;
 		background-size: contain;
 
 		:root.dark & {
-			background-image: url(./wrench-dark.svg);
+			background-image: url(../icons/wrench-dark.svg);
 		}
 	}
 </style>
