@@ -136,21 +136,10 @@
 
 		files.push(
 			...components.map((component) => ({
-				path: `src/${component.name}`,
+				path: `src/routes/${component.name}`,
 				data: (component as File).contents
 			}))
 		);
-		files.push({
-			path: `src/main.ts`,
-			data: `import App from './App.svelte';
-import { mount } from 'svelte';
-
-const app = mount(App, {
-	target: document.body
-});
-
-export default app;`
-		});
 
 		const downloadBlob = (blob: any, filename: string) => {
 			const url = URL.createObjectURL(blob);

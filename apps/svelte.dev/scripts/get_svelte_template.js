@@ -1,16 +1,8 @@
 // @ts-check
-import { execSync } from 'node:child_process';
-import {
-	copyFileSync,
-	mkdirSync,
-	readdirSync,
-	readFileSync,
-	rmSync,
-	statSync,
-	writeFileSync
-} from 'node:fs';
+import { readdirSync, readFileSync, rmSync, statSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { create } from 'sv';
 
 // This download the currente Vite template from Github, adjusts it to our needs, and saves it to static/svelte-template.json
 // This is used by the Svelte REPL as part of the "download project" feature
@@ -25,29 +17,8 @@ try {
 		process.exit(0);
 	}
 } catch {
-	// fetch svelte app
-	rmSync(output_dir, { force: true, recursive: true });
-	execSync(`npx degit vitejs/vite/packages/create-vite/template-svelte-ts ${output_dir}`, {
-		stdio: 'inherit'
-	});
-
-	// remove everything that's not needed
-	rmSync(join(output_dir, 'src/assets'), { force: true, recursive: true });
-	rmSync(join(output_dir, 'src/lib'), { force: true, recursive: true });
-	rmSync(join(output_dir, 'src/app.css'), { force: true, recursive: true });
-	rmSync(join(output_dir, 'src/App.svelte'), { force: true, recursive: true });
-	rmSync(join(output_dir, 'src/main.ts'), { force: true, recursive: true });
-	rmSync(join(output_dir, 'public'), { force: true, recursive: true });
-
-	// add what we need
-	mkdirSync(join(output_dir, 'public'));
-	copyFileSync(
-		fileURLToPath(new URL('../static/favicon.png')),
-		join(output_dir, 'public/favicon.png')
-	);
-
-	// build svelte-app.json
-	const files = [];
+	// create Svelte-Kit skelton app
+	create(output_dir, { template: 'minimal', types: 'typescript', name: 'your-app' });
 
 	function get_all_files(dir) {
 		const files = [];
@@ -58,7 +29,7 @@ try {
 			if (item.isDirectory()) {
 				files.push(...get_all_files(full_path));
 			} else {
-				files.push(full_path);
+				files.push(full_path.replaceAll('\\', '/'));
 			}
 		}
 
@@ -66,25 +37,28 @@ try {
 	}
 
 	const all_files = get_all_files(output_dir);
+	const files = [];
 
 	for (let path of all_files) {
 		const bytes = readFileSync(path);
 		const string = bytes.toString();
 		let data = bytes.compare(Buffer.from(string)) === 0 ? string : [...bytes];
 
-		// handle some special cases
-		path = path.slice(output_dir.length + 1);
-		if (path.endsWith('_gitignore')) path = path.slice(0, -10) + '.gitignore';
-
-		if (path.endsWith('index.html')) {
-			data = /** @type {any} */ (data).replace(
-				'<link rel="icon" type="image/svg+xml" href="/vite.svg" />',
-				'<link rel="icon" type="image/png" href="/favicon.png" />'
-			);
+		if (path.endsWith('routes/+page.svelte')) {
+			data = `<script>\nimport App from './App.svelte';\n</script>\n\n<App />\n`;
 		}
 
-		files.push({ path, data });
+		files.push({ path: path.slice(output_dir.length + 1), data });
 	}
+
+	files.push({
+		path: 'src/routes/+page.js',
+		data:
+			"// Because we don't know whether or not your playground app can run in a server environment, we disable server-side rendering.\n" +
+			'// Make sure to test whether or not you can re-enable it, as SSR improves perceived performance and site accessibility.\n' +
+			'// Read more about this option here: https://svelte.dev/docs/kit/page-options#ssr\n' +
+			'export const ssr = false;\n'
+	});
 
 	writeFileSync(output_file, JSON.stringify(files));
 
