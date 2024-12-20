@@ -47,8 +47,8 @@
 		background: url(./wrench-light.svg) no-repeat 50% 50%;
 		background-size: contain;
 
-		:root.dark {
-			background-image: url(./wrench-light.svg);
+		:root.dark & {
+			background-image: url(./wrench-dark.svg);
 		}
 	}
 
