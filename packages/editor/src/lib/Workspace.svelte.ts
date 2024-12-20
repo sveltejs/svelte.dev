@@ -468,20 +468,36 @@ export class Workspace {
 	}
 
 	set vim(value) {
+		this.#toggle_vim(value);
+	}
+
+	async #toggle_vim(value: boolean) {
 		this.#vim = value;
 
 		localStorage.setItem('vim', String(value));
 
+		// @ts-expect-error jfc CodeMirror is a struggle
+		let vim_extension_index = default_extensions.findIndex((ext) => ext.compartment === vim_mode);
+
+		let extension: any = [];
+
 		if (value) {
-			import('@replit/codemirror-vim').then(({ vim }) => {
-				this.#view?.dispatch({
-					effects: vim_mode.reconfigure(vim())
-				});
-			});
-		} else {
-			this.#view?.dispatch({
-				effects: vim_mode.reconfigure([])
-			});
+			const { vim } = await import('@replit/codemirror-vim');
+			extension = vim();
+		}
+
+		default_extensions[vim_extension_index] = vim_mode.of(extension);
+
+		this.#view?.dispatch({
+			effects: vim_mode.reconfigure(extension)
+		});
+
+		// update all the other states
+		for (const file of this.#files) {
+			if (file.type !== 'file') continue;
+			if (file === this.#current) continue;
+
+			this.states.set(file.name, this.#create_state(file));
 		}
 	}
 
@@ -506,9 +522,10 @@ export class Workspace {
 	}
 
 	#get_state(file: File) {
-		let state = this.states.get(file.name);
-		if (state) return state;
+		return this.states.get(file.name) ?? this.#create_state(file);
+	}
 
+	#create_state(file: File) {
 		const extensions = [
 			...default_extensions,
 			EditorState.readOnly.of(this.#readonly),
@@ -582,7 +599,7 @@ export class Workspace {
 				break;
 		}
 
-		state = EditorState.create({
+		const state = EditorState.create({
 			doc: file.contents,
 			extensions
 		});
