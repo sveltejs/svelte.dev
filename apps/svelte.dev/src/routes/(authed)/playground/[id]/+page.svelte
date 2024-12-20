@@ -118,10 +118,9 @@
 	async function download() {
 		const { files: components, imports } = repl.toJSON();
 
-		const files: Array<{ path: string; data: string }> =
-			await // TODO this is a bit of a cyclic dependency: we assume that the site
-			// does provide a template at this position which matches our expectations
-			(await fetch('/svelte-template.json')).json();
+		const files: Array<{ path: string; data: string }> = await (
+			await fetch('/svelte-template.json')
+		).json();
 
 		if (imports.length > 0) {
 			const idx = files.findIndex(({ path }) => path === 'package.json');
