@@ -1,5 +1,9 @@
+import { PRERENDER } from '$env/static/private';
 import { docs, index } from '$lib/server/content';
 import type { BannerData, NavigationLink } from '@sveltejs/site-kit';
+
+// by default, all pages are prerendered
+export const prerender = PRERENDER !== 'false';
 
 const nav_links: NavigationLink[] = [
 	{
