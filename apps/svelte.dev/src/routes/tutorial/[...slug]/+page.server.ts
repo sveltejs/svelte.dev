@@ -1,8 +1,6 @@
 import { redirect } from '@sveltejs/kit';
 import { load_exercise } from './content.server';
 
-export const prerender = true;
-
 export async function load({ params }) {
 	if (!params.slug || params.slug === 'svelte') redirect(307, '/tutorial/svelte/welcome-to-svelte');
 	if (params.slug === 'kit') redirect(307, '/tutorial/kit/introducing-sveltekit');
