@@ -9,6 +9,7 @@
 	import { compress_and_encode_text, decode_and_decompress_text } from './gzip.js';
 	import { page } from '$app/state';
 	import type { File } from 'editor';
+	import * as doNotZip from 'do-not-zip';
 
 	let { data } = $props();
 
@@ -113,6 +114,57 @@
 		}
 	}
 
+	async function download() {
+		const { files: components, imports } = repl.toJSON();
+
+		const files: Array<{ path: string; data: string }> = await (
+			await fetch('/svelte-template.json')
+		).json();
+
+		if (imports.length > 0) {
+			const idx = files.findIndex(({ path }) => path === 'package.json');
+			const pkg = JSON.parse(files[idx].data);
+			const { devDependencies } = pkg;
+			imports.forEach((mod) => {
+				const match = /^(@[^/]+\/)?[^@/]+/.exec(mod)!;
+				devDependencies[match[0]] = 'latest';
+			});
+			pkg.devDependencies = devDependencies;
+			files[idx].data = JSON.stringify(pkg, null, '  ');
+		}
+
+		files.push(
+			...components.map((component) => ({
+				path: `src/${component.name}`,
+				data: (component as File).contents
+			}))
+		);
+		files.push({
+			path: `src/main.ts`,
+			data: `import App from './App.svelte';
+import { mount } from 'svelte';
+
+const app = mount(App, {
+	target: document.body
+});
+
+export default app;`
+		});
+
+		const downloadBlob = (blob: any, filename: string) => {
+			const url = URL.createObjectURL(blob);
+			const link = document.createElement('a');
+			link.href = url;
+			link.download = filename;
+			link.style.display = 'none';
+			document.body.appendChild(link);
+			link.click();
+			URL.revokeObjectURL(url);
+			link.remove();
+		};
+		downloadBlob(doNotZip.toBlob(files), 'svelte-app.zip');
+	}
+
 	async function update_hash() {
 		// Only change hash when necessary to avoid polluting everyone's browser history
 		if (modified) {
@@ -173,6 +225,12 @@
 			// a short-lived sessionStorage value instead
 			const json = JSON.stringify({ name, files: repl.toJSON().files });
 			sessionStorage.setItem(STORAGE_KEY, json);
+		}
+	}}
+	onkeydown={(e) => {
+		// TODO remove once dropdown from VIM UI PR is merged
+		if (e.ctrlKey && e.key === 'd') {
+			download();
 		}
 	}}
 />
