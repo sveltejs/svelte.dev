@@ -10,13 +10,14 @@ import {
 	writeFileSync
 } from 'node:fs';
 import { join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 // This download the currente Vite template from Github, adjusts it to our needs, and saves it to static/svelte-template.json
 // This is used by the Svelte REPL as part of the "download project" feature
 
 const force = process.env.FORCE_UPDATE === 'true';
-const output_file = 'static/svelte-template.json';
-const output_dir = 'scripts/svelte-template';
+const output_file = fileURLToPath(new URL('../static/svelte-template.json', import.meta.url));
+const output_dir = fileURLToPath(new URL('./svelte-template', import.meta.url));
 
 try {
 	if (!force && statSync(output_file)) {
@@ -40,7 +41,10 @@ try {
 
 	// add what we need
 	mkdirSync(join(output_dir, 'public'));
-	copyFileSync('static/favicon.png', join(output_dir, 'public/favicon.png'));
+	copyFileSync(
+		fileURLToPath(new URL('../static/favicon.png')),
+		join(output_dir, 'public/favicon.png')
+	);
 
 	// build svelte-app.json
 	const files = [];
