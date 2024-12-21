@@ -168,9 +168,14 @@ The [playground](/playground) had a secret Vim mode that you could activate by a
 - [tutorial](/tutorial)
 - [demo video](https://bsky.app/profile/svelte.dev/post/3ldqli3lk4k2g)
 
-## Day 21
+## Day 21: hash-based routing
 
-Coming soon!
+SvelteKit now supports hash-based routing, in addition to the default pathname-based routing. This can be useful for purely client-side apps (including those you might build with Electron or Tauri), or situations where you don't control the webserver and need to put everything on a single page.
+
+It comes with caveats — you can't use server-rendering (or any server logic), and you need to make sure all your internal links start with `/#/` or they won't work. Other than, it's just like any other SvelteKit app.
+
+- [docs](/docs/kit/configuration#router)
+- [demo](https://hash-based-routing.vercel.app/)
 
 ## Day 22
 
