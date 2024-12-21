@@ -1,4 +1,6 @@
 <script lang="ts">
+	// @ts-expect-error no types
+	import * as doNotZip from 'do-not-zip';
 	import { browser } from '$app/environment';
 	import { afterNavigate, goto, replaceState } from '$app/navigation';
 	import type { Gist } from '$lib/db/types';
@@ -113,6 +115,43 @@
 		}
 	}
 
+	async function download() {
+		const { files: components, imports } = repl.toJSON();
+
+		const files: Array<{ path: string; data: string }> = await (
+			await fetch('/svelte-template.json')
+		).json();
+
+		if (imports.length > 0) {
+			const idx = files.findIndex(({ path }) => path === 'package.json');
+			const pkg = JSON.parse(files[idx].data);
+			const { devDependencies } = pkg;
+			imports.forEach((mod) => {
+				const match = /^(@[^/]+\/)?[^@/]+/.exec(mod)!;
+				devDependencies[match[0]] = 'latest';
+			});
+			pkg.devDependencies = devDependencies;
+			files[idx].data = JSON.stringify(pkg, null, '  ');
+		}
+
+		files.push(
+			...components.map((component) => ({
+				path: `src/routes/${component.name}`,
+				data: (component as File).contents
+			}))
+		);
+
+		const url = URL.createObjectURL(doNotZip.toBlob(files));
+		const link = document.createElement('a');
+		link.href = url;
+		link.download = 'svelte-app.zip';
+		link.style.display = 'none';
+		document.body.appendChild(link);
+		link.click();
+		URL.revokeObjectURL(url);
+		link.remove();
+	}
+
 	async function update_hash() {
 		// Only change hash when necessary to avoid polluting everyone's browser history
 		if (modified) {
@@ -200,6 +239,7 @@
 				{can_escape}
 				injectedJS={mapbox_setup}
 				{onchange}
+				{download}
 				previewTheme={$theme.current}
 			/>
 		</div>

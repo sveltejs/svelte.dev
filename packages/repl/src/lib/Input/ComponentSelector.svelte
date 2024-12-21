@@ -10,9 +10,10 @@
 		workspace: Workspace;
 		can_migrate: boolean;
 		migrate: () => void;
+		download?: () => void;
 	}
 
-	let { runes, onchange, workspace, can_migrate, migrate }: Props = $props();
+	let { runes, onchange, workspace, can_migrate, migrate, download }: Props = $props();
 
 	let input = $state() as HTMLInputElement;
 	let input_value = $state(workspace.current.name);
@@ -170,6 +171,10 @@
 			</label>
 
 			<button disabled={!can_migrate} onclick={migrate}>Migrate to Svelte 5, if possible</button>
+
+			{#if download}
+				<button onclick={download}>Download app</button>
+			{/if}
 		</Toolbox>
 	</div>
 </div>
