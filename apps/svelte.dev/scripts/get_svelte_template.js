@@ -45,7 +45,7 @@ try {
 		let data = bytes.compare(Buffer.from(string)) === 0 ? string : [...bytes];
 
 		if (path.endsWith('routes/+page.svelte')) {
-			data = `<script>\nimport App from './App.svelte';\n</script>\n\n<App />\n`;
+			data = `<script>\n\timport '../app.css';\n\timport App from './App.svelte';\n</script>\n\n<App />\n`;
 		}
 
 		files.push({ path: path.slice(output_dir.length + 1), data });
@@ -58,6 +58,25 @@ try {
 			'// Make sure to test whether or not you can re-enable it, as SSR improves perceived performance and site accessibility.\n' +
 			'// Read more about this option here: https://svelte.dev/docs/kit/page-options#ssr\n' +
 			'export const ssr = false;\n'
+	});
+
+	// add CSS styles from playground to the project
+	const html = readFileSync(
+		join(output_dir, '../../../../packages/repl/src/lib/Output/srcdoc/index.html'),
+		{ encoding: 'utf-8' }
+	);
+	const css = html
+		.slice(html.indexOf('<style>') + 7, html.indexOf('</style>'))
+		.split('\n')
+		.map((line) =>
+			// remove leading \t
+			line.slice(3)
+		)
+		.join('\n')
+		.trimStart();
+	files.push({
+		path: 'src/app.css',
+		data: css
 	});
 
 	writeFileSync(output_file, JSON.stringify(files));
