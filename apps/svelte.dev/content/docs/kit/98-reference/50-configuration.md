@@ -1020,6 +1020,43 @@ The value of `url.origin` during prerendering; useful if it is included in rende
 
 </div>
 
+## router
+
+<div class="ts-block-property-bullets">
+
+
+
+</div>
+
+
+
+<div class="ts-block-property-children">
+
+<div class="ts-block-property">
+
+```ts
+// @noErrors
+type?: 'pathname' | 'hash';
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `"pathname"`
+- <span class="tag since">available since</span> v2.14.0
+
+</div>
+
+What type of client-side router to use.
+- `'pathname'` is the default and means the current URL pathname determines the route
+- `'hash'` means the route is determined by `location.hash`. In this case, SSR and prerendering are disabled. This is only recommended if `pathname` is not an option, for example because you don't control the webserver where your app is deployed.
+
+</div>
+</div>
+
+</div>
+
 ## serviceWorker
 
 <div class="ts-block-property-bullets">
