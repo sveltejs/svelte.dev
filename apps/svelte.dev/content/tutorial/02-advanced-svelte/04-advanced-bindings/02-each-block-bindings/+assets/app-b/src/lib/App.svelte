@@ -24,7 +24,7 @@
 
 	<ul class="todos">
 		{#each todos as todo}
-			<li class:done={todo.done}>
+			<li class={{ done: todo.done }}>
 				<input
 					type="checkbox"
 					bind:checked={todo.done}
