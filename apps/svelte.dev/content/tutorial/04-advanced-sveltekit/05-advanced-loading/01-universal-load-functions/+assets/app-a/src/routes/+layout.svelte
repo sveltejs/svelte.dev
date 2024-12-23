@@ -5,7 +5,7 @@
 </script>
 
 <nav
-	class:has-color={!!page.data.color}
+	class={[page.data.color && 'has-color']}
 	style:background={page.data.color ?? 'var(--bg-2)'}
 >
 	<a href="/">home</a>
