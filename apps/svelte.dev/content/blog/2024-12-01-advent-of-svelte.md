@@ -190,6 +190,14 @@ We've added a 'download app' option to the toolbox in the playground — selecti
 
 - [playground](/playground)
 
-## Day 24
+## Day 24: clsx built in
 
-Coming soon!
+Svelte now uses [clsx](https://github.com/lukeed/clsx) to parse `class` attributes, meaning you can use objects and arrays to conditionally add and remove classes. It's much more powerful and flexible than the `class:` directive, and — since this is Svelte — you still get dead code elimination of unused CSS. This feature is particularly useful for all you Tailwind-heads.
+
+- [docs](/docs/svelte/class)
+- [tutorial](/tutorial/svelte/classes)
+- [demo](/playground/61450f09983046efb18273d5c94db7b4?version=5.16.0)
+
+---
+
+And that's a wrap! Thanks for following along, everyone, and Merry Christmas to all who celebrate.
