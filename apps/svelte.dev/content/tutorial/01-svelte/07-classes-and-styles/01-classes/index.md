@@ -1,5 +1,5 @@
 ---
-title: The class directive
+title: The class attribute
 ---
 
 Like any other attribute, you can specify classes with a JavaScript attribute. Here, we could add a `flipped` class to the card:
