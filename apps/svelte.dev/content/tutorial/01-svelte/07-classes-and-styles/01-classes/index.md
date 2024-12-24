@@ -24,6 +24,6 @@ We can make it nicer though. Adding or removing a class based on some condition 
 >
 ```
 
-This means 'always add the `"card"` class, and add the `flipped` class whenever `flipped` is truthy'.
+This means 'always add the `card` class, and add the `flipped` class whenever `flipped` is truthy'.
 
 For more examples of how to combine conditional classes, [consult the `class` documentation](/docs/svelte/class).
