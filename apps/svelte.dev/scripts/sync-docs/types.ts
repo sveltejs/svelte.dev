@@ -86,10 +86,10 @@ export async function get_types(code: string, statements: ts.NodeArray<ts.Statem
 					// `@link` JSDoc tags (and maybe others?) turn this property into an array, which we need to join manually
 					if (Array.isArray(jsDoc.comment)) {
 						comment = (jsDoc.comment as any[])
-							.map(({ name, text }) => (name ? `\`${name.escapedText}\`` : text))
+							.map(({ name, text }) => strip_origin(name ? `\`${name.escapedText}\`` : text))
 							.join('');
 					} else {
-						comment = jsDoc.comment;
+						comment = strip_origin(jsDoc.comment);
 					}
 
 					if (jsDoc.tags) {
@@ -280,7 +280,7 @@ function munge_type_element(member: ts.TypeElement, depth = 1): TypeElement | un
 }
 
 function cleanup_comment(comment: string = '') {
-	return comment
+	return strip_origin(comment)
 		.replace(/\/\/\/ type: (.+)/g, '/** @type {$1} */')
 		.replace(/\/\/\/ errors: (.+)/g, '// @errors: $1') // see read_d_ts_file
 		.replace(/^(  )+/gm, (match: string, spaces: string) => {
