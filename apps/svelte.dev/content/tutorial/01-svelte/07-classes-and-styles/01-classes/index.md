@@ -14,7 +14,7 @@ Like any other attribute, you can specify classes with a JavaScript attribute. H
 
 This works as expected — if you click on the card now, it'll flip.
 
-We can make it nicer though. Adding or removing a class based on some condition is such a common pattern in UI development that Svelte allows you to pass an object or array that is converted to a string by [clsx](https://github.com/lukeed/clsx/).
+We can make it nicer though. Adding or removing a class based on some condition is such a common pattern in UI development that Svelte allows you to pass an object or array that is converted to a string by [clsx](https://github.com/lukeed/clsx).
 
 ```svelte
 /// file: App.svelte
