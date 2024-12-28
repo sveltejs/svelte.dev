@@ -4,7 +4,8 @@
 
 	let { runes }: { runes: boolean } = $props();
 
-	const { workspace } = get_repl_context();
+	const { workspace, svelteVersion } = get_repl_context();
+	const majorVersion = Number(svelteVersion.split(".")[0]);
 </script>
 
 <Dropdown align="right">
@@ -16,7 +17,12 @@
 
 	{#snippet dropdown()}
 		<div class="popup">
-			{#if workspace.current.name.endsWith('.svelte.js')}
+			{#if Number.isInteger(majorVersion) && majorVersion < 5}
+				<p>
+					<a href="/blog/runes">Runes</a> are available from Svelte 5 onwards, and this playground is
+					using Svelte {svelteVersion}.
+				</p>
+			{:else if workspace.current.name.endsWith('.svelte.js')}
 				<p>
 					Files with a <code>.svelte.js</code> extension are always in
 					<a href="/blog/runes">runes mode</a>.
