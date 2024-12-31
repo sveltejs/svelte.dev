@@ -8,7 +8,7 @@ Similarly, we can add handlers for other HTTP verbs. Add a `/todo/[id]` route by
 /// file: src/routes/todo/[id]/+server.js
 import * as database from '$lib/server/database.js';
 
-export async function PUT({ params, request, cookies }) {
++++export async function PUT({ params, request, cookies }) {
 	const { done } = await request.json();
 	const userid = cookies.get('userid');
 
@@ -16,7 +16,7 @@ export async function PUT({ params, request, cookies }) {
 	return new Response(null, { status: 204 });
 }
 
-export async function DELETE({ params, cookies }) {
++++export async function DELETE({ params, cookies }) {
 	const userid = cookies.get('userid');
 
 	await database.deleteTodo({ userid, id: params.id });
