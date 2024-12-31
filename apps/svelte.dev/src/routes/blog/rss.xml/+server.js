@@ -4,11 +4,13 @@ import { render_content } from '$lib/server/renderer';
 export const prerender = true;
 
 const months = ',Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec'.split(',');
+const days = 'Sun,Mon,Tue,Wed,Thu,Fri,Sat'.split(',')
 
 /** @param {string} str */
 function formatPubdate(str) {
 	const [y, m, d] = str.split('-');
-	return `${d} ${months[+m]} ${y} 12:00 +0000`;
+	const dayOfWeek = new Date(str).getDay();
+	return `${days[dayOfWeek]}, ${d} ${months[+m]} ${y} 12:00:00 +0000`;
 }
 
 /** @param {string} html */
