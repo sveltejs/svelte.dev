@@ -32,6 +32,7 @@ const get_rss = async (posts) => {
 	const renderedPosts = await Promise.all(
 		posts
 			.filter((post) => !post.metadata.draft)
+			.reverse()
 			.map(
 				async (post) => `
 		<item>
