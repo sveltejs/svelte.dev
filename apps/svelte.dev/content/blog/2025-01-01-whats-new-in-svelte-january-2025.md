@@ -15,6 +15,7 @@ Now let's get to the news 👀
 - `defaultValue` and `defaultChecked` are now supported for inputs (**5.6.0**, [Docs](https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/defaultChecked), [#14289](https://github.com/sveltejs/svelte/pull/14289))
 - The loose parser mode creates a more modern AST for developer tools to consume (**5.13.0**, [Docs](/docs/svelte/svelte-compiler#parse), [#14691](https://github.com/sveltejs/svelte/pull/14691))
 - A new "worker" exports condition helps better support bundling for worker-based environments (**5.15.0**, [#14779](https://github.com/sveltejs/svelte/pull/14779))
+- The `class` attribute can now be an object or array, using `clsx` (**5.16.0**, [Docs](https://svelte.dev/docs/svelte/class#Attributes-Objects-and-arrays), [#14714](https://github.com/sveltejs/svelte/pull/14714))
 
 _New/Updated Syntax_
 
@@ -33,7 +34,6 @@ _Reactivity APIs_
 
 ## What's new in SvelteKit, Svelte CLI and Language Tools
 
-- Vite 6 is now supported in SvelteKit - `create` templates in the CLI have been updated to this version (**kit@2.9.0**, **cli@0.6.6** [Docs](https://vite.dev/blog/announcing-vite6), [#12270](https://github.com/sveltejs/kit/pull/12270))
 - The new `init` hook runs once, when the server is created or the app starts in the browser, and is a useful place to do asynchronous work such as initializing a database connection (**2.10.0**, [Docs](/docs/kit/hooks#Shared-hooks-init), [#13103](https://github.com/sveltejs/kit/pull/13103))
 - The new [`transport`](https://svelte.dev/docs/kit/@sveltejs-kit#Transport) hook allows you to encode/serialize and decode/deserialize custom non-POJOs across the server/client boundary (**2.11.0**, [#13149](https://github.com/sveltejs/kit/pull/13149))
 - The new `$app/state` module replaces the existing `$app/stores` module but using Svelte 5 state. The `migrate` tool in the CLI/language tools have been updated to match (**2.12.0**, [Docs](/docs/kit/$app-state), [#13140](https://github.com/sveltejs/kit/pull/13140))
@@ -68,7 +68,7 @@ _Adapter Updates_
 
 _Featuring Svelte Contributors and Ambassadors_
 
-- [Svelte at Bloomberg (feat Julian Burgess)](https://www.svelteradio.com/episodes/svelte-at-bloomberg) by Svelte Radio
+- [Svelte at Bloomberg (feat Julian Burgess)](https://www.svelteradio.com/episodes/svelte-at-bloomberg) and [Scott Tolinski on Svelte 5 Local First Development](https://www.svelteradio.com/episodes/scott-tolinski-on-svelte-5-local-first-development) by Svelte Radio
 - [Rich Harris' North Star](https://www.youtube.com/watch?v=UegUi2fWBaU) at JSNation US 2024
 - [Perfect Svelte 5 code completion for any LLM - Claude, ChatGPT and GitHub Copilot](https://www.youtube.com/watch?v=tprMklFzy44) by Stanislav Khromov
 - [Svelte 5 Is Here!](https://www.youtube.com/watch?v=t6-znHs8DDM) and [View Transitions Are More Powerful Than You Think](https://www.youtube.com/watch?v=jnYjIDKyKHw) by Syntax
@@ -83,6 +83,7 @@ _To Read_
 
 - [Building accessible sites with SvelteKit: seven practical tips](https://blog.datawrapper.de/sveltekit-accessibility-tips/) by Antonio Sarcevic
 - [How to Fix Unexpected Logout Issues in SvelteKit Caused by data-sveltekit-preload-data](https://blog.yuki-dev.com/blogs/d2_e1zwgn3_o) by Yuki Ishii
+- [Svelte Job's Svelte Salaries Report](https://sveltejobs.com/svelte-salaries) shows average and median salaries across remote, non-remote positions, locations, and seniority levels
 
 _To Watch_
 
@@ -91,13 +92,14 @@ _To Watch_
 
 ### Libraries, Tools & Components
 
-- [This site](https://svelte-llm.khromov.se/) provides Svelte 5 and SvelteKit documentation in an LLM-friendly format
+- [The Svelte docs](https://svelte.dev/content.json) are now available in an LLM-friendly format (shout out to Stanislav Khromov for [svelte-llm](https://svelte-llm.khromov.se/))
 - [svelte-mainloop](https://github.com/retrotheft/svelte-mainloop) is awrapper for MainLoop.js that handles function registration and cleanup, and lets you join and leave the loop with a single component ([Reddit](https://www.reddit.com/r/sveltejs/comments/1hfto6y/sveltemainloop_the_easiest_way_to_add_a_loop_to/))
 - [bsky-comments-svelte](https://github.com/nsarrazin/bsky-comments-svelte/) is a simple customizable component to add comments to your website using Bluesky
 - [Svelte Mini Router](https://github.com/rodrigocfd/svelte-mini-router) is a declarative, minimal SPA router for Svelte 5, without SvelteKit
 - [svelte-firebase-state](https://github.com/pierregoutheraud/svelte-firebase-state) simplifies Firebase integration in Svelte/Sveltekit applications by providing easy-to-use reactive state classes for managing Firestore and Realtime Database data
 - [monoco-svelte](https://github.com/monokai/monoco-svelte) lets you create custom (squircle) corners and borders for Svelte components
 - [svelte-audio-waveform](https://github.com/Catsvilles/svelte-audio-waveform) transforms an array of peak data into beautifully rendered, customizable waveforms for music players, podcasts, audio editing tools, and more
+- [Svader](https://github.com/sockmaster27/svader) creates GPU-rendered Svelte components with WebGL and WebGPU fragment shaders
 
 That's it for this huge month in Svelte! Let us know if we missed anything on [Reddit](https://www.reddit.com/r/sveltejs/) or [Discord](https://discord.gg/svelte).
 
