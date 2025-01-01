@@ -5,7 +5,7 @@
 <ul class="todos">
 	{#each todos as todo (todo)}
 		<li
-			class:done={todo.done}
+			class={{ done: todo.done }}
 		>
 			<label>
 				<input type="checkbox" bind:checked={todo.done}/>

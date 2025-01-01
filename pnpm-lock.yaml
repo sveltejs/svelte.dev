@@ -77,6 +77,9 @@ importers:
       d3-geo-projection:
         specifier: ^4.0.0
         version: 4.0.0
+      do-not-zip:
+        specifier: ^1.0.0
+        version: 1.0.0
       editor:
         specifier: workspace:*
         version: link:../../packages/editor
@@ -177,6 +180,9 @@ importers:
       satori-html:
         specifier: ^0.3.2
         version: 0.3.2
+      sv:
+        specifier: ^0.6.8
+        version: 0.6.8
       svelte:
         specifier: 5.14.0
         version: 5.14.0
@@ -2131,6 +2137,9 @@ packages:
     resolution: {integrity: sha512-WkrWp9GR4KXfKGYzOLmTuGVi1UWFfws377n9cc55/tb6DuqyF6pcQ5AbiHEshaDpY9v6oaSr2XCDidGmMwdzIA==}
     engines: {node: '>=8'}
 
+  do-not-zip@1.0.0:
+    resolution: {integrity: sha512-Pgd81ET43bhAGaN2Hq1zluSX1FmD7kl7KcV9ER/lawiLsRUB9pRA5y8r6us29Xk6BrINZETO8TjhYwtwafWUww==}
+
   dom-accessibility-api@0.5.16:
     resolution: {integrity: sha512-X7BJ2yElsnOJ30pZF4uIIDfBEVgF4XEBxL9Bxhy6dnrm5hkzqmsWHGTiHqRiITNhMyFLyAiWndIJP7Z1NTteDg==}
 
@@ -2993,6 +3002,10 @@ packages:
   supports-color@7.2.0:
     resolution: {integrity: sha512-qpCAvRl9stuOHveKsn7HncJRvv501qIacKzQlO/+Lwxc9+0q2wLyv4Dfvt80/DPn2pqOBsJdDiogXGR9+OvwRw==}
     engines: {node: '>=8'}
+
+  sv@0.6.8:
+    resolution: {integrity: sha512-9+gEOIED7KzyvDVF7W4/L2Nv9ISvFrU0xp8dtEyP1QHWY/1bbz/Fp0Lo7/hgBSkVvvSXV3XMxQsTwz23AOobGw==}
+    hasBin: true
 
   svelte-check@4.1.1:
     resolution: {integrity: sha512-NfaX+6Qtc8W/CyVGS/F7/XdiSSyXz+WGYA9ZWV3z8tso14V2vzjfXviKaTFEzB7g8TqfgO2FOzP6XT4ApSTUTw==}
@@ -4967,6 +4980,8 @@ snapshots:
     dependencies:
       path-type: 4.0.0
 
+  do-not-zip@1.0.0: {}
+
   dom-accessibility-api@0.5.16: {}
 
   dotenv@16.4.7: {}
@@ -5882,6 +5897,8 @@ snapshots:
   supports-color@7.2.0:
     dependencies:
       has-flag: 4.0.0
+
+  sv@0.6.8: {}
 
   svelte-check@4.1.1(picomatch@4.0.2)(svelte@5.14.0)(typescript@5.5.4):
     dependencies:

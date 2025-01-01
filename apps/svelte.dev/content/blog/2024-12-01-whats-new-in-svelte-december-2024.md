@@ -43,7 +43,7 @@ The features since last month can be found below:
 - [PixelAttack](https://jason1610.github.io/PixelAttack/) takes an image, pixelizes it and makes the pixels fight each other
 - [NeoHtop](https://github.com/Abdenasser/neohtop) is a modern, process monitoring tool that combines the power of terminal-based system monitors with a clean, desktop-native UI
 - [WebVM](https://github.com/leaningtech/webvm) is a Linux virtual machine that runs in your browser
-- [Sveltris](https://svelte.dev/playground/8594eea15c6244908c3efad284fe2aa4?version=5.2.1) is Tetris built entirely in the Svelte REPL
+- [Sveltris](/playground/8594eea15c6244908c3efad284fe2aa4?version=5.2.1) is Tetris built entirely in the Svelte REPL
 
 ### Learning Resources
 

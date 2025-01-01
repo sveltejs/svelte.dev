@@ -15,7 +15,7 @@
 	}
 </script>
 
-<div class="player" class:paused>
+<div class={['player', { paused }]}>
 	<button
 		class="play"
 		aria-label={paused ? 'play' : 'pause'}

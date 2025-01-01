@@ -177,14 +177,27 @@ It comes with caveats — you can't use server-rendering (or any server logic), 
 - [docs](/docs/kit/configuration#router)
 - [demo](https://hash-based-routing.vercel.app/)
 
-## Day 22
+## Day 22: self-contained apps
 
-Coming soon!
+Following the introduction of the `bundleStrategy` option on day 19, and hash-based routing yesterday, we now have the ability to generate fully self-contained apps with the `bundleStrategy: 'inline'` option. Together with Vite's `assetsInlineLimit` option, it's possible to put an entire SvelteKit app — code, styles, fonts, images, audio and everything else — inside a single .html file that you can share with people on a floppy disk.
 
-## Day 23
+- [docs](/docs/kit/configuration#output)
+- [example downloadable Snake game](https://svelte-snek.vercel.app/)
 
-Coming soon!
+## Day 23: download from playground
 
-## Day 24
+We've added a 'download app' option to the toolbox in the playground — selecting it will zip up the app, along with any packages you've imported, and download it to your machine so you can continue working on it in your editor of choice.
 
-Coming soon!
+- [playground](/playground)
+
+## Day 24: clsx built in
+
+Svelte now uses [clsx](https://github.com/lukeed/clsx) to parse `class` attributes, meaning you can use objects and arrays to conditionally add and remove classes. It's much more powerful and flexible than the `class:` directive, and — since this is Svelte — you still get dead code elimination of unused CSS. This feature is particularly useful for all you Tailwind-heads.
+
+- [docs](/docs/svelte/class)
+- [tutorial](/tutorial/svelte/classes)
+- [demo](/playground/61450f09983046efb18273d5c94db7b4?version=5.16.0)
+
+---
+
+And that's a wrap! Thanks for following along, everyone, and Merry Christmas to all who celebrate.

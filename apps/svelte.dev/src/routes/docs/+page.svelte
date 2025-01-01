@@ -58,6 +58,10 @@
 	});
 </script>
 
+<svelte:head>
+	<title>Docs • Svelte</title>
+</svelte:head>
+
 <div class="page">
 	<h1>Documentation</h1>
 	<p>
