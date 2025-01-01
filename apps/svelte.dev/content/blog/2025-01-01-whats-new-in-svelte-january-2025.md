@@ -23,7 +23,7 @@ _New/Updated Syntax_
 - #each is now supported without `as` (**5.4.0**, [Docs](/docs/svelte/each), [#14396](https://github.com/sveltejs/svelte/pull/14396))
 - The new `Spring` and `Tween` classes in `svelte/motion` make it even easier to build custom animation (**5.8.0**, [Docs](/docs/svelte/svelte-motion), [#11519](https://github.com/sveltejs/svelte/pull/11519))
 - The new `outro` option in `unmount` will play transitions before the component is removed from the DOM. (**5.13.0**, [Docs](/docs/svelte/svelte#unmount), [#14540](https://github.com/sveltejs/svelte/pull/14540))
-- The `$inspect.trace` rune causes the surrounding function to be traced in development. Any time the function re-runs as part of an effect or a derived, information will be printed to the console about which pieces of reactive state caused the effect to fire (**5.14.0**, [Docs](</docs/svelte/inspect#inspect.trace()>), [#14290](https://github.com/sveltejs/svelte/pull/14290))
+- The `$inspect.trace` rune causes the surrounding function to be traced in development. Any time the function re-runs as part of an effect or a derived, information will be printed to the console about which pieces of reactive state caused the effect to fire (**5.14.0**, [Docs](</docs/svelte/$inspect#$inspect.trace()>), [#14290](https://github.com/sveltejs/svelte/pull/14290))
 
 _Reactivity APIs_
 
