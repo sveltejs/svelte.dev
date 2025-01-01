@@ -31,6 +31,8 @@ We can also add some UI to these two routes by adding a `src/routes/(authed)/+la
 	let { children } = $props();
 </script>
 
+{@render children()}
+
 <form method="POST" action="/logout">
 	<button>log out</button>
 </form>
