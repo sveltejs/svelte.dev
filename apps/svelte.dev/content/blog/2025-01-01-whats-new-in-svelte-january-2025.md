@@ -1,6 +1,6 @@
 ---
 title: "What's new in Svelte: January 2025"
-description: 'Svelte 5 just keeps getting better. Plus, and in-person Svelte Summit!'
+description: 'Svelte 5 just keeps getting better. Plus, an in-person Svelte Summit!'
 author: Dani Sandoval
 authorURL: https://dreamindani.com
 ---
@@ -35,7 +35,7 @@ _Reactivity APIs_
 
 - Vite 6 is now supported in SvelteKit - `create` templates in the CLI have been updated to this version (**kit@2.9.0**, **cli@0.6.6** [Docs](https://vite.dev/blog/announcing-vite6), [#12270](https://github.com/sveltejs/kit/pull/12270))
 - The new `init` hook runs once, when the server is created or the app starts in the browser, and is a useful place to do asynchronous work such as initializing a database connection (**2.10.0**, [Docs](/docs/kit/hooks#Shared-hooks-init), [#13103](https://github.com/sveltejs/kit/pull/13103))
-- Custom Types are now transported across the server/client boundary (**2.11.0**, [#13149](https://github.com/sveltejs/kit/pull/13149))
+- The new [`transport`](https://svelte.dev/docs/kit/@sveltejs-kit#Transport) hook allows you to encode/serialize and decode/deserialize custom non-POJOs across the server/client boundary (**2.11.0**, [#13149](https://github.com/sveltejs/kit/pull/13149))
 - The new `$app/state` module replaces the existing `$app/stores` module but using Svelte 5 state. The `migrate` tool in the CLI/language tools have been updated to match (**2.12.0**, [Docs](/docs/kit/$app-state), [#13140](https://github.com/sveltejs/kit/pull/13140))
 - `bundleStrategy` lets you choose between `'split'`, `'single'` and `'inline'` output options for JS and CSS files (**2.13.0** and **2.15.0**, [Docs](/docs/kit/configuration#output), [#13173](https://github.com/sveltejs/kit/pull/13191) and [#13193](https://github.com/sveltejs/kit/pull/13193))
 - The new `sveltekit-adapter` add-on for the Svelte CLI (`sv`) installs and replaces existing SvelteKit adapters ([Docs](/docs/cli/sv-add), [#346](https://github.com/sveltejs/cli/pull/346))
