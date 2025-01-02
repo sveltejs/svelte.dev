@@ -14,9 +14,12 @@
 		if ($theme.preference === 'system') {
 			const query = window.matchMedia('(prefers-color-scheme: dark)');
 
-			return on(query, 'change', (e) => {
+			function setTheme(e: MediaQueryListEvent | MediaQueryList) {
 				$theme.current = e.matches ? 'dark' : 'light';
-			});
+			}
+
+			setTheme(query);
+			return on(query, 'change', setTheme);
 		}
 	});
 </script>
