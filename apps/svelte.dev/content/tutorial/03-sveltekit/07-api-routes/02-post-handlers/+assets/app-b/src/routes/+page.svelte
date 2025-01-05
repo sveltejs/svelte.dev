@@ -1,5 +1,5 @@
 <script>
-	let { data = $bindable() } = $props();
+	let { data } = $props();
 </script>
 
 <div class="centered">
