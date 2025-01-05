@@ -26,10 +26,12 @@
 
 				const { id } = await response.json();
 
-				data.todos = [...data.todos, {
+				const todos = [...data.todos, {
 					id,
 					description
 				}];
+
+				data = { ...data, todos };
 
 				input.value = '';
 			}}

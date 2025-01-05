@@ -74,14 +74,18 @@ We're returning a response with a [201 Created](https://http.dog/201) status and
 
 +++		const { id } = await response.json();
 
-		data.todos = [...data.todos, {
+		const todos = [...data.todos, {
 			id,
 			description
-		}];+++
+		}];
+
+		data = { ...data, todos };+++
 
 		input.value = '';
 	}}
 />
 ```
 
-> [!NOTE] You should only mutate `data` in such a way that you'd get the same result by reloading the page.
+> [!NOTE] You should only update `data` in such a way that you'd get the same result by reloading the page.
+
+> [!NOTE] The `data` prop is not *deeply* reactive, so you need to replace it. Mutations like `data.todos = todos` will NOT trigger a re-render.
