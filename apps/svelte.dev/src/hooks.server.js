@@ -55,6 +55,12 @@ export async function handle({ event, resolve }) {
 		redirect(307, destination);
 	}
 
+	// For REPL. For some reason, the repl/+page.server.ts file is not working, so
+	// we are doing the redirect here
+	if (event.url.pathname.startsWith('/repl/')) {
+		redirect(307, event.url.pathname.replace('/repl/', '/playground/'));
+	}
+
 	// Best effort to redirect from Svelte 3 tutorial to new tutorial
 	if (event.url.pathname.startsWith('/tutorial/') && event.url.pathname.split('/').length === 2) {
 		redirect(307, event.url.pathname.replace('/tutorial/', '/tutorial/svelte/'));
