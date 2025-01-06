@@ -1,31 +1,37 @@
 <script lang="ts">
-	import { on } from 'svelte/events';
-	import { theme } from '../stores';
+	import { theme } from '../state';
 
 	function toggle() {
-		const next = $theme.current === 'light' ? 'dark' : 'light';
-		const system = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-
-		$theme.preference = next === system ? 'system' : next;
-		$theme.current = next;
+		theme.current = theme.current === 'light' ? 'dark' : 'light';
 	}
 
 	$effect(() => {
-		if ($theme.preference === 'system') {
-			const query = window.matchMedia('(prefers-color-scheme: dark)');
-
-			return on(query, 'change', (e) => {
-				$theme.current = e.matches ? 'dark' : 'light';
-			});
-		}
+		document.documentElement.classList.remove('light', 'dark');
+		document.documentElement.classList.add(theme.current);
 	});
 </script>
+
+<svelte:head>
+	<script>
+		{
+			const theme = localStorage.getItem('sv:theme');
+
+			document.documentElement.classList.add(
+				theme === 'system'
+					? window.matchMedia('(prefers-color-scheme: dark)').matches
+						? 'dark'
+						: 'light'
+					: theme
+			);
+		}
+	</script>
+</svelte:head>
 
 <button
 	onclick={toggle}
 	class="raised icon"
 	type="button"
-	aria-pressed={$theme.current === 'dark'}
+	aria-pressed={theme.current === 'dark'}
 	aria-label="Toggle dark mode"
 ></button>
 

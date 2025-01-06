@@ -73,6 +73,9 @@
 		"./actions": {
 			"default": "./src/lib/actions/index.ts"
 		},
+		"./state": {
+			"default": "./src/lib/state/index.ts"
+		},
 		"./stores": {
 			"default": "./src/lib/stores/index.ts"
 		},

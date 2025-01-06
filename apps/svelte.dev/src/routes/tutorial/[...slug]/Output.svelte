@@ -5,7 +5,7 @@
 <script lang="ts">
 	import { browser, dev } from '$app/environment';
 	import { afterNavigate } from '$app/navigation';
-	import { theme, type Theme } from '@sveltejs/site-kit/stores';
+	import { theme } from '@sveltejs/site-kit/state';
 	import { onMount } from 'svelte';
 	import Chrome from './Chrome.svelte';
 	import Loading from './Loading.svelte';
@@ -42,18 +42,6 @@
 	afterNavigate(() => {
 		clearTimeout(timeout);
 	});
-
-	function change_theme(theme: Theme) {
-		if (!iframe) return;
-
-		try {
-			const url = new URL(iframe.src);
-
-			url.searchParams.set('theme', theme.current);
-
-			iframe.src = url.href;
-		} catch {}
-	}
 
 	let timeout: any;
 
@@ -97,7 +85,7 @@
 		parentNode?.removeChild(iframe);
 
 		const url = new URL(src);
-		url.searchParams.set('theme', $theme.current);
+		url.searchParams.set('theme', theme.current);
 
 		iframe.src = url.href;
 		parentNode?.appendChild(iframe);
@@ -112,8 +100,17 @@
 	$effect(() => {
 		if (adapter_state.base) set_iframe_src(adapter_state.base + (path = exercise.path));
 	});
+
 	$effect(() => {
-		change_theme($theme);
+		if (!iframe) return;
+
+		try {
+			const url = new URL(iframe.src);
+
+			url.searchParams.set('theme', theme.current);
+
+			iframe.src = url.href;
+		} catch {}
 	});
 </script>
 
