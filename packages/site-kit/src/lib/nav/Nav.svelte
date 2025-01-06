@@ -3,7 +3,8 @@ Top navigation bar for the application. It provides a slot for the left side, th
 -->
 
 <script lang="ts">
-	import { overlay_open, searching, on_this_page_open } from '../stores';
+	import { overlay_open, on_this_page_open } from '../stores';
+	import { search } from '../state/search.svelte';
 	import Icon from '../components/Icon.svelte';
 	import { page } from '$app/stores';
 	import ThemeToggle from '../components/ThemeToggle.svelte';
@@ -67,7 +68,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 
 <nav
 	class:visible
-	style:z-index={$overlay_open && ($searching || $on_this_page_open) ? 80 : null}
+	style:z-index={$overlay_open && (search.active || $on_this_page_open) ? 80 : null}
 	aria-label="Primary"
 >
 	<a class="home-link" href="/" title={home_title} aria-label="Svelte"></a>
@@ -145,7 +146,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 			aria-label="Search"
 			class="raised icon search"
 			onclick={() => {
-				$searching = true;
+				search.active = true;
 			}}
 		>
 			<Icon name="search" size={18} />

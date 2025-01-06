@@ -87,7 +87,8 @@
 	set_repl_context({
 		bundle,
 		toggleable,
-		workspace
+		workspace,
+		svelteVersion
 	});
 
 	let current_token: Symbol;
