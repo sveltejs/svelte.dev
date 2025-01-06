@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { afterNavigate } from '$app/navigation';
 	import type { Snippet } from 'svelte';
-	import { prefers_ts } from '../stores/prefers_ts';
+	import { code_preference } from '../state/code_preference';
 	import { fix_position } from '../actions/utils';
 
 	let { children }: { children: Snippet } = $props();
@@ -14,14 +14,14 @@
 		const inputs = container.querySelectorAll('.ts-toggle') as NodeListOf<HTMLInputElement>;
 
 		for (const input of inputs) {
-			input.checked = $prefers_ts;
+			input.checked = code_preference.current === 'typescript';
 		}
 	}
 
 	function toggle(e: Event) {
 		if ((e.target as HTMLElement).classList.contains('ts-toggle')) {
 			const input = e.target as HTMLInputElement;
-			$prefers_ts = input.checked;
+			code_preference.current = input.checked ? 'typescript' : 'javascript';
 			fix_position(input, update);
 		}
 	}
