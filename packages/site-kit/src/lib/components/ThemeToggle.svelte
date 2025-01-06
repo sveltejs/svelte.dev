@@ -1,21 +1,13 @@
 <script lang="ts">
-	import { MediaQuery } from 'svelte/reactivity';
-	import { Persisted } from '../state/Persisted.svelte';
-
-	const preference = new Persisted<'system' | 'light' | 'dark'>('sv:theme', 'system');
-	const query = new MediaQuery('prefers-color-scheme: dark');
-
-	let system = $derived<'dark' | 'light'>(query.current ? 'dark' : 'light');
-	let current = $derived(preference.current === 'system' ? system : preference.current);
+	import { theme } from '../state';
 
 	function toggle() {
-		const next = current === 'light' ? 'dark' : 'light';
-		preference.current = next === system ? 'system' : next;
+		theme.current = theme.current === 'light' ? 'dark' : 'light';
 	}
 
 	$effect(() => {
 		document.documentElement.classList.remove('light', 'dark');
-		document.documentElement.classList.add(current);
+		document.documentElement.classList.add(theme.current);
 	});
 </script>
 
@@ -39,7 +31,7 @@
 	onclick={toggle}
 	class="raised icon"
 	type="button"
-	aria-pressed={current === 'dark'}
+	aria-pressed={theme.current === 'dark'}
 	aria-label="Toggle dark mode"
 ></button>
 
