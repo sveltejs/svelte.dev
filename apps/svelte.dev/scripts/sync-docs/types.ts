@@ -89,7 +89,7 @@ export async function get_types(code: string, statements: ts.NodeArray<ts.Statem
 							.map(({ name, text }) => strip_origin(name ? `\`${name.escapedText}\`` : text))
 							.join('');
 					} else {
-						comment = strip_origin(jsDoc.comment);
+						comment = strip_origin(jsDoc.comment ?? '');
 					}
 
 					if (jsDoc.tags) {
