@@ -1,9 +1,8 @@
 import { page } from '$app/stores';
-import { persisted } from 'svelte-persisted-store';
-import { get } from 'svelte/store';
 import { fix_position } from './utils';
+import { Persisted } from '../state';
 
-const show_legacy = persisted('svelte:show-legacy', true);
+const show_legacy = new Persisted<'open' | 'closed'>('sv:show-legacy', 'open');
 
 export function legacy_details(node: HTMLElement) {
 	function update() {
@@ -16,7 +15,7 @@ export function legacy_details(node: HTMLElement) {
 		}
 
 		const details = node.querySelectorAll('details.legacy') as NodeListOf<HTMLDetailsElement>;
-		const show = get(show_legacy);
+		const show = show_legacy.current === 'open';
 
 		/** Whether the toggle was initiated by user action or `element.open = !element.open` */
 		let secondary = false;
@@ -29,7 +28,7 @@ export function legacy_details(node: HTMLElement) {
 				if (secondary) return;
 				secondary = true;
 
-				show_legacy.set(detail.open);
+				show_legacy.current = detail.open ? 'open' : 'closed';
 
 				fix_position(detail, () => {
 					for (const other of details) {
