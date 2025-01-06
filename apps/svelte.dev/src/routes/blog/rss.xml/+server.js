@@ -3,14 +3,6 @@ import { render_content } from '$lib/server/renderer';
 
 export const prerender = true;
 
-const months = ',Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec'.split(',');
-const days = 'Sun,Mon,Tue,Wed,Thu,Fri,Sat'.split(',')
-
-/** @param {string} str */
-function formatPubdate(str) {
-	return new Date(str).toUTCString();
-}
-
 /** @param {string} html */
 function escapeHTML(html) {
 	/** @type {{ [key: string]: string }} */
@@ -38,7 +30,7 @@ const get_rss = async (posts) => {
 			<link>https://svelte.dev/${post.slug}</link>
 			<author>${escapeHTML(post.metadata.author)}</author>
 			<description>${escapeHTML(await render_content(post.file, post.body))}</description>
-			<pubDate>${formatPubdate(/** @type {string} */ (post.file.split('/').pop()).slice(0, 10))}</pubDate>
+			<pubDate>${new Date(/** @type {string} */ (post.file.split('/').pop()).slice(0, 10)).toUTCString()}</pubDate>
 		</item>
 	`
 			)
