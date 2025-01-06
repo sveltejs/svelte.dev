@@ -4,7 +4,8 @@ It appears when the user clicks on the `Search` component or presses the corresp
 -->
 <script lang="ts">
 	import { afterNavigate } from '$app/navigation';
-	import { overlay_open, search_query, search_recent, searching } from '../stores';
+	import { overlay_open } from '../stores';
+	import { search } from '../state/search.svelte';
 	import { onMount, type Snippet } from 'svelte';
 	import { focusable_children, forcefocus, trap } from '../actions/focus.js';
 	import Icon from '../components/Icon.svelte';
@@ -24,7 +25,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 	let modal = $state() as HTMLElement;
 
 	// TODO proper types
-	let search: any = $state(null);
+	let searched: any = $state(null);
 	let recent_searches: any[] = $state([]);
 
 	let last_scroll_position: number | null = null;
@@ -46,7 +47,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 			}
 
 			if (type === 'results') {
-				search = payload;
+				searched = payload;
 			}
 
 			if (type === 'recents') {
@@ -69,8 +70,8 @@ It appears when the user clicks on the `Search` component or presses the corresp
 	});
 
 	async function close() {
-		if ($searching) {
-			$searching = false;
+		if (search.active) {
+			search.active = false;
 			const scroll = last_scroll_position || 0;
 			last_scroll_position = null;
 			document.body.style.position = '';
@@ -79,14 +80,14 @@ It appears when the user clicks on the `Search` component or presses the corresp
 			document.body.removeAttribute('tabindex');
 			window.scrollTo(0, scroll);
 
-			$search_query = '';
+			search.query = '';
 		}
 
-		search = null;
+		searched = null;
 	}
 
 	function navigate(href: string) {
-		$search_recent = [href, ...$search_recent.filter((x) => x !== href)];
+		search.recent = [href, ...search.recent.filter((x) => x !== href)];
 		close();
 	}
 
@@ -99,7 +100,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 				type: 'query',
 				id,
 				payload: {
-					query: $search_query,
+					query: search.query,
 					path: $page.url.pathname
 				}
 			});
@@ -108,16 +109,16 @@ It appears when the user clicks on the `Search` component or presses the corresp
 
 	$effect(() => {
 		if (ready) {
-			worker.postMessage({ type: 'recents', payload: $state.snapshot($search_recent) });
+			worker.postMessage({ type: 'recents', payload: search.recent });
 		}
 	});
 
 	$effect(() => {
-		$overlay_open = $searching;
+		$overlay_open = search.active;
 	});
 
 	$effect(() => {
-		if ($searching) {
+		if (search.active) {
 			last_scroll_position = window.scrollY;
 		}
 	});
@@ -127,12 +128,12 @@ It appears when the user clicks on the `Search` component or presses the corresp
 	onkeydown={(e) => {
 		if (e.key === 'k' && (navigator.platform === 'MacIntel' ? e.metaKey : e.ctrlKey)) {
 			e.preventDefault();
-			$search_query = '';
+			search.query = '';
 
-			if ($searching) {
+			if (search.active) {
 				close();
 			} else {
-				$searching = true;
+				search.active = true;
 			}
 		}
 
@@ -142,7 +143,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 	}}
 />
 
-{#if $searching && ready}
+{#if search.active && ready}
 	<div class="pseudo-overlay" aria-hidden="true" onclick={close}></div>
 
 	<!-- svelte-ignore a11y_no_static_element_interactions -->
@@ -178,16 +179,16 @@ It appears when the user clicks on the `Search` component or presses the corresp
 							}
 						}}
 						oninput={(e) => {
-							$search_query = e.currentTarget.value;
+							search.query = e.currentTarget.value;
 						}}
-						value={$search_query}
+						value={search.query}
 						{placeholder}
 						aria-describedby="search-description"
 						aria-label={placeholder}
 						spellcheck="false"
 					/>
 
-					<button aria-label="Clear" onclick={() => ($search_query = '')}>
+					<button aria-label="Clear" onclick={() => (search.query = '')}>
 						<Icon name="close" />
 					</button>
 				</div>
@@ -207,11 +208,11 @@ It appears when the user clicks on the `Search` component or presses the corresp
 			</span>
 
 			<div class="results">
-				{#if search?.query}
+				{#if searched?.query}
 					<div class="results-container">
 						<SearchResults
-							results={search.results}
-							query={search.query}
+							results={searched.results}
+							query={searched.query}
 							onselect={(href) => {
 								navigate(href);
 							}}
@@ -229,17 +230,17 @@ It appears when the user clicks on the `Search` component or presses the corresp
 					{#if recent_searches.length}
 						<div class="results-container">
 							<ul class="recent">
-								{#each recent_searches as search}
+								{#each recent_searches as result}
 									<li>
-										<a onclick={() => navigate(search.href)} href={search.href}>
-											{search.breadcrumbs.at(-1)}
+										<a onclick={() => navigate(result.href)} href={result.href}>
+											{result.breadcrumbs.at(-1)}
 										</a>
 
 										<button
 											class="raised icon"
 											aria-label="Delete"
 											onclick={(e) => {
-												$search_recent = $search_recent.filter((href) => href !== search.href);
+												search.recent = search.recent.filter((href) => href !== result.href);
 												e.stopPropagation();
 												e.preventDefault();
 											}}
@@ -258,7 +259,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 {/if}
 
 <div aria-live="assertive" class="visually-hidden">
-	{#if $searching && search?.results.length === 0}
+	{#if search.active && searched?.results.length === 0}
 		<p>
 			{#if no_results}
 				{@render no_results()}
