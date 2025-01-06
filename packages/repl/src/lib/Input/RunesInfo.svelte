@@ -5,7 +5,7 @@
 	let { runes }: { runes: boolean } = $props();
 
 	const { workspace, svelteVersion } = get_repl_context();
-	const majorVersion = Number(svelteVersion.split(".")[0]);
+	const majorVersion = Number(svelteVersion.split('.')[0]);
 </script>
 
 <Dropdown align="right">
@@ -19,8 +19,8 @@
 		<div class="popup">
 			{#if Number.isInteger(majorVersion) && majorVersion < 5}
 				<p>
-					<a href="/blog/runes">Runes</a> are available from Svelte 5 onwards, and this playground is
-					using Svelte {svelteVersion}.
+					<a href="/blog/runes">Runes</a> are available from Svelte 5 onwards, and this playground
+					is using Svelte {svelteVersion}.
 				</p>
 			{:else if workspace.current.name.endsWith('.svelte.js')}
 				<p>
