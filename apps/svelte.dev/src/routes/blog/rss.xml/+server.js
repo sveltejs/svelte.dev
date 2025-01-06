@@ -8,9 +8,7 @@ const days = 'Sun,Mon,Tue,Wed,Thu,Fri,Sat'.split(',')
 
 /** @param {string} str */
 function formatPubdate(str) {
-	const [y, m, d] = str.split('-');
-	const dayOfWeek = new Date(str).getDay();
-	return `${days[dayOfWeek]}, ${d} ${months[+m]} ${y} 12:00:00 +0000`;
+	return new Date(str).toUTCString();
 }
 
 /** @param {string} html */
