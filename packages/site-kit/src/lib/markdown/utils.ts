@@ -144,5 +144,5 @@ const parse = (str: string) => {
  * deployments and when developing locally
  */
 export function strip_origin(str: string) {
-	return str.replaceAll('https://svelte.dev', '');
+	return str && str.replaceAll('https://svelte.dev', '');
 }
