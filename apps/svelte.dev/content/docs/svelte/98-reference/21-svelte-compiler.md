@@ -22,8 +22,6 @@ import {
 
 The current version, as set in package.json.
 
-/docs/svelte-compiler#svelte-version
-
 <div class="ts-block">
 
 ```dts
