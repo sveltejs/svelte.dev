@@ -1,31 +1,45 @@
 <script lang="ts">
-	import { on } from 'svelte/events';
-	import { theme } from '../stores';
+	import { MediaQuery } from 'svelte/reactivity';
+	import { Persisted } from '../state/Persisted.svelte';
+
+	const preference = new Persisted<'system' | 'light' | 'dark'>('sv:theme', 'system');
+	const query = new MediaQuery('prefers-color-scheme: dark');
+
+	let system = $derived<'dark' | 'light'>(query.current ? 'dark' : 'light');
+	let current = $derived(preference.current === 'system' ? system : preference.current);
 
 	function toggle() {
-		const next = $theme.current === 'light' ? 'dark' : 'light';
-		const system = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-
-		$theme.preference = next === system ? 'system' : next;
-		$theme.current = next;
+		const next = current === 'light' ? 'dark' : 'light';
+		preference.current = next === system ? 'system' : next;
 	}
 
 	$effect(() => {
-		if ($theme.preference === 'system') {
-			const query = window.matchMedia('(prefers-color-scheme: dark)');
-
-			return on(query, 'change', (e) => {
-				$theme.current = e.matches ? 'dark' : 'light';
-			});
-		}
+		document.documentElement.classList.remove('light', 'dark');
+		document.documentElement.classList.add(current);
 	});
 </script>
+
+<svelte:head>
+	<script>
+		{
+			const theme = localStorage.getItem('sv:theme');
+
+			document.documentElement.classList.add(
+				theme === 'system'
+					? window.matchMedia('(prefers-color-scheme: dark)').matches
+						? 'dark'
+						: 'light'
+					: theme
+			);
+		}
+	</script>
+</svelte:head>
 
 <button
 	onclick={toggle}
 	class="raised icon"
 	type="button"
-	aria-pressed={$theme.current === 'dark'}
+	aria-pressed={current === 'dark'}
 	aria-label="Toggle dark mode"
 ></button>
 
