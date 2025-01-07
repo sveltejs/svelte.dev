@@ -498,6 +498,31 @@ async function convert_to_ts(js_code: string, indent = '', offset = '') {
 					if (code.original[end - 1] === ';') end -= 1;
 					code.appendLeft(end, ` satisfies ${satisfies}`);
 				}
+			} else if (
+				(ts.isPropertyAssignment(node) && ts.isArrowFunction(node.initializer)) ||
+				ts.isMethodDeclaration(node)
+			) {
+				if (type) {
+					throw new Error('@type on property methods does nothing');
+				}
+
+				const parameters = ts.isMethodDeclaration(node)
+					? node.parameters
+					: (node.initializer as ts.ArrowFunction).parameters;
+				for (let i = 0; i < parameters.length; i += 1) {
+					if (params[i] !== undefined) {
+						code.appendLeft(parameters[i].getEnd(), `: ${params[i]}`);
+					}
+				}
+
+				if (returns) {
+					const body = ts.isMethodDeclaration(node)
+						? node.body
+						: (node.initializer as ts.ArrowFunction).body;
+					let start = body!.getStart();
+					while (code.original[start - 1] !== ')') start -= 1;
+					code.appendLeft(start, `: ${returns}`);
+				}
 			} else {
 				throw new Error('Unhandled @type JsDoc->TS conversion: ' + js_code);
 			}
@@ -699,7 +724,7 @@ async function syntax_highlight({
 
 		try {
 			html = await codeToHtml(prelude + redacted, {
-				lang: 'ts',
+				lang: language,
 				theme,
 				transformers: check
 					? [
@@ -708,7 +733,9 @@ async function syntax_highlight({
 									compilerOptions: {
 										types: ['svelte', '@sveltejs/kit']
 									}
-								}
+								},
+								// by default, twoslash does not run on .js files, change that through this option
+								filter: () => true
 							})
 						]
 					: []
