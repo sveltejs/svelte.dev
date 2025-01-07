@@ -731,6 +731,8 @@ async function syntax_highlight({
 							transformerTwoslash({
 								twoslashOptions: {
 									compilerOptions: {
+										allowJs: true,
+										checkJs: true,
 										types: ['svelte', '@sveltejs/kit']
 									}
 								},
