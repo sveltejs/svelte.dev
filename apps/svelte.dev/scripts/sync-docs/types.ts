@@ -122,6 +122,16 @@ export async function get_types(code: string, statements: ts.NodeArray<ts.Statem
 				if (ts.isInterfaceDeclaration(statement) || ts.isClassDeclaration(statement)) {
 					if (statement.members.length > 0) {
 						for (const member of statement.members) {
+							// for some reason, the existence of any private fields results
+							// in a useless `#private;` being added to the definition
+							if (
+								member.name?.getText() === '#private' &&
+								ts.isPropertyDeclaration(member) &&
+								!member.initializer
+							) {
+								continue;
+							}
+
 							children.push(munge_type_element(member as any)!);
 						}
 
