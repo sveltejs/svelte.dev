@@ -5,7 +5,7 @@
 </script>
 
 <ul class="todos">
-	{#each todos as todo (todo)}
+	{#each todos as todo (todo.id)}
 		<li
 			class={{ done: todo.done }}
 			in:receive={{ key: todo.id }}
