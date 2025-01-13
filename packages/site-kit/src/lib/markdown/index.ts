@@ -15,6 +15,7 @@ export interface Declaration {
 	name: string;
 	comment: string;
 	deprecated?: string | null;
+	since?: string | null;
 	overloads: Array<{
 		snippet: string;
 		children: TypeElement[];

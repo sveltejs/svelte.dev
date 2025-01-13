@@ -4,16 +4,9 @@
 
 	let { runes }: { runes: boolean } = $props();
 
-	let open = $state(false);
-
-	const { workspace } = get_repl_context();
+	const { workspace, svelteVersion } = get_repl_context();
+	const majorVersion = Number(svelteVersion.split('.')[0]);
 </script>
-
-<svelte:window
-	onkeydown={(e) => {
-		if (e.key === 'Escape') open = false;
-	}}
-/>
 
 <Dropdown align="right">
 	<div class="target">
@@ -24,7 +17,12 @@
 
 	{#snippet dropdown()}
 		<div class="popup">
-			{#if workspace.current.name.endsWith('.svelte.js')}
+			{#if Number.isInteger(majorVersion) && majorVersion < 5}
+				<p>
+					<a href="/blog/runes">Runes</a> are available from Svelte 5 onwards, and this playground
+					is using Svelte {svelteVersion}.
+				</p>
+			{:else if workspace.current.name.endsWith('.svelte.js')}
 				<p>
 					Files with a <code>.svelte.js</code> extension are always in
 					<a href="/blog/runes">runes mode</a>.
@@ -106,12 +104,13 @@
 
 	.popup {
 		position: absolute;
-		right: -6rem;
+		right: -4rem;
 		width: 100vw;
 		max-width: 320px;
 		z-index: 9999;
 		background: var(--sk-bg-3);
 		padding: 1em;
+		border-radius: var(--sk-border-radius);
 
 		p {
 			font: var(--sk-font-ui-medium);

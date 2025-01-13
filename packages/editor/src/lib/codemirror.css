@@ -304,4 +304,9 @@
 			}
 		}
 	}
+
+	.highlight {
+		background: var(--sk-bg-highlight);
+		padding: 4px 0;
+	}
 }

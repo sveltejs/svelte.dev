@@ -9,7 +9,7 @@
 	}
 </script>
 
-<button class:expanded onclick={toggle}>{name}</button>
+<button class={{ expanded }} onclick={toggle}>{name}</button>
 
 {#if expanded}
 	<ul>

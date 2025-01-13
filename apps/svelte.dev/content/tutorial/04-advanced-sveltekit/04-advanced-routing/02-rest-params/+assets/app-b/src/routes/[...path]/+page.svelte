@@ -1,9 +1,9 @@
 <script>
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 
 	let words = ['how', 'deep', 'does', 'the', 'rabbit', 'hole', 'go'];
 
-	let depth = $derived($page.params.path.split('/').filter(Boolean).length);
+	let depth = $derived(page.params.path.split('/').filter(Boolean).length);
 	let next = $derived(depth === words.length ? '/' : `/${words.slice(0, depth + 1).join('/')}`);
 </script>
 

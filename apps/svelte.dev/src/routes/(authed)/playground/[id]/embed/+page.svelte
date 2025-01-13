@@ -1,17 +1,16 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
 	import { afterNavigate, replaceState } from '$app/navigation';
-	import { theme } from '@sveltejs/site-kit/stores';
+	import { theme } from '@sveltejs/site-kit/state';
 	import { Repl } from '@sveltejs/repl';
 	import { mapbox_setup } from '../../../../../config.js';
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 
 	let { data } = $props();
 
 	let repl = $state() as ReturnType<typeof Repl>;
 
-	// svelte-ignore non_reactive_update
-	let version = $page.url.searchParams.get('version') || 'latest';
+	let version = page.url.searchParams.get('version') || 'latest';
 	let is_pr_or_commit_version = version.startsWith('pr-') || version.startsWith('commit-');
 
 	if (version !== 'local' && !is_pr_or_commit_version) {
@@ -51,7 +50,7 @@
 			{relaxed}
 			can_escape
 			injectedJS={mapbox_setup}
-			previewTheme={$theme.current}
+			previewTheme={theme.current}
 			embedded
 		/>
 	{/if}

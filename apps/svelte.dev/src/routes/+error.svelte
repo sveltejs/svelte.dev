@@ -21,7 +21,7 @@
 					If you were expecting to find something here, please drop by the
 					<a href="/chat"> Discord chatroom </a>
 					and let us know, or raise an issue on
-					<a href="https://github.com/sveltejs/sites">GitHub</a>. Thanks!
+					<a href="https://github.com/sveltejs/svelte.dev/issues">GitHub</a>. Thanks!
 				</p>
 			{:else}
 				<h1>Yikes!</h1>

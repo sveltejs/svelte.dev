@@ -10,20 +10,17 @@
 	interface Props {
 		workspace: Workspace;
 		ast: Ast;
-		autoscroll?: boolean;
+		active?: boolean;
 	}
 
-	let { workspace, ast, autoscroll = true }: Props = $props();
+	let { workspace, ast, active = true }: Props = $props();
 
-	// $cursor_index may go over the max since ast computation is usually slower.
-	// clamping this helps prevent the collapse view flashing
-	// TODO reimplement
-	let max_cursor_index = 0;
-	// $: max_cursor_index = !ast ? $cursorIndex : Math.min($cursorIndex, get_ast_max_end(ast));
+	let cursor = $state<number | null>(0);
 
-	let path_nodes = $derived(find_deepest_path(max_cursor_index, [ast]) || []);
+	let path_nodes = $derived(find_deepest_path(cursor, [ast]) || []);
 
-	function find_deepest_path(cursor: number, paths: Ast[]): Ast[] | undefined {
+	function find_deepest_path(cursor: number | null, paths: Ast[]): Ast[] | undefined {
+		if (cursor === null) return;
 		const value = paths[paths.length - 1];
 
 		if (!value) return;
@@ -47,17 +44,24 @@
 		}
 	}
 
-	function get_ast_max_end(ast: Ast) {
-		let max_end = 0;
+	$effect(() => {
+		if (active) {
+			workspace.onhover((pos) => {
+				cursor = pos;
+			});
+		}
+	});
 
-		for (const node of Object.values(ast) as any[]) {
-			if (node && typeof node.end === 'number' && node.end > max_end) {
-				max_end = node.end;
-			}
+	$effect(() => {
+		if (active) {
+			const leaf = path_nodes.at(-1) ?? null;
+			workspace.highlight_range(leaf);
 		}
 
-		return max_end;
-	}
+		return () => {
+			workspace.highlight_range(null);
+		};
+	});
 </script>
 
 <div class="ast-view">
@@ -65,7 +69,20 @@
 		<code>
 			{#if typeof ast === 'object'}
 				<ul>
-					<AstNode value={ast} {path_nodes} {autoscroll} />
+					<AstNode
+						value={ast}
+						{path_nodes}
+						{active}
+						onhover={(node) => {
+							if (
+								node === null ||
+								(node.type !== undefined && node.start !== undefined && node.end !== undefined)
+							) {
+								cursor = node && node.start + 1;
+								workspace.highlight_range(node);
+							}
+						}}
+					/>
 				</ul>
 			{:else}
 				<p>No AST available</p>

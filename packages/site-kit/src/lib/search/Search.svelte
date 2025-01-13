@@ -3,7 +3,7 @@ Renders a search widget which when clicked (or the corresponding keyboard shortc
 -->
 <script lang="ts">
 	import { BROWSER } from 'esm-env';
-	import { search_query, searching } from '../stores/search';
+	import { search } from '../state/search.svelte';
 
 	let { q = '', label = 'Search' }: { q?: string; label?: string } = $props();
 </script>
@@ -12,20 +12,20 @@ Renders a search widget which when clicked (or the corresponding keyboard shortc
 	<input
 		value={q}
 		oninput={(e) => {
-			$search_query = e.currentTarget.value;
-			$searching = true;
+			search.query = e.currentTarget.value;
+			search.active = true;
 			e.currentTarget.value = '';
 			e.currentTarget.blur();
 		}}
 		onmousedown={(event) => {
 			event.preventDefault();
 			event.currentTarget.blur();
-			$searching = true;
+			search.active = true;
 		}}
 		ontouchend={(event) => {
 			event.preventDefault();
 			event.currentTarget.blur();
-			$searching = true;
+			search.active = true;
 		}}
 		type="search"
 		name="q"

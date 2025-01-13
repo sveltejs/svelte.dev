@@ -1,9 +1,9 @@
 <script>
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 </script>
 
-<div class="color" style="--color: #{$page.params.color}">
-	<span>#{$page.params.color}</span>
+<div class="color" style="--color: #{page.params.color}">
+	<span>#{page.params.color}</span>
 </div>
 
 <style>

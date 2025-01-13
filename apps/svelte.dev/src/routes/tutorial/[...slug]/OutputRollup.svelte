@@ -4,7 +4,7 @@
 	import Viewer from '@sveltejs/repl/viewer';
 	// @ts-expect-error TODO types
 	import Console, { type Log } from '@sveltejs/repl/console';
-	import { theme } from '@sveltejs/site-kit/stores';
+	import { theme } from '@sveltejs/site-kit/state';
 	import Chrome from './Chrome.svelte';
 	import Loading from './Loading.svelte';
 	import { adapter_state, update } from './adapter.svelte';
@@ -35,9 +35,9 @@
 		<Viewer
 			relaxed
 			can_escape
-			onLog={(l: Log[]) => logs = l}
+			onLog={(l: Log[]) => (logs = l)}
 			{bundle}
-			theme={$theme.current}
+			theme={theme.current}
 			injectedCSS="@import '/tutorial/shared.css';"
 		/>
 	{/if}

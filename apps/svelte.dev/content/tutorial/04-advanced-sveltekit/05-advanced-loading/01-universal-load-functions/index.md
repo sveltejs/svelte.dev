@@ -20,16 +20,16 @@ We can now use the `component` returned from these `load` functions like any oth
 ```svelte
 /// file: src/routes/+layout.svelte
 <nav
-	class:has-color={!!$page.data.color}
-	style:background={$page.data.color ?? 'var(--bg-2)'}
+	class={[page.data.color && 'has-color']}
+	style:background={page.data.color ?? 'var(--bg-2)'}
 >
 	<a href="/">home</a>
 	<a href="/red">red</a>
 	<a href="/green">green</a>
 	<a href="/blue">blue</a>
 
-+++	{#if $page.data.component}
-		<svelte:component this={$page.data.component} />
++++	{#if page.data.component}
+		<page.data.component />
 	{/if}+++
 </nav>
 ```

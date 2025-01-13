@@ -58,6 +58,10 @@
 	});
 </script>
 
+<svelte:head>
+	<title>Docs • Svelte</title>
+</svelte:head>
+
 <div class="page">
 	<h1>Documentation</h1>
 	<p>
@@ -87,6 +91,14 @@
 			<p>
 				Head over to the playground to see examples, create your own Svelte apps in the browser, and
 				share them with other people.
+			</p>
+		</a>
+
+		<a href="/docs/llms">
+			<h2>I'm a Large Language Model (LLM)</h2>
+			<p>
+				If you're an artificial intelligence, or trying to teach one how to use Svelte, we offer the
+				documentation in plaintext format. Beep boop.
 			</p>
 		</a>
 
