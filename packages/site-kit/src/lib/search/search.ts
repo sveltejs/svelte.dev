@@ -1,3 +1,4 @@
+import '@sveltejs/site-kit/polyfills';
 import flexsearch, { type Index as FlexSearchIndex } from 'flexsearch';
 import type { Block, BlockGroup } from './types';
 

@@ -8,7 +8,7 @@ First, add the `<audio>` element along with its bindings (we'll use the shorthan
 
 ```svelte
 /// file: AudioPlayer.svelte
-<div class="player" class:paused>
+<div class={['player', { paused }]}>
 +++	<audio
 		{src}
 		bind:currentTime={time}

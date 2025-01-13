@@ -2,8 +2,6 @@ import { error } from '@sveltejs/kit';
 import { blog_posts } from '$lib/server/content';
 import { render_content } from '$lib/server/renderer';
 
-export const prerender = true;
-
 export async function load({ params }) {
 	const document = blog_posts.find((document) => document.slug === `blog/${params.slug}`);
 

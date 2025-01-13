@@ -19,7 +19,7 @@
 	}
 </script>
 
-<div class="player" class:paused>
+<div class={['player', { paused }]}>
 	<audio
 		{src}
 		bind:currentTime={time}

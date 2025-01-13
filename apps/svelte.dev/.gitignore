@@ -6,6 +6,8 @@
 /src/routes/_home/Supporters/contributors.js
 /src/routes/_home/Supporters/donors.jpg
 /src/routes/_home/Supporters/donors.js
+/scripts/svelte-template
+/static/svelte-template.json
 
 # git-repositories of synced docs go here
 /repos/

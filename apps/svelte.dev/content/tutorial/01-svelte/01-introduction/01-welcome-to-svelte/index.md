@@ -4,7 +4,7 @@ title: Welcome to Svelte
 
 Welcome to the Svelte tutorial! This will teach you everything you need to know to easily build web applications of all sizes, with high performance and a small footprint.
 
-You can also consult the [API docs](https://svelte.dev/docs) and visit the [playground](https://svelte.dev/playground), or — if you're impatient to start hacking on your machine locally — create a project with `npx sv create`.
+You can also consult the [API docs](/docs) and visit the [playground](/playground), or — if you're impatient to start hacking on your machine locally — create a project with `npx sv create`.
 
 ## What is Svelte?
 

@@ -245,6 +245,7 @@ export function completion_for_javascript(context, selected, files) {
 			'svelte/legacy',
 			'svelte/motion',
 			'svelte/reactivity',
+			'svelte/reactivity/window',
 			'svelte/store',
 			'svelte/transition'
 		];

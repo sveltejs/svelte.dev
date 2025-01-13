@@ -1,5 +1,5 @@
 <script>
-	import { navigating } from '$app/stores';
+	import { navigating } from '$app/state';
 
 	let { children } = $props();
 
@@ -8,10 +8,10 @@
 	let end = $state();
 
 	$effect(() => {
-		if ($navigating) {
+		if (navigating.to) {
 			start = Date.now();
 			end = null;
-			previous = $navigating;
+			previous = navigating;
 		} else {
 			end = Date.now();
 		}

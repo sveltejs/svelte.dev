@@ -23,6 +23,7 @@
 		injectedCSS?: string;
 		previewTheme?: 'light' | 'dark';
 		onchange?: () => void;
+		download?: () => void;
 	}
 
 	let {
@@ -37,7 +38,8 @@
 		injectedJS = '',
 		injectedCSS = '',
 		previewTheme = 'light',
-		onchange = () => {}
+		onchange = () => {},
+		download
 	}: Props = $props();
 
 	// TODO pass in real data
@@ -85,10 +87,8 @@
 	set_repl_context({
 		bundle,
 		toggleable,
-
-		migrate,
-
-		workspace
+		workspace,
+		svelteVersion
 	});
 
 	let current_token: Symbol;
@@ -175,25 +175,29 @@
 			min="100px"
 			max="-4.1rem"
 		>
-			<section slot="a">
-				<ComponentSelector {runes} {onchange} {workspace} {can_migrate} />
+			{#snippet a()}
+				<section>
+					<ComponentSelector {runes} {onchange} {workspace} {can_migrate} {migrate} {download} />
 
-				<Editor {workspace} />
-			</section>
+					<Editor {workspace} />
+				</section>
+			{/snippet}
 
-			<section slot="b" style="height: 100%;">
-				<Output
-					status={status_visible ? status : null}
-					{embedded}
-					{relaxed}
-					{can_escape}
-					{injectedJS}
-					{injectedCSS}
-					{previewTheme}
-					{workspace}
-					runtimeError={status_visible ? runtime_error : null}
-				/>
-			</section>
+			{#snippet b()}
+				<section>
+					<Output
+						status={status_visible ? status : null}
+						{embedded}
+						{relaxed}
+						{can_escape}
+						{injectedJS}
+						{injectedCSS}
+						{previewTheme}
+						{workspace}
+						runtimeError={status_visible ? runtime_error : null}
+					/>
+				</section>
+			{/snippet}
 		</SplitPane>
 	</div>
 
@@ -237,7 +241,7 @@
 				}
 			}
 
-			[data-pane='main'] > .divider::after {
+			[data-pane='main'] > svelte-split-pane-divider::after {
 				height: calc(100% - var(--sk-pane-controls-height));
 				top: var(--sk-pane-controls-height);
 			}
@@ -269,7 +273,7 @@
 				--pos: 5.4rem !important;
 			}
 
-			[data-pane] .divider {
+			[data-pane] svelte-split-pane-divider {
 				cursor: default;
 			}
 		}

@@ -62,9 +62,9 @@
 		['$app-paths-assets', ['`$app/paths#assets`', '/docs/kit/$app-paths#assets']],
 		['$app-paths-base', ['`$app/paths#base`', '/docs/kit/$app-paths#base']],
 		['$app-paths-resolveroute', ['`$app-paths#resolveRoute`', '/docs/kit/$app-paths#resolveRoute']],
-		['$app-server-read', ['`$app/paths#read`', '/docs/kit/$app-paths#read']],
+		['$app-server-read', ['`$app/server#read`', '/docs/kit/$app-server#read']],
 		['$app-stores-getstores', ['`$app/stores#getStores`', '/docs/kit/$app-stores#getStores']],
-		['$app-stores-navigating', ['`$app/stores#assets`', '/docs/kit/$app-stores#assets']],
+		['$app-stores-navigating', ['`$app/stores#navigating`', '/docs/kit/$app-stores#navigating']],
 		['$app-stores-page', ['`$app/stores#page`', '/docs/kit/$app-stores#page']],
 		['$app-stores-updated', ['`$app/stores#updated`', '/docs/kit/$app-stores#updated']],
 		['$lib-$lib-server', ['`$lib`', '/docs/kit/$lib']],
@@ -76,14 +76,20 @@
 			['`$service-worker#prerendered`', '/docs/kit/$service-worker#prerendered']
 		],
 		['$service-worker-version', ['`$service-worker#version`', '/docs/kit/$service-worker#version']],
-		['sveltejs-kit-version', ['`@sveltejs/kit#VERSION`', '/@sveltejs-kit#VERSION']],
-		['sveltejs-kit-error', ['`@sveltejs/kit#error`', '/@sveltejs-kit#error']],
-		['sveltejs-kit-fail', ['`@sveltejs/kit#fail`', '/@sveltejs-kit#fail']],
-		['sveltejs-kit-ishttperror', ['`@sveltejs/kit#isHttpError`', '/@sveltejs-kit#isHttpError']],
-		['sveltejs-kit-isredirect', ['`@sveltejs/kit#isRedirect`', '/@sveltejs-kit#isRedirect']],
-		['sveltejs-kit-json', ['`@sveltejs/kit#json`', '/@sveltejs-kit#json']],
-		['sveltejs-kit-redirect', ['`@sveltejs/kit#redirect`', '/@sveltejs-kit#redirect']],
-		['sveltejs-kit-text', ['`@sveltejs/kit#text`', '/@sveltejs-kit#text']],
+		['sveltejs-kit-version', ['`@sveltejs/kit#VERSION`', '/docs/kit/@sveltejs-kit#VERSION']],
+		['sveltejs-kit-error', ['`@sveltejs/kit#error`', '/docs/kit/@sveltejs-kit#error']],
+		['sveltejs-kit-fail', ['`@sveltejs/kit#fail`', '/docs/kit/@sveltejs-kit#fail']],
+		[
+			'sveltejs-kit-ishttperror',
+			['`@sveltejs/kit#isHttpError`', '/docs/kit/@sveltejs-kit#isHttpError']
+		],
+		[
+			'sveltejs-kit-isredirect',
+			['`@sveltejs/kit#isRedirect`', '/docs/kit/@sveltejs-kit#isRedirect']
+		],
+		['sveltejs-kit-json', ['`@sveltejs/kit#json`', '/docs/kit/@sveltejs-kit#json']],
+		['sveltejs-kit-redirect', ['`@sveltejs/kit#redirect`', '/docs/kit/@sveltejs-kit#redirect']],
+		['sveltejs-kit-text', ['`@sveltejs/kit#text`', '/docs/kit/@sveltejs-kit#text']],
 		[
 			'sveltejs-kit-hooks-sequence',
 			['`@sveltejs/kit/hooks#sequence`', '/docs/kit/@sveltejs-kit-hooks#sequence']

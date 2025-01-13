@@ -35,3 +35,11 @@ When writing content for the tutorial, you need to be aware of the differences o
 ### Dependencies
 
 If you look in the site's package.json you'll notice several dependencies that don't appear to be used, such as `@testing-library/svelte`. These are present because they're referenced in the docs, and Twoslash needs to be able to find type definitions in order to typecheck snippets. Installing the dependencies was deemed preferable to faking it with `declare module`, since we're liable to end up with fictional types that way.
+
+### Prerendering
+
+Most of the site is prerendered. Since that involves some fairly expensive work, it can take a while. To build the site _without_ prerendering — for example, because you need to debug an issue that's affecting production builds — set the `PRERENDER` environment variable to `false`:
+
+```bash
+PRERENDER=false pnpm build
+```

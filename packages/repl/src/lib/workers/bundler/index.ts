@@ -1,3 +1,4 @@
+import '@sveltejs/site-kit/polyfills';
 import '../patch_window';
 import { sleep } from '../../utils';
 import { rollup } from '@rollup/browser';
@@ -17,6 +18,7 @@ import type { Warning } from '../../types';
 import type { CompileError, CompileOptions, CompileResult } from 'svelte/compiler';
 import type { File } from 'editor';
 import { parseTar, type FileDescription } from 'tarparser';
+import { max } from './semver';
 
 // hack for magic-string and rollup inline sourcemaps
 // do not put this into a separate module and import it, would be treeshaken in prod
@@ -54,6 +56,9 @@ async function init(v: string, packages_url: string) {
 			const url = `${svelte_url}/${file.name.slice('package/'.length)}`;
 			FETCH_CACHE.set(url, Promise.resolve({ url, body: file.text }));
 		}
+	} else if (v === 'local') {
+		version = v;
+		svelte_url = `/svelte`;
 	} else {
 		const response = await fetch(`${packages_url}/svelte@${v}/package.json`);
 		const pkg = await response.json();
@@ -176,7 +181,7 @@ async function resolve_from_pkg(
 		try {
 			const resolved = resolve.exports(pkg, subpath, {
 				browser: true,
-				conditions: ['svelte', 'development']
+				conditions: ['svelte', 'module', 'browser', 'development']
 			});
 
 			return resolved?.[0];
@@ -228,6 +233,8 @@ async function resolve_from_pkg(
 
 	return subpath;
 }
+
+const versions = Object.create(null);
 
 async function get_bundle(
 	uid: number,
@@ -287,10 +294,46 @@ async function get_bundle(
 				}
 
 				const pkg_name = match[1];
+
+				let default_version = 'latest';
+
+				if (importer?.startsWith(packages_url)) {
+					const path = importer.slice(packages_url.length + 1);
+					const parts = path.split('/').slice(0, 2);
+					if (!parts[0].startsWith('@')) parts.pop();
+
+					const importer_name_and_version = parts.join('/');
+					const importer_name = importer_name_and_version.slice(
+						0,
+						importer_name_and_version.indexOf('@', 1)
+					);
+
+					const default_versions = (versions[importer_name_and_version] ??= Object.create(null));
+
+					if (!default_versions[pkg_name]) {
+						const pkg_json_url = `${packages_url}/${importer_name_and_version}/package.json`;
+						const pkg_json = (await fetch_if_uncached(pkg_json_url, uid))?.body;
+						const pkg = JSON.parse(pkg_json ?? '""');
+
+						if (importer_name === pkg_name) {
+							default_versions[pkg_name] = pkg.version;
+						} else {
+							const version =
+								pkg.devDependencies?.[pkg_name] ??
+								pkg.peerDependencies?.[pkg_name] ??
+								pkg.dependencies?.[pkg_name];
+
+							default_versions[pkg_name] = max(version);
+						}
+					}
+
+					default_version = default_versions[pkg_name];
+				}
+
 				const pkg_url =
 					pkg_name === 'svelte'
 						? `${svelte_url}/package.json`
-						: `${packages_url}/${pkg_name}/package.json`;
+						: `${packages_url}/${pkg_name}@${match[2] ?? default_version}/package.json`;
 				const subpath = `.${match[3] ?? ''}`;
 
 				// if this was imported by one of our files, add it to the `imports` set

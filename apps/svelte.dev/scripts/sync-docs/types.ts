@@ -76,6 +76,7 @@ export async function get_types(code: string, statements: ts.NodeArray<ts.Statem
 				let start = statement.pos;
 				let comment = '';
 				let deprecated_notice: string | null = null;
+				let since_notice: string | null = null;
 
 				// @ts-ignore i think typescript is bad at typescript
 				if (statement.jsDoc) {
@@ -85,16 +86,20 @@ export async function get_types(code: string, statements: ts.NodeArray<ts.Statem
 					// `@link` JSDoc tags (and maybe others?) turn this property into an array, which we need to join manually
 					if (Array.isArray(jsDoc.comment)) {
 						comment = (jsDoc.comment as any[])
-							.map(({ name, text }) => (name ? `\`${name.escapedText}\`` : text))
+							.map(({ name, text }) => strip_origin(name ? `\`${name.escapedText}\`` : text))
 							.join('');
 					} else {
-						comment = jsDoc.comment;
+						comment = strip_origin(jsDoc.comment ?? '');
 					}
 
 					if (jsDoc.tags) {
 						for (const tag of jsDoc.tags) {
 							if (tag.tagName.escapedText === 'deprecated') {
-								deprecated_notice = tag.comment;
+								deprecated_notice = tag.comment && strip_origin(tag.comment);
+							}
+
+							if (tag.tagName.escapedText === 'since') {
+								since_notice = tag.comment;
 							}
 
 							if (tag.tagName.escapedText === 'example') {
@@ -117,6 +122,16 @@ export async function get_types(code: string, statements: ts.NodeArray<ts.Statem
 				if (ts.isInterfaceDeclaration(statement) || ts.isClassDeclaration(statement)) {
 					if (statement.members.length > 0) {
 						for (const member of statement.members) {
+							// for some reason, the existence of any private fields results
+							// in a useless `#private;` being added to the definition
+							if (
+								member.name?.getText() === '#private' &&
+								ts.isPropertyDeclaration(member) &&
+								!member.initializer
+							) {
+								continue;
+							}
+
 							children.push(munge_type_element(member as any)!);
 						}
 
@@ -152,7 +167,9 @@ export async function get_types(code: string, statements: ts.NodeArray<ts.Statem
 					.trim();
 
 				const collection =
-					ts.isVariableStatement(statement) || ts.isFunctionDeclaration(statement)
+					ts.isVariableStatement(statement) ||
+					ts.isClassDeclaration(statement) ||
+					ts.isFunctionDeclaration(statement)
 						? exports
 						: types;
 
@@ -172,6 +189,7 @@ export async function get_types(code: string, statements: ts.NodeArray<ts.Statem
 						name,
 						comment: cleanup_comment(comment),
 						deprecated: deprecated_notice,
+						since: since_notice,
 						overloads: []
 					};
 
@@ -272,7 +290,7 @@ function munge_type_element(member: ts.TypeElement, depth = 1): TypeElement | un
 }
 
 function cleanup_comment(comment: string = '') {
-	return comment
+	return strip_origin(comment)
 		.replace(/\/\/\/ type: (.+)/g, '/** @type {$1} */')
 		.replace(/\/\/\/ errors: (.+)/g, '// @errors: $1') // see read_d_ts_file
 		.replace(/^(  )+/gm, (match: string, spaces: string) => {

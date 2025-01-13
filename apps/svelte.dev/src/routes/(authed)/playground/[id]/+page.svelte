@@ -1,13 +1,15 @@
 <script lang="ts">
+	// @ts-expect-error no types
+	import * as doNotZip from 'do-not-zip';
 	import { browser } from '$app/environment';
 	import { afterNavigate, goto, replaceState } from '$app/navigation';
 	import type { Gist } from '$lib/db/types';
 	import { Repl } from '@sveltejs/repl';
-	import { theme } from '@sveltejs/site-kit/stores';
+	import { theme } from '@sveltejs/site-kit/state';
 	import { mapbox_setup } from '../../../../config.js';
 	import AppControls from './AppControls.svelte';
 	import { compress_and_encode_text, decode_and_decompress_text } from './gzip.js';
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import type { File } from 'editor';
 
 	let { data } = $props();
@@ -20,12 +22,12 @@
 	let setting_hash: any = null;
 
 	// svelte-ignore non_reactive_update
-	let version = $page.url.searchParams.get('version') || 'latest';
+	let version = page.url.searchParams.get('version') || 'latest';
 	let is_pr_or_commit_version = version.startsWith('pr-') || version.startsWith('commit-');
 
 	// Hashed URLs are less safe (we can't delete malicious REPLs), therefore
 	// don't allow links to escape the sandbox restrictions
-	const can_escape = browser && !$page.url.hash;
+	const can_escape = browser && !page.url.hash;
 
 	if (version !== 'local' && !is_pr_or_commit_version) {
 		$effect(() => {
@@ -69,8 +71,8 @@
 
 		if (!hash && !saved) {
 			repl?.set({
-				// TODO make this munging unnecessary
-				files: structuredClone(data.gist.components).map(munge)
+				// TODO make this munging unnecessary (using JSON instead of structuredClone for better browser compat)
+				files: JSON.parse(JSON.stringify(data.gist.components)).map(munge)
 			});
 
 			modified = false;
@@ -111,6 +113,43 @@
 		if (hash) {
 			set_hash();
 		}
+	}
+
+	async function download() {
+		const { files: components, imports } = repl.toJSON();
+
+		const files: Array<{ path: string; data: string }> = await (
+			await fetch('/svelte-template.json')
+		).json();
+
+		if (imports.length > 0) {
+			const idx = files.findIndex(({ path }) => path === 'package.json');
+			const pkg = JSON.parse(files[idx].data);
+			const { devDependencies } = pkg;
+			imports.forEach((mod) => {
+				const match = /^(@[^/]+\/)?[^@/]+/.exec(mod)!;
+				devDependencies[match[0]] = 'latest';
+			});
+			pkg.devDependencies = devDependencies;
+			files[idx].data = JSON.stringify(pkg, null, '  ');
+		}
+
+		files.push(
+			...components.map((component) => ({
+				path: `src/routes/${component.name}`,
+				data: (component as File).contents
+			}))
+		);
+
+		const url = URL.createObjectURL(doNotZip.toBlob(files));
+		const link = document.createElement('a');
+		link.href = url;
+		link.download = 'svelte-app.zip';
+		link.style.display = 'none';
+		document.body.appendChild(link);
+		link.click();
+		URL.revokeObjectURL(url);
+		link.remove();
 	}
 
 	async function update_hash() {
@@ -200,7 +239,8 @@
 				{can_escape}
 				injectedJS={mapbox_setup}
 				{onchange}
-				previewTheme={$theme.current}
+				{download}
+				previewTheme={theme.current}
 			/>
 		</div>
 	{/if}

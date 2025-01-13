@@ -1,11 +1,13 @@
 <script lang="ts">
 	import { marked } from 'marked';
+	import { locate } from 'locate-character';
 	import AstView from './AstView.svelte';
 	import CompilerOptions from './CompilerOptions.svelte';
 	import PaneWithPanel from './PaneWithPanel.svelte';
 	import Viewer from './Viewer.svelte';
 	import { Editor, Workspace, type File } from 'editor';
-	import { untrack } from 'svelte';
+	import { tick, untrack } from 'svelte';
+	import { decode, type SourceMapSegment } from '@jridgewell/sourcemap-codec';
 
 	interface Props {
 		status: string | null;
@@ -81,6 +83,103 @@
 			css_workspace.update_file(css);
 		});
 	});
+
+	$effect(() => {
+		if (markdown) return;
+
+		if (view === 'js' || view === 'css') {
+			const v = view; // so that TS doesn't think it could become something different
+			const output = v === 'js' ? js_workspace : css_workspace;
+
+			const highlight = (
+				line: number,
+				a: SourceMapSegment,
+				b: SourceMapSegment,
+				scroll_input: boolean,
+				scroll_output: boolean
+			) => {
+				const split = {
+					original: workspace.current!.contents.split('\n'),
+					generated: current!.result![v]!.code.split('\n')
+				};
+
+				const original = {
+					start: split.original.slice(0, a[2]).join('\n').length + 1 + a[3]!,
+					end: split.original.slice(0, b[2]).join('\n').length + 1 + b[3]!
+				};
+
+				const generated = {
+					start: split.generated.slice(0, line).join('\n').length + 1 + a[0],
+					end: split.generated.slice(0, line).join('\n').length + 1 + b[0]
+				};
+
+				workspace.highlight_range(original, scroll_input);
+				output.highlight_range(generated, scroll_output);
+			};
+
+			const clear = () => {
+				workspace.highlight_range(null);
+				output.highlight_range(null);
+			};
+
+			const from_input = (pos: number, should_scroll: boolean) => {
+				if (!current?.result?.[v]?.map) return;
+
+				const mappings = decode(current.result[v].map.mappings);
+
+				const { line, column } = locate(workspace.current.contents, pos)!;
+
+				for (let i = 0; i < mappings.length; i += 1) {
+					const segments = mappings[i];
+					for (let j = 0; j < segments.length - 1; j += 1) {
+						// segment is [generated_column, source_index, original_line, original_column]
+						const a = segments[j];
+						const b = segments[j + 1];
+
+						if (a[2]! > line) continue;
+						if (b[2]! < line) continue;
+
+						if (a[2]! === line && a[3]! > column) continue;
+						if (b[2]! === line && b[3]! < column) continue;
+
+						// if we're still here, we have a match
+						highlight(i, a, b, false, should_scroll);
+						return;
+					}
+
+					clear();
+				}
+			};
+
+			const from_output = (pos: number, should_scroll: boolean) => {
+				if (!current?.result?.[v]?.map) return;
+
+				const mappings = decode(current.result[v].map.mappings);
+
+				const { line, column } = locate(current.result[v].code, pos)!;
+
+				const segments = mappings[line];
+
+				for (let i = 0; i < segments.length - 1; i += 1) {
+					const a = segments[i];
+					const b = segments[i + 1];
+
+					if (a[0] <= column && b[0] >= column) {
+						highlight(line, a, b, should_scroll, false);
+						return;
+					}
+
+					clear();
+				}
+			};
+
+			workspace.onhover((pos) => (pos === null ? clear() : from_input(pos, false)));
+			workspace.onselect((from, to) => from === to && from_input(from, true));
+
+			output.onhover((pos) => (pos === null ? clear() : from_output(pos, false)));
+			output.onselect((from, to) => from === to && from_output(from, true));
+		}
+	});
 </script>
 
 <div class="view-toggle">
@@ -112,14 +211,14 @@
 	{#if embedded}
 		<Editor workspace={js_workspace} />
 	{:else}
-		<PaneWithPanel pos="50%" panel="Compiler options">
-			<div slot="main">
+		<PaneWithPanel min="-18rem" pos="-18rem" panel="Compiler options">
+			{#snippet main()}
 				<Editor workspace={js_workspace} />
-			</div>
+			{/snippet}
 
-			<div slot="panel-body">
+			{#snippet body()}
 				<CompilerOptions {workspace} />
-			</div>
+			{/snippet}
 		</PaneWithPanel>
 	{/if}
 </div>
@@ -132,7 +231,7 @@
 <!-- ast output -->
 {#if current?.result}
 	<div class="tab-content" class:visible={!is_markdown && view === 'ast'}>
-		<AstView {workspace} ast={current.result.ast} autoscroll={!is_markdown && view === 'ast'} />
+		<AstView {workspace} ast={current.result.ast} active={!is_markdown && view === 'ast'} />
 	</div>
 {/if}
 
