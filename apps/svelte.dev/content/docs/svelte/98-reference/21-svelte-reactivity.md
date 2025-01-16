@@ -102,15 +102,6 @@ constructor(...params: any[]);
 ```
 
 <div class="ts-block-property-details"></div>
-</div>
-
-<div class="ts-block-property">
-
-```dts
-#private;
-```
-
-<div class="ts-block-property-details"></div>
 </div></div>
 
 
@@ -136,15 +127,6 @@ constructor(value?: Iterable<readonly [K, V]> | null | undefined);
 
 ```dts
 set(key: K, value: V): this;
-```
-
-<div class="ts-block-property-details"></div>
-</div>
-
-<div class="ts-block-property">
-
-```dts
-#private;
 ```
 
 <div class="ts-block-property-details"></div>
@@ -176,15 +158,6 @@ add(value: T): this;
 ```
 
 <div class="ts-block-property-details"></div>
-</div>
-
-<div class="ts-block-property">
-
-```dts
-#private;
-```
-
-<div class="ts-block-property-details"></div>
 </div></div>
 
 
@@ -204,15 +177,6 @@ get searchParams(): SvelteURLSearchParams;
 ```
 
 <div class="ts-block-property-details"></div>
-</div>
-
-<div class="ts-block-property">
-
-```dts
-#private;
-```
-
-<div class="ts-block-property-details"></div>
 </div></div>
 
 
@@ -229,15 +193,6 @@ class SvelteURLSearchParams extends URLSearchParams {/*…*/}
 
 ```dts
 [REPLACE](params: URLSearchParams): void;
-```
-
-<div class="ts-block-property-details"></div>
-</div>
-
-<div class="ts-block-property">
-
-```dts
-#private;
 ```
 
 <div class="ts-block-property-details"></div>
