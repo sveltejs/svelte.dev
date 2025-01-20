@@ -25,7 +25,7 @@ export function load({ params }) {
 ```svelte
 <!--- file: src/routes/blog/[slug]/+page.svelte --->
 <script>
-	/** @type {{ data: import('./$types').PageData }} */
+	/** @type {import('./$types').PageProps} */
 	let { data } = $props();
 </script>
 
@@ -34,7 +34,14 @@ export function load({ params }) {
 ```
 
 > [!LEGACY]
-> In Svelte 4, you'd use `export let data` instead
+> Before version 2.16.0, the props of a page and layout had to be typed individually:
+> ```js
+> /// file: +page.svelte
+> /** @type {{ data: import('./$types').PageData }} */
+> let { data } = $props();
+> ```
+>
+> In Svelte 4, you'd use `export let data` instead.
 
 Thanks to the generated `$types` module, we get full type safety.
 
@@ -89,7 +96,7 @@ export async function load() {
 ```svelte
 <!--- file: src/routes/blog/[slug]/+layout.svelte --->
 <script>
-	/** @type {{ data: import('./$types').LayoutData, children: Snippet }} */
+	/** @type {import('./$types').LayoutProps} */
 	let { data, children } = $props();
 </script>
 
@@ -112,6 +119,14 @@ export async function load() {
 </aside>
 ```
 
+> [!LEGACY]
+> `LayoutProps` was added in 2.16.0. In earlier versions, properties had to be typed individually:
+> ```js
+> /// file: +layout.svelte
+> /** @type {{ data: import('./$types').LayoutData, children: Snippet }} */
+> let { data, children } = $props();
+> ```
+
 Data returned from layout `load` functions is available to child `+layout.svelte` components and the `+page.svelte` component as well as the layout that it 'belongs' to.
 
 ```svelte
@@ -119,7 +134,7 @@ Data returned from layout `load` functions is available to child `+layout.svelte
 <script>
 	+++import { page } from '$app/state';+++
 
-	/** @type {{ data: import('./$types').PageData }} */
+	/** @type {import('./$types').PageProps} */
 	let { data } = $props();
 
 +++	// we can access `data.posts` because it's returned from
@@ -373,7 +388,7 @@ export async function load({ parent }) {
 ```svelte
 <!--- file: src/routes/abc/+page.svelte --->
 <script>
-	/** @type {{ data: import('./$types').PageData }} */
+	/** @type {import('./$types').PageProps} */
 	let { data } = $props();
 </script>
 
@@ -512,7 +527,7 @@ This is useful for creating skeleton loading states, for example:
 ```svelte
 <!--- file: src/routes/blog/[slug]/+page.svelte --->
 <script>
-	/** @type {{ data: import('./$types').PageData }} */
+	/** @type {import('./$types').PageProps} */
 	let { data } = $props();
 </script>
 
@@ -653,7 +668,7 @@ export async function load({ fetch, depends }) {
 <script>
 	import { invalidate, invalidateAll } from '$app/navigation';
 
-	/** @type {{ data: import('./$types').PageData }} */
+	/** @type {import('./$types').PageProps} */
 	let { data } = $props();
 
 	function rerunLoadFunction() {
