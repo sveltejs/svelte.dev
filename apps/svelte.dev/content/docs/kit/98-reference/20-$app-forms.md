@@ -86,6 +86,9 @@ If this function or its return value isn't set, it
 - redirects to the nearest error page in case of an unexpected error
 
 If you provide a custom function with a callback and want to use the default behavior, invoke `update` in your callback.
+It accepts an options object
+- `reset: false` if you don't want the `<form>` values to be reset after a successful submission
+- `invalidateAll: false` if you don't want the action to call `invalidateAll` after submission
 
 <div class="ts-block">
 
