@@ -1,11 +1,27 @@
 name: Docs preview create
 
 on:
-  repository_dispatch:
-    types: [docs-preview-create]
+  workflow_dispatch:
+    inputs:
+      package:
+        description: 'Package name'
+        required: true
+        type: string
+      pr:
+        description: 'PR number'
+        required: true
+        type: string
+      owner:
+        description: 'Owner (eg. sveltejs)'
+        required: true
+        type: string
+      branch:
+        description: 'Branch (eg. my-feature-branch)'
+        required: true
+        type: string
 
 env:
-  BRANCH: preview-${{ github.event.client_payload.package }}-${{ github.event.client_payload.pr }}
+  BRANCH: preview-${{ inputs.package }}-${{ inputs.pr }}
 
 jobs:
   Sync:
@@ -25,7 +41,7 @@ jobs:
         run: git fetch origin ${{ env.BRANCH }} && git checkout ${{ env.BRANCH }} || git checkout -b ${{ env.BRANCH }}
 
       - name: Sync
-        run: cd apps/svelte.dev && pnpm sync-docs --owner="${{ github.event.client_payload.owner }}" -p "${{ github.event.client_payload.package }}#${{ github.event.client_payload.branch }}"
+        run: cd apps/svelte.dev && pnpm sync-docs --owner="${{ inputs.owner }}" -p "${{ inputs.package }}#${{ inputs.branch }}"
 
       - name: Configure Git
         run: |
