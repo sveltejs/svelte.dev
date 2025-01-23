@@ -60,5 +60,5 @@ jobs:
           client-payload: |-
             {
               "repo": "${{ inputs.repo }}",
-              "pr": "${{ inputs.pr }}",
+              "pr": "${{ inputs.pr }}"
             }
