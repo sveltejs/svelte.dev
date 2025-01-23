@@ -3,8 +3,8 @@ name: Docs preview create
 on:
   workflow_dispatch:
     inputs:
-      package:
-        description: 'Package name'
+      repo:
+        description: 'Repository name (not fully-qualified, eg. `svelte` or `kit`)'
         required: true
         type: string
       pr:
@@ -21,11 +21,11 @@ on:
         type: string
 
 env:
-  BRANCH: preview-${{ inputs.package }}-${{ inputs.pr }}
+  BRANCH: preview-${{ inputs.repo }}-${{ inputs.pr }}
 
 jobs:
   Sync:
-    name: Sync (preview-${{ inputs.package }}-${{ inputs.pr }})
+    name: Sync
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -42,7 +42,7 @@ jobs:
         run: git fetch origin ${{ env.BRANCH }} && git checkout ${{ env.BRANCH }} || git checkout -b ${{ env.BRANCH }}
 
       - name: Sync
-        run: cd apps/svelte.dev && pnpm sync-docs --owner="${{ inputs.owner }}" -p "${{ inputs.package }}#${{ inputs.branch }}"
+        run: cd apps/svelte.dev && pnpm sync-docs --owner="${{ inputs.owner }}" -p "${{ inputs.repo }}#${{ inputs.branch }}"
 
       - name: Configure Git
         run: |
@@ -52,3 +52,13 @@ jobs:
       - name: Push
         id: push
         run: git add -A && git commit -m "sync docs" && git push -u origin ${{ env.BRANCH }}
+
+      - name: Request preview comment
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          event-type: 'request-preview-comment'
+          client-payload: |-
+            {
+              "repo": "${{ inputs.repo }}",
+              "pr": "${{ inputs.pr }}",
+            }

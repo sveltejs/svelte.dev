@@ -3,8 +3,8 @@ name: Docs preview delete
 on:
   workflow_dispatch:
     inputs:
-      package:
-        description: 'Package name'
+      repo:
+        description: 'Repository name (not fully-qualified, eg. `svelte` or `kit`)'
         required: true
         type: string
       pr:
@@ -13,7 +13,7 @@ on:
         type: string
 
 env:
-  BRANCH: preview-${{ inputs.package }}-${{ inputs.pr }}
+  BRANCH: preview-${{ inputs.repo }}-${{ inputs.pr }}
 
 jobs:
   Sync:
