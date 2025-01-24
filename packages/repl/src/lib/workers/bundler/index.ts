@@ -31,6 +31,8 @@ let current_id: number;
 
 let inited = Promise.withResolvers<typeof svelte>();
 
+let can_use_experimental_async = false;
+
 async function init(v: string, packages_url: string) {
 	const match = /^(pr|commit)-(.+)/.exec(v);
 
@@ -79,6 +81,23 @@ async function init(v: string, packages_url: string) {
 		: await fetch(`${svelte_url}/${entry}`).then((r) => r.text());
 
 	(0, eval)(compiler + `\n//# sourceURL=${entry}@` + version);
+
+	try {
+		self.svelte.compileModule('', {
+			generate: 'client',
+			// @ts-expect-error
+			experimental: {
+				async: true
+			}
+		});
+
+		can_use_experimental_async = true;
+	} catch (e) {
+		console.error(e);
+		// do nothing
+	}
+
+	console.log({ can_use_experimental_async });
 
 	return svelte;
 }
@@ -405,13 +424,18 @@ async function get_bundle(
 			if (cached_id && cached_id.code === code) {
 				result = cached_id.result;
 			} else if (id.endsWith('.svelte')) {
-				result = svelte.compile(code, {
+				const compilerOptions: any = {
 					...options,
 					filename: name + '.svelte',
-					// @ts-expect-error
 					generate: Number(svelte.VERSION.split('.')[0]) >= 5 ? 'client' : 'dom',
 					dev: true
-				});
+				};
+
+				if (can_use_experimental_async) {
+					compilerOptions.experimental = { async: true };
+				}
+
+				result = svelte.compile(code, compilerOptions);
 
 				if (result.css?.code) {
 					// resolve local files by inlining them
@@ -441,11 +465,18 @@ async function get_bundle(
 				`.replace(/\t/g, '');
 				}
 			} else if (id.endsWith('.svelte.js')) {
-				result = svelte.compileModule?.(code, {
+				const compilerOptions: any = {
 					filename: name + '.js',
 					generate: 'client',
 					dev: true
-				});
+				};
+
+				if (can_use_experimental_async) {
+					compilerOptions.experimental = { async: true };
+				}
+
+				result = svelte.compileModule?.(code, compilerOptions);
+
 				if (!result) {
 					return null;
 				}
