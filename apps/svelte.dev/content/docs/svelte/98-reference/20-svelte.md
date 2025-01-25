@@ -426,6 +426,9 @@ If a function is returned _synchronously_ from `onMount`, it will be called when
 
 `onMount` does not run inside [server-side components](/docs/svelte/svelte-server#render).
 
+`onMount` runs only once. If you need reactivity, you can use [`$effect`](/docs/svelte/$effect),
+which also runs when the component is mounted to the DOM.
+
 <div class="ts-block">
 
 ```dts
