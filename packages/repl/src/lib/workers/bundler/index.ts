@@ -34,7 +34,7 @@ let inited = Promise.withResolvers<typeof svelte>();
 let can_use_experimental_async = false;
 
 async function init(v: string, packages_url: string) {
-	const match = /^(pr|commit)-(.+)/.exec(v);
+	const match = /^(pr|commit|branch)-(.+)/.exec(v);
 
 	let tarball: FileDescription[] | undefined;
 

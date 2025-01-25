@@ -16,7 +16,7 @@ let can_use_experimental_async = false;
 
 async function init(v: string) {
 	const svelte_url = v === 'local' ? '/svelte' : `https://unpkg.com/svelte@${v}`;
-	const match = /^(?:pr|commit)-(.+)/.exec(v);
+	const match = /^(?:pr|commit|branch)-(.+)/.exec(v);
 
 	let tarball: FileDescription[] | undefined;
 	let version: string;
