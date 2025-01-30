@@ -55,8 +55,8 @@ export async function handle({ event, resolve }) {
 		redirect(307, destination);
 	}
 
-	// For REPL. In SvelteKit, redirects can also be handled in +page.server.js,
-	// for example, see routes/examples/[...path]/+page.server.ts file.
+	// For REPL. For some reason, the repl/+page.server.ts file is not working, so
+	// we are doing the redirect here
 	if (event.url.pathname.startsWith('/repl')) {
 		redirect(307, event.url.pathname.replace('/repl', '/playground'));
 	}
