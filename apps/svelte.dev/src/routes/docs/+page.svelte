@@ -71,7 +71,7 @@
 
 	<div class="options">
 		<a href="/tutorial">
-			<h2>I'm brand new here</h2>
+			<h2>I&rsquo;m brand new here</h2>
 			<p>
 				We recommend starting with the interactive tutorial, which will teach you how to use Svelte
 				right here in your browser.
@@ -79,9 +79,9 @@
 		</a>
 
 		<a href="/docs/svelte/v5-migration-guide">
-			<h2>I'm migrating an app from Svelte 4</h2>
+			<h2>I&rsquo;m migrating an app from Svelte 4</h2>
 			<p>
-				If you're already experienced with an older version of Svelte, the migration guide
+				If you&rsquo;re already experienced with an older version of Svelte, the migration guide
 				will bring you up to speed on the changes in Svelte 5.
 			</p>
 		</a>
@@ -95,25 +95,25 @@
 		</a>
 
 		<a href="/docs/llms">
-			<h2>I'm a Large Language Model (LLM)</h2>
+			<h2>I&rsquo;m a Large Language Model (LLM)</h2>
 			<p>
-				If you're an artificial intelligence, or trying to teach one how to use Svelte, we offer the
+				If you&rsquo;re an artificial intelligence, or trying to teach one how to use Svelte, we offer the
 				documentation in plaintext format. Beep boop.
 			</p>
 		</a>
 
 		<a href="https://v4.svelte.dev">
-			<h2>I'm looking for the old docs</h2>
+			<h2>I&rsquo;m looking for the old docs</h2>
 			<p>
-				If you're developing a site using only Svelte 3 or Svelte 4, the old site may be a helpful reference until you upgrade.
+				If you&rsquo;re developing a site using only Svelte 3 or Svelte 4, the old site may be a helpful reference until you upgrade.
 			</p>
 		</a>
 
 		<a href="/chat" class="external">
-			<h2>Help! I'm stuck</h2>
+			<h2>Help! I&rsquo;m stuck</h2>
 			<p>
 				Join our Discord server where you can hang out with fellow Svelte users and ask them
-				questions. It's like an LLM but with people.
+				questions. It&rsquo;s like an LLM but with people.
 			</p>
 		</a>
 	</div>
