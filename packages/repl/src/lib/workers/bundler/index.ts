@@ -97,8 +97,6 @@ async function init(v: string, packages_url: string) {
 		// do nothing
 	}
 
-	console.log({ can_use_experimental_async });
-
 	return svelte;
 }
 
