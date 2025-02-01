@@ -12,14 +12,14 @@ Let's dive in 🐬
 ## What's new in Svelte
 
 - Non-numeric values can now be tweened by snapping immediately to the new value (**5.17.0**, [Docs](/docs/svelte-motion#tweened), [#14941](https://github.com/sveltejs/svelte/pull/14941))
-- `const` tags are now allowed inside of a `svelte:boundary` (**5.17.5**, [Docs](https://svelte.dev/docs/svelte/svelte-boundary), [#14993](https://github.com/sveltejs/svelte/pull/14993))
+- `const` tags are now allowed inside of a `svelte:boundary` (**5.17.5**, [Docs](/docs/svelte/svelte-boundary), [#14993](https://github.com/sveltejs/svelte/pull/14993))
 - `<template>` elements are now allowed to contain any child elements (**5.18.0**, [Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template), [#15007](https://github.com/sveltejs/svelte/pull/15007))
-- `ClassValue` is now exposed from `svelte/elements` (**5.19.0**, [Docs]([/docs/svelte/class](https://svelte.dev/docs/svelte/class#Attributes-Objects-and-arrays)), [#15035](https://github.com/sveltejs/svelte/pull/15035))
+- `ClassValue` is now exposed from `svelte/elements` (**5.19.0**, [Docs]([/docs/svelte/class](/docs/svelte/class#Attributes-Objects-and-arrays)), [#15035](https://github.com/sveltejs/svelte/pull/15035))
 
 
 ## What's new in SvelteKit and Language Tools
 
-- Custom identifiers can now be invalidated on `goto()` navigation (**2.16.0**, [Docs](https://svelte.dev/docs/kit/app-navigation#goto), [#13256](https://github.com/sveltejs/kit/pull/13256))
+- Custom identifiers can now be invalidated on `goto()` navigation (**2.16.0**, [Docs](/docs/kit/$app-navigation#goto), [#13256](https://github.com/sveltejs/kit/pull/13256))
 - The `postinstall` script has been removed to support pnpm 10 (**2.16.0**, [#13304](https://github.com/sveltejs/kit/pull/13304))
   - users should add `"prepare": "svelte-kit sync"` to their `package.json` in order to avoid the a warning upon first running Vite
 - `PageProps` and `LayoutProps` types are now provided (**2.16.0**, [#13308](https://github.com/sveltejs/kit/pull/13308))
