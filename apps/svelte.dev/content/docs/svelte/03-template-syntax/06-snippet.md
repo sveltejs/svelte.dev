@@ -112,6 +112,30 @@ Snippets can reference themselves and each other ([demo](/playground/untitled#H4
 
 ## Passing snippets to components
 
+```svelte
+<Component>...</Component> <!-- uses the children prop -->
+```
+```svelte
+<Component>
+	{#snippet children()}...{/snippet}
+	{#snippet foo()}...{/snippet}
+</Component>
+```
+```svelte
+{#snippet children()}...{/snippet}
+{#snippet foo()}...{/snippet}
+<Component {children} {foo}/>
+```
+
+```svelte
+/// file: Component.svelte
+<script>
+  let { children, foo } = $props();
+</script>
+{@render children()}
+{@render foo()}
+```
+
 Within the template, snippets are values just like any other. As such, they can be passed to components as props ([demo](/playground/untitled#H4sIAAAAAAAAE41SwY6bMBD9lRGplKQlYRMpF5ZF7T_0ttmDwSZYJbZrT9pGlv-9g4Fkk-xhxYV5vHlvhjc-aWQnXJK_-kSxo0jy5IcxSZrg2fSF-yM6FFQ7fbJ1jxSuttJguVd7lEejLcJPVnUCGquPMF9nsVoPjfNnohGx1sohMU4SHbzAa4_t0UNvmcOcGUNDzFP4jeccdikYK2v6sIWQ3lErpui5cDdPF_LmkVy3wlp5Vd5e2U_rHYSe_kYjFtl1KeVnTkljBEIrGBd2sYy8AtsyLlBk9DYhJHtTR_UbBDWybkR8NkqHWyOr_y74ZMNLz9f9AoG6ePkOJLMHLBp-xISvcPf11r0YUuMM2Ysfkgngh5XphUYKkJWU_FFz2UjBkxztSYT0cihR4LOn0tGaPrql439N-7Uh0Dl8MVYbt1jeJ1Fg7xDb_Uw2Y18YQqZ_S2U5FH1pS__dCkWMa3C0uR0pfQRTg89kE4bLLLDS_Dxy_Eywuo1TAnPAw4fqY1rvtH3W9w35ZZMgvU3jq8LhedwkguCHRhT_cMU6eVA5dKLB5wGutCWjlTOslupAxxrxceKoD2hzhe2qbmXHF1v1bbOcNCtW_zpYfVI8h5kQ4qY3mueHTlesW2C7TOEO4hcdwzgf3Nc7cZxUKKC4yuNhvIX_MlV_Xk0EAAA=)):
 
 ```svelte
