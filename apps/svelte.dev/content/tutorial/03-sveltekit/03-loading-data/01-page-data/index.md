@@ -9,7 +9,7 @@ At its core, SvelteKit's job boils down to three things:
 2. **Loading** — get the data needed by the route
 3. **Rendering** — generate some HTML (on the server) or update the DOM (in the browser)
 
-We've seen how routing and rendering work. Let's talk about the middle part — loading.
+We've seen how routing and rendering works. Let's talk about the middle part — loading.
 
 Every page of your app can declare a `load` function in a `+page.server.js` file alongside the `+page.svelte` file. As the file name suggests, this module only ever runs on the server, including for client-side navigations. Let's add a `src/routes/blog/+page.server.js` file so that we can replace the hard-coded links in `src/routes/blog/+page.svelte` with actual blog post data:
 
