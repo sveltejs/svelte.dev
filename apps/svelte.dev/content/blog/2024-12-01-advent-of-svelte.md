@@ -103,7 +103,7 @@ As of today, you can also return things that _aren't_ built in to the language, 
 
 For those of you using LLMs to help you write code — via Cursor or Copilot or Claude or Bolt or v0 or some other interface — we now publish the documentation in a selection of robot-friendly `llms.txt` files. This is experimental and will evolve over time, but by way of example here's a [snake game](/playground/0de3c1c1a31d47bdbb7c4aa3477a6b46) built by Sonnet 3.5 with no additional prompting.
 
-Thanks to [Didier Catz](https://x.com/didiercatz) and [Stanislav Khromov](https://bsky.app/profile/khromov.se) for building this!
+Thanks to [Didier Catz](https://bsky.app/profile/didiercatz.com) and [Stanislav Khromov](https://bsky.app/profile/khromov.se) for building this!
 
 - [docs](/docs/llms)
 

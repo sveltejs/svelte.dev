@@ -90,7 +90,7 @@ We’ve had terrific support from teams at [Vercel](https://vercel.com), [Netlif
 
 Our friends at [StackBlitz](https://stackblitz.com/) worked feverishly to make [learn.svelte.dev](https://learn.svelte.dev), our first-of-its-kind [WebContainer](https://blog.stackblitz.com/posts/introducing-webcontainers/)-powered interactive tutorial, a reality.
 
-Finally, none of this could have happened without the project’s financial supporters. This includes hundreds of backers on [Open Collective](https://opencollective.com/svelte), and Vercel, which employs two core developers ([Rich](https://twitter.com/Rich_Harris/) and [Simon](https://twitter.com/dummdidumm_/)) to work on Svelte full time and supports the project in many other ways, such as [Steph’s](https://twitter.com/steph_dietz_) [Beginner SvelteKit](https://vercel.com/docs/beginner-sveltekit) course.
+Finally, none of this could have happened without the project’s financial supporters. This includes hundreds of backers on [Open Collective](https://opencollective.com/svelte), and Vercel, which employs two core developers ([Rich](https://bsky.app/profile/rich-harris.dev) and [Simon](https://bsky.app/profile/dummdidumm.bsky.social)) to work on Svelte full time and supports the project in many other ways, such as [Steph’s](https://www.steph-dietz.com/) [Beginner SvelteKit](https://vercel.com/docs/beginner-sveltekit) course.
 
 ## Migrating
 
@@ -100,6 +100,6 @@ If you have an app built with pre-release versions of SvelteKit, we recommend up
 
 SvelteKit 1.0 is the beginning, not the end. It’s ready for production use today, but we’re just getting started. Our roadmap includes built-in i18n support, incremental static regeneration, granular control over deployment region and runtime, image optimisation, and many other improvements. Next year we’ll also start work on Svelte 4 — more on that later.
 
-But don’t let us have the final word. Svelte is a community project, and many of our best ideas aren’t really ours at all — they’re yours. Subscribe to Svelte Society on [Twitter](https://twitter.com/SvelteSociety) and [YouTube](https://youtube.com/sveltesociety) to stay up to date, and join us in our [Discord server](/chat) and on [GitHub](https://github.com/sveltejs) to contribute back.
+But don’t let us have the final word. Svelte is a community project, and many of our best ideas aren’t really ours at all — they’re yours. Subscribe to Svelte Society on [BlueSky](https://bsky.app/profile/sveltesociety.dev) and [YouTube](https://youtube.com/sveltesociety) to stay up to date, and join us in our [Discord server](/chat) and on [GitHub](https://github.com/sveltejs) to contribute back.
 
 We can’t wait to see what you build.

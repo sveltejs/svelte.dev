@@ -12,4 +12,4 @@ npx sv create
 
 Svelte and SvelteKit will continue to evolve, and so will this tutorial. Check back periodically for updates.
 
-To keep up with developments in the Svelte world, join our Discord server at [svelte.dev/chat](/chat) and follow [Svelte Society](https://twitter.com/sveltesociety) on Twitter. We're so happy to welcome you to the Svelte community!
+To keep up with developments in the Svelte world, join our Discord server at [svelte.dev/chat](/chat) and follow [Svelte Society](https://bsky.app/profile/sveltesociety.dev) on BlueSky. We're so happy to welcome you to the Svelte community!

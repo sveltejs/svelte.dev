@@ -2,7 +2,7 @@
 title: SvelteKit is in public beta
 description: And we'd love to have your feedback
 author: Rich Harris
-authorURL: https://twitter.com/rich_harris
+authorURL: https://bsky.app/profile/rich-harris.dev
 ---
 
 <aside><p>Previously: <a href="/blog/whats-the-deal-with-sveltekit">What's the deal with SvelteKit?</a></p></aside>
@@ -40,7 +40,7 @@ One thing that might seem surprising after the [announcement video](/blog/whats-
 
 Snowpack created an entirely new category of dev tooling. Rather than _bundling_ your app in development, as we've been doing with webpack and Rollup for the last several years, Snowpack is an _unbundled dev server_ that uses the browser's native `import` and does 1:1 transformations of things like Svelte components on the fly. As a result you get quick startup, simple caching and instant hot module reloading. Once you experience this way of working, it will ruin you for anything else.
 
-Vite falls into the same category as Snowpack. While Vite 1 wasn't suitable for SvelteKit — it was Vue-centric (Vite and Vue are both created by [Evan You](https://twitter.com/youyuxi)) and made server-side rendering difficult — Vite 2 is framework-agnostic and designed with SSR at the core. It also has powerful features, like CSS code-splitting, that we previously had to implement ourselves. When we evaluated the two technologies side-by-side we were forced to conclude that Vite is a closer match for SvelteKit's requirements and would give us the best chance to deliver the framework of our imaginations.
+Vite falls into the same category as Snowpack. While Vite 1 wasn't suitable for SvelteKit — it was Vue-centric (Vite and Vue are both created by [Evan You](https://bsky.app/profile/evanyou.me)) and made server-side rendering difficult — Vite 2 is framework-agnostic and designed with SSR at the core. It also has powerful features, like CSS code-splitting, that we previously had to implement ourselves. When we evaluated the two technologies side-by-side we were forced to conclude that Vite is a closer match for SvelteKit's requirements and would give us the best chance to deliver the framework of our imaginations.
 
 We owe a deep debt of gratitude to the Snowpack team, both for the close collaboration earlier in development and for lighting the path that web development will take over the next few years. It's a wonderful tool, and you should absolutely try it out.
 

@@ -2,7 +2,7 @@
 title: Write less code
 description: The most important metric you're not paying attention to
 author: Rich Harris
-authorURL: https://twitter.com/Rich_Harris
+authorURL: https://bsky.app/profile/rich-harris.dev
 ---
 
 All code is buggy. It stands to reason, therefore, that the more code you have to write the buggier your apps will be.
