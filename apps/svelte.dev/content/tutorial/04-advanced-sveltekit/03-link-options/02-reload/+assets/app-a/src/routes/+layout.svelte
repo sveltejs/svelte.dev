@@ -1,11 +1,9 @@
 <script>
-	import { onMount } from 'svelte';
-
 	let { children } = $props();
 
 	let seconds = $state(0);
 
-	onMount(() => {
+	$effect(() => {
 		const interval = setInterval(() => {
 			seconds += 1;
 		}, 1000);
