@@ -16,7 +16,6 @@ Let's dive in 🐬
 - `<template>` elements are now allowed to contain any child elements (**5.18.0**, [Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template), [#15007](https://github.com/sveltejs/svelte/pull/15007))
 - `ClassValue` is now exposed from `svelte/elements` (**5.19.0**, [Docs](/docs/svelte/class#Attributes-Objects-and-arrays)), [#15035](https://github.com/sveltejs/svelte/pull/15035))
 
-
 ## What's new in SvelteKit and Language Tools
 
 - Custom identifiers can now be invalidated on `goto()` navigation (**2.16.0**, [Docs](/docs/kit/$app-navigation#goto), [#13256](https://github.com/sveltejs/kit/pull/13256))
@@ -26,7 +25,6 @@ Let's dive in 🐬
 - The generics attribute is now supported for JSDoc (**svelte2tsx-0.7.32/svelte-check-4.1.2**, [#2624](https://github.com/sveltejs/language-tools/pull/2624))
 - Semantic document highlighting makes the document highlights based on semantic/syntactic meaning instead of the current word-based default by VSCode (**language-server-0.17.9**, [Docs](https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/#textDocument_documentHighlight), [#1408](https://github.com/sveltejs/language-tools/pull/1408))
 
-
 ---
 
 ## Community Showcase
@@ -34,7 +32,7 @@ Let's dive in 🐬
 ### Apps & Sites built with Svelte
 
 - [Daily Tokki](https://dailytokki.com/?ref=sveltenewsletter) is daily personalized Korean learning delivered right to your inbox
-- [svelte-tower-defence](https://github.com/baterson/svelte-tower-defence) is a tower defense clicker game built with Svelte 5, without canvas, using only CSS transitions and the Runes 
+- [svelte-tower-defence](https://github.com/baterson/svelte-tower-defence) is a tower defense clicker game built with Svelte 5, without canvas, using only CSS transitions and the Runes
 - [PraccJS](https://github.com/alyalin/PraccJS) lets you practice JavaScript with real-time code execution
 - [Invoice-r](https://www.invoice-r.co.uk/) calculates what you're owed from the information you give and makes your invoice look good
 - [Carry Fit](https://github.com/AxelUser/carry-fit) is an online carry-on luggage compliance checker
@@ -76,7 +74,7 @@ _To Read_
 - [SVAR for Svelte](https://svar.dev/svelte/) provides feature-rich Svelte UI Components
 - [Tailwind CSS v4.0 ](https://tailwindcss.com/blog/tailwindcss-v4)has been released - with a new engine, simpler installation and more
 - [Frizzante](https://github.com/razshare/frizzante) is a procedural, minimalistic and opinionated web server that uses Svelte to render web pages
-- [svelte-5-dashboard](https://github.com/thomaslappenbusch/svelte-5-dashboard) is a boilerplate for Svelte 5 dashboards. Including alerts, avatars, custom formatting and more 
+- [svelte-5-dashboard](https://github.com/thomaslappenbusch/svelte-5-dashboard) is a boilerplate for Svelte 5 dashboards. Including alerts, avatars, custom formatting and more
 - [dnd-kit-svelte](https://github.com/HanielU/dnd-kit-svelte) is a Svelte 5 dnd-kit port
 - [youva](https://github.com/SikandarJODD/youva) provides pagination, debounced search, sorting, filtering and caching for SvelteKit
 
