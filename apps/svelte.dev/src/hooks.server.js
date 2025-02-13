@@ -61,6 +61,11 @@ export async function handle({ event, resolve }) {
 		redirect(307, event.url.pathname.replace('/repl', '/playground'));
 	}
 
+	// For examples
+	if (event.url.pathname.startsWith('/examples')) {
+		redirect(307, event.url.pathname.replace('/examples', '/playground'));
+	}
+
 	// Best effort to redirect from Svelte 3 tutorial to new tutorial
 	if (event.url.pathname.startsWith('/tutorial/') && event.url.pathname.split('/').length === 2) {
 		redirect(307, event.url.pathname.replace('/tutorial/', '/tutorial/svelte/'));
