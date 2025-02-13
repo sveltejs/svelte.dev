@@ -11,7 +11,7 @@ The project structure and routing will be the same regardless of the project typ
 
 ## Default hybrid rendered app
 
-By default, when a user visits a site, SvelteKit will render the first page with server-side rendering and subsequent pages with client-side rendering. Using SSR for the initial render improves SEO and perceived performance of the initial page load. Client-side rendering then takes over and updates the page without having to rerender common components which is typically faster and eliminates a flash when navigating between pages.
+By default, when a user visits a site, SvelteKit will render the first page with server-side rendering and subsequent pages with client-side rendering. Using SSR for the initial render improves SEO and perceived performance of the initial page load. Client-side rendering then takes over and updates the page without having to rerender common components, which is typically faster and eliminates a flash when navigating between pages.
 
 ## Static site generator (SSG)
 
@@ -21,7 +21,7 @@ You may also use [the prerender option](page-options#prerender) to prerender onl
 
 ## Single page apps (SPA)
 
-You can [build single page apps (SPA)](single-page-apps) with SvelteKit. As with all types of SvelteKit applications, you can write your backend in SvelteKit or [another language](#backend-in-another-lanugage).
+You can [build single page apps (SPAs)](single-page-apps) with SvelteKit. As with all types of SvelteKit applications, you can write your backend in SvelteKit or [another language](#backend-in-another-language).
 
 ## Traditional multi-page app (MPA)
 
