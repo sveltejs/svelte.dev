@@ -12,6 +12,7 @@ import {
 	VERSION,
 	error,
 	fail,
+	initServer,
 	isActionFailure,
 	isHttpError,
 	isRedirect,
@@ -22,6 +23,8 @@ import {
 ```
 
 ## Server
+
+Represents the SvelteKit server runtime. Adapters should use this via `${output}/server/index.js` to create a server to send requests to.
 
 <div class="ts-block">
 
@@ -120,6 +123,32 @@ function fail(status: number): ActionFailure<undefined>;
 function fail<
 	T extends Record<string, unknown> | undefined = undefined
 >(status: number, data: T): ActionFailure<T>;
+```
+
+</div>
+
+
+
+## initServer
+
+Similar to Server#init. Can be used via `${output}/server/init.js` for other entry points that don't start the server but still need to setup the environment.
+
+<div class="ts-block">
+
+```dts
+function initServer(options: {
+	/** Required for `$env/*` to work */
+	env: {
+		env: Record<string, string>;
+		public_prefix: string;
+		private_prefix: string;
+	};
+	/** Required for the `read` export from `$app/server` to work */
+	read?: {
+		read: (file: string) => ReadableStream;
+		manifest: SSRManifest;
+	};
+}): void;
 ```
 
 </div>
@@ -432,13 +461,27 @@ Test support for `read` from `$app/server`
 <div class="ts-block-property">
 
 ```dts
-emulate?: () => MaybePromise<Emulator>;
+emulate?: (helpers: { importFile: (fileUrl: string) => Promise<any> }) => MaybePromise<Emulator>;
 ```
 
 <div class="ts-block-property-details">
 
 Creates an `Emulator`, which allows the adapter to influence the environment
 during dev, build and prerendering
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+additionalEntryPoints?: () => AdditionalEntryPoint[];
+```
+
+<div class="ts-block-property-details">
+
+A function that returns additional entry points for Vite to consider during compilation.
+This is useful for adapters that want to generate separate bundles for e.g. middleware.
 
 </div>
 </div></div>
@@ -1028,6 +1071,27 @@ platform?(details: { config: any; prerender: PrerenderOption }): MaybePromise<Ap
 
 A function that is called with the current route `config` and `prerender` option
 and returns an `App.Platform` object
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+beforeRequest?: (
+	req: IncomingMessage & { originalUrl?: string },
+	res: ServerResponse,
+	next: () => void
+) => MaybePromise<void>;
+```
+
+<div class="ts-block-property-details">
+
+Runs before every request that would hit the SvelteKit runtime and before requests to static assets in dev mode.
+Can be used to replicate middleware behavior in dev mode.
+Implementation notes:
+- `req.url` does not include the base path, but `req.originalUrl` does, and you will have to adjust both in case you want to proxy/rewrite requests.
+- you either have to call `next()` to pass on the request/response, or `res.end()` to finish the request
 
 </div>
 </div></div>
@@ -2767,6 +2831,41 @@ should write the function to the filesystem and generate redirect manifests.
 </div>
 </div></div>
 
+## AdditionalEntryPoint
+
+<div class="ts-block">
+
+```dts
+interface AdditionalEntryPoint {/*…*/}
+```
+
+<div class="ts-block-property">
+
+```dts
+name: string;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+file: string;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+allowedFeatures: TrackedFeature[];
+```
+
+<div class="ts-block-property-details"></div>
+</div></div>
+
 ## Csp
 
 <div class="ts-block">
@@ -3501,6 +3600,16 @@ rest: boolean;
 
 <div class="ts-block-property-details"></div>
 </div></div>
+
+## TrackedFeature
+
+<div class="ts-block">
+
+```dts
+type TrackedFeature = '$app/server:read';
+```
+
+</div>
 
 ## TrailingSlash
 
