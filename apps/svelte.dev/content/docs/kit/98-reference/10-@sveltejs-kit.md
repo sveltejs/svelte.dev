@@ -17,6 +17,7 @@ import {
 	isHttpError,
 	isRedirect,
 	json,
+	normalizeUrl,
 	redirect,
 	text
 } from '@sveltejs/kit';
@@ -213,6 +214,32 @@ function json(
 	data: any,
 	init?: ResponseInit | undefined
 ): Response;
+```
+
+</div>
+
+
+
+## normalizeUrl
+
+Strips possible SvelteKit-internal suffixes from the URL pathname.
+Returns the normalized URL as well as a method for adding the potential suffix back based on a new pathname.
+```js
+// @errors: 7031
+import { normalizeUrl } from '@sveltejs/kit';
+
+const { url, denormalize } = normalizeUrl('/blog/post/__data.json');
+console.log(url.pathname); // /blog/post
+console.log(denormalize('/blog/post/a')); // /blog/post/a/__data.json
+```
+
+<div class="ts-block">
+
+```dts
+function normalizeUrl(url: URL | string): {
+	url: URL;
+	denormalize: (pathname?: string) => URL;
+};
 ```
 
 </div>
@@ -461,7 +488,10 @@ Test support for `read` from `$app/server`
 <div class="ts-block-property">
 
 ```dts
-emulate?: (helpers: { importFile: (fileUrl: string) => Promise<any> }) => MaybePromise<Emulator>;
+emulate?: (helpers: {
+	/** Allows to import an entry point defined within `additionalEntryPoints` by referencing its name */
+	importEntryPoint: (name: string) => Promise<any>;
+}) => MaybePromise<Emulator>;
 ```
 
 <div class="ts-block-property-details">
@@ -2845,7 +2875,11 @@ interface AdditionalEntryPoint {/*…*/}
 name: string;
 ```
 
-<div class="ts-block-property-details"></div>
+<div class="ts-block-property-details">
+
+Unique name of the entry point. Will be written to disk during build at `output/server/<name>.js`
+
+</div>
 </div>
 
 <div class="ts-block-property">
@@ -2854,16 +2888,24 @@ name: string;
 file: string;
 ```
 
-<div class="ts-block-property-details"></div>
+<div class="ts-block-property-details">
+
+Path relative to the project root of the corresponding file (e.g. `foo.js` means it's at `<project-root>/foo.js`)
+
+</div>
 </div>
 
 <div class="ts-block-property">
 
 ```dts
-allowedFeatures: TrackedFeature[];
+disallowedFeatures?: TrackedFeature[];
 ```
 
-<div class="ts-block-property-details"></div>
+<div class="ts-block-property-details">
+
+Define which features should not be allowed within the entry point (or the files it imports)
+
+</div>
 </div></div>
 
 ## Csp

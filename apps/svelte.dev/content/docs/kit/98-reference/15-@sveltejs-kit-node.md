@@ -10,6 +10,7 @@ title:  @sveltejs/kit/node
 import {
 	createReadableStream,
 	getRequest,
+	getRequestHeaders,
 	setResponse
 } from '@sveltejs/kit/node';
 ```
@@ -48,6 +49,22 @@ function getRequest({
 	base: string;
 	bodySizeLimit?: number;
 }): Promise<Request>;
+```
+
+</div>
+
+
+
+## getRequestHeaders
+
+Turns the Node request headers into a `Headers` instance
+
+<div class="ts-block">
+
+```dts
+function getRequestHeaders(
+	request: import('http').IncomingMessage
+): Headers;
 ```
 
 </div>
