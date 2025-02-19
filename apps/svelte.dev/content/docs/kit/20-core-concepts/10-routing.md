@@ -38,6 +38,8 @@ A `+page.svelte` component defines a page of your app. By default, pages are ren
 <a href="/">Home</a>
 ```
 
+> [!NOTE] SvelteKit uses `<a>` elements to navigate between routes, rather than a framework-specific `<Link>` component.
+
 Pages can receive data from `load` functions via the `data` prop.
 
 ```svelte
@@ -55,8 +57,6 @@ Pages can receive data from `load` functions via the `data` prop.
 > `PageProps` was added in 2.16.0. In earlier versions, you had to type the `data` property manually with `PageData` instead, see [$types](#\$types).
 >
 > In Svelte 4, you'd use `export let data` instead.
-
-> [!NOTE] SvelteKit uses `<a>` elements to navigate between routes, rather than a framework-specific `<Link>` component.
 
 ### +page.js
 

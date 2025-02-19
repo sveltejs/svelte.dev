@@ -97,8 +97,6 @@ async function init(v: string, packages_url: string) {
 		// do nothing
 	}
 
-	console.log({ can_use_experimental_async });
-
 	return svelte;
 }
 
@@ -521,9 +519,6 @@ async function get_bundle(
 					'process.env.NODE_ENV': JSON.stringify('production')
 				})
 			],
-			output: {
-				inlineDynamicImports: true
-			},
 			onwarn(warning) {
 				all_warnings.push({
 					message: warning.message
@@ -630,7 +625,8 @@ async function bundle({
 		const client_result = (
 			await client.bundle?.generate({
 				format: 'iife',
-				exports: 'named'
+				exports: 'named',
+				inlineDynamicImports: true
 				// sourcemap: 'inline'
 			})
 		)?.output[0];

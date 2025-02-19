@@ -2,7 +2,7 @@
 title: Using CSS-in-JS with Svelte
 description: You don't need to, but you can
 author: Rich Harris
-authorURL: https://twitter.com/Rich_Harris
+authorURL: https://bsky.app/profile/rich-harris.dev
 ---
 
 CSS is a core part of any web app. By extension, a UI framework that doesn't have a built-in way to add styles to your components is unfinished.

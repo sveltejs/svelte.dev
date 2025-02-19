@@ -63,8 +63,6 @@ async function init(v: string) {
 		// do nothing
 	}
 
-	console.log({ can_use_experimental_async });
-
 	return self.svelte;
 }
 
