@@ -25,7 +25,7 @@ import {
 
 ## Server
 
-Represents the SvelteKit server runtime. Adapters should use this via `${output}/server/index.js` to create a server to send requests to.
+Represents the SvelteKit server runtime. Adapters should use this via `${builder.getServerDirectory()}/index.js` to create a server to send requests to.
 
 <div class="ts-block">
 
@@ -132,7 +132,7 @@ function fail<
 
 ## initServer
 
-Similar to Server#init. Can be used via `${output}/server/init.js` for other entry points that don't start the server but still need to setup the environment.
+Similar to Server#init. Can be used via `${builder.getServerDirectory()}/init.js` for other entry points that don't start the server but still need to setup the environment.
 
 <div class="ts-block">
 
@@ -1119,9 +1119,7 @@ beforeRequest?: (
 
 Runs before every request that would hit the SvelteKit runtime and before requests to static assets in dev mode.
 Can be used to replicate middleware behavior in dev mode.
-Implementation notes:
-- `req.url` does not include the base path, but `req.originalUrl` does, and you will have to adjust both in case you want to proxy/rewrite requests.
-- you either have to call `next()` to pass on the request/response, or `res.end()` to finish the request
+Implementation note: You either have to call `next()` to pass on the request/response, or `res.end()` to finish the request
 
 </div>
 </div></div>
