@@ -466,7 +466,7 @@ Checks called during dev and build to determine whether specific features will w
 <div class="ts-block-property-children"><div class="ts-block-property">
 
 ```dts
-read?: (details: { config: any; route: { id: string } }) => boolean;
+read?: (details: { config: any; route: { id: string }; entry?: string }) => boolean;
 ```
 
 <div class="ts-block-property-details">
@@ -474,6 +474,8 @@ read?: (details: { config: any; route: { id: string } }) => boolean;
 <div class="ts-block-property-bullets">
 
 - `config` The merged route config
+- `route` The route and its ID
+- `entry` Name of the entry point, in case this was called from an additional entry point (route and config are irrelevant in this case)
 
 </div>
 
@@ -505,12 +507,14 @@ during dev, build and prerendering
 <div class="ts-block-property">
 
 ```dts
-additionalEntryPoints?: () => AdditionalEntryPoint[];
+additionalEntryPoints?: Record<string, string | undefined | null>;
 ```
 
 <div class="ts-block-property-details">
 
-A function that returns additional entry points for Vite to consider during compilation.
+An object with additional entry points for Vite to consider during compilation.
+The key is the name of the entry point that will be later available at `${builder.getServerDirectory()}/adapter/<name>.js`,
+the value is the relative path to the entry point file.
 This is useful for adapters that want to generate separate bundles for e.g. middleware.
 
 </div>
@@ -2855,53 +2859,6 @@ complete(entry: { generateManifest(opts: { relativePath: string }): string }): M
 
 A function that is invoked once the entry has been created. This is where you
 should write the function to the filesystem and generate redirect manifests.
-
-</div>
-</div></div>
-
-## AdditionalEntryPoint
-
-<div class="ts-block">
-
-```dts
-interface AdditionalEntryPoint {/*…*/}
-```
-
-<div class="ts-block-property">
-
-```dts
-name: string;
-```
-
-<div class="ts-block-property-details">
-
-Unique name of the entry point. Will be written to disk during build at `output/server/<name>.js`
-
-</div>
-</div>
-
-<div class="ts-block-property">
-
-```dts
-file: string;
-```
-
-<div class="ts-block-property-details">
-
-Path relative to the project root of the corresponding file (e.g. `foo.js` means it's at `<project-root>/foo.js`)
-
-</div>
-</div>
-
-<div class="ts-block-property">
-
-```dts
-disallowedFeatures?: TrackedFeature[];
-```
-
-<div class="ts-block-property-details">
-
-Define which features should not be allowed within the entry point (or the files it imports)
 
 </div>
 </div></div>
