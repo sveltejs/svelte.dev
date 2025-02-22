@@ -85,7 +85,7 @@ import { normalizeUrl } from '@sveltejs/kit';
  * @param {import('@netlify/edge-functions').Context} context
  */
 export default async function middleware(request, { next, cookies }) {
-	const { url, denormalize } = normalizeUrl(request.url);
+	const url = new URL(request.url);
 
 	if (url.pathname !== '/') return next();
 
@@ -99,7 +99,7 @@ export default async function middleware(request, { next, cookies }) {
 	cookies.set('flag', flag);
 
 	// Get destination URL based on the feature flag
-	return denormalize(flag === 'a' ? '/home-a' : '/home-b');
+	return new URL(flag === 'a' ? '/home-a' : '/home-b', url);
 }
 ```
 

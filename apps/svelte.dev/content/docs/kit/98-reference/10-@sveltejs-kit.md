@@ -223,7 +223,8 @@ function json(
 ## normalizeUrl
 
 Strips possible SvelteKit-internal suffixes from the URL pathname.
-Returns the normalized URL as well as a method for adding the potential suffix back based on a new pathname.
+Returns the normalized URL as well as a method for adding the potential suffix back
+based on a new pathname (possibly including search) or URL.
 ```js
 // @errors: 7031
 import { normalizeUrl } from '@sveltejs/kit';
@@ -238,7 +239,8 @@ console.log(denormalize('/blog/post/a')); // /blog/post/a/__data.json
 ```dts
 function normalizeUrl(url: URL | string): {
 	url: URL;
-	denormalize: (pathname?: string) => URL;
+	neededNormalization: boolean;
+	denormalize: (url?: string | URL) => URL;
 };
 ```
 

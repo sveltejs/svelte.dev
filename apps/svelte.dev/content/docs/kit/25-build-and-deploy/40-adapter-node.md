@@ -149,7 +149,6 @@ declare module 'polka';
 
 // @filename: index.js
 // ---cut---
-import { normalizeUrl } from '@sveltejs/kit';
 
 /**
  * @param {import('polka').Request} req
@@ -157,9 +156,7 @@ import { normalizeUrl } from '@sveltejs/kit';
  * @param {import('polka').NextHandler} next
  */
 export default function middleware(req, res, next) {
-	const { url, denormalize } = normalizeUrl(req.url);
-
-	if (url.pathname !== '/') return next();
+	if (req.url !== '/') return next();
 
 	// Retrieve feature flag from cookies
 	let flag = split_cookies(req.headers.cookie ?? '')?.flag;
@@ -168,8 +165,7 @@ export default function middleware(req, res, next) {
 	flag ||= Math.random() > 0.5 ? 'a' : 'b';
 
 	// Get destination URL based on the feature flag
-	const rewritten = denormalize(flag === 'a' ? '/home-a' : '/home-b');
-	req.url = rewritten.pathname + rewritten.search;
+	req.url = flag === 'a' ? '/home-a' : '/home-b';
 
 	// Set a cookie to remember the feature flags for this visitor
 	res.appendHeader('Set-Cookie', `flag=${flag}; Path=/`);
