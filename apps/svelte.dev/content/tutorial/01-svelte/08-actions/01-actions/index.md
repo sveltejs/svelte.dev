@@ -11,28 +11,7 @@ Actions are essentially element-level lifecycle functions. They're useful for th
 
 In this app, you can scribble on the `<canvas>`, and change colours and brush size via the menu. But if you open the menu and cycle through the options with the Tab key, you'll soon find that the focus isn't _trapped_ inside the modal.
 
-We can fix that with an action. Import `trapFocus` from `actions.svelte.js`...
-
-```svelte
-/// file: App.svelte
-<script>
-	import Canvas from './Canvas.svelte';
-	+++import { trapFocus } from './actions.svelte.js';+++
-
-	const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet', 'white', 'black'];
-
-	let selected = $state(colors[0]);
-	let size = $state(10);
-	let showMenu = $state(true);
-</script>
-```
-
-...then add it to the menu with the `use:` directive:
-
-```svelte
-/// file: App.svelte
-<div class="menu" +++use:trapFocus+++>
-```
+We can fix that with an action.
 
 Let's take a look at the `trapFocus` function in `actions.svelte.js`. An action function is called with a `node` — the `<div class="menu">` in our case — when the node is mounted to the DOM. Inside the action, we have an [effect](effects).
 
@@ -59,6 +38,29 @@ $effect(() => {
 		previous?.focus();
 	};+++
 });
+```
+
+Back in `App.svelte`, import `trapFocus` from `actions.svelte.js`...
+
+```svelte
+/// file: App.svelte
+<script>
+	import Canvas from './Canvas.svelte';
+	+++import { trapFocus } from './actions.svelte.js';+++
+
+	const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet', 'white', 'black'];
+
+	let selected = $state(colors[0]);
+	let size = $state(10);
+	let showMenu = $state(true);
+</script>
+```
+
+...then add it to the menu with the `use:` directive:
+
+```svelte
+/// file: App.svelte
+<div class="menu" +++use:trapFocus+++>
 ```
 
 Now, when you open the menu, you can cycle through the options with the Tab key.
