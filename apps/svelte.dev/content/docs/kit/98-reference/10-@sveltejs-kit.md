@@ -222,7 +222,7 @@ function json(
 
 ## normalizeUrl
 
-Strips possible SvelteKit-internal suffixes from the URL pathname.
+Strips possible SvelteKit-internal suffixes and trailing slashes from the URL pathname.
 Returns the normalized URL as well as a method for adding the potential suffix back
 based on a new pathname (possibly including search) or URL.
 ```js
@@ -239,7 +239,7 @@ console.log(denormalize('/blog/post/a')); // /blog/post/a/__data.json
 ```dts
 function normalizeUrl(url: URL | string): {
 	url: URL;
-	neededNormalization: boolean;
+	wasNormalized: boolean;
 	denormalize: (url?: string | URL) => URL;
 };
 ```
@@ -1114,7 +1114,7 @@ and returns an `App.Platform` object
 <div class="ts-block-property">
 
 ```dts
-beforeRequest?: (
+interceptRequest?: (
 	req: IncomingMessage & { originalUrl?: string },
 	res: ServerResponse,
 	next: () => void
@@ -1124,7 +1124,9 @@ beforeRequest?: (
 <div class="ts-block-property-details">
 
 Runs before every request that would hit the SvelteKit runtime and before requests to static assets in dev mode.
-Can be used to replicate middleware behavior in dev mode.
+In preview mode, in runs prior to all requests.
+Can be used to replicate middleware behavior outside of production environments.
+
 Implementation note: You either have to call `next()` to pass on the request/response, or `res.end()` to finish the request
 
 </div>
