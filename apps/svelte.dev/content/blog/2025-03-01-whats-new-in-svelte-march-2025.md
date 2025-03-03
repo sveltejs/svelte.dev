@@ -12,7 +12,7 @@ But before we dive into that, let's get to some updates!
 ## What's new in Svelte and SvelteKit
 
 - Native support for Websockets in SvelteKit is now available for testing! You can install the version of SvelteKit from the PR using pkg.pr.new and the PR number ([How To Install](https://github.com/sveltejs/kit/issues/1491#issuecomment-2645962690), [PR/Docs](https://github.com/sveltejs/kit/pull/12973))
-- `$props.id()` provides SSR-safe ID generation - unique for each instance of a component (**Svelte@5.20.0**, [Docs](<https://svelte.dev/docs/svelte/props#props.id()>), [#15185](https://github.com/sveltejs/svelte/pull/15185))
+- `$props.id()` provides SSR-safe ID generation - unique for each instance of a component (**Svelte@5.20.0**, [Docs](</docs/svelte/$props#$props.id()>), [#15185](https://github.com/sveltejs/svelte/pull/15185))
 - SvelteKit now supports an option for server-side route resolution. This means that instead of loading the whole routing manifest in the client, and doing the route resolution there, the server runtime is invoked for each route request (**Kit@2.17.0**, [#13379](https://github.com/sveltejs/kit/pull/13379))
 - The values for `cache-control` and `content-type` headers are now validated in dev mode to help catch invalid values early (**2.17.0**, [#13114](https://github.com/sveltejs/kit/pull/13114))
 
