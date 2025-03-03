@@ -12,7 +12,7 @@ But before we dive into that, let's get to some updates!
 ## What's new in Svelte and SvelteKit
 
 - Native support for Websockets in SvelteKit is now available for testing! You can install the version of SvelteKit from the PR using pkg.pr.new and the PR number ([How To Install](https://github.com/sveltejs/kit/issues/1491#issuecomment-2645962690), [PR/Docs](https://github.com/sveltejs/kit/pull/12973))
-- `$props.id()` provides SSR-safe ID generation - unique for each instance of a component (**Svelte@5.20.0**, [Docs](https://svelte.dev/docs/svelte/props#props.id()), [#15185](https://github.com/sveltejs/svelte/pull/15185))
+- `$props.id()` provides SSR-safe ID generation - unique for each instance of a component (**Svelte@5.20.0**, [Docs](<https://svelte.dev/docs/svelte/props#props.id()>), [#15185](https://github.com/sveltejs/svelte/pull/15185))
 - SvelteKit now supports an option for server-side route resolution. This means that instead of loading the whole routing manifest in the client, and doing the route resolution there, the server runtime is invoked for each route request (**Kit@2.17.0**, [#13379](https://github.com/sveltejs/kit/pull/13379))
 - The values for `cache-control` and `content-type` headers are now validated in dev mode to help catch invalid values early (**2.17.0**, [#13114](https://github.com/sveltejs/kit/pull/13114))
 
@@ -28,7 +28,7 @@ For a full list of bug fixes in Svelte, SvelteKit and its adapters, check out th
 - [stocknear](https://github.com/stocknear) is an open source stock analysis & community platform (congrats on [2 years of development](https://www.reddit.com/r/sveltejs/comments/1iupfxb/from_learning_web_dev_to_building_my_saas_hit/)!)
 - [Workouts](https://www.reddit.com/r/sveltejs/comments/1in1t0n/self_promotion_svelte_tauri_mobile_app_for/) is a simple and private app for tracking your strength training workouts
 - [Perplexity Fast Chat](https://github.com/Ayfri/Deep-Research) is a modern web interface to interact with Perplexity AI and OpenAI models, featuring a unique deep research mode
-- [exiftool-web](https://github.com/lucasgelfond/exiftool-web) is an exif data inspector tool, in the browser (via WebAssembly!) 
+- [exiftool-web](https://github.com/lucasgelfond/exiftool-web) is an exif data inspector tool, in the browser (via WebAssembly!)
 - [Weekend Scanner](https://weekendscanner.com/) helps you find long weekends by combining your weekends and holidays
 - [Linklink](https://linklink.ink/) is a link management tool for organising and sharing links
 - [Multiplayer Globe App](https://github.com/lilnasy/multiplayer-globe) displays website visitor locations in real-time using Astro, Cloudflare and Redis
@@ -37,12 +37,12 @@ For a full list of bug fixes in Svelte, SvelteKit and its adapters, check out th
 - [Segment Anything 2 in WebGPU](https://github.com/lucasgelfond/webgpu-sam2) is a WebGPU implementation of Facebook Research's model
 
 _Svelte Hack Wizzbangery Wizard Winners_
+
 1. [kunkun](https://github.com/kunkunsh/kunkun) is an open source, cross-platform, extensible app launcher (like Raycast) - it's also the winner of SvelteHack 2024 🏆
 2. [Infinite Turtles](https://github.com/edsunman/infinite-turtles) is a card game made with Threlte
 3. [Svudoku](https://github.com/fodor-lori/svudoku) is a modern-looking Sudoku application that lets you enjoy solving both Classic and Killer Sudoku puzzles
 4. [Svelte Space](https://github.com/baterson/svelte-tower-defence) is a TowerDefence clicker game made with Svelte 5, without canvas. Playable on different screens, Mobile or Desktop.
 5. [Haunted house](https://github.com/martaProsniak/haunted-house) is an old-school arcade game where you explore a haunted mansion full of ghosts. Control plasma bullets, use your wits and clear the whole house! Created only with Svelte 5.
-
 
 ### Learning Resources
 
@@ -65,7 +65,6 @@ _To Watch_
 - [GitHub Copilot: the agent awakens](https://www.youtube.com/watch?v=C95drFKy4ss) uses SvelteKit as their example project 🙌🏼
 - [Full Stack E-Commerce + Dashboard: Svelte 5, Cloudflare, Tailwind, Drizzle, Sqlite, 2025](https://www.youtube.com/watch?v=lwbNPEPt0E8) by Lawal Adebola
 
-
 _To Read_
 
 - [How to Protect Your SvelteKit Routes](https://blog.yuki-dev.com/blogs/x2lxp2szm) by Yuki Ishii
@@ -82,9 +81,10 @@ _To Read_
 - [Vite Plugin Svelte Anywhere](https://github.com/vidschofelix/vite-plugin-svelte-anywhere) empowers developers to define reusable custom elements directly within their Svelte components
 - [Svelte 5 + SvelteKit Sage](https://chatgpt.com/g/g-Knj6VxTpl-svelte-5-sveltekit-sage) is a custom GPT to get the best answers out of ChatGPT
 - [ModalFileManager](https://github.com/raguay/ModalFileManager/releases/tag/v2.0.0) and [PersonalKanban](https://github.com/raguay/PersonKanban/releases/tag/v0.5) have been updated to work with Svelte 5 (and fix a large number of bugs)
-- [components-pack](https://github.com/Matb85/components-pack) provides photos-related UI components for Svelte 5, Vue 3, Astro 5 and vanilla JS 
+- [components-pack](https://github.com/Matb85/components-pack) provides photos-related UI components for Svelte 5, Vue 3, Astro 5 and vanilla JS
 
 _Svelte Hack Rune Ritualist Winners_
+
 1. [SyncroState](https://github.com/beynar/syncrostate) brings Svelte 5 reactivity DX to the multiplayer level. Built on top of Yjs, it's a typesafe, efficient and dead simple way to manage multiplayer state. It is just like a normal $state but synchronised in realtime.
 2. [Twoslash Svelte](https://github.com/twoslashes/twoslash/pull/57) is an extension of `twoslashes/twoslash` which supports Svelte. This will be beneficial for adding type hints to code blocks on any documentation website targeting Svelte.
 3. [svisx](https://github.com/xGEMINIx/svisx) is a port of Airbnb's visx to Svelte, bringing the power of D3 visualizations to the Svelte ecosystem.
@@ -92,6 +92,7 @@ _Svelte Hack Rune Ritualist Winners_
 5. [Flexiboards](https://github.com/Blakintosh/svelte-flexiboards) provides headless, reactive drag and drop components for Svelte 5.
 
 _Svelte Hack Migration Magician Winners_
+
 1. [Svelte MapLibre GL](https://github.com/MIERUNE/svelte-maplibre-gl) lets you build interactive web maps effortlessly with MapLibre GL JS and Svelte 5.
 2. [svelte-ux](https://github.com/techniq/svelte-ux/pull/530) is a collection of Svelte components, actions, stores, and utilities to build highly interactive applications.
 3. [rokkit](https://github.com/jerrythomas/rokkit/tree/develop) is a data-driven, configurable, and themeable UI library built for use with Svelte. Rokkit controls are designed to be easily themeable, so you can match the look and feel of your project with minimal effort.
