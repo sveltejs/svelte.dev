@@ -709,6 +709,15 @@ sync?: boolean;
 <div class="ts-block-property">
 
 ```dts
+idPrefix?: string;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
 $$inline?: boolean;
 ```
 
