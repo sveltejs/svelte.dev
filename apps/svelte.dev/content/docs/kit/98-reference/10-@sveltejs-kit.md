@@ -193,6 +193,12 @@ function json(
 
 ## normalizeUrl
 
+<blockquote class="since note">
+
+Available since 2.18.0
+
+</blockquote>
+
 Strips possible SvelteKit-internal suffixes and trailing slashes from the URL pathname.
 Returns the normalized URL as well as a method for adding the potential suffix back
 based on a new pathname (possibly including search) or URL.
