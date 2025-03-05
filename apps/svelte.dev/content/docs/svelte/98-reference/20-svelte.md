@@ -278,12 +278,13 @@ function createRawSnippet<Params extends unknown[]>(
 
 ## flushSync
 
-Synchronously flushes any pending state changes and those that result from it.
+Synchronously flush any pending updates.
+Returns void if no callback is provided, otherwise returns the result of calling the callback.
 
 <div class="ts-block">
 
 ```dts
-function flushSync(fn?: (() => void) | undefined): void;
+function flushSync<T = void>(fn?: (() => T) | undefined): T;
 ```
 
 </div>
@@ -700,6 +701,15 @@ recover?: boolean;
 
 ```dts
 sync?: boolean;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+idPrefix?: string;
 ```
 
 <div class="ts-block-property-details"></div>
