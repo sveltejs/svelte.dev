@@ -4,7 +4,7 @@
 
 <Section>
 	<p class="copyright">
-		© 2024 Svelte contributors. Svelte is <a href="https://github.com/sveltejs/svelte"
+		© {new Date().getFullYear()} Svelte contributors. Svelte is <a href="https://github.com/sveltejs/svelte"
 			>free and open source software</a
 		> released under the MIT license.
 	</p>
