@@ -419,13 +419,14 @@ function onDestroy(fn: () => any): void;
 
 ## onMount
 
-The `onMount` function schedules a callback to run as soon as the component has been mounted to the DOM.
-It must be called during the component's initialisation (but doesn't need to live *inside* the component;
-it can be called from an external module).
+`onMount`, like [`$effect`](/docs/svelte/$effect), schedules a function to run as soon as the component has been mounted to the DOM.
+Unlike `$effect`, the provided function only runs once.
 
-If a function is returned _synchronously_ from `onMount`, it will be called when the component is unmounted.
+It must be called during the component's initialisation (but doesn't need to live _inside_ the component;
+it can be called from an external module). If a function is returned _synchronously_ from `onMount`,
+it will be called when the component is unmounted.
 
-`onMount` does not run inside [server-side components](/docs/svelte/svelte-server#render).
+`onMount` functions do not run during [server-side rendering](/docs/svelte/svelte-server#render).
 
 <div class="ts-block">
 
