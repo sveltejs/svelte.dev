@@ -27,6 +27,16 @@
 		padding: var(--sk-page-padding-top) var(--sk-page-padding-side) var(--sk-page-padding-bottom);
 
 		min-width: 0 !important;
+		overflow-wrap: break-word;
+		word-wrap: break-word;
+		word-break: break-word;
+	}
+
+	.page :global(h1) {
+		max-width: 100%;
+		overflow-wrap: break-word;
+		word-wrap: break-word;
+		hyphens: auto;
 	}
 
 	.page :global(:where(h2, h3) code) {
