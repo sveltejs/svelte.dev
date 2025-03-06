@@ -1,0 +1,11 @@
+---
+name: "svelte-virtuallists"
+description: "A component that renders only what is visible"
+repo_url: "https://github.com/orefalo/svelte-virtuallists"
+author: "orefalo"
+homepage: "https://orefalo.github.io/svelte-virtuallists/"
+downloads: 779
+updated: "2025-03-01T19:18:23.608Z"
+tags: 
+  - component-library
+---

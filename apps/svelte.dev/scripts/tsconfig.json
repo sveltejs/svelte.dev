@@ -1,0 +1,15 @@
+{
+	"compilerOptions": {
+		"checkJs": true,
+		"strict": true,
+		"allowJs": true,
+		"verbatimModuleSyntax": true,
+		"esModuleInterop": true,
+		"resolveJsonModule": true,
+		"emitDeclarationOnly": true,
+		"declaration": true,
+		"module": "NodeNext",
+		"moduleResolution": "nodenext"
+	},
+	"include": ["./**/*"]
+}

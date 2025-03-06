@@ -1,0 +1,22 @@
+{
+	"categories": {
+		"adapters": {
+			"keywords": ["sveltekit-adapter"]
+		},
+		"css+ui": {
+			"keywords": ["css", "ui", "icon", "icons", "renderer"]
+		},
+		"performance+seo": {
+			"keywords": ["seo", "performance", "perf", "optimization"]
+		},
+		"utilities": {
+			"keywords": ["tooling", "utils", "utility"]
+		},
+		"media": {
+			"keywords": ["media", "image", "images", "video", "audio"]
+		}
+	},
+	"featured": ["@sveltejs/kit"],
+	"blocklist": [],
+	"overrides": {}
+}
