@@ -8,7 +8,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import glob from 'tiny-glob/sync.js';
 import { fetch_details_for_package, request_queue, stream_search_by_keywords } from './npm.js';
-import registry from './registry.json' with { type: 'json' };
+import registry from '../../src/lib/registry.json' with { type: 'json' };
 
 dotenv.config({ path: '.env.local' });
 
@@ -51,7 +51,7 @@ function is_new_package(pkg: PackageWithTime): boolean {
 	return +now - +date > NEW_THRESHOLD_DAYS * 24 * 60 * 60 * 1000;
 }
 
-const keyword_to_categories = Object.entries(registry.categories).reduce((acc, [key, value]) => {
+const keyword_to_categories = Object.entries(registry.tags).reduce((acc, [key, value]) => {
 	const { keywords = [] } = value as { keywords?: string[] };
 
 	for (const keyword of keywords) {
@@ -162,57 +162,13 @@ const openrouter = createOpenRouter({
 	apiKey: process.env.OPENROUTER_API_KEY
 });
 
-const TAGS_PROMPT: Record<string, string> = {
-	// Component and UI categories
-	'component-library':
-		'ANY collection of Svelte components (2 or more). UI kits, design systems, widget collections, form components.',
-
-	ui: 'ANY UI-related code for Svelte. Single components, styling utilities, animations, transitions, visual elements, modals, tooltips.',
-
-	// Utility categories
-	utility:
-		'ANY helper functionality for Svelte. Stores, actions, directives, hooks, form handling, data fetching, validation, i18n.',
-
-	// Feature-specific categories
-	router:
-		'ANY routing or navigation related code. Page transitions, route management, URL handling, history management.',
-
-	content:
-		'ANY content or data handling. Markdown, MDX, CMS integration, blogs, static site generation, content editing.',
-
-	media:
-		'ANY media-related features. Images, videos, audio, file uploads, media players, carousels, galleries.',
-
-	// Infrastructure categories
-	server:
-		'ANY server-related functionality. SSR, API integration, data fetching, backend communication, cookies, sessions.',
-
-	adapter:
-		'ANY SvelteKit deployment solutions. Hosting integrations, platform adapters, deployment utilities.',
-
-	tooling:
-		'ANY development tools. Build plugins, code generation, testing, debugging, development workflows, CLI tools.',
-
-	preprocessor:
-		'ANY compile-time functionality. Language integration (SCSS/TS), template processing, code transformation.',
-
-	// Specialized functionality
-	performance:
-		'ANY performance optimization. Bundle optimization, runtime improvements, rendering optimization, lazy loading.',
-
-	seo: 'ANY SEO-related features. Meta tags, structured data, sitemaps, SEO analysis, head management.',
-
-	dom: 'ANY direct DOM interaction. Portal components, element queries, viewport detection, scroll handling, focus management.',
-
-	auth: 'ANY authentication or authorization. Login systems, OAuth, JWT, permission management, user sessions.',
-
-	// Specialized integration
-	integration:
-		'ANY integration with external services or libraries. Database connectors, API clients, third-party service integration.',
-
-	testing:
-		'Testing utilities, frameworks, or helpers specifically for Svelte applications. Includes test runners, mocking tools, assertion libraries, UI testing, and component testing for Svelte.'
-};
+const TAGS_PROMPT: Record<string, string> = Object.entries(registry.tags).reduce(
+	(acc, [key, value]) => {
+		acc[key] = value.prompt;
+		return acc;
+	},
+	{} as Record<string, string>
+);
 
 interface ProcessBatchesOptions {
 	/** Keywords to search for (default: ['svelte']) */

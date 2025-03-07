@@ -1,0 +1,69 @@
+{
+	"tags": {
+		"component-library": {
+			"prompt": "ANY collection of Svelte components (2 or more). UI kits, design systems, widget collections, form components.",
+			"title": "Component Collections & UI Kits"
+		},
+		"ui": {
+			"prompt": "ANY UI-related code for Svelte. Single components, styling utilities, animations, transitions, visual elements, modals, tooltips.",
+			"title": "UI Components & Elements"
+		},
+		"utility": {
+			"prompt": "ANY helper functionality for Svelte. Stores, actions, directives, hooks, form handling, data fetching, validation, i18n.",
+			"title": "Svelte Utility Helpers"
+		},
+		"router": {
+			"prompt": "ANY routing or navigation related code. Page transitions, route management, URL handling, history management.",
+			"title": "Routing & Navigation"
+		},
+		"content": {
+			"prompt": "ANY content or data handling. Markdown, MDX, CMS integration, blogs, static site generation, content editing.",
+			"title": "Content Management"
+		},
+		"media": {
+			"prompt": "ANY media-related features. Images, videos, audio, file uploads, media players, carousels, galleries.",
+			"title": "Media Handling"
+		},
+		"server": {
+			"prompt": "ANY server-related functionality. SSR, API integration, data fetching, backend communication, cookies, sessions.",
+			"title": "Server Integration"
+		},
+		"adapter": {
+			"prompt": "ANY SvelteKit deployment solutions. Hosting integrations, platform adapters, deployment utilities.",
+			"title": "Deployment Adapters"
+		},
+		"tooling": {
+			"prompt": "ANY development tools. Build plugins, code generation, testing, debugging, development workflows, CLI tools.",
+			"title": "Development Tools"
+		},
+		"preprocessor": {
+			"prompt": "ANY compile-time functionality. Language integration (SCSS/TS), template processing, code transformation.",
+			"title": "Compile-time Solutions"
+		},
+		"performance": {
+			"prompt": "ANY performance optimization. Bundle optimization, runtime improvements, rendering optimization, lazy loading.",
+			"title": "Performance Optimizers"
+		},
+		"seo": {
+			"prompt": "ANY SEO-related features. Meta tags, structured data, sitemaps, SEO analysis, head management.",
+			"title": "SEO Utilities"
+		},
+		"dom": {
+			"prompt": "ANY direct DOM interaction. Portal components, element queries, viewport detection, scroll handling, focus management.",
+			"title": "DOM Manipulation"
+		},
+		"auth": {
+			"prompt": "ANY authentication or authorization. Login systems, OAuth, JWT, permission management, user sessions.",
+			"title": "Authentication Solutions"
+		},
+		"integration": {
+			"prompt": "ANY integration with external services or libraries. Database connectors, API clients, third-party service integration.",
+			"title": "External Integrations"
+		},
+		"testing": {
+			"prompt": "Testing utilities, frameworks, or helpers specifically for Svelte applications. Includes test runners, mocking tools, assertion libraries, UI testing, and component testing for Svelte.",
+			"title": "Testing Frameworks"
+		}
+	},
+	"block": []
+}
