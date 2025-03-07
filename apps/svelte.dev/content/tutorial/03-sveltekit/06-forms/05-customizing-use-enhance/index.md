@@ -87,7 +87,7 @@ In the case of deletions, we don't really need to wait for the server to validat
 				method="POST"
 				action="?/delete"
 				+++use:enhance={() => {
-					deleting = [...deleting, todo.id];
+					deleting.push(todo.id)
 					return async ({ update }) => {
 						await update();
 						deleting = deleting.filter((id) => id !== todo.id);
