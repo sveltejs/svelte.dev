@@ -4,7 +4,7 @@
 	let time = $state(new Date());
 
 	// these automatically update when `time`
-	// changes, because of the `$:` prefix
+	// changes, because of the $derived
 	let hours = $derived(time.getHours());
 	let minutes = $derived(time.getMinutes());
 	let seconds = $derived(time.getSeconds());
