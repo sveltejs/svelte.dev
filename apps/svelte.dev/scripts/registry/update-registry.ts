@@ -333,7 +333,7 @@ ${JSON.stringify(batch_data)}
 				// Update packages in the map with LLM results
 				let updated_count = 0;
 
-				for (const [pkg_name, pkg_data] of packages) {
+				for (const [pkg_name] of packages) {
 					if (json[pkg_name]) {
 						// Package was successfully analyzed as a Svelte package
 						const package_details = packages_map.get(pkg_name);
