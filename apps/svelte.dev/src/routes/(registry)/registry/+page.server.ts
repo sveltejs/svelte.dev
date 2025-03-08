@@ -2,6 +2,8 @@ import { registry, type Package } from '$lib/server/content';
 import registry_json from '../../../lib/registry.json';
 import { getPackagesByTag, getSortedRegistry, init, search } from '../registry-search';
 
+export const prerender = false;
+
 const LIMIT = 100;
 
 export async function load({ url }) {
@@ -14,9 +16,7 @@ export async function load({ url }) {
 	let current_results: Package[] | null = null;
 
 	if (query) {
-		const result = search(query ?? '');
-
-		current_results = result;
+		current_results = search(query);
 	}
 
 	if (tag && current_results == null) {
