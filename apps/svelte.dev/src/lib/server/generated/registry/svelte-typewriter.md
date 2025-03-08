@@ -5,7 +5,7 @@ repo_url: "https://git.sr.ht/~henriquehbr/svelte-typewriter"
 author: "henriquehbr"
 homepage: "https://sr.ht/~henriquehbr/svelte-typewriter"
 downloads: 4364
-updated: "2025-03-05T05:21:09.531Z"
+updated: "2024-01-08T00:22:12.791Z"
 tags: 
   - ui
 ---

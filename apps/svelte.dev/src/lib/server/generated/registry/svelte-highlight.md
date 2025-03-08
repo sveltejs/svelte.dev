@@ -1,13 +1,12 @@
 ---
 name: "svelte-highlight"
-description: "Svelte component library for highlighting code using highlight.js"
+description: "A Svelte component library for syntax highlighting code using highlight.js."
 repo_url: "https://github.com/metonym/svelte-highlight"
 author: "metonym"
 homepage: "https://github.com/metonym/svelte-highlight"
-downloads: 15044
+downloads: 15877
 dependents: 22
-updated: "2025-03-06T05:09:23.168Z"
+updated: "2024-12-28T02:44:14.035Z"
 tags: 
-  - component-library
   - ui
 ---

@@ -1,12 +1,12 @@
 ---
 name: "@rgossiaux/svelte-headlessui"
-description: "A complete, full-featured, unofficial Svelte port of Headless UI, an unstyled, fully accessible UI component library."
+description: "A complete, full-featured Svelte port of Headless UI."
 repo_url: "https://github.com/rgossiaux/svelte-headlessui"
 author: "rgossiaux"
 homepage: "https://svelte-headlessui.goss.io"
-downloads: 4287
+downloads: 5004
 dependents: 3
-updated: "2025-02-28T05:31:12.563Z"
+updated: "2023-06-11T21:49:03.380Z"
 tags: 
   - component-library
   - ui

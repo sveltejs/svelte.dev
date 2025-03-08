@@ -6,7 +6,8 @@ author: "jesseskinner"
 homepage: "https://github.com/jesseskinner/svelte-autosize#readme"
 downloads: 3120
 dependents: 8
-updated: "2025-03-03T13:27:13.503Z"
+updated: "2024-11-01T14:42:17.801Z"
 tags: 
   - utility
+  - dom
 ---

@@ -5,8 +5,7 @@ repo_url: "https://github.com/vime-js/vime"
 author: "mihar-22"
 downloads: 562
 dependents: 6
-updated: "2025-03-03T16:01:29.489Z"
+updated: "2023-07-17T00:15:50.338Z"
 tags: 
-  - component-library
   - media
 ---

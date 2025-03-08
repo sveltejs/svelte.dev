@@ -1,13 +1,12 @@
 ---
 name: "@smui/dialog"
-description: "Svelte Material UI - Dialog"
+description: "Svelte Material UI component for creating dialogs, offering a Material Design-compliant dialog implementation."
 repo_url: "https://github.com/hperrin/svelte-material-ui"
 author: "hperrin"
 homepage: "https://github.com/hperrin/svelte-material-ui#readme"
-downloads: 7337
+downloads: 6980
 dependents: 7
-updated: "2025-03-06T05:09:27.561Z"
+updated: "2024-12-22T22:58:28.682Z"
 tags: 
-  - component-library
   - ui
 ---

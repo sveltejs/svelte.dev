@@ -4,9 +4,9 @@ description: "Allows to write stories in Svelte syntax"
 repo_url: "https://github.com/storybookjs/addon-svelte-csf"
 author: "storybook-bot"
 homepage: "https://github.com/storybookjs/addon-svelte-csf#readme"
-downloads: 55921
+downloads: 56023
 dependents: 15
-updated: "2025-03-06T05:08:44.048Z"
+updated: "2024-11-28T09:20:51.195Z"
 tags: 
   - tooling
 ---

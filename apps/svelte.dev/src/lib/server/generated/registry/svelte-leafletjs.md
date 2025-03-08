@@ -1,14 +1,12 @@
 ---
 name: "svelte-leafletjs"
-description: "Svelte component for leaflet"
+description: "Svelte component for Leaflet maps."
 repo_url: "https://github.com/ngyewch/svelte-leafletjs"
 author: "ngyewch"
 homepage: "https://ngyewch.github.io/svelte-leafletjs/"
 downloads: 1057
 dependents: 1
-updated: "2025-03-05T04:41:08.436Z"
+updated: "2024-11-20T03:27:11.865Z"
 tags: 
-  - ui
   - component-library
-  - media
 ---

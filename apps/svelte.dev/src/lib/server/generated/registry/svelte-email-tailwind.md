@@ -5,7 +5,7 @@ repo_url: "https://github.com/steveninety/svelte-email-tailwind"
 author: "steveninety"
 homepage: "https://github.com/steveninety/svelte-email-tailwind#readme"
 downloads: 240
-updated: "2025-03-03T11:01:20.327Z"
+updated: "2025-02-17T10:51:34.927Z"
 tags: 
   - utility
 ---

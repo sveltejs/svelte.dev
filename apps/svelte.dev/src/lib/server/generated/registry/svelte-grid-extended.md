@@ -5,8 +5,7 @@ repo_url: "https://github.com/cuire/svelte-grid-extended"
 author: "cuire"
 homepage: "https://github.com/cuire/svelte-grid-extended#readme"
 downloads: 746
-updated: "2025-03-04T14:02:36.552Z"
+updated: "2024-06-01T06:55:58.810Z"
 tags: 
-  - component-library
   - ui
 ---

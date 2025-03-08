@@ -1,9 +1,9 @@
 ---
 name: "@smkit/ui"
-description: "UI Kit of SberMarketing"
-author: "ghostmodd"
-downloads: 623
-updated: "2025-03-06T16:40:10.211Z"
+description: "UI Kit of SberMarketing for Svelte."
+author: "disimasar"
+downloads: 588
+updated: "2025-03-07T14:41:56.317Z"
 tags: 
   - component-library
   - ui

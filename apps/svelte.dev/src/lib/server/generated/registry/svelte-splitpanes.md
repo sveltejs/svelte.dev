@@ -1,13 +1,12 @@
 ---
 name: "svelte-splitpanes"
-description: "A full featured resizable pane layout splitter, ported from vue-splitpanes and enhanced"
+description: "A full featured resizable pane layout splitter for Svelte."
 repo_url: "https://github.com/orefalo/svelte-splitpanes"
 author: "orefalo"
 homepage: "https://orefalo.github.io/svelte-splitpanes/"
-downloads: 4622
+downloads: 3561
 dependents: 3
-updated: "2025-02-28T15:41:06.790Z"
+updated: "2024-10-30T17:39:46.960Z"
 tags: 
-  - component-library
   - ui
 ---

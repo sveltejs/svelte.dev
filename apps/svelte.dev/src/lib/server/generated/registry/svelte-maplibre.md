@@ -1,13 +1,14 @@
 ---
 name: "svelte-maplibre"
-description: "Svelte bindings for MapLibre"
+description: "Svelte bindings for the MapLibre mapping library."
 repo_url: "https://github.com/dimfeld/svelte-maplibre"
 author: "dimfeld"
 homepage: "https://svelte-maplibre.imfeld.dev"
-downloads: 6711
+downloads: 6205
 dependents: 6
-updated: "2025-03-05T05:05:46.050Z"
+updated: "2025-02-06T18:37:17.501Z"
 tags: 
-  - component-library
+  - integration
   - ui
+  - media
 ---

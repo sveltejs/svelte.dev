@@ -1,12 +1,11 @@
 ---
 name: "svelte4-htm"
-description: "tagged template syntax for svelte to simplify testing using svelte4"
+description: "Tagged template syntax for Svelte to simplify testing using Svelte 4."
 repo_url: "https://github.com/NanezX/svelte4-htm"
 author: "nanez"
 homepage: "https://github.com/NanezX/svelte4-htm#readme"
 downloads: 796
-updated: "2025-03-04T09:57:17.560Z"
+updated: "2023-07-18T00:16:13.013Z"
 tags: 
   - tooling
-  - testing
 ---

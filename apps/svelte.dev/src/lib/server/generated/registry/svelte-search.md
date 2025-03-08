@@ -1,14 +1,13 @@
 ---
 name: "svelte-search"
-description: "Accessible, customizable Svelte search component"
+description: "An accessible and customizable Svelte search component."
 repo_url: "https://github.com/metonym/svelte-search"
 author: "metonym"
 homepage: "https://github.com/metonym/svelte-search"
 downloads: 1182
 dependents: 4
-updated: "2025-03-05T00:56:12.668Z"
+updated: "2025-01-08T00:18:49.866Z"
 tags: 
   - ui
-  - component-library
   - utility
 ---

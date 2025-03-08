@@ -6,8 +6,7 @@ author: "mattjennings"
 homepage: "https://svelte-modals.mattjennin.gs"
 downloads: 4503
 dependents: 5
-updated: "2025-03-03T19:51:48.236Z"
+updated: "2024-11-11T19:52:00.724Z"
 tags: 
-  - component-library
   - ui
 ---

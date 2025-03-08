@@ -1,12 +1,12 @@
 ---
 name: "svelte-hydrated"
-description: "💧 Indicating hydration status by svelte-store "
+description: "Svelte store to indicate hydration status."
 repo_url: "https://github.com/jill64/svelte-hydrated"
 author: "jill64"
 homepage: "https://github.com/jill64/svelte-hydrated#readme"
-downloads: 3113
+downloads: 4076
 dependents: 1
-updated: "2025-03-01T04:41:36.518Z"
+updated: "2024-12-30T20:23:43.919Z"
 tags: 
   - utility
   - server

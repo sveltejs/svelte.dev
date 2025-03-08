@@ -4,9 +4,9 @@ description: "Adapter for building SvelteKit applications on Cloudflare Pages wi
 repo_url: "https://github.com/sveltejs/kit"
 author: "svelte-admin"
 homepage: "https://svelte.dev"
-downloads: 49577
+downloads: 51117
 dependents: 3
-updated: "2025-03-06T05:03:50.031Z"
+updated: "2025-02-14T16:50:40.461Z"
 tags: 
   - adapter
 ---

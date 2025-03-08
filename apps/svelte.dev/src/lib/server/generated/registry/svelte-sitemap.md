@@ -1,13 +1,12 @@
 ---
 name: "svelte-sitemap"
-description: "Small helper which scans your Svelte routes folder and generates static sitemap.xml"
+description: "Generates a static sitemap.xml file for SvelteKit projects."
 repo_url: "https://github.com/bartholomej/svelte-sitemap"
 author: "bartholomej"
 homepage: "https://github.com/bartholomej/svelte-sitemap#readme"
-downloads: 4336
-updated: "2025-03-06T05:31:10.120Z"
+downloads: 4702
+updated: "2025-01-05T13:02:34.197Z"
 tags: 
-  - utility
-  - seo
   - tooling
+  - seo
 ---

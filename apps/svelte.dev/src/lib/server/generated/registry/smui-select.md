@@ -4,9 +4,9 @@ description: "Svelte Material UI - Select"
 repo_url: "https://github.com/hperrin/svelte-material-ui"
 author: "hperrin"
 homepage: "https://github.com/hperrin/svelte-material-ui#readme"
-downloads: 7424
+downloads: 7453
 dependents: 8
-updated: "2025-03-06T05:06:14.877Z"
+updated: "2024-12-22T22:58:35.311Z"
 tags: 
   - component-library
   - ui

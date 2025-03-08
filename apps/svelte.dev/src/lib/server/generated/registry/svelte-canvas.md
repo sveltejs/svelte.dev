@@ -6,7 +6,7 @@ author: "dnass"
 homepage: "https://dnass.github.io/svelte-canvas/"
 downloads: 1435
 dependents: 2
-updated: "2025-03-05T21:51:30.434Z"
+updated: "2024-12-04T20:47:01.008Z"
 tags: 
   - ui
 ---

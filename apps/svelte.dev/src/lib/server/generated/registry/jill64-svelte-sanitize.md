@@ -1,12 +1,12 @@
 ---
 name: "@jill64/svelte-sanitize"
-description: "💎 Safe html expansion for Svelte with universal-sanitize"
+description: "Safe HTML expansion for Svelte using universal-sanitize."
 repo_url: "https://github.com/jill64/svelte-sanitize"
 author: "jill64"
 homepage: "https://github.com/jill64/svelte-sanitize#readme"
-downloads: 1379
+downloads: 1482
 dependents: 1
-updated: "2025-03-01T04:56:11.587Z"
+updated: "2025-01-31T00:17:18.150Z"
 tags: 
   - utility
 ---

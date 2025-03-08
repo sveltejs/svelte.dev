@@ -1,13 +1,12 @@
 ---
 name: "svelte-konva"
-description: "A Svelte wrapper for Konva"
+description: "A Svelte wrapper for Konva, a 2D canvas library."
 repo_url: "https://github.com/konvajs/svelte-konva"
 author: "teykey1"
 homepage: "https://konvajs.org/docs/svelte"
 downloads: 1370
 dependents: 2
-updated: "2025-03-05T13:41:17.337Z"
+updated: "2023-08-24T21:45:43.140Z"
 tags: 
-  - component-library
   - ui
 ---

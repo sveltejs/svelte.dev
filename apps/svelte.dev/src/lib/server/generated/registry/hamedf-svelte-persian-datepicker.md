@@ -5,8 +5,7 @@ repo_url: "https://github.com/hamedf62/svelte-persian-datepicker"
 author: "hamedf"
 homepage: "https://github.com/hamedf62/svelte-persian-datepicker"
 downloads: 1221
-updated: "2025-03-02T14:53:43.610Z"
+updated: "2025-03-02T14:53:12.359Z"
 tags: 
-  - component-library
   - ui
 ---

@@ -6,7 +6,7 @@ author: "ossdecathlon"
 homepage: "https://github.com/Decathlon/vitamin-web/tree/main/packages/sources/svelte"
 downloads: 8934
 dependents: 1
-updated: "2025-03-06T05:07:02.411Z"
+updated: "2024-03-25T10:00:34.270Z"
 tags: 
   - component-library
   - ui

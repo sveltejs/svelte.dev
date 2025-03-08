@@ -1,14 +1,12 @@
 ---
 name: "@sveltejs/enhanced-img"
-description: "Image optimization for your Svelte apps"
+description: "An image optimization plugin for Svelte apps."
 repo_url: "https://github.com/sveltejs/kit"
 author: "svelte-admin"
 homepage: "https://svelte.dev"
-downloads: 19465
-updated: "2025-03-06T05:04:59.689Z"
+downloads: 19910
+updated: "2024-12-12T22:34:24.780Z"
 tags: 
-  - tooling
   - preprocessor
   - performance
-  - media
 ---

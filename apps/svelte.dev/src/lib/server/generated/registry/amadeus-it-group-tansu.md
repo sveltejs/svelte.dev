@@ -5,7 +5,7 @@ repo_url: "https://github.com/AmadeusITGroup/tansu"
 author: "divdavem"
 homepage: "https://github.com/AmadeusITGroup/tansu#readme"
 downloads: 1416
-updated: "2025-03-04T09:56:09.766Z"
+updated: "2024-12-04T15:46:18.891Z"
 tags: 
   - utility
 ---

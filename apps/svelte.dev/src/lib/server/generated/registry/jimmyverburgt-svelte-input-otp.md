@@ -6,7 +6,7 @@ author: "jimmyverburgt"
 homepage: "http://svelte-input-otp.jimmyverburgt.com"
 downloads: 358
 dependents: 1
-updated: "2025-03-01T18:56:07.434Z"
+updated: "2024-08-30T18:19:35.962Z"
 tags: 
   - ui
   - utility

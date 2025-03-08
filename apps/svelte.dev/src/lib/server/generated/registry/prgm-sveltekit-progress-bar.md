@@ -5,8 +5,7 @@ repo_url: "https://github.com/prgm-dev/sveltekit-progress-bar"
 author: "alexandre-prgm"
 homepage: "https://github.com/prgm-dev/sveltekit-progress-bar#readme"
 downloads: 2692
-updated: "2025-03-04T11:56:09.026Z"
+updated: "2025-02-18T11:47:43.630Z"
 tags: 
   - ui
-  - utility
 ---

@@ -4,10 +4,9 @@ description: "A collection of high-level Svelte components designed for expandin
 repo_url: "https://github.com/rsdavis/svelte-collapsible"
 author: "rsdavis"
 homepage: "https://github.com/rsdavis/svelte-collapsible#readme"
-downloads: 663
+downloads: 696
 dependents: 1
-updated: "2025-02-27T23:51:06.496Z"
+updated: "2024-11-21T22:40:59.943Z"
 tags: 
-  - component-library
   - ui
 ---

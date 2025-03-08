@@ -1,12 +1,12 @@
 ---
 name: "svelte-resize-observer-action"
-description: "Svelte use:action for element resize notifications using ResizeObserver."
+description: "Svelte action for element resize notifications using ResizeObserver."
 repo_url: "https://github.com/captaincodeman/svelte-resize-observer-action"
 author: "captaincodeman"
 homepage: "https://captaincodeman.github.io/svelte-resize-observer-action/"
-downloads: 1443
+downloads: 896
 dependents: 3
-updated: "2025-02-28T06:16:09.347Z"
+updated: "2024-04-29T20:09:13.892Z"
 tags: 
   - utility
   - dom

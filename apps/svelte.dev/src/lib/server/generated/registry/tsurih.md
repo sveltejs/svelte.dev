@@ -1,10 +1,9 @@
 ---
 name: "tsurih"
-description: "Svelte form validation library"
+description: "A Svelte form validation library with TypeScript support."
 author: "hardwayder"
 downloads: 344
-updated: "2025-03-05T01:11:17.653Z"
+updated: "2024-04-15T16:53:49.639Z"
 tags: 
   - utility
-  - form
 ---

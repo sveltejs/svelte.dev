@@ -1,12 +1,11 @@
 ---
 name: "@bonosoft/sveltekit-qrcode"
-description: "QR Code generator component for SvelteKit"
+description: "A SvelteKit component for generating QR codes."
 repo_url: "https://github.com/bonosoft/sveltekit-qrcode"
 author: "bonosoft"
 homepage: "https://github.com/bonosoft/sveltekit-qrcode#readme"
 downloads: 345
-updated: "2025-03-05T01:26:12.185Z"
+updated: "2023-03-25T23:13:49.102Z"
 tags: 
-  - component-library
-  - utility
+  - ui
 ---

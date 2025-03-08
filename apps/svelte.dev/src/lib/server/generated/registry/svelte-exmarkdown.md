@@ -4,10 +4,9 @@ description: "Svelte component to render markdown. Dynamic and Extensible."
 repo_url: "https://github.com/ssssota/svelte-exmarkdown"
 author: "ssssota"
 homepage: "https://ssssota.github.io/svelte-exmarkdown"
-downloads: 5780
+downloads: 6040
 dependents: 5
-updated: "2025-03-06T05:04:54.110Z"
+updated: "2025-02-18T15:52:18.931Z"
 tags: 
-  - component-library
   - content
 ---

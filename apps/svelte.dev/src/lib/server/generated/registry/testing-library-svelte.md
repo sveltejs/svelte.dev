@@ -4,9 +4,9 @@ description: "Simple and complete Svelte testing utilities that encourage good t
 repo_url: "https://github.com/testing-library/svelte-testing-library"
 author: "testing-library-bot"
 homepage: "https://github.com/testing-library/svelte-testing-library#readme"
-downloads: 152991
+downloads: 157146
 dependents: 11
-updated: "2025-03-06T05:08:46.750Z"
+updated: "2025-02-11T18:02:00.554Z"
 tags: 
   - testing
 ---

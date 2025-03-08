@@ -1,14 +1,12 @@
 ---
 name: "svelte-multiselect"
-description: "Svelte multi-select component"
+description: "A highly customizable Svelte multi-select component with keyboard support and dropdown functionality."
 repo_url: "https://github.com/janosh/svelte-multiselect"
 author: "janosh"
 homepage: "https://janosh.github.io/svelte-multiselect"
-downloads: 20529
+downloads: 18570
 dependents: 3
-updated: "2025-03-06T05:04:18.577Z"
+updated: "2024-10-24T09:06:50.627Z"
 tags: 
-  - component-library
   - ui
-  - form
 ---

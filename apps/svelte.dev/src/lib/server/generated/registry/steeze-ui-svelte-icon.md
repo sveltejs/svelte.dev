@@ -1,13 +1,12 @@
 ---
 name: "@steeze-ui/svelte-icon"
-description: "This project is still in experimental development. Expect bugs and breaking changes!"
+description: "A Svelte component for easily using SVG icons from various icon packs."
 repo_url: "https://github.com/steeze-ui/icons"
 author: "justinvoitel"
 homepage: "https://github.com/steeze-ui/icons#readme"
-downloads: 12418
+downloads: 12746
 dependents: 18
-updated: "2025-03-06T05:05:17.928Z"
+updated: "2024-11-20T12:40:32.253Z"
 tags: 
-  - component-library
   - ui
 ---

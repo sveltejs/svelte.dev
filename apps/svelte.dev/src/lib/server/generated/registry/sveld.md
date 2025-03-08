@@ -6,7 +6,8 @@ author: "metonym"
 homepage: "https://github.com/carbon-design-system/sveld"
 downloads: 3785
 dependents: 2
-updated: "2025-03-03T19:28:15.209Z"
+updated: "2025-02-17T19:19:19.814Z"
 tags: 
   - tooling
+  - preprocessor
 ---

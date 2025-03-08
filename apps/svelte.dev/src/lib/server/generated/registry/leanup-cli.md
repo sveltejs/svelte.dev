@@ -6,7 +6,7 @@ author: "m.oppitz"
 homepage: "https://leanupjs.org"
 downloads: 678
 dependents: 5
-updated: "2025-03-05T00:52:18.231Z"
+updated: "2024-04-24T02:38:45.047Z"
 tags: 
   - tooling
 ---

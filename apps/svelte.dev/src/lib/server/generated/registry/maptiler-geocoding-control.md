@@ -1,0 +1,12 @@
+---
+name: "@maptiler/geocoding-control"
+description: "The Javascript & TypeScript Map Control component for MapTiler Geocoding service. Easy to be integrated into any JavaScript mapping application."
+repo_url: "https://github.com/maptiler/maptiler-geocoding-control"
+author: "martin.zdila"
+homepage: "https://github.com/maptiler/maptiler-geocoding-control#readme"
+downloads: 2102
+dependents: 3
+updated: "2025-02-05T07:29:54.024Z"
+tags: 
+  - integration
+---

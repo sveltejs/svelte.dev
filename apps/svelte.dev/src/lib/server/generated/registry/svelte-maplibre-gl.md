@@ -5,8 +5,7 @@ repo_url: "https://github.com/MIERUNE/svelte-maplibre-gl"
 author: "ciscorn"
 homepage: "https://svelte-maplibre-gl.mierune.dev/"
 downloads: 266
-updated: "2025-03-04T10:28:57.890Z"
+updated: "2025-02-18T10:11:08.006Z"
 tags: 
-  - integration
-  - ui
+  - media
 ---

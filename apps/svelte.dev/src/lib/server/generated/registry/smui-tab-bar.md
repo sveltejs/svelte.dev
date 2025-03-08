@@ -4,9 +4,9 @@ description: "Svelte Material UI - Tab Bar"
 repo_url: "https://github.com/hperrin/svelte-material-ui"
 author: "hperrin"
 homepage: "https://github.com/hperrin/svelte-material-ui#readme"
-downloads: 5243
+downloads: 5429
 dependents: 2
-updated: "2025-02-28T05:06:37.136Z"
+updated: "2024-12-22T22:58:33.912Z"
 tags: 
   - component-library
   - ui

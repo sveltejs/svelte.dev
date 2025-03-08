@@ -1,11 +1,11 @@
 ---
 name: "svelte-lucide"
-description: "1460+ Lucide SVG icon components for Svelte"
+description: "A Svelte component library providing a comprehensive set of Lucide SVG icons."
 repo_url: "https://github.com/shinokada/svelte-lucide"
 author: "shinichiokada"
 homepage: "https://svelte-lucide.codewithshin.com/"
-downloads: 9218
-updated: "2025-03-06T05:05:20.512Z"
+downloads: 11279
+updated: "2024-10-25T14:28:04.149Z"
 tags: 
   - ui
 ---

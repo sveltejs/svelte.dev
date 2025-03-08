@@ -1,12 +1,12 @@
 ---
 name: "svelte-subscribe"
-description: "Subscribe to non top-level stores in your Svelte templates"
-repo_url: "ssh://git@github.com/bryanmylee/svelte-subscribe"
+description: "Enables subscribing to non-top-level stores within Svelte templates."
+repo_url: "git@github.com/bryanmylee/svelte-subscribe"
 author: "bryanmylee"
 homepage: "https://github.com/bryanmylee/svelte-subscribe#readme"
-downloads: 16165
+downloads: 16043
 dependents: 6
-updated: "2025-03-06T05:10:40.106Z"
+updated: "2024-01-02T19:35:50.625Z"
 tags: 
   - utility
 ---

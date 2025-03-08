@@ -1,12 +1,12 @@
 ---
 name: "svelte-typeahead"
-description: "Accessible, fuzzy search typeahead component"
+description: "An accessible, fuzzy search typeahead component for Svelte."
 repo_url: "https://github.com/metonym/svelte-typeahead"
 author: "metonym"
 homepage: "https://github.com/metonym/svelte-typeahead"
 downloads: 794
-updated: "2025-03-03T19:03:49.866Z"
+updated: "2025-01-20T18:34:25.017Z"
 tags: 
-  - component-library
   - ui
+  - utility
 ---

@@ -6,8 +6,7 @@ author: "dysfunc"
 homepage: "https://github.com/svelte-plugins/tooltips"
 downloads: 4798
 dependents: 2
-updated: "2025-03-06T05:10:40.310Z"
+updated: "2025-02-07T04:58:52.924Z"
 tags: 
-  - utility
   - ui
 ---

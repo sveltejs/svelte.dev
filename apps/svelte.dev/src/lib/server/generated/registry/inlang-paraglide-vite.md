@@ -1,12 +1,13 @@
 ---
 name: "@inlang/paraglide-vite"
-description: "Vite plugin for running the Paraglide i18n compiler"
+description: "A Vite plugin for running the Paraglide i18n compiler in Svelte projects."
 repo_url: "https://github.com/opral/monorepo#inlang/source-code/paraglide/paraglide-vite"
 author: "samuelstroschein"
 homepage: "https://github.com/opral/monorepo/tree/main/inlang/source-code/paraglide/paraglide-vite#README"
-downloads: 26487
+downloads: 26816
 dependents: 3
-updated: "2025-03-06T05:10:26.753Z"
+updated: "2025-02-28T17:09:14.509Z"
 tags: 
+  - tooling
   - integration
 ---

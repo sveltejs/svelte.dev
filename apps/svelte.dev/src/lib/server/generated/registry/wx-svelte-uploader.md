@@ -6,8 +6,7 @@ author: "marta-ko"
 homepage: "https://svar.dev/svelte/core/"
 downloads: 862
 dependents: 1
-updated: "2025-03-04T22:11:07.485Z"
+updated: "2025-02-18T22:00:21.178Z"
 tags: 
-  - component-library
   - ui
 ---

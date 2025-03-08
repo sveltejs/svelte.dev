@@ -4,9 +4,9 @@ description: "Adapter for SvelteKit apps that prerenders your entire site as a c
 repo_url: "https://github.com/sveltejs/kit"
 author: "svelte-admin"
 homepage: "https://svelte.dev"
-downloads: 147209
+downloads: 151709
 dependents: 60
-updated: "2025-03-06T05:04:29.352Z"
+updated: "2024-12-21T18:33:37.611Z"
 tags: 
   - adapter
 ---

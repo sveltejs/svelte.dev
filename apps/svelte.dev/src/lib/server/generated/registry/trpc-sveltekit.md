@@ -6,9 +6,8 @@ author: "icflorescu"
 homepage: "https://icflorescu.github.io/trpc-sveltekit/"
 downloads: 3715
 dependents: 4
-updated: "2025-03-06T12:53:26.048Z"
+updated: "2025-03-06T12:52:54.703Z"
 tags: 
-  - server
-  - utility
   - integration
+  - server
 ---

@@ -1,12 +1,13 @@
 ---
 name: "@inlang/paraglide-js"
-description: "[![Inlang-ecosystem compatibility badge](https://cdn.jsdelivr.net/gh/opral/monorepo@main/inlang/assets/md-badges/inlang.svg)](https://inlang.com)"
+description: "A compiler-based i18n library that emits tree-shakable message functions."
 repo_url: "https://github.com/opral/inlang-paraglide-js"
 author: "samuelstroschein"
 homepage: "https://inlang.com/m/gerre34r/library-inlang-paraglideJs"
-downloads: 42930
+downloads: 43677
 dependents: 7
-updated: "2025-03-06T05:06:25.413Z"
+updated: "2025-03-08T03:02:10.477Z"
 tags: 
   - utility
+  - i18n
 ---

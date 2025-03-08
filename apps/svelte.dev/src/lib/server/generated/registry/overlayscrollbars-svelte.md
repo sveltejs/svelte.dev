@@ -1,14 +1,13 @@
 ---
 name: "overlayscrollbars-svelte"
-description: "OverlayScrollbars for Svelte."
+description: "Svelte component wrapper for OverlayScrollbars, providing custom scrollbars."
 repo_url: "https://github.com/KingSora/OverlayScrollbars"
 author: "kingsora"
 homepage: "https://kingsora.github.io/OverlayScrollbars"
 downloads: 982
 dependents: 1
-updated: "2025-03-05T13:36:18.799Z"
+updated: "2025-02-19T13:28:21.987Z"
 tags: 
   - ui
-  - component-library
   - dom
 ---

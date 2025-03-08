@@ -1,12 +1,12 @@
 ---
 name: "@smui/ripple"
-description: "Svelte Material UI - Ripple"
+description: "Svelte Material UI - Ripple component."
 repo_url: "https://github.com/hperrin/svelte-material-ui"
 author: "hperrin"
 homepage: "https://github.com/hperrin/svelte-material-ui#readme"
-downloads: 12850
+downloads: 12572
 dependents: 19
-updated: "2025-03-06T05:08:40.559Z"
+updated: "2024-12-22T22:58:30.221Z"
 tags: 
   - ui
 ---

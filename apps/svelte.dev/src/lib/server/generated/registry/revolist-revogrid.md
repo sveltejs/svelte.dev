@@ -1,14 +1,13 @@
 ---
 name: "@revolist/revogrid"
-description: "Virtual reactive data grid spreadsheet component - RevoGrid."
+description: "A virtual, reactive data grid/spreadsheet component for Svelte, supporting millions of cells and Excel-like features."
 repo_url: "https://github.com/revolist/revogrid"
 author: "kumakint"
 homepage: "https://rv-grid.com"
-downloads: 10046
+downloads: 9597
 dependents: 14
-updated: "2025-03-06T05:03:46.195Z"
+updated: "2025-03-07T00:53:12.961Z"
 tags: 
-  - svelte
-  - svelte-grid
-  - svelte-datagrid
+  - component-library
+  - ui
 ---

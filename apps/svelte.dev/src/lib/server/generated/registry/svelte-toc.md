@@ -5,8 +5,7 @@ repo_url: "https://github.com/janosh/svelte-toc"
 author: "janosh"
 homepage: "https://janosh.github.io/svelte-toc"
 downloads: 290
-updated: "2025-03-04T07:52:21.375Z"
+updated: "2024-06-12T17:18:18.813Z"
 tags: 
-  - component-library
   - ui
 ---

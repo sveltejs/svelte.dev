@@ -1,12 +1,12 @@
 ---
 name: "@smui/line-ripple"
-description: "Svelte Material UI - Line Ripple"
+description: "Svelte Material UI component for a line ripple effect, providing a Material Design-compliant visual element."
 repo_url: "https://github.com/hperrin/svelte-material-ui"
 author: "hperrin"
 homepage: "https://github.com/hperrin/svelte-material-ui#readme"
-downloads: 8461
+downloads: 8595
 dependents: 4
-updated: "2025-03-06T05:10:42.417Z"
+updated: "2024-12-22T22:58:28.629Z"
 tags: 
   - ui
 ---

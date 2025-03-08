@@ -4,10 +4,11 @@ description: "Svelte actions for working with floating ui"
 repo_url: "https://github.com/fedorovvvv/svelte-floating-ui"
 author: "fedorovvvv"
 homepage: "https://github.com/fedorovvvv/svelte-floating-ui#readme"
-downloads: 32775
+downloads: 31901
 dependents: 21
-updated: "2025-03-06T05:09:14.001Z"
+updated: "2024-06-17T10:29:31.921Z"
 tags: 
-  - utility
   - ui
+  - utility
+  - dom
 ---

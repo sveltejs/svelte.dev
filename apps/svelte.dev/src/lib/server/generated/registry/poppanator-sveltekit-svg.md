@@ -1,13 +1,12 @@
 ---
 name: "@poppanator/sveltekit-svg"
-description: "Import SVG files as Svelte components"
+description: "A Vite plugin for SvelteKit that imports SVG files as Svelte components."
 repo_url: "https://github.com/poppa/sveltekit-svg"
 author: "poppanator_"
 homepage: "https://github.com/poppa/sveltekit-svg#readme"
-downloads: 11969
+downloads: 11986
 dependents: 2
-updated: "2025-03-06T05:11:43.909Z"
+updated: "2024-10-23T12:21:16.906Z"
 tags: 
   - tooling
-  - preprocessor
 ---

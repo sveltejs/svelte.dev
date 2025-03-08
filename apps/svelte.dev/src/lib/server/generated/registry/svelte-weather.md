@@ -1,11 +1,11 @@
 ---
 name: "svelte-weather"
-description: "SVG weather icons for Svelte"
+description: "A Svelte component providing SVG weather icons."
 repo_url: "https://github.com/shinokada/svelte-weather"
 author: "shinichiokada"
 homepage: "https://svelte-weather-icons.codewithshin.com/"
 downloads: 471
-updated: "2025-03-04T05:22:59.845Z"
+updated: "2024-03-01T17:21:10.001Z"
 tags: 
   - ui
 ---

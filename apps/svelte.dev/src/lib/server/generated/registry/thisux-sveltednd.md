@@ -4,8 +4,7 @@ description: "A lightweight, flexible drag and drop library for Svelte 5 applica
 author: "sanjusivalingam"
 downloads: 1526
 dependents: 1
-updated: "2025-03-06T06:36:07.095Z"
+updated: "2025-01-23T06:05:15.817Z"
 tags: 
   - utility
-  - ui
 ---

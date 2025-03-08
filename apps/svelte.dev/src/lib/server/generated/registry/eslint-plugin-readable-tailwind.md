@@ -1,12 +1,12 @@
 ---
 name: "eslint-plugin-readable-tailwind"
-description: "auto-wraps tailwind classes after a certain print width or class count into multiple lines to improve readability."
+description: "ESLint plugin to auto-wrap Tailwind classes for improved Svelte code readability."
 repo_url: "https://github.com/schoero/eslint-plugin-readable-tailwind"
 author: "schoero"
 homepage: "https://github.com/schoero/eslint-plugin-readable-tailwind#readme"
-downloads: 7807
+downloads: 7627
 dependents: 4
-updated: "2025-03-06T05:06:32.862Z"
+updated: "2025-02-27T07:23:30.513Z"
 tags: 
   - tooling
   - preprocessor

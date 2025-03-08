@@ -4,9 +4,9 @@ description: "SVAR Svelte Core library, a collection of form controls and UI com
 repo_url: "https://github.com/svar-widgets/core"
 author: "marta-ko"
 homepage: "https://svar.dev/svelte/core/"
-downloads: 3834
+downloads: 3944
 dependents: 9
-updated: "2025-02-28T05:12:08.551Z"
+updated: "2025-02-18T20:57:56.323Z"
 tags: 
   - component-library
   - ui

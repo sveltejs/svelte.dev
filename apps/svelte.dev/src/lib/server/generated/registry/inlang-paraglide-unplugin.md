@@ -1,12 +1,13 @@
 ---
 name: "@inlang/paraglide-unplugin"
-description: "Unplugin Plugin for runnning the Paraglide compiler."
+description: "An Unplugin plugin for running the Paraglide i18n compiler, supporting Svelte and other bundlers."
 repo_url: "https://github.com/opral/monorepo#inlang/source-code/paraglide/paraglide-unplugin"
 author: "samuelstroschein"
 homepage: "https://github.com/opral/monorepo/tree/main/inlang/source-code/paraglide/paraglide-unplugin#README"
-downloads: 26246
+downloads: 26531
 dependents: 3
-updated: "2025-03-06T05:08:31.919Z"
+updated: "2025-01-10T14:54:39.836Z"
 tags: 
+  - tooling
   - integration
 ---

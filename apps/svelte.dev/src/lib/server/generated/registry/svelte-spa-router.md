@@ -1,12 +1,12 @@
 ---
 name: "svelte-spa-router"
-description: "Router for SPAs using Svelte 4"
+description: "A lightweight and declarative router for Single Page Applications (SPAs) built with Svelte."
 repo_url: "https://github.com/ItalyPaleAle/svelte-spa-router"
 author: "italypaleale"
 homepage: "https://github.com/ItalyPaleAle/svelte-spa-router#readme"
-downloads: 16875
+downloads: 17234
 dependents: 41
-updated: "2025-03-06T05:12:46.440Z"
+updated: "2024-01-09T01:09:06.033Z"
 tags: 
   - router
 ---

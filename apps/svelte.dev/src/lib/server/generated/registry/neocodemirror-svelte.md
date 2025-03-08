@@ -6,7 +6,7 @@ author: "puruvj"
 homepage: "https://github.com/PuruVJ/neocodemirror"
 downloads: 650
 dependents: 2
-updated: "2025-03-03T20:48:24.795Z"
+updated: "2024-07-04T18:31:33.069Z"
 tags: 
-  - utility
+  - tooling
 ---

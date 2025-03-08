@@ -5,7 +5,7 @@ repo_url: "https://github.com/sveltetools/svelte-pathfinder"
 author: "paulmaly"
 homepage: "https://github.com/sveltetools/svelte-pathfinder#readme"
 downloads: 891
-updated: "2025-03-04T23:51:19.824Z"
+updated: "2024-07-04T09:03:48.158Z"
 tags: 
   - router
 ---

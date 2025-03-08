@@ -1,12 +1,11 @@
 ---
 name: "@accuser/svelte-plausible-analytics"
-description: "Plausible Analytics library for SvelteKit apps."
+description: "A Plausible Analytics library for SvelteKit apps."
 repo_url: "https://github.com/accuser/svelte-plausible-analytics"
 author: "accuser"
 homepage: "https://github.com/accuser/svelte-plausible-analytics/README.md"
 downloads: 286
-updated: "2025-03-04T13:57:09.726Z"
+updated: "2023-12-21T16:57:09.707Z"
 tags: 
   - integration
-  - seo
 ---

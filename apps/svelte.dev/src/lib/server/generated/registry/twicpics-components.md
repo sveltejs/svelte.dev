@@ -6,7 +6,7 @@ author: "mbgspcii"
 homepage: "https://github.com/twicpics/components"
 downloads: 5037
 dependents: 6
-updated: "2025-03-06T05:09:55.131Z"
+updated: "2025-02-17T15:36:39.534Z"
 tags: 
   - component-library
   - media

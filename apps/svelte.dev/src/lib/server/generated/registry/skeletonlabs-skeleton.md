@@ -1,14 +1,13 @@
 ---
 name: "@skeletonlabs/skeleton"
-description: "A SvelteKit component library."
+description: "A SvelteKit component library with UI components and styling."
 repo_url: "https://github.com/skeletonlabs/skeleton"
 author: "skeletonadmin"
 homepage: "https://skeleton.dev/"
-downloads: 26009
+downloads: 24913
 dependents: 8
-updated: "2025-03-06T05:05:18.602Z"
+updated: "2025-01-25T20:41:58.069Z"
 tags: 
   - component-library
   - ui
-  - tooling
 ---

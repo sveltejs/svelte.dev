@@ -1,11 +1,12 @@
 ---
 name: "trap-focus-svelte"
-description: "Tiny focus trap. Supports stacking, toggling, and dynamic content. Compatible with any framework. 360 bytes gzip."
+description: "A tiny, Svelte-focused focus trap component with stacking, toggling, and dynamic content support."
 repo_url: "https://github.com/henrygd/trap-focus-svelte"
 author: "henrygd"
 homepage: "https://trap-focus-svelte.henrygd.me"
 downloads: 450
-updated: "2025-03-04T23:12:00.774Z"
+updated: "2024-05-10T22:23:53.626Z"
 tags: 
   - utility
+  - dom
 ---

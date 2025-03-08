@@ -1,12 +1,12 @@
 ---
 name: "svelte-sequential-preprocessor"
-description: "Sequential preprocessor for Svelte JS."
+description: "A Svelte preprocessor that forces preprocessors to be called sequentially."
 repo_url: "https://github.com/pchynoweth/svelte-sequential-preprocessor"
 author: "pchynoweth"
 homepage: "https://github.com/pchynoweth/svelte-sequential-preprocessor#readme"
-downloads: 16230
+downloads: 17123
 dependents: 8
-updated: "2025-03-06T05:05:22.304Z"
+updated: "2024-09-29T17:46:07.132Z"
 tags: 
   - preprocessor
 ---

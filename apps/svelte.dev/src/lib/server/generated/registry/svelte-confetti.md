@@ -1,12 +1,12 @@
 ---
 name: "svelte-confetti"
-description: "Confetti in Svelte! Celebrate things with some extra flair. Animates using just HTML and CSS meaning it can work with SSR in SvelteKit!"
+description: "A Svelte component for confetti animations, compatible with SSR."
 repo_url: "https://github.com/Mitcheljager/svelte-confetti"
 author: "mitcheljager"
 homepage: "https://mitcheljager.github.io/svelte-confetti/"
-downloads: 23375
+downloads: 23461
 dependents: 2
-updated: "2025-03-06T05:08:54.533Z"
+updated: "2025-01-26T14:39:48.888Z"
 tags: 
   - ui
 ---

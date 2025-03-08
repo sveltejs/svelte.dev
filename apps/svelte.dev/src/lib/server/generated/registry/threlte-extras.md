@@ -1,13 +1,13 @@
 ---
 name: "@threlte/extras"
-description: "Utilities, abstractions and plugins for your Threlte apps"
+description: "Utilities, abstractions and plugins for your Threlte apps."
 repo_url: "https://github.com/threlte/threlte"
 author: "grischaerbe"
 homepage: "https://threlte.xyz"
-downloads: 5036
+downloads: 5211
 dependents: 13
-updated: "2025-03-06T05:05:09.493Z"
+updated: "2025-01-23T09:05:26.118Z"
 tags: 
-  - component-library
   - utility
+  - component-library
 ---

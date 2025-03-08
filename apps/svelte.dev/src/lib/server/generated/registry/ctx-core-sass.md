@@ -6,7 +6,7 @@ author: "btakita"
 homepage: "https://github.com/ctx-core/sass#readme"
 downloads: 1054
 dependents: 1
-updated: "2025-03-03T20:26:38.013Z"
+updated: "2024-09-01T17:09:17.742Z"
 tags: 
   - preprocessor
 ---

@@ -1,12 +1,12 @@
 ---
 name: "@zerodevx/svelte-json-view"
-description: "View JSON data prettily"
+description: "Svelte component to prettily view JSON data."
 repo_url: "https://github.com/zerodevx/svelte-json-view"
 author: "zerodevx"
 homepage: "https://github.com/zerodevx/svelte-json-view#readme"
-downloads: 5311
+downloads: 4412
 dependents: 8
-updated: "2025-02-28T05:05:48.939Z"
+updated: "2024-09-23T17:55:11.462Z"
 tags: 
   - ui
 ---

@@ -1,12 +1,12 @@
 ---
 name: "@smui/layout-grid"
-description: "Svelte Material UI - Layout Grid"
+description: "Svelte Material UI - Layout Grid."
 repo_url: "https://github.com/hperrin/svelte-material-ui"
 author: "hperrin"
 homepage: "https://github.com/hperrin/svelte-material-ui#readme"
-downloads: 3929
+downloads: 4024
 dependents: 4
-updated: "2025-02-28T15:51:14.129Z"
+updated: "2024-12-22T22:58:28.971Z"
 tags: 
   - component-library
   - ui

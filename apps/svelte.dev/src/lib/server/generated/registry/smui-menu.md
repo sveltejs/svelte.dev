@@ -1,13 +1,12 @@
 ---
 name: "@smui/menu"
-description: "Svelte Material UI - Menu"
+description: "Svelte Material UI component for creating menus, offering a Material Design-compliant menu implementation."
 repo_url: "https://github.com/hperrin/svelte-material-ui"
 author: "hperrin"
 homepage: "https://github.com/hperrin/svelte-material-ui#readme"
-downloads: 7840
+downloads: 8009
 dependents: 8
-updated: "2025-03-06T05:10:30.630Z"
+updated: "2024-12-22T22:58:33.758Z"
 tags: 
-  - component-library
   - ui
 ---

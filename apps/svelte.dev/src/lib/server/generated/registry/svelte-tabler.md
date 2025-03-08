@@ -5,7 +5,7 @@ repo_url: "https://github.com/shinokada/svelte-tabler"
 author: "shinichiokada"
 homepage: "https://svelte-tabler.codewithshin.com/"
 downloads: 13
-updated: "2025-03-03T03:11:06.505Z"
+updated: "2024-10-25T14:11:38.173Z"
 tags: 
   - component-library
   - ui

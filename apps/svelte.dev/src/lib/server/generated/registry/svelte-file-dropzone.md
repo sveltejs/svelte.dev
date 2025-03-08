@@ -1,13 +1,13 @@
 ---
 name: "svelte-file-dropzone"
-description: "Svelte component for fileupload and file dropzone"
+description: "A Svelte component for creating file upload and dropzone interfaces."
 repo_url: "https://github.com/thecodejack/svelte-file-dropzone"
 author: "arackaf"
 homepage: "https://github.com/thecodejack/svelte-file-dropzone#readme"
-downloads: 10831
+downloads: 11103
 dependents: 20
-updated: "2025-03-06T05:06:42.999Z"
+updated: "2024-10-19T20:44:48.960Z"
 tags: 
   - ui
-  - media
+  - utility
 ---

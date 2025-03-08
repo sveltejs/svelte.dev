@@ -1,13 +1,12 @@
 ---
 name: "@smui/list"
-description: "Svelte Material UI - List"
+description: "Svelte Material UI component for creating lists, offering a Material Design-compliant list implementation."
 repo_url: "https://github.com/hperrin/svelte-material-ui"
 author: "hperrin"
 homepage: "https://github.com/hperrin/svelte-material-ui#readme"
-downloads: 8423
+downloads: 8546
 dependents: 12
-updated: "2025-03-06T05:10:27.197Z"
+updated: "2024-12-22T22:58:32.228Z"
 tags: 
-  - component-library
   - ui
 ---

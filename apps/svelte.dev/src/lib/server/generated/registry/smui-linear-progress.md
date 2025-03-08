@@ -6,7 +6,7 @@ author: "hperrin"
 homepage: "https://github.com/hperrin/svelte-material-ui#readme"
 downloads: 4278
 dependents: 3
-updated: "2025-03-02T23:46:15.024Z"
+updated: "2024-12-22T22:58:28.723Z"
 tags: 
   - ui
 ---
