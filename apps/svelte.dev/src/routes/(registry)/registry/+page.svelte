@@ -74,7 +74,7 @@
 	article {
 		margin: 0 0 4rem 0;
 
-		&.top {
+		/* &.top {
 			margin: 0 0 2rem 0;
 			padding: 0 0 4rem 0;
 
@@ -82,7 +82,7 @@
 				font: var(--sk-font-h1);
 				color: var(--sk-fg-1);
 			}
-		}
+		} */
 
 		a {
 			display: block;
@@ -112,7 +112,7 @@
 			gap: 3em;
 		}
 
-		.featured,
+		/* .featured,
 		.feed {
 			padding: 4rem 0;
 			position: relative;
@@ -124,9 +124,9 @@
 				text-transform: uppercase;
 				color: var(--sk-fg-3);
 			}
-		}
+		} */
 
-		.featured {
+		/* .featured {
 			display: block;
 
 			&::before {
@@ -142,7 +142,7 @@
 					font: var(--sk-font-h2);
 				}
 			}
-		}
+		} */
 
 		.feed {
 			display: block;
