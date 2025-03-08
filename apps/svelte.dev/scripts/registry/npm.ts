@@ -151,7 +151,7 @@ export function superfetch(
 	});
 }
 
-const HEADERS = { 'User-Agent': 'svelte.dev/registry; v1' };
+const HEADERS = { 'User-Agent': 'svelte.dev/registry; v0' };
 
 /**
  * Subtracts a specified number of days from a date
@@ -451,12 +451,31 @@ export async function* stream_search_by_keywords({
 					// Skip if we've reached the limit
 					if (total_runs >= limit) break;
 
+					if (obj.deprecated) {
+						console.log(`Skipping deprecated package: ${obj.package.name}`);
+						continue;
+					}
+
+					// Exclude 'svelte' and '@sveltejs/kit' package
+					if (obj.package.name === 'svelte' || obj.package.name === '@sveltejs/kit') {
+						continue;
+					}
+
 					// Fetch package.json if needed
 					if (fetch_package_json) {
 						try {
 							const response = await superfetch(`${REGISTRY_BASE_URL}${obj.package.name}`, {
 								headers: HEADERS
 							}).then((r) => r.json());
+
+							const latest_version = response['dist-tags']?.latest;
+
+							if (latest_version && response.time && response.time[latest_version]) {
+								obj.last_published = response.time[latest_version];
+							}
+
+							// If package not updated in the last 2 years, skip
+							if (new Date(obj.last_published) < sub_days(new Date(), 365 * 2)) continue;
 
 							obj.package.json = response;
 							obj.package.json.versions = Object.keys(obj.package.json.versions);
@@ -466,20 +485,14 @@ export async function* stream_search_by_keywords({
 						}
 					}
 
-					// Filter unwanted packages
-					if (
-						obj.package.links?.repository !== 'https://github.com/sveltejs/svelte' ||
-						obj.package.links?.repository !== 'https://github.com/sveltejs/kit'
-					) {
-						// Add to our collection
-						collected_packages.set(obj.package.name, obj);
+					// Add to our collection
+					collected_packages.set(obj.package.name, obj);
 
-						// Yield when we reach the requested batch size
-						if (collected_packages.size >= batch_size) {
-							console.log(`Yielding batch of ${collected_packages.size} packages`);
-							yield collected_packages;
-							collected_packages = new Map(); // Reset collection after yielding
-						}
+					// Yield when we reach the requested batch size
+					if (collected_packages.size >= batch_size) {
+						console.log(`Yielding batch of ${collected_packages.size} packages`);
+						yield collected_packages;
+						collected_packages = new Map(); // Reset collection after yielding
 					}
 
 					total_runs++;

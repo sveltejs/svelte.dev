@@ -1,10 +1,14 @@
 import { registry, type Package } from '$lib/server/content';
 import registry_json from '../../../lib/registry.json';
-import { getPackagesByTag, getSortedRegistry, init, search } from '../registry-search';
+import {
+	getPackagesByTag,
+	getSortedRegistry,
+	init,
+	REGISTRY_PAGE_LIMIT,
+	search
+} from '../registry-search';
 
 export const prerender = false;
-
-const LIMIT = 100;
 
 export async function load({ url }) {
 	const query = url.searchParams.get('query');
@@ -19,7 +23,7 @@ export async function load({ url }) {
 		current_results = search(query);
 	}
 
-	if (tag && current_results == null) {
+	if (tag && current_results == null && tag !== 'all') {
 		current_results = getPackagesByTag(tag);
 	}
 
@@ -28,7 +32,10 @@ export async function load({ url }) {
 	}
 
 	return {
-		registry: current_results.slice(page * LIMIT, page * LIMIT + LIMIT),
+		registry: current_results.slice(
+			page * REGISTRY_PAGE_LIMIT,
+			page * REGISTRY_PAGE_LIMIT + REGISTRY_PAGE_LIMIT
+		),
 		tags: Object.entries(registry_json.tags).reduce(
 			(acc, [key, value]) => {
 				if (value.title) {

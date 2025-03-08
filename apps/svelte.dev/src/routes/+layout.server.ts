@@ -60,7 +60,8 @@ const sections: Record<string, string> = {
 	playground: 'Playground',
 	blog: 'Blog',
 	tutorial: 'Tutorial',
-	search: 'Search'
+	search: 'Search',
+	registry: 'Registry'
 };
 
 const banner: BannerData = {

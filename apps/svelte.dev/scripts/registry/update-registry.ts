@@ -25,10 +25,12 @@ function is_official(pkg: string): boolean {
  */
 function sanitize_github_url(url: string): string {
 	return url
+		.replace('ssh://', '')
 		.replace('git+', '')
 		.replace('.git', '')
 		.replace('git:', 'https:')
-		.replace('git@github.com:', 'https://github.com/');
+		.replace('git@github.com:', 'https://github.com/')
+		.replace('git@github.com/', 'https://github.com/');
 }
 
 const NEW_THRESHOLD_DAYS = 28;
@@ -242,71 +244,79 @@ async function process_batches_through_llm({
 				const { text } = await generateText({
 					model: openrouter('google/gemini-2.0-flash-lite-001'),
 					prompt: `
-				You are a strict Svelte package validator with an absolute focus on Svelte exclusivity.
-
-MISSION:
-Identify ONLY packages designed PRIMARILY and EXCLUSIVELY for Svelte. The package must be BUILT FOR SVELTE AS ITS MAIN TARGET.
-
-MANDATORY REJECTION CRITERIA - REJECT ANY package that meets ANY of these:
-- Package primarily supports React/Vue/Angular with Svelte as a secondary adapter
-- Package documentation primarily shows examples for other frameworks
-- Package is marketed as "framework agnostic" or "works with any framework"
-- Package is a general utility that isn't specifically designed for Svelte
-- Package repository has more React/Vue/etc. code than Svelte code
-- Package that serves as a bridge/adapter between Svelte and another framework
-
-MANDATORY ACCEPTANCE CRITERIA - Package MUST meet ALL of these:
-1. Package MUST be designed primarily for Svelte developers
-2. Package MUST contain actual Svelte-specific code
-3. Svelte MUST be the main framework it targets, not just one of many supported frameworks
-
-EVIDENCE TO LOOK FOR:
-- Package documentation focuses primarily on Svelte usage
-- Code contains Svelte-specific patterns like '<script>', '$:', 'export let', '.svelte'
-- Package directly imports the 'svelte' library
-- Package has 'svelte' or '@sveltejs/*' in dependencies
-- Svelte is treated as the main framework, not just an alternative
-
-DO NOT TAG libraries that merely support Svelte as one of many frameworks. These packages MUST be Svelte-first.
-
-RETURN AN EMPTY OBJECT {} IF NO PACKAGES PASS YOUR VALIDATION.`,
-					system: `SVELTE-ONLY VALIDATION SYSTEM
-
-YOU ARE IN STRICT FRAMEWORK EXCLUSIVITY MODE.
-
-The Svelte ecosystem documentation should ONLY include packages that were BUILT SPECIFICALLY FOR SVELTE.
-
-AUTOMATIC REJECTION RULES:
-- If the package equally supports multiple frameworks (React, Vue, etc.) - REJECT
-- If the package mentions "adapter for Svelte" or "Svelte integration" - REJECT
-- If the package is primarily for another framework with Svelte support added - REJECT
-- If the package is completely framework-agnostic with no Svelte-specific implementation - REJECT
-
-EXAMPLES OF PACKAGES TO REJECT:
-- A UI library that has versions for React, Vue, AND Svelte, but the npm package input is NOT SVELTE
-- A utility that works with any framework and mentions Svelte compatibility
-- General JavaScript utilities that happen to work with Svelte
-
-EXAMPLES OF PACKAGES TO ACCEPT:
-- Svelte component libraries built specifically for Svelte
-- SvelteKit plugins and extensions
-- Svelte actions and stores
-- Development tools specifically for Svelte projects
-
-RESPONSE FORMAT:
-{
-  "legitimate-svelte-package": {
-    "tags": ["tag1", "tag2"]
-  }
-}
-
-AVAILABLE TAGS:
-${JSON.stringify(TAGS_PROMPT)}
-
-${JSON.stringify(batch_data)}
+				You are a meticulous Svelte package validator with EXTREMELY high standards.
+				
+				MISSION:
+				Identify ONLY packages designed EXCLUSIVELY for Svelte, where Svelte is the PRIMARY framework.
+				
+				AUTOMATIC REJECTION CRITERIA:
+				- Package doesn't contain explicit Svelte code like '<script>', '$:', 'export let', or '.svelte'
+				- Package doesn't import the 'svelte' library directly
+				- Package contains 'react-', 'vue-', 'angular-' or similar in name or dependencies
+				- Package is a general utility that works with many frameworks
+				- Package doesn't have 'svelte' or '@sveltejs/*' in peerDependencies or dependencies
+				- Package lacks explicit Svelte examples in description or documentation
+				- Package description doesn't specifically mention Svelte as primary focus
+				- README MUST contain at least one Svelte code snippet or example
+				
+				DESCRIPTION HANDLING:
+				For VALID Svelte packages ONLY: If a package's description is inadequate (too short, uninformative, or contains raw markdown), provide a new one-line description.
+				
+				RETURN AN EMPTY OBJECT {} IF NO PACKAGES PASS YOUR STRICT VALIDATION.
+				DO NOT RETURN ANYTHING FOR INVALID PACKAGES - NOT EVEN A DESCRIPTION.`,
+					system: `YOU ARE IN ZERO TOLERANCE MODE FOR NON-SVELTE PACKAGES
+				
+				DETECTION CHECKLIST (ALL MUST BE TRUE):
+				1. Package MUST contain actual Svelte code or import 'svelte' directly
+				2. Package MUST have EXPLICIT dependencies or peerDependencies on 'svelte'
+				3. Package MUST be designed primarily for Svelte users
+				4. Package MUST NOT work with React/Vue/Angular without major adaptation
+				5. Package MUST have clear Svelte-specific implementation
+				6. Package README MUST include at least one Svelte-specific code example
+				
+				DETECTION FAILURE CHECKLIST (ANY ONE MEANS REJECT):
+				- Generic JavaScript utilities that happen to work with Svelte
+				- "Framework agnostic" packages that work with many frameworks
+				- Packages with '-react-' or 'react-' or 'vue-' in the name
+				- Packages lacking explicit Svelte code examples
+				- Packages missing direct 'svelte' dependencies
+				- Packages with documentation showing use in multiple frameworks
+				- "Reactive" libraries that aren't Svelte-specific
+				- Utility libraries with no Svelte-specific implementation
+				- Carousel, UI, or component libraries not built specifically for Svelte
+				- README without any Svelte code snippets or implementation examples
+				
+				CRITICAL: Never return any data (not even descriptions) for packages that fail validation.
+				If a package fails ANY validation check, completely omit it from your response.
+				
+				Packages like "embla-carousel-reactive-utils" must be REJECTED unless they have Svelte-specific implementation.
+				
+				RESPONSE FORMAT:
+				VALID PACKAGES WITH GOOD DESCRIPTIONS:
+				{
+					"legitimate-svelte-package": {
+						"tags": ["tag1", "tag2"]
+					}
+				}
+				
+				VALID PACKAGES WITH INADEQUATE DESCRIPTIONS:
+				{
+					"legitimate-svelte-package": {
+						"tags": ["tag1", "tag2"],
+						"description": "A clear one-line description of what this package does for Svelte users."
+					}
+				}
+				
+				INVALID PACKAGES:
+				Do not include them in the response at all.
+				
+				AVAILABLE TAGS:
+				${JSON.stringify(TAGS_PROMPT)}
+				
+				${JSON.stringify(batch_data)}
 						`,
 					maxRetries: 2,
-					temperature: is_retry ? 0.1 : 0.3 // Slightly higher temperature for initial runs
+					temperature: is_retry ? 0.1 : undefined // Lower temperature for retries
 				});
 				console.timeEnd(`llm-${batch_id}`);
 
@@ -330,6 +340,8 @@ ${JSON.stringify(batch_data)}
 					}
 				}
 
+				console.log(json);
+
 				// Update packages in the map with LLM results
 				let updated_count = 0;
 
@@ -338,8 +350,61 @@ ${JSON.stringify(batch_data)}
 						// Package was successfully analyzed as a Svelte package
 						const package_details = packages_map.get(pkg_name);
 						package_details.llm_detail = json[pkg_name];
+
+						// If LLM provided a new description, use it
+						if (json[pkg_name].description) {
+							package_details.package.description = json[pkg_name].description;
+							console.log(`[${batch_id}] Updated description for ${pkg_name}`);
+						}
+
 						updated_count++;
 						console.log(`[${batch_id}] Tagged ${pkg_name}: ${JSON.stringify(json[pkg_name].tags)}`);
+
+						// Now that we have svelte_packages, write their data to .md files
+						const cleaned_up_pkg_name = pkg_name.replace(/@/g, '').replace(/\//g, '-');
+
+						let frontmatter = `---
+name: "${pkg_name}"\n`;
+
+						if (package_details.package.description) {
+							frontmatter += `description: "${package_details.package.description}"\n`;
+						}
+
+						if (package_details.package.links.repository) {
+							frontmatter += `repo_url: "${sanitize_github_url(package_details.package.links.repository)}"\n`;
+						}
+
+						if (package_details.package.publisher.username) {
+							frontmatter += `author: "${package_details.package.publisher.username}"\n`;
+						}
+
+						if (package_details.package.links.homepage) {
+							frontmatter += `homepage: "${package_details.package.links.homepage}"\n`;
+						}
+
+						if (package_details.downloads.weekly) {
+							frontmatter += `downloads: ${package_details.downloads.weekly}\n`;
+						}
+
+						if (package_details.dependents) {
+							frontmatter += `dependents: ${package_details.dependents}\n`;
+						}
+						if (package_details.updated) {
+							frontmatter += `updated: "${package_details.last_published}"\n`;
+						}
+
+						frontmatter += `tags: 
+${package_details.llm_detail.tags.map((tag = '') => `  - ${tag}`).join('\n')}\n`;
+
+						frontmatter += '---\n';
+
+						fs.writeFileSync(
+							path.resolve(
+								path.dirname(fileURLToPath(import.meta.url)),
+								`../../src/lib/server/generated/registry/${cleaned_up_pkg_name}.md`
+							),
+							frontmatter
+						);
 					}
 					// If not in json results, it's not a Svelte package - we don't add it to failed_llm
 				}
@@ -431,52 +496,3 @@ async function* create_map_batch_generator(
 }
 
 const svelte_packages = await process_batches_through_llm();
-
-for (const [pkg_name, pkg_data] of svelte_packages) {
-	// Now that we have svelte_packages, write their data to .md files
-	const cleaned_up_pkg_name = pkg_name.replace(/@/g, '').replace(/\//g, '-');
-
-	let frontmatter = `---
-name: "${pkg_name}"\n`;
-
-	if (pkg_data.package.description) {
-		frontmatter += `description: "${pkg_data.package.description}"\n`;
-	}
-
-	if (pkg_data.package.links.repository) {
-		frontmatter += `repo_url: "${sanitize_github_url(pkg_data.package.links.repository)}"\n`;
-	}
-
-	if (pkg_data.package.publisher.username) {
-		frontmatter += `author: "${pkg_data.package.publisher.username}"\n`;
-	}
-
-	if (pkg_data.package.links.homepage) {
-		frontmatter += `homepage: "${pkg_data.package.links.homepage}"\n`;
-	}
-
-	if (pkg_data.downloads.weekly) {
-		frontmatter += `downloads: ${pkg_data.downloads.weekly}\n`;
-	}
-
-	if (pkg_data.dependents) {
-		frontmatter += `dependents: ${pkg_data.dependents}\n`;
-	}
-
-	if (pkg_data.updated) {
-		frontmatter += `updated: "${pkg_data.updated}"\n`;
-	}
-
-	frontmatter += `tags: 
-${pkg_data.llm_detail.tags.map((tag = '') => `  - ${tag}`).join('\n')}\n`;
-
-	frontmatter += '---\n';
-
-	fs.writeFileSync(
-		path.resolve(
-			path.dirname(fileURLToPath(import.meta.url)),
-			`../../src/lib/server/generated/registry/${cleaned_up_pkg_name}.md`
-		),
-		frontmatter
-	);
-}

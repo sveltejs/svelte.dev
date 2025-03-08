@@ -1,6 +1,8 @@
 import flexsearch, { type Index as FlexSearchIndex } from 'flexsearch';
 import type { Package, PackageGroup } from '$lib/server/content';
 
+export const REGISTRY_PAGE_LIMIT = 100;
+
 // @ts-expect-error
 const Index = (flexsearch.Index as FlexSearchIndex) ?? flexsearch;
 
