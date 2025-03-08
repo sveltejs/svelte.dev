@@ -1,6 +1,12 @@
 import { read } from '$app/server';
 import type { Document } from '@sveltejs/site-kit';
+import {
+	extract_frontmatter,
+	markdown_to_plain_text,
+	transform
+} from '@sveltejs/site-kit/markdown';
 import { create_index } from '@sveltejs/site-kit/server/content';
+import registry_json from '../registry.json' assert { type: 'json' };
 
 const documents = import.meta.glob<string>('../../../content/**/*.md', {
 	eager: true,
@@ -16,6 +22,12 @@ const assets = import.meta.glob<string>(
 		import: 'default'
 	}
 );
+
+const registry_docs = import.meta.glob<string>('../../../src/lib/server/generated/registry/*.md', {
+	eager: true,
+	query: '?raw',
+	import: 'default'
+});
 
 // https://github.com/vitejs/vite/issues/17453
 export const index = await create_index(documents, assets, '../../../content', read);
@@ -126,3 +138,74 @@ function create_docs() {
 export const docs = create_docs();
 
 export const examples = index.examples.children;
+
+/**
+ * Represents a Svelte package in the registry
+ */
+export interface Package {
+	/** Package name */
+	name: string;
+
+	/** Package description (HTML formatted) */
+	description?: string;
+
+	/** Repository URL (typically GitHub) */
+	repo_url?: string;
+
+	/** Author username */
+	author?: string;
+
+	/** Homepage URL */
+	homepage?: string;
+
+	/** Weekly download count */
+	downloads?: number;
+
+	/** Number of packages depending on this package */
+	dependents?: number;
+
+	/** Last update timestamp */
+	updated?: string;
+
+	/** Tags for categorizing the package */
+	tags?: string[];
+}
+
+/**
+ * Represents a group of packages with a common tag
+ */
+export interface PackageGroup {
+	/** Tag name */
+	tag: string;
+
+	/** Packages in this group */
+	packages: Package[];
+}
+
+/**
+ * Initial package data structure
+ */
+export interface PackageData {
+	blocks: Package[];
+}
+
+function create_registry() {
+	let output: Package[] = [];
+
+	for (const frontmatter of Object.values(registry_docs)) {
+		const json = extract_frontmatter(frontmatter);
+		json.metadata.description = markdown_to_plain_text(json.metadata.description || '');
+
+		// @ts-ignore
+		json.metadata.tags = json.metadata.tags
+			.split('\n')
+			.filter(Boolean)
+			.map((v) => v.replace('-', '').trim());
+
+		output.push(json.metadata as unknown as Package);
+	}
+
+	return output;
+}
+
+export const registry = create_registry();

@@ -48,6 +48,10 @@ const nav_links: NavigationLink[] = [
 	{
 		title: 'Blog',
 		slug: 'blog'
+	},
+	{
+		title: 'Registry',
+		slug: 'registry'
 	}
 ];
 

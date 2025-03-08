@@ -1,6 +1,13 @@
 export { render_content_markdown } from './renderer';
 
-export { transform, slugify, clean, strip_origin, extract_frontmatter } from './utils';
+export {
+	transform,
+	slugify,
+	clean,
+	strip_origin,
+	extract_frontmatter,
+	markdown_to_plain_text
+} from './utils';
 
 // TODO none of these really belong here
 export type Modules = Array<{
