@@ -1,0 +1,11 @@
+---
+name: "svelte-preprocess-import-assets"
+description: "Import assets in markup"
+repo_url: "https://github.com/bluwy/svelte-preprocess-import-assets"
+author: "bluwy"
+homepage: "https://github.com/bluwy/svelte-preprocess-import-assets#readme"
+downloads: 3093
+updated: "2023-11-11T12:42:27.153Z"
+tags: 
+  - preprocessor
+---

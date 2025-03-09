@@ -1,0 +1,12 @@
+---
+name: "@dvcol/svelte-utils"
+description: "Svelte library for common utility functions and constants"
+repo_url: "https://github.com/dvcol/svelte-utils"
+author: "dvcol"
+homepage: "https://github.com/dvcol/svelte-utils"
+downloads: 343
+dependents: 2
+updated: "2025-03-09T15:57:22.003Z"
+tags: 
+  - utility
+---
