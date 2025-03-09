@@ -1,59 +1,26 @@
 <script lang="ts">
-	import { replaceState } from '$app/navigation';
 	import { page } from '$app/state';
 	import { forcefocus } from '@sveltejs/site-kit/actions';
 	import { Icon } from '@sveltejs/site-kit/components';
-	import { onMount, tick, untrack } from 'svelte';
+	import { Box, ReactiveQueryParam } from '@sveltejs/site-kit/reactivity';
+	import { onMount } from 'svelte';
 	import SearchWorker from './registry-worker.ts?worker';
-
-	class Box<T> {
-		#getter: () => T;
-		#setter?: (value: T) => void;
-
-		#derived = $derived.by(() => {
-			let val = $state(this.#getter());
-
-			return {
-				get current() {
-					return val;
-				},
-				set current(value) {
-					val = value;
-				}
-			};
-		});
-
-		constructor(getter: () => T, setter?: (value: T) => void) {
-			this.#getter = getter;
-			this.#setter = setter;
-
-			$effect(() => {
-				this.#setter?.($state.snapshot(this.#derived.current) as T);
-			});
-		}
-
-		get current(): T {
-			return this.#derived.current;
-		}
-
-		set current(value: T) {
-			this.#derived.current = value;
-		}
-	}
+	import { goto } from '$app/navigation';
 
 	const { data } = $props();
 
-	const query = new Box(
-		() => page.url.searchParams.get('query') ?? '',
-		(val) => {
-			page.url.searchParams.set('query', val);
-
-			// So we don't run it when router hasn't initialized yet
-			tick().then(() => replaceState(page.url, {}));
-		}
-	);
+	const query_qp = new ReactiveQueryParam<string>('query');
+	const page_qp = new ReactiveQueryParam<number>('page', {
+		encode: (v) => v.toString(),
+		decode: (v) => +v
+	});
+	const tags_qp = new ReactiveQueryParam<string[]>('tags', {
+		encode: (v) => v.join(','),
+		decode: (v) => v.split(',').filter(Boolean)
+	});
 
 	const registry = new Box(() => data.registry);
+	const total_pages = new Box(() => data.pages.total_pages);
 
 	let ready = $state(false);
 	let uid = 1;
@@ -68,18 +35,18 @@
 		worker.addEventListener('message', (event) => {
 			const { type, payload } = event.data;
 
+			if (type === 'update-page') {
+				page_qp.current = payload.page;
+			}
+
 			if (type === 'ready') {
 				ready = true;
 			}
 
 			if (type === 'results') {
-				console.log(payload);
 				registry.current = payload.results;
+				total_pages.current = payload.total_pages;
 			}
-
-			// if (type === 'recents') {
-			// 	recent_searches = payload;
-			// }
 		});
 
 		worker.postMessage({
@@ -92,14 +59,18 @@
 		return () => worker.terminate();
 	});
 
+	$inspect(tags_qp.current);
+
 	$effect(() => {
-		query.current;
+		query_qp.current;
+		tags_qp.current;
+		page_qp.current;
+		page.url;
 
 		if (ready) {
 			if (worker_first_run) {
 				worker_first_run = false;
 			} else {
-				console.log(1);
 				const id = uid++;
 				pending.add(id);
 
@@ -107,8 +78,10 @@
 					type: 'get',
 					id,
 					payload: {
-						query: query.current,
-						path: page.url.pathname
+						query: query_qp.current,
+						page: page_qp.current,
+						tags: $state.snapshot(tags_qp.current),
+						url: page.url.toString()
 					}
 				});
 			}
@@ -154,14 +127,14 @@
 								// element?.click();
 							}
 						}}
-						bind:value={query.current}
+						bind:value={query_qp.current}
 						placeholder="Search"
 						aria-describedby="search-description"
 						aria-label={'Search'}
 						spellcheck="false"
 					/>
 
-					<button aria-label="Clear" onclick={() => (query.current = '')}>
+					<button aria-label="Clear" onclick={() => (query_qp.current = '')}>
 						<Icon name="close" />
 					</button>
 				</div>
@@ -176,32 +149,62 @@
 				<article data-pubdate={pkg.updated}>
 					<a href="#{pkg.name}" title="Read the article »">
 						<h2>{pkg.name}</h2>
-						<p>{pkg.description?.replace(/"/g, '').trim()}</p>
+
+						<p>{pkg.description}</p>
 					</a>
 
 					<!-- <Byline post={pkg} /> -->
 				</article>
 			{/each}
+
+			<div class="pagination">
+				{#each Array(total_pages.current), i}
+					{@const link = new URL(page.url)}
+					{@const _ = link.searchParams.set('page', i + '')}
+					<a
+						href={link.pathname + link.search}
+						aria-current={page_qp.current === i}
+						onclick={(e) => {
+							e.preventDefault();
+							page_qp.current = i;
+						}}>{i + 1}</a
+					>
+				{/each}
+			</div>
 		</div>
 
 		<ul class="feed">
-			<li>
-				<a
-					href="?tag=all"
-					title="All Packages"
-					class="tag"
-					aria-current={!page.url.searchParams.has('tag') ||
-						page.url.searchParams.get('tag') === 'all'}
-				>
-					All
-				</a>
-			</li>
-			{#each data.tags as tag}
+			{#each [{ tag: 'all', short_title: 'All' }].concat(data.tags) as tag}
+				{@const link = new URL(page.url)}
+				{@const _ = link.searchParams.set(
+					'tags',
+					(tag.tag === 'all'
+						? []
+						: (link.searchParams.get('tags') ?? '').split(',').concat(tag.tag).filter(Boolean)
+					).join(',')
+				)}
+
 				<li>
 					<a
 						class="tag"
-						href="?tag={tag.tag}"
-						aria-current={tag.tag === page.url.searchParams.get('tag')}
+						href={link.pathname + link.search}
+						onclick={(e) => {
+							e.preventDefault();
+
+							if (tag.tag === 'all') {
+								// Click on this should just empty the tags array
+								tags_qp.current = [];
+								return;
+							}
+
+							if (tags_qp.current.includes(tag.tag)) {
+								tags_qp.current = tags_qp.current.filter((t) => t !== tag.tag);
+							} else {
+								tags_qp.current = [...tags_qp.current, tag.tag];
+							}
+						}}
+						aria-current={(tag.tag === 'all' && tags_qp.current.length === 0) ||
+							tags_qp.current.includes(tag.tag)}
 						title="Packages under {tag.tag}"
 					>
 						{tag.short_title}
@@ -332,6 +335,19 @@
 			font: var(--sk-font-body-small);
 			color: var(--sk-fg-3);
 			margin: 0 0 0.5em 0;
+		}
+	}
+
+	.pagination {
+		display: flex;
+
+		a {
+			font: var(--sk-font-ui-medium);
+		}
+
+		a[aria-current='true'] {
+			color: var(--sk-fg-accent);
+			text-decoration: underline;
 		}
 	}
 

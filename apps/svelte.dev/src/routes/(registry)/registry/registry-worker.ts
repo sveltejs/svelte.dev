@@ -1,39 +1,35 @@
-import type { Package } from '$lib/server/content';
-import {
-	getPackagesByTag,
-	getSortedRegistry,
-	init,
-	REGISTRY_PAGE_LIMIT,
-	search
-} from '../registry-search';
+import { init, REGISTRY_PAGE_LIMIT, search } from '../registry-search';
 
 addEventListener('message', async (event) => {
 	const { type, payload } = event.data;
 
 	if (type === 'init') {
-		const res = await fetch(`${payload.origin}/registry.json`);
-		const { blocks } = await res.json();
+		const { blocks } = await fetch(`${payload.origin}/registry.json`).then((r) => r.json());
 		init(blocks);
 
 		postMessage({ type: 'ready' });
 	}
 
 	if (type === 'get') {
-		const { query, page = 0, tag = 'all' } = payload;
+		let { query, page = 0, tags = [], url } = payload;
 
-		let current_results: Package[] | null = null;
+		const current_results = search(query, { tags });
+		const total_pages = Math.ceil(current_results.length / REGISTRY_PAGE_LIMIT);
 
-		if (query) {
-			current_results = search(query);
+		if (page > total_pages) {
+			page = 0;
+
+			postMessage({
+				type: 'update-page',
+				payload: {
+					page: page
+				}
+			});
+
+			return;
 		}
 
-		if (tag && current_results == null && tag !== 'all') {
-			current_results = getPackagesByTag(tag);
-		}
-
-		if (current_results == null) {
-			current_results = getSortedRegistry();
-		}
+		console.log(current_results.length);
 
 		postMessage({
 			type: 'results',
@@ -42,14 +38,9 @@ addEventListener('message', async (event) => {
 					page * REGISTRY_PAGE_LIMIT,
 					page * REGISTRY_PAGE_LIMIT + REGISTRY_PAGE_LIMIT
 				),
+				total_pages,
 				query
 			}
 		});
 	}
-
-	// if (type === 'recents') {
-	// 	const results = payload.map(lookup).filter(Boolean);
-
-	// 	postMessage({ type: 'recents', payload: results });
-	// }
 });

@@ -1,41 +1,39 @@
-import { registry, type Package } from '$lib/server/content';
+import { registry } from '$lib/server/content';
+import { redirect } from '@sveltejs/kit';
 import registry_json from '../../../lib/registry.json';
-import {
-	getPackagesByTag,
-	getSortedRegistry,
-	init,
-	REGISTRY_PAGE_LIMIT,
-	search
-} from '../registry-search';
+import { init, REGISTRY_PAGE_LIMIT, search } from '../registry-search';
 
 export const prerender = false;
 
 export async function load({ url }) {
 	const query = url.searchParams.get('query');
-	const tag = url.searchParams.get('tag');
-	const page = +(url.searchParams.get('page')?.toString() ?? 0);
+	const tags = (url.searchParams.get('tags') ?? '').split(',').filter(Boolean);
+	let page = +(url.searchParams.get('page')?.toString() ?? 0);
 
 	init(registry);
 
-	let current_results: Package[] | null = null;
+	const current_results = search(query, { tags, sortBy: 'popularity' });
 
-	if (query) {
-		current_results = search(query);
+	const total_pages = Math.ceil(current_results.length / REGISTRY_PAGE_LIMIT);
+
+	if (page > total_pages) {
+		page = 0;
+
+		const new_url = new URL(url);
+		new_url.searchParams.set('page', page + '');
+		redirect(303, new_url);
 	}
 
-	if (tag && current_results == null && tag !== 'all') {
-		current_results = getPackagesByTag(tag);
-	}
-
-	if (current_results == null) {
-		current_results = getSortedRegistry();
-	}
+	const current_results_paged = current_results.slice(
+		page * REGISTRY_PAGE_LIMIT,
+		page * REGISTRY_PAGE_LIMIT + REGISTRY_PAGE_LIMIT
+	);
 
 	return {
-		registry: current_results.slice(
-			page * REGISTRY_PAGE_LIMIT,
-			page * REGISTRY_PAGE_LIMIT + REGISTRY_PAGE_LIMIT
-		),
+		registry: current_results_paged,
+		pages: {
+			total_pages: Math.ceil(current_results.length / REGISTRY_PAGE_LIMIT)
+		},
 		tags: Object.entries(registry_json.tags).reduce(
 			(acc, [key, value]) => {
 				if (value.title) {

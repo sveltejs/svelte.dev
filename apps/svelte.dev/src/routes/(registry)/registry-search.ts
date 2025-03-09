@@ -1,13 +1,13 @@
 import flexsearch, { type Index as FlexSearchIndex } from 'flexsearch';
 import type { Package, PackageGroup } from '$lib/server/content';
 
-export const REGISTRY_PAGE_LIMIT = 100;
-
 // @ts-expect-error
 const Index = (flexsearch.Index as FlexSearchIndex) ?? flexsearch;
 
 /** If the search is already initialized */
 export let inited = false;
+
+export const REGISTRY_PAGE_LIMIT = 100;
 
 let index: FlexSearchIndex;
 
@@ -71,137 +71,205 @@ export function init(packages: Package[]) {
 }
 
 /**
- * Search for packages matching the query and return a flat list sorted by popularity
+ * Sort criteria options for package search results
+ */
+export type SortCriterion = 'popularity' | 'downloads' | 'dependents' | 'updated' | 'name';
+
+/**
+ * Search for packages matching the query and/or tags, returning a flat list sorted by the specified criterion
  *
- * @param query Search query string
+ * @param query Search query string, can be null
  * @param options Additional search options
- * @returns Flat array of packages sorted by popularity
+ * @returns Flat array of packages sorted by the selected criterion
  */
 export function search(
-	query: string,
+	query: string | null,
 	options: {
-		authorFilter?: string;
+		tags?: string[];
+		sortBy?: SortCriterion;
 	} = {}
 ): Package[] {
 	if (!inited) {
 		throw new Error('Search index not initialized. Call init() first.');
 	}
 
-	if (!query.trim() && !options.authorFilter) {
-		return [];
+	const { tags = [], sortBy = 'popularity' } = options;
+
+	// Normalize query to empty string if null or undefined
+	const normalizedQuery = query === null || query === undefined ? '' : query;
+
+	const hasQuery = normalizedQuery.trim().length > 0;
+	const hasTags = tags.length > 0;
+
+	// Get all packages that match the criteria
+	let resultPackages: Package[] = [];
+
+	// Case 1: No query, no tags - return all packages sorted by selected criterion
+	if (!hasQuery && !hasTags) {
+		resultPackages = Array.from(packagesMap.values()).sort((a, b) => sortPackages(a, b, sortBy));
 	}
-
-	// Create regex patterns for scoring
-	const escapedQuery = query.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
-	const exactMatch = new RegExp(`^${escapedQuery}$`, 'i');
-	const nameMatch = new RegExp(`${escapedQuery}`, 'i');
-	const tagMatch = new RegExp(`\\b${escapedQuery}\\b`, 'i');
-
-	// Handle author-specific searching
-	let searchQuery = query;
-	if (options.authorFilter) {
-		// If there's already content in the query, add the author as an additional term
-		if (query.trim()) {
-			searchQuery = `${query} author:${options.authorFilter}`;
-		} else {
-			// If query is empty, just search for the author
-			searchQuery = `author:${options.authorFilter}`;
-		}
+	// Case 2: Empty query, filter by tags only
+	else if (!hasQuery && hasTags) {
+		resultPackages = Array.from(packagesMap.values())
+			.filter((pkg) => tags.some((tag) => pkg.tags && pkg.tags.includes(tag)))
+			.sort((a, b) => sortPackages(a, b, sortBy));
 	}
+	// Case 3 & 4: Has query (and possibly tags)
+	else if (hasQuery) {
+		// Search the index
+		const resultIds = index.search(normalizedQuery);
 
-	// FlexSearch returns an array of IDs when not using document search mode
-	const resultIds = index.search(searchQuery);
+		if (resultIds && resultIds.length > 0) {
+			if (sortBy === 'popularity') {
+				// For popularity sorting, use our complex scoring system
+				// Create regex patterns for scoring
+				const escapedQuery = normalizedQuery.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
+				const exactMatch = new RegExp(`^${escapedQuery}$`, 'i');
+				const nameMatch = new RegExp(`${escapedQuery}`, 'i');
+				const tagMatch = new RegExp(`\\b${escapedQuery}\\b`, 'i');
 
-	if (!resultIds || !resultIds.length) {
-		return [];
-	}
+				const now = new Date();
+				const entries: SearchEntry[] = [];
 
-	const now = new Date();
-	const entries: SearchEntry[] = [];
+				// Process and score each result
+				for (const id of resultIds) {
+					const packageName = Array.from(nameToIndexMap.entries()).find(
+						([_, value]) => value === id
+					)?.[0];
 
-	// Process and score each result
-	for (const id of resultIds) {
-		const packageName = Array.from(nameToIndexMap.entries()).find(
-			([_, value]) => value === id
-		)?.[0];
+					if (!packageName) continue;
 
-		if (!packageName) continue;
+					const pkg = packagesMap.get(packageName);
+					if (!pkg) continue;
 
-		const pkg = packagesMap.get(packageName);
-		if (!pkg) continue;
+					// If we have tag filters, only include packages that match ANY of the tags
+					if (hasTags && !tags.some((tag) => pkg.tags && pkg.tags.includes(tag))) {
+						continue;
+					}
 
-		// Base score - all matched results start with the same score
-		// and then we'll apply our custom scoring
-		let score = 10;
+					// Base score - all matched results start with the same score
+					// and then we'll apply our custom scoring
+					let score = 10;
 
-		// Boost exact name matches
-		if (exactMatch.test(pkg.name)) {
-			score += EXACT_NAME_MATCH_BOOST;
-		} else if (nameMatch.test(pkg.name)) {
-			score += NAME_MATCH_BOOST;
-		}
+					// Boost exact name matches
+					if (exactMatch.test(pkg.name)) {
+						score += EXACT_NAME_MATCH_BOOST;
+					} else if (nameMatch.test(pkg.name)) {
+						score += NAME_MATCH_BOOST;
+					}
 
-		// Boost tag matches
-		if (pkg.tags && pkg.tags.some((tag) => tagMatch.test(tag))) {
-			score += TAG_MATCH_BOOST;
-		}
+					// Boost tag matches
+					if (pkg.tags && pkg.tags.some((tag) => tagMatch.test(tag))) {
+						score += TAG_MATCH_BOOST;
+					}
 
-		// Boost author matches
-		if (pkg.author && exactMatch.test(pkg.author)) {
-			score += EXACT_NAME_MATCH_BOOST; // Same high boost as exact package name
-		} else if (pkg.author && nameMatch.test(pkg.author)) {
-			score += NAME_MATCH_BOOST;
-		}
+					// Boost author matches
+					if (pkg.author && exactMatch.test(pkg.author)) {
+						score += EXACT_NAME_MATCH_BOOST; // Same high boost as exact package name
+					} else if (pkg.author && nameMatch.test(pkg.author)) {
+						score += NAME_MATCH_BOOST;
+					}
 
-		// Boost popular packages
-		if (pkg.downloads) {
-			// Log scale for downloads to avoid domination by very popular packages
-			score += Math.log10(pkg.downloads + 1) * DOWNLOADS_BOOST;
-		}
+					// Boost popular packages
+					if (pkg.downloads) {
+						// Log scale for downloads to avoid domination by very popular packages
+						score += Math.log10(pkg.downloads + 1) * DOWNLOADS_BOOST;
+					}
 
-		// Boost packages with many dependents
-		if (pkg.dependents) {
-			// Dependents are weighted more heavily as they indicate package reliability
-			score += Math.log10(pkg.dependents + 1) * 10 * DEPENDENTS_BOOST;
-		}
+					// Boost packages with many dependents
+					if (pkg.dependents) {
+						// Dependents are weighted more heavily as they indicate package reliability
+						score += Math.log10(pkg.dependents + 1) * 10 * DEPENDENTS_BOOST;
+					}
 
-		// Combined popularity score (packages with both downloads and dependents are prioritized)
-		if (pkg.downloads && pkg.dependents) {
-			// Main formula: Downloads × Dependents
-			// Using log to prevent extremely popular packages from completely dominating
-			const popularityFormula = pkg.downloads * pkg.dependents;
-			score += Math.log10(popularityFormula + 1) * 2; // Higher weight for the formula
-		}
+					// Combined popularity score (packages with both downloads and dependents are prioritized)
+					if (pkg.downloads && pkg.dependents) {
+						// Main formula: Downloads × Dependents
+						// Using log to prevent extremely popular packages from completely dominating
+						const popularityFormula = pkg.downloads * pkg.dependents;
+						score += Math.log10(popularityFormula + 1) * 2; // Higher weight for the formula
+					}
 
-		// Boost recently updated packages
-		if (pkg.updated) {
-			const updateDate = new Date(pkg.updated);
-			const daysSinceUpdate = (now.getTime() - updateDate.getTime()) / (1000 * 60 * 60 * 24);
-			// More recent updates get higher boost
-			if (daysSinceUpdate < 30) {
-				// Last month
-				score += ((30 - daysSinceUpdate) * RECENT_UPDATE_BOOST) / 30;
+					// Boost recently updated packages
+					if (pkg.updated) {
+						const updateDate = new Date(pkg.updated);
+						const daysSinceUpdate = (now.getTime() - updateDate.getTime()) / (1000 * 60 * 60 * 24);
+						// More recent updates get higher boost
+						if (daysSinceUpdate < 30) {
+							// Last month
+							score += ((30 - daysSinceUpdate) * RECENT_UPDATE_BOOST) / 30;
+						}
+					}
+
+					entries.push({ package: pkg, score });
+				}
+
+				// Sort first by score
+				resultPackages = entries.sort((a, b) => b.score - a.score).map((entry) => entry.package);
+			} else {
+				// For other sort criteria, directly extract and sort the packages
+				const matchedPackages: Package[] = [];
+
+				for (const id of resultIds) {
+					const packageName = Array.from(nameToIndexMap.entries()).find(
+						([_, value]) => value === id
+					)?.[0];
+
+					if (!packageName) continue;
+
+					const pkg = packagesMap.get(packageName);
+					if (!pkg) continue;
+
+					// If we have tag filters, only include packages that match ANY of the tags
+					if (hasTags && !tags.some((tag) => pkg.tags && pkg.tags.includes(tag))) {
+						continue;
+					}
+
+					matchedPackages.push(pkg);
+				}
+
+				// Sort directly by the selected criterion
+				resultPackages = matchedPackages.sort((a, b) => sortPackages(a, b, sortBy));
 			}
 		}
-
-		entries.push({ package: pkg, score });
 	}
 
-	// Instead of grouping, flatten all entries and sort by popularity
-	return entries
-		.sort((a, b) => {
-			// First sort by score (which already factors in downloads/dependents)
-			const scoreDiff = b.score - a.score;
-			if (Math.abs(scoreDiff) > 1) return scoreDiff;
+	return resultPackages;
+}
 
-			// For close scores, prioritize by direct popularity formula: Downloads × Dependents
-			const aFormula = (a.package.downloads || 1) * (a.package.dependents || 1);
-			const bFormula = (b.package.downloads || 1) * (b.package.dependents || 1);
+/**
+ * Helper function to sort packages by the specified criterion
+ */
+function sortPackages(a: Package, b: Package, criterion: SortCriterion): number {
+	switch (criterion) {
+		case 'popularity':
+			// Sort by Downloads × Dependents formula
+			const aPopularity = (a.downloads || 1) * (a.dependents || 1);
+			const bPopularity = (b.downloads || 1) * (b.dependents || 1);
+			return bPopularity - aPopularity;
 
-			// Sort in descending order (higher values first)
-			return bFormula - aFormula;
-		})
-		.map((entry) => entry.package);
+		case 'downloads':
+			return (b.downloads || 0) - (a.downloads || 0);
+
+		case 'dependents':
+			return (b.dependents || 0) - (a.dependents || 0);
+
+		case 'updated':
+			// Sort by most recently updated
+			const aDate = a.updated ? new Date(a.updated).getTime() : 0;
+			const bDate = b.updated ? new Date(b.updated).getTime() : 0;
+			return bDate - aDate;
+
+		case 'name':
+			// Sort alphabetically by name
+			return a.name.localeCompare(b.name);
+
+		default:
+			// Default to popularity if an invalid criterion is provided
+			const aDefaultPop = (a.downloads || 1) * (a.dependents || 1);
+			const bDefaultPop = (b.downloads || 1) * (b.dependents || 1);
+			return bDefaultPop - aDefaultPop;
+	}
 }
 
 /**
@@ -298,192 +366,4 @@ export function getPackagesByAuthor(author: string): Package[] {
 			const bFormula = (b.downloads || 1) * (b.dependents || 1);
 			return bFormula - aFormula;
 		});
-}
-
-/**
- * Calculate the popularity score for a package
- * Uses the Downloads × Dependents formula with fallback handling
- *
- * @param pkg The package to calculate score for
- * @returns The popularity score
- */
-export function calculatePopularity(pkg: Package): number {
-	const downloads = pkg.downloads || 0;
-	const dependents = pkg.dependents || 0;
-
-	// Main formula: Downloads × Dependents
-	// If either is 0, we use the other value to avoid nullifying the score completely
-	return downloads === 0 ? dependents * 10 : dependents === 0 ? downloads : downloads * dependents;
-}
-
-/**
- * Returns the entire registry sorted by popularity (Downloads × Dependents)
- *
- * @param options Optional sort configuration
- * @returns All packages sorted by popularity
- */
-export function getSortedRegistry(
-	options: {
-		limit?: number;
-		minDownloads?: number;
-		minDependents?: number;
-		includeNoStats?: boolean;
-	} = {}
-): Package[] {
-	if (!inited) {
-		throw new Error('Search index not initialized. Call init() first.');
-	}
-
-	const { limit = Infinity, minDownloads = 0, minDependents = 0, includeNoStats = true } = options;
-
-	// Get all packages
-	const allPackages = Array.from(packagesMap.values());
-
-	// Filter packages based on criteria
-	const filteredPackages = allPackages.filter((pkg) => {
-		const downloads = pkg.downloads || 0;
-		const dependents = pkg.dependents || 0;
-
-		// Skip packages with no stats if specified
-		if (!includeNoStats && downloads === 0 && dependents === 0) {
-			return false;
-		}
-
-		// Apply minimum thresholds
-		return downloads >= minDownloads && dependents >= minDependents;
-	});
-
-	// Sort packages by popularity formula
-	const sortedPackages = filteredPackages.sort((a, b) => {
-		const popularityA = calculatePopularity(a);
-		const popularityB = calculatePopularity(b);
-
-		// Sort in descending order (highest popularity first)
-		return popularityB - popularityA;
-	});
-
-	// Apply limit if specified
-	return sortedPackages.slice(0, limit);
-}
-
-/**
- * Returns packages sorted by a specific criteria
- *
- * @param sortBy The sort criterion
- * @param options Optional sort configuration
- * @returns Sorted packages
- */
-export function getPackagesSortedBy(
-	sortBy: 'downloads' | 'dependents' | 'popularity' | 'updated' | 'name',
-	options: {
-		limit?: number;
-		ascending?: boolean;
-	} = {}
-): Package[] {
-	if (!inited) {
-		throw new Error('Search index not initialized. Call init() first.');
-	}
-
-	const { limit = Infinity, ascending = false } = options;
-
-	// Get all packages
-	const allPackages = Array.from(packagesMap.values());
-
-	// Sort by the specified criterion
-	const sortedPackages = allPackages.sort((a, b) => {
-		let comparison: number;
-
-		switch (sortBy) {
-			case 'downloads':
-				comparison = (b.downloads || 0) - (a.downloads || 0);
-				break;
-
-			case 'dependents':
-				comparison = (b.dependents || 0) - (a.dependents || 0);
-				break;
-
-			case 'popularity':
-				comparison = calculatePopularity(b) - calculatePopularity(a);
-				break;
-
-			case 'updated':
-				const dateA = a.updated ? new Date(a.updated).getTime() : 0;
-				const dateB = b.updated ? new Date(b.updated).getTime() : 0;
-				comparison = dateB - dateA;
-				break;
-
-			case 'name':
-				comparison = a.name.localeCompare(b.name);
-				break;
-
-			default:
-				comparison = calculatePopularity(b) - calculatePopularity(a);
-		}
-
-		// Apply ascending/descending direction
-		return ascending ? -comparison : comparison;
-	});
-
-	// Apply limit if specified
-	return sortedPackages.slice(0, limit);
-}
-
-/**
- * Get statistics about the registry
- *
- * @returns Statistical information about the packages
- */
-export function getRegistryStats(): {
-	totalPackages: number;
-	totalDownloads: number;
-	averageDownloads: number;
-	totalDependents: number;
-	averageDependents: number;
-	packagesWithDownloads: number;
-	packagesWithDependents: number;
-	mostPopularPackages: Package[];
-	recentlyUpdatedPackages: Package[];
-	tagDistribution: { tag: string; count: number }[];
-} {
-	if (!inited) {
-		throw new Error('Search index not initialized. Call init() first.');
-	}
-
-	const allPackages = Array.from(packagesMap.values());
-
-	// Basic counts
-	const totalPackages = allPackages.length;
-
-	// Download stats
-	const packagesWithDownloads = allPackages.filter((pkg) => (pkg.downloads || 0) > 0).length;
-	const totalDownloads = allPackages.reduce((sum, pkg) => sum + (pkg.downloads || 0), 0);
-	const averageDownloads = packagesWithDownloads > 0 ? totalDownloads / packagesWithDownloads : 0;
-
-	// Dependent stats
-	const packagesWithDependents = allPackages.filter((pkg) => (pkg.dependents || 0) > 0).length;
-	const totalDependents = allPackages.reduce((sum, pkg) => sum + (pkg.dependents || 0), 0);
-	const averageDependents =
-		packagesWithDependents > 0 ? totalDependents / packagesWithDependents : 0;
-
-	// Most popular packages (top 10)
-	const mostPopularPackages = getPackagesSortedBy('popularity', { limit: 10 });
-
-	// Recently updated packages (top 10)
-	const recentlyUpdatedPackages = getPackagesSortedBy('updated', { limit: 10 });
-
-	// Tag distribution
-	const tagDistribution = getAllTags();
-
-	return {
-		totalPackages,
-		totalDownloads,
-		averageDownloads,
-		totalDependents,
-		averageDependents,
-		packagesWithDownloads,
-		packagesWithDependents,
-		mostPopularPackages,
-		recentlyUpdatedPackages,
-		tagDistribution
-	};
 }

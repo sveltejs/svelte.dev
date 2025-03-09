@@ -103,6 +103,9 @@
 		"./polyfills": {
 			"default": "./src/lib/polyfills/index.ts"
 		},
+		"./reactivity": {
+			"default": "./src/lib/reactivity/index.svelte.ts"
+		},
 		"./icons/link.svg": "./src/lib/icons/link.svg",
 		"./icons/search.svg": "./src/lib/icons/search.svg",
 		"./search": {

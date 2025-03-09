@@ -168,7 +168,7 @@ export interface Package {
 	updated?: string;
 
 	/** Tags for categorizing the package */
-	tags?: string[];
+	tags: string[];
 }
 
 /**
