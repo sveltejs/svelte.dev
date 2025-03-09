@@ -423,7 +423,7 @@ export async function* stream_search_by_keywords({
 		let page = 0;
 		let has_more_results = true;
 
-		while (has_more_results && total_runs < limit) {
+		results_loop: while (has_more_results && total_runs < limit) {
 			// Fetch a page of results
 			const url = new URL(`${REGISTRY_BASE_URL}-/v1/search`);
 			url.searchParams.set('text', `keywords:${keyword}`);
@@ -446,6 +446,11 @@ export async function* stream_search_by_keywords({
 
 				// Process each package
 				for (const obj of results.objects) {
+					if (collected_packages.has(obj.package.name)) {
+						// NPM is cyclically sending thee same results, so we need to skip them
+						break results_loop;
+					}
+
 					if (skip_cached && cache.has(obj.package.name)) continue;
 
 					// Skip if we've reached the limit
@@ -476,6 +481,17 @@ export async function* stream_search_by_keywords({
 
 							// If package not updated in the last 2 years, skip
 							if (new Date(obj.last_published) < sub_days(new Date(), 365 * 2)) continue;
+
+							// Make sure that either dependencies/peer dependencies have svelte or @sveltejs/kit
+							const latest_package_json = response.versions[latest_version];
+							if (
+								!latest_package_json.dependencies?.svelte &&
+								!latest_package_json.dependencies?.['@sveltejs/kit'] &&
+								!latest_package_json.peerDependencies?.svelte &&
+								!latest_package_json.peerDependencies?.['@sveltejs/kit']
+							) {
+								continue;
+							}
 
 							obj.package.json = response;
 							obj.package.json.versions = Object.keys(obj.package.json.versions);

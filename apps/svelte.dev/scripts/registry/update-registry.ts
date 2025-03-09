@@ -197,8 +197,8 @@ interface ProcessBatchesOptions {
  */
 async function process_batches_through_llm({
 	keywords = ['svelte'],
-	limit = 500,
-	batch_size = 20,
+	limit = Infinity,
+	batch_size = 25,
 	max_retries = 2,
 	retry_count = 0,
 	failed_packages = null
@@ -244,79 +244,74 @@ async function process_batches_through_llm({
 				const { text } = await generateText({
 					model: openrouter('google/gemini-2.0-flash-lite-001'),
 					prompt: `
-				You are a meticulous Svelte package validator with EXTREMELY high standards.
+				INSTRUCTIONS:
+				Apply this filtering to packages and return ONLY a valid JSON object.
 				
-				MISSION:
-				Identify ONLY packages designed EXCLUSIVELY for Svelte, where Svelte is the PRIMARY framework.
+				1. EXCLUDE any package where:
+					 - Name contains "react", "vue", "angular", "solid" (unless it also has "svelte" in the name)
+					 - Missing 'svelte' in dependencies or peerDependencies
+					 - README doesn't contain at least one \`\`\`svelte code block
 				
-				AUTOMATIC REJECTION CRITERIA:
-				- Package doesn't contain explicit Svelte code like '<script>', '$:', 'export let', or '.svelte'
-				- Package doesn't import the 'svelte' library directly
-				- Package contains 'react-', 'vue-', 'angular-' or similar in name or dependencies
-				- Package is a general utility that works with many frameworks
-				- Package doesn't have 'svelte' or '@sveltejs/*' in peerDependencies or dependencies
-				- Package lacks explicit Svelte examples in description or documentation
-				- Package description doesn't specifically mention Svelte as primary focus
-				- README MUST contain at least one Svelte code snippet or example
+				2. ALWAYS EXCLUDE these packages, NO EXCEPTIONS:
+					 - "embla-carousel-react"
+					 - Any package with "carousel" AND "react" in the name
+					 - Any package with "react-" prefix
+					 - Any package with "-react" suffix
 				
-				DESCRIPTION HANDLING:
-				For VALID Svelte packages ONLY: If a package's description is inadequate (too short, uninformative, or contains raw markdown), provide a new one-line description.
+				3. For INCLUDED packages:
+					 - Assign relevant tags
+					 - Clean up description
 				
-				RETURN AN EMPTY OBJECT {} IF NO PACKAGES PASS YOUR STRICT VALIDATION.
-				DO NOT RETURN ANYTHING FOR INVALID PACKAGES - NOT EVEN A DESCRIPTION.`,
-					system: `YOU ARE IN ZERO TOLERANCE MODE FOR NON-SVELTE PACKAGES
-				
-				DETECTION CHECKLIST (ALL MUST BE TRUE):
-				1. Package MUST contain actual Svelte code or import 'svelte' directly
-				2. Package MUST have EXPLICIT dependencies or peerDependencies on 'svelte'
-				3. Package MUST be designed primarily for Svelte users
-				4. Package MUST NOT work with React/Vue/Angular without major adaptation
-				5. Package MUST have clear Svelte-specific implementation
-				6. Package README MUST include at least one Svelte-specific code example
-				
-				DETECTION FAILURE CHECKLIST (ANY ONE MEANS REJECT):
-				- Generic JavaScript utilities that happen to work with Svelte
-				- "Framework agnostic" packages that work with many frameworks
-				- Packages with '-react-' or 'react-' or 'vue-' in the name
-				- Packages lacking explicit Svelte code examples
-				- Packages missing direct 'svelte' dependencies
-				- Packages with documentation showing use in multiple frameworks
-				- "Reactive" libraries that aren't Svelte-specific
-				- Utility libraries with no Svelte-specific implementation
-				- Carousel, UI, or component libraries not built specifically for Svelte
-				- README without any Svelte code snippets or implementation examples
-				
-				CRITICAL: Never return any data (not even descriptions) for packages that fail validation.
-				If a package fails ANY validation check, completely omit it from your response.
-				
-				Packages like "embla-carousel-reactive-utils" must be REJECTED unless they have Svelte-specific implementation.
-				
-				RESPONSE FORMAT:
-				VALID PACKAGES WITH GOOD DESCRIPTIONS:
+				OUTPUT FORMAT:
+				Return ONLY a valid JSON object like this:
 				{
-					"legitimate-svelte-package": {
-						"tags": ["tag1", "tag2"]
-					}
-				}
-				
-				VALID PACKAGES WITH INADEQUATE DESCRIPTIONS:
-				{
-					"legitimate-svelte-package": {
+					"package-name-1": {
 						"tags": ["tag1", "tag2"],
-						"description": "A clear one-line description of what this package does for Svelte users."
+						"description": "Description"
+					},
+					"package-name-2": {
+						"tags": ["tag1", "tag3"],
+						"description": "Description"
 					}
 				}
 				
-				INVALID PACKAGES:
-				Do not include them in the response at all.
+				CRITICAL: 
+				- DO NOT include JavaScript code, variable assignments, or console.log
+				- DO NOT use \`\`\`json code blocks
+				- Return an empty object {} if no packages qualify
+				- YOUR RESPONSE MUST BE VALID JSON AND NOTHING ELSE`,
+					system: `STRICT OUTPUT REQUIREMENTS
+				
+				You MUST return ONLY a valid JSON object and nothing else:
+				- No explanations
+				- No code blocks
+				- No variable assignments
+				- No JavaScript syntax
+				- No console.log statements
+				- No comments
+				
+				Just a plain JSON object like:
+				{
+					"package-name": {
+						"tags": ["tag1", "tag2"],
+						"description": "Clean description"
+					}
+				}
+				
+				Or an empty object {} if no packages qualify.
+				
+				FILTERING LOGIC:
+				1. Exclude packages with other framework names (unless they also have "svelte")
+				2. Exclude packages without 'svelte' in dependencies/peerDependencies
+				3. Exclude packages without \`\`\`svelte code examples in README
+				4. ALWAYS exclude "embla-carousel-react" and similar packages
 				
 				AVAILABLE TAGS:
 				${JSON.stringify(TAGS_PROMPT)}
 				
-				${JSON.stringify(batch_data)}
-						`,
-					maxRetries: 2,
-					temperature: is_retry ? 0.1 : undefined // Lower temperature for retries
+				${JSON.stringify(batch_data)}`,
+					maxRetries: 3,
+					temperature: 0.0 // Absolutely no deviation
 				});
 				console.timeEnd(`llm-${batch_id}`);
 
