@@ -5,7 +5,6 @@
 	import { Box, ReactiveQueryParam } from '@sveltejs/site-kit/reactivity';
 	import { onMount } from 'svelte';
 	import SearchWorker from './registry-worker.ts?worker';
-	import { goto } from '$app/navigation';
 
 	const { data } = $props();
 
