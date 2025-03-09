@@ -1,6 +1,6 @@
 ---
 name: "svelte-code-copy"
-description: "A simple Svelte component to add a copy button to code blocks."
+description: "❏ Just wrap it with this"
 repo_url: "https://github.com/jill64/svelte-code-copy"
 author: "jill64"
 homepage: "https://github.com/jill64/svelte-code-copy#readme"

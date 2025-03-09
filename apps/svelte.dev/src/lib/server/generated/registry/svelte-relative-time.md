@@ -1,0 +1,12 @@
+---
+name: "svelte-relative-time"
+description: "Efficient, lightweight, auto-updating timeago timestamps for Svelte"
+repo_url: "https://github.com/captaincodeman/svelte-relative-time"
+author: "captaincodeman"
+homepage: "https://captaincodeman.github.io/svelte-relative-time/"
+downloads: 167
+updated: "2024-07-08T18:09:27.031Z"
+tags: 
+  - ui
+  - utility
+---

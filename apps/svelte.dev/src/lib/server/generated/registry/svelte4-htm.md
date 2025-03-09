@@ -1,6 +1,6 @@
 ---
 name: "svelte4-htm"
-description: "Tagged template syntax for Svelte to simplify testing using Svelte 4."
+description: "tagged template syntax for svelte to simplify testing using svelte4"
 repo_url: "https://github.com/NanezX/svelte4-htm"
 author: "nanez"
 homepage: "https://github.com/NanezX/svelte4-htm#readme"

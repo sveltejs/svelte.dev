@@ -1,6 +1,6 @@
 ---
 name: "@sveltejs/adapter-netlify"
-description: "A SvelteKit adapter for deploying SvelteKit applications to Netlify."
+description: "A SvelteKit adapter that creates a Netlify app"
 repo_url: "https://github.com/sveltejs/kit"
 author: "svelte-admin"
 homepage: "https://svelte.dev"

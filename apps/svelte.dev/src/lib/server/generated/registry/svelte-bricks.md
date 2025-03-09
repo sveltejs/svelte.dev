@@ -1,12 +1,12 @@
 ---
 name: "svelte-bricks"
-description: "Simple masonry implementation without column balancing for Svelte."
+description: "Simple masonry implementation without column balancing"
 repo_url: "https://github.com/janosh/svelte-bricks"
 author: "janosh"
 homepage: "https://janosh.github.io/svelte-bricks"
-downloads: 2268
+downloads: 2452
 dependents: 3
-updated: "2025-02-15T21:13:25.280Z"
+updated: "2025-03-08T15:32:40.045Z"
 tags: 
-  - component-library
+  - ui
 ---

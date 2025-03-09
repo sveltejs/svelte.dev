@@ -1,6 +1,6 @@
 ---
 name: "@whyframe/svelte"
-description: "Svelte support for whyframe."
+description: "Svelte support for whyframe"
 repo_url: "https://github.com/bluwy/whyframe"
 author: "bluwy"
 homepage: "https://whyframe.dev"

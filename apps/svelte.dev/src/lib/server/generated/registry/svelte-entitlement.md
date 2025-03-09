@@ -1,6 +1,6 @@
 ---
 name: "svelte-entitlement"
-description: "Component for managing entitlements in Svelte applications."
+description: "Component for managing entitlements in Svelte"
 repo_url: "https://github.com/arlac77/svelte-entitlement"
 author: "arlac77"
 homepage: "https://github.com/arlac77/svelte-entitlement#readme"

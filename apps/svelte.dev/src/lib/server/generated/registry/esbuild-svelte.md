@@ -1,6 +1,6 @@
 ---
 name: "esbuild-svelte"
-description: "An esbuild plugin to resolve and compile .svelte files."
+description: "esbuild plugin to resolve .svelte files"
 repo_url: "https://github.com/EMH333/esbuild-svelte"
 author: "emh333"
 homepage: "https://github.com/EMH333/esbuild-svelte#readme"

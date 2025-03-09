@@ -1,7 +1,7 @@
 ---
 name: "svelte-previous"
-description: "Svelte stores that remember previous values."
-repo_url: "git@github.com/bryanmylee/svelte-previous"
+description: "Svelte stores that remember previous values"
+repo_url: "https://github.com/bryanmylee/svelte-previous"
 author: "bryanmylee"
 homepage: "https://github.com/bryanmylee/svelte-previous#readme"
 downloads: 608

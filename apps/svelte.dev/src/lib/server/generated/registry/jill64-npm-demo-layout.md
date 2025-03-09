@@ -1,11 +1,11 @@
 ---
 name: "@jill64/npm-demo-layout"
-description: "Svelte layout template for npm library demo sites."
+description: "My Svelte layout template for npm library demo site"
 repo_url: "https://github.com/jill64/npm-demo-layout"
 author: "jill64"
 homepage: "https://github.com/jill64/npm-demo-layout#readme"
 downloads: 1770
 updated: "2025-01-31T00:54:12.227Z"
 tags: 
-  - utility
+  - tooling
 ---

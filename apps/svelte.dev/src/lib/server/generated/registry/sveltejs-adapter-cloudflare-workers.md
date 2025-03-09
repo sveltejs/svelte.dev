@@ -1,6 +1,6 @@
 ---
 name: "@sveltejs/adapter-cloudflare-workers"
-description: "SvelteKit adapter for deploying SvelteKit apps to Cloudflare Workers."
+description: "SvelteKit adapter that creates a Cloudflare Workers site using a function for dynamic server rendering"
 repo_url: "https://github.com/sveltejs/kit"
 author: "svelte-admin"
 homepage: "https://svelte.dev"

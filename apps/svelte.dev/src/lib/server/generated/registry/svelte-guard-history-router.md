@@ -1,6 +1,6 @@
 ---
 name: "svelte-guard-history-router"
-description: "A Svelte router for Single Page Applications (SPA) using history mode."
+description: "svelte router for SPA (history mode only)"
 repo_url: "https://github.com/arlac77/svelte-guard-history-router"
 author: "arlac77"
 homepage: "https://github.com/arlac77/svelte-guard-history-router#readme"

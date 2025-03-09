@@ -1,0 +1,11 @@
+---
+name: "mcrm-svelte-navigator"
+description: "Simple, accessible routing for Svelte"
+repo_url: "https://github.com/mefechoel/svelte-navigator"
+author: "mbouclas"
+homepage: "https://github.com/mefechoel/svelte-navigator#readme"
+downloads: 3
+updated: "2023-10-09T12:06:07.641Z"
+tags: 
+  - router
+---

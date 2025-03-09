@@ -1,6 +1,6 @@
 ---
 name: "@jill64/svelte-sanitize"
-description: "Safe HTML expansion for Svelte using universal-sanitize."
+description: "Safe html expansion for Svelte with universal-sanitize"
 repo_url: "https://github.com/jill64/svelte-sanitize"
 author: "jill64"
 homepage: "https://github.com/jill64/svelte-sanitize#readme"

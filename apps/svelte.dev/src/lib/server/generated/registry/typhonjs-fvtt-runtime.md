@@ -1,0 +1,11 @@
+---
+name: "@typhonjs-fvtt/runtime"
+description: "Provides an integrated runtime library for Foundry VTT & Svelte."
+repo_url: "https://github.com/typhonjs-fvtt-lib/runtime"
+author: "typhonrt"
+homepage: "https://github.com/typhonjs-fvtt-lib/runtime#readme"
+downloads: 92
+updated: "2025-02-16T06:48:30.381Z"
+tags: 
+  - integration
+---

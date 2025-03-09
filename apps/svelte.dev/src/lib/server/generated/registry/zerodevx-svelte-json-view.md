@@ -1,6 +1,6 @@
 ---
 name: "@zerodevx/svelte-json-view"
-description: "Svelte component to prettily view JSON data."
+description: "View JSON data prettily"
 repo_url: "https://github.com/zerodevx/svelte-json-view"
 author: "zerodevx"
 homepage: "https://github.com/zerodevx/svelte-json-view#readme"

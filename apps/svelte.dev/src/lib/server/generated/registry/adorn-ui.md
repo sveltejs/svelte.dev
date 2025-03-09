@@ -1,0 +1,12 @@
+---
+name: "adorn-ui"
+description: "基于Svelte 4开发的组件库"
+repo_url: "https://github.com/renzp94/adorn"
+author: "renzp"
+homepage: "https://github.com/renzp94/adorn#readme"
+downloads: 9
+updated: "2024-06-28T07:11:44.817Z"
+tags: 
+  - component-library
+  - ui
+---

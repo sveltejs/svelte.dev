@@ -1,6 +1,6 @@
 ---
 name: "@imask/svelte"
-description: "Svelte input mask."
+description: "Svelte input mask"
 repo_url: "https://github.com/uNmAnNeR/imaskjs#master"
 author: "unmanner"
 homepage: "https://github.com/uNmAnNeR/imaskjs/tree/master#readme"

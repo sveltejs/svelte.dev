@@ -1,6 +1,6 @@
 ---
 name: "mytril"
-description: "A Svelte component library for rapidly building modern websites based on Svelte and Sveltekit."
+description: "Mytril Svelte library component for rapidly building modern websites based on Svelte and Sveltekit"
 repo_url: "https://github.com/minedelve/mytril"
 author: "nycolaide"
 homepage: "https://minedelve.com/mytril/docs"

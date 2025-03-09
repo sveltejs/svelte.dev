@@ -1,6 +1,6 @@
 ---
 name: "svelte-awesome"
-description: "Font Awesome component for Svelte JS, using inline SVG."
+description: "Font Awesome component for Svelte JS, using inline SVG"
 repo_url: "https://github.com/RobBrazier/svelte-awesome"
 author: "robbrazier"
 homepage: "https://github.com/RobBrazier/svelte-awesome#readme"

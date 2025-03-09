@@ -1,6 +1,6 @@
 ---
 name: "@svelte-put/copy"
-description: "Svelte action & utilities for copying text to clipboard."
+description: "Svelte action & utilities for copying text to clipboard"
 repo_url: "https://github.com/vnphanquang/svelte-put"
 author: "vnphanquang"
 homepage: "https://svelte-put.vnphanquang.com/docs/copy"
@@ -9,5 +9,4 @@ dependents: 3
 updated: "2024-10-25T05:17:14.208Z"
 tags: 
   - utility
-  - dom
 ---

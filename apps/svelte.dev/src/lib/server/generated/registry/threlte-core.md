@@ -1,6 +1,6 @@
 ---
 name: "@threlte/core"
-description: "A 3D framework for the web, built on top of Svelte and Three.js."
+description: "A 3D framework for the web, built on top of Svelte and Three.js"
 repo_url: "https://github.com/threlte/threlte"
 author: "grischaerbe"
 homepage: "https://threlte.xyz"

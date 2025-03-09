@@ -6,6 +6,5 @@ homepage: "https://docs.soleil.se/packages/config-svelte"
 downloads: 53
 updated: "2025-02-21T09:41:28.968Z"
 tags: 
-  - component-library
   - utility
 ---

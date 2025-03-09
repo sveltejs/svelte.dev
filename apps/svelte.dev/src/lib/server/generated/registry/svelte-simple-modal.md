@@ -1,6 +1,6 @@
 ---
 name: "svelte-simple-modal"
-description: "A small and simple modal component for Svelte."
+description: "A small and simple modal for Svelte"
 repo_url: "https://github.com/flekschas/svelte-simple-modal"
 author: "flekschas"
 homepage: "https://github.com/flekschas/svelte-simple-modal#readme"

@@ -1,7 +1,7 @@
 ---
 name: "sveltekit-device-detector"
-description: "Detect device type and render your SvelteKit components accordingly."
-repo_url: "git@github.com/bhaskarGyan/sveltekit-device-detector"
+description: "Detect device type and render your component according to it"
+repo_url: "https://github.com/bhaskarGyan/sveltekit-device-detector"
 author: "bhaskargyan"
 homepage: "https://github.com/bhaskarGyan/sveltekit-device-detector#readme"
 downloads: 689

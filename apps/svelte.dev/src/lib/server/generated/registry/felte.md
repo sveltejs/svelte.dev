@@ -1,6 +1,6 @@
 ---
 name: "felte"
-description: "An extensible form library for Svelte, providing actions, stores, and validation capabilities."
+description: "An extensible form library for Svelte"
 repo_url: "https://github.com/pablo-abc/felte"
 author: "pberganza"
 homepage: "https://felte.dev"

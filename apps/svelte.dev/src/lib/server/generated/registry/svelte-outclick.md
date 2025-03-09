@@ -1,6 +1,6 @@
 ---
 name: "svelte-outclick"
-description: "A Svelte component to detect clicks that occur outside of an element."
+description: "A Svelte component that allows you to listen to the clicks that happen outside of an element."
 repo_url: "https://github.com/babakfp/svelte-outclick"
 author: "babakfp"
 homepage: "https://github.com/babakfp/svelte-outclick#readme"

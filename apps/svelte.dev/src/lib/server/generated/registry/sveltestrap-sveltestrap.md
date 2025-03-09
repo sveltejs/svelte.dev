@@ -1,6 +1,6 @@
 ---
 name: "@sveltestrap/sveltestrap"
-description: "Bootstrap 5 components for Svelte."
+description: "Bootstrap components for Svelte"
 repo_url: "https://github.com/sveltestrap/sveltestrap"
 author: "dysfunc"
 homepage: "https://sveltestrap.js.org"

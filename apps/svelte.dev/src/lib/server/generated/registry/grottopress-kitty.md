@@ -1,0 +1,11 @@
+---
+name: "@grottopress/kitty"
+description: "Kitty is a collection of utilities for SvelteKit"
+repo_url: "https://github.com/GrottoPress/kitty"
+author: "akadusei"
+homepage: "https://github.com/GrottoPress/kitty#README"
+downloads: 125
+updated: "2025-02-24T14:09:14.731Z"
+tags: 
+  - utility
+---

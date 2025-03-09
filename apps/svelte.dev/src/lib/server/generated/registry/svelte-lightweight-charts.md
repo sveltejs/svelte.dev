@@ -1,6 +1,6 @@
 ---
 name: "svelte-lightweight-charts"
-description: "A Svelte wrapper for financial lightweight charts built with HTML5 canvas."
+description: "Svelte wrapper for financial lightweight charts built with HTML5 canvas"
 repo_url: "https://github.com/trash-and-fire/svelte-lightweight-charts"
 author: "trash-and-fire"
 homepage: "https://github.com/trash-and-fire/svelte-lightweight-charts#readme"

@@ -1,0 +1,12 @@
+---
+name: "syv"
+description: "Svelte Complementary Library"
+repo_url: "https://github.com/ignatiusmb/syv"
+author: "ignatiusmb"
+homepage: "https://github.com/ignatiusmb/syv#readme"
+downloads: 5
+updated: "2024-10-22T05:33:17.920Z"
+tags: 
+  - component-library
+  - utility
+---

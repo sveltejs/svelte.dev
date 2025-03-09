@@ -1,6 +1,6 @@
 ---
 name: "svelte-hamburgers"
-description: "Svelte component based on the popular hamburgers.css library."
+description: "Svelte Hamburgers is a component based on the popular hamburgers.css"
 repo_url: "https://github.com/ghostdevv/svelte-hamburgers"
 author: "ghostsos"
 homepage: "https://github.com/ghostdevv/svelte-hamburgers#readme"

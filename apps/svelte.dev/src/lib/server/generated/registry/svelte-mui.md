@@ -1,6 +1,6 @@
 ---
 name: "svelte-mui"
-description: "Set of Svelte material UI components."
+description: "Set of Svelte 3/4 material ui components"
 repo_url: "https://github.com/vikignt/svelte-mui"
 author: "vikignt"
 homepage: "https://github.com/vikignt/svelte-mui#readme"

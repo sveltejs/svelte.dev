@@ -1,0 +1,11 @@
+---
+name: "@babichjacob/svelte-localstorage"
+description: "Svelte writable stores that automatically synchronize with localStorage"
+repo_url: "https://github.com/babichjacob/svelte-localstorage"
+author: "babichjacob"
+homepage: "https://github.com/babichjacob/svelte-localstorage"
+downloads: 36
+updated: "2024-10-16T23:42:18.061Z"
+tags: 
+  - utility
+---

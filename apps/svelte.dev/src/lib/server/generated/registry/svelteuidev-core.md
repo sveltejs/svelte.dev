@@ -1,6 +1,6 @@
 ---
 name: "@svelteuidev/core"
-description: "A Svelte component library for creating fully functional and accessible web applications quickly."
+description: "Svelte component library for creating fully functional and accessible web applications quickly"
 repo_url: "https://github.com/svelteuidev/svelteui"
 author: "lowkey_daisy"
 homepage: "https://svelteui.dev/"

@@ -1,0 +1,11 @@
+---
+name: "svelte-materialdesign-icons"
+description: "Material Design SVG Icon components for Svelte"
+repo_url: "https://github.com/shinokada/svelte-materialdesign-icons"
+author: "shinichiokada"
+homepage: "https://svelte-materialdesign-icons.vercel.app"
+downloads: 84
+updated: "2023-08-03T15:47:43.784Z"
+tags: 
+  - ui
+---

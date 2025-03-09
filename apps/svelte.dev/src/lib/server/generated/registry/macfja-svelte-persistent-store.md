@@ -1,6 +1,6 @@
 ---
 name: "@macfja/svelte-persistent-store"
-description: "A Svelte store that persists its value through page reloads using various storage options."
+description: "A Svelte store that keep its value through pages and reloads"
 repo_url: "https://github.com/macfja/svelte-persistent-store"
 author: "macfja"
 homepage: "https://github.com/macfja/svelte-persistent-store#readme"

@@ -1,6 +1,6 @@
 ---
 name: "melt"
-description: "Headless UI component library for Svelte."
+description: "The next generation of Melt UI. Built for Svelte 5."
 repo_url: "https://github.com/melt-ui/next-gen"
 author: "tglide_personal"
 homepage: "https://next.melt-ui.com/"

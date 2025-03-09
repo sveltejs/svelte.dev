@@ -8,5 +8,7 @@ downloads: 740
 dependents: 1
 updated: "2025-01-17T09:22:58.032Z"
 tags: 
-  - utility
+  - ui
+  - media
+  - tooling
 ---

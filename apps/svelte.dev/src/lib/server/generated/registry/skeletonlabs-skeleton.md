@@ -1,6 +1,6 @@
 ---
 name: "@skeletonlabs/skeleton"
-description: "A SvelteKit component library with UI components and styling."
+description: "A SvelteKit component library."
 repo_url: "https://github.com/skeletonlabs/skeleton"
 author: "skeletonadmin"
 homepage: "https://skeleton.dev/"

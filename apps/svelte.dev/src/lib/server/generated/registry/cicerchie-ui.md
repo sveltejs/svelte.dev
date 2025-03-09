@@ -1,0 +1,12 @@
+---
+name: "@cicerchie/ui"
+description: "A set of web components for building fast user interfaces."
+repo_url: "https://github.com/cicerchie/ui"
+author: "cicerchia"
+homepage: "https://github.com/cicerchie/ui#readme"
+downloads: 5
+updated: "2023-04-08T17:32:41.498Z"
+tags: 
+  - component-library
+  - ui
+---

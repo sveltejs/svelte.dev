@@ -1,6 +1,6 @@
 ---
 name: "svead"
-description: "A Svelte component for managing head, meta tags, and SEO-related elements in Svelte and SvelteKit."
+description: "[docs](../../README.md)"
 repo_url: "https://github.com/spences10/svead"
 author: "spences10"
 homepage: "https://github.com/spences10/svead#readme"

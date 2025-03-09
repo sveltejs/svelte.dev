@@ -1,0 +1,12 @@
+---
+name: "kampsy-ui"
+description: "Svelte 5 inspired by Vercel Geist. Free. Open Source. Use this to build consistent and cohesive web experiences."
+repo_url: "https://github.com/kampsy/ui"
+author: "kampsy"
+homepage: "https://ui.kampsy.xyz"
+downloads: 43
+updated: "2025-01-23T21:22:41.406Z"
+tags: 
+  - component-library
+  - ui
+---

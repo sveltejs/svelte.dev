@@ -1,0 +1,11 @@
+---
+name: "svelte-pivottable"
+description: "A Svelte-based pivot table with grouping"
+repo_url: "https://github.com/jjagielka/svelte-pivottable"
+author: "jjagielka"
+homepage: "https://github.com/jjagielka/svelte-pivottable#readme"
+downloads: 8
+updated: "2024-11-29T16:14:51.072Z"
+tags: 
+  - ui
+---

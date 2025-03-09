@@ -1,6 +1,6 @@
 ---
 name: "svelte-ast-print"
-description: "Prints Svelte AST nodes as a string, useful for codemods and code transformations."
+description: "Print Svelte AST nodes as a string. Aka parse in reverse."
 repo_url: "https://github.com/xeho91/svelte-ast-print"
 author: "xeho91"
 homepage: "https://github.com/xeho91/svelte-ast-print"

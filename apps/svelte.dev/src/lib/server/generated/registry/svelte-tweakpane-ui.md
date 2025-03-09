@@ -8,6 +8,6 @@ downloads: 846
 dependents: 3
 updated: "2025-03-04T18:31:09.725Z"
 tags: 
-  - component-library
   - ui
+  - tooling
 ---

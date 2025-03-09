@@ -1,6 +1,6 @@
 ---
 name: "svelte-5-french-toast"
-description: "Buttery smooth Svelte 5 toasts. Lightweight, customizable, and beautiful by default."
+description: "Buttery smooth Svelte 5 toasts. Lightweight, customizable, and beautiful by default. Svelte 5 Only"
 repo_url: "https://github.com/anatoliy-t7/svelte-5-french-toast"
 author: "anatoliy.st"
 homepage: "https://github.com/anatoliy-t7/svelte-5-french-toast#readme"

@@ -1,6 +1,6 @@
 ---
 name: "svelte-fa"
-description: "A tiny FontAwesome component for Svelte."
+description: "Tiny FontAwesome component for Svelte"
 repo_url: "https://github.com/Cweili/svelte-fa"
 author: "cweili"
 homepage: "https://cweili.github.io/svelte-fa/"

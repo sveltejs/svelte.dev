@@ -1,7 +1,7 @@
 ---
 name: "svelte-render"
-description: "A utility to manage complex Svelte behaviors outside of templates with full type safety."
-repo_url: "git@github.com/bryanmylee/svelte-render"
+description: "Manage complex Svelte behaviors outside of templates with full type safety"
+repo_url: "https://github.com/bryanmylee/svelte-render"
 author: "bryanmylee"
 homepage: "https://github.com/bryanmylee/svelte-render#readme"
 downloads: 16095

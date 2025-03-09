@@ -1,6 +1,6 @@
 ---
 name: "svelte-markdoc-preprocess"
-description: "A Svelte preprocessor that allows you to use Markdoc for content."
+description: "A Svelte preprocessor that allows you to use Markdoc."
 repo_url: "https://github.com/TorstenDittmann/svelte-markdoc-preprocess"
 author: "torstendittmann"
 homepage: "https://svelte-markdoc-preprocess.pages.dev"

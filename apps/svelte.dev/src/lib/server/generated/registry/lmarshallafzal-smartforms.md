@@ -1,0 +1,11 @@
+---
+name: "@lmarshallafzal/smartforms"
+description: "A dynamic Svelte form generator"
+repo_url: "https://github.com/LMarshallAfzal/SmartForms"
+author: "lmarshallafzal"
+homepage: "https://github.com/LMarshallAfzal/SmartForms#readme"
+downloads: 2
+updated: "2024-12-18T15:55:42.110Z"
+tags: 
+  - utility
+---

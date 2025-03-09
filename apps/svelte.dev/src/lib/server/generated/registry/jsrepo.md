@@ -1,6 +1,6 @@
 ---
 name: "jsrepo"
-description: "A CLI to add shared code from remote repositories for Svelte and other frameworks."
+description: "A CLI to add shared code from remote repositories."
 repo_url: "https://github.com/ieedan/jsrepo"
 author: "iedan."
 homepage: "https://jsrepo.dev"

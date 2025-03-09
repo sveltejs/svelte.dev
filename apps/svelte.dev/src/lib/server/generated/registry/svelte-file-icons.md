@@ -1,6 +1,6 @@
 ---
 name: "svelte-file-icons"
-description: "Svelte file icon components."
+description: "Svelte file icon components"
 repo_url: "https://github.com/shinokada/svelte-file-icons"
 author: "shinichiokada"
 homepage: "https://svelte-file-icons.codewithshin.com/"

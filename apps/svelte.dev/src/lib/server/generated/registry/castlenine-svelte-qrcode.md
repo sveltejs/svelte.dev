@@ -1,6 +1,6 @@
 ---
 name: "@castlenine/svelte-qrcode"
-description: "A no-dependency QR code generator component for Svelte & SvelteKit."
+description: "QR Code generator component for Svelte & SvelteKit, with no dependencies"
 repo_url: "https://github.com/castlenine/svelte-qrcode"
 author: "castlenine"
 homepage: "https://github.com/castlenine/svelte-qrcode#readme"

@@ -1,6 +1,6 @@
 ---
 name: "svelte-pan-zoom"
-description: "Svelte action for panning and zooming on a canvas element."
+description: "Canvas Pan and Zoom action for Svelte"
 repo_url: "https://github.com/captaincodeman/svelte-pan-zoom"
 author: "captaincodeman"
 homepage: "https://captaincodeman.github.io/svelte-pan-zoom/"

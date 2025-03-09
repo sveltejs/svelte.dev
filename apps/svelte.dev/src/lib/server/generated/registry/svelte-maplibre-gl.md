@@ -7,5 +7,5 @@ homepage: "https://svelte-maplibre-gl.mierune.dev/"
 downloads: 266
 updated: "2025-02-18T10:11:08.006Z"
 tags: 
-  - media
+  - ui
 ---

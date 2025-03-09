@@ -1,6 +1,6 @@
 ---
 name: "svelte-use-form"
-description: "A Svelte form library with validation and more."
+description: "The most svelte form library! 🥷"
 repo_url: "https://github.com/noahsalvi/svelte-use-form"
 author: "noahsalvi"
 homepage: "https://github.com/noahsalvi/svelte-use-form#readme"

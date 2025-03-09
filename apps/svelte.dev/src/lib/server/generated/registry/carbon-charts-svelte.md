@@ -1,6 +1,6 @@
 ---
 name: "@carbon/charts-svelte"
-description: "Carbon Charts component library for Svelte."
+description: "Carbon Charts component library for Svelte"
 repo_url: "https://github.com/carbon-design-system/carbon-charts"
 author: "carbon-bot"
 homepage: "https://github.com/carbon-design-system/carbon-charts#readme"

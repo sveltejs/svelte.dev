@@ -6,5 +6,5 @@ downloads: 1526
 dependents: 1
 updated: "2025-01-23T06:05:15.817Z"
 tags: 
-  - utility
+  - ui
 ---

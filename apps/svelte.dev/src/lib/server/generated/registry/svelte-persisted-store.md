@@ -1,6 +1,6 @@
 ---
 name: "svelte-persisted-store"
-description: "A Svelte store that persists data to local storage and can sync changes across browser tabs."
+description: "A Svelte store that persists to local storage. Can sync changes across browser tabs."
 repo_url: "https://github.com/joshnuss/svelte-persisted-store"
 author: "joshnuss"
 homepage: "https://github.com/joshnuss/svelte-persisted-store#readme"

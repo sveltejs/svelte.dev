@@ -1,6 +1,6 @@
 ---
 name: "svelte-heros"
-description: "Heroicons for Svelte."
+description: "TailwindLabs Heroicons for Svelte 4, 5, and Runes"
 repo_url: "https://github.com/shinokada/svelte-heros"
 author: "shinichiokada"
 homepage: "https://svelte-heros.codewithshin.com/"

@@ -1,6 +1,6 @@
 ---
 name: "svelte-headlessui"
-description: "HeadlessUI components for Svelte."
+description: "HeadlessUI components for Svelte"
 repo_url: "https://github.com/captaincodeman/svelte-headlessui"
 author: "captaincodeman"
 homepage: "https://captaincodeman.github.io/svelte-headlessui/"

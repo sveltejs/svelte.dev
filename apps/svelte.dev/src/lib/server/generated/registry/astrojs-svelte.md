@@ -1,6 +1,6 @@
 ---
 name: "@astrojs/svelte"
-description: "Integrates Svelte components into Astro projects, enabling server-side rendering and client-side hydration."
+description: "Use Svelte components within Astro"
 repo_url: "https://github.com/withastro/astro"
 author: "fredkschott"
 homepage: "https://docs.astro.build/en/guides/integrations-guide/svelte/"

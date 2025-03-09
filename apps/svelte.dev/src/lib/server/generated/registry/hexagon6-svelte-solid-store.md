@@ -1,0 +1,11 @@
+---
+name: "@hexagon6/svelte-solid-store"
+description: "svelte stores for solid (social linked data)"
+repo_url: "https://github.com/hexagon6/svelte-solid-store"
+author: "hexagon6"
+homepage: "https://github.com/hexagon6/svelte-solid-store#readme"
+downloads: 2
+updated: "2024-05-21T09:52:43.589Z"
+tags: 
+  - utility
+---

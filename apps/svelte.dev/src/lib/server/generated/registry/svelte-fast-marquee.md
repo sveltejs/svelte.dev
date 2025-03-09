@@ -1,6 +1,6 @@
 ---
 name: "svelte-fast-marquee"
-description: "A fast and performant marquee component for Svelte."
+description: "A Marquee component for Svelte inspired by react-fast-marquee."
 repo_url: "https://github.com/abosch19/svelte-fast-marquee"
 author: "abosch19"
 homepage: "https://svelte-fast-marquee-docs.vercel.app/"

@@ -1,7 +1,7 @@
 ---
 name: "svelte-keyed"
-description: "A writable derived store for objects and arrays in Svelte, enabling two-way data transformations."
-repo_url: "git@github.com/bryanmylee/svelte-keyed"
+description: "A writable derived store for objects and arrays!"
+repo_url: "https://github.com/bryanmylee/svelte-keyed"
 author: "bryanmylee"
 homepage: "https://github.com/bryanmylee/svelte-keyed#readme"
 downloads: 15901

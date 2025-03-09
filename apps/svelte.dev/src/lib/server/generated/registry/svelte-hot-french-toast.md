@@ -1,6 +1,6 @@
 ---
 name: "svelte-hot-french-toast"
-description: "A lightweight and customizable toast notification library for Svelte 5."
+description: "Buttery smooth toast notifications for Svelte 5. Lightweight, customizable, and beautiful by default."
 repo_url: "https://github.com/babakfp/svelte-hot-french-toast"
 author: "babakfp"
 homepage: "https://github.com/babakfp/svelte-hot-french-toast#readme"

@@ -1,0 +1,12 @@
+---
+name: "@w5/svelte-preprocess"
+description: "A Svelte preprocessor wrapper with baked-in support for commonly used preprocessors"
+repo_url: "https://github.com/wacfork/svelte-preprocess"
+author: "i-user"
+homepage: "https://github.com/wacfork/svelte-preprocess#readme"
+downloads: 2
+dependents: 2
+updated: "2023-10-20T06:25:37.551Z"
+tags: 
+  - preprocessor
+---

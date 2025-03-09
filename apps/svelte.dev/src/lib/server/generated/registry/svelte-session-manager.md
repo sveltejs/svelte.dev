@@ -1,6 +1,6 @@
 ---
 name: "svelte-session-manager"
-description: "A Svelte session store, currently supporting JWT (JSON Web Token) authentication."
+description: "Session store for svelte (currently only for JWT)"
 repo_url: "https://github.com/arlac77/svelte-session-manager"
 author: "arlac77"
 homepage: "https://github.com/arlac77/svelte-session-manager#readme"

@@ -1,6 +1,6 @@
 ---
 name: "svelte-transition"
-description: "Svelte component to transition elements via CSS classes."
+description: "Svelte component to transition elements via CSS classes"
 repo_url: "https://github.com/captaincodeman/svelte-transition"
 author: "captaincodeman"
 homepage: "https://captaincodeman.github.io/svelte-transition/"

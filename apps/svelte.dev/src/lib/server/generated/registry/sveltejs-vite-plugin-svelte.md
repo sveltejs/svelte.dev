@@ -1,6 +1,6 @@
 ---
 name: "@sveltejs/vite-plugin-svelte"
-description: "The official Svelte plugin for Vite."
+description: "The official [Svelte](https://svelte.dev) plugin for [Vite](https://vitejs.dev)."
 repo_url: "https://github.com/sveltejs/vite-plugin-svelte"
 author: "svelte-admin"
 homepage: "https://github.com/sveltejs/vite-plugin-svelte#readme"

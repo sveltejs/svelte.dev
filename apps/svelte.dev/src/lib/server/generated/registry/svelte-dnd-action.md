@@ -4,10 +4,10 @@ description: "*An awesome drag and drop library for Svelte 3 and 4 (not using th
 repo_url: "https://github.com/isaacHagoel/svelte-dnd-action"
 author: "isaac_hagoel"
 homepage: "https://github.com/isaacHagoel/svelte-dnd-action#readme"
-downloads: 39161
+downloads: 38867
 dependents: 33
 updated: "2025-02-02T04:10:59.627Z"
 tags: 
+  - ui
   - utility
-  - dom
 ---
