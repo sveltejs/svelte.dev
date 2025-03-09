@@ -16,7 +16,7 @@ export async function load({ url }) {
 
 	const total_pages = Math.ceil(current_results.length / REGISTRY_PAGE_LIMIT);
 
-	if (page > total_pages) {
+	if (page + 1 > total_pages) {
 		page = 0;
 
 		const new_url = new URL(url);

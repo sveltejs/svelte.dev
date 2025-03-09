@@ -146,7 +146,12 @@
 
 			{#each registry.current as pkg}
 				<article data-pubdate={pkg.updated}>
-					<a href="#{pkg.name}" title="Read the article »">
+					<a
+						href="https://npmjs.com/package/{pkg.name}"
+						target="_blank"
+						rel="noreferrer noopener"
+						title="Read the article »"
+					>
 						<h2>{pkg.name}</h2>
 
 						<p>{pkg.description}</p>

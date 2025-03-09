@@ -16,9 +16,10 @@ addEventListener('message', async (event) => {
 		const current_results = search(query, { tags });
 		const total_pages = Math.ceil(current_results.length / REGISTRY_PAGE_LIMIT);
 
-		if (page > total_pages) {
+		if (page + 1 > total_pages) {
 			page = 0;
 
+			console.log('Redirecting to page 0');
 			postMessage({
 				type: 'update-page',
 				payload: {
