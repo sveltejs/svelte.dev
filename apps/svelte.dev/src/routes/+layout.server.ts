@@ -50,8 +50,8 @@ const nav_links: NavigationLink[] = [
 		slug: 'blog'
 	},
 	{
-		title: 'Registry',
-		slug: 'registry'
+		title: 'Packages',
+		slug: 'packages'
 	}
 ];
 
@@ -61,7 +61,7 @@ const sections: Record<string, string> = {
 	blog: 'Blog',
 	tutorial: 'Tutorial',
 	search: 'Search',
-	registry: 'Registry'
+	packages: 'Packages'
 };
 
 const banner: BannerData = {

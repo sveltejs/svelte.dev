@@ -4,7 +4,7 @@
 	import { Icon } from '@sveltejs/site-kit/components';
 	import { Box, ReactiveQueryParam } from '@sveltejs/site-kit/reactivity';
 	import { onMount } from 'svelte';
-	import SearchWorker from './registry-worker.ts?worker';
+	import SearchWorker from './packages-worker.ts?worker';
 
 	const { data } = $props();
 
@@ -89,7 +89,7 @@
 </script>
 
 <svelte:head>
-	<title>Registry • Svelte</title>
+	<title>Packages • Svelte</title>
 	<!-- <link
 		rel="alternate"
 		type="application/rss+xml"
@@ -97,12 +97,12 @@
 		href="https://svelte.dev/blog/rss.xml"
 	/> -->
 
-	<meta name="twitter:title" content="Registry • Svelte" />
+	<meta name="twitter:title" content="Packages • Svelte" />
 	<meta name="twitter:description" content="Articles about Svelte and UI development" />
 	<meta name="Description" content="Articles about Svelte and UI development" />
 </svelte:head>
 
-<h1 class="visually-hidden">Registry</h1>
+<h1 class="visually-hidden">Packages</h1>
 
 <div class="container">
 	<div class="toc-container" style="order: 1">
@@ -193,7 +193,8 @@
 	</article> -->
 
 	<div class="page content">
-		<h1>Registry</h1>
+		<h1>Packages</h1>
+
 		<div class="posts">
 			<div class="controls">
 				<div class="input-group">

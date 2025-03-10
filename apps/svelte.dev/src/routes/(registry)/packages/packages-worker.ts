@@ -1,10 +1,10 @@
-import { init, REGISTRY_PAGE_LIMIT, search } from '../registry-search';
+import { init, REGISTRY_PAGE_LIMIT, search } from '../packages-search';
 
 addEventListener('message', async (event) => {
 	const { type, payload } = event.data;
 
 	if (type === 'init') {
-		const { blocks } = await fetch(`${payload.origin}/registry.json`).then((r) => r.json());
+		const { blocks } = await fetch(`${payload.origin}/packages.json`).then((r) => r.json());
 		init(blocks);
 
 		postMessage({ type: 'ready' });
