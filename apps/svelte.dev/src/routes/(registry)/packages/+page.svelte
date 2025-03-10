@@ -130,14 +130,16 @@
 									? tags_qp.current.length === 0
 									: tags_qp.current.includes(tag.tag),
 							(v) => {
-								if (tag.tag !== 'all') {
-									if (v) {
-										tags_qp.current = [...tags_qp.current, tag.tag];
-									} else {
-										tags_qp.current = tags_qp.current.filter((t) => t !== tag.tag);
-									}
-								} else {
+								if (tag.tag === 'all') {
+									// Click on this should just empty the tags array
 									tags_qp.current = [];
+									return;
+								}
+
+								if (!v) {
+									tags_qp.current = tags_qp.current.filter((t) => t !== tag.tag);
+								} else {
+									tags_qp.current = [...tags_qp.current, tag.tag];
 								}
 							}}
 						/>
