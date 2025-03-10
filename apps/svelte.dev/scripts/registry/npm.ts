@@ -53,11 +53,12 @@ export class RequestQueue {
 				console.log('RESOLVING', result?.url);
 				this.running--;
 				item.resolve(result);
-				this.dequeue();
 			})
 			.catch((err) => {
 				this.running--;
 				item.reject(err);
+			})
+			.finally(() => {
 				this.dequeue();
 			});
 	}
@@ -86,7 +87,7 @@ export function superfetch(
 	fetch_options?: RequestInit,
 	options: SuperfetchOptions = {}
 ): Promise<Response> {
-	const { concurrency = 10, retries = 3, retry_delay = 2000 } = options;
+	const { concurrency = 10, retries = 10, retry_delay = 2000 } = options;
 
 	// Create a singleton request queue if it doesn't exist
 	if (!request_queue) {
@@ -151,7 +152,7 @@ export function superfetch(
 	});
 }
 
-const HEADERS = { 'User-Agent': 'svelte.dev/registry; v0' };
+const HEADERS = { 'User-Agent': 'svelte.dev/registry; v0.5' };
 
 /**
  * Subtracts a specified number of days from a date
@@ -403,9 +404,6 @@ async function populate_cache() {
 	}
 }
 
-/**
- * Searches npm for a specific keyword and returns batches of results based on batch_size
- */
 export async function* stream_search_by_keywords({
 	keywords,
 	ranking = 'quality',
@@ -418,12 +416,14 @@ export async function* stream_search_by_keywords({
 
 	let total_runs = 0;
 	let collected_packages = new Map<string, any>();
+	// Keep track of all seen packages across all batches
+	const all_seen_packages = new Set<string>();
 
 	for (const keyword of keywords) {
 		let page = 0;
 		let has_more_results = true;
 
-		results_loop: while (has_more_results && total_runs < limit) {
+		listing_loop: while (has_more_results && total_runs < limit) {
 			// Fetch a page of results
 			const url = new URL(`${REGISTRY_BASE_URL}-/v1/search`);
 			url.searchParams.set('text', `keywords:${keyword}`);
@@ -446,10 +446,17 @@ export async function* stream_search_by_keywords({
 
 				// Process each package
 				for (const obj of results.objects) {
-					if (collected_packages.has(obj.package.name)) {
-						// NPM is cyclically sending thee same results, so we need to skip them
-						break results_loop;
+					// Check if we've seen this package before (either in current batch or previous batches)
+					if (all_seen_packages.has(obj.package.name)) {
+						console.log(
+							`Detected duplicate package ${obj.package.name}, breaking search loop for this keyword`
+						);
+						has_more_results = false;
+						break listing_loop;
 					}
+
+					// Mark this package as seen
+					all_seen_packages.add(obj.package.name);
 
 					if (skip_cached && cache.has(obj.package.name)) continue;
 
@@ -474,7 +481,6 @@ export async function* stream_search_by_keywords({
 							}).then((r) => r.json());
 
 							const latest_version = response['dist-tags']?.latest;
-
 							if (latest_version && response.time && response.time[latest_version]) {
 								obj.last_published = response.time[latest_version];
 							}
@@ -488,7 +494,9 @@ export async function* stream_search_by_keywords({
 								!latest_package_json.dependencies?.svelte &&
 								!latest_package_json.dependencies?.['@sveltejs/kit'] &&
 								!latest_package_json.peerDependencies?.svelte &&
-								!latest_package_json.peerDependencies?.['@sveltejs/kit']
+								!latest_package_json.peerDependencies?.['@sveltejs/kit'] &&
+								!latest_package_json.devDependencies?.svelte &&
+								!latest_package_json.devDependencies?.['@sveltejs/kit']
 							) {
 								continue;
 							}

@@ -384,8 +384,17 @@ name: "${pkg_name}"\n`;
 						if (package_details.dependents) {
 							frontmatter += `dependents: ${package_details.dependents}\n`;
 						}
+
 						if (package_details.updated) {
 							frontmatter += `updated: "${package_details.last_published}"\n`;
+						}
+
+						if (package_details.outdated) {
+							frontmatter += `outdated: true\n`;
+						}
+
+						if (package_details.deprecated) {
+							frontmatter += `deprecated: true\n`;
 						}
 
 						frontmatter += `tags: 
