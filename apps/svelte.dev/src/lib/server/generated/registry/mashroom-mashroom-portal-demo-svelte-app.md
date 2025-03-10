@@ -1,0 +1,11 @@
+---
+name: "@mashroom/mashroom-portal-demo-svelte-app"
+description: "A simple Svelte based SPA that can be used in the Mashroom Portal"
+repo_url: "https://github.com/nonblocking/mashroom"
+author: "jkofler"
+homepage: "https://www.mashroom-server.com"
+downloads: 1
+updated: "2024-07-08T08:48:46.968Z"
+tags: 
+  - integration
+---

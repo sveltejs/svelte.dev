@@ -1,0 +1,11 @@
+---
+name: "svelte-kit-sst"
+description: "Adapter for SvelteKit apps to work on AWS Lambda and AWS Lambda@Edge."
+repo_url: "https://github.com/sst/sst"
+author: "fanjie"
+homepage: "https://github.com/sst/sst#readme"
+downloads: 1605
+updated: "2024-08-16T19:15:54.792Z"
+tags: 
+  - adapter
+---

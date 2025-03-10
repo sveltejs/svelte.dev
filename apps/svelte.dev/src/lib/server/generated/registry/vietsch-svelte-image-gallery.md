@@ -1,0 +1,12 @@
+---
+name: "@vietsch/svelte-image-gallery"
+description: "Svelte image gallery ported from react-image-gallery"
+repo_url: "https://github.com/Vietsch/svelte-image-gallery"
+author: "vietsch"
+homepage: "https://github.com/Vietsch/svelte-image-gallery"
+downloads: 4
+updated: "2025-01-29T14:59:10.343Z"
+tags: 
+  - media
+  - component-library
+---
