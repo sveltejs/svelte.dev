@@ -86,6 +86,8 @@
 			}
 		}
 	});
+
+	const number_formatter = Intl.NumberFormat();
 </script>
 
 <svelte:head>
@@ -183,14 +185,6 @@
 			</div>
 		</nav>
 	</div>
-	<!-- <article class="top" data-pubdate={top.date}>
-		<a href="/{top.slug}" title="Read the article »">
-			<h2>{top.metadata.title}</h2>
-			<p>{@html top.metadata.description}</p>
-		</a>
-
-		<!-- <Byline post={top} />
-	</article> -->
 
 	<div class="page content">
 		<h1>Packages</h1>
@@ -237,11 +231,50 @@
 
 					<p>{pkg.description}</p>
 
+					<br />
+
 					<p class="tags">
 						{pkg.tags.map((tag) => tag).join(', ')}
 					</p>
 
-					<!-- <Byline post={pkg} /> -->
+					<p class="stats">
+						<span title="{688} Github Stars">
+							{number_formatter.format(688)}
+							<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"
+								><!-- Icon from All by undefined - undefined --><path
+									fill="currentColor"
+									d="M9.6 15.65L12 13.8l2.4 1.85l-.9-3.05l2.25-1.6h-2.8L12 7.9l-.95 3.1h-2.8l2.25 1.6zm2.4.65l-3.7 2.825q-.275.225-.6.213t-.575-.188t-.387-.475t-.013-.65L8.15 13.4l-3.625-2.575q-.3-.2-.375-.525t.025-.6t.35-.488t.6-.212H9.6l1.45-4.8q.125-.35.388-.538T12 3.475t.563.188t.387.537L14.4 9h4.475q.35 0 .6.213t.35.487t.025.6t-.375.525L15.85 13.4l1.425 4.625q.125.35-.012.65t-.388.475t-.575.188t-.6-.213zm0-4.525"
+								/></svg
+							>
+						</span>
+
+						{#if pkg.downloads}
+							<span title="{pkg.downloads} downloads">
+								{number_formatter.format(+pkg.downloads)}
+								<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"
+									><!-- Icon from All by undefined - undefined --><path
+										fill="currentColor"
+										d="M12.554 16.506a.75.75 0 0 1-1.107 0l-4-4.375a.75.75 0 0 1 1.107-1.012l2.696 2.95V3a.75.75 0 0 1 1.5 0v11.068l2.697-2.95a.75.75 0 1 1 1.107 1.013z"
+									/><path
+										fill="currentColor"
+										d="M3.75 15a.75.75 0 0 0-1.5 0v.055c0 1.367 0 2.47.117 3.337c.12.9.38 1.658.981 2.26c.602.602 1.36.86 2.26.982c.867.116 1.97.116 3.337.116h6.11c1.367 0 2.47 0 3.337-.116c.9-.122 1.658-.38 2.26-.982s.86-1.36.982-2.26c.116-.867.116-1.97.116-3.337V15a.75.75 0 0 0-1.5 0c0 1.435-.002 2.436-.103 3.192c-.099.734-.28 1.122-.556 1.399c-.277.277-.665.457-1.4.556c-.755.101-1.756.103-3.191.103H9c-1.435 0-2.437-.002-3.192-.103c-.734-.099-1.122-.28-1.399-.556c-.277-.277-.457-.665-.556-1.4c-.101-.755-.103-1.756-.103-3.191"
+									/></svg
+								>
+							</span>
+						{/if}
+
+						{#if pkg.dependents}
+							<span title="{pkg.dependents} dependents">
+								{number_formatter.format(+pkg.dependents)}
+								<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"
+									><!-- Icon from All by undefined - undefined --><path
+										fill="currentColor"
+										d="M7.35 20.98q-.984 0-1.677-.683q-.692-.685-.692-1.662q0-.84.534-1.49q.533-.65 1.331-.816V7.67q-.798-.165-1.331-.815q-.534-.65-.534-1.49q0-.986.689-1.676T7.343 3t1.676.69t.693 1.676q0 .84-.524 1.49t-1.342.815v.54q0 1.37.942 2.33q.943.959 2.289.959h1.846q1.748 0 2.98 1.249t1.232 3.02v.56q.817.165 1.35.806q.534.64.534 1.48q0 .986-.702 1.676q-.701.69-1.68.69t-1.664-.69t-.685-1.675q0-.841.524-1.481q.525-.64 1.323-.806v-.56q0-1.346-.937-2.307q-.937-.962-2.275-.962h-1.846q-1.004 0-1.834-.435q-.83-.436-1.397-1.161v5.425q.817.165 1.341.806q.524.64.524 1.48q0 .986-.689 1.676q-.688.69-1.673.69M7.356 20q.569 0 .962-.392t.393-.972t-.392-.973t-.973-.394q-.56 0-.962.403q-.403.403-.403.963t.403.962q.402.403.972.403m9.288 0q.57 0 .963-.392t.393-.972t-.392-.974t-.973-.393q-.56 0-.963.403t-.403.963t.403.962t.972.403M7.356 6.73q.569 0 .962-.391t.394-.972t-.393-.974T7.346 4q-.56 0-.962.403q-.403.403-.403.963t.403.962t.972.403"
+									/></svg
+								>
+							</span>
+						{/if}
+					</p>
 				</article>
 			{/each}
 		</div>
@@ -412,6 +445,19 @@
 			gap: 0.5rem;
 			font: var(--sk-font-ui-medium);
 			font-family: var(--sk-font-family-mono);
+		}
+
+		.stats {
+			display: flex;
+			gap: 1.6rem;
+			font: var(--sk-font-ui-medium);
+			font-family: var(--sk-font-family-mono);
+
+			span {
+				display: flex;
+				gap: 0.1rem;
+				align-items: center;
+			}
 		}
 
 		p {
