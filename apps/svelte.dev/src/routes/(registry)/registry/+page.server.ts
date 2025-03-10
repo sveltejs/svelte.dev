@@ -34,15 +34,26 @@ export async function load({ url }) {
 		pages: {
 			total_pages: Math.ceil(current_results.length / REGISTRY_PAGE_LIMIT)
 		},
-		tags: Object.entries(registry_json.tags).reduce(
-			(acc, [key, value]) => {
-				if (value.title) {
-					acc.push({ tag: key, title: value.title, short_title: kebab_to_capital(key) });
-				}
-				return acc;
-			},
-			[] as { tag: string; title: string; short_title: string }[]
-		)
+		tags: Object.entries(registry_json.tags)
+			.reduce(
+				(acc, [key, value]) => {
+					if (value.title) {
+						acc.push({
+							tag: key,
+							title: value.title,
+							short_title:
+								{
+									ui: 'UI',
+									dom: 'DOM',
+									seo: 'SEO'
+								}[key] ?? kebab_to_capital(key)
+						});
+					}
+					return acc;
+				},
+				[] as { tag: string; title: string; short_title: string }[]
+			)
+			.sort((a, b) => a.tag.localeCompare(b.tag))
 	};
 }
 

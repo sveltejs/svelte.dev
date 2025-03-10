@@ -105,6 +105,84 @@
 <h1 class="visually-hidden">Registry</h1>
 
 <div class="container">
+	<div class="toc-container" style="order: 1">
+		<nav aria-label="Docs">
+			<ul class="sidebar">
+				{#each [{ tag: 'all', short_title: 'All' }].concat(data.tags) as tag}
+					{@const link = new URL(page.url)}
+					{@const _ = link.searchParams.set(
+						'tags',
+						(tag.tag === 'all'
+							? []
+							: (link.searchParams.get('tags') ?? '').split(',').concat(tag.tag).filter(Boolean)
+						).join(',')
+					)}
+
+					<li>
+						<input
+							type="checkbox"
+							bind:group={tags_qp.current}
+							value={tag.tag}
+							bind:checked={() =>
+								tag.tag === 'all'
+									? tags_qp.current.length === 0
+									: tags_qp.current.includes(tag.tag),
+							(v) => {
+								if (tag.tag !== 'all') {
+									if (v) {
+										tags_qp.current = [...tags_qp.current, tag.tag];
+									} else {
+										tags_qp.current = tags_qp.current.filter((t) => t !== tag.tag);
+									}
+								} else {
+									tags_qp.current = [];
+								}
+							}}
+						/>
+						<a
+							class="tag"
+							href={link.pathname + link.search}
+							onclick={(e) => {
+								e.preventDefault();
+
+								if (tag.tag === 'all') {
+									// Click on this should just empty the tags array
+									tags_qp.current = [];
+									return;
+								}
+
+								if (tags_qp.current.includes(tag.tag)) {
+									tags_qp.current = tags_qp.current.filter((t) => t !== tag.tag);
+								} else {
+									tags_qp.current = [...tags_qp.current, tag.tag];
+								}
+							}}
+							aria-current={(tag.tag === 'all' && tags_qp.current.length === 0) ||
+								tags_qp.current.includes(tag.tag)}
+							title="Packages under {tag.tag}"
+						>
+							{tag.short_title}
+						</a>
+					</li>
+				{/each}
+			</ul>
+
+			<div class="pagination">
+				{#each Array(total_pages.current), i}
+					{@const link = new URL(page.url)}
+					{@const _ = link.searchParams.set('page', i + '')}
+					<a
+						href={link.pathname + link.search}
+						aria-current={page_qp.current === i}
+						onclick={(e) => {
+							e.preventDefault();
+							page_qp.current = i;
+						}}>{i + 1}</a
+					>&nbsp;
+				{/each}
+			</div>
+		</nav>
+	</div>
 	<!-- <article class="top" data-pubdate={top.date}>
 		<a href="/{top.slug}" title="Read the article »">
 			<h2>{top.metadata.title}</h2>
@@ -114,7 +192,8 @@
 		<!-- <Byline post={top} />
 	</article> -->
 
-	<div class="grid">
+	<div class="page content">
+		<h1>Registry</h1>
 		<div class="posts">
 			<div class="controls">
 				<div class="input-group">
@@ -153,31 +232,20 @@
 						title="Read the article »"
 					>
 						<h2>{pkg.name}</h2>
-
-						<p>{pkg.description}</p>
 					</a>
+
+					<p>{pkg.description}</p>
+
+					<p class="tags">
+						{pkg.tags.map((tag) => tag).join(', ')}
+					</p>
 
 					<!-- <Byline post={pkg} /> -->
 				</article>
 			{/each}
-
-			<div class="pagination">
-				{#each Array(total_pages.current), i}
-					{@const link = new URL(page.url)}
-					{@const _ = link.searchParams.set('page', i + '')}
-					<a
-						href={link.pathname + link.search}
-						aria-current={page_qp.current === i}
-						onclick={(e) => {
-							e.preventDefault();
-							page_qp.current = i;
-						}}>{i + 1}</a
-					>
-				{/each}
-			</div>
 		</div>
 
-		<ul class="feed">
+		<!-- <ul class="feed">
 			{#each [{ tag: 'all', short_title: 'All' }].concat(data.tags) as tag}
 				{@const link = new URL(page.url)}
 				{@const _ = link.searchParams.set(
@@ -215,17 +283,57 @@
 					</a>
 				</li>
 			{/each}
-		</ul>
+		</ul> -->
 	</div>
 </div>
 
 <style>
+	nav {
+		top: 0;
+		left: 0;
+		color: var(--sk-fg-2);
+		position: relative;
+
+		a {
+			color: var(--sk-fg-2);
+		}
+	}
+
+	.sidebar {
+		padding: 3.2rem 3.2rem calc(3.2rem + var(--sk-banner-height)) 3.2rem;
+		font-family: var(--sk-font-family-body);
+		height: 100%;
+		bottom: auto;
+		width: 100%;
+		margin: 0;
+
+		list-style: none;
+
+		accent-color: var(--sk-fg-accent);
+	}
+
 	.container {
-		max-width: var(--sk-page-content-width);
+		/* max-width: var(--sk-page-content-width); */
 		box-sizing: content-box;
 		margin: 0 auto;
 		text-wrap: balance;
-		padding: var(--sk-page-padding-top) var(--sk-page-padding-side);
+		/* padding: var(--sk-page-padding-top) var(--sk-page-padding-side); */
+
+		--sidebar-menu-width: 28rem;
+		--sidebar-width: var(--sidebar-menu-width);
+
+		display: flex;
+		flex-direction: column;
+	}
+
+	.page {
+		padding: var(--sk-page-padding-top) var(--sk-page-padding-side) var(--sk-page-padding-bottom);
+
+		min-width: 0 !important;
+	}
+
+	.page :global(:where(h2, h3) code) {
+		all: unset;
 	}
 
 	.controls {
@@ -279,33 +387,6 @@
 		}
 	}
 
-	button[aria-label='Close'] {
-		height: 100%;
-		aspect-ratio: 1;
-		background: none;
-
-		&:hover,
-		&:focus {
-			color: var(--sk-fg-3);
-		}
-
-		&:focus-visible {
-			outline-offset: -2px;
-		}
-
-		kbd {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			text-transform: uppercase;
-			background: none;
-			font: var(--sk-font-ui-medium);
-			color: var(--sk-fg-4);
-			width: 100%;
-			height: 100%;
-		}
-	}
-
 	h2 {
 		display: inline-block;
 		color: var(--sk-fg-1);
@@ -315,16 +396,6 @@
 	article {
 		margin: 0 0 4rem 0;
 
-		/* &.top {
-			margin: 0 0 2rem 0;
-			padding: 0 0 4rem 0;
-
-			h2 {
-				font: var(--sk-font-h1);
-				color: var(--sk-fg-1);
-			}
-		} */
-
 		a {
 			display: block;
 			text-decoration: none;
@@ -333,6 +404,13 @@
 			&:hover h2 {
 				text-decoration: underline;
 			}
+		}
+
+		.tags {
+			display: flex;
+			gap: 0.5rem;
+			font: var(--sk-font-ui-medium);
+			font-family: var(--sk-font-family-mono);
 		}
 
 		p {
@@ -355,10 +433,6 @@
 		}
 	}
 
-	.feed {
-		display: none;
-	}
-
 	.tag {
 		&[aria-current='true'] {
 			color: var(--sk-fg-accent);
@@ -366,59 +440,68 @@
 		}
 	}
 
-	@media (min-width: 800px) {
-		.grid {
-			display: grid;
-			grid-template-columns: 3fr 1fr;
-			gap: 3em;
+	@media (min-width: 832px) {
+		.content {
+			padding-left: calc(var(--sidebar-width) + var(--sk-page-padding-side));
+		}
+	}
+
+	.toc-container {
+		background: var(--sk-bg-2);
+		display: none;
+
+		:root.dark & {
+			background: var(--sk-bg-0);
+		}
+	}
+
+	@media (min-width: 832px) {
+		.toc-container {
+			display: block;
+			width: var(--sidebar-width);
+			height: calc(100vh - var(--sk-nav-height) - var(--sk-banner-height));
+			position: fixed;
+			left: 0;
+			top: var(--sk-nav-height);
+			overflow: hidden;
+
+			&::after {
+				content: '';
+				position: absolute;
+				right: 0;
+				top: 0;
+				width: 3px;
+				height: 100%;
+				background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.03));
+			}
 		}
 
-		/* .featured,
-		.feed {
-			padding: 4rem 0;
-			position: relative;
+		.page {
+			padding-left: calc(var(--sidebar-width) + var(--sk-page-padding-side));
+		}
+	}
 
-			&::before {
-				position: absolute;
-				top: 0;
-				font: var(--sk-font-ui-medium);
-				text-transform: uppercase;
-				color: var(--sk-fg-3);
-			}
-		} */
+	@media (min-width: 1200px) {
+		.container {
+			--sidebar-width: max(
+				28rem,
+				calc(
+					0.5 *
+						(
+							100vw - var(--sk-page-content-width) - var(--sk-page-padding-side) -
+								var(--sk-page-padding-side)
+						)
+				)
+			);
+			flex-direction: row;
+		}
 
-		/* .featured {
-			display: block;
-
-			&::before {
-				content: 'Featured';
-			}
-
-			article {
-				&:not(.feature) {
-					display: none;
-				}
-
-				h2 {
-					font: var(--sk-font-h2);
-				}
-			}
-		} */
-
-		.feed {
-			display: block;
-			margin: 0;
-			list-style: none;
-
-			&::before {
-				content: 'Categories';
-			}
-
-			a {
-				display: block;
-				font: var(--sk-font-body);
-				color: inherit;
-			}
+		.page {
+			--on-this-page-display: block;
+			padding: var(--sk-page-padding-top) calc(var(--sidebar-width) + var(--sk-page-padding-side));
+			margin: 0 auto;
+			box-sizing: content-box;
+			width: 100%;
 		}
 	}
 </style>
