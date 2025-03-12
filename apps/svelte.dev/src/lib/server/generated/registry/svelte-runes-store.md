@@ -6,6 +6,7 @@ author: "joaquim.neto.cel"
 homepage: "https://github.com/joaquimnetocel/svelte-runes-store#readme"
 downloads: 4
 updated: "2024-08-26T21:02:17.325Z"
+github_stars: 2
 tags: 
   - utility
 ---

@@ -6,6 +6,7 @@ author: "nerdworks"
 homepage: "https://inertiajs.com/"
 downloads: 1
 updated: "2024-06-24T11:26:04.392Z"
+github_stars: 6957
 tags: 
   - integration
 ---

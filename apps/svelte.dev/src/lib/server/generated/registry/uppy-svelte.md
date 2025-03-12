@@ -6,6 +6,7 @@ author: "kvz"
 homepage: "https://uppy.io"
 downloads: 512
 updated: "2025-01-08T10:02:34.051Z"
+github_stars: 29579
 tags: 
   - integration
   - media

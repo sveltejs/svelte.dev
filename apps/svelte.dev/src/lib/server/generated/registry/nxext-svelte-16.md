@@ -6,6 +6,7 @@ author: "kmandrup"
 homepage: "https://nxext.dev/"
 downloads: 1
 updated: "2023-07-11T19:25:00.602Z"
+github_stars: 471
 tags: 
   - tooling
 ---

@@ -6,6 +6,7 @@ author: "dritter"
 homepage: "https://github.com/dritter/extended-table#readme"
 downloads: 1
 updated: "2023-06-07T06:14:06.916Z"
+github_stars: 6
 tags: 
   - ui
 ---

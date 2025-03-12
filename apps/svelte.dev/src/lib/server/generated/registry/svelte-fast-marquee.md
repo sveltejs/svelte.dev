@@ -6,6 +6,7 @@ author: "abosch19"
 homepage: "https://svelte-fast-marquee-docs.vercel.app/"
 downloads: 1871
 updated: "2024-09-23T15:12:07.918Z"
+github_stars: 47
 tags: 
   - ui
 ---

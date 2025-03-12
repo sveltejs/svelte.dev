@@ -7,6 +7,7 @@ homepage: "https://svelte-put.vnphanquang.com/docs/qr"
 downloads: 5093
 dependents: 1
 updated: "2024-11-29T03:48:15.759Z"
+github_stars: 897
 tags: 
   - ui
   - media

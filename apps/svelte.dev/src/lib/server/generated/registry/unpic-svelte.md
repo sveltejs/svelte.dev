@@ -7,6 +7,7 @@ homepage: "https://unpic.pics/img/svelte"
 downloads: 7699
 dependents: 5
 updated: "2025-01-19T16:47:12.413Z"
+github_stars: 1647
 tags: 
   - media
 ---

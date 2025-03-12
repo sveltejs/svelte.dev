@@ -7,6 +7,7 @@ homepage: "https://saurav.tech/mdbsvelte/?path=/story/charts--examples"
 downloads: 47688
 dependents: 15
 updated: "2024-02-06T14:40:40.928Z"
+github_stars: 318
 tags: 
   - ui
   - media

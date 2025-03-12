@@ -6,6 +6,7 @@ author: "shinichiokada"
 homepage: "https://svelte-heros-v2.codewithshin.com/"
 downloads: 4909
 updated: "2024-10-25T14:39:08.466Z"
+github_stars: 46
 tags: 
   - ui
 ---

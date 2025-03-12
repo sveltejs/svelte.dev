@@ -6,6 +6,7 @@ author: "humanspeakadmin"
 homepage: "https://markdown.svelte.page"
 downloads: 2180
 updated: "2025-03-03T01:21:17.693Z"
+github_stars: 18
 tags: 
   - content
 ---

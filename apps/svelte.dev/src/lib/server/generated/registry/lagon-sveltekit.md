@@ -7,6 +7,7 @@ homepage: "https://github.com/lagonapp/lagon/tree/main/packages/integrations/sve
 downloads: 1
 dependents: 1
 updated: "2023-06-29T17:37:54.721Z"
+github_stars: 1341
 tags: 
   - adapter
 ---

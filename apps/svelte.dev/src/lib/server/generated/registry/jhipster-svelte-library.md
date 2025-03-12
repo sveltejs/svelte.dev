@@ -6,6 +6,7 @@ author: "vishal423"
 homepage: "https://github.com/vishal423/jhipster-svelte-library"
 downloads: 29
 updated: "2024-10-06T08:56:16.491Z"
+github_stars: 3
 tags: 
   - component-library
   - ui

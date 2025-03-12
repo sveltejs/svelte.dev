@@ -6,6 +6,7 @@ author: "carza-104"
 homepage: "https://apple-svelte.vercel.app"
 downloads: 8
 updated: "2024-08-23T19:38:25.301Z"
+github_stars: 27
 tags: 
   - component-library
   - ui

@@ -6,6 +6,7 @@ author: "rtrampox"
 homepage: "https://github.com/ValentinH/svelte-easy-crop"
 downloads: 4
 updated: "2024-12-14T06:14:00.918Z"
+github_stars: 215
 tags: 
   - ui
   - media

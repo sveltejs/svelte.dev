@@ -7,6 +7,7 @@ homepage: "https://tanepiper.github.io/svelte-formula"
 downloads: 46
 updated: "2022-07-01T13:15:36.210Z"
 outdated: true
+github_stars: 125
 tags: 
   - utility
 ---

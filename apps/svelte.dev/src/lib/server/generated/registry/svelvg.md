@@ -6,6 +6,7 @@ author: "metonym"
 homepage: "https://github.com/metonym/svelvg"
 downloads: 66
 updated: "2024-06-19T20:04:37.913Z"
+github_stars: 44
 tags: 
   - tooling
 ---

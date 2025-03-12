@@ -6,6 +6,7 @@ author: "sawyerclick"
 homepage: "https://github.com/rob-balfre/svelte-select#readme"
 downloads: 1
 updated: "2023-04-21T16:00:55.515Z"
+github_stars: 1310
 tags: 
   - ui
 ---

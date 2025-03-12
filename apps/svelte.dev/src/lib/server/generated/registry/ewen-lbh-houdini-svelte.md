@@ -6,6 +6,7 @@ author: "ewen-lbh"
 homepage: "https://github.com/HoudiniGraphql/houdini"
 downloads: 1
 updated: "2024-11-11T14:50:00.022Z"
+github_stars: 936
 tags: 
   - integration
 ---

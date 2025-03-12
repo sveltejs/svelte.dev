@@ -5,6 +5,7 @@ repo_url: "https://github.com/sveltejs/language-tools#master"
 author: "pewww"
 homepage: "https://github.com/sveltejs/language-tools/tree/master/packages/svelte2tsx"
 updated: "2023-06-15T08:33:07.531Z"
+github_stars: 1288
 tags: 
   - tooling
   - preprocessor

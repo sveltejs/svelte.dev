@@ -6,6 +6,7 @@ author: "baseballyama"
 homepage: "https://github.com/baseballyama/svelte-preprocess-delegate-events#readme"
 downloads: 177
 updated: "2024-05-09T12:16:12.839Z"
+github_stars: 53
 tags: 
   - tooling
 ---

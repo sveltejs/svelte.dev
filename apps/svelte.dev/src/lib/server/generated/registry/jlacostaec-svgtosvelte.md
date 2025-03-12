@@ -6,6 +6,7 @@ author: "jlacostaec"
 homepage: "https://github.com/JLAcostaEC/svgtosvelte#readme"
 downloads: 23
 updated: "2025-02-20T20:44:57.416Z"
+github_stars: 4
 tags: 
   - tooling
   - preprocessor

@@ -7,6 +7,7 @@ homepage: "https://github.com/KTibow/m3-svelte"
 downloads: 53
 dependents: 1
 updated: "2025-02-14T00:31:33.217Z"
+github_stars: 294
 tags: 
   - component-library
   - ui

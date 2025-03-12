@@ -6,6 +6,7 @@ author: "1aron"
 homepage: "https://css.master.co"
 downloads: 6
 updated: "2024-06-09T00:49:23.168Z"
+github_stars: 10
 tags: 
   - ui
   - utility

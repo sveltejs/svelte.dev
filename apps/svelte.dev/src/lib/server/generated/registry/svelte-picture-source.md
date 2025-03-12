@@ -7,6 +7,7 @@ homepage: "https://github.com/ppvg/svelte-picture-source#readme"
 downloads: 1
 updated: "2020-09-14T16:41:56.077Z"
 outdated: true
+github_stars: 1
 tags: 
   - preprocessor
   - media

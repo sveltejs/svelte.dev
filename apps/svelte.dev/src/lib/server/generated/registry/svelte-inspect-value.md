@@ -7,6 +7,7 @@ homepage: "https://inspect.eirik.space"
 downloads: 1165
 dependents: 2
 updated: "2025-03-09T11:47:27.518Z"
+github_stars: 59
 tags: 
   - tooling
 ---

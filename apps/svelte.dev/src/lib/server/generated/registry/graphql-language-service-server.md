@@ -7,6 +7,7 @@ homepage: "https://github.com/graphql/graphiql/tree/main/packages/graphql-langua
 downloads: 2757
 dependents: 3
 updated: "2024-08-13T19:40:30.484Z"
+github_stars: 16316
 tags: 
   - tooling
   - server

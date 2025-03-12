@@ -7,6 +7,7 @@ homepage: "https://github.com/YogliB/svelte-fullcalendar#readme"
 downloads: 2706
 dependents: 3
 updated: "2023-09-14T15:26:31.125Z"
+github_stars: 198
 tags: 
   - component-library
 ---

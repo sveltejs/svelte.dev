@@ -7,6 +7,7 @@ homepage: "https://github.com/wetix/responsive-ui/blob/main/components/show-more
 downloads: 10
 dependents: 1
 updated: "2024-04-23T07:51:14.511Z"
+github_stars: 19
 tags: 
   - ui
 ---

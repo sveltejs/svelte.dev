@@ -5,6 +5,7 @@ repo_url: "https://github.com/seanvelasco/barcode-kit"
 author: "seanvelasco"
 homepage: "https://github.com/seanvelasco/barcode-kit#readme"
 updated: "2023-10-02T00:58:13.670Z"
+github_stars: 2
 tags: 
   - media
 ---

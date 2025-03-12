@@ -7,6 +7,7 @@ homepage: "https://github.com/bryanmylee/svelte-render#readme"
 downloads: 16095
 dependents: 4
 updated: "2024-02-02T15:24:28.108Z"
+github_stars: 26
 tags: 
   - utility
 ---

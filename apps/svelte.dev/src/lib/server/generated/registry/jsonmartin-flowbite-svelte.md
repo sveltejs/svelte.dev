@@ -6,6 +6,7 @@ author: "jsonmartin"
 homepage: "https://flowbite-svelte.com/"
 downloads: 1
 updated: "2023-09-27T22:48:46.755Z"
+github_stars: 2391
 tags: 
   - component-library
   - ui

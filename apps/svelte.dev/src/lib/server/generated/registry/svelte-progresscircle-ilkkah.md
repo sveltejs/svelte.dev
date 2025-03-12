@@ -7,6 +7,7 @@ homepage: "https://github.com/stephane-vanraes/svelte-progresscircle#readme"
 downloads: 73
 updated: "2022-01-03T05:15:11.581Z"
 outdated: true
+github_stars: 20
 tags: 
   - ui
 ---

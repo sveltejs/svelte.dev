@@ -5,6 +5,7 @@ repo_url: "https://github.com/paoloricciuti/optimistikit"
 author: "pablopang"
 homepage: "https://github.com/paoloricciuti/optimistikit"
 updated: "2024-08-09T15:28:39.348Z"
+github_stars: 68
 tags: 
   - utility
 ---

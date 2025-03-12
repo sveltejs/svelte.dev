@@ -346,6 +346,12 @@
 		list-style: none;
 
 		accent-color: var(--sk-fg-accent);
+
+		li {
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+		}
 	}
 
 	.container {

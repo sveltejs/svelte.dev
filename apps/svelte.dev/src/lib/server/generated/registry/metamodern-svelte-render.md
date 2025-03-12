@@ -7,6 +7,7 @@ homepage: "https://github.com/metamodern-design/svelte-render#readme"
 downloads: 2
 updated: "2020-12-25T04:46:08.278Z"
 outdated: true
+github_stars: 6
 tags: 
   - tooling
   - server

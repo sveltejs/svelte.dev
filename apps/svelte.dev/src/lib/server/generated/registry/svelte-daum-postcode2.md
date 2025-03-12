@@ -6,6 +6,7 @@ author: "imjongpil"
 homepage: "https://github.com/Baedonghee/svelte-daum-postcode#README"
 downloads: 8
 updated: "2024-04-26T14:18:38.194Z"
+github_stars: 6
 tags: 
   - utility
 ---

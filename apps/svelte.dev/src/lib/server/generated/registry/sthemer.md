@@ -7,6 +7,7 @@ homepage: "https://github.com/ivanhofer/sthemer"
 downloads: 2
 updated: "2022-12-22T17:42:14.040Z"
 outdated: true
+github_stars: 27
 tags: 
   - ui
 ---

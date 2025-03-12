@@ -6,6 +6,7 @@ author: "typhonrt"
 homepage: "https://github.com/typhonjs-fvtt-lib/standard#readme"
 downloads: 61
 updated: "2025-03-03T00:57:02.788Z"
+github_stars: 2
 tags: 
   - component-library
 ---

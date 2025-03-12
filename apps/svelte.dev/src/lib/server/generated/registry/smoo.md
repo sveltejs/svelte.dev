@@ -7,6 +7,7 @@ homepage: "https://github.com/pateketrueke/smoo#readme"
 downloads: 54
 updated: "2022-08-12T20:20:28.814Z"
 outdated: true
+github_stars: 2
 tags: 
   - ui
 ---

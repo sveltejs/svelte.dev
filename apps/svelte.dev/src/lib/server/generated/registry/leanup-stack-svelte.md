@@ -6,6 +6,7 @@ author: "m.oppitz"
 homepage: "https://leanupjs.org"
 downloads: 5
 updated: "2024-06-11T08:58:35.229Z"
+github_stars: 33
 tags: 
   - tooling
 ---

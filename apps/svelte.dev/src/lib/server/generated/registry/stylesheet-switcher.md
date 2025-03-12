@@ -7,6 +7,7 @@ homepage: "https://github.com/uglow/stylesheet-switcher#readme"
 downloads: 16
 updated: "2020-04-07T22:25:59.095Z"
 outdated: true
+github_stars: 7
 tags: 
   - ui
 ---

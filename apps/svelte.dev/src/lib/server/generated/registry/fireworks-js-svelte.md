@@ -6,6 +6,7 @@ author: "crashmax"
 homepage: "https://fireworks.js.org"
 downloads: 27
 updated: "2024-07-13T18:36:15.655Z"
+github_stars: 1248
 tags: 
   - ui
   - animation

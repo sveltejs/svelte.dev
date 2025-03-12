@@ -6,6 +6,7 @@ author: "shinichiokada"
 homepage: "https://svelte-bootstrap-svg-icons.codewithshin.com/"
 downloads: 1611
 updated: "2024-10-31T11:40:47.021Z"
+github_stars: 2
 tags: 
   - ui
   - media

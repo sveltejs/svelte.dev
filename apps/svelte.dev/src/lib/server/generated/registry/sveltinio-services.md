@@ -6,6 +6,7 @@ author: "sveltinio"
 homepage: "https://components.sveltin.io"
 downloads: 1
 updated: "2023-10-01T09:55:35.949Z"
+github_stars: 12
 tags: 
   - utility
   - integration

@@ -6,6 +6,7 @@ author: "philadelphia"
 homepage: "https://sveltepress.site/"
 downloads: 1235
 updated: "2025-02-26T01:04:19.775Z"
+github_stars: 408
 tags: 
   - component-library
   - content

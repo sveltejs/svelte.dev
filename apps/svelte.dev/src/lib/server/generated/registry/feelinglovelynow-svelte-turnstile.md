@@ -6,6 +6,7 @@ author: "feelinglovelynow"
 homepage: "https://github.com/feelinglovelynow/svelte-turnstile#readme"
 downloads: 1
 updated: "2023-10-30T10:53:34.288Z"
+github_stars: 1
 tags: 
   - utility
   - integration

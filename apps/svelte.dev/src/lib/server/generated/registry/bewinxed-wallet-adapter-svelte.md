@@ -6,6 +6,7 @@ author: "bewinxed"
 homepage: "https://github.com/bewinxed/wallet-adapter-svelte#readme"
 downloads: 25
 updated: "2024-08-27T19:07:47.999Z"
+github_stars: 2
 tags: 
   - utility
   - auth

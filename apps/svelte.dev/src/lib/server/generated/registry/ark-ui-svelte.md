@@ -6,6 +6,7 @@ author: "schroetier"
 homepage: "https://ark-ui.com"
 downloads: 4
 updated: "2025-01-08T14:15:51.964Z"
+github_stars: 4118
 tags: 
   - component-library
   - ui

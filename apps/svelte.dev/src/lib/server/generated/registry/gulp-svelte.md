@@ -7,6 +7,7 @@ homepage: "https://github.com/shinnn/gulp-svelte#readme"
 downloads: 19
 updated: "2018-12-17T09:01:59.954Z"
 outdated: true
+github_stars: 26
 tags: 
   - tooling
   - preprocessor

@@ -7,6 +7,7 @@ homepage: "https://github.com/pablo-abc/svelte-editorjs"
 downloads: 48
 updated: "2021-04-08T21:22:36.716Z"
 outdated: true
+github_stars: 31
 tags: 
   - ui
 ---

@@ -6,6 +6,7 @@ author: "zachscroggins"
 homepage: "https://sk-oidc-oauth.zachscroggins.com"
 downloads: 120
 updated: "2024-05-01T22:14:12.261Z"
+github_stars: 3
 tags: 
   - auth
   - server

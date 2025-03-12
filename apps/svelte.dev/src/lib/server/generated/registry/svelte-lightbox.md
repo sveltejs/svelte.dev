@@ -7,6 +7,7 @@ homepage: "https://svelte-lightbox.js.org"
 downloads: 1073
 dependents: 1
 updated: "2024-11-17T15:54:05.444Z"
+github_stars: 52
 tags: 
   - ui
   - media

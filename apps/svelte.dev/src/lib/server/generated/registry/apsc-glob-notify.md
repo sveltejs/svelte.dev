@@ -7,6 +7,7 @@ homepage: "https://github.com/andrey-pavlenko/svelte-components/tree/main/packag
 downloads: 1
 updated: "2023-02-01T20:16:50.892Z"
 outdated: true
+github_stars: 3
 tags: 
   - ui
 ---

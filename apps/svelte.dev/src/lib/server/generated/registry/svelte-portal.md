@@ -7,6 +7,7 @@ homepage: "https://github.com/romkor/svelte-portal#readme"
 downloads: 20593
 dependents: 53
 updated: "2024-01-17T09:01:10.277Z"
+github_stars: 451
 tags: 
   - dom
   - ui

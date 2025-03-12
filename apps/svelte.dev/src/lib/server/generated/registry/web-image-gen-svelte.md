@@ -6,6 +6,7 @@ author: "brev"
 homepage: "https://github.com/brev/web-image-gen/tree/main/packages/svelte#readme"
 downloads: 1
 updated: "2023-12-09T01:47:00.445Z"
+github_stars: 10
 tags: 
   - utility
 ---

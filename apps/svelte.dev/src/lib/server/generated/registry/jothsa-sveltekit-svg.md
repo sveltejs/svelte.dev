@@ -6,6 +6,7 @@ author: "jothsa"
 homepage: "https://github.com/poppa/sveltekit-svg#readme"
 downloads: 1
 updated: "2024-06-02T19:24:33.345Z"
+github_stars: 252
 tags: 
   - tooling
   - integration

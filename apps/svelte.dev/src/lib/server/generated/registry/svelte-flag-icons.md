@@ -7,6 +7,7 @@ homepage: "https://svelte-flag-icons.codewithshin.com/"
 downloads: 3650
 dependents: 2
 updated: "2024-10-25T14:49:30.769Z"
+github_stars: 11
 tags: 
   - ui
 ---

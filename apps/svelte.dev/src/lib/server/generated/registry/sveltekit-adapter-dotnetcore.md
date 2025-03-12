@@ -6,6 +6,7 @@ author: "samlam"
 homepage: "https://github.com/samlam/sveltekit-adapter-dotnetcore#readme"
 downloads: 1
 updated: "2023-06-01T00:22:28.234Z"
+github_stars: 18
 tags: 
   - adapter
   - server

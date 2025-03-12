@@ -7,6 +7,7 @@ homepage: "https://github.com/Bunlong/svelte-csv"
 downloads: 225
 updated: "2022-02-14T17:53:33.830Z"
 outdated: true
+github_stars: 12
 tags: 
   - utility
 ---

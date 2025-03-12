@@ -6,6 +6,7 @@ author: "softwarecurator"
 homepage: "https://github.com/softwarecurator/solana-svelte#readme"
 downloads: 1
 updated: "2024-05-03T05:50:46.872Z"
+github_stars: 3
 tags: 
   - integration
 ---

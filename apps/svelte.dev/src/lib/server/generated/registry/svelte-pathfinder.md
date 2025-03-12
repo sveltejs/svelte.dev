@@ -6,6 +6,7 @@ author: "paulmaly"
 homepage: "https://github.com/sveltetools/svelte-pathfinder#readme"
 downloads: 891
 updated: "2024-07-04T09:03:48.158Z"
+github_stars: 131
 tags: 
   - router
 ---

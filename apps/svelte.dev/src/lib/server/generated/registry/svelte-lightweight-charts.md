@@ -6,6 +6,7 @@ author: "trash-and-fire"
 homepage: "https://github.com/trash-and-fire/svelte-lightweight-charts#readme"
 downloads: 559
 updated: "2023-05-18T22:55:02.647Z"
+github_stars: 115
 tags: 
   - ui
 ---

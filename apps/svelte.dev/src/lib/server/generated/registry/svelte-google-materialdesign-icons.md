@@ -6,6 +6,7 @@ author: "shinichiokada"
 homepage: "https://svelte-google-materialdesign-icons.codewithshin.com"
 downloads: 508
 updated: "2024-08-14T15:13:42.293Z"
+github_stars: 12
 tags: 
   - ui
 ---

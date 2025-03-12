@@ -6,6 +6,7 @@ author: "nodify_at"
 homepage: "https://github.com/nodify-at/svelte-formify#readme"
 updated: "2022-04-10T22:08:32.153Z"
 outdated: true
+github_stars: 11
 tags: 
   - utility
 ---

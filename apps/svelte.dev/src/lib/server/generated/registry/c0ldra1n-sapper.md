@@ -7,6 +7,7 @@ homepage: "https://github.com/sveltejs/sapper#readme"
 downloads: 1
 updated: "2019-11-26T08:34:06.337Z"
 outdated: true
+github_stars: 6982
 tags: 
   - server
   - tooling

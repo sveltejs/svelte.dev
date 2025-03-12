@@ -6,6 +6,7 @@ author: "pouchlab"
 homepage: "https://github.com/spences10/svead#readme"
 downloads: 1
 updated: "2024-09-21T12:16:50.395Z"
+github_stars: 75
 tags: 
   - seo
   - utility

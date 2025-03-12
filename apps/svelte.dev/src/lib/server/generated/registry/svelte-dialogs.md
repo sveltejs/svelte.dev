@@ -7,6 +7,7 @@ homepage: "https://bibizio.github.io/svelte-dialogs/"
 downloads: 47
 updated: "2022-06-27T22:18:32.775Z"
 outdated: true
+github_stars: 19
 tags: 
   - ui
 ---

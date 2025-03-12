@@ -7,6 +7,7 @@ homepage: "https://github.com/ptkdev/sveltekit-cordova-adapter"
 downloads: 18
 updated: "2023-02-11T20:28:16.646Z"
 outdated: true
+github_stars: 50
 tags: 
   - adapter
 ---

@@ -6,6 +6,7 @@ author: "maxfriedmann"
 homepage: "https://svelte-ui.com"
 downloads: 79
 updated: "2025-02-17T14:34:24.387Z"
+github_stars: 7
 tags: 
   - component-library
   - ui

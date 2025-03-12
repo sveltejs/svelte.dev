@@ -7,6 +7,7 @@ homepage: "https://github.com/RobBrazier/svelte-awesome#readme"
 downloads: 3
 updated: "2020-09-02T20:10:03.347Z"
 outdated: true
+github_stars: 496
 tags: 
   - ui
 ---

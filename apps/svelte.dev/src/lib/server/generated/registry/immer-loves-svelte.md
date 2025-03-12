@@ -7,6 +7,7 @@ homepage: "https://github.com/bradphelan/immer.loves.svelte#readme"
 downloads: 36
 updated: "2022-11-14T09:58:56.200Z"
 outdated: true
+github_stars: 56
 tags: 
   - utility
 ---

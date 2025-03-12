@@ -7,6 +7,7 @@ homepage: "https://github.com/kbrgl/svelte-french-toast#readme"
 downloads: 15689
 dependents: 9
 updated: "2023-07-23T18:51:44.919Z"
+github_stars: 930
 tags: 
   - ui
 ---

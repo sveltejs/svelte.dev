@@ -7,6 +7,7 @@ homepage: "https://github.com/wetix/responsive-ui/blob/main/components/bottom-mo
 downloads: 6
 updated: "2021-12-27T05:02:12.421Z"
 outdated: true
+github_stars: 19
 tags: 
   - ui
 ---

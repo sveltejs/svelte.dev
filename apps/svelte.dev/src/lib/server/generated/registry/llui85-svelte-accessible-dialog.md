@@ -6,6 +6,7 @@ author: "llui85"
 homepage: "https://github.com/reecelucas/svelte-accessible-dialog#readme"
 downloads: 1
 updated: "2024-07-06T08:18:49.036Z"
+github_stars: 26
 tags: 
   - ui
 ---

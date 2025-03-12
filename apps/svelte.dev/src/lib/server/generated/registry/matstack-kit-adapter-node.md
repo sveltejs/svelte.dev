@@ -6,6 +6,7 @@ author: "jmathiesen"
 homepage: "https://matstack.dev"
 downloads: 1
 updated: "2024-09-17T18:18:17.139Z"
+github_stars: 3
 tags: 
   - adapter
 ---

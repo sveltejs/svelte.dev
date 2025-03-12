@@ -6,6 +6,7 @@ author: "dexlui"
 homepage: "https://github.com/dexterklui/svelte-scrollspy#readme"
 downloads: 1
 updated: "2023-11-26T14:24:04.525Z"
+github_stars: 4
 tags: 
   - utility
   - dom

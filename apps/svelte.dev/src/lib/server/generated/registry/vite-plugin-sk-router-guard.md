@@ -7,6 +7,7 @@ homepage: "https://github.com/ikun-svelte"
 downloads: 1
 dependents: 2
 updated: "2023-08-29T08:21:32.602Z"
+github_stars: 6
 tags: 
   - router
   - tooling

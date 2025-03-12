@@ -6,6 +6,7 @@ author: "daks.dev"
 homepage: "https://daks.dev/"
 downloads: 1
 updated: "2023-11-11T21:26:22.555Z"
+github_stars: 1
 tags: 
   - tooling
 ---

@@ -7,6 +7,7 @@ homepage: "https://github.com/NicoCevallos/eslint-svelte3-preprocess#readme"
 downloads: 44
 updated: "2021-02-16T15:59:49.410Z"
 outdated: true
+github_stars: 5
 tags: 
   - tooling
   - preprocessor

@@ -7,6 +7,7 @@ homepage: "https://github.com/Baedonghee/svelte-daum-postcode#README"
 downloads: 22
 updated: "2021-07-13T13:42:55.439Z"
 outdated: true
+github_stars: 6
 tags: 
   - integration
 ---

@@ -6,6 +6,7 @@ author: "mbparvez"
 homepage: "https://www.theui.dev/r/skcl"
 downloads: 3
 updated: "2023-12-17T14:22:59.494Z"
+github_stars: 4
 tags: 
   - component-library
   - ui

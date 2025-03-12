@@ -6,6 +6,7 @@ author: "smukkejohan"
 homepage: "https://github.com/airlookjs/airlookjs/packages/svelte-sequence-editor#readme"
 downloads: 8
 updated: "2024-09-02T19:35:39.529Z"
+github_stars: 5
 tags: 
   - ui
   - media

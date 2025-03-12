@@ -6,6 +6,7 @@ author: "jill64"
 homepage: "https://github.com/jill64/eslint-config-svelte#readme"
 downloads: 6033
 updated: "2025-03-07T21:45:48.100Z"
+github_stars: 2
 tags: 
   - tooling
 ---

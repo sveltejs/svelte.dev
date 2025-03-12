@@ -7,6 +7,7 @@ homepage: "https://github.com/heithemmoumni/svelte-stars-rating#readme"
 downloads: 6
 updated: "2019-11-21T20:53:15.850Z"
 outdated: true
+github_stars: 15
 tags: 
   - ui
 ---

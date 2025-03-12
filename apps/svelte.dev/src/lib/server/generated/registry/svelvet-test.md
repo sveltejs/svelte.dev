@@ -6,6 +6,7 @@ author: "briangregoryholmes"
 homepage: "https://github.com/open-source-labs/Svelvet"
 downloads: 20
 updated: "2023-04-19T16:27:37.402Z"
+github_stars: 2669
 tags: 
   - component-library
   - ui

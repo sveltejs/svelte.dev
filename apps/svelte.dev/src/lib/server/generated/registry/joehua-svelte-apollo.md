@@ -7,6 +7,7 @@ homepage: "https://github.com/timhall/svelte-apollo#readme"
 downloads: 1
 updated: "2020-01-04T16:44:44.035Z"
 outdated: true
+github_stars: 948
 tags: 
   - integration
   - server

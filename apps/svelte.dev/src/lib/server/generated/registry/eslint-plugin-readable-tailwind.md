@@ -7,6 +7,7 @@ homepage: "https://github.com/schoero/eslint-plugin-readable-tailwind#readme"
 downloads: 7627
 dependents: 4
 updated: "2025-03-08T20:27:37.922Z"
+github_stars: 150
 tags: 
   - tooling
 ---

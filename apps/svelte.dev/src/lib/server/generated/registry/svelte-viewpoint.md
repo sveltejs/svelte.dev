@@ -7,6 +7,7 @@ homepage: "https://github.com/sveltetools/svelte-viewpoint#readme"
 downloads: 57
 updated: "2021-03-04T11:39:29.012Z"
 outdated: true
+github_stars: 36
 tags: 
   - ui
 ---

@@ -7,6 +7,7 @@ homepage: "https://github.com/arlac77/svelte-log-view#readme"
 downloads: 164
 dependents: 2
 updated: "2025-03-05T12:22:43.756Z"
+github_stars: 4
 tags: 
   - ui
   - utility

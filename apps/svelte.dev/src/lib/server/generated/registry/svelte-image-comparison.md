@@ -6,6 +6,7 @@ author: "captaincodeman"
 homepage: "https://captaincodeman.github.io/svelte-image-comparison/"
 downloads: 15
 updated: "2024-04-27T18:56:28.004Z"
+github_stars: 17
 tags: 
   - ui
   - media

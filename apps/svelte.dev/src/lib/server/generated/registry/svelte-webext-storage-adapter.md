@@ -6,6 +6,7 @@ author: "pixievoltno1"
 homepage: "https://github.com/PixievoltNo1/svelte-webext-storage-adapter"
 downloads: 7
 updated: "2024-04-04T04:39:11.213Z"
+github_stars: 25
 tags: 
   - utility
 ---

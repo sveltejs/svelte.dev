@@ -7,6 +7,7 @@ homepage: "https://github.com/ampled/svelte-masonrylayout#readme"
 downloads: 13
 updated: "2023-02-12T12:57:25.688Z"
 outdated: true
+github_stars: 1
 tags: 
   - ui
 ---

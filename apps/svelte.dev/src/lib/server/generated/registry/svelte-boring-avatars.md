@@ -6,6 +6,7 @@ author: "paolotiu17"
 homepage: "https://github.com/paolotiu/svelte-boring-avatars#readme"
 downloads: 207
 updated: "2024-03-08T08:12:43.519Z"
+github_stars: 64
 tags: 
   - ui
 ---

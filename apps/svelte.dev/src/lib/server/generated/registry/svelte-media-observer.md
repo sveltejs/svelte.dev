@@ -7,6 +7,7 @@ homepage: "https://github.com/ericrovell/svelte-media-observer#readme"
 downloads: 122
 updated: "2021-10-26T21:45:00.537Z"
 outdated: true
+github_stars: 1
 tags: 
   - utility
 ---

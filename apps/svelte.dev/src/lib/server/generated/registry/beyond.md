@@ -7,6 +7,7 @@ homepage: "https://github.com/beyondjs/engine#readme"
 downloads: 117
 dependents: 39
 updated: "2025-02-17T19:21:26.766Z"
+github_stars: 17
 tags: 
   - server
   - tooling

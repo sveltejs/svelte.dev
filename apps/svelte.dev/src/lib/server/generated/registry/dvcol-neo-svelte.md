@@ -6,6 +6,7 @@ author: "dvcol"
 homepage: "https://github.com/dvcol/neo-svelte"
 downloads: 27
 updated: "2025-03-06T13:36:18.882Z"
+github_stars: 9
 tags: 
   - component-library
   - ui

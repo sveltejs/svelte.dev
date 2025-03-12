@@ -6,6 +6,7 @@ author: "battlefieldduck"
 homepage: "https://xterm-svelte.pages.dev"
 downloads: 199
 updated: "2024-11-17T19:32:11.708Z"
+github_stars: 29
 tags: 
   - ui
   - svelte

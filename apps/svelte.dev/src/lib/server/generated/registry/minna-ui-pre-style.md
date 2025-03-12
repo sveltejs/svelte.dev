@@ -7,6 +7,7 @@ homepage: "https://wearegenki.github.io/minna-ui"
 downloads: 1
 updated: "2019-02-06T00:32:26.611Z"
 outdated: true
+github_stars: 87
 tags: 
   - preprocessor
 ---

@@ -7,6 +7,7 @@ homepage: "https://github.com/vladshcherbin/rollup-plugin-svelte-static-html#rea
 downloads: 7
 updated: "2019-10-17T00:50:21.942Z"
 outdated: true
+github_stars: 19
 tags: 
   - tooling
 ---

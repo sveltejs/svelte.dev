@@ -7,6 +7,7 @@ homepage: "https://github.com/svelte-plugins/datepicker"
 downloads: 3794
 dependents: 2
 updated: "2025-01-19T19:50:33.977Z"
+github_stars: 79
 tags: 
   - ui
 ---

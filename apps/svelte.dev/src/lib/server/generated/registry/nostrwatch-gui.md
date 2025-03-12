@@ -6,6 +6,7 @@ author: "sandwiches"
 homepage: "https://github.com/careswitch/svelte-data-table#readme"
 downloads: 2
 updated: "2024-12-17T17:34:36.091Z"
+github_stars: 19
 tags: 
   - ui
   - content

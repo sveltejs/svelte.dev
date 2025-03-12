@@ -7,6 +7,7 @@ homepage: "https://github.com/sveltetools/svelte-statusable#readme"
 downloads: 16
 updated: "2022-07-28T07:42:07.521Z"
 outdated: true
+github_stars: 4
 tags: 
   - utility
 ---

@@ -6,6 +6,7 @@ author: "paddim8"
 homepage: "https://github.com/umaranis/svelte-lexical#readme"
 downloads: 2
 updated: "2024-08-10T10:46:59.757Z"
+github_stars: 399
 tags: 
   - component-library
   - content

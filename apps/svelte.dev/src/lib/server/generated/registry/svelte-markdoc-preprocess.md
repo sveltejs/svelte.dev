@@ -6,6 +6,7 @@ author: "torstendittmann"
 homepage: "https://svelte-markdoc-preprocess.pages.dev"
 downloads: 388
 updated: "2024-10-13T15:57:47.435Z"
+github_stars: 67
 tags: 
   - preprocessor
 ---

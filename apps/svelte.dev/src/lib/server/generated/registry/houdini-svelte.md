@@ -7,6 +7,7 @@ homepage: "https://github.com/HoudiniGraphql/houdini"
 downloads: 5573
 dependents: 2
 updated: "2025-03-06T01:13:46.323Z"
+github_stars: 936
 tags: 
   - integration
 ---

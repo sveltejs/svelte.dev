@@ -6,6 +6,7 @@ author: "leodog896"
 homepage: "https://leodog896.github.io/svelte-reparent"
 downloads: 1
 updated: "2023-09-07T23:39:43.789Z"
+github_stars: 16
 tags: 
   - dom
 ---

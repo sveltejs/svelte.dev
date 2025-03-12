@@ -7,6 +7,7 @@ homepage: "https://github.com/EazyReal/Sveth#readme"
 downloads: 16
 updated: "2022-02-16T16:26:10.255Z"
 outdated: true
+github_stars: 3
 tags: 
   - utility
 ---

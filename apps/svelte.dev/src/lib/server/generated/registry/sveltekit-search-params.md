@@ -6,6 +6,7 @@ author: "pablopang"
 homepage: "https://sveltekit-search-params.netlify.app"
 downloads: 8663
 updated: "2024-07-28T17:17:48.621Z"
+github_stars: 583
 tags: 
   - utility
   - router

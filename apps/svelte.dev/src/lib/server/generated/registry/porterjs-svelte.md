@@ -8,6 +8,7 @@ downloads: 2
 dependents: 2
 updated: "2020-10-05T12:55:50.184Z"
 outdated: true
+github_stars: 2
 tags: 
   - utility
 ---

@@ -7,6 +7,7 @@ homepage: "https://github.com/macfja/sveltekit-cas#readme"
 downloads: 2
 updated: "2023-01-10T22:17:29.844Z"
 outdated: true
+github_stars: 2
 tags: 
   - auth
   - server

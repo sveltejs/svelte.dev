@@ -7,6 +7,7 @@ homepage: "https://github.com/carbon-design-system/sveld"
 downloads: 3785
 dependents: 2
 updated: "2025-02-17T19:19:19.814Z"
+github_stars: 419
 tags: 
   - tooling
   - preprocessor

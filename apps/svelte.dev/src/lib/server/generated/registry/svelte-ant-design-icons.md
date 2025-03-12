@@ -6,6 +6,7 @@ author: "shinichiokada"
 homepage: "https://svelte-ant-design-icons.codewithshin.com/"
 downloads: 2484
 updated: "2024-10-25T14:17:51.787Z"
+github_stars: 6
 tags: 
   - ui
 ---

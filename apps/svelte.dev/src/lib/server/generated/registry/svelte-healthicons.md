@@ -6,6 +6,7 @@ author: "metonym"
 homepage: "https://github.com/metonym/svelte-healthicons"
 downloads: 21
 updated: "2023-05-31T18:34:21.752Z"
+github_stars: 3
 tags: 
   - ui
 ---

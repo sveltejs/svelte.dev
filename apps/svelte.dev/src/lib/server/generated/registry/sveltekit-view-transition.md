@@ -6,6 +6,7 @@ author: "pablopang"
 homepage: "https://github.com/paoloricciuti/sveltekit-view-transition#readme"
 downloads: 591
 updated: "2023-12-16T09:49:10.221Z"
+github_stars: 172
 tags: 
   - ui
 ---

@@ -6,6 +6,7 @@ author: "hedgehog125"
 homepage: "https://github.com/hedgehog125/SvelteKit-Adapter-Versioned-Worker#readme"
 downloads: 1
 updated: "2023-09-08T20:33:20.084Z"
+github_stars: 13
 tags: 
   - adapter
   - performance

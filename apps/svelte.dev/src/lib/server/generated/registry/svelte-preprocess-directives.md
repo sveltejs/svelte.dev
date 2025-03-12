@@ -6,6 +6,7 @@ author: "metonym"
 homepage: "https://github.com/metonym/svelte-preprocess-directives"
 downloads: 1
 updated: "2024-08-06T00:07:11.531Z"
+github_stars: 1
 tags: 
   - preprocessor
   - tooling

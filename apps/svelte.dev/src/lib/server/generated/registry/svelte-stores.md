@@ -5,6 +5,7 @@ repo_url: "https://github.com/devunt/svelte-stores"
 author: "devunt"
 homepage: "https://github.com/devunt/svelte-stores#readme"
 updated: "2023-04-17T17:02:03.568Z"
+github_stars: 44
 tags: 
   - utility
 ---

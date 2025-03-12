@@ -7,6 +7,7 @@ homepage: "https://github.com/ChrRubin/svelte-webext-stores"
 downloads: 2
 updated: "2022-10-14T13:06:33.667Z"
 outdated: true
+github_stars: 6
 tags: 
   - utility
 ---

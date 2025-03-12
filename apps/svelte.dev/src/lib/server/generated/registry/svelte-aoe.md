@@ -6,6 +6,7 @@ author: "lliamscholtz"
 homepage: "https://github.com/lliamscholtz/svelte-aoe#readme"
 downloads: 4
 updated: "2023-09-01T06:20:11.079Z"
+github_stars: 6
 tags: 
   - ui
   - performance

@@ -6,6 +6,7 @@ author: "fanjie"
 homepage: "https://github.com/sst/sst#readme"
 downloads: 1605
 updated: "2024-08-16T19:15:54.792Z"
+github_stars: 23145
 tags: 
   - adapter
 ---

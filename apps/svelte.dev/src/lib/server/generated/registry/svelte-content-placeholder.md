@@ -7,6 +7,7 @@ homepage: "https://github.com/EstebanBorai/svelte-content-placeholder#readme"
 downloads: 4
 updated: "2022-06-14T05:35:35.260Z"
 outdated: true
+github_stars: 1
 tags: 
   - ui
 ---

@@ -6,6 +6,7 @@ author: "nasso"
 homepage: "https://github.com/nasso/svelte-bound-store#readme"
 downloads: 18
 updated: "2024-03-17T04:07:26.759Z"
+github_stars: 8
 tags: 
   - utility
 ---

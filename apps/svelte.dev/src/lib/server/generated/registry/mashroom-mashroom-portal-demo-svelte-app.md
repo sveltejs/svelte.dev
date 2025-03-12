@@ -6,6 +6,7 @@ author: "jkofler"
 homepage: "https://www.mashroom-server.com"
 downloads: 1
 updated: "2024-07-08T08:48:46.968Z"
+github_stars: 55
 tags: 
   - integration
 ---

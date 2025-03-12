@@ -7,6 +7,7 @@ homepage: "https://github.com/GarethOates/svelte-dev-store#readme"
 downloads: 1
 updated: "2019-09-19T10:28:05.153Z"
 outdated: true
+github_stars: 22
 tags: 
   - utility
   - tooling

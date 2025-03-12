@@ -6,6 +6,7 @@ author: "antfu"
 homepage: "https://unocss.dev"
 downloads: 1163
 updated: "2025-02-27T03:16:45.890Z"
+github_stars: 17302
 tags: 
   - tooling
   - preprocessor

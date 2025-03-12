@@ -7,6 +7,7 @@ homepage: "https://github.com/yazonnile/svelidation#readme"
 downloads: 4
 updated: "2020-01-10T14:40:34.958Z"
 outdated: true
+github_stars: 52
 tags: 
   - utility
 ---

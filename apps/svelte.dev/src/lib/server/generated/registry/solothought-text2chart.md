@@ -6,6 +6,7 @@ author: "amitgupta"
 homepage: "https://github.com/solothought/text2chart#readme"
 downloads: 1
 updated: "2024-11-10T11:04:16.907Z"
+github_stars: 4
 tags: 
   - ui
   - utility

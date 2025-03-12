@@ -7,6 +7,7 @@ homepage: "https://www.theui.dev/r/skc"
 downloads: 11
 dependents: 1
 updated: "2024-05-23T20:10:39.463Z"
+github_stars: 4
 tags: 
   - component-library
   - ui

@@ -6,6 +6,7 @@ author: "edrichhans"
 homepage: "https://github.com/edrichhans/svelte-ios-pwa-prompt#readme"
 downloads: 48
 updated: "2023-10-15T05:54:50.309Z"
+github_stars: 4
 tags: 
   - ui
 ---

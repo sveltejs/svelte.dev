@@ -7,6 +7,7 @@ homepage: "https://github.com/pchynoweth/svelte-sequential-preprocessor#readme"
 downloads: 17107
 dependents: 8
 updated: "2024-09-29T17:46:07.132Z"
+github_stars: 9
 tags: 
   - preprocessor
   - tooling

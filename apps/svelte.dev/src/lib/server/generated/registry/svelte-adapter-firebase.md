@@ -7,6 +7,7 @@ homepage: "https://github.com/jthegedus/svelte-adapter-firebase#readme"
 downloads: 209
 updated: "2023-01-17T02:32:22.230Z"
 outdated: true
+github_stars: 288
 tags: 
   - adapter
   - server

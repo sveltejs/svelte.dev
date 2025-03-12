@@ -7,6 +7,7 @@ homepage: "https://www.highcharts.com/integrations/svelte/"
 downloads: 1302
 dependents: 1
 updated: "2024-10-25T09:07:23.737Z"
+github_stars: 11
 tags: 
   - ui
 ---

@@ -7,6 +7,7 @@ homepage: "https://github.com/AlbertAZ1992/svelte-g6#readme"
 downloads: 3
 updated: "2021-07-23T13:39:45.007Z"
 outdated: true
+github_stars: 6
 tags: 
   - ui
 ---

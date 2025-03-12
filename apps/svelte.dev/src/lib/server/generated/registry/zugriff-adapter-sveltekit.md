@@ -6,6 +6,7 @@ author: "lucagoslar"
 homepage: "https://github.com/zugriffcloud/os#readme"
 downloads: 16
 updated: "2025-02-02T23:36:15.907Z"
+github_stars: 5
 tags: 
   - adapter
 ---

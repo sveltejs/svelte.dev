@@ -7,6 +7,7 @@ homepage: "https://github.com/gornostay25/svelte-adapter-bun#readme"
 downloads: 5172
 dependents: 1
 updated: "2024-02-20T12:20:33.288Z"
+github_stars: 557
 tags: 
   - adapter
 ---

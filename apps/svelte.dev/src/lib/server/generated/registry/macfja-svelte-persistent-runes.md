@@ -6,6 +6,7 @@ author: "macfja"
 homepage: "https://github.com/MacFJA/svelte-persistent-runes"
 downloads: 10
 updated: "2024-12-09T22:07:33.275Z"
+github_stars: 7
 tags: 
   - utility
 ---

@@ -8,6 +8,7 @@ downloads: 11
 dependents: 1
 updated: "2023-01-25T15:41:18.398Z"
 outdated: true
+github_stars: 4
 tags: 
   - component-library
   - ui

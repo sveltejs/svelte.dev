@@ -7,6 +7,7 @@ homepage: "https://github.com/testing-library/svelte-testing-library#readme"
 downloads: 158463
 dependents: 11
 updated: "2025-02-11T18:02:00.554Z"
+github_stars: 628
 tags: 
   - testing
 ---

@@ -7,6 +7,7 @@ homepage: "https://github.com/maptiler/maptiler-geocoding-control#readme"
 downloads: 2102
 dependents: 3
 updated: "2025-02-05T07:29:54.024Z"
+github_stars: 44
 tags: 
   - integration
 ---

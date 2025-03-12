@@ -5,6 +5,7 @@ repo_url: "https://github.com/isaacHagoel/svelte-dnd-action"
 author: "yofou"
 homepage: "https://github.com/isaacHagoel/svelte-dnd-action#readme"
 updated: "2023-09-11T09:28:15.912Z"
+github_stars: 1910
 tags: 
   - ui
   - dom

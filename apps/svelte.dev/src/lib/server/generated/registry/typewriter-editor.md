@@ -7,6 +7,7 @@ homepage: "https://github.com/typewriter-editor/typewriter#readme"
 downloads: 185
 dependents: 3
 updated: "2025-02-12T18:30:38.430Z"
+github_stars: 406
 tags: 
   - ui
   - content

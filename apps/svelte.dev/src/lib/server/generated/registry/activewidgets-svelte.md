@@ -6,6 +6,7 @@ author: "xkam"
 homepage: "https://activewidgets.com/svelte/data-grid/"
 downloads: 12
 updated: "2023-04-30T18:45:55.134Z"
+github_stars: 13
 tags: 
   - component-library
   - ui

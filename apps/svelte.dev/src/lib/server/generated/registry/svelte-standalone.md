@@ -6,6 +6,7 @@ author: "brenoliradev"
 homepage: "https://svelte-standalone.vercel.app/"
 downloads: 122
 updated: "2025-02-15T02:50:03.533Z"
+github_stars: 59
 tags: 
   - tooling
 ---

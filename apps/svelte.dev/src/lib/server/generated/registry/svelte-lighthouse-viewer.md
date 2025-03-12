@@ -6,6 +6,7 @@ author: "dvelasquez"
 homepage: "https://dvelasquez.github.io/lighthouse-viewer/packages/svelte-lighthouse-viewer/demo/index.html"
 downloads: 255
 updated: "2025-03-09T10:44:43.863Z"
+github_stars: 38
 tags: 
   - tooling
   - performance

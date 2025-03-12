@@ -6,6 +6,7 @@ author: "indaco"
 homepage: "https://github.com/indaco/svelte-iconoir#readme"
 downloads: 150
 updated: "2025-01-13T12:00:43.633Z"
+github_stars: 14
 tags: 
   - ui
   - svelte

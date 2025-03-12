@@ -6,6 +6,7 @@ author: "mathu97"
 homepage: "https://sdk.vercel.ai/docs"
 downloads: 1
 updated: "2023-12-27T19:50:18.612Z"
+github_stars: 12555
 tags: 
   - integration
 ---

@@ -6,6 +6,7 @@ author: "grumpybear57"
 homepage: "https://github.com/ChrRubin/svelte-webext-stores"
 downloads: 14
 updated: "2023-04-05T03:50:51.613Z"
+github_stars: 6
 tags: 
   - utility
 ---

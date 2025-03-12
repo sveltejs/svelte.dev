@@ -7,6 +7,7 @@ homepage: "https://github.com/AlexxNB/aovi-svelte#readme"
 downloads: 6
 updated: "2021-11-06T20:29:42.356Z"
 outdated: true
+github_stars: 12
 tags: 
   - utility
 ---

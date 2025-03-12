@@ -6,6 +6,7 @@ author: "softwarecurator"
 homepage: "https://github.com/softwarecurator/svelte-wagmi#readme"
 downloads: 209
 updated: "2024-06-13T18:37:45.508Z"
+github_stars: 74
 tags: 
   - integration
   - auth

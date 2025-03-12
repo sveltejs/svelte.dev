@@ -6,6 +6,7 @@ author: "zimbronapps"
 homepage: "https://gzimbron.github.io/svelte-datagrid/"
 downloads: 2
 updated: "2024-03-05T23:45:18.302Z"
+github_stars: 9
 tags: 
   - component-library
   - ui

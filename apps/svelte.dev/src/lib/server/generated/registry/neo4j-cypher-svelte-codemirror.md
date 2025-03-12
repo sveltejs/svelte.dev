@@ -6,6 +6,7 @@ author: "neo4j-organization"
 homepage: "https://github.com/neo4j/cypher-editor#readme"
 downloads: 2
 updated: "2024-04-02T12:27:23.937Z"
+github_stars: 46
 tags: 
   - ui
   - integration

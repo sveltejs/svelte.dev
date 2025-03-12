@@ -7,6 +7,7 @@ homepage: "https://github.com/wetix/responsive-ui/blob/main/components/tooltip#R
 downloads: 1
 dependents: 1
 updated: "2024-04-23T07:51:23.902Z"
+github_stars: 19
 tags: 
   - ui
 ---

@@ -5,6 +5,7 @@ repo_url: "https://github.com/rlaffers/xstate-ninja"
 author: "rlaffers"
 homepage: "https://github.com/rlaffers/xstate-ninja#readme"
 updated: "2023-10-01T08:24:15.464Z"
+github_stars: 70
 tags: 
   - ui
 ---

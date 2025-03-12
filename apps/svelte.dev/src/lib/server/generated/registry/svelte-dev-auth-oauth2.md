@@ -7,6 +7,7 @@ homepage: "https://svelte.js.cool"
 downloads: 1
 dependents: 5
 updated: "2023-12-12T16:58:24.778Z"
+github_stars: 5
 tags: 
   - auth
   - server

@@ -6,6 +6,7 @@ author: "akiomik"
 homepage: "https://github.com/akiomik/nosvelte#readme"
 downloads: 1
 updated: "2023-06-15T09:10:04.725Z"
+github_stars: 28
 tags: 
   - integration
 ---

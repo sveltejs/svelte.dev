@@ -7,6 +7,7 @@ homepage: "https://github.com/wetix/responsive-ui/blob/main/components/bottom-ba
 downloads: 17
 dependents: 1
 updated: "2024-04-23T07:50:59.689Z"
+github_stars: 19
 tags: 
   - ui
 ---

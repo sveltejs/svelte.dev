@@ -7,6 +7,7 @@ homepage: "https://github.com/oekazuma/svelte-meta-tags#readme"
 downloads: 14321
 dependents: 11
 updated: "2025-03-03T03:52:13.897Z"
+github_stars: 569
 tags: 
   - seo
 ---

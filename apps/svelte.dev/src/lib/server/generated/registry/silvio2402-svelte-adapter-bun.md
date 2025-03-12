@@ -5,6 +5,7 @@ repo_url: "https://github.com/catdadcode/svelte-adapter-bun"
 author: "silvio2402"
 homepage: "https://github.com/catdadcode/svelte-adapter-bun#readme"
 updated: "2023-11-25T00:41:36.418Z"
+github_stars: 17
 tags: 
   - adapter
   - server

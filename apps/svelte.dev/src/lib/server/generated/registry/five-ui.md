@@ -6,6 +6,7 @@ author: "wqy2dev"
 homepage: "https://github.com/wqy2dev/five-ui#readme"
 downloads: 591
 updated: "2025-03-08T06:00:09.526Z"
+github_stars: 2
 tags: 
   - component-library
   - ui

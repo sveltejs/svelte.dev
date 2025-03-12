@@ -7,6 +7,7 @@ homepage: "https://github.com/bluwy/svelte-router"
 downloads: 4
 updated: "2021-09-09T17:01:16.692Z"
 outdated: true
+github_stars: 34
 tags: 
   - router
 ---

@@ -7,6 +7,7 @@ homepage: "https://github.com/sveltevk/qr"
 downloads: 56
 updated: "2022-02-16T17:56:21.151Z"
 outdated: true
+github_stars: 2
 tags: 
   - ui
 ---

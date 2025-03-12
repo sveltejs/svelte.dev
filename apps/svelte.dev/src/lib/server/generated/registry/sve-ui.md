@@ -6,6 +6,7 @@ author: "rodriabregu"
 homepage: "https://sveui.org/"
 downloads: 2
 updated: "2023-04-17T08:52:53.546Z"
+github_stars: 3
 tags: 
   - component-library
   - ui

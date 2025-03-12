@@ -6,6 +6,7 @@ author: "dennisoluoch"
 homepage: "https://github.com/DennisOluoch/novel-svelte#readme"
 downloads: 1
 updated: "2024-10-06T19:09:46.082Z"
+github_stars: 1
 tags: 
   - content
   - ui

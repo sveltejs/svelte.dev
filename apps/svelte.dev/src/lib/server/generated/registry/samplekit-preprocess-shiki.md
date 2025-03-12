@@ -6,6 +6,7 @@ author: "timothycohen"
 homepage: "https://preprocessors.samplekit.dev"
 downloads: 8
 updated: "2024-11-07T03:47:46.815Z"
+github_stars: 20
 tags: 
   - preprocessor
   - tooling

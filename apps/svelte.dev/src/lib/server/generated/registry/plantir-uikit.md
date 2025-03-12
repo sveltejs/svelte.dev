@@ -6,6 +6,7 @@ author: "arminkheirkhahan"
 homepage: "https://github.com/plantir/uikit#readme"
 downloads: 3
 updated: "2024-06-18T12:59:18.355Z"
+github_stars: 1
 tags: 
   - component-library
   - ui

@@ -7,6 +7,7 @@ homepage: "https://svelteui.dev/"
 downloads: 44
 dependents: 1
 updated: "2024-07-07T14:30:26.471Z"
+github_stars: 1354
 tags: 
   - ui
 ---

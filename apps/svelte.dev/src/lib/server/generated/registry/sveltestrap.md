@@ -7,6 +7,7 @@ homepage: "https://github.com/bestguy/sveltestrap#readme"
 downloads: 9121
 dependents: 13
 updated: "2023-12-23T03:15:42.477Z"
+github_stars: 1314
 tags: 
   - ui
   - component-library

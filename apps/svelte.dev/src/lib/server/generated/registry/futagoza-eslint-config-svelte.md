@@ -7,6 +7,7 @@ downloads: 2
 dependents: 1
 updated: "2021-05-23T02:39:48.174Z"
 outdated: true
+github_stars: 2
 tags: 
   - tooling
 ---

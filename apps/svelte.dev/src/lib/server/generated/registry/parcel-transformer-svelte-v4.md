@@ -5,6 +5,7 @@ repo_url: "https://github.com/orlov-vo/parcel-transformer-svelte"
 author: "fregante"
 homepage: "https://github.com/orlov-vo/parcel-transformer-svelte#readme"
 updated: "2024-06-11T05:47:27.666Z"
+github_stars: 39
 tags: 
   - tooling
   - preprocessor

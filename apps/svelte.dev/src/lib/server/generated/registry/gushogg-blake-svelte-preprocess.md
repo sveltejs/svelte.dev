@@ -7,6 +7,7 @@ homepage: "https://github.com/sveltejs/svelte-preprocess#readme"
 downloads: 1
 updated: "2022-08-13T15:04:37.837Z"
 outdated: true
+github_stars: 1772
 tags: 
   - preprocessor
   - tooling

@@ -6,6 +6,7 @@ author: "sbogalaloginsoft"
 homepage: "https://github.com/imgeng/imageengine-svelte#readme"
 downloads: 1
 updated: "2024-06-12T13:42:55.446Z"
+github_stars: 1
 tags: 
   - media
   - integration

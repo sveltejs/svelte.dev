@@ -6,6 +6,7 @@ author: "feuersteiner"
 homepage: "https://github.com/feuersteiner/sv-marketing#readme"
 downloads: 14
 updated: "2025-02-11T21:47:10.563Z"
+github_stars: 18
 tags: 
   - content
   - ui

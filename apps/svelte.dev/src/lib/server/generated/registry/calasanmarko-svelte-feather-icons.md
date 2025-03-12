@@ -6,6 +6,7 @@ author: "calasanmarko"
 homepage: "https://github.com/dylanblokhuis/svelte-feather-icons#readme"
 downloads: 1
 updated: "2024-04-07T14:22:31.584Z"
+github_stars: 138
 tags: 
   - ui
 ---

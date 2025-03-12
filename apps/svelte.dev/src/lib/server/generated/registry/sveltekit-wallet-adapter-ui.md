@@ -6,6 +6,7 @@ author: "svenanders"
 homepage: "https://github.com/portalpayments/svelte-on-solana-wallet-adapter#readme"
 downloads: 1
 updated: "2023-10-29T23:33:08.828Z"
+github_stars: 3
 tags: 
   - ui
   - integration

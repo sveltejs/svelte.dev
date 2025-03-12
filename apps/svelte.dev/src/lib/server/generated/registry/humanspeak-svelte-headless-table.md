@@ -6,6 +6,7 @@ author: "humanspeakadmin"
 homepage: "https://table.svelte.page"
 downloads: 395
 updated: "2025-03-08T00:59:29.658Z"
+github_stars: 1
 tags: 
   - component-library
   - svelte

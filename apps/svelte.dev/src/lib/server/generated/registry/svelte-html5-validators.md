@@ -7,6 +7,7 @@ homepage: "https://github.com/omirobarcelo/svelte-html5-validators#readme"
 downloads: 1
 updated: "2019-12-10T15:22:24.026Z"
 outdated: true
+github_stars: 3
 tags: 
   - utility
 ---

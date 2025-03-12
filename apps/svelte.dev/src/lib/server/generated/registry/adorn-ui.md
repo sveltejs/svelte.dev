@@ -6,6 +6,7 @@ author: "renzp"
 homepage: "https://github.com/renzp94/adorn#readme"
 downloads: 9
 updated: "2024-06-28T07:11:44.817Z"
+github_stars: 3
 tags: 
   - component-library
   - ui

@@ -6,6 +6,7 @@ author: "josuerhea"
 homepage: "https://headless-audioplayer.vercel.app"
 downloads: 2
 updated: "2023-04-30T03:07:29.487Z"
+github_stars: 6
 tags: 
   - media
   - ui

@@ -6,6 +6,7 @@ author: "lamparter"
 homepage: "https://github.com/RiversideValley/Fluid.Framework"
 downloads: 9
 updated: "2024-02-17T15:22:43.025Z"
+github_stars: 2
 tags: 
   - component-library
   - ui

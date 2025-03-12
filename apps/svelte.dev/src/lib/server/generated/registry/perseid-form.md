@@ -7,6 +7,7 @@ homepage: "https://github.com/openizr/perseid"
 downloads: 1
 dependents: 1
 updated: "2024-10-01T13:05:38.878Z"
+github_stars: 12
 tags: 
   - component-library
   - ui

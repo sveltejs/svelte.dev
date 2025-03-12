@@ -6,6 +6,7 @@ author: "shinnn"
 homepage: "https://github.com/shinnn/metalsmith-buble#readme"
 updated: "2017-11-08T00:51:07.830Z"
 outdated: true
+github_stars: 1
 tags: 
   - tooling
   - preprocessor

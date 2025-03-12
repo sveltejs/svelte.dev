@@ -6,6 +6,7 @@ author: "vnphanquang"
 homepage: "https://github.com/vnphanquang/svelte-put/tree/main/packages/preprocess-external-link"
 downloads: 1
 updated: "2024-06-22T10:16:33.614Z"
+github_stars: 897
 tags: 
   - preprocessor
   - content

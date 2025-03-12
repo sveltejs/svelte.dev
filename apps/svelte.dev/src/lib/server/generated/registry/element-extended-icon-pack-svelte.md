@@ -6,6 +6,7 @@ author: "iugsm"
 homepage: "https://icons.xiangsu.fun"
 downloads: 1
 updated: "2024-12-04T12:12:41.503Z"
+github_stars: 5
 tags: 
   - ui
 ---

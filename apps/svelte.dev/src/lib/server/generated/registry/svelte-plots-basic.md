@@ -6,6 +6,7 @@ author: "svkucheryavski"
 homepage: "https://github.com/svkucheryavski/svelte-plots-basic#readme"
 downloads: 66
 updated: "2025-02-14T19:41:17.954Z"
+github_stars: 1
 tags: 
   - ui
 ---

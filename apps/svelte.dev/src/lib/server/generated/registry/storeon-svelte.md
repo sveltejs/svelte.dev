@@ -7,6 +7,7 @@ homepage: "https://github.com/storeon/svelte#readme"
 downloads: 2
 updated: "2020-06-21T12:40:32.821Z"
 outdated: true
+github_stars: 56
 tags: 
   - utility
 ---

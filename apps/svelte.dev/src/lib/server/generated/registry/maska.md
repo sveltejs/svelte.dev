@@ -7,6 +7,7 @@ homepage: "https://beholdr.github.io/maska/"
 downloads: 175763
 dependents: 181
 updated: "2025-02-01T16:07:50.414Z"
+github_stars: 1854
 tags: 
   - ui
   - utility

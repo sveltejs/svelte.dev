@@ -7,6 +7,7 @@ homepage: "https://github.com/bryanmylee/svelte-keyed#readme"
 downloads: 15901
 dependents: 5
 updated: "2024-01-02T20:45:43.914Z"
+github_stars: 71
 tags: 
   - utility
 ---

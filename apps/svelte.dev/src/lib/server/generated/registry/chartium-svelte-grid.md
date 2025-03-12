@@ -6,6 +6,7 @@ author: "richard.ivanek"
 homepage: "https://github.com/vaheqelyan/svelte-grid#readme"
 downloads: 1
 updated: "2024-07-01T10:06:11.484Z"
+github_stars: 985
 tags: 
   - ui
   - dom

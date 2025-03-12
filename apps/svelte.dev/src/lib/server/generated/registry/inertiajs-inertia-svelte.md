@@ -8,6 +8,7 @@ downloads: 166
 dependents: 1
 updated: "2022-01-07T17:21:54.836Z"
 outdated: true
+github_stars: 6957
 tags: 
   - integration
 ---

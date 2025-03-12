@@ -8,6 +8,7 @@ downloads: 4045
 dependents: 2
 updated: "2020-07-13T10:06:45.377Z"
 outdated: true
+github_stars: 4
 tags: 
   - utility
   - testing

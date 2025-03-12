@@ -6,6 +6,7 @@ author: "vishalbalaji"
 homepage: "https://github.com/vishalbalaji/trpc-svelte-query-adapter#readme"
 downloads: 1305
 updated: "2024-11-16T16:48:43.933Z"
+github_stars: 77
 tags: 
   - integration
 ---

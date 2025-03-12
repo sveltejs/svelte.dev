@@ -6,6 +6,7 @@ author: "bitdivine"
 homepage: "https://github.com/dfinity/gix-components#readme"
 downloads: 2247
 updated: "2025-02-20T11:50:54.755Z"
+github_stars: 38
 tags: 
   - component-library
   - ui

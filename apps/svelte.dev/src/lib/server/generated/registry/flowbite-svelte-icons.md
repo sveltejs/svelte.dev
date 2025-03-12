@@ -7,6 +7,7 @@ homepage: "https://flowbite-svelte-icons.codewithshin.com/"
 downloads: 27840
 dependents: 16
 updated: "2024-10-25T13:53:04.245Z"
+github_stars: 73
 tags: 
   - ui
 ---

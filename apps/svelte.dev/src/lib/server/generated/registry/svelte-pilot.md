@@ -7,6 +7,7 @@ homepage: "https://svelte-pilot.github.io/"
 downloads: 34
 dependents: 1
 updated: "2024-11-22T07:32:29.575Z"
+github_stars: 39
 tags: 
   - router
 ---

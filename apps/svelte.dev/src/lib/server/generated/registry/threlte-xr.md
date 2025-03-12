@@ -6,6 +6,7 @@ author: "grischaerbe"
 homepage: "https://threlte.xyz"
 downloads: 175
 updated: "2025-02-20T09:25:15.311Z"
+github_stars: 2775
 tags: 
   - ui
   - media

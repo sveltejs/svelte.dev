@@ -7,6 +7,7 @@ homepage: "https://github.com/metonym/caligula"
 downloads: 1
 updated: "2020-04-04T15:37:04.792Z"
 outdated: true
+github_stars: 3
 tags: 
   - performance
   - tooling

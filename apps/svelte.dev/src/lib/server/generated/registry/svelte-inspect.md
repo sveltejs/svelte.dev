@@ -7,6 +7,7 @@ homepage: "https://github.com/trbrc/svelte-inspect"
 downloads: 5
 updated: "2022-01-20T17:11:35.757Z"
 outdated: true
+github_stars: 35
 tags: 
   - tooling
 ---

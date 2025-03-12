@@ -6,6 +6,7 @@ author: "willin"
 homepage: "https://svelte.js.cool"
 downloads: 1
 updated: "2023-12-31T05:27:38.945Z"
+github_stars: 5
 tags: 
   - utility
   - server

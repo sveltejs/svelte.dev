@@ -8,6 +8,7 @@ downloads: 580
 dependents: 5
 updated: "2022-03-05T08:21:50.292Z"
 outdated: true
+github_stars: 324
 tags: 
   - utility
 ---

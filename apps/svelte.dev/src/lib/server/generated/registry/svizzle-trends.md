@@ -6,6 +6,7 @@ author: "nestauk-dev"
 homepage: "https://github.com/nestauk/svizzle"
 downloads: 1
 updated: "2023-11-23T20:36:05.333Z"
+github_stars: 19
 tags: 
   - ui
   - component-library

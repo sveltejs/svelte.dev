@@ -6,6 +6,7 @@ author: "nycolaide"
 homepage: "https://minedelve.com/mytril/docs"
 downloads: 356
 updated: "2025-03-01T22:44:17.126Z"
+github_stars: 1
 tags: 
   - component-library
   - ui

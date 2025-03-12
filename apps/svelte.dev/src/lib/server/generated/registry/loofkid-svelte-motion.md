@@ -7,6 +7,7 @@ homepage: "https://github.com/micha-lmxt/svelte-motion#readme"
 downloads: 1
 updated: "2023-01-23T17:01:32.692Z"
 outdated: true
+github_stars: 617
 tags: 
   - ui
   - utility

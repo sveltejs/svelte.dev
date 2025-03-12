@@ -6,6 +6,7 @@ author: "uraniadev"
 homepage: "https://github.com/urania-dev/emailer#readme"
 downloads: 70
 updated: "2024-10-28T14:40:41.975Z"
+github_stars: 8
 tags: 
   - server
   - utility

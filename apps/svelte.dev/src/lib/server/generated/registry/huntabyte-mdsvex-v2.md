@@ -6,6 +6,7 @@ author: "huntabyte"
 homepage: "https://github.com/pngwn/MDsveX#readme"
 downloads: 2
 updated: "2023-07-03T23:39:22.734Z"
+github_stars: 2597
 tags: 
   - preprocessor
   - content

@@ -6,6 +6,7 @@ author: "philentropy"
 homepage: "https://sdk.vercel.ai/docs"
 downloads: 1
 updated: "2023-09-07T11:28:50.212Z"
+github_stars: 12555
 tags: 
   - integration
 ---

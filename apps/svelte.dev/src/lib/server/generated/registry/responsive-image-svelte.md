@@ -6,6 +6,7 @@ author: "simonihmig"
 homepage: "https://github.com/simonihmig/responsive-image#readme"
 downloads: 3
 updated: "2025-02-13T17:31:53.489Z"
+github_stars: 148
 tags: 
   - media
   - performance

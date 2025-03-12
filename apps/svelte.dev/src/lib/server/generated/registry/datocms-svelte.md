@@ -6,6 +6,7 @@ author: "sistrall_"
 homepage: "https://github.com/datocms/datocms-svelte"
 downloads: 384
 updated: "2025-02-28T11:41:46.934Z"
+github_stars: 12
 tags: 
   - integration
 ---

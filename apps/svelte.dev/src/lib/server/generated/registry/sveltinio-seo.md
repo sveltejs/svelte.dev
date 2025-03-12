@@ -6,6 +6,7 @@ author: "sveltinio"
 homepage: "https://components.sveltin.io"
 downloads: 4
 updated: "2023-10-01T09:55:06.864Z"
+github_stars: 12
 tags: 
   - seo
 ---

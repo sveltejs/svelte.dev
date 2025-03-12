@@ -7,6 +7,7 @@ homepage: "https://ui.wearegenki.com/"
 downloads: 2
 updated: "2018-10-21T03:34:59.228Z"
 outdated: true
+github_stars: 87
 tags: 
   - preprocessor
 ---

@@ -7,6 +7,7 @@ homepage: "https://github.com/JohnPeel/svelte-backed-store#readme"
 downloads: 2
 updated: "2019-12-01T10:34:39.778Z"
 outdated: true
+github_stars: 4
 tags: 
   - utility
 ---

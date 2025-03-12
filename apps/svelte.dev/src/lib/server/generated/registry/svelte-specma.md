@@ -7,6 +7,7 @@ homepage: "https://github.com/davidsavoie1/svelte-specma.git"
 downloads: 1
 updated: "2023-02-20T21:39:35.381Z"
 outdated: true
+github_stars: 1
 tags: 
   - utility
 ---

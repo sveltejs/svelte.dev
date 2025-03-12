@@ -6,6 +6,7 @@ author: "daimyo"
 homepage: "https://github.com/svonic/svonic#readme"
 downloads: 1
 updated: "2023-11-06T09:32:56.657Z"
+github_stars: 14
 tags: 
   - ui
   - component-library

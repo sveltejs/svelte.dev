@@ -7,6 +7,7 @@ homepage: "https://github.com/brunomolteni/svelte-sortable-list#readme"
 downloads: 437
 updated: "2019-07-05T19:48:52.084Z"
 outdated: true
+github_stars: 124
 tags: 
   - component-library
   - ui

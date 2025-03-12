@@ -6,6 +6,7 @@ author: "brianmitchl"
 homepage: "https://projects.brianm.me/svelte-compare-image/"
 downloads: 35
 updated: "2024-04-18T05:36:53.378Z"
+github_stars: 5
 tags: 
   - media
   - ui

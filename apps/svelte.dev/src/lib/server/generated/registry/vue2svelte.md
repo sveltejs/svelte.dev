@@ -6,6 +6,7 @@ author: "trickstival"
 homepage: "https://github.com/trickstival/vue2svelte#readme"
 updated: "2019-08-02T20:31:52.112Z"
 outdated: true
+github_stars: 13
 tags: 
   - tooling
   - preprocessor

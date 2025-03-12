@@ -6,6 +6,7 @@ author: "shinichiokada"
 homepage: "https://github.com/shinokada/svelte-lib-helpers#readme"
 downloads: 324
 updated: "2024-10-08T05:41:33.641Z"
+github_stars: 11
 tags: 
   - tooling
 ---

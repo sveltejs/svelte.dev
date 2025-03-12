@@ -7,6 +7,7 @@ homepage: "https://github.com/jill64/svelte-i18n#readme"
 downloads: 4624
 dependents: 1
 updated: "2025-01-21T13:48:38.626Z"
+github_stars: 2
 tags: 
   - utility
 ---

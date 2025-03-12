@@ -6,6 +6,7 @@ author: "wheezard"
 homepage: "https://github.com/wheezard/svbuild#readme"
 updated: "2023-01-25T13:03:13.546Z"
 outdated: true
+github_stars: 2
 tags: 
   - tooling
 ---

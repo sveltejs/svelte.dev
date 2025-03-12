@@ -7,6 +7,7 @@ homepage: "https://github.com/v1ack/svelte-virtual-scroll-list#readme"
 downloads: 1096
 dependents: 2
 updated: "2023-07-16T18:48:44.768Z"
+github_stars: 117
 tags: 
   - ui
 ---

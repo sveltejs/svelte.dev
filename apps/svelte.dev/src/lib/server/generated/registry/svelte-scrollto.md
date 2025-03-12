@@ -8,6 +8,7 @@ downloads: 1018
 dependents: 1
 updated: "2020-06-26T04:38:46.368Z"
 outdated: true
+github_stars: 67
 tags: 
   - utility
   - dom

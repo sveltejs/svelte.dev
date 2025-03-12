@@ -6,6 +6,7 @@ author: "nestauk-dev"
 homepage: "https://github.com/nestauk/svizzle"
 downloads: 1
 updated: "2023-11-24T08:12:32.768Z"
+github_stars: 19
 tags: 
   - component
   - content

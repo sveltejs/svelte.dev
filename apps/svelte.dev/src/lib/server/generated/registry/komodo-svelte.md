@@ -6,6 +6,7 @@ author: "markevans"
 homepage: "https://github.com/hungry-egg/komodo/tree/main/packages/komodo-svelte#readme"
 downloads: 4
 updated: "2024-06-07T11:33:16.337Z"
+github_stars: 62
 tags: 
   - integration
 ---

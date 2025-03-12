@@ -7,6 +7,7 @@ homepage: "https://github.com/thecodejack/svelte-file-dropzone#readme"
 downloads: 11103
 dependents: 20
 updated: "2024-10-19T20:44:48.960Z"
+github_stars: 269
 tags: 
   - ui
 ---

@@ -6,6 +6,7 @@ author: "accuser"
 homepage: "https://github.com/accuser/svelte-markdown-gfm"
 downloads: 1
 updated: "2024-09-30T08:49:03.326Z"
+github_stars: 1
 tags: 
   - content
 ---

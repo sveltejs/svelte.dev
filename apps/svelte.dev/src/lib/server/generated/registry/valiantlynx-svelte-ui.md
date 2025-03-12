@@ -7,6 +7,7 @@ homepage: "https://github.com/valiantlynx/svelte-ui#readme"
 downloads: 6
 dependents: 1
 updated: "2023-12-29T22:37:39.441Z"
+github_stars: 3
 tags: 
   - component-library
   - ui

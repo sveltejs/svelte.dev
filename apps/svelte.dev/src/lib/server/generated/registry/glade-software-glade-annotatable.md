@@ -6,6 +6,7 @@ author: "mattjohnston"
 homepage: "https://github.com/glade-software/glade-element#readme"
 downloads: 12
 updated: "2024-01-06T13:13:39.869Z"
+github_stars: 1
 tags: 
   - ui
   - utility

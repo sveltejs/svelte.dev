@@ -6,6 +6,7 @@ author: "tikramer"
 homepage: "https://github.com/TIKramer/svelte-section-list"
 downloads: 10
 updated: "2023-06-06T08:31:14.884Z"
+github_stars: 17
 tags: 
   - ui
 ---

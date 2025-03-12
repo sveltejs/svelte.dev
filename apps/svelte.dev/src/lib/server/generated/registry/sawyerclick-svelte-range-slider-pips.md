@@ -6,6 +6,7 @@ author: "sawyerclick"
 homepage: "https://simeydotme.github.io/svelte-range-slider-pips/"
 downloads: 4
 updated: "2023-06-06T20:35:59.428Z"
+github_stars: 484
 tags: 
   - ui
   - component-library

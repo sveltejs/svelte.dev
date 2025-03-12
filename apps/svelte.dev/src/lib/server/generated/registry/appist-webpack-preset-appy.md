@@ -7,6 +7,7 @@ homepage: "https://github.com/appist/webpack-preset-appy#readme"
 downloads: 2
 updated: "2020-07-13T11:56:45.920Z"
 outdated: true
+github_stars: 1
 tags: 
   - tooling
 ---

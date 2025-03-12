@@ -7,6 +7,7 @@ homepage: "https://github.com/arlac77/svelte-command#readme"
 downloads: 607
 dependents: 5
 updated: "2025-03-05T12:23:32.986Z"
+github_stars: 2
 tags: 
   - utility
 ---

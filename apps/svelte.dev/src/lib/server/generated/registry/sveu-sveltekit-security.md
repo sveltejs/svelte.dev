@@ -6,6 +6,7 @@ author: "mohamed-kaizen"
 homepage: "https://github.com/svelte-u/sveltekit-security#readme"
 downloads: 2
 updated: "2023-11-17T05:34:26.608Z"
+github_stars: 2
 tags: 
   - utility
 ---

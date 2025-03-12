@@ -6,6 +6,7 @@ author: "themecloset"
 homepage: "https://github.com/thingsneverchange/svelte-scrollable-arrow#readme"
 downloads: 3
 updated: "2024-04-02T09:05:27.947Z"
+github_stars: 10
 tags: 
   - ui
 ---

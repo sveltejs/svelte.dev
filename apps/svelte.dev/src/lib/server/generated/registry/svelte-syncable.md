@@ -7,6 +7,7 @@ homepage: "https://github.com/chainlist/svelte-syncable#readme"
 downloads: 11
 updated: "2019-06-26T19:01:00.960Z"
 outdated: true
+github_stars: 26
 tags: 
   - utility
 ---

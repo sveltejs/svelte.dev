@@ -6,6 +6,7 @@ author: "bluwy"
 homepage: "https://whyframe.dev"
 downloads: 1088
 updated: "2024-04-01T06:25:26.408Z"
+github_stars: 561
 tags: 
   - tooling
 ---

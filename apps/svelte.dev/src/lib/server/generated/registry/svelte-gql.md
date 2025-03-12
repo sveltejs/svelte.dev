@@ -6,6 +6,7 @@ author: "drejohnson"
 homepage: "https://github.com/drejohnson/svql#readme"
 updated: "2019-06-24T21:15:44.470Z"
 outdated: true
+github_stars: 7
 tags: 
   - integration
 ---

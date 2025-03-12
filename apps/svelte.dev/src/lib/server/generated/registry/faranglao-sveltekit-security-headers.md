@@ -6,6 +6,7 @@ author: "faranglao"
 homepage: "https://sveltekit-security-headers.vercel.app/"
 downloads: 114
 updated: "2024-02-26T12:08:11.041Z"
+github_stars: 5
 tags: 
   - server
   - utility

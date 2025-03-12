@@ -6,6 +6,7 @@ author: "jsconan"
 homepage: "https://github.com/oat-sa/jest-transform-svelte#readme"
 downloads: 273
 updated: "2023-05-11T11:10:13.420Z"
+github_stars: 1
 tags: 
   - tooling
   - testing

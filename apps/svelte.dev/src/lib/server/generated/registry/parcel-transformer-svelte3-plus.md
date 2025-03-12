@@ -6,6 +6,7 @@ author: "hellbutcherx"
 homepage: "https://github.com/HellButcher/parcel-transformer-svelte3-plus#readme"
 downloads: 18
 updated: "2023-07-29T01:34:52.529Z"
+github_stars: 6
 tags: 
   - preprocessor
   - tooling

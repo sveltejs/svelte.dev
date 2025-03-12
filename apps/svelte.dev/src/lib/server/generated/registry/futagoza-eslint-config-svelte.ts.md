@@ -5,6 +5,7 @@ repo_url: "https://github.com/futagoza/eslint-config-futagozaryuu/tree/master/pa
 author: "ryuu"
 updated: "2021-05-23T02:39:44.220Z"
 outdated: true
+github_stars: 2
 tags: 
   - tooling
 ---

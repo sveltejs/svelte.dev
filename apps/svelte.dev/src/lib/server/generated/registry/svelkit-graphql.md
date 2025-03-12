@@ -8,6 +8,7 @@ downloads: 22
 dependents: 1
 updated: "2020-09-25T12:46:02.876Z"
 outdated: true
+github_stars: 7
 tags: 
   - integration
   - server

@@ -6,6 +6,7 @@ author: "dupasquier"
 homepage: "https://github.com/Ddupasquier/githubCommits#readme"
 downloads: 3
 updated: "2023-04-11T01:38:00.725Z"
+github_stars: 4
 tags: 
   - ui
   - integration

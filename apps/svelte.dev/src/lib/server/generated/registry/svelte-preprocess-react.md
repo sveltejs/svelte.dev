@@ -7,6 +7,7 @@ homepage: "https://github.com/bfanger/svelte-preprocess-react#readme"
 downloads: 8109
 dependents: 2
 updated: "2025-02-02T20:15:57.350Z"
+github_stars: 148
 tags: 
   - preprocessor
   - integration

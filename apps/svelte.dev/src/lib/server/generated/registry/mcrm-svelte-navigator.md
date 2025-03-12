@@ -6,6 +6,7 @@ author: "mbouclas"
 homepage: "https://github.com/mefechoel/svelte-navigator#readme"
 downloads: 3
 updated: "2023-10-09T12:06:07.641Z"
+github_stars: 513
 tags: 
   - router
 ---

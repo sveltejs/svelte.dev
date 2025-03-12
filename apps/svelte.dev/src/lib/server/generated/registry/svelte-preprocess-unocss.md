@@ -6,6 +6,7 @@ author: "jacobbowdoin"
 homepage: "https://polylingual.dev"
 downloads: 1
 updated: "2023-05-20T00:02:34.567Z"
+github_stars: 17
 tags: 
   - preprocessor
   - ui

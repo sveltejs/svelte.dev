@@ -6,6 +6,7 @@ author: "nvl"
 homepage: "https://sveltex.dev"
 downloads: 6
 updated: "2024-07-18T17:43:51.892Z"
+github_stars: 7
 tags: 
   - preprocessor
   - content

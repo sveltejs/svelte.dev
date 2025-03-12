@@ -7,6 +7,7 @@ homepage: "https://github.com/Gibbu/svooltip#readme"
 downloads: 746
 dependents: 3
 updated: "2025-02-06T00:13:53.723Z"
+github_stars: 63
 tags: 
   - ui
 ---

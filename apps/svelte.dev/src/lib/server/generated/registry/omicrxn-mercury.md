@@ -5,6 +5,7 @@ repo_url: "https://github.com/Omicrxn/mercury"
 author: "omicrxn-dev"
 homepage: "https://github.com/Omicrxn/mercury#readme"
 updated: "2024-11-21T12:02:19.716Z"
+github_stars: 5
 tags: 
   - ui
 ---

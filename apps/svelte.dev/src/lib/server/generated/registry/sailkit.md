@@ -6,6 +6,7 @@ author: "n00ki"
 homepage: "https://sailkit.xyz"
 downloads: 123
 updated: "2025-02-23T08:45:40.628Z"
+github_stars: 56
 tags: 
   - tooling
 ---

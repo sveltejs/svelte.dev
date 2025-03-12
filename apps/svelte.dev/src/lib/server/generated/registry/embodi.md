@@ -6,6 +6,7 @@ author: "cordlesswool"
 homepage: "https://github.com/embodijs/generator/tree/main#readme"
 downloads: 5
 updated: "2024-11-16T16:20:35.949Z"
+github_stars: 2
 tags: 
   - tooling
   - content

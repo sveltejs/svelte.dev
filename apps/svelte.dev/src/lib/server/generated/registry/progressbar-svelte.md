@@ -6,6 +6,7 @@ author: "dhimankamal"
 homepage: "https://github.com/dhimankamal/svelte-progressbar"
 downloads: 3
 updated: "2024-01-09T12:28:44.982Z"
+github_stars: 7
 tags: 
   - ui
 ---

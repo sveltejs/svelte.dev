@@ -6,6 +6,7 @@ author: "milesonerd"
 homepage: "https://closure-next.github.io"
 downloads: 6
 updated: "2025-02-16T00:54:26.725Z"
+github_stars: 2
 tags: 
   - integration
 ---

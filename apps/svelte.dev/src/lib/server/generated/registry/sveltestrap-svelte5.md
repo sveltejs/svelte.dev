@@ -6,6 +6,7 @@ author: "winstonewert"
 homepage: "https://sveltestrap.js.org"
 downloads: 34
 updated: "2024-11-20T18:59:29.972Z"
+github_stars: 169
 tags: 
   - component-library
   - ui

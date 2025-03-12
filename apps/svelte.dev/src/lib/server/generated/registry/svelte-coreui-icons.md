@@ -6,6 +6,7 @@ author: "shinichiokada"
 homepage: "https://svelte-coreui-icons.codewithshin.com"
 downloads: 932
 updated: "2024-03-01T16:41:51.800Z"
+github_stars: 1
 tags: 
   - ui
 ---

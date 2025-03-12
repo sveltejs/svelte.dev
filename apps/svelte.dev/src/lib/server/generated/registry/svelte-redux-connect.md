@@ -7,6 +7,7 @@ homepage: "https://github.com/kolodziejczak-sz/svelte-redux-connect#readme"
 downloads: 26
 updated: "2021-07-07T14:28:31.192Z"
 outdated: true
+github_stars: 17
 tags: 
   - integration
 ---

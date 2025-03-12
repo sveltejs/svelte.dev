@@ -6,6 +6,7 @@ author: "pyoner"
 homepage: "https://github.com/pyoner/svelte-search-engine#readme"
 downloads: 4
 updated: "2024-08-19T14:38:46.523Z"
+github_stars: 2
 tags: 
   - integration
   - ui

@@ -6,6 +6,7 @@ author: "oneezy"
 homepage: "https://github.com/oneezy/ui"
 downloads: 1
 updated: "2024-06-07T06:33:13.161Z"
+github_stars: 1
 tags: 
   - component-library
   - ui

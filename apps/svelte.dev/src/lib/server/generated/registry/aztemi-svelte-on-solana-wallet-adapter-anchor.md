@@ -6,6 +6,7 @@ author: "t4top"
 homepage: "https://github.com/aztemi/wallet-adapter#readme"
 downloads: 30
 updated: "2024-04-15T19:39:00.167Z"
+github_stars: 14
 tags: 
   - integration
 ---

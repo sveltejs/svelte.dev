@@ -6,6 +6,7 @@ author: "maxleiter"
 homepage: "https://sdk.vercel.ai/docs"
 downloads: 231
 updated: "2023-08-17T17:09:28.750Z"
+github_stars: 12554
 tags: 
   - integration
   - ui

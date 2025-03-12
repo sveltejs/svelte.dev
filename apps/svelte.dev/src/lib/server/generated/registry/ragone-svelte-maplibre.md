@@ -6,6 +6,7 @@ author: "ragone"
 homepage: "https://svelte-maplibre.imfeld.dev"
 downloads: 1
 updated: "2024-02-08T10:50:04.867Z"
+github_stars: 387
 tags: 
   - ui
   - media

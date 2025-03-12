@@ -7,6 +7,7 @@ homepage: "https://tanstack.com/virtual"
 downloads: 4184
 dependents: 4
 updated: "2025-02-25T07:41:12.645Z"
+github_stars: 5870
 tags: 
   - component-library
 ---

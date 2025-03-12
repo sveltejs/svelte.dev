@@ -6,6 +6,7 @@ author: "richetechguy"
 homepage: "https://github.com/Blinkx-IO/editor#readme"
 downloads: 1400
 updated: "2025-03-04T20:35:10.766Z"
+github_stars: 1
 tags: 
   - component-library
   - ui

@@ -6,6 +6,7 @@ author: "sethburkart"
 homepage: "https://github.com/SethBurkart123/parcel-transformer-svelte#readme"
 downloads: 2
 updated: "2024-02-28T09:26:32.604Z"
+github_stars: 2
 tags: 
   - tooling
   - preprocessor

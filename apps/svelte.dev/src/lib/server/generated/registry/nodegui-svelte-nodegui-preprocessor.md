@@ -7,6 +7,7 @@ homepage: "https://github.com/nodegui/svelte-nodegui-preprocessor"
 downloads: 8
 updated: "2021-03-03T22:18:51.779Z"
 outdated: true
+github_stars: 2
 tags: 
   - preprocessor
 ---

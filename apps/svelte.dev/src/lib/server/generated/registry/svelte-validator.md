@@ -6,6 +6,7 @@ author: "joe-noh"
 homepage: "https://github.com/Joe-noh/svelte-validator#readme"
 updated: "2020-01-26T14:24:28.336Z"
 outdated: true
+github_stars: 2
 tags: 
   - utility
 ---

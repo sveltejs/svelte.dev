@@ -7,6 +7,7 @@ homepage: "https://github.com/arlac77/svelte-common#readme"
 downloads: 747
 dependents: 5
 updated: "2025-03-05T15:43:58.656Z"
+github_stars: 8
 tags: 
   - component-library
   - utility

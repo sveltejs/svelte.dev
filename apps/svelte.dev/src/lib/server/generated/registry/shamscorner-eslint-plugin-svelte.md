@@ -6,6 +6,7 @@ author: "shamscorner"
 homepage: "https://sveltejs.github.io/eslint-plugin-svelte"
 downloads: 7
 updated: "2025-01-30T21:00:46.130Z"
+github_stars: 321
 tags: 
   - tooling
 ---

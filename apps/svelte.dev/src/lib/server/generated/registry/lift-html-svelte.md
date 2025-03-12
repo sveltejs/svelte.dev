@@ -6,6 +6,7 @@ author: "jlarky"
 homepage: "https://github.com/JLarky/lift-html/tree/main#readme"
 downloads: 2
 updated: "2025-01-09T09:33:44.219Z"
+github_stars: 29
 tags: 
   - component-library
 ---

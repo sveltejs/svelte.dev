@@ -7,6 +7,7 @@ homepage: "https://github.com/halfnelson/svelte-native"
 downloads: 131
 dependents: 3
 updated: "2024-11-07T19:51:32.658Z"
+github_stars: 1845
 tags: 
   - component-library
   - integration

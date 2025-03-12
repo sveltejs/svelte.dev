@@ -6,6 +6,7 @@ author: "dirv"
 homepage: "https://github.com/dirv/svelte-component-double#readme"
 downloads: 608
 updated: "2024-06-03T20:32:17.654Z"
+github_stars: 7
 tags: 
   - testing
 ---

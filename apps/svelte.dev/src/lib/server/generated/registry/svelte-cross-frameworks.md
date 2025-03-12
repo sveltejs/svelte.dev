@@ -6,6 +6,7 @@ author: "zheeeng"
 homepage: "https://github.com/zheeeng/svelte-cross-frameworks#readme"
 downloads: 4
 updated: "2023-12-11T13:11:13.865Z"
+github_stars: 5
 tags: 
   - utility
 ---

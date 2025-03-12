@@ -6,6 +6,7 @@ author: "vnphanquang"
 homepage: "https://svelte-put.vnphanquang.com/docs/popover"
 downloads: 1
 updated: "2024-10-25T05:17:45.478Z"
+github_stars: 897
 tags: 
   - ui
 ---

@@ -6,6 +6,7 @@ author: "jer-0"
 homepage: "https://github.com/statelyai/xstate/tree/main/packages/xstate-svelte#readme"
 downloads: 1
 updated: "2023-07-07T15:08:51.874Z"
+github_stars: 27918
 tags: 
   - utility
 ---

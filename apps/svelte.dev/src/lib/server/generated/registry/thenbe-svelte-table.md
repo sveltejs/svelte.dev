@@ -6,6 +6,7 @@ author: "thenbe"
 homepage: "https://tanstack.com/table"
 downloads: 1
 updated: "2024-06-14T21:51:04.457Z"
+github_stars: 25974
 tags: 
   - component-library
   - ui

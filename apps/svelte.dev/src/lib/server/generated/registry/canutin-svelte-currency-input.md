@@ -6,6 +6,7 @@ author: "fmaclen"
 homepage: "https://svelte-currency-input.fernando.is"
 downloads: 830
 updated: "2024-11-01T21:04:48.714Z"
+github_stars: 42
 tags: 
   - ui
   - utility

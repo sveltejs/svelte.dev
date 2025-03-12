@@ -104,32 +104,122 @@ export function extract_frontmatter(markdown: string) {
 
 	const frontmatter = match[1];
 	const body = markdown.slice(match[0].length).trim();
+	const metadata: Record<string, any> = {};
 
-	const metadata: Record<string, string> = {};
+	// Track current parsing state
+	let currentKey = '';
+	let currentValue = '';
+	let inArray = false;
+	let arrayItems: string[] = [];
 
-	// Prettier might split things awkwardly, so we can't just go line-by-line
+	// Process each line
+	const lines = frontmatter.split('\n');
 
-	let key = '';
-	let value = '';
+	for (let i = 0; i < lines.length; i++) {
+		const line = lines[i];
+		const trimmedLine = line.trim();
 
-	for (const line of frontmatter.split('\n')) {
-		const match = /^(\w+):\s*(.*)$/.exec(line);
-		if (match) {
-			if (key) metadata[key] = parse(value);
+		// Check if line starts a new key-value pair
+		const keyMatch = /^(\w+):\s*(.*)$/.exec(line);
 
-			key = match[1];
-			value = match[2];
-		} else {
-			value += '\n' + line;
+		if (keyMatch) {
+			// Save previous key-value pair if exists
+			if (currentKey) {
+				if (inArray) {
+					metadata[currentKey] = arrayItems.map((item) => item.trim());
+					arrayItems = [];
+					inArray = false;
+				} else {
+					metadata[currentKey] = parse(currentValue.trim());
+				}
+			}
+
+			// Start new key-value pair
+			currentKey = keyMatch[1];
+			currentValue = keyMatch[2];
+
+			// Handle array notation like tags: [item1, item2]
+			if (currentValue.trim().startsWith('[') && currentValue.includes(']')) {
+				try {
+					// Try to parse as JSON array
+					const arrayStr = currentValue.trim();
+					metadata[currentKey] = JSON.parse(arrayStr);
+					currentKey = ''; // Reset as we've handled this key
+					currentValue = '';
+				} catch (e) {
+					// If parsing fails, treat as normal text
+					// This will be handled later when we finish the current key
+				}
+			}
+			// Check if this is an array declaration with empty value
+			else if (currentValue.trim() === '') {
+				const nextLine = i + 1 < lines.length ? lines[i + 1] : '';
+				// More flexible detection for array items - handle different indentation styles
+				if (nextLine.trim().startsWith('-')) {
+					inArray = true;
+					arrayItems = [];
+					currentValue = '';
+				}
+			}
+		}
+		// More flexible array item detection - handle different indentation patterns
+		else if (trimmedLine.startsWith('-')) {
+			inArray = true;
+			// Extract everything after the dash and space
+			const itemContent = trimmedLine.substring(trimmedLine.indexOf('-') + 1).trim();
+			arrayItems.push(itemContent);
+		} else if (inArray && (trimmedLine.startsWith(' ') || trimmedLine === '')) {
+			// This is continuation of an array item with indentation or empty line within array
+			if (arrayItems.length > 0 && trimmedLine !== '') {
+				arrayItems[arrayItems.length - 1] += '\n' + trimmedLine;
+			}
+		} else if (currentKey) {
+			// This is continuation of a regular value
+			currentValue += '\n' + line;
 		}
 	}
 
-	if (key) metadata[key] = parse(value);
+	// Add the last key-value pair
+	if (currentKey) {
+		if (inArray) {
+			metadata[currentKey] = arrayItems.map((item) => item.trim());
+		} else {
+			metadata[currentKey] = parse(currentValue.trim());
+		}
+	}
+
+	// Post-processing to handle special cases for tags
+	if (metadata.tags && typeof metadata.tags === 'string') {
+		// If tags parsed as a string but looks like it should be an array
+		if (metadata.tags.includes(',')) {
+			// Handle comma-separated tags
+			metadata.tags = metadata.tags
+				.split(',')
+				.map((t: string) => t.trim())
+				.filter(Boolean);
+		} else {
+			// Single tag case - make it an array with one item
+			metadata.tags = [metadata.tags];
+		}
+	}
 
 	return { metadata, body };
 }
 
 const parse = (str: string) => {
+	// Try JSON parse if it looks like JSON
+	if (
+		(str.startsWith('"') && str.endsWith('"')) ||
+		(str.startsWith('[') && str.endsWith(']')) ||
+		(str.startsWith('{') && str.endsWith('}'))
+	) {
+		try {
+			return JSON.parse(str);
+		} catch (err) {
+			// Fall through to try json5 if JSON.parse fails
+		}
+	}
+
 	try {
 		return json5.parse(str);
 	} catch (err) {

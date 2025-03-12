@@ -6,6 +6,7 @@ author: "maximux13"
 homepage: "https://github.com/maximux13/svelte-roving-ux#readme"
 downloads: 1
 updated: "2023-07-04T14:35:45.529Z"
+github_stars: 7
 tags: 
   - ui
   - dom

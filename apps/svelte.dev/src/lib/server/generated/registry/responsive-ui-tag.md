@@ -7,6 +7,7 @@ homepage: "https://github.com/wetix/responsive-ui/blob/main/components/tag#READM
 downloads: 3
 dependents: 1
 updated: "2024-04-23T07:51:21.954Z"
+github_stars: 19
 tags: 
   - ui
 ---

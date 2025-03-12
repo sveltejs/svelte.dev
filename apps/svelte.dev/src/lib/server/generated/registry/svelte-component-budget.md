@@ -7,6 +7,7 @@ homepage: "https://github.com/sveltetools/svelte-component-budget#readme"
 downloads: 1
 updated: "2022-01-16T18:52:15.865Z"
 outdated: true
+github_stars: 2
 tags: 
   - tooling
   - preprocessor

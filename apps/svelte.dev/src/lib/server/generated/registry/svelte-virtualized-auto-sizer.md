@@ -7,6 +7,7 @@ homepage: "https://github.com/micha-lmxt/svelte-virtualized-auto-sizer/"
 downloads: 8
 updated: "2021-02-19T20:05:47.052Z"
 outdated: true
+github_stars: 5
 tags: 
   - ui
 ---

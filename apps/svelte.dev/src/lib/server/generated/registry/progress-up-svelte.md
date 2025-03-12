@@ -6,6 +6,7 @@ author: "girish1729"
 homepage: "https://github.com/girish1729/progress-up#readme"
 downloads: 1
 updated: "2023-10-21T11:38:06.268Z"
+github_stars: 59
 tags: 
   - ui
   - utility

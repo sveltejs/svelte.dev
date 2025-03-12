@@ -7,6 +7,7 @@ homepage: "https://github.com/chakra-ui/ui-machines#readme"
 downloads: 1
 updated: "2022-01-14T22:32:22.889Z"
 outdated: true
+github_stars: 4285
 tags: 
   - utility
 ---

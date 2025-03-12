@@ -5,6 +5,7 @@ repo_url: "https://github.com/r4rmas/saraui"
 author: "r4rmas"
 homepage: "https://saraui.com"
 updated: "2024-05-17T05:53:56.977Z"
+github_stars: 106
 tags: 
   - component-library
   - ui

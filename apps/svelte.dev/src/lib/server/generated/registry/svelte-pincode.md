@@ -6,6 +6,7 @@ author: "metonym"
 homepage: "https://github.com/metonym/svelte-pincode"
 downloads: 231
 updated: "2024-06-13T02:35:03.543Z"
+github_stars: 32
 tags: 
   - ui
 ---

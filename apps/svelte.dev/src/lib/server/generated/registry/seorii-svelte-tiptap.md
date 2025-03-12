@@ -7,6 +7,7 @@ homepage: "https://github.com/sibiraj-s/svelte-tiptap#readme"
 downloads: 3
 updated: "2022-05-16T15:03:08.506Z"
 outdated: true
+github_stars: 278
 tags: 
   - component-library
   - content

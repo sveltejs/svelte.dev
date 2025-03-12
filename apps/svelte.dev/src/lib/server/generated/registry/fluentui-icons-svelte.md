@@ -6,6 +6,7 @@ author: "jlacostaec"
 homepage: "https://github.com/JLAcostaEC/fluentui-icons-svelte#readme"
 downloads: 2
 updated: "2025-02-20T21:39:41.714Z"
+github_stars: 3
 tags: 
   - ui
 ---

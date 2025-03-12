@@ -6,6 +6,7 @@ author: "abdel-17"
 homepage: "https://github.com/abdel-17/svelte-material-ripple#readme"
 downloads: 2
 updated: "2024-09-27T18:08:19.692Z"
+github_stars: 26
 tags: 
   - ui
 ---

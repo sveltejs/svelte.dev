@@ -6,6 +6,7 @@ author: "azarattum"
 homepage: "https://github.com/Azarattum/CRStore#readme"
 downloads: 47
 updated: "2025-02-11T04:49:18.967Z"
+github_stars: 100
 tags: 
   - utility
   - server

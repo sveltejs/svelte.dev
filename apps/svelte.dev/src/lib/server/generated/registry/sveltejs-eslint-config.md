@@ -6,6 +6,7 @@ author: "svelte-admin"
 homepage: "https://github.com/svelte/eslint-config#readme"
 downloads: 2549
 updated: "2025-03-04T01:23:32.195Z"
+github_stars: 16
 tags: 
   - tooling
 ---

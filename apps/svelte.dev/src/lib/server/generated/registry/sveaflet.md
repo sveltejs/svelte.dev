@@ -6,6 +6,7 @@ author: "garyfrost"
 homepage: "https://sveaflet.vercel.app/"
 downloads: 411
 updated: "2025-02-23T11:47:05.924Z"
+github_stars: 69
 tags: 
   - ui
 ---

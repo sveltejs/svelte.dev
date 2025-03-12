@@ -7,6 +7,7 @@ homepage: "https://github.com/andrey-pavlenko/svelte-components/tree/main/packag
 downloads: 2
 updated: "2023-02-01T20:18:04.588Z"
 outdated: true
+github_stars: 3
 tags: 
   - utility
   - dom

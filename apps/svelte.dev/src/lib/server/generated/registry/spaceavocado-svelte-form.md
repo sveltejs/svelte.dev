@@ -7,6 +7,7 @@ homepage: "https://github.com/spaceavocado/svelte-form"
 downloads: 62
 updated: "2019-10-11T14:37:50.096Z"
 outdated: true
+github_stars: 47
 tags: 
   - utility
 ---

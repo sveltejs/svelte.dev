@@ -6,6 +6,7 @@ author: "shinichiokada"
 homepage: "https://svelte-twitter-emoji.codewithshin.com/"
 downloads: 10
 updated: "2024-03-01T17:20:21.038Z"
+github_stars: 3
 tags: 
   - ui
 ---

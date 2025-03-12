@@ -8,6 +8,7 @@ downloads: 2
 dependents: 1
 updated: "2020-05-03T22:43:57.661Z"
 outdated: true
+github_stars: 3
 tags: 
   - preprocessor
   - tooling

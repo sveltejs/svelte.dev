@@ -7,6 +7,7 @@ homepage: "https://github.com/Perspective-Software/svelte-image-imgix#readme"
 downloads: 15
 updated: "2022-11-14T15:01:51.021Z"
 outdated: true
+github_stars: 2
 tags: 
   - media
   - performance

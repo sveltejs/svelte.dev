@@ -7,6 +7,7 @@ homepage: "https://github.com/wetix/responsive-ui/blob/main/components/dock#READ
 downloads: 1
 updated: "2021-10-26T14:57:44.353Z"
 outdated: true
+github_stars: 19
 tags: 
   - ui
 ---

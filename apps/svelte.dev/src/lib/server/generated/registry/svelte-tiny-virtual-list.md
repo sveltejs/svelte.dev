@@ -7,6 +7,7 @@ homepage: "https://github.com/jonasgeiler/svelte-tiny-virtual-list"
 downloads: 9773
 dependents: 6
 updated: "2024-05-28T06:05:48.177Z"
+github_stars: 497
 tags: 
   - ui
 ---

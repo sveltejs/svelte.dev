@@ -6,6 +6,7 @@ author: "catdadalex"
 homepage: "https://github.com/catdadcode/svelte-adapter-bun#readme"
 downloads: 16
 updated: "2023-11-25T18:02:13.039Z"
+github_stars: 17
 tags: 
   - adapter
 ---

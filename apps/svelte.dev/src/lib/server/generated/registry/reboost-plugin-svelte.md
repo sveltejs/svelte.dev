@@ -7,6 +7,7 @@ homepage: "https://github.com/sarsamurmu/reboost/tree/primary/packages/plugin-sv
 downloads: 40
 updated: "2021-09-25T13:20:52.336Z"
 outdated: true
+github_stars: 61
 tags: 
   - tooling
   - preprocessor

@@ -7,6 +7,7 @@ homepage: "https://github.com/AlexxNB/svelte-eventbus#readme"
 downloads: 6
 updated: "2022-02-18T12:24:22.806Z"
 outdated: true
+github_stars: 38
 tags: 
   - utility
 ---

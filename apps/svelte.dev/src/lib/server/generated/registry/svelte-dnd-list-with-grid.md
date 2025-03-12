@@ -5,6 +5,7 @@ repo_url: "https://github.com/tarb/svelte-dnd-list"
 author: "brechtknecht"
 homepage: "https://github.com/tarb/svelte-dnd-list"
 updated: "2024-06-24T13:10:11.695Z"
+github_stars: 49
 tags: 
   - ui
 ---

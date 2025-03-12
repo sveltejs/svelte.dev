@@ -6,6 +6,7 @@ author: "naokim03"
 homepage: "https://github.com/NaokiM03/codemirror-svelte#readme"
 downloads: 3
 updated: "2023-06-04T19:49:43.011Z"
+github_stars: 9
 tags: 
   - utility
 ---

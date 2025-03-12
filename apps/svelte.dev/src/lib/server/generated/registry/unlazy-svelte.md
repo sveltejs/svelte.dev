@@ -6,6 +6,7 @@ author: "johannschopplich"
 homepage: "https://unlazy.byjohann.dev"
 downloads: 47
 updated: "2025-03-07T14:38:09.520Z"
+github_stars: 789
 tags: 
   - ui
   - performance

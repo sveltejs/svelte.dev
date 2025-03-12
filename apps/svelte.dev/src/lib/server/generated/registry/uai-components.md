@@ -6,6 +6,7 @@ author: "01oseluiz"
 homepage: "https://github.com/vlgi/uai-components#readme"
 downloads: 6
 updated: "2024-02-19T20:52:42.056Z"
+github_stars: 2
 tags: 
   - component-library
   - ui

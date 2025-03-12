@@ -7,6 +7,7 @@ homepage: "https://www.embla-carousel.com"
 downloads: 25917
 dependents: 11
 updated: "2025-01-07T19:35:11.073Z"
+github_stars: 6776
 tags: 
   - ui
   - media

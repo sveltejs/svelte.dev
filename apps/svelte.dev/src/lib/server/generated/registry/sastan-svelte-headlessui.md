@@ -7,6 +7,7 @@ homepage: "https://svelte-headlessui-git-fork-noeloconnell-combob-d68663-rgossia
 downloads: 8
 updated: "2022-11-08T09:42:37.837Z"
 outdated: true
+github_stars: 1804
 tags: 
   - component-library
   - ui

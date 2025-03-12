@@ -6,6 +6,7 @@ author: "davekeehl"
 homepage: "https://github.com/DaveKeehl/svelte-reveal#readme"
 downloads: 946
 updated: "2024-04-10T16:13:16.167Z"
+github_stars: 133
 tags: 
   - ui
   - animation

@@ -6,6 +6,7 @@ author: "nerdworks"
 homepage: "https://svelte-headless-table.bryanmylee.com"
 downloads: 2
 updated: "2023-12-16T15:43:06.114Z"
+github_stars: 491
 tags: 
   - component-library
 ---

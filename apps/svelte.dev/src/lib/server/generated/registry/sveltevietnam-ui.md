@@ -6,6 +6,7 @@ author: "vnphanquang"
 homepage: "https://www.sveltevietnam.dev"
 downloads: 2
 updated: "2024-06-03T11:50:26.858Z"
+github_stars: 34
 tags: 
   - ui
   - component-library

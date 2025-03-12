@@ -6,6 +6,7 @@ author: "dizy"
 homepage: "https://sdk.vercel.ai/docs"
 downloads: 1
 updated: "2023-08-20T03:48:51.408Z"
+github_stars: 12555
 tags: 
   - integration
 ---

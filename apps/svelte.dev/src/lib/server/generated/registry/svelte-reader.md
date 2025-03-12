@@ -6,6 +6,7 @@ author: "jinhuan"
 homepage: "https://jinhuan138.github.io/svelte-reader/docs/"
 downloads: 5
 updated: "2025-01-08T05:55:25.895Z"
+github_stars: 2
 tags: 
   - media
 ---

@@ -7,6 +7,7 @@ homepage: "https://github.com/DPr00f/svelte-gravatar#readme"
 downloads: 48
 updated: "2020-03-14T16:05:22.083Z"
 outdated: true
+github_stars: 4
 tags: 
   - ui
 ---

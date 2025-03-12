@@ -6,6 +6,7 @@ author: "younkue"
 homepage: "https://github.com/naver/egjs-grid"
 downloads: 214
 updated: "2024-07-02T06:09:20.424Z"
+github_stars: 289
 tags: 
   - ui
 ---

@@ -6,6 +6,7 @@ author: "prantlf"
 homepage: "https://github.com/prantlf/web-clocks#readme"
 downloads: 36
 updated: "2023-05-06T18:53:53.697Z"
+github_stars: 2
 tags: 
   - ui
 ---

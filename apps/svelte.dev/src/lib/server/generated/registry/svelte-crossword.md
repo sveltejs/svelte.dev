@@ -7,6 +7,7 @@ homepage: "https://github.com/russellgoldenberg/svelte-crossword#readme"
 downloads: 3
 updated: "2020-11-30T14:42:53.271Z"
 outdated: true
+github_stars: 83
 tags: 
   - ui
 ---

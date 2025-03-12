@@ -6,6 +6,7 @@ author: "sachinsancheti1"
 homepage: "https://github.com/sachinsancheti1/svelte-bi#readme"
 downloads: 12
 updated: "2024-11-28T02:55:17.730Z"
+github_stars: 2
 tags: 
   - ui
 ---

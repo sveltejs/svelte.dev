@@ -6,6 +6,7 @@ author: "philipp-tailor"
 homepage: "http://sidebar.schneiders.space"
 downloads: 10
 updated: "2024-08-13T17:59:24.084Z"
+github_stars: 40
 tags: 
   - ui
 ---

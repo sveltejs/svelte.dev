@@ -6,6 +6,7 @@ author: "jiangfengming"
 homepage: "https://github.com/jiangfengming/svelte-preprocess-html-asset#readme"
 downloads: 3
 updated: "2023-04-10T12:48:15.722Z"
+github_stars: 3
 tags: 
   - preprocessor
 ---

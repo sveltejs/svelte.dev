@@ -8,6 +8,7 @@ downloads: 1
 dependents: 1
 updated: "2023-02-20T15:43:51.065Z"
 outdated: true
+github_stars: 11
 tags: 
   - component-library
 ---

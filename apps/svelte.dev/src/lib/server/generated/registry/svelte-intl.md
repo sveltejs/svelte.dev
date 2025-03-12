@@ -7,6 +7,7 @@ homepage: "https://github.com/Panya/svelte-intl"
 downloads: 101
 updated: "2022-04-04T11:16:49.037Z"
 outdated: true
+github_stars: 47
 tags: 
   - utility
 ---

@@ -7,6 +7,7 @@ homepage: "https://yukipastelcat.github.io/svelte-fontawesome"
 downloads: 64
 dependents: 1
 updated: "2025-01-12T16:15:55.759Z"
+github_stars: 12
 tags: 
   - ui
 ---

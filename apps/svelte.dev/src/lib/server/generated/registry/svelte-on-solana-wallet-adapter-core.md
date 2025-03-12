@@ -8,6 +8,7 @@ downloads: 50
 dependents: 2
 updated: "2022-12-14T18:09:56.076Z"
 outdated: true
+github_stars: 64
 tags: 
   - integration
   - auth

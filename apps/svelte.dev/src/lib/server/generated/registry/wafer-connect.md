@@ -5,6 +5,7 @@ repo_url: "https://github.com/saklani/wafer-connect"
 author: "saklani"
 homepage: "https://wafer.vercel.app"
 updated: "2023-06-16T07:47:20.582Z"
+github_stars: 1
 tags: 
   - integration
 ---

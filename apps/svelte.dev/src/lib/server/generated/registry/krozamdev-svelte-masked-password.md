@@ -6,6 +6,7 @@ author: "krozamdev"
 homepage: "https://github.com/krozamdev/svelte-masked-password#readme"
 downloads: 85
 updated: "2025-02-28T03:43:05.672Z"
+github_stars: 12
 tags: 
   - utility
   - ui

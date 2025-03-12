@@ -6,6 +6,7 @@ author: "jasongitmail"
 homepage: "https://github.com/jasongitmail/super-sitemap#readme"
 downloads: 4936
 updated: "2024-11-08T17:40:39.130Z"
+github_stars: 180
 tags: 
   - seo
   - server

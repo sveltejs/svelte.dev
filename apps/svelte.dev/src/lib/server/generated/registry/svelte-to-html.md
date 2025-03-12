@@ -6,6 +6,7 @@ author: "sidx1024"
 homepage: "https://github.com/sidx1024/svelte-to-html#readme"
 downloads: 7317
 updated: "2023-06-19T14:41:30.909Z"
+github_stars: 13
 tags: 
   - tooling
 ---

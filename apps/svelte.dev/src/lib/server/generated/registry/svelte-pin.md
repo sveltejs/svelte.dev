@@ -7,6 +7,7 @@ homepage: "https://github.com/rebotak/svelte-pin#readme"
 downloads: 5
 updated: "2020-12-29T06:48:55.762Z"
 outdated: true
+github_stars: 2
 tags: 
   - ui
 ---

@@ -7,6 +7,7 @@ homepage: "https://github.com/brandonxiang/svelteup#readme"
 downloads: 1
 updated: "2023-02-14T09:21:12.146Z"
 outdated: true
+github_stars: 15
 tags: 
   - tooling
 ---

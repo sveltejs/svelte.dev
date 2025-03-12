@@ -7,6 +7,7 @@ homepage: "https://github.com/hardyjosh/svelte-wagmi-stores#readme"
 downloads: 1
 dependents: 1
 updated: "2023-08-13T20:05:04.710Z"
+github_stars: 1
 tags: 
   - utility
   - integration

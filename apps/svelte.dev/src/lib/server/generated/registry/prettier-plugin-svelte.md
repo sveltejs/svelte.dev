@@ -7,6 +7,7 @@ homepage: "https://github.com/sveltejs/prettier-plugin-svelte#readme"
 downloads: 494219
 dependents: 159
 updated: "2025-01-13T10:09:51.803Z"
+github_stars: 761
 tags: 
   - tooling
   - preprocessor

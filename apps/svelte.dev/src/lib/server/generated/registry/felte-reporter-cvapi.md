@@ -6,6 +6,7 @@ author: "pberganza"
 homepage: "https://github.com/pablo-abc/felte/tree/main/packages/reporter-cvapi"
 downloads: 57
 updated: "2024-10-29T20:36:01.559Z"
+github_stars: 1042
 tags: 
   - utility
 ---

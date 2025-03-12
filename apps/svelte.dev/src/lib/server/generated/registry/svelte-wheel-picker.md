@@ -6,6 +6,7 @@ author: "umdev"
 homepage: "https://github.com/urmoov-dev/svelte-wheel-picker#readme"
 downloads: 33
 updated: "2024-10-06T03:27:11.925Z"
+github_stars: 1
 tags: 
   - ui
 ---

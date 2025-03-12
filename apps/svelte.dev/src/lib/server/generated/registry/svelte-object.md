@@ -6,6 +6,7 @@ author: "refzlund"
 homepage: "https://github.com/Refzlund/svelte-object"
 downloads: 37
 updated: "2025-01-17T00:49:59.218Z"
+github_stars: 4
 tags: 
   - utility
 ---

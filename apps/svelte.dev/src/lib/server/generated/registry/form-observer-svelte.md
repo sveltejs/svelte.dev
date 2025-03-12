@@ -6,6 +6,7 @@ author: "itenthusiasm"
 homepage: "https://github.com/enthusiastic-js/form-observer#readme"
 downloads: 127
 updated: "2024-05-05T17:20:03.222Z"
+github_stars: 10
 tags: 
   - utility
 ---

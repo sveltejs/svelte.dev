@@ -8,6 +8,7 @@ downloads: 1631
 dependents: 2
 updated: "2020-01-16T06:53:51.360Z"
 outdated: true
+github_stars: 35
 tags: 
   - tooling
   - testing

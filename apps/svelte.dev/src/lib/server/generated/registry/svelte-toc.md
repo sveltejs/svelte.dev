@@ -6,6 +6,7 @@ author: "janosh"
 homepage: "https://janosh.github.io/svelte-toc"
 downloads: 290
 updated: "2024-06-12T17:18:18.813Z"
+github_stars: 114
 tags: 
   - ui
   - content

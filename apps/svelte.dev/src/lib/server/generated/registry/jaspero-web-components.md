@@ -7,6 +7,7 @@ homepage: "https://github.com/Jaspero/web-components#readme"
 downloads: 375
 dependents: 1
 updated: "2025-02-27T15:12:56.739Z"
+github_stars: 1
 tags: 
   - component-library
 ---

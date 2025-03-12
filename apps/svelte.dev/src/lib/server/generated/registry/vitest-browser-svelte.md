@@ -6,6 +6,7 @@ author: "vitestbot"
 homepage: "https://github.com/vitest-dev/vitest-browser-svelte#readme"
 downloads: 1289
 updated: "2025-01-13T16:15:54.183Z"
+github_stars: 14
 tags: 
   - testing
 ---

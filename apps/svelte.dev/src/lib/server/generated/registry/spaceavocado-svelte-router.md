@@ -7,6 +7,7 @@ homepage: "https://github.com/spaceavocado/svelte-router"
 downloads: 12
 updated: "2019-09-30T03:07:07.713Z"
 outdated: true
+github_stars: 60
 tags: 
   - router
 ---

@@ -6,6 +6,7 @@ author: "thaunknown"
 homepage: "https://github.com/ThaUnknown/perfect-seekbar#readme"
 downloads: 66
 updated: "2023-04-05T11:38:23.900Z"
+github_stars: 7
 tags: 
   - ui
 ---

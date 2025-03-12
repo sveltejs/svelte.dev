@@ -6,6 +6,7 @@ author: "sascha-lucius"
 homepage: "https://github.com/SaschaLucius/svelte-umami#readme"
 downloads: 156
 updated: "2025-02-07T14:04:02.622Z"
+github_stars: 21
 tags: 
   - integration
   - utility

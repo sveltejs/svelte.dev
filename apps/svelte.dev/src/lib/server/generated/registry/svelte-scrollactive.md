@@ -6,6 +6,7 @@ author: "dmvvilela"
 homepage: "https://github.com/dmvvilela/svelte-scrollactive#readme"
 downloads: 62
 updated: "2023-10-03T20:36:51.169Z"
+github_stars: 7
 tags: 
   - utility
 ---

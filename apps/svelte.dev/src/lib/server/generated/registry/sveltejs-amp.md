@@ -6,6 +6,7 @@ author: "svelte-admin"
 homepage: "https://svelte.dev"
 downloads: 159
 updated: "2024-10-25T12:12:36.654Z"
+github_stars: 19069
 tags: 
   - integration
 ---

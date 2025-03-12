@@ -7,6 +7,7 @@ homepage: "https://svelte-awesome-icons.codewithshin.com/"
 downloads: 2121
 dependents: 1
 updated: "2024-10-25T14:54:03.773Z"
+github_stars: 20
 tags: 
   - ui
 ---

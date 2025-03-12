@@ -7,6 +7,7 @@ homepage: "https://svelteflow.dev"
 downloads: 29020
 dependents: 8
 updated: "2025-02-25T10:31:17.841Z"
+github_stars: 28174
 tags: 
   - ui
 ---

@@ -6,6 +6,7 @@ author: "bassemsab"
 homepage: "https://github.com/wetix/responsive-ui/blob/main/components/badge#README.md"
 downloads: 2
 updated: "2024-04-23T07:50:59.799Z"
+github_stars: 19
 tags: 
   - ui
 ---

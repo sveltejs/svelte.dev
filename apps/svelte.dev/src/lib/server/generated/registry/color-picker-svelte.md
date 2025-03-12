@@ -6,6 +6,7 @@ author: "probablykasper"
 homepage: "https://color-picker-svelte.kasper.space"
 downloads: 77
 updated: "2024-10-23T05:38:27.788Z"
+github_stars: 9
 tags: 
   - ui
 ---

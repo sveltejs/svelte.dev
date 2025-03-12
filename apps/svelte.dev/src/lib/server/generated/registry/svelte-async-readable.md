@@ -7,6 +7,7 @@ homepage: "https://github.com/cdellacqua/svelte-async-readable"
 downloads: 2
 updated: "2021-09-18T20:14:25.771Z"
 outdated: true
+github_stars: 5
 tags: 
   - utility
 ---

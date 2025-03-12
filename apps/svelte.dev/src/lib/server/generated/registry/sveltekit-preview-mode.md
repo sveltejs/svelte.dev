@@ -6,6 +6,7 @@ author: "darbymanning"
 homepage: "https://github.com/darbymanning/sveltekit-preview-mode#readme"
 downloads: 24
 updated: "2024-12-12T15:36:20.703Z"
+github_stars: 21
 tags: 
   - tooling
 ---

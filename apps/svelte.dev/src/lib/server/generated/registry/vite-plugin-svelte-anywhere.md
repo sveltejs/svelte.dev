@@ -6,6 +6,7 @@ author: "vidschofelix"
 homepage: "https://svelte-anywhere.dev"
 downloads: 11
 updated: "2025-02-14T20:01:21.281Z"
+github_stars: 15
 tags: 
   - tooling
 ---

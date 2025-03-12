@@ -7,6 +7,7 @@ homepage: "https://github.com/jill64/svelte-storage#readme"
 downloads: 5707
 dependents: 3
 updated: "2024-12-29T11:46:21.793Z"
+github_stars: 1
 tags: 
   - utility
 ---

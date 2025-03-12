@@ -8,6 +8,7 @@ downloads: 218
 dependents: 2
 updated: "2022-09-12T18:38:52.366Z"
 outdated: true
+github_stars: 12
 tags: 
   - ui
 ---

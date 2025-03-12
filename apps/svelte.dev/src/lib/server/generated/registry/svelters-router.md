@@ -6,6 +6,7 @@ author: "antoinelelaisant"
 homepage: "https://github.com/svelters/svelters-router#readme"
 updated: "2019-10-21T20:26:48.577Z"
 outdated: true
+github_stars: 13
 tags: 
   - router
 ---

@@ -5,6 +5,7 @@ repo_url: "https://github.com/kbrgl/svelte-french-toast"
 author: "rtyrthfgc"
 homepage: "https://github.com/kbrgl/svelte-french-toast#readme"
 updated: "2024-02-17T03:44:01.509Z"
+github_stars: 930
 tags: 
   - ui
 ---

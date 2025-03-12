@@ -1,14 +1,21 @@
 // Credit for original: Astro team
 import { createOpenRouter } from '@openrouter/ai-sdk-provider';
-import { transform } from '@sveltejs/site-kit/markdown';
+import { extract_frontmatter, transform } from '@sveltejs/site-kit/markdown';
 import { generateText } from 'ai';
 import dotenv from 'dotenv';
 import fs, { mkdirSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import glob from 'tiny-glob/sync.js';
-import { fetch_details_for_package, request_queue, stream_search_by_keywords } from './npm.js';
 import registry from '../../src/lib/registry.json' with { type: 'json' };
+import type { Package } from '../../src/lib/server/content.js';
+import {
+	fetch_details_for_package,
+	HEADERS,
+	request_queue,
+	stream_search_by_keywords,
+	superfetch
+} from './npm.js';
 
 dotenv.config({ path: '.env.local' });
 
@@ -172,6 +179,115 @@ const TAGS_PROMPT: Record<string, string> = Object.entries(registry.tags).reduce
 	{} as Record<string, string>
 );
 
+class PackageCache {
+	static stringify(package_details: any) {
+		const pkg_name = package_details.name ?? package_details.package?.name;
+		const description = package_details.description ?? package_details.package?.description;
+		const repo_url = package_details.repo_url ?? package_details.package?.links?.repository;
+		const author = package_details.author ?? package_details.package?.publisher.username;
+		const homepage = package_details.homepage ?? package_details.package?.links?.homepage;
+		const downloads = package_details.downloads ?? package_details.downloads;
+		const dependents = package_details.dependents ?? package_details.dependents;
+		const updated = package_details.updated ?? package_details.last_published;
+		const outdated = package_details.outdated ?? package_details.outdated;
+		const deprecated = package_details.deprecated ?? package_details.deprecated;
+		const tags = package_details.tags ?? package_details.llm_detail.tags;
+		const github_stars = package_details.github_stars;
+
+		let frontmatter = `---\nname: "${pkg_name}"\n`;
+
+		if (description) {
+			frontmatter += `description: "${description}"\n`;
+		}
+
+		if (repo_url) {
+			frontmatter += `repo_url: "${sanitize_github_url(repo_url)}"\n`;
+		}
+
+		if (author) {
+			frontmatter += `author: "${author}"\n`;
+		}
+
+		if (homepage) {
+			frontmatter += `homepage: "${homepage}"\n`;
+		}
+
+		if (downloads) {
+			frontmatter += `downloads: ${downloads}\n`;
+		}
+
+		if (dependents) {
+			frontmatter += `dependents: ${dependents}\n`;
+		}
+
+		if (updated) {
+			frontmatter += `updated: "${updated}"\n`;
+		}
+
+		if (outdated) {
+			frontmatter += `outdated: true\n`;
+		}
+
+		if (deprecated) {
+			frontmatter += `deprecated: true\n`;
+		}
+
+		if (github_stars) {
+			frontmatter += `github_stars: ${github_stars}\n`;
+		}
+
+		frontmatter += `tags: \n${tags.map((tag = '') => `  - ${tag}`).join('\n')}\n`;
+
+		frontmatter += '---\n';
+
+		return frontmatter;
+	}
+
+	static parse(markdown: string) {
+		const { metadata } = extract_frontmatter(markdown);
+
+		return metadata;
+	}
+
+	static get(pkg_name: string) {
+		const pathname = path.resolve(
+			path.dirname(fileURLToPath(import.meta.url)),
+			`../../src/lib/server/generated/registry/${pkg_name}.md`
+		);
+
+		try {
+			return PackageCache.parse(fs.readFileSync(pathname, { encoding: 'utf8' }));
+		} catch {
+			return null;
+		}
+	}
+
+	static set(pkg_name: string, data: any) {
+		const pathname = path.resolve(
+			path.dirname(fileURLToPath(import.meta.url)),
+			`../../src/lib/server/generated/registry/${pkg_name}.md`
+		);
+
+		fs.writeFileSync(pathname, PackageCache.stringify(data));
+	}
+
+	static *entries() {
+		const cache_dir = path.resolve(
+			path.dirname(fileURLToPath(import.meta.url)),
+			'../../src/lib/server/generated/registry'
+		);
+		const cache_dir_contents = fs.readdirSync(cache_dir);
+
+		for (const dirent of cache_dir_contents) {
+			const file_path = path.join(cache_dir, dirent);
+			yield [
+				dirent.replace(/.md$/, ''),
+				PackageCache.parse(fs.readFileSync(file_path, 'utf8'))
+			] as [string, Package];
+		}
+	}
+}
+
 interface ProcessBatchesOptions {
 	/** Keywords to search for (default: ['svelte']) */
 	keywords?: string[];
@@ -213,7 +329,7 @@ async function process_batches_through_llm({
 		: stream_search_by_keywords({
 				keywords,
 				limit,
-				fetch_package_json: true,
+				fetch: { package_json: true, github_stars: true },
 				batch_size,
 				skip_cached: true
 			});
@@ -355,62 +471,8 @@ async function process_batches_through_llm({
 						updated_count++;
 						console.log(`[${batch_id}] Tagged ${pkg_name}: ${JSON.stringify(json[pkg_name].tags)}`);
 
-						// Now that we have svelte_packages, write their data to .md files
-						const cleaned_up_pkg_name = pkg_name.replace(/@/g, '').replace(/\//g, '-');
-
-						let frontmatter = `---
-name: "${pkg_name}"\n`;
-
-						if (package_details.package.description) {
-							frontmatter += `description: "${package_details.package.description}"\n`;
-						}
-
-						if (package_details.package.links.repository) {
-							frontmatter += `repo_url: "${sanitize_github_url(package_details.package.links.repository)}"\n`;
-						}
-
-						if (package_details.package.publisher.username) {
-							frontmatter += `author: "${package_details.package.publisher.username}"\n`;
-						}
-
-						if (package_details.package.links.homepage) {
-							frontmatter += `homepage: "${package_details.package.links.homepage}"\n`;
-						}
-
-						if (package_details.downloads.weekly) {
-							frontmatter += `downloads: ${package_details.downloads.weekly}\n`;
-						}
-
-						if (package_details.dependents) {
-							frontmatter += `dependents: ${package_details.dependents}\n`;
-						}
-
-						if (package_details.updated) {
-							frontmatter += `updated: "${package_details.last_published}"\n`;
-						}
-
-						if (package_details.outdated) {
-							frontmatter += `outdated: true\n`;
-						}
-
-						if (package_details.deprecated) {
-							frontmatter += `deprecated: true\n`;
-						}
-
-						frontmatter += `tags: 
-${package_details.llm_detail.tags.map((tag = '') => `  - ${tag}`).join('\n')}\n`;
-
-						frontmatter += '---\n';
-
-						fs.writeFileSync(
-							path.resolve(
-								path.dirname(fileURLToPath(import.meta.url)),
-								`../../src/lib/server/generated/registry/${cleaned_up_pkg_name}.md`
-							),
-							frontmatter
-						);
+						PackageCache.set(pkg_name, package_details);
 					}
-					// If not in json results, it's not a Svelte package - we don't add it to failed_llm
 				}
 
 				console.log(
@@ -484,6 +546,84 @@ ${package_details.llm_detail.tags.map((tag = '') => `  - ${tag}`).join('\n')}\n`
 }
 
 /**
+ * Fetches the number of stars for a GitHub repository
+ */
+export async function fetch_github_stars(repo_url: string): Promise<number | null> {
+	// Validate and normalize the GitHub URL
+	if (!repo_url) {
+		console.error('No repository URL provided');
+		return null;
+	}
+
+	// Ensure URL is sanitized and in the correct format
+	const sanitized_url = sanitize_github_url(repo_url);
+
+	// Extract owner and repo name from the GitHub URL
+	// Example: https://github.com/owner/repo
+	const url_parts = new URL(sanitized_url);
+	const path_parts = url_parts.pathname.split('/').filter(Boolean);
+
+	if (path_parts.length < 2) {
+		console.error(`Invalid GitHub repository URL: ${repo_url}`);
+		return null;
+	}
+
+	const [owner, repo] = path_parts;
+
+	// GitHub API URL to fetch repository data
+	let api_url = `https://api.github.com/repos/${owner}/${repo}`;
+
+	return request_queue.enqueue(async () => {
+		try {
+			console.log(`Fetching stars for ${owner}/${repo}`);
+			const response = await superfetch(api_url, {
+				headers: {
+					...HEADERS,
+					Accept: 'application/vnd.github.v3+json',
+					Authorization: `Bearer ${process.env.GITHUB_TOKEN}`
+				}
+			});
+
+			if (response.status === 404) {
+				console.log(`404 Not Found for ${api_url} (Not retrying)`);
+				return null;
+			}
+
+			const data = await response.json();
+
+			if (!data || typeof data.stargazers_count !== 'number') {
+				console.error(`Invalid response from GitHub API for ${repo_url}`);
+				return null;
+			}
+
+			return data.stargazers_count;
+		} catch (error) {
+			console.error(`Error fetching stars for ${repo_url}:`, error);
+			return null;
+		}
+	});
+}
+
+async function update_all_github_stars(ignore_if_exists = false) {
+	for (const [pkg, data] of PackageCache.entries()) {
+		if (data.repo_url && !(ignore_if_exists && data.github_stars)) {
+			try {
+				// Fetch stars of this repo
+				const stars = await fetch_github_stars(data.repo_url);
+
+				if (typeof stars === 'number') {
+					data.github_stars = stars;
+
+					PackageCache.set(pkg, data);
+				}
+			} catch (e) {
+				console.error(e, data);
+			}
+		}
+	}
+}
+
+/**
  * Creates a generator that yields batches from a Map
  */
 async function* create_map_batch_generator(
@@ -499,4 +639,6 @@ async function* create_map_batch_generator(
 	}
 }
 
-const svelte_packages = await process_batches_through_llm();
+// const svelte_packages = await process_batches_through_llm();
+
+update_all_github_stars(true);

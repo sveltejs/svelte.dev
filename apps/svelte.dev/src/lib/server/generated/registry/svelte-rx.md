@@ -7,6 +7,7 @@ homepage: "https://github.com/timdeschryver/svelte-utils/tree/master/packages/rx
 downloads: 2
 updated: "2020-02-05T07:28:56.317Z"
 outdated: true
+github_stars: 16
 tags: 
   - utility
 ---

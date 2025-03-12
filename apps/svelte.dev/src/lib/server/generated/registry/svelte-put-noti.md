@@ -6,6 +6,7 @@ author: "vnphanquang"
 homepage: "https://svelte-put.vnphanquang.com/docs/noti"
 downloads: 223
 updated: "2024-05-17T09:08:47.597Z"
+github_stars: 897
 tags: 
   - ui
   - utility

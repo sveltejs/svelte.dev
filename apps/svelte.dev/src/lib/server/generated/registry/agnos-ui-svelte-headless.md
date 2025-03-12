@@ -7,6 +7,7 @@ homepage: "https://www.agnosui.dev/latest/"
 downloads: 23
 dependents: 2
 updated: "2025-01-09T15:43:58.775Z"
+github_stars: 66
 tags: 
   - component-library
   - ui

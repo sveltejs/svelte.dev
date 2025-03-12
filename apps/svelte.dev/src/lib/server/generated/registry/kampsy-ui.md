@@ -6,6 +6,7 @@ author: "kampsy"
 homepage: "https://ui.kampsy.xyz"
 downloads: 43
 updated: "2025-01-23T21:22:41.406Z"
+github_stars: 157
 tags: 
   - component-library
   - ui

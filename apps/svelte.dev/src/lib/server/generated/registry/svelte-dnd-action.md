@@ -7,6 +7,7 @@ homepage: "https://github.com/isaacHagoel/svelte-dnd-action#readme"
 downloads: 38867
 dependents: 33
 updated: "2025-02-02T04:10:59.627Z"
+github_stars: 1910
 tags: 
   - ui
   - utility

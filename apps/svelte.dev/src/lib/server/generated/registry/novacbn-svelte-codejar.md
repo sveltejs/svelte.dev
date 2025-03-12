@@ -8,6 +8,7 @@ downloads: 70
 dependents: 1
 updated: "2022-03-05T09:50:20.437Z"
 outdated: true
+github_stars: 23
 tags: 
   - tooling
   - ui

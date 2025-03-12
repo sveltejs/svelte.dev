@@ -6,6 +6,7 @@ author: "leodog896"
 homepage: "https://leodog896.github.io/svelte-persistent"
 downloads: 1
 updated: "2023-09-04T14:53:40.247Z"
+github_stars: 2
 tags: 
   - utility
 ---

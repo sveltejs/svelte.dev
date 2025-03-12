@@ -6,6 +6,7 @@ author: "metonym"
 homepage: "https://github.com/metonym/svelte-codicons"
 downloads: 577
 updated: "2024-08-25T15:52:45.861Z"
+github_stars: 4
 tags: 
   - ui
 ---

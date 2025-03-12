@@ -6,6 +6,7 @@ author: "elcobvg"
 homepage: "https://github.com/elcobvg/sapper-store#readme"
 updated: "2018-07-29T01:27:54.085Z"
 outdated: true
+github_stars: 5
 tags: 
   - utility
 ---

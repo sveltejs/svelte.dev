@@ -7,6 +7,7 @@ homepage: "https://github.com/vikignt/svelte-ui#readme"
 downloads: 5
 updated: "2019-11-27T19:47:49.800Z"
 outdated: true
+github_stars: 317
 tags: 
   - ui
 ---

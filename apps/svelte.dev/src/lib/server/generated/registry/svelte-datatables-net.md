@@ -6,6 +6,7 @@ author: "joaquim.neto.cel"
 homepage: "https://github.com/joaquimnetocel/svelte-datatables-net#readme"
 downloads: 350
 updated: "2025-02-16T21:17:43.890Z"
+github_stars: 28
 tags: 
   - component-library
 ---

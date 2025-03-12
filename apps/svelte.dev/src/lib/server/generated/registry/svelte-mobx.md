@@ -7,6 +7,7 @@ homepage: "https://github.com/xelaok/svelte-mobx#readme"
 downloads: 4
 updated: "2020-12-29T02:31:16.447Z"
 outdated: true
+github_stars: 48
 tags: 
   - utility
 ---

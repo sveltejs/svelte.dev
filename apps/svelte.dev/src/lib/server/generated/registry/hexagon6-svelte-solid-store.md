@@ -6,6 +6,7 @@ author: "hexagon6"
 homepage: "https://github.com/hexagon6/svelte-solid-store#readme"
 downloads: 2
 updated: "2024-05-21T09:52:43.589Z"
+github_stars: 1
 tags: 
   - utility
 ---

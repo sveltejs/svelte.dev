@@ -7,6 +7,7 @@ homepage: "https://github.com/kayodebristol/svelte-robot-factory#readme"
 downloads: 1
 updated: "2020-05-01T10:06:19.196Z"
 outdated: true
+github_stars: 15
 tags: 
   - utility
 ---

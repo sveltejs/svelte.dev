@@ -7,6 +7,7 @@ homepage: "https://github.com/sibiraj-s/svelte-tiptap#readme"
 downloads: 6310
 dependents: 4
 updated: "2024-12-01T10:24:47.495Z"
+github_stars: 278
 tags: 
   - component-library
   - ui

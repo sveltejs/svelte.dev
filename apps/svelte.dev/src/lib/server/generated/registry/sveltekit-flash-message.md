@@ -6,6 +6,7 @@ author: "ciscoheat"
 homepage: "https://github.com/ciscoheat/sveltekit-flash-message#readme"
 downloads: 7336
 updated: "2025-01-23T11:43:38.078Z"
+github_stars: 302
 tags: 
   - utility
 ---

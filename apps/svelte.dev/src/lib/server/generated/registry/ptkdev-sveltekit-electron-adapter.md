@@ -7,6 +7,7 @@ homepage: "https://github.com/ptkdev/sveltekit-electron-adapter"
 downloads: 22
 updated: "2023-02-11T20:20:42.101Z"
 outdated: true
+github_stars: 78
 tags: 
   - adapter
   - tooling

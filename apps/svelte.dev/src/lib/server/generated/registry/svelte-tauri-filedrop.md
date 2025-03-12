@@ -6,6 +6,7 @@ author: "probablykasper"
 homepage: "https://github.com/probablykasper/svelte-tauri-filedrop#readme"
 downloads: 4
 updated: "2024-10-23T08:26:58.326Z"
+github_stars: 39
 tags: 
   - ui
   - utility

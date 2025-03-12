@@ -6,6 +6,7 @@ author: "bewinxed"
 homepage: "https://github.com/bewinxed/wallet-adapter-svelte-ui#readme"
 downloads: 40
 updated: "2024-08-27T19:09:03.201Z"
+github_stars: 8
 tags: 
   - ui
   - integration

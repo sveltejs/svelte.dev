@@ -6,6 +6,7 @@ author: "lostisworld"
 homepage: "https://github.com/LoStis-World/svelte-classlist-preprocess#readme"
 downloads: 1
 updated: "2024-06-29T10:56:39.749Z"
+github_stars: 4
 tags: 
   - preprocessor
 ---

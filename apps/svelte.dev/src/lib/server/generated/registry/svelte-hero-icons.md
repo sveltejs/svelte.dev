@@ -7,6 +7,7 @@ homepage: "https://github.com/JustinVoitel/svelte-hero-icons#readme"
 downloads: 3675
 dependents: 11
 updated: "2024-07-16T07:28:07.710Z"
+github_stars: 120
 tags: 
   - ui
 ---

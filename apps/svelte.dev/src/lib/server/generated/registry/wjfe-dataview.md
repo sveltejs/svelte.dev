@@ -6,6 +6,7 @@ author: "webjose"
 homepage: "https://wjsoftware.github.io/wjfe-dataview/"
 downloads: 53
 updated: "2025-01-12T17:04:00.549Z"
+github_stars: 13
 tags: 
   - component-library
   - ui

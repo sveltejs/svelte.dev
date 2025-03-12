@@ -6,6 +6,7 @@ author: "stonetoast"
 homepage: "https://orefalo.github.io/svelte-splitpanes/"
 downloads: 1
 updated: "2024-10-30T03:33:48.375Z"
+github_stars: 417
 tags: 
   - ui
 ---

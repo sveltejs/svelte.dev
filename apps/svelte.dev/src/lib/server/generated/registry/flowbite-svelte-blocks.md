@@ -7,6 +7,7 @@ homepage: "https://flowbite-svelte-blocks.codewithshin.com/"
 downloads: 4942
 dependents: 1
 updated: "2024-10-17T05:41:13.142Z"
+github_stars: 102
 tags: 
   - component-library
   - ui

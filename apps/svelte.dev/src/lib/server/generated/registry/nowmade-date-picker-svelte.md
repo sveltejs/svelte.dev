@@ -6,6 +6,7 @@ author: "plcharriere"
 homepage: "https://date-picker-svelte.kasper.space"
 downloads: 1
 updated: "2023-03-16T04:47:13.547Z"
+github_stars: 328
 tags: 
   - ui
   - utility

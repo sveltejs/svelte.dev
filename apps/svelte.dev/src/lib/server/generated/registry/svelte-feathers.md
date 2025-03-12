@@ -6,6 +6,7 @@ author: "shinichiokada"
 homepage: "https://svelte-feathers.codewithshin.com"
 downloads: 51
 updated: "2024-06-09T03:43:03.719Z"
+github_stars: 4
 tags: 
   - ui
   - component-library

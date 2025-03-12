@@ -6,6 +6,7 @@ author: "cdellacqua"
 homepage: "https://github.com/cdellacqua/svelte-stack-router"
 updated: "2021-11-16T22:04:58.397Z"
 outdated: true
+github_stars: 42
 tags: 
   - router
 ---

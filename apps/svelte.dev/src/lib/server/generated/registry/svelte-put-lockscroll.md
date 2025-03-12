@@ -7,6 +7,7 @@ homepage: "https://svelte-put.vnphanquang.com/docs/lockscroll"
 downloads: 113
 dependents: 3
 updated: "2024-10-25T05:17:14.244Z"
+github_stars: 897
 tags: 
   - utility
   - dom

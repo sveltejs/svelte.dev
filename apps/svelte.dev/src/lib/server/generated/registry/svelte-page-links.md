@@ -6,6 +6,7 @@ author: "captaincodeman"
 homepage: "https://captaincodeman.github.io/svelte-page-links/"
 downloads: 1
 updated: "2024-09-14T19:10:03.271Z"
+github_stars: 4
 tags: 
   - utility
 ---

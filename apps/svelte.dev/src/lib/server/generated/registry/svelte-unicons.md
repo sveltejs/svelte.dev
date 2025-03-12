@@ -7,6 +7,7 @@ homepage: "https://github.com/devShamim/svelte-unicons#readme"
 downloads: 1
 updated: "2022-10-09T04:56:57.666Z"
 outdated: true
+github_stars: 3
 tags: 
   - ui
 ---

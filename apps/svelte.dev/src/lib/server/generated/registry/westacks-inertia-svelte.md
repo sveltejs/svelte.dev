@@ -6,6 +6,7 @@ author: "punyflash"
 homepage: "https://inertiajs.com/"
 downloads: 30
 updated: "2024-03-30T06:38:07.447Z"
+github_stars: 15
 tags: 
   - integration
 ---

@@ -6,6 +6,7 @@ author: "thurti"
 homepage: "https://thurti.github.io/svelte-prism-action/public/"
 downloads: 3
 updated: "2024-04-18T10:35:33.442Z"
+github_stars: 3
 tags: 
   - utility
   - ui

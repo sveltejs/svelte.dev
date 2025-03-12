@@ -6,6 +6,7 @@ author: "j_josu"
 homepage: "https://github.com/josu-dev/svelte-hypercommands#readme"
 downloads: 4
 updated: "2024-04-10T16:18:36.263Z"
+github_stars: 3
 tags: 
   - ui
   - utility

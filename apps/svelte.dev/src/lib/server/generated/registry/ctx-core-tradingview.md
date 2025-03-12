@@ -6,6 +6,7 @@ author: "btakita"
 homepage: "https://github.com/ctx-core/tradingview#readme"
 downloads: 116
 updated: "2024-09-01T17:09:47.798Z"
+github_stars: 1
 tags: 
   - integration
 ---

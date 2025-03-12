@@ -7,6 +7,7 @@ homepage: "https://github.com/cafebazaar/async-actions#readme"
 downloads: 6
 updated: "2021-01-01T12:03:11.456Z"
 outdated: true
+github_stars: 20
 tags: 
   - utility
 ---

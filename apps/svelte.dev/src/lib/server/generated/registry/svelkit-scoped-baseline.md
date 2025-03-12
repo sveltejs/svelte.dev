@@ -7,6 +7,7 @@ homepage: "https://github.com/kenoxa/svelkit#readme"
 downloads: 22
 updated: "2020-07-16T19:45:05.773Z"
 outdated: true
+github_stars: 7
 tags: 
   - ui
 ---

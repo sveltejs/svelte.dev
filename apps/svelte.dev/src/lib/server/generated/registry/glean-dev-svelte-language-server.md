@@ -7,6 +7,7 @@ homepage: "https://github.com/UnwrittenFun/svelte-language-server#readme"
 downloads: 4
 updated: "2019-06-07T16:13:08.142Z"
 outdated: true
+github_stars: 97
 tags: 
   - tooling
 ---

@@ -6,6 +6,7 @@ author: "nebez"
 homepage: "https://github.com/LottieFiles/svelte-lottie-player"
 downloads: 1
 updated: "2024-01-11T18:30:44.529Z"
+github_stars: 137
 tags: 
   - media
   - ui

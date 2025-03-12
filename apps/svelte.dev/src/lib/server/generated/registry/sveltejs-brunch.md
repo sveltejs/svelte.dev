@@ -7,6 +7,7 @@ homepage: "https://github.com/StarpTech/sveltejs-brunch#readme"
 downloads: 2
 updated: "2021-07-27T22:26:01.518Z"
 outdated: true
+github_stars: 6
 tags: 
   - tooling
 ---

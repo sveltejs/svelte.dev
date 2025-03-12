@@ -6,6 +6,7 @@ author: "profmancusoa"
 homepage: "https://github.com/free-icons/svelte-free-icons#readme"
 downloads: 4
 updated: "2025-02-16T14:50:07.377Z"
+github_stars: 3
 tags: 
   - ui
 ---

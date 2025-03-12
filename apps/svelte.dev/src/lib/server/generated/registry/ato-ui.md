@@ -6,6 +6,7 @@ author: "bennymi"
 homepage: "https://ato-ui.vercel.app/"
 downloads: 2
 updated: "2023-11-25T19:05:39.718Z"
+github_stars: 79
 tags: 
   - component-library
   - ui

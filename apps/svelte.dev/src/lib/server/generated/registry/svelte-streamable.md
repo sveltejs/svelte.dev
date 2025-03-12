@@ -7,6 +7,7 @@ homepage: "https://github.com/sveltetools/svelte-streamable#readme"
 downloads: 72
 updated: "2022-07-27T14:41:23.079Z"
 outdated: true
+github_stars: 10
 tags: 
   - utility
   - server

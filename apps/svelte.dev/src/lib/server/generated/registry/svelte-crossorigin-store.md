@@ -6,6 +6,7 @@ author: "idleberg"
 homepage: "https://github.com/idleberg/svelte-crossorigin-store#readme"
 downloads: 5
 updated: "2024-04-22T22:14:17.246Z"
+github_stars: 1
 tags: 
   - utility
 ---

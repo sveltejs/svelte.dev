@@ -6,6 +6,7 @@ author: "megakuul"
 homepage: "https://github.com/megakuul/battleshiper#readme"
 downloads: 2
 updated: "2024-10-03T18:26:22.551Z"
+github_stars: 2
 tags: 
   - adapter
 ---

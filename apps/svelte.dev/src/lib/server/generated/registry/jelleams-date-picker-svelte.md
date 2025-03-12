@@ -6,6 +6,7 @@ author: "jelleams"
 homepage: "https://date-picker-svelte.kasper.space"
 downloads: 1
 updated: "2023-08-27T10:27:46.974Z"
+github_stars: 328
 tags: 
   - ui
 ---

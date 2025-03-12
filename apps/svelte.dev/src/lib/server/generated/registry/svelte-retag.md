@@ -6,6 +6,7 @@ author: "patricknelson"
 homepage: "https://github.com/patricknelson/svelte-retag#readme"
 downloads: 58
 updated: "2024-06-25T01:40:34.502Z"
+github_stars: 41
 tags: 
   - component-library
   - dom

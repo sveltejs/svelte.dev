@@ -6,6 +6,7 @@ author: "notplancha"
 homepage: "https://github.com/notPlancha/sveltify-creator#readme"
 downloads: 1
 updated: "2023-07-03T01:53:22.729Z"
+github_stars: 1
 tags: 
   - tooling
 ---

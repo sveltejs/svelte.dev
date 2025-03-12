@@ -6,6 +6,7 @@ author: "tialro"
 homepage: "https://github.com/TiAlRo/RNBOKit#readme"
 downloads: 110
 updated: "2025-03-04T16:05:27.731Z"
+github_stars: 1
 tags: 
   - integration
 ---

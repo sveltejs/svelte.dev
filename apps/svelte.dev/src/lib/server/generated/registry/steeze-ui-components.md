@@ -7,6 +7,7 @@ homepage: "https://steeze-ui.com"
 downloads: 3
 updated: "2022-10-06T12:20:44.564Z"
 outdated: true
+github_stars: 31
 tags: 
   - component-library
   - ui

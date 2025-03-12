@@ -167,6 +167,13 @@ export interface Package {
 	/** Last update timestamp */
 	updated?: string;
 
+	/** Number of GitHub stars */
+	github_stars?: number;
+
+	outdated?: boolean;
+
+	deprecated?: boolean;
+
 	/** Tags for categorizing the package */
 	tags: string[];
 }
@@ -195,12 +202,6 @@ function create_registry() {
 	for (const frontmatter of Object.values(registry_docs)) {
 		const json = extract_frontmatter(frontmatter);
 		json.metadata.description = markdown_to_plain_text(json.metadata.description || '');
-
-		// @ts-ignore
-		json.metadata.tags = json.metadata.tags
-			.split('\n')
-			.filter(Boolean)
-			.map((v) => v.replace('-', '').trim());
 
 		output.push(json.metadata as unknown as Package);
 	}

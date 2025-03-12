@@ -5,6 +5,7 @@ repo_url: "https://github.com/1boch1/svelte-achievements-bar"
 author: "1boch1"
 homepage: "https://github.com/1boch1/svelte-achievements-bar#readme"
 updated: "2024-09-23T21:21:45.123Z"
+github_stars: 1
 tags: 
   - ui
 ---

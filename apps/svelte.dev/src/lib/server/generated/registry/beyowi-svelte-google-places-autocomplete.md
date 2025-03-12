@@ -6,6 +6,7 @@ author: "cedricbyw"
 homepage: "https://github.com/beyowi/svelte-google-places-autocomplete#readme"
 downloads: 2
 updated: "2023-05-30T00:39:06.483Z"
+github_stars: 1
 tags: 
   - utility
 ---

@@ -7,6 +7,7 @@ homepage: "https://github.com/openizr/perseid"
 downloads: 3
 dependents: 3
 updated: "2024-08-08T14:14:11.059Z"
+github_stars: 12
 tags: 
   - utility
 ---

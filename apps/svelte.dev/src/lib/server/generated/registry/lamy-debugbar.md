@@ -6,6 +6,7 @@ author: "lnfel"
 homepage: "https://lnfel.github.io/lamy-debugbar/"
 downloads: 1
 updated: "2023-11-27T03:20:21.232Z"
+github_stars: 12
 tags: 
   - tooling
 ---

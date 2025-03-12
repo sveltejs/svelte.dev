@@ -65,7 +65,7 @@ export class RequestQueue {
 }
 
 /** Singleton request queue instance */
-export let request_queue: RequestQueue;
+export let request_queue = new RequestQueue(10);
 
 /** Configuration options for superfetch */
 export interface SuperfetchOptions {
@@ -81,6 +81,7 @@ export interface SuperfetchOptions {
 
 /**
  * Fetch JSON with concurrency limit and retry logic
+ * Skip retries for 404 responses
  */
 export function superfetch(
 	url: string | URL,
@@ -114,6 +115,12 @@ export function superfetch(
 						const res = await fetch(url, fetch_options);
 
 						if (!res.ok) {
+							// Don't retry 404s, just return them
+							if (res.status === 404) {
+								console.log(`404 Not Found for ${url} (Not retrying)`);
+								return res;
+							}
+
 							console.error(`[${url}] ${res.status} ${res.statusText} (Attempt ${attempt})`);
 							throw new Error(`HTTP error ${res.status}`);
 						}
@@ -152,7 +159,7 @@ export function superfetch(
 	});
 }
 
-const HEADERS = { 'User-Agent': 'svelte.dev/registry; v0.5' };
+export const HEADERS = { 'User-Agent': 'svelte.dev/registry; v0.5' };
 
 /**
  * Subtracts a specified number of days from a date
@@ -369,7 +376,10 @@ export interface SearchOptions {
 	limit?: number;
 
 	/** Whether to fetch the full package.json */
-	fetch_package_json?: boolean;
+	fetch?: {
+		package_json?: boolean;
+		github_stars?: boolean;
+	};
 
 	/** The size of each yielded batch */
 	batch_size?: number;
@@ -408,7 +418,7 @@ export async function* stream_search_by_keywords({
 	keywords,
 	ranking = 'quality',
 	limit = Infinity,
-	fetch_package_json = true,
+	fetch = { package_json: true },
 	batch_size = 10,
 	skip_cached = false
 }: SearchOptions): AsyncGenerator<Map<string, any>> {
@@ -474,7 +484,7 @@ export async function* stream_search_by_keywords({
 					}
 
 					// Fetch package.json if needed
-					if (fetch_package_json) {
+					if (fetch.package_json) {
 						try {
 							const response = await superfetch(`${REGISTRY_BASE_URL}${obj.package.name}`, {
 								headers: HEADERS

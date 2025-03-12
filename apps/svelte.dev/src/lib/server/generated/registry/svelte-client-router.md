@@ -6,6 +6,7 @@ author: "arthurgermano"
 homepage: "https://arthurgermano.github.io/svelte-client-router/#/svelte-client-router/v2/presentation"
 downloads: 4
 updated: "2024-04-08T20:54:07.076Z"
+github_stars: 17
 tags: 
   - router
 ---

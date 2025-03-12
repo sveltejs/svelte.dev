@@ -7,6 +7,7 @@ homepage: "https://github.com/dai-shi/svelte3-redux#readme"
 downloads: 2
 updated: "2020-07-02T08:24:15.662Z"
 outdated: true
+github_stars: 30
 tags: 
   - utility
 ---

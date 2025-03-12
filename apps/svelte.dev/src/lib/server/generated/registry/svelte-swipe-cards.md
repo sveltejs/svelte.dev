@@ -6,6 +6,7 @@ author: "fluryr"
 homepage: "https://github.com/remoflury/svelte-swipe-cards#readme"
 downloads: 17
 updated: "2024-08-26T13:17:11.268Z"
+github_stars: 2
 tags: 
   - ui
 ---

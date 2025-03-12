@@ -6,6 +6,7 @@ author: "ste.djokovic"
 homepage: "https://sdk.vercel.ai/docs"
 downloads: 1
 updated: "2023-11-02T13:54:41.246Z"
+github_stars: 12555
 tags: 
   - integration
 ---

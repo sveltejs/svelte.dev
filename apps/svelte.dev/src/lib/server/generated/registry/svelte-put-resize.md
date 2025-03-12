@@ -7,6 +7,7 @@ homepage: "https://github.com/vnphanquang/svelte-put/tree/next/packages/resize"
 downloads: 119
 dependents: 1
 updated: "2024-10-25T05:17:45.319Z"
+github_stars: 897
 tags: 
   - utility
   - dom

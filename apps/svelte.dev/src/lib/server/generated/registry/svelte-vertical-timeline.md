@@ -5,6 +5,7 @@ repo_url: "https://github.com/K-Sato1995/svelte-vertical-timeline"
 author: "sato0130"
 downloads: 673
 updated: "2024-11-16T03:28:55.958Z"
+github_stars: 116
 tags: 
   - ui
 ---

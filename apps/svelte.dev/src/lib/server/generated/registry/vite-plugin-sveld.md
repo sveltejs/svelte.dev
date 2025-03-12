@@ -6,6 +6,7 @@ author: "mattjennings"
 homepage: "https://github.com/mattjennings/vite-plugin-sveld#readme"
 downloads: 82
 updated: "2024-10-11T03:48:25.051Z"
+github_stars: 20
 tags: 
   - tooling
   - preprocessor

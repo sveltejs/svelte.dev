@@ -6,6 +6,7 @@ author: "umaranis"
 homepage: "https://github.com/umaranis/svelte-lexical#readme"
 downloads: 864
 updated: "2025-03-05T12:13:56.510Z"
+github_stars: 399
 tags: 
   - ui
 ---

@@ -7,6 +7,7 @@ homepage: "https://github.com/puruvj/neoconfetti/tree/main/packages/svelte#readm
 downloads: 23092
 dependents: 1
 updated: "2025-03-09T12:58:01.521Z"
+github_stars: 275
 tags: 
   - ui
 ---

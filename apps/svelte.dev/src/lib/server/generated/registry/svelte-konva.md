@@ -7,6 +7,7 @@ homepage: "https://konvajs.org/docs/svelte"
 downloads: 1370
 dependents: 2
 updated: "2023-08-24T21:45:43.140Z"
+github_stars: 67
 tags: 
   - ui
 ---
