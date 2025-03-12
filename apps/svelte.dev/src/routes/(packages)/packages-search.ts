@@ -20,9 +20,12 @@ let nextId = 0;
 const EXACT_NAME_MATCH_BOOST = 10;
 const TAG_MATCH_BOOST = 5;
 const NAME_MATCH_BOOST = 3;
-const DOWNLOADS_BOOST = 1.0; // Stronger boost for popular packages
-const DEPENDENTS_BOOST = 1.5; // Higher weight for packages others depend on
+const DEPENDENTS_BOOST = 1.5; // Highest weight for packages others depend on
+const GITHUB_STARS_BOOST = 1.2; // Medium weight for GitHub stars (between dependents and downloads)
+const DOWNLOADS_BOOST = 1.0; // Lower weight for NPM downloads
 const RECENT_UPDATE_BOOST = 0.2;
+const OUTDATED_PENALTY = -10; // Substantial penalty for outdated packages
+const DEPRECATED_PENALTY = -20; // Severe penalty for deprecated packages
 
 /**
  * Simple utility to strip HTML tags from text
@@ -73,7 +76,13 @@ export function init(packages: Package[]) {
 /**
  * Sort criteria options for package search results
  */
-export type SortCriterion = 'popularity' | 'downloads' | 'dependents' | 'updated' | 'name';
+export type SortCriterion =
+	| 'popularity'
+	| 'downloads'
+	| 'dependents'
+	| 'github_stars'
+	| 'updated'
+	| 'name';
 
 /**
  * Search for packages matching the query and/or tags, returning a flat list sorted by the specified criterion
@@ -170,24 +179,24 @@ export function search(
 						score += NAME_MATCH_BOOST;
 					}
 
-					// Boost popular packages
-					if (pkg.downloads) {
-						// Log scale for downloads to avoid domination by very popular packages
-						score += Math.log10(pkg.downloads + 1) * DOWNLOADS_BOOST;
+					// Apply a balanced scoring system with log scales
+					const dependents = pkg.dependents || 0;
+					const stars = pkg.github_stars || 0;
+					const downloads = pkg.downloads || 0;
+
+					// Use logarithmic scales to prevent small numbers from dominating
+					// Each metric gets its own weighted contribution
+					score += Math.log10(dependents + 1) * 10 * DEPENDENTS_BOOST;
+					score += Math.log10(stars + 1) * 5 * GITHUB_STARS_BOOST;
+					score += Math.log10(downloads + 1) * DOWNLOADS_BOOST;
+
+					// Apply penalties for outdated or deprecated packages
+					if (pkg.outdated) {
+						score += OUTDATED_PENALTY;
 					}
 
-					// Boost packages with many dependents
-					if (pkg.dependents) {
-						// Dependents are weighted more heavily as they indicate package reliability
-						score += Math.log10(pkg.dependents + 1) * 10 * DEPENDENTS_BOOST;
-					}
-
-					// Combined popularity score (packages with both downloads and dependents are prioritized)
-					if (pkg.downloads && pkg.dependents) {
-						// Main formula: Downloads × Dependents
-						// Using log to prevent extremely popular packages from completely dominating
-						const popularityFormula = pkg.downloads * pkg.dependents;
-						score += Math.log10(popularityFormula + 1) * 2; // Higher weight for the formula
+					if (pkg.deprecated) {
+						score += DEPRECATED_PENALTY;
 					}
 
 					// Boost recently updated packages
@@ -243,16 +252,42 @@ export function search(
 function sortPackages(a: Package, b: Package, criterion: SortCriterion): number {
 	switch (criterion) {
 		case 'popularity':
-			// Sort by Downloads × Dependents formula
-			const aPopularity = (a.downloads || 1) * (a.dependents || 1);
-			const bPopularity = (b.downloads || 1) * (b.dependents || 1);
-			return bPopularity - aPopularity;
+			// Create a balanced scoring system using logarithmic scales to prevent small numbers from dominating
+			const aDependents = a.dependents || 0;
+			const bDependents = b.dependents || 0;
+			const aStars = a.github_stars || 0;
+			const bStars = b.github_stars || 0;
+			const aDownloads = a.downloads || 0;
+			const bDownloads = b.downloads || 0;
+
+			// Use log scale with appropriate weights to maintain priority but prevent small values from dominating
+			// Log base 10 with +1 to handle zeros, multiplied by importance factor
+			let aScore =
+				Math.log10(aDependents + 1) * 3 +
+				Math.log10(aStars + 1) * 2 +
+				Math.log10(aDownloads + 1) * 1;
+
+			let bScore =
+				Math.log10(bDependents + 1) * 3 +
+				Math.log10(bStars + 1) * 2 +
+				Math.log10(bDownloads + 1) * 1;
+
+			// Apply penalties for outdated or deprecated packages
+			if (a.outdated) aScore += OUTDATED_PENALTY;
+			if (a.deprecated) aScore += DEPRECATED_PENALTY;
+			if (b.outdated) bScore += OUTDATED_PENALTY;
+			if (b.deprecated) bScore += DEPRECATED_PENALTY;
+
+			return bScore - aScore;
 
 		case 'downloads':
 			return (b.downloads || 0) - (a.downloads || 0);
 
 		case 'dependents':
 			return (b.dependents || 0) - (a.dependents || 0);
+
+		case 'github_stars':
+			return (b.github_stars || 0) - (a.github_stars || 0);
 
 		case 'updated':
 			// Sort by most recently updated
@@ -265,10 +300,32 @@ function sortPackages(a: Package, b: Package, criterion: SortCriterion): number 
 			return a.name.localeCompare(b.name);
 
 		default:
-			// Default to popularity if an invalid criterion is provided
-			const aDefaultPop = (a.downloads || 1) * (a.dependents || 1);
-			const bDefaultPop = (b.downloads || 1) * (b.dependents || 1);
-			return bDefaultPop - aDefaultPop;
+			// Default to balanced popularity scoring if an invalid criterion is provided
+			const aDef = a.dependents || 0;
+			const bDef = b.dependents || 0;
+			const aDefStars = a.github_stars || 0;
+			const bDefStars = b.github_stars || 0;
+			const aDefDownloads = a.downloads || 0;
+			const bDefDownloads = b.downloads || 0;
+
+			// Use log scale with appropriate weights
+			let aDefScore =
+				Math.log10(aDef + 1) * 3 +
+				Math.log10(aDefStars + 1) * 2 +
+				Math.log10(aDefDownloads + 1) * 1;
+
+			let bDefScore =
+				Math.log10(bDef + 1) * 3 +
+				Math.log10(bDefStars + 1) * 2 +
+				Math.log10(bDefDownloads + 1) * 1;
+
+			// Apply penalties for outdated or deprecated packages
+			if (a.outdated) aDefScore += OUTDATED_PENALTY;
+			if (a.deprecated) aDefScore += DEPRECATED_PENALTY;
+			if (b.outdated) bDefScore += OUTDATED_PENALTY;
+			if (b.deprecated) bDefScore += DEPRECATED_PENALTY;
+
+			return bDefScore - aDefScore;
 	}
 }
 
@@ -296,13 +353,21 @@ export function groupByTags(packages: Package[]): PackageGroup[] {
 
 	// Convert to final format and sort groups by highest package popularity
 	return Object.values(grouped).sort((a, b) => {
-		// Sort groups by highest package popularity
-		const maxPopularityA = Math.max(
-			...a.packages.map((p) => (p.downloads || 1) * (p.dependents || 1))
-		);
-		const maxPopularityB = Math.max(
-			...b.packages.map((p) => (p.downloads || 1) * (p.dependents || 1))
-		);
+		// Calculate balanced popularity scores with logarithmic scaling
+		const getPopularity = (pkg: Package) => {
+			const dependents = pkg.dependents || 0;
+			const stars = pkg.github_stars || 0;
+			const downloads = pkg.downloads || 1;
+
+			// Use balanced logarithmic formula with proper weighting
+			return (
+				Math.log10(dependents + 1) * 3 + Math.log10(stars + 1) * 2 + Math.log10(downloads + 1) * 1
+			);
+		};
+
+		const maxPopularityA = Math.max(...a.packages.map(getPopularity));
+		const maxPopularityB = Math.max(...b.packages.map(getPopularity));
+
 		return maxPopularityB - maxPopularityA;
 	});
 }
@@ -319,20 +384,6 @@ export function getPackage(name: string): Package | undefined {
  */
 export function getAllPackages(): Package[] {
 	return Array.from(packagesMap.values());
-}
-
-/**
- * Get packages by tag
- */
-export function getPackagesByTag(tag: string): Package[] {
-	return Array.from(packagesMap.values())
-		.filter((pkg) => pkg.tags && pkg.tags.includes(tag))
-		.sort((a, b) => {
-			// Sort by Downloads × Dependents formula
-			const aFormula = (a.downloads || 1) * (a.dependents || 1);
-			const bFormula = (b.downloads || 1) * (b.dependents || 1);
-			return bFormula - aFormula;
-		});
 }
 
 /**
@@ -361,9 +412,25 @@ export function getPackagesByAuthor(author: string): Package[] {
 	return Array.from(packagesMap.values())
 		.filter((pkg) => pkg.author === author)
 		.sort((a, b) => {
-			// Sort by Downloads × Dependents formula
-			const aFormula = (a.downloads || 1) * (a.dependents || 1);
-			const bFormula = (b.downloads || 1) * (b.dependents || 1);
-			return bFormula - aFormula;
+			// Sort with balanced logarithmic scoring
+			const aDependents = a.dependents || 0;
+			const bDependents = b.dependents || 0;
+			const aStars = a.github_stars || 0;
+			const bStars = b.github_stars || 0;
+			const aDownloads = a.downloads || 1;
+			const bDownloads = b.downloads || 1;
+
+			// Calculate balanced scores using logarithmic scale
+			const aScore =
+				Math.log10(aDependents + 1) * 3 +
+				Math.log10(aStars + 1) * 2 +
+				Math.log10(aDownloads + 1) * 1;
+
+			const bScore =
+				Math.log10(bDependents + 1) * 3 +
+				Math.log10(bStars + 1) * 2 +
+				Math.log10(bDownloads + 1) * 1;
+
+			return bScore - aScore;
 		});
 }
