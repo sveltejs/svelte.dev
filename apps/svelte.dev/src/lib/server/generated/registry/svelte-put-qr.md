@@ -2,13 +2,11 @@
 name: "@svelte-put/qr"
 description: "render QR as svg or img"
 repo_url: "https://github.com/vnphanquang/svelte-put"
-author: "vnphanquang"
+author: "Quang Phan"
 homepage: "https://svelte-put.vnphanquang.com/docs/qr"
-downloads: 5093
+downloads: 4054
 dependents: 1
 updated: "2024-11-29T03:48:15.759Z"
-github_stars: 897
 tags: 
   - ui
-  - media
 ---

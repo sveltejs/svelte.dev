@@ -2,13 +2,11 @@
 name: "svelte-navigator"
 description: "Simple, accessible routing for Svelte"
 repo_url: "https://github.com/mefechoel/svelte-navigator"
-author: "mefechoel"
+author: "Michel Strelow @mefechoel"
 homepage: "https://github.com/mefechoel/svelte-navigator#readme"
-downloads: 5439
+downloads: 4958
 dependents: 1
 updated: "2022-08-27T16:14:14.500Z"
-outdated: true
-github_stars: 513
 tags: 
   - router
 ---

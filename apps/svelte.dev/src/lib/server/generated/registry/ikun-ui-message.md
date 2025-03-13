@@ -1,6 +1,6 @@
 ---
 name: "@ikun-ui/message"
-description: "Clean description"
+description: "ERROR: No README data found!"
 author: "baiwusanyu"
 downloads: 11
 dependents: 1

@@ -2,12 +2,10 @@
 name: "svelte-intl"
 description: "Internationalize your Svelte 3 apps"
 repo_url: "https://github.com/Panya/svelte-intl"
-author: "panya"
+author: "Cristóvão Trevisan"
 homepage: "https://github.com/Panya/svelte-intl"
-downloads: 101
+downloads: 85
 updated: "2022-04-04T11:16:49.037Z"
-outdated: true
-github_stars: 47
 tags: 
   - utility
 ---

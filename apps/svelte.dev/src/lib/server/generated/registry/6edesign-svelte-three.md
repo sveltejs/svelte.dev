@@ -1,10 +1,10 @@
 ---
 name: "@6edesign/svelte-three"
-description: "[Demo](https://6edesign.github.io/svelte-three-mograph/)"
+description: "Demo"
 author: "6edesign"
-downloads: 7
+downloads: 4
 updated: "2021-01-20T04:40:39.253Z"
-outdated: true
 tags: 
   - ui
+  - media
 ---

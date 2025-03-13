@@ -4,9 +4,8 @@ description: "FiveUI is an open source UI toolkit built with Svelte + Tailwind t
 repo_url: "https://github.com/wqy2dev/five-ui"
 author: "wqy2dev"
 homepage: "https://github.com/wqy2dev/five-ui#readme"
-downloads: 591
-updated: "2025-03-08T06:00:09.526Z"
-github_stars: 2
+downloads: 409
+updated: "2025-03-12T14:35:24.957Z"
 tags: 
   - component-library
   - ui

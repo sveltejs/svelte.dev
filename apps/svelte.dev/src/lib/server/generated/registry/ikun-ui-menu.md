@@ -6,5 +6,6 @@ downloads: 5
 dependents: 1
 updated: "2025-01-24T03:49:04.914Z"
 tags: 
+  - component-library
   - ui
 ---

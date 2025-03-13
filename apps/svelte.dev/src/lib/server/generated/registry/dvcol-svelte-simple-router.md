@@ -6,7 +6,6 @@ author: "dvcol"
 homepage: "https://github.com/dvcol/svelte-simple-router"
 downloads: 177
 updated: "2025-03-06T13:46:44.654Z"
-github_stars: 68
 tags: 
   - router
 ---

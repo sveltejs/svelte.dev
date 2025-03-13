@@ -1,13 +1,11 @@
 ---
 name: "@svonic/ui"
-description: "Testing"
+description: "Clean description"
 repo_url: "https://github.com/svonic/svonic"
-author: "daimyo"
+author: "Robert"
 homepage: "https://github.com/svonic/svonic#readme"
-downloads: 1
 updated: "2023-11-06T09:32:56.657Z"
-github_stars: 14
 tags: 
-  - ui
   - component-library
+  - ui
 ---

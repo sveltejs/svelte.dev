@@ -2,12 +2,11 @@
 name: "@sveltevietnam/ui"
 description: "UI kit for Svelte Vietnam"
 repo_url: "https://github.com/sveltevietnam/sveltevietnam.dev"
-author: "vnphanquang"
+author: "Svelte Vietnam"
 homepage: "https://www.sveltevietnam.dev"
-downloads: 2
+downloads: 10
 updated: "2024-06-03T11:50:26.858Z"
-github_stars: 34
 tags: 
-  - ui
   - component-library
+  - ui
 ---

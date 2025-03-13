@@ -1,10 +1,10 @@
 ---
 name: "svekyll-cli"
-description: "1. Why Svekyll? 1. Quickstart 1. Building your blog 1. Technical Notes"
-author: "chris"
+description: "Svekyll takes the simple conventions of Jekyll and marries them to the incredible power of Svelte."
+author: "chris@extrastatic.com"
 downloads: 116
 updated: "2025-02-27T20:55:19.722Z"
 tags: 
-  - content
   - tooling
+  - content
 ---

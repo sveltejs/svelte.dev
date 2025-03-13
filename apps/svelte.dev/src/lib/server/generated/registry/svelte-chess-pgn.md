@@ -1,10 +1,10 @@
 ---
 name: "svelte-chess-pgn"
-description: "a svelte component chess pgn reader"
+description: "A svelte component chess pgn reader"
 author: "mrbeast"
-downloads: 1
+downloads: 6
 updated: "2023-05-12T15:30:17.899Z"
 tags: 
-  - media
   - ui
+  - content
 ---

@@ -6,7 +6,6 @@ author: "jill64"
 homepage: "https://github.com/jill64/svelte-page-tab#readme"
 downloads: 2284
 updated: "2025-01-31T00:35:11.722Z"
-github_stars: 1
 tags: 
   - ui
   - router

@@ -2,6 +2,7 @@ import * as fsp from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { extract_frontmatter } from '@sveltejs/site-kit/markdown';
+import type { Package } from '../../src/lib/server/content.js';
 
 /**
  * Simple queue implementation for limiting concurrent requests
@@ -77,6 +78,129 @@ export interface SuperfetchOptions {
 
 	/** Base delay between retries in ms */
 	retry_delay?: number;
+}
+
+export class PackageCache {
+	static #clean_name(name: string) {
+		return name.replace(/@/g, '').replace(/\//g, '-');
+	}
+
+	static stringify(package_details: Package) {
+		let frontmatter = `---\nname: "${package_details.name}"\n`;
+
+		if (package_details.description) {
+			frontmatter += `description: "${package_details.description}"\n`;
+		}
+
+		if (package_details.repo_url) {
+			frontmatter += `repo_url: "${sanitize_github_url(package_details.repo_url)}"\n`;
+		}
+
+		if (package_details.author) {
+			frontmatter += `author: "${package_details.author}"\n`;
+		}
+
+		if (package_details.homepage) {
+			frontmatter += `homepage: "${package_details.homepage}"\n`;
+		}
+
+		if (package_details.downloads) {
+			frontmatter += `downloads: ${package_details.downloads}\n`;
+		}
+
+		if (package_details.dependents) {
+			frontmatter += `dependents: ${package_details.dependents}\n`;
+		}
+
+		if (package_details.updated) {
+			frontmatter += `updated: "${package_details.updated}"\n`;
+		}
+
+		if (package_details.deprecated) {
+			frontmatter += `deprecated: true\n`;
+		}
+
+		if (package_details.github_stars) {
+			frontmatter += `github_stars: ${package_details.github_stars}\n`;
+		}
+
+		frontmatter += `tags: \n${package_details.tags.map((tag = '') => `  - ${tag}`).join('\n')}\n`;
+
+		frontmatter += '---\n';
+
+		return frontmatter;
+	}
+
+	static parse(markdown: string) {
+		const { metadata } = extract_frontmatter(markdown);
+
+		return metadata;
+	}
+
+	static async get(pkg_name: string): Promise<Package | null> {
+		const pathname = path.resolve(
+			path.dirname(fileURLToPath(import.meta.url)),
+			`../../src/lib/server/generated/registry/${PackageCache.#clean_name(pkg_name)}.md`
+		);
+
+		try {
+			return PackageCache.parse(await fsp.readFile(pathname, { encoding: 'utf8' }));
+		} catch {
+			return null;
+		}
+	}
+
+	static async has(pkg_name: string): Promise<boolean> {
+		const pathname = path.resolve(
+			path.dirname(fileURLToPath(import.meta.url)),
+			`../../src/lib/server/generated/registry/${PackageCache.#clean_name(pkg_name)}.md`
+		);
+
+		try {
+			await fsp.stat(pathname);
+			return true;
+		} catch {
+			return false;
+		}
+	}
+
+	static async set(pkg_name: string, data: Package) {
+		const pathname = path.resolve(
+			path.dirname(fileURLToPath(import.meta.url)),
+			`../../src/lib/server/generated/registry/${PackageCache.#clean_name(pkg_name)}.md`
+		);
+
+		await fsp.writeFile(pathname, PackageCache.stringify(data));
+	}
+
+	static async *entries() {
+		const cache_dir = path.resolve(
+			path.dirname(fileURLToPath(import.meta.url)),
+			'../../src/lib/server/generated/registry'
+		);
+		const cache_dir_contents = await fsp.readdir(cache_dir);
+
+		for (const dirent of cache_dir_contents) {
+			const file_path = path.join(cache_dir, dirent);
+			yield [
+				dirent.replace(/.md$/, ''),
+				PackageCache.parse(await fsp.readFile(file_path, 'utf8'))
+			] as [string, Package];
+		}
+	}
+}
+
+/**
+ * Sanitizes GitHub URLs to a standard format
+ */
+export function sanitize_github_url(url: string): string {
+	return url
+		.replace('ssh://', '')
+		.replace('git+', '')
+		.replace('.git', '')
+		.replace('git:', 'https:')
+		.replace('git@github.com:', 'https://github.com/')
+		.replace('git@github.com/', 'https://github.com/');
 }
 
 /**
@@ -181,151 +305,6 @@ function format(date: Date, format_str: string): string {
 	return format_str.replace('yyyy', year.toString()).replace('MM', month).replace('dd', day);
 }
 
-/** Normalized package data from npm registry */
-interface NormalizedPackageData {
-	name: string;
-	description?: string;
-	homepage?: string;
-	keywords: string[];
-	repository?: string;
-	time: {
-		created: string;
-		modified: string;
-	};
-}
-
-/** Result of npm registry validation */
-type ValidationResult =
-	| { success: true; data: NormalizedPackageData }
-	| { success: false; error: string };
-
-/**
- * Validates that the input data matches the expected NPM registry schema format
- */
-function validate_npm_registry(data: unknown): ValidationResult {
-	try {
-		// Check if data is an object
-		if (!data || typeof data !== 'object' || Array.isArray(data)) {
-			throw new Error('Input must be an object');
-		}
-
-		// Create a new object to hold normalized data
-		const normalized: NormalizedPackageData = {
-			name: '',
-			keywords: [],
-			time: {
-				created: '',
-				modified: ''
-			}
-		};
-
-		const data_obj = data as Record<string, any>;
-
-		// Validate required string: name
-		if (!('name' in data_obj)) {
-			throw new Error('name is required');
-		}
-		if (typeof data_obj.name !== 'string' || data_obj.name.trim() === '') {
-			throw new Error('name must be a non-empty string');
-		}
-		normalized.name = data_obj.name;
-
-		// Validate optional string: description
-		if ('description' in data_obj) {
-			if (typeof data_obj.description !== 'string') {
-				throw new Error('description must be a string');
-			}
-			normalized.description = data_obj.description;
-		}
-
-		// Validate optional URL: homepage
-		if ('homepage' in data_obj) {
-			if (typeof data_obj.homepage !== 'string') {
-				throw new Error('homepage must be a string');
-			}
-
-			try {
-				// Check if valid URL
-				new URL(data_obj.homepage);
-				normalized.homepage = data_obj.homepage;
-			} catch (e) {
-				throw new Error('homepage must be a valid URL');
-			}
-		}
-
-		// Validate array of strings: keywords
-		normalized.keywords = [];
-		if ('keywords' in data_obj) {
-			if (!Array.isArray(data_obj.keywords)) {
-				throw new Error('keywords must be an array');
-			}
-
-			for (const keyword of data_obj.keywords) {
-				if (typeof keyword !== 'string') {
-					throw new Error('keywords must contain only strings');
-				}
-				normalized.keywords.push(keyword);
-			}
-		}
-
-		// Validate optional repository (string or object with url)
-		if ('repository' in data_obj) {
-			if (typeof data_obj.repository === 'string') {
-				normalized.repository = data_obj.repository;
-			} else if (
-				typeof data_obj.repository === 'object' &&
-				data_obj.repository !== null &&
-				'url' in data_obj.repository &&
-				typeof data_obj.repository.url === 'string'
-			) {
-				normalized.repository = data_obj.repository.url;
-			} else {
-				throw new Error('repository must be a string or an object with a url string');
-			}
-		}
-
-		// Validate time object with created and modified dates
-		if (!('time' in data_obj)) {
-			throw new Error('time is required');
-		}
-
-		if (typeof data_obj.time !== 'object' || data_obj.time === null) {
-			throw new Error('time must be an object');
-		}
-
-		if (!('created' in data_obj.time)) {
-			throw new Error('time.created is required');
-		}
-
-		if (!('modified' in data_obj.time)) {
-			throw new Error('time.modified is required');
-		}
-
-		if (typeof data_obj.time.created !== 'string') {
-			throw new Error('time.created must be a string');
-		}
-
-		if (typeof data_obj.time.modified !== 'string') {
-			throw new Error('time.modified must be a string');
-		}
-
-		normalized.time = {
-			created: data_obj.time.created,
-			modified: data_obj.time.modified
-		};
-
-		return {
-			success: true,
-			data: normalized
-		};
-	} catch (error) {
-		return {
-			success: false,
-			error: (error as Error).message
-		};
-	}
-}
-
 const API_BASE_URL = 'https://api.npmjs.org/downloads';
 const REGISTRY_BASE_URL = 'https://registry.npmjs.org/';
 
@@ -349,19 +328,12 @@ export async function fetch_downloads_for_package(pkg: string): Promise<number> 
 /**
  * Gets details for a package from the npm registry
  */
-export async function fetch_details_for_package(
-	pkg: string
-): Promise<NormalizedPackageData | undefined> {
+export async function fetch_details_for_package(pkg: string) {
 	const registry_data = await superfetch(`${REGISTRY_BASE_URL}${pkg}`, { headers: HEADERS }).then(
 		(r) => r.json()
 	);
-	const result = validate_npm_registry(registry_data);
-	if (!result.success) {
-		console.error(`Failed to parse metadata for "${pkg}": ${result.error}`);
-		return;
-	}
 
-	return result.data;
+	return registry_data;
 }
 
 /** Options for searching npm packages */
@@ -388,30 +360,39 @@ export interface SearchOptions {
 	skip_cached?: boolean;
 }
 
-const cache = new Map<string, any>();
-async function populate_cache() {
-	if (cache.size > 0) return;
+export type StructuredInterimPackage = {
+	meta: {
+		deprecated: boolean;
+		last_updated: string;
+		tags: string[];
+		description?: string;
+		downloads?: number;
+		dependents?: number;
+		github_stars?: number;
+	};
+	// Returned contents from registry.npmjs.org API
+	package_json: any;
+};
 
-	const cache_dir = path.resolve(
-		path.dirname(fileURLToPath(import.meta.url)),
-		'../../src/lib/server/generated/registry'
-	);
+export function structure_package_to_package(
+	structured_package: StructuredInterimPackage
+): Package {
+	const data = {} as Package;
 
-	const cache_dir_contents = await fsp.readdir(cache_dir);
-	for (const dirent of cache_dir_contents) {
-		const file_path = path.join(cache_dir, dirent);
+	data.name = structured_package.package_json.name;
+	data.description = structured_package.meta.description;
+	data.repo_url = structured_package.package_json.repository?.url;
+	data.author =
+		structured_package.package_json.author?.name ??
+		structured_package.package_json.maintainers[0].name;
+	data.homepage = structured_package.package_json.homepage;
+	data.downloads = structured_package.meta.downloads;
+	data.dependents = structured_package.meta.dependents;
+	data.updated = structured_package.meta.last_updated;
+	data.tags = structured_package.meta.tags;
+	data.github_stars = structured_package.meta.github_stars;
 
-		try {
-			const stat = await fsp.stat(file_path);
-			if (stat.isFile()) {
-				const file_contents = await fsp.readFile(file_path, 'utf8');
-				const extracted = extract_frontmatter(file_contents);
-				if (extracted.metadata.name) {
-					cache.set(extracted.metadata.name, extracted);
-				}
-			}
-		} catch {}
-	}
+	return data;
 }
 
 export async function* stream_search_by_keywords({
@@ -421,11 +402,9 @@ export async function* stream_search_by_keywords({
 	fetch = { package_json: true },
 	batch_size = 10,
 	skip_cached = false
-}: SearchOptions): AsyncGenerator<Map<string, any>> {
-	await populate_cache();
-
+}: SearchOptions): AsyncGenerator<Map<string, StructuredInterimPackage>> {
 	let total_runs = 0;
-	let collected_packages = new Map<string, any>();
+	let collected_packages = new Map<string, StructuredInterimPackage>();
 	// Keep track of all seen packages across all batches
 	const all_seen_packages = new Set<string>();
 
@@ -444,7 +423,7 @@ export async function* stream_search_by_keywords({
 			console.log(`Fetching page ${page + 1} of results for keyword: ${keyword}`);
 
 			try {
-				const results = await superfetch(url.toString(), {
+				const results = await superfetch(url, {
 					headers: HEADERS
 				}).then((r) => r.json());
 
@@ -456,6 +435,7 @@ export async function* stream_search_by_keywords({
 
 				// Process each package
 				for (const obj of results.objects) {
+					if (skip_cached && (await PackageCache.has(obj.package.name))) continue;
 					// Check if we've seen this package before (either in current batch or previous batches)
 					if (all_seen_packages.has(obj.package.name)) {
 						console.log(
@@ -465,18 +445,20 @@ export async function* stream_search_by_keywords({
 						break listing_loop;
 					}
 
+					const interim_pkg: StructuredInterimPackage = {
+						meta: {
+							deprecated: false,
+							last_updated: '',
+							tags: []
+						},
+						package_json: null as any
+					};
+
 					// Mark this package as seen
 					all_seen_packages.add(obj.package.name);
 
-					if (skip_cached && cache.has(obj.package.name)) continue;
-
 					// Skip if we've reached the limit
 					if (total_runs >= limit) break;
-
-					if (obj.deprecated) {
-						console.log(`Skipping deprecated package: ${obj.package.name}`);
-						continue;
-					}
 
 					// Exclude 'svelte' and '@sveltejs/kit' package
 					if (obj.package.name === 'svelte' || obj.package.name === '@sveltejs/kit') {
@@ -486,17 +468,9 @@ export async function* stream_search_by_keywords({
 					// Fetch package.json if needed
 					if (fetch.package_json) {
 						try {
-							const response = await superfetch(`${REGISTRY_BASE_URL}${obj.package.name}`, {
-								headers: HEADERS
-							}).then((r) => r.json());
+							const response = await fetch_details_for_package(obj.package.name);
 
 							const latest_version = response['dist-tags']?.latest;
-							if (latest_version && response.time && response.time[latest_version]) {
-								obj.last_published = response.time[latest_version];
-							}
-
-							// If package not updated in the last 2 years, skip
-							if (new Date(obj.last_published) < sub_days(new Date(), 365 * 2)) continue;
 
 							// Make sure that either dependencies/peer dependencies have svelte or @sveltejs/kit
 							const latest_package_json = response.versions[latest_version];
@@ -511,8 +485,19 @@ export async function* stream_search_by_keywords({
 								continue;
 							}
 
-							obj.package.json = response;
-							obj.package.json.versions = Object.keys(obj.package.json.versions);
+							if (latest_version && response.time && response.time[latest_version]) {
+								interim_pkg.meta.last_updated = response.time[latest_version];
+							}
+
+							if (response.versions[latest_version].deprecated) {
+								interim_pkg.meta.deprecated = true;
+							}
+
+							interim_pkg.meta.dependents = obj.dependents;
+							interim_pkg.meta.downloads = obj.downloads.weekly;
+
+							interim_pkg.package_json = response;
+							interim_pkg.package_json.versions = Object.keys(interim_pkg.package_json.versions);
 						} catch (err) {
 							console.error(`Error fetching package.json for ${obj.package.name}:`, err);
 							continue; // Skip this package if we can't get its details
@@ -520,7 +505,7 @@ export async function* stream_search_by_keywords({
 					}
 
 					// Add to our collection
-					collected_packages.set(obj.package.name, obj);
+					collected_packages.set(obj.package.name, interim_pkg);
 
 					// Yield when we reach the requested batch size
 					if (collected_packages.size >= batch_size) {

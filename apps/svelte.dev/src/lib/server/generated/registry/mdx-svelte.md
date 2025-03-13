@@ -6,7 +6,6 @@ author: "babakfp"
 homepage: "https://babakfp.ir/docs/mdx-svelte"
 downloads: 161
 updated: "2025-03-01T19:11:49.897Z"
-github_stars: 4
 tags: 
   - content
   - preprocessor

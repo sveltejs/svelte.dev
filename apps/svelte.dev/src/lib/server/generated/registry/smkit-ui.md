@@ -1,9 +1,9 @@
 ---
 name: "@smkit/ui"
 description: "UI Kit of SberMarketing"
-author: "disimasar"
-downloads: 588
-updated: "2025-03-07T14:41:56.317Z"
+author: "Dmitriy Din"
+downloads: 556
+updated: "2025-03-11T16:11:34.191Z"
 tags: 
   - component-library
   - ui

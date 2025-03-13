@@ -1,13 +1,11 @@
 ---
 name: "@nodegui/svelte-nodegui-preprocessor"
-description: "A preprocessor for [Svelte NodeGUI](https://github.com/nodegui/svelte-nodegui); forked from [halfnelson](https://github.com/halfnelson)'s [svelte-native-preprocessor](https://github.com/halfnelson/svelte-native-preprocessor) for [Svelte Native](https://gi"
+description: "A preprocessor for Svelte NodeGUI"
 repo_url: "https://github.com/nodegui/svelte-nodegui-preprocessor"
-author: "shirakaba"
+author: "Saurav Sahu"
 homepage: "https://github.com/nodegui/svelte-nodegui-preprocessor"
-downloads: 8
+downloads: 2
 updated: "2021-03-03T22:18:51.779Z"
-outdated: true
-github_stars: 2
 tags: 
   - preprocessor
 ---

@@ -4,7 +4,7 @@ description: "A lightweight and flexible Svelte component that wraps Prism Code 
 author: "alexgipi"
 downloads: 5
 dependents: 1
-updated: "2025-02-10T23:35:40.868Z"
+updated: "2025-03-13T02:15:32.644Z"
 tags: 
   - ui
 ---

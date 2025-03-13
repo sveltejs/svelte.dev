@@ -2,12 +2,11 @@
 name: "svelte-i18next"
 description: "Svelte wrapper for i18next"
 repo_url: "https://github.com/NishuGoel/svelte-i18next"
-author: "nishugoel"
+author: "Nishu Goel"
 homepage: "https://github.com/NishuGoel/svelte-i18next"
-downloads: 6980
+downloads: 7923
 dependents: 1
 updated: "2023-10-19T07:46:00.728Z"
-github_stars: 52
 tags: 
   - utility
 ---

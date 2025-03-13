@@ -1,6 +1,6 @@
 ---
 name: "@ikun-ui/affix"
-description: "Clean description"
+description: " "
 author: "baiwusanyu"
 downloads: 16
 dependents: 1

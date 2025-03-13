@@ -4,9 +4,8 @@ description: "A wrapper around Mozilla's PDFJS renderer. Only cares about loadin
 repo_url: "https://github.com/gtm-nayan/svelte-pdfjs"
 author: "gtmnayan"
 homepage: "https://github.com/gtm-nayan/svelte-pdfjs#readme"
-downloads: 943
+downloads: 613
 updated: "2024-09-24T15:40:07.719Z"
-github_stars: 37
 tags: 
-  - media
+  - ui
 ---

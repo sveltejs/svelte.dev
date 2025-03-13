@@ -1,6 +1,6 @@
 ---
 name: "@ikun-ui/empty"
-description: "Clean description"
+description: " "
 author: "baiwusanyu"
 downloads: 12
 dependents: 1

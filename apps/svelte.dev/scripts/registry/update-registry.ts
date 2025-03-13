@@ -12,9 +12,13 @@ import type { Package } from '../../src/lib/server/content.js';
 import {
 	fetch_details_for_package,
 	HEADERS,
+	PackageCache,
 	request_queue,
+	sanitize_github_url,
 	stream_search_by_keywords,
-	superfetch
+	structure_package_to_package,
+	superfetch,
+	type StructuredInterimPackage
 } from './npm.js';
 
 dotenv.config({ path: '.env.local' });
@@ -25,19 +29,6 @@ dotenv.config({ path: '.env.local' });
 function is_official(pkg: string): boolean {
 	// TODO: Is the the only condition?
 	return pkg.startsWith('@sveltejs/') || pkg === 'prettier-plugin-svelte';
-}
-
-/**
- * Sanitizes GitHub URLs to a standard format
- */
-function sanitize_github_url(url: string): string {
-	return url
-		.replace('ssh://', '')
-		.replace('git+', '')
-		.replace('.git', '')
-		.replace('git:', 'https:')
-		.replace('git@github.com:', 'https://github.com/')
-		.replace('git@github.com/', 'https://github.com/');
 }
 
 const NEW_THRESHOLD_DAYS = 28;
@@ -111,62 +102,6 @@ async function get_integration_files(): Promise<string[]> {
 	});
 }
 
-interface NormalizedPackageResult {
-	name: string;
-	title: string;
-	description: string;
-	categories: string[];
-	npmUrl: string;
-	repoUrl?: string;
-	homepageUrl: string;
-	official?: boolean;
-}
-
-/**
- * Normalizes package details from npm registry
- */
-function normalize_package_details(
-	data: NonNullable<Awaited<ReturnType<typeof fetch_details_for_package>>>,
-	pkg: string
-): NormalizedPackageResult {
-	const keyword_categories = (data.keywords ?? []).flatMap(get_categories_for_keyword);
-
-	if (keyword_categories.length === 0) {
-		keyword_categories.push('uncategorized');
-	}
-
-	const official = is_official(pkg);
-
-	const other_categories = [
-		official ? 'official' : undefined,
-		is_new_package(data) ? 'recent' : undefined
-	].filter(Boolean);
-
-	const uniq_categories = Array.from(new Set([...keyword_categories, ...other_categories]));
-
-	const npm_url = `https://www.npmjs.com/package/${pkg}`;
-
-	const repo_url = data.repository && sanitize_github_url(data.repository);
-
-	let homepage_url = npm_url;
-	// The `homepage` field is user-authored, so sometimes funky values can end up here.
-	// This is just a brief sanity check that things looks vaguely like a URL.
-	if (data.homepage?.toLowerCase().startsWith('https')) {
-		homepage_url = data.homepage;
-	}
-
-	return {
-		name: data.name,
-		title: data.name,
-		description: transform(data.description || ''),
-		categories: uniq_categories.filter(Boolean) as string[],
-		npmUrl: npm_url,
-		repoUrl: repo_url,
-		homepageUrl: homepage_url,
-		official: official === true ? true : undefined
-	};
-}
-
 const openrouter = createOpenRouter({
 	apiKey: process.env.OPENROUTER_API_KEY
 });
@@ -178,115 +113,6 @@ const TAGS_PROMPT: Record<string, string> = Object.entries(registry.tags).reduce
 	},
 	{} as Record<string, string>
 );
-
-class PackageCache {
-	static stringify(package_details: any) {
-		const pkg_name = package_details.name ?? package_details.package?.name;
-		const description = package_details.description ?? package_details.package?.description;
-		const repo_url = package_details.repo_url ?? package_details.package?.links?.repository;
-		const author = package_details.author ?? package_details.package?.publisher.username;
-		const homepage = package_details.homepage ?? package_details.package?.links?.homepage;
-		const downloads = package_details.downloads ?? package_details.downloads;
-		const dependents = package_details.dependents ?? package_details.dependents;
-		const updated = package_details.updated ?? package_details.last_published;
-		const outdated = package_details.outdated ?? package_details.outdated;
-		const deprecated = package_details.deprecated ?? package_details.deprecated;
-		const tags = package_details.tags ?? package_details.llm_detail.tags;
-		const github_stars = package_details.github_stars;
-
-		let frontmatter = `---\nname: "${pkg_name}"\n`;
-
-		if (description) {
-			frontmatter += `description: "${description}"\n`;
-		}
-
-		if (repo_url) {
-			frontmatter += `repo_url: "${sanitize_github_url(repo_url)}"\n`;
-		}
-
-		if (author) {
-			frontmatter += `author: "${author}"\n`;
-		}
-
-		if (homepage) {
-			frontmatter += `homepage: "${homepage}"\n`;
-		}
-
-		if (downloads) {
-			frontmatter += `downloads: ${downloads}\n`;
-		}
-
-		if (dependents) {
-			frontmatter += `dependents: ${dependents}\n`;
-		}
-
-		if (updated) {
-			frontmatter += `updated: "${updated}"\n`;
-		}
-
-		if (outdated) {
-			frontmatter += `outdated: true\n`;
-		}
-
-		if (deprecated) {
-			frontmatter += `deprecated: true\n`;
-		}
-
-		if (github_stars) {
-			frontmatter += `github_stars: ${github_stars}\n`;
-		}
-
-		frontmatter += `tags: \n${tags.map((tag = '') => `  - ${tag}`).join('\n')}\n`;
-
-		frontmatter += '---\n';
-
-		return frontmatter;
-	}
-
-	static parse(markdown: string) {
-		const { metadata } = extract_frontmatter(markdown);
-
-		return metadata;
-	}
-
-	static get(pkg_name: string) {
-		const pathname = path.resolve(
-			path.dirname(fileURLToPath(import.meta.url)),
-			`../../src/lib/server/generated/registry/${pkg_name}.md`
-		);
-
-		try {
-			return PackageCache.parse(fs.readFileSync(pathname, { encoding: 'utf8' }));
-		} catch {
-			return null;
-		}
-	}
-
-	static set(pkg_name: string, data: any) {
-		const pathname = path.resolve(
-			path.dirname(fileURLToPath(import.meta.url)),
-			`../../src/lib/server/generated/registry/${pkg_name}.md`
-		);
-
-		fs.writeFileSync(pathname, PackageCache.stringify(data));
-	}
-
-	static *entries() {
-		const cache_dir = path.resolve(
-			path.dirname(fileURLToPath(import.meta.url)),
-			'../../src/lib/server/generated/registry'
-		);
-		const cache_dir_contents = fs.readdirSync(cache_dir);
-
-		for (const dirent of cache_dir_contents) {
-			const file_path = path.join(cache_dir, dirent);
-			yield [
-				dirent.replace(/.md$/, ''),
-				PackageCache.parse(fs.readFileSync(file_path, 'utf8'))
-			] as [string, Package];
-		}
-	}
-}
 
 interface ProcessBatchesOptions {
 	/** Keywords to search for (default: ['svelte']) */
@@ -305,7 +131,7 @@ interface ProcessBatchesOptions {
 	retry_count?: number;
 
 	/** Failed packages from previous run (used internally) */
-	failed_packages?: Map<string, any> | null;
+	failed_packages?: Map<string, StructuredInterimPackage> | null;
 }
 
 /**
@@ -319,8 +145,8 @@ async function process_batches_through_llm({
 	retry_count = 0,
 	failed_packages = null
 }: ProcessBatchesOptions = {}): Promise<Map<string, any>> {
-	const packages_map = new Map<string, any>();
-	const failed_llm = new Map<string, any>();
+	const packages_map = new Map<string, StructuredInterimPackage>();
+	const failed_llm = new Map<string, StructuredInterimPackage>();
 	let batch_counter = 0;
 
 	// Source of packages - either from search or from previous failed packages
@@ -460,18 +286,21 @@ async function process_batches_through_llm({
 					if (json[pkg_name]) {
 						// Package was successfully analyzed as a Svelte package
 						const package_details = packages_map.get(pkg_name);
-						package_details.llm_detail = json[pkg_name];
+
+						if (!package_details) continue;
+
+						package_details.meta.tags = json[pkg_name].tags;
 
 						// If LLM provided a new description, use it
 						if (json[pkg_name].description) {
-							package_details.package.description = json[pkg_name].description;
+							package_details.meta.description = json[pkg_name].description;
 							console.log(`[${batch_id}] Updated description for ${pkg_name}`);
 						}
 
 						updated_count++;
 						console.log(`[${batch_id}] Tagged ${pkg_name}: ${JSON.stringify(json[pkg_name].tags)}`);
 
-						PackageCache.set(pkg_name, package_details);
+						PackageCache.set(pkg_name, structure_package_to_package(package_details));
 					}
 				}
 
@@ -526,8 +355,8 @@ async function process_batches_through_llm({
 		const non_svelte_packages = new Map<string, any>();
 
 		for (const [pkg_name, pkg_data] of packages_map) {
-			console.log(pkg_data.llm_detail);
-			if (pkg_data.llm_detail && (pkg_data.llm_detail?.tags?.length ?? 0) > 0) {
+			console.log(pkg_data.meta.tags, pkg_data.meta.description);
+			if (pkg_data.meta.tags.length > 0) {
 				svelte_packages.set(pkg_name, pkg_data);
 			} else {
 				non_svelte_packages.set(pkg_name, pkg_data);
@@ -605,7 +434,7 @@ export async function fetch_github_stars(repo_url: string): Promise<number | nul
 }
 
 async function update_all_github_stars(ignore_if_exists = false) {
-	for (const [pkg, data] of PackageCache.entries()) {
+	for await (const [pkg, data] of PackageCache.entries()) {
 		if (data.repo_url && !(ignore_if_exists && data.github_stars)) {
 			try {
 				// Fetch stars of this repo
@@ -623,13 +452,26 @@ async function update_all_github_stars(ignore_if_exists = false) {
 	}
 }
 
+// Gets the cached files, goes through npm for each, and udpate
+// all relevant npm information from that
+async function update_cache_from_npm() {
+	// for (const [pkg_file_name, data] of PackageCache.entries()) {
+	// console.log(await fetch_details_for_package(data.name));
+	// }
+	const detail = await fetch_details_for_package('svelte-drag');
+
+	const latestVersion = detail['dist-tags']?.latest;
+
+	console.log(detail.versions[latestVersion]);
+}
+
 /**
  * Creates a generator that yields batches from a Map
  */
 async function* create_map_batch_generator(
-	source_map: Map<string, any>,
+	source_map: Map<string, StructuredInterimPackage>,
 	batch_size: number
-): AsyncGenerator<Map<string, any>> {
+): AsyncGenerator<Map<string, StructuredInterimPackage>> {
 	// Convert map to array for easier batching
 	const entries = Array.from(source_map.entries());
 
@@ -639,6 +481,6 @@ async function* create_map_batch_generator(
 	}
 }
 
-// const svelte_packages = await process_batches_through_llm();
+const svelte_packages = await process_batches_through_llm();
 
-update_all_github_stars(true);
+// update_cache_from_npm();

@@ -2,12 +2,11 @@
 name: "@neo4j-cypher/svelte-codemirror"
 description: "Svelte CodeMirror 6 Cypher editor"
 repo_url: "https://github.com/neo4j/cypher-editor"
-author: "neo4j-organization"
+author: "Neo4j Inc."
 homepage: "https://github.com/neo4j/cypher-editor#readme"
-downloads: 2
+downloads: 3
 updated: "2024-04-02T12:27:23.937Z"
-github_stars: 46
 tags: 
   - ui
-  - integration
+  - tooling
 ---

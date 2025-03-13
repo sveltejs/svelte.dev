@@ -2,12 +2,10 @@
 name: "svelte-dialogs"
 description: "handy dialogs in/for svelte"
 repo_url: "https://github.com/bibizio/svelte-dialogs"
-author: "bibizio"
+author: "Fabrizio Giovinazzi"
 homepage: "https://bibizio.github.io/svelte-dialogs/"
-downloads: 47
+downloads: 120
 updated: "2022-06-27T22:18:32.775Z"
-outdated: true
-github_stars: 19
 tags: 
   - ui
 ---

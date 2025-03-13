@@ -1,6 +1,6 @@
 ---
 name: "@ikun-ui/progress"
-description: "A table component of responsive-ui."
+description: "ERROR: No README data found!"
 author: "baiwusanyu"
 downloads: 14
 dependents: 1

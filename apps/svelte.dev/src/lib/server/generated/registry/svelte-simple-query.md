@@ -4,7 +4,7 @@ description: "A simple yet powerful, lightweight data query library for Svelte 5
 repo_url: "https://github.com/harryhdt/svelte-simple-query"
 author: "harryhdt"
 homepage: "https://svelte-simple-query.harryhdt.dev"
-downloads: 4
+downloads: 2
 updated: "2025-02-12T10:00:50.509Z"
 tags: 
   - utility

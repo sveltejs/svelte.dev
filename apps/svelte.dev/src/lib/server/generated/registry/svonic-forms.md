@@ -2,11 +2,9 @@
 name: "@svonic/forms"
 description: "Testing"
 repo_url: "https://github.com/svonic/svonic"
-author: "daimyo"
+author: "Robert"
 homepage: "https://github.com/svonic/svonic#readme"
-downloads: 1
 updated: "2023-11-06T09:33:36.702Z"
-github_stars: 14
 tags: 
   - utility
 ---

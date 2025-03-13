@@ -1,6 +1,6 @@
 ---
 name: "@ikun-ui/notify"
-description: "A table component of responsive-ui."
+description: "ERROR: No README data found!"
 author: "baiwusanyu"
 downloads: 15
 dependents: 2

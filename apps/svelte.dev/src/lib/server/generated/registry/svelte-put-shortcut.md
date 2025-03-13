@@ -2,12 +2,12 @@
 name: "@svelte-put/shortcut"
 description: "Action to move node on mousedown & mousemove"
 repo_url: "https://github.com/vnphanquang/svelte-put"
-author: "vnphanquang"
+author: "Quang Phan"
 homepage: "https://github.com/vnphanquang/svelte-put/tree/main/packages/shortcut"
-downloads: 30323
+downloads: 30209
 dependents: 3
 updated: "2024-12-19T02:44:00.835Z"
-github_stars: 897
 tags: 
   - utility
+  - dom
 ---

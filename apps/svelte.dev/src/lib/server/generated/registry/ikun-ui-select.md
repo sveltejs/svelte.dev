@@ -1,6 +1,6 @@
 ---
 name: "@ikun-ui/select"
-description: "A table component of responsive-ui."
+description: "ERROR: No README data found!"
 author: "baiwusanyu"
 downloads: 19
 dependents: 3

@@ -1,9 +1,9 @@
 ---
 name: "@tadashi/svelte-splash-lgpd"
 description: "Svelte component"
-author: "lagden"
+author: "Thiago Lagden"
 homepage: "https://gitlab.textecnologia.io/nimble/svelte-splash-lgpd#readme"
-downloads: 2
+downloads: 6
 updated: "2023-07-05T19:59:58.276Z"
 tags: 
   - ui

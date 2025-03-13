@@ -2,11 +2,10 @@
 name: "@wxt-dev/module-svelte"
 description: "WXT module to enable Svelte support"
 repo_url: "https://github.com/wxt-dev/wxt"
-author: "_aklinker1"
+author: "Aaron Klinker"
 homepage: "https://github.com/wxt-dev/wxt/blob/main/packages/module-svelte/README.md"
-downloads: 234
+downloads: 202
 updated: "2025-01-28T21:17:42.473Z"
-github_stars: 5915
 tags: 
   - tooling
 ---

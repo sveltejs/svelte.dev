@@ -4,11 +4,10 @@ description: "A rich text editor using the Delta format with decorations and ren
 repo_url: "https://github.com/typewriter-editor/typewriter"
 author: "jacwright"
 homepage: "https://github.com/typewriter-editor/typewriter#readme"
-downloads: 185
+downloads: 197
 dependents: 3
 updated: "2025-02-12T18:30:38.430Z"
-github_stars: 406
 tags: 
-  - ui
   - content
+  - ui
 ---

@@ -1,6 +1,6 @@
 ---
 name: "@ikun-ui/badge"
-description: "ERROR: No README data found!"
+description: "UI component for Svelte"
 author: "baiwusanyu"
 downloads: 13
 dependents: 1

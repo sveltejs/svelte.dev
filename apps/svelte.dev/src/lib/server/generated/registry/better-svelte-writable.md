@@ -1,9 +1,9 @@
 ---
 name: "better-svelte-writable"
 description: "This package provides a type-safe writable which gives you more control over the container."
-author: "tnthung"
+author: "TNThung"
 homepage: "https://github.com/tnthung/better-svelte-writable"
-downloads: 6
+downloads: 5
 updated: "2023-12-01T00:51:18.489Z"
 tags: 
   - utility

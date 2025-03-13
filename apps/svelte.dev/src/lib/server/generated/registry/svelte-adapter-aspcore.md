@@ -3,9 +3,7 @@ name: "svelte-adapter-aspcore"
 description: "SvelteKit adapter for ASP.NET Core SPA."
 author: "kiho"
 homepage: "https://github.com/kiho/svelte-adapter-aspcore#readme"
-downloads: 5
 updated: "2022-12-20T05:58:32.924Z"
-outdated: true
 tags: 
   - adapter
 ---

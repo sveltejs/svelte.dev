@@ -2,11 +2,10 @@
 name: "svelte-gauge"
 description: "Svelte Gauge Component"
 repo_url: "https://github.com/vnau/svelte-gauge"
-author: "vneu"
+author: "vnau"
 homepage: "https://github.com/vnau/svelte-gauge#readme"
-downloads: 34
+downloads: 11
 updated: "2024-12-23T01:04:14.082Z"
-github_stars: 4
 tags: 
   - ui
 ---

@@ -4,11 +4,11 @@ description: "User-friendly session management module for SvelteKit. Effortlessl
 repo_url: "https://github.com/yutak23/svelte-kit-sessions"
 author: "yutak23"
 homepage: "https://github.com/yutak23/svelte-kit-sessions#readme"
-downloads: 121
+downloads: 134
 dependents: 3
 updated: "2024-11-13T04:51:52.547Z"
-github_stars: 16
 tags: 
   - server
-  - svelte
+  - utility
+  - auth
 ---

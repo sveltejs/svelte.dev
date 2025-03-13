@@ -2,12 +2,11 @@
 name: "mdsvex"
 description: "Markdown preprocessor for Svelte"
 repo_url: "https://github.com/pngwn/MDsveX"
-author: "evilpingwin"
+author: "pngwn"
 homepage: "https://github.com/pngwn/MDsveX#readme"
-downloads: 37679
+downloads: 36818
 dependents: 34
 updated: "2024-08-17T01:30:39.693Z"
-github_stars: 2597
 tags: 
   - content
   - preprocessor

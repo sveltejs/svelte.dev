@@ -1,9 +1,10 @@
 ---
 name: "svelte-v4-i18n"
-description: "Internationalization library for Svelte v4"
+description: "Internationalization for Svelte."
 repo_url: "https://github.com/harshmandan/svelte-i18n"
-author: "harshmandan"
+author: "Harsh Mandan"
 homepage: "https://github.com/harshmandan/svelte-i18n#readme"
+downloads: 1
 updated: "2023-06-30T05:14:21.438Z"
 tags: 
   - utility

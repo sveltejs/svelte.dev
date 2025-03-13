@@ -1,13 +1,12 @@
 ---
 name: "svelte-entitlement"
-description: "Component for managing entitlements in Svelte"
+description: "Svelte SDK to connect Storyblok with Svelte"
 repo_url: "https://github.com/arlac77/svelte-entitlement"
 author: "arlac77"
 homepage: "https://github.com/arlac77/svelte-entitlement#readme"
-downloads: 577
+downloads: 777
 dependents: 3
-updated: "2025-03-05T12:22:50.864Z"
-github_stars: 1
+updated: "2025-03-12T12:36:35.943Z"
 tags: 
   - utility
 ---

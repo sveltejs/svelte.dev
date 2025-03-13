@@ -1,6 +1,6 @@
 ---
 name: "@ikun-ui/steps"
-description: "ikun-ui steps component for svelte"
+description: "ERROR: No README data found!"
 author: "baiwusanyu"
 downloads: 13
 dependents: 1

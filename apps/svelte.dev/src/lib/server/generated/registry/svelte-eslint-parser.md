@@ -2,12 +2,11 @@
 name: "svelte-eslint-parser"
 description: "Svelte parser for ESLint"
 repo_url: "https://github.com/sveltejs/svelte-eslint-parser"
-author: "ota-meshi"
+author: "Yosuke Ota"
 homepage: "https://github.com/sveltejs/svelte-eslint-parser#readme"
-downloads: 459719
-dependents: 74
+downloads: 475922
+dependents: 73
 updated: "2025-03-05T04:04:49.283Z"
-github_stars: 99
 tags: 
   - tooling
 ---

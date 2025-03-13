@@ -1,9 +1,10 @@
 ---
 name: "svelte-scrollto-next"
-description: "Fork of svelte-scrollto for modernization"
+description: "Animating vertical and horizontal scrolling in Svelte."
 repo_url: "https://github.com/brev/svelte-scrollto-next"
-author: "brev"
+author: "Brev Patterson"
 homepage: "https://github.com/brev/svelte-scrollto-next#readme"
+downloads: 3
 updated: "2023-06-29T23:17:29.993Z"
 tags: 
   - utility

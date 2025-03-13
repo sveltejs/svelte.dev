@@ -7,5 +7,5 @@ downloads: 128
 updated: "2025-02-28T16:24:58.185Z"
 tags: 
   - component-library
-  - ui
+  - auth
 ---

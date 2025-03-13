@@ -1,13 +1,11 @@
 ---
 name: "svelte5kit-localization"
-description: "Inspired by https://github.com/sveltekit-i18n/lib."
+description: "Localization for SvelteKit with Svelte 5 reactivity."
 repo_url: "https://github.com/ktarmyshov/svelte5kit-localization"
-author: "ktarmyshov"
+author: "Konstantin Tarmyshov"
 homepage: "https://github.com/ktarmyshov/svelte5kit-localization"
-downloads: 571
-updated: "2025-03-07T14:26:03.679Z"
-github_stars: 2
+downloads: 437
+updated: "2025-03-12T16:47:30.020Z"
 tags: 
   - utility
-  - i18n
 ---

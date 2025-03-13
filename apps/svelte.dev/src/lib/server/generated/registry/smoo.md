@@ -2,12 +2,10 @@
 name: "smoo"
 description: "Simple Modal or Outlet"
 repo_url: "https://github.com/pateketrueke/smoo"
-author: "pateketrueke"
+author: "Alvaro Cabrera"
 homepage: "https://github.com/pateketrueke/smoo#readme"
-downloads: 54
+downloads: 24
 updated: "2022-08-12T20:20:28.814Z"
-outdated: true
-github_stars: 2
 tags: 
   - ui
 ---

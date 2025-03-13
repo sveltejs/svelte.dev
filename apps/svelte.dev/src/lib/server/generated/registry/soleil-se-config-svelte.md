@@ -1,10 +1,10 @@
 ---
 name: "@soleil-se/config-svelte"
 description: "A collection of Svelte components and utilities for WebApp, RESTApp and Widget configurations."
-author: "soleil-ab"
+author: "Soleil AB"
 homepage: "https://docs.soleil.se/packages/config-svelte"
-downloads: 53
-updated: "2025-02-21T09:41:28.968Z"
+downloads: 60
+updated: "2025-03-11T14:11:59.784Z"
 tags: 
-  - utility
+  - tooling
 ---

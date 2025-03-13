@@ -4,11 +4,9 @@ description: "Svelte action that listens for click events and scrolls to element
 repo_url: "https://github.com/langbamit/svelte-scrollto"
 author: "langbamit"
 homepage: "https://github.com/langbamit/svelte-scrollto#readme"
-downloads: 1018
+downloads: 1023
 dependents: 1
 updated: "2020-06-26T04:38:46.368Z"
-outdated: true
-github_stars: 67
 tags: 
   - utility
   - dom

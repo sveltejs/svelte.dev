@@ -2,12 +2,11 @@
 name: "svelte-fast-dimension"
 description: "Fast dimension bindings using ResizeObserver"
 repo_url: "https://github.com/bluwy/svelte-fast-dimension"
-author: "bluwy"
+author: "Bjorn Lu"
 homepage: "https://github.com/bluwy/svelte-fast-dimension#readme"
-downloads: 163
+downloads: 99
 updated: "2023-07-01T06:39:39.977Z"
-github_stars: 42
 tags: 
   - utility
-  - svelte
+  - performance
 ---

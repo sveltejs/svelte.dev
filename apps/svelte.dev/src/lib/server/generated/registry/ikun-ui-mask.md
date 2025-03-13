@@ -1,6 +1,6 @@
 ---
 name: "@ikun-ui/mask"
-description: "A Svelte mask component"
+description: "Reading progress bar (Svelte/Web Component/Custom Element)"
 author: "baiwusanyu"
 downloads: 29
 dependents: 5

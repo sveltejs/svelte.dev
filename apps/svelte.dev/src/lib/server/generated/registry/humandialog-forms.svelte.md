@@ -2,11 +2,11 @@
 name: "@humandialog/forms.svelte"
 description: "Basic Svelte UI components for Object Reef applications"
 repo_url: "https://github.com/HumanDialog/forms.svelte"
-author: "humandialog"
+author: "Human Dialog"
 homepage: "https://github.com/HumanDialog/forms.svelte#readme"
-downloads: 432
-updated: "2025-03-05T14:26:51.377Z"
+downloads: 182
+updated: "2025-03-11T12:20:36.005Z"
 tags: 
-  - ui
   - component-library
+  - ui
 ---

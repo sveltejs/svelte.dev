@@ -1,8 +1,7 @@
 ---
 name: "svesome"
-description: "Font Awesome v6 icons wrapper in Svelte"
+description: "FontAwesome v6 icons wrapper in svelte"
 author: "pouchlab"
-downloads: 1
 updated: "2024-07-31T14:06:07.389Z"
 tags: 
   - ui

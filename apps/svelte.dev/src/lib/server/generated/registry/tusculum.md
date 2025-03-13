@@ -4,9 +4,8 @@ description: "Automated heading ranks for HTML document outline using Svelte. Co
 repo_url: "https://github.com/realgoatish/tusculum"
 author: "realgoatish"
 homepage: "https://github.com/realgoatish/tusculum#readme"
-downloads: 1
 updated: "2024-01-06T04:18:14.574Z"
 tags: 
+  - utility
   - dom
-  - content
 ---

@@ -7,5 +7,4 @@ downloads: 1
 updated: "2023-07-28T20:36:40.858Z"
 tags: 
   - ui
-  - component-library
 ---

@@ -2,9 +2,9 @@
 name: "svelte-localstorage-writable"
 description: "svelte localstorage writable store"
 repo_url: "https://github.com/nathanfaucett/svelte-localstorage-writable"
-author: "nathanfaucett"
+author: "Nathan Faucett"
 homepage: "https://github.com/nathanfaucett/svelte-localstorage-writable#readme"
-downloads: 11
+downloads: 3
 updated: "2023-07-12T10:37:12.357Z"
 tags: 
   - utility

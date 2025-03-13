@@ -1,0 +1,10 @@
+---
+name: "creditdesign-svelte-components"
+description: "Collection fo svelte compontents for layout"
+repo_url: "https://github.com/chris-creditdesign/creditdesign-svelte-components"
+author: "chris-creditdesign"
+homepage: "https://serene-albattani-31205c.netlify.app/"
+updated: "2022-06-14T20:40:35.608Z"
+tags: 
+  - component-library
+---

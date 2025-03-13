@@ -4,10 +4,9 @@ description: "Svelte leaflet components library used in valiantlynx projects. ea
 repo_url: "https://github.com/valiantlynx/svelte-leaflet"
 author: "valiantlynx"
 homepage: "https://svelte-leaflet.vercel.app"
-downloads: 3
+downloads: 2
 updated: "2023-12-28T23:56:01.908Z"
-github_stars: 6
 tags: 
   - ui
-  - integration
+  - media
 ---

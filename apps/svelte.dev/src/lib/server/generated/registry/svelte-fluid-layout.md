@@ -1,0 +1,10 @@
+---
+name: "svelte-fluid-layout"
+description: "Responsive Layout Svelte Component"
+repo_url: "https://github.com/collardeau/svelte-fluid-layout"
+author: "Thomas Collardeau"
+homepage: "https://github.com/collardeau/svelte-fluid-layout#readme"
+updated: "2019-10-12T15:09:45.581Z"
+tags: 
+  - ui
+---

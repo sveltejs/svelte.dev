@@ -7,6 +7,5 @@ homepage: "https://github.com/sveadmin/common#readme"
 dependents: 2
 updated: "2023-08-06T16:22:17.680Z"
 tags: 
-  - component-library
-  - ui
+  - utility
 ---

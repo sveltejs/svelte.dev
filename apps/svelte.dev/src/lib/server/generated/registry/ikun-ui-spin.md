@@ -1,6 +1,6 @@
 ---
 name: "@ikun-ui/spin"
-description: "A table component of responsive-ui."
+description: "ERROR: No README data found!"
 author: "baiwusanyu"
 downloads: 17
 dependents: 1

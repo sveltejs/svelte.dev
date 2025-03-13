@@ -1,6 +1,6 @@
 ---
 name: "svelte-conmu"
-description: "A Svelte Context Menu Library"
+description: "A Svelte Context Menu Library. Headless, the rendering/styling is completely in your hands."
 repo_url: "https://github.com/jzillmann/svelte-conmu"
 author: "jzillmann"
 homepage: "https://github.com/jzillmann/svelte-conmu#readme"

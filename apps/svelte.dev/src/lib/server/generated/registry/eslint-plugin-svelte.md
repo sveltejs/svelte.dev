@@ -2,12 +2,11 @@
 name: "eslint-plugin-svelte"
 description: "ESLint plugin for Svelte using AST"
 repo_url: "https://github.com/sveltejs/eslint-plugin-svelte"
-author: "ota-meshi"
+author: "Yosuke Ota"
 homepage: "https://sveltejs.github.io/eslint-plugin-svelte"
-downloads: 425424
+downloads: 439569
 dependents: 139
-updated: "2025-03-05T04:24:50.150Z"
-github_stars: 321
+updated: "2025-03-10T01:34:22.897Z"
 tags: 
   - tooling
 ---

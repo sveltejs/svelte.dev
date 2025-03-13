@@ -62,7 +62,6 @@
 		query_qp.current;
 		tags_qp.current;
 		page_qp.current;
-		page.url;
 
 		if (ready) {
 			if (worker_first_run) {
@@ -77,8 +76,7 @@
 					payload: {
 						query: query_qp.current,
 						page: page_qp.current,
-						tags: $state.snapshot(tags_qp.current),
-						url: page.url.toString()
+						tags: $state.snapshot(tags_qp.current)
 					}
 				});
 			}

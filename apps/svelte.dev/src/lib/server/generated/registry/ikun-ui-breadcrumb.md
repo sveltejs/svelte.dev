@@ -1,6 +1,6 @@
 ---
 name: "@ikun-ui/breadcrumb"
-description: "ERROR: No README data found!"
+description: "UI component for Svelte"
 author: "baiwusanyu"
 downloads: 14
 dependents: 1

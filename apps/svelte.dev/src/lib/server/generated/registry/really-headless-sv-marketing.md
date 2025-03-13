@@ -1,14 +1,12 @@
 ---
 name: "@really-headless/sv-marketing"
-description: "> 🚧 Still in active development. > > 🧑‍💻 Need to expose a variable? feel free to submit a PR."
+description: "Build beautiful marketing sites with SvelteKit - A lightweight, customizable component library for static marketing websites."
 repo_url: "https://github.com/feuersteiner/sv-marketing"
 author: "feuersteiner"
 homepage: "https://github.com/feuersteiner/sv-marketing#readme"
-downloads: 14
-updated: "2025-02-11T21:47:10.563Z"
-github_stars: 18
+downloads: 1309
+updated: "2025-03-12T18:00:59.225Z"
 tags: 
   - content
-  - ui
   - seo
 ---

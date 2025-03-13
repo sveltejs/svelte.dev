@@ -4,8 +4,9 @@ description: "Flexible autocomplete/select component written in Svelte. Massivel
 repo_url: "https://github.com/mverzilli/svelecte"
 author: "martinverzilli"
 homepage: "https://github.com/mverzilli/svelecte#readme"
-downloads: 14
+downloads: 30
 updated: "2023-03-31T10:44:51.585Z"
 tags: 
   - ui
+  - utility
 ---

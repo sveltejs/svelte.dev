@@ -6,7 +6,6 @@ author: "jacobzwang"
 homepage: "https://github.com/jacobzwang/svelte-partial-stores.git"
 downloads: 5
 updated: "2022-10-06T22:04:53.272Z"
-outdated: true
 tags: 
   - utility
 ---

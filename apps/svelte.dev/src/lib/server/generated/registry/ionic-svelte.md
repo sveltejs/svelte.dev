@@ -4,10 +4,10 @@ description: "The NPM library to implement Ionic in any Svelte project - support
 repo_url: "https://github.com/Tommertom/svelte-ionic-app"
 author: "tommertom"
 homepage: "https://ionic-svelte.firebaseapp.com"
-downloads: 77
+downloads: 129
 dependents: 2
 updated: "2024-07-29T17:44:24.427Z"
-github_stars: 810
 tags: 
+  - component-library
   - ui
 ---

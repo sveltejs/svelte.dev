@@ -2,8 +2,9 @@
 name: "@getneurotic/svelte"
 description: "A bundle of Svelte libraries."
 repo_url: "https://github.com/getneurotic/svelte"
-author: "geoffrey.stekelenburg"
+author: "Geoffrey Stekelenburg"
 homepage: "https://github.com/getneurotic/svelte#readme"
+downloads: 1
 updated: "2023-09-29T13:06:15.562Z"
 tags: 
   - utility

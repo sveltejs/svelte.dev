@@ -1,6 +1,6 @@
 ---
 name: "@ikun-ui/watermark"
-description: "Clean description"
+description: " "
 author: "baiwusanyu"
 downloads: 11
 dependents: 1

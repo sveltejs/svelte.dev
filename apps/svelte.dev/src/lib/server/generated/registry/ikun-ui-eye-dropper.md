@@ -1,6 +1,6 @@
 ---
 name: "@ikun-ui/eye-dropper"
-description: " "
+description: "UI component for Svelte"
 author: "baiwusanyu"
 downloads: 13
 dependents: 1

@@ -4,6 +4,6 @@ description: "Nordcode UI Inputs and forms in svelte."
 author: "jshsj"
 updated: "2024-12-14T16:00:33.931Z"
 tags: 
-  - form
+  - component-library
   - ui
 ---

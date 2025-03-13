@@ -1,9 +1,10 @@
 ---
 name: "@softwareone/spi-sv5-library"
 description: "Svelte components"
-author: "fslefevre"
-downloads: 146
-updated: "2025-03-08T16:59:36.886Z"
+author: "Frederik Lefevre"
+downloads: 240
+updated: "2025-03-13T06:58:03.873Z"
 tags: 
   - component-library
+  - ui
 ---

@@ -6,9 +6,6 @@ author: "tarnadas"
 homepage: "https://kit.svelte.dev"
 downloads: 69
 updated: "2025-02-28T09:42:46.928Z"
-github_stars: 19069
 tags: 
-  - adapter
-  - server
   - adapter
 ---

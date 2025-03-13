@@ -4,10 +4,7 @@ description: "svelte components wrapping [tweakpane](https://github.com/cocopon/
 repo_url: "https://github.com/pierogis/svelte-tweakpane"
 author: "ksmoore17"
 homepage: "https://svelte-tweakpane.pierogis.live"
-downloads: 2
 updated: "2023-12-29T04:31:46.282Z"
-github_stars: 9
 tags: 
   - ui
-  - utility
 ---

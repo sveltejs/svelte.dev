@@ -2,12 +2,11 @@
 name: "@sveltejs/adapter-node"
 description: "Adapter for SvelteKit apps that generates a standalone Node server"
 repo_url: "https://github.com/sveltejs/kit"
-author: "svelte-admin"
+author: "rich_harris"
 homepage: "https://svelte.dev"
-downloads: 188577
+downloads: 192932
 dependents: 57
 updated: "2025-01-17T10:49:02.765Z"
-github_stars: 19069
 tags: 
   - adapter
   - server

@@ -1,0 +1,11 @@
+---
+name: "@iceye/svelte-slider-simple"
+description: "Simple slider for Svelte 3/4"
+repo_url: "https://github.com/iceye/svelte-slider"
+author: "Iceye"
+homepage: "https://github.com/iceye/svelte-slider#readme"
+downloads: 1
+updated: "2024-11-13T13:19:38.418Z"
+tags: 
+  - ui
+---

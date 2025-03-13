@@ -6,7 +6,6 @@ author: "yzn-h"
 homepage: "https://svelte.dev"
 downloads: 3
 updated: "2025-01-25T11:39:42.094Z"
-github_stars: 19069
 tags: 
   - tooling
 ---

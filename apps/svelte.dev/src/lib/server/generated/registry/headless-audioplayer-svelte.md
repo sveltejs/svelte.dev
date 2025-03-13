@@ -2,12 +2,10 @@
 name: "headless-audioplayer-svelte"
 description: "Headless Audio Player. A wrapper to make audio playing more easier"
 repo_url: "https://github.com/JosueRhea/headless-audioplayer#main"
-author: "josuerhea"
+author: "JosueRhea"
 homepage: "https://headless-audioplayer.vercel.app"
-downloads: 2
+downloads: 11
 updated: "2023-04-30T03:07:29.487Z"
-github_stars: 6
 tags: 
-  - media
   - ui
 ---

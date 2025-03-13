@@ -6,8 +6,7 @@ author: "dvcol"
 homepage: "https://github.com/dvcol/svelte-utils"
 downloads: 343
 dependents: 2
-updated: "2025-03-09T15:57:22.003Z"
-github_stars: 1
+updated: "2025-03-09T17:40:40.374Z"
 tags: 
   - utility
 ---

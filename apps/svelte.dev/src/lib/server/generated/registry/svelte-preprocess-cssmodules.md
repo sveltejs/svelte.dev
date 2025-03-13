@@ -7,7 +7,6 @@ homepage: "https://github.com/micantoine/svelte-preprocess-cssmodules"
 downloads: 1349
 dependents: 5
 updated: "2025-02-07T09:07:36.175Z"
-github_stars: 70
 tags: 
   - preprocessor
 ---

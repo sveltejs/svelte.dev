@@ -1,14 +1,11 @@
 ---
 name: "svelte-sortable-list"
-description: "A svelte 3 component that implements a list with animated drag-n-drop functionality."
+description: "This component renders a list of items which can be reordered by draggin and dropping and implements FLIP animation for adding/removing/reordering items in the list."
 repo_url: "https://github.com/brunomolteni/svelte-sortable-list"
-author: "brunomolteni"
+author: "Bruno Molteni"
 homepage: "https://github.com/brunomolteni/svelte-sortable-list#readme"
-downloads: 437
+downloads: 265
 updated: "2019-07-05T19:48:52.084Z"
-outdated: true
-github_stars: 124
 tags: 
-  - component-library
   - ui
 ---

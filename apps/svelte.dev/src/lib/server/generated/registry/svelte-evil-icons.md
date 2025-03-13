@@ -2,8 +2,9 @@
 name: "svelte-evil-icons"
 description: "Svelte SVG Evil icons component"
 repo_url: "https://github.com/shinokada/svelte-evil-icons"
-author: "shinichiokada"
+author: "Shinichi Okada"
 homepage: "https://svelte-evil-icons.codewithshin.com"
+downloads: 2
 updated: "2024-03-01T16:44:40.004Z"
 tags: 
   - ui

@@ -8,5 +8,6 @@ downloads: 11
 updated: "2025-01-17T22:14:30.745Z"
 tags: 
   - component-library
-  - ui
+  - seo
+  - utility
 ---

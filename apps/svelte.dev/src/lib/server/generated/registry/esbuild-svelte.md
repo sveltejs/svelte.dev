@@ -2,12 +2,11 @@
 name: "esbuild-svelte"
 description: "esbuild plugin to resolve .svelte files"
 repo_url: "https://github.com/EMH333/esbuild-svelte"
-author: "emh333"
+author: "Ethan Hampton"
 homepage: "https://github.com/EMH333/esbuild-svelte#readme"
-downloads: 20103
+downloads: 19529
 dependents: 38
-updated: "2024-11-09T17:30:04.543Z"
-github_stars: 251
+updated: "2025-03-09T17:35:54.602Z"
 tags: 
   - tooling
   - preprocessor

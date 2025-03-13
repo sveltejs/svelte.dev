@@ -2,12 +2,11 @@
 name: "svelte-editorjs"
 description: "An EditorJS wrapper for Svelte"
 repo_url: "https://github.com/pablo-abc/svelte-editorjs"
-author: "pberganza"
+author: "Pablo Berganza"
 homepage: "https://github.com/pablo-abc/svelte-editorjs"
-downloads: 48
+downloads: 46
 updated: "2021-04-08T21:22:36.716Z"
-outdated: true
-github_stars: 31
 tags: 
-  - ui
+  - content
+  - utility
 ---

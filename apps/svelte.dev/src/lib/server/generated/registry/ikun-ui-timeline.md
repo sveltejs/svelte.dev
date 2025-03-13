@@ -1,10 +1,11 @@
 ---
 name: "@ikun-ui/timeline"
-description: "ERROR: No README data found!"
+description: "Basic video player component for svelte, SSR and sveltekit apps."
 author: "baiwusanyu"
 downloads: 7
 dependents: 1
 updated: "2025-01-24T03:49:24.668Z"
 tags: 
+  - component-library
   - ui
 ---

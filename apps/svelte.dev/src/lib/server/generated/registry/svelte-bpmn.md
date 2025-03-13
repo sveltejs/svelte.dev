@@ -1,0 +1,11 @@
+---
+name: "svelte-bpmn"
+description: "Embed BPMN 2.0 diagrams in your Svelte app"
+repo_url: "https://github.com/bpmn-io/svelte-bpmn"
+author: "Niklas Kiefer"
+homepage: "https://github.com/bpmn-io/svelte-bpmn#readme"
+downloads: 20
+updated: "2021-07-30T12:17:33.628Z"
+tags: 
+  - ui
+---

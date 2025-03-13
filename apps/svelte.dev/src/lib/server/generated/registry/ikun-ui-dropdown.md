@@ -1,6 +1,6 @@
 ---
 name: "@ikun-ui/dropdown"
-description: "🐔 A Svelte.js based UnoCSS UI library that allows you to make websites"
+description: "ERROR: No README data found!"
 author: "baiwusanyu"
 downloads: 29
 dependents: 3

@@ -8,5 +8,4 @@ downloads: 7
 updated: "2025-01-11T08:11:21.097Z"
 tags: 
   - utility
-  - dom
 ---

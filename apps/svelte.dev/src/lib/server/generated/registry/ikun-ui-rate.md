@@ -1,6 +1,6 @@
 ---
 name: "@ikun-ui/rate"
-description: "Clean description"
+description: "ERROR: No README data found!"
 author: "baiwusanyu"
 downloads: 13
 dependents: 1

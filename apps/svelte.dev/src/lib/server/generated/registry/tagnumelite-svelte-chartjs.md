@@ -1,7 +1,6 @@
 ---
 name: "@tagnumelite/svelte-chartjs"
 description: "Svelte Component Wrappers for Chart.JS"
-repo_url: "github:TagnumElite/tagnumelite-svelte-chartjs"
 author: "tagnumelite"
 homepage: "https://github.com/TagnumElite/tagnumelite-svelte-chartjs"
 downloads: 1

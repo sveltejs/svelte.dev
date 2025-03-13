@@ -2,11 +2,9 @@
 name: "@nerdworks/svelte"
 description: "The Svelte adapter for Inertia.js"
 repo_url: "https://github.com/inertiajs/inertia"
-author: "nerdworks"
+author: "nobbo"
 homepage: "https://inertiajs.com/"
-downloads: 1
 updated: "2024-06-24T11:26:04.392Z"
-github_stars: 6957
 tags: 
   - integration
 ---

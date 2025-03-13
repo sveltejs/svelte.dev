@@ -4,10 +4,8 @@ description: "The svelte global store plugin for houdini"
 repo_url: "https://github.com/HoudiniGraphql/houdini"
 author: "aaivazis"
 homepage: "https://github.com/HoudiniGraphql/houdini"
-downloads: 217
+downloads: 332
 updated: "2025-03-06T01:13:44.583Z"
-github_stars: 936
 tags: 
-  - utility
-  - integration
+  - tooling
 ---
