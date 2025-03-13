@@ -201,7 +201,9 @@ function create_registry() {
 
 	for (const frontmatter of Object.values(registry_docs)) {
 		const json = extract_frontmatter(frontmatter);
-		json.metadata.description = markdown_to_plain_text(json.metadata.description || '');
+		json.metadata.description = json.metadata.description;
+		json.metadata.outdated =
+			+new Date() - +new Date(json.metadata.updated) > 2 * 365 * 24 * 60 * 60 * 1000;
 
 		output.push(json.metadata as unknown as Package);
 	}
