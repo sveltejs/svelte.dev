@@ -58,8 +58,6 @@
 		return () => worker.terminate();
 	});
 
-	$inspect(tags_qp.current);
-
 	$effect(() => {
 		query_qp.current;
 		tags_qp.current;
@@ -123,7 +121,6 @@
 					<li>
 						<input
 							type="checkbox"
-							bind:group={tags_qp.current}
 							value={tag.tag}
 							bind:checked={() =>
 								tag.tag === 'all'
@@ -228,7 +225,15 @@
 						rel="noreferrer noopener"
 						title="Read the article »"
 					>
-						<h2>{pkg.name}</h2>
+						<h2 class={[(pkg.outdated || pkg.deprecated) && 'faded']}>{pkg.name}</h2>
+						<span class="status">
+							{#if pkg.outdated}
+								<span>outdated</span>
+							{/if}
+							{#if pkg.deprecated}
+								<span>deprecated</span>
+							{/if}
+						</span>
 					</a>
 
 					<p>{pkg.description}</p>
@@ -435,6 +440,10 @@
 		display: inline-block;
 		color: var(--sk-fg-1);
 		font: var(--sk-font-h3);
+
+		&.faded {
+			color: var(--sk-fg-3);
+		}
 	}
 
 	article {
@@ -447,6 +456,20 @@
 
 			&:hover h2 {
 				text-decoration: underline;
+			}
+		}
+
+		.status {
+			width: max-content;
+			font: var(--sk-font-ui-medium);
+			font-family: var(--sk-font-family-mono);
+			margin-left: 0.5rem;
+
+			> * {
+				padding: 0.4rem 0.5rem;
+				width: fit-content;
+				border: 1px solid var(--sk-border);
+				border-radius: 0.5rem;
 			}
 		}
 

@@ -11,7 +11,7 @@ addEventListener('message', async (event) => {
 	}
 
 	if (type === 'get') {
-		let { query, page = 0, tags = [], url } = payload;
+		let { query, page = 0, tags = [] } = payload;
 
 		const current_results = search(query, { tags });
 		const total_pages = Math.ceil(current_results.length / REGISTRY_PAGE_LIMIT);
@@ -29,8 +29,6 @@ addEventListener('message', async (event) => {
 
 			return;
 		}
-
-		console.log(current_results.length);
 
 		postMessage({
 			type: 'results',
