@@ -6,6 +6,7 @@ author: "Eric Liu"
 homepage: "https://github.com/metonym/svelte-iconoir"
 downloads: 52
 updated: "2023-08-02T12:59:54.224Z"
+github_stars: 3
 tags: 
   - ui
 ---

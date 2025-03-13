@@ -6,6 +6,7 @@ author: "James Ellis-Jones"
 homepage: "https://github.com/restspace/svelte-schema-form#readme"
 downloads: 1
 updated: "2023-02-17T01:09:58.472Z"
+github_stars: 73
 tags: 
   - component-library
   - utility

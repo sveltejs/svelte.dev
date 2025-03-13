@@ -6,6 +6,7 @@ author: "meursyphus"
 homepage: "https://ssgoi.pages.dev"
 downloads: 30
 updated: "2024-10-26T14:19:30.316Z"
+github_stars: 162
 tags: 
   - router
   - performance

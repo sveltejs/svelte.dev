@@ -7,6 +7,7 @@ homepage: "https://github.com/ota-meshi/typescript-eslint-parser-for-extra-files
 downloads: 4774
 dependents: 3
 updated: "2024-06-09T11:58:52.874Z"
+github_stars: 47
 tags: 
   - tooling
   - preprocessor

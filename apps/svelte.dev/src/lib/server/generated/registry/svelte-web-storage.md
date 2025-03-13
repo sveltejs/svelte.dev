@@ -7,6 +7,7 @@ homepage: "https://captaincodeman.github.io/svelte-web-storage/"
 downloads: 3
 dependents: 1
 updated: "2024-04-27T18:59:51.449Z"
+github_stars: 14
 tags: 
   - utility
 ---

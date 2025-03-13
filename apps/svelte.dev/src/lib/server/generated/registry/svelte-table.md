@@ -7,6 +7,7 @@ homepage: "https://github.com/dasDaniel/svelte-table#readme"
 downloads: 3182
 dependents: 6
 updated: "2024-02-05T22:22:07.849Z"
+github_stars: 541
 tags: 
   - component-library
 ---

@@ -7,6 +7,7 @@ homepage: "https://github.com/PixievoltNo1/svelte-writable-derived"
 downloads: 23336
 dependents: 14
 updated: "2024-04-04T06:55:02.096Z"
+github_stars: 89
 tags: 
   - utility
 ---

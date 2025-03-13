@@ -7,6 +7,7 @@ homepage: "https://github.com/crisward/svelte-tag#readme"
 downloads: 35
 dependents: 1
 updated: "2025-01-20T14:59:54.630Z"
+github_stars: 53
 tags: 
   - tooling
 ---

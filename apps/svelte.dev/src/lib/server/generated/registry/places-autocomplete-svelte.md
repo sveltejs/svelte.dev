@@ -6,6 +6,7 @@ author: "Alexander Pechkarev"
 homepage: "https://places-autocomplete-demo.pages.dev"
 downloads: 45
 updated: "2025-02-20T19:57:34.993Z"
+github_stars: 5
 tags: 
   - ui
   - integration

@@ -6,6 +6,7 @@ author: "x0k"
 homepage: "https://x0k.github.io/svelte-jsonschema-form/"
 downloads: 32
 updated: "2025-01-28T22:50:21.963Z"
+github_stars: 39
 tags: 
   - integration
   - tooling

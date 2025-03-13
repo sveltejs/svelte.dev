@@ -6,6 +6,7 @@ author: "PatWie"
 homepage: "https://svelte-konvajs.patwie.com/"
 downloads: 7
 updated: "2022-02-20T18:07:01.988Z"
+github_stars: 2
 tags: 
   - ui
 ---

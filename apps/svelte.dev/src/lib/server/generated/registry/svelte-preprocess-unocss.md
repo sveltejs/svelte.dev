@@ -6,6 +6,7 @@ author: "Jacob Bowdoin"
 homepage: "https://polylingual.dev"
 downloads: 2
 updated: "2023-05-20T00:02:34.567Z"
+github_stars: 17
 tags: 
   - preprocessor
   - tooling

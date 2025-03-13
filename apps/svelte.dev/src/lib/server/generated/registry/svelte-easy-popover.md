@@ -7,6 +7,7 @@ homepage: "https://github.com/jguze/svelte-easy-popover#readme"
 downloads: 876
 dependents: 2
 updated: "2021-10-30T06:40:13.621Z"
+github_stars: 7
 tags: 
   - ui
   - dom

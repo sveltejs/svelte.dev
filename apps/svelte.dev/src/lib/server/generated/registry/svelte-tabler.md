@@ -6,6 +6,7 @@ author: "Shinichi Okada"
 homepage: "https://svelte-tabler.codewithshin.com/"
 downloads: 600
 updated: "2024-10-25T14:11:38.173Z"
+github_stars: 6
 tags: 
   - ui
   - component-library

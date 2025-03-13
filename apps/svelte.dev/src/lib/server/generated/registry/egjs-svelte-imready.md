@@ -6,6 +6,7 @@ author: "NAVER Corp."
 homepage: "https://github.com/naver/egjs-imready"
 downloads: 1
 updated: "2023-02-24T03:41:05.704Z"
+github_stars: 63
 tags: 
   - utility
 ---

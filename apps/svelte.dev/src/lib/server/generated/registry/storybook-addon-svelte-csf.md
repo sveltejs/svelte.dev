@@ -7,6 +7,7 @@ homepage: "https://github.com/storybookjs/addon-svelte-csf#readme"
 downloads: 62143
 dependents: 15
 updated: "2024-11-28T09:20:51.195Z"
+github_stars: 127
 tags: 
   - tooling
 ---

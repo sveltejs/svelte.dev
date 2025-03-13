@@ -6,6 +6,7 @@ author: "YuCheng Kuo"
 homepage: "https://github.com/yuchengkuo/sveltejs-markdoc#readme"
 downloads: 5
 updated: "2022-11-19T06:06:28.506Z"
+github_stars: 10
 tags: 
   - content
 ---

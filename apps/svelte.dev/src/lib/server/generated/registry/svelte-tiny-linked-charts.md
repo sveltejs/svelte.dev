@@ -7,6 +7,7 @@ homepage: "https://mitcheljager.github.io/svelte-tiny-linked-charts/"
 downloads: 1565
 dependents: 1
 updated: "2025-01-26T22:06:14.054Z"
+github_stars: 93
 tags: 
   - ui
 ---

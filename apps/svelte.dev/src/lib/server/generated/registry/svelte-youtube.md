@@ -7,6 +7,7 @@ homepage: "https://github.com/PandaWhisperer/svelte-youtube#README"
 downloads: 280
 dependents: 1
 updated: "2020-12-10T16:28:14.265Z"
+github_stars: 22
 tags: 
   - media
 ---

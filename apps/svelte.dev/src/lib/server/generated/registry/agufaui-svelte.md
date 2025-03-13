@@ -6,6 +6,7 @@ author: "Agufa.tech"
 homepage: "https://ui.agufa.tech"
 downloads: 1
 updated: "2023-03-01T04:17:04.277Z"
+github_stars: 2
 tags: 
   - component-library
   - ui

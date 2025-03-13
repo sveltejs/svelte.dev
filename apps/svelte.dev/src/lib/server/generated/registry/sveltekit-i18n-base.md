@@ -7,6 +7,7 @@ homepage: "https://github.com/sveltekit-i18n/base#readme"
 downloads: 9846
 dependents: 1
 updated: "2023-11-02T21:10:21.814Z"
+github_stars: 9
 tags: 
   - utility
 ---

@@ -6,6 +6,7 @@ author: "Matt Jennings"
 homepage: "https://svelte-modals.mattjennin.gs"
 downloads: 268
 updated: "2025-02-06T07:35:47.507Z"
+github_stars: 153
 tags: 
   - ui
 ---

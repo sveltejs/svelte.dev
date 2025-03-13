@@ -6,6 +6,7 @@ author: "jill64"
 homepage: "https://github.com/jill64/svelte-suite#readme"
 downloads: 8273
 updated: "2025-03-13T02:38:32.714Z"
+github_stars: 1
 tags: 
   - component-library
   - utility

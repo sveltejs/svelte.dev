@@ -7,6 +7,7 @@ homepage: "https://github.com/svelteness/svelte-jester#readme"
 downloads: 20912
 dependents: 10
 updated: "2024-06-14T23:13:24.804Z"
+github_stars: 128
 tags: 
   - tooling
   - testing

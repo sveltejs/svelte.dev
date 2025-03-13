@@ -6,6 +6,7 @@ author: "github.com/pierregoutheraud"
 homepage: "https://svelte-identicons.vercel.app/"
 downloads: 1
 updated: "2023-08-16T00:19:03.194Z"
+github_stars: 1
 tags: 
   - ui
 ---

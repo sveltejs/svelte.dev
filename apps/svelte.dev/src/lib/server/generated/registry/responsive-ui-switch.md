@@ -7,6 +7,7 @@ homepage: "https://github.com/wetix/responsive-ui/blob/main/components/switch#RE
 downloads: 2
 dependents: 1
 updated: "2024-04-23T07:51:21.991Z"
+github_stars: 19
 tags: 
   - ui
 ---

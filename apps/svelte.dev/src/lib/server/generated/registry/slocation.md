@@ -6,6 +6,7 @@ author: "varbhat"
 homepage: "https://github.com/varbhat/slocation#readme"
 downloads: 64
 updated: "2021-09-16T14:48:35.166Z"
+github_stars: 5
 tags: 
   - utility
   - router

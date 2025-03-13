@@ -6,6 +6,7 @@ author: "thoidh"
 homepage: "https://github.com/umaranis/svelte-lexical#readme"
 downloads: 1
 updated: "2024-12-14T20:21:38.366Z"
+github_stars: 399
 tags: 
   - ui
   - content

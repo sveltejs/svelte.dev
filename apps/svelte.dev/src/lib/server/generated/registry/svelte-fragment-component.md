@@ -7,6 +7,7 @@ homepage: "https://github.com/kenoxa/svelte-fragment-component#readme"
 downloads: 6464
 dependents: 2
 updated: "2020-07-13T10:06:45.377Z"
+github_stars: 4
 tags: 
   - utility
 ---

@@ -7,6 +7,7 @@ homepage: "https://github.com/denisstasyev/svelte-skeleton#readme"
 downloads: 2120
 dependents: 1
 updated: "2022-03-02T16:45:51.095Z"
+github_stars: 46
 tags: 
   - ui
 ---

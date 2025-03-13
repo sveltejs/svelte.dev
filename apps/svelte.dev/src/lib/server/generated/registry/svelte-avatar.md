@@ -7,6 +7,7 @@ homepage: "https://svelte-avatar.netlify.app/"
 downloads: 196
 dependents: 2
 updated: "2022-10-02T20:44:08.102Z"
+github_stars: 17
 tags: 
   - ui
 ---

@@ -6,6 +6,7 @@ author: "Moumni Heithem"
 homepage: "https://github.com/heithemmoumni/svelte-spinkit#readme"
 downloads: 10
 updated: "2020-08-11T22:06:59.490Z"
+github_stars: 33
 tags: 
   - ui
 ---

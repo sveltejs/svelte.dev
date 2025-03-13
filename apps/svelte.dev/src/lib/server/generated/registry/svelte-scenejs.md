@@ -6,6 +6,7 @@ author: "Daybrush"
 homepage: "https://github.com/daybrush/scenejs"
 downloads: 1
 updated: "2023-06-05T16:59:05.475Z"
+github_stars: 2748
 tags: 
   - ui
   - animation

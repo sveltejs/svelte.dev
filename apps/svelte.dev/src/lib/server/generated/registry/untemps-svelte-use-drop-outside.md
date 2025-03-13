@@ -7,6 +7,7 @@ homepage: "https://github.com/untemps/svelte-use-drop-outside#readme"
 downloads: 228
 dependents: 2
 updated: "2022-09-12T18:38:52.366Z"
+github_stars: 12
 tags: 
   - ui
 ---

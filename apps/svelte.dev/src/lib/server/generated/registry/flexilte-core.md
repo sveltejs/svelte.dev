@@ -7,6 +7,7 @@ homepage: "https://flexilte.github.io"
 downloads: 1
 dependents: 1
 updated: "2024-11-20T03:33:24.150Z"
+github_stars: 1
 tags: 
   - component-library
 ---

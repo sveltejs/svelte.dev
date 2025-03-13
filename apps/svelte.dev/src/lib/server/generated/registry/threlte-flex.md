@@ -6,6 +6,7 @@ author: "Grischa Erbe"
 homepage: "https://threlte.xyz"
 downloads: 81
 updated: "2025-01-20T22:28:45.385Z"
+github_stars: 2777
 tags: 
   - ui
 ---

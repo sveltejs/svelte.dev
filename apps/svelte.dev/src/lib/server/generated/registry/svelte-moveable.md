@@ -7,6 +7,7 @@ homepage: "https://daybrush.com/moveable"
 downloads: 1235
 dependents: 9
 updated: "2023-12-03T13:48:06.920Z"
+github_stars: 10283
 tags: 
   - ui
 ---

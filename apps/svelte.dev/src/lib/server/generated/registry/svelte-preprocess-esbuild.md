@@ -7,6 +7,7 @@ homepage: "https://github.com/lukeed/svelte-preprocess-esbuild#readme"
 downloads: 5167
 dependents: 1
 updated: "2022-08-28T04:02:38.971Z"
+github_stars: 45
 tags: 
   - preprocessor
   - tooling

@@ -6,6 +6,7 @@ author: "Avi Punes"
 homepage: "https://github.com/avipunes/File-Viewer#readme"
 downloads: 245
 updated: "2020-07-26T14:07:44.591Z"
+github_stars: 39
 tags: 
   - media
 ---

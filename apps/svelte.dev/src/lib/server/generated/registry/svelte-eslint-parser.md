@@ -7,6 +7,7 @@ homepage: "https://github.com/sveltejs/svelte-eslint-parser#readme"
 downloads: 475922
 dependents: 73
 updated: "2025-03-05T04:04:49.283Z"
+github_stars: 99
 tags: 
   - tooling
 ---

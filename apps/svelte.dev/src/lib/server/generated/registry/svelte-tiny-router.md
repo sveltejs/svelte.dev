@@ -6,6 +6,7 @@ author: "notnotsamuel"
 homepage: "https://github.com/notnotsamuel/svelte-tiny-router#readme"
 downloads: 5
 updated: "2025-03-12T10:15:02.991Z"
+github_stars: 6
 tags: 
   - router
 ---

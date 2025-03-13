@@ -7,6 +7,7 @@ homepage: "https://svelteflow.dev"
 downloads: 29019
 dependents: 8
 updated: "2025-02-25T10:31:17.841Z"
+github_stars: 28215
 tags: 
   - ui
   - component-library

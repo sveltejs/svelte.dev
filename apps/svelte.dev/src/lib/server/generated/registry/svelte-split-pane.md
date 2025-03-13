@@ -7,6 +7,7 @@ homepage: "https://readiz.com/"
 downloads: 305
 dependents: 2
 updated: "2021-02-07T15:35:09.068Z"
+github_stars: 44
 tags: 
   - ui
 ---

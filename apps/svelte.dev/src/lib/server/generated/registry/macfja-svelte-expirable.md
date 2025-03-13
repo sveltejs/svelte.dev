@@ -6,6 +6,7 @@ author: "MacFJA"
 homepage: "https://github.com/macfja/svelte-expirable#readme"
 downloads: 1
 updated: "2021-12-03T20:10:22.053Z"
+github_stars: 4
 tags: 
   - utility
 ---

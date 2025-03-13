@@ -7,6 +7,7 @@ homepage: "https://github.com/pablo-abc/felte/tree/main/packages/reporter-dom"
 downloads: 119
 dependents: 3
 updated: "2024-10-29T20:36:07.321Z"
+github_stars: 1042
 tags: 
   - utility
 ---

@@ -7,6 +7,7 @@ homepage: "https://github.com/jill64/svelte-menu#readme"
 downloads: 11760
 dependents: 3
 updated: "2025-03-13T02:30:03.254Z"
+github_stars: 1
 tags: 
   - component-library
 ---

@@ -7,6 +7,7 @@ homepage: "https://threlte.xyz"
 downloads: 7408
 dependents: 15
 updated: "2025-01-23T22:30:32.135Z"
+github_stars: 2777
 tags: 
   - ui
 ---

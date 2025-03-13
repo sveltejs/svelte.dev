@@ -6,6 +6,7 @@ author: "z3phyro"
 homepage: "https://github.com/z3phyro/tytra-ui#readme"
 downloads: 1
 updated: "2023-04-17T07:16:12.547Z"
+github_stars: 1
 tags: 
   - ui
   - utility

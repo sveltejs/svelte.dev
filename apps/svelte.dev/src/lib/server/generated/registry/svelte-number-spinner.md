@@ -6,6 +6,7 @@ author: "Hartmut Bohnacker"
 homepage: "https://github.com/bohnacker/svelte-number-spinner#readme"
 downloads: 83
 updated: "2022-01-06T12:20:44.313Z"
+github_stars: 28
 tags: 
   - ui
 ---

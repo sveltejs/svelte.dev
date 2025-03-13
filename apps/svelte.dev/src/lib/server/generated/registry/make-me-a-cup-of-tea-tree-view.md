@@ -5,6 +5,7 @@ repo_url: "https://github.com/TeemuKoivisto/svelte-tree-view"
 author: "Teemu Koivisto"
 homepage: "https://github.com/TeemuKoivisto/svelte-tree-view"
 updated: "2022-09-12T10:00:16.415Z"
+github_stars: 24
 tags: 
   - ui
 ---

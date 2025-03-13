@@ -6,6 +6,7 @@ author: "codingmustache && colinwilliams91"
 homepage: "https://github.com/jor-col/svelte-custom-roulette#readme"
 dependents: 1
 updated: "2023-06-16T23:38:29.754Z"
+github_stars: 16
 tags: 
   - ui
 ---

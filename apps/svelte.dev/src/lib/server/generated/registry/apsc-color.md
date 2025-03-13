@@ -6,6 +6,7 @@ author: "Andrey Pavlenko"
 homepage: "https://github.com/andrey-pavlenko/svelte-components/tree/main/packages/color#readme"
 downloads: 61
 updated: "2023-02-01T20:16:17.203Z"
+github_stars: 3
 tags: 
   - ui
 ---

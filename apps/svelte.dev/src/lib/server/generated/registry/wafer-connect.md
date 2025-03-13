@@ -6,6 +6,7 @@ author: "@saklani"
 homepage: "https://wafer.vercel.app"
 downloads: 17
 updated: "2023-06-16T07:47:20.582Z"
+github_stars: 1
 tags: 
   - auth
   - integration

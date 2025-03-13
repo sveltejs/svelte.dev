@@ -6,6 +6,7 @@ author: "nick-m"
 homepage: "https://github.com/Nick-Mazuk/ui-svelte#readme"
 downloads: 1
 updated: "2021-09-05T03:55:03.875Z"
+github_stars: 21
 tags: 
   - component-library
   - ui

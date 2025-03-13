@@ -7,6 +7,7 @@ homepage: "https://date-picker-svelte.kasper.space"
 downloads: 99
 dependents: 1
 updated: "2024-10-28T08:35:23.191Z"
+github_stars: 328
 tags: 
   - ui
 ---

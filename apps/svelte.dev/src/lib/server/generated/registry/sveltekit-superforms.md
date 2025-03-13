@@ -7,6 +7,7 @@ homepage: "https://superforms.rocks"
 downloads: 62392
 dependents: 16
 updated: "2025-03-09T15:49:51.195Z"
+github_stars: 2425
 tags: 
   - utility
   - form

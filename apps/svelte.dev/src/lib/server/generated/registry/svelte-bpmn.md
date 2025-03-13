@@ -6,6 +6,7 @@ author: "Niklas Kiefer"
 homepage: "https://github.com/bpmn-io/svelte-bpmn#readme"
 downloads: 20
 updated: "2021-07-30T12:17:33.628Z"
+github_stars: 8
 tags: 
   - ui
 ---

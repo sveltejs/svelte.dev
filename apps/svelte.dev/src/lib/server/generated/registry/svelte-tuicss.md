@@ -6,6 +6,7 @@ author: "nick-somebody"
 homepage: "https://nick-somebody.github.io/svelte-tuicss"
 downloads: 94
 updated: "2024-11-16T05:41:01.486Z"
+github_stars: 1
 tags: 
   - component-library
   - ui

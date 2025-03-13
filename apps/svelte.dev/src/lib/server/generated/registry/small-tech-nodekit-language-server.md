@@ -6,6 +6,7 @@ author: "James Birtles"
 homepage: "https://github.com/sveltejs/language-tools#readme"
 downloads: 1
 updated: "2022-02-14T17:46:02.855Z"
+github_stars: 3
 tags: 
   - tooling
 ---

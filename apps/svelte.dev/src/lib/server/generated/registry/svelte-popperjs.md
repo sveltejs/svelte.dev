@@ -7,6 +7,7 @@ homepage: "https://github.com/bryanmylee/svelte-popperjs#readme"
 downloads: 8334
 dependents: 12
 updated: "2022-08-30T04:12:00.943Z"
+github_stars: 113
 tags: 
   - ui
 ---

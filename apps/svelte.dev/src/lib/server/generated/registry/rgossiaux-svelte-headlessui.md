@@ -7,6 +7,7 @@ homepage: "https://svelte-headlessui.goss.io"
 downloads: 7649
 dependents: 3
 updated: "2023-06-11T21:49:03.380Z"
+github_stars: 1804
 tags: 
   - component-library
   - ui

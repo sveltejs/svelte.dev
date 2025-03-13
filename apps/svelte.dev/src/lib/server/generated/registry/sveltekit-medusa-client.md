@@ -6,6 +6,7 @@ author: "Lacey Pevey"
 homepage: "https://pevey.com/sveltekit-medusa-client"
 downloads: 82
 updated: "2023-09-02T15:49:08.051Z"
+github_stars: 60
 tags: 
   - integration
   - server

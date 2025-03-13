@@ -6,6 +6,7 @@ author: "Augustin Mauroy"
 homepage: "https://github.com/nodejs-loaders/nodejs-loaders#readme"
 downloads: 2
 updated: "2025-02-26T13:27:15.563Z"
+github_stars: 35
 tags: 
   - tooling
 ---

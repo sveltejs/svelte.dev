@@ -6,6 +6,7 @@ author: "Busthorne"
 homepage: "https://github.com/busthorne/papir"
 downloads: 2
 updated: "2025-02-06T01:54:55.084Z"
+github_stars: 4
 tags: 
   - component-library
   - ui

@@ -6,6 +6,7 @@ author: "Daybrush"
 homepage: "https://github.com/daybrush/ruler#readme"
 downloads: 3
 updated: "2023-06-02T16:20:49.677Z"
+github_stars: 343
 tags: 
   - ui
 ---

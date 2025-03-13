@@ -6,6 +6,7 @@ author: "Saurav Sahu"
 homepage: "https://github.com/nodegui/svelte-nodegui-preprocessor"
 downloads: 2
 updated: "2021-03-03T22:18:51.779Z"
+github_stars: 2
 tags: 
   - preprocessor
 ---

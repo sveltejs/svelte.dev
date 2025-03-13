@@ -7,6 +7,7 @@ homepage: "https://github.com/jill64/svelte-qparam#readme"
 downloads: 8141
 dependents: 1
 updated: "2024-12-30T10:09:53.101Z"
+github_stars: 3
 tags: 
   - utility
 ---

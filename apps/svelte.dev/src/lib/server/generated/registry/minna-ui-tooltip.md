@@ -7,6 +7,7 @@ homepage: "https://wearegenki.github.io/minna-ui"
 downloads: 2
 dependents: 1
 updated: "2020-03-24T19:40:15.486Z"
+github_stars: 87
 tags: 
   - ui
 ---

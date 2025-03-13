@@ -6,6 +6,7 @@ author: "Stephen Gunn"
 homepage: "https://github.com/StephenGunn/svelte-component-to-image"
 downloads: 172
 updated: "2024-11-09T17:17:00.413Z"
+github_stars: 45
 tags: 
   - tooling
 ---

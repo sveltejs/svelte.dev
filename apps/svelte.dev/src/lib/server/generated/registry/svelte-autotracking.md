@@ -6,6 +6,7 @@ author: "Emmanuel FITOUSSI"
 homepage: "https://github.com/manufitoussi/svelte-autotracking"
 downloads: 23
 updated: "2024-05-04T23:51:27.790Z"
+github_stars: 2
 tags: 
   - utility
 ---

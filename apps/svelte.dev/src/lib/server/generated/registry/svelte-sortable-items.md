@@ -6,6 +6,7 @@ author: "Joaquim Neto"
 homepage: "https://github.com/joaquimnetocel/svelte-sortable-items#readme"
 downloads: 72
 updated: "2024-08-26T20:44:52.886Z"
+github_stars: 12
 tags: 
   - ui
 ---

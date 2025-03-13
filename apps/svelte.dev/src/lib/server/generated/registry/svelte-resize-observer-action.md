@@ -7,6 +7,7 @@ homepage: "https://captaincodeman.github.io/svelte-resize-observer-action/"
 downloads: 896
 dependents: 3
 updated: "2024-04-29T20:09:13.892Z"
+github_stars: 13
 tags: 
   - dom
   - utility

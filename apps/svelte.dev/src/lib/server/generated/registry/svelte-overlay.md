@@ -6,6 +6,7 @@ author: "Mariusz Wachowski"
 homepage: "https://github.com/wysher/svelte-overlay#readme"
 downloads: 126
 updated: "2020-06-07T15:38:40.344Z"
+github_stars: 22
 tags: 
   - ui
 ---

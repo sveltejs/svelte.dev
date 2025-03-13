@@ -6,6 +6,7 @@ author: "Elron Bucai"
 homepage: "https://svelte-wp-shortcodes.netlify.app/"
 downloads: 1
 updated: "2023-08-11T18:27:28.618Z"
+github_stars: 5
 tags: 
   - content
   - utility

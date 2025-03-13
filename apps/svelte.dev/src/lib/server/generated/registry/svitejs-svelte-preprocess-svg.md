@@ -6,6 +6,7 @@ author: "dominikg"
 homepage: "https://github.com/svitejs/svelte-preprocess-svg#readme"
 downloads: 67
 updated: "2022-12-04T16:03:03.306Z"
+github_stars: 40
 tags: 
   - preprocessor
 ---

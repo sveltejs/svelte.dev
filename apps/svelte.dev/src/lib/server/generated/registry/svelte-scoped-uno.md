@@ -7,6 +7,7 @@ homepage: "https://polylingual.dev"
 downloads: 3
 dependents: 1
 updated: "2023-05-20T00:02:39.075Z"
+github_stars: 17
 tags: 
   - tooling
   - utility

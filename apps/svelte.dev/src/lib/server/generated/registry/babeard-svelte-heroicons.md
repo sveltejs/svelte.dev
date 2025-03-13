@@ -6,6 +6,7 @@ author: "Brian Beard"
 homepage: "https://github.com/babeard/svelte-heroicons"
 downloads: 95
 updated: "2024-01-12T02:26:38.362Z"
+github_stars: 2
 tags: 
   - ui
 ---

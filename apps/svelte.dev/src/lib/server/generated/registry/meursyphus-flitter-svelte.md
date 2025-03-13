@@ -5,6 +5,7 @@ repo_url: "https://github.com/meursyphus/flitter"
 author: "anseotmd555"
 homepage: "https://flitter.pages.dev"
 updated: "2024-06-28T06:42:00.752Z"
+github_stars: 326
 tags: 
   - ui
 ---

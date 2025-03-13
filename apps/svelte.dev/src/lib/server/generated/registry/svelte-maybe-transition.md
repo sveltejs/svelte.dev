@@ -6,6 +6,7 @@ author: "kiosion"
 homepage: "https://github.com/kiosion/svelte-maybe-transition#readme"
 downloads: 1
 updated: "2023-02-03T05:03:37.806Z"
+github_stars: 1
 tags: 
   - ui
 ---

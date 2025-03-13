@@ -7,6 +7,7 @@ homepage: "https://github.com/BulatDashiev/svelte-slider#readme"
 downloads: 952
 dependents: 2
 updated: "2020-05-24T07:55:02.534Z"
+github_stars: 28
 tags: 
   - ui
 ---

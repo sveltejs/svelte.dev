@@ -6,6 +6,7 @@ author: "Jakob Schnitzer"
 homepage: "https://github.com/yagebu/esbuild-plugin-svelte#readme"
 downloads: 9
 updated: "2021-01-02T12:08:49.332Z"
+github_stars: 3
 tags: 
   - tooling
   - preprocessor

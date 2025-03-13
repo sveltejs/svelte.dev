@@ -6,6 +6,7 @@ author: "embedz"
 homepage: "https://github.com/embedz/embedz"
 downloads: 805
 updated: "2025-03-07T17:01:50.954Z"
+github_stars: 14
 tags: 
   - media
   - integration

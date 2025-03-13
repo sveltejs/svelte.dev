@@ -6,6 +6,7 @@ author: "Eric Liu"
 homepage: "https://github.com/metonym/sveldoc"
 downloads: 4
 updated: "2022-09-03T22:31:52.248Z"
+github_stars: 1
 tags: 
   - tooling
 ---

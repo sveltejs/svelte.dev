@@ -6,6 +6,7 @@ author: "Eric Liu"
 homepage: "https://github.com/metonym/svelte-radio"
 downloads: 11
 updated: "2021-12-31T19:19:37.578Z"
+github_stars: 7
 tags: 
   - ui
 ---

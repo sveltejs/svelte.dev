@@ -6,6 +6,7 @@ author: "Jacob Bowdoin"
 homepage: "https://unocss.dev"
 downloads: 689
 updated: "2025-03-13T08:53:59.880Z"
+github_stars: 17320
 tags: 
   - utility
   - preprocessor

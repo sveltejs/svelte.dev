@@ -6,6 +6,7 @@ author: "cnolte"
 homepage: "https://noph.dev"
 downloads: 317
 updated: "2025-03-11T06:30:25.107Z"
+github_stars: 4
 tags: 
   - component-library
   - ui

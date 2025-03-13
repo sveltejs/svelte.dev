@@ -6,6 +6,7 @@ author: "Janosh Riebesell"
 homepage: "https://janosh.github.io/elementari"
 downloads: 94
 updated: "2025-02-17T18:02:04.379Z"
+github_stars: 143
 tags: 
   - ui
   - content

@@ -7,6 +7,7 @@ homepage: "https://kitbook.vercel.app"
 downloads: 14
 dependents: 2
 updated: "2024-04-27T16:08:33.240Z"
+github_stars: 64
 tags: 
   - tooling
   - content

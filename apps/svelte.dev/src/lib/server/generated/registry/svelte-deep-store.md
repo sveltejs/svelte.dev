@@ -6,6 +6,7 @@ author: "neuronet.io@gmail.com"
 homepage: "https://github.com/neuronetio/svelte-deep-store#readme"
 downloads: 1
 updated: "2019-08-27T21:19:20.342Z"
+github_stars: 1
 tags: 
   - utility
 ---

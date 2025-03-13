@@ -6,6 +6,7 @@ author: "jycouet"
 homepage: "https://www.kitql.dev/"
 downloads: 86
 updated: "2025-03-04T22:19:19.941Z"
+github_stars: 424
 tags: 
   - tooling
 ---

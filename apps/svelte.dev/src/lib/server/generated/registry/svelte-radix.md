@@ -7,6 +7,7 @@ homepage: "https://svelte-radix.codewithshin.com/"
 downloads: 15136
 dependents: 11
 updated: "2024-10-25T14:22:16.094Z"
+github_stars: 32
 tags: 
   - ui
   - component-library

@@ -6,6 +6,7 @@ author: "wobsoriano"
 homepage: "https://github.com/wobsoriano/svelte-clerk#readme"
 downloads: 544
 updated: "2025-03-11T21:38:38.128Z"
+github_stars: 92
 tags: 
   - auth
   - integration

@@ -6,6 +6,7 @@ author: "@silvestrevivo"
 homepage: "https://github.com/silvestrevivo/svelte-marquee#readme"
 downloads: 1
 updated: "2020-07-15T19:15:34.745Z"
+github_stars: 8
 tags: 
   - ui
 ---

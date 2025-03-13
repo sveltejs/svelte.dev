@@ -7,6 +7,7 @@ homepage: "https://github.com/joeattardi/svelte-click-outside#readme"
 downloads: 1109
 dependents: 8
 updated: "2019-08-10T15:40:54.728Z"
+github_stars: 29
 tags: 
   - utility
 ---

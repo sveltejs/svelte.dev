@@ -6,6 +6,7 @@ author: "Thang Huu Vu"
 homepage: "https://sveltekit.authjs.dev"
 downloads: 1
 updated: "2024-05-19T00:40:12.055Z"
+github_stars: 26233
 tags: 
   - auth
 ---

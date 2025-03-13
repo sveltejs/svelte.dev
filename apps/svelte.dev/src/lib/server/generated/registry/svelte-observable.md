@@ -7,6 +7,7 @@ homepage: "https://github.com/timhall/svelte-observable#readme"
 downloads: 164
 dependents: 1
 updated: "2019-04-26T20:13:35.925Z"
+github_stars: 62
 tags: 
   - utility
 ---

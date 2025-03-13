@@ -6,6 +6,7 @@ author: "artiebits"
 homepage: "https://github.com/artiebits/svelte-seo#readme"
 downloads: 2480
 updated: "2024-05-07T18:25:38.747Z"
+github_stars: 470
 tags: 
   - seo
 ---

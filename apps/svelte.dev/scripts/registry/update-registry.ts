@@ -289,7 +289,9 @@ async function process_batches_through_llm({
 
 						if (!package_details) continue;
 
-						package_details.meta.tags = json[pkg_name].tags;
+						package_details.meta.tags = json[pkg_name].tags ?? [];
+
+						if (package_details.meta.tags.length === 0) continue;
 
 						// If LLM provided a new description, use it
 						if (json[pkg_name].description) {
@@ -351,8 +353,8 @@ async function process_batches_through_llm({
 	// If this is the top-level call (not a retry), filter and return only Svelte packages
 	if (retry_count === 0) {
 		// Filter out packages that didn't get LLM details (non-Svelte packages)
-		const svelte_packages = new Map<string, any>();
-		const non_svelte_packages = new Map<string, any>();
+		const svelte_packages = new Map<string, StructuredInterimPackage>();
+		const non_svelte_packages = new Map<string, StructuredInterimPackage>();
 
 		for (const [pkg_name, pkg_data] of packages_map) {
 			console.log(pkg_data.meta.tags, pkg_data.meta.description);
@@ -402,35 +404,33 @@ export async function fetch_github_stars(repo_url: string): Promise<number | nul
 	// GitHub API URL to fetch repository data
 	let api_url = `https://api.github.com/repos/${owner}/${repo}`;
 
-	return request_queue.enqueue(async () => {
-		try {
-			console.log(`Fetching stars for ${owner}/${repo}`);
-			const response = await superfetch(api_url, {
-				headers: {
-					...HEADERS,
-					Accept: 'application/vnd.github.v3+json',
-					Authorization: `Bearer ${process.env.GITHUB_TOKEN}`
-				}
-			});
-
-			if (response.status === 404) {
-				console.log(`404 Not Found for ${api_url} (Not retrying)`);
-				return null;
+	try {
+		console.log(`Fetching stars for ${owner}/${repo}`);
+		const response = await superfetch(api_url, {
+			headers: {
+				...HEADERS,
+				Accept: 'application/vnd.github.v3+json',
+				Authorization: `Bearer ${process.env.GITHUB_TOKEN}`
 			}
+		});
 
-			const data = await response.json();
-
-			if (!data || typeof data.stargazers_count !== 'number') {
-				console.error(`Invalid response from GitHub API for ${repo_url}`);
-				return null;
-			}
-
-			return data.stargazers_count;
-		} catch (error) {
-			console.error(`Error fetching stars for ${repo_url}:`, error);
+		if (response.status === 404) {
+			console.log(`404 Not Found for ${api_url} (Not retrying)`);
 			return null;
 		}
-	});
+
+		const data = await response.json();
+
+		if (!data || typeof data.stargazers_count !== 'number') {
+			console.error(`Invalid response from GitHub API for ${repo_url}`);
+			return null;
+		}
+
+		return data.stargazers_count;
+	} catch (error) {
+		console.error(`Error fetching stars for ${repo_url}:`, error);
+		return null;
+	}
 }
 
 async function update_all_github_stars(ignore_if_exists = false) {
@@ -465,6 +465,14 @@ async function update_cache_from_npm() {
 	console.log(detail.versions[latestVersion]);
 }
 
+async function delete_untagged() {
+	for await (const [pkg_name_file, data] of PackageCache.entries()) {
+		if (!Array.isArray(data.tags)) {
+			PackageCache.delete(data.name);
+		}
+	}
+}
+
 /**
  * Creates a generator that yields batches from a Map
  */
@@ -481,6 +489,8 @@ async function* create_map_batch_generator(
 	}
 }
 
-const svelte_packages = await process_batches_through_llm();
+// const svelte_packages = await process_batches_through_llm();
 
 // update_cache_from_npm();
+update_all_github_stars();
+// delete_untagged();

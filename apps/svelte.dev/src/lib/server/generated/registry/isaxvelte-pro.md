@@ -6,6 +6,7 @@ author: "RubenMach"
 homepage: "https://github.com/RbnMach/isaxvelte-pro#readme"
 downloads: 69
 updated: "2024-07-05T04:21:34.957Z"
+github_stars: 2
 tags: 
   - ui
   - component-library

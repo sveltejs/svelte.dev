@@ -7,6 +7,7 @@ homepage: "https://github.com/ANovokmet/svelte-gantt#readme"
 downloads: 1093
 dependents: 2
 updated: "2025-02-10T09:27:05.820Z"
+github_stars: 557
 tags: 
   - component-library
   - ui

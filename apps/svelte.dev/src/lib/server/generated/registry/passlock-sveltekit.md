@@ -6,6 +6,7 @@ author: "Toby Hobson"
 homepage: "https://passlock.dev"
 downloads: 6
 updated: "2024-11-27T14:09:44.610Z"
+github_stars: 167
 tags: 
   - auth
 ---

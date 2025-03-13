@@ -6,6 +6,7 @@ author: "johnwalley"
 homepage: "https://github.com/johnwalley/compare-image-slider#readme"
 downloads: 1
 updated: "2020-07-27T20:18:53.273Z"
+github_stars: 17
 tags: 
   - ui
   - media

@@ -6,6 +6,7 @@ author: "subhendupsingh"
 homepage: "https://sveltekit-notion-blog.netlify.app/"
 downloads: 83
 updated: "2025-03-01T14:08:35.920Z"
+github_stars: 39
 tags: 
   - content
   - server

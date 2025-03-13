@@ -7,6 +7,7 @@ homepage: "https://github.com/RemiKalbe/svelte-fontawesome#readme"
 downloads: 4
 dependents: 1
 updated: "2019-11-13T18:22:17.380Z"
+github_stars: 2
 tags: 
   - ui
 ---

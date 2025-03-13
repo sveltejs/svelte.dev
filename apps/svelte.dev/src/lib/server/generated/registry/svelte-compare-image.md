@@ -6,6 +6,7 @@ author: "Brian Mitchell"
 homepage: "https://projects.brianm.me/svelte-compare-image/"
 downloads: 46
 updated: "2024-04-18T05:36:53.378Z"
+github_stars: 5
 tags: 
   - ui
 ---

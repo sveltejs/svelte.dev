@@ -6,6 +6,7 @@ author: "Ryan Gossiaux"
 homepage: "https://github.com/rgossiaux/svelte-heroicons"
 downloads: 149
 updated: "2022-02-10T06:08:17.906Z"
+github_stars: 65
 tags: 
   - ui
 ---

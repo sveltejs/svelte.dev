@@ -6,6 +6,7 @@ author: "Yong Jun"
 homepage: "https://github.com/yongjun21/st-scrolly#readme"
 downloads: 1
 updated: "2020-07-28T16:16:14.411Z"
+github_stars: 33
 tags: 
   - content
   - ui

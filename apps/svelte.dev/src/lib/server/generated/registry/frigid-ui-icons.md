@@ -6,6 +6,7 @@ author: "Antfroze"
 homepage: "https://frigid-ui/icons"
 downloads: 1
 updated: "2022-10-27T21:31:30.425Z"
+github_stars: 1
 tags: 
   - ui
   - component-library

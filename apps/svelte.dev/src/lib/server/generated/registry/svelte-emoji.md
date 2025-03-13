@@ -6,6 +6,7 @@ author: "Sean McPherson"
 homepage: "https://github.com/seanmcp/svelte-emoji#readme"
 downloads: 26
 updated: "2020-01-06T11:45:20.058Z"
+github_stars: 7
 tags: 
   - ui
 ---

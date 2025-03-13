@@ -7,6 +7,7 @@ homepage: "https://github.com/jill64/svelte-dark-theme#readme"
 downloads: 11927
 dependents: 2
 updated: "2025-01-21T08:32:14.575Z"
+github_stars: 3
 tags: 
   - utility
 ---

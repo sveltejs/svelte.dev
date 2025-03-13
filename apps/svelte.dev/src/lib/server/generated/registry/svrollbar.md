@@ -7,6 +7,7 @@ homepage: "https://github.com/daylilyfield/svrollbar#readme"
 downloads: 1629
 dependents: 4
 updated: "2022-04-17T14:54:20.139Z"
+github_stars: 85
 tags: 
   - ui
   - dom

@@ -6,6 +6,7 @@ author: "Shinichi Okada"
 homepage: "https://svelte-google-materialdesign-icons.codewithshin.com"
 downloads: 495
 updated: "2024-08-14T15:13:42.293Z"
+github_stars: 12
 tags: 
   - ui
 ---

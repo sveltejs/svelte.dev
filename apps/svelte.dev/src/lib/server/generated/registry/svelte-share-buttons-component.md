@@ -7,6 +7,7 @@ homepage: "https://pchynoweth.github.io/svelte-share-buttons-component/"
 downloads: 457
 dependents: 2
 updated: "2024-03-23T15:09:58.068Z"
+github_stars: 39
 tags: 
   - ui
 ---

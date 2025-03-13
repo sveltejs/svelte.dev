@@ -6,6 +6,7 @@ author: "Saurav Kanchan"
 homepage: "https://saurav.tech/mdbsvelte/?path=/story/charts--examples"
 downloads: 3
 updated: "2022-09-07T12:43:10.178Z"
+github_stars: 318
 tags: 
   - ui
   - media

@@ -6,6 +6,7 @@ author: "Mudia Geo"
 homepage: "https://github.com/mudiageo/svelte-guardian#readme"
 downloads: 26
 updated: "2025-02-20T16:03:13.410Z"
+github_stars: 1
 tags: 
   - auth
   - server

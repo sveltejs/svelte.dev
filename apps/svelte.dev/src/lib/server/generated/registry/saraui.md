@@ -6,6 +6,7 @@ author: "Raul Armas"
 homepage: "https://saraui.com"
 downloads: 2
 updated: "2024-05-17T05:53:56.977Z"
+github_stars: 107
 tags: 
   - component-library
   - ui

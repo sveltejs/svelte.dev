@@ -6,6 +6,7 @@ author: "Ahmad Barclay"
 homepage: "http://onsvisual.github.io/svelte-charts"
 downloads: 26
 updated: "2024-12-02T10:53:25.346Z"
+github_stars: 14
 tags: 
   - ui
 ---

@@ -6,6 +6,7 @@ author: "ThaUnknown"
 homepage: "https://github.com/ThaUnknown/simple-font-select#readme"
 downloads: 9
 updated: "2023-01-07T13:57:01.233Z"
+github_stars: 6
 tags: 
   - ui
 ---

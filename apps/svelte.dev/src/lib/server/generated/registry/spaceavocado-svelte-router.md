@@ -6,6 +6,7 @@ author: "David Horak"
 homepage: "https://github.com/spaceavocado/svelte-router"
 downloads: 1
 updated: "2019-09-30T03:07:07.713Z"
+github_stars: 60
 tags: 
   - router
 ---

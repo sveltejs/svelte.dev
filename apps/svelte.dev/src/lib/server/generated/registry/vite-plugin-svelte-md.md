@@ -7,6 +7,7 @@ homepage: "https://github.com/ota-meshi/vite-plugin-svelte-md#readme"
 downloads: 833
 dependents: 1
 updated: "2022-12-11T08:40:25.432Z"
+github_stars: 12
 tags: 
   - tooling
   - content

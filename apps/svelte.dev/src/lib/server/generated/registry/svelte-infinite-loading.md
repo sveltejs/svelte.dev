@@ -7,6 +7,7 @@ homepage: "https://github.com/jonasgeiler/svelte-infinite-loading"
 downloads: 2057
 dependents: 6
 updated: "2024-05-28T05:44:35.168Z"
+github_stars: 309
 tags: 
   - ui
 ---

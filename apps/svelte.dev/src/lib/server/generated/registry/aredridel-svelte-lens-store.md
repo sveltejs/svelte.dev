@@ -6,6 +6,7 @@ author: "Aria Stewart"
 homepage: "https://github.com/aredridel/svelte-lens-store#readme"
 downloads: 1
 updated: "2022-05-15T21:35:43.809Z"
+github_stars: 13
 tags: 
   - utility
 ---

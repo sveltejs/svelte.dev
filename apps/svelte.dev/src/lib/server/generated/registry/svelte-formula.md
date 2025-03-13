@@ -6,6 +6,7 @@ author: "Tane Piper"
 homepage: "https://tanepiper.github.io/svelte-formula"
 downloads: 66
 updated: "2022-07-01T13:15:36.210Z"
+github_stars: 125
 tags: 
   - utility
 ---

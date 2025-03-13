@@ -7,6 +7,7 @@ homepage: "https://github.com/jill64/svelte-html#readme"
 downloads: 12024
 dependents: 3
 updated: "2024-12-25T22:18:00.080Z"
+github_stars: 1
 tags: 
   - utility
 ---

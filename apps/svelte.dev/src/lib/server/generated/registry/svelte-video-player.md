@@ -7,6 +7,7 @@ homepage: "https://github.com/meigo/svelte-video-player"
 downloads: 445
 dependents: 1
 updated: "2021-03-18T09:15:42.653Z"
+github_stars: 133
 tags: 
   - media
   - ui

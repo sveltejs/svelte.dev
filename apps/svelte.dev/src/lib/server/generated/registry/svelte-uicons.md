@@ -6,6 +6,7 @@ author: "Robert Hamiga"
 homepage: "https://github.com/robak08/svelte-uicons#readme"
 downloads: 41
 updated: "2023-03-02T10:21:37.716Z"
+github_stars: 3
 tags: 
   - ui
 ---

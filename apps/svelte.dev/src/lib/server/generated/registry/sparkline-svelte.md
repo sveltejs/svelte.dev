@@ -7,6 +7,7 @@ homepage: "https://bn-l.github.io/sparkline-svelte/"
 downloads: 7
 dependents: 1
 updated: "2024-12-05T00:04:49.029Z"
+github_stars: 12
 tags: 
   - ui
 ---

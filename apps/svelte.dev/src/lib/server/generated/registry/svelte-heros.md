@@ -7,6 +7,7 @@ homepage: "https://svelte-heros.codewithshin.com/"
 downloads: 1268
 dependents: 3
 updated: "2024-11-02T14:47:38.761Z"
+github_stars: 19
 tags: 
   - ui
 ---

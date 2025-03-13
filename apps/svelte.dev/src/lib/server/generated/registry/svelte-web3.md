@@ -7,6 +7,7 @@ homepage: "https://github.com/clbrge/svelte-web3#readme"
 downloads: 179
 dependents: 2
 updated: "2023-07-17T10:12:41.599Z"
+github_stars: 140
 tags: 
   - integration
   - utility

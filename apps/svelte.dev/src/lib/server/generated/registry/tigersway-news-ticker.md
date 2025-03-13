@@ -6,6 +6,7 @@ author: "Ben Michaud"
 homepage: "https://github.com/tigersway/svelte-news-ticker#readme"
 downloads: 13
 updated: "2022-08-24T23:31:09.343Z"
+github_stars: 2
 tags: 
   - ui
 ---

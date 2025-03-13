@@ -7,6 +7,7 @@ homepage: "https://github.com/ikun-svelte/ikun-ui#readme"
 downloads: 17
 dependents: 1
 updated: "2025-01-24T03:49:30.129Z"
+github_stars: 1432
 tags: 
   - component-library
   - ui

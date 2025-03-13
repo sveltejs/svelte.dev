@@ -6,6 +6,7 @@ author: "Patryk Rzucidło [@ptkdev]"
 homepage: "https://github.com/ptkdev/sveltekit-electron-adapter"
 downloads: 36
 updated: "2023-02-11T20:20:42.101Z"
+github_stars: 78
 tags: 
   - adapter
 ---

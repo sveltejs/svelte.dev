@@ -6,6 +6,7 @@ author: "Neel Parpia"
 homepage: "https://svelte-editor.neelp.tech"
 downloads: 5
 updated: "2024-06-20T17:12:00.234Z"
+github_stars: 1
 tags: 
   - ui
   - tooling

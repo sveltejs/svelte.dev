@@ -7,6 +7,7 @@ homepage: "https://github.com/magidoc-org/magidoc#readme"
 downloads: 6010
 dependents: 1
 updated: "2024-11-08T18:33:01.933Z"
+github_stars: 261
 tags: 
   - content
 ---

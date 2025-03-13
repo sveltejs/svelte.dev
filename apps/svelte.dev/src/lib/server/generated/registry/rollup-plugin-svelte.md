@@ -7,6 +7,7 @@ homepage: "https://github.com/sveltejs/rollup-plugin-svelte#readme"
 downloads: 86389
 dependents: 126
 updated: "2024-06-06T09:02:39.239Z"
+github_stars: 508
 tags: 
   - tooling
   - preprocessor

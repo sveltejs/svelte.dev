@@ -6,6 +6,7 @@ author: "Natan Chiodi"
 homepage: "https://natoune.github.io/svelte-daisyui-toast"
 downloads: 31
 updated: "2025-02-13T20:46:30.430Z"
+github_stars: 1
 tags: 
   - ui
 ---

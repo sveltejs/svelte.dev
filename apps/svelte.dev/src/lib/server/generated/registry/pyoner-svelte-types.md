@@ -6,6 +6,7 @@ author: "Jungle"
 homepage: "https://github.com/pyoner/svelte-typescript#readme"
 downloads: 327
 updated: "2019-06-14T08:09:59.184Z"
+github_stars: 209
 tags: 
   - utility
 ---

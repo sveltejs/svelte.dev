@@ -173,6 +173,15 @@ export class PackageCache {
 		await fsp.writeFile(pathname, PackageCache.stringify(data));
 	}
 
+	static async delete(pkg_name: string) {
+		const pathname = path.resolve(
+			path.dirname(fileURLToPath(import.meta.url)),
+			`../../src/lib/server/generated/registry/${PackageCache.#clean_name(pkg_name)}.md`
+		);
+
+		await fsp.unlink(pathname);
+	}
+
 	static async *entries() {
 		const cache_dir = path.resolve(
 			path.dirname(fileURLToPath(import.meta.url)),

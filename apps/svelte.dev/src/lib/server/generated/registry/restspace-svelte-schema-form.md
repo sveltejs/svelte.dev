@@ -6,6 +6,7 @@ author: "James Ellis-Jones"
 homepage: "https://github.com/restspace/svelte-schema-form#readme"
 downloads: 62
 updated: "2023-08-19T09:26:18.506Z"
+github_stars: 73
 tags: 
   - utility
   - ui

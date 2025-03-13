@@ -6,6 +6,7 @@ author: "Daniil Suvorov"
 homepage: "https://sveltevk.github.io/icons/"
 dependents: 1
 updated: "2022-05-02T17:54:03.031Z"
+github_stars: 4
 tags: 
   - ui
 ---

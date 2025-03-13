@@ -6,6 +6,7 @@ author: "Team GOATS"
 homepage: "https://sveltetoggles.onrender.com"
 downloads: 1
 updated: "2024-02-23T02:59:04.722Z"
+github_stars: 8
 tags: 
   - ui
 ---

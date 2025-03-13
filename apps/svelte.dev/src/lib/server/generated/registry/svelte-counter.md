@@ -6,6 +6,7 @@ author: "rallisf1"
 homepage: "https://github.com/rallisf1/svelte-counter#readme"
 downloads: 13
 updated: "2020-04-23T17:07:06.855Z"
+github_stars: 4
 tags: 
   - ui
 ---

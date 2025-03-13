@@ -6,6 +6,7 @@ author: "SJ"
 homepage: "https://headlessui-svelte.com"
 downloads: 1
 updated: "2024-12-11T14:10:54.356Z"
+github_stars: 1
 tags: 
   - component-library
   - ui

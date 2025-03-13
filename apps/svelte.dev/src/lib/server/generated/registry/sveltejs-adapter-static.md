@@ -7,6 +7,7 @@ homepage: "https://svelte.dev"
 downloads: 153379
 dependents: 60
 updated: "2024-12-21T18:33:37.611Z"
+github_stars: 19074
 tags: 
   - adapter
   - content

@@ -7,6 +7,7 @@ homepage: "https://github.com/arlac77/svelte-entitlement#readme"
 downloads: 777
 dependents: 3
 updated: "2025-03-12T12:36:35.943Z"
+github_stars: 1
 tags: 
   - utility
 ---

@@ -6,6 +6,7 @@ author: "babakfp"
 homepage: "https://github.com/babakfp/svelte-outclick#readme"
 downloads: 643
 updated: "2025-03-02T18:16:12.982Z"
+github_stars: 68
 tags: 
   - dom
   - utility

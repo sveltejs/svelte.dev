@@ -6,6 +6,7 @@ author: "gcbenlloch"
 homepage: "https://github.com/GCBenlloch/svelte-cleavejs#readme"
 downloads: 152
 updated: "2021-11-14T16:48:40.357Z"
+github_stars: 7
 tags: 
   - utility
 ---

@@ -6,6 +6,7 @@ author: "Mateusz Kadlubowski"
 homepage: "https://github.com/xeho91/svelte-ast-print"
 downloads: 21839
 updated: "2024-12-26T04:23:00.373Z"
+github_stars: 12
 tags: 
   - tooling
 ---

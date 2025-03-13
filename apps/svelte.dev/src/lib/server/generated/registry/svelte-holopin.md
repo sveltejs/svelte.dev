@@ -6,6 +6,7 @@ author: "zaneshaw"
 homepage: "https://triangle100.com"
 downloads: 1
 updated: "2022-12-23T20:55:43.573Z"
+github_stars: 2
 tags: 
   - integration
 ---

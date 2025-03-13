@@ -7,6 +7,7 @@ homepage: "https://chainlist.github.io/svelte-forms/"
 downloads: 8628
 dependents: 15
 updated: "2022-03-31T22:29:26.074Z"
+github_stars: 402
 tags: 
   - utility
 ---

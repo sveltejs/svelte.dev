@@ -7,6 +7,7 @@ homepage: "https://github.com/thewuhxyz/wallet-adapter-svelte#readme"
 downloads: 2
 dependents: 1
 updated: "2024-07-24T15:32:33.198Z"
+github_stars: 1
 tags: 
   - integration
 ---

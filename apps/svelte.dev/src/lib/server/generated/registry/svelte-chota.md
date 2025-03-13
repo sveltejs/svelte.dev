@@ -6,6 +6,7 @@ author: "Alexey Schebelev"
 homepage: "https://alexxnb.github.io/svelte-chota"
 downloads: 58
 updated: "2021-07-29T11:43:20.374Z"
+github_stars: 287
 tags: 
   - ui
 ---

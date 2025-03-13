@@ -7,6 +7,7 @@ homepage: "https://janosh.github.io/svelte-zoo"
 downloads: 311
 dependents: 1
 updated: "2025-02-18T01:35:28.682Z"
+github_stars: 6
 tags: 
   - component-library
   - tooling

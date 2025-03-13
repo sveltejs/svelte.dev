@@ -6,6 +6,7 @@ author: "Luciano Ratamero"
 homepage: "https://github.com/lucianoratamero/svelte-promisable-stores#readme"
 downloads: 32
 updated: "2020-08-23T16:17:10.077Z"
+github_stars: 23
 tags: 
   - utility
 ---

@@ -6,6 +6,7 @@ author: "Volodymyr Palamar"
 homepage: "https://github.com/gornostay25/svelte-adapter-bun#readme"
 downloads: 1
 updated: "2024-09-30T11:41:07.854Z"
+github_stars: 559
 tags: 
   - adapter
 ---

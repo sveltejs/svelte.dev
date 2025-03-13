@@ -6,6 +6,7 @@ author: "pelletier197"
 homepage: "https://magidoc.js.org/svelte-plugins/prismjs"
 downloads: 1972
 updated: "2024-11-08T18:33:01.772Z"
+github_stars: 261
 tags: 
   - tooling
   - content

@@ -7,6 +7,7 @@ homepage: "https://github.com/rutynka/helper-bar-board"
 downloads: 1
 dependents: 3
 updated: "2023-01-28T23:47:02.718Z"
+github_stars: 1
 tags: 
   - ui
   - utility

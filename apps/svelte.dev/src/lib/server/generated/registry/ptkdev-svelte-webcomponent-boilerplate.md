@@ -6,6 +6,7 @@ author: "Patryk Rzucidło [@ptkdev]"
 homepage: "https://codepen.io/ptkdev/pen/jOyNmEQ"
 downloads: 1
 updated: "2022-02-20T23:46:11.424Z"
+github_stars: 60
 tags: 
   - tooling
 ---

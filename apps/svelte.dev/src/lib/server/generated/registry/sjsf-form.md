@@ -6,6 +6,7 @@ author: "x0k"
 homepage: "https://x0k.github.io/svelte-jsonschema-form/"
 downloads: 74
 updated: "2025-01-28T22:50:18.712Z"
+github_stars: 39
 tags: 
   - utility
 ---

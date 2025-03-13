@@ -6,6 +6,7 @@ author: "ivanhofer"
 homepage: "https://github.com/ivanhofer/sthemer"
 downloads: 1
 updated: "2022-12-22T17:42:14.040Z"
+github_stars: 27
 tags: 
   - utility
 ---

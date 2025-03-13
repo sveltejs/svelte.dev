@@ -6,6 +6,7 @@ author: "WunderGraph Maintainers"
 homepage: "https://wundergraph.com"
 downloads: 150
 updated: "2024-05-15T10:33:34.396Z"
+github_stars: 2318
 tags: 
   - integration
   - server

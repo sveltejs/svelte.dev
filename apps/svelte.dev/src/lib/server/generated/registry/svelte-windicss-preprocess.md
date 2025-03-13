@@ -6,6 +6,7 @@ author: "Veritas Raven"
 homepage: "https://windicss.org/"
 downloads: 265
 updated: "2022-06-03T09:13:07.764Z"
+github_stars: 163
 tags: 
   - preprocessor
   - tooling

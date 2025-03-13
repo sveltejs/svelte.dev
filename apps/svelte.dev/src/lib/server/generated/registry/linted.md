@@ -6,6 +6,7 @@ author: "Jimmy Zhening Luo"
 homepage: "https://github.com/jimmy-zhening-luo/linted#readme"
 downloads: 876
 updated: "2025-03-12T20:05:48.351Z"
+github_stars: 1
 tags: 
   - tooling
 ---

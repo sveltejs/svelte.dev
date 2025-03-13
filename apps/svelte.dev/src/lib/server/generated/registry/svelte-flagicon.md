@@ -6,6 +6,7 @@ author: "dustbort"
 homepage: "https://github.com/dustbort/svelte-flagicon#readme"
 downloads: 9
 updated: "2020-05-12T01:56:58.454Z"
+github_stars: 3
 tags: 
   - ui
 ---

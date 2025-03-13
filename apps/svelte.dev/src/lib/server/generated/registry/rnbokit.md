@@ -6,6 +6,7 @@ author: "sandernotenbaert"
 homepage: "https://github.com/SanderNotenbaert/RNBOKit#readme"
 downloads: 32
 updated: "2023-06-26T20:34:05.464Z"
+github_stars: 3
 tags: 
   - integration
   - media

@@ -6,6 +6,7 @@ author: "MacFJA"
 homepage: "https://github.com/macfja/svelte-p5#readme"
 downloads: 15
 updated: "2022-08-05T20:21:19.264Z"
+github_stars: 10
 tags: 
   - ui
 ---

@@ -6,6 +6,7 @@ author: "harryhdt"
 homepage: "https://svelte-simple-form.harryhdt.dev"
 downloads: 9
 updated: "2024-12-19T16:08:41.041Z"
+github_stars: 3
 tags: 
   - utility
 ---

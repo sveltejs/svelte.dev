@@ -7,6 +7,7 @@ homepage: "https://github.com/cmjoseph07/svelty-email#readme"
 downloads: 454
 dependents: 1
 updated: "2024-08-10T02:37:10.914Z"
+github_stars: 39
 tags: 
   - utility
 ---

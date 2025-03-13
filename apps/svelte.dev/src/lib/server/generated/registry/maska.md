@@ -7,6 +7,7 @@ homepage: "https://beholdr.github.io/maska/"
 downloads: 183702
 dependents: 182
 updated: "2025-02-01T16:07:50.414Z"
+github_stars: 1855
 tags: 
   - utility
 ---

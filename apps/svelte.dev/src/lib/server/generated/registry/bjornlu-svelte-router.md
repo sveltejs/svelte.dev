@@ -6,6 +6,7 @@ author: "Bjorn Lu"
 homepage: "https://github.com/bluwy/svelte-router"
 downloads: 1
 updated: "2021-09-09T17:01:16.692Z"
+github_stars: 34
 tags: 
   - router
 ---

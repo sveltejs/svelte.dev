@@ -6,6 +6,7 @@ author: "Bjorn Lu"
 homepage: "https://github.com/bluwy/svelte-fast-dimension#readme"
 downloads: 99
 updated: "2023-07-01T06:39:39.977Z"
+github_stars: 42
 tags: 
   - utility
   - performance

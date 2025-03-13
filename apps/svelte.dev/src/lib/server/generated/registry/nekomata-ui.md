@@ -6,6 +6,7 @@ author: "Open Anthro Projects"
 homepage: "https://open-anthro-projects.github.io/nekomata-ui/"
 downloads: 10
 updated: "2022-07-02T16:10:08.529Z"
+github_stars: 9
 tags: 
   - component-library
   - ui

@@ -6,6 +6,7 @@ author: "Dimitris - Rafail Katsampas"
 homepage: "https://github.com/DimitrisRK/svelte-bootstrapjs-action#readme"
 downloads: 86
 updated: "2024-05-15T18:01:35.443Z"
+github_stars: 2
 tags: 
   - ui
   - utility

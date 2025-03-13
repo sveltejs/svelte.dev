@@ -6,6 +6,7 @@ author: "Bruno Molteni"
 homepage: "https://github.com/brunomolteni/svelte-sortable-list#readme"
 downloads: 265
 updated: "2019-07-05T19:48:52.084Z"
+github_stars: 124
 tags: 
   - ui
 ---

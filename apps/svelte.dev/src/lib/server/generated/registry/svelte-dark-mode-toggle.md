@@ -6,6 +6,7 @@ author: "disimasar"
 homepage: "https://github.com/Disimasa/svelte-dark-mode-toggle#readme"
 downloads: 6
 updated: "2024-09-04T04:13:05.381Z"
+github_stars: 3
 tags: 
   - ui
 ---

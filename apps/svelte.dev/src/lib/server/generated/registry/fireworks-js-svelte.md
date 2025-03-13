@@ -6,6 +6,7 @@ author: "Vitalij Ryndin"
 homepage: "https://fireworks.js.org"
 downloads: 20
 updated: "2024-07-13T18:36:15.655Z"
+github_stars: 1249
 tags: 
   - ui
 ---

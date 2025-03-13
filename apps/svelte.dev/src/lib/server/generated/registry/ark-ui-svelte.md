@@ -6,6 +6,7 @@ author: "segunadebayo"
 homepage: "https://ark-ui.com"
 downloads: 3
 updated: "2025-01-08T14:15:51.964Z"
+github_stars: 4127
 tags: 
   - component-library
 ---

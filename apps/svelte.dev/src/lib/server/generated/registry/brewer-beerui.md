@@ -7,6 +7,7 @@ homepage: "https://github.com/beerui/BeerUi"
 downloads: 18
 dependents: 1
 updated: "2023-08-08T10:34:44.735Z"
+github_stars: 86
 tags: 
   - component-library
   - ui

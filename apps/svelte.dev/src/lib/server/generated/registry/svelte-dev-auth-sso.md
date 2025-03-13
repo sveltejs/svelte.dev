@@ -6,6 +6,7 @@ author: "Willin Wang"
 homepage: "https://svelte.js.cool"
 downloads: 1
 updated: "2023-12-31T05:27:38.185Z"
+github_stars: 5
 tags: 
   - auth
   - server

@@ -7,6 +7,7 @@ homepage: "https://github.com/aztemi/wallet-adapter#readme"
 downloads: 30
 dependents: 1
 updated: "2024-04-15T19:39:00.200Z"
+github_stars: 14
 tags: 
   - integration
 ---

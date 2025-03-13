@@ -6,6 +6,7 @@ author: "Daybrush"
 homepage: "https://daybrush.com/selecto"
 downloads: 304
 updated: "2023-12-03T06:46:11.979Z"
+github_stars: 2109
 tags: 
   - utility
   - dom

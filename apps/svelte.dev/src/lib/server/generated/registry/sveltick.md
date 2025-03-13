@@ -6,6 +6,7 @@ author: "Adam014"
 homepage: "https://github.com/Adam014/sveltick#readme"
 downloads: 9
 updated: "2024-10-18T01:19:12.584Z"
+github_stars: 40
 tags: 
   - performance
   - tooling

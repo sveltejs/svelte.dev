@@ -6,6 +6,7 @@ author: "cheukt"
 homepage: "https://github.com/viamrobotics/js-config#readme"
 downloads: 104
 updated: "2025-02-25T21:31:16.854Z"
+github_stars: 2
 tags: 
   - tooling
 ---

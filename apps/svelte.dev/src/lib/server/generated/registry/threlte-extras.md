@@ -7,6 +7,7 @@ homepage: "https://threlte.xyz"
 downloads: 6553
 dependents: 13
 updated: "2025-03-12T03:48:42.112Z"
+github_stars: 2777
 tags: 
   - component-library
 ---

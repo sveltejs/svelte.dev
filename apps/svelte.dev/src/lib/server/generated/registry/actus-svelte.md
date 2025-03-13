@@ -6,6 +6,7 @@ author: "Oskar Hane"
 homepage: "https://github.com/oskarhane/actus#readme"
 downloads: 4
 updated: "2022-01-10T12:50:48.342Z"
+github_stars: 51
 tags: 
   - ui
   - component-library

@@ -7,6 +7,7 @@ homepage: "https://github.com/sveltejs/vite-plugin-svelte#readme"
 downloads: 656420
 dependents: 139
 updated: "2024-12-18T10:03:00.518Z"
+github_stars: 897
 tags: 
   - tooling
   - preprocessor

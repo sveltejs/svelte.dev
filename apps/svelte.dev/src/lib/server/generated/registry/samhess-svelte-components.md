@@ -1,6 +1,6 @@
 ---
-name: "@samhess/svelte-components"
-description: "* [Address Autocompletion](src/routes/components/forms) * [DataTable](src/routes/components/tables) * [TreeMap](src/routes/components/charts)"
+name: ""@samhess/svelte-components"
+description: "* [Address Autocompletion](src/routes/components/forms) * [DataTable](src/routes/components/tables) * [TreeMap](src/routes/components/charts)""
 repo_url: "https://github.com/samhess/svelte-components"
 author: "samhess"
 homepage: "https://svelte-components-black.vercel.app"

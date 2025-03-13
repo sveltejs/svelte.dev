@@ -6,6 +6,7 @@ author: "Bunlong"
 homepage: "https://github.com/Bunlong/svelte-barcode"
 downloads: 222
 updated: "2022-02-07T17:27:24.958Z"
+github_stars: 7
 tags: 
   - utility
 ---

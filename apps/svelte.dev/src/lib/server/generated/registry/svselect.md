@@ -6,6 +6,7 @@ author: "battledash2"
 homepage: "https://github.com/Battledash-2/svselect#readme"
 downloads: 1
 updated: "2022-12-03T15:24:47.447Z"
+github_stars: 1
 tags: 
   - ui
 ---

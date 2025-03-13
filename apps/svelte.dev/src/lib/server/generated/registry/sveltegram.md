@@ -7,6 +7,7 @@ homepage: "https://sveltegram.a3k.me"
 downloads: 34
 dependents: 1
 updated: "2025-01-23T20:59:13.357Z"
+github_stars: 31
 tags: 
   - ui
   - integration

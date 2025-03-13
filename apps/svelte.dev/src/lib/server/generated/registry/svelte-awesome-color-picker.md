@@ -7,6 +7,7 @@ homepage: "https://svelte-awesome-color-picker.vercel.app"
 downloads: 9935
 dependents: 13
 updated: "2024-08-13T12:34:29.911Z"
+github_stars: 141
 tags: 
   - ui
 ---

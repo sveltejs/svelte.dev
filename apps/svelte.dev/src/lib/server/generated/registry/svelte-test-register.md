@@ -7,6 +7,7 @@ homepage: "https://github.com/dirv/svelte-test-register#readme"
 downloads: 32
 dependents: 1
 updated: "2019-11-23T22:26:52.340Z"
+github_stars: 2
 tags: 
   - tooling
   - testing

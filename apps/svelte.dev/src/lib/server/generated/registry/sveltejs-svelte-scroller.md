@@ -7,6 +7,7 @@ homepage: "https://github.com/sveltejs/svelte-scroller#readme"
 downloads: 621
 dependents: 8
 updated: "2021-06-10T04:13:51.114Z"
+github_stars: 357
 tags: 
   - dom
   - ui

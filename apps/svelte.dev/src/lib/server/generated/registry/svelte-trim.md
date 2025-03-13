@@ -6,6 +6,7 @@ author: "firefish5000"
 homepage: "https://github.com/firefish5000/svelte-trim#readme"
 downloads: 1
 updated: "2020-10-30T01:33:18.230Z"
+github_stars: 8
 tags: 
   - tooling
   - preprocessor

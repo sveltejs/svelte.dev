@@ -6,6 +6,7 @@ author: "Svelte on Solana"
 homepage: "https://github.com/thewuhxyz/wallet-adapter-svelte#readme"
 downloads: 2
 updated: "2024-07-24T15:32:33.229Z"
+github_stars: 1
 tags: 
   - utility
 ---

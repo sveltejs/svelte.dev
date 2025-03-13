@@ -6,6 +6,7 @@ author: "AyloSrd"
 homepage: "https://github.com/AyloSrd/svelte-idle-sensor#readme"
 downloads: 44
 updated: "2022-11-19T17:31:39.242Z"
+github_stars: 2
 tags: 
   - utility
 ---
