@@ -22,7 +22,7 @@ on:
 
 permissions:
   contents: read
-  actions: write
+  issues: write
 
 env:
   BRANCH: preview-${{ inputs.repo }}-${{ inputs.pr }}
