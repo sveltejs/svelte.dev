@@ -4,7 +4,7 @@ description: "A Prototype svelte actions for inclusion into official actions in 
 repo_url: "https://github.com/sw-yx/svelte-actions"
 author: "swyx"
 homepage: "https://github.com/sw-yx/svelte-actions#readme"
-downloads: 2
+downloads: 3
 updated: "2022-03-07T21:09:39.307Z"
 github_stars: 224
 tags: 

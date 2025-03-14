@@ -4,7 +4,7 @@ description: "A simple wrapper on `Redux` and makes it possible to use `Redux` s
 repo_url: "https://github.com/ColaFanta/svelte-redux-adapter"
 author: "Cola Fanta Wlk"
 homepage: "https://github.com/ColaFanta/svelte-redux-adapter"
-downloads: 5
+downloads: 3
 updated: "2023-08-28T09:46:28.645Z"
 tags: 
   - utility

@@ -4,8 +4,8 @@ description: "A keyless and typesafe approach to the Svelte context API"
 repo_url: "https://github.com/bechii/svelte-create-context"
 author: "Simon Bechmann"
 homepage: "https://github.com/bechii/svelte-create-context#readme"
-downloads: 32
-updated: "2024-03-14T21:12:16.999Z"
+downloads: 16
+updated: "2025-03-13T21:53:55.840Z"
 tags: 
   - utility
 ---

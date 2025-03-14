@@ -4,7 +4,7 @@ description: "Transform [Hast](https://github.com/syntax-tree/hast) into Svelte 
 repo_url: "https://github.com/accuser/svelte-hast"
 author: "Matthew Gibbons"
 homepage: "https://github.com/accuser/svelte-hast"
-downloads: 2
+downloads: 5
 dependents: 1
 updated: "2024-10-06T06:37:34.602Z"
 tags: 

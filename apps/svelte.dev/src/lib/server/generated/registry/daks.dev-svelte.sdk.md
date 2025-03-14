@@ -4,7 +4,7 @@ description: "DAKS.DEV Svelte SDK"
 repo_url: "https://github.com/daks-dev/svelte"
 author: "DVA"
 homepage: "https://svelte.daks.dev"
-downloads: 487
+downloads: 167
 updated: "2025-03-08T05:47:12.806Z"
 tags: 
   - ui

@@ -4,7 +4,7 @@ description: "Nearly native image scaling in web (mobile/desktop), rich in funct
 repo_url: "https://github.com/vaheqelyan/svelte-zoom"
 author: "Vahe Araqelyan"
 homepage: "https://github.com/vaheqelyan/svelte-zoom#readme"
-downloads: 250
+downloads: 246
 dependents: 2
 updated: "2021-08-14T12:10:29.116Z"
 github_stars: 77

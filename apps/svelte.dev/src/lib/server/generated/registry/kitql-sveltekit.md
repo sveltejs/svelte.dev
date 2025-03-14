@@ -4,7 +4,7 @@ description: "kitql sveltekit helpers"
 repo_url: "https://github.com/jycouet/kitql"
 author: "jycouet"
 homepage: "https://www.kitql.dev/"
-downloads: 86
+downloads: 20
 updated: "2025-03-04T22:19:19.941Z"
 github_stars: 424
 tags: 

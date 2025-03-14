@@ -4,7 +4,7 @@ description: "This package contains the Svelte framework extension for the @lean
 repo_url: "https://github.com/leanupjs/leanup"
 author: "Martin Oppitz"
 homepage: "https://leanupjs.org"
-downloads: 62
+downloads: 3
 updated: "2024-06-11T08:58:35.229Z"
 github_stars: 33
 tags: 

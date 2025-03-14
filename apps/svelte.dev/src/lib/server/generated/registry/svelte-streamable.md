@@ -4,7 +4,7 @@ description: "Super tiny, simple to use SvelteJS store for real-time updates fro
 repo_url: "https://github.com/sveltetools/svelte-streamable"
 author: "PaulMaly"
 homepage: "https://github.com/sveltetools/svelte-streamable#readme"
-downloads: 37
+downloads: 49
 updated: "2022-07-27T14:41:23.079Z"
 github_stars: 10
 tags: 

@@ -4,7 +4,7 @@ description: "Tipex stands as an advanced rich text editor tailored for Svelte, 
 repo_url: "https://github.com/friendofsvelte/tipex"
 author: "bishwas bhandari"
 homepage: "https://tipex.pages.dev/"
-downloads: 521
+downloads: 437
 dependents: 1
 updated: "2024-12-29T03:39:17.626Z"
 github_stars: 296

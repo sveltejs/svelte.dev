@@ -4,7 +4,7 @@ description: "slate svelte view layer"
 repo_url: "https://github.com/nathanfaucett/svelte-slate"
 author: "Nathan Faucett"
 homepage: "https://github.com/nathanfaucett/svelte-slate#readme"
-downloads: 53
+downloads: 52
 updated: "2024-01-02T12:37:45.664Z"
 github_stars: 61
 tags: 

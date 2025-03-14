@@ -4,7 +4,6 @@ description: "Alphabet List is a versatile and customizable Svelte component des
 repo_url: "https://github.com/the-non-expert/Alphabet-List-Svelte"
 author: "Ayush Jhunjhunwala"
 homepage: "https://github.com/the-non-expert/Alphabet-List-Svelte#readme"
-downloads: 1
 updated: "2024-07-24T06:22:47.776Z"
 tags: 
   - ui

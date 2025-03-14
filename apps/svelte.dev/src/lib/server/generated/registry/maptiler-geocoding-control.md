@@ -4,7 +4,7 @@ description: "The Javascript & TypeScript Map Control component for MapTiler Geo
 repo_url: "https://github.com/maptiler/maptiler-geocoding-control"
 author: "Martin Ždila"
 homepage: "https://github.com/maptiler/maptiler-geocoding-control#readme"
-downloads: 1817
+downloads: 1240
 dependents: 3
 updated: "2025-02-05T07:29:54.024Z"
 github_stars: 44

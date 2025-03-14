@@ -4,7 +4,7 @@ description: "Svelte component to transition elements via CSS classes"
 repo_url: "https://github.com/captaincodeman/svelte-transition"
 author: "Simon Green"
 homepage: "https://captaincodeman.github.io/svelte-transition/"
-downloads: 4045
+downloads: 4630
 dependents: 4
 updated: "2024-06-18T18:28:55.703Z"
 github_stars: 58

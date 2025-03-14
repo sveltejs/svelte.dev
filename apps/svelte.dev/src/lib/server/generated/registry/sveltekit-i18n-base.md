@@ -4,7 +4,7 @@ description: "Base functionality of sveltekit-i18n library with a support for ex
 repo_url: "https://github.com/sveltekit-i18n/base"
 author: "Jarda Svoboda"
 homepage: "https://github.com/sveltekit-i18n/base#readme"
-downloads: 9846
+downloads: 7868
 dependents: 1
 updated: "2023-11-02T21:10:21.814Z"
 github_stars: 9

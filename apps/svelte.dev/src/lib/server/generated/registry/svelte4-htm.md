@@ -4,7 +4,7 @@ description: "Tagged template syntax for svelte to simplify testing using svelte
 repo_url: "https://github.com/NanezX/svelte4-htm"
 author: "Sascha Tandel"
 homepage: "https://github.com/NanezX/svelte4-htm#readme"
-downloads: 1068
+downloads: 764
 updated: "2023-07-18T00:16:13.013Z"
 tags: 
   - utility

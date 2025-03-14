@@ -4,7 +4,7 @@ description: "High performance subscription-based form state management for Svel
 repo_url: "https://github.com/jetrockets/svelte-final-form"
 author: "Alexey Solilin"
 homepage: "https://github.com/jetrockets/svelte-final-form#readme"
-downloads: 331
+downloads: 215
 dependents: 2
 updated: "2020-12-22T16:33:08.780Z"
 github_stars: 43

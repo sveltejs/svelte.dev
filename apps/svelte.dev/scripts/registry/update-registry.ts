@@ -1,6 +1,5 @@
 // Credit for original: Astro team
 import { createOpenRouter } from '@openrouter/ai-sdk-provider';
-import { extract_frontmatter, transform } from '@sveltejs/site-kit/markdown';
 import { generateText } from 'ai';
 import dotenv from 'dotenv';
 import fs, { mkdirSync } from 'node:fs';
@@ -8,9 +7,9 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import glob from 'tiny-glob/sync.js';
 import registry from '../../src/lib/registry.json' with { type: 'json' };
-import type { Package } from '../../src/lib/server/content.js';
 import {
 	fetch_details_for_package,
+	fetch_downloads_for_package,
 	HEADERS,
 	PackageCache,
 	request_queue,
@@ -20,6 +19,7 @@ import {
 	superfetch,
 	type StructuredInterimPackage
 } from './npm.js';
+import type { Package } from '../../src/lib/server/content.js';
 
 dotenv.config({ path: '.env.local' });
 
@@ -452,17 +452,98 @@ async function update_all_github_stars(ignore_if_exists = false) {
 	}
 }
 
-// Gets the cached files, goes through npm for each, and udpate
-// all relevant npm information from that
+/**
+ * Updates package cache with latest npm data
+ * Uses existing request_queue from superfetch for concurrency control
+ */
 async function update_cache_from_npm() {
-	// for (const [pkg_file_name, data] of PackageCache.entries()) {
-	// console.log(await fetch_details_for_package(data.name));
-	// }
-	const detail = await fetch_details_for_package('svelte-drag');
+	// Track progress
+	let processedCount = 0;
+	const updatedPackages: {
+		pkg_name: string;
+		data: Package;
+	}[] = [];
 
-	const latestVersion = detail['dist-tags']?.latest;
+	// Collect all package entries to count total
+	const packages = [];
+	for await (const [pkg_name, data] of PackageCache.entries()) {
+		packages.push({ pkg_name, data });
+	}
 
-	console.log(detail.versions[latestVersion]);
+	const totalPackages = packages.length;
+	console.log(`Starting update for ${totalPackages} packages`);
+
+	// Create array of promises for package updates
+	const promises = packages.map(({ pkg_name, data }) => {
+		// These fetch functions already use request_queue internally via superfetch
+		return Promise.all([
+			fetch_details_for_package(data.name),
+			fetch_downloads_for_package(data.name)
+		])
+			.then(([details, downloads]) => {
+				try {
+					if (!details) {
+						console.warn(`No details found for package: ${data.name}`);
+						return null;
+					}
+
+					const latest_version = details['dist-tags']?.latest;
+					if (!latest_version) {
+						console.warn(`No latest version found for package: ${data.name}`);
+						return null;
+					}
+
+					// Get last update date and deprecation status
+					const updated = details.time?.[latest_version]
+						? new Date(details.time[latest_version])
+						: undefined;
+					const deprecated = details.versions?.[latest_version]?.deprecated || false;
+
+					// Update the package data
+					const updatedData = {
+						...data,
+						downloads,
+						updated: updated?.toISOString(),
+						deprecated: deprecated || undefined // Only include if true
+					};
+
+					// Save updated data back to cache
+					PackageCache.set(data.name, updatedData);
+
+					// Track progress
+					processedCount++;
+					if (processedCount % 10 === 0 || processedCount === totalPackages) {
+						console.log(
+							`Progress: ${processedCount}/${totalPackages} (${Math.round((processedCount / totalPackages) * 100)}%)`
+						);
+					}
+
+					// Store updated package info
+					const packageInfo: Package = {
+						...data,
+						downloads,
+						updated: updated?.toISOString(),
+						deprecated
+					};
+
+					updatedPackages.push({ data: packageInfo as any, pkg_name: data.name });
+					return packageInfo;
+				} catch (error) {
+					console.error(`Error processing package ${data.name}:`, error);
+					return null;
+				}
+			})
+			.catch((error) => {
+				console.error(`Error fetching package ${data.name}:`, error);
+				return null;
+			});
+	});
+
+	// Wait for all updates to complete
+	await Promise.all(promises);
+
+	console.log(`Update completed for ${processedCount} packages`);
+	return updatedPackages.filter(Boolean);
 }
 
 async function delete_untagged() {
@@ -491,6 +572,6 @@ async function* create_map_batch_generator(
 
 // const svelte_packages = await process_batches_through_llm();
 
-// update_cache_from_npm();
-update_all_github_stars();
+update_cache_from_npm();
+// update_all_github_stars();
 // delete_untagged();

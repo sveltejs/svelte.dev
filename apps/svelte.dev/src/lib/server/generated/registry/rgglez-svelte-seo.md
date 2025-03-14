@@ -4,7 +4,7 @@ description: "Optimize your Svelte app for search engines and social media with 
 repo_url: "https://github.com/rgglez/svelte-seo"
 author: "rgglez"
 homepage: "https://github.com/rgglez/svelte-seo#readme"
-downloads: 4
+downloads: 3
 updated: "2024-11-02T06:47:58.681Z"
 github_stars: 1
 tags: 

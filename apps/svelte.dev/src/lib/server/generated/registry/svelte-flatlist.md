@@ -4,7 +4,7 @@ description: "A draggable, customizable, mobile-friendly menu that's easy to use
 repo_url: "https://github.com/snuffyDev/svelte-flatlist"
 author: "snuffydev"
 homepage: "https://github.com/snuffyDev/svelte-flatlist#readme"
-downloads: 2
+downloads: 1
 updated: "2021-12-20T16:31:42.503Z"
 github_stars: 16
 tags: 

@@ -4,7 +4,7 @@ description: "Svelte Scrollable Arrow effortlessly creates a horizontal navigati
 repo_url: "https://github.com/thingsneverchange/svelte-scrollable-arrow"
 author: "themecloset"
 homepage: "https://github.com/thingsneverchange/svelte-scrollable-arrow#readme"
-downloads: 54
+downloads: 153
 updated: "2024-04-02T09:05:27.947Z"
 github_stars: 10
 tags: 

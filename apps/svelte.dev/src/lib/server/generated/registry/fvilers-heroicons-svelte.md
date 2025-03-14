@@ -3,7 +3,7 @@ name: "@fvilers/heroicons-svelte"
 description: "Beautiful hand-crafted SVG icons, by the makers of Tailwind CSS (for Svelte)"
 author: "Fabian Vilers"
 homepage: "https://github.com/fvilers/heroicons-svelte#readme"
-downloads: 2
+downloads: 5
 updated: "2025-01-28T13:49:35.237Z"
 tags: 
   - ui

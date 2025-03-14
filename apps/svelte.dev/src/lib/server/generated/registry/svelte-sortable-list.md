@@ -4,7 +4,7 @@ description: "This component renders a list of items which can be reordered by d
 repo_url: "https://github.com/brunomolteni/svelte-sortable-list"
 author: "Bruno Molteni"
 homepage: "https://github.com/brunomolteni/svelte-sortable-list#readme"
-downloads: 265
+downloads: 119
 updated: "2019-07-05T19:48:52.084Z"
 github_stars: 124
 tags: 

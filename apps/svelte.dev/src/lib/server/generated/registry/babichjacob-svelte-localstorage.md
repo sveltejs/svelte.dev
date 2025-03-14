@@ -4,7 +4,7 @@ description: "Svelte writable stores that automatically synchronize with localSt
 repo_url: "https://github.com/babichjacob/svelte-localstorage"
 author: "J / Jacob Babich"
 homepage: "https://github.com/babichjacob/svelte-localstorage"
-downloads: 6
+downloads: 7
 updated: "2024-10-16T23:42:18.061Z"
 github_stars: 47
 tags: 

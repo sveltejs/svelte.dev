@@ -4,7 +4,7 @@ description: "A highly configurable number spinner component for Svelte. It's a 
 repo_url: "https://github.com/bohnacker/svelte-number-spinner"
 author: "Hartmut Bohnacker"
 homepage: "https://github.com/bohnacker/svelte-number-spinner#readme"
-downloads: 83
+downloads: 73
 updated: "2022-01-06T12:20:44.313Z"
 github_stars: 28
 tags: 

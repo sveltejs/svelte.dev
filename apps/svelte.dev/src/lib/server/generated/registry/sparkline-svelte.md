@@ -4,7 +4,7 @@ description: "A lightweight, responsive Sparkline chart component for Svelte 5 w
 repo_url: "https://github.com/bn-l/sparkline-svelte"
 author: "bn-l"
 homepage: "https://bn-l.github.io/sparkline-svelte/"
-downloads: 7
+downloads: 1
 dependents: 1
 updated: "2024-12-05T00:04:49.029Z"
 github_stars: 12

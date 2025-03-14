@@ -4,7 +4,7 @@ description: "A wrapper for any Svelte Store instance that gives it Browser Stor
 repo_url: "https://github.com/drtrt-org/give-svelte-store-persistence-behaviour"
 author: "drtrt-org"
 homepage: "https://github.com/drtrt-org/give-svelte-store-persistence-behaviour#readme"
-downloads: 2
+downloads: 1
 updated: "2024-09-16T09:37:07.557Z"
 tags: 
   - utility

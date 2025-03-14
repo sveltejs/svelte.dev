@@ -4,7 +4,7 @@ description: "A collection of types SEO related Svelte components to easily add 
 repo_url: "https://github.com/sveltinio/components-library"
 author: "dev"
 homepage: "https://components.sveltin.io"
-downloads: 2
+downloads: 1
 updated: "2023-10-01T09:55:06.864Z"
 github_stars: 12
 tags: 

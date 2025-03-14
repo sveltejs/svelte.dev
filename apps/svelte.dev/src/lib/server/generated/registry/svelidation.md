@@ -4,7 +4,7 @@ description: "Validate your svelte application easy"
 repo_url: "https://github.com/yazonnile/svelidation"
 author: "yazonnile"
 homepage: "https://github.com/yazonnile/svelidation#readme"
-downloads: 3
+downloads: 2
 updated: "2020-01-10T14:40:34.958Z"
 github_stars: 52
 tags: 

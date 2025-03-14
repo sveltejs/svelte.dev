@@ -4,7 +4,7 @@ description: "A simple SPA router that enforces event-driven user interfaces. Yo
 repo_url: "https://github.com/qudo-lucas/svelte-router"
 author: "Lucas Hugdahl"
 homepage: "https://www.npmjs.com/package/svelte-event-router"
-downloads: 5
+downloads: 2
 updated: "2020-06-23T18:11:23.467Z"
 tags: 
   - router

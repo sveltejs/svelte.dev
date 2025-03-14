@@ -4,7 +4,7 @@ description: "[Over 35 million](https://techcrunch.com/2021/07/27/element-a-mess
 repo_url: "https://github.com/mishushakov/signin-with-matrix"
 author: "mishushakov"
 homepage: "https://github.com/mishushakov/signin-with-matrix#readme"
-downloads: 9
+downloads: 6
 updated: "2021-11-15T08:50:59.113Z"
 github_stars: 212
 tags: 

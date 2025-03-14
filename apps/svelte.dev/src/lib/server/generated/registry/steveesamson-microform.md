@@ -4,6 +4,7 @@ description: "`microform` is a tiny library for managing forms in `svelte/svelte
 repo_url: "https://github.com/steveesamson/microform"
 author: "Steve S. Samson"
 homepage: "https://steveesamson.github.io/microform"
+downloads: 2
 updated: "2024-08-06T12:29:32.927Z"
 tags: 
   - utility

@@ -4,7 +4,7 @@ description: "A powerful writable derived store for Svelte that enables deep obj
 repo_url: "https://github.com/humanspeak/svelte-keyed"
 author: "Humanspeak, Inc."
 homepage: "https://github.com/humanspeak/svelte-keyed#readme"
-downloads: 266
+downloads: 298
 dependents: 1
 updated: "2025-01-27T19:29:34.608Z"
 tags: 

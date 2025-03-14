@@ -4,7 +4,7 @@ description: "Tiny focus trap. Supports stacking, toggling, and dynamic content.
 repo_url: "https://github.com/henrygd/trap-focus-svelte"
 author: "Hank Dollman"
 homepage: "https://trap-focus-svelte.henrygd.me"
-downloads: 586
+downloads: 398
 updated: "2024-05-10T22:23:53.626Z"
 github_stars: 6
 tags: 

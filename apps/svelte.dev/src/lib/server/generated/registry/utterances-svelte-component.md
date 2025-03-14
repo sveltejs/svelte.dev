@@ -4,7 +4,7 @@ description: "Type safety svelte component for utterances"
 repo_url: "https://github.com/TomokiMiyauci/utterances-component"
 author: "TomokiMiyauci"
 homepage: "https://github.com/TomokiMiyauci/utterances-component#readme"
-downloads: 1
+downloads: 3
 updated: "2021-07-09T03:03:22.849Z"
 github_stars: 10
 tags: 

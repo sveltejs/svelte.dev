@@ -12,7 +12,7 @@ export async function load({ url }) {
 
 	init(registry);
 
-	const current_results = search(query, { tags, sortBy: 'popularity' });
+	const current_results = search(query, { tags, sort_by: 'popularity' });
 
 	const total_pages = Math.ceil(current_results.length / REGISTRY_PAGE_LIMIT);
 

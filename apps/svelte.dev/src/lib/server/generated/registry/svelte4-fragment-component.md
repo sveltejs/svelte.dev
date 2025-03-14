@@ -4,7 +4,7 @@ description: "Svelte component that renders its children with lifecycle hooks to
 repo_url: "https://github.com/NanezX/svelte4-fragment-component"
 author: "Sascha Tandel"
 homepage: "https://github.com/NanezX/svelte4-fragment-component#readme"
-downloads: 1048
+downloads: 765
 dependents: 1
 updated: "2023-07-17T23:19:54.275Z"
 tags: 

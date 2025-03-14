@@ -4,7 +4,7 @@ description: "A customizable and interactive wheel picker component for Svelte a
 repo_url: "https://github.com/urmoov-dev/svelte-wheel-picker"
 author: "Jorge Linares"
 homepage: "https://github.com/urmoov-dev/svelte-wheel-picker#readme"
-downloads: 9
+downloads: 3
 updated: "2024-10-06T03:27:11.925Z"
 github_stars: 1
 tags: 

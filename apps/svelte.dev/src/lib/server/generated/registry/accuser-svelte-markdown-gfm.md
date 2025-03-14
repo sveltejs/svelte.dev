@@ -4,6 +4,7 @@ description: "Transforms Markdown source (as a `string`) or a [Markdown AST](htt
 repo_url: "https://github.com/accuser/svelte-markdown-gfm"
 author: "Matthew Gibbons"
 homepage: "https://github.com/accuser/svelte-markdown-gfm"
+downloads: 4
 updated: "2024-09-30T08:49:03.326Z"
 github_stars: 1
 tags: 

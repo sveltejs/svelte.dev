@@ -4,7 +4,7 @@ description: "I have just converted https://github.com/kozakdenys/qr-code-stylin
 repo_url: "https://github.com/binsarjr/svelte-qrcode-action"
 author: "binsarjr"
 homepage: "https://github.com/binsarjr/svelte-qrcode-action#readme"
-downloads: 474
+downloads: 504
 updated: "2023-08-20T08:55:12.767Z"
 github_stars: 4
 tags: 

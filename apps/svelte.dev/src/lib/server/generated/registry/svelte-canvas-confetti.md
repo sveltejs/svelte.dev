@@ -4,7 +4,7 @@ description: "Canvas-based confetti for Svelte"
 repo_url: "https://github.com/andreasmcdermott/svelte-canvas-confetti"
 author: "andreasmcdermott"
 homepage: "https://github.com/andreasmcdermott/svelte-canvas-confetti#readme"
-downloads: 286
+downloads: 193
 updated: "2022-09-16T06:52:34.667Z"
 github_stars: 19
 tags: 

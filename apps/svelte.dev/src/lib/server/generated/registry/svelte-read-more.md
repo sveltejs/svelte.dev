@@ -4,7 +4,7 @@ description: "A small & simple svelte component to render text dynamically using
 repo_url: "https://github.com/saideepesh000/svelte-read-more"
 author: "saideepesh000"
 homepage: "https://github.com/saideepesh000/svelte-read-more"
-downloads: 95
+downloads: 99
 updated: "2021-11-03T12:28:10.232Z"
 github_stars: 4
 tags: 

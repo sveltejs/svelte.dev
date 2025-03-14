@@ -4,7 +4,7 @@ description: "SvelteKit adapter that creates a Cloudflare Workers site using a f
 repo_url: "https://github.com/sveltejs/kit"
 author: "rich_harris"
 homepage: "https://svelte.dev"
-downloads: 2194
+downloads: 1636
 updated: "2025-02-25T14:50:38.909Z"
 github_stars: 19074
 tags: 

@@ -4,7 +4,7 @@ description: "The `@awsless/i18n` package is a Vite plugin that automatically tr
 repo_url: "https://github.com/awsless/awsless"
 author: "micmonen"
 homepage: "https://github.com/awsless/awsless#readme"
-downloads: 2
+downloads: 6
 updated: "2024-09-17T10:16:34.129Z"
 github_stars: 1
 tags: 

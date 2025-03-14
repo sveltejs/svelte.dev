@@ -4,7 +4,7 @@ description: "SvelteKit integration for Lucia"
 repo_url: "https://github.com/pilcrowOnPaper/lucia"
 author: "pilcrowonpaper"
 homepage: "https://github.com/pilcrowOnPaper/lucia#readme"
-downloads: 40
+downloads: 29
 updated: "2023-03-19T12:24:16.861Z"
 github_stars: 9984
 tags: 

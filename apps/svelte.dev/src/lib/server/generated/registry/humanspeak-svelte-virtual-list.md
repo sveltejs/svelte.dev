@@ -4,7 +4,7 @@ description: "A lightweight, high-performance virtual list component for Svelte 
 repo_url: "https://github.com/humanspeak/svelte-virtual-list"
 author: "Humanspeak, Inc."
 homepage: "https://virtuallist.svelte.page"
-downloads: 4
+downloads: 17
 updated: "2025-01-21T17:10:25.865Z"
 tags: 
   - ui

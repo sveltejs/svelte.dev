@@ -4,7 +4,7 @@ description: "webcomponent wrapper for svelte"
 repo_url: "https://github.com/crisward/svelte-tag"
 author: "Cris Ward"
 homepage: "https://github.com/crisward/svelte-tag#readme"
-downloads: 35
+downloads: 27
 dependents: 1
 updated: "2025-01-20T14:59:54.630Z"
 github_stars: 53

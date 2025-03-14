@@ -4,7 +4,7 @@ description: "Support library offering several new types of store compatible wit
 repo_url: "https://github.com/txstate-etc/svelte-store"
 author: "Nick Wing"
 homepage: "https://github.com/txstate-etc/svelte-store#readme"
-downloads: 82
+downloads: 68
 dependents: 4
 updated: "2023-03-15T12:35:23.182Z"
 github_stars: 1

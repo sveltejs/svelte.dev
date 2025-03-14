@@ -4,7 +4,7 @@ description: "Integrates Svelte into Node-RED so that the editor-part of a node 
 repo_url: "https://gitlab.com/2WeltenChris/svelte-integration-red"
 author: "Christian Geiger"
 homepage: "https://gitlab.com/2WeltenChris/svelte-integration-red#readme"
-downloads: 330
+downloads: 379
 dependents: 1
 updated: "2025-03-11T10:50:41.425Z"
 tags: 

@@ -4,7 +4,7 @@ description: "Svelte components"
 repo_url: "https://github.com/lagden/svelte-atom-elements"
 author: "Thiago Lagden"
 homepage: "https://github.com/lagden/svelte-atom-elements#readme"
-downloads: 8
+downloads: 10
 updated: "2022-08-16T14:53:59.919Z"
 github_stars: 1
 tags: 

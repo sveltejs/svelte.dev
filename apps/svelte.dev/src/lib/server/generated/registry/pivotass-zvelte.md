@@ -4,7 +4,7 @@ description: "Svelte like compiler for twig like syntax that outputs PHP for ssr
 repo_url: "https://github.com/PivotStick/zvelte"
 author: "Maxime DI NATALE"
 homepage: "https://github.com/PivotStick/zvelte#readme"
-downloads: 47
+downloads: 62
 updated: "2025-01-31T15:09:59.625Z"
 tags: 
   - tooling

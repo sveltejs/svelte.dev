@@ -4,7 +4,7 @@ description: "Increase your productivity exponentially. 🚀🚀"
 repo_url: "https://github.com/rohitpotato/svelte-command-palette"
 author: "rohitpotato"
 homepage: "https://svelte-command-palette.vercel.app/"
-downloads: 1934
+downloads: 1516
 dependents: 1
 updated: "2022-10-24T21:09:40.123Z"
 github_stars: 184

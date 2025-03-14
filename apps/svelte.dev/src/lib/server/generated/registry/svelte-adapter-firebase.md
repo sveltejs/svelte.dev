@@ -4,7 +4,7 @@ description: "Adapter for Svelte apps that integrates a Firebase Hosting Website
 repo_url: "https://github.com/jthegedus/svelte-adapter-firebase"
 author: "James Hegedus"
 homepage: "https://github.com/jthegedus/svelte-adapter-firebase#readme"
-downloads: 77
+downloads: 26
 updated: "2023-01-17T02:32:22.230Z"
 github_stars: 288
 tags: 

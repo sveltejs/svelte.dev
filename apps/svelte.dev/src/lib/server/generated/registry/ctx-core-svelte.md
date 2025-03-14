@@ -4,7 +4,7 @@ description: "ctx-core svelte"
 repo_url: "https://github.com/ctx-core/svelte"
 author: "Brian Takita"
 homepage: "https://github.com/ctx-core/svelte#readme"
-downloads: 62
+downloads: 42
 dependents: 8
 updated: "2024-09-01T17:09:37.185Z"
 github_stars: 2

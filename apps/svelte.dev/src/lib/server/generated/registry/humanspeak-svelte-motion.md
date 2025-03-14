@@ -4,7 +4,7 @@ description: "A lightweight animation library for Svelte 5 that provides smooth,
 repo_url: "https://github.com/humanspeak/svelte-motion"
 author: "Humanspeak, Inc."
 homepage: "https://github.com/humanspeak/svelte-motion#readme"
-downloads: 196
+downloads: 14
 updated: "2025-03-04T01:36:17.905Z"
 tags: 
   - ui

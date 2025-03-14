@@ -4,6 +4,7 @@ description: "Zero-config PWA for Vite"
 repo_url: "https://github.com/antfu/vite-plugin-pwa"
 author: "antfu"
 homepage: "https://github.com/antfu/vite-plugin-pwa"
+downloads: 3
 updated: "2022-10-25T04:46:11.921Z"
 github_stars: 3418
 tags: 

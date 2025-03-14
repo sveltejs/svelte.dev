@@ -4,7 +4,7 @@ description: "The core of the wallet adapter is a Svelte Store which exposes met
 repo_url: "https://github.com/aztemi/wallet-adapter"
 author: "Svelte on Solana"
 homepage: "https://github.com/aztemi/wallet-adapter#readme"
-downloads: 30
+downloads: 44
 dependents: 1
 updated: "2024-04-15T19:39:00.200Z"
 github_stars: 14

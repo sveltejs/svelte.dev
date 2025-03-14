@@ -4,7 +4,7 @@ description: "This is library for Vanilla Svelte custom components with TS. Whic
 repo_url: "https://github.com/jinkalr/svelte-custom-components"
 author: "It Path Solutions Pvt. Ltd."
 homepage: "https://github.com/jinkalr/svelte-custom-components#readme"
-downloads: 2
+downloads: 7
 updated: "2022-12-01T13:02:08.200Z"
 tags: 
   - component-library

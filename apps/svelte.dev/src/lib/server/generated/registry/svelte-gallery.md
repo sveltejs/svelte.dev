@@ -4,7 +4,7 @@ description: "Intelligent masonry style photo gallery that maintains image aspec
 repo_url: "https://github.com/peppercornstudio/svelte-gallery"
 author: "Madeleine Ostoja"
 homepage: "https://github.com/peppercornstudio/svelte-gallery#readme"
-downloads: 13
+downloads: 6
 updated: "2022-01-22T09:02:53.968Z"
 github_stars: 26
 tags: 

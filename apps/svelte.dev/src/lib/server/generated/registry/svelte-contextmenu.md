@@ -4,7 +4,7 @@ description: "A simple, no-frills context menu that works out of the box with Bo
 repo_url: "https://github.com/vincentlaucsb/svelte-contextmenu"
 author: "vincela9"
 homepage: "https://github.com/vincentlaucsb/svelte-contextmenu#readme"
-downloads: 251
+downloads: 99
 updated: "2023-01-09T07:46:17.532Z"
 github_stars: 12
 tags: 

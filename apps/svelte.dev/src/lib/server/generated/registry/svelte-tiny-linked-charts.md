@@ -4,7 +4,7 @@ description: "A library to display tiny bar charts using Svelte. These charts ar
 repo_url: "https://github.com/Mitcheljager/svelte-tiny-linked-charts"
 author: "mitcheljager"
 homepage: "https://mitcheljager.github.io/svelte-tiny-linked-charts/"
-downloads: 1565
+downloads: 1994
 dependents: 1
 updated: "2025-01-26T22:06:14.054Z"
 github_stars: 93

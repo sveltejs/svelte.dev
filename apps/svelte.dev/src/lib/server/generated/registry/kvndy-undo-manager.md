@@ -4,7 +4,7 @@ description: "Undo and redo management for Preact and Solid Signals, Preact Sign
 repo_url: "https://gitlab.com/kevindoughty/undo-manager"
 author: "Kevin Doughty"
 homepage: "https://gitlab.com/kevindoughty/undo-manager#readme"
-downloads: 1
+downloads: 2
 updated: "2025-01-10T21:12:18.933Z"
 tags: 
   - utility

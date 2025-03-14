@@ -4,7 +4,7 @@ description: "Mytril Svelte library component for rapidly building modern websit
 repo_url: "https://github.com/minedelve/mytril"
 author: "Nycolaide"
 homepage: "https://minedelve.com/mytril/docs"
-downloads: 379
+downloads: 403
 updated: "2025-03-01T22:44:17.126Z"
 github_stars: 1
 tags: 

@@ -314,11 +314,11 @@ function format(date: Date, format_str: string): string {
 	return format_str.replace('yyyy', year.toString()).replace('MM', month).replace('dd', day);
 }
 
-const API_BASE_URL = 'https://api.npmjs.org/downloads';
+const API_BASE_URL = 'https://api.npmjs.org/';
 const REGISTRY_BASE_URL = 'https://registry.npmjs.org/';
 
 const END_DATE = format(new Date(), 'yyyy-MM-dd');
-const START_DATE = format(sub_days(new Date(), 30), 'yyyy-MM-dd');
+const START_DATE = format(sub_days(new Date(), 7), 'yyyy-MM-dd');
 
 const PAGE_SIZE = 100;
 
@@ -337,7 +337,7 @@ export async function fetch_downloads_for_package(pkg: string): Promise<number> 
 /**
  * Gets details for a package from the npm registry
  */
-export async function fetch_details_for_package(pkg: string) {
+export async function fetch_details_for_package(pkg: string): Promise<any> {
 	const registry_data = await superfetch(`${REGISTRY_BASE_URL}${pkg}`, { headers: HEADERS }).then(
 		(r) => r.json()
 	);

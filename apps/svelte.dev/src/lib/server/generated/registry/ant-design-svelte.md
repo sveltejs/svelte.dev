@@ -4,6 +4,7 @@ description: "An enterprise-class UI design language and Svelte-based implementa
 repo_url: "https://github.com/Jetsly/ant-design-svelte"
 author: "Jetsly"
 homepage: "https://github.com/Jetsly/ant-design-svelte#readme"
+downloads: 1
 updated: "2019-07-19T03:41:12.923Z"
 github_stars: 98
 tags: 

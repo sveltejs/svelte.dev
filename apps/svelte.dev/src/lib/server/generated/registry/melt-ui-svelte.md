@@ -4,7 +4,7 @@ description: "Melt UI is a set of headless, accessible component builders for Sv
 repo_url: "https://github.com/melt-ui/melt-ui"
 author: "Thomas G. Lopes"
 homepage: "https://github.com/melt-ui/melt-ui#readme"
-downloads: 122477
+downloads: 101194
 dependents: 48
 updated: "2025-03-08T12:06:32.377Z"
 github_stars: 3930

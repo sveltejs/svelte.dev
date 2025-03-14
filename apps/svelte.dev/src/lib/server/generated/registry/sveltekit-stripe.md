@@ -4,7 +4,7 @@ description: "A barebones SvelteKit implementation for concisely rendering Strip
 repo_url: "https://github.com/pevey/sveltekit-stripe"
 author: "Lacey Pevey"
 homepage: "https://pevey.com/sveltekit-stripe"
-downloads: 57
+downloads: 52
 updated: "2024-03-30T13:22:57.386Z"
 github_stars: 11
 tags: 

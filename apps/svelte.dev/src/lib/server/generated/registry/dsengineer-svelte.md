@@ -4,7 +4,7 @@ description: "Svelte implementation for the Design Systems Engineer design syste
 repo_url: "https://github.com/DesignSystemsEngineer/designsystem"
 author: "Garth Braithwaite"
 homepage: "https://github.com/DesignSystemsEngineer/designsystem/tree/master/packages/dsengineer-svelte#readme"
-downloads: 16
+downloads: 1
 updated: "2020-12-19T20:54:42.913Z"
 tags: 
   - design

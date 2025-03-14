@@ -4,7 +4,7 @@ description: "Manage complex Svelte behaviors outside of templates with full typ
 repo_url: "https://github.com/humanspeak/svelte-render"
 author: "Humanspeak, Inc."
 homepage: "https://github.com/humanspeak/svelte-render#readme"
-downloads: 313
+downloads: 531
 dependents: 1
 updated: "2025-03-08T00:46:04.726Z"
 tags: 

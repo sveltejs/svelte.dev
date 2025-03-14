@@ -4,7 +4,7 @@ description: "$css rune for svelte. Allows you to pass classes between your svel
 repo_url: "https://github.com/JanNitschke/svelte-css-rune"
 author: "Jan Nitschke"
 homepage: "https://github.com/JanNitschke/svelte-css-rune#readme"
-downloads: 8
+downloads: 10
 updated: "2025-01-20T23:39:23.346Z"
 github_stars: 7
 tags: 

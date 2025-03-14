@@ -4,7 +4,7 @@ description: "Easy to use Tooltip component for your svelte and tailwindcss proj
 repo_url: "https://github.com/fouita/svelte-tw-tooltip"
 author: "fouita"
 homepage: "https://github.com/fouita/svelte-tw-tooltip#readme"
-downloads: 94
+downloads: 61
 dependents: 1
 updated: "2020-09-13T12:59:38.941Z"
 github_stars: 5

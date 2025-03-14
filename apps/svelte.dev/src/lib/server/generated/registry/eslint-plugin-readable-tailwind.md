@@ -4,7 +4,7 @@ description: "auto-wraps tailwind classes after a certain print width or class c
 repo_url: "https://github.com/schoero/eslint-plugin-readable-tailwind"
 author: "Roger Schönbächler"
 homepage: "https://github.com/schoero/eslint-plugin-readable-tailwind#readme"
-downloads: 8375
+downloads: 6573
 dependents: 4
 updated: "2025-03-08T20:27:37.922Z"
 github_stars: 151

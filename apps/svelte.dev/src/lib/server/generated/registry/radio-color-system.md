@@ -2,7 +2,7 @@
 name: "radio-color-system"
 description: "Radio Color System is a color system for Svelte that creates background color palettes with the given color and adds text with the right contrast ratio on that background. Its main purpose is to improve accessibility by ensuring that text is legible against its background color."
 author: "canerakdas"
-downloads: 4
+downloads: 2
 updated: "2023-09-07T16:31:13.030Z"
 tags: 
   - ui

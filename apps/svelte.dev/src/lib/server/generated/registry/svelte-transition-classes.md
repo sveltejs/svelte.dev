@@ -4,7 +4,7 @@ description: "svelte-transition-classes adds a set of base classes, a set of cla
 repo_url: "https://github.com/rmarscher/svelte-transition-classes"
 author: "rmarscher"
 homepage: "https://github.com/rmarscher/svelte-transition-classes"
-downloads: 147
+downloads: 70
 updated: "2021-12-21T16:37:13.147Z"
 github_stars: 55
 tags: 

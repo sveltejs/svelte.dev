@@ -4,7 +4,7 @@ description: "Svelte store that saves and loads data from localStorage or sessio
 repo_url: "https://github.com/furudean/svelte-persistent-store"
 author: "Merilynn Bandy"
 homepage: "https://github.com/furudean/svelte-persistent-store#readme"
-downloads: 40
+downloads: 39
 updated: "2024-04-01T18:44:55.851Z"
 github_stars: 37
 tags: 

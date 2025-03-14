@@ -4,7 +4,7 @@ description: "Simple [Svelte](https://svelte.dev/) component acting as a thin la
 repo_url: "https://github.com/PandaWhisperer/svelte-youtube"
 author: "pandawhisperer"
 homepage: "https://github.com/PandaWhisperer/svelte-youtube#README"
-downloads: 280
+downloads: 274
 dependents: 1
 updated: "2020-12-10T16:28:14.265Z"
 github_stars: 22

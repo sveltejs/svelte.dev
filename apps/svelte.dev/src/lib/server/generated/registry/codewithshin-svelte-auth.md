@@ -4,7 +4,7 @@ description: "Register, Login, Forgot password, Reset password components using 
 repo_url: "https://github.com/shinokada/svelte-auth"
 author: "Shinichi Okada"
 homepage: "https://github.com/shinokada/svelte-auth"
-downloads: 1
+downloads: 3
 updated: "2022-03-15T23:14:50.203Z"
 github_stars: 7
 tags: 

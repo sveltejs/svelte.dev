@@ -4,7 +4,7 @@ description: "Internationalization library for Svelte"
 repo_url: "https://github.com/kaisermann/svelte-i18n"
 author: "Christian Kaisermann"
 homepage: "https://github.com/kaisermann/svelte-i18n#readme"
-downloads: 1
+downloads: 2
 updated: "2021-02-07T17:05:11.370Z"
 github_stars: 1308
 tags: 

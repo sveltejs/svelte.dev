@@ -4,7 +4,7 @@ description: "Build interactive web maps effortlessly with MapLibre GL JS and Sv
 repo_url: "https://github.com/MIERUNE/svelte-maplibre-gl"
 author: "mierune_iguchi"
 homepage: "https://svelte-maplibre-gl.mierune.dev/"
-downloads: 281
+downloads: 186
 updated: "2025-02-18T10:11:08.006Z"
 github_stars: 122
 tags: 

@@ -4,7 +4,7 @@ description: "Sveltekit component library for seamlessly importing Cycling74's M
 repo_url: "https://github.com/TiAlRo/RNBOKit"
 author: "tialro"
 homepage: "https://github.com/TiAlRo/RNBOKit#readme"
-downloads: 97
+downloads: 19
 updated: "2025-03-04T16:05:27.731Z"
 github_stars: 1
 tags: 

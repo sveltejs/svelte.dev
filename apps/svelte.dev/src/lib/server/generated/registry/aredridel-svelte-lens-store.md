@@ -4,7 +4,7 @@ description: "Functional lenses over svelte stores"
 repo_url: "https://github.com/aredridel/svelte-lens-store"
 author: "Aria Stewart"
 homepage: "https://github.com/aredridel/svelte-lens-store#readme"
-downloads: 1
+downloads: 2
 updated: "2022-05-15T21:35:43.809Z"
 github_stars: 13
 tags: 

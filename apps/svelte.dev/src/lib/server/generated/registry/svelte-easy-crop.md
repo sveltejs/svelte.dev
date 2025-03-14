@@ -4,7 +4,7 @@ description: "A Svelte component to crop images with easy interactions"
 repo_url: "https://github.com/ValentinH/svelte-easy-crop"
 author: "Valentin Hervieu"
 homepage: "https://github.com/ValentinH/svelte-easy-crop"
-downloads: 3536
+downloads: 3039
 dependents: 1
 updated: "2025-01-13T19:21:11.336Z"
 github_stars: 215

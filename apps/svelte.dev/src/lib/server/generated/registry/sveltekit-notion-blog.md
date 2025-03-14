@@ -4,7 +4,7 @@ description: "A plug and play library for setting up blogs in subdirectory or ma
 repo_url: "https://github.com/subhendupsingh/sveltekit-notion-blog"
 author: "subhendupsingh"
 homepage: "https://sveltekit-notion-blog.netlify.app/"
-downloads: 83
+downloads: 40
 updated: "2025-03-01T14:08:35.920Z"
 github_stars: 39
 tags: 

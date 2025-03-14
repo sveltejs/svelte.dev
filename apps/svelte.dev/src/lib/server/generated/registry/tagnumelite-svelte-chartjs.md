@@ -3,7 +3,7 @@ name: "@tagnumelite/svelte-chartjs"
 description: "Svelte Component Wrappers for Chart.JS"
 author: "tagnumelite"
 homepage: "https://github.com/TagnumElite/tagnumelite-svelte-chartjs"
-downloads: 1
+downloads: 2
 updated: "2024-12-31T23:29:08.021Z"
 tags: 
   - ui

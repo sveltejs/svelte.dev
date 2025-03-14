@@ -4,7 +4,7 @@ description: "Svelte component for fileupload and file dropzone"
 repo_url: "https://github.com/Roborob03/svelte-file-dropzone"
 author: "thecodejack"
 homepage: "https://github.com/Roborob03/svelte-file-dropzone#readme"
-downloads: 6
+downloads: 4
 updated: "2023-09-30T10:51:31.544Z"
 tags: 
   - ui

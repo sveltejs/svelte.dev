@@ -4,7 +4,7 @@ description: "A Svelte component library wrapping UI elements from Tweakpane, pl
 repo_url: "https://github.com/kitschpatrol/svelte-tweakpane-ui"
 author: "Eric Mika"
 homepage: "https://kitschpatrol.com/svelte-tweakpane-ui"
-downloads: 1167
+downloads: 822
 dependents: 3
 updated: "2025-03-04T18:31:09.725Z"
 github_stars: 158

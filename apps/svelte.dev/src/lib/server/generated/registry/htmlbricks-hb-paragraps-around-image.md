@@ -2,7 +2,7 @@
 name: "@htmlbricks/hb-paragraps-around-image"
 description: "Svelte-Bootstrap paragraps-around-image"
 author: "Dario Caruso"
-downloads: 5
+downloads: 393
 updated: "2025-03-09T03:10:32.285Z"
 tags: 
   - ui

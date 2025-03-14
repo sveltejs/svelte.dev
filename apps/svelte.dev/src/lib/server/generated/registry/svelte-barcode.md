@@ -4,7 +4,7 @@ description: "A light-weight and high-performance component to generate barcode 
 repo_url: "https://github.com/Bunlong/svelte-barcode"
 author: "Bunlong"
 homepage: "https://github.com/Bunlong/svelte-barcode"
-downloads: 222
+downloads: 147
 updated: "2022-02-07T17:27:24.958Z"
 github_stars: 7
 tags: 

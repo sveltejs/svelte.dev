@@ -4,7 +4,7 @@ description: "The InputMaskingPassword component is a password input field that 
 repo_url: "https://github.com/krozamdev/svelte-masked-password"
 author: "krozamdev"
 homepage: "https://github.com/krozamdev/svelte-masked-password#readme"
-downloads: 85
+downloads: 4
 updated: "2025-02-28T03:43:05.672Z"
 github_stars: 12
 tags: 

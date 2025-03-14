@@ -4,7 +4,7 @@ description: "Detects whether the user is using MetaMask or Ethereum wallet-enab
 repo_url: "https://github.com/binsarjr/svelte-web3-provider"
 author: "binsarjr"
 homepage: "https://github.com/binsarjr/svelte-web3-provider#readme"
-downloads: 7
+downloads: 2
 updated: "2022-11-04T17:21:28.607Z"
 github_stars: 2
 tags: 

@@ -4,7 +4,7 @@ description: "A svelte component to render a credit card"
 repo_url: "https://github.com/CharlyJazz/svelte-credit-card"
 author: "Carlos Azuaje"
 homepage: "https://github.com/CharlyJazz/svelte-credit-card#readme"
-downloads: 17
+downloads: 11
 updated: "2024-11-04T01:58:25.078Z"
 github_stars: 67
 tags: 

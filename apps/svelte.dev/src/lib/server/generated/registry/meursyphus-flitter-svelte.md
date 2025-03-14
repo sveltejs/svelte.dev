@@ -4,6 +4,7 @@ description: "Flitter-Svelte is a library designed to simplify the integration o
 repo_url: "https://github.com/meursyphus/flitter"
 author: "anseotmd555"
 homepage: "https://flitter.pages.dev"
+downloads: 2
 updated: "2024-06-28T06:42:00.752Z"
 github_stars: 326
 tags: 

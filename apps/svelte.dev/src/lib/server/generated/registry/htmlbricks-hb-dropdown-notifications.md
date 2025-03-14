@@ -2,7 +2,7 @@
 name: "@htmlbricks/hb-dropdown-notifications"
 description: "Svelte Dropdown Notifications WebComponent"
 author: "Dario Caruso"
-downloads: 9
+downloads: 488
 updated: "2025-03-09T03:10:28.208Z"
 tags: 
   - ui

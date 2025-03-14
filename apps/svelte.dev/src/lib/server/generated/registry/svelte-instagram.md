@@ -4,7 +4,7 @@ description: "Carrusel de imágenes para mostrar un feed de la última actividad
 repo_url: "https://github.com/alextomas80/svelte-instagram"
 author: "Alex Tomás"
 homepage: "https://alextomas.com"
-downloads: 4
+downloads: 2
 updated: "2021-02-22T15:07:37.223Z"
 github_stars: 1
 tags: 

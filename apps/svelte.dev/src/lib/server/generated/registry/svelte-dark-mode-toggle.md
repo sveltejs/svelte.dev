@@ -4,7 +4,7 @@ description: "Animated toggle button on Svelte for dark mode"
 repo_url: "https://github.com/Disimasa/svelte-dark-mode-toggle"
 author: "disimasar"
 homepage: "https://github.com/Disimasa/svelte-dark-mode-toggle#readme"
-downloads: 6
+downloads: 24
 updated: "2024-09-04T04:13:05.381Z"
 github_stars: 3
 tags: 

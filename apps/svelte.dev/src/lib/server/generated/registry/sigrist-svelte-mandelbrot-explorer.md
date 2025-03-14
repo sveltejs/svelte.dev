@@ -4,7 +4,7 @@ description: "A svelte component that renders the mandelbrot set using WebGL. Tr
 repo_url: "https://github.com/LorisSigrist/svelte-mandelbrot-explorer"
 author: "lurmwoch"
 homepage: "https://github.com/LorisSigrist/svelte-mandelbrot-explorer#readme"
-downloads: 3
+downloads: 5
 updated: "2021-11-04T20:01:29.288Z"
 tags: 
   - ui

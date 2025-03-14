@@ -4,7 +4,7 @@ description: "The core of the wallet adapter is a Svelte Store which exposes met
 repo_url: "https://github.com/portalpayments/svelte-on-solana-wallet-adapter"
 author: "Svelte on Solana team"
 homepage: "https://github.com/portalpayments/svelte-on-solana-wallet-adapter#readme"
-downloads: 10
+downloads: 8
 updated: "2023-06-07T20:10:07.410Z"
 github_stars: 3
 tags: 

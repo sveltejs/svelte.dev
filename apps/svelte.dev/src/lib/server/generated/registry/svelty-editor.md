@@ -4,7 +4,7 @@ description: "A Svelte wrapper for Editor.js with TypeScript support and enhance
 repo_url: "https://github.com/code-gio/svelty-editor"
 author: "Giovani Rodriguez"
 homepage: "https://github.com/code-gio/svelty-editor#readme"
-downloads: 80
+downloads: 16
 updated: "2025-03-04T19:57:41.103Z"
 tags: 
   - ui

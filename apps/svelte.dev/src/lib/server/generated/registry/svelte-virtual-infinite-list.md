@@ -4,7 +4,7 @@ description: "A virtual list component for Svelte apps. Instead of rendering all
 repo_url: "https://github.com/koheing/svelte-virtual-infinite-list"
 author: "koheing"
 homepage: "https://github.com/koheing/svelte-virtual-infinite-list#readme"
-downloads: 28
+downloads: 48
 updated: "2023-01-09T10:15:14.604Z"
 github_stars: 7
 tags: 

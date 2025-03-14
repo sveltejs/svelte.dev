@@ -4,7 +4,7 @@ description: "A lightweight and customizable Svelte component for easy integrati
 repo_url: "https://github.com/JaunPaul/places-autocomplete-svelte"
 author: "Alexander Pechkarev"
 homepage: "https://github.com/alexpechkarev"
-downloads: 4
+downloads: 6
 updated: "2024-11-26T02:17:43.910Z"
 tags: 
   - ui

@@ -4,7 +4,7 @@ description: "A powerful, headless table library for Svelte that provides comple
 repo_url: "https://github.com/humanspeak/svelte-headless-table"
 author: "Humanspeak, Inc."
 homepage: "https://table.svelte.page"
-downloads: 395
+downloads: 354
 updated: "2025-03-08T00:59:29.658Z"
 github_stars: 1
 tags: 

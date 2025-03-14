@@ -4,7 +4,7 @@ description: "<date-picker> Web-component or svelte component"
 repo_url: "https://github.com/ivosdc/svelte-datepicker"
 author: "Ivo Bozic"
 homepage: "https://github.com/ivosdc/svelte-datepicker"
-downloads: 9
+downloads: 4
 updated: "2021-03-21T19:35:32.246Z"
 github_stars: 1
 tags: 

@@ -2,7 +2,7 @@
 name: "hyunseung-svelte-google-analytics"
 description: "A fork of @beyonk/svelte-google-analytics"
 author: "hyunseunglee2008"
-downloads: 5
+downloads: 6
 updated: "2023-12-17T02:00:29.836Z"
 tags: 
   - utility

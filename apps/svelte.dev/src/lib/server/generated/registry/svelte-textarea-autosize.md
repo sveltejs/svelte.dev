@@ -4,7 +4,7 @@ description: "textarea autosize input component for the web built with svelte."
 repo_url: "https://github.com/shivesh947/svelte-textarea-autosize"
 author: "guptashiv84@gmail.com"
 homepage: "https://github.com/shivesh947/svelte-textarea-autosize#readme"
-downloads: 15
+downloads: 7
 updated: "2024-01-15T12:31:21.707Z"
 github_stars: 1
 tags: 

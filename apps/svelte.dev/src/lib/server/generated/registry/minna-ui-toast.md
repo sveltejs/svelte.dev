@@ -1,6 +1,6 @@
 ---
 name: "@minna-ui/toast"
-description: ""A simple "toast" notification web component. It can be used standalone, in Svelte projects, or any JavaScript project.""
+description: """"A simple "toast" notification web component. It can be used standalone, in Svelte projects, or any JavaScript project.""""
 repo_url: "https://github.com/WeAreGenki/minna-ui/tree/master/components/toast"
 author: "Max Milton"
 homepage: "https://wearegenki.github.io/minna-ui"

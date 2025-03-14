@@ -4,7 +4,7 @@ description: "GitLab SVG icons as Svelte components"
 repo_url: "https://github.com/metonym/svelte-gitlab-icons"
 author: "Eric Liu"
 homepage: "https://github.com/metonym/svelte-gitlab-icons"
-downloads: 36
+downloads: 41
 updated: "2023-09-26T20:12:15.736Z"
 github_stars: 2
 tags: 

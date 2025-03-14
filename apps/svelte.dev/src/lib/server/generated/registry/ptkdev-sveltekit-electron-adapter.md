@@ -4,7 +4,7 @@ description: "Adapter for SvelteKit apps that prerenders your entire site as a c
 repo_url: "https://github.com/ptkdev/sveltekit-electron-adapter"
 author: "Patryk Rzucidło [@ptkdev]"
 homepage: "https://github.com/ptkdev/sveltekit-electron-adapter"
-downloads: 36
+downloads: 10
 updated: "2023-02-11T20:20:42.101Z"
 github_stars: 78
 tags: 

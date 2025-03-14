@@ -4,7 +4,7 @@ description: "AG-Grid wrapper component for Svelte 5 (runes) with support for Sv
 repo_url: "https://github.com/bn-l/ag-grid-svelte5-extended"
 author: "bn-l-github"
 homepage: "https://bn-l.github.io/ag-grid-svelte5-extended/"
-downloads: 675
+downloads: 225
 updated: "2024-12-01T09:46:06.383Z"
 github_stars: 16
 tags: 

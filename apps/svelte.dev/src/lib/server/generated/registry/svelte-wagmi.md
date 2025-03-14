@@ -4,7 +4,7 @@ description: "Svelte Wagmi is a package that provides a collection of Svelte sto
 repo_url: "https://github.com/softwarecurator/svelte-wagmi"
 author: "@softwarecurator"
 homepage: "https://github.com/softwarecurator/svelte-wagmi#readme"
-downloads: 148
+downloads: 188
 updated: "2024-06-13T18:37:45.508Z"
 github_stars: 74
 tags: 

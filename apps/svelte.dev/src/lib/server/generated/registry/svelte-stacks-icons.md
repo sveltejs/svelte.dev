@@ -4,7 +4,7 @@ description: "Stack Overflow Stacks SVG icons as Svelte components."
 repo_url: "https://github.com/metonym/svelte-stacks-icons"
 author: "Eric Liu"
 homepage: "https://github.com/metonym/svelte-stacks-icons"
-downloads: 338
+downloads: 344
 updated: "2022-10-06T14:43:11.526Z"
 tags: 
   - ui

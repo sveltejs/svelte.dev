@@ -4,7 +4,7 @@ description: "Svelte wrappers for the Heroicons v2 library."
 repo_url: "https://github.com/babeard/svelte-heroicons"
 author: "Brian Beard"
 homepage: "https://github.com/babeard/svelte-heroicons"
-downloads: 95
+downloads: 35
 updated: "2024-01-12T02:26:38.362Z"
 github_stars: 2
 tags: 

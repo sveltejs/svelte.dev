@@ -4,7 +4,7 @@ description: "Confetti in Svelte! Celebrate things with some extra flair. Animat
 repo_url: "https://github.com/Mitcheljager/svelte-confetti"
 author: "mitcheljager"
 homepage: "https://mitcheljager.github.io/svelte-confetti/"
-downloads: 22319
+downloads: 18113
 dependents: 2
 updated: "2025-01-26T14:39:48.888Z"
 github_stars: 281

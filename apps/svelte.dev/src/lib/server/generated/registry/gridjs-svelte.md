@@ -4,7 +4,7 @@ description: "A Svelte wrapper component for Grid.js"
 repo_url: "https://github.com/iamyuu/gridjs-svelte"
 author: "Muhammad Yusuf"
 homepage: "https://gridjs.io/docs/integrations/svelte"
-downloads: 1264
+downloads: 977
 dependents: 2
 updated: "2022-03-31T13:04:24.486Z"
 github_stars: 59

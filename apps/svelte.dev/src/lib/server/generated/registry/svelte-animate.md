@@ -4,7 +4,7 @@ description: "A lightweight Svelte component that adds beautiful CSS animations 
 repo_url: "https://github.com/shinokada/svelte-animate"
 author: "Shinichi Okada"
 homepage: "https://svelte-animate.codewithshin.com/"
-downloads: 15
+downloads: 4
 updated: "2024-11-30T08:16:43.822Z"
 github_stars: 9
 tags: 

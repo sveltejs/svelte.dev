@@ -4,6 +4,7 @@ description: "A form management library for Svelte that is very lightweight and 
 repo_url: "https://github.com/ragokan/svelte-better-form"
 author: "ragokan"
 homepage: "https://github.com/ragokan/svelte-better-form#readme"
+downloads: 1
 dependents: 1
 updated: "2022-01-01T11:06:32.927Z"
 tags: 

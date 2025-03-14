@@ -4,7 +4,7 @@ description: "Reusable chart templates for Svelte projects."
 repo_url: "https://github.com/onsvisual/svelte-charts"
 author: "Ahmad Barclay"
 homepage: "http://onsvisual.github.io/svelte-charts"
-downloads: 26
+downloads: 74
 updated: "2024-12-02T10:53:25.346Z"
 github_stars: 14
 tags: 

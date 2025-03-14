@@ -4,7 +4,7 @@ description: "A reactive wrapper for PocketBase collections and records in Svelt
 repo_url: "https://github.com/matheustavarestrindade/svelte-pocketbase-sync"
 author: "Matheus Tavares Trindade"
 homepage: "https://github.com/matheustavarestrindade/svelte-pocketbase-sync#readme"
-downloads: 1
+downloads: 3
 updated: "2025-01-20T14:07:52.783Z"
 tags: 
   - utility

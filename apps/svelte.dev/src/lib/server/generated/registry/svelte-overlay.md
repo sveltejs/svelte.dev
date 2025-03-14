@@ -4,7 +4,7 @@ description: "Svelte Overlay component. Great for creating dropdowns, tooltips a
 repo_url: "https://github.com/wysher/svelte-overlay"
 author: "Mariusz Wachowski"
 homepage: "https://github.com/wysher/svelte-overlay#readme"
-downloads: 126
+downloads: 97
 updated: "2020-06-07T15:38:40.344Z"
 github_stars: 22
 tags: 

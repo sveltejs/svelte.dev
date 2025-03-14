@@ -4,8 +4,8 @@ description: "Noph UI is a modern, powerful UI library for Svelte 5, fully align
 repo_url: "https://github.com/cnolte/noph-ui"
 author: "cnolte"
 homepage: "https://noph.dev"
-downloads: 317
-updated: "2025-03-11T06:30:25.107Z"
+downloads: 179
+updated: "2025-03-13T18:56:36.368Z"
 github_stars: 4
 tags: 
   - component-library

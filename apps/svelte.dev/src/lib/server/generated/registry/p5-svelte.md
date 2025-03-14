@@ -4,7 +4,7 @@ description: "A component for easily using p5 sketches in Svelte. Allows using S
 repo_url: "https://github.com/tonyketcham/p5-svelte"
 author: "Tony Ketcham"
 homepage: "https://p5-svelte.netlify.app/"
-downloads: 151
+downloads: 120
 dependents: 2
 updated: "2022-04-03T01:45:26.342Z"
 github_stars: 178

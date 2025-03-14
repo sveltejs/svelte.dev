@@ -4,7 +4,6 @@ description: "PartyPrompt is a React component library for building interactive 
 repo_url: "https://github.com/indentapis/multiparty"
 author: "fouad"
 homepage: "https://multiparty.ai"
-downloads: 1
 updated: "2023-09-20T18:34:02.218Z"
 github_stars: 4
 tags: 

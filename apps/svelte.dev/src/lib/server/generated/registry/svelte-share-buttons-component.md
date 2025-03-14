@@ -4,7 +4,7 @@ description: "Simple Svelte based social media share buttons component with no t
 repo_url: "https://github.com/pchynoweth/svelte-share-buttons-component"
 author: "pchynoweth"
 homepage: "https://pchynoweth.github.io/svelte-share-buttons-component/"
-downloads: 457
+downloads: 444
 dependents: 2
 updated: "2024-03-23T15:09:58.068Z"
 github_stars: 39

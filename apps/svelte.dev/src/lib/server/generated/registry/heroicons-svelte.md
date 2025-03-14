@@ -4,7 +4,7 @@ description: "The collection of beautiful hand-crafted SVG icons, by the makers 
 repo_url: "https://github.com/travishorn/heroicons-svelte"
 author: "Travis Horn"
 homepage: "https://github.com/travishorn/heroicons-svelte#readme"
-downloads: 373
+downloads: 344
 updated: "2024-10-28T16:48:12.746Z"
 github_stars: 3
 tags: 

@@ -4,7 +4,7 @@ description: "📍 Safe svelte-highlight dynamic style switching"
 repo_url: "https://github.com/jill64/svelte-highlight-switcher"
 author: "jill64"
 homepage: "https://github.com/jill64/svelte-highlight-switcher#readme"
-downloads: 5076
+downloads: 4536
 dependents: 1
 updated: "2025-01-20T02:43:10.149Z"
 github_stars: 2

@@ -4,7 +4,7 @@ description: "MDX for Svelte. Svelte in Markdown. A Markdown preprocessor for Sv
 repo_url: "https://github.com/babakfp/mdx-svelte"
 author: "babakfp"
 homepage: "https://babakfp.ir/docs/mdx-svelte"
-downloads: 161
+downloads: 103
 updated: "2025-03-01T19:11:49.897Z"
 github_stars: 4
 tags: 

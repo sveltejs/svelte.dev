@@ -4,7 +4,7 @@ description: "Svelte Flow - A highly customizable Svelte library for building no
 repo_url: "https://github.com/xyflow/xyflow"
 author: "peterkogo"
 homepage: "https://svelteflow.dev"
-downloads: 29019
+downloads: 23608
 dependents: 8
 updated: "2025-02-25T10:31:17.841Z"
 github_stars: 28215
