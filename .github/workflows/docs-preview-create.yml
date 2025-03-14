@@ -20,6 +20,10 @@ on:
         required: true
         type: string
 
+permissions:
+  contents: read
+  actions: write
+
 env:
   BRANCH: preview-${{ inputs.repo }}-${{ inputs.pr }}
 
