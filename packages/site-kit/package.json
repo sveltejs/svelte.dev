@@ -52,7 +52,7 @@
 		"marked": "^14.1.2",
 		"prettier": "^3.3.2",
 		"prettier-plugin-svelte": "^3.3.2",
-		"svelte": "5.14.0",
+		"svelte": "5.23.0",
 		"svelte-check": "^4.1.1",
 		"typescript": "^5.5.4",
 		"vite": "^5.4.3"
