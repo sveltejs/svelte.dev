@@ -20,11 +20,9 @@ on:
         required: true
         type: string
 
-# Add this permissions block at the top level of your workflow
 permissions:
   contents: read
-  # This is the critical permission needed for repository-dispatch
-  actions: write
+  issues: write
 
 env:
   BRANCH: preview-${{ inputs.repo }}-${{ inputs.pr }}
