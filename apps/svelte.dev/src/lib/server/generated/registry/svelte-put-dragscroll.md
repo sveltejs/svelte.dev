@@ -1,13 +1,13 @@
 ---
 name: "@svelte-put/dragscroll"
-description: "Svelte action for drag-to-scroll behavior"
+description: "Enable drag-to-scroll behavior in Svelte applications."
 repo_url: "https://github.com/vnphanquang/svelte-put"
 author: "Quang Phan"
 homepage: "https://github.com/vnphanquang/svelte-put/tree/next/packages/dragscroll"
-downloads: 632
+downloads: 893
 updated: "2024-10-25T05:17:14.596Z"
-github_stars: 898
+github_stars: 899
 tags: 
+  - ui
   - dom
-  - utility
 ---

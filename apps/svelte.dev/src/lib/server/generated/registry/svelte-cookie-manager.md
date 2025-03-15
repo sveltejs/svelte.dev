@@ -1,6 +1,6 @@
 ---
 name: "svelte-cookie-manager"
-description: "The ultimate Svelte cookie consent solution. Automatically block trackers, manage consent preferences, and protect user privacy with an elegant UI. Perfect for modern web applications."
+description: "Manage cookies, handle consent, block trackers in Svelte apps."
 repo_url: "https://github.com/dasporal/svelte-cookie-manager"
 author: "dasporal"
 homepage: "https://github.com/dasporal/svelte-cookie-manager#readme"

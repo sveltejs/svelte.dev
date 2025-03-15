@@ -1,6 +1,6 @@
 ---
 name: "@hyrious/esbuild-plugin-svelte"
-description: "Load .svelte files in esbuild."
+description: "Load Svelte files directly in esbuild build processes."
 repo_url: "https://github.com/hyrious/esbuild-plugin-svelte"
 author: "hyrious"
 homepage: "https://github.com/hyrious/esbuild-plugin-svelte#readme"

@@ -1,10 +1,10 @@
 ---
 name: "svelidation"
-description: "Validate your svelte application easy"
+description: "Validate Svelte application forms with customizable rules and types."
 repo_url: "https://github.com/yazonnile/svelidation"
 author: "yazonnile"
 homepage: "https://github.com/yazonnile/svelidation#readme"
-downloads: 2
+downloads: 3
 updated: "2020-01-10T14:40:34.958Z"
 github_stars: 52
 tags: 

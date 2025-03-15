@@ -1,6 +1,6 @@
 ---
 name: "@svuick/action"
-description: "Svelte actions"
+description: "Create custom Svelte actions."
 repo_url: "https://gitlab.com/david-plugge/svuick"
 author: "davidplugge"
 homepage: "https://gitlab.com/david-plugge/svuick#readme"

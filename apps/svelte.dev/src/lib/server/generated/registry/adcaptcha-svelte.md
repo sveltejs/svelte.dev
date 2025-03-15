@@ -1,6 +1,6 @@
 ---
 name: "@adcaptcha/svelte"
-description: "adCAPTCHA package for Svelte"
+description: "Integrate adCAPTCHA into Svelte applications."
 repo_url: "https://github.com/adcaptcha-org/adCAPTCHA-NPM-Packages"
 author: "adCAPTCHA"
 homepage: "https://docs.adcaptcha.com"

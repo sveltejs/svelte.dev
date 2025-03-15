@@ -1,6 +1,6 @@
 ---
 name: "svelte-restate"
-description: "Immutable store for Svelte with full Typescript support and Redux Devtools integration"
+description: "Provide immutable store for Svelte with Redux Devtools integration."
 repo_url: "https://github.com/endenwer/svelte-restate"
 author: "Stepan Lusnikov"
 homepage: "https://github.com/endenwer/svelte-restate#readme"

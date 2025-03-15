@@ -1,6 +1,6 @@
 ---
 name: "@solar-republic/svelte-toggle"
-description: "Accessible toggle switch component"
+description: "Create accessible toggle switch components for Svelte."
 repo_url: "https://github.com/metonym/svelte-toggle"
 author: "Eric Liu"
 homepage: "https://github.com/metonym/svelte-toggle"

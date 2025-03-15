@@ -1,6 +1,6 @@
 ---
 name: "svelte5-skeleton"
-description: "Simple implementation of SVG skeletons in Svelte 5 with types"
+description: "Implement SVG skeletons in Svelte 5 for improved UX during loading."
 repo_url: "https://github.com/sonniydsgn/svelte5-skeleton"
 author: "sonniydsgn"
 homepage: "https://github.com/sonniydsgn/svelte5-skeleton#readme"

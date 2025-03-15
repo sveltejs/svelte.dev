@@ -1,6 +1,6 @@
 ---
 name: "svelte-evil-icons"
-description: "Svelte SVG Evil icons component"
+description: "Render Evil Icons as Svelte components."
 repo_url: "https://github.com/shinokada/svelte-evil-icons"
 author: "Shinichi Okada"
 homepage: "https://svelte-evil-icons.codewithshin.com"

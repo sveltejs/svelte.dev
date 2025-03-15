@@ -1,13 +1,13 @@
 ---
 name: "svelte-check"
-description: "Svelte Code Checker Terminal Interface"
+description: "Check Svelte projects for type errors and linting warnings"
 repo_url: "https://github.com/sveltejs/language-tools"
 author: "The Svelte Community"
 homepage: "https://github.com/sveltejs/language-tools#readme"
-downloads: 438172
+downloads: 432592
 dependents: 69
 updated: "2025-03-06T14:20:23.951Z"
-github_stars: 1289
+github_stars: 1291
 tags: 
   - tooling
 ---

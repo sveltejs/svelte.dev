@@ -1,13 +1,13 @@
 ---
 name: "@tanstack/svelte-table"
-description: "Headless UI for building powerful tables & datagrids for Svelte."
+description: "Headless UI for building powerful tables and datagrids in Svelte."
 repo_url: "https://github.com/TanStack/table"
 author: "Tanner Linsley"
 homepage: "https://tanstack.com/table"
-downloads: 9149
+downloads: 8666
 dependents: 14
 updated: "2025-02-11T21:00:39.245Z"
-github_stars: 25988
+github_stars: 26001
 tags: 
   - component-library
 ---

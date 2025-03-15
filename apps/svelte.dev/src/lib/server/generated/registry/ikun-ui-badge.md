@@ -1,6 +1,6 @@
 ---
 name: "@ikun-ui/badge"
-description: "UI component for Svelte"
+description: "Create badge components for Svelte applications."
 author: "baiwusanyu"
 downloads: 1
 dependents: 1

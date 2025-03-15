@@ -1,6 +1,6 @@
 ---
 name: "sveltejs-markdoc"
-description: "Markdoc renderer for Svelte"
+description: "Render Markdoc content within Svelte and SvelteKit projects."
 repo_url: "https://github.com/yuchengkuo/sveltejs-markdoc"
 author: "YuCheng Kuo"
 homepage: "https://github.com/yuchengkuo/sveltejs-markdoc#readme"

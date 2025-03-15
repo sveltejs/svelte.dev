@@ -1,10 +1,10 @@
 ---
 name: "svavatar"
-description: "Svavatar is a Svelte component wrapping Dicebear's Avatars library."
+description: "Wrap Dicebear's Avatars library for use in Svelte components."
 repo_url: "https://github.com/takoyaro/svavatar"
 author: "takoyaro"
 homepage: "https://github.com/takoyaro/svavatar#readme"
-downloads: 64
+downloads: 1
 updated: "2020-06-05T07:14:12.578Z"
 tags: 
   - ui

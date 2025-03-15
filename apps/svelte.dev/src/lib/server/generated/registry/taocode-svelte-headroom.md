@@ -1,10 +1,10 @@
 ---
 name: "@taocode/svelte-headroom"
-description: "Svelte component providing auto-hiding header and footer based on collardeau/svelte-headroom inspired by headroom.js"
+description: "Provides auto-hiding header and footer for Svelte apps."
 repo_url: "https://github.com/taocode/svelte-headroom"
 author: "Mark Jones"
 homepage: "https://github.com/taocode/svelte-headroom#readme"
-downloads: 57
+downloads: 90
 updated: "2022-11-22T08:32:56.974Z"
 github_stars: 2
 tags: 

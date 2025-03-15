@@ -1,13 +1,12 @@
 ---
 name: "svelte-advanced-tables"
-description: "This project brings DataTable into your Svelte project."
+description: "Integrate advanced data tables into Svelte projects."
 repo_url: "https://github.com/homescriptone/svelte-datatables"
 author: "homescriptone"
 homepage: "https://github.com/homescriptone/svelte-datatables"
-downloads: 5
+downloads: 4
 updated: "2021-09-12T07:15:06.234Z"
 github_stars: 17
 tags: 
-  - component-library
   - ui
 ---

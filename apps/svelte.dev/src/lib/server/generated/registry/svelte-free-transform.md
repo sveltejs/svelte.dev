@@ -1,6 +1,6 @@
 ---
 name: "svelte-free-transform"
-description: "A freely user-transformable container component for Svelte."
+description: "Provide freely transformable container component for Svelte content."
 repo_url: "https://github.com/mononaut/svelte-free-transform"
 author: "mononaut"
 homepage: "https://github.com/mononaut/svelte-free-transform#readme"

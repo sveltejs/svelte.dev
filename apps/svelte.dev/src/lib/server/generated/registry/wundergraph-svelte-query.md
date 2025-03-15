@@ -1,13 +1,12 @@
 ---
 name: "@wundergraph/svelte-query"
-description: "WunderGraph Svelte Query Integration"
+description: "Integrate Svelte Query with WunderGraph for data fetching."
 repo_url: "https://github.com/wundergraph/wundergraph"
 author: "WunderGraph Maintainers"
 homepage: "https://wundergraph.com"
-downloads: 85
+downloads: 150
 updated: "2024-05-15T10:33:34.396Z"
-github_stars: 2318
+github_stars: 2322
 tags: 
-  - integration
-  - server
+  - utility
 ---

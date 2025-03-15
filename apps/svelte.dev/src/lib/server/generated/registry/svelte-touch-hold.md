@@ -1,6 +1,6 @@
 ---
 name: "svelte-touch-hold"
-description: """- runs a callback function after touching and holding the component for specific milliseconds. it only fires the "holding" callback on touch screens."""
+description: "Run callback after touching and holding Svelte component."
 author: "Arian"
 homepage: "https://github.com/ariannargesi/svelte-touch-hold"
 downloads: 1

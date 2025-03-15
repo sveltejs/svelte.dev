@@ -1,6 +1,6 @@
 ---
 name: "@ikun-ui/collapse-wrapper"
-description: "ERROR: No README data found!"
+description: "Wrap content with collapsible sections in Svelte applications."
 author: "baiwusanyu"
 downloads: 3
 dependents: 1

@@ -1,10 +1,10 @@
 ---
 name: "@htmlbricks/hb-offcanvas"
-description: "Svelte Boostrap Offcanvas"
+description: "Create offcanvas component for Svelte applications."
 author: "Dario Caruso"
-downloads: 660
+downloads: 6
 dependents: 3
 updated: "2025-03-09T03:10:41.094Z"
 tags: 
-  - component-library
+  - ui
 ---

@@ -1,10 +1,10 @@
 ---
 name: "@runkai/eslint-config"
-description: "Svelte ESLint config"
+description: "ESLint and Prettier configuration for Svelte and SvelteKit."
 repo_url: "https://github.com/runkaiz/eslint-config"
 author: "Runkai Zhang"
 homepage: "https://github.com/runkaiz/eslint-config#readme"
-downloads: 1
+downloads: 2
 updated: "2024-05-16T10:21:26.375Z"
 tags: 
   - tooling

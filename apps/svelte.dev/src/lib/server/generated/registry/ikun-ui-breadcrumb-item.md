@@ -1,6 +1,6 @@
 ---
 name: "@ikun-ui/breadcrumb-item"
-description: "ERROR: No README data found!"
+description: "Create breadcrumb navigation items for Svelte applications."
 author: "baiwusanyu"
 downloads: 1
 dependents: 1

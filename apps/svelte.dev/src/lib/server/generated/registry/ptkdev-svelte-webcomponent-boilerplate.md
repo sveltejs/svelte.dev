@@ -1,6 +1,6 @@
 ---
 name: "@ptkdev/svelte-webcomponent-boilerplate"
-description: "Create your HTML5 Web Component with Svelte. Made your web components with this user friendly boilerplate"
+description: "Create HTML5 Web Components with Svelte, user-friendly boilerplate."
 repo_url: "https://github.com/ptkdev-boilerplate/svelte-webcomponent-boilerplate"
 author: "Patryk Rzucidło [@ptkdev]"
 homepage: "https://codepen.io/ptkdev/pen/jOyNmEQ"

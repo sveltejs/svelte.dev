@@ -1,6 +1,6 @@
 ---
 name: "svelvet-test"
-description: "A lightweight Svelte component library for building dynamic, node-based user interfaces"
+description: "Build dynamic, node-based user interfaces with Svelte."
 repo_url: "https://github.com/open-source-labs/Svelvet"
 author: "briangregoryholmes"
 homepage: "https://github.com/open-source-labs/Svelvet"

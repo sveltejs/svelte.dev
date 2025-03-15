@@ -1,6 +1,6 @@
 ---
 name: "app-template-sstt"
-description: "GitHub/CSA template for Snowpack + Svelte + Typescript + TailwindCSS"
+description: "Template for Snowpack, Svelte, Typescript, and TailwindCSS projects."
 author: "Brian YP Liu"
 homepage: "https://github.com/LBrian/app-template-s2t2"
 downloads: 4

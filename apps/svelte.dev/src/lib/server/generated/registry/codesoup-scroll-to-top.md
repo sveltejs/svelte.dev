@@ -1,8 +1,7 @@
 ---
 name: "@codesoup/scroll-to-top"
-description: "Component places a vertically centered scroll button on the right of the html body."
+description: "Adds scroll-to-top button to Svelte applications."
 author: "Allan Nielsen"
-downloads: 2
 updated: "2022-11-11T19:33:05.818Z"
 tags: 
   - ui

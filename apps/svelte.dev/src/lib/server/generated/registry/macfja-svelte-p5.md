@@ -1,6 +1,6 @@
 ---
 name: "@macfja/svelte-p5"
-description: "Small wrapper around P5 for Svelte"
+description: "Integrate p5.js sketches into Svelte components."
 repo_url: "https://github.com/macfja/svelte-p5"
 author: "MacFJA"
 homepage: "https://github.com/macfja/svelte-p5#readme"

@@ -1,9 +1,9 @@
 ---
 name: "@brunnerh/autocomplete"
-description: "An autocomplete component."
+description: "Create autocomplete components for Svelte."
 author: "brunnerh"
 homepage: "https://github.com/brunnerh/autocomplete"
-downloads: 2
+downloads: 1
 updated: "2020-03-10T20:24:40.005Z"
 tags: 
   - ui

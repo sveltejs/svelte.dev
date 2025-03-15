@@ -1,6 +1,6 @@
 ---
 name: "@vanillacode314/svelte-derived-mutable"
-description: "Helper function to create a derived rune in svelte 5 which can be mutated"
+description: "Create mutable derived runes in Svelte 5 with deep tracking support."
 repo_url: "https://github.com/vanillacode314/svelte-derived-mutable"
 author: "Raqueebuddin Aziz"
 homepage: "https://github.com/vanillacode314/svelte-derived-mutable#readme"

@@ -1,6 +1,6 @@
 ---
 name: "@pdfsvex/table-of-contents"
-description: "Table of contents for pdfsvex"
+description: "Generate table of contents for pdfsvex."
 author: "manuel3108"
 downloads: 1
 dependents: 1

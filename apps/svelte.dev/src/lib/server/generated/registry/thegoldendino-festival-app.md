@@ -1,6 +1,6 @@
 ---
 name: "@thegoldendino/festival-app"
-description: "A mobile kiosk for festival information. Each festival day displays a pannable/zoomable map image with positioned stage pins. Stages display artist schedules with links to more artist information."
+description: "Build mobile kiosk for festival information with pannable maps and schedules."
 repo_url: "https://github.com/thegoldendino/festival-app"
 author: "Dwight VanTuyl"
 homepage: "https://github.com/thegoldendino/festival-app#readme"

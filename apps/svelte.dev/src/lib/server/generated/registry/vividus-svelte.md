@@ -1,6 +1,6 @@
 ---
 name: "@vividus/svelte"
-description: "Read more about the library in the main repo [here](../README.md)..."
+description: "Create lively and reactive UI components for Svelte applications."
 repo_url: "https://github.com/hAbuMustafa/vividus"
 author: "eyecode"
 homepage: "https://github.com/hAbuMustafa/vividus#readme"

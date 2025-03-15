@@ -1,6 +1,6 @@
 ---
 name: "@terrxo/unpic-svelte"
-description: "Svelte component for responsive, high-performance images. Generates a responsive `<img>` tag that follows best practices, with the correct srcset, sizes and styles. Detects image URLs from most image CDNs and CMSs and can resize images with no build step."
+description: "Create responsive, high-performance image component for Svelte."
 repo_url: "https://github.com/ascorbic/unpic-img"
 author: "terrxo"
 homepage: "https://unpic.pics/img/svelte"

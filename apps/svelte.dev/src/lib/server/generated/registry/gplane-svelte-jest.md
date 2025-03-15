@@ -1,6 +1,6 @@
 ---
 name: "@gplane/svelte-jest"
-description: "Jest custom transformer for transforming Svelte."
+description: "Provide Jest transformer for Svelte components."
 repo_url: "https://github.com/g-plane/svelte-jest"
 author: "Pig Fang"
 downloads: 1

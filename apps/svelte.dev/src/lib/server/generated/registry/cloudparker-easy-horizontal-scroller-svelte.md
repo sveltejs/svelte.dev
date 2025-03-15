@@ -1,8 +1,8 @@
 ---
 name: "@cloudparker/easy-horizontal-scroller-svelte"
-description: "A lightweight and user-friendly library for implementing horizontal scrolling on both web and mobile UIs. This intuitive scroller relies solely on the drag feature, providing a seamless and responsive experience across various devices."
+description: "Implement horizontal scrolling on web and mobile UIs in Svelte."
 author: "cloudparker.com"
-downloads: 3
+downloads: 2
 updated: "2023-04-09T03:17:07.537Z"
 tags: 
   - ui

@@ -1,6 +1,6 @@
 ---
 name: "@jakxz/svelte-eslint-parser"
-description: "Svelte parser for ESLint"
+description: "Parse Svelte code for ESLint, enabling custom rule creation."
 repo_url: "https://github.com/sveltejs/svelte-eslint-parser"
 author: "Yosuke Ota"
 homepage: "https://github.com/sveltejs/svelte-eslint-parser#readme"

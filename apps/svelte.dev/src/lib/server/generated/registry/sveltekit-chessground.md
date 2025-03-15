@@ -1,9 +1,9 @@
 ---
 name: "sveltekit-chessground"
-description: "Svelte chessboard component. A Svelte wrapper for the full-featured Chessground chess UI."
+description: "Create chessboard component for SvelteKit applications."
 author: "sharlesleglerg"
 homepage: "https://github.com/AhsanSarwar45/sveltekit-chessground#readme"
-downloads: 7
+downloads: 10
 updated: "2023-12-08T06:24:58.312Z"
 tags: 
   - ui

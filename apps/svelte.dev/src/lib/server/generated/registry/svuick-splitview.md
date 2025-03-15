@@ -1,6 +1,6 @@
 ---
 name: "@svuick/splitview"
-description: "A splitview component for Svelte and SvelteKit"
+description: "Create split view components for Svelte and SvelteKit."
 repo_url: "https://gitlab.com/david-plugge/svuick"
 author: "davidplugge"
 homepage: "https://gitlab.com/david-plugge/svuick#readme"

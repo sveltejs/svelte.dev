@@ -1,10 +1,10 @@
 ---
 name: "@untemps/svelte-use-tooltip"
-description: "Svelte action to display a tooltip"
+description: "Create tooltips in Svelte applications."
 repo_url: "https://github.com/untemps/svelte-use-tooltip"
 author: "Vincent Le Badezet"
 homepage: "https://github.com/untemps/svelte-use-tooltip#readme"
-downloads: 204
+downloads: 261
 dependents: 2
 updated: "2024-12-01T15:07:35.483Z"
 github_stars: 61

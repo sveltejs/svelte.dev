@@ -1,6 +1,6 @@
 ---
 name: "@rutynka/helper-crypto-address-2-qrcode"
-description: "A simple Svelte app - crypto address 2 qrcode"
+description: "Generate QR codes from crypto addresses in Svelte apps."
 repo_url: "https://github.com/rutynka/helper-crypto-address-2-qrcode"
 author: "ru7ynk4"
 homepage: "https://github.com/rutynka/helper-crypto-address-2-qrcode"

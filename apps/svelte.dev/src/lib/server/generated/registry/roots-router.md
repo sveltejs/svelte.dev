@@ -1,6 +1,6 @@
 ---
 name: "roots-router"
-description: "A client-side router for Svelte"
+description: "Client-side router for Svelte applications using history API."
 repo_url: "https://github.com/PierBover/roots-svelte-router"
 author: "Pier Bover"
 homepage: "https://github.com/PierBover/roots-svelte-router#readme"

@@ -1,6 +1,6 @@
 ---
 name: "@sveltewind/actions"
-description: "Sveltewind collection of actions"
+description: "Collection of Svelte actions for Tailwind CSS projects."
 repo_url: "https://github.com/sveltewind/actions"
 author: "Bob McAleavey"
 homepage: "https://github.com/sveltewind/actions#readme"

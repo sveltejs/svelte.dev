@@ -1,6 +1,6 @@
 ---
 name: "@ikun-ui/statistic"
-description: " "
+description: "Statistic component for Svelte."
 author: "baiwusanyu"
 downloads: 1
 dependents: 2

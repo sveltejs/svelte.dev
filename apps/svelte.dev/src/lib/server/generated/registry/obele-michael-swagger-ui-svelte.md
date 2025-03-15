@@ -1,6 +1,6 @@
 ---
 name: "@obele-michael/swagger-ui-svelte"
-description: "A Svelte library that auto-generates OpenAPI (Swagger) documentation for HTTP handlers in SvelteKit projects. This library scans your project’s routes to create a dynamic, accessible Swagger UI page that documents your API endpoints."
+description: "Generates OpenAPI (Swagger) documentation for SvelteKit HTTP handlers."
 repo_url: "https://github.com/Michael-Obele/swagger-ui-svelte"
 author: "Michael Obele"
 homepage: "https://github.com/Michael-Obele/swagger-ui-svelte#readme"
@@ -8,4 +8,5 @@ downloads: 1
 updated: "2024-12-27T07:59:43.900Z"
 tags: 
   - tooling
+  - content
 ---

@@ -1,6 +1,6 @@
 ---
 name: "@yusuffidan42/svelte-headlessui"
-description: "A complete, full-featured, unofficial Svelte port of Headless UI, an unstyled, fully accessible UI component library."
+description: "Provide unstyled, accessible UI components for Svelte applications."
 repo_url: "https://github.com/YusufFidan/svelte-headlessui"
 author: "yusuffidan.42"
 homepage: "https://fidan.de"

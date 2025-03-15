@@ -1,10 +1,11 @@
 ---
 name: "@popperjs/svelte"
-description: "Svelte wrapper for Popper - the positioning library"
+description: "Wraps Popper.js for positioning UI elements in Svelte applications."
 author: "atomiks"
-downloads: 26
+downloads: 134
 dependents: 4
 updated: "2020-04-19T15:43:49.306Z"
 tags: 
   - ui
+  - utility
 ---

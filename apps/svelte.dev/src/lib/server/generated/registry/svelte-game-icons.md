@@ -1,6 +1,6 @@
 ---
 name: "svelte-game-icons"
-description: "svelte-game-icons is a simple component wrapping the [game-icons](https://github.com/game-icons/icons) library for easy use in your Svelte projects."
+description: "Integrate game-icons library into Svelte projects, using simple components."
 repo_url: "https://github.com/takoyaro/svelte-game-icons"
 author: "takoyaro"
 homepage: "https://github.com/takoyaro/svelte-game-icons#readme"

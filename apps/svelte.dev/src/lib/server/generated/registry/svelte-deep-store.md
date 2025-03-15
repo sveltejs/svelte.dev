@@ -1,6 +1,6 @@
 ---
 name: "svelte-deep-store"
-description: "Svelte deep store - react only when specified property of the object was changed."
+description: "Create Svelte stores that react only to specific property changes."
 repo_url: "https://github.com/neuronetio/svelte-deep-store"
 author: "neuronet.io@gmail.com"
 homepage: "https://github.com/neuronetio/svelte-deep-store#readme"

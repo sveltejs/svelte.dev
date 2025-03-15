@@ -1,6 +1,6 @@
 ---
 name: "svelte-persistent"
-description: "Svelte writables for local & session storage"
+description: "Provide Svelte writables for local and session storage."
 repo_url: "https://github.com/LeoDog896/svelte-persistent"
 author: "Tristan F."
 homepage: "https://leodog896.github.io/svelte-persistent"

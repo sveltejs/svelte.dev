@@ -1,6 +1,6 @@
 ---
 name: "svelte-form-easy"
-description: "Svelte realtime form validator with [yup](https://www.npmjs.com/package/yup) validation"
+description: "Build forms with Yup validation in Svelte applications."
 repo_url: "https://github.com/vanzinvestor/svelte-form-easy"
 author: "Vanz Investor"
 homepage: "https://github.com/vanzinvestor/svelte-form-easy"

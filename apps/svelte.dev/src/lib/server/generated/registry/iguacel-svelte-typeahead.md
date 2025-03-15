@@ -1,6 +1,6 @@
 ---
 name: "@iguacel/svelte-typeahead"
-description: "Accessible, fuzzy search typeahead component"
+description: "Implement accessible, fuzzy search typeahead components for Svelte."
 repo_url: "https://github.com/metonym/svelte-typeahead"
 author: "Eric Liu"
 homepage: "https://github.com/metonym/svelte-typeahead"

@@ -1,9 +1,9 @@
 ---
 name: "@joshnuss/svelte-codemirror"
-description: "Svelte CodeMirror component"
+description: "Integrate CodeMirror editor into Svelte applications."
 author: "joshnuss"
-downloads: 29
+downloads: 40
 updated: "2021-07-15T01:31:16.513Z"
 tags: 
-  - utility
+  - ui
 ---

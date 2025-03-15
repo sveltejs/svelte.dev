@@ -1,6 +1,6 @@
 ---
 name: "svelte-app-router"
-description: "Simple SPA router made with Svelte."
+description: "Simple SPA router for Svelte, hash-based routing."
 repo_url: "https://github.com/coussej/svelte-app-router"
 author: "Jeroen Coussement"
 homepage: "https://github.com/coussej/svelte-app-router#readme"

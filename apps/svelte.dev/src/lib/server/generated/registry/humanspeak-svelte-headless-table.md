@@ -1,13 +1,12 @@
 ---
 name: "@humanspeak/svelte-headless-table"
-description: "A powerful, headless table library for Svelte that provides complete control over table UI while handling complex data operations like sorting, filtering, pagination, grouping, and row expansion. Build custom, accessible data tables with zero styling opin"
+description: "Headless table library for Svelte, handles sorting, filtering, and more."
 repo_url: "https://github.com/humanspeak/svelte-headless-table"
 author: "Humanspeak, Inc."
 homepage: "https://table.svelte.page"
-downloads: 354
+downloads: 392
 updated: "2025-03-08T00:59:29.658Z"
-github_stars: 1
+github_stars: 2
 tags: 
-  - utility
   - component-library
 ---

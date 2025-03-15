@@ -1,6 +1,6 @@
 ---
 name: "svelte-chota-ablab"
-description: "Svelte UI components based on super lightweight chota CSS framework."
+description: "Build UI with Svelte components based on Chota CSS framework."
 repo_url: "https://github.com/AlexxNB/svelte-chota"
 author: "Alexey Schebelev"
 homepage: "https://alexxnb.github.io/svelte-chota"

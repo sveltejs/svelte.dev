@@ -1,7 +1,6 @@
 ---
 name: "svelte-formit"
-description: """"svelte-formit is a small unopinionated library for handling forms with svelte.
-svelte-formit is heavily inspired by the react-hook-form library""""
+description: "Handle forms with validation in Svelte applications."
 repo_url: "https://github.com/galkatz373/svelte-formit"
 author: "galkatz373"
 homepage: "https://svelte-formit.now.sh/"

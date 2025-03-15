@@ -1,6 +1,6 @@
 ---
 name: "@jbfulgencio/svelte-simplebar"
-description: "A Svelte wrapper for SimpleBar"
+description: "Provide Svelte wrapper for SimpleBar scrollbar component."
 repo_url: "https://github.com/jbfulgencio/svelte-simplebar"
 author: "João Batista Fulgêncio"
 homepage: "https://github.com/jbfulgencio/svelte-simplebar#readme"

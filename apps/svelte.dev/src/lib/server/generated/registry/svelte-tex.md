@@ -1,10 +1,10 @@
 ---
 name: "svelte-tex"
-description: "Svelte Component to convert TeX to rendered SVG using MathJax or rendered MathML using Temml"
+description: "Convert TeX to rendered SVG using MathJax or MathML using Temml in Svelte."
 author: "Jirawat Boonkumnerd"
-downloads: 2
+downloads: 1
 dependents: 1
 updated: "2024-11-16T12:49:02.760Z"
 tags: 
-  - ui
+  - utility
 ---

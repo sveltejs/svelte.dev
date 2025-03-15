@@ -1,6 +1,6 @@
 ---
 name: "@robotpajamas/headlessui-svelte"
-description: "An unofficial port of the HeadlessUI component library to Svelte 5+."
+description: "Port HeadlessUI component library to Svelte 5+, staying faithful to React API."
 repo_url: "https://github.com/robotpajamas/headlessui-svelte"
 author: "SJ"
 homepage: "https://headlessui-svelte.com"

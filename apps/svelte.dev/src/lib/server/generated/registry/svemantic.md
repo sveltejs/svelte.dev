@@ -1,6 +1,6 @@
 ---
 name: "svemantic"
-description: "Now tuned to Fomantic-UI 2.9.2"
+description: "Implement Fomantic-UI components for Svelte applications."
 repo_url: "https://github.com/eddow/svemantic"
 author: "fmdm"
 homepage: "https://github.com/eddow/svemantic#readme"
@@ -10,5 +10,4 @@ github_stars: 1
 tags: 
   - component-library
   - ui
-  - integration
 ---

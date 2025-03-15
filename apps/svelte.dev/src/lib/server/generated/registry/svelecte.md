@@ -1,14 +1,13 @@
 ---
 name: "svelecte"
-description: "Flexible autocomplete/select component written in Svelte. Massively inspired by Selectize.js. Also usable as custom element (CE)"
+description: "Provide flexible autocomplete and select component for Svelte."
 repo_url: "https://github.com/mskocik/svelecte"
 author: "mskocik"
 homepage: "https://svelecte.vercel.app/"
-downloads: 4320
+downloads: 5527
 dependents: 10
 updated: "2025-03-07T14:56:00.569Z"
 github_stars: 507
 tags: 
-  - component-library
   - ui
 ---

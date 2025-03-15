@@ -1,6 +1,6 @@
 ---
 name: "@foxkdev/svelte-components"
-description: "Install dependencies with npm:"
+description: "Offer reusable Svelte components for various application needs."
 repo_url: "https://github.com/foxkdev/svelte-components"
 author: "Carlos Lopez"
 homepage: "https://github.com/foxkdev/svelte-components"

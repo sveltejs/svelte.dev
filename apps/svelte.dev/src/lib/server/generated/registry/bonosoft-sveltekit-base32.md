@@ -1,6 +1,6 @@
 ---
 name: "@bonosoft/sveltekit-base32"
-description: "Encode or Decode strings or arrays to and from base32"
+description: "Encode and decode strings and arrays using base32 in SvelteKit."
 repo_url: "https://github.com/bonosoft/sveltekit-base32"
 author: "Bonosoft"
 homepage: "https://github.com/bonosoft/sveltekit-base32#readme"

@@ -1,6 +1,6 @@
 ---
 name: "svelte-img"
-description: "Responsive image loading component for Svelte"
+description: "Create responsive image loading component for Svelte applications."
 repo_url: "https://github.com/metonym/svelte-img"
 author: "Eric Liu"
 homepage: "https://github.com/metonym/svelte-img"

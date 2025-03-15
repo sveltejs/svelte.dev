@@ -1,6 +1,6 @@
 ---
 name: "@curi/svelte"
-description: "Curi integration with Svelte"
+description: "Integrate Curi routing with Svelte applications."
 repo_url: "https://github.com/pshrmn/curi/tree/master/packages/svelte"
 author: "Paul Sherman"
 downloads: 4

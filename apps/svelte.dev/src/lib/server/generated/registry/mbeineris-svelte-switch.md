@@ -1,6 +1,6 @@
 ---
 name: "@mbeineris/svelte-switch"
-description: "Sveltev3 switch component"
+description: "Simple switch component for Svelte applications."
 repo_url: "https://github.com/mbeineris/svelte-switch"
 author: "Marius Beineris"
 homepage: "https://github.com/mbeineris/svelte-switch#readme"

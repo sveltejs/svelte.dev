@@ -1,10 +1,10 @@
 ---
 name: "svelte-pell"
-description: "An implementation of Pell as a Svelte Component."
+description: "Integrate Pell rich text editor into Svelte components."
 repo_url: "https://github.com/demonicious/svelte-pell"
 author: "Demonicious"
 homepage: "https://github.com/demonicious/svelte-pell"
-downloads: 1
+downloads: 4
 updated: "2020-10-06T00:24:51.243Z"
 github_stars: 9
 tags: 

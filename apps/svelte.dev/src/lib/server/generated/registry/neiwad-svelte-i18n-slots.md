@@ -1,6 +1,6 @@
 ---
 name: "@neiwad/svelte-i18n-slots"
-description: "> A simple Svelte component that transform i18n variables into Slots."
+description: "Transform i18n variables into slots within Svelte components."
 repo_url: "https://github.com/neiwad/svelte-i18n-slots"
 author: "neiwad"
 homepage: "https://github.com/neiwad/svelte-i18n-slots"

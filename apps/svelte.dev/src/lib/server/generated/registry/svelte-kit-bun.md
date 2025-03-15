@@ -1,6 +1,6 @@
 ---
 name: "svelte-kit-bun"
-description: "SvelteKit adapter for Bun runtime"
+description: "Create SvelteKit adapter for Bun runtime."
 repo_url: "https://github.com/mastermakrela/svelte-kit-bun"
 author: "mastermakrela"
 homepage: "https://github.com/mastermakrela/svelte-kit-bun#readme"

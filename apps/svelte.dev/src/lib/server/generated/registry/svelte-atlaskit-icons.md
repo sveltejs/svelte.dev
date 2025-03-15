@@ -1,6 +1,6 @@
 ---
 name: "svelte-atlaskit-icons"
-description: "Atlaskit SVG icons as Svelte components"
+description: "Render Atlaskit SVG icons as Svelte components."
 repo_url: "https://github.com/metonym/svelte-atlaskit-icons"
 author: "Eric Liu"
 homepage: "https://github.com/metonym/svelte-atlaskit-icons"

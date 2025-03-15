@@ -1,4 +1,3 @@
-// Credit for original: Astro team
 import { createOpenRouter } from '@openrouter/ai-sdk-provider';
 import { generateText } from 'ai';
 import dotenv from 'dotenv';
@@ -7,6 +6,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import glob from 'tiny-glob/sync.js';
 import registry from '../../src/lib/registry.json' with { type: 'json' };
+import type { Package } from '../../src/lib/server/content.js';
 import {
 	fetch_details_for_package,
 	fetch_downloads_for_package,
@@ -19,7 +19,7 @@ import {
 	superfetch,
 	type StructuredInterimPackage
 } from './npm.js';
-import type { Package } from '../../src/lib/server/content.js';
+import { program } from 'commander';
 
 dotenv.config({ path: '.env.local' });
 
@@ -140,7 +140,7 @@ interface ProcessBatchesOptions {
 async function process_batches_through_llm({
 	keywords = ['svelte'],
 	limit = Infinity,
-	batch_size = 25,
+	batch_size = 20,
 	max_retries = 2,
 	retry_count = 0,
 	failed_packages = null
@@ -201,19 +201,23 @@ async function process_batches_through_llm({
 					 - Any package with "-react" suffix
 				
 				3. For INCLUDED packages:
-					 - Assign relevant tags
-					 - Clean up description
+					 - Assign relevant tags based on functionality
+					 - ALWAYS provide a terse description:
+						 - Must be plain text (no markdown, HTML, or special chars)
+						 - Should be 30-80 characters, direct and to the point
+						 - Use simple present tense verbs
+						 - No need for complete sentences; can omit articles
 				
 				OUTPUT FORMAT:
 				Return ONLY a valid JSON object like this:
 				{
 					"package-name-1": {
 						"tags": ["tag1", "tag2"],
-						"description": "Description"
+						"description": "Parse Svelte markup without parsing script or style tags, useful for codemods and tooling."
 					},
 					"package-name-2": {
 						"tags": ["tag1", "tag3"],
-						"description": "Description"
+						"description": "Accessible UI components for Svelte applications."
 					}
 				}
 				
@@ -236,7 +240,7 @@ async function process_batches_through_llm({
 				{
 					"package-name": {
 						"tags": ["tag1", "tag2"],
-						"description": "Clean description"
+						"description": "Terse description"
 					}
 				}
 				
@@ -248,6 +252,21 @@ async function process_batches_through_llm({
 				3. Exclude packages without \`\`\`svelte code examples in README
 				4. ALWAYS exclude "embla-carousel-react" and similar packages
 				
+				DESCRIPTION REQUIREMENTS:
+				For ALL qualifying packages:
+				1. Create terse, direct descriptions (30-80 characters)
+				2. Start with a verb in present tense (Parse, Create, Generate, etc.)
+				3. Focus only on core functionality, omit fluff
+				4. Articles (a, an, the) can be omitted
+				5. Use plain text only - no markdown, HTML, or special characters
+				6. Prioritize brevity over completeness
+				
+				EXAMPLE FORMATS:
+				- "Parse Svelte markup without parsing script tags, useful for codemods."
+				- "Generate type definitions for Svelte components."
+				- "Build forms with validation in Svelte apps."
+				- "Convert Markdown to Svelte components."
+				
 				AVAILABLE TAGS:
 				${JSON.stringify(TAGS_PROMPT)}
 				
@@ -255,6 +274,7 @@ async function process_batches_through_llm({
 					maxRetries: 3,
 					temperature: 0.0 // Absolutely no deviation
 				});
+
 				console.timeEnd(`llm-${batch_id}`);
 
 				// Parse the LLM response
@@ -570,8 +590,12 @@ async function* create_map_batch_generator(
 	}
 }
 
-// const svelte_packages = await process_batches_through_llm();
+const svelte_packages = await process_batches_through_llm();
 
-update_cache_from_npm();
-// update_all_github_stars();
+// update_cache_from_npm();
+await update_all_github_stars();
 // delete_untagged();
+
+// program.name('packages').description('Package to curate the svelte.dev/packages list');
+
+// program.command('update').addArgument({ name: 'github-stars', required: false });

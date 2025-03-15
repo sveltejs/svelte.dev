@@ -1,10 +1,10 @@
 ---
 name: "svelte-5-french-toast"
-description: "Buttery smooth Svelte 5 toasts. Lightweight, customizable, and beautiful by default. Svelte 5 Only"
+description: "Create buttery smooth toast notifications in Svelte 5 apps."
 repo_url: "https://github.com/anatoliy-t7/svelte-5-french-toast"
 author: "Anatoliy"
 homepage: "https://github.com/anatoliy-t7/svelte-5-french-toast#readme"
-downloads: 354
+downloads: 398
 updated: "2025-01-16T03:07:23.749Z"
 github_stars: 11
 tags: 

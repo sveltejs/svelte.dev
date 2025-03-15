@@ -1,6 +1,6 @@
 ---
 name: "svea"
-description: "Component library"
+description: "Offer Svelte component library with accessibility focus."
 repo_url: "https://github.com/AronssonFredrik/svea"
 author: "Fredrik Aronsson"
 homepage: "https://github.com/AronssonFredrik/svea#readme"

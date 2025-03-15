@@ -1,6 +1,6 @@
 ---
 name: "@sveltevk/icons"
-description: "SVG icons, provided as a Svelte components."
+description: "Provide SVG icons as Svelte components."
 repo_url: "https://github.com/sveltevk/icons"
 author: "Daniil Suvorov"
 homepage: "https://sveltevk.github.io/icons/"

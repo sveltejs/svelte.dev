@@ -1,6 +1,6 @@
 ---
 name: "svelte-tauri-store"
-description: "A Svelte store that persists to tauri-plugin-store. Supports changes across multiple tabs."
+description: "Create Svelte stores that persist data using tauri-plugin-store."
 repo_url: "https://github.com/Summpot/svelte-tauri-store"
 author: "summpot"
 homepage: "https://github.com/Summpot/svelte-tauri-store.git"

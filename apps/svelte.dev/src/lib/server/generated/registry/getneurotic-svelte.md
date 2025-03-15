@@ -1,6 +1,6 @@
 ---
 name: "@getneurotic/svelte"
-description: "A bundle of Svelte libraries."
+description: "Offer Svelte directives and helpers for common tasks."
 repo_url: "https://github.com/getneurotic/svelte"
 author: "Geoffrey Stekelenburg"
 homepage: "https://github.com/getneurotic/svelte#readme"

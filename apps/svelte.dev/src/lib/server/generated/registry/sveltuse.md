@@ -1,6 +1,6 @@
 ---
 name: "sveltuse"
-description: "Collection of Essential Svelte Composition Utilities"
+description: "Offer essential Svelte composition utilities for various tasks."
 repo_url: "https://github.com/rkanik/sveltuse"
 author: "RK Anik"
 homepage: "https://sveltuse.pages.dev/"

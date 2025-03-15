@@ -1,6 +1,6 @@
 ---
 name: "svelte-style-action"
-description: "This is a simple Svelte action that makes it easier to manage style attributes without needing to manually concatenate strings together."
+description: "Manage Svelte style attributes without string concatenation."
 repo_url: "https://github.com/dimfeld/svelte-style-action"
 author: "Daniel Imfeld"
 homepage: "https://github.com/dimfeld/svelte-style-action#readme"

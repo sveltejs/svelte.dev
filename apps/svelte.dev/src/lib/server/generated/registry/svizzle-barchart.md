@@ -1,6 +1,6 @@
 ---
 name: "@svizzle/barchart"
-description: "A vertical barchart component for Svelte."
+description: "Create vertical bar chart components for Svelte applications."
 repo_url: "https://github.com/nestauk/svizzle"
 author: "nestauk"
 homepage: "https://github.com/nestauk/svizzle"

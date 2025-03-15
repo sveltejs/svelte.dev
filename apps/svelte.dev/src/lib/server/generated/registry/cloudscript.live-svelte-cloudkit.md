@@ -1,6 +1,6 @@
 ---
 name: "@cloudscript.live/svelte-cloudkit"
-description: "Free lightweight library for svelte/kit projects! (~75.3 kB)"
+description: "Offer lightweight Svelte components, utilities, and SCSS ecosystem."
 repo_url: "https://github.com/ImL0w/Svelte-CloudKit"
 author: "the-cloudscript"
 homepage: "https://github.com/ImL0w/Svelte-CloudKit#readme"

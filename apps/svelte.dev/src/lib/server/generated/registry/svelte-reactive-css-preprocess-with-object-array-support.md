@@ -1,6 +1,6 @@
 ---
 name: "svelte-reactive-css-preprocess-with-object-array-support"
-description: "Svelte preprocessor to automatically create and update css variables using svelte's reactivity"
+description: "Update CSS variables using Svelte's reactivity."
 repo_url: "https://github.com/SBHattarj/svelte-reactive-css-preprocess#main"
 author: "Subham Bhattacharjee"
 homepage: "https://github.com/SBHattarj/svelte-reactive-css-preprocess/tree/main#readme"

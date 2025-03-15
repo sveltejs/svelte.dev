@@ -1,8 +1,8 @@
 ---
 name: "@marigoldapp/svelte-calendar"
-description: "A small date picker built with Svelte 3. Demo available here: [demo page]."
+description: "Create date picker component for Svelte applications."
 author: "marigoldapp"
-downloads: 2
+downloads: 4
 updated: "2021-02-22T18:41:33.214Z"
 tags: 
   - ui

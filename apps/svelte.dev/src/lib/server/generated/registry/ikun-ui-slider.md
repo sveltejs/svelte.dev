@@ -1,6 +1,6 @@
 ---
 name: "@ikun-ui/slider"
-description: "UI component for Svelte"
+description: "Build UI sliders for Svelte applications."
 author: "baiwusanyu"
 downloads: 2
 dependents: 1

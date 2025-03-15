@@ -1,6 +1,6 @@
 ---
 name: "@jbfulgencio/svelte-nouislider"
-description: "## Installation ### Npm     npm install --save @woden/svelte-nouislider ### Yarn     yarn add @woden/svelte-nouislider"
+description: "Implement range slider component for Svelte applications."
 repo_url: "https://github.com/jbfulgencio/svelte-nouislider"
 author: "João Batista Fulgencio"
 homepage: "https://github.com/jbfulgencio/svelte-nouislider#readme"

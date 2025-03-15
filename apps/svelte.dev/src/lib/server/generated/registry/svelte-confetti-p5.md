@@ -1,6 +1,6 @@
 ---
 name: "svelte-confetti-p5"
-description: "An awesome svelte realistic fullpage confetti animation, that can be customized in creative ways like snow flakes, falling balls and more."
+description: "Create fullpage confetti animations with p5.js in Svelte."
 repo_url: "https://github.com/elron/svelte-confetti-p5"
 author: "Elron Bucai"
 homepage: "https://svelte-confetti-p5.netlify.app/"
@@ -9,5 +9,4 @@ updated: "2023-08-22T18:04:17.056Z"
 github_stars: 2
 tags: 
   - ui
-  - media
 ---

@@ -1,8 +1,8 @@
 ---
 name: "@htmlbricks/hb-input-array-objects"
-description: "Svelte-Bootstrap Text Input WebComponent"
+description: "Create Svelte-Bootstrap text input web component for array of objects."
 author: "Dario Caruso"
-downloads: 588
+downloads: 17
 dependents: 1
 updated: "2025-03-09T03:10:39.729Z"
 tags: 

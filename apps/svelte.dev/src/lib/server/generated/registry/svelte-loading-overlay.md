@@ -1,6 +1,6 @@
 ---
 name: "svelte-loading-overlay"
-description: "Simple svelte component to display custom loading screen."
+description: "Display custom loading screens in Svelte applications."
 repo_url: "https://github.com/imIfOu/svelte-loading-overlay"
 author: "floriandidier"
 homepage: "https://github.com/imIfOu/svelte-loading-overlay"

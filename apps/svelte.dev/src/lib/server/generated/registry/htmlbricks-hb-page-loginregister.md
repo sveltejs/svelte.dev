@@ -1,6 +1,6 @@
 ---
 name: "@htmlbricks/hb-page-loginregister"
-description: "Svelte Boostrap Login and Register WebComponent"
+description: "Create login and registration pages for Svelte applications."
 author: "Dario Caruso"
 downloads: 1
 dependents: 1

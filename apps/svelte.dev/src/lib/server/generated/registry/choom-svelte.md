@@ -1,6 +1,6 @@
 ---
 name: "choom-svelte"
-description: "UI building blocks for your next Svelte 3 prototype"
+description: "Provide UI building blocks for Svelte 3 prototypes."
 repo_url: "https://github.com/XOP/choom"
 author: "XOP"
 homepage: "https://github.com/XOP/choom#readme"

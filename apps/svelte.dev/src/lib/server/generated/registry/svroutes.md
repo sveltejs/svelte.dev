@@ -1,6 +1,6 @@
 ---
 name: "svroutes"
-description: "Powerful SPA router for Svelte."
+description: "Create powerful SPA router for Svelte applications."
 repo_url: "https://github.com/Battledash-2/svelte-router"
 author: "Battledash-2"
 homepage: "https://github.com/Battledash-2/svelte-router#readme"

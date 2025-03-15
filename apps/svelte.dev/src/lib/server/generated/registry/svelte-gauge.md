@@ -1,12 +1,12 @@
 ---
 name: "svelte-gauge"
-description: "Svelte Gauge Component"
+description: "Create customizable and animated gauge component for Svelte applications."
 repo_url: "https://github.com/vnau/svelte-gauge"
 author: "vnau"
 homepage: "https://github.com/vnau/svelte-gauge#readme"
-downloads: 10
+downloads: 11
 updated: "2024-12-23T01:04:14.082Z"
-github_stars: 4
+github_stars: 5
 tags: 
   - ui
 ---

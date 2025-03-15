@@ -1,6 +1,6 @@
 ---
 name: "@svonic/forms"
-description: "Testing"
+description: "Build forms with validation in Svelte apps."
 repo_url: "https://github.com/svonic/svonic"
 author: "Robert"
 homepage: "https://github.com/svonic/svonic#readme"

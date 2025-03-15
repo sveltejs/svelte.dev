@@ -1,12 +1,12 @@
 ---
 name: "@animotion/core"
-description: "Core components for Animotion"
+description: "Provide core components for Animotion animation library."
 repo_url: "https://github.com/animotionjs/animotion"
 author: "animotionjs"
 homepage: "https://animotion.pages.dev/"
-downloads: 111
+downloads: 55
 updated: "2025-02-22T15:03:29.513Z"
-github_stars: 1467
+github_stars: 1470
 tags: 
   - ui
 ---

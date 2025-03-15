@@ -1,6 +1,6 @@
 ---
 name: "svelte-inline-input"
-description: "A Svelte component for inline editable inputs."
+description: "Create inline editable input components for Svelte."
 repo_url: "https://github.com/ukchukx/svelte-inline-input"
 author: "Uk Chukundah"
 homepage: "https://github.com/ukchukx/svelte-inline-input#readme"

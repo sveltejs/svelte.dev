@@ -1,13 +1,13 @@
 ---
 name: "maska"
-description: "Simple zero-dependency input mask for Vanilla JS, Vue, Alpine.js and Svelte"
+description: "Provides simple zero-dependency input mask for Svelte."
 repo_url: "https://github.com/beholdr/maska"
 author: "Alexander Shabunevich"
 homepage: "https://beholdr.github.io/maska/"
-downloads: 147824
-dependents: 182
+downloads: 145224
+dependents: 184
 updated: "2025-02-01T16:07:50.414Z"
-github_stars: 1855
+github_stars: 1856
 tags: 
   - utility
 ---

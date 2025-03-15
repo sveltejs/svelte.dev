@@ -1,10 +1,10 @@
 ---
 name: "svelte-create-context"
-description: "A keyless and typesafe approach to the Svelte context API"
+description: "Create type-safe Svelte contexts without string keys."
 repo_url: "https://github.com/bechii/svelte-create-context"
 author: "Simon Bechmann"
 homepage: "https://github.com/bechii/svelte-create-context#readme"
-downloads: 16
+downloads: 17
 updated: "2025-03-13T21:53:55.840Z"
 tags: 
   - utility

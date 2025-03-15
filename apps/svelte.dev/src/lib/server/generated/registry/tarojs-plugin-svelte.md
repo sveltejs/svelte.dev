@@ -1,10 +1,9 @@
 ---
 name: "tarojs-plugin-svelte"
-description: "使用 Svelte 开发小程序"
+description: "Enable Svelte development within Taro framework for mini-programs."
 repo_url: "https://github.com/SyMind/tarojs-plugin-svelte"
 author: "SyMind"
 homepage: "https://github.com/SyMind/tarojs-plugin-svelte#readme"
-downloads: 31
 updated: "2023-06-25T22:11:51.333Z"
 github_stars: 63
 tags: 

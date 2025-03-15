@@ -1,6 +1,6 @@
 ---
 name: "svelte-repo-card"
-description: "A simple GitHub repo card, based on Tarptaeya/repo-card"
+description: "Display GitHub repository cards in Svelte applications."
 repo_url: "https://github.com/thislooksfun/svelte-repo-card"
 author: "thislooksfun"
 homepage: "https://github.com/thislooksfun/svelte-repo-card#readme"

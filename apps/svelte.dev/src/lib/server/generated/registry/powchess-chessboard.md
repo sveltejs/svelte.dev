@@ -1,6 +1,6 @@
 ---
 name: "@powchess/chessboard"
-description: "Chessboard UI Package for PowChess.com"
+description: "Display interactive chessboards within Svelte applications."
 repo_url: "https://github.com/powchess/chessboard"
 author: "PowChess GmbH"
 homepage: "https://powchess.com"

@@ -1,6 +1,6 @@
 ---
 name: "@windmill-labs/svelte-grid"
-description: "A responsive, draggable and resizable grid layout, for Svelte."
+description: "Create responsive, draggable, resizable grid layouts for Svelte."
 repo_url: "https://github.com/vaheqelyan/svelte-grid"
 author: "Vahe Araqelyan"
 homepage: "https://github.com/vaheqelyan/svelte-grid#readme"

@@ -1,6 +1,6 @@
 ---
 name: "svelte-cleanable-store"
-description: "Custom Svelte store with built-in cleanup support on `subscribe` (like React's `useEffect`)."
+description: "Create Svelte stores with built-in cleanup support."
 repo_url: "https://github.com/Skaldebane/svelte-cleanable-store"
 author: "Houssam Elbadissi"
 homepage: "https://github.com/Skaldebane/svelte-cleanable-store#readme"

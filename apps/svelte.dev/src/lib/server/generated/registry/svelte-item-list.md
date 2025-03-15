@@ -1,6 +1,6 @@
 ---
 name: "svelte-item-list"
-description: "Svelte item list with pagination"
+description: "Create item lists with pagination in Svelte applications."
 repo_url: "https://github.com/Zimtir/svelte-item-list"
 author: "Marat Zimnurov"
 homepage: "https://github.com/Zimtir/svelte-item-list"

@@ -1,6 +1,6 @@
 ---
 name: "@dukerupert/sveltekit-medusa-client"
-description: "A client library for communicating with a Medusa ecommerce backend from a SvelteKit storefront"
+description: "Client library for Medusa e-commerce backend in SvelteKit apps."
 repo_url: "https://github.com/dukerupert/sveltekit-medusa-client"
 author: "Logan Williams"
 homepage: "https://github.com/dukerupert/sveltekit-medusa-client#readme"

@@ -1,6 +1,6 @@
 ---
 name: "@make-me-a-cup-of-tea/tree-view"
-description: "Display JSON objects in a customizable tree-view"
+description: "Display JSON objects in customizable tree-view components for Svelte."
 repo_url: "https://github.com/TeemuKoivisto/svelte-tree-view"
 author: "Teemu Koivisto"
 homepage: "https://github.com/TeemuKoivisto/svelte-tree-view"

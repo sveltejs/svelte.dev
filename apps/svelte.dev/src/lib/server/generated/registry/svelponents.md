@@ -1,6 +1,6 @@
 ---
 name: "svelponents"
-description: "*Attempt to port ant design to svelte*"
+description: "Ports Ant Design components to Svelte."
 repo_url: "https://github.com/N00nDay/svelponents"
 author: "noonday"
 homepage: "https://github.com/N00nDay/svelponents#readme"

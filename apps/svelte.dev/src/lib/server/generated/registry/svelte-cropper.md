@@ -1,9 +1,9 @@
 ---
 name: "svelte-cropper"
-description: "CropperJS component for Svelte."
+description: "Implement CropperJS component for Svelte."
 repo_url: "src/lib/cropper"
 author: "dehwyy"
-downloads: 131
+downloads: 117
 updated: "2024-01-22T15:52:06.999Z"
 tags: 
   - ui

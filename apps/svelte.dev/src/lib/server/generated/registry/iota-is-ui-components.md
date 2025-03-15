@@ -1,6 +1,6 @@
 ---
 name: "@iota/is-ui-components"
-description: "Svelte UI components for IOTA Integration Services"
+description: "Offer Svelte UI components for IOTA Integration Services."
 repo_url: "https://github.com/iotaledger/is-ui-components"
 author: "Begoña Álvarez"
 homepage: "https://github.com/iotaledger/is-ui-components#readme"

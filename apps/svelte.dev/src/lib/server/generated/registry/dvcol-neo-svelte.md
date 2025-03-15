@@ -1,10 +1,10 @@
 ---
 name: "@dvcol/neo-svelte"
-description: "Neomorphic ui library for svelte 5"
+description: "Create neomorphic and glassmorphic UI components for Svelte 5."
 repo_url: "https://github.com/dvcol/neo-svelte"
 author: "dvcol"
 homepage: "https://github.com/dvcol/neo-svelte"
-downloads: 28
+downloads: 55
 updated: "2025-03-06T13:36:18.882Z"
 github_stars: 9
 tags: 

@@ -1,6 +1,6 @@
 ---
 name: "svelte-holopin"
-description: "A low effort wrapper of Holopin's board API."
+description: "Provide a wrapper for Holopin's board API in Svelte apps."
 repo_url: "https://github.com/zaneshaw/svelte-holopin"
 author: "zaneshaw"
 homepage: "https://triangle100.com"

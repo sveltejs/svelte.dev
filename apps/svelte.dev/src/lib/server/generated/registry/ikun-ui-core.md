@@ -1,6 +1,6 @@
 ---
 name: "@ikun-ui/core"
-description: "🐔 A Svelte.js based UnoCSS UI library that allows you to make websites"
+description: "Create UnoCSS UI library for Svelte, build websites with ease."
 repo_url: "https://github.com/ikun-svelte/ikun-ui"
 author: "baiwusanyu-c"
 homepage: "https://github.com/ikun-svelte/ikun-ui#readme"
@@ -10,5 +10,4 @@ updated: "2025-01-24T03:49:30.129Z"
 github_stars: 1432
 tags: 
   - component-library
-  - ui
 ---

@@ -1,6 +1,6 @@
 ---
 name: "@sastan/svelte-headlessui"
-description: "A complete, full-featured, unofficial Svelte port of Headless UI, an unstyled, fully accessible UI component library."
+description: "Provide Svelte port of Headless UI, unstyled, accessible UI components."
 repo_url: "https://github.com/rgossiaux/svelte-headlessui"
 author: "sastan"
 homepage: "https://svelte-headlessui-git-fork-noeloconnell-combob-d68663-rgossiaux.vercel.app"

@@ -1,6 +1,6 @@
 ---
 name: "@kamrade/svelte-dynamic-button"
-description: "A simple button template that supports a flexible set of themes, variants, sizes and shapes. You can find usage examples (MagicButton and SimpleButton components) in the repository."
+description: "Create button component with flexible themes, variants, sizes, and shapes."
 repo_url: "https://github.com/kamrade/svelte-dynamic-button"
 author: "kamrade"
 homepage: "https://github.com/kamrade/svelte-dynamic-button#readme"

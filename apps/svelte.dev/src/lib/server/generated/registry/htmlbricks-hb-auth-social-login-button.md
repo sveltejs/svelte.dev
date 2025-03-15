@@ -1,11 +1,11 @@
 ---
 name: "@htmlbricks/hb-auth-social-login-button"
-description: "Svelte Boostrap Login and Register WebComponent"
+description: "Social login button component for Svelte applications."
 author: "Dario Caruso"
-downloads: 388
+downloads: 2
 dependents: 1
 updated: "2025-03-09T03:10:26.718Z"
 tags: 
-  - ui
   - auth
+  - ui
 ---

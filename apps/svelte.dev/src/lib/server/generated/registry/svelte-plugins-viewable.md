@@ -1,10 +1,10 @@
 ---
 name: "@svelte-plugins/viewable"
-description: "A simple rule-based approach to tracking element viewability."
+description: "Tracks element viewability using a rule-based approach in Svelte."
 repo_url: "https://github.com/svelte-plugins/svelte-viewable"
 author: "Kieran Boyle"
 homepage: "https://github.com/svelte-plugins/svelte-viewable"
-downloads: 23
+downloads: 31
 updated: "2024-02-12T18:57:19.225Z"
 github_stars: 37
 tags: 

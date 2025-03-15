@@ -1,8 +1,8 @@
 ---
 name: "@htmlbricks/hb-page-invoice"
-description: "Svelte Invoice WebComponent"
+description: "Generate invoice pages using Svelte components."
 author: "Dario Caruso"
-downloads: 607
+downloads: 7
 dependents: 2
 updated: "2025-03-09T03:10:42.531Z"
 tags: 

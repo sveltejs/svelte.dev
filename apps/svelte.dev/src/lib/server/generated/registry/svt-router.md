@@ -1,6 +1,6 @@
 ---
 name: "svt-router"
-description: "a hash router for svelte but idea can be for any front-end project"
+description: "Provide a hash router for Svelte applications."
 repo_url: "https://github.com/cicada1993/svt-router"
 author: "ttjbs"
 homepage: "https://github.com/cicada1993/svt-router#readme"

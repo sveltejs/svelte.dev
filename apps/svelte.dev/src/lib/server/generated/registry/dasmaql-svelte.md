@@ -1,6 +1,6 @@
 ---
 name: "dasmaql-svelte"
-description: "A Svelte component providing an example of how DasmaQL can be utilized. DasmaQL is a lightweight query language used for data retrieval."
+description: "Provide Svelte component example using DasmaQL query language."
 author: "Mads Hansen Lund"
 downloads: 2
 updated: "2024-02-20T21:53:39.044Z"

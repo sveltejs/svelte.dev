@@ -1,6 +1,6 @@
 ---
 name: "@kainstar/svelte-i18next"
-description: "i18next's framework adapter for svelte, better internationalization UX"
+description: "Integrate i18next for internationalization in Svelte applications."
 repo_url: "https://github.com/kainstar/svelte-i18next"
 author: "Kainstar"
 homepage: "https://github.com/kainstar/svelte-i18next#readme"

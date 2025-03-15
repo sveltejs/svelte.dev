@@ -1,6 +1,6 @@
 ---
 name: "svelte-scenejs"
-description: "A React Component that create JavaScript & CSS timeline-based animation with Scene.js."
+description: "Create JavaScript & CSS timeline-based animations with Svelte and Scene.js."
 repo_url: "https://github.com/daybrush/scenejs/blob/master/packages/svelte-scenejs"
 author: "Daybrush"
 homepage: "https://github.com/daybrush/scenejs"
@@ -9,5 +9,4 @@ updated: "2023-06-05T16:59:05.475Z"
 github_stars: 2748
 tags: 
   - ui
-  - animation
 ---

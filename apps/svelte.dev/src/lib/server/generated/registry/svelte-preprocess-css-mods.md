@@ -1,6 +1,6 @@
 ---
 name: "svelte-preprocess-css-mods"
-description: "use css modules in svelte"
+description: "Use CSS Modules in Svelte components via preprocessor."
 repo_url: "https://github.com/ryoppippi/svelte-preprocess-css-mods"
 author: "ryoppippi"
 homepage: "https://github.com/ryoppippi/svelte-preprocess-css-mods#readme"

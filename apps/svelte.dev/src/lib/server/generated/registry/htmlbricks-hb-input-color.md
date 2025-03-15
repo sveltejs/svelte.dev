@@ -1,8 +1,8 @@
 ---
 name: "@htmlbricks/hb-input-color"
-description: "Svelte-Bootstrap Color Input WebComponent"
+description: "Create Svelte color input web component."
 author: "Dario Caruso"
-downloads: 939
+downloads: 22
 dependents: 3
 updated: "2025-03-09T03:10:29.640Z"
 tags: 

@@ -1,6 +1,6 @@
 ---
 name: "@tarnadas/svelte-simple-modal"
-description: "A small and simple modal for Svelte"
+description: "Create simple, content-agnostic modal dialogs for Svelte applications."
 repo_url: "https://github.com/flekschas/svelte-simple-modal"
 author: "Fritz Lekschas"
 homepage: "https://github.com/flekschas/svelte-simple-modal#readme"

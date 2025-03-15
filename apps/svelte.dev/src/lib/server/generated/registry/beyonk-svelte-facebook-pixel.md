@@ -1,8 +1,8 @@
 ---
 name: "@beyonk/svelte-facebook-pixel"
-description: "Svelte Facebook Pixel Component"
+description: "Integrate Facebook Pixel tracking into Svelte applications."
 author: "antony"
-downloads: 238
+downloads: 401
 updated: "2022-05-03T16:13:38.720Z"
 tags: 
   - integration

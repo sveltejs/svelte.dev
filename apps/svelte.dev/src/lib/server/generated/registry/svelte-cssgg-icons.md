@@ -1,6 +1,6 @@
 ---
 name: "svelte-cssgg-icons"
-description: "Svelte SVG icon components for CSS.gg"
+description: "Use CSS.gg SVG icons as Svelte components."
 repo_url: "https://github.com/shinokada/svelte-cssgg-icons"
 author: "Shinichi Okada"
 homepage: "https://svelte-cssgg-icons.codewithshin.com"

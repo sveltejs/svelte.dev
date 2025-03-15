@@ -1,6 +1,6 @@
 ---
 name: "@ikun-ui/progress"
-description: "ERROR: No README data found!"
+description: "Display progress indicators in Svelte applications."
 author: "baiwusanyu"
 downloads: 3
 dependents: 1

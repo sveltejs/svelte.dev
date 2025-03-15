@@ -1,13 +1,13 @@
 ---
 name: "mdsvex"
-description: "Markdown preprocessor for Svelte"
+description: "Markdown preprocessor for Svelte, enabling Svelte components in Markdown."
 repo_url: "https://github.com/pngwn/MDsveX"
 author: "pngwn"
 homepage: "https://github.com/pngwn/MDsveX#readme"
-downloads: 30579
+downloads: 32559
 dependents: 34
 updated: "2024-08-17T01:30:39.693Z"
-github_stars: 2599
+github_stars: 2600
 tags: 
   - content
   - preprocessor

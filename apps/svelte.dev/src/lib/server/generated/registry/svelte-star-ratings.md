@@ -1,6 +1,6 @@
 ---
 name: "svelte-star-ratings"
-description: "A Svelte library to select and display rating using stars."
+description: "Display star ratings in Svelte applications."
 repo_url: "https://github.com/impauloalves/svelte-star-ratings"
 author: "Paulo Alves"
 homepage: "https://github.com/impauloalves/svelte-star-ratings"

@@ -1,6 +1,6 @@
 ---
 name: "@loscrackitos/svelte-typed-js"
-description: "Typed.js Svelte component"
+description: "Create Typed.js Svelte component for typing text with various options."
 repo_url: "https://github.com/Los-Crackitos/svelte-typed-js"
 author: "Jérôme Pogeant"
 homepage: "https://github.com/Los-Crackitos/svelte-typed-js#readme"

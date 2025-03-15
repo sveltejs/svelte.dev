@@ -1,6 +1,6 @@
 ---
 name: "@canadies/searchselectsvelte"
-description: "A light weight, easy to use select Svelte component with lots of handy integrated features"
+description: "Create a searchable select component for Svelte applications."
 repo_url: "https://github.com/Hai567/SearchSelectSvelte"
 author: "Daniel Ho"
 homepage: "https://github.com/Hai567/SearchSelectSvelte#readme"

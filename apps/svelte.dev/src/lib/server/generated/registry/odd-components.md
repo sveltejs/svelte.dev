@@ -1,6 +1,6 @@
 ---
 name: "odd-components"
-description: "Svelte components you might occasionally want!"
+description: "Provides a collection of Svelte components."
 repo_url: "https://github.com/JulianNymark/odd-components"
 author: "just_a_guy"
 homepage: "https://github.com/JulianNymark/odd-components#readme"

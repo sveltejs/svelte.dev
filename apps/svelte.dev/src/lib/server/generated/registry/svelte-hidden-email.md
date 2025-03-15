@@ -1,6 +1,6 @@
 ---
 name: "svelte-hidden-email"
-description: "Obfuscate email addresses from bots in your svelte project"
+description: "Obfuscate email addresses from bots in Svelte projects."
 repo_url: "https://github.com/rallisf1/svelte-hidden-email"
 author: "rallisf1"
 homepage: "https://github.com/rallisf1/svelte-hidden-email#readme"

@@ -1,6 +1,6 @@
 ---
 name: "@ikun-ui/select"
-description: "ERROR: No README data found!"
+description: "Create select component for Svelte applications."
 author: "baiwusanyu"
 downloads: 3
 dependents: 3

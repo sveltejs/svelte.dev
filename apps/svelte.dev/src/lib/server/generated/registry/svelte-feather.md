@@ -1,6 +1,6 @@
 ---
 name: "svelte-feather"
-description: "Svelte component for Feather icons"
+description: "Integrate Feather icons into Svelte components."
 repo_url: "https://github.com/langbamit/svelte-feather"
 author: "langbamit"
 homepage: "https://github.com/langbamit/svelte-feather#readme"

@@ -1,6 +1,6 @@
 ---
 name: "svelte-tauri-filedrop"
-description: "Tauri file drop handling component for Svelte"
+description: "Handle file drops in Svelte applications built with Tauri."
 repo_url: "https://github.com/probablykasper/svelte-tauri-filedrop"
 author: "Kasper Henningsen"
 homepage: "https://github.com/probablykasper/svelte-tauri-filedrop#readme"

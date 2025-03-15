@@ -1,12 +1,12 @@
 ---
 name: "@uppy/svelte"
-description: "Uppy plugin that helps integrate Uppy into your Svelte project."
+description: "Integrate Uppy file uploader into Svelte projects."
 repo_url: "https://github.com/transloadit/uppy"
 author: "kvz"
 homepage: "https://uppy.io"
-downloads: 497
+downloads: 680
 updated: "2025-01-08T10:02:34.051Z"
-github_stars: 29596
+github_stars: 29602
 tags: 
   - integration
   - media

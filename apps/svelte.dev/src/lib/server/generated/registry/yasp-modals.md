@@ -1,6 +1,6 @@
 ---
 name: "yasp-modals"
-description: "Yet Another Svelte Package: Modals"
+description: "Create modal windows easily within Svelte applications."
 author: "dievardump"
 updated: "2021-06-25T07:56:57.895Z"
 tags: 

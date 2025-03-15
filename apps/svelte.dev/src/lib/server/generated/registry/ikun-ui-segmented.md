@@ -1,6 +1,6 @@
 ---
 name: "@ikun-ui/segmented"
-description: " "
+description: "Segmented component for Svelte."
 author: "baiwusanyu"
 downloads: 1
 dependents: 1

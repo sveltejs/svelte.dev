@@ -1,6 +1,6 @@
 ---
 name: "sveaflet-heat"
-description: "sveaflet-heat"
+description: "Create heatmaps using Leaflet in Svelte applications."
 repo_url: "https://github.com/GrayFrost/sveaflet-heat"
 author: "GrayFrost"
 homepage: "https://sveaflet-heat.vercel.app/"

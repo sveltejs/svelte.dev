@@ -1,6 +1,6 @@
 ---
 name: "svelte-scroll-infinite"
-description: "Infinite scroll component for Svelte 3"
+description: "Create infinite scroll component for Svelte 3."
 repo_url: "https://github.com/razrabotal/svelte-scroll-infinite"
 author: "Taras Gordienko"
 homepage: "https://github.com/razrabotal/svelte-scroll-infinite#readme"

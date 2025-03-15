@@ -1,6 +1,6 @@
 ---
 name: "svelte-idb-store"
-description: "A library that allows you to sync the value of your Svelte stores with IndexedDB"
+description: "Sync Svelte stores with IndexedDB, enabling persistent data storage."
 repo_url: "https://github.com/kroniapp/svelte-idb-store"
 author: "Kronia"
 homepage: "https://github.com/kroniapp/svelte-idb-store"

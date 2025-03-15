@@ -1,6 +1,6 @@
 ---
 name: "@svelte-dev/i18n"
-description: "Internationalization library for Svelte"
+description: "Provide internationalization features for Svelte applications."
 repo_url: "https://github.com/willin/svelte-turbo"
 author: "Willin Wang"
 homepage: "https://svelte.js.cool"

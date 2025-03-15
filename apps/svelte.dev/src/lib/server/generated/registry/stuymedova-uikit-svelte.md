@@ -1,6 +1,6 @@
 ---
 name: "@stuymedova/uikit-svelte"
-description: "[WIP] UIKit Component Library — Svelte implementation"
+description: "Create UIKit component library for Svelte applications."
 repo_url: "https://github.com/stuymedova/uikit-svelte"
 author: "stuymedova"
 homepage: "https://github.com/stuymedova/uikit-svelte#readme"

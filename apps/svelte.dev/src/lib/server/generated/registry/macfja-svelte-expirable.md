@@ -1,6 +1,6 @@
 ---
 name: "@macfja/svelte-expirable"
-description: "A Svelte store with items that expire"
+description: "Create Svelte store with items that expire after a set time."
 repo_url: "https://github.com/macfja/svelte-expirable"
 author: "MacFJA"
 homepage: "https://github.com/macfja/svelte-expirable#readme"

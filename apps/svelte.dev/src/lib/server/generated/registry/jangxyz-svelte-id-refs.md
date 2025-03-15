@@ -1,6 +1,6 @@
 ---
 name: "@jangxyz/svelte-id-refs"
-description: "Manage page-level id uniqueness in Svelte components"
+description: "Manage unique id attributes in Svelte components, improving reusability."
 repo_url: "https://github.com/jangxyz/svelte-id-refs"
 author: "Kim, Jang-hwan"
 homepage: "https://github.com/jangxyz/svelte-id-refs#readme"

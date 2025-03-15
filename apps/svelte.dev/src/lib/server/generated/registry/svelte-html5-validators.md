@@ -1,6 +1,6 @@
 ---
 name: "svelte-html5-validators"
-description: "Simple library that adds validator attributes --required, min, maxlength...-- to form elements using Svelte."
+description: "Add HTML5 validator attributes to Svelte form elements."
 repo_url: "https://github.com/omirobarcelo/svelte-html5-validators"
 author: "Oriol Miro-Barcelo"
 homepage: "https://github.com/omirobarcelo/svelte-html5-validators#readme"

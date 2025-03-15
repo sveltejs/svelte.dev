@@ -1,6 +1,6 @@
 ---
 name: "image-zoom-simple"
-description: "The Svelte Image Zoom Plugin is a lightweight and customizable plugin that provides zoom functionality for images in Svelte applications. It allows users to hover over an image and view a zoomed-in version in a separate box, enhancing the user experience "
+description: "Provide image zoom functionality for Svelte applications."
 repo_url: "https://github.com/akbaruddin/image-zoom-simple"
 author: "Akbar Uddin"
 homepage: "https://github.com/akbaruddin/image-zoom-simple"

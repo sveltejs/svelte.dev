@@ -1,6 +1,6 @@
 ---
 name: "@ikun-ui/link"
-description: "UI component for Svelte"
+description: "Create UI links for Svelte applications."
 author: "baiwusanyu"
 downloads: 3
 dependents: 1

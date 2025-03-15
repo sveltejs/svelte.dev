@@ -1,12 +1,12 @@
 ---
 name: "@tanstack/svelte-store"
-description: "Framework agnostic type-safe store w/ reactive framework adapters"
+description: "Create type-safe stores with reactive framework adapters for Svelte."
 repo_url: "https://github.com/TanStack/store"
 author: "Tanner Linsley"
 homepage: "https://tanstack.com/store"
-downloads: 69
+downloads: 79
 updated: "2024-12-26T22:22:32.347Z"
-github_stars: 451
+github_stars: 453
 tags: 
   - utility
 ---

@@ -1,10 +1,10 @@
 ---
 name: "svelte-awesome-slider"
-description: "A highly customizable slider component library"
+description: "Provide customizable slider component for Svelte applications."
 repo_url: "https://github.com/Ennoriel/svelte-awesome-slider"
 author: "Maxime Dupont"
 homepage: "https://svelte-awesome-slider.vercel.app"
-downloads: 5453
+downloads: 6545
 dependents: 1
 updated: "2024-08-13T12:29:28.669Z"
 tags: 

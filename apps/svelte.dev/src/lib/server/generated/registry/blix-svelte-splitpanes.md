@@ -1,6 +1,6 @@
 ---
 name: "blix-svelte-splitpanes"
-description: "A full featured resizable pane layout splitter, ported from vue-splitpanes"
+description: "Provides resizable pane layout splitter for Svelte applications."
 repo_url: "https://github.com/The-SpanishInquisition/svelte-splitpanes"
 author: "Olivier Refalo"
 homepage: "https://github.com/The-SpanishInquisition/svelte-splitpanes"

@@ -1,6 +1,6 @@
 ---
 name: "@halo-lab/svelte-form-getform-io"
-description: "A simple form library for Svelte that uses Getform"
+description: "Build forms with Getform integration for Svelte applications."
 repo_url: "https://github.com/Halo-Lab/svelte-form-getform-io"
 author: "prostory"
 homepage: "https://github.com/Halo-Lab/svelte-form-getform-io#readme"

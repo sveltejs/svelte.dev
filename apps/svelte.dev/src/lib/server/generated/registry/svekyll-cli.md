@@ -1,10 +1,9 @@
 ---
 name: "svekyll-cli"
-description: "Svekyll takes the simple conventions of Jekyll and marries them to the incredible power of Svelte."
+description: "Build static blogs using Svelte and Markdown."
 author: "chris@extrastatic.com"
-downloads: 38
+downloads: 42
 updated: "2025-02-27T20:55:19.722Z"
 tags: 
   - tooling
-  - content
 ---

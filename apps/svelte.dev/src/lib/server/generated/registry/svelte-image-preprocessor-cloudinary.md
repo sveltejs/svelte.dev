@@ -1,6 +1,6 @@
 ---
 name: "svelte-image-preprocessor-cloudinary"
-description: "Image preprocessor for Svelte to use cloudinary remote images"
+description: "Process images with Cloudinary in Svelte preprocessor."
 repo_url: "https://github.com/matiasfha/svelte-image-preprocessing-clodinary"
 author: "Matias Hernandez"
 homepage: "https://github.com/matiasfha/svelte-image-preprocessing-clodinary#readme"

@@ -1,6 +1,6 @@
 ---
 name: "@ikun-ui/button"
-description: "Button component for Svelte"
+description: "Create customizable button components for Svelte applications."
 author: "baiwusanyu"
 downloads: 4
 dependents: 7

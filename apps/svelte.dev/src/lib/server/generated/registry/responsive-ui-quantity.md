@@ -1,6 +1,6 @@
 ---
 name: "@responsive-ui/quantity"
-description: "A quantity component of responsive-ui."
+description: "Implement quantity input component for Svelte applications."
 repo_url: "https://github.com/wetix/responsive-ui"
 author: "Mohamad Harith"
 homepage: "https://github.com/wetix/responsive-ui/blob/main/components/quantity#README.md"

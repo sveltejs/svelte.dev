@@ -1,6 +1,6 @@
 ---
 name: "svelte-preprocess-uuid"
-description: "Svelte compile-time UUID generation preprocessor"
+description: "Generate UUIDs at compile time for Svelte components."
 repo_url: "https://github.com/duydang2311/svelte-preprocess-uuid"
 author: "duydang2311"
 homepage: "https://github.com/duydang2311/svelte-preprocess-uuid#readme"

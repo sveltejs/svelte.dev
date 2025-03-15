@@ -1,6 +1,6 @@
 ---
 name: "@livetl/svelte-webext-stores"
-description: "Svelte stores that synchronizes to WebExtension storage."
+description: "Synchronize Svelte stores with WebExtension storage."
 repo_url: "https://github.com/ChrRubin/svelte-webext-stores"
 author: "ChrRubin"
 homepage: "https://github.com/ChrRubin/svelte-webext-stores"

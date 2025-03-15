@@ -1,6 +1,6 @@
 ---
 name: "@ikun-ui/switch"
-description: "ERROR: No README data found!"
+description: "Build switch component for Svelte applications."
 author: "baiwusanyu"
 downloads: 3
 dependents: 1

@@ -1,6 +1,6 @@
 ---
 name: "svelte-key"
-description: "Emulates React's `key` feature: force some content (e.g. some component) to be recreated when the value of the key changes."
+description: "Emulate React's key feature to force Svelte content recreation."
 repo_url: "https://github.com/rixo/svelte-key"
 author: "rixo"
 homepage: "https://github.com/rixo/svelte-key"

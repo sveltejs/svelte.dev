@@ -1,10 +1,10 @@
 ---
 name: "@felte/validator-vest"
-description: "A package to use Vest validation with Felte"
+description: "Integrate Vest validation with Felte forms in Svelte."
 repo_url: "https://github.com/pablo-abc/felte"
 author: "Panagiotis Kapros"
 homepage: "https://github.com/pablo-abc/felte/tree/main/packages/validator-vest"
-downloads: 253
+downloads: 369
 updated: "2024-10-29T22:05:22.422Z"
 github_stars: 1042
 tags: 

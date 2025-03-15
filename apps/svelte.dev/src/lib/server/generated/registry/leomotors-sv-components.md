@@ -1,6 +1,6 @@
 ---
 name: "@leomotors/sv-components"
-description: "My personal UI/Components Library"
+description: "Develop personal UI/components library for Svelte applications."
 repo_url: "https://github.com/Leomotors/sv-components"
 author: "Leomotors"
 downloads: 1

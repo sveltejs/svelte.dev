@@ -1,6 +1,6 @@
 ---
 name: "projectc-components"
-description: "test components"
+description: "Create lightweight Svelte UI components for various applications."
 repo_url: "https://github.com/yustarandomname/projectC-components"
 author: "Abel de Bruijn"
 homepage: "https://github.com/yustarandomname/projectC-components#readme"

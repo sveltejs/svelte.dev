@@ -1,6 +1,6 @@
 ---
 name: "@samplekit/preprocess-katex"
-description: "Svelte preprocessor for TeX using KaTeX."
+description: "Preprocess Svelte code for TeX using KaTeX."
 repo_url: "https://github.com/timothycohen/samplekit#main"
 author: "Tim Cohen"
 homepage: "https://preprocessors.samplekit.dev"

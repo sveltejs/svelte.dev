@@ -1,6 +1,6 @@
 ---
 name: "@ikun-ui/message"
-description: "ERROR: No README data found!"
+description: "Create message components for Svelte applications."
 author: "baiwusanyu"
 downloads: 2
 dependents: 1

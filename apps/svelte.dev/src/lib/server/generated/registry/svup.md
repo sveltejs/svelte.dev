@@ -1,6 +1,6 @@
 ---
 name: "svup"
-description: "- Elegant - Using Svelte actions - Full yup support"
+description: "Validate Svelte forms using Yup schema and Svelte actions."
 repo_url: "https://github.com/FalkaiPeter/svup"
 author: "Falkai Peter"
 homepage: "https://github.com/FalkaiPeter/svup#readme"

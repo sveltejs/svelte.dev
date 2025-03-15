@@ -1,12 +1,12 @@
 ---
 name: "sv-router"
-description: "Modern Svelte Routing"
+description: "Create modern Svelte routing with typesafe navigation."
 repo_url: "https://github.com/colinlienard/sv-router"
 author: "colinlienard"
 homepage: "https://github.com/colinlienard/sv-router"
-downloads: 89
+downloads: 70
 updated: "2025-03-09T14:52:54.621Z"
-github_stars: 1
+github_stars: 6
 tags: 
   - router
 ---

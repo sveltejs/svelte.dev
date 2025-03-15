@@ -1,6 +1,6 @@
 ---
 name: "@teddy-error/svelte-french-toast"
-description: "Buttery smooth Svelte toasts. Lightweight, customizable, and beautiful by default."
+description: "Creates buttery smooth toast notifications for Svelte applications."
 repo_url: "https://github.com/team-poseidon/svelte-french-toast"
 author: "Kabir Goel"
 homepage: "https://github.com/team-poseidon/svelte-french-toast#readme"

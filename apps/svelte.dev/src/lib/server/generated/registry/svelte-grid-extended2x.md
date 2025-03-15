@@ -1,6 +1,6 @@
 ---
 name: "svelte-grid-extended2x"
-description: "A draggable and resizable grid layout, with windowed system, for Svelte"
+description: "Create draggable, resizable grid layout component for Svelte."
 repo_url: "https://github.com/vieurou/svelte-grid-extended2x"
 author: "vieurou"
 homepage: "https://github.com/vieurou/svelte-grid-extended2x#readme"

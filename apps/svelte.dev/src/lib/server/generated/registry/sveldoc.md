@@ -1,6 +1,6 @@
 ---
 name: "sveldoc"
-description: "Readme-driven Development for building Svelte components"
+description: "Generate documentation for Svelte components from README files."
 repo_url: "https://github.com/metonym/sveldoc"
 author: "Eric Liu"
 homepage: "https://github.com/metonym/sveldoc"

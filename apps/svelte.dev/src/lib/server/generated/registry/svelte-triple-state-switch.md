@@ -1,6 +1,6 @@
 ---
 name: "svelte-triple-state-switch"
-description: "Everything you need to build a Svelte library, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte)."
+description: "Implement triple-state switch component for Svelte applications."
 repo_url: "https://github.com/Carlos-err406/svelte-triple-state-switch"
 author: "Carlos Daniel Vilaseca"
 homepage: "https://github.com/Carlos-err406/svelte-triple-state-switch#readme"

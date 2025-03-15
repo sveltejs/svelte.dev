@@ -1,6 +1,6 @@
 ---
 name: "@abbychau/svelma"
-description: "Bulma components for Svelte"
+description: "Bulma-based UI components for Svelte, lightweight and modular."
 repo_url: "https://github.com/abbychau/svelma"
 author: "Abby Chau, Brian Hann"
 homepage: "https://github.com/c0bra/svelma#readme"

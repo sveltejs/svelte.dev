@@ -1,6 +1,6 @@
 ---
 name: "@mavthedev/svodals"
-description: "Cybernatically enhanced svelte modals"
+description: "Create cybernetically enhanced Svelte modals."
 repo_url: "https://github.com/mavthedev/svodals"
 author: "mavthedev"
 homepage: "https://github.com/mavthedev/svodals#readme"

@@ -1,6 +1,6 @@
 ---
 name: "@michmich112/svelte-chartjs"
-description: "Svelte wrapper for chart.js"
+description: "Chart.js wrapper for Svelte, create various charts easily."
 repo_url: "https://github.com/michmich112/svelte-chartjs"
 author: "Saurav Kanchan"
 homepage: "https://github.com/michmich112/svelte-chartjs#readme"

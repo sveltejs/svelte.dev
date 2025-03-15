@@ -1,6 +1,6 @@
 ---
 name: "svelte-simple-form"
-description: "A simple yet powerful, lightweight form handling library for Svelte 5, designed with flexibility in mind giving you full control without being opinionated. It integrates seamlessly with Zod for validation. With built-in TypeScript autocompletion, error pr"
+description: "Offers a simple form handling library for Svelte 5 with Zod validation."
 repo_url: "https://github.com/harryhdt/svelte-simple-form"
 author: "harryhdt"
 homepage: "https://svelte-simple-form.harryhdt.dev"

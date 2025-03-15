@@ -1,10 +1,10 @@
 ---
 name: "@undp-data/date-picker-svelte"
-description: "Date and time picker for Svelte"
+description: "Create date and time picker component for Svelte applications."
 repo_url: "https://github.com/probablykasper/date-picker-svelte"
 author: "Kasper Henningsen"
 homepage: "https://date-picker-svelte.kasper.space"
-downloads: 64
+downloads: 99
 dependents: 1
 updated: "2024-10-28T08:35:23.191Z"
 github_stars: 328

@@ -1,6 +1,6 @@
 ---
 name: "s-comp-core"
-description: "Some Svelte components are here:"
+description: "Provide various Svelte components including UI elements and layouts."
 repo_url: "https://github.com/ghjang/s-comp-core"
 author: "ghjang"
 homepage: "https://github.com/ghjang/s-comp-core#readme"

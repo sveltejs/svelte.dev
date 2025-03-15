@@ -1,67 +1,67 @@
 {
 	"tags": {
 		"component-library": {
-			"prompt": "ANY collection of Svelte components (2 or more). UI kits, design systems, widget collections, form components.",
+			"prompt": "MUST contain 2+ reusable Svelte components designed as a cohesive set with shared design principles. Examples: complete UI kits, design systems, form libraries, widget collections. Key indicator: components are intentionally built to work together, share styling patterns, and serve a unified purpose. NOT a single component or unrelated components bundled together.",
 			"title": "Component Collections & UI Kits"
 		},
 		"ui": {
-			"prompt": "ANY UI-related code for Svelte. Single components, styling utilities, animations, transitions, visual elements, modals, tooltips.",
+			"prompt": "Individual visual Svelte components or styling tools focused on appearance. Examples: standalone UI elements (buttons, modals, dropdowns), animation libraries, transition effects, tooltips. Key indicator: primary purpose is enhancing visual presentation. NOT utility libraries, state management tools, or multi-component systems that would qualify as component libraries.",
 			"title": "UI Components & Elements"
 		},
 		"utility": {
-			"prompt": "ANY helper functionality for Svelte. Stores, actions, directives, hooks, form handling, data fetching, validation, i18n.",
+			"prompt": "Non-visual logic and helper functions for Svelte. Examples: custom stores, actions, directives, form validation, state management tools. Key indicator: focuses on behavior and functionality rather than appearance. NOT visual components, routers, or content rendering tools. Solves specific developer implementation challenges with minimal UI output.",
 			"title": "Svelte Utility Helpers"
 		},
 		"router": {
-			"prompt": "ANY routing or navigation related code. Page transitions, route management, URL handling, history management.",
+			"prompt": "Manages navigation and URL handling in Svelte apps. Examples: client-side routers, path matching utilities, navigation guards, route parameter parsers. Key indicator: primary purpose is handling application navigation flow and URL state. NOT page transition animations (ui tag) or general application state management (utility tag).",
 			"title": "Routing & Navigation"
 		},
 		"content": {
-			"prompt": "ANY content or data handling. Markdown, MDX, CMS integration, blogs, static site generation, content editing.",
+			"prompt": "Tools for creating, processing, and rendering structured content in Svelte. Examples: Markdown/MDX processors, CMS connectors, blog frameworks, documentation generators. Key indicator: focused on content authoring, organization, or display. NOT general data fetching (server tag) or UI components (ui tag) unless specifically content-oriented.",
 			"title": "Content Management"
 		},
 		"media": {
-			"prompt": "ANY media-related features. Images, videos, audio, file uploads, media players, carousels, galleries.",
+			"prompt": "Tools specifically for handling images, video, audio or file assets in Svelte. Examples: media players, image galleries, file uploaders, lazy-loading media components. Key indicator: primarily works with media files or streams. NOT general UI components or data fetching utilities unless media-specific.",
 			"title": "Media Handling"
 		},
 		"server": {
-			"prompt": "ANY server-related functionality. SSR, API integration, data fetching, backend communication, cookies, sessions.",
+			"prompt": "Tools for server-side operations and client-server communication in Svelte. Examples: SSR utilities, API clients, data fetching libraries, server action wrappers. Key indicator: facilitates interaction between frontend and backend. NOT client-side state management (utility tag) or deployment tools (adapter tag).",
 			"title": "Server Integration"
 		},
 		"adapter": {
-			"prompt": "ANY SvelteKit deployment solutions. Hosting integrations, platform adapters, deployment utilities.",
+			"prompt": "SvelteKit-specific deployment adapters or hosting integration tools. Examples: platform adapters (Vercel, Netlify, etc.), serverless deployment helpers, hosting configuration utilities. Key indicator: primary purpose is facilitating deployment to specific environments. NOT general server utilities or build tools.",
 			"title": "Deployment Adapters"
 		},
 		"tooling": {
-			"prompt": "ANY development tools. Build plugins, code generation, testing, debugging, development workflows, CLI tools.",
+			"prompt": "Development tools for Svelte that operate outside runtime code. Examples: build plugins, code generators, debugging utilities, CLI tools, linters. Key indicator: used during development process but not part of runtime application code. NOT runtime libraries, components, or server integrations.",
 			"title": "Development Tools"
 		},
 		"preprocessor": {
-			"prompt": "ANY compile-time functionality. Language integration (SCSS/TS), template processing, code transformation.",
+			"prompt": "Compile-time extensions or transformations for Svelte. Examples: language integrations (TypeScript, SCSS), template preprocessors, code transformation tools. Key indicator: modifies or enhances the Svelte compilation process. NOT runtime utilities, components, or post-build optimizations.",
 			"title": "Compile-time Solutions"
 		},
 		"performance": {
-			"prompt": "ANY performance optimization. Bundle optimization, runtime improvements, rendering optimization, lazy loading.",
+			"prompt": "Tools specifically focused on optimizing Svelte application performance. Examples: bundle optimizers, rendering enhancers, code-splitting utilities, memory management tools. Key indicator: primary purpose is improving speed or resource efficiency. NOT general utilities or UI components unless specifically focused on performance optimization.",
 			"title": "Performance Optimizers"
 		},
 		"seo": {
-			"prompt": "ANY SEO-related features. Meta tags, structured data, sitemaps, SEO analysis, head management.",
+			"prompt": "Tools for improving search engine optimization in Svelte applications. Examples: meta tag managers, structured data generators, sitemap creators, link analyzers. Key indicator: primarily concerned with search engine visibility. NOT general head management or routing unless specifically SEO-focused.",
 			"title": "SEO Utilities"
 		},
 		"dom": {
-			"prompt": "ANY direct DOM interaction. Portal components, element queries, viewport detection, scroll handling, focus management.",
+			"prompt": "Low-level tools for direct DOM manipulation in Svelte. Examples: portal components, intersection observers, focus managers, scroll utilities. Key indicator: involves direct interaction with browser DOM outside Svelte's normal element handling. NOT high-level UI components or general utilities that don't require direct DOM access.",
 			"title": "DOM Manipulation"
 		},
 		"auth": {
-			"prompt": "ANY authentication or authorization. Login systems, OAuth, JWT, permission management, user sessions.",
+			"prompt": "User authentication and authorization solutions for Svelte. Examples: login systems, OAuth implementations, JWT handlers, permission managers. Key indicator: primarily concerned with user identity and access control. NOT general API clients or state management unless specifically auth-focused.",
 			"title": "Authentication Solutions"
 		},
 		"integration": {
-			"prompt": "ANY integration with external services or libraries. Database connectors, API clients, third-party service integration.",
+			"prompt": "Connectors between Svelte and external services or systems. Examples: database clients, third-party API wrappers, payment processor integrations. Key indicator: primary purpose is connecting Svelte apps with external platforms. NOT general UI components or utilities unless they specifically bridge to external services.",
 			"title": "External Integrations"
 		},
 		"testing": {
-			"prompt": "Testing utilities, frameworks, or helpers specifically for Svelte applications. Includes test runners, mocking tools, assertion libraries, UI testing, and component testing for Svelte.",
+			"prompt": "Specialized testing tools designed for Svelte applications. Examples: component testing libraries, Svelte-aware test runners, store mocking utilities. Key indicator: explicitly built for testing Svelte code with awareness of Svelte's features. NOT general JavaScript testing tools that aren't Svelte-specific.",
 			"title": "Testing Frameworks"
 		}
 	},

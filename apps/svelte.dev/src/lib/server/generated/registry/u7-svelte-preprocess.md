@@ -1,6 +1,6 @@
 ---
 name: "@u7/svelte-preprocess"
-description: "A Svelte preprocessor wrapper with baked-in support for commonly used preprocessors"
+description: "Preprocessor wrapper with support for common preprocessors in Svelte."
 repo_url: "https://github.com/sveltejs/svelte-preprocess"
 author: "Christian Kaisermann"
 homepage: "https://github.com/sveltejs/svelte-preprocess#readme"

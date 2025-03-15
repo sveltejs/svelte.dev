@@ -1,8 +1,8 @@
 ---
 name: "croswil_componenti"
-description: "Libreria di componenti Croswil per Svelte"
+description: "Provide Croswil's Svelte UI component library."
 author: "Croswil SRL"
-downloads: 895
+downloads: 855
 updated: "2025-03-09T07:43:16.550Z"
 tags: 
   - component-library

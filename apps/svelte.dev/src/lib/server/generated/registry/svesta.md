@@ -1,6 +1,6 @@
 ---
 name: "svesta"
-description: "`svesta` - is a tiny `sve`lte `sta`te management library for `svelte/sveltekit`."
+description: "Manage Svelte state with RESTful interface and real-time data exchange."
 repo_url: "https://github.com/steveesamson/svesta"
 author: "Steve S. Samson"
 homepage: "https://steveesamson.github.io/svesta"

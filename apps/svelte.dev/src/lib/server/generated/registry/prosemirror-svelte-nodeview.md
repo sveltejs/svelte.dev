@@ -1,13 +1,13 @@
 ---
 name: "prosemirror-svelte-nodeview"
-description: "Create a ProseMirror NodeView using Svelte."
+description: "Create ProseMirror NodeView using Svelte components."
 repo_url: "https://github.com/mattosborn/prosemirror-svelte-nodeview"
 author: "Matt Osborn"
 homepage: "https://github.com/mattosborn/prosemirror-svelte-nodeview#readme"
-downloads: 6
+downloads: 7
 dependents: 1
 updated: "2022-11-15T02:09:55.931Z"
 github_stars: 2
 tags: 
-  - ui
+  - utility
 ---

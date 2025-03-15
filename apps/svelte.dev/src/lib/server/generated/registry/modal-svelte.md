@@ -1,10 +1,10 @@
 ---
 name: "modal-svelte"
-description: "Modal component for Svelte"
+description: "Create modal dialogs in Svelte, with focus management and form support."
 repo_url: "https://github.com/probablykasper/modal-svelte"
 author: "Kasper Henningsen"
 homepage: "https://modal-svelte.kasper.space"
-downloads: 18
+downloads: 20
 updated: "2024-10-23T05:46:15.599Z"
 github_stars: 9
 tags: 

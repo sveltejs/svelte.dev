@@ -1,6 +1,6 @@
 ---
 name: "svault"
-description: "Authentication library for SvelteKit"
+description: "Authentication library for SvelteKit applications."
 repo_url: "https://github.com/oslabs-beta/Svault"
 author: "Team Svault"
 homepage: "https://svault.dev"
@@ -9,5 +9,4 @@ updated: "2023-07-23T00:08:53.291Z"
 github_stars: 65
 tags: 
   - auth
-  - server
 ---

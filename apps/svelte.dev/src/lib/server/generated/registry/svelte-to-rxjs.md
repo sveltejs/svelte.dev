@@ -1,6 +1,6 @@
 ---
 name: "svelte-to-rxjs"
-description: "Simple function to transform your Svelte Store into Observable"
+description: "Convert Svelte stores to RxJS Observables."
 repo_url: "https://github.com/Tommertom/svelte-to-observable"
 author: "tommertom"
 homepage: "https://github.com/Tommertom/svelte-to-observable"

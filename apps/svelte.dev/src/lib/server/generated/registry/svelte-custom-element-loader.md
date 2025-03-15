@@ -1,6 +1,6 @@
 ---
 name: "svelte-custom-element-loader"
-description: "auto register custom element by svelte file"
+description: "Automatically register Svelte components as custom elements."
 repo_url: "https://github.com/performonkey/svelte-custom-element-loader"
 author: "p10y"
 homepage: "https://github.com/performonkey/svelte-custom-element-loader"

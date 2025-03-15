@@ -1,13 +1,13 @@
 ---
 name: "@svelte-put/toc"
-description: "Action & utilities for building table of contents"
+description: "Creates table of contents from headings in Svelte components."
 repo_url: "https://github.com/vnphanquang/svelte-put"
 author: "Quang Phan"
 homepage: "https://github.com/vnphanquang/svelte-put/tree/main/packages/toc"
-downloads: 126
-updated: "2025-01-30T17:46:47.162Z"
-github_stars: 898
+downloads: 122
+updated: "2025-03-15T08:01:17.887Z"
+github_stars: 899
 tags: 
+  - content
   - utility
-  - dom
 ---

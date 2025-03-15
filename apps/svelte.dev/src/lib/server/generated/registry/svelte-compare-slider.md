@@ -1,6 +1,6 @@
 ---
 name: "svelte-compare-slider"
-description: "Compare two components side-by-side or top-to-toe."
+description: "Compares two components side-by-side or top-to-toe in Svelte."
 author: "Abiee"
 homepage: "https://github.com/richhost/svelte-compare-slider"
 downloads: 3

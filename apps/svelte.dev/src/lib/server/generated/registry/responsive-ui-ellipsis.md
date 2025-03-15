@@ -1,6 +1,6 @@
 ---
 name: "@responsive-ui/ellipsis"
-description: "A ellipsis component of responsive-ui."
+description: "Create ellipsis component for responsive UI in Svelte applications."
 repo_url: "https://github.com/wetix/responsive-ui"
 author: "Si3nLoong"
 homepage: "https://github.com/wetix/responsive-ui/blob/main/components/ellipsis#README.md"

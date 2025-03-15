@@ -1,10 +1,10 @@
 ---
 name: "@zamiru/timescape"
-description: "A flexible, headless date and time input library for JavaScript. Provides tools for building fully customizable date and time input fields, with support for libraries like React, Preact, Vue, Svelte and Solid."
+description: "Create headless date and time input components for Svelte apps."
 repo_url: "https://github.com/dan-lee/timescape"
 author: "catalyst-mirza"
 homepage: "https://github.com/dan-lee/timescape#readme"
-downloads: 188
+downloads: 433
 dependents: 1
 updated: "2024-09-13T10:40:01.791Z"
 github_stars: 178

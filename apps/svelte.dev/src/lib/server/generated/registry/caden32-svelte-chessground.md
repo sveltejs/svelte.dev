@@ -1,6 +1,6 @@
 ---
 name: "caden32-svelte-chessground"
-description: "Svelte chessboard component. A Svelte wrapper for the full-featured Chessground chess UI."
+description: "Create chessboard component using Chessground library."
 author: "caden32"
 homepage: "https://github.com/gtim/svelte-chessground#readme"
 downloads: 1

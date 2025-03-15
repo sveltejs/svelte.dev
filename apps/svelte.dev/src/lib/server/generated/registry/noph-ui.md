@@ -1,11 +1,11 @@
 ---
 name: "noph-ui"
-description: "Noph UI is a modern, powerful UI library for Svelte 5, fully aligned with the Material 3 guidelines. Build stunning, consistent user interfaces with the efficiency and flexibility of Svelte and Google’s Material Design framework."
+description: "Build modern UI with Svelte 5, aligned with Material 3 guidelines."
 repo_url: "https://github.com/cnolte/noph-ui"
 author: "cnolte"
 homepage: "https://noph.dev"
-downloads: 179
-updated: "2025-03-13T18:56:36.368Z"
+downloads: 212
+updated: "2025-03-14T12:43:43.199Z"
 github_stars: 4
 tags: 
   - component-library

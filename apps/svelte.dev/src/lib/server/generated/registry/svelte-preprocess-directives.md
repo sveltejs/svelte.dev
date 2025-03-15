@@ -1,6 +1,6 @@
 ---
 name: "svelte-preprocess-directives"
-description: "Svelte preprocessor that allows class and style directives to be used on Svelte components."
+description: "Enable class and style directives on Svelte components via preprocessor."
 repo_url: "https://github.com/metonym/svelte-preprocess-directives"
 author: "Eric Liu"
 homepage: "https://github.com/metonym/svelte-preprocess-directives"

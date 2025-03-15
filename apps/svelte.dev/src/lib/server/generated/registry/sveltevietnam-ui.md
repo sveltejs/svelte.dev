@@ -1,6 +1,6 @@
 ---
 name: "@sveltevietnam/ui"
-description: "UI kit for Svelte Vietnam"
+description: "UI kit for Svelte Vietnam, built with Tailwind presets."
 repo_url: "https://github.com/sveltevietnam/sveltevietnam.dev"
 author: "Svelte Vietnam"
 homepage: "https://www.sveltevietnam.dev"

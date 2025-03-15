@@ -1,6 +1,6 @@
 ---
 name: "svelte-github-login"
-description: "Github Login Component to Svelte"
+description: "Integrate GitHub login functionality into Svelte applications."
 repo_url: "https://github.com/andrelmlins/svelte-github-login"
 author: "André Lins"
 homepage: "https://svelte-github-login.netlify.com/"

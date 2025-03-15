@@ -1,10 +1,10 @@
 ---
 name: "@lostisworld/svelte-interactive-cursor"
-description: "A Svelte component for creating interactive custom cursors. Enhance user experience with customizable cursor effects and animations."
+description: "Create interactive custom cursors with Svelte component."
 repo_url: "https://github.com/LoStis-World/svelte-interactive-cursor"
 author: "LoSti's World"
 homepage: "https://github.com/LoStis-World/svelte-interactive-cursor#readme"
-downloads: 52
+downloads: 36
 updated: "2025-01-11T14:52:12.488Z"
 github_stars: 11
 tags: 

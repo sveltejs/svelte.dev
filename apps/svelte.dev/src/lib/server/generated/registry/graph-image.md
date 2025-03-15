@@ -1,6 +1,6 @@
 ---
 name: "graph-image"
-description: "Advanced Lazy-Loading and Compression with Svelte/SvelteKit and Hygraph"
+description: "Provide advanced lazy-loading and compression for images in Svelte."
 repo_url: "https://github.com/ObieMunoz/graph-image"
 author: "Obie Munoz obiemunozjr@gmail.com"
 homepage: "https://github.com/ObieMunoz/graph-image#readme"

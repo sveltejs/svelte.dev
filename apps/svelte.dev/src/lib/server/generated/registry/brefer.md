@@ -1,6 +1,6 @@
 ---
 name: "brefer"
-description: "Svelte 5 preprocessor to shorten runes syntax."
+description: "Preprocessor to shorten Svelte 5 runes syntax."
 repo_url: "https://github.com/KilDesu/brefer"
 author: "KilDesu"
 homepage: "https://github.com/KilDesu/brefer#readme"

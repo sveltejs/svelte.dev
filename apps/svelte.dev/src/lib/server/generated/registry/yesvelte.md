@@ -1,0 +1,14 @@
+---
+name: "yesvelte"
+description: "Create UI components for Svelte, based on Bootstrap and Tabler."
+repo_url: "https://github.com/yesvelte/yesvelte"
+author: "Amir Pournasserian"
+homepage: "https://www.yesvelte.com/"
+downloads: 80
+dependents: 2
+updated: "2023-02-22T12:25:40.057Z"
+github_stars: 222
+tags: 
+  - component-library
+  - ui
+---

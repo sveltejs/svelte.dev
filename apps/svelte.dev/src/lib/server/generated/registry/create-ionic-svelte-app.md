@@ -1,6 +1,6 @@
 ---
 name: "create-ionic-svelte-app"
-description: "Use this CLI app to setup a new Ionic application in a new SvelteKit project."
+description: "CLI tool to create Ionic apps with SvelteKit."
 repo_url: "https://github.com/Tommertom/svelte-ionic-npm"
 author: "Tommertom"
 homepage: "https://ionic-svelte.firebaseapp.com"

@@ -1,10 +1,10 @@
 ---
 name: "svelte-redux-connect"
-description: "Redux binding to Svelte based on react-redux"
+description: "Connect Svelte components to Redux store."
 repo_url: "https://github.com/kolodziejczak-sz/svelte-redux-connect"
 author: "kolodziejczak-sz"
 homepage: "https://github.com/kolodziejczak-sz/svelte-redux-connect#readme"
-downloads: 7
+downloads: 28
 updated: "2021-07-07T14:28:31.192Z"
 github_stars: 17
 tags: 

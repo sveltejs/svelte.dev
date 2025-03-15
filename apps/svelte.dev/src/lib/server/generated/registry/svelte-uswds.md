@@ -1,6 +1,6 @@
 ---
 name: "svelte-uswds"
-description: "Svelte component library that implements the U.S. Web Design System"
+description: "Component library implementing U.S. Web Design System for Svelte."
 repo_url: "https://github.com/metonym/svelte-uswds"
 author: "Eric Liu"
 homepage: "https://github.com/metonym/svelte-uswds"

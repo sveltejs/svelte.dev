@@ -1,6 +1,6 @@
 ---
 name: "context-menu-svelte"
-description: "A svelte component designed for effortless creation of context menus."
+description: "Create context menus easily in Svelte applications."
 repo_url: "https://github.com/sayori1/svelte-context-menu"
 author: "almetoff"
 homepage: "https://github.com/sayori1/svelte-context-menu"

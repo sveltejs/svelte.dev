@@ -1,6 +1,6 @@
 ---
 name: "svelte-price-estimate"
-description: "An easy way to show and manage your price estimation for your Svelte project"
+description: "Show and manage price estimations for Svelte projects."
 repo_url: "https://github.com/bonillap/price-estimate"
 author: "Brayan Bonilla Paruma"
 homepage: "https://github.com/bonillap/price-estimate#readme"

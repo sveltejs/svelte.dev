@@ -1,6 +1,6 @@
 ---
 name: "svelte-placeholder"
-description: "Image component for SvelteJS that you can use placeholders with. You can use any image as a placeholder, if not set, it'll use a skeleton animation."
+description: "Provide Svelte image component with placeholder support."
 repo_url: "https://github.com/treboryx/svelte-placeholder"
 author: "treboryx"
 homepage: "https://github.com/treboryx/svelte-placeholder#readme"

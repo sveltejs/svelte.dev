@@ -1,6 +1,6 @@
 ---
 name: "svelte-image"
-description: "Image processing with sharp for Svelte"
+description: "Optimize images with sharp for Svelte, generate responsive images."
 repo_url: "https://github.com/matyunya/svelte-image"
 author: "Maxim Matyunin"
 homepage: "https://github.com/matyunya/svelte-image#readme"

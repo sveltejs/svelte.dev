@@ -1,10 +1,10 @@
 ---
 name: "@gcas/tinro"
-description: "tinro is a tiny declarative router for Svelte"
+description: "Provide tiny, declarative router for Svelte web applications."
 repo_url: "https://github.com/gcasro/tinro"
 author: "Alexey Schebelev"
 homepage: "https://github.com/gcasro/tinro#readme"
-downloads: 3
+downloads: 1
 updated: "2024-12-31T10:48:56.421Z"
 tags: 
   - router

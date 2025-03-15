@@ -1,6 +1,6 @@
 ---
 name: "@riadvargas/svelte-algolia-instantsearch"
-description: "Svelte wrapper for Algolia InstantSearch"
+description: "Svelte wrapper for Algolia InstantSearch."
 repo_url: "https://github.com/aymeric-giraudet/svelte-algolia-instantsearch"
 author: "riadvargas"
 homepage: "https://github.com/aymeric-giraudet/svelte-algolia-instantsearch#readme"

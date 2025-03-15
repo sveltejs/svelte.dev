@@ -1,6 +1,6 @@
 ---
 name: "@peter-pakanun/svelte-icon"
-description: "Simple Svelte Icon Component"
+description: "Create simple Svelte icon components using SVG paths."
 repo_url: "https://github.com/peter-pakanun/svelte-icon"
 author: "Peter Pakanun"
 homepage: "https://github.com/peter-pakanun/svelte-icon#readme"

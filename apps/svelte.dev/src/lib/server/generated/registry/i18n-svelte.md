@@ -1,0 +1,11 @@
+---
+name: "i18n-svelte"
+description: "Implement lightweight internationalization plugin for Svelte."
+repo_url: "https://github.com/sharmapukar217/i18n-svelte"
+author: "Pukar Sharma"
+homepage: "https://github.com/sharmapukar217/i18n-svelte#readme"
+downloads: 1
+updated: "2022-01-28T14:33:09.803Z"
+tags: 
+  - utility
+---

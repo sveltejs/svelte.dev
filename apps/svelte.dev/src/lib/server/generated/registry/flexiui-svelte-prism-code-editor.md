@@ -1,10 +1,11 @@
 ---
 name: "@flexiui/svelte-prism-code-editor"
-description: "A lightweight and flexible Svelte component that wraps Prism Code Editor, providing syntax highlighting with ease of integration"
+description: "Provides syntax highlighting for code editors in Svelte applications."
 author: "alexgipi"
-downloads: 18
+downloads: 5
 dependents: 1
 updated: "2025-03-13T02:15:32.644Z"
 tags: 
   - ui
+  - tooling
 ---

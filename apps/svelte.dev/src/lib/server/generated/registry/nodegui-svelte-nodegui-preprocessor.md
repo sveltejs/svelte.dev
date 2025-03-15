@@ -1,6 +1,6 @@
 ---
 name: "@nodegui/svelte-nodegui-preprocessor"
-description: "A preprocessor for Svelte NodeGUI"
+description: "Preprocessor for Svelte NodeGUI, enabling Svelte for desktop apps."
 repo_url: "https://github.com/nodegui/svelte-nodegui-preprocessor"
 author: "Saurav Sahu"
 homepage: "https://github.com/nodegui/svelte-nodegui-preprocessor"

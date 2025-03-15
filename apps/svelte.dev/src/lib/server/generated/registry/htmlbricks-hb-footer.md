@@ -1,10 +1,10 @@
 ---
 name: "@htmlbricks/hb-footer"
-description: "Svelte Bootstrap Footer WebComponent"
+description: "Create footer component for Svelte applications."
 author: "Dario Caruso"
-downloads: 688
+downloads: 5
 dependents: 4
 updated: "2025-03-09T03:10:36.808Z"
 tags: 
-  - component-library
+  - ui
 ---

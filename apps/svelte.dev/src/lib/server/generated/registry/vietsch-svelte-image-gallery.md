@@ -1,6 +1,6 @@
 ---
 name: "@vietsch/svelte-image-gallery"
-description: "Svelte image gallery ported from react-image-gallery"
+description: "Display image galleries with mobile swipe gestures in Svelte."
 repo_url: "https://github.com/Vietsch/svelte-image-gallery"
 author: "Volker von Vietsch"
 homepage: "https://github.com/Vietsch/svelte-image-gallery"

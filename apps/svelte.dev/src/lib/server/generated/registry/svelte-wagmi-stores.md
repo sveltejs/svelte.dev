@@ -1,6 +1,6 @@
 ---
 name: "svelte-wagmi-stores"
-description: "A simple wrapper around the @wagmi/core library, providing readable stores for use in Svelte/SvelteKit applications."
+description: "Provide readable stores for Wagmi and Ethereum in Svelte/SvelteKit apps."
 repo_url: "https://github.com/hardyjosh/svelte-wagmi-stores"
 author: "Josh Hardy"
 homepage: "https://github.com/hardyjosh/svelte-wagmi-stores#readme"

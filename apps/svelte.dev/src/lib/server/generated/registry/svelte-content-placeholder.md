@@ -1,6 +1,6 @@
 ---
 name: "svelte-content-placeholder"
-description: "Replicate components with shadow versions while content is not yet available"
+description: "Generate placeholder components, replicate content while loading."
 repo_url: "https://github.com/EstebanBorai/svelte-content-placeholder"
 author: "Esteban Borai"
 homepage: "https://github.com/EstebanBorai/svelte-content-placeholder#readme"

@@ -1,6 +1,6 @@
 ---
 name: "valtio-svelte"
-description: "Combines the power of valtio and svelte stores"
+description: "Integrate Valtio state management with Svelte components."
 repo_url: "https://github.com/pedeEli/valtio-svelte"
 author: "Elias Gerster"
 homepage: "https://github.com/pedeEli/valtio-svelte#readme"

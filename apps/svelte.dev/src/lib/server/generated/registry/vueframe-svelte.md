@@ -1,6 +1,6 @@
 ---
 name: "@vueframe/svelte"
-description: "Simple embeds for Svelte and Vue."
+description: "Embed YouTube and Vimeo videos in Svelte components."
 repo_url: "https://github.com/vueframe/vueframe"
 author: "vueframe"
 homepage: "https://github.com/vueframe/vueframe"
@@ -9,5 +9,4 @@ updated: "2025-02-20T12:35:00.882Z"
 github_stars: 74
 tags: 
   - ui
-  - media
 ---

@@ -1,6 +1,6 @@
 ---
 name: "svelte-pin"
-description: "Input masking component for Svelte"
+description: "Implement input masking component for PIN input in Svelte."
 repo_url: "https://github.com/rebotak/svelte-pin"
 author: "Pais Rebotak"
 homepage: "https://github.com/rebotak/svelte-pin#readme"

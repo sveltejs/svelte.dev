@@ -1,6 +1,6 @@
 ---
 name: "svelte-reparent"
-description: "reparent nodes with ease in svelte"
+description: "Reparent DOM nodes with ease in Svelte applications."
 repo_url: "https://github.com/LeoDog896/svelte-reparent"
 author: "Tristan F."
 homepage: "https://leodog896.github.io/svelte-reparent"

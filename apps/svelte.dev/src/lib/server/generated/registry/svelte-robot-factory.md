@@ -1,14 +1,13 @@
 ---
 name: "svelte-robot-factory"
-description: "svelte robot integration"
+description: "Integrate robot finite state machines into Svelte applications."
 repo_url: "https://github.com/kayodebristol/svelte-robot-factory"
 author: "Kayode Bristol"
 homepage: "https://github.com/kayodebristol/svelte-robot-factory#readme"
-downloads: 8
+downloads: 7
 dependents: 1
 updated: "2023-03-20T11:23:05.209Z"
 github_stars: 15
 tags: 
-  - integration
   - utility
 ---

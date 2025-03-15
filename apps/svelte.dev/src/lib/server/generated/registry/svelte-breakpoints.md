@@ -1,10 +1,10 @@
 ---
 name: "svelte-breakpoints"
-description: "Svelte component and helper function for creating easy dynamic layouts with CSS media queries."
+description: "Create responsive layouts with CSS media queries in Svelte."
 repo_url: "https://github.com/kiosion/svelte-breakpoints"
 author: "kiosion"
 homepage: "https://github.com/kiosion/svelte-breakpoints#readme"
-downloads: 137
+downloads: 120
 updated: "2024-02-06T12:51:30.121Z"
 github_stars: 16
 tags: 

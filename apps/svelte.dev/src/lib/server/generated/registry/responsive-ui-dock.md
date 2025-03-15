@@ -1,0 +1,11 @@
+---
+name: "@responsive-ui/dock"
+description: "Create dock component for responsive Svelte UI."
+repo_url: "https://github.com/wetix/responsive-ui"
+author: "Si3nLoong"
+homepage: "https://github.com/wetix/responsive-ui/blob/main/components/dock#README.md"
+updated: "2021-10-26T14:57:44.353Z"
+github_stars: 19
+tags: 
+  - ui
+---

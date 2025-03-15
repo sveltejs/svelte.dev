@@ -1,6 +1,6 @@
 ---
 name: "@loloof64/chessboard-component"
-description: "A chess board web component"
+description: "Create interactive chess board component for Svelte applications."
 repo_url: "https://github.com/loloof64/Chess-Board-Component-Sveltejs"
 author: "Laurent Bernabe"
 homepage: "https://github.com/loloof64/Chess-Board-Component-Sveltejs#readme"

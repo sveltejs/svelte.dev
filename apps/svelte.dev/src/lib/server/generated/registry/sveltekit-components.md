@@ -1,6 +1,6 @@
 ---
 name: "sveltekit-components"
-description: "An opinionated UI library of SvelteKit components"
+description: "Build opinionated UI components for SvelteKit applications."
 repo_url: "https://github.com/mirkoschubert/sveltekit-components"
 author: "mirkoschubert"
 homepage: "https://sveltekit-components.mirkoschubert.com"

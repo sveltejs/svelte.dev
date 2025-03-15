@@ -1,6 +1,6 @@
 ---
 name: "@seaniwe/svelte-slider"
-description: "Simple range slider for Svelte 3"
+description: "Simple range slider for Svelte 3 applications."
 author: "Seaniwe"
 updated: "2024-12-21T17:19:31.182Z"
 tags: 

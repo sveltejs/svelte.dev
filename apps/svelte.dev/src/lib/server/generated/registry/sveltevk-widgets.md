@@ -1,6 +1,6 @@
 ---
 name: "@sveltevk/widgets"
-description: "VK widgets, provided as a Svelte components."
+description: "Provide VK widgets as reusable Svelte components for applications."
 repo_url: "https://github.com/sveltevk/widgets"
 author: "Daniil Suvorov"
 homepage: "https://sveltevk.github.io/widgets/"

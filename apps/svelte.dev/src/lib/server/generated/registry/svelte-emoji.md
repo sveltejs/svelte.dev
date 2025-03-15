@@ -1,10 +1,10 @@
 ---
 name: "svelte-emoji"
-description: "An accessible Emoji component for Svelte applications"
+description: "Create accessible and reusable Emoji components for Svelte applications."
 repo_url: "https://github.com/seanmcp/svelte-emoji"
 author: "Sean McPherson"
 homepage: "https://github.com/seanmcp/svelte-emoji#readme"
-downloads: 15
+downloads: 26
 updated: "2020-01-06T11:45:20.058Z"
 github_stars: 7
 tags: 

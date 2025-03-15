@@ -1,6 +1,6 @@
 ---
 name: "@simtropolis/fractalicons"
-description: "Svelte wrappers for the Heroicons library."
+description: "Svelte wrappers for Heroicons and MaterialDesignicons."
 repo_url: "https://github.com/simtropolis/fratalicons"
 author: "asvegah"
 homepage: "https://github.com/simtropolis/fractalicons"

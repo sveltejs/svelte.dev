@@ -1,6 +1,6 @@
 ---
 name: "@ikun-ui/spin"
-description: "ERROR: No README data found!"
+description: "Create spin components for Svelte applications with customizable styles."
 author: "baiwusanyu"
 downloads: 1
 dependents: 1

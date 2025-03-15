@@ -1,10 +1,10 @@
 ---
 name: "svelte-textarea-autosize"
-description: "textarea autosize input component for the web built with svelte."
+description: "Autosize textarea component for Svelte applications."
 repo_url: "https://github.com/shivesh947/svelte-textarea-autosize"
 author: "guptashiv84@gmail.com"
 homepage: "https://github.com/shivesh947/svelte-textarea-autosize#readme"
-downloads: 7
+downloads: 15
 updated: "2024-01-15T12:31:21.707Z"
 github_stars: 1
 tags: 

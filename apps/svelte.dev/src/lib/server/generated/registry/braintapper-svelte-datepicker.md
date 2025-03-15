@@ -1,6 +1,6 @@
 ---
 name: "braintapper-svelte-datepicker"
-description: "Svelte component for ..."
+description: "Create datepicker component for Svelte applications."
 repo_url: "https://github.com/braintapper/braintapper-svelte-datepicker"
 author: "braintapper"
 homepage: "https://github.com/braintapper/braintapper-svelte-datepicker#readme"

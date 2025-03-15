@@ -1,6 +1,6 @@
 ---
 name: "custom-uikit-svelte"
-description: "Unofficial Svelte Component Library for the UIkit framework"
+description: "Create UIkit-based Svelte components for building web applications."
 repo_url: "https://github.com/cdellacqua/custom-uikit-svelte"
 author: "Carlo Dell'Acqua"
 homepage: "https://github.com/cdellacqua/custom-uikit-svelte"

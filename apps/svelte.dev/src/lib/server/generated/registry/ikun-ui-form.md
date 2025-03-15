@@ -1,6 +1,6 @@
 ---
 name: "@ikun-ui/form"
-description: "Clean description"
+description: "Build forms with validation in Svelte applications."
 author: "baiwusanyu"
 downloads: 7
 dependents: 14

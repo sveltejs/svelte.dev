@@ -1,6 +1,6 @@
 ---
 name: "svelte-custom-roulette"
-description: "Svelte custom roulette wheel UI library"
+description: "Create custom roulette wheel UI components for Svelte applications."
 repo_url: "https://github.com/jor-col/svelte-custom-roulette"
 author: "codingmustache && colinwilliams91"
 homepage: "https://github.com/jor-col/svelte-custom-roulette#readme"

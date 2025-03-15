@@ -1,6 +1,6 @@
 ---
 name: "svelte-docster"
-description: "Generate metadata about your Svelte files from jsdoc."
+description: "Generate metadata about Svelte files from JSDoc comments."
 repo_url: "https://github.com/TheComputerM/svelte-docster"
 author: "TheComputerM"
 homepage: "https://github.com/TheComputerM/svelte-docster#readme"

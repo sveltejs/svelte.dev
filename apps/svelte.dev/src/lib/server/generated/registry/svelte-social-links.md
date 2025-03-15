@@ -1,6 +1,6 @@
 ---
 name: "svelte-social-links"
-description: "A Share link component library"
+description: "Provide share link component library for Svelte and React applications."
 repo_url: "https://github.com/Ennoriel/social-links"
 author: "Maxime Dupont"
 homepage: "https://ennoriel.github.io/Ennoriel/social-links"

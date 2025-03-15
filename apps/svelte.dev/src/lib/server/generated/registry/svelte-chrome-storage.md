@@ -1,6 +1,6 @@
 ---
 name: "svelte-chrome-storage"
-description: "A lightweight abstraction between Svelte stores and Chrome extension storage."
+description: "Offer lightweight abstraction between Svelte stores and Chrome storage."
 repo_url: "https://github.com/shaun-wild/svelte-chrome-storage"
 author: "Shaun Wild"
 homepage: "https://github.com/shaun-wild/svelte-chrome-storage#readme"

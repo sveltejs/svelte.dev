@@ -1,8 +1,8 @@
 ---
 name: "svelte-toasty"
-description: "Easily configurable toast notification component for Svelte"
+description: "Offer easily configurable toast notification component for Svelte applications."
 author: "tiaanduplessis"
-downloads: 12
+downloads: 21
 updated: "2021-02-07T10:47:48.605Z"
 tags: 
   - ui

@@ -1,6 +1,6 @@
 ---
 name: "svelte-typeform-embed"
-description: "A Svelte wrapper component for Typeform Embed SDK."
+description: "Embed Typeform forms within Svelte applications easily."
 repo_url: "https://github.com/silvestrevivo/svelte-typeform-embed"
 author: "@silvestrevivo"
 homepage: "https://svelte-typeform-embed.netlify.app/"

@@ -1,6 +1,6 @@
 ---
 name: "svelte-content-pages"
-description: "Svelte Element to do easy Content Switching. The inspiration came from [<iron-pages>](https://www.webcomponents.org/element/@polymer/iron-pages)"
+description: "Implement easy content switching in Svelte apps."
 repo_url: "https://github.com/arcoirislabs/svelte-content-pages"
 author: "Arcoiris Labs"
 homepage: "https://github.com/arcoirislabs/svelte-content-pages#readme"

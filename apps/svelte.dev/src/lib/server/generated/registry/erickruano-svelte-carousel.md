@@ -1,6 +1,6 @@
 ---
 name: "@erickruano/svelte-carousel"
-description: "Svelte Carousel / Slider"
+description: "Create carousel/slider components for Svelte applications."
 repo_url: "https://github.com/erickruano/svelte-carousel"
 author: "glitchverse"
 homepage: "https://github.com/erickruano/svelte-carousel#readme"

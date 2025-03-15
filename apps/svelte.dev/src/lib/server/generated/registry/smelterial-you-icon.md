@@ -1,6 +1,6 @@
 ---
 name: "@smelterial/you-icon"
-description: "Easy access to Google's Material Symbols. A simple API, fully typed right, down to the icon names."
+description: "Provide easy access to Google's Material Symbols for Svelte components."
 author: "willster277"
 downloads: 1
 dependents: 1

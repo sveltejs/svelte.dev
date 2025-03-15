@@ -1,10 +1,10 @@
 ---
 name: "@svitejs/svelte-preprocess-svg"
-description: "Optimize inline svg in svelte components"
+description: "Optimize inline SVG in Svelte components during preprocessing."
 repo_url: "https://github.com/svitejs/svelte-preprocess-svg"
 author: "dominikg"
 homepage: "https://github.com/svitejs/svelte-preprocess-svg#readme"
-downloads: 70
+downloads: 67
 updated: "2022-12-04T16:03:03.306Z"
 github_stars: 40
 tags: 

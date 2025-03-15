@@ -1,12 +1,12 @@
 ---
 name: "@humanspeak/svelte-markdown"
-description: "A powerful, customizable markdown renderer for Svelte with TypeScript support"
+description: "Render Markdown to HTML in Svelte components."
 repo_url: "https://github.com/humanspeak/svelte-markdown"
 author: "Humanspeak, Inc."
 homepage: "https://markdown.svelte.page"
-downloads: 4786
+downloads: 4279
 updated: "2025-03-03T01:21:17.693Z"
-github_stars: 18
+github_stars: 19
 tags: 
   - content
 ---

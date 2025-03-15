@@ -1,6 +1,6 @@
 ---
 name: "@azreenlex/svelte-components"
-description: "Simple components made for Svelte, built using Bun"
+description: "Offer simple Svelte components built using Bun."
 author: "Stickboy"
 downloads: 2
 updated: "2024-05-26T02:45:46.852Z"

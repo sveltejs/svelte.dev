@@ -1,6 +1,6 @@
 ---
 name: "@gardenjs/render-plugin-svelte"
-description: "Plugin for rendering svelte components in gardenjs"
+description: "Render Svelte components within Gardenjs environments."
 repo_url: "https://github.com/gardenjs/render-plugin-svelte"
 author: "Robin Danzinger"
 homepage: "https://github.com/gardenjs/render-plugin-svelte#readme"

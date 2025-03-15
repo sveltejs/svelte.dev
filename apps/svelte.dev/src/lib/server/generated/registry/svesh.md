@@ -1,6 +1,6 @@
 ---
 name: "svesh"
-description: "Simple Svelte component library to easily use generated mesh gradients in your project."
+description: "Generate mesh gradients for Svelte UI components."
 repo_url: "https://github.com/koodeau/svesh"
 author: "Nick Revenko"
 homepage: "https://github.com/koodeau/svesh#readme"

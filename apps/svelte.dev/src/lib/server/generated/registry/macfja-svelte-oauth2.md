@@ -1,6 +1,6 @@
 ---
 name: "@macfja/svelte-oauth2"
-description: "OAuth2 authorization for Svelte"
+description: "Implement OAuth2 authorization for Svelte applications."
 repo_url: "https://github.com/macfja/svelte-oauth2"
 author: "MacFJA"
 homepage: "https://github.com/macfja/svelte-oauth2#readme"
@@ -10,6 +10,4 @@ github_stars: 41
 tags: 
   - auth
   - utility
-  - server
-  - integration
 ---

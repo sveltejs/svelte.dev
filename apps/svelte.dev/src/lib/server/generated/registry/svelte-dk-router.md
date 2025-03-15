@@ -1,6 +1,6 @@
 ---
 name: "svelte-dk-router"
-description: "An efficient, easy-to-use router for Svelte."
+description: "Efficient, easy-to-use router for Svelte applications."
 repo_url: "https://github.com/Daniel-Knights/svelte-dk-router"
 author: "Daniel Knights"
 homepage: "https://github.com/Daniel-Knights/svelte-dk-router#readme"

@@ -1,6 +1,6 @@
 ---
 name: "svelte-marquee"
-description: "Marquee fully responsive and adaptive for Svelte"
+description: "Create fully responsive and adaptive marquee components for Svelte."
 repo_url: "https://github.com/silvestrevivo/svelte-marquee"
 author: "@silvestrevivo"
 homepage: "https://github.com/silvestrevivo/svelte-marquee#readme"

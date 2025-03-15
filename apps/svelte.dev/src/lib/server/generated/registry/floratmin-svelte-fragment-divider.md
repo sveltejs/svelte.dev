@@ -1,6 +1,6 @@
 ---
 name: "@floratmin/svelte-fragment-divider"
-description: "Divide svelte files into script, style and HTML fragments"
+description: "Divide Svelte files into script, style, HTML fragments with line numbers."
 repo_url: "https://github.com/floratmin/svelte-fragment-divider"
 author: "Florian Murat Koch"
 homepage: "https://github.com/floratmin/svelte-fragment-divider#readme"

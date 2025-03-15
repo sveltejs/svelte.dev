@@ -1,14 +1,13 @@
 ---
 name: "@threlte/rapier"
-description: "Components and hooks to use the Rapier physics engine in Threlte"
+description: "Integrate Rapier physics engine into Threlte Svelte apps."
 repo_url: "https://github.com/threlte/threlte"
 author: "Grischa Erbe"
 homepage: "https://threlte.xyz"
-downloads: 699
+downloads: 702
 dependents: 5
 updated: "2025-03-12T23:25:03.609Z"
-github_stars: 2777
+github_stars: 2779
 tags: 
   - integration
-  - media
 ---

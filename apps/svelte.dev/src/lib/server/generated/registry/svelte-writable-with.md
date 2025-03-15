@@ -1,6 +1,6 @@
 ---
 name: "svelte-writable-with"
-description: "A Svelte store utility library that allows you to extend the writable."
+description: "Extend Svelte writables with state, previous value, local storage, and history."
 repo_url: "https://github.com/SaintPepsi/svelte-writable-with"
 author: "Ian Hogers"
 homepage: "https://github.com/SaintPepsi/svelte-writable-with#readme"

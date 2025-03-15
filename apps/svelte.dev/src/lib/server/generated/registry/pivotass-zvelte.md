@@ -1,11 +1,12 @@
 ---
 name: "@pivotass/zvelte"
-description: "Svelte like compiler for twig like syntax that outputs PHP for ssr and JS for browser"
+description: "Compile Svelte-like code to PHP for SSR and JS for browser."
 repo_url: "https://github.com/PivotStick/zvelte"
 author: "Maxime DI NATALE"
 homepage: "https://github.com/PivotStick/zvelte#readme"
-downloads: 62
+downloads: 66
 updated: "2025-01-31T15:09:59.625Z"
 tags: 
   - tooling
+  - preprocessor
 ---

@@ -1,6 +1,6 @@
 ---
 name: "grig"
-description: "a lightweight nested messages i18n library with smart ts prompt can be used in react , vue , svelte , solid , etc..."
+description: "Lightweight i18n library with smart TS prompts for Svelte and others."
 author: "leafnote"
 homepage: "https://github.com/leafio/grig"
 downloads: 1

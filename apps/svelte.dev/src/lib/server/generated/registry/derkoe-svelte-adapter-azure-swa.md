@@ -1,6 +1,6 @@
 ---
 name: "@derkoe/svelte-adapter-azure-swa"
-description: "SvelteKit adapter for Azure Static Web Apps."
+description: "Adapter for SvelteKit to deploy to Azure Static Web Apps."
 author: "derkoe"
 homepage: "https://github.com/geoffrich/svelte-adapter-azure-swa#readme"
 downloads: 1

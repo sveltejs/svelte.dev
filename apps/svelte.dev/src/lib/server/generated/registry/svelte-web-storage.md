@@ -1,10 +1,10 @@
 ---
 name: "svelte-web-storage"
-description: "A Svelte writable store that saves values to Web-Storage. Great for persisting settings or preference objects within your Svelte apps. Th"
+description: "Create Svelte writable stores for web storage."
 repo_url: "https://github.com/captaincodeman/svelte-web-storage"
 author: "Simon Green"
 homepage: "https://captaincodeman.github.io/svelte-web-storage/"
-downloads: 4
+downloads: 3
 dependents: 1
 updated: "2024-04-27T18:59:51.449Z"
 github_stars: 14

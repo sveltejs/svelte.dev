@@ -1,6 +1,6 @@
 ---
 name: "@ikun-ui/divider"
-description: "ERROR: No README data found!"
+description: "Create divider components for Svelte applications."
 author: "baiwusanyu"
 downloads: 1
 dependents: 3

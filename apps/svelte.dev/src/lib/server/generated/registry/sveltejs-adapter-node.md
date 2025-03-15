@@ -1,13 +1,13 @@
 ---
 name: "@sveltejs/adapter-node"
-description: "Adapter for SvelteKit apps that generates a standalone Node server"
+description: "Deploy SvelteKit apps to Node.js servers, enabling server-side rendering."
 repo_url: "https://github.com/sveltejs/kit"
 author: "rich_harris"
 homepage: "https://svelte.dev"
-downloads: 160328
-dependents: 57
+downloads: 194175
+dependents: 55
 updated: "2025-01-17T10:49:02.765Z"
-github_stars: 19074
+github_stars: 19079
 tags: 
   - adapter
   - server

@@ -1,6 +1,6 @@
 ---
 name: "svelte-create-state"
-description: "useState (from React) but for Svelte."
+description: "Create state variables with subscribe functionality for Svelte components."
 repo_url: "https://github.com/juliandavidmr/svelte-create-state"
 author: "Julian Mora"
 homepage: "https://github.com/juliandavidmr/svelte-create-state#readme"

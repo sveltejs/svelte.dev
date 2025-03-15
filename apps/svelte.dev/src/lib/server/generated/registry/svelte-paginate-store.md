@@ -1,6 +1,6 @@
 ---
 name: "svelte-paginate-store"
-description: "Create a svelte store with pagination"
+description: "Create Svelte store with pagination functionality."
 repo_url: "https://github.com/stevenrico/svelte-paginate-store"
 author: "Steven Rico"
 homepage: "https://github.com/stevenrico/svelte-paginate-store"

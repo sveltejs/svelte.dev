@@ -1,6 +1,6 @@
 ---
 name: "@svelty/cli"
-description: "A Node CLI for component library"
+description: "Generate component libraries with a Node CLI."
 repo_url: "https://github.com/mochen0505/svelty-cli"
 author: "Mo Chen"
 homepage: "https://github.com/mochen0505/svelty-cli"

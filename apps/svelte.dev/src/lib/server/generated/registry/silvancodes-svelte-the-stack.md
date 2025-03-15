@@ -1,6 +1,6 @@
 ---
 name: "@silvancodes/svelte-the-stack"
-description: "This component implements 'The Stack' from EveryLayout."
+description: "Implement 'The Stack' layout from EveryLayout in Svelte."
 repo_url: "https://github.com/SilvanCodes/svelte-the-stack"
 author: "Silvan Buedenbender"
 homepage: "https://github.com/SilvanCodes/svelte-the-stack#readme"

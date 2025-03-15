@@ -1,6 +1,6 @@
 ---
 name: "@robakk08/svelte-evaicons"
-description: "Another take on svelte-eva-icons for Svelte"
+description: "Use Eva Icons in Svelte applications."
 repo_url: "https://github.com/Robak08/svelte-evaicons"
 author: "Robert Hamiga"
 homepage: "https://github.com/Robak08/svelte-evaicons#readme"

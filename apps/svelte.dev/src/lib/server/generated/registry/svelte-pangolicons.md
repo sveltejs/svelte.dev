@@ -1,6 +1,6 @@
 ---
 name: "svelte-pangolicons"
-description: "Pangolicons made ready for svelte!"
+description: "Use Pangolin icons in Svelte projects."
 author: "Sebastian Heinz"
 downloads: 1
 updated: "2022-05-06T21:58:59.441Z"

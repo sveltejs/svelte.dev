@@ -1,11 +1,12 @@
 ---
 name: "svelte-carbonbadge"
-description: "Svelte component for https://www.websitecarbon.com/badge/"
+description: "Generate Svelte component for Website Carbon Badge."
 repo_url: "https://gitlab.com/davidhund/svelte-carbonbadge"
 author: "David Hund"
 homepage: "https://gitlab.com/davidhund/svelte-carbonbadge"
-downloads: 2
+downloads: 5
 updated: "2022-02-08T18:28:32.548Z"
 tags: 
   - seo
+  - ui
 ---

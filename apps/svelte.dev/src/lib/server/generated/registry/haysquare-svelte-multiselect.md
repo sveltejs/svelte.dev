@@ -1,6 +1,6 @@
 ---
 name: "@haysquare/svelte-multiselect"
-description: "Hey there! Welcome to the SvelteKit Custom MultiSelect Component. This component is here to make your life easier when dealing with multiple selections in your SvelteKit projects. Let's dive in!"
+description: "Create custom multiselect components for SvelteKit projects."
 repo_url: "https://github.com/haysquareA/svelte-multiselect"
 author: "Ayorinde Abdulafeez"
 homepage: "https://github.com/haysquareA/svelte-multiselect#readme"

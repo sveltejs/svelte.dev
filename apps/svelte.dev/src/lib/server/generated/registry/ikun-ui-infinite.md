@@ -1,6 +1,6 @@
 ---
 name: "@ikun-ui/infinite"
-description: "UI component for Svelte"
+description: "Create infinite scroll components for Svelte applications."
 author: "baiwusanyu"
 downloads: 2
 dependents: 1

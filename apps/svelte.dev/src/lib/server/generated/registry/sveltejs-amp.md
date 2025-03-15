@@ -1,13 +1,13 @@
 ---
 name: "@sveltejs/amp"
-description: "AMP integration for SvelteKit"
+description: "Integrate AMP support for SvelteKit applications."
 repo_url: "https://github.com/sveltejs/kit"
 author: "rich_harris"
 homepage: "https://svelte.dev"
-downloads: 111
+downloads: 118
 updated: "2024-10-25T12:12:36.654Z"
-github_stars: 19074
+github_stars: 19079
 tags: 
-  - adapter
+  - tooling
   - seo
 ---

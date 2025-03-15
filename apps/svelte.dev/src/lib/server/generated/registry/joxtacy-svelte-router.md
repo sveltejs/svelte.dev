@@ -1,6 +1,6 @@
 ---
 name: "@joxtacy/svelte-router"
-description: "Simple router for Svelte apps"
+description: "Simple router for Svelte apps, manages navigation and URL handling."
 repo_url: "https://github.com/Joxtacy/svelte-router"
 author: "Joxtacy"
 homepage: "https://github.com/Joxtacy/svelte-router#readme"

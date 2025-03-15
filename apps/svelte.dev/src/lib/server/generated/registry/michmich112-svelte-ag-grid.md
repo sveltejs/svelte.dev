@@ -1,9 +1,9 @@
 ---
 name: "@michmich112/svelte-ag-grid"
-description: "Forked from [Budibase/svelte-ag-grid](https://github.com/Budibase/svelte-ag-grid)"
+description: "Provide a barebones wrapper around ag-grid for Svelte."
 author: "michmich112"
-downloads: 2
+downloads: 6
 updated: "2021-10-03T19:58:28.762Z"
 tags: 
-  - integration
+  - ui
 ---

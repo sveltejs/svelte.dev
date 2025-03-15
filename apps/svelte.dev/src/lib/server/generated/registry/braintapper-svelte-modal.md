@@ -1,6 +1,6 @@
 ---
 name: "braintapper-svelte-modal"
-description: "Svelte component for modals"
+description: "Create modal dialogs in Svelte applications."
 repo_url: "https://github.com/braintapper/braintapper-svelte-modal"
 author: "braintapper"
 homepage: "https://github.com/braintapper/braintapper-svelte-modal#readme"

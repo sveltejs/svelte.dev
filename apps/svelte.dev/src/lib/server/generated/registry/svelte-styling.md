@@ -1,6 +1,6 @@
 ---
 name: "svelte-styling"
-description: "css and variable actions within svelte"
+description: "Apply CSS variables and styles within Svelte components."
 repo_url: "https://github.com/LeoDog896/svelte-styling"
 author: "Tristan F."
 homepage: "https://leodog896.github.io/svelte-styling"

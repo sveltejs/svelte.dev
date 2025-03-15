@@ -1,6 +1,6 @@
 ---
 name: "@macfja/svelte-adapter-neutralino"
-description: "SvelteKit adapter to generate a Neutralinojs application"
+description: "Generate Neutralinojs applications using SvelteKit adapter."
 repo_url: "https://github.com/macfja/svelte-adapter-neutralino"
 author: "MacFJA"
 homepage: "https://github.com/macfja/svelte-adapter-neutralino#readme"

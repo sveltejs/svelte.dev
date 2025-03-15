@@ -1,6 +1,6 @@
 ---
 name: "svelte-barcode-scanner"
-description: "A Svelte component for detecting QR-codes, EAN-barcodes and other barcode formats."
+description: "Detect QR codes, EAN barcodes, other barcode formats in Svelte apps."
 repo_url: "https://github.com/ollema/svelte-barcode-scanner"
 author: "Olle Månsson"
 homepage: "https://github.com/ollema/svelte-barcode-scanner"

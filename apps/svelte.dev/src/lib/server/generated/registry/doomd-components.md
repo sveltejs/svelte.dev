@@ -1,6 +1,6 @@
 ---
 name: "@doomd/components"
-description: "Doomd Svelte Components"
+description: "Provide reusable Svelte components with Tailwind base styles and utilities."
 repo_url: "https://github.com/Doomd/doomd-components"
 author: "Doomd"
 homepage: "https://github.com/Doomd/doomd-components#readme"

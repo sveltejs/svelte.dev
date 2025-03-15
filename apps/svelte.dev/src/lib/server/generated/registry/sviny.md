@@ -1,6 +1,6 @@
 ---
 name: "sviny"
-description: "For your tiny Svelte apps"
+description: "Generate Svelte apps quickly for small projects."
 repo_url: "https://github.com/josefaidt/sviny"
 author: "garlicbred"
 homepage: "https://github.com/josefaidt/sviny#readme"

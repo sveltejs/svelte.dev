@@ -1,13 +1,13 @@
 ---
 name: "svelte-log-view"
-description: "svelte log viewer component"
+description: "View log content in Svelte applications."
 repo_url: "https://github.com/arlac77/svelte-log-view"
 author: "arlac77"
 homepage: "https://github.com/arlac77/svelte-log-view#readme"
-downloads: 187
+downloads: 204
 dependents: 2
 updated: "2025-03-12T12:37:58.537Z"
 github_stars: 4
 tags: 
-  - tooling
+  - utility
 ---

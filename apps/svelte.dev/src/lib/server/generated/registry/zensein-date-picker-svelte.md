@@ -1,6 +1,6 @@
 ---
 name: "@zensein/date-picker-svelte"
-description: "Date and time picker for Svelte"
+description: "Implement date and time pickers with theming and i18n support."
 repo_url: "https://github.com/probablykasper/date-picker-svelte"
 author: "Kasper Henningsen"
 homepage: "https://date-picker-svelte.kasper.space"

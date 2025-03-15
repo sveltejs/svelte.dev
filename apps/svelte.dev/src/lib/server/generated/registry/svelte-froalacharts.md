@@ -1,6 +1,6 @@
 ---
 name: "svelte-froalacharts"
-description: "Simple and lightweight official Svelte component for FroalaCharts."
+description: "Integrate FroalaCharts into Svelte applications."
 repo_url: "https://github.com/froala/svelte-froalacharts"
 author: "froala"
 homepage: "https://github.com/froala/svelte-froalacharts"

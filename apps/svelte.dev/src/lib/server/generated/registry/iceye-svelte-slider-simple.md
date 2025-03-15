@@ -1,6 +1,6 @@
 ---
 name: "@iceye/svelte-slider-simple"
-description: "Simple slider for Svelte 3/4"
+description: "Create simple range slider components for Svelte applications."
 repo_url: "https://github.com/iceye/svelte-slider"
 author: "Iceye"
 homepage: "https://github.com/iceye/svelte-slider#readme"

@@ -1,6 +1,6 @@
 ---
 name: "svelte-layout-aware-transitions"
-description: "Svelte transitions that are layout aware"
+description: "Create Svelte transitions aware of layout changes."
 repo_url: "https://github.com/ramiroaisen/svelte-layout-aware-transitions"
 author: "ramiroaisen"
 homepage: "https://github.com/ramiroaisen/svelte-layout-aware-transitions"

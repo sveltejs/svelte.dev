@@ -1,6 +1,6 @@
 ---
 name: "svelte-custom-scrollbar"
-description: "A custom scrollbar Svelte component."
+description: "Creates custom scrollbar component for Svelte with styling options."
 repo_url: "https://github.com/LQR471814/custom-scrollbar"
 author: "lqr471814"
 homepage: "https://github.com/LQR471814/custom-scrollbar#readme"

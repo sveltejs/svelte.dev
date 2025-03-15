@@ -1,6 +1,6 @@
 ---
 name: "@elron/svelte-wp-shortcode"
-description: "Effortlessly blend Svelte components into content with WordPress-inspired shortcodes. Simplify dynamic embedding with a familiar touch."
+description: "Embed Svelte components into content using WordPress-style shortcodes."
 repo_url: "https://github.com/elron/svelte-wp-shortcodes"
 author: "Elron Bucai"
 homepage: "https://svelte-wp-shortcodes.netlify.app/"

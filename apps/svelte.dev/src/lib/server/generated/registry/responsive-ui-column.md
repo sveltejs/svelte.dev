@@ -1,6 +1,6 @@
 ---
 name: "@responsive-ui/column"
-description: "A column component of responsive-ui."
+description: "Create column component for Svelte apps."
 repo_url: "https://github.com/wetix/responsive-ui"
 author: "Si3nLoong"
 homepage: "https://github.com/wetix/responsive-ui/blob/main/components/column#README.md"

@@ -1,12 +1,11 @@
 ---
 name: "svelte-inplace-carousel"
-description: "Everything you need to build a Svelte library, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte)."
+description: "Creates a carousel component for Svelte with in-place transitions."
 repo_url: "https://github.com/Carlos-err406/inplace-carousel"
 author: "Carlos Daniel Vilaseca"
 homepage: "https://github.com/Carlos-err406/inplace-carousel#readme"
-downloads: 2
+downloads: 3
 updated: "2024-08-13T16:46:57.986Z"
 tags: 
   - ui
-  - component-library
 ---

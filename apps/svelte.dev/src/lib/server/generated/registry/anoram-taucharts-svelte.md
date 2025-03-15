@@ -1,6 +1,6 @@
 ---
 name: "@anoram/taucharts-svelte"
-description: "Svelte wrapper for Taucharts"
+description: "Creates Svelte wrapper for Taucharts."
 repo_url: "https://github.com/anoram/taucharts-svelte"
 author: "Shriji Kondan"
 homepage: "https://github.com/anoram/taucharts-svelte#readme"

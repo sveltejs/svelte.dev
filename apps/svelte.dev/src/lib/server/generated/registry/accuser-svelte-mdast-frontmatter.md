@@ -1,6 +1,6 @@
 ---
 name: "@accuser/svelte-mdast-frontmatter"
-description: "Frontmatter extension for [`svelte-mdast`]."
+description: "Adds frontmatter parsing to svelte-mdast for content processing."
 repo_url: "https://github.com/accuser/svelte-mdast-frontmatter"
 author: "Matthew Gibbons"
 homepage: "https://github.com/accuser/svelte-mdast-frontmatter"

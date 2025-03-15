@@ -1,6 +1,6 @@
 ---
 name: "@openelectricity/svelte-charts"
-description: "Reusable time series charts built with Svelte and LayerCake."
+description: "Creates reusable time series charts with Svelte and LayerCake."
 repo_url: "https://github.com/opennem/svelte-charts"
 author: "Open Electricity"
 homepage: "https://github.com/opennem/svelte-charts#readme"

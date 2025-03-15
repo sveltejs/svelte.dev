@@ -1,6 +1,6 @@
 ---
 name: "spa-storage"
-description: "Browser Storage plugin for Svelte and Pinia"
+description: "Integrate browser storage and forage with Svelte and Pinia."
 repo_url: "https://github.com/arthurgermano/spa-storage"
 author: "Arthur J. Germano"
 homepage: "https://arthurgermano.github.io/spa-storage/"

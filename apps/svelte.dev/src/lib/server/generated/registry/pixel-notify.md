@@ -1,6 +1,6 @@
 ---
 name: "pixel-notify"
-description: "Very simple and lightweight notifications widget for SvelteKit based on stores"
+description: "Create simple, lightweight notifications widget for SvelteKit apps."
 author: "Sergey Galaktionov"
 downloads: 1
 dependents: 1

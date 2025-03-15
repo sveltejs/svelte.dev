@@ -1,10 +1,10 @@
 ---
 name: "svelte-vimeo-player"
-description: "svelte-vimeo-player"
+description: "Svelte wrapper for Vimeo's player.js, embed videos easily."
 repo_url: "https://github.com/benwoodward/svelte-vimeo-player"
 author: "Ben Woodward"
 homepage: "https://github.com/benwoodward/svelte-vimeo-player#readme"
-downloads: 42
+downloads: 37
 updated: "2020-09-21T22:45:18.697Z"
 github_stars: 4
 tags: 

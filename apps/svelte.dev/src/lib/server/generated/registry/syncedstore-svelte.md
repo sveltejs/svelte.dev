@@ -1,8 +1,8 @@
 ---
 name: "@syncedstore/svelte"
-description: "Svelte helper for SyncedStore."
+description: "Svelte helper for SyncedStore, enabling collaborative editing."
 author: "yousefed"
-downloads: 168
+downloads: 242
 dependents: 2
 updated: "2023-10-15T11:48:21.416Z"
 tags: 

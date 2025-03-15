@@ -1,6 +1,6 @@
 ---
 name: "@ghostebony/svelte-heroicons"
-description: "Heroicons for Svelte"
+description: "Provides Heroicons for Svelte applications."
 repo_url: "https://github.com/ghostebony/svelte-heroicons"
 author: "Pedro Américo"
 homepage: "https://github.com/ghostebony/svelte-heroicons#readme"

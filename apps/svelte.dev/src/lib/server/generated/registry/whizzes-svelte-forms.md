@@ -1,6 +1,6 @@
 ---
 name: "@whizzes/svelte-forms"
-description: "Svelte form handlers"
+description: "Handle forms with validation in Svelte applications."
 repo_url: "https://github.com/whizzes/svelte-forms"
 author: "Esteban Borai"
 homepage: "https://github.com/whizzes/svelte-forms#readme"

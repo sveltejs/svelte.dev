@@ -1,6 +1,6 @@
 ---
 name: "@responsive-ui/tooltip"
-description: "A tooltip component of responsive-ui."
+description: "Create tooltip components for Svelte applications."
 repo_url: "https://github.com/wetix/responsive-ui"
 author: "Si3nLoong"
 homepage: "https://github.com/wetix/responsive-ui/blob/main/components/tooltip#README.md"

@@ -1,6 +1,6 @@
 ---
 name: "spre"
-description: "Svelte preprocessing utilities"
+description: "Preprocess Svelte code, rewrite import declarations."
 repo_url: "https://github.com/metonym/spre"
 author: "Eric Liu"
 homepage: "https://github.com/metonym/spre"

@@ -1,12 +1,12 @@
 ---
 name: "svelte-migrate"
-description: "A CLI for migrating Svelte(Kit) codebases"
+description: "CLI tool for migrating Svelte and SvelteKit codebases."
 repo_url: "https://github.com/sveltejs/cli"
 author: "svelte-admin"
 homepage: "https://svelte.dev"
-downloads: 529
+downloads: 617
 updated: "2025-01-31T14:57:55.681Z"
-github_stars: 328
+github_stars: 329
 tags: 
   - tooling
 ---

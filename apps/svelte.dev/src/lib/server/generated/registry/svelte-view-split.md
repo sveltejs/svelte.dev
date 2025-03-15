@@ -1,6 +1,6 @@
 ---
 name: "svelte-view-split"
-description: "Resizable views (panels) for svelte"
+description: "Create resizable views (panels) within Svelte applications."
 repo_url: "https://github.com/tuggle24/view-split"
 author: "Demetrius Tuggle"
 homepage: "https://github.com/tuggle24/view-split#readme"

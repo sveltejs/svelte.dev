@@ -1,6 +1,6 @@
 ---
 name: "@thatconference/sveltejs-forms"
-description: "Declarative forms for Svelte"
+description: "Build forms with validation in Svelte applications."
 repo_url: "https://github.com/thatconference/sveltejs-forms"
 author: "csell5"
 homepage: "https://mdauner.github.io/sveltejs-forms/"

@@ -1,6 +1,6 @@
 ---
 name: "svelte-color-well"
-description: "Pick a color and get on with it."
+description: "Provide a color picker component for Svelte applications."
 repo_url: "https://github.com/Indyandie/svelte-color-well"
 author: "Andy Contreras"
 homepage: "https://github.com/Indyandie/svelte-color-well#readme"

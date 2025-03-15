@@ -1,6 +1,6 @@
 ---
 name: "ato-ui"
-description: "The elemental UI component library for Svelte / SvelteKit, built with UnoCSS and Melt UI."
+description: "Provides elemental UI components for Svelte/SvelteKit with UnoCSS and Melt UI."
 repo_url: "https://github.com/bennymi/ato-ui"
 author: "Benedikt Mielke"
 homepage: "https://ato-ui.vercel.app/"

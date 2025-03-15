@@ -1,6 +1,6 @@
 ---
 name: "@svelkit/scoped-baseline"
-description: "> A scoped baseline component to progressively kickstart an elegant, consistent, and simple baseline to build upon."
+description: "Apply scoped baseline styles to Svelte components, fixing browser inconsistencies."
 repo_url: "https://github.com/kenoxa/svelkit"
 author: "Sascha Tandel"
 homepage: "https://github.com/kenoxa/svelkit#readme"

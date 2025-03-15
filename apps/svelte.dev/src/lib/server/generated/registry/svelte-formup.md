@@ -1,10 +1,10 @@
 ---
 name: "svelte-formup"
-description: "form helpers for svelte"
+description: "Provides form helpers for Svelte, including validation with Yup."
 repo_url: "https://github.com/kenoxa/svelte-formup"
 author: "Sascha Tandel"
 homepage: "https://svelte-formup.js.org"
-downloads: 21
+downloads: 17
 updated: "2020-07-13T10:36:44.595Z"
 github_stars: 3
 tags: 

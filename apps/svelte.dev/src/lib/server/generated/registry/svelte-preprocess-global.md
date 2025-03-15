@@ -1,6 +1,6 @@
 ---
 name: "svelte-preprocess-global"
-description: "Svelte preprocessor that applies the `:global()` directive to id, class, and data attribute selectors passed to Svelte components."
+description: "Apply :global() directive to id, class, and data attribute selectors."
 repo_url: "https://github.com/metonym/svelte-preprocess-global"
 author: "Eric Liu"
 homepage: "https://github.com/metonym/svelte-preprocess-global"

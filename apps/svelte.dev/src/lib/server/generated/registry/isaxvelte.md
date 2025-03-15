@@ -1,6 +1,6 @@
 ---
 name: "isaxvelte"
-description: "Iconsax for Svelte, based on iconsax"
+description: "Provide Iconsax icon library for Svelte and SvelteKit applications."
 repo_url: "https://github.com/RbnMach/isaxvelte"
 author: "RubenMach"
 homepage: "https://github.com/RbnMach/isaxvelte#readme"

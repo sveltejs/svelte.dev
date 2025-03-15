@@ -1,8 +1,8 @@
 ---
 name: "svelte-copyright"
-description: "A Svelte component to format and display a copyright notice."
+description: "Format and display copyright notices in Svelte components."
 author: "himynameisdave"
-downloads: 9
+downloads: 10
 updated: "2023-08-31T18:49:12.288Z"
 tags: 
   - ui

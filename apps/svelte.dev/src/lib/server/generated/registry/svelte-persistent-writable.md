@@ -1,6 +1,6 @@
 ---
 name: "svelte-persistent-writable"
-description: "A Svelte writable store that persists data. It supports local and session storage out-of-the-box and can easily be extended to target different storage mechanisms"
+description: "Create persistent writable stores for Svelte applications."
 repo_url: "https://github.com/cdellacqua/svelte-persistent-writable"
 author: "Carlo Dell'Acqua"
 homepage: "https://github.com/cdellacqua/svelte-persistent-writable"

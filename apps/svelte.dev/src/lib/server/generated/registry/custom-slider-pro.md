@@ -1,6 +1,6 @@
 ---
 name: "custom-slider-pro"
-description: "A customizable slider component for SvelteKit with multiple shapes and styles"
+description: "Create customizable slider components for SvelteKit."
 repo_url: "https://github.com/Civoremo/custom-slider-pro"
 author: "Civoremon"
 homepage: "https://custom-slider-pro.netlify.app/"

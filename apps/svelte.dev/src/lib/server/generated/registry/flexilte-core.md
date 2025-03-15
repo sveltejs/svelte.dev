@@ -1,10 +1,10 @@
 ---
 name: "@flexilte/core"
-description: "A SvelteKit layout library."
+description: "Generate Svelte layouts from JSON, supports custom components."
 repo_url: "https://github.com/flexilte/flexilte"
 author: "borgmon"
 homepage: "https://flexilte.github.io"
-downloads: 2
+downloads: 1
 dependents: 1
 updated: "2024-11-20T03:33:24.150Z"
 github_stars: 1

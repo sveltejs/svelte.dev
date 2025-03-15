@@ -1,6 +1,6 @@
 ---
 name: "@luxchanlu/simple-svelte-autocomplete"
-description: "Autocomplete / Select / Typeahead component made with Svelte 3"
+description: "Creates autocomplete / select / typeahead components for Svelte."
 repo_url: "https://github.com/pstanoev/simple-svelte-autocomplete"
 author: "hugome"
 homepage: "https://github.com/pstanoev/simple-svelte-autocomplete#readme"

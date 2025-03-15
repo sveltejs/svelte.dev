@@ -1,10 +1,11 @@
 ---
 name: "supabase-ui-svelte"
-description: "- Login via OAUTH providers: Google, Facebook, Twitter, Github, Azure, Gitlab, Bitbucket - Login and signup via email/password - Login via magic link - Password recovery - Password reset"
+description: "Offers UI components for Supabase authentication in Svelte apps."
 author: "joshnuss"
-downloads: 5
+downloads: 1
 updated: "2021-05-12T08:08:41.756Z"
 tags: 
-  - auth
   - ui
+  - auth
+  - component-library
 ---

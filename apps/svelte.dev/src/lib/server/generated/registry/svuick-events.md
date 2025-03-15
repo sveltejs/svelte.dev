@@ -1,6 +1,6 @@
 ---
 name: "@svuick/events"
-description: "npm (scoped)"
+description: "Provides event handling utilities for Svelte and SvelteKit projects."
 repo_url: "https://gitlab.com/david-plugge/svuick"
 author: "davidplugge"
 homepage: "https://gitlab.com/david-plugge/svuick#readme"

@@ -1,6 +1,6 @@
 ---
 name: "@bithero/svelte-datatable-bs"
-description: "Svelte component for a simple datatable with styles to match bootstrap"
+description: "Create simple datatables with Bootstrap styling for Svelte applications."
 repo_url: "https://codeark.it/bithero-agency-js/svelte-datatable-bs"
 author: "Mai-Lapyst"
 homepage: "https://codeark.it/bithero-agency-js/svelte-datatable-bs"

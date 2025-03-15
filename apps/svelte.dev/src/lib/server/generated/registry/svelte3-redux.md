@@ -1,6 +1,6 @@
 ---
 name: "svelte3-redux"
-description: "Redux for Svelte 3"
+description: "Integrate Redux state management into Svelte 3 applications."
 repo_url: "https://github.com/dai-shi/svelte3-redux"
 author: "Daishi Kato"
 homepage: "https://github.com/dai-shi/svelte3-redux#readme"

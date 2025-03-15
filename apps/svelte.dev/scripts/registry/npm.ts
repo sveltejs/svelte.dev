@@ -367,6 +367,8 @@ export interface SearchOptions {
 
 	/** Whether to use the cache of markdown files */
 	skip_cached?: boolean;
+
+	exclude_official?: boolean;
 }
 
 export type StructuredInterimPackage = {
@@ -410,7 +412,8 @@ export async function* stream_search_by_keywords({
 	limit = Infinity,
 	fetch = { package_json: true },
 	batch_size = 10,
-	skip_cached = false
+	skip_cached = false,
+	exclude_official = true
 }: SearchOptions): AsyncGenerator<Map<string, StructuredInterimPackage>> {
 	let total_runs = 0;
 	let collected_packages = new Map<string, StructuredInterimPackage>();
@@ -445,6 +448,7 @@ export async function* stream_search_by_keywords({
 				// Process each package
 				for (const obj of results.objects) {
 					if (skip_cached && (await PackageCache.has(obj.package.name))) continue;
+
 					// Check if we've seen this package before (either in current batch or previous batches)
 					if (all_seen_packages.has(obj.package.name)) {
 						console.log(
@@ -469,7 +473,7 @@ export async function* stream_search_by_keywords({
 					// Skip if we've reached the limit
 					if (total_runs >= limit) break;
 
-					// Exclude 'svelte' and '@sveltejs/kit' package
+					// Exclude 'svelte' and Kit
 					if (obj.package.name === 'svelte' || obj.package.name === '@sveltejs/kit') {
 						continue;
 					}

@@ -1,6 +1,6 @@
 ---
 name: "@spezifisch/svelte-media"
-description: "Svelte.js util to easily observe media queries as a reactive store"
+description: "Observe media queries as reactive store for Svelte apps."
 repo_url: "https://github.com/cibernox/svelte-media"
 author: "Miguel Camba"
 homepage: "https://github.com/cibernox/svelte-media#readme"

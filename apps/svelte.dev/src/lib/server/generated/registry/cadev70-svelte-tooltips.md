@@ -1,6 +1,6 @@
 ---
 name: "@cadev70/svelte-tooltips"
-description: "A svelte tooltips using action wrapper"
+description: "Create tooltips using action wrapper for Svelte components."
 repo_url: "https://github.com/cadev70/svelte-tooltips"
 author: "cadev70"
 homepage: "https://github.com/cadev70/svelte-tooltips#readme"

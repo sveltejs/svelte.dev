@@ -1,13 +1,13 @@
 ---
 name: "@sveltejs/vite-plugin-svelte-inspector"
-description: "A Svelte inspector plugin for Vite."
+description: "Inspect Svelte components directly within browser, aiding development."
 repo_url: "https://github.com/sveltejs/vite-plugin-svelte"
 author: "dominikg"
 homepage: "https://github.com/sveltejs/vite-plugin-svelte#readme"
-downloads: 508021
+downloads: 507224
 dependents: 2
 updated: "2024-11-26T14:41:47.066Z"
-github_stars: 897
+github_stars: 899
 tags: 
   - tooling
 ---

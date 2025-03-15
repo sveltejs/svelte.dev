@@ -1,10 +1,10 @@
 ---
 name: "svelte-i18next"
-description: "Svelte wrapper for i18next"
+description: "Svelte wrapper for i18next, observes i18next events."
 repo_url: "https://github.com/NishuGoel/svelte-i18next"
 author: "Nishu Goel"
 homepage: "https://github.com/NishuGoel/svelte-i18next"
-downloads: 6583
+downloads: 6399
 dependents: 1
 updated: "2023-10-19T07:46:00.728Z"
 github_stars: 52

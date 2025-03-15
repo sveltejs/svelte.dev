@@ -1,6 +1,6 @@
 ---
 name: "@calle.wester/svelte-adapter-bun"
-description: "Adapter for SvelteKit apps that generates a standalone Bun.js server."
+description: "Generate standalone Bun.js server for SvelteKit applications."
 repo_url: "https://github.com/calle/svelte-adapter-bun"
 author: "Calle Wester"
 homepage: "https://github.com/calle/svelte-adapter-bun#readme"

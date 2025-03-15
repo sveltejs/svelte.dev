@@ -1,0 +1,13 @@
+---
+name: "@responsive-ui/bottom-bar"
+description: "Create bottom bar component for responsive Svelte UI."
+repo_url: "https://github.com/wetix/responsive-ui"
+author: "Si3nLoong"
+homepage: "https://github.com/wetix/responsive-ui/blob/main/components/bottom-bar#README.md"
+downloads: 6
+dependents: 1
+updated: "2024-04-23T07:50:59.689Z"
+github_stars: 19
+tags: 
+  - ui
+---

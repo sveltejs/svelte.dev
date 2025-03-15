@@ -1,6 +1,6 @@
 ---
 name: "@ikun-ui/backtop"
-description: "ERROR: No README data found!"
+description: "Create back-to-top button component for Svelte applications."
 author: "baiwusanyu"
 downloads: 1
 dependents: 1

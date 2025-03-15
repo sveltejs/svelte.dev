@@ -1,10 +1,10 @@
 ---
 name: "svelte-droplet"
-description: "File dropzone for Svelte"
+description: "Implement file dropzone functionality for Svelte applications."
 repo_url: "https://github.com/probablykasper/svelte-droplet"
 author: "Kasper Henningsen"
 homepage: "https://svelte-droplet.kasper.space"
-downloads: 101
+downloads: 182
 updated: "2024-10-23T05:24:38.827Z"
 github_stars: 34
 tags: 

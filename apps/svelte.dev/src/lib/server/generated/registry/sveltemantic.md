@@ -1,6 +1,6 @@
 ---
 name: "sveltemantic"
-description: "Fomantic-UI components for Svelte 3"
+description: "Provides Fomantic-UI components for Svelte 3."
 repo_url: "https://github.com/titans-inc/sveltemantic"
 author: "Devi Prasad"
 homepage: "https://github.com/titans-inc/sveltemantic#readme"

@@ -1,6 +1,6 @@
 ---
 name: "@spaceavocado/svelte-router"
-description: "Simple Svelte Router for Single Page Applications (SPA). Features include: Nested route/view mapping, Modular, component-based router configuration, Route params, query, wildcards, Navigation guards for navigation control, Links with automatic active CSS classes, HTML5 history mode or hash mode"
+description: "Create Svelte router for single-page applications."
 repo_url: "https://github.com/spaceavocado/svelte-router"
 author: "David Horak"
 homepage: "https://github.com/spaceavocado/svelte-router"

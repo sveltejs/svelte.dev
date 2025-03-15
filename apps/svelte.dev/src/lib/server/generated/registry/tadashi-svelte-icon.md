@@ -1,6 +1,6 @@
 ---
 name: "@tadashi/svelte-icon"
-description: "Svelte component"
+description: "Render icons in Svelte applications."
 repo_url: "https://github.com/lagden/svelte-icon"
 author: "Thiago Lagden"
 homepage: "https://github.com/lagden/svelte-icon#readme"

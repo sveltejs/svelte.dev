@@ -1,6 +1,6 @@
 ---
 name: "svelte-paginate-ts"
-description: "Svelte Paginate in TS. Forked from https://github.com/TahaSh/svelte-paginate"
+description: "Paginate data in Svelte applications using TypeScript."
 repo_url: "https://github.com/bas-baskara/svelte-paginate-ts"
 author: "bas_baskara"
 homepage: "https://github.com/bas-baskara/svelte-paginate-ts#readme"

@@ -1,13 +1,13 @@
 ---
 name: "@dylanvann/mdsvex"
-description: "Markdown preprocessor for Svelte"
+description: "Process Markdown files with Svelte components."
 repo_url: "https://github.com/pngwn/MDsveX"
 author: "pngwn"
 homepage: "https://github.com/pngwn/MDsveX#readme"
-downloads: 2
+downloads: 5
 updated: "2020-09-25T00:38:20.819Z"
-github_stars: 2599
+github_stars: 2600
 tags: 
-  - content
   - preprocessor
+  - content
 ---

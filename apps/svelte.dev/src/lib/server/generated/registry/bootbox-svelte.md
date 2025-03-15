@@ -1,6 +1,6 @@
 ---
 name: "bootbox-svelte"
-description: "A svelte version of bootbox package"
+description: "Create Bootstrap-based alert, confirm, and prompt dialogs in Svelte."
 repo_url: "https://github.com/tmalahie/bootbox-svelte"
 author: "Timothé Malahieude"
 homepage: "https://github.com/tmalahie/bootbox-svelte#readme"

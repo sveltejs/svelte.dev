@@ -1,6 +1,6 @@
 ---
 name: "@epicenterhq/svelte-persisted-writable"
-description: "An extension of Svelte's writable that saves and restores data from localstorage automatically. Fork of @efstajas/svelte-stored-writable with better error handling and parameters as destructured object"
+description: "Extend Svelte's writable to persist data in local storage automatically."
 repo_url: "https://github.com/braden-w/svelte-persisted-writable"
 author: "Braden Wong"
 homepage: "https://github.com/braden-w/svelte-persisted-writable#readme"

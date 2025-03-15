@@ -1,6 +1,6 @@
 ---
 name: "@sveadmin/common"
-description: "Helper components to dispay dynamic administration pages with Svelte"
+description: "Provide helper components for building dynamic Svelte admin pages."
 repo_url: "https://github.com/sveadmin/common"
 author: "mkufferstein"
 homepage: "https://github.com/sveadmin/common#readme"

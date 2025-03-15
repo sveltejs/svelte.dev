@@ -1,6 +1,6 @@
 ---
 name: "svelte-window-system"
-description: "Simple customizable window system for Svelte"
+description: "Create a customizable window system for Svelte applications."
 repo_url: "https://github.com/DoutLaser/svelte-window-system"
 author: "Vidmantas Luneckas"
 homepage: "https://github.com/DonutLaser/svelte-window-system"

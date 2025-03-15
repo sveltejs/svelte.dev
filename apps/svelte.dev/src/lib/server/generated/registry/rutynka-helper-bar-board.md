@@ -1,6 +1,6 @@
 ---
 name: "@rutynka/helper-bar-board"
-description: "A simple Svelte app - sticky bar with timer & counter"
+description: "Creates sticky bar with timer and counter for Svelte apps."
 repo_url: "https://github.com/rutynka/helper-bar-board"
 author: "ru7ynk4"
 homepage: "https://github.com/rutynka/helper-bar-board"

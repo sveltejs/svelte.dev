@@ -1,6 +1,6 @@
 ---
 name: "svelte-float-window"
-description: "A Svelte component for a moveable floating window - with a slot and a resize corner."
+description: "Create moveable floating windows with slots and resize corners in Svelte."
 repo_url: "https://github.com/copious-world/svelte-float-window"
 author: "Richard Leddy"
 homepage: "http://www.copious.world"

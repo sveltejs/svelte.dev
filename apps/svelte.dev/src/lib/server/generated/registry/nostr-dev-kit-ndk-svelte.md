@@ -1,9 +1,10 @@
 ---
 name: "@nostr-dev-kit/ndk-svelte"
-description: "This package provides convenience functionalities to make usage of NDK with Svelte nicer."
+description: "Integrate Nostr with Svelte using NDK."
 author: "pablof7z"
-downloads: 39
+downloads: 147
 updated: "2025-03-06T14:57:54.028Z"
 tags: 
+  - utility
   - integration
 ---

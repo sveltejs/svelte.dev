@@ -1,12 +1,12 @@
 ---
 name: "svelte-router-spa"
-description: "A full featured router component for Svelte and your Single Page Applications."
+description: "Create single-page applications with Svelte, manage routes."
 repo_url: "https://github.com/jorgegorka/svelte-router"
 author: "Jorge Alvarez"
 homepage: "https://github.com/jorgegorka/svelte-router/blob/master/README.md"
-downloads: 242
+downloads: 369
 updated: "2023-09-14T10:24:36.330Z"
-github_stars: 531
+github_stars: 530
 tags: 
   - router
 ---

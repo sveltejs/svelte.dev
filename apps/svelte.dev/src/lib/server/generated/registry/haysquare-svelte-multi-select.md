@@ -1,6 +1,6 @@
 ---
 name: "@haysquare/svelte-multi-select"
-description: "SvelteKit Custom MultiSelect Component."
+description: "Create multi-select dropdown components for SvelteKit applications."
 repo_url: "https://github.com/haysquareA/svelte-multiselect"
 author: "Ayorinde Abdulafeez"
 homepage: "https://github.com/haysquareA/svelte-multiselect#readme"

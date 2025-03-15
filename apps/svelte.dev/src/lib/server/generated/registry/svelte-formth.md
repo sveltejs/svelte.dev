@@ -1,6 +1,6 @@
 ---
 name: "svelte-formth"
-description: "Svelte Form library"
+description: "Create Svelte forms with validators, hints, and automatic bindings."
 repo_url: "https://github.com/Marnes/svelte-use-form"
 author: "Marnes Prinsloo"
 homepage: "https://github.com/Marnes/svelte-use-form#readme"

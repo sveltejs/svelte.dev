@@ -1,6 +1,6 @@
 ---
 name: "@sveltevk/vksui"
-description: "VKSUI library"
+description: "Offers a library of adaptive Svelte components for VK Mini Apps."
 repo_url: "https://github.com/sveltevk/VKSUI"
 author: "Daniil Suvorov"
 homepage: "https://sveltevk.github.io/VKSUI"

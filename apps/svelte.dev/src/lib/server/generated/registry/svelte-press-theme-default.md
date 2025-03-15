@@ -1,6 +1,6 @@
 ---
 name: "@svelte-press/theme-default"
-description: "The default theme for sveltepress"
+description: "Provides default theme for SveltePress documentation sites."
 repo_url: "https://github.com/Blackman99/sveltepress"
 author: "Dongsheng Zhao"
 homepage: "https://sveltepress.site/"

@@ -1,6 +1,6 @@
 ---
 name: "@ikun-ui/rate"
-description: "ERROR: No README data found!"
+description: "Provides rate component for Svelte applications."
 author: "baiwusanyu"
 downloads: 1
 dependents: 1

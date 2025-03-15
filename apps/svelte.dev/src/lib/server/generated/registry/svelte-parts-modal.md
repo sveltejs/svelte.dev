@@ -1,6 +1,6 @@
 ---
 name: "@svelte-parts/modal"
-description: "Simple svelte modal"
+description: "Create simple modal component for Svelte applications."
 repo_url: "https://github.com/idris-maps/svelte-parts"
 author: "idris-maps"
 homepage: "https://github.com/idris-maps/svelte-parts#readme"

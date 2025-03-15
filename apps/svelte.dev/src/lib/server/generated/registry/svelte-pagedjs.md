@@ -1,6 +1,6 @@
 ---
 name: "svelte-pagedjs"
-description: "A Svelte wrapper for PagedJS, providing easy pagination and print layout capabilities for your Svelte applications."
+description: "Implement pagination and print layout capabilities for Svelte apps."
 repo_url: "https://github.com/codebygio/svelte-pagedjs"
 author: "Giovani Rodriguez"
 homepage: "https://codebygio.com/libs/svelte-pagedjs"

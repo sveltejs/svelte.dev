@@ -1,6 +1,6 @@
 ---
 name: "rdfjs-svelte"
-description: "Svelte components for RDFJS objects such as Literals, NamedNodes and Datasets."
+description: "Create Svelte components for RDFJS objects."
 author: "retog"
 updated: "2020-11-01T21:07:17.259Z"
 tags: 

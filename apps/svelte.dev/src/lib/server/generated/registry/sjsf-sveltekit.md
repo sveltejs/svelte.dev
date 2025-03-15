@@ -1,13 +1,13 @@
 ---
 name: "@sjsf/sveltekit"
-description: "The SvelteKit integration for svelte-jsonschema-form"
+description: "Integrate svelte-jsonschema-form with SvelteKit applications."
 repo_url: "https://github.com/x0k/svelte-jsonschema-form"
 author: "x0k"
 homepage: "https://x0k.github.io/svelte-jsonschema-form/"
-downloads: 112
+downloads: 122
 updated: "2025-01-28T22:50:21.963Z"
 github_stars: 39
 tags: 
   - integration
-  - tooling
+  - utility
 ---

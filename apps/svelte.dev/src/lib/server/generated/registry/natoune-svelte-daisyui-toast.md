@@ -1,6 +1,6 @@
 ---
 name: "@natoune/svelte-daisyui-toast"
-description: "A simple toaster component for Svelte with DaisyUI"
+description: "Create toast notification components for Svelte with DaisyUI."
 repo_url: "https://github.com/Natoune/svelte-daisyui-toast"
 author: "Natan Chiodi"
 homepage: "https://natoune.github.io/svelte-daisyui-toast"

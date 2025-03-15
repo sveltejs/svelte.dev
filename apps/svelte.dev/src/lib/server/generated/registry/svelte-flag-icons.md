@@ -1,10 +1,10 @@
 ---
 name: "svelte-flag-icons"
-description: "Flag icon components for Sveltejs"
+description: "Display flag icon components for Sveltejs."
 repo_url: "https://github.com/shinokada/svelte-flag-icons"
 author: "Shinichi Okada"
 homepage: "https://svelte-flag-icons.codewithshin.com/"
-downloads: 3301
+downloads: 4441
 dependents: 2
 updated: "2024-10-25T14:49:30.769Z"
 github_stars: 11

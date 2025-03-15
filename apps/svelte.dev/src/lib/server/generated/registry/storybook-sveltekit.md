@@ -1,13 +1,13 @@
 ---
 name: "@storybook/sveltekit"
-description: "Storybook for SvelteKit"
+description: "Develop and document SvelteKit components with Storybook."
 repo_url: "https://github.com/storybookjs/storybook"
 author: "ndelangen"
 homepage: "https://github.com/storybookjs/storybook/tree/next/code/frameworks/sveltekit"
-downloads: 43730
-dependents: 2
-updated: "2025-03-05T16:45:16.884Z"
-github_stars: 86086
+downloads: 43838
+dependents: 1
+updated: "2025-03-15T03:40:45.117Z"
+github_stars: 86097
 tags: 
   - tooling
 ---

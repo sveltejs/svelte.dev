@@ -1,13 +1,12 @@
 ---
 name: "svelte-adapter-firebase"
-description: "Adapter for Svelte apps that integrates a Firebase Hosting Website with Cloud Functions or Cloud Run for server side rendering."
+description: "Adapts SvelteKit apps for deployment Firebase Hosting and Cloud Functions."
 repo_url: "https://github.com/jthegedus/svelte-adapter-firebase"
 author: "James Hegedus"
 homepage: "https://github.com/jthegedus/svelte-adapter-firebase#readme"
-downloads: 26
+downloads: 77
 updated: "2023-01-17T02:32:22.230Z"
 github_stars: 288
 tags: 
   - adapter
-  - server
 ---

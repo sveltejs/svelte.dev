@@ -1,6 +1,6 @@
 ---
 name: "web-clocks"
-description: "Web components showing an analogue clock and a digital clock known from Svelte examples."
+description: "Display analogue and digital clocks as Svelte web components."
 repo_url: "https://github.com/prantlf/web-clocks"
 author: "Ferdinand Prantl"
 homepage: "https://github.com/prantlf/web-clocks#readme"

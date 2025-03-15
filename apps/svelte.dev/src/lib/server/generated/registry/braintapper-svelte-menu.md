@@ -1,6 +1,6 @@
 ---
 name: "braintapper-svelte-menu"
-description: "Svelte component for menus"
+description: "Create menus with Svelte components."
 repo_url: "https://github.com/braintapper/braintapper-svelte-menu"
 author: "braintapper"
 homepage: "https://github.com/braintapper/braintapper-svelte-menu#readme"

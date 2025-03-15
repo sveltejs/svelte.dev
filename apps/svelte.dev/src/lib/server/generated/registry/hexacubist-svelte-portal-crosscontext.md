@@ -1,6 +1,6 @@
 ---
 name: "@hexacubist/svelte-portal-crosscontext"
-description: "Fork of romkor/svelte-portal"
+description: "Render Svelte components outside parent component's DOM."
 repo_url: "https://github.com/romkor/svelte-portal"
 author: "hexacubist"
 homepage: "https://github.com/romkor/svelte-portal#readme"

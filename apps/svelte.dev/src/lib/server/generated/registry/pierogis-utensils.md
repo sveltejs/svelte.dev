@@ -1,6 +1,6 @@
 ---
 name: "@pierogis/utensils"
-description: "a set of svelte components"
+description: "Provide a set of UI components for Svelte applications."
 repo_url: "https://github.com/pierogis/live"
 author: "ksmoore17"
 homepage: "https://utensils.pierogis.live"

@@ -1,0 +1,11 @@
+---
+name: "@dringtech/svelte-blocks"
+description: "Build Svelte libraries with components and utilities."
+repo_url: "https://github.com/dringtech/svelte-blocks"
+author: "Giles Dring"
+homepage: "https://github.com/dringtech/svelte-blocks#readme"
+downloads: 1
+updated: "2024-02-21T22:41:20.224Z"
+tags: 
+  - component-library
+---

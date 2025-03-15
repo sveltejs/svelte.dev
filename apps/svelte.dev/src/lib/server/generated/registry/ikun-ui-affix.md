@@ -1,6 +1,6 @@
 ---
 name: "@ikun-ui/affix"
-description: " "
+description: "Create affix components for Svelte applications."
 author: "baiwusanyu"
 downloads: 1
 dependents: 1

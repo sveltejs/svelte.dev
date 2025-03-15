@@ -1,6 +1,6 @@
 ---
 name: "@ikun-ui/avatar"
-description: "ERROR: No README data found!"
+description: "Create avatar components for Svelte."
 author: "baiwusanyu"
 downloads: 1
 dependents: 1

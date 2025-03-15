@@ -1,6 +1,6 @@
 ---
 name: "@farhansyah/imask-svelte"
-description: "Svelte input mask"
+description: "Provides input masking for Svelte applications."
 repo_url: "https://github.com/uNmAnNeR/imaskjs#master"
 author: "Alexey Kryazhev"
 homepage: "https://github.com/uNmAnNeR/imaskjs/tree/master#readme"

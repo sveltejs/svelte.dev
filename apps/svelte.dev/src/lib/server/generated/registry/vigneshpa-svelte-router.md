@@ -1,6 +1,6 @@
 ---
 name: "@vigneshpa/svelte-router"
-description: "A simple router for svelte using navaid"
+description: "Simple router for Svelte applications using navaid."
 repo_url: "https://github.com/vigneshpa/svelte-router"
 author: "vignesh paranthaman"
 homepage: "https://github.com/vigneshpa/svelte-router#readme"

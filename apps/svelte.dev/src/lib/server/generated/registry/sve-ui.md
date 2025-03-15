@@ -1,6 +1,6 @@
 ---
 name: "sve-ui"
-description: "Sve-UI is a collection of customizable UI components for Svelte applications. These components are designed to be easy to use and highly flexible, allowing developers to quickly build beautiful interfaces. Sve-UI includes buttons, forms, modals, and other"
+description: "Offer customizable UI components for Svelte applications, including buttons and forms."
 repo_url: "https://github.com/rodriabregu/sve-ui"
 author: "Rodrigo Abregu"
 homepage: "https://sveui.org/"

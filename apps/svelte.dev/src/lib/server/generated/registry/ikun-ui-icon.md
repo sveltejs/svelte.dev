@@ -1,6 +1,6 @@
 ---
 name: "@ikun-ui/icon"
-description: "ERROR: No README data found!"
+description: "Provide icon components for Svelte applications."
 author: "baiwusanyu"
 downloads: 9
 dependents: 66

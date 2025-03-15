@@ -1,6 +1,6 @@
 ---
 name: "svercle"
-description: "This is the Svercle. A small svelte component that produces a configurable superellipse approximation similar to a squircle. The component is based on this [REPL](https://svelte.dev/repl/2319271d93c34981aafce411f8345be8?version=3.18.2) (I have yet to find"
+description: "Generates a configurable superellipse approximation component for Svelte."
 repo_url: "https://github.com/aMediocreDad/svercle"
 author: "Filip Ambrosius"
 homepage: "https://github.com/aMediocreDad/svercle#readme"

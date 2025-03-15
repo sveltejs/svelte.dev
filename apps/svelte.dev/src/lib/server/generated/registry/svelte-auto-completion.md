@@ -1,6 +1,6 @@
 ---
 name: "svelte-auto-completion"
-description: "A svelte autocomplete component"
+description: "Provide autocomplete functionality for Svelte applications."
 repo_url: "https://github.com/jeremiedubuis/svelte-auto-complete"
 author: "Jérémie Dubuis"
 homepage: "https://github.com/jeremiedubuis/svelte-auto-complete#readme"

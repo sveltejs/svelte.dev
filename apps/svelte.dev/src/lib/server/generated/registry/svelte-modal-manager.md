@@ -1,10 +1,10 @@
 ---
 name: "svelte-modal-manager"
-description: "svelte-modal-manager is ..."
+description: "Manage modals in Svelte applications."
 author: "phi"
-downloads: 28
+downloads: 17
 dependents: 1
 updated: "2023-03-20T03:08:30.924Z"
 tags: 
-  - ui
+  - utility
 ---

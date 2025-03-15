@@ -1,6 +1,6 @@
 ---
 name: "@sinnerjoe/svelte-touch-datepicker"
-description: "Native like touch datepicker for Svelte"
+description: "Create native-like touch datepicker components for Svelte applications."
 repo_url: "https://github.com/sinnerJoe/svelte-touch-datepicker"
 author: "Radu Cebotari"
 homepage: "https://github.com/sinnerJoe/svelte-touch-datepicker"

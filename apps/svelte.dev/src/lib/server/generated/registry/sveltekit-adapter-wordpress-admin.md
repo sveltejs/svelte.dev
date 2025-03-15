@@ -1,6 +1,6 @@
 ---
 name: "sveltekit-adapter-wordpress-admin"
-description: "Build wordpress plugin admin interface with SvelteKit"
+description: "Adapt SvelteKit apps for WordPress plugin admin interfaces."
 repo_url: "https://github.com/lolcabanon/sveltekit-adapter-wordpress-admin"
 author: "Jules Luzy-Riopel"
 homepage: "https://github.com/lolcabanon/sveltekit-adapter-wordpress-admin#readme"

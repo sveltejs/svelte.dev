@@ -1,6 +1,6 @@
 ---
 name: "@fmented/scp"
-description: "A simple svelte component parser to get necessary info for documentation"
+description: "Parse Svelte files, extract props, slots, events, and methods for documentation."
 repo_url: "https://github.com/fmented/scp"
 author: "fauky"
 homepage: "https://github.com/fmented/scp/"

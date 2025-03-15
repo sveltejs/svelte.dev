@@ -1,10 +1,10 @@
 ---
 name: "heroicons-svelte"
-description: "The collection of beautiful hand-crafted SVG icons, by the makers of Tailwind CSS, packaged for Svelte apps."
+description: "Use Heroicons SVG icons in Svelte, include beautiful icons."
 repo_url: "https://github.com/travishorn/heroicons-svelte"
 author: "Travis Horn"
 homepage: "https://github.com/travishorn/heroicons-svelte#readme"
-downloads: 344
+downloads: 373
 updated: "2024-10-28T16:48:12.746Z"
 github_stars: 3
 tags: 

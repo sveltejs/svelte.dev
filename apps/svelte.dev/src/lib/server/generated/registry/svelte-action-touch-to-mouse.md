@@ -1,9 +1,9 @@
 ---
 name: "svelte-action-touch-to-mouse"
-description: "Svelte action that converts automatically touch events into mouse events"
+description: "Convert touch events into mouse events for Svelte applications."
 author: "Ignacio Bustos"
 homepage: "https://github.com/Egnus/svelte-action-touch-to-mouse"
-downloads: 10
+downloads: 9
 updated: "2023-11-17T09:43:58.180Z"
 tags: 
   - utility

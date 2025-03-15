@@ -1,6 +1,6 @@
 ---
 name: "@parkingboss/svelte-storage"
-description: "Cross Platform Permanent Storage stores (using store.js)"
+description: "Provide cross-platform persistent storage stores for Svelte apps."
 repo_url: "https://github.com/parkingboss/svelte-storage"
 author: "Parking Boss"
 homepage: "https://github.com/parkingboss/svelte-storage#readme"

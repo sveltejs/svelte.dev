@@ -1,6 +1,6 @@
 ---
 name: "@toryz/eslint-config-svelte"
-description: "toryz general eslint configuration for vue3"
+description: "Provide ESLint configuration for Svelte and Vite projects."
 author: "toryz"
 homepage: "https://github.com/zhou-tao/eslint-config"
 downloads: 1

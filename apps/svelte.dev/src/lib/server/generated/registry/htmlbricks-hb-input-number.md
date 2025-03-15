@@ -1,8 +1,8 @@
 ---
 name: "@htmlbricks/hb-input-number"
-description: "Svelte-Bootstrap Number Input WebComponent"
+description: "Create Svelte-Bootstrap Number Input WebComponent with various features."
 author: "Dario Caruso"
-downloads: 1018
+downloads: 22
 dependents: 4
 updated: "2025-03-09T03:10:30.434Z"
 tags: 

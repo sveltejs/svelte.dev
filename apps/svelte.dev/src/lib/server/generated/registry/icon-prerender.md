@@ -1,6 +1,6 @@
 ---
 name: "icon-prerender"
-description: "A plugin to prerender your SVG icons at compile time, rather than making the client fetch them during runtime."
+description: "Prerender SVG icons at build time for improved performance."
 repo_url: "https://github.com/Ernxst/icon-prerender"
 author: "Ernest Nkansah-Badu"
 homepage: "https://github.com/Ernxst/icon-prerender/packages/core"

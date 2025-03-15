@@ -1,6 +1,6 @@
 ---
 name: "feature-sliced-svelte"
-description: "Control of FSD with Svelte"
+description: "Implement Feature Sliced Design architecture in Svelte projects."
 author: "Mikhael Khrustik"
 updated: "2023-11-14T16:55:03.217Z"
 tags: 

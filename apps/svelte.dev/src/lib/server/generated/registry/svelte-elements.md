@@ -1,6 +1,6 @@
 ---
 name: "svelte-elements"
-description: "Component wrappers for built-in html elements"
+description: "Provide component wrappers for built-in HTML elements in Svelte."
 repo_url: "https://github.com/timhall/svelte-elements"
 author: "Tim Hall"
 homepage: "https://github.com/timhall/svelte-elements#readme"

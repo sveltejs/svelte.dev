@@ -1,10 +1,10 @@
 ---
 name: "@svelstack/state"
-description: "The only Svelte Promise/Future states you will need."
+description: "Provide Svelte Promise/Future states for managing asynchronous operations."
 repo_url: "https://github.com/svelstack/state"
 author: "martk"
 homepage: "https://github.com/svelstack/state"
-downloads: 8
+downloads: 4
 dependents: 1
 updated: "2025-01-14T18:59:32.106Z"
 tags: 

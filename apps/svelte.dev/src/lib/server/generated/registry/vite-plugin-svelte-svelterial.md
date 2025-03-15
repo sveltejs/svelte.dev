@@ -1,6 +1,6 @@
 ---
 name: "vite-plugin-svelte-svelterial"
-description: "A plugin for integration with Vite and SvelteKit."
+description: "Integrate Svelterial features into Vite and SvelteKit projects."
 repo_url: "https://github.com/svelterialjs/integrations"
 author: "TheComputerM"
 homepage: "https://github.com/svelterialjs/integrations/tree/main/packages/vite-plugin#readme"

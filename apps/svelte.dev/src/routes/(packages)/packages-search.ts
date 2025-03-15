@@ -7,7 +7,7 @@ const Index = (flexsearch.Index as FlexSearchIndex) ?? flexsearch;
 /** If the search is already initialized */
 export let is_inited = false;
 
-export const REGISTRY_PAGE_LIMIT = 100;
+export const REGISTRY_PAGE_LIMIT = 50;
 
 let index: FlexSearchIndex;
 
@@ -20,12 +20,12 @@ let next_id = 0;
 const EXACT_NAME_MATCH_BOOST = 10;
 const TAG_MATCH_BOOST = 5;
 const NAME_MATCH_BOOST = 3;
-const DEPENDENTS_BOOST = 1.5; // Highest weight for packages others depend on
-const GITHUB_STARS_BOOST = 1.2; // Medium weight for GitHub stars (between dependents and downloads)
+const DEPENDENTS_BOOST = 1.2; // Highest weight for packages others depend on
+const GITHUB_STARS_BOOST = 1.5; // Medium weight for GitHub stars (between dependents and downloads)
 const DOWNLOADS_BOOST = 1.0; // Lower weight for NPM downloads
 const RECENT_UPDATE_BOOST = 0.2;
-const OUTDATED_PENALTY = -3; // Substantial penalty for outdated packages
-const DEPRECATED_PENALTY = -6; // Severe penalty for deprecated packages
+const OUTDATED_PENALTY = -6; // Substantial penalty for outdated packages
+const DEPRECATED_PENALTY = -12; // Severe penalty for deprecated packages
 
 /**
  * Simple utility to strip HTML tags from text

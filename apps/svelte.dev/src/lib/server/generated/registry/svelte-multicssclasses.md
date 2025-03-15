@@ -1,6 +1,6 @@
 ---
 name: "svelte-multicssclasses"
-description: "svelte multiple css classes with one condition"
+description: "Apply multiple CSS classes conditionally in Svelte components."
 repo_url: "https://github.com/danielgaiduk/svelte-multicssclasses"
 author: "Daniel Gaiduk"
 homepage: "https://github.com/danielgaiduk/svelte-multicssclasses#readme"

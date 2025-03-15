@@ -1,6 +1,6 @@
 ---
 name: "jitsi-svelte"
-description: "Reactive svelte3 stores for lib-jitsi-meet"
+description: "Create Svelte stores and components for Jitsi video conferencing apps."
 repo_url: "https://github.com/relm-us/jitsi-svelte"
 author: "Duane Johnson"
 downloads: 1

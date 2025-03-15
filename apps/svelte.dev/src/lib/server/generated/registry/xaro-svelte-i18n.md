@@ -1,6 +1,6 @@
 ---
 name: "@xaro/svelte-i18n"
-description: "Svelte i18n library with dynamic add/change translations"
+description: "Provide i18n library for Svelte with dynamic translation management."
 repo_url: "https://github.com/vladimir-xaro/svelte-i18n"
 author: "Vladimir Slavgorodskiy"
 homepage: "https://github.com/vladimir-xaro/svelte-i18n#readme"

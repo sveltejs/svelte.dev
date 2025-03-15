@@ -1,6 +1,6 @@
 ---
 name: "@mashroom/mashroom-portal-demo-svelte-app"
-description: "A simple Svelte based SPA that can be used in the Mashroom Portal"
+description: "Provide Svelte-based SPA for Mashroom Portal integration."
 repo_url: "https://github.com/nonblocking/mashroom"
 author: "Milan Heimschild"
 homepage: "https://www.mashroom-server.com"

@@ -1,6 +1,6 @@
 ---
 name: "@robotpajamas/svelte-heroicons"
-description: "Svelte wrappers for the Heroicons library."
+description: "Provide Svelte wrappers for Heroicons, supporting outline and solid styles."
 repo_url: "https://github.com/robotpajamas/svelte-heroicons"
 author: "SJ"
 homepage: "https://github.com/robotpajamas/svelte-heroicons"

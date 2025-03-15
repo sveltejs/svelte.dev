@@ -1,6 +1,6 @@
 ---
 name: "xmodel-svelte"
-description: "OOP style state management for Svelte"
+description: "Implement OOP state management for Svelte applications."
 repo_url: "https://github.com/TishanV/xmodel#main"
 author: "tiscodes"
 homepage: "https://github.com/TishanV/xmodel/tree/main#readme"

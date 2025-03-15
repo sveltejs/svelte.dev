@@ -1,6 +1,6 @@
 ---
 name: "@svuick/modal"
-description: "Modal component for Svelte"
+description: "Create modal dialogs in Svelte applications."
 repo_url: "https://gitlab.com/david-plugge/svuick"
 author: "davidplugge"
 homepage: "https://gitlab.com/david-plugge/svuick#readme"

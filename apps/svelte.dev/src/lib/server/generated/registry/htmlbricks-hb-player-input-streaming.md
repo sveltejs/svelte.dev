@@ -1,10 +1,10 @@
 ---
 name: "@htmlbricks/hb-player-input-streaming"
-description: "Svelte-Bootstrap player-input-streaming"
+description: "Create player input web components for Svelte applications."
 author: "Dario Caruso"
-downloads: 252
+downloads: 1
 updated: "2025-03-09T03:10:32.684Z"
 tags: 
   - media
-  - component-library
+  - ui
 ---

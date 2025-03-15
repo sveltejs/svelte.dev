@@ -1,6 +1,6 @@
 ---
 name: "svelte-paginator"
-description: "Unopinionated pagination component for Svelte that supports a callback method for asynchronously loading elements and customizeable styling."
+description: "Implement unopinionated pagination component for Svelte."
 repo_url: "https://github.com/mpdaugherty/svelte-paginator"
 author: "Michael Daugherty & Laura Daugherty"
 homepage: "https://github.com/mpdaugherty/svelte-paginator#readme"

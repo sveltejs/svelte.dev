@@ -1,6 +1,6 @@
 ---
 name: "svelte-valibot-form"
-description: "A Svelte form validation library using Valibot."
+description: "Svelte form validation library using Valibot."
 repo_url: "https://github.com/matheustavarestrindade/svelte-valibot-form"
 author: "Matheus Tavares"
 homepage: "https://github.com/matheustavarestrindade/svelte-valibot-form"

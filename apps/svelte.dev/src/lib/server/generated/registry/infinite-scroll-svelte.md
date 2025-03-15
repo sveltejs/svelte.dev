@@ -1,6 +1,6 @@
 ---
 name: "infinite-scroll-svelte"
-description: "Wrapper that fires events when the user has scrolled it to the beginning or end"
+description: "Create infinite scroll wrapper for Svelte, trigger events on scroll."
 repo_url: "https://github.com/rust1cean/infinite-scroll-svelte"
 author: "nowaout"
 homepage: "https://github.com/rust1cean/infinite-scroll-svelte#readme"

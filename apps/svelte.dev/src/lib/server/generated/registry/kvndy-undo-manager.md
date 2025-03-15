@@ -1,6 +1,6 @@
 ---
 name: "@kvndy/undo-manager"
-description: "Undo and redo management for Preact and Solid Signals, Preact Signals for React, Svelte Stores, Vue Shallow Refs, and React Hooks"
+description: "Manage undo/redo functionality for Svelte stores and signals."
 repo_url: "https://gitlab.com/kevindoughty/undo-manager"
 author: "Kevin Doughty"
 homepage: "https://gitlab.com/kevindoughty/undo-manager#readme"

@@ -1,8 +1,8 @@
 ---
 name: "@htmlbricks/hb-paginate"
-description: "Svelte Boostrap Pagination WebComponent"
+description: "Create Svelte-Bootstrap Pagination WebComponent with various features."
 author: "Dario Caruso"
-downloads: 1002
+downloads: 22
 dependents: 4
 updated: "2025-03-09T03:10:33.825Z"
 tags: 

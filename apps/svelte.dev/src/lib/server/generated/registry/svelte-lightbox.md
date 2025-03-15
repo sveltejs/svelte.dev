@@ -1,10 +1,10 @@
 ---
 name: "svelte-lightbox"
-description: "Lightweight lightbox library for Svelte"
+description: "Create customizable lightbox galleries for Svelte with images and videos."
 repo_url: "https://github.com/Hejtmus/svelte-lightbox"
 author: "Filip Holčík"
 homepage: "https://svelte-lightbox.js.org"
-downloads: 703
+downloads: 848
 dependents: 1
 updated: "2024-11-17T15:54:05.444Z"
 github_stars: 52

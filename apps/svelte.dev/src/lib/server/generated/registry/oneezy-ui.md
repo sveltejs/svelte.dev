@@ -1,6 +1,6 @@
 ---
 name: "@oneezy/ui"
-description: "A UI library for Tailwind CSS v4 and Svelte v5"
+description: "UI library for Tailwind CSS v4 and Svelte v5."
 repo_url: "https://github.com/oneezy/ui"
 author: "oneezy"
 homepage: "https://github.com/oneezy/ui"

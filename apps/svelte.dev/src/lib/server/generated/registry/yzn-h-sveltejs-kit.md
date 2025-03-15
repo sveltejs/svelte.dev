@@ -1,12 +1,12 @@
 ---
 name: "@yzn-h/sveltejs-kit"
-description: "SvelteKit is the fastest way to build Svelte apps"
+description: "Provide SvelteKit framework and CLI tools."
 repo_url: "https://github.com/sveltejs/kit"
 author: "yzn-h"
 homepage: "https://svelte.dev"
-downloads: 3
+downloads: 2
 updated: "2025-01-25T11:39:42.094Z"
-github_stars: 19074
+github_stars: 19079
 tags: 
   - tooling
 ---

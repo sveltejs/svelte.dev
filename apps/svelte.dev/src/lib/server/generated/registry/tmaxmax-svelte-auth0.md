@@ -1,6 +1,6 @@
 ---
 name: "@tmaxmax/svelte-auth0"
-description: "Svelte Auth0 Component Library"
+description: "Provides Auth0 component library for Svelte."
 repo_url: "https://github.com/tmaxmax/svelte-auth0"
 author: "tmaxmax"
 homepage: "https://github.com/tmaxmax/svelte-auth0#readme"

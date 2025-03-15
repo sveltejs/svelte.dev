@@ -1,13 +1,12 @@
 ---
 name: "ctw-kit"
-description: "Custom components and utilities for Svelte and TailwindCSS (DaisyUI)"
+description: "Create custom components and utilities for Svelte and TailwindCSS."
 repo_url: "https://github.com/ctwhome/ctw-kit"
 author: "ctwhome"
 homepage: "https://github.com/ctwhome/ctw-kit#readme"
-downloads: 2
+downloads: 3
 updated: "2025-01-17T22:14:30.745Z"
 tags: 
   - component-library
-  - seo
   - utility
 ---

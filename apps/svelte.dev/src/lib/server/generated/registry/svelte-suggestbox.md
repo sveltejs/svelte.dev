@@ -1,6 +1,6 @@
 ---
 name: "svelte-suggestbox"
-description: "Autocomplete / Multiselect / Typeahead component made with Svelte"
+description: "Autocomplete, multiselect, and typeahead component for Svelte."
 repo_url: "https://github.com/Ascarbek/svelte-suggestbox"
 author: "Askarbek Zadauly"
 homepage: "https://github.com/Ascarbek/svelte-suggestbox#readme"

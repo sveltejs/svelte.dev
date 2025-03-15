@@ -1,13 +1,13 @@
 ---
 name: "@specialdoom/proi-ui"
-description: "yet another Svelte ui library"
+description: "Create UI components for Svelte applications."
 repo_url: "https://github.com/specialdoom/proi-ui"
 author: "specialdoom"
 homepage: "https://proi-ui.vercel.app"
-downloads: 5
+downloads: 3
 updated: "2023-10-28T08:08:56.095Z"
 github_stars: 141
 tags: 
-  - ui
   - component-library
+  - ui
 ---

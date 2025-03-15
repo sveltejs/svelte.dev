@@ -1,6 +1,6 @@
 ---
 name: "ivvy"
-description: "Form manager with dynamic type safe validators and i18n/l10n support."
+description: "Form manager with type-safe validators and i18n/l10n support."
 repo_url: "https://github.com/romelperez/ivvy"
 author: "romelperez"
 homepage: "https://github.com/romelperez/ivvy"

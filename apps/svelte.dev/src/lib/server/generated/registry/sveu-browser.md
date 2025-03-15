@@ -1,10 +1,10 @@
 ---
 name: "@sveu/browser"
-description: "A collection of browser utilities for Svelte"
+description: "Offer browser utilities for Svelte applications."
 repo_url: "https://github.com/svelte-u/browser"
 author: "Mohamed Nesredin"
 homepage: "https://github.com/svelte-u/browser#readme"
-downloads: 109
+downloads: 103
 dependents: 1
 updated: "2023-09-18T11:22:29.271Z"
 github_stars: 15

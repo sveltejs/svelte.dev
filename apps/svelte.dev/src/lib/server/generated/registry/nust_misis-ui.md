@@ -1,8 +1,8 @@
 ---
 name: "@nust_misis/ui"
-description: "University MISIS UI Components Library"
+description: "Offer University MISIS UI Components Library for Svelte."
 author: "Dmitriy Din"
-downloads: 55
+downloads: 126
 updated: "2025-03-02T16:53:08.960Z"
 tags: 
   - component-library

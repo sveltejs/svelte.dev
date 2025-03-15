@@ -1,6 +1,6 @@
 ---
 name: "@neesh-studio/svelte-portal"
-description: "Svelte component for rendering outside the DOM of parent component"
+description: "Render Svelte components outside parent component's DOM."
 repo_url: "https://github.com/neesh-studio/svelte-portal"
 author: "ocupe"
 homepage: "https://github.com/neesh-studio/svelte-portal#readme"

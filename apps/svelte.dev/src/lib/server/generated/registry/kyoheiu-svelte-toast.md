@@ -1,6 +1,6 @@
 ---
 name: "@kyoheiu/svelte-toast"
-description: "Yet another simple toast notifications"
+description: "Simple, elegant toast notification component for Svelte applications."
 repo_url: "https://github.com/kyoheiu/svelte-toast"
 author: "Kyohei Uto"
 homepage: "https://github.com/kyoheiu/svelte-toast#readme"

@@ -1,10 +1,10 @@
 ---
 name: "@zerodevx/svelte-toast"
-description: "Simple elegant toast notifications"
+description: "Toast notification component for Svelte, displaying messages."
 repo_url: "https://github.com/zerodevx/svelte-toast"
 author: "Jason Lee"
 homepage: "https://zerodevx.github.io/svelte-toast/"
-downloads: 17547
+downloads: 16620
 dependents: 18
 updated: "2024-09-21T07:08:28.020Z"
 github_stars: 866

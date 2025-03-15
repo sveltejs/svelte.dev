@@ -1,13 +1,13 @@
 ---
 name: "@sveltejs/adapter-auto"
-description: "Automatically chooses the SvelteKit adapter for your current environment, if possible."
+description: "Automatically choose SvelteKit adapter based on environment."
 repo_url: "https://github.com/sveltejs/kit"
 author: "rich_harris"
 homepage: "https://svelte.dev"
-downloads: 203432
+downloads: 201104
 dependents: 45
 updated: "2025-01-15T12:27:24.129Z"
-github_stars: 19074
+github_stars: 19079
 tags: 
   - adapter
 ---

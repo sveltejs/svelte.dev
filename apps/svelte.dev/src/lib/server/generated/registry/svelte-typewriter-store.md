@@ -1,6 +1,6 @@
 ---
 name: "svelte-typewriter-store"
-description: "The simplest way to get a rotating typewriter effect in svelte."
+description: "Create typewriter effect in Svelte with rotating words."
 repo_url: "https://github.com/paoloricciuti/svelte-typewriter-store"
 author: "Paolo Ricciuti"
 homepage: "https://github.com/paoloricciuti/svelte-typewriter-store#readme"

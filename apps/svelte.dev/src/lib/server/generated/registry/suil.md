@@ -1,6 +1,6 @@
 ---
 name: "suil"
-description: "Svelte UI Library. <https://suil.vercel.app/>"
+description: "Provides Svelte UI components for building applications."
 repo_url: "https://github.com/lemmon/suil"
 author: "lemmon"
 homepage: "https://suil.vercel.app"

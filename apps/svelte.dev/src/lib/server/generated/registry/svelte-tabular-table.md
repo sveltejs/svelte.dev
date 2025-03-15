@@ -1,6 +1,6 @@
 ---
 name: "svelte-tabular-table"
-description: "Fully-featured, lightweight table component for Svelte JS"
+description: "Create fully-featured, lightweight table component for Svelte apps."
 repo_url: "https://github.com/autr/svelte-tabular-table"
 author: "G.Sinnott"
 homepage: "https://autr.github.io/svelte-tabular-table"

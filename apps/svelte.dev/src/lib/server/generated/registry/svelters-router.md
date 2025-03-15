@@ -1,6 +1,6 @@
 ---
 name: "svelters-router"
-description: "A lightweight router component for svelte"
+description: "Implement lightweight routing for Svelte applications."
 repo_url: "https://github.com/svelters/svelters-router"
 author: "svelters"
 homepage: "https://github.com/svelters/svelters-router#readme"

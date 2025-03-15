@@ -1,6 +1,6 @@
 ---
 name: "@ikun-ui/input"
-description: "ERROR: No README data found!"
+description: "Create input components for Svelte with various customization options."
 author: "baiwusanyu"
 downloads: 2
 dependents: 5

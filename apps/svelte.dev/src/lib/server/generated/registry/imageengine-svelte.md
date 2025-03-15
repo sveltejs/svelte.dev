@@ -1,6 +1,6 @@
 ---
 name: "@imageengine/svelte"
-description: "Svelte components for seamless integration with ImageEngine"
+description: "Integrate optimized responsive images into Svelte applications."
 repo_url: "https://github.com/imgeng/imageengine-svelte"
 author: "Siva Sankar Reddy Bogala | sbogala@loginsoft.com | https://github.com/ssrbloginsoft"
 homepage: "https://github.com/imgeng/imageengine-svelte#readme"

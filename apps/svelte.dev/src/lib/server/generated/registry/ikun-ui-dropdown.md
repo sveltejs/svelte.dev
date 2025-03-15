@@ -1,6 +1,6 @@
 ---
 name: "@ikun-ui/dropdown"
-description: "ERROR: No README data found!"
+description: "Create dropdown component for Svelte applications."
 author: "baiwusanyu"
 downloads: 1
 dependents: 3

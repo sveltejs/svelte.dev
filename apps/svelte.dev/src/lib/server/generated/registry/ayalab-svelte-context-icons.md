@@ -1,8 +1,8 @@
 ---
 name: "@ayalab/svelte-context-icons"
-description: "Lightweight and configurable icons for Svelte"
+description: "Provide lightweight, configurable icons for Svelte apps."
 author: "Anton Aksionau"
-downloads: 2
+downloads: 1
 dependents: 1
 updated: "2024-02-29T21:24:06.555Z"
 tags: 

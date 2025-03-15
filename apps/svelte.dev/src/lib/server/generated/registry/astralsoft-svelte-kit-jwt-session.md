@@ -1,12 +1,13 @@
 ---
 name: "@astralsoft/svelte-kit-jwt-session"
-description: "Svelte-kit jwt session hook"
+description: "Handle JWT sessions in SvelteKit applications."
 repo_url: "https://github.com/astralyazilim/svelte_kit_jwt_session"
 author: "pisinsi"
 homepage: "https://github.com/astralyazilim/svelte_kit_jwt_session#readme"
-downloads: 5
+downloads: 1
 updated: "2022-11-18T16:13:20.258Z"
 tags: 
+  - utility
   - auth
   - server
 ---

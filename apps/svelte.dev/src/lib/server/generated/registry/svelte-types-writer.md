@@ -1,9 +1,10 @@
 ---
 name: "svelte-types-writer"
-description: "Export typescript types based form .svelte files based on svelte2tsx, which is used on vs code language-tools plugin."
+description: "Generate TypeScript declaration files from Svelte components."
 author: "Michael Lucht"
-downloads: 3
+downloads: 4
 updated: "2021-01-19T10:40:35.468Z"
 tags: 
   - tooling
+  - preprocessor
 ---

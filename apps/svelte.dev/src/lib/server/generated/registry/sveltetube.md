@@ -1,6 +1,6 @@
 ---
 name: "sveltetube"
-description: "A Svelte component for Youtube videos."
+description: "Embed YouTube videos in Svelte components with customizable options."
 repo_url: "https://github.com/bmehder/sveltetube"
 author: "bmehder"
 homepage: "https://github.com/bmehder/sveltetube#readme"

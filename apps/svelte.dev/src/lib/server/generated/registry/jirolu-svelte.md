@@ -1,11 +1,12 @@
 ---
 name: "jirolu-svelte"
-description: "This is a collection of components I use on a regular basis packaged up for use."
+description: "Offer collection of reusable Svelte UI components with TailwindCSS styling."
 repo_url: "https://github.com/arief-fajri/jirolu"
 author: "Arif Fajri"
 homepage: "https://github.com/arief-fajri/jirolu#readme"
+downloads: 3
 updated: "2023-11-13T20:50:41.268Z"
 tags: 
-  - component-library
   - ui
+  - component-library
 ---

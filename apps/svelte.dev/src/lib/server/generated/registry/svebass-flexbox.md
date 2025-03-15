@@ -1,6 +1,6 @@
 ---
 name: "@svebass/flexbox"
-description: "Responsive Svelte Box and Flex components built with Styled System and Emotion, heavily inspired by RebassJS."
+description: "Build responsive flexbox layouts for Svelte applications."
 author: "Tanner Marshall"
 downloads: 1
 dependents: 1

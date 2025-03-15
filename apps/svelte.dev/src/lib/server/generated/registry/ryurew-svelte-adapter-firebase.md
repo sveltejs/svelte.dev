@@ -1,6 +1,6 @@
 ---
 name: "ryurew-svelte-adapter-firebase"
-description: "Adapter for Svelte apps that integrates a Firebase Hosting Website with Cloud Functions or Cloud Run for server side rendering."
+description: "Integrate Svelte apps with Firebase Hosting and Cloud Functions."
 repo_url: "https://github.com/jthegedus/svelte-adapter-firebase"
 author: "James Hegedus"
 homepage: "https://github.com/jthegedus/svelte-adapter-firebase#readme"

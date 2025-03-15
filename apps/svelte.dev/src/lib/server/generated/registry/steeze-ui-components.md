@@ -1,6 +1,6 @@
 ---
 name: "@steeze-ui/components"
-description: "Components for SvelteKit Apps. Check out the [documentation](https://steeze-ui.com) for more info!"
+description: "Offer accessible, pre-styled, and themable UI components for SvelteKit apps."
 repo_url: "https://github.com/steeze-ui/components"
 author: "Justin Voitel"
 homepage: "https://steeze-ui.com"

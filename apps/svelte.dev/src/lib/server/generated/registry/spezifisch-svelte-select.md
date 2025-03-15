@@ -1,6 +1,6 @@
 ---
 name: "@spezifisch/svelte-select"
-description: "A <Select> component for Svelte apps"
+description: "Provides select/autocomplete component for Svelte apps."
 repo_url: "https://github.com/spezifisch/svelte-select"
 author: "rob-balfre"
 homepage: "https://github.com/spezifisch/svelte-select#readme"

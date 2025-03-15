@@ -1,6 +1,6 @@
 ---
 name: "@perfectthings/ui"
-description: "Perfect UI components"
+description: "Create perfect UI components for Svelte applications."
 repo_url: "https://github.com/perfect-things/ui"
 author: "tborychowski"
 homepage: "https://github.com/perfect-things/ui#readme"

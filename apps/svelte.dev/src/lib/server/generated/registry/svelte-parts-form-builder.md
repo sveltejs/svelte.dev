@@ -1,6 +1,6 @@
 ---
 name: "@svelte-parts/form-builder"
-description: "UI to create forms"
+description: "Build UI for creating Svelte form descriptions."
 repo_url: "https://github.com/idris-maps/svelte-parts"
 author: "idris-maps"
 homepage: "https://github.com/idris-maps/svelte-parts#readme"

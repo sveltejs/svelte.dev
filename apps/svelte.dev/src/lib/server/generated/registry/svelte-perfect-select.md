@@ -1,6 +1,6 @@
 ---
 name: "svelte-perfect-select"
-description: "## Install"
+description: "Create customizable select components for Svelte applications."
 repo_url: "https://github.com/ishansasika/svelte-perfect-select"
 author: "Ishan Karunaratne"
 homepage: "https://github.com/ishansasika/svelte-perfect-select#readme"

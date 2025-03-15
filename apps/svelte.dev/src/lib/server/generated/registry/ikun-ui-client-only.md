@@ -1,6 +1,6 @@
 ---
 name: "@ikun-ui/client-only"
-description: "Reading progress bar (Svelte/Web Component/Custom Element)"
+description: "Provide client-side only utilities for Svelte applications."
 author: "baiwusanyu"
 downloads: 3
 dependents: 5

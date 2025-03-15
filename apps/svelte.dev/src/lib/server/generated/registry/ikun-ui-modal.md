@@ -1,6 +1,6 @@
 ---
 name: "@ikun-ui/modal"
-description: "ERROR: No README data found!"
+description: "Build modal dialog components for Svelte applications."
 author: "baiwusanyu"
 downloads: 1
 dependents: 2

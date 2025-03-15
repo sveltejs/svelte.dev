@@ -1,6 +1,6 @@
 ---
 name: "@timojarv/svelte-select"
-description: "A <Select> component for Svelte apps"
+description: "Create select/autocomplete components for Svelte applications."
 repo_url: "https://rob-balfre@github.com/rob-balfre/svelte-select"
 author: "Robert Balfré"
 homepage: "https://github.com/rob-balfre/svelte-select#readme"

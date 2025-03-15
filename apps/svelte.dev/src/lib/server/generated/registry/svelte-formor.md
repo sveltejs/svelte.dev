@@ -1,6 +1,6 @@
 ---
 name: "svelte-formor"
-description: "Form validation for Svelte in Runes with Valibot."
+description: "Validate Svelte forms using runes and Valibot schemas."
 repo_url: "https://github.com/Vanilla-IceCream/svelte-formor"
 author: "Vanilla IceCream"
 homepage: "https://github.com/Vanilla-IceCream/svelte-formor#readme"

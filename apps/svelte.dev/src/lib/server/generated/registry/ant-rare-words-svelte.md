@@ -1,6 +1,6 @@
 ---
 name: "ant-rare-words-svelte"
-description: "生僻字输入组件 React 版"
+description: "Svelte component for inputting rare characters, supporting pinyin input."
 repo_url: "https://github.com/alipay/Z-RareCharacterSolution"
 author: "andyliwr"
 homepage: "https://github.com/alipay/Z-RareCharacterSolution#readme"

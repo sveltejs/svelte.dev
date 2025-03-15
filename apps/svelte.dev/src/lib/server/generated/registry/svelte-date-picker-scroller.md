@@ -1,6 +1,6 @@
 ---
 name: "svelte-date-picker-scroller"
-description: "A simple svelte scrollable date picker component. A native ios/android like date picker for the web"
+description: "Create scrollable date picker component for Svelte applications."
 repo_url: "https://github.com/jayeshpatil594/svelte-date-picker-scroller"
 author: "Jayesh Patil"
 homepage: "https://github.com/jayeshpatil594/svelte-date-picker-scroller"

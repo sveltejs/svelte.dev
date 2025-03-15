@@ -1,13 +1,13 @@
 ---
 name: "@imask/svelte"
-description: "Svelte input mask"
+description: "Mask input fields in Svelte apps."
 repo_url: "https://github.com/uNmAnNeR/imaskjs#master"
 author: "Alexey Kryazhev"
 homepage: "https://github.com/uNmAnNeR/imaskjs/tree/master#readme"
-downloads: 5364
+downloads: 6655
 dependents: 11
 updated: "2024-05-21T07:16:41.242Z"
 github_stars: 5031
 tags: 
-  - utility
+  - ui
 ---

@@ -1,6 +1,6 @@
 ---
 name: "@willingtonortiz/svelte-simple-icons"
-description: "Open source icons for your next Svelte project."
+description: "Render Simple Icons in Svelte projects."
 repo_url: "https://github.com/willingtonortiz/svelte-simple-icons"
 author: "Willington Ortiz"
 homepage: "https://github.com/willingtonortiz/svelte-simple-icons#readme"

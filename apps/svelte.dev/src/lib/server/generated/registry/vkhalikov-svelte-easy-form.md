@@ -1,6 +1,6 @@
 ---
 name: "@vkhalikov/svelte-easy-form"
-description: "A simple, easy to use form state and validation handler for Svelte"
+description: "Handle form state and validation in Svelte applications."
 repo_url: "https://github.com/vkhalikov/svelte-easy-form"
 author: "Vadim Khalikov"
 homepage: "https://vkhalikov.github.io/svelte-easy-form"

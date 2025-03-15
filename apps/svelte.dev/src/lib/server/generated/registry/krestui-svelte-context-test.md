@@ -1,6 +1,6 @@
 ---
 name: "@krestui/svelte-context-test"
-description: "`@krestui/svelte-context-test` is a library to test components with svelte context, specifically `getContext()` API-s."
+description: "Test Svelte components using context, specifically getContext() API."
 repo_url: "https://github.com/krestui/svelte-context-test"
 author: "KrestUI"
 homepage: "https://github.com/krestui/svelte-context-test#readme"
