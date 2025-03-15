@@ -273,6 +273,15 @@ easing?: EasingFunction;
 ```
 
 <div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+strategy?: 'scale' | 'size';
+```
+
+<div class="ts-block-property-details"></div>
 </div></div>
 
 ## DrawParams
