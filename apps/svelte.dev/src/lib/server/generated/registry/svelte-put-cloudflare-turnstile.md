@@ -6,7 +6,7 @@ author: "Quang Phan"
 homepage: "https://svelte-put.vnphanquang.com/docs/cloudflare-turnstile"
 downloads: 375
 updated: "2025-03-02T01:29:40.018Z"
-github_stars: 899
+github_stars: 900
 tags: 
   - utility
 ---

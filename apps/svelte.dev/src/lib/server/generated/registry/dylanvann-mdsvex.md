@@ -6,7 +6,7 @@ author: "pngwn"
 homepage: "https://github.com/pngwn/MDsveX#readme"
 downloads: 5
 updated: "2020-09-25T00:38:20.819Z"
-github_stars: 2600
+github_stars: 2601
 tags: 
   - preprocessor
   - content

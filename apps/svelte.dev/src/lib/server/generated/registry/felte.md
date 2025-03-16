@@ -7,7 +7,7 @@ homepage: "https://felte.dev"
 downloads: 9486
 dependents: 8
 updated: "2024-10-29T20:35:41.611Z"
-github_stars: 1042
+github_stars: 1043
 tags: 
   - utility
 ---

@@ -7,7 +7,7 @@ homepage: "https://github.com/sveltejs/language-tools/tree/master/packages/types
 downloads: 10708
 dependents: 4
 updated: "2025-03-06T14:09:32.286Z"
-github_stars: 1291
+github_stars: 1292
 tags: 
   - tooling
 ---

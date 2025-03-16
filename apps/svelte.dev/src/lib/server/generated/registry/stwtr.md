@@ -1,0 +1,10 @@
+---
+name: "stwtr"
+description: "Generate Twitter card components for Svelte applications."
+repo_url: "https://github.com/csm-yujinkim/stwtr"
+author: "csm-yujinkim"
+homepage: "https://github.com/csm-yujinkim/stwtr#readme"
+updated: "2021-10-16T19:26:49.734Z"
+tags: 
+  - ui
+---

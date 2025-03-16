@@ -7,7 +7,7 @@ homepage: "https://github.com/sveltejs/language-tools#readme"
 downloads: 432592
 dependents: 69
 updated: "2025-03-06T14:20:23.951Z"
-github_stars: 1291
+github_stars: 1292
 tags: 
   - tooling
 ---

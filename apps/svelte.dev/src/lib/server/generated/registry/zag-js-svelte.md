@@ -7,7 +7,7 @@ homepage: "https://github.com/chakra-ui/zag#readme"
 downloads: 4535
 dependents: 5
 updated: "2025-03-14T17:30:40.983Z"
-github_stars: 4296
+github_stars: 4300
 tags: 
   - utility
 ---

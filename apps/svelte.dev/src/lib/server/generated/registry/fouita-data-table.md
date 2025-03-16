@@ -6,7 +6,7 @@ author: "fouita"
 homepage: "https://github.com/fouita/svelte-tw-data-table#readme"
 downloads: 5
 updated: "2021-02-20T16:58:36.814Z"
-github_stars: 25
+github_stars: 26
 tags: 
   - ui
 ---

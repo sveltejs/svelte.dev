@@ -6,7 +6,7 @@ author: "Segun Adebayo"
 homepage: "https://github.com/chakra-ui/ui-machines#readme"
 downloads: 2
 updated: "2022-01-14T22:32:22.889Z"
-github_stars: 4296
+github_stars: 4300
 tags: 
   - utility
 ---

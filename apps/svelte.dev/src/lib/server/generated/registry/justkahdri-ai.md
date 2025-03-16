@@ -6,7 +6,7 @@ author: "justkahdri"
 homepage: "https://sdk.vercel.ai/docs"
 downloads: 122
 updated: "2024-04-18T20:19:32.897Z"
-github_stars: 12652
+github_stars: 12673
 tags: 
   - integration
 ---

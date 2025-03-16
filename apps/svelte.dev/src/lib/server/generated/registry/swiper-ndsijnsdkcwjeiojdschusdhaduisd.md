@@ -6,7 +6,7 @@ author: "Vladimir Kharlampidi"
 homepage: "https://swiperjs.com"
 downloads: 14
 updated: "2021-07-15T14:23:07.886Z"
-github_stars: 40655
+github_stars: 40657
 tags: 
   - ui
 ---

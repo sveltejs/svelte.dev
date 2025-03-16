@@ -7,7 +7,7 @@ homepage: "https://svelte-put.vnphanquang.com/docs/clickoutside"
 downloads: 1708
 dependents: 7
 updated: "2024-10-25T05:17:14.604Z"
-github_stars: 899
+github_stars: 900
 tags: 
   - utility
   - dom

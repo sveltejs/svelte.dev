@@ -1,0 +1,10 @@
+---
+name: "use-valid-example"
+description: "Validate form inputs in Svelte applications."
+repo_url: "https://github.com/voscausa/use-validate-example"
+author: "voscausa"
+homepage: "https://github.com/voscausa/use-validate-example#readme"
+updated: "2022-01-02T09:13:19.680Z"
+tags: 
+  - utility
+---

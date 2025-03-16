@@ -6,7 +6,7 @@ author: "Carlo Dell'Acqua"
 homepage: "https://github.com/cdellacqua/svelte-stack-router"
 downloads: 2
 updated: "2021-11-16T22:04:58.397Z"
-github_stars: 42
+github_stars: 43
 tags: 
   - router
 ---

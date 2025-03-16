@@ -5,7 +5,7 @@ repo_url: "https://github.com/inertiajs/inertia"
 author: "nobbo"
 homepage: "https://inertiajs.com/"
 updated: "2024-06-24T11:26:04.392Z"
-github_stars: 6961
+github_stars: 6962
 tags: 
   - integration
 ---

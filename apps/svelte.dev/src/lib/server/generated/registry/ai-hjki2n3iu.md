@@ -5,7 +5,7 @@ repo_url: "https://github.com/vercel/ai"
 author: "quietshu"
 homepage: "https://sdk.vercel.ai/docs"
 updated: "2024-02-29T20:53:39.881Z"
-github_stars: 12652
+github_stars: 12673
 tags: 
   - utility
   - integration

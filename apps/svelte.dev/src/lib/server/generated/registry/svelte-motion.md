@@ -7,7 +7,7 @@ homepage: "https://github.com/micha-lmxt/svelte-motion#readme"
 downloads: 12791
 dependents: 2
 updated: "2024-02-27T20:12:47.917Z"
-github_stars: 617
+github_stars: 618
 tags: 
   - ui
 ---

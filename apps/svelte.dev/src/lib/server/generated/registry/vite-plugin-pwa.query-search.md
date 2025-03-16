@@ -6,7 +6,7 @@ author: "antfu"
 homepage: "https://github.com/vite-pwa/vite-plugin-pwa#readme"
 downloads: 24
 updated: "2024-10-15T01:29:05.388Z"
-github_stars: 3421
+github_stars: 3422
 tags: 
   - tooling
   - performance

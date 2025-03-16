@@ -6,7 +6,7 @@ author: "markeljan"
 homepage: "https://sdk.vercel.ai/docs"
 downloads: 1
 updated: "2025-02-26T14:15:38.591Z"
-github_stars: 12652
+github_stars: 12673
 tags: 
   - ui
 ---

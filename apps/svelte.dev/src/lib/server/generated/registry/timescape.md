@@ -7,7 +7,7 @@ homepage: "https://github.com/dan-lee/timescape#readme"
 downloads: 4348
 dependents: 6
 updated: "2024-12-25T11:05:58.735Z"
-github_stars: 178
+github_stars: 179
 tags: 
   - ui
   - utility

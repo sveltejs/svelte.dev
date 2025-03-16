@@ -7,7 +7,7 @@ homepage: "https://github.com/storybookjs/storybook/tree/next/code/frameworks/sv
 downloads: 43838
 dependents: 1
 updated: "2025-03-15T03:40:45.117Z"
-github_stars: 86097
+github_stars: 86102
 tags: 
   - tooling
 ---

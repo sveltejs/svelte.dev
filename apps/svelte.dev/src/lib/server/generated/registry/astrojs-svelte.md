@@ -7,7 +7,7 @@ homepage: "https://docs.astro.build/en/guides/integrations-guide/svelte/"
 downloads: 19290
 dependents: 11
 updated: "2025-03-11T09:24:38.037Z"
-github_stars: 49762
+github_stars: 49776
 tags: 
   - tooling
   - integration

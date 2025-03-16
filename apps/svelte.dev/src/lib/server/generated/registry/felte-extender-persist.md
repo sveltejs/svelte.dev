@@ -6,7 +6,7 @@ author: "Pablo Berganza"
 homepage: "https://github.com/pablo-abc/felte/tree/main/packages/extender-persist"
 downloads: 11
 updated: "2024-10-29T20:35:33.667Z"
-github_stars: 1042
+github_stars: 1043
 tags: 
   - utility
 ---
