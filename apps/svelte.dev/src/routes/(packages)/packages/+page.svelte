@@ -5,13 +5,15 @@
 	import { Box, ReactiveQueryParam } from '@sveltejs/site-kit/reactivity';
 	import { onMount } from 'svelte';
 	import SearchWorker from './packages-worker.ts?worker';
+	import { stopPropagation } from 'svelte/legacy';
+	import Pagination from './pagination.svelte';
 
 	const { data } = $props();
 
 	const query_qp = new ReactiveQueryParam<string>('query');
 	const page_qp = new ReactiveQueryParam<number>('page', {
 		encode: (v) => v.toString(),
-		decode: (v) => +v
+		decode: (v) => Math.max(1, v.length ? +v : 1)
 	});
 	const tags_qp = new ReactiveQueryParam<string[]>('tags', {
 		encode: (v) => v.join(','),
@@ -63,24 +65,25 @@
 		tags_qp.current;
 		page_qp.current;
 
-		if (ready) {
-			if (worker_first_run) {
-				worker_first_run = false;
-			} else {
-				const id = uid++;
-				pending.add(id);
+		if (!ready) return;
 
-				worker.postMessage({
-					type: 'get',
-					id,
-					payload: {
-						query: query_qp.current,
-						page: page_qp.current,
-						tags: $state.snapshot(tags_qp.current)
-					}
-				});
-			}
+		if (worker_first_run) {
+			worker_first_run = false;
+			return;
 		}
+
+		const id = uid++;
+		pending.add(id);
+
+		worker.postMessage({
+			type: 'get',
+			id,
+			payload: {
+				query: query_qp.current,
+				page: page_qp.current,
+				tags: $state.snapshot(tags_qp.current)
+			}
+		});
 	});
 
 	const number_formatter = Intl.NumberFormat();
@@ -103,7 +106,7 @@
 <h1 class="visually-hidden">Packages</h1>
 
 <div class="container">
-	<div class="toc-container" style="order: 1">
+	<div class="toc-container">
 		<nav aria-label="Docs">
 			<ul class="sidebar">
 				{#each [{ tag: 'all', short_title: 'All' }].concat(data.tags) as tag}
@@ -165,56 +168,48 @@
 					</li>
 				{/each}
 			</ul>
-
-			<div class="pagination">
-				{#each Array(total_pages.current), i}
-					{@const link = new URL(page.url)}
-					{@const _ = link.searchParams.set('page', i + '')}
-					<a
-						href={link.pathname + link.search}
-						aria-current={page_qp.current === i}
-						onclick={(e) => {
-							e.preventDefault();
-							page_qp.current = i;
-						}}>{i + 1}</a
-					>&nbsp;
-				{/each}
-			</div>
 		</nav>
 	</div>
 
 	<div class="page content">
 		<h1>Packages</h1>
 
-		<div class="posts">
-			<div class="controls">
-				<div class="input-group">
-					<input
-						use:forcefocus
-						onkeydown={(e) => {
-							if (e.key === 'Enter' && !e.isComposing) {
-								// const element = modal.querySelector('a[data-has-node]') as HTMLElement | undefined;
-								// element?.click();
-							}
-						}}
-						bind:value={query_qp.current}
-						placeholder="Search"
-						aria-describedby="search-description"
-						aria-label={'Search'}
-						spellcheck="false"
-					/>
+		<div class="controls">
+			<label class="input-group">
+				<Icon name="search" />
+				<input
+					use:forcefocus
+					onkeydown={(e) => {
+						if (e.key === 'Enter' && !e.isComposing) {
+							// const element = modal.querySelector('a[data-has-node]') as HTMLElement | undefined;
+							// element?.click();
+						}
+					}}
+					bind:value={query_qp.current}
+					placeholder="Search"
+					aria-describedby="search-description"
+					aria-label={'Search'}
+					spellcheck="false"
+				/>
 
-					<button aria-label="Clear" onclick={() => (query_qp.current = '')}>
-						<Icon name="close" />
-					</button>
-				</div>
+				<button
+					aria-label="Clear"
+					onclick={(e) => {
+						e.stopPropagation();
+						query_qp.current = '';
+					}}
+				>
+					<Icon name="close" />
+				</button>
+			</label>
 
-				<!-- <button class="raised" aria-label="Close" onclick={close}>
+			<!-- <button class="raised" aria-label="Close" onclick={close}>
 					<Icon name="close" />
 					<kbd>Esc</kbd>
 				</button> -->
-			</div>
+		</div>
 
+		<div class="posts">
 			{#each registry.current as pkg}
 				<article data-pubdate={pkg.updated}>
 					<a
@@ -284,6 +279,25 @@
 					</p>
 				</article>
 			{/each}
+		</div>
+
+		<div class="pagination">
+			<Pagination total={total_pages.current} bind:page={page_qp.current}>
+				{#snippet children(pageItem)}
+					{#if pageItem.type === 'ellipsis'}
+						<span>-</span>
+					{:else}
+						<button
+							aria-current={page_qp.current === pageItem.value}
+							onclick={() => {
+								page_qp.current = pageItem.value;
+							}}
+						>
+							{pageItem.value}
+						</button>
+					{/if}
+				{/snippet}
+			</Pagination>
 		</div>
 
 		<!-- <ul class="feed">
@@ -391,27 +405,43 @@
 	}
 
 	.input-group {
-		position: relative;
+		display: flex;
+		align-items: center;
+		gap: 1rem;
 		flex: 1;
 
+		border-radius: 0.5rem;
+		padding: 0.5rem 0.5rem 0.5rem 0rem;
+		margin-block-start: 1rem;
+
+		position: relative;
+
+		&:has(:focus-visible) {
+			outline: 2px solid var(--sk-fg-accent);
+			outline-offset: 4px;
+		}
+
+		/* Border that is not rounded */
+		&::after {
+			content: '';
+			position: absolute;
+			inset-block-end: 0;
+			inset-inline: 0;
+			height: 1px;
+			background: var(--sk-border);
+		}
+
 		input {
-			font: var(--sk-font-ui-large);
+			font: var(--sk-font-ui-medium);
 			width: 100%;
-			padding: var(--padding) 6rem var(--padding) calc(var(--padding) - 0.5rem);
-			height: 6rem;
-			border: none;
-			flex-shrink: 0;
 			color: var(--sk-fg-1);
-			border-bottom: 1px solid var(--sk-border);
 			background: inherit;
+			border: none;
+			outline: none;
 
 			&::placeholder {
 				color: var(--sk-fg-4);
 				opacity: 0.5;
-			}
-
-			&:focus-visible {
-				outline-offset: -2px;
 			}
 		}
 
@@ -425,13 +455,19 @@
 
 			&:hover,
 			&:focus {
-				color: var(--sk-fg-3);
+				color: var(--sk-fg-1);
 			}
 
 			&:focus-visible {
 				outline-offset: -2px;
 			}
 		}
+	}
+
+	.posts {
+		display: flex;
+		flex-direction: column;
+		margin-block-start: 4rem;
 	}
 
 	h2 {
@@ -500,12 +536,20 @@
 
 	.pagination {
 		display: flex;
+		justify-content: center;
 
-		a {
+		span {
+			opacity: 0.5;
+		}
+
+		button,
+		span {
+			width: 2rem;
+			text-align: center;
 			font: var(--sk-font-ui-medium);
 		}
 
-		a[aria-current='true'] {
+		button[aria-current='true'] {
 			color: var(--sk-fg-accent);
 			text-decoration: underline;
 		}
@@ -525,12 +569,7 @@
 	}
 
 	.toc-container {
-		background: var(--sk-bg-2);
 		display: none;
-
-		:root.dark & {
-			background: var(--sk-bg-0);
-		}
 	}
 
 	@media (min-width: 832px) {

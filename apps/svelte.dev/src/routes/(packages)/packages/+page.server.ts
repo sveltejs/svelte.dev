@@ -8,16 +8,17 @@ export const prerender = false;
 export async function load({ url }) {
 	const query = url.searchParams.get('query');
 	const tags = (url.searchParams.get('tags') ?? '').split(',').filter(Boolean);
-	let page = +(url.searchParams.get('page')?.toString() ?? 0);
+	let page = Math.max(1, +(url.searchParams.get('page')?.toString() ?? 1));
 
 	init(registry);
 
 	const current_results = search(query, { tags, sort_by: 'popularity' });
 
 	const total_pages = Math.ceil(current_results.length / REGISTRY_PAGE_LIMIT);
+	console.log(page, total_pages);
 
-	if (page + 1 > total_pages) {
-		page = 0;
+	if (page > total_pages) {
+		page = 1;
 
 		const new_url = new URL(url);
 		new_url.searchParams.set('page', page + '');
@@ -25,8 +26,8 @@ export async function load({ url }) {
 	}
 
 	const current_results_paged = current_results.slice(
-		page * REGISTRY_PAGE_LIMIT,
-		page * REGISTRY_PAGE_LIMIT + REGISTRY_PAGE_LIMIT
+		(page - 1) * REGISTRY_PAGE_LIMIT,
+		(page - 1) * REGISTRY_PAGE_LIMIT + REGISTRY_PAGE_LIMIT
 	);
 
 	return {
