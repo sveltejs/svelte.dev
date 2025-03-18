@@ -523,8 +523,20 @@ async function convert_to_ts(js_code: string, indent = '', offset = '') {
 					while (code.original[start - 1] !== ')') start -= 1;
 					code.appendLeft(start, `: ${returns}`);
 				}
+			} else if (type && ts.isParenthesizedExpression(node)) {
+				// convert `/* @type {Foo} */ (foo)` to `foo as Foo`
+				// TODO one day we may need to account for operator precedence
+				// (i.e. preserve the parens in e.g. `(x as y).z()`)
+				let start = node.getStart();
+				while (js_code[start - 1] !== '/') start -= 1;
+				code.remove(start, node.getStart() + 1);
+
+				let end = node.getEnd();
+				code.overwrite(end - 1, end, ` as ${type}`);
 			} else {
-				throw new Error('Unhandled @type JsDoc->TS conversion: ' + js_code);
+				throw new Error(
+					'Unhandled @type JsDoc->TS conversion: ' + js_code.slice(node.getStart(), node.getEnd())
+				);
 			}
 
 			if (!comment) {
@@ -532,7 +544,9 @@ async function convert_to_ts(js_code: string, indent = '', offset = '') {
 				let start = jsdoc[0].getStart();
 				let end = jsdoc[0].getEnd();
 
-				while (start > 0 && code.original[start] !== '\n') start -= 1;
+				while (start > 0 && code.original[start] === '\t') start -= 1;
+				if (code.original[start - 1] === '\n') start -= 1;
+
 				code.overwrite(start, end, '');
 			}
 		}
