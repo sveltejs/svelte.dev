@@ -803,6 +803,25 @@ If `true`, whitespace inside and between elements is kept as you typed it, rathe
 <div class="ts-block-property">
 
 ```dts
+preventTemplateCloning?: boolean;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `false`
+
+</div>
+
+If `true`, the template will get compiled to a series of `document.createElement` calls instead of using `template.innerHTML`.
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
 runes?: boolean | undefined;
 ```
 
