@@ -2,7 +2,7 @@
 title: Spread props
 ---
 
-In this exercise, in `App.svelte` we've forgotten to pass the `name` prop expected by `PackageInfo.svelte`, meaning the `<code>` element is empty and the npm link is broken.
+In this exercise, in `App.svelte` we've forgotten to pass the `name` prop expected by `PackageInfo.svelte`, meaning the `<code>` element is empty.
 
 We _could_ fix it by adding the prop...
 
