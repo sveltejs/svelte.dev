@@ -544,8 +544,8 @@ async function convert_to_ts(js_code: string, indent = '', offset = '') {
 				let start = jsdoc[0].getStart();
 				let end = jsdoc[0].getEnd();
 
-				while (start > 0 && code.original[start] === '\t') start -= 1;
-				if (code.original[start - 1] === '\n') start -= 1;
+				while (start > 0 && code.original[start - 1] === '\t') start -= 1;
+				while (start > 0 && code.original[start - 1] === '\n') start -= 1;
 
 				code.overwrite(start, end, '');
 			}
@@ -574,7 +574,7 @@ async function convert_to_ts(js_code: string, indent = '', offset = '') {
 			while (js_code[i] !== '\n') i += 1;
 			i += 1;
 
-			code.appendLeft(i, import_statements + '\n');
+			code.appendLeft(i, '\n' + import_statements + '\n');
 		} else {
 			code.prependLeft(0, offset + import_statements + '\n');
 		}
