@@ -2,6 +2,8 @@
 title: $app/stores
 ---
 
+This module contains store-based equivalents of the exports from [`$app/state`]($app-state). If you're using SvelteKit 2.12 or later, use that module instead.
+
 
 
 ```js
@@ -29,6 +31,12 @@ function getStores(): {
 
 ## navigating
 
+<blockquote class="tag deprecated">
+
+Use `navigating` from `$app/state` instead (requires Svelte 5, [see docs for more info](https://svelte.dev/docs/kit/migrating-to-sveltekit-2#SvelteKit-2.12:-$app-stores-deprecated))
+
+</blockquote>
+
 A readable store.
 When navigating starts, its value is a `Navigation` object with `from`, `to`, `type` and (if `type === 'popstate'`) `delta` properties.
 When navigating finishes, its value reverts to `null`.
@@ -49,6 +57,12 @@ const navigating: import('svelte/store').Readable<
 
 ## page
 
+<blockquote class="tag deprecated">
+
+Use `page` from `$app/state` instead (requires Svelte 5, [see docs for more info](https://svelte.dev/docs/kit/migrating-to-sveltekit-2#SvelteKit-2.12:-$app-stores-deprecated))
+
+</blockquote>
+
 A readable store whose value contains page data.
 
 On the server, this store can only be subscribed to during component initialization. In the browser, it can be subscribed to at any time.
@@ -66,6 +80,12 @@ const page: import('svelte/store').Readable<
 
 
 ## updated
+
+<blockquote class="tag deprecated">
+
+Use `updated` from `$app/state` instead (requires Svelte 5, [see docs for more info](https://svelte.dev/docs/kit/migrating-to-sveltekit-2#SvelteKit-2.12:-$app-stores-deprecated))
+
+</blockquote>
 
 A readable store whose initial value is `false`. If [`version.pollInterval`](/docs/kit/configuration#version) is a non-zero value, SvelteKit will poll for new versions of the app and update the store value to `true` when it detects one. `updated.check()` will force an immediate check, regardless of polling.
 
