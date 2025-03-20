@@ -803,18 +803,18 @@ If `true`, whitespace inside and between elements is kept as you typed it, rathe
 <div class="ts-block-property">
 
 ```dts
-preventTemplateCloning?: boolean;
+templatingMode?: 'string' | 'functional';
 ```
 
 <div class="ts-block-property-details">
 
 <div class="ts-block-property-bullets">
 
-- <span class="tag">default</span> `false`
+- <span class="tag">default</span> `'string'`
 
 </div>
 
-If `true`, the template will get compiled to a series of `document.createElement` calls instead of using `template.innerHTML`.
+If `functional`, the template will get compiled to a series of `document.createElement` calls, if `string` it will render the template tp a string and use `template.innerHTML`.
 
 </div>
 </div>
