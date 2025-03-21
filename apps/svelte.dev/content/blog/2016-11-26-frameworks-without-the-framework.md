@@ -2,7 +2,7 @@
 title: "Frameworks without the framework: why didn't we think of this sooner?"
 description: You can't write serious applications in vanilla JavaScript without hitting a complexity wall. But a compiler can do it for you.
 author: Rich Harris
-authorURL: https://twitter.com/Rich_Harris
+authorURL: https://bsky.app/profile/rich-harris.dev
 ---
 
 > Wait, this new framework has a _runtime_? Ugh. Thanks, I'll pass.
@@ -12,7 +12,7 @@ We're shipping too much code to our users. Like a lot of front end developers, I
 
 But I was wrong. 100kb of .js isn't equivalent to 100kb of .jpg. It's not just the network time that'll kill your app's startup performance, but the time spent parsing and evaluating your script, during which time the browser becomes completely unresponsive. On mobile, those milliseconds rack up very quickly.
 
-If you're not convinced that this is a problem, follow [Alex Russell](https://twitter.com/slightlylate) on Twitter. Alex [hasn't been making many friends in the framework community lately](https://twitter.com/slightlylate/status/728355959022587905), but he's not wrong. But the proposed alternative to using frameworks like Angular, React and Ember – [Polymer](https://www.polymer-project.org/1.0/) – hasn't yet gained traction in the front end world, and it's certainly not for a lack of marketing.
+If you're not convinced that this is a problem, follow [Alex Russell](https://bsky.app/profile/infrequently.org) on BlueSky. Alex [hasn't been making many friends in the framework community lately](https://twitter.com/slightlylate/status/728355959022587905), but he's not wrong. But the proposed alternative to using frameworks like Angular, React and Ember – [Polymer](https://www.polymer-project.org/1.0/) – hasn't yet gained traction in the front end world, and it's certainly not for a lack of marketing.
 
 Perhaps we need to rethink the whole thing.
 
@@ -30,7 +30,7 @@ Svelte is a new framework that does exactly that. You write your components usin
 
 The [Svelte implementation of TodoMVC](https://svelte-todomvc.surge.sh/) weighs 3.6kb zipped. For comparison, React plus ReactDOM _without any app code_ weighs about 45kb zipped. It takes about 10x as long for the browser just to evaluate React as it does for Svelte to be up and running with an interactive TodoMVC.
 
-And once your app _is_ up and running, according to [js-framework-benchmark](https://github.com/krausest/js-framework-benchmark) **Svelte is fast as heck**. It's faster than React. It's faster than Vue. It's faster than Angular, or Ember, or Ractive, or Preact, or Riot, or Mithril. It's competitive with Inferno, which is probably the fastest UI framework in the world, for now, because [Dominic Gannaway](https://twitter.com/trueadm) is a wizard. (Svelte is slower at removing elements. We're [working on it](https://github.com/sveltejs/svelte/issues/26).)
+And once your app _is_ up and running, according to [js-framework-benchmark](https://github.com/krausest/js-framework-benchmark) **Svelte is fast as heck**. It's faster than React. It's faster than Vue. It's faster than Angular, or Ember, or Ractive, or Preact, or Riot, or Mithril. It's competitive with Inferno, which is probably the fastest UI framework in the world, for now, because [Dominic Gannaway](https://bsky.app/profile/trueadm.dev) is a wizard. (Svelte is slower at removing elements. We're [working on it](https://github.com/sveltejs/svelte/issues/26).)
 
 It's basically as fast as vanilla JS, which makes sense because it _is_ vanilla JS – just vanilla JS that you didn't have to write.
 

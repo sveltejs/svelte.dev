@@ -2,7 +2,7 @@
 title: Redirects
 ---
 
-We can also use the `throw` mechanism to redirect from one page to another.
+We can use the `redirect` mechanism to redirect from one page to another.
 
 Create a new `load` function in `src/routes/a/+page.server.js`:
 

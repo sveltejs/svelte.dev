@@ -2,7 +2,7 @@
 title: The zen of Just Writing CSS
 description: I would say this is the future, but we're already doing it.
 author: Rich Harris
-authorURL: https://twitter.com/Rich_Harris
+authorURL: https://bsky.app/profile/rich-harris.dev
 ---
 
 It's fashionable to dislike CSS. There are lots of reasons why that's the case, but it boils down to this: CSS is _unpredictable_. If you've never had the experience of tweaking a style rule and accidentally breaking some layout that you thought was completely unrelated — usually when you're trying to ship — then you're either new at this or you're a much better programmer than the rest of us.

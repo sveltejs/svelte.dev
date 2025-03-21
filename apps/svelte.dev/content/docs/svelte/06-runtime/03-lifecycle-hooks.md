@@ -48,21 +48,6 @@ If a function is returned from `onMount`, it will be called when the component i
 
 Schedules a callback to run immediately before the component is unmounted.
 
-Out of `onMount`, `beforeUpdate`, `afterUpdate` and `onDestroy`, this is the
-only one that runs inside a server-side component.
-
-<div class="ts-block">
-
-```dts
-function onDestroy(fn: () => any): void;
-```
-
-</div>
-
-
-
-Schedules a callback to run immediately before the component is unmounted.
-
 Out of `onMount`, `beforeUpdate`, `afterUpdate` and `onDestroy`, this is the only one that runs inside a server-side component.
 
 ```svelte
@@ -163,7 +148,7 @@ With runes, we can use `$effect.pre`, which behaves the same as `$effect` but ru
 	}
 
 	function toggle() {
-		toggleValue = !toggleValue;
+		theme = theme === 'dark' ? 'light' : 'dark';
 	}
 </script>
 

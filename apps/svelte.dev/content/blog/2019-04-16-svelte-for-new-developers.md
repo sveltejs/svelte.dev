@@ -2,7 +2,7 @@
 title: Svelte for new developers
 description: Never used Node.js or the command line? No problem
 author: Rich Harris
-authorURL: https://twitter.com/Rich_Harris
+authorURL: https://bsky.app/profile/rich-harris.dev
 ---
 
 This short guide is designed to help you — someone who has looked at the [tutorial](/tutorial) and wants to start creating Svelte apps, but doesn't have a ton of experience using JavaScript build tooling — get up and running.
