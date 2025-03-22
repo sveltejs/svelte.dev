@@ -5,17 +5,16 @@
 	import { Box, ReactiveQueryParam } from '@sveltejs/site-kit/reactivity';
 	import { onMount } from 'svelte';
 	import SearchWorker from './packages-worker.ts?worker';
-	import { stopPropagation } from 'svelte/legacy';
 	import Pagination from './pagination.svelte';
 
 	const { data } = $props();
 
 	const query_qp = new ReactiveQueryParam<string>('query');
-	const page_qp = new ReactiveQueryParam<number>('page', {
+	const page_qp = new ReactiveQueryParam<number>('page', 1, {
 		encode: (v) => v.toString(),
-		decode: (v) => Math.max(1, v.length ? +v : 1)
+		decode: (v) => +v
 	});
-	const tags_qp = new ReactiveQueryParam<string[]>('tags', {
+	const tags_qp = new ReactiveQueryParam<string[]>('tags', [], {
 		encode: (v) => v.join(','),
 		decode: (v) => v.split(',').filter(Boolean)
 	});

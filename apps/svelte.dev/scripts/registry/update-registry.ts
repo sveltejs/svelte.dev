@@ -19,7 +19,6 @@ import {
 	superfetch,
 	type StructuredInterimPackage
 } from './npm.js';
-import { program } from 'commander';
 
 dotenv.config({ path: '.env.local' });
 

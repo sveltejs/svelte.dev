@@ -1,5 +1,5 @@
-import flexsearch, { type Index as FlexSearchIndex } from 'flexsearch';
 import type { Package, PackageGroup } from '$lib/server/content';
+import flexsearch, { type Index as FlexSearchIndex } from 'flexsearch';
 
 // @ts-expect-error
 const Index = (flexsearch.Index as FlexSearchIndex) ?? flexsearch;
@@ -313,14 +313,14 @@ function sort_packages(a: Package, b: Package, criterion: SortCriterion): number
 
 			// Use log scale with appropriate weights
 			let a_def_score =
-				Math.log10(a_def + 1) * 3 +
-				Math.log10(a_def_stars + 1) * 2 +
-				Math.log10(a_def_downloads + 1) * 1;
+				Math.log10(a_def + 1) * 1 +
+				Math.log10(a_def_stars + 1) * 3 +
+				Math.log10(a_def_downloads + 1) * 2;
 
 			let b_def_score =
-				Math.log10(b_def + 1) * 3 +
-				Math.log10(b_def_stars + 1) * 2 +
-				Math.log10(b_def_downloads + 1) * 1;
+				Math.log10(b_def + 1) * 1 +
+				Math.log10(b_def_stars + 1) * 3 +
+				Math.log10(b_def_downloads + 1) * 2;
 
 			// Apply penalties for outdated or deprecated packages
 			if (a.outdated) a_def_score += OUTDATED_PENALTY;
@@ -364,7 +364,7 @@ export function group_by_tags(packages: Package[]): PackageGroup[] {
 
 			// Use balanced logarithmic formula with proper weighting
 			return (
-				Math.log10(dependents + 1) * 3 + Math.log10(stars + 1) * 2 + Math.log10(downloads + 1) * 1
+				Math.log10(dependents + 1) * 1 + Math.log10(stars + 1) * 3 + Math.log10(downloads + 1) * 1
 			);
 		};
 
