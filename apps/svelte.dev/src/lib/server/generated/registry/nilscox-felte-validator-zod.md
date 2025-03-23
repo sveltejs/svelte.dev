@@ -1,6 +1,6 @@
 ---
 name: "@nilscox/felte-validator-zod"
-description: "Use Zod validation with Felte forms in Svelte applications."
+description: "Integrate Zod validation with Felte forms in Svelte."
 repo_url: "https://github.com/pablo-abc/felte"
 author: "Pablo Berganza"
 homepage: "https://github.com/pablo-abc/felte/tree/main/packages/validator-zod"

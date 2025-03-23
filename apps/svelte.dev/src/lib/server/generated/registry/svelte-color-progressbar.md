@@ -1,6 +1,6 @@
 ---
 name: "svelte-color-progressbar"
-description: "Display color progress bars in Svelte applications."
+description: "Generate color progress bars for Svelte apps."
 repo_url: "https://github.com/khguruge/svelte-color-progressbar"
 author: "khguruge"
 homepage: "https://github.com/khguruge/svelte-color-progressbar#readme"

@@ -1,8 +1,8 @@
 ---
 name: "@htmlbricks/hb-payment-paypal"
-description: "Integrate PayPal payment functionality into Svelte applications."
+description: "Integrate PayPal payments into Svelte apps."
 author: "Dario Caruso"
-downloads: 3135
+downloads: 3589
 dependents: 3
 updated: "2025-03-09T03:10:33.600Z"
 tags: 

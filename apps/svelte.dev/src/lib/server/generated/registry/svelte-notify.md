@@ -1,6 +1,6 @@
 ---
 name: "svelte-notify"
-description: "Add notifications to Svelte apps, with customizable message types and timeouts."
+description: "Add customizable notification messages to Svelte applications."
 repo_url: "https://github.com/shaanu1404/svelte-notify"
 author: "shaanu1404"
 homepage: "https://github.com/shaanu1404/svelte-notify#readme"

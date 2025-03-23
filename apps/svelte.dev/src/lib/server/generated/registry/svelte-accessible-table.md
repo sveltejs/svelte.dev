@@ -1,6 +1,6 @@
 ---
 name: "svelte-accessible-table"
-description: "Create accessible table components for Svelte applications."
+description: "Build accessible table components for Svelte applications."
 repo_url: "https://github.com/metonym/svelte-accessible-table"
 author: "Eric Liu"
 homepage: "https://github.com/metonym/svelte-accessible-table"

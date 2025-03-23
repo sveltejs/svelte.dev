@@ -4,10 +4,10 @@ description: "Generates standalone Bun.js server for SvelteKit apps."
 repo_url: "https://github.com/gornostay25/svelte-adapter-bun"
 author: "Volodymyr Palamar"
 homepage: "https://github.com/gornostay25/svelte-adapter-bun#readme"
-downloads: 5582
+downloads: 5136
 dependents: 1
 updated: "2024-02-20T12:20:33.288Z"
-github_stars: 559
+github_stars: 558
 tags: 
   - adapter
 ---

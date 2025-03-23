@@ -1,10 +1,10 @@
 ---
 name: "svelte-stopwatch"
-description: "Provides a Svelte component for stopwatch and countdown timer functionality."
+description: "Implement timer and stopwatch components in Svelte applications."
 author: "ero"
 homepage: "https://github.com/erokar/svelte-stopwatch"
-downloads: 1
+downloads: 7
 updated: "2022-04-01T13:45:20.565Z"
 tags: 
-  - utility
+  - ui
 ---

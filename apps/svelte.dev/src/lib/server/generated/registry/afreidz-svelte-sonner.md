@@ -1,9 +1,10 @@
 ---
 name: "@afreidz/svelte-sonner"
-description: "Create toast notifications for Svelte applications."
+description: "Implement opinionated toast notifications in Svelte apps."
 author: "Robert Soriano"
-downloads: 2
+downloads: 21
 updated: "2024-10-23T16:16:33.051Z"
+svelte5: true
 tags: 
   - ui
 ---

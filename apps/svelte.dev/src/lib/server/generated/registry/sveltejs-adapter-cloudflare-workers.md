@@ -1,13 +1,12 @@
 ---
 name: "@sveltejs/adapter-cloudflare-workers"
-description: "Create Cloudflare Workers sites with SvelteKit."
+description: "Adapt SvelteKit apps for Cloudflare Workers."
 repo_url: "https://github.com/sveltejs/kit"
 author: "rich_harris"
 homepage: "https://svelte.dev"
-downloads: 2194
-updated: "2025-02-25T14:50:38.909Z"
-github_stars: 19115
+downloads: 1572
+updated: "2025-03-15T17:28:14.755Z"
+github_stars: 19118
 tags: 
   - adapter
-  - server
 ---

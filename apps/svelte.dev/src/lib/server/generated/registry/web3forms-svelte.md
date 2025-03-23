@@ -1,9 +1,9 @@
 ---
 name: "web3forms-svelte"
-description: "Svelte wrapper for Web3forms, receive form submissions to inbox."
+description: "Provide a Svelte wrapper for Web3Forms form submissions."
 author: "Joshua Walker"
-downloads: 6
+downloads: 9
 updated: "2023-06-29T14:33:23.740Z"
 tags: 
-  - integration
+  - utility
 ---

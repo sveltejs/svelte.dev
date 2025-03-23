@@ -1,6 +1,6 @@
 ---
 name: "@liquidiqq/iconkit"
-description: "Provide community icons for Svelte ecosystem."
+description: "Provide community icons for Svelte projects."
 repo_url: "https://github.com/liquidiqq/iconkit"
 author: "Liquidiqq"
 homepage: "https://github.com/liquidiqq/iconkit"

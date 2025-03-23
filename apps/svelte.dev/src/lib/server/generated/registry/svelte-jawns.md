@@ -1,6 +1,6 @@
 ---
 name: "svelte-jawns"
-description: "Provides customizable Svelte component library with Tailwind and TypeScript."
+description: "Customizable Svelte component library built with Tailwind and TypeScript."
 repo_url: "https://github.com/atuttle/svelte-jawns"
 author: "Adam Tuttle"
 homepage: "https://github.com/atuttle/svelte-jawns#readme"

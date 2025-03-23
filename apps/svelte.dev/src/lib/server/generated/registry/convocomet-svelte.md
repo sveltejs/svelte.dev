@@ -1,10 +1,10 @@
 ---
 name: "@convocomet/svelte"
-description: "Integrate ConvoComet commenting widget into Svelte websites."
+description: "Provide Svelte widget for ConvoComet commenting system."
 repo_url: "https://github.com/AsyncBanana/convocomet"
 author: "Jacob Jackson"
 homepage: "https://github.com/AsyncBanana/convocomet#readme"
-downloads: 2
+downloads: 5
 updated: "2024-03-24T20:18:40.835Z"
 github_stars: 4
 tags: 

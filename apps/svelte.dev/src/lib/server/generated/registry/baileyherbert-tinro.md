@@ -1,10 +1,10 @@
 ---
 name: "@baileyherbert/tinro"
-description: "Implement tiny, declarative router for Svelte web applications."
+description: "Create tiny declarative router for Svelte applications."
 repo_url: "https://github.com/baileyherbert/tinro"
 author: "Alexey Schebelev"
 homepage: "https://github.com/baileyherbert/tinro#readme"
-downloads: 42
+downloads: 30
 updated: "2022-12-10T22:03:56.428Z"
 tags: 
   - router

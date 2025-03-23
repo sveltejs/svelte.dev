@@ -1,6 +1,6 @@
 ---
 name: "@chartium/svelte-grid"
-description: "Create responsive, draggable, resizable grid layouts for Svelte."
+description: "Responsive, draggable, resizable grid layout for Svelte."
 repo_url: "https://github.com/vaheqelyan/svelte-grid"
 author: "Vahe Araqelyan"
 homepage: "https://github.com/vaheqelyan/svelte-grid#readme"

@@ -1,6 +1,6 @@
 ---
 name: "svelte-pointer-tracker"
-description: "Track pointer position within Svelte components."
+description: "Track pointer events within Svelte components."
 author: "7korobi"
 homepage: "https://github.com/7korobi/svelte-pointer-tracker/blob/main/src/lib/"
 dependents: 1

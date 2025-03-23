@@ -1,9 +1,10 @@
 ---
 name: "@schedule-x/svelte"
-description: "Create a fully featured event calendar for Svelte applications."
+description: "Svelte component for Schedule-X calendar."
 author: "tomosterlund"
-downloads: 141
+downloads: 184
 updated: "2024-12-25T19:08:58.117Z"
+svelte5: true
 tags: 
   - ui
 ---

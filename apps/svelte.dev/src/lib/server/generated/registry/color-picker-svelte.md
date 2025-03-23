@@ -1,12 +1,13 @@
 ---
 name: "color-picker-svelte"
-description: "Create color picker component for Svelte applications."
+description: "Provide color picker component for Svelte."
 repo_url: "https://github.com/probablykasper/color-picker-svelte"
 author: "Kasper Henningsen"
 homepage: "https://color-picker-svelte.kasper.space"
-downloads: 91
+downloads: 37
 updated: "2024-10-23T05:38:27.788Z"
 github_stars: 10
+svelte5: true
 tags: 
   - ui
 ---

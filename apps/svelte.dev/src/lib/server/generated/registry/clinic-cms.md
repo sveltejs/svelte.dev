@@ -1,11 +1,12 @@
 ---
 name: "clinic-cms"
-description: "Provides Svelte components for the frontend of a clinic CMS."
+description: "Build frontend for outpatient clinic CMS using Svelte and Skeleton UI."
 author: "Jerome Pinguet"
 homepage: "https://github.com/medica-im/clinic-cms"
-downloads: 8
+downloads: 66
 updated: "2025-03-14T14:36:14.866Z"
+svelte5: true
 tags: 
-  - content
   - component-library
+  - ui
 ---

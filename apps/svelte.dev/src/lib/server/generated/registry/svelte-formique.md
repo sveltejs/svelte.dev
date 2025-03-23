@@ -1,10 +1,12 @@
 ---
 name: "svelte-formique"
-description: "Build accessible, WCAG-compliant forms in Svelte with various input types."
+description: "Build accessible forms in Svelte applications."
 author: "gugulethu_nyoni"
-downloads: 3
+downloads: 12
 dependents: 1
 updated: "2025-02-17T08:54:27.666Z"
+svelte5: true
 tags: 
+  - ui
   - utility
 ---

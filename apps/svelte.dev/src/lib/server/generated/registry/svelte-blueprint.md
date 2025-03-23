@@ -1,6 +1,6 @@
 ---
 name: "svelte-blueprint"
-description: "Create documentation files for Svelte components using comments."
+description: "Generates documentation for Svelte components."
 repo_url: "svelte-blueprint"
 author: "everitosan"
 downloads: 1

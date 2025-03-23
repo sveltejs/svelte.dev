@@ -1,9 +1,10 @@
 ---
 name: "svelte-headless-components"
-description: "Create headless Svelte components for select, dropdown, and multi-select menus."
+description: "Headless UI components for Svelte."
 author: "adamnyberg"
-downloads: 22
+downloads: 26
 updated: "2024-12-09T20:01:58.476Z"
 tags: 
+  - component-library
   - ui
 ---

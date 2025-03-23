@@ -4,7 +4,7 @@ description: "Simple datepicker component designed for Svelte."
 repo_url: "https://github.com/svelte-plugins/datepicker"
 author: "Kieran Boyle"
 homepage: "https://github.com/svelte-plugins/datepicker"
-downloads: 3987
+downloads: 4141
 dependents: 2
 updated: "2025-01-19T19:50:33.977Z"
 github_stars: 82

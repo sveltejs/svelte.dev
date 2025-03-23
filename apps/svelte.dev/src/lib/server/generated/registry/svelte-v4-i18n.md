@@ -4,7 +4,6 @@ description: "Implement internationalization for Svelte v4 applications."
 repo_url: "https://github.com/harshmandan/svelte-i18n"
 author: "Harsh Mandan"
 homepage: "https://github.com/harshmandan/svelte-i18n#readme"
-downloads: 1
 updated: "2023-06-30T05:14:21.438Z"
 tags: 
   - utility

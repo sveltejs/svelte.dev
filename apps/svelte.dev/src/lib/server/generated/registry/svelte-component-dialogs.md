@@ -1,6 +1,6 @@
 ---
 name: "svelte-component-dialogs"
-description: "Manage dialogs in Svelte apps, opening components as HTML5 dialogs."
+description: "Manage dialogs, opening Svelte components as HTML5 dialogs."
 repo_url: "https://github.com/antal-krisztian/svelte-component-dialogs"
 author: "Antal Krisztián-Tamás"
 homepage: "https://svelte-component-dialogs.vercel.app"

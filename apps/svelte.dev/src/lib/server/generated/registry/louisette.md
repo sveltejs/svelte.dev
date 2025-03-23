@@ -1,6 +1,6 @@
 ---
 name: "louisette"
-description: "Build accessible Svelte components using headless primitives."
+description: "Create accessible Svelte component primitives."
 repo_url: "https://github.com/ubermanu/louisette"
 author: "Emmanuel Vodor"
 homepage: "https://github.com/ubermanu/louisette#readme"

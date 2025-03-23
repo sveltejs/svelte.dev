@@ -1,8 +1,8 @@
 ---
 name: "@svebass/flexbox"
-description: "Build responsive flexbox layouts for Svelte applications."
+description: "Responsive Svelte Box and Flex components with Styled System."
 author: "Tanner Marshall"
-downloads: 1
+downloads: 5
 dependents: 1
 updated: "2021-04-29T21:47:16.442Z"
 tags: 

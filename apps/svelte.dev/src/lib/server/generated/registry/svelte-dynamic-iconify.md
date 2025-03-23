@@ -1,10 +1,10 @@
 ---
 name: "svelte-dynamic-iconify"
-description: "Render dynamic icons for Svelte applications."
+description: "Render dynamic Iconify icons in Svelte components."
 repo_url: "https://github.com/hazg/svelte-dynamic-iconify"
 author: "Aleksandr Alksandrov"
 homepage: "https://github.com/hazg/svelte-dynamic-iconify#readme"
-downloads: 1
+downloads: 2
 updated: "2021-06-22T09:09:16.307Z"
 tags: 
   - ui

@@ -1,6 +1,6 @@
 ---
 name: "@svizzle/trends"
-description: "Create trend charts for Svelte applications."
+description: "Render trend charts for Svelte, visualizing data trends."
 repo_url: "https://github.com/nestauk/svizzle"
 author: "nestauk"
 homepage: "https://github.com/nestauk/svizzle"

@@ -1,12 +1,13 @@
 ---
 name: "svelte-maplibre-gl"
-description: "Build interactive web maps effortlessly with MapLibre GL JS and Svelte."
+description: "Create interactive web maps with MapLibre GL JS and Svelte."
 repo_url: "https://github.com/MIERUNE/svelte-maplibre-gl"
 author: "mierune_iguchi"
 homepage: "https://svelte-maplibre-gl.mierune.dev/"
-downloads: 281
+downloads: 350
 updated: "2025-02-18T10:11:08.006Z"
-github_stars: 137
+github_stars: 140
+svelte5: true
 tags: 
   - ui
 ---

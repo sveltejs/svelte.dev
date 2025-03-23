@@ -1,6 +1,6 @@
 ---
 name: "svelte-api-keys"
-description: "Generate, validate, and rate-limit API keys for SvelteKit applications."
+description: "Generate, validate, and rate-limit API keys in SvelteKit."
 repo_url: "https://github.com/captaincodeman/svelte-api-keys"
 author: "Simon Green"
 homepage: "https://captaincodeman.github.io/svelte-api-keys/"
@@ -9,5 +9,4 @@ github_stars: 38
 tags: 
   - utility
   - auth
-  - server
 ---

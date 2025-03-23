@@ -1,10 +1,10 @@
 ---
 name: "svelte-class-transition"
-description: "Transition Svelte elements using CSS classes."
+description: "Enables transitions using CSS classes in Svelte."
 repo_url: "https://github.com/gawlk/svelte-class-transition"
 author: "Kevin Gawlik"
 homepage: "https://github.com/gawlk/svelte-class-transition#readme"
-downloads: 257
+downloads: 191
 dependents: 4
 updated: "2020-06-25T11:53:54.118Z"
 tags: 

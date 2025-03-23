@@ -1,6 +1,6 @@
 ---
 name: "@svizzle/mapbox"
-description: "Integrate Mapbox GL JS with Svelte, add custom layers and controls."
+description: "Mapbox components and utilities for Svelte."
 repo_url: "https://github.com/nestauk/svizzle"
 author: "nestauk"
 homepage: "https://github.com/nestauk/svizzle"

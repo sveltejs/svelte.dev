@@ -1,8 +1,10 @@
 ---
 name: "@eslym/svelte-utility-stores"
-description: "Provide utility stores for Svelte applications."
+description: "Offer utility stores for Svelte applications."
 author: "0nepeop1e"
-updated: "2025-01-13T07:45:05.393Z"
+downloads: 10
+updated: "2025-03-21T10:27:29.538Z"
+svelte5: true
 tags: 
   - utility
 ---

@@ -1,13 +1,14 @@
 ---
 name: "@prosemirror-adapter/svelte"
-description: "Integrate ProseMirror editor with Svelte components using node and mark views"
+description: "Adapt ProseMirror editors for use within Svelte applications."
 repo_url: "https://github.com/Saul-Mirone/prosemirror-adapter"
 author: "mirone"
 homepage: "https://github.com/Saul-Mirone/prosemirror-adapter#readme"
-downloads: 3561
+downloads: 2731
 dependents: 5
-updated: "2024-12-19T05:02:21.653Z"
-github_stars: 118
+updated: "2025-03-17T21:59:01.355Z"
+github_stars: 119
+svelte5: true
 tags: 
   - utility
 ---

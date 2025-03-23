@@ -1,8 +1,8 @@
 ---
 name: "@htmlbricks/hb-messages-send"
-description: "Svelte-Bootstrap messages-send web component."
+description: "Create Svelte-Bootstrap messages-send web components."
 author: "Dario Caruso"
-downloads: 1
+downloads: 94
 dependents: 1
 updated: "2025-03-09T03:10:33.077Z"
 tags: 

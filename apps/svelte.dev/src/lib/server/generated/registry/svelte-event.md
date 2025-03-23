@@ -1,6 +1,6 @@
 ---
 name: "svelte-event"
-description: "Provides wrapper functions for event modifiers in Svelte."
+description: "Provides event modifiers and an action for Svelte event handling."
 repo_url: "https://github.com/Not-Jayden/svelte-event"
 author: "Not-Jayden"
 homepage: "https://github.com/Not-Jayden/svelte-event#readme"

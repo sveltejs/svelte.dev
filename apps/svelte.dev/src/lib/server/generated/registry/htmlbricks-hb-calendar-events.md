@@ -1,11 +1,10 @@
 ---
 name: "@htmlbricks/hb-calendar-events"
-description: "Creates calendar events component for Svelte applications."
+description: "Provides a calendar events web component for Svelte."
 author: "Dario Caruso"
-downloads: 12
+downloads: 453
 dependents: 2
 updated: "2025-03-09T03:10:27.452Z"
 tags: 
   - ui
-  - utility
 ---

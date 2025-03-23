@@ -1,6 +1,6 @@
 ---
 name: "svelte-plyr-fixed"
-description: "Integrate Plyr.js media player into Svelte applications."
+description: "Create Svelte wrapper around Plyr.js for video/audio playback."
 repo_url: "https://github.com/benwoodward/svelte-plyr"
 author: "Ben Woodward"
 homepage: "https://github.com/benwoodward/svelte-plyr#readme"

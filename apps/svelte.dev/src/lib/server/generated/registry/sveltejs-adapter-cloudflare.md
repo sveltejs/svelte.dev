@@ -1,14 +1,13 @@
 ---
 name: "@sveltejs/adapter-cloudflare"
-description: "Deploy SvelteKit apps to Cloudflare Pages, with serverless functions."
+description: "Build SvelteKit apps on Cloudflare Pages with Workers."
 repo_url: "https://github.com/sveltejs/kit"
 author: "rich_harris"
 homepage: "https://svelte.dev"
-downloads: 52527
+downloads: 75112
 dependents: 3
-updated: "2025-02-14T16:50:40.461Z"
-github_stars: 19115
+updated: "2025-03-22T15:29:49.767Z"
+github_stars: 19118
 tags: 
   - adapter
-  - server
 ---

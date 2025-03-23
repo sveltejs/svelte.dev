@@ -1,6 +1,6 @@
 ---
 name: "sveltekit-oauth"
-description: "Provides SvelteKit authentication with built-in OAuth providers."
+description: "Implement OAuth authentication in SvelteKit apps."
 repo_url: "https://github.com/vhsdev/sveltekit-oauth"
 author: "vhsdev"
 homepage: "https://github.com/vhsdev/sveltekit-oauth#readme"

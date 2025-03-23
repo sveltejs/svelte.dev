@@ -1,7 +1,8 @@
 ---
 name: "dug-svelte-router"
-description: "Create simple client-side hash-based router for Svelte apps."
+description: "Simple client-side hash-based router for Svelte apps."
 author: "pant_angst"
+downloads: 4
 updated: "2023-04-13T22:47:38.686Z"
 tags: 
   - router

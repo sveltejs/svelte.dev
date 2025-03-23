@@ -1,6 +1,6 @@
 ---
 name: "svelte-show-action"
-description: "Show or hide Svelte elements without destroying components."
+description: "Conditionally show/hide elements in Svelte, similar to Vue's v-show."
 repo_url: "https://github.com/ramonmalcolm10/svelte-show-action"
 author: "Ramon Malcolm"
 homepage: "https://github.com/ramonmalcolm10/svelte-show-action#readme"

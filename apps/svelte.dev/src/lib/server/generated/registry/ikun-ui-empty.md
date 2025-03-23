@@ -1,8 +1,8 @@
 ---
 name: "@ikun-ui/empty"
-description: "Create empty components for Svelte applications."
+description: "Display empty state components in Svelte apps."
 author: "baiwusanyu"
-downloads: 2
+downloads: 20
 dependents: 1
 updated: "2025-01-24T03:48:52.936Z"
 tags: 

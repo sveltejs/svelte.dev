@@ -1,6 +1,6 @@
 ---
 name: "boost-web-forms-svelte"
-description: "Integrate boost-web-forms library with Svelte for form creation."
+description: "Create forms using boost-web-forms library in Svelte."
 repo_url: "https://github.com/lgirma/boost-web-forms-svelte"
 author: "Leone"
 homepage: "https://github.com/lgirma/boost-web-forms-svelte"

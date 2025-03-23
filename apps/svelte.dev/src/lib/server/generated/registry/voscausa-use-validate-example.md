@@ -1,6 +1,6 @@
 ---
 name: "@voscausa/use-validate-example"
-description: "Validate example form in Svelte-Vite SPA."
+description: "Validate forms in Svelte applications using custom rules."
 repo_url: "https://github.com/voscausa/use-validate-example"
 author: "voscausa"
 homepage: "https://github.com/voscausa/use-validate-example#readme"

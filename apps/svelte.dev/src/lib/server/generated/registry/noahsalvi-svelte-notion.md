@@ -1,6 +1,6 @@
 ---
 name: "@noahsalvi/svelte-notion"
-description: "Render Notion content within Svelte applications."
+description: "Use Notion as a CMS for Svelte projects."
 repo_url: "https://github.com/NoahVersace/svelte-notion"
 author: "Noah Salvi"
 homepage: "https://github.com/NoahVersace/svelte-notion#readme"
@@ -9,4 +9,5 @@ updated: "2021-01-24T23:12:31.298Z"
 github_stars: 17
 tags: 
   - content
+  - integration
 ---

@@ -1,13 +1,13 @@
 ---
 name: "@ark-ui/svelte"
-description: "Create unstyled, accessible UI components for Svelte applications."
+description: "Unstyled, accessible UI components for Svelte."
 repo_url: "https://github.com/chakra-ui/ark"
 author: "segunadebayo"
 homepage: "https://ark-ui.com"
-downloads: 3
+downloads: 12
 updated: "2025-01-08T14:15:51.964Z"
-github_stars: 4168
+github_stars: 4171
+svelte5: true
 tags: 
   - component-library
-  - ui
 ---

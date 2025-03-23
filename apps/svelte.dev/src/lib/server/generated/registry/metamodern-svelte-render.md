@@ -1,6 +1,6 @@
 ---
 name: "@metamodern/svelte-render"
-description: "Build Svelte apps with Jamstack focus, includes Rollup and Babel config."
+description: "Build static sites with Svelte, focused on Jamstack deployments."
 repo_url: "https://github.com/metamodern-design/svelte-render"
 author: "Daniel C. Narey"
 homepage: "https://github.com/metamodern-design/svelte-render#readme"

@@ -1,13 +1,14 @@
 ---
 name: "@sveltejs/vite-plugin-svelte"
-description: "Integrate Svelte components into Vite projects, enhancing build process."
+description: "Compiles Svelte components with Vite, enabling hot module replacement."
 repo_url: "https://github.com/sveltejs/vite-plugin-svelte"
 author: "dominikg"
 homepage: "https://github.com/sveltejs/vite-plugin-svelte#readme"
-downloads: 543942
-dependents: 139
+downloads: 651183
+dependents: 141
 updated: "2024-12-18T10:03:00.518Z"
 github_stars: 902
+svelte5: true
 tags: 
   - tooling
   - preprocessor

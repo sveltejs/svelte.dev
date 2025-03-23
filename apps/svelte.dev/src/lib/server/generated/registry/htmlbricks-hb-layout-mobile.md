@@ -1,10 +1,10 @@
 ---
 name: "@htmlbricks/hb-layout-mobile"
-description: "Build Svelte web components for mobile layouts."
+description: "Provides a mobile layout component for Svelte applications."
 author: "Dario Caruso"
-downloads: 4
+downloads: 293
 dependents: 1
 updated: "2025-03-09T03:10:42.944Z"
 tags: 
-  - component-library
+  - ui
 ---

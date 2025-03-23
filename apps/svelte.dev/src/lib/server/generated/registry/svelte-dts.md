@@ -1,10 +1,10 @@
 ---
 name: "svelte-dts"
-description: "Generate TypeScript declaration files for Svelte components and libraries."
+description: "Generate TypeScript declarations for Svelte components."
 repo_url: "https://github.com/andrelmlins/svelte-dts"
 author: "André Lins"
 homepage: "https://github.com/andrelmlins/svelte-dts"
-downloads: 1995
+downloads: 1934
 dependents: 1
 updated: "2022-04-06T01:37:55.222Z"
 github_stars: 28

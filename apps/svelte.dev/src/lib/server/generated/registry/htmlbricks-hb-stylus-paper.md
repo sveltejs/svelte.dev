@@ -1,8 +1,8 @@
 ---
 name: "@htmlbricks/hb-stylus-paper"
-description: "Svelte-Bootstrap stylus-paper components for web components."
+description: "Stylus paper web component for Svelte."
 author: "Dario Caruso"
-downloads: 1
+downloads: 137
 dependents: 1
 updated: "2025-03-09T03:10:36.301Z"
 tags: 

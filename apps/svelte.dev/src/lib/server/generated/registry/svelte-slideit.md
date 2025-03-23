@@ -1,6 +1,6 @@
 ---
 name: "svelte-slideit"
-description: "Create lightweight, dependency-free slider/carousel components for Svelte."
+description: "Build responsive slider/carousel component for Svelte apps."
 repo_url: "https://github.com/zgunz42/svelte-slideit"
 author: "adi gunawan"
 homepage: "https://github.com/zgunz42/svelte-slideit"

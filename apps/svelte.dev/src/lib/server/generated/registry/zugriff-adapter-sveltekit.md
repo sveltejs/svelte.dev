@@ -1,6 +1,6 @@
 ---
 name: "@zugriff/adapter-sveltekit"
-description: "Deploy SvelteKit apps with zugriff, an edge-based platform."
+description: "Deploy SvelteKit applications with zugriff."
 repo_url: "https://github.com/zugriffcloud/os"
 author: "Luca Goslar"
 homepage: "https://github.com/zugriffcloud/os#readme"

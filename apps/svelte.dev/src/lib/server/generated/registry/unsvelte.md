@@ -1,6 +1,6 @@
 ---
 name: "unsvelte"
-description: "Lazy load Svelte components and images for performance."
+description: "Lazy load Svelte components and images."
 repo_url: "https://github.com/greencoder001/unsvelte"
 author: "greencoder001"
 homepage: "https://github.com/greencoder001/unsvelte#readme"

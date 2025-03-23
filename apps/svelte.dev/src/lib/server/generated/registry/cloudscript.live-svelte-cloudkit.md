@@ -1,12 +1,12 @@
 ---
 name: "@cloudscript.live/svelte-cloudkit"
-description: "Offer lightweight Svelte components, utilities, and SCSS ecosystem."
+description: "Create lightweight UI components for Svelte/Kit projects."
 repo_url: "https://github.com/ImL0w/Svelte-CloudKit"
 author: "the-cloudscript"
 homepage: "https://github.com/ImL0w/Svelte-CloudKit#readme"
-downloads: 2
+downloads: 67
 updated: "2023-10-14T17:56:06.600Z"
 tags: 
   - component-library
-  - utility
+  - ui
 ---

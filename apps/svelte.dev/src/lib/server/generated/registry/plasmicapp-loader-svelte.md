@@ -2,8 +2,8 @@
 name: "@plasmicapp/loader-svelte"
 description: "Load Plasmic components into Svelte applications."
 author: "plasmicapp"
-downloads: 8
-updated: "2025-02-13T19:46:01.507Z"
+downloads: 62
+updated: "2025-03-18T21:32:06.565Z"
 tags: 
   - tooling
 ---

@@ -1,13 +1,13 @@
 ---
 name: "melt"
-description: "Build headless UI components for Svelte with a focus on accessibility."
+description: "Build headless UI components for Svelte with runes support."
 repo_url: "https://github.com/melt-ui/next-gen"
 author: "Thomas G. Lopes"
 homepage: "https://next.melt-ui.com/"
-downloads: 1217
-updated: "2025-03-14T13:31:04.565Z"
-github_stars: 127
+downloads: 1660
+updated: "2025-03-22T09:35:47.007Z"
+github_stars: 129
+svelte5: true
 tags: 
   - component-library
-  - ui
 ---

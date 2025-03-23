@@ -1,13 +1,14 @@
 ---
 name: "svelte-tiptap"
-description: "Provides Svelte components for tiptap v2 rich text editor."
+description: "Create Svelte components for tiptap v2."
 repo_url: "https://github.com/sibiraj-s/svelte-tiptap"
 author: "sibiraj-s"
 homepage: "https://github.com/sibiraj-s/svelte-tiptap#readme"
-downloads: 5256
-dependents: 4
+downloads: 6394
+dependents: 5
 updated: "2024-12-01T10:24:47.495Z"
-github_stars: 281
+github_stars: 282
+svelte5: true
 tags: 
-  - content
+  - ui
 ---

@@ -1,6 +1,6 @@
 ---
 name: "svelt-yjs"
-description: "Create Svelte stores from Yjs types for collaborative, local-first apps."
+description: "Create Svelte stores from Yjs types for transport-agnostic sync."
 repo_url: "https://github.com/relm-us/svelt-yjs"
 author: "Duane Johnson"
 downloads: 1

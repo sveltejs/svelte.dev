@@ -1,9 +1,10 @@
 ---
 name: "@o7/icon"
-description: "Create efficient Svelte icon library using SVG sprites."
+description: "Efficient Svelte icon library using SVG sprites."
 author: "ottomated"
-downloads: 96
-updated: "2025-03-15T07:11:32.215Z"
+downloads: 117
+updated: "2025-03-19T07:12:52.732Z"
+svelte5: true
 tags: 
   - ui
 ---

@@ -212,11 +212,13 @@ async function process_batches_through_llm({
 				{
 					"package-name-1": {
 						"tags": ["tag1", "tag2"],
-						"description": "Parse Svelte markup without parsing script or style tags, useful for codemods and tooling."
+						"description": "Parse Svelte markup without parsing script or style tags, useful for codemods and tooling.",
+						"runes": true,
 					},
 					"package-name-2": {
 						"tags": ["tag1", "tag3"],
-						"description": "Accessible UI components for Svelte applications."
+						"description": "Accessible UI components for Svelte applications.",
+						"runes": false,
 					}
 				}
 				
@@ -239,7 +241,8 @@ async function process_batches_through_llm({
 				{
 					"package-name": {
 						"tags": ["tag1", "tag2"],
-						"description": "Terse description"
+						"description": "Terse description",
+						"runes": true
 					}
 				}
 				
@@ -266,6 +269,71 @@ async function process_batches_through_llm({
 				- "Build forms with validation in Svelte apps."
 				- "Convert Markdown to Svelte components."
 				
+				SVELTE 5 RUNES DETECTION:
+For each package, thoroughly analyze code examples to determine if they use Svelte 5 runes and include a "runes" boolean field:
+
+1. Set "runes": true if ANY of these patterns appear in code examples:
+   
+   STATE MANAGEMENT:
+   - $state(...) - Reactive state declaration
+   - $state.raw(...) - Raw state without deep reactivity
+   - $state.snapshot(...) - Taking static snapshots of state
+   - $derived(...) - Derived reactive values
+   - $derived.by(() => {...}) - Complex derived calculations
+   
+   LIFECYCLE & EFFECTS:
+   - $effect(() => {...}) - Side effects when dependencies change
+   - $effect.pre(() => {...}) - Effects that run before DOM updates
+   - $effect.root(() => {...}) - Non-tracked effect scope
+   - $effect.tracking() - Detect if running in tracking context
+   
+   COMPONENT API:
+   - $props() - Component props declaration
+   - let { ...props } = $props() - Props destructuring
+   - $props.id() - Generate unique component instance ID
+   - $bindable(...) - Mark props as bindable by parent
+   - $host() - Access to custom element host
+   
+   DEBUGGING & UTILITIES:
+   - $inspect(...) - Debug reactive values
+   - $inspect.trace(...) - Trace function execution
+   - $inspect(...).with(...) - Custom inspect handling
+   - untrack(...) - Prevent tracking inside reactive context
+   
+   TEMPLATING FEATURES:
+   - {#snippet ...}{/snippet} - Snippet blocks (replaces slots)
+   - {@render ...} - Render tags for snippets
+   - createRawSnippet(...) - Programmatic snippet creation
+   
+   EVENT HANDLING:
+   - onclick={...}, onkeydown={...} etc. - Modern event attributes (not on:click)
+   - {...props} - Props spreading including event handlers
+   
+   REACTIVE VALUE PATTERNS:
+   - someValue.current - .current property access (except $store.current)
+   - MediaQuery/ReactiveValue usage from svelte/reactivity
+   - SvelteMap, SvelteSet, SvelteURL from svelte/reactivity
+   
+   IMPORTS & MODULE STRUCTURE:
+   - import {...} from 'svelte/reactivity' - Reactive utilities
+   - import { mount, hydrate } from 'svelte' - Component lifecycle
+   - .svelte.js or .svelte.ts file extensions mentioned
+   
+2. Set "runes": false if:
+   - Only legacy Svelte 4 patterns are detected:
+     - export let prop - Legacy props
+     - $: derived = ... - Legacy reactive declarations
+     - <slot> elements - Legacy content passing
+     - on:event handlers - Legacy event handling
+     - $$props, $$restProps - Legacy prop access
+     - createEventDispatcher - Legacy events
+   
+3. Consider package metadata:
+   - If package specifically mentions "Svelte 5" or "runes" support in description
+   - If package.json shows a dependency on "svelte": "^5" or similar
+
+4. When in doubt, set "runes": false - be conservative with detection
+
 				AVAILABLE TAGS:
 				${JSON.stringify(TAGS_PROMPT)}
 				
@@ -316,6 +384,11 @@ async function process_batches_through_llm({
 						if (json[pkg_name].description) {
 							package_details.meta.description = json[pkg_name].description;
 							console.log(`[${batch_id}] Updated description for ${pkg_name}`);
+						}
+
+						if (json[pkg_name].runes && package_details.meta.svelte5) {
+							package_details.meta.runes = json[pkg_name].runes;
+							console.log(`[${batch_id}] Updated runes for ${pkg_name}`);
 						}
 
 						updated_count++;

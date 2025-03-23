@@ -1,11 +1,12 @@
 ---
 name: "svelte-websocket-stores"
-description: "Synchronize primitive Svelte stores across WebSocket connections."
+description: "Synchronize Svelte stores across WebSocket connections."
 repo_url: "https://github.com/xt449/svelte-websocket-stores"
 author: "binarybanana"
 homepage: "https://github.com/xt449/svelte-websocket-stores#readme"
 downloads: 1
-updated: "2024-11-08T14:26:33.170Z"
+updated: "2025-03-19T13:13:12.408Z"
+svelte5: true
 tags: 
   - utility
 ---

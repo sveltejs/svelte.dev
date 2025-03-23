@@ -1,9 +1,8 @@
 ---
 name: "svelte-yafal"
-description: "Provides minimal abstractions for Fontawesome icons in Svelte."
+description: "Integrate Font Awesome icons into Svelte applications easily."
 author: "gtmnayan"
 homepage: "https://github.com/gtm-nayan/svelte-yafal"
-downloads: 1
 updated: "2022-09-29T13:44:29.576Z"
 tags: 
   - ui

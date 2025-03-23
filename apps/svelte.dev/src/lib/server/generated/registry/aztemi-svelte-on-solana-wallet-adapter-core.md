@@ -1,10 +1,10 @@
 ---
 name: "@aztemi/svelte-on-solana-wallet-adapter-core"
-description: "Integrate Solana wallet adapter core functionality into Svelte apps."
+description: "Manage Solana wallet connections in Svelte applications."
 repo_url: "https://github.com/aztemi/wallet-adapter"
 author: "Svelte on Solana"
 homepage: "https://github.com/aztemi/wallet-adapter#readme"
-downloads: 30
+downloads: 36
 dependents: 1
 updated: "2024-04-15T19:39:00.200Z"
 github_stars: 14

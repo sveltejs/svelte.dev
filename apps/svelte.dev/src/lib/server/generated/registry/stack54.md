@@ -1,12 +1,12 @@
 ---
 name: "stack54"
-description: "Enable SSR and streaming capabilities for Svelte applications."
+description: "Build a fun Javascript stack with Svelte and streaming."
 repo_url: "https://github.com/joshamaju/stack54"
 author: "Joshua Amaju"
 homepage: "https://github.com/joshamaju/stack54#readme"
-downloads: 1
+downloads: 16
 dependents: 4
-updated: "2025-01-06T08:31:16.778Z"
+updated: "2025-03-22T16:03:49.523Z"
 tags: 
   - server
 ---

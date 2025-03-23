@@ -1,7 +1,8 @@
 ---
 name: "svelte-photoviewer"
-description: "Create image galleries with Google Photos-esque layout in Svelte."
+description: "Create Google Photos-esque image galleries in Svelte."
 author: "psnszsn"
+downloads: 2
 updated: "2020-06-16T18:21:01.565Z"
 tags: 
   - ui

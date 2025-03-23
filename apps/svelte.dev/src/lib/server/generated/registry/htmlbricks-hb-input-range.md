@@ -1,8 +1,8 @@
 ---
 name: "@htmlbricks/hb-input-range"
-description: "Create Svelte-Bootstrap number input web component."
+description: "Create range input web component for Svelte applications."
 author: "Dario Caruso"
-downloads: 16
+downloads: 66
 dependents: 1
 updated: "2025-03-09T03:10:30.662Z"
 tags: 

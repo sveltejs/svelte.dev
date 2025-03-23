@@ -1,12 +1,13 @@
 ---
 name: "svelte-theme-select"
-description: "Provide customizable Svelte components for theme selection (light/dark mode)."
+description: "Create customizable Svelte components for theme selection."
 repo_url: "https://github.com/captaincodeman/svelte-theme-select"
 author: "Simon Green"
 homepage: "https://captaincodeman.github.io/svelte-theme-select/"
-downloads: 7
+downloads: 12
 updated: "2024-10-24T19:27:12.758Z"
 github_stars: 19
+svelte5: true
 tags: 
   - ui
 ---

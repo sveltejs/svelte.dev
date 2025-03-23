@@ -1,6 +1,6 @@
 ---
 name: "@nvl/sveltex"
-description: "Preprocessor for Svelte, integrate Markdown, LaTeX, and math."
+description: "Process Markdown and LaTeX in Svelte components."
 repo_url: "https://github.com/nvlang/sveltex"
 author: "N. V. Lang"
 homepage: "https://sveltex.dev"

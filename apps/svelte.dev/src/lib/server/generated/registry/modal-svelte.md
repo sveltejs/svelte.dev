@@ -1,12 +1,13 @@
 ---
 name: "modal-svelte"
-description: "Create modal dialogs in Svelte, with focus management and form support."
+description: "Creates modal dialogs with focus trapping for Svelte."
 repo_url: "https://github.com/probablykasper/modal-svelte"
 author: "Kasper Henningsen"
 homepage: "https://modal-svelte.kasper.space"
-downloads: 20
+downloads: 1
 updated: "2024-10-23T05:46:15.599Z"
 github_stars: 9
+svelte5: true
 tags: 
   - ui
 ---

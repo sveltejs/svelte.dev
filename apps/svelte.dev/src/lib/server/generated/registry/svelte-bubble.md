@@ -1,6 +1,6 @@
 ---
 name: "svelte-bubble"
-description: "Create bubble-like display containers for Svelte applications."
+description: "Provide bubble-like display container for Svelte components."
 repo_url: "https://github.com/thiagozanetti/svelte-bubble"
 author: "thiagozanetti"
 homepage: "https://github.com/thiagozanetti/svelte-bubble#readme"

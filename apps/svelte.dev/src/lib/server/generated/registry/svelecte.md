@@ -1,13 +1,14 @@
 ---
 name: "svelecte"
-description: "Provide flexible autocomplete and select component for Svelte."
+description: "Create flexible autocomplete/select component for Svelte."
 repo_url: "https://github.com/mskocik/svelecte"
 author: "mskocik"
 homepage: "https://svelecte.vercel.app/"
-downloads: 5527
-dependents: 10
+downloads: 4976
+dependents: 11
 updated: "2025-03-07T14:56:00.569Z"
-github_stars: 513
+github_stars: 514
+svelte5: true
 tags: 
   - ui
 ---

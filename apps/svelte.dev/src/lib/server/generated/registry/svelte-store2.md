@@ -1,6 +1,6 @@
 ---
 name: "svelte-store2"
-description: "Extends Svelte stores with methods like get() for value retrieval."
+description: "Provide extended Svelte stores with get() method for retrieving values."
 repo_url: "https://github.com/vkurko/svelte-store2"
 author: "vkurko"
 homepage: "https://github.com/vkurko/svelte-store2#readme"

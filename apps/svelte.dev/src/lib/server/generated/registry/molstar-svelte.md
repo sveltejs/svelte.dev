@@ -1,10 +1,9 @@
 ---
 name: "molstar-svelte"
-description: "Provides Svelte components for Mol* biomolecular structure visualization."
+description: "Create Mol* Svelte components for biomolecular structure visualization."
 author: "0gust1"
-downloads: 6
+downloads: 2
 updated: "2023-09-15T17:42:18.437Z"
 tags: 
   - ui
-  - media
 ---

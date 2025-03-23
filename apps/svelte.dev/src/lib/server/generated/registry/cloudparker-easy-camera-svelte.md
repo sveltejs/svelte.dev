@@ -1,10 +1,11 @@
 ---
 name: "@cloudparker/easy-camera-svelte"
-description: "Integrate camera features, capture images and videos in Svelte apps."
+description: "Implement camera features for Svelte applications."
 author: "couldparker.com"
-downloads: 11
+downloads: 94
 dependents: 1
 updated: "2024-11-26T17:44:28.796Z"
+svelte5: true
 tags: 
   - media
   - ui

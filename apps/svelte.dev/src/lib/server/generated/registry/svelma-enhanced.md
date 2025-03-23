@@ -1,6 +1,6 @@
 ---
 name: "svelma-enhanced"
-description: "Build UI with Bulma components for Svelte, enhanced with fixes."
+description: "Build Bulma components for Svelte apps."
 repo_url: "https://github.com/saravanabalagi/svelma"
 author: "Saravanabalagi Ramachandran"
 homepage: "https://github.com/saravanabalagi/svelma#readme"

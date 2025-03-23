@@ -1,8 +1,8 @@
 ---
 name: "@ikun-ui/tour"
-description: "Create tour components for Svelte applications."
+description: "Create guided tours for Svelte applications."
 author: "baiwusanyu"
-downloads: 1
+downloads: 5
 dependents: 1
 updated: "2025-01-24T03:49:25.946Z"
 tags: 

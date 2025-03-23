@@ -6,6 +6,7 @@ author: "Willin Wang"
 homepage: "https://svelte.js.cool"
 updated: "2023-12-31T05:27:38.141Z"
 github_stars: 5
+svelte5: true
 tags: 
   - utility
 ---

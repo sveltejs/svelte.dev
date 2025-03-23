@@ -1,9 +1,10 @@
 ---
 name: "@chrisjayden/flowbite-svelte"
-description: "Use Flowbite components for Svelte and SvelteKit applications."
+description: "Build websites faster with Flowbite components for Svelte."
 repo_url: "https://github.com/chrisjayden/flowbite-svelte"
 author: "Shinichi Okada"
 homepage: "https://flowbite-svelte.com/"
+downloads: 46
 updated: "2022-11-22T19:16:52.050Z"
 tags: 
   - component-library

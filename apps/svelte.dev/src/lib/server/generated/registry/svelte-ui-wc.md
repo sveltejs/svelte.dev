@@ -1,0 +1,10 @@
+---
+name: "svelte-ui-wc"
+description: "Create Svelte component library for web components."
+repo_url: "https://github.com/achanta3215/svelte-wc"
+author: "Achanta Krishna Sameer"
+homepage: "https://github.com/achanta3215/svelte-wc#readme"
+updated: "2024-09-21T09:05:33.913Z"
+tags: 
+  - component-library
+---

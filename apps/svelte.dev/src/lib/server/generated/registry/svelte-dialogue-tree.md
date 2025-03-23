@@ -1,6 +1,6 @@
 ---
 name: "svelte-dialogue-tree"
-description: "Create interactive branching dialogues for Svelte applications."
+description: "Create and interact with branching dialogues in Svelte apps."
 repo_url: "https://github.com/KutayGuler/svelte-dialogue-tree"
 author: "KutayGuler"
 homepage: "http://svelte-dialogue-tree.vercel.app"

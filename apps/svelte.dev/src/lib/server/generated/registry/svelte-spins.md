@@ -1,8 +1,8 @@
 ---
 name: "svelte-spins"
-description: "Render CSS loaders as Svelte components, zero dependencies."
+description: "Svelte components for loaders.css spinners."
 author: "ksmarty"
-downloads: 20
+downloads: 52
 updated: "2021-01-18T04:44:55.278Z"
 tags: 
   - ui

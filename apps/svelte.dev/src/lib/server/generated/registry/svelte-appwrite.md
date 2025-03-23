@@ -1,12 +1,10 @@
 ---
 name: "svelte-appwrite"
-description: "Integrate Appwrite services into Svelte applications."
+description: "Integrate Appwrite services into Svelte applications easily."
 author: "eldadfux"
-downloads: 4
+downloads: 1
 updated: "2021-05-13T07:39:47.827Z"
 tags: 
+  - component-library
   - integration
-  - auth
-  - server
-  - utility
 ---

@@ -1,8 +1,8 @@
 ---
 name: "@htmlbricks/hb-site-slideshow"
-description: "Create slideshows with Svelte and HTMLBricks."
+description: "Create slideshows with this web component for Svelte."
 author: "Dario Caruso"
-downloads: 2
+downloads: 257
 updated: "2025-03-09T03:10:35.760Z"
 tags: 
   - ui

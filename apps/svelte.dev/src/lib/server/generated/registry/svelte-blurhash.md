@@ -1,6 +1,6 @@
 ---
 name: "svelte-blurhash"
-description: "Display placeholder images using Blurhash in Svelte apps."
+description: "Implements Blurhash image encoding for Svelte applications."
 repo_url: "https://github.com/h416/svelte-blurhash"
 author: "h416"
 homepage: "https://github.com/h416/svelte-blurhash#readme"
@@ -9,5 +9,4 @@ dependents: 1
 updated: "2021-04-30T05:00:20.927Z"
 tags: 
   - media
-  - ui
 ---

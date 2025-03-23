@@ -1,6 +1,6 @@
 ---
 name: "@windmill-labs/svelvet"
-description: "Build interactive node-based flow diagrams with Svelte components."
+description: "Build interactive node-based flow diagrams with Svelte."
 repo_url: "https://github.com/open-source-labs/Svelvet"
 author: "hugocasa"
 homepage: "https://github.com/open-source-labs/Svelvet"

@@ -1,13 +1,14 @@
 ---
 name: "@svelteuidev/composables"
-description: "Provides Svelte actions and utility functions for various use cases."
+description: "Svelte actions and utilities library."
 repo_url: "https://github.com/svelteuidev/svelteui"
 author: "Kamell Perry"
 homepage: "https://svelteui.dev/"
-downloads: 1084
+downloads: 1210
 dependents: 9
 updated: "2024-07-07T14:30:26.620Z"
 github_stars: 1359
+svelte5: true
 tags: 
   - utility
 ---

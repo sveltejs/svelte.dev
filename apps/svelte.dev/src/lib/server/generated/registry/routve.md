@@ -1,6 +1,6 @@
 ---
 name: "routve"
-description: "Advanced Svelte router with nested routes, code splitting, and navigation guards."
+description: "Provides advanced routing for Svelte applications."
 repo_url: "https://github.com/routve/routve"
 author: "Routve"
 homepage: "https://github.com/routve/routve#readme"

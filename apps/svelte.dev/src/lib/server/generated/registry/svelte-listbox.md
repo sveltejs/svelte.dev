@@ -1,10 +1,9 @@
 ---
 name: "svelte-listbox"
-description: "Implement listbox UI component for Svelte applications."
+description: "Implement listbox component for Svelte."
 author: "danipo"
-downloads: 5
+downloads: 2
 updated: "2020-06-04T13:53:44.303Z"
 tags: 
   - ui
-  - component-library
 ---

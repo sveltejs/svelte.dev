@@ -1,8 +1,8 @@
 ---
 name: "@ikun-ui/tooltip"
-description: "Create tooltips in Svelte applications."
+description: "Create tooltip components for Svelte."
 author: "baiwusanyu"
-downloads: 3
+downloads: 36
 dependents: 4
 updated: "2025-01-24T03:49:24.967Z"
 tags: 

@@ -1,11 +1,13 @@
 ---
 name: "@jothsa/sveltekit-svg"
-description: "Import SVG files as Svelte components, inline SVG code or urls."
+description: "Import SVG files as Svelte components."
 repo_url: "https://github.com/poppa/sveltekit-svg"
 author: "Pontus Östlund"
 homepage: "https://github.com/poppa/sveltekit-svg#readme"
+downloads: 1
 updated: "2024-06-02T19:24:33.345Z"
 github_stars: 253
+svelte5: true
 tags: 
   - tooling
 ---

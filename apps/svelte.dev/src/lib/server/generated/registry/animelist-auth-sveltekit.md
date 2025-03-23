@@ -1,6 +1,6 @@
 ---
 name: "@animelist/auth-sveltekit"
-description: "Integrate @animelist/auth with SvelteKit applications."
+description: "Integrate @animelist/auth for SvelteKit applications."
 repo_url: "https://github.com/Neo-Ciber94/animelist"
 author: "Freddy L."
 homepage: "https://github.com/Neo-Ciber94/animelist#readme"

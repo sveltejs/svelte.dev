@@ -1,6 +1,6 @@
 ---
 name: "@minna-ui/code-view"
-description: "Syntax highlight code blocks within Svelte components."
+description: "Provides code syntax highlighting web component."
 repo_url: "https://github.com/WeAreGenki/minna-ui/tree/master/components/code-view"
 author: "Max Milton"
 homepage: "https://wearegenki.github.io/minna-ui"

@@ -1,6 +1,6 @@
 ---
 name: "svelte-router-spaceavocado"
-description: "Implement simple routing for Svelte single-page applications."
+description: "Simple Svelte router for single-page applications."
 repo_url: "https://github.com/OrkhanAlikhanov/svelte-router"
 author: "David Horak"
 homepage: "https://github.com/OrkhanAlikhanov/svelte-router"

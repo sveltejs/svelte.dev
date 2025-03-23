@@ -1,6 +1,6 @@
 ---
 name: "@neiwad/svelte-calendar"
-description: "Create simple Svelte calendar for date picking."
+description: "Simple Svelte calendar for date selection."
 repo_url: "https://github.com/neiwad/svelte-calendar"
 author: "neiwad"
 homepage: "https://github.com/neiwad/svelte-calendar"

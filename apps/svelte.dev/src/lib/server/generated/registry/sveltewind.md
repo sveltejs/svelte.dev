@@ -1,10 +1,10 @@
 ---
 name: "sveltewind"
-description: "Build UI with utility-first CSS framework for Svelte and SvelteKit."
+description: "Build user interfaces rapidly with Tailwind CSS and Svelte."
 author: "bobthered"
-downloads: 9
+downloads: 1
 updated: "2025-01-04T15:34:03.468Z"
+svelte5: true
 tags: 
-  - component-library
   - ui
 ---

@@ -1,6 +1,6 @@
 ---
 name: "svelte-grid-2023"
-description: "Responsive, draggable, resizable grid layout for Svelte."
+description: "Create responsive, draggable, resizable grid layout for Svelte."
 repo_url: "https://github.com/raashy/svelte-grid-2022"
 author: "Vahe Araqelyan"
 homepage: "https://github.com/raashy/svelte-grid-2022#readme"

@@ -1,6 +1,6 @@
 ---
 name: "@svuick/events"
-description: "Provides event handling utilities for Svelte and SvelteKit projects."
+description: "Provides event handling utilities for Svelte and SvelteKit."
 repo_url: "https://gitlab.com/david-plugge/svuick"
 author: "davidplugge"
 homepage: "https://gitlab.com/david-plugge/svuick#readme"

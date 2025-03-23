@@ -1,11 +1,10 @@
 ---
 name: "@popperjs/svelte"
-description: "Wraps Popper.js for positioning UI elements in Svelte applications."
+description: "Wrap Popper.js for positioning in Svelte."
 author: "atomiks"
-downloads: 134
+downloads: 201
 dependents: 4
 updated: "2020-04-19T15:43:49.306Z"
 tags: 
-  - ui
   - utility
 ---

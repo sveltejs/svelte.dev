@@ -1,6 +1,6 @@
 ---
 name: "toas"
-description: "Create simple web component for displaying notifications in Svelte."
+description: "Display notifications in Svelte applications without dependencies."
 repo_url: "https://github.com/itamaesanorg/toas"
 author: "ITAMAESAN ORG & Miguel Gargallo"
 homepage: "https://itamaesan.org"

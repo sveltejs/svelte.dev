@@ -1,6 +1,6 @@
 ---
 name: "@llui85/svelte-accessible-dialog"
-description: "Create accessible dialog components for Svelte apps."
+description: "Build accessible dialog components for Svelte apps."
 repo_url: "https://github.com/reecelucas/svelte-accessible-dialog"
 author: "llui85"
 homepage: "https://github.com/reecelucas/svelte-accessible-dialog#readme"

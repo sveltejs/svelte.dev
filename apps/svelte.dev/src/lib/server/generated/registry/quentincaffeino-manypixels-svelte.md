@@ -1,6 +1,6 @@
 ---
 name: "@quentincaffeino/manypixels-svelte"
-description: "Render Manypixels SVG illustrations as Svelte components."
+description: "Integrate Manypixels SVG illustrations into Svelte projects."
 repo_url: "https://github.com/quentincaffeino/manypixels-illustrations"
 author: "quentincaffeino"
 homepage: "https://github.com/quentincaffeino/manypixels-illustrations#readme"

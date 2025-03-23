@@ -1,6 +1,6 @@
 ---
 name: "sveltepress-ui"
-description: "User interface for SveltePress, manage documentation and features."
+description: "Provide user interface for SveltePress documentation."
 repo_url: "https://github.com/GeopJr/SveltePress"
 author: "GeopJr"
 homepage: "https://github.com/GeopJr/SveltePress#readme"
@@ -9,5 +9,4 @@ updated: "2021-12-16T01:11:18.151Z"
 github_stars: 218
 tags: 
   - ui
-  - tooling
 ---

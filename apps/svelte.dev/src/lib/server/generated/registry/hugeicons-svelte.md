@@ -1,9 +1,10 @@
 ---
 name: "@hugeicons/svelte"
-description: "Use Hugeicons icon library in Svelte projects."
+description: "Provide Hugeicons icon components for Svelte applications."
 author: "Hugeicons"
-downloads: 6
+downloads: 33
 updated: "2025-02-06T17:10:29.756Z"
+svelte5: true
 tags: 
-  - ui
+  - component-library
 ---

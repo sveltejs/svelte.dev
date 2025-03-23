@@ -1,11 +1,13 @@
 ---
 name: "svelte-simple-query"
-description: "Offers a simple, lightweight data query library for Svelte 5."
+description: "Fetch, cache, and mutate data in Svelte apps with TypeScript support."
 repo_url: "https://github.com/harryhdt/svelte-simple-query"
 author: "harryhdt"
 homepage: "https://svelte-simple-query.harryhdt.dev"
-downloads: 4
-updated: "2025-03-15T09:42:21.718Z"
+downloads: 82
+updated: "2025-03-16T07:58:40.326Z"
+svelte5: true
 tags: 
   - utility
+  - server
 ---

@@ -174,6 +174,10 @@ export interface Package {
 
 	deprecated?: boolean;
 
+	svelte5: boolean;
+
+	runes: boolean;
+
 	/** Tags for categorizing the package */
 	tags: string[];
 }

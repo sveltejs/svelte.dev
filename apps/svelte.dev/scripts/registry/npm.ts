@@ -124,6 +124,14 @@ export class PackageCache {
 			frontmatter += `github_stars: ${package_details.github_stars}\n`;
 		}
 
+		if (package_details.svelte5) {
+			frontmatter += `svelte5: true\n`;
+		}
+
+		if (package_details.runes) {
+			frontmatter += `runes: true\n`;
+		}
+
 		frontmatter += `tags: \n${package_details.tags.map((tag = '') => `  - ${tag}`).join('\n')}\n`;
 
 		frontmatter += '---\n';
@@ -345,6 +353,156 @@ export async function fetch_details_for_package(pkg: string): Promise<any> {
 	return registry_data;
 }
 
+/**
+ * Checks if a semver range supports Svelte version 5.x
+ *
+ * @param {string} version_range - The semver version range to check
+ * @returns {boolean} - True if the range supports Svelte 5, false otherwise
+ */
+function supports_svelte5(version_range: string): boolean {
+	if (!version_range) return false;
+
+	// Handle complex range patterns first to prevent matching simpler patterns
+
+	// Handle complex version ranges with both upper and lower bounds (e.g., ">=3.0.0 <6.0.0")
+	if (
+		(version_range.includes('<') || version_range.includes('<=')) &&
+		(version_range.includes('>=') || version_range.includes('>'))
+	) {
+		// Extract lower bound
+		let lower_bound = 0;
+		let lower_bound_operator = '>=';
+
+		if (version_range.includes('>=')) {
+			const match = version_range.match(/>=\s*(\d+(\.\d+)*)/);
+			if (match) {
+				lower_bound = parseFloat(match[1]);
+				lower_bound_operator = '>=';
+			}
+		} else if (version_range.includes('>')) {
+			const match = version_range.match(/>\s*(\d+(\.\d+)*)/);
+			if (match) {
+				lower_bound = parseFloat(match[1]);
+				lower_bound_operator = '>';
+			}
+		}
+
+		// Extract upper bound
+		let upper_bound = Infinity;
+		let upper_bound_operator = '<';
+
+		if (version_range.includes('<')) {
+			const match = version_range.match(/<\s*(\d+(\.\d+)*)/);
+			if (match) {
+				upper_bound = parseFloat(match[1]);
+				upper_bound_operator = '<';
+			}
+		} else if (version_range.includes('<=')) {
+			const match = version_range.match(/<=\s*(\d+(\.\d+)*)/);
+			if (match) {
+				upper_bound = parseFloat(match[1]);
+				upper_bound_operator = '<=';
+			}
+		}
+
+		// Special case: If the upper bound is exactly 5 with '<', version 5 is excluded
+		if (upper_bound_operator === '<' && upper_bound === 5) {
+			return false;
+		}
+
+		// Check if version 5 is within the range
+		const is_lower_bound_satisfied =
+			lower_bound_operator === '>=' ? lower_bound <= 5 : lower_bound < 5;
+		const is_upper_bound_satisfied =
+			upper_bound_operator === '<' ? upper_bound > 5 : upper_bound >= 5;
+
+		return is_lower_bound_satisfied && is_upper_bound_satisfied;
+	}
+
+	// Handle version range with OR operators
+	if (version_range.includes('||')) {
+		const ranges = version_range.split('||').map((r) => r.trim());
+		// If any sub-range supports v5, the whole range supports it
+		return ranges.some((range) => supports_svelte5(range));
+	}
+
+	// Handle exact major version format (5)
+	if (version_range === '5') return true;
+
+	// Handle caret ranges like ^5 or ^5.0.0
+	if (version_range.startsWith('^5')) return true;
+
+	// Handle tilde ranges like ~5 or ~5.0.0
+	if (version_range.startsWith('~5')) return true;
+
+	// Handle wildcard (*) by itself, which means any version
+	if (version_range === '*') return true;
+
+	// Handle * and x ranges (e.g., "5.x", "5.*")
+	if (
+		version_range.startsWith('5.') &&
+		(version_range.endsWith('*') || version_range.endsWith('x'))
+	) {
+		return true;
+	}
+
+	// Handle version ranges with hyphen notation
+	if (version_range.includes(' - ')) {
+		const [start, end] = version_range.split(' - ').map((v) => parseFloat(v));
+		return end >= 5;
+	}
+
+	// Handle >= ranges (after checking for complex ranges)
+	if (version_range.startsWith('>=')) {
+		const version_number = parseFloat(version_range.substring(2));
+		return version_number <= 5;
+	}
+
+	// Handle > ranges
+	if (version_range.startsWith('>')) {
+		const version_number = parseFloat(version_range.substring(1));
+		return version_number < 5;
+	}
+
+	// Handle <= ranges
+	if (version_range.startsWith('<=')) {
+		const version_number = parseFloat(version_range.substring(2));
+		return version_number >= 5;
+	}
+
+	// Handle < ranges
+	if (version_range.startsWith('<')) {
+		const version_number = parseFloat(version_range.substring(1));
+		return version_number > 5;
+	}
+
+	// Handle exact versions of non-5 (like 4.0.0 or 6.0.0)
+	if (/^\d+(\.\d+)*$/.test(version_range)) {
+		const major_version = parseInt(version_range.split('.')[0]);
+		return major_version === 5;
+	}
+
+	// Handle other caret ranges (^4.x.x, ^6.x.x)
+	if (version_range.startsWith('^')) {
+		const major_version = parseInt(version_range.substring(1).split('.')[0]);
+		return major_version === 5;
+	}
+
+	// Handle other tilde ranges (~4.x.x, ~6.x.x)
+	if (version_range.startsWith('~')) {
+		const major_version = parseInt(version_range.substring(1).split('.')[0]);
+		return major_version === 5;
+	}
+
+	// Handle other x-ranges (4.x, 6.x)
+	if (version_range.includes('.x') || version_range.includes('.*')) {
+		const major_version = parseInt(version_range.split('.')[0]);
+		return major_version === 5;
+	}
+
+	return false;
+}
+
 /** Options for searching npm packages */
 export interface SearchOptions {
 	/** The keywords used to search npm, ex: `svelte-component` */
@@ -380,6 +538,8 @@ export type StructuredInterimPackage = {
 		downloads?: number;
 		dependents?: number;
 		github_stars?: number;
+		svelte5: boolean;
+		runes: boolean;
 	};
 	// Returned contents from registry.npmjs.org API
 	package_json: any;
@@ -402,6 +562,8 @@ export function structure_package_to_package(
 	data.updated = structured_package.meta.last_updated;
 	data.tags = structured_package.meta.tags;
 	data.github_stars = structured_package.meta.github_stars;
+	data.svelte5 = structured_package.meta.svelte5;
+	data.runes = structured_package.meta.runes;
 
 	return data;
 }
@@ -462,7 +624,9 @@ export async function* stream_search_by_keywords({
 						meta: {
 							deprecated: false,
 							last_updated: '',
-							tags: []
+							tags: [],
+							svelte5: false,
+							runes: false
 						},
 						package_json: null as any
 					};
@@ -496,6 +660,17 @@ export async function* stream_search_by_keywords({
 								!latest_package_json.devDependencies?.['@sveltejs/kit']
 							) {
 								continue;
+							}
+
+							// Get version number of svelte
+							const svelte_version =
+								latest_package_json.dependencies?.svelte ??
+								latest_package_json.peerDependencies?.svelte ??
+								latest_package_json.devDependencies?.svelte;
+
+							const is_svelte_5 = supports_svelte5(svelte_version);
+							if (is_svelte_5) {
+								interim_pkg.meta.svelte5 = true;
 							}
 
 							if (latest_version && response.time && response.time[latest_version]) {

@@ -1,13 +1,14 @@
 ---
 name: "@sveltejs/adapter-static"
-description: "Build SvelteKit apps as static sites, for easy deployment."
+description: "Adapts SvelteKit apps for static site generation."
 repo_url: "https://github.com/sveltejs/kit"
 author: "rich_harris"
 homepage: "https://svelte.dev"
-downloads: 154654
-dependents: 61
+downloads: 146791
+dependents: 63
 updated: "2024-12-21T18:33:37.611Z"
-github_stars: 19115
+github_stars: 19118
+svelte5: true
 tags: 
   - adapter
 ---

@@ -1,6 +1,6 @@
 ---
 name: "@responsive-ui/action-sheet"
-description: "Action sheet component for responsive-ui Svelte applications."
+description: "Action sheet component for responsive-ui."
 repo_url: "https://github.com/wetix/responsive-ui"
 author: "Si3nLoong"
 homepage: "https://github.com/wetix/responsive-ui/blob/main/components/action-sheet#README.md"

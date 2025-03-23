@@ -1,6 +1,6 @@
 ---
 name: "svelte-komponents"
-description: "Provide SvelteKit and DaisyUI components for Svelte applications."
+description: "Create SvelteKit and DaisyUI components."
 repo_url: "https://github.com/GabrielHK97/svelte-komponents"
 author: "Gabriel Kubota"
 homepage: "https://github.com/GabrielHK97/svelte-komponents#readme"

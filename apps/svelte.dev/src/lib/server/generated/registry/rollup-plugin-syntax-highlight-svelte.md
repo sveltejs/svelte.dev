@@ -1,6 +1,6 @@
 ---
 name: "rollup-plugin-syntax-highlight-svelte"
-description: "Highlight code in Svelte components using Shiki and Rollup."
+description: "Highlight code in Svelte components using Shiki."
 repo_url: "https://github.com/valterkraemer/rollup-plugin-syntax-highlight"
 author: "Valter Kraemer"
 homepage: "https://github.com/valterkraemer/rollup-plugin-syntax-highlight#readme"

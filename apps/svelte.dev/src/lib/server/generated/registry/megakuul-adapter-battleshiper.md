@@ -1,6 +1,6 @@
 ---
 name: "@megakuul/adapter-battleshiper"
-description: "Adapt SvelteKit apps for deployment on battleshiper lambda infrastructure."
+description: "Deploy SvelteKit apps on battleshiper lambda infrastructure."
 repo_url: "https://github.com/megakuul/battleshiper"
 author: "Megakuul"
 homepage: "https://github.com/megakuul/battleshiper#readme"

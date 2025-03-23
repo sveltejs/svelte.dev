@@ -1,10 +1,9 @@
 ---
 name: "@htmlbricks/bootstraplayout-component"
-description: "Provide Bootstrap 5 layout components for Svelte applications."
+description: "Svelte Bootstrap 5 WebComponent."
 author: "Dario Caruso"
-downloads: 2
+downloads: 103
 updated: "2022-01-02T19:14:33.396Z"
 tags: 
   - ui
-  - component-library
 ---

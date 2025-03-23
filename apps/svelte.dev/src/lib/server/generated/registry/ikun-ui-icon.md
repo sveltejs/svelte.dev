@@ -1,8 +1,8 @@
 ---
 name: "@ikun-ui/icon"
-description: "Provide icon components for Svelte applications."
+description: "Provide icon components for Svelte."
 author: "baiwusanyu"
-downloads: 9
+downloads: 49
 dependents: 66
 updated: "2025-01-24T03:48:56.877Z"
 tags: 

@@ -1,8 +1,8 @@
 ---
 name: "@krist7599555/svelte-turing-render"
-description: "Enable Turing machine-like behavior for rendering Svelte components."
+description: "Render Svelte components in a Turing machine-like sequence."
 author: "Krist Ponpairin"
-downloads: 2
+downloads: 14
 updated: "2023-07-19T06:13:52.017Z"
 tags: 
   - utility

@@ -1,14 +1,14 @@
 ---
 name: "svelte-tweakpane-ui"
-description: "Create UI controls for Tweakpane in Svelte applications."
+description: "Svelte component library wrapping Tweakpane UI elements."
 repo_url: "https://github.com/kitschpatrol/svelte-tweakpane-ui"
 author: "Eric Mika"
 homepage: "https://kitschpatrol.com/svelte-tweakpane-ui"
-downloads: 1167
+downloads: 1321
 dependents: 3
-updated: "2025-03-04T18:31:09.725Z"
-github_stars: 162
+updated: "2025-03-18T15:09:13.099Z"
+github_stars: 164
+svelte5: true
 tags: 
   - ui
-  - tooling
 ---

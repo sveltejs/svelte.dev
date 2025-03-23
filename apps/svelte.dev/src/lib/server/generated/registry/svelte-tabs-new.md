@@ -1,6 +1,6 @@
 ---
 name: "svelte-tabs-new"
-description: "Create tabbed interfaces for Svelte applications."
+description: "Create tab components for Svelte applications."
 repo_url: "https://github.com/joeattardi/svelte-tabs"
 author: "harishdurga"
 homepage: "https://github.com/joeattardi/svelte-tabs#readme"

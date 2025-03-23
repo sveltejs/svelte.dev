@@ -1,6 +1,6 @@
 ---
 name: "carrusel"
-description: "Create simple, dependency-free, SSR-compatible carousel for Svelte."
+description: "Create simple, dependency-free, SSR-compatible carousels in Svelte."
 repo_url: "https://github.com/jhanca-vm/carrusel"
 author: "Jhan Viloria"
 homepage: "https://carruseljs.vercel.app"

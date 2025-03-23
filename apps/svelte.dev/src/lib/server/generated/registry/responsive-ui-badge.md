@@ -1,6 +1,6 @@
 ---
 name: "@responsive-ui/badge"
-description: "Create notification badge component for Svelte applications."
+description: "Create notification badges for Svelte UI components."
 repo_url: "https://github.com/wetix/responsive-ui"
 author: "Si3nLoong"
 homepage: "https://github.com/wetix/responsive-ui/blob/main/components/badge#README.md"

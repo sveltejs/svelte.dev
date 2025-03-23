@@ -1,6 +1,6 @@
 ---
 name: "svelte-fastform"
-description: "Manage forms with validation and submission handling in Svelte apps."
+description: "Simplify form building with components and API hooks for Svelte."
 author: "Sean Mullen"
 updated: "2021-02-17T22:19:13.385Z"
 tags: 

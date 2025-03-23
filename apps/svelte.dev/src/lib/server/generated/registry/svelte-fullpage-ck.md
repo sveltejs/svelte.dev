@@ -1,6 +1,6 @@
 ---
 name: "svelte-fullpage-ck"
-description: "Create fullpage scrolling sections for Svelte applications."
+description: "Implement fullpage scrolling sections in Svelte applications."
 repo_url: "https://github.com/cagdaskemik/svelte-fullpage-ck"
 author: "Cagdas Kemik"
 homepage: "https://github.com/cagdaskemik/svelte-fullpage-ck#readme"

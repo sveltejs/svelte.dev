@@ -1,6 +1,6 @@
 ---
 name: "svelte-short-qrcode"
-description: "Shorten URLs and generate QR codes for SvelteKit applications."
+description: "Generate QR codes and shorten URLs for SvelteKit applications."
 repo_url: "https://github.com/captaincodeman/svelte-short-qrcode"
 author: "Simon Green"
 homepage: "https://captaincodeman.github.io/svelte-short-qrcode/"

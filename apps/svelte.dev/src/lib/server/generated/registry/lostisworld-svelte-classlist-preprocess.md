@@ -1,6 +1,6 @@
 ---
 name: "@lostisworld/svelte-classlist-preprocess"
-description: "Enables array usage within Svelte's class:list attribute."
+description: "Enable array usage in Svelte's class:list attribute."
 repo_url: "https://github.com/LoStis-World/svelte-classlist-preprocess"
 author: "LoSti's World"
 homepage: "https://github.com/LoStis-World/svelte-classlist-preprocess#readme"

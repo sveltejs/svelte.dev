@@ -1,8 +1,8 @@
 ---
 name: "@ikun-ui/eye-dropper"
-description: "Implement eye dropper functionality in Svelte applications."
+description: "Create eye dropper components for Svelte applications."
 author: "baiwusanyu"
-downloads: 1
+downloads: 36
 dependents: 1
 updated: "2025-01-24T03:48:54.079Z"
 tags: 

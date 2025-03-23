@@ -1,8 +1,8 @@
 ---
 name: "@async-resource/svelte"
-description: "Manage asynchronous resources in Svelte applications."
+description: "Manage resources asynchronously in Svelte applications."
 author: "Cristóvão Trevisan"
-downloads: 3
+downloads: 40
 updated: "2019-08-14T18:27:48.522Z"
 tags: 
   - utility

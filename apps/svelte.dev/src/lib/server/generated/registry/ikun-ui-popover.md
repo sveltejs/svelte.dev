@@ -1,8 +1,8 @@
 ---
 name: "@ikun-ui/popover"
-description: "Create popover components for Svelte applications."
+description: "Create popover components for Svelte."
 author: "baiwusanyu"
-downloads: 2
+downloads: 37
 dependents: 9
 updated: "2025-01-24T03:49:10.903Z"
 tags: 

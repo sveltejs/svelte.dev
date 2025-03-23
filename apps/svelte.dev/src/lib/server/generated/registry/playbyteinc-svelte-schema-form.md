@@ -1,6 +1,6 @@
 ---
 name: "@playbyteinc/svelte-schema-form"
-description: "Generate Svelte forms from JSON Schema, supporting subforms and lists."
+description: "Generate forms from JSON schema in Svelte applications."
 repo_url: "https://github.com/playbyteinc/svelte-schema-form"
 author: "James Ellis-Jones"
 homepage: "https://github.com/playbyteinc/svelte-schema-form#readme"

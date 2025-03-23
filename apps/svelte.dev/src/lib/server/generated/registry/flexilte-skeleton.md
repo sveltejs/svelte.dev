@@ -1,12 +1,13 @@
 ---
 name: "@flexilte/skeleton"
-description: "Offer skeleton support for Flexilte, a Svelte framework."
+description: "Provides skeleton support library for flexilte."
 repo_url: "https://github.com/flexilte/flexilte"
 author: "borgmon"
 homepage: "https://flexilte.github.io"
-downloads: 1
+downloads: 17
 updated: "2024-11-20T03:33:24.380Z"
 github_stars: 1
 tags: 
   - component-library
+  - ui
 ---

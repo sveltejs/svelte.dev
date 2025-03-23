@@ -1,8 +1,8 @@
 ---
 name: "sk-form-data"
-description: "Parse SvelteKit form data automatically in server hooks."
+description: "Parses form data automatically in SvelteKit."
 author: "Scott Tolinski"
-downloads: 22
+downloads: 55
 updated: "2024-07-03T04:11:00.448Z"
 tags: 
   - utility

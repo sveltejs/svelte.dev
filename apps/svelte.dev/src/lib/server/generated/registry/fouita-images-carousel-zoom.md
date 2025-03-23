@@ -1,10 +1,9 @@
 ---
 name: "@fouita/images-carousel-zoom"
-description: "Display and zoom product images in Svelte with Tailwind CSS."
+description: "Create image carousels with zoom functionality in Svelte."
 author: "islem"
-downloads: 2
+downloads: 7
 updated: "2020-09-11T20:59:02.596Z"
 tags: 
   - ui
-  - media
 ---

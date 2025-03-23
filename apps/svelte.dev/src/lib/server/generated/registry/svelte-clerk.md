@@ -1,12 +1,13 @@
 ---
 name: "svelte-clerk"
-description: "Integrates Clerk authentication with SvelteKit applications."
+description: "Integrate Clerk authentication with SvelteKit applications."
 repo_url: "https://github.com/wobsoriano/svelte-clerk"
 author: "wobsoriano"
 homepage: "https://github.com/wobsoriano/svelte-clerk#readme"
-downloads: 617
-updated: "2025-03-14T15:15:24.325Z"
+downloads: 705
+updated: "2025-03-18T23:35:19.312Z"
 github_stars: 99
+svelte5: true
 tags: 
   - auth
 ---

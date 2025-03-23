@@ -1,6 +1,6 @@
 ---
 name: "@svelkit/chip"
-description: "Create chip component for Svelte apps."
+description: "Create chip components for Svelte applications."
 repo_url: "https://github.com/kenoxa/svelkit"
 author: "Sascha Tandel"
 homepage: "https://github.com/kenoxa/svelkit#readme"

@@ -8,5 +8,5 @@ downloads: 1
 updated: "2021-11-24T10:46:16.903Z"
 github_stars: 10
 tags: 
-  - ui
+  - component-library
 ---

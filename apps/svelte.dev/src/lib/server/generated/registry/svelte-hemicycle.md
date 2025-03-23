@@ -1,6 +1,6 @@
 ---
 name: "svelte-hemicycle"
-description: "Visualize election data using Svelte hemicycle component."
+description: "Visualize election data using hemicycle charts in Svelte."
 repo_url: "https://github.com/j-norwood-young/svelte-hemicycle"
 author: "jasony"
 homepage: "https://github.com/j-norwood-young/svelte-hemicycle#readme"

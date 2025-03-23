@@ -1,6 +1,6 @@
 ---
 name: "nodeviz"
-description: "Node graph based UI framework for Svelte and SvelteKit."
+description: "Render interactive node graph UI framework for Svelte."
 repo_url: "https://github.com/jarecsni/nodeviz"
 author: "Johnny Jarecsni"
 homepage: "https://github.com/jarecsni/nodeviz#readme"

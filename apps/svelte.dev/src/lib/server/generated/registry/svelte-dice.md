@@ -1,8 +1,7 @@
 ---
 name: "svelte-dice"
-description: "Provide simple d6 dice rolling and table implementation for Svelte."
+description: "Roll dice, generate random numbers in Svelte applications."
 author: "colinbate"
-downloads: 1
 updated: "2021-10-25T00:43:49.374Z"
 tags: 
   - utility

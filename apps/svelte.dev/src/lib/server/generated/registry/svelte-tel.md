@@ -1,10 +1,10 @@
 ---
 name: "svelte-tel"
-description: "Provide headless phone number input handling for Svelte."
+description: "Handle phone number input with headless Svelte component."
 author: "mattheous"
-downloads: 6
+downloads: 8
 updated: "2025-02-19T15:05:48.136Z"
+svelte5: true
 tags: 
   - utility
-  - ui
 ---

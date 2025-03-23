@@ -1,6 +1,6 @@
 ---
 name: "@svelte-put/select"
-description: "Feature-rich, extensible, type-safe, accessible select component for Svelte."
+description: "Create feature-rich, accessible select component for Svelte."
 repo_url: "https://github.com/vnphanquang/svelte-put"
 author: "Quang Phan"
 homepage: "https://github.com/vnphanquang/svelte-put/tree/main/packages/select"

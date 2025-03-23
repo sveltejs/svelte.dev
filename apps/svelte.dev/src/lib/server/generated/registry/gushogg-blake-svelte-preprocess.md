@@ -1,6 +1,6 @@
 ---
 name: "@gushogg-blake/svelte-preprocess"
-description: "Extend Svelte preprocessor with support for SCSS, TypeScript, and more."
+description: "Provide Svelte preprocessor wrapper with support for multiple preprocessors."
 repo_url: "https://github.com/sveltejs/svelte-preprocess"
 author: "Christian Kaisermann"
 homepage: "https://github.com/sveltejs/svelte-preprocess#readme"

@@ -1,6 +1,6 @@
 ---
 name: "tailwind-editor-liddellh"
-description: "Generate Tailwind CSS HTML from a Notion-like WYSIWYG editor."
+description: "Generate Tailwind CSS HTML from a Notion-like Svelte editor."
 repo_url: "https://https://github.com/LiddellHunter/tailwind-editor"
 author: "fouita"
 homepage: "https://https://github.com/LiddellHunter/tailwind-editor#readme"

@@ -1,6 +1,6 @@
 ---
 name: "braintapper-svelte-button"
-description: "Provide button component for Svelte applications."
+description: "Create button components for Svelte applications."
 repo_url: "https://github.com/braintapper/braintapper-svelte-button"
 author: "braintapper"
 homepage: "https://github.com/braintapper/braintapper-svelte-button#readme"

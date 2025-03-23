@@ -1,12 +1,11 @@
 ---
 name: "@amadeus-it-group/svelvunity"
-description: "Reusable Svelte components and utilities library."
+description: "Provide reusable Svelte components and utilities."
 repo_url: "https://github.com/AmadeusITGroup/Svelvunity"
 author: "mcavdar"
 homepage: "https://github.com/AmadeusITGroup/Svelvunity#readme"
-downloads: 88
+downloads: 25
 updated: "2025-03-05T17:47:34.712Z"
 tags: 
   - component-library
-  - ui
 ---

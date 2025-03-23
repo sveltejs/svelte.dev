@@ -1,8 +1,8 @@
 ---
 name: "@htmlbricks/hb-checkout-shopping-cart"
-description: "Create shopping cart web component for Svelte applications."
+description: "Create Svelte Shopping Cart WebComponent."
 author: "Dario Caruso"
-downloads: 5
+downloads: 438
 dependents: 3
 updated: "2025-03-09T03:10:43.438Z"
 tags: 

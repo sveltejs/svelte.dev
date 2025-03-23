@@ -1,9 +1,0 @@
----
-name: "@components_/svelte"
-description: "Reusable Svelte components for various UI needs."
-author: "rick-torrellas"
-downloads: 2
-updated: "2022-07-20T19:13:50.912Z"
-tags: 
-  - component-library
----

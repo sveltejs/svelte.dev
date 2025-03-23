@@ -1,10 +1,12 @@
 ---
 name: "svelte-object"
-description: "Create nested component pattern for structuring objects and arrays in Svelte."
+description: "Structure objects/arrays and their properties with Svelte 5 runes."
 author: "refzlund"
 homepage: "https://github.com/Refzlund/svelte-object"
-downloads: 2
+downloads: 8
 updated: "2025-01-17T00:49:59.218Z"
+svelte5: true
+runes: true
 tags: 
   - utility
 ---

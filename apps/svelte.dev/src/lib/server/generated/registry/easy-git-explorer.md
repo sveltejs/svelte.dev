@@ -1,6 +1,6 @@
 ---
 name: "easy-git-explorer"
-description: "Explore Git repositories visually in Svelte applications."
+description: "Explore Git repositories visually in browser."
 repo_url: "https://github.com/danisss9/easy-git-explorer"
 author: "danisss9"
 homepage: "https://github.com/danisss9/easy-git-explorer#readme"

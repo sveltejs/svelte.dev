@@ -1,8 +1,7 @@
 ---
 name: "dasmaql-svelte"
-description: "Provide Svelte component example using DasmaQL query language."
+description: "Integrate DasmaQL query language into Svelte apps."
 author: "Mads Hansen Lund"
-downloads: 2
 updated: "2024-02-20T21:53:39.044Z"
 tags: 
   - utility

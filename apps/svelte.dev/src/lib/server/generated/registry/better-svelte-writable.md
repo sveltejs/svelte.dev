@@ -1,6 +1,6 @@
 ---
 name: "better-svelte-writable"
-description: "Provides type-safe writable with more control over the container."
+description: "Provides type-safe writable stores with advanced features for Svelte."
 author: "TNThung"
 homepage: "https://github.com/tnthung/better-svelte-writable"
 downloads: 5

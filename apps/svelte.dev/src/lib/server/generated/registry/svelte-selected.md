@@ -1,6 +1,6 @@
 ---
 name: "svelte-selected"
-description: "Create select/autocomplete component for Svelte apps with grouping and filtering."
+description: "Select/autocomplete component for Svelte apps with grouping and filtering."
 repo_url: "https://github.com/basaran/svelte-selected"
 author: "rob-balfre"
 homepage: "https://github.com/basaran/svelte-selected#readme"

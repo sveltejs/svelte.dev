@@ -1,6 +1,6 @@
 ---
 name: "svelte-form-ease"
-description: "Manage Svelte forms, handle state, and validate inputs."
+description: "Simplifies form management and validation in Svelte applications."
 repo_url: "https://github.com/FernandoAcTr/svelte-form-ease"
 author: "fernando_acosta"
 homepage: "https://github.com/FernandoAcTr/svelte-form-ease#readme"

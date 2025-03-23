@@ -1,6 +1,6 @@
 ---
 name: "@meticoeus/svelte-photoviewer"
-description: "Create Google Photos-esque image galleries in Svelte projects."
+description: "Create Google Photos-esque image galleries in Svelte."
 repo_url: "https://github.com/meticoeus/svelte-photoviewer"
 author: "meticoeus"
 homepage: "https://github.com/meticoeus/svelte-photoviewer#readme"

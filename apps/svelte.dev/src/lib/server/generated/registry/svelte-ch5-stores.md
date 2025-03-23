@@ -1,6 +1,6 @@
 ---
 name: "svelte-ch5-stores"
-description: "Create stores for Crestron CH5 touch panels using Svelte."
+description: "Provides stores for Crestron CH5 touch panel integration."
 repo_url: "https://github.com/xt449/svelte-ch5-stores"
 author: "binarybanana"
 homepage: "https://github.com/xt449/svelte-ch5-stores#readme"

@@ -1,10 +1,10 @@
 ---
 name: "@smkit/ui"
-description: "UI Kit of SberMarketing, providing reusable Svelte components."
+description: "UI Kit for SberMarketing, providing reusable Svelte components."
 author: "Dmitriy Din"
-downloads: 417
-updated: "2025-03-13T14:27:41.896Z"
+downloads: 621
+updated: "2025-03-21T12:53:35.788Z"
+svelte5: true
 tags: 
   - component-library
-  - ui
 ---

@@ -1,6 +1,6 @@
 ---
 name: "val-i18n-svelte"
-description: "Provides Svelte goodies for val-i18n, including translation components."
+description: "Provides Svelte utilities for val-i18n internationalization."
 repo_url: "https://github.com/crimx/val-i18n-svelte"
 author: "CRIMX"
 homepage: "https://github.com/crimx/val-i18n-svelte#readme"

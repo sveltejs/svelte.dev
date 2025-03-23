@@ -1,6 +1,6 @@
 ---
 name: "svelte-c-reveal"
-description: "Svelte component for reveal effects on scroll."
+description: "Reveal elements on scroll with Svelte components."
 repo_url: "https://github.com/andrusenn/SvelteComponents"
 author: "andrusenn"
 homepage: "https://github.com/andrusenn/SvelteComponents#readme"

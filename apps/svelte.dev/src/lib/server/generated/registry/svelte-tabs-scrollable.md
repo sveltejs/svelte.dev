@@ -1,6 +1,6 @@
 ---
 name: "svelte-tabs-scrollable"
-description: "Create scrollable tabs in Svelte, supports RTL and customization."
+description: "Create scrollable tabs with many features and RTL support."
 repo_url: "Mohammed Aliwi/svelte-tabs-scrollable"
 author: "Mohammed Aliwi"
 homepage: "https://github.com/Mood-al/svelte-tabs-scrollable#readme"

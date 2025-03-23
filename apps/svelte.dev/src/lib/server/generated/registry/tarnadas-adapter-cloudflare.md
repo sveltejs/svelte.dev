@@ -1,13 +1,12 @@
 ---
 name: "@tarnadas/adapter-cloudflare"
-description: "Adapt SvelteKit apps for Cloudflare Pages with Workers integration."
+description: "Build SvelteKit apps on Cloudflare Pages with Workers."
 repo_url: "https://github.com/sveltejs/kit"
 author: "tarnadas"
 homepage: "https://kit.svelte.dev"
-downloads: 1
+downloads: 3
 updated: "2025-02-28T09:42:46.928Z"
-github_stars: 19115
+github_stars: 19118
 tags: 
   - adapter
-  - server
 ---

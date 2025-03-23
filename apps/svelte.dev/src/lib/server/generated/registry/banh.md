@@ -1,6 +1,6 @@
 ---
 name: "banh"
-description: "Integrate build step for frontend with Bun and Svelte."
+description: "Integrate build steps for frontend with Bun and Svelte."
 repo_url: "https://github.com/daniel-le97/banh"
 author: "cocobob"
 homepage: "https://github.com/daniel-le97/banh#readme"

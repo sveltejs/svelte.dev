@@ -1,8 +1,8 @@
 ---
 name: "@htmlbricks/hb-dialog"
-description: "Create Svelte-Bootstrap dialog web component."
+description: "Create Svelte-Bootstrap dialog web components."
 author: "Dario Caruso"
-downloads: 27
+downloads: 478
 dependents: 9
 updated: "2025-03-09T03:10:28.618Z"
 tags: 

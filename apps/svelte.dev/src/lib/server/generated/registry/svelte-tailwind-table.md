@@ -1,12 +1,11 @@
 ---
 name: "svelte-tailwind-table"
-description: "Render dynamic, sortable tables with Tailwind CSS in Svelte."
+description: "Render dynamic tables using Tailwind CSS in Svelte."
 repo_url: "https://gitlab.com/aztlan1/svelte_table"
 author: "Priyav K Kaneria"
 homepage: "https://svelte-tailwind-table-demo.vercel.app/"
-downloads: 13
+downloads: 8
 updated: "2022-01-21T18:12:20.357Z"
 tags: 
   - component-library
-  - ui
 ---

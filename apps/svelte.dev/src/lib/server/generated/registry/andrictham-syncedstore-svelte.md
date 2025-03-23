@@ -1,9 +1,10 @@
 ---
 name: "@andrictham/syncedstore-svelte"
-description: "Helper for SyncedStore, enabling collaborative Svelte applications."
+description: "Creates Svelte helper for SyncedStore."
 author: "andrictham"
-downloads: 1
+downloads: 3
 updated: "2024-04-30T07:56:40.450Z"
+svelte5: true
 tags: 
   - utility
 ---

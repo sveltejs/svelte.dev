@@ -1,8 +1,8 @@
 ---
 name: "@ikun-ui/descriptions-item"
-description: "Create descriptions item for Svelte applications."
+description: "Render descriptions item components for Svelte."
 author: "baiwusanyu"
-downloads: 1
+downloads: 14
 dependents: 1
 updated: "2025-01-24T03:48:49.292Z"
 tags: 

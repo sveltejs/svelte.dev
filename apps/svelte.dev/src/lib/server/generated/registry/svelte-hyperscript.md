@@ -1,10 +1,10 @@
 ---
 name: "svelte-hyperscript"
-description: "Provide hyperscript for creating Svelte components."
+description: "Use hyperscript to create Svelte components."
 repo_url: "https://github.com/kenoxa/svelte-hyperscript"
 author: "Sascha Tandel"
 homepage: "https://github.com/kenoxa/svelte-hyperscript#readme"
-downloads: 6386
+downloads: 7086
 dependents: 3
 updated: "2020-06-29T15:29:31.097Z"
 github_stars: 8

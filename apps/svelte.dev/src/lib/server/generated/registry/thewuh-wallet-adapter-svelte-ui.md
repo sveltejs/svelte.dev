@@ -1,6 +1,6 @@
 ---
 name: "@thewuh/wallet-adapter-svelte-ui"
-description: "Provides pre-built components for Solana wallet integration in Svelte."
+description: "Provides pre-built components for Solana wallet integration."
 repo_url: "https://github.com/thewuhxyz/wallet-adapter-svelte"
 author: "Svelte on Solana"
 homepage: "https://github.com/thewuhxyz/wallet-adapter-svelte#readme"

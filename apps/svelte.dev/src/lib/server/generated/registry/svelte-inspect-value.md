@@ -1,13 +1,15 @@
 ---
 name: "svelte-inspect-value"
-description: "Inspect and display JavaScript values in Svelte applications."
+description: "Inspect Svelte values, display data structures in a tree view."
 repo_url: "https://github.com/ampled/svelte-inspect-value"
 author: "eirikk"
 homepage: "https://inspect.eirik.space"
-downloads: 1686
+downloads: 951
 dependents: 2
-updated: "2025-03-11T11:53:38.357Z"
+updated: "2025-03-17T13:40:15.632Z"
 github_stars: 66
+svelte5: true
 tags: 
   - utility
+  - tooling
 ---

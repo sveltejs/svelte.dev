@@ -1,8 +1,8 @@
 ---
 name: "@ikun-ui/rate"
-description: "Provides rate component for Svelte applications."
+description: "Create rate components for Svelte."
 author: "baiwusanyu"
-downloads: 1
+downloads: 24
 dependents: 1
 updated: "2025-01-24T03:49:14.462Z"
 tags: 

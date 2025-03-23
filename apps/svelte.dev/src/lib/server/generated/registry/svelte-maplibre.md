@@ -1,13 +1,14 @@
 ---
 name: "svelte-maplibre"
-description: "Provide Svelte bindings for MapLibre mapping library."
+description: "Create Svelte bindings for MapLibre maps."
 repo_url: "https://github.com/dimfeld/svelte-maplibre"
 author: "Daniel Imfeld"
 homepage: "https://svelte-maplibre.imfeld.dev"
-downloads: 5582
-dependents: 6
-updated: "2025-02-06T18:37:17.501Z"
-github_stars: 400
+downloads: 5254
+dependents: 7
+updated: "2025-03-20T19:32:58.345Z"
+github_stars: 402
+svelte5: true
 tags: 
   - ui
 ---

@@ -1,8 +1,8 @@
 ---
 name: "@htmlbricks/hb-order-list"
-description: "Provide Svelte web component for creating order lists."
+description: "Svelte Order List WebComponent."
 author: "Dario Caruso"
-downloads: 6
+downloads: 431
 dependents: 2
 updated: "2025-03-09T03:10:32.726Z"
 tags: 

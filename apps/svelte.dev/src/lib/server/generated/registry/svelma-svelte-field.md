@@ -1,6 +1,6 @@
 ---
 name: "svelma-svelte-field"
-description: "Provide Bulma components for Svelte applications."
+description: "Create Bulma components for Svelte applications."
 repo_url: "https://github.com/c0bra/svelma"
 author: "Brian Hann"
 homepage: "https://github.com/c0bra/svelma#readme"

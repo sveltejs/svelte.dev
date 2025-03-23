@@ -1,12 +1,14 @@
 ---
 name: "svelte5kit-localization"
-description: "Provide localization for SvelteKit with Svelte 5 reactivity."
+description: "Localize SvelteKit apps with Svelte 5 reactivity and lazy loading."
 repo_url: "https://github.com/ktarmyshov/svelte5kit-localization"
 author: "Konstantin Tarmyshov"
 homepage: "https://github.com/ktarmyshov/svelte5kit-localization"
-downloads: 376
-updated: "2025-03-14T22:30:32.688Z"
+downloads: 151
+updated: "2025-03-22T07:46:17.255Z"
 github_stars: 3
+svelte5: true
 tags: 
   - utility
+  - server
 ---

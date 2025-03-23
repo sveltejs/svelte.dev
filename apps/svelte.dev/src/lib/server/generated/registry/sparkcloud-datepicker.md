@@ -1,6 +1,6 @@
 ---
 name: "@sparkcloud/datepicker"
-description: "Implement simple datepicker component for Svelte applications."
+description: "Provide simple datepicker component for Svelte applications."
 repo_url: "https://github.com/svelte-plugins/datepicker"
 author: "Kieran Boyle"
 homepage: "https://github.com/svelte-plugins/datepicker"

@@ -4,9 +4,10 @@ description: "Implement medium.com-style image zoom for Svelte."
 repo_url: "https://github.com/moonlitgrace/svelte-medium-image-zoom"
 author: "moonlitgrace"
 homepage: "https://github.com/moonlitgrace/svelte-medium-image-zoom"
-downloads: 74
+downloads: 128
 updated: "2025-02-11T08:43:06.458Z"
 github_stars: 10
+svelte5: true
 tags: 
   - ui
 ---

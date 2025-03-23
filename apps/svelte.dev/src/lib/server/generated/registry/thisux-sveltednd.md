@@ -1,10 +1,11 @@
 ---
 name: "@thisux/sveltednd"
-description: "Implement drag and drop functionality in Svelte 5 applications."
+description: "Create drag and drop functionality for Svelte 5 applications."
 author: "sanjusivalingam"
-downloads: 1606
-dependents: 1
+downloads: 2374
+dependents: 4
 updated: "2025-01-23T06:05:15.817Z"
+svelte5: true
 tags: 
-  - ui
+  - utility
 ---

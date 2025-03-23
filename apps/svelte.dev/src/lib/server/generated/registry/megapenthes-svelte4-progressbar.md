@@ -1,6 +1,6 @@
 ---
 name: "@megapenthes/svelte4-progressbar"
-description: "Generate multi-series SVG progress bar component for Svelte."
+description: "Generate SVG progress bars with linear, radial, or custom shapes."
 repo_url: "https://github.com/Pete-Y-CS/svelte-progressbar"
 author: "Enrico Triolo"
 homepage: "https://github.com/Pete-Y-CS/svelte-progressbar#readme"

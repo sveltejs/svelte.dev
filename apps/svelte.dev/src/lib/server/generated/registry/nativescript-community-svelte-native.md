@@ -1,9 +1,10 @@
 ---
 name: "@nativescript-community/svelte-native"
-description: "Integrate Svelte with NativeScript for native mobile app development."
+description: "Integrate Svelte with NativeScript for mobile app development."
 repo_url: "https://github.com/nativescript-community/svelte-native"
 author: "David Pershouse"
 homepage: "https://github.com/nativescript-community/svelte-native"
+downloads: 4
 updated: "2025-02-19T08:06:02.625Z"
 github_stars: 18
 tags: 

@@ -1,8 +1,8 @@
 ---
 name: "@htmlbricks/hb-chartjs"
-description: "Creates Chart.js charts as Svelte web components."
+description: "Create chartjs web components for Svelte."
 author: "Dario Caruso"
-downloads: 4
+downloads: 472
 dependents: 2
 updated: "2025-03-09T03:10:26.687Z"
 tags: 

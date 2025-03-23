@@ -1,14 +1,14 @@
 ---
 name: "@xyflow/svelte"
-description: "Svelte Flow: Build node-based editors, workflow systems, and diagrams."
+description: "Build node-based editors, diagrams, and workflows."
 repo_url: "https://github.com/xyflow/xyflow"
 author: "peterkogo"
 homepage: "https://svelteflow.dev"
-downloads: 23674
+downloads: 27087
 dependents: 8
 updated: "2025-02-25T10:31:17.841Z"
-github_stars: 28391
+github_stars: 28415
+svelte5: true
 tags: 
-  - ui
   - component-library
 ---

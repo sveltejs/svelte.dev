@@ -1,6 +1,6 @@
 ---
 name: "tanoshi"
-description: "Build atomic component library for Svelte, create beautiful pages easily."
+description: "Atomic component library for Svelte, built with configurable objects."
 repo_url: "https://github.com/deozza/tanoshi"
 author: "deozza"
 homepage: "https://github.com/deozza/tanoshi#readme"

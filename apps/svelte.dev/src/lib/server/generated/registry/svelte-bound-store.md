@@ -1,10 +1,10 @@
 ---
 name: "svelte-bound-store"
-description: "Provide monadic binding for Svelte stores."
+description: "Create monadic bindings for Svelte stores."
 repo_url: "https://github.com/nasso/svelte-bound-store"
 author: "nasso"
 homepage: "https://github.com/nasso/svelte-bound-store#readme"
-downloads: 25
+downloads: 18
 updated: "2024-03-17T04:07:26.759Z"
 github_stars: 8
 tags: 

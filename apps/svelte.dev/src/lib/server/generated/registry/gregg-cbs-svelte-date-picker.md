@@ -1,6 +1,6 @@
 ---
 name: "@gregg-cbs/svelte-date-picker"
-description: "Provide date and time picker components for Svelte applications."
+description: "Provides date and time picker components for Svelte applications."
 repo_url: "https://github.com/coldbrewstudios/svelte-date-picker"
 author: "Kasper Henningsen"
 homepage: "https://github.com/coldbrewstudios"

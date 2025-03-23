@@ -1,6 +1,6 @@
 ---
 name: "sveltekit-fireauth"
-description: "Provides server-side authentication using Firebase Authentication for SvelteKit."
+description: "Enables server-side Firebase authentication in SvelteKit."
 repo_url: "https://github.com/AlanAcDz/sveltekit-fireauth"
 author: "Alan Acuña"
 homepage: "https://github.com/AlanAcDz/sveltekit-fireauth#readme"

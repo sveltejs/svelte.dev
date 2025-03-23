@@ -1,6 +1,6 @@
 ---
 name: "svercle"
-description: "Generates a configurable superellipse approximation component for Svelte."
+description: "Generate configurable superellipse approximations in Svelte."
 repo_url: "https://github.com/aMediocreDad/svercle"
 author: "Filip Ambrosius"
 homepage: "https://github.com/aMediocreDad/svercle#readme"

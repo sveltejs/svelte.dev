@@ -4,10 +4,11 @@ description: "Import SVG files as Svelte components in SvelteKit."
 repo_url: "https://github.com/poppa/sveltekit-svg"
 author: "Pontus Östlund"
 homepage: "https://github.com/poppa/sveltekit-svg#readme"
-downloads: 8830
+downloads: 11552
 dependents: 2
-updated: "2024-10-23T12:21:16.906Z"
+updated: "2025-03-20T05:58:54.586Z"
 github_stars: 253
+svelte5: true
 tags: 
   - tooling
 ---

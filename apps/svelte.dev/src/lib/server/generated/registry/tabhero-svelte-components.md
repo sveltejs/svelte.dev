@@ -7,5 +7,4 @@ homepage: "https://tabhero.github.io/svelte-components"
 updated: "2020-12-27T07:43:25.951Z"
 tags: 
   - component-library
-  - ui
 ---

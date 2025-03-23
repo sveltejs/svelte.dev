@@ -1,11 +1,10 @@
 ---
 name: "supabase-ui-svelte"
-description: "Offers UI components for Supabase authentication in Svelte apps."
+description: "Provides Supabase authentication UI components for Svelte apps."
 author: "joshnuss"
-downloads: 1
+downloads: 4
 updated: "2021-05-12T08:08:41.756Z"
 tags: 
-  - ui
-  - auth
   - component-library
+  - auth
 ---

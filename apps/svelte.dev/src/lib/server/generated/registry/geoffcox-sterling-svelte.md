@@ -1,10 +1,11 @@
 ---
 name: "@geoffcox/sterling-svelte"
-description: "Provide modern, accessible UI components for Svelte applications."
+description: "Build modern, accessible UI components for Svelte."
 author: "Geoff Cox"
 homepage: "https://github.com/GeoffCox/sterling-svelte/blob/main/README.md"
-downloads: 11
+downloads: 58
 updated: "2025-01-09T22:06:33.143Z"
+svelte5: true
 tags: 
   - component-library
   - ui

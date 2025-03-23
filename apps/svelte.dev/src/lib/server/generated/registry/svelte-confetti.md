@@ -1,13 +1,14 @@
 ---
 name: "svelte-confetti"
-description: "Confetti component for Svelte, adding visual flair."
+description: "Add confetti animations to Svelte apps."
 repo_url: "https://github.com/Mitcheljager/svelte-confetti"
 author: "mitcheljager"
 homepage: "https://mitcheljager.github.io/svelte-confetti/"
-downloads: 17844
+downloads: 20999
 dependents: 2
 updated: "2025-01-26T14:39:48.888Z"
 github_stars: 281
+svelte5: true
 tags: 
   - ui
 ---

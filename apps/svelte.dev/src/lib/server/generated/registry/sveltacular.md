@@ -1,6 +1,6 @@
 ---
 name: "sveltacular"
-description: "Svelte component library built with TypeScript and SASS."
+description: "Create Svelte component library with TypeScript and SASS."
 repo_url: "https://github.com/jasonbyrne/sveltacular"
 author: "Jason Byrne"
 homepage: "https://github.com/jasonbyrne/sveltacular#readme"

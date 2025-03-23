@@ -1,6 +1,6 @@
 ---
 name: "@eirikk/svelte-masonry-layout"
-description: "Implement Masonry layout in Svelte applications."
+description: "Provides Masonry layout for Svelte components."
 repo_url: "https://github.com/ampled/svelte-masonrylayout"
 author: "eirikk"
 homepage: "https://github.com/ampled/svelte-masonrylayout#readme"

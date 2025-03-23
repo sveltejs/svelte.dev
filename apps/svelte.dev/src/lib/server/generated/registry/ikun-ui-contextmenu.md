@@ -1,8 +1,8 @@
 ---
 name: "@ikun-ui/contextmenu"
-description: "Build context menus for Svelte applications with customizable options."
+description: "Create context menu components for Svelte."
 author: "baiwusanyu"
-downloads: 2
+downloads: 22
 dependents: 1
 updated: "2025-01-24T03:48:46.241Z"
 tags: 

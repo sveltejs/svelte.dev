@@ -1,6 +1,6 @@
 ---
 name: "@small-tech/nodekit-language-server"
-description: "Provides language server support for NodeKit (Svelte fork)."
+description: "Provide language support for NodeKit (Svelte fork)."
 repo_url: "https://github.com/small-tech/nodekit-for-codium"
 author: "James Birtles"
 homepage: "https://github.com/sveltejs/language-tools#readme"

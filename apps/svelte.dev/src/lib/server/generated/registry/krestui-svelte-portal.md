@@ -1,11 +1,13 @@
 ---
 name: "@krestui/svelte-portal"
-description: "Implement portal functionality for Svelte components, useful for modals."
+description: "Implement portal functionality in Svelte applications."
 repo_url: "https://github.com/krestui/krestui"
 author: "KrestUI"
 homepage: "https://github.com/krestui/krestui#readme"
+downloads: 1
 dependents: 1
 updated: "2023-02-23T17:14:49.462Z"
 tags: 
   - dom
+  - ui
 ---

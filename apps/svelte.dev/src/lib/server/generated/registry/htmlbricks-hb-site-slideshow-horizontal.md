@@ -1,8 +1,8 @@
 ---
 name: "@htmlbricks/hb-site-slideshow-horizontal"
-description: "Create horizontal slideshow component for Svelte applications."
+description: "Horizontal slideshow web component for Svelte."
 author: "Dario Caruso"
-downloads: 1
+downloads: 211
 updated: "2025-03-09T03:10:35.760Z"
 tags: 
   - ui

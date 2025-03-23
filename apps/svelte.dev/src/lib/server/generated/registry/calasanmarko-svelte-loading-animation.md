@@ -1,8 +1,8 @@
 ---
 name: "@calasanmarko/svelte-loading-animation"
-description: "Add loading animations to Svelte apps with customizable styles."
+description: "Provide collection of loading animation components for Svelte."
 author: "gayuh tri satria"
-downloads: 1
+downloads: 2
 updated: "2024-05-13T18:05:52.073Z"
 tags: 
   - ui

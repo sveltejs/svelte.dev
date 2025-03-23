@@ -1,10 +1,9 @@
 ---
 name: "svelte-meilisearch-instantsearch"
-description: "Svelte wrapper for Meilisearch InstantSearch, providing search UI."
+description: "Create search interfaces with Meilisearch and Svelte."
 author: "dfanchon"
-downloads: 7
+downloads: 4
 updated: "2024-08-23T09:31:43.629Z"
 tags: 
-  - integration
   - utility
 ---

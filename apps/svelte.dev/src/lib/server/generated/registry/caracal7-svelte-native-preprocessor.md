@@ -1,6 +1,6 @@
 ---
 name: "@caracal7/svelte-native-preprocessor"
-description: "Preprocess Svelte-Native code for improved development."
+description: "Preprocess Svelte code for Svelte Native projects."
 repo_url: "https://github.com/halfnelson/svelte-native-preprocessor"
 author: "David Pershouse"
 homepage: "https://github.com/halfnelson/svelte-native-preprocessor"

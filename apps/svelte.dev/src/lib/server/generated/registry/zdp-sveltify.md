@@ -1,6 +1,6 @@
 ---
 name: "@zdp/sveltify"
-description: "Provide a component library for Svelte and Sapper projects."
+description: "Provide component library for Svelte/Sapper projects."
 repo_url: "https://github.com/zdproduction/sveltify"
 author: "Den Kochetkov"
 homepage: "https://sveltify.dev"

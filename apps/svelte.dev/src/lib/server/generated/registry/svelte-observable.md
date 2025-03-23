@@ -1,10 +1,10 @@
 ---
 name: "svelte-observable"
-description: "Use observables in Svelte components."
+description: "Use observables in Svelte components with ease."
 repo_url: "https://github.com/timhall/svelte-observable"
 author: "Tim Hall"
 homepage: "https://github.com/timhall/svelte-observable#readme"
-downloads: 164
+downloads: 88
 dependents: 1
 updated: "2019-04-26T20:13:35.925Z"
 github_stars: 62

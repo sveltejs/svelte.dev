@@ -1,6 +1,6 @@
 ---
 name: "svelte.charts.css"
-description: "Provide Svelte wrapper for Charts CSS library."
+description: "Provide Svelte wrapper for Charts CSS."
 repo_url: "https://github.com/PfisterFactor/svelte.charts.css"
 author: "Eric Pfister"
 homepage: "https://github.com/PfisterFactor/svelte.charts.css#readme"

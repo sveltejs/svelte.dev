@@ -1,10 +1,10 @@
 ---
 name: "@drtrt/give-svelte-store-previous-behaviour"
-description: "Wraps Svelte stores, providing access to previous values."
+description: "Wrap Svelte stores, providing access to previous store values."
 repo_url: "https://github.com/drtrt-org/give-svelte-store-previous-behaviour"
 author: "drtrt-org"
 homepage: "https://github.com/drtrt-org/give-svelte-store-previous-behaviour#readme"
-downloads: 1
+downloads: 39
 updated: "2024-09-16T09:36:54.285Z"
 tags: 
   - utility

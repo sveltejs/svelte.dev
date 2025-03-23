@@ -1,8 +1,8 @@
 ---
 name: "@ikun-ui/checkbox"
-description: "Create checkbox components for Svelte applications with customizable styles."
+description: "Create checkbox components for Svelte applications."
 author: "baiwusanyu"
-downloads: 1
+downloads: 39
 dependents: 2
 updated: "2025-01-24T03:48:40.988Z"
 tags: 

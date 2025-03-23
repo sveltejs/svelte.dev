@@ -1,6 +1,6 @@
 ---
 name: "svelte-meta"
-description: "Generate SEO metadata easily for Svelte applications."
+description: "Generate SEO metadata for Svelte, including Open Graph tags."
 repo_url: "https://github.com/peppercornstudio/svelte-meta"
 author: "madeleineostoja"
 homepage: "https://github.com/peppercornstudio/svelte-meta#readme"

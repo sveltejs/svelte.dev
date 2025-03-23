@@ -1,6 +1,6 @@
 ---
 name: "sve-ui"
-description: "Offer customizable UI components for Svelte applications, including buttons and forms."
+description: "Offer customizable UI components for Svelte applications."
 repo_url: "https://github.com/rodriabregu/sve-ui"
 author: "Rodrigo Abregu"
 homepage: "https://sveui.org/"

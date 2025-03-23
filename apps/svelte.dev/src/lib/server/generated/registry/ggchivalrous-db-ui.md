@@ -1,8 +1,8 @@
 ---
 name: "@ggchivalrous/db-ui"
-description: "Builds Svelte UI components for database-driven applications."
+description: "Provide a Svelte component library."
 author: "ggchivalrous"
-downloads: 1
+downloads: 3
 updated: "2023-12-03T07:24:16.128Z"
 tags: 
   - component-library

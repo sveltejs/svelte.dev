@@ -1,8 +1,8 @@
 ---
 name: "@kws3/eslint-plugin-svelte4"
-description: "Provide ESLint rules for Svelte 4 projects."
+description: "Provide Kws3 specific Svelte 4 ESLint rules."
 author: "Khaled Ahmed"
-downloads: 27
+downloads: 38
 updated: "2023-12-22T17:42:26.936Z"
 tags: 
   - tooling

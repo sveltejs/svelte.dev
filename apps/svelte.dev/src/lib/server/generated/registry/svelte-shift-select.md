@@ -1,10 +1,10 @@
 ---
 name: "svelte-shift-select"
-description: "Enables multi-select checkboxes with shift-click functionality in Svelte."
+description: "Enable multi-select checkboxes with shift-click in Svelte."
 repo_url: "https://github.com/anotherempty/svelte-shift-select"
 author: "anotherempty"
 homepage: "https://anotherempty.github.io/svelte-shift-select/"
-downloads: 67
+downloads: 23
 updated: "2022-05-29T19:45:46.609Z"
 tags: 
   - utility

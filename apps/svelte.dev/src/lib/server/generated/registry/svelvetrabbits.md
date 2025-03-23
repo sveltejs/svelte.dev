@@ -1,6 +1,6 @@
 ---
 name: "svelvetrabbits"
-description: "Create interactive node-based flow diagrams in Svelte."
+description: "Build interactive, node-based flow diagrams in Svelte."
 repo_url: "https://github.com/open-source-labs/Svelvet"
 author: "taylien96"
 homepage: "https://github.com/open-source-labs/Svelvet"

@@ -1,6 +1,6 @@
 ---
 name: "svelte-headless-button"
-description: "Create button component without default styling for Svelte."
+description: "Create button components without default styling."
 repo_url: "https://github.com/zerok84/svelte-headless-button"
 author: "Zerok84"
 homepage: "https://github.com/zerok84/svelte-headless-button#readme"

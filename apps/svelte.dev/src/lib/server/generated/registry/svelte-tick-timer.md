@@ -1,6 +1,6 @@
 ---
 name: "svelte-tick-timer"
-description: "Create timers that tick at various intervals."
+description: "Create timers and time-based components in Svelte."
 author: "7korobi"
 homepage: "https://github.com/7korobi/svelte-tick-timer/blob/main/src/lib/"
 dependents: 1

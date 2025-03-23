@@ -1,10 +1,10 @@
 ---
 name: "grig"
-description: "Lightweight i18n library with smart TS prompts for Svelte and others."
+description: "Lightweight i18n library with TS prompts for Svelte."
 author: "leafnote"
 homepage: "https://github.com/leafio/grig"
-downloads: 1
 updated: "2024-09-02T12:28:39.673Z"
+svelte5: true
 tags: 
   - utility
 ---

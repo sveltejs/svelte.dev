@@ -1,10 +1,9 @@
 ---
 name: "@responsive-ui/bottom-modal"
-description: "Create bottom modal component for Svelte applications."
+description: "Create bottom modal component for Svelte apps."
 repo_url: "https://github.com/wetix/responsive-ui"
 author: "Si3nLoong"
 homepage: "https://github.com/wetix/responsive-ui/blob/main/components/bottom-modal#README.md"
-downloads: 2
 updated: "2021-12-27T05:02:12.421Z"
 github_stars: 19
 tags: 

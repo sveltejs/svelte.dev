@@ -4,7 +4,7 @@ description: "Integrate TinyMCE rich text editor into Svelte applications."
 repo_url: "https://github.com/tinymce/tinymce-svelte"
 author: "Tiny"
 homepage: "https://github.com/tinymce/tinymce-svelte#readme"
-downloads: 2989
+downloads: 3068
 dependents: 3
 updated: "2024-06-05T02:35:24.881Z"
 github_stars: 27

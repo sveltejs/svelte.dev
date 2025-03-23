@@ -1,8 +1,8 @@
 ---
 name: "@ikun-ui/message-box"
-description: "Build message box components for Svelte applications."
+description: "Display message boxes in Svelte applications."
 author: "baiwusanyu"
-downloads: 1
+downloads: 31
 dependents: 1
 updated: "2025-01-24T03:49:06.807Z"
 tags: 

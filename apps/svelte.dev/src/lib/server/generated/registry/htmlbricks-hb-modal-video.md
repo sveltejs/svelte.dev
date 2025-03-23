@@ -1,11 +1,11 @@
 ---
 name: "@htmlbricks/hb-modal-video"
-description: "Create video modal web component for Svelte applications."
+description: "Svelte-Bootstrap Video Modal WebComponent."
 author: "Dario Caruso"
-downloads: 3
+downloads: 455
 dependents: 2
 updated: "2025-03-09T03:10:38.033Z"
 tags: 
-  - media
   - ui
+  - media
 ---

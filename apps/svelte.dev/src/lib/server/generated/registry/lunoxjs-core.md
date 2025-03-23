@@ -1,6 +1,6 @@
 ---
 name: "@lunoxjs/core"
-description: "Build Laravel-flavored Node.js applications with Svelte."
+description: "Provides core functionalities for LunoxJs framework, including Svelte support."
 repo_url: "https://github.com/kodepandai/lunox-framework"
 author: "Akhmad Salafudin"
 homepage: "https://github.com/kodepandai/lunox-framework#readme"

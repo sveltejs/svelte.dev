@@ -1,8 +1,8 @@
 ---
 name: "@devlego/bbui"
-description: "Reusable UI components for Budibase projects, built with Svelte."
+description: "Provide UI components for Budibase projects."
 author: "lisipeng"
-downloads: 1
+downloads: 14
 dependents: 3
 updated: "2022-08-09T02:11:33.435Z"
 tags: 

@@ -1,6 +1,6 @@
 ---
 name: "svelte-virtualized-tree"
-description: "Display large datasets in a virtualized tree structure for Svelte."
+description: "Display large datasets in a virtualized tree structure."
 repo_url: "https://github.com/fairhurt/svelte-virtualized-tree"
 author: "Tyson Fairhurst"
 homepage: "https://svelte-virtualized-tree.vercel.app/"

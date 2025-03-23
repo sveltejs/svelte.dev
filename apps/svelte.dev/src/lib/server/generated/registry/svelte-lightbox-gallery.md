@@ -4,6 +4,7 @@ description: "Create image galleries with lightbox functionality in Svelte proje
 repo_url: "https://github.com/joergjan/svelte-image-gallery"
 author: "Jan Jörg"
 homepage: "https://npm.jan-joerg.ch/svelte-lightbox-gallery"
+downloads: 1
 updated: "2024-04-09T09:20:46.934Z"
 tags: 
   - ui

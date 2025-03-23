@@ -1,13 +1,13 @@
 ---
 name: "vite-plugin-pwa"
-description: "Integrate Progressive Web App features into Vite powered Svelte projects"
+description: "Adds PWA support to Vite-based Svelte projects."
 repo_url: "https://github.com/vite-pwa/vite-plugin-pwa"
 author: "antfu"
 homepage: "https://github.com/vite-pwa/vite-plugin-pwa#readme"
-downloads: 350386
+downloads: 429347
 dependents: 70
-updated: "2024-11-29T17:42:57.813Z"
-github_stars: 3436
+updated: "2025-03-21T23:47:33.446Z"
+github_stars: 3440
 tags: 
   - tooling
 ---

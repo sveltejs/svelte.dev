@@ -1,6 +1,6 @@
 ---
 name: "svelte-routed"
-description: "Implement routing and navigation within Svelte applications."
+description: "Provides routing functionality for Svelte applications."
 repo_url: "https://github.com/andrusenn/RouterSvelteTemplate"
 author: "andrusenn"
 homepage: "https://github.com/andrusenn/RouterSvelteTemplate/tree/master/package/svelte-routed#readme"

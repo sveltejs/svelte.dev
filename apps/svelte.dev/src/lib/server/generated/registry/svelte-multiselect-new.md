@@ -1,6 +1,6 @@
 ---
 name: "svelte-multiselect-new"
-description: "Create keyboard-friendly, accessible multi-select components for Svelte."
+description: "Multi-select component for Svelte."
 repo_url: "https://github.com/janosh/svelte-multiselect"
 author: "Janosh Riebesell"
 homepage: "https://svelte-multiselect.netlify.app"

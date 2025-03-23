@@ -1,9 +1,9 @@
 ---
 name: "sveltekit-chessground"
-description: "Create chessboard component for SvelteKit applications."
+description: "Display interactive chessboards in SvelteKit applications."
 author: "sharlesleglerg"
 homepage: "https://github.com/AhsanSarwar45/sveltekit-chessground#readme"
-downloads: 10
+downloads: 3
 updated: "2023-12-08T06:24:58.312Z"
 tags: 
   - ui

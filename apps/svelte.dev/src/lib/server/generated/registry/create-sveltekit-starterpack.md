@@ -1,10 +1,9 @@
 ---
 name: "create-sveltekit-starterpack"
-description: "Generate SvelteKit projects with pre-configured tooling and components."
+description: "CLI tool to quickly setup SvelteKit projects."
 repo_url: "https://github.com/thomasmol/create-sveltekit-starterpack"
 author: "Thomas Mol"
 homepage: "https://github.com/thomasmol/sveltekit-starterpack#readme"
-downloads: 1
 updated: "2023-04-23T10:46:51.628Z"
 tags: 
   - tooling

@@ -1,6 +1,6 @@
 ---
 name: "svelte-labeled-input"
-description: "Create labeled input fields with validation and error messages."
+description: "Create labeled input fields with validation."
 repo_url: "https://github.com/ivosdc/svelte-labeled-input"
 author: "Ivo Bozic"
 homepage: "https://github.com/ivosdc/svelte-labeled-input#readme"

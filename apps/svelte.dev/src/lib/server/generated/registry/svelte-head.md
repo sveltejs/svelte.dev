@@ -1,10 +1,9 @@
 ---
 name: "svelte-head"
-description: "Manage meta information and SEO tags in Svelte applications."
+description: "Set meta information easily output to head."
 author: "phi"
-downloads: 33
+downloads: 131
 updated: "2023-03-27T14:23:44.444Z"
 tags: 
   - seo
-  - utility
 ---

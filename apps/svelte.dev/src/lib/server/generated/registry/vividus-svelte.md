@@ -1,6 +1,6 @@
 ---
 name: "@vividus/svelte"
-description: "Create lively and reactive UI components for Svelte applications."
+description: "Offer a component library for Svelte with lively transitions."
 repo_url: "https://github.com/hAbuMustafa/vividus"
 author: "eyecode"
 homepage: "https://github.com/hAbuMustafa/vividus#readme"

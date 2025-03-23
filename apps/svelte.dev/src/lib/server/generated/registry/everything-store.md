@@ -1,6 +1,6 @@
 ---
 name: "everything-store"
-description: "Provides useful Svelte stores for breakpoints, media queries, and dark mode."
+description: "Offer useful Svelte stores for breakpoints, media queries, and dark mode."
 repo_url: "https://github.com/sw-yx/everything-store"
 author: "sw-yx"
 homepage: "https://github.com/sw-yx/everything-store#readme"

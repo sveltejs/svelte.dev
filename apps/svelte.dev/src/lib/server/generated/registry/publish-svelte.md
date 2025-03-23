@@ -1,6 +1,6 @@
 ---
 name: "publish-svelte"
-description: "Compile, bundle, publish Svelte components to npm easily."
+description: "Publish Svelte components to npm easily."
 repo_url: "https://github.com/philter87/publish-svelte"
 author: "Philip Christiansen"
 homepage: "https://github.com/philter87/publish-svelte#readme"

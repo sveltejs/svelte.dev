@@ -1,8 +1,8 @@
 ---
 name: "path2percent"
-description: "Animate paths to a given percent in Svelte."
+description: "Animate SVG paths to given percent in Svelte apps."
 author: "studentofjs"
-downloads: 16
+downloads: 4
 updated: "2020-02-04T05:13:37.738Z"
 tags: 
   - ui

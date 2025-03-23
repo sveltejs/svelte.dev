@@ -1,6 +1,6 @@
 ---
 name: "@miguelmazetto/svelte-neutralino-adapter"
-description: "Adapt SvelteKit applications for Neutralino desktop environments."
+description: "Adapt SvelteKit applications for Neutralino desktop apps."
 repo_url: "https://github.com/miguelmazetto/svelte-neutralino-adapter"
 author: "miguelmazetto"
 homepage: "https://github.com/miguelmazetto/svelte-neutralino-adapter#readme"

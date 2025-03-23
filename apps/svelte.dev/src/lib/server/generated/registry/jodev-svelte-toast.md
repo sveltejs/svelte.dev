@@ -1,6 +1,6 @@
 ---
 name: "@jodev/svelte-toast"
-description: "Build toast notification system for Svelte projects."
+description: "Create toast notifications for Svelte applications."
 repo_url: "https://github.com/jodev7/svelte-toast"
 author: "Joseph"
 homepage: "https://github.com/jodev7/svelte-toast#readme"

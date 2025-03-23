@@ -1,9 +1,9 @@
 ---
 name: "@felbsn/svelte-material-symbols"
-description: "Create Svelte components for Google Material Symbols icons."
+description: "Use Google Material Symbols in Svelte projects."
 author: "felbsn"
 homepage: "https://svelte-material-symbols.vercel.app/"
-downloads: 1
+downloads: 8
 updated: "2023-09-13T20:25:25.605Z"
 tags: 
   - ui

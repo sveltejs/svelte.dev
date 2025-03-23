@@ -1,11 +1,11 @@
 ---
 name: "svelte-markdoc-preprocess"
-description: "Process Markdoc content within Svelte components, compile Markdown."
+description: "Preprocess Svelte files with Markdoc."
 repo_url: "https://github.com/TorstenDittmann/svelte-markdoc-preprocess"
 author: "Torsten Dittmann"
 homepage: "https://svelte-markdoc-preprocess.pages.dev"
-downloads: 299
-updated: "2024-10-13T15:57:47.435Z"
+downloads: 243
+updated: "2025-03-20T13:16:08.329Z"
 github_stars: 67
 tags: 
   - preprocessor

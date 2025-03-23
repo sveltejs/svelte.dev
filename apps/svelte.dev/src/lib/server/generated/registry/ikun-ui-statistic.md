@@ -1,8 +1,8 @@
 ---
 name: "@ikun-ui/statistic"
-description: "Statistic component for Svelte."
+description: "Create statistic component for Svelte."
 author: "baiwusanyu"
-downloads: 1
+downloads: 12
 dependents: 2
 updated: "2025-01-24T03:49:20.718Z"
 tags: 

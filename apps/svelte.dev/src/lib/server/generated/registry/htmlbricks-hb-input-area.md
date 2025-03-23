@@ -1,8 +1,8 @@
 ---
 name: "@htmlbricks/hb-input-area"
-description: "Create Svelte text area input web component."
+description: "Svelte-Bootstrap Text Area Input WebComponent."
 author: "Dario Caruso"
-downloads: 24
+downloads: 485
 dependents: 3
 updated: "2025-03-09T03:10:29.806Z"
 tags: 

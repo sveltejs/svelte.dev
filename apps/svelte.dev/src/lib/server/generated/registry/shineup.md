@@ -1,6 +1,6 @@
 ---
 name: "shineup"
-description: "Implement CSS-in-JS for Svelte, enabling dynamic styling."
+description: "Implement CSS-in-JS for Svelte components, with scoping support."
 repo_url: "https://github.com/Vehmloewff/shineup"
 author: "Elijah Mooring"
 homepage: "https://github.com/Vehmloewff/shineup#readme"

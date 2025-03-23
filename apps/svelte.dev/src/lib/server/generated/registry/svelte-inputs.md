@@ -1,6 +1,6 @@
 ---
 name: "svelte-inputs"
-description: "Provide basic input components for Svelte with data binding."
+description: "Provide basic input components for Svelte."
 repo_url: "https://github.com/JuicyJah/svelte-inputs"
 author: "JuicyJah"
 homepage: "https://github.com/JuicyJah/svelte-inputs#readme"

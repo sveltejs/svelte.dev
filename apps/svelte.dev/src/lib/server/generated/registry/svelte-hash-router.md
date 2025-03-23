@@ -1,10 +1,10 @@
 ---
 name: "svelte-hash-router"
-description: "Create hash-based router for Svelte applications with nested routes."
+description: "Create hash-based routing for Svelte applications."
 repo_url: "https://github.com/pynnl/svelte-hash-router"
 author: "pynnl"
 homepage: "https://github.com/pynnl/svelte-hash-router#readme"
-downloads: 16
+downloads: 4
 updated: "2019-06-16T16:31:41.755Z"
 github_stars: 47
 tags: 

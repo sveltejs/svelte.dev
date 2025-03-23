@@ -1,6 +1,6 @@
 ---
 name: "svelte-primer"
-description: "Implement GitHub's Primer design system for Svelte components."
+description: "Svelte implementation of GitHub Primer design system."
 repo_url: "https://github.com/metonym/svelte-primer"
 author: "Eric Liu"
 homepage: "https://github.com/metonym/svelte-primer"

@@ -1,10 +1,11 @@
 ---
 name: "@ikun-ui/backtop"
-description: "Create back-to-top button component for Svelte applications."
+description: "Create backtop component for Svelte applications."
 author: "baiwusanyu"
-downloads: 1
+downloads: 28
 dependents: 1
 updated: "2025-01-24T03:48:31.489Z"
 tags: 
   - ui
+  - component-library
 ---

@@ -1,13 +1,15 @@
 ---
 name: "@really-headless/sv-marketing"
-description: "Build marketing sites with SvelteKit using customizable components."
+description: "Builds marketing sites with SvelteKit, customizable components."
 repo_url: "https://github.com/feuersteiner/sv-marketing"
 author: "feuersteiner"
 homepage: "https://github.com/feuersteiner/sv-marketing#readme"
-downloads: 1464
-updated: "2025-03-14T17:58:04.889Z"
+downloads: 892
+updated: "2025-03-19T21:07:01.167Z"
 github_stars: 18
+svelte5: true
 tags: 
   - component-library
-  - content
+  - ui
+  - seo
 ---

@@ -1,6 +1,6 @@
 ---
 name: "svelte-search-table"
-description: "Create searchable table component for displaying JSON data in Svelte."
+description: "Generate searchable tables from JSON data in Svelte."
 repo_url: "git@gitlab.com/tcsorrel/svelte-search-table"
 author: "Thomas Sorrel"
 homepage: "https://gitlab.com/tcsorrel/svelte-search-table#readme"

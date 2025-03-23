@@ -1,6 +1,6 @@
 ---
 name: "magic-json-tree"
-description: "Render interactive JSON trees within Svelte components."
+description: "Render interactive JSON trees within Svelte applications."
 repo_url: "https://github.com/rlaffers/xstate-ninja"
 author: "Richard Laffers"
 homepage: "https://github.com/rlaffers/xstate-ninja#readme"

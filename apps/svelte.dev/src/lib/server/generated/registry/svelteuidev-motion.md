@@ -4,9 +4,10 @@ description: "Provides Svelte animation library with transition functions and co
 repo_url: "https://github.com/svelteuidev/svelteui"
 author: "Kamell Perry"
 homepage: "https://svelteui.dev/"
-downloads: 84
+downloads: 108
 updated: "2024-07-07T14:30:26.634Z"
 github_stars: 1359
+svelte5: true
 tags: 
   - ui
 ---

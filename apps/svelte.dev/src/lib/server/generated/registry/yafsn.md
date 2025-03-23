@@ -1,6 +1,6 @@
 ---
 name: "yafsn"
-description: "Provide simple Svelte navigation solution."
+description: "Create navigation solutions for Svelte applications."
 repo_url: "https://github.com/jkbz64/yafsn"
 author: "jkbz64"
 homepage: "https://github.com/jkbz64/yafsn#readme"

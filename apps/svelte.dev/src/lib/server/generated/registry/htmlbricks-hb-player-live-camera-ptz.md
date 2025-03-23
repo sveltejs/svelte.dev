@@ -1,8 +1,8 @@
 ---
 name: "@htmlbricks/hb-player-live-camera-ptz"
-description: "Create Svelte web component for live camera PTZ player."
+description: "Create Svelte Boostrap Pagination WebComponent."
 author: "Dario Caruso"
-downloads: 1
+downloads: 84
 dependents: 1
 updated: "2025-03-09T03:10:42.798Z"
 tags: 

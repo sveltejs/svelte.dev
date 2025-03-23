@@ -1,8 +1,7 @@
 ---
 name: "svelte-tutorial-builder"
-description: "Create linear in-app tutorials for Svelte apps."
+description: "Build linear in-app tutorials for Svelte applications."
 author: "sfasulo"
-downloads: 4
 updated: "2024-06-25T17:59:02.536Z"
 tags: 
   - utility

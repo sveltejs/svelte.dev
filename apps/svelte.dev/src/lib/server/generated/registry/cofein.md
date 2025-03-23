@@ -1,6 +1,6 @@
 ---
 name: "cofein"
-description: "Create Svelte fetchable stores using Axios or fetch."
+description: "Fetch data using Svelte stores with Axios or fetch."
 repo_url: "https://github.com/lewis-wow/svelte-fetchable"
 author: "Ludvík Prokopec"
 homepage: "https://github.com/lewis-wow/svelte-fetchable#readme"

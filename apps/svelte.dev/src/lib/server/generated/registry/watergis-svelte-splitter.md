@@ -1,9 +1,9 @@
 ---
 name: "@watergis/svelte-splitter"
-description: "Create resizable split panels in Svelte applications using CSS grid."
+description: "Create resizable splitters using CSS grid in Svelte."
 author: "Geoff Cox"
 homepage: "https://github.com/@watergis/svelte-splitter/README.md"
-downloads: 43
+downloads: 61
 dependents: 1
 updated: "2024-08-25T12:14:06.722Z"
 tags: 

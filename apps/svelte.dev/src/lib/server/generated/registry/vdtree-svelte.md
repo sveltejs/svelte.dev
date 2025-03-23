@@ -1,6 +1,6 @@
 ---
 name: "vdtree-svelte"
-description: "Wrap vdtree abstract components for use in Svelte applications."
+description: "Integrate vdtree abstract components into Svelte applications."
 repo_url: "https://github.com/lgirma/vdtree-plugins"
 author: "Leone"
 homepage: "https://github.com/lgirma/vdtree-plugins/tree/master/svelte"

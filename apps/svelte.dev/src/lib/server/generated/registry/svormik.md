@@ -1,6 +1,6 @@
 ---
 name: "svormik"
-description: "Handle form values, validation, and errors in Svelte forms."
+description: "Handle form values and errors in Svelte forms."
 repo_url: "https://github.com/tranpeter08/svormik"
 author: "Peter Tran"
 homepage: "https://github.com/tranpeter08/svormik"

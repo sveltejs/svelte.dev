@@ -1,6 +1,6 @@
 ---
 name: "@ourway/svelte-redux"
-description: "Connect Svelte components to Redux store, using Redux Toolkit."
+description: "Connect Svelte components to Redux store for state management."
 repo_url: "https://github.com/AndrewBlackledge/svelte-redux"
 author: "Andrew Blackledge, Alex Nicolaou"
 homepage: "https://github.com/AndrewBlackledge/svelte-redux#readme"

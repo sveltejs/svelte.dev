@@ -1,6 +1,6 @@
 ---
 name: "svelte-syncable"
-description: "Synchronize Svelte store values with localStorage."
+description: "Synchronize Svelte store values with local storage."
 repo_url: "https://github.com/chainlist/svelte-syncable"
 author: "Kevin Guillouard"
 homepage: "https://github.com/chainlist/svelte-syncable#readme"

@@ -1,10 +1,12 @@
 ---
 name: "@fullcrew/design"
-description: "Create responsive UI components for Svelte applications."
+description: "Offer responsive UI components for Svelte."
 repo_url: "https://github.com/fullcrew/design"
 author: "Fullcrew, Inc. Team"
 homepage: "https://github.com/fullcrew/design#readme"
+downloads: 2
 updated: "2020-04-22T12:19:31.844Z"
 tags: 
   - component-library
+  - ui
 ---

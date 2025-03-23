@@ -1,6 +1,6 @@
 ---
 name: "happymodals"
-description: "Create accessible modals with a stress-free developer experience in Svelte."
+description: "Create accessible modals with easy developer experience."
 repo_url: "https://github.com/byjackli/happymodals"
 author: "Jack Li"
 homepage: "https://happymodals.com"

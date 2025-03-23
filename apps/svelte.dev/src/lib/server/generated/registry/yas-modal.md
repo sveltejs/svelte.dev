@@ -1,6 +1,6 @@
 ---
 name: "yas-modal"
-description: "Create modal components for Svelte with target and fullscreen support."
+description: "Implement modal component with target for Svelte applications."
 repo_url: "https://github.com/gigor/yas-modal"
 author: "Igor Grechishkin"
 homepage: "https://github.com/gigor/yas-modal#readme"

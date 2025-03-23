@@ -1,6 +1,6 @@
 ---
 name: "@ikun-ui/alert"
-description: "Create alert components for Svelte applications."
+description: "Display alert messages in Svelte applications."
 author: "baiwusanyu"
 downloads: 28
 dependents: 1

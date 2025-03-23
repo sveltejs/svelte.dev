@@ -1,8 +1,8 @@
 ---
 name: "svelte-autocomplete-select"
-description: "Implement flexible, zero-dependency autocomplete component for Svelte."
+description: "Create autocomplete select components for Svelte."
 author: "tiaanduplessis"
-downloads: 54
+downloads: 42
 dependents: 1
 updated: "2021-02-12T12:07:06.700Z"
 tags: 

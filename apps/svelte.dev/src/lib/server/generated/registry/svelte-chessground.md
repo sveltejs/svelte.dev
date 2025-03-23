@@ -1,9 +1,9 @@
 ---
 name: "svelte-chessground"
-description: "Svelte chessboard component, wrapper for Chessground chess UI."
+description: "Display interactive chessboard component for Svelte apps."
 author: "gtim"
 homepage: "https://github.com/gtim/svelte-chessground#readme"
-downloads: 63
+downloads: 45
 dependents: 1
 updated: "2023-12-15T20:29:11.487Z"
 tags: 

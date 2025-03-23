@@ -1,6 +1,6 @@
 ---
 name: "@responsive-ui/chip"
-description: "Create chip component for responsive Svelte UI."
+description: "Create chip component for responsive-ui Svelte projects."
 repo_url: "https://github.com/wetix/responsive-ui"
 author: "Si3nLoong"
 homepage: "https://github.com/wetix/responsive-ui/blob/main/components/chip#README.md"

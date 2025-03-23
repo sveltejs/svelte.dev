@@ -1,10 +1,10 @@
 ---
 name: "sveltekit-notion-blog"
-description: "Build blogs in SvelteKit using Notion as a CMS."
+description: "Create blogs in SvelteKit using Notion as CMS."
 repo_url: "https://github.com/subhendupsingh/sveltekit-notion-blog"
 author: "subhendupsingh"
 homepage: "https://sveltekit-notion-blog.netlify.app/"
-downloads: 83
+downloads: 7
 updated: "2025-03-01T14:08:35.920Z"
 github_stars: 39
 tags: 

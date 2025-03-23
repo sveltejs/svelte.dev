@@ -1,11 +1,12 @@
 ---
 name: "svelvet-against-war"
-description: "Builds dynamic, node-based user interfaces with Svelte."
+description: "Build dynamic, node-based user interfaces with Svelte."
 repo_url: "https://github.com/bots-against-war/Svelvet"
 author: "nj-vs-vh"
 homepage: "https://github.com/bots-against-war/Svelvet/"
-downloads: 6
+downloads: 28
 updated: "2024-04-26T00:12:40.773Z"
+svelte5: true
 tags: 
-  - ui
+  - component-library
 ---

@@ -1,11 +1,10 @@
 ---
 name: "sveltetube"
-description: "Embed YouTube videos in Svelte components with customizable options."
+description: "Embed YouTube videos in Svelte components."
 repo_url: "https://github.com/bmehder/sveltetube"
 author: "bmehder"
 homepage: "https://github.com/bmehder/sveltetube#readme"
 updated: "2022-11-25T12:32:21.078Z"
 tags: 
   - media
-  - ui
 ---

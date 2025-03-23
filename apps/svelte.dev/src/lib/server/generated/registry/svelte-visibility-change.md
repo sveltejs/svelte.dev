@@ -1,12 +1,13 @@
 ---
 name: "svelte-visibility-change"
-description: "Detect browser page visibility changes using Page Visibility API."
+description: "Detect browser page visibility changes in Svelte apps."
 repo_url: "https://github.com/metonym/svelte-visibility-change"
 author: "Eric Liu"
-homepage: "https://github.com/metonym/svelte-visibility-change"
-downloads: 494
-updated: "2022-06-28T16:07:55.643Z"
+homepage: "https://metonym.github.io/svelte-visibility-change/"
+downloads: 639
+updated: "2025-03-22T01:52:03.428Z"
 github_stars: 22
+svelte5: true
 tags: 
   - utility
 ---

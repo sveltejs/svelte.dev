@@ -1,8 +1,8 @@
 ---
 name: "@htmlbricks/hb-sidebar-desktop"
-description: "Create desktop sidebar components for Svelte."
+description: "Svelte Boostrap Sidebar Desktop component."
 author: "Dario Caruso"
-downloads: 7
+downloads: 324
 dependents: 3
 updated: "2025-03-09T03:10:38.636Z"
 tags: 

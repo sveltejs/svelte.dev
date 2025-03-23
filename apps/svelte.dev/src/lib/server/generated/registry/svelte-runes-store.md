@@ -1,12 +1,13 @@
 ---
 name: "svelte-runes-store"
-description: "Builds persistent Svelte stores using runes."
+description: "Build persistent Svelte states using Svelte 5 runes."
 repo_url: "https://github.com/joaquimnetocel/svelte-runes-store"
 author: "Joaquim Neto"
 homepage: "https://github.com/joaquimnetocel/svelte-runes-store#readme"
-downloads: 12
-updated: "2024-08-26T21:02:17.325Z"
+downloads: 1
+updated: "2025-03-17T02:16:54.748Z"
 github_stars: 2
+svelte5: true
 tags: 
   - utility
 ---

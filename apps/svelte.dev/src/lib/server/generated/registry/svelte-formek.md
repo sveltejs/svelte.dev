@@ -1,6 +1,6 @@
 ---
 name: "svelte-formek"
-description: "Manage forms with validation using Yup in Svelte applications."
+description: "Manages forms with validation in Svelte using a Formik-like API."
 repo_url: "https://github.com/eriknyk/svelte-formek"
 author: "Tjin Au Yeung, Erik Amaru Ortiz"
 homepage: "https://github.com/eriknyk/svelte-formek#readme"

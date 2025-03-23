@@ -1,8 +1,8 @@
 ---
 name: "svelte-switcher"
-description: "Create accessible, customizable toggle components for Svelte apps."
+description: "Create accessible, customizable toggle components for Svelte."
 author: "rohitpotato"
-downloads: 55
+downloads: 81
 updated: "2022-12-09T09:05:56.490Z"
 tags: 
   - ui

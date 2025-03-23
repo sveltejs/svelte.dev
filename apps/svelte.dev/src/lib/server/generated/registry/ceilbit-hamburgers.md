@@ -1,10 +1,10 @@
 ---
 name: "ceilbit-hamburgers"
-description: "Hamburger menu component for Svelte, fully customisable."
+description: "Create hamburger menu components for Svelte apps."
 repo_url: "https://github.com/CeilBit/ceilbit-hamburgers"
 author: "GHOST"
 homepage: "https://github.com/CeilBit/ceilbit-hamburgers#readme"
-downloads: 6
+downloads: 9
 updated: "2023-06-08T13:59:43.179Z"
 tags: 
   - ui

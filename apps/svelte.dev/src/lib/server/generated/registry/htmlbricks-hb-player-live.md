@@ -1,8 +1,8 @@
 ---
 name: "@htmlbricks/hb-player-live"
-description: "Create live player component for Svelte applications."
+description: "Svelte Boostrap Pagination WebComponent."
 author: "Dario Caruso"
-downloads: 6
+downloads: 441
 dependents: 3
 updated: "2025-03-09T03:10:34.453Z"
 tags: 

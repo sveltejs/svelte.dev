@@ -1,6 +1,6 @@
 ---
 name: "komodo-svelte"
-description: "Provide Svelte bindings for the Komodo Elixir library."
+description: "Provide Svelte bindings for Komodo Elixir library."
 repo_url: "https://github.com/hungry-egg/komodo"
 author: "Mark Evans"
 homepage: "https://github.com/hungry-egg/komodo/tree/main/packages/komodo-svelte#readme"

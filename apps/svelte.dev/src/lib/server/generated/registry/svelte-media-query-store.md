@@ -1,10 +1,10 @@
 ---
 name: "svelte-media-query-store"
-description: "Provide reactive store detecting specific media queries in Svelte."
+description: "Provide reactive store detecting specific media queries."
 repo_url: "https://github.com/michaelbelete/svelte-media-query-store"
 author: "Michael Belete"
 homepage: "https://github.com/michaelbelete/svelte-media-query-store#readme"
-downloads: 11
+downloads: 5
 dependents: 1
 updated: "2022-09-25T00:49:45.983Z"
 github_stars: 3

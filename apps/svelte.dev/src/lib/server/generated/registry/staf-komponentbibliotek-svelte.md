@@ -1,6 +1,6 @@
 ---
 name: "staf-komponentbibliotek-svelte"
-description: "Create component library for Svelte with custom styling and components."
+description: "Component library with custom styles for Svelte."
 repo_url: "https://github.com/fmfaDigitalisering/staf-komponentbibliotek-svelte"
 author: "tobiasgunther"
 homepage: "https://github.com/fmfaDigitalisering/staf-komponentbibliotek-svelte#readme"

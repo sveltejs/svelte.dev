@@ -1,12 +1,11 @@
 ---
 name: "higlass-svelte"
-description: "Integrate HiGlass genomic visualization with Svelte."
+description: "Integrate HiGlass components into Svelte apps."
 repo_url: "https://github.com/flekschas/higlass-svelte"
 author: "flekschas"
 homepage: "https://github.com/flekschas/higlass-svelte#readme"
-downloads: 3
+downloads: 1
 updated: "2020-07-18T01:13:00.471Z"
 tags: 
-  - integration
   - ui
 ---

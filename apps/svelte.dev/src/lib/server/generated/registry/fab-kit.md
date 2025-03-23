@@ -1,6 +1,6 @@
 ---
 name: "fab-kit"
-description: "Provide UI components for Svelte, focusing on user experience."
+description: "UI kit for Svelte with components and styling."
 repo_url: "https://github.com/gived/fab-kit"
 author: "Tamas Fabi"
 homepage: "https://github.com/gived/fab-kit#readme"

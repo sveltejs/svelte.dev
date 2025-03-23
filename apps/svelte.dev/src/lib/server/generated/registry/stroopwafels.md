@@ -1,6 +1,6 @@
 ---
 name: "stroopwafels"
-description: "Offer collection of Svelte components including slider, tabs, and more."
+description: "Collection of Svelte components including slider, tabs, and more."
 repo_url: "https://github.com/bmehder/stroopwafels"
 author: "bmehder"
 homepage: "https://github.com/bmehder/stroopwafels#readme"

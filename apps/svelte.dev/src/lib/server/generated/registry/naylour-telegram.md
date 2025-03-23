@@ -1,10 +1,11 @@
 ---
 name: "@naylour/telegram"
-description: "Svelte component for Telegram API integration."
+description: "Integrates Telegram API with Svelte."
 repo_url: "https://github.com/naylour/NaylourTelegram"
 author: "Naylour"
-downloads: 5
+downloads: 14
 updated: "2025-01-04T22:40:10.009Z"
+svelte5: true
 tags: 
   - integration
 ---

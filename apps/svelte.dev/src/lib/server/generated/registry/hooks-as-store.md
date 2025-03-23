@@ -1,6 +1,6 @@
 ---
 name: "hooks-as-store"
-description: "Use React custom hooks in Svelte applications."
+description: "Use React custom hooks within Svelte applications."
 repo_url: "https://github.com/micha-lmxt/hooks-as-store"
 author: "micha-lmxt"
 homepage: "https://github.com/micha-lmxt/hooks-as-store#readme"

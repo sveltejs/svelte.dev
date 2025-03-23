@@ -1,6 +1,6 @@
 ---
 name: "@fullstax/svelte-i18n"
-description: "Internationalize Svelte applications with reactive tools."
+description: "Implement internationalization for Svelte applications."
 repo_url: "https://github.com/fullstax/svelte-i18n"
 author: "Christian Kaisermann"
 homepage: "https://github.com/fullstax/svelte-i18n#readme"
