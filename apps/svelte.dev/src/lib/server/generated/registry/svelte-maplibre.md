@@ -7,7 +7,7 @@ homepage: "https://svelte-maplibre.imfeld.dev"
 downloads: 5582
 dependents: 6
 updated: "2025-02-06T18:37:17.501Z"
-github_stars: 387
+github_stars: 400
 tags: 
   - ui
 ---

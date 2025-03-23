@@ -7,7 +7,7 @@ homepage: "https://sveltejs.github.io/eslint-plugin-svelte"
 downloads: 368056
 dependents: 139
 updated: "2025-03-10T01:34:22.897Z"
-github_stars: 321
+github_stars: 323
 tags: 
   - tooling
 ---

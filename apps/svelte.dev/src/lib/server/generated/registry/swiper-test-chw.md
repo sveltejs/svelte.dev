@@ -5,7 +5,7 @@ repo_url: "https://github.com/nolimits4web/Swiper"
 author: "Vladimir Kharlampidi"
 homepage: "https://swiperjs.com"
 updated: "2022-08-28T22:43:32.782Z"
-github_stars: 40657
+github_stars: 40691
 tags: 
   - ui
 ---

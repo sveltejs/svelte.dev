@@ -6,7 +6,7 @@ author: "colinlienard"
 homepage: "https://github.com/colinlienard/sv-router"
 downloads: 70
 updated: "2025-03-09T14:52:54.621Z"
-github_stars: 6
+github_stars: 10
 tags: 
   - router
 ---

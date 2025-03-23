@@ -6,7 +6,7 @@ author: "Daybrush"
 homepage: "https://daybrush.com/infinite-viewer"
 downloads: 24
 updated: "2023-10-31T17:13:57.479Z"
-github_stars: 310
+github_stars: 312
 tags: 
   - ui
   - performance

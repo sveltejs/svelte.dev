@@ -6,7 +6,7 @@ author: "Dongsheng Zhao"
 homepage: "https://sveltepress.site/"
 downloads: 3
 updated: "2023-02-01T06:58:20.576Z"
-github_stars: 408
+github_stars: 413
 tags: 
   - content
 ---

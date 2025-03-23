@@ -6,7 +6,7 @@ author: "Robin Danzinger, Martin Farkas"
 homepage: "https://gardenjs.org/"
 downloads: 34
 updated: "2025-01-10T14:28:09.501Z"
-github_stars: 6
+github_stars: 7
 tags: 
   - tooling
   - component-library

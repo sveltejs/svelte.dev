@@ -6,7 +6,7 @@ author: "frielforreal"
 homepage: "https://sdk.vercel.ai/docs"
 downloads: 1
 updated: "2024-07-08T02:19:11.228Z"
-github_stars: 12673
+github_stars: 12833
 tags: 
   - utility
 ---

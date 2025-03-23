@@ -5,7 +5,7 @@ repo_url: "https://github.com/vercel/ai"
 author: "dizy"
 homepage: "https://sdk.vercel.ai/docs"
 updated: "2023-08-20T03:48:51.408Z"
-github_stars: 12673
+github_stars: 12834
 tags: 
   - utility
 ---

@@ -7,7 +7,7 @@ homepage: "https://sdk.vercel.ai/docs"
 downloads: 460233
 dependents: 6
 updated: "2025-03-13T14:19:35.468Z"
-github_stars: 12673
+github_stars: 12833
 tags: 
   - ui
 ---

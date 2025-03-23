@@ -6,7 +6,7 @@ author: "maxleiter"
 homepage: "https://sdk.vercel.ai/docs"
 downloads: 194
 updated: "2023-08-17T17:09:28.750Z"
-github_stars: 12673
+github_stars: 12833
 tags: 
   - utility
 ---

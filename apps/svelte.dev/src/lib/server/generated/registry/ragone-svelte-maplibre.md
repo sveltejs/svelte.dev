@@ -5,7 +5,7 @@ repo_url: "https://github.com/dimfeld/svelte-maplibre"
 author: "Daniel Imfeld"
 homepage: "https://svelte-maplibre.imfeld.dev"
 updated: "2024-02-08T10:50:04.867Z"
-github_stars: 387
+github_stars: 400
 tags: 
   - ui
 ---

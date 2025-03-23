@@ -7,7 +7,7 @@ homepage: "https://github.com/melt-ui/melt-ui#readme"
 downloads: 100079
 dependents: 48
 updated: "2025-03-08T12:06:32.377Z"
-github_stars: 3935
+github_stars: 3943
 tags: 
   - component-library
   - ui

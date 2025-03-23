@@ -7,7 +7,7 @@ homepage: "https://tipex.pages.dev/"
 downloads: 521
 dependents: 1
 updated: "2024-12-29T03:39:17.626Z"
-github_stars: 299
+github_stars: 302
 tags: 
   - content
   - ui

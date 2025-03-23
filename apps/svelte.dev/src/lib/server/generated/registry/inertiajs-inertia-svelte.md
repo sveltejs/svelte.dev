@@ -7,7 +7,7 @@ homepage: "https://inertiajs.com/"
 downloads: 175
 dependents: 1
 updated: "2022-01-07T17:21:54.836Z"
-github_stars: 6962
+github_stars: 6974
 tags: 
   - router
 ---

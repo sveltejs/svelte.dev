@@ -7,7 +7,7 @@ homepage: "https://github.com/vnphanquang/svelte-put/tree/main/packages/inline-s
 downloads: 858
 dependents: 1
 updated: "2025-01-17T09:22:58.032Z"
-github_stars: 900
+github_stars: 906
 tags: 
   - utility
   - preprocessor

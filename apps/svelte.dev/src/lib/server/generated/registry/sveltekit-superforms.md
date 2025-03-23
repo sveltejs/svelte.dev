@@ -7,7 +7,7 @@ homepage: "https://superforms.rocks"
 downloads: 54238
 dependents: 16
 updated: "2025-03-09T15:49:51.195Z"
-github_stars: 2428
+github_stars: 2435
 tags: 
   - utility
 ---

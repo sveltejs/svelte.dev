@@ -5,7 +5,7 @@ repo_url: "https://github.com/themesberg/flowbite-svelte"
 author: "Shinichi Okada"
 homepage: "https://flowbite-svelte.com/"
 updated: "2023-09-27T22:48:46.755Z"
-github_stars: 2398
+github_stars: 2407
 tags: 
   - component-library
   - ui

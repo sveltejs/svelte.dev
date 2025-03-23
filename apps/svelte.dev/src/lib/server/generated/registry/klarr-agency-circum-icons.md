@@ -6,7 +6,7 @@ author: "klarr-agency"
 homepage: "https://github.com/Klarr-Agency/Circum-icons#readme"
 downloads: 1
 updated: "2022-05-21T14:03:51.228Z"
-github_stars: 181
+github_stars: 182
 tags: 
   - ui
 ---

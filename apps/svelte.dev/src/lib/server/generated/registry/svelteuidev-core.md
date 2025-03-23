@@ -7,7 +7,7 @@ homepage: "https://svelteui.dev/"
 downloads: 545
 dependents: 6
 updated: "2024-07-07T14:30:27.404Z"
-github_stars: 1354
+github_stars: 1359
 tags: 
   - component-library
   - ui

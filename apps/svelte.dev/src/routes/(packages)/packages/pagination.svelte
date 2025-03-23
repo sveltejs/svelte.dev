@@ -42,23 +42,23 @@
 
 	const { total, siblingCount = 1, page = $bindable(1), children }: Props = $props();
 
-	function getPageItems(): Array<PageItem> {
-		const pageItems: Array<PageItem> = [];
-		const pagesToShow = new Set([1, Math.max(total, 1)]);
-		const firstItemWithSiblings = 3 + siblingCount;
-		const lastItemWithSiblings = total - 2 - siblingCount;
+	function get_page_items(): Array<PageItem> {
+		const page_items: Array<PageItem> = [];
+		const pages_to_show = new Set([1, Math.max(total, 1)]);
+		const first_item_with_siblings = 3 + siblingCount;
+		const last_item_with_siblings = total - 2 - siblingCount;
 
-		if (firstItemWithSiblings > lastItemWithSiblings) {
+		if (first_item_with_siblings > last_item_with_siblings) {
 			for (let p = 2; p <= total - 1; p++) {
-				pagesToShow.add(p);
+				pages_to_show.add(p);
 			}
-		} else if (page < firstItemWithSiblings) {
-			for (let p = 2; p <= Math.min(firstItemWithSiblings, total); p++) {
-				pagesToShow.add(p);
+		} else if (page < first_item_with_siblings) {
+			for (let p = 2; p <= Math.min(first_item_with_siblings, total); p++) {
+				pages_to_show.add(p);
 			}
-		} else if (page > lastItemWithSiblings) {
-			for (let p = total - 1; p >= Math.max(lastItemWithSiblings, 2); p--) {
-				pagesToShow.add(p);
+		} else if (page > last_item_with_siblings) {
+			for (let p = total - 1; p >= Math.max(last_item_with_siblings, 2); p--) {
+				pages_to_show.add(p);
 			}
 		} else {
 			for (
@@ -66,32 +66,32 @@
 				p <= Math.min(page + siblingCount, total);
 				p++
 			) {
-				pagesToShow.add(p);
+				pages_to_show.add(p);
 			}
 		}
 
-		const addPage = (value: number) => {
-			pageItems.push({ type: 'page', value });
+		const add_page = (value: number) => {
+			page_items.push({ type: 'page', value });
 		};
-		const addEllipsis = () => {
-			pageItems.push({ type: 'ellipsis' });
+		const add_ellipsis = () => {
+			page_items.push({ type: 'ellipsis' });
 		};
 
-		let lastNumber = 0;
-		for (const page of Array.from(pagesToShow).sort((a, b) => a - b)) {
-			if (page - lastNumber > 1) {
-				addEllipsis();
+		let last_number = 0;
+		for (const page of Array.from(pages_to_show).sort((a, b) => a - b)) {
+			if (page - last_number > 1) {
+				add_ellipsis();
 			}
-			addPage(page);
-			lastNumber = page;
+			add_page(page);
+			last_number = page;
 		}
 
-		return pageItems;
+		return page_items;
 	}
 
-	const pageItems = $derived(getPageItems());
+	const page_items = $derived(get_page_items());
 </script>
 
-{#each pageItems as pageItem}
+{#each page_items as pageItem}
 	{@render children(pageItem)}
 {/each}

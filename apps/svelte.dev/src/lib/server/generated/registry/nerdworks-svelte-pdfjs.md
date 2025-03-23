@@ -6,7 +6,7 @@ author: "nobbo"
 homepage: "https://github.com/gtm-nayan/svelte-pdfjs#readme"
 downloads: 5
 updated: "2023-02-14T05:04:06.919Z"
-github_stars: 37
+github_stars: 38
 tags: 
   - media
 ---

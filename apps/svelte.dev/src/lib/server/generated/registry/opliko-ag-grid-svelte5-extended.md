@@ -6,7 +6,7 @@ author: "opliko"
 homepage: "https://bn-l.github.io/ag-grid-svelte5-extended/"
 downloads: 7
 updated: "2024-12-20T13:27:16.501Z"
-github_stars: 17
+github_stars: 18
 tags: 
   - component-library
 ---

@@ -6,7 +6,7 @@ author: "qderoubaix"
 homepage: "https://amadeusitgroup.github.io/AgnosUI/latest/"
 downloads: 1
 updated: "2024-03-05T09:27:30.377Z"
-github_stars: 66
+github_stars: 68
 tags: 
   - component-library
   - ui

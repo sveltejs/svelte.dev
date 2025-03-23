@@ -7,7 +7,7 @@ homepage: "https://svelecte.vercel.app/"
 downloads: 5527
 dependents: 10
 updated: "2025-03-07T14:56:00.569Z"
-github_stars: 507
+github_stars: 513
 tags: 
   - ui
 ---

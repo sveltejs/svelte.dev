@@ -6,7 +6,7 @@ author: "Jacob Cutshall @jpcutshall"
 homepage: "https://github.com/jpcutshall/svelte5-router"
 downloads: 253
 updated: "2025-01-22T23:26:57.572Z"
-github_stars: 11
+github_stars: 12
 tags: 
   - router
 ---

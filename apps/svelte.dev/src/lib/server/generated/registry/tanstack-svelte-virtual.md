@@ -7,7 +7,7 @@ homepage: "https://tanstack.com/virtual"
 downloads: 4956
 dependents: 4
 updated: "2025-03-13T20:23:54.276Z"
-github_stars: 5888
+github_stars: 5912
 tags: 
   - utility
 ---

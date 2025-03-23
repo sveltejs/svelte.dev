@@ -6,7 +6,7 @@ author: "Dominik Pieper"
 homepage: "https://nxext.dev/"
 downloads: 1
 updated: "2023-07-11T20:01:17.168Z"
-github_stars: 471
+github_stars: 472
 tags: 
   - tooling
 ---

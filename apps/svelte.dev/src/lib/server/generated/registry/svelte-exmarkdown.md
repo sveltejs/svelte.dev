@@ -7,7 +7,7 @@ homepage: "https://ssssota.github.io/svelte-exmarkdown"
 downloads: 6479
 dependents: 5
 updated: "2025-02-18T15:52:18.931Z"
-github_stars: 241
+github_stars: 244
 tags: 
   - content
 ---

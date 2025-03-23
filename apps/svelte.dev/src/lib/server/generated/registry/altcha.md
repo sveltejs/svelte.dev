@@ -7,7 +7,7 @@ homepage: "https://altcha.org"
 downloads: 6972
 dependents: 5
 updated: "2025-03-10T01:39:12.030Z"
-github_stars: 715
+github_stars: 726
 tags: 
   - auth
 ---

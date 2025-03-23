@@ -6,7 +6,7 @@ author: "Nazar Ugrinovsky"
 homepage: "https://github.com/Telegram-Mini-Apps/telegram-apps#readme"
 downloads: 132
 updated: "2025-02-27T15:04:05.359Z"
-github_stars: 900
+github_stars: 905
 tags: 
   - integration
 ---

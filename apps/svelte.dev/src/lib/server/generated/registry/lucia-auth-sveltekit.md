@@ -6,7 +6,7 @@ author: "pilcrowonpaper"
 homepage: "https://github.com/pilcrowOnPaper/lucia#readme"
 downloads: 40
 updated: "2023-03-19T12:24:16.861Z"
-github_stars: 9989
+github_stars: 10008
 tags: 
   - auth
   - server

@@ -5,7 +5,7 @@ repo_url: "https://github.com/HoudiniGraphql/houdini"
 author: "ewen-lbh"
 homepage: "https://github.com/HoudiniGraphql/houdini"
 updated: "2024-11-11T14:50:00.022Z"
-github_stars: 938
+github_stars: 940
 tags: 
   - utility
 ---

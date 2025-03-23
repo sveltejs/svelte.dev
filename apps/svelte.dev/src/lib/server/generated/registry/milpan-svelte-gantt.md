@@ -6,7 +6,7 @@ author: "Ante Novokmet"
 homepage: "https://github.com/ANovokmet/svelte-gantt#readme"
 downloads: 69
 updated: "2025-02-23T14:01:02.931Z"
-github_stars: 558
+github_stars: 559
 tags: 
   - ui
   - component-library

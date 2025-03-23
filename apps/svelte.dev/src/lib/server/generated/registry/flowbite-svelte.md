@@ -7,7 +7,7 @@ homepage: "https://flowbite-svelte.com/"
 downloads: 50461
 dependents: 43
 updated: "2025-02-24T16:22:35.419Z"
-github_stars: 2398
+github_stars: 2407
 tags: 
   - component-library
 ---

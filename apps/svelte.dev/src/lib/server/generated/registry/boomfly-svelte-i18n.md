@@ -6,7 +6,7 @@ author: "Christian Kaisermann"
 homepage: "https://github.com/kaisermann/svelte-i18n#readme"
 downloads: 1
 updated: "2021-02-07T17:05:11.370Z"
-github_stars: 1311
+github_stars: 1315
 tags: 
   - utility
 ---

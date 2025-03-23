@@ -7,7 +7,7 @@ homepage: "https://github.com/open-source-labs/Svelvet"
 downloads: 1489
 dependents: 5
 updated: "2025-02-18T20:13:27.930Z"
-github_stars: 2672
+github_stars: 2676
 tags: 
   - component-library
 ---

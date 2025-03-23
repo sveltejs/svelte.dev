@@ -6,7 +6,7 @@ author: "Nam Nguyen"
 homepage: "https://willnguyen1312.github.io/zoom-image"
 downloads: 2745
 updated: "2025-03-01T22:36:04.188Z"
-github_stars: 321
+github_stars: 322
 tags: 
   - ui
   - media

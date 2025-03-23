@@ -7,7 +7,7 @@ homepage: "https://github.com/sibiraj-s/svelte-tiptap#readme"
 downloads: 5256
 dependents: 4
 updated: "2024-12-01T10:24:47.495Z"
-github_stars: 279
+github_stars: 281
 tags: 
   - content
 ---

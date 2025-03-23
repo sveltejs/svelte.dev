@@ -7,7 +7,7 @@ homepage: "https://ngyewch.github.io/svelte-leafletjs/"
 downloads: 710
 dependents: 1
 updated: "2024-11-20T03:27:11.865Z"
-github_stars: 111
+github_stars: 112
 tags: 
   - ui
 ---

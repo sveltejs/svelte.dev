@@ -7,7 +7,7 @@ homepage: "https://github.com/dkaoster/scrolly-video#readme"
 downloads: 827
 dependents: 1
 updated: "2025-03-07T04:16:43.669Z"
-github_stars: 1031
+github_stars: 1033
 tags: 
   - ui
 ---

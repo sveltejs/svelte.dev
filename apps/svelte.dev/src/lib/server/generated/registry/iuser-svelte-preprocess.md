@@ -6,7 +6,7 @@ author: "Christian Kaisermann"
 homepage: "https://github.com/sveltejs/svelte-preprocess#readme"
 downloads: 1
 updated: "2023-02-14T09:28:47.302Z"
-github_stars: 1772
+github_stars: 1773
 tags: 
   - preprocessor
   - tooling

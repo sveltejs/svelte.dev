@@ -6,7 +6,7 @@ author: "Kabir Goel"
 homepage: "https://github.com/kbrgl/svelte-french-toast#readme"
 downloads: 2
 updated: "2024-05-22T13:30:37.963Z"
-github_stars: 933
+github_stars: 937
 tags: 
   - ui
 ---

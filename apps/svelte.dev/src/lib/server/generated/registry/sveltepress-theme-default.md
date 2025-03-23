@@ -6,7 +6,7 @@ author: "Dongsheng Zhao"
 homepage: "https://sveltepress.site/"
 downloads: 1898
 updated: "2025-02-26T01:04:19.775Z"
-github_stars: 408
+github_stars: 413
 tags: 
   - content
   - ui

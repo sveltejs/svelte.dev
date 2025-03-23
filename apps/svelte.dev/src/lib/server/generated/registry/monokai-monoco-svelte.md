@@ -6,7 +6,7 @@ author: "Monokai"
 homepage: "https://github.com/monokai/monoco-svelte#readme"
 downloads: 122
 updated: "2025-01-14T15:23:01.093Z"
-github_stars: 30
+github_stars: 31
 tags: 
   - ui
 ---

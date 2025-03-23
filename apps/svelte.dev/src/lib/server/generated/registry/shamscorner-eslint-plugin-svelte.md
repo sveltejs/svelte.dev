@@ -6,7 +6,7 @@ author: "Yosuke Ota"
 homepage: "https://sveltejs.github.io/eslint-plugin-svelte"
 downloads: 9
 updated: "2025-01-30T21:00:46.130Z"
-github_stars: 321
+github_stars: 323
 tags: 
   - tooling
 ---

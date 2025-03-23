@@ -7,7 +7,7 @@ homepage: "https://github.com/poppa/sveltekit-svg#readme"
 downloads: 8830
 dependents: 2
 updated: "2024-10-23T12:21:16.906Z"
-github_stars: 252
+github_stars: 253
 tags: 
   - tooling
 ---

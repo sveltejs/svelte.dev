@@ -2,7 +2,7 @@
 	import { page } from '$app/state';
 	import { forcefocus } from '@sveltejs/site-kit/actions';
 	import { Icon } from '@sveltejs/site-kit/components';
-	import { Box, ReactiveQueryParam } from '@sveltejs/site-kit/reactivity';
+	import { ReactiveQueryParam } from '@sveltejs/site-kit/reactivity';
 	import { onMount } from 'svelte';
 	import SearchWorker from './packages-worker.ts?worker';
 	import Pagination from './pagination.svelte';
@@ -14,17 +14,17 @@
 		encode: (v) => v.toString(),
 		decode: (v) => +v
 	});
+
 	const tags_qp = new ReactiveQueryParam<string[]>('tags', [], {
 		encode: (v) => v.join(','),
 		decode: (v) => v.split(',').filter(Boolean)
 	});
 
-	const registry = new Box(() => data.registry);
-	const total_pages = new Box(() => data.pages.total_pages);
+	let registry = $derived(data.registry);
+	let total_pages = $derived(data.pages.total_pages);
 
 	let ready = $state(false);
 	let uid = 1;
-	const pending = new Set();
 
 	let worker_first_run = true;
 
@@ -44,8 +44,8 @@
 			}
 
 			if (type === 'results') {
-				registry.current = payload.results;
-				total_pages.current = payload.total_pages;
+				registry = payload.results;
+				total_pages = payload.total_pages;
 			}
 		});
 
@@ -72,7 +72,6 @@
 		}
 
 		const id = uid++;
-		pending.add(id);
 
 		worker.postMessage({
 			type: 'get',
@@ -105,111 +104,11 @@
 <h1 class="visually-hidden">Packages</h1>
 
 <div class="container">
-	<div class="toc-container">
-		<nav aria-label="Docs">
-			<ul class="sidebar">
-				{#each [{ tag: 'all', short_title: 'All' }].concat(data.tags) as tag}
-					{@const link = new URL(page.url)}
-					{@const _ = link.searchParams.set(
-						'tags',
-						(tag.tag === 'all'
-							? []
-							: (link.searchParams.get('tags') ?? '').split(',').concat(tag.tag).filter(Boolean)
-						).join(',')
-					)}
-
-					<li>
-						<input
-							type="checkbox"
-							value={tag.tag}
-							bind:checked={() =>
-								tag.tag === 'all'
-									? tags_qp.current.length === 0
-									: tags_qp.current.includes(tag.tag),
-							(v) => {
-								if (tag.tag === 'all') {
-									// Click on this should just empty the tags array
-									tags_qp.current = [];
-									return;
-								}
-
-								if (!v) {
-									tags_qp.current = tags_qp.current.filter((t) => t !== tag.tag);
-								} else {
-									tags_qp.current = [...tags_qp.current, tag.tag];
-								}
-							}}
-						/>
-						<a
-							class="tag"
-							href={link.pathname + link.search}
-							onclick={(e) => {
-								e.preventDefault();
-
-								if (tag.tag === 'all') {
-									// Click on this should just empty the tags array
-									tags_qp.current = [];
-									return;
-								}
-
-								if (tags_qp.current.includes(tag.tag)) {
-									tags_qp.current = tags_qp.current.filter((t) => t !== tag.tag);
-								} else {
-									tags_qp.current = [...tags_qp.current, tag.tag];
-								}
-							}}
-							aria-current={(tag.tag === 'all' && tags_qp.current.length === 0) ||
-								tags_qp.current.includes(tag.tag)}
-							title="Packages under {tag.tag}"
-						>
-							{tag.short_title}
-						</a>
-					</li>
-				{/each}
-			</ul>
-		</nav>
-	</div>
-
 	<div class="page content">
 		<h1>Packages</h1>
 
-		<div class="controls">
-			<label class="input-group">
-				<Icon name="search" />
-				<input
-					use:forcefocus
-					onkeydown={(e) => {
-						if (e.key === 'Enter' && !e.isComposing) {
-							// const element = modal.querySelector('a[data-has-node]') as HTMLElement | undefined;
-							// element?.click();
-						}
-					}}
-					bind:value={query_qp.current}
-					placeholder="Search"
-					aria-describedby="search-description"
-					aria-label={'Search'}
-					spellcheck="false"
-				/>
-
-				<button
-					aria-label="Clear"
-					onclick={(e) => {
-						e.stopPropagation();
-						query_qp.current = '';
-					}}
-				>
-					<Icon name="close" />
-				</button>
-			</label>
-
-			<!-- <button class="raised" aria-label="Close" onclick={close}>
-					<Icon name="close" />
-					<kbd>Esc</kbd>
-				</button> -->
-		</div>
-
 		<div class="posts">
-			{#each registry.current as pkg}
+			{#each registry as pkg}
 				<article data-pubdate={pkg.updated}>
 					<a
 						href="https://npmjs.com/package/{pkg.name}"
@@ -279,65 +178,129 @@
 				</article>
 			{/each}
 		</div>
+	</div>
+
+	<div class="toc-container">
+		<nav aria-label="Docs">
+			<div class="controls">
+				<label class="input-group">
+					<Icon name="search" />
+					<input
+						use:forcefocus
+						onkeydown={(e) => {
+							if (e.key === 'Enter' && !e.isComposing) {
+								// const element = modal.querySelector('a[data-has-node]') as HTMLElement | undefined;
+								// element?.click();
+							}
+						}}
+						bind:value={query_qp.current}
+						placeholder="Search"
+						aria-describedby="search-description"
+						aria-label={'Search'}
+						spellcheck="false"
+					/>
+
+					<button
+						aria-label="Clear"
+						onclick={(e) => {
+							e.stopPropagation();
+							query_qp.current = '';
+						}}
+					>
+						<Icon name="close" />
+					</button>
+				</label>
+
+				<!-- <button class="raised" aria-label="Close" onclick={close}>
+						<Icon name="close" />
+						<kbd>Esc</kbd>
+					</button> -->
+			</div>
+
+			<ul class="sidebar">
+				{#each [{ tag: 'all', short_title: 'All' }].concat(data.tags) as tag}
+					{@const link = new URL(page.url)}
+					{@const _ = link.searchParams.set(
+						'tags',
+						(tag.tag === 'all'
+							? []
+							: (link.searchParams.get('tags') ?? '').split(',').concat(tag.tag).filter(Boolean)
+						).join(',')
+					)}
+
+					<li>
+						<input
+							type="checkbox"
+							value={tag.tag}
+							bind:checked={() =>
+								tag.tag === 'all'
+									? tags_qp.current.length === 0
+									: tags_qp.current.includes(tag.tag),
+							(v) => {
+								if (tag.tag === 'all') {
+									// Click on this should just empty the tags array
+									tags_qp.current = [];
+									return;
+								}
+
+								if (!v) {
+									tags_qp.current = tags_qp.current.filter((t) => t !== tag.tag);
+								} else {
+									tags_qp.current = [...tags_qp.current, tag.tag];
+								}
+							}}
+						/>
+						<a
+							class="tag"
+							href={link.pathname + link.search}
+							onclick={(e) => {
+								e.preventDefault();
+
+								if (tag.tag === 'all') {
+									// Click on this should just empty the tags array
+									tags_qp.current = [];
+									return;
+								}
+
+								if (tags_qp.current.includes(tag.tag)) {
+									tags_qp.current = tags_qp.current.filter((t) => t !== tag.tag);
+								} else {
+									tags_qp.current = [...tags_qp.current, tag.tag];
+								}
+							}}
+							aria-current={(tag.tag === 'all' && tags_qp.current.length === 0) ||
+								tags_qp.current.includes(tag.tag)}
+							title="Packages under {tag.tag}"
+						>
+							{tag.short_title}
+						</a>
+					</li>
+				{/each}
+			</ul>
+		</nav>
 
 		<div class="pagination">
-			<Pagination total={total_pages.current} bind:page={page_qp.current}>
+			<Pagination total={total_pages} bind:page={page_qp.current}>
 				{#snippet children(pageItem)}
 					{#if pageItem.type === 'ellipsis'}
 						<span>-</span>
 					{:else}
-						<button
+						{@const url = new URL(page.url)}
+						{@const _ = url.searchParams.set('page', pageItem.value.toString())}
+						<a
+							href={url.pathname + url.search}
 							aria-current={page_qp.current === pageItem.value}
-							onclick={() => {
+							onclick={(e) => {
+								e.preventDefault();
 								page_qp.current = pageItem.value;
 							}}
 						>
 							{pageItem.value}
-						</button>
+						</a>
 					{/if}
 				{/snippet}
 			</Pagination>
 		</div>
-
-		<!-- <ul class="feed">
-			{#each [{ tag: 'all', short_title: 'All' }].concat(data.tags) as tag}
-				{@const link = new URL(page.url)}
-				{@const _ = link.searchParams.set(
-					'tags',
-					(tag.tag === 'all'
-						? []
-						: (link.searchParams.get('tags') ?? '').split(',').concat(tag.tag).filter(Boolean)
-					).join(',')
-				)}
-
-				<li>
-					<a
-						class="tag"
-						href={link.pathname + link.search}
-						onclick={(e) => {
-							e.preventDefault();
-
-							if (tag.tag === 'all') {
-								// Click on this should just empty the tags array
-								tags_qp.current = [];
-								return;
-							}
-
-							if (tags_qp.current.includes(tag.tag)) {
-								tags_qp.current = tags_qp.current.filter((t) => t !== tag.tag);
-							} else {
-								tags_qp.current = [...tags_qp.current, tag.tag];
-							}
-						}}
-						aria-current={(tag.tag === 'all' && tags_qp.current.length === 0) ||
-							tags_qp.current.includes(tag.tag)}
-						title="Packages under {tag.tag}"
-					>
-						{tag.short_title}
-					</a>
-				</li>
-			{/each}
-		</ul> -->
 	</div>
 </div>
 
@@ -354,7 +317,6 @@
 	}
 
 	.sidebar {
-		padding: 3.2rem 3.2rem calc(3.2rem + var(--sk-banner-height)) 3.2rem;
 		font-family: var(--sk-font-family-body);
 		height: 100%;
 		bottom: auto;
@@ -541,14 +503,14 @@
 			opacity: 0.5;
 		}
 
-		button,
+		a,
 		span {
 			width: 2rem;
 			text-align: center;
 			font: var(--sk-font-ui-medium);
 		}
 
-		button[aria-current='true'] {
+		a[aria-current='true'] {
 			color: var(--sk-fg-accent);
 			text-decoration: underline;
 		}
@@ -563,12 +525,13 @@
 
 	@media (min-width: 832px) {
 		.content {
-			padding-left: calc(var(--sidebar-width) + var(--sk-page-padding-side));
+			padding-left: calc(var(--sk-page-padding-side));
 		}
 	}
 
 	.toc-container {
 		display: none;
+		padding-top: calc(var(--sk-nav-height) + var(--sk-banner-height));
 	}
 
 	@media (min-width: 832px) {
@@ -577,7 +540,7 @@
 			width: var(--sidebar-width);
 			height: calc(100vh - var(--sk-nav-height) - var(--sk-banner-height));
 			position: fixed;
-			left: 0;
+			right: 100px;
 			top: var(--sk-nav-height);
 			overflow: hidden;
 
@@ -593,16 +556,16 @@
 		}
 
 		.page {
-			padding-left: calc(var(--sidebar-width) + var(--sk-page-padding-side));
+			padding-left: calc(var(--sk-page-padding-side));
 		}
 	}
 
 	@media (min-width: 1200px) {
 		.container {
 			--sidebar-width: max(
-				28rem,
+				26rem,
 				calc(
-					0.5 *
+					0.4 *
 						(
 							100vw - var(--sk-page-content-width) - var(--sk-page-padding-side) -
 								var(--sk-page-padding-side)

@@ -6,7 +6,7 @@ author: "shinichiokada"
 homepage: "https://flowbite-svelte-admin-dashboard.vercel.app/"
 downloads: 116
 updated: "2024-02-09T19:18:55.629Z"
-github_stars: 378
+github_stars: 381
 tags: 
   - component-library
   - ui

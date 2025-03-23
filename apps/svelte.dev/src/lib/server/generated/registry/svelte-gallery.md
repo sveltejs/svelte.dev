@@ -6,7 +6,7 @@ author: "Madeleine Ostoja"
 homepage: "https://github.com/peppercornstudio/svelte-gallery#readme"
 downloads: 13
 updated: "2022-01-22T09:02:53.968Z"
-github_stars: 26
+github_stars: 27
 tags: 
   - ui
 ---

@@ -6,7 +6,7 @@ author: "Johann Schopplich"
 homepage: "https://unlazy.byjohann.dev"
 downloads: 246
 updated: "2025-03-07T14:38:09.520Z"
-github_stars: 792
+github_stars: 795
 tags: 
   - media
   - performance

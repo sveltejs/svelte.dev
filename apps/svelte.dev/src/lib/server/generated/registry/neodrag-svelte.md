@@ -7,7 +7,7 @@ homepage: "https://neodrag.dev/docs/svelte"
 downloads: 3811
 dependents: 23
 updated: "2025-03-09T16:22:22.420Z"
-github_stars: 1807
+github_stars: 1811
 tags: 
   - utility
   - ui

@@ -6,7 +6,7 @@ author: "k4ung"
 homepage: "https://k4ung-svelte-otp.netlify.app/usage"
 downloads: 553
 updated: "2023-03-03T10:39:54.897Z"
-github_stars: 33
+github_stars: 34
 tags: 
   - ui
 ---

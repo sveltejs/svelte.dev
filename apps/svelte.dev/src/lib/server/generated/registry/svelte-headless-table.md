@@ -7,7 +7,7 @@ homepage: "https://svelte-headless-table.bryanmylee.com"
 downloads: 15336
 dependents: 8
 updated: "2024-10-28T12:34:41.590Z"
-github_stars: 491
+github_stars: 492
 tags: 
   - utility
   - component-library

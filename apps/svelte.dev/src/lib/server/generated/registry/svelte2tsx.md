@@ -7,7 +7,7 @@ homepage: "https://github.com/sveltejs/language-tools/tree/master/packages/svelt
 downloads: 221780
 dependents: 410
 updated: "2025-03-06T14:09:16.473Z"
-github_stars: 1292
+github_stars: 1290
 tags: 
   - tooling
 ---

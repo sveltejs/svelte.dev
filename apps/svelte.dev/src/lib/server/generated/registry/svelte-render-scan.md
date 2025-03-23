@@ -6,7 +6,7 @@ author: "stanislav-khromov"
 homepage: "https://khromov.github.io/svelte-render-scan/"
 downloads: 96
 updated: "2025-03-09T23:38:48.841Z"
-github_stars: 54
+github_stars: 70
 tags: 
   - tooling
 ---

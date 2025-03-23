@@ -6,7 +6,7 @@ author: "Giovani Rodriguez"
 homepage: "https://github.com/code-gio/svelte-firekit#readme"
 downloads: 19
 updated: "2025-02-18T00:01:45.506Z"
-github_stars: 14
+github_stars: 15
 tags: 
   - auth
   - integration

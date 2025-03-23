@@ -7,7 +7,7 @@ homepage: "https://github.com/Decathlon/vitamin-web/tree/main/packages/sources/s
 downloads: 5921
 dependents: 1
 updated: "2024-03-25T10:00:34.270Z"
-github_stars: 284
+github_stars: 285
 tags: 
   - component-library
   - ui

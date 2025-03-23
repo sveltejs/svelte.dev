@@ -7,7 +7,7 @@ homepage: "https://p5-svelte.netlify.app/"
 downloads: 151
 dependents: 2
 updated: "2022-04-03T01:45:26.342Z"
-github_stars: 178
+github_stars: 179
 tags: 
   - ui
   - integration

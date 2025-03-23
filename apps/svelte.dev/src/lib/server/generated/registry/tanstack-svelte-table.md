@@ -7,7 +7,7 @@ homepage: "https://tanstack.com/table"
 downloads: 8666
 dependents: 14
 updated: "2025-02-11T21:00:39.245Z"
-github_stars: 26009
+github_stars: 26054
 tags: 
   - component-library
 ---

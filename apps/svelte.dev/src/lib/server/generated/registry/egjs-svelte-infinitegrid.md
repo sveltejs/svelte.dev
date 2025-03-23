@@ -7,7 +7,7 @@ homepage: "https://github.com/naver/egjs-infinitegrid"
 downloads: 60
 dependents: 1
 updated: "2024-07-02T11:40:50.068Z"
-github_stars: 2271
+github_stars: 2272
 tags: 
   - ui
 ---

@@ -7,7 +7,7 @@ homepage: "https://github.com/ItalyPaleAle/svelte-spa-router#readme"
 downloads: 14760
 dependents: 43
 updated: "2024-01-09T01:09:06.033Z"
-github_stars: 1564
+github_stars: 1566
 tags: 
   - router
 ---

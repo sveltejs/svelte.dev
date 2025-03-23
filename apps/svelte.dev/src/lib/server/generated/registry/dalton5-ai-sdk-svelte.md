@@ -6,7 +6,7 @@ author: "dalton5"
 homepage: "https://sdk.vercel.ai/docs"
 downloads: 129
 updated: "2025-03-03T02:24:43.834Z"
-github_stars: 12673
+github_stars: 12833
 tags: 
   - ui
   - integration

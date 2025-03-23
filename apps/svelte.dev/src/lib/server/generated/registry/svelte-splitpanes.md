@@ -7,7 +7,7 @@ homepage: "https://orefalo.github.io/svelte-splitpanes/"
 downloads: 4099
 dependents: 3
 updated: "2024-10-30T17:39:46.960Z"
-github_stars: 417
+github_stars: 418
 tags: 
   - ui
 ---

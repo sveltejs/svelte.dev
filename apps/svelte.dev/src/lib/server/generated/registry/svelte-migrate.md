@@ -6,7 +6,7 @@ author: "svelte-admin"
 homepage: "https://svelte.dev"
 downloads: 617
 updated: "2025-01-31T14:57:55.681Z"
-github_stars: 329
+github_stars: 332
 tags: 
   - tooling
 ---

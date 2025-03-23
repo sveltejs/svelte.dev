@@ -6,7 +6,7 @@ author: "Serwist"
 homepage: "https://serwist.pages.dev"
 downloads: 14
 updated: "2025-02-22T22:38:42.796Z"
-github_stars: 896
+github_stars: 903
 tags: 
   - utility
   - performance

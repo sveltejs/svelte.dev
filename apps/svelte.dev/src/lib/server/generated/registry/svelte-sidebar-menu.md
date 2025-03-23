@@ -6,7 +6,7 @@ author: "Shinichi Okada"
 homepage: "https://svelte-sidebar.vercel.app/"
 downloads: 28
 updated: "2022-10-07T01:56:39.177Z"
-github_stars: 39
+github_stars: 40
 tags: 
   - ui
 ---

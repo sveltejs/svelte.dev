@@ -6,7 +6,7 @@ author: "Clifford njoroge"
 homepage: "https://github.com/cliffordkleinsr/shadcn-svelte-chat#readme"
 downloads: 47
 updated: "2025-02-25T06:54:55.032Z"
-github_stars: 3
+github_stars: 4
 tags: 
   - tooling
 ---

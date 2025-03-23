@@ -6,7 +6,7 @@ author: "micha-lmxt"
 homepage: "https://github.com/micha-lmxt/svelte-window#readme"
 downloads: 161
 updated: "2022-09-27T07:25:49.318Z"
-github_stars: 59
+github_stars: 60
 tags: 
   - ui
   - performance

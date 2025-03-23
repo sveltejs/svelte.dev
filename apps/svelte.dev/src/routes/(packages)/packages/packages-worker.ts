@@ -14,9 +14,10 @@ addEventListener('message', async (event) => {
 		let { query, page = 1, tags = [] } = payload;
 
 		const current_results = search(query, { tags });
+
 		const total_pages = Math.ceil(current_results.length / REGISTRY_PAGE_LIMIT);
 
-		if (page > total_pages) {
+		if (page > total_pages && total_pages !== 0) {
 			page = 1;
 
 			console.log('Redirecting to page 0');
@@ -30,12 +31,19 @@ addEventListener('message', async (event) => {
 			return;
 		}
 
+		console.log({
+			current_results,
+			page,
+			range: [(page - 1) * REGISTRY_PAGE_LIMIT, page * REGISTRY_PAGE_LIMIT],
+			sliced: current_results.slice((page - 1) * REGISTRY_PAGE_LIMIT, page * REGISTRY_PAGE_LIMIT)
+		});
+
 		postMessage({
 			type: 'results',
 			payload: {
 				results: current_results.slice(
 					(page - 1) * REGISTRY_PAGE_LIMIT,
-					(page - 1) * REGISTRY_PAGE_LIMIT + REGISTRY_PAGE_LIMIT
+					page * REGISTRY_PAGE_LIMIT
 				),
 				total_pages,
 				query

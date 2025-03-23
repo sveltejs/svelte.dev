@@ -6,7 +6,7 @@ author: "Konstantin Tarmyshov"
 homepage: "https://github.com/ktarmyshov/svelte5kit-localization"
 downloads: 376
 updated: "2025-03-14T22:30:32.688Z"
-github_stars: 2
+github_stars: 3
 tags: 
   - utility
 ---

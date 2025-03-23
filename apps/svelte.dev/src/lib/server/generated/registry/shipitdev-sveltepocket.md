@@ -6,7 +6,7 @@ author: "shipitdev"
 homepage: "https://github.com/brennerm/sveltepocket#readme"
 downloads: 91
 updated: "2025-03-10T19:46:28.513Z"
-github_stars: 12
+github_stars: 13
 tags: 
   - integration
   - utility

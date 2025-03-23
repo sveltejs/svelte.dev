@@ -5,7 +5,7 @@ repo_url: "https://github.com/probablykasper/date-picker-svelte"
 author: "Kasper Henningsen"
 homepage: "https://date-picker-svelte.kasper.space"
 updated: "2023-01-19T00:26:26.002Z"
-github_stars: 328
+github_stars: 330
 tags: 
   - ui
 ---

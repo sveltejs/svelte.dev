@@ -6,7 +6,7 @@ author: "Thomas G. Lopes"
 homepage: "https://next.melt-ui.com/"
 downloads: 1217
 updated: "2025-03-14T13:31:04.565Z"
-github_stars: 121
+github_stars: 127
 tags: 
   - component-library
   - ui

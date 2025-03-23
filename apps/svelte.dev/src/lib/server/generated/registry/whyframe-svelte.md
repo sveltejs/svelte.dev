@@ -6,7 +6,7 @@ author: "Bjorn Lu"
 homepage: "https://whyframe.dev"
 downloads: 1771
 updated: "2024-04-01T06:25:26.408Z"
-github_stars: 563
+github_stars: 564
 tags: 
   - tooling
 ---

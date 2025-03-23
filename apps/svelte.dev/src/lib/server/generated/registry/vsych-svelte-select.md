@@ -6,7 +6,7 @@ author: "rob-balfre"
 homepage: "https://github.com/rob-balfre/svelte-select#readme"
 downloads: 35
 updated: "2019-12-06T12:27:40.598Z"
-github_stars: 1310
+github_stars: 1314
 tags: 
   - ui
 ---

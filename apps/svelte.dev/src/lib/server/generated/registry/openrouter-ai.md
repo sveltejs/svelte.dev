@@ -6,7 +6,7 @@ author: "ozgurozkan123"
 homepage: "https://github.com/vercel-labs/ai#readme"
 downloads: 5
 updated: "2023-07-24T03:35:13.231Z"
-github_stars: 12673
+github_stars: 12834
 tags: 
   - utility
   - server

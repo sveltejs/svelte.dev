@@ -7,7 +7,7 @@ homepage: "https://github.com/statelyai/xstate/tree/main/packages/xstate-svelte#
 downloads: 5196
 dependents: 8
 updated: "2025-01-12T18:44:57.794Z"
-github_stars: 27928
+github_stars: 27975
 tags: 
   - utility
 ---

@@ -6,7 +6,7 @@ author: "James Birtles"
 homepage: "https://github.com/sveltejs/prettier-plugin-svelte#readme"
 downloads: 1
 updated: "2020-09-08T19:43:52.806Z"
-github_stars: 764
+github_stars: 762
 tags: 
   - tooling
   - preprocessor

@@ -6,7 +6,7 @@ author: "Shinichi Okada"
 homepage: "https://svelte-heros-v2.codewithshin.com/"
 downloads: 2312
 updated: "2024-10-25T14:39:08.466Z"
-github_stars: 46
+github_stars: 47
 tags: 
   - ui
 ---

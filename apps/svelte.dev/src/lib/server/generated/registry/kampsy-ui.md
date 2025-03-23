@@ -6,7 +6,7 @@ author: "Kampamba Chanda"
 homepage: "https://ui.kampsy.xyz"
 downloads: 51
 updated: "2025-01-23T21:22:41.406Z"
-github_stars: 158
+github_stars: 166
 tags: 
   - component-library
   - ui

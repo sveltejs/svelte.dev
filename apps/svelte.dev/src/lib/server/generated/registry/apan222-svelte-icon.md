@@ -1,0 +1,11 @@
+---
+name: "@apan222/svelte-icon"
+description: "Render SVG icons in Svelte components with customizable properties."
+repo_url: "https://github.com/02rasjac/svelte-icon-ts"
+author: "Rasmus Jacklin"
+homepage: "https://github.com/02rasjac/svelte-icon-ts#readme"
+downloads: 10
+updated: "2023-08-16T12:36:42.741Z"
+tags: 
+  - ui
+---

@@ -6,7 +6,7 @@ author: "Svelte Vietnam"
 homepage: "https://www.sveltevietnam.dev"
 downloads: 10
 updated: "2024-06-03T11:50:26.858Z"
-github_stars: 34
+github_stars: 35
 tags: 
   - component-library
   - ui

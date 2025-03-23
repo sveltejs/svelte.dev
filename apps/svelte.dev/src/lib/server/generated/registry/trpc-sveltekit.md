@@ -7,7 +7,7 @@ homepage: "https://icflorescu.github.io/trpc-sveltekit/"
 downloads: 4639
 dependents: 4
 updated: "2025-03-06T12:52:54.703Z"
-github_stars: 806
+github_stars: 809
 tags: 
   - server
   - integration

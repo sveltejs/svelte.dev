@@ -6,7 +6,7 @@ author: "Hank Dollman"
 homepage: "https://trap-focus-svelte.henrygd.me"
 downloads: 586
 updated: "2024-05-10T22:23:53.626Z"
-github_stars: 6
+github_stars: 8
 tags: 
   - utility
 ---

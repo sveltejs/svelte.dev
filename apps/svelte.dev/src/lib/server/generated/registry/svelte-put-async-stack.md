@@ -6,7 +6,7 @@ author: "Quang Phan"
 homepage: "https://svelte-put.vnphanquang.com/docs/async-stack"
 downloads: 13
 updated: "2024-10-25T05:17:14.841Z"
-github_stars: 900
+github_stars: 906
 tags: 
   - utility
 ---

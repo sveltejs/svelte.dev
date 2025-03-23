@@ -6,7 +6,7 @@ author: "Alexander Kozlovich"
 homepage: "https://github.com/xelaok/svelte-mobx#readme"
 downloads: 13
 updated: "2020-12-29T02:31:16.447Z"
-github_stars: 48
+github_stars: 49
 tags: 
   - utility
 ---
