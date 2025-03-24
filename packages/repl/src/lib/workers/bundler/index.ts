@@ -140,7 +140,7 @@ self.addEventListener('message', async (event: MessageEvent<BundleMessageData>) 
 
 let cached: Record<
 	'client' | 'server',
-	Map<string, { code: string; result: ReturnType<typeof svelte.compile> }>
+	Map<string, { code: string; result: ReturnType<typeof svelte.compile>; templatingMode: string }>
 > = {
 	client: new Map(),
 	server: new Map()
@@ -419,14 +419,20 @@ async function get_bundle(
 			const cached_id = cache.get(id);
 			let result: CompileResult;
 
-			if (cached_id && cached_id.code === code) {
+			if (
+				cached_id &&
+				cached_id.code === code &&
+				cached_id.templatingMode === (options as any).templatingMode
+			) {
 				result = cached_id.result;
 			} else if (id.endsWith('.svelte')) {
 				const compilerOptions: any = {
 					...options,
 					filename: name + '.svelte',
 					generate: Number(svelte.VERSION.split('.')[0]) >= 5 ? 'client' : 'dom',
-					dev: true
+					dev: true,
+					// @ts-expect-error
+					templatingMode: options.templatingMode
 				};
 
 				if (can_use_experimental_async) {
@@ -482,7 +488,7 @@ async function get_bundle(
 				return null;
 			}
 
-			new_cache.set(id, { code, result });
+			new_cache.set(id, { code, result, templatingMode: (options as any).templatingMode });
 
 			// @ts-expect-error
 			(result.warnings || result.stats?.warnings)?.forEach((warning) => {

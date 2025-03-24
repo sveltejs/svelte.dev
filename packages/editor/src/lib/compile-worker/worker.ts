@@ -116,7 +116,8 @@ addEventListener('message', async (event) => {
 						: 'ssr'
 					: options.generate,
 				dev: options.dev,
-				filename: file.name
+				filename: file.name,
+				templatingMode: options.templatingMode
 			};
 
 			if (!is_svelte_3_or_4) {
