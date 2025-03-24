@@ -1,4 +1,6 @@
 import '@sveltejs/site-kit/polyfills';
+import * as tailwindcss from 'tailwindcss';
+import { walk } from 'zimmerframe';
 import '../patch_window';
 import { sleep } from '../../utils';
 import { rollup } from '@rollup/browser';
@@ -17,8 +19,19 @@ import type { BundleMessageData } from '../workers';
 import type { Warning } from '../../types';
 import type { CompileError, CompileOptions, CompileResult } from 'svelte/compiler';
 import type { File } from 'editor';
+import type { Node } from 'estree';
 import { parseTar, type FileDescription } from 'tarparser';
 import { max } from './semver';
+
+import tailwind_preflight from 'tailwindcss/preflight.css?raw';
+import tailwind_theme from 'tailwindcss/theme.css?raw';
+import tailwind_utilities from 'tailwindcss/utilities.css?raw';
+
+const tailwind_files = {
+	'tailwindcss/theme.css': tailwind_theme,
+	'tailwindcss/preflight.css': tailwind_preflight,
+	'tailwindcss/utilities.css': tailwind_utilities
+};
 
 // hack for magic-string and rollup inline sourcemaps
 // do not put this into a separate module and import it, would be treeshaken in prod
@@ -32,6 +45,17 @@ let current_id: number;
 let inited = Promise.withResolvers<typeof svelte>();
 
 let can_use_experimental_async = false;
+
+const base = `@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css" layer(utilities);`;
+
+const tailwind = await tailwindcss.compile(base, {
+	loadStylesheet: async (id, base) => {
+		return { content: tailwind_files[id], base };
+	}
+});
 
 async function init(v: string, packages_url: string) {
 	const match = /^(pr|commit|branch)-(.+)/.exec(v);
@@ -267,6 +291,29 @@ async function get_bundle(
 	const all_warnings: Array<{ message: string }> = [];
 	const new_cache: typeof cache = new Map();
 
+	const tailwind_candidates = [];
+
+	function add_tailwind_candidates(ast: Node | undefined) {
+		if (!ast) return;
+
+		walk(ast, null, {
+			ImportDeclaration() {
+				// don't descend into these nodes, so that we don't
+				// pick up import sources
+			},
+			Literal(node) {
+				if (typeof node.value === 'string' && node.value) {
+					tailwind_candidates.push(...node.value.split(' '));
+				}
+			},
+			TemplateElement(node) {
+				if (node.value.raw) {
+					tailwind_candidates.push(...node.value.raw.split(' '));
+				}
+			}
+		});
+	}
+
 	const repl_plugin: Plugin = {
 		name: 'svelte-repl',
 		async resolveId(importee, importer) {
@@ -434,6 +481,21 @@ async function get_bundle(
 
 				result = svelte.compile(code, compilerOptions);
 
+				walk(result.ast.html as import('svelte/compiler').AST.TemplateNode, null, {
+					Attribute(node) {
+						if (Array.isArray(node.value)) {
+							for (const chunk of node.value) {
+								if (chunk.type === 'Text') {
+									tailwind_candidates.push(...chunk.data.split(' '));
+								}
+							}
+						}
+					}
+				});
+
+				add_tailwind_candidates(result.ast.module);
+				add_tailwind_candidates(result.ast.instance);
+
 				if (result.css?.code) {
 					// resolve local files by inlining them
 					result.css.code = result.css.code.replace(
@@ -516,7 +578,21 @@ async function get_bundle(
 				loop_protect,
 				replace({
 					'process.env.NODE_ENV': JSON.stringify('production')
-				})
+				}),
+				{
+					name: 'tailwind-extract',
+					transform(code, id) {
+						// TODO tidy this up
+						if (id.startsWith(svelte_url)) return;
+						if (id.endsWith('.svelte')) return;
+						if (id === './__entry.js') return;
+						if (id === 'esm-env') return;
+						if (id === shared_file) return;
+						if (id.startsWith('https://unpkg.com/clsx@')) return;
+
+						add_tailwind_candidates(this.parse(code));
+					}
+				}
 			],
 			onwarn(warning) {
 				all_warnings.push({
@@ -527,6 +603,7 @@ async function get_bundle(
 
 		return {
 			bundle,
+			tailwind: tailwind.build(tailwind_candidates),
 			imports: Array.from(imports),
 			cache: new_cache,
 			error: null,
@@ -656,6 +733,7 @@ async function bundle({
 			uid,
 			client: client_result,
 			server: server_result,
+			tailwind: client.tailwind,
 			imports: client.imports,
 			// Svelte 5 returns warnings as error objects with a toJSON method, prior versions return a POJO
 			warnings: client.warnings.map((w: any) => w.toJSON?.() ?? w),

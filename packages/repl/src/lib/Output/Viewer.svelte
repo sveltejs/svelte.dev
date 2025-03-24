@@ -107,7 +107,8 @@
 			clear_logs();
 
 			if (!$bundle.error) {
-				await proxy?.eval(`
+				await proxy?.eval(
+					`
 					${injectedJS}
 
 					if (!window.__setup_focus_handling) {
@@ -183,7 +184,9 @@
 						}
 					}
 					//# sourceURL=playground:output
-				`);
+				`,
+					$bundle?.tailwind
+				);
 				error = null;
 			}
 		} catch (e) {
