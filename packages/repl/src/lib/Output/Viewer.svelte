@@ -8,6 +8,7 @@
 	import Console, { type Log } from './console/Console.svelte';
 	import getLocationFromStack from './get-location-from-stack';
 	import srcdoc from './srcdoc/index.html?raw';
+	import srcdoc_styles from './srcdoc/styles.css?raw';
 	import ErrorOverlay from './ErrorOverlay.svelte';
 	import type { CompileError } from 'svelte/compiler';
 	import type { Bundle } from '../types';
@@ -185,7 +186,7 @@
 					}
 					//# sourceURL=playground:output
 				`,
-					$bundle?.tailwind
+					$bundle?.tailwind ?? srcdoc_styles
 				);
 				error = null;
 			}

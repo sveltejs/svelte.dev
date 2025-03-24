@@ -14,24 +14,14 @@ import image from './plugins/image';
 import svg from './plugins/svg';
 import replace from './plugins/replace';
 import loop_protect from './plugins/loop-protect';
-import type { Plugin, TransformResult } from '@rollup/browser';
-import type { BundleMessageData } from '../workers';
+import type { Plugin, RollupCache, TransformResult } from '@rollup/browser';
+import type { BundleMessageData, BundleOptions } from '../workers';
 import type { Warning } from '../../types';
-import type { CompileError, CompileOptions, CompileResult } from 'svelte/compiler';
+import type { CompileError, CompileResult } from 'svelte/compiler';
 import type { File } from 'editor';
 import type { Node } from 'estree';
 import { parseTar, type FileDescription } from 'tarparser';
 import { max } from './semver';
-
-import tailwind_preflight from 'tailwindcss/preflight.css?raw';
-import tailwind_theme from 'tailwindcss/theme.css?raw';
-import tailwind_utilities from 'tailwindcss/utilities.css?raw';
-
-const tailwind_files = {
-	'tailwindcss/theme.css': tailwind_theme,
-	'tailwindcss/preflight.css': tailwind_preflight,
-	'tailwindcss/utilities.css': tailwind_utilities
-};
 
 // hack for magic-string and rollup inline sourcemaps
 // do not put this into a separate module and import it, would be treeshaken in prod
@@ -45,17 +35,6 @@ let current_id: number;
 let inited = Promise.withResolvers<typeof svelte>();
 
 let can_use_experimental_async = false;
-
-const base = `@layer theme, base, components, utilities;
-@import "tailwindcss/theme.css" layer(theme);
-@import "tailwindcss/preflight.css" layer(base);
-@import "tailwindcss/utilities.css" layer(utilities);`;
-
-const tailwind = await tailwindcss.compile(base, {
-	loadStylesheet: async (id, base) => {
-		return { content: tailwind_files[id], base };
-	}
-});
 
 async function init(v: string, packages_url: string) {
 	const match = /^(pr|commit|branch)-(.+)/.exec(v);
@@ -276,12 +255,44 @@ async function resolve_from_pkg(
 
 const versions = Object.create(null);
 
+let previous: {
+	key: string;
+	cache: RollupCache;
+};
+
+let tailwind: Awaited<ReturnType<typeof init_tailwind>>;
+
+async function init_tailwind() {
+	const { default: tailwind_preflight } = await import('tailwindcss/preflight.css?raw');
+	const { default: tailwind_theme } = await import('tailwindcss/theme.css?raw');
+	const { default: tailwind_utilities } = await import('tailwindcss/utilities.css?raw');
+
+	const tailwind_files = {
+		'tailwindcss/theme.css': tailwind_theme,
+		'tailwindcss/preflight.css': tailwind_preflight,
+		'tailwindcss/utilities.css': tailwind_utilities
+	};
+
+	const tailwind_base = [
+		`@layer theme, base, components, utilities;`,
+		`@import "tailwindcss/theme.css" layer(theme);`,
+		`@import "tailwindcss/preflight.css" layer(base);`,
+		`@import "tailwindcss/utilities.css" layer(utilities);`
+	].join('\n');
+
+	return await tailwindcss.compile(tailwind_base, {
+		loadStylesheet: async (id, base) => {
+			return { content: tailwind_files[id], base };
+		}
+	});
+}
+
 async function get_bundle(
 	uid: number,
 	mode: 'client' | 'server',
 	cache: (typeof cached)['client'],
 	local_files_lookup: Map<string, File>,
-	options: CompileOptions
+	options: BundleOptions
 ) {
 	let bundle;
 
@@ -469,7 +480,6 @@ async function get_bundle(
 				result = cached_id.result;
 			} else if (id.endsWith('.svelte')) {
 				const compilerOptions: any = {
-					...options,
 					filename: name + '.svelte',
 					generate: Number(svelte.VERSION.split('.')[0]) >= 5 ? 'client' : 'dom',
 					dev: true
@@ -543,7 +553,8 @@ async function get_bundle(
 				return null;
 			}
 
-			new_cache.set(id, { code, result });
+			// disabled because otherwise we don't recompile when options.tailwind changes
+			// new_cache.set(id, { code, result });
 
 			// @ts-expect-error
 			(result.warnings || result.stats?.warnings)?.forEach((warning) => {
@@ -565,8 +576,11 @@ async function get_bundle(
 	};
 
 	try {
+		const key = JSON.stringify(options);
+
 		bundle = await rollup({
 			input: './__entry.js',
+			cache: previous?.key === key && previous.cache,
 			plugins: [
 				repl_plugin,
 				commonjs,
@@ -579,7 +593,7 @@ async function get_bundle(
 				replace({
 					'process.env.NODE_ENV': JSON.stringify('production')
 				}),
-				{
+				options.tailwind && {
 					name: 'tailwind-extract',
 					transform(code, id) {
 						// TODO tidy this up
@@ -601,9 +615,13 @@ async function get_bundle(
 			}
 		});
 
+		previous = { key, cache: bundle.cache };
+
 		return {
 			bundle,
-			tailwind: tailwind.build(tailwind_candidates),
+			tailwind: options.tailwind
+				? (tailwind ?? (await init_tailwind())).build(tailwind_candidates)
+				: undefined,
 			imports: Array.from(imports),
 			cache: new_cache,
 			error: null,
@@ -626,7 +644,7 @@ async function bundle({
 }: {
 	uid: number;
 	files: File[];
-	options: CompileOptions;
+	options: BundleOptions;
 }) {
 	if (!DEV) {
 		console.clear();

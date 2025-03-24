@@ -95,7 +95,9 @@
 
 	async function rebundle() {
 		const token = (current_token = Symbol());
-		const result = await bundler!.bundle(workspace.files as File[]);
+		const result = await bundler!.bundle(workspace.files as File[], {
+			tailwind: workspace.tailwind
+		});
 		if (token === current_token) $bundle = result as Bundle;
 	}
 
