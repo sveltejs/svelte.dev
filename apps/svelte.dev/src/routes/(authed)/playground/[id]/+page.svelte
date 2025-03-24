@@ -72,7 +72,8 @@
 		if (!hash && !saved) {
 			repl?.set({
 				// TODO make this munging unnecessary (using JSON instead of structuredClone for better browser compat)
-				files: JSON.parse(JSON.stringify(data.gist.components)).map(munge)
+				files: JSON.parse(JSON.stringify(data.gist.components)).map(munge),
+				tailwind: false // TODO
 			});
 
 			modified = false;
@@ -92,7 +93,7 @@
 				name = recovered.name;
 			}
 
-			repl.set({ files });
+			repl.set({ files, tailwind: recovered.tailwind ?? false });
 		} catch {
 			alert(`Couldn't load the code from the URL. Make sure you copied the link correctly.`);
 		}
@@ -155,7 +156,8 @@
 	async function update_hash() {
 		// Only change hash when necessary to avoid polluting everyone's browser history
 		if (modified) {
-			const json = JSON.stringify({ name, files: repl.toJSON().files });
+			const { files, tailwind } = repl.toJSON();
+			const json = JSON.stringify({ name, files, tailwind });
 			await set_hash(json);
 		}
 	}
@@ -210,7 +212,8 @@
 		if (modified) {
 			// we can't save to the hash because it's an async operation, so we use
 			// a short-lived sessionStorage value instead
-			const json = JSON.stringify({ name, files: repl.toJSON().files });
+			const { files, tailwind } = repl.toJSON();
+			const json = JSON.stringify({ name, files, tailwind });
 			sessionStorage.setItem(STORAGE_KEY, json);
 		}
 	}}

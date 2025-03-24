@@ -393,11 +393,13 @@ export class Workspace {
 		this.#onreset?.(this.#files);
 	}
 
-	reset(new_files: Item[], selected?: string) {
+	reset(new_files: Item[], options: { tailwind: boolean }, selected?: string) {
 		this.states.clear();
 		this.set(new_files, selected);
 
 		this.mark_saved();
+
+		this.#tailwind = options.tailwind;
 
 		this.#onreset(new_files);
 		this.#reset_diagnostics();

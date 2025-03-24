@@ -67,13 +67,14 @@
 	export function toJSON() {
 		return {
 			imports: $bundle?.imports ?? [],
-			files: workspace.files
+			files: workspace.files,
+			tailwind: workspace.tailwind
 		};
 	}
 
 	// TODO get rid
-	export async function set(data: { files: File[]; css?: string }) {
-		workspace.reset(data.files, 'App.svelte');
+	export async function set(data: { files: File[]; tailwind?: boolean }) {
+		workspace.reset(data.files, { tailwind: data.tailwind }, 'App.svelte');
 	}
 
 	// TODO get rid
