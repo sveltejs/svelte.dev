@@ -140,14 +140,6 @@ self.addEventListener('message', async (event: MessageEvent<BundleMessageData>) 
 	}
 });
 
-let cached: Record<
-	'client' | 'server',
-	Map<string, { code: string; result: ReturnType<typeof svelte.compile> }>
-> = {
-	client: new Map(),
-	server: new Map()
-};
-
 const ABORT = { aborted: true };
 
 const FETCH_CACHE: Map<string, Promise<{ url: string; body: string }>> = new Map();
@@ -290,7 +282,6 @@ async function init_tailwind() {
 async function get_bundle(
 	uid: number,
 	mode: 'client' | 'server',
-	cache: (typeof cached)['client'],
 	local_files_lookup: Map<string, File>,
 	options: BundleOptions
 ) {
@@ -300,7 +291,6 @@ async function get_bundle(
 	const imports: Set<string> = new Set();
 	const warnings: Warning[] = [];
 	const all_warnings: Array<{ message: string }> = [];
-	const new_cache: typeof cache = new Map();
 
 	const tailwind_candidates = [];
 
@@ -473,12 +463,9 @@ async function get_bundle(
 
 			const name = id.split('/').pop()?.split('.')[0];
 
-			const cached_id = cache.get(id);
 			let result: CompileResult;
 
-			if (cached_id && cached_id.code === code) {
-				result = cached_id.result;
-			} else if (id.endsWith('.svelte')) {
+			if (id.endsWith('.svelte')) {
 				const compilerOptions: any = {
 					filename: name + '.svelte',
 					generate: Number(svelte.VERSION.split('.')[0]) >= 5 ? 'client' : 'dom',
@@ -553,9 +540,6 @@ async function get_bundle(
 				return null;
 			}
 
-			// disabled because otherwise we don't recompile when options.tailwind changes
-			// new_cache.set(id, { code, result });
-
 			// @ts-expect-error
 			(result.warnings || result.stats?.warnings)?.forEach((warning) => {
 				// This is required, otherwise postMessage won't work
@@ -623,13 +607,12 @@ async function get_bundle(
 				? (tailwind ?? (await init_tailwind())).build(tailwind_candidates)
 				: undefined,
 			imports: Array.from(imports),
-			cache: new_cache,
 			error: null,
 			warnings,
 			all_warnings
 		};
 	} catch (error) {
-		return { error, imports: null, bundle: null, cache: new_cache, warnings, all_warnings };
+		return { error, imports: null, bundle: null, warnings, all_warnings };
 	}
 }
 
@@ -704,7 +687,6 @@ async function bundle({
 	let client: Awaited<ReturnType<typeof get_bundle>> = await get_bundle(
 		uid,
 		'client',
-		cached.client,
 		lookup,
 		options
 	);
@@ -713,8 +695,6 @@ async function bundle({
 		if (client.error) {
 			throw client.error;
 		}
-
-		cached.client = client.cache;
 
 		const client_result = (
 			await client.bundle?.generate({
@@ -726,14 +706,11 @@ async function bundle({
 		)?.output[0];
 
 		const server = false // TODO how can we do SSR?
-			? await get_bundle(uid, 'server', cached.server, lookup, options)
+			? await get_bundle(uid, 'server', lookup, options)
 			: null;
 
-		if (server) {
-			cached.server = server.cache;
-			if (server.error) {
-				throw server.error;
-			}
+		if (server?.error) {
+			throw server.error;
 		}
 
 		const server_result = server
