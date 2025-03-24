@@ -94,6 +94,7 @@ export interface ExposedCompilerOptions {
 	generate: 'client' | 'server';
 	dev: boolean;
 	modernAst: boolean;
+	templatingMode: 'string' | 'functional';
 }
 
 export class Workspace {
@@ -104,7 +105,8 @@ export class Workspace {
 	#compiler_options = $state.raw<ExposedCompilerOptions>({
 		generate: 'client',
 		dev: false,
-		modernAst: true
+		modernAst: true,
+		templatingMode: 'string'
 	});
 	compiled = $state<Record<string, Compiled>>({});
 
@@ -453,6 +455,11 @@ export class Workspace {
 	update_compiler_options(options: Partial<ExposedCompilerOptions>) {
 		this.#compiler_options = { ...this.#compiler_options, ...options };
 		this.#reset_diagnostics();
+		for (let file of this.#files) {
+			if (is_file(file)) {
+				this.#onupdate(file);
+			}
+		}
 	}
 
 	update_file(file: File) {

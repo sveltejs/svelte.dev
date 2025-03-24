@@ -101,6 +101,7 @@
 	$: if (ready) proxy?.iframe_command('set_theme', { theme });
 
 	async function apply_bundle($bundle: Bundle | null | undefined) {
+		console.log({ $bundle });
 		if (!$bundle) return;
 
 		try {

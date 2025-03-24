@@ -24,6 +24,23 @@
 		{/each},
 	</div>
 
+	<div class="option">
+		<span class="key">templatingMode:</span>
+
+		{#each ['string', 'functional'] as const as templating_mode}
+			<input
+				id={templating_mode}
+				type="radio"
+				checked={workspace.compiler_options.templatingMode === templating_mode}
+				value={templating_mode}
+				onchange={() => {
+					workspace.update_compiler_options({ templatingMode: templating_mode });
+				}}
+			/>
+			<label for={templating_mode}><span class="string">"{templating_mode}"</span></label>
+		{/each},
+	</div>
+
 	<!-- svelte-ignore a11y_label_has_associated_control (TODO this warning should probably be disabled if there's a component)-->
 	<label class="option">
 		<span class="key">dev:</span>
@@ -55,7 +72,7 @@
 
 	.key {
 		display: inline-block;
-		width: 6em;
+		width: 10em;
 	}
 
 	.string {
