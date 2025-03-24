@@ -23,6 +23,10 @@ import type { Node } from 'estree';
 import { parseTar, type FileDescription } from 'tarparser';
 import { max } from './semver';
 
+import tailwind_preflight from 'tailwindcss/preflight.css?raw';
+import tailwind_theme from 'tailwindcss/theme.css?raw';
+import tailwind_utilities from 'tailwindcss/utilities.css?raw';
+
 // hack for magic-string and rollup inline sourcemaps
 // do not put this into a separate module and import it, would be treeshaken in prod
 self.window = self;
@@ -255,10 +259,6 @@ let previous: {
 let tailwind: Awaited<ReturnType<typeof init_tailwind>>;
 
 async function init_tailwind() {
-	const { default: tailwind_preflight } = await import('tailwindcss/preflight.css?raw');
-	const { default: tailwind_theme } = await import('tailwindcss/theme.css?raw');
-	const { default: tailwind_utilities } = await import('tailwindcss/utilities.css?raw');
-
 	const tailwind_files = {
 		'tailwindcss/theme.css': tailwind_theme,
 		'tailwindcss/preflight.css': tailwind_preflight,
