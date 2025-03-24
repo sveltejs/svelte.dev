@@ -473,7 +473,7 @@ export class Workspace {
 
 	set tailwind(value) {
 		this.#tailwind = value;
-		this.#onreset(this.#files);
+		this.#onupdate(this.#current);
 	}
 
 	get vim() {
