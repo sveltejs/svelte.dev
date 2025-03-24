@@ -13,7 +13,7 @@
 	interface Props {
 		packagesUrl?: string;
 		svelteVersion?: string;
-		embedded?: boolean;
+		embedded?: boolean | 'output-only';
 		orientation?: 'columns' | 'rows';
 		relaxed?: boolean;
 		can_escape?: boolean;
@@ -152,7 +152,7 @@
 	let mobile = $derived(width < 540);
 
 	$effect(() => {
-		$toggleable = mobile && orientation === 'columns';
+		$toggleable = mobile && orientation === 'columns' && embedded !== 'output-only';
 	});
 
 	let runes = $derived(
@@ -166,13 +166,24 @@
 
 <svelte:window onbeforeunload={before_unload} />
 
-<div class="container" class:embedded class:toggleable={$toggleable} bind:clientWidth={width}>
+<div
+	class="container {embedded === 'output-only' ? '' : 'container-normal'}"
+	class:embedded
+	class:toggleable={$toggleable}
+	bind:clientWidth={width}
+>
 	<div class="viewport" class:output={show_output}>
 		<SplitPane
 			id="main"
 			type={orientation === 'rows' ? 'vertical' : 'horizontal'}
-			pos="{mobile || fixed ? fixedPos : orientation === 'rows' ? 60 : 50}%"
-			min="100px"
+			pos="{embedded === 'output-only'
+				? 0
+				: mobile || fixed
+					? fixedPos
+					: orientation === 'rows'
+						? 60
+						: 50}%"
+			min={embedded === 'output-only' ? '0px' : '100px'}
 			max="-4.1rem"
 		>
 			{#snippet a()}
@@ -264,7 +275,7 @@
 
 	/* on mobile, override the <SplitPane> controls */
 	@media (max-width: 799px) {
-		:global {
+		.container-normal :global {
 			[data-pane='main'] {
 				--pos: 50% !important;
 			}
