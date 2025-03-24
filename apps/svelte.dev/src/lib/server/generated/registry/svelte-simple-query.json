@@ -1,0 +1,16 @@
+{
+  "name": "svelte-simple-query",
+  "description": "Fetch data with a simple, lightweight query library for Svelte 5.",
+  "repo_url": "https://github.com/harryhdt/svelte-simple-query",
+  "author": "harryhdt",
+  "homepage": "https://svelte-simple-query.harryhdt.dev",
+  "downloads": 82,
+  "dependents": 0,
+  "updated": "2025-03-16T07:58:40.326Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 0
+}

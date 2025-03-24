@@ -1,0 +1,16 @@
+{
+  "name": "@anoram/taucharts-svelte",
+  "description": "Provide Svelte wrapper for Taucharts.",
+  "repo_url": "https://github.com/anoram/taucharts-svelte",
+  "author": "Shriji Kondan",
+  "homepage": "https://github.com/anoram/taucharts-svelte#readme",
+  "downloads": 10,
+  "dependents": 0,
+  "updated": "2021-02-06T18:32:12.598Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

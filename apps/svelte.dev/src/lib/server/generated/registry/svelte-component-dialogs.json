@@ -1,0 +1,17 @@
+{
+  "name": "svelte-component-dialogs",
+  "description": "Manage dialogs, opening Svelte components as HTML5 dialogs.",
+  "repo_url": "https://github.com/antal-krisztian/svelte-component-dialogs",
+  "author": "Antal Krisztián-Tamás",
+  "homepage": "https://svelte-component-dialogs.vercel.app",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2023-02-12T12:42:35.287Z",
+  "tags": [
+    "ui",
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 1
+}

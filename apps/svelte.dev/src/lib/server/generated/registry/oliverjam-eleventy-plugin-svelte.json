@@ -1,0 +1,15 @@
+{
+  "name": "@oliverjam/eleventy-plugin-svelte",
+  "description": "Use Svelte components as Eleventy templates, with CSS and head extraction.",
+  "repo_url": "https://github.com/oliverjam/eleventy-plugin-svelte",
+  "author": "Oliver Phillips",
+  "homepage": "https://github.com/oliverjam/eleventy-plugin-svelte#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2020-08-15T18:34:33.677Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false
+}

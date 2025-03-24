@@ -1,0 +1,15 @@
+{
+  "name": "s4e-icons",
+  "description": "Provides SVG icon components for Svelte.",
+  "repo_url": "https://github.com/eswat2/s4e-icons",
+  "author": "eswat2",
+  "downloads": 4,
+  "dependents": 0,
+  "updated": "2024-10-21T14:36:08.959Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 1
+}

@@ -1,0 +1,16 @@
+{
+  "name": "svelte-moveable",
+  "description": "Create draggable, resizable, scalable, and rotatable elements in Svelte.",
+  "repo_url": "https://github.com/daybrush/moveable",
+  "author": "Daybrush",
+  "homepage": "https://daybrush.com/moveable",
+  "downloads": 1110,
+  "dependents": 9,
+  "updated": "2023-12-03T13:48:06.920Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 10295
+}

@@ -1,0 +1,17 @@
+{
+  "name": "sveltetube",
+  "description": "Embed YouTube videos within Svelte components.",
+  "repo_url": "https://github.com/bmehder/sveltetube",
+  "author": "bmehder",
+  "homepage": "https://github.com/bmehder/sveltetube#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2022-11-25T12:32:21.078Z",
+  "tags": [
+    "ui",
+    "media"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

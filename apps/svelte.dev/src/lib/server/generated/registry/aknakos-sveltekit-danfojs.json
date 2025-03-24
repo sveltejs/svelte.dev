@@ -1,0 +1,14 @@
+{
+  "name": "@aknakos/sveltekit-danfojs",
+  "description": "Integrate danfo.js with SvelteKit.",
+  "author": "aknakos",
+  "homepage": "https://github.com/aknakos/sveltekit-danfojs#readme",
+  "downloads": 6,
+  "dependents": 1,
+  "updated": "2022-09-06T17:52:12.554Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

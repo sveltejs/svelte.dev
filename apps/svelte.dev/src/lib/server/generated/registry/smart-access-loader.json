@@ -1,0 +1,13 @@
+{
+  "name": "@smart-access/loader",
+  "description": "Manage business logic for Smart Access dashboards.",
+  "author": "Kyle Jeske",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2019-12-10T15:15:28.025Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

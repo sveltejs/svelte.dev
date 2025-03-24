@@ -1,0 +1,16 @@
+{
+  "name": "@castlenine/svelte-canvas-confetti",
+  "description": "Add canvas-based confetti effects to Svelte apps.",
+  "repo_url": "https://github.com/castlenine/svelte-canvas-confetti",
+  "author": "Alexandre Castlenine",
+  "homepage": "https://github.com/castlenine/svelte-canvas-confetti",
+  "downloads": 38,
+  "dependents": 0,
+  "updated": "2024-05-06T15:57:41.692Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

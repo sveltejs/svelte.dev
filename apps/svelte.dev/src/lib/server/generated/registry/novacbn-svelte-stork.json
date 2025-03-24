@@ -1,0 +1,15 @@
+{
+  "name": "@novacbn/svelte-stork",
+  "description": "Provide Svelte stores and components for Stork search integration.",
+  "repo_url": "https://github.com/novacbn/svelte-stork",
+  "author": "novacbn",
+  "homepage": "https://github.com/novacbn/svelte-stork#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2021-08-09T08:30:59.154Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

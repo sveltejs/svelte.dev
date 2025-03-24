@@ -1,0 +1,13 @@
+{
+  "name": "@ovenwand/svelte-sidebar",
+  "description": "Create sidebar components for Svelte applications.",
+  "author": "Sibbe Heijne",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2021-03-20T17:28:20.305Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

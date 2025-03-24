@@ -1,0 +1,16 @@
+{
+  "name": "@codewithshin/svelte-auth",
+  "description": "Provides registration, login, and password reset components for SvelteKit.",
+  "repo_url": "https://github.com/shinokada/svelte-auth",
+  "author": "Shinichi Okada",
+  "homepage": "https://github.com/shinokada/svelte-auth",
+  "downloads": 11,
+  "dependents": 0,
+  "updated": "2022-03-15T23:14:50.203Z",
+  "tags": [
+    "auth"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 7
+}

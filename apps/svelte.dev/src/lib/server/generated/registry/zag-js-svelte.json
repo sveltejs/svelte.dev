@@ -1,0 +1,16 @@
+{
+  "name": "@zag-js/svelte",
+  "description": "Headless UI components for Svelte with accessibility.",
+  "repo_url": "https://github.com/chakra-ui/zag",
+  "author": "Segun Adebayo",
+  "homepage": "https://github.com/chakra-ui/zag#readme",
+  "downloads": 5662,
+  "dependents": 5,
+  "updated": "2025-03-20T18:18:01.609Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 4319
+}

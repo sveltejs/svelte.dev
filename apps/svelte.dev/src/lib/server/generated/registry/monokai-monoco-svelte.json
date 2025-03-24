@@ -1,0 +1,16 @@
+{
+  "name": "@monokai/monoco-svelte",
+  "description": "Apply custom corners and borders to Svelte components.",
+  "repo_url": "https://github.com/monokai/monoco-svelte",
+  "author": "Monokai",
+  "homepage": "https://github.com/monokai/monoco-svelte#readme",
+  "downloads": 60,
+  "dependents": 0,
+  "updated": "2025-01-14T15:23:01.093Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 31
+}

@@ -1,0 +1,16 @@
+{
+  "name": "@sawyerclick/svelte-select",
+  "description": "Create select/autocomplete/typeahead components for Svelte.",
+  "repo_url": "https://rob-balfre@github.com/rob-balfre/svelte-select",
+  "author": "Robert Balfré",
+  "homepage": "https://github.com/rob-balfre/svelte-select#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2023-04-21T16:00:55.515Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 1313
+}

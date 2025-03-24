@@ -1,0 +1,13 @@
+{
+  "name": "@ikun-ui/countdown",
+  "description": "Display countdown timers in Svelte applications.",
+  "author": "baiwusanyu",
+  "downloads": 13,
+  "dependents": 1,
+  "updated": "2025-01-24T03:48:47.272Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

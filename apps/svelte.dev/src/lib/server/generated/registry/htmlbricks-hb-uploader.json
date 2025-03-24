@@ -1,0 +1,14 @@
+{
+  "name": "@htmlbricks/hb-uploader",
+  "description": "Create file upload components for Svelte.",
+  "author": "Dario Caruso",
+  "downloads": 178,
+  "dependents": 0,
+  "updated": "2025-03-09T03:10:37.923Z",
+  "tags": [
+    "ui",
+    "media"
+  ],
+  "svelte5": false,
+  "runes": false
+}

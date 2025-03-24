@@ -1,0 +1,13 @@
+{
+  "name": "svelte-cache-store",
+  "description": "Cache API data in Svelte stores, compatible with Svelte 4.",
+  "author": "Joachim Haagen Skeie",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2024-10-12T12:16:04.512Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": true,
+  "runes": false
+}

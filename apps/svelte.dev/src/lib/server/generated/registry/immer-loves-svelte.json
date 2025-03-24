@@ -1,0 +1,16 @@
+{
+  "name": "immer-loves-svelte",
+  "description": "Create immutable Svelte stores using Immer.js.",
+  "repo_url": "https://github.com/bradphelan/immer.loves.svelte",
+  "author": "bradphelan",
+  "homepage": "https://github.com/bradphelan/immer.loves.svelte#readme",
+  "downloads": 37,
+  "dependents": 0,
+  "updated": "2022-11-14T09:58:56.200Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 56
+}

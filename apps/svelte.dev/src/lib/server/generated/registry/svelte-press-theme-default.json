@@ -1,0 +1,16 @@
+{
+  "name": "@svelte-press/theme-default",
+  "description": "Provide default theme for Sveltepress.",
+  "repo_url": "https://github.com/Blackman99/sveltepress",
+  "author": "Dongsheng Zhao",
+  "homepage": "https://sveltepress.site/",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2023-02-01T06:58:20.576Z",
+  "tags": [
+    "content"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 413
+}

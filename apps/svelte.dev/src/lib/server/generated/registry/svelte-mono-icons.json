@@ -1,0 +1,16 @@
+{
+  "name": "svelte-mono-icons",
+  "description": "Provide mono icons as Svelte components.",
+  "repo_url": "https://github.com/srmullen/svelte-mono-icons",
+  "author": "srmullen",
+  "homepage": "https://github.com/srmullen/svelte-mono-icons#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2021-04-09T17:39:58.260Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 17
+}

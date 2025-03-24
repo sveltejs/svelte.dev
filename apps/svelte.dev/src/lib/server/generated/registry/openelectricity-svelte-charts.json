@@ -1,0 +1,16 @@
+{
+  "name": "@openelectricity/svelte-charts",
+  "description": "Create reusable time series charts using Svelte and LayerCake.",
+  "repo_url": "https://github.com/opennem/svelte-charts",
+  "author": "Open Electricity",
+  "homepage": "https://github.com/opennem/svelte-charts#readme",
+  "downloads": 3,
+  "dependents": 0,
+  "updated": "2025-02-21T05:00:28.723Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 0
+}

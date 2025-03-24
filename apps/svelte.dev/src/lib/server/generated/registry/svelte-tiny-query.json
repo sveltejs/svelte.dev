@@ -1,0 +1,13 @@
+{
+  "name": "svelte-tiny-query",
+  "description": "Simplify data fetching with Svelte 5 reactive state.",
+  "author": "sra448",
+  "downloads": 43,
+  "dependents": 0,
+  "updated": "2025-03-23T12:42:25.117Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": true,
+  "runes": false
+}

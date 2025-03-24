@@ -1,0 +1,17 @@
+{
+  "name": "typescript-eslint-parser-for-extra-files",
+  "description": "Provides type information for Vue, Svelte, Astro files.",
+  "repo_url": "https://github.com/ota-meshi/typescript-eslint-parser-for-extra-files",
+  "author": "Yosuke Ota",
+  "homepage": "https://github.com/ota-meshi/typescript-eslint-parser-for-extra-files#readme",
+  "downloads": 4949,
+  "dependents": 3,
+  "updated": "2024-06-09T11:58:52.874Z",
+  "tags": [
+    "tooling",
+    "preprocessor"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 47
+}

@@ -1,0 +1,13 @@
+{
+  "name": "@coding-blocks/cb-components",
+  "description": "Provide reusable components for Coding Blocks platforms.",
+  "author": "bipinkalra",
+  "downloads": 5,
+  "dependents": 0,
+  "updated": "2019-08-11T06:15:13.628Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": false,
+  "runes": false
+}

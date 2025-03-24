@@ -1,0 +1,16 @@
+{
+  "name": "@adcaptcha/svelte",
+  "description": "Integrate adCAPTCHA for enhanced security in Svelte apps.",
+  "repo_url": "https://github.com/adcaptcha-org/adCAPTCHA-NPM-Packages",
+  "author": "adCAPTCHA",
+  "homepage": "https://docs.adcaptcha.com",
+  "downloads": 13,
+  "dependents": 0,
+  "updated": "2025-01-10T10:00:43.527Z",
+  "tags": [
+    "integration"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 0
+}

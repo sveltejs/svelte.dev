@@ -1,0 +1,16 @@
+{
+  "name": "@softmotions/carbon-components-svelte",
+  "description": "Implement Carbon Design System components in Svelte applications.",
+  "repo_url": "https://github.com/carbon-design-system/carbon-components-svelte",
+  "author": "adamansky",
+  "homepage": "https://github.com/carbon-design-system/carbon-components-svelte",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2022-10-16T15:18:07.891Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 2768
+}

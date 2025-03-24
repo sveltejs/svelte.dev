@@ -1,0 +1,16 @@
+{
+  "name": "svelte-translator",
+  "description": "Tools for combining Svelte 2 and Svelte 3 features.",
+  "repo_url": "https://github.com/tivac/svelte-translator",
+  "author": "Pat Cavit",
+  "homepage": "https://github.com/tivac/svelte-translator#readme",
+  "downloads": 5,
+  "dependents": 0,
+  "updated": "2019-08-28T19:57:04.356Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 17
+}

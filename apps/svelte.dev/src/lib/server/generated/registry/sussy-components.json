@@ -1,0 +1,14 @@
+{
+  "name": "sussy-components",
+  "description": "Provide sussy web components to enhance Svelte websites.",
+  "repo_url": "https://github.com/laspruca/sussy-components",
+  "author": "laspruca",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2022-02-23T07:01:59.425Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

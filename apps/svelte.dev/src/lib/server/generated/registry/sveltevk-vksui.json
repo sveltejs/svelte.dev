@@ -1,0 +1,16 @@
+{
+  "name": "@sveltevk/vksui",
+  "description": "Build adaptive Svelte components for VK Mini Apps.",
+  "repo_url": "https://github.com/sveltevk/VKSUI",
+  "author": "Daniil Suvorov",
+  "homepage": "https://sveltevk.github.io/VKSUI",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2022-05-04T21:36:55.991Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 19
+}

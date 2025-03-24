@@ -1,0 +1,16 @@
+{
+  "name": "svelte-counter",
+  "description": "Create dynamic counter components for Svelte.",
+  "repo_url": "https://github.com/rallisf1/svelte-counter",
+  "author": "rallisf1",
+  "homepage": "https://github.com/rallisf1/svelte-counter#readme",
+  "downloads": 29,
+  "dependents": 0,
+  "updated": "2020-04-23T17:07:06.855Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 4
+}

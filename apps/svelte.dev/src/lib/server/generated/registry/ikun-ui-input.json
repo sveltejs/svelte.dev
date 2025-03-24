@@ -1,0 +1,13 @@
+{
+  "name": "@ikun-ui/input",
+  "description": "Build input components for Svelte with customizable styles.",
+  "author": "baiwusanyu",
+  "downloads": 36,
+  "dependents": 5,
+  "updated": "2025-01-24T03:49:00.997Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

@@ -1,0 +1,16 @@
+{
+  "name": "katai",
+  "description": "Simple state manager for Svelte 5 with caching support.",
+  "repo_url": "https://github.com/srav001/katai",
+  "author": "Sravan Suresh",
+  "homepage": "https://github.com/srav001/katai#readme",
+  "downloads": 4,
+  "dependents": 0,
+  "updated": "2024-03-10T13:59:39.441Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 17
+}

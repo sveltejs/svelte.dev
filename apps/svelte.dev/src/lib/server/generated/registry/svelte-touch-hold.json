@@ -1,0 +1,14 @@
+{
+  "name": "svelte-touch-hold",
+  "description": "Detect touch and hold events on Svelte components.",
+  "author": "Arian",
+  "homepage": "https://github.com/ariannargesi/svelte-touch-hold",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2022-11-26T08:15:30.125Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

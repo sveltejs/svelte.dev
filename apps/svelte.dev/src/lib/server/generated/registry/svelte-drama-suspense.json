@@ -1,0 +1,16 @@
+{
+  "name": "@svelte-drama/suspense",
+  "description": "Implement React's Suspense for Svelte.",
+  "repo_url": "https://github.com/svelte-drama/suspense",
+  "author": "adantes",
+  "homepage": "https://github.com/svelte-drama/suspense#readme",
+  "downloads": 127,
+  "dependents": 0,
+  "updated": "2025-02-24T15:39:27.165Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 65
+}

@@ -1,0 +1,16 @@
+{
+  "name": "@abdelh2o/agnostic-svelte",
+  "description": "Provide AgnosticUI components for Svelte.",
+  "repo_url": "https://github.com/AgnosticUI/agnosticui",
+  "author": "Rob Levin",
+  "homepage": "https://github.com/AgnosticUI/agnosticui#readme",
+  "downloads": 11,
+  "dependents": 0,
+  "updated": "2022-08-31T19:26:45.451Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 732
+}

@@ -1,0 +1,15 @@
+{
+  "name": "@sveltewind/actions",
+  "description": "Provide Sveltewind collection of actions for Svelte.",
+  "repo_url": "https://github.com/sveltewind/actions",
+  "author": "Bob McAleavey",
+  "homepage": "https://github.com/sveltewind/actions#readme",
+  "downloads": 0,
+  "dependents": 1,
+  "updated": "2022-03-02T15:18:14.134Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

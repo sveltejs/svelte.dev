@@ -1,0 +1,16 @@
+{
+  "name": "@paddim8/svelte-lexical",
+  "description": "Create rich text editors for Svelte using Lexical.",
+  "repo_url": "https://github.com/umaranis/svelte-lexical",
+  "author": "paddim8",
+  "homepage": "https://github.com/umaranis/svelte-lexical#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2024-08-10T10:46:59.757Z",
+  "tags": [
+    "content"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 404
+}

@@ -1,0 +1,14 @@
+{
+  "name": "supabase-ui-svelte",
+  "description": "Offer UI components for Supabase authentication in Svelte.",
+  "author": "joshnuss",
+  "downloads": 4,
+  "dependents": 0,
+  "updated": "2021-05-12T08:08:41.756Z",
+  "tags": [
+    "auth",
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

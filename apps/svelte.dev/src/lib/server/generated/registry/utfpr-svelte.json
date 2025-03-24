@@ -1,0 +1,15 @@
+{
+  "name": "utfpr-svelte",
+  "description": "Provide components for Svelte, respecting UTFPR Design System.",
+  "repo_url": "git@gitlab.utfpr.edu.br:desis/utfpr-svelte",
+  "author": "edujed",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2022-12-01T19:07:38.938Z",
+  "tags": [
+    "component-library",
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

@@ -1,0 +1,17 @@
+{
+  "name": "@hypernym/svelte-markdown",
+  "description": "Preprocess Markdown files into Svelte components.",
+  "repo_url": "https://github.com/hypernym-studio/svelte-markdown",
+  "author": "Hypernym Studio",
+  "homepage": "https://github.com/hypernym-studio/svelte-markdown",
+  "downloads": 269,
+  "dependents": 0,
+  "updated": "2025-03-18T19:02:47.745Z",
+  "tags": [
+    "preprocessor",
+    "content"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 4
+}

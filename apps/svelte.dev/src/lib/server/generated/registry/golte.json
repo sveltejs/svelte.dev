@@ -1,0 +1,16 @@
+{
+  "name": "golte",
+  "description": "Render Svelte components in Go HTTP handlers with SSR.",
+  "repo_url": "https://github.com/nichady/golte",
+  "author": "nichady",
+  "homepage": "https://github.com/nichady/golte#README.md",
+  "downloads": 4,
+  "dependents": 0,
+  "updated": "2024-12-16T00:15:36.132Z",
+  "tags": [
+    "server"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 227
+}

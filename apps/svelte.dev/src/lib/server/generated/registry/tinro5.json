@@ -1,0 +1,16 @@
+{
+  "name": "tinro5",
+  "description": "Tiny declarative router for Svelte 5.",
+  "repo_url": "https://github.com/caracal7/tinro5",
+  "author": "Alexey Schebelev",
+  "homepage": "https://github.com/caracal7/tinro5#readme",
+  "downloads": 174,
+  "dependents": 0,
+  "updated": "2025-03-15T12:15:03.074Z",
+  "tags": [
+    "router"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 3
+}

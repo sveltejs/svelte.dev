@@ -1,0 +1,16 @@
+{
+  "name": "sveltestrap-paginate",
+  "description": "Paginate data with Sveltestrap and Bootstrap.",
+  "repo_url": "https://github.com/hazg/sveltestrap-paginate",
+  "author": "hazg",
+  "homepage": "https://github.com/hazg/sveltestrap-paginate#readme",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2021-06-22T09:08:59.327Z",
+  "tags": [
+    "utility",
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

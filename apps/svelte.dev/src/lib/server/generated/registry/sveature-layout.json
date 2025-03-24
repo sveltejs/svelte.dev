@@ -1,0 +1,13 @@
+{
+  "name": "sveature-layout",
+  "description": "Provides layout component for sveature applications.",
+  "author": "aewing",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2020-12-10T21:14:40.820Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

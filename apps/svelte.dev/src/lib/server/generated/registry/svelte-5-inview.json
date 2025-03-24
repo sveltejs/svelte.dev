@@ -1,0 +1,14 @@
+{
+  "name": "svelte-5-inview",
+  "description": "Monitor element visibility in Svelte applications.",
+  "author": "Travis Mathis",
+  "homepage": "https://github.com/travisdmathis/svelte-5-inview",
+  "downloads": 7,
+  "dependents": 0,
+  "updated": "2024-08-04T16:38:15.750Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": true,
+  "runes": false
+}

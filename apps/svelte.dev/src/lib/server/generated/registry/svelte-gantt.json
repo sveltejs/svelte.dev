@@ -1,0 +1,16 @@
+{
+  "name": "svelte-gantt",
+  "description": "Create interactive Gantt charts with drag-and-drop functionality.",
+  "repo_url": "https://github.com/ANovokmet/svelte-gantt",
+  "author": "Ante Novokmet",
+  "homepage": "https://github.com/ANovokmet/svelte-gantt#readme",
+  "downloads": 863,
+  "dependents": 2,
+  "updated": "2025-02-10T09:27:05.820Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 559
+}

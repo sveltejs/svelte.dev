@@ -1,0 +1,16 @@
+{
+  "name": "svelte-react-kit",
+  "description": "Integrate React components seamlessly within Svelte applications.",
+  "repo_url": "https://github.com/jpinho/svelte-react-kit",
+  "author": "João Pinho",
+  "homepage": "https://github.com/jpinho/svelte-react-kit/",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2023-04-11T13:06:18.735Z",
+  "tags": [
+    "integration"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 4
+}

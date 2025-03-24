@@ -1,0 +1,15 @@
+{
+  "name": "slick-svero",
+  "description": "Provides page.js based routing for Svelte applications.",
+  "repo_url": "https://github.com/antonielbordin/slick-svero",
+  "author": "Antoniel Bordin",
+  "homepage": "https://github.com/antonielbordin/slick-svero/blob/main/README.md",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2020-11-28T15:07:10.301Z",
+  "tags": [
+    "router"
+  ],
+  "svelte5": false,
+  "runes": false
+}

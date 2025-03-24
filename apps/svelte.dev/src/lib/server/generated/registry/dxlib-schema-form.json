@@ -1,0 +1,13 @@
+{
+  "name": "@dxlib/schema-form",
+  "description": "Build shareable Svelte components from schema.",
+  "author": "dexterlabs",
+  "downloads": 22,
+  "dependents": 0,
+  "updated": "2019-07-30T19:52:48.935Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

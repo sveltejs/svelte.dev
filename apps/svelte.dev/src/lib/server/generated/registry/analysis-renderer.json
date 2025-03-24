@@ -1,0 +1,16 @@
+{
+  "name": "analysis-renderer",
+  "description": "Svelte component for dashboard cards, integrates with Vite and web components.",
+  "repo_url": "https://github.com/miyokoLeeM/vite-svelte-comps",
+  "author": "miyoko0505",
+  "homepage": "https://github.com/miyokoLeeM/vite-svelte-comps#readme",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2023-03-24T08:00:51.703Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 2
+}

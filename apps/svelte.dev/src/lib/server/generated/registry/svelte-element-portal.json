@@ -1,0 +1,16 @@
+{
+  "name": "svelte-element-portal",
+  "description": "Render elements over ancestors, escaping parent overflow.",
+  "repo_url": "https://github.com/nwaughachukwuma/svelte-element-portal",
+  "author": "nwaughachukwuma",
+  "homepage": "https://github.com/nwaughachukwuma/svelte-element-portal#readme",
+  "downloads": 3,
+  "dependents": 0,
+  "updated": "2022-11-25T17:27:38.705Z",
+  "tags": [
+    "dom"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 4
+}

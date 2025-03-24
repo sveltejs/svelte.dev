@@ -1,0 +1,16 @@
+{
+  "name": "@tb-dev/eslint-config",
+  "description": "Provide ESLint config for Svelte, TypeScript, and more.",
+  "repo_url": "https://github.com/ferreira-tb/eslint-config",
+  "author": "ferreira-tb",
+  "homepage": "https://github.com/ferreira-tb/eslint-config",
+  "downloads": 373,
+  "dependents": 0,
+  "updated": "2025-03-22T20:33:07.721Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 1
+}

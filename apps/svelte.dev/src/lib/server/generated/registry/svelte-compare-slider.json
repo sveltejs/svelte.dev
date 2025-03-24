@@ -1,0 +1,14 @@
+{
+  "name": "svelte-compare-slider",
+  "description": "Compare components side-by-side or top-to-toe.",
+  "author": "Abiee",
+  "homepage": "https://github.com/richhost/svelte-compare-slider",
+  "downloads": 5,
+  "dependents": 0,
+  "updated": "2024-12-19T09:28:16.015Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false
+}

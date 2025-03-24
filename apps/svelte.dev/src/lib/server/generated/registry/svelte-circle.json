@@ -1,0 +1,14 @@
+{
+  "name": "svelte-circle",
+  "description": "Create circle progress components for Svelte.",
+  "author": "Abiee",
+  "homepage": "https://svelte-circle.vercel.app",
+  "downloads": 23,
+  "dependents": 0,
+  "updated": "2024-10-20T02:25:41.740Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false
+}

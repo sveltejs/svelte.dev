@@ -1,0 +1,16 @@
+{
+  "name": "s-file-load",
+  "description": "Simple Svelte component for file uploads without CSS dependencies.",
+  "repo_url": "https://github.com/s-library/s-file-load",
+  "author": "Jean M.",
+  "homepage": "https://s-file-load-khn1ohzvd-s-library.vercel.app/",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2023-09-29T03:10:13.144Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

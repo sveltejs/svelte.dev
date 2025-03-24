@@ -1,0 +1,16 @@
+{
+  "name": "@canutin/svelte-currency-input",
+  "description": "Format numbers to currencies as you type in Svelte.",
+  "repo_url": "https://github.com/fmaclen/svelte-currency-input",
+  "author": "Fernando Maclen",
+  "homepage": "https://svelte-currency-input.fernando.is",
+  "downloads": 903,
+  "dependents": 0,
+  "updated": "2024-11-01T21:04:48.714Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 41
+}

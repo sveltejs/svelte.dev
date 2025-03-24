@@ -1,0 +1,13 @@
+{
+  "name": "ant-svelte",
+  "description": "Provides Ant Design components for Svelte.",
+  "author": "Anders Sjöberg",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2019-09-08T00:43:02.845Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": false,
+  "runes": false
+}

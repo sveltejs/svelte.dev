@@ -1,0 +1,13 @@
+{
+  "name": "praecox-datepicker",
+  "description": "Create datepicker component for Svelte apps.",
+  "author": "runningzs",
+  "downloads": 120,
+  "dependents": 0,
+  "updated": "2021-11-14T07:14:34.466Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

@@ -1,0 +1,16 @@
+{
+  "name": "immer-svelte",
+  "description": "Use Immer for immutable state management in Svelte.",
+  "repo_url": "https://github.com/distolma/immer-svelte",
+  "author": "Dmytro Mostovyi",
+  "homepage": "https://github.com/distolma/immer-svelte#readme",
+  "downloads": 6,
+  "dependents": 0,
+  "updated": "2020-03-28T09:50:13.266Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 4
+}

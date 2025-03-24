@@ -1,0 +1,16 @@
+{
+  "name": "bootbox-svelte",
+  "description": "Implement Bootstrap-based alert, confirm, and prompt dialogs in Svelte.",
+  "repo_url": "https://github.com/tmalahie/bootbox-svelte",
+  "author": "Timothé Malahieude",
+  "homepage": "https://github.com/tmalahie/bootbox-svelte#readme",
+  "downloads": 4,
+  "dependents": 0,
+  "updated": "2021-09-18T19:02:06.551Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

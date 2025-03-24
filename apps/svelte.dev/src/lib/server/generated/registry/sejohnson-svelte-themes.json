@@ -1,0 +1,16 @@
+{
+  "name": "@sejohnson/svelte-themes",
+  "description": "Implement easy and performant themes for Svelte apps.",
+  "repo_url": "https://github.com/elliott-with-the-longest-name-on-github/svelte-themes",
+  "author": "S. Elliott Johnson",
+  "homepage": "https://github.com/elliott-with-the-longest-name-on-github/svelte-themes#readme",
+  "downloads": 11,
+  "dependents": 0,
+  "updated": "2025-02-27T18:35:40.228Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 3
+}

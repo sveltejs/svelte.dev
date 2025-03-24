@@ -1,0 +1,13 @@
+{
+  "name": "@htmlbricks/hb-input-area",
+  "description": "Create Svelte-Bootstrap text area input web component.",
+  "author": "Dario Caruso",
+  "downloads": 485,
+  "dependents": 3,
+  "updated": "2025-03-09T03:10:29.806Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

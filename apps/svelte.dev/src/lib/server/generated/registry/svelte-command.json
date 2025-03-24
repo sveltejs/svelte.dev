@@ -1,0 +1,16 @@
+{
+  "name": "svelte-command",
+  "description": "Provides general command execution handling for Svelte components.",
+  "repo_url": "https://github.com/arlac77/svelte-command",
+  "author": "arlac77",
+  "homepage": "https://github.com/arlac77/svelte-command#readme",
+  "downloads": 586,
+  "dependents": 5,
+  "updated": "2025-03-12T12:37:58.108Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 2
+}

@@ -1,0 +1,15 @@
+{
+  "name": "ant-rare-words-svelte",
+  "description": "Create input components for rare characters in Svelte projects.",
+  "repo_url": "https://github.com/alipay/Z-RareCharacterSolution",
+  "author": "andyliwr",
+  "homepage": "https://github.com/alipay/Z-RareCharacterSolution#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2023-11-06T03:16:54.936Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

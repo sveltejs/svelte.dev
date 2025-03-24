@@ -1,0 +1,16 @@
+{
+  "name": "@storybook/addon-svelte-csf",
+  "description": "Write Storybook stories using Svelte syntax.",
+  "repo_url": "https://github.com/storybookjs/addon-svelte-csf",
+  "author": "ndelangen",
+  "homepage": "https://github.com/storybookjs/addon-svelte-csf#readme",
+  "downloads": 59289,
+  "dependents": 15,
+  "updated": "2024-11-28T09:20:51.195Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 128
+}

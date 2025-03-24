@@ -1,0 +1,16 @@
+{
+  "name": "svelte-relative-time",
+  "description": "Creates auto-updating timeago timestamps for Svelte.",
+  "repo_url": "https://github.com/captaincodeman/svelte-relative-time",
+  "author": "Simon Green",
+  "homepage": "https://captaincodeman.github.io/svelte-relative-time/",
+  "downloads": 118,
+  "dependents": 0,
+  "updated": "2024-07-08T18:09:27.031Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 42
+}

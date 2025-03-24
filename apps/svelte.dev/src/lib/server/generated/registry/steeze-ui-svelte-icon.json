@@ -1,0 +1,16 @@
+{
+  "name": "@steeze-ui/svelte-icon",
+  "description": "Provides effortless Svelte icon component.",
+  "repo_url": "https://github.com/steeze-ui/icons",
+  "author": "Justin Voitel",
+  "homepage": "https://github.com/steeze-ui/icons#readme",
+  "downloads": 11568,
+  "dependents": 18,
+  "updated": "2024-11-20T12:40:32.253Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 188
+}

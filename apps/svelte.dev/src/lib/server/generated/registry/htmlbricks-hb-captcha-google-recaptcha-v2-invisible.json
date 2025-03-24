@@ -1,0 +1,13 @@
+{
+  "name": "@htmlbricks/hb-captcha-google-recaptcha-v2-invisible",
+  "description": "Integrate Google reCAPTCHA v2 invisible captcha in Svelte.",
+  "author": "Dario Caruso",
+  "downloads": 259,
+  "dependents": 0,
+  "updated": "2025-03-09T03:10:26.378Z",
+  "tags": [
+    "integration"
+  ],
+  "svelte5": false,
+  "runes": false
+}

@@ -1,0 +1,13 @@
+{
+  "name": "svelte-number-format",
+  "description": "Format numbers in Svelte input or text.",
+  "author": "Pitiș Radu",
+  "downloads": 9,
+  "dependents": 0,
+  "updated": "2024-11-17T02:26:36.650Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false
+}

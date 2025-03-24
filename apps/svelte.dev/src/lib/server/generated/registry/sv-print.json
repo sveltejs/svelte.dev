@@ -1,0 +1,13 @@
+{
+  "name": "sv-print",
+  "description": "Design and print documents within Svelte applications.",
+  "author": "CcSimple",
+  "downloads": 41,
+  "dependents": 5,
+  "updated": "2024-07-29T15:55:07.858Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false
+}

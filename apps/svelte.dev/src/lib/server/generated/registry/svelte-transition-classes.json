@@ -1,0 +1,16 @@
+{
+  "name": "svelte-transition-classes",
+  "description": "Add CSS classes for Svelte transitions, useful for Tailwind.",
+  "repo_url": "https://github.com/rmarscher/svelte-transition-classes",
+  "author": "rmarscher",
+  "homepage": "https://github.com/rmarscher/svelte-transition-classes",
+  "downloads": 70,
+  "dependents": 0,
+  "updated": "2021-12-21T16:37:13.147Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 55
+}

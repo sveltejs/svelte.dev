@@ -1,0 +1,13 @@
+{
+  "name": "svelte-tags-search-input",
+  "description": "Create customizable tag input with search functionality in Svelte.",
+  "author": "Agustin Lautaro",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2023-08-30T13:11:48.902Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

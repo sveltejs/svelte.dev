@@ -1,0 +1,16 @@
+{
+  "name": "nitro-ui-components",
+  "description": "UI kit with theme modification, originally developed with SvelteKit.",
+  "repo_url": "https://github.com/dfinity/gix-components",
+  "author": "fer_martz",
+  "homepage": "https://github.com/dfinity/gix-components#readme",
+  "downloads": 3,
+  "dependents": 0,
+  "updated": "2024-02-25T18:22:39.988Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 39
+}

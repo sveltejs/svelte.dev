@@ -1,0 +1,13 @@
+{
+  "name": "@6edesign/svelte-sortablejs",
+  "description": "Implement sortable lists using SortableJS in Svelte.",
+  "author": "6edesign",
+  "downloads": 12,
+  "dependents": 0,
+  "updated": "2020-10-26T21:07:23.556Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

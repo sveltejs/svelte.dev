@@ -1,0 +1,16 @@
+{
+  "name": "svelte-form-helper",
+  "description": "Validate forms easily with Svelte, enhancing native browser validation.",
+  "repo_url": "https://github.com/captaincodeman/svelte-form-helper",
+  "author": "Simon Green",
+  "homepage": "https://captaincodeman.github.io/svelte-form-helper/",
+  "downloads": 11,
+  "dependents": 0,
+  "updated": "2024-04-27T18:51:26.876Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 56
+}

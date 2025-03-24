@@ -1,0 +1,13 @@
+{
+  "name": "@htmlbricks/hb-messages-send",
+  "description": "Create Svelte-Bootstrap messages-send web components.",
+  "author": "Dario Caruso",
+  "downloads": 94,
+  "dependents": 1,
+  "updated": "2025-03-09T03:10:33.077Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

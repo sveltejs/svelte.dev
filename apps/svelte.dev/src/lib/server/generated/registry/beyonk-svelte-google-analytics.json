@@ -1,0 +1,13 @@
+{
+  "name": "@beyonk/svelte-google-analytics",
+  "description": "Integrate Google Analytics v4 into Svelte apps.",
+  "author": "antony",
+  "downloads": 402,
+  "dependents": 0,
+  "updated": "2022-05-23T16:36:42.913Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

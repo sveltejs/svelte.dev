@@ -1,0 +1,17 @@
+{
+  "name": "@tanstack/svelte-table",
+  "description": "Builds powerful tables and datagrids for Svelte applications.",
+  "repo_url": "https://github.com/TanStack/table",
+  "author": "Tanner Linsley",
+  "homepage": "https://tanstack.com/table",
+  "downloads": 10697,
+  "dependents": 14,
+  "updated": "2025-02-11T21:00:39.245Z",
+  "tags": [
+    "ui",
+    "component-library"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 26068
+}

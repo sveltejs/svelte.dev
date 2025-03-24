@@ -1,0 +1,16 @@
+{
+  "name": "@jill64/svelte-pagination",
+  "description": "Create pagination components for SvelteKit applications.",
+  "repo_url": "https://github.com/jill64/svelte-pagination",
+  "author": "jill64",
+  "homepage": "https://github.com/jill64/svelte-pagination#readme",
+  "downloads": 1925,
+  "dependents": 0,
+  "updated": "2025-01-23T06:31:56.141Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 4
+}

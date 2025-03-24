@@ -1,0 +1,15 @@
+{
+  "name": "eslint-config-pro",
+  "description": "Provide ESLint configuration for professional Svelte development.",
+  "repo_url": "https://github.com/NikolayMakhonin/eslint-config-pro",
+  "author": "Nikolay Makhonin",
+  "homepage": "https://github.com/NikolayMakhonin/eslint-config-pro",
+  "downloads": 9,
+  "dependents": 0,
+  "updated": "2023-11-14T02:45:50.080Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false
+}

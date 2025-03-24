@@ -1,0 +1,16 @@
+{
+  "name": "@iconslib/svelte",
+  "description": "Use open source icons in Svelte projects.",
+  "repo_url": "https://github.com/iconslib/svelte",
+  "author": "Chirill Ceban",
+  "homepage": "https://iconslib.com/frameworks/svelte",
+  "downloads": 36,
+  "dependents": 1,
+  "updated": "2024-07-20T20:25:14.428Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 4
+}

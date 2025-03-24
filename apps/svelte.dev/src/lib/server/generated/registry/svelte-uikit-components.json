@@ -1,0 +1,17 @@
+{
+  "name": "svelte-uikit-components",
+  "description": "Offer UI components based on UIKit for Svelte applications.",
+  "repo_url": "https://github.com/Wigtertainment/svelte-uikit-components",
+  "author": "Wigtertainment Ltd",
+  "homepage": "https://svelte-uikit.wigtertainment.com",
+  "downloads": 45,
+  "dependents": 0,
+  "updated": "2025-02-14T07:18:34.356Z",
+  "tags": [
+    "component-library",
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 6
+}

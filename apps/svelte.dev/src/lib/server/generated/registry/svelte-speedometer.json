@@ -1,0 +1,16 @@
+{
+  "name": "svelte-speedometer",
+  "description": "Display speedometer-like gauges in Svelte apps.",
+  "repo_url": "https://github.com/palerdot/svelte-speedometer",
+  "author": "palerdot",
+  "homepage": "https://github.com/palerdot/svelte-speedometer#readme",
+  "downloads": 974,
+  "dependents": 1,
+  "updated": "2024-12-18T03:50:01.999Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 16
+}

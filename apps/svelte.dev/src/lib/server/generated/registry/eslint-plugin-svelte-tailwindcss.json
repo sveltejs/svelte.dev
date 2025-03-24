@@ -1,0 +1,16 @@
+{
+  "name": "eslint-plugin-svelte-tailwindcss",
+  "description": "Lint Svelte components using Tailwind CSS.",
+  "repo_url": "https://github.com/mikededo/eslint-plugin-svelte-tailwindcss",
+  "author": "Miquel De Domingo",
+  "homepage": "https://github.com/mikededo/eslint-plugin-svelte-tailwindcss",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2024-11-19T17:09:31.103Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 4
+}

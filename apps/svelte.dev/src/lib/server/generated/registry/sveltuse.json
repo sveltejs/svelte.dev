@@ -1,0 +1,16 @@
+{
+  "name": "sveltuse",
+  "description": "Collection of essential Svelte composition utilities.",
+  "repo_url": "https://github.com/rkanik/sveltuse",
+  "author": "RK Anik",
+  "homepage": "https://sveltuse.pages.dev/",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2023-06-13T16:01:52.854Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 8
+}

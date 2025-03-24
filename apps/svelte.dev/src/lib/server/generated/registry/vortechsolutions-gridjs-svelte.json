@@ -1,0 +1,16 @@
+{
+  "name": "@vortechsolutions/gridjs-svelte",
+  "description": "Create Svelte wrapper component for Grid.js.",
+  "repo_url": "https://github.com/VortechSolutions/gridjs-svelte",
+  "author": "jaredforth",
+  "homepage": "https://gridjs.io/docs/integrations/svelte",
+  "downloads": 45,
+  "dependents": 0,
+  "updated": "2025-03-17T15:38:57.043Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 0
+}

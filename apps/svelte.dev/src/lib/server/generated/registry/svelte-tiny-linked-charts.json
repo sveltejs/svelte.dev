@@ -1,0 +1,16 @@
+{
+  "name": "svelte-tiny-linked-charts",
+  "description": "Display tiny, linked bar charts within Svelte applications.",
+  "repo_url": "https://github.com/Mitcheljager/svelte-tiny-linked-charts",
+  "author": "mitcheljager",
+  "homepage": "https://mitcheljager.github.io/svelte-tiny-linked-charts/",
+  "downloads": 1878,
+  "dependents": 1,
+  "updated": "2025-01-26T22:06:14.054Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 93
+}

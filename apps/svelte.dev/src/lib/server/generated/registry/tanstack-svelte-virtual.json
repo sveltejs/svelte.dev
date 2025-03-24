@@ -1,0 +1,17 @@
+{
+  "name": "@tanstack/svelte-virtual",
+  "description": "Virtualizes scrollable elements in Svelte applications.",
+  "repo_url": "https://github.com/TanStack/virtual",
+  "author": "Tanner Linsley",
+  "homepage": "https://tanstack.com/virtual",
+  "downloads": 4956,
+  "dependents": 4,
+  "updated": "2025-03-13T20:23:54.276Z",
+  "tags": [
+    "utility",
+    "dom"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 5915
+}

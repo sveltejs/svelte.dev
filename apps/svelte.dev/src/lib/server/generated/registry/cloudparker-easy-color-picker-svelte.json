@@ -1,0 +1,13 @@
+{
+  "name": "@cloudparker/easy-color-picker-svelte",
+  "description": "Implement simple, lightweight color picker for Svelte.",
+  "author": "cloudparker.com",
+  "downloads": 39,
+  "dependents": 0,
+  "updated": "2024-08-16T11:35:38.063Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false
+}

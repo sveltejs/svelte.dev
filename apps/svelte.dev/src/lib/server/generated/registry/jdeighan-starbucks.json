@@ -1,0 +1,17 @@
+{
+  "name": "@jdeighan/starbucks",
+  "description": "Transform Starbucks files into Svelte components.",
+  "repo_url": "https://github.com/johndeighan/starbucks",
+  "author": "John Deighan",
+  "homepage": "https://github.com/johndeighan/starbucks#readme",
+  "downloads": 1,
+  "dependents": 1,
+  "updated": "2022-08-17T09:36:08.291Z",
+  "tags": [
+    "tooling",
+    "preprocessor"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

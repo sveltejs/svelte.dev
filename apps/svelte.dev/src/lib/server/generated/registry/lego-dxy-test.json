@@ -1,0 +1,13 @@
+{
+  "name": "lego-dxy-test",
+  "description": "Test component for lego-dxy.",
+  "author": "yangjushang",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2022-03-25T07:09:21.549Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

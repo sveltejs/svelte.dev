@@ -1,0 +1,16 @@
+{
+  "name": "sveltyper",
+  "description": "Generate declaration files for Svelte components.",
+  "repo_url": "https://github.com/TheComputerM/sveltyper",
+  "author": "TheComputerM",
+  "homepage": "https://github.com/TheComputerM/sveltyper#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2021-05-26T09:42:26.591Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 5
+}

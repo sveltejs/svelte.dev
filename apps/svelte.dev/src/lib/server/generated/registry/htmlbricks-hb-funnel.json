@@ -1,0 +1,13 @@
+{
+  "name": "@htmlbricks/hb-funnel",
+  "description": "Provides web component for creating funnel in Svelte.",
+  "author": "Dario Caruso",
+  "downloads": 456,
+  "dependents": 2,
+  "updated": "2025-03-09T03:10:42.062Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

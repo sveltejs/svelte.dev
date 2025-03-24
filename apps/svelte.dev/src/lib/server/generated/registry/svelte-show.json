@@ -1,0 +1,16 @@
+{
+  "name": "svelte-show",
+  "description": "Show/hide elements without destroying Svelte components.",
+  "repo_url": "https://github.com/Foxeye-Rinx/svelte-show",
+  "author": "foxeye.rinx",
+  "homepage": "https://github.com/Foxeye-Rinx/svelte-show#readme",
+  "downloads": 3,
+  "dependents": 0,
+  "updated": "2022-09-04T08:14:42.658Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

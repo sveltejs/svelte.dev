@@ -1,0 +1,17 @@
+{
+  "name": "svelte-scrollto-next",
+  "description": "Animate scrolling to elements in Svelte applications.",
+  "repo_url": "https://github.com/brev/svelte-scrollto-next",
+  "author": "Brev Patterson",
+  "homepage": "https://github.com/brev/svelte-scrollto-next#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2023-06-29T23:17:29.993Z",
+  "tags": [
+    "utility",
+    "dom"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 0
+}

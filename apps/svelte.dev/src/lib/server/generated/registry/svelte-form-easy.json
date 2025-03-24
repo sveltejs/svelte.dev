@@ -1,0 +1,16 @@
+{
+  "name": "svelte-form-easy",
+  "description": "Validate Svelte forms with Yup schema validation.",
+  "repo_url": "https://github.com/vanzinvestor/svelte-form-easy",
+  "author": "Vanz Investor",
+  "homepage": "https://github.com/vanzinvestor/svelte-form-easy",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2022-11-08T11:25:56.673Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

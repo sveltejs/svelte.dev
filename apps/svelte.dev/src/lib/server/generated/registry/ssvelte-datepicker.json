@@ -1,0 +1,13 @@
+{
+  "name": "ssvelte-datepicker",
+  "description": "Implement datepicker component for Svelte apps.",
+  "author": "runningzs",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2021-08-04T09:39:47.263Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

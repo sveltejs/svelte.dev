@@ -1,0 +1,15 @@
+{
+  "name": "@tommywalkie/ant-design-svelte",
+  "description": "Develop enterprise-class UI components based on Ant Design.",
+  "repo_url": "https://github.com/tommywalkie/ant-design-svelte",
+  "author": "Tom Bazarnik",
+  "homepage": "https://github.com/tommywalkie/ant-design-svelte#readme",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2020-12-11T10:46:00.481Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": false,
+  "runes": false
+}

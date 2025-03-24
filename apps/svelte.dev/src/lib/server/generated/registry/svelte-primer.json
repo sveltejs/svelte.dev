@@ -1,0 +1,17 @@
+{
+  "name": "svelte-primer",
+  "description": "Implement GitHub Primer design system components in Svelte.",
+  "repo_url": "https://github.com/metonym/svelte-primer",
+  "author": "Eric Liu",
+  "homepage": "https://github.com/metonym/svelte-primer",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2020-11-23T21:10:14.369Z",
+  "tags": [
+    "component-library",
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 6
+}

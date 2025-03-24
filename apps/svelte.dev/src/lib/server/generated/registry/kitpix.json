@@ -1,0 +1,15 @@
+{
+  "name": "kitpix",
+  "description": "Optimize SvelteKit image component with build-time optimizations.",
+  "repo_url": "https://github.com/dayvista/kitpix",
+  "author": "dayvista",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2022-03-15T01:30:03.374Z",
+  "tags": [
+    "ui",
+    "performance"
+  ],
+  "svelte5": false,
+  "runes": false
+}

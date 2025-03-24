@@ -1,0 +1,14 @@
+{
+  "name": "@onlook/svelte",
+  "description": "Provide Svelte preprocessor for onlook.dev.",
+  "author": "onlook.dev",
+  "homepage": "https://onlook.dev",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2024-06-03T14:25:51.544Z",
+  "tags": [
+    "preprocessor"
+  ],
+  "svelte5": false,
+  "runes": false
+}

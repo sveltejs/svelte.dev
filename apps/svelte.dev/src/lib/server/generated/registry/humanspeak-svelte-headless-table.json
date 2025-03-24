@@ -1,0 +1,16 @@
+{
+  "name": "@humanspeak/svelte-headless-table",
+  "description": "Build customizable, headless data tables for Svelte.",
+  "repo_url": "https://github.com/humanspeak/svelte-headless-table",
+  "author": "Humanspeak, Inc.",
+  "homepage": "https://table.svelte.page",
+  "downloads": 391,
+  "dependents": 0,
+  "updated": "2025-03-08T00:59:29.658Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 2
+}

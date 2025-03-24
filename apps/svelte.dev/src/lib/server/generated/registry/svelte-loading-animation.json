@@ -1,0 +1,13 @@
+{
+  "name": "svelte-loading-animation",
+  "description": "Provide loading animation components for Svelte.",
+  "author": "gayuh tri satria",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2021-02-12T15:17:53.199Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

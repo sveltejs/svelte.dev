@@ -1,0 +1,16 @@
+{
+  "name": "svelte-media-observer",
+  "description": "Observe media queries in Svelte applications.",
+  "repo_url": "https://github.com/ericrovell/svelte-media-observer",
+  "author": "Eric Rovell",
+  "homepage": "https://github.com/ericrovell/svelte-media-observer#readme",
+  "downloads": 136,
+  "dependents": 0,
+  "updated": "2021-10-26T21:45:00.537Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 1
+}

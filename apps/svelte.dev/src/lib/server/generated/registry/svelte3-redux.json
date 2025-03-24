@@ -1,0 +1,16 @@
+{
+  "name": "svelte3-redux",
+  "description": "Integrate Redux with Svelte 3, using bind or bindTracked.",
+  "repo_url": "https://github.com/dai-shi/svelte3-redux",
+  "author": "Daishi Kato",
+  "homepage": "https://github.com/dai-shi/svelte3-redux#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2020-07-02T08:24:15.662Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 30
+}

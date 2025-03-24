@@ -1,0 +1,16 @@
+{
+  "name": "svelte-meta",
+  "description": "Generate SEO metadata for Svelte, including Open Graph and JSON-LD.",
+  "repo_url": "https://github.com/peppercornstudio/svelte-meta",
+  "author": "madeleineostoja",
+  "homepage": "https://github.com/peppercornstudio/svelte-meta#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2021-05-19T08:12:04.429Z",
+  "tags": [
+    "seo"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 11
+}

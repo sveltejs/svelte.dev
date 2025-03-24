@@ -1,0 +1,14 @@
+{
+  "name": "svelte-chessground-ui",
+  "description": "Provide Chessground chess UI for Svelte.",
+  "author": "agelas",
+  "homepage": "https://github.com/agelas/svelte-chessground-ui#",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2024-07-22T23:15:48.417Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

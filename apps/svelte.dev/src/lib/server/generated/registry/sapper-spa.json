@@ -1,0 +1,15 @@
+{
+  "name": "sapper-spa",
+  "description": "Generate single-page application target for Sapper apps.",
+  "repo_url": "https://github.com/timhall/sapper-spa",
+  "author": "Tim Hall",
+  "homepage": "https://github.com/timhall/sapper-spa#readme",
+  "downloads": 3,
+  "dependents": 0,
+  "updated": "2018-08-02T21:56:39.593Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false
+}

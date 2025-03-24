@@ -1,0 +1,16 @@
+{
+  "name": "svelte-fuzzy",
+  "description": "Provide Fuse.js binding for fuzzy text match highlighting.",
+  "repo_url": "https://github.com/metonym/svelte-fuzzy",
+  "author": "Eric Liu",
+  "homepage": "https://github.com/metonym/svelte-fuzzy",
+  "downloads": 16,
+  "dependents": 0,
+  "updated": "2021-09-08T15:47:20.996Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 31
+}

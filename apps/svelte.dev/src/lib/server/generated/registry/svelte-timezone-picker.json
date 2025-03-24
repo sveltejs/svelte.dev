@@ -1,0 +1,16 @@
+{
+  "name": "svelte-timezone-picker",
+  "description": "Provide accessible timezone picker component for Svelte apps.",
+  "repo_url": "https://github.com/tricinel/svelte-timezone-picker",
+  "author": "Bogdan Lazar",
+  "homepage": "https://github.com/tricinel/svelte-timezone-picker#readme",
+  "downloads": 129,
+  "dependents": 0,
+  "updated": "2022-05-27T08:57:05.673Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 7
+}

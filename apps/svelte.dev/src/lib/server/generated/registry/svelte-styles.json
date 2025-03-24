@@ -1,0 +1,15 @@
+{
+  "name": "svelte-styles",
+  "description": "Help style and improve Svelte UI with components.",
+  "repo_url": "https://github.com/tu-usuario/el-nombre-del-repositorio",
+  "author": "Sawcce",
+  "homepage": "https://github.com/tu-usuario/el-nombre-del-repositorio#readme",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2020-11-01T18:57:03.053Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

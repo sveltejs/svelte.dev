@@ -1,0 +1,15 @@
+{
+  "name": "@jodev/svelte-toast",
+  "description": "Create toast notifications in Svelte applications.",
+  "repo_url": "https://github.com/jodev7/svelte-toast",
+  "author": "Joseph",
+  "homepage": "https://github.com/jodev7/svelte-toast#readme",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2022-11-17T14:35:52.844Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

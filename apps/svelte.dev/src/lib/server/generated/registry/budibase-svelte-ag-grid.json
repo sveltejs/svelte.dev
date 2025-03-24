@@ -1,0 +1,13 @@
+{
+  "name": "@budibase/svelte-ag-grid",
+  "description": "Provide barebones wrapper around ag-grid.",
+  "author": "mike_chuckles",
+  "downloads": 66,
+  "dependents": 0,
+  "updated": "2021-02-23T11:30:16.517Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

@@ -1,0 +1,16 @@
+{
+  "name": "svelte-mini-router",
+  "description": "Declarative, minimal SPA router for Svelte 5 without SvelteKit.",
+  "repo_url": "https://github.com/rodrigocfd/svelte-mini-router",
+  "author": "Rodrigo César de Freitas Dias",
+  "homepage": "https://github.com/rodrigocfd/svelte-mini-router",
+  "downloads": 3,
+  "dependents": 0,
+  "updated": "2024-12-25T13:46:23.073Z",
+  "tags": [
+    "router"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 17
+}

@@ -1,0 +1,14 @@
+{
+  "name": "svelte-lenis",
+  "description": "Integrate Lenis smooth scrolling into Svelte projects.",
+  "author": "Abiee",
+  "homepage": "https://github.com/richhost/svelte-lenis",
+  "downloads": 6,
+  "dependents": 0,
+  "updated": "2024-12-19T14:55:43.901Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false
+}

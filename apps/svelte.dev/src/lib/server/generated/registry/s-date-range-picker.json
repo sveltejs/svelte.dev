@@ -1,0 +1,16 @@
+{
+  "name": "s-date-range-picker",
+  "description": "Create date range picker component for Svelte.",
+  "repo_url": "https://github.com/onx2/svelte-date-range-picker",
+  "author": "Jeff Rooks",
+  "homepage": "https://github.com/onx2/svelte-date-range-picker#readme",
+  "downloads": 8,
+  "dependents": 0,
+  "updated": "2019-12-14T15:42:07.264Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 12
+}

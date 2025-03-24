@@ -1,0 +1,16 @@
+{
+  "name": "@terrxo/unpic-svelte",
+  "description": "Generate responsive, high-performance images in Svelte applications.",
+  "repo_url": "https://github.com/ascorbic/unpic-img",
+  "author": "terrxo",
+  "homepage": "https://unpic.pics/img/svelte",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2024-10-26T10:08:25.320Z",
+  "tags": [
+    "media"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 1667
+}

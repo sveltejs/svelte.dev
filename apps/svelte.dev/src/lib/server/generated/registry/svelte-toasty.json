@@ -1,0 +1,13 @@
+{
+  "name": "svelte-toasty",
+  "description": "Configurable toast notification component for Svelte.",
+  "author": "tiaanduplessis",
+  "downloads": 17,
+  "dependents": 0,
+  "updated": "2021-02-07T10:47:48.605Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

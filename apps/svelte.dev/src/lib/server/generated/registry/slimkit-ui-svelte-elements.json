@@ -1,0 +1,13 @@
+{
+  "name": "@slimkit-ui/svelte-elements",
+  "description": "Builds Svelte UI elements, including typeahead and sidebar components.",
+  "author": "Thilanka N. Liyanaarachchi",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2022-08-31T10:32:45.999Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": false,
+  "runes": false
+}

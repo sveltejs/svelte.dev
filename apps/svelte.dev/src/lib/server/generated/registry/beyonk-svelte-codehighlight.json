@@ -1,0 +1,13 @@
+{
+  "name": "@beyonk/svelte-codehighlight",
+  "description": "Highlight code blocks in Svelte presentations.",
+  "author": "antony",
+  "downloads": 8,
+  "dependents": 0,
+  "updated": "2019-09-26T09:56:19.422Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

@@ -1,0 +1,13 @@
+{
+  "name": "@ikun-ui/contextmenu",
+  "description": "Create context menu components for Svelte.",
+  "author": "baiwusanyu",
+  "downloads": 22,
+  "dependents": 1,
+  "updated": "2025-01-24T03:48:46.241Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

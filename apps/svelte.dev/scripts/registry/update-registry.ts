@@ -95,12 +95,6 @@ function update_last_modified(): void {
 	fs.writeFileSync(pathname, JSON.stringify(data, null, '\t'), { encoding: 'utf8' });
 }
 
-async function get_integration_files(): Promise<string[]> {
-	return glob('src/lib/server/generated/registry/*.md', {
-		cwd: path.resolve(fileURLToPath(import.meta.url), '../../..')
-	});
-}
-
 const openrouter = createOpenRouter({
 	apiKey: process.env.OPENROUTER_API_KEY
 });
@@ -535,6 +529,8 @@ async function update_all_github_stars(ignore_if_exists = false) {
 				if (typeof stars === 'number') {
 					data.github_stars = stars;
 
+					console.log({ pkg });
+
 					PackageCache.set(pkg, data);
 				}
 			} catch (e) {
@@ -662,7 +658,9 @@ async function* create_map_batch_generator(
 	}
 }
 
-const svelte_packages = await process_batches_through_llm();
+for (let i = 0; i < 3; i++) {
+	await process_batches_through_llm();
+}
 
 // update_cache_from_npm();
 await update_all_github_stars();

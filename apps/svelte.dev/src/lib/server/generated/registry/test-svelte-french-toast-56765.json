@@ -1,0 +1,16 @@
+{
+  "name": "test-svelte-french-toast-56765",
+  "description": "Create smooth, customizable toast notifications in Svelte apps.",
+  "repo_url": "https://github.com/kbrgl/svelte-french-toast",
+  "author": "Kabir Goel",
+  "homepage": "https://github.com/kbrgl/svelte-french-toast#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2024-02-17T03:44:01.509Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 937
+}

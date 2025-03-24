@@ -1,0 +1,16 @@
+{
+  "name": "metawrite",
+  "description": "Integrate Appwrite SDK with ready-to-use components for Svelte.",
+  "repo_url": "https://github.com/koodeau/metawrite",
+  "author": "Nick Revenko",
+  "homepage": "https://increas.io/metawrite",
+  "downloads": 65,
+  "dependents": 0,
+  "updated": "2022-06-12T19:33:50.028Z",
+  "tags": [
+    "integration"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 26
+}

@@ -1,0 +1,17 @@
+{
+  "name": "stwui",
+  "description": "Provides Svelte-TailwindCSS UI component library.",
+  "repo_url": "https://github.com/N00nDay/stwui",
+  "author": "noonday",
+  "homepage": "https://github.com/N00nDay/stwui",
+  "downloads": 99,
+  "dependents": 0,
+  "updated": "2024-01-12T02:42:57.915Z",
+  "tags": [
+    "component-library",
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 460
+}

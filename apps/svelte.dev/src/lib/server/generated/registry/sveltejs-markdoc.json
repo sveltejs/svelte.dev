@@ -1,0 +1,16 @@
+{
+  "name": "sveltejs-markdoc",
+  "description": "Render Markdoc content in Svelte/SvelteKit projects.",
+  "repo_url": "https://github.com/yuchengkuo/sveltejs-markdoc",
+  "author": "YuCheng Kuo",
+  "homepage": "https://github.com/yuchengkuo/sveltejs-markdoc#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2022-11-19T06:06:28.506Z",
+  "tags": [
+    "content"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 10
+}

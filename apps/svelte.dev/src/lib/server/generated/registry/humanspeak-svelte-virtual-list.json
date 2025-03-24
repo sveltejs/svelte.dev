@@ -1,0 +1,16 @@
+{
+  "name": "@humanspeak/svelte-virtual-list",
+  "description": "Create high-performance virtual list components for Svelte.",
+  "repo_url": "https://github.com/humanspeak/svelte-virtual-list",
+  "author": "Humanspeak, Inc.",
+  "homepage": "https://virtuallist.svelte.page",
+  "downloads": 22,
+  "dependents": 0,
+  "updated": "2025-01-21T17:10:25.865Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 0
+}

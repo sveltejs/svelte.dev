@@ -1,0 +1,17 @@
+{
+  "name": "@storyblok/svelte",
+  "description": "Integrate Storyblok CMS with Svelte applications.",
+  "repo_url": "https://github.com/storyblok/storyblok-svelte",
+  "author": "Josefine Schaefer",
+  "homepage": "https://github.com/storyblok/storyblok-svelte",
+  "downloads": 618,
+  "dependents": 2,
+  "updated": "2025-01-03T15:41:32.037Z",
+  "tags": [
+    "content",
+    "integration"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 84
+}

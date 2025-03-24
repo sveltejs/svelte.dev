@@ -1,0 +1,15 @@
+{
+  "name": "svelte-treeviews",
+  "description": "Provides full-featured treeview component for Svelte applications.",
+  "repo_url": "https://github.com/orefalo/svelte-treeviewss",
+  "author": "Olivier Refalo",
+  "homepage": "https://orefalo.github.io/svelte-treeviews/",
+  "downloads": 3,
+  "dependents": 0,
+  "updated": "2022-04-09T06:58:08.001Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

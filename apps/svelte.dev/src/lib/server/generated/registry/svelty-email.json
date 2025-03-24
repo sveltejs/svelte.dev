@@ -1,0 +1,16 @@
+{
+  "name": "svelty-email",
+  "description": "Build emails with Svelte components.",
+  "repo_url": "https://github.com/cmjoseph07/svelty-email",
+  "author": "Chris Joseph",
+  "homepage": "https://github.com/cmjoseph07/svelty-email#readme",
+  "downloads": 403,
+  "dependents": 1,
+  "updated": "2024-08-10T02:37:10.914Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 39
+}

@@ -1,0 +1,16 @@
+{
+  "name": "svelte-headroom",
+  "description": "Create headroom component for Svelte apps.",
+  "repo_url": "https://github.com/collardeau/svelte-headroom",
+  "author": "Thomas Collardeau",
+  "homepage": "https://github.com/collardeau/svelte-headroom#readme",
+  "downloads": 24,
+  "dependents": 0,
+  "updated": "2019-10-14T10:29:36.044Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 81
+}

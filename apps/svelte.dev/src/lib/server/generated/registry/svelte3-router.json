@@ -1,0 +1,16 @@
+{
+  "name": "svelte3-router",
+  "description": "Simple router for Svelte 3 applications.",
+  "repo_url": "https://github.com/ddidwyll/svelte-router",
+  "author": "Phil D'Oz",
+  "homepage": "https://github.com/ddidwyll/svelte-router#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2019-07-02T12:35:25.223Z",
+  "tags": [
+    "router"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

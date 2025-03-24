@@ -1,0 +1,16 @@
+{
+  "name": "@sveltevk/icons",
+  "description": "Provide SVG icons as Svelte components.",
+  "repo_url": "https://github.com/sveltevk/icons",
+  "author": "Daniil Suvorov",
+  "homepage": "https://sveltevk.github.io/icons/",
+  "downloads": 3,
+  "dependents": 1,
+  "updated": "2022-05-02T17:54:03.031Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 4
+}

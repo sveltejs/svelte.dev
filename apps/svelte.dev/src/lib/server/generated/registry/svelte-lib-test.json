@@ -1,0 +1,13 @@
+{
+  "name": "svelte-lib-test",
+  "description": "Create base for building shareable Svelte components.",
+  "author": "1ilsang",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2021-06-13T15:15:20.431Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

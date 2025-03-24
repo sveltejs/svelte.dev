@@ -1,0 +1,13 @@
+{
+  "name": "svelte-autosize-input",
+  "description": "Create auto-width, auto-grow input component for Svelte.",
+  "author": "georgeous",
+  "downloads": 185,
+  "dependents": 0,
+  "updated": "2024-06-12T22:06:36.123Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

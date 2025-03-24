@@ -1,0 +1,16 @@
+{
+  "name": "svelte-adaptive-sensors",
+  "description": "Provide adaptive behavior based on device and network sensors.",
+  "repo_url": "https://github.com/pngwn/svelte-adaptive-sensors",
+  "author": "pngwn",
+  "homepage": "https://github.com/pngwn/svelte-adaptive-sensors#readme",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2019-11-12T23:35:41.516Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 50
+}

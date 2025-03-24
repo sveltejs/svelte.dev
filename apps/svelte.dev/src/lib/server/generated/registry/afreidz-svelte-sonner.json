@@ -1,0 +1,13 @@
+{
+  "name": "@afreidz/svelte-sonner",
+  "description": "Create toast notifications in Svelte applications.",
+  "author": "Robert Soriano",
+  "downloads": 21,
+  "dependents": 0,
+  "updated": "2024-10-23T16:16:33.051Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false
+}

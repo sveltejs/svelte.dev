@@ -1,0 +1,16 @@
+{
+  "name": "@sveltinio/media-content",
+  "description": "Embed media content in Svelte and SvelteKit projects.",
+  "repo_url": "https://github.com/sveltinio/components-library",
+  "author": "dev",
+  "homepage": "https://components.sveltin.io",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2023-10-01T09:56:06.591Z",
+  "tags": [
+    "media"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 12
+}

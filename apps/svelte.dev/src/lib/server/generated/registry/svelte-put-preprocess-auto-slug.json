@@ -1,0 +1,17 @@
+{
+  "name": "@svelte-put/preprocess-auto-slug",
+  "description": "Generate slugs from heading text, adding IDs to headings.",
+  "repo_url": "https://github.com/vnphanquang/svelte-put",
+  "author": "Quang Phan",
+  "homepage": "https://github.com/vnphanquang/svelte-put/tree/next/packages/preprocess-auto-slug",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2024-10-25T05:17:45.593Z",
+  "tags": [
+    "preprocessor",
+    "tooling"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 908
+}

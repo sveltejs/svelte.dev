@@ -1,0 +1,16 @@
+{
+  "name": "svelte-preview-card",
+  "description": "Display preview cards with title, image, and open event in Svelte.",
+  "repo_url": "https://github.com/Linkcube/svelte-preview-card",
+  "author": "linkcube",
+  "homepage": "https://github.com/Linkcube/svelte-preview-card#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2020-02-28T22:22:11.515Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

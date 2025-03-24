@@ -1,0 +1,13 @@
+{
+  "name": "@yungas/svelte-rx",
+  "description": "Implement Redux-like state management for Svelte using RxJS.",
+  "author": "Gustavo Konrad",
+  "downloads": 29,
+  "dependents": 0,
+  "updated": "2021-08-10T14:40:42.922Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

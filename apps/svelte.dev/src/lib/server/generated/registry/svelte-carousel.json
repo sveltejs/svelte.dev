@@ -1,0 +1,16 @@
+{
+  "name": "svelte-carousel",
+  "description": "Create carousel component for Svelte with various customization options.",
+  "repo_url": "https://github.com/vadimkorr/svelte-carousel",
+  "author": "vadimkorr",
+  "homepage": "https://github.com/vadimkorr/svelte-carousel#readme",
+  "downloads": 7215,
+  "dependents": 6,
+  "updated": "2023-04-03T20:55:32.574Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 292
+}

@@ -1,0 +1,13 @@
+{
+  "name": "@htmlbricks/hb-input-range",
+  "description": "Provides Svelte-Bootstrap Number Input WebComponent.",
+  "author": "Dario Caruso",
+  "downloads": 66,
+  "dependents": 1,
+  "updated": "2025-03-09T03:10:30.662Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

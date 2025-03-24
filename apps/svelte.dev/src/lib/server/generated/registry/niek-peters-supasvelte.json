@@ -1,0 +1,17 @@
+{
+  "name": "@niek-peters/supasvelte",
+  "description": "Sync Supabase Postgres data with Svelte stores in real time.",
+  "repo_url": "https://github.com/niek-peters/supasvelte",
+  "author": "Niek Peters",
+  "homepage": "https://github.com/niek-peters/supasvelte#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2023-06-11T23:45:43.567Z",
+  "tags": [
+    "utility",
+    "integration"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 1
+}

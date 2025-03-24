@@ -1,0 +1,16 @@
+{
+  "name": "bubbles-threlte",
+  "description": "Generate customizable bubble effects for Svelte with Threlte.",
+  "repo_url": "https://github.com/ZeroDelusions/Bubbles-Threlte",
+  "author": "Dmytro Kosorukov",
+  "homepage": "https://github.com/ZeroDelusions/Bubbles-Threlte",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2024-08-02T12:22:08.127Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

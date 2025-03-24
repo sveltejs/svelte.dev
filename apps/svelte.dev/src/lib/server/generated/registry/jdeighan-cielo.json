@@ -1,0 +1,13 @@
+{
+  "name": "@jdeighan/cielo",
+  "description": "Process *.cielo and *.starbucks files.",
+  "author": "John Deighan",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2022-03-10T19:34:19.023Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false
+}

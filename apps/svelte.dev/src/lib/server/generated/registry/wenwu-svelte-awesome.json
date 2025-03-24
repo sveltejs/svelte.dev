@@ -1,0 +1,14 @@
+{
+  "name": "@wenwu/svelte-awesome",
+  "description": "Integrate FontAwesome icons with Svelte.",
+  "repo_url": "",
+  "author": "wenwu",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2020-03-12T09:53:53.964Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

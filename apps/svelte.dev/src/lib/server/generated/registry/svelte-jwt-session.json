@@ -1,0 +1,17 @@
+{
+  "name": "svelte-jwt-session",
+  "description": "Manage sessions with JSON Web Tokens in Svelte applications.",
+  "repo_url": "https://github.com/escheiermann/svelte-jwt-session",
+  "author": "Edgar Scheiermann",
+  "homepage": "https://github.com/escheiermann/svelte-jwt-session#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2023-02-04T18:22:30.743Z",
+  "tags": [
+    "auth",
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

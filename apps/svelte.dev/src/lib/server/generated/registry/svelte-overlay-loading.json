@@ -1,0 +1,16 @@
+{
+  "name": "svelte-overlay-loading",
+  "description": "Provide simple Svelte component for loading overlays.",
+  "repo_url": "https://github.com/andrusenn/SvelteComponents",
+  "author": "andrusenn",
+  "homepage": "https://github.com/andrusenn/SvelteComponents#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2020-07-24T21:57:47.167Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 4
+}

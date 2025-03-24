@@ -1,0 +1,13 @@
+{
+  "name": "@sv-print/hiprint",
+  "description": "Design and print documents within Svelte applications.",
+  "author": "CcSimple",
+  "downloads": 48,
+  "dependents": 3,
+  "updated": "2024-06-03T15:56:02.801Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false
+}

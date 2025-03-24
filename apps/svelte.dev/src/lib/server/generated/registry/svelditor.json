@@ -1,0 +1,16 @@
+{
+  "name": "svelditor",
+  "description": "Create tab-based editor UI library with Svelte.",
+  "repo_url": "https://github.com/komietty/svelditor",
+  "author": "Saki Komikado",
+  "homepage": "https://github.com/komietty/svelditor#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2020-11-06T11:33:49.934Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

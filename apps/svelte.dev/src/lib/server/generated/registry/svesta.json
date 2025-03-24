@@ -1,0 +1,16 @@
+{
+  "name": "svesta",
+  "description": "Tiny Svelte state management library for Svelte/SvelteKit.",
+  "repo_url": "https://github.com/steveesamson/svesta",
+  "author": "Steve S. Samson",
+  "homepage": "https://steveesamson.github.io/svesta",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2024-08-05T16:56:01.508Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 2
+}

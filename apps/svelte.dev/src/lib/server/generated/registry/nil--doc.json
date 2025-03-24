@@ -1,0 +1,14 @@
+{
+  "name": "@nil-/doc",
+  "description": "Provide Svelte components to help with documentation.",
+  "author": "Neil Aldea",
+  "downloads": 11,
+  "dependents": 0,
+  "updated": "2023-07-05T13:02:59.924Z",
+  "tags": [
+    "component-library",
+    "content"
+  ],
+  "svelte5": false,
+  "runes": false
+}

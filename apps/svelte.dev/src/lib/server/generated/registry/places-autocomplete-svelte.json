@@ -1,0 +1,16 @@
+{
+  "name": "places-autocomplete-svelte",
+  "description": "Integrate Google Maps Places Autocomplete in Svelte apps.",
+  "repo_url": "https://github.com/alexpechkarev/places-autocomplete-svelte",
+  "author": "Alexander Pechkarev",
+  "homepage": "https://places-autocomplete-demo.pages.dev",
+  "downloads": 50,
+  "dependents": 0,
+  "updated": "2025-03-23T11:35:04.377Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 5
+}

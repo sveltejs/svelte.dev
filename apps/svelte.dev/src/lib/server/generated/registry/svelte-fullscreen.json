@@ -1,0 +1,16 @@
+{
+  "name": "svelte-fullscreen",
+  "description": "Enable fullscreen mode for DOM elements in Svelte applications.",
+  "repo_url": "https://github.com/andrelmlins/svelte-fullscreen",
+  "author": "André Lins",
+  "homepage": "https://svelte-fullscreen.netlify.com/",
+  "downloads": 116,
+  "dependents": 0,
+  "updated": "2021-09-01T00:58:55.624Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 65
+}

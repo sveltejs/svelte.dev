@@ -1,0 +1,16 @@
+{
+  "name": "yafsn",
+  "description": "Provide simple navigation solutions for Svelte applications.",
+  "repo_url": "https://github.com/jkbz64/yafsn",
+  "author": "jkbz64",
+  "homepage": "https://github.com/jkbz64/yafsn#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2023-01-25T17:12:11.228Z",
+  "tags": [
+    "router"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

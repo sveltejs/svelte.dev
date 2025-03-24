@@ -1,0 +1,15 @@
+{
+  "name": "boost-web-forms-svelte",
+  "description": "Create Svelte component for boost-web-forms library.",
+  "repo_url": "https://github.com/lgirma/boost-web-forms-svelte",
+  "author": "Leone",
+  "homepage": "https://github.com/lgirma/boost-web-forms-svelte",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2021-07-01T17:24:30.009Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

@@ -1,0 +1,16 @@
+{
+  "name": "@alexaegis/svelte-config",
+  "description": "Configuration for Svelte projects.",
+  "repo_url": "https://github.com/AlexAegis/js-tooling",
+  "author": "Alex Aegis",
+  "homepage": "https://github.com/AlexAegis/js-tooling",
+  "downloads": 79,
+  "dependents": 0,
+  "updated": "2024-11-30T21:42:24.347Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 8
+}

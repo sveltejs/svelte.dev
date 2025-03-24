@@ -1,0 +1,14 @@
+{
+  "name": "@nust_misis/ui",
+  "description": "Provides UI components for MISIS university.",
+  "author": "Dmitriy Din",
+  "downloads": 309,
+  "dependents": 0,
+  "updated": "2025-03-21T12:58:16.309Z",
+  "tags": [
+    "component-library",
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false
+}

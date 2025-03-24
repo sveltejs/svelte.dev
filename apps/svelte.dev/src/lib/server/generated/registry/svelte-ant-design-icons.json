@@ -1,0 +1,16 @@
+{
+  "name": "svelte-ant-design-icons",
+  "description": "Provides Ant Design SVG Icon components for Svelte.",
+  "repo_url": "https://github.com/shinokada/svelte-ant-design-icons",
+  "author": "Shinichi Okada",
+  "homepage": "https://svelte-ant-design-icons.codewithshin.com/",
+  "downloads": 843,
+  "dependents": 0,
+  "updated": "2024-10-25T14:17:51.787Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 6
+}

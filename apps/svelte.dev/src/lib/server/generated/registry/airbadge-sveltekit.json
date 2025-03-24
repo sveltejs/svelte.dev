@@ -1,0 +1,13 @@
+{
+  "name": "@airbadge/sveltekit",
+  "description": "Adds Stripe Subscriptions and Checkout to SvelteKit apps.",
+  "author": "joshnuss",
+  "downloads": 44,
+  "dependents": 0,
+  "updated": "2024-07-05T17:27:29.883Z",
+  "tags": [
+    "auth"
+  ],
+  "svelte5": false,
+  "runes": false
+}

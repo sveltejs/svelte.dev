@@ -1,0 +1,16 @@
+{
+  "name": "svelte-section-list",
+  "description": "Create headless, draggable section lists for Svelte apps.",
+  "repo_url": "https://github.com/TIKramer/svelte-section-list",
+  "author": "Thomas Kramer",
+  "homepage": "https://github.com/TIKramer/svelte-section-list",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2023-06-06T08:31:14.884Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 17
+}

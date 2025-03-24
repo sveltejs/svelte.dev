@@ -1,0 +1,16 @@
+{
+  "name": "@loofkid/svelte-loading-spinners",
+  "description": "Implement loading spinners using Svelte framework.",
+  "repo_url": "https://github.com/schum123/svelte-loading-spinners",
+  "author": "Eric Schumertl",
+  "homepage": "https://github.com/schum123/svelte-loading-spinners#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2022-03-14T16:06:50.436Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 521
+}

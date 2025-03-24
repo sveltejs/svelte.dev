@@ -1,0 +1,13 @@
+{
+  "name": "@htmlbricks/formrenderer-emailinput",
+  "description": "Provides Svelte-Bootstrap email input web component.",
+  "author": "Dario Caruso",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2022-01-02T19:14:28.792Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

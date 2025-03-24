@@ -1,0 +1,16 @@
+{
+  "name": "@sveltestrap/sveltestrap",
+  "description": "Create Bootstrap 5 components for Svelte applications.",
+  "repo_url": "https://github.com/sveltestrap/sveltestrap",
+  "author": "dysfunc",
+  "homepage": "https://sveltestrap.js.org",
+  "downloads": 5517,
+  "dependents": 5,
+  "updated": "2025-02-04T15:33:33.979Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 173
+}

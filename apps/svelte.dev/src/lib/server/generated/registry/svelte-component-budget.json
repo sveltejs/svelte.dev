@@ -1,0 +1,17 @@
+{
+  "name": "svelte-component-budget",
+  "description": "Control Svelte component size using a preprocessor.",
+  "repo_url": "https://github.com/sveltetools/svelte-component-budget",
+  "author": "PaulMaly",
+  "homepage": "https://github.com/sveltetools/svelte-component-budget#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2022-01-16T18:52:15.865Z",
+  "tags": [
+    "tooling",
+    "preprocessor"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 2
+}

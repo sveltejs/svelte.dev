@@ -1,0 +1,16 @@
+{
+  "name": "houdini-plugin-svelte-global-stores",
+  "description": "Provides global stores for Houdini's Svelte bindings.",
+  "repo_url": "https://github.com/HoudiniGraphql/houdini",
+  "author": "aaivazis",
+  "homepage": "https://github.com/HoudiniGraphql/houdini",
+  "downloads": 479,
+  "dependents": 0,
+  "updated": "2025-03-20T16:24:17.756Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 941
+}

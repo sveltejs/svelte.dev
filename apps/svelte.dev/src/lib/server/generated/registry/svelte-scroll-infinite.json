@@ -1,0 +1,16 @@
+{
+  "name": "svelte-scroll-infinite",
+  "description": "Implements infinite scroll component for Svelte applications.",
+  "repo_url": "https://github.com/razrabotal/svelte-scroll-infinite",
+  "author": "Taras Gordienko",
+  "homepage": "https://github.com/razrabotal/svelte-scroll-infinite#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2020-02-25T11:37:09.304Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 4
+}

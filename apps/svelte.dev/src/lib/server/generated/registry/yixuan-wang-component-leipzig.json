@@ -1,0 +1,14 @@
+{
+  "name": "@yixuan-wang/component-leipzig",
+  "description": "Render Leipzig Interlinear Gloss using Svelte web component.",
+  "author": "yixuan-wang",
+  "homepage": "http://github.com/Yixuan-Wang/component-leipzig",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2022-01-29T10:22:12.241Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": false,
+  "runes": false
+}

@@ -1,0 +1,15 @@
+{
+  "name": "@parkingboss/svelte-storage",
+  "description": "Persist Svelte stores using local storage.",
+  "repo_url": "https://github.com/parkingboss/svelte-storage",
+  "author": "Parking Boss",
+  "homepage": "https://github.com/parkingboss/svelte-storage#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2020-04-17T14:28:49.691Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

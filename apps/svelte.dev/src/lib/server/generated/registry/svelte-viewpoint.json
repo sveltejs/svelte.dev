@@ -1,0 +1,15 @@
+{
+  "name": "svelte-viewpoint",
+  "description": "Create loadable Svelte components with data preloading.",
+  "repo_url": "https://github.com/sveltetools/svelte-viewpoint",
+  "author": "PaulMaly",
+  "homepage": "https://github.com/sveltetools/svelte-viewpoint#readme",
+  "downloads": 24,
+  "dependents": 0,
+  "updated": "2021-03-04T11:39:29.012Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

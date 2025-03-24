@@ -1,0 +1,13 @@
+{
+  "name": "first-simple-svelte-components-lyq",
+  "description": "Simple Svelte components for basic use.",
+  "author": "lyq",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2021-05-25T12:19:20.141Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": false,
+  "runes": false
+}

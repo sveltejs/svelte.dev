@@ -1,0 +1,16 @@
+{
+  "name": "another-svelte-data-grid",
+  "description": "Display and edit data with a high-performance Svelte data grid.",
+  "repo_url": "https://github.com/millerlm012/another-svelte-data-grid",
+  "author": "Landon Miller",
+  "homepage": "https://github.com/Millerlm012/another-svelte-data-grid",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2023-12-09T16:02:49.905Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 2
+}

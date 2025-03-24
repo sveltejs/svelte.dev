@@ -1,0 +1,16 @@
+{
+  "name": "svelte-image-compare",
+  "description": "Compare images using a slider in Svelte.",
+  "repo_url": "https://github.com/PaulMaly/svelte-image-compare",
+  "author": "PaulMaly",
+  "homepage": "https://github.com/PaulMaly/svelte-image-compare#readme",
+  "downloads": 37,
+  "dependents": 0,
+  "updated": "2019-08-24T23:29:22.232Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 23
+}

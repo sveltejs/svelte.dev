@@ -1,0 +1,13 @@
+{
+  "name": "create-jsx-snippet",
+  "description": "Wraps createRawSnippet for JSX snippet creation in Svelte.",
+  "author": "TOMIKAWA Sotaro",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2024-07-24T16:16:55.417Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": true,
+  "runes": true
+}

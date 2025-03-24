@@ -1,0 +1,16 @@
+{
+  "name": "svelte-color-progressbar",
+  "description": "Create color progressbar component for Svelte.",
+  "repo_url": "https://github.com/khguruge/svelte-color-progressbar",
+  "author": "khguruge",
+  "homepage": "https://github.com/khguruge/svelte-color-progressbar#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2022-06-13T19:13:12.332Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

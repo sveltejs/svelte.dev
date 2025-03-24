@@ -1,0 +1,17 @@
+{
+  "name": "sveltepress-ui",
+  "description": "Provide a user interface for SveltePress documentation.",
+  "repo_url": "https://github.com/GeopJr/SveltePress",
+  "author": "GeopJr",
+  "homepage": "https://github.com/GeopJr/SveltePress#readme",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2021-12-16T01:11:18.151Z",
+  "tags": [
+    "ui",
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 218
+}

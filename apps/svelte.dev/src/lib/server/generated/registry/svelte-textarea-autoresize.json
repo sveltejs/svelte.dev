@@ -1,0 +1,13 @@
+{
+  "name": "svelte-textarea-autoresize",
+  "description": "Create autoresizing textarea components for Svelte.",
+  "author": "d0x2f",
+  "downloads": 37,
+  "dependents": 0,
+  "updated": "2020-06-27T05:18:32.698Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

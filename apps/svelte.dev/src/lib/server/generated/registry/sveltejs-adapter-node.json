@@ -1,0 +1,17 @@
+{
+  "name": "@sveltejs/adapter-node",
+  "description": "Build SvelteKit apps for Node.js.",
+  "repo_url": "https://github.com/sveltejs/kit",
+  "author": "rich_harris",
+  "homepage": "https://svelte.dev",
+  "downloads": 185152,
+  "dependents": 58,
+  "updated": "2025-01-17T10:49:02.765Z",
+  "tags": [
+    "adapter",
+    "server"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 19121
+}

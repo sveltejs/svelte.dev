@@ -1,0 +1,13 @@
+{
+  "name": "svelte-swipe-to-action",
+  "description": "Create swipe-to-action components for Svelte apps.",
+  "author": "Nutchapon Makelai",
+  "downloads": 63,
+  "dependents": 0,
+  "updated": "2025-03-11T10:11:30.079Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false
+}

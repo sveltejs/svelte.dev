@@ -1,0 +1,15 @@
+{
+  "name": "@gabio/design-svelte",
+  "description": "Build Svelte applications with a killer design library.",
+  "repo_url": "git@github.com-vigenere23:vigenere23/gabio-design-svelte",
+  "author": "Gabriel St-Pierre",
+  "homepage": "https://github.com/vigenere23/gabio-design-svelte#readme",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2022-08-13T21:04:06.000Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": false,
+  "runes": false
+}

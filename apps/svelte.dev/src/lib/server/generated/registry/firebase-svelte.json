@@ -1,0 +1,17 @@
+{
+  "name": "firebase-svelte",
+  "description": "Integrate Svelte stores with Firebase easily.",
+  "repo_url": "https://github.com/xKesvaL/firebase-svelte",
+  "author": "KesvaL",
+  "homepage": "https://firebase-svelte.vercel.app",
+  "downloads": 11,
+  "dependents": 0,
+  "updated": "2023-10-11T16:45:55.782Z",
+  "tags": [
+    "utility",
+    "integration"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 3
+}

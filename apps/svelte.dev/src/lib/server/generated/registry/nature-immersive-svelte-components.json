@@ -1,0 +1,13 @@
+{
+  "name": "nature-immersive-svelte-components",
+  "description": "Build nature-immersive articles with Svelte components.",
+  "author": "chris-creditdesign",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2022-11-27T16:39:43.333Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": false,
+  "runes": false
+}

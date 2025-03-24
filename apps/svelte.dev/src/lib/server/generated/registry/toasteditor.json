@@ -1,0 +1,13 @@
+{
+  "name": "toasteditor",
+  "description": "Add WYSIWYG editor to Svelte and SvelteKit projects.",
+  "author": "spettit",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2022-04-30T22:44:11.447Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

@@ -1,0 +1,16 @@
+{
+  "name": "@fouita/dialog",
+  "description": "Create dialog and modal components with Svelte and Tailwind CSS.",
+  "repo_url": "https://github.com/fouita/svelte-tw-dialog",
+  "author": "fouita",
+  "homepage": "https://github.com/fouita/svelte-tw-dialog#readme",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2020-09-19T13:58:55.351Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 3
+}

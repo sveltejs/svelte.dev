@@ -1,0 +1,16 @@
+{
+  "name": "vite-plugin-svelte-svgr",
+  "description": "Enable SVG imports in Svelte projects using Vite.",
+  "repo_url": "https://github.com/blujedis/vite-plugin-svelte-svgr",
+  "author": "Blujedis",
+  "homepage": "https://github.com/blujedis/vite-plugin-svelte-svgr#readme",
+  "downloads": 258,
+  "dependents": 0,
+  "updated": "2022-09-22T22:15:54.613Z",
+  "tags": [
+    "tooling",
+    "preprocessor"
+  ],
+  "svelte5": true,
+  "runes": false
+}

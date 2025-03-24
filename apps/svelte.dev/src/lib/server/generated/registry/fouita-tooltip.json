@@ -1,0 +1,16 @@
+{
+  "name": "@fouita/tooltip",
+  "description": "Create easy-to-use tooltip components for Svelte and Tailwind.",
+  "repo_url": "https://github.com/fouita/svelte-tw-tooltip",
+  "author": "fouita",
+  "homepage": "https://github.com/fouita/svelte-tw-tooltip#readme",
+  "downloads": 73,
+  "dependents": 1,
+  "updated": "2020-09-13T12:59:38.941Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 5
+}

@@ -1,0 +1,17 @@
+{
+  "name": "@oklookat/svelte-portal",
+  "description": "Render Svelte components outside parent component, useful for modals.",
+  "repo_url": "https://github.com/oklookat/svelte-portal",
+  "author": "oklookit",
+  "homepage": "https://github.com/oklookat/svelte-portal#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2022-05-31T12:53:19.325Z",
+  "tags": [
+    "dom",
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

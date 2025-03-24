@@ -1,0 +1,13 @@
+{
+  "name": "@dztek/ui",
+  "description": "Assemble Svelte apps with UI components, actions, and services.",
+  "author": "hifalutin",
+  "downloads": 28,
+  "dependents": 0,
+  "updated": "2022-02-07T00:53:28.061Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

@@ -1,0 +1,16 @@
+{
+  "name": "@gaia-green-tech/svelte-chartjs",
+  "description": "Create chart components using Chart.js in Svelte.",
+  "repo_url": "https://github.com/SauravKanchan/svelte-chartjs",
+  "author": "Saurav Kanchan",
+  "homepage": "https://saurav.tech/mdbsvelte/?path=/story/charts--examples",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2022-09-07T12:43:10.178Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 318
+}

@@ -1,0 +1,16 @@
+{
+  "name": "svelte-ktippy",
+  "description": "Create tooltips and popovers using Tippy.js in Svelte.",
+  "repo_url": "https://github.com/Kapsonfire-DE/svelte-ktippy",
+  "author": "Dennis Kaspar",
+  "homepage": "https://github.com/Kapsonfire-DE/svelte-ktippy#readme",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2022-01-03T11:51:23.609Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 5
+}

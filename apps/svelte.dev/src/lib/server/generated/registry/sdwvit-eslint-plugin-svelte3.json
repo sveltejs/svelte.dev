@@ -1,0 +1,17 @@
+{
+  "name": "sdwvit-eslint-plugin-svelte3",
+  "description": "Lint Svelte v3 components using ESLint.",
+  "repo_url": "https://github.com/sveltejs/eslint-plugin-svelte3",
+  "author": "Conduitry",
+  "homepage": "https://github.com/sveltejs/eslint-plugin-svelte3#readme",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2020-08-27T17:57:50.337Z",
+  "tags": [
+    "tooling",
+    "preprocessor"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 376
+}

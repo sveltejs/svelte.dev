@@ -1,0 +1,13 @@
+{
+  "name": "@parkingboss/components",
+  "description": "Develop component library for Parking Boss applications.",
+  "author": "crisfole",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2020-04-24T23:52:42.903Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": false,
+  "runes": false
+}

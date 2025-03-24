@@ -1,0 +1,17 @@
+{
+  "name": "shiki-code-block-svelte",
+  "description": "Render code blocks with syntax highlighting in Svelte.",
+  "repo_url": "https://github.com/selemondev/shiki-code-block",
+  "author": "Selemondev",
+  "homepage": "https://github.com/selemondev/shiki-code-block#readme",
+  "downloads": 22,
+  "dependents": 1,
+  "updated": "2025-01-24T09:06:29.407Z",
+  "tags": [
+    "ui",
+    "tooling"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 3
+}

@@ -1,0 +1,17 @@
+{
+  "name": "@svelte-dev/auth-oauth2",
+  "description": "Implement OAuth2 authentication strategies for Svelte.",
+  "repo_url": "https://github.com/willin/svelte-turbo",
+  "author": "Willin Wang",
+  "homepage": "https://svelte.js.cool",
+  "downloads": 0,
+  "dependents": 5,
+  "updated": "2023-12-12T16:58:24.778Z",
+  "tags": [
+    "auth",
+    "integration"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 5
+}

@@ -1,0 +1,16 @@
+{
+  "name": "svelte-supertiny",
+  "description": "Provide Svelte components for SuperTinyIcons.",
+  "repo_url": "https://github.com/shinokada/svelte-supertiny",
+  "author": "Shinichi Okada",
+  "homepage": "https://svelte-supertiny.codewithshin.com/",
+  "downloads": 7,
+  "dependents": 0,
+  "updated": "2024-11-10T12:02:08.105Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 1
+}

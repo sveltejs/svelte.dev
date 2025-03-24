@@ -1,0 +1,16 @@
+{
+  "name": "svelte-swipeable",
+  "description": "Handle swipe gestures within Svelte components.",
+  "repo_url": "https://github.com/James-revans/svelte-swipeable",
+  "author": "James Evans",
+  "homepage": "https://github.com/James-revans/svelte-swipeable#readme",
+  "downloads": 2,
+  "dependents": 1,
+  "updated": "2020-03-20T08:25:17.894Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 6
+}

@@ -1,0 +1,16 @@
+{
+  "name": "braintapper-svelte-flex",
+  "description": "Create flexbox rows and columns in Svelte.",
+  "repo_url": "https://github.com/braintapper/braintapper-svelte-flex",
+  "author": "braintapper",
+  "homepage": "https://github.com/braintapper/braintapper-svelte-flex#readme",
+  "downloads": 2,
+  "dependents": 1,
+  "updated": "2020-11-20T16:51:24.967Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 2
+}

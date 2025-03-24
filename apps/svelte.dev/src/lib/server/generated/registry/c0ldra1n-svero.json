@@ -1,0 +1,16 @@
+{
+  "name": "@c0ldra1n/svero",
+  "description": "Simple router for Svelte 3 applications.",
+  "repo_url": "https://github.com/kazzkiq/svero",
+  "author": "Claudio Holanda",
+  "homepage": "https://github.com/kazzkiq/svero",
+  "downloads": 13,
+  "dependents": 0,
+  "updated": "2019-11-16T03:06:53.356Z",
+  "tags": [
+    "router"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 200
+}

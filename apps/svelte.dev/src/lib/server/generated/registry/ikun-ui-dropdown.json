@@ -1,0 +1,13 @@
+{
+  "name": "@ikun-ui/dropdown",
+  "description": "Build dropdown menus with various options in Svelte.",
+  "author": "baiwusanyu",
+  "downloads": 17,
+  "dependents": 3,
+  "updated": "2025-01-24T03:48:51.715Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

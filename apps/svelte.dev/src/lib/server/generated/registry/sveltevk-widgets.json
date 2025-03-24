@@ -1,0 +1,16 @@
+{
+  "name": "@sveltevk/widgets",
+  "description": "Integrate VK widgets into Svelte applications.",
+  "repo_url": "https://github.com/sveltevk/widgets",
+  "author": "Daniil Suvorov",
+  "homepage": "https://sveltevk.github.io/widgets/",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2022-02-16T08:44:19.582Z",
+  "tags": [
+    "integration"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

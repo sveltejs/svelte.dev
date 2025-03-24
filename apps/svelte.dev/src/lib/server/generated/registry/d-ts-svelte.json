@@ -1,0 +1,16 @@
+{
+  "name": "@d-ts/svelte",
+  "description": "Provide additional Svelte TypeScript type definitions.",
+  "repo_url": "https://github.com/rx-ts/types",
+  "author": "JounQin",
+  "homepage": "https://github.com/rx-ts/types/tree/master/packages/svelte",
+  "downloads": 24,
+  "dependents": 0,
+  "updated": "2022-05-20T16:06:11.882Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 29
+}

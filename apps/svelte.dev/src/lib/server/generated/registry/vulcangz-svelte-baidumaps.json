@@ -1,0 +1,15 @@
+{
+  "name": "@vulcangz/svelte-baidumaps",
+  "description": "Integrate Baidu Maps JavaScript API with Svelte components.",
+  "repo_url": "https://github.com/vulcangz/svelte-baidumaps",
+  "author": "vulcangz",
+  "homepage": "https://github.com/vulcangz/svelte-baidumaps#readme",
+  "downloads": 80,
+  "dependents": 0,
+  "updated": "2021-03-06T13:29:27.811Z",
+  "tags": [
+    "integration"
+  ],
+  "svelte5": false,
+  "runes": false
+}

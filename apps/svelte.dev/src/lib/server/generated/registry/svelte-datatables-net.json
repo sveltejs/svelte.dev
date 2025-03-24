@@ -1,0 +1,16 @@
+{
+  "name": "svelte-datatables-net",
+  "description": "Transform data into interactive HTML tables for Svelte.",
+  "repo_url": "https://github.com/joaquimnetocel/svelte-datatables-net",
+  "author": "Joaquim Neto",
+  "homepage": "https://github.com/joaquimnetocel/svelte-datatables-net#readme",
+  "downloads": 214,
+  "dependents": 0,
+  "updated": "2025-02-16T21:17:43.890Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 28
+}

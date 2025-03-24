@@ -1,0 +1,17 @@
+{
+  "name": "@dylanvann/prettier-plugin-svelte",
+  "description": "Format Svelte components with Prettier.",
+  "repo_url": "https://github.com/sveltejs/prettier-plugin-svelte",
+  "author": "James Birtles",
+  "homepage": "https://github.com/sveltejs/prettier-plugin-svelte#readme",
+  "downloads": 3,
+  "dependents": 0,
+  "updated": "2020-09-08T19:43:52.806Z",
+  "tags": [
+    "tooling",
+    "preprocessor"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 762
+}

@@ -1,0 +1,16 @@
+{
+  "name": "svelte-theme-provider",
+  "description": "Provide theme support for Svelte applications.",
+  "repo_url": "https://github.com/wecount-dev/svelte-theme-provider",
+  "author": "Yujong Lee",
+  "homepage": "https://github.com/wecount-dev/svelte-theme-provider",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2021-10-22T12:55:06.226Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 6
+}

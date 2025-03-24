@@ -1,0 +1,16 @@
+{
+  "name": "svelte-lang",
+  "description": "Simplify multilingual support in Svelte applications.",
+  "repo_url": "https://github.com/enoy19/svelte-lang",
+  "author": "enoy19",
+  "homepage": "https://github.com/enoy19/svelte-lang#readme",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2024-11-01T19:14:37.704Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 2
+}

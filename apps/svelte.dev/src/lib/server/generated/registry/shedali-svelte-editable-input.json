@@ -1,0 +1,15 @@
+{
+  "name": "@shedali/svelte-editable-input",
+  "description": "Create editable input fields for Svelte applications.",
+  "repo_url": "https://github.com/shedali/EditableInput",
+  "author": "franzi",
+  "homepage": "https://github.com/shedali/EditableInput#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2020-06-08T20:15:04.934Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

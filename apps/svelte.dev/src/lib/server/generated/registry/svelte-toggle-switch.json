@@ -1,0 +1,16 @@
+{
+  "name": "svelte-toggle-switch",
+  "description": "Create toggle switch components for Svelte.",
+  "repo_url": "https://github.com/ishansasika/svelte-toggle-switch",
+  "author": "Ishan Karunaratne",
+  "homepage": "https://github.com/ishansasika/svelte-toggle-switch#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2022-06-30T11:30:46.312Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

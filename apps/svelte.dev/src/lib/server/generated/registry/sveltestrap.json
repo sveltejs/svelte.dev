@@ -1,0 +1,17 @@
+{
+  "name": "sveltestrap",
+  "description": "Provides Bootstrap 5 components for Svelte applications.",
+  "repo_url": "https://github.com/bestguy/sveltestrap",
+  "author": "bestguy",
+  "homepage": "https://github.com/bestguy/sveltestrap#readme",
+  "downloads": 7999,
+  "dependents": 13,
+  "updated": "2023-12-23T03:15:42.477Z",
+  "tags": [
+    "component-library",
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 1314
+}

@@ -1,0 +1,16 @@
+{
+  "name": "@neo4j-cypher/svelte-codemirror",
+  "description": "Integrate Cypher editor using CodeMirror 6 in Svelte.",
+  "repo_url": "https://github.com/neo4j/cypher-editor",
+  "author": "Neo4j Inc.",
+  "homepage": "https://github.com/neo4j/cypher-editor#readme",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2024-04-02T12:27:23.937Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 46
+}

@@ -1,0 +1,16 @@
+{
+  "name": "svelte-mapbox",
+  "description": "Create Mapbox components for Svelte applications.",
+  "repo_url": "https://github.com/jack-weilage/svelte-mapbox",
+  "author": "jack-weilage",
+  "homepage": "https://github.com/jack-weilage/svelte-mapbox#readme",
+  "downloads": 13,
+  "dependents": 0,
+  "updated": "2024-02-09T18:13:00.635Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 9
+}

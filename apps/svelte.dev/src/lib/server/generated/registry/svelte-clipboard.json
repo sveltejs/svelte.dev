@@ -1,0 +1,16 @@
+{
+  "name": "svelte-clipboard",
+  "description": "Copy text to clipboard with Svelte component.",
+  "repo_url": "https://github.com/meloalright/svelte-clipboard",
+  "author": "meloalright",
+  "homepage": "https://github.com/meloalright/svelte-clipboard#readme",
+  "downloads": 292,
+  "dependents": 0,
+  "updated": "2021-09-11T11:55:07.795Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 8
+}

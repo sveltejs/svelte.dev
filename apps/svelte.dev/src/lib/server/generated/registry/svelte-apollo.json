@@ -1,0 +1,13 @@
+{
+  "name": "svelte-apollo",
+  "description": "Svelte integration for Apollo GraphQL.",
+  "author": "timhall",
+  "downloads": 1287,
+  "dependents": 3,
+  "updated": "2022-02-21T22:26:28.006Z",
+  "tags": [
+    "integration"
+  ],
+  "svelte5": false,
+  "runes": false
+}

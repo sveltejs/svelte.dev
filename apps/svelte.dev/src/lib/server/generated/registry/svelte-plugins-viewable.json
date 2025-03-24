@@ -1,0 +1,16 @@
+{
+  "name": "@svelte-plugins/viewable",
+  "description": "Track element viewability using Intersection Observer API.",
+  "repo_url": "https://github.com/svelte-plugins/svelte-viewable",
+  "author": "Kieran Boyle",
+  "homepage": "https://github.com/svelte-plugins/svelte-viewable",
+  "downloads": 36,
+  "dependents": 0,
+  "updated": "2024-02-12T18:57:19.225Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 38
+}

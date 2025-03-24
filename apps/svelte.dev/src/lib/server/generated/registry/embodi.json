@@ -1,0 +1,16 @@
+{
+  "name": "embodi",
+  "description": "Generate static websites using Svelte and Vite.",
+  "repo_url": "https://github.com/embodijs/generator",
+  "author": "cordlesswool",
+  "homepage": "https://github.com/embodijs/generator/tree/main#readme",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2024-11-16T16:20:35.949Z",
+  "tags": [
+    "content"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 2
+}

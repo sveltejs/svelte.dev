@@ -1,0 +1,16 @@
+{
+  "name": "esbuild-plugin-svelte",
+  "description": "Load Svelte files using esbuild plugin.",
+  "repo_url": "https://github.com/yagebu/esbuild-plugin-svelte",
+  "author": "Jakob Schnitzer",
+  "homepage": "https://github.com/yagebu/esbuild-plugin-svelte#readme",
+  "downloads": 15,
+  "dependents": 0,
+  "updated": "2021-01-02T12:08:49.332Z",
+  "tags": [
+    "tooling",
+    "preprocessor"
+  ],
+  "svelte5": false,
+  "runes": false
+}

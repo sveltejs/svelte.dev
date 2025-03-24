@@ -1,0 +1,16 @@
+{
+  "name": "@minna-ui/dialog",
+  "description": "Fast, friendly UI kit with dialog component for Svelte.",
+  "repo_url": "https://github.com/WeAreGenki/minna-ui",
+  "author": "Max Milton",
+  "homepage": "https://wearegenki.github.io/minna-ui",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2019-04-14T19:53:59.669Z",
+  "tags": [
+    "ui",
+    "component-library"
+  ],
+  "svelte5": false,
+  "runes": false
+}

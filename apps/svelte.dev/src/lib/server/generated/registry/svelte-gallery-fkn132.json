@@ -1,0 +1,14 @@
+{
+  "name": "svelte-gallery-fkn132",
+  "description": "Display images in Svelte gallery and carousel components.",
+  "author": "trypophob1a",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2023-06-06T09:23:20.466Z",
+  "tags": [
+    "ui",
+    "media"
+  ],
+  "svelte5": false,
+  "runes": false
+}

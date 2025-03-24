@@ -1,0 +1,15 @@
+{
+  "name": "@pentcloud/svelte-utils",
+  "description": "Provide utility functions for Svelte component library development.",
+  "repo_url": "https://github.com/pentcloud/svelte-utils",
+  "author": "Pentcloud Team",
+  "homepage": "https://github.com/pentcloud/svelte-utils#readme",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2020-06-15T16:02:52.939Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

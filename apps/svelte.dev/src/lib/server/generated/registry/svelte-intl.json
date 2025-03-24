@@ -1,0 +1,16 @@
+{
+  "name": "svelte-intl",
+  "description": "Internationalize Svelte apps using format-message.",
+  "repo_url": "https://github.com/Panya/svelte-intl",
+  "author": "Cristóvão Trevisan",
+  "homepage": "https://github.com/Panya/svelte-intl",
+  "downloads": 49,
+  "dependents": 0,
+  "updated": "2022-04-04T11:16:49.037Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 47
+}

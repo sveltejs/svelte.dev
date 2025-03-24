@@ -1,0 +1,13 @@
+{
+  "name": "@pdfsvex/dynamic-page-number",
+  "description": "Dynamically generate page numbers for PDF documents in Svelte.",
+  "author": "manuel3108",
+  "downloads": 0,
+  "dependents": 2,
+  "updated": "2021-07-04T12:13:32.847Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

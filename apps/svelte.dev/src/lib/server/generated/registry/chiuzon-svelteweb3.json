@@ -1,0 +1,16 @@
+{
+  "name": "@chiuzon/svelteweb3",
+  "description": "Build dApps with SvelteKit, providing web3 utilities.",
+  "repo_url": "https://github.com/chiuzon/svelteWeb3",
+  "author": "chiuzon",
+  "downloads": 52,
+  "dependents": 0,
+  "updated": "2021-12-30T12:36:21.482Z",
+  "tags": [
+    "utility",
+    "integration"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 14
+}

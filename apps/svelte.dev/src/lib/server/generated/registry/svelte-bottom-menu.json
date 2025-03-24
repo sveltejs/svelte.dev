@@ -1,0 +1,13 @@
+{
+  "name": "svelte-bottom-menu",
+  "description": "Create bottom navigation menus for Svelte applications.",
+  "author": "kuanyu0729",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2022-04-26T04:11:13.284Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

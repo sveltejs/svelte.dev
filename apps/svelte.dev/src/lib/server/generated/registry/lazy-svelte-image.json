@@ -1,0 +1,16 @@
+{
+  "name": "lazy-svelte-image",
+  "description": "Lazy load images in Svelte with custom loaders and broken image handling.",
+  "repo_url": "https://github.com/rishabharidas/lazy-svelte-image",
+  "author": "rishabharidas",
+  "homepage": "https://github.com/rishabharidas/lazy-svelte-image#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2024-07-08T12:55:09.476Z",
+  "tags": [
+    "media"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 3
+}

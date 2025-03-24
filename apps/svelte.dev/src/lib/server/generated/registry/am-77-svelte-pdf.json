@@ -1,0 +1,13 @@
+{
+  "name": "@am-77/svelte-pdf",
+  "description": "View PDF documents within Svelte applications.",
+  "author": "am-77",
+  "downloads": 47,
+  "dependents": 0,
+  "updated": "2023-09-05T15:19:06.902Z",
+  "tags": [
+    "media"
+  ],
+  "svelte5": false,
+  "runes": false
+}

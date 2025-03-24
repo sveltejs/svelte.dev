@@ -1,0 +1,16 @@
+{
+  "name": "@fullcrew/design",
+  "description": "Offer responsive UI components for Svelte applications.",
+  "repo_url": "https://github.com/fullcrew/design",
+  "author": "Fullcrew, Inc. Team",
+  "homepage": "https://github.com/fullcrew/design#readme",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2020-04-22T12:19:31.844Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

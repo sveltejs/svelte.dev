@@ -1,0 +1,16 @@
+{
+  "name": "svelte-perfect-select",
+  "description": "Create customizable select elements for Svelte applications.",
+  "repo_url": "https://github.com/ishansasika/svelte-perfect-select",
+  "author": "Ishan Karunaratne",
+  "homepage": "https://github.com/ishansasika/svelte-perfect-select#readme",
+  "downloads": 6,
+  "dependents": 0,
+  "updated": "2022-06-13T11:21:16.446Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

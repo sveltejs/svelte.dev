@@ -1,0 +1,16 @@
+{
+  "name": "typescript-svelte-plugin",
+  "description": "Provides TypeScript plugin for Svelte intellisense.",
+  "repo_url": "https://github.com/sveltejs/language-tools",
+  "author": "The Svelte Community",
+  "homepage": "https://github.com/sveltejs/language-tools/tree/master/packages/typescript-plugin",
+  "downloads": 11612,
+  "dependents": 4,
+  "updated": "2025-03-06T14:09:32.286Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 1290
+}

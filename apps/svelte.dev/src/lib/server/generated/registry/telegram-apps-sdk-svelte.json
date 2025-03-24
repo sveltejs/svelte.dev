@@ -1,0 +1,16 @@
+{
+  "name": "@telegram-apps/sdk-svelte",
+  "description": "Provides Svelte.js bindings for Mini Apps client SDK.",
+  "repo_url": "https://github.com/Telegram-Mini-Apps/telegram-apps",
+  "author": "Nazar Ugrinovsky",
+  "homepage": "https://github.com/Telegram-Mini-Apps/telegram-apps#readme",
+  "downloads": 100,
+  "dependents": 0,
+  "updated": "2025-03-22T18:05:03.673Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 904
+}

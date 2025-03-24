@@ -1,0 +1,13 @@
+{
+  "name": "modal-overlay",
+  "description": "Create modal overlays in Svelte applications.",
+  "author": "Reza Handzalah",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2020-05-09T02:34:39.050Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

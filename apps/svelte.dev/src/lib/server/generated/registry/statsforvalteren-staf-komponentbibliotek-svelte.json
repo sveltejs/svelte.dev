@@ -1,0 +1,15 @@
+{
+  "name": "@statsforvalteren/staf-komponentbibliotek-svelte",
+  "description": "Provide Statsforvalteren's Svelte component library.",
+  "repo_url": "https://github.com/fmfaDigitalisering/staf-komponentbibliotek-svelte",
+  "author": "pekaaw",
+  "homepage": "https://github.com/fmfaDigitalisering/staf-komponentbibliotek-svelte#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2022-02-01T08:54:31.521Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": false,
+  "runes": false
+}

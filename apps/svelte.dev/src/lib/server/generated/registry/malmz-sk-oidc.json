@@ -1,0 +1,16 @@
+{
+  "name": "@malmz/sk-oidc",
+  "description": "Provides OIDC client for SvelteKit applications.",
+  "repo_url": "https://github.com/Malmz/sk-oidc",
+  "author": "Carl Malmgren",
+  "homepage": "https://github.com/Malmz/sk-oidc",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2023-06-13T01:24:44.666Z",
+  "tags": [
+    "auth",
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

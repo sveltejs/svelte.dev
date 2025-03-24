@@ -1,0 +1,14 @@
+{
+  "name": "svelte-social-btns",
+  "description": "Create social media buttons for Svelte applications.",
+  "author": "Natumanya Guy Muriro",
+  "homepage": "https://github.com/NatumanyaGuy/svelte-social-btns",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2023-07-26T11:24:09.866Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

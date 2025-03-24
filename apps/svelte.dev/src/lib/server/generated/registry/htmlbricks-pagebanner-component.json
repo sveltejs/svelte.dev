@@ -1,0 +1,13 @@
+{
+  "name": "@htmlbricks/pagebanner-component",
+  "description": "Create page banner component for Svelte apps.",
+  "author": "Dario Caruso",
+  "downloads": 111,
+  "dependents": 0,
+  "updated": "2022-01-02T19:14:36.809Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

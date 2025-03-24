@@ -1,0 +1,15 @@
+{
+  "name": "@cnshsliu/myinput1",
+  "description": "Svelte component package starter template.",
+  "repo_url": "https://github.com/el3um4s/svelte-component-package-starter",
+  "author": "Samuele C. De Tomasi",
+  "homepage": "https://github.com/el3um4s/svelte-component-package-starter#readme",
+  "downloads": 3,
+  "dependents": 0,
+  "updated": "2022-12-18T14:14:42.250Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

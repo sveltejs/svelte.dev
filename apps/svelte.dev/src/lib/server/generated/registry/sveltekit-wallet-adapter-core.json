@@ -1,0 +1,16 @@
+{
+  "name": "sveltekit-wallet-adapter-core",
+  "description": "Core Svelte store for Solana wallet adapter.",
+  "repo_url": "https://github.com/portalpayments/svelte-on-solana-wallet-adapter",
+  "author": "Svelte on Solana team",
+  "homepage": "https://github.com/portalpayments/svelte-on-solana-wallet-adapter#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2023-10-29T22:20:19.791Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 3
+}

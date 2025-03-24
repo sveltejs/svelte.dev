@@ -1,0 +1,15 @@
+{
+  "name": "rollup-plugin-svelte-hot",
+  "description": "Enable HMR for Svelte components in Rollup.",
+  "author": "Rich Harris",
+  "homepage": "https://github.com/rixo/rollup-plugin-svelte",
+  "downloads": 375,
+  "dependents": 4,
+  "updated": "2021-05-13T15:25:18.197Z",
+  "tags": [
+    "tooling",
+    "preprocessor"
+  ],
+  "svelte5": true,
+  "runes": false
+}

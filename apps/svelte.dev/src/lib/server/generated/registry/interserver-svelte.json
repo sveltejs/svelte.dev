@@ -1,0 +1,17 @@
+{
+  "name": "interserver-svelte",
+  "description": "Simplify IntersectionObserver usage within Svelte components.",
+  "repo_url": "https://github.com/mefechoel/interserver-svelte",
+  "author": "Michel Strelow @mefechoel",
+  "homepage": "https://github.com/mefechoel/interserver-svelte#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2020-05-14T12:56:50.255Z",
+  "tags": [
+    "utility",
+    "dom"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 1
+}

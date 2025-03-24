@@ -1,0 +1,16 @@
+{
+  "name": "svelte-bootstrap-svg-icons",
+  "description": "Use Bootstrap SVG icons in Svelte projects.",
+  "repo_url": "https://github.com/shinokada/svelte-bootstrap-svg-icons",
+  "author": "Shinichi Okada",
+  "homepage": "https://svelte-bootstrap-svg-icons.codewithshin.com/",
+  "downloads": 10725,
+  "dependents": 0,
+  "updated": "2024-10-31T11:40:47.021Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 2
+}

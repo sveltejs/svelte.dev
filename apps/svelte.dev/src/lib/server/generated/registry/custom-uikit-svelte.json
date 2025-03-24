@@ -1,0 +1,16 @@
+{
+  "name": "custom-uikit-svelte",
+  "description": "Offer UIkit framework components for Svelte.",
+  "repo_url": "https://github.com/cdellacqua/custom-uikit-svelte",
+  "author": "Carlo Dell'Acqua",
+  "homepage": "https://github.com/cdellacqua/custom-uikit-svelte",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2021-12-07T17:52:56.198Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 11
+}

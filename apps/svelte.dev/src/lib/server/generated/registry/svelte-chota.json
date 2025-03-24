@@ -1,0 +1,17 @@
+{
+  "name": "svelte-chota",
+  "description": "UI components for Svelte based on Chota CSS framework.",
+  "repo_url": "https://github.com/AlexxNB/svelte-chota",
+  "author": "Alexey Schebelev",
+  "homepage": "https://alexxnb.github.io/svelte-chota",
+  "downloads": 34,
+  "dependents": 0,
+  "updated": "2021-07-29T11:43:20.374Z",
+  "tags": [
+    "component-library",
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 287
+}

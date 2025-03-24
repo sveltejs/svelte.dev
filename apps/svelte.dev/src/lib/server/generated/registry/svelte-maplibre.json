@@ -1,0 +1,16 @@
+{
+  "name": "svelte-maplibre",
+  "description": "Create Svelte bindings for MapLibre maps.",
+  "repo_url": "https://github.com/dimfeld/svelte-maplibre",
+  "author": "Daniel Imfeld",
+  "homepage": "https://svelte-maplibre.imfeld.dev",
+  "downloads": 5254,
+  "dependents": 7,
+  "updated": "2025-03-20T19:32:58.345Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 404
+}

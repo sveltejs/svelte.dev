@@ -1,0 +1,16 @@
+{
+  "name": "svelte-shared",
+  "description": "Provide shared stores and actions for Svelte applications.",
+  "repo_url": "https://github.com/andreasmcdermott/svelte-shared",
+  "author": "Andreas McDermott",
+  "homepage": "https://github.com/andreasmcdermott/svelte-shared#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2022-09-18T07:23:47.351Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

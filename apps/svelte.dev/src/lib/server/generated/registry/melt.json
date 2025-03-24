@@ -1,0 +1,16 @@
+{
+  "name": "melt",
+  "description": "Build headless UI components for Svelte with Runes support.",
+  "repo_url": "https://github.com/melt-ui/next-gen",
+  "author": "Thomas G. Lopes",
+  "homepage": "https://next.melt-ui.com/",
+  "downloads": 1660,
+  "dependents": 0,
+  "updated": "2025-03-22T09:35:47.007Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 130
+}

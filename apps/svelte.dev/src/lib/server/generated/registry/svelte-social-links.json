@@ -1,0 +1,16 @@
+{
+  "name": "svelte-social-links",
+  "description": "Create share link component library for Svelte.",
+  "repo_url": "https://github.com/Ennoriel/social-links",
+  "author": "Maxime Dupont",
+  "homepage": "https://ennoriel.github.io/Ennoriel/social-links",
+  "downloads": 12,
+  "dependents": 0,
+  "updated": "2024-01-21T08:39:56.469Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 4
+}

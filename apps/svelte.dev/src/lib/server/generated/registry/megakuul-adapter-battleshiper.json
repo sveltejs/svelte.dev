@@ -1,0 +1,16 @@
+{
+  "name": "@megakuul/adapter-battleshiper",
+  "description": "Deploy SvelteKit applications to battleshiper lambda infrastructure.",
+  "repo_url": "https://github.com/megakuul/battleshiper",
+  "author": "Megakuul",
+  "homepage": "https://github.com/megakuul/battleshiper#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2024-10-03T18:26:22.551Z",
+  "tags": [
+    "adapter"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 2
+}

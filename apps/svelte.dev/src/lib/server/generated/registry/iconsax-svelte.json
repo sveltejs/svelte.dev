@@ -1,0 +1,16 @@
+{
+  "name": "iconsax-svelte",
+  "description": "Use Iconsax icons as Svelte components.",
+  "repo_url": "https://github.com/mashanz/iconsax-svelte",
+  "author": "Mashanz",
+  "homepage": "https://github.com/mashanz/iconsax-svelte#readme",
+  "downloads": 55,
+  "dependents": 0,
+  "updated": "2022-09-04T03:24:55.884Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 7
+}

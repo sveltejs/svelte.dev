@@ -1,9 +1,0 @@
----
-name: "@beyonk/svelte-googlemaps"
-description: "Integrate Google Maps and Places in Svelte applications."
-author: "antony"
-downloads: 123
-updated: "2022-01-06T17:25:02.073Z"
-tags: 
-  - integration
----

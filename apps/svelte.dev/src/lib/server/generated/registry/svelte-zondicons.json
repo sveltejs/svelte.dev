@@ -1,0 +1,15 @@
+{
+  "name": "svelte-zondicons",
+  "description": "Use Zondicons icons in Svelte applications.",
+  "repo_url": "https://github.com/moollaza/svelte-zondicons",
+  "author": "moollaza",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2019-12-24T02:21:34.421Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 4
+}

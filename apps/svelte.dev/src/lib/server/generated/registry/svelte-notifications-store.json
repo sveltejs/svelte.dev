@@ -1,0 +1,13 @@
+{
+  "name": "svelte-notifications-store",
+  "description": "Manage and display notifications in Svelte applications.",
+  "author": "Anthony Sergeant",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2022-03-06T20:07:51.622Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

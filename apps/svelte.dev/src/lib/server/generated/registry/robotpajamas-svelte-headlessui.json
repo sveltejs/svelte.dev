@@ -1,0 +1,16 @@
+{
+  "name": "@robotpajamas/svelte-headlessui",
+  "description": "Unofficial Svelte port of Headless UI, unstyled, accessible UI components.",
+  "repo_url": "https://github.com/robotpajamas/svelte-headlessui",
+  "author": "SJ",
+  "homepage": "https://svelte-headlessui.goss.io",
+  "downloads": 17,
+  "dependents": 0,
+  "updated": "2023-04-19T16:19:47.865Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

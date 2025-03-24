@@ -1,0 +1,13 @@
+{
+  "name": "@htmlbricks/hb-input-captcha-google-v2",
+  "description": "Integrate Google reCAPTCHA v2 in Svelte apps.",
+  "author": "Dario Caruso",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2022-06-06T01:53:15.126Z",
+  "tags": [
+    "integration"
+  ],
+  "svelte5": false,
+  "runes": false
+}

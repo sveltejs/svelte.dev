@@ -1,0 +1,16 @@
+{
+  "name": "@felte/extender-persist",
+  "description": "Persists Felte form state using localStorage.",
+  "repo_url": "https://github.com/pablo-abc/felte",
+  "author": "Pablo Berganza",
+  "homepage": "https://github.com/pablo-abc/felte/tree/main/packages/extender-persist",
+  "downloads": 157,
+  "dependents": 0,
+  "updated": "2024-10-29T20:35:33.667Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 1043
+}

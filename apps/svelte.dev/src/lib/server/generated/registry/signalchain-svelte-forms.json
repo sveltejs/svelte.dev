@@ -1,0 +1,14 @@
+{
+  "name": "@signalchain/svelte-forms",
+  "description": "Provides a forms library for Svelte applications.",
+  "repo_url": "",
+  "author": "signalchain",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2022-03-12T12:43:48.404Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

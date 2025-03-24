@@ -1,0 +1,13 @@
+{
+  "name": "@imtala/cli",
+  "description": "Build Svelte projects with create-svelte.",
+  "author": "des-des",
+  "downloads": 21,
+  "dependents": 0,
+  "updated": "2022-06-04T16:44:32.755Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false
+}

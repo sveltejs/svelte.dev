@@ -1,0 +1,13 @@
+{
+  "name": "@tdi/svcli",
+  "description": "CLI tool for setting up Svelte projects.",
+  "author": "firefish5000",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2020-10-25T16:14:14.610Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false
+}

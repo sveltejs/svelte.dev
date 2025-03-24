@@ -1,0 +1,17 @@
+{
+  "name": "@joynow/prettier-plugin-svelte",
+  "description": "Formats Svelte code using Prettier.",
+  "repo_url": "https://github.com/sveltejs/prettier-plugin-svelte",
+  "author": "joynow",
+  "homepage": "https://github.com/sveltejs/prettier-plugin-svelte#readme",
+  "downloads": 19,
+  "dependents": 0,
+  "updated": "2022-08-29T06:05:29.810Z",
+  "tags": [
+    "tooling",
+    "preprocessor"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 762
+}

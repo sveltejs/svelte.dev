@@ -1,0 +1,16 @@
+{
+  "name": "@svelte-put/dragscroll",
+  "description": "Adds drag-to-scroll behavior to Svelte elements.",
+  "repo_url": "https://github.com/vnphanquang/svelte-put",
+  "author": "Quang Phan",
+  "homepage": "https://github.com/vnphanquang/svelte-put/tree/next/packages/dragscroll",
+  "downloads": 913,
+  "dependents": 0,
+  "updated": "2024-10-25T05:17:14.596Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 908
+}

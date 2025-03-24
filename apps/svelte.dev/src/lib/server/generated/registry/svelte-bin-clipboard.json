@@ -1,0 +1,13 @@
+{
+  "name": "@svelte-bin/clipboard",
+  "description": "Copy text and images to clipboard with Svelte actions.",
+  "author": "binsarjr",
+  "downloads": 137,
+  "dependents": 0,
+  "updated": "2023-11-13T20:03:51.203Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

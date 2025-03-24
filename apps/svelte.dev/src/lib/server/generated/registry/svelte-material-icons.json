@@ -1,0 +1,16 @@
+{
+  "name": "svelte-material-icons",
+  "description": "Provide Material Design Icons for Svelte apps.",
+  "repo_url": "https://github.com/ramiroaisen/svelte-material-icons",
+  "author": "ramiroaisen@gmail.com",
+  "homepage": "https://github.com/ramiroaisen/svelte-material-icons#readme",
+  "downloads": 2034,
+  "dependents": 4,
+  "updated": "2023-07-10T17:34:10.050Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 67
+}

@@ -1,0 +1,17 @@
+{
+  "name": "@edraj/sveltestrap",
+  "description": "Bootstrap 5 components for Svelte apps.",
+  "repo_url": "https://github.com/edraj/sveltestrap",
+  "author": "ms_splimter",
+  "homepage": "https://github.com/edraj/sveltestrap#readme",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2023-11-22T12:49:14.172Z",
+  "tags": [
+    "component-library",
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

@@ -1,0 +1,16 @@
+{
+  "name": "cl-editor",
+  "description": "Create lightweight text editors with Svelte.",
+  "repo_url": "https://github.com/nenadpnc/cl-editor",
+  "author": "nenadpnc",
+  "homepage": "https://nenadpnc.github.io/cl-editor/",
+  "downloads": 896,
+  "dependents": 2,
+  "updated": "2021-12-03T20:40:58.512Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 298
+}

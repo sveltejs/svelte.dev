@@ -1,0 +1,13 @@
+{
+  "name": "@schedule-x/svelte",
+  "description": "Provides a Svelte component for the Schedule-X calendar.",
+  "author": "tomosterlund",
+  "downloads": 184,
+  "dependents": 0,
+  "updated": "2024-12-25T19:08:58.117Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false
+}

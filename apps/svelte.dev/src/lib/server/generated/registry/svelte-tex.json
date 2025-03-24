@@ -1,0 +1,13 @@
+{
+  "name": "svelte-tex",
+  "description": "Render TeX math expressions in Svelte using MathJax or Temml.",
+  "author": "Jirawat Boonkumnerd",
+  "downloads": 2,
+  "dependents": 1,
+  "updated": "2024-11-16T12:49:02.760Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

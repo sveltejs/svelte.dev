@@ -1,0 +1,16 @@
+{
+  "name": "svelte-styling",
+  "description": "Apply CSS variables via Svelte actions.",
+  "repo_url": "https://github.com/LeoDog896/svelte-styling",
+  "author": "Tristan F.",
+  "homepage": "https://leodog896.github.io/svelte-styling",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2022-10-17T13:00:40.238Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 1
+}

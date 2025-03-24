@@ -1,0 +1,16 @@
+{
+  "name": "@thegrommet/svelte-syncable",
+  "description": "Synchronize Svelte store data with localStorage.",
+  "repo_url": "https://github.com/chainlist/svelte-syncable",
+  "author": "Kevin Guillouard",
+  "homepage": "https://github.com/chainlist/svelte-syncable#readme",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2022-01-21T17:07:39.922Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 26
+}

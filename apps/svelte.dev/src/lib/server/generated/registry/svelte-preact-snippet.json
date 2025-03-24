@@ -1,0 +1,13 @@
+{
+  "name": "svelte-preact-snippet",
+  "description": "Create Svelte snippets using JSX syntax based on Preact.",
+  "author": "TOMIKAWA Sotaro",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2024-08-17T03:17:00.870Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": true,
+  "runes": false
+}

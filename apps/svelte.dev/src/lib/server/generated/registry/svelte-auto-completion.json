@@ -1,0 +1,15 @@
+{
+  "name": "svelte-auto-completion",
+  "description": "Provides autocomplete functionality for Svelte components.",
+  "repo_url": "https://github.com/jeremiedubuis/svelte-auto-complete",
+  "author": "Jérémie Dubuis",
+  "homepage": "https://github.com/jeremiedubuis/svelte-auto-complete#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2020-07-08T15:03:35.722Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

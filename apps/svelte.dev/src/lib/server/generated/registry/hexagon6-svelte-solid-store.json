@@ -1,0 +1,17 @@
+{
+  "name": "@hexagon6/svelte-solid-store",
+  "description": "Provide Svelte stores for Solid (social linked data).",
+  "repo_url": "https://github.com/hexagon6/svelte-solid-store",
+  "author": "Hexagon Six",
+  "homepage": "https://github.com/hexagon6/svelte-solid-store#readme",
+  "downloads": 29,
+  "dependents": 0,
+  "updated": "2024-05-21T09:52:43.589Z",
+  "tags": [
+    "utility",
+    "integration"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 1
+}

@@ -1,0 +1,16 @@
+{
+  "name": "@humandialog/forms.svelte",
+  "description": "Basic Svelte UI components for Object Reef applications.",
+  "repo_url": "https://github.com/HumanDialog/forms.svelte",
+  "author": "Human Dialog",
+  "homepage": "https://github.com/HumanDialog/forms.svelte#readme",
+  "downloads": 212,
+  "dependents": 0,
+  "updated": "2025-03-19T08:10:57.000Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

@@ -1,0 +1,15 @@
+{
+  "name": "@4mende2/svelte-heroicons",
+  "description": "Provide prepackaged Heroicons for use in Svelte applications.",
+  "repo_url": "https://gitlab.com/aldomendez/svelte-heroicons",
+  "author": "Aldo Mendez",
+  "homepage": "https://gitlab.com/aldomendez/svelte-heroicons",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2020-10-26T17:30:35.791Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

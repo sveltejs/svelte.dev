@@ -1,0 +1,14 @@
+{
+  "name": "svelte-toolkit",
+  "description": "Collection of UI components for Svelte.",
+  "author": "andrewjk",
+  "downloads": 10,
+  "dependents": 0,
+  "updated": "2021-10-08T03:03:47.029Z",
+  "tags": [
+    "ui",
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

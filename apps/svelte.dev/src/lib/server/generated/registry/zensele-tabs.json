@@ -1,0 +1,16 @@
+{
+  "name": "zensele-tabs",
+  "description": "Create Svelte tab bar component.",
+  "repo_url": "https://github.com/countnazgul/zensele-tabs",
+  "author": "Stefan Stoichev @countnazgul",
+  "homepage": "https://github.com/countnazgul/zensele-tabs",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2020-06-15T15:39:31.989Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 1
+}

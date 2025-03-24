@@ -1,0 +1,14 @@
+{
+  "name": "nature-graphic-svelte-components",
+  "description": "Build nature-themed infographics using Svelte components.",
+  "author": "chris-creditdesign",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2020-11-18T18:54:19.520Z",
+  "tags": [
+    "component-library",
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

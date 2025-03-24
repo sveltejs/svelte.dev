@@ -1,0 +1,16 @@
+{
+  "name": "heroicons-for-svelte",
+  "description": "Use Heroicons in Svelte projects.",
+  "repo_url": "https://github.com/patrikpessi/heroicons-for-svelte",
+  "author": "batti",
+  "homepage": "https://github.com/patrikpessi/heroicons-for-svelte#readme",
+  "downloads": 116,
+  "dependents": 0,
+  "updated": "2022-02-03T07:42:49.229Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 1
+}

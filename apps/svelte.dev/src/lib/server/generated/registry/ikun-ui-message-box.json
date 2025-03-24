@@ -1,0 +1,14 @@
+{
+  "name": "@ikun-ui/message-box",
+  "description": "Display message boxes with customizable content in Svelte.",
+  "author": "baiwusanyu",
+  "downloads": 31,
+  "dependents": 1,
+  "updated": "2025-01-24T03:49:06.807Z",
+  "tags": [
+    "ui",
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

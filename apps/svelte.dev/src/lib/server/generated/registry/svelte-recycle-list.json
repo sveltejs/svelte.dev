@@ -1,0 +1,13 @@
+{
+  "name": "svelte-recycle-list",
+  "description": "Svelte recycle list component.",
+  "author": "ee70.dev",
+  "downloads": 3,
+  "dependents": 0,
+  "updated": "2025-02-19T13:03:13.769Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false
+}

@@ -1,0 +1,16 @@
+{
+  "name": "@amadeus-it-group/svelvunity",
+  "description": "Reusable Svelte components and utilities library.",
+  "repo_url": "https://github.com/AmadeusITGroup/Svelvunity",
+  "author": "mcavdar",
+  "homepage": "https://github.com/AmadeusITGroup/Svelvunity#readme",
+  "downloads": 25,
+  "dependents": 0,
+  "updated": "2025-03-05T17:47:34.712Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

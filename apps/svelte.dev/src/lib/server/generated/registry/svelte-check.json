@@ -1,0 +1,16 @@
+{
+  "name": "svelte-check",
+  "description": "Check Svelte code for errors and warnings.",
+  "repo_url": "https://github.com/sveltejs/language-tools",
+  "author": "The Svelte Community",
+  "homepage": "https://github.com/sveltejs/language-tools#readme",
+  "downloads": 501248,
+  "dependents": 69,
+  "updated": "2025-03-06T14:20:23.951Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 1290
+}

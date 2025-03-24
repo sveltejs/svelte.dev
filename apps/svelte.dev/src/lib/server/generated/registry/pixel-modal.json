@@ -1,0 +1,13 @@
+{
+  "name": "pixel-modal",
+  "description": "Create simple, lightweight modal widget for SvelteKit apps.",
+  "author": "Sergey Galaktionov",
+  "downloads": 7,
+  "dependents": 0,
+  "updated": "2023-10-24T03:55:51.618Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false
+}

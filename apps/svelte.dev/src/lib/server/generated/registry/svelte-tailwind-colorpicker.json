@@ -1,0 +1,16 @@
+{
+  "name": "svelte-tailwind-colorpicker",
+  "description": "Create color pickers using Tailwind CSS color palettes in Svelte.",
+  "repo_url": "https://github.com/kaerte/svelte-tailwind-colorpicker",
+  "author": "kaerte",
+  "homepage": "https://svelte-tailwind-colorpicker.pages.dev/",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2024-10-12T11:03:43.192Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

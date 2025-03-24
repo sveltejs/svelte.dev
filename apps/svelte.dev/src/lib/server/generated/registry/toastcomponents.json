@@ -1,0 +1,13 @@
+{
+  "name": "toastcomponents",
+  "description": "Add date and time pickers to Svelte projects.",
+  "author": "spettit",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2022-05-03T17:18:29.211Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

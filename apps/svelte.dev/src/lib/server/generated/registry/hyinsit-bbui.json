@@ -1,0 +1,14 @@
+{
+  "name": "hyinsit-bbui",
+  "description": "UI components used in Budibase projects.",
+  "author": "hyinsit",
+  "downloads": 0,
+  "dependents": 3,
+  "updated": "2022-11-14T09:21:26.490Z",
+  "tags": [
+    "component-library",
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

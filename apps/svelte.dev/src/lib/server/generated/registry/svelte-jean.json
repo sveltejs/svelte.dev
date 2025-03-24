@@ -1,0 +1,16 @@
+{
+  "name": "svelte-jean",
+  "description": "Build SvelteKit admin templates based on Bootstrap 5.",
+  "repo_url": "https://github.com/joaquimnetocel/svelte-jean",
+  "author": "Joaquim Neto",
+  "homepage": "https://github.com/joaquimnetocel/svelte-jean#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2023-07-14T16:41:32.702Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

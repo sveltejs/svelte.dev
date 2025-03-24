@@ -1,0 +1,16 @@
+{
+  "name": "@svelteuidev/preprocessors",
+  "description": "Preprocessor library assisting in Svelte development.",
+  "repo_url": "https://github.com/svelteuidev/svelteui",
+  "author": "Kamell Perry",
+  "homepage": "https://svelteui.dev/",
+  "downloads": 5,
+  "dependents": 0,
+  "updated": "2024-07-07T14:30:26.435Z",
+  "tags": [
+    "preprocessor"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 1360
+}

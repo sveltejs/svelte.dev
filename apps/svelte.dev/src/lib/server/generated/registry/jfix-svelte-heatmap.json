@@ -1,0 +1,15 @@
+{
+  "name": "@jfix/svelte-heatmap",
+  "description": "Generate heatmap visualizations for Svelte apps.",
+  "repo_url": "https://github.com/jfix/svelte-heatmap",
+  "author": "Scott Bedard / Jakob Fix",
+  "homepage": "https://github.com/jfix/svelte-heatmap",
+  "downloads": 8,
+  "dependents": 0,
+  "updated": "2021-01-19T18:20:18.935Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

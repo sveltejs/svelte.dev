@@ -1,0 +1,13 @@
+{
+  "name": "@ikun-ui/icon",
+  "description": "Provides a set of icon components for Svelte.",
+  "author": "baiwusanyu",
+  "downloads": 49,
+  "dependents": 66,
+  "updated": "2025-01-24T03:48:56.877Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

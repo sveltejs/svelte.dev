@@ -1,0 +1,14 @@
+{
+  "name": "svelte-browser",
+  "description": "Provides browser-related information for Svelte components.",
+  "author": "7korobi",
+  "homepage": "https://github.com/7korobi/svelte-browser/blob/main/src/lib/",
+  "downloads": 0,
+  "dependents": 4,
+  "updated": "2022-11-05T16:48:33.138Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

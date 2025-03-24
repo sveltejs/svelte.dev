@@ -1,0 +1,14 @@
+{
+  "name": "@rabee-org/svelte-head",
+  "description": "Set meta information easily for Svelte applications.",
+  "author": "horietty",
+  "downloads": 36,
+  "dependents": 1,
+  "updated": "2023-05-24T11:34:58.173Z",
+  "tags": [
+    "seo",
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

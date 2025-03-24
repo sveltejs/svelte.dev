@@ -1,0 +1,15 @@
+{
+  "name": "svue",
+  "description": "Adds Vue-style reactive stores with data/computed properties.",
+  "repo_url": "https://github.com/freedmand/svue",
+  "author": "Dylan Freedman",
+  "homepage": "https://github.com/freedmand/svue#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2020-02-14T17:57:58.525Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

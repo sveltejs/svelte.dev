@@ -1,0 +1,16 @@
+{
+  "name": "@whyframe/svelte",
+  "description": "Integrate Svelte components into Whyframe for visual isolation.",
+  "repo_url": "https://github.com/bluwy/whyframe",
+  "author": "Bjorn Lu",
+  "homepage": "https://whyframe.dev",
+  "downloads": 1751,
+  "dependents": 0,
+  "updated": "2025-03-18T03:48:37.354Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 564
+}

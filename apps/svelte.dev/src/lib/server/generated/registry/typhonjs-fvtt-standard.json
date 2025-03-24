@@ -1,0 +1,16 @@
+{
+  "name": "@typhonjs-fvtt/standard",
+  "description": "Provides standard Svelte components for Foundry VTT.",
+  "repo_url": "https://github.com/typhonjs-fvtt-lib/standard",
+  "author": "Michael Leahy",
+  "homepage": "https://github.com/typhonjs-fvtt-lib/standard#readme",
+  "downloads": 56,
+  "dependents": 0,
+  "updated": "2025-03-03T00:57:02.788Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 2
+}

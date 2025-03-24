@@ -1,0 +1,15 @@
+{
+  "name": "@svuick/contextmenu",
+  "description": "Create context menus for Svelte applications.",
+  "repo_url": "https://gitlab.com/david-plugge/svuick",
+  "author": "davidplugge",
+  "homepage": "https://gitlab.com/david-plugge/svuick#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2022-07-25T14:50:32.112Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

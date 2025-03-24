@@ -1,0 +1,17 @@
+{
+  "name": "svelte-autocomplete-table",
+  "description": "Provide table with autocomplete, sorting, and filtering features.",
+  "repo_url": "https://github.com/Krishnan555/svelte-autocomplete-table",
+  "author": "Krishnan B",
+  "homepage": "https://github.com/Krishnan555/svelte-autocomplete-table#readme",
+  "downloads": 3,
+  "dependents": 0,
+  "updated": "2020-08-01T16:53:48.673Z",
+  "tags": [
+    "ui",
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

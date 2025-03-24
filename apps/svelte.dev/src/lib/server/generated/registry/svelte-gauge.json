@@ -1,0 +1,16 @@
+{
+  "name": "svelte-gauge",
+  "description": "Create customizable, animated gauge components for Svelte.",
+  "repo_url": "https://github.com/vnau/svelte-gauge",
+  "author": "vnau",
+  "homepage": "https://github.com/vnau/svelte-gauge#readme",
+  "downloads": 15,
+  "dependents": 0,
+  "updated": "2024-12-23T01:04:14.082Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 5
+}

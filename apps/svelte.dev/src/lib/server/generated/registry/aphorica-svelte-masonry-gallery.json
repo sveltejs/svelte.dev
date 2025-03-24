@@ -1,0 +1,14 @@
+{
+  "name": "@aphorica/svelte-masonry-gallery",
+  "description": "Create masonry photo gallery for Svelte applications.",
+  "repo_url": "TODO",
+  "author": "rickbsgu",
+  "downloads": 9,
+  "dependents": 0,
+  "updated": "2020-11-28T18:38:41.181Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

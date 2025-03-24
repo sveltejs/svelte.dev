@@ -1,0 +1,17 @@
+{
+  "name": "@nosnibor89/svelte-client-sdk",
+  "description": "Integrate LaunchDarkly SDK for Svelte applications.",
+  "repo_url": "https://github.com/launchdarkly/js-core",
+  "author": "nosnibor89",
+  "homepage": "https://github.com/launchdarkly/js-core/tree/main/packages/sdk/svelte",
+  "downloads": 28,
+  "dependents": 0,
+  "updated": "2025-03-07T16:56:47.917Z",
+  "tags": [
+    "integration",
+    "auth"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 16
+}

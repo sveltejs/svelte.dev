@@ -1,0 +1,16 @@
+{
+  "name": "braintapper-svelte-inline-input",
+  "description": "Create inline input components for Svelte.",
+  "repo_url": "https://github.com/braintapper/braintapper-svelte-inline-input",
+  "author": "braintapper",
+  "homepage": "https://github.com/braintapper/braintapper-svelte-inline-input#readme",
+  "downloads": 3,
+  "dependents": 0,
+  "updated": "2021-09-13T14:28:18.020Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

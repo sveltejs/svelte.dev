@@ -1,0 +1,15 @@
+{
+  "name": "prettier-plugin-sveltev2",
+  "description": "Format Svelte v2 code using Prettier.",
+  "repo_url": "https://github.com/umanghome/prettier-plugin-sveltev2",
+  "author": "Umang Galaiya",
+  "homepage": "https://github.com/umanghome/prettier-plugin-sveltev2#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2019-09-19T08:23:33.303Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false
+}

@@ -1,0 +1,17 @@
+{
+  "name": "gardenjs",
+  "description": "Explore, test, and document UI components for Svelte and other frameworks.",
+  "repo_url": "https://github.com/gardenjs/gardenjs",
+  "author": "Robin Danzinger, Martin Farkas",
+  "homepage": "https://gardenjs.org/",
+  "downloads": 4,
+  "dependents": 0,
+  "updated": "2025-01-10T14:28:09.501Z",
+  "tags": [
+    "tooling",
+    "component-library"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 7
+}

@@ -1,0 +1,13 @@
+{
+  "name": "@rabee-org/svelte-popup-manager",
+  "description": "Creates popups and toasts in Svelte applications.",
+  "author": "horietty",
+  "downloads": 25,
+  "dependents": 0,
+  "updated": "2023-07-03T05:32:01.523Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

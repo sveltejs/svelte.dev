@@ -1,0 +1,16 @@
+{
+  "name": "svelte-pathfinder",
+  "description": "Create state-based router for SvelteJS.",
+  "repo_url": "https://github.com/sveltetools/svelte-pathfinder",
+  "author": "PaulMaly",
+  "homepage": "https://github.com/sveltetools/svelte-pathfinder#readme",
+  "downloads": 767,
+  "dependents": 0,
+  "updated": "2024-07-04T09:03:48.158Z",
+  "tags": [
+    "router"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 131
+}

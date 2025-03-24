@@ -1,0 +1,16 @@
+{
+  "name": "@pivotass/zvelte",
+  "description": "Compile twig-like syntax to PHP and JS for SSR and CSR.",
+  "repo_url": "https://github.com/PivotStick/zvelte",
+  "author": "Maxime DI NATALE",
+  "homepage": "https://github.com/PivotStick/zvelte#readme",
+  "downloads": 559,
+  "dependents": 0,
+  "updated": "2025-03-21T14:44:49.128Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

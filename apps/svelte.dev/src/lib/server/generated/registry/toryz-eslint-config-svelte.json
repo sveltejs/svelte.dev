@@ -1,0 +1,14 @@
+{
+  "name": "@toryz/eslint-config-svelte",
+  "description": "Provides ESLint configuration for Svelte projects.",
+  "author": "toryz",
+  "homepage": "https://github.com/zhou-tao/eslint-config",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2023-08-11T12:36:52.780Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": true,
+  "runes": false
+}

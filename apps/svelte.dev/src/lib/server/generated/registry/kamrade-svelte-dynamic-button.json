@@ -1,0 +1,16 @@
+{
+  "name": "@kamrade/svelte-dynamic-button",
+  "description": "Create dynamic button component with flexible themes, variants, sizes.",
+  "repo_url": "https://github.com/kamrade/svelte-dynamic-button",
+  "author": "kamrade",
+  "homepage": "https://github.com/kamrade/svelte-dynamic-button#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2024-03-05T20:19:08.142Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 1
+}

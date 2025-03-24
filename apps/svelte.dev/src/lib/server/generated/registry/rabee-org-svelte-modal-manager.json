@@ -1,0 +1,13 @@
+{
+  "name": "@rabee-org/svelte-modal-manager",
+  "description": "Manage modals in Svelte applications.",
+  "author": "horietty",
+  "downloads": 48,
+  "dependents": 1,
+  "updated": "2023-06-12T07:17:23.796Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

@@ -1,0 +1,16 @@
+{
+  "name": "svelte-canvas-confetti",
+  "description": "Create canvas-based confetti for Svelte.",
+  "repo_url": "https://github.com/andreasmcdermott/svelte-canvas-confetti",
+  "author": "andreasmcdermott",
+  "homepage": "https://github.com/andreasmcdermott/svelte-canvas-confetti#readme",
+  "downloads": 228,
+  "dependents": 0,
+  "updated": "2022-09-16T06:52:34.667Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 19
+}

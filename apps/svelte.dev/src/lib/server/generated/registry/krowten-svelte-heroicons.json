@@ -1,0 +1,16 @@
+{
+  "name": "@krowten/svelte-heroicons",
+  "description": "Integrate Heroicons into Svelte projects.",
+  "repo_url": "https://github.com/krowten/svelte-heroicons",
+  "author": "Vladimir",
+  "homepage": "https://github.com/krowten/svelte-heroicons#readme",
+  "downloads": 30,
+  "dependents": 0,
+  "updated": "2023-01-06T11:00:52.870Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 8
+}

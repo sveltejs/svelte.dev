@@ -1,0 +1,13 @@
+{
+  "name": "@ikun-ui/empty",
+  "description": "Create empty state components for Svelte apps.",
+  "author": "baiwusanyu",
+  "downloads": 20,
+  "dependents": 1,
+  "updated": "2025-01-24T03:48:52.936Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

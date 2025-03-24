@@ -1,0 +1,16 @@
+{
+  "name": "sviny",
+  "description": "Create tiny Svelte apps.",
+  "repo_url": "https://github.com/josefaidt/sviny",
+  "author": "garlicbred",
+  "homepage": "https://github.com/josefaidt/sviny#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2022-06-12T21:58:26.468Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 1
+}

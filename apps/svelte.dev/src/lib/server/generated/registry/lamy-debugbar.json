@@ -1,0 +1,16 @@
+{
+  "name": "lamy-debugbar",
+  "description": "Add debugbar to Svelte applications.",
+  "repo_url": "https://github.com/lnfel/lamy-debugbar",
+  "author": "Dale Ryan Aldover",
+  "homepage": "https://lnfel.github.io/lamy-debugbar/",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2023-11-27T03:20:21.232Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 12
+}

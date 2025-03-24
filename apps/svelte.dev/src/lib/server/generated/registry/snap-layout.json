@@ -1,0 +1,16 @@
+{
+  "name": "snap-layout",
+  "description": "Provides lightweight layout snapping for Svelte.",
+  "repo_url": "https://github.com/ThaUnknown/snap-layout",
+  "author": "thaunknown",
+  "homepage": "https://github.com/ThaUnknown/snap-layout#readme",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2022-07-24T20:15:30.179Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 12
+}

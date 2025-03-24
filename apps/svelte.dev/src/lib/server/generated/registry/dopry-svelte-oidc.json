@@ -1,0 +1,16 @@
+{
+  "name": "@dopry/svelte-oidc",
+  "description": "OIDC client component for Svelte.",
+  "repo_url": "https://github.com/dopry/svelte-oidc",
+  "author": "dopry",
+  "homepage": "https://github.com/dopry/svelte-oidc#readme",
+  "downloads": 102,
+  "dependents": 0,
+  "updated": "2023-01-24T16:47:18.807Z",
+  "tags": [
+    "auth"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 42
+}

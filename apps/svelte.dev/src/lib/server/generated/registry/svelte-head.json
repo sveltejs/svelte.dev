@@ -1,0 +1,13 @@
+{
+  "name": "svelte-head",
+  "description": "Set meta information easily in Svelte applications.",
+  "author": "phi",
+  "downloads": 131,
+  "dependents": 0,
+  "updated": "2023-03-27T14:23:44.444Z",
+  "tags": [
+    "seo"
+  ],
+  "svelte5": false,
+  "runes": false
+}

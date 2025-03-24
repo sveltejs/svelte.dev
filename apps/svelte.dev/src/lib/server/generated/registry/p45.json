@@ -1,0 +1,16 @@
+{
+  "name": "p45",
+  "description": "Generate SVG icons programmatically using grid-based drawing commands.",
+  "repo_url": "https://github.com/PaulioRandall/p45",
+  "author": "Paul Williams",
+  "homepage": "https://github.com/PaulioRandall/p45#readme",
+  "downloads": 1,
+  "dependents": 1,
+  "updated": "2024-07-02T22:26:58.768Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

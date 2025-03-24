@@ -1,0 +1,16 @@
+{
+  "name": "svelte-event",
+  "description": "Manage Svelte event listeners with modifiers and actions.",
+  "repo_url": "https://github.com/Not-Jayden/svelte-event",
+  "author": "Not-Jayden",
+  "homepage": "https://github.com/Not-Jayden/svelte-event#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2023-12-09T17:22:43.401Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 7
+}

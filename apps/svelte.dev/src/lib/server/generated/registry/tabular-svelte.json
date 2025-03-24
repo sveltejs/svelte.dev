@@ -1,0 +1,15 @@
+{
+  "name": "tabular-svelte",
+  "description": "Displays tabular data within Svelte components.",
+  "repo_url": "https://github.com/jdmedlock/tabular-svelte",
+  "author": "Jim D. Medlock",
+  "homepage": "https://github.com/jdmedlock/tabular-svelte#readme",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2021-01-24T00:15:21.324Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

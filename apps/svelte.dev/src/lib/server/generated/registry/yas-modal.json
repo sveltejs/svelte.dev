@@ -1,0 +1,16 @@
+{
+  "name": "yas-modal",
+  "description": "Render modals in Svelte apps, supporting nested modals and fullscreen mode.",
+  "repo_url": "https://github.com/gigor/yas-modal",
+  "author": "Igor Grechishkin",
+  "homepage": "https://github.com/gigor/yas-modal#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2023-01-31T11:59:38.720Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

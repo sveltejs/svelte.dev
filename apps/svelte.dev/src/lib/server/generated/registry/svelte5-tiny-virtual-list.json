@@ -1,0 +1,16 @@
+{
+  "name": "svelte5-tiny-virtual-list",
+  "description": "Implement tiny, virtualized lists for Svelte applications.",
+  "repo_url": "https://github.com/jonasgeiler/svelte-tiny-virtual-list",
+  "author": "Jonas Geiler",
+  "homepage": "https://github.com/TutorLatin/svelte-tiny-virtual-list/#readme",
+  "downloads": 74,
+  "dependents": 0,
+  "updated": "2025-02-20T15:04:43.379Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 500
+}

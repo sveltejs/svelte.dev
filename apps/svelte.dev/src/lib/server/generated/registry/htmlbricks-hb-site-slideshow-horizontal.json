@@ -1,0 +1,13 @@
+{
+  "name": "@htmlbricks/hb-site-slideshow-horizontal",
+  "description": "Creates horizontal slideshow web component.",
+  "author": "Dario Caruso",
+  "downloads": 211,
+  "dependents": 0,
+  "updated": "2025-03-09T03:10:35.760Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

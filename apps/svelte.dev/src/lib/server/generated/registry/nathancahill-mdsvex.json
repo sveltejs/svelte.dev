@@ -1,0 +1,18 @@
+{
+  "name": "@nathancahill/mdsvex",
+  "description": "Process Markdown files, enabling Svelte component use within Markdown.",
+  "repo_url": "https://github.com/pngwn/MDsveX",
+  "author": "pngwn",
+  "homepage": "https://github.com/pngwn/MDsveX#readme",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2020-01-04T13:26:03.025Z",
+  "tags": [
+    "preprocessor",
+    "content",
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 2612
+}

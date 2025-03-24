@@ -1,0 +1,13 @@
+{
+  "name": "prismic-svelte",
+  "description": "Helpers for using Prismic with Svelte.",
+  "author": "samlfair",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2021-08-23T16:52:40.307Z",
+  "tags": [
+    "content"
+  ],
+  "svelte5": false,
+  "runes": false
+}

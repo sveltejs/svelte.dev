@@ -1,0 +1,16 @@
+{
+  "name": "@lionixevolve/svelte-virtual-list-enhanced",
+  "description": "Render virtual lists in Svelte apps, improving performance.",
+  "repo_url": "https://github.com/lionixevolve/svelte-virtual-list-enhanced",
+  "author": "Rich Harris + tje3d + Lionix folks",
+  "homepage": "https://github.com/lionixevolve/svelte-virtual-list-enhanced#readme",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2020-09-30T01:37:07.318Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 4
+}

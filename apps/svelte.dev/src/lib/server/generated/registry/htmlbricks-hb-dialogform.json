@@ -1,0 +1,13 @@
+{
+  "name": "@htmlbricks/hb-dialogform",
+  "description": "Provides web component for creating dialog form in Svelte.",
+  "author": "Dario Caruso",
+  "downloads": 225,
+  "dependents": 2,
+  "updated": "2025-03-09T03:10:40.850Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

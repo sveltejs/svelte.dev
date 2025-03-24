@@ -1,0 +1,16 @@
+{
+  "name": "svelte-infinite",
+  "description": "Create infinite scroll for Svelte 5 with Runes.",
+  "repo_url": "https://github.com/ndom91/svelte-infinite",
+  "author": "Nico Domino",
+  "homepage": "https://svelte-5-infinite.vercel.app",
+  "downloads": 227,
+  "dependents": 0,
+  "updated": "2025-03-19T14:03:08.848Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 72
+}

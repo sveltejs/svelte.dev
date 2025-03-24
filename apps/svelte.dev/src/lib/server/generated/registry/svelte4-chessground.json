@@ -1,0 +1,14 @@
+{
+  "name": "svelte4-chessground",
+  "description": "Svelte 4 chessboard component, wrapper for Chessground.",
+  "author": "liamkrenn",
+  "homepage": "https://github.com/LiamKrenn/svelte4-chessground",
+  "downloads": 3,
+  "dependents": 1,
+  "updated": "2025-02-02T14:37:13.750Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

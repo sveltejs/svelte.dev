@@ -1,0 +1,16 @@
+{
+  "name": "svhighlight",
+  "description": "Highlight code syntax in SvelteKit with TailwindCSS.",
+  "repo_url": "https://github.com/bennymi/svhighlight",
+  "author": "Benedikt Mielke",
+  "homepage": "https://svhighlight.vercel.app/",
+  "downloads": 329,
+  "dependents": 0,
+  "updated": "2023-02-25T12:05:44.594Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 62
+}

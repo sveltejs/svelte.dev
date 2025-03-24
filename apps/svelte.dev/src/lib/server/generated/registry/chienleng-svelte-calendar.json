@@ -1,0 +1,13 @@
+{
+  "name": "@chienleng/svelte-calendar",
+  "description": "Create calendar view component for Svelte applications.",
+  "author": "steven tan | @chienleng | steventan.com.au",
+  "downloads": 18,
+  "dependents": 0,
+  "updated": "2022-10-18T00:52:01.927Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

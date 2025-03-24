@@ -1,0 +1,13 @@
+{
+  "name": "humdrum-svelte",
+  "description": "Create Svelte component library with testing and Storybook.",
+  "author": "garthdb",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2020-10-04T06:37:16.341Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false
+}

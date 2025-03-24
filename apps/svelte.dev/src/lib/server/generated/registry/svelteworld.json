@@ -1,0 +1,15 @@
+{
+  "name": "svelteworld",
+  "description": "Display list of countries using Svelte component.",
+  "repo_url": "https://gitlab.com/st33fn/svelteworld",
+  "author": "Stefan Lakicevic",
+  "homepage": "https://gitlab.com/st33fn/svelteworld#readme",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2021-09-25T08:11:38.412Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

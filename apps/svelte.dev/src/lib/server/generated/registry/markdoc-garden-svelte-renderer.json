@@ -1,0 +1,16 @@
+{
+  "name": "@markdoc-garden/svelte-renderer",
+  "description": "Render Markdoc files in Svelte(kit) applications.",
+  "repo_url": "https://github.com/markdoc-garden/svelte-renderer",
+  "author": "lofty_brambles",
+  "homepage": "https://github.com/markdoc-garden/svelte-renderer",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2023-07-20T11:11:32.679Z",
+  "tags": [
+    "content"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 1
+}

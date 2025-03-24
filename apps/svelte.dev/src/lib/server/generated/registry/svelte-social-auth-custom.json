@@ -1,0 +1,14 @@
+{
+  "name": "svelte-social-auth-custom",
+  "description": "Implement Google and Facebook authentication in Svelte apps.",
+  "author": "louishrg",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2021-04-22T22:36:58.586Z",
+  "tags": [
+    "auth",
+    "integration"
+  ],
+  "svelte5": false,
+  "runes": false
+}

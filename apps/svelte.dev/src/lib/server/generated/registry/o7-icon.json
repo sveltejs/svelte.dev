@@ -1,0 +1,13 @@
+{
+  "name": "@o7/icon",
+  "description": "Efficient Svelte icon library using SVG sprites.",
+  "author": "ottomated",
+  "downloads": 117,
+  "dependents": 0,
+  "updated": "2025-03-19T07:12:52.732Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false
+}

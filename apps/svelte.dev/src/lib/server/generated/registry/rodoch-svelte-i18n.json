@@ -1,0 +1,16 @@
+{
+  "name": "@rodoch/svelte-i18n",
+  "description": "Implement internationalization in Svelte applications.",
+  "repo_url": "https://github.com/rodoch/svelte-i18n",
+  "author": "Christian Kaisermann",
+  "homepage": "https://github.com/rodoch/svelte-i18n#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2020-03-19T11:26:03.215Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

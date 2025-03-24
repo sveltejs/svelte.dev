@@ -1,0 +1,16 @@
+{
+  "name": "svelte-swiper",
+  "description": "Integrate Swiper.js for Svelte, create touch-enabled carousels.",
+  "repo_url": "https://github.com/beomy/svelte-swiper",
+  "author": "Hyo Bum Lee",
+  "homepage": "https://github.com/beomy/svelte-swiper#readme",
+  "downloads": 186,
+  "dependents": 1,
+  "updated": "2020-08-14T07:33:44.956Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 24
+}

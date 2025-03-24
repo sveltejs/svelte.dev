@@ -1,0 +1,16 @@
+{
+  "name": "svelte-hover-draw-svg",
+  "description": "Draw SVG strokes on hover in Svelte components.",
+  "repo_url": "https://github.com/davipon/svelte-hover-draw-svg",
+  "author": "Peng Wei Che",
+  "homepage": "https://github.com/davipon/svelte-hover-draw-svg#readme",
+  "downloads": 7,
+  "dependents": 0,
+  "updated": "2023-03-28T15:40:25.598Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 25
+}

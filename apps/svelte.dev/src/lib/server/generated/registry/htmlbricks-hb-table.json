@@ -1,0 +1,13 @@
+{
+  "name": "@htmlbricks/hb-table",
+  "description": "Create table web components for Svelte applications.",
+  "author": "Dario Caruso",
+  "downloads": 468,
+  "dependents": 8,
+  "updated": "2025-03-09T03:10:40.494Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

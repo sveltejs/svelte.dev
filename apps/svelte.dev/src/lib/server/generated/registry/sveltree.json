@@ -1,0 +1,13 @@
+{
+  "name": "sveltree",
+  "description": "Provides a simple drag-and-drop tree component for Svelte.",
+  "author": "imkreislaufen",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2020-06-11T09:58:27.928Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

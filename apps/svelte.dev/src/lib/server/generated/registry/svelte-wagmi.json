@@ -1,0 +1,16 @@
+{
+  "name": "svelte-wagmi",
+  "description": "Provides Svelte stores and functions for interacting with Ethereum.",
+  "repo_url": "https://github.com/softwarecurator/svelte-wagmi",
+  "author": "@softwarecurator",
+  "homepage": "https://github.com/softwarecurator/svelte-wagmi#readme",
+  "downloads": 191,
+  "dependents": 0,
+  "updated": "2024-06-13T18:37:45.508Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 74
+}

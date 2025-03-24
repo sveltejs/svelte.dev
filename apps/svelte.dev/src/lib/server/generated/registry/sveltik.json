@@ -1,0 +1,15 @@
+{
+  "name": "sveltik",
+  "description": "Build forms with validation in Svelte applications.",
+  "repo_url": "https://github.com/nathancahill/sveltik",
+  "author": "Nathan Cahill",
+  "downloads": 23,
+  "dependents": 0,
+  "updated": "2020-12-07T10:36:34.057Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 194
+}

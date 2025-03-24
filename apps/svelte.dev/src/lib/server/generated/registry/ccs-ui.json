@@ -1,0 +1,13 @@
+{
+  "name": "ccs-ui",
+  "description": "Handle common components across Budibase organization.",
+  "author": "crecatalyst",
+  "downloads": 0,
+  "dependents": 1,
+  "updated": "2021-04-20T17:40:52.457Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": false,
+  "runes": false
+}

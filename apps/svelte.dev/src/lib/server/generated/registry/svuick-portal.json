@@ -1,0 +1,14 @@
+{
+  "name": "@svuick/portal",
+  "description": "Create portals for rendering content outside Svelte component trees.",
+  "repo_url": "https://gitlab.com/david-plugge/svuick",
+  "author": "davidplugge",
+  "downloads": 0,
+  "dependents": 2,
+  "updated": "2022-02-03T11:38:58.010Z",
+  "tags": [
+    "dom"
+  ],
+  "svelte5": false,
+  "runes": false
+}

@@ -1,0 +1,13 @@
+{
+  "name": "svelte-appwrite",
+  "description": "Integrate Appwrite backend services into Svelte applications.",
+  "author": "eldadfux",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2021-05-13T07:39:47.827Z",
+  "tags": [
+    "integration"
+  ],
+  "svelte5": false,
+  "runes": false
+}

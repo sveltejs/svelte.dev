@@ -1,0 +1,15 @@
+{
+  "name": "lucide-icons-svelte",
+  "description": "Import Lucide icons as Svelte components.",
+  "repo_url": "https://github.com/ElectronicBlueberry/svelte-lucide-icons",
+  "author": "Laila L.",
+  "homepage": "https://github.com/ElectronicBlueberry/svelte-lucide-icons#readme",
+  "downloads": 5,
+  "dependents": 0,
+  "updated": "2021-11-28T19:05:46.594Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

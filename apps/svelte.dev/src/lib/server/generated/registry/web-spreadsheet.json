@@ -1,0 +1,16 @@
+{
+  "name": "web-spreadsheet",
+  "description": "Creates Excel-like spreadsheet web component for Svelte.",
+  "repo_url": "https://github.com/icheer/web-spreadsheet",
+  "author": "icheer@live.com",
+  "homepage": "https://github.com/icheer/web-spreadsheet#readme",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2021-11-24T10:46:16.903Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 10
+}

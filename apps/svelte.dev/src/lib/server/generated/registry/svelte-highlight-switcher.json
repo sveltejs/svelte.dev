@@ -1,0 +1,16 @@
+{
+  "name": "svelte-highlight-switcher",
+  "description": "Switch svelte-highlight styles safely in Svelte apps.",
+  "repo_url": "https://github.com/jill64/svelte-highlight-switcher",
+  "author": "jill64",
+  "homepage": "https://github.com/jill64/svelte-highlight-switcher#readme",
+  "downloads": 19643,
+  "dependents": 1,
+  "updated": "2025-01-20T02:43:10.149Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 2
+}

@@ -1,0 +1,16 @@
+{
+  "name": "svelte-i18next",
+  "description": "Wraps i18next instance for use in Svelte.",
+  "repo_url": "https://github.com/NishuGoel/svelte-i18next",
+  "author": "Nishu Goel",
+  "homepage": "https://github.com/NishuGoel/svelte-i18next",
+  "downloads": 7787,
+  "dependents": 1,
+  "updated": "2023-10-19T07:46:00.728Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 52
+}

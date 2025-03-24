@@ -1,0 +1,15 @@
+{
+  "name": "svelte-digital-alarm-number",
+  "description": "Render digital alarm number component for Svelte.",
+  "repo_url": "https://github.com/hazg/svelte-digital-alarm-number",
+  "author": "Aleksandr Aleksandrov",
+  "homepage": "https://github.com/hazg/svelte-digital-alarm-number#readme",
+  "downloads": 5,
+  "dependents": 0,
+  "updated": "2021-03-13T05:24:07.686Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

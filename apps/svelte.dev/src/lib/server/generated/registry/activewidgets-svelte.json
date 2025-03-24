@@ -1,0 +1,16 @@
+{
+  "name": "@activewidgets/svelte",
+  "description": "Create virtualized datagrid components for Svelte.",
+  "repo_url": "https://github.com/activewidgets/svelte",
+  "author": "ActiveWidgets SARL",
+  "homepage": "https://activewidgets.com/svelte/data-grid/",
+  "downloads": 74,
+  "dependents": 0,
+  "updated": "2023-04-30T18:45:55.134Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 13
+}

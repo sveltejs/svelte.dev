@@ -1,0 +1,14 @@
+{
+  "name": "svelte-tailwind-transition",
+  "description": "Use transitions with Tailwind CSS in Svelte.",
+  "author": "Code Mun Dee",
+  "homepage": "https://github.com/codemundee/svelte-tailwind-transition#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2024-11-23T13:34:27.106Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false
+}

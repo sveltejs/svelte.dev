@@ -1,0 +1,16 @@
+{
+  "name": "svelte-morphing-modal",
+  "description": "Create morphing modal components with transition effects.",
+  "repo_url": "https://github.com/PaulMaly/svelte-morphing-modal",
+  "author": "PaulMaly",
+  "homepage": "https://github.com/PaulMaly/svelte-morphing-modal#readme",
+  "downloads": 12,
+  "dependents": 0,
+  "updated": "2020-10-25T19:22:21.849Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 4
+}

@@ -1,0 +1,17 @@
+{
+  "name": "svelte-fomantic-ui",
+  "description": "Offer Fomantic UI components for Svelte.",
+  "repo_url": "https://github.com/roycdaviesuoa/svelte-fomantic-ui",
+  "author": "Roy C. Davies",
+  "homepage": "http://roycdaviesuoa.github.io/",
+  "downloads": 4,
+  "dependents": 0,
+  "updated": "2025-02-01T07:54:50.188Z",
+  "tags": [
+    "ui",
+    "component-library"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 4
+}

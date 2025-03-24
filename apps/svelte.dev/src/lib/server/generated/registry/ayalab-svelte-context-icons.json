@@ -1,0 +1,14 @@
+{
+  "name": "@ayalab/svelte-context-icons",
+  "description": "Provide context-based icon components for Svelte applications.",
+  "author": "Anton Aksionau",
+  "downloads": 36,
+  "dependents": 1,
+  "updated": "2024-02-29T21:24:06.555Z",
+  "tags": [
+    "ui",
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

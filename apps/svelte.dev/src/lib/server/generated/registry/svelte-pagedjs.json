@@ -1,0 +1,16 @@
+{
+  "name": "svelte-pagedjs",
+  "description": "Paginate content and create print layouts in Svelte apps.",
+  "repo_url": "https://github.com/codebygio/svelte-pagedjs",
+  "author": "Giovani Rodriguez",
+  "homepage": "https://codebygio.com/libs/svelte-pagedjs",
+  "downloads": 3,
+  "dependents": 0,
+  "updated": "2025-01-16T15:40:16.550Z",
+  "tags": [
+    "content"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 0
+}

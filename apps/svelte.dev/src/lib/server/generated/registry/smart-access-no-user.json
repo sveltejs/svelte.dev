@@ -1,0 +1,13 @@
+{
+  "name": "@smart-access/no-user",
+  "description": "Show private screen message, buttons download app.",
+  "author": "Kyle Jeske",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2020-01-28T00:05:30.392Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

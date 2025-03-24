@@ -1,0 +1,16 @@
+{
+  "name": "@svonic/ui",
+  "description": "UI components for Svelte and SvelteKit.",
+  "repo_url": "https://github.com/svonic/svonic",
+  "author": "Robert",
+  "homepage": "https://github.com/svonic/svonic#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2023-11-06T09:32:56.657Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 14
+}

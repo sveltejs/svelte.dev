@@ -1,0 +1,17 @@
+{
+  "name": "@wxt-dev/module-svelte",
+  "description": "Enables Svelte support in web extension development.",
+  "repo_url": "https://github.com/wxt-dev/wxt",
+  "author": "Aaron Klinker",
+  "homepage": "https://github.com/wxt-dev/wxt/blob/main/packages/module-svelte/README.md",
+  "downloads": 241,
+  "dependents": 0,
+  "updated": "2025-01-28T21:17:42.473Z",
+  "tags": [
+    "tooling",
+    "preprocessor"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 6246
+}

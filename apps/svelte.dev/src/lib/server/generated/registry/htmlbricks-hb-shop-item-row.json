@@ -1,0 +1,13 @@
+{
+  "name": "@htmlbricks/hb-shop-item-row",
+  "description": "Create Bootstrap shop item row component for Svelte applications.",
+  "author": "Dario Caruso",
+  "downloads": 303,
+  "dependents": 0,
+  "updated": "2025-03-09T03:10:34.591Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

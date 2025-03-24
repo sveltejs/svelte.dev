@@ -1,0 +1,16 @@
+{
+  "name": "sveltetf",
+  "description": "Integrate TensorflowJS machine learning features into Svelte apps.",
+  "repo_url": "https://github.com/eksohinc/sveltetf",
+  "author": "François Paquette",
+  "homepage": "https://github.com/eksohinc/sveltetf#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2023-12-09T18:50:10.728Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

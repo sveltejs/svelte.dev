@@ -1,0 +1,16 @@
+{
+  "name": "svelte-image-encoder-save-type",
+  "description": "Encode and save images in Svelte applications.",
+  "repo_url": "https://github.com/efebia-com/svelte-image-encoder",
+  "author": "Sebastian Ferreyra Pons",
+  "homepage": "https://github.com/efebia-com/svelte-image-encoder#readme",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2021-07-27T16:41:48.303Z",
+  "tags": [
+    "media"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

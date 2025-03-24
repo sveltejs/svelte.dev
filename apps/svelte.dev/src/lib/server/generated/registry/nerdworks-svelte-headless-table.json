@@ -1,0 +1,17 @@
+{
+  "name": "@nerdworks/svelte-headless-table",
+  "description": "Build unopinionated, extensible data tables for Svelte.",
+  "repo_url": "https://github.com/bryanmylee/svelte-headless-table",
+  "author": "Bryan Lee",
+  "homepage": "https://svelte-headless-table.bryanmylee.com",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2023-12-16T15:43:06.114Z",
+  "tags": [
+    "component-library",
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 492
+}

@@ -1,0 +1,16 @@
+{
+  "name": "progressbar-svelte",
+  "description": "Creates customizable progress bars for Svelte.",
+  "repo_url": "https://github.com/dhimankamal/svelte-progressbar",
+  "author": "dhimankamal",
+  "homepage": "https://github.com/dhimankamal/svelte-progressbar",
+  "downloads": 21,
+  "dependents": 0,
+  "updated": "2024-01-09T12:28:44.982Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 7
+}

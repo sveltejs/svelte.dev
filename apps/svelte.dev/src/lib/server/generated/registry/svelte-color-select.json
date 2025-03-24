@@ -1,0 +1,16 @@
+{
+  "name": "svelte-color-select",
+  "description": "Select colors using Okhsl color space in Svelte.",
+  "repo_url": "https://github.com/captaincodeman/svelte-color-select",
+  "author": "Simon Green",
+  "homepage": "https://captaincodeman.github.io/svelte-color-select/",
+  "downloads": 35,
+  "dependents": 0,
+  "updated": "2024-11-27T00:12:45.841Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 32
+}

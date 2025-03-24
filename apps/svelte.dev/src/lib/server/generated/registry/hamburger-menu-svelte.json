@@ -1,0 +1,16 @@
+{
+  "name": "hamburger-menu-svelte",
+  "description": "Creates intuitive hamburger menu for Svelte apps.",
+  "repo_url": "https://github.com/itsuki-guitar/hamburger-menu-svelte",
+  "author": "Kazuki Fujita",
+  "homepage": "https://github.com/itsuki-guitar/hamburger-menu-svelte#readme",
+  "downloads": 40,
+  "dependents": 0,
+  "updated": "2021-10-28T06:20:13.136Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 4
+}

@@ -1,0 +1,13 @@
+{
+  "name": "molstar-svelte",
+  "description": "Visualize biomolecular structures with Svelte components.",
+  "author": "0gust1",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2023-09-15T17:42:18.437Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

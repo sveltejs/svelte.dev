@@ -1,0 +1,16 @@
+{
+  "name": "svelte-pan-zoom",
+  "description": "Create canvas pan and zoom action for Svelte.",
+  "repo_url": "https://github.com/captaincodeman/svelte-pan-zoom",
+  "author": "Simon Green",
+  "homepage": "https://captaincodeman.github.io/svelte-pan-zoom/",
+  "downloads": 565,
+  "dependents": 1,
+  "updated": "2024-10-02T15:26:46.843Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 22
+}

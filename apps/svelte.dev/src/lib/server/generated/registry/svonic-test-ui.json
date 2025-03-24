@@ -1,0 +1,15 @@
+{
+  "name": "@svonic-test/ui",
+  "description": "Test UI components for Svelte applications.",
+  "repo_url": "https://github.com/svonic/test",
+  "author": "Robert",
+  "homepage": "https://github.com/svonic/test#readme",
+  "downloads": 3,
+  "dependents": 0,
+  "updated": "2022-04-11T08:44:54.018Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

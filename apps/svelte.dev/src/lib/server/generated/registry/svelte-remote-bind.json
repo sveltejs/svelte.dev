@@ -1,0 +1,16 @@
+{
+  "name": "svelte-remote-bind",
+  "description": "Bind Svelte objects to remote endpoints, automatically saving changes.",
+  "repo_url": "https://github.com/yellowmachine/svelte-remote-bind",
+  "author": "Miguel Ángel Alarcos Torrecillas",
+  "homepage": "https://github.com/yellowmachine/svelte-remote-bind#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2022-07-02T18:16:07.407Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

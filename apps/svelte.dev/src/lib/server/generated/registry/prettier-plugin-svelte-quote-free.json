@@ -1,0 +1,17 @@
+{
+  "name": "prettier-plugin-svelte-quote-free",
+  "description": "Format Svelte code with Prettier, ignoring quote style.",
+  "repo_url": "https://github.com/sveltejs/prettier-plugin-svelte",
+  "author": "James Birtles",
+  "homepage": "https://github.com/sveltejs/prettier-plugin-svelte#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2020-07-19T20:25:07.309Z",
+  "tags": [
+    "tooling",
+    "preprocessor"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 762
+}

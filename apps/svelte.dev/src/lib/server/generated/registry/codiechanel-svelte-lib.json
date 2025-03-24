@@ -1,0 +1,16 @@
+{
+  "name": "@codiechanel/svelte-lib",
+  "description": "Create personal Svelte library.",
+  "repo_url": "https://github.com/codiechanel/solid-library",
+  "author": "codiechanel",
+  "homepage": "https://github.com/codiechanel/solid-library#readme",
+  "downloads": 11,
+  "dependents": 0,
+  "updated": "2021-11-15T19:02:04.483Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

@@ -1,0 +1,16 @@
+{
+  "name": "@svelstack/state",
+  "description": "Manage promise/future states with AsyncableFutureState in Svelte.",
+  "repo_url": "https://github.com/svelstack/state",
+  "author": "martk",
+  "homepage": "https://github.com/svelstack/state",
+  "downloads": 11,
+  "dependents": 1,
+  "updated": "2025-01-14T18:59:32.106Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 0
+}

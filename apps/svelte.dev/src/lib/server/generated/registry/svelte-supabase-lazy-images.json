@@ -1,0 +1,16 @@
+{
+  "name": "svelte-supabase-lazy-images",
+  "description": "Lazyload images from Supabase using Svelte and store them.",
+  "repo_url": "https://github.com/Mitcheljager/svelte-supabase-lazy-images",
+  "author": "mitcheljager",
+  "homepage": "https://github.com/Mitcheljager/svelte-supabase-lazy-images#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2021-08-29T13:39:17.161Z",
+  "tags": [
+    "media",
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

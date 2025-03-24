@@ -1,0 +1,16 @@
+{
+  "name": "@altron/altron",
+  "description": "Create rich text editor as a Svelte component.",
+  "repo_url": "https://github.com/EMPTYVOID-DEV/Altron",
+  "author": "Keskas aymen",
+  "homepage": "https://github.com/EMPTYVOID-DEV/Altron#readme",
+  "downloads": 91,
+  "dependents": 0,
+  "updated": "2024-08-29T12:04:02.590Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 23
+}

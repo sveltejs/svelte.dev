@@ -1,0 +1,16 @@
+{
+  "name": "svelte-animated-icons",
+  "description": "Animated SVG icons for Svelte with customizable transitions.",
+  "repo_url": "https://github.com/shinokada/svelte-animated-icons",
+  "author": "Shinichi Okada",
+  "homepage": "https://svelte-animated-icons.codewithshin.com/",
+  "downloads": 60,
+  "dependents": 0,
+  "updated": "2024-11-26T10:33:45.264Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 3
+}

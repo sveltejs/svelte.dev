@@ -1,0 +1,16 @@
+{
+  "name": "@powchess/chessboard",
+  "description": "Create chessboard UI for Svelte.",
+  "repo_url": "https://github.com/powchess/chessboard",
+  "author": "PowChess GmbH",
+  "homepage": "https://powchess.com",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2023-11-12T14:55:34.244Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 1
+}

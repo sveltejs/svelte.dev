@@ -1,0 +1,16 @@
+{
+  "name": "@vouchpanel/svelte",
+  "description": "Provides Svelte component library template for vouchpanel.",
+  "repo_url": "https://github.com/vouchpanel/vouchpanel-svelte",
+  "author": "Patrick Roberts",
+  "homepage": "https://github.com/vouchpanel/vouchpanel-svelte#readme",
+  "downloads": 5,
+  "dependents": 0,
+  "updated": "2021-04-07T15:35:04.138Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

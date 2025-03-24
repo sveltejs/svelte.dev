@@ -1,0 +1,14 @@
+{
+  "name": "svelte-groot",
+  "description": "Provide a minimal, sensible router for Svelte applications.",
+  "repo_url": "https://github.com/Kaporos/svelte-grouter",
+  "author": "kaporos",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2021-12-24T15:33:26.815Z",
+  "tags": [
+    "router"
+  ],
+  "svelte5": false,
+  "runes": false
+}

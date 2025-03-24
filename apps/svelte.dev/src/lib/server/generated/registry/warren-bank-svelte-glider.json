@@ -1,0 +1,16 @@
+{
+  "name": "@warren-bank/svelte-glider",
+  "description": "Implement fast, lightweight carousel alternative for Svelte.",
+  "repo_url": "https://github.com/warren-bank/js-svelte-glider",
+  "author": "Warren R. Bank",
+  "homepage": "https://github.com/warren-bank/js-svelte-glider#readme",
+  "downloads": 3,
+  "dependents": 0,
+  "updated": "2024-06-06T23:26:35.116Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 0
+}

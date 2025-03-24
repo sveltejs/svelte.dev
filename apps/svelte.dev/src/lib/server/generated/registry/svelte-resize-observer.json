@@ -1,0 +1,17 @@
+{
+  "name": "svelte-resize-observer",
+  "description": "Observe element resizes within Svelte components.",
+  "repo_url": "https://github.com/andrelmlins/svelte-resize-observer",
+  "author": "André Lins",
+  "homepage": "https://svelte-resize-observer.netlify.com/",
+  "downloads": 156,
+  "dependents": 0,
+  "updated": "2021-08-17T00:58:10.467Z",
+  "tags": [
+    "utility",
+    "dom"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 14
+}

@@ -1,0 +1,16 @@
+{
+  "name": "svelte-barcode",
+  "description": "Generates barcode images for Svelte applications.",
+  "repo_url": "https://github.com/Bunlong/svelte-barcode",
+  "author": "Bunlong",
+  "homepage": "https://github.com/Bunlong/svelte-barcode",
+  "downloads": 171,
+  "dependents": 0,
+  "updated": "2022-02-07T17:27:24.958Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 7
+}

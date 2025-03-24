@@ -1,0 +1,14 @@
+{
+  "name": "google-login-svelte",
+  "description": "Sign in with Google component for Svelte applications.",
+  "author": "jorge-pereira",
+  "downloads": 48,
+  "dependents": 0,
+  "updated": "2022-01-08T01:36:00.174Z",
+  "tags": [
+    "auth",
+    "integration"
+  ],
+  "svelte5": false,
+  "runes": false
+}

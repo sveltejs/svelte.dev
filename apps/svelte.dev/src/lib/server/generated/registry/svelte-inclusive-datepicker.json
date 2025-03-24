@@ -1,0 +1,16 @@
+{
+  "name": "svelte-inclusive-datepicker",
+  "description": "Create accessible date picker for Svelte, supporting date-fns, dayjs, etc.",
+  "repo_url": "https://github.com/andrew-secret/svelte-datepicker",
+  "author": "André Rusakow",
+  "homepage": "https://github.com/andrew-secret/svelte-datepicker",
+  "downloads": 19,
+  "dependents": 0,
+  "updated": "2021-05-16T12:09:23.352Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 58
+}

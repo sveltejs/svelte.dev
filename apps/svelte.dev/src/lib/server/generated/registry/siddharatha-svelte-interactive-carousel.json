@@ -1,0 +1,16 @@
+{
+  "name": "@siddharatha/svelte-interactive-carousel",
+  "description": "Create interactive carousel with multiple visible sections.",
+  "repo_url": "https://github.com/siddharatha/svelte-interactive-carousel",
+  "author": "siddharatha",
+  "homepage": "https://github.com/siddharatha/svelte-interactive-carousel#readme",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2019-07-22T06:14:57.055Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

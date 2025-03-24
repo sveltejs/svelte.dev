@@ -1,0 +1,16 @@
+{
+  "name": "sveltekit-oauth",
+  "description": "Provides OAuth authentication for SvelteKit applications.",
+  "repo_url": "https://github.com/vhsdev/sveltekit-oauth",
+  "author": "vhsdev",
+  "homepage": "https://github.com/vhsdev/sveltekit-oauth#readme",
+  "downloads": 5,
+  "dependents": 0,
+  "updated": "2022-08-01T03:03:52.356Z",
+  "tags": [
+    "auth",
+    "integration"
+  ],
+  "svelte5": false,
+  "runes": false
+}

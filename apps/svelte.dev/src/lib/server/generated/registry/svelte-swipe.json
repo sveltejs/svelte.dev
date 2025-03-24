@@ -1,0 +1,16 @@
+{
+  "name": "svelte-swipe",
+  "description": "Create Svelte component to swipe elements.",
+  "repo_url": "https://github.com/SharifClick/svelte-swipe",
+  "author": "Sharif Ahmed",
+  "homepage": "https://github.com/SharifClick/svelte-swipe",
+  "downloads": 262,
+  "dependents": 2,
+  "updated": "2023-11-10T13:18:12.910Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 389
+}

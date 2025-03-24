@@ -1,0 +1,17 @@
+{
+  "name": "svader",
+  "description": "Create GPU-rendered Svelte components with WebGL and WebGPU shaders.",
+  "repo_url": "https://github.com/sockmaster27/svader",
+  "author": "Holger Dal Mogensen",
+  "homepage": "https://github.com/sockmaster27/svader#readme",
+  "downloads": 70,
+  "dependents": 0,
+  "updated": "2025-03-04T12:21:18.764Z",
+  "tags": [
+    "ui",
+    "tooling"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 397
+}

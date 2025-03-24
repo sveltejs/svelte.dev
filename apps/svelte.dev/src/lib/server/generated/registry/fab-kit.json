@@ -1,0 +1,15 @@
+{
+  "name": "fab-kit",
+  "description": "Offer UI components for Svelte applications.",
+  "repo_url": "https://github.com/gived/fab-kit",
+  "author": "Tamas Fabi",
+  "homepage": "https://github.com/gived/fab-kit#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2021-10-29T15:25:51.374Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": false,
+  "runes": false
+}

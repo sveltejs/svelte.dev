@@ -1,0 +1,16 @@
+{
+  "name": "svelte-former",
+  "description": "Create Svelte form elements with easy validation.",
+  "repo_url": "https://github.com/mugendi/svelte-former",
+  "author": "Anthony Mugendi",
+  "homepage": "https://github.com/mugendi/svelte-former#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2024-07-04T00:57:22.950Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

@@ -1,0 +1,15 @@
+{
+  "name": "sveltekit-vercel-hybrid-edge",
+  "description": "Build SvelteKit apps for edge and serverless functions.",
+  "repo_url": "https://github.com/lucagoslar/ts-pkg",
+  "author": "Luca Goslar",
+  "homepage": "https://github.com/lucagoslar/ts-pkg#readme",
+  "downloads": 3,
+  "dependents": 0,
+  "updated": "2023-01-31T20:27:04.130Z",
+  "tags": [
+    "adapter"
+  ],
+  "svelte5": false,
+  "runes": false
+}

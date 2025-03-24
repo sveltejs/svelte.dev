@@ -1,0 +1,16 @@
+{
+  "name": "@salonhub/svelte-spa-router",
+  "description": "Create router for SPAs using Svelte.",
+  "repo_url": "https://github.com/Salonhub/svelte-spa-router",
+  "author": "Alessandro Segala",
+  "homepage": "https://github.com/ItalyPaleAle/svelte-spa-router#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2024-12-02T19:31:49.235Z",
+  "tags": [
+    "router"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 0
+}

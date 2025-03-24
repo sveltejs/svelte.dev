@@ -1,0 +1,16 @@
+{
+  "name": "@zoom-image/svelte",
+  "description": "Zoom images on hover, move, or pinch in Svelte apps.",
+  "repo_url": "https://github.com/willnguyen1312/zoom-image",
+  "author": "Nam Nguyen",
+  "homepage": "https://willnguyen1312.github.io/zoom-image",
+  "downloads": 2229,
+  "dependents": 0,
+  "updated": "2025-03-01T22:36:04.188Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 322
+}

@@ -1,0 +1,13 @@
+{
+  "name": "@htmlbricks/hb-form",
+  "description": "Create text input web components for Svelte applications.",
+  "author": "Dario Caruso",
+  "downloads": 473,
+  "dependents": 11,
+  "updated": "2025-03-09T03:10:40.151Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": false,
+  "runes": false
+}

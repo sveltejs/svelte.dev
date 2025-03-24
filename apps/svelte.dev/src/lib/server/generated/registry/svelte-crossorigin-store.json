@@ -1,0 +1,16 @@
+{
+  "name": "svelte-crossorigin-store",
+  "description": "Shares Svelte stores across origins, including iFrames.",
+  "repo_url": "https://github.com/idleberg/svelte-crossorigin-store",
+  "author": "idleberg",
+  "homepage": "https://github.com/idleberg/svelte-crossorigin-store#readme",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2024-04-22T22:14:17.246Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 1
+}

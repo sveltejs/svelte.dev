@@ -1,0 +1,17 @@
+{
+  "name": "@rutynka/helper-bar-board-sse",
+  "description": "Create Svelte sticky bar board with Server-Sent Events.",
+  "repo_url": "https://github.com/rutynka/helper-bar-board-sse",
+  "author": "ru7ynk4",
+  "homepage": "https://github.com/rutynka/helper-bar-board-sse",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2023-02-08T01:45:42.506Z",
+  "tags": [
+    "ui",
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

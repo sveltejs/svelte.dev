@@ -1,0 +1,13 @@
+{
+  "name": "@ikun-ui/progress",
+  "description": "Display progress indicators with various styles in Svelte.",
+  "author": "baiwusanyu",
+  "downloads": 27,
+  "dependents": 1,
+  "updated": "2025-01-24T03:49:13.281Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

@@ -1,0 +1,13 @@
+{
+  "name": "svelte-painter",
+  "description": "Create painter application using Svelte.",
+  "author": "miruoon",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2021-07-04T04:44:24.695Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

@@ -1,0 +1,16 @@
+{
+  "name": "@responsive-ui/app-bar",
+  "description": "Implement app bar component for responsive Svelte UI.",
+  "repo_url": "https://github.com/wetix/responsive-ui",
+  "author": "Si3nLoong",
+  "homepage": "https://github.com/wetix/responsive-ui/blob/main/components/app-bar#README.md",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2024-04-23T07:50:59.618Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 19
+}

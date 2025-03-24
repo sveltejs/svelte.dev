@@ -1,0 +1,16 @@
+{
+  "name": "eslint-plugin-readable-tailwind",
+  "description": "Automatically wraps Tailwind classes for readability.",
+  "repo_url": "https://github.com/schoero/eslint-plugin-readable-tailwind",
+  "author": "Roger Schönbächler",
+  "homepage": "https://github.com/schoero/eslint-plugin-readable-tailwind#readme",
+  "downloads": 8958,
+  "dependents": 5,
+  "updated": "2025-03-08T20:27:37.922Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 157
+}

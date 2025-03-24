@@ -1,0 +1,16 @@
+{
+  "name": "svelte-colourpicker",
+  "description": "Create Svelte colour picker component.",
+  "repo_url": "https://github.com/cooolbros/svelte-colourpicker",
+  "author": "cooolbros",
+  "homepage": "https://github.com/cooolbros/svelte-colourpicker#readme",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2023-12-02T03:51:33.188Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 10
+}

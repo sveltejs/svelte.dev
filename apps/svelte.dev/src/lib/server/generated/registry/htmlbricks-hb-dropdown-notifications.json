@@ -1,0 +1,13 @@
+{
+  "name": "@htmlbricks/hb-dropdown-notifications",
+  "description": "Svelte Dropdown Notifications WebComponent",
+  "author": "Dario Caruso",
+  "downloads": 321,
+  "dependents": 0,
+  "updated": "2025-03-09T03:10:28.208Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

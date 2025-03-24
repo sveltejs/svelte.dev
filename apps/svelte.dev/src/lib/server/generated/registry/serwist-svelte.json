@@ -1,0 +1,15 @@
+{
+  "name": "@serwist/svelte",
+  "description": "Enhance SvelteKit's service worker support.",
+  "repo_url": "https://github.com/serwist/serwist",
+  "author": "Serwist",
+  "homepage": "https://serwist.pages.dev",
+  "downloads": 39,
+  "dependents": 0,
+  "updated": "2025-02-22T22:38:42.796Z",
+  "tags": [
+    "adapter"
+  ],
+  "svelte5": false,
+  "runes": false
+}

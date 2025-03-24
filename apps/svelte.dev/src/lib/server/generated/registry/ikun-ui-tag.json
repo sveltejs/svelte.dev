@@ -1,0 +1,13 @@
+{
+  "name": "@ikun-ui/tag",
+  "description": "Create tags with various styles for Svelte applications.",
+  "author": "baiwusanyu",
+  "downloads": 36,
+  "dependents": 1,
+  "updated": "2025-01-24T03:49:22.970Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

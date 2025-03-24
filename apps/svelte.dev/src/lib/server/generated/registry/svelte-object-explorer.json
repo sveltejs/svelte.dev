@@ -1,0 +1,16 @@
+{
+  "name": "svelte-object-explorer",
+  "description": "View objects in Svelte apps, similar to console.",
+  "repo_url": "https://github.com/Swiftaff/svelte-object-explorer",
+  "author": "swiftaff",
+  "homepage": "https://github.com/Swiftaff/svelte-object-explorer",
+  "downloads": 50,
+  "dependents": 0,
+  "updated": "2021-10-09T10:46:23.877Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 3
+}

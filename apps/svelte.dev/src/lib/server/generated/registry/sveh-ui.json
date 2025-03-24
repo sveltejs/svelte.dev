@@ -1,0 +1,14 @@
+{
+  "name": "sveh-ui",
+  "description": "Offer Svelte components styled with Tailwind CSS.",
+  "author": "harryhdt",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2024-01-14T14:11:02.185Z",
+  "tags": [
+    "component-library",
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

@@ -1,0 +1,14 @@
+{
+  "name": "@ggchivalrous/db-ui",
+  "description": "Provide Svelte component library.",
+  "author": "ggchivalrous",
+  "downloads": 3,
+  "dependents": 0,
+  "updated": "2023-12-03T07:24:16.128Z",
+  "tags": [
+    "component-library",
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

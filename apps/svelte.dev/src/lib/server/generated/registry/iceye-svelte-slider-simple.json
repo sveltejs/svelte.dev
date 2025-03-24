@@ -1,0 +1,15 @@
+{
+  "name": "@iceye/svelte-slider-simple",
+  "description": "Create simple Svelte slider components.",
+  "repo_url": "https://github.com/iceye/svelte-slider",
+  "author": "Iceye",
+  "homepage": "https://github.com/iceye/svelte-slider#readme",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2024-11-13T13:19:38.418Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

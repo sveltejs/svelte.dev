@@ -1,0 +1,13 @@
+{
+  "name": "@canadies/svelte-customizable-quill",
+  "description": "Create easy-to-use, flexible Quill editor for Svelte.",
+  "author": "Daniel Ho",
+  "downloads": 7,
+  "dependents": 0,
+  "updated": "2024-09-18T05:53:59.608Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

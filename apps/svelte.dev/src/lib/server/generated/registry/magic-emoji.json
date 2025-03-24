@@ -1,0 +1,16 @@
+{
+  "name": "magic-emoji",
+  "description": "Display accessible emoji in Svelte applications.",
+  "repo_url": "https://github.com/shwilliam/magic-emoji",
+  "author": "William Lindvall",
+  "homepage": "https://github.com/shwilliam/magic-emoji#readme",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2020-07-16T22:14:22.491Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

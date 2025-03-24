@@ -1,0 +1,16 @@
+{
+  "name": "@sveltejs/svelte-json-tree",
+  "description": "View JSON data in Svelte applications.",
+  "repo_url": "https://github.com/sveltejs/svelte-json-tree",
+  "author": "Tan Li Hau",
+  "homepage": "https://github.com/sveltejs/svelte-json-tree#readme",
+  "downloads": 274,
+  "dependents": 0,
+  "updated": "2024-12-10T23:22:51.617Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 10
+}

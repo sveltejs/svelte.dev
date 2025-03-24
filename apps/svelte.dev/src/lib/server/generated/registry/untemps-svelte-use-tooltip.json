@@ -1,0 +1,16 @@
+{
+  "name": "@untemps/svelte-use-tooltip",
+  "description": "Create tooltips for Svelte elements.",
+  "repo_url": "https://github.com/untemps/svelte-use-tooltip",
+  "author": "Vincent Le Badezet",
+  "homepage": "https://github.com/untemps/svelte-use-tooltip#readme",
+  "downloads": 296,
+  "dependents": 2,
+  "updated": "2024-12-01T15:07:35.483Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 61
+}

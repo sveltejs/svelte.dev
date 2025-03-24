@@ -1,0 +1,16 @@
+{
+  "name": "svelte-stack-router",
+  "description": "Create native-feeling web apps with Svelte, caching page components.",
+  "repo_url": "https://github.com/cdellacqua/svelte-stack-router",
+  "author": "Carlo Dell'Acqua",
+  "homepage": "https://github.com/cdellacqua/svelte-stack-router",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2021-11-16T22:04:58.397Z",
+  "tags": [
+    "router"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 43
+}

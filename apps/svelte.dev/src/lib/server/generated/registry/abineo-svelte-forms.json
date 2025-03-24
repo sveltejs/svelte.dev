@@ -1,0 +1,16 @@
+{
+  "name": "@abineo/svelte-forms",
+  "description": "Provide well-tested form validation for Svelte and SvelteKit.",
+  "repo_url": "https://github.com/abineo-ag/svelte-forms",
+  "author": "christoph-jeanluc-schneider",
+  "homepage": "https://github.com/abineo-ag/svelte-forms#readme",
+  "downloads": 39,
+  "dependents": 0,
+  "updated": "2023-06-27T14:48:12.451Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

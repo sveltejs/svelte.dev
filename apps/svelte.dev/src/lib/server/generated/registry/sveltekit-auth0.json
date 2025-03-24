@@ -1,0 +1,14 @@
+{
+  "name": "sveltekit-auth0",
+  "description": "Integrate Auth0 authentication into SvelteKit applications.",
+  "author": "kalis99",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2023-01-08T08:29:40.563Z",
+  "tags": [
+    "auth",
+    "integration"
+  ],
+  "svelte5": false,
+  "runes": false
+}

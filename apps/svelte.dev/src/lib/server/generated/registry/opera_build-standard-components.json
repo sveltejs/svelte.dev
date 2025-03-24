@@ -1,0 +1,13 @@
+{
+  "name": "@opera_build/standard-components",
+  "description": "Define components available in Opera client library.",
+  "author": "simvolice",
+  "downloads": 0,
+  "dependents": 1,
+  "updated": "2021-09-09T16:28:00.498Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": false,
+  "runes": false
+}

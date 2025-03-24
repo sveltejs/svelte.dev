@@ -1,0 +1,14 @@
+{
+  "name": "@svelte-frens/ui-kit",
+  "description": "Create UI kit for Svelte projects.",
+  "author": "ktruong008",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2022-11-27T21:17:00.665Z",
+  "tags": [
+    "component-library",
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

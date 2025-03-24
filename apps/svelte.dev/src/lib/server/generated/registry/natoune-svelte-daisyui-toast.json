@@ -1,0 +1,16 @@
+{
+  "name": "@natoune/svelte-daisyui-toast",
+  "description": "Display toast notifications using DaisyUI in Svelte apps.",
+  "repo_url": "https://github.com/Natoune/svelte-daisyui-toast",
+  "author": "Natan Chiodi",
+  "homepage": "https://natoune.github.io/svelte-daisyui-toast",
+  "downloads": 15,
+  "dependents": 0,
+  "updated": "2025-02-13T20:46:30.430Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 1
+}

@@ -1,0 +1,15 @@
+{
+  "name": "happy-svelte-scrollbar",
+  "description": "Create custom scrollbar component for Svelte.",
+  "repo_url": "https://github.com/happy-inc-tech/happy-svelte-scrollbar",
+  "author": "Happy Inc",
+  "homepage": "https://github.com/happy-inc-tech/happy-svelte-scrollbar#readme",
+  "downloads": 4,
+  "dependents": 0,
+  "updated": "2020-12-15T13:24:34.841Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

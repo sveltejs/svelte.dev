@@ -1,0 +1,13 @@
+{
+  "name": "myui-qiangliar",
+  "description": "Create Svelte UI components.",
+  "author": "qiangliar",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2023-02-20T15:26:58.734Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": false,
+  "runes": false
+}

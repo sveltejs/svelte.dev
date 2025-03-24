@@ -1,0 +1,13 @@
+{
+  "name": "@tnthung/svelte-component",
+  "description": "Build reusable Svelte components with actions and functions.",
+  "author": "tnthung",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2023-05-29T01:13:31.829Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": false,
+  "runes": false
+}

@@ -1,0 +1,15 @@
+{
+  "name": "svelte-game-icons",
+  "description": "Use Game-Icons in Svelte projects.",
+  "repo_url": "https://github.com/takoyaro/svelte-game-icons",
+  "author": "takoyaro",
+  "homepage": "https://github.com/takoyaro/svelte-game-icons#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2020-09-26T02:08:17.908Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

@@ -1,0 +1,16 @@
+{
+  "name": "happymodals",
+  "description": "Create accessible modals with stress-free developer experience.",
+  "repo_url": "https://github.com/byjackli/happymodals",
+  "author": "Jack Li",
+  "homepage": "https://happymodals.com",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2022-07-14T21:40:00.027Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 1
+}

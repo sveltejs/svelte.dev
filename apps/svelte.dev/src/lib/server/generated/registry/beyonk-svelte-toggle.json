@@ -1,0 +1,13 @@
+{
+  "name": "@beyonk/svelte-toggle",
+  "description": "Create toggle components for Svelte applications.",
+  "author": "antony",
+  "downloads": 32,
+  "dependents": 0,
+  "updated": "2021-12-02T13:42:31.145Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

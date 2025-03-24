@@ -1,0 +1,14 @@
+{
+  "name": "@vigenere23/svelte-component",
+  "description": "Base for building shareable Svelte components.",
+  "repo_url": "git@github.com-vigenere23:vigenere23/svelte-component-issue-5503",
+  "author": "Gab S.",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2020-10-06T13:12:58.182Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

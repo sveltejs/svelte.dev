@@ -1,0 +1,16 @@
+{
+  "name": "@elron/svelte-wp-shortcode",
+  "description": "Embed Svelte components using WordPress-style shortcodes.",
+  "repo_url": "https://github.com/elron/svelte-wp-shortcodes",
+  "author": "Elron Bucai",
+  "homepage": "https://svelte-wp-shortcodes.netlify.app/",
+  "downloads": 42,
+  "dependents": 0,
+  "updated": "2023-08-11T18:27:28.618Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 5
+}

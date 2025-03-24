@@ -1,0 +1,16 @@
+{
+  "name": "svelte-hamburgers",
+  "description": "Create animated hamburger menu icons for Svelte.",
+  "repo_url": "https://github.com/ghostdevv/svelte-hamburgers",
+  "author": "Willow GHOST",
+  "homepage": "https://github.com/ghostdevv/svelte-hamburgers#readme",
+  "downloads": 1405,
+  "dependents": 1,
+  "updated": "2024-10-21T00:00:29.969Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 99
+}

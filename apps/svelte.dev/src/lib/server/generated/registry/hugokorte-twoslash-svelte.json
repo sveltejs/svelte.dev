@@ -1,0 +1,17 @@
+{
+  "name": "@hugokorte/twoslash-svelte",
+  "description": "Extend Twoslash for Svelte support.",
+  "repo_url": "https://github.com/twoslashes/twoslash",
+  "author": "Hugo Korte",
+  "homepage": "https://github.com/twoslashes/twoslash#readme",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2024-12-15T21:43:10.073Z",
+  "tags": [
+    "tooling",
+    "preprocessor"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 656
+}

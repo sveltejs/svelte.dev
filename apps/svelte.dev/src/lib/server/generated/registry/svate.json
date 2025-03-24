@@ -1,0 +1,16 @@
+{
+  "name": "svate",
+  "description": "Implement state machines for Svelte applications.",
+  "repo_url": "https://github.com/AlexxNB/svate",
+  "author": "Alexey Schebelev",
+  "homepage": "https://github.com/AlexxNB/svate#readme",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2021-09-29T04:48:55.969Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 14
+}

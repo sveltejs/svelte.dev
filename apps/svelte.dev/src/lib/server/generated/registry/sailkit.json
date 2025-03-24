@@ -1,0 +1,16 @@
+{
+  "name": "sailkit",
+  "description": "Compose responsive email templates in SvelteKit applications.",
+  "repo_url": "https://github.com/n00ki/sailkit",
+  "author": "Noam Shemesh",
+  "homepage": "https://sailkit.xyz",
+  "downloads": 144,
+  "dependents": 0,
+  "updated": "2025-02-23T08:45:40.628Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 58
+}

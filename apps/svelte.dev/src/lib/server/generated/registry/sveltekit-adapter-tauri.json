@@ -1,0 +1,16 @@
+{
+  "name": "sveltekit-adapter-tauri",
+  "description": "Enables SvelteKit applications to run as Tauri desktop apps.",
+  "repo_url": "https://github.com/mudiageo/sveltekit-adapter-tauri",
+  "author": "Mudia Geo",
+  "homepage": "https://github.com/mudiageo/sveltekit-adapter-tauri#readme",
+  "downloads": 3,
+  "dependents": 0,
+  "updated": "2024-10-31T13:46:52.016Z",
+  "tags": [
+    "adapter"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 1
+}

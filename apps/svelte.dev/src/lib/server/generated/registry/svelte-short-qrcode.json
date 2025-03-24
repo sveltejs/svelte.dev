@@ -1,0 +1,15 @@
+{
+  "name": "svelte-short-qrcode",
+  "description": "Generate short URLs and QR codes for SvelteKit applications.",
+  "repo_url": "https://github.com/captaincodeman/svelte-short-qrcode",
+  "author": "Simon Green",
+  "homepage": "https://captaincodeman.github.io/svelte-short-qrcode/",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2024-04-29T20:40:57.231Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

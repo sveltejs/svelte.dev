@@ -1,0 +1,16 @@
+{
+  "name": "theme-selector",
+  "description": "Switch between light, dark, system themes in Svelte apps.",
+  "repo_url": "https://github.com/lixelv/theme-selector",
+  "author": "Simon Efremenko",
+  "homepage": "https://github.com/lixelv/theme-selector#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2024-09-04T16:43:47.075Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 0
+}

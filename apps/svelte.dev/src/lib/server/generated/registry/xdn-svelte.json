@@ -1,0 +1,14 @@
+{
+  "name": "@xdn/svelte",
+  "description": "Integrate Moovweb XDN edge cache with Svelte apps.",
+  "author": "Moovweb",
+  "downloads": 1954,
+  "dependents": 0,
+  "updated": "2022-01-11T10:10:46.853Z",
+  "tags": [
+    "adapter",
+    "server"
+  ],
+  "svelte5": false,
+  "runes": false
+}

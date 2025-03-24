@@ -1,0 +1,16 @@
+{
+  "name": "fluent-svelte-extra",
+  "description": "Implement Microsoft's Fluent Design System in Svelte.",
+  "repo_url": "https://github.com/OpenAnime/fluent-svelte-extra",
+  "author": "SpongeBed",
+  "homepage": "https://github.com/OpenAnime/fluent-svelte-extra",
+  "downloads": 14,
+  "dependents": 0,
+  "updated": "2025-01-27T11:28:21.176Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 54
+}

@@ -1,0 +1,13 @@
+{
+  "name": "@htmlbricks/formrenderer-areainput",
+  "description": "Create Svelte-Bootstrap text area input web component.",
+  "author": "Dario Caruso",
+  "downloads": 71,
+  "dependents": 0,
+  "updated": "2022-01-02T19:14:28.827Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

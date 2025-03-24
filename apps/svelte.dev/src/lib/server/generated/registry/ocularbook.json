@@ -1,0 +1,16 @@
+{
+  "name": "ocularbook",
+  "description": "Create component documentation with Svelte, Vite, and HeroIcons.",
+  "repo_url": "https://github.com/imadx/ocularbook",
+  "author": "Ishan Madhusanka",
+  "homepage": "https://github.com/imadx/ocularbook#readme",
+  "downloads": 2,
+  "dependents": 1,
+  "updated": "2022-06-19T04:29:55.818Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 1
+}

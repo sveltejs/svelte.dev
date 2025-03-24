@@ -1,0 +1,17 @@
+{
+  "name": "@snoculars/adapter-cloudflare-workers",
+  "description": "Adapt SvelteKit apps for deployment on Cloudflare Workers.",
+  "repo_url": "https://github.com/sveltejs/kit",
+  "author": "snoculars",
+  "homepage": "https://kit.svelte.dev",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2024-08-23T02:23:08.281Z",
+  "tags": [
+    "adapter",
+    "server"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 19121
+}

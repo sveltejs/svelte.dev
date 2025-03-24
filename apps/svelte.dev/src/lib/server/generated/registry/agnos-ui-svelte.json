@@ -1,0 +1,16 @@
+{
+  "name": "@agnos-ui/svelte",
+  "description": "Provide Bootstrap-based widget library for Svelte.",
+  "repo_url": "https://github.com/AmadeusITGroup/AgnosUI",
+  "author": "qderoubaix",
+  "homepage": "https://amadeusitgroup.github.io/AgnosUI/latest/",
+  "downloads": 42,
+  "dependents": 0,
+  "updated": "2024-03-05T09:27:30.377Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 68
+}

@@ -1,0 +1,16 @@
+{
+  "name": "@storybook/sveltekit",
+  "description": "Integrates Storybook with SvelteKit projects.",
+  "repo_url": "https://github.com/storybookjs/storybook",
+  "author": "ndelangen",
+  "homepage": "https://github.com/storybookjs/storybook/tree/next/code/frameworks/sveltekit",
+  "downloads": 51806,
+  "dependents": 1,
+  "updated": "2025-03-22T09:14:17.201Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 86194
+}

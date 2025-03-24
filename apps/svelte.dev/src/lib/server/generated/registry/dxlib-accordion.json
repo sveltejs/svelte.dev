@@ -1,0 +1,13 @@
+{
+  "name": "@dxlib/accordion",
+  "description": "Create accordion component for Svelte applications.",
+  "author": "dexterlabs",
+  "downloads": 9,
+  "dependents": 0,
+  "updated": "2019-07-28T14:47:57.654Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

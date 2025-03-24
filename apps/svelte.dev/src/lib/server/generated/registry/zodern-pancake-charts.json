@@ -1,0 +1,16 @@
+{
+  "name": "@zodern/pancake-charts",
+  "description": "Create responsive charts without JavaScript for Svelte.",
+  "repo_url": "https://github.com/zodern/pancake",
+  "author": "Rich Harris",
+  "homepage": "https://github.com/zodern/pancake#readme",
+  "downloads": 18,
+  "dependents": 0,
+  "updated": "2022-04-28T17:01:09.231Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

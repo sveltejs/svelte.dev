@@ -1,0 +1,13 @@
+{
+  "name": "luna_charts",
+  "description": "Build accessible charts for Svelte applications.",
+  "author": "Antonino Provenzano",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2022-09-07T12:00:20.754Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": false,
+  "runes": false
+}

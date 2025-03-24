@@ -1,0 +1,17 @@
+{
+  "name": "@enkitek/sveltestrap",
+  "description": "Bootstrap 5 components for Svelte, providing UI elements.",
+  "repo_url": "https://github.com/ENKI-Technologies-S-L/enki-sveltestrap",
+  "author": "shebinpr",
+  "homepage": "https://github.com/ENKI-Technologies-S-L/enki-sveltestrap#readme",
+  "downloads": 11,
+  "dependents": 0,
+  "updated": "2024-08-16T05:36:13.858Z",
+  "tags": [
+    "component-library",
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

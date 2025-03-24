@@ -1,0 +1,16 @@
+{
+  "name": "svelte-code-editor",
+  "description": "Provide code editor action and component with highlighting.",
+  "repo_url": "https://github.com/PaulMaly/svelte-code-editor",
+  "author": "PaulMaly",
+  "homepage": "https://github.com/PaulMaly/svelte-code-editor#readme",
+  "downloads": 157,
+  "dependents": 0,
+  "updated": "2020-10-30T17:46:34.572Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 7
+}

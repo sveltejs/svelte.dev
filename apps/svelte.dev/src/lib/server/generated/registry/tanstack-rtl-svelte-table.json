@@ -1,0 +1,16 @@
+{
+  "name": "@tanstack-rtl/svelte-table",
+  "description": "Build powerful tables and datagrids for Svelte.",
+  "repo_url": "https://github.com/armantc/table",
+  "author": "Tanner Linsley",
+  "homepage": "https://github.com/armantc/table#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2023-09-28T06:02:14.152Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

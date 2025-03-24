@@ -1,0 +1,13 @@
+{
+  "name": "sequential-workflow-designer-svelte",
+  "description": "Integrate Sequential Workflow Designer in Svelte apps.",
+  "author": "b4rtaz",
+  "downloads": 335,
+  "dependents": 1,
+  "updated": "2025-03-20T17:36:55.045Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": false,
+  "runes": false
+}

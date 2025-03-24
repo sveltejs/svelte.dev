@@ -1,0 +1,16 @@
+{
+  "name": "svelte-diagrams",
+  "description": "Generate diagrams and charts using Svelte components.",
+  "repo_url": "https://github.com/exybore/svelte-diagrams",
+  "author": "exybore",
+  "homepage": "https://github.com/exybore/svelte-diagrams",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2019-08-29T18:21:48.249Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 4
+}

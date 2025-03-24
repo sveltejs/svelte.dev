@@ -1,0 +1,17 @@
+{
+  "name": "leafletjs-svelte",
+  "description": "Integrate LeafletJS maps into Svelte applications.",
+  "repo_url": "https://github.com/otokama/leafletjs-svelte",
+  "author": "lampo",
+  "homepage": "https://otokama.github.io/leafletjs-svelte/",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2023-10-19T14:42:06.771Z",
+  "tags": [
+    "ui",
+    "integration"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 4
+}

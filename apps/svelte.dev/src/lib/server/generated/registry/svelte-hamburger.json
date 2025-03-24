@@ -1,0 +1,16 @@
+{
+  "name": "svelte-hamburger",
+  "description": "Create animated hamburger icon for Svelte with no dependencies.",
+  "repo_url": "https://github.com/madeleineostoja/svelte-hamburger",
+  "author": "madeleineostoja",
+  "homepage": "https://github.com/madeleineostoja/svelte-hamburger#readme",
+  "downloads": 35,
+  "dependents": 0,
+  "updated": "2022-02-10T07:05:08.586Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 5
+}

@@ -1,0 +1,17 @@
+{
+  "name": "js-hex-editor",
+  "description": "Implement hex editor component for Svelte applications.",
+  "repo_url": "https://github.com/stan-kondrat/js-hex-editor",
+  "author": "stankondrat",
+  "homepage": "https://github.com/stan-kondrat/js-hex-editor#readme",
+  "downloads": 19,
+  "dependents": 1,
+  "updated": "2022-09-11T22:04:25.741Z",
+  "tags": [
+    "ui",
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 4
+}

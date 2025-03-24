@@ -1,0 +1,16 @@
+{
+  "name": "svelte-translate-tools",
+  "description": "Extract, generate, and compile translation files for Svelte apps.",
+  "repo_url": "https://github.com/noelmugnier/svelte-translate-tools",
+  "author": "Noël Mugnier",
+  "homepage": "https://github.com/noelmugnier/svelte-translate-tools#readme",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2021-10-01T14:01:24.669Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 9
+}

@@ -1,0 +1,15 @@
+{
+  "name": "svb",
+  "description": "Bundle Svelte apps with zero configuration.",
+  "repo_url": "https://github.com/himynameisdave/svelte-bundler",
+  "author": "Dave Lunny",
+  "homepage": "https://github.com/himynameisdave/svelte-bundler#readme",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2019-09-24T04:44:24.794Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false
+}

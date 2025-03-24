@@ -1,0 +1,16 @@
+{
+  "name": "svelte-show-action",
+  "description": "Conditionally show or hide elements in Svelte apps.",
+  "repo_url": "https://github.com/ramonmalcolm10/svelte-show-action",
+  "author": "Ramon Malcolm",
+  "homepage": "https://github.com/ramonmalcolm10/svelte-show-action#readme",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2023-05-30T11:22:46.433Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 1
+}

@@ -1,0 +1,17 @@
+{
+  "name": "lottie-svelte",
+  "description": "Provides Svelte wrapper around lottie-web for animations.",
+  "repo_url": "https://github.com/MattDavis00/lottie-svelte",
+  "author": "mattdavis00",
+  "homepage": "https://github.com/MattDavis00/lottie-svelte",
+  "downloads": 124,
+  "dependents": 0,
+  "updated": "2024-01-11T18:45:04.303Z",
+  "tags": [
+    "ui",
+    "media"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 10
+}

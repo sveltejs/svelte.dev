@@ -1,0 +1,16 @@
+{
+  "name": "@minna-ui/code-view",
+  "description": "Highlight code syntax in Svelte projects.",
+  "repo_url": "https://github.com/WeAreGenki/minna-ui",
+  "author": "Max Milton",
+  "homepage": "https://wearegenki.github.io/minna-ui",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2019-05-28T12:13:47.778Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 87
+}

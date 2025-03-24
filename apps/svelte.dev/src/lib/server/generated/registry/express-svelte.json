@@ -1,0 +1,16 @@
+{
+  "name": "express-svelte",
+  "description": "Integrate Svelte views into Express applications.",
+  "repo_url": "https://github.com/maxiruani/express-svelte",
+  "author": "Maximiliano Ruani",
+  "homepage": "https://github.com/maxiruani/express-svelte#readme",
+  "downloads": 10,
+  "dependents": 2,
+  "updated": "2021-07-16T13:56:13.440Z",
+  "tags": [
+    "server"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 11
+}

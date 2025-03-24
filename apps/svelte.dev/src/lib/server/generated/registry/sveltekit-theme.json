@@ -1,0 +1,13 @@
+{
+  "name": "sveltekit-theme",
+  "description": "Provides easy theming capabilities for SvelteKit applications.",
+  "author": "dooboolab",
+  "downloads": 11,
+  "dependents": 0,
+  "updated": "2022-04-03T11:22:33.326Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

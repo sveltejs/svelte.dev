@@ -1,0 +1,13 @@
+{
+  "name": "@htmlbricks/hb-shop-item-cell",
+  "description": "Provides Svelte Shop Item Cell WebComponent.",
+  "author": "Dario Caruso",
+  "downloads": 303,
+  "dependents": 0,
+  "updated": "2025-03-09T03:10:35.128Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

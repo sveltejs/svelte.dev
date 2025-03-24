@@ -1,0 +1,17 @@
+{
+  "name": "vite-plugin-svelte-checker",
+  "description": "Check Svelte projects with Vite.",
+  "repo_url": "https://github.com/FabianCarrasco/vite-plugin-svelte-checker",
+  "author": "FabianCarrasco",
+  "homepage": "https://github.com/FabianCarrasco/vite-plugin-svelte-checker#readme",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2024-12-19T04:41:29.666Z",
+  "tags": [
+    "tooling",
+    "preprocessor"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 4
+}

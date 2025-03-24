@@ -1,0 +1,13 @@
+{
+  "name": "svelte-used",
+  "description": "Provides useful Svelte store extensions and utility functions.",
+  "author": "1bye",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2023-12-04T12:01:41.579Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

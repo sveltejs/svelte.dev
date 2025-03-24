@@ -1,0 +1,16 @@
+{
+  "name": "@svelte-parts/markdown",
+  "description": "Renders Markdown blocks in Svelte components using marked and dompurify.",
+  "repo_url": "https://github.com/idris-maps/svelte-parts",
+  "author": "idris-maps",
+  "homepage": "https://github.com/idris-maps/svelte-parts#readme",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2022-04-04T21:06:39.010Z",
+  "tags": [
+    "content"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 50
+}

@@ -1,0 +1,14 @@
+{
+  "name": "svelte-meilisearch-instantsearch",
+  "description": "Svelte wrapper for Meilisearch InstantSearch, build search interfaces.",
+  "author": "dfanchon",
+  "downloads": 4,
+  "dependents": 0,
+  "updated": "2024-08-23T09:31:43.629Z",
+  "tags": [
+    "integration",
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

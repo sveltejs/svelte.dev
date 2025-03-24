@@ -1,0 +1,16 @@
+{
+  "name": "@jangxyz/svelte-id-refs",
+  "description": "Manage unique ID attributes in Svelte components.",
+  "repo_url": "https://github.com/jangxyz/svelte-id-refs",
+  "author": "Kim, Jang-hwan",
+  "homepage": "https://github.com/jangxyz/svelte-id-refs#readme",
+  "downloads": 3,
+  "dependents": 0,
+  "updated": "2024-05-14T00:51:23.726Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 0
+}

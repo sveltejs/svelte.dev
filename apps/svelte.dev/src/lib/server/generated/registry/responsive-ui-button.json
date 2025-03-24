@@ -1,0 +1,16 @@
+{
+  "name": "@responsive-ui/button",
+  "description": "Create button component for responsive-ui.",
+  "repo_url": "https://github.com/wetix/responsive-ui",
+  "author": "Si3nLoong",
+  "homepage": "https://github.com/wetix/responsive-ui/blob/main/components/button#README.md",
+  "downloads": 6,
+  "dependents": 1,
+  "updated": "2024-04-23T07:50:59.754Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 19
+}

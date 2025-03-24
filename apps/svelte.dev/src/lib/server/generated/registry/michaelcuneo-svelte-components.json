@@ -1,0 +1,15 @@
+{
+  "name": "@michaelcuneo/svelte-components",
+  "description": "Develop Svelte component library for rapid prototyping.",
+  "repo_url": "https://github.com/michaelcuneo/michaelcuneo",
+  "author": "Michael Cuneo",
+  "homepage": "https://michaelcuneo.com.au",
+  "downloads": 17,
+  "dependents": 0,
+  "updated": "2024-12-22T09:19:12.381Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": true,
+  "runes": false
+}

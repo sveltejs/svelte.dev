@@ -1,0 +1,16 @@
+{
+  "name": "svelte-accessible-table",
+  "description": "Create accessible table components for Svelte applications.",
+  "repo_url": "https://github.com/metonym/svelte-accessible-table",
+  "author": "Eric Liu",
+  "homepage": "https://github.com/metonym/svelte-accessible-table",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2022-01-24T16:09:32.934Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 3
+}

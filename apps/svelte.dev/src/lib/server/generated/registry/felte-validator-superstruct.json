@@ -1,0 +1,16 @@
+{
+  "name": "@felte/validator-superstruct",
+  "description": "Integrate Superstruct validation with Felte forms in Svelte.",
+  "repo_url": "https://github.com/pablo-abc/felte",
+  "author": "Pablo Berganza",
+  "homepage": "https://github.com/pablo-abc/felte/tree/main/packages/validator-superstruct",
+  "downloads": 85,
+  "dependents": 0,
+  "updated": "2024-10-29T20:36:26.472Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 1043
+}

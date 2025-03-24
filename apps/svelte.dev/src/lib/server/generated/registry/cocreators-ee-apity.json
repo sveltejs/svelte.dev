@@ -1,0 +1,16 @@
+{
+  "name": "@cocreators-ee/apity",
+  "description": "Create typed fetch client for openapi-typescript with Svelte.",
+  "repo_url": "https://github.com/cocreators-ee/apity",
+  "author": "Cocreators OÜ",
+  "homepage": "https://github.com/cocreators-ee/apity#readme",
+  "downloads": 68,
+  "dependents": 0,
+  "updated": "2023-10-03T11:48:13.372Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 55
+}

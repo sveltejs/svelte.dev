@@ -1,0 +1,16 @@
+{
+  "name": "@feelinglovelynow/svelte-loading-anchor",
+  "description": "Show loading icon when clicking SvelteKit anchor links.",
+  "repo_url": "https://github.com/feelinglovelynow/svelte-loading-anchor",
+  "author": "https://github.com/feelinglovelynow?tab=repositories",
+  "homepage": "https://github.com/feelinglovelynow/svelte-loading-anchor#readme",
+  "downloads": 16,
+  "dependents": 0,
+  "updated": "2023-12-17T21:50:04.124Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

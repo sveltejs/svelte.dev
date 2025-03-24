@@ -1,0 +1,16 @@
+{
+  "name": "svelte-flex",
+  "description": "Provide reusable flexbox component for Svelte.",
+  "repo_url": "https://github.com/himynameisdave/svelte-flex",
+  "author": "himynameisdave",
+  "homepage": "https://github.com/himynameisdave/svelte-flex",
+  "downloads": 18,
+  "dependents": 0,
+  "updated": "2023-09-05T16:22:00.240Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 79
+}

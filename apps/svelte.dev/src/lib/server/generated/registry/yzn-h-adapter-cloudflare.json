@@ -1,0 +1,16 @@
+{
+  "name": "@yzn-h/adapter-cloudflare",
+  "description": "Build SvelteKit apps on Cloudflare Pages with Workers integration.",
+  "repo_url": "https://github.com/sveltejs/kit",
+  "author": "yzn-h",
+  "homepage": "https://svelte.dev",
+  "downloads": 13,
+  "dependents": 0,
+  "updated": "2025-01-25T16:31:47.655Z",
+  "tags": [
+    "adapter"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 19121
+}

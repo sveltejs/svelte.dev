@@ -1,0 +1,16 @@
+{
+  "name": "@minsoochoo/audio-player",
+  "description": "Create SvelteKit audio player with custom controls.",
+  "repo_url": "https://gitlab.com/minsoochoo/audio-player",
+  "author": "Minsoo Choo",
+  "homepage": "https://gitlab.com/minsoochoo/audio-player#readme",
+  "downloads": 19,
+  "dependents": 0,
+  "updated": "2025-03-06T18:44:31.369Z",
+  "tags": [
+    "media",
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false
+}

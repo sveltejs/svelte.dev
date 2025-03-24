@@ -1,0 +1,15 @@
+{
+  "name": "svelte-loading-skeleton",
+  "description": "Create customizable loading skeletons for Svelte.",
+  "repo_url": "https://github.com/dylanblokhuis/svelte-loading-skeleton",
+  "author": "dylanblokhuis",
+  "downloads": 232,
+  "dependents": 3,
+  "updated": "2019-10-29T17:41:25.410Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 10
+}

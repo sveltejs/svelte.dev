@@ -1,0 +1,16 @@
+{
+  "name": "@maritime-fun-group/svelte-core",
+  "description": "Component theming for Svelte components using CSS variables.",
+  "repo_url": "https://github.com/isaacmfg/svelte-core",
+  "author": "mfgdevelopment",
+  "homepage": "https://github.com/isaacmfg/svelte-core",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2021-06-01T14:43:25.354Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

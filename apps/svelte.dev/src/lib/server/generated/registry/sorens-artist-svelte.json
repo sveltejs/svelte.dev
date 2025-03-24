@@ -1,0 +1,17 @@
+{
+  "name": "@sorens/artist-svelte",
+  "description": "Build UI with Artist, an opinionated SvelteKit UI framework.",
+  "repo_url": "https://github.com/sorenabedi/artist-svelte",
+  "author": "Soren Abedi",
+  "homepage": "https://artist-ui.pages.dev",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2021-11-21T14:06:50.947Z",
+  "tags": [
+    "component-library",
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 4
+}

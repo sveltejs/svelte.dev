@@ -1,0 +1,15 @@
+{
+  "name": "webln-v4v",
+  "description": "Render form for Bitcoin Lightning payments in Svelte.",
+  "repo_url": "https://github.com/podverse/webln-v4v",
+  "author": "Mitch Downey [@mitchdowney]",
+  "homepage": "https://podverse.fm",
+  "downloads": 3,
+  "dependents": 0,
+  "updated": "2024-08-06T22:23:58.363Z",
+  "tags": [
+    "integration"
+  ],
+  "svelte5": false,
+  "runes": false
+}

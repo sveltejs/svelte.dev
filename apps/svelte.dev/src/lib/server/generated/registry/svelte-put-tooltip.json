@@ -1,0 +1,16 @@
+{
+  "name": "@svelte-put/tooltip",
+  "description": "Build type-safe, headless, extensible tooltips via Svelte action.",
+  "repo_url": "https://github.com/vnphanquang/svelte-put",
+  "author": "Quang Phan",
+  "homepage": "https://svelte-put.vnphanquang.com/docs/tooltip",
+  "downloads": 6,
+  "dependents": 0,
+  "updated": "2024-05-17T09:08:59.162Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 908
+}

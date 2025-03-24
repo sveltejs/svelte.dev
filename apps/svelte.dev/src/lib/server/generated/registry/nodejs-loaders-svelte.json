@@ -1,0 +1,16 @@
+{
+  "name": "@nodejs-loaders/svelte",
+  "description": "Extend Node.js to support Svelte via customization hooks.",
+  "repo_url": "https://github.com/nodejs-loaders/nodejs-loaders",
+  "author": "Augustin Mauroy",
+  "homepage": "https://github.com/nodejs-loaders/nodejs-loaders#readme",
+  "downloads": 7,
+  "dependents": 0,
+  "updated": "2025-02-26T13:27:15.563Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 35
+}

@@ -1,0 +1,15 @@
+{
+  "name": "@legnaleurc/svelte-virtual-scroll-list",
+  "description": "Virtualize large lists within Svelte applications.",
+  "repo_url": "https://github.com/legnaleurc/svelte-virtual-scroll-list",
+  "author": "legnaleurc",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2022-06-02T16:39:44.789Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

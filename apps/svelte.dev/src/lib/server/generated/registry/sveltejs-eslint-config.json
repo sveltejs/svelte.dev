@@ -1,0 +1,16 @@
+{
+  "name": "@sveltejs/eslint-config",
+  "description": "Provides ESLint configuration for Svelte projects.",
+  "repo_url": "https://github.com/sveltejs/eslint-config",
+  "author": "Svelte",
+  "homepage": "https://github.com/svelte/eslint-config#readme",
+  "downloads": 2289,
+  "dependents": 0,
+  "updated": "2025-03-04T01:23:32.195Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 16
+}

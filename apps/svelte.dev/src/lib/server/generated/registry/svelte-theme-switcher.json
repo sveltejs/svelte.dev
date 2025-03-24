@@ -1,0 +1,14 @@
+{
+  "name": "svelte-theme-switcher",
+  "description": "Switch Svelte themes with a simple component.",
+  "author": "dev-warner",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2020-04-20T15:09:05.770Z",
+  "tags": [
+    "ui",
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

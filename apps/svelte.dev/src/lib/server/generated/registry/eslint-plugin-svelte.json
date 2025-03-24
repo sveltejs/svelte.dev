@@ -1,0 +1,16 @@
+{
+  "name": "eslint-plugin-svelte",
+  "description": "Lint Svelte code with ESLint.",
+  "repo_url": "https://github.com/sveltejs/eslint-plugin-svelte",
+  "author": "Yosuke Ota",
+  "homepage": "https://sveltejs.github.io/eslint-plugin-svelte",
+  "downloads": 453956,
+  "dependents": 143,
+  "updated": "2025-03-20T00:24:18.230Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 324
+}

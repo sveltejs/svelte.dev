@@ -1,0 +1,13 @@
+{
+  "name": "argil-svelte",
+  "description": "Build Svelte UI Components Kit from argil data agency.",
+  "author": "Vincent Delaleu",
+  "downloads": 10,
+  "dependents": 0,
+  "updated": "2024-09-26T12:22:38.610Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": false,
+  "runes": false
+}

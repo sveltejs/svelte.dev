@@ -1,0 +1,16 @@
+{
+  "name": "@svelteschool/svelte-forms",
+  "description": "Build forms with validation in Svelte apps.",
+  "repo_url": "https://github.com/svelteschool/svelte-forms",
+  "author": "Svelte School",
+  "homepage": "https://github.com/svelteschool/svelte-forms/",
+  "downloads": 73,
+  "dependents": 2,
+  "updated": "2020-05-20T11:11:14.215Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 137
+}

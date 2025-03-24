@@ -1,0 +1,16 @@
+{
+  "name": "svelte-scrollable-card",
+  "description": "Implement scrollable card components in Svelte.",
+  "repo_url": "https://github.com/httpsOmkar/svelte-scrollable-component",
+  "author": "Omkar Yadav",
+  "homepage": "https://github.com/httpsOmkar/svelte-scrollable-component#readme",
+  "downloads": 5,
+  "dependents": 0,
+  "updated": "2019-05-23T19:17:18.249Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 2
+}

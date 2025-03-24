@@ -1,0 +1,16 @@
+{
+  "name": "svelte-font-select",
+  "description": "Preview and select Google Fonts in Svelte apps.",
+  "repo_url": "https://github.com/captaincodeman/svelte-font-select",
+  "author": "Simon Green",
+  "homepage": "https://captaincodeman.github.io/svelte-font-select/",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2024-04-29T20:46:17.722Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 4
+}

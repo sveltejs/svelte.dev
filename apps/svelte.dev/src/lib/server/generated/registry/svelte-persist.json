@@ -1,0 +1,15 @@
+{
+  "name": "svelte-persist",
+  "description": "Creates persistent stores for Svelte applications.",
+  "repo_url": "https://github.com/ddidwyll/svelte-persist",
+  "author": "Phil D'Oz",
+  "homepage": "https://github.com/ddidwyll/svelte-persist#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2019-07-01T10:07:32.512Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

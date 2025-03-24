@@ -1,0 +1,17 @@
+{
+  "name": "@xec/svelte-todo",
+  "description": "Create simple Todo component for Svelte apps.",
+  "repo_url": "https://github.com/xec/svelte-todo",
+  "author": "Eric Morton",
+  "homepage": "https://xec.github.io/todo/",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2020-03-08T16:06:46.780Z",
+  "tags": [
+    "ui",
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 1
+}

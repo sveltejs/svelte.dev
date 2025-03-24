@@ -1,0 +1,16 @@
+{
+  "name": "litl-ui",
+  "description": "Create Litl design system for Svelte.",
+  "repo_url": "https://github.com/litlio/litl-ui",
+  "author": "Slava Grigorev",
+  "homepage": "https://github.com/litlio/litl-ui#readme",
+  "downloads": 26,
+  "dependents": 0,
+  "updated": "2024-11-21T08:45:03.533Z",
+  "tags": [
+    "component-library",
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false
+}

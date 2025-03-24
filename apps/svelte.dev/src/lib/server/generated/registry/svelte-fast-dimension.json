@@ -1,0 +1,18 @@
+{
+  "name": "svelte-fast-dimension",
+  "description": "Bind dimensions using ResizeObserver for Svelte.",
+  "repo_url": "https://github.com/bluwy/svelte-fast-dimension",
+  "author": "Bjorn Lu",
+  "homepage": "https://github.com/bluwy/svelte-fast-dimension#readme",
+  "downloads": 127,
+  "dependents": 0,
+  "updated": "2023-07-01T06:39:39.977Z",
+  "tags": [
+    "utility",
+    "dom",
+    "performance"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 42
+}

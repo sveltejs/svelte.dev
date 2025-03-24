@@ -1,0 +1,16 @@
+{
+  "name": "@keenmate/svelte-spa-router",
+  "description": "Router for SPAs using Svelte, with hash-based routing.",
+  "repo_url": "https://github.com/keenmate/svelte-spa-router",
+  "author": "Alessandro Segala",
+  "homepage": "https://github.com/KeenMate/svelte-spa-router#readme",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2024-10-07T14:05:55.519Z",
+  "tags": [
+    "router"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

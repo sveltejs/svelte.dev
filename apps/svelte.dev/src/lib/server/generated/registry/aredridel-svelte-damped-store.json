@@ -1,0 +1,16 @@
+{
+  "name": "@aredridel/svelte-damped-store",
+  "description": "Create derived writable Svelte stores that suspend updates.",
+  "repo_url": "https://github.com/aredridel/svelte-damped-store",
+  "author": "Aria Stewart",
+  "homepage": "https://github.com/aredridel/svelte-damped-store#readme",
+  "downloads": 7,
+  "dependents": 0,
+  "updated": "2022-05-15T19:27:58.801Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 6
+}

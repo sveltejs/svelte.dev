@@ -1,0 +1,16 @@
+{
+  "name": "svelte-formly",
+  "description": "Generate dynamic, reactive forms for Svelte applications.",
+  "repo_url": "https://github.com/dyaliCode/svelte-formly",
+  "author": "Kamal Sahmoud",
+  "homepage": "https://github.com/dyaliCode/svelte-formly#readme",
+  "downloads": 232,
+  "dependents": 1,
+  "updated": "2022-07-24T00:42:19.533Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 254
+}

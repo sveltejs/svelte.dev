@@ -1,0 +1,13 @@
+{
+  "name": "@flexiui/svelte-quote",
+  "description": "Create quote components for Svelte applications.",
+  "author": "alexgipi",
+  "downloads": 23,
+  "dependents": 0,
+  "updated": "2025-02-17T12:07:03.750Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false
+}

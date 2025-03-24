@@ -1,0 +1,16 @@
+{
+  "name": "@n-vh/svelte-writable",
+  "description": "Create custom and localStorage-synced writable stores for Svelte.",
+  "repo_url": "https://github.com/n-vh/svelte-writable",
+  "author": "Nils Van Hée",
+  "homepage": "https://github.com/n-vh/svelte-writable",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2023-01-24T17:47:17.199Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

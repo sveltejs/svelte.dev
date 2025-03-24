@@ -1,0 +1,16 @@
+{
+  "name": "svelte-micro",
+  "description": "Lightweight, reactive client-side router for Svelte.",
+  "repo_url": "https://github.com/ayndqy/svelte-micro",
+  "author": "ayndqy",
+  "homepage": "https://github.com/ayndqy/svelte-micro#readme",
+  "downloads": 200,
+  "dependents": 0,
+  "updated": "2024-07-13T23:25:16.789Z",
+  "tags": [
+    "router"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 95
+}

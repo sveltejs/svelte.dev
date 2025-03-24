@@ -1,0 +1,17 @@
+{
+  "name": "svelte-assets-preprocessor",
+  "description": "Extract assets from Svelte templates during the build process.",
+  "repo_url": "https://github.com/pchynoweth/svelte-assets-preprocessor",
+  "author": "Peter Chynoweth",
+  "homepage": "https://github.com/pchynoweth/svelte-assets-preprocessor#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2021-03-28T19:21:52.047Z",
+  "tags": [
+    "preprocessor",
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

@@ -1,0 +1,16 @@
+{
+  "name": "@closure-next/svelte",
+  "description": "Integrate Closure Next components with Svelte apps.",
+  "repo_url": "https://github.com/MilesONerd/closure-next",
+  "author": "milesonerd",
+  "homepage": "https://closure-next.github.io",
+  "downloads": 8,
+  "dependents": 0,
+  "updated": "2025-02-16T00:54:26.725Z",
+  "tags": [
+    "integration"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 2
+}

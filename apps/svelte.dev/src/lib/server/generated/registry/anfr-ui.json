@@ -1,0 +1,14 @@
+{
+  "name": "@anfr/ui",
+  "description": "Create UI components for Anafro tools.",
+  "author": "Anatoly Frolov",
+  "homepage": "https://github.com/anafro/ui",
+  "downloads": 5,
+  "dependents": 0,
+  "updated": "2024-12-17T02:18:06.756Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": true,
+  "runes": false
+}

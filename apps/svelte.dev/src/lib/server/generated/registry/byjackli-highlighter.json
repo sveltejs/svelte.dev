@@ -1,0 +1,16 @@
+{
+  "name": "@byjackli/highlighter",
+  "description": "Modify Prism.js, support Svelte, resemble VSCode editor syntax.",
+  "repo_url": "https://github.com/byjackli/highlighter",
+  "author": "Jack Li",
+  "homepage": "https://github.com/byjackli/highlighter#readme",
+  "downloads": 25,
+  "dependents": 0,
+  "updated": "2022-04-23T16:25:20.132Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

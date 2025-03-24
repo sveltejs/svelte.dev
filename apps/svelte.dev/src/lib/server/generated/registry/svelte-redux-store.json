@@ -1,0 +1,16 @@
+{
+  "name": "svelte-redux-store",
+  "description": "Use Redux store with Svelte, similar to react-redux.",
+  "repo_url": "https://github.com/vanzinvestor/svelte-redux-store",
+  "author": "Vanz Investor",
+  "homepage": "https://github.com/vanzinvestor/svelte-redux-store",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2023-01-16T15:39:14.477Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 2
+}

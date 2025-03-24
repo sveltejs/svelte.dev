@@ -1,0 +1,16 @@
+{
+  "name": "@carbon/charts-svelte",
+  "description": "Offer Carbon Design System chart components for Svelte.",
+  "repo_url": "https://github.com/carbon-design-system/carbon-charts",
+  "author": "carbon-bot",
+  "homepage": "https://github.com/carbon-design-system/carbon-charts#readme",
+  "downloads": 3072,
+  "dependents": 2,
+  "updated": "2025-02-18T17:07:04.219Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 938
+}

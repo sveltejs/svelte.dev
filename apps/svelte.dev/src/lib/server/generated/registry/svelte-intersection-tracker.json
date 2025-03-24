@@ -1,0 +1,17 @@
+{
+  "name": "svelte-intersection-tracker",
+  "description": "Track element visibility using IntersectionObserver in Svelte.",
+  "repo_url": "https://github.com/Corrl/svelte-intersection-tracker",
+  "author": "corrl",
+  "homepage": "https://corrl.github.io/svelte-intersection-tracker/",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2022-07-06T09:20:28.471Z",
+  "tags": [
+    "dom",
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 5
+}

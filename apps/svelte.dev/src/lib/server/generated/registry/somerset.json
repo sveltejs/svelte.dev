@@ -1,0 +1,16 @@
+{
+  "name": "somerset",
+  "description": "Implement Next SEO for SvelteKit.",
+  "repo_url": "https://github.com/realgoatish/somerset",
+  "author": "realgoatish",
+  "homepage": "https://github.com/realgoatish/somerset#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2024-01-06T04:44:00.504Z",
+  "tags": [
+    "seo"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 21
+}

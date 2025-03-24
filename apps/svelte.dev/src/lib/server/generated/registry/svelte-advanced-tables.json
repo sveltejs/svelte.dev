@@ -1,0 +1,16 @@
+{
+  "name": "svelte-advanced-tables",
+  "description": "Integrates DataTables into Svelte projects.",
+  "repo_url": "https://github.com/homescriptone/svelte-datatables",
+  "author": "homescriptone",
+  "homepage": "https://github.com/homescriptone/svelte-datatables",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2021-09-12T07:15:06.234Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 17
+}

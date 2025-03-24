@@ -1,0 +1,16 @@
+{
+  "name": "@mashroom/mashroom-portal-demo-svelte-app",
+  "description": "Integrate Svelte SPA into Mashroom Portal microfrontend platform.",
+  "repo_url": "https://github.com/nonblocking/mashroom",
+  "author": "Milan Heimschild",
+  "homepage": "https://www.mashroom-server.com",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2024-07-08T08:48:46.968Z",
+  "tags": [
+    "integration"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 55
+}

@@ -1,0 +1,13 @@
+{
+  "name": "@fallen-ui/core",
+  "description": "Provide core UI components for Svelte applications.",
+  "author": "siddacool",
+  "downloads": 13,
+  "dependents": 0,
+  "updated": "2021-11-16T08:52:57.139Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

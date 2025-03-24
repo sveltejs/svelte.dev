@@ -1,0 +1,15 @@
+{
+  "name": "@vite-cms/editor-svelte",
+  "description": "Edit content files directly within Vite applications.",
+  "repo_url": "https://github.com/StarLederer/vite-plugin-content",
+  "author": "Star Lederer",
+  "homepage": "https://github.com/StarLederer/vite-plugin-content#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2022-11-13T18:01:35.161Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false
+}

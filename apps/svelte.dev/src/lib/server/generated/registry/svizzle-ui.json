@@ -1,0 +1,17 @@
+{
+  "name": "@svizzle/ui",
+  "description": "Provide UI components for Svelte, including icons, layouts, and sensors.",
+  "repo_url": "https://github.com/nestauk/svizzle",
+  "author": "nestauk",
+  "homepage": "https://github.com/nestauk/svizzle",
+  "downloads": 0,
+  "dependents": 5,
+  "updated": "2023-11-23T20:36:01.455Z",
+  "tags": [
+    "ui",
+    "component-library"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 19
+}

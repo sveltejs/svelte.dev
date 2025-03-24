@@ -1,0 +1,16 @@
+{
+  "name": "toas",
+  "description": "Display notifications in Svelte applications.",
+  "repo_url": "https://github.com/itamaesanorg/toas",
+  "author": "ITAMAESAN ORG & Miguel Gargallo",
+  "homepage": "https://itamaesan.org",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2023-12-17T18:23:58.934Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

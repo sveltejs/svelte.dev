@@ -1,0 +1,15 @@
+{
+  "name": "@voscausa/use-validate-example",
+  "description": "Validate forms in Svelte using svelte-use-validate.",
+  "repo_url": "https://github.com/voscausa/use-validate-example",
+  "author": "voscausa",
+  "homepage": "https://github.com/voscausa/use-validate-example#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2024-01-18T12:11:11.130Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

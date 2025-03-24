@@ -1,0 +1,17 @@
+{
+  "name": "svantic",
+  "description": "Fomantic-UI components for Svelte framework.",
+  "repo_url": "https://github.com/ryu-man/svantic",
+  "author": "ryu-man",
+  "homepage": "https://github.com/ryu-man/svantic#readme",
+  "downloads": 4,
+  "dependents": 0,
+  "updated": "2022-02-16T09:57:27.941Z",
+  "tags": [
+    "component-library",
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 17
+}

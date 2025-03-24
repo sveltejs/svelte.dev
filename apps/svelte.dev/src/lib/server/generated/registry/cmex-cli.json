@@ -1,0 +1,13 @@
+{
+  "name": "@cmex/cli",
+  "description": "CLI tool for managing Svelte component libraries.",
+  "author": "Mo",
+  "downloads": 29,
+  "dependents": 0,
+  "updated": "2022-04-19T16:06:15.113Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false
+}

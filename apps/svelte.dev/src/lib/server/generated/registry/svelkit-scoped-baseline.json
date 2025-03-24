@@ -1,0 +1,16 @@
+{
+  "name": "@svelkit/scoped-baseline",
+  "description": "Provides scoped baseline component for consistent styling.",
+  "repo_url": "https://github.com/kenoxa/svelkit",
+  "author": "Sascha Tandel",
+  "homepage": "https://github.com/kenoxa/svelkit#readme",
+  "downloads": 13,
+  "dependents": 0,
+  "updated": "2020-07-16T19:45:05.773Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 7
+}

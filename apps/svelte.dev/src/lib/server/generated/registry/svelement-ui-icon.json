@@ -1,0 +1,16 @@
+{
+  "name": "@svelement-ui/icon",
+  "description": "Element UI icon component for Svelte.",
+  "repo_url": "https://github.com/koory1st/svelement-ui",
+  "author": "koory1st",
+  "homepage": "https://koory1st.github.io/svelement-ui/",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2024-02-15T11:12:41.776Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 1
+}

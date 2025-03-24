@@ -1,0 +1,13 @@
+{
+  "name": "@htmlbricks/funnel-component",
+  "description": "Create funnel web components for Svelte.",
+  "author": "Dario Caruso",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2022-01-02T19:14:33.361Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

@@ -1,0 +1,13 @@
+{
+  "name": "@kws3/eslint-plugin-svelte3",
+  "description": "Provide Kws3 specific ESLint rules for Svelte 3.",
+  "author": "Khaled Ahmed",
+  "downloads": 5,
+  "dependents": 0,
+  "updated": "2023-12-22T17:42:26.993Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false
+}

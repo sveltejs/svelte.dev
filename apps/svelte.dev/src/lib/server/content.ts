@@ -1,12 +1,7 @@
 import { read } from '$app/server';
 import type { Document } from '@sveltejs/site-kit';
-import {
-	extract_frontmatter,
-	markdown_to_plain_text,
-	transform
-} from '@sveltejs/site-kit/markdown';
+import { extract_frontmatter } from '@sveltejs/site-kit/markdown';
 import { create_index } from '@sveltejs/site-kit/server/content';
-import registry_json from '../registry.json' assert { type: 'json' };
 
 const documents = import.meta.glob<string>('../../../content/**/*.md', {
 	eager: true,
@@ -23,11 +18,14 @@ const assets = import.meta.glob<string>(
 	}
 );
 
-const registry_docs = import.meta.glob<string>('../../../src/lib/server/generated/registry/*.md', {
-	eager: true,
-	query: '?raw',
-	import: 'default'
-});
+const registry_docs = import.meta.glob<string>(
+	'../../../src/lib/server/generated/registry/*.json',
+	{
+		eager: true,
+		query: '?raw',
+		import: 'default'
+	}
+);
 
 // https://github.com/vitejs/vite/issues/17453
 export const index = await create_index(documents, assets, '../../../content', read);
@@ -204,12 +202,11 @@ function create_registry() {
 	let output: Package[] = [];
 
 	for (const frontmatter of Object.values(registry_docs)) {
-		const json = extract_frontmatter(frontmatter);
-		json.metadata.description = json.metadata.description;
-		json.metadata.outdated =
-			+new Date() - +new Date(json.metadata.updated) > 2 * 365 * 24 * 60 * 60 * 1000;
+		const json = JSON.parse(frontmatter);
+		json.description = json.description;
+		json.outdated = +new Date() - +new Date(json.updated) > 2 * 365 * 24 * 60 * 60 * 1000;
 
-		output.push(json.metadata as unknown as Package);
+		output.push(json as unknown as Package);
 	}
 
 	return output;

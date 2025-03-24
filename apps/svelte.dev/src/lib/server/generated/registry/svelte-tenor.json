@@ -1,0 +1,17 @@
+{
+  "name": "svelte-tenor",
+  "description": "Provides Tenor GIF components for Svelte applications.",
+  "repo_url": "https://github.com/GauBen/svelte-tenor",
+  "author": "Gautier Ben Aïm",
+  "homepage": "https://github.com/GauBen/svelte-tenor/#readme",
+  "downloads": 52,
+  "dependents": 0,
+  "updated": "2022-08-15T14:51:40.288Z",
+  "tags": [
+    "ui",
+    "integration"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 8
+}

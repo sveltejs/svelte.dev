@@ -1,0 +1,15 @@
+{
+  "name": "svelte-currency-formatter",
+  "description": "Format numbers as currency in Svelte applications.",
+  "repo_url": "https://github.com/ayotunde-codes/svelte-currency",
+  "author": "ayotunde",
+  "homepage": "https://github.com/ayotunde-codes/svelte-currency#readme",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2021-07-29T12:26:02.202Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

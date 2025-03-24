@@ -1,0 +1,17 @@
+{
+  "name": "uifox",
+  "description": "Build beautiful UI components with Tailwind 4 and Svelte 5.",
+  "repo_url": "https://github.com/flo-bit/ui-kit",
+  "author": "flo-bit",
+  "homepage": "https://flo-bit.dev/ui-kit",
+  "downloads": 62,
+  "dependents": 0,
+  "updated": "2025-03-16T18:11:31.485Z",
+  "tags": [
+    "component-library",
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 12
+}

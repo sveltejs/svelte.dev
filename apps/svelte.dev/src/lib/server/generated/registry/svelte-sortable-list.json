@@ -1,0 +1,16 @@
+{
+  "name": "svelte-sortable-list",
+  "description": "Implement drag-n-drop functionality for Svelte lists.",
+  "repo_url": "https://github.com/brunomolteni/svelte-sortable-list",
+  "author": "Bruno Molteni",
+  "homepage": "https://github.com/brunomolteni/svelte-sortable-list#readme",
+  "downloads": 404,
+  "dependents": 0,
+  "updated": "2019-07-05T19:48:52.084Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 124
+}

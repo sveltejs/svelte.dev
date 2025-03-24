@@ -1,0 +1,15 @@
+{
+  "name": "clinic-cms",
+  "description": "Build clinic CMS frontend with Svelte and Skeleton UI components.",
+  "author": "Jerome Pinguet",
+  "homepage": "https://github.com/medica-im/clinic-cms",
+  "downloads": 66,
+  "dependents": 0,
+  "updated": "2025-03-14T14:36:14.866Z",
+  "tags": [
+    "content",
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false
+}

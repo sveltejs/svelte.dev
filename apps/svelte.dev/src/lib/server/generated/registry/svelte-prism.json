@@ -1,0 +1,16 @@
+{
+  "name": "svelte-prism",
+  "description": "Prismjs for Svelte code highlighting.",
+  "repo_url": "https://github.com/jakobrosenberg/svelte-prism",
+  "author": "Jakob Rosenberg",
+  "homepage": "https://github.com/jakobrosenberg/svelte-prism#readme",
+  "downloads": 1052,
+  "dependents": 5,
+  "updated": "2022-07-23T19:31:59.073Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 35
+}

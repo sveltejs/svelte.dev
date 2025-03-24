@@ -1,0 +1,16 @@
+{
+  "name": "jsrepo",
+  "description": "CLI to add shared code from remote repositories.",
+  "repo_url": "https://github.com/ieedan/jsrepo",
+  "author": "Aidan Bleser",
+  "homepage": "https://jsrepo.dev",
+  "downloads": 1666,
+  "dependents": 1,
+  "updated": "2025-03-19T18:43:16.126Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 360
+}

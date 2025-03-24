@@ -1,0 +1,13 @@
+{
+  "name": "svelte-moving-div",
+  "description": "Create moving div components in Svelte applications.",
+  "author": "nergel",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2020-01-21T16:25:08.027Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

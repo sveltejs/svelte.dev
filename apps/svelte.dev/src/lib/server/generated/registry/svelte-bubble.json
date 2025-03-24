@@ -1,0 +1,16 @@
+{
+  "name": "svelte-bubble",
+  "description": "Create bubble-like display container for Svelte applications.",
+  "repo_url": "https://github.com/thiagozanetti/svelte-bubble",
+  "author": "thiagozanetti",
+  "homepage": "https://github.com/thiagozanetti/svelte-bubble#readme",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2020-09-21T22:20:42.037Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 1
+}

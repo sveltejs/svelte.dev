@@ -1,0 +1,16 @@
+{
+  "name": "@neiwad/svelte-calendar",
+  "description": "Create calendar components and date pickers for Svelte.",
+  "repo_url": "https://github.com/neiwad/svelte-calendar",
+  "author": "neiwad",
+  "homepage": "https://github.com/neiwad/svelte-calendar",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2022-04-28T20:28:21.171Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 2
+}

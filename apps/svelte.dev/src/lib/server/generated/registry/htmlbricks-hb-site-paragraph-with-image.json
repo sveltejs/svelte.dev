@@ -1,0 +1,13 @@
+{
+  "name": "@htmlbricks/hb-site-paragraph-with-image",
+  "description": "Create site paragraph with image web component.",
+  "author": "Dario Caruso",
+  "downloads": 263,
+  "dependents": 0,
+  "updated": "2025-03-09T03:10:36.559Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

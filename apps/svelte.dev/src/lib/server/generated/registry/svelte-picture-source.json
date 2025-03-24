@@ -1,0 +1,16 @@
+{
+  "name": "svelte-picture-source",
+  "description": "Optimize picture source elements using Svelte preprocessor.",
+  "repo_url": "https://github.com/ppvg/svelte-picture-source",
+  "author": "Peter-Paul van Gemerden",
+  "homepage": "https://github.com/ppvg/svelte-picture-source#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2020-09-14T16:41:56.077Z",
+  "tags": [
+    "preprocessor"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 1
+}

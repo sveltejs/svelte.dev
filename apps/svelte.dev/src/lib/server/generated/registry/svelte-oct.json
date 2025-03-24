@@ -1,0 +1,16 @@
+{
+  "name": "svelte-oct",
+  "description": "Use Octicons SVG icons in Svelte projects.",
+  "repo_url": "https://github.com/shinokada/svelte-oct",
+  "author": "Shinichi Okada",
+  "homepage": "https://svelte-oct.codewithshin.com/",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2024-03-01T16:54:19.566Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 0
+}

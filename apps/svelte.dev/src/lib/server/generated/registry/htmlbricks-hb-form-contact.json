@@ -1,0 +1,13 @@
+{
+  "name": "@htmlbricks/hb-form-contact",
+  "description": "Create Bootstrap contact form component for Svelte applications.",
+  "author": "Dario Caruso",
+  "downloads": 304,
+  "dependents": 0,
+  "updated": "2025-03-09T03:10:42.277Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

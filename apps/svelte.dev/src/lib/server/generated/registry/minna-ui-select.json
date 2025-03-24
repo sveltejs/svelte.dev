@@ -1,0 +1,16 @@
+{
+  "name": "@minna-ui/select",
+  "description": "Build select UI components for Svelte.",
+  "repo_url": "https://github.com/WeAreGenki/minna-ui",
+  "author": "Max Milton",
+  "homepage": "https://wearegenki.github.io/minna-ui",
+  "downloads": 1,
+  "dependents": 1,
+  "updated": "2020-03-24T19:40:15.675Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 87
+}

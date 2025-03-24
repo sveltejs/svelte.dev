@@ -1,0 +1,14 @@
+{
+  "name": "@yeungkc/svelte-portal",
+  "description": "Create portals in Svelte, supporting SSR and updates.",
+  "author": "YeungKC",
+  "homepage": "https://github.com/YeungKC/svelte-portal/",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2023-04-20T09:30:26.163Z",
+  "tags": [
+    "dom"
+  ],
+  "svelte5": false,
+  "runes": false
+}

@@ -1,0 +1,16 @@
+{
+  "name": "stack54",
+  "description": "Provide Javascript stack for SSR and streaming in Svelte.",
+  "repo_url": "https://github.com/joshamaju/stack54",
+  "author": "Joshua Amaju",
+  "homepage": "https://github.com/joshamaju/stack54#readme",
+  "downloads": 16,
+  "dependents": 4,
+  "updated": "2025-03-22T16:03:49.523Z",
+  "tags": [
+    "server"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

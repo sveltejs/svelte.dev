@@ -1,0 +1,15 @@
+{
+  "name": "@pageql/pageql-store-table",
+  "description": "Provide PageQL table functionality via Svelte store.",
+  "repo_url": "https://github.com/pageql/pageql-store-table",
+  "author": "Conner Aldrich",
+  "homepage": "https://github.com/pageql/pageql-store-table#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2020-08-07T07:13:21.762Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

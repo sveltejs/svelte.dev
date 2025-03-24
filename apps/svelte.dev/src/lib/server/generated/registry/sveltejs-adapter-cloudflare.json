@@ -1,0 +1,16 @@
+{
+  "name": "@sveltejs/adapter-cloudflare",
+  "description": "Build SvelteKit applications on Cloudflare Pages.",
+  "repo_url": "https://github.com/sveltejs/kit",
+  "author": "rich_harris",
+  "homepage": "https://svelte.dev",
+  "downloads": 75112,
+  "dependents": 3,
+  "updated": "2025-03-22T15:29:49.767Z",
+  "tags": [
+    "adapter"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 19121
+}

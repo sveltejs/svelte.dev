@@ -1,0 +1,16 @@
+{
+  "name": "hooks-as-store",
+  "description": "Enables use of React custom hooks in Svelte apps.",
+  "repo_url": "https://github.com/micha-lmxt/hooks-as-store",
+  "author": "micha-lmxt",
+  "homepage": "https://github.com/micha-lmxt/hooks-as-store#readme",
+  "downloads": 0,
+  "dependents": 1,
+  "updated": "2023-01-24T19:55:38.203Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 4
+}

@@ -1,0 +1,13 @@
+{
+  "name": "@hbquick/hq-player-live-camera-ptz",
+  "description": "Player for live camera with PTZ control in Svelte.",
+  "author": "Dario Caruso",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2023-08-05T01:20:50.588Z",
+  "tags": [
+    "media"
+  ],
+  "svelte5": false,
+  "runes": false
+}

@@ -1,0 +1,13 @@
+{
+  "name": "motion-start",
+  "description": "Animate Svelte components with gestures and spring animations.",
+  "author": "JonathonRP",
+  "downloads": 131,
+  "dependents": 0,
+  "updated": "2024-12-05T01:02:02.084Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false
+}

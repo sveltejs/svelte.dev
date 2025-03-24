@@ -1,0 +1,15 @@
+{
+  "name": "@svelterialjs/process",
+  "description": "Preprocessor for Svelte, used with Svelterial.",
+  "repo_url": "https://github.com/svelterialjs/integrations",
+  "author": "TheComputerM",
+  "homepage": "https://github.com/svelterialjs/integrations/tree/main/packages/preprocessor#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2021-10-04T12:47:19.342Z",
+  "tags": [
+    "preprocessor"
+  ],
+  "svelte5": false,
+  "runes": false
+}

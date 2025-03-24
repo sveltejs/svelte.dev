@@ -1,0 +1,16 @@
+{
+  "name": "svelte-collapsible",
+  "description": "Create collapsible components for Svelte.",
+  "repo_url": "https://github.com/rsdavis/svelte-collapsible",
+  "author": "rsdavis",
+  "homepage": "https://github.com/rsdavis/svelte-collapsible#readme",
+  "downloads": 765,
+  "dependents": 1,
+  "updated": "2024-11-21T22:40:59.943Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 32
+}

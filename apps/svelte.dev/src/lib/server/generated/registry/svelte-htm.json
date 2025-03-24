@@ -1,0 +1,17 @@
+{
+  "name": "svelte-htm",
+  "description": "Enables writing Svelte components using JSX-like syntax.",
+  "repo_url": "https://github.com/kenoxa/svelte-htm",
+  "author": "Sascha Tandel",
+  "homepage": "https://github.com/kenoxa/svelte-htm#readme",
+  "downloads": 5959,
+  "dependents": 2,
+  "updated": "2022-11-08T21:34:29.863Z",
+  "tags": [
+    "utility",
+    "testing"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 25
+}

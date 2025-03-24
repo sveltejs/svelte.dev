@@ -1,0 +1,13 @@
+{
+  "name": "@ikun-ui/eye-dropper",
+  "description": "Provide eye-dropper functionality for Svelte apps.",
+  "author": "baiwusanyu",
+  "downloads": 36,
+  "dependents": 1,
+  "updated": "2025-01-24T03:48:54.079Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

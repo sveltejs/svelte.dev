@@ -1,0 +1,16 @@
+{
+  "name": "elm-nativescript",
+  "description": "Integrates Svelte with NativeScript for mobile app development.",
+  "repo_url": "https://github.com/halfnelson/svelte-native",
+  "author": "David Pershouse",
+  "homepage": "https://github.com/halfnelson/svelte-native",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2022-06-12T15:33:24.169Z",
+  "tags": [
+    "integration"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 1844
+}

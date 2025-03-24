@@ -1,0 +1,15 @@
+{
+  "name": "@chanapongpan/svelte-common",
+  "description": "Provides common utilities for Svelte projects.",
+  "repo_url": "https://github.com/chanapongpan/svelte-common",
+  "author": "Chanapongpan pick.chanapongpan@gmail.com",
+  "homepage": "https://github.com/chanapongpan/svelte-common#readme",
+  "downloads": 9,
+  "dependents": 0,
+  "updated": "2023-12-30T18:30:32.983Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

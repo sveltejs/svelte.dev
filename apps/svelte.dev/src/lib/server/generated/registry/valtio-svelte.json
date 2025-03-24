@@ -1,0 +1,16 @@
+{
+  "name": "valtio-svelte",
+  "description": "Integrate Valtio state management with Svelte.",
+  "repo_url": "https://github.com/pedeEli/valtio-svelte",
+  "author": "Elias Gerster",
+  "homepage": "https://github.com/pedeEli/valtio-svelte#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2022-05-06T18:41:46.551Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

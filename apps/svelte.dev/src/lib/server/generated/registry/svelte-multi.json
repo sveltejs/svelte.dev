@@ -1,0 +1,16 @@
+{
+  "name": "svelte-multi",
+  "description": "Create multi-step forms in Svelte.",
+  "repo_url": "https://github.com/MirrorBytes/phorm-utils",
+  "author": "MirrorBytes",
+  "homepage": "https://github.com/MirrorBytes/phorm-utils/tree/main/packages/multi",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2021-01-19T04:03:21.161Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 2
+}

@@ -1,0 +1,15 @@
+{
+  "name": "@vessel-js/svelte",
+  "description": "Add Svelte support to Vessel.",
+  "repo_url": "https://github.com/vessel-js/vessel",
+  "author": "mihar-22",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2023-05-21T03:53:53.307Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 253
+}

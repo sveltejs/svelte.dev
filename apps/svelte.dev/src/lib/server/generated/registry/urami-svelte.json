@@ -1,0 +1,16 @@
+{
+  "name": "@urami/svelte",
+  "description": "Optimize images automatically within Svelte applications.",
+  "repo_url": "https://github.com/rayriffy/urami",
+  "author": "Phumrapee Limpiancop",
+  "homepage": "https://urami.dev/",
+  "downloads": 31,
+  "dependents": 0,
+  "updated": "2024-11-15T06:40:00.292Z",
+  "tags": [
+    "media"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 88
+}

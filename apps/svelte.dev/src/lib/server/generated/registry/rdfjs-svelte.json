@@ -1,0 +1,13 @@
+{
+  "name": "rdfjs-svelte",
+  "description": "Provide Svelte components for RDFJS objects.",
+  "author": "retog",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2020-11-01T21:07:17.259Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

@@ -1,0 +1,13 @@
+{
+  "name": "@rodneylab/sveltekit-map-component",
+  "description": "Add map components to SvelteKit sites using Leaflet.",
+  "author": "Rodney Lab",
+  "downloads": 8,
+  "dependents": 0,
+  "updated": "2024-05-15T07:44:14.697Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

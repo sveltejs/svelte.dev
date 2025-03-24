@@ -1,0 +1,15 @@
+{
+  "name": "@kubuskotak/freya-ui",
+  "description": "UI component library for Svelte and TypeScript.",
+  "repo_url": "https://gitlab.com/aegis-kraken/core/freya-ui-component",
+  "author": "suryakencana007",
+  "homepage": "https://gitlab.com/aegis-kraken/core/freya-ui-component#readme",
+  "downloads": 8,
+  "dependents": 0,
+  "updated": "2021-10-26T07:27:21.253Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": false,
+  "runes": false
+}

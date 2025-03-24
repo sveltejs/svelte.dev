@@ -1,0 +1,15 @@
+{
+  "name": "svelte-lingui",
+  "description": "Internationalize and localize Svelte and Sapper apps.",
+  "repo_url": "https://github.com/hyperlab/svelte-lingui",
+  "author": "mrlundis",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2019-11-04T16:39:26.182Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 3
+}

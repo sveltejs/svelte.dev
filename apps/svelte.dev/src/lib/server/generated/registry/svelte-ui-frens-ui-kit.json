@@ -1,0 +1,13 @@
+{
+  "name": "@svelte-ui-frens/ui-kit",
+  "description": "Build Svelte UI kit with Ant Design components.",
+  "author": "ktruong008",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2022-11-27T21:00:42.602Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": false,
+  "runes": false
+}

@@ -1,0 +1,15 @@
+{
+  "name": "@minna-ui/svelte-preprocess-markup",
+  "description": "Preprocess Svelte markup for Minna UI projects.",
+  "repo_url": "https://github.com/WeAreGenki/minna-ui",
+  "author": "Max Milton",
+  "homepage": "https://ui.wearegenki.com/",
+  "downloads": 6,
+  "dependents": 0,
+  "updated": "2018-10-21T03:34:59.228Z",
+  "tags": [
+    "preprocessor"
+  ],
+  "svelte5": false,
+  "runes": false
+}

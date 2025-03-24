@@ -1,0 +1,17 @@
+{
+  "name": "@kahi-ui/framework",
+  "description": "Build straight-forward Svelte UI for the Web.",
+  "repo_url": "https://github.com/novacbn/kahi-ui",
+  "author": "novacbn",
+  "homepage": "https://github.com/novacbn/kahi-ui#readme",
+  "downloads": 340,
+  "dependents": 0,
+  "updated": "2022-03-19T19:31:18.325Z",
+  "tags": [
+    "component-library",
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 187
+}

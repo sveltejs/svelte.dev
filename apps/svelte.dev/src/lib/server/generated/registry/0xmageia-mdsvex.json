@@ -1,0 +1,17 @@
+{
+  "name": "@0xmageia/mdsvex",
+  "description": "Process Markdown files, enabling Svelte components within Markdown.",
+  "repo_url": "https://github.com/0xmageia/MDsveX",
+  "author": "pngwn",
+  "homepage": "https://github.com/0xmageia/MDsveX#readme",
+  "downloads": 7,
+  "dependents": 0,
+  "updated": "2023-10-08T01:00:50.441Z",
+  "tags": [
+    "preprocessor",
+    "content"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

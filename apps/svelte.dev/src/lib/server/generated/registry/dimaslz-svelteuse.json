@@ -1,0 +1,16 @@
+{
+  "name": "@dimaslz/svelteuse",
+  "description": "Provides Svelte hooks inspired by VueUse and React.",
+  "repo_url": "https://github.com/dimaslz/svelteuse",
+  "author": "Dimas López",
+  "homepage": "https://svelteuse.dimaslz.dev",
+  "downloads": 9,
+  "dependents": 0,
+  "updated": "2024-03-10T18:20:06.792Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 4
+}

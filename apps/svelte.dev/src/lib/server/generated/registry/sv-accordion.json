@@ -1,0 +1,13 @@
+{
+  "name": "sv-accordion",
+  "description": "Create accordion components for Svelte projects.",
+  "author": "Onder Bakirtas",
+  "downloads": 3,
+  "dependents": 0,
+  "updated": "2021-03-24T00:35:21.834Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

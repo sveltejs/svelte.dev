@@ -1,0 +1,16 @@
+{
+  "name": "svelte-cryptoicon",
+  "description": "Render cryptocurrency icons as Svelte components.",
+  "repo_url": " git+https://github.com/alepop/svelte-cryptoicon",
+  "author": "alepop",
+  "homepage": "https://github.com/alepop/svelte-cryptoicon#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2020-04-04T15:22:34.547Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 8
+}

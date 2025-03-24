@@ -1,0 +1,17 @@
+{
+  "name": "@pixss/svelte",
+  "description": "Svelte UI component library based on Pixss CSS.",
+  "repo_url": "https://github.com/vikbert/pixssvelte",
+  "author": "segentor",
+  "homepage": "https://github.com/vikbert/pixssvelte#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2021-02-13T03:25:51.141Z",
+  "tags": [
+    "component-library",
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

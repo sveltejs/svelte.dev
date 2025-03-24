@@ -1,0 +1,13 @@
+{
+  "name": "@htmlbricks/hb-stylus-paper",
+  "description": "Stylus paper web component inspired by perfect-freehand.",
+  "author": "Dario Caruso",
+  "downloads": 137,
+  "dependents": 1,
+  "updated": "2025-03-09T03:10:36.301Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

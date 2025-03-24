@@ -1,0 +1,16 @@
+{
+  "name": "svelte-masonry",
+  "description": "Implement Masonry layout for Svelte, no external dependencies.",
+  "repo_url": "https://github.com/janzheng/svelte-masonry",
+  "author": "Jan Zheng",
+  "homepage": "https://github.com/janzheng/svelte-masonry#readme",
+  "downloads": 55,
+  "dependents": 1,
+  "updated": "2025-01-14T23:02:23.331Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 31
+}

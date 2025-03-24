@@ -1,0 +1,16 @@
+{
+  "name": "@wabosh/navigation-loader",
+  "description": "Create navigation loading indicator for SvelteKit.",
+  "repo_url": "https://github.com/wabosh/navigation-loader",
+  "author": "wabosh",
+  "homepage": "https://navigation-loader.vercel.app",
+  "downloads": 19,
+  "dependents": 0,
+  "updated": "2024-12-30T14:06:34.729Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 1
+}

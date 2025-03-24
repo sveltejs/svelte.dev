@@ -1,0 +1,16 @@
+{
+  "name": "grf-ui-explorer",
+  "description": "UI component explorer for Svelte.",
+  "repo_url": "https://github.com/grassrootsfoundation/ui-explorer",
+  "author": "Morgan Segura",
+  "homepage": "https://github.com/grassrootsfoundation/ui-explorer#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2025-02-08T05:00:47.638Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

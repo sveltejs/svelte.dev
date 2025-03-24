@@ -1,0 +1,15 @@
+{
+  "name": "prisme-components-svelte",
+  "description": "Svelte components for Prisme Design System.",
+  "repo_url": "https://github.com/halcyonnouveau/prisme",
+  "author": "Justin Duch",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2020-02-18T22:42:18.518Z",
+  "tags": [
+    "component-library",
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

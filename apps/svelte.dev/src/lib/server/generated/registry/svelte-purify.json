@@ -1,0 +1,16 @@
+{
+  "name": "svelte-purify",
+  "description": "Sanitize HTML in Svelte applications using DOMPurify.",
+  "repo_url": "https://github.com/jill64/svelte-purify",
+  "author": "jill64",
+  "homepage": "https://github.com/jill64/svelte-purify#readme",
+  "downloads": 437,
+  "dependents": 0,
+  "updated": "2025-03-13T15:31:27.813Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 6
+}

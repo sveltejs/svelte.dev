@@ -1,0 +1,15 @@
+{
+  "name": "svelte-eva-icons",
+  "description": "Integrate Eva Icons easily into Svelte projects.",
+  "repo_url": "https://github.com/dylanblokhuis/svelte-eva-icons",
+  "author": "dylanblokhuis",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2019-11-19T18:52:10.182Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 13
+}

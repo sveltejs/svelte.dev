@@ -1,0 +1,16 @@
+{
+  "name": "@macfja/svelte-undoable",
+  "description": "Implement Memento pattern for Svelte stores.",
+  "repo_url": "https://github.com/macfja/svelte-undoable",
+  "author": "MacFJA",
+  "homepage": "https://github.com/macfja/svelte-undoable#readme",
+  "downloads": 14,
+  "dependents": 0,
+  "updated": "2021-02-20T18:47:39.164Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 45
+}

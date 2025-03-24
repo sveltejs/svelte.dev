@@ -1,0 +1,16 @@
+{
+  "name": "timescape",
+  "description": "Creates flexible, headless date and time input components for Svelte.",
+  "repo_url": "https://github.com/dan-lee/timescape",
+  "author": "dan-lee",
+  "homepage": "https://github.com/dan-lee/timescape#readme",
+  "downloads": 4283,
+  "dependents": 6,
+  "updated": "2024-12-25T11:05:58.735Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 179
+}

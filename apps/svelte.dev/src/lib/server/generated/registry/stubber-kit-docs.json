@@ -1,0 +1,15 @@
+{
+  "name": "stubber-kit-docs",
+  "description": "Integrates documentation into SvelteKit projects.",
+  "repo_url": "https://github.com/svelteness/kit-docs",
+  "author": "vincent_stubber.com",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2024-01-17T13:32:39.655Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 493
+}

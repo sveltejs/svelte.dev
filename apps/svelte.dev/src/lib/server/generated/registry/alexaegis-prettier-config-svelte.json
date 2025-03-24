@@ -1,0 +1,16 @@
+{
+  "name": "@alexaegis/prettier-config-svelte",
+  "description": "Configure Prettier for Svelte code formatting.",
+  "repo_url": "https://github.com/AlexAegis/js-tooling",
+  "author": "Alex Aegis",
+  "homepage": "https://github.com/AlexAegis/js-tooling",
+  "downloads": 36,
+  "dependents": 0,
+  "updated": "2023-07-19T20:57:07.844Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 8
+}

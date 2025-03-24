@@ -1,0 +1,16 @@
+{
+  "name": "svelte-guard-history-router",
+  "description": "Provides a history-based router for Svelte SPA applications.",
+  "repo_url": "https://github.com/arlac77/svelte-guard-history-router",
+  "author": "arlac77",
+  "homepage": "https://github.com/arlac77/svelte-guard-history-router#readme",
+  "downloads": 406,
+  "dependents": 7,
+  "updated": "2024-06-06T21:38:42.626Z",
+  "tags": [
+    "router"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 13
+}

@@ -1,0 +1,16 @@
+{
+  "name": "@getjoystick/mismerge-core",
+  "description": "Implement a web-based merge editor for Svelte applications.",
+  "repo_url": "https://github.com/getjoystick/mismerge",
+  "author": "getjoystick",
+  "homepage": "https://github.com/getjoystick/mismerge#readme",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2024-02-21T13:45:50.643Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

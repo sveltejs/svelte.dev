@@ -1,0 +1,16 @@
+{
+  "name": "utterances-svelte-component",
+  "description": "Provides Svelte component for utterances comments.",
+  "repo_url": "https://github.com/TomokiMiyauci/utterances-component",
+  "author": "TomokiMiyauci",
+  "homepage": "https://github.com/TomokiMiyauci/utterances-component#readme",
+  "downloads": 3,
+  "dependents": 0,
+  "updated": "2021-07-09T03:03:22.849Z",
+  "tags": [
+    "integration"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 10
+}

@@ -1,0 +1,16 @@
+{
+  "name": "@xyflow/svelte",
+  "description": "Build node-based editors, diagrams with Svelte Flow.",
+  "repo_url": "https://github.com/xyflow/xyflow",
+  "author": "peterkogo",
+  "homepage": "https://svelteflow.dev",
+  "downloads": 27087,
+  "dependents": 8,
+  "updated": "2025-02-25T10:31:17.841Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 28429
+}

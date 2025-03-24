@@ -1,0 +1,16 @@
+{
+  "name": "@iro/icon",
+  "description": "Use icon components in Svelte applications.",
+  "repo_url": "https://github.com/choogo-cn/icon",
+  "author": "jetlua",
+  "homepage": "https://github.com/choogo-cn/icon#readme",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2023-09-19T17:44:54.258Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

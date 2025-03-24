@@ -1,0 +1,16 @@
+{
+  "name": "storez",
+  "description": "Enhance Svelte writable stores with history and localstorage.",
+  "repo_url": "https://github.com/plrenaudin/svelte-storez",
+  "author": "Pierre-Louis Renaudin",
+  "homepage": "https://github.com/plrenaudin/svelte-storez#readme",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2023-10-28T21:30:29.023Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 28
+}

@@ -1,0 +1,16 @@
+{
+  "name": "@datocms/svelte",
+  "description": "Integrate DatoCMS with Svelte, access components and utilities.",
+  "repo_url": "https://github.com/datocms/datocms-svelte",
+  "author": "Silvano Stralla",
+  "homepage": "https://github.com/datocms/datocms-svelte",
+  "downloads": 374,
+  "dependents": 0,
+  "updated": "2025-03-12T11:18:36.782Z",
+  "tags": [
+    "integration"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 12
+}

@@ -1,0 +1,16 @@
+{
+  "name": "svelte-connection-status",
+  "description": "Detect online/offline status in Svelte applications.",
+  "repo_url": "https://github.com/said-m/svelte-connection-status",
+  "author": "Said Magomedov",
+  "homepage": "https://github.com/said-m/svelte-connection-status#readme",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2021-05-30T14:04:23.474Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 1
+}

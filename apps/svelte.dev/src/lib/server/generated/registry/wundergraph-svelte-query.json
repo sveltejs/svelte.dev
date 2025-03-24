@@ -1,0 +1,16 @@
+{
+  "name": "@wundergraph/svelte-query",
+  "description": "Integrate WunderGraph with Svelte Query for data fetching.",
+  "repo_url": "https://github.com/wundergraph/wundergraph",
+  "author": "WunderGraph Maintainers",
+  "homepage": "https://wundergraph.com",
+  "downloads": 46,
+  "dependents": 0,
+  "updated": "2024-05-15T10:33:34.396Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 2326
+}

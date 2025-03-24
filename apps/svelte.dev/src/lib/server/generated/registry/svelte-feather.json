@@ -1,0 +1,16 @@
+{
+  "name": "svelte-feather",
+  "description": "Use Feather icons in Svelte projects.",
+  "repo_url": "https://github.com/langbamit/svelte-feather",
+  "author": "langbamit",
+  "homepage": "https://github.com/langbamit/svelte-feather#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2020-12-04T09:07:14.487Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 2
+}

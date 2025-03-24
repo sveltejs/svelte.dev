@@ -1,0 +1,16 @@
+{
+  "name": "svelte-progress-bar",
+  "description": "Create progress bar component, inspired by YouTube's loader.",
+  "repo_url": "https://github.com/saibotsivad/svelte-progress-bar",
+  "author": "Tobias Davis",
+  "homepage": "https://github.com/saibotsivad/svelte-progress-bar#readme",
+  "downloads": 388,
+  "dependents": 0,
+  "updated": "2022-01-19T16:08:17.518Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 71
+}

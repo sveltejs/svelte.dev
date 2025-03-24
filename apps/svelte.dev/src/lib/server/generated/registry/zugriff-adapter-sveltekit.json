@@ -1,0 +1,16 @@
+{
+  "name": "@zugriff/adapter-sveltekit",
+  "description": "Deploy SvelteKit applications with zugriff.",
+  "repo_url": "https://github.com/zugriffcloud/os",
+  "author": "Luca Goslar",
+  "homepage": "https://github.com/zugriffcloud/os#readme",
+  "downloads": 4,
+  "dependents": 0,
+  "updated": "2025-02-02T23:36:15.907Z",
+  "tags": [
+    "adapter"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 5
+}

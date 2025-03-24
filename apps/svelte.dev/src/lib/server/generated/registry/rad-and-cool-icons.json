@@ -1,0 +1,13 @@
+{
+  "name": "rad-and-cool-icons",
+  "description": "Create light/dark mode icon with animation.",
+  "author": "autr",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2022-03-30T06:03:00.352Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

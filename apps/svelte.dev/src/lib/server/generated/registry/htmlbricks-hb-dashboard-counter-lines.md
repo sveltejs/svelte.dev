@@ -1,9 +1,0 @@
----
-name: "@htmlbricks/hb-dashboard-counter-lines"
-description: "Svelte-Bootstrap dashboard counter lines component."
-author: "Dario Caruso"
-downloads: 215
-updated: "2025-03-09T03:10:28.582Z"
-tags: 
-  - ui
----

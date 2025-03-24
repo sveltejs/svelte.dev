@@ -1,0 +1,15 @@
+{
+  "name": "lahm-plugin-pwa",
+  "description": "PWA plugin for Lahm, framework-agnostic.",
+  "repo_url": "https://github.com/lahmjs/lahm-plugin-pwa",
+  "author": "NKDuy",
+  "homepage": "https://github.com/lahmjs/lahm-plugin-pwa",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2024-08-03T13:21:28.529Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false
+}

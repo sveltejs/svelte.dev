@@ -1,0 +1,13 @@
+{
+  "name": "@htmlbricks/hb-dashboard-indicator",
+  "description": "Creates dashboard indicator web component.",
+  "author": "Dario Caruso",
+  "downloads": 279,
+  "dependents": 0,
+  "updated": "2025-03-09T03:10:28.291Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

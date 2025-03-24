@@ -1,0 +1,16 @@
+{
+  "name": "jest-transform-svelte",
+  "description": "Jest transformer for Svelte components.",
+  "repo_url": "https://github.com/rspieker/jest-transform-svelte",
+  "author": "Rogier Spieker",
+  "homepage": "https://github.com/rspieker/jest-transform-svelte#readme",
+  "downloads": 1563,
+  "dependents": 2,
+  "updated": "2020-01-16T06:53:51.360Z",
+  "tags": [
+    "tooling",
+    "testing"
+  ],
+  "svelte5": true,
+  "runes": false
+}

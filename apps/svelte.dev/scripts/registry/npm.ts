@@ -86,61 +86,11 @@ export class PackageCache {
 	}
 
 	static stringify(package_details: Package) {
-		let frontmatter = `---\nname: "${package_details.name}"\n`;
-
-		if (package_details.description) {
-			frontmatter += `description: "${package_details.description}"\n`;
-		}
-
-		if (package_details.repo_url) {
-			frontmatter += `repo_url: "${sanitize_github_url(package_details.repo_url)}"\n`;
-		}
-
-		if (package_details.author) {
-			frontmatter += `author: "${package_details.author}"\n`;
-		}
-
-		if (package_details.homepage) {
-			frontmatter += `homepage: "${package_details.homepage}"\n`;
-		}
-
-		if (package_details.downloads) {
-			frontmatter += `downloads: ${package_details.downloads}\n`;
-		}
-
-		if (package_details.dependents) {
-			frontmatter += `dependents: ${package_details.dependents}\n`;
-		}
-
-		if (package_details.updated) {
-			frontmatter += `updated: "${package_details.updated}"\n`;
-		}
-
-		if (package_details.deprecated) {
-			frontmatter += `deprecated: true\n`;
-		}
-
-		if (package_details.github_stars) {
-			frontmatter += `github_stars: ${package_details.github_stars}\n`;
-		}
-
-		if (package_details.svelte5) {
-			frontmatter += `svelte5: true\n`;
-		}
-
-		if (package_details.runes) {
-			frontmatter += `runes: true\n`;
-		}
-
-		frontmatter += `tags: \n${package_details.tags.map((tag = '') => `  - ${tag}`).join('\n')}\n`;
-
-		frontmatter += '---\n';
-
-		return frontmatter;
+		return JSON.stringify(package_details, null, 2);
 	}
 
 	static parse(markdown: string) {
-		const { metadata } = extract_frontmatter(markdown);
+		const metadata = JSON.parse(markdown);
 
 		return metadata;
 	}
@@ -148,7 +98,7 @@ export class PackageCache {
 	static async get(pkg_name: string): Promise<Package | null> {
 		const pathname = path.resolve(
 			path.dirname(fileURLToPath(import.meta.url)),
-			`../../src/lib/server/generated/registry/${PackageCache.#clean_name(pkg_name)}.md`
+			`../../src/lib/server/generated/registry/${PackageCache.#clean_name(pkg_name)}.json`
 		);
 
 		try {
@@ -161,7 +111,7 @@ export class PackageCache {
 	static async has(pkg_name: string): Promise<boolean> {
 		const pathname = path.resolve(
 			path.dirname(fileURLToPath(import.meta.url)),
-			`../../src/lib/server/generated/registry/${PackageCache.#clean_name(pkg_name)}.md`
+			`../../src/lib/server/generated/registry/${PackageCache.#clean_name(pkg_name)}.json`
 		);
 
 		try {
@@ -175,7 +125,7 @@ export class PackageCache {
 	static async set(pkg_name: string, data: Package) {
 		const pathname = path.resolve(
 			path.dirname(fileURLToPath(import.meta.url)),
-			`../../src/lib/server/generated/registry/${PackageCache.#clean_name(pkg_name)}.md`
+			`../../src/lib/server/generated/registry/${PackageCache.#clean_name(pkg_name)}.json`
 		);
 
 		await fsp.writeFile(pathname, PackageCache.stringify(data));
@@ -184,7 +134,7 @@ export class PackageCache {
 	static async delete(pkg_name: string) {
 		const pathname = path.resolve(
 			path.dirname(fileURLToPath(import.meta.url)),
-			`../../src/lib/server/generated/registry/${PackageCache.#clean_name(pkg_name)}.md`
+			`../../src/lib/server/generated/registry/${PackageCache.#clean_name(pkg_name)}.json`
 		);
 
 		await fsp.unlink(pathname);
@@ -200,7 +150,7 @@ export class PackageCache {
 		for (const dirent of cache_dir_contents) {
 			const file_path = path.join(cache_dir, dirent);
 			yield [
-				dirent.replace(/.md$/, ''),
+				dirent.replace(/.json$/, ''),
 				PackageCache.parse(await fsp.readFile(file_path, 'utf8'))
 			] as [string, Package];
 		}
@@ -211,13 +161,38 @@ export class PackageCache {
  * Sanitizes GitHub URLs to a standard format
  */
 export function sanitize_github_url(url: string): string {
+	if (!url || typeof url !== 'string') return url;
+
+	// Handle the simple case of just owner/repo format
+	if (/^[^\/:\s]+\/[^\/:\s]+$/.test(url) && !url.includes('github')) {
+		return `https://github.com/${url}`;
+	}
+
+	// Remove fragments and query parameters
+	url = url.split('#')[0].split('?')[0];
+
+	// Remove additional path segments after repo name
+	if (url.includes('github.com')) {
+		const basicRepoPattern =
+			/^((?:https?:\/\/|git@|git:\/\/|ssh:\/\/git@|git\+https?:\/\/|git\+ssh:\/\/git@)?(?:github\.com)[\/:]([^\/\s]+\/[^\/\s]+))(?:\/|\.git|$)/i;
+		const basicMatch = url.match(basicRepoPattern);
+		if (basicMatch) {
+			url = basicMatch[1];
+		}
+	}
+
+	// Now standardize the URL format
 	return url
-		.replace('ssh://', '')
-		.replace('git+', '')
-		.replace('.git', '')
-		.replace('git:', 'https:')
-		.replace('git@github.com:', 'https://github.com/')
-		.replace('git@github.com/', 'https://github.com/');
+		.replace(/^git\+/, '') // Remove git+ prefix
+		.replace(/^ssh:\/\//, '') // Remove ssh:// prefix
+		.replace(/^git:\/\/github\.com\//, 'https://github.com/') // Replace git:// with https://
+		.replace(/^git:github\.com\//, 'https://github.com/') // Replace git:github with https://github
+		.replace(/^git:/, 'https:') // Replace git: with https:
+		.replace(/^git@github\.com:/, 'https://github.com/') // Replace git@github.com: with https://github.com/
+		.replace(/^git@github\.com\//, 'https://github.com/') // Replace git@github.com/ with https://github.com/
+		.replace(/^github\.com\//, 'https://github.com/') // Add https:// if missing
+		.replace(/^http:\/\/github\.com\//, 'https://github.com/') // Replace http:// with https:// for GitHub
+		.replace(/\.git$/, ''); // Remove .git suffix
 }
 
 /**
@@ -552,7 +527,10 @@ export function structure_package_to_package(
 
 	data.name = structured_package.package_json.name;
 	data.description = structured_package.meta.description;
+
 	data.repo_url = structured_package.package_json.repository?.url;
+	if (data.repo_url) data.repo_url = sanitize_github_url(data.repo_url);
+
 	data.author =
 		structured_package.package_json.author?.name ??
 		structured_package.package_json.maintainers[0].name;

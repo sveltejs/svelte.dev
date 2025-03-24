@@ -1,0 +1,15 @@
+{
+  "name": "@teamtime/tt-editor",
+  "description": "Build a WYSIWYG editor for Svelte with ProseMirror.",
+  "repo_url": "https://bitbucket.org/amigoalt/tt-editor/src/tailwind_implemented/",
+  "author": "Anton Gavrilyuk",
+  "downloads": 4,
+  "dependents": 0,
+  "updated": "2020-09-20T18:25:16.997Z",
+  "tags": [
+    "content",
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

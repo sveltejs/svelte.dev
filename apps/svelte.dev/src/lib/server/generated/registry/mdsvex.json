@@ -1,0 +1,17 @@
+{
+  "name": "mdsvex",
+  "description": "Markdown preprocessor for Svelte components.",
+  "repo_url": "https://github.com/pngwn/MDsveX",
+  "author": "pngwn",
+  "homepage": "https://github.com/pngwn/MDsveX#readme",
+  "downloads": 36532,
+  "dependents": 34,
+  "updated": "2024-08-17T01:30:39.693Z",
+  "tags": [
+    "content",
+    "preprocessor"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 2612
+}

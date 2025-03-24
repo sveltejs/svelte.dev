@@ -1,0 +1,13 @@
+{
+  "name": "@htmlbricktest/skel-skeleton-component",
+  "description": "Create skeleton components for Svelte applications.",
+  "author": "Dario Caruso",
+  "downloads": 27,
+  "dependents": 0,
+  "updated": "2022-03-31T17:13:28.415Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

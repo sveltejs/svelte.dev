@@ -1,0 +1,16 @@
+{
+  "name": "@svelte-put/resize",
+  "description": "Observe element resizes with Svelte action.",
+  "repo_url": "https://github.com/vnphanquang/svelte-put",
+  "author": "Quang Phan",
+  "homepage": "https://github.com/vnphanquang/svelte-put/tree/next/packages/resize",
+  "downloads": 183,
+  "dependents": 1,
+  "updated": "2024-10-25T05:17:45.319Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 908
+}

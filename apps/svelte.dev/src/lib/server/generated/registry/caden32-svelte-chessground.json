@@ -1,0 +1,14 @@
+{
+  "name": "caden32-svelte-chessground",
+  "description": "Svelte component wrapper for the Chessground chessboard UI.",
+  "author": "caden32",
+  "homepage": "https://github.com/gtim/svelte-chessground#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2023-07-28T20:36:40.858Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

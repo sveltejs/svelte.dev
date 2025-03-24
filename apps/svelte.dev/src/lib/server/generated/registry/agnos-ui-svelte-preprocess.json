@@ -1,0 +1,16 @@
+{
+  "name": "@agnos-ui/svelte-preprocess",
+  "description": "Run Svelte directives server-side with a preprocessor.",
+  "repo_url": "https://github.com/AmadeusITGroup/AgnosUI",
+  "author": "divdavem",
+  "homepage": "https://www.agnosui.dev/latest/",
+  "downloads": 67,
+  "dependents": 0,
+  "updated": "2025-01-09T15:44:05.026Z",
+  "tags": [
+    "preprocessor"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 68
+}

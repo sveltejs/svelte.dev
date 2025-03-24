@@ -1,0 +1,15 @@
+{
+  "name": "@superfacefff8lsm/adapter-cloudflare-workers-custom",
+  "description": "Custom SvelteKit adapter for Cloudflare Workers.",
+  "repo_url": "https://github.com/yourusername/custom-adapter-cloudflare-workers",
+  "author": "ff8lsm",
+  "homepage": "https://your-custom-homepage.com",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2024-08-09T19:29:34.276Z",
+  "tags": [
+    "adapter"
+  ],
+  "svelte5": false,
+  "runes": false
+}

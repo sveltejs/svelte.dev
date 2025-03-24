@@ -1,0 +1,13 @@
+{
+  "name": "svelte-listbox",
+  "description": "Create listbox UI components for Svelte applications.",
+  "author": "danipo",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2020-06-04T13:53:44.303Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

@@ -1,0 +1,16 @@
+{
+  "name": "figblocks",
+  "description": "Build UI components for Figma plugins using Svelte.",
+  "repo_url": "https://github.com/imohanvadivel/figblocks",
+  "author": "Mohan Vadivel",
+  "homepage": "https://figblocks.mohanvadivel.com",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2024-06-27T02:12:57.635Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 10
+}

@@ -1,0 +1,13 @@
+{
+  "name": "svelte-toolbar",
+  "description": "Create toolbar menus for Svelte applications.",
+  "author": "emnudge",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2020-05-27T04:26:24.235Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

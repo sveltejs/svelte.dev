@@ -1,0 +1,15 @@
+{
+  "name": "svelte-mobx-observer",
+  "description": "Integrate MobX state management with Svelte components.",
+  "repo_url": "https://github.com/episage/svelte-mobx-observer",
+  "author": "Tomasz Ciborski",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2020-07-30T13:19:27.755Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 8
+}

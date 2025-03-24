@@ -1,0 +1,15 @@
+{
+  "name": "svelte-phaser",
+  "description": "Create Phaser 3 games with Svelte 3.",
+  "repo_url": "https://github.com/mattjennings/svelte-phaser",
+  "author": "mattjennings",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2021-02-15T18:55:44.261Z",
+  "tags": [
+    "integration"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 79
+}

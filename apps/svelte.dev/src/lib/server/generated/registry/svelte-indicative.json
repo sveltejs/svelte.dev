@@ -1,0 +1,16 @@
+{
+  "name": "svelte-indicative",
+  "description": "Implement AdonisJs Indicative form validation in Svelte applications.",
+  "repo_url": "https://github.com/caschbre/Svelte-Indicative",
+  "author": "Craig Aschbrenner",
+  "homepage": "https://github.com/caschbre/Svelte-Indicative#readme",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2020-06-07T04:45:45.064Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

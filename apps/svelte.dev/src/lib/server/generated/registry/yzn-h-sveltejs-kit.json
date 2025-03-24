@@ -1,0 +1,16 @@
+{
+  "name": "@yzn-h/sveltejs-kit",
+  "description": "Build Svelte apps with SvelteKit framework.",
+  "repo_url": "https://github.com/sveltejs/kit",
+  "author": "yzn-h",
+  "homepage": "https://svelte.dev",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2025-01-25T11:39:42.094Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 19121
+}

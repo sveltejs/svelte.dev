@@ -1,0 +1,17 @@
+{
+  "name": "peltejs",
+  "description": "Preprocessor to shorten Svelte 5 runes syntax.",
+  "repo_url": "https://github.com/98mux/pelte",
+  "author": "KilDesu & 98mux",
+  "homepage": "https://github.com/98mux/pelte#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2024-03-06T20:11:12.822Z",
+  "tags": [
+    "tooling",
+    "preprocessor"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

@@ -1,0 +1,15 @@
+{
+  "name": "svelte-inplace-carousel",
+  "description": "Create inplace carousel component for Svelte.",
+  "repo_url": "https://github.com/Carlos-err406/inplace-carousel",
+  "author": "Carlos Daniel Vilaseca",
+  "homepage": "https://github.com/Carlos-err406/inplace-carousel#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2024-08-13T16:46:57.986Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

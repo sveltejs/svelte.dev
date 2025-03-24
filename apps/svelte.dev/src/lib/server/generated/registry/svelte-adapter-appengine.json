@@ -1,0 +1,16 @@
+{
+  "name": "svelte-adapter-appengine",
+  "description": "Adapts SvelteKit applications for deployment on Google App Engine.",
+  "repo_url": "https://github.com/halfdanj/svelte-adapter-appengine",
+  "author": "Jonas Jongejan",
+  "homepage": "https://github.com/halfdanj/svelte-adapter-appengine#readme",
+  "downloads": 193,
+  "dependents": 0,
+  "updated": "2025-02-24T22:48:25.803Z",
+  "tags": [
+    "adapter"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 69
+}

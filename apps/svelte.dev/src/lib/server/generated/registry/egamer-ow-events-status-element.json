@@ -1,0 +1,13 @@
+{
+  "name": "@egamer/ow-events-status-element",
+  "description": "Indicate game events status using Svelte web components.",
+  "author": "@eGamer/eGear",
+  "downloads": 9,
+  "dependents": 0,
+  "updated": "2019-12-09T21:42:27.683Z",
+  "tags": [
+    "integration"
+  ],
+  "svelte5": false,
+  "runes": false
+}

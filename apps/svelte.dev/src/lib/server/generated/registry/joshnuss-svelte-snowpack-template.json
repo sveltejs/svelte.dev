@@ -1,0 +1,13 @@
+{
+  "name": "@joshnuss/svelte-snowpack-template",
+  "description": "Snowpack template for Svelte projects.",
+  "author": "joshnuss",
+  "downloads": 17,
+  "dependents": 0,
+  "updated": "2021-02-26T03:11:18.231Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false
+}

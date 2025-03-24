@@ -1,0 +1,16 @@
+{
+  "name": "svelte-shields",
+  "description": "Generate Shields badge components for Svelte applications.",
+  "repo_url": "https://github.com/shinokada/svelte-shields",
+  "author": "Shinichi Okada",
+  "homepage": "https://svelte-shields.codewithshin.com/",
+  "downloads": 57,
+  "dependents": 0,
+  "updated": "2024-07-17T04:50:22.746Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 0
+}

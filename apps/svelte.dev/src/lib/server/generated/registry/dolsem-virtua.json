@@ -1,0 +1,16 @@
+{
+  "name": "@dolsem/virtua",
+  "description": "Create virtual list component for Svelte apps.",
+  "repo_url": "https://github.com/dolsem/virtua",
+  "author": "inokawa",
+  "homepage": "https://github.com/dolsem/virtua#readme",
+  "downloads": 5,
+  "dependents": 0,
+  "updated": "2025-03-06T22:27:09.261Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 0
+}

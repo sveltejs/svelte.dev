@@ -1,0 +1,16 @@
+{
+  "name": "svelte-shiki",
+  "description": "Preprocessor for syntax highlighting in Svelte components.",
+  "repo_url": "https://github.com/morsby/svelte-shiki",
+  "author": "Morsby",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2020-05-19T09:47:10.548Z",
+  "tags": [
+    "tooling",
+    "preprocessor"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 12
+}

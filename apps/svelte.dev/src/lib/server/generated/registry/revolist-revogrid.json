@@ -1,0 +1,16 @@
+{
+  "name": "@revolist/revogrid",
+  "description": "Create virtual reactive data grid spreadsheet components.",
+  "repo_url": "https://github.com/revolist/revogrid",
+  "author": "revolist",
+  "homepage": "https://rv-grid.com",
+  "downloads": 11811,
+  "dependents": 14,
+  "updated": "2025-03-22T11:53:17.774Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 2881
+}

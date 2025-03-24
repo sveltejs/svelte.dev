@@ -1,0 +1,16 @@
+{
+  "name": "svelte-dnd-action",
+  "description": "Drag and drop action for Svelte, supports nested zones.",
+  "repo_url": "https://github.com/isaacHagoel/svelte-dnd-action",
+  "author": "Isaac Hagoel",
+  "homepage": "https://github.com/isaacHagoel/svelte-dnd-action#readme",
+  "downloads": 37016,
+  "dependents": 33,
+  "updated": "2025-03-10T12:09:09.509Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 1915
+}

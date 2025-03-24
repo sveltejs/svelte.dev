@@ -1,0 +1,17 @@
+{
+  "name": "@reboost/plugin-svelte",
+  "description": "Enable Svelte support for Reboost bundler.",
+  "repo_url": "https://github.com/sarsamurmu/reboost",
+  "author": "Sarsa Murmu",
+  "homepage": "https://github.com/sarsamurmu/reboost/tree/primary/packages/plugin-svelte",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2021-09-25T13:20:52.336Z",
+  "tags": [
+    "tooling",
+    "preprocessor"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 61
+}

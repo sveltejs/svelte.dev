@@ -1,0 +1,16 @@
+{
+  "name": "svelte-color-well",
+  "description": "Provides color picker component for Svelte applications.",
+  "repo_url": "https://github.com/Indyandie/svelte-color-well",
+  "author": "Andy Contreras",
+  "homepage": "https://github.com/Indyandie/svelte-color-well#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2020-11-08T20:34:41.983Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 1
+}

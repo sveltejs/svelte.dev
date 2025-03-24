@@ -1,0 +1,16 @@
+{
+  "name": "svelte-key",
+  "description": "Emulate React's key feature, recreating content on key changes.",
+  "repo_url": "https://github.com/rixo/svelte-key",
+  "author": "rixo",
+  "homepage": "https://github.com/rixo/svelte-key",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2019-11-26T11:26:04.452Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 6
+}

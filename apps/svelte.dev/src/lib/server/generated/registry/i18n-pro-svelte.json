@@ -1,0 +1,14 @@
+{
+  "name": "@i18n-pro/svelte",
+  "description": "Provide lightweight, flexible, automatic translation for Svelte apps.",
+  "author": "Eyelly Wu",
+  "homepage": "https://github.com/i18n-pro/svelte",
+  "downloads": 4,
+  "dependents": 0,
+  "updated": "2024-04-29T08:05:36.290Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

@@ -1,0 +1,16 @@
+{
+  "name": "arrows-svg-svelte",
+  "description": "Provides Svelte actions for SVG arrows.",
+  "repo_url": "https://github.com/r59q/arrows-svg-svelte",
+  "author": "A. Malthe Henriksen",
+  "homepage": "https://github.com/r59q/arrows-svg-svelte#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2024-04-14T19:32:34.645Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

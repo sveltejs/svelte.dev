@@ -1,0 +1,13 @@
+{
+  "name": "@devjoyvn/web-components",
+  "description": "Create fast, context-free web components for Svelte.",
+  "author": "devjoy",
+  "downloads": 21,
+  "dependents": 0,
+  "updated": "2022-04-12T08:15:09.298Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

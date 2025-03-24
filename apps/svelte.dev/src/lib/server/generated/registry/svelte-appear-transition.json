@@ -1,0 +1,13 @@
+{
+  "name": "svelte-appear-transition",
+  "description": "Transition elements when they appear in viewport.",
+  "author": "adevien-solutions",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2024-09-10T18:55:44.312Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false
+}

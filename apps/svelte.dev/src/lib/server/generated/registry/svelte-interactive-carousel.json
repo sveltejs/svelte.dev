@@ -1,0 +1,16 @@
+{
+  "name": "svelte-interactive-carousel",
+  "description": "Create interactive, draggable, and responsive carousel components.",
+  "repo_url": "https://github.com/elron/svelte-interactive-carousel",
+  "author": "Elron Bucai",
+  "homepage": "https://svelte-interactive-carousel.netlify.app/",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2022-09-03T06:45:44.297Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

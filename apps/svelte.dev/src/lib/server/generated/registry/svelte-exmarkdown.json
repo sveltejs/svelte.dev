@@ -1,0 +1,16 @@
+{
+  "name": "svelte-exmarkdown",
+  "description": "Renders markdown content in Svelte components.",
+  "repo_url": "https://github.com/ssssota/svelte-exmarkdown",
+  "author": "ssssota",
+  "homepage": "https://ssssota.github.io/svelte-exmarkdown",
+  "downloads": 7907,
+  "dependents": 5,
+  "updated": "2025-02-18T15:52:18.931Z",
+  "tags": [
+    "content"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 245
+}

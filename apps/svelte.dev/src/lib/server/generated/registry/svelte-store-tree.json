@@ -1,0 +1,16 @@
+{
+  "name": "svelte-store-tree",
+  "description": "Manage nested Svelte stores, zoom into store parts.",
+  "repo_url": "https://github.com/igrep/svelte-store-tree",
+  "author": "Internet Initiative Japan Inc.",
+  "homepage": "https://github.com/igrep/svelte-store-tree#readme",
+  "downloads": 22,
+  "dependents": 0,
+  "updated": "2023-10-12T08:51:56.120Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 11
+}

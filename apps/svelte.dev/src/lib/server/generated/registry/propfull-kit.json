@@ -1,0 +1,17 @@
+{
+  "name": "@propfull/kit",
+  "description": "Offer design system components for Svelte applications.",
+  "repo_url": "https://github.com/propfull/kit",
+  "author": "Saurav Sahu",
+  "homepage": "https://github.com/propfull/kit#readme",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2021-01-27T09:01:02.096Z",
+  "tags": [
+    "component-library",
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

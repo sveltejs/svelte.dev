@@ -1,0 +1,13 @@
+{
+  "name": "svelte-epic-accordion",
+  "description": "Build accordion component for Svelte, inspired by VS Code.",
+  "author": "Patryk Eliasz",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2023-10-07T17:21:13.497Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

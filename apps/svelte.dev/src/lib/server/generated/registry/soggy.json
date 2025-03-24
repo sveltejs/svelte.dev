@@ -1,0 +1,15 @@
+{
+  "name": "soggy",
+  "description": "Filter floods of results into a soggy delight.",
+  "repo_url": "https://github.com/mvllow/soggy",
+  "author": "mvllow",
+  "homepage": "https://github.com/mvllow/soggy#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2022-09-18T15:11:57.694Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

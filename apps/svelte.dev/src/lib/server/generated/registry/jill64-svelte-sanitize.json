@@ -1,0 +1,16 @@
+{
+  "name": "@jill64/svelte-sanitize",
+  "description": "Provides safe HTML expansion for Svelte.",
+  "repo_url": "https://github.com/jill64/svelte-sanitize",
+  "author": "jill64",
+  "homepage": "https://github.com/jill64/svelte-sanitize#readme",
+  "downloads": 16047,
+  "dependents": 1,
+  "updated": "2025-03-20T03:38:12.444Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 6
+}

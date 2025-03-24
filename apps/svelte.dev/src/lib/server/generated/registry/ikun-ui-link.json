@@ -1,0 +1,13 @@
+{
+  "name": "@ikun-ui/link",
+  "description": "Create link components for Svelte UI.",
+  "author": "baiwusanyu",
+  "downloads": 30,
+  "dependents": 1,
+  "updated": "2025-01-24T03:49:03.451Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

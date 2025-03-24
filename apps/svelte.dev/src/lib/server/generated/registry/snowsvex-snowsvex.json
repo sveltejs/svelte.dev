@@ -1,0 +1,16 @@
+{
+  "name": "@snowsvex/snowsvex",
+  "description": "Generate static sites with Svelte and MDSvex.",
+  "repo_url": "https://github.com/snowsvex/snowsvex",
+  "author": "Conor Sinclair",
+  "homepage": "https://github.com/snowsvex/snowsvex#readme",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2021-03-05T19:34:46.679Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

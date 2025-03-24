@@ -1,0 +1,13 @@
+{
+  "name": "@devlego/bbui",
+  "description": "Provide UI components for Budibase projects.",
+  "author": "lisipeng",
+  "downloads": 14,
+  "dependents": 3,
+  "updated": "2022-08-09T02:11:33.435Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": false,
+  "runes": false
+}

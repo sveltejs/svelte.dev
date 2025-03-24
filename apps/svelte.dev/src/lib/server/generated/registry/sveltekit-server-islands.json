@@ -1,0 +1,16 @@
+{
+  "name": "sveltekit-server-islands",
+  "description": "Implement server islands for SvelteKit applications.",
+  "repo_url": "https://github.com/paoloricciuti/sveltekit-server-islands",
+  "author": "Paolo Ricciuti",
+  "homepage": "https://github.com/paoloricciuti/sveltekit-server-islands#readme",
+  "downloads": 8,
+  "dependents": 0,
+  "updated": "2025-02-11T18:01:10.621Z",
+  "tags": [
+    "server"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 13
+}

@@ -1,0 +1,17 @@
+{
+  "name": "@bonosoft/sveltekit-codeentry",
+  "description": "Create code entry components for SvelteKit apps.",
+  "repo_url": "https://github.com/bonosoft/sveltekit-codeentry",
+  "author": "Bonosoft",
+  "homepage": "https://github.com/bonosoft/sveltekit-codeentry#readme",
+  "downloads": 10,
+  "dependents": 0,
+  "updated": "2023-04-03T21:16:12.509Z",
+  "tags": [
+    "ui",
+    "auth"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

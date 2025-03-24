@@ -1,0 +1,16 @@
+{
+  "name": "@magidoc/plugin-svelte-marked",
+  "description": "Render markdown to Svelte components.",
+  "repo_url": "https://github.com/magidoc-org/magidoc",
+  "author": "pelletier197",
+  "homepage": "https://github.com/magidoc-org/magidoc#readme",
+  "downloads": 6677,
+  "dependents": 1,
+  "updated": "2024-11-08T18:33:01.933Z",
+  "tags": [
+    "content"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 262
+}

@@ -1,0 +1,17 @@
+{
+  "name": "@bowline/svelte-lexical",
+  "description": "Create rich text editor for Svelte using lexical.",
+  "repo_url": "https://github.com/bowlineai/svelte-lexical",
+  "author": "stayradiated",
+  "homepage": "https://github.com/bowlineai/svelte-lexical#readme",
+  "downloads": 37,
+  "dependents": 0,
+  "updated": "2024-01-31T15:41:38.148Z",
+  "tags": [
+    "content",
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 2
+}

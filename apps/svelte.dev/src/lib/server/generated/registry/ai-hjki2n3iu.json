@@ -1,0 +1,16 @@
+{
+  "name": "ai-hjki2n3iu",
+  "description": "Build AI-powered streaming text and chat UIs for Svelte.",
+  "repo_url": "https://github.com/vercel/ai",
+  "author": "quietshu",
+  "homepage": "https://sdk.vercel.ai/docs",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2024-02-29T20:53:39.881Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 12872
+}

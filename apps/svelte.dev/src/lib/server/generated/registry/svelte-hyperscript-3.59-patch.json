@@ -1,0 +1,16 @@
+{
+  "name": "svelte-hyperscript-3.59-patch",
+  "description": "Use hyperscript to create Svelte components, with Svelte 3.59 fix.",
+  "repo_url": "https://github.com/kenoxa/svelte-hyperscript",
+  "author": "Sascha Tandel",
+  "homepage": "https://github.com/kenoxa/svelte-hyperscript#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2023-06-01T03:25:28.790Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 8
+}

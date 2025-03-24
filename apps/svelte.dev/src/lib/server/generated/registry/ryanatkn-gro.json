@@ -1,0 +1,16 @@
+{
+  "name": "@ryanatkn/gro",
+  "description": "Task runner and toolkit extending SvelteKit.",
+  "repo_url": "https://github.com/ryanatkn/gro",
+  "author": "Ryan Atkinson",
+  "homepage": "https://gro.ryanatkn.com/",
+  "downloads": 151,
+  "dependents": 0,
+  "updated": "2024-12-06T22:51:02.436Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 19
+}

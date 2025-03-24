@@ -1,0 +1,15 @@
+{
+  "name": "stylesheet-switcher",
+  "description": "Switch stylesheets on website using Svelte component.",
+  "repo_url": "https://github.com/uglow/stylesheet-switcher",
+  "author": "Brett Uglow",
+  "homepage": "https://github.com/uglow/stylesheet-switcher#readme",
+  "downloads": 36,
+  "dependents": 0,
+  "updated": "2020-04-07T22:25:59.095Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

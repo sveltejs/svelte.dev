@@ -1,0 +1,15 @@
+{
+  "name": "svelte-pass-props",
+  "description": "Forward all DOM events to child components in Svelte.",
+  "repo_url": "https://github.com/matyunya/svelte-pass-props",
+  "author": "Maxim Matyunin",
+  "homepage": "https://github.com/matyunya/svelte-pass-props#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2019-07-17T05:33:28.257Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

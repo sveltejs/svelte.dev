@@ -1,0 +1,16 @@
+{
+  "name": "svelte-headless-button",
+  "description": "Provide a simple, unstyled button component for Svelte.",
+  "repo_url": "https://github.com/zerok84/svelte-headless-button",
+  "author": "Zerok84",
+  "homepage": "https://github.com/zerok84/svelte-headless-button#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2022-07-21T04:14:49.117Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

@@ -1,0 +1,15 @@
+{
+  "name": "svelte-simple-icons-games",
+  "description": "Import and use Simple Icons in Svelte components.",
+  "repo_url": "https://github.com/tathaha/svelte-simple-icons-games",
+  "author": "Chiraitori",
+  "homepage": "https://github.com/tathaha/svelte-simple-icons-games#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2024-05-18T10:55:41.907Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

@@ -1,0 +1,17 @@
+{
+  "name": "@codewithshin/svelte-utterances",
+  "description": "Integrate Utterances comments into Svelte applications.",
+  "repo_url": "https://github.com/shinokada/svelte-uttrances",
+  "author": "Shinichi Okada",
+  "homepage": "https://github.com/shinokada/svelte-uttrances",
+  "downloads": 14,
+  "dependents": 0,
+  "updated": "2022-10-21T06:11:24.975Z",
+  "tags": [
+    "integration",
+    "content"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 12
+}

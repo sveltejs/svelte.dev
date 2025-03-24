@@ -1,0 +1,15 @@
+{
+  "name": "@collabcode/styleguide",
+  "description": "Provide CollabCode's styleguide for Svelte.",
+  "repo_url": "https://github.com/CollabCodeTech/styleguide",
+  "author": "CollabCode",
+  "homepage": "https://github.com/CollabCodeTech/styleguide#readme",
+  "downloads": 63,
+  "dependents": 0,
+  "updated": "2020-01-21T22:22:16.144Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

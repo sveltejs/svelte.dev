@@ -1,0 +1,16 @@
+{
+  "name": "crstore",
+  "description": "Conflict-free replicated store for Svelte, SQLite, and tRPC.",
+  "repo_url": "https://github.com/Azarattum/CRStore",
+  "author": "Azarattum",
+  "homepage": "https://github.com/Azarattum/CRStore#readme",
+  "downloads": 168,
+  "dependents": 0,
+  "updated": "2025-02-11T04:49:18.967Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 100
+}

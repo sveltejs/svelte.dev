@@ -1,0 +1,16 @@
+{
+  "name": "svelte-kit-sst",
+  "description": "Deploy SvelteKit apps to AWS Lambda and Lambda@Edge.",
+  "repo_url": "https://github.com/sst/sst",
+  "author": "SST",
+  "homepage": "https://github.com/sst/sst#readme",
+  "downloads": 1280,
+  "dependents": 0,
+  "updated": "2024-08-16T19:15:54.792Z",
+  "tags": [
+    "adapter"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 23272
+}

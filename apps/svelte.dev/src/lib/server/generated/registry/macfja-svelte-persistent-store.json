@@ -1,0 +1,16 @@
+{
+  "name": "@macfja/svelte-persistent-store",
+  "description": "Persist Svelte store values through page reloads and sessions.",
+  "repo_url": "https://github.com/macfja/svelte-persistent-store",
+  "author": "MacFJA",
+  "homepage": "https://github.com/macfja/svelte-persistent-store#readme",
+  "downloads": 1330,
+  "dependents": 8,
+  "updated": "2024-10-25T20:34:44.617Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 248
+}

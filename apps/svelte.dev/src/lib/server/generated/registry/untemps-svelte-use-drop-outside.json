@@ -1,0 +1,16 @@
+{
+  "name": "@untemps/svelte-use-drop-outside",
+  "description": "Enables dropping elements outside specified area in Svelte.",
+  "repo_url": "https://github.com/untemps/svelte-use-drop-outside",
+  "author": "Vincent Le Badezet",
+  "homepage": "https://github.com/untemps/svelte-use-drop-outside#readme",
+  "downloads": 114,
+  "dependents": 2,
+  "updated": "2022-09-12T18:38:52.366Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 12
+}

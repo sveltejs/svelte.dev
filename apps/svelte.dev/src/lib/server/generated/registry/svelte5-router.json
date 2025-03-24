@@ -1,0 +1,16 @@
+{
+  "name": "svelte5-router",
+  "description": "Provides declarative Svelte routing with SSR support.",
+  "repo_url": "https://github.com/jpcutshall/svelte5-router",
+  "author": "Jacob Cutshall @jpcutshall",
+  "homepage": "https://github.com/jpcutshall/svelte5-router",
+  "downloads": 362,
+  "dependents": 0,
+  "updated": "2025-01-22T23:26:57.572Z",
+  "tags": [
+    "router"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 12
+}

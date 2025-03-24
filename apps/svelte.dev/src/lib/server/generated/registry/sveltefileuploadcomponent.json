@@ -1,0 +1,16 @@
+{
+  "name": "sveltefileuploadcomponent",
+  "description": "Integrate file upload functionality with drag-and-drop support.",
+  "repo_url": "https://github.com/vipero07/svelte-file-upload-component",
+  "author": "Eitan Stadtlader-Miller",
+  "homepage": "https://github.com/vipero07/svelte-file-upload-component#readme",
+  "downloads": 44,
+  "dependents": 0,
+  "updated": "2019-12-21T05:31:55.567Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 19
+}

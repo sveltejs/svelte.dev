@@ -1,0 +1,13 @@
+{
+  "name": "svelte-mainloop",
+  "description": "Wrap mainloop.js for Svelte, handle function registration.",
+  "author": "Jim Bridger",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2024-12-20T23:12:03.095Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": true,
+  "runes": false
+}

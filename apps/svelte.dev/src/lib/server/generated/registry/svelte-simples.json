@@ -1,0 +1,16 @@
+{
+  "name": "svelte-simples",
+  "description": "Provide simple-icons components for Svelte.",
+  "repo_url": "https://github.com/shinokada/svelte-simples",
+  "author": "Shinichi Okada",
+  "homepage": "https://svelte-simples.codewithshin.com/",
+  "downloads": 32,
+  "dependents": 0,
+  "updated": "2024-03-01T16:40:30.295Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 8
+}

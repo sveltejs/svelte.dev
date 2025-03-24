@@ -1,0 +1,16 @@
+{
+  "name": "@tigersway/reading-bar",
+  "description": "Create reading progress bar web component for Svelte.",
+  "repo_url": "https://github.com/tigersway/svelte-reading-bar",
+  "author": "Ben Michaud",
+  "homepage": "https://github.com/tigersway/svelte-reading-bar#readme",
+  "downloads": 10,
+  "dependents": 0,
+  "updated": "2022-08-05T01:16:47.640Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 2
+}

@@ -1,0 +1,13 @@
+{
+  "name": "@ikun-ui/spin",
+  "description": "Display loading spinners with customizable styles in Svelte.",
+  "author": "baiwusanyu",
+  "downloads": 29,
+  "dependents": 1,
+  "updated": "2025-01-24T03:49:18.889Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

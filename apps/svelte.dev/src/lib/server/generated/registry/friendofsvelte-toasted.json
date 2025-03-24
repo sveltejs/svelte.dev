@@ -1,0 +1,17 @@
+{
+  "name": "@friendofsvelte/toasted",
+  "description": "Display toast and flash messages in Svelte applications.",
+  "repo_url": "https://github.com/friendofsvelte/toasted",
+  "author": "bishwas bhandari",
+  "homepage": "https://github.com/friendofsvelte/toasted#readme",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2024-01-26T03:50:39.994Z",
+  "tags": [
+    "ui",
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 4
+}

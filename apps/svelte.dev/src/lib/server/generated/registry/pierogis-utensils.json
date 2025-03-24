@@ -1,0 +1,17 @@
+{
+  "name": "@pierogis/utensils",
+  "description": "Offers set of reusable Svelte UI components for various application needs.",
+  "repo_url": "https://github.com/pierogis/live",
+  "author": "ksmoore17",
+  "homepage": "https://utensils.pierogis.live",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2024-01-04T05:11:10.473Z",
+  "tags": [
+    "component-library",
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

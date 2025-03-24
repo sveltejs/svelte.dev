@@ -1,0 +1,13 @@
+{
+  "name": "test01-svelte-counter",
+  "description": "Create counter component for Svelte.",
+  "author": "akifb37",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2024-11-21T15:56:47.015Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false
+}

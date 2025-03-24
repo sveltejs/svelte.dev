@@ -1,0 +1,16 @@
+{
+  "name": "svelte-transition",
+  "description": "Transition elements via CSS classes in Svelte.",
+  "repo_url": "https://github.com/captaincodeman/svelte-transition",
+  "author": "Simon Green",
+  "homepage": "https://captaincodeman.github.io/svelte-transition/",
+  "downloads": 2945,
+  "dependents": 4,
+  "updated": "2024-06-18T18:28:55.703Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 58
+}

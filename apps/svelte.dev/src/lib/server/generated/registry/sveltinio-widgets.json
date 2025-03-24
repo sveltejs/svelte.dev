@@ -1,0 +1,16 @@
+{
+  "name": "@sveltinio/widgets",
+  "description": "Provide responsive Svelte components for cards, navigation, and more.",
+  "repo_url": "https://github.com/sveltinio/components-library",
+  "author": "dev",
+  "homepage": "https://components.sveltin.io",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2023-10-02T07:25:34.985Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 12
+}

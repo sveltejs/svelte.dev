@@ -1,0 +1,16 @@
+{
+  "name": "@rutynka/helper-bar-board",
+  "description": "Provides a sticky bar with timer and counter for Svelte apps.",
+  "repo_url": "https://github.com/rutynka/helper-bar-board",
+  "author": "ru7ynk4",
+  "homepage": "https://github.com/rutynka/helper-bar-board",
+  "downloads": 0,
+  "dependents": 3,
+  "updated": "2023-01-28T23:47:02.718Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 1
+}

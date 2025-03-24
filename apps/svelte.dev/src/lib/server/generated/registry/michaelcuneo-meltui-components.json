@@ -1,0 +1,16 @@
+{
+  "name": "@michaelcuneo/meltui-components",
+  "description": "Provide Melt UI component library for Svelte.",
+  "repo_url": "https://github.com/michaelcuneo/michaelcuneo",
+  "author": "Michael Cuneo",
+  "homepage": "https://michaelcuneo.com.au",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2024-11-24T22:37:23.575Z",
+  "tags": [
+    "component-library",
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false
+}

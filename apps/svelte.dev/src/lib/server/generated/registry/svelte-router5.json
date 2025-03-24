@@ -1,0 +1,15 @@
+{
+  "name": "svelte-router5",
+  "description": "Provide router5 helpers for Svelte applications.",
+  "repo_url": "https://github.com/shanewwarren/svelte-router5",
+  "author": "Shane Warren",
+  "homepage": "https://github.com/shanewwarren/svelte-router5#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2017-12-07T22:50:47.861Z",
+  "tags": [
+    "router"
+  ],
+  "svelte5": false,
+  "runes": false
+}

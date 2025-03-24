@@ -1,0 +1,17 @@
+{
+  "name": "svelte-web3-provider",
+  "description": "Detect Ethereum wallet, provide Web3 fallback provider for Svelte.",
+  "repo_url": "https://github.com/binsarjr/svelte-web3-provider",
+  "author": "binsarjr",
+  "homepage": "https://github.com/binsarjr/svelte-web3-provider#readme",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2022-11-04T17:21:28.607Z",
+  "tags": [
+    "utility",
+    "integration"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 2
+}

@@ -1,0 +1,13 @@
+{
+  "name": "@ikun-ui/image-view",
+  "description": "View images with zoom, rotate, and pan features.",
+  "author": "baiwusanyu",
+  "downloads": 12,
+  "dependents": 2,
+  "updated": "2025-01-24T03:48:59.041Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

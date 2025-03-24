@@ -1,0 +1,16 @@
+{
+  "name": "@taocode/svelte-headroom",
+  "description": "Auto-hide header/footer components based on scroll direction.",
+  "repo_url": "https://github.com/taocode/svelte-headroom",
+  "author": "Mark Jones",
+  "homepage": "https://github.com/taocode/svelte-headroom#readme",
+  "downloads": 99,
+  "dependents": 0,
+  "updated": "2022-11-22T08:32:56.974Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 2
+}

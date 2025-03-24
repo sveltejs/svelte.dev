@@ -1,0 +1,16 @@
+{
+  "name": "@jill64/svelte-storage",
+  "description": "Provides type-safe web storage API wrapper for Svelte apps.",
+  "repo_url": "https://github.com/jill64/svelte-storage",
+  "author": "jill64",
+  "homepage": "https://github.com/jill64/svelte-storage#readme",
+  "downloads": 29674,
+  "dependents": 3,
+  "updated": "2025-03-14T18:28:58.364Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 1
+}

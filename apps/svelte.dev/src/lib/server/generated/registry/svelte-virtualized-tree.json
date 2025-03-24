@@ -1,0 +1,15 @@
+{
+  "name": "svelte-virtualized-tree",
+  "description": "Displays large datasets in tree structure using Svelte components.",
+  "repo_url": "https://github.com/fairhurt/svelte-virtualized-tree",
+  "author": "Tyson Fairhurst",
+  "homepage": "https://svelte-virtualized-tree.vercel.app/",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2024-10-19T22:28:23.360Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

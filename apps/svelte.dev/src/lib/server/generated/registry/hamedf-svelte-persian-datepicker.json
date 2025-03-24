@@ -1,0 +1,16 @@
+{
+  "name": "@hamedf/svelte-persian-datepicker",
+  "description": "Create Persian date and time pickers for Svelte.",
+  "repo_url": "https://github.com/hamedf62/svelte-persian-datepicker",
+  "author": "Hamed Fallah",
+  "homepage": "https://github.com/hamedf62/svelte-persian-datepicker",
+  "downloads": 25,
+  "dependents": 0,
+  "updated": "2025-03-02T14:53:12.359Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 0
+}

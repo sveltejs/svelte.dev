@@ -1,0 +1,16 @@
+{
+  "name": "sadforms",
+  "description": "Build accessible forms designed for Svelte developers.",
+  "repo_url": "https://github.com/byjackli/sadforms",
+  "author": "Jack Li",
+  "homepage": "https://sadforms.com",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2022-07-24T13:17:19.228Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 2
+}

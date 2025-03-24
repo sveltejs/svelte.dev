@@ -1,0 +1,16 @@
+{
+  "name": "svelte-infinite-viewer",
+  "description": "Create infinite scrolling document viewers for Svelte.",
+  "repo_url": "https://github.com/daybrush/infinite-viewer",
+  "author": "Daybrush",
+  "homepage": "https://daybrush.com/infinite-viewer",
+  "downloads": 20,
+  "dependents": 0,
+  "updated": "2023-10-31T17:13:57.479Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 312
+}

@@ -1,0 +1,17 @@
+{
+  "name": "@sveu/extend",
+  "description": "Integrate third-party services and tools into Svelte projects.",
+  "repo_url": "https://github.com/svelte-u/extend",
+  "author": "Mohamed Nesredin",
+  "homepage": "https://github.com/svelte-u/extend#readme",
+  "downloads": 4,
+  "dependents": 0,
+  "updated": "2023-07-04T05:50:02.769Z",
+  "tags": [
+    "utility",
+    "integration"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 2
+}

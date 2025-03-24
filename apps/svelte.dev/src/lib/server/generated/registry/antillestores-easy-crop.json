@@ -1,0 +1,17 @@
+{
+  "name": "antillestores-easy-crop",
+  "description": "Crop images with easy interactions in Svelte applications.",
+  "repo_url": "https://github.com/ValentinH/svelte-easy-crop",
+  "author": "Valentin Hervieu",
+  "homepage": "https://github.com/ValentinH/svelte-easy-crop",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2019-05-27T03:37:39.162Z",
+  "tags": [
+    "ui",
+    "media"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 215
+}

@@ -1,0 +1,15 @@
+{
+  "name": "@bithero/svelte-datatable-bs",
+  "description": "Creates simple datatable component with Bootstrap styling for Svelte.",
+  "repo_url": "https://codeark.it/bithero-agency-js/svelte-datatable-bs",
+  "author": "Mai-Lapyst",
+  "homepage": "https://codeark.it/bithero-agency-js/svelte-datatable-bs",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2023-04-21T18:52:14.839Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

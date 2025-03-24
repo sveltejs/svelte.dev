@@ -1,0 +1,16 @@
+{
+  "name": "@anoram/svelte-images",
+  "description": "Display images and create image galleries in Svelte.",
+  "repo_url": "https://github.com/peopledrivemecrazy/svelte-images",
+  "author": "shriji",
+  "homepage": "https://github.com/peopledrivemecrazy/svelte-images#readme",
+  "downloads": 12,
+  "dependents": 0,
+  "updated": "2020-12-13T10:19:08.979Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

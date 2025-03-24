@@ -1,0 +1,16 @@
+{
+  "name": "sveltfy",
+  "description": "Build material design UI with Svelte.",
+  "repo_url": "https://github.com/apoprotsky/svelte-materialify",
+  "author": "TheComputerM",
+  "homepage": "https://github.com/apoprotsky/svelte-materialify#readme",
+  "downloads": 13,
+  "dependents": 0,
+  "updated": "2023-04-04T21:53:35.599Z",
+  "tags": [
+    "component-library",
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false
+}

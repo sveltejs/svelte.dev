@@ -1,0 +1,16 @@
+{
+  "name": "svelte-file-dropzone",
+  "description": "Provides file upload and dropzone component for Svelte.",
+  "repo_url": "https://github.com/thecodejack/svelte-file-dropzone",
+  "author": "thecodejack",
+  "homepage": "https://github.com/thecodejack/svelte-file-dropzone#readme",
+  "downloads": 11174,
+  "dependents": 20,
+  "updated": "2024-10-19T20:44:48.960Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 270
+}

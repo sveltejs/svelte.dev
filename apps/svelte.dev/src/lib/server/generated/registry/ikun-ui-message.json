@@ -1,0 +1,13 @@
+{
+  "name": "@ikun-ui/message",
+  "description": "Display message components for Svelte.",
+  "author": "baiwusanyu",
+  "downloads": 39,
+  "dependents": 1,
+  "updated": "2025-01-24T03:49:05.072Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

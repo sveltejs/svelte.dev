@@ -1,0 +1,14 @@
+{
+  "name": "svelte-table-store",
+  "description": "Create relational table data stores for Svelte apps.",
+  "author": "7korobi",
+  "homepage": "https://github.com/7korobi/svelte-table-store/blob/main/src/lib/",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2022-12-15T16:27:47.481Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

@@ -1,0 +1,15 @@
+{
+  "name": "@userlike/emoji-picker-element",
+  "description": "Lightweight emoji picker web component for Svelte.",
+  "repo_url": "https://github.com/nolanlawson/emoji-picker-element",
+  "author": "Nolan Lawson",
+  "homepage": "https://github.com/nolanlawson/emoji-picker-element#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2021-06-10T05:31:04.204Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

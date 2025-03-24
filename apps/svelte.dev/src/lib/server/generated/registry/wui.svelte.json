@@ -1,0 +1,16 @@
+{
+  "name": "wui.svelte",
+  "description": "Offer a collection of Web UI components for Svelte.",
+  "repo_url": "https://github.com/shuLhan/wui.svelte",
+  "author": "ms@kilabit.info",
+  "homepage": "https://github.com/shuLhan/wui.svelte#readme",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2020-09-01T06:09:28.298Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

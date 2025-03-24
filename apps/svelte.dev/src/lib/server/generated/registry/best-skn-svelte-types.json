@@ -1,0 +1,16 @@
+{
+  "name": "@best-skn/svelte-types",
+  "description": "Provides type definitions for SvelteKit (Svelte 5) projects.",
+  "repo_url": "https://github.com/skn437/skn-svelte-types",
+  "author": "SKN Shukhan",
+  "homepage": "https://github.com/skn437/skn-svelte-types#readme",
+  "downloads": 21,
+  "dependents": 0,
+  "updated": "2024-12-25T23:08:52.739Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 1
+}

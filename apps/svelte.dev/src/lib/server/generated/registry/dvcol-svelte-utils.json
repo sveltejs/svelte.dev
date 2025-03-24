@@ -1,0 +1,16 @@
+{
+  "name": "@dvcol/svelte-utils",
+  "description": "Provide utility functions and constants for Svelte.",
+  "repo_url": "https://github.com/dvcol/svelte-utils",
+  "author": "dvcol",
+  "homepage": "https://github.com/dvcol/svelte-utils",
+  "downloads": 95,
+  "dependents": 2,
+  "updated": "2025-03-09T17:40:40.374Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 1
+}

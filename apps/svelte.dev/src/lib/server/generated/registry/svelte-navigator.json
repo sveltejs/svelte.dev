@@ -1,0 +1,16 @@
+{
+  "name": "svelte-navigator",
+  "description": "Simple, accessible routing for Svelte applications.",
+  "repo_url": "https://github.com/mefechoel/svelte-navigator",
+  "author": "Michel Strelow @mefechoel",
+  "homepage": "https://github.com/mefechoel/svelte-navigator#readme",
+  "downloads": 5177,
+  "dependents": 1,
+  "updated": "2022-08-27T16:14:14.500Z",
+  "tags": [
+    "router"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 513
+}

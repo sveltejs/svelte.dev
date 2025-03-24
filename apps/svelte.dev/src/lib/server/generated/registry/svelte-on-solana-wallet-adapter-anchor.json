@@ -1,0 +1,16 @@
+{
+  "name": "@svelte-on-solana/wallet-adapter-anchor",
+  "description": "Integrate Solana wallet adapter with Anchor for Svelte.",
+  "repo_url": "https://github.com/svelte-on-solana/wallet-adapter",
+  "author": "Svelte on Solana",
+  "homepage": "https://github.com/svelte-on-solana/wallet-adapter#readme",
+  "downloads": 55,
+  "dependents": 0,
+  "updated": "2022-08-25T09:29:01.458Z",
+  "tags": [
+    "integration"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 65
+}

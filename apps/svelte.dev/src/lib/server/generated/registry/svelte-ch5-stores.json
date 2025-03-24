@@ -1,0 +1,15 @@
+{
+  "name": "svelte-ch5-stores",
+  "description": "Enable Crestron CH5 touch panels to use Svelte stores.",
+  "repo_url": "https://github.com/xt449/svelte-ch5-stores",
+  "author": "binarybanana",
+  "homepage": "https://github.com/xt449/svelte-ch5-stores#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2024-08-22T18:27:49.327Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

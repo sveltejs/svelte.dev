@@ -1,0 +1,16 @@
+{
+  "name": "@svelte-put/lockscroll",
+  "description": "Lock scroll, hide scrollbar within HTML element.",
+  "repo_url": "https://github.com/vnphanquang/svelte-put",
+  "author": "Quang Phan",
+  "homepage": "https://svelte-put.vnphanquang.com/docs/lockscroll",
+  "downloads": 172,
+  "dependents": 3,
+  "updated": "2024-10-25T05:17:14.244Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 908
+}

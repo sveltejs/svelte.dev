@@ -1,0 +1,17 @@
+{
+  "name": "scrolly-video",
+  "description": "Create scroll-based video playback in Svelte.",
+  "repo_url": "https://github.com/dkaoster/scrolly-video",
+  "author": "Daniel Kao",
+  "homepage": "https://github.com/dkaoster/scrolly-video#readme",
+  "downloads": 561,
+  "dependents": 1,
+  "updated": "2025-03-07T04:16:43.669Z",
+  "tags": [
+    "ui",
+    "media"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 1033
+}

@@ -1,0 +1,17 @@
+{
+  "name": "svelte-toolbox",
+  "description": "Implement UI component library for Svelte with Material Design.",
+  "repo_url": "https://github.com/svelte-toolbox/svelte-toolbox",
+  "author": "vehmloewff",
+  "homepage": "https://svelte.dev/repl/5cf847108884453cbedd5920e919b630?version=3.6.5",
+  "downloads": 43,
+  "dependents": 0,
+  "updated": "2019-08-11T00:27:58.359Z",
+  "tags": [
+    "component-library",
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 78
+}

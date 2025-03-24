@@ -1,0 +1,14 @@
+{
+  "name": "svelte-textfit-v4",
+  "description": "Fit headlines and paragraphs into any element using Svelte action.",
+  "author": "micha-lmxt",
+  "homepage": "https://github.com/micha-lmxt/svelte-textfit",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2024-12-09T23:21:59.688Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": true,
+  "runes": false
+}

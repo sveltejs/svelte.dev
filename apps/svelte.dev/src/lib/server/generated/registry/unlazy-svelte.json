@@ -1,0 +1,16 @@
+{
+  "name": "@unlazy/svelte",
+  "description": "Implement lazy loading for placeholder images in Svelte.",
+  "repo_url": "https://github.com/johannschopplich/unlazy",
+  "author": "Johann Schopplich",
+  "homepage": "https://unlazy.byjohann.dev",
+  "downloads": 60,
+  "dependents": 0,
+  "updated": "2025-03-07T14:38:09.520Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 795
+}

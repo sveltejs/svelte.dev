@@ -1,0 +1,13 @@
+{
+  "name": "@snuffkin/alexandria",
+  "description": "Svelte component library.",
+  "author": "snuffkin",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2024-11-15T22:51:18.713Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": true,
+  "runes": false
+}

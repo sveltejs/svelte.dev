@@ -1,0 +1,17 @@
+{
+  "name": "svelte-highlight-copy",
+  "description": "Provides syntax highlighting for Svelte code using highlight.js.",
+  "repo_url": "https://github.com/kayaman/svelte-highlight-copy",
+  "author": "Marco Antonio Gonzalez Junior",
+  "homepage": "https://github.com/kayaman/svelte-highlight-copy",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2023-12-06T05:09:06.287Z",
+  "tags": [
+    "ui",
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

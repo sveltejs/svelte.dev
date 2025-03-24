@@ -1,0 +1,16 @@
+{
+  "name": "svselect",
+  "description": "Create easy to use select inputs in Svelte.",
+  "repo_url": "https://github.com/Battledash-2/svselect",
+  "author": "battledash2",
+  "homepage": "https://github.com/Battledash-2/svselect#readme",
+  "downloads": 3,
+  "dependents": 0,
+  "updated": "2022-12-03T15:24:47.447Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 1
+}

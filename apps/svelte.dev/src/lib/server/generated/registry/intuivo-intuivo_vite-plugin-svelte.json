@@ -1,0 +1,17 @@
+{
+  "name": "@intuivo/intuivo_vite-plugin-svelte",
+  "description": "Vite plugin for Svelte.",
+  "repo_url": "https://github.com/jesusalc/vite-plugin-svelte",
+  "author": "jesusalc",
+  "homepage": "https://github.com/jesusalc/vite-plugin-svelte#readme",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2023-04-03T06:14:27.611Z",
+  "tags": [
+    "tooling",
+    "preprocessor"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

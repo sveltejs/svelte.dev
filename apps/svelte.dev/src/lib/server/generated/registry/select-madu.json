@@ -1,0 +1,16 @@
+{
+  "name": "select-madu",
+  "description": "Create customizable select menus with search and multi-select.",
+  "repo_url": "https://github.com/pavish/select-madu",
+  "author": "Pavish Kumar Ramani Gopal",
+  "homepage": "https://github.com/pavish/select-madu#readme",
+  "downloads": 7,
+  "dependents": 0,
+  "updated": "2021-03-25T06:01:27.134Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 50
+}

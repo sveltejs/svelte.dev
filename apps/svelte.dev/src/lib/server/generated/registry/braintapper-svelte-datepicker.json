@@ -1,0 +1,16 @@
+{
+  "name": "braintapper-svelte-datepicker",
+  "description": "Create datepicker component for Svelte.",
+  "repo_url": "https://github.com/braintapper/braintapper-svelte-datepicker",
+  "author": "braintapper",
+  "homepage": "https://github.com/braintapper/braintapper-svelte-datepicker#readme",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2020-12-20T16:44:28.784Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

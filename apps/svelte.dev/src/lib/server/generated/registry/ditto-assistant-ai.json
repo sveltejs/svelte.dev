@@ -1,0 +1,16 @@
+{
+  "name": "ditto-assistant-ai",
+  "description": "Build AI-powered streaming text and chat UIs in Svelte.",
+  "repo_url": "https://github.com/ditto-assistant/ai",
+  "author": "omniaura",
+  "homepage": "https://sdk.vercel.ai/docs",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2024-03-18T07:59:23.319Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

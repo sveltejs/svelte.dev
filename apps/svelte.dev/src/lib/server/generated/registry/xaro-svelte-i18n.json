@@ -1,0 +1,16 @@
+{
+  "name": "@xaro/svelte-i18n",
+  "description": "Dynamically add, change, translate text in Svelte apps.",
+  "repo_url": "https://github.com/vladimir-xaro/svelte-i18n",
+  "author": "Vladimir Slavgorodskiy",
+  "homepage": "https://github.com/vladimir-xaro/svelte-i18n#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2023-10-31T21:38:11.932Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

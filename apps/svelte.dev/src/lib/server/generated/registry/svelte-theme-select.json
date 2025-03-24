@@ -1,0 +1,16 @@
+{
+  "name": "svelte-theme-select",
+  "description": "Implement theme selection components for Svelte.",
+  "repo_url": "https://github.com/captaincodeman/svelte-theme-select",
+  "author": "Simon Green",
+  "homepage": "https://captaincodeman.github.io/svelte-theme-select/",
+  "downloads": 12,
+  "dependents": 0,
+  "updated": "2024-10-24T19:27:12.758Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 19
+}

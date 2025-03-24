@@ -1,0 +1,17 @@
+{
+  "name": "@eraviart/svelte-json-tree",
+  "description": "View JSON data within Svelte applications, supports Maps and Sets.",
+  "repo_url": "https://github.com/eraviart/svelte-json-tree",
+  "author": "Tan Li Hau",
+  "homepage": "https://github.com/eraviart/svelte-json-tree#readme",
+  "downloads": 3,
+  "dependents": 0,
+  "updated": "2022-04-02T21:27:14.109Z",
+  "tags": [
+    "utility",
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

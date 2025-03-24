@@ -1,0 +1,17 @@
+{
+  "name": "svelte-remove-attributes",
+  "description": "Remove attributes from Svelte components during build.",
+  "repo_url": "https://github.com/jacobbogers/svelte-remove-attributes",
+  "author": "jacob bogers",
+  "homepage": "https://github.com/jacobbogers/svelte-remove-attributes#readme",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2024-06-14T18:56:57.930Z",
+  "tags": [
+    "tooling",
+    "preprocessor"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 2
+}

@@ -1,0 +1,17 @@
+{
+  "name": "rollup-plugin-syntax-highlight-svelte",
+  "description": "Highlight code in Svelte components using Shiki for Rollup/Vite.",
+  "repo_url": "https://github.com/valterkraemer/rollup-plugin-syntax-highlight",
+  "author": "Valter Kraemer",
+  "homepage": "https://github.com/valterkraemer/rollup-plugin-syntax-highlight#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2022-10-05T14:07:01.231Z",
+  "tags": [
+    "tooling",
+    "preprocessor"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 1
+}

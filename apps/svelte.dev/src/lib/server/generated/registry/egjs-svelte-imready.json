@@ -1,0 +1,16 @@
+{
+  "name": "@egjs/svelte-imready",
+  "description": "Check if images or videos are loaded in Svelte.",
+  "repo_url": "https://github.com/naver/egjs-imready",
+  "author": "NAVER Corp.",
+  "homepage": "https://github.com/naver/egjs-imready",
+  "downloads": 11,
+  "dependents": 0,
+  "updated": "2023-02-24T03:41:05.704Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 63
+}

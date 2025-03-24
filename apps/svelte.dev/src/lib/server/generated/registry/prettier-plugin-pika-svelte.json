@@ -1,0 +1,17 @@
+{
+  "name": "prettier-plugin-pika-svelte",
+  "description": "Format Svelte code using Prettier, including HTML, CSS, and JS.",
+  "repo_url": "https://github.com/sveltejs/prettier-plugin-svelte",
+  "author": "James Birtles",
+  "homepage": "https://github.com/sveltejs/prettier-plugin-svelte#readme",
+  "downloads": 0,
+  "dependents": 1,
+  "updated": "2021-04-15T12:13:44.205Z",
+  "tags": [
+    "tooling",
+    "preprocessor"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 762
+}

@@ -1,0 +1,16 @@
+{
+  "name": "@milpan/svelte-gantt",
+  "description": "Create interactive Gantt charts for Svelte applications.",
+  "repo_url": "https://github.com/ANovokmet/svelte-gantt",
+  "author": "Ante Novokmet",
+  "homepage": "https://github.com/ANovokmet/svelte-gantt#readme",
+  "downloads": 54,
+  "dependents": 0,
+  "updated": "2025-02-23T14:01:02.931Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 559
+}

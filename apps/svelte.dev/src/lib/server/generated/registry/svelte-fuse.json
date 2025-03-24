@@ -1,0 +1,16 @@
+{
+  "name": "svelte-fuse",
+  "description": "Provide Svelte wrapper for Fuse.js fuzzy search.",
+  "repo_url": "https://github.com/g1eny0ung/svelte-fuse",
+  "author": "Yue Yang",
+  "homepage": "https://github.com/g1eny0ung/svelte-fuse#readme",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2023-08-06T06:45:41.019Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 2
+}

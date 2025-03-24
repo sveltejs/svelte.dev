@@ -1,0 +1,17 @@
+{
+  "name": "ionic-svelte",
+  "description": "Integrate Ionic UI components into Svelte projects.",
+  "repo_url": "https://github.com/Tommertom/svelte-ionic-app",
+  "author": "tommertom",
+  "homepage": "https://ionic-svelte.firebaseapp.com",
+  "downloads": 90,
+  "dependents": 2,
+  "updated": "2024-07-29T17:44:24.427Z",
+  "tags": [
+    "component-library",
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 819
+}

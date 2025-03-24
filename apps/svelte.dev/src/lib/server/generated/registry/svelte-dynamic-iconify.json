@@ -1,0 +1,16 @@
+{
+  "name": "svelte-dynamic-iconify",
+  "description": "Render Iconify icons dynamically in Svelte components.",
+  "repo_url": "https://github.com/hazg/svelte-dynamic-iconify",
+  "author": "Aleksandr Alksandrov",
+  "homepage": "https://github.com/hazg/svelte-dynamic-iconify#readme",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2021-06-22T09:09:16.307Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

@@ -1,0 +1,16 @@
+{
+  "name": "svelte-best-tabs-component",
+  "description": "Create tabbed interfaces in Svelte applications.",
+  "repo_url": "https://github.com/matheusbenedet/svelte-best-tabs-component",
+  "author": "@matheusbenedet",
+  "homepage": "https://github.com/matheusbenedet/svelte-best-tabs-component#readme",
+  "downloads": 3,
+  "dependents": 0,
+  "updated": "2023-05-12T04:29:17.402Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

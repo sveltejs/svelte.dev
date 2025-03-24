@@ -1,0 +1,15 @@
+{
+  "name": "svelte-dock",
+  "description": "Create Svelte components for toggling boolean values.",
+  "repo_url": "https://github.com/thecodejack/svelte-dock",
+  "author": "thecodejack",
+  "homepage": "https://github.com/thecodejack/svelte-dock#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2020-09-13T16:47:06.683Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

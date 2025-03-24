@@ -1,0 +1,16 @@
+{
+  "name": "@cokejoke/svelte-infinite-loading",
+  "description": "Add infinite scroll functionality to Svelte applications.",
+  "repo_url": "https://github.com/cokejoke/svelte-infinite-loading",
+  "author": "Skayo",
+  "homepage": "https://github.com/cokejoke/svelte-infinite-loading",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2023-03-09T07:29:22.042Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

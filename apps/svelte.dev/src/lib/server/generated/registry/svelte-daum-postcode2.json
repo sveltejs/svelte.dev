@@ -1,0 +1,16 @@
+{
+  "name": "svelte-daum-postcode2",
+  "description": "Integrate Daum postcode search into Svelte applications.",
+  "repo_url": "https://github.com/Baedonghee/svelte-daum-postcode",
+  "author": "imjongpil",
+  "homepage": "https://github.com/Baedonghee/svelte-daum-postcode#README",
+  "downloads": 12,
+  "dependents": 0,
+  "updated": "2024-04-26T14:18:38.194Z",
+  "tags": [
+    "integration"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 6
+}

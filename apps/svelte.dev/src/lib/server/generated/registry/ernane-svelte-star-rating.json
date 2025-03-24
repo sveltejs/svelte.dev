@@ -1,0 +1,16 @@
+{
+  "name": "@ernane/svelte-star-rating",
+  "description": "Create star ratings with this Svelte component.",
+  "repo_url": "https://github.com/ErnaneJ/svelte-star-rating",
+  "author": "ernane",
+  "homepage": "https://github.com/ErnaneJ/svelte-star-rating",
+  "downloads": 321,
+  "dependents": 0,
+  "updated": "2024-08-10T13:04:55.878Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 36
+}

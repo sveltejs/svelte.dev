@@ -1,0 +1,16 @@
+{
+  "name": "svelidation",
+  "description": "Validate Svelte applications easily.",
+  "repo_url": "https://github.com/yazonnile/svelidation",
+  "author": "yazonnile",
+  "homepage": "https://github.com/yazonnile/svelidation#readme",
+  "downloads": 12,
+  "dependents": 0,
+  "updated": "2020-01-10T14:40:34.958Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 52
+}

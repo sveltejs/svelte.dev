@@ -1,0 +1,16 @@
+{
+  "name": "hydrogenpay-svelte",
+  "description": "Integrate Hydrogenpay payment gateway in Svelte apps.",
+  "repo_url": "https://github.com/HydrogenAfrica/hydrogenpay-svelte",
+  "author": "amoslv",
+  "homepage": "https://github.com/HydrogenAfrica/hydrogenpay-svelte",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2024-11-01T14:06:26.711Z",
+  "tags": [
+    "integration"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

@@ -1,0 +1,16 @@
+{
+  "name": "@minna-ui/navbar",
+  "description": "Create navigation bars for Svelte apps.",
+  "repo_url": "https://github.com/WeAreGenki/minna-ui",
+  "author": "Max Milton",
+  "homepage": "https://wearegenki.github.io/minna-ui",
+  "downloads": 12,
+  "dependents": 1,
+  "updated": "2020-03-24T19:40:16.110Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 87
+}

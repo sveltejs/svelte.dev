@@ -1,0 +1,15 @@
+{
+  "name": "hyper-svelte-component",
+  "description": "Manages Hyperdrives using dat-sdk within Svelte components.",
+  "repo_url": "https://github.com/DougAnderson444/hyper-svelte-component",
+  "author": "Douglas S Anderson",
+  "homepage": "https://github.com/DougAnderson444/hyper-svelte-component#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2020-09-14T22:06:11.382Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

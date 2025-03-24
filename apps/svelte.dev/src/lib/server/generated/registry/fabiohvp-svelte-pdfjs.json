@@ -1,0 +1,17 @@
+{
+  "name": "@fabiohvp/svelte-pdfjs",
+  "description": "Render PDFs in Svelte applications.",
+  "repo_url": "https://github.com/fabiohvp/svelte-pdfjs",
+  "author": "https://github.com/fabiohvp",
+  "homepage": "https://github.com/fabiohvp/svelte-pdfjs#readme",
+  "downloads": 60,
+  "dependents": 0,
+  "updated": "2020-03-06T04:09:26.015Z",
+  "tags": [
+    "ui",
+    "media"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 5
+}

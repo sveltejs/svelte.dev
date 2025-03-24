@@ -1,0 +1,16 @@
+{
+  "name": "date-picker-svelte-fork",
+  "description": "Offer date and time picker component for Svelte.",
+  "repo_url": "https://github.com/phongcao1998/date-picker-svelte",
+  "author": "Kasper Henningsen",
+  "homepage": "https://date-picker-svelte.kasper.space",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2023-12-27T04:56:10.067Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

@@ -1,0 +1,13 @@
+{
+  "name": "@sunify/svelte-select",
+  "description": "Customize select button appearance in Svelte apps.",
+  "author": "Alex Lunyov",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2019-08-28T07:25:05.501Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

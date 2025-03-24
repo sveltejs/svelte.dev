@@ -1,0 +1,14 @@
+{
+  "name": "svelte-svg-transform",
+  "description": "Transform and customize SVG files within Svelte components.",
+  "author": "Bartek Telec",
+  "homepage": "https://github.com/bartektelec/svelte-svg-transform",
+  "downloads": 22,
+  "dependents": 0,
+  "updated": "2023-08-03T19:04:35.261Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

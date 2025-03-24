@@ -1,0 +1,16 @@
+{
+  "name": "svelte-repo-card",
+  "description": "Display GitHub repository information in Svelte components.",
+  "repo_url": "https://github.com/thislooksfun/svelte-repo-card",
+  "author": "thislooksfun",
+  "homepage": "https://github.com/thislooksfun/svelte-repo-card#readme",
+  "downloads": 6,
+  "dependents": 0,
+  "updated": "2021-03-21T03:05:28.017Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 6
+}

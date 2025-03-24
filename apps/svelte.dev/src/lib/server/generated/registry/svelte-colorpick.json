@@ -1,0 +1,13 @@
+{
+  "name": "svelte-colorpick",
+  "description": "Full-featured color picker for Svelte applications.",
+  "author": "Stefan Seemayer",
+  "downloads": 54,
+  "dependents": 0,
+  "updated": "2020-10-04T18:11:34.184Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

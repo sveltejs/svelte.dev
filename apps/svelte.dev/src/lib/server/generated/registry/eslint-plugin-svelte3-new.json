@@ -1,0 +1,16 @@
+{
+  "name": "eslint-plugin-svelte3-new",
+  "description": "Lint Svelte v3 components with ESLint, catching errors.",
+  "repo_url": "https://github.com/sveltejs/eslint-plugin-svelte3",
+  "author": "Conduitry",
+  "homepage": "https://github.com/sveltejs/eslint-plugin-svelte3#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2019-09-02T08:55:37.740Z",
+  "tags": [
+    "tooling",
+    "preprocessor"
+  ],
+  "svelte5": false,
+  "runes": false
+}

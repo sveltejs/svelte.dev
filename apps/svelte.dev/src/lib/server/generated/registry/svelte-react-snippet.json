@@ -1,0 +1,16 @@
+{
+  "name": "svelte-react-snippet",
+  "description": "Create Svelte snippets using JSX syntax based on React components.",
+  "repo_url": "https://github.com/ssssota/svelte-react-snippet",
+  "author": "TOMIKAWA Sotaro",
+  "homepage": "https://ssssota.github.io/svelte-react-snippet/",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2024-08-18T07:51:08.372Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": true,
+  "runes": true,
+  "github_stars": 3
+}

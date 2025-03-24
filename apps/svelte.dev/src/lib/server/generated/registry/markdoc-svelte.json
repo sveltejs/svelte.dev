@@ -1,0 +1,17 @@
+{
+  "name": "markdoc-svelte",
+  "description": "Preprocesses Markdoc files for use in SvelteKit.",
+  "repo_url": "https://github.com/CollierCZ/markdoc-svelte",
+  "author": "Aaron Collier",
+  "homepage": "https://github.com/CollierCZ/markdoc-svelte#readme",
+  "downloads": 8,
+  "dependents": 0,
+  "updated": "2025-01-14T21:26:29.968Z",
+  "tags": [
+    "content",
+    "preprocessor"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 13
+}

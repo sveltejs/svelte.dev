@@ -1,0 +1,17 @@
+{
+  "name": "svelte-to-html",
+  "description": "Transform Svelte files into static HTML.",
+  "repo_url": "https://github.com/sidx1024/svelte-to-html",
+  "author": "sidx1024",
+  "homepage": "https://github.com/sidx1024/svelte-to-html#readme",
+  "downloads": 15852,
+  "dependents": 0,
+  "updated": "2023-06-19T14:41:30.909Z",
+  "tags": [
+    "tooling",
+    "preprocessor"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 13
+}

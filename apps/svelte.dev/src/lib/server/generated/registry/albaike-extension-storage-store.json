@@ -1,0 +1,14 @@
+{
+  "name": "@albaike/extension-storage-store",
+  "description": "Provide Svelte store for extension messaging.",
+  "repo_url": "https://gitgud.io/albaike/extension-storage-store",
+  "author": "albaike",
+  "downloads": 3,
+  "dependents": 0,
+  "updated": "2022-12-26T02:42:29.596Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

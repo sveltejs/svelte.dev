@@ -1,0 +1,13 @@
+{
+  "name": "@htmlbricks/hb-sidenav-link",
+  "description": "Provides Svelte-Bootstrap sidenav link web component.",
+  "author": "Dario Caruso",
+  "downloads": 451,
+  "dependents": 5,
+  "updated": "2025-03-09T03:10:34.815Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

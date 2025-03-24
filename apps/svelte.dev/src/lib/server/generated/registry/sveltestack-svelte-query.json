@@ -1,0 +1,14 @@
+{
+  "name": "@sveltestack/svelte-query",
+  "description": "Manage, cache, sync asynchronous data in Svelte.",
+  "author": "amen-souissi",
+  "homepage": "https://github.com/SvelteStack/svelte-query",
+  "downloads": 1474,
+  "dependents": 4,
+  "updated": "2022-01-22T21:30:04.205Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

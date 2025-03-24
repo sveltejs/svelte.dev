@@ -1,0 +1,15 @@
+{
+  "name": "vite-plugin-pwa-mg",
+  "description": "Provide zero-config PWA for Vite.",
+  "repo_url": "https://github.com/markgregg/vite-plugin-pwa-mg",
+  "author": "antfu",
+  "homepage": "https://github.com/markgregg/vite-plugin-pwa-mg",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2023-06-18T19:39:06.541Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false
+}

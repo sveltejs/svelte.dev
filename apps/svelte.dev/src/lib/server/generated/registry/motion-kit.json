@@ -1,0 +1,15 @@
+{
+  "name": "motion-kit",
+  "description": "Animation library for Svelte and SvelteKit.",
+  "repo_url": "https://github.com/juanvillacortac/motion-kit",
+  "author": "juanvillacortac",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2021-12-08T19:07:22.512Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 1
+}

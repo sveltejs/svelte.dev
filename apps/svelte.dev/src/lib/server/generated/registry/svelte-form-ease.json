@@ -1,0 +1,16 @@
+{
+  "name": "svelte-form-ease",
+  "description": "Manage Svelte forms, maintain state, and validate easily.",
+  "repo_url": "https://github.com/FernandoAcTr/svelte-form-ease",
+  "author": "fernando_acosta",
+  "homepage": "https://github.com/FernandoAcTr/svelte-form-ease#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2024-02-20T23:31:41.349Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

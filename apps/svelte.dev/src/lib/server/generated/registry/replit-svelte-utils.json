@@ -1,0 +1,13 @@
+{
+  "name": "@replit-svelte/utils",
+  "description": "Provides utility functions for replit-svelte.",
+  "author": "LuisAFK",
+  "downloads": 0,
+  "dependents": 1,
+  "updated": "2023-07-28T09:40:08.130Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

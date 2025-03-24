@@ -1,0 +1,16 @@
+{
+  "name": "svelte-persisted-store",
+  "description": "Persist Svelte store data to local storage.",
+  "repo_url": "https://github.com/joshnuss/svelte-persisted-store",
+  "author": "joshnuss",
+  "homepage": "https://github.com/joshnuss/svelte-persisted-store#readme",
+  "downloads": 17683,
+  "dependents": 17,
+  "updated": "2024-10-31T12:16:06.628Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 1087
+}

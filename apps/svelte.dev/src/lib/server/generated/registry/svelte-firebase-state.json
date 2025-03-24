@@ -1,0 +1,14 @@
+{
+  "name": "svelte-firebase-state",
+  "description": "Simplifies Firebase integration with reactive state management.",
+  "author": "Pierre Goutheraud pierre.goutheraud@gmail.com",
+  "homepage": "https://svelte-firebase-state.vercel.app",
+  "downloads": 26,
+  "dependents": 0,
+  "updated": "2024-12-21T12:27:59.151Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": true,
+  "runes": false
+}

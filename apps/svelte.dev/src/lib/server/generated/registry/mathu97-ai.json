@@ -1,0 +1,16 @@
+{
+  "name": "@mathu97/ai",
+  "description": "Build AI-powered streaming text and chat UIs with Svelte.",
+  "repo_url": "https://github.com/vercel/ai",
+  "author": "mathu97",
+  "homepage": "https://sdk.vercel.ai/docs",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2023-12-27T19:50:18.612Z",
+  "tags": [
+    "integration"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 12872
+}

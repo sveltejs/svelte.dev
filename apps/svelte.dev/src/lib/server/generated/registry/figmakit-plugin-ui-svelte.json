@@ -1,0 +1,17 @@
+{
+  "name": "figmakit-plugin-ui-svelte",
+  "description": "Build Figma plugin UI components with Svelte 5.",
+  "repo_url": "https://github.com/KaiMagnusMueller/figmakit-plugin-ui",
+  "author": "Kai Magnus Müller",
+  "homepage": "https://github.com/KaiMagnusMueller/figmakit-plugin-ui#readme",
+  "downloads": 110,
+  "dependents": 0,
+  "updated": "2024-12-01T16:01:17.197Z",
+  "tags": [
+    "component-library",
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 0
+}

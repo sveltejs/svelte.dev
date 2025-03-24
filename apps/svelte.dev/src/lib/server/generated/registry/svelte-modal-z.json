@@ -1,0 +1,15 @@
+{
+  "name": "svelte-modal-z",
+  "description": "Create simple, beautiful Svelte modals with various customization options.",
+  "repo_url": "https://github.com/delpikye-v/svelte-modal",
+  "author": "Delpi.Kye",
+  "homepage": "https://github.com/delpikye-v/svelte-modal#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2023-02-03T07:57:30.563Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

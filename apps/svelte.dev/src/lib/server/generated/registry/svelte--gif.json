@@ -1,0 +1,17 @@
+{
+  "name": "svelte--gif",
+  "description": "Implement Tenor GIF components in Svelte applications.",
+  "repo_url": "https://github.com/atordvairn/svelte-tenor",
+  "author": "atordvairn",
+  "homepage": "https://github.com/atordvairn/svelte-tenor/#readme",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2022-03-11T17:33:13.690Z",
+  "tags": [
+    "ui",
+    "media"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

@@ -1,0 +1,13 @@
+{
+  "name": "@ikun-ui/drawer",
+  "description": "Build drawers for Svelte applications.",
+  "author": "baiwusanyu",
+  "downloads": 38,
+  "dependents": 1,
+  "updated": "2025-01-24T03:48:50.630Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

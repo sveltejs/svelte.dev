@@ -1,0 +1,13 @@
+{
+  "name": "svelte-object-table",
+  "description": "Render data as table in Svelte applications.",
+  "author": "Marc Bouvier",
+  "downloads": 341,
+  "dependents": 0,
+  "updated": "2025-03-12T19:23:29.642Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false
+}

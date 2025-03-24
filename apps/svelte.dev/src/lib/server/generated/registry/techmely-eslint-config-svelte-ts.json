@@ -1,0 +1,15 @@
+{
+  "name": "@techmely/eslint-config-svelte-ts",
+  "description": "Provides ESLint configuration for Svelte and TypeScript projects.",
+  "repo_url": "https://github.com/TechMely/eslint-config-ts",
+  "author": "thaycacac",
+  "downloads": 3,
+  "dependents": 0,
+  "updated": "2021-12-18T16:53:47.979Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

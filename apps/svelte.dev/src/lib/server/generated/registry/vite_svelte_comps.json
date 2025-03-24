@@ -1,0 +1,13 @@
+{
+  "name": "vite_svelte_comps",
+  "description": "Build dashboard cards using Svelte, Vite, and web components.",
+  "author": "miyoko0505",
+  "downloads": 1,
+  "dependents": 2,
+  "updated": "2023-03-17T08:23:36.296Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

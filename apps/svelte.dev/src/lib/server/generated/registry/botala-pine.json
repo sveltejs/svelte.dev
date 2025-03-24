@@ -1,0 +1,17 @@
+{
+  "name": "@botala/pine",
+  "description": "Create Svelte components with Botala's component library.",
+  "repo_url": "https://github.com/BotalaFoods/client-components",
+  "author": "kierangill",
+  "homepage": "https://github.com/BotalaFoods/client-components#readme",
+  "downloads": 88,
+  "dependents": 0,
+  "updated": "2020-07-26T08:09:59.357Z",
+  "tags": [
+    "component-library",
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

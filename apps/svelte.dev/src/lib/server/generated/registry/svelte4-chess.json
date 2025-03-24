@@ -1,0 +1,14 @@
+{
+  "name": "svelte4-chess",
+  "description": "Develop fully playable chess components for Svelte 4.",
+  "author": "liamkrenn",
+  "homepage": "https://github.com/LiamKrenn/svelte4-chess",
+  "downloads": 25,
+  "dependents": 0,
+  "updated": "2025-02-03T16:55:04.243Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

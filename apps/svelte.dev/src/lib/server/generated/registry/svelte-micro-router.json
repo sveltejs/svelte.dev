@@ -1,0 +1,16 @@
+{
+  "name": "svelte-micro-router",
+  "description": "Micro router for Svelte with easy configuration.",
+  "repo_url": "https://github.com/davidrot/svelte-micro-router",
+  "author": "David Rothmann",
+  "homepage": "https://github.com/davidrot/svelte-micro-router#readme",
+  "downloads": 36,
+  "dependents": 0,
+  "updated": "2022-09-15T13:22:52.240Z",
+  "tags": [
+    "router"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 3
+}

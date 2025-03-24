@@ -1,0 +1,13 @@
+{
+  "name": "@simplero/svelte-font-select",
+  "description": "Create font selection UI components for Svelte.",
+  "author": "owaissimplero",
+  "downloads": 24,
+  "dependents": 0,
+  "updated": "2024-10-03T08:51:46.788Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

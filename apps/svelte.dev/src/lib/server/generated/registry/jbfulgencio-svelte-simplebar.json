@@ -1,0 +1,16 @@
+{
+  "name": "@jbfulgencio/svelte-simplebar",
+  "description": "Use SimpleBar scrollbars in Svelte applications.",
+  "repo_url": "https://github.com/jbfulgencio/svelte-simplebar",
+  "author": "João Batista Fulgêncio",
+  "homepage": "https://github.com/jbfulgencio/svelte-simplebar#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2022-03-15T19:13:52.173Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 1
+}

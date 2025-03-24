@@ -1,0 +1,16 @@
+{
+  "name": "syncwave-dnd",
+  "description": "Create drag and drop interfaces for Svelte 5 apps.",
+  "repo_url": "https://github.com/isaacHagoel/svelte-dnd-action",
+  "author": "Isaac Hagoel",
+  "homepage": "https://github.com/isaacHagoel/svelte-dnd-action#readme",
+  "downloads": 1947,
+  "dependents": 0,
+  "updated": "2025-03-20T05:04:10.873Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 1915
+}

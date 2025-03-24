@@ -1,0 +1,16 @@
+{
+  "name": "sveltestrap-svelte5",
+  "description": "Bootstrap 5 components for Svelte 4+ applications.",
+  "repo_url": "https://github.com/sveltestrap/sveltestrap",
+  "author": "winstonewert",
+  "homepage": "https://sveltestrap.js.org",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2024-11-20T18:59:29.972Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 173
+}

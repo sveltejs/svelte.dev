@@ -1,0 +1,16 @@
+{
+  "name": "svelte-typewriter-store",
+  "description": "Generate typewriter effect with rotating words in Svelte.",
+  "repo_url": "https://github.com/paoloricciuti/svelte-typewriter-store",
+  "author": "Paolo Ricciuti",
+  "homepage": "https://github.com/paoloricciuti/svelte-typewriter-store#readme",
+  "downloads": 7,
+  "dependents": 0,
+  "updated": "2022-11-30T15:22:10.276Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 11
+}

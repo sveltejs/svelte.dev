@@ -1,0 +1,17 @@
+{
+  "name": "svelte-markup-walker",
+  "description": "Walk Svelte AST, modify markup with MagicString.",
+  "repo_url": "https://github.com/kaisermann/svelte-markup-walker",
+  "author": "Christian Kaisermann",
+  "homepage": "https://github.com/kaisermann/svelte-markup-walker#readme",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2019-11-04T23:06:54.532Z",
+  "tags": [
+    "tooling",
+    "preprocessor"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 9
+}

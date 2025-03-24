@@ -1,0 +1,15 @@
+{
+  "name": "@alanchenchen/svelte-store-persisted",
+  "description": "Persist Svelte store data using local/session storage.",
+  "repo_url": "https://github.com/alanchenchen/svelte-store-persisted",
+  "author": "Alan Chen",
+  "homepage": "https://github.com/alanchenchen/svelte-store-persisted",
+  "downloads": 19,
+  "dependents": 0,
+  "updated": "2020-01-19T09:42:20.915Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

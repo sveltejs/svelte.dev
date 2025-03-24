@@ -1,0 +1,17 @@
+{
+  "name": "svelma2",
+  "description": "Build Bulma components for Svelte.",
+  "repo_url": "https://github.com/abbychau/svelma",
+  "author": "Abby Chau, Brian Hann",
+  "homepage": "https://github.com/abbychau/svelma#readme",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2021-03-19T09:37:05.949Z",
+  "tags": [
+    "component-library",
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 5
+}

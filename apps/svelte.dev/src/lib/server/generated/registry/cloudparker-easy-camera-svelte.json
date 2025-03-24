@@ -1,0 +1,13 @@
+{
+  "name": "@cloudparker/easy-camera-svelte",
+  "description": "Integrate camera features into Svelte apps.",
+  "author": "couldparker.com",
+  "downloads": 94,
+  "dependents": 1,
+  "updated": "2024-11-26T17:44:28.796Z",
+  "tags": [
+    "media"
+  ],
+  "svelte5": true,
+  "runes": false
+}

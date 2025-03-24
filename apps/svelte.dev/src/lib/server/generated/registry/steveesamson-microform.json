@@ -1,0 +1,16 @@
+{
+  "name": "@steveesamson/microform",
+  "description": "Manage forms in Svelte and SvelteKit applications.",
+  "repo_url": "https://github.com/steveesamson/microform",
+  "author": "Steve S. Samson",
+  "homepage": "https://steveesamson.github.io/microform",
+  "downloads": 245,
+  "dependents": 0,
+  "updated": "2025-03-15T21:05:53.153Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 0
+}

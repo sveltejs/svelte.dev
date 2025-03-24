@@ -1,0 +1,17 @@
+{
+  "name": "svelte-facebook-login",
+  "description": "Integrate Facebook login functionality into Svelte apps.",
+  "repo_url": "https://github.com/andrelmlins/svelte-facebook-login",
+  "author": "André Lins",
+  "homepage": "https://svelte-facebook-login.netlify.com/",
+  "downloads": 5,
+  "dependents": 0,
+  "updated": "2021-02-24T12:05:55.071Z",
+  "tags": [
+    "auth",
+    "integration"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 8
+}

@@ -1,0 +1,13 @@
+{
+  "name": "svelte-tutorial-builder",
+  "description": "Simplify creating linear in-app tutorials for Svelte.",
+  "author": "sfasulo",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2024-06-25T17:59:02.536Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

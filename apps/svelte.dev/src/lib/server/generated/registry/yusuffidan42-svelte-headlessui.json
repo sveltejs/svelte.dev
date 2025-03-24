@@ -1,0 +1,15 @@
+{
+  "name": "@yusuffidan42/svelte-headlessui",
+  "description": "Offer unstyled, accessible UI components for Svelte, based on Headless UI.",
+  "repo_url": "https://github.com/YusufFidan/svelte-headlessui",
+  "author": "yusuffidan.42",
+  "homepage": "https://fidan.de",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2024-07-16T17:40:37.204Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": false,
+  "runes": false
+}

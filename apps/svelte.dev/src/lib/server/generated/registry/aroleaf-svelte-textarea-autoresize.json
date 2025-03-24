@@ -1,0 +1,16 @@
+{
+  "name": "@aroleaf/svelte-textarea-autoresize",
+  "description": "Create autoresizing textarea components for Svelte.",
+  "repo_url": "https://github.com/d0x2f/svelte-textarea-autoresize",
+  "author": "aroleaf",
+  "homepage": "https://github.com/d0x2f/svelte-textarea-autoresize#readme",
+  "downloads": 4,
+  "dependents": 0,
+  "updated": "2022-11-27T13:37:38.073Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 8
+}

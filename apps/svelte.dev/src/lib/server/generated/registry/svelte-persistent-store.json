@@ -1,0 +1,16 @@
+{
+  "name": "svelte-persistent-store",
+  "description": "Persist Svelte stores in localStorage or sessionStorage.",
+  "repo_url": "https://github.com/andsala/svelte-persistent-store",
+  "author": "Andrea Salamone",
+  "homepage": "https://github.com/andsala/svelte-persistent-store",
+  "downloads": 51,
+  "dependents": 0,
+  "updated": "2021-01-06T16:44:14.502Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 85
+}

@@ -1,0 +1,15 @@
+{
+  "name": "kvelte-node",
+  "description": "Build UI with Svelte for Kotlin users.",
+  "repo_url": "https://github.com/baseballyama/kvelte",
+  "author": "baseballyama",
+  "homepage": "https://github.com/baseballyama/kvelte/tree/main/kvelte-node#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2022-07-10T10:09:30.035Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false
+}

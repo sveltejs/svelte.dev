@@ -1,0 +1,13 @@
+{
+  "name": "@ikun-ui/tabs",
+  "description": "Provides tabs UI component for Svelte.",
+  "author": "baiwusanyu",
+  "downloads": 16,
+  "dependents": 1,
+  "updated": "2025-01-24T03:49:23.143Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

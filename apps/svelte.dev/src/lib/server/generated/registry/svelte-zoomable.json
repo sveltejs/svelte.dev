@@ -1,0 +1,16 @@
+{
+  "name": "svelte-zoomable",
+  "description": "Create zoomable UI components in Svelte.",
+  "repo_url": "https://github.com/dimfeld/svelte-zoomable",
+  "author": "Daniel Imfeld",
+  "homepage": "https://github.com/dimfeld/svelte-zoomable#readme",
+  "downloads": 102,
+  "dependents": 0,
+  "updated": "2021-01-28T08:09:21.878Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 11
+}

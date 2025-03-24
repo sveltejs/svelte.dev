@@ -1,0 +1,13 @@
+{
+  "name": "sveltekit-embed",
+  "description": "Provides embed components for SvelteKit projects.",
+  "author": "Scott Spence",
+  "downloads": 871,
+  "dependents": 0,
+  "updated": "2025-02-09T20:30:39.779Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false
+}

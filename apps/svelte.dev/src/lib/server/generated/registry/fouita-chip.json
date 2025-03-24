@@ -1,0 +1,16 @@
+{
+  "name": "@fouita/chip",
+  "description": "Build chip and alert components with Svelte and TailwindCSS.",
+  "repo_url": "https://github.com/fouita/chip",
+  "author": "fouita",
+  "homepage": "https://github.com/fouita/chip#readme",
+  "downloads": 8,
+  "dependents": 0,
+  "updated": "2020-09-18T12:54:26.907Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

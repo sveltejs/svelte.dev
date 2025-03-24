@@ -1,0 +1,16 @@
+{
+  "name": "svelte-yt",
+  "description": "Wrap YouTube IFrame API for Svelte components.",
+  "repo_url": "https://github.com/zusorio/svelte-yt",
+  "author": "Tobias Messner",
+  "homepage": "https://github.com/zusorio/svelte-yt#readme",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2023-02-15T10:59:33.972Z",
+  "tags": [
+    "media"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

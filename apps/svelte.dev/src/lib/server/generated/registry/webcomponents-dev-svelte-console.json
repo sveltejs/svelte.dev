@@ -1,0 +1,15 @@
+{
+  "name": "@webcomponents-dev/svelte-console",
+  "description": "Provide console component for Svelte applications.",
+  "repo_url": "https://github.com/webcomponents-dev/svelte-console",
+  "author": "_wcd_",
+  "homepage": "https://github.com/webcomponents-dev/svelte-console#readme",
+  "downloads": 7,
+  "dependents": 0,
+  "updated": "2019-11-20T15:34:32.682Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false
+}

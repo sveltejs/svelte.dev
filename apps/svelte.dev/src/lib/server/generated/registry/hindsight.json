@@ -1,0 +1,16 @@
+{
+  "name": "hindsight",
+  "description": "Generate prop documentation for Svelte components.",
+  "repo_url": "https://github.com/metonym/hindsight",
+  "author": "Eric Liu",
+  "homepage": "https://github.com/metonym/hindsight",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2020-03-31T00:48:56.372Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 1
+}

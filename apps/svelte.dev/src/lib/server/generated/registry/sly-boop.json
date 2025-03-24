@@ -1,0 +1,16 @@
+{
+  "name": "sly-boop",
+  "description": "Create 3D card twisting hover animations with Svelte directives.",
+  "repo_url": "https://github.com/SlyOtis/sly-boop",
+  "author": "Martin Ottersland",
+  "homepage": "https://github.com/SlyOtis/sly-boop.git",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2024-10-23T14:53:58.630Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

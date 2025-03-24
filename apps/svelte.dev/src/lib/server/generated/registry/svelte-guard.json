@@ -1,0 +1,16 @@
+{
+  "name": "svelte-guard",
+  "description": "Implement route guards for SvelteKit applications.",
+  "repo_url": "https://github.com/mehdikhody/svelte-guard",
+  "author": "Mehdi Khodayari",
+  "homepage": "https://github.com/mehdikhody/svelte-guard#readme",
+  "downloads": 116,
+  "dependents": 0,
+  "updated": "2025-02-22T13:41:50.551Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 15
+}

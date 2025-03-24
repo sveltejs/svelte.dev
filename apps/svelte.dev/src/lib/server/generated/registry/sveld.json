@@ -1,0 +1,17 @@
+{
+  "name": "sveld",
+  "description": "Generates TypeScript definitions for Svelte components.",
+  "repo_url": "https://github.com/carbon-design-system/sveld",
+  "author": "metonym",
+  "homepage": "https://github.com/carbon-design-system/sveld",
+  "downloads": 3676,
+  "dependents": 2,
+  "updated": "2025-02-17T19:19:19.814Z",
+  "tags": [
+    "tooling",
+    "preprocessor"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 420
+}

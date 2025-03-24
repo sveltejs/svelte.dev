@@ -1,0 +1,16 @@
+{
+  "name": "@danielschischkin/publish-svelte",
+  "description": "Publish Svelte components to npm easily.",
+  "repo_url": "https://github.com/fourhundredfour/publish-svelte",
+  "author": "Philip Christiansen",
+  "homepage": "https://github.com/fourhundredfour/publish-svelte#readme",
+  "downloads": 7,
+  "dependents": 0,
+  "updated": "2021-09-17T12:19:35.260Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

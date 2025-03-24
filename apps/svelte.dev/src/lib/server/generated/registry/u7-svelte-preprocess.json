@@ -1,0 +1,16 @@
+{
+  "name": "@u7/svelte-preprocess",
+  "description": "Svelte preprocessor with support for various languages.",
+  "repo_url": "https://github.com/sveltejs/svelte-preprocess",
+  "author": "Christian Kaisermann",
+  "homepage": "https://github.com/sveltejs/svelte-preprocess#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2023-02-18T11:37:11.629Z",
+  "tags": [
+    "preprocessor"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 1772
+}

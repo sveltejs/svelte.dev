@@ -1,0 +1,14 @@
+{
+  "name": "@htmlbricks/loginregister-component",
+  "description": "Build login and register web components for Svelte.",
+  "author": "Dario Caruso",
+  "downloads": 107,
+  "dependents": 0,
+  "updated": "2022-01-02T19:14:36.273Z",
+  "tags": [
+    "ui",
+    "auth"
+  ],
+  "svelte5": false,
+  "runes": false
+}

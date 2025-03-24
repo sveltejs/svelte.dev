@@ -1,0 +1,15 @@
+{
+  "name": "svelte-qr",
+  "description": "Generate QR codes using Svelte components.",
+  "repo_url": "https://github.com/jnordberg/svelte-qr",
+  "author": "jnordberg",
+  "downloads": 11,
+  "dependents": 0,
+  "updated": "2020-07-26T12:05:07.714Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 5
+}

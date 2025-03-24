@@ -1,0 +1,17 @@
+{
+  "name": "eslint-plugin-svelte3-preprocess",
+  "description": "Lint Svelte v3 components, respecting scope and stores.",
+  "repo_url": "https://github.com/sveltejs/eslint-plugin-svelte3",
+  "author": "Conduitry",
+  "homepage": "https://github.com/sveltejs/eslint-plugin-svelte3#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2020-08-27T18:00:55.201Z",
+  "tags": [
+    "tooling",
+    "preprocessor"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 376
+}

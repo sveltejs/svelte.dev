@@ -1,0 +1,13 @@
+{
+  "name": "svelte-vx",
+  "description": "Svelte components for data visualization.",
+  "author": "osmanmesutozcan",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2020-03-26T04:55:30.324Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

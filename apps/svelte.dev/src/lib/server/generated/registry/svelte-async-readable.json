@@ -1,0 +1,16 @@
+{
+  "name": "svelte-async-readable",
+  "description": "Create readable stores from async resources in Svelte.",
+  "repo_url": "https://github.com/cdellacqua/svelte-async-readable",
+  "author": "Carlo Dell'Acqua",
+  "homepage": "https://github.com/cdellacqua/svelte-async-readable",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2021-09-18T20:14:25.771Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 5
+}

@@ -1,0 +1,15 @@
+{
+  "name": "cosmo-wc",
+  "description": "Shareable web components library built with Svelte.",
+  "repo_url": "https://github.com/Plortinus/cosmo",
+  "author": "plortinus",
+  "homepage": "https://github.com/Plortinus/cosmo#readme",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2021-06-13T08:56:05.741Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": false,
+  "runes": false
+}

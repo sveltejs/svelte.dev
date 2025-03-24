@@ -1,0 +1,16 @@
+{
+  "name": "svelte-zdog",
+  "description": "Create 3D renders with Zdog in Svelte.",
+  "repo_url": "https://github.com/wh0am1-dev/svelte-zdog",
+  "author": "Carlos Aguilar",
+  "homepage": "https://carlos-aguilar.com/svelte-zdog",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2023-08-21T02:15:43.393Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 44
+}

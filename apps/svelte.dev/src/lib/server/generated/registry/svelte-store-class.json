@@ -1,0 +1,16 @@
+{
+  "name": "svelte-store-class",
+  "description": "Encapsulate Svelte store data within a class.",
+  "repo_url": "https://github.com/yeori/svelte-store-class",
+  "author": "yeori",
+  "homepage": "https://github.com/yeori/svelte-store-class#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2024-11-05T11:44:22.678Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

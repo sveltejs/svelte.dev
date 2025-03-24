@@ -1,0 +1,16 @@
+{
+  "name": "chocobytes",
+  "description": "Provide reusable building blocks for Svelte 5 UI components and headless classes.",
+  "repo_url": "https://github.com/fcrozatier/choco-ui",
+  "author": "fcrozatier",
+  "homepage": "https://choco-ui.com/",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2024-10-01T08:41:43.731Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 6
+}

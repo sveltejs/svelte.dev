@@ -1,0 +1,16 @@
+{
+  "name": "svault",
+  "description": "Implement authentication, authorization, user management in SvelteKit.",
+  "repo_url": "https://github.com/oslabs-beta/Svault",
+  "author": "Team Svault",
+  "homepage": "https://svault.dev",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2023-07-23T00:08:53.291Z",
+  "tags": [
+    "auth"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 65
+}

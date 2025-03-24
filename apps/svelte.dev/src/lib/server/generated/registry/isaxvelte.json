@@ -1,0 +1,16 @@
+{
+  "name": "isaxvelte",
+  "description": "Use Iconsax icons in Svelte projects.",
+  "repo_url": "https://github.com/RbnMach/isaxvelte",
+  "author": "RubenMach",
+  "homepage": "https://github.com/RbnMach/isaxvelte#readme",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2024-06-08T02:15:46.407Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

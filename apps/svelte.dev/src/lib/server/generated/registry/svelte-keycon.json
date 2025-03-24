@@ -1,0 +1,16 @@
+{
+  "name": "svelte-keycon",
+  "description": "Implement Svelte key controller reactive component.",
+  "repo_url": "https://github.com/daybrush/keycon",
+  "author": "Daybrush",
+  "homepage": "https://github.com/daybrush/keycon",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2022-12-04T01:50:42.280Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 43
+}

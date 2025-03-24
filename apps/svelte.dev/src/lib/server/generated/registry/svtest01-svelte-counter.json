@@ -1,0 +1,13 @@
+{
+  "name": "svtest01-svelte-counter",
+  "description": "Creates customizable text editor component for Svelte 5.",
+  "author": "Your Name",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2024-12-27T00:26:05.703Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false
+}

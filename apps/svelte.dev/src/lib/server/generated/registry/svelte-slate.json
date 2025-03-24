@@ -1,0 +1,16 @@
+{
+  "name": "svelte-slate",
+  "description": "Provide a Svelte view layer for Slate rich text editor.",
+  "repo_url": "https://github.com/nathanfaucett/svelte-slate",
+  "author": "Nathan Faucett",
+  "homepage": "https://github.com/nathanfaucett/svelte-slate#readme",
+  "downloads": 47,
+  "dependents": 0,
+  "updated": "2024-01-02T12:37:45.664Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 61
+}

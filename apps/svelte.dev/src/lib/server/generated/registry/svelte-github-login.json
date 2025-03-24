@@ -1,0 +1,17 @@
+{
+  "name": "svelte-github-login",
+  "description": "Integrate GitHub login functionality into Svelte apps.",
+  "repo_url": "https://github.com/andrelmlins/svelte-github-login",
+  "author": "André Lins",
+  "homepage": "https://svelte-github-login.netlify.com/",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2022-04-30T15:10:51.732Z",
+  "tags": [
+    "auth",
+    "integration"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 12
+}

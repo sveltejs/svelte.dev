@@ -1,0 +1,16 @@
+{
+  "name": "@cwlogo/svelte-tags-input",
+  "description": "Create customizable tag input components for Svelte.",
+  "repo_url": "https://github.com/agustinl/svelte-tags-input",
+  "author": "Agustin Lautaro",
+  "homepage": "https://svelte-tags-input.vercel.app/",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2022-10-25T13:36:41.153Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 314
+}

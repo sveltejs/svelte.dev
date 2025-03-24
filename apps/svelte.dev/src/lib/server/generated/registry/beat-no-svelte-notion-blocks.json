@@ -1,0 +1,16 @@
+{
+  "name": "@beat-no/svelte-notion-blocks",
+  "description": "Render Notion blocks in Svelte applications.",
+  "repo_url": "https://github.com/beat-no/svelte-notion-blocks",
+  "author": "vegard_larsen",
+  "homepage": "https://github.com/beat-no/svelte-notion-blocks",
+  "downloads": 51,
+  "dependents": 0,
+  "updated": "2023-03-30T14:01:23.463Z",
+  "tags": [
+    "content"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 23
+}

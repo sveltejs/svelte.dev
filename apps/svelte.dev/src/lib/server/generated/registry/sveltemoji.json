@@ -1,0 +1,13 @@
+{
+  "name": "sveltemoji",
+  "description": "Provide lightweight emoji picker for Svelte applications.",
+  "author": "Anton Aksionau",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2023-06-05T20:35:16.942Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

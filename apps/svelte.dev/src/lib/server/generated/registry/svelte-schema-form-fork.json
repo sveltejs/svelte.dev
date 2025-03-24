@@ -1,0 +1,16 @@
+{
+  "name": "svelte-schema-form-fork",
+  "description": "Generate forms from JSON schema in Svelte.",
+  "repo_url": "https://github.com/restspace/svelte-schema-form",
+  "author": "James Ellis-Jones",
+  "homepage": "https://github.com/restspace/svelte-schema-form#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2024-05-22T06:57:02.228Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 73
+}

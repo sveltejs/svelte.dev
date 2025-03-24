@@ -1,0 +1,16 @@
+{
+  "name": "@edelman/svelte-storekeeper",
+  "description": "Provide a set of HOC stores for Svelte.",
+  "repo_url": "https://github.com/medelman17/edel.monster",
+  "author": "Michael Edelman",
+  "homepage": "https://github.com/medelman17/edel.monster#readme",
+  "downloads": 5,
+  "dependents": 0,
+  "updated": "2021-11-24T02:06:32.271Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

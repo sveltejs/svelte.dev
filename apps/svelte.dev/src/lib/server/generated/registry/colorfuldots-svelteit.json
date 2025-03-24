@@ -1,0 +1,17 @@
+{
+  "name": "@colorfuldots/svelteit",
+  "description": "Develop UI/UX components for Svelte and Sapper projects.",
+  "repo_url": "https://github.com/erictherobot/svelteit",
+  "author": "Eric David Smith",
+  "homepage": "https://github.com/erictherobot/svelteit#readme",
+  "downloads": 34,
+  "dependents": 0,
+  "updated": "2020-04-06T17:39:52.907Z",
+  "tags": [
+    "component-library",
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 80
+}

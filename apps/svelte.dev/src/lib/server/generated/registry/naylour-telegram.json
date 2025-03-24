@@ -1,0 +1,15 @@
+{
+  "name": "@naylour/telegram",
+  "description": "Integrate Telegram API with Svelte applications.",
+  "repo_url": "https://github.com/naylour/NaylourTelegram",
+  "author": "Naylour",
+  "downloads": 14,
+  "dependents": 0,
+  "updated": "2025-01-04T22:40:10.009Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 0
+}

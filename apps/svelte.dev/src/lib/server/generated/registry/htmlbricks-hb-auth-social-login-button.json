@@ -1,0 +1,14 @@
+{
+  "name": "@htmlbricks/hb-auth-social-login-button",
+  "description": "Build login and register web component.",
+  "author": "Dario Caruso",
+  "downloads": 160,
+  "dependents": 1,
+  "updated": "2025-03-09T03:10:26.718Z",
+  "tags": [
+    "ui",
+    "auth"
+  ],
+  "svelte5": false,
+  "runes": false
+}

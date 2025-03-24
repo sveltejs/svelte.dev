@@ -1,0 +1,16 @@
+{
+  "name": "beta-shadui",
+  "description": "Create beautifully designed components with Svelte 5 and Tailwind CSS.",
+  "repo_url": "https://github.com/hermny/shadcn-svpack",
+  "author": "hermny",
+  "homepage": "https://github.com/hermny/shadcn-svpack#readme",
+  "downloads": 6,
+  "dependents": 0,
+  "updated": "2025-01-19T18:33:07.380Z",
+  "tags": [
+    "component-library",
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false
+}

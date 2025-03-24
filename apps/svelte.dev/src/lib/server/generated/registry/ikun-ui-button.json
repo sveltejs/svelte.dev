@@ -1,0 +1,13 @@
+{
+  "name": "@ikun-ui/button",
+  "description": "Build button components for Svelte applications.",
+  "author": "baiwusanyu",
+  "downloads": 38,
+  "dependents": 7,
+  "updated": "2025-01-24T03:48:36.328Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

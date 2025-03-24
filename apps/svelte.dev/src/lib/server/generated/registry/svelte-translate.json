@@ -1,0 +1,16 @@
+{
+  "name": "svelte-translate",
+  "description": "Provide dynamic translation service with fallback to HTML text.",
+  "repo_url": "https://github.com/noelmugnier/svelte-translate",
+  "author": "Noël Mugnier",
+  "homepage": "https://github.com/noelmugnier/svelte-translate#readme",
+  "downloads": 6,
+  "dependents": 0,
+  "updated": "2021-10-01T14:03:15.146Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 10
+}

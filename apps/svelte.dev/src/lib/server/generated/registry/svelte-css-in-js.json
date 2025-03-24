@@ -1,0 +1,13 @@
+{
+  "name": "svelte-css-in-js",
+  "description": "Handle CSS in JavaScript form from Svelte components.",
+  "author": "hmmhmmhm",
+  "downloads": 2,
+  "dependents": 1,
+  "updated": "2020-01-02T03:04:35.844Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": true,
+  "runes": false
+}

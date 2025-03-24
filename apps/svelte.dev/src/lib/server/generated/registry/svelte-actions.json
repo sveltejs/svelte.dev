@@ -1,0 +1,16 @@
+{
+  "name": "svelte-actions",
+  "description": "Implement various Svelte actions for enhanced user interactions.",
+  "repo_url": "https://github.com/sw-yx/svelte-actions",
+  "author": "swyx",
+  "homepage": "https://github.com/sw-yx/svelte-actions#readme",
+  "downloads": 6,
+  "dependents": 0,
+  "updated": "2022-03-07T21:09:39.307Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 224
+}

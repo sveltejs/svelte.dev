@@ -1,0 +1,13 @@
+{
+  "name": "@ikun-ui/client-only",
+  "description": "Create client-side only components in Svelte.",
+  "author": "baiwusanyu",
+  "downloads": 37,
+  "dependents": 5,
+  "updated": "2025-01-24T03:48:43.633Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

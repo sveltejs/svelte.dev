@@ -1,0 +1,16 @@
+{
+  "name": "svelte-common",
+  "description": "Provides common components and utilities for Svelte apps.",
+  "repo_url": "https://github.com/arlac77/svelte-common",
+  "author": "arlac77",
+  "homepage": "https://github.com/arlac77/svelte-common#readme",
+  "downloads": 642,
+  "dependents": 5,
+  "updated": "2025-03-21T20:24:41.264Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 8
+}

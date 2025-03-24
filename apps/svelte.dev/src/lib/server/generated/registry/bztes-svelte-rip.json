@@ -1,0 +1,17 @@
+{
+  "name": "@bztes/svelte-rip",
+  "description": "Provide responsive image previews for Svelte apps.",
+  "repo_url": "https://github.com/bztes/svelte-rip",
+  "author": "Nico Beierle",
+  "homepage": "https://bztes.github.io/svelte-rip/",
+  "downloads": 10,
+  "dependents": 0,
+  "updated": "2021-11-07T22:00:49.998Z",
+  "tags": [
+    "media",
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 2
+}

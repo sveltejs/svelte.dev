@@ -1,0 +1,16 @@
+{
+  "name": "@minissg/render-svelte",
+  "description": "Render Svelte components with Minissg.",
+  "repo_url": "https://github.com/uenoB/minissg",
+  "author": "uenob",
+  "homepage": "https://github.com/uenoB/minissg/tree/main/packages/render-svelte#readme",
+  "downloads": 4,
+  "dependents": 0,
+  "updated": "2025-01-03T22:39:19.254Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 3
+}

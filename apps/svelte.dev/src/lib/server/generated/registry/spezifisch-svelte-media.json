@@ -1,0 +1,16 @@
+{
+  "name": "@spezifisch/svelte-media",
+  "description": "Observe media queries, providing reactive store for Svelte apps.",
+  "repo_url": "https://github.com/cibernox/svelte-media",
+  "author": "Miguel Camba",
+  "homepage": "https://github.com/cibernox/svelte-media#readme",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2022-05-10T09:02:43.920Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 59
+}

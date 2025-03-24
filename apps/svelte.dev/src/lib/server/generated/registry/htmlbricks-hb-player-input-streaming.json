@@ -1,0 +1,14 @@
+{
+  "name": "@htmlbricks/hb-player-input-streaming",
+  "description": "Create player input web component.",
+  "author": "Dario Caruso",
+  "downloads": 80,
+  "dependents": 0,
+  "updated": "2025-03-09T03:10:32.684Z",
+  "tags": [
+    "media",
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

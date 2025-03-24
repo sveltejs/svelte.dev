@@ -1,0 +1,16 @@
+{
+  "name": "@bjornlu/svelte-router",
+  "description": "Create easy-to-use SPA routing for Svelte applications.",
+  "repo_url": "https://github.com/bluwy/svelte-router",
+  "author": "Bjorn Lu",
+  "homepage": "https://github.com/bluwy/svelte-router",
+  "downloads": 37,
+  "dependents": 0,
+  "updated": "2021-09-09T17:01:16.692Z",
+  "tags": [
+    "router"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 34
+}

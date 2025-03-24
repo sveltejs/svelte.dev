@@ -1,0 +1,16 @@
+{
+  "name": "eslint-plugin-svelte-albert",
+  "description": "Lint Svelte code using AST.",
+  "repo_url": "https://github.com/sveltejs/eslint-plugin-svelte",
+  "author": "Yosuke Ota",
+  "homepage": "https://sveltejs.github.io/eslint-plugin-svelte",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2024-08-09T18:26:05.886Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": true,
+  "runes": true,
+  "github_stars": 324
+}

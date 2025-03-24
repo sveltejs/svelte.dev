@@ -1,0 +1,16 @@
+{
+  "name": "svelte-final-form",
+  "description": "Manage form state with subscriptions in Svelte applications.",
+  "repo_url": "https://github.com/jetrockets/svelte-final-form",
+  "author": "Alexey Solilin",
+  "homepage": "https://github.com/jetrockets/svelte-final-form#readme",
+  "downloads": 206,
+  "dependents": 2,
+  "updated": "2020-12-22T16:33:08.780Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 43
+}

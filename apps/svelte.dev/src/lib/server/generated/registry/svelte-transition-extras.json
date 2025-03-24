@@ -1,0 +1,14 @@
+{
+  "name": "svelte-transition-extras",
+  "description": "Extend Svelte's transition effects with more control.",
+  "author": "Ron Jones",
+  "homepage": "https://github.com/boatilus/svelte-transition-extras",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2022-01-11T00:54:54.782Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

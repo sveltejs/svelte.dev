@@ -1,0 +1,16 @@
+{
+  "name": "svelte-toggles",
+  "description": "Create light and dark mode toggle switches for Svelte.",
+  "repo_url": "https://github.com/Team-GOATS/teamgoats-npm-package",
+  "author": "Team GOATS",
+  "homepage": "https://sveltetoggles.onrender.com",
+  "downloads": 3,
+  "dependents": 0,
+  "updated": "2024-02-23T02:59:04.722Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 8
+}

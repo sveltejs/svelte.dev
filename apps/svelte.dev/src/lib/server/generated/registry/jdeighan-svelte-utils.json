@@ -1,0 +1,13 @@
+{
+  "name": "@jdeighan/svelte-utils",
+  "description": "Provide utility functions for Svelte, including CoffeeScript preprocessor.",
+  "author": "John Deighan",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2024-04-22T12:57:03.221Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": true,
+  "runes": false
+}

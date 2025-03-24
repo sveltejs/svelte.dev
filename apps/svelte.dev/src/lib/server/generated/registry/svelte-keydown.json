@@ -1,0 +1,16 @@
+{
+  "name": "svelte-keydown",
+  "description": "Listen for keyboard events in Svelte applications.",
+  "repo_url": "https://github.com/metonym/svelte-keydown",
+  "author": "Eric Liu",
+  "homepage": "https://github.com/metonym/svelte-keydown",
+  "downloads": 379,
+  "dependents": 0,
+  "updated": "2024-03-15T02:20:40.717Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 44
+}

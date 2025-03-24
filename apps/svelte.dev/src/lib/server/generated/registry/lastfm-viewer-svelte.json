@@ -1,0 +1,14 @@
+{
+  "name": "@lastfm-viewer/svelte",
+  "description": "View recent scrobbles for Last.fm users in Svelte.",
+  "author": "ZOASR",
+  "homepage": "https://lastfm-viewer.vercel.app/",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2024-09-08T19:58:32.917Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

@@ -1,0 +1,17 @@
+{
+  "name": "@rmw/svelte-preprocess",
+  "description": "Preprocess Svelte with support for multiple languages.",
+  "repo_url": "https://github.com/sveltejs/svelte-preprocess",
+  "author": "Christian Kaisermann",
+  "homepage": "https://github.com/sveltejs/svelte-preprocess#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2022-07-29T05:46:27.432Z",
+  "tags": [
+    "preprocessor",
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 1772
+}

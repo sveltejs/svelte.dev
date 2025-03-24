@@ -1,0 +1,16 @@
+{
+  "name": "svelte-grid-custom",
+  "description": "Create responsive, draggable, resizable grid layouts for Svelte.",
+  "repo_url": "https://github.com/vaheqelyan/svelte-grid",
+  "author": "Vahe Araqelyan",
+  "homepage": "https://github.com/vaheqelyan/svelte-grid#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2024-04-02T20:37:09.745Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 985
+}

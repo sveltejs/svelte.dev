@@ -1,0 +1,13 @@
+{
+  "name": "@atbeta/components",
+  "description": "Provide components for Beta services.",
+  "author": "juiipup",
+  "downloads": 26,
+  "dependents": 0,
+  "updated": "2021-03-06T13:35:28.980Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": false,
+  "runes": false
+}

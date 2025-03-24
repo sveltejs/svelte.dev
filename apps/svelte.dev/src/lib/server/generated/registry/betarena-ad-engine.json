@@ -1,0 +1,15 @@
+{
+  "name": "@betarena/ad-engine",
+  "description": "Integrate Betarena ad-engine widget into Svelte applications.",
+  "repo_url": "https://github.com/Betarena/ad-engine",
+  "author": "migbash",
+  "homepage": "https://github.com/Betarena/ad-engine#readme",
+  "downloads": 89,
+  "dependents": 0,
+  "updated": "2024-12-15T19:51:26.243Z",
+  "tags": [
+    "integration"
+  ],
+  "svelte5": false,
+  "runes": false
+}

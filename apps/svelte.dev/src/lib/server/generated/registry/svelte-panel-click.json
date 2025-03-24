@@ -1,0 +1,15 @@
+{
+  "name": "svelte-panel-click",
+  "description": "Determine if clicks occur inside or outside Svelte panel.",
+  "repo_url": "https://github.com/saibotsivad/svelte-panel-click",
+  "author": "saibotsivad",
+  "homepage": "https://github.com/saibotsivad/svelte-panel-click#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2018-12-15T20:37:24.651Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

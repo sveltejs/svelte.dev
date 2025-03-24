@@ -1,0 +1,13 @@
+{
+  "name": "@htmlbricks/hb-messages-list",
+  "description": "Create Svelte web components for message list.",
+  "author": "Dario Caruso",
+  "downloads": 92,
+  "dependents": 1,
+  "updated": "2025-03-09T03:10:32.002Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

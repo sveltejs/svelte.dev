@@ -1,0 +1,16 @@
+{
+  "name": "svelte-data-grid-tmp",
+  "description": "Display high-performance data tables in Svelte.",
+  "repo_url": "https://github.com/bsssshhhhhhh/svelte-data-grid",
+  "author": "Brian Simon",
+  "homepage": "https://github.com/bsssshhhhhhh/svelte-data-grid",
+  "downloads": 3,
+  "dependents": 0,
+  "updated": "2020-01-04T13:40:29.859Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 202
+}

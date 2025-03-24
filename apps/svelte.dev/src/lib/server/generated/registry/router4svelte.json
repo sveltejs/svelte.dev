@@ -1,0 +1,16 @@
+{
+  "name": "router4svelte",
+  "description": "Implement client-side routing for Svelte projects.",
+  "repo_url": "https://github.com/OscarLundberg/router4svelte",
+  "author": "Oscar Lundberg",
+  "homepage": "https://github.com/OscarLundberg/router4svelte#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2023-10-06T16:02:42.796Z",
+  "tags": [
+    "router"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

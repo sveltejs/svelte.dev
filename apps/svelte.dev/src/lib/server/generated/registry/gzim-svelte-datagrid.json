@@ -1,0 +1,16 @@
+{
+  "name": "@gzim/svelte-datagrid",
+  "description": "Create high-performance, feature-rich data grids for Svelte.",
+  "repo_url": "https://github.com/gzimbron/svelte-datagrid",
+  "author": "Gustavo Zimbrón",
+  "homepage": "https://gzimbron.github.io/svelte-datagrid/",
+  "downloads": 17,
+  "dependents": 0,
+  "updated": "2024-03-05T23:45:18.302Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 9
+}

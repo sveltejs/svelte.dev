@@ -1,0 +1,13 @@
+{
+  "name": "tsurih",
+  "description": "Create type-safe form validation in Svelte applications.",
+  "author": "Vladislav Yemelyanov",
+  "downloads": 229,
+  "dependents": 0,
+  "updated": "2024-04-15T16:53:49.639Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

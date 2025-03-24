@@ -1,0 +1,16 @@
+{
+  "name": "@threlte/theatre",
+  "description": "Integrate Threlte components with Theatre.js for animation.",
+  "repo_url": "https://github.com/threlte/threlte",
+  "author": "Grischa Erbe",
+  "homepage": "https://threlte.xyz",
+  "downloads": 464,
+  "dependents": 1,
+  "updated": "2025-01-20T22:28:45.486Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 2815
+}

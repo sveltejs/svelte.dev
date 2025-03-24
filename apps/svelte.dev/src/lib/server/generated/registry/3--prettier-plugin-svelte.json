@@ -1,0 +1,15 @@
+{
+  "name": "@3-/prettier-plugin-svelte",
+  "description": "Format Svelte components using Prettier.",
+  "author": "i18n-now",
+  "homepage": "https://github.com/i18n-fork/prettier-plugin-svelte/tree/tmp",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2025-02-05T07:26:58.910Z",
+  "tags": [
+    "tooling",
+    "preprocessor"
+  ],
+  "svelte5": true,
+  "runes": false
+}

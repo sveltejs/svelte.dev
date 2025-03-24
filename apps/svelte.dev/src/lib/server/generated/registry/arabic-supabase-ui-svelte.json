@@ -1,0 +1,14 @@
+{
+  "name": "arabic-supabase-ui-svelte",
+  "description": "Offer UI components for Supabase authentication using Svelte.",
+  "author": "yzn-h",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2022-09-29T11:31:38.579Z",
+  "tags": [
+    "auth",
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

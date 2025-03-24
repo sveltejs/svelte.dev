@@ -1,0 +1,16 @@
+{
+  "name": "svelte-router-spa",
+  "description": "Create single-page applications with Svelte Router SPA.",
+  "repo_url": "https://github.com/jorgegorka/svelte-router",
+  "author": "Jorge Alvarez",
+  "homepage": "https://github.com/jorgegorka/svelte-router/blob/master/README.md",
+  "downloads": 338,
+  "dependents": 0,
+  "updated": "2023-09-14T10:24:36.330Z",
+  "tags": [
+    "router"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 531
+}

@@ -1,0 +1,13 @@
+{
+  "name": "@sveltecool/smelt",
+  "description": "Build forms with validation in Svelte apps.",
+  "author": "cstrnt",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2020-03-29T11:07:03.907Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

@@ -1,0 +1,17 @@
+{
+  "name": "@hyrious/esbuild-plugin-svelte",
+  "description": "Load Svelte files in esbuild.",
+  "repo_url": "https://github.com/hyrious/esbuild-plugin-svelte",
+  "author": "hyrious",
+  "homepage": "https://github.com/hyrious/esbuild-plugin-svelte#readme",
+  "downloads": 19,
+  "dependents": 0,
+  "updated": "2025-01-09T09:38:29.178Z",
+  "tags": [
+    "tooling",
+    "preprocessor"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 6
+}

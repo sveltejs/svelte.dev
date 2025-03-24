@@ -1,0 +1,16 @@
+{
+  "name": "svelte-animated-headline",
+  "description": "Add animated headlines to Svelte components.",
+  "repo_url": "https://github.com/elron/svelte-animated-headline",
+  "author": "Elron Bucai",
+  "homepage": "https://svelte-animated-headline.netlify.app/",
+  "downloads": 40,
+  "dependents": 0,
+  "updated": "2024-10-19T21:36:54.419Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 32
+}

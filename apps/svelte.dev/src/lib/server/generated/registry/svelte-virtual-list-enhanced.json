@@ -1,0 +1,15 @@
+{
+  "name": "svelte-virtual-list-enhanced",
+  "description": "Render virtual lists for Svelte apps, improving performance.",
+  "repo_url": "https://github.com/sveltejs/svelte-virtual-list",
+  "author": "Rich Harris",
+  "homepage": "https://github.com/sveltejs/svelte-virtual-list#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2020-07-13T10:48:09.008Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

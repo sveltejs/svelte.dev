@@ -1,0 +1,17 @@
+{
+  "name": "@dylanvann/mdsvex",
+  "description": "Process Markdown files into Svelte components.",
+  "repo_url": "https://github.com/pngwn/MDsveX",
+  "author": "pngwn",
+  "homepage": "https://github.com/pngwn/MDsveX#readme",
+  "downloads": 15,
+  "dependents": 0,
+  "updated": "2020-09-25T00:38:20.819Z",
+  "tags": [
+    "content",
+    "preprocessor"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 2612
+}

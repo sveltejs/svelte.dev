@@ -1,0 +1,16 @@
+{
+  "name": "@fabiohvp/svelte-table",
+  "description": "Render tables using HTML, manage user interaction with JavaScript.",
+  "repo_url": "https://github.com/fabiohvp/svelte-table",
+  "author": "https://github.com/fabiohvp",
+  "homepage": "https://github.com/fabiohvp/svelte-table#readme",
+  "downloads": 50,
+  "dependents": 0,
+  "updated": "2023-07-06T08:01:05.317Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 14
+}

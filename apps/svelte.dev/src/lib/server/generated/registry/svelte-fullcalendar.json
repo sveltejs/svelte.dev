@@ -1,0 +1,16 @@
+{
+  "name": "svelte-fullcalendar",
+  "description": "Provides a Svelte component wrapper around FullCalendar.",
+  "repo_url": "https://github.com/YogliB/svelte-fullcalendar",
+  "author": "Yogev Boaron Ben-Har",
+  "homepage": "https://github.com/YogliB/svelte-fullcalendar#readme",
+  "downloads": 1246,
+  "dependents": 3,
+  "updated": "2023-09-14T15:26:31.125Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 198
+}

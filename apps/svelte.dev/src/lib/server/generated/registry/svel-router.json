@@ -1,0 +1,16 @@
+{
+  "name": "@svel/router",
+  "description": "Implements a router for Svelte applications.",
+  "repo_url": "https://github.com/wmzy/svelte-router",
+  "author": "Evan You",
+  "homepage": "https://github.com/wmzy/svelte-router#readme",
+  "downloads": 2,
+  "dependents": 1,
+  "updated": "2019-05-22T07:55:34.971Z",
+  "tags": [
+    "router"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 7
+}
