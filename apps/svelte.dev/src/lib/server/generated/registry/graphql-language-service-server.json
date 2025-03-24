@@ -1,6 +1,6 @@
 {
   "name": "graphql-language-service-server",
-  "description": "Provides GraphQL language service for IDEs, including Svelte support.",
+  "description": "Provide language service for GraphQL in IDEs.",
   "repo_url": "https://github.com/graphql/graphiql",
   "author": "benjie",
   "homepage": "https://github.com/graphql/graphiql/tree/main/packages/graphql-language-service-server#readme",
@@ -11,5 +11,6 @@
     "tooling"
   ],
   "svelte5": false,
-  "runes": false
+  "runes": false,
+  "github_stars": 16343
 }

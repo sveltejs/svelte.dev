@@ -1,6 +1,7 @@
 {
   "name": "eva-icons-svelte",
-  "description": "Use Eva Icons as Svelte components.",
+  "description": "Provide Svelte components for Eva icons, a pack of open source icons.",
+  "repo_url": "",
   "author": "runningzs",
   "downloads": 6,
   "dependents": 0,

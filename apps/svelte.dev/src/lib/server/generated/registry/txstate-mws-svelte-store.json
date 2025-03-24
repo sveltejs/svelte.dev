@@ -1,6 +1,6 @@
 {
   "name": "@txstate-mws/svelte-store",
-  "description": "Offers new store types compatible with Svelte stores.",
+  "description": "Provides several new store types compatible with Svelte stores.",
   "repo_url": "https://github.com/txstate-etc/svelte-store",
   "author": "Nick Wing",
   "homepage": "https://github.com/txstate-etc/svelte-store#readme",

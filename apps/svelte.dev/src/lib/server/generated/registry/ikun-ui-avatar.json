@@ -1,6 +1,7 @@
 {
   "name": "@ikun-ui/avatar",
-  "description": "Display user avatars with customizable styles in Svelte.",
+  "description": "Create avatar components for Svelte apps.",
+  "repo_url": "",
   "author": "baiwusanyu",
   "downloads": 28,
   "dependents": 1,

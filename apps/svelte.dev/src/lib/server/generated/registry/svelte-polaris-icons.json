@@ -1,6 +1,6 @@
 {
   "name": "svelte-polaris-icons",
-  "description": "Use Shopify Polaris SVG icons as Svelte components.",
+  "description": "Shopify Polaris SVG icons as Svelte components.",
   "repo_url": "https://github.com/metonym/svelte-polaris-icons",
   "author": "Eric Liu",
   "homepage": "https://github.com/metonym/svelte-polaris-icons",

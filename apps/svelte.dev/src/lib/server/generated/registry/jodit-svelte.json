@@ -1,6 +1,6 @@
 {
   "name": "jodit-svelte",
-  "description": "Integrate Jodit WYSIWYG editor into Svelte.",
+  "description": "Integrate Jodit rich text editor into Svelte applications.",
   "repo_url": "https://github.com/jodit/jodit-svelte",
   "author": "Valerii Chupurniov",
   "homepage": "https://github.com/jodit/jodit-svelte",
@@ -8,7 +8,7 @@
   "dependents": 0,
   "updated": "2023-02-22T19:38:11.460Z",
   "tags": [
-    "ui"
+    "content"
   ],
   "svelte5": false,
   "runes": false,

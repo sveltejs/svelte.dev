@@ -1,6 +1,6 @@
 {
   "name": "use-svelte",
-  "description": "Provide Svelte actions and directives.",
+  "description": "Provide Svelte actions/directives for common UI tasks.",
   "repo_url": "https://github.com/treboryx/use-svelte",
   "author": "treboryx",
   "homepage": "https://github.com/treboryx/use-svelte#readme",

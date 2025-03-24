@@ -1,6 +1,6 @@
 {
   "name": "@astaroid/ui",
-  "description": "Provides UI components for Astaroid website.",
+  "description": "Provide UI components and tabs used in astaroid website.",
   "repo_url": "https://github.com/astaroid/astaroid-ui",
   "author": "astaroid",
   "homepage": "https://github.com/astaroid/astaroid-ui#readme",
@@ -8,6 +8,7 @@
   "dependents": 0,
   "updated": "2023-03-01T14:27:23.375Z",
   "tags": [
+    "ui",
     "component-library"
   ],
   "svelte5": false,

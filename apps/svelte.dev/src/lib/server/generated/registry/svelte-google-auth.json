@@ -1,13 +1,13 @@
 {
   "name": "svelte-google-auth",
-  "description": "Authenticate users with Google in SvelteKit apps.",
+  "description": "Google authentication for SvelteKit applications.",
+  "repo_url": "",
   "author": "Jonas Jongejan",
   "downloads": 119,
   "dependents": 0,
   "updated": "2023-01-17T21:18:10.634Z",
   "tags": [
-    "auth",
-    "integration"
+    "auth"
   ],
   "svelte5": false,
   "runes": false

@@ -1,6 +1,6 @@
 {
   "name": "@sveu/browser",
-  "description": "Provide browser utilities for Svelte.",
+  "description": "Collection of browser utilities for Svelte.",
   "repo_url": "https://github.com/svelte-u/browser",
   "author": "Mohamed Nesredin",
   "homepage": "https://github.com/svelte-u/browser#readme",

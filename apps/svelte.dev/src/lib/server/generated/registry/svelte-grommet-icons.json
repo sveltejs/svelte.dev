@@ -1,6 +1,6 @@
 {
   "name": "svelte-grommet-icons",
-  "description": "Use Grommet SVG icons as Svelte components.",
+  "description": "Provides Grommet SVG icons as Svelte components.",
   "repo_url": "https://github.com/metonym/svelte-grommet-icons",
   "author": "Eric Liu",
   "homepage": "https://github.com/metonym/svelte-grommet-icons",

@@ -1,6 +1,6 @@
 {
   "name": "@ctx-core/checkbox-tree-ui-svelte",
-  "description": "Provide checkbox tree component for Svelte applications.",
+  "description": "Checkbox tree component for Svelte.",
   "repo_url": "https://github.com/ctx-core/checkbox-tree-ui-svelte",
   "author": "Brian Takita",
   "homepage": "https://github.com/ctx-core/checkbox-tree-ui-svelte#readme",

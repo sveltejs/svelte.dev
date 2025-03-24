@@ -1,6 +1,6 @@
 {
   "name": "svelte-audio",
-  "description": "Audio player component for Svelte.",
+  "description": "Audio player component for Svelte, uses APlayer.",
   "repo_url": "https://github.com/JacobLinCool/svelte-audio",
   "author": "JacobLinCool",
   "homepage": "https://jacoblincool.github.io/svelte-audio/",

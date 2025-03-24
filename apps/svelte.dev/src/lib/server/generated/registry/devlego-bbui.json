@@ -1,6 +1,7 @@
 {
   "name": "@devlego/bbui",
-  "description": "Provide UI components for Budibase projects.",
+  "description": "Provide reusable UI components for Budibase projects in Svelte.",
+  "repo_url": "",
   "author": "lisipeng",
   "downloads": 14,
   "dependents": 3,

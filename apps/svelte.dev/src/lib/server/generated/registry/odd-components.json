@@ -1,6 +1,6 @@
 {
   "name": "odd-components",
-  "description": "Provide occasionally useful Svelte components, like playing cards.",
+  "description": "Provides Svelte components, including playing card components.",
   "repo_url": "https://github.com/JulianNymark/odd-components",
   "author": "just_a_guy",
   "homepage": "https://github.com/JulianNymark/odd-components#readme",

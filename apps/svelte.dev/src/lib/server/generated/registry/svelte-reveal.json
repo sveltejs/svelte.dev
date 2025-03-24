@@ -1,6 +1,6 @@
 {
   "name": "svelte-reveal",
-  "description": "Add reveal-on-scroll animations to Svelte applications.",
+  "description": "Trigger reveal on scroll transitions using Intersection Observer API.",
   "repo_url": "https://github.com/DaveKeehl/svelte-reveal",
   "author": "Davide Ciulla",
   "homepage": "https://github.com/DaveKeehl/svelte-reveal#readme",

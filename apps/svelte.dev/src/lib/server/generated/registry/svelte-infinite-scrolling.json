@@ -1,6 +1,6 @@
 {
   "name": "svelte-infinite-scrolling",
-  "description": "Implement infinite scrolling in Svelte applications.",
+  "description": "Implement infinite scrolling component for Svelte applications.",
   "repo_url": "https://github.com/jatinhemnani01/svelte-infinite-scrolling",
   "author": "Jatin Hemnani",
   "homepage": "https://svelte-infinite-example.netlify.app/",

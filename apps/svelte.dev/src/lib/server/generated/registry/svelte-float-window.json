@@ -1,6 +1,6 @@
 {
   "name": "svelte-float-window",
-  "description": "Create moveable floating window component for Svelte.",
+  "description": "Provides moveable floating window component for Svelte.",
   "repo_url": "https://github.com/copious-world/svelte-float-window",
   "author": "Richard Leddy",
   "homepage": "http://www.copious.world",

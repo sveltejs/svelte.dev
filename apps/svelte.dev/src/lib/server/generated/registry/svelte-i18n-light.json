@@ -1,6 +1,7 @@
 {
   "name": "svelte-i18n-light",
-  "description": "Provide lightweight internationalization and translation for Svelte.",
+  "description": "Provide lightweight internationalization and translation for Svelte apps.",
+  "repo_url": "",
   "author": "rolator",
   "downloads": 28,
   "dependents": 0,

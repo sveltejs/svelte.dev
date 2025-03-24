@@ -1,6 +1,6 @@
 {
   "name": "svelidation",
-  "description": "Validate Svelte applications easily.",
+  "description": "Validate Svelte applications with customizable rules.",
   "repo_url": "https://github.com/yazonnile/svelidation",
   "author": "yazonnile",
   "homepage": "https://github.com/yazonnile/svelidation#readme",

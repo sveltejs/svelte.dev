@@ -1,6 +1,6 @@
 {
   "name": "svelte-evil-icons",
-  "description": "Use SVG Evil icons in Svelte applications.",
+  "description": "Provide SVG Evil icons component for Svelte.",
   "repo_url": "https://github.com/shinokada/svelte-evil-icons",
   "author": "Shinichi Okada",
   "homepage": "https://svelte-evil-icons.codewithshin.com",

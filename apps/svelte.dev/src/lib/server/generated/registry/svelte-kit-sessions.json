@@ -1,6 +1,6 @@
 {
   "name": "svelte-kit-sessions",
-  "description": "Manage user sessions in SvelteKit applications.",
+  "description": "User-friendly session management module for SvelteKit.",
   "repo_url": "https://github.com/yutak23/svelte-kit-sessions",
   "author": "yutak23",
   "homepage": "https://github.com/yutak23/svelte-kit-sessions#readme",

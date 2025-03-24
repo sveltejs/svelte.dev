@@ -1,6 +1,6 @@
 {
   "name": "svelte-translate",
-  "description": "Provide dynamic translation service with fallback to HTML text.",
+  "description": "Provide dynamic translation service for Svelte apps.",
   "repo_url": "https://github.com/noelmugnier/svelte-translate",
   "author": "Noël Mugnier",
   "homepage": "https://github.com/noelmugnier/svelte-translate#readme",

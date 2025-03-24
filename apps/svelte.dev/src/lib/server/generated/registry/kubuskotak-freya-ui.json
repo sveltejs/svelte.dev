@@ -1,6 +1,6 @@
 {
   "name": "@kubuskotak/freya-ui",
-  "description": "UI component library for Svelte and TypeScript.",
+  "description": "Develop Svelte and TypeScript apps with Vite.",
   "repo_url": "https://gitlab.com/aegis-kraken/core/freya-ui-component",
   "author": "suryakencana007",
   "homepage": "https://gitlab.com/aegis-kraken/core/freya-ui-component#readme",
@@ -8,7 +8,8 @@
   "dependents": 0,
   "updated": "2021-10-26T07:27:21.253Z",
   "tags": [
-    "component-library"
+    "component-library",
+    "ui"
   ],
   "svelte5": false,
   "runes": false

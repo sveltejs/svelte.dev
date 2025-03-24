@@ -1,6 +1,7 @@
 {
   "name": "@htmlbricks/hb-input-email",
-  "description": "Create Svelte-Bootstrap email input web component.",
+  "description": "Svelte-Bootstrap email input component.",
+  "repo_url": "",
   "author": "Dario Caruso",
   "downloads": 485,
   "dependents": 3,

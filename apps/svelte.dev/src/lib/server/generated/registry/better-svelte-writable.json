@@ -1,6 +1,7 @@
 {
   "name": "better-svelte-writable",
-  "description": "Create type-safe writable stores with more control in Svelte.",
+  "description": "Create type-safe writable stores with advanced features.",
+  "repo_url": "",
   "author": "TNThung",
   "homepage": "https://github.com/tnthung/better-svelte-writable",
   "downloads": 5,

@@ -1,6 +1,6 @@
 {
   "name": "svelte-auto-animate",
-  "description": "Apply flip animations to any Svelte element.",
+  "description": "Adds flip animations to any Svelte element.",
   "repo_url": "https://github.com/Thiagolino8/svelte-auto-animate",
   "author": "Thiago Lino Gomes",
   "homepage": "https://svelte-auto-animate.vercel.app/",

@@ -1,6 +1,6 @@
 {
   "name": "sveltepress-ui",
-  "description": "Provide a user interface for SveltePress documentation.",
+  "description": "User interface for SveltePress, manage documentation.",
   "repo_url": "https://github.com/GeopJr/SveltePress",
   "author": "GeopJr",
   "homepage": "https://github.com/GeopJr/SveltePress#readme",

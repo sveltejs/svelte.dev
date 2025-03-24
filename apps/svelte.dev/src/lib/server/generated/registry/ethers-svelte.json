@@ -1,6 +1,6 @@
 {
   "name": "ethers-svelte",
-  "description": "Integrate Ethers.js library as Svelte stores for blockchain interaction.",
+  "description": "Integrates ethers.js library as Svelte stores.",
   "repo_url": "https://github.com/clbrge/ethers-svelte",
   "author": "Christophe Le Bars",
   "homepage": "https://github.com/clbrge/ethers-svelte#readme",

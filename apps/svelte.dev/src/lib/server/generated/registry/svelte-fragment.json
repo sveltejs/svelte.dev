@@ -1,6 +1,6 @@
 {
   "name": "svelte-fragment",
-  "description": "Render Svelte components without DOM containers using actions.",
+  "description": "Render Svelte components without DOM containers.",
   "repo_url": "https://github.com/qutran/svelte-fragment",
   "author": "Dmitry Kutran",
   "homepage": "https://github.com/qutran/svelte-fragment",

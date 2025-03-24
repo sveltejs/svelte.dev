@@ -1,6 +1,6 @@
 {
   "name": "@beat-no/svelte-notion-blocks",
-  "description": "Render Notion blocks in Svelte applications.",
+  "description": "Render Notion blocks easily within Svelte applications.",
   "repo_url": "https://github.com/beat-no/svelte-notion-blocks",
   "author": "vegard_larsen",
   "homepage": "https://github.com/beat-no/svelte-notion-blocks",

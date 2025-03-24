@@ -1,6 +1,6 @@
 {
   "name": "svelte-ajax",
-  "description": "Make AJAX requests in Svelte with minimal code.",
+  "description": "Make AJAX requests with Svelte components.",
   "repo_url": "https://github.com/gak4u/svelte-ajax",
   "author": "gak4u",
   "homepage": "https://github.com/gak4u/svelte-ajax#readme",

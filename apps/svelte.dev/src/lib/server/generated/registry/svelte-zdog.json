@@ -1,6 +1,6 @@
 {
   "name": "svelte-zdog",
-  "description": "Create 3D renders with Zdog in Svelte.",
+  "description": "Creates 3D renders using Zdog library in Svelte.",
   "repo_url": "https://github.com/wh0am1-dev/svelte-zdog",
   "author": "Carlos Aguilar",
   "homepage": "https://carlos-aguilar.com/svelte-zdog",

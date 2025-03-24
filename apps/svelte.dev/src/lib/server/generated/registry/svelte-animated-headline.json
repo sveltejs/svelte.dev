@@ -1,6 +1,6 @@
 {
   "name": "svelte-animated-headline",
-  "description": "Add animated headlines to Svelte components.",
+  "description": "Animate headlines with text transitions in Svelte.",
   "repo_url": "https://github.com/elron/svelte-animated-headline",
   "author": "Elron Bucai",
   "homepage": "https://svelte-animated-headline.netlify.app/",

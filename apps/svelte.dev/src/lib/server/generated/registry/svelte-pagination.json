@@ -1,6 +1,7 @@
 {
   "name": "svelte-pagination",
   "description": "Create pagination components for Svelte applications.",
+  "repo_url": "",
   "author": "thecodejack",
   "downloads": 14,
   "dependents": 0,

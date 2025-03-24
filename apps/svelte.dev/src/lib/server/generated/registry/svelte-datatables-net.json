@@ -1,10 +1,10 @@
 {
   "name": "svelte-datatables-net",
-  "description": "Transform data into interactive HTML tables for Svelte.",
+  "description": "Transforms data into interactive HTML tables for Svelte apps.",
   "repo_url": "https://github.com/joaquimnetocel/svelte-datatables-net",
   "author": "Joaquim Neto",
   "homepage": "https://github.com/joaquimnetocel/svelte-datatables-net#readme",
-  "downloads": 214,
+  "downloads": 367,
   "dependents": 0,
   "updated": "2025-02-16T21:17:43.890Z",
   "tags": [

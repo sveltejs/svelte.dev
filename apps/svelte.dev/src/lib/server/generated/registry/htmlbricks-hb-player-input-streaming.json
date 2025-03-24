@@ -1,13 +1,13 @@
 {
   "name": "@htmlbricks/hb-player-input-streaming",
-  "description": "Create player input web component.",
+  "description": "Svelte-Bootstrap player-input-streaming web component.",
+  "repo_url": "",
   "author": "Dario Caruso",
   "downloads": 80,
   "dependents": 0,
   "updated": "2025-03-09T03:10:32.684Z",
   "tags": [
-    "media",
-    "ui"
+    "media"
   ],
   "svelte5": false,
   "runes": false

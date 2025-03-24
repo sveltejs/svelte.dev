@@ -1,6 +1,6 @@
 {
   "name": "svelte-remove-attributes",
-  "description": "Remove attributes from Svelte components during build.",
+  "description": "Preprocessor removes attributes from Svelte components, like data-testid.",
   "repo_url": "https://github.com/jacobbogers/svelte-remove-attributes",
   "author": "jacob bogers",
   "homepage": "https://github.com/jacobbogers/svelte-remove-attributes#readme",

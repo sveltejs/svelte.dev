@@ -1,6 +1,7 @@
 {
   "name": "svelte-painter",
-  "description": "Create painter application using Svelte.",
+  "description": "Create a painter app using Svelte.",
+  "repo_url": "",
   "author": "miruoon",
   "downloads": 2,
   "dependents": 0,

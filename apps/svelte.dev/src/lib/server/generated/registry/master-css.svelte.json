@@ -1,6 +1,6 @@
 {
   "name": "@master/css.svelte",
-  "description": "Integrate Master CSS for styling Svelte applications.",
+  "description": "Integrate Master CSS in Svelte applications.",
   "repo_url": "https://github.com/master-co/css",
   "author": "Aoyue Design LLC.",
   "homepage": "https://css.master.co",
@@ -8,8 +8,7 @@
   "dependents": 0,
   "updated": "2023-03-28T13:32:19.183Z",
   "tags": [
-    "utility",
-    "ui"
+    "utility"
   ],
   "svelte5": true,
   "runes": false,

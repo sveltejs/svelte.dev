@@ -1,6 +1,6 @@
 {
   "name": "anymapper",
-  "description": "Visualize data as zoomable map with Svelte components.",
+  "description": "Visualize data as zoomable map.",
   "repo_url": "https://github.com/webvis/anymapper",
   "author": "nitaku",
   "homepage": "https://github.com/webvis/anymapper#readme",

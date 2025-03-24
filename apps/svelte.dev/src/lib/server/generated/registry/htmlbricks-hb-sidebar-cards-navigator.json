@@ -1,6 +1,7 @@
 {
   "name": "@htmlbricks/hb-sidebar-cards-navigator",
-  "description": "Create Svelte-Bootstrap sidebar-cards-navigator web components.",
+  "description": "Provide Svelte-Bootstrap sidebar cards navigator web component.",
+  "repo_url": "",
   "author": "Dario Caruso",
   "downloads": 83,
   "dependents": 0,

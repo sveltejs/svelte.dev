@@ -1,0 +1,16 @@
+{
+  "name": "@sveltekit/ui",
+  "description": "Create UI library for SvelteKit applications.",
+  "repo_url": "https://github.com/sveltekit/ui",
+  "author": "rob-balfre",
+  "homepage": "https://github.com/sveltekit/ui",
+  "downloads": 12,
+  "dependents": 0,
+  "updated": "2020-01-30T06:26:36.454Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 63
+}

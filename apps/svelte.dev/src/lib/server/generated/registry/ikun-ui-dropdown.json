@@ -1,6 +1,7 @@
 {
   "name": "@ikun-ui/dropdown",
-  "description": "Build dropdown menus with various options in Svelte.",
+  "description": "Create dropdown components for Svelte apps.",
+  "repo_url": "",
   "author": "baiwusanyu",
   "downloads": 17,
   "dependents": 3,

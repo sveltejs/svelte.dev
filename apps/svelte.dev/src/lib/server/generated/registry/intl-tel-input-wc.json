@@ -1,6 +1,6 @@
 {
   "name": "intl-tel-input-wc",
-  "description": "Create international phone code selector web component.",
+  "description": "Provides international phone code selector web component for Svelte.",
   "repo_url": "https://github.com/swaggyp7/intl-tel-input-wc",
   "author": "Yuteng Lin",
   "homepage": "https://github.com/swaggyp7/intl-tel-input-wc#readme",

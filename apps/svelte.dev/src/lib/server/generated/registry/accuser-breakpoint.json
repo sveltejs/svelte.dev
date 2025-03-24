@@ -1,6 +1,6 @@
 {
   "name": "@accuser/breakpoint",
-  "description": "Provide breakpoint utility for SvelteKit and TailwindCSS.",
+  "description": "Add breakpoint utility for SvelteKit and TailwindCSS.",
   "repo_url": "https://github.com/accuser/svelte-tailwindcss-breakpoint",
   "author": "Matthew Gibbons",
   "homepage": "https://github.com/accuser/svelte-tailwindcss-breakpoint/README.md",

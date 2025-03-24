@@ -1,6 +1,6 @@
 {
   "name": "mdx-svelte",
-  "description": "Process Markdown with Svelte components using MDX.",
+  "description": "Process MDX files with Svelte components.",
   "repo_url": "https://github.com/babakfp/mdx-svelte",
   "author": "babakfp",
   "homepage": "https://babakfp.ir/docs/mdx-svelte",

@@ -1,6 +1,6 @@
 {
   "name": "svelte-asyncable",
-  "description": "Create async stores with declarative side-effects in Svelte.",
+  "description": "Provides async store for Svelte applications.",
   "repo_url": "https://github.com/sveltetools/svelte-asyncable",
   "author": "PaulMaly",
   "homepage": "https://github.com/sveltetools/svelte-asyncable#readme",

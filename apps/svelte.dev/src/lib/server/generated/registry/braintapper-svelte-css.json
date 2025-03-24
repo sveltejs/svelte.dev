@@ -1,6 +1,6 @@
 {
   "name": "braintapper-svelte-css",
-  "description": "Provide common CSS for Braintapper Svelte applications.",
+  "description": "Provide common CSS components for Braintapper Svelte applications.",
   "repo_url": "https://github.com/braintapper/braintapper-svelte-css",
   "author": "braintapper",
   "homepage": "https://github.com/braintapper/braintapper-svelte-css#readme",

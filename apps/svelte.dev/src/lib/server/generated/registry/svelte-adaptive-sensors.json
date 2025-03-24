@@ -1,6 +1,6 @@
 {
   "name": "svelte-adaptive-sensors",
-  "description": "Provide adaptive behavior based on device and network sensors.",
+  "description": "Detect device, network, and user preferences in Svelte apps.",
   "repo_url": "https://github.com/pngwn/svelte-adaptive-sensors",
   "author": "pngwn",
   "homepage": "https://github.com/pngwn/svelte-adaptive-sensors#readme",

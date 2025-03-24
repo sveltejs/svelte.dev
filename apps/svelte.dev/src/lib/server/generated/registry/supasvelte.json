@@ -1,6 +1,6 @@
 {
   "name": "supasvelte",
-  "description": "Provide reactive bindings for Supabase in Svelte.",
+  "description": "Reactive bindings for Supabase in Svelte apps.",
   "repo_url": "https://github.com/coflow-network/supasvelte",
   "author": "Matan Bendix Shenhav",
   "homepage": "https://github.com/coflow-network/supasvelte#readme",

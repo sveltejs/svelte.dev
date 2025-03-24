@@ -1,6 +1,7 @@
 {
   "name": "svelte-pangolicons",
-  "description": "Provide Pangolin icon components for Svelte applications.",
+  "description": "Use Pangolin icon set as Svelte components.",
+  "repo_url": "",
   "author": "Sebastian Heinz",
   "downloads": 0,
   "dependents": 0,

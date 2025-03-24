@@ -1,6 +1,6 @@
 {
   "name": "mdx-collections-svelte",
-  "description": "Create collections of Markdown pages in SvelteKit.",
+  "description": "Create collections of markdown pages in SvelteKit easily.",
   "repo_url": "https://github.com/babakfp/mdx-collections-svelte",
   "author": "babakfp",
   "homepage": "https://github.com/babakfp/mdx-collections-svelte#readme",

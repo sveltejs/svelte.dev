@@ -1,6 +1,6 @@
 {
   "name": "heroicons-svelte",
-  "description": "Provides Heroicons SVG icons for Svelte applications.",
+  "description": "Use Heroicons SVG icons in Svelte applications.",
   "repo_url": "https://github.com/travishorn/heroicons-svelte",
   "author": "Travis Horn",
   "homepage": "https://github.com/travishorn/heroicons-svelte#readme",

@@ -1,6 +1,6 @@
 {
   "name": "svelte-collapsible",
-  "description": "Create collapsible components for Svelte.",
+  "description": "Provides high-level Svelte components for expanding content.",
   "repo_url": "https://github.com/rsdavis/svelte-collapsible",
   "author": "rsdavis",
   "homepage": "https://github.com/rsdavis/svelte-collapsible#readme",

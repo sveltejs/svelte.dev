@@ -1,6 +1,6 @@
 {
   "name": "@bolduh/svelte-treeview",
-  "description": "Create tree view components for Svelte applications.",
+  "description": "Display tree data structures within Svelte applications.",
   "repo_url": "https://github.com/b3b00/svelte-treeview",
   "author": "b3b00",
   "homepage": "https://github.com/b3b00/svelte-treeview",

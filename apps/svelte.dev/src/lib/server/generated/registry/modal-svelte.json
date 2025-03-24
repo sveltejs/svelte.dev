@@ -1,6 +1,6 @@
 {
   "name": "modal-svelte",
-  "description": "Create modal dialogs with autofocus and focus trapping.",
+  "description": "Create modal components with focus trapping and autofocus support.",
   "repo_url": "https://github.com/probablykasper/modal-svelte",
   "author": "Kasper Henningsen",
   "homepage": "https://modal-svelte.kasper.space",

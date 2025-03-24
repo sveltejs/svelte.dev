@@ -1,6 +1,6 @@
 {
   "name": "svelte-pocketbase-sync",
-  "description": "Create reactive wrapper for PocketBase collections in SvelteKit.",
+  "description": "Reactive wrapper for PocketBase collections in SvelteKit.",
   "repo_url": "https://github.com/matheustavarestrindade/svelte-pocketbase-sync",
   "author": "Matheus Tavares Trindade",
   "homepage": "https://github.com/matheustavarestrindade/svelte-pocketbase-sync#readme",

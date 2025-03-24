@@ -1,6 +1,6 @@
 {
   "name": "gazeplotter",
-  "description": "Visualize eye-tracking data with interactive scarf plots.",
+  "description": "Visualizes eye-tracking data with Svelte.",
   "repo_url": "https://github.com/misavojte/GazePlotter",
   "author": "Michaela Vojtěchovská",
   "homepage": "https://gazeplotter.com",
@@ -8,7 +8,7 @@
   "dependents": 0,
   "updated": "2024-02-17T19:29:07.804Z",
   "tags": [
-    "ui"
+    "media"
   ],
   "svelte5": false,
   "runes": false,

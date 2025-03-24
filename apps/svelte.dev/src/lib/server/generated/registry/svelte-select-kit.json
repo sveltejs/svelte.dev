@@ -1,6 +1,7 @@
 {
   "name": "svelte-select-kit",
-  "description": "Build WAI-ARIA compliant navigation/select menus.",
+  "description": "Build WAI-ARIA compliant select menus in Svelte.",
+  "repo_url": "",
   "author": "Snehal Baghel",
   "downloads": 0,
   "dependents": 0,

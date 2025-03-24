@@ -1,6 +1,6 @@
 {
   "name": "svelte-headless-form",
-  "description": "Build forms with validation in Svelte applications.",
+  "description": "Fast, light form library for Svelte.",
   "repo_url": "https://github.com/nickt26/svelte-headless-form",
   "author": "Nicholas Trummer",
   "homepage": "https://github.com/nickt26/svelte-headless-form#readme",

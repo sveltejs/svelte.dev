@@ -1,6 +1,6 @@
 {
   "name": "@lmarshallafzal/smartforms",
-  "description": "Generate dynamic, customizable forms for Svelte applications.",
+  "description": "Generate dynamic forms for Svelte applications.",
   "repo_url": "https://github.com/LMarshallAfzal/SmartForms",
   "author": "Leonard Marshall Afzal",
   "homepage": "https://github.com/LMarshallAfzal/SmartForms#readme",

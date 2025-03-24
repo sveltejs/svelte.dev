@@ -1,6 +1,7 @@
 {
   "name": "tecble-components",
-  "description": "Reusable UI components for Tecble projects, styled with Tailwind CSS.",
+  "description": "Offer reusable Svelte UI components for Tecble projects.",
+  "repo_url": "",
   "author": "tecble",
   "downloads": 1,
   "dependents": 0,

@@ -1,6 +1,6 @@
 {
   "name": "@svelte-put/modal",
-  "description": "Create async modal solution for Svelte apps.",
+  "description": "Create async modal solutions for Svelte.",
   "repo_url": "https://github.com/vnphanquang/svelte-put",
   "author": "Quang Phan",
   "homepage": "https://github.com/vnphanquang/svelte-put/tree/main/packages/modal",

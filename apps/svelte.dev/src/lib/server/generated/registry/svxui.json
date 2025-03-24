@@ -1,6 +1,7 @@
 {
   "name": "svxui",
   "description": "Create UI components for Svelte apps.",
+  "repo_url": "",
   "author": "radiium",
   "homepage": "https://github.com/radiium/svxui",
   "downloads": 1,

@@ -1,6 +1,6 @@
 {
   "name": "@ctx-core/svelte-preprocess",
-  "description": "Provides preprocessing scripts for Svelte.",
+  "description": "Preprocess scripts for Svelte.",
   "repo_url": "https://github.com/ctx-core/svelte-preprocess",
   "author": "Brian Takita",
   "homepage": "https://github.com/ctx-core/svelte-preprocess#readme",

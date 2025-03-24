@@ -1,6 +1,6 @@
 {
   "name": "@svelte-on-solana/wallet-adapter-core",
-  "description": "Expose methods and properties to run wallet in Svelte app.",
+  "description": "Provide core functionality for Solana wallet adapter in Svelte.",
   "repo_url": "https://github.com/svelte-on-solana/wallet-adapter",
   "author": "Svelte on Solana",
   "homepage": "https://github.com/svelte-on-solana/wallet-adapter#readme",
@@ -8,8 +8,7 @@
   "dependents": 2,
   "updated": "2022-12-14T18:09:56.076Z",
   "tags": [
-    "utility",
-    "auth"
+    "utility"
   ],
   "svelte5": false,
   "runes": false,

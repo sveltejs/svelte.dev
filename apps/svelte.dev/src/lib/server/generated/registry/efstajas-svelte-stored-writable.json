@@ -1,6 +1,6 @@
 {
   "name": "@efstajas/svelte-stored-writable",
-  "description": "Store Svelte writable data in local storage.",
+  "description": "Extends Svelte's writable to store data in localstorage.",
   "repo_url": "https://github.com/efstajas/svelte-stored-writable",
   "author": "Georgios Jason Efstathiou",
   "homepage": "https://github.com/efstajas/svelte-stored-writable#readme",

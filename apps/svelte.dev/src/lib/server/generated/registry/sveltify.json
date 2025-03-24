@@ -1,6 +1,6 @@
 {
   "name": "sveltify",
-  "description": "Transform Svelte templates for Browserify.",
+  "description": "Browserify transform for Svelte components.",
   "repo_url": "https://github.com/TehShrike/sveltify",
   "author": "TehShrike",
   "homepage": "https://github.com/TehShrike/sveltify#readme",
@@ -12,5 +12,6 @@
     "preprocessor"
   ],
   "svelte5": false,
-  "runes": false
+  "runes": false,
+  "github_stars": 35
 }

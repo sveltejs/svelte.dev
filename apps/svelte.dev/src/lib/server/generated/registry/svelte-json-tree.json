@@ -1,6 +1,6 @@
 {
   "name": "svelte-json-tree",
-  "description": "Display JSON data in a tree view within Svelte apps.",
+  "description": "Svelte JSON viewer component, used in Svelte REPL, supports Map, Set, etc.",
   "repo_url": "https://github.com/tanhauhau/svelte-json-tree",
   "author": "Tan Li Hau",
   "homepage": "https://github.com/tanhauhau/svelte-json-tree#readme",
@@ -8,7 +8,8 @@
   "dependents": 24,
   "updated": "2023-10-15T10:44:28.736Z",
   "tags": [
-    "ui"
+    "ui",
+    "utility"
   ],
   "svelte5": false,
   "runes": false,

@@ -1,6 +1,6 @@
 {
   "name": "@obele-michael/swagger-ui-svelte",
-  "description": "Generate OpenAPI documentation for SvelteKit API endpoints.",
+  "description": "Generate OpenAPI documentation for SvelteKit HTTP handlers.",
   "repo_url": "https://github.com/Michael-Obele/swagger-ui-svelte",
   "author": "Michael Obele",
   "homepage": "https://github.com/Michael-Obele/swagger-ui-svelte#readme",
@@ -8,7 +8,7 @@
   "dependents": 0,
   "updated": "2024-12-27T07:59:43.900Z",
   "tags": [
-    "tooling"
+    "utility"
   ],
   "svelte5": true,
   "runes": false

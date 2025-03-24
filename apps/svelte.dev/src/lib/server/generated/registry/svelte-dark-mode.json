@@ -1,6 +1,6 @@
 {
   "name": "svelte-dark-mode",
-  "description": "Support dark mode in Svelte apps, persisting user preference.",
+  "description": "Implement dark mode support in Svelte applications.",
   "repo_url": "https://github.com/metonym/svelte-dark-mode",
   "author": "Eric Liu",
   "homepage": "https://github.com/metonym/svelte-dark-mode",

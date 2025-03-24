@@ -1,6 +1,6 @@
 {
   "name": "sv-router",
-  "description": "Implement modern Svelte routing.",
+  "description": "Implement modern routing for Svelte single-page applications.",
   "repo_url": "https://github.com/colinlienard/sv-router",
   "author": "colinlienard",
   "homepage": "https://github.com/colinlienard/sv-router",
@@ -12,5 +12,5 @@
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 24
+  "github_stars": 25
 }

@@ -1,6 +1,6 @@
 {
   "name": "@radiofrance/svelte-leaflet",
-  "description": "Wrap Leaflet classes in Svelte components for mapping.",
+  "description": "Wraps Leaflet classes in Svelte components.",
   "repo_url": "https://github.com/radiofrance/svelte-leaflet",
   "author": "Romain Durand",
   "homepage": "https://github.com/radiofrance/svelte-leaflet#readme",
@@ -8,7 +8,8 @@
   "dependents": 0,
   "updated": "2024-09-05T10:11:34.317Z",
   "tags": [
-    "ui"
+    "ui",
+    "media"
   ],
   "svelte5": false,
   "runes": false,

@@ -1,6 +1,6 @@
 {
   "name": "svelma-svelte-field",
-  "description": "Provide Bulma components for Svelte forms.",
+  "description": "Build Bulma components for Svelte applications.",
   "repo_url": "https://github.com/c0bra/svelma",
   "author": "Brian Hann",
   "homepage": "https://github.com/c0bra/svelma#readme",
@@ -11,5 +11,6 @@
     "component-library"
   ],
   "svelte5": false,
-  "runes": false
+  "runes": false,
+  "github_stars": 539
 }

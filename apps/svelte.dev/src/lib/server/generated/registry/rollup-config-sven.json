@@ -1,6 +1,6 @@
 {
   "name": "rollup-config-sven",
-  "description": "Generate static sites from Svelte components using Rollup.",
+  "description": "Generates static sites from Svelte components.",
   "repo_url": "https://github.com/wulfmann/sven",
   "author": "Joe Snell",
   "downloads": 0,
@@ -10,5 +10,6 @@
     "tooling"
   ],
   "svelte5": false,
-  "runes": false
+  "runes": false,
+  "github_stars": 4
 }

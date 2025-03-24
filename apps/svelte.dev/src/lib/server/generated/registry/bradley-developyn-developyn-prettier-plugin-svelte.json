@@ -1,6 +1,7 @@
 {
   "name": "@bradley-developyn/developyn-prettier-plugin-svelte",
-  "description": "Formats Svelte components using Prettier with Developyn-specific rules.",
+  "description": "Formats Svelte code using Prettier with Developyn rules.",
+  "repo_url": "",
   "author": "James Birtles",
   "downloads": 6,
   "dependents": 0,

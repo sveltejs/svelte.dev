@@ -1,6 +1,6 @@
 {
   "name": "@lunoxjs/core",
-  "description": "Provides core functionalities for LunoxJs framework.",
+  "description": "Create Laravel-Flavoured NodeJs framework.",
   "repo_url": "https://github.com/kodepandai/lunox-framework",
   "author": "Akhmad Salafudin",
   "homepage": "https://github.com/kodepandai/lunox-framework#readme",

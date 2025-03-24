@@ -1,0 +1,16 @@
+{
+  "name": "svelte-css-import",
+  "description": "Inline CSS styles directly into Svelte components.",
+  "repo_url": "https://github.com/HeadMad/svelte-css-import",
+  "author": "headmad",
+  "homepage": "https://github.com/HeadMad/svelte-css-import#readme",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2020-05-13T19:38:13.791Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

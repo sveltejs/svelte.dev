@@ -1,6 +1,6 @@
 {
   "name": "@modular-css/svelte",
-  "description": "Add modular-css support to Svelte components.",
+  "description": "Add modular-css support to Svelte components, improving compile-time optimizations.",
   "repo_url": "https://github.com/tivac/modular-css",
   "author": "Pat Cavit",
   "homepage": "https://m-css.com",

@@ -1,6 +1,6 @@
 {
   "name": "sv-bootstrap-modal",
-  "description": "Integrate Bootstrap modal component into Svelte applications.",
+  "description": "Create Bootstrap modal components for Svelte applications.",
   "repo_url": "https://github.com/Sidd27/sv-bootstrap-modal",
   "author": "Sidddharth Pandey",
   "homepage": "https://github.com/Sidd27/sv-bootstrap-modal#readme",

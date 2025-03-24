@@ -1,6 +1,6 @@
 {
   "name": "svelte-translator",
-  "description": "Tools for combining Svelte 2 and Svelte 3 features.",
+  "description": "Use Svelte v2 features inside Svelte v3 and vice-versa.",
   "repo_url": "https://github.com/tivac/svelte-translator",
   "author": "Pat Cavit",
   "homepage": "https://github.com/tivac/svelte-translator#readme",

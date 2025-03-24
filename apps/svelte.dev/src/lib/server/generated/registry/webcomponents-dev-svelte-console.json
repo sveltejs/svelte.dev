@@ -1,6 +1,6 @@
 {
   "name": "@webcomponents-dev/svelte-console",
-  "description": "Provide console component for Svelte applications.",
+  "description": "Display console component with JSON viewer for Svelte apps.",
   "repo_url": "https://github.com/webcomponents-dev/svelte-console",
   "author": "_wcd_",
   "homepage": "https://github.com/webcomponents-dev/svelte-console#readme",
@@ -8,7 +8,7 @@
   "dependents": 0,
   "updated": "2019-11-20T15:34:32.682Z",
   "tags": [
-    "tooling"
+    "ui"
   ],
   "svelte5": false,
   "runes": false

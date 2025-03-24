@@ -1,6 +1,6 @@
 {
   "name": "@chanapongpan/svelte-common",
-  "description": "Provides common utilities for Svelte projects.",
+  "description": "Provide common utilities for Svelte projects.",
   "repo_url": "https://github.com/chanapongpan/svelte-common",
   "author": "Chanapongpan pick.chanapongpan@gmail.com",
   "homepage": "https://github.com/chanapongpan/svelte-common#readme",

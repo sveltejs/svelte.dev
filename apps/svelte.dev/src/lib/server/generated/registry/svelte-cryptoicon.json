@@ -1,6 +1,6 @@
 {
   "name": "svelte-cryptoicon",
-  "description": "Render cryptocurrency icons as Svelte components.",
+  "description": "Display cryptocurrency icons in Svelte applications.",
   "repo_url": " git+https://github.com/alepop/svelte-cryptoicon",
   "author": "alepop",
   "homepage": "https://github.com/alepop/svelte-cryptoicon#readme",

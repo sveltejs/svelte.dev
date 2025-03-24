@@ -1,6 +1,6 @@
 {
   "name": "svelte-types",
-  "description": "Provide type definitions for svelte-draft.",
+  "description": "Provides type definitions for svelte-draft.",
   "repo_url": "https://github.com/mistlog/svelte-types",
   "author": "mistlog",
   "homepage": "https://github.com/mistlog/svelte-types#readme",
@@ -11,5 +11,6 @@
     "tooling"
   ],
   "svelte5": false,
-  "runes": false
+  "runes": false,
+  "github_stars": 0
 }

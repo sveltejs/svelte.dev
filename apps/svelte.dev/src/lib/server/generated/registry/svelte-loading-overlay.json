@@ -1,6 +1,6 @@
 {
   "name": "svelte-loading-overlay",
-  "description": "Display custom loading screens in Svelte apps.",
+  "description": "Display custom loading screens with this Svelte component.",
   "repo_url": "https://github.com/imIfOu/svelte-loading-overlay",
   "author": "floriandidier",
   "homepage": "https://github.com/imIfOu/svelte-loading-overlay",
@@ -11,5 +11,6 @@
     "ui"
   ],
   "svelte5": false,
-  "runes": false
+  "runes": false,
+  "github_stars": 2
 }

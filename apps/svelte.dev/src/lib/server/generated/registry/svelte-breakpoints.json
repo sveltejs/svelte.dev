@@ -1,6 +1,6 @@
 {
   "name": "svelte-breakpoints",
-  "description": "Create dynamic layouts with CSS media queries in Svelte.",
+  "description": "Create dynamic layouts with CSS media queries.",
   "repo_url": "https://github.com/kiosion/svelte-breakpoints",
   "author": "kiosion",
   "homepage": "https://github.com/kiosion/svelte-breakpoints#readme",

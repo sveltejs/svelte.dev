@@ -1,6 +1,6 @@
 {
   "name": "svelte-audio-controls",
-  "description": "Wraps audio tag, provides consistent audio controls in Svelte.",
+  "description": "Wrap audio tag, provide consistent GUI controls across browsers.",
   "repo_url": "https://github.com/Linkcube/svelte-audio-controls",
   "author": "linkcube",
   "homepage": "https://github.com/Linkcube/svelte-audio-controls#readme",

@@ -1,6 +1,6 @@
 {
   "name": "svelvet-against-war",
-  "description": "Build dynamic, node-based user interfaces with Svelvet.",
+  "description": "Build node-based user interfaces with Svelte.",
   "repo_url": "https://github.com/bots-against-war/Svelvet",
   "author": "nj-vs-vh",
   "homepage": "https://github.com/bots-against-war/Svelvet/",

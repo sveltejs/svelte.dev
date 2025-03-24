@@ -1,6 +1,6 @@
 {
   "name": "create-sveltekit-starterpack",
-  "description": "Generate production-ready SvelteKit projects quickly.",
+  "description": "Generate SvelteKit projects with pre-configured tools.",
   "repo_url": "https://github.com/thomasmol/create-sveltekit-starterpack",
   "author": "Thomas Mol",
   "homepage": "https://github.com/thomasmol/sveltekit-starterpack#readme",

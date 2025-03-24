@@ -1,6 +1,6 @@
 {
   "name": "svelt-rating-selector-display",
-  "description": "Create rating selectors with custom icons in Svelte apps.",
+  "description": "Enables user rating input and display in Svelte.",
   "repo_url": "https://github.com/stinger567/svelt-rating-selector-display",
   "author": "Stinger567",
   "homepage": "https://svelt-rating-selector-display.stinger567.com/",

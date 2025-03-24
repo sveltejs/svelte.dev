@@ -1,6 +1,6 @@
 {
   "name": "@blinkx/editor",
-  "description": "Visual editor with Svelte, GrapesJS, and Monaco integration.",
+  "description": "Provides a visual editor component for Svelte applications.",
   "repo_url": "https://github.com/Blinkx-IO/editor",
   "author": "richetechguy",
   "homepage": "https://github.com/Blinkx-IO/editor#readme",
@@ -8,8 +8,9 @@
   "dependents": 0,
   "updated": "2025-03-04T20:35:10.766Z",
   "tags": [
-    "component-library"
+    "ui"
   ],
   "svelte5": true,
-  "runes": false
+  "runes": false,
+  "github_stars": 1
 }

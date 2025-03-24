@@ -1,6 +1,6 @@
 {
   "name": "tusculum",
-  "description": "Automate heading ranks for HTML document outline using Svelte components.",
+  "description": "Automate heading ranks for HTML document outlines in Svelte.",
   "repo_url": "https://github.com/realgoatish/tusculum",
   "author": "realgoatish",
   "homepage": "https://github.com/realgoatish/tusculum#readme",

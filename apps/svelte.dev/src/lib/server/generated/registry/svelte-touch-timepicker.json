@@ -1,6 +1,6 @@
 {
   "name": "svelte-touch-timepicker",
-  "description": "Provide native-like touch timepicker for Svelte.",
+  "description": "Create native-like touch timepickers for Svelte applications.",
   "repo_url": "https://github.com/SharifClick/svelte-touch-timepicker",
   "author": "Sharif Ahmed",
   "homepage": "https://github.com/SharifClick/svelte-touch-timepicker",

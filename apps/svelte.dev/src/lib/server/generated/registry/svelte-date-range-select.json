@@ -1,6 +1,6 @@
 {
   "name": "svelte-date-range-select",
-  "description": "Provide Svelte component with HTML5 date picker for range selection.",
+  "description": "Svelte component with HTML5 date picker for range selection.",
   "repo_url": "https://github.com/brettdawkins/svelte-date-range-select",
   "author": "Brett Dawkins",
   "homepage": "https://github.com/brettdawkins/svelte-date-range-select#readme",

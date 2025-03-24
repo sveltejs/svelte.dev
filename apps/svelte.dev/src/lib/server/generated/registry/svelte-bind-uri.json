@@ -1,6 +1,7 @@
 {
   "name": "svelte-bind-uri",
-  "description": "Bind URI parameters to Svelte component properties.",
+  "description": "Bind Svelte components to URI parameters.",
+  "repo_url": "",
   "author": "7korobi",
   "homepage": "https://github.com/7korobi/svelte-bind-uri/blob/main/src/lib/",
   "downloads": 0,

@@ -1,6 +1,7 @@
 {
   "name": "tnext-hanta-core-components",
-  "description": "Provide core Svelte components for tnext hanta projects.",
+  "description": "Provides core components for Svelte applications.",
+  "repo_url": "",
   "author": "t-next",
   "downloads": 0,
   "dependents": 0,

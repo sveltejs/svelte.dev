@@ -1,6 +1,6 @@
 {
   "name": "@coding-g/webpacker-svelte",
-  "description": "Integrate Svelte with webpacker.",
+  "description": "Integrates webpacker with Svelte projects.",
   "repo_url": "https://github.com/will-wow/webpacker-svelte",
   "author": "Will Ockelmann-Wagner",
   "homepage": "https://github.com/will-wow/webpacker-svelte",
@@ -8,8 +8,10 @@
   "dependents": 0,
   "updated": "2020-06-14T05:18:56.403Z",
   "tags": [
-    "tooling"
+    "tooling",
+    "preprocessor"
   ],
   "svelte5": true,
-  "runes": true
+  "runes": false,
+  "github_stars": 23
 }

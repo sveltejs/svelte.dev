@@ -1,6 +1,6 @@
 {
   "name": "@ctx-core/auth0-spa-svelte",
-  "description": "Provides Auth0 SPA components for Svelte applications.",
+  "description": "Provides Auth0 authentication for Svelte applications.",
   "repo_url": "https://github.com/ctx-core/auth0-spa-svelte",
   "author": "Brian Takita",
   "homepage": "https://github.com/ctx-core/auth0-ui#readme",

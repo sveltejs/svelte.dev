@@ -1,6 +1,6 @@
 {
   "name": "svelte-simpletoast",
-  "description": "Create simple toast notifications for Svelte applications.",
+  "description": "Create simple, customizable toast notifications for Svelte apps.",
   "repo_url": "https://github.com/mongodillo/svelte-simpletoast",
   "author": "Marc Gregory",
   "homepage": "https://mongodillo.github.io/svelte-simpletoast/",

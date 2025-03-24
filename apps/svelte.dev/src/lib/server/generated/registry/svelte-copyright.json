@@ -1,6 +1,7 @@
 {
   "name": "svelte-copyright",
-  "description": "Format and display copyright notices in Svelte components.",
+  "description": "Display copyright notices in Svelte components.",
+  "repo_url": "",
   "author": "himynameisdave",
   "downloads": 13,
   "dependents": 0,

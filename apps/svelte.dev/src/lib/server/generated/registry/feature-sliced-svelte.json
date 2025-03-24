@@ -1,11 +1,13 @@
 {
   "name": "feature-sliced-svelte",
-  "description": "Enforce Feature Sliced Design architecture in Svelte projects.",
+  "description": "Provides utilities for Feature Sliced Design architecture in Svelte projects.",
+  "repo_url": "",
   "author": "Mikhael Khrustik",
-  "downloads": 1,
+  "downloads": 11,
   "dependents": 0,
   "updated": "2023-11-14T16:55:03.217Z",
   "tags": [
+    "utility",
     "tooling"
   ],
   "svelte5": false,

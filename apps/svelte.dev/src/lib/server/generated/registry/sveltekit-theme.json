@@ -1,6 +1,7 @@
 {
   "name": "sveltekit-theme",
-  "description": "Provides easy theming capabilities for SvelteKit applications.",
+  "description": "Implement light and dark themes for SvelteKit applications.",
+  "repo_url": "",
   "author": "dooboolab",
   "downloads": 11,
   "dependents": 0,

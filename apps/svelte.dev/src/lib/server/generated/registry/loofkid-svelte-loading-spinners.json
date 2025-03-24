@@ -1,6 +1,6 @@
 {
   "name": "@loofkid/svelte-loading-spinners",
-  "description": "Implement loading spinners using Svelte framework.",
+  "description": "Provide loading spinners using the Svelte framework.",
   "repo_url": "https://github.com/schum123/svelte-loading-spinners",
   "author": "Eric Schumertl",
   "homepage": "https://github.com/schum123/svelte-loading-spinners#readme",
@@ -12,5 +12,5 @@
   ],
   "svelte5": false,
   "runes": false,
-  "github_stars": 521
+  "github_stars": 522
 }

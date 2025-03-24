@@ -1,6 +1,7 @@
 {
   "name": "@layer0/svelte",
-  "description": "Prefetch pages from Layer0 edge cache in Svelte apps.",
+  "description": "Layer0 integration for Svelte apps.",
+  "repo_url": "",
   "author": "Layer0",
   "downloads": 2482,
   "dependents": 0,

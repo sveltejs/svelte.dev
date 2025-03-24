@@ -1,14 +1,13 @@
 {
   "name": "@futagoza/eslint-config-svelte",
-  "description": "Provides ESLint configurations for Svelte files.",
+  "description": "Provides ESLint configurations for linting Svelte files.",
   "repo_url": "https://github.com/futagoza/eslint-config-futagozaryuu",
   "author": "Futago-za Ryuu",
   "downloads": 51,
   "dependents": 1,
   "updated": "2021-05-23T02:39:48.174Z",
   "tags": [
-    "tooling",
-    "preprocessor"
+    "tooling"
   ],
   "svelte5": true,
   "runes": false,

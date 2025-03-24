@@ -1,6 +1,6 @@
 {
   "name": "@dvcol/svelte-simple-router",
-  "description": "Provides simple client-side routing for Svelte 5 applications.",
+  "description": "Provides client-side routing for Svelte 5 applications.",
   "repo_url": "https://github.com/dvcol/svelte-simple-router",
   "author": "dvcol",
   "homepage": "https://github.com/dvcol/svelte-simple-router",
@@ -12,5 +12,5 @@
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 72
+  "github_stars": 73
 }

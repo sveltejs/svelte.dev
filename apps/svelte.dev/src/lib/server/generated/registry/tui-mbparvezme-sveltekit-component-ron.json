@@ -1,6 +1,6 @@
 {
   "name": "tui-mbparvezme-sveltekit-component-ron",
-  "description": "TheUI SvelteKit component library with TailwindCSS.",
+  "description": "Build accessible SvelteKit components with TailwindCSS.",
   "repo_url": "https://github.com/mbparvezme/theui-sveltekit",
   "author": "M B Parvez",
   "homepage": "https://www.theui.dev/r/skcl",

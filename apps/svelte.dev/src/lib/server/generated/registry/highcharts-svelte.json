@@ -1,6 +1,6 @@
 {
   "name": "@highcharts/svelte",
-  "description": "Integrate Highcharts charts into Svelte applications easily.",
+  "description": "Integrate Highcharts charts into Svelte applications.",
   "repo_url": "https://github.com/highcharts/highcharts-svelte",
   "author": "Jakub Szumiński",
   "homepage": "https://www.highcharts.com/integrations/svelte/",

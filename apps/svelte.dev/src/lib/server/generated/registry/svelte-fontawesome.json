@@ -1,6 +1,7 @@
 {
   "name": "svelte-fontawesome",
-  "description": "Use FontAwesome icons with Svelte.",
+  "description": "Use FontAwesome icons within Svelte components.",
+  "repo_url": "",
   "author": "andrewjk",
   "downloads": 22,
   "dependents": 0,

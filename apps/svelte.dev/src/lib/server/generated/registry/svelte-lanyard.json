@@ -1,6 +1,6 @@
 {
   "name": "svelte-lanyard",
-  "description": "Wrap Lanyard API for Discord presence in Svelte.",
+  "description": "Wrap Lanyard API for Discord presence in Svelte apps.",
   "repo_url": "https://github.com/iGalaxyYT/svelte-lanyard",
   "author": "William Hayr",
   "homepage": "https://github.com/iGalaxyYT/svelte-lanyard#readme",

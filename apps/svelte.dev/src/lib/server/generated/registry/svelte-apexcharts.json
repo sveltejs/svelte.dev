@@ -1,6 +1,6 @@
 {
   "name": "svelte-apexcharts",
-  "description": "Build interactive charts and visualizations in Svelte apps.",
+  "description": "Svelte wrapper for ApexCharts, build interactive visualizations.",
   "repo_url": "https://github.com/galkatz373/svelte-apexcharts",
   "author": "galkatz373",
   "homepage": "https://github.com/galkatz373/svelte-apexcharts#readme",
@@ -12,5 +12,5 @@
   ],
   "svelte5": false,
   "runes": false,
-  "github_stars": 73
+  "github_stars": 72
 }

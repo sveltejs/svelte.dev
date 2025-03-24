@@ -1,6 +1,6 @@
 {
   "name": "@isaac-m/svelte-intl",
-  "description": "Internationalize Svelte 4 applications using format-message.",
+  "description": "Internationalize Svelte 4 apps using format-message.",
   "repo_url": "https://github.com/isaac-mok/svelte-intl",
   "author": "Cristóvão Trevisan",
   "homepage": "https://github.com/isaac-mok/svelte-intl",

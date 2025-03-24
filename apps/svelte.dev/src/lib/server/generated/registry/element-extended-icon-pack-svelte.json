@@ -1,6 +1,6 @@
 {
   "name": "@element-extended-icon-pack/svelte",
-  "description": "Provides a collection of icons styled like Element UI.",
+  "description": "Collection of icons in the style of Element UI for Svelte.",
   "repo_url": "https://github.com/richhost/element-extended-icon-pack",
   "author": "Abiee",
   "homepage": "https://icons.xiangsu.fun",

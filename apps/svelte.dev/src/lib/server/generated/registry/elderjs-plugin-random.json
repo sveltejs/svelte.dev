@@ -1,6 +1,6 @@
 {
   "name": "@elderjs/plugin-random",
-  "description": "Preview random pages of routes in Elder.js development.",
+  "description": "Preview random pages of routes during Elder.js development.",
   "repo_url": "https://github.com/Elderjs/plugins",
   "author": "Nick Reese",
   "homepage": "https://github.com/Elderjs/plugins#readme",

@@ -1,6 +1,6 @@
 {
   "name": "@bztes/svelte-rip",
-  "description": "Provide responsive image previews for Svelte apps.",
+  "description": "Create responsive image previews with Svelte.",
   "repo_url": "https://github.com/bztes/svelte-rip",
   "author": "Nico Beierle",
   "homepage": "https://bztes.github.io/svelte-rip/",

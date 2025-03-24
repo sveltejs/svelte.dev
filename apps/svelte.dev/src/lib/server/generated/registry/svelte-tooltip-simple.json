@@ -1,6 +1,6 @@
 {
   "name": "svelte-tooltip-simple",
-  "description": "Display simple tooltips in Svelte applications.",
+  "description": "Display tooltips with Svelte, automatically place them.",
   "repo_url": "https://github.com/gspasov/svelte-tooltip",
   "author": "Georgi Spasov",
   "homepage": "https://github.com/gspasov/svelte-tooltip#readme",

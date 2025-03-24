@@ -1,6 +1,7 @@
 {
   "name": "@6edesign/svelte-three",
   "description": "Create 3D mograph experiments with Svelte and Three.js.",
+  "repo_url": "",
   "author": "6edesign",
   "downloads": 66,
   "dependents": 0,

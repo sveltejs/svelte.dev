@@ -1,6 +1,6 @@
 {
   "name": "svelte-gym",
-  "description": "Create and exercise Svelte components rapidly.",
+  "description": "Exercise Svelte components with a playground environment.",
   "repo_url": "https://github.com/paulsputer/svelte-gym",
   "author": "paulsputer",
   "homepage": "https://github.com/paulsputer/svelte-gym#readme",
@@ -8,8 +8,8 @@
   "dependents": 0,
   "updated": "2024-09-18T08:26:08.171Z",
   "tags": [
-    "tooling",
-    "testing"
+    "testing",
+    "tooling"
   ],
   "svelte5": true,
   "runes": false,

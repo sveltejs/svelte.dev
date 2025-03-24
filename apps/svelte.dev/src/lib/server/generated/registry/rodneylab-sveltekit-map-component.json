@@ -1,6 +1,7 @@
 {
   "name": "@rodneylab/sveltekit-map-component",
-  "description": "Add map components to SvelteKit sites using Leaflet.",
+  "description": "Create maps using Mapbox and OpenStreetMap in SvelteKit.",
+  "repo_url": "",
   "author": "Rodney Lab",
   "downloads": 8,
   "dependents": 0,

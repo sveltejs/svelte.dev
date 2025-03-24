@@ -1,6 +1,6 @@
 {
   "name": "svelte-dnd-list",
-  "description": "Provides simple drag and drop functionality for Svelte lists.",
+  "description": "Simple, lightweight drag and drop list library for Svelte.",
   "repo_url": "https://github.com/tarb/svelte-dnd-list",
   "author": "Rob Tarbath",
   "homepage": "https://github.com/tarb/svelte-dnd-list",
@@ -8,7 +8,7 @@
   "dependents": 0,
   "updated": "2023-01-16T06:33:54.487Z",
   "tags": [
-    "utility"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

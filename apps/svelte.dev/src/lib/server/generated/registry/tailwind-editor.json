@@ -1,6 +1,6 @@
 {
   "name": "tailwind-editor",
-  "description": "Generate Tailwind CSS HTML from a WYSIWYG editor in Svelte.",
+  "description": "Generate Tailwind CSS HTML from a WYSIWYG editor.",
   "repo_url": "https://github.com/fouita/tailwind-editor",
   "author": "fouita",
   "homepage": "https://github.com/fouita/tailwind-editor#readme",

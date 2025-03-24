@@ -1,6 +1,7 @@
 {
   "name": "@atbeta/components",
-  "description": "Provide components for Beta services.",
+  "description": "Offer components for Beta services.",
+  "repo_url": "",
   "author": "juiipup",
   "downloads": 26,
   "dependents": 0,

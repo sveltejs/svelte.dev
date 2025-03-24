@@ -1,6 +1,6 @@
 {
   "name": "@feelinglovelynow/slug",
-  "description": "Generate URL slugs, includes Svelte component for browser slug generation.",
+  "description": "Generate URL slugs with helper function and Svelte component.",
   "repo_url": "https://github.com/feelinglovelynow/slug",
   "author": "https://github.com/feelinglovelynow?tab=repositories",
   "homepage": "https://github.com/feelinglovelynow/slug#readme",

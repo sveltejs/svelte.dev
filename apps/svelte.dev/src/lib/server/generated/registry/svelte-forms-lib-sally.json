@@ -1,6 +1,6 @@
 {
   "name": "svelte-forms-lib-sally",
-  "description": "Manage forms with validation in Svelte applications.",
+  "description": "Manage forms with validation in Svelte.",
   "repo_url": "https://github.com/Sally-R-AB/svelte-forms-lib",
   "author": "Samuel Wahlberg",
   "homepage": "https://svelte-forms-lib-sapper-docs.now.sh",

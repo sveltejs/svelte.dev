@@ -1,6 +1,6 @@
 {
   "name": "lc-svelte-floating-ui",
-  "description": "Integrates Floating UI for positioning UI elements in Svelte.",
+  "description": "Use Floating UI for positioning elements in Svelte.",
   "repo_url": "https://github.com/lecong/svelte-floating-ui",
   "author": "lecong",
   "homepage": "https://github.com/lecong/svelte-floating-ui#readme",

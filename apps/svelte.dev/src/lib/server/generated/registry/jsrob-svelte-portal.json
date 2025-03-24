@@ -1,6 +1,6 @@
 {
   "name": "@jsrob/svelte-portal",
-  "description": "Render Svelte children into different part of DOM.",
+  "description": "Render Svelte children into different DOM parts.",
   "repo_url": "https://github.com/wobsoriano/svelte-portal",
   "author": "wobsoriano",
   "homepage": "https://github.com/wobsoriano/svelte-portal#readme",

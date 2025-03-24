@@ -1,6 +1,6 @@
 {
   "name": "svelte-stacks-icons",
-  "description": "Render Stack Overflow Stacks SVG icons as Svelte components.",
+  "description": "Stack Overflow Stacks SVG icons as Svelte components.",
   "repo_url": "https://github.com/metonym/svelte-stacks-icons",
   "author": "Eric Liu",
   "homepage": "https://github.com/metonym/svelte-stacks-icons",
@@ -11,5 +11,6 @@
     "ui"
   ],
   "svelte5": false,
-  "runes": false
+  "runes": false,
+  "github_stars": 0
 }

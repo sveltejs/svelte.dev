@@ -1,6 +1,6 @@
 {
   "name": "@prioritymaster/date-picker-svelte",
-  "description": "Provide date and time picker for Svelte.",
+  "description": "Implement date and time pickers for Svelte applications.",
   "repo_url": "https://github.com/probablykasper/date-picker-svelte",
   "author": "Kasper Henningsen",
   "homepage": "https://date-picker-svelte.kasper.space",

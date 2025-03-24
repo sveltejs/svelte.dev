@@ -1,6 +1,6 @@
 {
   "name": "@rise/payment-form",
-  "description": "Integrate RiSE payment forms into Svelte applications.",
+  "description": "Integrate RiSE payment forms into Svelte apps.",
   "repo_url": "https://github.com/rise-app/rise-payment-form",
   "author": "scottbwyatt",
   "homepage": "https://github.com/rise-app/rise-payment-form#readme",

@@ -1,10 +1,10 @@
 {
   "name": "svelte-select",
-  "description": "Create select/autocomplete/typeahead components in Svelte.",
+  "description": "Creates a select/autocomplete/typeahead component for Svelte.",
   "repo_url": "https://rob-balfre@github.com/rob-balfre/svelte-select",
   "author": "Robert Balfré",
   "homepage": "https://github.com/rob-balfre/svelte-select#readme",
-  "downloads": 29749,
+  "downloads": 29299,
   "dependents": 49,
   "updated": "2024-01-05T01:59:21.822Z",
   "tags": [

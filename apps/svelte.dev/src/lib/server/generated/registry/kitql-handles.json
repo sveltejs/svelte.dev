@@ -1,6 +1,6 @@
 {
   "name": "@kitql/handles",
-  "description": "Provides useful handles for SvelteKit.",
+  "description": "Provides useful handles for SvelteKit applications.",
   "repo_url": "https://github.com/jycouet/kitql",
   "author": "jycouet",
   "homepage": "https://www.kitql.dev/",

@@ -1,6 +1,6 @@
 {
   "name": "@peter.naydenov/visual-controller-for-svelte3",
-  "description": "Build micro-frontends based on Svelte components.",
+  "description": "Build micro-frontends with Svelte components.",
   "repo_url": "https://github.com/PeterNaydenov/visual-controller-for-svelte3",
   "author": "Peter Naydenov",
   "homepage": "https://github.com/PeterNaydenov/visual-controller-for-svelte3#readme",

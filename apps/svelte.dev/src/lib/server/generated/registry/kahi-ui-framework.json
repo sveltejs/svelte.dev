@@ -1,6 +1,6 @@
 {
   "name": "@kahi-ui/framework",
-  "description": "Build straight-forward Svelte UI for the Web.",
+  "description": "Provide straight-forward Svelte UI components.",
   "repo_url": "https://github.com/novacbn/kahi-ui",
   "author": "novacbn",
   "homepage": "https://github.com/novacbn/kahi-ui#readme",

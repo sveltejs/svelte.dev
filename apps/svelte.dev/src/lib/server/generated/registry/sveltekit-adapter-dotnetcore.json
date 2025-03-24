@@ -1,6 +1,6 @@
 {
   "name": "sveltekit-adapter-dotnetcore",
-  "description": "Adapter for SvelteKit apps with standalone dotnetcore server.",
+  "description": "Adapt SvelteKit apps for deployment with a .NET Core server.",
   "repo_url": "https://github.com/samlam/sveltekit-adapter-dotnetcore",
   "author": "Samuel Lam",
   "homepage": "https://github.com/samlam/sveltekit-adapter-dotnetcore#readme",
@@ -8,8 +8,7 @@
   "dependents": 0,
   "updated": "2023-06-01T00:22:28.234Z",
   "tags": [
-    "adapter",
-    "server"
+    "adapter"
   ],
   "svelte5": false,
   "runes": false,

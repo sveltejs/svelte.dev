@@ -1,6 +1,7 @@
 {
   "name": "svelte-rating-svg",
-  "description": "Create scalable star rating components for Svelte apps.",
+  "description": "Create SVG star rating components for Svelte apps.",
+  "repo_url": "",
   "author": "zyxd",
   "downloads": 0,
   "dependents": 0,

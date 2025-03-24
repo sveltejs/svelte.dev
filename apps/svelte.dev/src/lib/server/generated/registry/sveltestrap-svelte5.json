@@ -1,6 +1,6 @@
 {
   "name": "sveltestrap-svelte5",
-  "description": "Bootstrap 5 components for Svelte 4+ applications.",
+  "description": "Integrate Bootstrap 5 components into Svelte applications.",
   "repo_url": "https://github.com/sveltestrap/sveltestrap",
   "author": "winstonewert",
   "homepage": "https://sveltestrap.js.org",

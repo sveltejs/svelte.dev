@@ -1,6 +1,6 @@
 {
   "name": "ckeditor5-svelte",
-  "description": "Integrate CKEditor5 editor component into Svelte.",
+  "description": "Integrate CKEditor5 editor component for Svelte.",
   "repo_url": "https://github.com/techlab23/ckeditor5-svelte",
   "author": "Shirish Nigam",
   "homepage": "https://github.com/techlab23/ckeditor5-svelte",

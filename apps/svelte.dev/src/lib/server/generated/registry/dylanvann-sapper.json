@@ -1,0 +1,13 @@
+{
+  "name": "@dylanvann/sapper",
+  "repo_url": "https://github.com/sveltejs/sapper",
+  "author": "Rich Harris",
+  "homepage": "https://github.com/sveltejs/sapper#readme",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2020-09-22T08:11:19.704Z",
+  "tags": [],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 6980
+}

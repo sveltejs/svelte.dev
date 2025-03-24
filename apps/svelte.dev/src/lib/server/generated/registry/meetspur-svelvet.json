@@ -1,16 +1,13 @@
 {
   "name": "meetspur-svelvet",
-  "description": "Build node-based user interfaces with Svelte.",
   "repo_url": "https://github.com/open-source-labs/Svelvet",
   "author": "rohanrajpal",
   "homepage": "https://github.com/open-source-labs/Svelvet",
   "downloads": 0,
   "dependents": 0,
   "updated": "2023-09-14T06:45:45.280Z",
-  "tags": [
-    "ui"
-  ],
+  "tags": [],
   "svelte5": true,
   "runes": false,
-  "github_stars": 2676
+  "github_stars": 2677
 }

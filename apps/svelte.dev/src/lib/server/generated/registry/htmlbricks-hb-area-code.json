@@ -1,6 +1,7 @@
 {
   "name": "@htmlbricks/hb-area-code",
-  "description": "Provides a web component for an area code input.",
+  "description": "Create Svelte web component for area code input.",
+  "repo_url": "",
   "author": "Dario Caruso",
   "downloads": 427,
   "dependents": 2,

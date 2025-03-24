@@ -1,6 +1,6 @@
 {
   "name": "@easyroute/svelte",
-  "description": "Config-based router for Svelte with SSR support.",
+  "description": "Implement config-based routing for Svelte with SSR support.",
   "repo_url": "https://github.com/easyroute-router/easyroute",
   "author": "Alexey Solovyov",
   "homepage": "https://easyroute.lyoha.info",

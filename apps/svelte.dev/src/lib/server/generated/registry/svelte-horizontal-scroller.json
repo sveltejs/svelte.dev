@@ -1,6 +1,6 @@
 {
   "name": "svelte-horizontal-scroller",
-  "description": "Create horizontal scroller for Svelte with touch and drag support.",
+  "description": "Create horizontal scrollers for Svelte with touch and drag support.",
   "repo_url": "https://github.com/nicolasmgaray/svelte-horizontal-scroller",
   "author": "nicolasmgaray",
   "homepage": "https://github.com/nicolasmgaray/svelte-horizontal-scroller#readme",

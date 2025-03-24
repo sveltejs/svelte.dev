@@ -1,6 +1,6 @@
 {
   "name": "svelte-calculator",
-  "description": "Create calculator component with animation and sounds in Svelte.",
+  "description": "Implement calculator with animation and sound effects.",
   "repo_url": "https://github.com/ArshdeepSahni/svelte-calculator",
   "author": "Arshdeep Singh",
   "homepage": "https://github.com/ArshdeepSahni/svelte-calculator",

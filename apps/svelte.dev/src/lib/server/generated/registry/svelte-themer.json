@@ -1,6 +1,6 @@
 {
   "name": "svelte-themer",
-  "description": "Theme Svelte apps with custom themes.",
+  "description": "Theme Svelte components with CSS variables.",
   "repo_url": "https://github.com/josefaidt/svelte-themer",
   "author": "garlicbred",
   "homepage": "https://svelte-themer.vercel.app",
@@ -11,5 +11,6 @@
     "utility"
   ],
   "svelte5": false,
-  "runes": false
+  "runes": false,
+  "github_stars": 142
 }

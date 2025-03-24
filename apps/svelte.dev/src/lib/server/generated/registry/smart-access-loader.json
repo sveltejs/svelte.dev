@@ -1,6 +1,7 @@
 {
   "name": "@smart-access/loader",
-  "description": "Manage business logic for Smart Access dashboards.",
+  "description": "Manage business logic for Smart Access Dashboards.",
+  "repo_url": "",
   "author": "Kyle Jeske",
   "downloads": 0,
   "dependents": 0,

@@ -1,6 +1,6 @@
 {
   "name": "@overlays/svelte",
-  "description": "Create imperative overlays in Svelte apps, supporting context inheritance.",
+  "description": "Create imperative overlays with context inheritance in Svelte apps.",
   "repo_url": "https://github.com/hairyf/unoverlays",
   "author": "tuimao",
   "homepage": "https://github.com/hairyf/unoverlays#readme",

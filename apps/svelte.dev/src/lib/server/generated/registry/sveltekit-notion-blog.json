@@ -1,6 +1,6 @@
 {
   "name": "sveltekit-notion-blog",
-  "description": "Create blogs in SvelteKit using Notion as CMS.",
+  "description": "Set up blogs in SvelteKit using Notion as CMS.",
   "repo_url": "https://github.com/subhendupsingh/sveltekit-notion-blog",
   "author": "subhendupsingh",
   "homepage": "https://sveltekit-notion-blog.netlify.app/",
@@ -8,8 +8,7 @@
   "dependents": 0,
   "updated": "2025-03-01T14:08:35.920Z",
   "tags": [
-    "content",
-    "integration"
+    "content"
   ],
   "svelte5": false,
   "runes": false,

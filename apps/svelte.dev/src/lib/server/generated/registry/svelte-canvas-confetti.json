@@ -1,6 +1,6 @@
 {
   "name": "svelte-canvas-confetti",
-  "description": "Create canvas-based confetti for Svelte.",
+  "description": "Add canvas-based confetti animations to Svelte apps.",
   "repo_url": "https://github.com/andreasmcdermott/svelte-canvas-confetti",
   "author": "andreasmcdermott",
   "homepage": "https://github.com/andreasmcdermott/svelte-canvas-confetti#readme",

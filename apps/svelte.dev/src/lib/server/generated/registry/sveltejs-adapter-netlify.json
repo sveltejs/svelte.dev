@@ -1,10 +1,10 @@
 {
   "name": "@sveltejs/adapter-netlify",
-  "description": "Creates Netlify app from SvelteKit project.",
+  "description": "Creates Netlify apps from SvelteKit projects.",
   "repo_url": "https://github.com/sveltejs/kit",
   "author": "rich_harris",
   "homepage": "https://svelte.dev",
-  "downloads": 11407,
+  "downloads": 11501,
   "dependents": 2,
   "updated": "2025-03-20T12:09:21.110Z",
   "tags": [
@@ -12,5 +12,5 @@
   ],
   "svelte5": false,
   "runes": false,
-  "github_stars": 19121
+  "github_stars": 19122
 }

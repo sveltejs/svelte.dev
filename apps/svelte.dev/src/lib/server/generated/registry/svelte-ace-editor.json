@@ -1,6 +1,6 @@
 {
   "name": "svelte-ace-editor",
-  "description": "Integrate Ace editor component into Svelte applications.",
+  "description": "Integrate Ace editor into Svelte applications.",
   "repo_url": "https://github.com/greatenemy/svelte-ace-editor",
   "author": "IOM",
   "homepage": "https://github.com/GreatEnemy/svelte-ace-editor#readme",

@@ -1,6 +1,6 @@
 {
   "name": "svelte-simple-modal",
-  "description": "Creates simple modal dialogs in Svelte.",
+  "description": "Create simple modal dialogs in Svelte applications.",
   "repo_url": "https://github.com/flekschas/svelte-simple-modal",
   "author": "Fritz Lekschas",
   "homepage": "https://github.com/flekschas/svelte-simple-modal#readme",
@@ -12,5 +12,5 @@
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 424
+  "github_stars": 425
 }

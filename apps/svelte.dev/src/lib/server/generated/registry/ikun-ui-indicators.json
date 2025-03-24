@@ -1,6 +1,7 @@
 {
   "name": "@ikun-ui/indicators",
-  "description": "Create UI indicators for Svelte.",
+  "description": "UI indicators for Svelte.",
+  "repo_url": "",
   "author": "baiwusanyu",
   "downloads": 5,
   "dependents": 3,

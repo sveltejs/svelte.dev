@@ -1,6 +1,6 @@
 {
   "name": "@boundedinfinity/svelte-tooltip",
-  "description": "Create Svelte tooltips.",
+  "description": "Builds Svelte project, powered by create-svelte.",
   "repo_url": "https://github.com/boundedinfinity/svelte-tooltip",
   "author": "brad.babb",
   "homepage": "https://github.com/boundedinfinity/svelte-tooltip#readme",

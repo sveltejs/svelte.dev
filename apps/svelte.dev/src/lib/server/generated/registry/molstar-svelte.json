@@ -1,6 +1,7 @@
 {
   "name": "molstar-svelte",
-  "description": "Visualize biomolecular structures with Svelte components.",
+  "description": "Provides Svelte components for Mol* biomolecular visualizations.",
+  "repo_url": "",
   "author": "0gust1",
   "downloads": 2,
   "dependents": 0,

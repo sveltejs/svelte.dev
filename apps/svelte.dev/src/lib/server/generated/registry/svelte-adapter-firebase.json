@@ -1,6 +1,6 @@
 {
   "name": "svelte-adapter-firebase",
-  "description": "Deploy SvelteKit apps Firebase Hosting, Cloud Functions.",
+  "description": "Integrate SvelteKit apps with Firebase Hosting and Cloud Functions.",
   "repo_url": "https://github.com/jthegedus/svelte-adapter-firebase",
   "author": "James Hegedus",
   "homepage": "https://github.com/jthegedus/svelte-adapter-firebase#readme",

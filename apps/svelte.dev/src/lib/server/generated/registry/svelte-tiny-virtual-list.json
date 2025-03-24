@@ -1,6 +1,6 @@
 {
   "name": "svelte-tiny-virtual-list",
-  "description": "Tiny, dependency-free list virtualization component for Svelte.",
+  "description": "Render large lists efficiently in Svelte, with zero dependencies.",
   "repo_url": "https://github.com/jonasgeiler/svelte-tiny-virtual-list",
   "author": "Jonas Geiler",
   "homepage": "https://github.com/jonasgeiler/svelte-tiny-virtual-list",

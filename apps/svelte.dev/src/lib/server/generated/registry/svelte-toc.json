@@ -1,6 +1,6 @@
 {
   "name": "svelte-toc",
-  "description": "Provides sticky responsive table of contents component.",
+  "description": "Create sticky responsive table of contents in Svelte.",
   "repo_url": "https://github.com/janosh/svelte-toc",
   "author": "Janosh Riebesell",
   "homepage": "https://janosh.github.io/svelte-toc",

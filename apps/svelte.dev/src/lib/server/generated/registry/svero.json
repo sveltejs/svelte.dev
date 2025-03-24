@@ -1,6 +1,6 @@
 {
   "name": "svero",
-  "description": "Provide simple router for Svelte 3 applications.",
+  "description": "Create simple router for Svelte 3 applications.",
   "repo_url": "https://github.com/kazzkiq/svero",
   "author": "Claudio Holanda",
   "homepage": "https://github.com/kazzkiq/svero",

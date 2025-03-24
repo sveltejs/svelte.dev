@@ -1,6 +1,6 @@
 {
   "name": "@svelte-put/resize",
-  "description": "Observe element resizes with Svelte action.",
+  "description": "Svelte action wrapper for ResizeObserver, observe element resizing.",
   "repo_url": "https://github.com/vnphanquang/svelte-put",
   "author": "Quang Phan",
   "homepage": "https://github.com/vnphanquang/svelte-put/tree/next/packages/resize",

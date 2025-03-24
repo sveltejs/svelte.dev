@@ -1,6 +1,6 @@
 {
   "name": "@humanspeak/svelte-virtual-list",
-  "description": "Create high-performance virtual list components for Svelte.",
+  "description": "Render large datasets efficiently with virtual scrolling in Svelte 5.",
   "repo_url": "https://github.com/humanspeak/svelte-virtual-list",
   "author": "Humanspeak, Inc.",
   "homepage": "https://virtuallist.svelte.page",

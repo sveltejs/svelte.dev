@@ -1,6 +1,6 @@
 {
   "name": "svelte-mui",
-  "description": "Build material design UI components for Svelte applications.",
+  "description": "Create Material UI components for Svelte 3/4 applications.",
   "repo_url": "https://github.com/vikignt/svelte-mui",
   "author": "viking",
   "homepage": "https://github.com/vikignt/svelte-mui#readme",

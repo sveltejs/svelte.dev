@@ -1,6 +1,7 @@
 {
   "name": "@krist7599555/svelte-turing-render",
-  "description": "Render components programmatically in Turing machine style.",
+  "description": "Run Svelte in Turing machine-like behavior.",
+  "repo_url": "",
   "author": "Krist Ponpairin",
   "downloads": 14,
   "dependents": 0,

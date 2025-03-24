@@ -1,6 +1,6 @@
 {
   "name": "@zingsoft/zingchart-svelte",
-  "description": "Integrate ZingChart into Svelte applications.",
+  "description": "Incorporate ZingChart into Svelte applications.",
   "repo_url": "https://github.com/zingchart/zingchart-svelte",
   "author": "Phil Mercurio",
   "homepage": "https://github.com/zingchart/zingchart-svelte",
@@ -11,5 +11,6 @@
     "ui"
   ],
   "svelte5": false,
-  "runes": false
+  "runes": false,
+  "github_stars": 0
 }

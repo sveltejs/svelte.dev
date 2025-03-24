@@ -1,6 +1,6 @@
 {
   "name": "@responsive-image/svelte",
-  "description": "Render responsive images from local or remote sources.",
+  "description": "Render responsive images in Svelte, local or CDN-based.",
   "repo_url": "https://github.com/simonihmig/responsive-image",
   "author": "Simon Ihmig",
   "homepage": "https://github.com/simonihmig/responsive-image#readme",

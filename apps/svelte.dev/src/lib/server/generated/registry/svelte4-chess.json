@@ -1,6 +1,7 @@
 {
   "name": "svelte4-chess",
-  "description": "Develop fully playable chess components for Svelte 4.",
+  "description": "Play chess component for Svelte 4, powered by Chess.js and Chessground.",
+  "repo_url": "",
   "author": "liamkrenn",
   "homepage": "https://github.com/LiamKrenn/svelte4-chess",
   "downloads": 25,

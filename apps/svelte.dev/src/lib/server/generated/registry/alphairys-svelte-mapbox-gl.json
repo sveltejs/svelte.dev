@@ -1,6 +1,7 @@
 {
   "name": "@alphairys/svelte-mapbox-gl",
-  "description": "Create interactive maps using Mapbox GL JS in Svelte.",
+  "description": "Svelte wrapper components for Mapbox GL JS.",
+  "repo_url": "",
   "author": "alphairys",
   "downloads": 4,
   "dependents": 0,

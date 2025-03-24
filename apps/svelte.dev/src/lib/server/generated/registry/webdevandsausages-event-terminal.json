@@ -1,6 +1,6 @@
 {
   "name": "@webdevandsausages/event-terminal",
-  "description": "Displays and manages WD&S event registration in Svelte.",
+  "description": "Displays WD&S event, executes, checks, cancels event registration.",
   "repo_url": "https://github.com/webDevAndSausages/world-of-webdevandsausages",
   "author": "Richard Van Camp",
   "homepage": "https://github.com/webDevAndSausages/world-of-webdevandsausages#readme",

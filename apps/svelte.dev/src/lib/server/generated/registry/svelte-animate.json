@@ -1,6 +1,6 @@
 {
   "name": "svelte-animate",
-  "description": "Add CSS animations to Svelte elements using Animate.css.",
+  "description": "Animate Svelte elements using Animate.css library.",
   "repo_url": "https://github.com/shinokada/svelte-animate",
   "author": "Shinichi Okada",
   "homepage": "https://svelte-animate.codewithshin.com/",

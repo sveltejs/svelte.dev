@@ -1,6 +1,6 @@
 {
   "name": "sveltmline",
-  "description": "Create timeline UI with Svelte, supporting tracks and assets.",
+  "description": "Create timeline editor UI components for Svelte applications.",
   "repo_url": "https://github.com/komietty/sveltmline",
   "author": "Saki Komikado",
   "homepage": "https://github.com/komietty/sveltmline#readme",

@@ -1,6 +1,6 @@
 {
   "name": "@ctx-core/a__target",
-  "description": "Sets target to _blank for absolute URLs, _self for relative.",
+  "description": "Sets target to _blank for absolute urls or _self for relative urls.",
   "repo_url": "https://github.com/ctx-core/a__target",
   "author": "Brian Takita",
   "homepage": "https://github.com/ctx-core/a__target#readme",

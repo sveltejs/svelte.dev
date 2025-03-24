@@ -1,6 +1,6 @@
 {
   "name": "svelte-compare-image",
-  "description": "Compare two images with slider in Svelte.",
+  "description": "Compare two images with slider to reveal one over other.",
   "repo_url": "https://github.com/BrianMitchL/svelte-compare-image",
   "author": "Brian Mitchell",
   "homepage": "https://projects.brianm.me/svelte-compare-image/",
@@ -8,8 +8,7 @@
   "dependents": 0,
   "updated": "2024-04-18T05:36:53.378Z",
   "tags": [
-    "ui",
-    "media"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

@@ -1,6 +1,7 @@
 {
   "name": "@ikun-ui/infinite",
-  "description": "Create infinite scroll components for Svelte.",
+  "description": "Provides infinite scroll component for Svelte.",
+  "repo_url": "",
   "author": "baiwusanyu",
   "downloads": 22,
   "dependents": 1,

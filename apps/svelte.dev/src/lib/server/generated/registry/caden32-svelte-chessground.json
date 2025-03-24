@@ -1,6 +1,7 @@
 {
   "name": "caden32-svelte-chessground",
-  "description": "Svelte component wrapper for the Chessground chessboard UI.",
+  "description": "Create Svelte chessboard component using Chessground.",
+  "repo_url": "",
   "author": "caden32",
   "homepage": "https://github.com/gtim/svelte-chessground#readme",
   "downloads": 0,

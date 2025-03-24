@@ -1,6 +1,6 @@
 {
   "name": "svelte-flatlist",
-  "description": "Create mobile-friendly, customizable draggable menu for Svelte.",
+  "description": "Create draggable, customizable, mobile-friendly menu for Svelte.",
   "repo_url": "https://github.com/snuffyDev/svelte-flatlist",
   "author": "snuffydev",
   "homepage": "https://github.com/snuffyDev/svelte-flatlist#readme",

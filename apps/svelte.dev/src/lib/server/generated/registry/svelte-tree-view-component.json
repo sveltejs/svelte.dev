@@ -1,6 +1,6 @@
 {
   "name": "svelte-tree-view-component",
-  "description": "Implement tree view components for Svelte applications.",
+  "description": "Build beautiful, easy-to-use tree view components for Svelte.",
   "repo_url": "https://github.com/SamuelQZQ/svelte-tree-view-component",
   "author": "SamuelQZQ",
   "homepage": "https://github.com/SamuelQZQ/svelte-tree-view-component#readme",
@@ -8,8 +8,7 @@
   "dependents": 0,
   "updated": "2022-04-28T15:35:33.719Z",
   "tags": [
-    "ui",
-    "component-library"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

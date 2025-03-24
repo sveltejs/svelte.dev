@@ -1,6 +1,6 @@
 {
   "name": "@firstclasspostcodes/svelte",
-  "description": "Integrate postcode lookup functionality into Svelte forms.",
+  "description": "Integrate Firstclasspostcodes API into Svelte apps.",
   "repo_url": "https://github.com/firstclasspostcodes/firstclasspostcodes-js-plugin",
   "author": "Firstclasspostcodes",
   "homepage": "https://github.com/firstclasspostcodes/firstclasspostcodes-js-plugin",
@@ -8,7 +8,8 @@
   "dependents": 0,
   "updated": "2020-07-30T21:04:04.316Z",
   "tags": [
-    "utility"
+    "utility",
+    "integration"
   ],
   "svelte5": false,
   "runes": false,

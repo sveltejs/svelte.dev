@@ -1,6 +1,6 @@
 {
   "name": "svelte-bulma-lib",
-  "description": "Svelte components based on Bulma CSS framework.",
+  "description": "Provides Svelte versions of common Bulma components.",
   "repo_url": "https://github.com/thompson4822/svelte-bulma-lib",
   "author": "thompson4822",
   "homepage": "https://github.com/thompson4822/svelte-bulma-lib#readme",
@@ -8,8 +8,10 @@
   "dependents": 0,
   "updated": "2020-02-14T19:44:27.103Z",
   "tags": [
-    "component-library"
+    "component-library",
+    "ui"
   ],
   "svelte5": false,
-  "runes": false
+  "runes": false,
+  "github_stars": 0
 }

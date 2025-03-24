@@ -1,6 +1,7 @@
 {
   "name": "svelte-headless-components",
-  "description": "Provide headless UI components for Svelte.",
+  "description": "Create headless UI components for Svelte.",
+  "repo_url": "",
   "author": "adamnyberg",
   "downloads": 26,
   "dependents": 0,

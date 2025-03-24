@@ -1,6 +1,6 @@
 {
   "name": "stores-x",
-  "description": "Implement minimal VueX-inspired store for Svelte applications.",
+  "description": "Manage Svelte stores with actions, mutations, and getters.",
   "repo_url": "https://github.com/Anyass3/stores-x",
   "author": "Abdoulie Nyass",
   "homepage": "https://github.com/Anyass3/stores-x#readme",

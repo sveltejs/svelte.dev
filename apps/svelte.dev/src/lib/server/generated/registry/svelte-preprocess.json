@@ -1,6 +1,6 @@
 {
   "name": "svelte-preprocess",
-  "description": "Preprocess Svelte components with various tools.",
+  "description": "Preprocesses Svelte components, supporting various languages.",
   "repo_url": "https://github.com/sveltejs/svelte-preprocess",
   "author": "Christian Kaisermann",
   "homepage": "https://github.com/sveltejs/svelte-preprocess#readme",

@@ -1,6 +1,6 @@
 {
   "name": "@cypress/svelte",
-  "description": "Enable browser-based component testing for Svelte.",
+  "description": "Enable browser-based component testing for Svelte.js with Cypress.io.",
   "repo_url": "https://github.com/cypress-io/cypress",
   "author": "cypress-npm-publisher",
   "homepage": "https://github.com/cypress-io/cypress/blob/develop/npm/svelte/#readme",
@@ -12,5 +12,5 @@
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 48439
+  "github_stars": 48440
 }

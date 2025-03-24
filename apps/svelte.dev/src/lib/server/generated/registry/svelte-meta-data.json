@@ -1,6 +1,7 @@
 {
   "name": "svelte-meta-data",
   "description": "Manage SEO metadata for Svelte applications.",
+  "repo_url": "",
   "author": "Jacob Stordahl",
   "downloads": 2,
   "dependents": 0,

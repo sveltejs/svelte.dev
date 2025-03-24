@@ -1,6 +1,6 @@
 {
   "name": "@viamrobotics/prettier-config-svelte",
-  "description": "Provide Prettier configuration for Svelte projects.",
+  "description": "Shared Prettier configuration for Svelte projects.",
   "repo_url": "https://github.com/viamrobotics/js-config",
   "author": "cheukt",
   "homepage": "https://github.com/viamrobotics/js-config#readme",
@@ -8,8 +8,7 @@
   "dependents": 0,
   "updated": "2024-12-03T16:12:49.990Z",
   "tags": [
-    "tooling",
-    "preprocessor"
+    "tooling"
   ],
   "svelte5": true,
   "runes": false,

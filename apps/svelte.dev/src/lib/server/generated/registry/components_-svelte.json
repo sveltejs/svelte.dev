@@ -1,13 +1,13 @@
 {
   "name": "@components_/svelte",
-  "description": "Reusable Svelte components for building user interfaces.",
+  "description": "Create reusable Svelte components.",
+  "repo_url": "",
   "author": "rick-torrellas",
   "downloads": 21,
   "dependents": 0,
   "updated": "2022-07-20T19:13:50.912Z",
   "tags": [
-    "component-library",
-    "ui"
+    "component-library"
   ],
   "svelte5": false,
   "runes": false

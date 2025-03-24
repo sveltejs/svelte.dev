@@ -1,6 +1,7 @@
 {
   "name": "@centroculturadigital-mx/svelte-themer",
-  "description": "Style Svelte apps with CSS Variables, persisted.",
+  "description": "Style Svelte apps using CSS variables, with theme persistence.",
+  "repo_url": "",
   "author": "furenku",
   "downloads": 24,
   "dependents": 0,

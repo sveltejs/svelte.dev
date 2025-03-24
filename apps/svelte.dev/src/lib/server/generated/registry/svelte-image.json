@@ -1,6 +1,6 @@
 {
   "name": "svelte-image",
-  "description": "Optimizes images using sharp for Svelte applications.",
+  "description": "Optimizes images using Sharp for Svelte applications.",
   "repo_url": "https://github.com/matyunya/svelte-image",
   "author": "Maxim Matyunin",
   "homepage": "https://github.com/matyunya/svelte-image#readme",
@@ -8,7 +8,7 @@
   "dependents": 1,
   "updated": "2020-12-16T11:01:38.614Z",
   "tags": [
-    "utility"
+    "media"
   ],
   "svelte5": false,
   "runes": false,

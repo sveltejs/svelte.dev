@@ -1,6 +1,6 @@
 {
   "name": "typescript-svelte-plugin",
-  "description": "Provides TypeScript plugin for Svelte intellisense.",
+  "description": "Provides TypeScript intellisense for Svelte files.",
   "repo_url": "https://github.com/sveltejs/language-tools",
   "author": "The Svelte Community",
   "homepage": "https://github.com/sveltejs/language-tools/tree/master/packages/typescript-plugin",

@@ -1,6 +1,6 @@
 {
   "name": "@svelte-put/intersect",
-  "description": "Wraps IntersectionObserver, enabling lazy loading and intersection detection.",
+  "description": "Action to wrap IntersectionObserver in Svelte.",
   "repo_url": "https://github.com/vnphanquang/svelte-put",
   "author": "Quang Phan",
   "homepage": "https://github.com/vnphanquang/svelte-put/tree/next/packages/intersect",

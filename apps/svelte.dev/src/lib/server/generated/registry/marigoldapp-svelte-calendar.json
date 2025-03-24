@@ -1,6 +1,7 @@
 {
   "name": "@marigoldapp/svelte-calendar",
-  "description": "Simple date picker built with Svelte.",
+  "description": "Create date picker component for Svelte.",
+  "repo_url": "",
   "author": "marigoldapp",
   "downloads": 2,
   "dependents": 0,

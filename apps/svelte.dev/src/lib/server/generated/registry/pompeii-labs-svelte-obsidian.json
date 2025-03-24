@@ -1,6 +1,7 @@
 {
   "name": "@pompeii-labs/svelte-obsidian",
-  "description": "Integrate Magma chat with Svelte components.",
+  "description": "Svelte providers for Magma chat integration.",
+  "repo_url": "",
   "author": "Pompeii Labs",
   "downloads": 147,
   "dependents": 0,

@@ -1,6 +1,7 @@
 {
   "name": "svelte-freeze",
-  "description": "Freeze Svelte components to prevent unnecessary updates.",
+  "description": "Provide freeze-like functionality for Svelte components.",
+  "repo_url": "",
   "author": "externdefs",
   "downloads": 50,
   "dependents": 0,

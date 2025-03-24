@@ -1,6 +1,6 @@
 {
   "name": "p45",
-  "description": "Generate SVG icons programmatically using grid-based drawing commands.",
+  "description": "Craft grid-based SVG icons programmatically in Svelte.",
   "repo_url": "https://github.com/PaulioRandall/p45",
   "author": "Paul Williams",
   "homepage": "https://github.com/PaulioRandall/p45#readme",
@@ -8,7 +8,7 @@
   "dependents": 1,
   "updated": "2024-07-02T22:26:58.768Z",
   "tags": [
-    "utility"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

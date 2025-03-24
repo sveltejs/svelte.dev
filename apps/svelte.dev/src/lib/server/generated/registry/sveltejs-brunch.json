@@ -1,6 +1,6 @@
 {
   "name": "sveltejs-brunch",
-  "description": "Compile Svelte components inside Brunch projects.",
+  "description": "Compile Svelte components within Brunch projects.",
   "repo_url": "https://github.com/StarpTech/sveltejs-brunch",
   "author": "Dustin Deus",
   "homepage": "https://github.com/StarpTech/sveltejs-brunch#readme",

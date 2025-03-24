@@ -1,6 +1,6 @@
 {
   "name": "svelte-h-split-pane",
-  "description": "Create horizontal pane splitter for Svelte applications.",
+  "description": "Create horizontal split panes in Svelte applications.",
   "repo_url": "https://github.com/Readiz/svelte-h-split-pane",
   "author": "Readiz",
   "homepage": "https://readiz.com/",

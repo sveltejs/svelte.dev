@@ -1,6 +1,6 @@
 {
   "name": "svelte-konva",
-  "description": "Svelte wrapper for Konva.",
+  "description": "Integrate Konva for interactive graphics in Svelte apps.",
   "repo_url": "https://github.com/konvajs/svelte-konva",
   "author": "TeyKey1",
   "homepage": "https://konvajs.org/docs/svelte",

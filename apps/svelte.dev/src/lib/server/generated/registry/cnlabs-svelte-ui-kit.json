@@ -1,6 +1,6 @@
 {
   "name": "@cnlabs/svelte-ui-kit",
-  "description": "Develop UI with a collection of Svelte components.",
+  "description": "Build UI with a collection of Svelte components.",
   "repo_url": "git@gitlab.com/cian-finance/content-distribution/svelte-ui-kit",
   "author": "migger",
   "homepage": "https://gitlab.com/cian-finance/content-distribution/svelte-ui-kit#readme",
@@ -8,8 +8,7 @@
   "dependents": 0,
   "updated": "2021-06-28T12:33:48.136Z",
   "tags": [
-    "component-library",
-    "ui"
+    "component-library"
   ],
   "svelte5": false,
   "runes": false

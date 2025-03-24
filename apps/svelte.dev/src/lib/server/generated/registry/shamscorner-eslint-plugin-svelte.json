@@ -1,6 +1,6 @@
 {
   "name": "@shamscorner/eslint-plugin-svelte",
-  "description": "Provide ESLint rules for Svelte components.",
+  "description": "Lint Svelte code using ESLint.",
   "repo_url": "https://github.com/sveltejs/eslint-plugin-svelte",
   "author": "Yosuke Ota",
   "homepage": "https://sveltejs.github.io/eslint-plugin-svelte",

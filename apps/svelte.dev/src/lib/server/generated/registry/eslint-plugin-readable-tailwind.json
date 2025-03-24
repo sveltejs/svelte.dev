@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-readable-tailwind",
-  "description": "Automatically wraps Tailwind classes for readability.",
+  "description": "Enforces readable Tailwind CSS class formatting in Svelte.",
   "repo_url": "https://github.com/schoero/eslint-plugin-readable-tailwind",
   "author": "Roger Schönbächler",
   "homepage": "https://github.com/schoero/eslint-plugin-readable-tailwind#readme",

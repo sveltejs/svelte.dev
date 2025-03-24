@@ -1,13 +1,13 @@
 {
   "name": "@ggchivalrous/db-ui",
-  "description": "Provide Svelte component library.",
+  "description": "Build UI components for Svelte with database integration.",
+  "repo_url": "",
   "author": "ggchivalrous",
   "downloads": 3,
   "dependents": 0,
   "updated": "2023-12-03T07:24:16.128Z",
   "tags": [
-    "component-library",
-    "ui"
+    "component-library"
   ],
   "svelte5": false,
   "runes": false

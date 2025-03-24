@@ -1,6 +1,6 @@
 {
   "name": "spa-storage",
-  "description": "Integrate browser storage easily with Svelte and Pinia.",
+  "description": "Integrate browser storage with Svelte and Pinia.",
   "repo_url": "https://github.com/arthurgermano/spa-storage",
   "author": "Arthur J. Germano",
   "homepage": "https://arthurgermano.github.io/spa-storage/",

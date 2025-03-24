@@ -1,6 +1,6 @@
 {
   "name": "sveltekit-superfetch",
-  "description": "Interact with APIs in SvelteKit, with optional request logging.",
+  "description": "Interact with APIs in SvelteKit with logging support.",
   "repo_url": "https://github.com/pevey/sveltekit-superfetch",
   "author": "Lacey Pevey",
   "homepage": "https://pevey.com/sveltekit-superfetch",
@@ -8,8 +8,7 @@
   "dependents": 2,
   "updated": "2025-01-22T04:08:16.102Z",
   "tags": [
-    "utility",
-    "server"
+    "utility"
   ],
   "svelte5": true,
   "runes": false,

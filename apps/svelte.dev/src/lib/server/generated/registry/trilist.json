@@ -1,6 +1,6 @@
 {
   "name": "trilist",
-  "description": "Create tree data web components: treeselect and treeview.",
+  "description": "Create treeselect and treeview web components for tree data.",
   "repo_url": "https://github.com/beholdr/trilist",
   "author": "Alexander Shabunevich",
   "homepage": "https://github.com/beholdr/trilist#readme",

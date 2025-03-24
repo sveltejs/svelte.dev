@@ -1,6 +1,7 @@
 {
   "name": "svelte-listbox",
-  "description": "Create listbox UI components for Svelte applications.",
+  "description": "Provides Svelte implementation of listbox component.",
+  "repo_url": "",
   "author": "danipo",
   "downloads": 2,
   "dependents": 0,

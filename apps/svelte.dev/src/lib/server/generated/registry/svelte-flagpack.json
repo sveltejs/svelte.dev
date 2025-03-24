@@ -1,6 +1,6 @@
 {
   "name": "svelte-flagpack",
-  "description": "Display flag icons in Svelte projects.",
+  "description": "Provides flag icons as Svelte components for various countries.",
   "repo_url": "https://github.com/Yummygum/svelte-flagpack",
   "author": "Yummygum,",
   "homepage": "https://github.com/Yummygum/svelte-flagpack#readme",

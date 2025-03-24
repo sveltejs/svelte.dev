@@ -1,6 +1,6 @@
 {
   "name": "qonstrue-svelte-modals",
-  "description": "Manage simple, flexible, zero-dependency modal manager for Svelte.",
+  "description": "Manage modals in Svelte applications.",
   "repo_url": "https://github.com/mattjennings/svelte-modals",
   "author": "Matt Jennings",
   "homepage": "https://svelte-modals.mattjennin.gs",

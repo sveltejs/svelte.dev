@@ -1,6 +1,7 @@
 {
   "name": "@htmlbricks/hb-layout-mobile",
-  "description": "Create Bootstrap mobile layout component for Svelte applications.",
+  "description": "Svelte Bootstrap 5 WebComponent.",
+  "repo_url": "",
   "author": "Dario Caruso",
   "downloads": 293,
   "dependents": 1,

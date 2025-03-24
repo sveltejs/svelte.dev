@@ -1,6 +1,6 @@
 {
   "name": "svelte-extras",
-  "description": "Provides extra methods for Svelte components.",
+  "description": "Provide extra methods for Svelte components.",
   "repo_url": "https://github.com/sveltejs/svelte-extras",
   "author": "Rich Harris",
   "homepage": "https://github.com/sveltejs/svelte-extras#readme",

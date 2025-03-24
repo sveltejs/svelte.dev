@@ -1,6 +1,6 @@
 {
   "name": "svelte-naver-maps",
-  "description": "Integrate Naver Maps into Svelte applications.",
+  "description": "Integrates Naver Maps into Svelte applications.",
   "repo_url": "https://github.com/dalcon10028/svelte-naver-maps",
   "author": "dalcon10028",
   "homepage": "https://svelte-naver-maps.vercel.app/",

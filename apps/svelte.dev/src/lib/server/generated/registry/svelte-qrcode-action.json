@@ -1,6 +1,6 @@
 {
   "name": "svelte-qrcode-action",
-  "description": "Generate QR codes using Svelte action.",
+  "description": "Generate QR codes in Svelte using an action.",
   "repo_url": "https://github.com/binsarjr/svelte-qrcode-action",
   "author": "binsarjr",
   "homepage": "https://github.com/binsarjr/svelte-qrcode-action#readme",

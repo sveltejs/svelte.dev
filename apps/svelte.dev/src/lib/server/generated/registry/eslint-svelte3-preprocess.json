@@ -1,6 +1,6 @@
 {
   "name": "eslint-svelte3-preprocess",
-  "description": "Preprocess Svelte code for eslint-plugin-svelte3.",
+  "description": "Preprocess Svelte code for eslint-plugin-svelte3, supporting TypeScript.",
   "repo_url": "https://github.com/NicoCevallos/eslint-svelte3-preprocess",
   "author": "nicocevallos",
   "homepage": "https://github.com/NicoCevallos/eslint-svelte3-preprocess#readme",
@@ -8,7 +8,8 @@
   "dependents": 0,
   "updated": "2021-02-16T15:59:49.410Z",
   "tags": [
-    "tooling"
+    "tooling",
+    "preprocessor"
   ],
   "svelte5": true,
   "runes": false,

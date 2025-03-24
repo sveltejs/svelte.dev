@@ -1,6 +1,6 @@
 {
   "name": "@figliolia/enhanced-stores",
-  "description": "Enhance Svelte stores with middleware support.",
+  "description": "Enhance Svelte stores with middleware for advanced state management.",
   "repo_url": "https://github.com/alexfigliolia/enhanced-stores",
   "author": "Alex Figliolia",
   "homepage": "https://github.com/alexfigliolia/enhanced-stores#readme",

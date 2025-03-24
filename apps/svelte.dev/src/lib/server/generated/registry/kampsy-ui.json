@@ -1,6 +1,6 @@
 {
   "name": "kampsy-ui",
-  "description": "Builds consistent, cohesive web experiences with Svelte 5 components.",
+  "description": "Build consistent web experiences with Svelte 5 components.",
   "repo_url": "https://github.com/kampsy/ui",
   "author": "Kampamba Chanda",
   "homepage": "https://ui.kampsy.xyz",
@@ -8,8 +8,7 @@
   "dependents": 0,
   "updated": "2025-03-16T11:01:07.034Z",
   "tags": [
-    "component-library",
-    "ui"
+    "component-library"
   ],
   "svelte5": true,
   "runes": false,

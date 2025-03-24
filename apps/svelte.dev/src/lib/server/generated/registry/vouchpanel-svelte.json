@@ -1,6 +1,6 @@
 {
   "name": "@vouchpanel/svelte",
-  "description": "Provides Svelte component library template for vouchpanel.",
+  "description": "Embed Vouchpanel testimonials into Svelte projects.",
   "repo_url": "https://github.com/vouchpanel/vouchpanel-svelte",
   "author": "Patrick Roberts",
   "homepage": "https://github.com/vouchpanel/vouchpanel-svelte#readme",

@@ -1,6 +1,6 @@
 {
   "name": "@egjs/svelte-conveyer",
-  "description": "Add drag gestures to native scroll in Svelte apps.",
+  "description": "Adds drag gestures to native scroll in Svelte applications.",
   "repo_url": "https://github.com/naver/egjs-conveyer",
   "author": "NAVER Corp.",
   "homepage": "https://github.com/naver/egjs-conveyer",
@@ -8,7 +8,8 @@
   "dependents": 1,
   "updated": "2023-09-27T04:35:48.923Z",
   "tags": [
-    "utility"
+    "utility",
+    "dom"
   ],
   "svelte5": false,
   "runes": false,

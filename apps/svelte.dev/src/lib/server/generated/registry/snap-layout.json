@@ -1,6 +1,6 @@
 {
   "name": "snap-layout",
-  "description": "Provides lightweight layout snapping for Svelte.",
+  "description": "Implement layout snapping functionality in Svelte applications.",
   "repo_url": "https://github.com/ThaUnknown/snap-layout",
   "author": "thaunknown",
   "homepage": "https://github.com/ThaUnknown/snap-layout#readme",

@@ -1,6 +1,6 @@
 {
   "name": "@st-graphics/svelte-scrolly",
-  "description": "Create scrollytelling components for Svelte applications.",
+  "description": "Create scrollytelling components for Svelte.",
   "repo_url": "https://github.com/yongjun21/st-scrolly",
   "author": "Yong Jun",
   "homepage": "https://github.com/yongjun21/st-scrolly#readme",

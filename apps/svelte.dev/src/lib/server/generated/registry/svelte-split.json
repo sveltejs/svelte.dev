@@ -1,6 +1,6 @@
 {
   "name": "svelte-split",
-  "description": "Creates split panel layouts within Svelte applications.",
+  "description": "Provides split panel component for Svelte.",
   "repo_url": "https://github.com/rabee-inc/svelte-split",
   "author": "phi",
   "homepage": "https://github.com/rabee-inc/svelte-split#readme",

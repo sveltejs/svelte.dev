@@ -1,6 +1,7 @@
 {
   "name": "@jacksonthall22/svelte-chessground",
-  "description": "Integrate Chessground chessboard component into Svelte apps.",
+  "description": "Svelte component for Chessground chess UI.",
+  "repo_url": "",
   "author": "jacksonthall22",
   "homepage": "https://github.com/gtim/svelte-chessground#readme",
   "downloads": 11,

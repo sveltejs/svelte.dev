@@ -1,6 +1,7 @@
 {
   "name": "@htmlbricks/hb-pad-joistick",
-  "description": "Create Svelte-Bootstrap pad-joistick web components.",
+  "description": "Create pad-joystick web components for Svelte applications.",
+  "repo_url": "",
   "author": "Dario Caruso",
   "downloads": 2,
   "dependents": 0,

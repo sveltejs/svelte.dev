@@ -1,6 +1,6 @@
 {
   "name": "sveltekit-html-minifier",
-  "description": "Minify prerendered HTML output in SvelteKit applications.",
+  "description": "Minify prerendered HTML pages in SvelteKit.",
   "repo_url": "https://github.com/ntsd/sveltekit-html-minifier",
   "author": "Jirawat Boonkumnerd",
   "homepage": "https://github.com/ntsd/sveltekit-html-minifier#readme",
@@ -9,7 +9,7 @@
   "updated": "2024-10-25T06:10:25.528Z",
   "tags": [
     "adapter",
-    "tooling"
+    "performance"
   ],
   "svelte5": false,
   "runes": false,

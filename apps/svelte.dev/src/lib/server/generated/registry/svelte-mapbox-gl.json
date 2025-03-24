@@ -1,6 +1,6 @@
 {
   "name": "svelte-mapbox-gl",
-  "description": "Create Mapbox GL components for Svelte applications.",
+  "description": "Create interactive maps using Mapbox GL components for Svelte.",
   "repo_url": "https://github.com/saravanabalagi/svelte-mapbox-gl",
   "author": "Saravanabalagi Ramachandran",
   "homepage": "https://github.com/saravanabalagi/svelte-mapbox-gl#readme",

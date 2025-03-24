@@ -1,6 +1,6 @@
 {
   "name": "svelte-conmu",
-  "description": "Create context menus in Svelte applications.",
+  "description": "Creates headless context menus for Svelte applications.",
   "repo_url": "https://github.com/jzillmann/svelte-conmu",
   "author": "jzillmann",
   "homepage": "https://github.com/jzillmann/svelte-conmu#readme",
@@ -8,8 +8,7 @@
   "dependents": 0,
   "updated": "2023-05-06T18:07:49.138Z",
   "tags": [
-    "ui",
-    "utility"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

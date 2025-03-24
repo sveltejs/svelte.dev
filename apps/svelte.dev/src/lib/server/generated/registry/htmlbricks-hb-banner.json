@@ -1,6 +1,7 @@
 {
   "name": "@htmlbricks/hb-banner",
-  "description": "Create banner web component for Svelte apps.",
+  "description": "Svelte Banner WebComponent.",
+  "repo_url": "",
   "author": "Dario Caruso",
   "downloads": 475,
   "dependents": 2,

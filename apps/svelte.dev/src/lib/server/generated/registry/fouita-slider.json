@@ -1,6 +1,6 @@
 {
   "name": "@fouita/slider",
-  "description": "Create form range (slider) components with Svelte and TailwindCSS.",
+  "description": "Create range slider component with Tailwind CSS styling.",
   "repo_url": "https://github.com/fouita/svelte-tw-slider",
   "author": "fouita",
   "homepage": "https://github.com/fouita/svelte-tw-slider#readme",

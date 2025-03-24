@@ -1,6 +1,6 @@
 {
   "name": "parcel-plugin-svelte",
-  "description": "Enable Svelte support in Parcel bundler.",
+  "description": "Parcel plugin to support Svelte.",
   "repo_url": "https://github.com/DeMoorJasper/parcel-plugin-svelte",
   "author": "Jasper De Moor",
   "homepage": "https://github.com/DeMoorJasper/parcel-plugin-svelte#readme",

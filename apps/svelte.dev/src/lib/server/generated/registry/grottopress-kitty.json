@@ -1,6 +1,6 @@
 {
   "name": "@grottopress/kitty",
-  "description": "Provide utilities for SvelteKit applications.",
+  "description": "Provides utilities for SvelteKit, including CSRF protection and sessions.",
   "repo_url": "https://github.com/GrottoPress/kitty",
   "author": "GrottoPress",
   "homepage": "https://github.com/GrottoPress/kitty#README",
@@ -8,7 +8,8 @@
   "dependents": 0,
   "updated": "2025-02-24T14:09:14.731Z",
   "tags": [
-    "utility"
+    "utility",
+    "server"
   ],
   "svelte5": true,
   "runes": false,

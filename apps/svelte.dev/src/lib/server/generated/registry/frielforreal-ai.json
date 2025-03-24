@@ -1,6 +1,6 @@
 {
   "name": "@frielforreal/ai",
-  "description": "Build AI-powered applications with Svelte and Vercel AI SDK.",
+  "description": "Build AI-powered applications using Svelte and Vercel AI SDK.",
   "repo_url": "https://github.com/vercel/ai",
   "author": "frielforreal",
   "homepage": "https://sdk.vercel.ai/docs",
@@ -8,9 +8,9 @@
   "dependents": 0,
   "updated": "2024-07-08T02:19:11.228Z",
   "tags": [
-    "utility"
+    "integration"
   ],
   "svelte5": false,
   "runes": false,
-  "github_stars": 12872
+  "github_stars": 12885
 }

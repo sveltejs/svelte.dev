@@ -1,6 +1,6 @@
 {
   "name": "svate",
-  "description": "Implement state machines for Svelte applications.",
+  "description": "Provides state machines for Svelte applications.",
   "repo_url": "https://github.com/AlexxNB/svate",
   "author": "Alexey Schebelev",
   "homepage": "https://github.com/AlexxNB/svate#readme",

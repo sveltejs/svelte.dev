@@ -1,6 +1,6 @@
 {
   "name": "@svelte-put/select",
-  "description": "Create feature-rich, type-safe, accessible select components.",
+  "description": "Provides feature-rich, extensible, accessible select component.",
   "repo_url": "https://github.com/vnphanquang/svelte-put",
   "author": "Quang Phan",
   "homepage": "https://github.com/vnphanquang/svelte-put/tree/main/packages/select",

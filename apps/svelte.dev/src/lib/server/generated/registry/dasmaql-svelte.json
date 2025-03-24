@@ -1,6 +1,7 @@
 {
   "name": "dasmaql-svelte",
   "description": "Integrate DasmaQL query language into Svelte applications.",
+  "repo_url": "",
   "author": "Mads Hansen Lund",
   "downloads": 0,
   "dependents": 0,

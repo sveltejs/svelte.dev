@@ -1,6 +1,7 @@
 {
   "name": "madskrist.horizon-ui",
-  "description": "Create 3D UI library for Svelte applications.",
+  "description": "Create 3D UI components for Svelte.",
+  "repo_url": "",
   "author": "ManMade2",
   "downloads": 0,
   "dependents": 0,

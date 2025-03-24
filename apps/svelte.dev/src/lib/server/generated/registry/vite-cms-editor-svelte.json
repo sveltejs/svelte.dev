@@ -1,6 +1,6 @@
 {
   "name": "@vite-cms/editor-svelte",
-  "description": "Edit content files directly within Vite applications.",
+  "description": "Edit content files from inside Vite app.",
   "repo_url": "https://github.com/StarLederer/vite-plugin-content",
   "author": "Star Lederer",
   "homepage": "https://github.com/StarLederer/vite-plugin-content#readme",
@@ -11,5 +11,6 @@
     "tooling"
   ],
   "svelte5": false,
-  "runes": false
+  "runes": false,
+  "github_stars": 0
 }

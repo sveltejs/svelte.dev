@@ -1,6 +1,6 @@
 {
   "name": "svelte-theme-provider",
-  "description": "Provide theme support for Svelte applications.",
+  "description": "Implement theme provider for Svelte applications.",
   "repo_url": "https://github.com/wecount-dev/svelte-theme-provider",
   "author": "Yujong Lee",
   "homepage": "https://github.com/wecount-dev/svelte-theme-provider",

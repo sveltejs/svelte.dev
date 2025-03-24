@@ -1,6 +1,6 @@
 {
   "name": "@tagnumelite/svelte-chartjs",
-  "description": "Create charts using Chart.js within Svelte components.",
+  "description": "Provide Svelte component wrappers for Chart.JS.",
   "author": "tagnumelite",
   "homepage": "https://github.com/TagnumElite/tagnumelite-svelte-chartjs",
   "downloads": 3,

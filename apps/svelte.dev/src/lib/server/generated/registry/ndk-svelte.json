@@ -1,6 +1,7 @@
 {
   "name": "ndk-svelte",
-  "description": "Provide convenience functions for using NDK with Svelte.",
+  "description": "Provides convenience functions for using NDK with Svelte.",
+  "repo_url": "",
   "author": "pablof7z",
   "downloads": 10,
   "dependents": 0,

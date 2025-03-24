@@ -1,6 +1,6 @@
 {
   "name": "sveltix",
-  "description": "Manage complex Svelte stores with Pinia-like API.",
+  "description": "Manage complex stores in Svelte with Pinia-like API.",
   "repo_url": "https://github.com/SpongeBed81/sveltix",
   "author": "SpongeBed",
   "homepage": "https://github.com/SpongeBed81/sveltix#readme",

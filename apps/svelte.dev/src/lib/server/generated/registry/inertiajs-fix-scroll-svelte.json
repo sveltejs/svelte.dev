@@ -1,6 +1,6 @@
 {
   "name": "@inertiajs-fix-scroll/svelte",
-  "description": "Use Inertia.js with Svelte for modern web applications.",
+  "description": "Svelte adapter for Inertia.js.",
   "repo_url": "https://github.com/inertiajs/inertia",
   "author": "axel-sh",
   "homepage": "https://inertiajs.com/",
@@ -12,5 +12,5 @@
   ],
   "svelte5": false,
   "runes": false,
-  "github_stars": 6977
+  "github_stars": 6980
 }

@@ -1,6 +1,6 @@
 {
   "name": "svelte-entitlement",
-  "description": "Manage entitlements and feature flags in Svelte apps.",
+  "description": "Manage user entitlements in Svelte applications.",
   "repo_url": "https://github.com/arlac77/svelte-entitlement",
   "author": "arlac77",
   "homepage": "https://github.com/arlac77/svelte-entitlement#readme",

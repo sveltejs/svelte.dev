@@ -1,11 +1,13 @@
 {
   "name": "@ikun-ui/switch",
-  "description": "Implement switch components for Svelte.",
+  "description": "Create switch components for Svelte applications.",
+  "repo_url": "",
   "author": "baiwusanyu",
   "downloads": 36,
   "dependents": 1,
   "updated": "2025-01-24T03:49:22.031Z",
   "tags": [
+    "component-library",
     "ui"
   ],
   "svelte5": false,

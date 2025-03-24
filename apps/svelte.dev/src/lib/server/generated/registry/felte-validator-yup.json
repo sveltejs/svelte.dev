@@ -1,6 +1,6 @@
 {
   "name": "@felte/validator-yup",
-  "description": "Validate Felte forms using Yup schema in Svelte.",
+  "description": "Use Yup for form validation with Felte in Svelte.",
   "repo_url": "https://github.com/pablo-abc/felte",
   "author": "Pablo Berganza",
   "homepage": "https://github.com/pablo-abc/felte/tree/main/packages/validator-yup",

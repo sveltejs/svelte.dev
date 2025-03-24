@@ -1,6 +1,6 @@
 {
   "name": "@powchess/chessboard",
-  "description": "Create chessboard UI for Svelte.",
+  "description": "Create chessboard UI for PowChess.com.",
   "repo_url": "https://github.com/powchess/chessboard",
   "author": "PowChess GmbH",
   "homepage": "https://powchess.com",

@@ -1,6 +1,6 @@
 {
   "name": "overlayscrollbars-svelte",
-  "description": "Integrate OverlayScrollbars into Svelte applications.",
+  "description": "Integrate OverlayScrollbars into Svelte components.",
   "repo_url": "https://github.com/KingSora/OverlayScrollbars",
   "author": "Rene Haas | KingSora",
   "homepage": "https://kingsora.github.io/OverlayScrollbars",

@@ -1,6 +1,6 @@
 {
   "name": "@w5/svelteup",
-  "description": "Bundles Svelte components as web components using esbuild.",
+  "description": "Bundle Svelte components as web components quickly.",
   "repo_url": "https://github.com/wacfork/svelteup",
   "author": "brandonxiang",
   "homepage": "https://github.com/wacfork/svelteup#readme",

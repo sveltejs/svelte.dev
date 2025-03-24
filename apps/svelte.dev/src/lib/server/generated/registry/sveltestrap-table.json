@@ -1,12 +1,13 @@
 {
   "name": "sveltestrap-table",
-  "description": "Create tables with pagination and sort controls in Svelte apps.",
+  "description": "Create table components with pagination and sort controls.",
+  "repo_url": "",
   "author": "hazg",
   "downloads": 0,
   "dependents": 0,
   "updated": "2021-06-22T09:09:35.260Z",
   "tags": [
-    "component-library"
+    "ui"
   ],
   "svelte5": false,
   "runes": false

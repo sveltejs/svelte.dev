@@ -1,6 +1,6 @@
 {
   "name": "@svelte-parts/map",
-  "description": "Create Leaflet maps with tiles, markers, and GeoJSON.",
+  "description": "Create Leaflet map components for Svelte applications.",
   "repo_url": "https://github.com/idris-maps/svelte-parts",
   "author": "idris-maps",
   "homepage": "https://github.com/idris-maps/svelte-parts#readme",

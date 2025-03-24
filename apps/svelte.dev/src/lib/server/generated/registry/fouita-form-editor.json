@@ -1,6 +1,6 @@
 {
   "name": "@fouita/form-editor",
-  "description": "Build forms using a no-code editor with Svelte and TailwindCSS.",
+  "description": "Build forms using nocode editor, built with Svelte and TailwindCSS.",
   "repo_url": "https://github.com/fouita/form-editor",
   "author": "fouita",
   "homepage": "https://github.com/fouita/form-editor#readme",
@@ -8,8 +8,7 @@
   "dependents": 0,
   "updated": "2022-12-30T09:50:05.324Z",
   "tags": [
-    "utility",
-    "ui"
+    "component-library"
   ],
   "svelte5": false,
   "runes": false,

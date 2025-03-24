@@ -1,6 +1,7 @@
 {
   "name": "@smelterial/you-icon",
   "description": "Access Google's Material Symbols in Svelte.",
+  "repo_url": "",
   "author": "willster277",
   "downloads": 0,
   "dependents": 1,

@@ -1,6 +1,6 @@
 {
   "name": "@castlenine/svelte-aoe",
-  "description": "Animate elements using CSS transitions based on viewport visibility.",
+  "description": "Animate elements on enter with Svelte.",
   "repo_url": "https://github.com/castlenine/svelte-aoe",
   "author": "Alexandre Castlenine",
   "homepage": "https://github.com/castlenine/svelte-aoe",

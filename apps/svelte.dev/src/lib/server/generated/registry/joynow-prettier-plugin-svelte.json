@@ -1,6 +1,6 @@
 {
   "name": "@joynow/prettier-plugin-svelte",
-  "description": "Formats Svelte code using Prettier.",
+  "description": "Formats Svelte code with Prettier.",
   "repo_url": "https://github.com/sveltejs/prettier-plugin-svelte",
   "author": "joynow",
   "homepage": "https://github.com/sveltejs/prettier-plugin-svelte#readme",

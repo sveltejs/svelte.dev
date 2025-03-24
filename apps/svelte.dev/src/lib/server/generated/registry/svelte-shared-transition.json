@@ -1,6 +1,6 @@
 {
   "name": "svelte-shared-transition",
-  "description": "Transition elements between routes in Svelte applications.",
+  "description": "Transition shared elements between routes in Svelte apps.",
   "repo_url": "https://github.com/JoshuaAmaju/svelte-shared-transition",
   "author": "Joshua Amaju",
   "homepage": "https://github.com/JoshuaAmaju/svelte-shared-transition#readme",

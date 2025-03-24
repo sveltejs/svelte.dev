@@ -1,6 +1,6 @@
 {
   "name": "@selenite/graph-editor",
-  "description": "Create graph editors for visual programming with Svelte.",
+  "description": "Create graph editor for visual programming with Svelte.",
   "repo_url": "https://github.com/Selenite-GEOS/graph-editor",
   "author": "moonlyss",
   "homepage": "https://selenite-geos.github.io/docs/developper/components/#graph-editor",

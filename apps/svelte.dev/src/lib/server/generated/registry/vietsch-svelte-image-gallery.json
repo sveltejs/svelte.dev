@@ -1,6 +1,6 @@
 {
   "name": "@vietsch/svelte-image-gallery",
-  "description": "Create image gallery component for Svelte apps.",
+  "description": "Build image galleries with Svelte.",
   "repo_url": "https://github.com/Vietsch/svelte-image-gallery",
   "author": "Volker von Vietsch",
   "homepage": "https://github.com/Vietsch/svelte-image-gallery",
@@ -8,8 +8,8 @@
   "dependents": 0,
   "updated": "2025-01-29T14:59:10.343Z",
   "tags": [
-    "ui",
-    "media"
+    "media",
+    "ui"
   ],
   "svelte5": false,
   "runes": false

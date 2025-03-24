@@ -1,6 +1,7 @@
 {
   "name": "ssvelte-datepicker",
-  "description": "Implement datepicker component for Svelte apps.",
+  "description": "Create datepicker component for Svelte apps.",
+  "repo_url": "",
   "author": "runningzs",
   "downloads": 0,
   "dependents": 0,

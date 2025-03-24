@@ -11,5 +11,6 @@
     "integration"
   ],
   "svelte5": true,
-  "runes": false
+  "runes": false,
+  "github_stars": 2
 }

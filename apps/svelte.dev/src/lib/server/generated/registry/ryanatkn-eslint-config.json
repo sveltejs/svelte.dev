@@ -1,6 +1,6 @@
 {
   "name": "@ryanatkn/eslint-config",
-  "description": "ESLint config for TypeScript, Svelte, Prettier.",
+  "description": "ESLint config for TypeScript, Svelte, and Prettier.",
   "repo_url": "https://github.com/ryanatkn/eslint-config",
   "author": "Ryan Atkinson",
   "homepage": "https://github.com/ryanatkn/eslint-config",

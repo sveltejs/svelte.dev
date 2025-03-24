@@ -1,6 +1,6 @@
 {
   "name": "@vtmn/svelte",
-  "description": "Provides Decathlon Design System - Vitamin Svelte components.",
+  "description": "Decathlon Design System - Vitamin Svelte components library.",
   "repo_url": "https://github.com/Decathlon/vitamin-web",
   "author": "ossdecathlon",
   "homepage": "https://github.com/Decathlon/vitamin-web/tree/main/packages/sources/svelte",

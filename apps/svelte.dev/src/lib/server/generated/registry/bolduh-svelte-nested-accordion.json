@@ -1,6 +1,6 @@
 {
   "name": "@bolduh/svelte-nested-accordion",
-  "description": "Create nested accordion component for Svelte.",
+  "description": "Create nested accordion components for Svelte.",
   "repo_url": "https://github.com/b3b00/svelte-nested-accordion",
   "author": "b3b00",
   "homepage": "https://github.com/b3b00/svelte-nested-accordion",

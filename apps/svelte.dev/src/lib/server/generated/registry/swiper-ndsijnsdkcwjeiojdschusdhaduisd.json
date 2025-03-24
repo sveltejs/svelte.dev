@@ -1,6 +1,6 @@
 {
   "name": "swiper-ndsijnsdkcwjeiojdschusdhaduisd",
-  "description": "Create touch slider with hardware accelerated transitions.",
+  "description": "Modern mobile touch slider with hardware accelerated transitions.",
   "repo_url": "https://github.com/nolimits4web/Swiper",
   "author": "Vladimir Kharlampidi",
   "homepage": "https://swiperjs.com",
@@ -12,5 +12,5 @@
   ],
   "svelte5": false,
   "runes": false,
-  "github_stars": 40706
+  "github_stars": 40711
 }

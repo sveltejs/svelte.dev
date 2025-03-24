@@ -1,6 +1,6 @@
 {
   "name": "svelte-guardian",
-  "description": "Implement authentication for SvelteKit applications.",
+  "description": "Provides authentication for SvelteKit applications.",
   "repo_url": "https://github.com/mudiageo/svelte-guardian",
   "author": "Mudia Geo",
   "homepage": "https://github.com/mudiageo/svelte-guardian#readme",

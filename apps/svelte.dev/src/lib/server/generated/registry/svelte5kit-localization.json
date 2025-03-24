@@ -1,6 +1,6 @@
 {
   "name": "svelte5kit-localization",
-  "description": "Implement localization for SvelteKit with Svelte 5 reactivity.",
+  "description": "Provides localization for SvelteKit with Svelte 5 reactivity.",
   "repo_url": "https://github.com/ktarmyshov/svelte5kit-localization",
   "author": "Konstantin Tarmyshov",
   "homepage": "https://github.com/ktarmyshov/svelte5kit-localization",

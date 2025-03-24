@@ -1,6 +1,6 @@
 {
   "name": "svelte-code-copy",
-  "description": "Adds copy button to code blocks in Svelte.",
+  "description": "Adds copy-to-clipboard functionality to code blocks in Svelte.",
   "repo_url": "https://github.com/jill64/svelte-code-copy",
   "author": "jill64",
   "homepage": "https://github.com/jill64/svelte-code-copy#readme",

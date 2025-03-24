@@ -9,8 +9,9 @@
   "updated": "2021-10-21T01:52:04.074Z",
   "tags": [
     "utility",
-    "auth"
+    "integration"
   ],
   "svelte5": false,
-  "runes": false
+  "runes": false,
+  "github_stars": 43
 }

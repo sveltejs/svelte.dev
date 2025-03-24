@@ -1,6 +1,7 @@
 {
   "name": "svelte-houston",
-  "description": "Push button assemblies for Svelte.",
+  "description": "Create push button assemblies for Svelte.",
+  "repo_url": "",
   "author": "loveencounterflow",
   "downloads": 0,
   "dependents": 0,

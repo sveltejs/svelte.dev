@@ -1,6 +1,6 @@
 {
   "name": "svelte-cropperjs",
-  "description": "Svelte wrapper for cropper.js.",
+  "description": "Svelte wrapper for Cropper.js, image cropping library.",
   "repo_url": "https://github.com/milo-ft/svelte-cropperjs",
   "author": "Emilio Figueroa Torres",
   "homepage": "https://github.com/milo-ft/svelte-cropperjs#readme",
@@ -8,8 +8,7 @@
   "dependents": 0,
   "updated": "2024-04-30T13:43:56.358Z",
   "tags": [
-    "ui",
-    "media"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

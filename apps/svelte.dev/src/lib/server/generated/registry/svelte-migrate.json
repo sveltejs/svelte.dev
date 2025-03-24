@@ -1,6 +1,6 @@
 {
   "name": "svelte-migrate",
-  "description": "CLI tool for migrating Svelte and SvelteKit codebases.",
+  "description": "CLI for migrating Svelte(Kit) codebases.",
   "repo_url": "https://github.com/sveltejs/cli",
   "author": "svelte-admin",
   "homepage": "https://svelte.dev",

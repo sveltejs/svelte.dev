@@ -1,6 +1,6 @@
 {
   "name": "@coryparsnipson/svelte-carousel",
-  "description": "Implements carousel component for Svelte.",
+  "description": "Create carousel component for Svelte with various customization options.",
   "repo_url": "https://github.com/vadimkorr/svelte-carousel",
   "author": "vadimkorr",
   "homepage": "https://github.com/vadimkorr/svelte-carousel#readme",

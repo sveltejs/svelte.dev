@@ -1,6 +1,6 @@
 {
   "name": "jsrepo",
-  "description": "CLI to add shared code from remote repositories.",
+  "description": "CLI to add shared code from remote repositories for Svelte and others.",
   "repo_url": "https://github.com/ieedan/jsrepo",
   "author": "Aidan Bleser",
   "homepage": "https://jsrepo.dev",
@@ -12,5 +12,5 @@
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 360
+  "github_stars": 361
 }

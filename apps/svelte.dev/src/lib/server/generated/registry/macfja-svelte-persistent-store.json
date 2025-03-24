@@ -1,6 +1,6 @@
 {
   "name": "@macfja/svelte-persistent-store",
-  "description": "Persist Svelte store values through page reloads and sessions.",
+  "description": "Svelte store that keeps value through reloads.",
   "repo_url": "https://github.com/macfja/svelte-persistent-store",
   "author": "MacFJA",
   "homepage": "https://github.com/macfja/svelte-persistent-store#readme",

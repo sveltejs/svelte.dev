@@ -1,6 +1,6 @@
 {
   "name": "svelte-deep-zoom",
-  "description": "Render interactive Deep Zoom images with Svelte.",
+  "description": "Render interactive Deep Zoom images in Svelte applications.",
   "repo_url": "https://github.com/captaincodeman/svelte-deep-zoom",
   "author": "Simon Green",
   "homepage": "https://captaincodeman.github.io/svelte-deep-zoom/",
@@ -8,7 +8,7 @@
   "dependents": 0,
   "updated": "2024-04-29T20:32:33.444Z",
   "tags": [
-    "ui"
+    "media"
   ],
   "svelte5": true,
   "runes": false

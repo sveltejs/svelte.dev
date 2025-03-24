@@ -1,6 +1,6 @@
 {
   "name": "@bztes/svelte-ds-validator",
-  "description": "Validate values in Svelte with simple, declarative rules.",
+  "description": "Validate form values in Svelte applications.",
   "repo_url": "https://github.com/bztes/svelte-ds-validator",
   "author": "Nico Beierle",
   "homepage": "https://github.com/bztes/svelte-ds-validator#readme",

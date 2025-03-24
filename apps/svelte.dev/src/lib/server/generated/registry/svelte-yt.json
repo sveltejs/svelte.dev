@@ -1,6 +1,6 @@
 {
   "name": "svelte-yt",
-  "description": "Wrap YouTube IFrame API for Svelte components.",
+  "description": "Embed YouTube videos in Svelte components.",
   "repo_url": "https://github.com/zusorio/svelte-yt",
   "author": "Tobias Messner",
   "homepage": "https://github.com/zusorio/svelte-yt#readme",

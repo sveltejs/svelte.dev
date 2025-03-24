@@ -1,6 +1,6 @@
 {
   "name": "svelte-boxicons",
-  "description": "Provides SVG boxicons components for Svelte applications.",
+  "description": "Use Boxicons SVG icons in Svelte projects.",
   "repo_url": "https://github.com/shinokada/svelte-boxicons",
   "author": "Shinichi Okada",
   "homepage": "https://svelte-boxicons.codewithshin.com",

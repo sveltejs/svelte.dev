@@ -1,6 +1,7 @@
 {
   "name": "@crx-template/chrome-extension-svelte-ts",
-  "description": "Generate Chrome extension boilerplate with Svelte and TypeScript.",
+  "description": "Generate Chrome extension boilerplate built with Svelte and Vite.",
+  "repo_url": "",
   "author": "crxapp",
   "downloads": 2,
   "dependents": 0,

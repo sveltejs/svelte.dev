@@ -1,6 +1,6 @@
 {
   "name": "@sveltevietnam/ui",
-  "description": "UI kit for Svelte Vietnam, providing Tailwind presets.",
+  "description": "Provides UI kit for Svelte Vietnam project.",
   "repo_url": "https://github.com/sveltevietnam/sveltevietnam.dev",
   "author": "Svelte Vietnam",
   "homepage": "https://www.sveltevietnam.dev",
@@ -8,8 +8,7 @@
   "dependents": 0,
   "updated": "2024-06-03T11:50:26.858Z",
   "tags": [
-    "component-library",
-    "ui"
+    "component-library"
   ],
   "svelte5": true,
   "runes": false,

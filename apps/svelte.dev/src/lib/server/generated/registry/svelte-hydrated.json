@@ -1,6 +1,6 @@
 {
   "name": "svelte-hydrated",
-  "description": "Indicate hydration status using Svelte store.",
+  "description": "Indicate hydration status using Svelte stores.",
   "repo_url": "https://github.com/jill64/svelte-hydrated",
   "author": "jill64",
   "homepage": "https://github.com/jill64/svelte-hydrated#readme",

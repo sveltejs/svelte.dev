@@ -1,6 +1,7 @@
 {
   "name": "@rabee-org/svelte-popup-manager",
-  "description": "Creates popups and toasts in Svelte applications.",
+  "description": "Creates popups and toast notifications easily in Svelte applications.",
+  "repo_url": "",
   "author": "horietty",
   "downloads": 25,
   "dependents": 0,

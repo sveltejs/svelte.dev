@@ -1,6 +1,6 @@
 {
   "name": "svemix",
-  "description": "Add full-stack capabilities to SvelteKit applications.",
+  "description": "Adds full-stack capabilities to SvelteKit, with server scripts.",
   "repo_url": "https://github.com/svemix/svemix",
   "author": "pixelmund",
   "homepage": "https://svemix.com",
@@ -8,8 +8,7 @@
   "dependents": 0,
   "updated": "2022-08-04T08:36:06.650Z",
   "tags": [
-    "server",
-    "tooling"
+    "server"
   ],
   "svelte5": false,
   "runes": false,

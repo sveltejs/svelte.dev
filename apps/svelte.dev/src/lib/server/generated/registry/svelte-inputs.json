@@ -1,6 +1,6 @@
 {
   "name": "svelte-inputs",
-  "description": "Provide basic, plug-and-play input components for Svelte.",
+  "description": "Provide basic input components for Svelte applications.",
   "repo_url": "https://github.com/JuicyJah/svelte-inputs",
   "author": "JuicyJah",
   "homepage": "https://github.com/JuicyJah/svelte-inputs#readme",

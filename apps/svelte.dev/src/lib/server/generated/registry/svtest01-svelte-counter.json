@@ -1,6 +1,6 @@
 {
   "name": "svtest01-svelte-counter",
-  "description": "Creates customizable text editor component for Svelte 5.",
+  "description": "Create customizable text editor component with Svelte 5.",
   "author": "Your Name",
   "downloads": 0,
   "dependents": 0,

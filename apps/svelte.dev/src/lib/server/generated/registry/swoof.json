@@ -1,6 +1,6 @@
 {
   "name": "swoof",
-  "description": "Integrate Google Firebase Firestore, Auth, Storage, Functions.",
+  "description": "Integrate Google Firebase Firestore, Auth, Storage, Functions in Svelte.",
   "repo_url": "https://github.com/ampatspell/swoof",
   "author": "Arnis Vuskans",
   "homepage": "https://github.com/ampatspell/swoof#readme",
@@ -8,7 +8,7 @@
   "dependents": 0,
   "updated": "2020-10-24T01:36:36.586Z",
   "tags": [
-    "utility"
+    "integration"
   ],
   "svelte5": false,
   "runes": false,

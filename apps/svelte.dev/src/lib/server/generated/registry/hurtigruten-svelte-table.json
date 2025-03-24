@@ -1,6 +1,7 @@
 {
   "name": "@hurtigruten/svelte-table",
-  "description": "Creates simple, sortable Svelte table components.",
+  "description": "Create sortable tables in Svelte applications.",
+  "repo_url": "",
   "author": "Hurtigruten",
   "downloads": 228,
   "dependents": 0,

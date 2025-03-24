@@ -1,0 +1,16 @@
+{
+  "name": "ssg",
+  "description": "Generates static sites using Svelte and Sapper.",
+  "repo_url": "https://github.com/sw-yx/ssg",
+  "author": "sw-yx",
+  "homepage": "https://github.com/sw-yx/ssg#readme",
+  "downloads": 0,
+  "dependents": 1,
+  "updated": "2020-07-04T22:43:54.931Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 162
+}

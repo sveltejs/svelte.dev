@@ -1,6 +1,6 @@
 {
   "name": "@pyoner/svelte-form",
-  "description": "Build HTML forms from JSON schema in Svelte applications.",
+  "description": "Builds HTML forms from JSON schema in Svelte.",
   "repo_url": "https://github.com/pyoner/svelte-form",
   "author": "Jungle",
   "homepage": "https://github.com/pyoner/svelte-form/tree/master/packages/lib#readme",

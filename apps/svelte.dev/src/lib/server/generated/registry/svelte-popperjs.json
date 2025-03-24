@@ -1,6 +1,6 @@
 {
   "name": "svelte-popperjs",
-  "description": "Use Popper.js with Svelte actions, no wrapper components.",
+  "description": "Create Popper.js tooltips and popovers with Svelte actions.",
   "repo_url": "https://github.com/bryanmylee/svelte-popperjs",
   "author": "Bryan Lee",
   "homepage": "https://github.com/bryanmylee/svelte-popperjs#readme",

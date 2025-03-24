@@ -1,6 +1,6 @@
 {
   "name": "@dsengineer/svelte",
-  "description": "Implement Design Systems Engineer design system in Svelte.",
+  "description": "Implement Design Systems Engineer design system for Svelte.",
   "repo_url": "https://github.com/DesignSystemsEngineer/designsystem",
   "author": "Garth Braithwaite",
   "homepage": "https://github.com/DesignSystemsEngineer/designsystem/tree/master/packages/dsengineer-svelte#readme",

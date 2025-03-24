@@ -1,6 +1,6 @@
 {
   "name": "@tommywalkie/ant-design-svelte",
-  "description": "Develop enterprise-class UI components based on Ant Design.",
+  "description": "Implement Ant Design components in Svelte applications.",
   "repo_url": "https://github.com/tommywalkie/ant-design-svelte",
   "author": "Tom Bazarnik",
   "homepage": "https://github.com/tommywalkie/ant-design-svelte#readme",

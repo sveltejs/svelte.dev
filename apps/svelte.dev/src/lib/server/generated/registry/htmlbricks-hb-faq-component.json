@@ -1,6 +1,7 @@
 {
   "name": "@htmlbricks/hb-faq-component",
-  "description": "Creates FAQ web component.",
+  "description": "Provides Svelte-Bootstrap faq-component.",
+  "repo_url": "",
   "author": "Dario Caruso",
   "downloads": 215,
   "dependents": 0,

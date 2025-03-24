@@ -1,6 +1,6 @@
 {
   "name": "@grasshopper42/svelte-grid",
-  "description": "Implement various grid layouts for Svelte.",
+  "description": "Arrange items using various grid layouts in Svelte.",
   "repo_url": "https://github.com/grasshopper42/egjs-grid",
   "author": "NAVER Corp.",
   "homepage": "https://github.com/grasshopper42/egjs-grid",

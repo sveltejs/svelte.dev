@@ -1,6 +1,6 @@
 {
   "name": "svelte-awesome-pug",
-  "description": "Enhance pug templates for Svelte, removing need for != and quotes.",
+  "description": "Enhance usage of pug HTML templates for Svelte.",
   "repo_url": "https://github.com/refzlund/svelte-awesome-pug",
   "author": "refzlund",
   "homepage": "https://github.com/Refzlund/svelte-awesome-pug",
@@ -8,8 +8,7 @@
   "dependents": 0,
   "updated": "2023-01-05T09:50:04.639Z",
   "tags": [
-    "preprocessor",
-    "tooling"
+    "preprocessor"
   ],
   "svelte5": false,
   "runes": false,

@@ -1,6 +1,6 @@
 {
   "name": "@apetrisor/nox-ui",
-  "description": "Offers NOX (Node on Xanax) Svelte UI library.",
+  "description": "Build UI with NOX (Node on Xanax) Svelte UI library.",
   "repo_url": "https://github.com/apetrisor/nox-ui",
   "author": "apetrisor",
   "homepage": "https://github.com/apetrisor/nox-ui#readme",
@@ -11,5 +11,6 @@
     "component-library"
   ],
   "svelte5": false,
-  "runes": false
+  "runes": false,
+  "github_stars": 0
 }

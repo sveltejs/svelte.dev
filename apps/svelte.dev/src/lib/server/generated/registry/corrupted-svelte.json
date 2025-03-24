@@ -1,6 +1,7 @@
 {
   "name": "corrupted-svelte",
-  "description": "Build corrupted-looking websites with Svelte components.",
+  "description": "Create corrupted-style websites with Svelte components.",
+  "repo_url": "",
   "author": "Jack van der Bilt",
   "homepage": "https://github.com/UltraCakeBakery/corrupted-text-svelte",
   "downloads": 0,

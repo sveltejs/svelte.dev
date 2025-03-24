@@ -1,6 +1,6 @@
 {
   "name": "@responsive-ui/docker",
-  "description": "Provides docker component for responsive-ui in Svelte.",
+  "description": "Docker component for responsive-ui.",
   "repo_url": "https://github.com/wetix/responsive-ui",
   "author": "Si3nLoong",
   "homepage": "https://github.com/wetix/responsive-ui/blob/main/components/docker#README.md",
@@ -11,5 +11,6 @@
     "ui"
   ],
   "svelte5": false,
-  "runes": false
+  "runes": false,
+  "github_stars": 19
 }

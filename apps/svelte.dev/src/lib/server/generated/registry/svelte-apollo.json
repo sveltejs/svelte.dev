@@ -1,12 +1,12 @@
 {
   "name": "svelte-apollo",
-  "description": "Svelte integration for Apollo GraphQL.",
+  "description": "Integrate Apollo GraphQL client with Svelte applications.",
   "author": "timhall",
   "downloads": 1287,
   "dependents": 3,
   "updated": "2022-02-21T22:26:28.006Z",
   "tags": [
-    "integration"
+    "utility"
   ],
   "svelte5": false,
   "runes": false

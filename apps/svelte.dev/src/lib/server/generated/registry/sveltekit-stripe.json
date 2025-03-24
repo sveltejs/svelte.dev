@@ -1,6 +1,6 @@
 {
   "name": "sveltekit-stripe",
-  "description": "Render Stripe Elements in SvelteKit applications.",
+  "description": "Render Stripe Elements in SvelteKit apps.",
   "repo_url": "https://github.com/pevey/sveltekit-stripe",
   "author": "Lacey Pevey",
   "homepage": "https://pevey.com/sveltekit-stripe",

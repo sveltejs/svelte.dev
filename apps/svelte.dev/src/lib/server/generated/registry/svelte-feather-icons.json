@@ -1,6 +1,6 @@
 {
   "name": "svelte-feather-icons",
-  "description": "Provides Feather icon components for Svelte applications.",
+  "description": "Provides Feather icons as Svelte components.",
   "repo_url": "https://github.com/dylanblokhuis/svelte-feather-icons",
   "author": "dylanblokhuis",
   "homepage": "https://github.com/dylanblokhuis/svelte-feather-icons#readme",

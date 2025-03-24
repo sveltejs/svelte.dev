@@ -1,6 +1,6 @@
 {
   "name": "@w5/svelte-preprocess",
-  "description": "Preprocess Svelte components with support for various languages.",
+  "description": "Preprocessor wrapper with support for SCSS, Less, and more.",
   "repo_url": "https://github.com/wacfork/svelte-preprocess",
   "author": "Christian Kaisermann",
   "homepage": "https://github.com/wacfork/svelte-preprocess#readme",

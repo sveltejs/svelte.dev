@@ -1,6 +1,6 @@
 {
   "name": "svelte-masonry-layout",
-  "description": "Create masonry-based layout components for Svelte.",
+  "description": "Create masonry-based layout component for Svelte.",
   "repo_url": "https://github.com/jorge-brito/svelte-masonry-layout",
   "author": "Jorge Brito",
   "homepage": "https://github.com/jorge-brito/svelte-masonry-layout",

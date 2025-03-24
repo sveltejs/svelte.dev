@@ -1,6 +1,6 @@
 {
   "name": "svelte-lang",
-  "description": "Simplify multilingual support in Svelte applications.",
+  "description": "Implement i18n for Svelte apps, supporting translations and parameters.",
   "repo_url": "https://github.com/enoy19/svelte-lang",
   "author": "enoy19",
   "homepage": "https://github.com/enoy19/svelte-lang#readme",

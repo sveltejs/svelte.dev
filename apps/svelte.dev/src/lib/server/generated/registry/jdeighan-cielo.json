@@ -1,6 +1,7 @@
 {
   "name": "@jdeighan/cielo",
-  "description": "Process *.cielo and *.starbucks files.",
+  "description": "Command to process .cielo and .starbucks files.",
+  "repo_url": "",
   "author": "John Deighan",
   "downloads": 1,
   "dependents": 0,

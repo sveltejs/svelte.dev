@@ -1,15 +1,12 @@
 {
   "name": "sp-svelte-classification-banner",
-  "description": "Create Svelte modal menus.",
   "repo_url": "https://github.com/sp-sveltejs/sp-svelte-modal-menu",
   "author": "Kayode Bristol",
   "homepage": "https://github.com/sp-sveltejs/sp-svelte-modal-menu#readme",
   "downloads": 0,
   "dependents": 0,
   "updated": "2020-09-29T21:18:46.899Z",
-  "tags": [
-    "ui"
-  ],
+  "tags": [],
   "svelte5": false,
   "runes": false
 }

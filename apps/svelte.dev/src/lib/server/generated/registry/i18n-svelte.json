@@ -1,6 +1,6 @@
 {
   "name": "i18n-svelte",
-  "description": "Integrate lightweight internationalization plugin for Svelte.",
+  "description": "Provides internationalization for Svelte applications.",
   "repo_url": "https://github.com/sharmapukar217/i18n-svelte",
   "author": "Pukar Sharma",
   "homepage": "https://github.com/sharmapukar217/i18n-svelte#readme",

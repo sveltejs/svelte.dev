@@ -1,6 +1,6 @@
 {
   "name": "@ctx-core/svelte",
-  "description": "Provides utility functions and types for Svelte development.",
+  "description": "Provides utility functions and components for Svelte development.",
   "repo_url": "https://github.com/ctx-core/svelte",
   "author": "Brian Takita",
   "homepage": "https://github.com/ctx-core/svelte#readme",

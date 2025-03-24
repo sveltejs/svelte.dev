@@ -1,6 +1,6 @@
 {
   "name": "@danielsharkov/svelte-router",
-  "description": "Create simple, fast, easy-to-use Svelte router with transitions.",
+  "description": "Simple, fast Svelte router with smooth page transitions.",
   "repo_url": "https://github.com/danielsharkov/svelte-router",
   "author": "danielsharkov",
   "homepage": "https://github.com/DanielSharkov/svelte-router",

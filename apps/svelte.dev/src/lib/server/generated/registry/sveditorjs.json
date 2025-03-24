@@ -1,6 +1,6 @@
 {
   "name": "sveditorjs",
-  "description": "Integrate Editor.js block editor into Svelte projects.",
+  "description": "EditorJS wrapper for Svelte and SvelteKit.",
   "repo_url": "https://github.com/pouchcms/sveditorjs",
   "author": "devbuddie",
   "homepage": " https://sveditorjs.vercel.app",
@@ -8,8 +8,7 @@
   "dependents": 0,
   "updated": "2024-03-02T05:39:15.996Z",
   "tags": [
-    "content",
-    "utility"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

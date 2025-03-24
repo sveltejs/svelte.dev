@@ -1,6 +1,7 @@
 {
   "name": "@cnlabs/serp-card-component",
   "description": "Create SERP card component for Svelte.",
+  "repo_url": "",
   "author": "migger",
   "downloads": 74,
   "dependents": 0,

@@ -1,14 +1,11 @@
 {
   "name": "@svuick/toast",
-  "description": "Create toast notifications for Svelte and SvelteKit applications.",
   "repo_url": "https://gitlab.com/david-plugge/svuick",
   "author": "davidplugge",
   "downloads": 0,
   "dependents": 0,
   "updated": "2022-02-03T11:39:11.966Z",
-  "tags": [
-    "ui"
-  ],
+  "tags": [],
   "svelte5": false,
   "runes": false
 }

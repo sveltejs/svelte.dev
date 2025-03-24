@@ -1,6 +1,6 @@
 {
   "name": "svelte-canvas",
-  "description": "Render reactive canvas elements within Svelte applications.",
+  "description": "Enables reactive canvas rendering with Svelte.",
   "repo_url": "https://github.com/dnass/svelte-canvas",
   "author": "dnass",
   "homepage": "https://dnass.github.io/svelte-canvas/",

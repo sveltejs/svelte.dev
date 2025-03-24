@@ -1,6 +1,6 @@
 {
   "name": "svelte-use-tippy.js",
-  "description": "Use tippy.js tooltips in Svelte applications.",
+  "description": "Integrates tippy.js tooltips within Svelte components.",
   "repo_url": "https://github.com/wareset/svelte-use-tippy.js",
   "author": "wareset",
   "homepage": "https://github.com/wareset/svelte-use-tippy.js#readme",

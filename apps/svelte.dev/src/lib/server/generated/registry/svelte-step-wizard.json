@@ -1,6 +1,6 @@
 {
   "name": "svelte-step-wizard",
-  "description": "Create simple Svelte step wizard component.",
+  "description": "Create multi-step wizards in Svelte applications.",
   "repo_url": "https://github.com/EvanOxfeld/svelte-step-wizard",
   "author": "Evan Oxfeld",
   "homepage": "https://github.com/EvanOxfeld/svelte-step-wizard#readme",

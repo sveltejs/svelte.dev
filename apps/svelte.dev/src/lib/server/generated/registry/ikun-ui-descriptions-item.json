@@ -1,6 +1,7 @@
 {
   "name": "@ikun-ui/descriptions-item",
-  "description": "Provides descriptions item UI component for Svelte.",
+  "description": "Render descriptions item components in Svelte applications.",
+  "repo_url": "",
   "author": "baiwusanyu",
   "downloads": 14,
   "dependents": 1,

@@ -1,6 +1,6 @@
 {
   "name": "svelte-preprocess-global",
-  "description": "Apply global directives to CSS selectors in Svelte components.",
+  "description": "Applies :global() directive to Svelte component selectors.",
   "repo_url": "https://github.com/metonym/svelte-preprocess-global",
   "author": "Eric Liu",
   "homepage": "https://github.com/metonym/svelte-preprocess-global",

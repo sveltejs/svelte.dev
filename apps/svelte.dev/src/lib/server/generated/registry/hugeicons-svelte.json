@@ -1,6 +1,7 @@
 {
   "name": "@hugeicons/svelte",
-  "description": "Integrates Hugeicons icon library into Svelte projects.",
+  "description": "Integrate Hugeicons into Svelte applications.",
+  "repo_url": "",
   "author": "Hugeicons",
   "downloads": 33,
   "dependents": 0,

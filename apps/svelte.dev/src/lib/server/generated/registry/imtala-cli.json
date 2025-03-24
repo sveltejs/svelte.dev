@@ -1,6 +1,7 @@
 {
   "name": "@imtala/cli",
-  "description": "Build Svelte projects with create-svelte.",
+  "description": "CLI tool for building Svelte projects, powered by create-svelte.",
+  "repo_url": "https://github.com/des-des/imtala",
   "author": "des-des",
   "downloads": 21,
   "dependents": 0,
@@ -9,5 +10,6 @@
     "tooling"
   ],
   "svelte5": false,
-  "runes": false
+  "runes": false,
+  "github_stars": 3
 }

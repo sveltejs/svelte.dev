@@ -1,6 +1,6 @@
 {
   "name": "svelte-jsx-snippet",
-  "description": "Write JSX as Svelte snippets for testing.",
+  "description": "Write JSX as Svelte snippets for testing Svelte 5 components.",
   "repo_url": "https://github.com/ssssota/svelte-jsx-snippet",
   "author": "TOMIKAWA Sotaro",
   "homepage": "https://github.com/ssssota/svelte-jsx-snippet#readme",

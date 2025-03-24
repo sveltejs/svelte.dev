@@ -1,12 +1,14 @@
 {
   "name": "@brando-calrissian/auth-0-svelte",
-  "description": "Authenticate users with Auth0 and manage auth state in Svelte.",
+  "description": "Authenticates with Auth0, stores user data in Svelte store.",
+  "repo_url": "",
   "author": "Brandon Dyal",
   "downloads": 9,
   "dependents": 0,
   "updated": "2021-02-22T01:39:07.503Z",
   "tags": [
-    "auth"
+    "auth",
+    "utility"
   ],
   "svelte5": false,
   "runes": false

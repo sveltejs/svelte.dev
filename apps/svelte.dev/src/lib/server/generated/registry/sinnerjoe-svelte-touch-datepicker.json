@@ -1,6 +1,6 @@
 {
   "name": "@sinnerjoe/svelte-touch-datepicker",
-  "description": "Create native-like touch datepicker for Svelte apps.",
+  "description": "Create touch datepicker for Svelte.",
   "repo_url": "https://github.com/sinnerJoe/svelte-touch-datepicker",
   "author": "Radu Cebotari",
   "homepage": "https://github.com/sinnerJoe/svelte-touch-datepicker",
@@ -11,5 +11,6 @@
     "ui"
   ],
   "svelte5": false,
-  "runes": false
+  "runes": false,
+  "github_stars": 1
 }

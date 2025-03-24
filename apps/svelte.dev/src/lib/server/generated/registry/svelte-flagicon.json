@@ -1,6 +1,6 @@
 {
   "name": "svelte-flagicon",
-  "description": "Display flag icons in Svelte using flag-icon-css.",
+  "description": "Display flag icons using Svelte components.",
   "repo_url": "https://github.com/dustbort/svelte-flagicon",
   "author": "dustbort",
   "homepage": "https://github.com/dustbort/svelte-flagicon#readme",

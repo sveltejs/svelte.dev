@@ -1,6 +1,6 @@
 {
   "name": "@perseid/form",
-  "description": "Build dynamic forms and input-based UIs in Svelte.",
+  "description": "Builds dynamic forms and input-based UIs.",
   "repo_url": "https://github.com/openizr/perseid",
   "author": "openizr2",
   "homepage": "https://github.com/openizr/perseid",
@@ -8,7 +8,7 @@
   "dependents": 1,
   "updated": "2024-10-01T13:05:38.878Z",
   "tags": [
-    "utility"
+    "component-library"
   ],
   "svelte5": false,
   "runes": false,

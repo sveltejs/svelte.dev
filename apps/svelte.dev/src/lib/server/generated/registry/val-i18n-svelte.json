@@ -1,6 +1,6 @@
 {
   "name": "val-i18n-svelte",
-  "description": "Provides Svelte goodies for val-i18n internationalization library.",
+  "description": "Provide i18n context and translate messages in Svelte.",
   "repo_url": "https://github.com/crimx/val-i18n-svelte",
   "author": "CRIMX",
   "homepage": "https://github.com/crimx/val-i18n-svelte#readme",

@@ -1,6 +1,6 @@
 {
   "name": "tilez-observable-plot",
-  "description": "Use Observable Plot tile for Svelte layout engine tilez.",
+  "description": "Render Observable Plot visualizations within Svelte tilez layouts.",
   "repo_url": "https://github.com/spren9er/tilez-observable-plot",
   "author": "Torsten Sprenger",
   "homepage": "https://github.com/spren9er/tilez-observable-plot#readme",

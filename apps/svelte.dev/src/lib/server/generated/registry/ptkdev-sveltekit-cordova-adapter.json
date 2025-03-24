@@ -1,6 +1,6 @@
 {
   "name": "@ptkdev/sveltekit-cordova-adapter",
-  "description": "Adapt SvelteKit apps for Cordova/Ionic Capacitor deployment.",
+  "description": "Adapt SvelteKit apps for Cordova/Ionic Capacitor mobile builds.",
   "repo_url": "https://github.com/ptkdev/sveltekit-cordova-adapter",
   "author": "Patryk Rzucidło [@ptkdev]",
   "homepage": "https://github.com/ptkdev/sveltekit-cordova-adapter",

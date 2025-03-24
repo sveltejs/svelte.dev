@@ -1,6 +1,6 @@
 {
   "name": "svelte-guard-history-router",
-  "description": "Provides a history-based router for Svelte SPA applications.",
+  "description": "Provides a guarded history router for Svelte SPA applications.",
   "repo_url": "https://github.com/arlac77/svelte-guard-history-router",
   "author": "arlac77",
   "homepage": "https://github.com/arlac77/svelte-guard-history-router#readme",

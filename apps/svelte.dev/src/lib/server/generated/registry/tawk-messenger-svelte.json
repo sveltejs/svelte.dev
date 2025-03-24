@@ -1,6 +1,6 @@
 {
   "name": "tawk-messenger-svelte",
-  "description": "Integrate Tawk.to live chat messenger into Svelte applications.",
+  "description": "Integrate Tawk messenger into Svelte applications.",
   "repo_url": "https://github.com/eduardolat/tawk-messenger-svelte",
   "author": "Eduardo Girón",
   "homepage": "https://github.com/eduardolat/tawk-messenger-svelte#readme",

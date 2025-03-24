@@ -1,6 +1,6 @@
 {
   "name": "@parkingboss/svelte-storage",
-  "description": "Persist Svelte stores using local storage.",
+  "description": "Creates cross-platform permanent storage stores for Svelte.",
   "repo_url": "https://github.com/parkingboss/svelte-storage",
   "author": "Parking Boss",
   "homepage": "https://github.com/parkingboss/svelte-storage#readme",
@@ -11,5 +11,6 @@
     "utility"
   ],
   "svelte5": false,
-  "runes": false
+  "runes": false,
+  "github_stars": 4
 }

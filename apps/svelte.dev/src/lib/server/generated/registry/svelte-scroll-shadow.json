@@ -1,6 +1,6 @@
 {
   "name": "svelte-scroll-shadow",
-  "description": "Add scroll shadows to Svelte components.",
+  "description": "Adds scroll shadow effect to Svelte components.",
   "repo_url": "https://github.com/andrelmlins/svelte-scroll-shadow",
   "author": "André Lins",
   "homepage": "https://svelte-scroll-shadow.netlify.com/",

@@ -1,6 +1,6 @@
 {
   "name": "signin-with-matrix",
-  "description": "Enables federated sign-in with Matrix in Svelte apps.",
+  "description": "Federated sign-in component for Matrix users.",
   "repo_url": "https://github.com/mishushakov/signin-with-matrix",
   "author": "mishushakov",
   "homepage": "https://github.com/mishushakov/signin-with-matrix#readme",
@@ -9,7 +9,7 @@
   "updated": "2021-11-15T08:50:59.113Z",
   "tags": [
     "auth",
-    "integration"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

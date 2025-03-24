@@ -1,6 +1,6 @@
 {
   "name": "svelte-flag-icons",
-  "description": "Provide country flag icon components for Svelte apps.",
+  "description": "Provides flag icon components for Svelte.",
   "repo_url": "https://github.com/shinokada/svelte-flag-icons",
   "author": "Shinichi Okada",
   "homepage": "https://svelte-flag-icons.codewithshin.com/",

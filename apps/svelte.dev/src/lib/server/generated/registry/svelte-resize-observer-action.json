@@ -1,6 +1,6 @@
 {
   "name": "svelte-resize-observer-action",
-  "description": "Provides a Svelte action for element resize notifications.",
+  "description": "Provides Svelte action for element resize notifications using ResizeObserver.",
   "repo_url": "https://github.com/captaincodeman/svelte-resize-observer-action",
   "author": "Simon Green",
   "homepage": "https://captaincodeman.github.io/svelte-resize-observer-action/",
@@ -8,7 +8,8 @@
   "dependents": 3,
   "updated": "2024-04-29T20:09:13.892Z",
   "tags": [
-    "utility"
+    "utility",
+    "dom"
   ],
   "svelte5": false,
   "runes": false,

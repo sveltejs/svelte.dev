@@ -1,6 +1,6 @@
 {
   "name": "@ssgjs/sapper",
-  "description": "Static export fork of Sapper.",
+  "description": "Fork of Sapper focused on static export needs.",
   "repo_url": "https://github.com/sw-yx/sapper",
   "author": "Rich Harris",
   "homepage": "https://github.com/sw-yx/sapper#readme",
@@ -8,8 +8,9 @@
   "dependents": 1,
   "updated": "2020-02-08T19:28:53.281Z",
   "tags": [
-    "server"
+    "tooling"
   ],
   "svelte5": false,
-  "runes": false
+  "runes": false,
+  "github_stars": 3
 }

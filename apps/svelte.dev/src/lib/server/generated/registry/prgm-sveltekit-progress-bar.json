@@ -1,6 +1,6 @@
 {
   "name": "@prgm/sveltekit-progress-bar",
-  "description": "Svelte progress bar component for SvelteKit navigation.",
+  "description": "Svelte progress bar hooks to SvelteKit navigation.",
   "repo_url": "https://github.com/prgm-dev/sveltekit-progress-bar",
   "author": "prgm.dev",
   "homepage": "https://github.com/prgm-dev/sveltekit-progress-bar#readme",
@@ -8,8 +8,7 @@
   "dependents": 0,
   "updated": "2025-02-18T11:47:43.630Z",
   "tags": [
-    "ui",
-    "utility"
+    "ui"
   ],
   "svelte5": true,
   "runes": false,

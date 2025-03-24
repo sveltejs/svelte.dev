@@ -1,6 +1,6 @@
 {
   "name": "@embedz/svelte",
-  "description": "Embed YouTube, Vimeo, and Dailymotion videos in Svelte.",
+  "description": "Embed YouTube, Vimeo, and Dailymotion videos in Svelte apps.",
   "repo_url": "https://github.com/embedz/embedz",
   "author": "embedz",
   "homepage": "https://github.com/embedz/embedz",
@@ -8,7 +8,7 @@
   "dependents": 0,
   "updated": "2025-03-21T21:08:50.224Z",
   "tags": [
-    "media"
+    "ui"
   ],
   "svelte5": true,
   "runes": false,

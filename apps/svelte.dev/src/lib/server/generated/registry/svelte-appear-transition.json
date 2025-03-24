@@ -1,6 +1,7 @@
 {
   "name": "svelte-appear-transition",
-  "description": "Transition elements when they appear in viewport.",
+  "description": "Transition elements when appearing in viewport.",
+  "repo_url": "",
   "author": "adevien-solutions",
   "downloads": 0,
   "dependents": 0,

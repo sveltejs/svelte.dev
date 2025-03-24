@@ -1,6 +1,7 @@
 {
   "name": "praecox-datepicker",
-  "description": "Create datepicker component for Svelte apps.",
+  "description": "Creates datepicker component for Svelte apps with various features.",
+  "repo_url": "",
   "author": "runningzs",
   "downloads": 120,
   "dependents": 0,

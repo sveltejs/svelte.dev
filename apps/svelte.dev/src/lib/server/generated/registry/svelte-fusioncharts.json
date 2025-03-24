@@ -1,6 +1,6 @@
 {
   "name": "svelte-fusioncharts",
-  "description": "Integrate FusionCharts JavaScript charting library in Svelte.",
+  "description": "Integrate FusionCharts JavaScript charts into Svelte applications.",
   "repo_url": "https://github.com/priyanjitdey94/svelte-fusioncharts",
   "author": "meherhowji",
   "homepage": "https://github.com/priyanjitdey94/svelte-fusioncharts#readme",

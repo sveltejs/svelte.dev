@@ -1,6 +1,6 @@
 {
   "name": "@neiwad/svelte-i18n-slots",
-  "description": "Transforms i18n variables into Svelte slots for dynamic content.",
+  "description": "Transforms i18n variables into Svelte slots.",
   "repo_url": "https://github.com/neiwad/svelte-i18n-slots",
   "author": "neiwad",
   "homepage": "https://github.com/neiwad/svelte-i18n-slots",

@@ -1,6 +1,6 @@
 {
   "name": "sveltekit-route-guard",
-  "description": "Create route guards for SvelteKit applications.",
+  "description": "Creates route guards for SvelteKit applications.",
   "repo_url": "https://github.com/rkanik/sveltekit-route-guard",
   "author": "RK Anik",
   "homepage": "https://github.com/rkanik/sveltekit-route-guard",
@@ -8,8 +8,8 @@
   "dependents": 0,
   "updated": "2023-01-30T17:52:27.964Z",
   "tags": [
-    "utility",
-    "router"
+    "router",
+    "utility"
   ],
   "svelte5": false,
   "runes": false,

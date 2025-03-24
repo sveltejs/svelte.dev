@@ -1,8 +1,9 @@
 {
   "name": "@beyonk/svelte-facebook-customer-chat",
   "description": "Integrate Facebook Customer Chat into Svelte apps.",
+  "repo_url": "",
   "author": "antony",
-  "downloads": 8,
+  "downloads": 1,
   "dependents": 0,
   "updated": "2019-05-25T17:04:33.458Z",
   "tags": [

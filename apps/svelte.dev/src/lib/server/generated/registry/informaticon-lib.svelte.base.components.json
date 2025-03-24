@@ -1,6 +1,6 @@
 {
   "name": "@informaticon/lib.svelte.base.components",
-  "description": "Informaticon Svelte components library.",
+  "description": "Provide Informaticon Svelte components library.",
   "repo_url": "https://github.com/informaticon/lib.svelte.base.components",
   "author": "Informaticon AG",
   "homepage": "https://github.com/informaticon/lib.svelte.base.components#readme",

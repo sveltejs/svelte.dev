@@ -1,6 +1,7 @@
 {
   "name": "@htmlbricks/hb-range-slider",
-  "description": "Provides a web component for a range slider.",
+  "description": "Svelte Boostrap Video Card WebComponent.",
+  "repo_url": "",
   "author": "Dario Caruso",
   "downloads": 454,
   "dependents": 3,

@@ -1,6 +1,6 @@
 {
   "name": "svt-router",
-  "description": "Implement hash-based routing for Svelte applications.",
+  "description": "Implement a hash router for Svelte applications.",
   "repo_url": "https://github.com/cicada1993/svt-router",
   "author": "ttjbs",
   "homepage": "https://github.com/cicada1993/svt-router#readme",

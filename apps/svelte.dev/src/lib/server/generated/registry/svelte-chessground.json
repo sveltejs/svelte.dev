@@ -1,6 +1,7 @@
 {
   "name": "svelte-chessground",
-  "description": "Integrate chessboard component for Svelte apps.",
+  "description": "Display interactive chessboard component for Svelte.",
+  "repo_url": "",
   "author": "gtim",
   "homepage": "https://github.com/gtim/svelte-chessground#readme",
   "downloads": 45,

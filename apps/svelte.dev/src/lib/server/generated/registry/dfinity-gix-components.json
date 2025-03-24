@@ -1,6 +1,6 @@
 {
   "name": "@dfinity/gix-components",
-  "description": "Builds UI components for the Internet Computer with Svelte.",
+  "description": "UI kit developed by the GIX team for Svelte.",
   "repo_url": "https://github.com/dfinity/gix-components",
   "author": "dayyildiz",
   "homepage": "https://github.com/dfinity/gix-components#readme",
@@ -8,8 +8,8 @@
   "dependents": 0,
   "updated": "2025-02-20T11:50:54.755Z",
   "tags": [
-    "ui",
-    "component-library"
+    "component-library",
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

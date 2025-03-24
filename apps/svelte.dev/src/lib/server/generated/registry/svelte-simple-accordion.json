@@ -1,6 +1,6 @@
 {
   "name": "svelte-simple-accordion",
-  "description": "Create simple, configurable accordion components.",
+  "description": "Creates simple, fully configurable accordion components for Svelte.",
   "repo_url": "git@gitlab.com/public-e-soa-com/svelte-simple-accordion",
   "author": "Jacques Desodt",
   "homepage": "https://gitlab.com/public-e-soa-com/svelte-simple-accordion#readme",

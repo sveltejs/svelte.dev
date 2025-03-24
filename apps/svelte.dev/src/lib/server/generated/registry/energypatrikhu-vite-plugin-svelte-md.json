@@ -1,6 +1,6 @@
 {
   "name": "@energypatrikhu/vite-plugin-svelte-md",
-  "description": "Convert Markdown files to Svelte components using Vite.",
+  "description": "Convert Markdown files to Svelte components with Vite.",
   "repo_url": "https://github.com/energypatrikhu/vite-plugin-svelte-md",
   "author": "Yosuke Ota",
   "homepage": "https://github.com/energypatrikhu/vite-plugin-svelte-md#readme",

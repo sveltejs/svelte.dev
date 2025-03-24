@@ -1,6 +1,6 @@
 {
   "name": "svelte-type-checker",
-  "description": "Check Svelte components for problems using Typescript.",
+  "description": "Type check Svelte components using Typescript.",
   "repo_url": "https://github.com/halfnelson/svelte-type-checker",
   "author": "David Pershouse",
   "homepage": "https://github.com/halfnelson/svelte-type-checker",

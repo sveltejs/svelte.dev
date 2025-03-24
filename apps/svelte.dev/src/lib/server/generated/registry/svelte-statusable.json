@@ -1,6 +1,6 @@
 {
   "name": "svelte-statusable",
-  "description": "Create Svelte store to control application status.",
+  "description": "Provides Svelte store for application status control.",
   "repo_url": "https://github.com/sveltetools/svelte-statusable",
   "author": "PaulMaly",
   "homepage": "https://github.com/sveltetools/svelte-statusable#readme",

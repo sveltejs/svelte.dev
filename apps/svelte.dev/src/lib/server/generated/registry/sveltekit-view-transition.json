@@ -1,6 +1,6 @@
 {
   "name": "sveltekit-view-transition",
-  "description": "Simplifies view transitions API for SvelteKit applications.",
+  "description": "Simplify view transitions in SvelteKit.",
   "repo_url": "https://github.com/paoloricciuti/sveltekit-view-transition",
   "author": "Paolo Ricciuti",
   "homepage": "https://github.com/paoloricciuti/sveltekit-view-transition#readme",

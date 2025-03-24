@@ -1,6 +1,6 @@
 {
   "name": "@responsive-ui/label",
-  "description": "Create label components for Svelte.",
+  "description": "Create label component for responsive UI in Svelte.",
   "repo_url": "https://github.com/wetix/responsive-ui",
   "author": "Si3nLoong",
   "homepage": "https://github.com/wetix/responsive-ui/blob/main/components/label#README.md",
@@ -11,5 +11,6 @@
     "ui"
   ],
   "svelte5": false,
-  "runes": false
+  "runes": false,
+  "github_stars": 19
 }

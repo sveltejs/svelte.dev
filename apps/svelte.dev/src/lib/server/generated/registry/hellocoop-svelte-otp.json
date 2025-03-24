@@ -1,6 +1,6 @@
 {
   "name": "@hellocoop/svelte-otp",
-  "description": "Implement OTP input component for Svelte applications.",
+  "description": "Create simple input component for one time passcodes (OTP) in Svelte.",
   "repo_url": "https://github.com/hellocoop/svelte-otp",
   "author": "rohanharikr",
   "homepage": "https://github.com/hellocoop/svelte-otp#readme",

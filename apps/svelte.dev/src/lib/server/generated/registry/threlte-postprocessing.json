@@ -1,6 +1,7 @@
 {
   "name": "threlte-postprocessing",
-  "description": "Apply post-processing effects to Threlte (Svelte Three.js) scenes.",
+  "description": "Adds postprocessing effects to Svelte Three.js (Threlte) scenes.",
+  "repo_url": "",
   "author": "Yurii Hulyk",
   "homepage": "https://github.com/1bye/threlte-postprocessing",
   "downloads": 13,

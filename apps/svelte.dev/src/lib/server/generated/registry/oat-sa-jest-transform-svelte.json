@@ -1,6 +1,6 @@
 {
   "name": "@oat-sa/jest-transform-svelte",
-  "description": "Jest transformer for Svelte components.",
+  "description": "Transform Svelte files for Jest testing.",
   "repo_url": "https://github.com/oat-sa/jest-transform-svelte",
   "author": "Open Assessment Technologies SA",
   "homepage": "https://github.com/oat-sa/jest-transform-svelte#readme",
@@ -8,9 +8,9 @@
   "dependents": 0,
   "updated": "2023-05-11T11:10:13.420Z",
   "tags": [
-    "tooling",
-    "testing"
+    "tooling"
   ],
   "svelte5": true,
-  "runes": false
+  "runes": false,
+  "github_stars": 1
 }

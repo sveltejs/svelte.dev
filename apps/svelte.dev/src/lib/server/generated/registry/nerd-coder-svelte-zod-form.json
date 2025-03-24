@@ -1,6 +1,6 @@
 {
   "name": "@nerd-coder/svelte-zod-form",
-  "description": "Build forms with validation using Svelte and Zod.",
+  "description": "Build forms with validation using Zod in Svelte apps.",
   "repo_url": "https://github.com/nerd-coder/svelte-zod-form",
   "author": "NerdCoder",
   "homepage": "https://github.com/nerd-coder/svelte-zod-form#readme",

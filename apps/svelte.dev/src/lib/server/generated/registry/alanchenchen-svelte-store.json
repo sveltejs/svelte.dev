@@ -1,6 +1,6 @@
 {
   "name": "@alanchenchen/svelte-store",
-  "description": "Implement store manager like Vuex for Svelte apps.",
+  "description": "Manage Svelte stores with Vuex-like store manager.",
   "repo_url": "https://github.com/alanchenchen/svelte-store-manager",
   "author": "Alan Chen",
   "homepage": "https://github.com/alanchenchen/svelte-store-manager",
@@ -11,5 +11,6 @@
     "utility"
   ],
   "svelte5": false,
-  "runes": false
+  "runes": false,
+  "github_stars": 6
 }

@@ -1,6 +1,7 @@
 {
   "name": "sveltekit-chessground",
-  "description": "Display interactive chessboards within SvelteKit applications.",
+  "description": "Integrate Chessground chess UI into SvelteKit apps.",
+  "repo_url": "",
   "author": "sharlesleglerg",
   "homepage": "https://github.com/AhsanSarwar45/sveltekit-chessground#readme",
   "downloads": 3,

@@ -1,6 +1,7 @@
 {
   "name": "@ikun-ui/rate",
-  "description": "Create rate components for Svelte.",
+  "description": "Create star rating components for Svelte.",
+  "repo_url": "",
   "author": "baiwusanyu",
   "downloads": 24,
   "dependents": 1,

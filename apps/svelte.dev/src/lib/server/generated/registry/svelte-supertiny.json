@@ -1,6 +1,6 @@
 {
   "name": "svelte-supertiny",
-  "description": "Provide Svelte components for SuperTinyIcons.",
+  "description": "Use SuperTinyIcons in Svelte projects.",
   "repo_url": "https://github.com/shinokada/svelte-supertiny",
   "author": "Shinichi Okada",
   "homepage": "https://svelte-supertiny.codewithshin.com/",

@@ -1,12 +1,12 @@
 {
   "name": "@htmlbricks/hb-card-video",
-  "description": "Provides a web component for a video card.",
+  "description": "Create Svelte web component for video card.",
+  "repo_url": "",
   "author": "Dario Caruso",
   "downloads": 467,
   "dependents": 3,
   "updated": "2025-03-09T03:10:26.466Z",
   "tags": [
-    "ui",
     "media"
   ],
   "svelte5": false,

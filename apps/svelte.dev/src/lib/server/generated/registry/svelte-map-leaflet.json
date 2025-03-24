@@ -1,6 +1,6 @@
 {
   "name": "svelte-map-leaflet",
-  "description": "Integrate Leaflet maps into Svelte applications.",
+  "description": "Implement Leaflet library to manipulate maps in Svelte components.",
   "repo_url": "https://github.com/imIfOu/svelte-map-leaflet",
   "author": "floriandidier",
   "homepage": "https://github.com/imIfOu/svelte-map-leaflet#readme",

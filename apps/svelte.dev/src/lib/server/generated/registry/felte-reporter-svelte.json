@@ -1,6 +1,6 @@
 {
   "name": "@felte/reporter-svelte",
-  "description": "Report Felte form errors using Svelte components.",
+  "description": "Error reporter for Felte using Svelte component.",
   "repo_url": "https://github.com/pablo-abc/felte",
   "author": "Pablo Berganza",
   "homepage": "https://github.com/pablo-abc/felte/tree/main/packages/reporter-svelte",
@@ -8,7 +8,8 @@
   "dependents": 2,
   "updated": "2024-10-29T22:05:11.752Z",
   "tags": [
-    "utility"
+    "utility",
+    "ui"
   ],
   "svelte5": true,
   "runes": false,

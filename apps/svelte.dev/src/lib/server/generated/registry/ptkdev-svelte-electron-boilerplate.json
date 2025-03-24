@@ -1,6 +1,6 @@
 {
   "name": "@ptkdev/svelte-electron-boilerplate",
-  "description": "Create desktop apps with Svelte and Electron boilerplate.",
+  "description": "Create desktop apps with Svelte and Electron.",
   "repo_url": "https://github.com/ptkdev-boilerplate/svelte-electron-boilerplate",
   "author": "Patryk Rzucidło [@ptkdev]",
   "homepage": "https://github.com/ptkdev-boilerplate/svelte-electron-boilerplate",
@@ -11,5 +11,6 @@
     "tooling"
   ],
   "svelte5": false,
-  "runes": false
+  "runes": false,
+  "github_stars": 127
 }

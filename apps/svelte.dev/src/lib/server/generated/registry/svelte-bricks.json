@@ -1,6 +1,6 @@
 {
   "name": "svelte-bricks",
-  "description": "Create masonry layouts without column balancing in Svelte.",
+  "description": "Implement simple masonry layout without column balancing.",
   "repo_url": "https://github.com/janosh/svelte-bricks",
   "author": "Janosh Riebesell",
   "homepage": "https://janosh.github.io/svelte-bricks",

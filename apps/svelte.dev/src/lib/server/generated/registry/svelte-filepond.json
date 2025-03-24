@@ -1,6 +1,6 @@
 {
   "name": "svelte-filepond",
-  "description": "Integrate FilePond file upload component into Svelte apps.",
+  "description": "Provides a FilePond adapter component for Svelte file uploads.",
   "repo_url": "https://github.com/pqina/svelte-filepond",
   "author": "PQINA",
   "homepage": "https://pqina.nl/filepond",

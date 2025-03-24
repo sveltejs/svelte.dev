@@ -1,6 +1,6 @@
 {
   "name": "@runkai/eslint-config",
-  "description": "Provide ESLint and Prettier configuration for Svelte projects.",
+  "description": "Provides ESLint and Prettier configuration for Svelte.",
   "repo_url": "https://github.com/runkaiz/eslint-config",
   "author": "Runkai Zhang",
   "homepage": "https://github.com/runkaiz/eslint-config#readme",

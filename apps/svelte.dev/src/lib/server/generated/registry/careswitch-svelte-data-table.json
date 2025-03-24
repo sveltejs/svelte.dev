@@ -1,6 +1,6 @@
 {
   "name": "@careswitch/svelte-data-table",
-  "description": "Build fast data tables with sorting, filtering, and pagination for Svelte 5.",
+  "description": "Provide fast data table with client-side sorting, filtering, pagination.",
   "repo_url": "https://github.com/careswitch/svelte-data-table",
   "author": "markfayngersh",
   "homepage": "https://careswitch-svelte-data-table.vercel.app",
@@ -8,7 +8,6 @@
   "dependents": 1,
   "updated": "2024-07-19T20:43:36.426Z",
   "tags": [
-    "utility",
     "component-library"
   ],
   "svelte5": true,

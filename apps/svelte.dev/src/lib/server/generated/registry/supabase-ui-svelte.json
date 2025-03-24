@@ -1,6 +1,7 @@
 {
   "name": "supabase-ui-svelte",
-  "description": "Offer UI components for Supabase authentication in Svelte.",
+  "description": "Implement Supabase authentication UI components for Svelte.",
+  "repo_url": "",
   "author": "joshnuss",
   "downloads": 4,
   "dependents": 0,

@@ -1,6 +1,6 @@
 {
   "name": "mega-toasts",
-  "description": "Creates highly configurable toast notification component for Svelte.",
+  "description": "Configurable notification/toast component with individual state management.",
   "repo_url": "https://github.com/GArysTrousers/svelte-toasts",
   "author": "Zohaib Ijaz @mzohaibqc",
   "homepage": "https://mzohaibqc.github.io/svelte-toasts",

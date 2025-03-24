@@ -1,6 +1,6 @@
 {
   "name": "@samplekit/preprocess-markdown",
-  "description": "Process Markdown directly within Svelte components.",
+  "description": "Preprocess Markdown directly in Svelte templates using Marked.",
   "repo_url": "https://github.com/timothycohen/samplekit",
   "author": "Tim Cohen",
   "homepage": "https://preprocessors.samplekit.dev",

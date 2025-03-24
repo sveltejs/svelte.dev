@@ -1,6 +1,6 @@
 {
   "name": "vizceral-svelte",
-  "description": "Create traffic data visualizations using Vizceral in Svelte.",
+  "description": "Visualize network traffic data with Svelte and Vizceral.",
   "repo_url": "https://github.com/dgzlopes/vizceral-svelte",
   "author": "Daniel González Lopes",
   "homepage": "https://github.com/dgzlopes/vizceral-svelte#readme",

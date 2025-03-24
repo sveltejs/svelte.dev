@@ -1,0 +1,17 @@
+{
+  "name": "@nodegui/svelte-nodegui",
+  "description": "Integrates Svelte with NodeGUI for native desktop app development.",
+  "repo_url": "https://github.com/nodegui/svelte-nodegui",
+  "author": "Jamie Birch",
+  "homepage": "https://github.com/nodegui/svelte-nodegui",
+  "downloads": 8,
+  "dependents": 0,
+  "updated": "2021-05-04T20:35:22.026Z",
+  "tags": [
+    "ui",
+    "integration"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 2849
+}

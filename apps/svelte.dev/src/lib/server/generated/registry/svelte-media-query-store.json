@@ -1,6 +1,6 @@
 {
   "name": "svelte-media-query-store",
-  "description": "Provide reactive store detecting CSS media queries.",
+  "description": "Provide reactive store detecting specific media queries.",
   "repo_url": "https://github.com/michaelbelete/svelte-media-query-store",
   "author": "Michael Belete",
   "homepage": "https://github.com/michaelbelete/svelte-media-query-store#readme",

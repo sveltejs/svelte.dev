@@ -1,6 +1,6 @@
 {
   "name": "svelte-youtube",
-  "description": "Embed YouTube videos in Svelte components.",
+  "description": "Embed YouTube videos in Svelte applications.",
   "repo_url": "https://github.com/PandaWhisperer/svelte-youtube",
   "author": "pandawhisperer",
   "homepage": "https://github.com/PandaWhisperer/svelte-youtube#README",

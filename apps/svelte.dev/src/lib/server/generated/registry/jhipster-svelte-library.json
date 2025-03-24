@@ -1,6 +1,6 @@
 {
   "name": "jhipster-svelte-library",
-  "description": "Provide Svelte components and utilities for JHipster projects.",
+  "description": "Provides Svelte components and utility functions for JHipster projects.",
   "repo_url": "https://github.com/vishal423/jhipster-svelte-library",
   "author": "Vishal Mahajan",
   "homepage": "https://github.com/vishal423/jhipster-svelte-library",
@@ -8,7 +8,7 @@
   "dependents": 0,
   "updated": "2024-10-06T08:56:16.491Z",
   "tags": [
-    "utility"
+    "component-library"
   ],
   "svelte5": false,
   "runes": false,

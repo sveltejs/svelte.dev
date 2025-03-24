@@ -1,6 +1,6 @@
 {
   "name": "svelte-lexical",
-  "description": "Integrates Lexical rich text editor into Svelte applications.",
+  "description": "Provides rich text editor for Svelte based on Lexical.",
   "repo_url": "https://github.com/umaranis/svelte-lexical",
   "author": "umaranis",
   "homepage": "https://github.com/umaranis/svelte-lexical#readme",
@@ -8,6 +8,7 @@
   "dependents": 0,
   "updated": "2025-03-19T12:04:31.119Z",
   "tags": [
+    "content",
     "ui"
   ],
   "svelte5": true,

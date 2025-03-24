@@ -1,6 +1,6 @@
 {
   "name": "@nativescript-dom/svelte-types",
-  "description": "Provide TypeScript definitions for NativeScript DOM elements in Svelte.",
+  "description": "Provide TypeScript definitions for Svelte Native.",
   "repo_url": "https://github.com/nativescript-dom/types",
   "author": "Ammar Ahmed",
   "homepage": "https://github.com/nativescript-dom/types/tree/main/svelte",

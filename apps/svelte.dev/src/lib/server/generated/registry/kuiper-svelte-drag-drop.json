@@ -1,6 +1,6 @@
 {
   "name": "@kuiper/svelte-drag-drop",
-  "description": "Drag and drop images in Svelte.",
+  "description": "Drag and drop images in Svelte applications.",
   "repo_url": "https://github.com/kofkuiper/svelte-drag-drop",
   "author": "kofkuiper",
   "homepage": "https://github.com/kofkuiper/svelte-drag-drop",

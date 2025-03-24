@@ -1,6 +1,7 @@
 {
   "name": "@cmex/cli",
-  "description": "CLI tool for managing Svelte component libraries.",
+  "description": "CLI tool for cmexd component library.",
+  "repo_url": "",
   "author": "Mo",
   "downloads": 29,
   "dependents": 0,

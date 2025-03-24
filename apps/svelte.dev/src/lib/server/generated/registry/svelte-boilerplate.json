@@ -1,6 +1,6 @@
 {
   "name": "svelte-boilerplate",
-  "description": "Generate Svelte boilerplate template project.",
+  "description": "Create Svelte boilerplate template project with Vite and TypeScript.",
   "repo_url": "https://github.com/basevich/svelte-boilerplate",
   "author": "basevich",
   "homepage": "https://github.com/basevich/svelte-boilerplate#readme",

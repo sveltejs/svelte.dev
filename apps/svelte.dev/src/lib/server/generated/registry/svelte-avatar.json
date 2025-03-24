@@ -1,6 +1,6 @@
 {
   "name": "svelte-avatar",
-  "description": "Displays avatar images with fallback to name initials.",
+  "description": "Create avatar images with initials or image sources.",
   "repo_url": "https://github.com/wdtamagi/svelte-avatar",
   "author": "Willian Dias Tamagi",
   "homepage": "https://svelte-avatar.netlify.app/",

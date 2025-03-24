@@ -1,6 +1,7 @@
 {
   "name": "@htmlbricks/hb-auth",
-  "description": "Provides a web component for authentication.",
+  "description": "Create Svelte web component for login and register.",
+  "repo_url": "",
   "author": "Dario Caruso",
   "downloads": 464,
   "dependents": 3,

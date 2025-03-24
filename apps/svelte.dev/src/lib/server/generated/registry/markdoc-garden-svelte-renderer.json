@@ -8,7 +8,8 @@
   "dependents": 0,
   "updated": "2023-07-20T11:11:32.679Z",
   "tags": [
-    "content"
+    "content",
+    "preprocessor"
   ],
   "svelte5": true,
   "runes": false,

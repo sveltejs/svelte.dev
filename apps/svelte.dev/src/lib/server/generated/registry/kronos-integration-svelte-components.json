@@ -1,6 +1,6 @@
 {
   "name": "@kronos-integration/svelte-components",
-  "description": "Svelte components for Kronos.",
+  "description": "Reusable Svelte components for Kronos applications.",
   "repo_url": "https://github.com/Kronos-Integration/svelte-components",
   "author": "arlac77",
   "homepage": "https://github.com/Kronos-Integration/svelte-components#readme",

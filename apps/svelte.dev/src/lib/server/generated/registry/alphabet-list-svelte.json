@@ -1,6 +1,6 @@
 {
   "name": "alphabet-list-svelte",
-  "description": "Offers alphabet navigation, search, and pagination for Svelte lists.",
+  "description": "Creates alphabet navigation for filtering and navigating lists in Svelte.",
   "repo_url": "https://github.com/the-non-expert/Alphabet-List-Svelte",
   "author": "Ayush Jhunjhunwala",
   "homepage": "https://github.com/the-non-expert/Alphabet-List-Svelte#readme",

@@ -1,8 +1,9 @@
 {
   "name": "@svx/components",
-  "description": "Create D3 components for Svelte, porting React's Vx.",
+  "description": "Port of React's Vx, providing Svelte D3 components.",
+  "repo_url": "",
   "author": "osmanmesutozcan",
-  "downloads": 0,
+  "downloads": 18,
   "dependents": 0,
   "updated": "2020-03-27T02:36:33.984Z",
   "tags": [

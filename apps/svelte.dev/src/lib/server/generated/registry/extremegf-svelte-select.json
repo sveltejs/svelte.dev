@@ -1,6 +1,6 @@
 {
   "name": "@extremegf/svelte-select",
-  "description": "Create select/autocomplete/typeahead components for Svelte apps.",
+  "description": "Creates a select/autocomplete/typeahead component for Svelte.",
   "repo_url": "https://rob-balfre@github.com/rob-balfre/svelte-select",
   "author": "Robert Balfré",
   "homepage": "https://github.com/rob-balfre/svelte-select#readme",

@@ -1,6 +1,6 @@
 {
   "name": "@apsc/tabs",
-  "description": "Organize tabs interface with component set and context class.",
+  "description": "Organizes tabs interface with Svelte components.",
   "repo_url": "https://github.com/andrey-pavlenko/svelte-components",
   "author": "Andrey Pavlenko",
   "homepage": "https://github.com/andrey-pavlenko/svelte-components/tree/main/packages/tabs#readme",

@@ -1,6 +1,6 @@
 {
   "name": "svelte-inline-modal",
-  "description": "Creates simple modal dialogs on the fly in Svelte.",
+  "description": "Create inline modal dialogs in Svelte applications.",
   "repo_url": "https://github.com/jill64/svelte-inline-modal",
   "author": "jill64",
   "homepage": "https://github.com/jill64/svelte-inline-modal#readme",

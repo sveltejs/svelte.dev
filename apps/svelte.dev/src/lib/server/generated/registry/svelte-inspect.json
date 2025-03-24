@@ -1,6 +1,6 @@
 {
   "name": "svelte-inspect",
-  "description": "Inspect Svelte objects interactively.",
+  "description": "Inspect Svelte objects within Svelte applications.",
   "repo_url": "https://github.com/trbrc/svelte-inspect",
   "author": "trbrc",
   "homepage": "https://github.com/trbrc/svelte-inspect",

@@ -1,6 +1,6 @@
 {
   "name": "svelte-formor",
-  "description": "Validate Svelte forms using Valibot and Svelte 5 runes.",
+  "description": "Validate forms in Svelte using Valibot and Svelte 5 runes.",
   "repo_url": "https://github.com/Vanilla-IceCream/svelte-formor",
   "author": "Vanilla IceCream",
   "homepage": "https://github.com/Vanilla-IceCream/svelte-formor#readme",

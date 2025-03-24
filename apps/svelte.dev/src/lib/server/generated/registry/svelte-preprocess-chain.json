@@ -1,6 +1,6 @@
 {
   "name": "svelte-preprocess-chain",
-  "description": "Chain Svelte preprocessors for complex transformations.",
+  "description": "Chains Svelte preprocessors.",
   "repo_url": "https://github.com/NicoCevallos/svelte-preprocess-chain",
   "author": "nicocevallos",
   "homepage": "https://github.com/NicoCevallos/svelte-preprocess-chain#readme",
@@ -12,5 +12,6 @@
     "preprocessor"
   ],
   "svelte5": true,
-  "runes": true
+  "runes": false,
+  "github_stars": 0
 }

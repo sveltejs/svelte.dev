@@ -1,6 +1,6 @@
 {
   "name": "@macfja/svelte-persistent-runes",
-  "description": "Create persistent reactive runes in Svelte.",
+  "description": "Persist Svelte reactive state across page reloads.",
   "repo_url": "https://github.com/MacFJA/svelte-persistent-runes",
   "author": "MacFJA",
   "homepage": "https://github.com/MacFJA/svelte-persistent-runes",
@@ -11,6 +11,6 @@
     "utility"
   ],
   "svelte5": true,
-  "runes": true,
+  "runes": false,
   "github_stars": 9
 }

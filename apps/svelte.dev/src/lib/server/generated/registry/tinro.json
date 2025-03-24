@@ -1,6 +1,6 @@
 {
   "name": "tinro",
-  "description": "Tiny, declarative router for Svelte web applications.",
+  "description": "Tiny declarative router for Svelte web applications.",
   "repo_url": "https://github.com/AlexxNB/tinro",
   "author": "Alexey Schebelev",
   "homepage": "https://github.com/AlexxNB/tinro#readme",

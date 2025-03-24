@@ -1,6 +1,6 @@
 {
   "name": "svelte-maybe-transition",
-  "description": "Enable and modify Svelte transitions dynamically.",
+  "description": "Enable and modify Svelte element transitions dynamically.",
   "repo_url": "https://github.com/kiosion/svelte-maybe-transition",
   "author": "kiosion",
   "homepage": "https://github.com/kiosion/svelte-maybe-transition#readme",

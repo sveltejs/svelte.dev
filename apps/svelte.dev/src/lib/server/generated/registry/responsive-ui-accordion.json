@@ -1,6 +1,6 @@
 {
   "name": "@responsive-ui/accordion",
-  "description": "Create responsive accordion component for Svelte applications.",
+  "description": "Build accordion component for responsive Svelte UI.",
   "repo_url": "https://github.com/wetix/responsive-ui",
   "author": "Si3nLoong",
   "homepage": "https://github.com/wetix/responsive-ui/blob/main/components/accordion#README.md",
@@ -8,7 +8,6 @@
   "dependents": 1,
   "updated": "2024-04-23T07:50:59.733Z",
   "tags": [
-    "ui",
     "component-library"
   ],
   "svelte5": false,

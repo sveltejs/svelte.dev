@@ -1,6 +1,7 @@
 {
   "name": "argil-svelte",
-  "description": "Build Svelte UI Components Kit from argil data agency.",
+  "description": "Provides Svelte UI components kit.",
+  "repo_url": "",
   "author": "Vincent Delaleu",
   "downloads": 10,
   "dependents": 0,

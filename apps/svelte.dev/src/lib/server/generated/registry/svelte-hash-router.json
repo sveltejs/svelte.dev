@@ -1,6 +1,6 @@
 {
   "name": "svelte-hash-router",
-  "description": "Create Svelte hash-based router.",
+  "description": "Create hash-based routing for Svelte applications.",
   "repo_url": "https://github.com/pynnl/svelte-hash-router",
   "author": "pynnl",
   "homepage": "https://github.com/pynnl/svelte-hash-router#readme",

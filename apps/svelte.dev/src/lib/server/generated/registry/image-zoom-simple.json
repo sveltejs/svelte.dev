@@ -1,6 +1,6 @@
 {
   "name": "image-zoom-simple",
-  "description": "Provide image zoom functionality in Svelte applications.",
+  "description": "Provide zoom functionality for images in Svelte applications.",
   "repo_url": "https://github.com/akbaruddin/image-zoom-simple",
   "author": "Akbar Uddin",
   "homepage": "https://github.com/akbaruddin/image-zoom-simple",

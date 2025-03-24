@@ -1,6 +1,6 @@
 {
   "name": "another-novel-svelte",
-  "description": "Build Notion-style WYSIWYG editor for Svelte apps.",
+  "description": "Offer Notion-style WYSIWYG editor for Svelte apps.",
   "repo_url": "https://github.com/DennisOluoch/novel-svelte",
   "author": "DennisOluoch",
   "homepage": "https://github.com/DennisOluoch/novel-svelte#readme",

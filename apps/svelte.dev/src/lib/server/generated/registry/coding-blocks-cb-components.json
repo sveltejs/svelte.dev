@@ -1,6 +1,7 @@
 {
   "name": "@coding-blocks/cb-components",
-  "description": "Provide reusable components for Coding Blocks platforms.",
+  "description": "Offer reusable components for Coding Blocks platforms.",
+  "repo_url": "",
   "author": "bipinkalra",
   "downloads": 5,
   "dependents": 0,

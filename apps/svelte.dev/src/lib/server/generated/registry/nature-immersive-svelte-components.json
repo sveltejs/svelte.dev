@@ -1,6 +1,7 @@
 {
   "name": "nature-immersive-svelte-components",
-  "description": "Build nature-immersive articles with Svelte components.",
+  "description": "Build nature immersive articles with Svelte components.",
+  "repo_url": "",
   "author": "chris-creditdesign",
   "downloads": 1,
   "dependents": 0,

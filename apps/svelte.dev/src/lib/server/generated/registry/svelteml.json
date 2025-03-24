@@ -1,6 +1,6 @@
 {
   "name": "svelteml",
-  "description": "Offers simple Svelte components for machine learning.",
+  "description": "Offer ML components for Svelte apps using TensorflowJS.",
   "repo_url": "https://github.com/john--kane/svelteml",
   "author": "John Kane",
   "homepage": "https://github.com/john--kane/svelteml#readme",
@@ -11,5 +11,6 @@
     "utility"
   ],
   "svelte5": false,
-  "runes": false
+  "runes": false,
+  "github_stars": 72
 }

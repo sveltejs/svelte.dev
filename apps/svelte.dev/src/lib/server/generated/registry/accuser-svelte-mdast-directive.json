@@ -1,6 +1,6 @@
 {
   "name": "@accuser/svelte-mdast-directive",
-  "description": "Transform Markdown into Svelte components.",
+  "description": "Transform Markdown to Svelte components.",
   "repo_url": "https://github.com/accuser/svelte-mdast-directive",
   "author": "Matthew Gibbons",
   "homepage": "https://github.com/accuser/svelte-mdast-directive",

@@ -1,6 +1,6 @@
 {
   "name": "svelte-heatmap",
-  "description": "Create GitHub-style contribution graphs in Svelte.",
+  "description": "Generate customizable GitHub-style contribution graphs in Svelte.",
   "repo_url": "https://github.com/scottbedard/svelte-heatmap",
   "author": "Scott Bedard",
   "homepage": "https://github.com/scottbedard/svelte-heatmap",

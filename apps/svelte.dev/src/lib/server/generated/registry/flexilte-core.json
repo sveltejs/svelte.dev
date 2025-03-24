@@ -1,6 +1,6 @@
 {
   "name": "@flexilte/core",
-  "description": "Generate layouts from JSON for SvelteKit applications.",
+  "description": "Transforms JSON into flex-based pages for SvelteKit.",
   "repo_url": "https://github.com/flexilte/flexilte",
   "author": "borgmon",
   "homepage": "https://flexilte.github.io",

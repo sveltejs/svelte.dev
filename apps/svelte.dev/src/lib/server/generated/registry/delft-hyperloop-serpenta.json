@@ -1,6 +1,7 @@
 {
   "name": "@delft-hyperloop/serpenta",
-  "description": "UI component library for Delft Hyperloop's Serpenta GUI standard.",
+  "description": "Provides UI component library for Delft Hyperloop's Serpenta GUI.",
+  "repo_url": "",
   "author": "Kiril Panayotov",
   "homepage": "https://delft-hyperloop.github.io/serpenta",
   "downloads": 16,

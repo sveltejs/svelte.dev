@@ -1,13 +1,13 @@
 {
   "name": "svelte-locomotive-scroll",
-  "description": "Provide Locomotive Scroll wrapper for Svelte applications.",
+  "description": "Svelte wrapper for Locomotive Scroll smooth scrolling.",
+  "repo_url": "",
   "author": "Jason",
   "downloads": 1,
   "dependents": 0,
   "updated": "2022-04-06T20:27:57.865Z",
   "tags": [
-    "integration",
-    "ui"
+    "utility"
   ],
   "svelte5": false,
   "runes": false

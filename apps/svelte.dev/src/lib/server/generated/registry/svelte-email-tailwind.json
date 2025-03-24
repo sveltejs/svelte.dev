@@ -1,6 +1,6 @@
 {
   "name": "svelte-email-tailwind",
-  "description": "Builds emails with Svelte 5 and Tailwind.",
+  "description": "Build emails with Svelte 5 and Tailwind.",
   "repo_url": "https://github.com/steveninety/svelte-email-tailwind",
   "author": "Steven Polak",
   "homepage": "https://github.com/steveninety/svelte-email-tailwind#readme",

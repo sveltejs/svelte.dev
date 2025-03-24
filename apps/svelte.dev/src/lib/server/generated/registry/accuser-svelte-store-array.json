@@ -1,6 +1,6 @@
 {
   "name": "@accuser/svelte-store-array",
-  "description": "Create higher-order Svelte stores for array manipulation.",
+  "description": "Higher-order Svelte stores for array manipulation.",
   "repo_url": "https://github.com/accuser/svelte-store-array",
   "author": "Matthew Gibbons",
   "homepage": "https://github.com/accuser/svelte-store-array/README.md",

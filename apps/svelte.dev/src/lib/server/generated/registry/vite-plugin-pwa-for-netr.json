@@ -1,15 +1,13 @@
 {
   "name": "vite-plugin-pwa-for-netr",
-  "description": "Add PWA features to Vite-based Svelte projects.",
   "repo_url": "https://github.com/antfu/vite-plugin-pwa",
   "author": "antfu",
   "homepage": "https://github.com/antfu/vite-plugin-pwa",
   "downloads": 0,
   "dependents": 0,
   "updated": "2022-09-10T10:18:21.003Z",
-  "tags": [
-    "tooling"
-  ],
+  "tags": [],
   "svelte5": false,
-  "runes": false
+  "runes": false,
+  "github_stars": 3440
 }

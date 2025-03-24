@@ -1,6 +1,7 @@
 {
   "name": "svelte-tree-viewer",
   "description": "Create tree view components for Svelte applications.",
+  "repo_url": "",
   "author": "pulkit29",
   "downloads": 55,
   "dependents": 0,

@@ -1,6 +1,6 @@
 {
   "name": "svelte-audio-video",
-  "description": "Provide audio/video components with track attachment.",
+  "description": "Provide audio and video components for Svelte.",
   "repo_url": "https://github.com/relm-us/svelte-audio-video",
   "author": "Duane Johnson",
   "downloads": 0,

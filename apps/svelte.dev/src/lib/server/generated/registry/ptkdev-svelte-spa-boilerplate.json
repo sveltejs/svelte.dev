@@ -4,11 +4,11 @@
   "repo_url": "https://github.com/ptkdev-boilerplate/svelte-spa-boilerplate",
   "author": "Patryk Rzucidło [@ptkdev]",
   "homepage": "https://github.com/ptkdev-boilerplate/svelte-spa-boilerplate",
-  "downloads": 1531,
+  "downloads": 1542,
   "dependents": 0,
   "updated": "2022-02-07T22:38:32.725Z",
   "tags": [
-    "utility"
+    "tooling"
   ],
   "svelte5": false,
   "runes": false,

@@ -1,6 +1,7 @@
 {
   "name": "svelte-react-player",
-  "description": "Svelte wrapper for React Player, embed videos easily.",
+  "description": "Integrate React Player into Svelte applications.",
+  "repo_url": "",
   "author": "Christian Korndoerfer",
   "homepage": "https://github.com/Perspective-Software/svelte-react-player",
   "downloads": 85,

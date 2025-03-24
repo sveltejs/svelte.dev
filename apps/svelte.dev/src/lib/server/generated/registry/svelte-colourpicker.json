@@ -1,6 +1,6 @@
 {
   "name": "svelte-colourpicker",
-  "description": "Create Svelte colour picker component.",
+  "description": "Implement Svelte color picker component.",
   "repo_url": "https://github.com/cooolbros/svelte-colourpicker",
   "author": "cooolbros",
   "homepage": "https://github.com/cooolbros/svelte-colourpicker#readme",

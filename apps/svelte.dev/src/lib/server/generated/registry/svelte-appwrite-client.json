@@ -1,6 +1,6 @@
 {
   "name": "svelte-appwrite-client",
-  "description": "Integrate Appwrite backend services with Svelte apps.",
+  "description": "Integrate Appwrite backend services with Svelte applications.",
   "repo_url": "https://github.com/lewis-wow/svelte-appwrite",
   "author": "Ludvik Prokopec",
   "homepage": "https://github.com/lewis-wow/svelte-appwrite#readme",

@@ -1,6 +1,6 @@
 {
   "name": "svelte-layouts",
-  "description": "Create layouts using Flexbox and Grid in Svelte apps.",
+  "description": "Structure Svelte pages easily using Flexbox and Grid components.",
   "repo_url": "https://github.com/ryu-man/svelte-layouts",
   "author": "ryu-man",
   "homepage": "https://github.com/ryu-man/svelte-layouts#readme",
@@ -8,7 +8,7 @@
   "dependents": 0,
   "updated": "2022-09-04T10:16:31.383Z",
   "tags": [
-    "ui"
+    "utility"
   ],
   "svelte5": false,
   "runes": false,

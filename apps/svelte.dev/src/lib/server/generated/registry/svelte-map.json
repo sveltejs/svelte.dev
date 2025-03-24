@@ -1,6 +1,6 @@
 {
   "name": "svelte-map",
-  "description": "Create maps using Leaflet.js in Svelte applications.",
+  "description": "Create interactive maps using Leaflet.js in Svelte.",
   "repo_url": "https://github.com/andre-brandao/svelte-map",
   "author": "andre-brandao",
   "homepage": "https://github.com/andre-brandao/svelte-map#readme",

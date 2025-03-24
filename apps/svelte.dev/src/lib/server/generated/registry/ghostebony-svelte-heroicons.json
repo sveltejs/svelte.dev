@@ -1,6 +1,6 @@
 {
   "name": "@ghostebony/svelte-heroicons",
-  "description": "Integrate Heroicons into Svelte projects, supporting outline and solid styles.",
+  "description": "Provides Heroicons as Svelte components.",
   "repo_url": "https://github.com/ghostebony/svelte-heroicons",
   "author": "Pedro Américo",
   "homepage": "https://github.com/ghostebony/svelte-heroicons#readme",
@@ -11,6 +11,6 @@
     "ui"
   ],
   "svelte5": true,
-  "runes": false,
+  "runes": true,
   "github_stars": 1
 }

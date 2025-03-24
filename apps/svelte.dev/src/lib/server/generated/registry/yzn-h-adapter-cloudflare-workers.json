@@ -1,6 +1,6 @@
 {
   "name": "@yzn-h/adapter-cloudflare-workers",
-  "description": "Create Cloudflare Workers site using dynamic server rendering.",
+  "description": "Creates Cloudflare Workers site using server-side rendering.",
   "repo_url": "https://github.com/sveltejs/kit",
   "author": "yzn-h",
   "homepage": "https://svelte.dev",
@@ -12,5 +12,5 @@
   ],
   "svelte5": false,
   "runes": false,
-  "github_stars": 19121
+  "github_stars": 19122
 }

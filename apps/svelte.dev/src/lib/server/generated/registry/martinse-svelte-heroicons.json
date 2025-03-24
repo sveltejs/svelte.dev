@@ -1,6 +1,6 @@
 {
   "name": "@martinse/svelte-heroicons",
-  "description": "Integrate Heroicons into Svelte components.",
+  "description": "Use Heroicons in Svelte applications.",
   "repo_url": "https://github.com/martinse/svelte-heroicons",
   "author": "@martinse",
   "homepage": "https://github.com/martinse/svelte-heroicons#readme",

@@ -1,6 +1,6 @@
 {
   "name": "@fabiohvp/svelte-table",
-  "description": "Render tables using HTML, manage user interaction with JavaScript.",
+  "description": "Render tables with sorting and pagination in Svelte.",
   "repo_url": "https://github.com/fabiohvp/svelte-table",
   "author": "https://github.com/fabiohvp",
   "homepage": "https://github.com/fabiohvp/svelte-table#readme",

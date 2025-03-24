@@ -1,6 +1,7 @@
 {
   "name": "svelte-tabula",
-  "description": "Create table components with built-in features.",
+  "description": "Create table components with batteries included for Svelte.",
+  "repo_url": "",
   "author": "danielschischkin",
   "downloads": 2,
   "dependents": 0,

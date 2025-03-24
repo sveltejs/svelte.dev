@@ -1,6 +1,6 @@
 {
   "name": "@dexq/svelte-scrollspy",
-  "description": "Track scroll position of elements in Svelte apps.",
+  "description": "Tracks scroll position of elements in Svelte apps.",
   "repo_url": "https://github.com/dexterklui/svelte-scrollspy",
   "author": "Dexter Lui",
   "homepage": "https://github.com/dexterklui/svelte-scrollspy#readme",

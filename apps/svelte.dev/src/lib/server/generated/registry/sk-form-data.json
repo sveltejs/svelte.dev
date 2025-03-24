@@ -1,6 +1,7 @@
 {
   "name": "sk-form-data",
   "description": "Parse form data automatically in SvelteKit form actions.",
+  "repo_url": "",
   "author": "Scott Tolinski",
   "downloads": 55,
   "dependents": 0,

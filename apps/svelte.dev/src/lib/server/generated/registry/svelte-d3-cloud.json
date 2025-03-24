@@ -1,6 +1,6 @@
 {
   "name": "svelte-d3-cloud",
-  "description": "Provides a Svelte wrapper for d3-cloud word cloud visualizations.",
+  "description": "Provides Svelte wrapper for d3-cloud word cloud visualizations.",
   "repo_url": "https://github.com/maziyank/svelte-d3-cloud",
   "author": "maziyank",
   "homepage": "https://github.com/maziyank/svelte-d3-cloud#readme",

@@ -1,6 +1,6 @@
 {
   "name": "@svelteschool/svelte-forms",
-  "description": "Build forms with validation in Svelte apps.",
+  "description": "Create simple, reactive forms for Svelte applications.",
   "repo_url": "https://github.com/svelteschool/svelte-forms",
   "author": "Svelte School",
   "homepage": "https://github.com/svelteschool/svelte-forms/",

@@ -1,6 +1,6 @@
 {
   "name": "@zeerobug/cookie-consent-banner",
-  "description": "Implement GDPR cookie consent banner in Svelte apps.",
+  "description": "Implement GDPR cookie consent banner in Svelte applications.",
   "author": "Antony Jones",
   "downloads": 0,
   "dependents": 0,

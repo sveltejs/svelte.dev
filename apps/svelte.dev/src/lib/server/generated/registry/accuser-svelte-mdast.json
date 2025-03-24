@@ -1,6 +1,6 @@
 {
   "name": "@accuser/svelte-mdast",
-  "description": "Transform Mdast to Svelte components, render Markdown content.",
+  "description": "Transform Mdast to Svelte components.",
   "repo_url": "https://github.com/accuser/svelte-mdast",
   "author": "Matthew Gibbons",
   "homepage": "https://github.com/accuser/svelte-mdast",

@@ -1,6 +1,6 @@
 {
   "name": "heroicons-for-svelte",
-  "description": "Use Heroicons in Svelte projects.",
+  "description": "Use Heroicons in Svelte projects, supporting outline and solid variants.",
   "repo_url": "https://github.com/patrikpessi/heroicons-for-svelte",
   "author": "batti",
   "homepage": "https://github.com/patrikpessi/heroicons-for-svelte#readme",

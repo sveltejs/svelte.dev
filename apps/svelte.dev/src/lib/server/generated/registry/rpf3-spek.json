@@ -1,6 +1,6 @@
 {
   "name": "@rpf3/spek",
-  "description": "Create UI components with Svelte and Tailwind.",
+  "description": "Create opinionated Svelte component library with Tailwind.",
   "repo_url": "https://github.com/rpf3/spek",
   "author": "Richard P. Field III",
   "homepage": "https://github.com/rpf3/spek#readme",
@@ -8,8 +8,7 @@
   "dependents": 0,
   "updated": "2024-06-02T16:02:32.334Z",
   "tags": [
-    "component-library",
-    "ui"
+    "component-library"
   ],
   "svelte5": false,
   "runes": false,

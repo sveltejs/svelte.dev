@@ -1,6 +1,6 @@
 {
   "name": "svelte-preprocess-md",
-  "description": "Preprocess Svelte components written as Markdown files.",
+  "description": "Processes Markdown files into Svelte components.",
   "repo_url": "https://github.com/timhall/svelte-preprocess-md",
   "author": "Tim Hall",
   "homepage": "https://github.com/timhall/svelte-preprocess-md#readme",

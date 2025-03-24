@@ -1,6 +1,6 @@
 {
   "name": "svelte-disable-preload",
-  "description": "Disable SvelteKit preloading for canvas animations.",
+  "description": "Disable SvelteKit preload for smoother canvas animations.",
   "repo_url": "https://github.com/captaincodeman/svelte-disable-preload",
   "author": "Simon Green",
   "homepage": "https://captaincodeman.github.io/svelte-disable-preload/",

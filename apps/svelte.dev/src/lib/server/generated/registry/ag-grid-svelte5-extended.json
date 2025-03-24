@@ -1,6 +1,6 @@
 {
   "name": "ag-grid-svelte5-extended",
-  "description": "AG-Grid wrapper for Svelte 5 with Svelte components as cell renderers.",
+  "description": "AG-Grid wrapper for Svelte 5 with Svelte component cell renderers.",
   "repo_url": "https://github.com/bn-l/ag-grid-svelte5-extended",
   "author": "bn-l-github",
   "homepage": "https://bn-l.github.io/ag-grid-svelte5-extended/",
@@ -8,7 +8,7 @@
   "dependents": 0,
   "updated": "2024-12-01T09:46:06.383Z",
   "tags": [
-    "component-library"
+    "ui"
   ],
   "svelte5": true,
   "runes": false,

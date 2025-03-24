@@ -1,6 +1,6 @@
 {
   "name": "svelte-use-mousetrap",
-  "description": "Use Mousetrap for keyboard shortcuts in Svelte.",
+  "description": "Use mousetrap for keyboard shortcuts in Svelte.",
   "repo_url": "https://github.com/wareset/svelte-use-mousetrap",
   "author": "wareset",
   "homepage": "https://github.com/wareset/svelte-use-mousetrap#readme",

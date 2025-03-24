@@ -1,6 +1,7 @@
 {
   "name": "@chienleng/svelte-calendar",
-  "description": "Create calendar view component for Svelte applications.",
+  "description": "Creates calendar view components for Svelte.",
+  "repo_url": "",
   "author": "steven tan | @chienleng | steventan.com.au",
   "downloads": 18,
   "dependents": 0,

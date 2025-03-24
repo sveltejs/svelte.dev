@@ -1,6 +1,6 @@
 {
   "name": "@rodneylab/sveltekit-components",
-  "description": "Provide handy components for building SvelteKit sites.",
+  "description": "Provides handy components for SvelteKit sites.",
   "repo_url": "https://github.com/rodneylab/sveltekit-components",
   "author": "Rodney Lab",
   "homepage": "https://github.com/rodneylab/sveltekit-components#readme",
@@ -8,7 +8,7 @@
   "dependents": 0,
   "updated": "2024-12-04T10:06:54.921Z",
   "tags": [
-    "component-library"
+    "ui"
   ],
   "svelte5": true,
   "runes": false,

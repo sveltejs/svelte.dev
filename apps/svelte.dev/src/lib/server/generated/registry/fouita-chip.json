@@ -1,6 +1,6 @@
 {
   "name": "@fouita/chip",
-  "description": "Build chip and alert components with Svelte and TailwindCSS.",
+  "description": "Build chip and alert components with Svelte and Tailwind CSS.",
   "repo_url": "https://github.com/fouita/chip",
   "author": "fouita",
   "homepage": "https://github.com/fouita/chip#readme",

@@ -1,15 +1,12 @@
 {
   "name": "@svelte-parts/zoom",
-  "description": "Enable pan and zoom functionality for images in Svelte.",
   "repo_url": "https://github.com/idris-maps/svelte-parts",
   "author": "idris-maps",
   "homepage": "https://github.com/idris-maps/svelte-parts#readme",
   "downloads": 90,
   "dependents": 0,
   "updated": "2022-04-04T21:07:07.534Z",
-  "tags": [
-    "ui"
-  ],
+  "tags": [],
   "svelte5": false,
   "runes": false,
   "github_stars": 50

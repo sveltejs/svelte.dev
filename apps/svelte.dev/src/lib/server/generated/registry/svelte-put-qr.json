@@ -1,6 +1,6 @@
 {
   "name": "@svelte-put/qr",
-  "description": "Render QR codes as SVG or IMG in Svelte.",
+  "description": "Render QR codes as SVG or IMG elements in Svelte apps.",
   "repo_url": "https://github.com/vnphanquang/svelte-put",
   "author": "Quang Phan",
   "homepage": "https://svelte-put.vnphanquang.com/docs/qr",
@@ -8,7 +8,7 @@
   "dependents": 1,
   "updated": "2024-11-29T03:48:15.759Z",
   "tags": [
-    "ui"
+    "media"
   ],
   "svelte5": true,
   "runes": false,

@@ -1,6 +1,6 @@
 {
   "name": "allay",
-  "description": "Provide low-level UI component library for Svelte, focused on accessibility.",
+  "description": "Provides low-level, accessible UI components for Svelte.",
   "repo_url": "https://github.com/AnatoleLucet/allay",
   "author": "AnatoleLucet",
   "homepage": "https://github.com/AnatoleLucet/allay#readme",
@@ -8,8 +8,7 @@
   "dependents": 0,
   "updated": "2022-03-03T23:20:24.458Z",
   "tags": [
-    "component-library",
-    "ui"
+    "component-library"
   ],
   "svelte5": false,
   "runes": false

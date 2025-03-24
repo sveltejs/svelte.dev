@@ -1,6 +1,6 @@
 {
   "name": "svelte-google-materialdesign-icons",
-  "description": "Provide Google Material Design SVG icon components for Svelte.",
+  "description": "Use Google Material Design SVG icons in Svelte projects.",
   "repo_url": "https://github.com/shinokada/svelte-google-materialdesign-icons",
   "author": "Shinichi Okada",
   "homepage": "https://svelte-google-materialdesign-icons.codewithshin.com",

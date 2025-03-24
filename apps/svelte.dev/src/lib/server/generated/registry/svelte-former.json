@@ -1,6 +1,6 @@
 {
   "name": "svelte-former",
-  "description": "Create Svelte form elements with easy validation.",
+  "description": "Build forms with easy validation in Svelte applications.",
   "repo_url": "https://github.com/mugendi/svelte-former",
   "author": "Anthony Mugendi",
   "homepage": "https://github.com/mugendi/svelte-former#readme",

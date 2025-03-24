@@ -1,6 +1,7 @@
 {
   "name": "@svelte-chat/utils",
-  "description": "Provide utilities for Svelte-Chat applications.",
+  "description": "Provides utilities for Svelte chat applications.",
+  "repo_url": "",
   "author": "kotekpsotek",
   "downloads": 0,
   "dependents": 2,

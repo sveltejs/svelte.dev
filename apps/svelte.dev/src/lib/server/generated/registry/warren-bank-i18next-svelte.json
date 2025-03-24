@@ -1,6 +1,6 @@
 {
   "name": "@warren-bank/i18next-svelte",
-  "description": "Provide Svelte wrapper for i18next internationalization library.",
+  "description": "Integrate i18next for Svelte applications.",
   "repo_url": "https://github.com/warren-bank/js-i18next-svelte",
   "author": "Warren R. Bank",
   "homepage": "https://github.com/warren-bank/js-i18next-svelte#readme",

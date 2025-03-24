@@ -1,6 +1,6 @@
 {
   "name": "s-comp-core",
-  "description": "Provide various Svelte components for UI development.",
+  "description": "Provide reusable Svelte UI components.",
   "repo_url": "https://github.com/ghjang/s-comp-core",
   "author": "ghjang",
   "homepage": "https://github.com/ghjang/s-comp-core#readme",

@@ -1,10 +1,10 @@
 {
   "name": "@unovis/svelte",
-  "description": "Visualize data using charts, graphs, and maps in Svelte.",
+  "description": "Modular data visualization framework for Svelte.",
   "repo_url": "https://github.com/f5/unovis",
   "author": "Rebecca Bol, F5 Inc.",
   "homepage": "https://unovis.dev",
-  "downloads": 5665,
+  "downloads": 6174,
   "dependents": 1,
   "updated": "2025-02-19T18:26:10.533Z",
   "tags": [
@@ -12,5 +12,5 @@
   ],
   "svelte5": false,
   "runes": false,
-  "github_stars": 2422
+  "github_stars": 2425
 }

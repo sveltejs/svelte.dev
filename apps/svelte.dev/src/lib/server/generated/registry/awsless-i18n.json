@@ -1,6 +1,6 @@
 {
   "name": "@awsless/i18n",
-  "description": "Automatically translate text in Svelte apps during build time.",
+  "description": "Automatically translate text in Svelte projects during build time.",
   "repo_url": "https://github.com/awsless/awsless",
   "author": "micmonen",
   "homepage": "https://github.com/awsless/awsless#readme",
@@ -8,7 +8,7 @@
   "dependents": 0,
   "updated": "2024-09-17T10:16:34.129Z",
   "tags": [
-    "tooling"
+    "utility"
   ],
   "svelte5": false,
   "runes": false,

@@ -1,6 +1,6 @@
 {
   "name": "@viamrobotics/eslint-config-svelte",
-  "description": "Provides ESLint configuration for Svelte projects at Viam.",
+  "description": "ESLint configuration for Svelte projects at Viam.",
   "repo_url": "https://github.com/viamrobotics/js-config",
   "author": "cheukt",
   "homepage": "https://github.com/viamrobotics/js-config#readme",
@@ -8,8 +8,7 @@
   "dependents": 0,
   "updated": "2025-02-25T21:31:16.854Z",
   "tags": [
-    "tooling",
-    "preprocessor"
+    "tooling"
   ],
   "svelte5": true,
   "runes": false,

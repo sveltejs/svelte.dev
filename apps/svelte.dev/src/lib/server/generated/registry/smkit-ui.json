@@ -1,6 +1,7 @@
 {
   "name": "@smkit/ui",
-  "description": "UI Kit of SberMarketing for Svelte.",
+  "description": "UI Kit of SberMarketing. Provides reusable Svelte components.",
+  "repo_url": "",
   "author": "Dmitriy Din",
   "downloads": 621,
   "dependents": 0,

@@ -1,6 +1,6 @@
 {
   "name": "svelte-codicons",
-  "description": "Use VS Code Codicons as Svelte components.",
+  "description": "Provides VS Code Codicons as Svelte components.",
   "repo_url": "https://github.com/metonym/svelte-codicons",
   "author": "Eric Liu",
   "homepage": "https://github.com/metonym/svelte-codicons",

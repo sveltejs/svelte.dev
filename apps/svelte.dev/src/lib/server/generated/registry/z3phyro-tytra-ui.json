@@ -1,6 +1,6 @@
 {
   "name": "@z3phyro/tytra-ui",
-  "description": "UI for typed translations package (TyTra) in Svelte.",
+  "description": "Provides UI for typed translations package (TyTra).",
   "repo_url": "https://github.com/z3phyro/tytra-ui",
   "author": "z3phyro",
   "homepage": "https://github.com/z3phyro/tytra-ui#readme",
@@ -8,7 +8,8 @@
   "dependents": 0,
   "updated": "2023-04-17T07:16:12.547Z",
   "tags": [
-    "ui"
+    "ui",
+    "component-library"
   ],
   "svelte5": false,
   "runes": false,

@@ -1,6 +1,6 @@
 {
   "name": "svelty-editor",
-  "description": "Integrate Editor.js into Svelte applications.",
+  "description": "Svelte wrapper for Editor.js with TypeScript support and configuration.",
   "repo_url": "https://github.com/code-gio/svelty-editor",
   "author": "Giovani Rodriguez",
   "homepage": "https://github.com/code-gio/svelty-editor#readme",
@@ -8,7 +8,7 @@
   "dependents": 0,
   "updated": "2025-03-04T19:57:41.103Z",
   "tags": [
-    "content"
+    "utility"
   ],
   "svelte5": true,
   "runes": false,

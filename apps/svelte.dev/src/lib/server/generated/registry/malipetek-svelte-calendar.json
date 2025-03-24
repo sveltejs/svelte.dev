@@ -1,6 +1,6 @@
 {
   "name": "@malipetek/svelte-calendar",
-  "description": "Implement small date picker components for Svelte.",
+  "description": "Provide small date picker component for Svelte.",
   "repo_url": "https://github.com/malipetek/svelte-calendar",
   "author": "malipetek",
   "homepage": "https://github.com/malipetek/svelte-calendar#readme",

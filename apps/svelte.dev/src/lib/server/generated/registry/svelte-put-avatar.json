@@ -1,6 +1,6 @@
 {
   "name": "@svelte-put/avatar",
-  "description": "Creates avatar components with Gravatar and UI Avatar support.",
+  "description": "Build avatars with Gravatar and UI Avatar support.",
   "repo_url": "https://github.com/vnphanquang/svelte-put",
   "author": "Quang Phan",
   "homepage": "https://svelte-put.vnphanquang.com/docs/avatar",

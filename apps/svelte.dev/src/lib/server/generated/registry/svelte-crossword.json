@@ -1,6 +1,6 @@
 {
   "name": "svelte-crossword",
-  "description": "Create crossword puzzles with Svelte.",
+  "description": "Create crossword puzzle component for Svelte.",
   "repo_url": "https://github.com/russellgoldenberg/svelte-crossword",
   "author": "russell goldenberg",
   "homepage": "https://github.com/russellgoldenberg/svelte-crossword#readme",

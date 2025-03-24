@@ -1,6 +1,6 @@
 {
   "name": "prosemirror-svelte-nodeview",
-  "description": "Create ProseMirror NodeView using Svelte.",
+  "description": "Create ProseMirror NodeViews using Svelte components.",
   "repo_url": "https://github.com/mattosborn/prosemirror-svelte-nodeview",
   "author": "Matt Osborn",
   "homepage": "https://github.com/mattosborn/prosemirror-svelte-nodeview#readme",
@@ -8,8 +8,9 @@
   "dependents": 1,
   "updated": "2022-11-15T02:09:55.931Z",
   "tags": [
-    "content"
+    "utility"
   ],
   "svelte5": false,
-  "runes": false
+  "runes": false,
+  "github_stars": 2
 }

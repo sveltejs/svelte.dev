@@ -1,6 +1,6 @@
 {
   "name": "svelte-feathers",
-  "description": "Provide Feathericon components for Svelte.",
+  "description": "Provide Feathericon components for Svelte applications.",
   "repo_url": "https://github.com/shinokada/svelte-feathers",
   "author": "Shinichi Okada",
   "homepage": "https://svelte-feathers.codewithshin.com",

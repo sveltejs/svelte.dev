@@ -1,6 +1,6 @@
 {
   "name": "svavatar",
-  "description": "Generate avatar placeholders using Dicebear's Avatars library.",
+  "description": "Generate avatars using Dicebear's library for Svelte apps.",
   "repo_url": "https://github.com/takoyaro/svavatar",
   "author": "takoyaro",
   "homepage": "https://github.com/takoyaro/svavatar#readme",

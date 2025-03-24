@@ -1,6 +1,6 @@
 {
   "name": "elementari",
-  "description": "Create interactive visualizations for materials science in Svelte.",
+  "description": "Interactive visualizations for materials science in Svelte.",
   "repo_url": "https://github.com/janosh/elementari",
   "author": "Janosh Riebesell",
   "homepage": "https://janosh.github.io/elementari",

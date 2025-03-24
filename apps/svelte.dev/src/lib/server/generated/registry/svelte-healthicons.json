@@ -1,6 +1,6 @@
 {
   "name": "svelte-healthicons",
-  "description": "Use Healthicons SVG icons as Svelte components.",
+  "description": "Render Healthicons SVG icons as Svelte components.",
   "repo_url": "https://github.com/metonym/svelte-healthicons",
   "author": "Eric Liu",
   "homepage": "https://github.com/metonym/svelte-healthicons",

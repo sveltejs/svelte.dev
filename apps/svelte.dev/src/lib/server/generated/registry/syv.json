@@ -1,6 +1,6 @@
 {
   "name": "syv",
-  "description": "Provide Svelte complementary components, icons, and stores.",
+  "description": "Offers Svelte complementary components, icons, and loaders.",
   "repo_url": "https://github.com/ignatiusmb/syv",
   "author": "Ignatius Bagus",
   "homepage": "https://github.com/ignatiusmb/syv#readme",
@@ -8,9 +8,7 @@
   "dependents": 0,
   "updated": "2024-10-22T05:33:17.920Z",
   "tags": [
-    "component-library",
-    "utility",
-    "ui"
+    "component-library"
   ],
   "svelte5": true,
   "runes": false,

@@ -1,6 +1,7 @@
 {
   "name": "@htmlbricks/hb-toast",
-  "description": "Create Svelte-Bootstrap Toast WebComponent.",
+  "description": "Create Svelte-Bootstrap toast web component.",
+  "repo_url": "",
   "author": "Dario Caruso",
   "downloads": 421,
   "dependents": 2,

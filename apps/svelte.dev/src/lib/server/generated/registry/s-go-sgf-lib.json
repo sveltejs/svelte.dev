@@ -1,6 +1,6 @@
 {
   "name": "s-go-sgf-lib",
-  "description": "Provide Go Game tools for SGF files in Svelte applications.",
+  "description": "Provide tools for reading and writing SGF files with Svelte.",
   "repo_url": "",
   "author": "Jean M.",
   "downloads": 1,

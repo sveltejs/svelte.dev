@@ -1,6 +1,7 @@
 {
   "name": "@developermuch/dev-svelte-headlessui",
   "description": "Provide unstyled, accessible UI components for Svelte.",
+  "repo_url": "",
   "author": "developermuch",
   "downloads": 2,
   "dependents": 0,

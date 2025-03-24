@@ -1,6 +1,6 @@
 {
   "name": "@svelte-put/clickoutside",
-  "description": "Provides an action for detecting clicks outside a node.",
+  "description": "Detect clicks outside Svelte component elements.",
   "repo_url": "https://github.com/vnphanquang/svelte-put",
   "author": "Quang Phan",
   "homepage": "https://svelte-put.vnphanquang.com/docs/clickoutside",

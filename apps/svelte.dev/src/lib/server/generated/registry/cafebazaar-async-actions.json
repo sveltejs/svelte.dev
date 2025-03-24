@@ -1,6 +1,6 @@
 {
   "name": "@cafebazaar/async-actions",
-  "description": "Manage async actions with loading states in Svelte apps.",
+  "description": "Manage asynchronous actions with state management in Svelte.",
   "repo_url": "https://github.com/cafebazaar/async-actions",
   "author": "Bazaar Front-End Chapter",
   "homepage": "https://github.com/cafebazaar/async-actions#readme",

@@ -1,6 +1,6 @@
 {
   "name": "smodale",
-  "description": "Create simple, customizable modal dialogs for Svelte.",
+  "description": "Create simple, customizable modals for Svelte.",
   "repo_url": "https://github.com/smoglica/smodale",
   "author": "Skender Moglica",
   "homepage": "https://smodale.vercel.app",

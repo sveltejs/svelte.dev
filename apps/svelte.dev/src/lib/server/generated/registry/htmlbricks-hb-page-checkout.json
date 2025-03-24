@@ -1,6 +1,7 @@
 {
   "name": "@htmlbricks/hb-page-checkout",
   "description": "Create Svelte Page Payment WebComponent.",
+  "repo_url": "",
   "author": "Dario Caruso",
   "downloads": 423,
   "dependents": 2,

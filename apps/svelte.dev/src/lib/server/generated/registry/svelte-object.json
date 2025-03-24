@@ -1,6 +1,6 @@
 {
   "name": "svelte-object",
-  "description": "Structure objects/arrays with nested components using Svelte 5 runes.",
+  "description": "Nested component pattern for structuring objects and arrays.",
   "author": "refzlund",
   "homepage": "https://github.com/Refzlund/svelte-object",
   "downloads": 8,

@@ -1,6 +1,6 @@
 {
   "name": "svelte-ionicons",
-  "description": "Provides 1350+ Ionicon SVG icons for Svelte.",
+  "description": "Provides Ionicons SVG icons for Svelte applications.",
   "repo_url": "https://github.com/shinokada/svelte-ionicons",
   "author": "Shinichi Okada",
   "homepage": "https://svelte-ionicons.codewithshin.com/",

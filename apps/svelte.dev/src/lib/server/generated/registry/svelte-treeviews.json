@@ -1,6 +1,6 @@
 {
   "name": "svelte-treeviews",
-  "description": "Provides full-featured treeview component for Svelte applications.",
+  "description": "Create treeview components for Svelte applications.",
   "repo_url": "https://github.com/orefalo/svelte-treeviewss",
   "author": "Olivier Refalo",
   "homepage": "https://orefalo.github.io/svelte-treeviews/",

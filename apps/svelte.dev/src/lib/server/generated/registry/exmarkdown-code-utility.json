@@ -1,6 +1,6 @@
 {
   "name": "exmarkdown-code-utility",
-  "description": "Add code copy, highlighting features to svelte-exmarkdown.",
+  "description": "Adds code copy button, filename display, and highlighting to exmarkdown.",
   "repo_url": "https://github.com/jill64/exmarkdown-code-utility",
   "author": "jill64",
   "homepage": "https://github.com/jill64/exmarkdown-code-utility#readme",
@@ -9,7 +9,7 @@
   "updated": "2025-03-16T07:02:59.685Z",
   "tags": [
     "utility",
-    "content"
+    "tooling"
   ],
   "svelte5": true,
   "runes": false,

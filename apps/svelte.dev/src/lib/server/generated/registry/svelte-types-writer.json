@@ -1,6 +1,7 @@
 {
   "name": "svelte-types-writer",
-  "description": "Generate TypeScript declarations for Svelte components.",
+  "description": "Generate TypeScript declaration files for Svelte components.",
+  "repo_url": "",
   "author": "Michael Lucht",
   "downloads": 2,
   "dependents": 0,

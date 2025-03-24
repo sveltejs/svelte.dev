@@ -1,6 +1,6 @@
 {
   "name": "svelte-fastore",
-  "description": "Provide fastore for Svelte, using localStorage and sessionStorage.",
+  "description": "Provide localStorage and sessionStorage utilities for Svelte.",
   "repo_url": "https://github.com/mwc/svelte-fastore",
   "author": "mwc@foxmail.com",
   "homepage": "https://github.com/mwc/svelte-fastore#readme",

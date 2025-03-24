@@ -1,6 +1,6 @@
 {
   "name": "svelte-preprocess-loader",
-  "description": "Preprocess Svelte components using Webpack.",
+  "description": "Preprocess Svelte components using webpack.",
   "repo_url": "https://github.com/esarbanis/svelte-preprocess-loader",
   "author": "Efthymis Sarmpanis",
   "homepage": "https://github.com/esarbanis/svelte-preprocess-loader#readme",
@@ -12,5 +12,6 @@
     "preprocessor"
   ],
   "svelte5": false,
-  "runes": false
+  "runes": false,
+  "github_stars": 0
 }

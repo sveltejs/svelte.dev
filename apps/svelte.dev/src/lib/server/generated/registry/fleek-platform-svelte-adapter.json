@@ -1,6 +1,7 @@
 {
   "name": "@fleek-platform/svelte-adapter",
   "description": "Build SvelteKit apps for Fleek Functions.",
+  "repo_url": "",
   "author": "gabriel.fleek",
   "downloads": 2,
   "dependents": 0,

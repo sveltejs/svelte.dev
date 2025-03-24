@@ -1,6 +1,6 @@
 {
   "name": "@el3um4s/svelte-component-info",
-  "description": "Show component property information for Svelte documentation.",
+  "description": "Show component property information for Svelte.",
   "repo_url": "https://github.com/el3um4s/svelte-component-info",
   "author": "Samuele C. De Tomasi",
   "homepage": "https://github.com/el3um4s/svelte-component-info#readme",

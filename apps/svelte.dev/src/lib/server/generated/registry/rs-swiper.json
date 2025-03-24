@@ -1,6 +1,6 @@
 {
   "name": "rs-swiper",
-  "description": "Create Swiper-based touch sliders for Svelte applications.",
+  "description": "Implement Swiper slider/carousel component for Svelte.",
   "repo_url": "https://github.com/SeoJaeWan/rs-swiper",
   "author": "SeoJaeWan",
   "homepage": "https://github.com/SeoJaeWan/rs-swiper",

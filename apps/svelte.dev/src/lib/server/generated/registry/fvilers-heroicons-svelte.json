@@ -1,6 +1,7 @@
 {
   "name": "@fvilers/heroicons-svelte",
-  "description": "Use Heroicons SVG icons in Svelte projects.",
+  "description": "Use Heroicons SVG icons in Svelte applications.",
+  "repo_url": "",
   "author": "Fabian Vilers",
   "homepage": "https://github.com/fvilers/heroicons-svelte#readme",
   "downloads": 4,

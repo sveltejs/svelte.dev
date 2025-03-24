@@ -1,6 +1,6 @@
 {
   "name": "@loofkid/svelte-motion",
-  "description": "Animate Svelte components with framer-motion.",
+  "description": "Animate Svelte components using framer-motion.",
   "repo_url": "https://github.com/micha-lmxt/svelte-motion",
   "author": "Michael Lucht",
   "homepage": "https://github.com/micha-lmxt/svelte-motion#readme",

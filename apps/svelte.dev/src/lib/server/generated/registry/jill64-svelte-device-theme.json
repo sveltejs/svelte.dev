@@ -1,6 +1,6 @@
 {
   "name": "@jill64/svelte-device-theme",
-  "description": "Provides simple store syncing with device's theme settings.",
+  "description": "Synchronizes Svelte apps with device's theme settings.",
   "repo_url": "https://github.com/jill64/svelte-device-theme",
   "author": "jill64",
   "homepage": "https://github.com/jill64/svelte-device-theme#readme",

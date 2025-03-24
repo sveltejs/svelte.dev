@@ -1,6 +1,6 @@
 {
   "name": "@konkat/svelte-spy",
-  "description": "Spy on HTML attribute updates with Svelte action.",
+  "description": "Creates Svelte action to listen for HTML attribute updates.",
   "repo_url": "https://github.com/KonkatHub/svelte-spy",
   "author": "Mathis Côté",
   "homepage": "https://github.com/KonkatHub/svelte-spy.git",

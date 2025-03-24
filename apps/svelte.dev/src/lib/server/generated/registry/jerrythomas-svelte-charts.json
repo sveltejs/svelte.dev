@@ -1,6 +1,6 @@
 {
   "name": "@jerrythomas/svelte-charts",
-  "description": "Create themable d3 charts for Svelte applications.",
+  "description": "Generate themable d3 charts for Svelte applications.",
   "repo_url": "https://github.com/jerrythomas/svelte-charts",
   "author": "Jerry Thomas",
   "homepage": "https://github.com/jerrythomas/svelte-charts#readme",
@@ -11,5 +11,6 @@
     "ui"
   ],
   "svelte5": false,
-  "runes": false
+  "runes": false,
+  "github_stars": 2
 }

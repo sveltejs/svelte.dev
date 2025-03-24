@@ -1,6 +1,6 @@
 {
   "name": "svelte-lazy-image-loader",
-  "description": "Load images lazily with loading animation in Svelte.",
+  "description": "Load images lazily with placeholder animation in Svelte.",
   "repo_url": "https://github.com/jz222/svelte-lazy-image-loader",
   "author": "Timo Zimmermann",
   "homepage": "https://github.com/jz222/svelte-lazy-image-loader#readme",
@@ -8,8 +8,7 @@
   "dependents": 0,
   "updated": "2020-02-18T10:16:46.667Z",
   "tags": [
-    "ui",
-    "media"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

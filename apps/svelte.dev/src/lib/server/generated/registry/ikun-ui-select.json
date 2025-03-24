@@ -1,6 +1,7 @@
 {
   "name": "@ikun-ui/select",
-  "description": "Create select components for Svelte with customizable styles.",
+  "description": "Build select components for Svelte applications.",
+  "repo_url": "",
   "author": "baiwusanyu",
   "downloads": 36,
   "dependents": 3,

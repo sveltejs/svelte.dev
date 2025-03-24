@@ -1,6 +1,6 @@
 {
   "name": "runes-meta-tags",
-  "description": "Manage meta tags for Svelte with Svelte 5 runes.",
+  "description": "Manages meta tags for Svelte, including SEO and social media.",
   "repo_url": "https://github.com/shinokada/runes-meta-tag",
   "author": "Shinichi Okada",
   "homepage": "https://runes-meta-tag.codewithshin.com/",

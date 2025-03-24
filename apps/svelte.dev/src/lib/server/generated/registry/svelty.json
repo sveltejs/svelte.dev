@@ -1,6 +1,6 @@
 {
   "name": "svelty",
-  "description": "Offer high-quality Svelte components designed with TailwindCSS.",
+  "description": "High quality Svelte components designed with TailwindCSS.",
   "repo_url": "git@gitlab.com/nexylan/svelty",
   "author": "Sullivan SENECHAL",
   "homepage": "https://gitlab.com/nexylan/svelty#readme",

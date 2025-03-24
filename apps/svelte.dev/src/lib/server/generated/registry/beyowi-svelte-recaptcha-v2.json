@@ -1,6 +1,6 @@
 {
   "name": "@beyowi/svelte-recaptcha-v2",
-  "description": "Integrate Google reCAPTCHA v2 into Svelte and SvelteKit.",
+  "description": "Implements Google ReCaptcha v2 for Svelte and SvelteKit.",
   "repo_url": "https://github.com/beyowi/svelte-recaptcha-v2",
   "author": "Beyowi",
   "homepage": "https://github.com/beyowi/svelte-recaptcha-v2#readme",

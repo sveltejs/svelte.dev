@@ -1,6 +1,6 @@
 {
   "name": "svelte-elements",
-  "description": "Wrap native HTML elements for use within Svelte components.",
+  "description": "Wrap built-in HTML elements for Svelte.",
   "repo_url": "https://github.com/timhall/svelte-elements",
   "author": "Tim Hall",
   "homepage": "https://github.com/timhall/svelte-elements#readme",

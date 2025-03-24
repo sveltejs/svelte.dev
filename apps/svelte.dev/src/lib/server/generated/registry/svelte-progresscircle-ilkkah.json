@@ -1,6 +1,6 @@
 {
   "name": "svelte-progresscircle-ilkkah",
-  "description": "Create circular progress bars in Svelte.",
+  "description": "Create circular progress bar as Svelte component.",
   "repo_url": "https://github.com/stephane-vanraes/svelte-progresscircle",
   "author": "Stephane Vanraes",
   "homepage": "https://github.com/stephane-vanraes/svelte-progresscircle#readme",

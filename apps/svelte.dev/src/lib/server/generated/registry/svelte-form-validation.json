@@ -1,6 +1,6 @@
 {
   "name": "svelte-form-validation",
-  "description": "Validate Svelte forms using Yup schema validation.",
+  "description": "Validates Svelte forms using Yup schema validation.",
   "repo_url": "https://github.com/DhyeyMoliya/svelte-form-validation",
   "author": "Dhyey Moliya",
   "homepage": "https://github.com/DhyeyMoliya/svelte-form-validation#readme",

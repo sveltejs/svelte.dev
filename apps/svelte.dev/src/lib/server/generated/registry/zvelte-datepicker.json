@@ -1,6 +1,7 @@
 {
   "name": "zvelte-datepicker",
-  "description": "Datepicker fork with time selection functionality for Svelte.",
+  "description": "Create datepickers with time selection in Svelte applications.",
+  "repo_url": "",
   "author": "zogs",
   "downloads": 3,
   "dependents": 0,

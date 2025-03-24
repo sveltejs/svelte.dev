@@ -1,6 +1,6 @@
 {
   "name": "svelte-scramble",
-  "description": "Add scramble text effect to Svelte applications.",
+  "description": "Apply scramble effect to text in Svelte applications.",
   "repo_url": "https://github.com/berkinakkaya/svelte-scramble",
   "author": "Berkin AKKAYA",
   "homepage": "https://github.com/berkinakkaya/svelte-scramble#readme",

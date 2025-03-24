@@ -1,6 +1,6 @@
 {
   "name": "svelte-mail",
-  "description": "Render Svelte components for emails, inlining styles and text.",
+  "description": "Render Svelte components for email generation.",
   "repo_url": "https://github.com/ls-age/svelte-mail",
   "author": "Lukas Hechenberger",
   "homepage": "https://github.com/ls-age/svelte-mail#readme",

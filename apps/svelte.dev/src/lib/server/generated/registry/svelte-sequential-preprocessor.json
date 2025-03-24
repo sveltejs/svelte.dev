@@ -1,10 +1,10 @@
 {
   "name": "svelte-sequential-preprocessor",
-  "description": "Forces Svelte preprocessors to run sequentially.",
+  "description": "Sequentially preprocesses Svelte files.",
   "repo_url": "https://github.com/pchynoweth/svelte-sequential-preprocessor",
   "author": "Peter Chynoweth",
   "homepage": "https://github.com/pchynoweth/svelte-sequential-preprocessor#readme",
-  "downloads": 15830,
+  "downloads": 16450,
   "dependents": 8,
   "updated": "2024-09-29T17:46:07.132Z",
   "tags": [

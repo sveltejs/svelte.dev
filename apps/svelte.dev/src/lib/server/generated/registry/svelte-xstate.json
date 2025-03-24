@@ -1,6 +1,7 @@
 {
   "name": "svelte-xstate",
   "description": "Simplify usage of XState machines with Svelte.",
+  "repo_url": "",
   "author": "Geoffrey Hug",
   "downloads": 16,
   "dependents": 0,

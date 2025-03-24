@@ -1,6 +1,6 @@
 {
   "name": "@accuser/svelte-markdown-gfm",
-  "description": "Transform Markdown to Svelte components.",
+  "description": "Transform Markdown to Svelte components using GitHub Flavored Markdown.",
   "repo_url": "https://github.com/accuser/svelte-markdown-gfm",
   "author": "Matthew Gibbons",
   "homepage": "https://github.com/accuser/svelte-markdown-gfm",

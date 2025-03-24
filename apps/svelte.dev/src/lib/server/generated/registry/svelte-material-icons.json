@@ -1,6 +1,6 @@
 {
   "name": "svelte-material-icons",
-  "description": "Provide Material Design Icons for Svelte apps.",
+  "description": "Material Design Icons for Svelte, programmatically change size and color.",
   "repo_url": "https://github.com/ramiroaisen/svelte-material-icons",
   "author": "ramiroaisen@gmail.com",
   "homepage": "https://github.com/ramiroaisen/svelte-material-icons#readme",

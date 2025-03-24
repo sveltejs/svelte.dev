@@ -1,6 +1,6 @@
 {
   "name": "typewriter-editor",
-  "description": "Create rich text editor using Delta format with Svelte renderless components.",
+  "description": "Create rich text editors using Delta format.",
   "repo_url": "https://github.com/typewriter-editor/typewriter",
   "author": "jacwright",
   "homepage": "https://github.com/typewriter-editor/typewriter#readme",
@@ -8,8 +8,7 @@
   "dependents": 3,
   "updated": "2025-02-12T18:30:38.430Z",
   "tags": [
-    "utility",
-    "content"
+    "ui"
   ],
   "svelte5": true,
   "runes": false,

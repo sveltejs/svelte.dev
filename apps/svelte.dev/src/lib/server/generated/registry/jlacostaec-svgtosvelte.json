@@ -1,6 +1,6 @@
 {
   "name": "@jlacostaec/svgtosvelte",
-  "description": "Convert SVG files into Svelte 5 components.",
+  "description": "Convert SVG files to Svelte 5 components.",
   "repo_url": "https://github.com/JLAcostaEC/svgtosvelte",
   "author": "Jorge Acosta",
   "homepage": "https://github.com/JLAcostaEC/svgtosvelte#readme",
@@ -8,8 +8,7 @@
   "dependents": 0,
   "updated": "2025-02-20T20:44:57.416Z",
   "tags": [
-    "tooling",
-    "content"
+    "tooling"
   ],
   "svelte5": true,
   "runes": false,

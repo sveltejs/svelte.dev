@@ -1,6 +1,7 @@
 {
   "name": "@ikun-ui/eye-dropper",
-  "description": "Provide eye-dropper functionality for Svelte apps.",
+  "description": "Create eye-dropper components for Svelte applications.",
+  "repo_url": "",
   "author": "baiwusanyu",
   "downloads": 36,
   "dependents": 1,

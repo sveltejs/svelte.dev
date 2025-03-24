@@ -1,6 +1,7 @@
 {
   "name": "svelte-preview-ui",
-  "description": "Add Mac-style chrome to Svelte components for screenshots.",
+  "description": "Add a mac-style chrome to Svelte components for easy screenshots.",
+  "repo_url": "",
   "author": "joshnuss",
   "downloads": 65,
   "dependents": 0,

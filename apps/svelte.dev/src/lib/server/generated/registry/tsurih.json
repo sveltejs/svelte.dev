@@ -1,6 +1,7 @@
 {
   "name": "tsurih",
-  "description": "Create type-safe form validation in Svelte applications.",
+  "description": "Svelte form validation library with custom validators and strategies.",
+  "repo_url": "",
   "author": "Vladislav Yemelyanov",
   "downloads": 229,
   "dependents": 0,

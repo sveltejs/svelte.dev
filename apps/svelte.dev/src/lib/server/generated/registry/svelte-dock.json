@@ -1,6 +1,6 @@
 {
   "name": "svelte-dock",
-  "description": "Create Svelte components for toggling boolean values.",
+  "description": "Offer Svelte component for toggling boolean values.",
   "repo_url": "https://github.com/thecodejack/svelte-dock",
   "author": "thecodejack",
   "homepage": "https://github.com/thecodejack/svelte-dock#readme",

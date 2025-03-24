@@ -1,13 +1,13 @@
 {
   "name": "yasp-modals",
-  "description": "Create modal windows in Svelte applications.",
+  "description": "Create modal wrappers for Svelte 3 applications.",
+  "repo_url": "",
   "author": "dievardump",
   "downloads": 0,
   "dependents": 0,
   "updated": "2021-06-25T07:56:57.895Z",
   "tags": [
-    "ui",
-    "utility"
+    "ui"
   ],
   "svelte5": false,
   "runes": false

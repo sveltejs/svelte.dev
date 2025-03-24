@@ -1,6 +1,7 @@
 {
   "name": "svelte-sexy-modal",
   "description": "Create modal component for Svelte applications.",
+  "repo_url": "",
   "author": "codecrapper",
   "downloads": 2,
   "dependents": 0,

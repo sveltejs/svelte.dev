@@ -1,6 +1,6 @@
 {
   "name": "sthemer",
-  "description": "Supports multiple color schemes in Svelte/SvelteKit applications.",
+  "description": "Enables light/dark mode theming in Svelte/SvelteKit apps.",
   "repo_url": "https://github.com/ivanhofer/sthemer",
   "author": "ivanhofer",
   "homepage": "https://github.com/ivanhofer/sthemer",

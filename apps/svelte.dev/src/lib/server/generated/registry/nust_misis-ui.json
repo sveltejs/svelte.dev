@@ -1,6 +1,7 @@
 {
   "name": "@nust_misis/ui",
-  "description": "Provides UI components for MISIS university.",
+  "description": "Offers UI components library for the MISIS University.",
+  "repo_url": "",
   "author": "Dmitriy Din",
   "downloads": 309,
   "dependents": 0,

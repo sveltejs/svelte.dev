@@ -1,6 +1,7 @@
 {
   "name": "svelte-swipe-to-action",
-  "description": "Create swipe-to-action components for Svelte apps.",
+  "description": "Create swipe-to-action components for Svelte applications.",
+  "repo_url": "",
   "author": "Nutchapon Makelai",
   "downloads": 63,
   "dependents": 0,

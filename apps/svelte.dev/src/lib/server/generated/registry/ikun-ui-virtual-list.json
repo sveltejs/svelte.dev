@@ -1,13 +1,13 @@
 {
   "name": "@ikun-ui/virtual-list",
-  "description": "Render large lists efficiently with virtual scrolling in Svelte.",
+  "description": "Create virtual list components for Svelte apps.",
+  "repo_url": "",
   "author": "baiwusanyu",
   "downloads": 21,
   "dependents": 3,
   "updated": "2025-01-24T03:49:26.568Z",
   "tags": [
-    "utility",
-    "dom"
+    "ui"
   ],
   "svelte5": false,
   "runes": false

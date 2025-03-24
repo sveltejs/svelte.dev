@@ -1,6 +1,6 @@
 {
   "name": "@pyoner/svelte-types",
-  "description": "Provide Typescript definitions for Svelte v3 projects.",
+  "description": "Provide TypeScript definitions for Svelte v3.",
   "repo_url": "https://github.com/pyoner/svelte-typescript",
   "author": "Jungle",
   "homepage": "https://github.com/pyoner/svelte-typescript#readme",
@@ -11,5 +11,6 @@
     "tooling"
   ],
   "svelte5": false,
-  "runes": false
+  "runes": false,
+  "github_stars": 209
 }

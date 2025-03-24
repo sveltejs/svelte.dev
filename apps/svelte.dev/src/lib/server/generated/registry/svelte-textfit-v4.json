@@ -1,6 +1,7 @@
 {
   "name": "svelte-textfit-v4",
-  "description": "Fit headlines and paragraphs into any element using Svelte action.",
+  "description": "Fit text to element's size in Svelte applications.",
+  "repo_url": "",
   "author": "micha-lmxt",
   "homepage": "https://github.com/micha-lmxt/svelte-textfit",
   "downloads": 0,

@@ -1,6 +1,6 @@
 {
   "name": "@locusts/svelte",
-  "description": "Introduce locusts into Svelte websites with this component.",
+  "description": "Introduce locusts into Svelte websites.",
   "repo_url": "https://github.com/locusts-r-us/locusts",
   "author": "Matt Strapp",
   "homepage": "https://github.com/locusts-r-us/locusts#readme",

@@ -1,6 +1,6 @@
 {
   "name": "svelte-uicons",
-  "description": "Import FlatIcon's Uicons for Svelte.",
+  "description": "FlatIcon's Uicons port for Svelte.",
   "repo_url": "https://github.com/robak08/svelte-uicons",
   "author": "Robert Hamiga",
   "homepage": "https://github.com/robak08/svelte-uicons#readme",

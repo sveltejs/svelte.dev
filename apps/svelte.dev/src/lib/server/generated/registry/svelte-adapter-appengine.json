@@ -1,6 +1,6 @@
 {
   "name": "svelte-adapter-appengine",
-  "description": "Adapts SvelteKit applications for deployment on Google App Engine.",
+  "description": "Deploy SvelteKit apps to Google Cloud App Engine.",
   "repo_url": "https://github.com/halfdanj/svelte-adapter-appengine",
   "author": "Jonas Jongejan",
   "homepage": "https://github.com/halfdanj/svelte-adapter-appengine#readme",

@@ -1,6 +1,6 @@
 {
   "name": "@slidy/svelte",
-  "description": "Build simple, configurable, reusable carousel component with SvelteJS.",
+  "description": "Create carousel components for Svelte.",
   "repo_url": "https://github.com/Valexr/slidy",
   "author": "Eric Rovell",
   "homepage": "https://github.com/Valexr/Slidy/tree/master/packages/svelte",

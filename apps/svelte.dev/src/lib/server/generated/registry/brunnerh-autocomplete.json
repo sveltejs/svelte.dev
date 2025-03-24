@@ -1,6 +1,7 @@
 {
   "name": "@brunnerh/autocomplete",
-  "description": "Implement autocomplete component for Svelte.",
+  "description": "Provides autocomplete component for Svelte projects.",
+  "repo_url": "",
   "author": "brunnerh",
   "homepage": "https://github.com/brunnerh/autocomplete",
   "downloads": 12,

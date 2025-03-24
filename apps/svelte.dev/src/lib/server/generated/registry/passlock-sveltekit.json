@@ -1,6 +1,6 @@
 {
   "name": "@passlock/sveltekit",
-  "description": "Implement passkey authentication, social login for SvelteKit apps.",
+  "description": "Add passkey authentication and social login to SvelteKit apps.",
   "repo_url": "https://github.com/passlock-dev/passlock",
   "author": "Toby Hobson",
   "homepage": "https://passlock.dev",
@@ -8,8 +8,7 @@
   "dependents": 0,
   "updated": "2024-11-27T14:09:44.610Z",
   "tags": [
-    "auth",
-    "integration"
+    "auth"
   ],
   "svelte5": false,
   "runes": false,

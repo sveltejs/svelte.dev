@@ -1,6 +1,6 @@
 {
   "name": "svelte-images",
-  "description": "Display images, create galleries and carousels in Svelte.",
+  "description": "Display images, create image galleries, and carousels in Svelte.",
   "repo_url": "https://github.com/sjafferi/svelte-images",
   "author": "sjafferi",
   "homepage": "https://github.com/sjafferi/svelte-images#readme",

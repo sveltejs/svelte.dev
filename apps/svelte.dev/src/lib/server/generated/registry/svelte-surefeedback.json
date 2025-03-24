@@ -1,6 +1,6 @@
 {
   "name": "svelte-surefeedback",
-  "description": "Integrate SureFeedback/ProjectHuddle with Svelte applications.",
+  "description": "Integrate SureFeedback/ProjectHuddle with Svelte apps.",
   "repo_url": "https://github.com/codebygio/svelte-surefeedback",
   "author": "Giovani Rodriguez",
   "homepage": "https://codebygio.com/libs/svelte-surefeedback",

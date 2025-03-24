@@ -1,6 +1,6 @@
 {
   "name": "@auth/sveltekit",
-  "description": "Implement authentication for SvelteKit apps.",
+  "description": "Implement authentication for SvelteKit applications.",
   "repo_url": "https://github.com/nextauthjs/next-auth",
   "author": "Thang Huu Vu",
   "homepage": "https://sveltekit.authjs.dev",
@@ -13,5 +13,5 @@
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 26332
+  "github_stars": 26338
 }

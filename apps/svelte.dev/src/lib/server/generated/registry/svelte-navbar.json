@@ -1,6 +1,7 @@
 {
   "name": "svelte-navbar",
   "description": "Create animated navbar component for Svelte.",
+  "repo_url": "",
   "author": "hannes Hattenbach",
   "homepage": "https://github.com/HannesGitH/svelte-navbar#readme",
   "downloads": 10,

@@ -1,6 +1,6 @@
 {
   "name": "svelte-popup",
-  "description": "Create popup components, supporting top-to-bottom, left, and right popups.",
+  "description": "Implement popup components for Svelte, supporting various positions.",
   "repo_url": "https://github.com/hengshanMWC/svelte-popup",
   "author": "mwc",
   "homepage": "https://github.com/hengshanMWC/svelte-popup#readme",

@@ -1,6 +1,6 @@
 {
   "name": "@kamrade/svelte-calendar",
-  "description": "Create date (range) picker components for Svelte.",
+  "description": "Create date and date range pickers for Svelte.",
   "repo_url": "https://github.com/kamrade/svelte-calendar",
   "author": "kamrade",
   "homepage": "https://github.com/kamrade/svelte-calendar#readme",

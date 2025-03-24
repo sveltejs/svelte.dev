@@ -1,6 +1,6 @@
 {
   "name": "twemoji-svelte-action",
-  "description": "Replace emojis with Twemoji images using Svelte actions.",
+  "description": "Replace emoji in text with Twemoji images using actions.",
   "repo_url": "https://github.com/IsraPerez98/twemoji-svelte-actions",
   "author": "Israel Perez",
   "homepage": "https://github.com/IsraPerez98/twemoji-svelte-actions#readme",

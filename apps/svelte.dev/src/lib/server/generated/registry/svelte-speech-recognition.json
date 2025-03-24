@@ -1,6 +1,6 @@
 {
   "name": "svelte-speech-recognition",
-  "description": "Convert speech to text using Svelte and Web Speech API.",
+  "description": "Svelte wrapper for speech recognition using Web Speech API.",
   "repo_url": "https://github.com/jhubbardsf/svelte-speech-recognition",
   "author": "Josh Hubbard",
   "homepage": "https://github.com/jhubbardsf/svelte-speech-recognition#readme",

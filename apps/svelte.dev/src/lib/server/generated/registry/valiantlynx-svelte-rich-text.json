@@ -1,6 +1,6 @@
 {
   "name": "@valiantlynx/svelte-rich-text",
-  "description": "Create rich text editor with customizable blocks for Svelte apps.",
+  "description": "Create rich text editor component for Svelte applications.",
   "repo_url": "https://github.com/valiantlynx/svelte-rich-text",
   "author": "valiantlynx",
   "homepage": "https://svelte-rich-text.valiantlynx.com",
@@ -8,8 +8,7 @@
   "dependents": 1,
   "updated": "2024-04-09T16:34:48.511Z",
   "tags": [
-    "ui",
-    "content"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

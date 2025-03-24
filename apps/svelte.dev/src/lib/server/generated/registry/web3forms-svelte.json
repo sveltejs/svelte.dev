@@ -1,6 +1,7 @@
 {
   "name": "web3forms-svelte",
-  "description": "Integrate Web3Forms form submissions into Svelte applications.",
+  "description": "Wrap Web3Forms for easy form submissions in Svelte applications.",
+  "repo_url": "",
   "author": "Joshua Walker",
   "downloads": 9,
   "dependents": 0,

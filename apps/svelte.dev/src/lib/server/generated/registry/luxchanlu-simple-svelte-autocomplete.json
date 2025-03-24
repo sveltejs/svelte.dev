@@ -1,6 +1,6 @@
 {
   "name": "@luxchanlu/simple-svelte-autocomplete",
-  "description": "Create autocomplete/select/typeahead component for Svelte.",
+  "description": "Creates autocomplete/select/typeahead components for Svelte.",
   "repo_url": "https://github.com/pstanoev/simple-svelte-autocomplete",
   "author": "hugome",
   "homepage": "https://github.com/pstanoev/simple-svelte-autocomplete#readme",

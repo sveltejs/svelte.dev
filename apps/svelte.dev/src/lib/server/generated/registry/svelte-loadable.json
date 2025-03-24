@@ -1,6 +1,6 @@
 {
   "name": "svelte-loadable",
-  "description": "Dynamically load Svelte components with ease.",
+  "description": "Dynamically load Svelte components.",
   "repo_url": "https://github.com/kaisermann/svelte-loadable",
   "author": "Christian Kaisermann",
   "homepage": "https://github.com/kaisermann/svelte-loadable#readme",
@@ -12,5 +12,5 @@
   ],
   "svelte5": false,
   "runes": false,
-  "github_stars": 324
+  "github_stars": 325
 }

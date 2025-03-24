@@ -1,6 +1,6 @@
 {
   "name": "svelte-pivottable",
-  "description": "Create pivot tables with drag-and-drop UI in Svelte.",
+  "description": "Create pivot tables with drag-and-drop in Svelte applications.",
   "repo_url": "https://github.com/jjagielka/svelte-pivottable",
   "author": "Jakub Jagielka",
   "homepage": "https://github.com/jjagielka/svelte-pivottable#readme",
@@ -8,7 +8,7 @@
   "dependents": 0,
   "updated": "2024-11-29T16:14:51.072Z",
   "tags": [
-    "ui"
+    "utility"
   ],
   "svelte5": false,
   "runes": false,

@@ -1,6 +1,6 @@
 {
   "name": "@bewinxed/wallet-adapter-svelte",
-  "description": "Create custom wallet connection buttons for Svelte apps.",
+  "description": "Provides Solana wallet adapter hooks for Svelte apps.",
   "repo_url": "https://github.com/bewinxed/wallet-adapter-svelte",
   "author": "Bewinxed",
   "homepage": "https://github.com/bewinxed/wallet-adapter-svelte#readme",
@@ -8,8 +8,7 @@
   "dependents": 0,
   "updated": "2024-08-27T19:07:47.999Z",
   "tags": [
-    "utility",
-    "auth"
+    "utility"
   ],
   "svelte5": true,
   "runes": false,

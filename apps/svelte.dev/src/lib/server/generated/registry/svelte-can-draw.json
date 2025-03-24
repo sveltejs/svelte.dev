@@ -1,6 +1,6 @@
 {
   "name": "svelte-can-draw",
-  "description": "Canvas element component exposing canvas drawing methods for Svelte.",
+  "description": "Create canvas elements with drawing methods in Svelte.",
   "repo_url": "https://github.com/copious-world/can-draw",
   "author": "Richard Leddy",
   "homepage": "https://github.com/copious-world/can-draw#readme",

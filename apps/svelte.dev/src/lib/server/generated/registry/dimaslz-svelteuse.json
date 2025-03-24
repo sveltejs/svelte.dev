@@ -1,6 +1,6 @@
 {
   "name": "@dimaslz/svelteuse",
-  "description": "Provides Svelte hooks inspired by VueUse and React.",
+  "description": "Implement hooks inspired by VueUse for Svelte applications.",
   "repo_url": "https://github.com/dimaslz/svelteuse",
   "author": "Dimas López",
   "homepage": "https://svelteuse.dimaslz.dev",

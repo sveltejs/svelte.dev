@@ -1,6 +1,6 @@
 {
   "name": "quiztest",
-  "description": "Generate interactive quiz apps using Markdown in Svelte.",
+  "description": "Generate interactive quizzes using Markdown in Svelte.",
   "repo_url": "https://github.com/Nitinbabariya/quiztest-js",
   "author": "Malte Bonart",
   "homepage": "https://github.com/Nitinbabariya/quiztest-js#readme",

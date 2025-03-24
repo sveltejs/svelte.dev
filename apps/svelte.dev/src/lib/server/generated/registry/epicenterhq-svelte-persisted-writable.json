@@ -1,6 +1,6 @@
 {
   "name": "@epicenterhq/svelte-persisted-writable",
-  "description": "Create Svelte writable stores that persist data in local storage.",
+  "description": "Persist Svelte writable stores to local storage automatically.",
   "repo_url": "https://github.com/braden-w/svelte-persisted-writable",
   "author": "Braden Wong",
   "homepage": "https://github.com/braden-w/svelte-persisted-writable#readme",

@@ -1,6 +1,6 @@
 {
   "name": "@shipitdev/sveltepocket",
-  "description": "Provides Svelte stores and components to query PocketBase data.",
+  "description": "Provides Svelte stores and components for PocketBase integration.",
   "repo_url": "https://github.com/brennerm/sveltepocket",
   "author": "shipitdev",
   "homepage": "https://github.com/brennerm/sveltepocket#readme",

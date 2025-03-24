@@ -1,6 +1,7 @@
 {
   "name": "svelte-css-in-js",
-  "description": "Handle CSS in JavaScript form from Svelte components.",
+  "description": "Use CSS-in-JS with Svelte components.",
+  "repo_url": "",
   "author": "hmmhmmhm",
   "downloads": 2,
   "dependents": 1,

@@ -1,15 +1,12 @@
 {
   "name": "lunox",
-  "description": "Build Laravel-Flavoured NodeJs framework.",
   "repo_url": "https://github.com/kodepandai/lunox-framework",
   "author": "Akhmad Salafudin",
   "homepage": "https://github.com/kodepandai/lunox-framework#readme",
   "downloads": 2,
   "dependents": 1,
   "updated": "2022-08-25T03:11:18.497Z",
-  "tags": [
-    "server"
-  ],
+  "tags": [],
   "svelte5": false,
   "runes": false,
   "github_stars": 22

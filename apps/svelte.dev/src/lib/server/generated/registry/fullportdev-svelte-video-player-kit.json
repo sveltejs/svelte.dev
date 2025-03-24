@@ -1,6 +1,6 @@
 {
   "name": "@fullportdev/svelte-video-player-kit",
-  "description": "Create basic video player component for Svelte and SvelteKit.",
+  "description": "Provides basic video player component for Svelte, SSR, and SvelteKit apps.",
   "repo_url": "https://github.com/FullPortDEV/svelte-video-player-kit",
   "author": "Meigo Kukk",
   "homepage": "https://github.com/FullPortDEV/svelte-video-player-kit",
@@ -8,6 +8,7 @@
   "dependents": 0,
   "updated": "2022-11-10T13:37:19.879Z",
   "tags": [
+    "ui",
     "media"
   ],
   "svelte5": false,

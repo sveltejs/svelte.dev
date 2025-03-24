@@ -1,6 +1,6 @@
 {
   "name": "svelte-fluid-layout",
-  "description": "Creates responsive layout components for Svelte applications.",
+  "description": "Provides responsive layout component for Svelte apps.",
   "repo_url": "https://github.com/collardeau/svelte-fluid-layout",
   "author": "Thomas Collardeau",
   "homepage": "https://github.com/collardeau/svelte-fluid-layout#readme",

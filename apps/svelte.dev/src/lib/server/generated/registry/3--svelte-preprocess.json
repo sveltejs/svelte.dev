@@ -1,6 +1,6 @@
 {
   "name": "@3-/svelte-preprocess",
-  "description": "Preprocess Svelte components with support for various languages.",
+  "description": "Preprocessor wrapper with support for various languages in Svelte.",
   "repo_url": "https://github.com/i18n-fork/svelte-preprocess",
   "author": "Christian Kaisermann",
   "homepage": "https://github.com/i18n-fork/svelte-preprocess#readme",
@@ -8,8 +8,7 @@
   "dependents": 0,
   "updated": "2024-10-21T06:10:48.516Z",
   "tags": [
-    "preprocessor",
-    "tooling"
+    "preprocessor"
   ],
   "svelte5": true,
   "runes": false,

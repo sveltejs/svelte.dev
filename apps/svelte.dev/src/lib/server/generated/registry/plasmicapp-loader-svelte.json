@@ -1,6 +1,7 @@
 {
   "name": "@plasmicapp/loader-svelte",
   "description": "Load Plasmic components in Svelte applications.",
+  "repo_url": "",
   "author": "plasmicapp",
   "downloads": 62,
   "dependents": 0,

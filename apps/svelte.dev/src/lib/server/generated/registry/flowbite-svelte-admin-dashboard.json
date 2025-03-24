@@ -1,6 +1,6 @@
 {
   "name": "flowbite-svelte-admin-dashboard",
-  "description": "Build admin dashboards using Flowbite and Tailwind CSS.",
+  "description": "Admin dashboard components built with Flowbite and Tailwind CSS.",
   "repo_url": "https://github.com/themesberg/flowbite-svelte-admin-dashboard",
   "author": "shinichiokada",
   "homepage": "https://flowbite-svelte-admin-dashboard.vercel.app/",
@@ -8,8 +8,7 @@
   "dependents": 0,
   "updated": "2024-02-09T19:18:55.629Z",
   "tags": [
-    "component-library",
-    "ui"
+    "component-library"
   ],
   "svelte5": false,
   "runes": false,

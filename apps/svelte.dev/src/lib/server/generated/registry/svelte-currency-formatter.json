@@ -1,6 +1,6 @@
 {
   "name": "svelte-currency-formatter",
-  "description": "Format numbers as currency in Svelte applications.",
+  "description": "Format currency values in Svelte applications.",
   "repo_url": "https://github.com/ayotunde-codes/svelte-currency",
   "author": "ayotunde",
   "homepage": "https://github.com/ayotunde-codes/svelte-currency#readme",

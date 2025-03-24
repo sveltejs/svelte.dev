@@ -1,6 +1,6 @@
 {
   "name": "@axdraft/prosemirror-dev-toolkit",
-  "description": "Inject dev tools for ProseMirror editors.",
+  "description": "Inject dev tools for ProseMirror editors in Svelte.",
   "repo_url": "https://github.com/axdraft/prosemirror-dev-toolkit",
   "author": "Teemu Koivisto",
   "homepage": "https://github.com/axdraft/prosemirror-dev-toolkit",

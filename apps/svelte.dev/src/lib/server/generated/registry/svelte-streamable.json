@@ -1,6 +1,6 @@
 {
   "name": "svelte-streamable",
-  "description": "Creates Svelte stores for real-time updates from server.",
+  "description": "Provides Svelte store for real-time updates from server via SSE.",
   "repo_url": "https://github.com/sveltetools/svelte-streamable",
   "author": "PaulMaly",
   "homepage": "https://github.com/sveltetools/svelte-streamable#readme",

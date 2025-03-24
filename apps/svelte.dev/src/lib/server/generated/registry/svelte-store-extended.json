@@ -1,6 +1,6 @@
 {
   "name": "svelte-store-extended",
-  "description": "Extend Svelte stores with action, selector, and on methods.",
+  "description": "Extends Svelte stores with additional functionalities.",
   "repo_url": "https://github.com/chainlist/svelte-store-extended",
   "author": "ChainList",
   "homepage": "https://github.com/chainlist/svelte-store-extended#readme",

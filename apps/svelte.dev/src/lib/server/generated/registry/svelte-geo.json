@@ -1,6 +1,6 @@
 {
   "name": "svelte-geo",
-  "description": "Create map components for data visualization in Svelte projects.",
+  "description": "Create map components for Svelte, suitable for data visualization.",
   "repo_url": "https://github.com/Sarah-W/svelte-geo",
   "author": "Sarah Wheaton",
   "homepage": "https://svelte-geo.vercel.app/",

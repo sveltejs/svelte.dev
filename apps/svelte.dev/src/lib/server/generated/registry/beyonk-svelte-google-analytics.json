@@ -1,6 +1,7 @@
 {
   "name": "@beyonk/svelte-google-analytics",
-  "description": "Integrate Google Analytics v4 into Svelte apps.",
+  "description": "Integrate Google Analytics v4 into Svelte applications.",
+  "repo_url": "",
   "author": "antony",
   "downloads": 402,
   "dependents": 0,

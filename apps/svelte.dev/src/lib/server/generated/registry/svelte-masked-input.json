@@ -1,6 +1,6 @@
 {
   "name": "svelte-masked-input",
-  "description": "Apply input masking and formatting to Svelte input elements.",
+  "description": "Apply input masking and formatting for Svelte.",
   "repo_url": "https://github.com/arschmitz/svelte-masked-input",
   "author": "Alexander Schmitz",
   "homepage": "https://github.com/arschmitz/svelte-masked-input#readme",

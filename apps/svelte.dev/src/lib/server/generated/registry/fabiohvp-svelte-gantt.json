@@ -1,6 +1,6 @@
 {
   "name": "@fabiohvp/svelte-gantt",
-  "description": "Provides a Gantt chart component for Svelte applications.",
+  "description": "Provides Gantt component made with Svelte.",
   "repo_url": "https://github.com/fabiohvp/svelte-gantt",
   "author": "https://github.com/fabiohvp",
   "homepage": "https://github.com/fabiohvp/svelte-gantt#readme",

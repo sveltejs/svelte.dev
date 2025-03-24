@@ -1,6 +1,6 @@
 {
   "name": "svelte-macros",
-  "description": "Provides macros for Svelte components.",
+  "description": "Preprocessor automates image optimization using sharp.",
   "repo_url": "https://github.com/matyunya/svelte-macros",
   "author": "Maxim Matyunin",
   "homepage": "https://github.com/matyunya/svelte-macros#readme",
@@ -8,6 +8,7 @@
   "dependents": 0,
   "updated": "2019-07-13T15:11:43.679Z",
   "tags": [
+    "preprocessor",
     "tooling"
   ],
   "svelte5": false,

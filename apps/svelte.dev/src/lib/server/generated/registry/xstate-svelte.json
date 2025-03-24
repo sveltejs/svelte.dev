@@ -1,6 +1,6 @@
 {
   "name": "@xstate/svelte",
-  "description": "Provides XState tools for Svelte.",
+  "description": "Integrates XState state machines into Svelte applications.",
   "repo_url": "https://github.com/statelyai/xstate",
   "author": "David Khourshid",
   "homepage": "https://github.com/statelyai/xstate/tree/main/packages/xstate-svelte#readme",
@@ -12,5 +12,5 @@
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 27982
+  "github_stars": 27987
 }

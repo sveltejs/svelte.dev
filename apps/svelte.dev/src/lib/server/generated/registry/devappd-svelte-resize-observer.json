@@ -1,6 +1,6 @@
 {
   "name": "@devappd/svelte-resize-observer",
-  "description": "Observe element resizing in Svelte apps.",
+  "description": "Observes element resizes in Svelte applications.",
   "repo_url": "https://github.com/andrelmlins/svelte-resize-observer",
   "author": "André Lins",
   "homepage": "https://svelte-resize-observer.netlify.com/",
@@ -8,7 +8,7 @@
   "dependents": 0,
   "updated": "2021-01-15T08:43:24.271Z",
   "tags": [
-    "dom"
+    "utility"
   ],
   "svelte5": false,
   "runes": false,

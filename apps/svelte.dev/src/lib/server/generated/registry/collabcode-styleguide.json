@@ -1,6 +1,6 @@
 {
   "name": "@collabcode/styleguide",
-  "description": "Provide CollabCode's styleguide for Svelte.",
+  "description": "Provide a styleguide for Svelte components.",
   "repo_url": "https://github.com/CollabCodeTech/styleguide",
   "author": "CollabCode",
   "homepage": "https://github.com/CollabCodeTech/styleguide#readme",
@@ -11,5 +11,6 @@
     "ui"
   ],
   "svelte5": false,
-  "runes": false
+  "runes": false,
+  "github_stars": 1
 }

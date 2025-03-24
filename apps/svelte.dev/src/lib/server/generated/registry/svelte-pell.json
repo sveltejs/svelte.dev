@@ -1,6 +1,6 @@
 {
   "name": "svelte-pell",
-  "description": "Implements Pell, a simple WYSIWYG editor, as Svelte component.",
+  "description": "Implement Pell rich text editor as Svelte component.",
   "repo_url": "https://github.com/demonicious/svelte-pell",
   "author": "Demonicious",
   "homepage": "https://github.com/demonicious/svelte-pell",
@@ -8,6 +8,7 @@
   "dependents": 0,
   "updated": "2020-10-06T00:24:51.243Z",
   "tags": [
+    "content",
     "ui"
   ],
   "svelte5": false,

@@ -1,6 +1,6 @@
 {
   "name": "@accuser/svelte-mdast-frontmatter",
-  "description": "Adds frontmatter support to svelte-mdast for Markdown processing.",
+  "description": "Adds frontmatter support for svelte-mdast Markdown processing.",
   "repo_url": "https://github.com/accuser/svelte-mdast-frontmatter",
   "author": "Matthew Gibbons",
   "homepage": "https://github.com/accuser/svelte-mdast-frontmatter",
@@ -8,7 +8,8 @@
   "dependents": 0,
   "updated": "2024-10-06T13:20:44.045Z",
   "tags": [
-    "utility"
+    "utility",
+    "content"
   ],
   "svelte5": true,
   "runes": false,

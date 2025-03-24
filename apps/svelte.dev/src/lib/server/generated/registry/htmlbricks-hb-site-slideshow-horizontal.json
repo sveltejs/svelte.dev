@@ -1,6 +1,7 @@
 {
   "name": "@htmlbricks/hb-site-slideshow-horizontal",
-  "description": "Creates horizontal slideshow web component.",
+  "description": "Provides Svelte-Bootstrap site-slideshow-horizontal.",
+  "repo_url": "",
   "author": "Dario Caruso",
   "downloads": 211,
   "dependents": 0,

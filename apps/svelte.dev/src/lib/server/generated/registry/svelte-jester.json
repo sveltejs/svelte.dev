@@ -1,6 +1,6 @@
 {
   "name": "svelte-jester",
-  "description": "Compile Svelte components before importing them into Jest tests.",
+  "description": "Compile Svelte components before importing into Jest tests.",
   "repo_url": "https://github.com/svelteness/svelte-jester",
   "author": "mihar-22",
   "homepage": "https://github.com/svelteness/svelte-jester#readme",

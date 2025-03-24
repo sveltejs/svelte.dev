@@ -1,0 +1,14 @@
+{
+  "name": "@ericksatelite/sputnik-components",
+  "description": "Provides Svelte component library template.",
+  "repo_url": "",
+  "author": "ericksatelite",
+  "downloads": 10,
+  "dependents": 0,
+  "updated": "2020-06-12T00:53:35.722Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": false,
+  "runes": false
+}

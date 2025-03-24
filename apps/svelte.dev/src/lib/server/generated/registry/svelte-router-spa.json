@@ -1,6 +1,6 @@
 {
   "name": "svelte-router-spa",
-  "description": "Create single-page applications with Svelte Router SPA.",
+  "description": "Implement routing in Svelte single-page applications.",
   "repo_url": "https://github.com/jorgegorka/svelte-router",
   "author": "Jorge Alvarez",
   "homepage": "https://github.com/jorgegorka/svelte-router/blob/master/README.md",

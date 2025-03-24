@@ -1,6 +1,6 @@
 {
   "name": "svelte-virtual-infinite-list",
-  "description": "Create virtual infinite list component for Svelte apps.",
+  "description": "Create virtual, infinite scrolling lists in Svelte.",
   "repo_url": "https://github.com/koheing/svelte-virtual-infinite-list",
   "author": "koheing",
   "homepage": "https://github.com/koheing/svelte-virtual-infinite-list#readme",
@@ -8,7 +8,8 @@
   "dependents": 0,
   "updated": "2023-01-09T10:15:14.604Z",
   "tags": [
-    "ui"
+    "ui",
+    "utility"
   ],
   "svelte5": false,
   "runes": false,

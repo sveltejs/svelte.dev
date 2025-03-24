@@ -1,6 +1,6 @@
 {
   "name": "svelte-windicss-preprocess",
-  "description": "Preprocess Windi CSS for Svelte components.",
+  "description": "Preprocess Svelte components with Windi CSS.",
   "repo_url": "https://github.com/windicss/svelte-windicss-preprocess",
   "author": "Veritas Raven",
   "homepage": "https://windicss.org/",

@@ -1,6 +1,7 @@
 {
   "name": "@htmlbricks/hb-offcanvas",
-  "description": "Create Bootstrap offcanvas component for Svelte applications.",
+  "description": "Create offcanvas components with Svelte web components.",
+  "repo_url": "",
   "author": "Dario Caruso",
   "downloads": 452,
   "dependents": 3,

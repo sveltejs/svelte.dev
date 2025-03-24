@@ -1,6 +1,7 @@
 {
   "name": "svelte-head",
-  "description": "Set meta information easily in Svelte applications.",
+  "description": "Set meta information for Svelte apps, outputting to head.",
+  "repo_url": "",
   "author": "phi",
   "downloads": 131,
   "dependents": 0,

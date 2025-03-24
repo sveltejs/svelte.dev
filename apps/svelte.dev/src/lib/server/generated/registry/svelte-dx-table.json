@@ -1,6 +1,6 @@
 {
   "name": "svelte-dx-table",
-  "description": "Create simple HTML tables from Svelte data.",
+  "description": "Generate HTML tables from array of objects with sorting.",
   "repo_url": "https://github.com/thecodejack/svelte-dx-table",
   "author": "thecodejack",
   "homepage": "https://github.com/thecodejack/svelte-dx-table#readme",
@@ -8,7 +8,7 @@
   "dependents": 0,
   "updated": "2022-01-04T17:48:23.882Z",
   "tags": [
-    "ui"
+    "component-library"
   ],
   "svelte5": false,
   "runes": false,

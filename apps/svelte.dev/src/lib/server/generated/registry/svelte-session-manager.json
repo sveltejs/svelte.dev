@@ -1,6 +1,6 @@
 {
   "name": "svelte-session-manager",
-  "description": "Manage session with JWT for Svelte apps.",
+  "description": "Manage JWT sessions in Svelte applications.",
   "repo_url": "https://github.com/arlac77/svelte-session-manager",
   "author": "arlac77",
   "homepage": "https://github.com/arlac77/svelte-session-manager#readme",

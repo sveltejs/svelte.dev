@@ -1,6 +1,6 @@
 {
   "name": "jirolu-svelte",
-  "description": "Collection of reusable Svelte components for common use cases.",
+  "description": "Provides reusable Svelte components for forms and UI.",
   "repo_url": "https://github.com/arief-fajri/jirolu",
   "author": "Arif Fajri",
   "homepage": "https://github.com/arief-fajri/jirolu#readme",

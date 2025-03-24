@@ -1,6 +1,6 @@
 {
   "name": "@centroculturadigital-mx/svelte-carousel",
-  "description": "Svelte carousel component using @svelte/gestures.",
+  "description": "Create carousel components for Svelte applications.",
   "repo_url": "https://github.com/centroculturadigital-mx/svelte-carousel",
   "author": "furenku",
   "homepage": "https://github.com/centroculturadigital-mx/svelte-carousel#readme",

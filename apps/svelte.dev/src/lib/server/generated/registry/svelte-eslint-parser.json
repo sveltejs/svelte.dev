@@ -1,6 +1,6 @@
 {
   "name": "svelte-eslint-parser",
-  "description": "Parse Svelte code for ESLint.",
+  "description": "Parses Svelte code for ESLint.",
   "repo_url": "https://github.com/sveltejs/svelte-eslint-parser",
   "author": "Yosuke Ota",
   "homepage": "https://github.com/sveltejs/svelte-eslint-parser#readme",
@@ -8,8 +8,7 @@
   "dependents": 74,
   "updated": "2025-03-17T00:23:28.789Z",
   "tags": [
-    "tooling",
-    "preprocessor"
+    "tooling"
   ],
   "svelte5": true,
   "runes": false,

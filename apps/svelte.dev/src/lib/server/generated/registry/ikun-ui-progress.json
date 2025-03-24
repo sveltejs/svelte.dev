@@ -1,6 +1,7 @@
 {
   "name": "@ikun-ui/progress",
-  "description": "Display progress indicators with various styles in Svelte.",
+  "description": "Create progress components for Svelte applications.",
+  "repo_url": "",
   "author": "baiwusanyu",
   "downloads": 27,
   "dependents": 1,

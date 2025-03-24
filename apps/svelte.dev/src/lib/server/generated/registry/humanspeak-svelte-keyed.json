@@ -1,6 +1,6 @@
 {
   "name": "@humanspeak/svelte-keyed",
-  "description": "Enables deep object and array manipulation with TypeScript support.",
+  "description": "Create deep object and array manipulation with TypeScript support.",
   "repo_url": "https://github.com/humanspeak/svelte-keyed",
   "author": "Humanspeak, Inc.",
   "homepage": "https://github.com/humanspeak/svelte-keyed#readme",

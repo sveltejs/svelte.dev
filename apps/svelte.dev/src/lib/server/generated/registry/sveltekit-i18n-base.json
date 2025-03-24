@@ -1,6 +1,6 @@
 {
   "name": "@sveltekit-i18n/base",
-  "description": "Base functionality for sveltekit-i18n with parser support.",
+  "description": "Base functionality for sveltekit-i18n library.",
   "repo_url": "https://github.com/sveltekit-i18n/base",
   "author": "Jarda Svoboda",
   "homepage": "https://github.com/sveltekit-i18n/base#readme",

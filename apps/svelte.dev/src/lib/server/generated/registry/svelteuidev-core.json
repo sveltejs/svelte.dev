@@ -1,6 +1,6 @@
 {
   "name": "@svelteuidev/core",
-  "description": "Create accessible web apps quickly with SvelteUI components.",
+  "description": "Create fully functional, accessible web applications quickly with SvelteUI.",
   "repo_url": "https://github.com/svelteuidev/svelteui",
   "author": "Kamell Perry",
   "homepage": "https://svelteui.dev/",
@@ -8,10 +8,9 @@
   "dependents": 6,
   "updated": "2024-07-07T14:30:27.404Z",
   "tags": [
-    "component-library",
-    "ui"
+    "component-library"
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 1360
+  "github_stars": 1361
 }

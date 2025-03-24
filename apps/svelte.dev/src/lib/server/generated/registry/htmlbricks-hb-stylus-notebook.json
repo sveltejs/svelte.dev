@@ -1,6 +1,7 @@
 {
   "name": "@htmlbricks/hb-stylus-notebook",
   "description": "Svelte-Bootstrap stylus-notebook.",
+  "repo_url": "",
   "author": "Dario Caruso",
   "downloads": 121,
   "dependents": 0,

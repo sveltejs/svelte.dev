@@ -1,6 +1,6 @@
 {
   "name": "@0xclearview/svelte-tiny-virtual-table",
-  "description": "Create tiny, dependency-free virtual tables for Svelte.",
+  "description": "Create tiny virtual table component for Svelte.",
   "repo_url": "https://github.com/0xclearview/svelte-tiny-virtual-table",
   "author": "Marcos Gutiérrez",
   "homepage": "https://github.com/0xclearview/svelte-tiny-virtual-table#readme",

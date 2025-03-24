@@ -1,6 +1,6 @@
 {
   "name": "@vikignt/svelte-ui",
-  "description": "Provide simple UI components for Svelte applications.",
+  "description": "Provide simple Svelte UI components.",
   "repo_url": "https://github.com/vikignt/svelte-ui",
   "author": "viking",
   "homepage": "https://github.com/vikignt/svelte-ui#readme",

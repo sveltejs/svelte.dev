@@ -1,6 +1,6 @@
 {
   "name": "@svelkit/delay",
-  "description": "Show content after a delay in Svelte apps.",
+  "description": "Delay component for Svelte applications.",
   "repo_url": "https://github.com/kenoxa/svelkit",
   "author": "Sascha Tandel",
   "homepage": "https://github.com/kenoxa/svelkit#readme",
@@ -8,7 +8,7 @@
   "dependents": 1,
   "updated": "2020-09-25T12:46:02.013Z",
   "tags": [
-    "ui"
+    "utility"
   ],
   "svelte5": false,
   "runes": false,

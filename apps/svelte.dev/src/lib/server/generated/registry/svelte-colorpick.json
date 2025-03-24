@@ -1,6 +1,7 @@
 {
   "name": "svelte-colorpick",
-  "description": "Full-featured color picker for Svelte applications.",
+  "description": "Provide a full-featured color picker for Svelte applications.",
+  "repo_url": "",
   "author": "Stefan Seemayer",
   "downloads": 54,
   "dependents": 0,

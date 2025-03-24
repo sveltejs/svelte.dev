@@ -1,6 +1,7 @@
 {
   "name": "svelte-dragdroplist",
-  "description": "Create sortable, animated, touch-friendly lists in Svelte apps.",
+  "description": "Create sortable, animated, touch-friendly lists in Svelte.",
+  "repo_url": "",
   "author": "John LaRocque",
   "homepage": "https://github.com/jwlarocque/svelte-dragdroplist",
   "downloads": 57,

@@ -1,6 +1,6 @@
 {
   "name": "@lucia-auth/sveltekit",
-  "description": "Integrate Lucia authentication library with SvelteKit.",
+  "description": "Integrate Lucia authentication with SvelteKit applications.",
   "repo_url": "https://github.com/pilcrowOnPaper/lucia",
   "author": "pilcrowonpaper",
   "homepage": "https://github.com/pilcrowOnPaper/lucia#readme",
@@ -8,10 +8,9 @@
   "dependents": 0,
   "updated": "2023-03-19T12:24:16.861Z",
   "tags": [
-    "auth",
-    "utility"
+    "auth"
   ],
   "svelte5": false,
   "runes": false,
-  "github_stars": 10016
+  "github_stars": 10019
 }

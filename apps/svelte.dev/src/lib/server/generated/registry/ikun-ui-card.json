@@ -1,6 +1,7 @@
 {
   "name": "@ikun-ui/card",
-  "description": "Build UI cards for Svelte applications.",
+  "description": "Create card component for Svelte.",
+  "repo_url": "",
   "author": "baiwusanyu",
   "downloads": 20,
   "dependents": 1,

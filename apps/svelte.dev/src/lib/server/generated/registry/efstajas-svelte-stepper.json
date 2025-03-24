@@ -1,6 +1,7 @@
 {
   "name": "@efstajas/svelte-stepper",
-  "description": "Build animated, headless stepped flows in Svelte apps.",
+  "description": "Build animated stepped flows with Svelte.",
+  "repo_url": "",
   "author": "efstajas",
   "downloads": 90,
   "dependents": 0,

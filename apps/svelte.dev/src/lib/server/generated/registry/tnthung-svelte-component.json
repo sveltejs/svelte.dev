@@ -1,6 +1,7 @@
 {
   "name": "@tnthung/svelte-component",
-  "description": "Build reusable Svelte components with actions and functions.",
+  "description": "Offers simple, reusable Svelte components.",
+  "repo_url": "",
   "author": "tnthung",
   "downloads": 0,
   "dependents": 0,

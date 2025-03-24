@@ -1,6 +1,6 @@
 {
   "name": "svelte-countdown",
-  "description": "Creates simple, CSS-agnostic countdown component for Svelte 3.",
+  "description": "Create countdown timers for Svelte applications.",
   "repo_url": "https://github.com/rallisf1/svelte-countdown",
   "author": "rallisf1",
   "homepage": "https://github.com/rallisf1/svelte-countdown#readme",

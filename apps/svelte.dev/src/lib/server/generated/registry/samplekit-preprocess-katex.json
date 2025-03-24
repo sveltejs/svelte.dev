@@ -1,6 +1,6 @@
 {
   "name": "@samplekit/preprocess-katex",
-  "description": "Preprocess Svelte templates for TeX math using KaTeX.",
+  "description": "Preprocess TeX math expressions using KaTeX in Svelte templates.",
   "repo_url": "https://github.com/timothycohen/samplekit",
   "author": "Tim Cohen",
   "homepage": "https://preprocessors.samplekit.dev",

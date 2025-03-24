@@ -1,6 +1,6 @@
 {
   "name": "@prosemirror-adapter/svelte",
-  "description": "Adapt ProseMirror editor for use within Svelte applications.",
+  "description": "Svelte adapter for ProseMirror.",
   "repo_url": "https://github.com/Saul-Mirone/prosemirror-adapter",
   "author": "mirone",
   "homepage": "https://github.com/Saul-Mirone/prosemirror-adapter#readme",

@@ -1,6 +1,6 @@
 {
   "name": "@svel/router",
-  "description": "Implements a router for Svelte applications.",
+  "description": "Provides routing for Svelte.js applications.",
   "repo_url": "https://github.com/wmzy/svelte-router",
   "author": "Evan You",
   "homepage": "https://github.com/wmzy/svelte-router#readme",

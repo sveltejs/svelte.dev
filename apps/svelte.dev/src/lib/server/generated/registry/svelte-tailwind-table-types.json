@@ -1,6 +1,6 @@
 {
   "name": "svelte-tailwind-table-types",
-  "description": "Render dynamic tables using Tailwind CSS with type support.",
+  "description": "Render dynamic tables using Tailwind CSS in Svelte.",
   "repo_url": "https://github.com/rafaelfrancisco-dev/svelte-tailwind-table-types",
   "author": "Rafael Francisco",
   "homepage": "https://github.com/rafaelfrancisco-dev/svelte-tailwind-table-types#readme",
@@ -8,8 +8,7 @@
   "dependents": 0,
   "updated": "2022-01-22T19:08:03.904Z",
   "tags": [
-    "ui",
-    "utility"
+    "component-library"
   ],
   "svelte5": false,
   "runes": false

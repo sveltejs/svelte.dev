@@ -1,6 +1,6 @@
 {
   "name": "@uraniadev/emailer",
-  "description": "Create email components with Svelte and Tailwind CSS.",
+  "description": "Create structured, styled HTML emails with Svelte and Tailwind CSS.",
   "repo_url": "https://github.com/urania-dev/emailer",
   "author": "uraniadev",
   "homepage": "https://github.com/urania-dev/emailer#readme",

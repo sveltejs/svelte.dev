@@ -1,6 +1,6 @@
 {
   "name": "@gplane/svelte-jest",
-  "description": "Transform Svelte components for Jest testing using svelte-preprocess.",
+  "description": "Transform Svelte components for Jest testing with svelte-preprocess.",
   "repo_url": "https://github.com/g-plane/svelte-jest",
   "author": "Pig Fang",
   "downloads": 2,

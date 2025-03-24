@@ -1,6 +1,6 @@
 {
   "name": "svelte-virtuallists",
-  "description": "Render only visible items in large Svelte lists.",
+  "description": "Render virtualized lists for Svelte, improving performance.",
   "repo_url": "https://github.com/orefalo/svelte-virtuallists",
   "author": "Olivier Refalo",
   "homepage": "https://orefalo.github.io/svelte-virtuallists/",

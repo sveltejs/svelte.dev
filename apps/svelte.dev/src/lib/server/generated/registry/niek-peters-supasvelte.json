@@ -1,6 +1,6 @@
 {
   "name": "@niek-peters/supasvelte",
-  "description": "Sync Supabase Postgres data with Svelte stores in real time.",
+  "description": "Sync Supabase data with Svelte stores in real time.",
   "repo_url": "https://github.com/niek-peters/supasvelte",
   "author": "Niek Peters",
   "homepage": "https://github.com/niek-peters/supasvelte#readme",

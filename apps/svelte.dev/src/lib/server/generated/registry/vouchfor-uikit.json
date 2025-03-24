@@ -1,6 +1,6 @@
 {
   "name": "@vouchfor/uikit",
-  "description": "Create Vouch Svelte UIKit.",
+  "description": "Provides Vouch Svelte UI Kit components.",
   "repo_url": "https://github.com/VouchAU/vouch-uikit",
   "author": "Vouch Dev Team",
   "homepage": "https://vouchau.github.io/vouch-uikit",
@@ -8,8 +8,7 @@
   "dependents": 0,
   "updated": "2024-01-11T00:39:12.366Z",
   "tags": [
-    "component-library",
-    "ui"
+    "component-library"
   ],
   "svelte5": false,
   "runes": false

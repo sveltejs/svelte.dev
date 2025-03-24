@@ -1,6 +1,7 @@
 {
   "name": "@codesoup/scroll-to-top",
   "description": "Add scroll-to-top button to Svelte applications.",
+  "repo_url": "",
   "author": "Allan Nielsen",
   "downloads": 11,
   "dependents": 0,

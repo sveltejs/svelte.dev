@@ -1,6 +1,6 @@
 {
   "name": "svelte-element",
-  "description": "Use Element UI components in Svelte.",
+  "description": "Implement Element UI components in Svelte applications.",
   "repo_url": "https://github.com/mistlog/svelte-element",
   "author": "mistlog",
   "homepage": "https://mistlog.github.io/svelte-element/",
@@ -8,7 +8,8 @@
   "dependents": 0,
   "updated": "2020-12-28T14:49:28.689Z",
   "tags": [
-    "component-library"
+    "component-library",
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

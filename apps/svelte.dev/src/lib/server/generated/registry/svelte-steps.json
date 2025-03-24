@@ -1,6 +1,6 @@
 {
   "name": "svelte-steps",
-  "description": "Create customizable step components for Svelte.",
+  "description": "Customizable step component written in Svelte, with Bootstrap theme.",
   "repo_url": "https://github.com/shaozi/svelte-steps",
   "author": "Jingshao Chen",
   "homepage": "https://svelte-steps.web.app",

@@ -1,6 +1,6 @@
 {
   "name": "svelte-exmarkdown",
-  "description": "Renders markdown content in Svelte components.",
+  "description": "Render Markdown content dynamically in Svelte applications.",
   "repo_url": "https://github.com/ssssota/svelte-exmarkdown",
   "author": "ssssota",
   "homepage": "https://ssssota.github.io/svelte-exmarkdown",

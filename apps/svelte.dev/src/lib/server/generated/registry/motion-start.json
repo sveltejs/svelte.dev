@@ -1,6 +1,6 @@
 {
   "name": "motion-start",
-  "description": "Animate Svelte components with gestures and spring animations.",
+  "description": "Svelte animation library inspired by Framer Motion.",
   "author": "JonathonRP",
   "downloads": 131,
   "dependents": 0,

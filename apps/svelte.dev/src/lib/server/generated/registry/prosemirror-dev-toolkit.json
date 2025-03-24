@@ -1,6 +1,6 @@
 {
   "name": "prosemirror-dev-toolkit",
-  "description": "Provide dev tools for ProseMirror editors in Svelte.",
+  "description": "Injectable dev tools for ProseMirror editors in Svelte.",
   "repo_url": "https://github.com/TeemuKoivisto/prosemirror-dev-toolkit",
   "author": "Teemu Koivisto",
   "homepage": "https://teemukoivisto.github.io/prosemirror-dev-toolkit/",

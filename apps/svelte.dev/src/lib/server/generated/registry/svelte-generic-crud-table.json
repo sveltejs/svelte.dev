@@ -1,6 +1,6 @@
 {
   "name": "svelte-generic-crud-table",
-  "description": "Create sortable table component with inline edit options for CRUD operations.",
+  "description": "Create generic CRUD tables for Svelte applications.",
   "repo_url": "https://github.com/ivosdc/svelte-generic-crud-table",
   "author": "Ivo Bozic",
   "homepage": "https://github.com/ivosdc/svelte-generic-crud-table#readme",
@@ -8,8 +8,7 @@
   "dependents": 0,
   "updated": "2023-12-26T18:52:30.309Z",
   "tags": [
-    "utility",
-    "component-library"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

@@ -1,15 +1,12 @@
 {
   "name": "@nativescript/template-blank-svelte-vision",
-  "description": "Generate NativeScript visionOS starter with Svelte.",
   "repo_url": "https://github.com/NativeScript/nativescript-app-templates",
   "author": "NativeScript Team",
   "homepage": "https://github.com/NativeScript/nativescript-app-templates",
   "downloads": 17,
   "dependents": 0,
   "updated": "2025-03-23T03:15:33.387Z",
-  "tags": [
-    "tooling"
-  ],
+  "tags": [],
   "svelte5": false,
   "runes": false,
   "github_stars": 222

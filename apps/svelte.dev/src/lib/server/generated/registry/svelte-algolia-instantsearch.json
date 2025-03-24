@@ -1,6 +1,6 @@
 {
   "name": "svelte-algolia-instantsearch",
-  "description": "Create Algolia InstantSearch UI with Svelte.",
+  "description": "Integrate Algolia InstantSearch into Svelte applications.",
   "repo_url": "https://github.com/aymeric-giraudet/svelte-algolia-instantsearch",
   "author": "aymeric.giraudet",
   "homepage": "https://github.com/aymeric-giraudet/svelte-algolia-instantsearch#readme",

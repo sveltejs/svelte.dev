@@ -1,6 +1,6 @@
 {
   "name": "@egjs/svelte-imready",
-  "description": "Check if images or videos are loaded in Svelte.",
+  "description": "Detect when images/videos are ready in Svelte components.",
   "repo_url": "https://github.com/naver/egjs-imready",
   "author": "NAVER Corp.",
   "homepage": "https://github.com/naver/egjs-imready",

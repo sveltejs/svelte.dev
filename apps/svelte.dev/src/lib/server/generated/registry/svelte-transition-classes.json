@@ -1,6 +1,6 @@
 {
   "name": "svelte-transition-classes",
-  "description": "Add CSS classes for Svelte transitions, useful for Tailwind.",
+  "description": "Apply CSS classes for Svelte transitions and animations.",
   "repo_url": "https://github.com/rmarscher/svelte-transition-classes",
   "author": "rmarscher",
   "homepage": "https://github.com/rmarscher/svelte-transition-classes",

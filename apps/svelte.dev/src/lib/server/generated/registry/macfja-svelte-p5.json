@@ -1,6 +1,6 @@
 {
   "name": "@macfja/svelte-p5",
-  "description": "Integrate p5.js sketches into Svelte components.",
+  "description": "Create p5.js sketches in Svelte components.",
   "repo_url": "https://github.com/macfja/svelte-p5",
   "author": "MacFJA",
   "homepage": "https://github.com/macfja/svelte-p5#readme",
@@ -8,7 +8,7 @@
   "dependents": 0,
   "updated": "2022-08-05T20:21:19.264Z",
   "tags": [
-    "ui"
+    "utility"
   ],
   "svelte5": false,
   "runes": false,

@@ -1,6 +1,6 @@
 {
   "name": "sveltejs-forms",
-  "description": "Create declarative forms with validation for Svelte.",
+  "description": "Create declarative forms for Svelte.",
   "repo_url": "https://github.com/mdauner/sveltejs-forms",
   "author": "mdauner",
   "homepage": "https://mdauner.github.io/sveltejs-forms/",

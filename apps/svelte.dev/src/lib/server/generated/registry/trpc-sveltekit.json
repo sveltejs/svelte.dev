@@ -1,6 +1,6 @@
 {
   "name": "trpc-sveltekit",
-  "description": "Integrates tRPC with SvelteKit for typesafe API development.",
+  "description": "SvelteKit adapter for tRPC.io, enabling end-to-end typesafe APIs.",
   "repo_url": "https://github.com/icflorescu/trpc-sveltekit",
   "author": "Ionut-Cristian Florescu",
   "homepage": "https://icflorescu.github.io/trpc-sveltekit/",
@@ -8,10 +8,10 @@
   "dependents": 4,
   "updated": "2025-03-06T12:52:54.703Z",
   "tags": [
-    "server",
-    "integration"
+    "integration",
+    "server"
   ],
   "svelte5": false,
   "runes": false,
-  "github_stars": 810
+  "github_stars": 811
 }

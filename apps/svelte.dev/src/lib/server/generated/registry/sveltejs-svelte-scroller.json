@@ -1,6 +1,6 @@
 {
   "name": "@sveltejs/svelte-scroller",
-  "description": "Provides a scroller component for Svelte apps.",
+  "description": "Scroller component for Svelte apps.",
   "repo_url": "https://github.com/sveltejs/svelte-scroller",
   "author": "Rich Harris",
   "homepage": "https://github.com/sveltejs/svelte-scroller#readme",

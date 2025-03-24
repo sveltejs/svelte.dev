@@ -1,6 +1,6 @@
 {
   "name": "progress-up-svelte",
-  "description": "Implement HTTPs file upload with progress bar in Svelte.",
+  "description": "Implement HTTPs file uploading with progress indicators in Svelte.",
   "repo_url": "https://github.com/girish1729/progress-up",
   "author": "Girish Venkatachalam",
   "homepage": "https://github.com/girish1729/progress-up#readme",
@@ -8,7 +8,6 @@
   "dependents": 0,
   "updated": "2023-10-21T11:38:06.268Z",
   "tags": [
-    "ui",
     "media"
   ],
   "svelte5": true,

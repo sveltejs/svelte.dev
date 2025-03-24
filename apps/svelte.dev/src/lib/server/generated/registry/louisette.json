@@ -1,6 +1,6 @@
 {
   "name": "louisette",
-  "description": "Provides accessible Svelte component primitives.",
+  "description": "Offer accessible Svelte component primitives.",
   "repo_url": "https://github.com/ubermanu/louisette",
   "author": "Emmanuel Vodor",
   "homepage": "https://github.com/ubermanu/louisette#readme",
@@ -11,5 +11,6 @@
     "component-library"
   ],
   "svelte5": false,
-  "runes": false
+  "runes": false,
+  "github_stars": 28
 }

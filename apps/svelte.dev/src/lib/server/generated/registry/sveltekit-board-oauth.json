@@ -1,12 +1,14 @@
 {
   "name": "@sveltekit-board/oauth",
-  "description": "Handles OAuth authentication within SvelteKit applications.",
+  "description": "Handle OAuth authentication in SvelteKit applications.",
+  "repo_url": "",
   "author": "hotsixman",
   "downloads": 11,
   "dependents": 0,
   "updated": "2024-11-24T15:48:24.567Z",
   "tags": [
-    "auth"
+    "auth",
+    "server"
   ],
   "svelte5": true,
   "runes": false

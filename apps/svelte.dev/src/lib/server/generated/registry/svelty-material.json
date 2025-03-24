@@ -1,6 +1,6 @@
 {
   "name": "svelty-material",
-  "description": "Material Design UI components for Svelte.",
+  "description": "Svelte Materialify fork with TypeScript support and updated SCSS.",
   "repo_url": "https://github.com/abdo643-HULK/svelty-material",
   "author": "abdo643-HULK",
   "homepage": "https://github.com/abdo643-HULK/svelty-material",

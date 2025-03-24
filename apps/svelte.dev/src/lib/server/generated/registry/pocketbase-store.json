@@ -1,6 +1,6 @@
 {
   "name": "pocketbase-store",
-  "description": "Provide reactive stores for PocketBase collections and records.",
+  "description": "Provides Svelte stores for PocketBase collections and records.",
   "repo_url": "https://github.com/lixelv/pocketbase-store",
   "author": "Simon Efremenko",
   "homepage": "https://github.com/lixelv/pocketbase-store",

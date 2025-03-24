@@ -1,6 +1,6 @@
 {
   "name": "@lostisworld/svelte-interactive-cursor",
-  "description": "Create interactive custom cursors with Svelte.",
+  "description": "Create interactive custom cursors with Svelte components.",
   "repo_url": "https://github.com/LoStis-World/svelte-interactive-cursor",
   "author": "LoSti's World",
   "homepage": "https://github.com/LoStis-World/svelte-interactive-cursor#readme",

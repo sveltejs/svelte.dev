@@ -1,6 +1,6 @@
 {
   "name": "svelte-cleavejs",
-  "description": "Use Cleave.js action for Svelte.",
+  "description": "Provides Cleave.js action for formatting input fields in Svelte.",
   "repo_url": "https://github.com/GCBenlloch/svelte-cleavejs",
   "author": "gcbenlloch",
   "homepage": "https://github.com/GCBenlloch/svelte-cleavejs#readme",

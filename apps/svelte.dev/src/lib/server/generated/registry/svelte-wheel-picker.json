@@ -1,6 +1,6 @@
 {
   "name": "svelte-wheel-picker",
-  "description": "Create customizable wheel picker components for Svelte.",
+  "description": "Create wheel picker components for Svelte.",
   "repo_url": "https://github.com/urmoov-dev/svelte-wheel-picker",
   "author": "Jorge Linares",
   "homepage": "https://github.com/urmoov-dev/svelte-wheel-picker#readme",

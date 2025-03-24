@@ -1,6 +1,6 @@
 {
   "name": "@beyonk/svelte-carousel",
-  "description": "Creates carousel/slider components for Svelte applications.",
+  "description": "Create carousel/slider components for Svelte.",
   "repo_url": "https://github.com/beyonk-adventures/svelte-carousel",
   "author": "antony",
   "homepage": "https://github.com/beyonk-adventures/svelte-carousel#readme",

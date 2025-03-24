@@ -1,6 +1,6 @@
 {
   "name": "@bulatdashiev/svelte-slider",
-  "description": "Create simple range sliders for Svelte 3 applications.",
+  "description": "Create range slider components for Svelte.",
   "repo_url": "https://github.com/BulatDashiev/svelte-slider",
   "author": "BulatDashiev",
   "homepage": "https://github.com/BulatDashiev/svelte-slider#readme",
@@ -11,5 +11,6 @@
     "ui"
   ],
   "svelte5": false,
-  "runes": false
+  "runes": false,
+  "github_stars": 28
 }

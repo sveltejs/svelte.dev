@@ -1,6 +1,6 @@
 {
   "name": "@dopry/svelte-oidc",
-  "description": "OIDC client component for Svelte.",
+  "description": "Provides OIDC client component for Svelte applications.",
   "repo_url": "https://github.com/dopry/svelte-oidc",
   "author": "dopry",
   "homepage": "https://github.com/dopry/svelte-oidc#readme",

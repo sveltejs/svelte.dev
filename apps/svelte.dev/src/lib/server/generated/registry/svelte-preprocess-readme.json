@@ -1,6 +1,6 @@
 {
   "name": "svelte-preprocess-readme",
-  "description": "Develop Svelte components directly from README.md files.",
+  "description": "Develop Svelte components from README.md files.",
   "repo_url": "https://github.com/metonym/svelte-preprocess-readme",
   "author": "Eric Liu",
   "homepage": "https://github.com/metonym/svelte-preprocess-readme",

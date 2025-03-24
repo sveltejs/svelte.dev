@@ -1,6 +1,6 @@
 {
   "name": "@thegoldendino/festival-app",
-  "description": "Display festival information with pannable maps and schedules.",
+  "description": "Displays festival information with pannable maps and schedules.",
   "repo_url": "https://github.com/thegoldendino/festival-app",
   "author": "Dwight VanTuyl",
   "homepage": "https://github.com/thegoldendino/festival-app#readme",
@@ -8,7 +8,7 @@
   "dependents": 0,
   "updated": "2025-01-02T04:45:24.978Z",
   "tags": [
-    "ui"
+    "component-library"
   ],
   "svelte5": true,
   "runes": false,

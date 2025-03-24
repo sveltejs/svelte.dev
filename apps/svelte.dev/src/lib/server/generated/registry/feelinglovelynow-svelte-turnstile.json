@@ -1,6 +1,6 @@
 {
   "name": "@feelinglovelynow/svelte-turnstile",
-  "description": "Integrate Svelte with Cloudflare Turnstile form validator.",
+  "description": "Integrate Cloudflare Turnstile form validation in Svelte apps.",
   "repo_url": "https://github.com/feelinglovelynow/svelte-turnstile",
   "author": "https://github.com/feelinglovelynow?tab=repositories",
   "homepage": "https://github.com/feelinglovelynow/svelte-turnstile#readme",

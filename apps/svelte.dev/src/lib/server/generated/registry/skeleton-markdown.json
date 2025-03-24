@@ -1,6 +1,7 @@
 {
   "name": "skeleton-markdown",
   "description": "Parse Markdown to Svelte components, designed for Skeleton.js.",
+  "repo_url": "",
   "author": "Safwan Samsudeen",
   "downloads": 0,
   "dependents": 0,

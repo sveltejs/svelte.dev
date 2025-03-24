@@ -1,6 +1,7 @@
 {
   "name": "@headwind-ui/svelte",
   "description": "Create Svelte components based on Tailwind CSS.",
+  "repo_url": "",
   "author": "urielcuriel",
   "downloads": 1,
   "dependents": 0,

@@ -1,6 +1,6 @@
 {
   "name": "svecial",
-  "description": "Offer social login buttons for Svelte apps.",
+  "description": "Create social media buttons for Svelte.",
   "repo_url": "https://github.com/Olyno/svecial",
   "author": "Olyno",
   "homepage": "https://github.com/Olyno/svecial#readme",
@@ -8,9 +8,7 @@
   "dependents": 0,
   "updated": "2019-09-04T16:04:26.066Z",
   "tags": [
-    "ui",
-    "integration",
-    "auth"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

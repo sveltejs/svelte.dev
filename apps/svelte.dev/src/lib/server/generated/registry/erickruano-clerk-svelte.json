@@ -1,6 +1,7 @@
 {
   "name": "@erickruano/clerk-svelte",
-  "description": "Implement Clerk authentication components for Svelte apps.",
+  "description": "Implement Clerk components in Svelte applications.",
+  "repo_url": "",
   "author": "glitchverse",
   "downloads": 14,
   "dependents": 0,

@@ -1,10 +1,10 @@
 {
   "name": "svelte-i18n",
-  "description": "Internationalization library for Svelte apps.",
+  "description": "Provides internationalization support for Svelte apps.",
   "repo_url": "https://github.com/kaisermann/svelte-i18n",
   "author": "Christian Kaisermann",
   "homepage": "https://github.com/kaisermann/svelte-i18n#readme",
-  "downloads": 51021,
+  "downloads": 52221,
   "dependents": 57,
   "updated": "2024-10-21T08:19:33.762Z",
   "tags": [

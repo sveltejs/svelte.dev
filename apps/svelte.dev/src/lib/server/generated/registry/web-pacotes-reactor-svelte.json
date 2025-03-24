@@ -1,6 +1,6 @@
 {
   "name": "@web-pacotes/reactor-svelte",
-  "description": "Manages reactive state using Flutter Bloc pattern in Svelte.",
+  "description": "Manage reactive state using Svelte stores, inspired by Flutter Bloc.",
   "repo_url": "https://github.com/web-pacotes/reactor-svelte",
   "author": "web-pacotes",
   "homepage": "https://github.com/web-pacotes/reactor-svelte#readme",

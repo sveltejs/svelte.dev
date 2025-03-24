@@ -1,6 +1,6 @@
 {
   "name": "svelte-lightbox-gallery",
-  "description": "Create image galleries with lightbox functionality in Svelte.",
+  "description": "Creates image galleries with lightbox functionality in Svelte.",
   "repo_url": "https://github.com/joergjan/svelte-image-gallery",
   "author": "Jan Jörg",
   "homepage": "https://npm.jan-joerg.ch/svelte-lightbox-gallery",

@@ -1,6 +1,7 @@
 {
   "name": "@htmlbricks/hb-dropdown-notifications",
-  "description": "Svelte Dropdown Notifications WebComponent",
+  "description": "Svelte Dropdown Notifications WebComponent.",
+  "repo_url": "",
   "author": "Dario Caruso",
   "downloads": 321,
   "dependents": 0,

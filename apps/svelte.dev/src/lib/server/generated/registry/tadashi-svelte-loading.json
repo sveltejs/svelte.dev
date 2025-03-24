@@ -1,6 +1,7 @@
 {
   "name": "@tadashi/svelte-loading",
-  "description": "Create loading components for Svelte.",
+  "description": "Display loading indicators in Svelte applications.",
+  "repo_url": "",
   "author": "Thiago Lagden",
   "homepage": "https://github.com/lagden/svelte-loading#readme",
   "downloads": 16,

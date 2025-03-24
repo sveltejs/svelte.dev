@@ -1,6 +1,6 @@
 {
   "name": "sveltestrap",
-  "description": "Provides Bootstrap 5 components for Svelte applications.",
+  "description": "Bootstrap 5 components for Svelte v3.",
   "repo_url": "https://github.com/bestguy/sveltestrap",
   "author": "bestguy",
   "homepage": "https://github.com/bestguy/sveltestrap#readme",

@@ -1,6 +1,6 @@
 {
   "name": "@edelman/svelte-storekeeper",
-  "description": "Provide a set of HOC stores for Svelte.",
+  "description": "Provide hoc stores for Svelte applications.",
   "repo_url": "https://github.com/medelman17/edel.monster",
   "author": "Michael Edelman",
   "homepage": "https://github.com/medelman17/edel.monster#readme",

@@ -1,6 +1,7 @@
 {
   "name": "svelte-translate-pro",
-  "description": "Manage internationalization in Svelte apps with dynamic loading.",
+  "description": "Provides internationalization for Svelte apps.",
+  "repo_url": "",
   "author": "Artin Zarghami dev.zarghami@gmail.com",
   "downloads": 2,
   "dependents": 0,

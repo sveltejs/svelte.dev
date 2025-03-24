@@ -1,6 +1,6 @@
 {
   "name": "svelte-extension-starter",
-  "description": "Starter template for building Svelte Chrome extensions.",
+  "description": "Generate Svelte Chrome extension starter with Manifest V3.",
   "repo_url": "https://github.com/raashy/svelte-chrome-extension-starter-mv3",
   "author": "Rahit Ash",
   "homepage": "https://github.com/raashy/svelte-chrome-extension-starter-mv3",

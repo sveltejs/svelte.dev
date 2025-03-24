@@ -1,6 +1,7 @@
 {
   "name": "svelte-adapter-aspcore",
   "description": "Adapt SvelteKit apps for ASP.NET Core SPA deployment.",
+  "repo_url": "",
   "author": "kiho",
   "homepage": "https://github.com/kiho/svelte-adapter-aspcore#readme",
   "downloads": 0,

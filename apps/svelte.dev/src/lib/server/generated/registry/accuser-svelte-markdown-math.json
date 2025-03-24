@@ -1,6 +1,6 @@
 {
   "name": "@accuser/svelte-markdown-math",
-  "description": "Transform Markdown with math into Svelte components.",
+  "description": "Transform Markdown to Svelte components with math support.",
   "repo_url": "https://github.com/accuser/svelte-markdown-math",
   "author": "Matthew Gibbons",
   "homepage": "https://github.com/accuser/svelte-markdown-math",

@@ -1,6 +1,6 @@
 {
   "name": "gettext-extractor-svelte",
-  "description": "Extract gettext messages from Svelte files.",
+  "description": "Extracts gettext messages from Svelte components.",
   "repo_url": "https://github.com/floratmin/gettext-extractor-svelte",
   "author": "Florian Murat Koch",
   "homepage": "https://github.com/floratmin/gettext-extractor-svelte#readme",

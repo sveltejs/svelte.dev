@@ -1,6 +1,6 @@
 {
   "name": "@huntabyte/mdsvex",
-  "description": "Process Markdown with Svelte components.",
+  "description": "Process Markdown files for Svelte components.",
   "repo_url": "https://github.com/huntabyte/MDsveX",
   "author": "pngwn",
   "homepage": "https://github.com/huntabyte/MDsveX#readme",

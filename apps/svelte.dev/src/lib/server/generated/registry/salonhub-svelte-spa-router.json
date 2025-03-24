@@ -1,6 +1,6 @@
 {
   "name": "@salonhub/svelte-spa-router",
-  "description": "Create router for SPAs using Svelte.",
+  "description": "Router for SPAs using Svelte, optimized for hash-based routing.",
   "repo_url": "https://github.com/Salonhub/svelte-spa-router",
   "author": "Alessandro Segala",
   "homepage": "https://github.com/ItalyPaleAle/svelte-spa-router#readme",

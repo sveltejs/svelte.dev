@@ -1,6 +1,6 @@
 {
   "name": "@elderjs/elderjs",
-  "description": "Build SEO-focused static sites with Svelte and Elder.js.",
+  "description": "Static site generator and web framework built with SEO.",
   "repo_url": "https://github.com/Elderjs/elderjs",
   "author": "Nick Reese",
   "homepage": "https://elderguide.com/tech/elderjs/",
@@ -9,7 +9,7 @@
   "updated": "2022-07-31T09:30:37.062Z",
   "tags": [
     "tooling",
-    "server"
+    "seo"
   ],
   "svelte5": false,
   "runes": false,

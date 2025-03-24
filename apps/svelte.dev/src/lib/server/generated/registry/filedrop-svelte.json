@@ -1,6 +1,6 @@
 {
   "name": "filedrop-svelte",
-  "description": "Create drag-and-drop file dropzones with Svelte component and action.",
+  "description": "Create drag-and-drop file upload zones in Svelte apps.",
   "repo_url": "https://github.com/chanced/filedrop-svelte",
   "author": "chance dinkins",
   "homepage": "https://github.com/chanced/filedrop-svelte#readme",
@@ -11,5 +11,6 @@
     "utility"
   ],
   "svelte5": false,
-  "runes": false
+  "runes": false,
+  "github_stars": 113
 }

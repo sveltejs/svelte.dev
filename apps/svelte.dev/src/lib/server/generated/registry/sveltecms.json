@@ -1,6 +1,6 @@
 {
   "name": "sveltecms",
-  "description": "Build content-driven websites with SvelteKit and a configurable CMS.",
+  "description": "Build content management system for SvelteKit projects.",
   "repo_url": "https://github.com/dnotes/sveltecms",
   "author": "David Hunt",
   "homepage": "https://github.com/dnotes/sveltecms#readme",

@@ -1,6 +1,6 @@
 {
   "name": "@noahsalvi/svelte-notion",
-  "description": "Use Notion as a CMS for Svelte projects.",
+  "description": "Render Notion content within Svelte applications.",
   "repo_url": "https://github.com/NoahVersace/svelte-notion",
   "author": "Noah Salvi",
   "homepage": "https://github.com/NoahVersace/svelte-notion#readme",
@@ -11,5 +11,6 @@
     "content"
   ],
   "svelte5": false,
-  "runes": false
+  "runes": false,
+  "github_stars": 17
 }

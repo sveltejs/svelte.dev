@@ -1,6 +1,6 @@
 {
   "name": "svelte-slimscroll",
-  "description": "Add slimscroll functionality to Svelte components.",
+  "description": "Transform divs into scrollable areas with scrollbars.",
   "repo_url": "https://github.com/MelihAltintas/svelte-slimscroll",
   "author": "Melih Altıntaş",
   "homepage": "https://github.com/MelihAltintas/svelte-slimscroll#readme",

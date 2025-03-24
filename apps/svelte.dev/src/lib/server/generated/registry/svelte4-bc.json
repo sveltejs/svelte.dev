@@ -1,6 +1,6 @@
 {
   "name": "svelte4-bc",
-  "description": "Enable Svelte 4 backward compatibility in Svelte 5 projects.",
+  "description": "Enables Svelte 4 backward compatibility in Svelte 5 projects.",
   "repo_url": "https://github.com/adiguba/svelte4-bc",
   "author": "adiGuba",
   "homepage": "https://github.com/adiguba/svelte4-bc#readme",

@@ -1,6 +1,6 @@
 {
   "name": "svelte-5-range-slider",
-  "description": "Create customizable double-thumb range slider component for Svelte 5.",
+  "description": "Create range slider component for Svelte 5 applications.",
   "repo_url": "https://github.com/Ionmi/svelte-5-range-slider",
   "author": "ionmi",
   "homepage": "https://github.com/Ionmi/svelte-5-range-slider",

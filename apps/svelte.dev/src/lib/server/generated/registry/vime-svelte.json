@@ -1,6 +1,6 @@
 {
   "name": "@vime/svelte",
-  "description": "Svelte bindings for Vime media player, customizable and extensible.",
+  "description": "Svelte bindings for Vime media player.",
   "repo_url": "https://github.com/vime-js/vime",
   "author": "mihar-22",
   "downloads": 383,

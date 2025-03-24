@@ -1,6 +1,6 @@
 {
   "name": "sly-svelte-router",
-  "description": "SPA router for Svelte using the History API.",
+  "description": "Implement SPA routing using the History API in Svelte.",
   "repo_url": "https://github.com/SlyOtis/svelte-router",
   "author": "Martin Ottersland",
   "homepage": "https://github.com/SlyOtis/svelte-router",

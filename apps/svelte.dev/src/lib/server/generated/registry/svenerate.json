@@ -1,6 +1,6 @@
 {
   "name": "svenerate",
-  "description": "Generate static sites from Svelte files using Rollup.",
+  "description": "Generate static sites using Svelte components.",
   "repo_url": "https://github.com/wulfmann/sven",
   "author": "Joe Snell",
   "downloads": 2,

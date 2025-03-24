@@ -1,6 +1,6 @@
 {
   "name": "svelte-formup",
-  "description": "Form helpers for Svelte with validation and two-way binding.",
+  "description": "Provides form helpers, validation, and two-way binding for Svelte.",
   "repo_url": "https://github.com/kenoxa/svelte-formup",
   "author": "Sascha Tandel",
   "homepage": "https://svelte-formup.js.org",

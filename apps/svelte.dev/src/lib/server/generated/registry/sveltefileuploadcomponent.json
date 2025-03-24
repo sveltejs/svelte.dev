@@ -1,6 +1,6 @@
 {
   "name": "sveltefileuploadcomponent",
-  "description": "Integrate file upload functionality with drag-and-drop support.",
+  "description": "Standalone Svelte component merges file input with drag-drop functionality.",
   "repo_url": "https://github.com/vipero07/svelte-file-upload-component",
   "author": "Eitan Stadtlader-Miller",
   "homepage": "https://github.com/vipero07/svelte-file-upload-component#readme",

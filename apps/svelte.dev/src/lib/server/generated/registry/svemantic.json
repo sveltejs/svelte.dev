@@ -1,6 +1,6 @@
 {
   "name": "svemantic",
-  "description": "Implement Fomantic-UI components with reactive attributes in Svelte.",
+  "description": "Implement Fomantic-UI components in Svelte applications.",
   "repo_url": "https://github.com/eddow/svemantic",
   "author": "fmdm",
   "homepage": "https://github.com/eddow/svemantic#readme",
@@ -8,7 +8,8 @@
   "dependents": 0,
   "updated": "2023-04-29T08:53:31.853Z",
   "tags": [
-    "component-library"
+    "component-library",
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

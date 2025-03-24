@@ -1,6 +1,6 @@
 {
   "name": "litl-ui",
-  "description": "Create Litl design system for Svelte.",
+  "description": "Develop user interfaces using Litl design system for Svelte.",
   "repo_url": "https://github.com/litlio/litl-ui",
   "author": "Slava Grigorev",
   "homepage": "https://github.com/litlio/litl-ui#readme",
@@ -12,5 +12,6 @@
     "ui"
   ],
   "svelte5": true,
-  "runes": false
+  "runes": false,
+  "github_stars": 0
 }

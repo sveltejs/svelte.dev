@@ -1,6 +1,6 @@
 {
   "name": "svelte-qparam",
-  "description": "Provides type-safe query parameters for SvelteKit.",
+  "description": "Provides type-safe query parameter handling for SvelteKit.",
   "repo_url": "https://github.com/jill64/svelte-qparam",
   "author": "jill64",
   "homepage": "https://github.com/jill64/svelte-qparam#readme",

@@ -1,10 +1,10 @@
 {
   "name": "eslint-plugin-svelte",
-  "description": "Lint Svelte code with ESLint.",
+  "description": "Provides ESLint rules for Svelte components.",
   "repo_url": "https://github.com/sveltejs/eslint-plugin-svelte",
   "author": "Yosuke Ota",
   "homepage": "https://sveltejs.github.io/eslint-plugin-svelte",
-  "downloads": 453956,
+  "downloads": 448796,
   "dependents": 143,
   "updated": "2025-03-20T00:24:18.230Z",
   "tags": [

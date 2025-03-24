@@ -1,6 +1,6 @@
 {
   "name": "drawer-svelte",
-  "description": "Creates drawer component for Svelte.",
+  "description": "Create drawer components for Svelte applications.",
   "repo_url": "https://github.com/0xD1M4/drawer-svelte",
   "author": "0xD1M4",
   "homepage": "https://github.com/0xD1M4/drawer-svelte#readme",
@@ -11,6 +11,6 @@
     "ui"
   ],
   "svelte5": true,
-  "runes": true,
+  "runes": false,
   "github_stars": 0
 }

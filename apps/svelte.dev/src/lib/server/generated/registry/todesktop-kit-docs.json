@@ -1,6 +1,6 @@
 {
   "name": "@todesktop/kit-docs",
-  "description": "Integrate documentation for SvelteKit.",
+  "description": "Integrate documentation into SvelteKit projects.",
   "repo_url": "https://github.com/svelteness/kit-docs",
   "author": "isaacaderogba",
   "homepage": "https://github.com/svelteness/kit-docs#readme",

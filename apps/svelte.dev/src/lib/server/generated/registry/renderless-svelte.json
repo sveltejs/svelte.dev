@@ -1,6 +1,6 @@
 {
   "name": "renderless-svelte",
-  "description": "Provide renderless Svelte components for various UI needs.",
+  "description": "Provides collection of renderless Svelte components.",
   "repo_url": "https://github.com/stephane-vanraes/renderless-svelte",
   "author": "Stephane Vanraes",
   "homepage": "https://www.renderless-svelte.dev",

@@ -1,6 +1,6 @@
 {
   "name": "@halo-lab/svelte-form-getform-io",
-  "description": "Build forms with Svelte, Getform integration, and svelte-forms.",
+  "description": "Build forms with Getform integration in Svelte applications.",
   "repo_url": "https://github.com/Halo-Lab/svelte-form-getform-io",
   "author": "prostory",
   "homepage": "https://github.com/Halo-Lab/svelte-form-getform-io#readme",
@@ -8,6 +8,7 @@
   "dependents": 0,
   "updated": "2023-04-26T15:19:25.091Z",
   "tags": [
+    "component-library",
     "utility"
   ],
   "svelte5": false,

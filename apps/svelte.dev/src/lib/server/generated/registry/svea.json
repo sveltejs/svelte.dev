@@ -1,6 +1,6 @@
 {
   "name": "svea",
-  "description": "Offers a component library for Svelte, enhancing UI development.",
+  "description": "Provide component library for Svelte v3.",
   "repo_url": "https://github.com/AronssonFredrik/svea",
   "author": "Fredrik Aronsson",
   "homepage": "https://github.com/AronssonFredrik/svea#readme",

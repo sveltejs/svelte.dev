@@ -1,6 +1,6 @@
 {
   "name": "svelte-grouter",
-  "description": "Implements a minimal, sensible client-side router for Svelte.",
+  "description": "Minimal client-side routing engine for Svelte.",
   "repo_url": "https://github.com/gbuerk/svelte-grouter",
   "author": "Gavin Buerk",
   "homepage": "https://github.com/gbuerk/svelte-grouter#readme",

@@ -1,6 +1,6 @@
 {
   "name": "@slithe/svelte",
-  "description": "Svelte wrapper for Slithe.",
+  "description": "Provide Svelte wrapper for Slithe.",
   "repo_url": "https://github.com/cadgerfeast/slithe",
   "author": "cadgerfeast",
   "homepage": "https://slithe.cadgerfeast.dev",

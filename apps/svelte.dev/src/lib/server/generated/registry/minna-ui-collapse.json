@@ -1,6 +1,6 @@
 {
   "name": "@minna-ui/collapse",
-  "description": "Create collapse components for Svelte applications.",
+  "description": "Create collapsible content sections for Svelte applications.",
   "repo_url": "https://github.com/WeAreGenki/minna-ui",
   "author": "Max Milton",
   "homepage": "https://wearegenki.github.io/minna-ui",
@@ -11,5 +11,6 @@
     "ui"
   ],
   "svelte5": false,
-  "runes": false
+  "runes": false,
+  "github_stars": 87
 }

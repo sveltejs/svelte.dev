@@ -1,6 +1,6 @@
 {
   "name": "@sveltecasts/svelte-youtube",
-  "description": "Embed YouTube videos in Svelte applications.",
+  "description": "Embed YouTube videos into Svelte projects.",
   "repo_url": "https://github.com/sveltecasts/svelte-youtube",
   "author": "Sveltecasts.dev",
   "homepage": "https://github.com/sveltecasts/svelte-youtube#readme",

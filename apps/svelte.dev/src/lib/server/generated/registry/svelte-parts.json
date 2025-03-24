@@ -1,6 +1,6 @@
 {
   "name": "svelte-parts",
-  "description": "Provide reusable Svelte components including forms, maps, and markdown.",
+  "description": "Provides Svelte components including DropFile, Form, and Markdown.",
   "repo_url": "https://github.com/idris-maps/svelte-parts",
   "author": "idris-maps",
   "homepage": "https://github.com/idris-maps/svelte-parts#readme",

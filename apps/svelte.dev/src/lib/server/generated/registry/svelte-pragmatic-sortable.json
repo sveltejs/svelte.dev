@@ -1,6 +1,6 @@
 {
   "name": "svelte-pragmatic-sortable",
-  "description": "Implement pragmatic drag and drop for Svelte 5.",
+  "description": "Sortable list component for Svelte, based on Pragmatic Drag and Drop.",
   "repo_url": "https://github.com/dysbulic/svelte-pragmatic-sortable",
   "author": "dysbulic",
   "homepage": "https://dysbulic.github.io/svelte-pragmatic-sortable/",
@@ -8,7 +8,6 @@
   "dependents": 0,
   "updated": "2025-02-18T20:02:14.877Z",
   "tags": [
-    "ui",
     "utility"
   ],
   "svelte5": true,

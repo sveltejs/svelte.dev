@@ -1,6 +1,6 @@
 {
   "name": "@small-tech/spinners",
-  "description": "Provide two indeterminate progress spinners for Svelte.",
+  "description": "Display indeterminate progress spinners in Svelte.",
   "repo_url": "https://github.com/small-tech/spinners",
   "author": "Aral Balkan",
   "homepage": "https://github.com/small-tech/spinners",

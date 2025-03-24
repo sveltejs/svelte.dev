@@ -1,6 +1,6 @@
 {
   "name": "@douganderson444/panzoom-node",
-  "description": "Implement pan and zoom functionality in Svelte.",
+  "description": "Provides pan and zoom functionality for Svelte.",
   "repo_url": "https://github.com/DougAnderson444/panzoom-node",
   "author": "Doug Anderson",
   "homepage": "https://github.com/DougAnderson444/panzoom-node#readme",
@@ -8,7 +8,8 @@
   "dependents": 1,
   "updated": "2024-04-09T15:00:00.453Z",
   "tags": [
-    "utility"
+    "utility",
+    "dom"
   ],
   "svelte5": false,
   "runes": false,

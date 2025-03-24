@@ -1,6 +1,6 @@
 {
   "name": "@sveltinio/essentials",
-  "description": "Offer type-safe, accessible Svelte components.",
+  "description": "Provides type-safe, accessible Svelte components.",
   "repo_url": "https://github.com/sveltinio/components-library",
   "author": "dev",
   "homepage": "https://components.sveltin.io",
@@ -8,8 +8,7 @@
   "dependents": 1,
   "updated": "2023-10-01T09:54:37.197Z",
   "tags": [
-    "component-library",
-    "ui"
+    "component-library"
   ],
   "svelte5": false,
   "runes": false,

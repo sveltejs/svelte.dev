@@ -1,6 +1,6 @@
 {
   "name": "pika-svelte-language-server",
-  "description": "Offer language server for Svelte, providing editor features.",
+  "description": "Provide language server support for Svelte.",
   "repo_url": "https://github.com/sveltejs/language-tools",
   "author": "James Birtles",
   "homepage": "https://github.com/sveltejs/language-tools#readme",

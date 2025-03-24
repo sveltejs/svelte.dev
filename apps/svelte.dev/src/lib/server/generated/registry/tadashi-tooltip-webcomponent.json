@@ -1,6 +1,7 @@
 {
   "name": "@tadashi/tooltip-webcomponent",
   "description": "Create tooltip web components for Svelte applications.",
+  "repo_url": "",
   "author": "Thiago Lagden",
   "homepage": "https://github.com/lagden/svelte-tooltip-webcomponent#readme",
   "downloads": 0,

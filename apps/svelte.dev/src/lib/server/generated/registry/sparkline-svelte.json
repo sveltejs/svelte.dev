@@ -1,6 +1,6 @@
 {
   "name": "sparkline-svelte",
-  "description": "Generate lightweight, responsive Sparkline charts for Svelte.",
+  "description": "Lightweight, responsive Sparkline chart component for Svelte.",
   "repo_url": "https://github.com/bn-l/sparkline-svelte",
   "author": "bn-l",
   "homepage": "https://bn-l.github.io/sparkline-svelte/",

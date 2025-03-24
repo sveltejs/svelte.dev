@@ -1,6 +1,6 @@
 {
   "name": "svelte3-redux",
-  "description": "Integrate Redux with Svelte 3, using bind or bindTracked.",
+  "description": "Integrate Redux state management with Svelte 3 applications.",
   "repo_url": "https://github.com/dai-shi/svelte3-redux",
   "author": "Daishi Kato",
   "homepage": "https://github.com/dai-shi/svelte3-redux#readme",

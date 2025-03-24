@@ -1,6 +1,6 @@
 {
   "name": "simple-font-select",
-  "description": "Create simple font select component for Svelte.",
+  "description": "Provide simple font selection component for Svelte apps.",
   "repo_url": "https://github.com/ThaUnknown/simple-font-select",
   "author": "ThaUnknown",
   "homepage": "https://github.com/ThaUnknown/simple-font-select#readme",

@@ -1,6 +1,6 @@
 {
   "name": "@chartium/svelte-grid",
-  "description": "Create responsive, draggable, and resizable grid layouts in Svelte.",
+  "description": "Create responsive, draggable, resizable grid layouts for Svelte.",
   "repo_url": "https://github.com/vaheqelyan/svelte-grid",
   "author": "Vahe Araqelyan",
   "homepage": "https://github.com/vaheqelyan/svelte-grid#readme",
@@ -8,7 +8,7 @@
   "dependents": 0,
   "updated": "2024-07-01T10:06:11.484Z",
   "tags": [
-    "ui"
+    "component-library"
   ],
   "svelte5": false,
   "runes": false,

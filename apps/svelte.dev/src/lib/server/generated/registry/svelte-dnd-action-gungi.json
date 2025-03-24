@@ -8,7 +8,8 @@
   "dependents": 0,
   "updated": "2023-09-11T09:28:15.912Z",
   "tags": [
-    "utility"
+    "utility",
+    "ui"
   ],
   "svelte5": true,
   "runes": false,

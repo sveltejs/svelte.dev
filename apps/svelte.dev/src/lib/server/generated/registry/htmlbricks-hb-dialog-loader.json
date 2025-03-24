@@ -1,6 +1,7 @@
 {
   "name": "@htmlbricks/hb-dialog-loader",
   "description": "Svelte-Bootstrap Downloader WebComponent.",
+  "repo_url": "",
   "author": "Dario Caruso",
   "downloads": 168,
   "dependents": 0,

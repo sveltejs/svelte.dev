@@ -1,6 +1,6 @@
 {
   "name": "svelte-skeleton-loader",
-  "description": "Generate animated loading skeletons for Svelte apps.",
+  "description": "Create animated loading skeletons for Svelte apps.",
   "repo_url": "https://github.com/Aushtiin/svelte-skeleton",
   "author": "aushtiin",
   "homepage": "https://github.com/Aushtiin/svelte-skeleton#readme",

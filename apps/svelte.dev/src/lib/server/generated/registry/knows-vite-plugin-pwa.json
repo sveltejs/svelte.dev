@@ -1,6 +1,6 @@
 {
   "name": "@knows/vite-plugin-pwa",
-  "description": "Provides zero-config PWA support for Vite projects.",
+  "description": "Integrate Progressive Web App features into Vite-based Svelte projects.",
   "repo_url": "https://github.com/antfu/vite-plugin-pwa",
   "author": "antfu",
   "homepage": "https://github.com/antfu/vite-plugin-pwa",

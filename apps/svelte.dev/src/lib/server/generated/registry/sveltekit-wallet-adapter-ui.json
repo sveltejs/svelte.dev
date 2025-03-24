@@ -1,6 +1,6 @@
 {
   "name": "sveltekit-wallet-adapter-ui",
-  "description": "Integrate Solana wallets using Svelte components.",
+  "description": "Provide pre-built components for Solana wallet integration in SvelteKit.",
   "repo_url": "https://github.com/portalpayments/svelte-on-solana-wallet-adapter",
   "author": "Svelte on Solana team",
   "homepage": "https://github.com/portalpayments/svelte-on-solana-wallet-adapter#readme",

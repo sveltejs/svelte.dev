@@ -1,6 +1,6 @@
 {
   "name": "svelte-pricing",
-  "description": "Build multilang column pricing apps with Svelte.",
+  "description": "Creates multilang column pricing app.",
   "repo_url": "https://github.com/rutynka/svelte-pricing",
   "author": "ru7ynk4",
   "homepage": "https://github.com/rutynka/svelte-pricing",

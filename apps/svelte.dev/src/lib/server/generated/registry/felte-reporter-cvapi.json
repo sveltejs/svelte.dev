@@ -1,6 +1,6 @@
 {
   "name": "@felte/reporter-cvapi",
-  "description": "Report form errors using browser's Constraint Validation API.",
+  "description": "Report Felte form errors using browser's Constraint Validation API.",
   "repo_url": "https://github.com/pablo-abc/felte",
   "author": "Pablo Berganza",
   "homepage": "https://github.com/pablo-abc/felte/tree/main/packages/reporter-cvapi",

@@ -1,12 +1,14 @@
 {
   "name": "@jacksonfrankland/game-kit",
-  "description": "Provide Svelte components and scripts for game development.",
+  "description": "Offers Svelte components and scripts for game development.",
+  "repo_url": "",
   "author": "jacksonfrankland",
   "downloads": 27,
   "dependents": 0,
   "updated": "2021-02-22T10:00:36.763Z",
   "tags": [
-    "component-library"
+    "ui",
+    "utility"
   ],
   "svelte5": false,
   "runes": false

@@ -1,6 +1,7 @@
 {
   "name": "svelte-rodry-common",
-  "description": "Offer common Svelte components for various use cases.",
+  "description": "Provides reusable Svelte components, including modal and tabulator.",
+  "repo_url": "",
   "author": "rodryquintero",
   "downloads": 2,
   "dependents": 0,

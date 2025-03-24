@@ -1,6 +1,6 @@
 {
   "name": "svelte-test-register",
-  "description": "Compile Svelte 3 components for use in Node.js test runners.",
+  "description": "Compile Svelte components on Node for testing purposes.",
   "repo_url": "https://github.com/dirv/svelte-test-register",
   "author": "Daniel Irvine",
   "homepage": "https://github.com/dirv/svelte-test-register#readme",
@@ -8,8 +8,9 @@
   "dependents": 1,
   "updated": "2019-11-23T22:26:52.340Z",
   "tags": [
-    "testing"
+    "tooling"
   ],
   "svelte5": false,
-  "runes": false
+  "runes": false,
+  "github_stars": 2
 }

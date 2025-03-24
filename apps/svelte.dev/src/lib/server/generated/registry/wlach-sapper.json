@@ -1,16 +1,13 @@
 {
   "name": "@wlach/sapper",
-  "description": "Build high-performance universal web apps with Svelte.",
   "repo_url": "https://github.com/sveltejs/sapper",
   "author": "Rich Harris",
   "homepage": "https://github.com/sveltejs/sapper#readme",
   "downloads": 17,
   "dependents": 0,
   "updated": "2021-06-18T14:27:44.032Z",
-  "tags": [
-    "router",
-    "server"
-  ],
+  "tags": [],
   "svelte5": false,
-  "runes": false
+  "runes": false,
+  "github_stars": 6980
 }

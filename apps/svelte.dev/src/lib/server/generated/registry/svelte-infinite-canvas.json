@@ -1,6 +1,7 @@
 {
   "name": "svelte-infinite-canvas",
-  "description": "Offer pannable, zoomable interface for movable, linkable elements.",
+  "description": "Create pannable, zoomable interface with movable elements.",
+  "repo_url": "",
   "author": "cbroms",
   "downloads": 2,
   "dependents": 0,

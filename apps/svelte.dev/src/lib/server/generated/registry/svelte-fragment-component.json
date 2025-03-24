@@ -1,6 +1,6 @@
 {
   "name": "svelte-fragment-component",
-  "description": "Renders children with lifecycle hooks for testing Svelte components.",
+  "description": "Svelte component rendering children with lifecycle hooks.",
   "repo_url": "https://github.com/kenoxa/svelte-fragment-component",
   "author": "Sascha Tandel",
   "homepage": "https://github.com/kenoxa/svelte-fragment-component#readme",

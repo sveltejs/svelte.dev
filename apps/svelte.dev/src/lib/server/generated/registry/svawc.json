@@ -1,6 +1,6 @@
 {
   "name": "svawc",
-  "description": "Develop A-Frame components using Svelte.",
+  "description": "Create A-Frame web components using Svelte for reactive templates.",
   "repo_url": "https://github.com/immers-space/svawc",
   "author": "William Murphy",
   "homepage": "https://github.com/immers-space/svawc#readme",
@@ -8,7 +8,8 @@
   "dependents": 1,
   "updated": "2023-02-20T15:43:51.065Z",
   "tags": [
-    "dom"
+    "dom",
+    "component-library"
   ],
   "svelte5": false,
   "runes": false,

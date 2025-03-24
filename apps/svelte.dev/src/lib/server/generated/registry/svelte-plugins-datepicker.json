@@ -1,6 +1,6 @@
 {
   "name": "@svelte-plugins/datepicker",
-  "description": "Implement date and time pickers for Svelte applications.",
+  "description": "Simple datepicker component designed for Svelte.",
   "repo_url": "https://github.com/svelte-plugins/datepicker",
   "author": "Kieran Boyle",
   "homepage": "https://github.com/svelte-plugins/datepicker",

@@ -1,6 +1,6 @@
 {
   "name": "svelte5-skeleton",
-  "description": "Create SVG skeletons for loading images and interfaces in Svelte 5.",
+  "description": "Create SVG skeletons for loading states in Svelte 5 apps.",
   "repo_url": "https://github.com/sonniydsgn/svelte5-skeleton",
   "author": "sonniydsgn",
   "homepage": "https://github.com/sonniydsgn/svelte5-skeleton#readme",
@@ -11,6 +11,6 @@
     "ui"
   ],
   "svelte5": true,
-  "runes": false,
+  "runes": true,
   "github_stars": 0
 }

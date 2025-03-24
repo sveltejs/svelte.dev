@@ -1,6 +1,7 @@
 {
   "name": "@htmlbricks/hb-table",
-  "description": "Create table web components for Svelte applications.",
+  "description": "Create table web components for Svelte.",
+  "repo_url": "",
   "author": "Dario Caruso",
   "downloads": 468,
   "dependents": 8,

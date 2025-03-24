@@ -1,6 +1,6 @@
 {
   "name": "svelte-page-links",
-  "description": "Generate pagination links for Svelte.",
+  "description": "Generate pagination links for Svelte with customizable options.",
   "repo_url": "https://github.com/captaincodeman/svelte-page-links",
   "author": "Simon Green",
   "homepage": "https://captaincodeman.github.io/svelte-page-links/",

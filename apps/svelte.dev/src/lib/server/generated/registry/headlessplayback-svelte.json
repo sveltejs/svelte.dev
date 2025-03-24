@@ -1,6 +1,6 @@
 {
   "name": "@headlessplayback/svelte",
-  "description": "Adapt headlessplayback core for Svelte video playback.",
+  "description": "Adapt headlessplayback core for Svelte.",
   "repo_url": "https://github.com/willnguyen1312/headlessplayback",
   "author": "Nam Nguyen",
   "homepage": "https://github.com/sponsors/willnguyen1312",
@@ -11,5 +11,6 @@
     "media"
   ],
   "svelte5": true,
-  "runes": false
+  "runes": false,
+  "github_stars": 5
 }

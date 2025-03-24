@@ -1,6 +1,6 @@
 {
   "name": "svelte-favicon-badge",
-  "description": "Add favicon badge to show unread messages.",
+  "description": "Add favicon with badge to show unread messages or counts.",
   "repo_url": "https://github.com/kevmodrome/svelte-favicon-badge",
   "author": "kevmodrome",
   "homepage": "https://github.com/kevmodrome/svelte-favicon-badge#readme",

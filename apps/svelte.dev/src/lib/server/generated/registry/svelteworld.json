@@ -1,6 +1,6 @@
 {
   "name": "svelteworld",
-  "description": "Display list of countries using Svelte component.",
+  "description": "Svelte component displaying list of countries.",
   "repo_url": "https://gitlab.com/st33fn/svelteworld",
   "author": "Stefan Lakicevic",
   "homepage": "https://gitlab.com/st33fn/svelteworld#readme",

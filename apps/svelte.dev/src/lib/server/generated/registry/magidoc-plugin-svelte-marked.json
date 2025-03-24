@@ -1,6 +1,6 @@
 {
   "name": "@magidoc/plugin-svelte-marked",
-  "description": "Render markdown to Svelte components.",
+  "description": "Render markdown to Svelte components with svelte-highlight support.",
   "repo_url": "https://github.com/magidoc-org/magidoc",
   "author": "pelletier197",
   "homepage": "https://github.com/magidoc-org/magidoc#readme",

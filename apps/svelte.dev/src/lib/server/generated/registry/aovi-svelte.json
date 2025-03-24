@@ -1,6 +1,6 @@
 {
   "name": "aovi-svelte",
-  "description": "Integrate Aovi validation in Svelte apps.",
+  "description": "Integrates Aovi validation library into Svelte applications.",
   "repo_url": "https://github.com/AlexxNB/aovi-svelte",
   "author": "Alexey Schebelev",
   "homepage": "https://github.com/AlexxNB/aovi-svelte#readme",
@@ -11,5 +11,6 @@
     "utility"
   ],
   "svelte5": false,
-  "runes": false
+  "runes": false,
+  "github_stars": 12
 }

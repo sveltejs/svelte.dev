@@ -1,6 +1,6 @@
 {
   "name": "svelte-enhanced-transitions",
-  "description": "Enhance Svelte transitions with enabled parameter and CSS variables.",
+  "description": "Enhance Svelte transitions with CSS variables and enable/disable.",
   "repo_url": "https://github.com/Thiagolino8/svelte-enhanced-transitions",
   "author": "Thiago Lino Gomes",
   "homepage": "https://svelte-enhanced-transitions.vercel.app/",

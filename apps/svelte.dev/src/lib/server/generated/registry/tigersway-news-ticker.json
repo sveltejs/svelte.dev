@@ -1,6 +1,6 @@
 {
   "name": "@tigersway/news-ticker",
-  "description": "Create news ticker web component for Svelte apps.",
+  "description": "Create news tickers or marquees in Svelte.",
   "repo_url": "https://github.com/tigersway/svelte-news-ticker",
   "author": "Ben Michaud",
   "homepage": "https://github.com/tigersway/svelte-news-ticker#readme",

@@ -1,6 +1,6 @@
 {
   "name": "@vortechsolutions/gridjs-svelte",
-  "description": "Create Svelte wrapper component for Grid.js.",
+  "description": "Create Grid.js data grids within Svelte applications.",
   "repo_url": "https://github.com/VortechSolutions/gridjs-svelte",
   "author": "jaredforth",
   "homepage": "https://gridjs.io/docs/integrations/svelte",

@@ -1,13 +1,13 @@
 {
   "name": "@pdfsvex/pdfsvex",
-  "description": "Generate PDFs easily within Svelte applications.",
+  "description": "Generate PDF documents using Svelte components.",
+  "repo_url": "",
   "author": "manuel3108",
   "downloads": 0,
   "dependents": 2,
   "updated": "2021-07-04T12:13:28.006Z",
   "tags": [
-    "utility",
-    "content"
+    "utility"
   ],
   "svelte5": false,
   "runes": false

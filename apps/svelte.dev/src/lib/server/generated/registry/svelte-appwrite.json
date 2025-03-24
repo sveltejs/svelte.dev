@@ -1,6 +1,7 @@
 {
   "name": "svelte-appwrite",
-  "description": "Integrate Appwrite backend services into Svelte applications.",
+  "description": "Provides Appwrite components for Svelte.",
+  "repo_url": "",
   "author": "eldadfux",
   "downloads": 1,
   "dependents": 0,

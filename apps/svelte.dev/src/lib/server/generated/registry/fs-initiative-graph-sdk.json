@@ -1,6 +1,6 @@
 {
   "name": "@fs-initiative/graph-sdk",
-  "description": "SDK for interacting with GraphQL APIs in Svelte applications.",
+  "description": "Provides a GraphQL SDK for Svelte applications.",
   "repo_url": "https://github.com/sdekna/graph-sdk",
   "author": "Free Source Initiative",
   "homepage": "https://github.com/sdekna/graph-sdk#readme",

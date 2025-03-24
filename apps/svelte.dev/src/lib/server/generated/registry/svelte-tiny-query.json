@@ -1,10 +1,11 @@
 {
   "name": "svelte-tiny-query",
-  "description": "Simplify data fetching with Svelte 5 reactive state.",
+  "description": "Manage data fetching with declarative queries in Svelte 5.",
+  "repo_url": "",
   "author": "sra448",
-  "downloads": 43,
+  "downloads": 88,
   "dependents": 0,
-  "updated": "2025-03-23T12:42:25.117Z",
+  "updated": "2025-03-24T08:40:32.938Z",
   "tags": [
     "utility"
   ],

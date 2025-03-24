@@ -1,6 +1,6 @@
 {
   "name": "@svuick/ide",
-  "description": "Integrate Monaco editor into Svelte applications.",
+  "description": "Integrate Monaco editor IDE into SvelteKit projects.",
   "repo_url": "https://gitlab.com/david-plugge/svuick",
   "author": "davidplugge",
   "homepage": "https://gitlab.com/david-plugge/svuick#readme",

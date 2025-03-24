@@ -1,6 +1,6 @@
 {
   "name": "svelte-split-pane",
-  "description": "Split panes horizontally and vertically in Svelte apps.",
+  "description": "Create split panes, both horizontal and vertical, in Svelte apps.",
   "repo_url": "https://github.com/Readiz/svelte-split-pane",
   "author": "Readiz",
   "homepage": "https://readiz.com/",

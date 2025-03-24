@@ -1,6 +1,6 @@
 {
   "name": "@furudean/svelte-persistent-store",
-  "description": "Persistent Svelte store using localStorage or sessionStorage.",
+  "description": "Persist Svelte store data using localStorage or sessionStorage.",
   "repo_url": "https://github.com/furudean/svelte-persistent-store",
   "author": "Merilynn Bandy",
   "homepage": "https://github.com/furudean/svelte-persistent-store#readme",

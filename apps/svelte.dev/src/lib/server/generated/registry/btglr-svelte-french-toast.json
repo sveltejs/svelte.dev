@@ -1,6 +1,6 @@
 {
   "name": "@btglr/svelte-french-toast",
-  "description": "Generate buttery smooth Svelte toast notifications.",
+  "description": "Display buttery smooth toast notifications in Svelte.",
   "repo_url": "https://github.com/kbrgl/svelte-french-toast",
   "author": "Kabir Goel",
   "homepage": "https://github.com/kbrgl/svelte-french-toast#readme",
@@ -12,5 +12,5 @@
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 937
+  "github_stars": 938
 }

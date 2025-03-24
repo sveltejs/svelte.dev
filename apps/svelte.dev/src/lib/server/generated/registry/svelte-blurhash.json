@@ -1,6 +1,6 @@
 {
   "name": "svelte-blurhash",
-  "description": "Implement blurhash for Svelte, lazy loading images.",
+  "description": "Implement blurhash image placeholders in Svelte applications.",
   "repo_url": "https://github.com/h416/svelte-blurhash",
   "author": "h416",
   "homepage": "https://github.com/h416/svelte-blurhash#readme",
@@ -8,6 +8,7 @@
   "dependents": 1,
   "updated": "2021-04-30T05:00:20.927Z",
   "tags": [
+    "ui",
     "media"
   ],
   "svelte5": false,

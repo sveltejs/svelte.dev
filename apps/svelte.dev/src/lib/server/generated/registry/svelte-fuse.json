@@ -1,6 +1,6 @@
 {
   "name": "svelte-fuse",
-  "description": "Provide Svelte wrapper for Fuse.js fuzzy search.",
+  "description": "Integrate Fuse.js for fuzzy search within Svelte applications.",
   "repo_url": "https://github.com/g1eny0ung/svelte-fuse",
   "author": "Yue Yang",
   "homepage": "https://github.com/g1eny0ung/svelte-fuse#readme",

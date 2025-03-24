@@ -1,6 +1,6 @@
 {
   "name": "@codiechanel/svelte-lib",
-  "description": "Create personal Svelte library.",
+  "description": "Create shareable Svelte components.",
   "repo_url": "https://github.com/codiechanel/solid-library",
   "author": "codiechanel",
   "homepage": "https://github.com/codiechanel/solid-library#readme",

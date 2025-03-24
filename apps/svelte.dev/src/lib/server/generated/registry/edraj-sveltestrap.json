@@ -1,6 +1,6 @@
 {
   "name": "@edraj/sveltestrap",
-  "description": "Bootstrap 5 components for Svelte apps.",
+  "description": "Bootstrap 5 components for Svelte.",
   "repo_url": "https://github.com/edraj/sveltestrap",
   "author": "ms_splimter",
   "homepage": "https://github.com/edraj/sveltestrap#readme",

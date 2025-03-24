@@ -1,6 +1,6 @@
 {
   "name": "sk-oidc-oauth",
-  "description": "Implement OIDC/OAuth2 authentication for SvelteKit apps.",
+  "description": "Enable OIDC/OAuth2 authentication in SvelteKit apps.",
   "repo_url": "https://github.com/ZachScroggins/sk-oidc-oauth",
   "author": "Zach Scroggins",
   "homepage": "https://sk-oidc-oauth.zachscroggins.com",
@@ -8,8 +8,7 @@
   "dependents": 0,
   "updated": "2024-05-01T22:14:12.261Z",
   "tags": [
-    "auth",
-    "integration"
+    "auth"
   ],
   "svelte5": false,
   "runes": false,

@@ -1,6 +1,6 @@
 {
   "name": "svelte-num-otp",
-  "description": "Create number OTP input components for Svelte.",
+  "description": "Create OTP input component for Svelte applications.",
   "repo_url": "https://github.com/rezk2ll/svelte-num-otp",
   "author": "kferjani",
   "homepage": "https://github.com/rezk2ll/svelte-num-otp#readme",

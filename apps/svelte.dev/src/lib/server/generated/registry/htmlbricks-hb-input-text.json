@@ -1,6 +1,7 @@
 {
   "name": "@htmlbricks/hb-input-text",
-  "description": "Create Svelte-Bootstrap text input web component.",
+  "description": "Create text input web components for Svelte applications.",
+  "repo_url": "",
   "author": "Dario Caruso",
   "downloads": 487,
   "dependents": 3,

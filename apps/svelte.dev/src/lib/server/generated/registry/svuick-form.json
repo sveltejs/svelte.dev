@@ -1,6 +1,6 @@
 {
   "name": "@svuick/form",
-  "description": "Validate forms in Svelte and SvelteKit applications.",
+  "description": "Validate forms in SvelteKit applications.",
   "repo_url": "https://gitlab.com/david-plugge/svuick",
   "author": "davidplugge",
   "downloads": 1,

@@ -1,6 +1,7 @@
 {
   "name": "svelte-loading-animation",
-  "description": "Provide loading animation components for Svelte.",
+  "description": "Provide collection of CSS loading animations for Svelte applications.",
+  "repo_url": "",
   "author": "gayuh tri satria",
   "downloads": 1,
   "dependents": 0,

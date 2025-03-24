@@ -1,6 +1,6 @@
 {
   "name": "@brewer/beerui",
-  "description": "Provide Svelte UI components.",
+  "description": "Svelte UI component library with various components.",
   "repo_url": "https://github.com/beerui/BeerUi",
   "author": "beerui",
   "homepage": "https://github.com/beerui/BeerUi",

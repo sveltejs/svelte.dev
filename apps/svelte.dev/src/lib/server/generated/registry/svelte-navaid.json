@@ -1,6 +1,7 @@
 {
   "name": "svelte-navaid",
-  "description": "Routing components for Svelte using navaid.",
+  "description": "Create routing components for Svelte applications.",
+  "repo_url": "",
   "author": "jacwright",
   "downloads": 3,
   "dependents": 0,

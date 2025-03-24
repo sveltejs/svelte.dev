@@ -1,6 +1,7 @@
 {
   "name": "svelte-tel",
   "description": "Handle phone number input with headless Svelte component.",
+  "repo_url": "",
   "author": "mattheous",
   "downloads": 8,
   "dependents": 0,

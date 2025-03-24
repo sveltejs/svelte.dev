@@ -1,6 +1,7 @@
 {
   "name": "@ikun-ui/contextmenu",
-  "description": "Create context menu components for Svelte.",
+  "description": "Build context menus for Svelte applications.",
+  "repo_url": "",
   "author": "baiwusanyu",
   "downloads": 22,
   "dependents": 1,

@@ -1,12 +1,13 @@
 {
   "name": "@popperjs/svelte",
-  "description": "Position elements with Popper in Svelte applications.",
+  "description": "Position elements with Popper.js in Svelte applications.",
+  "repo_url": "",
   "author": "atomiks",
   "downloads": 201,
   "dependents": 4,
   "updated": "2020-04-19T15:43:49.306Z",
   "tags": [
-    "ui"
+    "utility"
   ],
   "svelte5": false,
   "runes": false

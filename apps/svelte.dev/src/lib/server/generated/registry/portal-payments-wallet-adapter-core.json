@@ -1,6 +1,6 @@
 {
   "name": "@portal-payments/wallet-adapter-core",
-  "description": "Expose methods to run wallet in Svelte applications.",
+  "description": "Expose methods and properties to run wallet in Svelte applications.",
   "repo_url": "https://github.com/portalpayments/svelte-on-solana-wallet-adapter",
   "author": "Svelte on Solana team",
   "homepage": "https://github.com/portalpayments/svelte-on-solana-wallet-adapter#readme",

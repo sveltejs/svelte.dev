@@ -1,6 +1,6 @@
 {
   "name": "@accuser/svelte-hast",
-  "description": "Transform Hast data into Svelte components.",
+  "description": "Transform Hast to Svelte components.",
   "repo_url": "https://github.com/accuser/svelte-hast",
   "author": "Matthew Gibbons",
   "homepage": "https://github.com/accuser/svelte-hast",

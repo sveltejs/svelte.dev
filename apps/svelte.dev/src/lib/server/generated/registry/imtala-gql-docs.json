@@ -1,6 +1,6 @@
 {
   "name": "@imtala/gql-docs",
-  "description": "Generate GraphQL documentation from Svelte components.",
+  "description": "Generate GraphQL documentation from schema.",
   "repo_url": "https://github.com/des-des/imtala",
   "author": "@des-des",
   "homepage": "https://github.com/des-des/imtala#readme",
@@ -11,5 +11,6 @@
     "tooling"
   ],
   "svelte5": false,
-  "runes": false
+  "runes": false,
+  "github_stars": 3
 }

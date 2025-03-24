@@ -1,6 +1,6 @@
 {
   "name": "kitva",
-  "description": "Validate SvelteKit endpoints and forms using JSON schema.",
+  "description": "Validate SvelteKit endpoints and forms with schema validation.",
   "repo_url": "https://github.com/qurafi/kitva",
   "author": "Mohammed Al-Qurafi",
   "homepage": "https://github.com/qurafi/kitva#readme",
@@ -8,8 +8,7 @@
   "dependents": 0,
   "updated": "2023-06-22T21:17:30.206Z",
   "tags": [
-    "utility",
-    "tooling"
+    "utility"
   ],
   "svelte5": false,
   "runes": false,

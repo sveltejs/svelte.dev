@@ -1,6 +1,6 @@
 {
   "name": "@svelte-parts/editor",
-  "description": "Provide markdown editor and codemirror wrapper for Svelte.",
+  "description": "Create Markdown editor with codemirror wrapper for Svelte.",
   "repo_url": "https://github.com/idris-maps/svelte-parts",
   "author": "idris-maps",
   "homepage": "https://github.com/idris-maps/svelte-parts#readme",
@@ -8,8 +8,8 @@
   "dependents": 0,
   "updated": "2022-04-04T21:36:48.275Z",
   "tags": [
-    "ui",
-    "content"
+    "utility",
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

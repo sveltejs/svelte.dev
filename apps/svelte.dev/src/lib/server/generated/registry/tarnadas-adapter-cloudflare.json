@@ -1,17 +1,13 @@
 {
   "name": "@tarnadas/adapter-cloudflare",
-  "description": "Deploy SvelteKit apps to Cloudflare Pages with Workers.",
   "repo_url": "https://github.com/sveltejs/kit",
   "author": "tarnadas",
   "homepage": "https://kit.svelte.dev",
   "downloads": 3,
   "dependents": 0,
   "updated": "2025-02-28T09:42:46.928Z",
-  "tags": [
-    "adapter",
-    "server"
-  ],
+  "tags": [],
   "svelte5": false,
   "runes": false,
-  "github_stars": 19121
+  "github_stars": 19122
 }

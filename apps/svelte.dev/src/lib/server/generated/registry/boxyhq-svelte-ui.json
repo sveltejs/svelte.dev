@@ -1,14 +1,14 @@
 {
   "name": "@boxyhq/svelte-ui",
-  "description": "Build UI components for Svelte applications.",
+  "description": "UI components from BoxyHQ for enterprise features.",
+  "repo_url": "",
   "author": "deepakp",
   "homepage": "https://github.com/boxyhq/ui",
   "downloads": 111,
   "dependents": 0,
   "updated": "2025-02-28T16:24:58.185Z",
   "tags": [
-    "component-library",
-    "ui"
+    "component-library"
   ],
   "svelte5": false,
   "runes": false

@@ -1,6 +1,7 @@
 {
   "name": "simply-svelte-autocomplete",
-  "description": "Create autocomplete input components in Svelte.",
+  "description": "Create autocomplete component in Svelte apps.",
+  "repo_url": "",
   "author": "Yuval Allweil | @esotericsheric | www.whoisyuval.com",
   "homepage": "https://github.com/themarquisdesheric/simply-svelte-autocomplete",
   "downloads": 3,

@@ -1,6 +1,7 @@
 {
   "name": "@beyonk/svelte-codehighlight",
-  "description": "Highlight code blocks in Svelte presentations.",
+  "description": "Highlight code snippets within Svelte components.",
+  "repo_url": "",
   "author": "antony",
   "downloads": 8,
   "dependents": 0,

@@ -1,6 +1,6 @@
 {
   "name": "crstore",
-  "description": "Conflict-free replicated store for Svelte, SQLite, and tRPC.",
+  "description": "Create conflict-free replicated stores for Svelte apps.",
   "repo_url": "https://github.com/Azarattum/CRStore",
   "author": "Azarattum",
   "homepage": "https://github.com/Azarattum/CRStore#readme",

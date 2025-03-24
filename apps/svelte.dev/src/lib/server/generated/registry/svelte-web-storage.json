@@ -1,6 +1,6 @@
 {
   "name": "svelte-web-storage",
-  "description": "Persist Svelte store values to web storage (localStorage, sessionStorage).",
+  "description": "Persist Svelte store values using Web Storage API.",
   "repo_url": "https://github.com/captaincodeman/svelte-web-storage",
   "author": "Simon Green",
   "homepage": "https://captaincodeman.github.io/svelte-web-storage/",

@@ -1,6 +1,7 @@
 {
   "name": "svelte-cache-store",
   "description": "Cache API data in Svelte stores, compatible with Svelte 4.",
+  "repo_url": "",
   "author": "Joachim Haagen Skeie",
   "downloads": 0,
   "dependents": 0,

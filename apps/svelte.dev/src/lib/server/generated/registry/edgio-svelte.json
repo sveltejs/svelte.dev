@@ -1,13 +1,13 @@
 {
   "name": "@edgio/svelte",
-  "description": "Edgio integration for Svelte applications.",
+  "description": "Adapter for Edgio edge cache.",
+  "repo_url": "",
   "author": "Edgio",
   "downloads": 7289,
   "dependents": 0,
   "updated": "2024-11-06T23:18:43.977Z",
   "tags": [
-    "adapter",
-    "server"
+    "adapter"
   ],
   "svelte5": false,
   "runes": false

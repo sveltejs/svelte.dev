@@ -1,6 +1,6 @@
 {
   "name": "file-viewer",
-  "description": "View files using custom element built with Svelte.",
+  "description": "View files of various formats using Svelte web component.",
   "repo_url": "https://github.com/avipunes/File-Viewer",
   "author": "Avi Punes",
   "homepage": "https://github.com/avipunes/File-Viewer#readme",
@@ -11,5 +11,6 @@
     "ui"
   ],
   "svelte5": false,
-  "runes": false
+  "runes": false,
+  "github_stars": 40
 }

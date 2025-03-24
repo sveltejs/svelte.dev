@@ -1,6 +1,6 @@
 {
   "name": "svelte-inspect-value",
-  "description": "Svelte component for inspecting and debugging values.",
+  "description": "Inspect JavaScript values within Svelte components.",
   "repo_url": "https://github.com/ampled/svelte-inspect-value",
   "author": "eirikk",
   "homepage": "https://inspect.eirik.space",
@@ -8,8 +8,7 @@
   "dependents": 2,
   "updated": "2025-03-17T13:40:15.632Z",
   "tags": [
-    "utility",
-    "tooling"
+    "utility"
   ],
   "svelte5": true,
   "runes": false,

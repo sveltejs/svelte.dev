@@ -1,6 +1,6 @@
 {
   "name": "universal-title-bar",
-  "description": "Create lightweight, fast title bars for Svelte applications.",
+  "description": "Lightweight, fast title bar component made with Svelte.",
   "repo_url": "https://github.com/ThaUnknown/universal-title-bar",
   "author": "thaunknown",
   "homepage": "https://github.com/ThaUnknown/universal-title-bar#readme",
@@ -8,8 +8,10 @@
   "dependents": 0,
   "updated": "2022-07-28T19:58:08.739Z",
   "tags": [
-    "ui"
+    "ui",
+    "dom"
   ],
   "svelte5": false,
-  "runes": false
+  "runes": false,
+  "github_stars": 6
 }

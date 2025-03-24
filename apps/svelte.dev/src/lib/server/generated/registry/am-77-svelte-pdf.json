@@ -1,6 +1,7 @@
 {
   "name": "@am-77/svelte-pdf",
-  "description": "View PDF documents within Svelte applications.",
+  "description": "Create PDF viewer component for Svelte applications.",
+  "repo_url": "",
   "author": "am-77",
   "downloads": 47,
   "dependents": 0,

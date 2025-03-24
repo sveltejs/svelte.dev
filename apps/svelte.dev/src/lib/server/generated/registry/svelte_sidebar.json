@@ -1,6 +1,6 @@
 {
   "name": "svelte_sidebar",
-  "description": "Create sidebar navigation component for Svelte apps.",
+  "description": "Create sidebar navigation for Svelte applications.",
   "repo_url": "https://github.com/philipp-tailor/svelte_sidebar",
   "author": "philipp-tailor",
   "homepage": "http://sidebar.schneiders.space",

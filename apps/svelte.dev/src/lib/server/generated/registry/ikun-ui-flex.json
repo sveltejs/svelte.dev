@@ -1,6 +1,7 @@
 {
   "name": "@ikun-ui/flex",
-  "description": "Create flexible layouts with Svelte components.",
+  "description": "Create flex layout components for Svelte.",
+  "repo_url": "",
   "author": "baiwusanyu",
   "downloads": 11,
   "dependents": 1,

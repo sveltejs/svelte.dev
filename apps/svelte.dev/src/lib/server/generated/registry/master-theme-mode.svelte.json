@@ -1,6 +1,6 @@
 {
   "name": "@master/theme-mode.svelte",
-  "description": "Switch CSS theme modes with this lightweight utility.",
+  "description": "Switch CSS theme modes, sync preferences, and avoid FOUC.",
   "repo_url": "https://github.com/master-co/theme-mode",
   "author": "Aoyue Design LLC.",
   "homepage": "https://css.master.co",

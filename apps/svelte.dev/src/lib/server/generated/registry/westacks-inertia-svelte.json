@@ -1,6 +1,6 @@
 {
   "name": "@westacks/inertia-svelte",
-  "description": "Svelte adapter for Inertia.js, facilitating server-side rendering.",
+  "description": "Integrate Inertia.js with Svelte applications.",
   "repo_url": "https://github.com/westacks/inertia-svelte",
   "author": "Dmytro Morozov",
   "homepage": "https://inertiajs.com/",

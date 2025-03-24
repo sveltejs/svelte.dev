@@ -1,6 +1,6 @@
 {
   "name": "use-valid-example",
-  "description": "Validate form inputs in Svelte applications.",
+  "description": "Validate forms in Svelte using example form.",
   "repo_url": "https://github.com/voscausa/use-validate-example",
   "author": "voscausa",
   "homepage": "https://github.com/voscausa/use-validate-example#readme",

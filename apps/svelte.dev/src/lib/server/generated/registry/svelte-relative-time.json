@@ -1,6 +1,6 @@
 {
   "name": "svelte-relative-time",
-  "description": "Creates auto-updating timeago timestamps for Svelte.",
+  "description": "Create auto-updating relative time timestamps for Svelte.",
   "repo_url": "https://github.com/captaincodeman/svelte-relative-time",
   "author": "Simon Green",
   "homepage": "https://captaincodeman.github.io/svelte-relative-time/",

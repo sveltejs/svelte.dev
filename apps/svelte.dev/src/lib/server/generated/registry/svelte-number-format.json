@@ -1,6 +1,7 @@
 {
   "name": "svelte-number-format",
-  "description": "Format numbers in Svelte input or text.",
+  "description": "Format numbers in Svelte input components.",
+  "repo_url": "",
   "author": "Pitiș Radu",
   "downloads": 9,
   "dependents": 0,

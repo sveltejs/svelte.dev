@@ -1,6 +1,6 @@
 {
   "name": "motion-kit",
-  "description": "Animation library for Svelte and SvelteKit.",
+  "description": "Create animations and transitions for Svelte.",
   "repo_url": "https://github.com/juanvillacortac/motion-kit",
   "author": "juanvillacortac",
   "downloads": 0,

@@ -1,6 +1,6 @@
 {
   "name": "svelte-actions-resize",
-  "description": "ResizeObserver action for Svelte 3.",
+  "description": "Use ResizeObserver action for Svelte components.",
   "repo_url": "https://github.com/Gennnji/svelte-actions-resize",
   "author": "Genji",
   "downloads": 6,

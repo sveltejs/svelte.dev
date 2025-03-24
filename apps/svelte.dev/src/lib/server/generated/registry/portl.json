@@ -1,6 +1,6 @@
 {
   "name": "portl",
-  "description": "Render content in different locations within Svelte applications.",
+  "description": "Render content in different locations using portals in Svelte 5.",
   "repo_url": "https://github.com/FalkZ/portl",
   "author": "FalkZ",
   "homepage": "https://github.com/FalkZ/portl#readme",
@@ -11,6 +11,6 @@
     "utility"
   ],
   "svelte5": true,
-  "runes": false,
+  "runes": true,
   "github_stars": 0
 }

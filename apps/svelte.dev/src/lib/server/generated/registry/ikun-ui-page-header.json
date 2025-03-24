@@ -1,6 +1,7 @@
 {
   "name": "@ikun-ui/page-header",
-  "description": "Build page header components for Svelte applications.",
+  "description": "Create page header UI components for Svelte.",
+  "repo_url": "",
   "author": "baiwusanyu",
   "downloads": 12,
   "dependents": 1,

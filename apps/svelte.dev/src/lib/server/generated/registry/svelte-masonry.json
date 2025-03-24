@@ -1,6 +1,6 @@
 {
   "name": "svelte-masonry",
-  "description": "Implement Masonry layout for Svelte, no external dependencies.",
+  "description": "Implement basic Masonry layout for Svelte.",
   "repo_url": "https://github.com/janzheng/svelte-masonry",
   "author": "Jan Zheng",
   "homepage": "https://github.com/janzheng/svelte-masonry#readme",

@@ -1,6 +1,6 @@
 {
   "name": "@sveltevk/qr",
-  "description": "Generate VK-style QR codes in Svelte.",
+  "description": "Generate VK-style QR codes with Svelte components.",
   "repo_url": "https://github.com/sveltevk/qr",
   "author": "Daniil Suvorov",
   "homepage": "https://github.com/sveltevk/qr",

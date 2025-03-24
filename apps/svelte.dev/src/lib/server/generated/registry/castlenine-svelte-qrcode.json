@@ -1,6 +1,6 @@
 {
   "name": "@castlenine/svelte-qrcode",
-  "description": "Generate QR codes as SVG images in Svelte and SvelteKit.",
+  "description": "Generate QR codes in Svelte with no dependencies.",
   "repo_url": "https://github.com/castlenine/svelte-qrcode",
   "author": "Alexandre Castlenine",
   "homepage": "https://github.com/castlenine/svelte-qrcode#readme",

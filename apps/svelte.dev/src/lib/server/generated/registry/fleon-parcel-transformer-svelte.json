@@ -1,6 +1,6 @@
 {
   "name": "@fleon/parcel-transformer-svelte",
-  "description": "Transform Svelte 3 code for Parcel 2 bundler.",
+  "description": "Transforms Svelte components for Parcel bundler.",
   "repo_url": "https://github.com/fleon/parcel-transformer-svelte",
   "author": "Vladislav Orlov",
   "homepage": "https://github.com/fleon/parcel-transformer-svelte#readme",
@@ -12,5 +12,6 @@
     "preprocessor"
   ],
   "svelte5": false,
-  "runes": false
+  "runes": false,
+  "github_stars": 0
 }

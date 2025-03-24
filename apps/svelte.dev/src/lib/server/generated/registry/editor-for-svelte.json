@@ -1,6 +1,6 @@
 {
   "name": "editor-for-svelte",
-  "description": "Create a simple, customizable code editor using Svelte.",
+  "description": "Create a simple code editor built with Svelte.",
   "repo_url": "https://github.com/CoderN-P/SvelteEditor",
   "author": "Neel Parpia",
   "homepage": "https://svelte-editor.neelp.tech",

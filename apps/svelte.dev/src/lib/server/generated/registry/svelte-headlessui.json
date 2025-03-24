@@ -1,6 +1,6 @@
 {
   "name": "svelte-headlessui",
-  "description": "Provides unstyled, accessible UI components for Svelte applications.",
+  "description": "Provides HeadlessUI components for Svelte.",
   "repo_url": "https://github.com/captaincodeman/svelte-headlessui",
   "author": "Simon Green",
   "homepage": "https://captaincodeman.github.io/svelte-headlessui/",
@@ -8,7 +8,6 @@
   "dependents": 8,
   "updated": "2025-01-26T18:04:32.872Z",
   "tags": [
-    "ui",
     "component-library"
   ],
   "svelte5": true,

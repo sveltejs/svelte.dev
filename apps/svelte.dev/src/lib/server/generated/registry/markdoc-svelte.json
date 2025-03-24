@@ -1,6 +1,6 @@
 {
   "name": "markdoc-svelte",
-  "description": "Preprocesses Markdoc files for use in SvelteKit.",
+  "description": "Preprocesses Markdoc files for use in SvelteKit sites.",
   "repo_url": "https://github.com/CollierCZ/markdoc-svelte",
   "author": "Aaron Collier",
   "homepage": "https://github.com/CollierCZ/markdoc-svelte#readme",

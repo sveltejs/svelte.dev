@@ -1,6 +1,6 @@
 {
   "name": "svelte5-tiny-virtual-list",
-  "description": "Implement tiny, virtualized lists for Svelte applications.",
+  "description": "Render large lists efficiently in Svelte.",
   "repo_url": "https://github.com/jonasgeiler/svelte-tiny-virtual-list",
   "author": "Jonas Geiler",
   "homepage": "https://github.com/TutorLatin/svelte-tiny-virtual-list/#readme",

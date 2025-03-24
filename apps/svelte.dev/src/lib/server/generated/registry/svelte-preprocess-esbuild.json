@@ -1,6 +1,6 @@
 {
   "name": "svelte-preprocess-esbuild",
-  "description": "Compiles TypeScript via esbuild for Svelte.",
+  "description": "Compile TypeScript code within Svelte components using esbuild.",
   "repo_url": "https://github.com/lukeed/svelte-preprocess-esbuild",
   "author": "Luke Edwards",
   "homepage": "https://github.com/lukeed/svelte-preprocess-esbuild#readme",
@@ -8,7 +8,7 @@
   "dependents": 1,
   "updated": "2022-08-28T04:02:38.971Z",
   "tags": [
-    "tooling"
+    "preprocessor"
   ],
   "svelte5": true,
   "runes": false,

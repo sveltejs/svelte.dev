@@ -1,6 +1,6 @@
 {
   "name": "jitsi-svelte",
-  "description": "Creates Svelte stores for lib-jitsi-meet, builds custom video apps.",
+  "description": "Provides Svelte stores for lib-jitsi-meet.",
   "repo_url": "https://github.com/relm-us/jitsi-svelte",
   "author": "Duane Johnson",
   "downloads": 1,

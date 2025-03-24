@@ -1,6 +1,6 @@
 {
   "name": "svelte-ethers-store",
-  "description": "Use Ethers.js library as Svelte stores.",
+  "description": "Provides Ethers.js library as Svelte stores.",
   "repo_url": "https://gitlab.com/clb1/svelte-ethers-store",
   "author": "Christophe Le Bars",
   "homepage": "https://gitlab.com/clb1/svelte-ethers-store#readme",

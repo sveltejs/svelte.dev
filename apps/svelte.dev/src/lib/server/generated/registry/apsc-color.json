@@ -1,6 +1,6 @@
 {
   "name": "@apsc/color",
-  "description": "Create color pickers and color editing components for Svelte.",
+  "description": "Offer Svelte components for picking, editing colors.",
   "repo_url": "https://github.com/andrey-pavlenko/svelte-components",
   "author": "Andrey Pavlenko",
   "homepage": "https://github.com/andrey-pavlenko/svelte-components/tree/main/packages/color#readme",

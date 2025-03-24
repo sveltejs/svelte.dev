@@ -1,6 +1,7 @@
 {
   "name": "@htmlbricks/hb-site-slideshow",
-  "description": "Creates slideshow web component.",
+  "description": "Provides Svelte-Bootstrap site-slideshow.",
+  "repo_url": "",
   "author": "Dario Caruso",
   "downloads": 257,
   "dependents": 0,

@@ -1,6 +1,6 @@
 {
   "name": "saos",
-  "description": "Animate elements on scroll in Svelte applications.",
+  "description": "Animate elements on scroll in Svelte.",
   "repo_url": "https://github.com/shiryel/saos",
   "author": "Shiryel",
   "homepage": "https://github.com/shiryel/saos#readme",

@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-svelte-albert",
-  "description": "Lint Svelte code using AST.",
+  "description": "Provides ESLint rules for Svelte code.",
   "repo_url": "https://github.com/sveltejs/eslint-plugin-svelte",
   "author": "Yosuke Ota",
   "homepage": "https://sveltejs.github.io/eslint-plugin-svelte",
@@ -11,6 +11,6 @@
     "tooling"
   ],
   "svelte5": true,
-  "runes": true,
+  "runes": false,
   "github_stars": 324
 }

@@ -1,6 +1,6 @@
 {
   "name": "svelte-show-action",
-  "description": "Conditionally show or hide elements in Svelte apps.",
+  "description": "Show/hide elements without destroying components in Svelte apps.",
   "repo_url": "https://github.com/ramonmalcolm10/svelte-show-action",
   "author": "Ramon Malcolm",
   "homepage": "https://github.com/ramonmalcolm10/svelte-show-action#readme",

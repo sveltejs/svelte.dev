@@ -1,6 +1,6 @@
 {
   "name": "svelte-lightbox",
-  "description": "Create image and video lightboxes for Svelte.",
+  "description": "Create customizable lightbox galleries for Svelte.",
   "repo_url": "https://github.com/Hejtmus/svelte-lightbox",
   "author": "Filip Holčík",
   "homepage": "https://svelte-lightbox.js.org",

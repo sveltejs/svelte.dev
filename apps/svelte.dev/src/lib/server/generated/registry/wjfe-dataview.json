@@ -1,6 +1,6 @@
 {
   "name": "@wjfe/dataview",
-  "description": "Create table components for examining extensive tabular data.",
+  "description": "Render table components for examining extensive tabular data in Svelte.",
   "repo_url": "https://github.com/WJSoftware/wjfe-dataview",
   "author": "José Pablo Ramírez Vargas",
   "homepage": "https://wjsoftware.github.io/wjfe-dataview/",

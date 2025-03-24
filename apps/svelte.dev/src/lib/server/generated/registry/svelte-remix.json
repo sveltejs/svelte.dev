@@ -1,6 +1,6 @@
 {
   "name": "svelte-remix",
-  "description": "Use Remix icon components in Svelte projects.",
+  "description": "Use Remix icon components in Svelte 5 and Runes projects.",
   "repo_url": "https://github.com/shinokada/svelte-remix",
   "author": "Shinichi Okada",
   "homepage": "https://svelte-remix.codewithshin.com/",

@@ -1,6 +1,6 @@
 {
   "name": "@sato0130/svelte-tooltip",
-  "description": "Create tooltip components using Svelte actions.",
+  "description": "Create lightweight tooltip components in Svelte.",
   "repo_url": "https://github.com/K-Sato1995/svelte-tooltip",
   "author": "K-Sato1995",
   "downloads": 1,

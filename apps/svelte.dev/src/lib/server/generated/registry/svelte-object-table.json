@@ -1,6 +1,7 @@
 {
   "name": "svelte-object-table",
-  "description": "Render data as table in Svelte applications.",
+  "description": "Render data as table in Svelte.",
+  "repo_url": "",
   "author": "Marc Bouvier",
   "downloads": 341,
   "dependents": 0,

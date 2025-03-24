@@ -1,6 +1,7 @@
 {
   "name": "@kws3/eslint-plugin-svelte3",
-  "description": "Provide Kws3 specific ESLint rules for Svelte 3.",
+  "description": "Provide ESLint rules for Svelte 3 projects.",
+  "repo_url": "",
   "author": "Khaled Ahmed",
   "downloads": 5,
   "dependents": 0,

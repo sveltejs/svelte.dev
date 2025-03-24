@@ -1,6 +1,6 @@
 {
   "name": "@unocss/svelte-scoped",
-  "description": "Use UnoCSS utility classes scoped to Svelte components.",
+  "description": "Apply UnoCSS utility classes scoped to Svelte components.",
   "repo_url": "https://github.com/unocss/unocss",
   "author": "Jacob Bowdoin",
   "homepage": "https://unocss.dev",
@@ -13,5 +13,5 @@
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 17380
+  "github_stars": 17382
 }

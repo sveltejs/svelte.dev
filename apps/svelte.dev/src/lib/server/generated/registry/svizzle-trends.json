@@ -1,6 +1,6 @@
 {
   "name": "@svizzle/trends",
-  "description": "Creates trend charts for Svelte, including stream and percentile graphs.",
+  "description": "Visualize trend data with Svelte components.",
   "repo_url": "https://github.com/nestauk/svizzle",
   "author": "nestauk",
   "homepage": "https://github.com/nestauk/svizzle",

@@ -1,15 +1,12 @@
 {
   "name": "sp-svelte-world-clock",
-  "description": "Create world clock component for Svelte apps.",
   "repo_url": "https://github.com/sp-sveltejs/sp-svelte-modal-menu",
   "author": "Kayode Bristol",
   "homepage": "https://github.com/sp-sveltejs/sp-svelte-modal-menu#readme",
   "downloads": 1,
   "dependents": 0,
   "updated": "2020-08-27T14:57:37.663Z",
-  "tags": [
-    "ui"
-  ],
+  "tags": [],
   "svelte5": false,
   "runes": false
 }

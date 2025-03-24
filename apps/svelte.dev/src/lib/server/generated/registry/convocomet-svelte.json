@@ -1,6 +1,6 @@
 {
   "name": "@convocomet/svelte",
-  "description": "Integrate ConvoComet commenting widget into Svelte apps.",
+  "description": "Embeds ConvoComet widget into Svelte websites.",
   "repo_url": "https://github.com/AsyncBanana/convocomet",
   "author": "Jacob Jackson",
   "homepage": "https://github.com/AsyncBanana/convocomet#readme",
@@ -8,7 +8,7 @@
   "dependents": 0,
   "updated": "2024-03-24T20:18:40.835Z",
   "tags": [
-    "integration"
+    "utility"
   ],
   "svelte5": false,
   "runes": false,

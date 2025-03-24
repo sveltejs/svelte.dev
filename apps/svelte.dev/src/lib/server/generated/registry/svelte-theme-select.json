@@ -1,6 +1,6 @@
 {
   "name": "svelte-theme-select",
-  "description": "Implement theme selection components for Svelte.",
+  "description": "Create theme selection components for Svelte apps.",
   "repo_url": "https://github.com/captaincodeman/svelte-theme-select",
   "author": "Simon Green",
   "homepage": "https://captaincodeman.github.io/svelte-theme-select/",

@@ -1,6 +1,7 @@
 {
   "name": "@cloudparker/easy-horizontal-scroller-svelte",
-  "description": "Implement horizontal scrolling with drag feature.",
+  "description": "Implements horizontal scrolling on web and mobile UIs.",
+  "repo_url": "",
   "author": "cloudparker.com",
   "downloads": 7,
   "dependents": 0,

@@ -1,6 +1,6 @@
 {
   "name": "another-svelte-data-grid",
-  "description": "Display and edit data with a high-performance Svelte data grid.",
+  "description": "Display and edit data using a virtualized Svelte data grid.",
   "repo_url": "https://github.com/millerlm012/another-svelte-data-grid",
   "author": "Landon Miller",
   "homepage": "https://github.com/Millerlm012/another-svelte-data-grid",

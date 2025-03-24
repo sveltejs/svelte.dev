@@ -1,6 +1,6 @@
 {
   "name": "sveltekit-i18n",
-  "description": "Provides internationalization for SvelteKit applications.",
+  "description": "Internationalize SvelteKit applications.",
   "repo_url": "https://github.com/sveltekit-i18n/lib",
   "author": "Jarda Svoboda",
   "homepage": "https://github.com/sveltekit-i18n/lib#readme",

@@ -1,6 +1,7 @@
 {
   "name": "@macfja/sveltekit-session",
   "description": "Manage sessions in SvelteKit applications.",
+  "repo_url": "",
   "author": "MacFJA",
   "homepage": "https://github.com/macfja/sveltekit-session#readme",
   "downloads": 0,

@@ -1,6 +1,6 @@
 {
   "name": "svelte-treeview-dnd",
-  "description": "Create JSON-based treeview components with drag-and-drop.",
+  "description": "Implement JSON-based treeview component with drag-and-drop.",
   "repo_url": "https://github.com/sytanta/svelte-treeview-dnd",
   "author": "sytanta",
   "homepage": "https://svelte-treeview-dnd.netlify.app",

@@ -1,6 +1,6 @@
 {
   "name": "@ardaqs/svelte-ui",
-  "description": "Svelte UI component library.",
+  "description": "Build UI component libraries for Svelte applications.",
   "repo_url": "https://github.com/ardaqs/svelte-ui",
   "author": "Ardak Saduakassov",
   "homepage": "https://github.com/ardaqs/svelte-ui#readme",

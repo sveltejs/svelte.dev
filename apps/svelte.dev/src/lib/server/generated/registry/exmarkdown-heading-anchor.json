@@ -1,6 +1,6 @@
 {
   "name": "exmarkdown-heading-anchor",
-  "description": "Add anchor links to headings in svelte-exmarkdown.",
+  "description": "Adds anchor links to headings in svelte-exmarkdown.",
   "repo_url": "https://github.com/jill64/exmarkdown-heading-anchor",
   "author": "jill64",
   "homepage": "https://github.com/jill64/exmarkdown-heading-anchor#readme",

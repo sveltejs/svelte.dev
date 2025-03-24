@@ -1,6 +1,6 @@
 {
   "name": "@doomd/components",
-  "description": "Provide reusable Svelte components for various UI needs.",
+  "description": "Provides reusable Svelte components.",
   "repo_url": "https://github.com/Doomd/doomd-components",
   "author": "Doomd",
   "homepage": "https://github.com/Doomd/doomd-components#readme",

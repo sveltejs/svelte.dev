@@ -1,6 +1,6 @@
 {
   "name": "svelte-signals",
-  "description": "Wrap Svelte runes with functions for reactive state management.",
+  "description": "Create reactive state and derived values with Svelte runes.",
   "repo_url": "https://github.com/abdel-17/svelte-signals",
   "author": "abdel-17",
   "homepage": "https://github.com/abdel-17/svelte-signals#readme",
@@ -11,6 +11,6 @@
     "utility"
   ],
   "svelte5": true,
-  "runes": false,
+  "runes": true,
   "github_stars": 0
 }

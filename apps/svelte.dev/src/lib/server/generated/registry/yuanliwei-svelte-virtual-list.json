@@ -1,6 +1,6 @@
 {
   "name": "@yuanliwei/svelte-virtual-list",
-  "description": "Create virtual list component for Svelte.",
+  "description": "Create virtual lists for Svelte, handling large datasets.",
   "repo_url": "https://github.com/yuanliwei/svelte-virtual-list",
   "author": "yuanliwei",
   "homepage": "https://github.com/yuanliwei/svelte-virtual-list",
@@ -8,6 +8,7 @@
   "dependents": 0,
   "updated": "2023-11-22T09:36:48.016Z",
   "tags": [
+    "utility",
     "ui"
   ],
   "svelte5": true,

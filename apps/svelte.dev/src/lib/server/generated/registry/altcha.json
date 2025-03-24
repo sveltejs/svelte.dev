@@ -1,6 +1,6 @@
 {
   "name": "altcha",
-  "description": "Implement GDPR-compliant CAPTCHA alternative for Svelte apps.",
+  "description": "Implement GDPR compliant, self-hosted CAPTCHA alternative.",
   "repo_url": "https://github.com/altcha-org/altcha",
   "author": "Daniel Regeci",
   "homepage": "https://altcha.org",
@@ -12,5 +12,5 @@
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 729
+  "github_stars": 730
 }

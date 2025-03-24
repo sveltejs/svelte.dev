@@ -1,6 +1,6 @@
 {
   "name": "@healthtree/svelte-epic-form",
-  "description": "Create reactive Svelte forms with validation and conditional display.",
+  "description": "Create reactive forms with validation in Svelte.",
   "repo_url": "https://github.com/HealthTree/svelte-epic-form",
   "author": "sahagun-jorge",
   "homepage": "https://github.com/HealthTree/svelte-epic-form#readme",

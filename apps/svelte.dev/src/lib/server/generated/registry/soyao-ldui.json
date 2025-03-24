@@ -1,12 +1,13 @@
 {
   "name": "@soyao/ldui",
-  "description": "Develop UI components for Svelte applications.",
+  "description": "Develop UI components with Svelte and TypeScript in Vite.",
+  "repo_url": "",
   "author": "soyao",
   "downloads": 2,
   "dependents": 0,
   "updated": "2022-01-19T01:45:10.548Z",
   "tags": [
-    "component-library"
+    "ui"
   ],
   "svelte5": false,
   "runes": false

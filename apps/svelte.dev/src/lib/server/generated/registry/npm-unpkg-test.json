@@ -1,15 +1,12 @@
 {
   "name": "npm-unpkg-test",
-  "description": "Generate dynamic forms for Svelte/Sapper applications.",
   "repo_url": "https://github.com/arabdevelop/svelte-formly",
   "author": "arabedevelop",
   "homepage": "https://github.com/arabdevelop/svelte-formly#readme",
   "downloads": 6,
   "dependents": 0,
   "updated": "2019-12-03T20:47:23.277Z",
-  "tags": [
-    "utility"
-  ],
+  "tags": [],
   "svelte5": false,
   "runes": false,
   "github_stars": 254

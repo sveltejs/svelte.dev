@@ -1,6 +1,7 @@
 {
   "name": "@htmlbricks/hb-form",
-  "description": "Create text input web components for Svelte applications.",
+  "description": "Svelte-Bootstrap form component.",
+  "repo_url": "",
   "author": "Dario Caruso",
   "downloads": 473,
   "dependents": 11,

@@ -1,6 +1,6 @@
 {
   "name": "sveditor",
-  "description": "Simple code editor component for Svelte with syntax highlighting support.",
+  "description": "Simple code editor component for Svelte with syntax highlighting.",
   "repo_url": "https://github.com/jorge-brito/sveditor",
   "author": "jorge-pereira",
   "homepage": "https://github.com/jorge-brito/sveditor#readme",

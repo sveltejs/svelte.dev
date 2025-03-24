@@ -1,6 +1,6 @@
 {
   "name": "utilcomps",
-  "description": "Provide utilitarian component library for Svelte.",
+  "description": "Offers utilitarian Svelte components for various UI needs.",
   "repo_url": "https://github.com/albingroen/utilcomps",
   "author": "Albin Groen",
   "homepage": "https://utilcomps.vercel.app/",

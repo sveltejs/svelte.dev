@@ -1,6 +1,6 @@
 {
   "name": "rutynka-svelte-app",
-  "description": "Create quiz app with helpers for Svelte.",
+  "description": "Create quiz app with Wikipedia API data for Svelte.",
   "repo_url": "https://github.com/rutynka/routine-svelte-quiz",
   "author": "ru7ynk4",
   "homepage": "https://github.com/rutynka/routine-svelte-quiz",
@@ -8,6 +8,7 @@
   "dependents": 0,
   "updated": "2022-02-15T10:51:54.857Z",
   "tags": [
+    "content",
     "utility"
   ],
   "svelte5": false,

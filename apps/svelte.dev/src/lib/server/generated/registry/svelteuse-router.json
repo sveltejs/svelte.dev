@@ -1,6 +1,6 @@
 {
   "name": "@svelteuse/router",
-  "description": "Provide useful Svelte router helper.",
+  "description": "Provides useful router helpers for Svelte applications.",
   "repo_url": "https://github.com/svelteuse/router",
   "author": "Alexander Niebuhr",
   "homepage": "https://github.com/svelteuse/router#readme",

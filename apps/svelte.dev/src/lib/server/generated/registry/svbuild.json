@@ -1,6 +1,6 @@
 {
   "name": "svbuild",
-  "description": "Build Svelte files without bundling, useful for specific environments.",
+  "description": "Build Svelte files without bundling.",
   "repo_url": "https://github.com/wheezard/svbuild",
   "author": "wheezard",
   "homepage": "https://github.com/wheezard/svbuild#readme",

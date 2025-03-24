@@ -1,6 +1,6 @@
 {
   "name": "svelte-baseui-icons",
-  "description": "Use Uber Base UI SVG icons as Svelte components.",
+  "description": "Use Uber Base UI SVG icons in Svelte components.",
   "repo_url": "https://github.com/metonym/svelte-baseui-icons",
   "author": "Eric Liu",
   "homepage": "https://github.com/metonym/svelte-baseui-icons",

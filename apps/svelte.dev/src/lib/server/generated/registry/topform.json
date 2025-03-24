@@ -1,6 +1,6 @@
 {
   "name": "topform",
-  "description": "Generate forms for SvelteKit applications.",
+  "description": "Generate forms easily with consistent HTML standard in SvelteKit.",
   "repo_url": "https://github.com/tguelcan/topform",
   "author": "Tayfun Guelcan",
   "homepage": "https://github.com/tguelcan/topform#readme",

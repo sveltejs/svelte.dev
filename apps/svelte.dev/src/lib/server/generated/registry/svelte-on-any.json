@@ -1,6 +1,6 @@
 {
   "name": "svelte-on-any",
-  "description": "Forward all DOM events in Svelte components.",
+  "description": "Preprocessor for forwarding all DOM events in Svelte.",
   "repo_url": "https://github.com/matyunya/svelte-on-any",
   "author": "Maxim Matyunin",
   "homepage": "https://github.com/matyunya/svelte-on-any#readme",

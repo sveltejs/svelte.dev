@@ -1,6 +1,7 @@
 {
   "name": "svelte-theme-switcher",
-  "description": "Switch Svelte themes with a simple component.",
+  "description": "Switch themes in Svelte applications.",
+  "repo_url": "",
   "author": "dev-warner",
   "downloads": 2,
   "dependents": 0,

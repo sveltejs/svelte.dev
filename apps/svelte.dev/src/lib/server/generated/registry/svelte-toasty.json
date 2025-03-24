@@ -1,6 +1,7 @@
 {
   "name": "svelte-toasty",
-  "description": "Configurable toast notification component for Svelte.",
+  "description": "Configure toast notification component for Svelte.",
+  "repo_url": "",
   "author": "tiaanduplessis",
   "downloads": 17,
   "dependents": 0,

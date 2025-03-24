@@ -1,6 +1,7 @@
 {
   "name": "svelte-tawk-to-chat-widget",
   "description": "Integrate Tawk.to chat widget into Svelte applications.",
+  "repo_url": "",
   "author": "hellpirat",
   "downloads": 2,
   "dependents": 1,

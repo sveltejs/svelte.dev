@@ -1,6 +1,7 @@
 {
   "name": "@htmlbricks/formrenderer-component",
   "description": "Render forms with Svelte web components.",
+  "repo_url": "",
   "author": "Dario Caruso",
   "downloads": 1,
   "dependents": 0,

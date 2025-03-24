@@ -1,6 +1,7 @@
 {
   "name": "svelte-component-library-template",
-  "description": "Create Svelte component library template.",
+  "description": "Generate Svelte component library template.",
+  "repo_url": "",
   "author": "tant2012",
   "downloads": 0,
   "dependents": 0,

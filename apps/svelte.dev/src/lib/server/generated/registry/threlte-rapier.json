@@ -1,6 +1,6 @@
 {
   "name": "@threlte/rapier",
-  "description": "Integrate Rapier physics engine with Threlte for 3D apps.",
+  "description": "Integrate Rapier physics engine into Threlte for Svelte.",
   "repo_url": "https://github.com/threlte/threlte",
   "author": "Grischa Erbe",
   "homepage": "https://threlte.xyz",
@@ -12,5 +12,5 @@
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 2815
+  "github_stars": 2819
 }

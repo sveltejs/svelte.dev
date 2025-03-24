@@ -1,6 +1,6 @@
 {
   "name": "@panta/svelte-router",
-  "description": "Svelte router based on alshdavid/crayon.",
+  "description": "Create router for Svelte applications.",
   "repo_url": "https://github.com/panta/svelte-router",
   "author": "Marco Pantaleoni",
   "homepage": "https://github.com/panta/svelte-router#readme",

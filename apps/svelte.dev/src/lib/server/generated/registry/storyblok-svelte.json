@@ -1,6 +1,6 @@
 {
   "name": "@storyblok/svelte",
-  "description": "Integrate Storyblok CMS with Svelte applications.",
+  "description": "Connect Storyblok with Svelte and enable real-time editing.",
   "repo_url": "https://github.com/storyblok/storyblok-svelte",
   "author": "Josefine Schaefer",
   "homepage": "https://github.com/storyblok/storyblok-svelte",
@@ -8,8 +8,7 @@
   "dependents": 2,
   "updated": "2025-01-03T15:41:32.037Z",
   "tags": [
-    "content",
-    "integration"
+    "content"
   ],
   "svelte5": false,
   "runes": false,

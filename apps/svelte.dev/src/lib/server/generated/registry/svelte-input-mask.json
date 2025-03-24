@@ -1,6 +1,7 @@
 {
   "name": "svelte-input-mask",
-  "description": "Mask input component for Svelte.",
+  "description": "Create masked input fields for Svelte.",
+  "repo_url": "",
   "author": "Nik Mostovoy",
   "downloads": 1112,
   "dependents": 2,

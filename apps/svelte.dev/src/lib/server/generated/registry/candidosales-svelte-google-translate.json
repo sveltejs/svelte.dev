@@ -1,6 +1,6 @@
 {
   "name": "@candidosales/svelte-google-translate",
-  "description": "Integrate Google Translate component into Svelte applications.",
+  "description": "Integrate Google Translate component into Svelte apps.",
   "repo_url": "https://github.com/candidosales/svelte-google-translate",
   "author": "Candido Sales Gomes",
   "homepage": "https://github.com/candidosales/svelte-google-translate#readme",

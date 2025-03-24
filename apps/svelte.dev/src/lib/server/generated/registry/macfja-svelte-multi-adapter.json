@@ -1,6 +1,6 @@
 {
   "name": "@macfja/svelte-multi-adapter",
-  "description": "Launch multiple Svelte adapters.",
+  "description": "Svelte adapter that launches other adapters.",
   "repo_url": "https://github.com/macfja/svelte-adapter-multi",
   "author": "MacFJA",
   "homepage": "https://github.com/macfja/svelte-adapter-multi#readme",

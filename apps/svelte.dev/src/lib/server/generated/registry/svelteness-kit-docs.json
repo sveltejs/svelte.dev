@@ -1,6 +1,6 @@
 {
   "name": "@svelteness/kit-docs",
-  "description": "Integrate documentation into SvelteKit projects.",
+  "description": "Integrates documentation into SvelteKit projects.",
   "repo_url": "https://github.com/svelteness/kit-docs",
   "author": "mihar-22",
   "downloads": 54,

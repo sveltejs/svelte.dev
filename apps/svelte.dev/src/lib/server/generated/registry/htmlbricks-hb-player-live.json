@@ -1,6 +1,7 @@
 {
   "name": "@htmlbricks/hb-player-live",
-  "description": "Provides web component for creating live player in Svelte.",
+  "description": "Svelte-Bootstrap live player component.",
+  "repo_url": "",
   "author": "Dario Caruso",
   "downloads": 441,
   "dependents": 3,

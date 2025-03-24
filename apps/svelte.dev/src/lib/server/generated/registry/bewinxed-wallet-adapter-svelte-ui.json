@@ -1,6 +1,6 @@
 {
   "name": "@bewinxed/wallet-adapter-svelte-ui",
-  "description": "Provide wallet adapter UI for Svelte 5.",
+  "description": "Provide UI components for Solana wallet adapter in Svelte.",
   "repo_url": "https://github.com/bewinxed/wallet-adapter-svelte-ui",
   "author": "bewinxed",
   "homepage": "https://github.com/bewinxed/wallet-adapter-svelte-ui#readme",
@@ -8,7 +8,8 @@
   "dependents": 0,
   "updated": "2024-08-27T19:09:03.201Z",
   "tags": [
-    "ui"
+    "ui",
+    "integration"
   ],
   "svelte5": true,
   "runes": false,

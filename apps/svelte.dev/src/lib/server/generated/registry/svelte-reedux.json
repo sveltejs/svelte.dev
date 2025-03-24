@@ -1,6 +1,6 @@
 {
   "name": "svelte-reedux",
-  "description": "Connect Redux to Svelte applications using hooks.",
+  "description": "Connect Redux store to Svelte components using hooks.",
   "repo_url": "https://github.com/icarus-sullivan/svelte-redux",
   "author": "Chris Sullivan",
   "downloads": 2,

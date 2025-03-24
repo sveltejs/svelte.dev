@@ -1,6 +1,6 @@
 {
   "name": "svelte-tauri-filedrop",
-  "description": "Handle file drops in Svelte Tauri applications.",
+  "description": "Handles file drop events in Svelte Tauri applications.",
   "repo_url": "https://github.com/probablykasper/svelte-tauri-filedrop",
   "author": "Kasper Henningsen",
   "homepage": "https://github.com/probablykasper/svelte-tauri-filedrop#readme",

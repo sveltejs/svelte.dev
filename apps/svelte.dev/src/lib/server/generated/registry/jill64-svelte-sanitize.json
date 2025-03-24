@@ -1,6 +1,6 @@
 {
   "name": "@jill64/svelte-sanitize",
-  "description": "Provides safe HTML expansion for Svelte.",
+  "description": "Sanitize HTML content within Svelte components.",
   "repo_url": "https://github.com/jill64/svelte-sanitize",
   "author": "jill64",
   "homepage": "https://github.com/jill64/svelte-sanitize#readme",

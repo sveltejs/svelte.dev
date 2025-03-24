@@ -1,6 +1,6 @@
 {
   "name": "svelte-iconoir",
-  "description": "Provides Iconoir SVG icons as Svelte components.",
+  "description": "Use Iconoir SVG icons as Svelte components.",
   "repo_url": "https://github.com/metonym/svelte-iconoir",
   "author": "Eric Liu",
   "homepage": "https://github.com/metonym/svelte-iconoir",

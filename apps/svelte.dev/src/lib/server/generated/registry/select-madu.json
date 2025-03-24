@@ -1,6 +1,6 @@
 {
   "name": "select-madu",
-  "description": "Create customizable select menus with search and multi-select.",
+  "description": "Create select menu with search, multi-select, and async loading.",
   "repo_url": "https://github.com/pavish/select-madu",
   "author": "Pavish Kumar Ramani Gopal",
   "homepage": "https://github.com/pavish/select-madu#readme",

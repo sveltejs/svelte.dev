@@ -1,12 +1,14 @@
 {
   "name": "@cadev70/onepiece",
-  "description": "Build Svelte UI library.",
+  "description": "Create Svelte UI library with various components.",
+  "repo_url": "",
   "author": "cadev70",
   "downloads": 13,
   "dependents": 0,
   "updated": "2023-05-04T20:01:41.379Z",
   "tags": [
-    "ui"
+    "ui",
+    "component-library"
   ],
   "svelte5": false,
   "runes": false

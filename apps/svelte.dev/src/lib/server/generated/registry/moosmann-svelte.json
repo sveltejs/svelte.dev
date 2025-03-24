@@ -1,6 +1,6 @@
 {
   "name": "moosmann-svelte",
-  "description": "Integrate moosmann for Svelte, simple system for localization.",
+  "description": "Integrate moosmann for i18n into Svelte projects.",
   "repo_url": "https://github.com/Niphram/moosmann",
   "author": "Niphram",
   "homepage": "https://github.com/Niphram/moosmann#readme",
@@ -8,8 +8,7 @@
   "dependents": 0,
   "updated": "2025-01-18T15:40:18.348Z",
   "tags": [
-    "utility",
-    "integration"
+    "utility"
   ],
   "svelte5": true,
   "runes": false,

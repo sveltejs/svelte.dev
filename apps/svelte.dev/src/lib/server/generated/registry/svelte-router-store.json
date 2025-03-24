@@ -1,12 +1,14 @@
 {
   "name": "svelte-router-store",
   "description": "Router for SPAs using Svelte stores.",
+  "repo_url": "",
   "author": "digital-daniel",
   "downloads": 0,
   "dependents": 1,
   "updated": "2022-12-27T13:48:48.114Z",
   "tags": [
-    "router"
+    "router",
+    "utility"
   ],
   "svelte5": false,
   "runes": false

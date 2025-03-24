@@ -1,6 +1,6 @@
 {
   "name": "@proicons/svelte",
-  "description": "Provides ProIcons icon library as Svelte components.",
+  "description": "Use ProIcons icon library as Svelte components.",
   "repo_url": "https://github.com/ProCode-Software/proicons",
   "author": "ProCode Software",
   "homepage": "https://github.com/ProCode-Software/proicons/tree/main/packages/proicons-svelte",

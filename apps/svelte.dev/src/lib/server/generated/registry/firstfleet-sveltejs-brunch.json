@@ -12,5 +12,6 @@
     "preprocessor"
   ],
   "svelte5": false,
-  "runes": false
+  "runes": false,
+  "github_stars": 1
 }

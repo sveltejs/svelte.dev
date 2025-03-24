@@ -1,6 +1,6 @@
 {
   "name": "immer-loves-svelte",
-  "description": "Create immutable Svelte stores using Immer.js.",
+  "description": "Provides functional lenses over Svelte stores using Immer.js.",
   "repo_url": "https://github.com/bradphelan/immer.loves.svelte",
   "author": "bradphelan",
   "homepage": "https://github.com/bradphelan/immer.loves.svelte#readme",

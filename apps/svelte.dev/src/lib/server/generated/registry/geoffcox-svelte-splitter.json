@@ -1,6 +1,7 @@
 {
   "name": "@geoffcox/svelte-splitter",
-  "description": "Create resizable split panels using CSS grid.",
+  "description": "Resizable splitter for Svelte, uses CSS grid for simple resizing.",
+  "repo_url": "",
   "author": "Geoff Cox",
   "homepage": "https://github.com/GeoffCox/svelte-splitter/blob/main/package/README.md",
   "downloads": 87,

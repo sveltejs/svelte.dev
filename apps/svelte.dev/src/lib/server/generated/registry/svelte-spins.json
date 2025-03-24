@@ -1,6 +1,7 @@
 {
   "name": "svelte-spins",
-  "description": "Use loaders.css spinners as Svelte components.",
+  "description": "Provides loaders.css spinners as Svelte components.",
+  "repo_url": "",
   "author": "ksmarty",
   "downloads": 52,
   "dependents": 0,

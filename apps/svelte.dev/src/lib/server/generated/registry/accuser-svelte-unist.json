@@ -1,6 +1,6 @@
 {
   "name": "@accuser/svelte-unist",
-  "description": "Transform Unist syntax trees into Svelte components.",
+  "description": "Transforms Unist to Svelte components.",
   "repo_url": "https://github.com/accuser/svelte-unist",
   "author": "Matthew Gibbons",
   "homepage": "https://github.com/accuser/svelte-unist",

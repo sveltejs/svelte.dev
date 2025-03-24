@@ -1,6 +1,7 @@
 {
   "name": "formsvelte",
-  "description": "Complete form solution for Svelte with validation and error handling.",
+  "description": "Provides complete form solution with validation for Svelte.",
+  "repo_url": "",
   "author": "Zach Posten",
   "downloads": 0,
   "dependents": 0,

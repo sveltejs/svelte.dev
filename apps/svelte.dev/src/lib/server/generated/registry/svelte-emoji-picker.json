@@ -1,6 +1,7 @@
 {
   "name": "svelte-emoji-picker",
-  "description": "Integrate emoji picker component for Svelte.",
+  "description": "Simple emoji picker component for Svelte applications.",
+  "repo_url": "",
   "author": "ehne",
   "downloads": 151,
   "dependents": 0,

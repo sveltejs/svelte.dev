@@ -1,6 +1,6 @@
 {
   "name": "svelte-log-view",
-  "description": "Svelte component display log content.",
+  "description": "Svelte log viewer component.",
   "repo_url": "https://github.com/arlac77/svelte-log-view",
   "author": "arlac77",
   "homepage": "https://github.com/arlac77/svelte-log-view#readme",
@@ -8,7 +8,8 @@
   "dependents": 2,
   "updated": "2025-03-12T12:37:58.537Z",
   "tags": [
-    "ui"
+    "ui",
+    "utility"
   ],
   "svelte5": true,
   "runes": false,

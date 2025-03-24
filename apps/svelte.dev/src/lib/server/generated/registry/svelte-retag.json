@@ -1,6 +1,6 @@
 {
   "name": "svelte-retag",
-  "description": "Wraps Svelte components as custom elements with light DOM support.",
+  "description": "Wrap Svelte components as custom elements with light DOM.",
   "repo_url": "https://github.com/patricknelson/svelte-retag",
   "author": "Patrick Nelson",
   "homepage": "https://github.com/patricknelson/svelte-retag#readme",

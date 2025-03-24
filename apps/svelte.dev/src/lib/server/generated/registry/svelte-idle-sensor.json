@@ -1,6 +1,6 @@
 {
   "name": "svelte-idle-sensor",
-  "description": "Detect user idleness, manage session timeouts in Svelte apps.",
+  "description": "Detect user idleness and manage inactivity in Svelte applications.",
   "repo_url": "https://github.com/AyloSrd/svelte-idle-sensor",
   "author": "AyloSrd",
   "homepage": "https://github.com/AyloSrd/svelte-idle-sensor#readme",

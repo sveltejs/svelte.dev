@@ -1,6 +1,7 @@
 {
   "name": "@calasanmarko/svelte-loading-animation",
-  "description": "Create loading animations for Svelte applications.",
+  "description": "Collection of loading animation components for Svelte.",
+  "repo_url": "",
   "author": "gayuh tri satria",
   "downloads": 2,
   "dependents": 0,

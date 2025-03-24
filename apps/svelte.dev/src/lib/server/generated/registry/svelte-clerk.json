@@ -1,6 +1,6 @@
 {
   "name": "svelte-clerk",
-  "description": "Integrate Clerk authentication with SvelteKit applications.",
+  "description": "Integrate Clerk authentication with SvelteKit apps.",
   "repo_url": "https://github.com/wobsoriano/svelte-clerk",
   "author": "wobsoriano",
   "homepage": "https://github.com/wobsoriano/svelte-clerk#readme",

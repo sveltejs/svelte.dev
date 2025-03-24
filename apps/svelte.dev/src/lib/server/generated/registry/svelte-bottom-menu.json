@@ -1,6 +1,7 @@
 {
   "name": "svelte-bottom-menu",
-  "description": "Create bottom navigation menus for Svelte applications.",
+  "description": "Create bottom menu components for Svelte apps.",
+  "repo_url": "",
   "author": "kuanyu0729",
   "downloads": 2,
   "dependents": 0,

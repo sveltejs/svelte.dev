@@ -1,6 +1,6 @@
 {
   "name": "sotion",
-  "description": "Use Notion as CMS for Svelte projects, rendering content easily.",
+  "description": "Uses Notion as a CMS for Svelte projects.",
   "repo_url": "https://github.com/noahsalvi/sotion",
   "author": "Noah Salvi",
   "homepage": "https://github.com/noahsalvi/sotion#readme",

@@ -1,6 +1,7 @@
 {
   "name": "@htmlbricks/formrenderer-checkboxinput",
-  "description": "Svelte-Bootstrap checkbox input web component.",
+  "description": "Create checkbox input web components for Svelte.",
+  "repo_url": "",
   "author": "Dario Caruso",
   "downloads": 1,
   "dependents": 0,

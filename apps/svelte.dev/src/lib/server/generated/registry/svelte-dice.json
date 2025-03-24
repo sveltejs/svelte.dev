@@ -1,12 +1,12 @@
 {
   "name": "svelte-dice",
-  "description": "Provide simple d6 dice and table implementation for Svelte.",
+  "description": "Implement simple d6 dice rolling and table functionality.",
+  "repo_url": "",
   "author": "colinbate",
   "downloads": 0,
   "dependents": 0,
   "updated": "2021-10-25T00:43:49.374Z",
   "tags": [
-    "ui",
     "utility"
   ],
   "svelte5": false,

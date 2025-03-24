@@ -1,14 +1,11 @@
 {
   "name": "@svuick/time",
-  "description": "Provide time and date utilities for SvelteKit.",
   "repo_url": "https://gitlab.com/david-plugge/svuick",
   "author": "davidplugge",
   "downloads": 2,
   "dependents": 0,
   "updated": "2022-02-03T11:39:44.243Z",
-  "tags": [
-    "utility"
-  ],
+  "tags": [],
   "svelte5": false,
   "runes": false
 }

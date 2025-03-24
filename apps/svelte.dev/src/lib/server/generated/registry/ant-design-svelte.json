@@ -8,9 +8,9 @@
   "dependents": 0,
   "updated": "2019-07-19T03:41:12.923Z",
   "tags": [
-    "component-library",
-    "ui"
+    "component-library"
   ],
   "svelte5": false,
-  "runes": false
+  "runes": false,
+  "github_stars": 98
 }

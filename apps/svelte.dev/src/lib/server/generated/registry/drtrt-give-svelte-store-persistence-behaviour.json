@@ -1,6 +1,6 @@
 {
   "name": "@drtrt/give-svelte-store-persistence-behaviour",
-  "description": "Add browser storage persistence to Svelte store instances.",
+  "description": "Add browser storage persistence to Svelte stores.",
   "repo_url": "https://github.com/drtrt-org/give-svelte-store-persistence-behaviour",
   "author": "drtrt-org",
   "homepage": "https://github.com/drtrt-org/give-svelte-store-persistence-behaviour#readme",

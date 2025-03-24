@@ -1,12 +1,13 @@
 {
   "name": "peachy-booking-flow",
-  "description": "Provides a booking flow widget for Svelte applications.",
+  "description": "Booking flow widget built with Svelte web components.",
+  "repo_url": "",
   "author": "sam.chung.peachy",
-  "downloads": 86,
+  "downloads": 392,
   "dependents": 0,
   "updated": "2025-03-03T00:38:38.078Z",
   "tags": [
-    "component-library"
+    "integration"
   ],
   "svelte5": false,
   "runes": false

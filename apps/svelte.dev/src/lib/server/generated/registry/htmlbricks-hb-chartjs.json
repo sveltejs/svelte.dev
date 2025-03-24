@@ -1,6 +1,7 @@
 {
   "name": "@htmlbricks/hb-chartjs",
-  "description": "Create chartjs web component for Svelte apps.",
+  "description": "Svelte-Bootstrap chartjs.",
+  "repo_url": "",
   "author": "Dario Caruso",
   "downloads": 472,
   "dependents": 2,

@@ -1,6 +1,6 @@
 {
   "name": "felte",
-  "description": "Extensible form library for Svelte applications.",
+  "description": "Extensible form library for Svelte.",
   "repo_url": "https://github.com/pablo-abc/felte",
   "author": "Pablo Berganza",
   "homepage": "https://felte.dev",

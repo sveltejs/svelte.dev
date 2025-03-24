@@ -1,6 +1,7 @@
 {
   "name": "svelte-in-element",
-  "description": "Render Svelte components in arbitrary DOM elements.",
+  "description": "Render Svelte component parts within arbitrary DOM elements.",
+  "repo_url": "",
   "author": "Ten Bitcomb",
   "homepage": "https://github.com/ravenstine/svelte-in-element",
   "downloads": 1,

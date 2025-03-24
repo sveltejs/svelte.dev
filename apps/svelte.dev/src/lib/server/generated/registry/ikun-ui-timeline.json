@@ -1,6 +1,7 @@
 {
   "name": "@ikun-ui/timeline",
-  "description": "Create timeline component for Svelte applications.",
+  "description": "Create timeline components for Svelte applications.",
+  "repo_url": "",
   "author": "baiwusanyu",
   "downloads": 8,
   "dependents": 1,

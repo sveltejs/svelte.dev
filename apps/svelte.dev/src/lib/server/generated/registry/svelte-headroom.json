@@ -1,6 +1,6 @@
 {
   "name": "svelte-headroom",
-  "description": "Create headroom component for Svelte apps.",
+  "description": "Create a headroom component for Svelte.",
   "repo_url": "https://github.com/collardeau/svelte-headroom",
   "author": "Thomas Collardeau",
   "homepage": "https://github.com/collardeau/svelte-headroom#readme",

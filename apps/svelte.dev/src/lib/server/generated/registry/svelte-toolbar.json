@@ -1,6 +1,7 @@
 {
   "name": "svelte-toolbar",
-  "description": "Create toolbar menus for Svelte applications.",
+  "description": "Create toolbar menu for Svelte applications.",
+  "repo_url": "",
   "author": "emnudge",
   "downloads": 2,
   "dependents": 0,

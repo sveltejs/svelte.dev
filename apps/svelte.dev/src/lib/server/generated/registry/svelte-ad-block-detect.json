@@ -1,6 +1,7 @@
 {
   "name": "svelte-ad-block-detect",
   "description": "Detect ad blockers within Svelte applications.",
+  "repo_url": "",
   "author": "Md. Atiqzaman Soikat",
   "downloads": 2,
   "dependents": 0,

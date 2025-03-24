@@ -8,7 +8,8 @@
   "dependents": 1,
   "updated": "2021-03-18T09:15:42.653Z",
   "tags": [
-    "media"
+    "media",
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

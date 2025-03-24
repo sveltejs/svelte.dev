@@ -1,6 +1,7 @@
 {
   "name": "svelte-tick-timer",
-  "description": "Create timers and schedule events in Svelte applications.",
+  "description": "Create timers for Svelte applications.",
+  "repo_url": "",
   "author": "7korobi",
   "homepage": "https://github.com/7korobi/svelte-tick-timer/blob/main/src/lib/",
   "downloads": 0,

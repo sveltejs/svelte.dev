@@ -1,6 +1,6 @@
 {
   "name": "svelte-kit-inspector",
-  "description": "Inspect SvelteKit components in browser, jump to local IDE.",
+  "description": "Jump to local IDE source code from browser elements.",
   "repo_url": "https://github.com/baiwusanyu-c/svelte-kit-inspector",
   "author": "baiwusanyu-c",
   "homepage": "https://github.com/baiwusanyu-c",

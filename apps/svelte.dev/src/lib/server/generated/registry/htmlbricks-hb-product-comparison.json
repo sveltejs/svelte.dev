@@ -1,6 +1,7 @@
 {
   "name": "@htmlbricks/hb-product-comparison",
-  "description": "Create Svelte Product Comparison WebComponent.",
+  "description": "Create Svelte Boostrap Product Comparison WebComponent.",
+  "repo_url": "",
   "author": "Dario Caruso",
   "downloads": 446,
   "dependents": 2,

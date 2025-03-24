@@ -1,6 +1,6 @@
 {
   "name": "svelte-showdown",
-  "description": "Integrate Showdown Markdown parser into Svelte components.",
+  "description": "Parse Markdown content within Svelte components.",
   "repo_url": "https://github.com/dragomano/svelte-showdown",
   "author": "Bugo",
   "homepage": "https://github.com/dragomano/svelte-showdown",

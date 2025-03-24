@@ -1,6 +1,7 @@
 {
   "name": "svelte-q",
-  "description": "Fetch data with built-in caching and SSR support for Svelte apps.",
+  "description": "Fetch data with Svelte, built-in cache and request deduplication.",
+  "repo_url": "",
   "author": "maxam2017",
   "downloads": 1,
   "dependents": 0,

@@ -1,6 +1,6 @@
 {
   "name": "svelte-droplet",
-  "description": "Creates file dropzone for Svelte, enabling file uploads.",
+  "description": "Create file dropzone for Svelte applications.",
   "repo_url": "https://github.com/probablykasper/svelte-droplet",
   "author": "Kasper Henningsen",
   "homepage": "https://svelte-droplet.kasper.space",
@@ -8,7 +8,7 @@
   "dependents": 0,
   "updated": "2024-10-23T05:24:38.827Z",
   "tags": [
-    "ui"
+    "media"
   ],
   "svelte5": true,
   "runes": false,

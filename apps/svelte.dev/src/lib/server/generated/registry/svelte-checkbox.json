@@ -1,6 +1,6 @@
 {
   "name": "svelte-checkbox",
-  "description": "Implement customizable checkbox components for Svelte.",
+  "description": "Create customizable, animated checkbox components for Svelte.",
   "repo_url": "https://github.com/HosseinShabani/svelte-checkbox",
   "author": "Hossein Shabani",
   "homepage": "https://github.com/HosseinShabani/svelte-checkbox",

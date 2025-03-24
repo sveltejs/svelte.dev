@@ -1,12 +1,14 @@
 {
   "name": "@htmlbricks/hb-gallery-video",
-  "description": "Svelte-Bootstrap Video Gallery WebComponent.",
+  "description": "Create Svelte-Bootstrap video gallery web component.",
+  "repo_url": "",
   "author": "Dario Caruso",
   "downloads": 459,
   "dependents": 2,
   "updated": "2025-03-09T03:10:39.045Z",
   "tags": [
-    "ui"
+    "component-library",
+    "media"
   ],
   "svelte5": false,
   "runes": false

@@ -1,6 +1,6 @@
 {
   "name": "@m93a/svelte-portal",
-  "description": "Create portals for rendering Svelte components outside DOM.",
+  "description": "Create portals in Svelte applications.",
   "repo_url": "https://github.com/m93a/svelte-portal",
   "author": "c.sha",
   "downloads": 0,

@@ -8,6 +8,7 @@
   "dependents": 0,
   "updated": "2025-03-14T07:06:47.557Z",
   "tags": [
+    "integration",
     "auth"
   ],
   "svelte5": true,

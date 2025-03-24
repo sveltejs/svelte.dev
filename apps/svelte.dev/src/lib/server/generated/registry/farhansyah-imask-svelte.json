@@ -1,6 +1,6 @@
 {
   "name": "@farhansyah/imask-svelte",
-  "description": "Apply input masks to Svelte components using IMask.",
+  "description": "Apply input masks to Svelte components.",
   "repo_url": "https://github.com/uNmAnNeR/imaskjs",
   "author": "Alexey Kryazhev",
   "homepage": "https://github.com/uNmAnNeR/imaskjs/tree/master#readme",

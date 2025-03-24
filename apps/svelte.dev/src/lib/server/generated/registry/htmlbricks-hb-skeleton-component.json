@@ -1,6 +1,7 @@
 {
   "name": "@htmlbricks/hb-skeleton-component",
-  "description": "Create skeleton components for Svelte applications.",
+  "description": "Skeleton component for Svelte.",
+  "repo_url": "",
   "author": "Dario Caruso",
   "downloads": 299,
   "dependents": 0,

@@ -1,6 +1,6 @@
 {
   "name": "@jbfulgencio/svelte-nouislider",
-  "description": "Implement noUiSlider component for Svelte applications.",
+  "description": "Integrates noUiSlider for range slider functionality in Svelte apps.",
   "repo_url": "https://github.com/jbfulgencio/svelte-nouislider",
   "author": "João Batista Fulgencio",
   "homepage": "https://github.com/jbfulgencio/svelte-nouislider#readme",

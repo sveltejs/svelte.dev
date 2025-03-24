@@ -1,6 +1,6 @@
 {
   "name": "svelte-page",
-  "description": "Provides nested routing with page.js for Svelte applications.",
+  "description": "Nested routing solution for Svelte using page.js.",
   "repo_url": "https://github.com/kaisermann/svelte-router",
   "author": "Christian Kaisermann",
   "homepage": "https://github.com/kaisermann/svelte-router#readme",

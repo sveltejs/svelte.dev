@@ -1,6 +1,6 @@
 {
   "name": "@svelte-kits/store",
-  "description": "Provide safe stores for SvelteKit SSR.",
+  "description": "Provides safe stores for SvelteKit SSR.",
   "repo_url": "https://github.com/svelte-kits/store",
   "author": "Bae Junehyeon",
   "homepage": "https://github.com/svelte-kits/store#readme",

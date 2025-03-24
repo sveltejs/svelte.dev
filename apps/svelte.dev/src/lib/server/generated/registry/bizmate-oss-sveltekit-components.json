@@ -1,13 +1,13 @@
 {
   "name": "@bizmate-oss/sveltekit-components",
-  "description": "Provide SvelteKit components for tables, selects, and more.",
+  "description": "Provides SvelteKit components for tables, selects, and auth.",
+  "repo_url": "",
   "author": "webfrank",
   "downloads": 237,
   "dependents": 0,
   "updated": "2025-01-13T14:39:37.859Z",
   "tags": [
-    "component-library",
-    "ui"
+    "component-library"
   ],
   "svelte5": false,
   "runes": false

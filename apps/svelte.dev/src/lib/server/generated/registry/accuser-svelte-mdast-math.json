@@ -1,6 +1,6 @@
 {
   "name": "@accuser/svelte-mdast-math",
-  "description": "Transform Mdast to Svelte components.",
+  "description": "Transform Markdown AST into Svelte components with math support.",
   "repo_url": "https://github.com/accuser/svelte-mdast-math",
   "author": "Matthew Gibbons",
   "homepage": "https://github.com/accuser/svelte-mdast-math",

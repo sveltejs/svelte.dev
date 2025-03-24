@@ -1,6 +1,6 @@
 {
   "name": "svelte-lightweight-charts",
-  "description": "Svelte wrapper for financial lightweight charts.",
+  "description": "Create financial charts using Lightweight Charts in Svelte.",
   "repo_url": "https://github.com/trash-and-fire/svelte-lightweight-charts",
   "author": "trash-and-fire",
   "homepage": "https://github.com/trash-and-fire/svelte-lightweight-charts#readme",

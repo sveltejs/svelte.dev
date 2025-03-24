@@ -1,6 +1,6 @@
 {
   "name": "@auroratide/svelte-custom-element-transitions",
-  "description": "Make Svelte transitions work on custom elements.",
+  "description": "Enable Svelte transitions in custom elements.",
   "repo_url": "https://github.com/Auroratide/svelte-custom-element-transitions",
   "author": "Timothy Foster",
   "homepage": "https://github.com/Auroratide/svelte-custom-element-transitions#readme",

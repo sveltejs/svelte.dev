@@ -8,9 +8,10 @@
   "dependents": 0,
   "updated": "2022-05-20T14:49:48.073Z",
   "tags": [
-    "tooling"
+    "tooling",
+    "preprocessor"
   ],
   "svelte5": false,
   "runes": false,
-  "github_stars": 420
+  "github_stars": 421
 }

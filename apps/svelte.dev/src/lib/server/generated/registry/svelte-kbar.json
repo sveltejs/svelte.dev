@@ -1,6 +1,6 @@
 {
   "name": "svelte-kbar",
-  "description": "Implement KBar component for Svelte applications, providing search and navigation.",
+  "description": "Implement command/search bar component for Svelte apps.",
   "repo_url": "https://github.com/dwagio/svelte-kbar",
   "author": "Tas Hasting",
   "homepage": "https://github.com/dwagio/svelte-kbar",

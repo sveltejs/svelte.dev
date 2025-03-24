@@ -1,6 +1,6 @@
 {
   "name": "@robakk08/svelte-evaicons",
-  "description": "Use Eva Icons in Svelte applications.",
+  "description": "Render Eva Icons in Svelte applications.",
   "repo_url": "https://github.com/Robak08/svelte-evaicons",
   "author": "Robert Hamiga",
   "homepage": "https://github.com/Robak08/svelte-evaicons#readme",
@@ -11,5 +11,6 @@
     "ui"
   ],
   "svelte5": false,
-  "runes": false
+  "runes": false,
+  "github_stars": 0
 }

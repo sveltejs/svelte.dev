@@ -1,6 +1,6 @@
 {
   "name": "@responsive-ui/ellipsis",
-  "description": "Create ellipsis component for responsive-ui Svelte applications.",
+  "description": "Truncate text with ellipsis in Svelte applications.",
   "repo_url": "https://github.com/wetix/responsive-ui",
   "author": "Si3nLoong",
   "homepage": "https://github.com/wetix/responsive-ui/blob/main/components/ellipsis#README.md",

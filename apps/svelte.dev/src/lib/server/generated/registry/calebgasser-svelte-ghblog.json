@@ -1,6 +1,6 @@
 {
   "name": "@calebgasser/svelte-ghblog",
-  "description": "Generate simple blog from GitHub repo using Svelte.",
+  "description": "Generate blog from GitHub repo using Svelte and Markdown.",
   "repo_url": "https://github.com/calebgasser/svelte-ghblog",
   "author": "Caleb Gasser",
   "homepage": "https://github.com/calebgasser/svelte-ghblog/tree/develop#readme",
@@ -11,5 +11,6 @@
     "content"
   ],
   "svelte5": false,
-  "runes": false
+  "runes": false,
+  "github_stars": 1
 }

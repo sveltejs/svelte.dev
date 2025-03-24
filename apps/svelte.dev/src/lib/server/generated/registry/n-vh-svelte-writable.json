@@ -1,6 +1,6 @@
 {
   "name": "@n-vh/svelte-writable",
-  "description": "Create custom and localStorage-synced writable stores for Svelte.",
+  "description": "Provide custom writables for Svelte stores.",
   "repo_url": "https://github.com/n-vh/svelte-writable",
   "author": "Nils Van Hée",
   "homepage": "https://github.com/n-vh/svelte-writable",

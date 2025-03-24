@@ -1,6 +1,6 @@
 {
   "name": "svelte-i18next",
-  "description": "Wraps i18next instance for use in Svelte.",
+  "description": "Integrate i18next internationalization library into Svelte apps.",
   "repo_url": "https://github.com/NishuGoel/svelte-i18next",
   "author": "Nishu Goel",
   "homepage": "https://github.com/NishuGoel/svelte-i18next",

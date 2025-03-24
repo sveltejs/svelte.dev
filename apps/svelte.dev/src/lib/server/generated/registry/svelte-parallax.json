@@ -1,6 +1,6 @@
 {
   "name": "svelte-parallax",
-  "description": "Create spring-based parallax effects in Svelte.",
+  "description": "Create parallax scrolling effects in Svelte.",
   "repo_url": "https://github.com/kindoflew/svelte-parallax",
   "author": "Lewis DAvanzo",
   "homepage": "https://github.com/kindoflew/svelte-parallax#readme",

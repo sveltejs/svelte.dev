@@ -1,0 +1,13 @@
+{
+  "name": "minna-ui",
+  "repo_url": "https://github.com/WeAreGenki/minna-ui",
+  "author": "Max Milton",
+  "homepage": "https://wearegenki.github.io/minna-ui",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2020-03-24T19:40:23.088Z",
+  "tags": [],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 87
+}

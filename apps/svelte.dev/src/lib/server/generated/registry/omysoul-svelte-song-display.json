@@ -1,6 +1,6 @@
 {
   "name": "@omysoul/svelte-song-display",
-  "description": "Display song lyrics, rendering verses as large as possible.",
+  "description": "Display song lyrics, one verse at a time, in Svelte.",
   "repo_url": "https://github.com/philholden/svelte-song-display",
   "author": "omysoul",
   "homepage": "https://ipfs.infura.io/ipfs/QmciYNTJzeKcEMWTYvNhcRErKvGVXMSbevvfgVhCLT7T2j/",

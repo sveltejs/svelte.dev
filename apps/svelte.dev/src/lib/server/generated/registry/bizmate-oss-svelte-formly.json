@@ -1,6 +1,6 @@
 {
   "name": "@bizmate-oss/svelte-formly",
-  "description": "Generate dynamic, reactive forms in Svelte.",
+  "description": "Generate dynamic, reactive forms in Svelte applications.",
   "repo_url": "https://github.com/bizmate-oss/svelte-formly",
   "author": "Kamal Sahmoud",
   "homepage": "https://github.com/bizmate-oss/svelte-formly#readme",

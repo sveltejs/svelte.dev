@@ -1,15 +1,12 @@
 {
   "name": "@c0ldra1n/sapper",
-  "description": "Build high-performance universal web apps with Sapper.",
   "repo_url": "https://github.com/sveltejs/sapper",
   "author": "Rich Harris",
   "homepage": "https://github.com/sveltejs/sapper#readme",
   "downloads": 3,
   "dependents": 0,
   "updated": "2019-11-26T08:34:06.337Z",
-  "tags": [
-    "tooling"
-  ],
+  "tags": [],
   "svelte5": false,
   "runes": false,
   "github_stars": 6980

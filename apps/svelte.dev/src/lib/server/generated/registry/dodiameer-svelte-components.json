@@ -1,6 +1,7 @@
 {
   "name": "@dodiameer/svelte-components",
-  "description": "Build shareable Svelte components, base for component creation.",
+  "description": "Base for building shareable Svelte components.",
+  "repo_url": "",
   "author": "dodiameer",
   "downloads": 18,
   "dependents": 0,

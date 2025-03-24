@@ -1,6 +1,6 @@
 {
   "name": "braintapper-svelte-toast",
-  "description": "Display toast notifications in Svelte applications.",
+  "description": "Create toast pop-up notifications in Svelte applications.",
   "repo_url": "https://github.com/braintapper/braintapper-svelte-toast",
   "author": "braintapper",
   "homepage": "https://github.com/braintapper/braintapper-svelte-toast#readme",
@@ -11,5 +11,6 @@
     "ui"
   ],
   "svelte5": false,
-  "runes": false
+  "runes": false,
+  "github_stars": 0
 }

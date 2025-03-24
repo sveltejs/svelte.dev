@@ -1,6 +1,6 @@
 {
   "name": "svelte-mapbox",
-  "description": "Create Mapbox components for Svelte applications.",
+  "description": "Integrates Mapbox GL with Svelte, providing map components.",
   "repo_url": "https://github.com/jack-weilage/svelte-mapbox",
   "author": "jack-weilage",
   "homepage": "https://github.com/jack-weilage/svelte-mapbox#readme",

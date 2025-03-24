@@ -1,6 +1,7 @@
 {
   "name": "@htmlbricks/hb-site-paragraph-with-image",
-  "description": "Create site paragraph with image web component.",
+  "description": "Creates Svelte-Bootstrap site paragraph with image web component.",
+  "repo_url": "",
   "author": "Dario Caruso",
   "downloads": 263,
   "dependents": 0,

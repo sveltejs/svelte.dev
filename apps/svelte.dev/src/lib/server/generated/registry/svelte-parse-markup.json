@@ -1,6 +1,6 @@
 {
   "name": "svelte-parse-markup",
-  "description": "Parse Svelte markup, skip script and style tags.",
+  "description": "Parses Svelte markup, excluding script and style tags.",
   "repo_url": "https://github.com/bluwy/svelte-parse-markup",
   "author": "Bjorn Lu",
   "homepage": "https://github.com/bluwy/svelte-parse-markup",

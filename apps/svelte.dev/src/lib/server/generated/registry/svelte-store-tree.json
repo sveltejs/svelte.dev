@@ -1,6 +1,6 @@
 {
   "name": "svelte-store-tree",
-  "description": "Manage nested Svelte stores, zoom into store parts.",
+  "description": "Provides nested stores for managing Svelte app state.",
   "repo_url": "https://github.com/igrep/svelte-store-tree",
   "author": "Internet Initiative Japan Inc.",
   "homepage": "https://github.com/igrep/svelte-store-tree#readme",

@@ -1,6 +1,6 @@
 {
   "name": "svelte-transition",
-  "description": "Transition elements via CSS classes in Svelte.",
+  "description": "Transition elements via CSS classes, ideal for TailwindCSS integration.",
   "repo_url": "https://github.com/captaincodeman/svelte-transition",
   "author": "Simon Green",
   "homepage": "https://captaincodeman.github.io/svelte-transition/",

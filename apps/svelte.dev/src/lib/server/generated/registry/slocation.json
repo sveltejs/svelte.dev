@@ -1,6 +1,6 @@
 {
   "name": "slocation",
-  "description": "Reactive Svelte store for managing location and routing.",
+  "description": "Reactive Svelte location store for managing URLs.",
   "repo_url": "https://github.com/varbhat/slocation",
   "author": "varbhat",
   "homepage": "https://github.com/varbhat/slocation#readme",
@@ -8,8 +8,7 @@
   "dependents": 0,
   "updated": "2021-09-16T14:48:35.166Z",
   "tags": [
-    "utility",
-    "router"
+    "utility"
   ],
   "svelte5": false,
   "runes": false,

@@ -1,6 +1,6 @@
 {
   "name": "import-svelte",
-  "description": "Transpile Svelte on the fly, useful for dynamic module loading.",
+  "description": "Requires and transpiles Svelte on the fly.",
   "repo_url": "https://github.com/SyMind/import-svelte",
   "author": "SyMind",
   "homepage": "https://github.com/SyMind/import-svelte#readme",
@@ -8,7 +8,6 @@
   "dependents": 0,
   "updated": "2023-01-23T11:20:19.250Z",
   "tags": [
-    "utility",
     "tooling"
   ],
   "svelte5": false,

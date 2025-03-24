@@ -1,6 +1,7 @@
 {
   "name": "svelte-touch-hold",
-  "description": "Detect touch and hold events on Svelte components.",
+  "description": "Trigger callback after holding Svelte component for milliseconds.",
+  "repo_url": "",
   "author": "Arian",
   "homepage": "https://github.com/ariannargesi/svelte-touch-hold",
   "downloads": 0,

@@ -1,6 +1,6 @@
 {
   "name": "svelte-micro",
-  "description": "Lightweight, reactive client-side router for Svelte.",
+  "description": "Lightweight, reactive client-side router for Svelte applications.",
   "repo_url": "https://github.com/ayndqy/svelte-micro",
   "author": "ayndqy",
   "homepage": "https://github.com/ayndqy/svelte-micro#readme",

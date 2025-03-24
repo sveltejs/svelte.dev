@@ -1,6 +1,6 @@
 {
   "name": "@boundedinfinity/svelte-ea",
-  "description": "Create SvelteKit component library.",
+  "description": "Create SvelteKit component libraries using npm link.",
   "repo_url": "https://github.com/boundedinfinity/svelte-ea",
   "author": "brad.babb",
   "homepage": "https://github.com/boundedinfinity/svelte-ea#readme",
@@ -11,5 +11,6 @@
     "tooling"
   ],
   "svelte5": false,
-  "runes": false
+  "runes": false,
+  "github_stars": 0
 }

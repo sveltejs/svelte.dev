@@ -1,6 +1,7 @@
 {
   "name": "@svebass/flexbox",
-  "description": "Build responsive layout components with Styled System in Svelte.",
+  "description": "Provide responsive Svelte Box and Flex components.",
+  "repo_url": "",
   "author": "Tanner Marshall",
   "downloads": 5,
   "dependents": 1,

@@ -1,6 +1,6 @@
 {
   "name": "svelte-http-client",
-  "description": "Create HTTP clients returning Svelte stores for data fetching.",
+  "description": "Fetch data and return Svelte stores for HTTP requests.",
   "repo_url": "https://github.com/bibizio/svelte-http-client",
   "author": "Fabrizio Giovinazzi",
   "homepage": "https://bibizio.github.io/svelte-http-client/",
@@ -8,7 +8,6 @@
   "dependents": 0,
   "updated": "2023-01-24T19:32:15.485Z",
   "tags": [
-    "server",
     "utility"
   ],
   "svelte5": false,

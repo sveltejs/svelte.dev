@@ -1,6 +1,6 @@
 {
   "name": "@svelte-web-fonts/google",
-  "description": "Load Google Fonts into Svelte projects.",
+  "description": "Load Google Fonts in Svelte projects with auto-completion.",
   "repo_url": "https://github.com/svelte-web-fonts/google",
   "author": "Jakob Kruse",
   "homepage": "https://github.com/svelte-web-fonts/google#readme",

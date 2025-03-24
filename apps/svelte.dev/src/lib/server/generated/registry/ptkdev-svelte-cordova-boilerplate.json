@@ -1,6 +1,6 @@
 {
   "name": "@ptkdev/svelte-cordova-boilerplate",
-  "description": "Generate Android/iOS mobile apps with Svelte and Cordova.",
+  "description": "Creates Cordova mobile apps with Svelte.",
   "repo_url": "https://github.com/ptkdev-boilerplate/svelte-cordova-boilerplate",
   "author": "Patryk Rzucidło [@ptkdev]",
   "homepage": "https://github.com/ptkdev-boilerplate/svelte-cordova-boilerplate",
@@ -11,5 +11,6 @@
     "tooling"
   ],
   "svelte5": false,
-  "runes": false
+  "runes": false,
+  "github_stars": 28
 }

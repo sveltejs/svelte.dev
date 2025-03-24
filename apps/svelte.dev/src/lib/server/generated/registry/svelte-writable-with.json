@@ -1,6 +1,6 @@
 {
   "name": "svelte-writable-with",
-  "description": "Extend Svelte's writable stores with extra features.",
+  "description": "Extends Svelte's writable stores with additional features.",
   "repo_url": "https://github.com/SaintPepsi/svelte-writable-with",
   "author": "Ian Hogers",
   "homepage": "https://github.com/SaintPepsi/svelte-writable-with#readme",

@@ -1,6 +1,6 @@
 {
   "name": "svem",
-  "description": "Preprocess Svelte code within Markdown files.",
+  "description": "Preprocessor for Svelte in Markdown, write Svelte components in Markdown.",
   "repo_url": "https://github.com/beerush-id/svem",
   "author": "Nanang Mahdaen El Agung",
   "homepage": "https://github.com/beerush-id/svem#readme",
@@ -8,8 +8,8 @@
   "dependents": 0,
   "updated": "2025-03-16T01:58:53.353Z",
   "tags": [
-    "preprocessor",
-    "tooling"
+    "tooling",
+    "preprocessor"
   ],
   "svelte5": true,
   "runes": false,

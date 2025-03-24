@@ -1,12 +1,13 @@
 {
   "name": "@ikun-ui/menu",
-  "description": "Create menu components for Svelte applications.",
+  "description": "Build menu components for Svelte applications.",
+  "repo_url": "",
   "author": "baiwusanyu",
   "downloads": 2,
   "dependents": 1,
   "updated": "2025-01-24T03:49:04.914Z",
   "tags": [
-    "ui"
+    "component-library"
   ],
   "svelte5": false,
   "runes": false

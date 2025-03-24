@@ -1,6 +1,6 @@
 {
   "name": "@douganderson444/sveltana",
-  "description": "Integrate Solana blockchain functionality into Svelte applications.",
+  "description": "Integrate Solana into Svelte components.",
   "repo_url": "https://github.com/DougAnderson444/sveltana",
   "author": "Doug Anderson",
   "homepage": "https://github.com/DougAnderson444/sveltana",

@@ -1,6 +1,6 @@
 {
   "name": "sveltoaste",
-  "description": "Display Svelte notifications with customizable themes and timeouts.",
+  "description": "Display Svelte notifications with customizable themes.",
   "repo_url": "https://github.com/marvinody/sveltoaste",
   "author": "marvinody",
   "homepage": "https://github.com/marvinody/sveltoaste#readme",

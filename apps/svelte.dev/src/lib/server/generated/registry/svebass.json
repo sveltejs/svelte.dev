@@ -1,12 +1,13 @@
 {
   "name": "svebass",
-  "description": "Provides primitive, themeable UI components for Svelte.",
+  "description": "Build UI components with Styled System props for Svelte.",
+  "repo_url": "",
   "author": "Tanner Marshall",
   "downloads": 4,
   "dependents": 0,
   "updated": "2021-04-29T21:48:28.606Z",
   "tags": [
-    "ui"
+    "component-library"
   ],
   "svelte5": false,
   "runes": false

@@ -1,6 +1,6 @@
 {
   "name": "svelte-twitter-emoji",
-  "description": "Display Twitter emoji icons in Svelte applications.",
+  "description": "Provide Twitter emoji SVG icon components for Svelte.",
   "repo_url": "https://github.com/shinokada/svelte-twitter-emoji",
   "author": "Shinichi Okada",
   "homepage": "https://svelte-twitter-emoji.codewithshin.com/",

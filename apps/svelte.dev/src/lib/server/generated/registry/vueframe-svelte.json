@@ -1,6 +1,6 @@
 {
   "name": "@vueframe/svelte",
-  "description": "Embeds for Svelte and Vue.",
+  "description": "Provides simple embeds for Svelte.",
   "repo_url": "https://github.com/vueframe/vueframe",
   "author": "vueframe",
   "homepage": "https://github.com/vueframe/vueframe",

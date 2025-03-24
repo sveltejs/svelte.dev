@@ -1,6 +1,6 @@
 {
   "name": "swagger-ui-svelte",
-  "description": "Display Swagger/OpenAPI documentation in Svelte applications.",
+  "description": "Display Swagger UI documentation in Svelte apps.",
   "repo_url": "https://github.com/matchid-project/swagger-ui-svelte",
   "author": "cristianpb",
   "homepage": "https://github.com/matchid-project/swagger-ui-svelte#readme",
@@ -8,7 +8,6 @@
   "dependents": 0,
   "updated": "2020-11-08T21:27:01.994Z",
   "tags": [
-    "ui",
     "integration"
   ],
   "svelte5": false,

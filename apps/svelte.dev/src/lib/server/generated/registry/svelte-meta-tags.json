@@ -1,6 +1,6 @@
 {
   "name": "svelte-meta-tags",
-  "description": "Provides components for managing SEO in Svelte projects.",
+  "description": "Manages SEO meta tags for SvelteKit and Svelte projects.",
   "repo_url": "https://github.com/oekazuma/svelte-meta-tags",
   "author": "oe.kazuma",
   "homepage": "https://github.com/oekazuma/svelte-meta-tags#readme",
@@ -12,5 +12,5 @@
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 570
+  "github_stars": 571
 }

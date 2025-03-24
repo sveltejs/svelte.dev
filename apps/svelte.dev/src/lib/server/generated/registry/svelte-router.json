@@ -1,6 +1,6 @@
 {
   "name": "svelte-router",
-  "description": "Simple router component for Svelte.",
+  "description": "Create simple routing for Svelte applications.",
   "repo_url": "https://github.com/jikkai/svelte-router",
   "author": "Jikkai Xiao",
   "homepage": "https://jikkai.github.io/svelte-router",

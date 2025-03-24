@@ -1,6 +1,6 @@
 {
   "name": "svelte-hero-icons",
-  "description": "Provide Heroicons for Svelte applications.",
+  "description": "Heroicons for Svelte, programmatically change solid/outline versions.",
   "repo_url": "https://github.com/JustinVoitel/svelte-hero-icons",
   "author": "Justin Voitel",
   "homepage": "https://github.com/JustinVoitel/svelte-hero-icons#readme",

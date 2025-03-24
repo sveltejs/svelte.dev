@@ -1,6 +1,7 @@
 {
   "name": "@tadashi/svelte-splash-lgpd",
-  "description": "Create splash screens with LGPD compliance in Svelte.",
+  "description": "Create splash screen component for Svelte apps.",
+  "repo_url": "",
   "author": "Thiago Lagden",
   "homepage": "https://gitlab.textecnologia.io/nimble/svelte-splash-lgpd#readme",
   "downloads": 2,

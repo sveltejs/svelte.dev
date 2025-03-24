@@ -1,6 +1,6 @@
 {
   "name": "segmented-control-svelte",
-  "description": "Create segmented control UI elements for Svelte.",
+  "description": "Build segmented control UI elements with sliding background animation.",
   "repo_url": "https://github.com/stuymedova/segmented-control-svelte",
   "author": "stuymedova",
   "homepage": "https://github.com/stuymedova/segmented-control-svelte#readme",

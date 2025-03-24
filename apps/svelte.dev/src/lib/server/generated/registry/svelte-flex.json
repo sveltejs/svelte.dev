@@ -1,6 +1,6 @@
 {
   "name": "svelte-flex",
-  "description": "Provide reusable flexbox component for Svelte.",
+  "description": "Creates reusable flexbox layouts for Svelte components.",
   "repo_url": "https://github.com/himynameisdave/svelte-flex",
   "author": "himynameisdave",
   "homepage": "https://github.com/himynameisdave/svelte-flex",

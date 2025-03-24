@@ -1,6 +1,6 @@
 {
   "name": "@sveltejs/vite-plugin-svelte",
-  "description": "Compile Svelte components with Vite.",
+  "description": "Compiles Svelte components with Vite, enabling fast development.",
   "repo_url": "https://github.com/sveltejs/vite-plugin-svelte",
   "author": "dominikg",
   "homepage": "https://github.com/sveltejs/vite-plugin-svelte#readme",

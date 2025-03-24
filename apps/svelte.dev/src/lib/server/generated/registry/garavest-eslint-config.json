@@ -1,6 +1,6 @@
 {
   "name": "@garavest/eslint-config",
-  "description": "Provide an opinionated ESLint configuration for Svelte projects.",
+  "description": "Opinionated ESLint config for Svelte and TypeScript projects.",
   "repo_url": "https://github.com/garavest/eslint-config",
   "author": "Seth Murphy",
   "homepage": "https://github.com/garavest/eslint-config#readme",

@@ -1,6 +1,7 @@
 {
   "name": "sv-accordion",
   "description": "Create accordion components for Svelte projects.",
+  "repo_url": "",
   "author": "Onder Bakirtas",
   "downloads": 3,
   "dependents": 0,

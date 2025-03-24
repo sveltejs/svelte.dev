@@ -1,6 +1,6 @@
 {
   "name": "@devahmadsalameh/ai",
-  "description": "Build AI-powered streaming text and chat UIs with Svelte.",
+  "description": "Build AI-powered streaming text and chat UIs in Svelte apps.",
   "repo_url": "https://github.com/vercel/ai",
   "author": "ahmadsalamehdev",
   "homepage": "https://sdk.vercel.ai/docs",
@@ -12,5 +12,5 @@
   ],
   "svelte5": false,
   "runes": false,
-  "github_stars": 12872
+  "github_stars": 12885
 }

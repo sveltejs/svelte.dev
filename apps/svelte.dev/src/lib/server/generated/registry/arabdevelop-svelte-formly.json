@@ -1,6 +1,6 @@
 {
   "name": "@arabdevelop/svelte-formly",
-  "description": "Generate forms with custom field types and validation in Svelte.",
+  "description": "Generate forms with custom field types and validation.",
   "repo_url": "https://github.com/arabdevelop/svelte-formly",
   "author": "Kamal Sahmoud",
   "homepage": "https://github.com/arabdevelop/svelte-formly#readme",

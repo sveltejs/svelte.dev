@@ -1,6 +1,6 @@
 {
   "name": "svelte-float",
-  "description": "Create floating elements like tooltips and popovers in Svelte.",
+  "description": "Creates floating UI elements like popovers and tooltips.",
   "repo_url": "https://github.com/Star3Lord/svelte-float",
   "author": "Nikhil Patel",
   "homepage": "https://svelte-float.pages.dev",

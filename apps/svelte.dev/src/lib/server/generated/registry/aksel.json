@@ -1,6 +1,7 @@
 {
   "name": "aksel",
-  "description": "Add Aksel the seagull to Svelte sites.",
+  "description": "Adds Aksel the seagull to your Svelte site.",
+  "repo_url": "",
   "author": "mallsoft",
   "homepage": "https://github.com/mallsoft/aksel#readme",
   "downloads": 1,

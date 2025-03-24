@@ -1,6 +1,6 @@
 {
   "name": "@seorii/svelte-tiptap",
-  "description": "Create rich text editors using Svelte and Tiptap.",
+  "description": "Provides Svelte components for the Tiptap rich text editor.",
   "repo_url": "https://github.com/sibiraj-s/svelte-tiptap",
   "author": "Seo-Rii",
   "homepage": "https://github.com/sibiraj-s/svelte-tiptap#readme",

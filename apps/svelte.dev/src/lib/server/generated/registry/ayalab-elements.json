@@ -1,6 +1,7 @@
 {
   "name": "@ayalab/elements",
-  "description": "Create UI elements for Svelte applications.",
+  "description": "Create UI library for Svelte.",
+  "repo_url": "",
   "author": "ikari132",
   "downloads": 8,
   "dependents": 0,

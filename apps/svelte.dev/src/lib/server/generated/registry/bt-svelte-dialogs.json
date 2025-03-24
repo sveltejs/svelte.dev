@@ -1,6 +1,6 @@
 {
   "name": "bt-svelte-dialogs",
-  "description": "Create handy dialogs, alerts, and modals in Svelte apps.",
+  "description": "Create handy dialogs for Svelte applications.",
   "repo_url": "https://github.com/bibizio/svelte-dialogs",
   "author": "Fabrizio Giovinazzi",
   "homepage": "https://bibizio.github.io/svelte-dialogs/",

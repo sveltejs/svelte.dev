@@ -1,6 +1,6 @@
 {
   "name": "material-icons-svelte",
-  "description": "Render Material Design icons as Svelte components.",
+  "description": "Integrate Material Design icons into Svelte projects.",
   "repo_url": "https://github.com/calasanmarko/material-icons-svelte",
   "author": "Marko Calasan",
   "homepage": "https://github.com/calasanmarko/material-icons-svelte#readme",

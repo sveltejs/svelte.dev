@@ -1,6 +1,7 @@
 {
   "name": "@ikun-ui/calendar",
-  "description": "Create calendar components for Svelte applications.",
+  "description": "Create calendar components for Svelte.",
+  "repo_url": "",
   "author": "baiwusanyu",
   "downloads": 6,
   "dependents": 1,

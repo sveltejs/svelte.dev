@@ -1,12 +1,13 @@
 {
   "name": "@htmlbricks/hb-order-list",
-  "description": "Provides web component for creating order list in Svelte.",
+  "description": "Create sortable lists with Svelte web components.",
+  "repo_url": "",
   "author": "Dario Caruso",
   "downloads": 431,
   "dependents": 2,
   "updated": "2025-03-09T03:10:32.726Z",
   "tags": [
-    "ui"
+    "component-library"
   ],
   "svelte5": false,
   "runes": false

@@ -1,6 +1,6 @@
 {
   "name": "svelte-gitcal",
-  "description": "Create Github-like commit calendars from git log data.",
+  "description": "Generate Github-like commit calendar component for Svelte.",
   "repo_url": "https://github.com/jdeneef/svelte-gitcal",
   "author": "J de Neef",
   "homepage": "https://github.com/jdeneef/svelte-gitcal#readme",

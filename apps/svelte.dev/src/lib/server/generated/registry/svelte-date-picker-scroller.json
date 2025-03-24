@@ -1,6 +1,6 @@
 {
   "name": "svelte-date-picker-scroller",
-  "description": "Create scrollable date picker component for Svelte applications.",
+  "description": "Provides scrollable date picker component for Svelte.",
   "repo_url": "https://github.com/jayeshpatil594/svelte-date-picker-scroller",
   "author": "Jayesh Patil",
   "homepage": "https://github.com/jayeshpatil594/svelte-date-picker-scroller",

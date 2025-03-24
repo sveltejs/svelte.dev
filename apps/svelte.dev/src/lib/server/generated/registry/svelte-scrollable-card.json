@@ -1,6 +1,6 @@
 {
   "name": "svelte-scrollable-card",
-  "description": "Implement scrollable card components in Svelte.",
+  "description": "Create scrollable card components for Svelte applications.",
   "repo_url": "https://github.com/httpsOmkar/svelte-scrollable-component",
   "author": "Omkar Yadav",
   "homepage": "https://github.com/httpsOmkar/svelte-scrollable-component#readme",

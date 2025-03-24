@@ -1,6 +1,6 @@
 {
   "name": "svelte-contracts",
-  "description": "Manage Ethereum contracts as Svelte readable stores.",
+  "description": "Access Ethereum contract addresses in Svelte apps.",
   "repo_url": "https://github.com/PythoniCode/svelte-contracts",
   "author": "Anthony Riley",
   "homepage": "https://github.com/PythoniCode/svelte-contracts#readme",

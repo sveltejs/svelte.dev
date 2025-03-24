@@ -1,6 +1,6 @@
 {
   "name": "@el3um4s/svelte-component-package-starter",
-  "description": "Generate Svelte component package starter with TypeScript.",
+  "description": "Provides a starter template for Svelte component packages.",
   "repo_url": "https://github.com/el3um4s/svelte-component-package-starter",
   "author": "Samuele C. De Tomasi",
   "homepage": "https://github.com/el3um4s/svelte-component-package-starter#readme",

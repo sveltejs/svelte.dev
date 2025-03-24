@@ -1,6 +1,6 @@
 {
   "name": "svelte-fast-dimension",
-  "description": "Bind dimensions using ResizeObserver for Svelte.",
+  "description": "Use ResizeObserver for fast dimension bindings in Svelte.",
   "repo_url": "https://github.com/bluwy/svelte-fast-dimension",
   "author": "Bjorn Lu",
   "homepage": "https://github.com/bluwy/svelte-fast-dimension#readme",
@@ -8,9 +8,7 @@
   "dependents": 0,
   "updated": "2023-07-01T06:39:39.977Z",
   "tags": [
-    "utility",
-    "dom",
-    "performance"
+    "utility"
   ],
   "svelte5": false,
   "runes": false,

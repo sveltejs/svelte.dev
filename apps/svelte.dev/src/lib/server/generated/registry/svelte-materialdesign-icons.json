@@ -1,6 +1,6 @@
 {
   "name": "svelte-materialdesign-icons",
-  "description": "Provide Material Design SVG icon components for Svelte.",
+  "description": "Use Material Design SVG icon components in Svelte.",
   "repo_url": "https://github.com/shinokada/svelte-materialdesign-icons",
   "author": "Shinichi Okada",
   "homepage": "https://svelte-materialdesign-icons.vercel.app",

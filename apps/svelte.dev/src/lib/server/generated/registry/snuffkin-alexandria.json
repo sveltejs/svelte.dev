@@ -1,6 +1,7 @@
 {
   "name": "@snuffkin/alexandria",
-  "description": "Svelte component library.",
+  "description": "Create Svelte component library.",
+  "repo_url": "",
   "author": "snuffkin",
   "downloads": 1,
   "dependents": 0,

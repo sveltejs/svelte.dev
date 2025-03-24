@@ -1,6 +1,6 @@
 {
   "name": "@urami/svelte",
-  "description": "Optimize images automatically within Svelte applications.",
+  "description": "Automatic image optimization component for Svelte.",
   "repo_url": "https://github.com/rayriffy/urami",
   "author": "Phumrapee Limpiancop",
   "homepage": "https://urami.dev/",

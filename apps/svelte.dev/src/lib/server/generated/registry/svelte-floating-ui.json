@@ -1,13 +1,14 @@
 {
   "name": "svelte-floating-ui",
-  "description": "Svelte actions for working with Floating UI.",
+  "description": "Integrate Floating UI for positioning UI elements in Svelte.",
   "repo_url": "https://github.com/fedorovvvv/svelte-floating-ui",
   "author": "Nikita Fedorov",
   "homepage": "https://github.com/fedorovvvv/svelte-floating-ui#readme",
-  "downloads": 33885,
+  "downloads": 33605,
   "dependents": 22,
   "updated": "2024-06-17T10:29:31.921Z",
   "tags": [
+    "ui",
     "utility"
   ],
   "svelte5": false,

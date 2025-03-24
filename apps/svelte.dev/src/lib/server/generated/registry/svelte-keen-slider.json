@@ -1,6 +1,7 @@
 {
   "name": "svelte-keen-slider",
-  "description": "Create Keen-slider carousels in Svelte applications.",
+  "description": "Svelte wrapper for Keen-slider, create carousels.",
+  "repo_url": "",
   "author": "Slimboyfat",
   "downloads": 8,
   "dependents": 0,

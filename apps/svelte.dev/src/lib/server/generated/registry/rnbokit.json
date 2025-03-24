@@ -1,6 +1,6 @@
 {
   "name": "rnbokit",
-  "description": "Integrate Cycling74's Max RNBO~ patches into Svelte apps.",
+  "description": "Integrate Cycling74's Max RNBO patches into Svelte apps.",
   "repo_url": "https://github.com/SanderNotenbaert/RNBOKit",
   "author": "sandernotenbaert",
   "homepage": "https://github.com/SanderNotenbaert/RNBOKit#readme",

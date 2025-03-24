@@ -11,6 +11,6 @@
     "utility"
   ],
   "svelte5": true,
-  "runes": false,
+  "runes": true,
   "github_stars": 0
 }

@@ -1,6 +1,6 @@
 {
   "name": "svelte-inline-svg",
-  "description": "Inlines SVG sources within Svelte components at build time.",
+  "description": "Inlines SVG sources as Svelte components.",
   "repo_url": "https://github.com/robinscholz/svelte-inline-svg",
   "author": "dev@studioscholz.info",
   "homepage": "https://github.com/robinscholz/svelte-inline-svg#readme",

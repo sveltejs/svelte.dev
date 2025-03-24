@@ -1,6 +1,6 @@
 {
   "name": "parcel-transformer-svelte",
-  "description": "Transform Svelte files using Parcel bundler.",
+  "description": "Transform Svelte components with Parcel.",
   "repo_url": "https://github.com/orlov-vo/parcel-transformer-svelte",
   "author": "Vladislav Orlov",
   "homepage": "https://github.com/orlov-vo/parcel-transformer-svelte#readme",

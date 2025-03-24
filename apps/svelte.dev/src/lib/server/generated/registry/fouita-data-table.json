@@ -1,6 +1,6 @@
 {
   "name": "@fouita/data-table",
-  "description": "Provides responsive data table component for Svelte with Tailwind CSS.",
+  "description": "Create responsive data tables with Svelte and Tailwind CSS.",
   "repo_url": "https://github.com/fouita/svelte-tw-data-table",
   "author": "fouita",
   "homepage": "https://github.com/fouita/svelte-tw-data-table#readme",

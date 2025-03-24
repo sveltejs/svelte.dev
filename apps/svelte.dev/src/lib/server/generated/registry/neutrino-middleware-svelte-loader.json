@@ -1,6 +1,6 @@
 {
   "name": "neutrino-middleware-svelte-loader",
-  "description": "Compile Svelte components using Neutrino middleware.",
+  "description": "Compile Svelte components with Neutrino.",
   "repo_url": "https://github.com/constgen/neutrino-middleware-svelte-loader",
   "author": "Constantine Genchevsky",
   "homepage": "https://github.com/constgen/neutrino-middleware-svelte-loader",

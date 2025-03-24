@@ -1,6 +1,6 @@
 {
   "name": "svelte-ticker",
-  "description": "Creates ticker component for Svelte 3.",
+  "description": "Create ticker component for Svelte 3.",
   "repo_url": "https://github.com/PaulMaly/svelte-ticker",
   "author": "PaulMaly",
   "homepage": "https://github.com/PaulMaly/svelte-ticker#readme",
@@ -11,5 +11,6 @@
     "ui"
   ],
   "svelte5": false,
-  "runes": false
+  "runes": false,
+  "github_stars": 18
 }

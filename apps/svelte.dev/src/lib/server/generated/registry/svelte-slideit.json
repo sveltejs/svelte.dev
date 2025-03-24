@@ -1,6 +1,6 @@
 {
   "name": "svelte-slideit",
-  "description": "Build lightweight, simple slider/carousel components for Svelte.",
+  "description": "Create lightweight slider or carousel for Svelte.",
   "repo_url": "https://github.com/zgunz42/svelte-slideit",
   "author": "adi gunawan",
   "homepage": "https://github.com/zgunz42/svelte-slideit",

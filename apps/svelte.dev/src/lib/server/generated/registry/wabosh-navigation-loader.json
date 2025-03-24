@@ -1,6 +1,6 @@
 {
   "name": "@wabosh/navigation-loader",
-  "description": "Create navigation loading indicator for SvelteKit.",
+  "description": "Displays loading bar during SvelteKit navigation.",
   "repo_url": "https://github.com/wabosh/navigation-loader",
   "author": "wabosh",
   "homepage": "https://navigation-loader.vercel.app",

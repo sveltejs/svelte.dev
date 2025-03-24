@@ -1,6 +1,6 @@
 {
   "name": "wite-plugin-pwa",
-  "description": "Generate PWA for Wite with zero configuration.",
+  "description": "Implement PWA features for Wite projects.",
   "repo_url": "https://github.com/lahmjs/wite-plugin-pwa",
   "author": "NKDuy",
   "homepage": "https://github.com/lahmjs/wite-plugin-pwa",

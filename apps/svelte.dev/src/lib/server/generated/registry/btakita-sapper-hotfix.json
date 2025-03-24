@@ -1,15 +1,12 @@
 {
   "name": "@btakita/sapper-hotfix",
-  "description": "Build high-performance universal web apps with Sapper.",
   "repo_url": "https://github.com/sveltejs/sapper",
   "author": "Rich Harris",
   "homepage": "https://github.com/sveltejs/sapper#readme",
   "downloads": 4,
   "dependents": 0,
   "updated": "2019-05-18T16:06:15.989Z",
-  "tags": [
-    "tooling"
-  ],
+  "tags": [],
   "svelte5": false,
   "runes": false,
   "github_stars": 6980

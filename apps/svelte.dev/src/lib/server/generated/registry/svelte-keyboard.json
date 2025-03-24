@@ -1,6 +1,6 @@
 {
   "name": "svelte-keyboard",
-  "description": "Provides a permanent on-screen keyboard for Svelte.",
+  "description": "Provides an on-screen keyboard component for Svelte.",
   "repo_url": "https://github.com/russellgoldenberg/svelte-keyboard",
   "author": "russell goldenberg",
   "homepage": "https://github.com/russellgoldenberg/svelte-keyboard#readme",

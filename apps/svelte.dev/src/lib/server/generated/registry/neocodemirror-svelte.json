@@ -1,6 +1,6 @@
 {
   "name": "@neocodemirror/svelte",
-  "description": "Adds CodeMirror 6 editor to Svelte applications.",
+  "description": "Provides Svelte action to add codemirror to your apps.",
   "repo_url": "https://github.com/PuruVJ/neocodemirror",
   "author": "Puru Vijay",
   "homepage": "https://github.com/PuruVJ/neocodemirror",
@@ -8,7 +8,8 @@
   "dependents": 2,
   "updated": "2024-07-04T18:31:33.069Z",
   "tags": [
-    "utility"
+    "content",
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

@@ -1,6 +1,7 @@
 {
   "name": "@async-resource/svelte",
-  "description": "Manage resources and data fetching in Svelte apps.",
+  "description": "Manages asynchronous resources in Svelte applications.",
+  "repo_url": "",
   "author": "Cristóvão Trevisan",
   "downloads": 40,
   "dependents": 0,

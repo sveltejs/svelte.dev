@@ -1,6 +1,6 @@
 {
   "name": "@sjsf/form",
-  "description": "Create Svelte forms based on JSON schema.",
+  "description": "Create forms based on JSON schema for Svelte.",
   "repo_url": "https://github.com/x0k/svelte-jsonschema-form",
   "author": "x0k",
   "homepage": "https://x0k.github.io/svelte-jsonschema-form/",

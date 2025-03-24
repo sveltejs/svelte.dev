@@ -1,6 +1,6 @@
 {
   "name": "svelte-zoom",
-  "description": "Create nearly native image scaling in web (mobile/desktop).",
+  "description": "Implement nearly native image scaling in web apps.",
   "repo_url": "https://github.com/vaheqelyan/svelte-zoom",
   "author": "Vahe Araqelyan",
   "homepage": "https://github.com/vaheqelyan/svelte-zoom#readme",

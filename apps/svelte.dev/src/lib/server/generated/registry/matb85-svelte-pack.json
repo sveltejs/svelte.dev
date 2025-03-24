@@ -1,6 +1,6 @@
 {
   "name": "@matb85/svelte-pack",
-  "description": "Create UI components for Svelte 5.",
+  "description": "UI components for Svelte 5.",
   "repo_url": "https://github.com/Matb85/components-pack",
   "author": "Mateusz Bis",
   "homepage": "https://github.com/Matb85/components-pack#readme",
@@ -8,8 +8,7 @@
   "dependents": 0,
   "updated": "2025-03-01T16:13:58.492Z",
   "tags": [
-    "component-library",
-    "ui"
+    "component-library"
   ],
   "svelte5": true,
   "runes": false,

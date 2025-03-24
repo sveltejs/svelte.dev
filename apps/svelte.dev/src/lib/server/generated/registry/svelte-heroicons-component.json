@@ -1,6 +1,6 @@
 {
   "name": "svelte-heroicons-component",
-  "description": "Integrate Heroicons SVG icons as Svelte components.",
+  "description": "Use Heroicons in Svelte components.",
   "repo_url": "https://github.com/bas-baskara/svelte-heroicons-component",
   "author": "Baskara",
   "homepage": "https://github.com/bas-baskara/svelte-heroicons-component#readme",

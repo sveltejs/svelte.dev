@@ -1,6 +1,6 @@
 {
   "name": "svelte-pdfjs",
-  "description": "Render PDF documents using Mozilla's PDFJS in Svelte apps.",
+  "description": "Render PDF documents in Svelte using PDF.js.",
   "repo_url": "https://github.com/gtm-nayan/svelte-pdfjs",
   "author": "gtmnayan",
   "homepage": "https://github.com/gtm-nayan/svelte-pdfjs#readme",
@@ -8,7 +8,6 @@
   "dependents": 0,
   "updated": "2024-09-24T15:40:07.719Z",
   "tags": [
-    "ui",
     "media"
   ],
   "svelte5": false,

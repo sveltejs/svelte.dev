@@ -1,6 +1,6 @@
 {
   "name": "@svelte-kit/svelte-toast",
-  "description": "Display toast notifications in SvelteKit applications.",
+  "description": "Provides toast notification UI for Svelte applications.",
   "repo_url": "https://github.com/itsarunkumar/svelte-toast",
   "author": "itsarunkumar",
   "homepage": "https://github.com/itsarunkumar/svelte-toast#readme",

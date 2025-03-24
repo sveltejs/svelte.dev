@@ -1,6 +1,6 @@
 {
   "name": "svelte-img",
-  "description": "Load responsive images with fade-in effect in Svelte.",
+  "description": "Create responsive image loading components for Svelte applications.",
   "repo_url": "https://github.com/metonym/svelte-img",
   "author": "Eric Liu",
   "homepage": "https://github.com/metonym/svelte-img",
@@ -8,8 +8,8 @@
   "dependents": 0,
   "updated": "2021-10-16T22:09:11.151Z",
   "tags": [
-    "ui",
-    "media"
+    "media",
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

@@ -8,8 +8,7 @@
   "dependents": 2,
   "updated": "2020-08-24T19:37:40.168Z",
   "tags": [
-    "tooling",
-    "preprocessor"
+    "tooling"
   ],
   "svelte5": true,
   "runes": false,

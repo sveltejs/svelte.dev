@@ -1,6 +1,6 @@
 {
   "name": "@svuick/modal",
-  "description": "Create modal components for Svelte and SvelteKit applications.",
+  "description": "Create modal components for Svelte applications.",
   "repo_url": "https://gitlab.com/david-plugge/svuick",
   "author": "davidplugge",
   "homepage": "https://gitlab.com/david-plugge/svuick#readme",

@@ -1,6 +1,6 @@
 {
   "name": "svhighlight",
-  "description": "Highlight code syntax in SvelteKit with TailwindCSS.",
+  "description": "Provides code highlighting for SvelteKit using highlight.js and TailwindCSS.",
   "repo_url": "https://github.com/bennymi/svhighlight",
   "author": "Benedikt Mielke",
   "homepage": "https://svhighlight.vercel.app/",

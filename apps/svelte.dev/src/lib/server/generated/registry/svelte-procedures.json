@@ -1,6 +1,7 @@
 {
   "name": "svelte-procedures",
-  "description": "Manage step-by-step procedures in Svelte applications.",
+  "description": "Assist with step-by-step forms and procedures in Svelte.",
+  "repo_url": "",
   "author": "esinx",
   "downloads": 13,
   "dependents": 0,

@@ -1,6 +1,6 @@
 {
   "name": "lexical-svelte",
-  "description": "Provides components and utilities for Lexical text editing in Svelte apps.",
+  "description": "Provides Svelte components for Lexical rich text editor.",
   "repo_url": "https://github.com/levi-bassey/lexical-svelte",
   "author": "Levi Bassey",
   "homepage": "https://github.com/levi-bassey/lexical-svelte#readme",
@@ -8,7 +8,8 @@
   "dependents": 0,
   "updated": "2022-05-17T19:36:45.869Z",
   "tags": [
-    "utility"
+    "ui",
+    "content"
   ],
   "svelte5": false,
   "runes": false

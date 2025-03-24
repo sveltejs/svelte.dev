@@ -1,6 +1,7 @@
 {
   "name": "@htmlbricks/hb-layout-desktop",
-  "description": "Create Bootstrap desktop layout component for Svelte applications.",
+  "description": "Svelte Bootstrap 5 WebComponent.",
+  "repo_url": "",
   "author": "Dario Caruso",
   "downloads": 295,
   "dependents": 1,

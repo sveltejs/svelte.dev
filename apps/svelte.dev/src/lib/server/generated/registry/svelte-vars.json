@@ -1,12 +1,13 @@
 {
   "name": "svelte-vars",
   "description": "Repurpose var declarations for reactive variables in Svelte.",
+  "repo_url": "",
   "author": "emmyarty",
   "downloads": 0,
   "dependents": 0,
   "updated": "2023-05-08T04:54:54.312Z",
   "tags": [
-    "utility",
+    "tooling",
     "preprocessor"
   ],
   "svelte5": false,

@@ -1,6 +1,7 @@
 {
   "name": "svelte-mac-os-frame",
-  "description": "Create macOS window frames in Svelte applications.",
+  "description": "Creates macOS window frame component for Svelte.",
+  "repo_url": "",
   "author": "nergel",
   "downloads": 1,
   "dependents": 0,

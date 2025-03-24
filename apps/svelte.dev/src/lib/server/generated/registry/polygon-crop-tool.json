@@ -1,13 +1,13 @@
 {
   "name": "polygon-crop-tool",
-  "description": "Crop images using polygon shapes in Svelte applications.",
+  "description": "Crop images using polygon or rectangle shapes in Svelte apps.",
+  "repo_url": "",
   "author": "Claudia Chin",
   "homepage": "https://github.com/claudiachin/polygon-crop-tool",
   "downloads": 0,
   "dependents": 0,
   "updated": "2023-06-19T21:06:43.675Z",
   "tags": [
-    "ui",
     "media"
   ],
   "svelte5": false,

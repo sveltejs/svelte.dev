@@ -1,6 +1,6 @@
 {
   "name": "@svelte-plugins/tooltips",
-  "description": "Simple tooltip action and component for Svelte.",
+  "description": "Simple tooltip action and component for Svelte applications.",
   "repo_url": "https://github.com/svelte-plugins/tooltips",
   "author": "Kieran Boyle",
   "homepage": "https://github.com/svelte-plugins/tooltips",

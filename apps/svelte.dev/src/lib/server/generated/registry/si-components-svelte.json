@@ -1,6 +1,6 @@
 {
   "name": "@si-components/svelte",
-  "description": "Use Simple Icons in Svelte components.",
+  "description": "Render Simple Icons in Svelte components.",
   "repo_url": "https://github.com/sachinraja/si-components",
   "author": "sachinraja",
   "homepage": "https://github.com/sachinraja/si-components/tree/main/packages/svelte#readme",

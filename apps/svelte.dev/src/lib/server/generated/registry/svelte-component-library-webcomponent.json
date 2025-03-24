@@ -1,6 +1,7 @@
 {
   "name": "svelte-component-library-webcomponent",
-  "description": "Build shareable Svelte component libraries with testing and Storybook.",
+  "description": "Template for building Svelte component libraries as web components.",
+  "repo_url": "",
   "author": "guilhermesnts",
   "downloads": 0,
   "dependents": 0,

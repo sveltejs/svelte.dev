@@ -1,6 +1,6 @@
 {
   "name": "svelte-skeleton-collapsible-sidebar",
-  "description": "Provide collapsible sidebar component for Svelte 5 and Skeleton UI.",
+  "description": "Collapsible sidebar component for Svelte 5 and Skeleton UI.",
   "repo_url": "https://github.com/CoffeeStraw/svelte-skeleton-collapsible-sidebar",
   "author": "CoffeeStraw",
   "homepage": "https://github.com/CoffeeStraw/svelte-skeleton-collapsible-sidebar",

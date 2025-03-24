@@ -1,6 +1,6 @@
 {
   "name": "svelte-specma",
-  "description": "Enables data validation in Svelte using Specma, a validation library.",
+  "description": "Validate data in Svelte using Specma predicates.",
   "repo_url": "https://github.com/davidsavoie1/svelte-specma",
   "author": "David Savoie",
   "homepage": "https://github.com/davidsavoie1/svelte-specma.git",

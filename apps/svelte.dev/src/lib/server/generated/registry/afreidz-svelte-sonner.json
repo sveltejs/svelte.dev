@@ -1,6 +1,7 @@
 {
   "name": "@afreidz/svelte-sonner",
-  "description": "Create toast notifications in Svelte applications.",
+  "description": "Provides opinionated toast component for Svelte.",
+  "repo_url": "",
   "author": "Robert Soriano",
   "downloads": 21,
   "dependents": 0,

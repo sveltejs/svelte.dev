@@ -1,6 +1,6 @@
 {
   "name": "svelte-websocket-stores",
-  "description": "Synchronize Svelte stores across WebSocket connections.",
+  "description": "Synchronize Svelte stores via WebSocket connections.",
   "repo_url": "https://github.com/xt449/svelte-websocket-stores",
   "author": "binarybanana",
   "homepage": "https://github.com/xt449/svelte-websocket-stores#readme",

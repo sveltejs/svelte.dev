@@ -1,6 +1,6 @@
 {
   "name": "svelte-dts",
-  "description": "Generate TypeScript declaration files for Svelte components.",
+  "description": "Generates TypeScript declaration files for Svelte components.",
   "repo_url": "https://github.com/andrelmlins/svelte-dts",
   "author": "André Lins",
   "homepage": "https://github.com/andrelmlins/svelte-dts",
@@ -8,8 +8,7 @@
   "dependents": 1,
   "updated": "2022-04-06T01:37:55.222Z",
   "tags": [
-    "tooling",
-    "preprocessor"
+    "tooling"
   ],
   "svelte5": false,
   "runes": false,

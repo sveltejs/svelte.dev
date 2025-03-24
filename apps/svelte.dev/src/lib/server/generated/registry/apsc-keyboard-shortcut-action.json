@@ -1,6 +1,6 @@
 {
   "name": "@apsc/keyboard-shortcut-action",
-  "description": "Trigger functions using keyboard shortcuts in Svelte.",
+  "description": "Trigger functions with keyboard shortcuts in Svelte.",
   "repo_url": "https://github.com/andrey-pavlenko/svelte-components",
   "author": "Andrey Pavlenko",
   "homepage": "https://github.com/andrey-pavlenko/svelte-components/tree/main/packages/keyboard-shortcut-action#readme",

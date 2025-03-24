@@ -1,6 +1,6 @@
 {
   "name": "@lagon/sveltekit",
-  "description": "Integrate SvelteKit with Lagon for serverless deployment.",
+  "description": "Integrate SvelteKit to deploy sites to Lagon serverless platform.",
   "repo_url": "https://github.com/lagonapp/lagon",
   "author": "matt.straka",
   "homepage": "https://github.com/lagonapp/lagon/tree/main/packages/integrations/sveltekit",
@@ -8,8 +8,9 @@
   "dependents": 1,
   "updated": "2023-06-29T17:37:54.721Z",
   "tags": [
-    "adapter"
+    "integration"
   ],
   "svelte5": false,
-  "runes": false
+  "runes": false,
+  "github_stars": 1343
 }

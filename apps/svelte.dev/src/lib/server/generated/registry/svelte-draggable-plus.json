@@ -1,6 +1,6 @@
 {
   "name": "svelte-draggable-plus",
-  "description": "Create drag-and-drop sortable lists in Svelte applications.",
+  "description": "Provides drag and drop sorting functionality for Svelte components.",
   "repo_url": "https://github.com/Alfred-Skyblue/svelte-draggable-plus",
   "author": "yangpanteng",
   "homepage": "https://github.com/Alfred-Skyblue/svelte-draggable-plus#readme",

@@ -1,12 +1,13 @@
 {
   "name": "@htmlbricks/hb-site-contacts-row",
-  "description": "Build site contacts web component.",
+  "description": "Create site contact rows using Svelte web components.",
+  "repo_url": "",
   "author": "Dario Caruso",
   "downloads": 228,
   "dependents": 0,
   "updated": "2025-03-09T03:10:35.147Z",
   "tags": [
-    "ui"
+    "component-library"
   ],
   "svelte5": false,
   "runes": false

@@ -4,9 +4,9 @@ import dotenv from 'dotenv';
 import fs, { mkdirSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import glob from 'tiny-glob/sync.js';
 import registry from '../../src/lib/registry.json' with { type: 'json' };
 import type { Package } from '../../src/lib/server/content.js';
+import { sort_packages } from '../../src/routes/(packages)/packages-search.js';
 import {
 	fetch_details_for_package,
 	fetch_downloads_for_package,
@@ -15,7 +15,7 @@ import {
 	request_queue,
 	sanitize_github_url,
 	stream_search_by_keywords,
-	structure_package_to_package,
+	structured_interim_package_to_package,
 	superfetch,
 	type StructuredInterimPackage
 } from './npm.js';
@@ -142,6 +142,8 @@ async function process_batches_through_llm({
 	const failed_llm = new Map<string, StructuredInterimPackage>();
 	let batch_counter = 0;
 
+	const repo_url_to_interim_package = new Map<string, Set<StructuredInterimPackage>>();
+
 	// Source of packages - either from search or from previous failed packages
 	const package_source = failed_packages
 		? create_map_batch_generator(failed_packages, batch_size)
@@ -264,69 +266,69 @@ async function process_batches_through_llm({
 				- "Convert Markdown to Svelte components."
 				
 				SVELTE 5 RUNES DETECTION:
-For each package, thoroughly analyze code examples to determine if they use Svelte 5 runes and include a "runes" boolean field:
+				For each package, thoroughly analyze code examples to determine if they use Svelte 5 runes and include a "runes" boolean field:
 
-1. Set "runes": true if ANY of these patterns appear in code examples:
-   
-   STATE MANAGEMENT:
-   - $state(...) - Reactive state declaration
-   - $state.raw(...) - Raw state without deep reactivity
-   - $state.snapshot(...) - Taking static snapshots of state
-   - $derived(...) - Derived reactive values
-   - $derived.by(() => {...}) - Complex derived calculations
-   
-   LIFECYCLE & EFFECTS:
-   - $effect(() => {...}) - Side effects when dependencies change
-   - $effect.pre(() => {...}) - Effects that run before DOM updates
-   - $effect.root(() => {...}) - Non-tracked effect scope
-   - $effect.tracking() - Detect if running in tracking context
-   
-   COMPONENT API:
-   - $props() - Component props declaration
-   - let { ...props } = $props() - Props destructuring
-   - $props.id() - Generate unique component instance ID
-   - $bindable(...) - Mark props as bindable by parent
-   - $host() - Access to custom element host
-   
-   DEBUGGING & UTILITIES:
-   - $inspect(...) - Debug reactive values
-   - $inspect.trace(...) - Trace function execution
-   - $inspect(...).with(...) - Custom inspect handling
-   - untrack(...) - Prevent tracking inside reactive context
-   
-   TEMPLATING FEATURES:
-   - {#snippet ...}{/snippet} - Snippet blocks (replaces slots)
-   - {@render ...} - Render tags for snippets
-   - createRawSnippet(...) - Programmatic snippet creation
-   
-   EVENT HANDLING:
-   - onclick={...}, onkeydown={...} etc. - Modern event attributes (not on:click)
-   - {...props} - Props spreading including event handlers
-   
-   REACTIVE VALUE PATTERNS:
-   - someValue.current - .current property access (except $store.current)
-   - MediaQuery/ReactiveValue usage from svelte/reactivity
-   - SvelteMap, SvelteSet, SvelteURL from svelte/reactivity
-   
-   IMPORTS & MODULE STRUCTURE:
-   - import {...} from 'svelte/reactivity' - Reactive utilities
-   - import { mount, hydrate } from 'svelte' - Component lifecycle
-   - .svelte.js or .svelte.ts file extensions mentioned
-   
-2. Set "runes": false if:
-   - Only legacy Svelte 4 patterns are detected:
-     - export let prop - Legacy props
-     - $: derived = ... - Legacy reactive declarations
-     - <slot> elements - Legacy content passing
-     - on:event handlers - Legacy event handling
-     - $$props, $$restProps - Legacy prop access
-     - createEventDispatcher - Legacy events
-   
-3. Consider package metadata:
-   - If package specifically mentions "Svelte 5" or "runes" support in description
-   - If package.json shows a dependency on "svelte": "^5" or similar
+				1. Set "runes": true if ANY of these patterns appear in code examples:
+					
+					STATE MANAGEMENT:
+					- $state(...) - Reactive state declaration
+					- $state.raw(...) - Raw state without deep reactivity
+					- $state.snapshot(...) - Taking static snapshots of state
+					- $derived(...) - Derived reactive values
+					- $derived.by(() => {...}) - Complex derived calculations
+					
+					LIFECYCLE & EFFECTS:
+					- $effect(() => {...}) - Side effects when dependencies change
+					- $effect.pre(() => {...}) - Effects that run before DOM updates
+					- $effect.root(() => {...}) - Non-tracked effect scope
+					- $effect.tracking() - Detect if running in tracking context
+					
+					COMPONENT API:
+					- $props() - Component props declaration
+					- let { ...props } = $props() - Props destructuring
+					- $props.id() - Generate unique component instance ID
+					- $bindable(...) - Mark props as bindable by parent
+					- $host() - Access to custom element host
+					
+					DEBUGGING & UTILITIES:
+					- $inspect(...) - Debug reactive values
+					- $inspect.trace(...) - Trace function execution
+					- $inspect(...).with(...) - Custom inspect handling
+					- untrack(...) - Prevent tracking inside reactive context
+					
+					TEMPLATING FEATURES:
+					- {#snippet ...}{/snippet} - Snippet blocks (replaces slots)
+					- {@render ...} - Render tags for snippets
+					- createRawSnippet(...) - Programmatic snippet creation
+					
+					EVENT HANDLING:
+					- onclick={...}, onkeydown={...} etc. - Modern event attributes (not on:click)
+					- {...props} - Props spreading including event handlers
+					
+					REACTIVE VALUE PATTERNS:
+					- someValue.current - .current property access (except $store.current)
+					- MediaQuery/ReactiveValue usage from svelte/reactivity
+					- SvelteMap, SvelteSet, SvelteURL from svelte/reactivity
+					
+					IMPORTS & MODULE STRUCTURE:
+					- import {...} from 'svelte/reactivity' - Reactive utilities
+					- import { mount, hydrate } from 'svelte' - Component lifecycle
+					- .svelte.js or .svelte.ts file extensions mentioned
+					
+				2. Set "runes": false if:
+					- Only legacy Svelte 4 patterns are detected:
+						- export let prop - Legacy props
+						- $: derived = ... - Legacy reactive declarations
+						- <slot> elements - Legacy content passing
+						- on:event handlers - Legacy event handling
+						- $$props, $$restProps - Legacy prop access
+						- createEventDispatcher - Legacy events
+					
+				3. Consider package metadata:
+					- If package specifically mentions "Svelte 5" or "runes" support in description
+					- If package.json shows a dependency on "svelte": "^5" or similar
 
-4. When in doubt, set "runes": false - be conservative with detection
+				4. When in doubt, set "runes": false - be conservative with detection
 
 				AVAILABLE TAGS:
 				${JSON.stringify(TAGS_PROMPT)}
@@ -364,12 +366,19 @@ For each package, thoroughly analyze code examples to determine if they use Svel
 				let updated_count = 0;
 
 				for (const [pkg_name] of packages) {
+					// Package was successfully analyzed as a Svelte package
+					const package_details = packages_map.get(pkg_name);
+					if (!package_details) continue;
+
+					if (package_details.meta.repo_url) {
+						if (!repo_url_to_interim_package.has(package_details.meta.repo_url)) {
+							repo_url_to_interim_package.set(package_details.meta.repo_url, new Set());
+						}
+
+						repo_url_to_interim_package.get(package_details.meta.repo_url)!.add(package_details);
+					}
+
 					if (json[pkg_name]) {
-						// Package was successfully analyzed as a Svelte package
-						const package_details = packages_map.get(pkg_name);
-
-						if (!package_details) continue;
-
 						package_details.meta.tags = json[pkg_name].tags ?? [];
 
 						if (package_details.meta.tags.length === 0) continue;
@@ -388,7 +397,7 @@ For each package, thoroughly analyze code examples to determine if they use Svel
 						updated_count++;
 						console.log(`[${batch_id}] Tagged ${pkg_name}: ${JSON.stringify(json[pkg_name].tags)}`);
 
-						PackageCache.set(pkg_name, structure_package_to_package(package_details));
+						PackageCache.set(pkg_name, structured_interim_package_to_package(package_details));
 					}
 				}
 
@@ -448,6 +457,23 @@ For each package, thoroughly analyze code examples to determine if they use Svel
 				svelte_packages.set(pkg_name, pkg_data);
 			} else {
 				non_svelte_packages.set(pkg_name, pkg_data);
+			}
+		}
+
+		console.log(repo_url_to_interim_package);
+
+		// Now find the packages that are forks
+		for (const set of repo_url_to_interim_package.values()) {
+			if (set.size <= 1) continue;
+
+			// Now, get the one with maximum popularity
+			const arr = Array.from(set);
+			const max = arr.sort((a, b) => sort_packages(a, b, 'popularity'))[0];
+
+			// Get the other forks, and mark them as forks
+			for (const pkg of arr.filter((p) => p !== max)) {
+				pkg.meta.fork_of = max.package_json.name;
+				PackageCache.set(pkg.package_json.name, structured_interim_package_to_package(pkg));
 			}
 		}
 
@@ -658,7 +684,7 @@ async function* create_map_batch_generator(
 	}
 }
 
-for (let i = 0; i < 3; i++) {
+for (let i = 0; i < 1; i++) {
 	await process_batches_through_llm();
 }
 

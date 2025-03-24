@@ -1,6 +1,7 @@
 {
   "name": "@andrictham/syncedstore-svelte",
-  "description": "Create Svelte helper for SyncedStore.",
+  "description": "Provide Svelte helper for SyncedStore.",
+  "repo_url": "",
   "author": "andrictham",
   "downloads": 3,
   "dependents": 0,

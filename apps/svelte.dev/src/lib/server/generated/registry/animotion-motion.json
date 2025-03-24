@@ -1,6 +1,6 @@
 {
   "name": "@animotion/motion",
-  "description": "Animate values over time in Svelte applications.",
+  "description": "Svelte animation library for animating values over time.",
   "repo_url": "https://github.com/animotionjs/motion",
   "author": "animotionjs",
   "homepage": "https://animotion.pages.dev",
@@ -12,5 +12,5 @@
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 45
+  "github_stars": 46
 }

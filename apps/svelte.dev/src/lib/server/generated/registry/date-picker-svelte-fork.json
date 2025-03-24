@@ -1,6 +1,6 @@
 {
   "name": "date-picker-svelte-fork",
-  "description": "Offer date and time picker component for Svelte.",
+  "description": "Provide date and time picker for Svelte applications.",
   "repo_url": "https://github.com/phongcao1998/date-picker-svelte",
   "author": "Kasper Henningsen",
   "homepage": "https://date-picker-svelte.kasper.space",

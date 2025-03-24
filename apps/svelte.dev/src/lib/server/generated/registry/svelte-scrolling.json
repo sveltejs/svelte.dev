@@ -1,6 +1,6 @@
 {
   "name": "svelte-scrolling",
-  "description": "Scroll to elements with smooth animation in Svelte.",
+  "description": "Scroll to elements with smooth animation in Svelte applications.",
   "repo_url": "https://github.com/valmisson/svelte-scrolling",
   "author": "Valmisson Grizorte",
   "homepage": "https://github.com/valmisson/svelte-scrolling#readme",

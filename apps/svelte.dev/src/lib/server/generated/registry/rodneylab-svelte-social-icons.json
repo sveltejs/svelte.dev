@@ -1,6 +1,6 @@
 {
   "name": "@rodneylab/svelte-social-icons",
-  "description": "Render beautiful, easy SVG social icons in Svelte.",
+  "description": "Render SVG social media icons in Svelte.",
   "repo_url": "https://github.com/rodneylab/svelte-social-icons",
   "author": "Rodney Lab",
   "homepage": "https://github.com/rodneylab/svelte-social-icons#readme",

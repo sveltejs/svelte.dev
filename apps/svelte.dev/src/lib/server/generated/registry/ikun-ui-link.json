@@ -1,6 +1,7 @@
 {
   "name": "@ikun-ui/link",
-  "description": "Create link components for Svelte UI.",
+  "description": "Create link components for Svelte apps.",
+  "repo_url": "",
   "author": "baiwusanyu",
   "downloads": 30,
   "dependents": 1,

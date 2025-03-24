@@ -1,6 +1,6 @@
 {
   "name": "@kucrut/svelte-location-picker",
-  "description": "Implement simple location picker for Svelte projects.",
+  "description": "Create location picker for Svelte projects.",
   "repo_url": "https://gitlab.com/kucrut/svelte-location-picker",
   "author": "kucrut",
   "homepage": "https://kucrut.gitlab.io/svelte-location-picker",

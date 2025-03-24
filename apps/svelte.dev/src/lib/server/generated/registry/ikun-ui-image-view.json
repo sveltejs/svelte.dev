@@ -1,6 +1,7 @@
 {
   "name": "@ikun-ui/image-view",
-  "description": "View images with zoom, rotate, and pan features.",
+  "description": "Display images with zoom and other interactive features in Svelte.",
+  "repo_url": "",
   "author": "baiwusanyu",
   "downloads": 12,
   "dependents": 2,

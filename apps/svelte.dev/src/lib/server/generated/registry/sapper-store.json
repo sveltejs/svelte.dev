@@ -1,6 +1,6 @@
 {
   "name": "sapper-store",
-  "description": "Manage Sapper/Svelte state using actions and mutations.",
+  "description": "Manage Svelte state with actions and mutations.",
   "repo_url": "https://github.com/elcobvg/sapper-store",
   "author": "Elco Brouwer von Gonzenbach",
   "homepage": "https://github.com/elcobvg/sapper-store#readme",
@@ -11,5 +11,6 @@
     "utility"
   ],
   "svelte5": false,
-  "runes": false
+  "runes": false,
+  "github_stars": 5
 }

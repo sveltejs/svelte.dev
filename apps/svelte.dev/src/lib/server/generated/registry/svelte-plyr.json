@@ -1,6 +1,6 @@
 {
   "name": "svelte-plyr",
-  "description": "Svelte wrapper for Plyr.js, a customizable media player.",
+  "description": "Thin Svelte wrapper around Plyr.js for video/audio playback.",
   "repo_url": "https://github.com/benwoodward/svelte-plyr",
   "author": "Ben Woodward",
   "homepage": "https://github.com/benwoodward/svelte-plyr#readme",
@@ -8,8 +8,7 @@
   "dependents": 0,
   "updated": "2020-01-24T21:43:21.714Z",
   "tags": [
-    "media",
-    "ui"
+    "media"
   ],
   "svelte5": false,
   "runes": false,

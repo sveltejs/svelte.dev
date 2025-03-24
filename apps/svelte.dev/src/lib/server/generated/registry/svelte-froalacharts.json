@@ -1,6 +1,6 @@
 {
   "name": "svelte-froalacharts",
-  "description": "Create charts in Svelte applications using FroalaCharts.",
+  "description": "Svelte component for FroalaCharts, create interactive charts.",
   "repo_url": "https://github.com/froala/svelte-froalacharts",
   "author": "froala",
   "homepage": "https://github.com/froala/svelte-froalacharts",

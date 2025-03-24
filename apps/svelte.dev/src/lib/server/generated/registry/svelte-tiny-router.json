@@ -1,6 +1,6 @@
 {
   "name": "svelte-tiny-router",
-  "description": "Implement simple, efficient declarative routing in Svelte 5.",
+  "description": "Simple, efficient declarative routing library for Svelte 5 with runes.",
   "repo_url": "https://github.com/notnotsamuel/svelte-tiny-router",
   "author": "notnotsamuel",
   "homepage": "https://github.com/notnotsamuel/svelte-tiny-router#readme",

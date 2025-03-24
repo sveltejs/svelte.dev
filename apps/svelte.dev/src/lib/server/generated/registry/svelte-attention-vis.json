@@ -1,6 +1,7 @@
 {
   "name": "svelte-attention-vis",
-  "description": "Visualize connectivity matrices between tokens with Svelte component.",
+  "description": "Visualize connectivity matrices between tokens in Svelte.",
+  "repo_url": "",
   "author": "Ben Hoover",
   "downloads": 0,
   "dependents": 0,

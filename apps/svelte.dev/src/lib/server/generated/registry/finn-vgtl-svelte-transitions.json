@@ -1,6 +1,6 @@
 {
   "name": "@finn-vgtl/svelte-transitions",
-  "description": "Provide CSS transitions for Svelte components.",
+  "description": "Collection of CSS transitions for Svelte.",
   "repo_url": "https://github.com/finn-vgtl/svelte-transitions",
   "author": "Finn Voigtländer",
   "homepage": "https://github.com/finn-vgtl/svelte-transitions#readme",

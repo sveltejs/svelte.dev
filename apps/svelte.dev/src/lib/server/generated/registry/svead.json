@@ -1,6 +1,6 @@
 {
   "name": "svead",
-  "description": "Add meta tags and structured data to SvelteKit apps.",
+  "description": "Provides Svelte head component for SEO and meta tag management.",
   "repo_url": "https://github.com/spences10/svead",
   "author": "Scott Spence",
   "homepage": "https://github.com/spences10/svead#readme",

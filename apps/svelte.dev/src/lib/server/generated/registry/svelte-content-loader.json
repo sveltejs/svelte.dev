@@ -1,6 +1,6 @@
 {
   "name": "svelte-content-loader",
-  "description": "Generate placeholder loading components for Svelte.",
+  "description": "Create placeholder loading components for Svelte apps.",
   "repo_url": "https://github.com/PaulMaly/svelte-content-loader",
   "author": "PaulMaly",
   "homepage": "https://github.com/PaulMaly/svelte-content-loader#readme",

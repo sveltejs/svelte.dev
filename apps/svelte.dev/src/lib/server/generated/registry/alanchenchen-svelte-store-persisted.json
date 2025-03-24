@@ -1,6 +1,6 @@
 {
   "name": "@alanchenchen/svelte-store-persisted",
-  "description": "Persist Svelte store data using local/session storage.",
+  "description": "Persist Svelte store data to browser storage.",
   "repo_url": "https://github.com/alanchenchen/svelte-store-persisted",
   "author": "Alan Chen",
   "homepage": "https://github.com/alanchenchen/svelte-store-persisted",
@@ -11,5 +11,6 @@
     "utility"
   ],
   "svelte5": false,
-  "runes": false
+  "runes": false,
+  "github_stars": 2
 }

@@ -1,6 +1,6 @@
 {
   "name": "svelte-ace",
-  "description": "Provides Ace Editor component for Svelte with TypeScript support.",
+  "description": "Integrate Ace Editor with Svelte, with TypeScript support.",
   "repo_url": "https://github.com/nateshmbhat/svelte-ace",
   "author": "Natesh Bhat",
   "homepage": "https://github.com/nateshmbhat/svelte-ace#readme",

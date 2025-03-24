@@ -1,6 +1,6 @@
 {
   "name": "antillestores-simple-modal",
-  "description": "Create simple, content-agnostic modal components for Svelte apps.",
+  "description": "Create simple, content-agnostic modal for Svelte apps.",
   "repo_url": "https://github.com/flekschas/svelte-simple-modal",
   "author": "Fritz Lekschas",
   "homepage": "https://github.com/flekschas/svelte-simple-modal#readme",
@@ -12,5 +12,5 @@
   ],
   "svelte5": false,
   "runes": false,
-  "github_stars": 424
+  "github_stars": 425
 }

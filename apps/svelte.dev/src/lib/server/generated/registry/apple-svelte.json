@@ -1,6 +1,6 @@
 {
   "name": "apple-svelte",
-  "description": "Build Svelte UI components based on Apple's Human Interface design.",
+  "description": "Provides component library based on Apple's Human Interface.",
   "repo_url": "https://github.com/Carza-104/apple-svelte",
   "author": "Carza-104",
   "homepage": "https://apple-svelte.vercel.app",
@@ -8,8 +8,7 @@
   "dependents": 0,
   "updated": "2024-08-23T19:38:25.301Z",
   "tags": [
-    "component-library",
-    "ui"
+    "component-library"
   ],
   "svelte5": false,
   "runes": false,

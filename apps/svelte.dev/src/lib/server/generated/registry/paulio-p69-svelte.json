@@ -1,6 +1,6 @@
 {
   "name": "@paulio/p69-svelte",
-  "description": "Inject compile-time tokens into Svelte component CSS.",
+  "description": "Injects compile-time tokens into Svelte component CSS styles.",
   "repo_url": "https://github.com/PaulioRandall/p69-svelte",
   "author": "Paul Williams",
   "homepage": "https://github.com/PaulioRandall/p69-svelte#readme",

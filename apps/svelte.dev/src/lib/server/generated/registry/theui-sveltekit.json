@@ -1,6 +1,6 @@
 {
   "name": "theui-sveltekit",
-  "description": "Build accessible SvelteKit components with TailwindCSS.",
+  "description": "Create accessible, customizable UI components for SvelteKit.",
   "repo_url": "https://github.com/mbparvezme/theui-svelte",
   "author": "M B Parvez",
   "homepage": "https://www.theui.dev/r/skc",
@@ -8,8 +8,7 @@
   "dependents": 1,
   "updated": "2024-05-23T20:10:39.463Z",
   "tags": [
-    "component-library",
-    "ui"
+    "component-library"
   ],
   "svelte5": false,
   "runes": false,

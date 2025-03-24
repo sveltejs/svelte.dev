@@ -1,6 +1,6 @@
 {
   "name": "svelte-store2",
-  "description": "Extend Svelte stores with get() method.",
+  "description": "Extend Svelte stores with get() method for retrieving values.",
   "repo_url": "https://github.com/vkurko/svelte-store2",
   "author": "vkurko",
   "homepage": "https://github.com/vkurko/svelte-store2#readme",

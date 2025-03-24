@@ -1,6 +1,6 @@
 {
   "name": "@daks.dev/svelte.sdk",
-  "description": "Provide a Svelte SDK for building Svelte libraries.",
+  "description": "Provide DAKS.DEV Svelte SDK.",
   "repo_url": "https://github.com/daks-dev/svelte",
   "author": "DVA",
   "homepage": "https://svelte.daks.dev",

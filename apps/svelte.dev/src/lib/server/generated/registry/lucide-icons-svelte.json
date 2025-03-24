@@ -1,6 +1,6 @@
 {
   "name": "lucide-icons-svelte",
-  "description": "Import Lucide icons as Svelte components.",
+  "description": "Use Lucide icons as Svelte components.",
   "repo_url": "https://github.com/ElectronicBlueberry/svelte-lucide-icons",
   "author": "Laila L.",
   "homepage": "https://github.com/ElectronicBlueberry/svelte-lucide-icons#readme",
@@ -11,5 +11,6 @@
     "ui"
   ],
   "svelte5": false,
-  "runes": false
+  "runes": false,
+  "github_stars": 1
 }

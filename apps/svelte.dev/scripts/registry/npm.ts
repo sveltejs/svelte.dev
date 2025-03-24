@@ -515,12 +515,14 @@ export type StructuredInterimPackage = {
 		github_stars?: number;
 		svelte5: boolean;
 		runes: boolean;
+		repo_url: string;
+		fork_of?: string;
 	};
 	// Returned contents from registry.npmjs.org API
 	package_json: any;
 };
 
-export function structure_package_to_package(
+export function structured_interim_package_to_package(
 	structured_package: StructuredInterimPackage
 ): Package {
 	const data = {} as Package;
@@ -528,8 +530,7 @@ export function structure_package_to_package(
 	data.name = structured_package.package_json.name;
 	data.description = structured_package.meta.description;
 
-	data.repo_url = structured_package.package_json.repository?.url;
-	if (data.repo_url) data.repo_url = sanitize_github_url(data.repo_url);
+	data.repo_url = structured_package.meta.repo_url;
 
 	data.author =
 		structured_package.package_json.author?.name ??
@@ -604,7 +605,8 @@ export async function* stream_search_by_keywords({
 							last_updated: '',
 							tags: [],
 							svelte5: false,
-							runes: false
+							runes: false,
+							repo_url: ''
 						},
 						package_json: null as any
 					};
@@ -649,6 +651,10 @@ export async function* stream_search_by_keywords({
 							const is_svelte_5 = supports_svelte5(svelte_version);
 							if (is_svelte_5) {
 								interim_pkg.meta.svelte5 = true;
+							}
+
+							if (latest_package_json.repository) {
+								interim_pkg.meta.repo_url = sanitize_github_url(latest_package_json.repository.url);
 							}
 
 							if (latest_version && response.time && response.time[latest_version]) {

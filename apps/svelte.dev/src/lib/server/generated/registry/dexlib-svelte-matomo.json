@@ -1,6 +1,6 @@
 {
   "name": "@dexlib/svelte-matomo",
-  "description": "Integrate Matomo analytics tracking into Svelte apps.",
+  "description": "Loads Matomo script, exposes asynchronous Matomo API for Svelte.",
   "repo_url": "https://gitlab.com/dexterlabs/dexlib",
   "author": "dexterlabs",
   "homepage": "https://gitlab.com/dexterlabs/dexlib/-/tree/master/packages/svelte-matomo",

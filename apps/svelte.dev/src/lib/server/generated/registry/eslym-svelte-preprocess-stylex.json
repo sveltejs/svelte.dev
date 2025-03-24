@@ -1,6 +1,6 @@
 {
   "name": "@eslym/svelte-preprocess-stylex",
-  "description": "Makes StyleX more readable in Svelte components.",
+  "description": "Preprocess Svelte to make StyleX more readable.",
   "repo_url": "https://github.com/eslym/svelte-preprocess-stylex",
   "author": "0nepeop1e",
   "downloads": 63,

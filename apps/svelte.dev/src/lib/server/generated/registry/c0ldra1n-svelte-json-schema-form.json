@@ -1,6 +1,7 @@
 {
   "name": "@c0ldra1n/svelte-json-schema-form",
-  "description": "Generate forms from JSON schema in Svelte.",
+  "description": "Generates forms from JSON schema in Svelte applications.",
+  "repo_url": "",
   "author": "c0ldra1n",
   "downloads": 25,
   "dependents": 0,

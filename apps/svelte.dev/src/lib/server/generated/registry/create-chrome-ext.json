@@ -1,6 +1,6 @@
 {
   "name": "create-chrome-ext",
-  "description": "Scaffold Chrome extensions with Svelte support.",
+  "description": "Scaffold Chrome extensions with Svelte and Vite.",
   "repo_url": "https://github.com/guocaoyi/create-chrome-ext",
   "author": "yalda",
   "homepage": "https://github.com/guocaoyi",
@@ -12,5 +12,5 @@
   ],
   "svelte5": false,
   "runes": false,
-  "github_stars": 1849
+  "github_stars": 1851
 }

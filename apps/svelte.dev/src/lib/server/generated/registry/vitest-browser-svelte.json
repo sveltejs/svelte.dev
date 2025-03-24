@@ -1,6 +1,6 @@
 {
   "name": "vitest-browser-svelte",
-  "description": "Renders Svelte components in Vitest Browser Mode for testing.",
+  "description": "Render Svelte components in Vitest Browser Mode for testing.",
   "repo_url": "https://github.com/vitest-dev/vitest-browser-svelte",
   "author": "Vitest Team",
   "homepage": "https://github.com/vitest-dev/vitest-browser-svelte#readme",

@@ -1,6 +1,6 @@
 {
   "name": "@neodrag/svelte",
-  "description": "Add drag-and-drop functionality to Svelte elements.",
+  "description": "Svelte action to add dragging to apps.",
   "repo_url": "https://github.com/PuruVJ/neodrag",
   "author": "Puru Vijay",
   "homepage": "https://neodrag.dev/docs/svelte",

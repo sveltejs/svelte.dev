@@ -1,6 +1,6 @@
 {
   "name": "svelte-cleanable-store",
-  "description": "Offer custom Svelte store with built-in cleanup support on subscribe.",
+  "description": "Create custom Svelte stores with built-in cleanup support.",
   "repo_url": "https://github.com/Skaldebane/svelte-cleanable-store",
   "author": "Houssam Elbadissi",
   "homepage": "https://github.com/Skaldebane/svelte-cleanable-store#readme",

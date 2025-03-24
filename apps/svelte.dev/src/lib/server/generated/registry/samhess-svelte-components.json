@@ -1,6 +1,6 @@
 {
   "name": "@samhess/svelte-components",
-  "description": "Offer address autocompletion, datatable, and treemap components.",
+  "description": "Provide address autocompletion, datatable, and treemap components.",
   "repo_url": "https://github.com/samhess/svelte-components",
   "author": "samhess",
   "homepage": "https://svelte-components-black.vercel.app",

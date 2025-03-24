@@ -1,6 +1,6 @@
 {
   "name": "svelte-observable",
-  "description": "Use observables in Svelte components easily.",
+  "description": "Use observables in Svelte components.",
   "repo_url": "https://github.com/timhall/svelte-observable",
   "author": "Tim Hall",
   "homepage": "https://github.com/timhall/svelte-observable#readme",
@@ -12,5 +12,5 @@
   ],
   "svelte5": false,
   "runes": false,
-  "github_stars": 62
+  "github_stars": 63
 }

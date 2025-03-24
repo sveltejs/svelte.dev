@@ -1,6 +1,6 @@
 {
   "name": "@arackaf-svelte/svelte-loadable",
-  "description": "Dynamically load Svelte components.",
+  "description": "Dynamically loads Svelte components.",
   "repo_url": "https://github.com/arackaf/svelte-loadable",
   "author": "Christian Kaisermann",
   "homepage": "https://github.com/arackaf/svelte-loadable#readme",

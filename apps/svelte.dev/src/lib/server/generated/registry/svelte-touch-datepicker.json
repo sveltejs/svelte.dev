@@ -1,6 +1,6 @@
 {
   "name": "svelte-touch-datepicker",
-  "description": "Create native-like touch datepicker components for Svelte apps.",
+  "description": "Provides native-like touch datepicker for Svelte.",
   "repo_url": "https://github.com/SharifClick/svelte-touch-datepicker",
   "author": "Sharif Ahmed",
   "homepage": "https://github.com/SharifClick/svelte-touch-datepicker",

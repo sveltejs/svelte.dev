@@ -1,6 +1,7 @@
 {
   "name": "@ikun-ui/breadcrumb",
-  "description": "Generate breadcrumb navigation for Svelte apps.",
+  "description": "Build breadcrumb navigation component for Svelte apps.",
+  "repo_url": "",
   "author": "baiwusanyu",
   "downloads": 28,
   "dependents": 1,

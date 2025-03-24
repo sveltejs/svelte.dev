@@ -1,6 +1,6 @@
 {
   "name": "@splidejs/svelte-splide",
-  "description": "Svelte component for Splide slider/carousel.",
+  "description": "Svelte component for the Splide slider/carousel.",
   "repo_url": "https://github.com/Splidejs/svelte-splide",
   "author": "Naotoshi Fujita",
   "homepage": "https://github.com/Splidejs/svelte-splide#readme",

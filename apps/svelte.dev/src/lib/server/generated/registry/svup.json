@@ -1,6 +1,6 @@
 {
   "name": "svup",
-  "description": "Validate Svelte forms using Yup schema with Svelte actions.",
+  "description": "Implement Yup validator for Svelte forms using Svelte actions.",
   "repo_url": "https://github.com/FalkaiPeter/svup",
   "author": "Falkai Peter",
   "homepage": "https://github.com/FalkaiPeter/svup#readme",

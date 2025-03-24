@@ -1,6 +1,7 @@
 {
   "name": "@jacksonthall22/svelte-chess",
-  "description": "Create fully playable chess component for Svelte.",
+  "description": "Creates fully playable chess component for Svelte.",
+  "repo_url": "",
   "author": "jacksonthall22",
   "homepage": "https://github.com/gtim/svelte-chess#readme",
   "downloads": 3,

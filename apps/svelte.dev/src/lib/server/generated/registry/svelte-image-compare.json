@@ -1,6 +1,6 @@
 {
   "name": "svelte-image-compare",
-  "description": "Compare images using a slider in Svelte.",
+  "description": "Create image comparison sliders for Svelte applications.",
   "repo_url": "https://github.com/PaulMaly/svelte-image-compare",
   "author": "PaulMaly",
   "homepage": "https://github.com/PaulMaly/svelte-image-compare#readme",

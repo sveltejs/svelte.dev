@@ -1,6 +1,6 @@
 {
   "name": "@monokai/monoco-svelte",
-  "description": "Apply custom corners and borders to Svelte components.",
+  "description": "Create custom (squircle) corners and borders for Svelte components.",
   "repo_url": "https://github.com/monokai/monoco-svelte",
   "author": "Monokai",
   "homepage": "https://github.com/monokai/monoco-svelte#readme",

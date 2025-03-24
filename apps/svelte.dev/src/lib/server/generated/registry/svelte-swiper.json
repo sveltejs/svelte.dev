@@ -1,6 +1,6 @@
 {
   "name": "svelte-swiper",
-  "description": "Integrate Swiper.js for Svelte, create touch-enabled carousels.",
+  "description": "Implement Swiper.js carousels in Svelte applications.",
   "repo_url": "https://github.com/beomy/svelte-swiper",
   "author": "Hyo Bum Lee",
   "homepage": "https://github.com/beomy/svelte-swiper#readme",

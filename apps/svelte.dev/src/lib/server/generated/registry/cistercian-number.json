@@ -1,6 +1,7 @@
 {
   "name": "cistercian-number",
-  "description": "Display Cistercian numbers as SVG paths in Svelte components.",
+  "description": "Display Cistercian numbers as SVG paths in Svelte.",
+  "repo_url": "",
   "author": "mallsoft",
   "homepage": "https://github.com/mallsoft/cistercianNumber#readme",
   "downloads": 0,

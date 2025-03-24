@@ -1,6 +1,6 @@
 {
   "name": "@baileyherbert/tinro",
-  "description": "Provide a tiny declarative router for Svelte applications.",
+  "description": "Create tiny, declarative router for Svelte applications.",
   "repo_url": "https://github.com/baileyherbert/tinro",
   "author": "Alexey Schebelev",
   "homepage": "https://github.com/baileyherbert/tinro#readme",

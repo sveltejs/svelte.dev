@@ -1,6 +1,6 @@
 {
   "name": "poudriere",
-  "description": "Monitor Poudriere build system with SvelteKit.",
+  "description": "Monitor Poudriere builds with Svelte and SvelteKit.",
   "repo_url": "https://github.com/fel1x-developer/poudriere-web-app",
   "author": "Minsoo Choo",
   "homepage": "https://github.com/fel1x-developer/poudriere-web-app",

@@ -1,6 +1,7 @@
 {
   "name": "@htmlbricks/hb-editor-video",
-  "description": "Provides web component for creating video editor in Svelte.",
+  "description": "Svelte-Bootstrap video editor component.",
+  "repo_url": "",
   "author": "Dario Caruso",
   "downloads": 453,
   "dependents": 2,

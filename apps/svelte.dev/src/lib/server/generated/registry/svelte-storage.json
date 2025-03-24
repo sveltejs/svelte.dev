@@ -1,6 +1,7 @@
 {
   "name": "svelte-storage",
-  "description": "Manage local and session storage in Svelte applications.",
+  "description": "Provide local and session storage for Svelte applications.",
+  "repo_url": "",
   "author": "7korobi",
   "homepage": "https://github.com/7korobi/svelte-storage/blob/main/src/lib/",
   "downloads": 0,

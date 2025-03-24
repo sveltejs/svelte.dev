@@ -1,6 +1,7 @@
 {
   "name": "svelte-math",
   "description": "Render math with MathML via Temml in Svelte components.",
+  "repo_url": "",
   "author": "Kelvin Soh",
   "downloads": 5,
   "dependents": 0,

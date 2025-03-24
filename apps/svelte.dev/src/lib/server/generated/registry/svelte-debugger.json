@@ -1,6 +1,6 @@
 {
   "name": "svelte-debugger",
-  "description": "Format and display JSON data within Svelte applications.",
+  "description": "Debug Svelte apps with a JSON debugger component.",
   "repo_url": "https://github.com/ftonato/svelte-debugger",
   "author": "Ademílson F. Tonato - @ftonato",
   "homepage": "https://github.com/ftonato/svelte-debugger#readme",

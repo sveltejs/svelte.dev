@@ -1,6 +1,6 @@
 {
   "name": "svelte-check",
-  "description": "Check Svelte code for errors and warnings.",
+  "description": "Provides CLI diagnostics checks for Svelte code.",
   "repo_url": "https://github.com/sveltejs/language-tools",
   "author": "The Svelte Community",
   "homepage": "https://github.com/sveltejs/language-tools#readme",

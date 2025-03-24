@@ -1,6 +1,6 @@
 {
   "name": "@twind/with-sveltekit",
-  "description": "Integrate Twind with SvelteKit projects.",
+  "description": "Integrates Twind with SvelteKit projects seamlessly.",
   "repo_url": "https://github.com/tw-in-js/twind",
   "author": "Sascha Tandel",
   "homepage": "https://twind.style",
@@ -13,5 +13,5 @@
   ],
   "svelte5": false,
   "runes": false,
-  "github_stars": 3847
+  "github_stars": 3848
 }

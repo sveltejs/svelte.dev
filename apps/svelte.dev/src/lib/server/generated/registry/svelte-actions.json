@@ -1,6 +1,6 @@
 {
   "name": "svelte-actions",
-  "description": "Implement various Svelte actions for enhanced user interactions.",
+  "description": "Create Svelte actions for various DOM interactions.",
   "repo_url": "https://github.com/sw-yx/svelte-actions",
   "author": "swyx",
   "homepage": "https://github.com/sw-yx/svelte-actions#readme",

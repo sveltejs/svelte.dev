@@ -1,6 +1,6 @@
 {
   "name": "svelte-weather",
-  "description": "Provide SVG weather icons for Svelte applications.",
+  "description": "Display SVG weather icons in Svelte applications.",
   "repo_url": "https://github.com/shinokada/svelte-weather",
   "author": "Shinichi Okada",
   "homepage": "https://svelte-weather-icons.codewithshin.com/",

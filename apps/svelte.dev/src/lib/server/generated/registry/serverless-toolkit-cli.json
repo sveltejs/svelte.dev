@@ -1,6 +1,6 @@
 {
   "name": "@serverless-toolkit/cli",
-  "description": "Develop serverless applications with Svelte and AWS CDK.",
+  "description": "CLI tool for serverless application development with Svelte and AWS CDK.",
   "repo_url": "https://github.com/serverless-toolkit/cli",
   "author": "mikebild",
   "homepage": "https://github.com/serverless-toolkit/cli#readme",

@@ -1,6 +1,7 @@
 {
   "name": "svelte-client-components",
   "description": "Preprocessor for Svelte client components.",
+  "repo_url": "",
   "author": "pablopang",
   "downloads": 31,
   "dependents": 0,

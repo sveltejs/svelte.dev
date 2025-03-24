@@ -1,6 +1,6 @@
 {
   "name": "svelte-route",
-  "description": "Provides simple routing functionality for Svelte applications.",
+  "description": "Implement simple routing for Svelte applications.",
   "repo_url": "https://github.com/imsamtar/svelte-route",
   "author": "SAMEER TARIQ",
   "homepage": "https://github.com/imsamtar/svelte-route#readme",

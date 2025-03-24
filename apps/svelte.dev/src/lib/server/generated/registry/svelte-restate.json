@@ -1,6 +1,6 @@
 {
   "name": "svelte-restate",
-  "description": "Create immutable store for Svelte with Redux Devtools.",
+  "description": "Manage immutable state in Svelte with Redux Devtools.",
   "repo_url": "https://github.com/endenwer/svelte-restate",
   "author": "Stepan Lusnikov",
   "homepage": "https://github.com/endenwer/svelte-restate#readme",

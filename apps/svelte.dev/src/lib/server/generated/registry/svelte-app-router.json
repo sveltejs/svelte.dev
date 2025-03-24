@@ -1,6 +1,6 @@
 {
   "name": "svelte-app-router",
-  "description": "Implement simple SPA routing with hash-based navigation in Svelte.",
+  "description": "Create simple SPA routing with Svelte.",
   "repo_url": "https://github.com/coussej/svelte-app-router",
   "author": "Jeroen Coussement",
   "homepage": "https://github.com/coussej/svelte-app-router#readme",

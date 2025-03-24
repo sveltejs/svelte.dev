@@ -1,6 +1,6 @@
 {
   "name": "@benzara/svelte-animated-counter",
-  "description": "Create animated counter components for Svelte.",
+  "description": "Create animated counter component for Svelte.",
   "repo_url": "https://github.com/benzara-tahar/svelte-animated-counter",
   "author": "Benzara Tahar Benlahcene",
   "homepage": "https://svelte-animated-counter.vercel.app",

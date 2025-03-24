@@ -1,6 +1,6 @@
 {
   "name": "@egjs/svelte-grid",
-  "description": "Arrange items according to various grid types in Svelte.",
+  "description": "Arrange items according to grid types.",
   "repo_url": "https://github.com/naver/egjs-grid",
   "author": "NAVER Corp.",
   "homepage": "https://github.com/naver/egjs-grid",

@@ -1,6 +1,6 @@
 {
   "name": "svelte-skeleton",
-  "description": "Creates SVG skeletons to improve UX of loading images.",
+  "description": "Create SVG skeletons to improve UX of loading images and interfaces.",
   "repo_url": "https://github.com/denisstasyev/svelte-skeleton",
   "author": "Denis Stasyev",
   "homepage": "https://github.com/denisstasyev/svelte-skeleton#readme",

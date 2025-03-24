@@ -1,10 +1,10 @@
 {
   "name": "maska",
-  "description": "Create input masks for Vanilla JS, Vue, Alpine.js and Svelte.",
+  "description": "Provides a simple zero-dependency input mask for Svelte.",
   "repo_url": "https://github.com/beholdr/maska",
   "author": "Alexander Shabunevich",
   "homepage": "https://beholdr.github.io/maska/",
-  "downloads": 183963,
+  "downloads": 184579,
   "dependents": 184,
   "updated": "2025-03-22T18:56:06.438Z",
   "tags": [
@@ -12,5 +12,5 @@
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 1860
+  "github_stars": 1861
 }

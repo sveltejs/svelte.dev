@@ -1,6 +1,6 @@
 {
   "name": "@cfcs/svelte",
-  "description": "Create framework components for Svelte.",
+  "description": "Create framework components supporting Svelte.",
   "repo_url": "https://github.com/naver/cfcs",
   "author": "NAVER Corp.",
   "homepage": "https://naver.github.io/cfcs",

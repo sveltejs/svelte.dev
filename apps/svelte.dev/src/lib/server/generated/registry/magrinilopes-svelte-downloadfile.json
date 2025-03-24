@@ -1,14 +1,14 @@
 {
   "name": "@magrinilopes/svelte-downloadfile",
-  "description": "Create download buttons for files in Svelte applications.",
+  "description": "Create Svelte component for downloading files.",
+  "repo_url": "",
   "author": "Daniel Magrini",
   "homepage": "https://github.com/magrinilopes/svelte-downloadfile#readme",
   "downloads": 1,
   "dependents": 0,
   "updated": "2021-05-03T19:15:26.922Z",
   "tags": [
-    "utility",
-    "ui"
+    "utility"
   ],
   "svelte5": false,
   "runes": false

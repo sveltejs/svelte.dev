@@ -1,6 +1,6 @@
 {
   "name": "styled-svelte",
-  "description": "Create styled components for Svelte applications.",
+  "description": "Creates Svelte components with attached styles.",
   "repo_url": "https://github.com/vanzinvestor/styled-svelte",
   "author": "Vanz Investor",
   "homepage": "https://github.com/vanzinvestor/styled-svelte",

@@ -1,12 +1,13 @@
 {
   "name": "@ikun-ui/collapse-wrapper",
-  "description": "Create collapsible content sections in Svelte.",
+  "description": "Create collapse wrappers for Svelte components.",
+  "repo_url": "",
   "author": "baiwusanyu",
   "downloads": 27,
   "dependents": 1,
   "updated": "2025-01-24T03:48:46.373Z",
   "tags": [
-    "ui"
+    "component-library"
   ],
   "svelte5": false,
   "runes": false

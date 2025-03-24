@@ -1,6 +1,6 @@
 {
   "name": "@perseid/store",
-  "description": "Manage state for Svelte applications.",
+  "description": "Offers complete state management for front and back ends.",
   "repo_url": "https://github.com/openizr/perseid",
   "author": "openizr2",
   "homepage": "https://github.com/openizr/perseid",

@@ -1,6 +1,6 @@
 {
   "name": "noph-ui",
-  "description": "Build modern UI with Material 3 guidelines for Svelte 5.",
+  "description": "Build modern UI with Material 3 guidelines in Svelte 5.",
   "repo_url": "https://github.com/cnolte/noph-ui",
   "author": "cnolte",
   "homepage": "https://noph.dev",
@@ -8,8 +8,7 @@
   "dependents": 0,
   "updated": "2025-03-21T19:32:44.960Z",
   "tags": [
-    "component-library",
-    "ui"
+    "component-library"
   ],
   "svelte5": true,
   "runes": false,

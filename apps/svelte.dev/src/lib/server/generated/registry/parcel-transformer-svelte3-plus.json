@@ -1,6 +1,6 @@
 {
   "name": "parcel-transformer-svelte3-plus",
-  "description": "Transform Svelte3 code for Parcel bundler.",
+  "description": "Transform Svelte3 code for Parcel bundler, also supports Svelte 4.",
   "repo_url": "https://github.com/HellButcher/parcel-transformer-svelte3-plus",
   "author": "Christoph Hommelsheim",
   "homepage": "https://github.com/HellButcher/parcel-transformer-svelte3-plus#readme",

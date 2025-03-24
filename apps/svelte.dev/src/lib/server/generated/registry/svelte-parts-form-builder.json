@@ -1,6 +1,6 @@
 {
   "name": "@svelte-parts/form-builder",
-  "description": "Build form descriptions for Svelte-parts form components.",
+  "description": "Build form descriptions for Svelte-parts form.",
   "repo_url": "https://github.com/idris-maps/svelte-parts",
   "author": "idris-maps",
   "homepage": "https://github.com/idris-maps/svelte-parts#readme",

@@ -1,6 +1,6 @@
 {
   "name": "svelte-data-grid-tmp",
-  "description": "Display high-performance data tables in Svelte.",
+  "description": "Display and edit large datasets with high performance in Svelte.",
   "repo_url": "https://github.com/bsssshhhhhhh/svelte-data-grid",
   "author": "Brian Simon",
   "homepage": "https://github.com/bsssshhhhhhh/svelte-data-grid",
@@ -8,7 +8,7 @@
   "dependents": 0,
   "updated": "2020-01-04T13:40:29.859Z",
   "tags": [
-    "ui"
+    "component-library"
   ],
   "svelte5": false,
   "runes": false,

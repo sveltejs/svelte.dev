@@ -1,6 +1,6 @@
 {
   "name": "@battlefieldduck/xterm-svelte",
-  "description": "Embed terminal in SvelteKit apps with Xterm.js.",
+  "description": "Integrate Xterm.js terminal emulator into SvelteKit applications.",
   "repo_url": "https://github.com/BattlefieldDuck/xterm-svelte",
   "author": "battlefieldduck",
   "homepage": "https://xterm-svelte.pages.dev",

@@ -1,6 +1,6 @@
 {
   "name": "@rutynka/helper-progress",
-  "description": "Create Svelte heatmap calendar based on local storage.",
+  "description": "Creates Svelte heatmap calendar based on local storage.",
   "repo_url": "https://github.com/rutynka/helper-progress-calendar",
   "author": "ru7ynk4",
   "homepage": "https://github.com/rutynka/helper-progress-calendar",

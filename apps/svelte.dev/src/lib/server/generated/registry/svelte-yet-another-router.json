@@ -1,6 +1,6 @@
 {
   "name": "svelte-yet-another-router",
-  "description": "Implement declarative browser routing for Svelte applications.",
+  "description": "Create declarative browser routing for Svelte single-page applications.",
   "repo_url": "https://github.com/doit-solutions/svelte-yet-another-router",
   "author": "David Nordvall",
   "homepage": "https://github.com/doit-solutions/svelte-yet-another-router",

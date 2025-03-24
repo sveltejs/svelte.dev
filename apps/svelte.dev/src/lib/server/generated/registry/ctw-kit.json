@@ -1,6 +1,6 @@
 {
   "name": "ctw-kit",
-  "description": "Provide custom Svelte components and utilities with TailwindCSS.",
+  "description": "Create custom components and utilities for Svelte and TailwindCSS.",
   "repo_url": "https://github.com/ctwhome/ctw-kit",
   "author": "ctwhome",
   "homepage": "https://github.com/ctwhome/ctw-kit#readme",

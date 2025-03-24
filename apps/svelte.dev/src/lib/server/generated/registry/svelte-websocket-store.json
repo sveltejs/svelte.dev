@@ -1,6 +1,6 @@
 {
   "name": "svelte-websocket-store",
-  "description": "Creates Svelte store with a websocket backend.",
+  "description": "Create Svelte stores with a WebSocket backend.",
   "repo_url": "https://github.com/arlac77/svelte-websocket-store",
   "author": "arlac77",
   "homepage": "https://github.com/arlac77/svelte-websocket-store#readme",

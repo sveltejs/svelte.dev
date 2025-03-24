@@ -8,9 +8,10 @@
   "dependents": 0,
   "updated": "2025-01-08T10:02:34.051Z",
   "tags": [
-    "media"
+    "media",
+    "integration"
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 29625
+  "github_stars": 29624
 }

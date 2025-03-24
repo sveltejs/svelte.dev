@@ -1,6 +1,6 @@
 {
   "name": "svelte-standalone",
-  "description": "Transforms Svelte components into standalone JavaScript files.",
+  "description": "Bundles Svelte components into standalone JavaScript files.",
   "repo_url": "https://github.com/brenoliradev/svelte-standalone",
   "author": "brenoliradev",
   "homepage": "https://svelte-standalone.vercel.app/",

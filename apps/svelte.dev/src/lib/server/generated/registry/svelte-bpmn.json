@@ -1,6 +1,6 @@
 {
   "name": "svelte-bpmn",
-  "description": "Embed BPMN 2.0 diagrams in Svelte apps.",
+  "description": "Embed BPMN 2.0 diagrams in Svelte applications.",
   "repo_url": "https://github.com/bpmn-io/svelte-bpmn",
   "author": "Niklas Kiefer",
   "homepage": "https://github.com/bpmn-io/svelte-bpmn#readme",
@@ -8,7 +8,7 @@
   "dependents": 0,
   "updated": "2021-07-30T12:17:33.628Z",
   "tags": [
-    "ui"
+    "media"
   ],
   "svelte5": false,
   "runes": false,

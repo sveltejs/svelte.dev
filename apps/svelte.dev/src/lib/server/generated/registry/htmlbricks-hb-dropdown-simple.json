@@ -1,6 +1,7 @@
 {
   "name": "@htmlbricks/hb-dropdown-simple",
-  "description": "Create simple dropdown web component for Svelte apps.",
+  "description": "Create simple dropdown components for Svelte applications.",
+  "repo_url": "",
   "author": "Dario Caruso",
   "downloads": 471,
   "dependents": 3,

@@ -1,6 +1,6 @@
 {
   "name": "svelte-image-viewer",
-  "description": "Display images with pan, zoom capabilities in Svelte apps.",
+  "description": "Provides image viewer components with pan and zoom capabilities.",
   "repo_url": "https://github.com/abdelfattahradwan/svelte-image-viewer",
   "author": "abdelfattahradwan",
   "homepage": "https://github.com/abdelfattahradwan/svelte-image-viewer#readme",
@@ -8,8 +8,7 @@
   "dependents": 0,
   "updated": "2025-01-18T10:41:20.232Z",
   "tags": [
-    "ui",
-    "media"
+    "ui"
   ],
   "svelte5": true,
   "runes": false,

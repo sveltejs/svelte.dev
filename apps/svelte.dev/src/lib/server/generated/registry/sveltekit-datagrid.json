@@ -1,6 +1,7 @@
 {
   "name": "sveltekit-datagrid",
-  "description": "Create data grids with sorting, filtering, and export options.",
+  "description": "Build data grids with sorting, filtering, and export options.",
+  "repo_url": "",
   "author": "joirg_dev98",
   "downloads": 41,
   "dependents": 0,

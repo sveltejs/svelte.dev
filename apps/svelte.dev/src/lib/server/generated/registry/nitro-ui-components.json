@@ -1,6 +1,6 @@
 {
   "name": "nitro-ui-components",
-  "description": "UI kit with theme modification, originally developed with SvelteKit.",
+  "description": "Offers UI components with theme modification for SvelteKit.",
   "repo_url": "https://github.com/dfinity/gix-components",
   "author": "fer_martz",
   "homepage": "https://github.com/dfinity/gix-components#readme",

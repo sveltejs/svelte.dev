@@ -1,6 +1,6 @@
 {
   "name": "@jdeighan/starbucks",
-  "description": "Transform Starbucks files into Svelte components.",
+  "description": "Transforms *.starbucks files to *.svelte files.",
   "repo_url": "https://github.com/johndeighan/starbucks",
   "author": "John Deighan",
   "homepage": "https://github.com/johndeighan/starbucks#readme",

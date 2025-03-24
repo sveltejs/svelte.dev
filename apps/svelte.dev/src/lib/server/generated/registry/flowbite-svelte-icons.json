@@ -1,6 +1,6 @@
 {
   "name": "flowbite-svelte-icons",
-  "description": "Flowbite icon components for Svelte 5 Runes.",
+  "description": "Provides Flowbite icon components for Svelte apps.",
   "repo_url": "https://github.com/themesberg/flowbite-svelte-icons",
   "author": "Shinichi Okada",
   "homepage": "https://flowbite-svelte-icons.codewithshin.com/",

@@ -1,6 +1,7 @@
 {
   "name": "@htmlbricks/hb-animated-container",
-  "description": "Create animated containers with Svelte-Bootstrap.",
+  "description": "Svelte-Bootstrap animated container web component.",
+  "repo_url": "",
   "author": "Dario Caruso",
   "downloads": 220,
   "dependents": 0,

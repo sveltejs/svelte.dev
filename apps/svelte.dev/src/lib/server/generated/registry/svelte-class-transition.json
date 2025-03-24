@@ -1,6 +1,6 @@
 {
   "name": "svelte-class-transition",
-  "description": "Animate Svelte components using CSS classes for transitions.",
+  "description": "Transition Svelte components using CSS classes.",
   "repo_url": "https://github.com/gawlk/svelte-class-transition",
   "author": "Kevin Gawlik",
   "homepage": "https://github.com/gawlk/svelte-class-transition#readme",

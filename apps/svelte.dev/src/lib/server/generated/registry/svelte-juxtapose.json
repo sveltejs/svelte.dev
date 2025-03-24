@@ -1,6 +1,6 @@
 {
   "name": "svelte-juxtapose",
-  "description": "Juxtapose images with interactive slider in Svelte.",
+  "description": "Creates image comparison with interactive slider in Svelte.",
   "repo_url": "https://github.com/sawyerclick/svelte-juxtapose",
   "author": "Sawyer Click",
   "homepage": "http://svelte-juxtapose.netlify.app",

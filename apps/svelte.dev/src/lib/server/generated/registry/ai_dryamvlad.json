@@ -1,6 +1,6 @@
 {
   "name": "ai_dryamvlad",
-  "description": "Build AI-powered applications with Svelte.",
+  "description": "AI SDK by Vercel for building AI-powered applications.",
   "repo_url": "https://github.com/vercel/ai",
   "author": "dryamvlad",
   "homepage": "https://sdk.vercel.ai/docs",
@@ -8,9 +8,9 @@
   "dependents": 0,
   "updated": "2024-11-01T08:56:19.194Z",
   "tags": [
-    "integration"
+    "utility"
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 12872
+  "github_stars": 12885
 }

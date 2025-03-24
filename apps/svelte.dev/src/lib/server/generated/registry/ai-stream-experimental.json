@@ -1,6 +1,6 @@
 {
   "name": "ai-stream-experimental",
-  "description": "Build AI-powered streaming text and chat UIs in Svelte.",
+  "description": "Build AI-powered streaming text and chat UIs.",
   "repo_url": "https://github.com/vercel/ai",
   "author": "maxleiter",
   "homepage": "https://sdk.vercel.ai/docs",
@@ -11,5 +11,6 @@
     "utility"
   ],
   "svelte5": false,
-  "runes": false
+  "runes": false,
+  "github_stars": 12885
 }

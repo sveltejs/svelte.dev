@@ -1,6 +1,6 @@
 {
   "name": "npm-navigator",
-  "description": "Visually navigate npm dependencies.",
+  "description": "Visually navigate npm dependencies within Svelte projects.",
   "repo_url": "https://github.com/arlac77/npm-navigator",
   "author": "arlac77",
   "homepage": "https://github.com/arlac77/npm-navigator#readme",

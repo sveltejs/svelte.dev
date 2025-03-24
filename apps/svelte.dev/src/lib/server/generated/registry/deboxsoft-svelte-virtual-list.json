@@ -1,6 +1,6 @@
 {
   "name": "@deboxsoft/svelte-virtual-list",
-  "description": "Render large lists efficiently with virtualized scrolling.",
+  "description": "Render virtual lists, improving performance with large datasets.",
   "repo_url": "https://github.com/lionixevolve/svelte-virtual-list-enhanced",
   "author": "Rich Harris + tje3d + Lionix folks",
   "homepage": "https://github.com/lionixevolve/svelte-virtual-list-enhanced#readme",

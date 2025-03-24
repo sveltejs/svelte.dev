@@ -1,6 +1,6 @@
 {
   "name": "sveaflet-markercluster",
-  "description": "Cluster Leaflet markers in Svelte applications.",
+  "description": "Create marker clusters for Svelte applications.",
   "repo_url": "https://github.com/GrayFrost/sveaflet-markercluster",
   "author": "GrayFrost",
   "homepage": "https://sveaflet-markercluster.vercel.app/",
@@ -8,8 +8,7 @@
   "dependents": 0,
   "updated": "2025-02-06T08:53:40.006Z",
   "tags": [
-    "component-library",
-    "media"
+    "ui"
   ],
   "svelte5": true,
   "runes": false,

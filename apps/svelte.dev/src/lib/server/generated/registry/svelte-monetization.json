@@ -1,6 +1,6 @@
 {
   "name": "svelte-monetization",
-  "description": "Wrap Web Monetization API for Svelte apps.",
+  "description": "Integrate Web Monetization API into Svelte applications.",
   "repo_url": "https://github.com/sorxrob/svelte-monetization",
   "author": "wobsoriano",
   "homepage": "https://github.com/sorxrob/svelte-monetization#readme",

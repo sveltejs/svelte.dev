@@ -1,6 +1,7 @@
 {
   "name": "@ikun-ui/notify",
-  "description": "Display notifications in Svelte applications.",
+  "description": "Build notify components for Svelte applications.",
+  "repo_url": "",
   "author": "baiwusanyu",
   "downloads": 37,
   "dependents": 2,

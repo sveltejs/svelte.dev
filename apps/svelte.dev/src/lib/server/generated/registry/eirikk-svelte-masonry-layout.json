@@ -1,6 +1,6 @@
 {
   "name": "@eirikk/svelte-masonry-layout",
-  "description": "Implements Masonry layout for Svelte components.",
+  "description": "Create masonry layouts for Svelte with dynamic content.",
   "repo_url": "https://github.com/ampled/svelte-masonrylayout",
   "author": "eirikk",
   "homepage": "https://github.com/ampled/svelte-masonrylayout#readme",
@@ -11,5 +11,6 @@
     "ui"
   ],
   "svelte5": false,
-  "runes": false
+  "runes": false,
+  "github_stars": 1
 }

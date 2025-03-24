@@ -1,6 +1,6 @@
 {
   "name": "svelte-better-store",
-  "description": "Manage Svelte state with better object updates and produce method.",
+  "description": "Implement state management library for Svelte.",
   "repo_url": "https://github.com/ragokan/svelte-better-store",
   "author": "ragokan",
   "homepage": "https://github.com/ragokan/svelte-better-store#readme",

@@ -1,15 +1,12 @@
 {
   "name": "svelte-free-icons-sharp-light",
-  "description": "Provide Svelte icon components for free-icons set.",
   "repo_url": "https://github.com/free-icons/svelte-free-icons",
   "author": "Antonio \"profmancusoa\" Mancuso",
   "homepage": "https://github.com/free-icons/svelte-free-icons#readme",
   "downloads": 0,
   "dependents": 0,
   "updated": "2025-02-09T10:45:21.461Z",
-  "tags": [
-    "ui"
-  ],
+  "tags": [],
   "svelte5": true,
   "runes": false,
   "github_stars": 3

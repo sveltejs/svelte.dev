@@ -1,6 +1,6 @@
 {
   "name": "@mcaligares/button-component",
-  "description": "Create reusable Svelte button components.",
+  "description": "Build shareable Svelte components.",
   "repo_url": "https://github.com/mcaligares/button-component",
   "author": "mcaligares@gmail.com",
   "homepage": "https://github.com/mcaligares/button-component#readme",

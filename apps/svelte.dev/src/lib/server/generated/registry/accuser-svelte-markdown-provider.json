@@ -1,6 +1,6 @@
 {
   "name": "@accuser/svelte-markdown-provider",
-  "description": "Transform Markdown source into Svelte components.",
+  "description": "Transforms Markdown to Svelte components, supporting AST input.",
   "repo_url": "https://github.com/accuser/svelte-markdown-provider",
   "author": "Matthew Gibbons",
   "homepage": "https://github.com/accuser/svelte-markdown-provider",

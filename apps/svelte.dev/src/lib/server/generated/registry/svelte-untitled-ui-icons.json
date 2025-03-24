@@ -1,6 +1,7 @@
 {
   "name": "svelte-untitled-ui-icons",
-  "description": "Provide Untitled UI icon components for Svelte projects.",
+  "description": "Provides Untitled UI icon components for Svelte projects.",
+  "repo_url": "",
   "author": "Marko Calasan",
   "downloads": 0,
   "dependents": 0,

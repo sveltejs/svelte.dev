@@ -1,6 +1,6 @@
 {
   "name": "@watergis/svelte-collapsible-panel",
-  "description": "Create collapsible panels in Svelte applications.",
+  "description": "Creates collapsible panel component for Svelte applications.",
   "repo_url": "https://github.com/watergis/svelte-maplibre-components",
   "author": "Jin IGARASHI",
   "homepage": "https://github.com/watergis/svelte-maplibre-components/tree/main/packages/collapsible-panel#readme",

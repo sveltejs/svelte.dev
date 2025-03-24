@@ -1,6 +1,6 @@
 {
   "name": "sveltesupa",
-  "description": "Enhance Supabase apps with Svelte components.",
+  "description": "Integrate Supabase with Svelte applications.",
   "repo_url": "https://github.com/yustarandomname/supasvelte",
   "author": "Abel de Bruijn",
   "homepage": "https://github.com/yustarandomname/supasvelte#readme",
@@ -8,8 +8,7 @@
   "dependents": 0,
   "updated": "2021-07-06T16:57:27.671Z",
   "tags": [
-    "integration",
-    "auth"
+    "integration"
   ],
   "svelte5": false,
   "runes": false,

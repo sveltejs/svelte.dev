@@ -1,6 +1,6 @@
 {
   "name": "@iota/is-ui-components",
-  "description": "Offer Svelte UI components for IOTA Integration Services.",
+  "description": "Provides IOTA Integration Services UI components for SvelteKit apps.",
   "repo_url": "https://github.com/iotaledger/is-ui-components",
   "author": "Begoña Álvarez",
   "homepage": "https://github.com/iotaledger/is-ui-components#readme",
@@ -8,11 +8,10 @@
   "dependents": 0,
   "updated": "2022-10-21T09:39:15.992Z",
   "tags": [
-    "component-library",
     "ui",
-    "auth",
-    "integration"
+    "component-library"
   ],
   "svelte5": false,
-  "runes": false
+  "runes": false,
+  "github_stars": 3
 }

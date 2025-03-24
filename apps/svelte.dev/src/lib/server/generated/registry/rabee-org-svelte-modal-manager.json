@@ -1,12 +1,14 @@
 {
   "name": "@rabee-org/svelte-modal-manager",
-  "description": "Manage modals in Svelte applications.",
+  "description": "Manages modal windows in Svelte applications.",
+  "repo_url": "",
   "author": "horietty",
   "downloads": 48,
   "dependents": 1,
   "updated": "2023-06-12T07:17:23.796Z",
   "tags": [
-    "ui"
+    "ui",
+    "utility"
   ],
   "svelte5": false,
   "runes": false

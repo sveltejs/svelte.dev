@@ -1,6 +1,6 @@
 {
   "name": "svelte-vimeo-player",
-  "description": "Embed Vimeo videos in Svelte applications.",
+  "description": "Create Svelte wrapper around Vimeo's player.js.",
   "repo_url": "https://github.com/benwoodward/svelte-vimeo-player",
   "author": "Ben Woodward",
   "homepage": "https://github.com/benwoodward/svelte-vimeo-player#readme",

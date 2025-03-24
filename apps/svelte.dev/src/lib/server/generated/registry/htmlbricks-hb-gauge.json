@@ -1,8 +1,9 @@
 {
   "name": "@htmlbricks/hb-gauge",
-  "description": "Create gauge web components for Svelte applications.",
+  "description": "Svelte-Bootstrap gauge component.",
+  "repo_url": "",
   "author": "Dario Caruso",
-  "downloads": 104,
+  "downloads": 475,
   "dependents": 2,
   "updated": "2025-03-09T03:10:29.393Z",
   "tags": [

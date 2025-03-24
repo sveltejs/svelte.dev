@@ -1,6 +1,6 @@
 {
   "name": "svelte-confetti-p5",
-  "description": "Create customizable confetti animation for Svelte apps.",
+  "description": "Generate customizable confetti animations for Svelte.",
   "repo_url": "https://github.com/elron/svelte-confetti-p5",
   "author": "Elron Bucai",
   "homepage": "https://svelte-confetti-p5.netlify.app/",

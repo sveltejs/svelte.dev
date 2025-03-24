@@ -1,6 +1,6 @@
 {
   "name": "@khulnasoft/ai-sdk",
-  "description": "Build AI-powered streaming text and chat UIs.",
+  "description": "Build AI-powered streaming text and chat UIs in Svelte.",
   "repo_url": "https://github.com/khulnasoft/ai-sdk",
   "author": "nextlinux",
   "homepage": "https://ai.khulnasoft.com/docs",

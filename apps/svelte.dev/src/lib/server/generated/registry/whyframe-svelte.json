@@ -1,6 +1,6 @@
 {
   "name": "@whyframe/svelte",
-  "description": "Integrate Svelte components into Whyframe for visual isolation.",
+  "description": "Integrate Svelte components into Whyframe.",
   "repo_url": "https://github.com/bluwy/whyframe",
   "author": "Bjorn Lu",
   "homepage": "https://whyframe.dev",

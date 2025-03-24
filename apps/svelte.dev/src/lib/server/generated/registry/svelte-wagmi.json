@@ -1,6 +1,6 @@
 {
   "name": "svelte-wagmi",
-  "description": "Provides Svelte stores and functions for interacting with Ethereum.",
+  "description": "Provide Svelte stores and functions for Ethereum interaction.",
   "repo_url": "https://github.com/softwarecurator/svelte-wagmi",
   "author": "@softwarecurator",
   "homepage": "https://github.com/softwarecurator/svelte-wagmi#readme",

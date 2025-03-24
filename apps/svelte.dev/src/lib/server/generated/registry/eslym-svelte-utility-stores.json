@@ -1,13 +1,14 @@
 {
   "name": "@eslym/svelte-utility-stores",
-  "description": "Provide utility stores for Svelte applications.",
+  "description": "Provide various utility stores for Svelte applications.",
+  "repo_url": "",
   "author": "0nepeop1e",
-  "downloads": 10,
+  "downloads": 58,
   "dependents": 0,
-  "updated": "2025-03-21T10:27:29.538Z",
+  "updated": "2025-03-24T09:36:30.772Z",
   "tags": [
     "utility"
   ],
   "svelte5": true,
-  "runes": true
+  "runes": false
 }

@@ -1,6 +1,6 @@
 {
   "name": "svelte-free-icons-brands",
-  "description": "Provides Svelte icon components for free-icons brands.",
+  "description": "Provides Svelte components for free brand icons.",
   "repo_url": "https://github.com/free-icons/svelte-free-icons",
   "author": "Antonio \"profmancusoa\" Mancuso",
   "homepage": "https://github.com/free-icons/svelte-free-icons#readme",
@@ -11,6 +11,6 @@
     "ui"
   ],
   "svelte5": true,
-  "runes": true,
+  "runes": false,
   "github_stars": 3
 }

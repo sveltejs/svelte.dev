@@ -1,6 +1,6 @@
 {
   "name": "tarojs-plugin-svelte",
-  "description": "Develop mini-programs using Svelte with Taro.",
+  "description": "Enables Svelte development for Taro cross-platform apps.",
   "repo_url": "https://github.com/SyMind/tarojs-plugin-svelte",
   "author": "SyMind",
   "homepage": "https://github.com/SyMind/tarojs-plugin-svelte#readme",

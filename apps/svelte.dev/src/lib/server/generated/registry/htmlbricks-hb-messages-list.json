@@ -1,6 +1,7 @@
 {
   "name": "@htmlbricks/hb-messages-list",
-  "description": "Create Svelte web components for message list.",
+  "description": "Svelte-Bootstrap messages-list web component.",
+  "repo_url": "",
   "author": "Dario Caruso",
   "downloads": 92,
   "dependents": 1,

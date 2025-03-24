@@ -1,6 +1,6 @@
 {
   "name": "svelte-rough-notation",
-  "description": "Annotate text with rough-notation in Svelte apps.",
+  "description": "Wrap rough-notation library for Svelte, adding hand-drawn annotations.",
   "repo_url": "https://github.com/dimfeld/svelte-rough-notation",
   "author": "Daniel Imfeld",
   "homepage": "https://github.com/dimfeld/svelte-rough-notation#readme",

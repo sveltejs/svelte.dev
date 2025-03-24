@@ -1,6 +1,6 @@
 {
   "name": "power-styles",
-  "description": "Provide dynamic style properties for Svelte.",
+  "description": "Provide dynamic style properties for Svelte components.",
   "repo_url": "https://github.com/JuanDAC/power-styles",
   "author": "JuanDAC",
   "homepage": "https://github.com/JuanDAC/power-styles#readme",

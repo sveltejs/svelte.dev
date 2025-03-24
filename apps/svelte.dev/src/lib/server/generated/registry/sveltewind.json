@@ -1,11 +1,13 @@
 {
   "name": "sveltewind",
-  "description": "Build user interfaces rapidly with Tailwind CSS and Svelte.",
+  "description": "Build UI with utility-first CSS framework for Svelte.",
+  "repo_url": "",
   "author": "bobthered",
   "downloads": 1,
   "dependents": 0,
   "updated": "2025-01-04T15:34:03.468Z",
   "tags": [
+    "component-library",
     "ui"
   ],
   "svelte5": true,

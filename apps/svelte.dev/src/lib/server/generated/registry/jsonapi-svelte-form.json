@@ -1,6 +1,7 @@
 {
   "name": "jsonapi-svelte-form",
-  "description": "Build forms for JSON:API backends in Svelte applications.",
+  "description": "Build forms for JSON:API backends in Svelte.",
+  "repo_url": "",
   "author": "Tobias Davis",
   "homepage": "https://github.com/saibotsivad/jsonapi-svelte-form",
   "downloads": 59,

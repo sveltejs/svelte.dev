@@ -1,16 +1,13 @@
 {
   "name": "@windmill-labs/svelvet",
-  "description": "Create interactive node-based flow diagrams in Svelte.",
   "repo_url": "https://github.com/open-source-labs/Svelvet",
   "author": "hugocasa",
   "homepage": "https://github.com/open-source-labs/Svelvet",
   "downloads": 0,
   "dependents": 0,
   "updated": "2022-12-24T18:28:19.897Z",
-  "tags": [
-    "ui"
-  ],
+  "tags": [],
   "svelte5": false,
   "runes": false,
-  "github_stars": 2676
+  "github_stars": 2677
 }

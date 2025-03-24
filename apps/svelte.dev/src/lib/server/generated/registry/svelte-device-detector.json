@@ -1,6 +1,6 @@
 {
   "name": "svelte-device-detector",
-  "description": "Detect device types and render views in Svelte.",
+  "description": "Detect device types and render views in Svelte apps.",
   "repo_url": "https://github.com/andrelmlins/svelte-device-detector",
   "author": "André Lins",
   "homepage": "https://github.com/andrelmlins/svelte-device-detector#readme",

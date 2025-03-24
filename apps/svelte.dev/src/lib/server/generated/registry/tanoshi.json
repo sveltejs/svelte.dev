@@ -1,6 +1,6 @@
 {
   "name": "tanoshi",
-  "description": "Build UI with atomic Svelte components, configurable via TypeScript.",
+  "description": "Build styled components with configurable TypeScript objects.",
   "repo_url": "https://github.com/deozza/tanoshi",
   "author": "deozza",
   "homepage": "https://github.com/deozza/tanoshi#readme",
@@ -8,8 +8,7 @@
   "dependents": 0,
   "updated": "2023-11-20T11:46:47.305Z",
   "tags": [
-    "component-library",
-    "ui"
+    "component-library"
   ],
   "svelte5": false,
   "runes": false,

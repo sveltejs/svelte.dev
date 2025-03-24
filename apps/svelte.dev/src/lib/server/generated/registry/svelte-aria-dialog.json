@@ -1,6 +1,6 @@
 {
   "name": "svelte-aria-dialog",
-  "description": "Create accessible modal dialogs in Svelte applications.",
+  "description": "Provides WAI-ARIA accessible modal dialog component for Svelte.",
   "repo_url": "https://github.com/tropix126/svelte-aria-dialog",
   "author": "tropix126",
   "homepage": "https://github.com/tropix126/svelte-aria-dialog",

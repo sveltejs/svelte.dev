@@ -1,6 +1,7 @@
 {
   "name": "@ikun-ui/auto-complete",
-  "description": "Provides auto-complete UI component for Svelte.",
+  "description": "Build auto-complete input fields for Svelte applications.",
+  "repo_url": "",
   "author": "baiwusanyu",
   "downloads": 11,
   "dependents": 1,

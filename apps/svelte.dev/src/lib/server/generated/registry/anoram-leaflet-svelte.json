@@ -1,6 +1,6 @@
 {
   "name": "@anoram/leaflet-svelte",
-  "description": "Create interactive maps using Leaflet in Svelte applications.",
+  "description": "Create Svelte wrappers for Leaflet maps.",
   "repo_url": "https://github.com/anoram/leaflet-svelte",
   "author": "Shriji Kondan",
   "homepage": "https://github.com/anoram/leaflet-svelte#readme",
@@ -8,8 +8,7 @@
   "dependents": 0,
   "updated": "2021-02-05T09:49:11.559Z",
   "tags": [
-    "ui",
-    "media"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

@@ -1,6 +1,7 @@
 {
   "name": "@yeungkc/svelte-portal",
-  "description": "Create portals in Svelte, supporting SSR and updates.",
+  "description": "Create portals for rendering content in Svelte apps.",
+  "repo_url": "",
   "author": "YeungKC",
   "homepage": "https://github.com/YeungKC/svelte-portal/",
   "downloads": 1,

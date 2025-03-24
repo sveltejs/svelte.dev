@@ -1,6 +1,7 @@
 {
   "name": "@htmlbricks/hb-paragraps-around-image",
-  "description": "Create paragraphs around image with Svelte-Bootstrap.",
+  "description": "Svelte-Bootstrap paragraphs around image web component.",
+  "repo_url": "",
   "author": "Dario Caruso",
   "downloads": 240,
   "dependents": 0,

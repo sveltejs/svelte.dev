@@ -1,6 +1,6 @@
 {
   "name": "@sveu/sveltekit-security",
-  "description": "Secure SvelteKit apps with ease, preventing common vulnerabilities.",
+  "description": "Secures SvelteKit apps, preventing common vulnerabilities.",
   "repo_url": "https://github.com/svelte-u/sveltekit-security",
   "author": "Mohamed Nesredin",
   "homepage": "https://github.com/svelte-u/sveltekit-security#readme",

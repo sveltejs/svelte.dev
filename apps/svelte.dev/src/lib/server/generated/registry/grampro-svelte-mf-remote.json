@@ -1,6 +1,7 @@
 {
   "name": "@grampro/svelte-mf-remote",
-  "description": "Configure Webpack for Svelte module federation.",
+  "description": "Generate Webpack configuration for Svelte module federation.",
+  "repo_url": "",
   "author": "josephvanto",
   "downloads": 2,
   "dependents": 0,

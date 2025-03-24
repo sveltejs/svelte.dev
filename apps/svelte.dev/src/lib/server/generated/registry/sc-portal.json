@@ -1,6 +1,7 @@
 {
   "name": "sc-portal",
-  "description": "Create portal components for Svelte applications.",
+  "description": "Create opinionated portal components for Svelte.",
+  "repo_url": "",
   "author": "hunghg255",
   "downloads": 0,
   "dependents": 1,

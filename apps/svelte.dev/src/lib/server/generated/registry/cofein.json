@@ -1,6 +1,6 @@
 {
   "name": "cofein",
-  "description": "Create fetchable stores for Svelte using fetch or Axios.",
+  "description": "Create fetchable Svelte stores using Axios or fetch.",
   "repo_url": "https://github.com/lewis-wow/svelte-fetchable",
   "author": "Ludvík Prokopec",
   "homepage": "https://github.com/lewis-wow/svelte-fetchable#readme",

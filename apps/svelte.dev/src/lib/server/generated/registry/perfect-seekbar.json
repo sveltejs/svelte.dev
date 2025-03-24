@@ -1,6 +1,6 @@
 {
   "name": "perfect-seekbar",
-  "description": "Create seek/progress bars with chapters, thumbnails, and buffering.",
+  "description": "Create pixel-perfect, smooth, reactive seek/progress bar.",
   "repo_url": "https://github.com/ThaUnknown/perfect-seekbar",
   "author": "ThaUnknown",
   "homepage": "https://github.com/ThaUnknown/perfect-seekbar#readme",

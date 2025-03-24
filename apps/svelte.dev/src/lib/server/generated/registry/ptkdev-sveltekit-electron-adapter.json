@@ -1,6 +1,6 @@
 {
   "name": "@ptkdev/sveltekit-electron-adapter",
-  "description": "Adapt SvelteKit apps for Electron, enabling desktop app builds.",
+  "description": "Adapt SvelteKit apps for Electron deployment.",
   "repo_url": "https://github.com/ptkdev/sveltekit-electron-adapter",
   "author": "Patryk Rzucidło [@ptkdev]",
   "homepage": "https://github.com/ptkdev/sveltekit-electron-adapter",

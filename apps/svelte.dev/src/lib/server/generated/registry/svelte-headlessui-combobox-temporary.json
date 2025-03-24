@@ -1,6 +1,6 @@
 {
   "name": "svelte-headlessui-combobox-temporary",
-  "description": "Svelte port of Headless UI combobox component.",
+  "description": "Provides unstyled, accessible combobox component for Svelte.",
   "repo_url": "https://github.com/NoelOConnell/svelte-headlessui",
   "author": "noeloconnell",
   "homepage": "https://svelte-headlessui.goss.io",

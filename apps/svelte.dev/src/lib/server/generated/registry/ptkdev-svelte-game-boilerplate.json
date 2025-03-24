@@ -1,6 +1,6 @@
 {
   "name": "@ptkdev/svelte-game-boilerplate",
-  "description": "Create Javascript games with Kaboom boilerplate using Svelte.",
+  "description": "Develop JavaScript games using Kaboom, Svelte, and TypeScript.",
   "repo_url": "https://github.com/ptkdev-boilerplate/svelte-game-boilerplate",
   "author": "Patryk Rzucidło [@ptkdev]",
   "homepage": "https://github.com/ptkdev-boilerplate/svelte-game-boilerplate",

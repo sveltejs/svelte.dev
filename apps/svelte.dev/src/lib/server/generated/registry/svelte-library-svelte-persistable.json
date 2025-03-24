@@ -1,6 +1,6 @@
 {
   "name": "@svelte-library/svelte-persistable",
-  "description": "Persist Svelte stores to storage with TypeScript support.",
+  "description": "Persist Svelte stores to local storage.",
   "repo_url": "https://github.com/svelte-library/svelte-persistable",
   "author": "Thomas Biesaart",
   "downloads": 0,

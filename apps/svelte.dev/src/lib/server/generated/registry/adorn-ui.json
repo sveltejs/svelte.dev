@@ -1,6 +1,6 @@
 {
   "name": "adorn-ui",
-  "description": "Build UI components for Svelte with CSS variable theming.",
+  "description": "Develop UI components based on Svelte 4.",
   "repo_url": "https://github.com/renzp94/adorn",
   "author": "renzp94",
   "homepage": "https://github.com/renzp94/adorn#readme",
@@ -8,7 +8,8 @@
   "dependents": 0,
   "updated": "2024-06-28T07:11:44.817Z",
   "tags": [
-    "component-library"
+    "component-library",
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

@@ -1,10 +1,10 @@
 {
   "name": "prettier-plugin-svelte",
-  "description": "Format Svelte components with Prettier.",
+  "description": "Formats Svelte components using Prettier.",
   "repo_url": "https://github.com/sveltejs/prettier-plugin-svelte",
   "author": "James Birtles",
   "homepage": "https://github.com/sveltejs/prettier-plugin-svelte#readme",
-  "downloads": 497999,
+  "downloads": 495139,
   "dependents": 165,
   "updated": "2025-01-13T10:09:51.803Z",
   "tags": [

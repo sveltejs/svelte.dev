@@ -1,6 +1,6 @@
 {
   "name": "svelte-magnifier",
-  "description": "Magnify images with a customizable Svelte component.",
+  "description": "Create image magnifier components for Svelte.",
   "repo_url": "https://github.com/supercoww/svelte-magnifier",
   "author": "Ambar Mutha",
   "homepage": "https://github.com/supercoww/svelte-magnifier#readme",

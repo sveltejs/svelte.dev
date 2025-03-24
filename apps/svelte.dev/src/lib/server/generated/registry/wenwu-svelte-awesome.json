@@ -1,6 +1,6 @@
 {
   "name": "@wenwu/svelte-awesome",
-  "description": "Integrate FontAwesome icons with Svelte.",
+  "description": "Integrate FontAwesome icons into Svelte applications.",
   "repo_url": "",
   "author": "wenwu",
   "downloads": 2,

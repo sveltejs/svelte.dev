@@ -1,6 +1,6 @@
 {
   "name": "svelte-simples",
-  "description": "Provide simple-icons components for Svelte.",
+  "description": "Provides Simple Icons components for Svelte applications.",
   "repo_url": "https://github.com/shinokada/svelte-simples",
   "author": "Shinichi Okada",
   "homepage": "https://svelte-simples.codewithshin.com/",

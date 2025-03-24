@@ -1,6 +1,6 @@
 {
   "name": "@really-headless/sv-marketing",
-  "description": "Build marketing sites with SvelteKit components.",
+  "description": "Build marketing sites with SvelteKit.",
   "repo_url": "https://github.com/feuersteiner/sv-marketing",
   "author": "feuersteiner",
   "homepage": "https://github.com/feuersteiner/sv-marketing#readme",

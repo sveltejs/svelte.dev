@@ -1,6 +1,6 @@
 {
   "name": "svelte-promisable-stores",
-  "description": "Manage promises with Svelte stores, simplifying API calls.",
+  "description": "Manage promises and API calls with Svelte stores.",
   "repo_url": "https://github.com/lucianoratamero/svelte-promisable-stores",
   "author": "Luciano Ratamero",
   "homepage": "https://github.com/lucianoratamero/svelte-promisable-stores#readme",

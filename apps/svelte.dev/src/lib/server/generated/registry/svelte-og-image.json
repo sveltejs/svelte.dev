@@ -1,6 +1,6 @@
 {
   "name": "svelte-og-image",
-  "description": "Generate Open Graph images using Svelte components.",
+  "description": "Generate Open Graph images using Svelte components and Vercel's OG.",
   "repo_url": "https://github.com/eltigerchino/svelte-og-image",
   "author": "Chew Tee Ming",
   "homepage": "https://github.com/eltigerchino/svelte-og-image#readme",
@@ -8,8 +8,8 @@
   "dependents": 0,
   "updated": "2024-07-15T16:39:13.496Z",
   "tags": [
-    "ui",
-    "seo"
+    "seo",
+    "utility"
   ],
   "svelte5": false,
   "runes": false,

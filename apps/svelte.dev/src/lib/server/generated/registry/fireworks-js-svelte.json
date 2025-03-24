@@ -1,6 +1,6 @@
 {
   "name": "@fireworks-js/svelte",
-  "description": "Add fireworks animations to Svelte applications.",
+  "description": "Add simple, customizable fireworks animations to Svelte projects.",
   "repo_url": "https://github.com/crashmax-dev/fireworks-js",
   "author": "Vitalij Ryndin",
   "homepage": "https://fireworks.js.org",
@@ -12,5 +12,5 @@
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 1254
+  "github_stars": 1255
 }

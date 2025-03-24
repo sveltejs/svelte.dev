@@ -1,6 +1,6 @@
 {
   "name": "kilo-ui",
-  "description": "Provide component library for Svelte applications.",
+  "description": "Offers component library for Svelte, providing UI components.",
   "repo_url": "https://github.com/kiloOhm/kilo-ui",
   "author": "Lukas Wicke",
   "homepage": "https://kiloui.com",

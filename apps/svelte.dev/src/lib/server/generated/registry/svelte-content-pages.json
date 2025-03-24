@@ -1,6 +1,6 @@
 {
   "name": "svelte-content-pages",
-  "description": "Provides content switching functionality for Svelte pages.",
+  "description": "Implement content switching with Svelte pages.",
   "repo_url": "https://github.com/arcoirislabs/svelte-content-pages",
   "author": "Arcoiris Labs",
   "homepage": "https://github.com/arcoirislabs/svelte-content-pages#readme",
@@ -8,7 +8,7 @@
   "dependents": 0,
   "updated": "2024-10-11T14:30:58.487Z",
   "tags": [
-    "utility"
+    "router"
   ],
   "svelte5": false,
   "runes": false,

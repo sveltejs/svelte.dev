@@ -1,6 +1,7 @@
 {
   "name": "svelte-yafal",
-  "description": "Use Font Awesome icons in Svelte applications.",
+  "description": "Provide FontAwesome icons for Svelte apps.",
+  "repo_url": "",
   "author": "gtmnayan",
   "homepage": "https://github.com/gtm-nayan/svelte-yafal",
   "downloads": 0,

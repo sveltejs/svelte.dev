@@ -1,6 +1,6 @@
 {
   "name": "@rtrampox/svelte-easy-crop",
-  "description": "Crop images with easy drag and zoom interactions.",
+  "description": "Crop images with easy drag and zoom interactions in Svelte.",
   "repo_url": "https://github.com/ValentinH/svelte-easy-crop",
   "author": "Valentin Hervieu",
   "homepage": "https://github.com/ValentinH/svelte-easy-crop",
@@ -12,5 +12,5 @@
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 215
+  "github_stars": 216
 }

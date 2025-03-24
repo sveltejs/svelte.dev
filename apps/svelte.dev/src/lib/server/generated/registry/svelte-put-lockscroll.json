@@ -8,7 +8,8 @@
   "dependents": 3,
   "updated": "2024-10-25T05:17:14.244Z",
   "tags": [
-    "utility"
+    "utility",
+    "dom"
   ],
   "svelte5": true,
   "runes": false,

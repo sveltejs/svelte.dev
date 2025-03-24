@@ -1,6 +1,7 @@
 {
   "name": "@user.tax/ui",
-  "description": "UI components for user.tax.",
+  "description": "Create UI components for Svelte applications.",
+  "repo_url": "",
   "author": "i-user",
   "downloads": 1,
   "dependents": 0,

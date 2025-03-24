@@ -1,6 +1,7 @@
 {
   "name": "svelte-draggable-draw",
   "description": "Create draggable draw/modal components in Svelte.",
+  "repo_url": "",
   "author": "pupubird",
   "homepage": "https://github.com/pupubird/svelte-draggable-draw",
   "downloads": 4,

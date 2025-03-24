@@ -1,16 +1,17 @@
 {
   "name": "virtua",
-  "description": "Create virtual lists and grids for React, Vue, Solid and Svelte.",
+  "description": "Provides a virtual list component for Svelte.",
   "repo_url": "https://github.com/inokawa/virtua",
   "author": "inokawa",
   "homepage": "https://github.com/inokawa/virtua#readme",
-  "downloads": 79759,
+  "downloads": 79248,
   "dependents": 24,
   "updated": "2025-03-08T01:58:08.375Z",
   "tags": [
-    "ui"
+    "ui",
+    "utility"
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 2588
+  "github_stars": 2601
 }

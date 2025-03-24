@@ -1,11 +1,13 @@
 {
   "name": "radio-color-system",
-  "description": "Generate color palettes with text contrast for Svelte.",
+  "description": "Create color palettes for Svelte, improve accessibility.",
+  "repo_url": "",
   "author": "canerakdas",
   "downloads": 1,
   "dependents": 0,
   "updated": "2023-09-07T16:31:13.030Z",
   "tags": [
+    "utility",
     "ui"
   ],
   "svelte5": false,

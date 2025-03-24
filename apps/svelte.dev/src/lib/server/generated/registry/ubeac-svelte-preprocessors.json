@@ -1,6 +1,6 @@
 {
   "name": "@ubeac/svelte-preprocessors",
-  "description": "Provide preprocessors for Svelte, including if and preview.",
+  "description": "Collection of useful preprocessors for Svelte projects.",
   "repo_url": "https://github.com/ubeac/svelte-preprocessors",
   "author": "Amir Pournasserian",
   "homepage": "https://github.com/ubeac/svelte-preprocessors",

@@ -1,6 +1,7 @@
 {
   "name": "svelte-esm-loader",
-  "description": "Load Svelte components as ES modules.",
+  "description": "Provides ESM loader for Svelte components, useful for module bundlers.",
+  "repo_url": "",
   "author": "jakobrosenberg@gmail.com",
   "downloads": 1,
   "dependents": 0,

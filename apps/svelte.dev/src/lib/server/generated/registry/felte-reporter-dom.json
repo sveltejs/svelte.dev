@@ -1,6 +1,6 @@
 {
   "name": "@felte/reporter-dom",
-  "description": "Reports Felte form validation errors using DOM elements.",
+  "description": "Display Felte form validation errors using the DOM.",
   "repo_url": "https://github.com/pablo-abc/felte",
   "author": "Pablo Berganza",
   "homepage": "https://github.com/pablo-abc/felte/tree/main/packages/reporter-dom",
@@ -8,8 +8,7 @@
   "dependents": 3,
   "updated": "2024-10-29T20:36:07.321Z",
   "tags": [
-    "utility",
-    "dom"
+    "utility"
   ],
   "svelte5": false,
   "runes": false,

@@ -1,6 +1,6 @@
 {
   "name": "uai-components",
-  "description": "Offer Svelte UI component package.",
+  "description": "Create UI components with UAI components for Svelte.",
   "repo_url": "https://github.com/vlgi/uai-components",
   "author": "vlgi",
   "homepage": "https://github.com/vlgi/uai-components#readme",
@@ -8,7 +8,8 @@
   "dependents": 0,
   "updated": "2024-02-19T20:52:42.056Z",
   "tags": [
-    "component-library"
+    "component-library",
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

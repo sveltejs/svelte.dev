@@ -1,6 +1,6 @@
 {
   "name": "@apsc/focus-action",
-  "description": "Control focusin and focusout events using Svelte actions.",
+  "description": "Control focusin and focusout events for Svelte.",
   "repo_url": "https://github.com/andrey-pavlenko/svelte-components",
   "author": "Andrey Pavlenko",
   "homepage": "https://github.com/andrey-pavlenko/svelte-components/tree/main/packages/focus-action#readme",

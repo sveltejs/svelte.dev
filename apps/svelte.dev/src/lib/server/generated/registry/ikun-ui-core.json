@@ -1,6 +1,6 @@
 {
   "name": "@ikun-ui/core",
-  "description": "Build UnoCSS UI library for Svelte.",
+  "description": "Build UI components for Svelte applications.",
   "repo_url": "https://github.com/ikun-svelte/ikun-ui",
   "author": "baiwusanyu-c",
   "homepage": "https://github.com/ikun-svelte/ikun-ui#readme",

@@ -1,6 +1,6 @@
 {
   "name": "svelte-scrollable-arrow",
-  "description": "Creates horizontal scrollable navigation with arrow controls.",
+  "description": "Create horizontal scrollable navigation with arrows.",
   "repo_url": "https://github.com/thingsneverchange/svelte-scrollable-arrow",
   "author": "themecloset",
   "homepage": "https://github.com/thingsneverchange/svelte-scrollable-arrow#readme",

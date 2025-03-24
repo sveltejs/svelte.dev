@@ -1,6 +1,6 @@
 {
   "name": "pdf.svelte",
-  "description": "Wraps pdf.js in Svelte component for PDF viewing.",
+  "description": "Integrate pdf.js in Svelte applications.",
   "repo_url": "https://github.com/timgblack/pdf.svelte",
   "author": "Tim Black",
   "homepage": "https://github.com/timgblack/pdf.svelte#readme",
@@ -8,7 +8,7 @@
   "dependents": 0,
   "updated": "2023-07-08T22:45:00.243Z",
   "tags": [
-    "ui"
+    "media"
   ],
   "svelte5": false,
   "runes": false,

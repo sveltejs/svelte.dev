@@ -1,6 +1,6 @@
 {
   "name": "svelte-table",
-  "description": "Create sortable, filterable table components for Svelte.",
+  "description": "Minimal Svelte table component with sorting, filtering, and row selection.",
   "repo_url": "https://github.com/dasDaniel/svelte-table",
   "author": "danipo",
   "homepage": "https://github.com/dasDaniel/svelte-table#readme",

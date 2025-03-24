@@ -1,6 +1,6 @@
 {
   "name": "svelte-language-server",
-  "description": "Provides language server protocol for Svelte.",
+  "description": "Provides language support features for Svelte in various editors.",
   "repo_url": "https://github.com/sveltejs/language-tools",
   "author": "James Birtles",
   "homepage": "https://github.com/sveltejs/language-tools#readme",
@@ -8,7 +8,8 @@
   "dependents": 9,
   "updated": "2025-03-06T14:09:49.594Z",
   "tags": [
-    "tooling"
+    "tooling",
+    "preprocessor"
   ],
   "svelte5": false,
   "runes": false,

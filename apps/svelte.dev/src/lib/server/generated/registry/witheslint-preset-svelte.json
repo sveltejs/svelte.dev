@@ -1,6 +1,6 @@
 {
   "name": "@witheslint/preset-svelte",
-  "description": "Provides a Svelte preset for witheslint.",
+  "description": "Provides an ESLint preset for Svelte projects.",
   "repo_url": "https://github.com/witheslint/witheslint",
   "author": "Joie",
   "homepage": "https://github.com/witheslint/witheslint",

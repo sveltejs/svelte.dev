@@ -1,6 +1,7 @@
 {
   "name": "@beyonk/svelte-toggle",
-  "description": "Create toggle components for Svelte applications.",
+  "description": "Implement toggle component for Svelte applications.",
+  "repo_url": "",
   "author": "antony",
   "downloads": 32,
   "dependents": 0,

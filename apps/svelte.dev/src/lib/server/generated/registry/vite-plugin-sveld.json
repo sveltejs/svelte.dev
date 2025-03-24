@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-sveld",
-  "description": "Parse Svelte components with sveld in Vite projects.",
+  "description": "Parse Svelte components with sveld using Vite plugin.",
   "repo_url": "https://github.com/mattjennings/vite-plugin-sveld",
   "author": "Matt Jennings",
   "homepage": "https://github.com/mattjennings/vite-plugin-sveld#readme",

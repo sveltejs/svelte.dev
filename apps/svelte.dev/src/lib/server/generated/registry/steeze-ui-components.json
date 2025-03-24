@@ -1,6 +1,6 @@
 {
   "name": "@steeze-ui/components",
-  "description": "Build accessible, pre-styled, themable UI components for SvelteKit.",
+  "description": "Provides accessible, pre-styled, themable Svelte components.",
   "repo_url": "https://github.com/steeze-ui/components",
   "author": "Justin Voitel",
   "homepage": "https://steeze-ui.com",

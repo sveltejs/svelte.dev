@@ -1,6 +1,6 @@
 {
   "name": "@iconslib/svelte",
-  "description": "Use open source icons in Svelte projects.",
+  "description": "Provides open source icons for Svelte projects.",
   "repo_url": "https://github.com/iconslib/svelte",
   "author": "Chirill Ceban",
   "homepage": "https://iconslib.com/frameworks/svelte",

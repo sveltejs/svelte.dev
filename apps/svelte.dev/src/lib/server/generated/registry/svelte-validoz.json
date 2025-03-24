@@ -1,6 +1,6 @@
 {
   "name": "svelte-validoz",
-  "description": "Svelte form validation library using Validoz.",
+  "description": "Offers form validation for Svelte applications.",
   "repo_url": "https://github.com/KamyarLajani/svelte-validoz",
   "author": "Kamyar Lajani",
   "homepage": "https://github.com/KamyarLajani/svelte-validoz#readme",

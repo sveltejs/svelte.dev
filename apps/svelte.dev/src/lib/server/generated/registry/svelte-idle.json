@@ -1,6 +1,7 @@
 {
   "name": "svelte-idle",
   "description": "Detect idleness in Svelte applications.",
+  "repo_url": "",
   "author": "mathiaswp",
   "downloads": 397,
   "dependents": 0,

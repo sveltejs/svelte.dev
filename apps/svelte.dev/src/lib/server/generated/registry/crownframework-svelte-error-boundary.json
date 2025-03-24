@@ -1,6 +1,6 @@
 {
   "name": "@crownframework/svelte-error-boundary",
-  "description": "Implement error boundaries in Svelte applications.",
+  "description": "Provides simple error boundary component for Svelte.",
   "repo_url": "https://github.com/crownframework/svelte-error-boundary",
   "author": "Jonatan Svennberg",
   "homepage": "https://github.com/crownframework/svelte-error-boundary#readme",

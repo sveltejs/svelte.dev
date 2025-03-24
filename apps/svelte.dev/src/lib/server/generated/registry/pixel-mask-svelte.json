@@ -1,6 +1,6 @@
 {
   "name": "pixel-mask-svelte",
-  "description": "Provides input masking for Svelte 4 and 5 applications.",
+  "description": "Provides tiny Svelte 4 and 5 mask library for input fields.",
   "repo_url": "https://github.com/Pixel1917/pixel-mask-svelte",
   "author": "Sergey Galaktionov",
   "homepage": "https://github.com/Pixel1917/pixel-mask-svelte",

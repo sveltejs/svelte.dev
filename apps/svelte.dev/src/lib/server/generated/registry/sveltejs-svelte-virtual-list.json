@@ -1,10 +1,10 @@
 {
   "name": "@sveltejs/svelte-virtual-list",
-  "description": "Create virtual list components for Svelte apps.",
+  "description": "Virtual list component for Svelte apps, rendering only visible items.",
   "repo_url": "https://github.com/sveltejs/svelte-virtual-list",
   "author": "Rich Harris",
   "homepage": "https://github.com/sveltejs/svelte-virtual-list#readme",
-  "downloads": 15631,
+  "downloads": 15289,
   "dependents": 5,
   "updated": "2019-08-22T14:41:08.370Z",
   "tags": [

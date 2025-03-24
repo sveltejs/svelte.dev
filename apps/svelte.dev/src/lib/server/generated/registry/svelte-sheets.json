@@ -1,13 +1,13 @@
 {
   "name": "svelte-sheets",
-  "description": "Render Excel sheets directly in Svelte applications.",
+  "description": "Run Excel sheets in browser with Svelte, inspired by JExcel.",
+  "repo_url": "",
   "author": "Thibaut Duchêne",
   "downloads": 6,
   "dependents": 0,
   "updated": "2022-05-16T16:15:07.940Z",
   "tags": [
-    "ui",
-    "utility"
+    "ui"
   ],
   "svelte5": false,
   "runes": false

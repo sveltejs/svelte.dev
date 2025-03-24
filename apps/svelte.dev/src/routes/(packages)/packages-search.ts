@@ -252,7 +252,7 @@ export function search(
 /**
  * Helper function to sort packages by the specified criterion
  */
-function sort_packages(a: Package, b: Package, criterion: SortCriterion): number {
+export function sort_packages(a: Package, b: Package, criterion: SortCriterion): number {
 	switch (criterion) {
 		case 'popularity':
 			// Create a balanced scoring system using logarithmic scales to prevent small numbers from dominating

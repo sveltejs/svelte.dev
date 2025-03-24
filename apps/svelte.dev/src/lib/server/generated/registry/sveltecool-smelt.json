@@ -1,6 +1,7 @@
 {
   "name": "@sveltecool/smelt",
-  "description": "Build forms with validation in Svelte apps.",
+  "description": "Build forms with validation in Svelte applications.",
+  "repo_url": "",
   "author": "cstrnt",
   "downloads": 2,
   "dependents": 0,

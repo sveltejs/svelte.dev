@@ -1,6 +1,7 @@
 {
   "name": "@schedule-x/svelte",
-  "description": "Provides a Svelte component for the Schedule-X calendar.",
+  "description": "Offer Schedule-X calendar component for Svelte.",
+  "repo_url": "",
   "author": "tomosterlund",
   "downloads": 184,
   "dependents": 0,

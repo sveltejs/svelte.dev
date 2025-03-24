@@ -1,6 +1,7 @@
 {
   "name": "@ikun-ui/color-picker",
-  "description": "Create color picker components for Svelte applications.",
+  "description": "Create color picker UI components for Svelte.",
+  "repo_url": "",
   "author": "baiwusanyu",
   "downloads": 9,
   "dependents": 1,
