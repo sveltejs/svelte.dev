@@ -253,13 +253,13 @@ const versions = Object.create(null);
 
 let previous: {
 	key: string;
-	cache: RollupCache;
+	cache: RollupCache | undefined;
 };
 
 let tailwind: Awaited<ReturnType<typeof init_tailwind>>;
 
 async function init_tailwind() {
-	const tailwind_files = {
+	const tailwind_files: Record<string, string> = {
 		'tailwindcss/theme.css': tailwind_theme,
 		'tailwindcss/preflight.css': tailwind_preflight,
 		'tailwindcss/utilities.css': tailwind_utilities
@@ -292,7 +292,7 @@ async function get_bundle(
 	const warnings: Warning[] = [];
 	const all_warnings: Array<{ message: string }> = [];
 
-	const tailwind_candidates = [];
+	const tailwind_candidates: string[] = [];
 
 	function add_tailwind_candidates(ast: Node | undefined) {
 		if (!ast) return;
