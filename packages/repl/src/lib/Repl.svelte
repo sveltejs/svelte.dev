@@ -74,7 +74,7 @@
 
 	// TODO get rid
 	export async function set(data: { files: File[]; tailwind?: boolean }) {
-		workspace.reset(data.files, { tailwind: data.tailwind }, 'App.svelte');
+		workspace.reset(data.files, { tailwind: data.tailwind ?? false }, 'App.svelte');
 	}
 
 	// TODO get rid
