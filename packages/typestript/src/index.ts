@@ -36,9 +36,10 @@ export function stripTypes(content: string): { content: string; sourceMap: Sourc
 		TSSatisfiesExpression: (node) => {
 			handleTypeExpression(node, s);
 		},
-		TSNonNullExpression: (node) => {
+		TSNonNullExpression: (node, context) => {
 			const { end } = node as unknown as { start: number; end: number };
 			s.overwrite(end - 1, end, ' ');
+			context.next();
 		},
 		ImportDeclaration: (node, context) => {
 			if (
