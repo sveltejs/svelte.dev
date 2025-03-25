@@ -8,7 +8,7 @@ let worker: Worker;
 let uid = 1;
 
 if (BROWSER) {
-	worker = new Worker(new URL('./worker.ts'), {
+	worker = new Worker(new URL('./worker.ts', import.meta.url), {
 		type: 'module'
 	});
 
