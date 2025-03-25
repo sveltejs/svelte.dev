@@ -1,0 +1,16 @@
+{
+  "name": "svelte-add",
+  "description": "Add tools to Svelte/Kit projects.",
+  "repo_url": "https://github.com/svelte-add/svelte-add",
+  "author": "babichjacob",
+  "homepage": "https://github.com/svelte-add/svelte-add/tree/main#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2024-08-10T13:10:11.509Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 1519
+}

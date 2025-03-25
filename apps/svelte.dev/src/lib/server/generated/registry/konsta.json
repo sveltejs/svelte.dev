@@ -1,0 +1,17 @@
+{
+  "name": "konsta",
+  "description": "Build mobile UI components with Tailwind CSS for Svelte.",
+  "repo_url": "https://github.com/konstaui/konsta",
+  "author": "Vladimir Kharlampidi",
+  "homepage": "https://konstaui.com",
+  "downloads": 901,
+  "dependents": 6,
+  "updated": "2024-09-18T16:14:44.738Z",
+  "tags": [
+    "component-library",
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 3649
+}

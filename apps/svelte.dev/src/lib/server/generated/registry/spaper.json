@@ -1,0 +1,16 @@
+{
+  "name": "spaper",
+  "description": "Use PaperCSS components for Svelte.",
+  "repo_url": "https://github.com/Oli8/spaper",
+  "author": "oli8",
+  "homepage": "https://github.com/Oli8/spaper#readme",
+  "downloads": 8,
+  "dependents": 0,
+  "updated": "2024-03-01T11:12:48.285Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 202
+}

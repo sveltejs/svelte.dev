@@ -1,0 +1,17 @@
+{
+  "name": "@twicpics/components",
+  "description": "Optimize images and videos with TwicPics in Svelte apps.",
+  "repo_url": "https://github.com/twicpics/components",
+  "author": "TwicPics",
+  "homepage": "https://github.com/twicpics/components",
+  "downloads": 5932,
+  "dependents": 5,
+  "updated": "2025-03-24T09:42:59.917Z",
+  "tags": [
+    "media",
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 56
+}

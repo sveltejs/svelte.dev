@@ -356,6 +356,7 @@ export async function fetch_package_stats(
 export async function process_package_details(
 	pkg_name: string,
 	package_json: any,
+	check_svelte_dep_criteria = true,
 	stats?: { dependents?: number; downloads?: number }
 ): Promise<StructuredInterimPackage | null> {
 	try {
@@ -386,27 +387,30 @@ export async function process_package_details(
 
 		// Check Svelte dependencies
 		const latest_package_json = package_json.versions[latest_version];
-		if (
-			!latest_package_json.dependencies?.svelte &&
-			!latest_package_json.dependencies?.['@sveltejs/kit'] &&
-			!latest_package_json.peerDependencies?.svelte &&
-			!latest_package_json.peerDependencies?.['@sveltejs/kit'] &&
-			!latest_package_json.devDependencies?.svelte &&
-			!latest_package_json.devDependencies?.['@sveltejs/kit']
-		) {
-			console.log(`Package ${pkg_name} is not a Svelte package, skipping`);
-			return null; // Skip non-Svelte packages
-		}
 
-		// Get Svelte version
-		const svelte_version =
-			latest_package_json.dependencies?.svelte ??
-			latest_package_json.peerDependencies?.svelte ??
-			latest_package_json.devDependencies?.svelte;
+		if (check_svelte_dep_criteria) {
+			if (
+				!latest_package_json.dependencies?.svelte &&
+				!latest_package_json.dependencies?.['@sveltejs/kit'] &&
+				!latest_package_json.peerDependencies?.svelte &&
+				!latest_package_json.peerDependencies?.['@sveltejs/kit'] &&
+				!latest_package_json.devDependencies?.svelte &&
+				!latest_package_json.devDependencies?.['@sveltejs/kit']
+			) {
+				console.log(`Package ${pkg_name} is not a Svelte package, skipping`);
+				return null; // Skip non-Svelte packages
+			}
 
-		const is_svelte_5 = supports_svelte5(svelte_version);
-		if (is_svelte_5) {
-			interim_pkg.meta.svelte5 = true;
+			// Get Svelte version
+			const svelte_version =
+				latest_package_json.dependencies?.svelte ??
+				latest_package_json.peerDependencies?.svelte ??
+				latest_package_json.devDependencies?.svelte;
+
+			const is_svelte_5 = supports_svelte5(svelte_version);
+			if (is_svelte_5) {
+				interim_pkg.meta.svelte5 = true;
+			}
 		}
 
 		// Get repository URL
@@ -467,6 +471,7 @@ export async function* process_packages(
 	options: {
 		limit?: number;
 		skip_cached?: boolean;
+		check_svelte_dep_criteria?: boolean;
 	} = {}
 ): AsyncGenerator<[string, StructuredInterimPackage]> {
 	const { limit = Infinity, skip_cached = false } = options;
@@ -492,7 +497,12 @@ export async function* process_packages(
 			const stats = await fetch_package_stats(pkg_name);
 
 			// Process package details
-			const interim_pkg = await process_package_details(pkg_name, package_json, stats);
+			const interim_pkg = await process_package_details(
+				pkg_name,
+				package_json,
+				options.check_svelte_dep_criteria,
+				stats
+			);
 
 			if (interim_pkg) {
 				count++;
@@ -786,7 +796,12 @@ export async function* stream_search_by_keywords({
 							};
 
 							// Process package details
-							const interim_pkg = await process_package_details(pkg_name, package_json, stats);
+							const interim_pkg = await process_package_details(
+								pkg_name,
+								package_json,
+								true,
+								stats
+							);
 
 							if (interim_pkg) {
 								total_runs++;
@@ -825,7 +840,11 @@ export async function* stream_packages_by_names({
 	skip_cached?: boolean;
 }): AsyncGenerator<Map<string, StructuredInterimPackage>> {
 	// Use the common process_packages generator
-	const packages_generator = process_packages(package_names, { limit, skip_cached });
+	const packages_generator = process_packages(package_names, {
+		limit,
+		skip_cached,
+		check_svelte_dep_criteria: false
+	});
 
 	// Use the common batch yielding logic
 	yield* yield_batches(packages_generator, batch_size);

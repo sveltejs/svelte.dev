@@ -772,7 +772,7 @@ async function* create_map_batch_generator(
 await process_packages_by_names_through_llm({ package_names: Object.keys(svelte_society_list) });
 
 // update_cache_from_npm();
-// await update_all_github_stars();
+await update_all_github_stars();
 
 // await remove_forks();
 // delete_untagged();

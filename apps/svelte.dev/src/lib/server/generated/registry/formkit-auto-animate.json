@@ -1,0 +1,16 @@
+{
+  "name": "@formkit/auto-animate",
+  "description": "Add motion and transitions to Svelte apps easily.",
+  "repo_url": "https://github.com/formkit/auto-animate",
+  "author": "Justin Schroeder",
+  "homepage": "https://github.com/formkit/auto-animate#readme",
+  "downloads": 246232,
+  "dependents": 147,
+  "updated": "2024-04-10T16:20:50.136Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 13243
+}

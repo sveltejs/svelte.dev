@@ -1,0 +1,16 @@
+{
+  "name": "lucia",
+  "description": "Provides simple, flexible authentication for SvelteKit.",
+  "repo_url": "https://github.com/pilcrowOnPaper/lucia",
+  "author": "pilcrowonpaper",
+  "homepage": "https://github.com/pilcrowOnPaper/lucia#readme",
+  "downloads": 42903,
+  "dependents": 34,
+  "updated": "2024-10-20T12:40:32.030Z",
+  "tags": [
+    "auth"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 10020
+}

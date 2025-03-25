@@ -1,0 +1,16 @@
+{
+  "name": "sv",
+  "description": "CLI for creating and updating SvelteKit projects.",
+  "repo_url": "https://github.com/sveltejs/cli",
+  "author": "rich_harris",
+  "homepage": "https://svelte.dev",
+  "downloads": 14493,
+  "dependents": 6,
+  "updated": "2025-03-24T17:48:37.718Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 335
+}

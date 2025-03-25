@@ -1,0 +1,16 @@
+{
+  "name": "@tsconfig/svelte",
+  "description": "Provide base TSConfig for Svelte projects.",
+  "repo_url": "https://github.com/tsconfig/bases",
+  "author": "orta",
+  "homepage": "https://github.com/tsconfig/bases#readme",
+  "downloads": 186007,
+  "dependents": 63,
+  "updated": "2024-03-27T04:13:14.815Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 6811
+}

@@ -1,0 +1,14 @@
+{
+  "name": "svelte-css-vars",
+  "description": "Manage CSS variables in Svelte components.",
+  "repo_url": "",
+  "author": "Christian Kaisermann",
+  "downloads": 716,
+  "dependents": 5,
+  "updated": "2021-06-17T16:00:46.189Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

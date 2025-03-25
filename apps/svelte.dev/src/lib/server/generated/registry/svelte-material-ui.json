@@ -1,0 +1,16 @@
+{
+  "name": "svelte-material-ui",
+  "description": "Svelte Material UI components, implementing Material Design.",
+  "repo_url": "https://github.com/hperrin/svelte-material-ui",
+  "author": "hperrin",
+  "downloads": 2735,
+  "dependents": 8,
+  "updated": "2024-12-22T22:58:40.767Z",
+  "tags": [
+    "component-library",
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 3358
+}

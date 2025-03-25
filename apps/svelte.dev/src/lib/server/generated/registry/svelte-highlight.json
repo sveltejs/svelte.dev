@@ -1,0 +1,16 @@
+{
+  "name": "svelte-highlight",
+  "description": "Highlight code syntax in Svelte components.",
+  "repo_url": "https://github.com/metonym/svelte-highlight",
+  "author": "Eric Liu",
+  "homepage": "https://github.com/metonym/svelte-highlight",
+  "downloads": 23362,
+  "dependents": 23,
+  "updated": "2024-12-28T02:44:14.035Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 282
+}

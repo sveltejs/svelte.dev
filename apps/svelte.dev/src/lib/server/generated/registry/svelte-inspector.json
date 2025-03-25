@@ -1,0 +1,16 @@
+{
+  "name": "svelte-inspector",
+  "description": "Inspect and open Svelte components in editor.",
+  "repo_url": "https://github.com/qutran/svelte-inspector",
+  "author": "Dmitry Kutran",
+  "homepage": "https://github.com/qutran/svelte-inspector",
+  "downloads": 41,
+  "dependents": 0,
+  "updated": "2019-09-01T06:09:45.663Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 85
+}

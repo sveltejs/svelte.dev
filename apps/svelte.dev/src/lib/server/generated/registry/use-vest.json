@@ -1,0 +1,16 @@
+{
+  "name": "use-vest",
+  "description": "Svelte action for Vest, validating forms and showing errors.",
+  "repo_url": "https://github.com/enyo/use-vest",
+  "author": "Matias Meno",
+  "homepage": "https://github.com/enyo/use-vest",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2022-06-01T15:49:37.461Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 10
+}

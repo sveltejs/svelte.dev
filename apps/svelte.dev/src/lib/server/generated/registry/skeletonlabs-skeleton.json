@@ -1,0 +1,17 @@
+{
+  "name": "@skeletonlabs/skeleton",
+  "description": "Implement a complete UI toolkit for Svelte.",
+  "repo_url": "https://github.com/skeletonlabs/skeleton",
+  "author": "skeletonadmin",
+  "homepage": "https://github.com/skeletonlabs/skeleton#readme",
+  "downloads": 24022,
+  "dependents": 9,
+  "updated": "2025-03-22T13:22:43.826Z",
+  "tags": [
+    "component-library",
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 5414
+}

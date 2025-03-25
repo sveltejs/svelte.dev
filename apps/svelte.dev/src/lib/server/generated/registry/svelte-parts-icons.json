@@ -1,0 +1,16 @@
+{
+  "name": "@svelte-parts/icons",
+  "description": "Use icon components for Svelte.",
+  "repo_url": "https://github.com/idris-maps/svelte-parts",
+  "author": "idris-maps",
+  "homepage": "https://github.com/idris-maps/svelte-parts#readme",
+  "downloads": 25,
+  "dependents": 1,
+  "updated": "2022-04-04T21:05:57.009Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 50
+}

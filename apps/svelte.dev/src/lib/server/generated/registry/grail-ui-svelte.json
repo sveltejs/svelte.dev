@@ -1,0 +1,17 @@
+{
+  "name": "@grail-ui/svelte",
+  "description": "Create accessible, unstyled UI components for Svelte.",
+  "repo_url": "https://github.com/grail-ui/grail-ui",
+  "author": "bekos",
+  "homepage": "https://github.com/grail-ui/grail-ui#readme",
+  "downloads": 183,
+  "dependents": 0,
+  "updated": "2023-09-30T14:03:30.742Z",
+  "tags": [
+    "component-library",
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 382
+}

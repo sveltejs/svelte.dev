@@ -1,0 +1,16 @@
+{
+  "name": "houdini",
+  "description": "GraphQL client for Svelte, generating lean abstractions.",
+  "repo_url": "https://github.com/HoudiniGraphql/houdini",
+  "author": "aaivazis",
+  "homepage": "https://github.com/HoudiniGraphql/houdini",
+  "downloads": 7059,
+  "dependents": 12,
+  "updated": "2025-03-20T16:24:18.105Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 941
+}

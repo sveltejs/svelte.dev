@@ -1,0 +1,14 @@
+{
+  "name": "svelte-icons",
+  "description": "Icon components for Svelte, supporting various icon sets.",
+  "repo_url": "",
+  "author": "Chris Ryan",
+  "downloads": 3119,
+  "dependents": 22,
+  "updated": "2020-03-07T23:48:39.756Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

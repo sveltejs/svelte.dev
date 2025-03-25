@@ -1,0 +1,17 @@
+{
+  "name": "svelte-preprocess-markdown",
+  "description": "Process Markdown files as Svelte components.",
+  "repo_url": "https://github.com/AlexxNB/svelte-preprocess-markdown",
+  "author": "Alexey Schebelev",
+  "homepage": "https://github.com/AlexxNB/svelte-preprocess-markdown#readme",
+  "downloads": 30,
+  "dependents": 2,
+  "updated": "2020-08-14T05:06:27.368Z",
+  "tags": [
+    "preprocessor",
+    "content"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 138
+}

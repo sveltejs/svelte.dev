@@ -1,0 +1,16 @@
+{
+  "name": "@zooplus/zoo-web-components",
+  "description": "Implement reusable web components for the zoo+ style guide.",
+  "repo_url": "https://github.com/zooplus/zoo-web-components",
+  "author": "Yuriy Kravets",
+  "homepage": "https://github.com/zooplus/zoo-web-components#readme",
+  "downloads": 411,
+  "dependents": 0,
+  "updated": "2023-10-27T10:52:11.180Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 46
+}

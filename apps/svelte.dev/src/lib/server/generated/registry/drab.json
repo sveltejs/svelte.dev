@@ -1,0 +1,16 @@
+{
+  "name": "drab",
+  "description": "Adds interactivity to web components.",
+  "repo_url": "https://github.com/rossrobino/drab",
+  "author": "Ross Robino",
+  "homepage": "https://drab.robino.dev",
+  "downloads": 150,
+  "dependents": 1,
+  "updated": "2025-02-11T18:32:07.597Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 281
+}

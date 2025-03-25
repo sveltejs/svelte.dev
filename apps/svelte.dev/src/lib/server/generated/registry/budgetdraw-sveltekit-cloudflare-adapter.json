@@ -1,0 +1,14 @@
+{
+  "name": "@budgetdraw/sveltekit-cloudflare-adapter",
+  "description": "Adapts SvelteKit apps for Cloudflare Workers.",
+  "repo_url": "",
+  "author": "Thomas Yandell",
+  "downloads": 42,
+  "dependents": 0,
+  "updated": "2021-11-17T23:26:29.636Z",
+  "tags": [
+    "adapter"
+  ],
+  "svelte5": false,
+  "runes": false
+}
