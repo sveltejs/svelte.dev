@@ -492,6 +492,7 @@ async function get_bundle(
 
 				add_tailwind_candidates(result.ast.module);
 				add_tailwind_candidates(result.ast.instance);
+				add_tailwind_candidates(result.ast.html);
 
 				if (result.css?.code) {
 					// resolve local files by inlining them
