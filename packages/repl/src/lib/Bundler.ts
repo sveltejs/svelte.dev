@@ -1,6 +1,4 @@
-import type { CompileOptions } from 'svelte/compiler';
 import type { BundleResult } from './workers/bundler';
-import Worker from './workers/bundler/index.js?worker';
 import type { BundleMessageData } from './workers/workers';
 import type { File } from 'editor';
 
@@ -27,7 +25,10 @@ export default class Bundler {
 		this.hash = `${packages_url}:${svelte_version}`;
 
 		if (!workers.has(this.hash)) {
-			const worker = new Worker();
+			const worker = new Worker(new URL('./workers/bundler/index.ts', import.meta.url), {
+				type: 'module'
+			});
+
 			worker.postMessage({ type: 'init', packages_url, svelte_version });
 			workers.set(this.hash, worker);
 		}
