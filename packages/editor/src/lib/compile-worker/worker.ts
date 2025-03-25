@@ -3,6 +3,7 @@ import { parseTar } from 'tarparser';
 import type { CompileResult } from 'svelte/compiler';
 import type { ExposedCompilerOptions, File } from '../Workspace.svelte';
 import type { FileDescription } from 'tarparser';
+import { stripTypes } from 'typestript';
 
 // hack for magic-string and Svelte 4 compiler
 // do not put this into a separate module and import it, would be treeshaken in prod
@@ -139,7 +140,8 @@ addEventListener('message', async (event) => {
 				compilerOptions.experimental = { async: true };
 			}
 
-			result = svelte.compileModule(file.contents, compilerOptions);
+			const { content } = stripTypes(file.contents);
+			result = svelte.compileModule(content, compilerOptions);
 		}
 
 		postMessage({

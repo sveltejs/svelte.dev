@@ -52,6 +52,7 @@
 		"@sveltejs/package": "^2.0.0",
 		"@sveltejs/vite-plugin-svelte": "4.0.0",
 		"@types/estree": "^1.0.5",
+		"magic-string": "^0.30.11",
 		"prettier": "^3.3.2",
 		"prettier-plugin-svelte": "^3.3.2",
 		"publint": "^0.2.12",
@@ -87,6 +88,7 @@
 		"resolve.exports": "^2.0.2",
 		"svelte": "5.23.0",
 		"tarparser": "^0.0.4",
-		"zimmerframe": "^1.1.2"
+		"zimmerframe": "^1.1.2",
+		"typestript": "workspace:*"
 	}
 }
