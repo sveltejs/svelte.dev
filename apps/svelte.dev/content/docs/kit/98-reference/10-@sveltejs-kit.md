@@ -497,7 +497,7 @@ type: Exclude<NavigationType, 'leave'>;
 <div class="ts-block-property-details">
 
 The type of navigation:
-- `enter`: The app has hydrated
+- `enter`: The app has hydrated/started
 - `form`: The user submitted a `<form>`
 - `link`: Navigation was triggered by a link click
 - `goto`: Navigation was triggered by a `goto(...)` call or a redirect
@@ -1042,6 +1042,18 @@ You must specify a `path` for the cookie. In most cases you should explicitly se
 
 </div>
 </div></div>
+
+## EmbedResult
+
+<div class="ts-block">
+
+```dts
+type EmbedResult = {
+	target: string;
+} | null;
+```
+
+</div>
 
 ## Emulator
 
@@ -1650,7 +1662,7 @@ The URL that is navigated to
 
 ## NavigationType
 
-- `enter`: The app has hydrated
+- `enter`: The app has hydrated/started
 - `form`: The user submitted a `<form>` with a GET method
 - `leave`: The user is leaving the app by closing the tab or using the back/forward buttons to go to a different document
 - `link`: Navigation was triggered by a link click
