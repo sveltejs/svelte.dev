@@ -20,7 +20,10 @@ export function stripTypes(content: string): { content: string; sourceMap: Sourc
 	walk(ast as unknown as TSESTree.Node, null, {
 		_: (node, context) => {
 			console.log(node.type);
-			if (node.type.startsWith('TS') && node.type !== 'TSAsExpression') {
+			if (
+				node.type.startsWith('TS') &&
+				!['TSAsExpression', 'TSSatisfiesExpression', 'TSNonNullExpression'].includes(node.type)
+			) {
 				const { start, end } = node as unknown as { start: number; end: number };
 				s.overwrite(start, end, ' '.repeat(end - start));
 			} else {
@@ -28,9 +31,14 @@ export function stripTypes(content: string): { content: string; sourceMap: Sourc
 			}
 		},
 		TSAsExpression: (node) => {
-			const { end: start } = node.expression as unknown as { end: number; start: number };
-			const { end } = node.typeAnnotation as unknown as { start: number; end: number };
-			s.overwrite(start, end, ' '.repeat(end - start));
+			handleTypeExpression(node, s);
+		},
+		TSSatisfiesExpression: (node) => {
+			handleTypeExpression(node, s);
+		},
+		TSNonNullExpression: (node) => {
+			const { end } = node as unknown as { start: number; end: number };
+			s.overwrite(end - 1, end, ' ');
 		},
 		ImportDeclaration: (node, context) => {
 			if (
@@ -63,4 +71,16 @@ export function stripTypes(content: string): { content: string; sourceMap: Sourc
 			hires: true
 		})
 	};
+}
+
+function handleTypeExpression(
+	node: {
+		expression: unknown;
+		typeAnnotation: unknown;
+	},
+	s: { overwrite: (start: number, end: number, content: string) => void }
+) {
+	const { end: start } = node.expression as unknown as { end: number; start: number };
+	const { end } = node.typeAnnotation as unknown as { start: number; end: number };
+	s.overwrite(start, end, ' '.repeat(end - start));
 }

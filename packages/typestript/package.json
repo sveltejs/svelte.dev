@@ -2,6 +2,7 @@
 	"name": "typestript",
 	"private": true,
 	"scripts": {
+		"dev": "tsc --watch",
 		"build": "tsc",
 		"lint": "prettier --check .",
 		"format": "prettier --write ."
