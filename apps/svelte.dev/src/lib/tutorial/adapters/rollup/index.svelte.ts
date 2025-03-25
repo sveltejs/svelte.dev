@@ -45,7 +45,7 @@ export async function create(): Promise<Adapter> {
 				.filter((f): f is File => f.name.startsWith('/src/lib/') && f.type === 'file')
 				.map((f) => ({ ...f, name: f.name.slice(9) })),
 			{
-				runes: true
+				// TODO support Tailwind here?
 			}
 		);
 	}

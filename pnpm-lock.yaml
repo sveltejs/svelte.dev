@@ -376,6 +376,9 @@ importers:
       svelte:
         specifier: 5.23.0
         version: 5.23.0
+      tailwindcss:
+        specifier: ^4.0.15
+        version: 4.0.15
       tarparser:
         specifier: ^0.0.4
         version: 0.0.4
@@ -3081,6 +3084,9 @@ packages:
   svelte@5.23.0:
     resolution: {integrity: sha512-v0lL3NuKontiCxholEiAXCB+BYbndlKbwlDMK0DS86WgGELMJSpyqCSbJeMEMBDwOglnS7Ar2Rq0wwa/z2L8Vg==}
     engines: {node: '>=18'}
+
+  tailwindcss@4.0.15:
+    resolution: {integrity: sha512-6ZMg+hHdMJpjpeCCFasX7K+U615U9D+7k5/cDK/iRwl6GptF24+I/AbKgOnXhVKePzrEyIXutLv36n4cRsq3Sg==}
 
   tar@7.4.3:
     resolution: {integrity: sha512-5S7Va8hKfV7W5U6g3aYxXmlPoZVAwUMy9AOKyF2fVuZa2UD3qZjg578OrLRt8PcNN1PleVaL/5/yYATNL0ICUw==}
@@ -5963,6 +5969,8 @@ snapshots:
       locate-character: 3.0.0
       magic-string: 0.30.12
       zimmerframe: 1.1.2
+
+  tailwindcss@4.0.15: {}
 
   tar@7.4.3:
     dependencies:

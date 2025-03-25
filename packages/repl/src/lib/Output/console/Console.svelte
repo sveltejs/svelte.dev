@@ -1,4 +1,4 @@
-<script module>
+<script module lang="ts">
 	export type Log = {
 		command: 'info' | 'warn' | 'error' | 'table' | 'group' | 'clear' | 'unclonable';
 		action?: 'console';

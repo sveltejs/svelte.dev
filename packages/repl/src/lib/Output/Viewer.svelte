@@ -8,6 +8,7 @@
 	import Console, { type Log } from './console/Console.svelte';
 	import getLocationFromStack from './get-location-from-stack';
 	import srcdoc from './srcdoc/index.html?raw';
+	import srcdoc_styles from './srcdoc/styles.css?raw';
 	import ErrorOverlay from './ErrorOverlay.svelte';
 	import type { CompileError } from 'svelte/compiler';
 	import type { Bundle } from '../types';
@@ -107,7 +108,8 @@
 			clear_logs();
 
 			if (!$bundle.error) {
-				await proxy?.eval(`
+				await proxy?.eval(
+					`
 					${injectedJS}
 
 					if (!window.__setup_focus_handling) {
@@ -183,7 +185,9 @@
 						}
 					}
 					//# sourceURL=playground:output
-				`);
+				`,
+					$bundle?.tailwind ?? srcdoc_styles
+				);
 				error = null;
 			}
 		} catch (e) {
