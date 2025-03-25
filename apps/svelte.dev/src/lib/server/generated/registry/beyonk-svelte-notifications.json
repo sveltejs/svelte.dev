@@ -1,0 +1,15 @@
+{
+  "name": "@beyonk/svelte-notifications",
+  "description": "Display notifications in Svelte apps with various themes and options.",
+  "repo_url": "",
+  "author": "antony",
+  "downloads": 644,
+  "dependents": 0,
+  "updated": "2025-02-26T10:40:01.628Z",
+  "tags": [
+    "ui",
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

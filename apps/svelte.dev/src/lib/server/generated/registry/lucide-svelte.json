@@ -1,0 +1,15 @@
+{
+  "name": "lucide-svelte",
+  "description": "Use Lucide icons in Svelte applications.",
+  "repo_url": "https://github.com/lucide-icons/lucide",
+  "author": "Eric Fennis",
+  "homepage": "https://lucide.dev",
+  "downloads": 103290,
+  "dependents": 105,
+  "updated": "2025-03-18T12:45:43.477Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false
+}

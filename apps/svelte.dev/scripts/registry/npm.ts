@@ -1,7 +1,6 @@
 import * as fsp from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { extract_frontmatter } from '@sveltejs/site-kit/markdown';
 import type { Package } from '../../src/lib/server/content.js';
 
 /**
@@ -52,14 +51,13 @@ export class RequestQueue {
 		Promise.resolve(item.fn())
 			.then((result) => {
 				console.log('RESOLVING', result?.url);
-				this.running--;
 				item.resolve(result);
 			})
 			.catch((err) => {
-				this.running--;
 				item.reject(err);
 			})
 			.finally(() => {
+				this.running--;
 				this.dequeue();
 			});
 	}
@@ -85,37 +83,34 @@ export class PackageCache {
 		return name.replace(/@/g, '').replace(/\//g, '-');
 	}
 
+	static #root_dir = path.resolve(
+		path.dirname(fileURLToPath(import.meta.url)),
+		`../../src/lib/server/generated/registry`
+	);
+
+	static #get_full_path(name: string) {
+		return path.resolve(this.#root_dir, `${this.#clean_name(name)}.json`);
+	}
+
 	static stringify(package_details: Package) {
 		return JSON.stringify(package_details, null, 2);
 	}
 
 	static parse(markdown: string) {
-		const metadata = JSON.parse(markdown);
-
-		return metadata;
+		return JSON.parse(markdown);
 	}
 
 	static async get(pkg_name: string): Promise<Package | null> {
-		const pathname = path.resolve(
-			path.dirname(fileURLToPath(import.meta.url)),
-			`../../src/lib/server/generated/registry/${PackageCache.#clean_name(pkg_name)}.json`
-		);
-
 		try {
-			return PackageCache.parse(await fsp.readFile(pathname, { encoding: 'utf8' }));
+			return this.parse(await fsp.readFile(this.#get_full_path(pkg_name), { encoding: 'utf8' }));
 		} catch {
 			return null;
 		}
 	}
 
 	static async has(pkg_name: string): Promise<boolean> {
-		const pathname = path.resolve(
-			path.dirname(fileURLToPath(import.meta.url)),
-			`../../src/lib/server/generated/registry/${PackageCache.#clean_name(pkg_name)}.json`
-		);
-
 		try {
-			await fsp.stat(pathname);
+			await fsp.stat(this.#get_full_path(pkg_name));
 			return true;
 		} catch {
 			return false;
@@ -123,36 +118,20 @@ export class PackageCache {
 	}
 
 	static async set(pkg_name: string, data: Package) {
-		const pathname = path.resolve(
-			path.dirname(fileURLToPath(import.meta.url)),
-			`../../src/lib/server/generated/registry/${PackageCache.#clean_name(pkg_name)}.json`
-		);
-
-		await fsp.writeFile(pathname, PackageCache.stringify(data));
+		await fsp.writeFile(this.#get_full_path(pkg_name), this.stringify(data));
 	}
 
 	static async delete(pkg_name: string) {
-		const pathname = path.resolve(
-			path.dirname(fileURLToPath(import.meta.url)),
-			`../../src/lib/server/generated/registry/${PackageCache.#clean_name(pkg_name)}.json`
-		);
-
-		await fsp.unlink(pathname);
+		await fsp.unlink(this.#get_full_path(pkg_name));
 	}
 
 	static async *entries() {
-		const cache_dir = path.resolve(
-			path.dirname(fileURLToPath(import.meta.url)),
-			'../../src/lib/server/generated/registry'
-		);
-		const cache_dir_contents = await fsp.readdir(cache_dir);
+		const cache_dir_contents = await fsp.readdir(this.#root_dir);
 
 		for (const dirent of cache_dir_contents) {
-			const file_path = path.join(cache_dir, dirent);
-			yield [
-				dirent.replace(/.json$/, ''),
-				PackageCache.parse(await fsp.readFile(file_path, 'utf8'))
-			] as [string, Package];
+			const file_path = path.join(this.#root_dir, dirent);
+			const parsed = this.parse(await fsp.readFile(file_path, 'utf8'));
+			yield [parsed.name, parsed] as [string, Package];
 		}
 	}
 }
@@ -173,11 +152,11 @@ export function sanitize_github_url(url: string): string {
 
 	// Remove additional path segments after repo name
 	if (url.includes('github.com')) {
-		const basicRepoPattern =
+		const basic_repo_pattern =
 			/^((?:https?:\/\/|git@|git:\/\/|ssh:\/\/git@|git\+https?:\/\/|git\+ssh:\/\/git@)?(?:github\.com)[\/:]([^\/\s]+\/[^\/\s]+))(?:\/|\.git|$)/i;
-		const basicMatch = url.match(basicRepoPattern);
-		if (basicMatch) {
-			url = basicMatch[1];
+		const basic_match = url.match(basic_repo_pattern);
+		if (basic_match) {
+			url = basic_match[1];
 		}
 	}
 
@@ -326,6 +305,203 @@ export async function fetch_details_for_package(pkg: string): Promise<any> {
 	);
 
 	return registry_data;
+}
+
+/**
+ * Gets the number of packages that depend on a given package and weekly downloads
+ * by using npm search API to find the exact package
+ */
+export async function fetch_package_stats(
+	pkg_name: string
+): Promise<{ dependents: number; downloads: number }> {
+	try {
+		// Use the npm search API to find the package
+		const url = new URL(`${REGISTRY_BASE_URL}-/v1/search`);
+		url.searchParams.set('text', pkg_name); // Search for the exact package name
+		url.searchParams.set('size', '5'); // Limit to 5 results to keep it efficient
+
+		const response = await superfetch(url, {
+			headers: HEADERS
+		});
+
+		if (!response.ok) {
+			console.error(`Error searching for package ${pkg_name}: ${response.status}`);
+			return { dependents: 0, downloads: 0 };
+		}
+
+		const data = await response.json();
+
+		// Find the exact package name match
+		const matched_package = data.objects?.find((obj: any) => obj.package.name === pkg_name);
+
+		if (!matched_package) {
+			console.log(`No exact match found for package ${pkg_name} in search results`);
+			return { dependents: 0, downloads: 0 };
+		}
+
+		// Extract dependents and downloads
+		return {
+			dependents: matched_package.dependents || 0,
+			downloads: matched_package.downloads?.weekly || 0
+		};
+	} catch (error) {
+		console.error(`Error fetching stats for ${pkg_name}:`, error);
+		return { dependents: 0, downloads: 0 };
+	}
+}
+
+/**
+ * Analyzes package details to determine if it's a valid Svelte package and extracts metadata
+ */
+export async function process_package_details(
+	pkg_name: string,
+	package_json: any,
+	stats?: { dependents?: number; downloads?: number }
+): Promise<StructuredInterimPackage | null> {
+	try {
+		const latest_version = package_json['dist-tags']?.latest;
+
+		if (!latest_version) {
+			console.log(`No latest version found for ${pkg_name}`);
+			return null;
+		}
+
+		// Create a structured interim package
+		const interim_pkg: StructuredInterimPackage = {
+			meta: {
+				deprecated: false,
+				last_updated: '',
+				tags: [],
+				svelte5: false,
+				runes: false,
+				repo_url: '',
+				dependents: stats?.dependents || 0,
+				downloads: stats?.downloads || 0
+			},
+			package_json: package_json
+		};
+
+		// Skip certain packages
+		if (pkg_name === 'svelte' || pkg_name === '@sveltejs/kit') return null;
+
+		// Check Svelte dependencies
+		const latest_package_json = package_json.versions[latest_version];
+		if (
+			!latest_package_json.dependencies?.svelte &&
+			!latest_package_json.dependencies?.['@sveltejs/kit'] &&
+			!latest_package_json.peerDependencies?.svelte &&
+			!latest_package_json.peerDependencies?.['@sveltejs/kit'] &&
+			!latest_package_json.devDependencies?.svelte &&
+			!latest_package_json.devDependencies?.['@sveltejs/kit']
+		) {
+			console.log(`Package ${pkg_name} is not a Svelte package, skipping`);
+			return null; // Skip non-Svelte packages
+		}
+
+		// Get Svelte version
+		const svelte_version =
+			latest_package_json.dependencies?.svelte ??
+			latest_package_json.peerDependencies?.svelte ??
+			latest_package_json.devDependencies?.svelte;
+
+		const is_svelte_5 = supports_svelte5(svelte_version);
+		if (is_svelte_5) {
+			interim_pkg.meta.svelte5 = true;
+		}
+
+		// Get repository URL
+		if (latest_package_json.repository) {
+			interim_pkg.meta.repo_url = sanitize_github_url(latest_package_json.repository.url);
+		}
+
+		// Get last updated date
+		if (latest_version && package_json.time && package_json.time[latest_version]) {
+			interim_pkg.meta.last_updated = package_json.time[latest_version];
+		}
+
+		// Check if deprecated
+		if (package_json.versions[latest_version].deprecated) {
+			interim_pkg.meta.deprecated = true;
+		}
+
+		// Normalize versions to just keys
+		interim_pkg.package_json.versions = Object.keys(interim_pkg.package_json.versions);
+
+		return interim_pkg;
+	} catch (error) {
+		console.error(`Error processing package details for ${pkg_name}:`, error);
+		return null;
+	}
+}
+
+/**
+ * Common batch yielding logic
+ */
+export async function* yield_batches<T>(
+	items_generator: AsyncGenerator<[string, T]>,
+	batch_size: number
+): AsyncGenerator<Map<string, T>> {
+	let batch = new Map<string, T>();
+
+	for await (const [pkg_name, item] of items_generator) {
+		batch.set(pkg_name, item);
+
+		if (batch.size >= batch_size) {
+			console.log(`Yielding batch of ${batch.size} packages`);
+			yield batch;
+			batch = new Map();
+		}
+	}
+
+	if (batch.size > 0) {
+		console.log(`Yielding final batch of ${batch.size} packages`);
+		yield batch;
+	}
+}
+
+/**
+ * Generator function to process packages one by one
+ */
+export async function* process_packages(
+	package_names: string[],
+	options: {
+		limit?: number;
+		skip_cached?: boolean;
+	} = {}
+): AsyncGenerator<[string, StructuredInterimPackage]> {
+	const { limit = Infinity, skip_cached = false } = options;
+	const processed = new Set<string>();
+	let count = 0;
+
+	for (const pkg_name of package_names) {
+		// Skip if we've reached the limit
+		if (count >= limit) break;
+
+		// Skip if already processed or cached
+		if (processed.has(pkg_name) || (skip_cached && (await PackageCache.has(pkg_name)))) {
+			continue;
+		}
+
+		processed.add(pkg_name);
+
+		try {
+			// Get package details
+			const package_json = await fetch_details_for_package(pkg_name);
+
+			// Get package stats
+			const stats = await fetch_package_stats(pkg_name);
+
+			// Process package details
+			const interim_pkg = await process_package_details(pkg_name, package_json, stats);
+
+			if (interim_pkg) {
+				count++;
+				yield [pkg_name, interim_pkg];
+			}
+		} catch (error) {
+			console.error(`Error processing package ${pkg_name}:`, error);
+		}
+	}
 }
 
 /**
@@ -547,160 +723,110 @@ export function structured_interim_package_to_package(
 	return data;
 }
 
+/**
+ * Search for packages by keywords and stream results in batches
+ */
 export async function* stream_search_by_keywords({
 	keywords,
 	ranking = 'quality',
 	limit = Infinity,
-	fetch = { package_json: true },
 	batch_size = 10,
-	skip_cached = false,
-	exclude_official = true
-}: SearchOptions): AsyncGenerator<Map<string, StructuredInterimPackage>> {
-	let total_runs = 0;
-	let collected_packages = new Map<string, StructuredInterimPackage>();
-	// Keep track of all seen packages across all batches
+	skip_cached = false
+}: Omit<SearchOptions, 'fetch'> & { batch_size?: number }): AsyncGenerator<
+	Map<string, StructuredInterimPackage>
+> {
 	const all_seen_packages = new Set<string>();
+	let total_runs = 0;
 
-	for (const keyword of keywords) {
-		let page = 0;
-		let has_more_results = true;
+	// Generator function to search and process packages
+	async function* search_and_process(): AsyncGenerator<[string, StructuredInterimPackage]> {
+		for (const keyword of keywords) {
+			let page = 0;
+			let has_more_results = true;
 
-		listing_loop: while (has_more_results && total_runs < limit) {
-			// Fetch a page of results
-			const url = new URL(`${REGISTRY_BASE_URL}-/v1/search`);
-			url.searchParams.set('text', `keywords:${keyword}`);
-			url.searchParams.set('ranking', ranking);
-			url.searchParams.set('size', String(PAGE_SIZE));
-			url.searchParams.set('from', String(page * PAGE_SIZE));
+			while (has_more_results && total_runs < limit) {
+				// Fetch a page of results
+				const url = new URL(`${REGISTRY_BASE_URL}-/v1/search`);
+				url.searchParams.set('text', `keywords:${keyword}`);
+				url.searchParams.set('ranking', ranking);
+				url.searchParams.set('size', String(PAGE_SIZE));
+				url.searchParams.set('from', String(page * PAGE_SIZE));
 
-			console.log(`Fetching page ${page + 1} of results for keyword: ${keyword}`);
+				console.log(`Fetching page ${page + 1} of results for keyword: ${keyword}`);
 
-			try {
-				const results = await superfetch(url, {
-					headers: HEADERS
-				}).then((r) => r.json());
+				try {
+					const results = await superfetch(url, { headers: HEADERS }).then((r) => r.json());
 
-				// Break if no more results
-				if (!results.objects || results.objects.length === 0) {
-					has_more_results = false;
-					break;
-				}
-
-				// Process each package
-				for (const obj of results.objects) {
-					if (skip_cached && (await PackageCache.has(obj.package.name))) continue;
-
-					// Check if we've seen this package before (either in current batch or previous batches)
-					if (all_seen_packages.has(obj.package.name)) {
-						console.log(
-							`Detected duplicate package ${obj.package.name}, breaking search loop for this keyword`
-						);
+					// Break if no more results
+					if (!results.objects || results.objects.length === 0) {
 						has_more_results = false;
-						break listing_loop;
+						break;
 					}
 
-					const interim_pkg: StructuredInterimPackage = {
-						meta: {
-							deprecated: false,
-							last_updated: '',
-							tags: [],
-							svelte5: false,
-							runes: false,
-							repo_url: ''
-						},
-						package_json: null as any
-					};
+					// Process each package
+					for (const obj of results.objects) {
+						const pkg_name = obj.package.name;
 
-					// Mark this package as seen
-					all_seen_packages.add(obj.package.name);
+						// Skip certain packages
+						if (pkg_name === 'svelte' || pkg_name === '@sveltejs/kit') continue;
+						if (skip_cached && (await PackageCache.has(pkg_name))) continue;
+						if (all_seen_packages.has(pkg_name)) continue;
+						if (total_runs >= limit) break;
 
-					// Skip if we've reached the limit
-					if (total_runs >= limit) break;
+						all_seen_packages.add(pkg_name);
 
-					// Exclude 'svelte' and Kit
-					if (obj.package.name === 'svelte' || obj.package.name === '@sveltejs/kit') {
-						continue;
-					}
-
-					// Fetch package.json if needed
-					if (fetch.package_json) {
 						try {
-							const response = await fetch_details_for_package(obj.package.name);
+							// Get package details
+							const package_json = await fetch_details_for_package(pkg_name);
 
-							const latest_version = response['dist-tags']?.latest;
+							// Use stats from search results
+							const stats = {
+								dependents: obj.dependents || 0,
+								downloads: obj.downloads?.weekly || 0
+							};
 
-							// Make sure that either dependencies/peer dependencies have svelte or @sveltejs/kit
-							const latest_package_json = response.versions[latest_version];
-							if (
-								!latest_package_json.dependencies?.svelte &&
-								!latest_package_json.dependencies?.['@sveltejs/kit'] &&
-								!latest_package_json.peerDependencies?.svelte &&
-								!latest_package_json.peerDependencies?.['@sveltejs/kit'] &&
-								!latest_package_json.devDependencies?.svelte &&
-								!latest_package_json.devDependencies?.['@sveltejs/kit']
-							) {
-								continue;
+							// Process package details
+							const interim_pkg = await process_package_details(pkg_name, package_json, stats);
+
+							if (interim_pkg) {
+								total_runs++;
+								yield [pkg_name, interim_pkg];
 							}
-
-							// Get version number of svelte
-							const svelte_version =
-								latest_package_json.dependencies?.svelte ??
-								latest_package_json.peerDependencies?.svelte ??
-								latest_package_json.devDependencies?.svelte;
-
-							const is_svelte_5 = supports_svelte5(svelte_version);
-							if (is_svelte_5) {
-								interim_pkg.meta.svelte5 = true;
-							}
-
-							if (latest_package_json.repository) {
-								interim_pkg.meta.repo_url = sanitize_github_url(latest_package_json.repository.url);
-							}
-
-							if (latest_version && response.time && response.time[latest_version]) {
-								interim_pkg.meta.last_updated = response.time[latest_version];
-							}
-
-							if (response.versions[latest_version].deprecated) {
-								interim_pkg.meta.deprecated = true;
-							}
-
-							interim_pkg.meta.dependents = obj.dependents;
-							interim_pkg.meta.downloads = obj.downloads.weekly;
-
-							interim_pkg.package_json = response;
-							interim_pkg.package_json.versions = Object.keys(interim_pkg.package_json.versions);
-						} catch (err) {
-							console.error(`Error fetching package.json for ${obj.package.name}:`, err);
-							continue; // Skip this package if we can't get its details
+						} catch (error) {
+							console.error(`Error processing package ${pkg_name}:`, error);
 						}
 					}
 
-					// Add to our collection
-					collected_packages.set(obj.package.name, interim_pkg);
-
-					// Yield when we reach the requested batch size
-					if (collected_packages.size >= batch_size) {
-						console.log(`Yielding batch of ${collected_packages.size} packages`);
-						yield collected_packages;
-						collected_packages = new Map(); // Reset collection after yielding
-					}
-
-					total_runs++;
+					page++;
+				} catch (error) {
+					console.error(`Error fetching search results for ${keyword}, page ${page}:`, error);
+					has_more_results = false;
 				}
-
-				// Move to next page
-				page++;
-			} catch (error) {
-				console.error(`Error fetching search results for ${keyword}, page ${page}:`, error);
-				has_more_results = false;
 			}
 		}
 	}
 
-	// Yield any remaining packages
-	if (collected_packages.size > 0) {
-		console.log(`Yielding final batch of ${collected_packages.size} packages`);
-		yield collected_packages;
-	}
+	// Use the common batch yielding logic
+	yield* yield_batches(search_and_process(), batch_size);
+}
+
+/**
+ * Stream packages by specific names instead of keywords
+ */
+export async function* stream_packages_by_names({
+	package_names,
+	limit = Infinity,
+	batch_size = 10,
+	skip_cached = false
+}: {
+	package_names: string[];
+	limit?: number;
+	batch_size?: number;
+	skip_cached?: boolean;
+}): AsyncGenerator<Map<string, StructuredInterimPackage>> {
+	// Use the common process_packages generator
+	const packages_generator = process_packages(package_names, { limit, skip_cached });
+
+	// Use the common batch yielding logic
+	yield* yield_batches(packages_generator, batch_size);
 }

@@ -1,0 +1,16 @@
+{
+  "name": "@tolgee/svelte",
+  "description": "Provides Svelte implementation for Tolgee localization framework.",
+  "repo_url": "https://github.com/tolgee/tolgee-js",
+  "author": "jancizmar",
+  "homepage": "https://tolgee.io",
+  "downloads": 237,
+  "dependents": 0,
+  "updated": "2025-03-19T08:37:52.677Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 241
+}

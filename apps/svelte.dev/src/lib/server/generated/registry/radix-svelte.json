@@ -1,0 +1,15 @@
+{
+  "name": "radix-svelte",
+  "description": "Provides unstyled, accessible UI components for Svelte.",
+  "repo_url": "",
+  "author": "tglide_personal",
+  "downloads": 632,
+  "dependents": 1,
+  "updated": "2023-07-23T19:43:39.851Z",
+  "tags": [
+    "component-library",
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

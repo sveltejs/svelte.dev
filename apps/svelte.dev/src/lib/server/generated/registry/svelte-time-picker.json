@@ -1,0 +1,15 @@
+{
+  "name": "svelte-time-picker",
+  "description": "Implement time picker component for Svelte applications.",
+  "repo_url": "git@gitlab.com/public-e-soa-com/svelte-time-picker",
+  "author": "Jacques Desodt",
+  "homepage": "https://gitlab.com/public-e-soa-com/svelte-time-picker#readme",
+  "downloads": 529,
+  "dependents": 0,
+  "updated": "2024-02-07T14:30:41.701Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

@@ -1,0 +1,16 @@
+{
+  "name": "@jill64/sentry-sveltekit-edge",
+  "description": "Integrate Sentry error tracking with SvelteKit edge runtimes.",
+  "repo_url": "https://github.com/jill64/sentry-sveltekit-edge",
+  "author": "jill64",
+  "homepage": "https://github.com/jill64/sentry-sveltekit-edge#readme",
+  "downloads": 1551,
+  "dependents": 0,
+  "updated": "2025-01-31T16:19:18.188Z",
+  "tags": [
+    "integration"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 3
+}

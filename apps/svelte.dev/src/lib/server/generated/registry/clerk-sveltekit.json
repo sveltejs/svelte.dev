@@ -1,0 +1,17 @@
+{
+  "name": "clerk-sveltekit",
+  "description": "Integrate Clerk authentication into SvelteKit applications.",
+  "repo_url": "https://github.com/markjaquith/clerk-sveltekit",
+  "author": "Mark Jaquith",
+  "homepage": "https://github.com/markjaquith/clerk-sveltekit#readme",
+  "downloads": 560,
+  "dependents": 0,
+  "updated": "2024-04-30T17:57:09.111Z",
+  "tags": [
+    "auth",
+    "server"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 181
+}

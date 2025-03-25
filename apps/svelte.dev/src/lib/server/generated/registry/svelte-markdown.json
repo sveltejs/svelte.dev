@@ -1,0 +1,16 @@
+{
+  "name": "svelte-markdown",
+  "description": "Render Markdown content into Svelte components.",
+  "repo_url": "https://github.com/pablo-abc/svelte-markdown",
+  "author": "Pablo Berganza",
+  "homepage": "https://github.com/pablo-abc/svelte-markdown",
+  "downloads": 21936,
+  "dependents": 56,
+  "updated": "2023-12-25T15:34:13.274Z",
+  "tags": [
+    "content"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 372
+}

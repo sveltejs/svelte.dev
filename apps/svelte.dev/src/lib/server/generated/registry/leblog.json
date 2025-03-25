@@ -1,0 +1,16 @@
+{
+  "name": "leblog",
+  "description": "Add blog or changelog to any SvelteKit site.",
+  "repo_url": "https://github.com/nbgoodall/leblog",
+  "author": "Nick Goodall",
+  "homepage": "https://leblog.dev",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2024-02-04T17:41:51.552Z",
+  "tags": [
+    "content"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 1
+}

@@ -1,0 +1,17 @@
+{
+  "name": "carta-md",
+  "description": "Lightweight Markdown editor with syntax highlighting.",
+  "repo_url": "https://github.com/BearToCode/carta",
+  "author": "astrobear",
+  "homepage": "https://github.com/BearToCode/carta#readme",
+  "downloads": 1864,
+  "dependents": 0,
+  "updated": "2025-03-03T21:36:52.262Z",
+  "tags": [
+    "content",
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 562
+}

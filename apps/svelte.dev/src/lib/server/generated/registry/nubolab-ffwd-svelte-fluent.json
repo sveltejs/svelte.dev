@@ -1,0 +1,16 @@
+{
+  "name": "@nubolab-ffwd/svelte-fluent",
+  "description": "Adds Mozilla's Fluent localization to Svelte and SvelteKit projects.",
+  "repo_url": "https://github.com/nubolab-ffwd/svelte-fluent",
+  "author": "sfriedel",
+  "homepage": "https://github.com/nubolab-ffwd/svelte-fluent",
+  "downloads": 66,
+  "dependents": 0,
+  "updated": "2024-12-06T13:29:07.434Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 98
+}

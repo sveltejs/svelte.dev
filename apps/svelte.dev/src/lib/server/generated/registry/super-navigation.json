@@ -1,0 +1,15 @@
+{
+  "name": "super-navigation",
+  "description": "Build mobile-like navigation experiences in SvelteKit.",
+  "repo_url": "https://github.com/0xdjole/super-navigation",
+  "author": "0xdjole",
+  "homepage": "https://github.com/0xdjole/super-navigation#readme",
+  "downloads": 1,
+  "dependents": 1,
+  "updated": "2024-10-30T03:44:16.975Z",
+  "tags": [
+    "router"
+  ],
+  "svelte5": true,
+  "runes": false
+}

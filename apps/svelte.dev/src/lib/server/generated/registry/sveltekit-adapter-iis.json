@@ -1,0 +1,15 @@
+{
+  "name": "sveltekit-adapter-iis",
+  "description": "Provides SvelteKit Adapter for IIS Web Servers.",
+  "repo_url": "https://github.com/abaga129/sveltekit-adapter-iis",
+  "author": "Ethan P. Reker",
+  "downloads": 72,
+  "dependents": 0,
+  "updated": "2024-11-06T20:19:37.060Z",
+  "tags": [
+    "adapter"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 19
+}

@@ -1,0 +1,16 @@
+{
+  "name": "@sentry/svelte",
+  "description": "Integrate Sentry error and performance monitoring with Svelte apps.",
+  "repo_url": "https://github.com/getsentry/sentry-javascript",
+  "author": "Sentry",
+  "homepage": "https://github.com/getsentry/sentry-javascript/tree/master/packages/svelte",
+  "downloads": 99969,
+  "dependents": 8,
+  "updated": "2025-03-24T13:46:54.564Z",
+  "tags": [
+    "integration"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 8166
+}

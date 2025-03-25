@@ -1,0 +1,15 @@
+{
+  "name": "svelte-rate-it",
+  "description": "Implement rate components for Svelte apps.",
+  "repo_url": "https://github.com/emrekara37/svelte-rate-it",
+  "author": "Emre KARA",
+  "homepage": "https://github.com/emrekara37/svelte-rate-it#readme",
+  "downloads": 3,
+  "dependents": 0,
+  "updated": "2019-07-29T11:30:11.230Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

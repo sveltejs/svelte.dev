@@ -1,0 +1,14 @@
+{
+  "name": "@square/svelte-store",
+  "description": "Extend Svelte stores for handling asynchronous behavior.",
+  "repo_url": "https://github.com/square/svelte-store",
+  "author": "Square",
+  "downloads": 5596,
+  "dependents": 1,
+  "updated": "2024-02-21T15:08:52.067Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

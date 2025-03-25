@@ -1,0 +1,16 @@
+{
+  "name": "svelte-icons-pack",
+  "description": "Use SVG icons as Svelte components with props.",
+  "repo_url": "https://github.com/leshak/svelte-icons-pack",
+  "author": "leshak",
+  "homepage": "https://github.com/leshak/svelte-icons-pack#readme",
+  "downloads": 2781,
+  "dependents": 7,
+  "updated": "2024-03-27T10:54:27.761Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 66
+}

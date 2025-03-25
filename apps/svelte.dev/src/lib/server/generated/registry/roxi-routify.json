@@ -1,0 +1,16 @@
+{
+  "name": "@roxi/routify",
+  "description": "Automates Svelte routing based on file structure.",
+  "repo_url": "https://github.com/roxiness/routify",
+  "author": "jakobrosenberg@gmail.com",
+  "homepage": "https://routify.dev",
+  "downloads": 3397,
+  "dependents": 1,
+  "updated": "2024-09-09T11:49:46.143Z",
+  "tags": [
+    "router"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 1925
+}

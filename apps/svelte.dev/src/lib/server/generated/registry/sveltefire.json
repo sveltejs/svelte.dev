@@ -1,0 +1,16 @@
+{
+  "name": "sveltefire",
+  "description": "Integrate Firebase Auth, Firestore, and RealtimeDB with Svelte apps.",
+  "repo_url": "",
+  "author": "jeffd23",
+  "downloads": 1830,
+  "dependents": 0,
+  "updated": "2024-01-08T15:32:30.686Z",
+  "tags": [
+    "utility",
+    "integration",
+    "auth"
+  ],
+  "svelte5": false,
+  "runes": false
+}

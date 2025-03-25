@@ -1,0 +1,16 @@
+{
+  "name": "svelte-ripple-action",
+  "description": "Add ripple effect to any element in Svelte applications.",
+  "repo_url": "https://github.com/posandu/svelte-ripple-action",
+  "author": "posandu",
+  "homepage": "https://github.com/posandu/svelte-ripple-action#readme",
+  "downloads": 536,
+  "dependents": 0,
+  "updated": "2024-11-15T13:18:50.975Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 61
+}

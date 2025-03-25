@@ -5,6 +5,7 @@ import fs, { mkdirSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import registry from '../../src/lib/registry.json' with { type: 'json' };
+import svelte_society_list from '../../src/lib/society-npm.json' with { type: 'json' };
 import type { Package } from '../../src/lib/server/content.js';
 import { sort_packages } from '../../src/routes/(packages)/packages-search.js';
 import {
@@ -14,6 +15,7 @@ import {
 	PackageCache,
 	request_queue,
 	sanitize_github_url,
+	stream_packages_by_names,
 	stream_search_by_keywords,
 	structured_interim_package_to_package,
 	superfetch,
@@ -128,39 +130,40 @@ interface ProcessBatchesOptions {
 }
 
 /**
- * Process packages through LLM with recursive retries for failed packages
+ * Core LLM processing logic for batches of packages
+ * This function handles all the details of processing packages through LLM,
+ * including batching, retries, and error handling
  */
-async function process_batches_through_llm({
-	keywords = ['svelte'],
+async function process_batches_through_llm_base({
+	package_source,
 	limit = Infinity,
 	batch_size = 20,
 	max_retries = 2,
 	retry_count = 0,
 	failed_packages = null
-}: ProcessBatchesOptions = {}): Promise<Map<string, any>> {
+}: {
+	package_source: AsyncGenerator<Map<string, StructuredInterimPackage>>;
+	limit?: number;
+	batch_size?: number;
+	max_retries?: number;
+	retry_count?: number;
+	failed_packages?: Map<string, StructuredInterimPackage> | null;
+}): Promise<Map<string, StructuredInterimPackage>> {
 	const packages_map = new Map<string, StructuredInterimPackage>();
 	const failed_llm = new Map<string, StructuredInterimPackage>();
 	let batch_counter = 0;
 
-	const repo_url_to_interim_package = new Map<string, Set<StructuredInterimPackage>>();
-
-	// Source of packages - either from search or from previous failed packages
-	const package_source = failed_packages
+	// Source of packages - either from the provided source or from failed packages in retry runs
+	const actual_package_source = failed_packages
 		? create_map_batch_generator(failed_packages, batch_size)
-		: stream_search_by_keywords({
-				keywords,
-				limit,
-				fetch: { package_json: true, github_stars: true },
-				batch_size,
-				skip_cached: true
-			});
+		: package_source;
 
 	// Whether this is a retry run
 	const is_retry = retry_count > 0;
 	console.log(`${is_retry ? `Retry attempt ${retry_count}` : 'Initial processing'} started`);
 
 	// Process each batch from the source
-	for await (const packages of package_source) {
+	for await (const packages of actual_package_source) {
 		batch_counter++;
 		const batch_id = is_retry
 			? `retry${retry_count}-batch-${batch_counter}`
@@ -370,14 +373,6 @@ async function process_batches_through_llm({
 					const package_details = packages_map.get(pkg_name);
 					if (!package_details) continue;
 
-					if (package_details.meta.repo_url) {
-						if (!repo_url_to_interim_package.has(package_details.meta.repo_url)) {
-							repo_url_to_interim_package.set(package_details.meta.repo_url, new Set());
-						}
-
-						repo_url_to_interim_package.get(package_details.meta.repo_url)!.add(package_details);
-					}
-
 					if (json[pkg_name]) {
 						package_details.meta.tags = json[pkg_name].tags ?? [];
 
@@ -428,8 +423,8 @@ async function process_batches_through_llm({
 		);
 
 		// Recursively call this function with the failed packages
-		const retry_results = await process_batches_through_llm({
-			keywords,
+		const retry_results = await process_batches_through_llm_base({
+			package_source, // Original package source is passed, but won't be used for retries
 			limit,
 			batch_size,
 			max_retries,
@@ -460,23 +455,6 @@ async function process_batches_through_llm({
 			}
 		}
 
-		console.log(repo_url_to_interim_package);
-
-		// Now find the packages that are forks
-		for (const set of repo_url_to_interim_package.values()) {
-			if (set.size <= 1) continue;
-
-			// Now, get the one with maximum popularity
-			const arr = Array.from(set);
-			const max = arr.sort((a, b) => sort_packages(a, b, 'popularity'))[0];
-
-			// Get the other forks, and mark them as forks
-			for (const pkg of arr.filter((p) => p !== max)) {
-				pkg.meta.fork_of = max.package_json.name;
-				PackageCache.set(pkg.package_json.name, structured_interim_package_to_package(pkg));
-			}
-		}
-
 		console.log(
 			`Final results: ${svelte_packages.size} Svelte packages, ${non_svelte_packages.size} non-Svelte packages`
 		);
@@ -486,6 +464,68 @@ async function process_batches_through_llm({
 
 	// For retry calls, return the full map for merging
 	return packages_map;
+}
+
+/**
+ * Process packages through LLM using keyword search
+ */
+async function process_batches_through_llm({
+	keywords = ['svelte'],
+	limit = Infinity,
+	batch_size = 20,
+	max_retries = 2
+}: {
+	keywords?: string[];
+	limit?: number;
+	batch_size?: number;
+	max_retries?: number;
+} = {}): Promise<Map<string, StructuredInterimPackage>> {
+	// Source of packages from keyword search
+	const package_source = stream_search_by_keywords({
+		keywords,
+		limit,
+		batch_size,
+		skip_cached: true
+	});
+
+	// Use the base processing function with the appropriate package source
+	return process_batches_through_llm_base({
+		package_source,
+		limit,
+		batch_size,
+		max_retries
+	});
+}
+
+/**
+ * Process specific packages through LLM by name
+ */
+async function process_packages_by_names_through_llm({
+	package_names = [],
+	limit = Infinity,
+	batch_size = 20,
+	max_retries = 2
+}: {
+	package_names?: string[];
+	limit?: number;
+	batch_size?: number;
+	max_retries?: number;
+} = {}): Promise<Map<string, StructuredInterimPackage>> {
+	// Source of packages from specific package names
+	const package_source = stream_packages_by_names({
+		package_names,
+		limit,
+		batch_size,
+		skip_cached: true
+	});
+
+	// Use the base processing function with the appropriate package source
+	return process_batches_through_llm_base({
+		package_source,
+		limit,
+		batch_size,
+		max_retries
+	});
 }
 
 /**
@@ -564,6 +604,47 @@ async function update_all_github_stars(ignore_if_exists = false) {
 			}
 		}
 	}
+}
+
+async function remove_forks() {
+	const repo_url_to_interim_package = new Map<string, Set<Package>>();
+
+	for await (const [pkg, data] of PackageCache.entries()) {
+		if (data.repo_url) {
+			if (!repo_url_to_interim_package.has(data.repo_url)) {
+				repo_url_to_interim_package.set(data.repo_url, new Set());
+			}
+
+			repo_url_to_interim_package.get(data.repo_url)!.add(data);
+		}
+	}
+
+	// Now filter the entries where set size is <= 1
+	for (const [repo_url, set] of repo_url_to_interim_package.entries()) {
+		if (set.size <= 1) {
+			repo_url_to_interim_package.delete(repo_url);
+			continue;
+		}
+
+		// find the most popular package
+		const max = Array.from(set).sort((a, b) => sort_packages(a, b, 'popularity'))[0];
+
+		// Now, delete entries from set where the author is the same as the most popular package
+		for (const pkg of set) {
+			if (pkg.author === max.author) {
+				set.delete(pkg);
+			}
+		}
+	}
+
+	for (const [repo_url, set] of repo_url_to_interim_package.entries()) {
+		if (set.size <= 1) {
+			repo_url_to_interim_package.delete(repo_url);
+			continue;
+		}
+	}
+
+	console.log(1, repo_url_to_interim_package);
 }
 
 /**
@@ -684,12 +765,16 @@ async function* create_map_batch_generator(
 	}
 }
 
-for (let i = 0; i < 1; i++) {
-	await process_batches_through_llm();
-}
+// for (let i = 0; i < 1; i++) {
+// 	await process_batches_through_llm();
+// }
+
+await process_packages_by_names_through_llm({ package_names: Object.keys(svelte_society_list) });
 
 // update_cache_from_npm();
-await update_all_github_stars();
+// await update_all_github_stars();
+
+// await remove_forks();
 // delete_untagged();
 
 // program.name('packages').description('Package to curate the svelte.dev/packages list');

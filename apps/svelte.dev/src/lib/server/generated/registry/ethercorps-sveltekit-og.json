@@ -1,0 +1,15 @@
+{
+  "name": "@ethercorps/sveltekit-og",
+  "description": "Generate Open Graph images from HTML+CSS templates.",
+  "repo_url": "",
+  "author": "ethercorps.io",
+  "downloads": 5201,
+  "dependents": 0,
+  "updated": "2024-01-15T03:25:31.700Z",
+  "tags": [
+    "server",
+    "seo"
+  ],
+  "svelte5": false,
+  "runes": false
+}

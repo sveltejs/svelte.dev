@@ -1,0 +1,16 @@
+{
+  "name": "@equipmentshare/date-range-input",
+  "description": "Provides a user interface for inputting date ranges in Svelte components.",
+  "repo_url": "https://github.com/EquipmentShare/date-range-input",
+  "author": "equipmentshare",
+  "homepage": "https://github.com/EquipmentShare/date-range-input/#date-range-input",
+  "downloads": 22,
+  "dependents": 0,
+  "updated": "2020-02-26T18:00:07.289Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 15
+}

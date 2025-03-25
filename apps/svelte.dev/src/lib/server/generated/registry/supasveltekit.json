@@ -1,0 +1,14 @@
+{
+  "name": "supasveltekit",
+  "description": "Integrate SvelteKit with Supabase for authentication, realtime, and storage.",
+  "repo_url": "",
+  "author": "itsalexousd",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2024-08-07T13:13:28.223Z",
+  "tags": [
+    "integration"
+  ],
+  "svelte5": false,
+  "runes": false
+}

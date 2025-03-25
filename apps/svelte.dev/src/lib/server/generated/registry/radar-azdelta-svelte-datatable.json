@@ -1,0 +1,15 @@
+{
+  "name": "@radar-azdelta/svelte-datatable",
+  "description": "Build datatables with sorting, filtering, and column management.",
+  "repo_url": "https://github.com/RADar-AZDelta/svelte-datatable",
+  "author": "btoby",
+  "homepage": "https://radar-azdelta.github.io/svelte-datatable/",
+  "downloads": 1,
+  "dependents": 1,
+  "updated": "2024-08-19T10:05:15.370Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

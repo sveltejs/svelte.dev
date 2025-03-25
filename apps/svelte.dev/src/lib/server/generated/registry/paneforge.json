@@ -1,0 +1,16 @@
+{
+  "name": "paneforge",
+  "description": "Create resizable and nestable panes for Svelte applications.",
+  "repo_url": "https://github.com/svecosystem/paneforge",
+  "author": "Hunter Johnston",
+  "homepage": "https://github.com/svecosystem/paneforge#readme",
+  "downloads": 27370,
+  "dependents": 16,
+  "updated": "2024-09-19T21:01:48.516Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 494
+}

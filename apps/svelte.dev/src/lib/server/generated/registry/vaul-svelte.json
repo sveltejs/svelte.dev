@@ -1,0 +1,15 @@
+{
+  "name": "vaul-svelte",
+  "description": "Create accessible dialogs, sheets, and popovers in Svelte.",
+  "repo_url": "https://github.com/huntabyte/vaul-svelte",
+  "author": "huntabyte",
+  "homepage": "https://github.com/huntabyte/vaul-svelte#readme",
+  "downloads": 21702,
+  "dependents": 15,
+  "updated": "2024-06-29T16:12:55.492Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false
+}

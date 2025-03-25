@@ -1,0 +1,16 @@
+{
+  "name": "@storybook/svelte",
+  "description": "Provides a Storybook renderer for Svelte components.",
+  "repo_url": "https://github.com/storybookjs/storybook",
+  "author": "ndelangen",
+  "homepage": "https://github.com/storybookjs/storybook/tree/next/code/renderers/svelte",
+  "downloads": 85074,
+  "dependents": 5,
+  "updated": "2025-03-24T16:24:45.970Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 86199
+}

@@ -1,0 +1,16 @@
+{
+  "name": "svelte-cartesian",
+  "description": "Render prop combinations for visual regression testing.",
+  "repo_url": "https://github.com/theetrain/svelte-cartesian",
+  "author": "Enrico Sacchetti",
+  "homepage": "https://github.com/theetrain/svelte-cartesian#readme",
+  "downloads": 63,
+  "dependents": 0,
+  "updated": "2024-09-06T02:07:39.457Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 11
+}

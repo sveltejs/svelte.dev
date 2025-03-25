@@ -1,0 +1,16 @@
+{
+  "name": "svelte-broadcastable",
+  "description": "Sync data across a given channel with svelte-broadcastable.",
+  "repo_url": "https://github.com/Hugos68/action-archive",
+  "author": "Hugo Korte",
+  "homepage": "https://github.com/Hugos68/action-archive#readme",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2023-11-25T22:02:55.883Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 32
+}

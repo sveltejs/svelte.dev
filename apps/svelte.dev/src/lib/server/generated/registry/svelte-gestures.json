@@ -1,0 +1,16 @@
+{
+  "name": "svelte-gestures",
+  "description": "Provides Svelte cross-platform gesture actions.",
+  "repo_url": "https://github.com/Rezi/svelte-gestures",
+  "author": "rezi99",
+  "homepage": "https://github.com/Rezi/svelte-gestures#readme",
+  "downloads": 11546,
+  "dependents": 8,
+  "updated": "2025-01-16T12:29:42.019Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 148
+}

@@ -1,0 +1,16 @@
+{
+  "name": "@shipbit/svane",
+  "description": "Displays Tailwind viewport/breakpoint as a fixed bar.",
+  "repo_url": "https://github.com/ShipBit/svane",
+  "author": "Simon Hopstätter",
+  "homepage": "https://github.com/ShipBit/svane#readme",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2023-10-09T09:09:50.158Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 35
+}

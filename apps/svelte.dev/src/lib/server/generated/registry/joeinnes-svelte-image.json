@@ -1,0 +1,15 @@
+{
+  "name": "@joeinnes/svelte-image",
+  "description": "Serve responsive images using image CDNs.",
+  "repo_url": "",
+  "author": "Joe Innes",
+  "homepage": "https://github.com/joeinnes/svelte-image",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2021-11-20T11:57:43.923Z",
+  "tags": [
+    "media"
+  ],
+  "svelte5": false,
+  "runes": false
+}

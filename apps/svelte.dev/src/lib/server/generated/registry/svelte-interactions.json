@@ -1,0 +1,17 @@
+{
+  "name": "svelte-interactions",
+  "description": "Provides Svelte actions for press and hover interactions.",
+  "repo_url": "https://github.com/huntabyte/svelte-interactions",
+  "author": "Hunter Johnston",
+  "homepage": "https://github.com/huntabyte/svelte-interactions#readme",
+  "downloads": 138,
+  "dependents": 0,
+  "updated": "2024-01-10T01:18:25.606Z",
+  "tags": [
+    "utility",
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 119
+}

@@ -1,0 +1,16 @@
+{
+  "name": "svelte-color-picker",
+  "description": "Provides a simple color picker component for Svelte applications.",
+  "repo_url": "https://github.com/qintarp/svelte-color-picker",
+  "author": "qintarp",
+  "homepage": "https://qintarp.github.io/svelte-color-picker",
+  "downloads": 316,
+  "dependents": 2,
+  "updated": "2019-10-12T13:34:22.928Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 106
+}

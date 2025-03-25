@@ -1,0 +1,16 @@
+{
+  "name": "@jill64/sveltekit-adapter-aws",
+  "description": "Deploy SvelteKit apps to AWS with multiple architecture options.",
+  "repo_url": "https://github.com/jill64/sveltekit-adapter-aws",
+  "author": "jill64",
+  "homepage": "https://github.com/jill64/sveltekit-adapter-aws#readme",
+  "downloads": 365,
+  "dependents": 0,
+  "updated": "2025-03-12T22:57:58.505Z",
+  "tags": [
+    "adapter"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 32
+}

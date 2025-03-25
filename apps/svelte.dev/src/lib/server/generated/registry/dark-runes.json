@@ -1,0 +1,17 @@
+{
+  "name": "dark-runes",
+  "description": "Provides experimental Svelte 5 runes for testing.",
+  "repo_url": "https://github.com/flakolefluk/dark-runes",
+  "author": "flakolefluk",
+  "homepage": "https://github.com/flakolefluk/dark-runes#readme",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2024-01-08T15:25:57.797Z",
+  "tags": [
+    "utility",
+    "tooling"
+  ],
+  "svelte5": true,
+  "runes": true,
+  "github_stars": 39
+}

@@ -1,0 +1,16 @@
+{
+  "name": "vite-plugin-kit-routes",
+  "description": "Maintain SvelteKit routes in single file.",
+  "repo_url": "https://github.com/jycouet/kitql",
+  "author": "jycouet",
+  "homepage": "https://www.kitql.dev/",
+  "downloads": 3607,
+  "dependents": 2,
+  "updated": "2025-03-18T17:02:07.958Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 424
+}
