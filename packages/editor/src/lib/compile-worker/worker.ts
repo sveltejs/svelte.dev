@@ -59,7 +59,6 @@ async function init(v: string) {
 
 		can_use_experimental_async = true;
 	} catch (e) {
-		console.error(e);
 		// do nothing
 	}
 

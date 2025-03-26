@@ -58,7 +58,7 @@ export default class Bundler {
 		});
 	}
 
-	bundle(files: File[], options: CompileOptions = {}): Promise<BundleResult> {
+	bundle(files: File[], options: { tailwind?: boolean }): Promise<BundleResult> {
 		return new Promise<any>((fulfil) => {
 			this.handlers.set(uid, fulfil);
 			this.worker.postMessage({
