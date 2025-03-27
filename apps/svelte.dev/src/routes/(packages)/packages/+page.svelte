@@ -93,69 +93,6 @@
 	});
 
 	const number_formatter = Intl.NumberFormat();
-
-	/**
-	 * Formats a timestamp string into both short and long relative time formats
-	 *
-	 * @param timestamp ISO timestamp string
-	 * @returns An object with short (1d) and long (1 day) format strings
-	 */
-	export function format_relative_time(date: Date): { short: string; long: string } {
-		const now = new Date();
-		const diff_ms = now.getTime() - date.getTime();
-
-		// Convert to different time units
-		const diff_seconds = Math.floor(diff_ms / 1000);
-		const diff_minutes = Math.floor(diff_seconds / 60);
-		const diff_hours = Math.floor(diff_minutes / 60);
-		const diff_days = Math.floor(diff_hours / 24);
-		const diff_weeks = Math.floor(diff_days / 7);
-
-		// Calculate months (accounting for different month lengths)
-		const months =
-			(now.getFullYear() - date.getFullYear()) * 12 + (now.getMonth() - date.getMonth());
-		const diff_months = months;
-
-		const diff_years = Math.floor(diff_months / 12);
-
-		// Return the appropriate unit
-		if (diff_years >= 1) {
-			return {
-				short: `${diff_years}y`,
-				long: `${diff_years} ${diff_years === 1 ? 'year' : 'years'}`
-			};
-		} else if (diff_months >= 1) {
-			return {
-				short: `${diff_months}m`,
-				long: `${diff_months} ${diff_months === 1 ? 'month' : 'months'}`
-			};
-		} else if (diff_weeks >= 1) {
-			return {
-				short: `${diff_weeks}w`,
-				long: `${diff_weeks} ${diff_weeks === 1 ? 'week' : 'weeks'}`
-			};
-		} else if (diff_days >= 1) {
-			return {
-				short: `${diff_days}d`,
-				long: `${diff_days} ${diff_days === 1 ? 'day' : 'days'}`
-			};
-		} else if (diff_hours >= 1) {
-			return {
-				short: `${diff_hours}h`,
-				long: `${diff_hours} ${diff_hours === 1 ? 'hour' : 'hours'}`
-			};
-		} else if (diff_minutes >= 1) {
-			return {
-				short: `${diff_minutes}m`,
-				long: `${diff_minutes} ${diff_minutes === 1 ? 'minute' : 'minutes'}`
-			};
-		} else {
-			return {
-				short: `${diff_seconds}s`,
-				long: `${diff_seconds} ${diff_seconds === 1 ? 'second' : 'seconds'}`
-			};
-		}
-	}
 </script>
 
 <svelte:head>
@@ -283,13 +220,6 @@
 									/>
 								</svg></span
 							>
-						{/if}
-
-						{#if pkg.updated}
-							{@const date = new Date(pkg.updated)}
-							<span title="Last updated on {date.toLocaleDateString()}">
-								{format_relative_time(date).long}
-							</span>
 						{/if}
 					</p>
 				</article>
