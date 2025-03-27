@@ -36,7 +36,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 	const pending = new Set();
 
 	onMount(async () => {
-		worker = new Worker(new URL('./search-worker.ts', import.meta.url), {
+		worker = new Worker(new URL('./search-worker', import.meta.url), {
 			type: 'module'
 		});
 

@@ -25,7 +25,7 @@ export default class Bundler {
 		this.hash = `${packages_url}:${svelte_version}`;
 
 		if (!workers.has(this.hash)) {
-			const worker = new Worker(new URL('./workers/bundler/index.ts', import.meta.url), {
+			const worker = new Worker(new URL('./workers/bundler/index', import.meta.url), {
 				type: 'module'
 			});
 
