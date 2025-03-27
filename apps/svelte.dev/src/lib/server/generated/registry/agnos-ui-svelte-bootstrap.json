@@ -1,8 +1,12 @@
 {
   "name": "@agnos-ui/svelte-bootstrap",
-  "description": "Provide Bootstrap-based component library for Svelte.",
+  "description": "Build Bootstrap-based UI components for Svelte applications.",
   "repo_url": "https://github.com/AmadeusITGroup/AgnosUI",
-  "author": "divdavem",
+  "authors": [
+    "divdavem",
+    "basso",
+    "qderoubaix"
+  ],
   "homepage": "https://www.agnosui.dev/latest/",
   "downloads": 65,
   "dependents": 0,
@@ -12,5 +16,5 @@
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 69
+  "github_stars": 70
 }

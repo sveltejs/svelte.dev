@@ -1,13 +1,15 @@
 {
   "name": "@htmlbricks/hb-layout",
-  "description": "Build responsive layouts using Svelte web components.",
+  "description": "Create Svelte-Bootstrap layout.",
   "repo_url": "",
-  "author": "Dario Caruso",
-  "downloads": 465,
+  "authors": [
+    "dariocaruso"
+  ],
+  "downloads": 484,
   "dependents": 3,
-  "updated": "2025-03-09T03:10:45.413Z",
+  "updated": "2025-03-24T18:07:30.127Z",
   "tags": [
-    "component-library"
+    "ui"
   ],
   "svelte5": false,
   "runes": false

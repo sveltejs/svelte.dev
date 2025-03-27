@@ -1,10 +1,12 @@
 {
   "name": "svelte-apex",
-  "description": "Create ApexCharts charts in Svelte applications.",
+  "description": "Integrate ApexCharts library into Svelte applications.",
   "repo_url": "https://github.com/AlexandreKempf/svelte-apex",
-  "author": "AlexandreKempf",
+  "authors": [
+    "alexandrekempf"
+  ],
   "homepage": "https://svelte-apex-examples.vercel.app/",
-  "downloads": 0,
+  "downloads": 12,
   "dependents": 0,
   "updated": "2022-02-07T21:18:08.612Z",
   "tags": [

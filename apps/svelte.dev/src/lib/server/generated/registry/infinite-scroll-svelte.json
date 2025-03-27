@@ -1,8 +1,10 @@
 {
   "name": "infinite-scroll-svelte",
-  "description": "Provides infinite scroll functionality for Svelte components.",
+  "description": "Implement infinite scroll functionality in Svelte applications.",
   "repo_url": "https://github.com/rust1cean/infinite-scroll-svelte",
-  "author": "nowaout",
+  "authors": [
+    "nowaout"
+  ],
   "homepage": "https://github.com/rust1cean/infinite-scroll-svelte#readme",
   "downloads": 0,
   "dependents": 0,

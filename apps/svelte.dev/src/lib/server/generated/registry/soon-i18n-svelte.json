@@ -1,8 +1,10 @@
 {
   "name": "soon-i18n-svelte",
-  "description": "Implement lightweight nested messages i18n library.",
+  "description": "Lightweight nested messages i18n library for Svelte.",
   "repo_url": "",
-  "author": "leafnote",
+  "authors": [
+    "leafnote"
+  ],
   "homepage": "https://leafio.github.io/soon-i18n/",
   "downloads": 67,
   "dependents": 0,

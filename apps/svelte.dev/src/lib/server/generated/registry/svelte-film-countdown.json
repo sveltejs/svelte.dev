@@ -1,8 +1,10 @@
 {
   "name": "svelte-film-countdown",
-  "description": "Create vintage film countdown component for Svelte 5.",
+  "description": "Create vintage film countdown component for Svelte 5 apps.",
   "repo_url": "https://github.com/bethropolis/svelte-film-countdown",
-  "author": "bethropolis",
+  "authors": [
+    "bethropolis"
+  ],
   "homepage": "https://bethropolis.github.io/svelte-film-countdown",
   "downloads": 1,
   "dependents": 0,

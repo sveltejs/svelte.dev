@@ -1,0 +1,16 @@
+{
+  "name": "@kitql/all-in",
+  "description": "Set of tools for building efficient SvelteKit apps.",
+  "repo_url": "https://github.com/jycouet/kitql",
+  "authors": [],
+  "homepage": "https://github.com/jycouet/kitql#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2023-10-12T11:06:57.926Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 426
+}

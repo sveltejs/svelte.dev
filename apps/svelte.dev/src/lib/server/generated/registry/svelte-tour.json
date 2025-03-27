@@ -1,10 +1,12 @@
 {
   "name": "svelte-tour",
-  "description": "Create interactive tours using Svelte components.",
+  "description": "Create interactive tours within Svelte applications.",
   "repo_url": "https://github.com/nickheal/svelte-tour",
-  "author": "Nick Heal",
+  "authors": [
+    "nickheal"
+  ],
   "homepage": "https://github.com/nickheal/svelte-tour#readme",
-  "downloads": 32,
+  "downloads": 44,
   "dependents": 0,
   "updated": "2021-08-01T09:31:51.246Z",
   "tags": [

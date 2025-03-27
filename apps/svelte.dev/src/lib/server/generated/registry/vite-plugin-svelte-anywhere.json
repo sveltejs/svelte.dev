@@ -1,8 +1,10 @@
 {
   "name": "vite-plugin-svelte-anywhere",
-  "description": "Use Svelte components anywhere with Vite.",
+  "description": "Use Svelte components anywhere in HTML.",
   "repo_url": "https://github.com/vidschofelix/vite-plugin-svelte-anywhere",
-  "author": "Felix",
+  "authors": [
+    "vidschofelix"
+  ],
   "homepage": "https://svelte-anywhere.dev",
   "downloads": 17,
   "dependents": 0,

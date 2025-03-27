@@ -1,8 +1,10 @@
 {
   "name": "svelte-radio-checkbox-z",
-  "description": "Build custom radio and checkbox UI elements for Svelte.",
+  "description": "Create UI Check/Radio components for Svelte applications.",
   "repo_url": "https://github.com/delpikye-v/svelte-radio-checkbox",
-  "author": "Delpi.Kye",
+  "authors": [
+    "delpikye"
+  ],
   "homepage": "https://github.com/delpikye-v/svelte-radio-checkbox#readme",
   "downloads": 11,
   "dependents": 0,

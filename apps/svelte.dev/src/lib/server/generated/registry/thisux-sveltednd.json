@@ -1,8 +1,10 @@
 {
   "name": "@thisux/sveltednd",
-  "description": "Lightweight, flexible drag and drop library for Svelte 5.",
+  "description": "Create drag and drop functionality in Svelte 5 applications.",
   "repo_url": "",
-  "author": "sanjusivalingam",
+  "authors": [
+    "sanjusivalingam"
+  ],
   "downloads": 2374,
   "dependents": 4,
   "updated": "2025-01-23T06:05:15.817Z",

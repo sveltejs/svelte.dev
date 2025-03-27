@@ -1,8 +1,10 @@
 {
   "name": "svelte-migrate",
-  "description": "CLI for migrating Svelte(Kit) codebases.",
+  "description": "Migrate Svelte(Kit) codebases, upgrade Svelte 3 to 4, Svelte 4 to 5.",
   "repo_url": "https://github.com/sveltejs/cli",
-  "author": "svelte-admin",
+  "authors": [
+    "svelte-admin"
+  ],
   "homepage": "https://svelte.dev",
   "downloads": 563,
   "dependents": 0,

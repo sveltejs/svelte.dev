@@ -1,15 +1,16 @@
 {
   "name": "svimg",
-  "description": "Process and lazy load responsive images in Svelte applications.",
+  "description": "Process, lazy load images in Svelte applications.",
   "repo_url": "https://github.com/xiphux/svimg",
-  "author": "Chris Han",
+  "authors": [
+    "xiphux"
+  ],
   "homepage": "https://github.com/xiphux/svimg",
-  "downloads": 56,
+  "downloads": 59,
   "dependents": 2,
   "updated": "2023-11-10T01:51:33.648Z",
   "tags": [
-    "media",
-    "preprocessor"
+    "media"
   ],
   "svelte5": false,
   "runes": false,

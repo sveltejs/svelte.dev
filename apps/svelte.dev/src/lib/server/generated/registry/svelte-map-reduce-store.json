@@ -1,10 +1,12 @@
 {
   "name": "svelte-map-reduce-store",
-  "description": "Implement map-reduce operations using Svelte stores.",
+  "description": "Create map-reduce stores for Svelte applications.",
   "repo_url": "",
-  "author": "7korobi",
+  "authors": [
+    "7korobi"
+  ],
   "homepage": "https://github.com/7korobi/svelte-giji/tree/master/src/lib/map-reduce",
-  "downloads": 2,
+  "downloads": 18,
   "dependents": 0,
   "updated": "2022-02-13T15:32:43.570Z",
   "tags": [

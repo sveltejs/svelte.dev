@@ -1,12 +1,17 @@
 {
   "name": "nxext-svelte-16",
+  "description": "Provide Nx plugin for Svelte.",
   "repo_url": "https://github.com/nxext/nx-extensions",
-  "author": "Dominik Pieper",
+  "authors": [
+    "kmandrup"
+  ],
   "homepage": "https://nxext.dev/",
-  "downloads": 0,
+  "downloads": 1,
   "dependents": 0,
   "updated": "2023-07-11T19:25:00.602Z",
-  "tags": [],
+  "tags": [
+    "tooling"
+  ],
   "svelte5": false,
   "runes": false,
   "github_stars": 473

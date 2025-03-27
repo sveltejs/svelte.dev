@@ -1,12 +1,14 @@
 {
   "name": "@svelstack/state",
-  "description": "Provides Svelte Promise/Future state management.",
+  "description": "Provide Svelte Promise/Future states for data fetching.",
   "repo_url": "https://github.com/svelstack/state",
-  "author": "martk",
+  "authors": [
+    "martk"
+  ],
   "homepage": "https://github.com/svelstack/state",
-  "downloads": 11,
+  "downloads": 51,
   "dependents": 1,
-  "updated": "2025-01-14T18:59:32.106Z",
+  "updated": "2025-03-26T16:39:49.737Z",
   "tags": [
     "utility"
   ],

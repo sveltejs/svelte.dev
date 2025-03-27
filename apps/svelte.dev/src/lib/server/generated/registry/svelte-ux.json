@@ -1,16 +1,18 @@
 {
   "name": "svelte-ux",
-  "description": "Build interactive, visual applications with Svelte components and utilities.",
+  "description": "Provides Svelte components, actions, stores, and utilities.",
   "repo_url": "https://github.com/techniq/svelte-ux",
-  "author": "Sean Lynch",
+  "authors": [
+    "techniq"
+  ],
   "homepage": "https://github.com/techniq/svelte-ux#readme",
-  "downloads": 4421,
+  "downloads": 5264,
   "dependents": 1,
   "updated": "2025-03-18T12:47:22.361Z",
   "tags": [
     "component-library"
   ],
-  "svelte5": true,
+  "svelte5": false,
   "runes": false,
-  "github_stars": 954
+  "github_stars": 957
 }

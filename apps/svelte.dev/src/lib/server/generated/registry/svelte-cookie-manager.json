@@ -1,8 +1,10 @@
 {
   "name": "svelte-cookie-manager",
-  "description": "Manage cookies, block trackers, and handle consent in Svelte.",
+  "description": "Manage cookies, consent, and privacy in Svelte apps.",
   "repo_url": "https://github.com/dasporal/svelte-cookie-manager",
-  "author": "dasporal",
+  "authors": [
+    "dasporal"
+  ],
   "homepage": "https://github.com/dasporal/svelte-cookie-manager#readme",
   "downloads": 4,
   "dependents": 0,

@@ -1,10 +1,12 @@
 {
   "name": "svelte-spinkit",
-  "description": "Provide collection of loading indicators animated with CSS for Svelte.",
+  "description": "Display loading indicators animated with CSS for Svelte applications.",
   "repo_url": "https://github.com/heithemmoumni/svelte-spinkit",
-  "author": "Moumni Heithem",
+  "authors": [
+    "heithemmoumni"
+  ],
   "homepage": "https://github.com/heithemmoumni/svelte-spinkit#readme",
-  "downloads": 1,
+  "downloads": 10,
   "dependents": 0,
   "updated": "2020-08-11T22:06:59.490Z",
   "tags": [

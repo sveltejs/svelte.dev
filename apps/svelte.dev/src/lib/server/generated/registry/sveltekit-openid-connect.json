@@ -1,15 +1,16 @@
 {
   "name": "sveltekit-openid-connect",
-  "description": "Protect SvelteKit applications using OpenID Connect.",
+  "description": "Protect SvelteKit apps using OpenID Connect.",
   "repo_url": "https://github.com/starbasehq/sveltekit-openid-connect",
-  "author": "ChrisOgden",
+  "authors": [
+    "chrisogden"
+  ],
   "homepage": "https://github.com/starbasehq/sveltekit-openid-connect#readme",
-  "downloads": 1,
+  "downloads": 21,
   "dependents": 0,
   "updated": "2024-04-10T20:25:43.055Z",
   "tags": [
-    "auth",
-    "server"
+    "auth"
   ],
   "svelte5": false,
   "runes": false,

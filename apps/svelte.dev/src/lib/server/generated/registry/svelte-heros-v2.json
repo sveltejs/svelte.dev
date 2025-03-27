@@ -2,7 +2,9 @@
   "name": "svelte-heros-v2",
   "description": "Provides Hero icon v2 components for Svelte.",
   "repo_url": "https://github.com/shinokada/svelte-heros-v2",
-  "author": "Shinichi Okada",
+  "authors": [
+    "shinichiokada"
+  ],
   "homepage": "https://svelte-heros-v2.codewithshin.com/",
   "downloads": 2950,
   "dependents": 0,

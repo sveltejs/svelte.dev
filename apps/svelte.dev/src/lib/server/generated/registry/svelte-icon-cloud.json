@@ -1,8 +1,10 @@
 {
   "name": "svelte-icon-cloud",
-  "description": "Creates interactive 3D clouds of icons in Svelte.",
+  "description": "Create interactive 3D clouds of icons in Svelte.",
   "repo_url": "https://github.com/Ahram-41/svelte-icon-cloud",
-  "author": "Ahram-41",
+  "authors": [
+    "ahram-41"
+  ],
   "homepage": "https://github.com/Ahram-41/svelte-icon-cloud#readme",
   "downloads": 3,
   "dependents": 0,

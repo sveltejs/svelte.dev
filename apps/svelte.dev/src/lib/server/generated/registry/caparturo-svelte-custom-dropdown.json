@@ -2,8 +2,10 @@
   "name": "@caparturo/svelte-custom-dropdown",
   "description": "Create customizable dropdown lists using slots and properties.",
   "repo_url": "",
-  "author": "Cesar Patiño",
-  "downloads": 20,
+  "authors": [
+    "caparturo"
+  ],
+  "downloads": 0,
   "dependents": 0,
   "updated": "2022-07-13T03:39:20.369Z",
   "tags": [

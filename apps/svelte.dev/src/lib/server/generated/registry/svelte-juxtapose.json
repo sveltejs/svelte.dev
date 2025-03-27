@@ -1,14 +1,17 @@
 {
   "name": "svelte-juxtapose",
-  "description": "Creates image comparison with interactive slider in Svelte.",
+  "description": "Juxtapose images with interactive slider in Svelte.",
   "repo_url": "https://github.com/sawyerclick/svelte-juxtapose",
-  "author": "Sawyer Click",
+  "authors": [
+    "sawyerclick"
+  ],
   "homepage": "http://svelte-juxtapose.netlify.app",
-  "downloads": 0,
+  "downloads": 7,
   "dependents": 0,
   "updated": "2022-09-05T18:47:44.992Z",
   "tags": [
-    "ui"
+    "ui",
+    "media"
   ],
   "svelte5": false,
   "runes": false,

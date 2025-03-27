@@ -151,7 +151,7 @@ export interface Package {
 	repo_url?: string;
 
 	/** Author username */
-	author?: string;
+	authors?: string[];
 
 	/** Homepage URL */
 	homepage?: string;

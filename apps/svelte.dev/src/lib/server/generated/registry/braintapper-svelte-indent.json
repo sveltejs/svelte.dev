@@ -1,10 +1,12 @@
 {
   "name": "braintapper-svelte-indent",
-  "description": "Create indent div component for hierarchical list views in Svelte.",
+  "description": "Provide simple indent div component for hierarchical lists.",
   "repo_url": "https://github.com/braintapper/braintapper-svelte-indent",
-  "author": "braintapper",
+  "authors": [
+    "braintapper"
+  ],
   "homepage": "https://github.com/braintapper/braintapper-svelte-indent#readme",
-  "downloads": 0,
+  "downloads": 10,
   "dependents": 0,
   "updated": "2020-11-26T15:17:58.123Z",
   "tags": [

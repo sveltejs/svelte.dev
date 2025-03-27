@@ -1,15 +1,16 @@
 {
   "name": "svelton",
-  "description": "Provides high-quality Svelte components with powerful customization.",
+  "description": "Provide high-quality Svelte components with customization.",
   "repo_url": "https://github.com/farhadniaz/svelton",
-  "author": "farhad azarbarzinniaz",
+  "authors": [
+    "farhadniaz"
+  ],
   "homepage": "https://github.com/farhadniaz/svelton#readme",
-  "downloads": 10,
+  "downloads": 28,
   "dependents": 0,
   "updated": "2020-05-17T06:23:46.888Z",
   "tags": [
-    "component-library",
-    "ui"
+    "component-library"
   ],
   "svelte5": false,
   "runes": false

@@ -1,10 +1,12 @@
 {
   "name": "@westacks/inertia-svelte",
-  "description": "Integrate Inertia.js with Svelte applications.",
+  "description": "Svelte adapter for Inertia.js, build modern single-page apps.",
   "repo_url": "https://github.com/westacks/inertia-svelte",
-  "author": "Dmytro Morozov",
+  "authors": [
+    "punyflash"
+  ],
   "homepage": "https://inertiajs.com/",
-  "downloads": 0,
+  "downloads": 30,
   "dependents": 0,
   "updated": "2024-03-30T06:38:07.447Z",
   "tags": [

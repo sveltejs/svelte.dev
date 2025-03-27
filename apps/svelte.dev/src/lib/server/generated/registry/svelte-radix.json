@@ -1,10 +1,12 @@
 {
   "name": "svelte-radix",
-  "description": "Provides Radix SVG icon components for Svelte.",
+  "description": "Radix SVG icon components for Svelte.",
   "repo_url": "https://github.com/shinokada/svelte-radix",
-  "author": "Shinichi Okada",
+  "authors": [
+    "shinichiokada"
+  ],
   "homepage": "https://svelte-radix.codewithshin.com/",
-  "downloads": 15896,
+  "downloads": 16899,
   "dependents": 11,
   "updated": "2024-10-25T14:22:16.094Z",
   "tags": [

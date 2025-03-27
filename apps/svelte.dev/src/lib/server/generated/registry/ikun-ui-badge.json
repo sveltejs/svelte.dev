@@ -1,8 +1,10 @@
 {
   "name": "@ikun-ui/badge",
-  "description": "Build badge component for Svelte applications.",
+  "description": "Create badge components for Svelte.",
   "repo_url": "",
-  "author": "baiwusanyu",
+  "authors": [
+    "baiwusanyu"
+  ],
   "downloads": 29,
   "dependents": 1,
   "updated": "2025-01-24T03:48:35.792Z",

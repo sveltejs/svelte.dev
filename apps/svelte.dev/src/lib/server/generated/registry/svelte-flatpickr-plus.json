@@ -1,8 +1,10 @@
 {
   "name": "svelte-flatpickr-plus",
-  "description": "Integrates Flatpickr datepicker as Svelte action with extra features.",
+  "description": "Use Flatpickr date and time pickers in Svelte with extra features.",
   "repo_url": "https://github.com/kodaicoder/svelte-flatpickr-plus",
-  "author": "kodaicoder",
+  "authors": [
+    "nutchyleo123"
+  ],
   "homepage": "https://github.com/kodaicoder/svelte-flatpickr-plus",
   "downloads": 95,
   "dependents": 0,

@@ -1,10 +1,12 @@
 {
   "name": "sv-router",
-  "description": "Implement modern routing for Svelte single-page applications.",
+  "description": "Provides modern, feature-rich routing for Svelte SPAs.",
   "repo_url": "https://github.com/colinlienard/sv-router",
-  "author": "colinlienard",
+  "authors": [
+    "colinlienard"
+  ],
   "homepage": "https://github.com/colinlienard/sv-router",
-  "downloads": 26,
+  "downloads": 120,
   "dependents": 0,
   "updated": "2025-03-19T13:12:25.929Z",
   "tags": [

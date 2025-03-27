@@ -1,10 +1,12 @@
 {
   "name": "respawn-carousel",
-  "description": "Create carousel/slider components for Svelte.",
+  "description": "Create carousel/slider components for Svelte apps.",
   "repo_url": "https://github.com/proven-design/respawn-carousel",
-  "author": "Jonny@respawn",
+  "authors": [
+    "respawn"
+  ],
   "homepage": "https://github.com/proven-design/respawn-carousel#readme",
-  "downloads": 1,
+  "downloads": 6,
   "dependents": 0,
   "updated": "2021-02-07T03:10:58.694Z",
   "tags": [

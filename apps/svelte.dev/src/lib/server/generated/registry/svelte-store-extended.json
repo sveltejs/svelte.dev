@@ -2,9 +2,11 @@
   "name": "svelte-store-extended",
   "description": "Extends Svelte stores with additional functionalities.",
   "repo_url": "https://github.com/chainlist/svelte-store-extended",
-  "author": "ChainList",
+  "authors": [
+    "chainlist"
+  ],
   "homepage": "https://github.com/chainlist/svelte-store-extended#readme",
-  "downloads": 0,
+  "downloads": 8,
   "dependents": 0,
   "updated": "2021-04-04T14:18:30.388Z",
   "tags": [

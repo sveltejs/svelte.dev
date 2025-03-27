@@ -1,10 +1,12 @@
 {
   "name": "braintapper-svelte-icon",
-  "description": "Renders SVG icons from materialdesignicons.com in Svelte.",
+  "description": "Display SVG icons from materialdesignicons.com in Svelte.",
   "repo_url": "https://github.com/braintapper/braintapper-svelte-icon",
-  "author": "braintapper",
+  "authors": [
+    "braintapper"
+  ],
   "homepage": "https://github.com/braintapper/braintapper-svelte-icon#readme",
-  "downloads": 1,
+  "downloads": 42,
   "dependents": 0,
   "updated": "2021-10-08T19:25:48.494Z",
   "tags": [

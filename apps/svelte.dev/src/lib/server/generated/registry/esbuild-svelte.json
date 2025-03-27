@@ -1,10 +1,12 @@
 {
   "name": "esbuild-svelte",
-  "description": "Compile Svelte components with esbuild.",
+  "description": "esbuild plugin to resolve .svelte files.",
   "repo_url": "https://github.com/EMH333/esbuild-svelte",
-  "author": "Ethan Hampton",
+  "authors": [
+    "emh333"
+  ],
   "homepage": "https://github.com/EMH333/esbuild-svelte#readme",
-  "downloads": 20690,
+  "downloads": 21715,
   "dependents": 38,
   "updated": "2025-03-14T02:28:58.960Z",
   "tags": [

@@ -1,15 +1,16 @@
 {
   "name": "svelte-editorjs",
-  "description": "Integrate EditorJS rich text editor into Svelte projects.",
+  "description": "Provide EditorJS wrapper for Svelte applications.",
   "repo_url": "https://github.com/pablo-abc/svelte-editorjs",
-  "author": "Pablo Berganza",
+  "authors": [
+    "pberganza"
+  ],
   "homepage": "https://github.com/pablo-abc/svelte-editorjs",
-  "downloads": 50,
+  "downloads": 21,
   "dependents": 0,
   "updated": "2021-04-08T21:22:36.716Z",
   "tags": [
-    "content",
-    "ui"
+    "content"
   ],
   "svelte5": false,
   "runes": false,

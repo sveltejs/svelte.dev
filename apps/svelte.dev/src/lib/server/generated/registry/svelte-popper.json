@@ -1,10 +1,12 @@
 {
   "name": "svelte-popper",
-  "description": "Wrapper component for popper.js in Svelte.",
+  "description": "Wrap popper.js for use in Svelte components.",
   "repo_url": "https://github.com/bgreenacre/svelte-popper",
-  "author": "Brian Greenacre",
+  "authors": [
+    "bgreenacre"
+  ],
   "homepage": "https://github.com/bgreenacre/svelte-popper#readme",
-  "downloads": 6,
+  "downloads": 13,
   "dependents": 0,
   "updated": "2020-07-04T01:06:27.813Z",
   "tags": [

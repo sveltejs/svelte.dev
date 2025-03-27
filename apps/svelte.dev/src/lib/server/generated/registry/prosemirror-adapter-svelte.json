@@ -1,10 +1,12 @@
 {
   "name": "@prosemirror-adapter/svelte",
-  "description": "Svelte adapter for ProseMirror.",
+  "description": "Provides Svelte adapter for ProseMirror.",
   "repo_url": "https://github.com/Saul-Mirone/prosemirror-adapter",
-  "author": "mirone",
+  "authors": [
+    "mirone"
+  ],
   "homepage": "https://github.com/Saul-Mirone/prosemirror-adapter#readme",
-  "downloads": 2731,
+  "downloads": 3334,
   "dependents": 5,
   "updated": "2025-03-17T21:59:01.355Z",
   "tags": [
@@ -12,5 +14,5 @@
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 119
+  "github_stars": 120
 }

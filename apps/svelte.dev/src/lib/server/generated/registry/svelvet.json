@@ -1,16 +1,28 @@
 {
   "name": "svelvet",
-  "description": "Build dynamic, node-based user interfaces with Svelte.",
+  "description": "Builds dynamic, node-based user interfaces with Svelte.",
   "repo_url": "https://github.com/open-source-labs/Svelvet",
-  "author": "vongarcia97",
+  "authors": [
+    "vongarcia97",
+    "justinwouters",
+    "amadams",
+    "tensioncoding",
+    "limd96",
+    "andrew-widjaja",
+    "azambran21",
+    "anulepau",
+    "svelvet.oslabs",
+    "aaronwnyc"
+  ],
   "homepage": "https://github.com/open-source-labs/Svelvet",
-  "downloads": 1547,
+  "downloads": 1310,
   "dependents": 5,
   "updated": "2025-02-18T20:13:27.930Z",
   "tags": [
+    "component-library",
     "ui"
   ],
-  "svelte5": true,
+  "svelte5": false,
   "runes": false,
-  "github_stars": 2677
+  "github_stars": 2679
 }

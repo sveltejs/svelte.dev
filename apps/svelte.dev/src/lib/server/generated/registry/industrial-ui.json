@@ -1,14 +1,16 @@
 {
   "name": "industrial-ui",
-  "description": "Provide production-oriented library of styleless UI-components.",
+  "description": "Provides unstyled UI components for Svelte.",
   "repo_url": "https://github.com/VanishMax/industrial-ui",
-  "author": "VanishMax",
+  "authors": [
+    "vanishmax"
+  ],
   "homepage": "https://github.com/VanishMax/industrial-ui#readme",
-  "downloads": 0,
+  "downloads": 11,
   "dependents": 0,
   "updated": "2020-05-13T14:15:08.738Z",
   "tags": [
-    "ui"
+    "component-library"
   ],
   "svelte5": false,
   "runes": false,

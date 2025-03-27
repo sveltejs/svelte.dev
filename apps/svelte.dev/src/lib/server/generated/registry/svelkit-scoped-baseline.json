@@ -1,14 +1,16 @@
 {
   "name": "@svelkit/scoped-baseline",
-  "description": "Scoped baseline component for Svelte apps.",
+  "description": "Scoped baseline component to kickstart consistent baseline.",
   "repo_url": "https://github.com/kenoxa/svelkit",
-  "author": "Sascha Tandel",
+  "authors": [
+    "sastan"
+  ],
   "homepage": "https://github.com/kenoxa/svelkit#readme",
-  "downloads": 13,
+  "downloads": 36,
   "dependents": 0,
   "updated": "2020-07-16T19:45:05.773Z",
   "tags": [
-    "utility"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

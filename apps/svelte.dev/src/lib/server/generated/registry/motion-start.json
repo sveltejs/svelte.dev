@@ -1,8 +1,10 @@
 {
   "name": "motion-start",
-  "description": "Svelte animation library inspired by Framer Motion.",
-  "author": "JonathonRP",
-  "downloads": 131,
+  "description": "Svelte animation library inspired by framer-motion.",
+  "authors": [
+    "jonathonrp"
+  ],
+  "downloads": 133,
   "dependents": 0,
   "updated": "2024-12-05T01:02:02.084Z",
   "tags": [

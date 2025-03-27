@@ -1,10 +1,12 @@
 {
   "name": "svelte-actions",
-  "description": "Create Svelte actions for various DOM interactions.",
+  "description": "Create reusable Svelte actions for various DOM interactions.",
   "repo_url": "https://github.com/sw-yx/svelte-actions",
-  "author": "swyx",
+  "authors": [
+    "sw-yx"
+  ],
   "homepage": "https://github.com/sw-yx/svelte-actions#readme",
-  "downloads": 6,
+  "downloads": 12,
   "dependents": 0,
   "updated": "2022-03-07T21:09:39.307Z",
   "tags": [
@@ -12,5 +14,5 @@
   ],
   "svelte5": false,
   "runes": false,
-  "github_stars": 224
+  "github_stars": 225
 }

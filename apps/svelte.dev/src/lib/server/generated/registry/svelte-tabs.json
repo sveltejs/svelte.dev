@@ -1,10 +1,12 @@
 {
   "name": "svelte-tabs",
-  "description": "Create tabs component for Svelte.",
+  "description": "Create tab components for Svelte applications.",
   "repo_url": "https://github.com/joeattardi/svelte-tabs",
-  "author": "joeattardi",
+  "authors": [
+    "joeattardi"
+  ],
   "homepage": "https://github.com/joeattardi/svelte-tabs#readme",
-  "downloads": 877,
+  "downloads": 276,
   "dependents": 3,
   "updated": "2019-08-21T14:00:16.390Z",
   "tags": [

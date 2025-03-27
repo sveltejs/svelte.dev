@@ -1,8 +1,10 @@
 {
   "name": "svelte-markdoc-preprocess",
-  "description": "Preprocess Svelte files with Markdoc.",
+  "description": "Preprocess Svelte files with Markdoc for content.",
   "repo_url": "https://github.com/TorstenDittmann/svelte-markdoc-preprocess",
-  "author": "Torsten Dittmann",
+  "authors": [
+    "torstendittmann"
+  ],
   "homepage": "https://svelte-markdoc-preprocess.pages.dev",
   "downloads": 243,
   "dependents": 0,

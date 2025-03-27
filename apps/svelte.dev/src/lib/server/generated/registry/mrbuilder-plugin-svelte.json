@@ -1,0 +1,19 @@
+{
+  "name": "@mrbuilder/plugin-svelte",
+  "description": "Provides Svelte file handling for MrBuilder build system.",
+  "repo_url": "",
+  "authors": [
+    "speajus",
+    "nanandn",
+    "brycereynolds"
+  ],
+  "downloads": 11,
+  "dependents": 0,
+  "updated": "2021-10-25T22:41:48.846Z",
+  "tags": [
+    "tooling",
+    "preprocessor"
+  ],
+  "svelte5": false,
+  "runes": false
+}

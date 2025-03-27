@@ -1,8 +1,10 @@
 {
   "name": "svelte-match-media",
-  "description": "Adds matchMedia support to Svelte components.",
+  "description": "Match media plugin for Svelte.",
   "repo_url": "https://github.com/pearofducks/svelte-match-media",
-  "author": "Dave Honneffer",
+  "authors": [
+    "pearofducks"
+  ],
   "homepage": "https://github.com/pearofducks/svelte-match-media#readme",
   "downloads": 39,
   "dependents": 2,

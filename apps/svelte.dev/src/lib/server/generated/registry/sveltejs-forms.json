@@ -1,10 +1,12 @@
 {
   "name": "sveltejs-forms",
-  "description": "Create declarative forms for Svelte.",
+  "description": "Build declarative forms with validation in Svelte applications.",
   "repo_url": "https://github.com/mdauner/sveltejs-forms",
-  "author": "mdauner",
+  "authors": [
+    "mdauner"
+  ],
   "homepage": "https://mdauner.github.io/sveltejs-forms/",
-  "downloads": 430,
+  "downloads": 948,
   "dependents": 0,
   "updated": "2020-09-05T16:46:05.508Z",
   "tags": [

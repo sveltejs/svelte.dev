@@ -1,9 +1,11 @@
 {
   "name": "mdi-svelte-ts",
-  "description": "Provides Material Design Icons for Svelte with TypeScript support.",
+  "description": "Use Material Design Icons in Svelte with TypeScript support.",
   "repo_url": "",
-  "author": "abeldebruijn",
-  "downloads": 9,
+  "authors": [
+    "abeldebruijn"
+  ],
+  "downloads": 20,
   "dependents": 0,
   "updated": "2022-09-22T13:48:07.272Z",
   "tags": [

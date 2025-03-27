@@ -1,10 +1,12 @@
 {
   "name": "svelte-tiny-pdf",
-  "description": "View PDF documents in Svelte applications.",
+  "description": "Integrate a tiny PDF viewer into Svelte applications.",
   "repo_url": "https://github.com/JoshuaDesiresCoffee/svelte-tiny-pdf",
-  "author": "JoshuaDesiresCoffee",
+  "authors": [
+    "joshua-desires-coffee"
+  ],
   "homepage": "https://github.com/JoshuaDesiresCoffee/svelte-tiny-pdf",
-  "downloads": 2,
+  "downloads": 0,
   "dependents": 0,
   "updated": "2024-11-20T01:05:59.580Z",
   "tags": [

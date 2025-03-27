@@ -1,15 +1,16 @@
 {
   "name": "vite-plugin-svelte-svgr",
-  "description": "Import SVGs as Svelte components in Vite projects.",
+  "description": "Enable normalized SVG imports in SvelteKit.",
   "repo_url": "https://github.com/blujedis/vite-plugin-svelte-svgr",
-  "author": "Blujedis",
+  "authors": [
+    "blujedis"
+  ],
   "homepage": "https://github.com/blujedis/vite-plugin-svelte-svgr#readme",
-  "downloads": 258,
+  "downloads": 151,
   "dependents": 0,
   "updated": "2022-09-22T22:15:54.613Z",
   "tags": [
-    "tooling",
-    "preprocessor"
+    "tooling"
   ],
   "svelte5": true,
   "runes": false,

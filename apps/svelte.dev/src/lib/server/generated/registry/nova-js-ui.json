@@ -1,9 +1,11 @@
 {
   "name": "nova-js-ui",
-  "description": "Create UI components for Svelte applications.",
+  "description": "Provides UI components for Svelte, including a provider for SvelteKit and Astro.",
   "repo_url": "",
-  "author": "martinramos98",
-  "downloads": 2,
+  "authors": [
+    "martinramos98"
+  ],
+  "downloads": 4,
   "dependents": 0,
   "updated": "2024-10-21T19:28:31.788Z",
   "tags": [

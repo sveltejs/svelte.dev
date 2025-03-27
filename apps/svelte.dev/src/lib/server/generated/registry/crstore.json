@@ -1,10 +1,12 @@
 {
   "name": "crstore",
-  "description": "Create conflict-free replicated stores for Svelte apps.",
+  "description": "Provides conflict-free replicated store for Svelte apps.",
   "repo_url": "https://github.com/Azarattum/CRStore",
-  "author": "Azarattum",
+  "authors": [
+    "azarattum"
+  ],
   "homepage": "https://github.com/Azarattum/CRStore#readme",
-  "downloads": 168,
+  "downloads": 380,
   "dependents": 0,
   "updated": "2025-02-11T04:49:18.967Z",
   "tags": [

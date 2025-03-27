@@ -1,11 +1,13 @@
 {
   "name": "@htmlbricks/hb-input-radio",
-  "description": "Create radio input web components for Svelte applications.",
+  "description": "Create Svelte-Bootstrap radio input web components.",
   "repo_url": "",
-  "author": "Dario Caruso",
-  "downloads": 493,
+  "authors": [
+    "dariocaruso"
+  ],
+  "downloads": 509,
   "dependents": 3,
-  "updated": "2025-03-09T03:10:30.241Z",
+  "updated": "2025-03-24T18:07:16.076Z",
   "tags": [
     "ui"
   ],

@@ -1,10 +1,12 @@
 {
   "name": "svavatar",
-  "description": "Generate avatars using Dicebear's library for Svelte apps.",
+  "description": "Generate avatar components using Dicebear's Avatars library.",
   "repo_url": "https://github.com/takoyaro/svavatar",
-  "author": "takoyaro",
+  "authors": [
+    "takochan"
+  ],
   "homepage": "https://github.com/takoyaro/svavatar#readme",
-  "downloads": 116,
+  "downloads": 14,
   "dependents": 0,
   "updated": "2020-06-05T07:14:12.578Z",
   "tags": [

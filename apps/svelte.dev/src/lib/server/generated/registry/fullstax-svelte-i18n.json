@@ -1,10 +1,12 @@
 {
   "name": "@fullstax/svelte-i18n",
-  "description": "Implement internationalization in Svelte applications.",
+  "description": "Provides internationalization for Svelte applications.",
   "repo_url": "https://github.com/fullstax/svelte-i18n",
-  "author": "Christian Kaisermann",
+  "authors": [
+    "mojoaxel"
+  ],
   "homepage": "https://github.com/fullstax/svelte-i18n#readme",
-  "downloads": 18,
+  "downloads": 4,
   "dependents": 0,
   "updated": "2023-10-04T18:50:10.892Z",
   "tags": [

@@ -1,9 +1,11 @@
 {
   "name": "@alphairys/svelte-mapbox-gl",
-  "description": "Svelte wrapper components for Mapbox GL JS.",
+  "description": "Provides Svelte wrapper components for Mapbox GL JS.",
   "repo_url": "",
-  "author": "alphairys",
-  "downloads": 4,
+  "authors": [
+    "alphairys"
+  ],
+  "downloads": 2,
   "dependents": 0,
   "updated": "2024-02-28T19:02:57.141Z",
   "tags": [

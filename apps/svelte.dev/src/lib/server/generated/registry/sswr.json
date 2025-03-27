@@ -1,15 +1,17 @@
 {
   "name": "sswr",
-  "description": "Implement Svelte stale-while-revalidate (SWR) data fetching strategy.",
+  "description": "Implement Svelte stale-while-revalidate data fetching strategy.",
   "repo_url": "https://github.com/ConsoleTVs/sswr",
-  "author": "Èrik C. Forés",
-  "downloads": 542848,
+  "authors": [
+    "consoletvs"
+  ],
+  "downloads": 493563,
   "dependents": 34,
   "updated": "2025-03-04T20:30:45.524Z",
   "tags": [
     "utility"
   ],
-  "svelte5": true,
+  "svelte5": false,
   "runes": false,
-  "github_stars": 247
+  "github_stars": 248
 }

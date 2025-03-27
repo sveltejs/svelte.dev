@@ -1,8 +1,10 @@
 {
   "name": "svelte-deep-zoom",
-  "description": "Render interactive Deep Zoom images in Svelte applications.",
+  "description": "Render interactive Deep Zoom images (tiled image pyramids) in Svelte.",
   "repo_url": "https://github.com/captaincodeman/svelte-deep-zoom",
-  "author": "Simon Green",
+  "authors": [
+    "captaincodeman"
+  ],
   "homepage": "https://captaincodeman.github.io/svelte-deep-zoom/",
   "downloads": 55,
   "dependents": 0,

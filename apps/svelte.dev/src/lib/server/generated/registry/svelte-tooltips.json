@@ -2,7 +2,9 @@
   "name": "svelte-tooltips",
   "description": "Create customizable tooltips for Svelte elements.",
   "repo_url": "https://github.com/DonutLaser/svelte-tooltips",
-  "author": "Vidmantas Luneckas",
+  "authors": [
+    "donutlaser"
+  ],
   "homepage": "https://github.com/DonutLaser/svelte-tooltips",
   "downloads": 0,
   "dependents": 0,

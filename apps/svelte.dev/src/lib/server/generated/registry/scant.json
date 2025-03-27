@@ -1,0 +1,17 @@
+{
+  "name": "scant",
+  "description": "Generate static sites for Svelte applications.",
+  "repo_url": "https://github.com/voldemortensen/scant",
+  "authors": [
+    "voldemortensen"
+  ],
+  "homepage": "https://github.com/voldemortensen/scant#readme",
+  "downloads": 9,
+  "dependents": 0,
+  "updated": "2019-05-25T15:06:49.183Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false
+}

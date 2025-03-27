@@ -1,16 +1,19 @@
 {
   "name": "vaul-svelte",
-  "description": "Create accessible dialogs, sheets, and popovers in Svelte.",
+  "description": "Create transitions and animations for Svelte components.",
   "repo_url": "https://github.com/huntabyte/vaul-svelte",
-  "author": "huntabyte",
+  "authors": [
+    "huntabyte"
+  ],
   "homepage": "https://github.com/huntabyte/vaul-svelte#readme",
-  "downloads": 21702,
+  "downloads": 23075,
   "dependents": 15,
   "updated": "2024-06-29T16:12:55.492Z",
   "tags": [
-    "ui"
+    "ui",
+    "component-library"
   ],
-  "svelte5": true,
+  "svelte5": false,
   "runes": false,
-  "github_stars": 525
+  "github_stars": 526
 }

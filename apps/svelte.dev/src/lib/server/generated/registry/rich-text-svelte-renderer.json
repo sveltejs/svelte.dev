@@ -1,10 +1,12 @@
 {
   "name": "rich-text-svelte-renderer",
-  "description": "Render Hygraph rich text content in Svelte applications.",
+  "description": "Render Hygraph Rich Text content in Svelte applications.",
   "repo_url": "https://github.com/bertybot/svelte-renderer",
-  "author": "Bert Bengtson",
+  "authors": [
+    "bertybot"
+  ],
   "homepage": "https://github.com/bertybot/svelte-renderer#readme",
-  "downloads": 29,
+  "downloads": 43,
   "dependents": 0,
   "updated": "2025-03-17T20:25:18.413Z",
   "tags": [

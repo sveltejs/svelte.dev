@@ -1,14 +1,15 @@
 {
   "name": "@htmlbricks/hb-calendar-appointments",
-  "description": "Create a Svelte Calendar WebComponent.",
+  "description": "Create calendar appointment components.",
   "repo_url": "",
-  "author": "Dario Caruso",
-  "downloads": 199,
+  "authors": [
+    "dariocaruso"
+  ],
+  "downloads": 211,
   "dependents": 0,
-  "updated": "2025-03-09T03:10:27.097Z",
+  "updated": "2025-03-24T18:07:12.661Z",
   "tags": [
-    "component-library",
-    "ui"
+    "component-library"
   ],
   "svelte5": false,
   "runes": false

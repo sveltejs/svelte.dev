@@ -2,8 +2,10 @@
   "name": "@kwangure/strawberry",
   "description": "Provide Svelte components and utilities.",
   "repo_url": "",
-  "author": "kwangure",
-  "downloads": 85,
+  "authors": [
+    "kwangure"
+  ],
+  "downloads": 0,
   "dependents": 0,
   "updated": "2023-06-25T16:25:12.694Z",
   "tags": [

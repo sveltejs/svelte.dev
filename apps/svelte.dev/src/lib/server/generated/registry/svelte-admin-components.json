@@ -1,10 +1,12 @@
 {
   "name": "svelte-admin-components",
-  "description": "Create admin UI components for Svelte projects.",
+  "description": "Offers Svelte admin components based on Skeleton UI toolkit.",
   "repo_url": "https://github.com/rabee-inc/svelte-admin-components",
-  "author": "phi",
+  "authors": [
+    "phi"
+  ],
   "homepage": "https://github.com/rabee-inc/svelte-admin-components#readme",
-  "downloads": 62,
+  "downloads": 73,
   "dependents": 0,
   "updated": "2023-04-13T12:05:36.254Z",
   "tags": [

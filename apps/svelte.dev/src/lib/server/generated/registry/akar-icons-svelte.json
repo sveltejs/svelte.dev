@@ -1,10 +1,12 @@
 {
   "name": "akar-icons-svelte",
-  "description": "Use Akar icons as Svelte components.",
+  "description": "Use Akar Icons as Svelte components.",
   "repo_url": "https://github.com/WilliamVenner/akar-icons-svelte",
-  "author": "WilliamVenner",
+  "authors": [
+    "williamvenner"
+  ],
   "homepage": "https://akaricons.com",
-  "downloads": 4,
+  "downloads": 8,
   "dependents": 0,
   "updated": "2023-12-29T17:43:54.698Z",
   "tags": [

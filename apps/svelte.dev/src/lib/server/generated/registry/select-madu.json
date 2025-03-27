@@ -1,10 +1,12 @@
 {
   "name": "select-madu",
-  "description": "Create select menu with search, multi-select, and async loading.",
+  "description": "Provides a customizable select menu for Svelte.",
   "repo_url": "https://github.com/pavish/select-madu",
-  "author": "Pavish Kumar Ramani Gopal",
+  "authors": [
+    "pavish"
+  ],
   "homepage": "https://github.com/pavish/select-madu#readme",
-  "downloads": 7,
+  "downloads": 12,
   "dependents": 0,
   "updated": "2021-03-25T06:01:27.134Z",
   "tags": [

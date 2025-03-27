@@ -1,14 +1,16 @@
 {
   "name": "svelte-json-tree-auto",
-  "description": "Display JSON data in a tree structure with auto-expanding objects.",
+  "description": "View JSON data in Svelte applications.",
   "repo_url": "https://github.com/popey456963/svelte-json-tree",
-  "author": "Alexander Craggs",
+  "authors": [
+    "codefined"
+  ],
   "homepage": "https://github.com/popey456963/svelte-json-tree#readme",
-  "downloads": 497,
+  "downloads": 603,
   "dependents": 5,
   "updated": "2020-08-19T10:56:48.948Z",
   "tags": [
-    "ui"
+    "utility"
   ],
   "svelte5": false,
   "runes": false,

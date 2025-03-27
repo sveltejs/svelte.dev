@@ -1,13 +1,16 @@
 {
   "name": "argil-svelte",
-  "description": "Provides Svelte UI components kit.",
+  "description": "Create Svelte UI components kit.",
   "repo_url": "",
-  "author": "Vincent Delaleu",
+  "authors": [
+    "delwwwinc"
+  ],
   "downloads": 10,
   "dependents": 0,
   "updated": "2024-09-26T12:22:38.610Z",
   "tags": [
-    "component-library"
+    "component-library",
+    "ui"
   ],
   "svelte5": false,
   "runes": false

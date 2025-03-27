@@ -1,12 +1,17 @@
 {
   "name": "svelte-preprocess-unocss",
+  "description": "Run UnoCSS in svelte-scoped mode via preprocessor.",
   "repo_url": "https://github.com/jacob-8/svelte-scoped-uno",
-  "author": "Jacob Bowdoin",
+  "authors": [
+    "jacobbowdoin"
+  ],
   "homepage": "https://polylingual.dev",
-  "downloads": 1,
+  "downloads": 8,
   "dependents": 0,
   "updated": "2023-05-20T00:02:34.567Z",
-  "tags": [],
+  "tags": [
+    "preprocessor"
+  ],
   "svelte5": false,
   "runes": false,
   "github_stars": 17

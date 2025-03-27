@@ -1,10 +1,12 @@
 {
   "name": "@svel/router",
-  "description": "Provides routing for Svelte.js applications.",
+  "description": "Implement routing for Svelte applications with nested routes.",
   "repo_url": "https://github.com/wmzy/svelte-router",
-  "author": "Evan You",
+  "authors": [
+    "wmzy"
+  ],
   "homepage": "https://github.com/wmzy/svelte-router#readme",
-  "downloads": 2,
+  "downloads": 19,
   "dependents": 1,
   "updated": "2019-05-22T07:55:34.971Z",
   "tags": [

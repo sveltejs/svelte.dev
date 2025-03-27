@@ -1,10 +1,12 @@
 {
   "name": "svelte-use-mousetrap",
-  "description": "Use mousetrap for keyboard shortcuts in Svelte.",
+  "description": "Integrate Mousetrap keyboard shortcuts into Svelte apps.",
   "repo_url": "https://github.com/wareset/svelte-use-mousetrap",
-  "author": "wareset",
+  "authors": [
+    "nk12"
+  ],
   "homepage": "https://github.com/wareset/svelte-use-mousetrap#readme",
-  "downloads": 228,
+  "downloads": 189,
   "dependents": 0,
   "updated": "2021-05-27T22:14:09.252Z",
   "tags": [

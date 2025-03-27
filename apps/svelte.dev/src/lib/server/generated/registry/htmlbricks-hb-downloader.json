@@ -1,13 +1,15 @@
 {
   "name": "@htmlbricks/hb-downloader",
-  "description": "Create downloader web component.",
+  "description": "Svelte-Bootstrap Downloader WebComponent",
   "repo_url": "",
-  "author": "Dario Caruso",
-  "downloads": 459,
+  "authors": [
+    "dariocaruso"
+  ],
+  "downloads": 476,
   "dependents": 2,
-  "updated": "2025-03-09T03:10:37.145Z",
+  "updated": "2025-03-24T18:07:22.303Z",
   "tags": [
-    "ui"
+    "utility"
   ],
   "svelte5": false,
   "runes": false

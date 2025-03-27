@@ -1,14 +1,16 @@
 {
   "name": "trilist",
-  "description": "Create treeselect and treeview web components for tree data.",
+  "description": "Provides tree data components: treeselect and treeview for Svelte.",
   "repo_url": "https://github.com/beholdr/trilist",
-  "author": "Alexander Shabunevich",
+  "authors": [
+    "beholdr"
+  ],
   "homepage": "https://github.com/beholdr/trilist#readme",
-  "downloads": 0,
+  "downloads": 8,
   "dependents": 0,
   "updated": "2024-06-24T09:38:05.898Z",
   "tags": [
-    "ui"
+    "component-library"
   ],
   "svelte5": false,
   "runes": false,

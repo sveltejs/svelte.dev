@@ -1,10 +1,12 @@
 {
   "name": "svelte-component-navigator",
-  "description": "Provides simple component routing for Svelte applications.",
+  "description": "Provides simple component router for Svelte 3.",
   "repo_url": "https://github.com/russellraimundo/svelte-abstract-router",
-  "author": "Russell Raimundo",
+  "authors": [
+    "russellraimundo"
+  ],
   "homepage": "https://github.com/russellraimundo/svelte-abstract-router#readme",
-  "downloads": 1,
+  "downloads": 31,
   "dependents": 0,
   "updated": "2021-09-11T03:13:28.331Z",
   "tags": [

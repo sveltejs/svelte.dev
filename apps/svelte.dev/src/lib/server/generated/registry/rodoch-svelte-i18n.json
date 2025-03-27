@@ -1,0 +1,18 @@
+{
+  "name": "@rodoch/svelte-i18n",
+  "description": "Provide internationalization for Svelte, using stores for locales.",
+  "repo_url": "https://github.com/rodoch/svelte-i18n",
+  "authors": [
+    "rodoch"
+  ],
+  "homepage": "https://github.com/rodoch/svelte-i18n#readme",
+  "downloads": 6,
+  "dependents": 0,
+  "updated": "2020-03-19T11:26:03.215Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

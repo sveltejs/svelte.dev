@@ -1,8 +1,10 @@
 {
   "name": "svelte-ruler",
-  "description": "Draw grids, scroll infinitely with Svelte ruler component.",
+  "description": "Draws grids and scrolls infinitely in Svelte.",
   "repo_url": "https://github.com/daybrush/ruler",
-  "author": "Daybrush",
+  "authors": [
+    "younkue"
+  ],
   "homepage": "https://github.com/daybrush/ruler#readme",
   "downloads": 3,
   "dependents": 0,

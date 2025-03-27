@@ -1,14 +1,16 @@
 {
   "name": "extended-table",
-  "description": "Provides extended table component for Svelte.",
+  "description": "Create sortable, filterable data tables for Svelte.",
   "repo_url": "https://github.com/dritter/extended-table",
-  "author": "Dominik Ritter",
+  "authors": [
+    "dritter"
+  ],
   "homepage": "https://github.com/dritter/extended-table#readme",
-  "downloads": 10,
+  "downloads": 8,
   "dependents": 0,
   "updated": "2023-06-07T06:14:06.916Z",
   "tags": [
-    "component-library"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

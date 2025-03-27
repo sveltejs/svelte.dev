@@ -1,8 +1,10 @@
 {
   "name": "@wjfe/dataview",
-  "description": "Render table components for examining extensive tabular data in Svelte.",
+  "description": "Render table component for examining tabular data in Svelte.",
   "repo_url": "https://github.com/WJSoftware/wjfe-dataview",
-  "author": "José Pablo Ramírez Vargas",
+  "authors": [
+    "webjose"
+  ],
   "homepage": "https://wjsoftware.github.io/wjfe-dataview/",
   "downloads": 37,
   "dependents": 0,

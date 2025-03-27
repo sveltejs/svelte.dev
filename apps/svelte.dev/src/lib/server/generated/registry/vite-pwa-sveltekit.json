@@ -1,17 +1,19 @@
 {
   "name": "@vite-pwa/sveltekit",
-  "description": "Zero-config PWA for SvelteKit applications.",
+  "description": "Integrate PWA features into SvelteKit applications.",
   "repo_url": "https://github.com/vite-pwa/sveltekit",
-  "author": "antfu",
+  "authors": [
+    "antfu",
+    "userquin"
+  ],
   "homepage": "https://github.com/vite-pwa/sveltekit#readme",
-  "downloads": 6945,
+  "downloads": 6984,
   "dependents": 5,
   "updated": "2024-12-31T15:28:58.780Z",
   "tags": [
-    "adapter",
-    "tooling"
+    "adapter"
   ],
   "svelte5": false,
   "runes": false,
-  "github_stars": 347
+  "github_stars": 349
 }

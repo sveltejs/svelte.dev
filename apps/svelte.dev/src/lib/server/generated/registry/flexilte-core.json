@@ -1,10 +1,12 @@
 {
   "name": "@flexilte/core",
-  "description": "Transforms JSON into flex-based pages for SvelteKit.",
+  "description": "Generate flex-based pages from JSON in SvelteKit.",
   "repo_url": "https://github.com/flexilte/flexilte",
-  "author": "borgmon",
+  "authors": [
+    "borgmon"
+  ],
   "homepage": "https://flexilte.github.io",
-  "downloads": 16,
+  "downloads": 0,
   "dependents": 1,
   "updated": "2024-11-20T03:33:24.150Z",
   "tags": [

@@ -1,13 +1,15 @@
 {
   "name": "svelte-html-repl",
-  "description": "Creates HTML REPL built in Svelte.",
+  "description": "Create HTML REPL using Svelte components.",
   "repo_url": "",
-  "author": "nph",
-  "downloads": 3,
+  "authors": [
+    "nph"
+  ],
+  "downloads": 12,
   "dependents": 0,
   "updated": "2021-03-15T12:13:37.229Z",
   "tags": [
-    "tooling"
+    "utility"
   ],
   "svelte5": false,
   "runes": false

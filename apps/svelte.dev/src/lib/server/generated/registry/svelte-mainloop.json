@@ -1,8 +1,10 @@
 {
   "name": "svelte-mainloop",
-  "description": "Svelte wrapper for mainloop.js, handles function registration.",
+  "description": "Integrate mainloop.js for game loops and animations in Svelte.",
   "repo_url": "",
-  "author": "Jim Bridger",
+  "authors": [
+    "retrotheft"
+  ],
   "downloads": 0,
   "dependents": 0,
   "updated": "2024-12-20T23:12:03.095Z",

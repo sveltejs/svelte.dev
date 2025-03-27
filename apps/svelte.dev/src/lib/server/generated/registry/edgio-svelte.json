@@ -1,9 +1,11 @@
 {
   "name": "@edgio/svelte",
-  "description": "Adapter for Edgio edge cache.",
+  "description": "Integrate Svelte apps with Edgio.",
   "repo_url": "",
-  "author": "Edgio",
-  "downloads": 7289,
+  "authors": [
+    "moovweb-admin"
+  ],
+  "downloads": 3643,
   "dependents": 0,
   "updated": "2024-11-06T23:18:43.977Z",
   "tags": [

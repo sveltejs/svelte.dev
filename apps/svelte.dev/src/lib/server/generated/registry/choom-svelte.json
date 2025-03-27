@@ -1,15 +1,16 @@
 {
   "name": "choom-svelte",
-  "description": "Provides UI building blocks for Svelte 3 prototypes.",
+  "description": "Offers UI building blocks for Svelte 3 prototypes.",
   "repo_url": "https://github.com/XOP/choom",
-  "author": "XOP",
+  "authors": [
+    "awsmx4"
+  ],
   "homepage": "https://github.com/XOP/choom#readme",
-  "downloads": 3,
+  "downloads": 4,
   "dependents": 0,
   "updated": "2022-02-12T17:53:00.283Z",
   "tags": [
-    "component-library",
-    "ui"
+    "component-library"
   ],
   "svelte5": false,
   "runes": false,

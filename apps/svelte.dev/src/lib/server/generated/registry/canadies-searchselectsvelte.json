@@ -1,10 +1,12 @@
 {
   "name": "@canadies/searchselectsvelte",
-  "description": "Create searchable select component for Svelte with custom UI options.",
+  "description": "Create customizable select components with search functionality.",
   "repo_url": "https://github.com/Hai567/SearchSelectSvelte",
-  "author": "Daniel Ho",
+  "authors": [
+    "canadies"
+  ],
   "homepage": "https://github.com/Hai567/SearchSelectSvelte#readme",
-  "downloads": 26,
+  "downloads": 1,
   "dependents": 0,
   "updated": "2024-03-04T05:23:15.656Z",
   "tags": [

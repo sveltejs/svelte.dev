@@ -2,9 +2,11 @@
   "name": "svelte-showdown",
   "description": "Parse Markdown content within Svelte components.",
   "repo_url": "https://github.com/dragomano/svelte-showdown",
-  "author": "Bugo",
+  "authors": [
+    "dragomano"
+  ],
   "homepage": "https://github.com/dragomano/svelte-showdown",
-  "downloads": 5,
+  "downloads": 6,
   "dependents": 0,
   "updated": "2025-01-08T19:43:19.594Z",
   "tags": [

@@ -2,9 +2,11 @@
   "name": "svelte-adapter-ghpages",
   "description": "Deploy SvelteKit apps to GitHub Pages.",
   "repo_url": "https://github.com/ota-meshi/svelte-adapter-ghpages",
-  "author": "Yosuke Ota",
+  "authors": [
+    "ota-meshi"
+  ],
   "homepage": "https://github.com/ota-meshi/vite-plugin-svelte-md#readme",
-  "downloads": 1905,
+  "downloads": 3687,
   "dependents": 0,
   "updated": "2023-12-15T02:42:03.756Z",
   "tags": [

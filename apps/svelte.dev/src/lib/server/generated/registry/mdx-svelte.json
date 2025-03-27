@@ -1,15 +1,17 @@
 {
   "name": "mdx-svelte",
-  "description": "Process MDX files with Svelte components.",
+  "description": "Process MDX files, enabling Svelte code within Markdown content.",
   "repo_url": "https://github.com/babakfp/mdx-svelte",
-  "author": "babakfp",
+  "authors": [
+    "babakfp"
+  ],
   "homepage": "https://babakfp.ir/docs/mdx-svelte",
   "downloads": 23,
   "dependents": 0,
   "updated": "2025-03-01T19:11:49.897Z",
   "tags": [
-    "content",
-    "preprocessor"
+    "preprocessor",
+    "content"
   ],
   "svelte5": true,
   "runes": false,

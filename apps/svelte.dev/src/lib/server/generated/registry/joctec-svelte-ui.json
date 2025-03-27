@@ -1,0 +1,17 @@
+{
+  "name": "joctec-svelte-ui",
+  "description": "Provide UI framework for Svelte applications.",
+  "repo_url": "https://gitee.com/ruofeng945/joctec-ui",
+  "authors": [
+    "ruofeng945"
+  ],
+  "downloads": 35,
+  "dependents": 0,
+  "updated": "2019-09-18T02:34:05.985Z",
+  "tags": [
+    "component-library",
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

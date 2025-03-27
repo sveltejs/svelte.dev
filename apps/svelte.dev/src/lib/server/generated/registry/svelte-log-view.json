@@ -1,14 +1,15 @@
 {
   "name": "svelte-log-view",
-  "description": "Svelte log viewer component.",
+  "description": "Svelte component displays log content from a source.",
   "repo_url": "https://github.com/arlac77/svelte-log-view",
-  "author": "arlac77",
+  "authors": [
+    "arlac77"
+  ],
   "homepage": "https://github.com/arlac77/svelte-log-view#readme",
-  "downloads": 375,
+  "downloads": 193,
   "dependents": 2,
-  "updated": "2025-03-12T12:37:58.537Z",
+  "updated": "2025-03-24T12:59:00.765Z",
   "tags": [
-    "ui",
     "utility"
   ],
   "svelte5": true,

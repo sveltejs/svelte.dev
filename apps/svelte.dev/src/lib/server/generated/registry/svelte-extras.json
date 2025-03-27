@@ -1,10 +1,12 @@
 {
   "name": "svelte-extras",
-  "description": "Provide extra methods for Svelte components.",
+  "description": "Provide extra methods for Svelte components, including array methods.",
   "repo_url": "https://github.com/sveltejs/svelte-extras",
-  "author": "Rich Harris",
+  "authors": [
+    "rich_harris"
+  ],
   "homepage": "https://github.com/sveltejs/svelte-extras#readme",
-  "downloads": 197,
+  "downloads": 160,
   "dependents": 5,
   "updated": "2018-04-19T16:21:25.308Z",
   "tags": [

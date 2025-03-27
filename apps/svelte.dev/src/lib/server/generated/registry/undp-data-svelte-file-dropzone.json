@@ -1,10 +1,15 @@
 {
   "name": "@undp-data/svelte-file-dropzone",
-  "description": "File upload and dropzone component for Svelte.",
+  "description": "Implement file upload and dropzone functionality in Svelte.",
   "repo_url": "https://github.com/thecodejack/svelte-file-dropzone",
-  "author": "thecodejack",
+  "authors": [
+    "mustafa.saifee",
+    "iferencik",
+    "thuhadev",
+    "j_igarashi"
+  ],
   "homepage": "https://github.com/thecodejack/svelte-file-dropzone#readme",
-  "downloads": 59,
+  "downloads": 89,
   "dependents": 1,
   "updated": "2023-12-12T14:55:58.793Z",
   "tags": [

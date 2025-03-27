@@ -1,10 +1,12 @@
 {
   "name": "svelte-animated-icons",
-  "description": "Animated SVG icons for Svelte with customizable transitions.",
+  "description": "Create animated SVG icons for Svelte with customizable transitions.",
   "repo_url": "https://github.com/shinokada/svelte-animated-icons",
-  "author": "Shinichi Okada",
+  "authors": [
+    "shinichiokada"
+  ],
   "homepage": "https://svelte-animated-icons.codewithshin.com/",
-  "downloads": 60,
+  "downloads": 25,
   "dependents": 0,
   "updated": "2024-11-26T10:33:45.264Z",
   "tags": [

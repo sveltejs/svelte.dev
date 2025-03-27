@@ -1,11 +1,13 @@
 {
   "name": "typesafe-i18n",
-  "description": "Provides type-safe internationalization for Svelte apps.",
+  "description": "Provides a fully type-safe internationalization library for Svelte.",
   "repo_url": "https://github.com/ivanhofer/typesafe-i18n",
-  "author": "ivanhofer",
+  "authors": [
+    "ivanhofer"
+  ],
   "homepage": "https://github.com/ivanhofer/typesafe-i18n",
-  "downloads": 27219,
-  "dependents": 15,
+  "downloads": 26257,
+  "dependents": 16,
   "updated": "2023-08-25T07:58:11.071Z",
   "tags": [
     "utility"

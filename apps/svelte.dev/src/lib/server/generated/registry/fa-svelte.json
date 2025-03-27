@@ -1,10 +1,12 @@
 {
   "name": "fa-svelte",
-  "description": "Integrate Font Awesome 5 icons into Svelte components.",
+  "description": "Integrate Font Awesome 5 SVG icons into Svelte apps.",
   "repo_url": "https://github.com/alphapeter/fa-svelte",
-  "author": "Peter Klaesson",
+  "authors": [
+    "alphapeter"
+  ],
   "homepage": "https://github.com/alphapeter/fa-svelte#readme",
-  "downloads": 481,
+  "downloads": 205,
   "dependents": 2,
   "updated": "2019-11-09T14:38:48.567Z",
   "tags": [

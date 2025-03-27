@@ -1,14 +1,17 @@
 {
   "name": "svelte-command-palette",
-  "description": "Add command palette to Svelte apps.",
+  "description": "Adds command palette to Svelte apps, improves productivity.",
   "repo_url": "https://github.com/rohitpotato/svelte-command-palette",
-  "author": "rohitpotato",
+  "authors": [
+    "rohitpotato"
+  ],
   "homepage": "https://svelte-command-palette.vercel.app/",
-  "downloads": 1691,
+  "downloads": 1662,
   "dependents": 1,
   "updated": "2022-10-24T21:09:40.123Z",
   "tags": [
-    "ui"
+    "ui",
+    "utility"
   ],
   "svelte5": false,
   "runes": false,

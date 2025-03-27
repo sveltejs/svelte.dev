@@ -1,10 +1,12 @@
 {
   "name": "@shellicar/svelte-adapter-azure-functions",
-  "description": "Adapt SvelteKit apps for deployment Azure Function Apps.",
+  "description": "Adapts SvelteKit apps for deployment to Azure Function Apps.",
   "repo_url": "https://github.com/shellicar/svelte-adapter-azure-functions",
-  "author": "Stephen Hellicar",
+  "authors": [
+    "shellicar"
+  ],
   "homepage": "https://github.com/shellicar/svelte-adapter-azure-functions#readme",
-  "downloads": 7,
+  "downloads": 6,
   "dependents": 0,
   "updated": "2025-01-09T09:11:36.991Z",
   "tags": [

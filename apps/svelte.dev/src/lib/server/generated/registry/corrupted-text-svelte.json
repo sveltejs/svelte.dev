@@ -1,0 +1,17 @@
+{
+  "name": "corrupted-text-svelte",
+  "description": "Display corrupted text with configurable speed and characters.",
+  "repo_url": "",
+  "authors": [
+    "ultracakebakery"
+  ],
+  "homepage": "https://github.com/UltraCakeBakery/corrupted-text-svelte",
+  "downloads": 8,
+  "dependents": 0,
+  "updated": "2023-11-03T22:35:23.164Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

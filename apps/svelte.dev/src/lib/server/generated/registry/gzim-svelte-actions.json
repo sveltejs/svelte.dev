@@ -1,16 +1,18 @@
 {
   "name": "@gzim/svelte-actions",
-  "description": "Collection of Svelte actions for enhanced interactivity.",
+  "description": "Collection of Svelte actions to enhance component interactivity.",
   "repo_url": "https://github.com/gzimbron/svelte-actions",
-  "author": "Gustavo Zimbrón",
+  "authors": [
+    "zimbronapps"
+  ],
   "homepage": "https://gzimbron.github.io/svelte-actions/",
-  "downloads": 1,
+  "downloads": 9,
   "dependents": 0,
   "updated": "2024-11-04T16:02:07.068Z",
   "tags": [
     "utility"
   ],
-  "svelte5": true,
+  "svelte5": false,
   "runes": false,
   "github_stars": 3
 }

@@ -1,15 +1,16 @@
 {
   "name": "@witheslint/preset-svelte",
-  "description": "Provides an ESLint preset for Svelte projects.",
+  "description": "Provide Svelte preset for witheslint.",
   "repo_url": "https://github.com/witheslint/witheslint",
-  "author": "Joie",
+  "authors": [
+    "usings"
+  ],
   "homepage": "https://github.com/witheslint/witheslint",
   "downloads": 63,
   "dependents": 1,
   "updated": "2025-03-21T13:52:05.199Z",
   "tags": [
-    "tooling",
-    "preprocessor"
+    "tooling"
   ],
   "svelte5": true,
   "runes": false,

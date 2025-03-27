@@ -1,14 +1,16 @@
 {
   "name": "svelte-generic-crud-table",
-  "description": "Create generic CRUD tables for Svelte applications.",
+  "description": "Render object arrays with options panel and inline edit per row.",
   "repo_url": "https://github.com/ivosdc/svelte-generic-crud-table",
-  "author": "Ivo Bozic",
+  "authors": [
+    "nologin"
+  ],
   "homepage": "https://github.com/ivosdc/svelte-generic-crud-table#readme",
-  "downloads": 13,
+  "downloads": 6,
   "dependents": 0,
   "updated": "2023-12-26T18:52:30.309Z",
   "tags": [
-    "ui"
+    "component-library"
   ],
   "svelte5": false,
   "runes": false,

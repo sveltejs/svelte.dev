@@ -1,9 +1,11 @@
 {
   "name": "thumb-ui",
-  "description": "Create thumb-driven UI components for Svelte.",
+  "description": "Provides thumb-driven UI components for Svelte.",
   "repo_url": "",
-  "author": "buhrmi",
-  "downloads": 92,
+  "authors": [
+    "buhrmi"
+  ],
+  "downloads": 11,
   "dependents": 0,
   "updated": "2021-09-28T21:08:44.057Z",
   "tags": [

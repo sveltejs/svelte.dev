@@ -1,14 +1,16 @@
 {
   "name": "p5-svelte",
-  "description": "Integrates p5.js sketches into Svelte components.",
+  "description": "Integrate p5.js sketches seamlessly within Svelte components.",
   "repo_url": "https://github.com/tonyketcham/p5-svelte",
-  "author": "Tony Ketcham",
+  "authors": [
+    "tonyketcham"
+  ],
   "homepage": "https://p5-svelte.netlify.app/",
-  "downloads": 204,
+  "downloads": 153,
   "dependents": 2,
   "updated": "2022-04-03T01:45:26.342Z",
   "tags": [
-    "utility"
+    "media"
   ],
   "svelte5": false,
   "runes": false,

@@ -1,10 +1,12 @@
 {
   "name": "@eraviart/svelte-json-tree",
-  "description": "Display JSON data in a tree structure within Svelte.",
+  "description": "View and inspect JSON data in Svelte applications.",
   "repo_url": "https://github.com/eraviart/svelte-json-tree",
-  "author": "Tan Li Hau",
+  "authors": [
+    "eraviart"
+  ],
   "homepage": "https://github.com/eraviart/svelte-json-tree#readme",
-  "downloads": 3,
+  "downloads": 19,
   "dependents": 0,
   "updated": "2022-04-02T21:27:14.109Z",
   "tags": [

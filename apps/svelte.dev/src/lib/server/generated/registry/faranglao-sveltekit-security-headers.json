@@ -1,14 +1,17 @@
 {
   "name": "@faranglao/sveltekit-security-headers",
-  "description": "Add security headers to SvelteKit applications.",
+  "description": "Adds security HTTP response headers to SvelteKit apps.",
   "repo_url": "https://github.com/kevinobee/sveltekit-security-headers",
-  "author": "Kevin Obee",
+  "authors": [
+    "faranglao"
+  ],
   "homepage": "https://sveltekit-security-headers.vercel.app/",
-  "downloads": 149,
+  "downloads": 213,
   "dependents": 0,
   "updated": "2024-02-26T12:08:11.041Z",
   "tags": [
-    "server"
+    "server",
+    "seo"
   ],
   "svelte5": false,
   "runes": false,

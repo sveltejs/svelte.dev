@@ -2,9 +2,11 @@
   "name": "svelte-lightweight-charts",
   "description": "Create financial charts using Lightweight Charts in Svelte.",
   "repo_url": "https://github.com/trash-and-fire/svelte-lightweight-charts",
-  "author": "trash-and-fire",
+  "authors": [
+    "trash-and-fire"
+  ],
   "homepage": "https://github.com/trash-and-fire/svelte-lightweight-charts#readme",
-  "downloads": 455,
+  "downloads": 253,
   "dependents": 0,
   "updated": "2023-05-18T22:55:02.647Z",
   "tags": [

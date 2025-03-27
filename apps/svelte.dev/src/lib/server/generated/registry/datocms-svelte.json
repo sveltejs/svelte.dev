@@ -1,14 +1,21 @@
 {
   "name": "@datocms/svelte",
-  "description": "Use DatoCMS with Svelte, includes components for images, text.",
+  "description": "Integrate DatoCMS with Svelte for content management.",
   "repo_url": "https://github.com/datocms/datocms-svelte",
-  "author": "Silvano Stralla",
+  "authors": [
+    "marcelofinamorvieira",
+    "stefanoverna",
+    "delphaber",
+    "mat_jack1",
+    "souljuse",
+    "sistrall_"
+  ],
   "homepage": "https://github.com/datocms/datocms-svelte",
-  "downloads": 374,
+  "downloads": 387,
   "dependents": 0,
-  "updated": "2025-03-12T11:18:36.782Z",
+  "updated": "2025-03-24T12:28:20.724Z",
   "tags": [
-    "content"
+    "integration"
   ],
   "svelte5": true,
   "runes": false,

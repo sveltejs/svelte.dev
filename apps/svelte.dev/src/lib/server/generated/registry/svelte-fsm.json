@@ -1,8 +1,10 @@
 {
   "name": "svelte-fsm",
-  "description": "Implement tiny, expressive Svelte-optimized Finite State Machine.",
+  "description": "Implements a tiny, expressive Finite State Machine library for Svelte.",
   "repo_url": "https://github.com/kenkunz/svelte-fsm",
-  "author": "Ken Kunz",
+  "authors": [
+    "kenkunz"
+  ],
   "homepage": "https://github.com/kenkunz/svelte-fsm#README",
   "downloads": 439,
   "dependents": 3,

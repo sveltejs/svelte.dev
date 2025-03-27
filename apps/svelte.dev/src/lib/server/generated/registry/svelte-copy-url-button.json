@@ -1,10 +1,12 @@
 {
   "name": "svelte-copy-url-button",
-  "description": "Create Svelte button component copy current URL to clipboard.",
+  "description": "Create button to copy current URL in Svelte apps.",
   "repo_url": "https://github.com/terziev1/svelte-copy-url-button",
-  "author": "Kostadin Terziev",
+  "authors": [
+    "kostadinterziev"
+  ],
   "homepage": "https://github.com/terziev1/svelte-copy-url-button#readme",
-  "downloads": 1,
+  "downloads": 13,
   "dependents": 1,
   "updated": "2020-12-01T17:24:45.982Z",
   "tags": [

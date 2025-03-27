@@ -1,8 +1,10 @@
 {
   "name": "graph-image",
-  "description": "Lazy-loads and compresses images with Svelte and Hygraph.",
+  "description": "Lazy-load, compress images with SvelteKit and Hygraph.",
   "repo_url": "https://github.com/ObieMunoz/graph-image",
-  "author": "Obie Munoz obiemunozjr@gmail.com",
+  "authors": [
+    "obiemunoz"
+  ],
   "homepage": "https://github.com/ObieMunoz/graph-image#readme",
   "downloads": 10,
   "dependents": 0,

@@ -1,10 +1,12 @@
 {
   "name": "svelte-printpdf",
-  "description": "Print PDF support color, flexbox, and grid system.",
+  "description": "Print PDF support color, flexbox and grid system.",
   "repo_url": "https://github.com/binsarjr/svelte-printpdf",
-  "author": "Binsar Dwi Jasuma",
+  "authors": [
+    "binsarjr"
+  ],
   "homepage": "https://github.com/binsarjr/svelte-printpdf#readme",
-  "downloads": 165,
+  "downloads": 219,
   "dependents": 0,
   "updated": "2022-11-09T02:54:27.317Z",
   "tags": [

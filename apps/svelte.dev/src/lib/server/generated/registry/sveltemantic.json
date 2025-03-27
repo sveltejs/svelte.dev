@@ -1,10 +1,12 @@
 {
   "name": "sveltemantic",
-  "description": "Provides Fomantic-UI components for Svelte 3 applications.",
+  "description": "Provides Fomantic-UI components for Svelte.",
   "repo_url": "https://github.com/titans-inc/sveltemantic",
-  "author": "Devi Prasad",
+  "authors": [
+    "deviprsd"
+  ],
   "homepage": "https://github.com/titans-inc/sveltemantic#readme",
-  "downloads": 1,
+  "downloads": 12,
   "dependents": 0,
   "updated": "2019-08-22T03:56:54.500Z",
   "tags": [

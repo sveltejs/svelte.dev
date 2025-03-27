@@ -1,8 +1,10 @@
 {
   "name": "svelte-just-table",
-  "description": "Create simple, minimalistic tables in Svelte applications.",
+  "description": "Create simple, customizable tables for Svelte projects.",
   "repo_url": "https://github.com/lukaszwisniewski88/SimpleSvelteTable",
-  "author": "Łukasz Wiśniewski",
+  "authors": [
+    "lukasz_wisniewski"
+  ],
   "homepage": "https://github.com/lukaszwisniewski88/SimpleSvelteTable",
   "downloads": 0,
   "dependents": 0,

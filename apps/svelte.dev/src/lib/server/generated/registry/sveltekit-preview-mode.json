@@ -2,7 +2,9 @@
   "name": "sveltekit-preview-mode",
   "description": "Enables CMS preview mode for SvelteKit applications.",
   "repo_url": "https://github.com/darbymanning/sveltekit-preview-mode",
-  "author": "Darby Manning",
+  "authors": [
+    "darbymanning"
+  ],
   "homepage": "https://github.com/darbymanning/sveltekit-preview-mode#readme",
   "downloads": 2,
   "dependents": 0,

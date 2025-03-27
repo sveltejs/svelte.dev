@@ -1,14 +1,17 @@
 {
   "name": "agnostic-svelte",
-  "description": "Provides UI components for Svelte.",
+  "description": "Provides UI components for Svelte applications.",
   "repo_url": "https://github.com/AgnosticUI/agnosticui",
-  "author": "Rob Levin",
+  "authors": [
+    "rlevin"
+  ],
   "homepage": "https://github.com/AgnosticUI/agnosticui#readme",
-  "downloads": 237,
+  "downloads": 413,
   "dependents": 0,
   "updated": "2022-05-16T16:25:06.512Z",
   "tags": [
-    "component-library"
+    "component-library",
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

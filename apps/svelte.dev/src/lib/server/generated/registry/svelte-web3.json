@@ -1,10 +1,12 @@
 {
   "name": "svelte-web3",
-  "description": "Integrate Web3 functionality into Svelte apps.",
+  "description": "Integrates web3.js as Svelte stores for Ethereum dApps.",
   "repo_url": "https://github.com/clbrge/svelte-web3",
-  "author": "Christophe Le Bars",
+  "authors": [
+    "clbrge"
+  ],
   "homepage": "https://github.com/clbrge/svelte-web3#readme",
-  "downloads": 107,
+  "downloads": 163,
   "dependents": 2,
   "updated": "2023-07-17T10:12:41.599Z",
   "tags": [

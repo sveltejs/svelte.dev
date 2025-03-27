@@ -1,10 +1,12 @@
 {
   "name": "svelte-themer",
-  "description": "Theme Svelte components with CSS variables.",
+  "description": "Theming utility for Svelte applications.",
   "repo_url": "https://github.com/josefaidt/svelte-themer",
-  "author": "garlicbred",
+  "authors": [
+    "garlicbred"
+  ],
   "homepage": "https://svelte-themer.vercel.app",
-  "downloads": 909,
+  "downloads": 52,
   "dependents": 0,
   "updated": "2022-01-30T20:18:20.870Z",
   "tags": [

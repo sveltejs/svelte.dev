@@ -2,7 +2,9 @@
   "name": "@edge-csrf/sveltekit",
   "description": "Integrate CSRF protection into SvelteKit applications.",
   "repo_url": "https://github.com/kubetail-org/edge-csrf",
-  "author": "Andres Morey",
+  "authors": [
+    "amorey"
+  ],
   "homepage": "https://github.com/kubetail-org/edge-csrf#readme",
   "downloads": 34,
   "dependents": 0,
@@ -12,5 +14,5 @@
   ],
   "svelte5": false,
   "runes": false,
-  "github_stars": 165
+  "github_stars": 166
 }

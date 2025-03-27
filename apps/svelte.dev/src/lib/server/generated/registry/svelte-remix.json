@@ -1,8 +1,10 @@
 {
   "name": "svelte-remix",
-  "description": "Use Remix icon components in Svelte 5 and Runes projects.",
+  "description": "Provides RemixIcon SVG icons as Svelte components.",
   "repo_url": "https://github.com/shinokada/svelte-remix",
-  "author": "Shinichi Okada",
+  "authors": [
+    "shinichiokada"
+  ],
   "homepage": "https://svelte-remix.codewithshin.com/",
   "downloads": 262,
   "dependents": 0,

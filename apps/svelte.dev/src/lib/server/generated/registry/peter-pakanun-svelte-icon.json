@@ -1,10 +1,12 @@
 {
   "name": "@peter-pakanun/svelte-icon",
-  "description": "Create simple Svelte icon component, compatible with Tailwind CSS.",
+  "description": "Simple Svelte icon component using SVG paths.",
   "repo_url": "https://github.com/peter-pakanun/svelte-icon",
-  "author": "Peter Pakanun",
+  "authors": [
+    "peter-pakanun"
+  ],
   "homepage": "https://github.com/peter-pakanun/svelte-icon#readme",
-  "downloads": 2,
+  "downloads": 6,
   "dependents": 0,
   "updated": "2022-07-01T16:25:36.088Z",
   "tags": [

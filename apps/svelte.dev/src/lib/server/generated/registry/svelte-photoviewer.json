@@ -2,12 +2,15 @@
   "name": "svelte-photoviewer",
   "description": "Create Google Photos-esque image galleries in Svelte.",
   "repo_url": "",
-  "author": "psnszsn",
-  "downloads": 2,
+  "authors": [
+    "psnszsn"
+  ],
+  "downloads": 6,
   "dependents": 0,
   "updated": "2020-06-16T18:21:01.565Z",
   "tags": [
-    "ui"
+    "ui",
+    "media"
   ],
   "svelte5": false,
   "runes": false

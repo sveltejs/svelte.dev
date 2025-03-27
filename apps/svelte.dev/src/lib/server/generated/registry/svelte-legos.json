@@ -1,10 +1,12 @@
 {
   "name": "svelte-legos",
-  "description": "Provide Svelte composition utilities for various use cases.",
+  "description": "Provides framework for Svelte utilities.",
   "repo_url": "https://github.com/ankurrsinghal/svelte-legos",
-  "author": "Ankur Singhal",
+  "authors": [
+    "anksin1994"
+  ],
   "homepage": "https://svelte-legos.surge.sh",
-  "downloads": 6552,
+  "downloads": 8573,
   "dependents": 6,
   "updated": "2024-08-25T21:05:06.320Z",
   "tags": [

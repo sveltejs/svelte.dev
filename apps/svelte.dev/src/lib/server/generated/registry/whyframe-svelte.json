@@ -1,10 +1,12 @@
 {
   "name": "@whyframe/svelte",
-  "description": "Integrate Svelte components into Whyframe.",
+  "description": "Provides Svelte support for Whyframe, component isolation.",
   "repo_url": "https://github.com/bluwy/whyframe",
-  "author": "Bjorn Lu",
+  "authors": [
+    "bluwy"
+  ],
   "homepage": "https://whyframe.dev",
-  "downloads": 1751,
+  "downloads": 1241,
   "dependents": 0,
   "updated": "2025-03-18T03:48:37.354Z",
   "tags": [

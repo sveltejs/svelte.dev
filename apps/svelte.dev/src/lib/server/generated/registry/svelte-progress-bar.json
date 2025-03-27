@@ -1,10 +1,12 @@
 {
   "name": "svelte-progress-bar",
-  "description": "Create YouTube-like progress bars in Svelte.",
+  "description": "Display a tiny progress bar, inspired by YouTube's loader.",
   "repo_url": "https://github.com/saibotsivad/svelte-progress-bar",
-  "author": "Tobias Davis",
+  "authors": [
+    "saibotsivad"
+  ],
   "homepage": "https://github.com/saibotsivad/svelte-progress-bar#readme",
-  "downloads": 388,
+  "downloads": 589,
   "dependents": 0,
   "updated": "2022-01-19T16:08:17.518Z",
   "tags": [

@@ -1,14 +1,18 @@
 {
   "name": "@svelte-on-solana/wallet-adapter-ui",
-  "description": "Integrate Solana wallets using Svelte components.",
+  "description": "Integrate Solana wallet adapters with Svelte applications.",
   "repo_url": "https://github.com/svelte-on-solana/wallet-adapter",
-  "author": "Svelte on Solana",
+  "authors": [
+    "silvestrevivo",
+    "c_ogoo"
+  ],
   "homepage": "https://github.com/svelte-on-solana/wallet-adapter#readme",
-  "downloads": 68,
+  "downloads": 62,
   "dependents": 2,
   "updated": "2022-12-10T10:58:17.836Z",
   "tags": [
-    "integration"
+    "integration",
+    "auth"
   ],
   "svelte5": false,
   "runes": false,

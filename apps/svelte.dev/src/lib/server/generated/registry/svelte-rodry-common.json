@@ -1,9 +1,11 @@
 {
   "name": "svelte-rodry-common",
-  "description": "Provides reusable Svelte components, including modal and tabulator.",
+  "description": "Provides common Svelte components, including modals and tabs.",
   "repo_url": "",
-  "author": "rodryquintero",
-  "downloads": 2,
+  "authors": [
+    "rodryquintero"
+  ],
+  "downloads": 29,
   "dependents": 0,
   "updated": "2021-06-11T18:42:26.862Z",
   "tags": [

@@ -1,10 +1,12 @@
 {
   "name": "@panta/svelte-router",
-  "description": "Create router for Svelte applications.",
+  "description": "Implement routing in Svelte applications.",
   "repo_url": "https://github.com/panta/svelte-router",
-  "author": "Marco Pantaleoni",
+  "authors": [
+    "panta"
+  ],
   "homepage": "https://github.com/panta/svelte-router#readme",
-  "downloads": 2,
+  "downloads": 22,
   "dependents": 0,
   "updated": "2019-10-08T12:25:06.350Z",
   "tags": [

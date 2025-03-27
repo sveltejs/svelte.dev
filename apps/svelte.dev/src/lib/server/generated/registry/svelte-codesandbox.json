@@ -1,14 +1,16 @@
 {
   "name": "svelte-codesandbox",
-  "description": "Wraps CodeSandbox editor for Svelte component demos.",
+  "description": "Embed CodeSandbox editor within Svelte components.",
   "repo_url": "https://github.com/tropix126/svelte-codesandbox",
-  "author": "tropix126",
+  "authors": [
+    "tropix126"
+  ],
   "homepage": "https://github.com/tropix126/svelte-codesandbox",
-  "downloads": 1,
+  "downloads": 11,
   "dependents": 0,
   "updated": "2021-12-16T07:58:07.171Z",
   "tags": [
-    "tooling"
+    "utility"
   ],
   "svelte5": false,
   "runes": false,

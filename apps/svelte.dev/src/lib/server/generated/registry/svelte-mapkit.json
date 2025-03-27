@@ -1,0 +1,18 @@
+{
+  "name": "svelte-mapkit",
+  "description": "Integrate Apple MapKit JS into Svelte applications.",
+  "repo_url": "https://github.com/JustinVoitel/svelte-mapkit",
+  "authors": [
+    "justinvoitel"
+  ],
+  "homepage": "https://github.com/JustinVoitel/svelte-mapkit#readme",
+  "downloads": 7,
+  "dependents": 0,
+  "updated": "2021-05-04T21:12:04.082Z",
+  "tags": [
+    "integration"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 2
+}

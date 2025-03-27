@@ -1,8 +1,15 @@
 {
   "name": "@onsvisual/svelte-charts",
-  "description": "Create reusable chart templates for Svelte projects.",
+  "description": "Reusable chart templates for Svelte projects.",
   "repo_url": "https://github.com/onsvisual/svelte-charts",
-  "author": "Ahmad Barclay",
+  "authors": [
+    "bothness",
+    "henrylau",
+    "petem-ons",
+    "sambennettons",
+    "erinvickery-ons",
+    "shiny-penny"
+  ],
   "homepage": "http://onsvisual.github.io/svelte-charts",
   "downloads": 191,
   "dependents": 0,

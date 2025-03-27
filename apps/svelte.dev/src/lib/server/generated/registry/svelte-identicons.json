@@ -1,8 +1,10 @@
 {
   "name": "svelte-identicons",
-  "description": "Generate identicons (visual hashes) in Svelte.",
+  "description": "Generates identicons (unique visual avatars) in Svelte.",
   "repo_url": "https://github.com/pierregoutheraud/svelte-identicons",
-  "author": "github.com/pierregoutheraud",
+  "authors": [
+    "httpete"
+  ],
   "homepage": "https://svelte-identicons.vercel.app/",
   "downloads": 0,
   "dependents": 0,

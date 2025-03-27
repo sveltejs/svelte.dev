@@ -2,9 +2,11 @@
   "name": "gulp-svelte",
   "description": "Compile Svelte templates to JavaScript using Gulp.",
   "repo_url": "https://github.com/shinnn/gulp-svelte",
-  "author": "Shinnosuke Watanabe",
+  "authors": [
+    "shinnn"
+  ],
   "homepage": "https://github.com/shinnn/gulp-svelte#readme",
-  "downloads": 76,
+  "downloads": 41,
   "dependents": 0,
   "updated": "2018-12-17T09:01:59.954Z",
   "tags": [

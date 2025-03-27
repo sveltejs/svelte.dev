@@ -1,12 +1,17 @@
 {
   "name": "@minna-ui/preprocess",
+  "description": "Provide code transformers and Svelte preprocessor for Minna UI.",
   "repo_url": "https://github.com/WeAreGenki/minna-ui",
-  "author": "Max Milton",
+  "authors": [
+    "maxmilton"
+  ],
   "homepage": "https://wearegenki.github.io/minna-ui",
-  "downloads": 14,
+  "downloads": 108,
   "dependents": 2,
   "updated": "2020-03-24T19:39:56.123Z",
-  "tags": [],
+  "tags": [
+    "preprocessor"
+  ],
   "svelte5": false,
   "runes": false,
   "github_stars": 87

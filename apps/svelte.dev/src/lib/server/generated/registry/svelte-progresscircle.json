@@ -2,9 +2,11 @@
   "name": "svelte-progresscircle",
   "description": "Create circular progress bar component for Svelte.",
   "repo_url": "https://github.com/stephane-vanraes/svelte-progresscircle",
-  "author": "Stephane Vanraes",
+  "authors": [
+    "rainlife"
+  ],
   "homepage": "https://github.com/stephane-vanraes/svelte-progresscircle#readme",
-  "downloads": 18,
+  "downloads": 19,
   "dependents": 0,
   "updated": "2020-02-11T07:40:47.031Z",
   "tags": [

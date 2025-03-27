@@ -1,16 +1,18 @@
 {
   "name": "@opliko/ag-grid-svelte5-extended",
-  "description": "Integrate AG-Grid with Svelte 5, supporting components.",
+  "description": "AG-Grid wrapper for Svelte 5 with Svelte component cell renderers.",
   "repo_url": "https://github.com/bn-l/ag-grid-svelte5-extended",
-  "author": "opliko",
+  "authors": [
+    "opliko"
+  ],
   "homepage": "https://bn-l.github.io/ag-grid-svelte5-extended/",
   "downloads": 5,
   "dependents": 0,
   "updated": "2024-12-20T13:27:16.501Z",
   "tags": [
-    "component-library"
+    "utility"
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 18
+  "github_stars": 19
 }

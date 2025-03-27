@@ -1,0 +1,18 @@
+{
+  "name": "@kayodebristol/svelte-robot-factory",
+  "description": "Integrate finite state machines with Svelte.",
+  "repo_url": "https://github.com/kayodebristol/svelte-robot-factory",
+  "authors": [
+    "kayodebristol"
+  ],
+  "homepage": "https://github.com/kayodebristol/svelte-robot-factory#readme",
+  "downloads": 17,
+  "dependents": 0,
+  "updated": "2020-05-01T10:06:19.196Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 15
+}

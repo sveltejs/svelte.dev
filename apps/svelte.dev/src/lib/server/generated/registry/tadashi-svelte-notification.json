@@ -1,10 +1,12 @@
 {
   "name": "@tadashi/svelte-notification",
-  "description": "Create Svelte notification component.",
+  "description": "Svelte component for notifications.",
   "repo_url": "",
-  "author": "Thiago Lagden",
+  "authors": [
+    "lagden"
+  ],
   "homepage": "https://github.com/lagden/svelte-notification#readme",
-  "downloads": 290,
+  "downloads": 259,
   "dependents": 2,
   "updated": "2023-12-18T16:05:08.298Z",
   "tags": [

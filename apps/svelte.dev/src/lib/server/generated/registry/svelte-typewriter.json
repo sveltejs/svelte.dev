@@ -2,9 +2,11 @@
   "name": "svelte-typewriter",
   "description": "Simple, reusable typewriter effect for Svelte applications.",
   "repo_url": "https://git.sr.ht/~henriquehbr/svelte-typewriter",
-  "author": "Henrique Borges",
+  "authors": [
+    "henriquehbr"
+  ],
   "homepage": "https://sr.ht/~henriquehbr/svelte-typewriter",
-  "downloads": 3540,
+  "downloads": 3239,
   "dependents": 0,
   "updated": "2024-01-08T00:22:12.791Z",
   "tags": [

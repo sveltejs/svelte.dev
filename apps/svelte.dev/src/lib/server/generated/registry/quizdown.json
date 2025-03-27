@@ -1,10 +1,12 @@
 {
   "name": "quizdown",
-  "description": "Generate interactive quizzes from Markdown in Svelte.",
+  "description": "Generate interactive quiz apps using Markdown syntax.",
   "repo_url": "https://github.com/bonartm/quizdown-js",
-  "author": "Malte Bonart",
+  "authors": [
+    "bonartm"
+  ],
   "homepage": "https://github.com/bonartm/quizdown-js#readme",
-  "downloads": 7,
+  "downloads": 17,
   "dependents": 0,
   "updated": "2022-09-07T17:28:16.670Z",
   "tags": [
@@ -12,5 +14,5 @@
   ],
   "svelte5": false,
   "runes": false,
-  "github_stars": 105
+  "github_stars": 106
 }

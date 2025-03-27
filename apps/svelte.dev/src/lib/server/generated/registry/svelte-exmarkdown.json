@@ -1,10 +1,12 @@
 {
   "name": "svelte-exmarkdown",
-  "description": "Render Markdown content dynamically in Svelte applications.",
+  "description": "Render Markdown content dynamically within Svelte components.",
   "repo_url": "https://github.com/ssssota/svelte-exmarkdown",
-  "author": "ssssota",
+  "authors": [
+    "ssssota"
+  ],
   "homepage": "https://ssssota.github.io/svelte-exmarkdown",
-  "downloads": 7907,
+  "downloads": 7041,
   "dependents": 5,
   "updated": "2025-02-18T15:52:18.931Z",
   "tags": [
@@ -12,5 +14,5 @@
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 245
+  "github_stars": 247
 }

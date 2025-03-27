@@ -1,10 +1,12 @@
 {
   "name": "svelte-dialogs",
-  "description": "Create dialogs in Svelte applications.",
+  "description": "Provides handy dialogs for Svelte applications.",
   "repo_url": "https://github.com/bibizio/svelte-dialogs",
-  "author": "Fabrizio Giovinazzi",
+  "authors": [
+    "bibizio"
+  ],
   "homepage": "https://bibizio.github.io/svelte-dialogs/",
-  "downloads": 121,
+  "downloads": 93,
   "dependents": 0,
   "updated": "2022-06-27T22:18:32.775Z",
   "tags": [

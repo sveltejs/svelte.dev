@@ -2,7 +2,9 @@
   "name": "@phoria/phoria-svelte",
   "description": "Integrate Svelte components with Phoria Islands for .NET.",
   "repo_url": "https://github.com/CMeeg/phoria",
-  "author": "Chris Meagher",
+  "authors": [
+    "meeg"
+  ],
   "homepage": "https://github.com/CMeeg/phoria#readme",
   "downloads": 6,
   "dependents": 0,

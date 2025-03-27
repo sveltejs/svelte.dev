@@ -1,10 +1,12 @@
 {
   "name": "svelte-tabcontent",
-  "description": "Build fully customizable tab UI components.",
+  "description": "Fully customizable tab UI component for Svelte.",
   "repo_url": "https://github.com/zogs/svelte-tabcontent",
-  "author": "Simon Guichard",
+  "authors": [
+    "zogs"
+  ],
   "homepage": "https://github.com/zogs/svelte-tabcontent#readme",
-  "downloads": 0,
+  "downloads": 8,
   "dependents": 0,
   "updated": "2022-03-28T08:37:18.144Z",
   "tags": [

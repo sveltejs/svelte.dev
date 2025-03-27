@@ -1,17 +1,18 @@
 {
   "name": "huggingface-widgets",
-  "description": "Integrates Hugging Face inference widgets into Svelte apps.",
+  "description": "Integrate Hugging Face inference widgets into Svelte apps.",
   "repo_url": "https://github.com/huggingface/huggingface_hub",
-  "author": "mishig",
+  "authors": [
+    "mishig"
+  ],
   "homepage": "https://github.com/huggingface/huggingface_hub/tree/main/widgets",
-  "downloads": 14,
+  "downloads": 54,
   "dependents": 0,
   "updated": "2021-09-09T08:45:53.317Z",
   "tags": [
-    "ui",
     "integration"
   ],
   "svelte5": false,
   "runes": false,
-  "github_stars": 2456
+  "github_stars": 2466
 }

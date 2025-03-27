@@ -1,10 +1,12 @@
 {
   "name": "svelte-router5",
-  "description": "Provides router5 helpers and components for Svelte applications.",
+  "description": "Provide router5 helpers for SvelteJS applications.",
   "repo_url": "https://github.com/shanewwarren/svelte-router5",
-  "author": "Shane Warren",
+  "authors": [
+    "shanewwarren"
+  ],
   "homepage": "https://github.com/shanewwarren/svelte-router5#readme",
-  "downloads": 0,
+  "downloads": 1,
   "dependents": 0,
   "updated": "2017-12-07T22:50:47.861Z",
   "tags": [

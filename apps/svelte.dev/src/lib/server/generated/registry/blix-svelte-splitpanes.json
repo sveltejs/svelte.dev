@@ -1,0 +1,22 @@
+{
+  "name": "blix-svelte-splitpanes",
+  "description": "Implement resizable pane layouts in Svelte apps.",
+  "repo_url": "https://github.com/The-SpanishInquisition/svelte-splitpanes",
+  "authors": [
+    "armandkrynauw",
+    "sharkmanza",
+    "rec1dite",
+    "spanish_inquisition"
+  ],
+  "homepage": "https://github.com/The-SpanishInquisition/svelte-splitpanes",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2023-09-27T18:12:07.609Z",
+  "tags": [
+    "ui",
+    "component-library"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

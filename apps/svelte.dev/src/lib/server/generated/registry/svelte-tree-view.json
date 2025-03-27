@@ -1,10 +1,12 @@
 {
   "name": "svelte-tree-view",
-  "description": "Display JSON objects in a customizable tree-view.",
+  "description": "Displays JSON objects in customizable tree-view.",
   "repo_url": "https://github.com/TeemuKoivisto/svelte-tree-view",
-  "author": "Teemu Koivisto",
+  "authors": [
+    "tekk"
+  ],
   "homepage": "https://github.com/TeemuKoivisto/svelte-tree-view",
-  "downloads": 4201,
+  "downloads": 3812,
   "dependents": 2,
   "updated": "2023-07-24T12:04:25.865Z",
   "tags": [

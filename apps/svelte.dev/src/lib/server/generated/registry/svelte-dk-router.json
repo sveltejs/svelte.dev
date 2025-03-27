@@ -1,10 +1,12 @@
 {
   "name": "svelte-dk-router",
-  "description": "Create efficient, easy-to-use router for Svelte applications.",
+  "description": "Provides efficient, easy-to-use routing for Svelte applications.",
   "repo_url": "https://github.com/Daniel-Knights/svelte-dk-router",
-  "author": "Daniel Knights",
+  "authors": [
+    "daniel_knights"
+  ],
   "homepage": "https://github.com/Daniel-Knights/svelte-dk-router#readme",
-  "downloads": 0,
+  "downloads": 13,
   "dependents": 0,
   "updated": "2021-02-04T15:18:03.638Z",
   "tags": [

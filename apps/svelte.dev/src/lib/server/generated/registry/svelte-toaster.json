@@ -1,10 +1,12 @@
 {
   "name": "svelte-toaster",
-  "description": "Display toast notifications in Svelte applications.",
+  "description": "Create toast notifications for Svelte applications.",
   "repo_url": "https://github.com/captaincodeman/svelte-toaster",
-  "author": "Simon Green",
+  "authors": [
+    "captaincodeman"
+  ],
   "homepage": "https://captaincodeman.github.io/svelte-toaster",
-  "downloads": 0,
+  "downloads": 2,
   "dependents": 0,
   "updated": "2024-04-29T19:46:29.475Z",
   "tags": [

@@ -1,14 +1,16 @@
 {
   "name": "@keycloakify/svelte-email",
-  "description": "Build and send emails using Svelte components.",
+  "description": "Build emails with Svelte components, render to HTML or plain text.",
   "repo_url": "https://github.com/keycloakify/svelte-email",
-  "author": "Luca Peruzzo",
+  "authors": [
+    "garronej"
+  ],
   "homepage": "https://github.com/keycloakify/svelte-email#readme",
   "downloads": 0,
   "dependents": 0,
   "updated": "2025-01-27T06:54:54.330Z",
   "tags": [
-    "utility"
+    "content"
   ],
   "svelte5": true,
   "runes": false,

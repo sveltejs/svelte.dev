@@ -1,8 +1,10 @@
 {
   "name": "@avidys/s-blog",
-  "description": "Build blog with SvelteKit and Markdown.",
+  "description": "Build blog component with SvelteKit and Markdown support",
   "repo_url": "",
-  "author": "Avidys",
+  "authors": [
+    "nanotron"
+  ],
   "homepage": "https://github.com/avidys/s-blog",
   "downloads": 457,
   "dependents": 0,

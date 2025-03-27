@@ -1,8 +1,11 @@
 {
   "name": "@master/theme-mode.svelte",
-  "description": "Switch CSS theme modes, sync preferences, and avoid FOUC.",
+  "description": "Switch CSS theme modes in Svelte applications.",
   "repo_url": "https://github.com/master-co/theme-mode",
-  "author": "Aoyue Design LLC.",
+  "authors": [
+    "benseage0",
+    "1aron"
+  ],
   "homepage": "https://css.master.co",
   "downloads": 2,
   "dependents": 0,

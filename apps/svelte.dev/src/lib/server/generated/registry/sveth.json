@@ -1,15 +1,16 @@
 {
   "name": "sveth",
-  "description": "Provide Ethereum hooks for Svelte in TypeScript.",
+  "description": "Provides Ethereum hooks for Svelte in TypeScript.",
   "repo_url": "https://github.com/EazyReal/Sveth",
-  "author": "maxwill",
+  "authors": [
+    "eazyreal"
+  ],
   "homepage": "https://github.com/EazyReal/Sveth#readme",
-  "downloads": 1,
+  "downloads": 17,
   "dependents": 0,
   "updated": "2022-02-16T16:26:10.255Z",
   "tags": [
-    "utility",
-    "integration"
+    "utility"
   ],
   "svelte5": false,
   "runes": false,

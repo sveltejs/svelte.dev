@@ -1,14 +1,17 @@
 {
   "name": "svelte-webext-storage-adapter",
-  "description": "Create Svelte stores backed by chrome.storage.",
+  "description": "Create Svelte stores backed by browser extension storage.",
   "repo_url": "https://github.com/PixievoltNo1/svelte-webext-storage-adapter",
-  "author": "Pixievolt No. 1",
+  "authors": [
+    "pixievoltno1"
+  ],
   "homepage": "https://github.com/PixievoltNo1/svelte-webext-storage-adapter",
-  "downloads": 3,
+  "downloads": 6,
   "dependents": 0,
   "updated": "2024-04-04T04:39:11.213Z",
   "tags": [
-    "utility"
+    "utility",
+    "integration"
   ],
   "svelte5": true,
   "runes": false,

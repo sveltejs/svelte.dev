@@ -1,8 +1,10 @@
 {
   "name": "@ikun-ui/checkbox-group",
-  "description": "Provides checkbox group components for Svelte.",
+  "description": "Create checkbox group component for Svelte.",
   "repo_url": "",
-  "author": "baiwusanyu",
+  "authors": [
+    "baiwusanyu"
+  ],
   "downloads": 25,
   "dependents": 3,
   "updated": "2025-01-24T03:48:41.376Z",

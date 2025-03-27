@@ -1,0 +1,16 @@
+{
+  "name": "@turbo-lang/card-qa",
+  "description": "Build shareable Svelte components.",
+  "repo_url": "",
+  "authors": [
+    "trevyn"
+  ],
+  "downloads": 6,
+  "dependents": 0,
+  "updated": "2021-01-17T14:16:45.035Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

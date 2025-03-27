@@ -2,13 +2,15 @@
   "name": "@ctx-core/tradingview",
   "description": "Integrate TradingView charts into Svelte applications.",
   "repo_url": "https://github.com/ctx-core/tradingview",
-  "author": "Brian Takita",
+  "authors": [
+    "btakita"
+  ],
   "homepage": "https://github.com/ctx-core/tradingview#readme",
-  "downloads": 2160,
+  "downloads": 1090,
   "dependents": 0,
   "updated": "2024-09-01T17:09:47.798Z",
   "tags": [
-    "integration"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

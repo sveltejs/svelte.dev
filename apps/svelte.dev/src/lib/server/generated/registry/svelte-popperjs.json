@@ -1,10 +1,12 @@
 {
   "name": "svelte-popperjs",
-  "description": "Create Popper.js tooltips and popovers with Svelte actions.",
+  "description": "Create Popper tooltips with Svelte actions.",
   "repo_url": "https://github.com/bryanmylee/svelte-popperjs",
-  "author": "Bryan Lee",
+  "authors": [
+    "bryanmylee"
+  ],
   "homepage": "https://github.com/bryanmylee/svelte-popperjs#readme",
-  "downloads": 7864,
+  "downloads": 7667,
   "dependents": 12,
   "updated": "2022-08-30T04:12:00.943Z",
   "tags": [

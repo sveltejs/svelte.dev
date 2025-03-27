@@ -1,10 +1,12 @@
 {
   "name": "@svelteschool/svelte-forms",
-  "description": "Create simple, reactive forms for Svelte applications.",
+  "description": "Simple form component for Svelte, handles input and values.",
   "repo_url": "https://github.com/svelteschool/svelte-forms",
-  "author": "Svelte School",
+  "authors": [
+    "kevmodrome"
+  ],
   "homepage": "https://github.com/svelteschool/svelte-forms/",
-  "downloads": 73,
+  "downloads": 33,
   "dependents": 2,
   "updated": "2020-05-20T11:11:14.215Z",
   "tags": [

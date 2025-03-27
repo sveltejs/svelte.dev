@@ -1,10 +1,12 @@
 {
   "name": "manzana",
-  "description": "Build forms with validation in Svelte apps.",
+  "description": "Build forms easily in Svelte applications.",
   "repo_url": "https://github.com/EstebanBorai/manzana",
-  "author": "Esteban Borai",
+  "authors": [
+    "estebanborai"
+  ],
   "homepage": "https://manzana.estebanborai.com",
-  "downloads": 0,
+  "downloads": 18,
   "dependents": 0,
   "updated": "2022-06-14T04:17:11.438Z",
   "tags": [

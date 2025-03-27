@@ -1,13 +1,15 @@
 {
   "name": "no-framework-video-player",
-  "description": "Embed video player component without framework dependency.",
+  "description": "Integrate a no-framework video player into Svelte projects.",
   "repo_url": "",
-  "author": "wangjian27",
-  "downloads": 3,
+  "authors": [
+    "wangjian27"
+  ],
+  "downloads": 5,
   "dependents": 0,
   "updated": "2023-01-03T14:43:24.913Z",
   "tags": [
-    "media"
+    "ui"
   ],
   "svelte5": false,
   "runes": false

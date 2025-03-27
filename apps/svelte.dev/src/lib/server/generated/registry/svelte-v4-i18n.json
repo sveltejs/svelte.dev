@@ -1,10 +1,12 @@
 {
   "name": "svelte-v4-i18n",
-  "description": "Provides internationalization for Svelte applications.",
+  "description": "Internationalization library for Svelte v4 apps.",
   "repo_url": "https://github.com/harshmandan/svelte-i18n",
-  "author": "Harsh Mandan",
+  "authors": [
+    "harshmandan"
+  ],
   "homepage": "https://github.com/harshmandan/svelte-i18n#readme",
-  "downloads": 0,
+  "downloads": 6,
   "dependents": 0,
   "updated": "2023-06-30T05:14:21.438Z",
   "tags": [

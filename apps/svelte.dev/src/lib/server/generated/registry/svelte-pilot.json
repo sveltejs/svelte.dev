@@ -1,16 +1,18 @@
 {
   "name": "svelte-pilot",
-  "description": "Implement Svelte router supporting server-side rendering.",
+  "description": "Provides a Svelte router with SSR support.",
   "repo_url": "https://github.com/svelte-pilot/svelte-pilot",
-  "author": "Jiang Fengming",
+  "authors": [
+    "jiangfengming"
+  ],
   "homepage": "https://svelte-pilot.github.io/",
-  "downloads": 85,
+  "downloads": 183,
   "dependents": 1,
   "updated": "2025-03-19T18:02:43.184Z",
   "tags": [
     "router"
   ],
-  "svelte5": true,
+  "svelte5": false,
   "runes": false,
   "github_stars": 39
 }

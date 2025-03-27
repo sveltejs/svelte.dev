@@ -1,10 +1,12 @@
 {
   "name": "iconsax-svelte",
-  "description": "Provides Iconsax icon components for Svelte projects.",
+  "description": "Use Iconsax icons in Svelte applications.",
   "repo_url": "https://github.com/mashanz/iconsax-svelte",
-  "author": "Mashanz",
+  "authors": [
+    "mashanz"
+  ],
   "homepage": "https://github.com/mashanz/iconsax-svelte#readme",
-  "downloads": 55,
+  "downloads": 79,
   "dependents": 0,
   "updated": "2022-09-04T03:24:55.884Z",
   "tags": [

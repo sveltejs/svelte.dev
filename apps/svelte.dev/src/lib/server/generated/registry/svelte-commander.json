@@ -1,0 +1,16 @@
+{
+  "name": "svelte-commander",
+  "description": "Command palette with robust interactions and predictable behavior.",
+  "repo_url": "",
+  "authors": [
+    "oskarhane"
+  ],
+  "downloads": 12,
+  "dependents": 0,
+  "updated": "2021-03-21T17:57:29.912Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

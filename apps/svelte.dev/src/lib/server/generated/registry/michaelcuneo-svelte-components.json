@@ -1,8 +1,10 @@
 {
   "name": "@michaelcuneo/svelte-components",
-  "description": "Offers Svelte components for rapid prototyping.",
+  "description": "Create reusable Svelte components for rapid prototyping.",
   "repo_url": "https://github.com/michaelcuneo/michaelcuneo",
-  "author": "Michael Cuneo",
+  "authors": [
+    "michaelcuneo"
+  ],
   "homepage": "https://michaelcuneo.com.au",
   "downloads": 17,
   "dependents": 0,

@@ -1,8 +1,23 @@
 {
   "name": "convex-svelte",
-  "description": "Integrate Convex backend with Svelte applications.",
+  "description": "Integrate Convex backend with Svelte apps for real-time updates.",
   "repo_url": "https://github.com/get-convex/convex-svelte",
-  "author": "Convex, Inc.",
+  "authors": [
+    "cowling",
+    "jordanhunt",
+    "gautamg795",
+    "emmaling27",
+    "nipunn",
+    "sujayakar",
+    "ikhare",
+    "ldanilek",
+    "ballingt",
+    "sshader",
+    "aritrakh",
+    "ianatconvex",
+    "erquhart",
+    "jamwt"
+  ],
   "homepage": "https://convex.dev",
   "downloads": 66,
   "dependents": 0,
@@ -10,7 +25,7 @@
   "tags": [
     "integration"
   ],
-  "svelte5": true,
+  "svelte5": false,
   "runes": false,
   "github_stars": 27
 }

@@ -1,0 +1,18 @@
+{
+  "name": "pocketto-svelte",
+  "description": "Integrate Pocketto real-time features into Svelte applications.",
+  "repo_url": "https://github.com/pockettojs/pocketto-svelte",
+  "authors": [
+    "pockettojs"
+  ],
+  "homepage": "https://github.com/pockettojs/pocketto-svelte#readme",
+  "downloads": 4,
+  "dependents": 0,
+  "updated": "2024-10-26T13:23:52.673Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 0
+}

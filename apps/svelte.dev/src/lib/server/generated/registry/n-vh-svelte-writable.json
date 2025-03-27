@@ -1,8 +1,10 @@
 {
   "name": "@n-vh/svelte-writable",
-  "description": "Provide custom writables for Svelte stores.",
+  "description": "Create custom writables for Svelte applications.",
   "repo_url": "https://github.com/n-vh/svelte-writable",
-  "author": "Nils Van Hée",
+  "authors": [
+    "n-vh"
+  ],
   "homepage": "https://github.com/n-vh/svelte-writable",
   "downloads": 1,
   "dependents": 0,

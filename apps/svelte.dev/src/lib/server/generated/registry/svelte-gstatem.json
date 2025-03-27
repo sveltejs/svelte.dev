@@ -1,10 +1,12 @@
 {
   "name": "svelte-gstatem",
-  "description": "Manage global state in Svelte applications.",
+  "description": "Provides lightweight global state management for Svelte applications.",
   "repo_url": "https://github.com/gstatem/gstatem",
-  "author": "shuieryin",
+  "authors": [
+    "shuieryin"
+  ],
   "homepage": "https://github.com/gstatem/gstatem/tree/main/packages/svelte-gstatem",
-  "downloads": 0,
+  "downloads": 8,
   "dependents": 0,
   "updated": "2022-03-30T12:50:23.414Z",
   "tags": [

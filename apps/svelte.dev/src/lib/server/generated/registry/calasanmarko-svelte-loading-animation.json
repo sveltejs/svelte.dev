@@ -1,9 +1,11 @@
 {
   "name": "@calasanmarko/svelte-loading-animation",
-  "description": "Collection of loading animation components for Svelte.",
+  "description": "Provide collection of loading animation components for Svelte.",
   "repo_url": "",
-  "author": "gayuh tri satria",
-  "downloads": 2,
+  "authors": [
+    "calasanmarko"
+  ],
+  "downloads": 0,
   "dependents": 0,
   "updated": "2024-05-13T18:05:52.073Z",
   "tags": [

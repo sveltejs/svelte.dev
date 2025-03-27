@@ -1,0 +1,18 @@
+{
+  "name": "sveltemod",
+  "description": "Run codemods for Svelte, using jscodeshift for AST transformations.",
+  "repo_url": "https://github.com/rajasegar/sveltemod",
+  "authors": [
+    "rajasegar"
+  ],
+  "homepage": "https://github.com/rajasegar/sveltemod#readme",
+  "downloads": 3,
+  "dependents": 0,
+  "updated": "2023-12-12T14:32:43.261Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 2
+}

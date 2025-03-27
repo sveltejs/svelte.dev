@@ -1,15 +1,16 @@
 {
   "name": "@mikerowe81/flowbite-svelte",
-  "description": "Build websites faster with Svelte components on Tailwind CSS.",
+  "description": "Build UI with Flowbite components for Svelte.",
   "repo_url": "https://github.com/mikerowe81/flowbite-svelte",
-  "author": "Shinichi Okada",
+  "authors": [
+    "mikerowe81"
+  ],
   "homepage": "https://flowbite-svelte.com/",
   "downloads": 7,
   "dependents": 0,
   "updated": "2025-02-10T21:27:48.532Z",
   "tags": [
-    "component-library",
-    "ui"
+    "component-library"
   ],
   "svelte5": true,
   "runes": false,

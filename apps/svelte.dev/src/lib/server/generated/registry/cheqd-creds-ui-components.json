@@ -1,14 +1,19 @@
 {
   "name": "@cheqd/creds-ui-components",
-  "description": "Reusable UI components for Creds.xyz projects, like Sidebar, Button, Modal.",
+  "description": "Provides reusable UI components for Creds Suite.",
   "repo_url": "https://github.com/cheqd/creds-libs",
-  "author": "Cheqd Foundation Limited",
+  "authors": [
+    "cheqd.io",
+    "daevm",
+    "eengineer1"
+  ],
   "homepage": "http://git@github.com:cheqd/creds-libs/tree/main/packages/components",
-  "downloads": 412,
+  "downloads": 8,
   "dependents": 0,
   "updated": "2025-02-03T11:51:07.627Z",
   "tags": [
-    "component-library"
+    "component-library",
+    "ui"
   ],
   "svelte5": false,
   "runes": false

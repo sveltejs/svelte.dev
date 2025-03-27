@@ -1,15 +1,16 @@
 {
   "name": "@macfja/svelte-oauth2",
-  "description": "Add OAuth2 authorization to Svelte and SvelteKit applications.",
+  "description": "Enables OAuth2 authorization for Svelte and SvelteKit.",
   "repo_url": "https://github.com/macfja/svelte-oauth2",
-  "author": "MacFJA",
+  "authors": [
+    "macfja"
+  ],
   "homepage": "https://github.com/macfja/svelte-oauth2#readme",
-  "downloads": 2,
+  "downloads": 17,
   "dependents": 0,
   "updated": "2021-09-23T11:37:47.583Z",
   "tags": [
-    "auth",
-    "utility"
+    "auth"
   ],
   "svelte5": false,
   "runes": false,

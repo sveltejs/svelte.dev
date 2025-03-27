@@ -1,11 +1,13 @@
 {
   "name": "svelte-highlight",
-  "description": "Highlight code syntax in Svelte components.",
+  "description": "Highlights code syntax in Svelte components using highlight.js.",
   "repo_url": "https://github.com/metonym/svelte-highlight",
-  "author": "Eric Liu",
+  "authors": [
+    "metonym"
+  ],
   "homepage": "https://github.com/metonym/svelte-highlight",
-  "downloads": 23362,
-  "dependents": 23,
+  "downloads": 21933,
+  "dependents": 24,
   "updated": "2024-12-28T02:44:14.035Z",
   "tags": [
     "ui"

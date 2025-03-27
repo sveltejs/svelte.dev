@@ -1,10 +1,12 @@
 {
   "name": "sveltekit-superfetch",
-  "description": "Interact with APIs in SvelteKit with logging support.",
+  "description": "SvelteKit library for interacting with APIs, logging requests.",
   "repo_url": "https://github.com/pevey/sveltekit-superfetch",
-  "author": "Lacey Pevey",
+  "authors": [
+    "pevey"
+  ],
   "homepage": "https://pevey.com/sveltekit-superfetch",
-  "downloads": 41,
+  "downloads": 43,
   "dependents": 2,
   "updated": "2025-01-22T04:08:16.102Z",
   "tags": [

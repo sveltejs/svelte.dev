@@ -1,14 +1,16 @@
 {
   "name": "svelte-fusioncharts",
-  "description": "Integrate FusionCharts JavaScript charts into Svelte applications.",
+  "description": "Integrate FusionCharts JavaScript charting library into Svelte apps.",
   "repo_url": "https://github.com/priyanjitdey94/svelte-fusioncharts",
-  "author": "meherhowji",
+  "authors": [
+    "meherhowji"
+  ],
   "homepage": "https://github.com/priyanjitdey94/svelte-fusioncharts#readme",
-  "downloads": 141,
+  "downloads": 158,
   "dependents": 0,
   "updated": "2024-06-23T09:47:07.097Z",
   "tags": [
-    "ui"
+    "media"
   ],
   "svelte5": false,
   "runes": false,

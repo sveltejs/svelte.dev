@@ -1,10 +1,12 @@
 {
   "name": "svelte-steps-wizard",
-  "description": "Creates step wizard component for Svelte applications.",
+  "description": "Build multi-step wizards in Svelte applications.",
   "repo_url": "https://github.com/JeanChuquispuma/svelte-step-wizard",
-  "author": "Jean Chuquispuma",
+  "authors": [
+    "chuquis"
+  ],
   "homepage": "https://github.com/JeanChuquispuma/svelte-step-wizard#readme",
-  "downloads": 71,
+  "downloads": 15,
   "dependents": 0,
   "updated": "2023-01-27T23:35:57.142Z",
   "tags": [

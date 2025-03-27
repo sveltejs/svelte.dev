@@ -1,10 +1,12 @@
 {
   "name": "mathjax-svelte",
-  "description": "Render mathematical equations using MathJax in Svelte.",
+  "description": "Renders mathematical expressions using MathJax in Svelte.",
   "repo_url": "https://github.com/WoolDoughnut310/mathjax-svelte",
-  "author": "WoolDoughnut310",
+  "authors": [
+    "wooldoughnut310"
+  ],
   "homepage": "https://github.com/WoolDoughnut310/mathjax-svelte",
-  "downloads": 9,
+  "downloads": 6,
   "dependents": 0,
   "updated": "2023-01-08T12:02:34.886Z",
   "tags": [

@@ -1,0 +1,19 @@
+{
+  "name": "dekilte-ui",
+  "description": "Build UI components for Svelte applications.",
+  "repo_url": "https://github.com/Daiki48/dekilte-ui",
+  "authors": [
+    "daiki48"
+  ],
+  "homepage": "https://github.com/Daiki48/dekilte-ui#readme",
+  "downloads": 7,
+  "dependents": 0,
+  "updated": "2023-12-27T14:02:20.466Z",
+  "tags": [
+    "ui",
+    "component-library"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

@@ -1,10 +1,12 @@
 {
   "name": "braintapper-svelte-flex",
-  "description": "Provides flexbox row and column components for Svelte.",
+  "description": "Provide flexbox row and column components for Svelte layouts.",
   "repo_url": "https://github.com/braintapper/braintapper-svelte-flex",
-  "author": "braintapper",
+  "authors": [
+    "braintapper"
+  ],
   "homepage": "https://github.com/braintapper/braintapper-svelte-flex#readme",
-  "downloads": 2,
+  "downloads": 13,
   "dependents": 1,
   "updated": "2020-11-20T16:51:24.967Z",
   "tags": [

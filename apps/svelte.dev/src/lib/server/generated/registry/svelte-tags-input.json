@@ -1,14 +1,17 @@
 {
   "name": "svelte-tags-input",
-  "description": "Create customizable tag input components for Svelte.",
+  "description": "Create tag inputs with autocomplete in Svelte apps.",
   "repo_url": "https://github.com/agustinl/svelte-tags-input",
-  "author": "Agustin Lautaro",
+  "authors": [
+    "agustinl"
+  ],
   "homepage": "https://svelte-tags-input.vercel.app/",
-  "downloads": 1725,
+  "downloads": 1117,
   "dependents": 4,
   "updated": "2025-01-07T00:13:20.232Z",
   "tags": [
-    "ui"
+    "ui",
+    "utility"
   ],
   "svelte5": false,
   "runes": false,

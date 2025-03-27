@@ -1,0 +1,19 @@
+{
+  "name": "@svizzle/legend",
+  "description": "Create color scale components for Svelte data visualizations.",
+  "repo_url": "https://github.com/nestauk/svizzle",
+  "authors": [
+    "nestauk-dev",
+    "mindrones"
+  ],
+  "homepage": "https://github.com/nestauk/svizzle",
+  "downloads": 17,
+  "dependents": 2,
+  "updated": "2023-11-23T20:36:02.129Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 19
+}

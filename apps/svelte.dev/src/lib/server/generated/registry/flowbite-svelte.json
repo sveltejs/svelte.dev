@@ -1,10 +1,14 @@
 {
   "name": "flowbite-svelte",
-  "description": "Provides Flowbite UI components for Svelte apps.",
+  "description": "UI components for Svelte apps.",
   "repo_url": "https://github.com/themesberg/flowbite-svelte",
-  "author": "Shinichi Okada",
+  "authors": [
+    "jjagielka",
+    "zoliszogyenyi",
+    "shinichiokada"
+  ],
   "homepage": "https://flowbite-svelte.com/",
-  "downloads": 52318,
+  "downloads": 50711,
   "dependents": 44,
   "updated": "2025-02-24T16:22:35.419Z",
   "tags": [
@@ -13,5 +17,5 @@
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 2411
+  "github_stars": 2416
 }

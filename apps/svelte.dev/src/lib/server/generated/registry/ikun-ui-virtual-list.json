@@ -1,8 +1,10 @@
 {
   "name": "@ikun-ui/virtual-list",
-  "description": "Create virtual list components for Svelte apps.",
+  "description": "Virtual list component for Svelte.",
   "repo_url": "",
-  "author": "baiwusanyu",
+  "authors": [
+    "baiwusanyu"
+  ],
   "downloads": 21,
   "dependents": 3,
   "updated": "2025-01-24T03:49:26.568Z",

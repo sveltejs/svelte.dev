@@ -1,8 +1,10 @@
 {
   "name": "svemix",
-  "description": "Adds full-stack capabilities to SvelteKit, with server scripts.",
+  "description": "Add full-stack capabilities to SvelteKit, server scripts, SEO handling.",
   "repo_url": "https://github.com/svemix/svemix",
-  "author": "pixelmund",
+  "authors": [
+    "pixelmund"
+  ],
   "homepage": "https://svemix.com",
   "downloads": 1,
   "dependents": 0,

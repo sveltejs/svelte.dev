@@ -1,10 +1,12 @@
 {
   "name": "svelte-spa-router",
-  "description": "Create Single Page Application (SPA) routers for Svelte.",
+  "description": "Create single-page applications with Svelte.",
   "repo_url": "https://github.com/ItalyPaleAle/svelte-spa-router",
-  "author": "Alessandro Segala",
+  "authors": [
+    "italypaleale"
+  ],
   "homepage": "https://github.com/ItalyPaleAle/svelte-spa-router#readme",
-  "downloads": 17319,
+  "downloads": 17251,
   "dependents": 43,
   "updated": "2024-01-09T01:09:06.033Z",
   "tags": [

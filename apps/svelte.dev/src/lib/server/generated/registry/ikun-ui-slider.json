@@ -1,8 +1,10 @@
 {
   "name": "@ikun-ui/slider",
-  "description": "Build slider component for Svelte applications.",
+  "description": "Create slider components for Svelte applications.",
   "repo_url": "",
-  "author": "baiwusanyu",
+  "authors": [
+    "baiwusanyu"
+  ],
   "downloads": 29,
   "dependents": 1,
   "updated": "2025-01-24T03:49:18.871Z",

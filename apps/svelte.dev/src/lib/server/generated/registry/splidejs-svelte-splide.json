@@ -1,10 +1,12 @@
 {
   "name": "@splidejs/svelte-splide",
-  "description": "Svelte component for the Splide slider/carousel.",
+  "description": "Create Svelte components for Splide slider/carousel.",
   "repo_url": "https://github.com/Splidejs/svelte-splide",
-  "author": "Naotoshi Fujita",
+  "authors": [
+    "splidejs"
+  ],
   "homepage": "https://github.com/Splidejs/svelte-splide#readme",
-  "downloads": 6073,
+  "downloads": 6237,
   "dependents": 6,
   "updated": "2022-09-30T03:37:44.743Z",
   "tags": [

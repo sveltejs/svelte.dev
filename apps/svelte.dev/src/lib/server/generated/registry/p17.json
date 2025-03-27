@@ -1,10 +1,12 @@
 {
   "name": "p17",
-  "description": "Build Svelte forms with accessible HTML and GDS-inspired styling.",
+  "description": "Builds forms with validation and user interaction in Svelte.",
   "repo_url": "https://github.com/PaulioRandall/p17",
-  "author": "Paul Williams",
+  "authors": [
+    "pauliorandall"
+  ],
   "homepage": "https://github.com/PaulioRandall/p17#readme",
-  "downloads": 2,
+  "downloads": 36,
   "dependents": 0,
   "updated": "2024-07-07T14:25:33.069Z",
   "tags": [

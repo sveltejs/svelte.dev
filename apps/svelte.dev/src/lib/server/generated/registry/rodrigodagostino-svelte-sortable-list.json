@@ -1,17 +1,18 @@
 {
   "name": "@rodrigodagostino/svelte-sortable-list",
-  "description": "Create accessible, sortable lists with drag-and-drop in Svelte apps.",
+  "description": "Create accessible sortable lists in Svelte applications.",
   "repo_url": "https://github.com/rodrigodagostino/svelte-sortable-list",
-  "author": "Rodrigo D’Agostino",
+  "authors": [
+    "rodrigodagostino"
+  ],
   "homepage": "https://github.com/rodrigodagostino/svelte-sortable-list#readme",
-  "downloads": 128,
+  "downloads": 97,
   "dependents": 0,
   "updated": "2025-02-05T02:12:11.651Z",
   "tags": [
-    "component-library",
-    "ui"
+    "utility"
   ],
   "svelte5": false,
   "runes": false,
-  "github_stars": 22
+  "github_stars": 23
 }

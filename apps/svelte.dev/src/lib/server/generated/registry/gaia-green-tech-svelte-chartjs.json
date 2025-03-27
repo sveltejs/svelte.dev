@@ -2,9 +2,11 @@
   "name": "@gaia-green-tech/svelte-chartjs",
   "description": "Integrate Chart.js charts into Svelte applications.",
   "repo_url": "https://github.com/SauravKanchan/svelte-chartjs",
-  "author": "Saurav Kanchan",
+  "authors": [
+    "suda"
+  ],
   "homepage": "https://saurav.tech/mdbsvelte/?path=/story/charts--examples",
-  "downloads": 0,
+  "downloads": 3,
   "dependents": 0,
   "updated": "2022-09-07T12:43:10.178Z",
   "tags": [
@@ -12,5 +14,5 @@
   ],
   "svelte5": false,
   "runes": false,
-  "github_stars": 318
+  "github_stars": 319
 }

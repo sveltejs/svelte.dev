@@ -1,8 +1,10 @@
 {
   "name": "svelte-calendar",
-  "description": "Create date pickers with day, month, and year pickers.",
+  "description": "Create a small date picker built with Svelte.",
   "repo_url": "",
-  "author": "6edesign",
+  "authors": [
+    "6edesign"
+  ],
   "downloads": 4692,
   "dependents": 2,
   "updated": "2021-09-22T18:19:33.586Z",

@@ -1,9 +1,11 @@
 {
   "name": "zvelte-datepicker",
-  "description": "Create datepickers with time selection in Svelte applications.",
+  "description": "Add datepicker with time selection to Svelte apps.",
   "repo_url": "",
-  "author": "zogs",
-  "downloads": 3,
+  "authors": [
+    "zogs"
+  ],
+  "downloads": 2,
   "dependents": 0,
   "updated": "2023-10-09T08:50:55.993Z",
   "tags": [

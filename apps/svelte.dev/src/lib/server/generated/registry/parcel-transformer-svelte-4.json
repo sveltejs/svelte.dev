@@ -2,7 +2,9 @@
   "name": "parcel-transformer-svelte-4",
   "description": "Transform Svelte 4 components with Parcel.",
   "repo_url": "https://github.com/SethBurkart123/parcel-transformer-svelte",
-  "author": "Seth Burkart",
+  "authors": [
+    "sethburkart"
+  ],
   "homepage": "https://github.com/SethBurkart123/parcel-transformer-svelte#readme",
   "downloads": 3,
   "dependents": 0,

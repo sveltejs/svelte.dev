@@ -1,11 +1,13 @@
 {
   "name": "@htmlbricks/hb-messages-topics-card",
-  "description": "Svelte-Bootstrap messages-topics-card web component.",
+  "description": "Create message topics card web component for Svelte.",
   "repo_url": "",
-  "author": "Dario Caruso",
-  "downloads": 93,
+  "authors": [
+    "dariocaruso"
+  ],
+  "downloads": 96,
   "dependents": 0,
-  "updated": "2025-03-09T03:10:32.653Z",
+  "updated": "2025-03-24T18:07:17.596Z",
   "tags": [
     "ui"
   ],

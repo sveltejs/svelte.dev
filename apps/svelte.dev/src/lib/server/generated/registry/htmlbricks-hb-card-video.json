@@ -1,12 +1,15 @@
 {
   "name": "@htmlbricks/hb-card-video",
-  "description": "Create Svelte web component for video card.",
+  "description": "Create Svelte Boostrap Video Card WebComponent.",
   "repo_url": "",
-  "author": "Dario Caruso",
-  "downloads": 467,
+  "authors": [
+    "dariocaruso"
+  ],
+  "downloads": 474,
   "dependents": 3,
-  "updated": "2025-03-09T03:10:26.466Z",
+  "updated": "2025-03-24T18:07:12.437Z",
   "tags": [
+    "ui",
     "media"
   ],
   "svelte5": false,

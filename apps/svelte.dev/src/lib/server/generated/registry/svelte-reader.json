@@ -1,14 +1,17 @@
 {
   "name": "svelte-reader",
-  "description": "Embed ePub files into Svelte apps using EpubJS.",
+  "description": "Embeds ePub files into Svelte applications, powered by EpubJS.",
   "repo_url": "https://github.com/jinhuan138/svelte-reader",
-  "author": "jinhuan",
+  "authors": [
+    "jinhuan"
+  ],
   "homepage": "https://jinhuan138.github.io/svelte-reader/docs/",
-  "downloads": 5,
+  "downloads": 13,
   "dependents": 0,
   "updated": "2025-01-08T05:55:25.895Z",
   "tags": [
-    "content"
+    "content",
+    "media"
   ],
   "svelte5": false,
   "runes": false,

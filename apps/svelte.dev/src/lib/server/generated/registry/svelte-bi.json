@@ -1,8 +1,11 @@
 {
   "name": "svelte-bi",
-  "description": "Use Bootstrap Icons in Svelte 5 applications.",
+  "description": "Provides Bootstrap Icons as Svelte components.",
   "repo_url": "https://github.com/sachinsancheti1/svelte-bi",
-  "author": "sachinsancheti1",
+  "authors": [
+    "onokumus",
+    "sachinsancheti1"
+  ],
   "homepage": "https://github.com/sachinsancheti1/svelte-bi#readme",
   "downloads": 8,
   "dependents": 0,

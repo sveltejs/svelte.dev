@@ -1,10 +1,12 @@
 {
   "name": "@macfja/svelte-expirable",
-  "description": "Create Svelte store with expiring items.",
+  "description": "Create Svelte stores with expiring items.",
   "repo_url": "https://github.com/macfja/svelte-expirable",
-  "author": "MacFJA",
+  "authors": [
+    "macfja"
+  ],
   "homepage": "https://github.com/macfja/svelte-expirable#readme",
-  "downloads": 1,
+  "downloads": 12,
   "dependents": 0,
   "updated": "2021-12-03T20:10:22.053Z",
   "tags": [

@@ -1,8 +1,10 @@
 {
   "name": "svoast",
-  "description": "Create simple toast notifications for Svelte applications.",
+  "description": "Create toast notifications in Svelte applications.",
   "repo_url": "https://github.com/Gibbu/svoast",
-  "author": "gibbu",
+  "authors": [
+    "gibbu"
+  ],
   "homepage": "https://svoast.vercel.app",
   "downloads": 737,
   "dependents": 0,

@@ -1,10 +1,12 @@
 {
   "name": "@lottiefiles/svelte-lottie-player",
-  "description": "Lottie animation player component for Svelte.",
+  "description": "Play Lottie animations in Svelte applications.",
   "repo_url": "https://github.com/LottieFiles/svelte-lottie-player",
-  "author": "Jawish Hameed",
+  "authors": [
+    "jawish"
+  ],
   "homepage": "https://github.com/LottieFiles/svelte-lottie-player",
-  "downloads": 4311,
+  "downloads": 4804,
   "dependents": 2,
   "updated": "2024-01-16T08:16:28.170Z",
   "tags": [

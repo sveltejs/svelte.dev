@@ -2,8 +2,10 @@
   "name": "@ashiteam/sveltekit-images",
   "description": "Render optimized images in SvelteKit applications.",
   "repo_url": "",
-  "author": "Asanga Weerapura",
-  "downloads": 48,
+  "authors": [
+    "asangawee"
+  ],
+  "downloads": 0,
   "dependents": 0,
   "updated": "2024-09-25T11:19:08.528Z",
   "tags": [

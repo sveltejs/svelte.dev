@@ -1,8 +1,11 @@
 {
   "name": "@makolabs/ripple",
-  "description": "Build simple Svelte 5 powered UI components.",
+  "description": "Create simple Svelte 5 powered component library.",
   "repo_url": "https://github.com/makolabsai/mako-ui-components",
-  "author": "bishwasbh",
+  "authors": [
+    "bishwasbh",
+    "sharktu"
+  ],
   "homepage": "https://github.com/makolabsai/mako-ui-components#readme",
   "downloads": 17,
   "dependents": 0,

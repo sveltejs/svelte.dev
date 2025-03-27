@@ -1,15 +1,17 @@
 {
   "name": "svelte-multi",
-  "description": "Manage multi-step forms with form, step, and field components.",
+  "description": "Manages multi-step forms in Svelte applications.",
   "repo_url": "https://github.com/MirrorBytes/phorm-utils",
-  "author": "MirrorBytes",
+  "authors": [
+    "mirrorbytes"
+  ],
   "homepage": "https://github.com/MirrorBytes/phorm-utils/tree/main/packages/multi",
-  "downloads": 2,
+  "downloads": 31,
   "dependents": 0,
   "updated": "2021-01-19T04:03:21.161Z",
   "tags": [
-    "utility",
-    "component-library"
+    "component-library",
+    "utility"
   ],
   "svelte5": false,
   "runes": false,

@@ -1,9 +1,11 @@
 {
   "name": "@afreidz/svelte-sonner",
-  "description": "Provides opinionated toast component for Svelte.",
+  "description": "Provides opinionated toast component for Svelte applications.",
   "repo_url": "",
-  "author": "Robert Soriano",
-  "downloads": 21,
+  "authors": [
+    "afreidz"
+  ],
+  "downloads": 17,
   "dependents": 0,
   "updated": "2024-10-23T16:16:33.051Z",
   "tags": [

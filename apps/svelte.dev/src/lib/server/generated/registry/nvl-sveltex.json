@@ -1,15 +1,16 @@
 {
   "name": "@nvl/sveltex",
-  "description": "Preprocesses Svelte with Markdown and LaTeX support.",
+  "description": "Preprocess Markdown and LaTeX for Svelte.",
   "repo_url": "https://github.com/nvlang/sveltex",
-  "author": "N. V. Lang",
+  "authors": [
+    "nvl"
+  ],
   "homepage": "https://sveltex.dev",
-  "downloads": 1,
+  "downloads": 17,
   "dependents": 0,
   "updated": "2024-07-18T17:43:51.892Z",
   "tags": [
-    "preprocessor",
-    "content"
+    "preprocessor"
   ],
   "svelte5": false,
   "runes": false,

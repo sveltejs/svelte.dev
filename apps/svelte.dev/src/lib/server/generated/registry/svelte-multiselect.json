@@ -1,10 +1,12 @@
 {
   "name": "svelte-multiselect",
-  "description": "Create multi-select components for Svelte forms.",
+  "description": "Create multi-select components for Svelte.",
   "repo_url": "https://github.com/janosh/svelte-multiselect",
-  "author": "Janosh Riebesell",
+  "authors": [
+    "janosh"
+  ],
   "homepage": "https://janosh.github.io/svelte-multiselect",
-  "downloads": 20120,
+  "downloads": 20130,
   "dependents": 3,
   "updated": "2024-10-24T09:06:50.627Z",
   "tags": [

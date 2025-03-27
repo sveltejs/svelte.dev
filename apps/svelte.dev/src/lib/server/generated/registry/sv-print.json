@@ -1,9 +1,11 @@
 {
   "name": "sv-print",
-  "description": "Provides print functionality for Svelte applications.",
+  "description": "Print Svelte components, designed for hi-print and designer.",
   "repo_url": "",
-  "author": "CcSimple",
-  "downloads": 41,
+  "authors": [
+    "cc-better"
+  ],
+  "downloads": 23,
   "dependents": 5,
   "updated": "2024-07-29T15:55:07.858Z",
   "tags": [

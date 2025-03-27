@@ -1,11 +1,13 @@
 {
   "name": "@htmlbricks/hb-contact-item",
-  "description": "Svelte Contact WebComponent.",
+  "description": "Create contact item web component for Svelte apps.",
   "repo_url": "",
-  "author": "Dario Caruso",
-  "downloads": 464,
+  "authors": [
+    "dariocaruso"
+  ],
+  "downloads": 482,
   "dependents": 3,
-  "updated": "2025-03-09T03:10:26.274Z",
+  "updated": "2025-03-24T18:07:11.992Z",
   "tags": [
     "ui"
   ],

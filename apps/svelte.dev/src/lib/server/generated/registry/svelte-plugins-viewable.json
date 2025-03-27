@@ -1,10 +1,12 @@
 {
   "name": "@svelte-plugins/viewable",
-  "description": "Track element viewability using a rule-based approach.",
+  "description": "Track element viewability with Svelte.",
   "repo_url": "https://github.com/svelte-plugins/svelte-viewable",
-  "author": "Kieran Boyle",
+  "authors": [
+    "dysfunc"
+  ],
   "homepage": "https://github.com/svelte-plugins/svelte-viewable",
-  "downloads": 36,
+  "downloads": 12,
   "dependents": 0,
   "updated": "2024-02-12T18:57:19.225Z",
   "tags": [

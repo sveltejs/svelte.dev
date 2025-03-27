@@ -1,14 +1,17 @@
 {
-  "name": "ubeac-svelte",
-  "description": "Offer uBeac's opinionated Svelte component library.",
+  "name": "@ubeac/svelte",
+  "description": "Provides opinionated Svelte component library.",
   "repo_url": "https://github.com/ubeac/svelte",
-  "author": "Amir Pournasserian",
+  "authors": [
+    "ubeac-owner"
+  ],
   "homepage": "https://svelte.ubeac.io/",
-  "downloads": 12,
+  "downloads": 237,
   "dependents": 0,
-  "updated": "2023-01-23T14:10:45.867Z",
+  "updated": "2023-01-15T21:08:54.026Z",
   "tags": [
-    "component-library"
+    "component-library",
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

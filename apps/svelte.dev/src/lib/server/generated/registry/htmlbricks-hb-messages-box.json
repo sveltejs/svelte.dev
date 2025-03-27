@@ -1,11 +1,13 @@
 {
   "name": "@htmlbricks/hb-messages-box",
-  "description": "Provide Svelte-Bootstrap messages box web component.",
+  "description": "Create message box components for Svelte applications.",
   "repo_url": "",
-  "author": "Dario Caruso",
-  "downloads": 100,
+  "authors": [
+    "dariocaruso"
+  ],
+  "downloads": 104,
   "dependents": 0,
-  "updated": "2025-03-09T03:10:38.263Z",
+  "updated": "2025-03-24T18:07:23.399Z",
   "tags": [
     "ui"
   ],

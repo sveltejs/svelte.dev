@@ -1,10 +1,14 @@
 {
   "name": "@txstate-mws/svelte-store",
-  "description": "Provides several new store types compatible with Svelte stores.",
+  "description": "Provides enhanced store types for Svelte applications.",
   "repo_url": "https://github.com/txstate-etc/svelte-store",
-  "author": "Nick Wing",
+  "authors": [
+    "wickning1",
+    "jsnider",
+    "rmcew"
+  ],
   "homepage": "https://github.com/txstate-etc/svelte-store#readme",
-  "downloads": 102,
+  "downloads": 114,
   "dependents": 4,
   "updated": "2023-03-15T12:35:23.182Z",
   "tags": [

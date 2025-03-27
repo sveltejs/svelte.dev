@@ -1,10 +1,12 @@
 {
   "name": "svelte-awesome-pug",
-  "description": "Enhance usage of pug HTML templates for Svelte.",
+  "description": "Enhance Pug template usage within Svelte projects.",
   "repo_url": "https://github.com/refzlund/svelte-awesome-pug",
-  "author": "refzlund",
+  "authors": [
+    "refzlund"
+  ],
   "homepage": "https://github.com/Refzlund/svelte-awesome-pug",
-  "downloads": 23,
+  "downloads": 2,
   "dependents": 0,
   "updated": "2023-01-05T09:50:04.639Z",
   "tags": [

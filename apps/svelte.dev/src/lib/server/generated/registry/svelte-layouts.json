@@ -1,14 +1,16 @@
 {
   "name": "svelte-layouts",
-  "description": "Structure Svelte pages easily using Flexbox and Grid components.",
+  "description": "Structure pages using Svelte components.",
   "repo_url": "https://github.com/ryu-man/svelte-layouts",
-  "author": "ryu-man",
+  "authors": [
+    "ryuman"
+  ],
   "homepage": "https://github.com/ryu-man/svelte-layouts#readme",
-  "downloads": 0,
+  "downloads": 26,
   "dependents": 0,
   "updated": "2022-09-04T10:16:31.383Z",
   "tags": [
-    "utility"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

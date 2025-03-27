@@ -1,10 +1,12 @@
 {
   "name": "svelte-vatsim-stands",
-  "description": "Display VATSIM stand occupancy in SvelteKit applications.",
+  "description": "Display VATSIM stand occupancy information in SvelteKit apps.",
   "repo_url": "https://github.com/kristiankunc/svelte-vatsim-stands",
-  "author": "Kristian Kunc",
+  "authors": [
+    "kristiankunc"
+  ],
   "homepage": "https://github.com/kristiankunc/svelte-vatsim-stands#readme",
-  "downloads": 18,
+  "downloads": 8,
   "dependents": 0,
   "updated": "2025-02-25T13:05:44.190Z",
   "tags": [

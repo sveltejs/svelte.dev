@@ -2,13 +2,15 @@
   "name": "cl-editor",
   "description": "Create lightweight text editors with Svelte and TypeScript.",
   "repo_url": "https://github.com/nenadpnc/cl-editor",
-  "author": "nenadpnc",
+  "authors": [
+    "nenadpnc"
+  ],
   "homepage": "https://nenadpnc.github.io/cl-editor/",
-  "downloads": 896,
+  "downloads": 930,
   "dependents": 2,
   "updated": "2021-12-03T20:40:58.512Z",
   "tags": [
-    "ui"
+    "content"
   ],
   "svelte5": false,
   "runes": false,

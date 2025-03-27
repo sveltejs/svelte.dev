@@ -2,9 +2,11 @@
   "name": "svelte-tiny-router",
   "description": "Simple, efficient declarative routing library for Svelte 5 with runes.",
   "repo_url": "https://github.com/notnotsamuel/svelte-tiny-router",
-  "author": "notnotsamuel",
+  "authors": [
+    "notnotsamuel"
+  ],
   "homepage": "https://github.com/notnotsamuel/svelte-tiny-router#readme",
-  "downloads": 82,
+  "downloads": 15,
   "dependents": 0,
   "updated": "2025-03-12T10:15:02.991Z",
   "tags": [

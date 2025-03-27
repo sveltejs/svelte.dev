@@ -1,16 +1,22 @@
 {
   "name": "@sveltejs/adapter-vercel",
-  "description": "Creates a Vercel app from SvelteKit applications.",
+  "description": "Builds SvelteKit apps for Vercel.",
   "repo_url": "https://github.com/sveltejs/kit",
-  "author": "rich_harris",
+  "authors": [
+    "rich_harris",
+    "svelte-admin",
+    "conduitry",
+    "dominik_g"
+  ],
   "homepage": "https://svelte.dev",
-  "downloads": 67215,
+  "downloads": 67294,
   "dependents": 13,
   "updated": "2025-02-21T00:04:48.230Z",
   "tags": [
-    "adapter"
+    "adapter",
+    "server"
   ],
   "svelte5": false,
   "runes": false,
-  "github_stars": 19123
+  "github_stars": 19137
 }

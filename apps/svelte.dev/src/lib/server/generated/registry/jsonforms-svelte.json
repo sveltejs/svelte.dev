@@ -1,10 +1,12 @@
 {
   "name": "jsonforms-svelte",
-  "description": "Generate Svelte forms from JSON schema definitions.",
+  "description": "Generate Svelte forms from JSON schema.",
   "repo_url": "https://github.com/mikaboh/jsonforms-svelte",
-  "author": "Mika Boehm",
+  "authors": [
+    "mikaboh"
+  ],
   "homepage": "https://github.com/mikaboh/jsonforms-svelte#readme",
-  "downloads": 1,
+  "downloads": 0,
   "dependents": 1,
   "updated": "2023-02-03T22:38:37.169Z",
   "tags": [

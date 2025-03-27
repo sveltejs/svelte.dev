@@ -1,13 +1,23 @@
 {
   "name": "@rabee-org/svelte-head",
-  "description": "Set meta information easily for Svelte and SvelteKit applications.",
+  "description": "Set meta information easily for Svelte applications.",
   "repo_url": "",
-  "author": "horietty",
-  "downloads": 36,
+  "authors": [
+    "horietty",
+    "tata_jp",
+    "ooharamasaki",
+    "suico",
+    "juth5",
+    "mtnn_rabee",
+    "simiraaaa",
+    "phi"
+  ],
+  "downloads": 21,
   "dependents": 1,
   "updated": "2023-05-24T11:34:58.173Z",
   "tags": [
-    "seo"
+    "seo",
+    "utility"
   ],
   "svelte5": false,
   "runes": false

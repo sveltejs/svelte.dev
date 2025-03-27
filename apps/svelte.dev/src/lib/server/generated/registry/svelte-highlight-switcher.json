@@ -1,14 +1,16 @@
 {
   "name": "svelte-highlight-switcher",
-  "description": "Switch svelte-highlight styles safely in Svelte apps.",
+  "description": "Dynamically switch svelte-highlight styles safely.",
   "repo_url": "https://github.com/jill64/svelte-highlight-switcher",
-  "author": "jill64",
+  "authors": [
+    "jill64"
+  ],
   "homepage": "https://github.com/jill64/svelte-highlight-switcher#readme",
-  "downloads": 19643,
+  "downloads": 7910,
   "dependents": 1,
   "updated": "2025-01-20T02:43:10.149Z",
   "tags": [
-    "utility"
+    "ui"
   ],
   "svelte5": true,
   "runes": false,

@@ -1,14 +1,15 @@
 {
   "name": "svemantic",
-  "description": "Implement Fomantic-UI components in Svelte applications.",
+  "description": "Provides Fomantic-UI components for Svelte.",
   "repo_url": "https://github.com/eddow/svemantic",
-  "author": "fmdm",
+  "authors": [
+    "eeddow"
+  ],
   "homepage": "https://github.com/eddow/svemantic#readme",
-  "downloads": 3,
+  "downloads": 2,
   "dependents": 0,
   "updated": "2023-04-29T08:53:31.853Z",
   "tags": [
-    "component-library",
     "ui"
   ],
   "svelte5": false,

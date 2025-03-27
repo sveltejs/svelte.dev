@@ -1,14 +1,16 @@
 {
   "name": "@josesan9/svelte-virtual-scroll-list",
-  "description": "Virtualize lists for Svelte applications.",
+  "description": "Virtualize lists for Svelte, handling dynamic sizes.",
   "repo_url": "https://github.com/josesan9/svelte-virtual-scroll-list",
-  "author": "josesan9",
+  "authors": [
+    "josesan9"
+  ],
   "homepage": "https://github.com/josesan9/svelte-virtual-scroll-list#readme",
   "downloads": 27,
   "dependents": 0,
   "updated": "2025-03-20T12:17:10.497Z",
   "tags": [
-    "utility"
+    "ui"
   ],
   "svelte5": true,
   "runes": false

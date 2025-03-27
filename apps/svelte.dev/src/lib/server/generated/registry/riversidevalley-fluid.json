@@ -2,13 +2,16 @@
   "name": "@riversidevalley/fluid",
   "description": "UI framework for web based on Microsoft Fluent UI.",
   "repo_url": "https://github.com/RiversideValley/Fluid.Framework",
-  "author": "RiversideValley",
+  "authors": [
+    "lamparter"
+  ],
   "homepage": "https://github.com/RiversideValley/Fluid.Framework",
   "downloads": 3,
   "dependents": 0,
   "updated": "2024-02-17T15:22:43.025Z",
   "tags": [
-    "component-library"
+    "component-library",
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

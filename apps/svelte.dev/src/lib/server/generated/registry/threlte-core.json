@@ -2,9 +2,11 @@
   "name": "@threlte/core",
   "description": "Build 3D web experiences with Svelte and Three.js.",
   "repo_url": "https://github.com/threlte/threlte",
-  "author": "Grischa Erbe",
+  "authors": [
+    "grischaerbe"
+  ],
   "homepage": "https://threlte.xyz",
-  "downloads": 8580,
+  "downloads": 8855,
   "dependents": 18,
   "updated": "2025-01-23T22:30:32.135Z",
   "tags": [
@@ -12,5 +14,5 @@
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 2820
+  "github_stars": 2828
 }

@@ -1,10 +1,12 @@
 {
   "name": "@fabiohvp/svelte-table",
-  "description": "Render tables with sorting and pagination in Svelte.",
+  "description": "Render tables with pagination, search, and sort features.",
   "repo_url": "https://github.com/fabiohvp/svelte-table",
-  "author": "https://github.com/fabiohvp",
+  "authors": [
+    "fabiohvp"
+  ],
   "homepage": "https://github.com/fabiohvp/svelte-table#readme",
-  "downloads": 50,
+  "downloads": 49,
   "dependents": 0,
   "updated": "2023-07-06T08:01:05.317Z",
   "tags": [

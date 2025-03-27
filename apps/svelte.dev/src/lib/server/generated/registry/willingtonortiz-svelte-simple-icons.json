@@ -1,8 +1,10 @@
 {
   "name": "@willingtonortiz/svelte-simple-icons",
-  "description": "Use Simple Icons in Svelte projects.",
+  "description": "Use Simple Icons in Svelte projects easily.",
   "repo_url": "https://github.com/willingtonortiz/svelte-simple-icons",
-  "author": "Willington Ortiz",
+  "authors": [
+    "willingtonortiz"
+  ],
   "homepage": "https://github.com/willingtonortiz/svelte-simple-icons#readme",
   "downloads": 1,
   "dependents": 0,

@@ -1,10 +1,12 @@
 {
   "name": "svelte-star-rating",
-  "description": "Shows rating from 0 to 5 with svg stars.",
+  "description": "Display star ratings in Svelte apps.",
   "repo_url": "https://github.com/rubenvar/svelte-star-rating",
-  "author": "Rubén Vara",
+  "authors": [
+    "rubenvara"
+  ],
   "homepage": "https://github.com/rubenvar/svelte-star-rating#readme",
-  "downloads": 619,
+  "downloads": 678,
   "dependents": 0,
   "updated": "2022-09-09T20:59:14.034Z",
   "tags": [

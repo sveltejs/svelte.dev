@@ -1,0 +1,18 @@
+{
+  "name": "@joxtacy/svelte-router",
+  "description": "Creates simple routing for Svelte applications.",
+  "repo_url": "https://github.com/Joxtacy/svelte-router",
+  "authors": [
+    "joxtacy"
+  ],
+  "homepage": "https://github.com/Joxtacy/svelte-router#readme",
+  "downloads": 29,
+  "dependents": 0,
+  "updated": "2019-11-11T22:39:33.315Z",
+  "tags": [
+    "router"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 1
+}

@@ -1,10 +1,12 @@
 {
   "name": "svelte-exstore",
-  "description": "Manage Svelte state with Redux DevTools integration.",
+  "description": "Simple state management library for Svelte with Redux DevTools.",
   "repo_url": "https://github.com/noney1412/svelte-exstore",
-  "author": "Chanon Panpila",
+  "authors": [
+    "nonpanpila"
+  ],
   "homepage": "https://github.com/noney1412/svelte-exstore",
-  "downloads": 1,
+  "downloads": 41,
   "dependents": 0,
   "updated": "2022-10-05T07:51:09.913Z",
   "tags": [

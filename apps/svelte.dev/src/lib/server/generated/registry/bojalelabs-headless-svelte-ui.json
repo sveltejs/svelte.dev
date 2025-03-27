@@ -1,14 +1,18 @@
 {
   "name": "@bojalelabs/headless-svelte-ui",
-  "description": "Build reusable headless UI components for Svelte apps.",
+  "description": "Build Svelte apps with reusable headless components.",
   "repo_url": "https://github.com/Bojale-Labs/svelte-component-library",
-  "author": "calebbenjin",
+  "authors": [
+    "calebbenjin",
+    "ayoalfonso"
+  ],
   "homepage": "https://github.com/Bojale-Labs/svelte-component-library#readme",
-  "downloads": 28,
+  "downloads": 26,
   "dependents": 0,
   "updated": "2022-02-10T11:15:36.672Z",
   "tags": [
-    "component-library"
+    "component-library",
+    "ui"
   ],
   "svelte5": false,
   "runes": false

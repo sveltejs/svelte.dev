@@ -1,14 +1,16 @@
 {
   "name": "svelte-blockly",
-  "description": "Integrate Blockly visual programming editor into Svelte applications.",
+  "description": "Provides a Blockly wrapper for Svelte.",
   "repo_url": "https://github.com/SillyFreak/svelte-blockly",
-  "author": "Clemens Koza",
+  "authors": [
+    "sillyfreak"
+  ],
   "homepage": "https://github.com/SillyFreak/svelte-blockly#readme",
-  "downloads": 5,
+  "downloads": 6,
   "dependents": 0,
   "updated": "2021-11-09T14:57:07.440Z",
   "tags": [
-    "tooling"
+    "utility"
   ],
   "svelte5": false,
   "runes": false,

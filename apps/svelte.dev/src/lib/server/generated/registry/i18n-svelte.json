@@ -1,10 +1,12 @@
 {
   "name": "i18n-svelte",
-  "description": "Provides internationalization for Svelte applications.",
+  "description": "Implement lightweight Svelte internationalization with frenchkiss.js.",
   "repo_url": "https://github.com/sharmapukar217/i18n-svelte",
-  "author": "Pukar Sharma",
+  "authors": [
+    "sharmapukar217"
+  ],
   "homepage": "https://github.com/sharmapukar217/i18n-svelte#readme",
-  "downloads": 1,
+  "downloads": 14,
   "dependents": 0,
   "updated": "2022-01-28T14:33:09.803Z",
   "tags": [

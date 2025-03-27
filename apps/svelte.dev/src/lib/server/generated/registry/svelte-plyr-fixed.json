@@ -1,10 +1,12 @@
 {
   "name": "svelte-plyr-fixed",
-  "description": "Provides a thin Svelte wrapper for Plyr.js video player.",
+  "description": "Thin Svelte wrapper around Plyr.js video player.",
   "repo_url": "https://github.com/benwoodward/svelte-plyr",
-  "author": "Ben Woodward",
+  "authors": [
+    "koala1e"
+  ],
   "homepage": "https://github.com/benwoodward/svelte-plyr#readme",
-  "downloads": 2,
+  "downloads": 6,
   "dependents": 0,
   "updated": "2021-05-01T19:56:43.546Z",
   "tags": [

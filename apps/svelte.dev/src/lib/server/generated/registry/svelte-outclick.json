@@ -1,15 +1,16 @@
 {
   "name": "svelte-outclick",
-  "description": "Detects clicks outside Svelte elements, useful for closing popups.",
+  "description": "Detect clicks outside Svelte elements.",
   "repo_url": "https://github.com/babakfp/svelte-outclick",
-  "author": "babakfp",
+  "authors": [
+    "babakfp"
+  ],
   "homepage": "https://github.com/babakfp/svelte-outclick#readme",
   "downloads": 1005,
   "dependents": 0,
   "updated": "2025-03-02T18:16:12.982Z",
   "tags": [
-    "utility",
-    "dom"
+    "utility"
   ],
   "svelte5": true,
   "runes": false,

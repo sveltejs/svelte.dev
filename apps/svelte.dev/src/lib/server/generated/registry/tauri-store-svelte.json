@@ -1,8 +1,10 @@
 {
   "name": "@tauri-store/svelte",
-  "description": "Provide persistent Svelte stores for Tauri applications.",
+  "description": "Persistent Svelte stores and runes for Tauri applications.",
   "repo_url": "https://github.com/ferreira-tb/tauri-store",
-  "author": "ferreira-tb",
+  "authors": [
+    "ferreira-tb"
+  ],
   "homepage": "https://tb.dev.br/tauri-store/plugin-svelte/guide/getting-started",
   "downloads": 157,
   "dependents": 0,
@@ -12,5 +14,5 @@
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 39
+  "github_stars": 44
 }

@@ -1,8 +1,10 @@
 {
   "name": "@ikun-ui/input-number",
-  "description": "Create number input components for Svelte applications.",
+  "description": "Create number input components for Svelte with customizable features.",
   "repo_url": "",
-  "author": "baiwusanyu",
+  "authors": [
+    "baiwusanyu"
+  ],
   "downloads": 12,
   "dependents": 2,
   "updated": "2025-01-24T03:49:01.245Z",

@@ -1,14 +1,17 @@
 {
   "name": "svelte-target-blank",
-  "description": "Preprocessor to automatically add target=\"_blank\" to external links.",
+  "description": "Adds target=\"_blank\" to external links in Svelte templates.",
   "repo_url": "https://github.com/fcrozatier/svelte-targe-blank",
-  "author": "Frédéric Crozatier",
+  "authors": [
+    "fcrozatier"
+  ],
   "homepage": "https://github.com/fcrozatier/svelte-targe-blank#readme",
-  "downloads": 0,
+  "downloads": 12,
   "dependents": 0,
   "updated": "2024-04-27T13:51:06.068Z",
   "tags": [
-    "preprocessor"
+    "preprocessor",
+    "tooling"
   ],
   "svelte5": false,
   "runes": false

@@ -1,15 +1,17 @@
 {
   "name": "@brewer/beerui",
-  "description": "Svelte UI component library with various components.",
+  "description": "Provides Svelte UI components.",
   "repo_url": "https://github.com/beerui/BeerUi",
-  "author": "beerui",
+  "authors": [
+    "beerer",
+    "beer-ui"
+  ],
   "homepage": "https://github.com/beerui/BeerUi",
-  "downloads": 392,
+  "downloads": 3,
   "dependents": 1,
   "updated": "2023-08-08T10:34:44.735Z",
   "tags": [
-    "component-library",
-    "ui"
+    "component-library"
   ],
   "svelte5": false,
   "runes": false,

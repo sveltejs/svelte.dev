@@ -1,8 +1,10 @@
 {
   "name": "@ikun-ui/affix",
-  "description": "Create affix component for Svelte.",
+  "description": "Provides affix component for Svelte apps.",
   "repo_url": "",
-  "author": "baiwusanyu",
+  "authors": [
+    "baiwusanyu"
+  ],
   "downloads": 14,
   "dependents": 1,
   "updated": "2025-01-24T03:48:31.789Z",

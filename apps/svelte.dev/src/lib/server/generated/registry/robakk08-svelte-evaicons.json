@@ -1,10 +1,12 @@
 {
   "name": "@robakk08/svelte-evaicons",
-  "description": "Render Eva Icons in Svelte applications.",
+  "description": "Provides Eva Icons for Svelte components.",
   "repo_url": "https://github.com/Robak08/svelte-evaicons",
-  "author": "Robert Hamiga",
+  "authors": [
+    "robakk08"
+  ],
   "homepage": "https://github.com/Robak08/svelte-evaicons#readme",
-  "downloads": 0,
+  "downloads": 11,
   "dependents": 0,
   "updated": "2021-08-21T15:34:33.344Z",
   "tags": [

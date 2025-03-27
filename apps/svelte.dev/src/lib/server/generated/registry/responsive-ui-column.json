@@ -1,14 +1,18 @@
 {
   "name": "@responsive-ui/column",
-  "description": "Provides responsive column component for Svelte layouts.",
+  "description": "Create responsive column component for Svelte layouts.",
   "repo_url": "https://github.com/wetix/responsive-ui",
-  "author": "Si3nLoong",
+  "authors": [
+    "rexlow",
+    "bassemsab",
+    "rm.oska",
+    "apacventure"
+  ],
   "homepage": "https://github.com/wetix/responsive-ui/blob/main/components/column#README.md",
-  "downloads": 1,
+  "downloads": 82,
   "dependents": 1,
   "updated": "2024-04-23T07:51:06.039Z",
   "tags": [
-    "component-library",
     "ui"
   ],
   "svelte5": false,

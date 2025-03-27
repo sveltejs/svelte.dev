@@ -1,10 +1,12 @@
 {
   "name": "@castlenine/svelte-aoe",
-  "description": "Animate elements on enter with Svelte.",
+  "description": "Animate elements on scroll in Svelte applications.",
   "repo_url": "https://github.com/castlenine/svelte-aoe",
-  "author": "Alexandre Castlenine",
+  "authors": [
+    "castlenine"
+  ],
   "homepage": "https://github.com/castlenine/svelte-aoe",
-  "downloads": 46,
+  "downloads": 149,
   "dependents": 0,
   "updated": "2024-05-06T21:32:22.329Z",
   "tags": [

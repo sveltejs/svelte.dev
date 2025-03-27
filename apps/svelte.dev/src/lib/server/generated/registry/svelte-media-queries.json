@@ -1,8 +1,10 @@
 {
   "name": "svelte-media-queries",
-  "description": "Lightweight Svelte component for CSS media queries.",
+  "description": "Adds CSS media query support to Svelte components.",
   "repo_url": "https://github.com/fedorovvvv/svelte-media-queries",
-  "author": "Nikita Fedorov",
+  "authors": [
+    "fedorovvvv"
+  ],
   "homepage": "https://github.com/fedorovvvv/svelte-media-queries#readme",
   "downloads": 2963,
   "dependents": 2,

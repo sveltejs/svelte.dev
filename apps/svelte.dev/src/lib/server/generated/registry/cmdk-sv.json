@@ -1,14 +1,17 @@
 {
   "name": "cmdk-sv",
-  "description": "Create accessible command menus and comboboxes in Svelte.",
+  "description": "Provides a command menu and accessible combobox for Svelte.",
   "repo_url": "",
-  "author": "huntabyte",
-  "downloads": 36811,
+  "authors": [
+    "huntabyte"
+  ],
+  "downloads": 38684,
   "dependents": 17,
   "updated": "2025-03-14T15:56:46.882Z",
   "tags": [
+    "component-library",
     "ui"
   ],
-  "svelte5": true,
+  "svelte5": false,
   "runes": false
 }

@@ -1,9 +1,11 @@
 {
   "name": "svelte-head",
-  "description": "Set meta information for Svelte apps, outputting to head.",
+  "description": "Manage meta information for Svelte applications.",
   "repo_url": "",
-  "author": "phi",
-  "downloads": 131,
+  "authors": [
+    "phi"
+  ],
+  "downloads": 90,
   "dependents": 0,
   "updated": "2023-03-27T14:23:44.444Z",
   "tags": [

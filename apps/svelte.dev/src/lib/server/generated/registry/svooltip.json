@@ -1,15 +1,17 @@
 {
   "name": "svooltip",
-  "description": "Provides a basic Svelte tooltip directive powered by Floating UI.",
+  "description": "Create basic Svelte tooltip directives using Floating UI.",
   "repo_url": "https://github.com/Gibbu/svooltip",
-  "author": "gibbu",
+  "authors": [
+    "gibbu"
+  ],
   "homepage": "https://github.com/Gibbu/svooltip#readme",
-  "downloads": 703,
+  "downloads": 783,
   "dependents": 3,
   "updated": "2025-02-06T00:13:53.723Z",
   "tags": [
     "ui",
-    "dom"
+    "utility"
   ],
   "svelte5": true,
   "runes": false,

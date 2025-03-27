@@ -1,14 +1,18 @@
 {
   "name": "@cocreators-ee/apity",
-  "description": "Generate typed fetch client for OpenApi with Svelte support.",
+  "description": "Typed fetch client for OpenAPI with Svelte support.",
   "repo_url": "https://github.com/cocreators-ee/apity",
-  "author": "Cocreators OÜ",
+  "authors": [
+    "fbjorn",
+    "lietu"
+  ],
   "homepage": "https://github.com/cocreators-ee/apity#readme",
-  "downloads": 68,
+  "downloads": 94,
   "dependents": 0,
   "updated": "2023-10-03T11:48:13.372Z",
   "tags": [
-    "server"
+    "server",
+    "utility"
   ],
   "svelte5": false,
   "runes": false,

@@ -2,10 +2,12 @@
   "name": "@htmlbricks/hb-input-select",
   "description": "Create select input web components for Svelte.",
   "repo_url": "",
-  "author": "Dario Caruso",
-  "downloads": 482,
+  "authors": [
+    "dariocaruso"
+  ],
+  "downloads": 500,
   "dependents": 3,
-  "updated": "2025-03-09T03:10:30.821Z",
+  "updated": "2025-03-24T18:07:16.888Z",
   "tags": [
     "ui"
   ],

@@ -1,10 +1,12 @@
 {
   "name": "@sveltinio/services",
-  "description": "Integrate Google Fonts, Analytics, and Umami in SvelteKit.",
+  "description": "Integrate Google Fonts, Analytics, and Umami in Svelte projects.",
   "repo_url": "https://github.com/sveltinio/components-library",
-  "author": "dev",
+  "authors": [
+    "sveltinio"
+  ],
   "homepage": "https://components.sveltin.io",
-  "downloads": 1,
+  "downloads": 11,
   "dependents": 0,
   "updated": "2023-10-01T09:55:35.949Z",
   "tags": [

@@ -1,10 +1,12 @@
 {
   "name": "svelte-circle-flags",
-  "description": "Provides SVG circle flag icon components for Svelte.",
+  "description": "Provide SVG circle flag icon components for Svelte projects.",
   "repo_url": "https://github.com/shinokada/svelte-circle-flags",
-  "author": "Shinichi Okada",
+  "authors": [
+    "shinichiokada"
+  ],
   "homepage": "https://svelte-circle-flags.codewithshin.com",
-  "downloads": 1326,
+  "downloads": 903,
   "dependents": 0,
   "updated": "2024-03-01T16:40:45.383Z",
   "tags": [

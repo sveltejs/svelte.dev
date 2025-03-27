@@ -1,14 +1,16 @@
 {
   "name": "@dexlib/svelte-matomo",
-  "description": "Loads Matomo script, exposes asynchronous Matomo API for Svelte.",
+  "description": "Load Matomo script, expose asynchronous Matomo API.",
   "repo_url": "https://gitlab.com/dexterlabs/dexlib",
-  "author": "dexterlabs",
+  "authors": [
+    "dexterlabs"
+  ],
   "homepage": "https://gitlab.com/dexterlabs/dexlib/-/tree/master/packages/svelte-matomo",
-  "downloads": 75,
+  "downloads": 48,
   "dependents": 0,
   "updated": "2020-05-19T08:26:34.526Z",
   "tags": [
-    "integration"
+    "utility"
   ],
   "svelte5": false,
   "runes": false

@@ -2,8 +2,10 @@
   "name": "dug-svelte-router",
   "description": "Implements simple client-side hash-based routing for Svelte apps.",
   "repo_url": "",
-  "author": "pant_angst",
-  "downloads": 4,
+  "authors": [
+    "pant_angst"
+  ],
+  "downloads": 23,
   "dependents": 0,
   "updated": "2023-04-13T22:47:38.686Z",
   "tags": [

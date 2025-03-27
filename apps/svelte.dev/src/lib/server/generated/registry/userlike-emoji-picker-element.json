@@ -1,10 +1,14 @@
 {
   "name": "@userlike/emoji-picker-element",
-  "description": "Implement lightweight emoji picker as a web component.",
+  "description": "Create lightweight emoji picker as web component.",
   "repo_url": "https://github.com/nolanlawson/emoji-picker-element",
-  "author": "Nolan Lawson",
+  "authors": [
+    "richard.steinbrueck.userlike",
+    "anilanar",
+    "optixx"
+  ],
   "homepage": "https://github.com/nolanlawson/emoji-picker-element#readme",
-  "downloads": 0,
+  "downloads": 1,
   "dependents": 0,
   "updated": "2021-06-10T05:31:04.204Z",
   "tags": [

@@ -2,9 +2,11 @@
   "name": "svelte-grid",
   "description": "Responsive, draggable, resizable grid layout for Svelte.",
   "repo_url": "https://github.com/vaheqelyan/svelte-grid",
-  "author": "Vahe Araqelyan",
+  "authors": [
+    "vaheqelyan"
+  ],
   "homepage": "https://github.com/vaheqelyan/svelte-grid#readme",
-  "downloads": 1502,
+  "downloads": 1756,
   "dependents": 6,
   "updated": "2023-08-20T18:18:47.780Z",
   "tags": [

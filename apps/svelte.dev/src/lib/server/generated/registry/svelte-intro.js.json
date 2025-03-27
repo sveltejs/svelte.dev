@@ -1,0 +1,18 @@
+{
+  "name": "svelte-intro.js",
+  "description": "Integrate introjs library for Svelte.",
+  "repo_url": "https://github.com/etuncay/svelte-intro.js",
+  "authors": [
+    "etuncay"
+  ],
+  "homepage": "https://github.com/etuncay/svelte-intro.js",
+  "downloads": 5,
+  "dependents": 0,
+  "updated": "2023-11-15T05:23:46.709Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 1
+}

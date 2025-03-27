@@ -1,10 +1,17 @@
 {
   "name": "@vouchfor/uikit",
-  "description": "Provides Vouch Svelte UI Kit components.",
+  "description": "UI component library for Svelte.",
   "repo_url": "https://github.com/VouchAU/vouch-uikit",
-  "author": "Vouch Dev Team",
+  "authors": [
+    "dstirk",
+    "nathanvouch",
+    "dteale",
+    "julianburr-vouch",
+    "aaron-vouch",
+    "vouch-tech"
+  ],
   "homepage": "https://vouchau.github.io/vouch-uikit",
-  "downloads": 625,
+  "downloads": 1005,
   "dependents": 0,
   "updated": "2024-01-11T00:39:12.366Z",
   "tags": [

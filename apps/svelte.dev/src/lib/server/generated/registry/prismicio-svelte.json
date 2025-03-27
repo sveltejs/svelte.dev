@@ -1,17 +1,43 @@
 {
   "name": "@prismicio/svelte",
-  "description": "Present Prismic content with Svelte components.",
+  "description": "Presents Prismic content with Svelte components.",
   "repo_url": "https://github.com/prismicio/prismic-svelte",
-  "author": "Prismic",
+  "authors": [
+    "chrrrs",
+    "samuelhorn",
+    "prismic",
+    "raph22",
+    "sre",
+    "arnaudlewis",
+    "michel.chau",
+    "gholgot",
+    "odim",
+    "prismic-ci",
+    "lihbr",
+    "bapmrl",
+    "angeloashmore",
+    "levimykel",
+    "nvld",
+    "dani-mp",
+    "boubiyeah",
+    "rafa17",
+    "filipeue",
+    "ruben-prismic",
+    "paulyvpg",
+    "jomifepe",
+    "srflp",
+    "xrutayisire",
+    "greenwalker90"
+  ],
   "homepage": "https://github.com/prismicio/prismic-svelte#readme",
-  "downloads": 477,
+  "downloads": 758,
   "dependents": 3,
   "updated": "2025-03-19T20:06:48.540Z",
   "tags": [
     "content",
-    "ui"
+    "integration"
   ],
-  "svelte5": true,
+  "svelte5": false,
   "runes": false,
   "github_stars": 24
 }

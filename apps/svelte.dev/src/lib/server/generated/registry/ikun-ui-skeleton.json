@@ -1,8 +1,10 @@
 {
   "name": "@ikun-ui/skeleton",
-  "description": "Create skeleton components for Svelte applications.",
+  "description": "Build skeleton components for Svelte applications.",
   "repo_url": "",
-  "author": "baiwusanyu",
+  "authors": [
+    "baiwusanyu"
+  ],
   "downloads": 10,
   "dependents": 1,
   "updated": "2025-01-24T03:49:18.058Z",

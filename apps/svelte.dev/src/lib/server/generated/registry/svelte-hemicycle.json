@@ -2,7 +2,9 @@
   "name": "svelte-hemicycle",
   "description": "Visualize election data using a hemicycle chart in Svelte.",
   "repo_url": "https://github.com/j-norwood-young/svelte-hemicycle",
-  "author": "jasony",
+  "authors": [
+    "jasony"
+  ],
   "homepage": "https://github.com/j-norwood-young/svelte-hemicycle#readme",
   "downloads": 0,
   "dependents": 0,

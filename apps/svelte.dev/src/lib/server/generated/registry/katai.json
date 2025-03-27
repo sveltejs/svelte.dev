@@ -1,10 +1,12 @@
 {
   "name": "katai",
-  "description": "Simple state manager for Svelte 5 with caching support.",
+  "description": "Create simple, lightweight store implementation for Svelte 5.",
   "repo_url": "https://github.com/srav001/katai",
-  "author": "Sravan Suresh",
+  "authors": [
+    "sravan-suresh"
+  ],
   "homepage": "https://github.com/srav001/katai#readme",
-  "downloads": 4,
+  "downloads": 16,
   "dependents": 0,
   "updated": "2024-03-10T13:59:39.441Z",
   "tags": [

@@ -1,10 +1,12 @@
 {
   "name": "@busthorne/papir",
-  "description": "Build UI with dramaturgy-inspired design system for Svelte.",
+  "description": "Develop dramaturgy-inspired design system for Svelte.",
   "repo_url": "https://github.com/busthorne/papir",
-  "author": "Busthorne",
+  "authors": [
+    "badt"
+  ],
   "homepage": "https://github.com/busthorne/papir",
-  "downloads": 19,
+  "downloads": 0,
   "dependents": 0,
   "updated": "2025-02-06T01:54:55.084Z",
   "tags": [

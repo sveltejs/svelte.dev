@@ -1,0 +1,18 @@
+{
+  "name": "fly-svelte",
+  "description": "Compile Svelte components with Fly.",
+  "repo_url": "https://github.com/flyjs/fly-svelte",
+  "authors": [
+    "lukeed"
+  ],
+  "homepage": "https://github.com/flyjs/fly-svelte#readme",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2017-03-12T00:51:54.641Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 3
+}

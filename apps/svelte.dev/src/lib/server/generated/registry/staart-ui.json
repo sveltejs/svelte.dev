@@ -1,15 +1,16 @@
 {
   "name": "@staart/ui",
-  "description": "Frontend Svelte app starter for SaaS startups.",
+  "description": "Frontend UI starter for SaaS applications using Svelte.",
   "repo_url": "https://github.com/staart/ui",
-  "author": "Anand Chowdhary",
+  "authors": [
+    "anandchowdhary"
+  ],
   "homepage": "https://staart.js.org/ui",
-  "downloads": 66,
+  "downloads": 103,
   "dependents": 0,
   "updated": "2021-01-25T00:50:59.755Z",
   "tags": [
-    "component-library",
-    "ui"
+    "component-library"
   ],
   "svelte5": false,
   "runes": false,

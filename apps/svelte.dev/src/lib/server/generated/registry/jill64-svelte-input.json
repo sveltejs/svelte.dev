@@ -1,10 +1,12 @@
 {
   "name": "@jill64/svelte-input",
-  "description": "Provides a set of functional input components for Svelte.",
+  "description": "Provides functional input component set for Svelte.",
   "repo_url": "https://github.com/jill64/svelte-input",
-  "author": "jill64",
+  "authors": [
+    "jill64"
+  ],
   "homepage": "https://github.com/jill64/svelte-input#readme",
-  "downloads": 11450,
+  "downloads": 7596,
   "dependents": 1,
   "updated": "2025-03-13T15:11:33.993Z",
   "tags": [

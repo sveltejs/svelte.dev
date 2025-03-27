@@ -1,0 +1,18 @@
+{
+  "name": "@pouchlab/svead",
+  "description": "Manage meta tags and SEO for SvelteKit applications.",
+  "repo_url": "https://github.com/spences10/svead",
+  "authors": [
+    "pouchlab"
+  ],
+  "homepage": "https://github.com/spences10/svead#readme",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2024-09-21T12:16:50.395Z",
+  "tags": [
+    "seo"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 75
+}

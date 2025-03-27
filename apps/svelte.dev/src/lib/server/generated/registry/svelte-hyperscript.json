@@ -2,13 +2,15 @@
   "name": "svelte-hyperscript",
   "description": "Use hyperscript to create Svelte components.",
   "repo_url": "https://github.com/kenoxa/svelte-hyperscript",
-  "author": "Sascha Tandel",
+  "authors": [
+    "sastan"
+  ],
   "homepage": "https://github.com/kenoxa/svelte-hyperscript#readme",
-  "downloads": 7086,
+  "downloads": 4121,
   "dependents": 3,
   "updated": "2020-06-29T15:29:31.097Z",
   "tags": [
-    "tooling"
+    "utility"
   ],
   "svelte5": false,
   "runes": false,

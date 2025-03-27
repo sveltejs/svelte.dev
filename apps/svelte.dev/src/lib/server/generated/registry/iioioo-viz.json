@@ -1,0 +1,17 @@
+{
+  "name": "@iioioo/viz",
+  "description": "Create visualizations using D3, XState, and Svelte.",
+  "repo_url": "https://github.com/heinschulie/xio-viz",
+  "authors": [
+    "iioioo"
+  ],
+  "homepage": "https://github.com/heinschulie/xio-viz#readme",
+  "downloads": 5,
+  "dependents": 0,
+  "updated": "2021-04-29T10:54:59.686Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

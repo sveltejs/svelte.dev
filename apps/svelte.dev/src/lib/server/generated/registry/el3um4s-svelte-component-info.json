@@ -1,10 +1,12 @@
 {
   "name": "@el3um4s/svelte-component-info",
-  "description": "Show component property information for Svelte.",
+  "description": "Show component properties information for Svelte.",
   "repo_url": "https://github.com/el3um4s/svelte-component-info",
-  "author": "Samuele C. De Tomasi",
+  "authors": [
+    "el3um4s"
+  ],
   "homepage": "https://github.com/el3um4s/svelte-component-info#readme",
-  "downloads": 44,
+  "downloads": 13,
   "dependents": 0,
   "updated": "2021-12-30T11:40:57.378Z",
   "tags": [

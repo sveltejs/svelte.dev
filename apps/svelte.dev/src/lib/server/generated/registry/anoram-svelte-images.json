@@ -1,14 +1,15 @@
 {
   "name": "@anoram/svelte-images",
-  "description": "Display images, galleries, carousels in Svelte apps.",
+  "description": "Display images, create galleries, and implement carousels in Svelte.",
   "repo_url": "https://github.com/peopledrivemecrazy/svelte-images",
-  "author": "shriji",
+  "authors": [
+    "shriji"
+  ],
   "homepage": "https://github.com/peopledrivemecrazy/svelte-images#readme",
-  "downloads": 12,
+  "downloads": 1,
   "dependents": 0,
   "updated": "2020-12-13T10:19:08.979Z",
   "tags": [
-    "ui",
     "media"
   ],
   "svelte5": false,

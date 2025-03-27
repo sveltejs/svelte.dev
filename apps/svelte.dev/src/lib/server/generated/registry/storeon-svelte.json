@@ -1,10 +1,13 @@
 {
   "name": "@storeon/svelte",
-  "description": "Connect Storeon state manager with Svelte components.",
+  "description": "Connect Storeon state manager with Svelte applications.",
   "repo_url": "https://github.com/storeon/svelte",
-  "author": "Dmytro Mostovyi",
+  "authors": [
+    "ai",
+    "distolma"
+  ],
   "homepage": "https://github.com/storeon/svelte#readme",
-  "downloads": 4,
+  "downloads": 37,
   "dependents": 0,
   "updated": "2020-06-21T12:40:32.821Z",
   "tags": [

@@ -1,13 +1,15 @@
 {
   "name": "milkytables-svelte-5",
-  "description": "Create table component for Svelte 5.",
+  "description": "Create tables for Svelte 5.",
   "repo_url": "",
-  "author": "milkyskies",
-  "downloads": 3,
+  "authors": [
+    "milkyskies"
+  ],
+  "downloads": 17,
   "dependents": 0,
   "updated": "2024-08-15T12:46:49.551Z",
   "tags": [
-    "component-library"
+    "ui"
   ],
   "svelte5": true,
   "runes": false

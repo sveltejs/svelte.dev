@@ -1,10 +1,12 @@
 {
   "name": "maska",
-  "description": "Provides a simple zero-dependency input mask for Svelte.",
+  "description": "Creates input masks for Svelte.",
   "repo_url": "https://github.com/beholdr/maska",
-  "author": "Alexander Shabunevich",
+  "authors": [
+    "beholdr"
+  ],
   "homepage": "https://beholdr.github.io/maska/",
-  "downloads": 184579,
+  "downloads": 184853,
   "dependents": 184,
   "updated": "2025-03-22T18:56:06.438Z",
   "tags": [
@@ -12,5 +14,5 @@
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 1862
+  "github_stars": 1867
 }

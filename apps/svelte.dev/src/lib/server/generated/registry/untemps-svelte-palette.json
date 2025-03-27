@@ -1,10 +1,12 @@
 {
   "name": "@untemps/svelte-palette",
-  "description": "Create customizable color pickers within Svelte applications.",
+  "description": "Display customisable color picker with Svelte component",
   "repo_url": "https://github.com/untemps/svelte-palette",
-  "author": "Vincent Le Badezet",
+  "authors": [
+    "untemps"
+  ],
   "homepage": "https://svelte-palette.vercel.app",
-  "downloads": 120,
+  "downloads": 313,
   "dependents": 0,
   "updated": "2024-02-29T10:00:11.025Z",
   "tags": [

@@ -64,7 +64,9 @@ export function init(packages: Package[]) {
 			pkg.name,
 			strip_html(pkg.description || ''),
 			(pkg.tags || []).join(' '),
-			pkg.author ? `author:${pkg.author}` : '' // Add author with prefix for targeted searching
+			pkg.authors
+				? `${pkg.authors.reduce((a, b) => `${a.includes('author:') ? `author:${a}` : `${a}`} author:${b}`, '')}`
+				: '' // Add authors with prefix for targeted searching
 		].join(' ');
 
 		index.add(id, searchable_text);
@@ -174,11 +176,15 @@ export function search(
 						score += TAG_MATCH_BOOST;
 					}
 
-					// Boost author matches
-					if (pkg.author && exact_match.test(pkg.author)) {
-						score += EXACT_NAME_MATCH_BOOST; // Same high boost as exact package name
-					} else if (pkg.author && name_match.test(pkg.author)) {
-						score += NAME_MATCH_BOOST;
+					if (pkg.authors?.length) {
+						for (const author of pkg.authors) {
+							if (exact_match.test(author)) {
+								// Boost author matches
+								score += EXACT_NAME_MATCH_BOOST; // Same high boost as exact package name
+							} else if (name_match.test(author)) {
+								score += NAME_MATCH_BOOST;
+							}
+						}
 					}
 
 					// Apply a balanced scoring system with log scales
@@ -413,7 +419,7 @@ export function get_all_tags(): { tag: string; count: number }[] {
  */
 export function get_packages_by_author(author: string): Package[] {
 	return Array.from(packages_map.values())
-		.filter((pkg) => pkg.author === author)
+		.filter((pkg) => pkg.authors?.includes(author))
 		.sort((a, b) => {
 			// Sort with balanced logarithmic scoring
 			const a_dependents = a.dependents || 0;

@@ -1,10 +1,12 @@
 {
   "name": "svelte-writable-with",
-  "description": "Extends Svelte's writable stores with additional features.",
+  "description": "Extend Svelte writable stores with state, previous, and local storage.",
   "repo_url": "https://github.com/SaintPepsi/svelte-writable-with",
-  "author": "Ian Hogers",
+  "authors": [
+    "sancoca"
+  ],
   "homepage": "https://github.com/SaintPepsi/svelte-writable-with#readme",
-  "downloads": 0,
+  "downloads": 20,
   "dependents": 0,
   "updated": "2024-10-26T03:35:27.663Z",
   "tags": [

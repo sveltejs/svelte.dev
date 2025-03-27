@@ -1,15 +1,16 @@
 {
   "name": "dxsvelte",
-  "description": "Integrate Svelte into Django projects, enabling SSR and SPA.",
+  "description": "Integrate Svelte into Django projects.",
   "repo_url": "",
-  "author": "emmyarty",
+  "authors": [
+    "emmyarty"
+  ],
   "homepage": "https://dxsvelte.com/",
-  "downloads": 0,
+  "downloads": 47,
   "dependents": 0,
   "updated": "2023-10-29T00:13:10.144Z",
   "tags": [
-    "tooling",
-    "server"
+    "tooling"
   ],
   "svelte5": false,
   "runes": false

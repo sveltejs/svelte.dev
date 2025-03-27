@@ -1,12 +1,14 @@
 {
   "name": "@sveltejs-labs/chart.js",
   "description": "Create charts using Chart.js in Svelte applications.",
-  "repo_url": "https://github.com/sveltejs-labs/chart.js",
-  "author": "Minsoo Choo",
-  "homepage": "https://github.com/sveltejs-labs/chart.js",
-  "downloads": 162,
+  "repo_url": "https://github.com/sveltejs-labs/Chart.js",
+  "authors": [
+    "minsoochoo"
+  ],
+  "homepage": "https://www.npmjs.com/package/@sveltejs-labs/chart.js",
+  "downloads": 271,
   "dependents": 0,
-  "updated": "2025-03-24T04:31:03.216Z",
+  "updated": "2025-03-26T17:15:59.314Z",
   "tags": [
     "ui"
   ],

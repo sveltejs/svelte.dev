@@ -1,0 +1,18 @@
+{
+  "name": "prism-svelte-renderer",
+  "description": "Renders highlighted code in Svelte using PrismJS.",
+  "repo_url": "https://github.com/lukasmoellerch/prism-svelte-renderer",
+  "authors": [
+    "lukas_moeller"
+  ],
+  "homepage": "https://github.com/lukasmoellerch/prism-svelte-renderer#readme",
+  "downloads": 11,
+  "dependents": 0,
+  "updated": "2020-07-16T11:20:12.948Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

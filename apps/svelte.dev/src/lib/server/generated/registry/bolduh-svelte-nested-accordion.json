@@ -1,10 +1,12 @@
 {
   "name": "@bolduh/svelte-nested-accordion",
-  "description": "Create nested accordion components for Svelte.",
+  "description": "Display tree data structure with nested accordion.",
   "repo_url": "https://github.com/b3b00/svelte-nested-accordion",
-  "author": "b3b00",
+  "authors": [
+    "bolduh"
+  ],
   "homepage": "https://github.com/b3b00/svelte-nested-accordion",
-  "downloads": 36,
+  "downloads": 0,
   "dependents": 0,
   "updated": "2024-10-17T12:19:00.156Z",
   "tags": [

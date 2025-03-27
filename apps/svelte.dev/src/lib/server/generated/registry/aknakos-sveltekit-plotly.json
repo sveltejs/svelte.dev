@@ -1,12 +1,15 @@
 {
   "name": "@aknakos/sveltekit-plotly",
   "description": "Integrate Plotly charts into SvelteKit applications.",
-  "author": "aknakos",
+  "authors": [
+    "aknakos"
+  ],
   "homepage": "https://github.com/aknakos/sveltekit-plotly#readme",
-  "downloads": 29,
+  "downloads": 12,
   "dependents": 0,
   "updated": "2022-09-06T17:58:00.244Z",
   "tags": [
+    "content",
     "ui"
   ],
   "svelte5": false,

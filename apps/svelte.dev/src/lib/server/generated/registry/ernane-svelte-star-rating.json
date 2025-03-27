@@ -1,10 +1,13 @@
 {
   "name": "@ernane/svelte-star-rating",
-  "description": "Implement star rating component for Svelte.",
+  "description": "Assign scores based on stars in Svelte.",
   "repo_url": "https://github.com/ErnaneJ/svelte-star-rating",
-  "author": "ernane",
+  "authors": [
+    "ernane",
+    "teago"
+  ],
   "homepage": "https://github.com/ErnaneJ/svelte-star-rating",
-  "downloads": 321,
+  "downloads": 204,
   "dependents": 0,
   "updated": "2024-08-10T13:04:55.878Z",
   "tags": [

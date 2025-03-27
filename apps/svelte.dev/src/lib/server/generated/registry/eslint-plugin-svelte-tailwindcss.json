@@ -1,8 +1,10 @@
 {
   "name": "eslint-plugin-svelte-tailwindcss",
-  "description": "Lint Svelte code using Tailwind CSS.",
+  "description": "Integrate Tailwind CSS with Svelte using ESLint rules.",
   "repo_url": "https://github.com/mikededo/eslint-plugin-svelte-tailwindcss",
-  "author": "Miquel De Domingo",
+  "authors": [
+    "mikededo"
+  ],
   "homepage": "https://github.com/mikededo/eslint-plugin-svelte-tailwindcss",
   "downloads": 2,
   "dependents": 0,

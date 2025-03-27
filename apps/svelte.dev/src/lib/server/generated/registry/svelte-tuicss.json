@@ -1,10 +1,12 @@
 {
   "name": "svelte-tuicss",
-  "description": "Svelte component library for the Tuicss UI framework.",
+  "description": "Provide Svelte component library for Tuicss UI framework.",
   "repo_url": "https://github.com/nick-somebody/svelte-tuicss",
-  "author": "nick-somebody",
+  "authors": [
+    "nick-somebody"
+  ],
   "homepage": "https://nick-somebody.github.io/svelte-tuicss",
-  "downloads": 8,
+  "downloads": 2,
   "dependents": 0,
   "updated": "2024-11-16T05:41:01.486Z",
   "tags": [

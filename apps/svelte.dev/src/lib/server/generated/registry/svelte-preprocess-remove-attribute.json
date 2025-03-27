@@ -2,13 +2,14 @@
   "name": "svelte-preprocess-remove-attribute",
   "description": "Remove attributes from Svelte components during preprocessing.",
   "repo_url": "https://github.com/ypyf/svelte-preprocess-remove-attribute",
-  "author": "Yan Feng",
+  "authors": [
+    "ypyf"
+  ],
   "homepage": "https://github.com/ypyf/svelte-preprocess-remove-attribute#readme",
-  "downloads": 780,
+  "downloads": 663,
   "dependents": 0,
   "updated": "2021-03-31T03:54:12.852Z",
   "tags": [
-    "tooling",
     "preprocessor"
   ],
   "svelte5": true,

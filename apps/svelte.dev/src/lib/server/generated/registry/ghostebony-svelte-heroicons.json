@@ -1,16 +1,18 @@
 {
   "name": "@ghostebony/svelte-heroicons",
-  "description": "Provides Heroicons as Svelte components.",
+  "description": "Integrate Heroicons into Svelte projects.",
   "repo_url": "https://github.com/ghostebony/svelte-heroicons",
-  "author": "Pedro Américo",
+  "authors": [
+    "ghostebony"
+  ],
   "homepage": "https://github.com/ghostebony/svelte-heroicons#readme",
-  "downloads": 0,
+  "downloads": 18,
   "dependents": 0,
   "updated": "2024-10-25T23:06:50.424Z",
   "tags": [
     "ui"
   ],
   "svelte5": true,
-  "runes": true,
+  "runes": false,
   "github_stars": 1
 }

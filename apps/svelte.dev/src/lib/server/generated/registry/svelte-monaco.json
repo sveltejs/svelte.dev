@@ -1,16 +1,19 @@
 {
   "name": "svelte-monaco",
-  "description": "Provides Monaco Editor bindings for Svelte applications.",
+  "description": "Provides Monaco Editor bindings for Svelte.",
   "repo_url": "https://github.com/LeoDog896/svelte-monaco",
-  "author": "Tristan F.",
+  "authors": [
+    "leodog896"
+  ],
   "homepage": "https://leodog896.github.io/svelte-monaco",
-  "downloads": 134,
+  "downloads": 178,
   "dependents": 0,
   "updated": "2024-06-29T03:35:39.513Z",
   "tags": [
-    "ui"
+    "ui",
+    "tooling"
   ],
-  "svelte5": true,
+  "svelte5": false,
   "runes": false,
   "github_stars": 6
 }

@@ -1,10 +1,12 @@
 {
   "name": "aksel",
-  "description": "Adds Aksel the seagull to your Svelte site.",
+  "description": "Adds Aksel the seagull component to Svelte sites.",
   "repo_url": "",
-  "author": "mallsoft",
+  "authors": [
+    "mallsoft"
+  ],
   "homepage": "https://github.com/mallsoft/aksel#readme",
-  "downloads": 1,
+  "downloads": 6,
   "dependents": 0,
   "updated": "2023-03-21T21:35:01.634Z",
   "tags": [

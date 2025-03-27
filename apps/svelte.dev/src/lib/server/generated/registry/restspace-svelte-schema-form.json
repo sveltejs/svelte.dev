@@ -1,10 +1,12 @@
 {
   "name": "@restspace/svelte-schema-form",
-  "description": "Generates forms from JSON Schema in Svelte.",
+  "description": "Generate forms from JSON schema in Svelte.",
   "repo_url": "https://github.com/restspace/svelte-schema-form",
-  "author": "James Ellis-Jones",
+  "authors": [
+    "restspace"
+  ],
   "homepage": "https://github.com/restspace/svelte-schema-form#readme",
-  "downloads": 40,
+  "downloads": 16,
   "dependents": 0,
   "updated": "2023-08-19T09:26:18.506Z",
   "tags": [

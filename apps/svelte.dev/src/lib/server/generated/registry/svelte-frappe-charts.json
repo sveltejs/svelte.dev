@@ -1,10 +1,12 @@
 {
   "name": "svelte-frappe-charts",
-  "description": "Create charts using Frappe Charts in Svelte.",
+  "description": "Integrate frappe-charts into Svelte projects, create charts easily.",
   "repo_url": "https://github.com/himynameisdave/svelte-frappe-charts",
-  "author": "himynameisdave",
+  "authors": [
+    "himynameisdave"
+  ],
   "homepage": "https://github.com/himynameisdave/svelte-frappe-charts#readme",
-  "downloads": 343,
+  "downloads": 383,
   "dependents": 4,
   "updated": "2022-11-24T21:53:37.458Z",
   "tags": [

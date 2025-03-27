@@ -1,0 +1,19 @@
+{
+  "name": "full-client-server-sveltekit",
+  "description": "Provides full client-server WebSocket implementation for SvelteKit.",
+  "repo_url": "https://github.com/SBHattarj/full-client-server-sveltekit",
+  "authors": [
+    "subhambh"
+  ],
+  "homepage": "https://github.com/SBHattarj/full-client-server-sveltekit#readme",
+  "downloads": 70,
+  "dependents": 0,
+  "updated": "2023-10-28T04:45:20.970Z",
+  "tags": [
+    "server",
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 3
+}

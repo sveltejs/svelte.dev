@@ -1,10 +1,12 @@
 {
   "name": "svelte-flags",
-  "description": "Display country flag icons in Svelte applications.",
+  "description": "Display country flag icon components in Svelte.",
   "repo_url": "https://github.com/shinokada/svelte-flags",
-  "author": "Shinichi Okada",
+  "authors": [
+    "shinichiokada"
+  ],
   "homepage": "https://svelte-flags.codewithshin.com/",
-  "downloads": 6284,
+  "downloads": 2142,
   "dependents": 2,
   "updated": "2024-10-25T14:46:22.535Z",
   "tags": [

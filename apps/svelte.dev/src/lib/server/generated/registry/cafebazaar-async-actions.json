@@ -1,10 +1,14 @@
 {
   "name": "@cafebazaar/async-actions",
-  "description": "Manage asynchronous actions with state management in Svelte.",
+  "description": "Manage async actions with state, error, and data properties.",
   "repo_url": "https://github.com/cafebazaar/async-actions",
-  "author": "Bazaar Front-End Chapter",
+  "authors": [
+    "_mahdude",
+    "amir_mousavi",
+    "nainemom"
+  ],
   "homepage": "https://github.com/cafebazaar/async-actions#readme",
-  "downloads": 22,
+  "downloads": 1,
   "dependents": 0,
   "updated": "2021-01-01T12:03:11.456Z",
   "tags": [

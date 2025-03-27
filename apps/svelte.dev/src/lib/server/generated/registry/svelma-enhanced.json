@@ -1,12 +1,17 @@
 {
   "name": "svelma-enhanced",
+  "description": "Provides Bulma components for Svelte.",
   "repo_url": "https://github.com/saravanabalagi/svelma",
-  "author": "Saravanabalagi Ramachandran",
+  "authors": [
+    "saravanabalagi"
+  ],
   "homepage": "https://github.com/saravanabalagi/svelma#readme",
-  "downloads": 0,
+  "downloads": 12,
   "dependents": 0,
   "updated": "2022-05-21T01:14:11.751Z",
-  "tags": [],
+  "tags": [
+    "component-library"
+  ],
   "svelte5": false,
   "runes": false,
   "github_stars": 2

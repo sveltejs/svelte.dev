@@ -1,10 +1,12 @@
 {
   "name": "svelte-digital-alarm-number",
-  "description": "Display digital alarm numbers in Svelte applications.",
+  "description": "Render digital alarm clock numbers in Svelte.",
   "repo_url": "https://github.com/hazg/svelte-digital-alarm-number",
-  "author": "Aleksandr Aleksandrov",
+  "authors": [
+    "hazg"
+  ],
   "homepage": "https://github.com/hazg/svelte-digital-alarm-number#readme",
-  "downloads": 5,
+  "downloads": 13,
   "dependents": 0,
   "updated": "2021-03-13T05:24:07.686Z",
   "tags": [

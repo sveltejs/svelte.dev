@@ -1,9 +1,11 @@
 {
   "name": "svelte-css-in-js",
-  "description": "Use CSS-in-JS with Svelte components.",
+  "description": "Manage CSS-in-JS styles within Svelte components.",
   "repo_url": "",
-  "author": "hmmhmmhm",
-  "downloads": 2,
+  "authors": [
+    "hmmhmmhm"
+  ],
+  "downloads": 12,
   "dependents": 1,
   "updated": "2020-01-02T03:04:35.844Z",
   "tags": [

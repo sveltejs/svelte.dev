@@ -1,0 +1,18 @@
+{
+  "name": "projectc-components",
+  "description": "Build lightweight UI components for Svelte applications.",
+  "repo_url": "https://github.com/yustarandomname/projectC-components",
+  "authors": [
+    "abeldebruijn"
+  ],
+  "homepage": "https://github.com/yustarandomname/projectC-components#readme",
+  "downloads": 37,
+  "dependents": 0,
+  "updated": "2021-06-03T21:39:17.930Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

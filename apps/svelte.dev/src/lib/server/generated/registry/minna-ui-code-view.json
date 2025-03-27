@@ -1,10 +1,12 @@
 {
   "name": "@minna-ui/code-view",
-  "description": "Highlight code syntax within Svelte components.",
+  "description": "Syntax highlight code blocks within Svelte components.",
   "repo_url": "https://github.com/WeAreGenki/minna-ui",
-  "author": "Max Milton",
+  "authors": [
+    "maxmilton"
+  ],
   "homepage": "https://wearegenki.github.io/minna-ui",
-  "downloads": 0,
+  "downloads": 52,
   "dependents": 0,
   "updated": "2019-05-28T12:13:47.778Z",
   "tags": [

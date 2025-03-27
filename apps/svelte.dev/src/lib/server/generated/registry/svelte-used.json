@@ -1,0 +1,16 @@
+{
+  "name": "svelte-used",
+  "description": "Extend Svelte stores with useful functions and transitions.",
+  "repo_url": "",
+  "authors": [
+    "1bye"
+  ],
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2023-12-04T12:01:41.579Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

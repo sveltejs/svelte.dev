@@ -1,10 +1,12 @@
 {
   "name": "express-svelte",
-  "description": "Integrates Svelte as view engine for Express.",
+  "description": "Integrate Svelte views into Express applications.",
   "repo_url": "https://github.com/maxiruani/express-svelte",
-  "author": "Maximiliano Ruani",
+  "authors": [
+    "maxiruani"
+  ],
   "homepage": "https://github.com/maxiruani/express-svelte#readme",
-  "downloads": 10,
+  "downloads": 49,
   "dependents": 2,
   "updated": "2021-07-16T13:56:13.440Z",
   "tags": [

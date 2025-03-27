@@ -1,8 +1,11 @@
 {
   "name": "svelte-grid-layout",
-  "description": "Create grid layouts for Svelte applications.",
+  "description": "Create page templates with a grid layout for Svelte apps.",
   "repo_url": "https://github.com/MarieanneWU20/svelte-grid-layout",
-  "author": "Marie Eriksson",
+  "authors": [
+    "wiviwonderwoman",
+    "kerstinmarie"
+  ],
   "homepage": "https://github.com/MarieanneWU20/svelte-grid-layout#readme",
   "downloads": 30,
   "dependents": 0,

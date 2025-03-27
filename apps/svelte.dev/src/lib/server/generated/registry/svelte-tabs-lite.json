@@ -1,9 +1,11 @@
 {
   "name": "svelte-tabs-lite",
-  "description": "Creates lightweight, fast tab components for Svelte.",
+  "description": "Lightweight, fast Svelte tabs component.",
   "repo_url": "",
-  "author": "talsingh",
-  "downloads": 2,
+  "authors": [
+    "talsingh"
+  ],
+  "downloads": 11,
   "dependents": 0,
   "updated": "2022-02-24T04:02:35.101Z",
   "tags": [

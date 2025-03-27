@@ -1,10 +1,12 @@
 {
   "name": "svelte-headroom",
-  "description": "Create a headroom component for Svelte.",
+  "description": "Hide or show header on scroll with Svelte Headroom component.",
   "repo_url": "https://github.com/collardeau/svelte-headroom",
-  "author": "Thomas Collardeau",
+  "authors": [
+    "collardeau"
+  ],
   "homepage": "https://github.com/collardeau/svelte-headroom#readme",
-  "downloads": 24,
+  "downloads": 123,
   "dependents": 0,
   "updated": "2019-10-14T10:29:36.044Z",
   "tags": [

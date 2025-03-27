@@ -2,8 +2,10 @@
   "name": "@syncedstore/svelte",
   "description": "Svelte helper for SyncedStore.",
   "repo_url": "",
-  "author": "yousefed",
-  "downloads": 212,
+  "authors": [
+    "yousefed"
+  ],
+  "downloads": 384,
   "dependents": 2,
   "updated": "2023-10-15T11:48:21.416Z",
   "tags": [

@@ -1,9 +1,11 @@
 {
   "name": "@brando-calrissian/auth-0-svelte",
-  "description": "Authenticates with Auth0, stores user data in Svelte store.",
+  "description": "Authenticate users with Auth0 in Svelte apps.",
   "repo_url": "",
-  "author": "Brandon Dyal",
-  "downloads": 9,
+  "authors": [
+    "brando-calrissian"
+  ],
+  "downloads": 10,
   "dependents": 0,
   "updated": "2021-02-22T01:39:07.503Z",
   "tags": [

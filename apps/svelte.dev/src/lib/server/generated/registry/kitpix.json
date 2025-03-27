@@ -1,0 +1,17 @@
+{
+  "name": "kitpix",
+  "description": "Optimize images in SvelteKit with build-time and client-side features.",
+  "repo_url": "https://github.com/dayvista/kitpix",
+  "authors": [
+    "dayvista"
+  ],
+  "downloads": 10,
+  "dependents": 0,
+  "updated": "2022-03-15T01:30:03.374Z",
+  "tags": [
+    "media",
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false
+}

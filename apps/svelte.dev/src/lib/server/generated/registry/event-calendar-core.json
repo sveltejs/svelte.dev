@@ -1,16 +1,18 @@
 {
   "name": "@event-calendar/core",
-  "description": "Create full-sized drag & drop event calendar with resource & timeline views.",
+  "description": "Provides a full-sized drag & drop event calendar for Svelte.",
   "repo_url": "https://github.com/vkurko/calendar",
-  "author": "vkurko",
+  "authors": [
+    "vkurko"
+  ],
   "homepage": "https://vkurko.github.io/calendar/",
-  "downloads": 4759,
+  "downloads": 5355,
   "dependents": 13,
-  "updated": "2025-02-04T12:57:38.650Z",
+  "updated": "2025-03-25T17:43:40.753Z",
   "tags": [
     "component-library"
   ],
   "svelte5": false,
   "runes": false,
-  "github_stars": 1613
+  "github_stars": 1614
 }

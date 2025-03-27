@@ -1,0 +1,16 @@
+{
+  "name": "svelte-pick-list",
+  "description": "Reorder items between different lists in Svelte apps.",
+  "repo_url": "",
+  "authors": [
+    "alstar01"
+  ],
+  "downloads": 9,
+  "dependents": 0,
+  "updated": "2021-05-13T16:24:36.601Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

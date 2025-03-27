@@ -1,10 +1,12 @@
 {
   "name": "svelte-zoo",
-  "description": "Provide assorted Svelte components for doc sites.",
+  "description": "Create Svelte components for building doc sites.",
   "repo_url": "https://github.com/janosh/svelte-zoo",
-  "author": "Janosh Riebesell",
+  "authors": [
+    "janosh"
+  ],
   "homepage": "https://janosh.github.io/svelte-zoo",
-  "downloads": 191,
+  "downloads": 157,
   "dependents": 1,
   "updated": "2025-02-18T01:35:28.682Z",
   "tags": [

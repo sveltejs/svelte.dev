@@ -1,15 +1,17 @@
 {
   "name": "svelte-algolia",
-  "description": "Algolia server-side index updater and client-side search component.",
+  "description": "Provides Algolia index updater and search component for Svelte.",
   "repo_url": "https://github.com/janosh/svelte-algolia",
-  "author": "Janosh Riebesell",
+  "authors": [
+    "janosh"
+  ],
   "homepage": "https://svelte-algolia.netlify.app",
-  "downloads": 26,
+  "downloads": 2,
   "dependents": 0,
   "updated": "2022-10-24T21:39:10.581Z",
   "tags": [
-    "server",
-    "utility"
+    "utility",
+    "server"
   ],
   "svelte5": false,
   "runes": false,

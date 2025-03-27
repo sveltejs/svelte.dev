@@ -1,8 +1,10 @@
 {
   "name": "sveltekit-reroute",
-  "description": "Handle SvelteKit redirections, useful for URL shortening.",
+  "description": "Handle SvelteKit redirection rules for URL shortening and deprecation.",
   "repo_url": "",
-  "author": "joshnuss",
+  "authors": [
+    "joshnuss"
+  ],
   "downloads": 1,
   "dependents": 0,
   "updated": "2024-06-02T01:31:01.276Z",

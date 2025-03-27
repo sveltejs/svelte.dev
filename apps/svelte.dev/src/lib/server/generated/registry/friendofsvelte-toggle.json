@@ -1,10 +1,12 @@
 {
   "name": "@friendofsvelte/toggle",
-  "description": "Create simple dark mode toggle for Svelte and SvelteKit apps.",
+  "description": "Adds dark mode toggle to Svelte and SvelteKit apps.",
   "repo_url": "https://github.com/friendofsvelte/toggle",
-  "author": "bishwas bhandari",
+  "authors": [
+    "bishwasbh"
+  ],
   "homepage": "https://github.com/friendofsvelte/toggle#readme",
-  "downloads": 57,
+  "downloads": 30,
   "dependents": 0,
   "updated": "2025-02-11T10:50:48.787Z",
   "tags": [
@@ -12,5 +14,5 @@
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 6
+  "github_stars": 7
 }

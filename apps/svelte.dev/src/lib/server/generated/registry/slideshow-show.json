@@ -1,0 +1,18 @@
+{
+  "name": "@slideshow/show",
+  "description": "Offers basic components for creating slideshow presentations in Svelte.",
+  "repo_url": "https://github.com/AleCandido/show",
+  "authors": [
+    "annibale"
+  ],
+  "homepage": "https://github.com/AleCandido/show#readme",
+  "downloads": 24,
+  "dependents": 1,
+  "updated": "2022-04-25T10:12:34.827Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

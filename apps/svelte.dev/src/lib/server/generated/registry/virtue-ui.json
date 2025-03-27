@@ -1,8 +1,10 @@
 {
   "name": "virtue-ui",
-  "description": "Build Svelte component library on top of melt-ui and TailwindCSS.",
+  "description": "Build simple Svelte UI components with TailwindCSS and melt-ui.",
   "repo_url": "https://github.com/virtueorg/ui",
-  "author": "Leonardo Dipace",
+  "authors": [
+    "leonardodipace"
+  ],
   "homepage": "https://github.com/virtueorg/ui#readme",
   "downloads": 1,
   "dependents": 0,

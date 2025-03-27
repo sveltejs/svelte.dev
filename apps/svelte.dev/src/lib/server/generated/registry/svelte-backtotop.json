@@ -1,0 +1,18 @@
+{
+  "name": "svelte-backtotop",
+  "description": "Create a back-to-top button for Svelte apps.",
+  "repo_url": "https://github.com/greatenemy/svelte-backtotop",
+  "authors": [
+    "iomge"
+  ],
+  "homepage": "https://github.com/GreatEnemy/svelte-backtotop#readme",
+  "downloads": 9,
+  "dependents": 0,
+  "updated": "2019-09-06T01:52:41.935Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 1
+}

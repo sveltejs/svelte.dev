@@ -1,10 +1,12 @@
 {
   "name": "svelte-keystroke",
-  "description": "Observe keystrokes in Svelte, focused on simplicity.",
+  "description": "Observe keystrokes and key combinations in Svelte apps.",
   "repo_url": "https://github.com/nvlgzr/svelte-keystroke",
-  "author": "Elbong Gearny",
+  "authors": [
+    "nvlgzr"
+  ],
   "homepage": "https://github.com/nvlgzr/svelte-keystroke#readme",
-  "downloads": 6,
+  "downloads": 9,
   "dependents": 0,
   "updated": "2021-08-05T23:48:52.603Z",
   "tags": [

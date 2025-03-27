@@ -1,8 +1,10 @@
 {
   "name": "@typhonjs-fvtt/runtime",
-  "description": "Provides runtime library for Foundry VTT & Svelte.",
+  "description": "Integrate Foundry VTT with Svelte applications.",
   "repo_url": "https://github.com/typhonjs-fvtt-lib/runtime",
-  "author": "Michael Leahy",
+  "authors": [
+    "typhonrt"
+  ],
   "homepage": "https://github.com/typhonjs-fvtt-lib/runtime#readme",
   "downloads": 156,
   "dependents": 0,

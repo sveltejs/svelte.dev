@@ -1,10 +1,12 @@
 {
   "name": "@babeard/svelte-heroicons",
-  "description": "Provide Svelte wrappers for Heroicons v2 library.",
+  "description": "Provides Svelte wrappers for Heroicons v2 library.",
   "repo_url": "https://github.com/babeard/svelte-heroicons",
-  "author": "Brian Beard",
+  "authors": [
+    "babeard"
+  ],
   "homepage": "https://github.com/babeard/svelte-heroicons",
-  "downloads": 47,
+  "downloads": 13,
   "dependents": 0,
   "updated": "2024-01-12T02:26:38.362Z",
   "tags": [

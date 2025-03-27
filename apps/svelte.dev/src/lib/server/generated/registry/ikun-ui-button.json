@@ -1,8 +1,10 @@
 {
   "name": "@ikun-ui/button",
-  "description": "Create button components for Svelte applications.",
+  "description": "Provides button components for Svelte applications.",
   "repo_url": "",
-  "author": "baiwusanyu",
+  "authors": [
+    "baiwusanyu"
+  ],
   "downloads": 38,
   "dependents": 7,
   "updated": "2025-01-24T03:48:36.328Z",

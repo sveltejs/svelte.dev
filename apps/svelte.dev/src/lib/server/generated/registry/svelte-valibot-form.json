@@ -1,8 +1,10 @@
 {
   "name": "svelte-valibot-form",
-  "description": "Validate Svelte forms using Valibot, including server actions.",
+  "description": "Validate Svelte forms using Valibot schema.",
   "repo_url": "https://github.com/matheustavarestrindade/svelte-valibot-form",
-  "author": "Matheus Tavares",
+  "authors": [
+    "matheustt098"
+  ],
   "homepage": "https://github.com/matheustavarestrindade/svelte-valibot-form",
   "downloads": 1,
   "dependents": 0,

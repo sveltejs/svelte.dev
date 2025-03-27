@@ -1,0 +1,18 @@
+{
+  "name": "svelte-dragondrop",
+  "description": "Implement drag and drop functionality in Svelte applications.",
+  "repo_url": "https://github.com/joburgard/svelte-dragondrop",
+  "authors": [
+    "joburgard"
+  ],
+  "homepage": "https://github.com/joburgard/svelte-dragondrop#readme",
+  "downloads": 6,
+  "dependents": 0,
+  "updated": "2021-03-28T15:02:55.330Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

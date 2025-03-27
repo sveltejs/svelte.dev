@@ -1,10 +1,12 @@
 {
   "name": "stwui",
-  "description": "Creates opinionated, customizable Svelte-TailwindCSS components.",
+  "description": "Opinionated, customizable Svelte-TailwindCSS component library.",
   "repo_url": "https://github.com/N00nDay/stwui",
-  "author": "noonday",
+  "authors": [
+    "noonday"
+  ],
   "homepage": "https://github.com/N00nDay/stwui",
-  "downloads": 99,
+  "downloads": 199,
   "dependents": 0,
   "updated": "2024-01-12T02:42:57.915Z",
   "tags": [

@@ -1,9 +1,11 @@
 {
   "name": "ssvelte-datepicker",
-  "description": "Create datepicker component for Svelte apps.",
+  "description": "Create date pickers for Svelte apps.",
   "repo_url": "",
-  "author": "runningzs",
-  "downloads": 0,
+  "authors": [
+    "asahelk"
+  ],
+  "downloads": 13,
   "dependents": 0,
   "updated": "2021-08-04T09:39:47.263Z",
   "tags": [

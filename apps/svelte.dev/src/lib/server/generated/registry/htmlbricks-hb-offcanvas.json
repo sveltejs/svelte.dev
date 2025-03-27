@@ -1,11 +1,13 @@
 {
   "name": "@htmlbricks/hb-offcanvas",
-  "description": "Create offcanvas components with Svelte web components.",
+  "description": "Create Svelte Boostrap Offcanvas.",
   "repo_url": "",
-  "author": "Dario Caruso",
-  "downloads": 452,
+  "authors": [
+    "dariocaruso"
+  ],
+  "downloads": 468,
   "dependents": 3,
-  "updated": "2025-03-09T03:10:41.094Z",
+  "updated": "2025-03-24T18:07:25.448Z",
   "tags": [
     "ui"
   ],

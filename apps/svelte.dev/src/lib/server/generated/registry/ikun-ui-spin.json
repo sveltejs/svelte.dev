@@ -1,8 +1,10 @@
 {
   "name": "@ikun-ui/spin",
-  "description": "Create spinning indicators for Svelte applications.",
+  "description": "Show loading spinners in Svelte applications.",
   "repo_url": "",
-  "author": "baiwusanyu",
+  "authors": [
+    "baiwusanyu"
+  ],
   "downloads": 29,
   "dependents": 1,
   "updated": "2025-01-24T03:49:18.889Z",

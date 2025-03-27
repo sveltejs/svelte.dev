@@ -1,10 +1,12 @@
 {
   "name": "svelte-simple-accordion",
-  "description": "Creates simple, fully configurable accordion components for Svelte.",
+  "description": "Build simple, fully configurable accordion components in Svelte.",
   "repo_url": "git@gitlab.com/public-e-soa-com/svelte-simple-accordion",
-  "author": "Jacques Desodt",
+  "authors": [
+    "jack-y"
+  ],
   "homepage": "https://gitlab.com/public-e-soa-com/svelte-simple-accordion#readme",
-  "downloads": 2,
+  "downloads": 13,
   "dependents": 0,
   "updated": "2021-10-26T14:09:42.861Z",
   "tags": [

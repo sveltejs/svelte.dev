@@ -1,10 +1,12 @@
 {
   "name": "flowbite-svelte-icons",
-  "description": "Provides Flowbite icon components for Svelte apps.",
+  "description": "Flowbite icon components for Svelte apps.",
   "repo_url": "https://github.com/themesberg/flowbite-svelte-icons",
-  "author": "Shinichi Okada",
+  "authors": [
+    "shinichiokada"
+  ],
   "homepage": "https://flowbite-svelte-icons.codewithshin.com/",
-  "downloads": 26626,
+  "downloads": 26428,
   "dependents": 17,
   "updated": "2025-03-23T05:32:08.827Z",
   "tags": [

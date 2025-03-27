@@ -1,14 +1,17 @@
 {
   "name": "@gabio/design-svelte",
-  "description": "Create Svelte design library with components, icons, and code blocks.",
+  "description": "Offers a design system with Svelte UI components.",
   "repo_url": "git@github.com-vigenere23:vigenere23/gabio-design-svelte",
-  "author": "Gabriel St-Pierre",
+  "authors": [
+    "vigenere23"
+  ],
   "homepage": "https://github.com/vigenere23/gabio-design-svelte#readme",
-  "downloads": 1,
+  "downloads": 27,
   "dependents": 0,
   "updated": "2022-08-13T21:04:06.000Z",
   "tags": [
-    "component-library"
+    "component-library",
+    "ui"
   ],
   "svelte5": false,
   "runes": false

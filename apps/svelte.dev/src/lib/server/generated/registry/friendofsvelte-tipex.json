@@ -1,13 +1,16 @@
 {
   "name": "@friendofsvelte/tipex",
-  "description": "Build rich text editor for Svelte with Tiptap and Prosemirror.",
+  "description": "Create rich text editors for Svelte with Tiptap and Prosemirror.",
   "repo_url": "https://github.com/friendofsvelte/tipex",
-  "author": "bishwas bhandari",
+  "authors": [
+    "bishwasbh"
+  ],
   "homepage": "https://tipex.pages.dev/",
   "downloads": 501,
   "dependents": 1,
   "updated": "2025-03-22T03:00:45.220Z",
   "tags": [
+    "component-library",
     "ui"
   ],
   "svelte5": true,

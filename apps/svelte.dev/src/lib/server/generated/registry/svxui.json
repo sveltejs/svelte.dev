@@ -1,14 +1,17 @@
 {
   "name": "svxui",
-  "description": "Create UI components for Svelte apps.",
+  "description": "Provide customizable UI components for Svelte applications.",
   "repo_url": "",
-  "author": "radiium",
+  "authors": [
+    "radiium"
+  ],
   "homepage": "https://github.com/radiium/svxui",
-  "downloads": 1,
+  "downloads": 0,
   "dependents": 0,
   "updated": "2024-12-23T11:55:03.593Z",
   "tags": [
-    "component-library"
+    "component-library",
+    "ui"
   ],
   "svelte5": true,
   "runes": false

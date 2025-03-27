@@ -1,8 +1,10 @@
 {
   "name": "svelte-remixicon",
-  "description": "Use Remix Icon in Svelte/SvelteKit projects.",
+  "description": "Use Remix Icon in Svelte/SvelteKit apps.",
   "repo_url": "https://github.com/aantusahaa/svelte-remixicon",
-  "author": "Antu Saha",
+  "authors": [
+    "antusaha"
+  ],
   "homepage": "https://github.com/aantusahaa/svelte-remixicon#readme",
   "downloads": 293,
   "dependents": 0,

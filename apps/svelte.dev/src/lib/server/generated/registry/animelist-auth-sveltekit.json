@@ -1,14 +1,17 @@
 {
   "name": "@animelist/auth-sveltekit",
-  "description": "Integrate authentication with MyAnimeList in SvelteKit.",
+  "description": "Integrate authentication with MyAnimeList in SvelteKit apps.",
   "repo_url": "https://github.com/Neo-Ciber94/animelist",
-  "author": "Freddy L.",
+  "authors": [
+    "neociber94"
+  ],
   "homepage": "https://github.com/Neo-Ciber94/animelist#readme",
   "downloads": 15,
   "dependents": 0,
   "updated": "2025-03-23T19:36:38.727Z",
   "tags": [
-    "auth"
+    "auth",
+    "server"
   ],
   "svelte5": false,
   "runes": false,

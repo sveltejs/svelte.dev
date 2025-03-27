@@ -1,0 +1,18 @@
+{
+  "name": "svelte-popdown",
+  "description": "Position popovers/dropdowns next to trigger elements.",
+  "repo_url": "https://github.com/Jakeii/svelte-popdown",
+  "authors": [
+    "jakeii"
+  ],
+  "homepage": "https://github.com/Jakeii/svelte-popdown#readme",
+  "downloads": 4,
+  "dependents": 0,
+  "updated": "2024-10-13T05:19:53.842Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

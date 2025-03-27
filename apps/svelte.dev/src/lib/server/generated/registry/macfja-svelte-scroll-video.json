@@ -1,14 +1,15 @@
 {
   "name": "@macfja/svelte-scroll-video",
-  "description": "Play video by scrolling page using Svelte component.",
+  "description": "Play video by scrolling page in Svelte.",
   "repo_url": "https://github.com/macfja/svelte-scroll-video",
-  "author": "MacFJA",
+  "authors": [
+    "macfja"
+  ],
   "homepage": "https://github.com/macfja/svelte-scroll-video#readme",
-  "downloads": 5,
+  "downloads": 4,
   "dependents": 0,
   "updated": "2022-10-17T16:23:31.904Z",
   "tags": [
-    "ui",
     "media"
   ],
   "svelte5": false,

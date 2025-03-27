@@ -1,10 +1,12 @@
 {
   "name": "@calasanmarko/svelte-feather-icons",
-  "description": "Use Feather icons in Svelte applications.",
+  "description": "Integrate Feather icons into Svelte projects easily.",
   "repo_url": "https://github.com/dylanblokhuis/svelte-feather-icons",
-  "author": "dylanblokhuis",
+  "authors": [
+    "calasanmarko"
+  ],
   "homepage": "https://github.com/dylanblokhuis/svelte-feather-icons#readme",
-  "downloads": 3,
+  "downloads": 0,
   "dependents": 0,
   "updated": "2024-04-07T14:22:31.584Z",
   "tags": [

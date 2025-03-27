@@ -1,17 +1,18 @@
 {
   "name": "@seorii/svelte-tiptap",
-  "description": "Provides Svelte components for the Tiptap rich text editor.",
+  "description": "Provides Svelte components for tiptap rich text editor.",
   "repo_url": "https://github.com/sibiraj-s/svelte-tiptap",
-  "author": "Seo-Rii",
+  "authors": [
+    "seorii"
+  ],
   "homepage": "https://github.com/sibiraj-s/svelte-tiptap#readme",
-  "downloads": 1,
+  "downloads": 13,
   "dependents": 0,
   "updated": "2022-05-16T15:03:08.506Z",
   "tags": [
-    "content",
-    "ui"
+    "content"
   ],
   "svelte5": false,
   "runes": false,
-  "github_stars": 282
+  "github_stars": 283
 }

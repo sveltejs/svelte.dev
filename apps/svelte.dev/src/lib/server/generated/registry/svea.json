@@ -1,14 +1,17 @@
 {
   "name": "svea",
-  "description": "Provide component library for Svelte v3.",
+  "description": "Provide component library for Svelte with accessibility focus.",
   "repo_url": "https://github.com/AronssonFredrik/svea",
-  "author": "Fredrik Aronsson",
+  "authors": [
+    "aronsson"
+  ],
   "homepage": "https://github.com/AronssonFredrik/svea#readme",
-  "downloads": 6,
+  "downloads": 11,
   "dependents": 0,
   "updated": "2019-11-04T20:10:04.776Z",
   "tags": [
-    "component-library"
+    "component-library",
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

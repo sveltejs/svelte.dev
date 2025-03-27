@@ -1,14 +1,16 @@
 {
   "name": "@warren-bank/svelte-glider",
-  "description": "Create fast, lightweight carousel component for Svelte.",
+  "description": "Create fast, lightweight carousel with Svelte wrapper for Glider.js.",
   "repo_url": "https://github.com/warren-bank/js-svelte-glider",
-  "author": "Warren R. Bank",
+  "authors": [
+    "warren-r-bank"
+  ],
   "homepage": "https://github.com/warren-bank/js-svelte-glider#readme",
   "downloads": 3,
   "dependents": 0,
   "updated": "2024-06-06T23:26:35.116Z",
   "tags": [
-    "component-library"
+    "ui"
   ],
   "svelte5": true,
   "runes": false,

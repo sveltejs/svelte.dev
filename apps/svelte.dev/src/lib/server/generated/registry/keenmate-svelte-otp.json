@@ -1,14 +1,19 @@
 {
   "name": "@keenmate/svelte-otp",
-  "description": "Create customizable one-time password input for Svelte.",
+  "description": "Implement customizable one-time password input for Svelte.",
   "repo_url": "https://github.com/keenmate/svelte-otp",
-  "author": "zelvaman",
+  "authors": [
+    "benjaminhorne",
+    "themaikxx",
+    "ondrejvalenta"
+  ],
   "homepage": "https://github.com/keenmate/svelte-otp#readme",
   "downloads": 1,
   "dependents": 0,
   "updated": "2024-01-09T13:07:44.033Z",
   "tags": [
-    "ui"
+    "ui",
+    "utility"
   ],
   "svelte5": false,
   "runes": false,

@@ -2,9 +2,11 @@
   "name": "svelte-autocomplete",
   "description": "Create lightweight typeahead/autocomplete component for Svelte.",
   "repo_url": "https://github.com/elcobvg/svelte-autocomplete",
-  "author": "Elco Brouwer von Gonzenbach",
+  "authors": [
+    "elcobvg"
+  ],
   "homepage": "https://github.com/elcobvg/svelte-autocomplete#readme",
-  "downloads": 88,
+  "downloads": 82,
   "dependents": 0,
   "updated": "2019-01-16T08:10:05.292Z",
   "tags": [
@@ -12,5 +14,5 @@
   ],
   "svelte5": false,
   "runes": false,
-  "github_stars": 115
+  "github_stars": 117
 }

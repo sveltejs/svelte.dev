@@ -1,14 +1,16 @@
 {
   "name": "svelte-prism-action",
-  "description": "Highlight code blocks using Prism.js in Svelte.",
+  "description": "Lazy load and highlight code blocks with Prism.js in Svelte.",
   "repo_url": "https://github.com/thurti/svelte-prism-action",
-  "author": "thurti",
+  "authors": [
+    "thurti"
+  ],
   "homepage": "https://thurti.github.io/svelte-prism-action/public/",
-  "downloads": 0,
+  "downloads": 13,
   "dependents": 0,
   "updated": "2024-04-18T10:35:33.442Z",
   "tags": [
-    "ui"
+    "utility"
   ],
   "svelte5": true,
   "runes": false,

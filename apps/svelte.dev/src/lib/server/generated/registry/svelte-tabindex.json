@@ -1,14 +1,17 @@
 {
   "name": "svelte-tabindex",
-  "description": "Manage tabindex for accessible Svelte component navigation.",
+  "description": "Manage tabindex for accessibility in Svelte applications.",
   "repo_url": "https://github.com/radiofrance/svelte-tabindex",
-  "author": "romaindurand",
+  "authors": [
+    "romaindurand"
+  ],
   "homepage": "https://github.com/radiofrance/svelte-tabindex#readme",
-  "downloads": 2,
+  "downloads": 25,
   "dependents": 0,
   "updated": "2022-05-16T14:22:53.121Z",
   "tags": [
-    "utility"
+    "utility",
+    "dom"
   ],
   "svelte5": false,
   "runes": false,

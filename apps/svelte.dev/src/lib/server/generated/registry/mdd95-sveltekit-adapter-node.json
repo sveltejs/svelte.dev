@@ -2,13 +2,16 @@
   "name": "@mdd95/sveltekit-adapter-node",
   "description": "Generate standalone Node server for SvelteKit apps.",
   "repo_url": "https://github.com/mdd95/sveltekit-adapter-node",
-  "author": "mdd95",
+  "authors": [
+    "mdd95"
+  ],
   "homepage": "https://kit.svelte.dev",
-  "downloads": 0,
+  "downloads": 4,
   "dependents": 0,
   "updated": "2024-10-06T11:47:51.483Z",
   "tags": [
-    "adapter"
+    "adapter",
+    "server"
   ],
   "svelte5": false,
   "runes": false,

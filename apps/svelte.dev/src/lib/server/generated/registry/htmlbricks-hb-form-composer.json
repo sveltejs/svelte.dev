@@ -1,13 +1,15 @@
 {
   "name": "@htmlbricks/hb-form-composer",
-  "description": "Compose forms with validation in Svelte web components.",
+  "description": "Svelte-Bootstrap form-composer web component.",
   "repo_url": "",
-  "author": "Dario Caruso",
+  "authors": [
+    "dariocaruso"
+  ],
   "downloads": 61,
   "dependents": 0,
-  "updated": "2025-03-09T03:10:42.877Z",
+  "updated": "2025-03-24T18:07:28.116Z",
   "tags": [
-    "component-library"
+    "ui"
   ],
   "svelte5": false,
   "runes": false

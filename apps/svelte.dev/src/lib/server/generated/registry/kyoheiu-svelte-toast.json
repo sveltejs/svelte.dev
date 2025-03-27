@@ -1,10 +1,12 @@
 {
   "name": "@kyoheiu/svelte-toast",
-  "description": "Display simple, elegant toast notifications in Svelte apps.",
+  "description": "Implement simple, elegant toast notification system for Svelte.",
   "repo_url": "https://github.com/kyoheiu/svelte-toast",
-  "author": "Kyohei Uto",
+  "authors": [
+    "kyoheiu"
+  ],
   "homepage": "https://github.com/kyoheiu/svelte-toast#readme",
-  "downloads": 0,
+  "downloads": 1,
   "dependents": 0,
   "updated": "2023-09-22T21:28:00.172Z",
   "tags": [

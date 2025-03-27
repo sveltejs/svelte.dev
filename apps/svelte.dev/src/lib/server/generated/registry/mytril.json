@@ -2,7 +2,9 @@
   "name": "mytril",
   "description": "Build modern websites with Mytril Svelte component library.",
   "repo_url": "https://github.com/minedelve/mytril",
-  "author": "Nycolaide",
+  "authors": [
+    "nycolaide"
+  ],
   "homepage": "https://minedelve.com/mytril/docs",
   "downloads": 517,
   "dependents": 0,

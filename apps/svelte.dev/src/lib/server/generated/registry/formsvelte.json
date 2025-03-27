@@ -1,9 +1,12 @@
 {
   "name": "formsvelte",
-  "description": "Provides complete form solution with validation for Svelte.",
+  "description": "Build forms with validation in Svelte using Yup schema.",
   "repo_url": "",
-  "author": "Zach Posten",
-  "downloads": 0,
+  "authors": [
+    "zposten",
+    "olivare"
+  ],
+  "downloads": 3,
   "dependents": 0,
   "updated": "2022-07-29T19:27:13.513Z",
   "tags": [

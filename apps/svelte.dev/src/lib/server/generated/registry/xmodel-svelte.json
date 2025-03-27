@@ -1,8 +1,10 @@
 {
   "name": "xmodel-svelte",
-  "description": "Provides OOP style state management for Svelte applications.",
+  "description": "Manage state in Svelte apps using OOP style.",
   "repo_url": "https://github.com/TishanV/xmodel",
-  "author": "tiscodes",
+  "authors": [
+    "tiscodes"
+  ],
   "homepage": "https://github.com/TishanV/xmodel/tree/main#readme",
   "downloads": 0,
   "dependents": 0,

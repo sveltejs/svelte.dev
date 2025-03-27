@@ -1,14 +1,17 @@
 {
   "name": "amplify-adapter",
-  "description": "Adapt SvelteKit apps for AWS Amplify SSR CI/CD.",
+  "description": "Adapts SvelteKit for Amplify Hosting CI/CD.",
   "repo_url": "https://github.com/gzimbron/amplify-adapter",
-  "author": "zimbronapps",
+  "authors": [
+    "zimbronapps"
+  ],
   "homepage": "https://github.com/gzimbron/amplify-adapter#readme",
-  "downloads": 1316,
+  "downloads": 1500,
   "dependents": 2,
   "updated": "2024-10-27T07:50:22.272Z",
   "tags": [
-    "adapter"
+    "adapter",
+    "server"
   ],
   "svelte5": false,
   "runes": false,

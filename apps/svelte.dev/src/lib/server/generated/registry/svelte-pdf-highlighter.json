@@ -1,14 +1,17 @@
 {
   "name": "svelte-pdf-highlighter",
-  "description": "Highlight and annotate PDF documents in Svelte apps.",
+  "description": "Highlight text in PDF documents using Svelte components.",
   "repo_url": "https://github.com/blackcat42/svelte-pdf-highlighter",
-  "author": "Sergey Gapchenko",
+  "authors": [
+    "blackcat42"
+  ],
   "homepage": "https://github.com/blackcat42/svelte-pdf-highlighter#readme",
   "downloads": 1,
   "dependents": 0,
   "updated": "2025-02-25T20:44:22.028Z",
   "tags": [
-    "media"
+    "media",
+    "ui"
   ],
   "svelte5": true,
   "runes": false,

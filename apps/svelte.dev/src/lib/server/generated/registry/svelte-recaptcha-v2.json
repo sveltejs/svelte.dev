@@ -1,14 +1,15 @@
 {
   "name": "svelte-recaptcha-v2",
-  "description": "Integrate Google reCAPTCHA v2 into Svelte and SvelteKit applications.",
+  "description": "Implement Google reCAPTCHA v2 in Svelte and SvelteKit apps.",
   "repo_url": "https://github.com/basaran/svelte-recaptcha-v2",
-  "author": "Basaran",
+  "authors": [
+    "anakha"
+  ],
   "homepage": "https://github.com/basaran/svelte-recaptcha-v2#readme",
-  "downloads": 538,
+  "downloads": 359,
   "dependents": 1,
   "updated": "2021-10-21T01:52:04.074Z",
   "tags": [
-    "utility",
     "integration"
   ],
   "svelte5": false,

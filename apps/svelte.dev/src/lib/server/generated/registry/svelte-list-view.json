@@ -1,8 +1,10 @@
 {
   "name": "svelte-list-view",
-  "description": "Create infinite list components for Svelte apps.",
+  "description": "Provides infinite list component for Svelte apps.",
   "repo_url": "https://github.com/maxam2017/svelte-list-view",
-  "author": "maxam2017",
+  "authors": [
+    "maxam2017"
+  ],
   "homepage": "https://github.com/maxam2017/svelte-list-view#readme",
   "downloads": 0,
   "dependents": 0,

@@ -1,15 +1,16 @@
 {
   "name": "svelte-markdown-input",
-  "description": "Create Markdown input fields with live preview in Svelte.",
+  "description": "Creates Markdown input with preview for Svelte apps.",
   "repo_url": "https://github.com/captaincodeman/svelte-markdown-input",
-  "author": "Simon Green",
+  "authors": [
+    "captaincodeman"
+  ],
   "homepage": "https://captaincodeman.github.io/svelte-markdown-input/",
-  "downloads": 20,
+  "downloads": 46,
   "dependents": 0,
   "updated": "2024-04-29T20:33:19.894Z",
   "tags": [
-    "content",
-    "ui"
+    "utility"
   ],
   "svelte5": true,
   "runes": false,

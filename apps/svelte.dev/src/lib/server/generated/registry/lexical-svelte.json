@@ -1,15 +1,17 @@
 {
   "name": "lexical-svelte",
-  "description": "Provides Svelte components for Lexical rich text editor.",
+  "description": "Integrates Lexical editor into Svelte applications.",
   "repo_url": "https://github.com/levi-bassey/lexical-svelte",
-  "author": "Levi Bassey",
+  "authors": [
+    "programlevi"
+  ],
   "homepage": "https://github.com/levi-bassey/lexical-svelte#readme",
-  "downloads": 1,
+  "downloads": 23,
   "dependents": 0,
   "updated": "2022-05-17T19:36:45.869Z",
   "tags": [
     "ui",
-    "content"
+    "utility"
   ],
   "svelte5": false,
   "runes": false

@@ -1,10 +1,12 @@
 {
   "name": "@okrad/svelte-progressbar",
-  "description": "Create SVG progress bars with Svelte.",
+  "description": "Creates multi-series SVG progress bars with various styles.",
   "repo_url": "https://github.com/okrad/svelte-progressbar",
-  "author": "Enrico Triolo",
+  "authors": [
+    "okrad"
+  ],
   "homepage": "https://github.com/okrad/svelte-progressbar#readme",
-  "downloads": 230,
+  "downloads": 446,
   "dependents": 0,
   "updated": "2023-07-06T09:06:19.807Z",
   "tags": [

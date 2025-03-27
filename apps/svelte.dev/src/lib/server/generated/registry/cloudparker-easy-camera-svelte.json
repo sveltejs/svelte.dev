@@ -2,13 +2,14 @@
   "name": "@cloudparker/easy-camera-svelte",
   "description": "Integrate camera features, capture images, and record videos.",
   "repo_url": "",
-  "author": "couldparker.com",
-  "downloads": 94,
+  "authors": [
+    "couldparker.com"
+  ],
+  "downloads": 21,
   "dependents": 1,
   "updated": "2024-11-26T17:44:28.796Z",
   "tags": [
-    "media",
-    "ui"
+    "media"
   ],
   "svelte5": true,
   "runes": false

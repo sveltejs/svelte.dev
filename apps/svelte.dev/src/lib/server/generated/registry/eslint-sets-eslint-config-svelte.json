@@ -1,10 +1,12 @@
 {
   "name": "@eslint-sets/eslint-config-svelte",
-  "description": "Provide ESLint configuration for Svelte projects.",
+  "description": "Provide ESLint configurations for Svelte projects.",
   "repo_url": "https://github.com/saqqdy/eslint-sets",
-  "author": "saqqdy",
+  "authors": [
+    "saqqdy"
+  ],
   "homepage": "https://github.com/saqqdy/eslint-sets/tree/master/packages/svelte#readme",
-  "downloads": 49,
+  "downloads": 1,
   "dependents": 1,
   "updated": "2024-11-20T06:22:11.506Z",
   "tags": [

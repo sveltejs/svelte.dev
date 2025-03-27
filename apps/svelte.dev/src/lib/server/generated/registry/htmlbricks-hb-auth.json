@@ -1,11 +1,13 @@
 {
   "name": "@htmlbricks/hb-auth",
-  "description": "Create Svelte web component for login and register.",
+  "description": "Create Svelte Boostrap Login and Register WebComponent.",
   "repo_url": "",
-  "author": "Dario Caruso",
-  "downloads": 464,
+  "authors": [
+    "dariocaruso"
+  ],
+  "downloads": 473,
   "dependents": 3,
-  "updated": "2025-03-09T03:10:42.242Z",
+  "updated": "2025-03-24T18:07:27.481Z",
   "tags": [
     "auth"
   ],

@@ -1,0 +1,19 @@
+{
+  "name": "hyunseung-svelte-tabs",
+  "description": "Create tabbed interfaces within Svelte applications.",
+  "repo_url": "https://github.com/joeattardi/svelte-tabs",
+  "authors": [
+    "hyunseunglee2008"
+  ],
+  "homepage": "https://github.com/joeattardi/svelte-tabs#readme",
+  "downloads": 3,
+  "dependents": 0,
+  "updated": "2023-12-17T02:09:00.173Z",
+  "tags": [
+    "ui",
+    "component-library"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 94
+}

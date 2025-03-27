@@ -1,15 +1,16 @@
 {
   "name": "@onlook/svelte",
-  "description": "Preprocessor for Svelte, enhancing component development.",
+  "description": "Preprocessor for onlook.dev in Svelte projects.",
   "repo_url": "",
-  "author": "onlook.dev",
+  "authors": [
+    "kitenite"
+  ],
   "homepage": "https://onlook.dev",
   "downloads": 14,
   "dependents": 0,
   "updated": "2024-06-03T14:25:51.544Z",
   "tags": [
-    "preprocessor",
-    "tooling"
+    "preprocessor"
   ],
   "svelte5": false,
   "runes": false

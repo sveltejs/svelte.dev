@@ -1,10 +1,12 @@
 {
   "name": "sveltekit-adapter-tauri",
-  "description": "Enables SvelteKit adapter for Tauri with SSR support.",
+  "description": "Adapts SvelteKit apps for Tauri desktop applications.",
   "repo_url": "https://github.com/mudiageo/sveltekit-adapter-tauri",
-  "author": "Mudia Geo",
+  "authors": [
+    "mudiageo"
+  ],
   "homepage": "https://github.com/mudiageo/sveltekit-adapter-tauri#readme",
-  "downloads": 3,
+  "downloads": 0,
   "dependents": 0,
   "updated": "2024-10-31T13:46:52.016Z",
   "tags": [

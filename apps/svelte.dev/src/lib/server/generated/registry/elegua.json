@@ -1,10 +1,12 @@
 {
   "name": "elegua",
-  "description": "Svelte router with PWA support.",
+  "description": "Provide Svelte routing and PWA capabilities.",
   "repo_url": "https://github.com/howesteve/elegua",
-  "author": "howesteve",
+  "authors": [
+    "howesteve"
+  ],
   "homepage": "https://github.com/howesteve/elegua",
-  "downloads": 25,
+  "downloads": 49,
   "dependents": 0,
   "updated": "2024-01-20T23:32:01.116Z",
   "tags": [

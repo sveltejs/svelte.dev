@@ -1,0 +1,19 @@
+{
+  "name": "@appist/webpack-preset-appy",
+  "description": "Configure Webpack for Appy web framework with Svelte support.",
+  "repo_url": "https://github.com/appist/webpack-preset-appy",
+  "authors": [
+    "cayter"
+  ],
+  "homepage": "https://github.com/appist/webpack-preset-appy#readme",
+  "downloads": 24,
+  "dependents": 0,
+  "updated": "2020-07-13T11:56:45.920Z",
+  "tags": [
+    "tooling",
+    "preprocessor"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 1
+}

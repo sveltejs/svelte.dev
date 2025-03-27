@@ -1,12 +1,15 @@
 {
   "name": "@htmlbricks/hb-site-slideshow",
-  "description": "Provides Svelte-Bootstrap site-slideshow.",
+  "description": "Provides a Svelte-Bootstrap site-slideshow component.",
   "repo_url": "",
-  "author": "Dario Caruso",
-  "downloads": 257,
+  "authors": [
+    "dariocaruso"
+  ],
+  "downloads": 265,
   "dependents": 0,
-  "updated": "2025-03-09T03:10:35.760Z",
+  "updated": "2025-03-24T18:07:20.362Z",
   "tags": [
+    "component-library",
     "ui"
   ],
   "svelte5": false,

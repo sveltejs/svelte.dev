@@ -1,10 +1,12 @@
 {
   "name": "svelte-cssmodules-loader",
-  "description": "Generates CSS Modules classnames for Svelte components.",
+  "description": "Generate CSS Modules classnames for Svelte components.",
   "repo_url": "https://github.com/micantoine/svelte-cssmodules-loader",
-  "author": "micantoine",
+  "authors": [
+    "micantoine"
+  ],
   "homepage": "https://github.com/micantoine/svelte-cssmodules-loader",
-  "downloads": 0,
+  "downloads": 6,
   "dependents": 0,
   "updated": "2020-04-15T14:07:32.597Z",
   "tags": [

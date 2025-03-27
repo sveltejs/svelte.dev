@@ -2,14 +2,15 @@
   "name": "@aztemi/svelte-on-solana-wallet-adapter-core",
   "description": "Core Svelte store for Solana wallet adapter.",
   "repo_url": "https://github.com/aztemi/wallet-adapter",
-  "author": "Svelte on Solana",
+  "authors": [
+    "t4top"
+  ],
   "homepage": "https://github.com/aztemi/wallet-adapter#readme",
-  "downloads": 36,
+  "downloads": 0,
   "dependents": 1,
   "updated": "2024-04-15T19:39:00.200Z",
   "tags": [
-    "utility",
-    "auth"
+    "utility"
   ],
   "svelte5": false,
   "runes": false,

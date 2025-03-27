@@ -1,17 +1,18 @@
 {
   "name": "@wxt-dev/module-svelte",
-  "description": "Enable Svelte support in WXT web extension projects.",
+  "description": "Enables Svelte support in web extensions, HTML pages, and content scripts.",
   "repo_url": "https://github.com/wxt-dev/wxt",
-  "author": "Aaron Klinker",
+  "authors": [
+    "_aklinker1"
+  ],
   "homepage": "https://github.com/wxt-dev/wxt/blob/main/packages/module-svelte/README.md",
-  "downloads": 241,
+  "downloads": 225,
   "dependents": 0,
   "updated": "2025-01-28T21:17:42.473Z",
   "tags": [
-    "tooling",
-    "preprocessor"
+    "tooling"
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 6260
+  "github_stars": 6281
 }

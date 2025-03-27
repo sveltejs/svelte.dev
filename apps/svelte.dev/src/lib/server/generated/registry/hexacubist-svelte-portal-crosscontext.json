@@ -2,9 +2,11 @@
   "name": "@hexacubist/svelte-portal-crosscontext",
   "description": "Render Svelte components outside parent component DOM.",
   "repo_url": "https://github.com/romkor/svelte-portal",
-  "author": "hexacubist",
+  "authors": [
+    "hexacubist"
+  ],
   "homepage": "https://github.com/romkor/svelte-portal#readme",
-  "downloads": 5,
+  "downloads": 0,
   "dependents": 0,
   "updated": "2022-10-31T04:10:37.622Z",
   "tags": [

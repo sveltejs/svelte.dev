@@ -1,10 +1,12 @@
 {
   "name": "@icons-pack/svelte-simple-icons",
-  "description": "Use Simple Icons as Svelte components.",
+  "description": "Provides Simple Icons as Svelte components.",
   "repo_url": "https://github.com/icons-pack/svelte-simple-icons",
-  "author": "Jorge Luis Calleja",
+  "authors": [
+    "wootsbot"
+  ],
   "homepage": "https://github.com/icons-pack/svelte-simple-icons#readme",
-  "downloads": 325,
+  "downloads": 263,
   "dependents": 0,
   "updated": "2025-02-19T00:48:51.775Z",
   "tags": [

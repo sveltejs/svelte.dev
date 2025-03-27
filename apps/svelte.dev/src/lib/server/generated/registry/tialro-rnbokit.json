@@ -1,14 +1,17 @@
 {
   "name": "@tialro/rnbokit",
-  "description": "Integrate RNBO~ patches into SvelteKit applications.",
+  "description": "Integrate RNBO~ patches into Svelte apps.",
   "repo_url": "https://github.com/TiAlRo/RNBOKit",
-  "author": "tialro",
+  "authors": [
+    "tialro"
+  ],
   "homepage": "https://github.com/TiAlRo/RNBOKit#readme",
-  "downloads": 18,
+  "downloads": 28,
   "dependents": 0,
   "updated": "2025-03-04T16:05:27.731Z",
   "tags": [
-    "media"
+    "component-library",
+    "integration"
   ],
   "svelte5": true,
   "runes": false,

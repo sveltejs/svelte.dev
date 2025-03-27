@@ -1,8 +1,10 @@
 {
   "name": "svelte-page-router",
-  "description": "Simple wrapper for pagejs, config-based router for Svelte.",
+  "description": "Config-based router for Svelte using page.js.",
   "repo_url": "https://github.com/PaulMaly/svelte-page-router",
-  "author": "PaulMaly",
+  "authors": [
+    "paulmaly"
+  ],
   "homepage": "https://github.com/PaulMaly/svelte-page-router#readme",
   "downloads": 10,
   "dependents": 0,

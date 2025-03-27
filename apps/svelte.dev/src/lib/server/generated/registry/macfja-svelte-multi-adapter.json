@@ -1,10 +1,12 @@
 {
   "name": "@macfja/svelte-multi-adapter",
-  "description": "Svelte adapter that launches other adapters.",
+  "description": "Launch multiple SvelteKit adapters.",
   "repo_url": "https://github.com/macfja/svelte-adapter-multi",
-  "author": "MacFJA",
+  "authors": [
+    "macfja"
+  ],
   "homepage": "https://github.com/macfja/svelte-adapter-multi#readme",
-  "downloads": 188,
+  "downloads": 156,
   "dependents": 0,
   "updated": "2021-12-29T15:05:52.563Z",
   "tags": [

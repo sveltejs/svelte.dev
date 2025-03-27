@@ -1,0 +1,19 @@
+{
+  "name": "@svizzle/mapbox",
+  "description": "Integrate Mapbox GL JS into Svelte applications.",
+  "repo_url": "https://github.com/nestauk/svizzle",
+  "authors": [
+    "nestauk-dev",
+    "mindrones"
+  ],
+  "homepage": "https://github.com/nestauk/svizzle",
+  "downloads": 4,
+  "dependents": 0,
+  "updated": "2023-11-23T20:36:02.742Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 19
+}

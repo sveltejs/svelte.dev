@@ -1,0 +1,18 @@
+{
+  "name": "@klarr-agency/circum-icons",
+  "description": "Provides a set of consistent, circular icons for Svelte.",
+  "repo_url": "https://github.com/Klarr-Agency/Circum-icons",
+  "authors": [
+    "klarr-agency"
+  ],
+  "homepage": "https://github.com/Klarr-Agency/Circum-icons#readme",
+  "downloads": 30,
+  "dependents": 0,
+  "updated": "2022-05-21T14:03:51.228Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 182
+}

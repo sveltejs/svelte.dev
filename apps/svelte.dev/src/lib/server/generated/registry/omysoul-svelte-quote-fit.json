@@ -1,0 +1,16 @@
+{
+  "name": "@omysoul/svelte-quote-fit",
+  "description": "Formats text using HTML subset, fitting quotes.",
+  "repo_url": "",
+  "authors": [
+    "omysoul"
+  ],
+  "downloads": 23,
+  "dependents": 0,
+  "updated": "2021-09-04T19:26:32.502Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

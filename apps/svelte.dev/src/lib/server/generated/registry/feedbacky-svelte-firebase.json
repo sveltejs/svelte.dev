@@ -1,14 +1,17 @@
 {
   "name": "feedbacky-svelte-firebase",
-  "description": "Provides simple feedback component made with Svelte.",
+  "description": "Implement feedback component with Svelte and Firebase.",
   "repo_url": "https://github.com/vukovics/svelte-feedback",
-  "author": "Stefan Vukovic",
+  "authors": [
+    "stefanvkvc"
+  ],
   "homepage": "https://github.com/vukovics/svelte-feedback#readme",
-  "downloads": 2,
+  "downloads": 12,
   "dependents": 0,
   "updated": "2022-08-03T14:42:37.458Z",
   "tags": [
-    "ui"
+    "ui",
+    "integration"
   ],
   "svelte5": false,
   "runes": false,

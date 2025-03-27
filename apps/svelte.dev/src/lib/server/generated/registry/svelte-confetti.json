@@ -2,9 +2,11 @@
   "name": "svelte-confetti",
   "description": "Add confetti animations to Svelte apps.",
   "repo_url": "https://github.com/Mitcheljager/svelte-confetti",
-  "author": "mitcheljager",
+  "authors": [
+    "mitcheljager"
+  ],
   "homepage": "https://mitcheljager.github.io/svelte-confetti/",
-  "downloads": 21129,
+  "downloads": 21456,
   "dependents": 2,
   "updated": "2025-01-26T14:39:48.888Z",
   "tags": [

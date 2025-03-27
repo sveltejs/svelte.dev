@@ -1,10 +1,12 @@
 {
   "name": "@threlte/gltf",
-  "description": "Convert GLTF assets into Threlte components.",
+  "description": "Convert GLTF models into Threlte components.",
   "repo_url": "https://github.com/threlte/threlte",
-  "author": "Grischa Erbe",
+  "authors": [
+    "grischaerbe"
+  ],
   "homepage": "https://github.com/threlte/threlte.git#readme",
-  "downloads": 297,
+  "downloads": 401,
   "dependents": 1,
   "updated": "2025-01-20T22:28:42.925Z",
   "tags": [
@@ -12,5 +14,5 @@
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 2820
+  "github_stars": 2828
 }

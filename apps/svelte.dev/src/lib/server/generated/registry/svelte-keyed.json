@@ -1,10 +1,12 @@
 {
   "name": "svelte-keyed",
-  "description": "Creates writable derived stores for objects and arrays in Svelte.",
+  "description": "Create writable derived stores for objects and arrays.",
   "repo_url": "https://github.com/bryanmylee/svelte-keyed",
-  "author": "Bryan Lee",
+  "authors": [
+    "bryanmylee"
+  ],
   "homepage": "https://github.com/bryanmylee/svelte-keyed#readme",
-  "downloads": 17337,
+  "downloads": 18194,
   "dependents": 5,
   "updated": "2024-01-02T20:45:43.914Z",
   "tags": [

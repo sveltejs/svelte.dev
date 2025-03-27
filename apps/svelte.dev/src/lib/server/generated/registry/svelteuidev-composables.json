@@ -1,8 +1,11 @@
 {
   "name": "@svelteuidev/composables",
-  "description": "Provide Svelte actions and utilities for various tasks.",
+  "description": "Svelte actions and utilities library.",
   "repo_url": "https://github.com/svelteuidev/svelteui",
-  "author": "Kamell Perry",
+  "authors": [
+    "lowkey_daisy",
+    "uxtitan"
+  ],
   "homepage": "https://svelteui.dev/",
   "downloads": 1210,
   "dependents": 9,
@@ -12,5 +15,5 @@
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 1361
+  "github_stars": 1363
 }

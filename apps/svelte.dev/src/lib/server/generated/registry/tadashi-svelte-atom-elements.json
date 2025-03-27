@@ -1,10 +1,12 @@
 {
   "name": "@tadashi/svelte-atom-elements",
-  "description": "Provides reusable Svelte components for building user interfaces.",
+  "description": "Create Svelte UI components.",
   "repo_url": "https://github.com/lagden/svelte-atom-elements",
-  "author": "Thiago Lagden",
+  "authors": [
+    "lagden"
+  ],
   "homepage": "https://github.com/lagden/svelte-atom-elements#readme",
-  "downloads": 14,
+  "downloads": 41,
   "dependents": 0,
   "updated": "2022-08-16T14:53:59.919Z",
   "tags": [

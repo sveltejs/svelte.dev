@@ -1,10 +1,12 @@
 {
   "name": "kl-svelte-select",
-  "description": "Create select/autocomplete/typeahead components in Svelte.",
+  "description": "Create select/autocomplete/typeahead components for Svelte apps.",
   "repo_url": "https://github.com/Kirill-Lekhov/svelte-select",
-  "author": "Robert Balfré",
+  "authors": [
+    "k.lekhov"
+  ],
   "homepage": "https://github.com/Kirill-Lekhov/svelte-select#readme",
-  "downloads": 0,
+  "downloads": 3,
   "dependents": 0,
   "updated": "2024-11-06T13:15:13.993Z",
   "tags": [

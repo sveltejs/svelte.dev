@@ -1,8 +1,10 @@
 {
   "name": "@ikun-ui/popconfirm",
-  "description": "Create popconfirm components for Svelte applications.",
+  "description": "Confirm actions with popover in Svelte applications.",
   "repo_url": "",
-  "author": "baiwusanyu",
+  "authors": [
+    "baiwusanyu"
+  ],
   "downloads": 25,
   "dependents": 1,
   "updated": "2025-01-24T03:49:10.381Z",

@@ -1,0 +1,18 @@
+{
+  "name": "@otterstack/sanity-img-svelte",
+  "description": "Render responsive images from Sanity CMS in Svelte.",
+  "repo_url": "https://github.com/otterdev-io/sanity-img",
+  "authors": [
+    "cfraz89"
+  ],
+  "homepage": "https://github.com/otterdev-io/sanity-img/tree/main/svelte#readme",
+  "downloads": 5,
+  "dependents": 0,
+  "updated": "2023-10-14T07:42:13.736Z",
+  "tags": [
+    "media"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

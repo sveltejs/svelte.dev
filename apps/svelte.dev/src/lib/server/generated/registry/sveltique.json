@@ -1,0 +1,18 @@
+{
+  "name": "sveltique",
+  "description": "Create fashionable and accessible Svelte components.",
+  "repo_url": "https://github.com/Domenicobrz/Sveltique",
+  "authors": [
+    "domenicobrz"
+  ],
+  "homepage": "https://github.com/Domenicobrz/Sveltique",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2023-07-10T03:32:46.184Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

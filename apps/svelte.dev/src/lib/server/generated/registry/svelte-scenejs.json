@@ -1,10 +1,12 @@
 {
   "name": "svelte-scenejs",
-  "description": "Create timeline-based animations with Scene.js in Svelte.",
+  "description": "Create JavaScript & CSS timeline-based animations with Scene.js.",
   "repo_url": "https://github.com/daybrush/scenejs",
-  "author": "Daybrush",
+  "authors": [
+    "younkue"
+  ],
   "homepage": "https://github.com/daybrush/scenejs",
-  "downloads": 0,
+  "downloads": 14,
   "dependents": 0,
   "updated": "2023-06-05T16:59:05.475Z",
   "tags": [

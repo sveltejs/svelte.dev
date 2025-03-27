@@ -2,7 +2,9 @@
   "name": "@jerrythomas/eslint-config-svelte",
   "description": "Provide ESLint configuration for Svelte projects.",
   "repo_url": "https://github.com/jerrythomas/eslint-config-svelte",
-  "author": "jerrythomas",
+  "authors": [
+    "jerrythomas"
+  ],
   "homepage": "https://github.com/jerrythomas/eslint-config-svelte#readme",
   "downloads": 4,
   "dependents": 0,

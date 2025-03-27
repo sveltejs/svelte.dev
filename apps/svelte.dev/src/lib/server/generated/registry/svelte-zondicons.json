@@ -1,9 +1,11 @@
 {
   "name": "svelte-zondicons",
-  "description": "Use Zondicons icon set in Svelte components.",
+  "description": "Use Zondicons SVG icons as Svelte components.",
   "repo_url": "https://github.com/moollaza/svelte-zondicons",
-  "author": "moollaza",
-  "downloads": 0,
+  "authors": [
+    "moollaza"
+  ],
+  "downloads": 7,
   "dependents": 0,
   "updated": "2019-12-24T02:21:34.421Z",
   "tags": [

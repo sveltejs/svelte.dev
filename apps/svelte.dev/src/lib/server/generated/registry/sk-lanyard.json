@@ -1,10 +1,12 @@
 {
   "name": "sk-lanyard",
-  "description": "Integrate Discord presence data into SvelteKit applications.",
+  "description": "Integrate Lanyard API to fetch Discord presence in SvelteKit.",
   "repo_url": "https://github.com/nebulatgs/sk-lanyard",
-  "author": "Nebula",
+  "authors": [
+    "nebulatgs"
+  ],
   "homepage": "https://github.com/nebulatgs/sk-lanyard#readme",
-  "downloads": 8,
+  "downloads": 47,
   "dependents": 0,
   "updated": "2023-09-10T05:43:44.019Z",
   "tags": [

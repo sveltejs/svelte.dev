@@ -1,10 +1,12 @@
 {
   "name": "@thewuh/wallet-standard-wallet-adapter-svelte",
-  "description": "Creates Svelte store managing Wallet Standard adapters.",
+  "description": "Create Svelte store for Wallet Standard adapters.",
   "repo_url": "https://github.com/thewuhxyz/wallet-adapter-svelte",
-  "author": "The Wuh",
+  "authors": [
+    "_thewuh"
+  ],
   "homepage": "https://github.com/thewuhxyz/wallet-adapter-svelte#readme",
-  "downloads": 0,
+  "downloads": 2,
   "dependents": 1,
   "updated": "2024-07-24T15:32:33.198Z",
   "tags": [

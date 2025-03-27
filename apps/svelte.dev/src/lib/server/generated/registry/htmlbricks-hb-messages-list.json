@@ -2,10 +2,12 @@
   "name": "@htmlbricks/hb-messages-list",
   "description": "Svelte-Bootstrap messages-list web component.",
   "repo_url": "",
-  "author": "Dario Caruso",
-  "downloads": 92,
+  "authors": [
+    "dariocaruso"
+  ],
+  "downloads": 97,
   "dependents": 1,
-  "updated": "2025-03-09T03:10:32.002Z",
+  "updated": "2025-03-24T18:07:16.979Z",
   "tags": [
     "ui"
   ],

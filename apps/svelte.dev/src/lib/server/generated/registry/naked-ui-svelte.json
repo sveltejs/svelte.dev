@@ -1,0 +1,16 @@
+{
+  "name": "@naked-ui/svelte",
+  "description": "Create UI components for Svelte applications.",
+  "repo_url": "",
+  "authors": [
+    "allozaur"
+  ],
+  "downloads": 176,
+  "dependents": 0,
+  "updated": "2021-07-28T22:47:44.920Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": false,
+  "runes": false
+}

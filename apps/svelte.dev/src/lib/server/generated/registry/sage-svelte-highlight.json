@@ -1,9 +1,11 @@
 {
   "name": "sage-svelte-highlight",
-  "description": "Syntax highlight code in Svelte using Highlight.js.",
+  "description": "Provides syntax highlighting for Svelte using Highlight.js.",
   "repo_url": "",
-  "author": "Sage Vaillancourt",
-  "downloads": 0,
+  "authors": [
+    "sagethesagesage"
+  ],
+  "downloads": 1,
   "dependents": 0,
   "updated": "2022-08-17T15:08:22.424Z",
   "tags": [

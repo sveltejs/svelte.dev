@@ -1,10 +1,12 @@
 {
   "name": "svelte-ref",
-  "description": "Get reference to div element in Svelte components.",
+  "description": "Get reference to a div element in Svelte.",
   "repo_url": "https://github.com/metonym/svelte-ref",
-  "author": "Eric Liu",
+  "authors": [
+    "metonym"
+  ],
   "homepage": "https://github.com/metonym/svelte-ref",
-  "downloads": 0,
+  "downloads": 6,
   "dependents": 0,
   "updated": "2020-05-22T22:29:50.776Z",
   "tags": [

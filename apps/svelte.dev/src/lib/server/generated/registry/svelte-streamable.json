@@ -1,10 +1,12 @@
 {
   "name": "svelte-streamable",
-  "description": "Provides Svelte store for real-time updates from server via SSE.",
+  "description": "Provides Svelte store for real-time updates from SSE.",
   "repo_url": "https://github.com/sveltetools/svelte-streamable",
-  "author": "PaulMaly",
+  "authors": [
+    "paulmaly"
+  ],
   "homepage": "https://github.com/sveltetools/svelte-streamable#readme",
-  "downloads": 33,
+  "downloads": 12,
   "dependents": 0,
   "updated": "2022-07-27T14:41:23.079Z",
   "tags": [

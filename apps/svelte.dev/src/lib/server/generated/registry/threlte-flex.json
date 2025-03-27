@@ -1,10 +1,12 @@
 {
   "name": "@threlte/flex",
-  "description": "Use flexbox spec with Threlte in Svelte.",
+  "description": "Use flexbox spec with Threlte for 3D content.",
   "repo_url": "https://github.com/threlte/threlte",
-  "author": "Grischa Erbe",
+  "authors": [
+    "grischaerbe"
+  ],
   "homepage": "https://threlte.xyz",
-  "downloads": 142,
+  "downloads": 100,
   "dependents": 0,
   "updated": "2025-01-20T22:28:45.385Z",
   "tags": [
@@ -12,5 +14,5 @@
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 2820
+  "github_stars": 2828
 }

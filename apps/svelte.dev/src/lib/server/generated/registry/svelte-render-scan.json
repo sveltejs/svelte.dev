@@ -2,7 +2,9 @@
   "name": "svelte-render-scan",
   "description": "Visual debugging tool for Svelte applications.",
   "repo_url": "https://github.com/khromov/svelte-render-scan",
-  "author": "stanislav-khromov",
+  "authors": [
+    "stanislav-khromov"
+  ],
   "homepage": "https://khromov.github.io/svelte-render-scan/",
   "downloads": 554,
   "dependents": 0,
@@ -12,5 +14,5 @@
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 75
+  "github_stars": 76
 }

@@ -1,10 +1,12 @@
 {
   "name": "@arkangel-dev/svelte-recaptcha-v2",
-  "description": "Implements Google ReCaptcha v2 for Svelte and SvelteKit.",
+  "description": "Integrates Google reCAPTCHA v2 into Svelte and SvelteKit.",
   "repo_url": "https://github.com/arkangel-dev/svelte-recaptcha-v2",
-  "author": "arkangel-dev",
+  "authors": [
+    "arkangel-dev"
+  ],
   "homepage": "https://github.com/arkangel-dev/svelte-recaptcha-v2",
-  "downloads": 4,
+  "downloads": 1,
   "dependents": 0,
   "updated": "2024-02-17T16:18:26.739Z",
   "tags": [

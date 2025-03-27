@@ -1,0 +1,18 @@
+{
+  "name": "svelte-c-reveal",
+  "description": "Adds reveal effects on scroll for Svelte components.",
+  "repo_url": "https://github.com/andrusenn/SvelteComponents",
+  "authors": [
+    "andrusenn"
+  ],
+  "homepage": "https://github.com/andrusenn/SvelteComponents#readme",
+  "downloads": 8,
+  "dependents": 0,
+  "updated": "2020-09-02T19:03:03.577Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 4
+}

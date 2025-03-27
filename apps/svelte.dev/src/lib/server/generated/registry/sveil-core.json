@@ -1,0 +1,18 @@
+{
+  "name": "@sveil/core",
+  "description": "Provides core utilities for Svelte applications.",
+  "repo_url": "https://github.com/sveiljs/sveil",
+  "authors": [
+    "donapot"
+  ],
+  "homepage": "https://github.com/sveiljs/sveil#readme",
+  "downloads": 15,
+  "dependents": 0,
+  "updated": "2023-10-07T22:57:20.506Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

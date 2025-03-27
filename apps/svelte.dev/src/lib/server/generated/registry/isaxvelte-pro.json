@@ -1,10 +1,12 @@
 {
   "name": "isaxvelte-pro",
-  "description": "Iconsax icon library for Svelte, based on iconsax.",
+  "description": "Use Iconsax icons in Svelte applications.",
   "repo_url": "https://github.com/RbnMach/isaxvelte-pro",
-  "author": "RubenMach",
+  "authors": [
+    "rubenmach.oficial"
+  ],
   "homepage": "https://github.com/RbnMach/isaxvelte-pro#readme",
-  "downloads": 23,
+  "downloads": 25,
   "dependents": 0,
   "updated": "2024-07-05T04:21:34.957Z",
   "tags": [

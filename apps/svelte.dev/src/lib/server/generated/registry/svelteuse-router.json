@@ -1,10 +1,12 @@
 {
   "name": "@svelteuse/router",
-  "description": "Provides useful router helpers for Svelte applications.",
+  "description": "Provide useful Svelte router helpers.",
   "repo_url": "https://github.com/svelteuse/router",
-  "author": "Alexander Niebuhr",
+  "authors": [
+    "alexanderniebuhr"
+  ],
   "homepage": "https://github.com/svelteuse/router#readme",
-  "downloads": 0,
+  "downloads": 112,
   "dependents": 0,
   "updated": "2022-03-02T08:53:48.879Z",
   "tags": [

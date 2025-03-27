@@ -1,10 +1,13 @@
 {
   "name": "@ourway/svelte-redux",
-  "description": "Connect Svelte components to Redux store.",
+  "description": "Connect Svelte components to Redux store for state management.",
   "repo_url": "https://github.com/AndrewBlackledge/svelte-redux",
-  "author": "Andrew Blackledge, Alex Nicolaou",
+  "authors": [
+    "implode963",
+    "anicolao"
+  ],
   "homepage": "https://github.com/AndrewBlackledge/svelte-redux#readme",
-  "downloads": 0,
+  "downloads": 2,
   "dependents": 0,
   "updated": "2024-04-03T18:57:53.050Z",
   "tags": [

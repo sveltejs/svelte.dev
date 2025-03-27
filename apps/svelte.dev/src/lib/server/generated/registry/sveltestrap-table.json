@@ -2,8 +2,10 @@
   "name": "sveltestrap-table",
   "description": "Create table components with pagination and sort controls.",
   "repo_url": "",
-  "author": "hazg",
-  "downloads": 0,
+  "authors": [
+    "hazg"
+  ],
+  "downloads": 21,
   "dependents": 0,
   "updated": "2021-06-22T09:09:35.260Z",
   "tags": [

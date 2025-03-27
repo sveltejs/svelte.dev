@@ -1,14 +1,16 @@
 {
   "name": "svelte-jsx",
-  "description": "Use JSX syntax for writing Svelte components, simplifying testing.",
+  "description": "Use JSX for testing Svelte components.",
   "repo_url": "https://github.com/kenoxa/svelte-jsx",
-  "author": "Sascha Tandel",
+  "authors": [
+    "sastan"
+  ],
   "homepage": "https://github.com/kenoxa/svelte-jsx#readme",
-  "downloads": 653,
+  "downloads": 369,
   "dependents": 2,
   "updated": "2021-02-07T11:12:20.070Z",
   "tags": [
-    "testing"
+    "tooling"
   ],
   "svelte5": false,
   "runes": false,

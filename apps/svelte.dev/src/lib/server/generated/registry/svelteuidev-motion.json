@@ -1,13 +1,19 @@
 {
   "name": "@svelteuidev/motion",
+  "description": "Provides Svelte animation library with transition functions and components.",
   "repo_url": "https://github.com/svelteuidev/svelteui",
-  "author": "Kamell Perry",
+  "authors": [
+    "lowkey_daisy",
+    "uxtitan"
+  ],
   "homepage": "https://svelteui.dev/",
-  "downloads": 108,
+  "downloads": 142,
   "dependents": 0,
   "updated": "2024-07-07T14:30:26.634Z",
-  "tags": [],
+  "tags": [
+    "ui"
+  ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 1361
+  "github_stars": 1363
 }

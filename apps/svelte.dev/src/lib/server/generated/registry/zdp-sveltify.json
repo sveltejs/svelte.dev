@@ -1,0 +1,18 @@
+{
+  "name": "@zdp/sveltify",
+  "description": "Component library for Svelte/Sapper.",
+  "repo_url": "https://github.com/zdproduction/sveltify",
+  "authors": [
+    "zdpro"
+  ],
+  "homepage": "https://sveltify.dev",
+  "downloads": 11,
+  "dependents": 0,
+  "updated": "2020-05-29T21:07:17.179Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 2
+}

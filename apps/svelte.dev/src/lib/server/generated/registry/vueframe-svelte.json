@@ -1,8 +1,10 @@
 {
   "name": "@vueframe/svelte",
-  "description": "Provides simple embeds for Svelte.",
+  "description": "Embed YouTube and Vimeo videos in Svelte apps.",
   "repo_url": "https://github.com/vueframe/vueframe",
-  "author": "vueframe",
+  "authors": [
+    "greenestgoat"
+  ],
   "homepage": "https://github.com/vueframe/vueframe",
   "downloads": 20,
   "dependents": 0,
@@ -12,5 +14,5 @@
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 74
+  "github_stars": 73
 }

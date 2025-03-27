@@ -1,0 +1,17 @@
+{
+  "name": "@voscausa/use-validate-example",
+  "description": "Validate example form in Svelte-Vite SPA.",
+  "repo_url": "https://github.com/voscausa/use-validate-example",
+  "authors": [
+    "voscausa"
+  ],
+  "homepage": "https://github.com/voscausa/use-validate-example#readme",
+  "downloads": 5,
+  "dependents": 0,
+  "updated": "2024-01-18T12:11:11.130Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

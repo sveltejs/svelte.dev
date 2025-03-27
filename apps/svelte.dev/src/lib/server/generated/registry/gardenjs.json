@@ -1,8 +1,11 @@
 {
   "name": "gardenjs",
-  "description": "Explore and document UI components for Svelte and others.",
+  "description": "Explore and document UI components for Svelte, React, and Vue.",
   "repo_url": "https://github.com/gardenjs/gardenjs",
-  "author": "Robin Danzinger, Martin Farkas",
+  "authors": [
+    "robindanzinger",
+    "martinfarkas"
+  ],
   "homepage": "https://gardenjs.org/",
   "downloads": 4,
   "dependents": 0,

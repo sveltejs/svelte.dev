@@ -1,10 +1,12 @@
 {
   "name": "@svelte-put/preprocess-inline-svg",
-  "description": "Inlines static SVG files from local resources during build time.",
+  "description": "Inlines static SVG assets at build time for Svelte projects.",
   "repo_url": "https://github.com/vnphanquang/svelte-put",
-  "author": "Quang Phan",
+  "authors": [
+    "vnphanquang"
+  ],
   "homepage": "https://github.com/vnphanquang/svelte-put/tree/main/packages/preprocess-inline-svg",
-  "downloads": 312,
+  "downloads": 195,
   "dependents": 0,
   "updated": "2024-10-04T10:27:54.467Z",
   "tags": [
@@ -12,5 +14,5 @@
   ],
   "svelte5": false,
   "runes": false,
-  "github_stars": 909
+  "github_stars": 911
 }

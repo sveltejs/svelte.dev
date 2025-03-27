@@ -1,10 +1,23 @@
 {
   "name": "@storybook/addon-svelte-csf",
-  "description": "Enable Svelte stories within Storybook.",
+  "description": "Enables writing stories in Svelte syntax for Storybook.",
   "repo_url": "https://github.com/storybookjs/addon-svelte-csf",
-  "author": "ndelangen",
+  "authors": [
+    "ndelangen",
+    "shilman",
+    "tmeasday",
+    "ghengeveld",
+    "winkervsbecks",
+    "yannbf",
+    "kylegach",
+    "jreinhold",
+    "kasperpeulen",
+    "valentinpalkovic",
+    "domyen",
+    "storybook-bot"
+  ],
   "homepage": "https://github.com/storybookjs/addon-svelte-csf#readme",
-  "downloads": 59289,
+  "downloads": 59064,
   "dependents": 15,
   "updated": "2024-11-28T09:20:51.195Z",
   "tags": [

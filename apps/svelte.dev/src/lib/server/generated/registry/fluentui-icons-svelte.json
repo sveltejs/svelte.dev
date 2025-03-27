@@ -1,8 +1,10 @@
 {
   "name": "fluentui-icons-svelte",
-  "description": "Provide Fluent UI icons as Svelte 5 components.",
+  "description": "Use Fluent UI icons in Svelte 5 applications.",
   "repo_url": "https://github.com/JLAcostaEC/fluentui-icons-svelte",
-  "author": "Jorge Acosta",
+  "authors": [
+    "jlacostaec"
+  ],
   "homepage": "https://github.com/JLAcostaEC/fluentui-icons-svelte#readme",
   "downloads": 2,
   "dependents": 0,

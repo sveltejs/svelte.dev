@@ -1,10 +1,12 @@
 {
   "name": "svelte-color-calendar",
-  "description": "Create production-ready calendar with date selection limits.",
+  "description": "Implement calendar with date selection and month limiting.",
   "repo_url": "",
-  "author": "Sanshain",
+  "authors": [
+    "sanshain"
+  ],
   "homepage": "https://github.com/Sanshain/svelte-color-calendar",
-  "downloads": 3,
+  "downloads": 1,
   "dependents": 0,
   "updated": "2022-10-05T18:28:19.085Z",
   "tags": [

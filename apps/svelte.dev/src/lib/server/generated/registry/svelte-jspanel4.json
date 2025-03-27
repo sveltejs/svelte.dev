@@ -1,0 +1,18 @@
+{
+  "name": "svelte-jspanel4",
+  "description": "Integrate jsPanel4 panels into Svelte applications.",
+  "repo_url": "https://github.com/ngyewch/svelte-jspanel4",
+  "authors": [
+    "ngyewch"
+  ],
+  "homepage": "https://ngyewch.github.io/svelte-jspanel4/",
+  "downloads": 9,
+  "dependents": 0,
+  "updated": "2020-09-17T13:16:15.195Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 1
+}

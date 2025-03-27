@@ -2,7 +2,9 @@
   "name": "svelte-freeze",
   "description": "Provide freeze-like functionality for Svelte components.",
   "repo_url": "",
-  "author": "externdefs",
+  "authors": [
+    "externdefs"
+  ],
   "downloads": 50,
   "dependents": 0,
   "updated": "2025-03-22T09:49:25.844Z",

@@ -1,0 +1,16 @@
+{
+  "name": "rhyme-icons",
+  "description": "Provide icon components for Svelte.",
+  "repo_url": "https://github.com/Rhyme-Player/RhymeIcons",
+  "authors": [
+    "abdallah-moh"
+  ],
+  "downloads": 11,
+  "dependents": 0,
+  "updated": "2022-01-01T06:56:04.045Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

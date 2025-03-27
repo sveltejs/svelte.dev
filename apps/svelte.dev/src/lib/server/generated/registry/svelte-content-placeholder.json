@@ -1,8 +1,10 @@
 {
   "name": "svelte-content-placeholder",
-  "description": "Replicate components with shadow versions while content loads.",
+  "description": "Replicate components with shadow versions while content is unavailable.",
   "repo_url": "https://github.com/EstebanBorai/svelte-content-placeholder",
-  "author": "Esteban Borai",
+  "authors": [
+    "estebanborai"
+  ],
   "homepage": "https://github.com/EstebanBorai/svelte-content-placeholder#readme",
   "downloads": 0,
   "dependents": 0,

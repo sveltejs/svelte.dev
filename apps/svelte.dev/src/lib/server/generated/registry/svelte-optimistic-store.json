@@ -2,7 +2,9 @@
   "name": "svelte-optimistic-store",
   "description": "Handle optimistic state updates in Svelte applications.",
   "repo_url": "https://github.com/Der-Penz/svelte-optimistic-store",
-  "author": "DerPenz",
+  "authors": [
+    "derpenz"
+  ],
   "homepage": "https://github.com/Der-Penz/svelte-optimistic-store#readme",
   "downloads": 0,
   "dependents": 0,

@@ -1,10 +1,12 @@
 {
   "name": "@sveltinio/seo",
-  "description": "Add SEO metadata, schema.org markup to SvelteKit pages.",
+  "description": "Adds SEO-related Svelte components for structured data.",
   "repo_url": "https://github.com/sveltinio/components-library",
-  "author": "dev",
+  "authors": [
+    "sveltinio"
+  ],
   "homepage": "https://components.sveltin.io",
-  "downloads": 1,
+  "downloads": 18,
   "dependents": 0,
   "updated": "2023-10-01T09:55:06.864Z",
   "tags": [

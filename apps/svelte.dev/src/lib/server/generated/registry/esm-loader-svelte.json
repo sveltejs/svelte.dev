@@ -1,10 +1,12 @@
 {
   "name": "esm-loader-svelte",
-  "description": "Load and transpile Svelte and SvelteKit files with Node.js.",
+  "description": "Load Svelte and SvelteKit files with ESModule loader.",
   "repo_url": "https://github.com/brev/esm-loaders",
-  "author": "Brev Patterson",
+  "authors": [
+    "brev"
+  ],
   "homepage": "https://github.com/brev/esm-loaders/tree/main/packages/esm-loader-svelte#readme",
-  "downloads": 17,
+  "downloads": 28,
   "dependents": 0,
   "updated": "2023-11-01T02:32:43.545Z",
   "tags": [

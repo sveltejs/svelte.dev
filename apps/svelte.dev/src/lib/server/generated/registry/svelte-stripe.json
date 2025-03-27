@@ -1,16 +1,18 @@
 {
   "name": "svelte-stripe",
-  "description": "Add Stripe Elements to Svelte projects.",
+  "description": "Integrate Stripe Elements into Svelte projects.",
   "repo_url": "https://github.com/joshnuss/svelte-stripe",
-  "author": "joshnuss",
+  "authors": [
+    "joshnuss"
+  ],
   "homepage": "https://sveltestripe.com",
-  "downloads": 4653,
+  "downloads": 4571,
   "dependents": 2,
   "updated": "2024-10-31T12:24:24.374Z",
   "tags": [
     "integration"
   ],
-  "svelte5": true,
+  "svelte5": false,
   "runes": false,
   "github_stars": 461
 }

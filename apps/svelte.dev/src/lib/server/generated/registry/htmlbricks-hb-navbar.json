@@ -1,11 +1,13 @@
 {
   "name": "@htmlbricks/hb-navbar",
-  "description": "Svelte Navbar WebComponent.",
+  "description": "Create navbar web component for Svelte apps.",
   "repo_url": "",
-  "author": "Dario Caruso",
-  "downloads": 466,
+  "authors": [
+    "dariocaruso"
+  ],
+  "downloads": 486,
   "dependents": 5,
-  "updated": "2025-03-09T03:10:36.959Z",
+  "updated": "2025-03-24T18:07:21.833Z",
   "tags": [
     "ui"
   ],

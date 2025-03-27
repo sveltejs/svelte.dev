@@ -1,14 +1,16 @@
 {
   "name": "svelte-dnd-action-abstrato",
-  "description": "Create drag and drop interfaces in Svelte applications.",
+  "description": "Implement drag and drop functionality with rich animations in Svelte.",
   "repo_url": "https://github.com/dilonhenrique/svelte-dnd-action",
-  "author": "Isaac Hagoel",
+  "authors": [
+    "dilonhenrique"
+  ],
   "homepage": "https://github.com/dilonhenrique/svelte-dnd-action#readme",
-  "downloads": 0,
+  "downloads": 2,
   "dependents": 0,
   "updated": "2024-05-10T16:25:33.049Z",
   "tags": [
-    "utility"
+    "ui"
   ],
   "svelte5": true,
   "runes": false,

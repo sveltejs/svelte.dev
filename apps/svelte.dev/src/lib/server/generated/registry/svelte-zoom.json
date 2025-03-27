@@ -1,10 +1,12 @@
 {
   "name": "svelte-zoom",
-  "description": "Implement nearly native image scaling in web apps.",
+  "description": "Implement image zooming with pan and pinch gestures in Svelte.",
   "repo_url": "https://github.com/vaheqelyan/svelte-zoom",
-  "author": "Vahe Araqelyan",
+  "authors": [
+    "vaheqelyan"
+  ],
   "homepage": "https://github.com/vaheqelyan/svelte-zoom#readme",
-  "downloads": 263,
+  "downloads": 300,
   "dependents": 2,
   "updated": "2021-08-14T12:10:29.116Z",
   "tags": [

@@ -1,10 +1,12 @@
 {
   "name": "svelte-fastore",
-  "description": "Provide localStorage and sessionStorage utilities for Svelte.",
+  "description": "Provide localStorage and sessionStorage for Svelte.",
   "repo_url": "https://github.com/mwc/svelte-fastore",
-  "author": "mwc@foxmail.com",
+  "authors": [
+    "maowenchao"
+  ],
   "homepage": "https://github.com/mwc/svelte-fastore#readme",
-  "downloads": 2,
+  "downloads": 6,
   "dependents": 0,
   "updated": "2021-07-05T02:09:01.467Z",
   "tags": [

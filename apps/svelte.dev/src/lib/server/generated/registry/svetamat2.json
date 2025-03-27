@@ -1,0 +1,18 @@
+{
+  "name": "svetamat2",
+  "description": "Material Design widgets styled with TailwindCSS for Svelte.",
+  "repo_url": "https://github.com/tianhai82/svetamat2",
+  "authors": [
+    "tianhai82"
+  ],
+  "downloads": 27,
+  "dependents": 0,
+  "updated": "2021-06-24T01:21:23.821Z",
+  "tags": [
+    "component-library",
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 1
+}

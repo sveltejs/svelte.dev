@@ -1,10 +1,12 @@
 {
   "name": "@threlte/extras",
-  "description": "Provides utilities and plugins for Threlte 3D applications.",
+  "description": "Provide utilities for Threlte apps.",
   "repo_url": "https://github.com/threlte/threlte",
-  "author": "Grischa Erbe",
+  "authors": [
+    "grischaerbe"
+  ],
   "homepage": "https://threlte.xyz",
-  "downloads": 6570,
+  "downloads": 4573,
   "dependents": 16,
   "updated": "2025-03-16T19:03:58.996Z",
   "tags": [
@@ -12,5 +14,5 @@
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 2820
+  "github_stars": 2828
 }

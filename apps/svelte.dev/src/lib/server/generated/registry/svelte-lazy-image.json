@@ -1,15 +1,16 @@
 {
   "name": "svelte-lazy-image",
-  "description": "Provides Svelte component for lazy loading images using Intersection Observer.",
+  "description": "Lazy load images in Svelte using Intersection Observer.",
   "repo_url": "https://github.com/alexstaroselsky/svelte-lazy-image",
-  "author": "Alexander Staroselsky",
+  "authors": [
+    "alstar01"
+  ],
   "homepage": "https://github.com/alexstaroselsky/svelte-lazy-image#readme",
-  "downloads": 957,
+  "downloads": 682,
   "dependents": 3,
   "updated": "2022-03-27T15:21:11.389Z",
   "tags": [
-    "media",
-    "dom"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

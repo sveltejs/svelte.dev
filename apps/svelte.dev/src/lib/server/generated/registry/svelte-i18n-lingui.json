@@ -1,8 +1,10 @@
 {
   "name": "svelte-i18n-lingui",
-  "description": "Integrate Lingui for i18n in Svelte/SvelteKit projects.",
+  "description": "Add i18n to Svelte/Sveltekit projects using Lingui.",
   "repo_url": "https://github.com/HenryLie/svelte-i18n-lingui",
-  "author": "Henry Roes Lie",
+  "authors": [
+    "henrylie"
+  ],
   "homepage": "https://github.com/HenryLie/svelte-i18n-lingui#readme",
   "downloads": 190,
   "dependents": 0,
@@ -12,5 +14,5 @@
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 28
+  "github_stars": 29
 }

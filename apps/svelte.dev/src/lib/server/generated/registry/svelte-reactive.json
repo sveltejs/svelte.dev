@@ -1,8 +1,10 @@
 {
   "name": "svelte-reactive",
-  "description": "Offer alternative to Svelte's derived store with similar API.",
+  "description": "Provide alternative to Svelte's derived store with similar API.",
   "repo_url": "https://github.com/olehmisar/svelte-reactive",
-  "author": "olehmisar",
+  "authors": [
+    "olehmisar"
+  ],
   "homepage": "https://github.com/olehmisar/svelte-reactive#readme",
   "downloads": 64,
   "dependents": 1,

@@ -1,8 +1,10 @@
 {
   "name": "sequential-workflow-designer-svelte",
-  "description": "Svelte wrapper for Sequential Workflow Designer component.",
+  "description": "Create sequential workflow designer component for Svelte.",
   "repo_url": "",
-  "author": "b4rtaz",
+  "authors": [
+    "b4rtaz"
+  ],
   "downloads": 335,
   "dependents": 1,
   "updated": "2025-03-20T17:36:55.045Z",

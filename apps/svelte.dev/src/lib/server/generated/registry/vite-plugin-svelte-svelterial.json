@@ -2,9 +2,11 @@
   "name": "vite-plugin-svelte-svelterial",
   "description": "Integrate Svelterial with Vite and SvelteKit.",
   "repo_url": "https://github.com/svelterialjs/integrations",
-  "author": "TheComputerM",
+  "authors": [
+    "thecomputerm"
+  ],
   "homepage": "https://github.com/svelterialjs/integrations/tree/main/packages/vite-plugin#readme",
-  "downloads": 0,
+  "downloads": 10,
   "dependents": 0,
   "updated": "2021-10-04T12:46:38.794Z",
   "tags": [

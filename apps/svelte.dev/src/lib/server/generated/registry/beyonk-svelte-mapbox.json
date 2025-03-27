@@ -1,8 +1,15 @@
 {
   "name": "@beyonk/svelte-mapbox",
-  "description": "Integrate MapBox maps and geocoding components into Svelte apps.",
+  "description": "Integrate Mapbox maps and geocoding into Svelte apps.",
   "repo_url": "",
-  "author": "antony",
+  "authors": [
+    "antony",
+    "adampond",
+    "alex.dilley",
+    "jedwoodcock",
+    "leandro.silva",
+    "tomlewis0"
+  ],
   "downloads": 1382,
   "dependents": 7,
   "updated": "2024-11-11T13:27:03.614Z",
@@ -10,6 +17,6 @@
     "ui",
     "integration"
   ],
-  "svelte5": true,
+  "svelte5": false,
   "runes": false
 }

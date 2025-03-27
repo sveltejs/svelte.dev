@@ -1,14 +1,16 @@
 {
   "name": "odd-components",
-  "description": "Provides Svelte components, including playing card components.",
+  "description": "Provide Svelte components for playing cards.",
   "repo_url": "https://github.com/JulianNymark/odd-components",
-  "author": "just_a_guy",
+  "authors": [
+    "just_a_guy"
+  ],
   "homepage": "https://github.com/JulianNymark/odd-components#readme",
-  "downloads": 0,
+  "downloads": 13,
   "dependents": 0,
   "updated": "2023-06-06T21:30:55.950Z",
   "tags": [
-    "ui"
+    "component-library"
   ],
   "svelte5": false,
   "runes": false,

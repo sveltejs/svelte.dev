@@ -1,9 +1,11 @@
 {
   "name": "@ericksatelite/sputnik-components",
-  "description": "Provides Svelte component library template.",
+  "description": "Create shareable Svelte component libraries.",
   "repo_url": "",
-  "author": "ericksatelite",
-  "downloads": 10,
+  "authors": [
+    "ericksatelite"
+  ],
+  "downloads": 16,
   "dependents": 0,
   "updated": "2020-06-12T00:53:35.722Z",
   "tags": [

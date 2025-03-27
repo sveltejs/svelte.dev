@@ -1,8 +1,10 @@
 {
   "name": "fox-ui-svelte",
-  "description": "Create beautiful UI components with Tailwind 4 and Svelte 5.",
+  "description": "Create beautiful UI components with Tailwind CSS and Svelte 5.",
   "repo_url": "https://github.com/flo-bit/ui-kit",
-  "author": "flo-bit",
+  "authors": [
+    "flo-bit128"
+  ],
   "homepage": "https://flo-bit.dev/ui-kit",
   "downloads": 283,
   "dependents": 0,

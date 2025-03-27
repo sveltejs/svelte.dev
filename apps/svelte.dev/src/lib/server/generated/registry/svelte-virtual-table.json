@@ -1,9 +1,11 @@
 {
   "name": "svelte-virtual-table",
-  "description": "Provides sortable, virtual table component for Svelte.",
+  "description": "Creates sortable, virtual table component for Svelte.",
   "repo_url": "https://github.com/BernhardWebstudio/SvelteVirtualTable",
-  "author": "Tim Bernhard",
-  "downloads": 3,
+  "authors": [
+    "bernhard_webstudio"
+  ],
+  "downloads": 17,
   "dependents": 0,
   "updated": "2023-12-29T08:15:20.197Z",
   "tags": [

@@ -1,10 +1,13 @@
 {
   "name": "@svelteuidev/prism",
-  "description": "Provides code highlighting with SvelteUI theme.",
+  "description": "Highlight code with SvelteUI theme.",
   "repo_url": "https://github.com/svelteuidev/svelteui",
-  "author": "Kamell Perry",
+  "authors": [
+    "lowkey_daisy",
+    "uxtitan"
+  ],
   "homepage": "https://svelteui.dev/",
-  "downloads": 12,
+  "downloads": 76,
   "dependents": 1,
   "updated": "2024-07-07T14:30:26.471Z",
   "tags": [
@@ -12,5 +15,5 @@
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 1361
+  "github_stars": 1363
 }

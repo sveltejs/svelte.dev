@@ -1,11 +1,13 @@
 {
   "name": "@htmlbricks/hb-footer",
-  "description": "Svelte Bootstrap Footer WebComponent.",
+  "description": "Create Svelte Bootstrap footer web component.",
   "repo_url": "",
-  "author": "Dario Caruso",
-  "downloads": 458,
+  "authors": [
+    "dariocaruso"
+  ],
+  "downloads": 475,
   "dependents": 4,
-  "updated": "2025-03-09T03:10:36.808Z",
+  "updated": "2025-03-24T18:07:22.144Z",
   "tags": [
     "ui"
   ],

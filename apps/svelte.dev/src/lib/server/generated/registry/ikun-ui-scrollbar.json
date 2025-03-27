@@ -1,8 +1,10 @@
 {
   "name": "@ikun-ui/scrollbar",
-  "description": "Create scrollbar components for Svelte apps.",
+  "description": "Add custom scrollbars to Svelte applications.",
   "repo_url": "",
-  "author": "baiwusanyu",
+  "authors": [
+    "baiwusanyu"
+  ],
   "downloads": 13,
   "dependents": 3,
   "updated": "2025-01-24T03:49:14.897Z",

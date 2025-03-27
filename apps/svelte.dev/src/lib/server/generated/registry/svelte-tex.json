@@ -1,9 +1,11 @@
 {
   "name": "svelte-tex",
-  "description": "Convert TeX to rendered SVG or MathML in Svelte components.",
+  "description": "Convert TeX to SVG using MathJax or MathML using Temml.",
   "repo_url": "",
-  "author": "Jirawat Boonkumnerd",
-  "downloads": 2,
+  "authors": [
+    "ntsd"
+  ],
+  "downloads": 9,
   "dependents": 1,
   "updated": "2024-11-16T12:49:02.760Z",
   "tags": [

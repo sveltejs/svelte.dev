@@ -1,10 +1,12 @@
 {
   "name": "sveltoaste",
-  "description": "Display Svelte notifications with customizable themes.",
+  "description": "Create toast notifications in Svelte applications.",
   "repo_url": "https://github.com/marvinody/sveltoaste",
-  "author": "marvinody",
+  "authors": [
+    "marvinody"
+  ],
   "homepage": "https://github.com/marvinody/sveltoaste#readme",
-  "downloads": 1,
+  "downloads": 6,
   "dependents": 0,
   "updated": "2020-06-27T17:31:40.624Z",
   "tags": [

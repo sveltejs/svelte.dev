@@ -1,8 +1,10 @@
 {
   "name": "parcel-transformer-svelte-v4",
-  "description": "Transform Svelte 4 components with Parcel bundler.",
+  "description": "Transform Svelte code with Parcel 2, supporting Svelte 4.",
   "repo_url": "https://github.com/orlov-vo/parcel-transformer-svelte",
-  "author": "Vladislav Orlov",
+  "authors": [
+    "fregante"
+  ],
   "homepage": "https://github.com/orlov-vo/parcel-transformer-svelte#readme",
   "downloads": 2,
   "dependents": 0,

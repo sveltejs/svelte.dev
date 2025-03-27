@@ -1,14 +1,17 @@
 {
   "name": "svelte-integration-red",
-  "description": "Integrate Svelte into Node-RED for node editor development.",
+  "description": "Integrate Svelte into Node-RED, develop editor parts.",
   "repo_url": "https://gitlab.com/2WeltenChris/svelte-integration-red",
-  "author": "Christian Geiger",
+  "authors": [
+    "2weltenchris",
+    "meijey"
+  ],
   "homepage": "https://gitlab.com/2WeltenChris/svelte-integration-red#readme",
-  "downloads": 165,
+  "downloads": 267,
   "dependents": 1,
   "updated": "2025-03-19T08:53:31.072Z",
   "tags": [
-    "tooling"
+    "integration"
   ],
   "svelte5": false,
   "runes": false

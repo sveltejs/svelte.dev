@@ -1,8 +1,10 @@
 {
   "name": "@jamen/svelte-router",
-  "description": "Provides a Svelte router with store and components.",
+  "description": "Svelte router with store and components.",
   "repo_url": "https://github.com/jamen/svelte-router",
-  "author": "Jamen Marz",
+  "authors": [
+    "jamen"
+  ],
   "homepage": "https://github.com/jamen/svelte-router#readme",
   "downloads": 6,
   "dependents": 0,

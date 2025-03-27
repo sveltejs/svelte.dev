@@ -1,9 +1,11 @@
 {
   "name": "@svelte-bin/clipboard",
-  "description": "Svelte action and utilities for copying text and image to clipboard.",
+  "description": "Copies text and images to clipboard in Svelte apps.",
   "repo_url": "",
-  "author": "binsarjr",
-  "downloads": 137,
+  "authors": [
+    "binsarjr"
+  ],
+  "downloads": 145,
   "dependents": 0,
   "updated": "2023-11-13T20:03:51.203Z",
   "tags": [

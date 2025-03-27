@@ -2,16 +2,18 @@
   "name": "@unocss/svelte-scoped",
   "description": "Apply UnoCSS utility classes scoped to Svelte components.",
   "repo_url": "https://github.com/unocss/unocss",
-  "author": "Jacob Bowdoin",
+  "authors": [
+    "antfu",
+    "unocss-bot"
+  ],
   "homepage": "https://unocss.dev",
-  "downloads": 1033,
+  "downloads": 1202,
   "dependents": 0,
-  "updated": "2025-03-18T10:02:16.934Z",
+  "updated": "2025-03-25T09:25:29.636Z",
   "tags": [
-    "tooling",
-    "preprocessor"
+    "tooling"
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 17386
+  "github_stars": 17404
 }

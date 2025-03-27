@@ -1,10 +1,12 @@
 {
   "name": "@huntabyte/mdsvex",
-  "description": "Process Markdown files for Svelte components.",
+  "description": "Process Markdown with Svelte components using MDsveX.",
   "repo_url": "https://github.com/huntabyte/MDsveX",
-  "author": "pngwn",
+  "authors": [
+    "huntabyte"
+  ],
   "homepage": "https://github.com/huntabyte/MDsveX#readme",
-  "downloads": 74,
+  "downloads": 442,
   "dependents": 0,
   "updated": "2023-08-01T15:13:31.096Z",
   "tags": [

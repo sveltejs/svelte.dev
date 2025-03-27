@@ -1,10 +1,12 @@
 {
   "name": "@selemondev/svelte-marquee",
-  "description": "Create marquee component for Svelte.",
+  "description": "Create beautiful marquee components for Svelte.",
   "repo_url": "https://github.com/selemondev/svelte-marquee",
-  "author": "Selemondev",
+  "authors": [
+    "selemondev"
+  ],
   "homepage": "https://github.com/selemondev/svelte-marquee#readme",
-  "downloads": 328,
+  "downloads": 341,
   "dependents": 0,
   "updated": "2025-03-04T18:51:20.897Z",
   "tags": [

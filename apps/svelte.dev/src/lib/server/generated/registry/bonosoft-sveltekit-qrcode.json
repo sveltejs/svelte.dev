@@ -1,10 +1,12 @@
 {
   "name": "@bonosoft/sveltekit-qrcode",
-  "description": "Generate QR codes for SvelteKit applications.",
+  "description": "Generate QR codes in SvelteKit applications.",
   "repo_url": "https://github.com/bonosoft/sveltekit-qrcode",
-  "author": "Bonosoft",
+  "authors": [
+    "bonosoft"
+  ],
   "homepage": "https://github.com/bonosoft/sveltekit-qrcode#readme",
-  "downloads": 782,
+  "downloads": 434,
   "dependents": 0,
   "updated": "2023-03-25T23:13:49.102Z",
   "tags": [

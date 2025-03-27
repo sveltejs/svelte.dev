@@ -1,10 +1,12 @@
 {
   "name": "svelte-style-action",
-  "description": "Manage style attributes in Svelte without string concatenation.",
+  "description": "Manage Svelte style attributes without string concatenation.",
   "repo_url": "https://github.com/dimfeld/svelte-style-action",
-  "author": "Daniel Imfeld",
+  "authors": [
+    "dimfeld"
+  ],
   "homepage": "https://github.com/dimfeld/svelte-style-action#readme",
-  "downloads": 32,
+  "downloads": 56,
   "dependents": 1,
   "updated": "2020-12-31T00:49:08.959Z",
   "tags": [

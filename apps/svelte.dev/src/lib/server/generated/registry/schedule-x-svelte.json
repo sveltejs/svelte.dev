@@ -1,11 +1,13 @@
 {
   "name": "@schedule-x/svelte",
-  "description": "Offer Schedule-X calendar component for Svelte.",
+  "description": "Create event calendar components for Svelte applications.",
   "repo_url": "",
-  "author": "tomosterlund",
-  "downloads": 184,
+  "authors": [
+    "tomosterlund"
+  ],
+  "downloads": 358,
   "dependents": 0,
-  "updated": "2024-12-25T19:08:58.117Z",
+  "updated": "2025-03-25T06:04:26.620Z",
   "tags": [
     "ui"
   ],

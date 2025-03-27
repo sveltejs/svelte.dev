@@ -1,10 +1,12 @@
 {
   "name": "svelte-yt",
-  "description": "Embed YouTube videos in Svelte components.",
+  "description": "Embed YouTube videos in Svelte applications.",
   "repo_url": "https://github.com/zusorio/svelte-yt",
-  "author": "Tobias Messner",
+  "authors": [
+    "zusor"
+  ],
   "homepage": "https://github.com/zusorio/svelte-yt#readme",
-  "downloads": 1,
+  "downloads": 0,
   "dependents": 0,
   "updated": "2023-02-15T10:59:33.972Z",
   "tags": [

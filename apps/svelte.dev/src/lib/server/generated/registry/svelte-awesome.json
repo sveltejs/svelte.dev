@@ -1,10 +1,12 @@
 {
   "name": "svelte-awesome",
-  "description": "Use Font Awesome icons in Svelte applications.",
+  "description": "Use Font Awesome SVG icon components in Svelte.",
   "repo_url": "https://github.com/RobBrazier/svelte-awesome",
-  "author": "Rob Brazier",
+  "authors": [
+    "robbrazier"
+  ],
   "homepage": "https://github.com/RobBrazier/svelte-awesome#readme",
-  "downloads": 7308,
+  "downloads": 7868,
   "dependents": 20,
   "updated": "2024-10-22T12:51:36.311Z",
   "tags": [
@@ -12,5 +14,5 @@
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 497
+  "github_stars": 498
 }

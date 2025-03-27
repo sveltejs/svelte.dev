@@ -1,10 +1,12 @@
 {
   "name": "svelte-mp3",
-  "description": "Minimalistic Svelte component for audio playback.",
+  "description": "Create a minimalistic audio player for Svelte.",
   "repo_url": "https://github.com/khandakar227/svelte-mp3",
-  "author": "Khandakar Shakib",
+  "authors": [
+    "khandakar-shakib"
+  ],
   "homepage": "https://github.com/khandakar227/svelte-mp3#readme",
-  "downloads": 17,
+  "downloads": 30,
   "dependents": 0,
   "updated": "2023-05-29T06:11:03.379Z",
   "tags": [

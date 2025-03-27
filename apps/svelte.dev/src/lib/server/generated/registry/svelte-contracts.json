@@ -1,14 +1,17 @@
 {
   "name": "svelte-contracts",
-  "description": "Access Ethereum contract addresses in Svelte apps.",
+  "description": "Accesses contract addresses on Ethereum forked chains.",
   "repo_url": "https://github.com/PythoniCode/svelte-contracts",
-  "author": "Anthony Riley",
+  "authors": [
+    "anthonyriley"
+  ],
   "homepage": "https://github.com/PythoniCode/svelte-contracts#readme",
-  "downloads": 3,
+  "downloads": 24,
   "dependents": 0,
   "updated": "2022-01-05T04:23:09.034Z",
   "tags": [
-    "utility"
+    "utility",
+    "integration"
   ],
   "svelte5": false,
   "runes": false,

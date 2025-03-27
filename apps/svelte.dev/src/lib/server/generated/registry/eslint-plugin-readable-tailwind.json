@@ -1,16 +1,19 @@
 {
   "name": "eslint-plugin-readable-tailwind",
-  "description": "Enforces readable Tailwind CSS class formatting in Svelte.",
+  "description": "Automatically format Tailwind CSS classes for better readability.",
   "repo_url": "https://github.com/schoero/eslint-plugin-readable-tailwind",
-  "author": "Roger Schönbächler",
+  "authors": [
+    "schoero"
+  ],
   "homepage": "https://github.com/schoero/eslint-plugin-readable-tailwind#readme",
-  "downloads": 8958,
+  "downloads": 8539,
   "dependents": 5,
   "updated": "2025-03-08T20:27:37.922Z",
   "tags": [
-    "tooling"
+    "tooling",
+    "preprocessor"
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 157
+  "github_stars": 159
 }

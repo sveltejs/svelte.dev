@@ -1,0 +1,18 @@
+{
+  "name": "spre",
+  "description": "Rewrite Svelte import declarations during preprocessing.",
+  "repo_url": "https://github.com/metonym/spre",
+  "authors": [
+    "metonym"
+  ],
+  "homepage": "https://github.com/metonym/spre",
+  "downloads": 5,
+  "dependents": 0,
+  "updated": "2021-08-07T00:47:43.925Z",
+  "tags": [
+    "preprocessor"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

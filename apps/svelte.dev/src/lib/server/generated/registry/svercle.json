@@ -1,10 +1,12 @@
 {
   "name": "svercle",
-  "description": "Create configurable superellipse components for Svelte.",
+  "description": "Generate configurable superellipse approximations for Svelte.",
   "repo_url": "https://github.com/aMediocreDad/svercle",
-  "author": "Filip Ambrosius",
+  "authors": [
+    "amediocredad"
+  ],
   "homepage": "https://github.com/aMediocreDad/svercle#readme",
-  "downloads": 0,
+  "downloads": 7,
   "dependents": 0,
   "updated": "2021-11-05T23:34:34.874Z",
   "tags": [

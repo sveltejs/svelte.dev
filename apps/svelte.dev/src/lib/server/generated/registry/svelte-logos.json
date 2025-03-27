@@ -1,10 +1,12 @@
 {
   "name": "svelte-logos",
-  "description": "Provide Svelte components for various logos.",
+  "description": "Provide Svelte components for various logos and icons.",
   "repo_url": "https://github.com/joaopalmeiro/svelte-logos",
-  "author": "João Palmeiro",
+  "authors": [
+    "joaopalmeiro"
+  ],
   "homepage": "https://github.com/joaopalmeiro/svelte-logos#readme",
-  "downloads": 2,
+  "downloads": 16,
   "dependents": 0,
   "updated": "2022-01-02T18:25:27.143Z",
   "tags": [

@@ -1,14 +1,16 @@
 {
   "name": "svelte-grid-extended",
-  "description": "Create draggable and resizable grid layout for Svelte.",
+  "description": "Create draggable and resizable grid layouts for Svelte.",
   "repo_url": "https://github.com/cuire/svelte-grid-extended",
-  "author": "cuire",
+  "authors": [
+    "cuire"
+  ],
   "homepage": "https://github.com/cuire/svelte-grid-extended#readme",
-  "downloads": 715,
+  "downloads": 730,
   "dependents": 0,
   "updated": "2024-06-01T06:55:58.810Z",
   "tags": [
-    "ui"
+    "component-library"
   ],
   "svelte5": false,
   "runes": false,

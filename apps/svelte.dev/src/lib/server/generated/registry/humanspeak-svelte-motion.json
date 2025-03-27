@@ -1,10 +1,12 @@
 {
   "name": "@humanspeak/svelte-motion",
-  "description": "Create hardware-accelerated animations for Svelte 5.",
+  "description": "Provides hardware-accelerated animations for Svelte 5 apps.",
   "repo_url": "https://github.com/humanspeak/svelte-motion",
-  "author": "Humanspeak, Inc.",
+  "authors": [
+    "humanspeakadmin"
+  ],
   "homepage": "https://github.com/humanspeak/svelte-motion#readme",
-  "downloads": 17,
+  "downloads": 12,
   "dependents": 0,
   "updated": "2025-03-04T01:36:17.905Z",
   "tags": [

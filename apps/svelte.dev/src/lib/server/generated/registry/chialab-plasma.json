@@ -2,9 +2,12 @@
   "name": "@chialab/plasma",
   "description": "Generate Custom Elements wrappers for Svelte.",
   "repo_url": "https://github.com/chialab/plasma",
-  "author": "Chialab",
+  "authors": [
+    "chialab-admin",
+    "chialab-developers"
+  ],
   "homepage": "https://github.com/chialab/plasma#readme",
-  "downloads": 34,
+  "downloads": 15,
   "dependents": 0,
   "updated": "2025-01-07T11:32:05.252Z",
   "tags": [

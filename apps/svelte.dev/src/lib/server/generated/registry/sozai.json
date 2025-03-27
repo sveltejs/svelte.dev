@@ -1,0 +1,16 @@
+{
+  "name": "sozai",
+  "description": "Material design UI framework for Svelte.",
+  "repo_url": "",
+  "authors": [
+    "r2dev2"
+  ],
+  "downloads": 19,
+  "dependents": 0,
+  "updated": "2022-03-10T18:06:21.791Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": false,
+  "runes": false
+}

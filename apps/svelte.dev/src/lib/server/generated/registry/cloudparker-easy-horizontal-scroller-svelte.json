@@ -1,9 +1,11 @@
 {
   "name": "@cloudparker/easy-horizontal-scroller-svelte",
-  "description": "Implements horizontal scrolling on web and mobile UIs.",
+  "description": "Implement horizontal scrolling with drag gestures in Svelte apps.",
   "repo_url": "",
-  "author": "cloudparker.com",
-  "downloads": 7,
+  "authors": [
+    "couldparker.com"
+  ],
+  "downloads": 0,
   "dependents": 0,
   "updated": "2023-04-09T03:17:07.537Z",
   "tags": [

@@ -1,14 +1,16 @@
 {
   "name": "svelte-holopin",
-  "description": "Integrate Holopin board API into Svelte applications.",
+  "description": "Wrap Holopin's board API, display Holopin badges.",
   "repo_url": "https://github.com/zaneshaw/svelte-holopin",
-  "author": "zaneshaw",
+  "authors": [
+    "zaneshaw"
+  ],
   "homepage": "https://triangle100.com",
-  "downloads": 0,
+  "downloads": 8,
   "dependents": 0,
   "updated": "2022-12-23T20:55:43.573Z",
   "tags": [
-    "integration"
+    "utility"
   ],
   "svelte5": false,
   "runes": false,

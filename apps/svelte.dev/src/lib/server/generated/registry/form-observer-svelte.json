@@ -1,10 +1,12 @@
 {
   "name": "@form-observer/svelte",
-  "description": "Observe and validate forms in Svelte applications.",
+  "description": "Observe and validate form fields in Svelte applications.",
   "repo_url": "https://github.com/enthusiastic-js/form-observer",
-  "author": "Isaiah Thomason",
+  "authors": [
+    "itenthusiasm"
+  ],
   "homepage": "https://github.com/enthusiastic-js/form-observer#readme",
-  "downloads": 30,
+  "downloads": 16,
   "dependents": 0,
   "updated": "2024-05-05T17:20:03.222Z",
   "tags": [

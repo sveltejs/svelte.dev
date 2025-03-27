@@ -1,12 +1,15 @@
 {
   "name": "@htmlbricks/hb-player-live-camera-ptz",
-  "description": "Provide Svelte-Bootstrap player live camera PTZ web component.",
+  "description": "Provide live camera PTZ controls within Svelte applications.",
   "repo_url": "",
-  "author": "Dario Caruso",
-  "downloads": 84,
+  "authors": [
+    "dariocaruso"
+  ],
+  "downloads": 88,
   "dependents": 1,
-  "updated": "2025-03-09T03:10:42.798Z",
+  "updated": "2025-03-24T18:07:28.254Z",
   "tags": [
+    "media",
     "ui"
   ],
   "svelte5": false,

@@ -1,10 +1,13 @@
 {
   "name": "@statsforvalteren/staf-komponentbibliotek-svelte",
-  "description": "Provide component library for Statsforvalteren, based on Sveltestrap.",
+  "description": "Provide component library for Svelte with custom styling.",
   "repo_url": "https://github.com/fmfaDigitalisering/staf-komponentbibliotek-svelte",
-  "author": "pekaaw",
+  "authors": [
+    "pekaaw",
+    "krdon"
+  ],
   "homepage": "https://github.com/fmfaDigitalisering/staf-komponentbibliotek-svelte#readme",
-  "downloads": 0,
+  "downloads": 37,
   "dependents": 0,
   "updated": "2022-02-01T08:54:31.521Z",
   "tags": [

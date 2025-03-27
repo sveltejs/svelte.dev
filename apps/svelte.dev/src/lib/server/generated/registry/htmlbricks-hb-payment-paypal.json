@@ -1,11 +1,13 @@
 {
   "name": "@htmlbricks/hb-payment-paypal",
-  "description": "Svelte Paypal Payment WebComponent.",
+  "description": "Provides Svelte Paypal Payment WebComponent.",
   "repo_url": "",
-  "author": "Dario Caruso",
-  "downloads": 3589,
+  "authors": [
+    "dariocaruso"
+  ],
+  "downloads": 3217,
   "dependents": 3,
-  "updated": "2025-03-09T03:10:33.600Z",
+  "updated": "2025-03-24T18:07:18.349Z",
   "tags": [
     "integration"
   ],

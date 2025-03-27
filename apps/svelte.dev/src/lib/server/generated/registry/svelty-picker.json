@@ -1,14 +1,16 @@
 {
   "name": "svelty-picker",
-  "description": "Create simple date/time picker written in Svelte.",
+  "description": "Provides a date/time picker component for Svelte.",
   "repo_url": "",
-  "author": "mskocik",
-  "downloads": 5315,
+  "authors": [
+    "mskocik"
+  ],
+  "downloads": 4855,
   "dependents": 3,
   "updated": "2025-02-25T09:59:33.057Z",
   "tags": [
     "ui"
   ],
-  "svelte5": true,
+  "svelte5": false,
   "runes": false
 }

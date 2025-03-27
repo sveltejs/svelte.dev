@@ -1,0 +1,18 @@
+{
+  "name": "rx-svelte",
+  "description": "Integrate RxJS Observables into Svelte applications.",
+  "repo_url": "https://github.com/KakuschkeFelix/rx-svelte",
+  "authors": [
+    "kakuschkefelix"
+  ],
+  "homepage": "https://github.com/KakuschkeFelix/rx-svelte",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2023-11-08T09:39:58.251Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

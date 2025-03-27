@@ -1,12 +1,14 @@
 {
   "name": "sv-cscarousel",
-  "description": "Create responsive, reusable Svelte carousel components.",
+  "description": "Provides a responsive, reusable Svelte carousel component.",
   "repo_url": "https://github.com/sidfishus/sv-cscarousel",
-  "author": "sidfishus",
+  "authors": [
+    "sidfishus"
+  ],
   "homepage": "https://github.com/sidfishus/sv-cscarousel#readme",
-  "downloads": 384,
+  "downloads": 85,
   "dependents": 0,
-  "updated": "2025-03-15T16:23:49.543Z",
+  "updated": "2025-03-26T20:05:32.123Z",
   "tags": [
     "ui"
   ],

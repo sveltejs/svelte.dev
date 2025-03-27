@@ -1,0 +1,19 @@
+{
+  "name": "@thewuh/wallet-adapter-svelte-ui",
+  "description": "Integrates Solana wallets using Svelte components.",
+  "repo_url": "https://github.com/thewuhxyz/wallet-adapter-svelte",
+  "authors": [
+    "_thewuh"
+  ],
+  "homepage": "https://github.com/thewuhxyz/wallet-adapter-svelte#readme",
+  "downloads": 39,
+  "dependents": 0,
+  "updated": "2024-07-24T17:32:07.293Z",
+  "tags": [
+    "ui",
+    "integration"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 1
+}

@@ -1,14 +1,16 @@
 {
   "name": "@ai-toolkit/svelte",
-  "description": "Provide Svelte UI components for AI TOOLKIT.",
+  "description": "Provides Svelte UI components for AI TOOLKIT.",
   "repo_url": "https://github.com/khulnasoft/ai-toolkit",
-  "author": "khulnasoft-lab",
+  "authors": [
+    "khulnasoft-lab"
+  ],
   "homepage": "https://sdk.khulnasoft.com/docs",
   "downloads": 15,
   "dependents": 0,
   "updated": "2025-03-09T18:58:49.742Z",
   "tags": [
-    "ui"
+    "component-library"
   ],
   "svelte5": true,
   "runes": false,

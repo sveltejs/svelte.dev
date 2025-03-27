@@ -1,10 +1,13 @@
 {
   "name": "svelte-barcode",
-  "description": "Generates barcode images within Svelte applications.",
+  "description": "Generate barcode images within Svelte components.",
   "repo_url": "https://github.com/Bunlong/svelte-barcode",
-  "author": "Bunlong",
+  "authors": [
+    "bunlong",
+    "vanbunlong"
+  ],
   "homepage": "https://github.com/Bunlong/svelte-barcode",
-  "downloads": 171,
+  "downloads": 90,
   "dependents": 0,
   "updated": "2022-02-07T17:27:24.958Z",
   "tags": [

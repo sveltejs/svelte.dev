@@ -1,10 +1,12 @@
 {
   "name": "eleventy-plugin-svelte",
-  "description": "Integrate Svelte components into Eleventy static site generator.",
+  "description": "Integrate Svelte components into Eleventy static sites.",
   "repo_url": "https://github.com/gobeli/eleventy-plugin-svelte",
-  "author": "Etienne Gobeli",
+  "authors": [
+    "tienou"
+  ],
   "homepage": "https://github.com/gobeli/eleventy-plugin-svelte#readme",
-  "downloads": 149,
+  "downloads": 192,
   "dependents": 0,
   "updated": "2020-12-17T17:56:50.672Z",
   "tags": [

@@ -1,10 +1,15 @@
 {
   "name": "@responsive-ui/ellipsis",
-  "description": "Truncate text with ellipsis in Svelte applications.",
+  "description": "Truncates text with ellipsis in Svelte apps.",
   "repo_url": "https://github.com/wetix/responsive-ui",
-  "author": "Si3nLoong",
+  "authors": [
+    "rexlow",
+    "bassemsab",
+    "rm.oska",
+    "apacventure"
+  ],
   "homepage": "https://github.com/wetix/responsive-ui/blob/main/components/ellipsis#README.md",
-  "downloads": 0,
+  "downloads": 76,
   "dependents": 1,
   "updated": "2024-04-23T07:51:05.911Z",
   "tags": [

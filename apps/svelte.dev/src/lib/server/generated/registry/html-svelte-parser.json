@@ -2,9 +2,11 @@
   "name": "html-svelte-parser",
   "description": "Parse HTML into Svelte components.",
   "repo_url": "https://github.com/PatrickG/html-svelte-parser",
-  "author": "Patrick Günther",
+  "authors": [
+    "pehgeh"
+  ],
   "homepage": "https://github.com/PatrickG/html-svelte-parser#readme",
-  "downloads": 161,
+  "downloads": 271,
   "dependents": 0,
   "updated": "2024-01-11T10:14:34.087Z",
   "tags": [

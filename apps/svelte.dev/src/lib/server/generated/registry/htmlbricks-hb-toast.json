@@ -1,11 +1,13 @@
 {
   "name": "@htmlbricks/hb-toast",
-  "description": "Create Svelte-Bootstrap toast web component.",
+  "description": "Create toast notifications in Svelte applications.",
   "repo_url": "",
-  "author": "Dario Caruso",
-  "downloads": 421,
+  "authors": [
+    "dariocaruso"
+  ],
+  "downloads": 433,
   "dependents": 2,
-  "updated": "2025-03-09T03:10:36.718Z",
+  "updated": "2025-03-24T18:07:21.219Z",
   "tags": [
     "ui"
   ],

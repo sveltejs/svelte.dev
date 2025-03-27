@@ -1,10 +1,12 @@
 {
   "name": "@glagan/minimark",
-  "description": "Render Markdown-like text as Svelte components.",
+  "description": "Renders text with markdown-like tags into Svelte components.",
   "repo_url": "https://github.com/Glagan/minimark",
-  "author": "Glagan",
+  "authors": [
+    "glagan"
+  ],
   "homepage": "https://github.com/Glagan/minimark",
-  "downloads": 5,
+  "downloads": 0,
   "dependents": 1,
   "updated": "2022-09-18T19:09:59.843Z",
   "tags": [

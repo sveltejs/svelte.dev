@@ -1,14 +1,16 @@
 {
   "name": "svelte-pick-a-place",
-  "description": "Select location or area using Leaflet map in Svelte.",
+  "description": "Select locations and areas on Leaflet maps in Svelte apps.",
   "repo_url": "",
-  "author": "Jimmy Utterström",
+  "authors": [
+    "jimutt"
+  ],
   "homepage": "https://github.com/jimutt/svelte-pick-a-place",
-  "downloads": 42,
+  "downloads": 49,
   "dependents": 0,
   "updated": "2019-09-30T18:26:43.045Z",
   "tags": [
-    "utility"
+    "ui"
   ],
   "svelte5": false,
   "runes": false

@@ -1,10 +1,12 @@
 {
   "name": "sveltekit-medusa-client",
-  "description": "Provide client library for Medusa ecommerce backend.",
+  "description": "Client library for Medusa ecommerce backend in SvelteKit.",
   "repo_url": "https://github.com/pevey/sveltekit-medusa-client",
-  "author": "Lacey Pevey",
+  "authors": [
+    "pevey"
+  ],
   "homepage": "https://pevey.com/sveltekit-medusa-client",
-  "downloads": 36,
+  "downloads": 27,
   "dependents": 0,
   "updated": "2023-09-02T15:49:08.051Z",
   "tags": [

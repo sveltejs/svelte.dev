@@ -1,14 +1,21 @@
 {
   "name": "@beyonk/svelte-scrollspy",
-  "description": "Scrollspy component for Svelte using IntersectionObservers.",
+  "description": "Create scrollspy functionality in Svelte applications.",
   "repo_url": "https://github.com/beyonk-adventures/svelte-scrollspy",
-  "author": "antony",
+  "authors": [
+    "antony",
+    "adampond",
+    "alex.dilley",
+    "jedwoodcock",
+    "leandro.silva",
+    "tomlewis0"
+  ],
   "homepage": "https://github.com/beyonk-adventures/svelte-scrollspy#readme",
-  "downloads": 39,
+  "downloads": 12,
   "dependents": 0,
   "updated": "2019-06-28T20:26:57.682Z",
   "tags": [
-    "utility"
+    "dom"
   ],
   "svelte5": false,
   "runes": false,

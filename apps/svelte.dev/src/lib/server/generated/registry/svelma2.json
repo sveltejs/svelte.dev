@@ -1,14 +1,17 @@
 {
   "name": "svelma2",
-  "description": "Bulma components for Svelte applications.",
+  "description": "Bulma UI components for Svelte applications.",
   "repo_url": "https://github.com/abbychau/svelma",
-  "author": "Abby Chau, Brian Hann",
+  "authors": [
+    "abbychau"
+  ],
   "homepage": "https://github.com/abbychau/svelma#readme",
-  "downloads": 2,
+  "downloads": 9,
   "dependents": 0,
   "updated": "2021-03-19T09:37:05.949Z",
   "tags": [
-    "component-library"
+    "component-library",
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

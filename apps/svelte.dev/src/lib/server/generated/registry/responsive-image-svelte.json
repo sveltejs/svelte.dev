@@ -1,17 +1,19 @@
 {
   "name": "@responsive-image/svelte",
-  "description": "Render responsive images in Svelte, local or CDN-based.",
+  "description": "Render responsive images in Svelte apps.",
   "repo_url": "https://github.com/simonihmig/responsive-image",
-  "author": "Simon Ihmig",
+  "authors": [
+    "simonihmig"
+  ],
   "homepage": "https://github.com/simonihmig/responsive-image#readme",
   "downloads": 4,
   "dependents": 0,
   "updated": "2025-02-13T17:31:53.489Z",
   "tags": [
-    "media",
-    "ui"
+    "ui",
+    "media"
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 151
+  "github_stars": 153
 }

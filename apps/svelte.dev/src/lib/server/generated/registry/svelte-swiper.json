@@ -2,9 +2,11 @@
   "name": "svelte-swiper",
   "description": "Implement Swiper.js carousels in Svelte applications.",
   "repo_url": "https://github.com/beomy/svelte-swiper",
-  "author": "Hyo Bum Lee",
+  "authors": [
+    "beomy"
+  ],
   "homepage": "https://github.com/beomy/svelte-swiper#readme",
-  "downloads": 186,
+  "downloads": 270,
   "dependents": 1,
   "updated": "2020-08-14T07:33:44.956Z",
   "tags": [

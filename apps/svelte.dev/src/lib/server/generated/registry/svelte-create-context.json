@@ -1,8 +1,10 @@
 {
   "name": "svelte-create-context",
-  "description": "Implement keyless, typesafe Svelte context API.",
+  "description": "Create keyless, typesafe Svelte context API.",
   "repo_url": "https://github.com/bechii/svelte-create-context",
-  "author": "Simon Bechmann",
+  "authors": [
+    "bechii"
+  ],
   "homepage": "https://github.com/bechii/svelte-create-context#readme",
   "downloads": 100,
   "dependents": 0,

@@ -1,0 +1,16 @@
+{
+  "name": "@rubus/svelte-spectrum-icons-ui",
+  "description": "Use Adobe Spectrum Design System icons in Svelte.",
+  "repo_url": "",
+  "authors": [
+    "runningzs"
+  ],
+  "downloads": 51,
+  "dependents": 1,
+  "updated": "2020-10-24T18:11:07.838Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

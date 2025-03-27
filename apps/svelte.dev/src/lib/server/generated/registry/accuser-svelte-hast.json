@@ -2,14 +2,15 @@
   "name": "@accuser/svelte-hast",
   "description": "Transform Hast to Svelte components.",
   "repo_url": "https://github.com/accuser/svelte-hast",
-  "author": "Matthew Gibbons",
+  "authors": [
+    "accuser"
+  ],
   "homepage": "https://github.com/accuser/svelte-hast",
-  "downloads": 12,
+  "downloads": 16,
   "dependents": 1,
   "updated": "2024-10-06T06:37:34.602Z",
   "tags": [
-    "content",
-    "utility"
+    "content"
   ],
   "svelte5": true,
   "runes": false,

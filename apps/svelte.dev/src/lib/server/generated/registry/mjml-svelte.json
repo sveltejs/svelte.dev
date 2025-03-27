@@ -1,14 +1,16 @@
 {
   "name": "mjml-svelte",
-  "description": "Integrate MJML elements with Svelte components, render server-side.",
+  "description": "Integrate MJML with SvelteKit for responsive email templates.",
   "repo_url": "https://github.com/Luiz-Monad/mjml-svelte",
-  "author": "Luiz Stangarlin",
+  "authors": [
+    "luiz_monad"
+  ],
   "homepage": "https://github.com/Luiz-Monad/mjml-svelte#readme",
-  "downloads": 13,
+  "downloads": 83,
   "dependents": 0,
-  "updated": "2025-03-18T20:48:29.661Z",
+  "updated": "2025-03-24T20:07:03.076Z",
   "tags": [
-    "tooling"
+    "utility"
   ],
   "svelte5": true,
   "runes": false,

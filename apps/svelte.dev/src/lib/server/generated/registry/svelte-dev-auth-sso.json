@@ -1,10 +1,12 @@
 {
   "name": "@svelte-dev/auth-sso",
-  "description": "Integrate SSO authentication for Svelte applications.",
+  "description": "Implements SSO authentication strategies for Svelte applications.",
   "repo_url": "https://github.com/willin/svelte-turbo",
-  "author": "Willin Wang",
+  "authors": [
+    "willin"
+  ],
   "homepage": "https://svelte.js.cool",
-  "downloads": 1,
+  "downloads": 8,
   "dependents": 0,
   "updated": "2023-12-31T05:27:38.185Z",
   "tags": [

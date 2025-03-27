@@ -2,13 +2,14 @@
   "name": "@kitbook/mdsvex-shiki-twoslash",
   "description": "Highlights code blocks in MDSvex using shiki-twoslash.",
   "repo_url": "https://github.com/jacob-8/kitbook",
-  "author": "Jacob Bowdoin",
+  "authors": [
+    "jacobbowdoin"
+  ],
   "homepage": "https://kitbook.vercel.app",
-  "downloads": 101,
+  "downloads": 7,
   "dependents": 2,
   "updated": "2024-04-27T16:08:33.240Z",
   "tags": [
-    "tooling",
     "preprocessor"
   ],
   "svelte5": false,

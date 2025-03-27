@@ -1,10 +1,12 @@
 {
   "name": "svelte-image-comparison",
-  "description": "Compare image or canvas elements in Svelte.",
+  "description": "Compare images or canvas elements in Svelte components.",
   "repo_url": "https://github.com/captaincodeman/svelte-image-comparison",
-  "author": "Simon Green",
+  "authors": [
+    "captaincodeman"
+  ],
   "homepage": "https://captaincodeman.github.io/svelte-image-comparison/",
-  "downloads": 2,
+  "downloads": 6,
   "dependents": 0,
   "updated": "2024-04-27T18:56:28.004Z",
   "tags": [

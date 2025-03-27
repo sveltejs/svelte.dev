@@ -1,8 +1,10 @@
 {
   "name": "@tb-dev/eslint-config",
-  "description": "Provide ESLint config for TypeScript, React, Svelte, Vue.",
+  "description": "ESLint config for TypeScript, React, Svelte, Vue.",
   "repo_url": "https://github.com/ferreira-tb/eslint-config",
-  "author": "ferreira-tb",
+  "authors": [
+    "ferreira-tb"
+  ],
   "homepage": "https://github.com/ferreira-tb/eslint-config",
   "downloads": 373,
   "dependents": 0,

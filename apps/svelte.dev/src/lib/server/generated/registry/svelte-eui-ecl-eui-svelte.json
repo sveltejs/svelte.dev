@@ -1,0 +1,18 @@
+{
+  "name": "@svelte-eui/ecl-eui-svelte",
+  "description": "Develop Svelte components with EUI and ECL.",
+  "repo_url": "https://github.com/alfu32/ecl-eui-svelte",
+  "authors": [
+    "alfu32"
+  ],
+  "homepage": "https://github.com/alfu32/ecl-eui-svelte#readme",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2023-02-11T02:21:06.632Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

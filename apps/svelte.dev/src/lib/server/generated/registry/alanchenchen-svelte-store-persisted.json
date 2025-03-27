@@ -1,10 +1,12 @@
 {
   "name": "@alanchenchen/svelte-store-persisted",
-  "description": "Persist Svelte store data to browser storage.",
+  "description": "Persist Svelte store data to browser local storage.",
   "repo_url": "https://github.com/alanchenchen/svelte-store-persisted",
-  "author": "Alan Chen",
+  "authors": [
+    "alanchenchen"
+  ],
   "homepage": "https://github.com/alanchenchen/svelte-store-persisted",
-  "downloads": 19,
+  "downloads": 27,
   "dependents": 0,
   "updated": "2020-01-19T09:42:20.915Z",
   "tags": [

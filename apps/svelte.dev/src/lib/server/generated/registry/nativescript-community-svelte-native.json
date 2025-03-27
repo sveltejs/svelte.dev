@@ -2,15 +2,36 @@
   "name": "@nativescript-community/svelte-native",
   "description": "Integrate Svelte with NativeScript for mobile app development.",
   "repo_url": "https://github.com/nativescript-community/svelte-native",
-  "author": "David Pershouse",
+  "authors": [
+    "classicoldsong",
+    "asharghi",
+    "farfromrefuge",
+    "triniwiz",
+    "eddyverbruggen",
+    "rigor789",
+    "walkerrunpdx",
+    "dnr",
+    "keerl",
+    "cvietor",
+    "bradmartin",
+    "rdlabo",
+    "tralves",
+    "cjohn001",
+    "jcassidyav",
+    "sebjean",
+    "edusperoni",
+    "ammarahm-ed",
+    "mayerlench",
+    "dgmachado"
+  ],
   "homepage": "https://github.com/nativescript-community/svelte-native",
-  "downloads": 4,
-  "dependents": 0,
+  "downloads": 28,
+  "dependents": 2,
   "updated": "2025-02-19T08:06:02.625Z",
   "tags": [
     "integration"
   ],
   "svelte5": false,
   "runes": false,
-  "github_stars": 18
+  "github_stars": 19
 }

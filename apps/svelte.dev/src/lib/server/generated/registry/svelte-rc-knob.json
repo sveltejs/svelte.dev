@@ -1,10 +1,12 @@
 {
   "name": "svelte-rc-knob",
-  "description": "Create customizable, accessible knob component for Svelte.",
+  "description": "Create highly customizable knob components for Svelte apps.",
   "repo_url": "https://github.com/rjt-rockx/svelte-rc-knob",
-  "author": "Rajath R",
+  "authors": [
+    "rjt_rockx"
+  ],
   "homepage": "https://github.com/rjt-rockx/svelte-rc-knob#readme",
-  "downloads": 146,
+  "downloads": 17,
   "dependents": 0,
   "updated": "2025-03-12T10:05:23.223Z",
   "tags": [

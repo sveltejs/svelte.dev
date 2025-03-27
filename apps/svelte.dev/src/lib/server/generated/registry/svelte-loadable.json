@@ -2,9 +2,11 @@
   "name": "svelte-loadable",
   "description": "Dynamically load Svelte components.",
   "repo_url": "https://github.com/kaisermann/svelte-loadable",
-  "author": "Christian Kaisermann",
+  "authors": [
+    "kaisermann"
+  ],
   "homepage": "https://github.com/kaisermann/svelte-loadable#readme",
-  "downloads": 556,
+  "downloads": 342,
   "dependents": 5,
   "updated": "2022-03-05T08:21:50.292Z",
   "tags": [

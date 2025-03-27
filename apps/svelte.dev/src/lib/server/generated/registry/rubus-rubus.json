@@ -1,0 +1,17 @@
+{
+  "name": "@rubus/rubus",
+  "description": "Implement Adobe Spectrum CSS components for Svelte.",
+  "repo_url": "https://github.com/rubus-ui/rubus",
+  "authors": [
+    "runningzs"
+  ],
+  "homepage": "https://github.com/rubus-ui/rubus#readme",
+  "downloads": 180,
+  "dependents": 0,
+  "updated": "2020-10-29T17:40:21.201Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": false,
+  "runes": false
+}

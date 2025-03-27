@@ -2,12 +2,14 @@
   "name": "svelte-navlink-action",
   "description": "Inject active class into route-matched links in Svelte.",
   "repo_url": "https://github.com/kwhitley/svelte-navlink-action",
-  "author": "Kevin R. Whitley",
-  "downloads": 0,
+  "authors": [
+    "krwhitley"
+  ],
+  "downloads": 1,
   "dependents": 0,
   "updated": "2022-12-29T18:43:30.214Z",
   "tags": [
-    "utility"
+    "router"
   ],
   "svelte5": false,
   "runes": false,

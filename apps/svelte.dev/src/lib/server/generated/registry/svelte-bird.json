@@ -1,8 +1,10 @@
 {
   "name": "svelte-bird",
-  "description": "Create admin templates with Svelte and SvelteKit.",
+  "description": "Provides Svelte/SvelteKit admin template.",
   "repo_url": "https://github.com/joaquimnetocel/svelte-bird",
-  "author": "Joaquim Henriques",
+  "authors": [
+    "joaquim.neto.cel"
+  ],
   "homepage": "https://github.com/joaquimnetocel/svelte-bird#readme",
   "downloads": 92,
   "dependents": 0,

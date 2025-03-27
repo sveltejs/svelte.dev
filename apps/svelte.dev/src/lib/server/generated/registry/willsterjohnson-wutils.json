@@ -1,0 +1,17 @@
+{
+  "name": "@willsterjohnson/wutils",
+  "description": "Provide helpful syntax modifiers and upgrades for Svelte projects.",
+  "repo_url": "https://github.com/willsterjohnson/wUtils",
+  "authors": [
+    "willster277"
+  ],
+  "homepage": "https://github.com/willsterjohnson/wUtils#readme",
+  "downloads": 60,
+  "dependents": 0,
+  "updated": "2021-10-29T22:21:16.542Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

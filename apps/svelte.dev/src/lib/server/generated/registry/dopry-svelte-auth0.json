@@ -1,14 +1,17 @@
 {
   "name": "@dopry/svelte-auth0",
-  "description": "Implement Auth0 authentication in Svelte applications.",
+  "description": "Integrate Auth0 authentication into Svelte apps.",
   "repo_url": "https://github.com/dopry/svelte-auth0",
-  "author": "dopry",
+  "authors": [
+    "dopry"
+  ],
   "homepage": "https://github.com/dopry/svelte-auth0#readme",
-  "downloads": 29,
+  "downloads": 13,
   "dependents": 0,
   "updated": "2021-04-01T17:34:25.430Z",
   "tags": [
-    "auth"
+    "auth",
+    "integration"
   ],
   "svelte5": false,
   "runes": false,

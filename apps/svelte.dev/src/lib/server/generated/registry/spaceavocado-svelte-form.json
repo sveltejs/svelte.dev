@@ -1,10 +1,12 @@
 {
   "name": "@spaceavocado/svelte-form",
-  "description": "Handle Svelte form models, validate inputs, and manage form state.",
+  "description": "Handles Svelte form models, input validation.",
   "repo_url": "https://github.com/spaceavocado/svelte-form",
-  "author": "David Horak",
+  "authors": [
+    "davidhorak"
+  ],
   "homepage": "https://github.com/spaceavocado/svelte-form",
-  "downloads": 49,
+  "downloads": 96,
   "dependents": 0,
   "updated": "2019-10-11T14:37:50.096Z",
   "tags": [

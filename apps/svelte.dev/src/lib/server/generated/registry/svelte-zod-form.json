@@ -1,8 +1,10 @@
 {
   "name": "svelte-zod-form",
-  "description": "Build type-safe forms with Zod validation for SvelteKit applications.",
+  "description": "Create type-safe forms for SvelteKit with Zod validation.",
   "repo_url": "https://github.com/SBHattarj/svelte-zod-form",
-  "author": "subhambh",
+  "authors": [
+    "subhambh"
+  ],
   "homepage": "https://github.com/SBHattarj/svelte-zod-form#readme",
   "downloads": 2,
   "dependents": 0,

@@ -1,0 +1,18 @@
+{
+  "name": "@ui-machines/svelte",
+  "description": "Svelte wrapper for UI machines, state machines for UI.",
+  "repo_url": "https://github.com/chakra-ui/ui-machines",
+  "authors": [
+    "segunadebayo"
+  ],
+  "homepage": "https://github.com/chakra-ui/ui-machines#readme",
+  "downloads": 192,
+  "dependents": 0,
+  "updated": "2022-01-14T22:32:22.889Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 4323
+}

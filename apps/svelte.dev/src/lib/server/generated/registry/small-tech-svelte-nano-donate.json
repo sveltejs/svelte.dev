@@ -1,10 +1,12 @@
 {
   "name": "@small-tech/svelte-nano-donate",
-  "description": "Create Nano cryptocurrency donation component for Svelte apps.",
+  "description": "Create Nano cryptocurrency donation component for Svelte.",
   "repo_url": "https://github.com/small-tech/svelte-nano-donate",
-  "author": "aral",
+  "authors": [
+    "aral"
+  ],
   "homepage": "https://github.com/small-tech/svelte-nano-donate",
-  "downloads": 0,
+  "downloads": 18,
   "dependents": 0,
   "updated": "2021-04-08T14:42:30.252Z",
   "tags": [

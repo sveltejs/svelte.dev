@@ -1,15 +1,16 @@
 {
   "name": "mv-svelecte",
-  "description": "Create flexible autocomplete/select components for Svelte apps.",
+  "description": "Provides flexible autocomplete/select component for Svelte.",
   "repo_url": "https://github.com/mverzilli/svelecte",
-  "author": "martinverzilli",
+  "authors": [
+    "martinverzilli"
+  ],
   "homepage": "https://github.com/mverzilli/svelecte#readme",
-  "downloads": 23,
+  "downloads": 31,
   "dependents": 0,
   "updated": "2023-03-31T10:44:51.585Z",
   "tags": [
-    "ui",
-    "component-library"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

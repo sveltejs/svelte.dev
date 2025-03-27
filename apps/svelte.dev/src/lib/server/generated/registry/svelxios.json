@@ -1,13 +1,16 @@
 {
   "name": "svelxios",
-  "description": "SvelteKit Axios wrapper for making HTTP requests.",
+  "description": "Provides a SvelteKit Axios wrapper for server-side requests.",
   "repo_url": "https://github.com/hbourgeot/svex",
-  "author": "Henrry Bourgeot",
+  "authors": [
+    "hbourgeot"
+  ],
   "homepage": "https://github.com/hbourgeot/svex#readme",
-  "downloads": 0,
+  "downloads": 1,
   "dependents": 0,
   "updated": "2023-11-28T14:25:15.518Z",
   "tags": [
+    "utility",
     "server"
   ],
   "svelte5": false,

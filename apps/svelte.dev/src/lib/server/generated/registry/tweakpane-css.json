@@ -1,14 +1,16 @@
 {
   "name": "tweakpane-css",
-  "description": "Detect and tweak CSS variables at runtime in Svelte apps.",
+  "description": "Detect and tweak CSS variables at runtime in Svelte.",
   "repo_url": "https://github.com/kitschpatrol/tweakpane-css",
-  "author": "Eric Mika",
+  "authors": [
+    "kitschpatrol"
+  ],
   "homepage": "https://github.com/kitschpatrol/tweakpane-css",
-  "downloads": 8,
+  "downloads": 16,
   "dependents": 0,
   "updated": "2025-03-04T18:36:04.005Z",
   "tags": [
-    "tooling"
+    "utility"
   ],
   "svelte5": true,
   "runes": false,

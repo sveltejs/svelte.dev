@@ -1,8 +1,10 @@
 {
   "name": "svelte4-chessground",
-  "description": "Create Svelte 4 chessboard component using Chessground.",
+  "description": "Svelte 4 chessboard component, wrapper for Chessground chess UI.",
   "repo_url": "",
-  "author": "liamkrenn",
+  "authors": [
+    "liamkrenn"
+  ],
   "homepage": "https://github.com/LiamKrenn/svelte4-chessground",
   "downloads": 3,
   "dependents": 1,

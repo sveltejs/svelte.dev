@@ -1,10 +1,12 @@
 {
   "name": "@botala/pine",
-  "description": "Build Botala's component library with Svelte.",
+  "description": "Build Botala's component library, pine, using vanilla Svelte.",
   "repo_url": "https://github.com/BotalaFoods/client-components",
-  "author": "kierangill",
+  "authors": [
+    "kierangill"
+  ],
   "homepage": "https://github.com/BotalaFoods/client-components#readme",
-  "downloads": 88,
+  "downloads": 54,
   "dependents": 0,
   "updated": "2020-07-26T08:09:59.357Z",
   "tags": [

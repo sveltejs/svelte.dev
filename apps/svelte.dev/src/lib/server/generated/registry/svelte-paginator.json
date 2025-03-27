@@ -2,13 +2,15 @@
   "name": "svelte-paginator",
   "description": "Unopinionated pagination component for Svelte.",
   "repo_url": "https://github.com/mpdaugherty/svelte-paginator",
-  "author": "Michael Daugherty & Laura Daugherty",
+  "authors": [
+    "mpdaugherty"
+  ],
   "homepage": "https://github.com/mpdaugherty/svelte-paginator#readme",
-  "downloads": 2,
+  "downloads": 7,
   "dependents": 0,
   "updated": "2020-11-21T14:42:40.808Z",
   "tags": [
-    "utility"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

@@ -1,0 +1,18 @@
+{
+  "name": "@heinzaw/svelte-numdial",
+  "description": "Creates number dial component for Svelte apps.",
+  "repo_url": "https://github.com/lianhuilui/svelte-numdial",
+  "authors": [
+    "heinzaw"
+  ],
+  "homepage": "https://github.com/lianhuilui/svelte-numdial#readme",
+  "downloads": 8,
+  "dependents": 0,
+  "updated": "2024-02-07T16:48:25.495Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

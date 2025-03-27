@@ -1,14 +1,17 @@
 {
   "name": "svelte-highlighted-code-editor",
-  "description": "Create highlighted code editor for Svelte projects.",
+  "description": "Provides highlighted code editor component for Svelte projects.",
   "repo_url": "https://github.com/linusjaderlund/svelte-highlighted-code-editor",
-  "author": "Linus Jäderlund",
+  "authors": [
+    "linusjaderlund"
+  ],
   "homepage": "https://github.com/linusjaderlund/svelte-highlighted-code-editor#readme",
-  "downloads": 1,
+  "downloads": 0,
   "dependents": 0,
   "updated": "2022-11-14T16:46:50.140Z",
   "tags": [
-    "ui"
+    "ui",
+    "tooling"
   ],
   "svelte5": false,
   "runes": false,

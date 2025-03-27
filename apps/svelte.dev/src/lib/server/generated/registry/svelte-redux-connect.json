@@ -1,14 +1,17 @@
 {
   "name": "svelte-redux-connect",
-  "description": "Connect Svelte components to Redux stores.",
+  "description": "Connect Svelte components to Redux store, similar to react-redux.",
   "repo_url": "https://github.com/kolodziejczak-sz/svelte-redux-connect",
-  "author": "kolodziejczak-sz",
+  "authors": [
+    "kolodziejczak-sz"
+  ],
   "homepage": "https://github.com/kolodziejczak-sz/svelte-redux-connect#readme",
-  "downloads": 12,
+  "downloads": 43,
   "dependents": 0,
   "updated": "2021-07-07T14:28:31.192Z",
   "tags": [
-    "utility"
+    "utility",
+    "integration"
   ],
   "svelte5": false,
   "runes": false,

@@ -1,10 +1,12 @@
 {
   "name": "svelte-ace",
-  "description": "Integrate Ace Editor with Svelte, with TypeScript support.",
+  "description": "Integrate Ace Editor with TypeScript support into Svelte apps.",
   "repo_url": "https://github.com/nateshmbhat/svelte-ace",
-  "author": "Natesh Bhat",
+  "authors": [
+    "nateshmbhat"
+  ],
   "homepage": "https://github.com/nateshmbhat/svelte-ace#readme",
-  "downloads": 364,
+  "downloads": 509,
   "dependents": 0,
   "updated": "2021-04-09T13:15:23.808Z",
   "tags": [
@@ -12,5 +14,5 @@
   ],
   "svelte5": false,
   "runes": false,
-  "github_stars": 51
+  "github_stars": 52
 }

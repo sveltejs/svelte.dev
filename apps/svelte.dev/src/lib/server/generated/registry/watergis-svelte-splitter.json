@@ -1,10 +1,12 @@
 {
   "name": "@watergis/svelte-splitter",
-  "description": "Create resizable splitters using CSS grid templates in Svelte.",
+  "description": "Resizable splitter for Svelte, leveraging CSS grid.",
   "repo_url": "",
-  "author": "Geoff Cox",
+  "authors": [
+    "j_igarashi"
+  ],
   "homepage": "https://github.com/@watergis/svelte-splitter/README.md",
-  "downloads": 61,
+  "downloads": 70,
   "dependents": 1,
   "updated": "2024-08-25T12:14:06.722Z",
   "tags": [

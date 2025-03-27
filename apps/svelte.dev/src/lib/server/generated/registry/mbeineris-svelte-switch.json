@@ -1,0 +1,18 @@
+{
+  "name": "@mbeineris/svelte-switch",
+  "description": "Implement a simple switch component for Svelte.",
+  "repo_url": "https://github.com/mbeineris/svelte-switch",
+  "authors": [
+    "mbeineris"
+  ],
+  "homepage": "https://github.com/mbeineris/svelte-switch#readme",
+  "downloads": 8,
+  "dependents": 0,
+  "updated": "2019-08-25T12:57:29.830Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 2
+}

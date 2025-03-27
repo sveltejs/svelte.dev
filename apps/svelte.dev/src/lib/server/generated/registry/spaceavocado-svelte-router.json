@@ -1,10 +1,12 @@
 {
   "name": "@spaceavocado/svelte-router",
-  "description": "Simple Svelte router for single-page applications.",
+  "description": "Implement routing for Svelte single-page applications.",
   "repo_url": "https://github.com/spaceavocado/svelte-router",
-  "author": "David Horak",
+  "authors": [
+    "davidhorak"
+  ],
   "homepage": "https://github.com/spaceavocado/svelte-router",
-  "downloads": 5,
+  "downloads": 40,
   "dependents": 0,
   "updated": "2019-09-30T03:07:07.713Z",
   "tags": [

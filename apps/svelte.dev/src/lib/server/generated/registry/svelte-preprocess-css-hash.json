@@ -1,14 +1,17 @@
 {
   "name": "svelte-preprocess-css-hash",
-  "description": "Generate hashed CSS class names for Svelte components.",
+  "description": "Hashes CSS class names to prevent conflicts in Svelte components.",
   "repo_url": "https://github.com/jiangfengming/svelte-preprocess-css-hash",
-  "author": "Jiang Fengming",
+  "authors": [
+    "jiangfengming"
+  ],
   "homepage": "https://github.com/jiangfengming/svelte-preprocess-css-hash#readme",
   "downloads": 2,
   "dependents": 0,
   "updated": "2024-11-21T22:16:46.093Z",
   "tags": [
-    "preprocessor"
+    "preprocessor",
+    "tooling"
   ],
   "svelte5": false,
   "runes": false,

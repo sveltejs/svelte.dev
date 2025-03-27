@@ -1,12 +1,14 @@
 {
   "name": "@shipitdev/sveltepocket",
-  "description": "Provides Svelte stores and components for PocketBase integration.",
+  "description": "Provides Svelte stores and components for PocketBase.",
   "repo_url": "https://github.com/brennerm/sveltepocket",
-  "author": "shipitdev",
+  "authors": [
+    "shipitdev"
+  ],
   "homepage": "https://github.com/brennerm/sveltepocket#readme",
-  "downloads": 30,
+  "downloads": 58,
   "dependents": 0,
-  "updated": "2025-03-18T19:51:26.377Z",
+  "updated": "2025-03-25T17:33:34.870Z",
   "tags": [
     "utility"
   ],

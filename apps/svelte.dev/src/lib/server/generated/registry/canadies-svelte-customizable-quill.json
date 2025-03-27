@@ -1,14 +1,15 @@
 {
   "name": "@canadies/svelte-customizable-quill",
-  "description": "Provides easy-to-use, flexible Quill editor for Svelte.",
+  "description": "Integrate customizable Quill editor into Svelte applications.",
   "repo_url": "",
-  "author": "Daniel Ho",
-  "downloads": 7,
+  "authors": [
+    "canadies"
+  ],
+  "downloads": 9,
   "dependents": 0,
   "updated": "2024-09-18T05:53:59.608Z",
   "tags": [
-    "ui",
-    "content"
+    "ui"
   ],
   "svelte5": false,
   "runes": false

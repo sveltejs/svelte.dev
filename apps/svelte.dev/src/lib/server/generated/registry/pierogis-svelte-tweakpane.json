@@ -1,14 +1,17 @@
 {
   "name": "@pierogis/svelte-tweakpane",
-  "description": "Integrate Tweakpane UI for Svelte component control.",
+  "description": "Integrate Tweakpane UI for parameter adjustments in Svelte.",
   "repo_url": "https://github.com/pierogis/svelte-tweakpane",
-  "author": "ksmoore17",
+  "authors": [
+    "ksmoore17"
+  ],
   "homepage": "https://svelte-tweakpane.pierogis.live",
-  "downloads": 0,
+  "downloads": 3,
   "dependents": 0,
   "updated": "2023-12-29T04:31:46.282Z",
   "tags": [
-    "ui"
+    "ui",
+    "utility"
   ],
   "svelte5": false,
   "runes": false,

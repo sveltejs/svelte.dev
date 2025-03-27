@@ -1,0 +1,19 @@
+{
+  "name": "@vite-cms/content",
+  "description": "Preprocesses Markdown files, adds them to Vite output directory.",
+  "repo_url": "https://github.com/StarLederer/vite-plugin-content",
+  "authors": [
+    "starlederer"
+  ],
+  "homepage": "https://github.com/StarLederer/vite-plugin-content#readme",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2022-11-13T18:01:20.685Z",
+  "tags": [
+    "tooling",
+    "preprocessor"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

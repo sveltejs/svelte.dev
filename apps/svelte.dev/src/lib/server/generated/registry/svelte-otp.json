@@ -1,10 +1,12 @@
 {
   "name": "svelte-otp",
-  "description": "Create OTP input components for Svelte.",
+  "description": "Create OTP input component for Svelte applications.",
   "repo_url": "https://github.com/shubhadip/svelte-otp",
-  "author": "shubhadipmaity",
+  "authors": [
+    "shubhadipmaity"
+  ],
   "homepage": "https://github.com/shubhadip/svelte-otp#readme",
-  "downloads": 22,
+  "downloads": 31,
   "dependents": 0,
   "updated": "2022-09-18T13:10:00.808Z",
   "tags": [

@@ -2,9 +2,11 @@
   "name": "svelte-fullcalendar",
   "description": "Integrate FullCalendar into Svelte applications.",
   "repo_url": "https://github.com/YogliB/svelte-fullcalendar",
-  "author": "Yogev Boaron Ben-Har",
+  "authors": [
+    "yoglib"
+  ],
   "homepage": "https://github.com/YogliB/svelte-fullcalendar#readme",
-  "downloads": 1246,
+  "downloads": 1581,
   "dependents": 3,
   "updated": "2023-09-14T15:26:31.125Z",
   "tags": [

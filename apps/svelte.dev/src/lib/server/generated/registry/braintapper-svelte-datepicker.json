@@ -1,10 +1,12 @@
 {
   "name": "braintapper-svelte-datepicker",
-  "description": "Provides a datepicker component for Svelte applications.",
+  "description": "Provides datepicker component for Svelte.",
   "repo_url": "https://github.com/braintapper/braintapper-svelte-datepicker",
-  "author": "braintapper",
+  "authors": [
+    "braintapper"
+  ],
   "homepage": "https://github.com/braintapper/braintapper-svelte-datepicker#readme",
-  "downloads": 1,
+  "downloads": 12,
   "dependents": 0,
   "updated": "2020-12-20T16:44:28.784Z",
   "tags": [

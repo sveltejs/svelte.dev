@@ -1,8 +1,10 @@
 {
   "name": "svelte-unicons",
-  "description": "Use Unicon icons in Svelte applications.",
+  "description": "Integrate Unicon icons into Svelte projects.",
   "repo_url": "https://github.com/devShamim/svelte-unicons",
-  "author": "http://github.com/devShamim",
+  "authors": [
+    "shamim-ahmed"
+  ],
   "homepage": "https://github.com/devShamim/svelte-unicons#readme",
   "downloads": 4,
   "dependents": 0,

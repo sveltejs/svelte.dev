@@ -1,10 +1,12 @@
 {
   "name": "sly-svelte-pane",
-  "description": "Create resizable grid and popout panels for Svelte apps.",
+  "description": "Create resizable grid panels using CSS variables in Svelte apps.",
   "repo_url": "https://github.com/SlyOtis/svelte-pane",
-  "author": "Martin Ottersland",
+  "authors": [
+    "slyotis"
+  ],
   "homepage": "https://github.com/SlyOtis/svelte-pane",
-  "downloads": 3,
+  "downloads": 1,
   "dependents": 0,
   "updated": "2024-09-10T11:28:55.659Z",
   "tags": [

@@ -1,10 +1,12 @@
 {
   "name": "@frigid-ui/icons",
-  "description": "Use inline SVG icons in Svelte applications.",
+  "description": "Provides a library of SVG icons for Svelte.",
   "repo_url": "https://github.com/Antfroze/frigid-icons",
-  "author": "Antfroze",
+  "authors": [
+    "antfroze"
+  ],
   "homepage": "https://frigid-ui/icons",
-  "downloads": 0,
+  "downloads": 15,
   "dependents": 0,
   "updated": "2022-10-27T21:31:30.425Z",
   "tags": [

@@ -1,8 +1,10 @@
 {
   "name": "@ikun-ui/dropdown",
-  "description": "Create dropdown components for Svelte apps.",
+  "description": "Create dropdown components for Svelte UI.",
   "repo_url": "",
-  "author": "baiwusanyu",
+  "authors": [
+    "baiwusanyu"
+  ],
   "downloads": 17,
   "dependents": 3,
   "updated": "2025-01-24T03:48:51.715Z",

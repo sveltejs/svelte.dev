@@ -1,10 +1,12 @@
 {
   "name": "@embedvr/svelte-plausible-analytics",
-  "description": "Integrate Plausible Analytics for SvelteKit apps.",
+  "description": "Integrate Plausible Analytics into SvelteKit apps.",
   "repo_url": "https://github.com/embedvr/svelte-plausible-analytics",
-  "author": "Matthew Gibbons",
+  "authors": [
+    "embedvr"
+  ],
   "homepage": "https://github.com/embedvr/svelte-plausible-analytics/README.md",
-  "downloads": 2,
+  "downloads": 1,
   "dependents": 0,
   "updated": "2024-02-17T02:55:57.069Z",
   "tags": [

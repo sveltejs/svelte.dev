@@ -1,17 +1,18 @@
 {
   "name": "@sastan/svelte-headlessui",
-  "description": "Provide unstyled, accessible UI components for Svelte.",
+  "description": "Provides unstyled, accessible UI components for Svelte apps.",
   "repo_url": "https://github.com/rgossiaux/svelte-headlessui",
-  "author": "sastan",
+  "authors": [
+    "sastan"
+  ],
   "homepage": "https://svelte-headlessui-git-fork-noeloconnell-combob-d68663-rgossiaux.vercel.app",
-  "downloads": 3,
+  "downloads": 2,
   "dependents": 0,
   "updated": "2022-11-08T09:42:37.837Z",
   "tags": [
-    "ui",
     "component-library"
   ],
   "svelte5": false,
   "runes": false,
-  "github_stars": 1805
+  "github_stars": 1807
 }

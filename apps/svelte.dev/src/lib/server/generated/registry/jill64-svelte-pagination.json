@@ -1,10 +1,12 @@
 {
   "name": "@jill64/svelte-pagination",
-  "description": "Create pagination components for SvelteKit routes.",
+  "description": "Create pagination component for SvelteKit routes.",
   "repo_url": "https://github.com/jill64/svelte-pagination",
-  "author": "jill64",
+  "authors": [
+    "jill64"
+  ],
   "homepage": "https://github.com/jill64/svelte-pagination#readme",
-  "downloads": 1925,
+  "downloads": 1960,
   "dependents": 0,
   "updated": "2025-01-23T06:31:56.141Z",
   "tags": [

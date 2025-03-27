@@ -1,10 +1,12 @@
 {
   "name": "@kitql/handles",
-  "description": "Provides useful handles for SvelteKit applications.",
+  "description": "Provide useful handles for SvelteKit applications.",
   "repo_url": "https://github.com/jycouet/kitql",
-  "author": "jycouet",
+  "authors": [
+    "jycouet"
+  ],
   "homepage": "https://www.kitql.dev/",
-  "downloads": 73,
+  "downloads": 119,
   "dependents": 0,
   "updated": "2025-03-04T22:19:19.135Z",
   "tags": [
@@ -12,5 +14,5 @@
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 424
+  "github_stars": 426
 }

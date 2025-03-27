@@ -1,10 +1,15 @@
 {
   "name": "@responsive-ui/tag",
-  "description": "Create tag component for responsive-ui in Svelte.",
+  "description": "Provides a tag component for Svelte applications.",
   "repo_url": "https://github.com/wetix/responsive-ui",
-  "author": "Si3nLoong",
+  "authors": [
+    "rexlow",
+    "bassemsab",
+    "rm.oska",
+    "apacventure"
+  ],
   "homepage": "https://github.com/wetix/responsive-ui/blob/main/components/tag#README.md",
-  "downloads": 0,
+  "downloads": 83,
   "dependents": 1,
   "updated": "2024-04-23T07:51:21.954Z",
   "tags": [

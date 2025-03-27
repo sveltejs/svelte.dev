@@ -1,10 +1,12 @@
 {
   "name": "@accuser/svelte-mdast-math",
-  "description": "Transform Markdown AST into Svelte components with math support.",
+  "description": "Render math expressions in Svelte using Mdast.",
   "repo_url": "https://github.com/accuser/svelte-mdast-math",
-  "author": "Matthew Gibbons",
+  "authors": [
+    "accuser"
+  ],
   "homepage": "https://github.com/accuser/svelte-mdast-math",
-  "downloads": 8,
+  "downloads": 15,
   "dependents": 0,
   "updated": "2024-10-06T13:06:31.603Z",
   "tags": [

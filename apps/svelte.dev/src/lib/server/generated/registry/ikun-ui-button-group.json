@@ -1,13 +1,15 @@
 {
   "name": "@ikun-ui/button-group",
-  "description": "Create button groups for Svelte applications.",
+  "description": "Create button groups for Svelte UI.",
   "repo_url": "",
-  "author": "baiwusanyu",
+  "authors": [
+    "baiwusanyu"
+  ],
   "downloads": 31,
   "dependents": 2,
   "updated": "2025-01-24T03:48:36.534Z",
   "tags": [
-    "ui"
+    "component-library"
   ],
   "svelte5": false,
   "runes": false

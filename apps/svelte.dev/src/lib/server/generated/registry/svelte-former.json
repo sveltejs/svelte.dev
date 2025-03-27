@@ -1,10 +1,12 @@
 {
   "name": "svelte-former",
-  "description": "Build forms with easy validation in Svelte applications.",
+  "description": "Create forms with validation and dynamic fields in Svelte.",
   "repo_url": "https://github.com/mugendi/svelte-former",
-  "author": "Anthony Mugendi",
+  "authors": [
+    "nguru"
+  ],
   "homepage": "https://github.com/mugendi/svelte-former#readme",
-  "downloads": 0,
+  "downloads": 1,
   "dependents": 0,
   "updated": "2024-07-04T00:57:22.950Z",
   "tags": [

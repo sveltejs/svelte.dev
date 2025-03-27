@@ -2,13 +2,16 @@
   "name": "svelte-preprocess-react",
   "description": "Use React components inside Svelte apps.",
   "repo_url": "https://github.com/bfanger/svelte-preprocess-react",
-  "author": "bfanger",
+  "authors": [
+    "bfanger"
+  ],
   "homepage": "https://github.com/bfanger/svelte-preprocess-react#readme",
-  "downloads": 8057,
+  "downloads": 7793,
   "dependents": 2,
   "updated": "2025-02-02T20:15:57.350Z",
   "tags": [
-    "preprocessor"
+    "preprocessor",
+    "integration"
   ],
   "svelte5": true,
   "runes": false,

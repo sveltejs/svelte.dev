@@ -1,10 +1,12 @@
 {
   "name": "svelte-event-router",
-  "description": "Enforce event-driven user interfaces with a simple Svelte router.",
+  "description": "Enforces event-driven user interfaces with a simple SPA router.",
   "repo_url": "https://github.com/qudo-lucas/svelte-router",
-  "author": "Lucas Hugdahl",
+  "authors": [
+    "lucashugdahl"
+  ],
   "homepage": "https://www.npmjs.com/package/svelte-event-router",
-  "downloads": 3,
+  "downloads": 14,
   "dependents": 0,
   "updated": "2020-06-23T18:11:23.467Z",
   "tags": [

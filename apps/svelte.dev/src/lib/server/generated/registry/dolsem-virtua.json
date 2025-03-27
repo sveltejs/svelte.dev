@@ -1,14 +1,16 @@
 {
   "name": "@dolsem/virtua",
-  "description": "Virtualize lists, grids, and tables in Svelte apps.",
+  "description": "Create virtual list, grid components for Svelte, React, Vue, Solid.",
   "repo_url": "https://github.com/dolsem/virtua",
-  "author": "inokawa",
+  "authors": [
+    "dolsem"
+  ],
   "homepage": "https://github.com/dolsem/virtua#readme",
-  "downloads": 5,
+  "downloads": 8,
   "dependents": 0,
-  "updated": "2025-03-06T22:27:09.261Z",
+  "updated": "2025-03-26T21:33:52.297Z",
   "tags": [
-    "utility"
+    "ui"
   ],
   "svelte5": true,
   "runes": false,

@@ -1,16 +1,28 @@
 {
   "name": "@sentry/sveltekit",
-  "description": "Integrate Sentry error and performance monitoring with SvelteKit apps.",
+  "description": "Integrate Sentry error tracking into SvelteKit applications.",
   "repo_url": "https://github.com/getsentry/sentry-javascript",
-  "author": "Sentry",
+  "authors": [
+    "billyvg",
+    "mitsuhiko",
+    "haza",
+    "jauer",
+    "sentry-bot",
+    "evanpurkhiser",
+    "lynnagara",
+    "leedongwei",
+    "markstory",
+    "zeeg"
+  ],
   "homepage": "https://github.com/getsentry/sentry-javascript/tree/master/packages/sveltekit",
-  "downloads": 50064,
+  "downloads": 50152,
   "dependents": 3,
   "updated": "2025-03-24T13:47:25.641Z",
   "tags": [
-    "integration"
+    "integration",
+    "server"
   ],
   "svelte5": false,
   "runes": false,
-  "github_stars": 8165
+  "github_stars": 8168
 }

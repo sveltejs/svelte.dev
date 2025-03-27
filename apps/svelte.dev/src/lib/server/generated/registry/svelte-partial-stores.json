@@ -1,8 +1,10 @@
 {
   "name": "svelte-partial-stores",
-  "description": "Creates derived stores for watching parts of Svelte stores.",
+  "description": "Create derived stores watching parts of Svelte stores.",
   "repo_url": "https://github.com/jacobzwang/svelte-partial-stores",
-  "author": "jacobzwang",
+  "authors": [
+    "jacobzwang"
+  ],
   "homepage": "https://github.com/jacobzwang/svelte-partial-stores.git",
   "downloads": 0,
   "dependents": 0,

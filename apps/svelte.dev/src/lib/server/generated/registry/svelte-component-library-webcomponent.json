@@ -1,9 +1,11 @@
 {
   "name": "svelte-component-library-webcomponent",
-  "description": "Template for building Svelte component libraries as web components.",
+  "description": "Build shareable Svelte component libraries.",
   "repo_url": "",
-  "author": "guilhermesnts",
-  "downloads": 0,
+  "authors": [
+    "guilhermesnts"
+  ],
+  "downloads": 5,
   "dependents": 0,
   "updated": "2022-06-27T00:01:28.234Z",
   "tags": [

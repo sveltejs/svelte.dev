@@ -1,0 +1,16 @@
+{
+  "name": "techpro-svelte-ui",
+  "description": "Offers shared Svelte UI components.",
+  "repo_url": "",
+  "authors": [
+    "techprostudio"
+  ],
+  "downloads": 28,
+  "dependents": 0,
+  "updated": "2021-03-20T10:02:05.384Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": false,
+  "runes": false
+}

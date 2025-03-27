@@ -1,0 +1,18 @@
+{
+  "name": "svelte-progressive-image",
+  "description": "Implement progressive image loading in Svelte applications.",
+  "repo_url": "https://github.com/romdim/svelte-progressive-image",
+  "authors": [
+    "romdim"
+  ],
+  "homepage": "https://github.com/romdim/svelte-progressive-image",
+  "downloads": 8,
+  "dependents": 0,
+  "updated": "2021-02-01T00:53:22.111Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

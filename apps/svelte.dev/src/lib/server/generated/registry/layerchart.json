@@ -1,16 +1,18 @@
 {
   "name": "layerchart",
-  "description": "Compose Svelte chart components for building various data visualizations.",
+  "description": "Provides composable Svelte chart components for visualizations.",
   "repo_url": "https://github.com/techniq/layerchart",
-  "author": "Sean Lynch",
+  "authors": [
+    "techniq"
+  ],
   "homepage": "https://github.com/techniq/layerchart#readme",
-  "downloads": 7273,
+  "downloads": 6371,
   "dependents": 4,
   "updated": "2025-03-14T18:43:12.983Z",
   "tags": [
     "ui"
   ],
-  "svelte5": true,
+  "svelte5": false,
   "runes": false,
-  "github_stars": 817
+  "github_stars": 820
 }

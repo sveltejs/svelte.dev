@@ -1,10 +1,12 @@
 {
   "name": "svelte-persistent-writable",
-  "description": "Create persistent writable stores in Svelte.",
+  "description": "Creates persistent writable stores using local/session storage.",
   "repo_url": "https://github.com/cdellacqua/svelte-persistent-writable",
-  "author": "Carlo Dell'Acqua",
+  "authors": [
+    "cdellacqua"
+  ],
   "homepage": "https://github.com/cdellacqua/svelte-persistent-writable",
-  "downloads": 11,
+  "downloads": 16,
   "dependents": 0,
   "updated": "2021-10-09T19:48:52.000Z",
   "tags": [

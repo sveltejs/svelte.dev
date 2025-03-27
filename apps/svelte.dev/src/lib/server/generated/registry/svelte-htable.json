@@ -1,14 +1,16 @@
 {
   "name": "svelte-htable",
-  "description": "Create hierarchical tables with Svelte.",
+  "description": "Generate hierarchical tables from hierarchical data in Svelte.",
   "repo_url": "https://github.com/webJose/svelte-htable",
-  "author": "José Pablo Ramírez Vargas",
+  "authors": [
+    "webjose"
+  ],
   "homepage": "https://github.com/webJose/svelte-htable#readme",
-  "downloads": 0,
+  "downloads": 9,
   "dependents": 0,
   "updated": "2023-04-12T19:29:33.643Z",
   "tags": [
-    "component-library"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

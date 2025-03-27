@@ -1,10 +1,12 @@
 {
   "name": "sveltify",
-  "description": "Browserify transform for Svelte components.",
+  "description": "Browserify transform for compiling Svelte components.",
   "repo_url": "https://github.com/TehShrike/sveltify",
-  "author": "TehShrike",
+  "authors": [
+    "tehshrike"
+  ],
   "homepage": "https://github.com/TehShrike/sveltify#readme",
-  "downloads": 8,
+  "downloads": 21,
   "dependents": 1,
   "updated": "2019-05-01T22:44:39.919Z",
   "tags": [

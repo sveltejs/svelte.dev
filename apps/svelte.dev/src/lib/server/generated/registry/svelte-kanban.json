@@ -1,14 +1,16 @@
 {
   "name": "svelte-kanban",
-  "description": "Create Kanban boards with drag-and-drop functionality.",
+  "description": "Create Kanban boards with drag-and-drop functionality in Svelte.",
   "repo_url": "https://github.com/V-Py/svelte-kanban",
-  "author": "Valentin Py",
+  "authors": [
+    "v-py"
+  ],
   "homepage": "https://github.com/V-Py/svelte-kanban#readme",
-  "downloads": 62,
+  "downloads": 52,
   "dependents": 0,
   "updated": "2022-10-14T20:38:59.407Z",
   "tags": [
-    "component-library"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

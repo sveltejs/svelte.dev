@@ -2,7 +2,9 @@
   "name": "moosmann-svelte",
   "description": "Integrate moosmann for i18n into Svelte projects.",
   "repo_url": "https://github.com/Niphram/moosmann",
-  "author": "Niphram",
+  "authors": [
+    "niphram"
+  ],
   "homepage": "https://github.com/Niphram/moosmann#readme",
   "downloads": 1,
   "dependents": 0,

@@ -1,0 +1,17 @@
+{
+  "name": "@quantum_box/svelte",
+  "description": "Virtualize data for Svelte applications.",
+  "repo_url": "https://github.com/jbystronski/quantum_box_svelte",
+  "authors": [
+    "pogodisco"
+  ],
+  "homepage": "https://quantum_box.surge.sh",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2023-02-14T19:13:24.637Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

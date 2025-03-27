@@ -1,10 +1,12 @@
 {
   "name": "@cadev70/svelte-tooltips",
-  "description": "Create tooltips using action wrapper for Svelte components.",
+  "description": "Create tooltips using Svelte action wrapper.",
   "repo_url": "https://github.com/cadev70/svelte-tooltips",
-  "author": "cadev70",
+  "authors": [
+    "cadev70"
+  ],
   "homepage": "https://github.com/cadev70/svelte-tooltips#readme",
-  "downloads": 8,
+  "downloads": 0,
   "dependents": 0,
   "updated": "2023-06-26T11:31:55.253Z",
   "tags": [

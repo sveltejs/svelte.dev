@@ -1,10 +1,12 @@
 {
   "name": "tailwind-editor",
-  "description": "Generate Tailwind CSS HTML from a WYSIWYG editor.",
+  "description": "Generate Tailwind CSS HTML from Notion-like WYSIWYG editor.",
   "repo_url": "https://github.com/fouita/tailwind-editor",
-  "author": "fouita",
+  "authors": [
+    "fouita"
+  ],
   "homepage": "https://github.com/fouita/tailwind-editor#readme",
-  "downloads": 31,
+  "downloads": 97,
   "dependents": 1,
   "updated": "2024-04-24T14:16:17.413Z",
   "tags": [
@@ -12,5 +14,5 @@
   ],
   "svelte5": false,
   "runes": false,
-  "github_stars": 410
+  "github_stars": 411
 }

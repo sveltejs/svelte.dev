@@ -1,0 +1,18 @@
+{
+  "name": "@robotpajamas/svelte-hammertime",
+  "description": "Add HammerJS gesture support to Svelte components.",
+  "repo_url": "https://github.com/robotpajamas/svelte-hammertime",
+  "authors": [
+    "sureshjoshi"
+  ],
+  "homepage": "https://github.com/robotpajamas/svelte-hammertime",
+  "downloads": 3,
+  "dependents": 0,
+  "updated": "2023-09-30T04:23:50.601Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

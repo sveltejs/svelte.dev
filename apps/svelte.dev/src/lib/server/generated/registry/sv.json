@@ -2,9 +2,12 @@
   "name": "sv",
   "description": "CLI for creating and updating SvelteKit projects.",
   "repo_url": "https://github.com/sveltejs/cli",
-  "author": "rich_harris",
+  "authors": [
+    "rich_harris",
+    "svelte-admin"
+  ],
   "homepage": "https://svelte.dev",
-  "downloads": 14493,
+  "downloads": 14913,
   "dependents": 6,
   "updated": "2025-03-24T17:48:37.718Z",
   "tags": [

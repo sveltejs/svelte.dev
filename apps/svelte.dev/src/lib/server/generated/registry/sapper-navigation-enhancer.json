@@ -1,14 +1,17 @@
 {
   "name": "sapper-navigation-enhancer",
-  "description": "Enhance Sapper navigation with beforeNavigate and back functions.",
+  "description": "Enhance Sapper navigation with before/after hooks.",
   "repo_url": "https://github.com/PatrickG/sapper-navigation-enhancer",
-  "author": "Patrick Günther",
+  "authors": [
+    "pehgeh"
+  ],
   "homepage": "https://github.com/PatrickG/sapper-navigation-enhancer#readme",
-  "downloads": 1,
+  "downloads": 16,
   "dependents": 0,
   "updated": "2021-03-26T17:03:41.941Z",
   "tags": [
-    "utility"
+    "utility",
+    "router"
   ],
   "svelte5": false,
   "runes": false,

@@ -1,10 +1,12 @@
 {
   "name": "@macfja/svelte-persistent-store",
-  "description": "Svelte store that keeps value through reloads.",
+  "description": "Persists Svelte store values using localStorage, sessionStorage, etc.",
   "repo_url": "https://github.com/macfja/svelte-persistent-store",
-  "author": "MacFJA",
+  "authors": [
+    "macfja"
+  ],
   "homepage": "https://github.com/macfja/svelte-persistent-store#readme",
-  "downloads": 1330,
+  "downloads": 1266,
   "dependents": 8,
   "updated": "2024-10-25T20:34:44.617Z",
   "tags": [
@@ -12,5 +14,5 @@
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 248
+  "github_stars": 249
 }

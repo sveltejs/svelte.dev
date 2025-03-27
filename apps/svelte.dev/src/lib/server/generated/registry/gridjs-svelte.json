@@ -2,9 +2,11 @@
   "name": "gridjs-svelte",
   "description": "Integrate Grid.js tables into Svelte applications.",
   "repo_url": "https://github.com/iamyuu/gridjs-svelte",
-  "author": "Muhammad Yusuf",
+  "authors": [
+    "iamyuu"
+  ],
   "homepage": "https://gridjs.io/docs/integrations/svelte",
-  "downloads": 1306,
+  "downloads": 1195,
   "dependents": 2,
   "updated": "2022-03-31T13:04:24.486Z",
   "tags": [

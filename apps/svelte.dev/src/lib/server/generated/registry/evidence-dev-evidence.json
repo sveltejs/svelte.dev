@@ -1,9 +1,15 @@
 {
   "name": "@evidence-dev/evidence",
-  "description": "Build data apps with Svelte and Markdown.",
+  "description": "Build data apps with Svelte and Evidence.",
   "repo_url": "",
-  "author": "archiewood",
-  "downloads": 10828,
+  "authors": [
+    "archiewood",
+    "mcrascal",
+    "hughess",
+    "charles-evidence",
+    "brian-evidence"
+  ],
+  "downloads": 9595,
   "dependents": 3,
   "updated": "2025-02-13T23:32:58.988Z",
   "tags": [

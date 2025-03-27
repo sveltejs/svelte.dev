@@ -1,0 +1,18 @@
+{
+  "name": "svelte-json-form",
+  "description": "Create JSON forms using Svelte components.",
+  "repo_url": "https://github.com/CalebPena/svelte-json-form",
+  "authors": [
+    "not_a_cm"
+  ],
+  "homepage": "https://github.com/CalebPena/svelte-json-form#readme",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2024-03-01T16:12:28.456Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

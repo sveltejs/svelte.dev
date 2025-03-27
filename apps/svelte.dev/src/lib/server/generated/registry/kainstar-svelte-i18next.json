@@ -2,9 +2,11 @@
   "name": "@kainstar/svelte-i18next",
   "description": "Integrate i18next for internationalization in Svelte apps.",
   "repo_url": "https://github.com/kainstar/svelte-i18next",
-  "author": "Kainstar",
+  "authors": [
+    "kainstar"
+  ],
   "homepage": "https://github.com/kainstar/svelte-i18next#readme",
-  "downloads": 0,
+  "downloads": 2,
   "dependents": 0,
   "updated": "2024-03-23T12:58:19.977Z",
   "tags": [

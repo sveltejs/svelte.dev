@@ -1,16 +1,18 @@
 {
   "name": "@prgm/sveltekit-progress-bar",
-  "description": "Svelte progress bar hooks to SvelteKit navigation.",
+  "description": "Displays progress bar during SvelteKit page loading.",
   "repo_url": "https://github.com/prgm-dev/sveltekit-progress-bar",
-  "author": "prgm.dev",
+  "authors": [
+    "alexandre-prgm"
+  ],
   "homepage": "https://github.com/prgm-dev/sveltekit-progress-bar#readme",
-  "downloads": 5138,
+  "downloads": 6277,
   "dependents": 0,
   "updated": "2025-02-18T11:47:43.630Z",
   "tags": [
     "ui"
   ],
-  "svelte5": true,
+  "svelte5": false,
   "runes": false,
-  "github_stars": 42
+  "github_stars": 43
 }

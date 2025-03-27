@@ -1,10 +1,12 @@
 {
   "name": "svelte-preprocess-sass",
-  "description": "Preprocess Svelte components with Sass.",
+  "description": "Preprocess Svelte components with Sass or SCSS.",
   "repo_url": "https://github.com/ls-age/svelte-preprocess-sass",
-  "author": "Lukas Hechenberger",
+  "authors": [
+    "lhechenberger"
+  ],
   "homepage": "https://github.com/ls-age/svelte-preprocess-sass#readme",
-  "downloads": 629,
+  "downloads": 599,
   "dependents": 7,
   "updated": "2021-07-16T09:48:00.920Z",
   "tags": [

@@ -1,15 +1,17 @@
 {
   "name": "svelte-instagram",
-  "description": "Display Instagram images in Svelte carousel.",
+  "description": "Display Instagram images in a Svelte carousel.",
   "repo_url": "https://github.com/alextomas80/svelte-instagram",
-  "author": "Alex Tomás",
+  "authors": [
+    "alextomas80"
+  ],
   "homepage": "https://alextomas.com",
-  "downloads": 1,
+  "downloads": 12,
   "dependents": 0,
   "updated": "2021-02-22T15:07:37.223Z",
   "tags": [
-    "media",
-    "ui"
+    "ui",
+    "media"
   ],
   "svelte5": false,
   "runes": false,

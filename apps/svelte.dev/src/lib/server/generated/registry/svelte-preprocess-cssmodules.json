@@ -1,8 +1,10 @@
 {
   "name": "svelte-preprocess-cssmodules",
-  "description": "Generate CSS Modules classnames for Svelte components.",
+  "description": "Generates CSS Modules classnames for Svelte components.",
   "repo_url": "https://github.com/micantoine/svelte-preprocess-cssmodules",
-  "author": "micantoine",
+  "authors": [
+    "micantoine"
+  ],
   "homepage": "https://github.com/micantoine/svelte-preprocess-cssmodules",
   "downloads": 1295,
   "dependents": 5,

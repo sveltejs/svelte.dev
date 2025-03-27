@@ -1,10 +1,13 @@
 {
   "name": "@soleil-se/config-mediaflow-svelte",
-  "description": "Provides configuration components for Mediaflow in Svelte.",
+  "description": "Configure Mediaflow image/video selection in Svelte.",
   "repo_url": "",
-  "author": "Soleil AB",
+  "authors": [
+    "soleil-ab",
+    "kling90"
+  ],
   "homepage": "https://docs.soleil.se/packages/config-mediaflow-svelte",
-  "downloads": 186,
+  "downloads": 18,
   "dependents": 0,
   "updated": "2025-03-11T14:16:10.086Z",
   "tags": [

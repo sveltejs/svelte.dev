@@ -1,8 +1,10 @@
 {
   "name": "svelte-steps-local",
-  "description": "Create customizable step components for Svelte.",
+  "description": "Create customizable step components for Svelte applications.",
   "repo_url": "https://github.com/shaozi/svelte-steps",
-  "author": "Jingshao Chen",
+  "authors": [
+    "samelet-dev"
+  ],
   "homepage": "https://svelte-steps.web.app",
   "downloads": 0,
   "dependents": 0,

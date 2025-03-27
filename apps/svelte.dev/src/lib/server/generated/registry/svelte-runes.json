@@ -1,8 +1,10 @@
 {
   "name": "svelte-runes",
-  "description": "Implement Svelte 5 runes for state management.",
+  "description": "Adds Svelte 5 runes for state management and effects.",
   "repo_url": "https://github.com/0xD1M4/svelte-runes",
-  "author": "0xD1M4",
+  "authors": [
+    "0xd1m4"
+  ],
   "homepage": "https://github.com/0xD1M4/svelte-runes#readme",
   "downloads": 8,
   "dependents": 0,

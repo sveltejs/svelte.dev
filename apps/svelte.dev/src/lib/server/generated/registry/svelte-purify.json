@@ -2,7 +2,9 @@
   "name": "svelte-purify",
   "description": "Sanitize HTML in Svelte components using DOMPurify.",
   "repo_url": "https://github.com/jill64/svelte-purify",
-  "author": "jill64",
+  "authors": [
+    "jill64"
+  ],
   "homepage": "https://github.com/jill64/svelte-purify#readme",
   "downloads": 437,
   "dependents": 0,

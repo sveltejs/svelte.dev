@@ -2,13 +2,16 @@
   "name": "here-maps-svelte",
   "description": "Integrate Here Maps into Svelte applications.",
   "repo_url": "https://github.com/peopledrivemecrazy/here-maps-svelte",
-  "author": "Shriji Kondan",
+  "authors": [
+    "shriji"
+  ],
   "homepage": "https://github.com/peopledrivemecrazy/here-maps-svelte#readme",
-  "downloads": 0,
+  "downloads": 36,
   "dependents": 0,
   "updated": "2021-03-05T09:29:38.959Z",
   "tags": [
-    "integration"
+    "integration",
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

@@ -1,12 +1,18 @@
 {
   "name": "@svelkit/graphql",
+  "description": "Use GraphQL APIs in Svelte apps via readable stores.",
   "repo_url": "https://github.com/kenoxa/svelkit",
-  "author": "Sascha Tandel",
+  "authors": [
+    "sastan"
+  ],
   "homepage": "https://github.com/kenoxa/svelkit#readme",
-  "downloads": 16,
+  "downloads": 36,
   "dependents": 1,
   "updated": "2020-09-25T12:46:02.876Z",
-  "tags": [],
+  "tags": [
+    "utility",
+    "integration"
+  ],
   "svelte5": false,
   "runes": false,
   "github_stars": 7

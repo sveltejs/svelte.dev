@@ -1,0 +1,19 @@
+{
+  "name": "flock-ui",
+  "description": "Provides cookie-cutter components for FRC scouting in Svelte.",
+  "repo_url": "https://github.com/flamingchickens1540/Flock-UI",
+  "authors": [
+    "brelee2222",
+    "brillawasok"
+  ],
+  "homepage": "https://github.com/flamingchickens1540/Flock-UI#readme",
+  "downloads": 11,
+  "dependents": 0,
+  "updated": "2023-11-08T22:01:57.001Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 2
+}

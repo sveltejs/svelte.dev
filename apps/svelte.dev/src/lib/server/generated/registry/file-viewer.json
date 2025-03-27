@@ -1,14 +1,16 @@
 {
   "name": "file-viewer",
-  "description": "View files of various formats using Svelte web component.",
+  "description": "View files (PDF, Excel, etc.) using Svelte web component.",
   "repo_url": "https://github.com/avipunes/File-Viewer",
-  "author": "Avi Punes",
+  "authors": [
+    "avipunes"
+  ],
   "homepage": "https://github.com/avipunes/File-Viewer#readme",
-  "downloads": 246,
+  "downloads": 286,
   "dependents": 0,
   "updated": "2020-07-26T14:07:44.591Z",
   "tags": [
-    "ui"
+    "media"
   ],
   "svelte5": false,
   "runes": false,

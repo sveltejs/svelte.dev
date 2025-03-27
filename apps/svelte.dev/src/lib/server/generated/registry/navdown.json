@@ -1,14 +1,16 @@
 {
   "name": "navdown",
-  "description": "Hide navbar on scroll with Svelte action.",
+  "description": "Hide navigation bar on scroll in Svelte applications.",
   "repo_url": "https://github.com/AuriOpenSource/navdown",
-  "author": "Lucas Ouverney",
+  "authors": [
+    "realfakenerd"
+  ],
   "homepage": "https://github.com/AuriOpenSource/navdown#readme",
-  "downloads": 0,
+  "downloads": 5,
   "dependents": 0,
   "updated": "2023-11-14T21:22:41.734Z",
   "tags": [
-    "ui"
+    "utility"
   ],
   "svelte5": false,
   "runes": false,

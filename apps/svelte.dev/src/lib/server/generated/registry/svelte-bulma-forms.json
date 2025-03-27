@@ -1,14 +1,16 @@
 {
   "name": "svelte-bulma-forms",
-  "description": "Build forms with Bulma components in Svelte apps.",
+  "description": "Create Bulma form components for Svelte applications.",
   "repo_url": "https://github.com/elcobvg/svelte-bulma-forms",
-  "author": "Elco Brouwer von Gonzenbach",
+  "authors": [
+    "elcobvg"
+  ],
   "homepage": "https://github.com/elcobvg/svelte-bulma-forms#readme",
-  "downloads": 2,
+  "downloads": 28,
   "dependents": 0,
   "updated": "2019-01-22T02:57:26.982Z",
   "tags": [
-    "component-library"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

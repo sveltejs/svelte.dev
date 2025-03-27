@@ -1,10 +1,12 @@
 {
   "name": "create-skittle",
-  "description": "Creates new SvelteKit projects with added features.",
+  "description": "Generates new SvelteKit projects with added features.",
   "repo_url": "https://github.com/cowboycodr/skittle",
-  "author": "cowboycodr",
+  "authors": [
+    "cowboycodr"
+  ],
   "homepage": "https://kit.svelte.dev",
-  "downloads": 0,
+  "downloads": 3,
   "dependents": 0,
   "updated": "2024-08-22T02:40:44.001Z",
   "tags": [

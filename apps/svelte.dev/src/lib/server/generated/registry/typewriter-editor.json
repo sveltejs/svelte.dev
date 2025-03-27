@@ -2,15 +2,17 @@
   "name": "typewriter-editor",
   "description": "Create rich text editors using Delta format.",
   "repo_url": "https://github.com/typewriter-editor/typewriter",
-  "author": "jacwright",
+  "authors": [
+    "jacwright"
+  ],
   "homepage": "https://github.com/typewriter-editor/typewriter#readme",
-  "downloads": 132,
-  "dependents": 3,
+  "downloads": 727,
+  "dependents": 2,
   "updated": "2025-02-12T18:30:38.430Z",
   "tags": [
     "ui"
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 408
+  "github_stars": 412
 }

@@ -1,10 +1,12 @@
 {
   "name": "val-i18n-svelte",
-  "description": "Provide i18n context and translate messages in Svelte.",
+  "description": "Provides Svelte helpers for val-i18n internationalization.",
   "repo_url": "https://github.com/crimx/val-i18n-svelte",
-  "author": "CRIMX",
+  "authors": [
+    "straybugs"
+  ],
   "homepage": "https://github.com/crimx/val-i18n-svelte#readme",
-  "downloads": 0,
+  "downloads": 1,
   "dependents": 0,
   "updated": "2024-02-22T08:57:27.290Z",
   "tags": [

@@ -1,10 +1,12 @@
 {
   "name": "svelte-awesome-icons",
-  "description": "Provides Font Awesome SVG icon components for Svelte.",
+  "description": "Provides Font Awesome SVG icon components for Svelte 5.",
   "repo_url": "https://github.com/shinokada/svelte-awesome-icons",
-  "author": "Shinichi Okada",
+  "authors": [
+    "shinichiokada"
+  ],
   "homepage": "https://svelte-awesome-icons.codewithshin.com/",
-  "downloads": 9281,
+  "downloads": 1752,
   "dependents": 1,
   "updated": "2024-10-25T14:54:03.773Z",
   "tags": [

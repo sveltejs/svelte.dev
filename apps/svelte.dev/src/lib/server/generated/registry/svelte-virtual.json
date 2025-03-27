@@ -1,14 +1,16 @@
 {
   "name": "svelte-virtual",
-  "description": "Create virtual lists and grids in Svelte.",
+  "description": "Create virtual list and grid components for Svelte.",
   "repo_url": "https://github.com/ghostebony/svelte-virtual",
-  "author": "Pedro Américo",
+  "authors": [
+    "ghostebony"
+  ],
   "homepage": "https://github.com/ghostebony/svelte-virtual#readme",
-  "downloads": 361,
+  "downloads": 274,
   "dependents": 0,
   "updated": "2024-02-26T10:53:04.110Z",
   "tags": [
-    "utility"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

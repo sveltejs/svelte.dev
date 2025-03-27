@@ -1,14 +1,17 @@
 {
   "name": "@battlefieldduck/xterm-svelte",
-  "description": "Integrate Xterm.js terminal emulator into SvelteKit applications.",
+  "description": "Embed terminal in SvelteKit apps with Xterm.js.",
   "repo_url": "https://github.com/BattlefieldDuck/xterm-svelte",
-  "author": "battlefieldduck",
+  "authors": [
+    "battlefieldduck"
+  ],
   "homepage": "https://xterm-svelte.pages.dev",
-  "downloads": 283,
+  "downloads": 199,
   "dependents": 0,
   "updated": "2024-11-17T19:32:11.708Z",
   "tags": [
-    "ui"
+    "ui",
+    "utility"
   ],
   "svelte5": true,
   "runes": false,

@@ -1,10 +1,12 @@
 {
   "name": "ocularbook",
-  "description": "Preview Svelte components with Vite and HeroIcons.",
+  "description": "Preview Svelte components with Vite and Storybook.",
   "repo_url": "https://github.com/imadx/ocularbook",
-  "author": "Ishan Madhusanka",
+  "authors": [
+    "imadhusanka"
+  ],
   "homepage": "https://github.com/imadx/ocularbook#readme",
-  "downloads": 2,
+  "downloads": 16,
   "dependents": 1,
   "updated": "2022-06-19T04:29:55.818Z",
   "tags": [

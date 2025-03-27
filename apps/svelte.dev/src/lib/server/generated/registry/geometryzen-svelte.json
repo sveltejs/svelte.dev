@@ -1,10 +1,12 @@
 {
   "name": "@geometryzen/svelte",
-  "description": "Bundles Svelte as an EcmaScript module.",
+  "description": "Bundle Svelte as an EcmaScript module.",
   "repo_url": "https://github.com/geometryzen/esm-bundle-svelte",
-  "author": "David Geo Holmes",
+  "authors": [
+    "geometryzen"
+  ],
   "homepage": "https://github.com/geometryzen/esm-bundle-svelte#readme",
-  "downloads": 1,
+  "downloads": 16,
   "dependents": 0,
   "updated": "2024-05-27T13:38:08.586Z",
   "tags": [

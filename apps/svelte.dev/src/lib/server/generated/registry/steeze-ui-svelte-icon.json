@@ -1,10 +1,12 @@
 {
   "name": "@steeze-ui/svelte-icon",
-  "description": "Provides effortless Svelte icon components.",
+  "description": "Provides icon components for Svelte, built for SvelteKit and Vite.",
   "repo_url": "https://github.com/steeze-ui/icons",
-  "author": "Justin Voitel",
+  "authors": [
+    "justinvoitel"
+  ],
   "homepage": "https://github.com/steeze-ui/icons#readme",
-  "downloads": 11376,
+  "downloads": 10946,
   "dependents": 18,
   "updated": "2024-11-20T12:40:32.253Z",
   "tags": [

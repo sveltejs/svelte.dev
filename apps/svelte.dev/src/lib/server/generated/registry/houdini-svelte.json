@@ -1,16 +1,18 @@
 {
   "name": "houdini-svelte",
-  "description": "Integrate GraphQL queries into Svelte applications.",
+  "description": "Generate GraphQL clients for Svelte applications.",
   "repo_url": "https://github.com/HoudiniGraphql/houdini",
-  "author": "aaivazis",
+  "authors": [
+    "aaivazis"
+  ],
   "homepage": "https://github.com/HoudiniGraphql/houdini",
-  "downloads": 5730,
+  "downloads": 6817,
   "dependents": 2,
-  "updated": "2025-03-20T16:24:19.154Z",
+  "updated": "2025-03-27T05:47:19.545Z",
   "tags": [
     "utility"
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 941
+  "github_stars": 940
 }

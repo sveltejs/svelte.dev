@@ -1,10 +1,12 @@
 {
   "name": "svelte-perfect-select",
-  "description": "Create perfect select elements in Svelte applications.",
+  "description": "Creates customizable select elements for Svelte.",
   "repo_url": "https://github.com/ishansasika/svelte-perfect-select",
-  "author": "Ishan Karunaratne",
+  "authors": [
+    "ishansasika"
+  ],
   "homepage": "https://github.com/ishansasika/svelte-perfect-select#readme",
-  "downloads": 6,
+  "downloads": 2,
   "dependents": 0,
   "updated": "2022-06-13T11:21:16.446Z",
   "tags": [

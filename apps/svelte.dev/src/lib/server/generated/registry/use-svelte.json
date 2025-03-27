@@ -1,10 +1,12 @@
 {
   "name": "use-svelte",
-  "description": "Provide Svelte actions/directives for common UI tasks.",
+  "description": "Provide Svelte actions for shortcuts, lazy loading, tooltips, and more.",
   "repo_url": "https://github.com/treboryx/use-svelte",
-  "author": "treboryx",
+  "authors": [
+    "rowboat"
+  ],
   "homepage": "https://github.com/treboryx/use-svelte#readme",
-  "downloads": 1,
+  "downloads": 5,
   "dependents": 0,
   "updated": "2022-11-09T12:09:47.647Z",
   "tags": [

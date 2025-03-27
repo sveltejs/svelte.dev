@@ -1,0 +1,18 @@
+{
+  "name": "@nelreina/json-tree-viewer",
+  "description": "Visualize JSON data in tree structure within Svelte components.",
+  "repo_url": "https://github.com/nelreina/json-tree-viewer",
+  "authors": [
+    "nelreina"
+  ],
+  "homepage": "https://github.com/nelreina/json-tree-viewer#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2025-01-24T19:01:23.086Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 0
+}

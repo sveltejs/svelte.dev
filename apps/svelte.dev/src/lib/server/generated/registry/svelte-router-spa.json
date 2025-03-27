@@ -1,10 +1,12 @@
 {
   "name": "svelte-router-spa",
-  "description": "Implement routing in Svelte single-page applications.",
+  "description": "Adds routing to Svelte apps, organizes routes, and creates SPAs.",
   "repo_url": "https://github.com/jorgegorka/svelte-router",
-  "author": "Jorge Alvarez",
+  "authors": [
+    "jorgegorka"
+  ],
   "homepage": "https://github.com/jorgegorka/svelte-router/blob/master/README.md",
-  "downloads": 338,
+  "downloads": 624,
   "dependents": 0,
   "updated": "2023-09-14T10:24:36.330Z",
   "tags": [

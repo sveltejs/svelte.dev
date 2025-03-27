@@ -1,10 +1,12 @@
 {
   "name": "svelte-svg-transform",
-  "description": "Transform and style SVG files within Svelte components.",
+  "description": "Transform and customize SVG files within Svelte projects.",
   "repo_url": "",
-  "author": "Bartek Telec",
+  "authors": [
+    "bartektelec"
+  ],
   "homepage": "https://github.com/bartektelec/svelte-svg-transform",
-  "downloads": 22,
+  "downloads": 45,
   "dependents": 0,
   "updated": "2023-08-03T19:04:35.261Z",
   "tags": [

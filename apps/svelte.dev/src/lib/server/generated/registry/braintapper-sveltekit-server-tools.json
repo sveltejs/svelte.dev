@@ -1,10 +1,12 @@
 {
   "name": "braintapper-sveltekit-server-tools",
-  "description": "Provides server-side code libraries for SvelteKit.",
+  "description": "Provide server-side tools for SvelteKit applications.",
   "repo_url": "https://github.com/braintapper/braintapper-sveltekit-server-tools",
-  "author": "braintapper",
+  "authors": [
+    "braintapper"
+  ],
   "homepage": "https://github.com/braintapper/braintapper-sveltekit-server-tools#readme",
-  "downloads": 0,
+  "downloads": 23,
   "dependents": 0,
   "updated": "2021-07-29T18:39:16.463Z",
   "tags": [

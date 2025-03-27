@@ -2,9 +2,11 @@
   "name": "svelte-textfit",
   "description": "Fit text into elements, useful for headlines and paragraphs.",
   "repo_url": "",
-  "author": "micha-lmxt",
+  "authors": [
+    "micha-lmxt"
+  ],
   "homepage": "https://github.com/micha-lmxt/svelte-textfit",
-  "downloads": 1073,
+  "downloads": 1076,
   "dependents": 0,
   "updated": "2022-09-27T07:21:22.421Z",
   "tags": [

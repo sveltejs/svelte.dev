@@ -1,8 +1,10 @@
 {
   "name": "@ikun-ui/countdown",
-  "description": "Create countdown timer components for Svelte.",
+  "description": "Provides countdown component for Svelte apps.",
   "repo_url": "",
-  "author": "baiwusanyu",
+  "authors": [
+    "baiwusanyu"
+  ],
   "downloads": 13,
   "dependents": 1,
   "updated": "2025-01-24T03:48:47.272Z",

@@ -1,16 +1,18 @@
 {
   "name": "runed",
-  "description": "Utilities for Svelte applications using Svelte 5 runes.",
+  "description": "Provides utilities for Svelte runes.",
   "repo_url": "https://github.com/svecosystem/runed",
-  "author": "huntabyte",
+  "authors": [
+    "huntabyte"
+  ],
   "homepage": "https://github.com/svecosystem/runed#readme",
-  "downloads": 57371,
+  "downloads": 55029,
   "dependents": 20,
   "updated": "2025-03-21T13:11:04.750Z",
   "tags": [
     "utility"
   ],
-  "svelte5": true,
+  "svelte5": false,
   "runes": false,
-  "github_stars": 967
+  "github_stars": 974
 }

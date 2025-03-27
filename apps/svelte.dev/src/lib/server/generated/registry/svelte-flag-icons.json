@@ -2,9 +2,11 @@
   "name": "svelte-flag-icons",
   "description": "Provides flag icon components for Svelte.",
   "repo_url": "https://github.com/shinokada/svelte-flag-icons",
-  "author": "Shinichi Okada",
+  "authors": [
+    "shinichiokada"
+  ],
   "homepage": "https://svelte-flag-icons.codewithshin.com/",
-  "downloads": 3697,
+  "downloads": 2077,
   "dependents": 2,
   "updated": "2024-10-25T14:49:30.769Z",
   "tags": [

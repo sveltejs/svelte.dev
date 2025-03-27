@@ -1,10 +1,13 @@
 {
   "name": "@tanstack/svelte-table",
-  "description": "Headless UI for building powerful tables & datagrids for Svelte.",
+  "description": "Headless UI for building powerful tables and datagrids for Svelte.",
   "repo_url": "https://github.com/TanStack/table",
-  "author": "Tanner Linsley",
+  "authors": [
+    "tannerlinsley",
+    "nksaraf"
+  ],
   "homepage": "https://tanstack.com/table",
-  "downloads": 10697,
+  "downloads": 10018,
   "dependents": 14,
   "updated": "2025-02-11T21:00:39.245Z",
   "tags": [
@@ -12,5 +15,5 @@
   ],
   "svelte5": false,
   "runes": false,
-  "github_stars": 26081
+  "github_stars": 26093
 }

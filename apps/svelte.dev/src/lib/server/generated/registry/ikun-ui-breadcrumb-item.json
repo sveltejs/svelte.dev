@@ -1,13 +1,14 @@
 {
   "name": "@ikun-ui/breadcrumb-item",
-  "description": "Build breadcrumb item components for Svelte applications.",
+  "description": "Create breadcrumb item components for Svelte applications.",
   "repo_url": "",
-  "author": "baiwusanyu",
+  "authors": [
+    "baiwusanyu"
+  ],
   "downloads": 39,
   "dependents": 1,
   "updated": "2025-01-24T03:48:36.585Z",
   "tags": [
-    "component-library",
     "ui"
   ],
   "svelte5": false,

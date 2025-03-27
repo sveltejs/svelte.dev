@@ -2,7 +2,9 @@
   "name": "ui-ingredients",
   "description": "Headless component library for Svelte, powered by zag.",
   "repo_url": "https://github.com/calvo-jp/ui-ingredients",
-  "author": "John Paul Calvo",
+  "authors": [
+    "calvojp"
+  ],
   "homepage": "https://github.com/calvo-jp/ui-ingredients#readme",
   "downloads": 344,
   "dependents": 0,
@@ -10,7 +12,7 @@
   "tags": [
     "component-library"
   ],
-  "svelte5": true,
+  "svelte5": false,
   "runes": false,
   "github_stars": 45
 }

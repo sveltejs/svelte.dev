@@ -1,8 +1,10 @@
 {
   "name": "@ikun-ui/radio",
-  "description": "Create radio components for Svelte applications.",
+  "description": "Provides radio components for Svelte applications.",
   "repo_url": "",
-  "author": "baiwusanyu",
+  "authors": [
+    "baiwusanyu"
+  ],
   "downloads": 31,
   "dependents": 1,
   "updated": "2025-01-24T03:49:13.306Z",

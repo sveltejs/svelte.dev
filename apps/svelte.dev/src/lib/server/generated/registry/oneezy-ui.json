@@ -2,14 +2,15 @@
   "name": "@oneezy/ui",
   "description": "UI library for Tailwind CSS v4 and Svelte v5.",
   "repo_url": "https://github.com/oneezy/ui",
-  "author": "oneezy",
+  "authors": [
+    "oneezy"
+  ],
   "homepage": "https://github.com/oneezy/ui",
-  "downloads": 0,
+  "downloads": 52,
   "dependents": 0,
   "updated": "2024-06-07T06:33:13.161Z",
   "tags": [
-    "component-library",
-    "ui"
+    "component-library"
   ],
   "svelte5": true,
   "runes": false,

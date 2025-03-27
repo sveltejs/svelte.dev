@@ -1,12 +1,17 @@
 {
   "name": "@detachhead/svelte-schema-form",
+  "description": "Generate forms from JSON schema definitions in Svelte applications.",
   "repo_url": "https://github.com/restspace/svelte-schema-form",
-  "author": "James Ellis-Jones",
+  "authors": [
+    "detachhead"
+  ],
   "homepage": "https://github.com/restspace/svelte-schema-form#readme",
-  "downloads": 32,
+  "downloads": 2,
   "dependents": 0,
   "updated": "2023-02-17T01:09:58.472Z",
-  "tags": [],
+  "tags": [
+    "utility"
+  ],
   "svelte5": false,
   "runes": false,
   "github_stars": 73

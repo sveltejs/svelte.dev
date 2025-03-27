@@ -2,7 +2,9 @@
   "name": "@kvndy/undo-manager",
   "description": "Manage undo/redo functionality for Svelte stores.",
   "repo_url": "https://gitlab.com/kevindoughty/undo-manager",
-  "author": "Kevin Doughty",
+  "authors": [
+    "kvndy"
+  ],
   "homepage": "https://gitlab.com/kevindoughty/undo-manager#readme",
   "downloads": 0,
   "dependents": 0,

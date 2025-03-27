@@ -1,0 +1,18 @@
+{
+  "name": "@storybook-tiny/svelte",
+  "description": "Develop and test Svelte components with a tiny Storybook.",
+  "repo_url": "https://github.com/commenthol/storybook-tiny",
+  "authors": [
+    "commenthol"
+  ],
+  "homepage": "https://github.com/commenthol/storybook-tiny/tree/main/packages/svelte#readme",
+  "downloads": 3,
+  "dependents": 0,
+  "updated": "2024-11-10T20:15:36.102Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 0
+}

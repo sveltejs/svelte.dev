@@ -1,16 +1,18 @@
 {
   "name": "@orpc/svelte-query",
-  "description": "Fetch and manage data in Svelte applications.",
+  "description": "Integrate TanStack Query with Svelte, manage data fetching.",
   "repo_url": "https://github.com/unnoq/orpc",
-  "author": "unnoq",
+  "authors": [
+    "unnoq"
+  ],
   "homepage": "https://orpc.unnoq.com",
-  "downloads": 1477,
+  "downloads": 1556,
   "dependents": 0,
-  "updated": "2025-03-21T13:40:48.801Z",
+  "updated": "2025-03-25T14:54:04.695Z",
   "tags": [
     "utility"
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 859
+  "github_stars": 874
 }

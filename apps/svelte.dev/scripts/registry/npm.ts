@@ -299,12 +299,24 @@ export async function fetch_downloads_for_package(pkg: string): Promise<number> 
 /**
  * Gets details for a package from the npm registry
  */
-export async function fetch_details_for_package(pkg: string): Promise<any> {
-	const registry_data = await superfetch(`${REGISTRY_BASE_URL}${pkg}`, { headers: HEADERS }).then(
-		(r) => r.json()
-	);
+export async function fetch_details_for_package(pkg_name: string): Promise<any> {
+	const url = new URL(`${REGISTRY_BASE_URL}-/v1/search`);
+	url.searchParams.set('text', pkg_name); // Search for the exact package name
+	url.searchParams.set('size', '5'); // Limit to 5 results to keep it efficient
 
-	return registry_data;
+	const response = await superfetch(url, { headers: HEADERS, cache: 'force-cache' });
+
+	if (!response.ok) {
+		console.error(`Error searching for package ${pkg_name}: ${response.status}`);
+		return { dependents: 0, downloads: 0 };
+	}
+
+	const data = await response.json();
+
+	// Find the exact package name match
+	const matched_package = data.objects?.find((obj: any) => obj.package.name === pkg_name);
+
+	return matched_package;
 }
 
 /**
@@ -313,40 +325,25 @@ export async function fetch_details_for_package(pkg: string): Promise<any> {
  */
 export async function fetch_package_stats(
 	pkg_name: string
-): Promise<{ dependents: number; downloads: number }> {
+): Promise<{ dependents: number; downloads: number; authors: string[] }> {
 	try {
-		// Use the npm search API to find the package
-		const url = new URL(`${REGISTRY_BASE_URL}-/v1/search`);
-		url.searchParams.set('text', pkg_name); // Search for the exact package name
-		url.searchParams.set('size', '5'); // Limit to 5 results to keep it efficient
-
-		const response = await superfetch(url, {
-			headers: HEADERS
-		});
-
-		if (!response.ok) {
-			console.error(`Error searching for package ${pkg_name}: ${response.status}`);
-			return { dependents: 0, downloads: 0 };
-		}
-
-		const data = await response.json();
-
 		// Find the exact package name match
-		const matched_package = data.objects?.find((obj: any) => obj.package.name === pkg_name);
+		const matched_package = await fetch_details_for_package(pkg_name);
 
 		if (!matched_package) {
 			console.log(`No exact match found for package ${pkg_name} in search results`);
-			return { dependents: 0, downloads: 0 };
+			return { dependents: 0, downloads: 0, authors: [] };
 		}
 
 		// Extract dependents and downloads
 		return {
 			dependents: matched_package.dependents || 0,
-			downloads: matched_package.downloads?.weekly || 0
+			downloads: matched_package.downloads?.weekly || 0,
+			authors: matched_package.package.maintainers?.map((v: any) => v.username)
 		};
 	} catch (error) {
 		console.error(`Error fetching stats for ${pkg_name}:`, error);
-		return { dependents: 0, downloads: 0 };
+		return { dependents: 0, downloads: 0, authors: [] };
 	}
 }
 
@@ -357,7 +354,7 @@ export async function process_package_details(
 	pkg_name: string,
 	package_json: any,
 	check_svelte_dep_criteria = true,
-	stats?: { dependents?: number; downloads?: number }
+	stats?: { dependents?: number; downloads?: number; authors: string[] }
 ): Promise<StructuredInterimPackage | null> {
 	try {
 		const latest_version = package_json['dist-tags']?.latest;
@@ -377,7 +374,8 @@ export async function process_package_details(
 				runes: false,
 				repo_url: '',
 				dependents: stats?.dependents || 0,
-				downloads: stats?.downloads || 0
+				downloads: stats?.downloads || 0,
+				authors: stats?.authors || []
 			},
 			package_json: package_json
 		};
@@ -491,7 +489,9 @@ export async function* process_packages(
 
 		try {
 			// Get package details
-			const package_json = await fetch_details_for_package(pkg_name);
+			const package_json = await superfetch(`${REGISTRY_BASE_URL}${pkg_name}`).then((r) =>
+				r.json()
+			);
 
 			// Get package stats
 			const stats = await fetch_package_stats(pkg_name);
@@ -703,6 +703,7 @@ export type StructuredInterimPackage = {
 		runes: boolean;
 		repo_url: string;
 		fork_of?: string;
+		authors: string[];
 	};
 	// Returned contents from registry.npmjs.org API
 	package_json: any;
@@ -718,9 +719,7 @@ export function structured_interim_package_to_package(
 
 	data.repo_url = structured_package.meta.repo_url;
 
-	data.author =
-		structured_package.package_json.author?.name ??
-		structured_package.package_json.maintainers[0].name;
+	data.authors = structured_package.meta.authors;
 	data.homepage = structured_package.package_json.homepage;
 	data.downloads = structured_package.meta.downloads;
 	data.dependents = structured_package.meta.dependents;
@@ -780,19 +779,22 @@ export async function* stream_search_by_keywords({
 						// Skip certain packages
 						if (pkg_name === 'svelte' || pkg_name === '@sveltejs/kit') continue;
 						if (skip_cached && (await PackageCache.has(pkg_name))) continue;
-						if (all_seen_packages.has(pkg_name)) continue;
+						if (all_seen_packages.has(pkg_name)) continue; // Skip already seen packages
 						if (total_runs >= limit) break;
 
-						all_seen_packages.add(pkg_name);
+						all_seen_packages.add(pkg_name); // Mark this package as seen
 
 						try {
 							// Get package details
-							const package_json = await fetch_details_for_package(pkg_name);
+							const package_json = await superfetch(`${REGISTRY_BASE_URL}${pkg_name}`).then((v) =>
+								v.json()
+							);
 
 							// Use stats from search results
 							const stats = {
 								dependents: obj.dependents || 0,
-								downloads: obj.downloads?.weekly || 0
+								downloads: obj.downloads?.weekly || 0,
+								authors: obj.package.maintainers?.map((v: any) => v.username) ?? []
 							};
 
 							// Process package details

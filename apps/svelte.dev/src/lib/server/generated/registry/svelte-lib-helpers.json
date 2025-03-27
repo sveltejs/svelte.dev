@@ -1,10 +1,12 @@
 {
   "name": "svelte-lib-helpers",
-  "description": "Utility package for Svelte library development.",
+  "description": "Provide utility functions for Svelte library development.",
   "repo_url": "https://github.com/shinokada/svelte-lib-helpers",
-  "author": "Shinichi Okada",
+  "authors": [
+    "shinichiokada"
+  ],
   "homepage": "https://github.com/shinokada/svelte-lib-helpers#readme",
-  "downloads": 344,
+  "downloads": 343,
   "dependents": 0,
   "updated": "2024-10-08T05:41:33.641Z",
   "tags": [

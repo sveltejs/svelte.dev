@@ -1,9 +1,11 @@
 {
   "name": "@codesoup/scroll-to-top",
-  "description": "Add scroll-to-top button to Svelte applications.",
+  "description": "Places scroll button on the right of HTML body.",
   "repo_url": "",
-  "author": "Allan Nielsen",
-  "downloads": 11,
+  "authors": [
+    "alnig441"
+  ],
+  "downloads": 0,
   "dependents": 0,
   "updated": "2022-11-11T19:33:05.818Z",
   "tags": [

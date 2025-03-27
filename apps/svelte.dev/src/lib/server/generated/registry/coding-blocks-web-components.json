@@ -1,9 +1,16 @@
 {
   "name": "@coding-blocks/web-components",
-  "description": "Provides fast, context-free components as custom HTML elements.",
+  "description": "Create fast, context-free components for Svelte.",
   "repo_url": "",
-  "author": "abhishek97",
-  "downloads": 899,
+  "authors": [
+    "abhishek97",
+    "vdvibhu20",
+    "witty123",
+    "championswimmer",
+    "jatinkatyal13",
+    "bipinkalra"
+  ],
+  "downloads": 209,
   "dependents": 0,
   "updated": "2024-03-28T07:57:37.812Z",
   "tags": [

@@ -1,14 +1,16 @@
 {
   "name": "codemirror-svelte",
-  "description": "Provides CodeMirror 6 wrapper component for Svelte.",
+  "description": "Integrate CodeMirror editor into Svelte applications.",
   "repo_url": "https://github.com/NaokiM03/codemirror-svelte",
-  "author": "NaokiM03",
+  "authors": [
+    "naokim03"
+  ],
   "homepage": "https://github.com/NaokiM03/codemirror-svelte#readme",
-  "downloads": 0,
+  "downloads": 5,
   "dependents": 0,
   "updated": "2023-06-04T19:49:43.011Z",
   "tags": [
-    "utility"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

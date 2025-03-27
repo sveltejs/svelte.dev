@@ -1,15 +1,16 @@
 {
   "name": "@pivotass/zvelte",
-  "description": "Compile Svelte-like code to PHP for SSR and JS for browser.",
+  "description": "Svelte-like compiler for twig-like syntax, outputs PHP and JS.",
   "repo_url": "https://github.com/PivotStick/zvelte",
-  "author": "Maxime DI NATALE",
+  "authors": [
+    "pivotass"
+  ],
   "homepage": "https://github.com/PivotStick/zvelte#readme",
-  "downloads": 559,
+  "downloads": 752,
   "dependents": 0,
-  "updated": "2025-03-21T14:44:49.128Z",
+  "updated": "2025-03-26T09:54:18.089Z",
   "tags": [
-    "tooling",
-    "preprocessor"
+    "tooling"
   ],
   "svelte5": false,
   "runes": false,

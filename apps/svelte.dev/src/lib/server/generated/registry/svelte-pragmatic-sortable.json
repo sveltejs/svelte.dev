@@ -1,10 +1,12 @@
 {
   "name": "svelte-pragmatic-sortable",
-  "description": "Sortable list component for Svelte, based on Pragmatic Drag and Drop.",
+  "description": "Adaptation of Pragmatic Drag and Drop for Svelte 5.",
   "repo_url": "https://github.com/dysbulic/svelte-pragmatic-sortable",
-  "author": "dysbulic",
+  "authors": [
+    "dysbulic"
+  ],
   "homepage": "https://dysbulic.github.io/svelte-pragmatic-sortable/",
-  "downloads": 16,
+  "downloads": 0,
   "dependents": 0,
   "updated": "2025-02-18T20:02:14.877Z",
   "tags": [

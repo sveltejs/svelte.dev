@@ -2,7 +2,9 @@
   "name": "svelte-compare-slider",
   "description": "Compare two components side-by-side or top-to-toe.",
   "repo_url": "",
-  "author": "Abiee",
+  "authors": [
+    "iugsm"
+  ],
   "homepage": "https://github.com/richhost/svelte-compare-slider",
   "downloads": 5,
   "dependents": 0,

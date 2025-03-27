@@ -1,13 +1,15 @@
 {
   "name": "@htmlbricks/hb-dashboard-counter-lines",
-  "description": "Svelte-Bootstrap dashboard counter lines web component.",
+  "description": "Create dashboard counter line components.",
   "repo_url": "",
-  "author": "Dario Caruso",
-  "downloads": 215,
+  "authors": [
+    "dariocaruso"
+  ],
+  "downloads": 224,
   "dependents": 0,
-  "updated": "2025-03-09T03:10:28.582Z",
+  "updated": "2025-03-24T18:07:14.328Z",
   "tags": [
-    "ui"
+    "component-library"
   ],
   "svelte5": false,
   "runes": false

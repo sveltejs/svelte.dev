@@ -1,14 +1,16 @@
 {
   "name": "vdtree-svelte",
-  "description": "Wrap vdtree components for use within Svelte applications.",
+  "description": "Wraps vdtree abstract components for use in Svelte.",
   "repo_url": "https://github.com/lgirma/vdtree-plugins",
-  "author": "Leone",
+  "authors": [
+    "lgirma"
+  ],
   "homepage": "https://github.com/lgirma/vdtree-plugins/tree/master/svelte",
-  "downloads": 0,
+  "downloads": 10,
   "dependents": 0,
   "updated": "2021-07-09T06:45:48.364Z",
   "tags": [
-    "utility"
+    "ui"
   ],
   "svelte5": false,
   "runes": false

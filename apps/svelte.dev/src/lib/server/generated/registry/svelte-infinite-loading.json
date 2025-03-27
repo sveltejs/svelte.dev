@@ -1,10 +1,12 @@
 {
   "name": "svelte-infinite-loading",
-  "description": "Infinite scroll component for Svelte apps, with built-in spinners.",
+  "description": "Creates infinite scroll components for Svelte apps.",
   "repo_url": "https://github.com/jonasgeiler/svelte-infinite-loading",
-  "author": "Jonas Geiler",
+  "authors": [
+    "jonasgeiler"
+  ],
   "homepage": "https://github.com/jonasgeiler/svelte-infinite-loading",
-  "downloads": 2401,
+  "downloads": 2233,
   "dependents": 6,
   "updated": "2024-05-28T05:44:35.168Z",
   "tags": [

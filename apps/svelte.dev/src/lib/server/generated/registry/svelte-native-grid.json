@@ -1,0 +1,16 @@
+{
+  "name": "svelte-native-grid",
+  "description": "Create CSS grid layouts with Svelte components.",
+  "repo_url": "",
+  "authors": [
+    "kohlenbach"
+  ],
+  "downloads": 8,
+  "dependents": 0,
+  "updated": "2020-05-10T07:45:01.609Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

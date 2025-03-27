@@ -1,10 +1,12 @@
 {
   "name": "svelte-formify",
-  "description": "Manages and validates forms in Svelte applications.",
+  "description": "Manage and validate forms using decorators.",
   "repo_url": "https://github.com/nodify-at/svelte-formify",
-  "author": "Hasan Oezdemir",
+  "authors": [
+    "nodify_at"
+  ],
   "homepage": "https://github.com/nodify-at/svelte-formify#readme",
-  "downloads": 0,
+  "downloads": 14,
   "dependents": 0,
   "updated": "2022-04-10T22:08:32.153Z",
   "tags": [

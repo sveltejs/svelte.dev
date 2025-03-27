@@ -1,0 +1,18 @@
+{
+  "name": "@svelterun/store",
+  "description": "Provide local storage for Svelte applications.",
+  "repo_url": "https://github.com/svelterun/store",
+  "authors": [
+    "nberlette"
+  ],
+  "homepage": "https://svelterun.com/pkg/store",
+  "downloads": 10,
+  "dependents": 0,
+  "updated": "2022-01-14T19:42:07.446Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 1
+}

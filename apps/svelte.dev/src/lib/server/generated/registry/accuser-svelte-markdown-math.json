@@ -1,10 +1,12 @@
 {
   "name": "@accuser/svelte-markdown-math",
-  "description": "Transform Markdown to Svelte components with math support.",
+  "description": "Transforms Markdown to Svelte components, including math with KaTeX.",
   "repo_url": "https://github.com/accuser/svelte-markdown-math",
-  "author": "Matthew Gibbons",
+  "authors": [
+    "accuser"
+  ],
   "homepage": "https://github.com/accuser/svelte-markdown-math",
-  "downloads": 16,
+  "downloads": 17,
   "dependents": 0,
   "updated": "2024-09-30T08:54:41.193Z",
   "tags": [

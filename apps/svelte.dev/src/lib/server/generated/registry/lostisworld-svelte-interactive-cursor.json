@@ -1,8 +1,10 @@
 {
   "name": "@lostisworld/svelte-interactive-cursor",
-  "description": "Create interactive custom cursors with Svelte components.",
+  "description": "Create interactive custom cursors with Svelte.",
   "repo_url": "https://github.com/LoStis-World/svelte-interactive-cursor",
-  "author": "LoSti's World",
+  "authors": [
+    "lostisworld"
+  ],
   "homepage": "https://github.com/LoStis-World/svelte-interactive-cursor#readme",
   "downloads": 33,
   "dependents": 0,

@@ -1,14 +1,17 @@
 {
   "name": "@flexilte/dnd",
-  "description": "Create drag and drop functionality in SvelteKit layouts.",
+  "description": "Provides drag-and-drop support for SvelteKit layout generation.",
   "repo_url": "https://github.com/flexilte/flexilte",
-  "author": "borgmon",
+  "authors": [
+    "borgmon"
+  ],
   "homepage": "https://flexilte.github.io",
-  "downloads": 2,
+  "downloads": 0,
   "dependents": 0,
   "updated": "2024-11-20T03:33:24.377Z",
   "tags": [
-    "component-library"
+    "ui",
+    "utility"
   ],
   "svelte5": false,
   "runes": false,

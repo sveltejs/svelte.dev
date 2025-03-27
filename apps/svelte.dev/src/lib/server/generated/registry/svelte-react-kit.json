@@ -1,10 +1,12 @@
 {
   "name": "svelte-react-kit",
-  "description": "Use React components inside Svelte apps.",
+  "description": "Use React components inside Svelte applications.",
   "repo_url": "https://github.com/jpinho/svelte-react-kit",
-  "author": "João Pinho",
+  "authors": [
+    "j.pinho"
+  ],
   "homepage": "https://github.com/jpinho/svelte-react-kit/",
-  "downloads": 1,
+  "downloads": 2,
   "dependents": 0,
   "updated": "2023-04-11T13:06:18.735Z",
   "tags": [

@@ -1,16 +1,28 @@
 {
   "name": "@egjs/svelte-infinitegrid",
-  "description": "Create infinite grid layouts for Svelte applications.",
+  "description": "Arrange items infinitely according to grid type in Svelte.",
   "repo_url": "https://github.com/naver/egjs-infinitegrid",
-  "author": "NAVER Corp.",
+  "authors": [
+    "anuu0916",
+    "braixen",
+    "ajaxpf",
+    "jongmoon",
+    "sculove",
+    "happyhj",
+    "mixed",
+    "netil",
+    "younkue",
+    "woodneck"
+  ],
   "homepage": "https://github.com/naver/egjs-infinitegrid",
-  "downloads": 159,
+  "downloads": 118,
   "dependents": 1,
   "updated": "2024-07-02T11:40:50.068Z",
   "tags": [
+    "component-library",
     "ui"
   ],
   "svelte5": false,
   "runes": false,
-  "github_stars": 2273
+  "github_stars": 2274
 }

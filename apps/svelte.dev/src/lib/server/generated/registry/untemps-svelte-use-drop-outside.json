@@ -1,10 +1,12 @@
 {
   "name": "@untemps/svelte-use-drop-outside",
-  "description": "Creates Svelte action to drop element outside area.",
+  "description": "Create Svelte action to drop element outside area.",
   "repo_url": "https://github.com/untemps/svelte-use-drop-outside",
-  "author": "Vincent Le Badezet",
+  "authors": [
+    "untemps"
+  ],
   "homepage": "https://github.com/untemps/svelte-use-drop-outside#readme",
-  "downloads": 114,
+  "downloads": 274,
   "dependents": 2,
   "updated": "2022-09-12T18:38:52.366Z",
   "tags": [

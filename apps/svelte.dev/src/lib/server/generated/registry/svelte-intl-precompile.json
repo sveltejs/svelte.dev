@@ -1,15 +1,16 @@
 {
   "name": "svelte-intl-precompile",
-  "description": "Precompile i18n messages for Svelte, improve performance.",
+  "description": "Precompiles i18n messages for Svelte apps, improving performance.",
   "repo_url": "https://github.com/cibernox/svelte-intl-precompile",
-  "author": "Miguel Camba",
+  "authors": [
+    "cibernox"
+  ],
   "homepage": "https://github.com/cibernox/svelte-intl-precompile#readme",
-  "downloads": 2656,
+  "downloads": 2412,
   "dependents": 1,
   "updated": "2023-08-09T08:44:38.954Z",
   "tags": [
-    "utility",
-    "i18n"
+    "utility"
   ],
   "svelte5": false,
   "runes": false,

@@ -1,10 +1,13 @@
 {
   "name": "svelte-flatpickr",
-  "description": "Integrates Flatpickr date and time picker component for Svelte apps.",
+  "description": "Integrate Flatpickr date/time picker component into Svelte apps.",
   "repo_url": "https://github.com/jacobmischka/svelte-flatpickr",
-  "author": "Jacob Mischka",
+  "authors": [
+    "antony",
+    "jacobmischka"
+  ],
   "homepage": "https://github.com/jacobmischka/svelte-flatpickr",
-  "downloads": 8872,
+  "downloads": 7993,
   "dependents": 14,
   "updated": "2024-12-02T02:03:53.543Z",
   "tags": [

@@ -1,8 +1,10 @@
 {
   "name": "@ikun-ui/statistic",
-  "description": "Provides statistic components for Svelte applications.",
+  "description": "Display statistic components for Svelte.",
   "repo_url": "",
-  "author": "baiwusanyu",
+  "authors": [
+    "baiwusanyu"
+  ],
   "downloads": 12,
   "dependents": 2,
   "updated": "2025-01-24T03:49:20.718Z",

@@ -1,11 +1,13 @@
 {
   "name": "@htmlbricks/hb-range-slider",
-  "description": "Svelte Boostrap Video Card WebComponent.",
+  "description": "Create Svelte-Bootstrap range slider.",
   "repo_url": "",
-  "author": "Dario Caruso",
-  "downloads": 454,
+  "authors": [
+    "dariocaruso"
+  ],
+  "downloads": 464,
   "dependents": 3,
-  "updated": "2025-03-09T03:10:34.083Z",
+  "updated": "2025-03-24T18:07:19.027Z",
   "tags": [
     "ui"
   ],

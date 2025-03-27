@@ -1,10 +1,12 @@
 {
   "name": "@rgossiaux/svelte-heroicons",
-  "description": "Provide Svelte wrappers for Heroicons library.",
+  "description": "Heroicons library wrappers for Svelte components.",
   "repo_url": "https://github.com/rgossiaux/svelte-heroicons",
-  "author": "Ryan Gossiaux",
+  "authors": [
+    "rgossiaux"
+  ],
   "homepage": "https://github.com/rgossiaux/svelte-heroicons",
-  "downloads": 131,
+  "downloads": 136,
   "dependents": 0,
   "updated": "2022-02-10T06:08:17.906Z",
   "tags": [

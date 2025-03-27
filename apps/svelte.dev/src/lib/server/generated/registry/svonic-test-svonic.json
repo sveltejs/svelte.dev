@@ -1,0 +1,17 @@
+{
+  "name": "@svonic-test/svonic",
+  "description": "Testing svelte, sveltekit, and ionic.",
+  "repo_url": "https://github.com/svonic/test",
+  "authors": [
+    "daimyo"
+  ],
+  "homepage": "https://github.com/svonic/test#readme",
+  "downloads": 45,
+  "dependents": 0,
+  "updated": "2022-02-18T12:17:22.734Z",
+  "tags": [
+    "testing"
+  ],
+  "svelte5": false,
+  "runes": false
+}

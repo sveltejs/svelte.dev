@@ -1,8 +1,10 @@
 {
   "name": "@coriolis/coriolis-svelte",
-  "description": "Svelte wrapper for Coriolis event store.",
+  "description": "Provides Coriolis wrapper for Svelte.",
   "repo_url": "https://github.com/coriolisjs/coriolis-svelte",
-  "author": "Nicolas Deveaud",
+  "authors": [
+    "nicolas.deveaud"
+  ],
   "homepage": "https://github.com/coriolisjs/coriolis-svelte#readme",
   "downloads": 14,
   "dependents": 1,

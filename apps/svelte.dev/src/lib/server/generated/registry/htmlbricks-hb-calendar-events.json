@@ -1,13 +1,15 @@
 {
   "name": "@htmlbricks/hb-calendar-events",
-  "description": "Create Svelte web component for calendar events.",
+  "description": "Create Svelte Calendar WebComponent with events.",
   "repo_url": "",
-  "author": "Dario Caruso",
-  "downloads": 453,
+  "authors": [
+    "dariocaruso"
+  ],
+  "downloads": 477,
   "dependents": 2,
-  "updated": "2025-03-09T03:10:27.452Z",
+  "updated": "2025-03-24T18:07:12.828Z",
   "tags": [
-    "media"
+    "component-library"
   ],
   "svelte5": false,
   "runes": false

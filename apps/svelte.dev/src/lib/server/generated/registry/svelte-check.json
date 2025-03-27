@@ -1,10 +1,14 @@
 {
   "name": "svelte-check",
-  "description": "Provides CLI diagnostics checks for Svelte code.",
+  "description": "Checks Svelte code for errors and warnings.",
   "repo_url": "https://github.com/sveltejs/language-tools",
-  "author": "The Svelte Community",
+  "authors": [
+    "orta",
+    "svelte-language-tools-deploy",
+    "dummdidumm"
+  ],
   "homepage": "https://github.com/sveltejs/language-tools#readme",
-  "downloads": 501248,
+  "downloads": 504446,
   "dependents": 69,
   "updated": "2025-03-06T14:20:23.951Z",
   "tags": [

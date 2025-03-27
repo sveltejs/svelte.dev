@@ -1,11 +1,13 @@
 {
   "name": "@htmlbricks/hb-order-list",
-  "description": "Create sortable lists with Svelte web components.",
+  "description": "Create order list web components with Svelte.",
   "repo_url": "",
-  "author": "Dario Caruso",
-  "downloads": 431,
+  "authors": [
+    "dariocaruso"
+  ],
+  "downloads": 453,
   "dependents": 2,
-  "updated": "2025-03-09T03:10:32.726Z",
+  "updated": "2025-03-24T18:07:17.853Z",
   "tags": [
     "component-library"
   ],

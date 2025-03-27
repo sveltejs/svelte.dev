@@ -1,0 +1,17 @@
+{
+  "name": "@smart-access/image_viewer",
+  "description": "Display images within Svelte applications.",
+  "repo_url": "https://northkode@bitbucket.org/smart-access/image-viewer",
+  "authors": [
+    "smartaccess"
+  ],
+  "homepage": "https://bitbucket.org/smart-access/image-viewer#readme",
+  "downloads": 17,
+  "dependents": 0,
+  "updated": "2019-07-19T01:20:31.746Z",
+  "tags": [
+    "media"
+  ],
+  "svelte5": false,
+  "runes": false
+}

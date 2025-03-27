@@ -2,15 +2,17 @@
   "name": "svelte-contextify",
   "description": "Improve context management in Svelte apps.",
   "repo_url": "https://github.com/Hugos68/svelte-contextify",
-  "author": "Hugo Korte",
+  "authors": [
+    "hugoskokos"
+  ],
   "homepage": "https://github.com/Hugos68/svelte-contextify#readme",
-  "downloads": 21,
+  "downloads": 24,
   "dependents": 0,
   "updated": "2024-07-19T18:26:09.420Z",
   "tags": [
     "utility"
   ],
-  "svelte5": true,
+  "svelte5": false,
   "runes": false,
   "github_stars": 63
 }

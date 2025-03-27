@@ -1,10 +1,12 @@
 {
   "name": "caligula",
-  "description": "Optimize CSS stylesheets for Svelte apps by removing unused classes.",
+  "description": "Optimize CSS stylesheets for Svelte applications.",
   "repo_url": "https://github.com/metonym/caligula",
-  "author": "Eric Liu",
+  "authors": [
+    "metonym"
+  ],
   "homepage": "https://github.com/metonym/caligula",
-  "downloads": 0,
+  "downloads": 10,
   "dependents": 0,
   "updated": "2020-04-04T15:37:04.792Z",
   "tags": [

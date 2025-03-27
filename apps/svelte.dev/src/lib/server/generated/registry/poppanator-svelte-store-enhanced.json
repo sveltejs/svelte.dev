@@ -1,0 +1,18 @@
+{
+  "name": "@poppanator/svelte-store-enhanced",
+  "description": "Enhances Svelte stores with additional methods.",
+  "repo_url": "https://github.com/poppa/svelte-store-enhanced",
+  "authors": [
+    "poppanator_"
+  ],
+  "homepage": "https://github.com/poppa/svelte-store-enhanced#readme",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2023-08-30T10:22:39.366Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

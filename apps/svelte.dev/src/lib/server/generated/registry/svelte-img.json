@@ -1,15 +1,16 @@
 {
   "name": "svelte-img",
-  "description": "Create responsive image loading components for Svelte applications.",
+  "description": "Create responsive image loading component for Svelte.",
   "repo_url": "https://github.com/metonym/svelte-img",
-  "author": "Eric Liu",
+  "authors": [
+    "metonym"
+  ],
   "homepage": "https://github.com/metonym/svelte-img",
-  "downloads": 0,
+  "downloads": 14,
   "dependents": 0,
   "updated": "2021-10-16T22:09:11.151Z",
   "tags": [
-    "media",
-    "ui"
+    "media"
   ],
   "svelte5": false,
   "runes": false,

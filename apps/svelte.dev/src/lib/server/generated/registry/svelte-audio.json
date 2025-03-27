@@ -1,14 +1,17 @@
 {
   "name": "svelte-audio",
-  "description": "Audio player component for Svelte, uses APlayer.",
+  "description": "Integrate audio player component for Svelte applications.",
   "repo_url": "https://github.com/JacobLinCool/svelte-audio",
-  "author": "JacobLinCool",
+  "authors": [
+    "jacoblincool"
+  ],
   "homepage": "https://jacoblincool.github.io/svelte-audio/",
-  "downloads": 10,
+  "downloads": 2,
   "dependents": 0,
   "updated": "2024-04-04T15:44:10.337Z",
   "tags": [
-    "media"
+    "media",
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

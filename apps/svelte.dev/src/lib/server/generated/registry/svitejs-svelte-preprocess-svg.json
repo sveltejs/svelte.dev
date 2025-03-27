@@ -1,10 +1,13 @@
 {
   "name": "@svitejs/svelte-preprocess-svg",
-  "description": "Optimize inline SVG in Svelte components during preprocessing.",
+  "description": "Optimize inline SVG in Svelte components.",
   "repo_url": "https://github.com/svitejs/svelte-preprocess-svg",
-  "author": "dominikg",
+  "authors": [
+    "bluwy",
+    "dominik_g"
+  ],
   "homepage": "https://github.com/svitejs/svelte-preprocess-svg#readme",
-  "downloads": 53,
+  "downloads": 34,
   "dependents": 0,
   "updated": "2022-12-04T16:03:03.306Z",
   "tags": [

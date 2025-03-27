@@ -1,13 +1,15 @@
 {
   "name": "@htmlbricks/hb-vertical-img-txt-archive",
-  "description": "Provides Svelte-Bootstrap vertical-img-txt-archive.",
+  "description": "Create vertical image and text archive components.",
   "repo_url": "",
-  "author": "Dario Caruso",
-  "downloads": 212,
+  "authors": [
+    "dariocaruso"
+  ],
+  "downloads": 219,
   "dependents": 0,
-  "updated": "2025-03-09T03:10:36.262Z",
+  "updated": "2025-03-24T18:07:21.698Z",
   "tags": [
-    "ui"
+    "component-library"
   ],
   "svelte5": false,
   "runes": false

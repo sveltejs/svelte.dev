@@ -1,10 +1,12 @@
 {
   "name": "svelte-twitter-emoji",
-  "description": "Provide Twitter emoji SVG icon components for Svelte.",
+  "description": "Provide Twitter emoji icon components for Svelte.",
   "repo_url": "https://github.com/shinokada/svelte-twitter-emoji",
-  "author": "Shinichi Okada",
+  "authors": [
+    "shinichiokada"
+  ],
   "homepage": "https://svelte-twitter-emoji.codewithshin.com/",
-  "downloads": 0,
+  "downloads": 31,
   "dependents": 0,
   "updated": "2024-03-01T17:20:21.038Z",
   "tags": [

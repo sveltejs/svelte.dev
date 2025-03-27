@@ -1,14 +1,16 @@
 {
   "name": "svelte-style-directive",
-  "description": "Add style directive support to Svelte components.",
+  "description": "Adds style directive support to Svelte components.",
   "repo_url": "https://github.com/sidx1024/svelte-style-directive",
-  "author": "Siddharth Goswami",
+  "authors": [
+    "sidx1024"
+  ],
   "homepage": "https://github.com/sidx1024/svelte-style-directive#readme",
-  "downloads": 0,
+  "downloads": 12,
   "dependents": 0,
   "updated": "2020-11-29T14:47:58.873Z",
   "tags": [
-    "tooling",
+    "utility",
     "preprocessor"
   ],
   "svelte5": false,

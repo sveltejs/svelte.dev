@@ -1,8 +1,10 @@
 {
   "name": "@signalchain/svelte-forms",
-  "description": "Provides a Svelte forms library with validation and state management.",
+  "description": "Create forms with validation in Svelte applications.",
   "repo_url": "",
-  "author": "signalchain",
+  "authors": [
+    "signalchain"
+  ],
   "downloads": 33,
   "dependents": 0,
   "updated": "2022-03-12T12:43:48.404Z",

@@ -1,0 +1,17 @@
+{
+  "name": "svelte-lingui",
+  "description": "Internationalization, localization, translation for Svelte apps.",
+  "repo_url": "https://github.com/hyperlab/svelte-lingui",
+  "authors": [
+    "mrlundis"
+  ],
+  "downloads": 8,
+  "dependents": 0,
+  "updated": "2019-11-04T16:39:26.182Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 3
+}

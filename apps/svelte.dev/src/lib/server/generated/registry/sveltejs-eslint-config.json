@@ -1,10 +1,15 @@
 {
   "name": "@sveltejs/eslint-config",
-  "description": "Provides ESLint configuration for Svelte projects.",
+  "description": "Provide ESLint configuration for Svelte projects.",
   "repo_url": "https://github.com/sveltejs/eslint-config",
-  "author": "Svelte",
+  "authors": [
+    "rich_harris",
+    "svelte-admin",
+    "conduitry",
+    "dominik_g"
+  ],
   "homepage": "https://github.com/svelte/eslint-config#readme",
-  "downloads": 2289,
+  "downloads": 2036,
   "dependents": 0,
   "updated": "2025-03-04T01:23:32.195Z",
   "tags": [

@@ -1,10 +1,12 @@
 {
   "name": "@magrinilopes/svelte-downloadfile",
-  "description": "Create Svelte component for downloading files.",
+  "description": "Create download file component for Svelte.",
   "repo_url": "",
-  "author": "Daniel Magrini",
+  "authors": [
+    "magrinilopes"
+  ],
   "homepage": "https://github.com/magrinilopes/svelte-downloadfile#readme",
-  "downloads": 1,
+  "downloads": 34,
   "dependents": 0,
   "updated": "2021-05-03T19:15:26.922Z",
   "tags": [

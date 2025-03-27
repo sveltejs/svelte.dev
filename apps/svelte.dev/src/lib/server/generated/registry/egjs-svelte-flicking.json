@@ -1,8 +1,19 @@
 {
   "name": "@egjs/svelte-flicking",
-  "description": "Create flexible, extendable, and reliable carousel components in Svelte.",
+  "description": "Creates reliable, flexible, extendable carousel components.",
   "repo_url": "https://github.com/naver/egjs-flicking",
-  "author": "NAVER Corp.",
+  "authors": [
+    "ajaxpf",
+    "jongmoon",
+    "sculove",
+    "happyhj",
+    "anuu0916",
+    "mixed",
+    "netil",
+    "younkue",
+    "woodneck",
+    "braixen"
+  ],
   "homepage": "https://naver.github.io/egjs-flicking/",
   "downloads": 120,
   "dependents": 0,
@@ -12,5 +23,5 @@
   ],
   "svelte5": false,
   "runes": false,
-  "github_stars": 2826
+  "github_stars": 2827
 }

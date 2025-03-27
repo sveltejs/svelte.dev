@@ -1,10 +1,12 @@
 {
   "name": "sveltekit-turnstile",
-  "description": "Render forms and validate submissions with Cloudflare Turnstile.",
+  "description": "Create components for rendering forms and validating turnstile tokens.",
   "repo_url": "https://github.com/pevey/sveltekit-turnstile",
-  "author": "Lacey Pevey",
+  "authors": [
+    "pevey"
+  ],
   "homepage": "https://pevey.com/sveltekit-turnstile",
-  "downloads": 151,
+  "downloads": 132,
   "dependents": 0,
   "updated": "2025-01-22T03:43:54.115Z",
   "tags": [

@@ -1,10 +1,12 @@
 {
   "name": "svelte-parallax",
-  "description": "Create parallax scrolling effects in Svelte.",
+  "description": "Create parallax scrolling effects in Svelte applications.",
   "repo_url": "https://github.com/kindoflew/svelte-parallax",
-  "author": "Lewis DAvanzo",
+  "authors": [
+    "kindoflew"
+  ],
   "homepage": "https://github.com/kindoflew/svelte-parallax#readme",
-  "downloads": 381,
+  "downloads": 304,
   "dependents": 1,
   "updated": "2022-08-01T00:10:30.578Z",
   "tags": [

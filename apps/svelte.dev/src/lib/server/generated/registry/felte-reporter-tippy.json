@@ -1,13 +1,18 @@
 {
   "name": "@felte/reporter-tippy",
+  "description": "Displays Felte form validation errors using Tippy.js tooltips.",
   "repo_url": "https://github.com/pablo-abc/felte",
-  "author": "Pablo Berganza",
+  "authors": [
+    "pberganza"
+  ],
   "homepage": "https://github.com/pablo-abc/felte/tree/main/packages/reporter-tippy",
-  "downloads": 366,
+  "downloads": 485,
   "dependents": 1,
   "updated": "2024-10-29T22:05:16.541Z",
-  "tags": [],
+  "tags": [
+    "utility"
+  ],
   "svelte5": false,
   "runes": false,
-  "github_stars": 1042
+  "github_stars": 1043
 }

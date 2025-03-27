@@ -2,9 +2,11 @@
   "name": "@svelte-put/tooltip",
   "description": "Build type-safe, headless tooltips with Svelte actions.",
   "repo_url": "https://github.com/vnphanquang/svelte-put",
-  "author": "Quang Phan",
+  "authors": [
+    "vnphanquang"
+  ],
   "homepage": "https://svelte-put.vnphanquang.com/docs/tooltip",
-  "downloads": 6,
+  "downloads": 3,
   "dependents": 0,
   "updated": "2024-05-17T09:08:59.162Z",
   "tags": [
@@ -12,5 +14,5 @@
   ],
   "svelte5": false,
   "runes": false,
-  "github_stars": 909
+  "github_stars": 911
 }

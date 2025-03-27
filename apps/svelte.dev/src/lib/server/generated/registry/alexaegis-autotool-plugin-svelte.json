@@ -1,15 +1,16 @@
 {
   "name": "@alexaegis/autotool-plugin-svelte",
-  "description": "Setup svelte with autotool-plugin.",
+  "description": "Setup svelte.",
   "repo_url": "https://github.com/AlexAegis/js-tooling",
-  "author": "Alex Aegis",
+  "authors": [
+    "alexaegis"
+  ],
   "homepage": "https://github.com/AlexAegis/js-tooling",
   "downloads": 109,
   "dependents": 0,
   "updated": "2024-11-30T21:39:42.325Z",
   "tags": [
-    "tooling",
-    "preprocessor"
+    "tooling"
   ],
   "svelte5": true,
   "runes": false,

@@ -1,11 +1,13 @@
 {
   "name": "@htmlbricks/hb-form",
-  "description": "Svelte-Bootstrap form component.",
+  "description": "Build Svelte forms with validation and web component support.",
   "repo_url": "",
-  "author": "Dario Caruso",
-  "downloads": 473,
+  "authors": [
+    "dariocaruso"
+  ],
+  "downloads": 491,
   "dependents": 11,
-  "updated": "2025-03-09T03:10:40.151Z",
+  "updated": "2025-03-24T18:07:25.487Z",
   "tags": [
     "component-library"
   ],

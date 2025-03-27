@@ -1,10 +1,12 @@
 {
   "name": "@el3um4s/svelte-component-package-starter",
-  "description": "Provides a starter template for Svelte component packages.",
+  "description": "Provide Svelte component package starter template.",
   "repo_url": "https://github.com/el3um4s/svelte-component-package-starter",
-  "author": "Samuele C. De Tomasi",
+  "authors": [
+    "el3um4s"
+  ],
   "homepage": "https://github.com/el3um4s/svelte-component-package-starter#readme",
-  "downloads": 19,
+  "downloads": 109,
   "dependents": 0,
   "updated": "2021-12-31T18:23:09.920Z",
   "tags": [

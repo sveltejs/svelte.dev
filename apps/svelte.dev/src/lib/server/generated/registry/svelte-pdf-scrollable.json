@@ -1,14 +1,17 @@
 {
   "name": "svelte-pdf-scrollable",
-  "description": "Render scrollable PDF files using PDF.js in SvelteKit.",
+  "description": "Renders scrollable PDF files within SvelteKit applications.",
   "repo_url": "https://github.com/faigdavid/svelte-pdf-scrollable",
-  "author": "github.com/faigdavid",
+  "authors": [
+    "faigdalemon"
+  ],
   "homepage": "https://github.com/faigdavid/svelte-pdf-scrollable#readme",
-  "downloads": 1,
+  "downloads": 5,
   "dependents": 0,
   "updated": "2022-09-18T05:30:26.881Z",
   "tags": [
-    "ui"
+    "ui",
+    "media"
   ],
   "svelte5": false,
   "runes": false,

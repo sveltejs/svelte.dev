@@ -1,14 +1,17 @@
 {
   "name": "svelte-tenor",
-  "description": "Integrate Tenor GIF components into Svelte apps.",
+  "description": "Create GIF keyboard components for Svelte apps.",
   "repo_url": "https://github.com/GauBen/svelte-tenor",
-  "author": "Gautier Ben Aïm",
+  "authors": [
+    "gauben"
+  ],
   "homepage": "https://github.com/GauBen/svelte-tenor/#readme",
-  "downloads": 52,
+  "downloads": 41,
   "dependents": 0,
   "updated": "2022-08-15T14:51:40.288Z",
   "tags": [
-    "ui"
+    "ui",
+    "media"
   ],
   "svelte5": false,
   "runes": false,

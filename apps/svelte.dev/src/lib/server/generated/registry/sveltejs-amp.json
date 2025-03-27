@@ -1,10 +1,15 @@
 {
   "name": "@sveltejs/amp",
-  "description": "Integrate SvelteKit with Accelerated Mobile Pages (AMP).",
+  "description": "Provides AMP integration for SvelteKit.",
   "repo_url": "https://github.com/sveltejs/kit",
-  "author": "rich_harris",
+  "authors": [
+    "rich_harris",
+    "svelte-admin",
+    "conduitry",
+    "dominik_g"
+  ],
   "homepage": "https://svelte.dev",
-  "downloads": 208,
+  "downloads": 238,
   "dependents": 0,
   "updated": "2024-10-25T12:12:36.654Z",
   "tags": [
@@ -12,5 +17,5 @@
   ],
   "svelte5": false,
   "runes": false,
-  "github_stars": 19123
+  "github_stars": 19137
 }

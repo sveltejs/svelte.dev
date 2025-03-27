@@ -1,10 +1,12 @@
 {
   "name": "svelte-readme",
-  "description": "Develop and demo Svelte components in README.md files.",
+  "description": "Develop and demo Svelte components in README.md.",
   "repo_url": "https://github.com/metonym/svelte-readme",
-  "author": "Eric Liu",
+  "authors": [
+    "metonym"
+  ],
   "homepage": "https://github.com/metonym/svelte-readme",
-  "downloads": 134,
+  "downloads": 98,
   "dependents": 0,
   "updated": "2022-02-26T02:31:22.417Z",
   "tags": [

@@ -2,9 +2,11 @@
   "name": "svelte-boring-avatars",
   "description": "Generate boring avatars for Svelte applications.",
   "repo_url": "https://github.com/paolotiu/svelte-boring-avatars",
-  "author": "Paolo Tiu",
+  "authors": [
+    "paolotiu17"
+  ],
   "homepage": "https://github.com/paolotiu/svelte-boring-avatars#readme",
-  "downloads": 335,
+  "downloads": 344,
   "dependents": 0,
   "updated": "2024-03-08T08:12:43.519Z",
   "tags": [

@@ -1,13 +1,15 @@
 {
   "name": "svelte-input-mask",
-  "description": "Create masked input fields for Svelte.",
+  "description": "Masks input fields in Svelte, supports credit cards, dates, etc.",
   "repo_url": "",
-  "author": "Nik Mostovoy",
-  "downloads": 1112,
+  "authors": [
+    "xnimorz"
+  ],
+  "downloads": 1386,
   "dependents": 2,
   "updated": "2020-12-08T00:04:28.690Z",
   "tags": [
-    "utility"
+    "ui"
   ],
   "svelte5": true,
   "runes": false

@@ -1,10 +1,12 @@
 {
   "name": "svelte-credit-cards",
-  "description": "Render credit card previews in Svelte applications.",
+  "description": "Render credit card previews in Svelte.",
   "repo_url": "https://github.com/CharlyJazz/svelte-credit-card",
-  "author": "Carlos Azuaje",
+  "authors": [
+    "charlyjazz"
+  ],
   "homepage": "https://github.com/CharlyJazz/svelte-credit-card#readme",
-  "downloads": 8,
+  "downloads": 15,
   "dependents": 0,
   "updated": "2024-11-04T01:58:25.078Z",
   "tags": [

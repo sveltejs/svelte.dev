@@ -1,8 +1,10 @@
 {
   "name": "@grail-ui/svelte",
-  "description": "Create accessible, unstyled UI components for Svelte.",
+  "description": "Build accessible, high-quality Svelte applications.",
   "repo_url": "https://github.com/grail-ui/grail-ui",
-  "author": "bekos",
+  "authors": [
+    "bekos"
+  ],
   "homepage": "https://github.com/grail-ui/grail-ui#readme",
   "downloads": 183,
   "dependents": 0,

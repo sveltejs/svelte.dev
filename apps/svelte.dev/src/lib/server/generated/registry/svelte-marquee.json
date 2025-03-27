@@ -1,10 +1,12 @@
 {
   "name": "svelte-marquee",
-  "description": "Create responsive, adaptive marquee component for Svelte.",
+  "description": "Creates responsive, adaptive marquee elements for Svelte.",
   "repo_url": "https://github.com/silvestrevivo/svelte-marquee",
-  "author": "@silvestrevivo",
+  "authors": [
+    "silvestrevivo"
+  ],
   "homepage": "https://github.com/silvestrevivo/svelte-marquee#readme",
-  "downloads": 2,
+  "downloads": 19,
   "dependents": 0,
   "updated": "2020-07-15T19:15:34.745Z",
   "tags": [

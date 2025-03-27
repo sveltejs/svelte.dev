@@ -1,13 +1,15 @@
 {
   "name": "@htmlbricks/hb-page-invoice",
-  "description": "Create Svelte web component for invoice page.",
+  "description": "Create invoice page web component for Svelte apps.",
   "repo_url": "",
-  "author": "Dario Caruso",
-  "downloads": 437,
+  "authors": [
+    "dariocaruso"
+  ],
+  "downloads": 457,
   "dependents": 2,
-  "updated": "2025-03-09T03:10:42.531Z",
+  "updated": "2025-03-24T18:07:27.800Z",
   "tags": [
-    "content"
+    "ui"
   ],
   "svelte5": false,
   "runes": false

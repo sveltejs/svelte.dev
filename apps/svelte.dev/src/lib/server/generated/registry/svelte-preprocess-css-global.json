@@ -1,12 +1,15 @@
 {
   "name": "svelte-preprocess-css-global",
-  "description": "Preprocess Svelte CSS to create global prefixed styles.",
+  "description": "Preprocessor for global CSS and PostCSS styles in Svelte.",
   "repo_url": "https://github.com/aheissenberger/svelte-preprocess-css-global",
-  "author": "Andreas Heissenberger",
-  "downloads": 0,
+  "authors": [
+    "aheissenberger"
+  ],
+  "downloads": 7,
   "dependents": 0,
   "updated": "2019-05-12T20:39:25.326Z",
   "tags": [
+    "tooling",
     "preprocessor"
   ],
   "svelte5": false,

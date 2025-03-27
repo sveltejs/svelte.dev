@@ -1,0 +1,17 @@
+{
+  "name": "@4mende2/svelte-heroicons",
+  "description": "Use Heroicons in Svelte applications.",
+  "repo_url": "https://gitlab.com/aldomendez/svelte-heroicons",
+  "authors": [
+    "4mende2"
+  ],
+  "homepage": "https://gitlab.com/aldomendez/svelte-heroicons",
+  "downloads": 74,
+  "dependents": 0,
+  "updated": "2020-10-26T17:30:35.791Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

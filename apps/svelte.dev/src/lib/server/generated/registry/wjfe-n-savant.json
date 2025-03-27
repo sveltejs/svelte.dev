@@ -1,14 +1,16 @@
 {
   "name": "@wjfe/n-savant",
-  "description": "Client-side router for Svelte v5 SPA's.",
+  "description": "Client-side router for Svelte v5 with multi-hash routing.",
   "repo_url": "",
-  "author": "webjose",
+  "authors": [
+    "webjose"
+  ],
   "downloads": 20,
   "dependents": 0,
   "updated": "2025-03-07T02:31:45.548Z",
   "tags": [
     "router"
   ],
-  "svelte5": true,
+  "svelte5": false,
   "runes": false
 }

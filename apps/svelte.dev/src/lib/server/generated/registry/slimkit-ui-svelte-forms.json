@@ -1,0 +1,16 @@
+{
+  "name": "@slimkit-ui/svelte-forms",
+  "description": "Zero dependency Svelte form validation library.",
+  "repo_url": "",
+  "authors": [
+    "zirconlabz"
+  ],
+  "downloads": 14,
+  "dependents": 0,
+  "updated": "2022-05-26T04:03:53.384Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

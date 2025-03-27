@@ -1,0 +1,16 @@
+{
+  "name": "sveltekit-seo-enhancer",
+  "description": "Enhance SEO capabilities in SvelteKit applications.",
+  "repo_url": "",
+  "authors": [
+    "ayushjhunjhunwala"
+  ],
+  "downloads": 4,
+  "dependents": 0,
+  "updated": "2024-06-23T09:41:48.184Z",
+  "tags": [
+    "seo"
+  ],
+  "svelte5": false,
+  "runes": false
+}

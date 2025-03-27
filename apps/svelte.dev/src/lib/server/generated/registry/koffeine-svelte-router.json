@@ -1,10 +1,12 @@
 {
   "name": "@koffeine/svelte-router",
-  "description": "Implement routing functionality within Svelte applications.",
+  "description": "Provide router for Svelte applications.",
   "repo_url": "https://github.com/koffeine/svelte-router",
-  "author": "Kornél Horváth",
+  "authors": [
+    "koffeine"
+  ],
   "homepage": "https://github.com/koffeine/svelte-router",
-  "downloads": 14,
+  "downloads": 2,
   "dependents": 0,
   "updated": "2025-02-19T18:29:16.939Z",
   "tags": [

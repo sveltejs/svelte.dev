@@ -1,10 +1,12 @@
 {
   "name": "svelte-favicon-badge",
-  "description": "Add favicon with badge to show unread messages or counts.",
+  "description": "Adds favicon with badge to show notifications in Svelte apps.",
   "repo_url": "https://github.com/kevmodrome/svelte-favicon-badge",
-  "author": "kevmodrome",
+  "authors": [
+    "kevmodrome"
+  ],
   "homepage": "https://github.com/kevmodrome/svelte-favicon-badge#readme",
-  "downloads": 13,
+  "downloads": 7,
   "dependents": 0,
   "updated": "2020-03-25T19:02:04.005Z",
   "tags": [

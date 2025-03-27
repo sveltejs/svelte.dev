@@ -1,10 +1,12 @@
 {
   "name": "@fabiohvp/svelte-gantt",
-  "description": "Provides Gantt component made with Svelte.",
+  "description": "Create Gantt charts with Svelte.",
   "repo_url": "https://github.com/fabiohvp/svelte-gantt",
-  "author": "https://github.com/fabiohvp",
+  "authors": [
+    "fabiohvp"
+  ],
   "homepage": "https://github.com/fabiohvp/svelte-gantt#readme",
-  "downloads": 56,
+  "downloads": 28,
   "dependents": 0,
   "updated": "2020-07-26T03:21:07.689Z",
   "tags": [

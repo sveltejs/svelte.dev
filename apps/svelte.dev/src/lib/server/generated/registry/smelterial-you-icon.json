@@ -1,9 +1,11 @@
 {
   "name": "@smelterial/you-icon",
-  "description": "Access Google's Material Symbols in Svelte.",
+  "description": "Access Google's Material Symbols in Svelte components.",
   "repo_url": "",
-  "author": "willster277",
-  "downloads": 0,
+  "authors": [
+    "willster277"
+  ],
+  "downloads": 1,
   "dependents": 1,
   "updated": "2023-05-26T16:04:09.690Z",
   "tags": [

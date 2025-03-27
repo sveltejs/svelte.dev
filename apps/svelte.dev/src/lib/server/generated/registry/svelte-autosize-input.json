@@ -1,9 +1,11 @@
 {
   "name": "svelte-autosize-input",
-  "description": "Create auto-width, auto-grow input components for Svelte.",
+  "description": "Dynamically adjusts input field width to content, with placeholder support.",
   "repo_url": "",
-  "author": "georgeous",
-  "downloads": 185,
+  "authors": [
+    "georgeous"
+  ],
+  "downloads": 212,
   "dependents": 0,
   "updated": "2024-06-12T22:06:36.123Z",
   "tags": [

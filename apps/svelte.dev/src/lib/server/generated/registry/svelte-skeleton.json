@@ -1,10 +1,12 @@
 {
   "name": "svelte-skeleton",
-  "description": "Create SVG skeletons to improve UX of loading images and interfaces.",
+  "description": "Implements SVG skeletons in Svelte 3.",
   "repo_url": "https://github.com/denisstasyev/svelte-skeleton",
-  "author": "Denis Stasyev",
+  "authors": [
+    "denisstasyev"
+  ],
   "homepage": "https://github.com/denisstasyev/svelte-skeleton#readme",
-  "downloads": 2743,
+  "downloads": 5083,
   "dependents": 1,
   "updated": "2022-03-02T16:45:51.095Z",
   "tags": [

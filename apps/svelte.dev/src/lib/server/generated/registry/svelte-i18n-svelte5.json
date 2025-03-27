@@ -1,0 +1,17 @@
+{
+  "name": "svelte-i18n-svelte5",
+  "description": "Internationalization library for Svelte, supporting Svelte 5.",
+  "repo_url": "https://github.com/mardax/svelte-i18n",
+  "authors": [
+    "mardax"
+  ],
+  "homepage": "https://github.com/mardax/svelte-i18n#readme",
+  "downloads": 3,
+  "dependents": 0,
+  "updated": "2024-06-10T18:53:39.869Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": true,
+  "runes": false
+}

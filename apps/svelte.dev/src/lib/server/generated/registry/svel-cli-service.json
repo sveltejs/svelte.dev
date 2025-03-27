@@ -2,9 +2,11 @@
   "name": "@svel/cli-service",
   "description": "Provide local service for svelte-cli projects.",
   "repo_url": "https://github.com/wmzy/svelte-cli",
-  "author": "Evan You",
+  "authors": [
+    "wmzy"
+  ],
   "homepage": "https://cli.vuejs.org/",
-  "downloads": 2,
+  "downloads": 33,
   "dependents": 1,
   "updated": "2019-05-30T02:51:30.013Z",
   "tags": [

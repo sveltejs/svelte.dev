@@ -1,10 +1,12 @@
 {
   "name": "pelte",
-  "description": "Publish Svelte components to npm with ease.",
+  "description": "Compile, bundle, publish Svelte components to npm easily.",
   "repo_url": "https://github.com/philter87/publish-svelte",
-  "author": "Philip Christiansen",
+  "authors": [
+    "philter87"
+  ],
   "homepage": "https://github.com/philter87/publish-svelte#readme",
-  "downloads": 0,
+  "downloads": 14,
   "dependents": 0,
   "updated": "2020-01-03T15:11:28.386Z",
   "tags": [

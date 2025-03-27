@@ -1,11 +1,13 @@
 {
   "name": "@htmlbricks/hb-searchbar",
-  "description": "Search bar web component for Svelte.",
+  "description": "Create search bar web components for Svelte applications.",
   "repo_url": "",
-  "author": "Dario Caruso",
-  "downloads": 313,
+  "authors": [
+    "dariocaruso"
+  ],
+  "downloads": 322,
   "dependents": 0,
-  "updated": "2025-03-09T03:10:34.044Z",
+  "updated": "2025-03-24T18:07:19.536Z",
   "tags": [
     "ui"
   ],

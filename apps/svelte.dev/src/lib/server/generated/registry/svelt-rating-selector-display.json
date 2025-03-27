@@ -1,8 +1,10 @@
 {
   "name": "svelt-rating-selector-display",
-  "description": "Enables user rating input and display in Svelte.",
+  "description": "Display and select star ratings in Svelte apps.",
   "repo_url": "https://github.com/stinger567/svelt-rating-selector-display",
-  "author": "Stinger567",
+  "authors": [
+    "stinger567"
+  ],
   "homepage": "https://svelt-rating-selector-display.stinger567.com/",
   "downloads": 194,
   "dependents": 0,

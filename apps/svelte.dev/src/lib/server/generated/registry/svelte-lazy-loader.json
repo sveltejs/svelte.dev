@@ -1,10 +1,12 @@
 {
   "name": "svelte-lazy-loader",
-  "description": "Lazy load images and media in Svelte applications.",
+  "description": "Lazy-load media in Svelte using IntersectionObserver, with blur effect.",
   "repo_url": "https://github.com/sawyerclick/svelte-lazy-loader",
-  "author": "Sawyer Click",
+  "authors": [
+    "sawyerclick"
+  ],
   "homepage": "http://svelte-lazy-loader.netlify.app",
-  "downloads": 31,
+  "downloads": 53,
   "dependents": 0,
   "updated": "2022-03-29T02:52:43.435Z",
   "tags": [

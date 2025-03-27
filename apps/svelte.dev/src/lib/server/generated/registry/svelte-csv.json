@@ -1,10 +1,12 @@
 {
   "name": "svelte-csv",
-  "description": "Fast in-browser CSV parser for Svelte, with CSVDownloader and more.",
+  "description": "Provides in-browser CSV parser for Svelte.",
   "repo_url": "https://github.com/Bunlong/svelte-csv",
-  "author": "bunlong",
+  "authors": [
+    "bunlong"
+  ],
   "homepage": "https://github.com/Bunlong/svelte-csv",
-  "downloads": 74,
+  "downloads": 96,
   "dependents": 0,
   "updated": "2022-02-14T17:53:33.830Z",
   "tags": [

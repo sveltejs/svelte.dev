@@ -2,9 +2,11 @@
   "name": "sveltip",
   "description": "Create simple, lightweight tooltip components for Svelte.",
   "repo_url": "https://github.com/thetrisatria/sveltip",
-  "author": "gayuh tri satria",
+  "authors": [
+    "thetrisatria"
+  ],
   "homepage": "https://github.com/thetrisatria/sveltip#readme",
-  "downloads": 75,
+  "downloads": 71,
   "dependents": 0,
   "updated": "2020-11-13T09:45:37.330Z",
   "tags": [

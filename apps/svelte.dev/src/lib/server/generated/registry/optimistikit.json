@@ -1,10 +1,12 @@
 {
   "name": "optimistikit",
-  "description": "Simplify optimistic UI updates in SvelteKit applications.",
+  "description": "Simplify optimistic UI updates in SvelteKit forms.",
   "repo_url": "https://github.com/paoloricciuti/optimistikit",
-  "author": "Paolo Ricciuti",
+  "authors": [
+    "pablopang"
+  ],
   "homepage": "https://github.com/paoloricciuti/optimistikit",
-  "downloads": 1,
+  "downloads": 0,
   "dependents": 0,
   "updated": "2024-08-09T15:28:39.348Z",
   "tags": [

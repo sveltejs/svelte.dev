@@ -1,10 +1,15 @@
 {
   "name": "@sveltejs/package",
-  "description": "Builds Svelte packages.",
+  "description": "Build Svelte packages in correctly packaged format.",
   "repo_url": "https://github.com/sveltejs/kit",
-  "author": "rich_harris",
+  "authors": [
+    "rich_harris",
+    "svelte-admin",
+    "conduitry",
+    "dominik_g"
+  ],
   "homepage": "https://svelte.dev",
-  "downloads": 56439,
+  "downloads": 55725,
   "dependents": 88,
   "updated": "2025-02-03T10:02:40.009Z",
   "tags": [
@@ -12,5 +17,5 @@
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 19123
+  "github_stars": 19137
 }

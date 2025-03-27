@@ -2,14 +2,16 @@
   "name": "svelte-transpile-typescript",
   "description": "Transpile TypeScript code within Svelte files.",
   "repo_url": "https://github.com/andrelmlins/svelte-transpile-typescript",
-  "author": "André Lins",
+  "authors": [
+    "andrelmlins"
+  ],
   "homepage": "https://github.com/andrelmlins/svelte-transpile-typescript",
-  "downloads": 2,
+  "downloads": 16,
   "dependents": 0,
   "updated": "2021-02-23T05:15:11.458Z",
   "tags": [
-    "preprocessor",
-    "tooling"
+    "tooling",
+    "preprocessor"
   ],
   "svelte5": false,
   "runes": false,

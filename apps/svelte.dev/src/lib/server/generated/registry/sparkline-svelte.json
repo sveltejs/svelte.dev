@@ -1,10 +1,12 @@
 {
   "name": "sparkline-svelte",
-  "description": "Lightweight, responsive Sparkline chart component for Svelte.",
+  "description": "Create responsive Sparkline charts for Svelte 5 with touch support.",
   "repo_url": "https://github.com/bn-l/sparkline-svelte",
-  "author": "bn-l",
+  "authors": [
+    "bn-l-github"
+  ],
   "homepage": "https://bn-l.github.io/sparkline-svelte/",
-  "downloads": 3,
+  "downloads": 18,
   "dependents": 1,
   "updated": "2024-12-05T00:04:49.029Z",
   "tags": [

@@ -1,8 +1,10 @@
 {
   "name": "@ikun-ui/tag",
-  "description": "Build tag components for Svelte applications.",
+  "description": "Create tag components for Svelte applications.",
   "repo_url": "",
-  "author": "baiwusanyu",
+  "authors": [
+    "baiwusanyu"
+  ],
   "downloads": 36,
   "dependents": 1,
   "updated": "2025-01-24T03:49:22.970Z",

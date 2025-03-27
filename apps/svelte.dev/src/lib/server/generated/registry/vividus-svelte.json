@@ -1,0 +1,18 @@
+{
+  "name": "@vividus/svelte",
+  "description": "Provides lively, reactive UI components for Svelte.",
+  "repo_url": "https://github.com/hAbuMustafa/vividus",
+  "authors": [
+    "eyecode"
+  ],
+  "homepage": "https://github.com/hAbuMustafa/vividus#readme",
+  "downloads": 6,
+  "dependents": 0,
+  "updated": "2024-01-25T17:50:12.920Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

@@ -1,13 +1,16 @@
 {
   "name": "@m93a/svelte-portal",
-  "description": "Create portals in Svelte applications.",
+  "description": "Create portals to escape parent element overflow.",
   "repo_url": "https://github.com/m93a/svelte-portal",
-  "author": "c.sha",
-  "downloads": 0,
+  "authors": [
+    "c.sha"
+  ],
+  "downloads": 5,
   "dependents": 0,
   "updated": "2022-05-18T13:41:13.891Z",
   "tags": [
-    "dom"
+    "dom",
+    "utility"
   ],
   "svelte5": false,
   "runes": false,

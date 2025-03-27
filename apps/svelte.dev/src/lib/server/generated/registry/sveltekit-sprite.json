@@ -1,10 +1,12 @@
 {
   "name": "sveltekit-sprite",
-  "description": "Inlines SVG sprite into SvelteKit app template.",
+  "description": "Inline SVG sprite into SvelteKit app template.",
   "repo_url": "https://github.com/rodshtein/sveltekit-sprite",
-  "author": "Misha Rodshtein",
+  "authors": [
+    "misharodshtein"
+  ],
   "homepage": "https://github.com/rodshtein/sveltekit-sprite",
-  "downloads": 1,
+  "downloads": 28,
   "dependents": 0,
   "updated": "2023-01-11T13:25:29.205Z",
   "tags": [

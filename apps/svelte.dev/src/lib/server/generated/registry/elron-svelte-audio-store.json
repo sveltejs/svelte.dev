@@ -1,10 +1,12 @@
 {
   "name": "@elron/svelte-audio-store",
-  "description": "Manage and play audio in Svelte applications.",
+  "description": "Manage, play, and manipulate audio within Svelte applications.",
   "repo_url": "https://github.com/elron/svelte-audio-store",
-  "author": "Elron Bucai",
+  "authors": [
+    "elron"
+  ],
   "homepage": "https://svelte-audio-store.netlify.app/",
-  "downloads": 16,
+  "downloads": 12,
   "dependents": 0,
   "updated": "2023-08-30T15:51:32.838Z",
   "tags": [

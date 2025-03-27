@@ -1,0 +1,18 @@
+{
+  "name": "jb-svelte-weather-widget",
+  "description": "Display weather forecasts in Svelte applications.",
+  "repo_url": "https://github.com/jbystronski/jb-svelte-weather-widget",
+  "authors": [
+    "pogodisco"
+  ],
+  "homepage": "https://jb-weather-widget.surge.sh",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2023-02-13T22:42:17.609Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

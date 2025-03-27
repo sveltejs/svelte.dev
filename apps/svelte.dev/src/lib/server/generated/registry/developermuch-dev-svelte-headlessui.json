@@ -1,14 +1,15 @@
 {
   "name": "@developermuch/dev-svelte-headlessui",
-  "description": "Provide unstyled, accessible UI components for Svelte.",
+  "description": "Unofficial Svelte port of Headless UI components.",
   "repo_url": "",
-  "author": "developermuch",
-  "downloads": 2,
+  "authors": [
+    "developermuch"
+  ],
+  "downloads": 0,
   "dependents": 0,
   "updated": "2022-10-02T07:00:45.785Z",
   "tags": [
-    "component-library",
-    "ui"
+    "component-library"
   ],
   "svelte5": false,
   "runes": false

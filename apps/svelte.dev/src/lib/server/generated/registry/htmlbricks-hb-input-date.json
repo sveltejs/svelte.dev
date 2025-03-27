@@ -1,11 +1,13 @@
 {
   "name": "@htmlbricks/hb-input-date",
-  "description": "Create Svelte web component for date input.",
+  "description": "Create date input web components for Svelte.",
   "repo_url": "",
-  "author": "Dario Caruso",
-  "downloads": 482,
+  "authors": [
+    "dariocaruso"
+  ],
+  "downloads": 502,
   "dependents": 4,
-  "updated": "2025-03-09T03:10:30.085Z",
+  "updated": "2025-03-24T18:07:15.016Z",
   "tags": [
     "ui"
   ],

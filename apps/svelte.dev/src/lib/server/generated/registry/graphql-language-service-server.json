@@ -1,8 +1,23 @@
 {
   "name": "graphql-language-service-server",
-  "description": "Provide language service for GraphQL in IDEs.",
+  "description": "Provides server for GraphQL Language Service.",
   "repo_url": "https://github.com/graphql/graphiql",
-  "author": "benjie",
+  "authors": [
+    "benjie",
+    "mjmahone",
+    "leebyron",
+    "i1g",
+    "acao",
+    "schickling",
+    "fb",
+    "wincent",
+    "kassens",
+    "orta",
+    "asiandrummer",
+    "lostplan",
+    "mgadda",
+    "ags-"
+  ],
   "homepage": "https://github.com/graphql/graphiql/tree/main/packages/graphql-language-service-server#readme",
   "downloads": 3733,
   "dependents": 3,
@@ -12,5 +27,5 @@
   ],
   "svelte5": false,
   "runes": false,
-  "github_stars": 16344
+  "github_stars": 16346
 }

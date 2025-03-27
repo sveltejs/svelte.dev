@@ -1,0 +1,18 @@
+{
+  "name": "@onsetsoftware/svelte-local-storage-store",
+  "description": "Create Svelte writable stores backed by local storage.",
+  "repo_url": "https://github.com/onsetsoftware/svelte-local-storage-store",
+  "authors": [
+    "acurrieclark"
+  ],
+  "homepage": "https://github.com/onsetsoftware/svelte-local-storage-store#readme",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2022-10-12T22:10:49.042Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

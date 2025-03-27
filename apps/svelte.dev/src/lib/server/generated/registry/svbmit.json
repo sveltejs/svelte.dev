@@ -1,0 +1,18 @@
+{
+  "name": "svbmit",
+  "description": "Provides form validation for Svelte applications.",
+  "repo_url": "https://github.com/PierBover/svbmit",
+  "authors": [
+    "pier25"
+  ],
+  "homepage": "https://github.com/PierBover/svbmit#readme",
+  "downloads": 12,
+  "dependents": 0,
+  "updated": "2021-12-24T15:41:57.508Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 2
+}

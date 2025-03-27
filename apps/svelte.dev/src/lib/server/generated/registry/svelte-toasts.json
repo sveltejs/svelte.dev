@@ -1,10 +1,12 @@
 {
   "name": "svelte-toasts",
-  "description": "Configurable notification/toast component for Svelte.",
+  "description": "Provides configurable notification/toast component for Svelte.",
   "repo_url": "https://github.com/mzohaibqc/svelte-toasts",
-  "author": "Zohaib Ijaz @mzohaibqc",
+  "authors": [
+    "mzohaibqc"
+  ],
   "homepage": "https://mzohaibqc.github.io/svelte-toasts",
-  "downloads": 2857,
+  "downloads": 2746,
   "dependents": 2,
   "updated": "2021-03-16T12:21:46.651Z",
   "tags": [

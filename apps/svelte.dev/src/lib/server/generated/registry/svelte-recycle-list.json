@@ -1,0 +1,16 @@
+{
+  "name": "svelte-recycle-list",
+  "description": "Implements a recycle list component for Svelte applications.",
+  "repo_url": "",
+  "authors": [
+    "ee70.dev"
+  ],
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2025-02-19T13:03:13.769Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": true,
+  "runes": false
+}

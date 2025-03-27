@@ -1,11 +1,13 @@
 {
   "name": "@htmlbricks/hb-chartjs",
-  "description": "Svelte-Bootstrap chartjs.",
+  "description": "Create Svelte-Bootstrap chartjs.",
   "repo_url": "",
-  "author": "Dario Caruso",
-  "downloads": 472,
+  "authors": [
+    "dariocaruso"
+  ],
+  "downloads": 484,
   "dependents": 2,
-  "updated": "2025-03-09T03:10:26.687Z",
+  "updated": "2025-03-24T18:07:12.662Z",
   "tags": [
     "ui"
   ],

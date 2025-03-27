@@ -1,15 +1,16 @@
 {
   "name": "chocobytes",
-  "description": "UI kit providing building blocks for Svelte 5 components.",
+  "description": "Provide building blocks for composable, SSR-ready UI components.",
   "repo_url": "https://github.com/fcrozatier/choco-ui",
-  "author": "fcrozatier",
+  "authors": [
+    "fcrozatier"
+  ],
   "homepage": "https://choco-ui.com/",
-  "downloads": 0,
+  "downloads": 46,
   "dependents": 0,
   "updated": "2024-10-01T08:41:43.731Z",
   "tags": [
-    "component-library",
-    "ui"
+    "component-library"
   ],
   "svelte5": true,
   "runes": false,

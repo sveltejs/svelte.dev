@@ -1,0 +1,16 @@
+{
+  "name": "@htmlbricks/hb-matrix-video",
+  "description": "Integrate Svelte-Bootstrap matrix-video component.",
+  "repo_url": "",
+  "authors": [
+    "dariocaruso"
+  ],
+  "downloads": 17,
+  "dependents": 0,
+  "updated": "2025-03-24T18:07:17.490Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

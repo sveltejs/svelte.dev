@@ -1,0 +1,18 @@
+{
+  "name": "@pentcloud/svelte-utils",
+  "description": "Template for building shareable Svelte component libraries.",
+  "repo_url": "https://github.com/pentcloud/svelte-utils",
+  "authors": [
+    "william.chanchavac",
+    "diegofcornejo"
+  ],
+  "homepage": "https://github.com/pentcloud/svelte-utils#readme",
+  "downloads": 4,
+  "dependents": 0,
+  "updated": "2020-06-15T16:02:52.939Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false
+}

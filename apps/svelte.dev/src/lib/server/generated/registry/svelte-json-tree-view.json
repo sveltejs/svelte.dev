@@ -1,0 +1,18 @@
+{
+  "name": "svelte-json-tree-view",
+  "description": "Display JSON data in tree view format within Svelte apps.",
+  "repo_url": "https://github.com/PaulMaly/svelte-json-tree-view",
+  "authors": [
+    "paulmaly"
+  ],
+  "homepage": "https://github.com/PaulMaly/svelte-json-tree-view#readme",
+  "downloads": 7,
+  "dependents": 0,
+  "updated": "2020-10-28T21:41:58.284Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 2
+}

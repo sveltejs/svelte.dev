@@ -1,13 +1,16 @@
 {
   "name": "pixel-notify",
-  "description": "Create lightweight notification widgets for SvelteKit apps.",
+  "description": "Provide simple, lightweight notifications for SvelteKit.",
   "repo_url": "",
-  "author": "Sergey Galaktionov",
-  "downloads": 1,
+  "authors": [
+    "pixel_1917"
+  ],
+  "downloads": 7,
   "dependents": 1,
   "updated": "2023-08-04T12:29:21.995Z",
   "tags": [
-    "ui"
+    "ui",
+    "utility"
   ],
   "svelte5": true,
   "runes": false

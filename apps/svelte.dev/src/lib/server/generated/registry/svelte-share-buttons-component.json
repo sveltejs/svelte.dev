@@ -1,10 +1,12 @@
 {
   "name": "svelte-share-buttons-component",
-  "description": "Add social media share buttons to Svelte applications.",
+  "description": "Generate social media share buttons for Svelte apps.",
   "repo_url": "https://github.com/pchynoweth/svelte-share-buttons-component",
-  "author": "pchynoweth",
+  "authors": [
+    "pchynoweth"
+  ],
   "homepage": "https://pchynoweth.github.io/svelte-share-buttons-component/",
-  "downloads": 359,
+  "downloads": 282,
   "dependents": 2,
   "updated": "2024-03-23T15:09:58.068Z",
   "tags": [

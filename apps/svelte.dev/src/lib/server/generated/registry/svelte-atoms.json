@@ -1,14 +1,17 @@
 {
   "name": "svelte-atoms",
-  "description": "Create Svelte UI kit based on Atol design.",
+  "description": "Create UI with Svelte components based on Atol design.",
   "repo_url": "https://gitlab.com/az67128/svelte-atoms",
-  "author": "Alexander Zinchenko",
+  "authors": [
+    "az67128"
+  ],
   "homepage": "https://gitlab.com/az67128/svelte-atoms#readme",
-  "downloads": 21,
+  "downloads": 48,
   "dependents": 0,
   "updated": "2020-05-22T15:18:50.261Z",
   "tags": [
-    "component-library"
+    "component-library",
+    "ui"
   ],
   "svelte5": false,
   "runes": false

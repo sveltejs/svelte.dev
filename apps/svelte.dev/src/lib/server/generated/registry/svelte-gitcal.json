@@ -1,10 +1,12 @@
 {
   "name": "svelte-gitcal",
-  "description": "Generate Github-like commit calendar component for Svelte.",
+  "description": "Generate Github-like calendar component for Svelte apps.",
   "repo_url": "https://github.com/jdeneef/svelte-gitcal",
-  "author": "J de Neef",
+  "authors": [
+    "jdeneef"
+  ],
   "homepage": "https://github.com/jdeneef/svelte-gitcal#readme",
-  "downloads": 2,
+  "downloads": 11,
   "dependents": 0,
   "updated": "2021-05-11T08:36:55.527Z",
   "tags": [

@@ -1,9 +1,12 @@
 {
   "name": "@budibase/standard-components",
-  "description": "Provides standard UI components for Budibase, built with Svelte.",
+  "description": "Standard components for Budibase.",
   "repo_url": "",
-  "author": "mike_chuckles",
-  "downloads": 994,
+  "authors": [
+    "mike_chuckles",
+    "shogunpurple"
+  ],
+  "downloads": 7,
   "dependents": 1,
   "updated": "2021-09-21T16:25:24.830Z",
   "tags": [

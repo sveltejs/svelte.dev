@@ -1,8 +1,10 @@
 {
   "name": "svelte-preprocess-alien",
-  "description": "Replace Svelte reactivity dollar sign with custom string.",
+  "description": "Replace Svelte reactivity with custom alien strings.",
   "repo_url": "https://github.com/chientrm/svelte-preprocess-alien",
-  "author": "chientrm",
+  "authors": [
+    "chientrm"
+  ],
   "homepage": "https://github.com/chientrm/svelte-preprocess-alien#readme",
   "downloads": 0,
   "dependents": 0,

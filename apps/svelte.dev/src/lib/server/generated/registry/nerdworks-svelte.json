@@ -1,0 +1,18 @@
+{
+  "name": "@nerdworks/svelte",
+  "description": "Svelte adapter for Inertia.js, build modern single-page apps.",
+  "repo_url": "https://github.com/inertiajs/inertia",
+  "authors": [
+    "nobbo"
+  ],
+  "homepage": "https://inertiajs.com/",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2024-06-24T11:26:04.392Z",
+  "tags": [
+    "integration"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 6984
+}

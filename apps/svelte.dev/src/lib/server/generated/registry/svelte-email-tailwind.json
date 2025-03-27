@@ -2,13 +2,15 @@
   "name": "svelte-email-tailwind",
   "description": "Build emails with Svelte 5 and Tailwind.",
   "repo_url": "https://github.com/steveninety/svelte-email-tailwind",
-  "author": "Steven Polak",
+  "authors": [
+    "steveninety"
+  ],
   "homepage": "https://github.com/steveninety/svelte-email-tailwind#readme",
-  "downloads": 153,
+  "downloads": 280,
   "dependents": 0,
   "updated": "2025-02-17T10:51:34.927Z",
   "tags": [
-    "utility"
+    "tooling"
   ],
   "svelte5": true,
   "runes": false,

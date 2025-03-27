@@ -1,10 +1,12 @@
 {
   "name": "@alex_revin/svelte-toast",
-  "description": "Create simple, elegant toast notifications in Svelte applications.",
+  "description": "Simple, elegant toast notification component for Svelte.",
   "repo_url": "https://github.com/AlexRevin/svelte-toast",
-  "author": "Jason Lee",
+  "authors": [
+    "alex_revin"
+  ],
   "homepage": "https://zerodevx.github.io/svelte-toast/",
-  "downloads": 116,
+  "downloads": 29,
   "dependents": 0,
   "updated": "2021-09-22T13:29:34.181Z",
   "tags": [

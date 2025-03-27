@@ -1,8 +1,10 @@
 {
   "name": "svelte-swiftcursor",
-  "description": "Creates customizable cursor component for Svelte.",
+  "description": "Create customizable cursor components for Svelte applications.",
   "repo_url": "https://github.com/eagleyeee/svelte-swiftcursor",
-  "author": "eagleyeee",
+  "authors": [
+    "eagleyeee"
+  ],
   "homepage": "https://svelte-swiftcursor.vercel.app/",
   "downloads": 0,
   "dependents": 0,

@@ -471,7 +471,7 @@ async function process_batches_through_llm_base({
  */
 async function process_batches_through_llm({
 	keywords = ['svelte'],
-	limit = Infinity,
+	limit = 6000,
 	batch_size = 20,
 	max_retries = 2
 }: {
@@ -629,10 +629,13 @@ async function remove_forks() {
 		// find the most popular package
 		const max = Array.from(set).sort((a, b) => sort_packages(a, b, 'popularity'))[0];
 
-		// Now, delete entries from set where the author is the same as the most popular package
+		// Now, delete entries from set where not even one author is in the max package
 		for (const pkg of set) {
-			if (pkg.author === max.author) {
-				set.delete(pkg);
+			for (const author of pkg.authors ?? []) {
+				if (max.authors?.includes(author)) {
+					set.delete(pkg);
+				}
+				console.log('DELETING', max.name, pkg.name);
 			}
 		}
 	}
@@ -644,7 +647,17 @@ async function remove_forks() {
 		}
 	}
 
-	console.log(1, repo_url_to_interim_package);
+	// console.log(1, repo_url_to_interim_package);
+
+	console.log(repo_url_to_interim_package);
+
+	// Now delete all the packages which are in repo_url_to_interim_package
+
+	for (const [, set] of repo_url_to_interim_package.entries()) {
+		for (const pkg of set) {
+			PackageCache.delete(pkg.name);
+		}
+	}
 }
 
 /**
@@ -765,16 +778,16 @@ async function* create_map_batch_generator(
 	}
 }
 
-// for (let i = 0; i < 1; i++) {
-// 	await process_batches_through_llm();
-// }
+for (let i = 0; i < 1; i++) {
+	// await process_batches_through_llm();
+}
 
-await process_packages_by_names_through_llm({ package_names: Object.keys(svelte_society_list) });
+// await process_packages_by_names_through_llm({ package_names: Object.keys(svelte_society_list) });
 
 // update_cache_from_npm();
-await update_all_github_stars();
+// await update_all_github_stars();
 
-// await remove_forks();
+await remove_forks();
 // delete_untagged();
 
 // program.name('packages').description('Package to curate the svelte.dev/packages list');

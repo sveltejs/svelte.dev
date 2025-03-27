@@ -1,15 +1,16 @@
 {
   "name": "@sveu/extend",
-  "description": "Extend Svelte with third-party integrations.",
+  "description": "Integrate third-party services with Svelte apps.",
   "repo_url": "https://github.com/svelte-u/extend",
-  "author": "Mohamed Nesredin",
+  "authors": [
+    "mohamed-kaizen"
+  ],
   "homepage": "https://github.com/svelte-u/extend#readme",
-  "downloads": 4,
+  "downloads": 26,
   "dependents": 0,
   "updated": "2023-07-04T05:50:02.769Z",
   "tags": [
-    "utility",
-    "integration"
+    "utility"
   ],
   "svelte5": false,
   "runes": false,

@@ -1,10 +1,12 @@
 {
   "name": "sveltekit-server-functions",
-  "description": "Create server functions in SvelteKit.",
+  "description": "Create server functions for SvelteKit applications.",
   "repo_url": "https://github.com/Guandor/sveltekit-server-functions",
-  "author": "guandor",
+  "authors": [
+    "guandor"
+  ],
   "homepage": "https://github.com/Guandor/sveltekit-server-functions#readme",
-  "downloads": 11,
+  "downloads": 0,
   "dependents": 0,
   "updated": "2024-12-17T01:49:43.565Z",
   "tags": [

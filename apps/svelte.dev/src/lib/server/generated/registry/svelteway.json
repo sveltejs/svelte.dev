@@ -2,13 +2,15 @@
   "name": "svelteway",
   "description": "Build UI's for SvelteKit applications.",
   "repo_url": "https://github.com/elikelierpolite/svelteway",
-  "author": "Elikelier Polite",
+  "authors": [
+    "elikelierpolite"
+  ],
   "homepage": "https://github.com/elikelierpolite/svelteway#readme",
-  "downloads": 3,
+  "downloads": 1,
   "dependents": 0,
   "updated": "2023-04-25T00:11:31.785Z",
   "tags": [
-    "ui"
+    "component-library"
   ],
   "svelte5": false,
   "runes": false,

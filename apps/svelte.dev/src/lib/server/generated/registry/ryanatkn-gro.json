@@ -1,8 +1,10 @@
 {
   "name": "@ryanatkn/gro",
-  "description": "Task runner and toolkit extending SvelteKit.",
+  "description": "Create task runner and toolkit extending SvelteKit.",
   "repo_url": "https://github.com/ryanatkn/gro",
-  "author": "Ryan Atkinson",
+  "authors": [
+    "ryanatkn"
+  ],
   "homepage": "https://gro.ryanatkn.com/",
   "downloads": 151,
   "dependents": 0,

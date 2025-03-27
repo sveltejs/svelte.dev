@@ -1,14 +1,16 @@
 {
   "name": "@tadashi/svelte-pesquisa",
-  "description": "Provides search components for Svelte applications.",
+  "description": "Build search components for Svelte applications.",
   "repo_url": "https://github.com/lagden/svelte-pesquisa",
-  "author": "Thiago Lagden",
+  "authors": [
+    "lagden"
+  ],
   "homepage": "https://github.com/lagden/svelte-pesquisa#readme",
-  "downloads": 5,
+  "downloads": 21,
   "dependents": 0,
   "updated": "2023-01-09T07:10:49.333Z",
   "tags": [
-    "utility"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

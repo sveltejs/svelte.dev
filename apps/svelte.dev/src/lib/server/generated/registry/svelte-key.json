@@ -1,10 +1,12 @@
 {
   "name": "svelte-key",
-  "description": "Force Svelte content recreation when key value changes.",
+  "description": "Recreate content when key changes, emulating React's key feature.",
   "repo_url": "https://github.com/rixo/svelte-key",
-  "author": "rixo",
+  "authors": [
+    "rixo"
+  ],
   "homepage": "https://github.com/rixo/svelte-key",
-  "downloads": 2,
+  "downloads": 11,
   "dependents": 0,
   "updated": "2019-11-26T11:26:04.452Z",
   "tags": [

@@ -1,10 +1,12 @@
 {
   "name": "@powchess/chessboard",
-  "description": "Create chessboard UI for PowChess.com.",
+  "description": "Display chessboard UI for PowChess.com.",
   "repo_url": "https://github.com/powchess/chessboard",
-  "author": "PowChess GmbH",
+  "authors": [
+    "trgsv"
+  ],
   "homepage": "https://powchess.com",
-  "downloads": 0,
+  "downloads": 84,
   "dependents": 0,
   "updated": "2023-11-12T14:55:34.244Z",
   "tags": [

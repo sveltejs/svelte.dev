@@ -1,10 +1,12 @@
 {
   "name": "@leanup/stack-svelte",
-  "description": "Provides Svelte framework extension for Leanup CLI.",
+  "description": "Provides Svelte framework extension for @leanup/cli.",
   "repo_url": "https://github.com/leanupjs/leanup",
-  "author": "Martin Oppitz",
+  "authors": [
+    "m.oppitz"
+  ],
   "homepage": "https://leanupjs.org",
-  "downloads": 1,
+  "downloads": 436,
   "dependents": 0,
   "updated": "2024-06-11T08:58:35.229Z",
   "tags": [

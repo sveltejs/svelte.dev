@@ -1,10 +1,12 @@
 {
   "name": "@convocomet/svelte",
-  "description": "Embeds ConvoComet widget into Svelte websites.",
+  "description": "Embed ConvoComet widget inside Svelte websites.",
   "repo_url": "https://github.com/AsyncBanana/convocomet",
-  "author": "Jacob Jackson",
+  "authors": [
+    "asyncbanana"
+  ],
   "homepage": "https://github.com/AsyncBanana/convocomet#readme",
-  "downloads": 5,
+  "downloads": 0,
   "dependents": 0,
   "updated": "2024-03-24T20:18:40.835Z",
   "tags": [

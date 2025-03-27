@@ -1,9 +1,11 @@
 {
   "name": "@sunify/svelte-select",
-  "description": "Create customizable select components for Svelte.",
+  "description": "Simple select component, customize button appearance.",
   "repo_url": "",
-  "author": "Alex Lunyov",
-  "downloads": 2,
+  "authors": [
+    "sunify"
+  ],
+  "downloads": 6,
   "dependents": 0,
   "updated": "2019-08-28T07:25:05.501Z",
   "tags": [

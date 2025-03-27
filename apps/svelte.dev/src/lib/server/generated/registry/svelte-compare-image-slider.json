@@ -1,14 +1,17 @@
 {
   "name": "svelte-compare-image-slider",
-  "description": "Create interactive image comparison sliders in Svelte.",
+  "description": "Compare two images with interactive Svelte component.",
   "repo_url": "https://github.com/johnwalley/compare-image-slider",
-  "author": "johnwalley",
+  "authors": [
+    "johnwalley"
+  ],
   "homepage": "https://github.com/johnwalley/compare-image-slider#readme",
-  "downloads": 3,
+  "downloads": 21,
   "dependents": 0,
   "updated": "2020-07-27T20:18:53.273Z",
   "tags": [
-    "ui"
+    "ui",
+    "media"
   ],
   "svelte5": false,
   "runes": false,

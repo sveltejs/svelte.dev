@@ -1,0 +1,16 @@
+{
+  "name": "hyinsit-bbui",
+  "description": "Offer UI solution for Budibase projects.",
+  "repo_url": "",
+  "authors": [
+    "hyinsit"
+  ],
+  "downloads": 1,
+  "dependents": 3,
+  "updated": "2022-11-14T09:21:26.490Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": false,
+  "runes": false
+}

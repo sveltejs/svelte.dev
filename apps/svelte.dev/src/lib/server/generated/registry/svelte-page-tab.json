@@ -1,12 +1,14 @@
 {
   "name": "svelte-page-tab",
-  "description": "Tab menu component uses page as state.",
+  "description": "Tab menu component using page as state.",
   "repo_url": "https://github.com/jill64/svelte-page-tab",
-  "author": "jill64",
+  "authors": [
+    "jill64"
+  ],
   "homepage": "https://github.com/jill64/svelte-page-tab#readme",
-  "downloads": 3615,
+  "downloads": 2516,
   "dependents": 0,
-  "updated": "2025-01-31T00:35:11.722Z",
+  "updated": "2025-03-25T14:57:04.463Z",
   "tags": [
     "ui",
     "router"

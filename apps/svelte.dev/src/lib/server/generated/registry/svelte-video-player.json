@@ -1,15 +1,16 @@
 {
   "name": "svelte-video-player",
-  "description": "Create basic video player component for Svelte apps.",
+  "description": "Create basic video player component for svelte apps.",
   "repo_url": "https://github.com/meigo/svelte-video-player",
-  "author": "Meigo Kukk",
+  "authors": [
+    "meigo"
+  ],
   "homepage": "https://github.com/meigo/svelte-video-player",
-  "downloads": 480,
+  "downloads": 233,
   "dependents": 1,
   "updated": "2021-03-18T09:15:42.653Z",
   "tags": [
-    "media",
-    "ui"
+    "media"
   ],
   "svelte5": false,
   "runes": false,

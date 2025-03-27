@@ -1,9 +1,11 @@
 {
   "name": "@ericksatelite/libreria-componentes-prueba",
-  "description": "Component library template for Svelte with testing and Storybook.",
+  "description": "Provides Svelte component library template.",
   "repo_url": "",
-  "author": "ericksatelite",
-  "downloads": 5,
+  "authors": [
+    "ericksatelite"
+  ],
+  "downloads": 26,
   "dependents": 0,
   "updated": "2020-08-08T14:57:51.012Z",
   "tags": [

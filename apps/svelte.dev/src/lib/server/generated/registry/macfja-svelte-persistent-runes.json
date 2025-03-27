@@ -1,10 +1,12 @@
 {
   "name": "@macfja/svelte-persistent-runes",
-  "description": "Persist Svelte reactive state across page reloads.",
+  "description": "Persist Svelte runes values across reloads and pages.",
   "repo_url": "https://github.com/MacFJA/svelte-persistent-runes",
-  "author": "MacFJA",
+  "authors": [
+    "macfja"
+  ],
   "homepage": "https://github.com/MacFJA/svelte-persistent-runes",
-  "downloads": 6,
+  "downloads": 2,
   "dependents": 0,
   "updated": "2024-12-09T22:07:33.275Z",
   "tags": [

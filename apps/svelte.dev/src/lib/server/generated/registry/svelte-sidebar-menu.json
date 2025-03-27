@@ -1,8 +1,10 @@
 {
   "name": "svelte-sidebar-menu",
-  "description": "Implement sidebar menu component for Svelte applications.",
+  "description": "Create responsive sidebar menus for Svelte applications.",
   "repo_url": "https://github.com/shinokada/svelte-sidebar",
-  "author": "Shinichi Okada",
+  "authors": [
+    "shinichiokada"
+  ],
   "homepage": "https://svelte-sidebar.vercel.app/",
   "downloads": 12,
   "dependents": 0,

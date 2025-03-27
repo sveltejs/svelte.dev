@@ -1,10 +1,13 @@
 {
   "name": "@loscrackitos/svelte-typed-js",
-  "description": "Add typed.js typing animation to Svelte components.",
+  "description": "Type text with Typed.js in Svelte components.",
   "repo_url": "https://github.com/Los-Crackitos/svelte-typed-js",
-  "author": "Jérôme Pogeant",
+  "authors": [
+    "thyrael",
+    "jerome1337"
+  ],
   "homepage": "https://github.com/Los-Crackitos/svelte-typed-js#readme",
-  "downloads": 4,
+  "downloads": 20,
   "dependents": 0,
   "updated": "2020-09-11T18:56:12.776Z",
   "tags": [

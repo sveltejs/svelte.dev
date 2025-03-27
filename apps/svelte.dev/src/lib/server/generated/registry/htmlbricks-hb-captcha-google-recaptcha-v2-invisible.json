@@ -1,12 +1,15 @@
 {
   "name": "@htmlbricks/hb-captcha-google-recaptcha-v2-invisible",
-  "description": "Integrate Google reCAPTCHA v2 invisible in Svelte apps.",
+  "description": "Provides a Svelte-Bootstrap Checkbox Input WebComponent.",
   "repo_url": "",
-  "author": "Dario Caruso",
-  "downloads": 259,
+  "authors": [
+    "dariocaruso"
+  ],
+  "downloads": 267,
   "dependents": 0,
-  "updated": "2025-03-09T03:10:26.378Z",
+  "updated": "2025-03-24T18:07:12.040Z",
   "tags": [
+    "integration",
     "auth"
   ],
   "svelte5": false,

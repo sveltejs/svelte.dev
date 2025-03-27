@@ -1,8 +1,10 @@
 {
   "name": "@ikun-ui/form",
-  "description": "Build UI components for Svelte applications.",
+  "description": "Build forms with validation in Svelte applications.",
   "repo_url": "",
-  "author": "baiwusanyu",
+  "authors": [
+    "baiwusanyu"
+  ],
   "downloads": 17,
   "dependents": 14,
   "updated": "2025-01-24T03:48:55.592Z",

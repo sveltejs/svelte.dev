@@ -1,10 +1,12 @@
 {
   "name": "svelte-api-keys",
-  "description": "Generate, validate, and rate-limit API keys for SvelteKit.",
+  "description": "Generates, validates, and rate-limits API keys for SvelteKit.",
   "repo_url": "https://github.com/captaincodeman/svelte-api-keys",
-  "author": "Simon Green",
+  "authors": [
+    "captaincodeman"
+  ],
   "homepage": "https://captaincodeman.github.io/svelte-api-keys/",
-  "downloads": 0,
+  "downloads": 12,
   "dependents": 0,
   "updated": "2024-04-29T20:32:00.462Z",
   "tags": [

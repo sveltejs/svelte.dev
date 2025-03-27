@@ -1,10 +1,12 @@
 {
   "name": "svelte-toggle-switch",
-  "description": "Implement toggle switch components in Svelte.",
+  "description": "Implement toggle switches in Svelte applications.",
   "repo_url": "https://github.com/ishansasika/svelte-toggle-switch",
-  "author": "Ishan Karunaratne",
+  "authors": [
+    "ishansasika"
+  ],
   "homepage": "https://github.com/ishansasika/svelte-toggle-switch#readme",
-  "downloads": 0,
+  "downloads": 3,
   "dependents": 0,
   "updated": "2022-06-30T11:30:46.312Z",
   "tags": [

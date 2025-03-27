@@ -1,13 +1,15 @@
 {
   "name": "luna_charts",
-  "description": "Create accessible charts with line, bar, and pie chart components.",
+  "description": "Create accessible charts for Svelte applications.",
   "repo_url": "",
-  "author": "Antonino Provenzano",
-  "downloads": 1,
+  "authors": [
+    "ninosaurier"
+  ],
+  "downloads": 7,
   "dependents": 0,
   "updated": "2022-09-07T12:00:20.754Z",
   "tags": [
-    "component-library"
+    "ui"
   ],
   "svelte5": false,
   "runes": false

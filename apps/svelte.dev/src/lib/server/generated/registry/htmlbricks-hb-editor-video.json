@@ -1,11 +1,13 @@
 {
   "name": "@htmlbricks/hb-editor-video",
-  "description": "Svelte-Bootstrap video editor component.",
+  "description": "Svelte Boostrap Video Card WebComponent",
   "repo_url": "",
-  "author": "Dario Caruso",
-  "downloads": 453,
+  "authors": [
+    "dariocaruso"
+  ],
+  "downloads": 467,
   "dependents": 2,
-  "updated": "2025-03-09T03:10:42.316Z",
+  "updated": "2025-03-24T18:07:27.815Z",
   "tags": [
     "media"
   ],

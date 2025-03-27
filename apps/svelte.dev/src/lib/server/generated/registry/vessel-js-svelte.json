@@ -1,0 +1,17 @@
+{
+  "name": "@vessel-js/svelte",
+  "description": "Adds Svelte support to Vessel static site generator.",
+  "repo_url": "https://github.com/vessel-js/vessel",
+  "authors": [
+    "mihar-22"
+  ],
+  "downloads": 17,
+  "dependents": 0,
+  "updated": "2023-05-21T03:53:53.307Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 253
+}

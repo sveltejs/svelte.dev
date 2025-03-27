@@ -1,10 +1,12 @@
 {
   "name": "@rattus-orm/svelte",
-  "description": "Provide ORM functionality for JavaScript/TypeScript Svelte applications.",
+  "description": "Provide ORM bindings for Svelte apps.",
   "repo_url": "https://github.com/lyohaplotinka/rattus-orm",
-  "author": "lyohaplotinka",
+  "authors": [
+    "lyohaplotinka"
+  ],
   "homepage": "https://lyohaplotinka.github.io/rattus-orm/",
-  "downloads": 5,
+  "downloads": 7,
   "dependents": 0,
   "updated": "2025-02-11T19:44:34.537Z",
   "tags": [

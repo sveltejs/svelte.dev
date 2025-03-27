@@ -1,10 +1,12 @@
 {
   "name": "@perseid/store",
-  "description": "Offers complete state management for front and back ends.",
+  "description": "Provides complete state management for front and back ends.",
   "repo_url": "https://github.com/openizr/perseid",
-  "author": "openizr2",
+  "authors": [
+    "openizr2"
+  ],
   "homepage": "https://github.com/openizr/perseid",
-  "downloads": 7,
+  "downloads": 30,
   "dependents": 3,
   "updated": "2024-08-08T14:14:11.059Z",
   "tags": [

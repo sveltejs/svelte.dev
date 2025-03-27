@@ -1,10 +1,12 @@
 {
   "name": "svelte-device-detector",
-  "description": "Detect device types and render views in Svelte apps.",
+  "description": "Render views based on device types, browser, or OS.",
   "repo_url": "https://github.com/andrelmlins/svelte-device-detector",
-  "author": "André Lins",
+  "authors": [
+    "andrelmlins"
+  ],
   "homepage": "https://github.com/andrelmlins/svelte-device-detector#readme",
-  "downloads": 311,
+  "downloads": 378,
   "dependents": 1,
   "updated": "2020-11-29T02:42:01.694Z",
   "tags": [

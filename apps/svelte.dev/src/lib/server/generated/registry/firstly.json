@@ -1,14 +1,16 @@
 {
   "name": "firstly",
-  "description": "Provides opinionated Remult setup for SvelteKit applications.",
+  "description": "Opinionated Remult setup for SvelteKit projects.",
   "repo_url": "https://github.com/jycouet/firstly",
-  "author": "jycouet",
+  "authors": [
+    "jycouet"
+  ],
   "homepage": "https://firstly.fun/",
-  "downloads": 55,
+  "downloads": 123,
   "dependents": 0,
   "updated": "2025-03-18T17:19:16.285Z",
   "tags": [
-    "tooling"
+    "utility"
   ],
   "svelte5": true,
   "runes": false,

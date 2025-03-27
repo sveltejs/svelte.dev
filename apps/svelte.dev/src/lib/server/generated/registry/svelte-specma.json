@@ -1,10 +1,12 @@
 {
   "name": "svelte-specma",
-  "description": "Validate data in Svelte using Specma predicates.",
+  "description": "Validate data using Specma specs in Svelte stores.",
   "repo_url": "https://github.com/davidsavoie1/svelte-specma",
-  "author": "David Savoie",
+  "authors": [
+    "davidsavoie1"
+  ],
   "homepage": "https://github.com/davidsavoie1/svelte-specma.git",
-  "downloads": 3,
+  "downloads": 22,
   "dependents": 0,
   "updated": "2023-02-20T21:39:35.381Z",
   "tags": [

@@ -1,10 +1,12 @@
 {
   "name": "svelte-morphing-modal",
-  "description": "Create morphing modal layouts with transition effects in Svelte.",
+  "description": "Create morphing modal components for Svelte applications.",
   "repo_url": "https://github.com/PaulMaly/svelte-morphing-modal",
-  "author": "PaulMaly",
+  "authors": [
+    "paulmaly"
+  ],
   "homepage": "https://github.com/PaulMaly/svelte-morphing-modal#readme",
-  "downloads": 12,
+  "downloads": 14,
   "dependents": 0,
   "updated": "2020-10-25T19:22:21.849Z",
   "tags": [

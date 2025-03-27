@@ -1,14 +1,16 @@
 {
   "name": "svelte-pin",
-  "description": "Create masked PIN input components for Svelte.",
+  "description": "Create masked PIN input component for Svelte applications.",
   "repo_url": "https://github.com/rebotak/svelte-pin",
-  "author": "Pais Rebotak",
+  "authors": [
+    "rebotak"
+  ],
   "homepage": "https://github.com/rebotak/svelte-pin#readme",
-  "downloads": 3,
+  "downloads": 13,
   "dependents": 0,
   "updated": "2020-12-29T06:48:55.762Z",
   "tags": [
-    "ui"
+    "utility"
   ],
   "svelte5": false,
   "runes": false,

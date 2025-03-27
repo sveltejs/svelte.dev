@@ -1,10 +1,12 @@
 {
   "name": "svelte-heart",
-  "description": "Adds animated SVG heart icon with animation on like button.",
+  "description": "Add animated SVG heart icon to Svelte components.",
   "repo_url": "https://github.com/thingsneverchange/svelte-heart",
-  "author": "themecloset",
+  "authors": [
+    "themecloset"
+  ],
   "homepage": "https://github.com/thingsneverchange/svelte-heart#readme",
-  "downloads": 34,
+  "downloads": 31,
   "dependents": 0,
   "updated": "2024-03-27T12:07:32.713Z",
   "tags": [

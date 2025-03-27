@@ -1,10 +1,12 @@
 {
   "name": "svelte-material-ripple",
-  "description": "Add Material Design ripple effects to Svelte elements.",
+  "description": "Adds ripple effects to interactive Svelte elements.",
   "repo_url": "https://github.com/abdel-17/svelte-material-ripple",
-  "author": "abdel-17",
+  "authors": [
+    "abdel-17"
+  ],
   "homepage": "https://github.com/abdel-17/svelte-material-ripple#readme",
-  "downloads": 4,
+  "downloads": 0,
   "dependents": 0,
   "updated": "2024-09-27T18:08:19.692Z",
   "tags": [

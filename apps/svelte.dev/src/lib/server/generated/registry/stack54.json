@@ -1,12 +1,14 @@
 {
   "name": "stack54",
-  "description": "Builds a Javascript stack for SSR and streaming.",
+  "description": "Build a Javascript stack with SSR and streaming.",
   "repo_url": "https://github.com/joshamaju/stack54",
-  "author": "Joshua Amaju",
+  "authors": [
+    "joshamaju"
+  ],
   "homepage": "https://github.com/joshamaju/stack54#readme",
-  "downloads": 16,
+  "downloads": 86,
   "dependents": 4,
-  "updated": "2025-03-22T16:03:49.523Z",
+  "updated": "2025-03-26T15:22:52.245Z",
   "tags": [
     "server"
   ],

@@ -1,16 +1,18 @@
 {
   "name": "sveditorjs",
-  "description": "EditorJS wrapper for Svelte and SvelteKit.",
+  "description": "Wraps EditorJS for Svelte and SvelteKit, outputs clean JSON.",
   "repo_url": "https://github.com/pouchcms/sveditorjs",
-  "author": "devbuddie",
+  "authors": [
+    "pouchcms"
+  ],
   "homepage": " https://sveditorjs.vercel.app",
-  "downloads": 4,
+  "downloads": 2,
   "dependents": 0,
   "updated": "2024-03-02T05:39:15.996Z",
   "tags": [
-    "ui"
+    "content"
   ],
   "svelte5": false,
   "runes": false,
-  "github_stars": 38
+  "github_stars": 39
 }

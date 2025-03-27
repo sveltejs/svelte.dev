@@ -1,9 +1,11 @@
 {
   "name": "codechips-router",
-  "description": "Implement lightweight routing solution for Svelte apps.",
+  "description": "Provides lightweight Svelte routing solution.",
   "repo_url": "https://github.com/oscar-marion/codechips-router",
-  "author": "Oscar Marion",
-  "downloads": 1,
+  "authors": [
+    "oscarmarion"
+  ],
+  "downloads": 10,
   "dependents": 0,
   "updated": "2021-01-12T11:04:19.694Z",
   "tags": [

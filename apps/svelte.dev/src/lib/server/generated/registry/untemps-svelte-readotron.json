@@ -1,14 +1,15 @@
 {
   "name": "@untemps/svelte-readotron",
-  "description": "Display estimated reading time for content in Svelte.",
+  "description": "Display estimated reading time for Svelte content.",
   "repo_url": "https://github.com/untemps/svelte-readotron",
-  "author": "Vincent Le Badezet",
+  "authors": [
+    "untemps"
+  ],
   "homepage": "https://svelte-readotron.vercel.app",
-  "downloads": 9,
+  "downloads": 23,
   "dependents": 0,
   "updated": "2023-10-03T20:32:49.401Z",
   "tags": [
-    "ui",
     "utility"
   ],
   "svelte5": false,

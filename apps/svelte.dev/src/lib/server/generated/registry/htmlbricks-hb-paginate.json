@@ -1,11 +1,13 @@
 {
   "name": "@htmlbricks/hb-paginate",
-  "description": "Create pagination web component for Svelte.",
+  "description": "Create Svelte-Bootstrap pagination web components.",
   "repo_url": "",
-  "author": "Dario Caruso",
-  "downloads": 482,
+  "authors": [
+    "dariocaruso"
+  ],
+  "downloads": 498,
   "dependents": 4,
-  "updated": "2025-03-09T03:10:33.825Z",
+  "updated": "2025-03-24T18:07:18.283Z",
   "tags": [
     "ui"
   ],

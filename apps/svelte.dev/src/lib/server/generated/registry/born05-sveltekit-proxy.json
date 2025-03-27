@@ -1,8 +1,13 @@
 {
   "name": "@born05/sveltekit-proxy",
-  "description": "Proxy paths from SvelteKit to different servers easily.",
+  "description": "Proxies paths from SvelteKit to different servers.",
   "repo_url": "https://github.com/born05/sveltekit-proxy",
-  "author": "arjeng",
+  "authors": [
+    "arjeng",
+    "codename-niels",
+    "rens-born05",
+    "roelvanhintum"
+  ],
   "homepage": "https://github.com/born05/sveltekit-proxy#readme",
   "downloads": 18,
   "dependents": 0,

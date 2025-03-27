@@ -2,9 +2,11 @@
   "name": "svelte-ast-print",
   "description": "Print Svelte AST nodes as string.",
   "repo_url": "https://github.com/xeho91/svelte-ast-print",
-  "author": "Mateusz Kadlubowski",
+  "authors": [
+    "xeho91"
+  ],
   "homepage": "https://github.com/xeho91/svelte-ast-print",
-  "downloads": 22305,
+  "downloads": 22772,
   "dependents": 0,
   "updated": "2024-12-26T04:23:00.373Z",
   "tags": [

@@ -1,10 +1,12 @@
 {
   "name": "date-picker-svelte-fork",
-  "description": "Provide date and time picker for Svelte applications.",
+  "description": "Provides date and time picker for Svelte applications.",
   "repo_url": "https://github.com/phongcao1998/date-picker-svelte",
-  "author": "Kasper Henningsen",
+  "authors": [
+    "phongcao1998"
+  ],
   "homepage": "https://date-picker-svelte.kasper.space",
-  "downloads": 0,
+  "downloads": 2,
   "dependents": 0,
   "updated": "2023-12-27T04:56:10.067Z",
   "tags": [

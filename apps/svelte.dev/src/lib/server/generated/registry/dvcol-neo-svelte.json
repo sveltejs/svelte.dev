@@ -1,14 +1,17 @@
 {
   "name": "@dvcol/neo-svelte",
-  "description": "Build neomorphic UI components for Svelte 5 applications.",
+  "description": "Create neomorphic UI components for Svelte 5 with neumorphism.",
   "repo_url": "https://github.com/dvcol/neo-svelte",
-  "author": "dvcol",
+  "authors": [
+    "dvcol"
+  ],
   "homepage": "https://github.com/dvcol/neo-svelte",
   "downloads": 45,
   "dependents": 0,
   "updated": "2025-03-06T13:36:18.882Z",
   "tags": [
-    "component-library"
+    "component-library",
+    "ui"
   ],
   "svelte5": true,
   "runes": false,

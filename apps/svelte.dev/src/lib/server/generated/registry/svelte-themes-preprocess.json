@@ -1,10 +1,12 @@
 {
   "name": "svelte-themes-preprocess",
-  "description": "Adds theme support to Svelte components via preprocessor.",
+  "description": "Add flexible theme support for Svelte components using preprocessor.",
   "repo_url": "",
-  "author": "Nikolay Makhonin",
+  "authors": [
+    "nikolay_makhonin"
+  ],
   "homepage": "https://github.com/NikolayMakhonin/svelte-themes-preprocess",
-  "downloads": 30,
+  "downloads": 12,
   "dependents": 0,
   "updated": "2020-01-13T14:02:29.649Z",
   "tags": [

@@ -1,10 +1,12 @@
 {
   "name": "svelte-render",
-  "description": "Manage Svelte component behaviors outside templates.",
+  "description": "Manage complex Svelte behaviors outside templates.",
   "repo_url": "https://github.com/bryanmylee/svelte-render",
-  "author": "Bryan Lee",
+  "authors": [
+    "bryanmylee"
+  ],
   "homepage": "https://github.com/bryanmylee/svelte-render#readme",
-  "downloads": 17507,
+  "downloads": 18270,
   "dependents": 4,
   "updated": "2024-02-02T15:24:28.108Z",
   "tags": [

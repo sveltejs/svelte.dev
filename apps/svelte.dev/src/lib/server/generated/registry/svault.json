@@ -1,10 +1,13 @@
 {
   "name": "svault",
-  "description": "Provides authentication, authorization, user management for SvelteKit.",
+  "description": "Provide authentication library for SvelteKit applications.",
   "repo_url": "https://github.com/oslabs-beta/Svault",
-  "author": "Team Svault",
+  "authors": [
+    "mbuen21",
+    "tristbt"
+  ],
   "homepage": "https://svault.dev",
-  "downloads": 1,
+  "downloads": 4,
   "dependents": 0,
   "updated": "2023-07-23T00:08:53.291Z",
   "tags": [

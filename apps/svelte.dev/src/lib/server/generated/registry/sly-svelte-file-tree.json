@@ -1,10 +1,12 @@
 {
   "name": "sly-svelte-file-tree",
-  "description": "Display customizable file tree view component for Svelte.",
+  "description": "Create customizable file tree view components for Svelte.",
   "repo_url": "https://github.com/SlyOtis/svelte-file-tree",
-  "author": "Martin Ottersland",
+  "authors": [
+    "slyotis"
+  ],
   "homepage": "https://github.com/SlyOtis/svelte-file-tree",
-  "downloads": 3,
+  "downloads": 2,
   "dependents": 0,
   "updated": "2024-09-27T12:54:46.154Z",
   "tags": [

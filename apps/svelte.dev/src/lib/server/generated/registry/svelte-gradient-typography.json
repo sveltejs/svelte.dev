@@ -1,10 +1,12 @@
 {
   "name": "svelte-gradient-typography",
-  "description": "Adds gradient typography to Svelte projects.",
+  "description": "Apply gradient typography to Svelte text elements.",
   "repo_url": "https://github.com/thetrisatria/svelte-gradient-typography",
-  "author": "gayuh tri satria",
+  "authors": [
+    "thetrisatria"
+  ],
   "homepage": "https://github.com/thetrisatria/svelte-gradient-typography#readme",
-  "downloads": 0,
+  "downloads": 9,
   "dependents": 0,
   "updated": "2021-01-21T11:08:38.718Z",
   "tags": [

@@ -1,10 +1,12 @@
 {
   "name": "svelte-hcaptcha",
-  "description": "HCaptcha component for Svelte apps, with sitekey and events.",
+  "description": "Integrate hCaptcha challenges into Svelte forms.",
   "repo_url": "https://github.com/mrmikardo/svelte-hcaptcha",
-  "author": "mrmikardo",
+  "authors": [
+    "colinattab"
+  ],
   "homepage": "https://github.com/mrmikardo/svelte-hcaptcha#readme",
-  "downloads": 78,
+  "downloads": 90,
   "dependents": 0,
   "updated": "2022-04-18T11:43:21.517Z",
   "tags": [

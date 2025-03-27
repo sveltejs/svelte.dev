@@ -1,10 +1,12 @@
 {
   "name": "svelte-dob-picker",
-  "description": "Create date of birth picker for Svelte apps.",
+  "description": "Provides Date of Birth (DOB) picker for Svelte apps.",
   "repo_url": "https://github.com/sandipmalla44/svelte-dob-picker",
-  "author": "Sandip Malla",
+  "authors": [
+    "sandipmalla"
+  ],
   "homepage": "https://github.com/sandipmalla44/svelte-dob-picker#readme",
-  "downloads": 48,
+  "downloads": 72,
   "dependents": 0,
   "updated": "2021-06-01T03:36:54.101Z",
   "tags": [

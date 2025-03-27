@@ -1,10 +1,12 @@
 {
   "name": "svelte-persistent",
-  "description": "Offer local and session storage writables for SvelteKit.",
+  "description": "Offer Svelte writables for local and session storage.",
   "repo_url": "https://github.com/LeoDog896/svelte-persistent",
-  "author": "Tristan F.",
+  "authors": [
+    "leodog896"
+  ],
   "homepage": "https://leodog896.github.io/svelte-persistent",
-  "downloads": 0,
+  "downloads": 6,
   "dependents": 0,
   "updated": "2023-09-04T14:53:40.247Z",
   "tags": [

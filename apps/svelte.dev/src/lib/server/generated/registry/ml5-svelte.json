@@ -1,13 +1,16 @@
 {
   "name": "ml5-svelte",
-  "description": "Use ml5.js machine learning models in Svelte components.",
+  "description": "Integrate ml5.js machine learning models into Svelte components.",
   "repo_url": "https://github.com/Radialarray/ml5-svelte",
-  "author": "Radialarray",
+  "authors": [
+    "radialarray"
+  ],
   "homepage": "https://ml5-svelte.vercel.app/",
-  "downloads": 4,
+  "downloads": 10,
   "dependents": 0,
   "updated": "2022-11-16T16:07:04.845Z",
   "tags": [
+    "media",
     "utility"
   ],
   "svelte5": false,

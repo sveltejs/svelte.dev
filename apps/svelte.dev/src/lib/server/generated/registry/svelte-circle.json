@@ -1,10 +1,12 @@
 {
   "name": "svelte-circle",
-  "description": "Render circle progress component for Svelte applications.",
+  "description": "Create circle progress components for Svelte.",
   "repo_url": "",
-  "author": "Abiee",
+  "authors": [
+    "iugsm"
+  ],
   "homepage": "https://svelte-circle.vercel.app",
-  "downloads": 23,
+  "downloads": 12,
   "dependents": 0,
   "updated": "2024-10-20T02:25:41.740Z",
   "tags": [

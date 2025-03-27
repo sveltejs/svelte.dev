@@ -1,10 +1,13 @@
 {
   "name": "@cautionyourblast/svelte-carousel",
-  "description": "Create carousel/slider components for Svelte applications.",
+  "description": "Build carousel/slider components for Svelte applications.",
   "repo_url": "https://github.com/cautionyourblast/svelte-carousel",
-  "author": "jenbutonnpm",
+  "authors": [
+    "jenbutonnpm",
+    "superafroman"
+  ],
   "homepage": "https://github.com/cautionyourblast/svelte-carousel#readme",
-  "downloads": 7,
+  "downloads": 13,
   "dependents": 0,
   "updated": "2020-07-10T13:54:25.271Z",
   "tags": [

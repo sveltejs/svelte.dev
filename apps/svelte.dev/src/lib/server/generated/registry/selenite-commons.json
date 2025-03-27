@@ -1,10 +1,12 @@
 {
   "name": "@selenite/commons",
-  "description": "Provide utilities, types, and actions for Svelte.",
+  "description": "Provide utilities, types, and actions for Svelte projects.",
   "repo_url": "https://github.com/ShaitanLyss/selenite-commons",
-  "author": "moonlyss",
+  "authors": [
+    "moonlyss"
+  ],
   "homepage": "https://github.com/ShaitanLyss/selenite-commons#readme",
-  "downloads": 2,
+  "downloads": 181,
   "dependents": 0,
   "updated": "2024-11-15T16:43:43.817Z",
   "tags": [

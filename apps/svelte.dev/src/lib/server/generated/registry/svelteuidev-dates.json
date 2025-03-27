@@ -1,10 +1,13 @@
 {
   "name": "@svelteuidev/dates",
-  "description": "Create calendars, date, time pickers based on SvelteUI components.",
+  "description": "Build calendars, date, time pickers using SvelteUI components.",
   "repo_url": "https://github.com/svelteuidev/svelteui",
-  "author": "Kamell Perry",
+  "authors": [
+    "lowkey_daisy",
+    "uxtitan"
+  ],
   "homepage": "https://svelteui.dev/",
-  "downloads": 58,
+  "downloads": 73,
   "dependents": 0,
   "updated": "2024-07-07T14:30:27.111Z",
   "tags": [
@@ -12,5 +15,5 @@
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 1361
+  "github_stars": 1363
 }

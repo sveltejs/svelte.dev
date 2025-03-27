@@ -1,10 +1,12 @@
 {
   "name": "nodeviz",
-  "description": "Build node graph based UI framework for Svelte.",
+  "description": "Provides a node graph based UI framework.",
   "repo_url": "https://github.com/jarecsni/nodeviz",
-  "author": "Johnny Jarecsni",
+  "authors": [
+    "jarecsni"
+  ],
   "homepage": "https://github.com/jarecsni/nodeviz#readme",
-  "downloads": 0,
+  "downloads": 19,
   "dependents": 0,
   "updated": "2022-11-27T11:38:56.057Z",
   "tags": [

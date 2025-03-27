@@ -1,13 +1,15 @@
 {
   "name": "@tadashi/svelte-optin",
-  "description": "Create Svelte components for opt-in forms.",
+  "description": "Create Svelte components.",
   "repo_url": "https://gitlab.textecnologia.io/nimble/optin",
-  "author": "Thiago Lagden",
+  "authors": [
+    "lagden"
+  ],
   "downloads": 0,
   "dependents": 0,
   "updated": "2025-01-23T14:41:41.156Z",
   "tags": [
-    "utility"
+    "component-library"
   ],
   "svelte5": false,
   "runes": false

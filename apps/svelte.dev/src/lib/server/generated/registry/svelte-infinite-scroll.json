@@ -2,9 +2,11 @@
   "name": "svelte-infinite-scroll",
   "description": "Implement infinite scroll functionality in Svelte apps.",
   "repo_url": "https://github.com/andrelmlins/svelte-infinite-scroll",
-  "author": "André Lins",
+  "authors": [
+    "andrelmlins"
+  ],
   "homepage": "https://svelte-infinite-scroll.netlify.com/",
-  "downloads": 1025,
+  "downloads": 1024,
   "dependents": 6,
   "updated": "2022-04-06T01:56:29.427Z",
   "tags": [

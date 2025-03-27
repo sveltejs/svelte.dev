@@ -1,0 +1,18 @@
+{
+  "name": "@shynome/trpc-sveltekit",
+  "description": "Provides tRPC adapter for SvelteKit applications.",
+  "repo_url": "https://github.com/icflorescu/trpc-sveltekit",
+  "authors": [
+    "shynome"
+  ],
+  "homepage": "https://github.com/icflorescu/trpc-sveltekit#readme",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2022-07-12T07:50:16.965Z",
+  "tags": [
+    "integration"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 813
+}

@@ -1,0 +1,19 @@
+{
+  "name": "ldn-viz-tools",
+  "description": "Provide data visualization tools for Svelte and SvelteKit projects.",
+  "repo_url": "https://github.com/Greater-London-Authority/ldn-viz-tools",
+  "authors": [
+    "mikeldn",
+    "chris_knight_ldn"
+  ],
+  "homepage": "https://github.com/Greater-London-Authority/ldn-viz-tools#readme",
+  "downloads": 4,
+  "dependents": 0,
+  "updated": "2023-02-24T16:46:35.102Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 1
+}

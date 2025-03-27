@@ -1,9 +1,11 @@
 {
   "name": "svelte-auth-ui",
-  "description": "Simplify authentication in Svelte apps with UI components.",
+  "description": "Simplify authentication in Svelte with pre-built UI components.",
   "repo_url": "",
-  "author": "chrisjayden",
-  "downloads": 9,
+  "authors": [
+    "chrisjayden"
+  ],
+  "downloads": 3,
   "dependents": 0,
   "updated": "2023-05-25T16:04:34.132Z",
   "tags": [

@@ -1,10 +1,12 @@
 {
   "name": "svelte-window-system",
-  "description": "Create customizable window system for Svelte.",
+  "description": "Creates windowing system for Svelte applications.",
   "repo_url": "https://github.com/DoutLaser/svelte-window-system",
-  "author": "Vidmantas Luneckas",
+  "authors": [
+    "donutlaser"
+  ],
   "homepage": "https://github.com/DonutLaser/svelte-window-system",
-  "downloads": 0,
+  "downloads": 5,
   "dependents": 0,
   "updated": "2021-07-29T12:33:14.681Z",
   "tags": [

@@ -1,10 +1,12 @@
 {
   "name": "sv-bootstrap-dropdown",
-  "description": "Dropdown component for Svelte using Bootstrap.",
+  "description": "Create Bootstrap dropdown components for Svelte.",
   "repo_url": "https://github.com/Sidd27/sv-bootstrap-dropdown",
-  "author": "Sidddharth Pandey",
+  "authors": [
+    "sidd27"
+  ],
   "homepage": "https://github.com/Sidd27/sv-bootstrap-dropdown#readme",
-  "downloads": 71,
+  "downloads": 61,
   "dependents": 0,
   "updated": "2020-11-16T13:20:41.652Z",
   "tags": [

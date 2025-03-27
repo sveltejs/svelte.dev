@@ -1,10 +1,12 @@
 {
   "name": "@adityarizqi/svelte-currency-format-input",
-  "description": "Formats numerical input into localized currency format.",
+  "description": "Format currency input fields in Svelte apps.",
   "repo_url": "https://github.com/Adityarizqi7/svelte-currency-format-input",
-  "author": "Aditya Rizqi Ardhana",
+  "authors": [
+    "adityarizqi"
+  ],
   "homepage": "https://svelte-currency-format-input.netlify.app",
-  "downloads": 44,
+  "downloads": 46,
   "dependents": 0,
   "updated": "2024-01-15T09:01:16.339Z",
   "tags": [

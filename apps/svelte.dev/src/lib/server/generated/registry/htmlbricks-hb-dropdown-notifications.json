@@ -1,11 +1,13 @@
 {
   "name": "@htmlbricks/hb-dropdown-notifications",
-  "description": "Svelte Dropdown Notifications WebComponent.",
+  "description": "Create dropdown notifications web component for Svelte.",
   "repo_url": "",
-  "author": "Dario Caruso",
-  "downloads": 321,
+  "authors": [
+    "dariocaruso"
+  ],
+  "downloads": 330,
   "dependents": 0,
-  "updated": "2025-03-09T03:10:28.208Z",
+  "updated": "2025-03-24T18:07:14.153Z",
   "tags": [
     "ui"
   ],

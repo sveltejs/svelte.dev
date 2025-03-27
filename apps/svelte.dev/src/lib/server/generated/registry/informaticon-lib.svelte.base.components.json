@@ -1,10 +1,15 @@
 {
   "name": "@informaticon/lib.svelte.base.components",
-  "description": "Provide Informaticon Svelte components library.",
+  "description": "Provides Informaticon Svelte components library.",
   "repo_url": "https://github.com/informaticon/lib.svelte.base.components",
-  "author": "Informaticon AG",
+  "authors": [
+    "informaticon.bot",
+    "haldc",
+    "sebaz6r",
+    "michaelhugi"
+  ],
   "homepage": "https://github.com/informaticon/lib.svelte.base.components#readme",
-  "downloads": 20,
+  "downloads": 37,
   "dependents": 0,
   "updated": "2022-09-08T13:36:04.171Z",
   "tags": [

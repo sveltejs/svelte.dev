@@ -1,0 +1,16 @@
+{
+  "name": "@yerkopalma/cursor",
+  "description": "Customize cursor appearance in Svelte applications.",
+  "repo_url": "Custom cursor component",
+  "authors": [
+    "yerkopalma"
+  ],
+  "downloads": 18,
+  "dependents": 0,
+  "updated": "2020-02-20T19:02:56.487Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

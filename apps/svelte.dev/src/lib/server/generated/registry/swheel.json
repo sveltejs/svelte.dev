@@ -1,10 +1,12 @@
 {
   "name": "swheel",
-  "description": "Declarative component-based Svelte router.",
+  "description": "Create declarative component-based Svelte router.",
   "repo_url": "https://github.com/qutran/swheel",
-  "author": "Dmitry Kutran",
+  "authors": [
+    "dmitry.kutran"
+  ],
   "homepage": "https://github.com/qutran/swheel",
-  "downloads": 14,
+  "downloads": 19,
   "dependents": 0,
   "updated": "2019-09-05T14:20:54.973Z",
   "tags": [

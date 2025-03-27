@@ -1,15 +1,16 @@
 {
   "name": "@dukerupert/sveltekit-medusa-client",
-  "description": "Client library for Medusa e-commerce backend in SvelteKit.",
+  "description": "Communicate with Medusa ecommerce backend from SvelteKit.",
   "repo_url": "https://github.com/dukerupert/sveltekit-medusa-client",
-  "author": "Logan Williams",
+  "authors": [
+    "dukerupert"
+  ],
   "homepage": "https://github.com/dukerupert/sveltekit-medusa-client#readme",
-  "downloads": 2,
+  "downloads": 1,
   "dependents": 0,
   "updated": "2023-11-30T19:41:40.594Z",
   "tags": [
-    "server",
-    "integration"
+    "server"
   ],
   "svelte5": false,
   "runes": false,

@@ -1,8 +1,10 @@
 {
   "name": "svelte-bonsai",
-  "description": "Offer customizable bonsai tree component for Svelte.",
+  "description": "Create animated, customizable bonsai tree component for Svelte.",
   "repo_url": "https://github.com/stelath/svelte-bonsai",
-  "author": "stelath",
+  "authors": [
+    "stelath"
+  ],
   "homepage": "https://github.com/stelath/svelte-bonsai#readme",
   "downloads": 0,
   "dependents": 0,

@@ -1,14 +1,16 @@
 {
   "name": "entitlement-provider-frontend",
-  "description": "Frontend for entitlement-provider, built with Svelte.",
+  "description": "Web frontend for entitlement-provider.",
   "repo_url": "https://github.com/arlac77/entitlement-provider-frontend",
-  "author": "arlac77",
+  "authors": [
+    "arlac77"
+  ],
   "homepage": "https://github.com/arlac77/entitlement-provider-frontend#readme",
-  "downloads": 67,
+  "downloads": 167,
   "dependents": 0,
   "updated": "2024-08-01T21:58:57.486Z",
   "tags": [
-    "auth"
+    "ui"
   ],
   "svelte5": true,
   "runes": false,

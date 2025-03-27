@@ -1,15 +1,17 @@
 {
   "name": "formsnap",
-  "description": "Accessible form components for SvelteKit with superforms.",
+  "description": "Wraps sveltekit-superforms with accessible form components.",
   "repo_url": "",
-  "author": "Hunter Johnston",
-  "downloads": 36930,
+  "authors": [
+    "huntabyte"
+  ],
+  "downloads": 38717,
   "dependents": 19,
   "updated": "2024-12-13T17:45:07.463Z",
   "tags": [
-    "ui",
+    "component-library",
     "utility"
   ],
-  "svelte5": true,
+  "svelte5": false,
   "runes": false
 }

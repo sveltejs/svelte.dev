@@ -1,8 +1,13 @@
 {
   "name": "@sveltejs/adapter-cloudflare-workers",
-  "description": "Adapts SvelteKit apps for deployment to Cloudflare Workers.",
+  "description": "Deploy SvelteKit apps to Cloudflare Workers.",
   "repo_url": "https://github.com/sveltejs/kit",
-  "author": "rich_harris",
+  "authors": [
+    "rich_harris",
+    "svelte-admin",
+    "conduitry",
+    "dominik_g"
+  ],
   "homepage": "https://svelte.dev",
   "downloads": 1572,
   "dependents": 0,
@@ -12,5 +17,5 @@
   ],
   "svelte5": false,
   "runes": false,
-  "github_stars": 19123
+  "github_stars": 19137
 }

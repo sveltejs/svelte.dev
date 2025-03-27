@@ -1,14 +1,18 @@
 {
   "name": "@nust_misis/ui",
-  "description": "Offers UI components library for the MISIS University.",
+  "description": "Provides UI components for University MISIS Svelte projects.",
   "repo_url": "",
-  "author": "Dmitriy Din",
-  "downloads": 309,
+  "authors": [
+    "dmdin",
+    "julia_grishina",
+    "evilya2505",
+    "polinaryabukhina"
+  ],
+  "downloads": 364,
   "dependents": 0,
-  "updated": "2025-03-21T12:58:16.309Z",
+  "updated": "2025-03-24T16:33:11.881Z",
   "tags": [
-    "component-library",
-    "ui"
+    "component-library"
   ],
   "svelte5": true,
   "runes": false

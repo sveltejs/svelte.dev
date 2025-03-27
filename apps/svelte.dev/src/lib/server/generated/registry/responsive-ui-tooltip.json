@@ -1,10 +1,15 @@
 {
   "name": "@responsive-ui/tooltip",
-  "description": "Provides tooltip component for Svelte.",
+  "description": "Create tooltip component for responsive Svelte UI.",
   "repo_url": "https://github.com/wetix/responsive-ui",
-  "author": "Si3nLoong",
+  "authors": [
+    "rexlow",
+    "bassemsab",
+    "rm.oska",
+    "apacventure"
+  ],
   "homepage": "https://github.com/wetix/responsive-ui/blob/main/components/tooltip#README.md",
-  "downloads": 1,
+  "downloads": 73,
   "dependents": 1,
   "updated": "2024-04-23T07:51:23.902Z",
   "tags": [

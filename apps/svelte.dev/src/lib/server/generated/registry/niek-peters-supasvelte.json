@@ -2,14 +2,15 @@
   "name": "@niek-peters/supasvelte",
   "description": "Sync Supabase data with Svelte stores in real time.",
   "repo_url": "https://github.com/niek-peters/supasvelte",
-  "author": "Niek Peters",
+  "authors": [
+    "niek-peters"
+  ],
   "homepage": "https://github.com/niek-peters/supasvelte#readme",
-  "downloads": 0,
+  "downloads": 16,
   "dependents": 0,
   "updated": "2023-06-11T23:45:43.567Z",
   "tags": [
-    "utility",
-    "integration"
+    "utility"
   ],
   "svelte5": false,
   "runes": false,

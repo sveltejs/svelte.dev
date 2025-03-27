@@ -1,10 +1,12 @@
 {
   "name": "svelte-keyboard",
-  "description": "Provides an on-screen keyboard component for Svelte.",
+  "description": "Create keyboard component for Svelte apps.",
   "repo_url": "https://github.com/russellgoldenberg/svelte-keyboard",
-  "author": "russell goldenberg",
+  "authors": [
+    "russellsamora"
+  ],
   "homepage": "https://github.com/russellgoldenberg/svelte-keyboard#readme",
-  "downloads": 312,
+  "downloads": 281,
   "dependents": 2,
   "updated": "2022-09-30T14:42:13.836Z",
   "tags": [

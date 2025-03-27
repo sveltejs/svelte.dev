@@ -1,0 +1,19 @@
+{
+  "name": "sveltacular",
+  "description": "Provides a Svelte component library.",
+  "repo_url": "https://github.com/jasonbyrne/sveltacular",
+  "authors": [
+    "jasonbyrne"
+  ],
+  "homepage": "https://github.com/jasonbyrne/sveltacular#readme",
+  "downloads": 75,
+  "dependents": 0,
+  "updated": "2024-09-23T11:49:15.212Z",
+  "tags": [
+    "component-library",
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

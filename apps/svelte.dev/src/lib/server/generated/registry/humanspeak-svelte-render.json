@@ -2,7 +2,9 @@
   "name": "@humanspeak/svelte-render",
   "description": "Manage complex Svelte behaviors outside templates.",
   "repo_url": "https://github.com/humanspeak/svelte-render",
-  "author": "Humanspeak, Inc.",
+  "authors": [
+    "humanspeakadmin"
+  ],
   "homepage": "https://github.com/humanspeak/svelte-render#readme",
   "downloads": 388,
   "dependents": 1,

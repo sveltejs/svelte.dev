@@ -1,15 +1,17 @@
 {
   "name": "svelma",
-  "description": "Bulma components for Svelte, build user interfaces quickly.",
+  "description": "Build Bulma components for Svelte applications.",
   "repo_url": "https://github.com/c0bra/svelma",
-  "author": "Abby Chau, Brian Hann",
+  "authors": [
+    "c0bra",
+    "abbychau"
+  ],
   "homepage": "https://github.com/c0bra/svelma#readme",
-  "downloads": 113,
+  "downloads": 128,
   "dependents": 1,
   "updated": "2021-04-14T04:51:32.191Z",
   "tags": [
-    "component-library",
-    "ui"
+    "component-library"
   ],
   "svelte5": false,
   "runes": false,

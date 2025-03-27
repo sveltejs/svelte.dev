@@ -1,10 +1,12 @@
 {
   "name": "@macfja/svelte-p5",
-  "description": "Create p5.js sketches in Svelte components.",
+  "description": "Wrap P5.js for use within Svelte components.",
   "repo_url": "https://github.com/macfja/svelte-p5",
-  "author": "MacFJA",
+  "authors": [
+    "macfja"
+  ],
   "homepage": "https://github.com/macfja/svelte-p5#readme",
-  "downloads": 5,
+  "downloads": 10,
   "dependents": 0,
   "updated": "2022-08-05T20:21:19.264Z",
   "tags": [

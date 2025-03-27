@@ -1,14 +1,22 @@
 {
   "name": "@healthtree/svelte-adapter-firebase",
-  "description": "Integrate Svelte apps with Firebase Hosting and Cloud Functions.",
+  "description": "Adapt Svelte apps for Firebase Hosting with SSR.",
   "repo_url": "https://github.com/jthegedus/svelte-adapter-firebase",
-  "author": "James Hegedus",
+  "authors": [
+    "sahagun-jorge",
+    "alvarocapde",
+    "healthtree-admin",
+    "diegofhe",
+    "jpcapdevila",
+    "aureliob"
+  ],
   "homepage": "https://github.com/jthegedus/svelte-adapter-firebase#readme",
-  "downloads": 11,
+  "downloads": 14,
   "dependents": 0,
   "updated": "2022-03-17T04:22:20.606Z",
   "tags": [
-    "adapter"
+    "adapter",
+    "server"
   ],
   "svelte5": false,
   "runes": false,

@@ -2,15 +2,18 @@
   "name": "@ai-sdk/svelte",
   "description": "Provides Svelte UI components for the AI SDK.",
   "repo_url": "https://github.com/vercel/ai",
-  "author": "jaredpalmer",
+  "authors": [
+    "jaredpalmer",
+    "vercel-release-bot"
+  ],
   "homepage": "https://sdk.vercel.ai/docs",
-  "downloads": 477736,
+  "downloads": 348466,
   "dependents": 7,
-  "updated": "2025-03-21T09:13:22.270Z",
+  "updated": "2025-03-25T17:48:07.988Z",
   "tags": [
     "utility"
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 12908
+  "github_stars": 12953
 }

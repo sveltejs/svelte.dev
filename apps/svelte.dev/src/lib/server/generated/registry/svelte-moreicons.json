@@ -1,13 +1,18 @@
 {
   "name": "svelte-moreicons",
+  "description": "Provides Font Awesome icons as Svelte components.",
   "repo_url": "https://github.com/RobBrazier/svelte-awesome",
-  "author": "Rob Brazier",
+  "authors": [
+    "guchin"
+  ],
   "homepage": "https://github.com/RobBrazier/svelte-awesome#readme",
-  "downloads": 1,
+  "downloads": 10,
   "dependents": 0,
   "updated": "2020-09-02T20:10:03.347Z",
-  "tags": [],
+  "tags": [
+    "ui"
+  ],
   "svelte5": false,
   "runes": false,
-  "github_stars": 497
+  "github_stars": 498
 }

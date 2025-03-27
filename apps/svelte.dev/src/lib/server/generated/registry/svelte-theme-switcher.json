@@ -1,14 +1,15 @@
 {
   "name": "svelte-theme-switcher",
-  "description": "Switch themes in Svelte applications.",
+  "description": "Implement simple Svelte theme switcher for light/dark modes.",
   "repo_url": "",
-  "author": "dev-warner",
-  "downloads": 2,
+  "authors": [
+    "dev-warner"
+  ],
+  "downloads": 21,
   "dependents": 0,
   "updated": "2020-04-20T15:09:05.770Z",
   "tags": [
-    "ui",
-    "utility"
+    "ui"
   ],
   "svelte5": false,
   "runes": false

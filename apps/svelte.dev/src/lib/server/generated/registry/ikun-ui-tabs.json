@@ -1,8 +1,10 @@
 {
   "name": "@ikun-ui/tabs",
-  "description": "Create tabbed interfaces for Svelte applications.",
+  "description": "Create tab components for Svelte applications.",
   "repo_url": "",
-  "author": "baiwusanyu",
+  "authors": [
+    "baiwusanyu"
+  ],
   "downloads": 16,
   "dependents": 1,
   "updated": "2025-01-24T03:49:23.143Z",

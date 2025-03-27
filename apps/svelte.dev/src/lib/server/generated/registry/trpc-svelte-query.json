@@ -1,14 +1,16 @@
 {
   "name": "trpc-svelte-query",
-  "description": "Use tRPC with SvelteKit and Tanstack Query for type-safe APIs.",
+  "description": "Integrates tRPC with SvelteKit and Tanstack Query.",
   "repo_url": "https://github.com/ottomated/trpc-svelte-query",
-  "author": "Ottomated",
+  "authors": [
+    "ottomated"
+  ],
   "homepage": "https://github.com/ottomated/trpc-svelte-query#readme",
-  "downloads": 455,
+  "downloads": 513,
   "dependents": 0,
-  "updated": "2024-02-27T19:30:34.541Z",
+  "updated": "2025-03-26T22:16:14.634Z",
   "tags": [
-    "utility"
+    "integration"
   ],
   "svelte5": false,
   "runes": false,

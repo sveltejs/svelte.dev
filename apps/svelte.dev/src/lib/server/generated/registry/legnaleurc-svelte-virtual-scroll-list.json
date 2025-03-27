@@ -1,0 +1,17 @@
+{
+  "name": "@legnaleurc/svelte-virtual-scroll-list",
+  "description": "Virtualize lists for Svelte, supporting dynamic and both-directional lists.",
+  "repo_url": "https://github.com/legnaleurc/svelte-virtual-scroll-list",
+  "authors": [
+    "legnaleurc"
+  ],
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2022-06-02T16:39:44.789Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

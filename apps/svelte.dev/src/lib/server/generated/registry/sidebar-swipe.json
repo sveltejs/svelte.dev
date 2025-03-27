@@ -1,10 +1,12 @@
 {
   "name": "sidebar-swipe",
-  "description": "Create swipeable sidebar navigation for Svelte.",
+  "description": "Create swipeable sidebar navigation for touch screen devices.",
   "repo_url": "https://github.com/Anyass3/sidebar-swipe",
-  "author": "Abdoulie Nyass",
+  "authors": [
+    "anyass"
+  ],
   "homepage": "https://github.com/Anyass3/sidebar-swipe#readme",
-  "downloads": 2,
+  "downloads": 20,
   "dependents": 0,
   "updated": "2021-07-30T01:12:40.606Z",
   "tags": [

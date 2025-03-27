@@ -1,10 +1,12 @@
 {
   "name": "svelte-file-icons",
-  "description": "Display file icons in Svelte applications.",
+  "description": "Use file icon components for Svelte apps.",
   "repo_url": "https://github.com/shinokada/svelte-file-icons",
-  "author": "Shinichi Okada",
+  "authors": [
+    "shinichiokada"
+  ],
   "homepage": "https://svelte-file-icons.codewithshin.com/",
-  "downloads": 44,
+  "downloads": 45,
   "dependents": 0,
   "updated": "2024-03-01T16:46:50.565Z",
   "tags": [

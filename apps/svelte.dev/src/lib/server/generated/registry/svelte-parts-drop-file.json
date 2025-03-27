@@ -1,14 +1,17 @@
 {
   "name": "@svelte-parts/drop-file",
-  "description": "Create drop zones for file uploads in Svelte applications.",
+  "description": "Enable file upload via drag-and-drop in Svelte apps.",
   "repo_url": "https://github.com/idris-maps/svelte-parts",
-  "author": "idris-maps",
+  "authors": [
+    "idris-maps"
+  ],
   "homepage": "https://github.com/idris-maps/svelte-parts#readme",
-  "downloads": 35,
+  "downloads": 39,
   "dependents": 0,
   "updated": "2022-04-04T21:04:29.505Z",
   "tags": [
-    "utility"
+    "media",
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

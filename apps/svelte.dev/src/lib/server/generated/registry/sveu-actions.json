@@ -1,10 +1,12 @@
 {
   "name": "@sveu/actions",
-  "description": "Provide collection of Svelte actions for various use cases.",
+  "description": "Provide a collection of Svelte actions for various use cases.",
   "repo_url": "https://github.com/svelte-u/actions",
-  "author": "Mohamed Nesredin",
+  "authors": [
+    "mohamed-kaizen"
+  ],
   "homepage": "https://github.com/svelte-u/actions#readme",
-  "downloads": 18,
+  "downloads": 51,
   "dependents": 0,
   "updated": "2023-10-21T10:24:27.550Z",
   "tags": [

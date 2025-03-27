@@ -1,10 +1,12 @@
 {
   "name": "@dexq/svelte-scrollspy",
-  "description": "Tracks scroll position of elements in Svelte apps.",
+  "description": "Tracks scroll position of Svelte elements using actions.",
   "repo_url": "https://github.com/dexterklui/svelte-scrollspy",
-  "author": "Dexter Lui",
+  "authors": [
+    "dexlui"
+  ],
   "homepage": "https://github.com/dexterklui/svelte-scrollspy#readme",
-  "downloads": 2,
+  "downloads": 1,
   "dependents": 0,
   "updated": "2023-11-26T14:24:04.525Z",
   "tags": [

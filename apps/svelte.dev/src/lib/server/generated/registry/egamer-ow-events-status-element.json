@@ -1,13 +1,15 @@
 {
   "name": "@egamer/ow-events-status-element",
-  "description": "Show game event status using Svelte web component.",
+  "description": "Display Overwatch game event status using Svelte.",
   "repo_url": "",
-  "author": "@eGamer/eGear",
-  "downloads": 9,
+  "authors": [
+    "egear"
+  ],
+  "downloads": 43,
   "dependents": 0,
   "updated": "2019-12-09T21:42:27.683Z",
   "tags": [
-    "utility"
+    "ui"
   ],
   "svelte5": false,
   "runes": false

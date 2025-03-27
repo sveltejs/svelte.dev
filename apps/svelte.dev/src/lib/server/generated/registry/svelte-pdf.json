@@ -2,7 +2,9 @@
   "name": "svelte-pdf",
   "description": "Renders PDF documents using PDF.js in Svelte.",
   "repo_url": "https://github.com/vinodnimbalkar/svelte-pdf",
-  "author": "vinodnimbalkar",
+  "authors": [
+    "vinodnimbalkar"
+  ],
   "homepage": "https://github.com/vinodnimbalkar/svelte-pdf#readme",
   "downloads": 1056,
   "dependents": 0,
@@ -10,7 +12,7 @@
   "tags": [
     "media"
   ],
-  "svelte5": true,
+  "svelte5": false,
   "runes": false,
-  "github_stars": 213
+  "github_stars": 214
 }

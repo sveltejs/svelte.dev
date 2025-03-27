@@ -1,0 +1,19 @@
+{
+  "name": "@novacbn/test-package-kahi",
+  "description": "Straight-forward Svelte UI components for web applications.",
+  "repo_url": "https://github.com/novacbn/kahi-ui",
+  "authors": [
+    "novacbn"
+  ],
+  "homepage": "https://github.com/novacbn/kahi-ui#readme",
+  "downloads": 13,
+  "dependents": 0,
+  "updated": "2021-08-10T03:59:44.755Z",
+  "tags": [
+    "component-library",
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 187
+}

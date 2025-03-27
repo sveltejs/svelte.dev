@@ -1,14 +1,17 @@
 {
   "name": "@sorens/artist-svelte",
-  "description": "Build UI with opinionated, clean components for SvelteKit.",
+  "description": "Opinionated UI framework for SvelteKit with built-in theme support.",
   "repo_url": "https://github.com/sorenabedi/artist-svelte",
-  "author": "Soren Abedi",
+  "authors": [
+    "sorenabedi"
+  ],
   "homepage": "https://artist-ui.pages.dev",
-  "downloads": 2,
+  "downloads": 449,
   "dependents": 0,
   "updated": "2021-11-21T14:06:50.947Z",
   "tags": [
-    "component-library"
+    "component-library",
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

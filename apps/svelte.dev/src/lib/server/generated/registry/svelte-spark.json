@@ -1,9 +1,11 @@
 {
   "name": "svelte-spark",
-  "description": "Generate sparkline charts in Svelte applications.",
+  "description": "Generate sparklines with Svelte for data visualization.",
   "repo_url": "",
-  "author": "luknyb",
-  "downloads": 1,
+  "authors": [
+    "luknyb"
+  ],
+  "downloads": 4,
   "dependents": 0,
   "updated": "2022-12-02T12:47:36.263Z",
   "tags": [

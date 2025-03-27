@@ -1,0 +1,19 @@
+{
+  "name": "@sliu2017/svelte-recaptcha-v2",
+  "description": "Integrate Google reCAPTCHA v2 into SvelteKit and Svelte apps.",
+  "repo_url": "https://github.com/sliu2017/svelte-recaptcha-v2",
+  "authors": [
+    "sliu2017"
+  ],
+  "homepage": "https://github.com/sliu2017/svelte-recaptcha-v2#readme",
+  "downloads": 37,
+  "dependents": 0,
+  "updated": "2023-11-10T15:58:59.306Z",
+  "tags": [
+    "integration",
+    "auth"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

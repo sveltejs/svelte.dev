@@ -1,11 +1,13 @@
 {
   "name": "@htmlbricks/hb-dashboard-card1",
-  "description": "Creates Svelte-Bootstrap dashboard card web component.",
+  "description": "Provides a Svelte dashboard card component.",
   "repo_url": "",
-  "author": "Dario Caruso",
-  "downloads": 262,
+  "authors": [
+    "dariocaruso"
+  ],
+  "downloads": 274,
   "dependents": 0,
-  "updated": "2025-03-09T03:10:26.355Z",
+  "updated": "2025-03-24T18:07:11.998Z",
   "tags": [
     "ui"
   ],

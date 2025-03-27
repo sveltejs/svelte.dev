@@ -1,15 +1,16 @@
 {
   "name": "@asknotbad/sveltify",
-  "description": "Provide Svelte component library with Skeleton component.",
+  "description": "Provides Svelte component library with Skeleton component.",
   "repo_url": "https://github.com/asknotbad/sveltify",
-  "author": "Den Kochetkov",
+  "authors": [
+    "zdpro"
+  ],
   "homepage": "https://sveltify.dev",
-  "downloads": 14,
+  "downloads": 0,
   "dependents": 0,
   "updated": "2022-07-16T11:18:28.544Z",
   "tags": [
-    "component-library",
-    "ui"
+    "component-library"
   ],
   "svelte5": false,
   "runes": false,

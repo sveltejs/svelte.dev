@@ -1,10 +1,12 @@
 {
   "name": "@loloof64/chessboard-component",
-  "description": "Create chess board web component for Svelte.",
+  "description": "Render interactive chess board component for Svelte.",
   "repo_url": "https://github.com/loloof64/Chess-Board-Component-Sveltejs",
-  "author": "Laurent Bernabe",
+  "authors": [
+    "loloof64"
+  ],
   "homepage": "https://github.com/loloof64/Chess-Board-Component-Sveltejs#readme",
-  "downloads": 0,
+  "downloads": 59,
   "dependents": 0,
   "updated": "2024-04-08T11:27:18.713Z",
   "tags": [

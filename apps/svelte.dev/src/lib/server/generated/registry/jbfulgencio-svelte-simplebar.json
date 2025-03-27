@@ -1,10 +1,12 @@
 {
   "name": "@jbfulgencio/svelte-simplebar",
-  "description": "Create scrollable content areas with Svelte.",
+  "description": "Svelte wrapper for SimpleBar scrollbar component.",
   "repo_url": "https://github.com/jbfulgencio/svelte-simplebar",
-  "author": "João Batista Fulgêncio",
+  "authors": [
+    "jbfulgencio"
+  ],
   "homepage": "https://github.com/jbfulgencio/svelte-simplebar#readme",
-  "downloads": 0,
+  "downloads": 11,
   "dependents": 0,
   "updated": "2022-03-15T19:13:52.173Z",
   "tags": [

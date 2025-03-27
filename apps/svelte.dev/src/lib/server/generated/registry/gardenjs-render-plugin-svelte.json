@@ -1,10 +1,13 @@
 {
   "name": "@gardenjs/render-plugin-svelte",
-  "description": "Renders Svelte components in Gardenjs.",
+  "description": "Render Svelte components within Gardenjs.",
   "repo_url": "https://github.com/gardenjs/render-plugin-svelte",
-  "author": "Robin Danzinger",
+  "authors": [
+    "robindanzinger",
+    "martinfarkas"
+  ],
   "homepage": "https://github.com/gardenjs/render-plugin-svelte#readme",
-  "downloads": 14,
+  "downloads": 0,
   "dependents": 0,
   "updated": "2024-12-11T20:37:25.938Z",
   "tags": [

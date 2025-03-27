@@ -1,10 +1,12 @@
 {
   "name": "svelte-crop-window",
-  "description": "Crop images and videos with touch and mouse gestures.",
+  "description": "Crop images, videos with touch, mouse gestures in Svelte.",
   "repo_url": "https://github.com/sabine/svelte-crop-window",
-  "author": "Sabine Schmaltz",
+  "authors": [
+    "sabine_s"
+  ],
   "homepage": "https://sabine.github.io/svelte-crop-window",
-  "downloads": 25,
+  "downloads": 41,
   "dependents": 0,
   "updated": "2022-10-20T10:31:17.590Z",
   "tags": [

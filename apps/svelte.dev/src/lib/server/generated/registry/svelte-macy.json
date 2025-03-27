@@ -2,7 +2,9 @@
   "name": "svelte-macy",
   "description": "Create masonry layouts for Svelte components.",
   "repo_url": "https://github.com/hongkiulam/svelte-macy",
-  "author": "Haydon Lam",
+  "authors": [
+    "hongkiulam"
+  ],
   "homepage": "https://github.com/hongkiulam/svelte-macy#readme",
   "downloads": 8,
   "dependents": 0,

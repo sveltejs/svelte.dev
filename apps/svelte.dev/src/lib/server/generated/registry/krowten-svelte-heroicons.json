@@ -1,10 +1,12 @@
 {
   "name": "@krowten/svelte-heroicons",
-  "description": "Provides Heroicons for Svelte projects.",
+  "description": "Use Heroicons in Svelte projects.",
   "repo_url": "https://github.com/krowten/svelte-heroicons",
-  "author": "Vladimir",
+  "authors": [
+    "krowten"
+  ],
   "homepage": "https://github.com/krowten/svelte-heroicons#readme",
-  "downloads": 30,
+  "downloads": 2,
   "dependents": 0,
   "updated": "2023-01-06T11:00:52.870Z",
   "tags": [

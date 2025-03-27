@@ -1,14 +1,15 @@
 {
   "name": "pixel-modal",
-  "description": "Provides simple, lightweight modal widget for SvelteKit.",
+  "description": "Create simple, lightweight modal widgets for SvelteKit.",
   "repo_url": "",
-  "author": "Sergey Galaktionov",
-  "downloads": 7,
+  "authors": [
+    "pixel_1917"
+  ],
+  "downloads": 6,
   "dependents": 0,
   "updated": "2023-10-24T03:55:51.618Z",
   "tags": [
-    "ui",
-    "utility"
+    "ui"
   ],
   "svelte5": true,
   "runes": false

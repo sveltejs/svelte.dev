@@ -1,8 +1,14 @@
 {
   "name": "@sheepdog/svelte",
-  "description": "Handle async tasks in Svelte applications.",
+  "description": "Handles async tasks in Svelte applications.",
   "repo_url": "https://github.com/mainmatter/sheepdog",
-  "author": "pablopang",
+  "authors": [
+    "pablopang",
+    "marcoow",
+    "mainmatter",
+    "beerinho",
+    "nickschot"
+  ],
   "homepage": "https://github.com/mainmatter/sheepdog#readme",
   "downloads": 117,
   "dependents": 0,
@@ -10,7 +16,7 @@
   "tags": [
     "utility"
   ],
-  "svelte5": true,
+  "svelte5": false,
   "runes": false,
   "github_stars": 84
 }

@@ -1,10 +1,12 @@
 {
   "name": "svelte-bundle",
-  "description": "Bundle Svelte files into single HTML file.",
+  "description": "Bundle Svelte components into single HTML files.",
   "repo_url": "https://github.com/uhteddy/svelte-bundle",
-  "author": "Teddy Hartling",
+  "authors": [
+    "uhteddy"
+  ],
   "homepage": "https://github.com/uhteddy/svelte-bundle#readme",
-  "downloads": 3,
+  "downloads": 5,
   "dependents": 0,
   "updated": "2024-11-17T01:58:22.910Z",
   "tags": [

@@ -1,12 +1,15 @@
 {
   "name": "@soleil-se/build-app",
-  "description": "Build WebApps, RESTApps and Widgets with Svelte in Sitevision.",
+  "description": "Builds Sitevision WebApps, RESTApps, Widgets with Svelte.",
   "repo_url": "",
-  "author": "Soleil AB",
+  "authors": [
+    "soleil-ab",
+    "kling90"
+  ],
   "homepage": "https://docs.soleil.se/build/app",
-  "downloads": 97,
+  "downloads": 50,
   "dependents": 0,
-  "updated": "2025-03-05T11:20:42.680Z",
+  "updated": "2025-03-26T11:46:26.319Z",
   "tags": [
     "tooling"
   ],

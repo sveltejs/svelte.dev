@@ -1,0 +1,16 @@
+{
+  "name": "svelte-formgrid",
+  "description": "Render forms with data, simple validation, and input masking.",
+  "repo_url": "",
+  "authors": [
+    "kiho"
+  ],
+  "downloads": 10,
+  "dependents": 0,
+  "updated": "2018-09-09T20:24:45.883Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

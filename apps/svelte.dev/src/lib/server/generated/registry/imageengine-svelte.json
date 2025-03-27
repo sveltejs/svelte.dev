@@ -1,0 +1,21 @@
+{
+  "name": "@imageengine/svelte",
+  "description": "Integrate optimized responsive images in Svelte applications.",
+  "repo_url": "https://github.com/imgeng/imageengine-svelte",
+  "authors": [
+    "adityakantipudi",
+    "rraina",
+    "srinidhi12",
+    "sbogalaloginsoft"
+  ],
+  "homepage": "https://github.com/imgeng/imageengine-svelte#readme",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2024-06-12T13:42:55.446Z",
+  "tags": [
+    "media"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 1
+}

@@ -1,9 +1,11 @@
 {
   "name": "svelte-validify",
-  "description": "Create form validation for Svelte components.",
+  "description": "Flexible form validation library for Svelte.",
   "repo_url": "",
-  "author": "zackify",
-  "downloads": 2,
+  "authors": [
+    "zackify"
+  ],
+  "downloads": 6,
   "dependents": 0,
   "updated": "2021-03-15T21:15:46.922Z",
   "tags": [

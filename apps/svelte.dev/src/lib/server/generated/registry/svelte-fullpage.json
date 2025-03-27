@@ -1,8 +1,10 @@
 {
   "name": "svelte-fullpage",
-  "description": "Create fullpage scrolling sections in Svelte applications.",
+  "description": "Create fullpage scrolling sections in Svelte apps.",
   "repo_url": "https://github.com/Hejtmus/svelte-fullpage",
-  "author": "Filip Holčík",
+  "authors": [
+    "filiph"
+  ],
   "homepage": "https://hejtmus.github.io/svelte-fullpage/",
   "downloads": 64,
   "dependents": 0,

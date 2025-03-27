@@ -1,10 +1,12 @@
 {
   "name": "svelte-heroicons-component",
-  "description": "Use Heroicons in Svelte components.",
+  "description": "Render Heroicons as Svelte components, supporting various sizes and events.",
   "repo_url": "https://github.com/bas-baskara/svelte-heroicons-component",
-  "author": "Baskara",
+  "authors": [
+    "bas_baskara"
+  ],
   "homepage": "https://github.com/bas-baskara/svelte-heroicons-component#readme",
-  "downloads": 15,
+  "downloads": 14,
   "dependents": 0,
   "updated": "2023-09-14T10:52:40.091Z",
   "tags": [

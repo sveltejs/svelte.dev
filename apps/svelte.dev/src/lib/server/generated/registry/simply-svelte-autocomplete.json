@@ -1,10 +1,12 @@
 {
   "name": "simply-svelte-autocomplete",
-  "description": "Create autocomplete component in Svelte apps.",
+  "description": "Implement lightweight, zero-dependency autocomplete component.",
   "repo_url": "",
-  "author": "Yuval Allweil | @esotericsheric | www.whoisyuval.com",
+  "authors": [
+    "themarquisdesheric"
+  ],
   "homepage": "https://github.com/themarquisdesheric/simply-svelte-autocomplete",
-  "downloads": 3,
+  "downloads": 16,
   "dependents": 0,
   "updated": "2021-01-31T00:03:52.797Z",
   "tags": [

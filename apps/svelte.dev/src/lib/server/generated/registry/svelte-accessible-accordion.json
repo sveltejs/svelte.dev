@@ -1,14 +1,16 @@
 {
   "name": "svelte-accessible-accordion",
-  "description": "Create accessible accordion component for Svelte.",
+  "description": "Create accessible accordion component for Svelte applications.",
   "repo_url": "https://github.com/metonym/svelte-accessible-accordion",
-  "author": "Eric Liu",
+  "authors": [
+    "metonym"
+  ],
   "homepage": "https://github.com/metonym/svelte-accessible-accordion",
-  "downloads": 19,
+  "downloads": 41,
   "dependents": 1,
   "updated": "2021-11-02T15:09:57.828Z",
   "tags": [
-    "component-library"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

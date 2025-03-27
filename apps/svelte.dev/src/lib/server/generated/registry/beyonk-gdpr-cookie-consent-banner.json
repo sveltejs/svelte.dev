@@ -1,9 +1,16 @@
 {
   "name": "@beyonk/gdpr-cookie-consent-banner",
-  "description": "Implement GDPR cookie consent banners in SvelteKit apps.",
+  "description": "Create GDPR cookie consent banner for Svelte/Kit applications.",
   "repo_url": "",
-  "author": "Antony Jones",
-  "downloads": 1008,
+  "authors": [
+    "antony",
+    "adampond",
+    "alex.dilley",
+    "jedwoodcock",
+    "leandro.silva",
+    "tomlewis0"
+  ],
+  "downloads": 586,
   "dependents": 1,
   "updated": "2025-03-04T10:16:39.901Z",
   "tags": [

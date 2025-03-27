@@ -1,10 +1,12 @@
 {
   "name": "sonda",
-  "description": "Visualize and analyze JavaScript and CSS bundles for SvelteKit.",
+  "description": "Visualizes and analyzes JavaScript and CSS bundles.",
   "repo_url": "https://github.com/filipsobol/sonda",
-  "author": "filipsobol",
+  "authors": [
+    "filipsobol"
+  ],
   "homepage": "https://sonda.dev",
-  "downloads": 12238,
+  "downloads": 13150,
   "dependents": 1,
   "updated": "2024-12-31T08:29:09.012Z",
   "tags": [
@@ -12,5 +14,5 @@
   ],
   "svelte5": false,
   "runes": false,
-  "github_stars": 424
+  "github_stars": 425
 }

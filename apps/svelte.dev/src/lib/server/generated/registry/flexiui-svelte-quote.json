@@ -1,9 +1,11 @@
 {
   "name": "@flexiui/svelte-quote",
-  "description": "Create lightweight, flexible quote components for Svelte applications.",
+  "description": "Provides a lightweight and flexible quote component for Svelte.",
   "repo_url": "",
-  "author": "alexgipi",
-  "downloads": 23,
+  "authors": [
+    "alexgipi"
+  ],
+  "downloads": 21,
   "dependents": 0,
   "updated": "2025-02-17T12:07:03.750Z",
   "tags": [

@@ -1,8 +1,10 @@
 {
   "name": "svesta",
-  "description": "Manage Svelte state with RESTful interfaces and real-time data.",
+  "description": "Tiny Svelte state management library for Svelte/SvelteKit.",
   "repo_url": "https://github.com/steveesamson/svesta",
-  "author": "Steve S. Samson",
+  "authors": [
+    "steveesamson"
+  ],
   "homepage": "https://steveesamson.github.io/svesta",
   "downloads": 1,
   "dependents": 0,

@@ -1,8 +1,10 @@
 {
   "name": "@jacksonthall22/svelte-chessground",
-  "description": "Svelte component for Chessground chess UI.",
+  "description": "Create Svelte chessboard component using Chessground UI.",
   "repo_url": "",
-  "author": "jacksonthall22",
+  "authors": [
+    "jacksonthall22"
+  ],
   "homepage": "https://github.com/gtim/svelte-chessground#readme",
   "downloads": 11,
   "dependents": 1,

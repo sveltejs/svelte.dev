@@ -1,10 +1,12 @@
 {
   "name": "svql",
-  "description": "FetchQL wrapper for Svelte, simplifying GraphQL API consumption.",
+  "description": "GraphQL client wrapper for Svelte 3 applications.",
   "repo_url": "https://github.com/pateketrueke/svql",
-  "author": "Alvaro Cabrera",
+  "authors": [
+    "pateketrueke"
+  ],
   "homepage": "https://github.com/pateketrueke/svql#readme",
-  "downloads": 24,
+  "downloads": 28,
   "dependents": 0,
   "updated": "2021-08-21T22:08:49.690Z",
   "tags": [

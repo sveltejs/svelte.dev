@@ -1,14 +1,16 @@
 {
   "name": "svelte-imgcrop",
-  "description": "Provides a Svelte component for cropping images.",
+  "description": "Implement image crop component for Svelte.",
   "repo_url": "https://github.com/bestvist/svelte-imgcrop",
-  "author": "bestvist",
+  "authors": [
+    "bestvist"
+  ],
   "homepage": "https://github.com/bestvist/svelte-imgcrop#readme",
-  "downloads": 8,
+  "downloads": 13,
   "dependents": 0,
   "updated": "2020-08-24T09:13:00.836Z",
   "tags": [
-    "media"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

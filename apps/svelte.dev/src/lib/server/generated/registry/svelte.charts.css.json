@@ -1,10 +1,12 @@
 {
   "name": "svelte.charts.css",
-  "description": "Svelte wrapper for Charts CSS, creating various chart types.",
+  "description": "Svelte wrapper for Charts CSS, create charts easily.",
   "repo_url": "https://github.com/PfisterFactor/svelte.charts.css",
-  "author": "Eric Pfister",
+  "authors": [
+    "pfisterfactor"
+  ],
   "homepage": "https://github.com/PfisterFactor/svelte.charts.css#readme",
-  "downloads": 0,
+  "downloads": 10,
   "dependents": 0,
   "updated": "2022-04-10T20:46:00.007Z",
   "tags": [

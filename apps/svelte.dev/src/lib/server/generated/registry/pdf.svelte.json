@@ -1,10 +1,12 @@
 {
   "name": "pdf.svelte",
-  "description": "Integrate pdf.js in Svelte applications.",
+  "description": "Embed PDF documents within Svelte applications.",
   "repo_url": "https://github.com/timgblack/pdf.svelte",
-  "author": "Tim Black",
+  "authors": [
+    "timgblack"
+  ],
   "homepage": "https://github.com/timgblack/pdf.svelte#readme",
-  "downloads": 47,
+  "downloads": 50,
   "dependents": 0,
   "updated": "2023-07-08T22:45:00.243Z",
   "tags": [

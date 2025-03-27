@@ -1,8 +1,10 @@
 {
   "name": "@ikun-ui/icon",
-  "description": "Provide icon components for Svelte applications.",
+  "description": "Provide icon components for Svelte projects.",
   "repo_url": "",
-  "author": "baiwusanyu",
+  "authors": [
+    "baiwusanyu"
+  ],
   "downloads": 49,
   "dependents": 66,
   "updated": "2025-01-24T03:48:56.877Z",

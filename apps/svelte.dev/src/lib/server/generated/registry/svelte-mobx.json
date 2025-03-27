@@ -1,10 +1,12 @@
 {
   "name": "svelte-mobx",
-  "description": "Integrate MobX state management with Svelte.",
+  "description": "Integrate MobX for reactive state management in Svelte apps.",
   "repo_url": "https://github.com/xelaok/svelte-mobx",
-  "author": "Alexander Kozlovich",
+  "authors": [
+    "xelaok"
+  ],
   "homepage": "https://github.com/xelaok/svelte-mobx#readme",
-  "downloads": 2,
+  "downloads": 29,
   "dependents": 0,
   "updated": "2020-12-29T02:31:16.447Z",
   "tags": [

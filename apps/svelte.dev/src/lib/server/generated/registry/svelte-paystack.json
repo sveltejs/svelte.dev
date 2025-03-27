@@ -1,10 +1,12 @@
 {
   "name": "svelte-paystack",
-  "description": "Integrates Paystack payment gateway into Svelte applications.",
+  "description": "Integrate Paystack payment gateway into Svelte apps.",
   "repo_url": "https://github.com/iykekings/svelte-paystack",
-  "author": "Ikechukwu Eze",
+  "authors": [
+    "ikechukwu"
+  ],
   "homepage": "https://github.com/iykekings/svelte-paystack#readme",
-  "downloads": 2,
+  "downloads": 27,
   "dependents": 0,
   "updated": "2021-10-15T08:38:48.672Z",
   "tags": [

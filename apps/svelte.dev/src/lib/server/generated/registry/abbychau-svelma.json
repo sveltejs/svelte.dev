@@ -1,8 +1,10 @@
 {
   "name": "@abbychau/svelma",
-  "description": "Bulma components for Svelte.",
+  "description": "Provide Bulma components for Svelte applications.",
   "repo_url": "https://github.com/abbychau/svelma",
-  "author": "Abby Chau, Brian Hann",
+  "authors": [
+    "abbychau"
+  ],
   "homepage": "https://github.com/c0bra/svelma#readme",
   "downloads": 16,
   "dependents": 0,

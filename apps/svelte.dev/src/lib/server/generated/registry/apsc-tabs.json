@@ -1,14 +1,16 @@
 {
   "name": "@apsc/tabs",
-  "description": "Organizes tabs interface with Svelte components.",
+  "description": "Organize content using a set of Tabs, Tab, and Panel components.",
   "repo_url": "https://github.com/andrey-pavlenko/svelte-components",
-  "author": "Andrey Pavlenko",
+  "authors": [
+    "andrey-pavlenko"
+  ],
   "homepage": "https://github.com/andrey-pavlenko/svelte-components/tree/main/packages/tabs#readme",
-  "downloads": 36,
+  "downloads": 1,
   "dependents": 0,
   "updated": "2023-02-01T20:17:15.649Z",
   "tags": [
-    "component-library"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

@@ -1,14 +1,17 @@
 {
   "name": "@samplekit/preprocess-shiki",
-  "description": "Preprocess Svelte code, highlighting with Shiki.",
+  "description": "Highlights code blocks in Svelte using Shiki.",
   "repo_url": "https://github.com/timothycohen/samplekit",
-  "author": "Tim Cohen",
+  "authors": [
+    "timothycohen"
+  ],
   "homepage": "https://preprocessors.samplekit.dev",
-  "downloads": 1,
+  "downloads": 11,
   "dependents": 0,
   "updated": "2024-11-07T03:47:46.815Z",
   "tags": [
-    "preprocessor"
+    "preprocessor",
+    "tooling"
   ],
   "svelte5": true,
   "runes": false,

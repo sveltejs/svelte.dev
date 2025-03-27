@@ -1,13 +1,17 @@
 {
   "name": "@vortechsolutions/gridjs-svelte",
-  "description": "Create Grid.js data grids within Svelte applications.",
+  "description": "Svelte wrapper component for Grid.js, display data in grid.",
   "repo_url": "https://github.com/VortechSolutions/gridjs-svelte",
-  "author": "jaredforth",
+  "authors": [
+    "jaredforth",
+    "jaredvortech"
+  ],
   "homepage": "https://gridjs.io/docs/integrations/svelte",
-  "downloads": 45,
+  "downloads": 104,
   "dependents": 0,
   "updated": "2025-03-17T15:38:57.043Z",
   "tags": [
+    "component-library",
     "ui"
   ],
   "svelte5": true,

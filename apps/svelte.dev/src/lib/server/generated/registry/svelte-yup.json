@@ -1,10 +1,12 @@
 {
   "name": "svelte-yup",
-  "description": "Validates forms in Svelte using Yup schema.",
+  "description": "Validate forms with Yup schema in Svelte components.",
   "repo_url": "https://github.com/KamyarLajani/svelte-yup",
-  "author": "Kamyar Lajani",
+  "authors": [
+    "kamyar_lajani"
+  ],
   "homepage": "https://github.com/KamyarLajani/svelte-yup#readme",
-  "downloads": 180,
+  "downloads": 123,
   "dependents": 1,
   "updated": "2020-12-06T00:50:33.446Z",
   "tags": [

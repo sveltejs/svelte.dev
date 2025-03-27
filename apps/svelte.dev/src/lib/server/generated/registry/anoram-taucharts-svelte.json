@@ -1,10 +1,12 @@
 {
   "name": "@anoram/taucharts-svelte",
-  "description": "Create reactive charts with Taucharts in Svelte.",
+  "description": "Create reactive charts using Taucharts in Svelte applications.",
   "repo_url": "https://github.com/anoram/taucharts-svelte",
-  "author": "Shriji Kondan",
+  "authors": [
+    "shriji"
+  ],
   "homepage": "https://github.com/anoram/taucharts-svelte#readme",
-  "downloads": 10,
+  "downloads": 0,
   "dependents": 0,
   "updated": "2021-02-06T18:32:12.598Z",
   "tags": [

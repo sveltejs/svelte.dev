@@ -1,14 +1,16 @@
 {
   "name": "sveaflet-heat",
-  "description": "Create Leaflet heatmaps in Svelte applications.",
+  "description": "Create heatmaps on Leaflet maps within Svelte applications.",
   "repo_url": "https://github.com/GrayFrost/sveaflet-heat",
-  "author": "GrayFrost",
+  "authors": [
+    "garyfrost"
+  ],
   "homepage": "https://sveaflet-heat.vercel.app/",
   "downloads": 1,
   "dependents": 0,
   "updated": "2025-02-06T07:58:00.998Z",
   "tags": [
-    "ui"
+    "utility"
   ],
   "svelte5": true,
   "runes": false,

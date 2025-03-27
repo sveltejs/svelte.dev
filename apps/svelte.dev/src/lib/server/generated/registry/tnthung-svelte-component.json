@@ -1,13 +1,15 @@
 {
   "name": "@tnthung/svelte-component",
-  "description": "Offers simple, reusable Svelte components.",
+  "description": "Offer reusable Svelte components, actions, and functions.",
   "repo_url": "",
-  "author": "tnthung",
-  "downloads": 0,
+  "authors": [
+    "tnthung"
+  ],
+  "downloads": 4,
   "dependents": 0,
   "updated": "2023-05-29T01:13:31.829Z",
   "tags": [
-    "component-library"
+    "utility"
   ],
   "svelte5": false,
   "runes": false

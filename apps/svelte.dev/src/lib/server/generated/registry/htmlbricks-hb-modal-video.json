@@ -1,13 +1,14 @@
 {
   "name": "@htmlbricks/hb-modal-video",
-  "description": "Create Svelte-Bootstrap video modal web component.",
+  "description": "Svelte-Bootstrap Video Modal WebComponent",
   "repo_url": "",
-  "author": "Dario Caruso",
-  "downloads": 455,
+  "authors": [
+    "dariocaruso"
+  ],
+  "downloads": 467,
   "dependents": 2,
-  "updated": "2025-03-09T03:10:38.033Z",
+  "updated": "2025-03-24T18:07:22.184Z",
   "tags": [
-    "component-library",
     "media"
   ],
   "svelte5": false,

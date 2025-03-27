@@ -1,10 +1,12 @@
 {
   "name": "@tigersway/news-ticker",
-  "description": "Create news tickers or marquees in Svelte.",
+  "description": "Create news ticker or marquee components in Svelte.",
   "repo_url": "https://github.com/tigersway/svelte-news-ticker",
-  "author": "Ben Michaud",
+  "authors": [
+    "tigersway"
+  ],
   "homepage": "https://github.com/tigersway/svelte-news-ticker#readme",
-  "downloads": 11,
+  "downloads": 13,
   "dependents": 0,
   "updated": "2022-08-24T23:31:09.343Z",
   "tags": [

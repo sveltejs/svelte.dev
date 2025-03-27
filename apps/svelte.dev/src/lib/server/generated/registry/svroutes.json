@@ -1,10 +1,12 @@
 {
   "name": "svroutes",
-  "description": "Implement SPA routing for Svelte applications.",
+  "description": "Provides a powerful SPA router for Svelte applications.",
   "repo_url": "https://github.com/Battledash-2/svelte-router",
-  "author": "Battledash-2",
+  "authors": [
+    "battledash2"
+  ],
   "homepage": "https://github.com/Battledash-2/svelte-router#readme",
-  "downloads": 1,
+  "downloads": 23,
   "dependents": 0,
   "updated": "2023-08-18T20:13:36.975Z",
   "tags": [

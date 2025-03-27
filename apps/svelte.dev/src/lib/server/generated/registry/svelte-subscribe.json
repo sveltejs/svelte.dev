@@ -1,10 +1,12 @@
 {
   "name": "svelte-subscribe",
-  "description": "Subscribes to non top-level stores in Svelte templates.",
+  "description": "Subscribe to non top-level stores in Svelte templates.",
   "repo_url": "https://github.com/bryanmylee/svelte-subscribe",
-  "author": "Bryan Lee",
+  "authors": [
+    "bryanmylee"
+  ],
   "homepage": "https://github.com/bryanmylee/svelte-subscribe#readme",
-  "downloads": 17468,
+  "downloads": 18290,
   "dependents": 6,
   "updated": "2024-01-02T19:35:50.625Z",
   "tags": [

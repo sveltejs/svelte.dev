@@ -1,0 +1,17 @@
+{
+  "name": "@goodspirits/svelte-facebook-pixel",
+  "description": "Integrates Facebook Pixel tracking into Svelte applications.",
+  "repo_url": "",
+  "authors": [
+    "rnwolfe"
+  ],
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2023-04-21T14:02:19.555Z",
+  "tags": [
+    "integration",
+    "seo"
+  ],
+  "svelte5": false,
+  "runes": false
+}

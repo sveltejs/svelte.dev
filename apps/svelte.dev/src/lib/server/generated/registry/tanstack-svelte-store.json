@@ -1,8 +1,11 @@
 {
   "name": "@tanstack/svelte-store",
-  "description": "Create type-safe store with reactive framework adapters.",
+  "description": "Create type-safe stores with reactive framework adapters.",
   "repo_url": "https://github.com/TanStack/store",
-  "author": "Tanner Linsley",
+  "authors": [
+    "tannerlinsley",
+    "nksaraf"
+  ],
   "homepage": "https://tanstack.com/store",
   "downloads": 59,
   "dependents": 0,
@@ -12,5 +15,5 @@
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 464
+  "github_stars": 469
 }

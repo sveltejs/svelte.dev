@@ -1,0 +1,21 @@
+{
+  "name": "@responsive-ui/badge",
+  "description": "Display notification badges in Svelte applications.",
+  "repo_url": "https://github.com/wetix/responsive-ui",
+  "authors": [
+    "rexlow",
+    "bassemsab",
+    "rm.oska",
+    "apacventure"
+  ],
+  "homepage": "https://github.com/wetix/responsive-ui/blob/main/components/badge#README.md",
+  "downloads": 39,
+  "dependents": 0,
+  "updated": "2024-04-23T07:50:59.799Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 19
+}

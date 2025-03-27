@@ -1,10 +1,12 @@
 {
   "name": "github-commit-calendar",
-  "description": "Display GitHub user commit history in Svelte calendar component.",
+  "description": "Display GitHub user commit history as calendar in Svelte.",
   "repo_url": "https://github.com/Ddupasquier/githubCommits",
-  "author": "Dylan Dupasquier dylandupasquier@gmail.com",
+  "authors": [
+    "dupasquier"
+  ],
   "homepage": "https://github.com/Ddupasquier/githubCommits#readme",
-  "downloads": 3,
+  "downloads": 15,
   "dependents": 0,
   "updated": "2023-04-11T01:38:00.725Z",
   "tags": [

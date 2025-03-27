@@ -2,7 +2,9 @@
   "name": "@laserware/sword",
   "description": "Integrate Redux with Svelte applications.",
   "repo_url": "https://github.com/laserware/sword",
-  "author": "Mike Rourke",
+  "authors": [
+    "mikerourke"
+  ],
   "homepage": "https://github.com/laserware/sword#readme",
   "downloads": 29,
   "dependents": 0,

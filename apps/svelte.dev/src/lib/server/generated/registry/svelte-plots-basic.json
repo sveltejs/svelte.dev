@@ -1,8 +1,10 @@
 {
   "name": "svelte-plots-basic",
-  "description": "Create simple 2D and 3D plots/charts in Svelte.",
+  "description": "Create simple 2D and 3D plots in Svelte.",
   "repo_url": "https://github.com/svkucheryavski/svelte-plots-basic",
-  "author": "Sergey Kucheryavskiy",
+  "authors": [
+    "svkucheryavski"
+  ],
   "homepage": "https://github.com/svkucheryavski/svelte-plots-basic#readme",
   "downloads": 37,
   "dependents": 0,

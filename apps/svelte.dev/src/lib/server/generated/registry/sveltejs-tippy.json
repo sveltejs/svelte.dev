@@ -1,10 +1,12 @@
 {
   "name": "sveltejs-tippy",
-  "description": "Integrate Tippy.js tooltips and popovers into Svelte apps.",
+  "description": "Integrates Tippy.js tooltips and popovers with Svelte.",
   "repo_url": "https://github.com/mdauner/sveltejs-tippy",
-  "author": "mdauner",
+  "authors": [
+    "mdauner"
+  ],
   "homepage": "https://github.com/mdauner/sveltejs-tippy#readme",
-  "downloads": 1288,
+  "downloads": 1384,
   "dependents": 0,
   "updated": "2020-03-08T21:13:56.595Z",
   "tags": [

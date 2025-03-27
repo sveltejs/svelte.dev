@@ -1,12 +1,15 @@
 {
   "name": "@jdeighan/cielo",
-  "description": "Command to process .cielo and .starbucks files.",
+  "description": "Process *.cielo and *.starbucks files, useful for SvelteKit projects.",
   "repo_url": "",
-  "author": "John Deighan",
-  "downloads": 1,
+  "authors": [
+    "jdeighan"
+  ],
+  "downloads": 314,
   "dependents": 0,
   "updated": "2022-03-10T19:34:19.023Z",
   "tags": [
+    "utility",
     "tooling"
   ],
   "svelte5": false,

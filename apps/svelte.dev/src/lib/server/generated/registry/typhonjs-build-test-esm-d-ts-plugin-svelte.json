@@ -1,0 +1,19 @@
+{
+  "name": "@typhonjs-build-test/esm-d-ts-plugin-svelte",
+  "description": "Generate declarations for Svelte 4 components.",
+  "repo_url": "https://github.com/typhonjs-node-build-test/esm-d-ts-plugin-svelte",
+  "authors": [
+    "typhonrt"
+  ],
+  "homepage": "https://github.com/typhonjs-node-build-test/esm-d-ts-plugin-svelte#readme",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2024-03-26T20:55:05.202Z",
+  "tags": [
+    "tooling",
+    "preprocessor"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

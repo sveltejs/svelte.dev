@@ -1,14 +1,16 @@
 {
   "name": "@kuiper/svelte-scan-qrcode",
-  "description": "Scan QR codes using device camera in Svelte applications.",
+  "description": "Scans QR codes using browser camera or uploaded images.",
   "repo_url": "https://github.com/kofkuiper/svelte-scan-qrcode",
-  "author": "kuiper",
+  "authors": [
+    "kuiper"
+  ],
   "homepage": "https://github.com/kofkuiper/svelte-scan-qrcode#readme",
-  "downloads": 103,
+  "downloads": 149,
   "dependents": 0,
   "updated": "2022-10-09T07:26:12.519Z",
   "tags": [
-    "utility"
+    "media"
   ],
   "svelte5": false,
   "runes": false,

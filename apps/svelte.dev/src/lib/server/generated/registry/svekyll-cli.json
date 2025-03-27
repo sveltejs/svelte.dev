@@ -1,8 +1,10 @@
 {
   "name": "svekyll-cli",
-  "description": "Builds static blogs using Svelte and Markdown.",
+  "description": "Generate static blogs using Svelte and Markdown.",
   "repo_url": "",
-  "author": "chris@extrastatic.com",
+  "authors": [
+    "chris"
+  ],
   "downloads": 9,
   "dependents": 0,
   "updated": "2025-02-27T20:55:19.722Z",

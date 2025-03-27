@@ -1,14 +1,16 @@
 {
   "name": "@mzaghetto/svelte-json-tree",
-  "description": "Display JSON data in tree structure within Svelte applications.",
+  "description": "View JSON data in tree format within Svelte applications.",
   "repo_url": "https://github.com/mzaghetto/svelte-json-tree",
-  "author": "Marcos Zaghetto",
+  "authors": [
+    "mzaghetto"
+  ],
   "homepage": "https://github.com/mzaghetto/svelte-json-tree#readme",
-  "downloads": 20,
+  "downloads": 41,
   "dependents": 0,
   "updated": "2021-06-03T15:05:43.619Z",
   "tags": [
-    "utility"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

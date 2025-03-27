@@ -1,10 +1,16 @@
 {
   "name": "svelte-loader",
-  "description": "Load Svelte components within Webpack.",
+  "description": "Webpack loader for Svelte components.",
   "repo_url": "https://github.com/sveltejs/svelte-loader",
-  "author": "Nico Rehwaldt",
+  "authors": [
+    "nikku",
+    "rich_harris",
+    "conduitry",
+    "svelte-admin",
+    "dummdidumm"
+  ],
   "homepage": "https://github.com/sveltejs/svelte-loader#readme",
-  "downloads": 42445,
+  "downloads": 38672,
   "dependents": 88,
   "updated": "2024-10-09T21:13:47.738Z",
   "tags": [

@@ -1,9 +1,11 @@
 {
   "name": "sveltekit-adapter-wordpress-shortcode",
-  "description": "Adapt SvelteKit apps into WordPress shortcode plugins.",
+  "description": "Build WordPress shortcode plugins with SvelteKit.",
   "repo_url": "",
-  "author": "AJ Caldwell",
-  "downloads": 9,
+  "authors": [
+    "tomatrow"
+  ],
+  "downloads": 11,
   "dependents": 0,
   "updated": "2022-10-02T19:46:20.484Z",
   "tags": [

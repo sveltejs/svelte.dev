@@ -1,14 +1,18 @@
 {
   "name": "@jaspero/web-components",
-  "description": "Provide web components for Svelte applications.",
+  "description": "Provide collection of web components for Svelte.",
   "repo_url": "https://github.com/Jaspero/web-components",
-  "author": "flauc1",
+  "authors": [
+    "flauc1",
+    "antoniostipic"
+  ],
   "homepage": "https://github.com/Jaspero/web-components#readme",
   "downloads": 741,
   "dependents": 1,
   "updated": "2025-03-14T12:36:39.411Z",
   "tags": [
-    "component-library"
+    "component-library",
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

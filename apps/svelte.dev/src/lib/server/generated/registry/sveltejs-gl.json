@@ -1,10 +1,15 @@
 {
   "name": "@sveltejs/gl",
-  "description": "Build declarative WebGL scene graphs inside Svelte.",
+  "description": "Provides declarative WebGL scene graphs inside Svelte.",
   "repo_url": "https://github.com/Rich-Harris/gl",
-  "author": "Rich Harris",
+  "authors": [
+    "dominik_g",
+    "rich_harris",
+    "svelte-admin",
+    "conduitry"
+  ],
   "homepage": "https://github.com/Rich-Harris/gl#readme",
-  "downloads": 214,
+  "downloads": 242,
   "dependents": 0,
   "updated": "2020-02-18T18:25:21.038Z",
   "tags": [

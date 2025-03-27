@@ -1,11 +1,13 @@
 {
   "name": "@htmlbricks/hb-player-live",
-  "description": "Svelte-Bootstrap live player component.",
+  "description": "Svelte Boostrap Pagination WebComponent",
   "repo_url": "",
-  "author": "Dario Caruso",
-  "downloads": 441,
+  "authors": [
+    "dariocaruso"
+  ],
+  "downloads": 459,
   "dependents": 3,
-  "updated": "2025-03-09T03:10:34.453Z",
+  "updated": "2025-03-24T18:07:19.326Z",
   "tags": [
     "media"
   ],

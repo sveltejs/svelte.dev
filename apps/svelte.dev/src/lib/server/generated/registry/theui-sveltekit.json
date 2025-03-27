@@ -1,14 +1,17 @@
 {
   "name": "theui-sveltekit",
-  "description": "Create accessible, customizable UI components for SvelteKit.",
+  "description": "Provides accessible, customizable UI components for SvelteKit.",
   "repo_url": "https://github.com/mbparvezme/theui-svelte",
-  "author": "M B Parvez",
+  "authors": [
+    "mbparvez"
+  ],
   "homepage": "https://www.theui.dev/r/skc",
-  "downloads": 6,
+  "downloads": 1,
   "dependents": 1,
   "updated": "2024-05-23T20:10:39.463Z",
   "tags": [
-    "component-library"
+    "component-library",
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

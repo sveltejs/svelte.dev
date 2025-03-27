@@ -1,10 +1,12 @@
 {
   "name": "@sveu/browser",
-  "description": "Collection of browser utilities for Svelte.",
+  "description": "Provide browser utilities for Svelte applications.",
   "repo_url": "https://github.com/svelte-u/browser",
-  "author": "Mohamed Nesredin",
+  "authors": [
+    "mohamed-kaizen"
+  ],
   "homepage": "https://github.com/svelte-u/browser#readme",
-  "downloads": 135,
+  "downloads": 89,
   "dependents": 1,
   "updated": "2023-09-18T11:22:29.271Z",
   "tags": [

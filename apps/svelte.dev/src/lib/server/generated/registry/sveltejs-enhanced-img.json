@@ -1,17 +1,23 @@
 {
   "name": "@sveltejs/enhanced-img",
-  "description": "Optimize images for Svelte applications.",
+  "description": "Optimize images in Svelte apps with a Vite plugin.",
   "repo_url": "https://github.com/sveltejs/kit",
-  "author": "rich_harris",
+  "authors": [
+    "rich_harris",
+    "svelte-admin",
+    "conduitry",
+    "dominik_g"
+  ],
   "homepage": "https://svelte.dev",
-  "downloads": 20382,
+  "downloads": 22399,
   "dependents": 0,
   "updated": "2024-12-12T22:34:24.780Z",
   "tags": [
     "tooling",
-    "preprocessor"
+    "preprocessor",
+    "media"
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 19123
+  "github_stars": 19137
 }

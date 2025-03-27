@@ -2,13 +2,21 @@
   "name": "@beyonk/svelte-trustpilot",
   "description": "Integrate Trustpilot reviews into Svelte applications.",
   "repo_url": "https://github.com/beyonk-adventures/svelte-trustpilot",
-  "author": "antony",
+  "authors": [
+    "antony",
+    "adampond",
+    "alex.dilley",
+    "jedwoodcock",
+    "leandro.silva",
+    "tomlewis0"
+  ],
   "homepage": "https://github.com/beyonk-adventures/svelte-trustpilot#readme",
-  "downloads": 15,
+  "downloads": 2,
   "dependents": 0,
   "updated": "2019-06-22T07:13:07.617Z",
   "tags": [
-    "integration"
+    "integration",
+    "seo"
   ],
   "svelte5": false,
   "runes": false,

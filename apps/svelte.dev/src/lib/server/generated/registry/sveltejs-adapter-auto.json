@@ -1,10 +1,15 @@
 {
   "name": "@sveltejs/adapter-auto",
-  "description": "Automatically chooses SvelteKit adapter for environment.",
+  "description": "Automatically chooses SvelteKit adapter.",
   "repo_url": "https://github.com/sveltejs/kit",
-  "author": "rich_harris",
+  "authors": [
+    "rich_harris",
+    "svelte-admin",
+    "conduitry",
+    "dominik_g"
+  ],
   "homepage": "https://svelte.dev",
-  "downloads": 236763,
+  "downloads": 242175,
   "dependents": 45,
   "updated": "2025-03-20T12:09:20.685Z",
   "tags": [
@@ -12,5 +17,5 @@
   ],
   "svelte5": false,
   "runes": false,
-  "github_stars": 19123
+  "github_stars": 19137
 }

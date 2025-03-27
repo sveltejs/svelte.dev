@@ -1,10 +1,12 @@
 {
   "name": "@apetrisor/nox-ui",
-  "description": "Build UI with NOX (Node on Xanax) Svelte UI library.",
+  "description": "Build UI components for Svelte apps.",
   "repo_url": "https://github.com/apetrisor/nox-ui",
-  "author": "apetrisor",
+  "authors": [
+    "apetrisor"
+  ],
   "homepage": "https://github.com/apetrisor/nox-ui#readme",
-  "downloads": 52,
+  "downloads": 11,
   "dependents": 0,
   "updated": "2021-02-25T18:05:03.626Z",
   "tags": [

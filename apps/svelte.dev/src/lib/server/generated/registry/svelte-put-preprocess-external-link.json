@@ -1,10 +1,12 @@
 {
   "name": "@svelte-put/preprocess-external-link",
-  "description": "Add attributes to external links in Svelte components.",
+  "description": "Preprocessor adds attributes to external links in Svelte components.",
   "repo_url": "https://github.com/vnphanquang/svelte-put",
-  "author": "Quang Phan",
+  "authors": [
+    "vnphanquang"
+  ],
   "homepage": "https://github.com/vnphanquang/svelte-put/tree/next/packages/preprocess-external-link",
-  "downloads": 91,
+  "downloads": 78,
   "dependents": 0,
   "updated": "2024-10-25T05:17:45.870Z",
   "tags": [
@@ -12,5 +14,5 @@
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 909
+  "github_stars": 911
 }

@@ -2,9 +2,11 @@
   "name": "@altalune/svelte-adapter-serverless",
   "description": "Generate serverless handler for SvelteKit apps.",
   "repo_url": "https://github.com/hrz8/svelte-adapter-serverless",
-  "author": "Hirzi Nurfakhrian",
+  "authors": [
+    "nurfakhrian"
+  ],
   "homepage": "https://github.com/hrz8/svelte-adapter-serverless#readme",
-  "downloads": 11,
+  "downloads": 4,
   "dependents": 0,
   "updated": "2024-02-03T07:53:33.493Z",
   "tags": [

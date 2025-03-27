@@ -1,10 +1,12 @@
 {
   "name": "svelte-docster",
-  "description": "Generate metadata for Svelte files from JSDoc comments.",
+  "description": "Generate metadata about Svelte files from JSDoc comments.",
   "repo_url": "https://github.com/TheComputerM/svelte-docster",
-  "author": "TheComputerM",
+  "authors": [
+    "thecomputerm"
+  ],
   "homepage": "https://github.com/TheComputerM/svelte-docster#readme",
-  "downloads": 2,
+  "downloads": 18,
   "dependents": 1,
   "updated": "2021-06-07T19:05:45.916Z",
   "tags": [

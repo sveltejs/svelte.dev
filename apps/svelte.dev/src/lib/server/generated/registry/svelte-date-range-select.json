@@ -2,9 +2,11 @@
   "name": "svelte-date-range-select",
   "description": "Svelte component with HTML5 date picker for range selection.",
   "repo_url": "https://github.com/brettdawkins/svelte-date-range-select",
-  "author": "Brett Dawkins",
+  "authors": [
+    "brettdawkins"
+  ],
   "homepage": "https://github.com/brettdawkins/svelte-date-range-select#readme",
-  "downloads": 61,
+  "downloads": 89,
   "dependents": 0,
   "updated": "2020-05-17T05:32:47.292Z",
   "tags": [

@@ -1,10 +1,13 @@
 {
   "name": "@tsparticles/svelte",
-  "description": "Creates customizable particle animations for Svelte.",
+  "description": "Create customizable particle animations for Svelte backgrounds.",
   "repo_url": "https://github.com/tsparticles/svelte",
-  "author": "Matteo Bruni",
+  "authors": [
+    "matteobruni",
+    "ar3s"
+  ],
   "homepage": "https://github.com/tsparticles/svelte#readme",
-  "downloads": 2612,
+  "downloads": 750,
   "dependents": 0,
   "updated": "2024-05-26T10:58:39.331Z",
   "tags": [

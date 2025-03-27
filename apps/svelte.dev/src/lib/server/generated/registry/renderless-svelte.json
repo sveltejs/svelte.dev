@@ -1,10 +1,12 @@
 {
   "name": "renderless-svelte",
-  "description": "Provides collection of renderless Svelte components.",
+  "description": "Collection of renderless Svelte components.",
   "repo_url": "https://github.com/stephane-vanraes/renderless-svelte",
-  "author": "Stephane Vanraes",
+  "authors": [
+    "rainlife"
+  ],
   "homepage": "https://www.renderless-svelte.dev",
-  "downloads": 51,
+  "downloads": 28,
   "dependents": 0,
   "updated": "2021-04-29T06:18:45.428Z",
   "tags": [

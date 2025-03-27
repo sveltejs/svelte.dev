@@ -2,13 +2,15 @@
   "name": "svelte-link-preview",
   "description": "Preview links in Svelte applications.",
   "repo_url": "https://github.com/dhaiwat10/svelte-link-preview",
-  "author": "Dhaiwat Pandya",
+  "authors": [
+    "dhaiwat10"
+  ],
   "homepage": "https://github.com/dhaiwat10/svelte-link-preview",
-  "downloads": 14,
+  "downloads": 23,
   "dependents": 0,
   "updated": "2021-11-24T03:36:08.445Z",
   "tags": [
-    "ui"
+    "utility"
   ],
   "svelte5": false,
   "runes": false,

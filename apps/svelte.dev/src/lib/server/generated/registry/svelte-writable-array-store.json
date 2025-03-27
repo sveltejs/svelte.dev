@@ -1,10 +1,12 @@
 {
   "name": "svelte-writable-array-store",
-  "description": "Provide writable array store with array methods for Svelte.",
+  "description": "Provides writable array store with array methods.",
   "repo_url": "https://github.com/sophiamersmann/svelte-writable-array-store",
-  "author": "Sophia Mersmann",
+  "authors": [
+    "sophiamersmann"
+  ],
   "homepage": "https://github.com/sophiamersmann/svelte-writable-array-store#readme",
-  "downloads": 1,
+  "downloads": 8,
   "dependents": 0,
   "updated": "2022-04-29T16:07:09.297Z",
   "tags": [

@@ -1,0 +1,18 @@
+{
+  "name": "@opengamestack-svelte/logo",
+  "description": "Create Open Game Stack logo component for Svelte.",
+  "repo_url": "https://github.com/opengamestack/svelte",
+  "authors": [
+    "bartoszkrol"
+  ],
+  "homepage": "https://github.com/opengamestack/svelte",
+  "downloads": 9,
+  "dependents": 0,
+  "updated": "2020-05-01T03:28:07.843Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

@@ -1,10 +1,12 @@
 {
   "name": "tanoshi",
-  "description": "Build styled components with configurable TypeScript objects.",
+  "description": "Build atomic component library for Svelte.",
   "repo_url": "https://github.com/deozza/tanoshi",
-  "author": "deozza",
+  "authors": [
+    "deozza"
+  ],
   "homepage": "https://github.com/deozza/tanoshi#readme",
-  "downloads": 0,
+  "downloads": 2,
   "dependents": 0,
   "updated": "2023-11-20T11:46:47.305Z",
   "tags": [

@@ -1,8 +1,10 @@
 {
   "name": "svelte-forge-ui",
-  "description": "Develop lightweight, flexible Svelte UI component library.",
+  "description": "Lightweight, flexible UI component library for Svelte.",
   "repo_url": "https://github.com/jorgeluis2000/svelte-forge-ui",
-  "author": "Jorge Luis Güiza Granobles",
+  "authors": [
+    "jorgeluis2000"
+  ],
   "homepage": "https://github.com/jorgeluis2000/svelte-forge-ui",
   "downloads": 0,
   "dependents": 0,

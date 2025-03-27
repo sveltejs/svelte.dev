@@ -1,14 +1,16 @@
 {
   "name": "@duransbo/svelte-components",
-  "description": "Builds Svelte component libraries with create-svelte.",
+  "description": "Build Svelte libraries with create-svelte.",
   "repo_url": "https://github.com/duransbo/svelte-components",
-  "author": "Gustavo Duran Ferreira",
+  "authors": [
+    "duransbo"
+  ],
   "homepage": "https://github.com/duransbo/svelte-components#readme",
-  "downloads": 10,
+  "downloads": 0,
   "dependents": 0,
   "updated": "2023-10-02T00:56:56.252Z",
   "tags": [
-    "component-library"
+    "tooling"
   ],
   "svelte5": false,
   "runes": false,

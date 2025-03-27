@@ -1,10 +1,12 @@
 {
   "name": "@quickdevelopment/svelte-french-toast",
-  "description": "Creates buttery smooth toast notifications for Svelte.",
+  "description": "Display buttery smooth toast notifications in Svelte apps.",
   "repo_url": "https://github.com/QuickDevelopment/svelte-french-toast",
-  "author": "Kabir Goel",
+  "authors": [
+    "keygun-development"
+  ],
   "homepage": "https://github.com/QuickDevelopment/svelte-french-toast#readme",
-  "downloads": 0,
+  "downloads": 2,
   "dependents": 0,
   "updated": "2024-12-18T18:36:39.505Z",
   "tags": [

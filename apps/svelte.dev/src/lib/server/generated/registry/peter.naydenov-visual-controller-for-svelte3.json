@@ -1,8 +1,10 @@
 {
   "name": "@peter.naydenov/visual-controller-for-svelte3",
-  "description": "Build micro-frontends with Svelte components.",
+  "description": "Build micro-frontends based on Svelte components.",
   "repo_url": "https://github.com/PeterNaydenov/visual-controller-for-svelte3",
-  "author": "Peter Naydenov",
+  "authors": [
+    "dreamgfx"
+  ],
   "homepage": "https://github.com/PeterNaydenov/visual-controller-for-svelte3#readme",
   "downloads": 9,
   "dependents": 0,

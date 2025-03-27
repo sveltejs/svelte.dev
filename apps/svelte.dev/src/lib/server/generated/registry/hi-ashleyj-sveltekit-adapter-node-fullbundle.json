@@ -1,8 +1,10 @@
 {
   "name": "@hi-ashleyj/sveltekit-adapter-node-fullbundle",
-  "description": "Generates standalone Node server for SvelteKit apps.",
+  "description": "Generate standalone Node server for SvelteKit apps.",
   "repo_url": "https://github.com/hi-ashleyj/sveltekit-adapter-node-fullbundle",
-  "author": "hi-ashleyj",
+  "authors": [
+    "hi-ashleyj"
+  ],
   "homepage": "https://svelte.dev",
   "downloads": 8,
   "dependents": 0,

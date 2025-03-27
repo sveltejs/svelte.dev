@@ -1,8 +1,10 @@
 {
   "name": "my-svelte-components",
-  "description": "Builds Svelte component libraries.",
+  "description": "Create Svelte libraries using create-svelte.",
   "repo_url": "https://github.com/1toldyou/svelte-components",
-  "author": "ito1dyou",
+  "authors": [
+    "ito1dyou"
+  ],
   "homepage": "https://github.com/1toldyou/svelte-components#readme",
   "downloads": 1,
   "dependents": 0,

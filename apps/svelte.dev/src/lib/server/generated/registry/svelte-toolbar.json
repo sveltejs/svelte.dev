@@ -1,9 +1,11 @@
 {
   "name": "svelte-toolbar",
-  "description": "Create toolbar menu for Svelte applications.",
+  "description": "Display user-navigable menu emulating VS-Code toolbar.",
   "repo_url": "",
-  "author": "emnudge",
-  "downloads": 2,
+  "authors": [
+    "emnudge"
+  ],
+  "downloads": 7,
   "dependents": 0,
   "updated": "2020-05-27T04:26:24.235Z",
   "tags": [

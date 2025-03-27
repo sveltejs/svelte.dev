@@ -1,8 +1,10 @@
 {
   "name": "@jrmoynihan/svelte-fa",
-  "description": "Create FontAwesome icons in Svelte apps.",
+  "description": "Integrate FontAwesome icons into Svelte components.",
   "repo_url": "https://github.com/@jrmoynihan/svelte-fa",
-  "author": "Cweili",
+  "authors": [
+    "jrmoynihan"
+  ],
   "homepage": "https://github.com/jrmoynihan/svelte-fa/",
   "downloads": 0,
   "dependents": 1,

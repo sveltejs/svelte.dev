@@ -1,7 +1,9 @@
 {
   "name": "svelte-lighthouse-viewer",
   "description": "Visualize Lighthouse reports within Svelte applications.",
-  "author": "Danilo Velasquez",
+  "authors": [
+    "dvelasquez"
+  ],
   "homepage": "https://dvelasquez.github.io/lighthouse-viewer/packages/svelte-lighthouse-viewer/demo/index.html",
   "downloads": 581,
   "dependents": 0,

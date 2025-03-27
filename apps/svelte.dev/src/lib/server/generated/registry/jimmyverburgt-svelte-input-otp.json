@@ -1,8 +1,10 @@
 {
   "name": "@jimmyverburgt/svelte-input-otp",
-  "description": "Create accessible, unstyled OTP input components for Svelte.",
+  "description": "Create accessible, unstyled OTP input for Svelte.",
   "repo_url": "https://github.com/VerburgtJimmy/svelte-input-otp",
-  "author": "Jimmy Verburgt",
+  "authors": [
+    "jimmyverburgt"
+  ],
   "homepage": "http://svelte-input-otp.jimmyverburgt.com",
   "downloads": 224,
   "dependents": 1,

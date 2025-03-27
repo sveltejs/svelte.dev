@@ -1,11 +1,13 @@
 {
   "name": "@htmlbricks/hb-sidenav-link",
-  "description": "Create sidenav links for Svelte applications.",
+  "description": "Create sidenav link web component for Svelte apps.",
   "repo_url": "",
-  "author": "Dario Caruso",
-  "downloads": 451,
+  "authors": [
+    "dariocaruso"
+  ],
+  "downloads": 465,
   "dependents": 5,
-  "updated": "2025-03-09T03:10:34.815Z",
+  "updated": "2025-03-24T18:07:20.385Z",
   "tags": [
     "ui"
   ],

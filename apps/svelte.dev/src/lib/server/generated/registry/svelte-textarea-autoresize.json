@@ -1,9 +1,11 @@
 {
   "name": "svelte-textarea-autoresize",
-  "description": "Create autoresizing textarea components for Svelte applications.",
+  "description": "Create autoresizing textareas for Svelte, adjusting height dynamically.",
   "repo_url": "",
-  "author": "d0x2f",
-  "downloads": 37,
+  "authors": [
+    "d0x2f"
+  ],
+  "downloads": 43,
   "dependents": 0,
   "updated": "2020-06-27T05:18:32.698Z",
   "tags": [

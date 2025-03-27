@@ -1,14 +1,17 @@
 {
   "name": "@svelte-fui/core",
-  "description": "Implement Microsoft Fluent UI v9 components for Svelte framework.",
+  "description": "Implementation of Microsoft Fluent UI v9 for Svelte.",
   "repo_url": "https://github.com/ryu-man/svelte-fui",
-  "author": "ryu-man",
+  "authors": [
+    "ryuman"
+  ],
   "homepage": "https://github.com/ryu-man/svelte-fui/tree/main/packages/core#readme",
-  "downloads": 153,
+  "downloads": 114,
   "dependents": 0,
   "updated": "2025-01-07T20:02:41.982Z",
   "tags": [
-    "component-library"
+    "component-library",
+    "ui"
   ],
   "svelte5": true,
   "runes": false,

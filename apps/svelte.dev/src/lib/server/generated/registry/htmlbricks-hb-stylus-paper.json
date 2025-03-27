@@ -1,11 +1,13 @@
 {
   "name": "@htmlbricks/hb-stylus-paper",
-  "description": "Svelte-Bootstrap stylus-paper inspired by perfect-freehand.",
+  "description": "Provides stylus paper component for Svelte.",
   "repo_url": "",
-  "author": "Dario Caruso",
-  "downloads": 137,
+  "authors": [
+    "dariocaruso"
+  ],
+  "downloads": 142,
   "dependents": 1,
-  "updated": "2025-03-09T03:10:36.301Z",
+  "updated": "2025-03-24T18:07:21.144Z",
   "tags": [
     "ui"
   ],

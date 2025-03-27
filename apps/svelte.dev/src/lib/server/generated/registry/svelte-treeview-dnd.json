@@ -1,14 +1,17 @@
 {
   "name": "svelte-treeview-dnd",
-  "description": "Implement JSON-based treeview component with drag-and-drop.",
+  "description": "Create JSON-based treeview component with drag-and-drop.",
   "repo_url": "https://github.com/sytanta/svelte-treeview-dnd",
-  "author": "sytanta",
+  "authors": [
+    "sytanta"
+  ],
   "homepage": "https://svelte-treeview-dnd.netlify.app",
-  "downloads": 13,
+  "downloads": 6,
   "dependents": 0,
   "updated": "2023-02-13T15:49:58.978Z",
   "tags": [
-    "ui"
+    "ui",
+    "utility"
   ],
   "svelte5": false,
   "runes": false,

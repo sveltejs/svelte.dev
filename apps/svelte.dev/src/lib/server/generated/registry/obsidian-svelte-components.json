@@ -1,8 +1,10 @@
 {
   "name": "obsidian-svelte-components",
-  "description": "Create Svelte components for Obsidian plugin development.",
+  "description": "Adds Svelte components for Obsidian plugin development.",
   "repo_url": "https://github.com/acgabbert/obsidian-svelte-components",
-  "author": "acgabbert",
+  "authors": [
+    "acgabbert"
+  ],
   "homepage": "https://github.com/acgabbert/obsidian-svelte-components#readme",
   "downloads": 68,
   "dependents": 0,

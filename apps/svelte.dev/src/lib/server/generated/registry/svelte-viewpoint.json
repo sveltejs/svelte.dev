@@ -1,10 +1,12 @@
 {
   "name": "svelte-viewpoint",
-  "description": "Load Svelte components with loading, waiting, and error states.",
+  "description": "Loadable component for Svelte with data preloading.",
   "repo_url": "https://github.com/sveltetools/svelte-viewpoint",
-  "author": "PaulMaly",
+  "authors": [
+    "paulmaly"
+  ],
   "homepage": "https://github.com/sveltetools/svelte-viewpoint#readme",
-  "downloads": 24,
+  "downloads": 23,
   "dependents": 0,
   "updated": "2021-03-04T11:39:29.012Z",
   "tags": [

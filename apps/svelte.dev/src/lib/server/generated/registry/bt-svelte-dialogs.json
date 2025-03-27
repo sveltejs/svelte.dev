@@ -1,10 +1,12 @@
 {
   "name": "bt-svelte-dialogs",
-  "description": "Create handy dialogs for Svelte applications.",
+  "description": "Provide handy dialogs for Svelte, including alert, confirm, and modal.",
   "repo_url": "https://github.com/bibizio/svelte-dialogs",
-  "author": "Fabrizio Giovinazzi",
+  "authors": [
+    "bagaskarawg"
+  ],
   "homepage": "https://bibizio.github.io/svelte-dialogs/",
-  "downloads": 1,
+  "downloads": 2,
   "dependents": 0,
   "updated": "2024-10-29T04:39:30.684Z",
   "tags": [

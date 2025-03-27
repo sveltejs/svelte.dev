@@ -1,8 +1,10 @@
 {
   "name": "svelte-free-icons-regular",
-  "description": "Provides Svelte icon components for free-icons.",
+  "description": "Integrate free icon components into Svelte projects.",
   "repo_url": "https://github.com/free-icons/svelte-free-icons",
-  "author": "Antonio \"profmancusoa\" Mancuso",
+  "authors": [
+    "profmancusoa"
+  ],
   "homepage": "https://github.com/free-icons/svelte-free-icons#readme",
   "downloads": 3,
   "dependents": 0,

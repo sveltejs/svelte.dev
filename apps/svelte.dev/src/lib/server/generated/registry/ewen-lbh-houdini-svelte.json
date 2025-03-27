@@ -1,0 +1,18 @@
+{
+  "name": "@ewen-lbh/houdini-svelte",
+  "description": "Provides Svelte plugin for Houdini GraphQL client.",
+  "repo_url": "https://github.com/HoudiniGraphql/houdini",
+  "authors": [
+    "ewen-lbh"
+  ],
+  "homepage": "https://github.com/HoudiniGraphql/houdini",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2024-11-11T14:50:00.022Z",
+  "tags": [
+    "integration"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 940
+}

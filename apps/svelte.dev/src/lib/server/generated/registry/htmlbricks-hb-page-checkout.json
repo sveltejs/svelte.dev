@@ -1,13 +1,15 @@
 {
   "name": "@htmlbricks/hb-page-checkout",
-  "description": "Create Svelte Page Payment WebComponent.",
+  "description": "Create page checkout web components with Svelte.",
   "repo_url": "",
-  "author": "Dario Caruso",
-  "downloads": 423,
+  "authors": [
+    "dariocaruso"
+  ],
+  "downloads": 438,
   "dependents": 2,
-  "updated": "2025-03-09T03:10:45.675Z",
+  "updated": "2025-03-24T18:07:29.828Z",
   "tags": [
-    "ui"
+    "component-library"
   ],
   "svelte5": false,
   "runes": false

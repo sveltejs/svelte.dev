@@ -1,10 +1,12 @@
 {
   "name": "svelte-micro-router",
-  "description": "Micro router for Svelte with easy configuration and async routes.",
+  "description": "Create micro router for Svelte with easy configuration.",
   "repo_url": "https://github.com/davidrot/svelte-micro-router",
-  "author": "David Rothmann",
+  "authors": [
+    "davidrot1"
+  ],
   "homepage": "https://github.com/davidrot/svelte-micro-router#readme",
-  "downloads": 36,
+  "downloads": 14,
   "dependents": 0,
   "updated": "2022-09-15T13:22:52.240Z",
   "tags": [

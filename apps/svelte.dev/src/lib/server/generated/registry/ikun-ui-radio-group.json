@@ -1,8 +1,10 @@
 {
   "name": "@ikun-ui/radio-group",
-  "description": "Create radio group components for Svelte apps.",
+  "description": "Create radio group components for Svelte UI.",
   "repo_url": "",
-  "author": "baiwusanyu",
+  "authors": [
+    "baiwusanyu"
+  ],
   "downloads": 24,
   "dependents": 2,
   "updated": "2025-01-24T03:49:14.020Z",

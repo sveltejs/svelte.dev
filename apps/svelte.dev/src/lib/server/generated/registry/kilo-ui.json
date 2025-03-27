@@ -1,15 +1,16 @@
 {
   "name": "kilo-ui",
-  "description": "Offers component library for Svelte, providing UI components.",
+  "description": "Provide component library for Svelte.",
   "repo_url": "https://github.com/kiloOhm/kilo-ui",
-  "author": "Lukas Wicke",
+  "authors": [
+    "kiloohm"
+  ],
   "homepage": "https://kiloui.com",
-  "downloads": 5,
+  "downloads": 10,
   "dependents": 0,
   "updated": "2023-04-17T07:36:48.474Z",
   "tags": [
-    "component-library",
-    "ui"
+    "component-library"
   ],
   "svelte5": false,
   "runes": false,

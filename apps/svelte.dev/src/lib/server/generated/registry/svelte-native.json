@@ -2,15 +2,18 @@
   "name": "svelte-native",
   "description": "Build native mobile apps with Svelte and NativeScript.",
   "repo_url": "https://github.com/halfnelson/svelte-native",
-  "author": "David Pershouse",
+  "authors": [
+    "halfnelson"
+  ],
   "homepage": "https://github.com/halfnelson/svelte-native",
-  "downloads": 66,
-  "dependents": 3,
+  "downloads": 71,
+  "dependents": 1,
   "updated": "2024-11-07T19:51:32.658Z",
   "tags": [
-    "component-library"
+    "component-library",
+    "ui"
   ],
   "svelte5": false,
   "runes": false,
-  "github_stars": 1844
+  "github_stars": 1843
 }

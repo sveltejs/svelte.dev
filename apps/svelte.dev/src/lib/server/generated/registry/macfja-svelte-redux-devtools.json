@@ -1,0 +1,19 @@
+{
+  "name": "@macfja/svelte-redux-devtools",
+  "description": "Track and rewind Svelte stores with Redux Devtools.",
+  "repo_url": "https://github.com/macfja/svelte-redux-devtools",
+  "authors": [
+    "macfja"
+  ],
+  "homepage": "https://github.com/macfja/svelte-redux-devtools#readme",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2024-11-25T15:08:30.521Z",
+  "tags": [
+    "utility",
+    "tooling"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 0
+}

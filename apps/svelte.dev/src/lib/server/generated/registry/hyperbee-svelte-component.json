@@ -1,14 +1,16 @@
 {
   "name": "hyperbee-svelte-component",
-  "description": "Use Hyperbee in Svelte components.",
+  "description": "Use hyperbee in browser via Svelte component.",
   "repo_url": "https://github.com/DougAnderson444/hyperbee-svelte-component",
-  "author": "Doug S Anderson",
+  "authors": [
+    "douganderson444"
+  ],
   "homepage": "https://github.com/DougAnderson444/hyperbee-svelte-component#readme",
-  "downloads": 0,
+  "downloads": 9,
   "dependents": 0,
   "updated": "2021-02-12T14:12:09.101Z",
   "tags": [
-    "integration"
+    "utility"
   ],
   "svelte5": false,
   "runes": false,

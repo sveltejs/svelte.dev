@@ -1,10 +1,12 @@
 {
   "name": "louisette",
-  "description": "Offer accessible Svelte component primitives.",
+  "description": "Create accessible Svelte component primitives.",
   "repo_url": "https://github.com/ubermanu/louisette",
-  "author": "Emmanuel Vodor",
+  "authors": [
+    "ubermanu"
+  ],
   "homepage": "https://github.com/ubermanu/louisette#readme",
-  "downloads": 0,
+  "downloads": 15,
   "dependents": 0,
   "updated": "2023-07-09T11:42:32.226Z",
   "tags": [

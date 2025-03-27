@@ -1,10 +1,12 @@
 {
   "name": "sveltecms",
-  "description": "Build content management system for SvelteKit projects.",
+  "description": "Build content-managed sites with SvelteKit.",
   "repo_url": "https://github.com/dnotes/sveltecms",
-  "author": "David Hunt",
+  "authors": [
+    "dnotes"
+  ],
   "homepage": "https://github.com/dnotes/sveltecms#readme",
-  "downloads": 49,
+  "downloads": 2,
   "dependents": 0,
   "updated": "2023-12-11T04:51:30.445Z",
   "tags": [

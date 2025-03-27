@@ -1,10 +1,12 @@
 {
   "name": "@feelinglovelynow/svelte-modal",
-  "description": "Implements simple modal component for Svelte applications.",
+  "description": "Create simple modal components for Svelte and SvelteKit.",
   "repo_url": "https://github.com/feelinglovelynow/svelte-modal",
-  "author": "https://github.com/feelinglovelynow?tab=repositories",
+  "authors": [
+    "feelinglovelynow"
+  ],
   "homepage": "https://github.com/feelinglovelynow/svelte-modal#readme",
-  "downloads": 4,
+  "downloads": 1,
   "dependents": 0,
   "updated": "2023-10-31T05:09:20.446Z",
   "tags": [

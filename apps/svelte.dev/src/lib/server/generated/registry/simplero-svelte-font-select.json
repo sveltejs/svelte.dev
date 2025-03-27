@@ -1,9 +1,11 @@
 {
   "name": "@simplero/svelte-font-select",
-  "description": "Provides a font selection component for Svelte applications.",
+  "description": "Provide simple font selection component for Svelte.",
   "repo_url": "",
-  "author": "owaissimplero",
-  "downloads": 24,
+  "authors": [
+    "owaissimplero"
+  ],
+  "downloads": 78,
   "dependents": 0,
   "updated": "2024-10-03T08:51:46.788Z",
   "tags": [

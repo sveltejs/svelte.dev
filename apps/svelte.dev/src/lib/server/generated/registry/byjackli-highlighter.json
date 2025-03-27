@@ -1,10 +1,12 @@
 {
   "name": "@byjackli/highlighter",
-  "description": "Syntax highlight code blocks within Svelte components.",
+  "description": "Highlight code syntax, including Svelte, for web documentation.",
   "repo_url": "https://github.com/byjackli/highlighter",
-  "author": "Jack Li",
+  "authors": [
+    "byjackli"
+  ],
   "homepage": "https://github.com/byjackli/highlighter#readme",
-  "downloads": 25,
+  "downloads": 27,
   "dependents": 0,
   "updated": "2022-04-23T16:25:20.132Z",
   "tags": [

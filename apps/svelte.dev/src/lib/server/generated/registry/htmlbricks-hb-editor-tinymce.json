@@ -1,13 +1,15 @@
 {
   "name": "@htmlbricks/hb-editor-tinymce",
-  "description": "Integrate TinyMCE rich text editor into Svelte apps.",
+  "description": "Integrate TinyMCE editor into Svelte applications.",
   "repo_url": "",
-  "author": "Dario Caruso",
-  "downloads": 418,
+  "authors": [
+    "dariocaruso"
+  ],
+  "downloads": 427,
   "dependents": 2,
-  "updated": "2025-03-09T03:10:29.349Z",
+  "updated": "2025-03-24T18:07:13.970Z",
   "tags": [
-    "component-library"
+    "content"
   ],
   "svelte5": false,
   "runes": false

@@ -1,14 +1,17 @@
 {
   "name": "@jhubbardsf/svelte-inview",
-  "description": "Detect element visibility in Svelte using Intersection Observer.",
+  "description": "Detect element visibility in Svelte apps using Intersection Observer.",
   "repo_url": "",
-  "author": "Maciek Grzybek",
+  "authors": [
+    "jhubbardsf"
+  ],
   "homepage": "https://github.com/maciekgrzybek/svelte-inview",
-  "downloads": 3,
+  "downloads": 2,
   "dependents": 0,
   "updated": "2024-07-18T01:17:14.380Z",
   "tags": [
-    "utility"
+    "utility",
+    "dom"
   ],
   "svelte5": false,
   "runes": false

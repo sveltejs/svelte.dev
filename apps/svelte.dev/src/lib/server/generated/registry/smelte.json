@@ -2,8 +2,10 @@
   "name": "smelte",
   "description": "UI framework for Svelte using Tailwind CSS and Material Design.",
   "repo_url": "",
-  "author": "matyunya",
-  "downloads": 978,
+  "authors": [
+    "matyunya"
+  ],
+  "downloads": 180,
   "dependents": 3,
   "updated": "2021-09-06T04:05:31.316Z",
   "tags": [

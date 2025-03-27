@@ -1,10 +1,12 @@
 {
   "name": "five-ui",
-  "description": "Build UI with Svelte and Tailwind CSS.",
+  "description": "Create UI components with Svelte and Tailwind CSS.",
   "repo_url": "https://github.com/wqy2dev/five-ui",
-  "author": "wqy2dev",
+  "authors": [
+    "wqy2dev"
+  ],
   "homepage": "https://github.com/wqy2dev/five-ui#readme",
-  "downloads": 193,
+  "downloads": 71,
   "dependents": 0,
   "updated": "2025-03-12T14:35:24.957Z",
   "tags": [

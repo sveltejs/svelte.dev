@@ -1,0 +1,18 @@
+{
+  "name": "@tomdo1234/svelte-carousel",
+  "description": "Create carousel components for Svelte applications.",
+  "repo_url": "https://github.com/TomDo1234/svelte-carousel",
+  "authors": [
+    "tomdo1234"
+  ],
+  "homepage": "https://github.com/TomDo1234/svelte-carousel#readme",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2023-06-03T01:56:12.190Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 1
+}

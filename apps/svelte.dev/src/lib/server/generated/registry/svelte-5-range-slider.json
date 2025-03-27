@@ -1,8 +1,10 @@
 {
   "name": "svelte-5-range-slider",
-  "description": "Create range slider component for Svelte 5 applications.",
+  "description": "Create range sliders with Svelte 5.",
   "repo_url": "https://github.com/Ionmi/svelte-5-range-slider",
-  "author": "ionmi",
+  "authors": [
+    "ionmi"
+  ],
   "homepage": "https://github.com/Ionmi/svelte-5-range-slider",
   "downloads": 38,
   "dependents": 0,

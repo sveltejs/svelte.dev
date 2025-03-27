@@ -2,9 +2,11 @@
   "name": "sv-bootstrap-tooltip",
   "description": "Create Bootstrap tooltips in Svelte applications.",
   "repo_url": "https://github.com/Sidd27/sv-bootstrap-tooltip",
-  "author": "Sidddharth Pandey",
+  "authors": [
+    "sidd27"
+  ],
   "homepage": "https://github.com/Sidd27/sv-bootstrap-tooltip#readme",
-  "downloads": 13,
+  "downloads": 55,
   "dependents": 0,
   "updated": "2020-11-16T13:30:01.122Z",
   "tags": [

@@ -1,10 +1,12 @@
 {
   "name": "svelte-cleavejs",
-  "description": "Provides Cleave.js action for formatting input fields in Svelte.",
+  "description": "Apply Cleave.js input masking to Svelte elements.",
   "repo_url": "https://github.com/GCBenlloch/svelte-cleavejs",
-  "author": "gcbenlloch",
+  "authors": [
+    "gcbenlloch"
+  ],
   "homepage": "https://github.com/GCBenlloch/svelte-cleavejs#readme",
-  "downloads": 160,
+  "downloads": 124,
   "dependents": 0,
   "updated": "2021-11-14T16:48:40.357Z",
   "tags": [

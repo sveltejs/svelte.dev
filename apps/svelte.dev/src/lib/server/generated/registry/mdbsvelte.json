@@ -1,10 +1,12 @@
 {
   "name": "mdbsvelte",
-  "description": "Svelte components based on Bootstrap 4 with Material Design.",
+  "description": "Build Svelte apps with Material Design Bootstrap components.",
   "repo_url": "https://github.com/SauravKanchan/mdbsvelte",
-  "author": "Saurav Kanchan",
+  "authors": [
+    "sauravnk30"
+  ],
   "homepage": "http://saurav.tech/mdbsvelte",
-  "downloads": 22,
+  "downloads": 45,
   "dependents": 0,
   "updated": "2020-12-11T05:58:25.777Z",
   "tags": [

@@ -1,10 +1,12 @@
 {
   "name": "adorn-ui",
-  "description": "Develop UI components based on Svelte 4.",
+  "description": "Build UI components for Svelte 4 applications.",
   "repo_url": "https://github.com/renzp94/adorn",
-  "author": "renzp94",
+  "authors": [
+    "renzp"
+  ],
   "homepage": "https://github.com/renzp94/adorn#readme",
-  "downloads": 11,
+  "downloads": 14,
   "dependents": 0,
   "updated": "2024-06-28T07:11:44.817Z",
   "tags": [

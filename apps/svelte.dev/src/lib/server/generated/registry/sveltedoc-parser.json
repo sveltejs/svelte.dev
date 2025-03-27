@@ -1,14 +1,18 @@
 {
   "name": "sveltedoc-parser",
-  "description": "Generate JSON documentation for Svelte components.",
+  "description": "Parse Svelte files, generate JSON documentation.",
   "repo_url": "https://github.com/alexprey/sveltedoc-parser",
-  "author": "Alexey Mulyukin",
+  "authors": [
+    "ardenivanov",
+    "alexprey"
+  ],
   "homepage": "https://github.com/alexprey/sveltedoc-parser",
-  "downloads": 108899,
+  "downloads": 110252,
   "dependents": 10,
   "updated": "2021-12-15T10:08:28.326Z",
   "tags": [
-    "tooling"
+    "tooling",
+    "preprocessor"
   ],
   "svelte5": false,
   "runes": false,

@@ -1,14 +1,17 @@
 {
   "name": "svelte-state-renderer",
-  "description": "Render abstract-state-router states within Svelte components.",
+  "description": "Renderer for abstract-state-router, use Svelte with abstract-state-router.",
   "repo_url": "https://github.com/TehShrike/svelte-state-renderer",
-  "author": "TehShrike",
+  "authors": [
+    "tehshrike"
+  ],
   "homepage": "https://github.com/TehShrike/svelte-state-renderer#readme",
-  "downloads": 74,
+  "downloads": 132,
   "dependents": 1,
   "updated": "2025-02-05T20:44:46.086Z",
   "tags": [
-    "router"
+    "router",
+    "utility"
   ],
   "svelte5": true,
   "runes": false,

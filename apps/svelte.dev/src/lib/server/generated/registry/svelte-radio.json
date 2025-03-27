@@ -1,10 +1,12 @@
 {
   "name": "svelte-radio",
-  "description": "Create declarative radio button group components for Svelte.",
+  "description": "Creates declarative radio button group components for Svelte.",
   "repo_url": "https://github.com/metonym/svelte-radio",
-  "author": "Eric Liu",
+  "authors": [
+    "metonym"
+  ],
   "homepage": "https://github.com/metonym/svelte-radio",
-  "downloads": 5,
+  "downloads": 10,
   "dependents": 0,
   "updated": "2021-12-31T19:19:37.578Z",
   "tags": [

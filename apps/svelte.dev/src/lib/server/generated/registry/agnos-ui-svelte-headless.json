@@ -1,16 +1,21 @@
 {
   "name": "@agnos-ui/svelte-headless",
-  "description": "Create headless Svelte components.",
+  "description": "Build headless UI components for Svelte.",
   "repo_url": "https://github.com/AmadeusITGroup/AgnosUI",
-  "author": "divdavem",
+  "authors": [
+    "divdavem",
+    "basso",
+    "qderoubaix"
+  ],
   "homepage": "https://www.agnosui.dev/latest/",
   "downloads": 81,
   "dependents": 2,
   "updated": "2025-01-09T15:43:58.775Z",
   "tags": [
-    "component-library"
+    "component-library",
+    "ui"
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 69
+  "github_stars": 70
 }

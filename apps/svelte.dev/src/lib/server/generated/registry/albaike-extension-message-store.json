@@ -1,9 +1,11 @@
 {
   "name": "@albaike/extension-message-store",
-  "description": "Manage extension messaging with Svelte stores.",
+  "description": "Provides Svelte store for extension messaging.",
   "repo_url": "https://gitgud.io/albaike/extension-message-store",
-  "author": "albaike",
-  "downloads": 9,
+  "authors": [
+    "albaike"
+  ],
+  "downloads": 12,
   "dependents": 0,
   "updated": "2022-12-27T07:48:52.213Z",
   "tags": [

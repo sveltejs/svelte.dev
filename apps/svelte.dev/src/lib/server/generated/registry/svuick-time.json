@@ -1,11 +1,16 @@
 {
   "name": "@svuick/time",
+  "description": "Provides locale string in request locals and session.",
   "repo_url": "https://gitlab.com/david-plugge/svuick",
-  "author": "davidplugge",
-  "downloads": 2,
+  "authors": [
+    "davidplugge"
+  ],
+  "downloads": 17,
   "dependents": 0,
   "updated": "2022-02-03T11:39:44.243Z",
-  "tags": [],
+  "tags": [
+    "utility"
+  ],
   "svelte5": false,
   "runes": false
 }

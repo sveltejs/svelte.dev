@@ -1,10 +1,12 @@
 {
   "name": "@svelte-put/clickoutside",
-  "description": "Detect clicks outside Svelte component elements.",
+  "description": "Detects clicks outside of a Svelte node.",
   "repo_url": "https://github.com/vnphanquang/svelte-put",
-  "author": "Quang Phan",
+  "authors": [
+    "vnphanquang"
+  ],
   "homepage": "https://svelte-put.vnphanquang.com/docs/clickoutside",
-  "downloads": 2113,
+  "downloads": 2267,
   "dependents": 7,
   "updated": "2024-10-25T05:17:14.604Z",
   "tags": [
@@ -12,5 +14,5 @@
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 909
+  "github_stars": 911
 }

@@ -1,10 +1,12 @@
 {
   "name": "@sveu/sveltekit-security",
-  "description": "Secures SvelteKit apps, preventing common vulnerabilities.",
+  "description": "Secure SvelteKit apps with ease, preventing vulnerabilities.",
   "repo_url": "https://github.com/svelte-u/sveltekit-security",
-  "author": "Mohamed Nesredin",
+  "authors": [
+    "mohamed-kaizen"
+  ],
   "homepage": "https://github.com/svelte-u/sveltekit-security#readme",
-  "downloads": 1,
+  "downloads": 7,
   "dependents": 0,
   "updated": "2023-11-17T05:34:26.608Z",
   "tags": [

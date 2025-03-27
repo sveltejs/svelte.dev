@@ -1,16 +1,18 @@
 {
   "name": "svelte-easy-crop",
-  "description": "Crop images with easy interactions in Svelte applications.",
+  "description": "Crop images with easy interactions in Svelte.",
   "repo_url": "https://github.com/ValentinH/svelte-easy-crop",
-  "author": "Valentin Hervieu",
+  "authors": [
+    "valentinhervieu"
+  ],
   "homepage": "https://github.com/ValentinH/svelte-easy-crop",
-  "downloads": 3618,
+  "downloads": 3902,
   "dependents": 1,
   "updated": "2025-03-19T10:01:04.759Z",
   "tags": [
     "media"
   ],
-  "svelte5": true,
+  "svelte5": false,
   "runes": false,
-  "github_stars": 216
+  "github_stars": 218
 }

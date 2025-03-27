@@ -1,11 +1,13 @@
 {
   "name": "@htmlbricks/hb-checkout-shopping-cart",
-  "description": "Create Svelte web component for shopping cart.",
+  "description": "Create shopping cart web components with Svelte.",
   "repo_url": "",
-  "author": "Dario Caruso",
-  "downloads": 438,
+  "authors": [
+    "dariocaruso"
+  ],
+  "downloads": 451,
   "dependents": 3,
-  "updated": "2025-03-09T03:10:43.438Z",
+  "updated": "2025-03-24T18:07:27.885Z",
   "tags": [
     "component-library"
   ],

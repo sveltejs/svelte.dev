@@ -1,10 +1,30 @@
 {
   "name": "@urql/svelte",
-  "description": "GraphQL client for Svelte with caching and state management.",
+  "description": "Fetch GraphQL queries, mutations, subscriptions in Svelte apps.",
   "repo_url": "https://github.com/urql-graphql/urql",
-  "author": "urql GraphQL Contributors",
+  "authors": [
+    "michaelmerrill",
+    "sarmeyer",
+    "mariano-formidable",
+    "ryan.roemer",
+    "formidable-owner",
+    "formidablelabs",
+    "carbonrobot",
+    "masiddee",
+    "scott-rippey",
+    "sarahformidable",
+    "robwalkerco",
+    "ceceppa",
+    "keithluchtel",
+    "scottianstewart",
+    "philpl",
+    "andyrichardson",
+    "jdecroock",
+    "parkerziegler",
+    "npm-urql"
+  ],
   "homepage": "https://formidable.com/open-source/urql/docs/",
-  "downloads": 8748,
+  "downloads": 7981,
   "dependents": 8,
   "updated": "2025-03-03T21:13:56.638Z",
   "tags": [
@@ -12,5 +32,5 @@
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 8758
+  "github_stars": 8763
 }

@@ -1,8 +1,10 @@
 {
   "name": "@feelinglovelynow/slug",
-  "description": "Generate URL slugs with helper function and Svelte component.",
+  "description": "Generate slugs from strings, includes Svelte component.",
   "repo_url": "https://github.com/feelinglovelynow/slug",
-  "author": "https://github.com/feelinglovelynow?tab=repositories",
+  "authors": [
+    "feelinglovelynow"
+  ],
   "homepage": "https://github.com/feelinglovelynow/slug#readme",
   "downloads": 7,
   "dependents": 0,

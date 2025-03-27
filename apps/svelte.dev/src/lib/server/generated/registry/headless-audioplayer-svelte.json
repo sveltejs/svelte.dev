@@ -1,15 +1,16 @@
 {
   "name": "headless-audioplayer-svelte",
-  "description": "Handle audio playing with a headless Svelte component.",
+  "description": "Provides headless audio player for Svelte.",
   "repo_url": "https://github.com/JosueRhea/headless-audioplayer",
-  "author": "JosueRhea",
+  "authors": [
+    "josuerhea"
+  ],
   "homepage": "https://headless-audioplayer.vercel.app",
-  "downloads": 7,
+  "downloads": 6,
   "dependents": 0,
   "updated": "2023-04-30T03:07:29.487Z",
   "tags": [
-    "ui",
-    "utility"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

@@ -1,10 +1,12 @@
 {
   "name": "@iguacel/svelte-typeahead",
-  "description": "Create accessible, fuzzy search typeahead components.",
+  "description": "Provide accessible, fuzzy search typeahead component for Svelte.",
   "repo_url": "https://github.com/metonym/svelte-typeahead",
-  "author": "Eric Liu",
+  "authors": [
+    "iguacel"
+  ],
   "homepage": "https://github.com/metonym/svelte-typeahead",
-  "downloads": 1,
+  "downloads": 0,
   "dependents": 0,
   "updated": "2023-05-01T07:15:34.339Z",
   "tags": [

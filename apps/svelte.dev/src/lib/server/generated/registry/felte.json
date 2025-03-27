@@ -2,9 +2,11 @@
   "name": "felte",
   "description": "Extensible form library for Svelte.",
   "repo_url": "https://github.com/pablo-abc/felte",
-  "author": "Pablo Berganza",
+  "authors": [
+    "pberganza"
+  ],
   "homepage": "https://felte.dev",
-  "downloads": 9425,
+  "downloads": 8344,
   "dependents": 8,
   "updated": "2024-10-29T20:35:41.611Z",
   "tags": [
@@ -12,5 +14,5 @@
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 1042
+  "github_stars": 1043
 }

@@ -1,10 +1,12 @@
 {
   "name": "svelte-style",
-  "description": "Provide style utilities as Svelte actions.",
+  "description": "Apply styles to elements using Svelte actions.",
   "repo_url": "https://github.com/metonym/svelte-style",
-  "author": "Eric Liu",
+  "authors": [
+    "metonym"
+  ],
   "homepage": "https://github.com/metonym/svelte-style",
-  "downloads": 2,
+  "downloads": 6,
   "dependents": 0,
   "updated": "2021-10-31T02:31:25.841Z",
   "tags": [

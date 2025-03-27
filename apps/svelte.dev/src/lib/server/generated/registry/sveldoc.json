@@ -1,10 +1,12 @@
 {
   "name": "sveldoc",
-  "description": "Generate documentation from Svelte component Readmes.",
+  "description": "Generates documentation for Svelte components.",
   "repo_url": "https://github.com/metonym/sveldoc",
-  "author": "Eric Liu",
+  "authors": [
+    "metonym"
+  ],
   "homepage": "https://github.com/metonym/sveldoc",
-  "downloads": 5,
+  "downloads": 0,
   "dependents": 0,
   "updated": "2022-09-03T22:31:52.248Z",
   "tags": [

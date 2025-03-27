@@ -1,15 +1,16 @@
 {
   "name": "@bztes/svelte-rip",
-  "description": "Create responsive image previews with Svelte.",
+  "description": "Creates responsive image previews with blurhash support.",
   "repo_url": "https://github.com/bztes/svelte-rip",
-  "author": "Nico Beierle",
+  "authors": [
+    "bztes"
+  ],
   "homepage": "https://bztes.github.io/svelte-rip/",
-  "downloads": 10,
+  "downloads": 12,
   "dependents": 0,
   "updated": "2021-11-07T22:00:49.998Z",
   "tags": [
-    "media",
-    "ui"
+    "media"
   ],
   "svelte5": false,
   "runes": false,

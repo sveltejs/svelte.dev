@@ -1,10 +1,12 @@
 {
   "name": "eslint-config-pro",
-  "description": "Provides ESLint configuration for professional Svelte developers.",
+  "description": "Provide ESLint v5 rules for professional developers.",
   "repo_url": "https://github.com/NikolayMakhonin/eslint-config-pro",
-  "author": "Nikolay Makhonin",
+  "authors": [
+    "nikolay_makhonin"
+  ],
   "homepage": "https://github.com/NikolayMakhonin/eslint-config-pro",
-  "downloads": 9,
+  "downloads": 54,
   "dependents": 0,
   "updated": "2023-11-14T02:45:50.080Z",
   "tags": [

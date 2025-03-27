@@ -1,14 +1,19 @@
 {
   "name": "@sveltejs/svelte-json-tree",
-  "description": "View JSON data within Svelte applications.",
+  "description": "Svelte JSON Viewer Component, supports Map, Set, and Symbol.",
   "repo_url": "https://github.com/sveltejs/svelte-json-tree",
-  "author": "Tan Li Hau",
+  "authors": [
+    "rich_harris",
+    "svelte-admin",
+    "conduitry",
+    "dominik_g"
+  ],
   "homepage": "https://github.com/sveltejs/svelte-json-tree#readme",
-  "downloads": 274,
+  "downloads": 256,
   "dependents": 0,
   "updated": "2024-12-10T23:22:51.617Z",
   "tags": [
-    "utility"
+    "ui"
   ],
   "svelte5": true,
   "runes": false,

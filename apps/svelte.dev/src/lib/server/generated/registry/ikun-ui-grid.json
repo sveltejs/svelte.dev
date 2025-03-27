@@ -1,14 +1,15 @@
 {
   "name": "@ikun-ui/grid",
-  "description": "Implement grid components for Svelte applications.",
+  "description": "Build grid layouts for Svelte applications.",
   "repo_url": "",
-  "author": "baiwusanyu",
+  "authors": [
+    "baiwusanyu"
+  ],
   "downloads": 29,
   "dependents": 1,
   "updated": "2025-01-24T03:48:56.548Z",
   "tags": [
-    "component-library",
-    "ui"
+    "component-library"
   ],
   "svelte5": false,
   "runes": false

@@ -1,10 +1,12 @@
 {
   "name": "vite-plugin-sveld",
-  "description": "Parse Svelte components with sveld using Vite plugin.",
+  "description": "Parse Svelte components, generate sveld JSON data.",
   "repo_url": "https://github.com/mattjennings/vite-plugin-sveld",
-  "author": "Matt Jennings",
+  "authors": [
+    "mattjennings"
+  ],
   "homepage": "https://github.com/mattjennings/vite-plugin-sveld#readme",
-  "downloads": 63,
+  "downloads": 57,
   "dependents": 0,
   "updated": "2024-10-11T03:48:25.051Z",
   "tags": [

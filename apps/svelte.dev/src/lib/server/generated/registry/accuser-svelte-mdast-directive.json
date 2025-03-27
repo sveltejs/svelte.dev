@@ -1,14 +1,17 @@
 {
   "name": "@accuser/svelte-mdast-directive",
-  "description": "Transform Markdown to Svelte components.",
+  "description": "Transform Markdown to Svelte components using mdast.",
   "repo_url": "https://github.com/accuser/svelte-mdast-directive",
-  "author": "Matthew Gibbons",
+  "authors": [
+    "accuser"
+  ],
   "homepage": "https://github.com/accuser/svelte-mdast-directive",
-  "downloads": 17,
+  "downloads": 18,
   "dependents": 1,
   "updated": "2024-10-06T13:16:37.069Z",
   "tags": [
-    "content"
+    "content",
+    "tooling"
   ],
   "svelte5": true,
   "runes": false,

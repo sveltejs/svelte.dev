@@ -1,14 +1,17 @@
 {
   "name": "svelte-generic-table-pager",
-  "description": "Extracts configurable table lines, dispatches as page data for Svelte.",
+  "description": "Provides generic table pager component for Svelte.",
   "repo_url": "https://github.com/ivosdc/svelte-generic-table-pager",
-  "author": "Ivo Bozic",
+  "authors": [
+    "nologin"
+  ],
   "homepage": "https://github.com/ivosdc/svelte-generic-table-pager#readme",
-  "downloads": 75,
+  "downloads": 26,
   "dependents": 0,
   "updated": "2021-06-30T13:14:36.152Z",
   "tags": [
-    "component-library"
+    "ui",
+    "utility"
   ],
   "svelte5": false,
   "runes": false,

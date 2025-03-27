@@ -1,0 +1,18 @@
+{
+  "name": "svelte-barcode-kit",
+  "description": "Generate and read barcodes and QR codes in Svelte apps.",
+  "repo_url": "https://github.com/seanvelasco/barcode-kit",
+  "authors": [
+    "seanvelasco"
+  ],
+  "homepage": "https://github.com/seanvelasco/barcode-kit#readme",
+  "downloads": 10,
+  "dependents": 0,
+  "updated": "2023-10-02T00:58:13.670Z",
+  "tags": [
+    "media"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 2
+}

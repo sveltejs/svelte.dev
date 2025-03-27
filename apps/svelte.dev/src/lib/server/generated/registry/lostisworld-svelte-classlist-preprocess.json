@@ -1,0 +1,18 @@
+{
+  "name": "@lostisworld/svelte-classlist-preprocess",
+  "description": "Enable array usage within class:list attributes in Svelte components.",
+  "repo_url": "https://github.com/LoStis-World/svelte-classlist-preprocess",
+  "authors": [
+    "lostisworld"
+  ],
+  "homepage": "https://github.com/LoStis-World/svelte-classlist-preprocess#readme",
+  "downloads": 3,
+  "dependents": 0,
+  "updated": "2024-06-29T10:56:39.749Z",
+  "tags": [
+    "preprocessor"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 4
+}

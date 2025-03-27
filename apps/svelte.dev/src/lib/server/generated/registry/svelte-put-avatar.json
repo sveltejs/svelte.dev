@@ -1,10 +1,12 @@
 {
   "name": "@svelte-put/avatar",
-  "description": "Build avatars with Gravatar and UI Avatar support.",
+  "description": "Component and utilities for handling avatar images.",
   "repo_url": "https://github.com/vnphanquang/svelte-put",
-  "author": "Quang Phan",
+  "authors": [
+    "vnphanquang"
+  ],
   "homepage": "https://svelte-put.vnphanquang.com/docs/avatar",
-  "downloads": 68,
+  "downloads": 157,
   "dependents": 0,
   "updated": "2024-10-25T05:17:14.927Z",
   "tags": [
@@ -12,5 +14,5 @@
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 909
+  "github_stars": 911
 }

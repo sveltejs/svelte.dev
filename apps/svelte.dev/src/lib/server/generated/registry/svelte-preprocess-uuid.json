@@ -1,10 +1,12 @@
 {
   "name": "svelte-preprocess-uuid",
-  "description": "Generate UUIDs at compile time for Svelte components.",
+  "description": "Generates unique IDs at compile time for Svelte DOM elements.",
   "repo_url": "https://github.com/duydang2311/svelte-preprocess-uuid",
-  "author": "duydang2311",
+  "authors": [
+    "duydang2311"
+  ],
   "homepage": "https://github.com/duydang2311/svelte-preprocess-uuid#readme",
-  "downloads": 0,
+  "downloads": 1,
   "dependents": 0,
   "updated": "2022-06-24T13:15:26.603Z",
   "tags": [

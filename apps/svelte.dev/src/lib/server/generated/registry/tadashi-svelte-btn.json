@@ -1,10 +1,12 @@
 {
   "name": "@tadashi/svelte-btn",
-  "description": "Create button components for Svelte.",
+  "description": "Create customizable button components for Svelte.",
   "repo_url": "https://github.com/lagden/svelte-btn",
-  "author": "Thiago Lagden",
+  "authors": [
+    "lagden"
+  ],
   "homepage": "https://github.com/lagden/svelte-btn#readme",
-  "downloads": 3,
+  "downloads": 46,
   "dependents": 0,
   "updated": "2022-05-02T21:55:14.027Z",
   "tags": [

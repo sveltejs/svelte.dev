@@ -1,8 +1,10 @@
 {
   "name": "svelte-lenis",
-  "description": "Provide Svelte bindings for Lenis smooth scrolling library.",
+  "description": "Provides Svelte bindings for Lenis smooth scrolling library.",
   "repo_url": "",
-  "author": "Abiee",
+  "authors": [
+    "iugsm"
+  ],
   "homepage": "https://github.com/richhost/svelte-lenis",
   "downloads": 6,
   "dependents": 0,

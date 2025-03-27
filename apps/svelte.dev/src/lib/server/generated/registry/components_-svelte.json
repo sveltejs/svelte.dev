@@ -1,9 +1,11 @@
 {
   "name": "@components_/svelte",
-  "description": "Create reusable Svelte components.",
+  "description": "Reusable Svelte components for various UI needs.",
   "repo_url": "",
-  "author": "rick-torrellas",
-  "downloads": 21,
+  "authors": [
+    "rick-torrellas"
+  ],
+  "downloads": 0,
   "dependents": 0,
   "updated": "2022-07-20T19:13:50.912Z",
   "tags": [

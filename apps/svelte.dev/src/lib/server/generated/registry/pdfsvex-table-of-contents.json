@@ -1,9 +1,11 @@
 {
   "name": "@pdfsvex/table-of-contents",
-  "description": "Generate table of contents for PDF documents in Svelte.",
+  "description": "Generate table of contents for pdfsvex.",
   "repo_url": "",
-  "author": "manuel3108",
-  "downloads": 4,
+  "authors": [
+    "manuel3108"
+  ],
+  "downloads": 88,
   "dependents": 1,
   "updated": "2021-07-04T12:13:41.431Z",
   "tags": [

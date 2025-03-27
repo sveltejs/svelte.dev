@@ -1,10 +1,12 @@
 {
   "name": "svelte-emoji",
-  "description": "Add accessible emoji component to Svelte applications.",
+  "description": "Create accessible Emoji components for Svelte apps.",
   "repo_url": "https://github.com/seanmcp/svelte-emoji",
-  "author": "Sean McPherson",
+  "authors": [
+    "seanmcp"
+  ],
   "homepage": "https://github.com/seanmcp/svelte-emoji#readme",
-  "downloads": 11,
+  "downloads": 24,
   "dependents": 0,
   "updated": "2020-01-06T11:45:20.058Z",
   "tags": [

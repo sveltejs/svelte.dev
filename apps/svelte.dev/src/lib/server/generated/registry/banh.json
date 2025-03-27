@@ -1,0 +1,18 @@
+{
+  "name": "banh",
+  "description": "Integrate build step for frontend with Bun.",
+  "repo_url": "https://github.com/daniel-le97/banh",
+  "authors": [
+    "cocobob"
+  ],
+  "homepage": "https://github.com/daniel-le97/banh#readme",
+  "downloads": 12,
+  "dependents": 0,
+  "updated": "2023-09-18T03:39:49.418Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 1
+}

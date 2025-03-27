@@ -1,13 +1,16 @@
 {
   "name": "sveltekit-superactions",
-  "description": "Call server-side functions from SvelteKit client.",
+  "description": "Call server code from SvelteKit client components.",
   "repo_url": "https://github.com/kumpmati/sveltekit-superactions",
-  "author": "kumpmati",
+  "authors": [
+    "kumpmati"
+  ],
   "homepage": "https://github.com/kumpmati/sveltekit-superactions#readme",
-  "downloads": 16,
+  "downloads": 1,
   "dependents": 0,
   "updated": "2024-10-20T20:08:12.370Z",
   "tags": [
+    "server",
     "utility"
   ],
   "svelte5": true,

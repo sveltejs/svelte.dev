@@ -1,10 +1,12 @@
 {
   "name": "utilcomps",
-  "description": "Offers utilitarian Svelte components for various UI needs.",
+  "description": "Build utilitarian Svelte components.",
   "repo_url": "https://github.com/albingroen/utilcomps",
-  "author": "Albin Groen",
+  "authors": [
+    "albingroen"
+  ],
   "homepage": "https://utilcomps.vercel.app/",
-  "downloads": 1,
+  "downloads": 71,
   "dependents": 0,
   "updated": "2022-06-02T12:28:58.369Z",
   "tags": [

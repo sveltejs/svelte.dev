@@ -1,8 +1,10 @@
 {
   "name": "@nosnibor89/svelte-client-sdk",
-  "description": "Svelte LaunchDarkly SDK.",
+  "description": "Svelte LaunchDarkly SDK for feature flagging.",
   "repo_url": "https://github.com/launchdarkly/js-core",
-  "author": "nosnibor89",
+  "authors": [
+    "nosnibor89"
+  ],
   "homepage": "https://github.com/launchdarkly/js-core/tree/main/packages/sdk/svelte",
   "downloads": 28,
   "dependents": 0,

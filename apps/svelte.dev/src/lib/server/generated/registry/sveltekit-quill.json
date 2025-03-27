@@ -1,10 +1,12 @@
 {
   "name": "sveltekit-quill",
-  "description": "Integrates Quill.js rich text editor into SvelteKit projects.",
+  "description": "Integrate Quill.js rich text editor into SvelteKit projects.",
   "repo_url": "",
-  "author": "Natumanya Guy Muriro",
+  "authors": [
+    "natumanyaguy"
+  ],
   "homepage": "https://github.com/NatumanyaGuy/sveltekit-quill.git",
-  "downloads": 3,
+  "downloads": 5,
   "dependents": 0,
   "updated": "2023-08-01T13:01:10.449Z",
   "tags": [

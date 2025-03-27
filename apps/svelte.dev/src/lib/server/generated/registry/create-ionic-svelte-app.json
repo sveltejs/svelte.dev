@@ -1,10 +1,12 @@
 {
   "name": "create-ionic-svelte-app",
-  "description": "Create Ionic applications within SvelteKit projects.",
+  "description": "Create Ionic Svelte apps with SvelteKit.",
   "repo_url": "https://github.com/Tommertom/svelte-ionic-npm",
-  "author": "Tommertom",
+  "authors": [
+    "tommertom"
+  ],
   "homepage": "https://ionic-svelte.firebaseapp.com",
-  "downloads": 25,
+  "downloads": 40,
   "dependents": 0,
   "updated": "2024-08-04T12:00:09.160Z",
   "tags": [

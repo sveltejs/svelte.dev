@@ -2,7 +2,9 @@
   "name": "svelte-media-query",
   "description": "Implement CSS media queries within Svelte components.",
   "repo_url": "https://github.com/xelaok/svelte-media-query",
-  "author": "Alexander Kozlovich",
+  "authors": [
+    "xelaok"
+  ],
   "homepage": "https://github.com/xelaok/svelte-media-query#readme",
   "downloads": 665,
   "dependents": 2,

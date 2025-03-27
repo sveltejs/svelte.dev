@@ -1,10 +1,13 @@
 {
   "name": "svelte-routing",
-  "description": "Provides declarative routing for Svelte with SSR support.",
+  "description": "Declarative Svelte routing library with SSR support.",
   "repo_url": "https://github.com/EmilTholin/svelte-routing",
-  "author": "Emil Tholin @EmilTholin",
+  "authors": [
+    "tholle",
+    "krishnatorque"
+  ],
   "homepage": "https://github.com/EmilTholin/svelte-routing#readme",
-  "downloads": 12939,
+  "downloads": 13688,
   "dependents": 20,
   "updated": "2024-05-05T16:56:57.134Z",
   "tags": [
@@ -12,5 +15,5 @@
   ],
   "svelte5": false,
   "runes": false,
-  "github_stars": 2041
+  "github_stars": 2042
 }

@@ -1,14 +1,15 @@
 {
   "name": "svelte-hypercommands",
-  "description": "Build Headless Hyper Palette for Svelte apps.",
+  "description": "Provide headless command palette for Svelte apps.",
   "repo_url": "https://github.com/josu-dev/svelte-hypercommands",
-  "author": "j_josu",
+  "authors": [
+    "j_josu"
+  ],
   "homepage": "https://github.com/josu-dev/svelte-hypercommands#readme",
-  "downloads": 0,
+  "downloads": 1,
   "dependents": 0,
   "updated": "2024-04-10T16:18:36.263Z",
   "tags": [
-    "ui",
     "utility"
   ],
   "svelte5": false,

@@ -1,14 +1,17 @@
 {
   "name": "@lionixevolve/svelte-virtual-list-enhanced",
-  "description": "Implement virtual list component for Svelte apps.",
+  "description": "Implements virtual lists with drag-and-drop functionality in Svelte.",
   "repo_url": "https://github.com/lionixevolve/svelte-virtual-list-enhanced",
-  "author": "Rich Harris + tje3d + Lionix folks",
+  "authors": [
+    "cumanacr",
+    "mrbarletta"
+  ],
   "homepage": "https://github.com/lionixevolve/svelte-virtual-list-enhanced#readme",
-  "downloads": 1,
+  "downloads": 12,
   "dependents": 0,
   "updated": "2020-09-30T01:37:07.318Z",
   "tags": [
-    "utility"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

@@ -1,10 +1,16 @@
 {
   "name": "beyond",
-  "description": "Full Stack Universal Typescript Framework for building web apps.",
+  "description": "Full Stack Universal Typescript Framework.",
   "repo_url": "https://github.com/beyondjs/engine",
-  "author": "BeyondJS",
+  "authors": [
+    "hello-beyond",
+    "jircdeveloper",
+    "ftovar8",
+    "enriquebox",
+    "jr0driguez"
+  ],
   "homepage": "https://github.com/beyondjs/engine#readme",
-  "downloads": 317,
+  "downloads": 610,
   "dependents": 39,
   "updated": "2025-02-17T19:21:26.766Z",
   "tags": [

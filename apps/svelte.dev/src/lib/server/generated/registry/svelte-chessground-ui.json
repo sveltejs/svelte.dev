@@ -1,8 +1,10 @@
 {
   "name": "svelte-chessground-ui",
-  "description": "Provides Svelte wrapper for Chessground chess UI.",
+  "description": "Svelte wrapper for Chessground chess UI.",
   "repo_url": "",
-  "author": "agelas",
+  "authors": [
+    "agelas"
+  ],
   "homepage": "https://github.com/agelas/svelte-chessground-ui#",
   "downloads": 1,
   "dependents": 0,

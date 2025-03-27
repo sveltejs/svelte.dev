@@ -1,10 +1,12 @@
 {
   "name": "svelte-chrome-storage",
-  "description": "Abstract Svelte stores with Chrome extension storage.",
+  "description": "Synchronize Svelte stores with Chrome extension storage.",
   "repo_url": "https://github.com/shaun-wild/svelte-chrome-storage",
-  "author": "Shaun Wild",
+  "authors": [
+    "shaunwild97"
+  ],
   "homepage": "https://github.com/shaun-wild/svelte-chrome-storage#readme",
-  "downloads": 0,
+  "downloads": 2,
   "dependents": 0,
   "updated": "2022-07-17T07:48:22.394Z",
   "tags": [

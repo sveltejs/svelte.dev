@@ -1,10 +1,12 @@
 {
   "name": "svelte-crossword",
-  "description": "Create crossword puzzle component for Svelte.",
+  "description": "Generate crossword puzzles with customizable themes in Svelte.",
   "repo_url": "https://github.com/russellgoldenberg/svelte-crossword",
-  "author": "russell goldenberg",
+  "authors": [
+    "russellsamora"
+  ],
   "homepage": "https://github.com/russellgoldenberg/svelte-crossword#readme",
-  "downloads": 15,
+  "downloads": 35,
   "dependents": 0,
   "updated": "2020-11-30T14:42:53.271Z",
   "tags": [

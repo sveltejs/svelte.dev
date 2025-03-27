@@ -1,14 +1,15 @@
 {
   "name": "@kematzy/svelte",
-  "description": "Provide collection of personal Svelte components.",
+  "description": "Create personal Svelte UI components for various projects.",
   "repo_url": "https://github.com/kematzy/kematzy-svelte",
-  "author": "Kematzy",
+  "authors": [
+    "kematzy"
+  ],
   "homepage": "https://github.com/kematzy/kematzy-svelte#readme",
-  "downloads": 1,
+  "downloads": 0,
   "dependents": 0,
   "updated": "2023-07-03T06:16:16.713Z",
   "tags": [
-    "component-library",
     "ui"
   ],
   "svelte5": false,

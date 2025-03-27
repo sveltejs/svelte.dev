@@ -1,0 +1,18 @@
+{
+  "name": "analysis-renderer",
+  "description": "Create dashboard cards with Svelte and Vite.",
+  "repo_url": "https://github.com/miyokoLeeM/vite-svelte-comps",
+  "authors": [
+    "miyoko0505"
+  ],
+  "homepage": "https://github.com/miyokoLeeM/vite-svelte-comps#readme",
+  "downloads": 7,
+  "dependents": 0,
+  "updated": "2023-03-24T08:00:51.703Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 2
+}

@@ -1,15 +1,16 @@
 {
   "name": "svelte-adapter-deno",
-  "description": "Generate standalone Deno server for SvelteKit applications.",
+  "description": "Generate a standalone Deno server for SvelteKit apps.",
   "repo_url": "https://github.com/pluvial/svelte-adapter-deno",
-  "author": "jpaquim",
+  "authors": [
+    "jpaquim"
+  ],
   "homepage": "https://github.com/pluvial/svelte-adapter-deno#readme",
-  "downloads": 207,
+  "downloads": 167,
   "dependents": 0,
   "updated": "2024-08-09T00:25:14.026Z",
   "tags": [
-    "adapter",
-    "server"
+    "adapter"
   ],
   "svelte5": false,
   "runes": false,

@@ -1,8 +1,10 @@
 {
   "name": "svelte-blueprint",
-  "description": "Generates documentation for Svelte components.",
+  "description": "Generate documentation for Svelte components.",
   "repo_url": "svelte-blueprint",
-  "author": "everitosan",
+  "authors": [
+    "evesan"
+  ],
   "downloads": 1,
   "dependents": 0,
   "updated": "2024-09-10T18:37:19.640Z",

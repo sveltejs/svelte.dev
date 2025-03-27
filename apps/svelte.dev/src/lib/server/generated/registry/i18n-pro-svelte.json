@@ -1,10 +1,12 @@
 {
   "name": "@i18n-pro/svelte",
-  "description": "Provides internationalization tools for Svelte applications.",
+  "description": "Internationalization tool for Svelte with automatic translation.",
   "repo_url": "",
-  "author": "Eyelly Wu",
+  "authors": [
+    "eyelly"
+  ],
   "homepage": "https://github.com/i18n-pro/svelte",
-  "downloads": 4,
+  "downloads": 5,
   "dependents": 0,
   "updated": "2024-04-29T08:05:36.290Z",
   "tags": [

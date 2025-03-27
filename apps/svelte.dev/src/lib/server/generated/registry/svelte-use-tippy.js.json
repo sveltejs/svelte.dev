@@ -1,14 +1,16 @@
 {
   "name": "svelte-use-tippy.js",
-  "description": "Integrates tippy.js tooltips within Svelte components.",
+  "description": "Integrates tippy.js tooltips into Svelte components.",
   "repo_url": "https://github.com/wareset/svelte-use-tippy.js",
-  "author": "wareset",
+  "authors": [
+    "nk12"
+  ],
   "homepage": "https://github.com/wareset/svelte-use-tippy.js#readme",
-  "downloads": 1,
+  "downloads": 9,
   "dependents": 0,
   "updated": "2021-05-27T22:15:38.302Z",
   "tags": [
-    "ui"
+    "utility"
   ],
   "svelte5": false,
   "runes": false,

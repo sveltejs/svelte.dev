@@ -1,10 +1,12 @@
 {
   "name": "s-comp-core",
-  "description": "Provide reusable Svelte UI components.",
+  "description": "Provides various Svelte UI components.",
   "repo_url": "https://github.com/ghjang/s-comp-core",
-  "author": "ghjang",
+  "authors": [
+    "ghjang"
+  ],
   "homepage": "https://github.com/ghjang/s-comp-core#readme",
-  "downloads": 1,
+  "downloads": 6,
   "dependents": 0,
   "updated": "2024-09-24T06:56:40.580Z",
   "tags": [

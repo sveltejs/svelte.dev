@@ -2,11 +2,13 @@
   "name": "svelte-time-series",
   "description": "Display time series data with Svelte components.",
   "repo_url": "https://github.com/arlac77/svelte-time-series",
-  "author": "arlac77",
+  "authors": [
+    "arlac77"
+  ],
   "homepage": "https://github.com/arlac77/svelte-time-series#readme",
-  "downloads": 72,
+  "downloads": 98,
   "dependents": 0,
-  "updated": "2025-03-14T18:05:39.583Z",
+  "updated": "2025-03-26T18:26:26.886Z",
   "tags": [
     "ui"
   ],

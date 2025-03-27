@@ -1,8 +1,10 @@
 {
   "name": "svelte-free-icons-sharp-solid",
-  "description": "Use free icon components in Svelte projects.",
+  "description": "Provides Svelte icon components for free-icons.",
   "repo_url": "https://github.com/free-icons/svelte-free-icons",
-  "author": "Antonio \"profmancusoa\" Mancuso",
+  "authors": [
+    "profmancusoa"
+  ],
   "homepage": "https://github.com/free-icons/svelte-free-icons#readme",
   "downloads": 1,
   "dependents": 0,

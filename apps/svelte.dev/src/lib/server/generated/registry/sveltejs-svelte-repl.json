@@ -1,10 +1,15 @@
 {
   "name": "@sveltejs/svelte-repl",
-  "description": "Component for the Svelte website's REPL.",
+  "description": "Component used on the Svelte website for the REPL.",
   "repo_url": "https://github.com/sveltejs/svelte-repl",
-  "author": "Rich Harris",
+  "authors": [
+    "rich_harris",
+    "svelte-admin",
+    "conduitry",
+    "dominik_g"
+  ],
   "homepage": "https://github.com/sveltejs/svelte-repl#readme",
-  "downloads": 45,
+  "downloads": 246,
   "dependents": 0,
   "updated": "2021-12-02T20:58:48.819Z",
   "tags": [

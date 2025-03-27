@@ -1,10 +1,12 @@
 {
   "name": "kenova-svelte",
-  "description": "Provides Kenova framework component library for Svelte 5.",
+  "description": "Provide Kenova framework component library for Svelte 5.",
   "repo_url": "",
-  "author": "Frank Th. van de Ven and Sectosoft BV",
+  "authors": [
+    "sysdev-nl"
+  ],
   "homepage": "https://sysdev.nl",
-  "downloads": 0,
+  "downloads": 1,
   "dependents": 0,
   "updated": "2024-07-02T13:02:56.979Z",
   "tags": [

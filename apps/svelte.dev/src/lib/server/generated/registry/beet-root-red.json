@@ -1,10 +1,12 @@
 {
   "name": "beet-root-red",
-  "description": "Provides a Svelte component library.",
+  "description": "Offer Svelte component library.",
   "repo_url": "https://github.com/sudhanshuydv11/beet-root-red",
-  "author": "Sudhanshu Yadav",
+  "authors": [
+    "sudhanshuydv11"
+  ],
   "homepage": "https://github.com/sudhanshuydv11/beet-root-red#readme",
-  "downloads": 56,
+  "downloads": 4,
   "dependents": 0,
   "updated": "2025-03-11T16:15:54.794Z",
   "tags": [

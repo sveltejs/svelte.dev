@@ -1,8 +1,13 @@
 {
   "name": "@boxyhq/svelte-ui",
-  "description": "UI components from BoxyHQ for enterprise features.",
+  "description": "Provides UI components for BoxyHQ enterprise features.",
   "repo_url": "",
-  "author": "deepakp",
+  "authors": [
+    "deepakp",
+    "utkarsh_boxyhq",
+    "aswin_boxyhq",
+    "kiranboxyhq"
+  ],
   "homepage": "https://github.com/boxyhq/ui",
   "downloads": 111,
   "dependents": 0,

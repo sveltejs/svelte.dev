@@ -1,8 +1,10 @@
 {
   "name": "@omicrxn/mercury",
-  "description": "Animate DOM elements with AnimeJS using Svelte actions.",
+  "description": "Animate DOM elements with Svelte actions using AnimeJS.",
   "repo_url": "https://github.com/Omicrxn/mercury",
-  "author": "Alejandro Avila",
+  "authors": [
+    "omicrxn-dev"
+  ],
   "homepage": "https://github.com/Omicrxn/mercury#readme",
   "downloads": 3,
   "dependents": 0,

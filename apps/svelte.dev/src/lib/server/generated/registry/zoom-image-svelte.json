@@ -1,8 +1,10 @@
 {
   "name": "@zoom-image/svelte",
-  "description": "Integrate zoom image functionality into Svelte applications.",
+  "description": "Zoom images on hover, move, wheel, or pinch in Svelte apps.",
   "repo_url": "https://github.com/willnguyen1312/zoom-image",
-  "author": "Nam Nguyen",
+  "authors": [
+    "namnguyen131292"
+  ],
   "homepage": "https://willnguyen1312.github.io/zoom-image",
   "downloads": 2229,
   "dependents": 0,

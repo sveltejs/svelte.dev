@@ -1,10 +1,12 @@
 {
   "name": "@whoisyeshua-svelte/modal-custom-element",
-  "description": "Create modal custom elements with Svelte.",
+  "description": "Creates modal custom element with Svelte.",
   "repo_url": "https://github.com/whoisYeshua/svelte-modal-custom-element",
-  "author": "whoisYeshua",
+  "authors": [
+    "whoisyeshua"
+  ],
   "homepage": "https://github.com/whoisYeshua/svelte-modal-custom-element#readme",
-  "downloads": 0,
+  "downloads": 39,
   "dependents": 0,
   "updated": "2023-10-26T18:23:44.013Z",
   "tags": [

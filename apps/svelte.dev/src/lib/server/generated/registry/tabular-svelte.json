@@ -1,10 +1,12 @@
 {
   "name": "tabular-svelte",
-  "description": "Display tabular data with sort and scroll controls.",
+  "description": "Displays tabular data within Svelte components.",
   "repo_url": "https://github.com/jdmedlock/tabular-svelte",
-  "author": "Jim D. Medlock",
+  "authors": [
+    "jdmedlock"
+  ],
   "homepage": "https://github.com/jdmedlock/tabular-svelte#readme",
-  "downloads": 1,
+  "downloads": 25,
   "dependents": 0,
   "updated": "2021-01-24T00:15:21.324Z",
   "tags": [

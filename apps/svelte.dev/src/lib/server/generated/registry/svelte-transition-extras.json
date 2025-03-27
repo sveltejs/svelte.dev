@@ -1,0 +1,17 @@
+{
+  "name": "svelte-transition-extras",
+  "description": "Enhance Svelte transitions with extra control and effects.",
+  "repo_url": "",
+  "authors": [
+    "ovao"
+  ],
+  "homepage": "https://github.com/boatilus/svelte-transition-extras",
+  "downloads": 11,
+  "dependents": 0,
+  "updated": "2022-01-11T00:54:54.782Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

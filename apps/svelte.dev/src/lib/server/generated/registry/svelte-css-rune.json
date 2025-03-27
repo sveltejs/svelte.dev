@@ -1,14 +1,16 @@
 {
   "name": "svelte-css-rune",
-  "description": "Pass CSS classes between Svelte components.",
+  "description": "Pass CSS classes between Svelte components using a rune.",
   "repo_url": "https://github.com/JanNitschke/svelte-css-rune",
-  "author": "Jan Nitschke",
+  "authors": [
+    "jannitschke"
+  ],
   "homepage": "https://github.com/JanNitschke/svelte-css-rune#readme",
-  "downloads": 19,
+  "downloads": 2,
   "dependents": 0,
   "updated": "2025-01-20T23:39:23.346Z",
   "tags": [
-    "utility"
+    "preprocessor"
   ],
   "svelte5": true,
   "runes": false,

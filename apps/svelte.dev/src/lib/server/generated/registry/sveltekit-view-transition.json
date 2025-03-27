@@ -1,14 +1,17 @@
 {
   "name": "sveltekit-view-transition",
-  "description": "Simplify view transitions in SvelteKit.",
+  "description": "Simplified view transition API for SvelteKit.",
   "repo_url": "https://github.com/paoloricciuti/sveltekit-view-transition",
-  "author": "Paolo Ricciuti",
+  "authors": [
+    "pablopang"
+  ],
   "homepage": "https://github.com/paoloricciuti/sveltekit-view-transition#readme",
-  "downloads": 638,
+  "downloads": 713,
   "dependents": 0,
   "updated": "2023-12-16T09:49:10.221Z",
   "tags": [
-    "ui"
+    "ui",
+    "adapter"
   ],
   "svelte5": true,
   "runes": false,

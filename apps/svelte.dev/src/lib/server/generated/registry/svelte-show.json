@@ -1,10 +1,12 @@
 {
   "name": "svelte-show",
-  "description": "Conditionally show/hide elements without destroying Svelte components.",
+  "description": "Hides elements without destroying components, retains in DOM.",
   "repo_url": "https://github.com/Foxeye-Rinx/svelte-show",
-  "author": "foxeye.rinx",
+  "authors": [
+    "foxeye.rinx"
+  ],
   "homepage": "https://github.com/Foxeye-Rinx/svelte-show#readme",
-  "downloads": 3,
+  "downloads": 5,
   "dependents": 0,
   "updated": "2022-09-04T08:14:42.658Z",
   "tags": [

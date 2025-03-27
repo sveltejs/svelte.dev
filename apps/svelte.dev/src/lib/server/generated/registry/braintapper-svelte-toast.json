@@ -2,9 +2,11 @@
   "name": "braintapper-svelte-toast",
   "description": "Create toast pop-up notifications in Svelte applications.",
   "repo_url": "https://github.com/braintapper/braintapper-svelte-toast",
-  "author": "braintapper",
+  "authors": [
+    "braintapper"
+  ],
   "homepage": "https://github.com/braintapper/braintapper-svelte-toast#readme",
-  "downloads": 0,
+  "downloads": 7,
   "dependents": 0,
   "updated": "2020-12-18T22:39:38.766Z",
   "tags": [

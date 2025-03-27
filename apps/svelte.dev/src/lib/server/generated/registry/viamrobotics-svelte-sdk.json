@@ -1,0 +1,24 @@
+{
+  "name": "@viamrobotics/svelte-sdk",
+  "description": "Build Svelte apps with Viam, providing reactive SDK layer.",
+  "repo_url": "https://github.com/viamrobotics/viam-svelte-sdk",
+  "authors": [
+    "cheukt",
+    "mcous",
+    "stevebriskin",
+    "viambot",
+    "micheal.parks",
+    "mpviam",
+    "njooma"
+  ],
+  "homepage": "https://github.com/viamrobotics/viam-svelte-sdk#readme",
+  "downloads": 88,
+  "dependents": 0,
+  "updated": "2025-03-24T18:25:50.465Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 0
+}

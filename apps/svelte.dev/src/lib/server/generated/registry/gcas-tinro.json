@@ -1,10 +1,12 @@
 {
   "name": "@gcas/tinro",
-  "description": "Tiny, declarative router for Svelte web applications.",
+  "description": "Provides a tiny, declarative router for Svelte applications.",
   "repo_url": "https://github.com/gcasro/tinro",
-  "author": "Alexey Schebelev",
+  "authors": [
+    "vpalos"
+  ],
   "homepage": "https://github.com/gcasro/tinro#readme",
-  "downloads": 4,
+  "downloads": 6,
   "dependents": 0,
   "updated": "2024-12-31T10:48:56.421Z",
   "tags": [

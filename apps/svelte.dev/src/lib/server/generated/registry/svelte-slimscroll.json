@@ -1,10 +1,12 @@
 {
   "name": "svelte-slimscroll",
-  "description": "Transform divs into scrollable areas with scrollbars.",
+  "description": "Transforms any div into scrollable area with scrollbar.",
   "repo_url": "https://github.com/MelihAltintas/svelte-slimscroll",
-  "author": "Melih Altıntaş",
+  "authors": [
+    "melihaltintas"
+  ],
   "homepage": "https://github.com/MelihAltintas/svelte-slimscroll#readme",
-  "downloads": 51,
+  "downloads": 66,
   "dependents": 0,
   "updated": "2020-11-07T19:35:47.464Z",
   "tags": [

@@ -1,9 +1,11 @@
 {
   "name": "svelte-copy-to-clipboard",
-  "description": "Add copy-to-clipboard functionality to Svelte components.",
+  "description": "Copy text to clipboard in Svelte apps.",
   "repo_url": "",
-  "author": "Henrique Araujo",
-  "downloads": 282,
+  "authors": [
+    "henriquecaraujo"
+  ],
+  "downloads": 244,
   "dependents": 5,
   "updated": "2020-05-25T23:57:15.498Z",
   "tags": [

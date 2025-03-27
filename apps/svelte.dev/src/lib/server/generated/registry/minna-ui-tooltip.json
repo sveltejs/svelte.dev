@@ -1,12 +1,17 @@
 {
   "name": "@minna-ui/tooltip",
+  "description": "Create fast, friendly tooltips for Svelte applications.",
   "repo_url": "https://github.com/WeAreGenki/minna-ui",
-  "author": "Max Milton",
+  "authors": [
+    "maxmilton"
+  ],
   "homepage": "https://wearegenki.github.io/minna-ui",
-  "downloads": 0,
+  "downloads": 181,
   "dependents": 1,
   "updated": "2020-03-24T19:40:15.486Z",
-  "tags": [],
+  "tags": [
+    "ui"
+  ],
   "svelte5": false,
   "runes": false,
   "github_stars": 87

@@ -1,13 +1,15 @@
 {
   "name": "@xdn/svelte",
-  "description": "XDN adapter for Svelte.",
+  "description": "Prefetches pages from Moovweb XDN edge cache.",
   "repo_url": "",
-  "author": "Moovweb",
-  "downloads": 1954,
+  "authors": [
+    "moovweb-admin"
+  ],
+  "downloads": 5789,
   "dependents": 0,
   "updated": "2022-01-11T10:10:46.853Z",
   "tags": [
-    "adapter"
+    "server"
   ],
   "svelte5": false,
   "runes": false

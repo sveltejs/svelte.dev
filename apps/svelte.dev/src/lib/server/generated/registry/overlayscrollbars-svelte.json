@@ -1,10 +1,12 @@
 {
   "name": "overlayscrollbars-svelte",
-  "description": "Integrate OverlayScrollbars into Svelte components.",
+  "description": "Provides custom scrollbars for Svelte components.",
   "repo_url": "https://github.com/KingSora/OverlayScrollbars",
-  "author": "Rene Haas | KingSora",
+  "authors": [
+    "kingsora"
+  ],
   "homepage": "https://kingsora.github.io/OverlayScrollbars",
-  "downloads": 1116,
+  "downloads": 1253,
   "dependents": 1,
   "updated": "2025-02-19T13:28:21.987Z",
   "tags": [
@@ -12,5 +14,5 @@
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 4045
+  "github_stars": 4047
 }

@@ -1,15 +1,17 @@
 {
   "name": "tech-radar-editor",
-  "description": "Create and edit tech radars using Svelte web component.",
+  "description": "Create and edit technology radars with Svelte web component.",
   "repo_url": "https://github.com/jcreek/Tech-Radar-Editor",
-  "author": "Josh Creek",
+  "authors": [
+    "jcreek"
+  ],
   "homepage": "https://github.com/jcreek/Tech-Radar-Editor#readme",
-  "downloads": 2,
+  "downloads": 10,
   "dependents": 0,
   "updated": "2024-09-27T20:36:10.012Z",
   "tags": [
-    "tooling",
-    "ui"
+    "ui",
+    "tooling"
   ],
   "svelte5": false,
   "runes": false,

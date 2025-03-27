@@ -2,9 +2,11 @@
   "name": "@svelte-put/async-stack",
   "description": "Build type-safe, headless async component stack.",
   "repo_url": "https://github.com/vnphanquang/svelte-put",
-  "author": "Quang Phan",
+  "authors": [
+    "vnphanquang"
+  ],
   "homepage": "https://svelte-put.vnphanquang.com/docs/async-stack",
-  "downloads": 96,
+  "downloads": 48,
   "dependents": 0,
   "updated": "2024-10-25T05:17:14.841Z",
   "tags": [
@@ -12,5 +14,5 @@
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 909
+  "github_stars": 911
 }

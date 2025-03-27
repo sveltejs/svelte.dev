@@ -1,8 +1,10 @@
 {
   "name": "svelte-pan-zoom",
-  "description": "Create canvas pan and zoom action for Svelte.",
+  "description": "Implement pan and zoom functionality for canvas elements in Svelte.",
   "repo_url": "https://github.com/captaincodeman/svelte-pan-zoom",
-  "author": "Simon Green",
+  "authors": [
+    "captaincodeman"
+  ],
   "homepage": "https://captaincodeman.github.io/svelte-pan-zoom/",
   "downloads": 565,
   "dependents": 1,

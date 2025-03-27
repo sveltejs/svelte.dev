@@ -1,0 +1,18 @@
+{
+  "name": "p44",
+  "description": "Expose SVG icons crafted using P45 for Svelte.",
+  "repo_url": "https://github.com/PaulioRandall/p44",
+  "authors": [
+    "pauliorandall"
+  ],
+  "homepage": "https://github.com/PaulioRandall/p44#readme",
+  "downloads": 10,
+  "dependents": 0,
+  "updated": "2024-04-08T21:55:58.001Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

@@ -1,15 +1,16 @@
 {
   "name": "svelte-hash",
-  "description": "Manages URL hash/fragment easily in Svelte applications.",
+  "description": "Manage URL hash/fragment easily for Svelte applications.",
   "repo_url": "https://github.com/Bellisario/svelte-hash",
-  "author": "Bellisario",
+  "authors": [
+    "bellisario"
+  ],
   "homepage": "https://github.com/Bellisario/hostname-patcher#readme",
-  "downloads": 3,
+  "downloads": 11,
   "dependents": 0,
   "updated": "2024-06-29T21:23:12.646Z",
   "tags": [
-    "utility",
-    "router"
+    "utility"
   ],
   "svelte5": true,
   "runes": false,

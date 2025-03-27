@@ -2,13 +2,19 @@
   "name": "svelte-eslint-parser",
   "description": "Parses Svelte code for ESLint.",
   "repo_url": "https://github.com/sveltejs/svelte-eslint-parser",
-  "author": "Yosuke Ota",
+  "authors": [
+    "conduitry",
+    "ota-meshi",
+    "svelte-admin",
+    "baseballyama"
+  ],
   "homepage": "https://github.com/sveltejs/svelte-eslint-parser#readme",
-  "downloads": 479488,
-  "dependents": 74,
-  "updated": "2025-03-17T00:23:28.789Z",
+  "downloads": 475671,
+  "dependents": 75,
+  "updated": "2025-03-27T01:49:26.272Z",
   "tags": [
-    "tooling"
+    "tooling",
+    "preprocessor"
   ],
   "svelte5": true,
   "runes": false,

@@ -1,0 +1,18 @@
+{
+  "name": "@robotpajamas/svelte-heroicons",
+  "description": "Use Heroicons in Svelte applications.",
+  "repo_url": "https://github.com/robotpajamas/svelte-heroicons",
+  "authors": [
+    "sureshjoshi"
+  ],
+  "homepage": "https://github.com/robotpajamas/svelte-heroicons",
+  "downloads": 4,
+  "dependents": 0,
+  "updated": "2023-02-21T05:06:24.720Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 2
+}

@@ -1,10 +1,12 @@
 {
   "name": "svelte-query-params",
-  "description": "Manage query parameters reactively in Svelte 5 applications.",
+  "description": "Manage query parameters reactively in Svelte applications.",
   "repo_url": "https://github.com/Ernxst/svelte-query-params",
-  "author": "Ernest Nkansah-Badu",
+  "authors": [
+    "ernxst"
+  ],
   "homepage": "https://github.com/Ernxst/svelte-query-params",
-  "downloads": 42,
+  "downloads": 65,
   "dependents": 0,
   "updated": "2025-02-24T18:47:06.870Z",
   "tags": [

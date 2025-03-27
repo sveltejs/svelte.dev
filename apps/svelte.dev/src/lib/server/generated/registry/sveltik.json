@@ -1,9 +1,12 @@
 {
   "name": "sveltik",
-  "description": "Build forms with validation in Svelte applications.",
+  "description": "Build forms with validation in Svelte, inspired by Formik.",
   "repo_url": "https://github.com/nathancahill/sveltik",
-  "author": "Nathan Cahill",
-  "downloads": 23,
+  "authors": [
+    "nathancahill",
+    "mapgrid"
+  ],
+  "downloads": 82,
   "dependents": 0,
   "updated": "2020-12-07T10:36:34.057Z",
   "tags": [

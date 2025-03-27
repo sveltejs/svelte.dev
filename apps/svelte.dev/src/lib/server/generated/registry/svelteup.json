@@ -1,10 +1,12 @@
 {
   "name": "svelteup",
-  "description": "Bundle Svelte components as web components with esbuild.",
+  "description": "Bundles Svelte components as web components.",
   "repo_url": "https://github.com/brandonxiang/svelteup",
-  "author": "brandonxiang",
+  "authors": [
+    "brandonxiang"
+  ],
   "homepage": "https://github.com/brandonxiang/svelteup#readme",
-  "downloads": 5,
+  "downloads": 17,
   "dependents": 0,
   "updated": "2024-11-20T08:51:41.979Z",
   "tags": [

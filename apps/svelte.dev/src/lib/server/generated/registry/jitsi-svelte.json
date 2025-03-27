@@ -2,12 +2,14 @@
   "name": "jitsi-svelte",
   "description": "Provides Svelte stores for lib-jitsi-meet.",
   "repo_url": "https://github.com/relm-us/jitsi-svelte",
-  "author": "Duane Johnson",
-  "downloads": 1,
+  "authors": [
+    "canadaduane"
+  ],
+  "downloads": 18,
   "dependents": 0,
   "updated": "2021-02-25T04:37:59.578Z",
   "tags": [
-    "integration"
+    "utility"
   ],
   "svelte5": false,
   "runes": false,

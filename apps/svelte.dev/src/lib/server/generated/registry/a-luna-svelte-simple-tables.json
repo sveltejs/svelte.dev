@@ -1,10 +1,12 @@
 {
   "name": "@a-luna/svelte-simple-tables",
-  "description": "Create accessible, sortable, paginated table components.",
+  "description": "Create accessible, sortable, paginated tables in Svelte.",
   "repo_url": "https://github.com/a-luna/svelte-simple-tables",
-  "author": "Aaron Luna",
+  "authors": [
+    "a-luna"
+  ],
   "homepage": "https://github.com/a-luna/svelte-simple-tables",
-  "downloads": 83,
+  "downloads": 14,
   "dependents": 0,
   "updated": "2022-07-19T09:27:18.684Z",
   "tags": [

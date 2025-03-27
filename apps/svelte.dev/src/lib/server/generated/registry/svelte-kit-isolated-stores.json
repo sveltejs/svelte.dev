@@ -1,8 +1,10 @@
 {
   "name": "svelte-kit-isolated-stores",
-  "description": "Use stores in SvelteKit during SSR without modifying server state.",
+  "description": "Isolate SvelteKit stores during SSR, prevent server state modification.",
   "repo_url": "https://gitlab.com/x3ro/svelte-kit-isolated-stores",
-  "author": "Björn Richter",
+  "authors": [
+    "x3ro"
+  ],
   "homepage": "https://gitlab.com/x3ro/svelte-kit-isolated-stores#readme",
   "downloads": 3,
   "dependents": 0,

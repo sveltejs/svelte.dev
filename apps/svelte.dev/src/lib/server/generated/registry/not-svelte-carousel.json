@@ -1,10 +1,12 @@
 {
   "name": "not-svelte-carousel",
-  "description": "Implements carousel/slider component for Svelte.",
+  "description": "Implement carousel/slider component for Svelte.",
   "repo_url": "https://github.com/mzaini30/not-svelte-carousel",
-  "author": "mzaini30",
+  "authors": [
+    "mzaini30"
+  ],
   "homepage": "https://github.com/mzaini30/not-svelte-carousel#readme",
-  "downloads": 2,
+  "downloads": 7,
   "dependents": 0,
   "updated": "2021-04-01T09:51:43.008Z",
   "tags": [

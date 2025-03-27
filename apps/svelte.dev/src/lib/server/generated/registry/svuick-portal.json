@@ -1,0 +1,16 @@
+{
+  "name": "@svuick/portal",
+  "description": "Create portal components for Svelte applications.",
+  "repo_url": "https://gitlab.com/david-plugge/svuick",
+  "authors": [
+    "davidplugge"
+  ],
+  "downloads": 18,
+  "dependents": 2,
+  "updated": "2022-02-03T11:38:58.010Z",
+  "tags": [
+    "dom"
+  ],
+  "svelte5": false,
+  "runes": false
+}

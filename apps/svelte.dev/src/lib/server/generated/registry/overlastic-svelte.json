@@ -1,0 +1,18 @@
+{
+  "name": "@overlastic/svelte",
+  "description": "Create modal, dialog, and popup components for Svelte.",
+  "repo_url": "https://github.com/hairyf/overlastic",
+  "authors": [
+    "tuimao"
+  ],
+  "homepage": "https://github.com/hairyf/overlastic#readme",
+  "downloads": 7,
+  "dependents": 0,
+  "updated": "2024-08-02T13:48:46.474Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 65
+}

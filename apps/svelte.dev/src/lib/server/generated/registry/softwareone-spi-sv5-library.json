@@ -1,8 +1,11 @@
 {
   "name": "@softwareone/spi-sv5-library",
-  "description": "Provides Svelte components for SoftwareOne SPI projects.",
+  "description": "Reusable Svelte components for SoftwareOne SPI projects.",
   "repo_url": "",
-  "author": "Frederik Lefevre",
+  "authors": [
+    "fslefevre",
+    "sergio.londono"
+  ],
   "downloads": 239,
   "dependents": 0,
   "updated": "2025-03-13T16:19:25.828Z",

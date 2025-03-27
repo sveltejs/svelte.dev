@@ -1,10 +1,12 @@
 {
   "name": "yrv",
-  "description": "Create routes for Svelte apps.",
+  "description": "Provides routing capabilities for Svelte applications.",
   "repo_url": "https://github.com/pateketrueke/yrv",
-  "author": "Alvaro Cabrera",
+  "authors": [
+    "pateketrueke"
+  ],
   "homepage": "https://github.com/pateketrueke/yrv",
-  "downloads": 289,
+  "downloads": 242,
   "dependents": 1,
   "updated": "2022-06-26T18:57:46.496Z",
   "tags": [

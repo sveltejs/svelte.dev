@@ -2,9 +2,17 @@
   "name": "@unovis/svelte",
   "description": "Modular data visualization framework for Svelte.",
   "repo_url": "https://github.com/f5/unovis",
-  "author": "Rebecca Bol, F5 Inc.",
+  "authors": [
+    "rokotyan",
+    "nikita-rokotyan-f5",
+    "rmauer",
+    "caabernathy",
+    "curran",
+    "lee00678",
+    "rebeccabol"
+  ],
   "homepage": "https://unovis.dev",
-  "downloads": 6174,
+  "downloads": 8663,
   "dependents": 1,
   "updated": "2025-02-19T18:26:10.533Z",
   "tags": [

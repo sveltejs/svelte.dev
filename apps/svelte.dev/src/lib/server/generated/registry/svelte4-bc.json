@@ -2,13 +2,15 @@
   "name": "svelte4-bc",
   "description": "Enables Svelte 4 backward compatibility in Svelte 5 projects.",
   "repo_url": "https://github.com/adiguba/svelte4-bc",
-  "author": "adiGuba",
+  "authors": [
+    "adiguba"
+  ],
   "homepage": "https://github.com/adiguba/svelte4-bc#readme",
   "downloads": 1,
   "dependents": 0,
   "updated": "2024-10-19T15:38:16.130Z",
   "tags": [
-    "tooling"
+    "utility"
   ],
   "svelte5": true,
   "runes": false,

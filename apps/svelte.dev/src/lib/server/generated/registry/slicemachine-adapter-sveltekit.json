@@ -1,16 +1,30 @@
 {
   "name": "@slicemachine/adapter-sveltekit",
-  "description": "SvelteKit adapter for Amplify SSR CI/CD.",
+  "description": "Adapts SvelteKit for Prismic Slice Machine.",
   "repo_url": "https://github.com/prismicio/slice-machine",
-  "author": "lihbr",
-  "downloads": 4100,
+  "authors": [
+    "lihbr",
+    "angeloashmore",
+    "amaurycahuet",
+    "odim",
+    "levimykel",
+    "danielbg",
+    "nvld",
+    "prismic-ci",
+    "jomifepe",
+    "srflp",
+    "bohdan-one",
+    "xrutayisire",
+    "bapmrl"
+  ],
+  "downloads": 4668,
   "dependents": 0,
   "updated": "2025-03-21T15:38:28.152Z",
   "tags": [
     "adapter",
     "tooling"
   ],
-  "svelte5": true,
+  "svelte5": false,
   "runes": false,
   "github_stars": 296
 }

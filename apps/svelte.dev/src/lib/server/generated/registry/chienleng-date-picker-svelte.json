@@ -1,10 +1,12 @@
 {
   "name": "@chienleng/date-picker-svelte",
-  "description": "Create date and time pickers for Svelte applications.",
+  "description": "Implement date and time pickers for Svelte applications.",
   "repo_url": "https://github.com/chienleng/date-picker-svelte",
-  "author": "Steven Tan",
+  "authors": [
+    "chienleng"
+  ],
   "homepage": "https://github.com/chienleng/date-picker-svelte#readme",
-  "downloads": 9,
+  "downloads": 1,
   "dependents": 0,
   "updated": "2023-10-19T23:29:09.146Z",
   "tags": [

@@ -1,13 +1,15 @@
 {
   "name": "svelte-chess-pgn",
-  "description": "Render chess PGN reader component for Svelte applications.",
+  "description": "Renders chess PGN games within Svelte components.",
   "repo_url": "",
-  "author": "mrbeast",
-  "downloads": 1,
+  "authors": [
+    "mrbeast"
+  ],
+  "downloads": 6,
   "dependents": 0,
   "updated": "2023-05-12T15:30:17.899Z",
   "tags": [
-    "ui"
+    "content"
   ],
   "svelte5": false,
   "runes": false

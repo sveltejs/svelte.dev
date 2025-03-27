@@ -1,8 +1,10 @@
 {
   "name": "svkit-server-sent-events",
-  "description": "Implement Server-Sent Events (SSE) in SvelteKit apps.",
+  "description": "Implements Server-Sent Events for SvelteKit applications.",
   "repo_url": "https://github.com/Ionmi/sveltekit-server-sent-events",
-  "author": "ionmi",
+  "authors": [
+    "ionmi"
+  ],
   "homepage": "https://github.com/Ionmi/sveltekit-server-sent-events.git",
   "downloads": 0,
   "dependents": 0,

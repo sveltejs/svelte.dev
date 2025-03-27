@@ -1,0 +1,18 @@
+{
+  "name": "@tal500/cypress-svelte-unit-test",
+  "description": "Unit test Svelte components using Cypress E2E test runner.",
+  "repo_url": "https://github.com/flakolefluk/cypress-svelte-unit-test",
+  "authors": [
+    "tal500"
+  ],
+  "homepage": "https://github.com/bahmutov/cypress-svelte-unit-test#readme",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2022-07-17T13:02:55.964Z",
+  "tags": [
+    "testing"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 1
+}

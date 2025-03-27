@@ -1,10 +1,12 @@
 {
   "name": "svelte-modal-z",
-  "description": "Create simple, beautiful modal components for Svelte apps.",
+  "description": "Create simple and beautiful Svelte modals.",
   "repo_url": "https://github.com/delpikye-v/svelte-modal",
-  "author": "Delpi.Kye",
+  "authors": [
+    "delpikye"
+  ],
   "homepage": "https://github.com/delpikye-v/svelte-modal#readme",
-  "downloads": 0,
+  "downloads": 4,
   "dependents": 0,
   "updated": "2023-02-03T07:57:30.563Z",
   "tags": [

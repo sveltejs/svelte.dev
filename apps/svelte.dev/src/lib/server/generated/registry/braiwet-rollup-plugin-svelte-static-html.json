@@ -1,14 +1,17 @@
 {
   "name": "@braiwet/rollup-plugin-svelte-static-html",
-  "description": "Generates static HTML files from Svelte components.",
+  "description": "Generate static HTML files from Svelte components using Rollup.",
   "repo_url": "https://github.com/basileraiwet/rollup-plugin-svelte-static-html",
-  "author": "Vlad Shcherbin",
+  "authors": [
+    "braiwet"
+  ],
   "homepage": "https://github.com/basileraiwet/rollup-plugin-svelte-static-html#readme",
-  "downloads": 12,
+  "downloads": 18,
   "dependents": 0,
   "updated": "2022-01-05T13:14:15.163Z",
   "tags": [
-    "tooling"
+    "tooling",
+    "preprocessor"
   ],
   "svelte5": false,
   "runes": false

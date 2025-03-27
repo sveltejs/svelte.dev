@@ -1,10 +1,12 @@
 {
   "name": "svelte-wp",
-  "description": "Connect Svelte apps WordPress plugin.",
+  "description": "Create client for SvelteWP WordPress plugin.",
   "repo_url": "",
-  "author": "Dmitri Don",
+  "authors": [
+    "ddon"
+  ],
   "homepage": "https://github.com/ddon/SvelteWP",
-  "downloads": 2,
+  "downloads": 10,
   "dependents": 0,
   "updated": "2019-10-02T17:58:30.732Z",
   "tags": [

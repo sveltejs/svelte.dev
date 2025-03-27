@@ -1,12 +1,14 @@
 {
   "name": "fuchs",
-  "description": "Build beautiful UI components with Tailwind 4 and Svelte 5.",
+  "description": "Beautiful UI components built with Tailwind 4 and Svelte 5.",
   "repo_url": "https://github.com/flo-bit/ui-kit",
-  "author": "flo-bit",
+  "authors": [
+    "flo-bit128"
+  ],
   "homepage": "https://flo-bit.dev/ui-kit",
-  "downloads": 542,
+  "downloads": 950,
   "dependents": 0,
-  "updated": "2025-03-24T06:25:02.810Z",
+  "updated": "2025-03-26T19:08:51.302Z",
   "tags": [
     "component-library",
     "ui"

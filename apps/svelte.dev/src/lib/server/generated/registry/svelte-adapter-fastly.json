@@ -1,10 +1,12 @@
 {
   "name": "svelte-adapter-fastly",
-  "description": "SvelteKit adapter for deploying to Fastly Compute@Edge.",
+  "description": "Adapt SvelteKit apps for Fastly Compute@Edge.",
   "repo_url": "https://github.com/bertybot/svelte-adapter-fastly",
-  "author": "Bert Bengtson",
+  "authors": [
+    "bertybot"
+  ],
   "homepage": "https://github.com/bertybot/svelte-adapter-fastly#readme",
-  "downloads": 2,
+  "downloads": 7,
   "dependents": 0,
   "updated": "2025-01-29T20:41:40.887Z",
   "tags": [

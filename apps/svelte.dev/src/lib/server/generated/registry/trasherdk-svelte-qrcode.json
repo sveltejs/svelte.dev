@@ -2,13 +2,15 @@
   "name": "@trasherdk/svelte-qrcode",
   "description": "Generate QR codes in Svelte applications.",
   "repo_url": "https://github.com/trasherdk/svelte-qrcode",
-  "author": "TrasherDK",
+  "authors": [
+    "trasherdk"
+  ],
   "homepage": "https://github.com/trasherdk/svelte-qrcode#readme",
   "downloads": 1,
   "dependents": 0,
   "updated": "2025-01-18T11:32:23.534Z",
   "tags": [
-    "ui"
+    "utility"
   ],
   "svelte5": true,
   "runes": false,

@@ -1,9 +1,11 @@
 {
   "name": "svelte-sonner",
-  "description": "Provides opinionated toast component for Svelte apps.",
+  "description": "Opinionated toast component for Svelte apps.",
   "repo_url": "",
-  "author": "Robert Soriano",
-  "downloads": 61569,
+  "authors": [
+    "wobsoriano"
+  ],
+  "downloads": 62785,
   "dependents": 25,
   "updated": "2024-09-12T19:45:04.149Z",
   "tags": [

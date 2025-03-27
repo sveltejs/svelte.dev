@@ -1,10 +1,12 @@
 {
   "name": "svelte-transition-classes",
-  "description": "Apply CSS classes for Svelte transitions and animations.",
+  "description": "Adds CSS classes for transitions and animations in Svelte.",
   "repo_url": "https://github.com/rmarscher/svelte-transition-classes",
-  "author": "rmarscher",
+  "authors": [
+    "rmarscher"
+  ],
   "homepage": "https://github.com/rmarscher/svelte-transition-classes",
-  "downloads": 70,
+  "downloads": 103,
   "dependents": 0,
   "updated": "2021-12-21T16:37:13.147Z",
   "tags": [

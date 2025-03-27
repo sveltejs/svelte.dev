@@ -1,10 +1,12 @@
 {
   "name": "@easyroute/svelte",
-  "description": "Implement config-based routing for Svelte with SSR support.",
+  "description": "Config-based router for Svelte, similar to Vue Router, with SSR support.",
   "repo_url": "https://github.com/easyroute-router/easyroute",
-  "author": "Alexey Solovyov",
+  "authors": [
+    "lyohaplotinka"
+  ],
   "homepage": "https://easyroute.lyoha.info",
-  "downloads": 19,
+  "downloads": 33,
   "dependents": 1,
   "updated": "2023-07-25T19:38:21.847Z",
   "tags": [

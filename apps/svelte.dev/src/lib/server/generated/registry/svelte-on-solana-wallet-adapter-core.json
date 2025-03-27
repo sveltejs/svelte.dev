@@ -1,10 +1,13 @@
 {
   "name": "@svelte-on-solana/wallet-adapter-core",
-  "description": "Provide core functionality for Solana wallet adapter in Svelte.",
+  "description": "Provides core Svelte store for Solana wallet adapter.",
   "repo_url": "https://github.com/svelte-on-solana/wallet-adapter",
-  "author": "Svelte on Solana",
+  "authors": [
+    "silvestrevivo",
+    "c_ogoo"
+  ],
   "homepage": "https://github.com/svelte-on-solana/wallet-adapter#readme",
-  "downloads": 45,
+  "downloads": 56,
   "dependents": 2,
   "updated": "2022-12-14T18:09:56.076Z",
   "tags": [

@@ -2,7 +2,9 @@
   "name": "@shadcn-svelte-chat/cli",
   "description": "CLI for adding chat components to Svelte projects.",
   "repo_url": "https://github.com/cliffordkleinsr/shadcn-svelte-chat",
-  "author": "Clifford njoroge",
+  "authors": [
+    "cliffordkleinsr"
+  ],
   "homepage": "https://github.com/cliffordkleinsr/shadcn-svelte-chat#readme",
   "downloads": 30,
   "dependents": 0,

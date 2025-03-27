@@ -1,0 +1,17 @@
+{
+  "name": "svelte-choreography",
+  "description": "Enable responsive layouts with SSR, content re-ordering, focus retention.",
+  "repo_url": "https://github.com/captaincodeman/svelte-choreography",
+  "authors": [
+    "captaincodeman"
+  ],
+  "homepage": "https://captaincodeman.github.io/svelte-choreography/",
+  "downloads": 6,
+  "dependents": 0,
+  "updated": "2024-08-26T19:36:54.303Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": true,
+  "runes": false
+}

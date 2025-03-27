@@ -1,10 +1,12 @@
 {
   "name": "svelte-generic-datepicker",
-  "description": "Implement date pickers as web or Svelte components.",
+  "description": "Create date pickers as web or Svelte components.",
   "repo_url": "https://github.com/ivosdc/svelte-datepicker",
-  "author": "Ivo Bozic",
+  "authors": [
+    "nologin"
+  ],
   "homepage": "https://github.com/ivosdc/svelte-datepicker",
-  "downloads": 5,
+  "downloads": 11,
   "dependents": 0,
   "updated": "2021-03-21T19:35:32.246Z",
   "tags": [

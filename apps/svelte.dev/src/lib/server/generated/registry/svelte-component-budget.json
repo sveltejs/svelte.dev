@@ -1,0 +1,19 @@
+{
+  "name": "svelte-component-budget",
+  "description": "Preprocessor to control Svelte component's size (lines of code).",
+  "repo_url": "https://github.com/sveltetools/svelte-component-budget",
+  "authors": [
+    "paulmaly"
+  ],
+  "homepage": "https://github.com/sveltetools/svelte-component-budget#readme",
+  "downloads": 8,
+  "dependents": 0,
+  "updated": "2022-01-16T18:52:15.865Z",
+  "tags": [
+    "tooling",
+    "preprocessor"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 2
+}

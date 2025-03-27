@@ -1,10 +1,15 @@
 {
   "name": "svelte-windicss-preprocess",
-  "description": "Preprocess Svelte components with Windi CSS.",
+  "description": "Preprocess Windi CSS for Svelte, compile Tailwind at build time.",
   "repo_url": "https://github.com/windicss/svelte-windicss-preprocess",
-  "author": "Veritas Raven",
+  "authors": [
+    "antfu",
+    "voorjaar",
+    "hannoeru",
+    "harlan_zw"
+  ],
   "homepage": "https://windicss.org/",
-  "downloads": 219,
+  "downloads": 358,
   "dependents": 0,
   "updated": "2022-06-03T09:13:07.764Z",
   "tags": [

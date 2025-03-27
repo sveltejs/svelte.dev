@@ -1,10 +1,12 @@
 {
   "name": "svelte-fast-marquee",
-  "description": "Creates marquee component for Svelte apps.",
+  "description": "Create fast marquee component for Svelte.",
   "repo_url": "https://github.com/abosch19/svelte-fast-marquee",
-  "author": "Alex Bosch",
+  "authors": [
+    "abosch19"
+  ],
   "homepage": "https://svelte-fast-marquee-docs.vercel.app/",
-  "downloads": 1242,
+  "downloads": 1448,
   "dependents": 0,
   "updated": "2024-09-23T15:12:07.918Z",
   "tags": [

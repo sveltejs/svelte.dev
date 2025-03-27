@@ -1,10 +1,12 @@
 {
   "name": "@ctx-core/svelte-transitions",
-  "description": "Provides transitions for Svelte components.",
+  "description": "ctx-core svelte transitions.",
   "repo_url": "https://github.com/ctx-core/svelte-transitions",
-  "author": "Brian Takita",
+  "authors": [
+    "btakita"
+  ],
   "homepage": "https://github.com/ctx-core/svelte-transitions#readme",
-  "downloads": 624,
+  "downloads": 0,
   "dependents": 0,
   "updated": "2024-08-31T04:16:29.869Z",
   "tags": [

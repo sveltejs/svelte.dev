@@ -1,10 +1,13 @@
 {
   "name": "@soleil-se/config-svelte",
-  "description": "Provides Svelte components and utilities for WebApp configurations.",
+  "description": "Provides Svelte components and utilities for configuration.",
   "repo_url": "",
-  "author": "Soleil AB",
+  "authors": [
+    "soleil-ab",
+    "kling90"
+  ],
   "homepage": "https://docs.soleil.se/packages/config-svelte",
-  "downloads": 235,
+  "downloads": 99,
   "dependents": 0,
   "updated": "2025-03-11T14:11:59.784Z",
   "tags": [

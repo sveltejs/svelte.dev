@@ -1,0 +1,18 @@
+{
+  "name": "@nostrwatch/gui",
+  "description": "Provide a NIP-66 client GUI for Svelte.",
+  "repo_url": "https://github.com/careswitch/svelte-data-table",
+  "authors": [
+    "sandwiches"
+  ],
+  "homepage": "https://github.com/careswitch/svelte-data-table#readme",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2024-12-17T17:34:36.091Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 21
+}

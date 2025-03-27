@@ -1,16 +1,18 @@
 {
   "name": "layercake",
-  "description": "Creates reusable graphics with Svelte for data visualization.",
+  "description": "Create reusable graphics with Svelte for data visualization.",
   "repo_url": "https://github.com/mhkeller/layercake",
-  "author": "mhkeller0",
+  "authors": [
+    "mhkeller0"
+  ],
   "homepage": "https://layercake.graphics/",
-  "downloads": 13271,
+  "downloads": 11470,
   "dependents": 14,
   "updated": "2025-03-20T18:25:02.048Z",
   "tags": [
-    "utility"
+    "component-library"
   ],
-  "svelte5": true,
+  "svelte5": false,
   "runes": false,
-  "github_stars": 1533
+  "github_stars": 1536
 }

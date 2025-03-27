@@ -1,0 +1,17 @@
+{
+  "name": "svelte-dispatchable",
+  "description": "Create dispatchable reactive stores for Svelte applications.",
+  "repo_url": "https://github.com/ravid7000/svelte-dispatchable",
+  "authors": [
+    "ravid7000"
+  ],
+  "downloads": 10,
+  "dependents": 0,
+  "updated": "2022-01-22T21:57:11.071Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 1
+}

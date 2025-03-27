@@ -1,8 +1,10 @@
 {
   "name": "@ikun-ui/alert",
-  "description": "Provides alert components for Svelte.",
+  "description": "Display alert messages in Svelte applications.",
   "repo_url": "",
-  "author": "baiwusanyu",
+  "authors": [
+    "baiwusanyu"
+  ],
   "downloads": 28,
   "dependents": 1,
   "updated": "2025-01-24T03:48:32.110Z",

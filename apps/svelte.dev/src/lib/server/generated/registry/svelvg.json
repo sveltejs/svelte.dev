@@ -2,9 +2,11 @@
   "name": "svelvg",
   "description": "Convert SVG files into Svelte components with TypeScript definitions.",
   "repo_url": "https://github.com/metonym/svelvg",
-  "author": "Eric Liu",
+  "authors": [
+    "metonym"
+  ],
   "homepage": "https://github.com/metonym/svelvg",
-  "downloads": 39,
+  "downloads": 117,
   "dependents": 0,
   "updated": "2024-06-19T20:04:37.913Z",
   "tags": [

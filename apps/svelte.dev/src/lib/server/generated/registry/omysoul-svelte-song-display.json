@@ -1,15 +1,16 @@
 {
   "name": "@omysoul/svelte-song-display",
-  "description": "Display song lyrics, one verse at a time, in Svelte.",
+  "description": "Render lyrics, displaying one verse at a time.",
   "repo_url": "https://github.com/philholden/svelte-song-display",
-  "author": "omysoul",
+  "authors": [
+    "omysoul"
+  ],
   "homepage": "https://ipfs.infura.io/ipfs/QmciYNTJzeKcEMWTYvNhcRErKvGVXMSbevvfgVhCLT7T2j/",
-  "downloads": 3,
+  "downloads": 174,
   "dependents": 0,
   "updated": "2020-09-05T06:23:08.112Z",
   "tags": [
-    "ui",
-    "content"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

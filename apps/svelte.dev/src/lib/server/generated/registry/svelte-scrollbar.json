@@ -2,7 +2,9 @@
   "name": "svelte-scrollbar",
   "description": "Create custom scrollbars for Svelte applications.",
   "repo_url": "https://github.com/leshak/svelte-svrollbar",
-  "author": "daylilyfield",
+  "authors": [
+    "leshak"
+  ],
   "homepage": "https://github.com/leshak/svelte-svrollbar#readme",
   "downloads": 1,
   "dependents": 0,

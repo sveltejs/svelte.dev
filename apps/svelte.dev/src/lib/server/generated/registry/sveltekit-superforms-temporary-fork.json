@@ -2,7 +2,9 @@
   "name": "sveltekit-superforms-temporary-fork",
   "description": "Simplify SvelteKit form validation and display.",
   "repo_url": "https://github.com/ciscoheat/sveltekit-superforms",
-  "author": "Andreas Söderlund",
+  "authors": [
+    "thelinuxlich"
+  ],
   "homepage": "https://superforms.rocks",
   "downloads": 1,
   "dependents": 0,
@@ -12,5 +14,5 @@
   ],
   "svelte5": false,
   "runes": false,
-  "github_stars": 2437
+  "github_stars": 2440
 }

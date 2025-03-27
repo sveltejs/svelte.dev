@@ -1,0 +1,18 @@
+{
+  "name": "floeui",
+  "description": "Extend DaisyUI plugin for UnoCSS in Svelte projects.",
+  "repo_url": "",
+  "authors": [
+    "pondra"
+  ],
+  "homepage": "https://github.com/pondrax/floeui#readme",
+  "downloads": 35,
+  "dependents": 0,
+  "updated": "2024-09-27T06:28:27.537Z",
+  "tags": [
+    "ui",
+    "component-library"
+  ],
+  "svelte5": true,
+  "runes": false
+}

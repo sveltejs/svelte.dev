@@ -1,14 +1,16 @@
 {
   "name": "svelvetfork",
-  "description": "Build node-based user interfaces and diagrams with Svelte.",
+  "description": "Builds dynamic, node-based user interfaces.",
   "repo_url": "https://github.com/IamMathankumar/Svelvet",
-  "author": "Mathankumar K",
+  "authors": [
+    "iammathankumar"
+  ],
   "homepage": "https://github.com/IamMathankumar/Svelvet",
-  "downloads": 13,
+  "downloads": 22,
   "dependents": 0,
   "updated": "2025-03-05T13:53:53.701Z",
   "tags": [
-    "component-library"
+    "ui"
   ],
   "svelte5": true,
   "runes": false,

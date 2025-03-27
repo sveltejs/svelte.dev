@@ -1,10 +1,13 @@
 {
   "name": "@svizzle/trends",
-  "description": "Visualize trend data with Svelte components.",
+  "description": "Visualize trend data with stream and percentile charts in Svelte.",
   "repo_url": "https://github.com/nestauk/svizzle",
-  "author": "nestauk",
+  "authors": [
+    "nestauk-dev",
+    "mindrones"
+  ],
   "homepage": "https://github.com/nestauk/svizzle",
-  "downloads": 0,
+  "downloads": 2,
   "dependents": 0,
   "updated": "2023-11-23T20:36:05.333Z",
   "tags": [

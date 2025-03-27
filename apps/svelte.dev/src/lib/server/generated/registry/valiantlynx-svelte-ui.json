@@ -1,10 +1,12 @@
 {
   "name": "@valiantlynx/svelte-ui",
-  "description": "Create Svelte UI components for Valiantlynx projects.",
+  "description": "UI component library for Svelte projects.",
   "repo_url": "https://github.com/valiantlynx/svelte-ui",
-  "author": "valiantlynx",
+  "authors": [
+    "valiantlynx"
+  ],
   "homepage": "https://github.com/valiantlynx/svelte-ui#readme",
-  "downloads": 8,
+  "downloads": 33,
   "dependents": 1,
   "updated": "2023-12-29T22:37:39.441Z",
   "tags": [

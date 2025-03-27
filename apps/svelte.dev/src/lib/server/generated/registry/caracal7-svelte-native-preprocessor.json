@@ -2,9 +2,11 @@
   "name": "@caracal7/svelte-native-preprocessor",
   "description": "Preprocess Svelte code for Svelte Native.",
   "repo_url": "https://github.com/halfnelson/svelte-native-preprocessor",
-  "author": "David Pershouse",
+  "authors": [
+    "caracal7"
+  ],
   "homepage": "https://github.com/halfnelson/svelte-native-preprocessor",
-  "downloads": 65,
+  "downloads": 1,
   "dependents": 0,
   "updated": "2025-03-12T15:46:40.648Z",
   "tags": [

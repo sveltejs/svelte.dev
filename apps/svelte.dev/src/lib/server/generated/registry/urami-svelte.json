@@ -1,14 +1,17 @@
 {
   "name": "@urami/svelte",
-  "description": "Automatic image optimization component for Svelte.",
+  "description": "Optimize images automatically for Svelte, generating WebP, JPG, PNG, and AVIF.",
   "repo_url": "https://github.com/rayriffy/urami",
-  "author": "Phumrapee Limpiancop",
+  "authors": [
+    "rayriffy"
+  ],
   "homepage": "https://urami.dev/",
-  "downloads": 31,
+  "downloads": 13,
   "dependents": 0,
   "updated": "2024-11-15T06:40:00.292Z",
   "tags": [
-    "media"
+    "media",
+    "performance"
   ],
   "svelte5": false,
   "runes": false,

@@ -1,8 +1,10 @@
 {
   "name": "@warren-bank/i18next-svelte",
-  "description": "Integrate i18next for Svelte applications.",
+  "description": "Svelte wrapper for i18next.",
   "repo_url": "https://github.com/warren-bank/js-i18next-svelte",
-  "author": "Warren R. Bank",
+  "authors": [
+    "warren-r-bank"
+  ],
   "homepage": "https://github.com/warren-bank/js-i18next-svelte#readme",
   "downloads": 3,
   "dependents": 0,

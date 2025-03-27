@@ -1,10 +1,12 @@
 {
   "name": "svelte-fetchable",
-  "description": "Fetch data with Svelte stores, including POST and abort features.",
+  "description": "Create fetchable stores for Svelte applications.",
   "repo_url": "https://github.com/lewis-wow/svelte-fetchable",
-  "author": "Ludvík Prokopec",
+  "authors": [
+    "ujik"
+  ],
   "homepage": "https://github.com/lewis-wow/svelte-fetchable#readme",
-  "downloads": 3,
+  "downloads": 1,
   "dependents": 0,
   "updated": "2022-11-23T09:14:27.562Z",
   "tags": [

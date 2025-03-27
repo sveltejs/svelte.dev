@@ -1,0 +1,18 @@
+{
+  "name": "svelte-data-grid-ext",
+  "description": "Display and edit large datasets with Svelte data grid.",
+  "repo_url": "https://github.com/bsssshhhhhhh/svelte-data-grid",
+  "authors": [
+    "eriknyk"
+  ],
+  "homepage": "https://github.com/eriknyk/svelte-data-grid",
+  "downloads": 7,
+  "dependents": 0,
+  "updated": "2020-03-24T20:18:03.734Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 202
+}

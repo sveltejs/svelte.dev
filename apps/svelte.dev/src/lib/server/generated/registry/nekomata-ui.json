@@ -1,14 +1,17 @@
 {
   "name": "nekomata-ui",
-  "description": "Build adaptable UI components with Svelte.",
+  "description": "Build adaptable UI component library with focus on customization.",
   "repo_url": "https://github.com/open-anthro-projects/nekomata-ui",
-  "author": "Open Anthro Projects",
+  "authors": [
+    "sanctuscoma"
+  ],
   "homepage": "https://open-anthro-projects.github.io/nekomata-ui/",
-  "downloads": 0,
+  "downloads": 30,
   "dependents": 0,
   "updated": "2022-07-02T16:10:08.529Z",
   "tags": [
-    "component-library"
+    "component-library",
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

@@ -2,9 +2,11 @@
   "name": "svelte-window",
   "description": "Render large, scrollable lists and tabular data efficiently.",
   "repo_url": "https://github.com/micha-lmxt/svelte-window",
-  "author": "micha-lmxt",
+  "authors": [
+    "micha-lmxt"
+  ],
   "homepage": "https://github.com/micha-lmxt/svelte-window#readme",
-  "downloads": 207,
+  "downloads": 77,
   "dependents": 0,
   "updated": "2022-09-27T07:25:49.318Z",
   "tags": [

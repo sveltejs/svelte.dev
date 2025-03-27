@@ -1,8 +1,10 @@
 {
   "name": "@wjfe/single-spa-svelte",
-  "description": "Creates single-spa lifecycle functions for Svelte 5 components.",
+  "description": "Create single-spa lifecycle functions for Svelte v5 components.",
   "repo_url": "https://github.com/WJSoftware/wjfe-single-spa-svelte",
-  "author": "José Pablo Ramírez Vargas",
+  "authors": [
+    "webjose"
+  ],
   "homepage": "https://github.com/WJSoftware/wjfe-single-spa-svelte",
   "downloads": 14,
   "dependents": 0,

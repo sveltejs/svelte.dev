@@ -1,16 +1,18 @@
 {
   "name": "svelte-multitoneimage",
-  "description": "Renders images with multitone effects in Svelte.",
+  "description": "Apply multitone effects to images in Svelte.",
   "repo_url": "https://github.com/stephane-vanraes/svelte-multitoneimage",
-  "author": "Stephane Vanraes",
+  "authors": [
+    "rainlife"
+  ],
   "homepage": "https://stephane-vanraes.github.io/svelte-multitoneimage",
   "downloads": 10,
   "dependents": 0,
   "updated": "2024-11-01T08:01:58.463Z",
   "tags": [
-    "media"
+    "ui"
   ],
-  "svelte5": true,
+  "svelte5": false,
   "runes": false,
   "github_stars": 7
 }

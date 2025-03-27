@@ -1,10 +1,12 @@
 {
   "name": "@babichjacob/svelte-localstorage",
-  "description": "Synchronize Svelte stores with localStorage automatically.",
+  "description": "Synchronizes Svelte stores with localStorage automatically.",
   "repo_url": "https://github.com/babichjacob/svelte-localstorage",
-  "author": "J / Jacob Babich",
+  "authors": [
+    "babichjacob"
+  ],
   "homepage": "https://github.com/babichjacob/svelte-localstorage",
-  "downloads": 44,
+  "downloads": 8,
   "dependents": 0,
   "updated": "2024-10-16T23:42:18.061Z",
   "tags": [

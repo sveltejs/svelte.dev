@@ -1,14 +1,17 @@
 {
   "name": "@altron/altron",
-  "description": "Rich text editor as a svelte component.",
+  "description": "Rich text editor as a Svelte component.",
   "repo_url": "https://github.com/EMPTYVOID-DEV/Altron",
-  "author": "Keskas aymen",
+  "authors": [
+    "empty_void"
+  ],
   "homepage": "https://github.com/EMPTYVOID-DEV/Altron#readme",
-  "downloads": 91,
+  "downloads": 1,
   "dependents": 0,
   "updated": "2024-08-29T12:04:02.590Z",
   "tags": [
-    "component-library"
+    "content",
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

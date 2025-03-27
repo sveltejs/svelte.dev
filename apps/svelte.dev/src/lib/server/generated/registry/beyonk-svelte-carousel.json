@@ -1,10 +1,17 @@
 {
   "name": "@beyonk/svelte-carousel",
-  "description": "Create carousel/slider components for Svelte.",
+  "description": "Create carousel/slider components for Svelte applications.",
   "repo_url": "https://github.com/beyonk-adventures/svelte-carousel",
-  "author": "antony",
+  "authors": [
+    "antony",
+    "adampond",
+    "alex.dilley",
+    "jedwoodcock",
+    "leandro.silva",
+    "tomlewis0"
+  ],
   "homepage": "https://github.com/beyonk-adventures/svelte-carousel#readme",
-  "downloads": 208,
+  "downloads": 223,
   "dependents": 0,
   "updated": "2022-01-13T16:20:23.849Z",
   "tags": [

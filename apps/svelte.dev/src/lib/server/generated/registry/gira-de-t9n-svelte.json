@@ -2,9 +2,13 @@
   "name": "@gira-de/t9n-svelte",
   "description": "Provides Svelte translation solution for @gira-de/t9n.",
   "repo_url": "https://github.com/gira-de/t9n",
-  "author": "GIRA",
+  "authors": [
+    "zeekrey",
+    "bztes",
+    "daniel.albuschat"
+  ],
   "homepage": "https://github.com/gira-de/t9n#readme",
-  "downloads": 117,
+  "downloads": 52,
   "dependents": 0,
   "updated": "2024-08-12T07:23:26.204Z",
   "tags": [

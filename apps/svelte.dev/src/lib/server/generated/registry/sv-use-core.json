@@ -1,8 +1,10 @@
 {
   "name": "@sv-use/core",
-  "description": "Provides a collection of Svelte 5 utilities.",
+  "description": "Provides Svelte 5 utility functions and helpers.",
   "repo_url": "https://github.com/svelte-librarian/sv-use",
-  "author": "Sajidur Rahman",
+  "authors": [
+    "novaotp"
+  ],
   "homepage": "https://www.sv-use.org/",
   "downloads": 284,
   "dependents": 0,

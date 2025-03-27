@@ -1,8 +1,10 @@
 {
   "name": "@untemps/svelte-use-tooltip",
-  "description": "Display tooltips using Svelte action.",
+  "description": "Display tooltip with Svelte action",
   "repo_url": "https://github.com/untemps/svelte-use-tooltip",
-  "author": "Vincent Le Badezet",
+  "authors": [
+    "untemps"
+  ],
   "homepage": "https://github.com/untemps/svelte-use-tooltip#readme",
   "downloads": 296,
   "dependents": 2,

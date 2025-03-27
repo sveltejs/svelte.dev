@@ -2,9 +2,11 @@
   "name": "presveltation",
   "description": "Create interactive presentations and slideshows with SvelteKit.",
   "repo_url": "https://github.com/bennymi/presveltation",
-  "author": "Benedikt Mielke",
+  "authors": [
+    "bennymi"
+  ],
   "homepage": "https://presveltation.vercel.app/",
-  "downloads": 1,
+  "downloads": 2,
   "dependents": 0,
   "updated": "2023-02-27T11:45:58.813Z",
   "tags": [

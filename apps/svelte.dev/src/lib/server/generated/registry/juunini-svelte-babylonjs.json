@@ -2,13 +2,15 @@
   "name": "@juunini/svelte-babylonjs",
   "description": "Create 3D scenes with Babylon.js in Svelte.",
   "repo_url": "https://github.com/juunini/svelte-babylonjs",
-  "author": "juunini",
+  "authors": [
+    "juunini"
+  ],
   "homepage": "https://juunini.github.io/svelte-babylonjs",
-  "downloads": 14,
+  "downloads": 17,
   "dependents": 0,
   "updated": "2025-01-07T13:50:54.674Z",
   "tags": [
-    "ui"
+    "media"
   ],
   "svelte5": true,
   "runes": false,

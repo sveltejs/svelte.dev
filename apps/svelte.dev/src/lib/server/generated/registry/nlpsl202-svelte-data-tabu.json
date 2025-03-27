@@ -1,0 +1,18 @@
+{
+  "name": "@nlpsl202/svelte-data-tabu",
+  "description": "Create simple, light-weight data tables in Svelte.",
+  "repo_url": "https://github.com/nlpsl202/svelte-data-table",
+  "authors": [
+    "nlpsl202"
+  ],
+  "homepage": "https://github.com/nlpsl202/svelte-data-table#readme",
+  "downloads": 7,
+  "dependents": 0,
+  "updated": "2020-05-22T10:12:55.062Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

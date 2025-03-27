@@ -1,10 +1,12 @@
 {
   "name": "@felbsn/svelte-material-symbols",
-  "description": "Display Material Symbols icons in Svelte applications.",
+  "description": "Integrate Google Material Symbols in Svelte projects.",
   "repo_url": "",
-  "author": "felbsn",
+  "authors": [
+    "felbsn"
+  ],
   "homepage": "https://svelte-material-symbols.vercel.app/",
-  "downloads": 8,
+  "downloads": 7,
   "dependents": 0,
   "updated": "2023-09-13T20:25:25.605Z",
   "tags": [

@@ -1,10 +1,12 @@
 {
   "name": "svelte-scrollactive",
-  "description": "Highlight menu items on scroll in Svelte apps.",
+  "description": "Highlight menu items as user scrolls Svelte pages.",
   "repo_url": "https://github.com/dmvvilela/svelte-scrollactive",
-  "author": "Daniel Vilela",
+  "authors": [
+    "dmvvilela"
+  ],
   "homepage": "https://github.com/dmvvilela/svelte-scrollactive#readme",
-  "downloads": 46,
+  "downloads": 50,
   "dependents": 0,
   "updated": "2023-10-03T20:36:51.169Z",
   "tags": [

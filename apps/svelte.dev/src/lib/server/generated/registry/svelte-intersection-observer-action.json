@@ -1,14 +1,17 @@
 {
   "name": "svelte-intersection-observer-action",
-  "description": "Observe element intersections using IntersectionObserver.",
+  "description": "Svelte action for element position notifications using IntersectionObserver.",
   "repo_url": "https://github.com/captaincodeman/svelte-intersection-observer-action",
-  "author": "Simon Green",
+  "authors": [
+    "captaincodeman"
+  ],
   "homepage": "https://captaincodeman.github.io/svelte-intersection-observer-action/",
-  "downloads": 97,
+  "downloads": 36,
   "dependents": 3,
   "updated": "2024-04-29T20:08:50.129Z",
   "tags": [
-    "utility"
+    "utility",
+    "dom"
   ],
   "svelte5": false,
   "runes": false,

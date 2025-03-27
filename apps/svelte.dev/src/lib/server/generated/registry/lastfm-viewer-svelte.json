@@ -1,10 +1,12 @@
 {
   "name": "@lastfm-viewer/svelte",
-  "description": "View recent scrobbles for Last.fm user in Svelte.",
+  "description": "Displays recent scrobbles for Last.fm user in Svelte.",
   "repo_url": "",
-  "author": "ZOASR",
+  "authors": [
+    "zoasr"
+  ],
   "homepage": "https://lastfm-viewer.vercel.app/",
-  "downloads": 0,
+  "downloads": 27,
   "dependents": 0,
   "updated": "2024-09-08T19:58:32.917Z",
   "tags": [

@@ -1,0 +1,18 @@
+{
+  "name": "@rutynka/helper-crypto-address-2-qrcode",
+  "description": "Convert crypto addresses to QR codes in Svelte apps.",
+  "repo_url": "https://github.com/rutynka/helper-crypto-address-2-qrcode",
+  "authors": [
+    "all-the-fish"
+  ],
+  "homepage": "https://github.com/rutynka/helper-crypto-address-2-qrcode",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2023-01-31T02:50:23.401Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

@@ -1,10 +1,15 @@
 {
   "name": "@responsive-ui/header",
-  "description": "Create responsive header components for Svelte.",
+  "description": "Create header component for responsive-ui.",
   "repo_url": "https://github.com/wetix/responsive-ui",
-  "author": "Si3nLoong",
+  "authors": [
+    "rexlow",
+    "bassemsab",
+    "rm.oska",
+    "apacventure"
+  ],
   "homepage": "https://github.com/wetix/responsive-ui/blob/main/components/header#README.md",
-  "downloads": 0,
+  "downloads": 81,
   "dependents": 1,
   "updated": "2024-04-23T07:51:05.966Z",
   "tags": [

@@ -1,0 +1,16 @@
+{
+  "name": "svelte-theme",
+  "description": "Provides light/dark theme support for Svelte applications.",
+  "repo_url": "",
+  "authors": [
+    "dooboolab"
+  ],
+  "downloads": 12,
+  "dependents": 0,
+  "updated": "2021-11-12T07:51:45.122Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false
+}

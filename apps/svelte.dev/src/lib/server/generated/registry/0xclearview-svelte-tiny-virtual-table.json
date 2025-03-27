@@ -1,10 +1,12 @@
 {
   "name": "@0xclearview/svelte-tiny-virtual-table",
-  "description": "Create tiny virtual table component for Svelte.",
+  "description": "Virtualizes lists for Svelte, rendering only visible items.",
   "repo_url": "https://github.com/0xclearview/svelte-tiny-virtual-table",
-  "author": "Marcos Gutiérrez",
+  "authors": [
+    "margual56"
+  ],
   "homepage": "https://github.com/0xclearview/svelte-tiny-virtual-table#readme",
-  "downloads": 12,
+  "downloads": 17,
   "dependents": 0,
   "updated": "2024-11-16T13:11:37.125Z",
   "tags": [

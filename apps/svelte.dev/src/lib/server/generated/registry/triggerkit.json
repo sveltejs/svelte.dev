@@ -1,15 +1,16 @@
 {
   "name": "triggerkit",
-  "description": "Connect SvelteKit functions to Trigger.dev tasks.",
+  "description": "Connects SvelteKit functions to trigger.dev tasks.",
   "repo_url": "https://github.com/EnoughXP/vite-plugin-triggerkit",
-  "author": "Jason Gutierrez",
+  "authors": [
+    "cpt_crunch"
+  ],
   "homepage": "https://github.com/EnoughXP/vite-plugin-triggerkit#readme",
   "downloads": 97,
   "dependents": 0,
   "updated": "2025-03-07T23:56:47.503Z",
   "tags": [
-    "tooling",
-    "server"
+    "tooling"
   ],
   "svelte5": true,
   "runes": false,

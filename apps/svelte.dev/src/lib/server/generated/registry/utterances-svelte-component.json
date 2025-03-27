@@ -1,10 +1,12 @@
 {
   "name": "utterances-svelte-component",
-  "description": "Provide type-safe Svelte component for utterances comment system.",
+  "description": "Integrate utterances comments into Svelte applications.",
   "repo_url": "https://github.com/TomokiMiyauci/utterances-component",
-  "author": "TomokiMiyauci",
+  "authors": [
+    "miyauci"
+  ],
   "homepage": "https://github.com/TomokiMiyauci/utterances-component#readme",
-  "downloads": 3,
+  "downloads": 10,
   "dependents": 0,
   "updated": "2021-07-09T03:03:22.849Z",
   "tags": [

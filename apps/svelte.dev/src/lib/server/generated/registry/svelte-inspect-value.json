@@ -1,16 +1,18 @@
 {
   "name": "svelte-inspect-value",
-  "description": "Inspect JavaScript values within Svelte components.",
+  "description": "Inspect JavaScript values within Svelte applications.",
   "repo_url": "https://github.com/ampled/svelte-inspect-value",
-  "author": "eirikk",
+  "authors": [
+    "eirikk"
+  ],
   "homepage": "https://inspect.eirik.space",
-  "downloads": 951,
+  "downloads": 1200,
   "dependents": 2,
   "updated": "2025-03-17T13:40:15.632Z",
   "tags": [
     "utility"
   ],
-  "svelte5": true,
+  "svelte5": false,
   "runes": false,
-  "github_stars": 66
+  "github_stars": 68
 }

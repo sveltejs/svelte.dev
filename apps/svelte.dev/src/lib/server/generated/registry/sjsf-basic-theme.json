@@ -1,10 +1,12 @@
 {
   "name": "@sjsf/basic-theme",
-  "description": "Provide basic theme for svelte-jsonschema-form.",
+  "description": "Provides basic theme for svelte-jsonschema-form.",
   "repo_url": "https://github.com/x0k/svelte-jsonschema-form",
-  "author": "x0k",
+  "authors": [
+    "x0k"
+  ],
   "homepage": "https://x0k.github.io/svelte-jsonschema-form/",
-  "downloads": 273,
+  "downloads": 65,
   "dependents": 0,
   "updated": "2025-03-18T20:18:05.095Z",
   "tags": [

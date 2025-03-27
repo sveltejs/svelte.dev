@@ -1,10 +1,12 @@
 {
   "name": "svelte5-plausible-analytics",
-  "description": "Integrate Plausible Analytics into SvelteKit apps.",
+  "description": "Integrate Plausible Analytics into SvelteKit apps easily.",
   "repo_url": "https://github.com/accuser/svelte-plausible-analytics",
-  "author": "Matthew Gibbons",
+  "authors": [
+    "ahmedhossam"
+  ],
   "homepage": "https://github.com/accuser/svelte-plausible-analytics/README.md",
-  "downloads": 4,
+  "downloads": 2,
   "dependents": 0,
   "updated": "2025-02-13T06:50:54.394Z",
   "tags": [

@@ -1,0 +1,18 @@
+{
+  "name": "svelte-virtual-list-enhanced",
+  "description": "Render large lists efficiently in Svelte applications.",
+  "repo_url": "https://github.com/sveltejs/svelte-virtual-list",
+  "authors": [
+    "tje3d"
+  ],
+  "homepage": "https://github.com/sveltejs/svelte-virtual-list#readme",
+  "downloads": 9,
+  "dependents": 0,
+  "updated": "2020-07-13T10:48:09.008Z",
+  "tags": [
+    "utility"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 715
+}

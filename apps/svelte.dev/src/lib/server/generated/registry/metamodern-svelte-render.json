@@ -1,10 +1,12 @@
 {
   "name": "@metamodern/svelte-render",
-  "description": "Build Svelte apps with Jamstack-focused build tool.",
+  "description": "Build tool for Svelte apps, focused on Jamstack.",
   "repo_url": "https://github.com/metamodern-design/svelte-render",
-  "author": "Daniel C. Narey",
+  "authors": [
+    "danielnarey"
+  ],
   "homepage": "https://github.com/metamodern-design/svelte-render#readme",
-  "downloads": 2,
+  "downloads": 91,
   "dependents": 0,
   "updated": "2020-12-25T04:46:08.278Z",
   "tags": [

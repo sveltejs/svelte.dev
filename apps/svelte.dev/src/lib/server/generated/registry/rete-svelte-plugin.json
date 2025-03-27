@@ -1,8 +1,10 @@
 {
   "name": "rete-svelte-plugin",
-  "description": "Renders Rete.js elements using Svelte components.",
+  "description": "Render Rete.js elements using Svelte components.",
   "repo_url": "https://github.com/retejs/svelte-plugin",
-  "author": "Vitaliy Stoliarov",
+  "authors": [
+    "ni55an"
+  ],
   "homepage": "https://retejs.org",
   "downloads": 26,
   "dependents": 1,

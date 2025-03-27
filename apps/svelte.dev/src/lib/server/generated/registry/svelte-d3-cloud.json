@@ -1,10 +1,12 @@
 {
   "name": "svelte-d3-cloud",
-  "description": "Provides Svelte wrapper for d3-cloud word cloud visualizations.",
+  "description": "Generate word clouds using d3-cloud in Svelte.",
   "repo_url": "https://github.com/maziyank/svelte-d3-cloud",
-  "author": "maziyank",
+  "authors": [
+    "maziyank"
+  ],
   "homepage": "https://github.com/maziyank/svelte-d3-cloud#readme",
-  "downloads": 30,
+  "downloads": 45,
   "dependents": 0,
   "updated": "2021-07-16T22:43:00.144Z",
   "tags": [

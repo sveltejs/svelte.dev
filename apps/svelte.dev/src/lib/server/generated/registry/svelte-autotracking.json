@@ -1,10 +1,12 @@
 {
   "name": "svelte-autotracking",
-  "description": "Autotrack changes on Svelte stores with decorators.",
+  "description": "Simplify Svelte store usage with autotracking for classes.",
   "repo_url": "https://github.com/manufitoussi/svelte-autotracking",
-  "author": "Emmanuel FITOUSSI",
+  "authors": [
+    "manufitoussi"
+  ],
   "homepage": "https://github.com/manufitoussi/svelte-autotracking",
-  "downloads": 6,
+  "downloads": 10,
   "dependents": 0,
   "updated": "2024-05-04T23:51:27.790Z",
   "tags": [

@@ -1,10 +1,12 @@
 {
   "name": "svelte-translate",
-  "description": "Provide dynamic translation service for Svelte apps.",
+  "description": "Provides dynamic translation service for Svelte applications.",
   "repo_url": "https://github.com/noelmugnier/svelte-translate",
-  "author": "Noël Mugnier",
+  "authors": [
+    "noelmugnier"
+  ],
   "homepage": "https://github.com/noelmugnier/svelte-translate#readme",
-  "downloads": 6,
+  "downloads": 15,
   "dependents": 0,
   "updated": "2021-10-01T14:03:15.146Z",
   "tags": [

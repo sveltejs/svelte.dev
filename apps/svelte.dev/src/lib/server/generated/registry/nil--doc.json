@@ -1,9 +1,11 @@
 {
   "name": "@nil-/doc",
-  "description": "Provide Svelte component library to help documentation.",
+  "description": "Create Svelte component library for documentation.",
   "repo_url": "",
-  "author": "Neil Aldea",
-  "downloads": 11,
+  "authors": [
+    "nil-"
+  ],
+  "downloads": 65,
   "dependents": 0,
   "updated": "2023-07-05T13:02:59.924Z",
   "tags": [

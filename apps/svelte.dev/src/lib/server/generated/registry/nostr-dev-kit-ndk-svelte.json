@@ -1,13 +1,16 @@
 {
   "name": "@nostr-dev-kit/ndk-svelte",
-  "description": "Integrate Nostr Dev Kit functionalities into Svelte apps.",
+  "description": "Provides functionalities to make usage of NDK with Svelte nicer.",
   "repo_url": "",
-  "author": "pablof7z",
-  "downloads": 27,
+  "authors": [
+    "jinglescode",
+    "pablof7z"
+  ],
+  "downloads": 137,
   "dependents": 0,
   "updated": "2025-03-06T14:57:54.028Z",
   "tags": [
-    "integration"
+    "utility"
   ],
   "svelte5": true,
   "runes": false

@@ -1,10 +1,12 @@
 {
   "name": "@svelte-dev/auth-alipay",
-  "description": "Provides Alipay authentication strategy for Svelte applications.",
+  "description": "Provides Alipay authentication strategy for SvelteKit applications.",
   "repo_url": "https://github.com/willin/svelte-turbo",
-  "author": "Willin Wang",
+  "authors": [
+    "willin"
+  ],
   "homepage": "https://svelte.js.cool",
-  "downloads": 5,
+  "downloads": 3,
   "dependents": 0,
   "updated": "2023-12-11T08:15:03.660Z",
   "tags": [

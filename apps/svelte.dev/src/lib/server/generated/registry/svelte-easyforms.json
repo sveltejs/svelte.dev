@@ -1,10 +1,12 @@
 {
   "name": "svelte-easyforms",
-  "description": "Creates forms with validation in Svelte applications.",
+  "description": "Build forms with inputs, validation, and submission handling.",
   "repo_url": "https://github.com/kevmodrome/svelte-easyforms",
-  "author": "kevmodrome",
+  "authors": [
+    "kevmodrome"
+  ],
   "homepage": "https://github.com/kevmodrome/svelte-easyforms#readme",
-  "downloads": 10,
+  "downloads": 11,
   "dependents": 0,
   "updated": "2019-12-05T16:04:21.334Z",
   "tags": [

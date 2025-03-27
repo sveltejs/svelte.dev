@@ -1,0 +1,18 @@
+{
+  "name": "svelte-grid-2023",
+  "description": "Create responsive, draggable, resizable grid layouts for Svelte.",
+  "repo_url": "https://github.com/raashy/svelte-grid-2022",
+  "authors": [
+    "rashy"
+  ],
+  "homepage": "https://github.com/raashy/svelte-grid-2022#readme",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2024-02-21T17:53:45.837Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

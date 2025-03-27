@@ -1,17 +1,29 @@
 {
   "name": "@dfinity/gix-components",
-  "description": "UI kit developed by the GIX team for Svelte.",
+  "description": "Provides a UI kit developed by the GIX team.",
   "repo_url": "https://github.com/dfinity/gix-components",
-  "author": "dayyildiz",
-  "homepage": "https://github.com/dfinity/gix-components#readme",
-  "downloads": 4520,
-  "dependents": 0,
-  "updated": "2025-02-20T11:50:54.755Z",
-  "tags": [
-    "component-library",
-    "ui"
+  "authors": [
+    "dayyildiz",
+    "eric-swanson-dfinity",
+    "krpeacock",
+    "npm-dfinity-org",
+    "bitdivine",
+    "ielashi",
+    "keplervital",
+    "nathan.mcgrath.dfinity",
+    "dfx-json",
+    "dfn_wndlng",
+    "dsarlis",
+    "ihor_dfinity"
   ],
-  "svelte5": false,
+  "homepage": "https://github.com/dfinity/gix-components#readme",
+  "downloads": 2779,
+  "dependents": 0,
+  "updated": "2025-03-24T15:45:57.968Z",
+  "tags": [
+    "component-library"
+  ],
+  "svelte5": true,
   "runes": false,
   "github_stars": 39
 }

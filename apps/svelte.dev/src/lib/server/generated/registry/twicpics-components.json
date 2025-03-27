@@ -1,10 +1,15 @@
 {
   "name": "@twicpics/components",
-  "description": "Optimize images and videos with TwicPics in Svelte apps.",
+  "description": "Web components for responsive images and videos with TwicPics.",
   "repo_url": "https://github.com/twicpics/components",
-  "author": "TwicPics",
+  "authors": [
+    "florentb",
+    "jaubourg",
+    "balda",
+    "mbgspcii"
+  ],
   "homepage": "https://github.com/twicpics/components",
-  "downloads": 5932,
+  "downloads": 6872,
   "dependents": 5,
   "updated": "2025-03-24T09:42:59.917Z",
   "tags": [

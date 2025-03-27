@@ -1,10 +1,12 @@
 {
   "name": "sveltejs-form",
-  "description": "Build forms with validation using Svelte components.",
+  "description": "Enable complex form validation in Svelte applications.",
   "repo_url": "https://github.com/jeremiedubuis/SvelteForm",
-  "author": "Jérémie Dubuis",
+  "authors": [
+    "jeremiedubuis"
+  ],
   "homepage": "https://github.com/jeremiedubuis/SvelteForm#readme",
-  "downloads": 1,
+  "downloads": 27,
   "dependents": 0,
   "updated": "2020-07-07T05:56:57.009Z",
   "tags": [

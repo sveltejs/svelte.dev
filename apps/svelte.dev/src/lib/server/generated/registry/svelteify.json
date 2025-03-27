@@ -1,10 +1,12 @@
 {
   "name": "svelteify",
-  "description": "Integrate Vuetify components into Svelte applications.",
+  "description": "Provides Material Design components for Svelte applications.",
   "repo_url": "https://github.com/exybore/svelteify",
-  "author": "exybore",
+  "authors": [
+    "exybore"
+  ],
   "homepage": "https://github.com/exybore/svelteify",
-  "downloads": 1,
+  "downloads": 9,
   "dependents": 0,
   "updated": "2019-08-24T09:36:48.561Z",
   "tags": [
