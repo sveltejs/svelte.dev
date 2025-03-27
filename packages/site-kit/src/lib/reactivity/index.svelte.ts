@@ -40,6 +40,9 @@ export class Box<T> {
 export class ReactiveQueryParam<T = string> {
 	#current: Box<T>;
 
+	#encode: (value: T) => string;
+	#name: string;
+
 	constructor(
 		name: string,
 		default_value?: T,
@@ -54,6 +57,9 @@ export class ReactiveQueryParam<T = string> {
 			decode: (v) => v as T
 		}
 	) {
+		this.#encode = encode;
+		this.#name = name;
+
 		this.#current = new Box<T>(
 			() => {
 				const param_value = page.url.searchParams.get(name);
@@ -85,5 +91,13 @@ export class ReactiveQueryParam<T = string> {
 
 	set current(value: T) {
 		this.#current.current = value;
+	}
+
+	url_from(value: T) {
+		const encoded = this.#encode(value);
+		const new_url = new URL(page.url);
+		new_url.searchParams.set(this.#name, encoded);
+
+		return new_url.pathname + new_url.search;
 	}
 }

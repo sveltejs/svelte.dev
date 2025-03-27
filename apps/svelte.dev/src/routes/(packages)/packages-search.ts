@@ -23,7 +23,14 @@ const NAME_MATCH_BOOST = 3;
 const DEPENDENTS_BOOST = 1.5; // Highest weight for packages others depend on
 const GITHUB_STARS_BOOST = 5.5; // Medium weight for GitHub stars (between dependents and downloads)
 const DOWNLOADS_BOOST = 1.2; // Lower weight for NPM downloads
-const RECENT_UPDATE_BOOST = 0.2;
+const RECENT_UPDATE_BOOST = {
+	LAST_6_MONTHS: 1.0, // Highest boost for updates within 6 months
+	LAST_1_YEAR: 0.6, // Medium boost for updates within a year
+	LAST_2_YEARS: 0.3 // Small boost for updates within 2 years
+};
+const RECENCY_WEIGHT = 10; // Adjust this value to control recency's impact
+const SVELTE_5_BOOST = 15;
+
 const OUTDATED_PENALTY = -6; // Substantial penalty for outdated packages
 const DEPRECATED_PENALTY = -12; // Severe penalty for deprecated packages
 
@@ -198,6 +205,11 @@ export function search(
 					score += Math.log10(stars + 1) * 5 * GITHUB_STARS_BOOST;
 					score += Math.log10(downloads + 1) * DOWNLOADS_BOOST;
 
+					// If svelte 5, give boost
+					if (pkg.svelte5) {
+						score *= SVELTE_5_BOOST;
+					}
+
 					// Apply penalties for outdated or deprecated packages
 					if (pkg.outdated) {
 						score += OUTDATED_PENALTY;
@@ -208,15 +220,9 @@ export function search(
 					}
 
 					// Boost recently updated packages
+					// Boost recently updated packages
 					if (pkg.updated) {
-						const update_date = new Date(pkg.updated);
-						const days_since_update =
-							(now.getTime() - update_date.getTime()) / (1000 * 60 * 60 * 24);
-						// More recent updates get higher boost
-						if (days_since_update < 30) {
-							// Last month
-							score += ((30 - days_since_update) * RECENT_UPDATE_BOOST) / 30;
-						}
+						score += calculate_recency_boost(pkg.updated) * RECENCY_WEIGHT; // Multiply by 10 to make the boost more impactful
 					}
 
 					entries.push({ package: pkg, score });
@@ -281,6 +287,11 @@ export function sort_packages(a: Package, b: Package, criterion: SortCriterion):
 				Math.log10(b_stars + 1) * 2 +
 				Math.log10(b_downloads + 1) * 1;
 
+			// Apply recency boost using the same algorithm as in search
+			// Use a specific weight factor for recency in the sorting algorithm
+			a_score += calculate_recency_boost(a.updated) * RECENCY_WEIGHT;
+			b_score += calculate_recency_boost(b.updated) * RECENCY_WEIGHT;
+
 			// Apply penalties for outdated or deprecated packages
 			if (a.outdated) a_score += OUTDATED_PENALTY;
 			if (a.deprecated) a_score += DEPRECATED_PENALTY;
@@ -289,6 +300,7 @@ export function sort_packages(a: Package, b: Package, criterion: SortCriterion):
 
 			return b_score - a_score;
 
+		// Other cases remain unchanged
 		case 'downloads':
 			return (b.downloads || 0) - (a.downloads || 0);
 
@@ -328,6 +340,11 @@ export function sort_packages(a: Package, b: Package, criterion: SortCriterion):
 				Math.log10(b_def_stars + 1) * 3 +
 				Math.log10(b_def_downloads + 1) * 2;
 
+			// Apply recency boost using the same algorithm as in search
+			const DEFAULT_RECENCY_WEIGHT = 10; // Adjust as needed to balance with other factors
+			a_def_score += calculate_recency_boost(a.updated) * DEFAULT_RECENCY_WEIGHT;
+			b_def_score += calculate_recency_boost(b.updated) * DEFAULT_RECENCY_WEIGHT;
+
 			// Apply penalties for outdated or deprecated packages
 			if (a.outdated) a_def_score += OUTDATED_PENALTY;
 			if (a.deprecated) a_def_score += DEPRECATED_PENALTY;
@@ -336,6 +353,31 @@ export function sort_packages(a: Package, b: Package, criterion: SortCriterion):
 
 			return b_def_score - a_def_score;
 	}
+}
+
+/**
+ * Calculate a boost factor based on how recently a package was updated
+ */
+function calculate_recency_boost(update_date_str: string | undefined): number {
+	if (!update_date_str) return 0;
+
+	const update_date = new Date(update_date_str);
+	const now = new Date();
+	const days_since_update = (now.getTime() - update_date.getTime()) / (1000 * 60 * 60 * 24);
+
+	// Apply boost based on recency tiers
+	if (days_since_update <= 180) {
+		// 6 months
+		return RECENT_UPDATE_BOOST.LAST_6_MONTHS;
+	} else if (days_since_update <= 365) {
+		// 1 year
+		return RECENT_UPDATE_BOOST.LAST_1_YEAR;
+	} else if (days_since_update <= 730) {
+		// 2 years
+		return RECENT_UPDATE_BOOST.LAST_2_YEARS;
+	}
+
+	return 0; // No boost for packages older than 2 years
 }
 
 /**

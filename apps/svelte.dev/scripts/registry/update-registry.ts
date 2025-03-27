@@ -5,8 +5,8 @@ import fs, { mkdirSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import registry from '../../src/lib/registry.json' with { type: 'json' };
-import svelte_society_list from '../../src/lib/society-npm.json' with { type: 'json' };
 import type { Package } from '../../src/lib/server/content.js';
+import svelte_society_list from '../../src/lib/society-npm.json' with { type: 'json' };
 import { sort_packages } from '../../src/routes/(packages)/packages-search.js';
 import {
 	fetch_details_for_package,
@@ -782,6 +782,7 @@ for (let i = 0; i < 1; i++) {
 	// await process_batches_through_llm();
 }
 
+svelte_society_list;
 // await process_packages_by_names_through_llm({ package_names: Object.keys(svelte_society_list) });
 
 // update_cache_from_npm();

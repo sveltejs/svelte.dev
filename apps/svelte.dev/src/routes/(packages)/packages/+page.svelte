@@ -14,11 +14,12 @@
 		encode: (v) => v.toString(),
 		decode: (v) => +v
 	});
-
 	const tags_qp = new ReactiveQueryParam<string[]>('tags', [], {
 		encode: (v) => v.join(','),
 		decode: (v) => v.split(',').filter(Boolean)
 	});
+	const svelte_5_only_qp = new ReactiveQueryParam<boolean>('svelte_5_only', false);
+	const show_outdated_qp = new ReactiveQueryParam<boolean>('show_outdated', true);
 
 	let registry = $derived(data.registry);
 	let total_pages = $derived(data.pages.total_pages);
@@ -218,6 +219,41 @@
 			</div>
 
 			<ul class="sidebar">
+				<b>FILTERS</b>
+				<li>
+					<input type="checkbox" value="svelte5" bind:checked={svelte_5_only_qp.current} />
+					<a
+						class="tag"
+						href={svelte_5_only_qp.url_from(!svelte_5_only_qp.current)}
+						onclick={(e) => {
+							e.preventDefault();
+							svelte_5_only_qp.current = !svelte_5_only_qp.current;
+						}}
+						aria-current={svelte_5_only_qp.current}
+						title="Show Svelte 5 packages"
+					>
+						Svelte 5
+					</a>
+				</li>
+				<li>
+					<input type="checkbox" value="show-outdated" bind:checked={show_outdated_qp.current} />
+					<a
+						class="tag"
+						href={show_outdated_qp.url_from(!show_outdated_qp.current)}
+						onclick={(e) => {
+							e.preventDefault();
+							show_outdated_qp.current = !show_outdated_qp.current;
+						}}
+						aria-current={show_outdated_qp.current}
+					>
+						Outdated
+					</a>
+				</li>
+			</ul>
+
+			<br /><br />
+			<ul class="sidebar">
+				<b>TAGS</b>
 				{#each [{ tag: 'all', short_title: 'All' }].concat(data.tags) as tag}
 					{@const link = new URL(page.url)}
 					{@const _ = link.searchParams.set(
