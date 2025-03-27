@@ -71,7 +71,8 @@ export class ReactiveQueryParam<T = string> {
 				return decode('');
 			},
 			(val) => {
-				const encoded = val ? encode(val ?? default_value) : undefined;
+				const encoded = val != null ? encode(val ?? default_value) : undefined;
+
 				if (encoded) page.url.searchParams.set(name, encoded);
 				else page.url.searchParams.delete(name);
 
