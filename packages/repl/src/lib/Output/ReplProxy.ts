@@ -85,8 +85,8 @@ export default class ReplProxy {
 		}
 	}
 
-	eval(script: string) {
-		return this.iframe_command('eval', { script });
+	eval(script: string, style?: string) {
+		return this.iframe_command('eval', { script, style });
 	}
 
 	handle_links() {

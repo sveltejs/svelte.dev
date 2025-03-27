@@ -26,6 +26,7 @@ export type Bundle = {
 	client: OutputChunk | null;
 	error: (RollupError & CompileError) | null;
 	server: OutputChunk | null;
+	tailwind?: string;
 	imports: string[];
 	warnings: Warning[];
 };

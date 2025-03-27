@@ -113,6 +113,7 @@ export class Workspace {
 	#files = $state.raw<Item[]>([]);
 	#current = $state.raw() as File;
 	#vim = $state(false);
+	#tailwind = $state(false);
 
 	#handlers = {
 		hover: new Set<(pos: number | null) => void>(),
@@ -392,11 +393,13 @@ export class Workspace {
 		this.#onreset?.(this.#files);
 	}
 
-	reset(new_files: Item[], selected?: string) {
+	reset(new_files: Item[], options: { tailwind: boolean }, selected?: string) {
 		this.states.clear();
 		this.set(new_files, selected);
 
 		this.mark_saved();
+
+		this.#tailwind = options.tailwind;
 
 		this.#onreset(new_files);
 		this.#reset_diagnostics();
@@ -462,6 +465,15 @@ export class Workspace {
 		if (state) {
 			this.#update_state(file, state);
 		}
+	}
+
+	get tailwind() {
+		return this.#tailwind;
+	}
+
+	set tailwind(value) {
+		this.#tailwind = value;
+		this.#onupdate(this.#current);
 	}
 
 	get vim() {

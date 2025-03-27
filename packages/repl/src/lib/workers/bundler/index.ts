@@ -1,4 +1,5 @@
 import '@sveltejs/site-kit/polyfills';
+import { walk } from 'zimmerframe';
 import '../patch_window';
 import { sleep } from '../../utils';
 import { rollup } from '@rollup/browser';
@@ -12,11 +13,12 @@ import image from './plugins/image';
 import svg from './plugins/svg';
 import replace from './plugins/replace';
 import loop_protect from './plugins/loop-protect';
-import type { Plugin, TransformResult } from '@rollup/browser';
-import type { BundleMessageData } from '../workers';
+import type { Plugin, RollupCache, TransformResult } from '@rollup/browser';
+import type { BundleMessageData, BundleOptions } from '../workers';
 import type { Warning } from '../../types';
-import type { CompileError, CompileOptions, CompileResult } from 'svelte/compiler';
+import type { CompileError, CompileResult } from 'svelte/compiler';
 import type { File } from 'editor';
+import type { Node } from 'estree';
 import { parseTar, type FileDescription } from 'tarparser';
 import { max } from './semver';
 
@@ -93,7 +95,6 @@ async function init(v: string, packages_url: string) {
 
 		can_use_experimental_async = true;
 	} catch (e) {
-		console.error(e);
 		// do nothing
 	}
 
@@ -137,14 +138,6 @@ self.addEventListener('message', async (event: MessageEvent<BundleMessageData>) 
 		}
 	}
 });
-
-let cached: Record<
-	'client' | 'server',
-	Map<string, { code: string; result: ReturnType<typeof svelte.compile> }>
-> = {
-	client: new Map(),
-	server: new Map()
-};
 
 const ABORT = { aborted: true };
 
@@ -253,12 +246,45 @@ async function resolve_from_pkg(
 
 const versions = Object.create(null);
 
+let previous: {
+	key: string;
+	cache: RollupCache | undefined;
+};
+
+let tailwind: Awaited<ReturnType<typeof init_tailwind>>;
+
+async function init_tailwind() {
+	const tailwindcss = await import('tailwindcss');
+
+	const { default: tailwind_preflight } = await import('tailwindcss/preflight.css?raw');
+	const { default: tailwind_theme } = await import('tailwindcss/theme.css?raw');
+	const { default: tailwind_utilities } = await import('tailwindcss/utilities.css?raw');
+
+	const tailwind_files: Record<string, string> = {
+		'tailwindcss/theme.css': tailwind_theme,
+		'tailwindcss/preflight.css': tailwind_preflight,
+		'tailwindcss/utilities.css': tailwind_utilities
+	};
+
+	const tailwind_base = [
+		`@layer theme, base, components, utilities;`,
+		`@import "tailwindcss/theme.css" layer(theme);`,
+		`@import "tailwindcss/preflight.css" layer(base);`,
+		`@import "tailwindcss/utilities.css" layer(utilities);`
+	].join('\n');
+
+	return await tailwindcss.compile(tailwind_base, {
+		loadStylesheet: async (id, base) => {
+			return { content: tailwind_files[id], base };
+		}
+	});
+}
+
 async function get_bundle(
 	uid: number,
 	mode: 'client' | 'server',
-	cache: (typeof cached)['client'],
 	local_files_lookup: Map<string, File>,
-	options: CompileOptions
+	options: BundleOptions
 ) {
 	let bundle;
 
@@ -266,7 +292,29 @@ async function get_bundle(
 	const imports: Set<string> = new Set();
 	const warnings: Warning[] = [];
 	const all_warnings: Array<{ message: string }> = [];
-	const new_cache: typeof cache = new Map();
+
+	const tailwind_candidates: string[] = [];
+
+	function add_tailwind_candidates(ast: Node | undefined) {
+		if (!ast) return;
+
+		walk(ast, null, {
+			ImportDeclaration() {
+				// don't descend into these nodes, so that we don't
+				// pick up import sources
+			},
+			Literal(node) {
+				if (typeof node.value === 'string' && node.value) {
+					tailwind_candidates.push(...node.value.split(' '));
+				}
+			},
+			TemplateElement(node) {
+				if (node.value.raw) {
+					tailwind_candidates.push(...node.value.raw.split(' '));
+				}
+			}
+		});
+	}
 
 	const repl_plugin: Plugin = {
 		name: 'svelte-repl',
@@ -416,14 +464,10 @@ async function get_bundle(
 
 			const name = id.split('/').pop()?.split('.')[0];
 
-			const cached_id = cache.get(id);
 			let result: CompileResult;
 
-			if (cached_id && cached_id.code === code) {
-				result = cached_id.result;
-			} else if (id.endsWith('.svelte')) {
+			if (id.endsWith('.svelte')) {
 				const compilerOptions: any = {
-					...options,
 					filename: name + '.svelte',
 					generate: Number(svelte.VERSION.split('.')[0]) >= 5 ? 'client' : 'dom',
 					dev: true
@@ -434,6 +478,22 @@ async function get_bundle(
 				}
 
 				result = svelte.compile(code, compilerOptions);
+
+				walk(result.ast.html as import('svelte/compiler').AST.TemplateNode, null, {
+					Attribute(node) {
+						if (Array.isArray(node.value)) {
+							for (const chunk of node.value) {
+								if (chunk.type === 'Text') {
+									tailwind_candidates.push(...chunk.data.split(' '));
+								}
+							}
+						}
+					}
+				});
+
+				add_tailwind_candidates(result.ast.module);
+				add_tailwind_candidates(result.ast.instance);
+				add_tailwind_candidates(result.ast.html);
 
 				if (result.css?.code) {
 					// resolve local files by inlining them
@@ -482,8 +542,6 @@ async function get_bundle(
 				return null;
 			}
 
-			new_cache.set(id, { code, result });
-
 			// @ts-expect-error
 			(result.warnings || result.stats?.warnings)?.forEach((warning) => {
 				// This is required, otherwise postMessage won't work
@@ -504,8 +562,11 @@ async function get_bundle(
 	};
 
 	try {
+		const key = JSON.stringify(options);
+
 		bundle = await rollup({
 			input: './__entry.js',
+			cache: previous?.key === key && previous.cache,
 			plugins: [
 				repl_plugin,
 				commonjs,
@@ -517,7 +578,21 @@ async function get_bundle(
 				loop_protect,
 				replace({
 					'process.env.NODE_ENV': JSON.stringify('production')
-				})
+				}),
+				options.tailwind && {
+					name: 'tailwind-extract',
+					transform(code, id) {
+						// TODO tidy this up
+						if (id.startsWith(svelte_url)) return;
+						if (id.endsWith('.svelte')) return;
+						if (id === './__entry.js') return;
+						if (id === 'esm-env') return;
+						if (id === shared_file) return;
+						if (id.startsWith('https://unpkg.com/clsx@')) return;
+
+						add_tailwind_candidates(this.parse(code));
+					}
+				}
 			],
 			onwarn(warning) {
 				all_warnings.push({
@@ -526,16 +601,20 @@ async function get_bundle(
 			}
 		});
 
+		previous = { key, cache: bundle.cache };
+
 		return {
 			bundle,
+			tailwind: options.tailwind
+				? (tailwind ?? (await init_tailwind())).build(tailwind_candidates)
+				: undefined,
 			imports: Array.from(imports),
-			cache: new_cache,
 			error: null,
 			warnings,
 			all_warnings
 		};
 	} catch (error) {
-		return { error, imports: null, bundle: null, cache: new_cache, warnings, all_warnings };
+		return { error, imports: null, bundle: null, warnings, all_warnings };
 	}
 }
 
@@ -550,7 +629,7 @@ async function bundle({
 }: {
 	uid: number;
 	files: File[];
-	options: CompileOptions;
+	options: BundleOptions;
 }) {
 	if (!DEV) {
 		console.clear();
@@ -610,7 +689,6 @@ async function bundle({
 	let client: Awaited<ReturnType<typeof get_bundle>> = await get_bundle(
 		uid,
 		'client',
-		cached.client,
 		lookup,
 		options
 	);
@@ -619,8 +697,6 @@ async function bundle({
 		if (client.error) {
 			throw client.error;
 		}
-
-		cached.client = client.cache;
 
 		const client_result = (
 			await client.bundle?.generate({
@@ -632,14 +708,11 @@ async function bundle({
 		)?.output[0];
 
 		const server = false // TODO how can we do SSR?
-			? await get_bundle(uid, 'server', cached.server, lookup, options)
+			? await get_bundle(uid, 'server', lookup, options)
 			: null;
 
-		if (server) {
-			cached.server = server.cache;
-			if (server.error) {
-				throw server.error;
-			}
+		if (server?.error) {
+			throw server.error;
 		}
 
 		const server_result = server
@@ -657,6 +730,7 @@ async function bundle({
 			uid,
 			client: client_result,
 			server: server_result,
+			tailwind: client.tailwind,
 			imports: client.imports,
 			// Svelte 5 returns warnings as error objects with a toJSON method, prior versions return a POJO
 			warnings: client.warnings.map((w: any) => w.toJSON?.() ?? w),

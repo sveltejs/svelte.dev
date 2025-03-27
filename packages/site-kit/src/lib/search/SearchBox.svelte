@@ -10,7 +10,6 @@ It appears when the user clicks on the `Search` component or presses the corresp
 	import { focusable_children, forcefocus, trap } from '../actions/focus.js';
 	import Icon from '../components/Icon.svelte';
 	import SearchResults from './SearchResults.svelte';
-	import SearchWorker from './search-worker.js?worker';
 	import { page } from '$app/stores';
 
 	interface Props {
@@ -37,7 +36,9 @@ It appears when the user clicks on the `Search` component or presses the corresp
 	const pending = new Set();
 
 	onMount(async () => {
-		worker = new SearchWorker();
+		worker = new Worker(new URL('./search-worker', import.meta.url), {
+			type: 'module'
+		});
 
 		worker.addEventListener('message', (event) => {
 			const { type, payload } = event.data;
