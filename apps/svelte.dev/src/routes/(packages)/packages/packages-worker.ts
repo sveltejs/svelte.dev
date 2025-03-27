@@ -11,9 +11,16 @@ addEventListener('message', async (event) => {
 	}
 
 	if (type === 'get') {
-		let { query, page = 1, tags = [] } = payload;
+		let { query, page = 1, tags = [], svelte_5_only = false, show_outdated = true } = payload;
 
-		const current_results = search(query, { tags });
+		console.log({ svelte_5_only, show_outdated });
+		const current_results = search(query, {
+			tags,
+			filters: {
+				svelte_5_only,
+				show_outdated
+			}
+		});
 
 		const total_pages = Math.ceil(current_results.length / REGISTRY_PAGE_LIMIT);
 

@@ -9,13 +9,21 @@ export async function load({ url }) {
 	const query = url.searchParams.get('query');
 	const tags = (url.searchParams.get('tags') ?? '').split(',').filter(Boolean);
 	let page = Math.max(1, +(url.searchParams.get('page')?.toString() ?? 1));
+	const svelte_5_only = (url.searchParams.get('svelte_5_only') ?? 'false') === 'true';
+	const show_outdated = (url.searchParams.get('show_outdated') ?? 'true') === 'true';
 
 	init(registry);
 
-	const current_results = search(query, { tags, sort_by: 'popularity' });
+	const current_results = search(query, {
+		tags,
+		sort_by: 'popularity',
+		filters: {
+			svelte_5_only,
+			show_outdated
+		}
+	});
 
 	const total_pages = Math.ceil(current_results.length / REGISTRY_PAGE_LIMIT);
-	console.log(page, total_pages);
 
 	if (page > total_pages && total_pages !== 0) {
 		page = 1;

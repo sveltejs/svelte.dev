@@ -105,13 +105,19 @@ export function search(
 	options: {
 		tags?: string[];
 		sort_by?: SortCriterion;
+		filters?: {
+			svelte_5_only?: boolean;
+			show_outdated?: boolean;
+		};
 	} = {}
 ): Package[] {
 	if (!is_inited) {
 		throw new Error('Search index not initialized. Call init() first.');
 	}
 
-	const { tags = [], sort_by = 'popularity' } = options;
+	const { tags = [], sort_by = 'popularity', filters = {} } = options;
+
+	const { svelte_5_only = false, show_outdated = true } = filters;
 
 	// Normalize query to empty string if null or undefined
 	const normalized_query = query === null || query === undefined ? '' : query;
@@ -124,15 +130,13 @@ export function search(
 
 	// Case 1: No query, no tags - return all packages sorted by selected criterion
 	if (!has_query && !has_tags) {
-		result_packages = Array.from(packages_map.values()).sort((a, b) =>
-			sort_packages(a, b, sort_by)
-		);
+		result_packages = Array.from(packages_map.values());
 	}
 	// Case 2: Empty query, filter by tags only
 	else if (!has_query && has_tags) {
-		result_packages = Array.from(packages_map.values())
-			.filter((pkg) => tags.some((tag) => pkg.tags && pkg.tags.includes(tag)))
-			.sort((a, b) => sort_packages(a, b, sort_by));
+		result_packages = Array.from(packages_map.values()).filter((pkg) =>
+			tags.some((tag) => pkg.tags && pkg.tags.includes(tag))
+		);
 	}
 	// Case 3 & 4: Has query (and possibly tags)
 	else if (has_query) {
@@ -164,6 +168,16 @@ export function search(
 
 					// If we have tag filters, only include packages that match ANY of the tags
 					if (has_tags && !tags.some((tag) => pkg.tags && pkg.tags.includes(tag))) {
+						continue;
+					}
+
+					// Apply Svelte 5 filter if enabled
+					if (svelte_5_only && !pkg.svelte5) {
+						continue;
+					}
+
+					// Apply outdated filter if not showing outdated packages
+					if (!show_outdated && pkg.outdated) {
 						continue;
 					}
 
@@ -220,7 +234,6 @@ export function search(
 					}
 
 					// Boost recently updated packages
-					// Boost recently updated packages
 					if (pkg.updated) {
 						score += calculate_recency_boost(pkg.updated) * RECENCY_WEIGHT; // Multiply by 10 to make the boost more impactful
 					}
@@ -249,6 +262,16 @@ export function search(
 						continue;
 					}
 
+					// Apply Svelte 5 filter if enabled
+					if (svelte_5_only && !pkg.svelte5) {
+						continue;
+					}
+
+					// Apply outdated filter if not showing outdated packages
+					if (!show_outdated && pkg.outdated) {
+						continue;
+					}
+
 					matched_packages.push(pkg);
 				}
 
@@ -256,6 +279,22 @@ export function search(
 				result_packages = matched_packages.sort((a, b) => sort_packages(a, b, sort_by));
 			}
 		}
+	}
+
+	// Apply filters to results when not using search (cases 1 & 2)
+	if (!has_query) {
+		// Apply Svelte 5 filter if enabled
+		if (svelte_5_only) {
+			result_packages = result_packages.filter((pkg) => pkg.svelte5);
+		}
+
+		// Apply outdated filter if not showing outdated packages
+		if (!show_outdated) {
+			result_packages = result_packages.filter((pkg) => !pkg.outdated);
+		}
+
+		// Apply sorting after filtering
+		result_packages = result_packages.sort((a, b) => sort_packages(a, b, sort_by));
 	}
 
 	return result_packages;

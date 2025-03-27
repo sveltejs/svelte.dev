@@ -4,22 +4,23 @@
 	import { Icon } from '@sveltejs/site-kit/components';
 	import { ReactiveQueryParam } from '@sveltejs/site-kit/reactivity';
 	import { onMount } from 'svelte';
-	import SearchWorker from './packages-worker.ts?worker';
 	import Pagination from './pagination.svelte';
 
 	const { data } = $props();
 
 	const query_qp = new ReactiveQueryParam<string>('query');
-	const page_qp = new ReactiveQueryParam<number>('page', 1, {
-		encode: (v) => v.toString(),
-		decode: (v) => +v
-	});
-	const tags_qp = new ReactiveQueryParam<string[]>('tags', [], {
-		encode: (v) => v.join(','),
-		decode: (v) => v.split(',').filter(Boolean)
-	});
-	const svelte_5_only_qp = new ReactiveQueryParam<boolean>('svelte_5_only', false);
-	const show_outdated_qp = new ReactiveQueryParam<boolean>('show_outdated', true);
+	const page_qp = new ReactiveQueryParam<number>('page', 1, ReactiveQueryParam.number);
+	const tags_qp = new ReactiveQueryParam<string[]>('tags', [], ReactiveQueryParam.array);
+	const svelte_5_only_qp = new ReactiveQueryParam<boolean>(
+		'svelte_5_only',
+		false,
+		ReactiveQueryParam.boolean
+	);
+	const show_outdated_qp = new ReactiveQueryParam<boolean>(
+		'show_outdated',
+		true,
+		ReactiveQueryParam.boolean
+	);
 
 	let registry = $derived(data.registry);
 	let total_pages = $derived(data.pages.total_pages);
@@ -31,7 +32,7 @@
 
 	let worker: Worker;
 	onMount(() => {
-		worker = new SearchWorker();
+		worker = new Worker(new URL('./packages-worker.ts', import.meta.url), { type: 'module' });
 
 		worker.addEventListener('message', (event) => {
 			const { type, payload } = event.data;
@@ -60,10 +61,14 @@
 		return () => worker.terminate();
 	});
 
+	$inspect(svelte_5_only_qp.current);
+
 	$effect(() => {
 		query_qp.current;
 		tags_qp.current;
 		page_qp.current;
+		svelte_5_only_qp.current;
+		show_outdated_qp.current;
 
 		if (!ready) return;
 
@@ -80,7 +85,9 @@
 			payload: {
 				query: query_qp.current,
 				page: page_qp.current,
-				tags: $state.snapshot(tags_qp.current)
+				tags: $state.snapshot(tags_qp.current),
+				svelte_5_only: svelte_5_only_qp.current,
+				show_outdated: show_outdated_qp.current
 			}
 		});
 	});

@@ -37,6 +37,11 @@ export class Box<T> {
 	}
 }
 
+type Serde<T> = {
+	encode: (value: T) => string;
+	decode: (value: string) => T;
+};
+
 export class ReactiveQueryParam<T = string> {
 	#current: Box<T>;
 
@@ -46,16 +51,7 @@ export class ReactiveQueryParam<T = string> {
 	constructor(
 		name: string,
 		default_value?: T,
-		{
-			encode,
-			decode
-		}: {
-			encode: (value: T) => string;
-			decode: (value: string) => T;
-		} = {
-			encode: (v) => v + '',
-			decode: (v) => v as T
-		}
+		{ encode, decode }: Serde<T> = ReactiveQueryParam.string as any
 	) {
 		this.#encode = encode;
 		this.#name = name;
@@ -99,5 +95,33 @@ export class ReactiveQueryParam<T = string> {
 		new_url.searchParams.set(this.#name, encoded);
 
 		return new_url.pathname + new_url.search;
+	}
+
+	static get boolean(): Serde<boolean> {
+		return {
+			encode: (v) => (v ? 'true' : 'false'),
+			decode: (v) => v === 'true'
+		};
+	}
+
+	static get string(): Serde<string> {
+		return {
+			encode: (v) => v + '',
+			decode: (v) => v as string
+		};
+	}
+
+	static get number(): Serde<number> {
+		return {
+			encode: (v) => v + '',
+			decode: (v) => +v
+		};
+	}
+
+	static get array(): Serde<string[]> {
+		return {
+			encode: (v) => v.join(','),
+			decode: (v) => v.split(',').filter(Boolean)
+		};
 	}
 }
