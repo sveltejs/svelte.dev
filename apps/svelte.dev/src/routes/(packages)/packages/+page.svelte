@@ -93,6 +93,69 @@
 	});
 
 	const number_formatter = Intl.NumberFormat();
+
+	/**
+	 * Formats a timestamp string into both short and long relative time formats
+	 *
+	 * @param timestamp ISO timestamp string
+	 * @returns An object with short (1d) and long (1 day) format strings
+	 */
+	export function format_relative_time(date: Date): { short: string; long: string } {
+		const now = new Date();
+		const diff_ms = now.getTime() - date.getTime();
+
+		// Convert to different time units
+		const diff_seconds = Math.floor(diff_ms / 1000);
+		const diff_minutes = Math.floor(diff_seconds / 60);
+		const diff_hours = Math.floor(diff_minutes / 60);
+		const diff_days = Math.floor(diff_hours / 24);
+		const diff_weeks = Math.floor(diff_days / 7);
+
+		// Calculate months (accounting for different month lengths)
+		const months =
+			(now.getFullYear() - date.getFullYear()) * 12 + (now.getMonth() - date.getMonth());
+		const diff_months = months;
+
+		const diff_years = Math.floor(diff_months / 12);
+
+		// Return the appropriate unit
+		if (diff_years >= 1) {
+			return {
+				short: `${diff_years}y`,
+				long: `${diff_years} ${diff_years === 1 ? 'year' : 'years'}`
+			};
+		} else if (diff_months >= 1) {
+			return {
+				short: `${diff_months}m`,
+				long: `${diff_months} ${diff_months === 1 ? 'month' : 'months'}`
+			};
+		} else if (diff_weeks >= 1) {
+			return {
+				short: `${diff_weeks}w`,
+				long: `${diff_weeks} ${diff_weeks === 1 ? 'week' : 'weeks'}`
+			};
+		} else if (diff_days >= 1) {
+			return {
+				short: `${diff_days}d`,
+				long: `${diff_days} ${diff_days === 1 ? 'day' : 'days'}`
+			};
+		} else if (diff_hours >= 1) {
+			return {
+				short: `${diff_hours}h`,
+				long: `${diff_hours} ${diff_hours === 1 ? 'hour' : 'hours'}`
+			};
+		} else if (diff_minutes >= 1) {
+			return {
+				short: `${diff_minutes}m`,
+				long: `${diff_minutes} ${diff_minutes === 1 ? 'minute' : 'minutes'}`
+			};
+		} else {
+			return {
+				short: `${diff_seconds}s`,
+				long: `${diff_seconds} ${diff_seconds === 1 ? 'second' : 'seconds'}`
+			};
+		}
+	}
 </script>
 
 <svelte:head>
@@ -174,12 +237,58 @@
 						{#if pkg.dependents}
 							<span title="{pkg.dependents} dependents">
 								{number_formatter.format(+pkg.dependents)}
-								<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"
-									><!-- Icon from All by undefined - undefined --><path
-										fill="currentColor"
-										d="M7.35 20.98q-.984 0-1.677-.683q-.692-.685-.692-1.662q0-.84.534-1.49q.533-.65 1.331-.816V7.67q-.798-.165-1.331-.815q-.534-.65-.534-1.49q0-.986.689-1.676T7.343 3t1.676.69t.693 1.676q0 .84-.524 1.49t-1.342.815v.54q0 1.37.942 2.33q.943.959 2.289.959h1.846q1.748 0 2.98 1.249t1.232 3.02v.56q.817.165 1.35.806q.534.64.534 1.48q0 .986-.702 1.676q-.701.69-1.68.69t-1.664-.69t-.685-1.675q0-.841.524-1.481q.525-.64 1.323-.806v-.56q0-1.346-.937-2.307q-.937-.962-2.275-.962h-1.846q-1.004 0-1.834-.435q-.83-.436-1.397-1.161v5.425q.817.165 1.341.806q.524.64.524 1.48q0 .986-.689 1.676q-.688.69-1.673.69M7.356 20q.569 0 .962-.392t.393-.972t-.392-.973t-.973-.394q-.56 0-.962.403q-.403.403-.403.963t.403.962q.402.403.972.403m9.288 0q.57 0 .963-.392t.393-.972t-.392-.974t-.973-.393q-.56 0-.963.403t-.403.963t.403.962t.972.403M7.356 6.73q.569 0 .962-.391t.394-.972t-.393-.974T7.346 4q-.56 0-.962.403q-.403.403-.403.963t.403.962t.972.403"
-									/></svg
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									height="1.5em"
+									width="1.5em"
+									viewBox="0 0 512 512"
+									style="translate: 0 2px;"
 								>
+									<!-- Top cube - slightly larger -->
+									<path
+										d="M256 100 L346 150 L256 200 L166 150 Z"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="24"
+									/>
+
+									<!-- Connection lines - slightly curved for better visual flow -->
+									<path
+										d="M226 180 Q206 210 176 230"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="20"
+									/>
+									<path
+										d="M286 180 Q306 210 336 230"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="20"
+									/>
+
+									<!-- Bottom left cube - positioned for better balance -->
+									<path
+										d="M176 230 L246 280 L176 330 L106 280 Z"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="20"
+									/>
+
+									<!-- Bottom right cube - positioned for better balance -->
+									<path
+										d="M336 230 L406 280 L336 330 L266 280 Z"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="20"
+									/>
+								</svg></span
+							>
+						{/if}
+
+						{#if pkg.updated}
+							{@const date = new Date(pkg.updated)}
+							<span title="Last updated on {date.toLocaleDateString()}">
+								{format_relative_time(date).long}
 							</span>
 						{/if}
 					</p>
