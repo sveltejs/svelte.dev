@@ -1,0 +1,18 @@
+{
+  "name": "svelte-generic-table-pager",
+  "description": "Extract configurable lines and dispatches as page data.",
+  "repo_url": "https://github.com/ivosdc/svelte-generic-table-pager",
+  "authors": [
+    "nologin"
+  ],
+  "homepage": "https://github.com/ivosdc/svelte-generic-table-pager#readme",
+  "downloads": 26,
+  "dependents": 0,
+  "updated": "2021-06-30T13:14:36.152Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 4
+}

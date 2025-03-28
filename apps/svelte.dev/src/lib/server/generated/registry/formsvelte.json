@@ -1,0 +1,17 @@
+{
+  "name": "formsvelte",
+  "description": "Create forms with validation in Svelte applications.",
+  "repo_url": "",
+  "authors": [
+    "zposten",
+    "olivare"
+  ],
+  "downloads": 3,
+  "dependents": 0,
+  "updated": "2022-07-29T19:27:13.513Z",
+  "tags": [
+    "miscellaneous"
+  ],
+  "svelte5": false,
+  "runes": false
+}

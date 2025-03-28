@@ -1,0 +1,18 @@
+{
+  "name": "@w5/svelte-preprocess",
+  "description": "Preprocess Svelte components with various preprocessors.",
+  "repo_url": "https://github.com/wacfork/svelte-preprocess",
+  "authors": [
+    "i-user"
+  ],
+  "homepage": "https://github.com/wacfork/svelte-preprocess#readme",
+  "downloads": 20,
+  "dependents": 2,
+  "updated": "2023-10-20T06:25:37.551Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

@@ -1,0 +1,18 @@
+{
+  "name": "@axdraft/prosemirror-dev-toolkit",
+  "description": "Inject dev tools for ProseMirror editors.",
+  "repo_url": "https://github.com/axdraft/prosemirror-dev-toolkit",
+  "authors": [
+    "axdraft"
+  ],
+  "homepage": "https://github.com/axdraft/prosemirror-dev-toolkit",
+  "downloads": 10,
+  "dependents": 0,
+  "updated": "2022-09-14T16:03:22.140Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

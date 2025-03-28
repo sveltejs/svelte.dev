@@ -1,0 +1,16 @@
+{
+  "name": "sv-print",
+  "description": "Print designer for Svelte apps.",
+  "repo_url": "",
+  "authors": [
+    "cc-better"
+  ],
+  "downloads": 23,
+  "dependents": 5,
+  "updated": "2024-07-29T15:55:07.858Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false
+}

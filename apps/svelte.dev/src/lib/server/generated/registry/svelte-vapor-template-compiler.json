@@ -1,0 +1,18 @@
+{
+  "name": "svelte-vapor-template-compiler",
+  "description": "Compile Svelte templates for Vapor.",
+  "repo_url": "https://github.com/kazupon/inclusion-vapor",
+  "authors": [
+    "kazupon"
+  ],
+  "homepage": "https://github.com/kazupon/inclusion-vapor#readme",
+  "downloads": 3,
+  "dependents": 1,
+  "updated": "2024-11-27T11:37:02.763Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 35
+}

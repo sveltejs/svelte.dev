@@ -1,0 +1,19 @@
+{
+  "name": "huggingface-widgets",
+  "description": "Embed Hugging Face machine learning widgets in Svelte.",
+  "repo_url": "https://github.com/huggingface/huggingface_hub",
+  "authors": [
+    "mishig"
+  ],
+  "homepage": "https://github.com/huggingface/huggingface_hub/tree/main/widgets",
+  "downloads": 54,
+  "dependents": 0,
+  "updated": "2021-09-09T08:45:53.317Z",
+  "tags": [
+    "ui",
+    "integration"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 2470
+}

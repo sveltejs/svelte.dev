@@ -1,0 +1,16 @@
+{
+  "name": "s-go-sgf-lib",
+  "description": "Provide tools for reading and writing SGF files.",
+  "repo_url": "",
+  "authors": [
+    "nanotron"
+  ],
+  "downloads": 4,
+  "dependents": 0,
+  "updated": "2023-09-11T21:44:20.814Z",
+  "tags": [
+    "miscellaneous"
+  ],
+  "svelte5": false,
+  "runes": false
+}

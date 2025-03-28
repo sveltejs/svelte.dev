@@ -1,0 +1,16 @@
+{
+  "name": "svelte-oidc",
+  "description": "Manage OpenID-Connect authentication in Svelte apps.",
+  "repo_url": "",
+  "authors": [
+    "easterthebunny"
+  ],
+  "downloads": 10,
+  "dependents": 0,
+  "updated": "2021-01-11T22:00:15.546Z",
+  "tags": [
+    "auth"
+  ],
+  "svelte5": false,
+  "runes": false
+}

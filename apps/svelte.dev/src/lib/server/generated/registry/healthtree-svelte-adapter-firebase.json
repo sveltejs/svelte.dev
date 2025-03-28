@@ -1,0 +1,23 @@
+{
+  "name": "@healthtree/svelte-adapter-firebase",
+  "description": "Integrate Firebase Hosting with Cloud Functions in SvelteKit apps.",
+  "repo_url": "https://github.com/jthegedus/svelte-adapter-firebase",
+  "authors": [
+    "sahagun-jorge",
+    "alvarocapde",
+    "healthtree-admin",
+    "diegofhe",
+    "jpcapdevila",
+    "aureliob"
+  ],
+  "homepage": "https://github.com/jthegedus/svelte-adapter-firebase#readme",
+  "downloads": 14,
+  "dependents": 0,
+  "updated": "2022-03-17T04:22:20.606Z",
+  "tags": [
+    "adapter"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 288
+}

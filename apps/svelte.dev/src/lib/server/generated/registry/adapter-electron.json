@@ -1,0 +1,18 @@
+{
+  "name": "adapter-electron",
+  "description": "SvelteKit adapter for Electron desktop applications.",
+  "repo_url": "https://github.com/lukehagar/sveltekit-adapters",
+  "authors": [
+    "lukehagar"
+  ],
+  "homepage": "https://github.com/lukehagar/sveltekit-adapters#readme",
+  "downloads": 14,
+  "dependents": 0,
+  "updated": "2024-03-11T16:16:15.313Z",
+  "tags": [
+    "adapter"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 10
+}

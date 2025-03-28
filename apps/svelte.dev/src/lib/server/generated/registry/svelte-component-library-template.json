@@ -1,0 +1,17 @@
+{
+  "name": "svelte-component-library-template",
+  "description": "Generates Svelte component library templates.",
+  "repo_url": "",
+  "authors": [
+    "tant2012",
+    "mingsterism"
+  ],
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2022-07-25T05:09:32.639Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false
+}

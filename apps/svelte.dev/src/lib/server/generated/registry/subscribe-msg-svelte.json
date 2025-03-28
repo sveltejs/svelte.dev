@@ -1,0 +1,16 @@
+{
+  "name": "subscribe-msg-svelte",
+  "description": "Create international subscription message component for Svelte.",
+  "repo_url": "",
+  "authors": [
+    "lynne.xu0"
+  ],
+  "downloads": 43,
+  "dependents": 0,
+  "updated": "2022-04-01T06:26:39.756Z",
+  "tags": [
+    "miscellaneous"
+  ],
+  "svelte5": false,
+  "runes": false
+}

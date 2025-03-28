@@ -1,0 +1,18 @@
+{
+  "name": "svelte-radio",
+  "description": "Create declarative radio button group component for Svelte.",
+  "repo_url": "https://github.com/metonym/svelte-radio",
+  "authors": [
+    "metonym"
+  ],
+  "homepage": "https://github.com/metonym/svelte-radio",
+  "downloads": 10,
+  "dependents": 0,
+  "updated": "2021-12-31T19:19:37.578Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 7
+}

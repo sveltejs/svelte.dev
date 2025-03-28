@@ -1,0 +1,16 @@
+{
+  "name": "svelte-tabula",
+  "description": "Create table component with batteries included.",
+  "repo_url": "",
+  "authors": [
+    "danielschischkin"
+  ],
+  "downloads": 12,
+  "dependents": 0,
+  "updated": "2021-02-09T10:36:02.228Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

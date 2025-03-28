@@ -1,0 +1,17 @@
+{
+  "name": "@airbadge/sveltekit",
+  "description": "Add Stripe Subscriptions and Checkout to SvelteKit apps.",
+  "repo_url": "",
+  "authors": [
+    "joshnuss"
+  ],
+  "downloads": 12,
+  "dependents": 0,
+  "updated": "2024-07-05T17:27:29.883Z",
+  "tags": [
+    "integration",
+    "server"
+  ],
+  "svelte5": false,
+  "runes": false
+}

@@ -1,0 +1,16 @@
+{
+  "name": "@htmlbricks/formrenderer-radioinput",
+  "description": "Create radio input web component for Svelte apps.",
+  "repo_url": "",
+  "authors": [
+    "dariocaruso"
+  ],
+  "downloads": 165,
+  "dependents": 0,
+  "updated": "2022-01-02T19:14:33.263Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

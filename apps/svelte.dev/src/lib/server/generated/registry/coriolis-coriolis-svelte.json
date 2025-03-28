@@ -1,0 +1,18 @@
+{
+  "name": "@coriolis/coriolis-svelte",
+  "description": "Coriolis wrapper for Svelte, enabling event sourcing.",
+  "repo_url": "https://github.com/coriolisjs/coriolis-svelte",
+  "authors": [
+    "nicolas.deveaud"
+  ],
+  "homepage": "https://github.com/coriolisjs/coriolis-svelte#readme",
+  "downloads": 14,
+  "dependents": 1,
+  "updated": "2020-07-11T23:21:52.370Z",
+  "tags": [
+    "miscellaneous"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

@@ -1,0 +1,16 @@
+{
+  "name": "svesome",
+  "description": "Wrap FontAwesome icons for Svelte projects.",
+  "repo_url": "",
+  "authors": [
+    "pouchlab"
+  ],
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2024-07-31T14:06:07.389Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false
+}

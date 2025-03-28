@@ -1,0 +1,18 @@
+{
+  "name": "@parkingboss/components",
+  "description": "Component library for Parking Boss applications, built with Svelte.",
+  "repo_url": "",
+  "authors": [
+    "crisfole",
+    "jpfohl",
+    "nlemesurier"
+  ],
+  "downloads": 50,
+  "dependents": 0,
+  "updated": "2020-04-24T23:52:42.903Z",
+  "tags": [
+    "design-system"
+  ],
+  "svelte5": false,
+  "runes": false
+}

@@ -1,0 +1,16 @@
+{
+  "name": "svegos",
+  "description": "Build Svelte libraries using create-svelte.",
+  "repo_url": "",
+  "authors": [
+    "justboereh"
+  ],
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2024-07-04T15:19:03.568Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": true,
+  "runes": false
+}

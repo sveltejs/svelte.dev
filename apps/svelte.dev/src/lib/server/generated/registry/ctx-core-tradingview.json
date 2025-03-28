@@ -1,0 +1,18 @@
+{
+  "name": "@ctx-core/tradingview",
+  "description": "Svelte component for TradingView charts.",
+  "repo_url": "https://github.com/ctx-core/tradingview",
+  "authors": [
+    "btakita"
+  ],
+  "homepage": "https://github.com/ctx-core/tradingview#readme",
+  "downloads": 1090,
+  "dependents": 0,
+  "updated": "2024-09-01T17:09:47.798Z",
+  "tags": [
+    "integration"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 1
+}

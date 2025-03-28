@@ -1,0 +1,16 @@
+{
+  "name": "@gmana/svelte",
+  "description": "Create Svelte libraries with create-svelte.",
+  "repo_url": "",
+  "authors": [
+    "sunsreng"
+  ],
+  "downloads": 9,
+  "dependents": 0,
+  "updated": "2024-06-22T08:58:14.131Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": true,
+  "runes": false
+}

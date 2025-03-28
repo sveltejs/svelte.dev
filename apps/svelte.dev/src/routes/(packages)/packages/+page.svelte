@@ -257,11 +257,6 @@
 						<Icon name="close" />
 					</button>
 				</label>
-
-				<!-- <button class="raised" aria-label="Close" onclick={close}>
-						<Icon name="close" />
-						<kbd>Esc</kbd>
-					</button> -->
 			</div>
 
 			<ul class="sidebar">

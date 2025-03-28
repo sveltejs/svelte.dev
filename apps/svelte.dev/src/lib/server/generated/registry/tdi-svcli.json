@@ -1,0 +1,16 @@
+{
+  "name": "@tdi/svcli",
+  "description": "Set up and preprocess Svelte projects with CLI.",
+  "repo_url": "",
+  "authors": [
+    "firefish5000"
+  ],
+  "downloads": 65,
+  "dependents": 0,
+  "updated": "2020-10-25T16:14:14.610Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false
+}

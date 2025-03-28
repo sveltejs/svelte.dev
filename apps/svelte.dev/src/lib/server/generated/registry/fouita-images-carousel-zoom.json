@@ -1,0 +1,17 @@
+{
+  "name": "@fouita/images-carousel-zoom",
+  "description": "Create image carousel with zoom effect using Svelte and Tailwind CSS.",
+  "repo_url": "",
+  "authors": [
+    "fouita"
+  ],
+  "downloads": 10,
+  "dependents": 0,
+  "updated": "2020-09-11T20:59:02.596Z",
+  "tags": [
+    "ui",
+    "media"
+  ],
+  "svelte5": false,
+  "runes": false
+}

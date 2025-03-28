@@ -1,0 +1,18 @@
+{
+  "name": "explorator-ai",
+  "description": "Build AI-powered applications using Svelte and Vercel AI SDK.",
+  "repo_url": "https://github.com/exploratortech/ai-sdk",
+  "authors": [
+    "1orzero"
+  ],
+  "homepage": "https://sdk.vercel.ai/docs",
+  "downloads": 4,
+  "dependents": 0,
+  "updated": "2024-08-15T06:32:23.446Z",
+  "tags": [
+    "integration"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

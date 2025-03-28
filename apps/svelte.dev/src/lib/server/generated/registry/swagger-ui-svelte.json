@@ -1,0 +1,18 @@
+{
+  "name": "swagger-ui-svelte",
+  "description": "Lightweight Swagger UI implementation using Svelte framework.",
+  "repo_url": "https://github.com/matchid-project/swagger-ui-svelte",
+  "authors": [
+    "cristianpb"
+  ],
+  "homepage": "https://github.com/matchid-project/swagger-ui-svelte#readme",
+  "downloads": 1248,
+  "dependents": 0,
+  "updated": "2020-11-08T21:27:01.994Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 5
+}

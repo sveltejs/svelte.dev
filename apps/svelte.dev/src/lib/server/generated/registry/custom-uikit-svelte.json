@@ -1,0 +1,18 @@
+{
+  "name": "custom-uikit-svelte",
+  "description": "Build UIkit components for Svelte applications.",
+  "repo_url": "https://github.com/cdellacqua/custom-uikit-svelte",
+  "authors": [
+    "cdellacqua"
+  ],
+  "homepage": "https://github.com/cdellacqua/custom-uikit-svelte",
+  "downloads": 473,
+  "dependents": 0,
+  "updated": "2021-12-07T17:52:56.198Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 11
+}

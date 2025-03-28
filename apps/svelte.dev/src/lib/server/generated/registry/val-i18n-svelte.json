@@ -1,0 +1,18 @@
+{
+  "name": "val-i18n-svelte",
+  "description": "Integrate val-i18n for internationalization in Svelte apps.",
+  "repo_url": "https://github.com/crimx/val-i18n-svelte",
+  "authors": [
+    "straybugs"
+  ],
+  "homepage": "https://github.com/crimx/val-i18n-svelte#readme",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2024-02-22T08:57:27.290Z",
+  "tags": [
+    "integration"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 2
+}

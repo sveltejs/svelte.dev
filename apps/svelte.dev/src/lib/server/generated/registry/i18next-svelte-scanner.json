@@ -1,0 +1,16 @@
+{
+  "name": "i18next-svelte-scanner",
+  "description": "Scan Svelte components for i18next translation keys.",
+  "repo_url": "",
+  "authors": [
+    "daliusd"
+  ],
+  "downloads": 23,
+  "dependents": 0,
+  "updated": "2019-11-26T21:47:41.837Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false
+}

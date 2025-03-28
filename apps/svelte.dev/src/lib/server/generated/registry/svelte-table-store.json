@@ -1,0 +1,17 @@
+{
+  "name": "svelte-table-store",
+  "description": "Provides a relational table component for Svelte.",
+  "repo_url": "",
+  "authors": [
+    "7korobi"
+  ],
+  "homepage": "https://github.com/7korobi/svelte-table-store/blob/main/src/lib/",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2022-12-15T16:27:47.481Z",
+  "tags": [
+    "miscellaneous"
+  ],
+  "svelte5": false,
+  "runes": false
+}

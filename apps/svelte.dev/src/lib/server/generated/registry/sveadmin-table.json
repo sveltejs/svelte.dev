@@ -1,0 +1,18 @@
+{
+  "name": "@sveadmin/table",
+  "description": "Displays structured data in Svelte admin tables.",
+  "repo_url": "https://github.com/sveadmin/table",
+  "authors": [
+    "mkufferstein"
+  ],
+  "homepage": "https://github.com/sveadmin/table#readme",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2023-07-30T12:26:42.721Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

@@ -1,0 +1,23 @@
+{
+  "name": "overmind-svelte",
+  "description": "Manage application state and side effects in Svelte.",
+  "repo_url": "https://github.com/cerebral/overmind",
+  "authors": [
+    "cerebral.js",
+    "christianalfoni",
+    "guria",
+    "gbucher",
+    "henri-hulski",
+    "fweinb"
+  ],
+  "homepage": "https://github.com/cerebral/overmind#readme",
+  "downloads": 154,
+  "dependents": 0,
+  "updated": "2023-07-06T09:33:45.566Z",
+  "tags": [
+    "miscellaneous"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 1587
+}

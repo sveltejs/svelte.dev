@@ -1,0 +1,17 @@
+{
+  "name": "i18n-svelte",
+  "description": "Translate Svelte apps using frenchkiss.js for internationalization.",
+  "repo_url": "https://github.com/sharmapukar217/i18n-svelte",
+  "authors": [
+    "sharmapukar217"
+  ],
+  "homepage": "https://github.com/sharmapukar217/i18n-svelte#readme",
+  "downloads": 14,
+  "dependents": 0,
+  "updated": "2022-01-28T14:33:09.803Z",
+  "tags": [
+    "integration"
+  ],
+  "svelte5": false,
+  "runes": false
+}

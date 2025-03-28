@@ -1,0 +1,18 @@
+{
+  "name": "@twind/with-sveltekit",
+  "description": "Integrate Twind with SvelteKit projects.",
+  "repo_url": "https://github.com/tw-in-js/twind",
+  "authors": [
+    "sastan"
+  ],
+  "homepage": "https://twind.style",
+  "downloads": 614,
+  "dependents": 1,
+  "updated": "2023-01-24T21:30:38.707Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 3848
+}

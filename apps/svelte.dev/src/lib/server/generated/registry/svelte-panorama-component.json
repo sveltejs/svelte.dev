@@ -1,0 +1,18 @@
+{
+  "name": "svelte-panorama-component",
+  "description": "View 360-degree equirectangular images in Svelte.",
+  "repo_url": "https://github.com/vipero07/svelte-panorama",
+  "authors": [
+    "vipero07"
+  ],
+  "homepage": "https://vipero07.github.io/svelte-panorama/",
+  "downloads": 11,
+  "dependents": 0,
+  "updated": "2021-05-20T13:30:21.968Z",
+  "tags": [
+    "media"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

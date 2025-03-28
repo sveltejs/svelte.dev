@@ -1,0 +1,17 @@
+{
+  "name": "@otomo/svelte-sortable-list",
+  "description": "Implement animated drag-and-drop lists in Svelte.",
+  "repo_url": "",
+  "authors": [
+    "otomojun"
+  ],
+  "homepage": "https://github.com/junotomo/svelte-sortable-list#readme",
+  "downloads": 15,
+  "dependents": 0,
+  "updated": "2020-01-14T17:47:45.753Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

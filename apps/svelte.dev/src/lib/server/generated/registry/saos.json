@@ -1,0 +1,18 @@
+{
+  "name": "saos",
+  "description": "Svelte component for animating elements on scroll.",
+  "repo_url": "https://github.com/shiryel/saos",
+  "authors": [
+    "shiryel"
+  ],
+  "homepage": "https://github.com/shiryel/saos#readme",
+  "downloads": 839,
+  "dependents": 0,
+  "updated": "2022-05-30T19:21:21.471Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 253
+}

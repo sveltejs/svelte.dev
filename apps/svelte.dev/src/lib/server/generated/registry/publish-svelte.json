@@ -1,0 +1,18 @@
+{
+  "name": "publish-svelte",
+  "description": "CLI tool for publishing Svelte components to npm easily.",
+  "repo_url": "https://github.com/philter87/publish-svelte",
+  "authors": [
+    "philter87"
+  ],
+  "homepage": "https://github.com/philter87/publish-svelte#readme",
+  "downloads": 9,
+  "dependents": 1,
+  "updated": "2021-05-25T18:50:22.614Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 15
+}

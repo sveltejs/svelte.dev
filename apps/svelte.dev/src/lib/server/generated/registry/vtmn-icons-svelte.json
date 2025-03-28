@@ -1,0 +1,16 @@
+{
+  "name": "vtmn-icons-svelte",
+  "description": "Use Vitamin SVG icons as Svelte components.",
+  "repo_url": "",
+  "authors": [
+    "xavhan"
+  ],
+  "downloads": 9,
+  "dependents": 0,
+  "updated": "2021-06-16T15:09:41.971Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

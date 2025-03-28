@@ -1,0 +1,16 @@
+{
+  "name": "@ikun-ui/page-header",
+  "description": "Build page headers for Svelte applications.",
+  "repo_url": "",
+  "authors": [
+    "baiwusanyu"
+  ],
+  "downloads": 2,
+  "dependents": 1,
+  "updated": "2025-01-24T03:49:09.380Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

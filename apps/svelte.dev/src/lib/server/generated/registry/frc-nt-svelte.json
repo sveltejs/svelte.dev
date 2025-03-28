@@ -1,0 +1,17 @@
+{
+  "name": "frc-nt-svelte",
+  "description": "Create custom dashboards for FRC using Svelte and NetworkTables.",
+  "repo_url": "",
+  "authors": [
+    "cr1spybacon8r"
+  ],
+  "downloads": 6,
+  "dependents": 0,
+  "updated": "2022-07-26T19:12:51.607Z",
+  "tags": [
+    "ui",
+    "integration"
+  ],
+  "svelte5": false,
+  "runes": false
+}

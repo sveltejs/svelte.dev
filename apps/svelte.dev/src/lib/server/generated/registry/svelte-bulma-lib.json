@@ -1,0 +1,19 @@
+{
+  "name": "svelte-bulma-lib",
+  "description": "Provide Svelte versions of Bulma components.",
+  "repo_url": "https://github.com/thompson4822/svelte-bulma-lib",
+  "authors": [
+    "thompson4822"
+  ],
+  "homepage": "https://github.com/thompson4822/svelte-bulma-lib#readme",
+  "downloads": 7,
+  "dependents": 0,
+  "updated": "2020-02-14T19:44:27.103Z",
+  "tags": [
+    "ui",
+    "design-system"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

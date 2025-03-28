@@ -1,0 +1,16 @@
+{
+  "name": "@ikun-ui/auto-complete",
+  "description": "Create autocomplete components for Svelte.",
+  "repo_url": "",
+  "authors": [
+    "baiwusanyu"
+  ],
+  "downloads": 6,
+  "dependents": 1,
+  "updated": "2025-01-24T03:48:31.962Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

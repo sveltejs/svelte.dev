@@ -1,0 +1,18 @@
+{
+  "name": "@robotpajamas/svelte-headlessui",
+  "description": "Create unstyled, accessible UI components for Svelte.",
+  "repo_url": "https://github.com/robotpajamas/svelte-headlessui",
+  "authors": [
+    "sureshjoshi"
+  ],
+  "homepage": "https://svelte-headlessui.goss.io",
+  "downloads": 19,
+  "dependents": 0,
+  "updated": "2023-04-19T16:19:47.865Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

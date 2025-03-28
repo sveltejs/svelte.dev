@@ -1,0 +1,16 @@
+{
+  "name": "@ikun-ui/image-view",
+  "description": "Provide image view components for Svelte.",
+  "repo_url": "",
+  "authors": [
+    "baiwusanyu"
+  ],
+  "downloads": 1,
+  "dependents": 2,
+  "updated": "2025-01-24T03:48:59.041Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

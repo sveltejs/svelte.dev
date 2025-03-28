@@ -1,0 +1,18 @@
+{
+  "name": "svelte-entitlement",
+  "description": "Svelte component for managing user entitlements.",
+  "repo_url": "https://github.com/arlac77/svelte-entitlement",
+  "authors": [
+    "arlac77"
+  ],
+  "homepage": "https://github.com/arlac77/svelte-entitlement#readme",
+  "downloads": 415,
+  "dependents": 3,
+  "updated": "2025-03-24T13:04:43.145Z",
+  "tags": [
+    "miscellaneous"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 1
+}

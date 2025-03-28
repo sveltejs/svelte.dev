@@ -1,0 +1,18 @@
+{
+  "name": "dose-doce-core",
+  "description": "Provides core Svelte store for wallet adapter.",
+  "repo_url": "https://github.com/svelte-on-solana/wallet-adapter",
+  "authors": [
+    "binyebarwe"
+  ],
+  "homepage": "https://github.com/svelte-on-solana/wallet-adapter#readme",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2022-12-10T10:25:51.498Z",
+  "tags": [
+    "integration"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 65
+}

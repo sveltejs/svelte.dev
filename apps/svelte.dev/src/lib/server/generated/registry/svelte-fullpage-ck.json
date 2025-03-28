@@ -1,0 +1,17 @@
+{
+  "name": "svelte-fullpage-ck",
+  "description": "Creates fullpage scrolling sections in Svelte apps.",
+  "repo_url": "https://github.com/cagdaskemik/svelte-fullpage-ck",
+  "authors": [
+    "cagdaskemik"
+  ],
+  "homepage": "https://github.com/cagdaskemik/svelte-fullpage-ck#readme",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2023-11-04T12:10:17.110Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

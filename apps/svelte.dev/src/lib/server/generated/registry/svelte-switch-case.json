@@ -1,0 +1,16 @@
+{
+  "name": "svelte-switch-case",
+  "description": "Enable switch/case syntax within Svelte components.",
+  "repo_url": "",
+  "authors": [
+    "l-portet"
+  ],
+  "downloads": 22,
+  "dependents": 0,
+  "updated": "2022-08-31T22:51:03.399Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false
+}

@@ -1,0 +1,18 @@
+{
+  "name": "svormik",
+  "description": "Wrap Svelte forms, handle values, errors, and form status.",
+  "repo_url": "https://github.com/tranpeter08/svormik",
+  "authors": [
+    "mptxnismo"
+  ],
+  "homepage": "https://github.com/tranpeter08/svormik",
+  "downloads": 9,
+  "dependents": 0,
+  "updated": "2020-02-02T04:23:30.154Z",
+  "tags": [
+    "miscellaneous"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

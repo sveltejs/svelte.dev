@@ -1,0 +1,18 @@
+{
+  "name": "svelte-github-corner",
+  "description": "Add GitHub corner icon to Svelte projects.",
+  "repo_url": "https://github.com/flo-bit/svelte-github-corner",
+  "authors": [
+    "flo-bit128"
+  ],
+  "homepage": "https://flo-bit.dev/svelte-github-corner/",
+  "downloads": 3,
+  "dependents": 0,
+  "updated": "2024-12-05T21:23:41.035Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 1
+}

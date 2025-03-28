@@ -1,0 +1,16 @@
+{
+  "name": "@ikun-ui/switch",
+  "description": "Create switch components for Svelte.",
+  "repo_url": "",
+  "authors": [
+    "baiwusanyu"
+  ],
+  "downloads": 3,
+  "dependents": 1,
+  "updated": "2025-01-24T03:49:22.031Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

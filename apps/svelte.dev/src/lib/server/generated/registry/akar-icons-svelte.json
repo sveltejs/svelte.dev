@@ -1,0 +1,18 @@
+{
+  "name": "akar-icons-svelte",
+  "description": "Use Akar Icons, a rounded icon library, in Svelte projects.",
+  "repo_url": "https://github.com/WilliamVenner/akar-icons-svelte",
+  "authors": [
+    "williamvenner"
+  ],
+  "homepage": "https://akaricons.com",
+  "downloads": 8,
+  "dependents": 0,
+  "updated": "2023-12-29T17:43:54.698Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 7
+}

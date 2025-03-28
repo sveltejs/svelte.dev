@@ -1,0 +1,16 @@
+{
+  "name": "@cmex/cli",
+  "description": "CLI tool for component library cmexd, built with esbuild and Svelte.",
+  "repo_url": "",
+  "authors": [
+    "chen.mo"
+  ],
+  "downloads": 24,
+  "dependents": 0,
+  "updated": "2022-04-19T16:06:15.113Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false
+}

@@ -1,0 +1,18 @@
+{
+  "name": "svelte-presistent-store",
+  "description": "Create persistent stores for Svelte using local storage.",
+  "repo_url": "https://github.com/GagnDeep/svelte-presistent-store",
+  "authors": [
+    "gagndeep"
+  ],
+  "homepage": "https://github.com/GagnDeep/svelte-presistent-store#readme",
+  "downloads": 8,
+  "dependents": 0,
+  "updated": "2020-11-01T13:39:25.015Z",
+  "tags": [
+    "miscellaneous"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

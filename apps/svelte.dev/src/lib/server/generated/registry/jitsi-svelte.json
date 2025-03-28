@@ -1,0 +1,17 @@
+{
+  "name": "jitsi-svelte",
+  "description": "Create custom Jitsi clients with Svelte and lib-jitsi-meet.",
+  "repo_url": "https://github.com/relm-us/jitsi-svelte",
+  "authors": [
+    "canadaduane"
+  ],
+  "downloads": 18,
+  "dependents": 0,
+  "updated": "2021-02-25T04:37:59.578Z",
+  "tags": [
+    "integration"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 38
+}

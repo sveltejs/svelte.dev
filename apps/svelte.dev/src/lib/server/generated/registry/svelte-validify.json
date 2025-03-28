@@ -1,0 +1,16 @@
+{
+  "name": "svelte-validify",
+  "description": "Flexible form validation library for Svelte.",
+  "repo_url": "",
+  "authors": [
+    "zackify"
+  ],
+  "downloads": 6,
+  "dependents": 0,
+  "updated": "2021-03-15T21:15:46.922Z",
+  "tags": [
+    "miscellaneous"
+  ],
+  "svelte5": false,
+  "runes": false
+}

@@ -1,0 +1,21 @@
+{
+  "name": "@architect/sveltekit-adapter",
+  "description": "Create Begin/Architect app using function for server rendering.",
+  "repo_url": "",
+  "authors": [
+    "brianleroux",
+    "dam",
+    "kborchers",
+    "ryanblock",
+    "architectci",
+    "filmaj"
+  ],
+  "downloads": 11,
+  "dependents": 0,
+  "updated": "2021-10-11T15:40:39.994Z",
+  "tags": [
+    "adapter"
+  ],
+  "svelte5": false,
+  "runes": false
+}

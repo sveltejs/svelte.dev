@@ -1,0 +1,19 @@
+{
+  "name": "svelte-api-keys",
+  "description": "Generate, validate, and rate limit API keys for SvelteKit.",
+  "repo_url": "https://github.com/captaincodeman/svelte-api-keys",
+  "authors": [
+    "captaincodeman"
+  ],
+  "homepage": "https://captaincodeman.github.io/svelte-api-keys/",
+  "downloads": 12,
+  "dependents": 0,
+  "updated": "2024-04-29T20:32:00.462Z",
+  "tags": [
+    "server",
+    "auth"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 38
+}

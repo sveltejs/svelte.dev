@@ -1,0 +1,17 @@
+{
+  "name": "svelte4-htm",
+  "description": "Tagged template syntax for Svelte to simplify testing.",
+  "repo_url": "https://github.com/NanezX/svelte4-htm",
+  "authors": [
+    "nanez"
+  ],
+  "homepage": "https://github.com/NanezX/svelte4-htm#readme",
+  "downloads": 682,
+  "dependents": 0,
+  "updated": "2023-07-18T00:16:13.013Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false
+}

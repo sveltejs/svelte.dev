@@ -1,0 +1,18 @@
+{
+  "name": "@jaecktec/adapter-aws-lambda",
+  "description": "Generate AWS Lambda code for SvelteKit apps.",
+  "repo_url": "https://github.com/jaecktec/adapter-aws-lambda",
+  "authors": [
+    "jaecktec"
+  ],
+  "homepage": "https://github.com/jaecktec/adapter-aws-lambda",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2024-12-29T19:24:46.466Z",
+  "tags": [
+    "adapter"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

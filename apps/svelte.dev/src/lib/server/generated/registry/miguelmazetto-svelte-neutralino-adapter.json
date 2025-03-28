@@ -1,0 +1,18 @@
+{
+  "name": "@miguelmazetto/svelte-neutralino-adapter",
+  "description": "Adapt SvelteKit apps for Neutralino desktop environments.",
+  "repo_url": "https://github.com/miguelmazetto/svelte-neutralino-adapter",
+  "authors": [
+    "miguelmazetto"
+  ],
+  "homepage": "https://github.com/miguelmazetto/svelte-neutralino-adapter#readme",
+  "downloads": 9,
+  "dependents": 0,
+  "updated": "2024-01-15T14:11:41.960Z",
+  "tags": [
+    "adapter"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 3
+}

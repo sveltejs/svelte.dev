@@ -1,0 +1,18 @@
+{
+  "name": "svelte-style",
+  "description": "Apply styles to Svelte elements using actions.",
+  "repo_url": "https://github.com/metonym/svelte-style",
+  "authors": [
+    "metonym"
+  ],
+  "homepage": "https://github.com/metonym/svelte-style",
+  "downloads": 6,
+  "dependents": 0,
+  "updated": "2021-10-31T02:31:25.841Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 1
+}

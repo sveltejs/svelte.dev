@@ -1,0 +1,18 @@
+{
+  "name": "svelte-streamable",
+  "description": "Provide Svelte store for real-time updates from SSE.",
+  "repo_url": "https://github.com/sveltetools/svelte-streamable",
+  "authors": [
+    "paulmaly"
+  ],
+  "homepage": "https://github.com/sveltetools/svelte-streamable#readme",
+  "downloads": 12,
+  "dependents": 0,
+  "updated": "2022-07-27T14:41:23.079Z",
+  "tags": [
+    "miscellaneous"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 10
+}

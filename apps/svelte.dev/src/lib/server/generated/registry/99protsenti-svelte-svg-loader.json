@@ -1,0 +1,18 @@
+{
+  "name": "@99protsenti/svelte-svg-loader",
+  "description": "Load SVG files directly into Svelte components.",
+  "repo_url": "https://gitlab.com/99protsenti/svelte-svg-loader",
+  "authors": [
+    "paxapy",
+    "zmey3301"
+  ],
+  "homepage": "https://gitlab.com/99protsenti/svelte-svg-loader",
+  "downloads": 14,
+  "dependents": 0,
+  "updated": "2024-01-24T11:00:21.008Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false
+}
