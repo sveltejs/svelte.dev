@@ -109,26 +109,6 @@ const TAGS_PROMPT: Record<string, string> = Object.entries(registry.tags).reduce
 	{} as Record<string, string>
 );
 
-interface ProcessBatchesOptions {
-	/** Keywords to search for (default: ['svelte']) */
-	keywords?: string[];
-
-	/** Max packages to process (default: 200) */
-	limit?: number;
-
-	/** Packages per batch (default: 20) */
-	batch_size?: number;
-
-	/** Maximum retry attempts (default: 5) */
-	max_retries?: number;
-
-	/** Current retry count (used internally) */
-	retry_count?: number;
-
-	/** Failed packages from previous run (used internally) */
-	failed_packages?: Map<string, StructuredInterimPackage> | null;
-}
-
 /**
  * Core LLM processing logic for batches of packages
  * This function handles all the details of processing packages through LLM,
@@ -660,6 +640,55 @@ async function remove_forks() {
 	}
 }
 
+async function update_overrides() {
+	const overrides = registry.overrides;
+
+	const to_force_include = new Set<string>();
+	const to_remove = new Set<string>();
+	const to_force_include_and_alter = new Map<string, Partial<Package>>();
+
+	for (const [pkg, value] of Object.entries(overrides)) {
+		if (value === true) to_force_include.add(pkg);
+		else if (value === false) to_remove.add(pkg);
+		else if (typeof value === 'object') {
+			to_force_include_and_alter.set(pkg, value);
+		}
+	}
+
+	// First delete the packages to_remove
+	for (const pkg of to_remove) {
+		await PackageCache.delete(pkg);
+	}
+
+	// Now run the preprocess on the list of packages to_force_include_and_alter
+	const combined_to_crawl = new Set([...to_force_include_and_alter.keys(), ...to_force_include]);
+
+	await process_packages_by_names_through_llm({
+		package_names: Array.from(combined_to_crawl),
+		limit: Infinity,
+		batch_size: 20,
+		max_retries: 2
+	});
+
+	// Now go through the to_force_include_and_alter, and merge the existing package data with the one in the override
+	for (const [pkg, override] of to_force_include_and_alter) {
+		const existing_package = await PackageCache.get(pkg);
+
+		if (!existing_package) {
+			console.warn(`No existing package found for ${pkg}, skipping override`);
+			continue;
+		}
+
+		// Merge the existing package data with the override
+		const merged_package = {
+			...existing_package,
+			...override
+		};
+
+		await PackageCache.set(pkg, merged_package);
+	}
+}
+
 /**
  * Updates package cache with latest npm data
  * Uses existing request_queue from superfetch for concurrency control
@@ -779,11 +808,13 @@ async function* create_map_batch_generator(
 }
 
 for (let i = 0; i < 1; i++) {
-	await process_batches_through_llm();
+	// await process_batches_through_llm();
 }
 
+await update_overrides();
+
 svelte_society_list;
-await process_packages_by_names_through_llm({ package_names: Object.keys(svelte_society_list) });
+// await process_packages_by_names_through_llm({ package_names: Object.keys(svelte_society_list) });
 
 // update_cache_from_npm();
 await update_all_github_stars();
