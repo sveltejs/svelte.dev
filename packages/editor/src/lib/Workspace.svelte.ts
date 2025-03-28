@@ -589,6 +589,10 @@ export class Workspace {
 				extensions.push(javascript());
 				break;
 
+			case 'ts':
+				extensions.push(javascript({ typescript: true }));
+				break;
+
 			case 'html':
 				extensions.push(html());
 				break;

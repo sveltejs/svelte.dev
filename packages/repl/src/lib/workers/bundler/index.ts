@@ -5,6 +5,7 @@ import { sleep } from '../../utils';
 import { rollup } from '@rollup/browser';
 import { DEV } from 'esm-env';
 import * as resolve from 'resolve.exports';
+import typescriptStripTypes from './plugins/typescript-strip-types';
 import commonjs from './plugins/commonjs';
 import glsl from './plugins/glsl';
 import json from './plugins/json';
@@ -330,6 +331,7 @@ async function get_bundle(
 				return importee;
 			if (local_files_lookup.has(importee + '.js')) return importee + '.js';
 			if (local_files_lookup.has(importee + '.json')) return importee + '.json';
+			if (local_files_lookup.has(importee + '.ts')) return importee + '.ts';
 
 			// remove trailing slash
 			if (importee.endsWith('/')) importee = importee.slice(0, -1);
@@ -460,7 +462,7 @@ async function get_bundle(
 
 			self.postMessage({ type: 'status', uid, message: `bundling ${id}` });
 
-			if (!/\.(svelte|js)$/.test(id)) return null;
+			if (!/\.(svelte|js|ts)$/.test(id)) return null;
 
 			const name = id.split('/').pop()?.split('.')[0];
 
@@ -522,7 +524,7 @@ async function get_bundle(
 					$$_styles.push($$__style);
 				`.replace(/\t/g, '');
 				}
-			} else if (id.endsWith('.svelte.js')) {
+			} else if (/\.svelte\.(js|ts)$/.test(id)) {
 				const compilerOptions: any = {
 					filename: name + '.js',
 					generate: 'client',
@@ -568,6 +570,7 @@ async function get_bundle(
 			input: './__entry.js',
 			cache: previous?.key === key && previous.cache,
 			plugins: [
+				typescriptStripTypes,
 				repl_plugin,
 				commonjs,
 				json,
