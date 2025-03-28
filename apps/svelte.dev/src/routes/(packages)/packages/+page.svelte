@@ -267,7 +267,6 @@
 			<ul class="sidebar">
 				<b>FILTERS</b>
 				<li>
-					<input type="checkbox" value="svelte5" bind:checked={svelte_5_only_qp.current} />
 					<a
 						class="tag"
 						href={svelte_5_only_qp.url_from(!svelte_5_only_qp.current)}
@@ -282,7 +281,6 @@
 					</a>
 				</li>
 				<li>
-					<input type="checkbox" value="show-outdated" bind:checked={show_outdated_qp.current} />
 					<a
 						class="tag"
 						href={show_outdated_qp.url_from(!show_outdated_qp.current)}
@@ -311,27 +309,6 @@
 					)}
 
 					<li>
-						<input
-							type="checkbox"
-							value={tag.tag}
-							bind:checked={() =>
-								tag.tag === 'all'
-									? tags_qp.current.length === 0
-									: tags_qp.current.includes(tag.tag),
-							(v) => {
-								if (tag.tag === 'all') {
-									// Click on this should just empty the tags array
-									tags_qp.current = [];
-									return;
-								}
-
-								if (!v) {
-									tags_qp.current = tags_qp.current.filter((t) => t !== tag.tag);
-								} else {
-									tags_qp.current = [...tags_qp.current, tag.tag];
-								}
-							}}
-						/>
 						<a
 							class="tag"
 							href={link.pathname + link.search}
