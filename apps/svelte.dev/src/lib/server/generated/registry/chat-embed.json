@@ -1,0 +1,16 @@
+{
+  "name": "chat-embed",
+  "description": "Create and manage chats easily.",
+  "repo_url": "",
+  "authors": [
+    "ceifa"
+  ],
+  "downloads": 32,
+  "dependents": 1,
+  "updated": "2023-03-18T13:25:04.673Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

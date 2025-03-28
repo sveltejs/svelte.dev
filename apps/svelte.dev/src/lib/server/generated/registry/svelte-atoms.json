@@ -1,0 +1,18 @@
+{
+  "name": "svelte-atoms",
+  "description": "Svelte UI kit based on Atol design.",
+  "repo_url": "https://gitlab.com/az67128/svelte-atoms",
+  "authors": [
+    "az67128"
+  ],
+  "homepage": "https://gitlab.com/az67128/svelte-atoms#readme",
+  "downloads": 48,
+  "dependents": 0,
+  "updated": "2020-05-22T15:18:50.261Z",
+  "tags": [
+    "ui",
+    "design-system"
+  ],
+  "svelte5": false,
+  "runes": false
+}

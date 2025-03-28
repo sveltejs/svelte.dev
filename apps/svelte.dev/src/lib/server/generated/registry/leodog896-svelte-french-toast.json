@@ -1,0 +1,18 @@
+{
+  "name": "@leodog896/svelte-french-toast",
+  "description": "Create buttery smooth, customizable Svelte toast notifications.",
+  "repo_url": "https://github.com/kbrgl/svelte-french-toast",
+  "authors": [
+    "leodog896"
+  ],
+  "homepage": "https://github.com/kbrgl/svelte-french-toast#readme",
+  "downloads": 55,
+  "dependents": 0,
+  "updated": "2024-03-17T02:30:19.262Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 939
+}

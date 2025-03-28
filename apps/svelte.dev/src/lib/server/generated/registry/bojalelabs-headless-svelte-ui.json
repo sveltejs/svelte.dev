@@ -1,0 +1,18 @@
+{
+  "name": "@bojalelabs/headless-svelte-ui",
+  "description": "Reusable headless components for building Svelte apps.",
+  "repo_url": "https://github.com/Bojale-Labs/svelte-component-library",
+  "authors": [
+    "calebbenjin",
+    "ayoalfonso"
+  ],
+  "homepage": "https://github.com/Bojale-Labs/svelte-component-library#readme",
+  "downloads": 26,
+  "dependents": 0,
+  "updated": "2022-02-10T11:15:36.672Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

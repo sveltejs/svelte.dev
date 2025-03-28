@@ -1,0 +1,19 @@
+{
+  "name": "@staart/ui",
+  "description": "Frontend starter for SaaS startups, built with Svelte and TypeScript.",
+  "repo_url": "https://github.com/staart/ui",
+  "authors": [
+    "anandchowdhary"
+  ],
+  "homepage": "https://staart.js.org/ui",
+  "downloads": 103,
+  "dependents": 0,
+  "updated": "2021-01-25T00:50:59.755Z",
+  "tags": [
+    "design-system",
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 328
+}

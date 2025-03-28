@@ -1,0 +1,20 @@
+{
+  "name": "@berkeley-gif/cal-adapt-svelte-components",
+  "description": "Build UI components for Cal-Adapt using Svelte.",
+  "repo_url": "https://github.com/berkeley-gif/cal-adapt-svelte-components",
+  "authors": [
+    "elehmer",
+    "clhenrick",
+    "berkeley_gif"
+  ],
+  "homepage": "https://cal-adapt-svelte-components.netlify.app/",
+  "downloads": 39,
+  "dependents": 0,
+  "updated": "2022-05-27T23:34:39.813Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 2
+}

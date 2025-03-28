@@ -1,0 +1,19 @@
+{
+  "name": "sveltemantic",
+  "description": "Fomantic-UI components for Svelte 3.",
+  "repo_url": "https://github.com/titans-inc/sveltemantic",
+  "authors": [
+    "deviprsd"
+  ],
+  "homepage": "https://github.com/titans-inc/sveltemantic#readme",
+  "downloads": 12,
+  "dependents": 0,
+  "updated": "2019-08-22T03:56:54.500Z",
+  "tags": [
+    "ui",
+    "design-system"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 45
+}

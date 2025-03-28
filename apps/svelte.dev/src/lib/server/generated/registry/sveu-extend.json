@@ -1,0 +1,18 @@
+{
+  "name": "@sveu/extend",
+  "description": "Integrate 3rd party libraries with Svelte.",
+  "repo_url": "https://github.com/svelte-u/extend",
+  "authors": [
+    "mohamed-kaizen"
+  ],
+  "homepage": "https://github.com/svelte-u/extend#readme",
+  "downloads": 26,
+  "dependents": 0,
+  "updated": "2023-07-04T05:50:02.769Z",
+  "tags": [
+    "integration"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 2
+}

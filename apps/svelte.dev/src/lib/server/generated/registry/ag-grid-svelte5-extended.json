@@ -1,0 +1,18 @@
+{
+  "name": "ag-grid-svelte5-extended",
+  "description": "Provides AG-Grid wrapper for Svelte 5, cell renderers, reactive data.",
+  "repo_url": "https://github.com/bn-l/ag-grid-svelte5-extended",
+  "authors": [
+    "bn-l-github"
+  ],
+  "homepage": "https://bn-l.github.io/ag-grid-svelte5-extended/",
+  "downloads": 506,
+  "dependents": 0,
+  "updated": "2024-12-01T09:46:06.383Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 19
+}

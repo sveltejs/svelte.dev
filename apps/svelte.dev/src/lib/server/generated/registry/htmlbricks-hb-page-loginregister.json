@@ -1,0 +1,16 @@
+{
+  "name": "@htmlbricks/hb-page-loginregister",
+  "description": "Create Svelte web components for Bootstrap login/register pages.",
+  "repo_url": "",
+  "authors": [
+    "dariocaruso"
+  ],
+  "downloads": 262,
+  "dependents": 1,
+  "updated": "2022-06-30T18:25:50.510Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

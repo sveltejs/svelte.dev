@@ -1,0 +1,18 @@
+{
+  "name": "@webdevandsausages/event-terminal",
+  "description": "Display and manage WD&S event information.",
+  "repo_url": "https://github.com/webDevAndSausages/world-of-webdevandsausages",
+  "authors": [
+    "rikuvan"
+  ],
+  "homepage": "https://github.com/webDevAndSausages/world-of-webdevandsausages#readme",
+  "downloads": 127,
+  "dependents": 0,
+  "updated": "2020-02-10T17:01:40.617Z",
+  "tags": [
+    "miscellaneous"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 5
+}

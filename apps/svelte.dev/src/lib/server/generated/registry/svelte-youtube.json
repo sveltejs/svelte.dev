@@ -1,0 +1,18 @@
+{
+  "name": "svelte-youtube",
+  "description": "Embed YouTube videos in Svelte applications.",
+  "repo_url": "https://github.com/PandaWhisperer/svelte-youtube",
+  "authors": [
+    "pandawhisperer"
+  ],
+  "homepage": "https://github.com/PandaWhisperer/svelte-youtube#README",
+  "downloads": 149,
+  "dependents": 1,
+  "updated": "2020-12-10T16:28:14.265Z",
+  "tags": [
+    "media"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 22
+}

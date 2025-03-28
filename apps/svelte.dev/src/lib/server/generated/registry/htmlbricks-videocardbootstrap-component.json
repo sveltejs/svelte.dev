@@ -1,0 +1,16 @@
+{
+  "name": "@htmlbricks/videocardbootstrap-component",
+  "description": "Create Svelte web components for Bootstrap video cards.",
+  "repo_url": "",
+  "authors": [
+    "dariocaruso"
+  ],
+  "downloads": 259,
+  "dependents": 0,
+  "updated": "2022-01-02T19:14:39.883Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

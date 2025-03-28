@@ -1,0 +1,18 @@
+{
+  "name": "eleventy-plugin-svelte",
+  "description": "Integrates Svelte components into Eleventy static site generator.",
+  "repo_url": "https://github.com/gobeli/eleventy-plugin-svelte",
+  "authors": [
+    "tienou"
+  ],
+  "homepage": "https://github.com/gobeli/eleventy-plugin-svelte#readme",
+  "downloads": 192,
+  "dependents": 0,
+  "updated": "2020-12-17T17:56:50.672Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 44
+}

@@ -1,0 +1,16 @@
+{
+  "name": "@sveltekit-board/oauth",
+  "description": "Handles OAuth authentication for SvelteKit applications.",
+  "repo_url": "",
+  "authors": [
+    "hotsixman"
+  ],
+  "downloads": 11,
+  "dependents": 0,
+  "updated": "2024-11-24T15:48:24.567Z",
+  "tags": [
+    "auth"
+  ],
+  "svelte5": true,
+  "runes": false
+}

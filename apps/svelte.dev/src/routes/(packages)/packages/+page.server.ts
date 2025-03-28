@@ -53,7 +53,6 @@ export async function load({ url }) {
 							short_title:
 								{
 									ui: 'UI',
-									dom: 'DOM',
 									seo: 'SEO'
 								}[key] ?? kebab_to_capital(key)
 						});

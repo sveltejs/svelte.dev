@@ -1,0 +1,16 @@
+{
+  "name": "@htmlbricks/navbarbootstrap-component",
+  "description": "Create Bootstrap navbar components for Svelte applications.",
+  "repo_url": "",
+  "authors": [
+    "dariocaruso"
+  ],
+  "downloads": 139,
+  "dependents": 0,
+  "updated": "2022-01-02T19:14:36.731Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

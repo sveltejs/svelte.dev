@@ -1,0 +1,16 @@
+{
+  "name": "@htmlbricks/hb-offcanvas",
+  "description": "Provides Svelte Bootstrap offcanvas web components.",
+  "repo_url": "",
+  "authors": [
+    "dariocaruso"
+  ],
+  "downloads": 468,
+  "dependents": 3,
+  "updated": "2025-03-24T18:07:25.448Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

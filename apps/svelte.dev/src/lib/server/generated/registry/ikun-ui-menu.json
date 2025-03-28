@@ -1,0 +1,16 @@
+{
+  "name": "@ikun-ui/menu",
+  "description": "Build menu component for Svelte applications.",
+  "repo_url": "",
+  "authors": [
+    "baiwusanyu"
+  ],
+  "downloads": 45,
+  "dependents": 1,
+  "updated": "2025-01-24T03:49:04.914Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

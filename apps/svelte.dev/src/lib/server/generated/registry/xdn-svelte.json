@@ -1,0 +1,16 @@
+{
+  "name": "@xdn/svelte",
+  "description": "Prefetch pages from Moovweb XDN edge cache in Svelte.",
+  "repo_url": "",
+  "authors": [
+    "moovweb-admin"
+  ],
+  "downloads": 5789,
+  "dependents": 0,
+  "updated": "2022-01-11T10:10:46.853Z",
+  "tags": [
+    "adapter"
+  ],
+  "svelte5": false,
+  "runes": false
+}

@@ -1,0 +1,16 @@
+{
+  "name": "@htmlbricks/cookielaw-component",
+  "description": "Create cookie law components for Svelte applications.",
+  "repo_url": "",
+  "authors": [
+    "dariocaruso"
+  ],
+  "downloads": 135,
+  "dependents": 0,
+  "updated": "2022-01-02T19:14:28.802Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

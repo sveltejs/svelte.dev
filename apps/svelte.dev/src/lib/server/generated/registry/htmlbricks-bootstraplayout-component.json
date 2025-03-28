@@ -1,0 +1,16 @@
+{
+  "name": "@htmlbricks/bootstraplayout-component",
+  "description": "Create Bootstrap layout components for Svelte applications.",
+  "repo_url": "",
+  "authors": [
+    "dariocaruso"
+  ],
+  "downloads": 137,
+  "dependents": 0,
+  "updated": "2022-01-02T19:14:33.396Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

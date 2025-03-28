@@ -1,0 +1,18 @@
+{
+  "name": "svelte-ios-pwa-prompt",
+  "description": "Prompt iOS users install PWA, customizable appearance and behavior.",
+  "repo_url": "https://github.com/edrichhans/svelte-ios-pwa-prompt",
+  "authors": [
+    "edrichhans"
+  ],
+  "homepage": "https://github.com/edrichhans/svelte-ios-pwa-prompt#readme",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2023-10-15T05:54:50.309Z",
+  "tags": [
+    "miscellaneous"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 5
+}

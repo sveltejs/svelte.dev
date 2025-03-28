@@ -1,0 +1,18 @@
+{
+  "name": "svelte-flagpack",
+  "description": "Display flag icons in Svelte projects.",
+  "repo_url": "https://github.com/Yummygum/svelte-flagpack",
+  "authors": [
+    "yummygum"
+  ],
+  "homepage": "https://github.com/Yummygum/svelte-flagpack#readme",
+  "downloads": 233,
+  "dependents": 0,
+  "updated": "2021-09-15T14:50:40.058Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 10
+}

@@ -1,0 +1,18 @@
+{
+  "name": "@apsc/color",
+  "description": "Pick and edit colors with Svelte components.",
+  "repo_url": "https://github.com/andrey-pavlenko/svelte-components",
+  "authors": [
+    "andrey-pavlenko"
+  ],
+  "homepage": "https://github.com/andrey-pavlenko/svelte-components/tree/main/packages/color#readme",
+  "downloads": 58,
+  "dependents": 0,
+  "updated": "2023-02-01T20:16:17.203Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 3
+}

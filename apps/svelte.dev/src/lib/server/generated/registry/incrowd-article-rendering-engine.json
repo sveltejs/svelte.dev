@@ -1,0 +1,19 @@
+{
+  "name": "@incrowd/article-rendering-engine",
+  "description": "Render articles from CMS within Svelte applications.",
+  "repo_url": "",
+  "authors": [
+    "virgus66",
+    "horacekeung",
+    "josh_clement",
+    "saelora"
+  ],
+  "downloads": 40,
+  "dependents": 0,
+  "updated": "2023-07-14T16:19:13.448Z",
+  "tags": [
+    "content"
+  ],
+  "svelte5": false,
+  "runes": false
+}

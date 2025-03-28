@@ -1,0 +1,18 @@
+{
+  "name": "svelte-spinkit",
+  "description": "Provide collection loading indicators animated with CSS for Svelte.",
+  "repo_url": "https://github.com/heithemmoumni/svelte-spinkit",
+  "authors": [
+    "heithemmoumni"
+  ],
+  "homepage": "https://github.com/heithemmoumni/svelte-spinkit#readme",
+  "downloads": 10,
+  "dependents": 0,
+  "updated": "2020-08-11T22:06:59.490Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 33
+}

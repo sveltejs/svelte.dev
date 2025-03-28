@@ -1,0 +1,18 @@
+{
+  "name": "svelte-canvas",
+  "description": "Reactive canvas rendering for Svelte applications.",
+  "repo_url": "https://github.com/dnass/svelte-canvas",
+  "authors": [
+    "dnass"
+  ],
+  "homepage": "https://dnass.github.io/svelte-canvas/",
+  "downloads": 1470,
+  "dependents": 2,
+  "updated": "2024-12-04T20:47:01.008Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 315
+}

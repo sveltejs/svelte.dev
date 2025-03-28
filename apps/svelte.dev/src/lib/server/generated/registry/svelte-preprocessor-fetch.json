@@ -1,0 +1,18 @@
+{
+  "name": "svelte-preprocessor-fetch",
+  "description": "Fetches data before Svelte component compilation.",
+  "repo_url": "https://github.com/kevmodrome/svelte-preprocessor-fetch",
+  "authors": [
+    "kevmodrome"
+  ],
+  "homepage": "https://github.com/kevmodrome/svelte-preprocessor-fetch#readme",
+  "downloads": 12,
+  "dependents": 0,
+  "updated": "2020-03-10T15:01:23.759Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 51
+}

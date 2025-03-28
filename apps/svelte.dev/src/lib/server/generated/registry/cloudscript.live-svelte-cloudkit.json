@@ -1,0 +1,17 @@
+{
+  "name": "@cloudscript.live/svelte-cloudkit",
+  "description": "Provide lightweight Svelte UI components and utilities.",
+  "repo_url": "https://github.com/ImL0w/Svelte-CloudKit",
+  "authors": [
+    "the-cloudscript"
+  ],
+  "homepage": "https://github.com/ImL0w/Svelte-CloudKit#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2023-10-14T17:56:06.600Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

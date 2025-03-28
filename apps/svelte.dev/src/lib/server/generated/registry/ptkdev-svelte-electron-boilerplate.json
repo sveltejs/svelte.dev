@@ -1,0 +1,18 @@
+{
+  "name": "@ptkdev/svelte-electron-boilerplate",
+  "description": "Create Electron apps with Svelte, Typescript, and Vite.",
+  "repo_url": "https://github.com/ptkdev-boilerplate/svelte-electron-boilerplate",
+  "authors": [
+    "ptkdevio"
+  ],
+  "homepage": "https://github.com/ptkdev-boilerplate/svelte-electron-boilerplate",
+  "downloads": 1690,
+  "dependents": 0,
+  "updated": "2022-02-01T22:39:38.543Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 127
+}

@@ -1,0 +1,18 @@
+{
+  "name": "@minna-ui/toast",
+  "description": "Create toast notification web component for Svelte.",
+  "repo_url": "https://github.com/WeAreGenki/minna-ui",
+  "authors": [
+    "maxmilton"
+  ],
+  "homepage": "https://wearegenki.github.io/minna-ui",
+  "downloads": 104,
+  "dependents": 0,
+  "updated": "2019-05-28T12:13:48.358Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 87
+}

@@ -1,0 +1,17 @@
+{
+  "name": "sswr",
+  "description": "Fetch data with SWR strategy for Svelte, improving performance.",
+  "repo_url": "https://github.com/ConsoleTVs/sswr",
+  "authors": [
+    "consoletvs"
+  ],
+  "downloads": 351375,
+  "dependents": 34,
+  "updated": "2025-03-04T20:30:45.524Z",
+  "tags": [
+    "server"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 248
+}

@@ -1,0 +1,16 @@
+{
+  "name": "svelte-autocomplete-select",
+  "description": "Provides flexible, zero-dependency autocomplete component for Svelte.",
+  "repo_url": "",
+  "authors": [
+    "tiaanduplessis"
+  ],
+  "downloads": 97,
+  "dependents": 1,
+  "updated": "2021-02-12T12:07:06.700Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

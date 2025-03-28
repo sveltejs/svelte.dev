@@ -1,0 +1,18 @@
+{
+  "name": "svelte-lazy-loader",
+  "description": "Lazy load images and media in Svelte applications.",
+  "repo_url": "https://github.com/sawyerclick/svelte-lazy-loader",
+  "authors": [
+    "sawyerclick"
+  ],
+  "homepage": "http://svelte-lazy-loader.netlify.app",
+  "downloads": 53,
+  "dependents": 0,
+  "updated": "2022-03-29T02:52:43.435Z",
+  "tags": [
+    "media"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 21
+}

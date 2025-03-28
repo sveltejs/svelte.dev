@@ -1,0 +1,18 @@
+{
+  "name": "svelte-click-outside",
+  "description": "Detect clicks outside Svelte components.",
+  "repo_url": "https://github.com/joeattardi/svelte-click-outside",
+  "authors": [
+    "joeattardi"
+  ],
+  "homepage": "https://github.com/joeattardi/svelte-click-outside#readme",
+  "downloads": 758,
+  "dependents": 8,
+  "updated": "2019-08-10T15:40:54.728Z",
+  "tags": [
+    "miscellaneous"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 29
+}

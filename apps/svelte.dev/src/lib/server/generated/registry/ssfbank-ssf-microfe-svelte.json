@@ -1,0 +1,19 @@
+{
+  "name": "@ssfbank/ssf-microfe-svelte",
+  "description": "Provides micro-frontend capabilities for Svelte applications.",
+  "repo_url": "",
+  "authors": [
+    "palsmadal",
+    "laszlo.major",
+    "ssfdevelope",
+    "asbjorn.lucassen"
+  ],
+  "downloads": 159,
+  "dependents": 0,
+  "updated": "2021-03-12T12:36:13.095Z",
+  "tags": [
+    "miscellaneous"
+  ],
+  "svelte5": false,
+  "runes": false
+}

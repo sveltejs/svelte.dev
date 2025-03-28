@@ -1,0 +1,16 @@
+{
+  "name": "@ikun-ui/progress",
+  "description": "Create progress bar components for Svelte applications.",
+  "repo_url": "",
+  "authors": [
+    "baiwusanyu"
+  ],
+  "downloads": 1,
+  "dependents": 1,
+  "updated": "2025-01-24T03:49:13.281Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

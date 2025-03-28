@@ -1,0 +1,22 @@
+{
+  "name": "@maptiler/geocoding-control",
+  "description": "Map Control component for MapTiler Geocoding service.",
+  "repo_url": "https://github.com/maptiler/maptiler-geocoding-control",
+  "authors": [
+    "petrsloup",
+    "klokan",
+    "bolollo",
+    "jachym-maptiler",
+    "sysadmin_maptiler"
+  ],
+  "homepage": "https://github.com/maptiler/maptiler-geocoding-control#readme",
+  "downloads": 1535,
+  "dependents": 3,
+  "updated": "2025-02-05T07:29:54.024Z",
+  "tags": [
+    "integration"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 44
+}

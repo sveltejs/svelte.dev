@@ -1,0 +1,21 @@
+{
+  "name": "@coding-blocks/web-components",
+  "description": "Fast, context-free web components for Svelte.",
+  "repo_url": "",
+  "authors": [
+    "abhishek97",
+    "vdvibhu20",
+    "witty123",
+    "championswimmer",
+    "jatinkatyal13",
+    "bipinkalra"
+  ],
+  "downloads": 209,
+  "dependents": 0,
+  "updated": "2024-03-28T07:57:37.812Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

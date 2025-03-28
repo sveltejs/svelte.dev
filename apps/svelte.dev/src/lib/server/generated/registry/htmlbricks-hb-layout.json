@@ -1,0 +1,16 @@
+{
+  "name": "@htmlbricks/hb-layout",
+  "description": "Provides Svelte layout web components.",
+  "repo_url": "",
+  "authors": [
+    "dariocaruso"
+  ],
+  "downloads": 484,
+  "dependents": 3,
+  "updated": "2025-03-24T18:07:30.127Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

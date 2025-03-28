@@ -1,0 +1,18 @@
+{
+  "name": "@fullcrew/design",
+  "description": "Provides responsive UI components for Svelte applications.",
+  "repo_url": "https://github.com/fullcrew/design",
+  "authors": [
+    "jraminska"
+  ],
+  "homepage": "https://github.com/fullcrew/design#readme",
+  "downloads": 44,
+  "dependents": 0,
+  "updated": "2020-04-22T12:19:31.844Z",
+  "tags": [
+    "design-system"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

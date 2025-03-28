@@ -1,0 +1,18 @@
+{
+  "name": "@felte/reporter-cvapi",
+  "description": "Report Felte form errors using browser's constraint validation API.",
+  "repo_url": "https://github.com/pablo-abc/felte",
+  "authors": [
+    "pberganza"
+  ],
+  "homepage": "https://github.com/pablo-abc/felte/tree/main/packages/reporter-cvapi",
+  "downloads": 58,
+  "dependents": 0,
+  "updated": "2024-10-29T20:36:01.559Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 1043
+}

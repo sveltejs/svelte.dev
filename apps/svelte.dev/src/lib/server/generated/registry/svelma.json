@@ -1,0 +1,20 @@
+{
+  "name": "svelma",
+  "description": "Bulma components for Svelte applications.",
+  "repo_url": "https://github.com/c0bra/svelma",
+  "authors": [
+    "c0bra",
+    "abbychau"
+  ],
+  "homepage": "https://github.com/c0bra/svelma#readme",
+  "downloads": 128,
+  "dependents": 1,
+  "updated": "2021-04-14T04:51:32.191Z",
+  "tags": [
+    "ui",
+    "design-system"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 539
+}

@@ -1,0 +1,27 @@
+{
+  "name": "@egjs/svelte-grid",
+  "description": "Arrange items in various grid layouts for Svelte.",
+  "repo_url": "https://github.com/naver/egjs-grid",
+  "authors": [
+    "anuu0916",
+    "braixen",
+    "ajaxpf",
+    "jongmoon",
+    "sculove",
+    "happyhj",
+    "mixed",
+    "netil",
+    "younkue",
+    "woodneck"
+  ],
+  "homepage": "https://github.com/naver/egjs-grid",
+  "downloads": 179,
+  "dependents": 0,
+  "updated": "2024-07-02T06:09:20.424Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 290
+}

@@ -1,0 +1,17 @@
+{
+  "name": "@budibase/svelte-ag-grid",
+  "description": "Create wrapper around ag-grid for Svelte.",
+  "repo_url": "",
+  "authors": [
+    "mike_chuckles",
+    "shogunpurple"
+  ],
+  "downloads": 20,
+  "dependents": 0,
+  "updated": "2021-02-23T11:30:16.517Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

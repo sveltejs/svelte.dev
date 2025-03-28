@@ -1,0 +1,18 @@
+{
+  "name": "@gzim/svelte-actions",
+  "description": "Provides a collection of Svelte actions.",
+  "repo_url": "https://github.com/gzimbron/svelte-actions",
+  "authors": [
+    "zimbronapps"
+  ],
+  "homepage": "https://gzimbron.github.io/svelte-actions/",
+  "downloads": 9,
+  "dependents": 0,
+  "updated": "2024-11-04T16:02:07.068Z",
+  "tags": [
+    "miscellaneous"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 3
+}

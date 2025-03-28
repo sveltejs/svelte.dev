@@ -278,7 +278,7 @@
 						aria-current={svelte_5_only_qp.current}
 						title="Show Svelte 5 packages"
 					>
-						Svelte 5
+						Svelte 5 only
 					</a>
 				</li>
 				<li>

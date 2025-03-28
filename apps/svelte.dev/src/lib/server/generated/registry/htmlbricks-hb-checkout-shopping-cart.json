@@ -1,0 +1,16 @@
+{
+  "name": "@htmlbricks/hb-checkout-shopping-cart",
+  "description": "Create shopping cart web components for Svelte applications.",
+  "repo_url": "",
+  "authors": [
+    "dariocaruso"
+  ],
+  "downloads": 451,
+  "dependents": 3,
+  "updated": "2025-03-24T18:07:27.885Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

@@ -1,0 +1,16 @@
+{
+  "name": "@ikun-ui/tooltip",
+  "description": "Create tooltip component for Svelte.",
+  "repo_url": "",
+  "authors": [
+    "baiwusanyu"
+  ],
+  "downloads": 6,
+  "dependents": 4,
+  "updated": "2025-01-24T03:49:24.967Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

@@ -1,0 +1,18 @@
+{
+  "name": "svelte-google-materialdesign-icons",
+  "description": "Google Material Design SVG icon components for Svelte.",
+  "repo_url": "https://github.com/shinokada/svelte-google-materialdesign-icons",
+  "authors": [
+    "shinichiokada"
+  ],
+  "homepage": "https://svelte-google-materialdesign-icons.codewithshin.com",
+  "downloads": 533,
+  "dependents": 0,
+  "updated": "2024-08-14T15:13:42.293Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 12
+}

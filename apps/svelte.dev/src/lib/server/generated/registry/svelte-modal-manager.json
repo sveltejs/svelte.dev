@@ -1,0 +1,17 @@
+{
+  "name": "svelte-modal-manager",
+  "description": "Manages modal windows within Svelte applications.",
+  "repo_url": "",
+  "authors": [
+    "phi"
+  ],
+  "downloads": 76,
+  "dependents": 1,
+  "updated": "2023-03-20T03:08:30.924Z",
+  "tags": [
+    "ui",
+    "miscellaneous"
+  ],
+  "svelte5": false,
+  "runes": false
+}

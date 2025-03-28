@@ -1,0 +1,16 @@
+{
+  "name": "@htmlbricks/hb-gauge",
+  "description": "Creates gauge component for Svelte, displays values.",
+  "repo_url": "",
+  "authors": [
+    "dariocaruso"
+  ],
+  "downloads": 475,
+  "dependents": 2,
+  "updated": "2025-03-24T18:07:14.824Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

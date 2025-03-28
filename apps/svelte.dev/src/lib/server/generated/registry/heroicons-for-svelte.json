@@ -1,0 +1,18 @@
+{
+  "name": "heroicons-for-svelte",
+  "description": "Integrates Heroicons into Svelte projects.",
+  "repo_url": "https://github.com/patrikpessi/heroicons-for-svelte",
+  "authors": [
+    "batti"
+  ],
+  "homepage": "https://github.com/patrikpessi/heroicons-for-svelte#readme",
+  "downloads": 213,
+  "dependents": 0,
+  "updated": "2022-02-03T07:42:49.229Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 1
+}

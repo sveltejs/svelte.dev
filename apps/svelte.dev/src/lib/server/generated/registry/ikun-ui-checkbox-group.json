@@ -1,0 +1,16 @@
+{
+  "name": "@ikun-ui/checkbox-group",
+  "description": "Build checkbox group components for Svelte applications.",
+  "repo_url": "",
+  "authors": [
+    "baiwusanyu"
+  ],
+  "downloads": 2,
+  "dependents": 3,
+  "updated": "2025-01-24T03:48:41.376Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

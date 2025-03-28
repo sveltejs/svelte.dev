@@ -1,0 +1,18 @@
+{
+  "name": "@minna-ui/navbar",
+  "description": "Build responsive navigation bars for Svelte projects.",
+  "repo_url": "https://github.com/WeAreGenki/minna-ui",
+  "authors": [
+    "maxmilton"
+  ],
+  "homepage": "https://wearegenki.github.io/minna-ui",
+  "downloads": 84,
+  "dependents": 1,
+  "updated": "2020-03-24T19:40:16.110Z",
+  "tags": [
+    "design-system"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 87
+}

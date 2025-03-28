@@ -1,0 +1,18 @@
+{
+  "name": "@lunoxjs/core",
+  "description": "Develop Laravel-flavored NodeJs framework.",
+  "repo_url": "https://github.com/kodepandai/lunox-framework",
+  "authors": [
+    "axmad386"
+  ],
+  "homepage": "https://github.com/kodepandai/lunox-framework#readme",
+  "downloads": 3,
+  "dependents": 1,
+  "updated": "2023-04-11T02:12:03.218Z",
+  "tags": [
+    "server"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 22
+}

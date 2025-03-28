@@ -1,0 +1,16 @@
+{
+  "name": "@htmlbricks/hb-funnel",
+  "description": "Provides Svelte funnel web components.",
+  "repo_url": "",
+  "authors": [
+    "dariocaruso"
+  ],
+  "downloads": 470,
+  "dependents": 2,
+  "updated": "2025-03-24T18:07:27.877Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

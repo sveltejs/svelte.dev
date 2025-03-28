@@ -1,0 +1,19 @@
+{
+  "name": "bits-ui",
+  "description": "Provides headless UI components for Svelte.",
+  "repo_url": "https://github.com/huntabyte/bits-ui",
+  "authors": [
+    "huntabyte"
+  ],
+  "homepage": "https://github.com/huntabyte/bits-ui#readme",
+  "downloads": 151815,
+  "dependents": 79,
+  "updated": "2025-03-26T21:51:31.952Z",
+  "tags": [
+    "design-system",
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 1921
+}

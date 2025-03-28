@@ -1,0 +1,18 @@
+{
+  "name": "curseur",
+  "description": "Create custom, elegant cursors for SvelteKit applications.",
+  "repo_url": "https://github.com/n3-rd/curseur",
+  "authors": [
+    "n3-rd"
+  ],
+  "homepage": "https://curseur.vercel.app/",
+  "downloads": 9,
+  "dependents": 0,
+  "updated": "2023-04-11T18:44:48.438Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 8
+}

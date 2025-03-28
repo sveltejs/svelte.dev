@@ -1,0 +1,18 @@
+{
+  "name": "svelte-relative-time",
+  "description": "Display auto-updating relative time timestamps in Svelte.",
+  "repo_url": "https://github.com/captaincodeman/svelte-relative-time",
+  "authors": [
+    "captaincodeman"
+  ],
+  "homepage": "https://captaincodeman.github.io/svelte-relative-time/",
+  "downloads": 294,
+  "dependents": 0,
+  "updated": "2024-07-08T18:09:27.031Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 42
+}

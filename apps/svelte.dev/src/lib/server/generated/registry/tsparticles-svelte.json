@@ -1,0 +1,19 @@
+{
+  "name": "@tsparticles/svelte",
+  "description": "Create particle, confetti, and fireworks animations.",
+  "repo_url": "https://github.com/tsparticles/svelte",
+  "authors": [
+    "matteobruni",
+    "ar3s"
+  ],
+  "homepage": "https://github.com/tsparticles/svelte#readme",
+  "downloads": 750,
+  "dependents": 0,
+  "updated": "2024-05-26T10:58:39.331Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 54
+}

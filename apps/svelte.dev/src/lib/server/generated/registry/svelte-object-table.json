@@ -1,0 +1,16 @@
+{
+  "name": "svelte-object-table",
+  "description": "Render unknown data as table in Svelte.",
+  "repo_url": "",
+  "authors": [
+    "marc-bouvier"
+  ],
+  "downloads": 14,
+  "dependents": 0,
+  "updated": "2025-03-12T19:23:29.642Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false
+}

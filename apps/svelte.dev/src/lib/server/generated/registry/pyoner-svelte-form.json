@@ -1,0 +1,18 @@
+{
+  "name": "@pyoner/svelte-form",
+  "description": "Generate HTML forms from JSON schema in Svelte.",
+  "repo_url": "https://github.com/pyoner/svelte-form",
+  "authors": [
+    "pyoner"
+  ],
+  "homepage": "https://github.com/pyoner/svelte-form/tree/master/packages/lib#readme",
+  "downloads": 35,
+  "dependents": 0,
+  "updated": "2020-10-09T06:23:50.231Z",
+  "tags": [
+    "miscellaneous"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 56
+}

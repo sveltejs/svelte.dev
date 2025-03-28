@@ -1,0 +1,18 @@
+{
+  "name": "@novacbn/svelte-codejar",
+  "description": "Provides Svelte binding for the embeddable code editor CodeJar.",
+  "repo_url": "https://github.com/novacbn/svelte-codejar",
+  "authors": [
+    "novacbn"
+  ],
+  "homepage": "https://github.com/novacbn/svelte-codejar#readme",
+  "downloads": 65,
+  "dependents": 1,
+  "updated": "2022-03-05T09:50:20.437Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 23
+}

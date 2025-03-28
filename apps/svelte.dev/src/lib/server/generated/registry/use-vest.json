@@ -1,0 +1,18 @@
+{
+  "name": "use-vest",
+  "description": "Validate forms in Svelte using Vest, showing errors.",
+  "repo_url": "https://github.com/enyo/use-vest",
+  "authors": [
+    "enyo"
+  ],
+  "homepage": "https://github.com/enyo/use-vest",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2022-06-01T15:49:37.461Z",
+  "tags": [
+    "miscellaneous"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 10
+}

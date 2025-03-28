@@ -1,0 +1,18 @@
+{
+  "name": "@felte/reporter-tippy",
+  "description": "Creates error reporter for Felte using Tippy.js.",
+  "repo_url": "https://github.com/pablo-abc/felte",
+  "authors": [
+    "pberganza"
+  ],
+  "homepage": "https://github.com/pablo-abc/felte/tree/main/packages/reporter-tippy",
+  "downloads": 485,
+  "dependents": 1,
+  "updated": "2024-10-29T22:05:16.541Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 1043
+}

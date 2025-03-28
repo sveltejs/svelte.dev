@@ -1,0 +1,19 @@
+{
+  "name": "@livetl/svelte-webext-stores",
+  "description": "Svelte stores synchronized with WebExtension storage.",
+  "repo_url": "https://github.com/ChrRubin/svelte-webext-stores",
+  "authors": [
+    "kentonishi",
+    "grumpybear57"
+  ],
+  "homepage": "https://github.com/ChrRubin/svelte-webext-stores",
+  "downloads": 16,
+  "dependents": 0,
+  "updated": "2023-04-05T03:50:51.613Z",
+  "tags": [
+    "miscellaneous"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 6
+}

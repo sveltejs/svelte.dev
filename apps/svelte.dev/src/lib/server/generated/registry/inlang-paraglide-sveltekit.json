@@ -1,0 +1,16 @@
+{
+  "name": "@inlang/paraglide-sveltekit",
+  "description": "Integrate Paraglide for i18n in SvelteKit apps.",
+  "repo_url": "https://github.com/opral/inlang-paraglide-js",
+  "authors": [],
+  "homepage": "https://github.com/opral/inlang-paraglide-js#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2025-03-13T15:49:16.460Z",
+  "tags": [
+    "integration"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 84
+}

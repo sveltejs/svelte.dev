@@ -1,0 +1,18 @@
+{
+  "name": "svelte-pan-zoom",
+  "description": "Implement pan and zoom functionality for canvas elements.",
+  "repo_url": "https://github.com/captaincodeman/svelte-pan-zoom",
+  "authors": [
+    "captaincodeman"
+  ],
+  "homepage": "https://captaincodeman.github.io/svelte-pan-zoom/",
+  "downloads": 569,
+  "dependents": 1,
+  "updated": "2024-10-02T15:26:46.843Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 22
+}

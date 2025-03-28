@@ -1,0 +1,18 @@
+{
+  "name": "svelte-circle-flags",
+  "description": "Display SVG circle flag icons in Svelte applications.",
+  "repo_url": "https://github.com/shinokada/svelte-circle-flags",
+  "authors": [
+    "shinichiokada"
+  ],
+  "homepage": "https://svelte-circle-flags.codewithshin.com",
+  "downloads": 903,
+  "dependents": 0,
+  "updated": "2024-03-01T16:40:45.383Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 3
+}

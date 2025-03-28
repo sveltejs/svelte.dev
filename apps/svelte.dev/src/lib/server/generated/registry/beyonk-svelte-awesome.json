@@ -1,0 +1,23 @@
+{
+  "name": "@beyonk/svelte-awesome",
+  "description": "Use Font Awesome icons in Svelte with SVG.",
+  "repo_url": "https://github.com/RobBrazier/svelte-awesome",
+  "authors": [
+    "antony",
+    "adampond",
+    "alex.dilley",
+    "jedwoodcock",
+    "leandro.silva",
+    "tomlewis0"
+  ],
+  "homepage": "https://github.com/RobBrazier/svelte-awesome#readme",
+  "downloads": 35,
+  "dependents": 1,
+  "updated": "2018-10-18T08:58:01.370Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 498
+}

@@ -1,0 +1,18 @@
+{
+  "name": "super-navigation",
+  "description": "Provides customizable navigation for SvelteKit applications.",
+  "repo_url": "https://github.com/0xdjole/super-navigation",
+  "authors": [
+    "0xdjole"
+  ],
+  "homepage": "https://github.com/0xdjole/super-navigation#readme",
+  "downloads": 75,
+  "dependents": 1,
+  "updated": "2024-10-30T03:44:16.975Z",
+  "tags": [
+    "router"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 34
+}
