@@ -1,6 +1,6 @@
 {
   "name": "@responsive-ui/label",
-  "description": "Display labels within responsive-ui Svelte components.",
+  "description": "Create label components for responsive-ui.",
   "repo_url": "https://github.com/wetix/responsive-ui",
   "authors": [
     "rexlow",

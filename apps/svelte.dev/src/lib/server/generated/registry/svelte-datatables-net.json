@@ -1,6 +1,6 @@
 {
   "name": "svelte-datatables-net",
-  "description": "Create interactive HTML tables from data in Svelte/SvelteKit.",
+  "description": "Create interactive HTML tables from data in Svelte applications.",
   "repo_url": "https://github.com/joaquimnetocel/svelte-datatables-net",
   "authors": [
     "joaquim.neto.cel"

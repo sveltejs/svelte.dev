@@ -1,6 +1,6 @@
 {
   "name": "@htmlbricks/hb-input-file",
-  "description": "Create Svelte-Bootstrap file input web components.",
+  "description": "Create file input web component for Svelte applications.",
   "repo_url": "",
   "authors": [
     "dariocaruso"

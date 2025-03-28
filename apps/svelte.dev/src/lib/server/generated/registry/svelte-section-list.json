@@ -1,6 +1,6 @@
 {
   "name": "svelte-section-list",
-  "description": "Create headless, draggable section list for Svelte applications.",
+  "description": "Create headless, draggable section lists for Svelte.",
   "repo_url": "https://github.com/TIKramer/svelte-section-list",
   "authors": [
     "tikramer"

@@ -1,6 +1,6 @@
 {
   "name": "gridjs-svelte",
-  "description": "Integrate Grid.js tables into Svelte applications.",
+  "description": "Provides a Svelte wrapper for Grid.js tables.",
   "repo_url": "https://github.com/iamyuu/gridjs-svelte",
   "authors": [
     "iamyuu"

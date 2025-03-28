@@ -1,6 +1,6 @@
 {
   "name": "@ptkdev/sveltekit-cordova-adapter",
-  "description": "Adapt SvelteKit apps for Cordova/Capacitor mobile builds.",
+  "description": "Prerender SvelteKit apps for Cordova/Capacitor.",
   "repo_url": "https://github.com/ptkdev/sveltekit-cordova-adapter",
   "authors": [
     "ptkdevio"

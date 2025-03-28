@@ -1,6 +1,6 @@
 {
   "name": "@sv-use/core",
-  "description": "Provides Svelte 5 utility functions and helpers.",
+  "description": "Provide Svelte 5 utilities for various use cases.",
   "repo_url": "https://github.com/svelte-librarian/sv-use",
   "authors": [
     "novaotp"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2025-02-23T03:59:06.684Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": true,
   "runes": false,

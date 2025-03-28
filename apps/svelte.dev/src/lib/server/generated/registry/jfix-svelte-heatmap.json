@@ -1,6 +1,6 @@
 {
   "name": "@jfix/svelte-heatmap",
-  "description": "Generate heatmaps for Svelte applications.",
+  "description": "Display GitHub-style contribution graphs in Svelte apps.",
   "repo_url": "https://github.com/jfix/svelte-heatmap",
   "authors": [
     "jfix"

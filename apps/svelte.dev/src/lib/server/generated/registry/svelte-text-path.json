@@ -1,6 +1,6 @@
 {
   "name": "svelte-text-path",
-  "description": "Create auto-sizing text-path components for Svelte projects.",
+  "description": "Create auto-sizing text-path components for Svelte.",
   "repo_url": "https://github.com/LeoDog896/svelte-text-path",
   "authors": [
     "leodog896"

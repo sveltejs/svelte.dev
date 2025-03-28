@@ -1,6 +1,6 @@
 {
   "name": "svelte-client-router",
-  "description": "Simplifies SPA routing in Svelte applications.",
+  "description": "Provides client-side routing for Svelte applications.",
   "repo_url": "https://github.com/arthurgermano/svelte-client-router",
   "authors": [
     "arthurgermano"

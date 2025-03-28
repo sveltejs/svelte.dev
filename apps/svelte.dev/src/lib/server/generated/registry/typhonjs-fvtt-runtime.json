@@ -1,6 +1,6 @@
 {
   "name": "@typhonjs-fvtt/runtime",
-  "description": "Integrate Foundry VTT with Svelte applications.",
+  "description": "Integrates runtime library for Foundry VTT & Svelte.",
   "repo_url": "https://github.com/typhonjs-fvtt-lib/runtime",
   "authors": [
     "typhonrt"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2025-02-16T06:48:30.381Z",
   "tags": [
-    "utility"
+    "integration"
   ],
   "svelte5": false,
   "runes": false,

@@ -1,6 +1,6 @@
 {
   "name": "@abdelh2o/agnostic-svelte",
-  "description": "Build UI components agnostic to framework, using Svelte.",
+  "description": "Provides AgnosticUI components for Svelte applications.",
   "repo_url": "https://github.com/AgnosticUI/agnosticui",
   "authors": [
     "abdelh2o"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2022-08-31T19:26:45.451Z",
   "tags": [
-    "component-library"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

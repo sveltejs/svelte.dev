@@ -1,6 +1,6 @@
 {
   "name": "svelty-picker",
-  "description": "Provides a date/time picker component for Svelte.",
+  "description": "Create date and time pickers in Svelte applications.",
   "repo_url": "",
   "authors": [
     "mskocik"

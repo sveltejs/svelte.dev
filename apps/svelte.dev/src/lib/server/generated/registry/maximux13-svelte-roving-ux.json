@@ -1,6 +1,6 @@
 {
   "name": "@maximux13/svelte-roving-ux",
-  "description": "Implements roving focus UX with keyboard navigation in Svelte.",
+  "description": "Implements roving UX with keyboard navigation and focus management.",
   "repo_url": "https://github.com/maximux13/svelte-roving-ux",
   "authors": [
     "maximux13"
@@ -10,8 +10,7 @@
   "dependents": 0,
   "updated": "2023-07-04T14:35:45.529Z",
   "tags": [
-    "ui",
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

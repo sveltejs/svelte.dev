@@ -1,6 +1,6 @@
 {
   "name": "svelte-lighthouse-viewer",
-  "description": "Visualize Lighthouse reports within Svelte applications.",
+  "description": "View Lighthouse reports within Svelte applications.",
   "authors": [
     "dvelasquez"
   ],

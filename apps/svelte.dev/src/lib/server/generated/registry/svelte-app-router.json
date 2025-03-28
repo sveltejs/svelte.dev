@@ -1,6 +1,6 @@
 {
   "name": "svelte-app-router",
-  "description": "Create simple SPA routing with Svelte.",
+  "description": "Simple SPA router for Svelte applications.",
   "repo_url": "https://github.com/coussej/svelte-app-router",
   "authors": [
     "coussej"

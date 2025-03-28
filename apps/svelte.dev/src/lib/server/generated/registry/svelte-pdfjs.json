@@ -1,6 +1,6 @@
 {
   "name": "svelte-pdfjs",
-  "description": "Render PDF documents in Svelte apps using PDF.js.",
+  "description": "Render PDF documents in Svelte using PDFJS.",
   "repo_url": "https://github.com/gtm-nayan/svelte-pdfjs",
   "authors": [
     "gtmnayan"

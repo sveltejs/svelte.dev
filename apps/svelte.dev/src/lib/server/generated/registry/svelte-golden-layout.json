@@ -1,6 +1,6 @@
 {
   "name": "svelte-golden-layout",
-  "description": "Create GoldenLayout 2.x wrapper for Svelte.",
+  "description": "GoldenLayout 2.x Wrapper for Svelte.",
   "repo_url": "https://github.com/SillyFreak/svelte-golden-layout",
   "authors": [
     "sillyfreak"

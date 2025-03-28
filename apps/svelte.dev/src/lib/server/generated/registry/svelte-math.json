@@ -1,6 +1,6 @@
 {
   "name": "svelte-math",
-  "description": "Render math equations in Svelte using MathML and Temml.",
+  "description": "Render math equations using MathML and Temml in Svelte components.",
   "repo_url": "",
   "authors": [
     "kelvinsjk"

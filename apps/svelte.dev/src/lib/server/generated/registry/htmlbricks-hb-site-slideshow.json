@@ -1,6 +1,6 @@
 {
   "name": "@htmlbricks/hb-site-slideshow",
-  "description": "Provides a Svelte-Bootstrap site-slideshow component.",
+  "description": "Creates slideshow web component for Svelte applications.",
   "repo_url": "",
   "authors": [
     "dariocaruso"
@@ -9,7 +9,6 @@
   "dependents": 0,
   "updated": "2025-03-24T18:07:20.362Z",
   "tags": [
-    "component-library",
     "ui"
   ],
   "svelte5": false,

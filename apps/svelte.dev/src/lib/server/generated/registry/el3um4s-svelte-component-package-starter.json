@@ -1,6 +1,6 @@
 {
   "name": "@el3um4s/svelte-component-package-starter",
-  "description": "Provide Svelte component package starter template.",
+  "description": "Starter template for creating Svelte component packages.",
   "repo_url": "https://github.com/el3um4s/svelte-component-package-starter",
   "authors": [
     "el3um4s"

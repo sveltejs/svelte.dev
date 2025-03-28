@@ -1,6 +1,6 @@
 {
   "name": "svelte-toolbar",
-  "description": "Display user-navigable menu emulating VS-Code toolbar.",
+  "description": "Display user-navigable menus, emulating VS-Code toolbars.",
   "repo_url": "",
   "authors": [
     "emnudge"

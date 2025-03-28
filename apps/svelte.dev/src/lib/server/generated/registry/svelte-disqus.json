@@ -1,6 +1,6 @@
 {
   "name": "svelte-disqus",
-  "description": "Integrate Disqus comments into Svelte applications.",
+  "description": "Integrates Disqus services into Svelte applications.",
   "repo_url": "https://github.com/Demonicious/disqus-svelte",
   "authors": [
     "diogomoretti"

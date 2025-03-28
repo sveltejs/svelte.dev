@@ -1,6 +1,6 @@
 {
   "name": "svelte-navlink-action",
-  "description": "Inject active class into route-matched links in Svelte.",
+  "description": "Inject active class into route-matched links.",
   "repo_url": "https://github.com/kwhitley/svelte-navlink-action",
   "authors": [
     "krwhitley"

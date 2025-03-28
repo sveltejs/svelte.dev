@@ -1,6 +1,6 @@
 {
   "name": "use-svelte",
-  "description": "Provide Svelte actions for shortcuts, lazy loading, tooltips, and more.",
+  "description": "Collection of Svelte actions and directives.",
   "repo_url": "https://github.com/treboryx/use-svelte",
   "authors": [
     "rowboat"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2022-11-09T12:09:47.647Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

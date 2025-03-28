@@ -1,6 +1,6 @@
 {
   "name": "@canadies/svelte-customizable-quill",
-  "description": "Integrate customizable Quill editor into Svelte applications.",
+  "description": "Provide easy-to-use, flexible Quill editor for Svelte.",
   "repo_url": "",
   "authors": [
     "canadies"

@@ -1,6 +1,6 @@
 {
   "name": "@steveesamson/microform",
-  "description": "Manage forms with validations in Svelte and SvelteKit applications.",
+  "description": "Manage forms with validation in Svelte and SvelteKit.",
   "repo_url": "https://github.com/steveesamson/microform",
   "authors": [
     "steveesamson"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2025-03-15T21:05:53.153Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": true,
   "runes": false,

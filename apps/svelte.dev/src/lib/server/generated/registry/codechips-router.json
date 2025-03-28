@@ -1,6 +1,6 @@
 {
   "name": "codechips-router",
-  "description": "Provides lightweight Svelte routing solution.",
+  "description": "Implement lightweight Svelte routing solution.",
   "repo_url": "https://github.com/oscar-marion/codechips-router",
   "authors": [
     "oscarmarion"

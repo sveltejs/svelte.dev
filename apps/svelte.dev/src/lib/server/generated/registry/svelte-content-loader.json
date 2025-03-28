@@ -1,6 +1,6 @@
 {
   "name": "svelte-content-loader",
-  "description": "Create placeholder loading components, like Facebook cards loading.",
+  "description": "Create placeholder loading with Svelte Content Loader.",
   "repo_url": "https://github.com/PaulMaly/svelte-content-loader",
   "authors": [
     "paulmaly"

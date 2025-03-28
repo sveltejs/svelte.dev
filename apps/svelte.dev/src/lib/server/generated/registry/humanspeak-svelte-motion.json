@@ -1,6 +1,6 @@
 {
   "name": "@humanspeak/svelte-motion",
-  "description": "Provides hardware-accelerated animations for Svelte 5 apps.",
+  "description": "Provides smooth, hardware-accelerated animations for Svelte 5.",
   "repo_url": "https://github.com/humanspeak/svelte-motion",
   "authors": [
     "humanspeakadmin"

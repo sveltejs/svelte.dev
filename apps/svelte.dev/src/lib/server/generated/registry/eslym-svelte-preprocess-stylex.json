@@ -1,6 +1,6 @@
 {
   "name": "@eslym/svelte-preprocess-stylex",
-  "description": "Preprocesses StyleX for better readability in Svelte.",
+  "description": "Preprocesses Svelte code to make StyleX more readable.",
   "repo_url": "https://github.com/eslym/svelte-preprocess-stylex",
   "authors": [
     "0nepeop1e"
@@ -9,7 +9,7 @@
   "dependents": 0,
   "updated": "2025-03-08T13:50:29.157Z",
   "tags": [
-    "preprocessor"
+    "tooling"
   ],
   "svelte5": true,
   "runes": false,

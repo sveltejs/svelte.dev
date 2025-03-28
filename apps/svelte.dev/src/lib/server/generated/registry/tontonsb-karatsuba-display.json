@@ -1,6 +1,6 @@
 {
   "name": "@tontonsb/karatsuba-display",
-  "description": "Visualize Karatsuba algorithm for Svelte.",
+  "description": "Visualize Karatsuba algorithm steps in Svelte.",
   "repo_url": "https://github.com/tontonsb/karatsuba",
   "authors": [
     "tontonsb"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2023-01-08T10:03:56.078Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

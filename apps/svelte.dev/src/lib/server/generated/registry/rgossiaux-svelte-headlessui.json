@@ -1,6 +1,6 @@
 {
   "name": "@rgossiaux/svelte-headlessui",
-  "description": "Provides unstyled, accessible UI components for Svelte.",
+  "description": "Provides Svelte port of Headless UI components.",
   "repo_url": "https://github.com/rgossiaux/svelte-headlessui",
   "authors": [
     "rgossiaux"
@@ -10,7 +10,7 @@
   "dependents": 3,
   "updated": "2023-06-11T21:49:03.380Z",
   "tags": [
-    "component-library"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

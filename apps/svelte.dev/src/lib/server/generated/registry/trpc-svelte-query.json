@@ -1,6 +1,6 @@
 {
   "name": "trpc-svelte-query",
-  "description": "Integrates tRPC with SvelteKit and Tanstack Query.",
+  "description": "Use tRPC with SvelteKit and Tanstack Query.",
   "repo_url": "https://github.com/ottomated/trpc-svelte-query",
   "authors": [
     "ottomated"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2025-03-26T22:16:14.634Z",
   "tags": [
-    "integration"
+    "server"
   ],
   "svelte5": false,
   "runes": false,

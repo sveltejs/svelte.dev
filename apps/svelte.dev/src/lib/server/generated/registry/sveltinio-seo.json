@@ -1,6 +1,6 @@
 {
   "name": "@sveltinio/seo",
-  "description": "Adds SEO-related Svelte components for structured data.",
+  "description": "Add SEO metadata to Svelte and SvelteKit applications.",
   "repo_url": "https://github.com/sveltinio/components-library",
   "authors": [
     "sveltinio"

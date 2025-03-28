@@ -1,6 +1,6 @@
 {
   "name": "@unlazy/svelte",
-  "description": "Provides lazy loading for images in Svelte applications.",
+  "description": "Implement lazy loading for images in Svelte applications.",
   "repo_url": "https://github.com/johannschopplich/unlazy",
   "authors": [
     "johannschopplich"

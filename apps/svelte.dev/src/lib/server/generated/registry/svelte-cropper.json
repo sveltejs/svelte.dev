@@ -1,0 +1,16 @@
+{
+  "name": "svelte-cropper",
+  "description": "Provides CropperJS component for Svelte.",
+  "repo_url": "src/lib/cropper",
+  "authors": [
+    "dehwyy"
+  ],
+  "downloads": 187,
+  "dependents": 0,
+  "updated": "2024-01-22T15:52:06.999Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

@@ -1,6 +1,6 @@
 {
   "name": "syv",
-  "description": "Provides essential Svelte components, icons, and stores.",
+  "description": "Svelte complementary library with components, icons, and stores.",
   "repo_url": "https://github.com/ignatiusmb/syv",
   "authors": [
     "ignatiusmb"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2024-10-22T05:33:17.920Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": true,
   "runes": false,

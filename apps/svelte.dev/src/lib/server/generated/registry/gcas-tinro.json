@@ -1,6 +1,6 @@
 {
   "name": "@gcas/tinro",
-  "description": "Provides a tiny, declarative router for Svelte applications.",
+  "description": "Provide a tiny, declarative router for Svelte applications.",
   "repo_url": "https://github.com/gcasro/tinro",
   "authors": [
     "vpalos"

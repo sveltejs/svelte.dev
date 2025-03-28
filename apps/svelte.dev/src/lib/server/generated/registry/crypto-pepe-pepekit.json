@@ -1,6 +1,6 @@
 {
   "name": "@crypto-pepe/pepekit",
-  "description": "Minimalistic UI/UX component framework for Svelte.",
+  "description": "Develop UI/UX components for Svelte with PepeKit.",
   "repo_url": "https://github.com/crypto-pepe/pepekit",
   "authors": [
     "stupid_boar"
@@ -10,7 +10,6 @@
   "dependents": 0,
   "updated": "2022-01-11T20:04:31.903Z",
   "tags": [
-    "component-library",
     "ui"
   ],
   "svelte5": false,

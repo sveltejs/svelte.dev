@@ -1,6 +1,6 @@
 {
   "name": "@prismicio/svelte",
-  "description": "Presents Prismic content with Svelte components.",
+  "description": "Displays Prismic content within Svelte applications.",
   "repo_url": "https://github.com/prismicio/prismic-svelte",
   "authors": [
     "chrrrs",
@@ -34,8 +34,7 @@
   "dependents": 3,
   "updated": "2025-03-19T20:06:48.540Z",
   "tags": [
-    "content",
-    "integration"
+    "content"
   ],
   "svelte5": false,
   "runes": false,

@@ -1,6 +1,6 @@
 {
   "name": "@der-reiskoch/khao-ui",
-  "description": "Build UI components based on lightweight Svelte web components.",
+  "description": "Provides UI components as web-components.",
   "repo_url": "https://github.com/Khao-UI-Tools/khao-ui",
   "authors": [
     "jens-reiskoch"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2025-03-16T14:55:41.597Z",
   "tags": [
-    "component-library"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

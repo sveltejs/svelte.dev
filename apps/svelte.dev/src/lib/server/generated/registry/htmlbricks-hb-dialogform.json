@@ -1,6 +1,6 @@
 {
   "name": "@htmlbricks/hb-dialogform",
-  "description": "Svelte-Bootstrap dialogform WebComponent",
+  "description": "Build dialog form components for Svelte apps.",
   "repo_url": "",
   "authors": [
     "dariocaruso"

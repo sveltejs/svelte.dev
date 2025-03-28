@@ -1,6 +1,6 @@
 {
   "name": "svelte-stopwatch",
-  "description": "Create timer components with countdown option.",
+  "description": "Creates stopwatch and countdown timer components for Svelte.",
   "repo_url": "",
   "authors": [
     "ero"
@@ -10,8 +10,7 @@
   "dependents": 0,
   "updated": "2022-04-01T13:45:20.565Z",
   "tags": [
-    "ui",
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false

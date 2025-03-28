@@ -1,6 +1,6 @@
 {
   "name": "svelte-pincode",
-  "description": "Create declarative pin code input components for Svelte.",
+  "description": "Creates declarative pin code input components for Svelte.",
   "repo_url": "https://github.com/metonym/svelte-pincode",
   "authors": [
     "metonym"

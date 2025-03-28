@@ -1,6 +1,6 @@
 {
   "name": "@form-observer/svelte",
-  "description": "Observe and validate form fields in Svelte applications.",
+  "description": "Provide form validation and observation utilities for Svelte apps.",
   "repo_url": "https://github.com/enthusiastic-js/form-observer",
   "authors": [
     "itenthusiasm"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2024-05-05T17:20:03.222Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

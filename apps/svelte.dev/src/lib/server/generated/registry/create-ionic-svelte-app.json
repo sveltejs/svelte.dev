@@ -1,6 +1,6 @@
 {
   "name": "create-ionic-svelte-app",
-  "description": "Create Ionic Svelte apps with SvelteKit.",
+  "description": "Scaffold Ionic applications with SvelteKit.",
   "repo_url": "https://github.com/Tommertom/svelte-ionic-npm",
   "authors": [
     "tommertom"

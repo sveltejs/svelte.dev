@@ -1,6 +1,6 @@
 {
   "name": "super-svelte-router",
-  "description": "Create a powerful, easy to use Router for svelte.",
+  "description": "Provides a powerful, easy-to-use router for Svelte.",
   "repo_url": "https://github.com/AliBasicCoder/super-svelte-router",
   "authors": [
     "ali_ahmed"

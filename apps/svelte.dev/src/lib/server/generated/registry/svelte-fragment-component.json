@@ -1,6 +1,6 @@
 {
   "name": "svelte-fragment-component",
-  "description": "Renders children with lifecycle hooks for testing.",
+  "description": "Render children with Svelte lifecycle hooks for testing.",
   "repo_url": "https://github.com/kenoxa/svelte-fragment-component",
   "authors": [
     "sastan"
@@ -10,7 +10,7 @@
   "dependents": 2,
   "updated": "2020-07-13T10:06:45.377Z",
   "tags": [
-    "utility"
+    "tooling"
   ],
   "svelte5": false,
   "runes": false,

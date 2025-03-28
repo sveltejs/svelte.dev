@@ -1,6 +1,6 @@
 {
   "name": "@jill64/svelte-observer",
-  "description": "Observes Promise status from outside Svelte components.",
+  "description": "Observe Promise status easily from outside Svelte components.",
   "repo_url": "https://github.com/jill64/svelte-observer",
   "authors": [
     "jill64"
@@ -10,7 +10,7 @@
   "dependents": 2,
   "updated": "2024-12-28T00:40:53.815Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": true,
   "runes": false,

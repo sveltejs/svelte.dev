@@ -1,6 +1,6 @@
 {
   "name": "svimg",
-  "description": "Process, lazy load images in Svelte applications.",
+  "description": "Processes images for Svelte, generating responsive images and lazy loading.",
   "repo_url": "https://github.com/xiphux/svimg",
   "authors": [
     "xiphux"
@@ -14,5 +14,5 @@
   ],
   "svelte5": false,
   "runes": false,
-  "github_stars": 247
+  "github_stars": 246
 }

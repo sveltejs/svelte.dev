@@ -1,6 +1,6 @@
 {
   "name": "@schedule-x/svelte",
-  "description": "Create event calendar components for Svelte applications.",
+  "description": "Provides Svelte component for Schedule-X calendar.",
   "repo_url": "",
   "authors": [
     "tomosterlund"

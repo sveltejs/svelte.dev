@@ -1,6 +1,6 @@
 {
   "name": "@svonic/ui",
-  "description": "UI component library for Svelte and Ionic integration.",
+  "description": "UI components for Svelte and SvelteKit.",
   "repo_url": "https://github.com/svonic/svonic",
   "authors": [
     "daimyo"

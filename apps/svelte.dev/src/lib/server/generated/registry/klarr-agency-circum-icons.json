@@ -1,6 +1,6 @@
 {
   "name": "@klarr-agency/circum-icons",
-  "description": "Provides a set of consistent, circular icons for Svelte.",
+  "description": "Provides Circum icons pack for Svelte, React, and Vue.",
   "repo_url": "https://github.com/Klarr-Agency/Circum-icons",
   "authors": [
     "klarr-agency"

@@ -1,6 +1,6 @@
 {
   "name": "svelte-simple-icons",
-  "description": "Use Simple Icons in Svelte projects.",
+  "description": "Import Simple Icons for Svelte, tree-shake unused icons.",
   "repo_url": "https://github.com/beyonk-adventures/svelte-simple-icons",
   "authors": [
     "antony"

@@ -1,6 +1,6 @@
 {
   "name": "svelte-virtual",
-  "description": "Create virtual list and grid components for Svelte.",
+  "description": "Create virtual list and grid components for Svelte applications.",
   "repo_url": "https://github.com/ghostebony/svelte-virtual",
   "authors": [
     "ghostebony"

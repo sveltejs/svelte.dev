@@ -1,6 +1,6 @@
 {
   "name": "@responsive-ui/hscroll",
-  "description": "Create horizontal scroll component for Svelte.",
+  "description": "Provides horizontal scroll component for Svelte apps.",
   "repo_url": "https://github.com/wetix/responsive-ui",
   "authors": [
     "rexlow",

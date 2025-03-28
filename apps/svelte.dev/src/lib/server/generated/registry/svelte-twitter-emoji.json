@@ -1,6 +1,6 @@
 {
   "name": "svelte-twitter-emoji",
-  "description": "Provide Twitter emoji icon components for Svelte.",
+  "description": "Provides Twitter emoji icon components for Svelte.",
   "repo_url": "https://github.com/shinokada/svelte-twitter-emoji",
   "authors": [
     "shinichiokada"

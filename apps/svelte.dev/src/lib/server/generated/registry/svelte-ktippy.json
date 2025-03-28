@@ -1,6 +1,6 @@
 {
   "name": "svelte-ktippy",
-  "description": "Integrate Tippy.js tooltips into Svelte applications.",
+  "description": "Integrates Tippy.js tooltips into Svelte components.",
   "repo_url": "https://github.com/Kapsonfire-DE/svelte-ktippy",
   "authors": [
     "kapsonfire"

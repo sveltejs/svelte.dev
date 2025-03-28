@@ -1,6 +1,6 @@
 {
   "name": "iathings-ui",
-  "description": "UI component library for Svelte, built for IATHINGS products.",
+  "description": "Create UI components for IATHINGS products.",
   "repo_url": "https://github.com/linuxer41/iathings-ui",
   "authors": [
     "linuxer41"
@@ -10,8 +10,8 @@
   "dependents": 0,
   "updated": "2025-01-20T20:52:03.798Z",
   "tags": [
-    "component-library",
-    "ui"
+    "ui",
+    "design-system"
   ],
   "svelte5": true,
   "runes": false,

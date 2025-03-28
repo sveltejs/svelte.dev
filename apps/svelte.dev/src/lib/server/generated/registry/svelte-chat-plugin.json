@@ -1,6 +1,6 @@
 {
   "name": "@svelte-chat/plugin",
-  "description": "Integrate Svelte-Chat solution with SvelteKit.",
+  "description": "Integrate Svelte-Chat solution with SvelteKit applications.",
   "repo_url": "",
   "authors": [
     "kotekpsotek"
@@ -9,7 +9,7 @@
   "dependents": 1,
   "updated": "2023-11-06T21:42:58.240Z",
   "tags": [
-    "utility"
+    "integration"
   ],
   "svelte5": false,
   "runes": false

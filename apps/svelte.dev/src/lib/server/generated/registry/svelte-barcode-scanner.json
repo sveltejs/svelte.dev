@@ -1,6 +1,6 @@
 {
   "name": "svelte-barcode-scanner",
-  "description": "Scan QR codes and barcodes within Svelte applications.",
+  "description": "Detect QR codes and barcodes in Svelte applications.",
   "repo_url": "https://github.com/ollema/svelte-barcode-scanner",
   "authors": [
     "ollema"

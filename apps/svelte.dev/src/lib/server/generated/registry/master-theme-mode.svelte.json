@@ -1,6 +1,6 @@
 {
   "name": "@master/theme-mode.svelte",
-  "description": "Switch CSS theme modes in Svelte applications.",
+  "description": "Switch CSS theme modes with this lightweight Svelte utility.",
   "repo_url": "https://github.com/master-co/theme-mode",
   "authors": [
     "benseage0",
@@ -11,7 +11,7 @@
   "dependents": 0,
   "updated": "2024-06-09T00:49:23.168Z",
   "tags": [
-    "utility"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

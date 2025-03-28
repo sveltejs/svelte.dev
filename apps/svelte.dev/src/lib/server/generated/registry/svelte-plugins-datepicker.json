@@ -1,6 +1,6 @@
 {
   "name": "@svelte-plugins/datepicker",
-  "description": "Provides datepicker component designed for Svelte apps.",
+  "description": "Implement simple datepicker component for Svelte.",
   "repo_url": "https://github.com/svelte-plugins/datepicker",
   "authors": [
     "dysfunc"

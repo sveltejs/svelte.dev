@@ -1,6 +1,6 @@
 {
   "name": "ag-grid-svelte5",
-  "description": "Integrates AG Grid with Svelte 5, creates custom cells.",
+  "description": "Integrate AG Grid with Svelte 5 applications.",
   "repo_url": "https://github.com/JohnMaher1/ag-grid-svelte5",
   "authors": [
     "johnmaher149"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2025-02-21T10:13:19.792Z",
   "tags": [
-    "component-library"
+    "ui"
   ],
   "svelte5": true,
   "runes": false,

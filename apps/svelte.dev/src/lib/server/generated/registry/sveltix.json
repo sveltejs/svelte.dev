@@ -1,6 +1,6 @@
 {
   "name": "sveltix",
-  "description": "Manages complex stores in Svelte applications.",
+  "description": "Manage complex stores in Svelte applications.",
   "repo_url": "https://github.com/SpongeBed81/sveltix",
   "authors": [
     "spongebed"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2023-07-03T19:42:31.532Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

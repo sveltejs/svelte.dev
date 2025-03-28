@@ -1,6 +1,6 @@
 {
   "name": "svelte-morphing-modal",
-  "description": "Create morphing modal components for Svelte applications.",
+  "description": "Create morphing modal component for Svelte 3 apps.",
   "repo_url": "https://github.com/PaulMaly/svelte-morphing-modal",
   "authors": [
     "paulmaly"

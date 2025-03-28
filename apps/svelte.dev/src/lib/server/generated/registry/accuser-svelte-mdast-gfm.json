@@ -1,6 +1,6 @@
 {
   "name": "@accuser/svelte-mdast-gfm",
-  "description": "Transforms Markdown (GFM) into Svelte components.",
+  "description": "Transform Mdast to Svelte components.",
   "repo_url": "https://github.com/accuser/svelte-mdast-gfm",
   "authors": [
     "accuser"

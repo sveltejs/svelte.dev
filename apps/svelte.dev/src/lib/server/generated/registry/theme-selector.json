@@ -1,6 +1,6 @@
 {
   "name": "theme-selector",
-  "description": "Switch between light, dark, system themes in Svelte apps.",
+  "description": "Switch between light, dark, and system themes in Svelte.",
   "repo_url": "https://github.com/lixelv/theme-selector",
   "authors": [
     "lixelv"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2024-09-04T16:43:47.075Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": true,
   "runes": false,

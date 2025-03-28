@@ -1,18 +1,17 @@
 {
   "name": "svelte-inview",
-  "description": "Monitors element visibility in viewport using Intersection Observer.",
+  "description": "Detect when elements enter or leave viewport using Intersection Observer.",
   "repo_url": "",
   "authors": [
     "maciekgrzybek",
     "jhubbardsf"
   ],
   "homepage": "https://github.com/maciekgrzybek/svelte-inview",
-  "downloads": 13903,
+  "downloads": 13869,
   "dependents": 9,
   "updated": "2024-10-01T19:10:39.170Z",
   "tags": [
-    "utility",
-    "dom"
+    "miscellaneous"
   ],
   "svelte5": true,
   "runes": false

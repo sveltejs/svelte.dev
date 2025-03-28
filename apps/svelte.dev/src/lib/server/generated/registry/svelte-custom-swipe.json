@@ -1,6 +1,6 @@
 {
   "name": "svelte-custom-swipe",
-  "description": "Implement custom swipe gestures in Svelte applications.",
+  "description": "Create custom swipe interactions in Svelte apps.",
   "repo_url": "https://github.com/yoonjonglyu/custom-swipe",
   "authors": [
     "isa(yunjongryu)"

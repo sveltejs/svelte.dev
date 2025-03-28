@@ -1,6 +1,6 @@
 {
   "name": "svelte-pivottable",
-  "description": "Create pivot table with grouping for Svelte.",
+  "description": "Create pivot tables with drag and drop functionality.",
   "repo_url": "https://github.com/jjagielka/svelte-pivottable",
   "authors": [
     "jjagielka"

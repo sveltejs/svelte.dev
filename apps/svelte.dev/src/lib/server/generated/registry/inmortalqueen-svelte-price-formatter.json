@@ -1,6 +1,6 @@
 {
   "name": "@inmortalqueen/svelte-price-formatter",
-  "description": "Format numbers into price strings in Svelte apps.",
+  "description": "Format numbers as prices in Svelte applications.",
   "repo_url": "https://github.com/inmortalqueen/svelte-price-formatter",
   "authors": [
     "inmortalqueen"
@@ -10,7 +10,8 @@
   "dependents": 0,
   "updated": "2022-10-08T20:58:29.412Z",
   "tags": [
-    "utility"
+    "ui",
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

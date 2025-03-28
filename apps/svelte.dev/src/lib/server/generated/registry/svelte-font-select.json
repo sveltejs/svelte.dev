@@ -1,6 +1,6 @@
 {
   "name": "svelte-font-select",
-  "description": "Preview and select Google Fonts within Svelte applications.",
+  "description": "Preview and select Google Fonts in Svelte applications.",
   "repo_url": "https://github.com/captaincodeman/svelte-font-select",
   "authors": [
     "captaincodeman"

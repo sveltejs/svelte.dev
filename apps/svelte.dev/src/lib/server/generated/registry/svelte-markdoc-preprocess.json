@@ -1,16 +1,17 @@
 {
   "name": "svelte-markdoc-preprocess",
-  "description": "Preprocess Svelte files with Markdoc for content.",
+  "description": "Preprocess Svelte files using Markdoc for content creation.",
   "repo_url": "https://github.com/TorstenDittmann/svelte-markdoc-preprocess",
   "authors": [
     "torstendittmann"
   ],
   "homepage": "https://svelte-markdoc-preprocess.pages.dev",
-  "downloads": 243,
+  "downloads": 354,
   "dependents": 0,
   "updated": "2025-03-20T13:16:08.329Z",
   "tags": [
-    "preprocessor"
+    "tooling",
+    "content"
   ],
   "svelte5": false,
   "runes": false,

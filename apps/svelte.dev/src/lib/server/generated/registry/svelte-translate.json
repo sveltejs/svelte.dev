@@ -1,6 +1,6 @@
 {
   "name": "svelte-translate",
-  "description": "Provides dynamic translation service for Svelte applications.",
+  "description": "Provide dynamic translation service for Svelte applications.",
   "repo_url": "https://github.com/noelmugnier/svelte-translate",
   "authors": [
     "noelmugnier"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2021-10-01T14:03:15.146Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

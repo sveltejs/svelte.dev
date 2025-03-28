@@ -1,6 +1,6 @@
 {
   "name": "@tigersway/reading-bar",
-  "description": "Display reading progress bar in Svelte applications.",
+  "description": "Create reading progress bar element for Svelte apps.",
   "repo_url": "https://github.com/tigersway/svelte-reading-bar",
   "authors": [
     "tigersway"

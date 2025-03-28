@@ -1,6 +1,6 @@
 {
   "name": "svelte-store-extended",
-  "description": "Extends Svelte stores with additional functionalities.",
+  "description": "Extend Svelte stores with additional functionalities.",
   "repo_url": "https://github.com/chainlist/svelte-store-extended",
   "authors": [
     "chainlist"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2021-04-04T14:18:30.388Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false

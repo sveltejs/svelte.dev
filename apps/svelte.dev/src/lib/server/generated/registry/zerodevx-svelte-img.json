@@ -1,6 +1,6 @@
 {
   "name": "@zerodevx/svelte-img",
-  "description": "High-performance responsive/progressive images for SvelteKit.",
+  "description": "Create responsive and progressive images for SvelteKit.",
   "repo_url": "https://github.com/zerodevx/svelte-img",
   "authors": [
     "zerodevx"

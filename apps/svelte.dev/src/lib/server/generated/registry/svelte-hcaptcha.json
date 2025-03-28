@@ -1,6 +1,6 @@
 {
   "name": "svelte-hcaptcha",
-  "description": "Integrate hCaptcha challenges into Svelte forms.",
+  "description": "Integrate hCaptcha into Svelte apps.",
   "repo_url": "https://github.com/mrmikardo/svelte-hcaptcha",
   "authors": [
     "colinattab"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2022-04-18T11:43:21.517Z",
   "tags": [
-    "utility"
+    "integration"
   ],
   "svelte5": false,
   "runes": false,

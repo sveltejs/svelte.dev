@@ -1,6 +1,6 @@
 {
   "name": "@sunify/svelte-select",
-  "description": "Simple select component, customize button appearance.",
+  "description": "Create simple select elements with custom button appearance.",
   "repo_url": "",
   "authors": [
     "sunify"

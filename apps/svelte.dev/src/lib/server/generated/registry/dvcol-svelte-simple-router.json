@@ -1,12 +1,12 @@
 {
   "name": "@dvcol/svelte-simple-router",
-  "description": "Creates simple client-side routing for Svelte 5 applications.",
+  "description": "Simple, flexible client-side router for Svelte 5 apps.",
   "repo_url": "https://github.com/dvcol/svelte-simple-router",
   "authors": [
     "dvcol"
   ],
   "homepage": "https://github.com/dvcol/svelte-simple-router",
-  "downloads": 110,
+  "downloads": 84,
   "dependents": 0,
   "updated": "2025-03-06T13:46:44.654Z",
   "tags": [
@@ -14,5 +14,5 @@
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 76
+  "github_stars": 77
 }

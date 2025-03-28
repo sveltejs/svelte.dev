@@ -1,19 +1,19 @@
 {
   "name": "svelte-floating-ui",
-  "description": "Svelte actions for working with floating ui.",
+  "description": "Create floating UI elements with Svelte actions.",
   "repo_url": "https://github.com/fedorovvvv/svelte-floating-ui",
   "authors": [
     "fedorovvvv"
   ],
   "homepage": "https://github.com/fedorovvvv/svelte-floating-ui#readme",
-  "downloads": 31845,
+  "downloads": 31275,
   "dependents": 22,
-  "updated": "2024-06-17T10:29:31.921Z",
+  "updated": "2025-03-28T02:03:16.649Z",
   "tags": [
     "ui",
-    "utility"
+    "miscellaneous"
   ],
-  "svelte5": false,
+  "svelte5": true,
   "runes": false,
   "github_stars": 160
 }

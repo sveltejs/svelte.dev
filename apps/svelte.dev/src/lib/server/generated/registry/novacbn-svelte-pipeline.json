@@ -1,6 +1,6 @@
 {
   "name": "@novacbn/svelte-pipeline",
-  "description": "Provides custom Javascript contexts and Svelte Compiler.",
+  "description": "Provide custom Javascript contexts and Svelte compiler as stores.",
   "repo_url": "",
   "authors": [
     "novacbn"

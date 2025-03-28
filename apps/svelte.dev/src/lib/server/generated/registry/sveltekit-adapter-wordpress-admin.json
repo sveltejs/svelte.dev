@@ -1,6 +1,6 @@
 {
   "name": "sveltekit-adapter-wordpress-admin",
-  "description": "Adapt SvelteKit apps for WordPress admin interface.",
+  "description": "Adapt SvelteKit apps for WordPress admin interfaces.",
   "repo_url": "https://github.com/lolcabanon/sveltekit-adapter-wordpress-admin",
   "authors": [
     "lolcabanon"

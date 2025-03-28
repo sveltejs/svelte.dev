@@ -1,6 +1,6 @@
 {
   "name": "svelte-pagination",
-  "description": "Provides raw Svelte component for pagination.",
+  "description": "Implement pagination component for Svelte applications.",
   "repo_url": "",
   "authors": [
     "thecodejack"

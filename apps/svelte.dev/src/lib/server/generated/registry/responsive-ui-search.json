@@ -1,6 +1,6 @@
 {
   "name": "@responsive-ui/search",
-  "description": "Provides a search component for Svelte applications.",
+  "description": "Creates search component for responsive-ui.",
   "repo_url": "https://github.com/wetix/responsive-ui",
   "authors": [
     "rexlow",

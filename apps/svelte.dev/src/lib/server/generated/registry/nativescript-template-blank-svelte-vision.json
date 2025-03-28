@@ -1,6 +1,6 @@
 {
   "name": "@nativescript/template-blank-svelte-vision",
-  "description": "Provide Nativescript visionOS starter with Svelte.",
+  "description": "NativeScript visionOS starter template with Svelte.",
   "repo_url": "https://github.com/NativeScript/nativescript-app-templates",
   "authors": [
     "nativescript-user",

@@ -1,6 +1,6 @@
 {
   "name": "@kamrade/svelte-dynamic-button",
-  "description": "Creates dynamic button component with themes, variants, sizes.",
+  "description": "Create dynamic button components with themes, variants, and sizes.",
   "repo_url": "https://github.com/kamrade/svelte-dynamic-button",
   "authors": [
     "kamrade"

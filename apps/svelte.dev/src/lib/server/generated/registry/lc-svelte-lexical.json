@@ -1,6 +1,6 @@
 {
   "name": "lc-svelte-lexical",
-  "description": "Create rich text editors for Svelte using Lexical.",
+  "description": "Create rich text editor for Svelte using Lexical framework.",
   "repo_url": "https://github.com/lecong/svelte-lexical",
   "authors": [
     "lecongit"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2023-07-17T07:24:11.850Z",
   "tags": [
-    "content"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

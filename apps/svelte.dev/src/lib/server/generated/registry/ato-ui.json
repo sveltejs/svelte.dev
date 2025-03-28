@@ -1,6 +1,6 @@
 {
   "name": "ato-ui",
-  "description": "Elemental UI component library for Svelte, built with UnoCSS and Melt UI.",
+  "description": "Provides elemental UI components for Svelte/SvelteKit.",
   "repo_url": "https://github.com/bennymi/ato-ui",
   "authors": [
     "bennymi"
@@ -10,10 +10,10 @@
   "dependents": 0,
   "updated": "2023-11-25T19:05:39.718Z",
   "tags": [
-    "component-library",
-    "ui"
+    "ui",
+    "design-system"
   ],
-  "svelte5": true,
+  "svelte5": false,
   "runes": false,
   "github_stars": 79
 }

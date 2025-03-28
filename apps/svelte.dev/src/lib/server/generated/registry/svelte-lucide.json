@@ -1,6 +1,6 @@
 {
   "name": "svelte-lucide",
-  "description": "Use Lucide SVG icons in Svelte applications.",
+  "description": "Provides Lucide SVG icon components for Svelte.",
   "repo_url": "https://github.com/shinokada/svelte-lucide",
   "authors": [
     "shinichiokada"

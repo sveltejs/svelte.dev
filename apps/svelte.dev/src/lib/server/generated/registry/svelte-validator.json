@@ -1,6 +1,6 @@
 {
   "name": "svelte-validator",
-  "description": "Validate forms in Svelte applications.",
+  "description": "Offer form validation library for Svelte applications.",
   "repo_url": "https://github.com/Joe-noh/svelte-validator",
   "authors": [
     "joe-noh"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2020-01-26T14:24:28.336Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": true,
   "runes": false,

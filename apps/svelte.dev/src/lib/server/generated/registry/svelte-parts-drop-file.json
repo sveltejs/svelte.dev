@@ -1,6 +1,6 @@
 {
   "name": "@svelte-parts/drop-file",
-  "description": "Enable file upload via drag-and-drop in Svelte apps.",
+  "description": "Create file upload component for Svelte apps.",
   "repo_url": "https://github.com/idris-maps/svelte-parts",
   "authors": [
     "idris-maps"
@@ -10,7 +10,6 @@
   "dependents": 0,
   "updated": "2022-04-04T21:04:29.505Z",
   "tags": [
-    "media",
     "ui"
   ],
   "svelte5": false,

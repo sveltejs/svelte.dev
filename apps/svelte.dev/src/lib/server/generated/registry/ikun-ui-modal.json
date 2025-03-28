@@ -1,11 +1,11 @@
 {
   "name": "@ikun-ui/modal",
-  "description": "Create modal component for Svelte applications.",
+  "description": "Create modal dialogs in Svelte applications.",
   "repo_url": "",
   "authors": [
     "baiwusanyu"
   ],
-  "downloads": 37,
+  "downloads": 2,
   "dependents": 2,
   "updated": "2025-01-24T03:49:06.756Z",
   "tags": [

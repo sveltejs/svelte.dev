@@ -1,6 +1,6 @@
 {
   "name": "@danielschischkin/publish-svelte",
-  "description": "Publish Svelte components to npm with ease.",
+  "description": "Publish Svelte components to npm easily from command line.",
   "repo_url": "https://github.com/fourhundredfour/publish-svelte",
   "authors": [
     "danielschischkin"

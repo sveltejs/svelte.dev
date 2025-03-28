@@ -1,6 +1,6 @@
 {
   "name": "@jacksonthall22/svelte-chessground",
-  "description": "Create Svelte chessboard component using Chessground UI.",
+  "description": "Integrates Chessground chess UI into Svelte components.",
   "repo_url": "",
   "authors": [
     "jacksonthall22"

@@ -1,6 +1,6 @@
 {
   "name": "@htmlbricks/hb-site-contacts-row",
-  "description": "Create site contacts row web component.",
+  "description": "Create contact row components for Svelte apps.",
   "repo_url": "",
   "authors": [
     "dariocaruso"

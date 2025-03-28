@@ -1,6 +1,6 @@
 {
   "name": "@monaco-auth/sveltekit",
-  "description": "Provides SvelteKit integration for Monaco authentication.",
+  "description": "Integrate Monaco with SvelteKit.",
   "repo_url": "https://github.com/pilcrowOnPaper/monaco",
   "authors": [
     "pilcrowonpaper"

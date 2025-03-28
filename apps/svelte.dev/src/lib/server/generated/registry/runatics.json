@@ -1,6 +1,6 @@
 {
   "name": "runatics",
-  "description": "Simple Google Analytics component for Svelte Runes projects.",
+  "description": "Add Google Analytics to Svelte Runes projects.",
   "repo_url": "https://github.com/shinokada/runatics",
   "authors": [
     "shinichiokada"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2025-03-08T16:58:04.517Z",
   "tags": [
-    "utility"
+    "seo"
   ],
   "svelte5": true,
   "runes": false,

@@ -1,6 +1,6 @@
 {
   "name": "@felte/validator-vest",
-  "description": "Integrates Vest validation with Felte for Svelte forms.",
+  "description": "Integrate Vest validation with Felte forms.",
   "repo_url": "https://github.com/pablo-abc/felte",
   "authors": [
     "pberganza"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2024-10-29T22:05:22.422Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

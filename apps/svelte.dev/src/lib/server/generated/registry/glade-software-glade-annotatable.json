@@ -1,6 +1,6 @@
 {
   "name": "@glade-software/glade-annotatable",
-  "description": "Make DOM elements annotatable within Svelte apps.",
+  "description": "Make DOM elements annotatable in Svelte applications.",
   "repo_url": "https://github.com/glade-software/glade-element",
   "authors": [
     "mattjohnston"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2024-01-06T13:13:39.869Z",
   "tags": [
-    "dom"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

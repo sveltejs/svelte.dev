@@ -1,6 +1,6 @@
 {
   "name": "svelte-headlessui",
-  "description": "Provides HeadlessUI components for Svelte.",
+  "description": "Use HeadlessUI components in Svelte applications.",
   "repo_url": "https://github.com/captaincodeman/svelte-headlessui",
   "authors": [
     "captaincodeman"
@@ -10,9 +10,9 @@
   "dependents": 8,
   "updated": "2025-01-26T18:04:32.872Z",
   "tags": [
-    "component-library"
+    "ui"
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 583
+  "github_stars": 582
 }

@@ -1,6 +1,6 @@
 {
   "name": "svelte-preprocess-delegate-events",
-  "description": "Delegate events by on:* in Svelte apps.",
+  "description": "Delegate events by on:* in Svelte components.",
   "repo_url": "https://github.com/baseballyama/svelte-preprocess-delegate-events",
   "authors": [
     "baseballyama"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2024-05-09T12:16:12.839Z",
   "tags": [
-    "preprocessor"
+    "tooling"
   ],
   "svelte5": false,
   "runes": false,

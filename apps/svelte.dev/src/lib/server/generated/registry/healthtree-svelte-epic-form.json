@@ -1,6 +1,6 @@
 {
   "name": "@healthtree/svelte-epic-form",
-  "description": "Create reactive forms with validation in Svelte.",
+  "description": "Build reactive forms with validation in Svelte.",
   "repo_url": "https://github.com/HealthTree/svelte-epic-form",
   "authors": [
     "sahagun-jorge",
@@ -15,7 +15,7 @@
   "dependents": 0,
   "updated": "2021-06-28T18:06:14.819Z",
   "tags": [
-    "utility"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

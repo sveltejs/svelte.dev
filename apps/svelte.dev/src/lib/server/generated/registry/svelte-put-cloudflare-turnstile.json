@@ -1,6 +1,6 @@
 {
   "name": "@svelte-put/cloudflare-turnstile",
-  "description": "Renders Cloudflare Turnstile into HTML nodes using Svelte action.",
+  "description": "Integrate Cloudflare Turnstile into Svelte apps.",
   "repo_url": "https://github.com/vnphanquang/svelte-put",
   "authors": [
     "vnphanquang"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2025-03-02T01:29:40.018Z",
   "tags": [
-    "utility"
+    "integration"
   ],
   "svelte5": true,
   "runes": false,

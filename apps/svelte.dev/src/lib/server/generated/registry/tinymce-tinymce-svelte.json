@@ -1,6 +1,6 @@
 {
   "name": "@tinymce/tinymce-svelte",
-  "description": "Integrates TinyMCE rich text editor into Svelte applications.",
+  "description": "Integrate TinyMCE editor with Svelte.",
   "repo_url": "https://github.com/tinymce/tinymce-svelte",
   "authors": [
     "ephox",
@@ -11,7 +11,7 @@
   "dependents": 3,
   "updated": "2024-06-05T02:35:24.881Z",
   "tags": [
-    "content"
+    "integration"
   ],
   "svelte5": false,
   "runes": false,

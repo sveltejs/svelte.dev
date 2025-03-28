@@ -1,6 +1,6 @@
 {
   "name": "@codewithshin/svelte-auth",
-  "description": "Implement registration, login, and password reset in SvelteKit apps.",
+  "description": "Offers authentication components for SvelteKit apps.",
   "repo_url": "https://github.com/shinokada/svelte-auth",
   "authors": [
     "shinichiokada"

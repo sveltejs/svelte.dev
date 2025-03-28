@@ -1,6 +1,6 @@
 {
   "name": "zensele-tabs",
-  "description": "Create Svelte tab bar components with various customization options.",
+  "description": "Creates tab bar component for Svelte applications.",
   "repo_url": "https://github.com/countnazgul/zensele-tabs",
   "authors": [
     "stefan.stoichev"

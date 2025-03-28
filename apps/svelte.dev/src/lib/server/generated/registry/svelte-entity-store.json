@@ -1,6 +1,6 @@
 {
   "name": "svelte-entity-store",
-  "description": "Provides a normalized entity store for Svelte projects.",
+  "description": "Offer a normalized entity store for Svelte projects.",
   "repo_url": "https://github.com/tony-sull/svelte-entity-store",
   "authors": [
     "tony-sull"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2021-05-07T16:23:08.715Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

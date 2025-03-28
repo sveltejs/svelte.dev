@@ -1,6 +1,6 @@
 {
   "name": "svelte-data-tabu",
-  "description": "Create simple, lightweight data tables in Svelte.",
+  "description": "Create simple, light-weight data table in Svelte.",
   "repo_url": "https://github.com/kjj6198/svelte-data-table",
   "authors": [
     "kjj6198"

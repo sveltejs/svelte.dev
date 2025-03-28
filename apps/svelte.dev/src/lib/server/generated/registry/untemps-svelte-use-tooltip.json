@@ -1,6 +1,6 @@
 {
   "name": "@untemps/svelte-use-tooltip",
-  "description": "Display tooltip with Svelte action",
+  "description": "Creates tooltips for Svelte elements using actions.",
   "repo_url": "https://github.com/untemps/svelte-use-tooltip",
   "authors": [
     "untemps"

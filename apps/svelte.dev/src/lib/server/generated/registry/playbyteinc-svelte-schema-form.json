@@ -1,6 +1,6 @@
 {
   "name": "@playbyteinc/svelte-schema-form",
-  "description": "Generate forms from JSON schema in Svelte applications.",
+  "description": "Generate forms from JSON Schema in Svelte applications.",
   "repo_url": "https://github.com/playbyteinc/svelte-schema-form",
   "authors": [
     "matthewrobb"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2023-01-06T19:29:58.981Z",
   "tags": [
-    "utility"
+    "tooling"
   ],
   "svelte5": false,
   "runes": false,

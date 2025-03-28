@@ -1,6 +1,6 @@
 {
   "name": "nxext-svelte-16",
-  "description": "Provide Nx plugin for Svelte.",
+  "description": "Generate and manage Svelte applications within Nx workspaces.",
   "repo_url": "https://github.com/nxext/nx-extensions",
   "authors": [
     "kmandrup"

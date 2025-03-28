@@ -1,6 +1,6 @@
 {
   "name": "@leomotors/sv-components",
-  "description": "Offer UI/Components Library for Svelte applications.",
+  "description": "Offers a UI component library for Svelte.",
   "repo_url": "https://github.com/Leomotors/sv-components",
   "authors": [
     "leomotors"

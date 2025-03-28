@@ -1,6 +1,6 @@
 {
   "name": "et-date-svelte",
-  "description": "Provides Ethiopian calendar and datepicker components for Svelte.",
+  "description": "Provide Ethiopian calendar and datepicker components for Svelte.",
   "repo_url": "https://github.com/abdetaterefe/et-date-svelte",
   "authors": [
     "abdetaterefe"

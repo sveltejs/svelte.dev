@@ -1,6 +1,6 @@
 {
   "name": "@limeline/svelecte",
-  "description": "Create flexible autocomplete/select components in Svelte.",
+  "description": "Build flexible autocomplete/select components for Svelte applications.",
   "repo_url": "https://github.com/mskocik/svelecte",
   "authors": [
     "limeline"

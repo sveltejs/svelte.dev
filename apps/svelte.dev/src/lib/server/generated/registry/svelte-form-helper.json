@@ -1,6 +1,6 @@
 {
   "name": "svelte-form-helper",
-  "description": "Simplify form validation in Svelte applications.",
+  "description": "Provides lightweight helper for Svelte form validation.",
   "repo_url": "https://github.com/captaincodeman/svelte-form-helper",
   "authors": [
     "captaincodeman"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2024-04-27T18:51:26.876Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": true,
   "runes": false,

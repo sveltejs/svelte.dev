@@ -1,6 +1,6 @@
 {
   "name": "svelte-vertical-timeline",
-  "description": "Create vertical timelines with Svelte components.",
+  "description": "Create vertical timeline components for Svelte.",
   "repo_url": "https://github.com/K-Sato1995/svelte-vertical-timeline",
   "authors": [
     "sato0130"

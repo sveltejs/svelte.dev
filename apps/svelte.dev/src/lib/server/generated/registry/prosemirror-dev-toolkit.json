@@ -1,6 +1,6 @@
 {
   "name": "prosemirror-dev-toolkit",
-  "description": "Injects dev tools for ProseMirror editors.",
+  "description": "Inject dev tools for ProseMirror editors.",
   "repo_url": "https://github.com/TeemuKoivisto/prosemirror-dev-toolkit",
   "authors": [
     "tekk"

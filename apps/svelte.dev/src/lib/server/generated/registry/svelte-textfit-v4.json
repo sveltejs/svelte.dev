@@ -1,6 +1,6 @@
 {
   "name": "svelte-textfit-v4",
-  "description": "Fit text into elements using Svelte action.",
+  "description": "Fit text to elements in Svelte components.",
   "repo_url": "",
   "authors": [
     "jokroese"

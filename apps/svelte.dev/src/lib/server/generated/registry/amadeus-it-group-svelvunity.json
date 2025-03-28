@@ -1,6 +1,6 @@
 {
   "name": "@amadeus-it-group/svelvunity",
-  "description": "Provide reusable Svelte components and utilities.",
+  "description": "Provides reusable Svelte components and utilities.",
   "repo_url": "https://github.com/AmadeusITGroup/Svelvunity",
   "authors": [
     "mcavdar"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2025-03-05T17:47:34.712Z",
   "tags": [
-    "component-library"
+    "design-system"
   ],
   "svelte5": false,
   "runes": false,

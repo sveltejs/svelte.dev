@@ -1,6 +1,6 @@
 {
   "name": "@svelteness/kit-docs",
-  "description": "Integrate documentation for SvelteKit, similar to VitePress.",
+  "description": "Integrate documentation for SvelteKit.",
   "repo_url": "https://github.com/svelteness/kit-docs",
   "authors": [
     "mihar-22"
@@ -9,8 +9,8 @@
   "dependents": 0,
   "updated": "2023-09-16T01:27:25.411Z",
   "tags": [
-    "content",
-    "tooling"
+    "tooling",
+    "content"
   ],
   "svelte5": false,
   "runes": false,

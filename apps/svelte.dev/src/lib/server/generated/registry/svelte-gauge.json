@@ -1,6 +1,6 @@
 {
   "name": "svelte-gauge",
-  "description": "Create customizable gauge component for visualizing numerical data.",
+  "description": "Create customizable gauge components in Svelte.",
   "repo_url": "https://github.com/vnau/svelte-gauge",
   "authors": [
     "vneu"

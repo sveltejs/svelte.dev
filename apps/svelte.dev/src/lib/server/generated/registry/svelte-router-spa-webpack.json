@@ -1,6 +1,6 @@
 {
   "name": "svelte-router-spa-webpack",
-  "description": "Add routing to Svelte apps, organize routes.",
+  "description": "Adds routing to Svelte apps for Single Page Applications.",
   "repo_url": "https://github.com/jorgegorka/svelte-router",
   "authors": [
     "httpsomkar"

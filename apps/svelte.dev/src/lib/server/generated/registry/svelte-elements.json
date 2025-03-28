@@ -1,6 +1,6 @@
 {
   "name": "svelte-elements",
-  "description": "Wrap native HTML elements for use within Svelte components.",
+  "description": "Wraps HTML elements for use within Svelte components.",
   "repo_url": "https://github.com/timhall/svelte-elements",
   "authors": [
     "timhall"
@@ -10,7 +10,7 @@
   "dependents": 1,
   "updated": "2019-05-14T15:25:13.375Z",
   "tags": [
-    "utility"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

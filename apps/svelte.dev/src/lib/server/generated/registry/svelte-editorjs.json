@@ -1,6 +1,6 @@
 {
   "name": "svelte-editorjs",
-  "description": "Provide EditorJS wrapper for Svelte applications.",
+  "description": "Wrap EditorJS for use in Svelte applications.",
   "repo_url": "https://github.com/pablo-abc/svelte-editorjs",
   "authors": [
     "pberganza"

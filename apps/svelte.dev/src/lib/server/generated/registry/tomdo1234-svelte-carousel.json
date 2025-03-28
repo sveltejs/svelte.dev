@@ -1,6 +1,6 @@
 {
   "name": "@tomdo1234/svelte-carousel",
-  "description": "Create carousel components for Svelte applications.",
+  "description": "Create carousel component for Svelte with responsiveness and touch support.",
   "repo_url": "https://github.com/TomDo1234/svelte-carousel",
   "authors": [
     "tomdo1234"

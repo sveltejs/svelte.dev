@@ -1,6 +1,6 @@
 {
   "name": "@sveadmin/common",
-  "description": "Provides helper components for displaying admin pages in Svelte.",
+  "description": "Provide helper components for dynamic Svelte admin pages.",
   "repo_url": "https://github.com/sveadmin/common",
   "authors": [
     "mkufferstein"
@@ -10,7 +10,7 @@
   "dependents": 2,
   "updated": "2023-08-06T16:22:17.680Z",
   "tags": [
-    "utility"
+    "tooling"
   ],
   "svelte5": false,
   "runes": false,

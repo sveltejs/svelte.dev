@@ -1,6 +1,6 @@
 {
   "name": "@apsc/scroll-child-action",
-  "description": "Scroll child element into parent viewport in Svelte.",
+  "description": "Scroll child elements into parent viewport.",
   "repo_url": "https://github.com/andrey-pavlenko/svelte-components",
   "authors": [
     "andrey-pavlenko"
@@ -10,7 +10,8 @@
   "dependents": 0,
   "updated": "2023-02-01T20:18:29.482Z",
   "tags": [
-    "utility"
+    "ui",
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

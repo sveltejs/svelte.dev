@@ -1,11 +1,11 @@
 {
   "name": "@ikun-ui/input",
-  "description": "Create input elements for Svelte applications.",
+  "description": "Build input components for Svelte applications.",
   "repo_url": "",
   "authors": [
     "baiwusanyu"
   ],
-  "downloads": 36,
+  "downloads": 3,
   "dependents": 5,
   "updated": "2025-01-24T03:49:00.997Z",
   "tags": [

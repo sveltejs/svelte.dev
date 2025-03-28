@@ -1,6 +1,6 @@
 {
   "name": "svelte-star-ratings",
-  "description": "Select and display star ratings in Svelte applications.",
+  "description": "Display and select star ratings in Svelte applications.",
   "repo_url": "https://github.com/impauloalves/svelte-star-ratings",
   "authors": [
     "impauloalves"

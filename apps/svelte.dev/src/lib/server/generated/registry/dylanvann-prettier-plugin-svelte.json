@@ -1,0 +1,18 @@
+{
+  "name": "@dylanvann/prettier-plugin-svelte",
+  "description": "Format Svelte code using Prettier.",
+  "repo_url": "https://github.com/sveltejs/prettier-plugin-svelte",
+  "authors": [
+    "dylanvann"
+  ],
+  "homepage": "https://github.com/sveltejs/prettier-plugin-svelte#readme",
+  "downloads": 11,
+  "dependents": 0,
+  "updated": "2020-09-08T19:43:52.806Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 763
+}

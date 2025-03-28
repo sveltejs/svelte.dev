@@ -1,6 +1,6 @@
 {
   "name": "@beyonk/svelte-facebook-pixel",
-  "description": "Integrate Facebook Pixel tracking into Svelte applications.",
+  "description": "Integrate Facebook pixel tracking into Svelte applications.",
   "repo_url": "",
   "authors": [
     "antony",

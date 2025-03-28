@@ -1,6 +1,6 @@
 {
   "name": "dug-svelte-router",
-  "description": "Implements simple client-side hash-based routing for Svelte apps.",
+  "description": "Implement simple hash-based routing for Svelte apps.",
   "repo_url": "",
   "authors": [
     "pant_angst"

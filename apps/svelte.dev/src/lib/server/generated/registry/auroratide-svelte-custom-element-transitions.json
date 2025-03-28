@@ -1,6 +1,6 @@
 {
   "name": "@auroratide/svelte-custom-element-transitions",
-  "description": "Make Svelte transitions work on custom elements.",
+  "description": "Enable Svelte transitions in custom elements.",
   "repo_url": "https://github.com/Auroratide/svelte-custom-element-transitions",
   "authors": [
     "auroratide"
@@ -10,7 +10,7 @@
   "dependents": 2,
   "updated": "2021-04-25T02:14:51.463Z",
   "tags": [
-    "utility"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

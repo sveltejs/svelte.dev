@@ -1,0 +1,19 @@
+{
+  "name": "@nzz/et-video-scroller",
+  "description": "Create scroll-based video playback components for Svelte.",
+  "repo_url": "https://github.com/nzzdev/ed-tech-scrolly-video",
+  "authors": [
+    "nzzeditorialtech",
+    "nzzitonline"
+  ],
+  "homepage": "https://github.com/nzzdev/ed-tech-scrolly-video#readme",
+  "downloads": 3,
+  "dependents": 0,
+  "updated": "2024-08-05T11:54:09.469Z",
+  "tags": [
+    "media"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

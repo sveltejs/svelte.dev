@@ -1,6 +1,6 @@
 {
   "name": "svelte-skeleton",
-  "description": "Implements SVG skeletons in Svelte 3.",
+  "description": "Generate SVG skeletons for loading images and interfaces.",
   "repo_url": "https://github.com/denisstasyev/svelte-skeleton",
   "authors": [
     "denisstasyev"

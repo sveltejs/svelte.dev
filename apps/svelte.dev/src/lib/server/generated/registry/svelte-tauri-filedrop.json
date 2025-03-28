@@ -1,6 +1,6 @@
 {
   "name": "svelte-tauri-filedrop",
-  "description": "Handle file drops in Tauri Svelte applications.",
+  "description": "Handle file drops in Svelte Tauri applications.",
   "repo_url": "https://github.com/probablykasper/svelte-tauri-filedrop",
   "authors": [
     "probablykasper"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2024-10-23T08:26:58.326Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": true,
   "runes": false,

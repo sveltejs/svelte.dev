@@ -1,6 +1,6 @@
 {
   "name": "@ayalab/svelte-context-icons",
-  "description": "Provide lightweight, configurable icons for Svelte applications.",
+  "description": "Integrate lightweight and configurable icons into Svelte apps.",
   "repo_url": "",
   "authors": [
     "ikari132"

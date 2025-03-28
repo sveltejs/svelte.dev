@@ -1,6 +1,6 @@
 {
   "name": "svelte-router5",
-  "description": "Provide router5 helpers for SvelteJS applications.",
+  "description": "Provide router5 helpers for Svelte applications.",
   "repo_url": "https://github.com/shanewwarren/svelte-router5",
   "authors": [
     "shanewwarren"

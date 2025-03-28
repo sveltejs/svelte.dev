@@ -1,6 +1,6 @@
 {
   "name": "svelte-grouter",
-  "description": "Offers a sensible, minimal routing solution for Svelte projects.",
+  "description": "Client-side routing engine for Svelte applications.",
   "repo_url": "https://github.com/gbuerk/svelte-grouter",
   "authors": [
     "gbuerk"

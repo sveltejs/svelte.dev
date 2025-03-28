@@ -1,6 +1,6 @@
 {
   "name": "svemantic",
-  "description": "Provides Fomantic-UI components for Svelte.",
+  "description": "Provide Fomantic-UI components for Svelte.",
   "repo_url": "https://github.com/eddow/svemantic",
   "authors": [
     "eeddow"

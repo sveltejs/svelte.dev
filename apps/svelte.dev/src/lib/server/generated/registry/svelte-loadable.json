@@ -1,6 +1,6 @@
 {
   "name": "svelte-loadable",
-  "description": "Dynamically load Svelte components.",
+  "description": "Dynamically load Svelte components with loading states.",
   "repo_url": "https://github.com/kaisermann/svelte-loadable",
   "authors": [
     "kaisermann"
@@ -10,7 +10,7 @@
   "dependents": 5,
   "updated": "2022-03-05T08:21:50.292Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

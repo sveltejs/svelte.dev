@@ -1,6 +1,6 @@
 {
   "name": "@grasshopper42/svelte-grid",
-  "description": "Provides grid components for Svelte.",
+  "description": "Arranges items in various grid layouts for Svelte.",
   "repo_url": "https://github.com/grasshopper42/egjs-grid",
   "authors": [
     "grasshopper42"

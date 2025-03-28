@@ -1,6 +1,6 @@
 {
   "name": "@jill64/svelte-dark-theme",
-  "description": "Dark theme manager for SvelteKit.",
+  "description": "Manage dark theme in SvelteKit applications.",
   "repo_url": "https://github.com/jill64/svelte-dark-theme",
   "authors": [
     "jill64"
@@ -10,7 +10,7 @@
   "dependents": 2,
   "updated": "2025-03-15T03:10:26.142Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": true,
   "runes": false,

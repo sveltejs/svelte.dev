@@ -1,6 +1,6 @@
 {
   "name": "@joeinnes/svelte-image",
-  "description": "Serves responsive images using image CDNs in Svelte.",
+  "description": "Serve responsive images using image CDNs in Svelte.",
   "repo_url": "",
   "authors": [
     "joeinnes"

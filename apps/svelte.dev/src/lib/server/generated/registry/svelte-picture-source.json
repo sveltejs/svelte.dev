@@ -1,6 +1,6 @@
 {
   "name": "svelte-picture-source",
-  "description": "Preprocess Svelte images, optimizing and resizing them.",
+  "description": "Optimize images with picture and source tags in Svelte.",
   "repo_url": "https://github.com/ppvg/svelte-picture-source",
   "authors": [
     "ppvg"
@@ -10,7 +10,6 @@
   "dependents": 0,
   "updated": "2020-09-14T16:41:56.077Z",
   "tags": [
-    "preprocessor",
     "media"
   ],
   "svelte5": false,

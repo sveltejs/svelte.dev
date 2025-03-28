@@ -1,6 +1,6 @@
 {
   "name": "svelte-inplace-carousel",
-  "description": "Create in-place carousel components for Svelte.",
+  "description": "Implement in-place carousel component for Svelte.",
   "repo_url": "https://github.com/Carlos-err406/inplace-carousel",
   "authors": [
     "carlos.vilaseca"

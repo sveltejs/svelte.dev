@@ -1,6 +1,6 @@
 {
   "name": "svelte-preprocess-highlight",
-  "description": "Syntax highlight Svelte code using highlight.js.",
+  "description": "Syntax highlight code blocks within Svelte components.",
   "repo_url": "https://github.com/metonym/svelte-preprocess-highlight",
   "authors": [
     "metonym"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2022-06-26T18:16:41.603Z",
   "tags": [
-    "preprocessor"
+    "tooling"
   ],
   "svelte5": false,
   "runes": false,

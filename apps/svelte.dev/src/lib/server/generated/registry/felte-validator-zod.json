@@ -1,6 +1,6 @@
 {
   "name": "@felte/validator-zod",
-  "description": "Validate Felte forms using Zod schemas in Svelte apps.",
+  "description": "Integrates Zod validation with Felte forms.",
   "repo_url": "https://github.com/pablo-abc/felte",
   "authors": [
     "pberganza"
@@ -10,7 +10,7 @@
   "dependents": 6,
   "updated": "2024-10-29T22:05:33.472Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

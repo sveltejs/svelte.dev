@@ -1,6 +1,6 @@
 {
   "name": "svelte-scroll-observe",
-  "description": "Observe scroll position, trigger actions based on element visibility.",
+  "description": "Observe scroll events and manage focus in Svelte applications.",
   "repo_url": "",
   "authors": [
     "7korobi"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2022-11-05T17:12:12.738Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false

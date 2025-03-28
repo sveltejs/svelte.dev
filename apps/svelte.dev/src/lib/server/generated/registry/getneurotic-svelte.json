@@ -1,6 +1,6 @@
 {
   "name": "@getneurotic/svelte",
-  "description": "Provide Svelte directives and helpers for common tasks.",
+  "description": "Offers Svelte directives and helpers for common application tasks.",
   "repo_url": "https://github.com/getneurotic/svelte",
   "authors": [
     "geoffrey.stekelenburg"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2023-09-29T13:06:15.562Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false

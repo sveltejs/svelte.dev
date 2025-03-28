@@ -1,6 +1,6 @@
 {
   "name": "@matrx/svelte-realtime-server",
-  "description": "Server-side middleware for building realtime Svelte apps.",
+  "description": "Create server-side middleware for realtime Svelte apps.",
   "repo_url": "https://github.com/matrx-transformation/matrx",
   "authors": [
     "lmaccherone",

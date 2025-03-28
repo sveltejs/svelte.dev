@@ -1,6 +1,6 @@
 {
   "name": "@kfont/svelte-adapter-bun",
-  "description": "Generate standalone Bun.js server for SvelteKit apps.",
+  "description": "Generates standalone Bun.js server for SvelteKit apps.",
   "repo_url": "https://github.com/KyleFontenot/svelte-adapter-bun",
   "authors": [
     "kfontenot"

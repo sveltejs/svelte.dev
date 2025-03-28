@@ -1,6 +1,6 @@
 {
   "name": "svelte-chroma-picker",
-  "description": "Provides color picker for Svelte using chroma-js.",
+  "description": "Integrate color picker component for Svelte apps.",
   "repo_url": "https://github.com/tricinel/svelte-chroma-picker",
   "authors": [
     "tricinel"

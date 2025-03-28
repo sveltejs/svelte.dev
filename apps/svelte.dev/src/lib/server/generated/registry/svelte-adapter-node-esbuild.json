@@ -1,6 +1,6 @@
 {
   "name": "svelte-adapter-node-esbuild",
-  "description": "Adapts SvelteKit applications for Node.js with ESBuild.",
+  "description": "Use SvelteKit adapter with Node.js and ESBuild.",
   "repo_url": "https://github.com/JadedBlueEyes/svelte-adapter-node-esbuild",
   "authors": [
     "jadedblueeyes"

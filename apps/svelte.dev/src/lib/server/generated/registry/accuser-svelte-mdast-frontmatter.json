@@ -1,6 +1,6 @@
 {
   "name": "@accuser/svelte-mdast-frontmatter",
-  "description": "Adds frontmatter support to svelte-mdast for Markdown processing.",
+  "description": "Add frontmatter support to svelte-mdast for Markdown processing.",
   "repo_url": "https://github.com/accuser/svelte-mdast-frontmatter",
   "authors": [
     "accuser"

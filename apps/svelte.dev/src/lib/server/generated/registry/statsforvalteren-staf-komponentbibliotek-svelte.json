@@ -1,6 +1,6 @@
 {
   "name": "@statsforvalteren/staf-komponentbibliotek-svelte",
-  "description": "Provide component library for Svelte with custom styling.",
+  "description": "Provide a component library for Svelte applications.",
   "repo_url": "https://github.com/fmfaDigitalisering/staf-komponentbibliotek-svelte",
   "authors": [
     "pekaaw",
@@ -11,7 +11,7 @@
   "dependents": 0,
   "updated": "2022-02-01T08:54:31.521Z",
   "tags": [
-    "component-library"
+    "design-system"
   ],
   "svelte5": false,
   "runes": false

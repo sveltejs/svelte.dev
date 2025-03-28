@@ -1,6 +1,6 @@
 {
   "name": "@htmlbricks/hb-dialog-loader",
-  "description": "Provides Svelte-Bootstrap Downloader WebComponent.",
+  "description": "Create a Svelte-Bootstrap dialog-loader web component.",
   "repo_url": "",
   "authors": [
     "dariocaruso"

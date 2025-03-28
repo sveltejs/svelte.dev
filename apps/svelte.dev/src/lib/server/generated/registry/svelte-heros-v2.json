@@ -1,6 +1,6 @@
 {
   "name": "svelte-heros-v2",
-  "description": "Provides Hero icon v2 components for Svelte.",
+  "description": "Use Heroicons v2 in Svelte applications.",
   "repo_url": "https://github.com/shinokada/svelte-heros-v2",
   "authors": [
     "shinichiokada"

@@ -1,6 +1,6 @@
 {
   "name": "svelte-localstorage-writable",
-  "description": "Create writable Svelte stores that persist to local storage.",
+  "description": "Create local storage writable stores for Svelte.",
   "repo_url": "https://github.com/nathanfaucett/svelte-localstorage-writable",
   "authors": [
     "nathanfaucett"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2023-07-12T10:37:12.357Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": true,
   "runes": false,

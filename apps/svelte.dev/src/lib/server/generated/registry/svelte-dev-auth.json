@@ -10,8 +10,7 @@
   "dependents": 0,
   "updated": "2023-12-31T05:27:38.256Z",
   "tags": [
-    "auth",
-    "utility"
+    "auth"
   ],
   "svelte5": true,
   "runes": false,

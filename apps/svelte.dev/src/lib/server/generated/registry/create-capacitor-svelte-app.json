@@ -1,6 +1,6 @@
 {
   "name": "create-capacitor-svelte-app",
-  "description": "Set up new Capacitor app in SvelteKit project.",
+  "description": "Generate new Capacitor apps using SvelteKit.",
   "repo_url": "https://github.com/Tommertom/svelte-ionic-npm",
   "authors": [
     "tommertom"

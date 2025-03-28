@@ -1,6 +1,6 @@
 {
   "name": "@responsive-ui/docker",
-  "description": "Create docker components for Svelte applications.",
+  "description": "Provides a docker component for responsive-ui in Svelte.",
   "repo_url": "https://github.com/wetix/responsive-ui",
   "authors": [
     "rexlow",

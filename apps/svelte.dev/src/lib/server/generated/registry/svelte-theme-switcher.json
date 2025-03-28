@@ -1,6 +1,6 @@
 {
   "name": "svelte-theme-switcher",
-  "description": "Implement simple Svelte theme switcher for light/dark modes.",
+  "description": "Switch Svelte themes, light or dark, with a simple component.",
   "repo_url": "",
   "authors": [
     "dev-warner"

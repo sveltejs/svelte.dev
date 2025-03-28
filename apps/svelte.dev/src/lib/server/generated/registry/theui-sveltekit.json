@@ -1,6 +1,6 @@
 {
   "name": "theui-sveltekit",
-  "description": "Provides accessible, customizable UI components for SvelteKit.",
+  "description": "Provides accessible SvelteKit component library with TailwindCSS.",
   "repo_url": "https://github.com/mbparvezme/theui-svelte",
   "authors": [
     "mbparvez"
@@ -10,8 +10,7 @@
   "dependents": 1,
   "updated": "2024-05-23T20:10:39.463Z",
   "tags": [
-    "component-library",
-    "ui"
+    "design-system"
   ],
   "svelte5": false,
   "runes": false,

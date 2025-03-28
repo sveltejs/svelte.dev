@@ -1,6 +1,6 @@
 {
   "name": "svelte-scrollto-element",
-  "description": "Animate scrolling to elements in Svelte applications.",
+  "description": "Animate scrolling to elements with Svelte action.",
   "repo_url": "https://github.com/bartholomej/svelte-scrollto-element",
   "authors": [
     "bartholomej"
@@ -10,8 +10,7 @@
   "dependents": 1,
   "updated": "2025-01-05T18:09:19.188Z",
   "tags": [
-    "utility",
-    "dom"
+    "miscellaneous"
   ],
   "svelte5": true,
   "runes": false,

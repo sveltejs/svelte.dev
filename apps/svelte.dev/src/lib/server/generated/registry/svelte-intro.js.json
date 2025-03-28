@@ -1,6 +1,6 @@
 {
   "name": "svelte-intro.js",
-  "description": "Integrate introjs library for Svelte.",
+  "description": "Integrate intro.js tour library into Svelte applications.",
   "repo_url": "https://github.com/etuncay/svelte-intro.js",
   "authors": [
     "etuncay"

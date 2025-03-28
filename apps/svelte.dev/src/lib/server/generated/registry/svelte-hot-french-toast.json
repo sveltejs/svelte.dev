@@ -1,6 +1,6 @@
 {
   "name": "svelte-hot-french-toast",
-  "description": "Display buttery smooth toast notifications for Svelte 5.",
+  "description": "Create buttery smooth toast notifications for Svelte 5.",
   "repo_url": "https://github.com/babakfp/svelte-hot-french-toast",
   "authors": [
     "babakfp"

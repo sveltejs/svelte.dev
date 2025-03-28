@@ -1,6 +1,6 @@
 {
   "name": "svelte-subcomponent-preprocessor",
-  "description": "Allows multiple Svelte components within single file.",
+  "description": "Preprocesses Svelte files, enabling multiple components in one file.",
   "repo_url": "https://github.com/srmullen/svelte-subcomponent-preprocessor",
   "authors": [
     "srmullen"
@@ -10,7 +10,6 @@
   "dependents": 0,
   "updated": "2021-11-02T21:07:29.485Z",
   "tags": [
-    "preprocessor",
     "tooling"
   ],
   "svelte5": false,

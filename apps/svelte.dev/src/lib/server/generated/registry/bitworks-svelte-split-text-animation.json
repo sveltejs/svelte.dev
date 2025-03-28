@@ -1,6 +1,6 @@
 {
   "name": "@bitworks/svelte-split-text-animation",
-  "description": "Animate text split into characters, words, or lines in Svelte.",
+  "description": "Animate text split into characters, words, or lines.",
   "repo_url": "https://github.com/pavlanovotna/svelte-split-type-animation",
   "authors": [
     "pavlanovotna"

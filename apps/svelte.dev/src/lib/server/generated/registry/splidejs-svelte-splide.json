@@ -1,6 +1,6 @@
 {
   "name": "@splidejs/svelte-splide",
-  "description": "Create Svelte components for Splide slider/carousel.",
+  "description": "Create carousel components using Splide for Svelte.",
   "repo_url": "https://github.com/Splidejs/svelte-splide",
   "authors": [
     "splidejs"

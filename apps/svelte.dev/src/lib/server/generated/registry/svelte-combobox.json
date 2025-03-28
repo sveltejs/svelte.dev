@@ -1,6 +1,6 @@
 {
   "name": "svelte-combobox",
-  "description": "Build combobox components for Svelte and SvelteKit projects.",
+  "description": "Create simple combobox components for Svelte and SvelteKit.",
   "repo_url": "https://github.com/Sourabhpatel1/svelte-combobox",
   "authors": [
     "sourabh_patel_1"

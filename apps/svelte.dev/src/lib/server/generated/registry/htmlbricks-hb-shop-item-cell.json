@@ -1,6 +1,6 @@
 {
   "name": "@htmlbricks/hb-shop-item-cell",
-  "description": "Create shop item cell web components for Svelte applications.",
+  "description": "Create shop item cells with Svelte web components.",
   "repo_url": "",
   "authors": [
     "dariocaruso"

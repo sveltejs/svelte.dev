@@ -1,6 +1,6 @@
 {
   "name": "alphabet-list-svelte",
-  "description": "Create alphabet navigation for filtering Svelte list items.",
+  "description": "Create alphabet navigation for filtering lists in Svelte.",
   "repo_url": "https://github.com/the-non-expert/Alphabet-List-Svelte",
   "authors": [
     "ayushjhunjhunwala"

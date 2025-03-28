@@ -1,17 +1,17 @@
 {
   "name": "svelte-i18next",
-  "description": "Svelte wrapper for i18next.",
+  "description": "Svelte wrapper for i18next, enabling internationalization.",
   "repo_url": "https://github.com/NishuGoel/svelte-i18next",
   "authors": [
     "anttiviljami",
     "nishugoel"
   ],
   "homepage": "https://github.com/NishuGoel/svelte-i18next",
-  "downloads": 7347,
+  "downloads": 7699,
   "dependents": 1,
   "updated": "2023-10-19T07:46:00.728Z",
   "tags": [
-    "utility"
+    "integration"
   ],
   "svelte5": true,
   "runes": false,

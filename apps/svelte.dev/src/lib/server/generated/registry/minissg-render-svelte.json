@@ -1,6 +1,6 @@
 {
   "name": "@minissg/render-svelte",
-  "description": "Render Svelte components within Minissg static site generator.",
+  "description": "Integrates Svelte with Minissg for static site generation.",
   "repo_url": "https://github.com/uenoB/minissg",
   "authors": [
     "uenob"

@@ -1,6 +1,6 @@
 {
   "name": "hamburger-menu-svelte",
-  "description": "Provides intuitive, customizable hamburger menu for Svelte.",
+  "description": "Create intuitive, customizable hamburger menus for Svelte.",
   "repo_url": "https://github.com/itsuki-guitar/hamburger-menu-svelte",
   "authors": [
     "itsuki_guitar"

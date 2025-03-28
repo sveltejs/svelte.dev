@@ -1,6 +1,6 @@
 {
   "name": "@beyonk/svelte-intercom",
-  "description": "Integrate Intercom with Svelte applications.",
+  "description": "Integrate Intercom chat with Svelte applications.",
   "repo_url": "https://github.com/beyonk-adventures/svelte-intercom",
   "authors": [
     "antony",

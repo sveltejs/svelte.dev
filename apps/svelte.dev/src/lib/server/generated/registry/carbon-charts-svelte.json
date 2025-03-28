@@ -1,6 +1,6 @@
 {
   "name": "@carbon/charts-svelte",
-  "description": "Creates Carbon Design System charts in Svelte.",
+  "description": "Create Carbon Design System charts in Svelte.",
   "repo_url": "https://github.com/carbon-design-system/carbon-charts",
   "authors": [
     "carbon-bot",

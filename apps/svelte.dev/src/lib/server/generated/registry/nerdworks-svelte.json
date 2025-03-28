@@ -1,6 +1,6 @@
 {
   "name": "@nerdworks/svelte",
-  "description": "Svelte adapter for Inertia.js, build modern single-page apps.",
+  "description": "Integrate Inertia.js with Svelte for modern web applications.",
   "repo_url": "https://github.com/inertiajs/inertia",
   "authors": [
     "nobbo"
@@ -14,5 +14,5 @@
   ],
   "svelte5": false,
   "runes": false,
-  "github_stars": 6984
+  "github_stars": 6986
 }

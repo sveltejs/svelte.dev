@@ -1,6 +1,6 @@
 {
   "name": "svelte-tailwind-ripple",
-  "description": "Apply Material Design ripple effects with Tailwind CSS 4.",
+  "description": "Add Material Design ripple effects to Tailwind CSS styled elements.",
   "repo_url": "",
   "authors": [
     "codemundee"

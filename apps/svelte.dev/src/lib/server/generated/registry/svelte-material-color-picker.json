@@ -1,6 +1,6 @@
 {
   "name": "svelte-material-color-picker",
-  "description": "Create color pickers with Material Design in Svelte.",
+  "description": "Provides a material design color picker component for Svelte.",
   "repo_url": "https://github.com/V-Py/svelte-material-color-picker",
   "authors": [
     "v-py"

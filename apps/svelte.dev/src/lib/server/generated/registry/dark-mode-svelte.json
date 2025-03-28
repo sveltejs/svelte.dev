@@ -1,6 +1,6 @@
 {
   "name": "dark-mode-svelte",
-  "description": "Manage dark mode preferences for Svelte 5 apps.",
+  "description": "Manage dark mode in Svelte 5, persist user preferences.",
   "repo_url": "https://github.com/fieldcap/dark-mode-svelte",
   "authors": [
     "rogerfar"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2025-03-26T21:44:04.223Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": true,
   "runes": false,

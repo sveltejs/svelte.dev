@@ -1,6 +1,6 @@
 {
   "name": "@nativescript-community/svelte-native",
-  "description": "Integrate Svelte with NativeScript for mobile app development.",
+  "description": "Integrate Svelte with NativeScript for cross-platform mobile apps.",
   "repo_url": "https://github.com/nativescript-community/svelte-native",
   "authors": [
     "classicoldsong",
@@ -33,5 +33,5 @@
   ],
   "svelte5": false,
   "runes": false,
-  "github_stars": 19
+  "github_stars": 20
 }

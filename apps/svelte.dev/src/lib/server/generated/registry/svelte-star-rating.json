@@ -1,6 +1,6 @@
 {
   "name": "svelte-star-rating",
-  "description": "Display star ratings in Svelte apps.",
+  "description": "Show star ratings with a simple Svelte component.",
   "repo_url": "https://github.com/rubenvar/svelte-star-rating",
   "authors": [
     "rubenvara"

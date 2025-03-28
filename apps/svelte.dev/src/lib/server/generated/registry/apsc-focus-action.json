@@ -1,6 +1,6 @@
 {
   "name": "@apsc/focus-action",
-  "description": "Create focusin and focusout actions for Svelte directives.",
+  "description": "Control focusin and focusout events for Svelte directives.",
   "repo_url": "https://github.com/andrey-pavlenko/svelte-components",
   "authors": [
     "andrey-pavlenko"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2023-02-01T20:18:04.588Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

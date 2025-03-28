@@ -1,0 +1,17 @@
+{
+  "name": "svelte-carbonbadge",
+  "description": "Display Website Carbon Badge in Svelte apps.",
+  "repo_url": "https://gitlab.com/davidhund/svelte-carbonbadge",
+  "authors": [
+    "davidhund"
+  ],
+  "homepage": "https://gitlab.com/davidhund/svelte-carbonbadge",
+  "downloads": 13,
+  "dependents": 0,
+  "updated": "2022-02-08T18:28:32.548Z",
+  "tags": [
+    "seo"
+  ],
+  "svelte5": false,
+  "runes": false
+}

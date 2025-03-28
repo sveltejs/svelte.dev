@@ -1,6 +1,6 @@
 {
   "name": "s-comp-core",
-  "description": "Provides various Svelte UI components.",
+  "description": "Provide Svelte UI components including Book, Calendar, and more.",
   "repo_url": "https://github.com/ghjang/s-comp-core",
   "authors": [
     "ghjang"
@@ -10,7 +10,6 @@
   "dependents": 0,
   "updated": "2024-09-24T06:56:40.580Z",
   "tags": [
-    "component-library",
     "ui"
   ],
   "svelte5": false,

@@ -1,6 +1,6 @@
 {
   "name": "@keenmate/svelte-spa-router",
-  "description": "Router for SPAs using Svelte 4.",
+  "description": "Implement SPA routing for Svelte 4 applications.",
   "repo_url": "https://github.com/keenmate/svelte-spa-router",
   "authors": [
     "benjaminhorne",

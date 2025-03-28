@@ -1,16 +1,16 @@
 {
   "name": "svelte-simple-form",
-  "description": "Handle forms with Zod validation in Svelte 5 apps.",
+  "description": "Create forms with Zod validation in Svelte 5 apps.",
   "repo_url": "https://github.com/harryhdt/svelte-simple-form",
   "authors": [
     "harryhdt"
   ],
   "homepage": "https://svelte-simple-form.harryhdt.dev",
-  "downloads": 4,
+  "downloads": 32,
   "dependents": 0,
   "updated": "2024-12-19T16:08:41.041Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": true,
   "runes": false,

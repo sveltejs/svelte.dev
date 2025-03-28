@@ -1,6 +1,6 @@
 {
   "name": "@jwrunge/modal",
-  "description": "Create configurable, stylable modal dialogs in Svelte apps.",
+  "description": "Create configurable modal system with user inputs in Svelte.",
   "repo_url": "https://github.com/jwrunge/svelte-modal",
   "authors": [
     "jwrunge"

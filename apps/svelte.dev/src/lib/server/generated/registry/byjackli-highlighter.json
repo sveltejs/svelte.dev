@@ -1,6 +1,6 @@
 {
   "name": "@byjackli/highlighter",
-  "description": "Highlight code syntax, including Svelte, for web documentation.",
+  "description": "Highlight code syntax, including Svelte, with Prism.js.",
   "repo_url": "https://github.com/byjackli/highlighter",
   "authors": [
     "byjackli"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2022-04-23T16:25:20.132Z",
   "tags": [
-    "utility"
+    "tooling"
   ],
   "svelte5": false,
   "runes": false,

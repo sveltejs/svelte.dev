@@ -1,12 +1,12 @@
 {
   "name": "svelte-loading-spinners",
-  "description": "Display loading spinners using Svelte.",
+  "description": "Provide loading spinners for Svelte applications.",
   "repo_url": "https://github.com/schum123/svelte-loading-spinners",
   "authors": [
     "schum123"
   ],
   "homepage": "https://github.com/schum123/svelte-loading-spinners#readme",
-  "downloads": 16994,
+  "downloads": 16025,
   "dependents": 11,
   "updated": "2024-04-03T08:12:05.776Z",
   "tags": [

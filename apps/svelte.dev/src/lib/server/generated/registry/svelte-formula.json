@@ -1,6 +1,6 @@
 {
   "name": "svelte-formula",
-  "description": "Create reactive forms with validation for Svelte.",
+  "description": "Creates reactive forms for Svelte applications.",
   "repo_url": "https://github.com/tanepiper/svelte-formula",
   "authors": [
     "tanepiper"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2022-07-01T13:15:36.210Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": true,
   "runes": false,

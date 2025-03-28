@@ -1,6 +1,6 @@
 {
   "name": "@vietsch/svelte-image-gallery",
-  "description": "Build image galleries and carousels for Svelte applications.",
+  "description": "Implement image galleries and carousels in Svelte applications.",
   "repo_url": "https://github.com/Vietsch/svelte-image-gallery",
   "authors": [
     "vietsch"
@@ -10,6 +10,7 @@
   "dependents": 0,
   "updated": "2025-01-29T14:59:10.343Z",
   "tags": [
+    "media",
     "ui"
   ],
   "svelte5": false,

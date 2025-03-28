@@ -1,6 +1,6 @@
 {
   "name": "banh",
-  "description": "Integrate build step for frontend with Bun.",
+  "description": "Provides a Bun-first build tool for frontend development.",
   "repo_url": "https://github.com/daniel-le97/banh",
   "authors": [
     "cocobob"

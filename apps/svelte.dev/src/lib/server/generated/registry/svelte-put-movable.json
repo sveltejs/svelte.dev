@@ -1,6 +1,6 @@
 {
   "name": "@svelte-put/movable",
-  "description": "Action to make DOM nodes draggable in Svelte apps.",
+  "description": "Makes nodes movable with mousedown and mousemove.",
   "repo_url": "https://github.com/vnphanquang/svelte-put",
   "authors": [
     "vnphanquang"
@@ -10,8 +10,7 @@
   "dependents": 1,
   "updated": "2024-10-25T05:17:14.781Z",
   "tags": [
-    "utility",
-    "dom"
+    "miscellaneous"
   ],
   "svelte5": true,
   "runes": false,

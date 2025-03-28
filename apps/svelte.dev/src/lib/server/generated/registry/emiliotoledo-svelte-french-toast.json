@@ -1,6 +1,6 @@
 {
   "name": "@emiliotoledo/svelte-french-toast",
-  "description": "Creates buttery smooth toast notifications for Svelte.",
+  "description": "Creates buttery smooth toast notifications for Svelte apps.",
   "repo_url": "https://github.com/emilio-toledo/svelte-french-toast",
   "authors": [
     "emiliotoledo"

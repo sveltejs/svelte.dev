@@ -1,6 +1,6 @@
 {
   "name": "svelte-pick-a-place",
-  "description": "Select locations and areas on Leaflet maps in Svelte apps.",
+  "description": "Select location or area on Leaflet map in Svelte apps.",
   "repo_url": "",
   "authors": [
     "jimutt"

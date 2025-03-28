@@ -1,6 +1,6 @@
 {
   "name": "rollup-plugin-svelte",
-  "description": "Compiles Svelte components with Rollup.",
+  "description": "Compile Svelte components with Rollup.",
   "repo_url": "https://github.com/sveltejs/rollup-plugin-svelte",
   "authors": [
     "lukeed",
@@ -11,12 +11,11 @@
     "dummdidumm"
   ],
   "homepage": "https://github.com/sveltejs/rollup-plugin-svelte#readme",
-  "downloads": 87815,
+  "downloads": 88796,
   "dependents": 126,
   "updated": "2024-06-06T09:02:39.239Z",
   "tags": [
-    "tooling",
-    "preprocessor"
+    "tooling"
   ],
   "svelte5": true,
   "runes": false,

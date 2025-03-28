@@ -1,6 +1,6 @@
 {
   "name": "svelte-lang",
-  "description": "Implement i18n (internationalization) in Svelte apps.",
+  "description": "Simplify multilingual support in Svelte applications.",
   "repo_url": "https://github.com/enoy19/svelte-lang",
   "authors": [
     "enoy19"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2024-11-01T19:14:37.704Z",
   "tags": [
-    "utility"
+    "integration"
   ],
   "svelte5": true,
   "runes": false,

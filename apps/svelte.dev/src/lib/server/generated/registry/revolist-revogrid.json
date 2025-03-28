@@ -1,18 +1,18 @@
 {
   "name": "@revolist/revogrid",
-  "description": "Virtual reactive data grid spreadsheet component for Svelte.",
+  "description": "Create virtual reactive data grid spreadsheet components for Svelte.",
   "repo_url": "https://github.com/revolist/revogrid",
   "authors": [
     "kumakint"
   ],
   "homepage": "https://rv-grid.com",
-  "downloads": 11476,
+  "downloads": 10899,
   "dependents": 14,
-  "updated": "2025-03-26T21:40:23.082Z",
+  "updated": "2025-03-27T14:46:38.589Z",
   "tags": [
-    "component-library"
+    "ui"
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 2883
+  "github_stars": 2884
 }

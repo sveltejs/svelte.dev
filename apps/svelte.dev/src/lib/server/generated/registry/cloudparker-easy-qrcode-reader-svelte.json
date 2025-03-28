@@ -1,6 +1,6 @@
 {
   "name": "@cloudparker/easy-qrcode-reader-svelte",
-  "description": "Read QR codes from webcam in Svelte applications.",
+  "description": "Reads QR codes from webcam or mobile camera in Svelte apps.",
   "repo_url": "",
   "authors": [
     "couldparker.com"

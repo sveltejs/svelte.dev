@@ -1,0 +1,18 @@
+{
+  "name": "@elderjs/plugin-random",
+  "description": "Preview random pages in Elder.js development.",
+  "repo_url": "https://github.com/Elderjs/plugins",
+  "authors": [
+    "vonadz"
+  ],
+  "homepage": "https://github.com/Elderjs/plugins#readme",
+  "downloads": 31,
+  "dependents": 0,
+  "updated": "2022-07-15T10:12:25.418Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 79
+}

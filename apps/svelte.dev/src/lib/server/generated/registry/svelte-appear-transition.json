@@ -1,6 +1,6 @@
 {
   "name": "svelte-appear-transition",
-  "description": "Transition elements when appearing in viewport using Svelte.",
+  "description": "Transition elements when appearing in Svelte viewport.",
   "repo_url": "",
   "authors": [
     "adevien-solutions"

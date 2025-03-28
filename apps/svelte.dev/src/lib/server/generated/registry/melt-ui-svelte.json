@@ -1,19 +1,19 @@
 {
   "name": "@melt-ui/svelte",
-  "description": "Provides headless UI components for Svelte.",
+  "description": "Build accessible UI components for Svelte.",
   "repo_url": "https://github.com/melt-ui/melt-ui",
   "authors": [
     "tglide_personal"
   ],
   "homepage": "https://github.com/melt-ui/melt-ui#readme",
-  "downloads": 119002,
+  "downloads": 118257,
   "dependents": 48,
   "updated": "2025-03-25T16:32:29.281Z",
   "tags": [
-    "component-library",
-    "ui"
+    "ui",
+    "design-system"
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 3953
+  "github_stars": 3952
 }

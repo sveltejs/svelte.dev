@@ -1,6 +1,6 @@
 {
   "name": "s-offline",
-  "description": "Detect online/offline network status for Svelte applications.",
+  "description": "Detect online/offline network status in Svelte apps.",
   "repo_url": "https://github.com/vinayakkulkarni/s-offline",
   "authors": [
     "vinayakkulkarni"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2023-04-11T21:53:59.645Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

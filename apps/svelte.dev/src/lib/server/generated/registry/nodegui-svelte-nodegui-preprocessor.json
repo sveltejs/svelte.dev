@@ -1,6 +1,6 @@
 {
   "name": "@nodegui/svelte-nodegui-preprocessor",
-  "description": "Preprocessor for Svelte NodeGUI, adds namespace.",
+  "description": "Preprocess Svelte components for Svelte NodeGUI.",
   "repo_url": "https://github.com/nodegui/svelte-nodegui-preprocessor",
   "authors": [
     "sedwards2009",
@@ -15,7 +15,7 @@
   "dependents": 0,
   "updated": "2021-03-03T22:18:51.779Z",
   "tags": [
-    "preprocessor"
+    "tooling"
   ],
   "svelte5": false,
   "runes": false,

@@ -1,6 +1,6 @@
 {
   "name": "svelte-hydrated",
-  "description": "Indicates hydration status by svelte-store.",
+  "description": "Indicate hydration status by svelte-store.",
   "repo_url": "https://github.com/jill64/svelte-hydrated",
   "authors": [
     "jill64"
@@ -10,7 +10,7 @@
   "dependents": 1,
   "updated": "2024-12-30T20:23:43.919Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": true,
   "runes": false,

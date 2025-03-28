@@ -1,6 +1,6 @@
 {
   "name": "@rgossiaux/svelte-heroicons",
-  "description": "Heroicons library wrappers for Svelte components.",
+  "description": "Svelte wrappers for Heroicons library.",
   "repo_url": "https://github.com/rgossiaux/svelte-heroicons",
   "authors": [
     "rgossiaux"

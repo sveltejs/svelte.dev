@@ -1,6 +1,6 @@
 {
   "name": "svelte-headless-form",
-  "description": "Provides a fast, light form library for Svelte.",
+  "description": "Provides a fast, light, and feature-rich form library for Svelte.",
   "repo_url": "https://github.com/nickt26/svelte-headless-form",
   "authors": [
     "nickt1997"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2023-05-16T19:15:07.998Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

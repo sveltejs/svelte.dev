@@ -1,6 +1,6 @@
 {
   "name": "gettext-extractor-svelte",
-  "description": "Extracts gettext messages from Svelte files.",
+  "description": "Extract gettext messages from Svelte files.",
   "repo_url": "https://github.com/floratmin/gettext-extractor-svelte",
   "authors": [
     "floratmin"
@@ -10,7 +10,6 @@
   "dependents": 0,
   "updated": "2023-10-05T06:33:16.688Z",
   "tags": [
-    "utility",
     "tooling"
   ],
   "svelte5": false,

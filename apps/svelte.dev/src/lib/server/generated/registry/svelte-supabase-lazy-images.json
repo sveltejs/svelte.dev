@@ -1,6 +1,6 @@
 {
   "name": "svelte-supabase-lazy-images",
-  "description": "Lazy load images from Supabase using Svelte.",
+  "description": "Lazy loads images from Supabase within Svelte applications.",
   "repo_url": "https://github.com/Mitcheljager/svelte-supabase-lazy-images",
   "authors": [
     "mitcheljager"

@@ -1,6 +1,6 @@
 {
   "name": "svelte-time-series",
-  "description": "Display time series data with Svelte components.",
+  "description": "Display time series data in Svelte applications.",
   "repo_url": "https://github.com/arlac77/svelte-time-series",
   "authors": [
     "arlac77"

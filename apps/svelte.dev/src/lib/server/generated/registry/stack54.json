@@ -1,6 +1,6 @@
 {
   "name": "stack54",
-  "description": "Build a Javascript stack with SSR and streaming.",
+  "description": "Provide Javascript stack for SSR and streaming.",
   "repo_url": "https://github.com/joshamaju/stack54",
   "authors": [
     "joshamaju"

@@ -1,6 +1,6 @@
 {
   "name": "@slidy/svelte",
-  "description": "Creates simple, configurable carousel components.",
+  "description": "Creates simple, configurable carousel component for Svelte.",
   "repo_url": "https://github.com/Valexr/slidy",
   "authors": [
     "valexr"

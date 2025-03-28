@@ -1,6 +1,6 @@
 {
   "name": "@sawyerclick/svelte-range-slider-pips",
-  "description": "Create accessible, multi-thumb range sliders with pips in Svelte.",
+  "description": "Build accessible, multi-thumb range sliders with pips.",
   "repo_url": "https://github.com/simeydotme/svelte-range-slider-pips",
   "authors": [
     "sawyerclick"

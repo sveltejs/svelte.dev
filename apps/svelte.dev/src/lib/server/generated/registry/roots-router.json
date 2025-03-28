@@ -1,6 +1,6 @@
 {
   "name": "roots-router",
-  "description": "Client-side router for Svelte applications.",
+  "description": "Implement client-side routing for Svelte applications.",
   "repo_url": "https://github.com/PierBover/roots-svelte-router",
   "authors": [
     "pier25"

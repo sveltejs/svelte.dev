@@ -1,6 +1,6 @@
 {
   "name": "@apsc/tabs",
-  "description": "Organize content using a set of Tabs, Tab, and Panel components.",
+  "description": "Provides a component set for organizing Tabs interface.",
   "repo_url": "https://github.com/andrey-pavlenko/svelte-components",
   "authors": [
     "andrey-pavlenko"

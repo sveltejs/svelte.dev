@@ -1,11 +1,11 @@
 {
   "name": "@ikun-ui/avatar",
-  "description": "Create avatar components for Svelte UI.",
+  "description": "Create avatar components for Svelte.",
   "repo_url": "",
   "authors": [
     "baiwusanyu"
   ],
-  "downloads": 28,
+  "downloads": 6,
   "dependents": 1,
   "updated": "2025-01-24T03:48:31.502Z",
   "tags": [

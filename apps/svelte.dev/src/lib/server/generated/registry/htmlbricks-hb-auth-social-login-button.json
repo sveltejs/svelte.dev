@@ -1,6 +1,6 @@
 {
   "name": "@htmlbricks/hb-auth-social-login-button",
-  "description": "Implement social login buttons for authentication in Svelte.",
+  "description": "Create auth social login button web component.",
   "repo_url": "",
   "authors": [
     "dariocaruso"
@@ -9,7 +9,6 @@
   "dependents": 1,
   "updated": "2025-03-24T18:07:12.348Z",
   "tags": [
-    "ui",
     "auth"
   ],
   "svelte5": false,

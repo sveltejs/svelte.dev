@@ -1,6 +1,6 @@
 {
   "name": "svelty",
-  "description": "Offer high-quality components designed with TailwindCSS.",
+  "description": "Build high-quality components with Svelte and TailwindCSS.",
   "repo_url": "git@gitlab.com/nexylan/svelty",
   "authors": [
     "nexybot"
@@ -10,7 +10,6 @@
   "dependents": 0,
   "updated": "2020-12-01T10:36:45.912Z",
   "tags": [
-    "component-library",
     "ui"
   ],
   "svelte5": false,

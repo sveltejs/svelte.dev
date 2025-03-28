@@ -1,6 +1,6 @@
 {
   "name": "svelte-video-player-kit",
-  "description": "Create basic video player component for Svelte, SSR, and SvelteKit.",
+  "description": "Provide basic video player component for Svelte and SvelteKit.",
   "repo_url": "https://github.com/basaran/svelte-video-player-kit",
   "authors": [
     "anakha"
@@ -10,8 +10,7 @@
   "dependents": 0,
   "updated": "2021-10-24T19:58:12.779Z",
   "tags": [
-    "media",
-    "ui"
+    "media"
   ],
   "svelte5": false,
   "runes": false,

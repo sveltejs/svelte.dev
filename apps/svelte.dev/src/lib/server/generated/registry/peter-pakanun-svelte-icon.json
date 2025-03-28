@@ -1,6 +1,6 @@
 {
   "name": "@peter-pakanun/svelte-icon",
-  "description": "Simple Svelte icon component using SVG paths.",
+  "description": "Implement simple Svelte icon component.",
   "repo_url": "https://github.com/peter-pakanun/svelte-icon",
   "authors": [
     "peter-pakanun"

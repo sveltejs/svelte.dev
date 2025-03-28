@@ -1,6 +1,6 @@
 {
   "name": "@lottiefiles/svelte-lottie-player",
-  "description": "Play Lottie animations in Svelte applications.",
+  "description": "Play Lottie animations within Svelte applications.",
   "repo_url": "https://github.com/LottieFiles/svelte-lottie-player",
   "authors": [
     "jawish"

@@ -1,6 +1,6 @@
 {
   "name": "svawc",
-  "description": "Develop A-Frame web components using Svelte.",
+  "description": "Enables A-Frame component development using Svelte.",
   "repo_url": "https://github.com/immers-space/svawc",
   "authors": [
     "datatitian"
@@ -10,7 +10,7 @@
   "dependents": 1,
   "updated": "2023-02-20T15:43:51.065Z",
   "tags": [
-    "dom"
+    "integration"
   ],
   "svelte5": false,
   "runes": false,

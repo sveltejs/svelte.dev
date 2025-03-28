@@ -1,6 +1,6 @@
 {
   "name": "svelte-mainloop",
-  "description": "Integrate mainloop.js for game loops and animations in Svelte.",
+  "description": "Wrap mainloop.js for Svelte, manage game loops.",
   "repo_url": "",
   "authors": [
     "retrotheft"
@@ -9,7 +9,7 @@
   "dependents": 0,
   "updated": "2024-12-20T23:12:03.095Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": true,
   "runes": false

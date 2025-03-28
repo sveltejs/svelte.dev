@@ -1,6 +1,6 @@
 {
   "name": "sveltefire",
-  "description": "Integrate Firebase data into Svelte stores.",
+  "description": "Integrate Firebase Auth, Firestore, and RealtimeDB with Svelte.",
   "repo_url": "",
   "authors": [
     "jeffd23"

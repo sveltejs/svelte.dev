@@ -1,6 +1,6 @@
 {
   "name": "@naylour/telegram",
-  "description": "Integrate Telegram API into Svelte applications.",
+  "description": "Svelte 5 library for interacting with Telegram API.",
   "repo_url": "https://github.com/naylour/NaylourTelegram",
   "authors": [
     "shahtheshah"

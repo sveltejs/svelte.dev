@@ -1,6 +1,6 @@
 {
   "name": "caligula",
-  "description": "Optimize CSS stylesheets for Svelte applications.",
+  "description": "Optimize CSS stylesheets for Svelte apps.",
   "repo_url": "https://github.com/metonym/caligula",
   "authors": [
     "metonym"

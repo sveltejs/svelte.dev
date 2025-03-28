@@ -1,6 +1,6 @@
 {
   "name": "elegua",
-  "description": "Provide Svelte routing and PWA capabilities.",
+  "description": "Create Svelte routes and manage navigation.",
   "repo_url": "https://github.com/howesteve/elegua",
   "authors": [
     "howesteve"

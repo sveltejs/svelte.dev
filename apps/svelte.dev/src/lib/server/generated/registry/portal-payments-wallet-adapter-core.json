@@ -1,6 +1,6 @@
 {
   "name": "@portal-payments/wallet-adapter-core",
-  "description": "Provides core Svelte store for Solana wallet adapter.",
+  "description": "Core Svelte store for Solana wallet adapter.",
   "repo_url": "https://github.com/portalpayments/svelte-on-solana-wallet-adapter",
   "authors": [
     "mikemaccana"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2023-06-07T20:10:07.410Z",
   "tags": [
-    "utility"
+    "integration"
   ],
   "svelte5": false,
   "runes": false,

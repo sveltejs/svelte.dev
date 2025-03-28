@@ -1,6 +1,6 @@
 {
   "name": "codemirror-svelte",
-  "description": "Integrate CodeMirror editor into Svelte applications.",
+  "description": "Integrate CodeMirror editor into Svelte components.",
   "repo_url": "https://github.com/NaokiM03/codemirror-svelte",
   "authors": [
     "naokim03"

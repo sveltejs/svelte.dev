@@ -1,6 +1,6 @@
 {
   "name": "@sveu/browser",
-  "description": "Provide browser utilities for Svelte applications.",
+  "description": "Provides browser utilities for Svelte, type-safe and SSR friendly.",
   "repo_url": "https://github.com/svelte-u/browser",
   "authors": [
     "mohamed-kaizen"
@@ -10,7 +10,7 @@
   "dependents": 1,
   "updated": "2023-09-18T11:22:29.271Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

@@ -1,6 +1,6 @@
 {
   "name": "svelte-page-links",
-  "description": "Generates pagination links for Svelte.",
+  "description": "Generate pagination links for Svelte, customizable and intelligent.",
   "repo_url": "https://github.com/captaincodeman/svelte-page-links",
   "authors": [
     "captaincodeman"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2024-09-14T19:10:03.271Z",
   "tags": [
-    "utility"
+    "ui"
   ],
   "svelte5": true,
   "runes": false,

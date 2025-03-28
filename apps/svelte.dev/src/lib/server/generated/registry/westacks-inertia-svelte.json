@@ -1,6 +1,6 @@
 {
   "name": "@westacks/inertia-svelte",
-  "description": "Svelte adapter for Inertia.js, build modern single-page apps.",
+  "description": "Integrate Inertia.js with Svelte for server-driven apps.",
   "repo_url": "https://github.com/westacks/inertia-svelte",
   "authors": [
     "punyflash"

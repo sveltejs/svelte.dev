@@ -1,6 +1,6 @@
 {
   "name": "@svelte-parts/zoom",
-  "description": "Create zoomable images for Svelte.",
+  "description": "Implement zoomable images for Svelte applications.",
   "repo_url": "https://github.com/idris-maps/svelte-parts",
   "authors": [
     "idris-maps"

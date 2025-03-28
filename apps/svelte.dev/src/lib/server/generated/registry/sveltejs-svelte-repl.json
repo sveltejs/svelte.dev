@@ -1,6 +1,6 @@
 {
   "name": "@sveltejs/svelte-repl",
-  "description": "Component used on the Svelte website for the REPL.",
+  "description": "Provides the <Repl> component used on the Svelte website.",
   "repo_url": "https://github.com/sveltejs/svelte-repl",
   "authors": [
     "rich_harris",

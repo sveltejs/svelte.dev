@@ -1,6 +1,6 @@
 {
   "name": "sveltestrap-paginate",
-  "description": "Paginate data in Svelte apps using sveltestrap.",
+  "description": "Paginate data in Svelte applications with sveltestrap.",
   "repo_url": "https://github.com/hazg/sveltestrap-paginate",
   "authors": [
     "hazg"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2021-06-22T09:08:59.327Z",
   "tags": [
-    "utility"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

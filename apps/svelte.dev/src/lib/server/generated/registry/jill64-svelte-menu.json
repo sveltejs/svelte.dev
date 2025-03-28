@@ -1,6 +1,6 @@
 {
   "name": "@jill64/svelte-menu",
-  "description": "Functional menu component for Svelte.",
+  "description": "Create functional menu components for Svelte.",
   "repo_url": "https://github.com/jill64/svelte-menu",
   "authors": [
     "jill64"
@@ -10,7 +10,7 @@
   "dependents": 3,
   "updated": "2025-03-13T02:30:03.254Z",
   "tags": [
-    "component-library"
+    "ui"
   ],
   "svelte5": true,
   "runes": false,

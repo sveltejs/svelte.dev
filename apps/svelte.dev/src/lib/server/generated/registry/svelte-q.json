@@ -1,6 +1,6 @@
 {
   "name": "svelte-q",
-  "description": "Fetch data with built-in caching for Svelte apps.",
+  "description": "Fetch and cache data, built for Svelte applications.",
   "repo_url": "",
   "authors": [
     "maxam2017"
@@ -9,7 +9,7 @@
   "dependents": 0,
   "updated": "2022-07-15T14:35:00.953Z",
   "tags": [
-    "utility"
+    "server"
   ],
   "svelte5": false,
   "runes": false

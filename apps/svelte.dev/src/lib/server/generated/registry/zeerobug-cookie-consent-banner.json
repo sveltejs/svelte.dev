@@ -1,6 +1,6 @@
 {
   "name": "@zeerobug/cookie-consent-banner",
-  "description": "Implement GDPR cookie consent banner in Svelte apps.",
+  "description": "Implements GDPR cookie consent banner for Svelte applications.",
   "authors": [
     "zeerobug"
   ],
@@ -8,7 +8,8 @@
   "dependents": 0,
   "updated": "2022-07-22T08:32:54.193Z",
   "tags": [
-    "ui"
+    "ui",
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false

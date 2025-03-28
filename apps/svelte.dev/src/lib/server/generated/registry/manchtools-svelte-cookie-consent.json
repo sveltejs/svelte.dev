@@ -1,6 +1,6 @@
 {
   "name": "@manchtools/svelte-cookie-consent",
-  "description": "Manage cookie consent, tracking, and advertising preferences.",
+  "description": "Implement cookie consent banner for Svelte applications.",
   "repo_url": "https://github.com/manchtools/svelte-cookie-consent",
   "authors": [
     "pauldotterer"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2023-01-08T15:08:58.039Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false

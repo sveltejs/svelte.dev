@@ -1,11 +1,11 @@
 {
   "name": "@ikun-ui/spin",
-  "description": "Show loading spinners in Svelte applications.",
+  "description": "Create spin components for Svelte.",
   "repo_url": "",
   "authors": [
     "baiwusanyu"
   ],
-  "downloads": 29,
+  "downloads": 1,
   "dependents": 1,
   "updated": "2025-01-24T03:49:18.889Z",
   "tags": [

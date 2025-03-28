@@ -9,7 +9,7 @@
     "dominik_g"
   ],
   "homepage": "https://svelte.dev",
-  "downloads": 55725,
+  "downloads": 55822,
   "dependents": 88,
   "updated": "2025-02-03T10:02:40.009Z",
   "tags": [
@@ -17,5 +17,5 @@
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 19137
+  "github_stars": 19138
 }

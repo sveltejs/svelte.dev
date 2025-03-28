@@ -1,6 +1,6 @@
 {
   "name": "@ptkdev/sveltekit-electron-adapter",
-  "description": "Adapt SvelteKit apps for Electron deployment.",
+  "description": "Adapts SvelteKit apps for Electron, enabling static file prerendering.",
   "repo_url": "https://github.com/ptkdev/sveltekit-electron-adapter",
   "authors": [
     "ptkdevio"

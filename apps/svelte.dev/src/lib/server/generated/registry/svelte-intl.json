@@ -1,6 +1,6 @@
 {
   "name": "svelte-intl",
-  "description": "Internationalize Svelte 3 apps using format-message.",
+  "description": "Internationalize Svelte 3 applications using format-message.",
   "repo_url": "https://github.com/Panya/svelte-intl",
   "authors": [
     "panya"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2022-04-04T11:16:49.037Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

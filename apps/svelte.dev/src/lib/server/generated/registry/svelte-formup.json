@@ -1,6 +1,6 @@
 {
   "name": "svelte-formup",
-  "description": "Provides form helpers for Svelte with validation.",
+  "description": "Form helpers for Svelte with Yup validation.",
   "repo_url": "https://github.com/kenoxa/svelte-formup",
   "authors": [
     "sastan"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2020-07-13T10:36:44.595Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

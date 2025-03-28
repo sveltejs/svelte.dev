@@ -1,6 +1,6 @@
 {
   "name": "@svelte-fui/icons",
-  "description": "Provide Fluent UI icons for Svelte projects.",
+  "description": "Integrate Fluent UI icons into Svelte-fui projects.",
   "repo_url": "https://github.com/ryu-man/svelte-fui-icons",
   "authors": [
     "ryuman"

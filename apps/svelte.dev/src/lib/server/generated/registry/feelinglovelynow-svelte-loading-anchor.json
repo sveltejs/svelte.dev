@@ -1,6 +1,6 @@
 {
   "name": "@feelinglovelynow/svelte-loading-anchor",
-  "description": "Shows loading icon when clicked, stops after navigation.",
+  "description": "Show loading icon on SvelteKit anchor clicks.",
   "repo_url": "https://github.com/feelinglovelynow/svelte-loading-anchor",
   "authors": [
     "feelinglovelynow"
@@ -10,7 +10,8 @@
   "dependents": 0,
   "updated": "2023-12-17T21:50:04.124Z",
   "tags": [
-    "ui"
+    "ui",
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

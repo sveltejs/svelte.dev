@@ -1,6 +1,6 @@
 {
   "name": "svelte-clock",
-  "description": "Provide analog clock component for Svelte applications.",
+  "description": "Create analog clock component for Svelte apps.",
   "repo_url": "https://github.com/Bunlong/svelte-clock",
   "authors": [
     "bunlong"

@@ -1,6 +1,6 @@
 {
   "name": "pagination-svelte",
-  "description": "Create pagination components for Svelte applications.",
+  "description": "Creates pagination component for Svelte applications.",
   "repo_url": "https://github.com/joaquimnetocel/pagination-svelte",
   "authors": [
     "joaquim.neto.cel"

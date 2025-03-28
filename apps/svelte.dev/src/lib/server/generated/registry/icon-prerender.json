@@ -1,6 +1,6 @@
 {
   "name": "icon-prerender",
-  "description": "Prerender SVG icons at compile time for Svelte apps.",
+  "description": "Prerender SVG icons at build time for Svelte and other frameworks.",
   "repo_url": "https://github.com/Ernxst/icon-prerender",
   "authors": [
     "ernxst"
@@ -10,8 +10,7 @@
   "dependents": 0,
   "updated": "2022-09-11T22:19:25.259Z",
   "tags": [
-    "tooling",
-    "preprocessor"
+    "tooling"
   ],
   "svelte5": false,
   "runes": false

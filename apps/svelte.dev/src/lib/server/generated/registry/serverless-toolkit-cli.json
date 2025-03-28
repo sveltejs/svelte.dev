@@ -1,6 +1,6 @@
 {
   "name": "@serverless-toolkit/cli",
-  "description": "Develop serverless applications with Svelte and AWS CDK.",
+  "description": "Serverless application development runtime for AWS using CDK.",
   "repo_url": "https://github.com/serverless-toolkit/cli",
   "authors": [
     "mikebild"
@@ -11,7 +11,8 @@
   "updated": "2022-11-03T15:42:16.337Z",
   "tags": [
     "tooling",
-    "server"
+    "server",
+    "adapter"
   ],
   "svelte5": false,
   "runes": false,

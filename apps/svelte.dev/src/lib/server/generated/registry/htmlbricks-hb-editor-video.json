@@ -1,6 +1,6 @@
 {
   "name": "@htmlbricks/hb-editor-video",
-  "description": "Svelte Boostrap Video Card WebComponent",
+  "description": "Create video components for Svelte apps.",
   "repo_url": "",
   "authors": [
     "dariocaruso"

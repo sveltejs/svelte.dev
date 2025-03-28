@@ -1,6 +1,6 @@
 {
   "name": "@vividus/svelte",
-  "description": "Provides lively, reactive UI components for Svelte.",
+  "description": "Component library for Svelte with lively transitions.",
   "repo_url": "https://github.com/hAbuMustafa/vividus",
   "authors": [
     "eyecode"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2024-01-25T17:50:12.920Z",
   "tags": [
-    "component-library"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

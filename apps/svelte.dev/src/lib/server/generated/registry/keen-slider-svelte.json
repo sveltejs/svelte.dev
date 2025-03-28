@@ -1,6 +1,6 @@
 {
   "name": "keen-slider-svelte",
-  "description": "Create touch slider carousels with native feeling in Svelte.",
+  "description": "Create touch slider carousel with native feel in Svelte.",
   "repo_url": "https://github.com/JustDenP/svelte-keen-slider",
   "authors": [
     "justdenp"

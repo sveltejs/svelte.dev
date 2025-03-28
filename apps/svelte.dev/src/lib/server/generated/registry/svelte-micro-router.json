@@ -1,6 +1,6 @@
 {
   "name": "svelte-micro-router",
-  "description": "Create micro router for Svelte with easy configuration.",
+  "description": "Implement a micro router for Svelte applications.",
   "repo_url": "https://github.com/davidrot/svelte-micro-router",
   "authors": [
     "davidrot1"

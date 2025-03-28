@@ -1,6 +1,6 @@
 {
   "name": "@htmlbricks/hb-site-paragraph-with-image",
-  "description": "Provides a Svelte-Bootstrap site-paragraph-with-image component.",
+  "description": "Svelte-Bootstrap site-paragraph-with-image.",
   "repo_url": "",
   "authors": [
     "dariocaruso"
@@ -9,7 +9,6 @@
   "dependents": 0,
   "updated": "2025-03-24T18:07:20.663Z",
   "tags": [
-    "component-library",
     "ui"
   ],
   "svelte5": false,

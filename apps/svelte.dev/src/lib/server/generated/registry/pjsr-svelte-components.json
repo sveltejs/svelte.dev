@@ -1,6 +1,6 @@
 {
   "name": "@pjsr/svelte-components",
-  "description": "Offers reusable Svelte components including icons, splitters, and markdown.",
+  "description": "Provides various Svelte components, including Icon and Markdown.",
   "repo_url": "https://github.com/pjsr1980/svelte-components",
   "authors": [
     "pjsr"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2023-02-01T11:50:10.098Z",
   "tags": [
-    "component-library"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

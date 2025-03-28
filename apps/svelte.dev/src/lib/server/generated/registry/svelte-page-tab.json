@@ -1,6 +1,6 @@
 {
   "name": "svelte-page-tab",
-  "description": "Tab menu component using page as state.",
+  "description": "Create tab menu component using page as state.",
   "repo_url": "https://github.com/jill64/svelte-page-tab",
   "authors": [
     "jill64"

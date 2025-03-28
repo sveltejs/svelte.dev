@@ -1,6 +1,6 @@
 {
   "name": "svelte-groot",
-  "description": "Offers a minimal, sensible router for Svelte with 404 support.",
+  "description": "Minimal router for Svelte with 404 custom support.",
   "repo_url": "https://github.com/Kaporos/svelte-grouter",
   "authors": [
     "kaporos"

@@ -1,6 +1,6 @@
 {
   "name": "svelte-cryptocurrency-icons",
-  "description": "Display cryptocurrency SVG icons in Svelte applications.",
+  "description": "Provides cryptocurrency icon components for Svelte.",
   "repo_url": "https://github.com/shinokada/svelte-cryptocurrency-icons",
   "authors": [
     "shinichiokada"

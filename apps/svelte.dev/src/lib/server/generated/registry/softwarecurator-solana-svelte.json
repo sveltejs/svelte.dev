@@ -1,6 +1,6 @@
 {
   "name": "@softwarecurator/solana-svelte",
-  "description": "Interact with Solana blockchain in Svelte apps.",
+  "description": "Interact with Solana blockchain in Svelte applications.",
   "repo_url": "https://github.com/softwarecurator/solana-svelte",
   "authors": [
     "softwarecurator"
@@ -10,7 +10,6 @@
   "dependents": 0,
   "updated": "2024-05-03T05:50:46.872Z",
   "tags": [
-    "utility",
     "integration"
   ],
   "svelte5": true,

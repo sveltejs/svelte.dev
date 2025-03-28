@@ -1,6 +1,6 @@
 {
   "name": "@nativescript/template-blank-svelte",
-  "description": "Create blank NativeScript apps using Svelte.",
+  "description": "Generates blank NativeScript apps using Svelte.",
   "repo_url": "https://github.com/NativeScript/nativescript-app-templates",
   "authors": [
     "nativescript-user",
@@ -28,7 +28,7 @@
   "dependents": 0,
   "updated": "2025-03-23T03:15:36.742Z",
   "tags": [
-    "tooling"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

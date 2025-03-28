@@ -1,6 +1,6 @@
 {
   "name": "smelte",
-  "description": "UI framework for Svelte using Tailwind CSS and Material Design.",
+  "description": "Build UI with Svelte and Tailwind CSS using Material Design.",
   "repo_url": "",
   "authors": [
     "matyunya"
@@ -9,7 +9,7 @@
   "dependents": 3,
   "updated": "2021-09-06T04:05:31.316Z",
   "tags": [
-    "component-library",
+    "design-system",
     "ui"
   ],
   "svelte5": false,

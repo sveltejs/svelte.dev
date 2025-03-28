@@ -1,6 +1,6 @@
 {
   "name": "svelteify-react",
-  "description": "Render React components within Svelte applications.",
+  "description": "Integrate React components within Svelte applications.",
   "repo_url": "https://github.com/MKAbuMattar/svelteify-react",
   "authors": [
     "mkabumattar"

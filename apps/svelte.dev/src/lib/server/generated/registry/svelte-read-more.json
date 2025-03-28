@@ -1,6 +1,6 @@
 {
   "name": "svelte-read-more",
-  "description": "Render text dynamically using read more/less labels in Svelte.",
+  "description": "Create read more/less components in Svelte.",
   "repo_url": "https://github.com/saideepesh000/svelte-read-more",
   "authors": [
     "saideepesh000"

@@ -1,6 +1,6 @@
 {
   "name": "@krestui/svelte-portal",
-  "description": "Implements portal functionality for Svelte components.",
+  "description": "Implement portal functionality in Svelte applications.",
   "repo_url": "https://github.com/krestui/krestui",
   "authors": [
     "hellokarthik"
@@ -10,7 +10,7 @@
   "dependents": 1,
   "updated": "2023-02-23T17:14:49.462Z",
   "tags": [
-    "dom"
+    "ui"
   ],
   "svelte5": false,
   "runes": false

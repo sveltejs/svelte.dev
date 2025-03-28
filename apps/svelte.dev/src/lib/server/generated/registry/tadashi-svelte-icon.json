@@ -1,6 +1,6 @@
 {
   "name": "@tadashi/svelte-icon",
-  "description": "Display icons in Svelte components.",
+  "description": "Simple Svelte component for displaying icons.",
   "repo_url": "https://github.com/lagden/svelte-icon",
   "authors": [
     "lagden"

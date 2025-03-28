@@ -1,6 +1,6 @@
 {
   "name": "@jill64/svelte-html",
-  "description": "Declarative attribute binding for root HTML element.",
+  "description": "Declaratively bind attributes to root HTML element.",
   "repo_url": "https://github.com/jill64/svelte-html",
   "authors": [
     "jill64"
@@ -10,7 +10,7 @@
   "dependents": 3,
   "updated": "2024-12-25T22:18:00.080Z",
   "tags": [
-    "dom"
+    "miscellaneous"
   ],
   "svelte5": true,
   "runes": false,

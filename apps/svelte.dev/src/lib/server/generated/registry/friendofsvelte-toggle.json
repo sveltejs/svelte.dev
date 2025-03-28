@@ -1,6 +1,6 @@
 {
   "name": "@friendofsvelte/toggle",
-  "description": "Adds dark mode toggle to Svelte and SvelteKit apps.",
+  "description": "Create dark mode toggles for Svelte and SvelteKit apps.",
   "repo_url": "https://github.com/friendofsvelte/toggle",
   "authors": [
     "bishwasbh"

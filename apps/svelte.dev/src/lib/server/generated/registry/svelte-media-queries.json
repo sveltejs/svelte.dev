@@ -1,6 +1,6 @@
 {
   "name": "svelte-media-queries",
-  "description": "Adds CSS media query support to Svelte components.",
+  "description": "Use CSS media queries in Svelte components.",
   "repo_url": "https://github.com/fedorovvvv/svelte-media-queries",
   "authors": [
     "fedorovvvv"
@@ -10,7 +10,7 @@
   "dependents": 2,
   "updated": "2023-10-13T16:20:11.544Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

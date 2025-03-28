@@ -1,6 +1,6 @@
 {
   "name": "sveltyper",
-  "description": "Generate declaration files for Svelte components.",
+  "description": "Generate type definition files for Svelte components.",
   "repo_url": "https://github.com/TheComputerM/sveltyper",
   "authors": [
     "thecomputerm"

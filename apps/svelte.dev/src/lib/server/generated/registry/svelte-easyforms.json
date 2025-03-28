@@ -1,6 +1,6 @@
 {
   "name": "svelte-easyforms",
-  "description": "Build forms with inputs, validation, and submission handling.",
+  "description": "Build forms with validation using inputs and textarea components.",
   "repo_url": "https://github.com/kevmodrome/svelte-easyforms",
   "authors": [
     "kevmodrome"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2019-12-05T16:04:21.334Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

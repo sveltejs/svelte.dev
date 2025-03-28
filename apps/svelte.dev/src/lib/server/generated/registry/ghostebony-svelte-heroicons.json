@@ -1,6 +1,6 @@
 {
   "name": "@ghostebony/svelte-heroicons",
-  "description": "Integrate Heroicons into Svelte projects.",
+  "description": "Use Heroicons in Svelte projects.",
   "repo_url": "https://github.com/ghostebony/svelte-heroicons",
   "authors": [
     "ghostebony"

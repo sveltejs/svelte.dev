@@ -1,6 +1,6 @@
 {
   "name": "@egjs/svelte-flicking",
-  "description": "Creates reliable, flexible, extendable carousel components.",
+  "description": "Create reliable, flexible, and extendable carousels.",
   "repo_url": "https://github.com/naver/egjs-flicking",
   "authors": [
     "ajaxpf",

@@ -1,6 +1,6 @@
 {
   "name": "brefer",
-  "description": "Shortens Svelte 5 runes syntax.",
+  "description": "Preprocessor to shorten Svelte 5 runes syntax.",
   "repo_url": "https://github.com/KilDesu/brefer",
   "authors": [
     "kildesu"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2024-09-17T14:58:51.419Z",
   "tags": [
-    "preprocessor"
+    "tooling"
   ],
   "svelte5": false,
   "runes": false,

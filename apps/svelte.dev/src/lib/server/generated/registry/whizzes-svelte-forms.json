@@ -1,6 +1,6 @@
 {
   "name": "@whizzes/svelte-forms",
-  "description": "Provides utilities for managing forms in Svelte applications.",
+  "description": "Manage forms with validation in Svelte applications.",
   "repo_url": "https://github.com/whizzes/svelte-forms",
   "authors": [
     "estebanborai"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2024-03-16T22:33:25.450Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

@@ -1,6 +1,6 @@
 {
   "name": "svelte-inspect",
-  "description": "Inspects Svelte objects interactively, inspired by DevTools.",
+  "description": "Inspects Svelte objects within development environments.",
   "repo_url": "https://github.com/trbrc/svelte-inspect",
   "authors": [
     "trbrc"

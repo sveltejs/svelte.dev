@@ -1,6 +1,6 @@
 {
   "name": "svelte-theme-select",
-  "description": "Provide customizable theme selection components for Svelte.",
+  "description": "Provides customizable theme selection components for Svelte.",
   "repo_url": "https://github.com/captaincodeman/svelte-theme-select",
   "authors": [
     "captaincodeman"

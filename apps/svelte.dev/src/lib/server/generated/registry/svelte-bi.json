@@ -1,6 +1,6 @@
 {
   "name": "svelte-bi",
-  "description": "Provides Bootstrap Icons as Svelte components.",
+  "description": "Use Bootstrap SVG icons in Svelte 5 projects.",
   "repo_url": "https://github.com/sachinsancheti1/svelte-bi",
   "authors": [
     "onokumus",

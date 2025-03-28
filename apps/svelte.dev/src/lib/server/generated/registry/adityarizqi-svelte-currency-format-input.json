@@ -1,6 +1,6 @@
 {
   "name": "@adityarizqi/svelte-currency-format-input",
-  "description": "Format currency input fields in Svelte apps.",
+  "description": "Format numerical entries into localized currency formats.",
   "repo_url": "https://github.com/Adityarizqi7/svelte-currency-format-input",
   "authors": [
     "adityarizqi"

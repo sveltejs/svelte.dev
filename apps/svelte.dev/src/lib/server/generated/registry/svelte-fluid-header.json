@@ -1,6 +1,6 @@
 {
   "name": "svelte-fluid-header",
-  "description": "Provides responsive and customizable header component for Svelte.",
+  "description": "Responsive and customizable header component for Svelte.",
   "repo_url": "https://github.com/collardeau/svelte-fluid-header",
   "authors": [
     "collardeau"

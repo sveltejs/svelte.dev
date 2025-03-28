@@ -1,6 +1,6 @@
 {
   "name": "motion-start",
-  "description": "Svelte animation library inspired by framer-motion.",
+  "description": "Provides animation library for Svelte, inspired by framer-motion.",
   "authors": [
     "jonathonrp"
   ],

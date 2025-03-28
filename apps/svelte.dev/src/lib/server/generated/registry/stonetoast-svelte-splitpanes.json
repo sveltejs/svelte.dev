@@ -1,6 +1,6 @@
 {
   "name": "@stonetoast/svelte-splitpanes",
-  "description": "Create resizable pane layouts with advanced features.",
+  "description": "Create resizable pane layouts with Svelte.",
   "repo_url": "https://github.com/orefalo/svelte-splitpanes",
   "authors": [
     "stonetoast"

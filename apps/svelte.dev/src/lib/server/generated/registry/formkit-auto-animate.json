@@ -1,6 +1,6 @@
 {
   "name": "@formkit/auto-animate",
-  "description": "Animate UI elements with a single line of code.",
+  "description": "Animate Svelte apps with single line of code.",
   "repo_url": "https://github.com/formkit/auto-animate",
   "authors": [
     "devoidofgenius",
@@ -9,7 +9,7 @@
     "boyd"
   ],
   "homepage": "https://github.com/formkit/auto-animate#readme",
-  "downloads": 246096,
+  "downloads": 255022,
   "dependents": 148,
   "updated": "2024-04-10T16:20:50.136Z",
   "tags": [
@@ -17,5 +17,5 @@
   ],
   "svelte5": false,
   "runes": false,
-  "github_stars": 13250
+  "github_stars": 13251
 }

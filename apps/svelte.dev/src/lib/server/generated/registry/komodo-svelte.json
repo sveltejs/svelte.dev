@@ -1,6 +1,6 @@
 {
   "name": "komodo-svelte",
-  "description": "Integrate Komodo Elixir library with Svelte components.",
+  "description": "Provides Svelte bindings for Komodo Elixir library.",
   "repo_url": "https://github.com/hungry-egg/komodo",
   "authors": [
     "markevans"

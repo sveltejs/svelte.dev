@@ -1,6 +1,6 @@
 {
   "name": "@htmlbricks/hb-player-live-camera-ptz",
-  "description": "Provide live camera PTZ controls within Svelte applications.",
+  "description": "Create a live camera player with PTZ controls in Svelte.",
   "repo_url": "",
   "authors": [
     "dariocaruso"
@@ -9,8 +9,7 @@
   "dependents": 1,
   "updated": "2025-03-24T18:07:28.254Z",
   "tags": [
-    "media",
-    "ui"
+    "media"
   ],
   "svelte5": false,
   "runes": false

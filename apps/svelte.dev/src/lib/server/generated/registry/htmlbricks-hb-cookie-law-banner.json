@@ -1,6 +1,6 @@
 {
   "name": "@htmlbricks/hb-cookie-law-banner",
-  "description": "Create cookie law banner web component for Svelte apps.",
+  "description": "Create Svelte cookielaw WebComponent.",
   "repo_url": "",
   "authors": [
     "dariocaruso"

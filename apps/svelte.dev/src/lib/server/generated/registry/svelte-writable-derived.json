@@ -1,16 +1,16 @@
 {
   "name": "svelte-writable-derived",
-  "description": "Create two-way data-transforming stores for Svelte.",
+  "description": "Create writable derived stores for Svelte, transforming data bidirectionally.",
   "repo_url": "https://github.com/PixievoltNo1/svelte-writable-derived",
   "authors": [
     "pixievoltno1"
   ],
   "homepage": "https://github.com/PixievoltNo1/svelte-writable-derived",
-  "downloads": 22083,
+  "downloads": 20232,
   "dependents": 14,
   "updated": "2024-04-04T06:55:02.096Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": true,
   "runes": false,

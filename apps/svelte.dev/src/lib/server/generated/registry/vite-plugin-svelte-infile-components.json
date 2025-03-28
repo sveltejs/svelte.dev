@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-svelte-infile-components",
-  "description": "Enable multiple Svelte components within single .svelte files.",
+  "description": "Enable multiple components inside Svelte files.",
   "repo_url": "https://github.com/jangxyz/svelte-infile-components",
   "authors": [
     "jangxyz"
@@ -10,8 +10,7 @@
   "dependents": 0,
   "updated": "2025-01-10T12:06:19.071Z",
   "tags": [
-    "tooling",
-    "preprocessor"
+    "tooling"
   ],
   "svelte5": true,
   "runes": false,

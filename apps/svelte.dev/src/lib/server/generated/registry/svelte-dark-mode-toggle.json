@@ -1,6 +1,6 @@
 {
   "name": "svelte-dark-mode-toggle",
-  "description": "Provide animated toggle button for dark mode in Svelte apps.",
+  "description": "Animated toggle button for dark mode in Svelte apps.",
   "repo_url": "https://github.com/Disimasa/svelte-dark-mode-toggle",
   "authors": [
     "disimasar"

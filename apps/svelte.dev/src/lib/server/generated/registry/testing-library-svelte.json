@@ -1,6 +1,6 @@
 {
   "name": "@testing-library/svelte",
-  "description": "Testing utilities for Svelte components.",
+  "description": "Test Svelte components with Testing Library.",
   "repo_url": "https://github.com/testing-library/svelte-testing-library",
   "authors": [
     "testing-library-bot",

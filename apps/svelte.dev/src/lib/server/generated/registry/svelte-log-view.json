@@ -1,6 +1,6 @@
 {
   "name": "svelte-log-view",
-  "description": "Svelte component displays log content from a source.",
+  "description": "Displays log content within Svelte applications.",
   "repo_url": "https://github.com/arlac77/svelte-log-view",
   "authors": [
     "arlac77"
@@ -10,7 +10,7 @@
   "dependents": 2,
   "updated": "2025-03-24T12:59:00.765Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": true,
   "runes": false,

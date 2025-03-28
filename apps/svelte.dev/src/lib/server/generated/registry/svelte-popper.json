@@ -1,6 +1,6 @@
 {
   "name": "svelte-popper",
-  "description": "Wrap popper.js for use in Svelte components.",
+  "description": "Wrapper for Popper.js in Svelte.",
   "repo_url": "https://github.com/bgreenacre/svelte-popper",
   "authors": [
     "bgreenacre"

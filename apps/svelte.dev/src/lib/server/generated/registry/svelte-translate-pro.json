@@ -1,6 +1,6 @@
 {
   "name": "svelte-translate-pro",
-  "description": "Provides i18n with dynamic language loading for Svelte apps.",
+  "description": "Provides i18n library for dynamic language management.",
   "repo_url": "",
   "authors": [
     "dev.zarghami"
@@ -9,7 +9,7 @@
   "dependents": 0,
   "updated": "2025-01-19T11:22:08.976Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false

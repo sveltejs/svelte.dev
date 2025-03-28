@@ -1,12 +1,12 @@
 {
   "name": "@svelte-plugins/tooltips",
-  "description": "Create simple tooltip action and component for Svelte.",
+  "description": "Provides simple tooltip action and component for Svelte.",
   "repo_url": "https://github.com/svelte-plugins/tooltips",
   "authors": [
     "dysfunc"
   ],
   "homepage": "https://github.com/svelte-plugins/tooltips",
-  "downloads": 4730,
+  "downloads": 4896,
   "dependents": 2,
   "updated": "2025-02-07T04:58:52.924Z",
   "tags": [

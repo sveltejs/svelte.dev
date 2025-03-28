@@ -1,6 +1,6 @@
 {
   "name": "svelte-language-server",
-  "description": "Language server for Svelte.",
+  "description": "Provide language server for Svelte.",
   "repo_url": "https://github.com/sveltejs/language-tools",
   "authors": [
     "orta",

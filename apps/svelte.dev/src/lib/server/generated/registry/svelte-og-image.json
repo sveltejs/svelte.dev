@@ -1,6 +1,6 @@
 {
   "name": "svelte-og-image",
-  "description": "Generate Open Graph images for SvelteKit projects.",
+  "description": "Generate Open Graph images using Svelte components and Vercel's OG.",
   "repo_url": "https://github.com/eltigerchino/svelte-og-image",
   "authors": [
     "eltigerchino"

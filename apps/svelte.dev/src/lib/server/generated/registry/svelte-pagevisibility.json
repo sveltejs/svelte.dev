@@ -1,0 +1,17 @@
+{
+  "name": "svelte-pagevisibility",
+  "description": "Detect page visibility changes in Svelte applications.",
+  "repo_url": "https://github.com/john--kane/svelte-pagevisibility",
+  "authors": [
+    "john--kane"
+  ],
+  "homepage": "https://github.com/john--kane/svelte-pagevisibility#readme",
+  "downloads": 6,
+  "dependents": 0,
+  "updated": "2020-08-06T07:03:43.525Z",
+  "tags": [
+    "miscellaneous"
+  ],
+  "svelte5": false,
+  "runes": false
+}

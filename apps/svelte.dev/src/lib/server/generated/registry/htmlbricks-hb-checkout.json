@@ -1,0 +1,16 @@
+{
+  "name": "@htmlbricks/hb-checkout",
+  "description": "Provides Svelte Payment WebComponent.",
+  "repo_url": "",
+  "authors": [
+    "dariocaruso"
+  ],
+  "downloads": 435,
+  "dependents": 3,
+  "updated": "2025-03-24T18:07:27.435Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

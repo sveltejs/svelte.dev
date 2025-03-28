@@ -1,6 +1,6 @@
 {
   "name": "svelte-grid-responsive",
-  "description": "Create responsive grid system based on Bootstrap for Svelte.",
+  "description": "Create responsive grid layouts for Svelte applications.",
   "repo_url": "https://github.com/andrelmlins/svelte-grid-responsive",
   "authors": [
     "andrelmlins"

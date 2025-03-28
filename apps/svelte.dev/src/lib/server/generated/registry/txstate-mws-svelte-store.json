@@ -1,6 +1,6 @@
 {
   "name": "@txstate-mws/svelte-store",
-  "description": "Provides enhanced store types for Svelte applications.",
+  "description": "Provides new store types compatible with Svelte stores.",
   "repo_url": "https://github.com/txstate-etc/svelte-store",
   "authors": [
     "wickning1",
@@ -12,7 +12,7 @@
   "dependents": 4,
   "updated": "2023-03-15T12:35:23.182Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

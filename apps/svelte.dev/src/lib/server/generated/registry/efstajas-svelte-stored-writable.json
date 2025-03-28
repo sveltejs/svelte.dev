@@ -1,6 +1,6 @@
 {
   "name": "@efstajas/svelte-stored-writable",
-  "description": "Create Svelte writables that persist data in localStorage.",
+  "description": "Store and restore data from localstorage automatically.",
   "repo_url": "https://github.com/efstajas/svelte-stored-writable",
   "authors": [
     "efstajas"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2024-09-24T10:38:21.548Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

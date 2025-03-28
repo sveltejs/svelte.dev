@@ -1,6 +1,6 @@
 {
   "name": "svelte-fomantic-ui",
-  "description": "Create Fomantic UI wrapper for Svelte client-side web apps.",
+  "description": "Fomantic UI wrapper for Svelte, creating client-side web apps.",
   "repo_url": "https://github.com/roycdaviesuoa/svelte-fomantic-ui",
   "authors": [
     "roycdavies"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2025-02-01T07:54:50.188Z",
   "tags": [
-    "component-library"
+    "ui"
   ],
   "svelte5": true,
   "runes": false,

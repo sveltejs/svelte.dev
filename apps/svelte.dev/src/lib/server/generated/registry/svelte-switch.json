@@ -1,6 +1,6 @@
 {
   "name": "svelte-switch",
-  "description": "Create toggle button component for Svelte apps.",
+  "description": "Create toggle button component for Svelte.",
   "repo_url": "https://github.com/thecodejack/svelte-switch",
   "authors": [
     "thecodejack"

@@ -1,6 +1,6 @@
 {
   "name": "sveaflet",
-  "description": "Creates reactive maps using Svelte and Leaflet.",
+  "description": "Create interactive maps with Leaflet in Svelte.",
   "repo_url": "https://github.com/GrayFrost/sveaflet",
   "authors": [
     "garyfrost"

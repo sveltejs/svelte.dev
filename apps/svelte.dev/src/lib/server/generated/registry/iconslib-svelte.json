@@ -1,6 +1,6 @@
 {
   "name": "@iconslib/svelte",
-  "description": "Provides open source icons for Svelte projects.",
+  "description": "Provide open source icons for Svelte projects.",
   "repo_url": "https://github.com/iconslib/svelte",
   "authors": [
     "bitkidd"

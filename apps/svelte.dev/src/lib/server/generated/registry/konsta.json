@@ -1,6 +1,6 @@
 {
   "name": "konsta",
-  "description": "Provides mobile UI components built with Tailwind CSS for Svelte.",
+  "description": "Offers mobile UI components built with Tailwind CSS for Svelte.",
   "repo_url": "https://github.com/konstaui/konsta",
   "authors": [
     "nolimits4web"
@@ -10,8 +10,8 @@
   "dependents": 6,
   "updated": "2024-09-18T16:14:44.738Z",
   "tags": [
-    "component-library",
-    "ui"
+    "ui",
+    "design-system"
   ],
   "svelte5": false,
   "runes": false,

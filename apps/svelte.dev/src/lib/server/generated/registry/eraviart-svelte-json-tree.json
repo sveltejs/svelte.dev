@@ -1,6 +1,6 @@
 {
   "name": "@eraviart/svelte-json-tree",
-  "description": "View and inspect JSON data in Svelte applications.",
+  "description": "View and explore JSON data within Svelte applications.",
   "repo_url": "https://github.com/eraviart/svelte-json-tree",
   "authors": [
     "eraviart"

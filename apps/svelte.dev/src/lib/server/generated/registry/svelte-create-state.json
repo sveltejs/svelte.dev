@@ -1,6 +1,6 @@
 {
   "name": "svelte-create-state",
-  "description": "Create state management for Svelte components.",
+  "description": "Create state variables similar to React's useState for Svelte.",
   "repo_url": "https://github.com/juliandavidmr/svelte-create-state",
   "authors": [
     "anlijudavid"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2020-04-30T05:21:49.803Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

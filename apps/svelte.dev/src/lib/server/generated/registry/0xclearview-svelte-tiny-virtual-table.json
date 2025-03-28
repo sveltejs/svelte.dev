@@ -1,6 +1,6 @@
 {
   "name": "@0xclearview/svelte-tiny-virtual-table",
-  "description": "Virtualizes lists for Svelte, rendering only visible items.",
+  "description": "Provides a tiny virtual table component for Svelte.",
   "repo_url": "https://github.com/0xclearview/svelte-tiny-virtual-table",
   "authors": [
     "margual56"

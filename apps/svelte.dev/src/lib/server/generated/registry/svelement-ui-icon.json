@@ -1,6 +1,6 @@
 {
   "name": "@svelement-ui/icon",
-  "description": "Provide Element UI icons for Svelte applications.",
+  "description": "Use Element UI icons in Svelte applications.",
   "repo_url": "https://github.com/koory1st/svelement-ui",
   "authors": [
     "koory1st"

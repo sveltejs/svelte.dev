@@ -1,6 +1,6 @@
 {
   "name": "svelte-preprocess-alien",
-  "description": "Replace Svelte reactivity with custom alien strings.",
+  "description": "Replace Svelte reactivity signs with custom strings.",
   "repo_url": "https://github.com/chientrm/svelte-preprocess-alien",
   "authors": [
     "chientrm"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2023-08-15T19:55:14.497Z",
   "tags": [
-    "preprocessor"
+    "tooling"
   ],
   "svelte5": false,
   "runes": false,

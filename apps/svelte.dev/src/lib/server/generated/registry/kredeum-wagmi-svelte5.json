@@ -1,6 +1,6 @@
 {
   "name": "@kredeum/wagmi-svelte5",
-  "description": "Integrate Web3 functionality into Svelte 5 applications.",
+  "description": "Integrate Web3 functionality into Svelte apps using Wagmi.",
   "repo_url": "",
   "authors": [
     "zapaz",
@@ -11,8 +11,7 @@
   "dependents": 0,
   "updated": "2024-12-29T10:29:59.710Z",
   "tags": [
-    "integration",
-    "utility"
+    "integration"
   ],
   "svelte5": true,
   "runes": false

@@ -1,6 +1,6 @@
 {
   "name": "@jill64/eslint-config-svelte",
-  "description": "Pre-defined ESLint config for Svelte projects.",
+  "description": "Pre-defined ESLint flat config for Svelte projects.",
   "repo_url": "https://github.com/jill64/eslint-config-svelte",
   "authors": [
     "jill64"

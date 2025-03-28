@@ -1,6 +1,6 @@
 {
   "name": "svelte-apollo",
-  "description": "Integrates Apollo GraphQL with Svelte, fetches and manages data.",
+  "description": "Integrate Apollo GraphQL with Svelte applications.",
   "authors": [
     "timhall"
   ],

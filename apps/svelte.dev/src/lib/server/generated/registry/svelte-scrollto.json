@@ -1,6 +1,6 @@
 {
   "name": "svelte-scrollto",
-  "description": "Animate scrolling to elements with animation in Svelte.",
+  "description": "Provides Svelte action for smooth scrolling to elements.",
   "repo_url": "https://github.com/langbamit/svelte-scrollto",
   "authors": [
     "langbamit"
@@ -10,7 +10,7 @@
   "dependents": 1,
   "updated": "2020-06-26T04:38:46.368Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

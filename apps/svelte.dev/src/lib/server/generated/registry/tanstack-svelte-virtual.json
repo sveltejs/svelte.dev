@@ -1,6 +1,6 @@
 {
   "name": "@tanstack/svelte-virtual",
-  "description": "Virtualize scrollable elements in Svelte.",
+  "description": "Headless UI for virtualizing scrollable elements in Svelte.",
   "repo_url": "https://github.com/TanStack/virtual",
   "authors": [
     "tannerlinsley",
@@ -11,7 +11,7 @@
   "dependents": 4,
   "updated": "2025-03-24T11:34:44.198Z",
   "tags": [
-    "utility"
+    "ui"
   ],
   "svelte5": true,
   "runes": false,

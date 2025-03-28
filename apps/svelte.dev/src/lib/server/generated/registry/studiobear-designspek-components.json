@@ -1,6 +1,6 @@
 {
   "name": "@studiobear/designspek-components",
-  "description": "Create system UI components for Svelte.",
+  "description": "Provides system UI components for Svelte.",
   "repo_url": "",
   "authors": [
     "studiobear-co",
@@ -10,8 +10,7 @@
   "dependents": 0,
   "updated": "2020-09-12T00:02:20.091Z",
   "tags": [
-    "component-library",
-    "ui"
+    "design-system"
   ],
   "svelte5": false,
   "runes": false

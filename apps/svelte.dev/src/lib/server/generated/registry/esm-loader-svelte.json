@@ -1,6 +1,6 @@
 {
   "name": "esm-loader-svelte",
-  "description": "Load Svelte and SvelteKit files with ESModule loader.",
+  "description": "Load Svelte files with ESModule loader, transpiling on the fly.",
   "repo_url": "https://github.com/brev/esm-loaders",
   "authors": [
     "brev"
@@ -10,8 +10,7 @@
   "dependents": 0,
   "updated": "2023-11-01T02:32:43.545Z",
   "tags": [
-    "tooling",
-    "preprocessor"
+    "tooling"
   ],
   "svelte5": false,
   "runes": false,

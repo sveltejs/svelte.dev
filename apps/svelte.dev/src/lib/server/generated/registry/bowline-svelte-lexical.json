@@ -1,6 +1,6 @@
 {
   "name": "@bowline/svelte-lexical",
-  "description": "Rich text editor for Svelte based on lexical.",
+  "description": "Create rich text editors for Svelte using Lexical.",
   "repo_url": "https://github.com/bowlineai/svelte-lexical",
   "authors": [
     "stayradiated"

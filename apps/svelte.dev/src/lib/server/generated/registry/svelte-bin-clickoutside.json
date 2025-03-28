@@ -1,6 +1,6 @@
 {
   "name": "@svelte-bin/clickoutside",
-  "description": "Detect clicks outside Svelte component elements.",
+  "description": "Adds click outside detection to Svelte elements via action.",
   "repo_url": "",
   "authors": [
     "binsarjr"
@@ -9,7 +9,7 @@
   "dependents": 0,
   "updated": "2023-11-13T20:03:51.247Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false

@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-svelte-anywhere",
-  "description": "Use Svelte components anywhere in HTML.",
+  "description": "Use Svelte components anywhere with Vite plugin.",
   "repo_url": "https://github.com/vidschofelix/vite-plugin-svelte-anywhere",
   "authors": [
     "vidschofelix"
@@ -10,8 +10,7 @@
   "dependents": 0,
   "updated": "2025-02-14T20:01:21.281Z",
   "tags": [
-    "tooling",
-    "preprocessor"
+    "tooling"
   ],
   "svelte5": true,
   "runes": false,

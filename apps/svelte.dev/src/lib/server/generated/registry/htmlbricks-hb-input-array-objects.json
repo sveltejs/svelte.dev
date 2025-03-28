@@ -1,6 +1,6 @@
 {
   "name": "@htmlbricks/hb-input-array-objects",
-  "description": "Provides a Svelte-Bootstrap text input web component.",
+  "description": "Svelte-Bootstrap Text Input WebComponent.",
   "repo_url": "",
   "authors": [
     "dariocaruso"
@@ -9,7 +9,6 @@
   "dependents": 1,
   "updated": "2025-03-24T18:07:26.214Z",
   "tags": [
-    "component-library",
     "ui"
   ],
   "svelte5": false,

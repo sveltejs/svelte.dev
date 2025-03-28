@@ -1,6 +1,6 @@
 {
   "name": "@sveltekit-board/user",
-  "description": "Provide simple user management for SvelteKit applications.",
+  "description": "Provide simple user library for SvelteKit.",
   "repo_url": "",
   "authors": [
     "hotsixman"
@@ -9,8 +9,7 @@
   "dependents": 0,
   "updated": "2024-04-28T06:59:58.509Z",
   "tags": [
-    "auth",
-    "utility"
+    "auth"
   ],
   "svelte5": false,
   "runes": false

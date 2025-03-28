@@ -1,6 +1,6 @@
 {
   "name": "@vtmn/svelte",
-  "description": "Vitamin Svelte components library.",
+  "description": "Vitamin Design System components for Svelte.",
   "repo_url": "https://github.com/Decathlon/vitamin-web",
   "authors": [
     "ossdecathlon",
@@ -11,7 +11,7 @@
   "dependents": 1,
   "updated": "2024-03-25T10:00:34.270Z",
   "tags": [
-    "component-library",
+    "design-system",
     "ui"
   ],
   "svelte5": false,

@@ -1,6 +1,6 @@
 {
   "name": "@svuick/action",
-  "description": "Create Svelte actions for various use cases.",
+  "description": "Create Svelte actions for various UI interactions.",
   "repo_url": "https://gitlab.com/david-plugge/svuick",
   "authors": [
     "davidplugge"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2022-07-29T15:09:25.961Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false

@@ -1,6 +1,6 @@
 {
   "name": "svelte-adapter-aspcore",
-  "description": "Adapts SvelteKit apps for ASP.NET Core SPA.",
+  "description": "Adapter for SvelteKit apps running on ASP.NET Core.",
   "repo_url": "",
   "authors": [
     "kiho"

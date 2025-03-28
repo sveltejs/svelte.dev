@@ -1,6 +1,6 @@
 {
   "name": "@svelteuidev/motion",
-  "description": "Provides Svelte animation library with transition functions and components.",
+  "description": "Add transitions and animations to Svelte UI.",
   "repo_url": "https://github.com/svelteuidev/svelteui",
   "authors": [
     "lowkey_daisy",

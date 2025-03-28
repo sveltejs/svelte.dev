@@ -1,6 +1,6 @@
 {
   "name": "svelte-promise-modal",
-  "description": "Creates modals returning promises for Svelte applications.",
+  "description": "Create modals returning promises for Svelte applications.",
   "repo_url": "",
   "authors": [
     "esinx"
@@ -9,8 +9,7 @@
   "dependents": 0,
   "updated": "2020-06-01T09:48:19.187Z",
   "tags": [
-    "ui",
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false

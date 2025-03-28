@@ -1,6 +1,6 @@
 {
   "name": "drawer-svelte",
-  "description": "Create drawer component for Svelte 5 with hooks.",
+  "description": "Create drawer component for Svelte apps.",
   "repo_url": "https://github.com/0xD1M4/drawer-svelte",
   "authors": [
     "0xd1m4"

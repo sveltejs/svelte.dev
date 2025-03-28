@@ -1,6 +1,6 @@
 {
   "name": "smoo",
-  "description": "Create modal and outlet components for Svelte apps.",
+  "description": "Create simple modal or outlet components.",
   "repo_url": "https://github.com/pateketrueke/smoo",
   "authors": [
     "pateketrueke"

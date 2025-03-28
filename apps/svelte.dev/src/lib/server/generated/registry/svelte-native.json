@@ -1,6 +1,6 @@
 {
   "name": "svelte-native",
-  "description": "Build native mobile apps with Svelte and NativeScript.",
+  "description": "Integrate Svelte with NativeScript for mobile app development.",
   "repo_url": "https://github.com/halfnelson/svelte-native",
   "authors": [
     "halfnelson"
@@ -10,8 +10,7 @@
   "dependents": 1,
   "updated": "2024-11-07T19:51:32.658Z",
   "tags": [
-    "component-library",
-    "ui"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

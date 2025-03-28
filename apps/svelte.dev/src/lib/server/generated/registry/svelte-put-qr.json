@@ -1,6 +1,6 @@
 {
   "name": "@svelte-put/qr",
-  "description": "Render QR codes as SVG or IMG elements.",
+  "description": "Renders QR codes as SVG or IMG elements.",
   "repo_url": "https://github.com/vnphanquang/svelte-put",
   "authors": [
     "vnphanquang"

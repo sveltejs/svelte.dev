@@ -1,6 +1,6 @@
 {
   "name": "bt-svelte-dialogs",
-  "description": "Provide handy dialogs for Svelte, including alert, confirm, and modal.",
+  "description": "Provides handy dialogs for Svelte applications.",
   "repo_url": "https://github.com/bibizio/svelte-dialogs",
   "authors": [
     "bagaskarawg"
@@ -13,6 +13,6 @@
     "ui"
   ],
   "svelte5": true,
-  "runes": false,
+  "runes": true,
   "github_stars": 19
 }

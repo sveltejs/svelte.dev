@@ -1,6 +1,6 @@
 {
   "name": "svelte-medium-image-zoom",
-  "description": "Implement medium.com-style image zoom for Svelte.",
+  "description": "Provide medium.com-style image zoom for Svelte.",
   "repo_url": "https://github.com/moonlitgrace/svelte-medium-image-zoom",
   "authors": [
     "moonlitgrace"
@@ -10,8 +10,7 @@
   "dependents": 0,
   "updated": "2025-02-11T08:43:06.458Z",
   "tags": [
-    "ui",
-    "media"
+    "ui"
   ],
   "svelte5": true,
   "runes": false,

@@ -1,6 +1,6 @@
 {
   "name": "@tialro/rnbokit",
-  "description": "Integrate RNBO~ patches into Svelte apps.",
+  "description": "Integrate Cycling74's Max RNBO~ patches into Svelte apps.",
   "repo_url": "https://github.com/TiAlRo/RNBOKit",
   "authors": [
     "tialro"
@@ -10,7 +10,6 @@
   "dependents": 0,
   "updated": "2025-03-04T16:05:27.731Z",
   "tags": [
-    "component-library",
     "integration"
   ],
   "svelte5": true,

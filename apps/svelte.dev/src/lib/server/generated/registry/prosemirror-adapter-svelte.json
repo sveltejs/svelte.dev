@@ -1,6 +1,6 @@
 {
   "name": "@prosemirror-adapter/svelte",
-  "description": "Provides Svelte adapter for ProseMirror.",
+  "description": "Integrate ProseMirror editor with Svelte.",
   "repo_url": "https://github.com/Saul-Mirone/prosemirror-adapter",
   "authors": [
     "mirone"
@@ -10,7 +10,7 @@
   "dependents": 5,
   "updated": "2025-03-17T21:59:01.355Z",
   "tags": [
-    "utility"
+    "integration"
   ],
   "svelte5": true,
   "runes": false,

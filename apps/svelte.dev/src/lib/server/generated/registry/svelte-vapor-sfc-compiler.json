@@ -1,6 +1,6 @@
 {
   "name": "svelte-vapor-sfc-compiler",
-  "description": "Compile SFC-flavored Vapor Svelte components.",
+  "description": "Compile SFC-flavoured Vapor Svelte components.",
   "repo_url": "https://github.com/kazupon/inclusion-vapor",
   "authors": [
     "kazupon"
@@ -10,8 +10,7 @@
   "dependents": 1,
   "updated": "2024-11-27T11:37:00.184Z",
   "tags": [
-    "tooling",
-    "preprocessor"
+    "tooling"
   ],
   "svelte5": false,
   "runes": false,

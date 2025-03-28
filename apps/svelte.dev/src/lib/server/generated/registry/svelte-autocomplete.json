@@ -1,6 +1,6 @@
 {
   "name": "svelte-autocomplete",
-  "description": "Create lightweight typeahead/autocomplete component for Svelte.",
+  "description": "Create lightweight typeahead/autocomplete components.",
   "repo_url": "https://github.com/elcobvg/svelte-autocomplete",
   "authors": [
     "elcobvg"

@@ -1,6 +1,6 @@
 {
   "name": "@bucketh/icons",
-  "description": "Use Material Symbols as reusable Svelte components.",
+  "description": "Use Material Symbols as Svelte components.",
   "repo_url": "https://gitlab.com/bucketh/icons",
   "authors": [
     "ray-bucket"

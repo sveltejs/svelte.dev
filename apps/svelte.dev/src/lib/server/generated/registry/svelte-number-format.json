@@ -1,6 +1,6 @@
 {
   "name": "svelte-number-format",
-  "description": "Format numbers in Svelte input or text.",
+  "description": "Format numbers in Svelte input or text elements.",
   "repo_url": "",
   "authors": [
     "pitis"

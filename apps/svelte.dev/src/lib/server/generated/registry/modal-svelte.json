@@ -1,6 +1,6 @@
 {
   "name": "modal-svelte",
-  "description": "Create modal components for Svelte applications.",
+  "description": "Implement modal dialogs in Svelte applications.",
   "repo_url": "https://github.com/probablykasper/modal-svelte",
   "authors": [
     "probablykasper"

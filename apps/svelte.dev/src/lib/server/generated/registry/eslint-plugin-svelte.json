@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-svelte",
-  "description": "Provides ESLint rules for Svelte components.",
+  "description": "Lint Svelte code using AST.",
   "repo_url": "https://github.com/sveltejs/eslint-plugin-svelte",
   "authors": [
     "jounqin",
@@ -10,7 +10,7 @@
     "baseballyama"
   ],
   "homepage": "https://sveltejs.github.io/eslint-plugin-svelte",
-  "downloads": 441090,
+  "downloads": 442089,
   "dependents": 144,
   "updated": "2025-03-20T00:24:18.230Z",
   "tags": [

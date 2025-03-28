@@ -1,6 +1,6 @@
 {
   "name": "svelte-material-icons",
-  "description": "Provides Material Design Icons for Svelte.",
+  "description": "Display Material Design Icons in Svelte applications.",
   "repo_url": "https://github.com/ramiroaisen/svelte-material-icons",
   "authors": [
     "ramiroaisen"

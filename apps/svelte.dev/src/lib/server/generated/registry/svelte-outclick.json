@@ -1,6 +1,6 @@
 {
   "name": "svelte-outclick",
-  "description": "Detect clicks outside Svelte elements.",
+  "description": "Listen for clicks outside Svelte elements.",
   "repo_url": "https://github.com/babakfp/svelte-outclick",
   "authors": [
     "babakfp"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2025-03-02T18:16:12.982Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": true,
   "runes": false,

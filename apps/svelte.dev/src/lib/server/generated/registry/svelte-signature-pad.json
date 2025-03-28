@@ -1,6 +1,6 @@
 {
   "name": "svelte-signature-pad",
-  "description": "Capture smoothed signatures as SVG paths in Svelte.",
+  "description": "Captures smoothed signatures as SVG paths.",
   "repo_url": "https://github.com/captaincodeman/svelte-signature-pad",
   "authors": [
     "captaincodeman"

@@ -1,6 +1,6 @@
 {
   "name": "fontawesome-svelte",
-  "description": "Integrate FontAwesome icons into Svelte applications.",
+  "description": "Integrate FontAwesome icons into Svelte components.",
   "repo_url": "https://github.com/yukipastelcat/svelte-fontawesome",
   "authors": [
     "yukipastelcat"

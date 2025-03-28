@@ -1,6 +1,6 @@
 {
   "name": "@apsc/floating-ui-action",
-  "description": "Integrate Floating UI actions with Svelte directives.",
+  "description": "Use Floating UI actions with Svelte directives.",
   "repo_url": "https://github.com/andrey-pavlenko/svelte-components",
   "authors": [
     "andrey-pavlenko"
@@ -10,7 +10,8 @@
   "dependents": 0,
   "updated": "2023-02-03T18:07:27.226Z",
   "tags": [
-    "utility"
+    "ui",
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

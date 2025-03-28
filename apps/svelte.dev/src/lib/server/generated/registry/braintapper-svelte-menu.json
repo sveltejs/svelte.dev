@@ -1,6 +1,6 @@
 {
   "name": "braintapper-svelte-menu",
-  "description": "Creates menu components for Svelte applications.",
+  "description": "Provides Svelte component for creating menus.",
   "repo_url": "https://github.com/braintapper/braintapper-svelte-menu",
   "authors": [
     "braintapper"

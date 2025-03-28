@@ -1,6 +1,6 @@
 {
   "name": "@webdevandsausages/mailing-list-widget",
-  "description": "Create mailing list signup widget for Svelte.",
+  "description": "Display mailing list widget for Svelte apps.",
   "repo_url": "https://github.com/webDevAndSausages/world-of-webdevandsausages",
   "authors": [
     "rikuvan"
@@ -10,8 +10,7 @@
   "dependents": 0,
   "updated": "2020-02-16T13:46:27.137Z",
   "tags": [
-    "ui",
-    "integration"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

@@ -1,6 +1,6 @@
 {
   "name": "@lukulent/svelte-umami",
-  "description": "Integrates Umami analytics into Svelte and SvelteKit apps.",
+  "description": "Add Umami Analytics to Svelte and SvelteKit apps.",
   "repo_url": "https://github.com/SaschaLucius/svelte-umami",
   "authors": [
     "sascha-lucius"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2025-02-07T14:04:02.622Z",
   "tags": [
-    "utility"
+    "seo"
   ],
   "svelte5": true,
   "runes": false,

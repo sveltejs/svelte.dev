@@ -1,6 +1,6 @@
 {
   "name": "@eslint-sets/eslint-config-svelte",
-  "description": "Provide ESLint configurations for Svelte projects.",
+  "description": "Provides ESLint configurations for Svelte projects.",
   "repo_url": "https://github.com/saqqdy/eslint-sets",
   "authors": [
     "saqqdy"

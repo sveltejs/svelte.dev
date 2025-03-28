@@ -1,6 +1,6 @@
 {
   "name": "@devjoyvn/web-components",
-  "description": "Bundle fast, context-free web components for use in Svelte.",
+  "description": "Bundle of fast, context-free Svelte web components.",
   "repo_url": "",
   "authors": [
     "devjoy"
@@ -9,7 +9,7 @@
   "dependents": 0,
   "updated": "2022-04-12T08:15:09.298Z",
   "tags": [
-    "component-library"
+    "ui"
   ],
   "svelte5": false,
   "runes": false

@@ -1,6 +1,6 @@
 {
   "name": "sveltekit-chessground",
-  "description": "Create Svelte chessboard components using Chessground UI.",
+  "description": "Provides Svelte component for Chessground chess UI.",
   "repo_url": "",
   "authors": [
     "sharlesleglerg"

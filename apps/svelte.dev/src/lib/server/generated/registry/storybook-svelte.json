@@ -1,6 +1,6 @@
 {
   "name": "@storybook/svelte",
-  "description": "Develop and test Svelte components in isolation with Storybook.",
+  "description": "Develop and document Svelte components with Storybook.",
   "repo_url": "https://github.com/storybookjs/storybook",
   "authors": [
     "ndelangen",
@@ -17,7 +17,7 @@
     "storybook-bot"
   ],
   "homepage": "https://github.com/storybookjs/storybook/tree/next/code/renderers/svelte",
-  "downloads": 84808,
+  "downloads": 91014,
   "dependents": 5,
   "updated": "2025-03-26T16:08:00.099Z",
   "tags": [
@@ -25,5 +25,5 @@
   ],
   "svelte5": false,
   "runes": false,
-  "github_stars": 86229
+  "github_stars": 86239
 }

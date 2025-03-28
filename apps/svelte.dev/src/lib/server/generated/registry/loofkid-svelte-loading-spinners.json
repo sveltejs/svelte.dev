@@ -1,6 +1,6 @@
 {
   "name": "@loofkid/svelte-loading-spinners",
-  "description": "Provide collection of loading spinners for Svelte.",
+  "description": "Provide collection of loading spinners for Svelte apps.",
   "repo_url": "https://github.com/schum123/svelte-loading-spinners",
   "authors": [
     "loofkid"

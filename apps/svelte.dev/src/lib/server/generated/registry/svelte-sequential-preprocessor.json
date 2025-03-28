@@ -6,11 +6,11 @@
     "pchynoweth"
   ],
   "homepage": "https://github.com/pchynoweth/svelte-sequential-preprocessor#readme",
-  "downloads": 15785,
+  "downloads": 15654,
   "dependents": 8,
   "updated": "2024-09-29T17:46:07.132Z",
   "tags": [
-    "preprocessor"
+    "tooling"
   ],
   "svelte5": false,
   "runes": false,

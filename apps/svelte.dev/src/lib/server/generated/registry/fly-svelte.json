@@ -1,6 +1,6 @@
 {
   "name": "fly-svelte",
-  "description": "Compile Svelte components with Fly.",
+  "description": "Compile Svelte components with Fly build tool.",
   "repo_url": "https://github.com/flyjs/fly-svelte",
   "authors": [
     "lukeed"

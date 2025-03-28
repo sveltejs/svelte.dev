@@ -1,6 +1,6 @@
 {
   "name": "svelte-g6",
-  "description": "Visualize graphs using AntV G6 in Svelte applications.",
+  "description": "Integrates AntV G6 graph visualization library with Svelte.",
   "repo_url": "https://github.com/AlbertAZ1992/svelte-g6",
   "authors": [
     "albertaz777"

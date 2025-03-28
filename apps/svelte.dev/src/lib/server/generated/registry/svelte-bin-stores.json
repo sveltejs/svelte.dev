@@ -1,6 +1,6 @@
 {
   "name": "@svelte-bin/stores",
-  "description": "Offer useful Svelte stores for local storage, query params, etc.",
+  "description": "Provide useful Svelte stores for local/session storage and query params.",
   "repo_url": "",
   "authors": [
     "binsarjr"
@@ -9,7 +9,7 @@
   "dependents": 0,
   "updated": "2023-11-15T18:07:29.400Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false

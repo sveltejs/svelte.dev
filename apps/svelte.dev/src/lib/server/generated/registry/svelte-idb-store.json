@@ -1,6 +1,6 @@
 {
   "name": "svelte-idb-store",
-  "description": "Synchronize Svelte stores with IndexedDB for persistent data.",
+  "description": "Sync Svelte stores with IndexedDB for persistent data storage.",
   "repo_url": "https://github.com/kroniapp/svelte-idb-store",
   "authors": [
     "kronia"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2024-10-01T06:32:46.990Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

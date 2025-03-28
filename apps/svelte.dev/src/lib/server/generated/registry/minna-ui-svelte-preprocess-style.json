@@ -1,6 +1,6 @@
 {
   "name": "@minna-ui/svelte-preprocess-style",
-  "description": "Preprocess Svelte styles with PostCSS in minna-ui projects.",
+  "description": "Preprocess Svelte styles with PostCSS for Minna UI projects.",
   "repo_url": "https://github.com/WeAreGenki/minna-ui",
   "authors": [
     "maxmilton"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2018-10-21T03:35:00.359Z",
   "tags": [
-    "preprocessor"
+    "tooling"
   ],
   "svelte5": false,
   "runes": false,

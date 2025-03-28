@@ -1,17 +1,16 @@
 {
   "name": "svelte-clerk",
-  "description": "Integrate Clerk authentication with SvelteKit applications.",
+  "description": "Integrate Clerk authentication with SvelteKit.",
   "repo_url": "https://github.com/wobsoriano/svelte-clerk",
   "authors": [
     "wobsoriano"
   ],
   "homepage": "https://github.com/wobsoriano/svelte-clerk#readme",
-  "downloads": 627,
+  "downloads": 795,
   "dependents": 0,
-  "updated": "2025-03-26T05:30:02.753Z",
+  "updated": "2025-03-27T06:13:03.090Z",
   "tags": [
-    "auth",
-    "integration"
+    "auth"
   ],
   "svelte5": true,
   "runes": false,

@@ -1,6 +1,6 @@
 {
   "name": "@haysquare/svelte-multi-select",
-  "description": "Create multi-select dropdown components for SvelteKit projects.",
+  "description": "Create custom multi-select components for SvelteKit projects.",
   "repo_url": "https://github.com/haysquareA/svelte-multiselect",
   "authors": [
     "haysquare"
@@ -10,7 +10,8 @@
   "dependents": 0,
   "updated": "2024-03-21T17:08:38.443Z",
   "tags": [
-    "ui"
+    "ui",
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

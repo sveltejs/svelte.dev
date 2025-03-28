@@ -1,6 +1,6 @@
 {
   "name": "sveltekit-auth0-js",
-  "description": "Integrates Auth0 authentication into SvelteKit applications.",
+  "description": "Implement Auth0 authentication in SvelteKit applications.",
   "repo_url": "",
   "authors": [
     "leelaing"

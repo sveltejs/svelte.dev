@@ -1,6 +1,6 @@
 {
   "name": "@flexilte/skeleton",
-  "description": "Provide skeleton support for Flexilte, a Svelte UI framework.",
+  "description": "Provide skeleton support for Flexilte, a JSON-driven Svelte framework.",
   "repo_url": "https://github.com/flexilte/flexilte",
   "authors": [
     "borgmon"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2024-11-20T03:33:24.380Z",
   "tags": [
-    "component-library"
+    "design-system"
   ],
   "svelte5": false,
   "runes": false,

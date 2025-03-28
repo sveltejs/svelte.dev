@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-svelte-md",
-  "description": "Convert Markdown files to Svelte components using Vite.",
+  "description": "Convert markdown to svelte template.",
   "repo_url": "https://github.com/ota-meshi/vite-plugin-svelte-md",
   "authors": [
     "ota-meshi"

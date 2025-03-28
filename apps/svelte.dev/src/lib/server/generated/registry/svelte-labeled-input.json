@@ -1,6 +1,6 @@
 {
   "name": "svelte-labeled-input",
-  "description": "Create styled input fields with labels, validation, and error messages.",
+  "description": "Build labeled input fields with validation and error messages.",
   "repo_url": "https://github.com/ivosdc/svelte-labeled-input",
   "authors": [
     "nologin"

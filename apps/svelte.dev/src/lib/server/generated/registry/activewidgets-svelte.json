@@ -1,6 +1,6 @@
 {
   "name": "@activewidgets/svelte",
-  "description": "Create virtualized datagrid component for Svelte.",
+  "description": "Provide virtualized datagrid component for Svelte applications.",
   "repo_url": "https://github.com/activewidgets/svelte",
   "authors": [
     "xkam"

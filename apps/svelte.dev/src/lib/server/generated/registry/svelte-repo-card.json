@@ -1,6 +1,6 @@
 {
   "name": "svelte-repo-card",
-  "description": "Display GitHub repository cards in Svelte applications.",
+  "description": "Displays GitHub repository cards in Svelte applications.",
   "repo_url": "https://github.com/thislooksfun/svelte-repo-card",
   "authors": [
     "thislooksfun"

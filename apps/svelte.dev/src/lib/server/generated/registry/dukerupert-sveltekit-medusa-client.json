@@ -1,6 +1,6 @@
 {
   "name": "@dukerupert/sveltekit-medusa-client",
-  "description": "Communicate with Medusa ecommerce backend from SvelteKit.",
+  "description": "Client library for Medusa ecommerce backend in SvelteKit.",
   "repo_url": "https://github.com/dukerupert/sveltekit-medusa-client",
   "authors": [
     "dukerupert"

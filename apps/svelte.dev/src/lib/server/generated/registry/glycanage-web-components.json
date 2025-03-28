@@ -1,6 +1,6 @@
 {
   "name": "@glycanage/web-components",
-  "description": "Web components for rendering disease segments in GlycanAge reports.",
+  "description": "Provides web components for rendering disease segments.",
   "repo_url": "https://github.com/GlycanAge/ga-components",
   "authors": [
     "flauc1"
@@ -10,7 +10,6 @@
   "dependents": 0,
   "updated": "2025-02-19T11:11:41.193Z",
   "tags": [
-    "component-library",
     "ui"
   ],
   "svelte5": false,

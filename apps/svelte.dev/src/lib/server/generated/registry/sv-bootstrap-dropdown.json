@@ -1,6 +1,6 @@
 {
   "name": "sv-bootstrap-dropdown",
-  "description": "Create Bootstrap dropdown components for Svelte.",
+  "description": "Create Bootstrap dropdown components for Svelte apps.",
   "repo_url": "https://github.com/Sidd27/sv-bootstrap-dropdown",
   "authors": [
     "sidd27"

@@ -1,0 +1,18 @@
+{
+  "name": "@signaldb/svelte",
+  "description": "Svelte 5 plugin for SignalDB, a local-first database.",
+  "repo_url": "https://github.com/maxnowack/signaldb",
+  "authors": [
+    "maxnowack"
+  ],
+  "homepage": "https://signaldb.js.org",
+  "downloads": 9,
+  "dependents": 0,
+  "updated": "2025-03-27T14:04:03.004Z",
+  "tags": [
+    "miscellaneous"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 417
+}

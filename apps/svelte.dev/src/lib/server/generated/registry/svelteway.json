@@ -1,6 +1,6 @@
 {
   "name": "svelteway",
-  "description": "Build UI's for SvelteKit applications.",
+  "description": "Build UIs for SvelteKit applications.",
   "repo_url": "https://github.com/elikelierpolite/svelteway",
   "authors": [
     "elikelierpolite"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2023-04-25T00:11:31.785Z",
   "tags": [
-    "component-library"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

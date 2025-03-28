@@ -1,6 +1,6 @@
 {
   "name": "svelte-fancy-darkmode",
-  "description": "Create fancy dark mode toggle for Svelte apps.",
+  "description": "Implement a fancy dark mode toggle for Svelte apps.",
   "repo_url": "https://github.com/ryoppippi/svelte-fancy-darkmode",
   "authors": [
     "ryoppippi"

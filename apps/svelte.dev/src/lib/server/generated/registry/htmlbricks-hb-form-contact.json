@@ -1,6 +1,6 @@
 {
   "name": "@htmlbricks/hb-form-contact",
-  "description": "Create contact form web components for Svelte applications.",
+  "description": "Creates Svelte Form Contact WebComponent.",
   "repo_url": "",
   "authors": [
     "dariocaruso"

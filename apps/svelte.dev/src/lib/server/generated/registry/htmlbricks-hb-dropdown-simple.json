@@ -1,6 +1,6 @@
 {
   "name": "@htmlbricks/hb-dropdown-simple",
-  "description": "Create simple dropdown components for Svelte.",
+  "description": "Create dropdown simple web component for Svelte.",
   "repo_url": "",
   "authors": [
     "dariocaruso"

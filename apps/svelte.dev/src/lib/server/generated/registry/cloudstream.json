@@ -1,6 +1,6 @@
 {
   "name": "cloudstream",
-  "description": "Embed Cloudflare Stream videos in Svelte applications.",
+  "description": "Embed Cloudflare Stream videos in Svelte apps.",
   "repo_url": "https://github.com/GreenestGoat/cloudstream",
   "authors": [
     "greenestgoat"

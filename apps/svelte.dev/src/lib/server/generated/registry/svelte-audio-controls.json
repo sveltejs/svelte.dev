@@ -1,6 +1,6 @@
 {
   "name": "svelte-audio-controls",
-  "description": "Wrap audio tag with styled elements for consistent UI.",
+  "description": "Wrap audio tag with styled controls for consistent experience.",
   "repo_url": "https://github.com/Linkcube/svelte-audio-controls",
   "authors": [
     "linkcube"
@@ -10,7 +10,8 @@
   "dependents": 0,
   "updated": "2020-02-21T22:19:18.414Z",
   "tags": [
-    "ui"
+    "ui",
+    "media"
   ],
   "svelte5": false,
   "runes": false,

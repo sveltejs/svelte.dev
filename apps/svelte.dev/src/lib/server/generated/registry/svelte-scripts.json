@@ -1,6 +1,6 @@
 {
   "name": "svelte-scripts",
-  "description": "Provide configurations and scripts for Svelte applications.",
+  "description": "Create Svelte applications and libraries with zero settings.",
   "repo_url": "https://github.com/andrelmlins/svelte-scripts",
   "authors": [
     "andrelmlins"

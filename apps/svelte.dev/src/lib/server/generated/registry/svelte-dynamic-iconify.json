@@ -1,6 +1,6 @@
 {
   "name": "svelte-dynamic-iconify",
-  "description": "Renders Iconify icons dynamically in Svelte.",
+  "description": "Renders Iconify icons dynamically in Svelte applications.",
   "repo_url": "https://github.com/hazg/svelte-dynamic-iconify",
   "authors": [
     "hazg"

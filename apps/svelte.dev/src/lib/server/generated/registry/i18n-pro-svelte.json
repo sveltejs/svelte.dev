@@ -1,6 +1,6 @@
 {
   "name": "@i18n-pro/svelte",
-  "description": "Internationalization tool for Svelte with automatic translation.",
+  "description": "Internationalize Svelte apps with automatic translation features.",
   "repo_url": "",
   "authors": [
     "eyelly"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2024-04-29T08:05:36.290Z",
   "tags": [
-    "utility"
+    "integration"
   ],
   "svelte5": false,
   "runes": false

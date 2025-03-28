@@ -1,6 +1,6 @@
 {
   "name": "@gratrockstar/svelte-simple-accordion",
-  "description": "Implement simple accordion component for Svelte applications.",
+  "description": "Create simple accordion component for Svelte applications.",
   "repo_url": "https://github.com/gratrockstar/svelte-simple-accordion",
   "authors": [
     "gratrockstar"

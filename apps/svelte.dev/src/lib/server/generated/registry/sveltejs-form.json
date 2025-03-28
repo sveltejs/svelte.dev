@@ -1,6 +1,6 @@
 {
   "name": "sveltejs-form",
-  "description": "Enable complex form validation in Svelte applications.",
+  "description": "Provides complex form validation for Svelte components.",
   "repo_url": "https://github.com/jeremiedubuis/SvelteForm",
   "authors": [
     "jeremiedubuis"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2020-07-07T05:56:57.009Z",
   "tags": [
-    "utility"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

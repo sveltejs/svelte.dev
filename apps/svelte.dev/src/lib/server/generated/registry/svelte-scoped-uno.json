@@ -1,6 +1,6 @@
 {
   "name": "svelte-scoped-uno",
-  "description": "Integrates UnoCSS utility styles in Svelte components.",
+  "description": "Use UnoCSS utility styles in modular Svelte components.",
   "repo_url": "https://github.com/jacob-8/svelte-scoped-uno",
   "authors": [
     "jacobbowdoin"
@@ -10,7 +10,8 @@
   "dependents": 1,
   "updated": "2023-05-20T00:02:39.075Z",
   "tags": [
-    "utility"
+    "ui",
+    "tooling"
   ],
   "svelte5": false,
   "runes": false,

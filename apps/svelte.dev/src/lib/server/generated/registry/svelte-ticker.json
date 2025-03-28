@@ -1,6 +1,6 @@
 {
   "name": "svelte-ticker",
-  "description": "Create scrolling text tickers in Svelte applications.",
+  "description": "Create ticker-style scrolling content for Svelte.",
   "repo_url": "https://github.com/PaulMaly/svelte-ticker",
   "authors": [
     "paulmaly"

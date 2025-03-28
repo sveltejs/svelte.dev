@@ -1,6 +1,6 @@
 {
   "name": "pelte",
-  "description": "Compile, bundle, publish Svelte components to npm easily.",
+  "description": "Publish Svelte components to npm with bundling and web component support.",
   "repo_url": "https://github.com/philter87/publish-svelte",
   "authors": [
     "philter87"

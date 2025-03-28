@@ -1,6 +1,6 @@
 {
   "name": "unplugin-svelte-components",
-  "description": "Auto import Svelte components, no import required.",
+  "description": "Enables on-demand component auto-importing for Svelte.",
   "repo_url": "https://github.com/Mohamed-Kaizen/unplugin-svelte-components",
   "authors": [
     "mohamed-kaizen"
@@ -10,8 +10,7 @@
   "dependents": 0,
   "updated": "2023-10-22T06:53:41.200Z",
   "tags": [
-    "tooling",
-    "preprocessor"
+    "tooling"
   ],
   "svelte5": false,
   "runes": false,

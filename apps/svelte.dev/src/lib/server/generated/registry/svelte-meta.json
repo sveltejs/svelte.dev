@@ -1,6 +1,6 @@
 {
   "name": "svelte-meta",
-  "description": "Generates SEO metadata for Svelte applications.",
+  "description": "Generate SEO metadata for Svelte applications.",
   "repo_url": "https://github.com/peppercornstudio/svelte-meta",
   "authors": [
     "madeleineostoja"

@@ -1,18 +1,18 @@
 {
   "name": "@imask/svelte",
-  "description": "Create Svelte input mask components.",
+  "description": "Create input masks for Svelte applications.",
   "repo_url": "https://github.com/uNmAnNeR/imaskjs",
   "authors": [
     "unmanner"
   ],
   "homepage": "https://github.com/uNmAnNeR/imaskjs/tree/master#readme",
-  "downloads": 7196,
+  "downloads": 7836,
   "dependents": 12,
   "updated": "2024-05-21T07:16:41.242Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,
-  "github_stars": 5038
+  "github_stars": 5041
 }

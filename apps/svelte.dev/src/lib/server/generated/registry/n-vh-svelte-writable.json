@@ -1,6 +1,6 @@
 {
   "name": "@n-vh/svelte-writable",
-  "description": "Create custom writables for Svelte applications.",
+  "description": "Create custom writable stores for Svelte applications.",
   "repo_url": "https://github.com/n-vh/svelte-writable",
   "authors": [
     "n-vh"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2023-01-24T17:47:17.199Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

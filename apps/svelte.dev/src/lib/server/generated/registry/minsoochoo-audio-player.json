@@ -1,6 +1,6 @@
 {
   "name": "@minsoochoo/audio-player",
-  "description": "Create audio player with custom controls, playlist, and search.",
+  "description": "SvelteKit audio player with custom controls and playlist.",
   "repo_url": "https://github.com/fel1x-developer/audio-player",
   "authors": [
     "minsoochoo"

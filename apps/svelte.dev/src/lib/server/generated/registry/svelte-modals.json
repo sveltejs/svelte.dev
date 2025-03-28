@@ -1,12 +1,12 @@
 {
   "name": "svelte-modals",
-  "description": "Create simple, flexible modal manager for Svelte.",
+  "description": "Provides simple, flexible, zero-dependency modal manager for Svelte.",
   "repo_url": "https://github.com/mattjennings/svelte-modals",
   "authors": [
     "mattjennings"
   ],
   "homepage": "https://svelte-modals.mattjennin.gs",
-  "downloads": 5737,
+  "downloads": 6040,
   "dependents": 7,
   "updated": "2025-03-09T18:59:40.203Z",
   "tags": [

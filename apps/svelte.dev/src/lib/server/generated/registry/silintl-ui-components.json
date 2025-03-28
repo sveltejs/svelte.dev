@@ -1,6 +1,6 @@
 {
   "name": "@silintl/ui-components",
-  "description": "Reusable Svelte components for internal applications.",
+  "description": "Develop reusable Svelte components for internal applications.",
   "repo_url": "https://github.com/silinternational/ui-components",
   "authors": [
     "fillup",
@@ -14,8 +14,7 @@
   "dependents": 0,
   "updated": "2024-12-11T05:17:05.186Z",
   "tags": [
-    "component-library",
-    "ui"
+    "design-system"
   ],
   "svelte5": false,
   "runes": false,

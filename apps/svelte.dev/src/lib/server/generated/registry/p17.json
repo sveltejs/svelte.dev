@@ -1,6 +1,6 @@
 {
   "name": "p17",
-  "description": "Builds forms with validation and user interaction in Svelte.",
+  "description": "Experiment with Svelte form behavior and user interaction.",
   "repo_url": "https://github.com/PaulioRandall/p17",
   "authors": [
     "pauliorandall"
@@ -10,7 +10,8 @@
   "dependents": 0,
   "updated": "2024-07-07T14:25:33.069Z",
   "tags": [
-    "component-library"
+    "ui",
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

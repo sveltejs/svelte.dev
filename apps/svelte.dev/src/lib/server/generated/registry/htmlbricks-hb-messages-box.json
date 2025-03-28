@@ -1,6 +1,6 @@
 {
   "name": "@htmlbricks/hb-messages-box",
-  "description": "Create message box components for Svelte applications.",
+  "description": "Create a message box component in Svelte.",
   "repo_url": "",
   "authors": [
     "dariocaruso"

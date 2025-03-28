@@ -1,12 +1,12 @@
 {
   "name": "svelte-motion",
-  "description": "Create animations in Svelte based on framer-motion.",
+  "description": "Animate Svelte components with framer-motion.",
   "repo_url": "https://github.com/micha-lmxt/svelte-motion",
   "authors": [
     "micha-lmxt"
   ],
   "homepage": "https://github.com/micha-lmxt/svelte-motion#readme",
-  "downloads": 10458,
+  "downloads": 10419,
   "dependents": 2,
   "updated": "2024-02-27T20:12:47.917Z",
   "tags": [

@@ -1,6 +1,6 @@
 {
   "name": "svelte-transition-extras",
-  "description": "Enhance Svelte transitions with extra control and effects.",
+  "description": "Extend Svelte transitions with more control over execution.",
   "repo_url": "",
   "authors": [
     "ovao"

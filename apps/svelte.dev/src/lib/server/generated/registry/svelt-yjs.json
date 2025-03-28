@@ -1,6 +1,6 @@
 {
   "name": "svelt-yjs",
-  "description": "Build Svelte stores from Yjs types for collaborative apps.",
+  "description": "Create Svelte stores from Yjs types for collaborative apps.",
   "repo_url": "https://github.com/relm-us/svelt-yjs",
   "authors": [
     "canadaduane"
@@ -9,7 +9,7 @@
   "dependents": 0,
   "updated": "2021-03-05T14:44:13.946Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

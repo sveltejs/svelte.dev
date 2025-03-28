@@ -1,6 +1,6 @@
 {
   "name": "svelte-number-spinner",
-  "description": "Provides a number spinner component for Svelte applications.",
+  "description": "Implement highly configurable number spinner component for Svelte.",
   "repo_url": "https://github.com/bohnacker/svelte-number-spinner",
   "authors": [
     "bohnacker"

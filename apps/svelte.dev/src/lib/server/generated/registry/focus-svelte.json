@@ -1,6 +1,6 @@
 {
   "name": "focus-svelte",
-  "description": "Provides focus lock functionality for Svelte applications.",
+  "description": "Create focus lock for Svelte with zero dependencies.",
   "repo_url": "https://github.com/chanced/focus-svelte",
   "authors": [
     "chance--"
@@ -10,7 +10,7 @@
   "dependents": 1,
   "updated": "2021-10-17T16:55:36.762Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

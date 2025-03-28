@@ -1,6 +1,6 @@
 {
   "name": "@responsive-ui/card",
-  "description": "Offers card component for Svelte applications.",
+  "description": "Create card component for responsive Svelte UI.",
   "repo_url": "https://github.com/wetix/responsive-ui",
   "authors": [
     "rexlow",

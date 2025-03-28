@@ -1,6 +1,6 @@
 {
   "name": "braintapper-svelte-inline-input",
-  "description": "Provides Svelte component for inline input.",
+  "description": "Provides a Svelte component for inline input.",
   "repo_url": "https://github.com/braintapper/braintapper-svelte-inline-input",
   "authors": [
     "braintapper"

@@ -1,6 +1,6 @@
 {
   "name": "@humanspeak/svelte-keyed",
-  "description": "Enable deep object/array manipulation with TypeScript support.",
+  "description": "Create deep, reactive stores for Svelte with TypeScript support.",
   "repo_url": "https://github.com/humanspeak/svelte-keyed",
   "authors": [
     "humanspeakadmin"
@@ -10,7 +10,7 @@
   "dependents": 1,
   "updated": "2025-01-27T19:29:34.608Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": true,
   "runes": false,

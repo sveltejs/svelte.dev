@@ -1,6 +1,6 @@
 {
   "name": "@jill64/sentry-sveltekit-cloudflare",
-  "description": "Integrates Sentry error tracking with SvelteKit and Cloudflare.",
+  "description": "Integrate Sentry with SvelteKit Cloudflare adapter.",
   "repo_url": "https://github.com/jill64/sentry-sveltekit-cloudflare",
   "authors": [
     "jill64"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2025-01-22T21:47:44.693Z",
   "tags": [
-    "integration"
+    "tooling"
   ],
   "svelte5": false,
   "runes": false,

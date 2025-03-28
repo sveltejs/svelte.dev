@@ -1,6 +1,6 @@
 {
   "name": "svelte-file-icons",
-  "description": "Use file icon components for Svelte apps.",
+  "description": "Provide SVG file icon components for Svelte.",
   "repo_url": "https://github.com/shinokada/svelte-file-icons",
   "authors": [
     "shinichiokada"

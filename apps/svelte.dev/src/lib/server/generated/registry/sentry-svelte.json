@@ -15,9 +15,9 @@
     "zeeg"
   ],
   "homepage": "https://github.com/getsentry/sentry-javascript/tree/master/packages/svelte",
-  "downloads": 94367,
+  "downloads": 91431,
   "dependents": 8,
-  "updated": "2025-03-24T13:46:54.564Z",
+  "updated": "2025-03-27T18:39:23.324Z",
   "tags": [
     "integration"
   ],

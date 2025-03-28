@@ -1,6 +1,6 @@
 {
   "name": "svelte-overlay",
-  "description": "Create dropdowns, tooltips, popovers with Svelte overlay component.",
+  "description": "Create overlay components for dropdowns, tooltips, and popovers.",
   "repo_url": "https://github.com/wysher/svelte-overlay",
   "authors": [
     "wysher"

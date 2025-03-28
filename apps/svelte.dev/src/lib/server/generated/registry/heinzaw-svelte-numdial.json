@@ -1,6 +1,6 @@
 {
   "name": "@heinzaw/svelte-numdial",
-  "description": "Creates number dial component for Svelte apps.",
+  "description": "Create number dial component for Svelte applications.",
   "repo_url": "https://github.com/lianhuilui/svelte-numdial",
   "authors": [
     "heinzaw"

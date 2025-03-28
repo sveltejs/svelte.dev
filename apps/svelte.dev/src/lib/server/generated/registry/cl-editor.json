@@ -1,6 +1,6 @@
 {
   "name": "cl-editor",
-  "description": "Create lightweight text editors with Svelte and TypeScript.",
+  "description": "Creates lightweight text editor built with Svelte.",
   "repo_url": "https://github.com/nenadpnc/cl-editor",
   "authors": [
     "nenadpnc"
@@ -10,7 +10,7 @@
   "dependents": 2,
   "updated": "2021-12-03T20:40:58.512Z",
   "tags": [
-    "content"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

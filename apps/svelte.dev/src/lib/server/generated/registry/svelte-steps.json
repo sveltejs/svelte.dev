@@ -1,6 +1,6 @@
 {
   "name": "svelte-steps",
-  "description": "Provides customizable step component for Svelte.",
+  "description": "Create customizable step components in Svelte.",
   "repo_url": "https://github.com/shaozi/svelte-steps",
   "authors": [
     "shaozi"

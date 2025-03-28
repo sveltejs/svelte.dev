@@ -1,6 +1,6 @@
 {
   "name": "braintapper-svelte-keyword-highlighter",
-  "description": "Highlights keywords within Svelte components.",
+  "description": "Highlight keywords within Svelte components.",
   "repo_url": "https://github.com/braintapper/braintapper-svelte-keyword-highlighter",
   "authors": [
     "braintapper"

@@ -1,6 +1,6 @@
 {
   "name": "@krowten/svelte-heroicons",
-  "description": "Use Heroicons in Svelte projects.",
+  "description": "Provides Heroicons for Svelte applications.",
   "repo_url": "https://github.com/krowten/svelte-heroicons",
   "authors": [
     "krowten"

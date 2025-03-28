@@ -1,6 +1,6 @@
 {
   "name": "svelte-color-progressbar",
-  "description": "Create color progress bars in Svelte.",
+  "description": "Create customizable color progress bars for Svelte.",
   "repo_url": "https://github.com/khguruge/svelte-color-progressbar",
   "authors": [
     "khguruge"

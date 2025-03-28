@@ -1,6 +1,6 @@
 {
   "name": "seerbit-svelte",
-  "description": "Integrates Seerbit payment gateway into Svelte applications.",
+  "description": "Integrate Seerbit payment gateway into Svelte applications.",
   "repo_url": "https://github.com/seerbit/seerbit-svelte",
   "authors": [
     "seerbit"

@@ -1,6 +1,6 @@
 {
   "name": "svelte-komponents",
-  "description": "Offer SvelteKit and DaisyUI components.",
+  "description": "Provide Svelte components for SvelteKit and DaisyUI.",
   "repo_url": "https://github.com/GabrielHK97/svelte-komponents",
   "authors": [
     "gabrielhk97"
@@ -10,7 +10,6 @@
   "dependents": 0,
   "updated": "2023-08-23T14:54:04.304Z",
   "tags": [
-    "component-library",
     "ui"
   ],
   "svelte5": false,

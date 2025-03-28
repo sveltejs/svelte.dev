@@ -1,6 +1,6 @@
 {
   "name": "@k4ung/svelte-otp",
-  "description": "Create simple, lightweight OTP input component for Svelte.",
+  "description": "Create OTP input component for Svelte apps.",
   "repo_url": "https://github.com/K4UNG/svelte-otp",
   "authors": [
     "k4ung"

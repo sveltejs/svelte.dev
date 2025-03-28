@@ -1,6 +1,6 @@
 {
   "name": "svelte-tree-view-component",
-  "description": "Create tree view component for Svelte.",
+  "description": "Create tree view components for Svelte applications.",
   "repo_url": "https://github.com/SamuelQZQ/svelte-tree-view-component",
   "authors": [
     "samuelqzq"

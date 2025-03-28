@@ -1,6 +1,6 @@
 {
   "name": "svelte-google-analytics",
-  "description": "Integrates Google Analytics tracking into Svelte applications.",
+  "description": "Integrate Google Analytics tracking into Svelte applications.",
   "repo_url": "https://github.com/dhimankamal/svelte-google-analytics",
   "authors": [
     "dhimankamal"

@@ -1,6 +1,6 @@
 {
   "name": "@model-w/preset-sveltekit",
-  "description": "Provides SvelteKit preset for ModelW projects.",
+  "description": "Sets base dependencies for SvelteKit/Svelte projects.",
   "repo_url": "https://github.com/ModelW/preset-sveltekit",
   "authors": [
     "davewith",

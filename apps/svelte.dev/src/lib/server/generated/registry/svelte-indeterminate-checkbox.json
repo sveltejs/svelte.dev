@@ -1,6 +1,6 @@
 {
   "name": "svelte-indeterminate-checkbox",
-  "description": "Creates checkbox component with indeterminate status support.",
+  "description": "Adds indeterminate state support to Svelte checkboxes.",
   "repo_url": "https://github.com/zerok84/svelte-indeterminate-checkbox",
   "authors": [
     "zerok84"

@@ -1,6 +1,6 @@
 {
   "name": "@bewinxed/wallet-adapter-svelte-ui",
-  "description": "UI components for Solana wallet adapter, built for Svelte 5.",
+  "description": "Integrate Solana wallet adapters with Svelte 5 using runes.",
   "repo_url": "https://github.com/bewinxed/wallet-adapter-svelte-ui",
   "authors": [
     "bewinxed"
@@ -11,9 +11,9 @@
   "updated": "2024-08-27T19:09:03.201Z",
   "tags": [
     "ui",
-    "auth"
+    "integration"
   ],
   "svelte5": true,
-  "runes": true,
+  "runes": false,
   "github_stars": 8
 }

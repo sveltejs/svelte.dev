@@ -1,6 +1,6 @@
 {
   "name": "editor-for-svelte",
-  "description": "Provides a simple code editor built with Svelte.",
+  "description": "Create a simple, customizable code editor for Svelte.",
   "repo_url": "https://github.com/CoderN-P/SvelteEditor",
   "authors": [
     "codern"
@@ -10,7 +10,8 @@
   "dependents": 0,
   "updated": "2024-06-20T17:12:00.234Z",
   "tags": [
-    "ui"
+    "ui",
+    "tooling"
   ],
   "svelte5": false,
   "runes": false,

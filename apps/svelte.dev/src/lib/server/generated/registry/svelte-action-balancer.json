@@ -1,6 +1,6 @@
 {
   "name": "svelte-action-balancer",
-  "description": "Balance text lines for improved readability.",
+  "description": "Balance text lines for improved readability in Svelte.",
   "repo_url": "",
   "authors": [
     "pablopang"

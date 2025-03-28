@@ -1,6 +1,6 @@
 {
   "name": "svelte-lite-youtube-embed",
-  "description": "Embeds lightweight YouTube videos in Svelte applications.",
+  "description": "Embed YouTube videos with a lightweight Svelte component.",
   "repo_url": "https://github.com/zamanruhy/svelte-lite-youtube-embed",
   "authors": [
     "zamanruhy"

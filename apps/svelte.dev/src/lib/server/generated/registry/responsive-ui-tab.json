@@ -1,6 +1,6 @@
 {
   "name": "@responsive-ui/tab",
-  "description": "Create tab component for responsive Svelte UI.",
+  "description": "Create tab components in Svelte.",
   "repo_url": "https://github.com/wetix/responsive-ui",
   "authors": [
     "rexlow",

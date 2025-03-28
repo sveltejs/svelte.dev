@@ -1,6 +1,6 @@
 {
   "name": "@salonhub/svelte-spa-router",
-  "description": "Implement router for SPAs using Svelte, hash-based navigation.",
+  "description": "Provides hash-based routing for Single Page Applications in Svelte.",
   "repo_url": "https://github.com/Salonhub/svelte-spa-router",
   "authors": [
     "nielsleenheer"

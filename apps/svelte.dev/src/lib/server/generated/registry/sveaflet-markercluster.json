@@ -1,6 +1,6 @@
 {
   "name": "sveaflet-markercluster",
-  "description": "Cluster Leaflet markers in Svelte applications.",
+  "description": "Svelte component for Leaflet marker clustering.",
   "repo_url": "https://github.com/GrayFrost/sveaflet-markercluster",
   "authors": [
     "garyfrost"

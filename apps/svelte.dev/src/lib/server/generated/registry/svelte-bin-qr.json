@@ -1,6 +1,6 @@
 {
   "name": "@svelte-bin/qr",
-  "description": "Render QR codes as images or canvas elements in Svelte.",
+  "description": "Renders QR codes as child, img, or canvas elements in Svelte.",
   "repo_url": "",
   "authors": [
     "binsarjr"

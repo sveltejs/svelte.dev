@@ -1,6 +1,6 @@
 {
   "name": "svelte-sidebar-panels",
-  "description": "Create sidebar navigational menu component for Svelte apps.",
+  "description": "Create sidebar navigation menu component for Svelte.",
   "repo_url": "https://github.com/saibotsivad/svelte-sidebar-panels",
   "authors": [
     "saibotsivad"

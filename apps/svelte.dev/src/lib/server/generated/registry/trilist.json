@@ -1,6 +1,6 @@
 {
   "name": "trilist",
-  "description": "Provides tree data components: treeselect and treeview for Svelte.",
+  "description": "Web components for working with tree data: treeselect and treeview.",
   "repo_url": "https://github.com/beholdr/trilist",
   "authors": [
     "beholdr"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2024-06-24T09:38:05.898Z",
   "tags": [
-    "component-library"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

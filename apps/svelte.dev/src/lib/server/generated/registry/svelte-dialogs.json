@@ -1,6 +1,6 @@
 {
   "name": "svelte-dialogs",
-  "description": "Provides handy dialogs for Svelte applications.",
+  "description": "Implement dialogs, alerts, and prompts in Svelte apps.",
   "repo_url": "https://github.com/bibizio/svelte-dialogs",
   "authors": [
     "bibizio"

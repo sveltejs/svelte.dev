@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-kit-routes",
-  "description": "Generate routes from SvelteKit project.",
+  "description": "Generate routes file for SvelteKit projects.",
   "repo_url": "https://github.com/jycouet/kitql",
   "authors": [
     "jycouet"

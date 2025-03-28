@@ -1,6 +1,6 @@
 {
   "name": "@viamrobotics/prettier-config-svelte",
-  "description": "Provides Viam's shared Prettier configuration for Svelte projects.",
+  "description": "Provides Viam's Prettier configuration for Svelte projects.",
   "repo_url": "https://github.com/viamrobotics/js-config",
   "authors": [
     "cheukt",

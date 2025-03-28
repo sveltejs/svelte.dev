@@ -1,6 +1,6 @@
 {
   "name": "svelte-stars-hover-rating",
-  "description": "Creates simple star rating component with hover effect.",
+  "description": "Create star rating component with hover effect for Svelte.",
   "repo_url": "https://github.com/ckim328/svelte-stars-hover-rating",
   "authors": [
     "ckim328"

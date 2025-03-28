@@ -1,6 +1,6 @@
 {
   "name": "svelte-mp3",
-  "description": "Create a minimalistic audio player for Svelte.",
+  "description": "Create minimalistic audio players for Svelte apps.",
   "repo_url": "https://github.com/khandakar227/svelte-mp3",
   "authors": [
     "khandakar-shakib"

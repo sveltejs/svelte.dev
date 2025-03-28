@@ -1,6 +1,6 @@
 {
   "name": "svelte-formek",
-  "description": "Manage forms with validation in Svelte v3 apps.",
+  "description": "Manage forms with validation in Svelte applications.",
   "repo_url": "https://github.com/eriknyk/svelte-formek",
   "authors": [
     "eriknyk"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2019-12-30T16:39:16.145Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false

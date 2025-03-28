@@ -1,6 +1,6 @@
 {
   "name": "@soleil-se/config-svelte",
-  "description": "Provides Svelte components and utilities for configuration.",
+  "description": "Configure Svelte components for WebApp, RESTApp, and Widget.",
   "repo_url": "",
   "authors": [
     "soleil-ab",
@@ -11,7 +11,7 @@
   "dependents": 0,
   "updated": "2025-03-11T14:11:59.784Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": true,
   "runes": false

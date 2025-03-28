@@ -1,6 +1,6 @@
 {
   "name": "@stuymedova/uikit-svelte",
-  "description": "Provide UIKit component library for Svelte implementation.",
+  "description": "Provide UIKit component library for Svelte.",
   "repo_url": "https://github.com/stuymedova/uikit-svelte",
   "authors": [
     "stuymedova"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2022-11-17T14:47:44.220Z",
   "tags": [
-    "component-library"
+    "design-system"
   ],
   "svelte5": false,
   "runes": false,

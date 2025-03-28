@@ -1,6 +1,6 @@
 {
   "name": "svelte-popdown",
-  "description": "Position popovers/dropdowns next to trigger elements.",
+  "description": "Create minimal popover/dropdown components for Svelte.",
   "repo_url": "https://github.com/Jakeii/svelte-popdown",
   "authors": [
     "jakeii"

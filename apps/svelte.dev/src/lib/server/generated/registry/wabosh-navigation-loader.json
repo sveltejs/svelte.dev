@@ -1,6 +1,6 @@
 {
   "name": "@wabosh/navigation-loader",
-  "description": "Display loading bar during SvelteKit navigation.",
+  "description": "Display loading bar, listening to navigation state.",
   "repo_url": "https://github.com/wabosh/navigation-loader",
   "authors": [
     "wabosh"

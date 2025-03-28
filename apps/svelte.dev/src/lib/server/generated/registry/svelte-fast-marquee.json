@@ -1,6 +1,6 @@
 {
   "name": "svelte-fast-marquee",
-  "description": "Create fast marquee component for Svelte.",
+  "description": "Create fast marquee component for Svelte, inspired by react-fast-marquee.",
   "repo_url": "https://github.com/abosch19/svelte-fast-marquee",
   "authors": [
     "abosch19"

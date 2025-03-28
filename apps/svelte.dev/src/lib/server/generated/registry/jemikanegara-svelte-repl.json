@@ -1,0 +1,18 @@
+{
+  "name": "@jemikanegara/svelte-repl",
+  "description": "Provide the <Repl> component used on the Svelte website.",
+  "repo_url": "https://github.com/sveltejs/svelte-repl",
+  "authors": [
+    "jemikanegara"
+  ],
+  "homepage": "https://github.com/sveltejs/svelte-repl#readme",
+  "downloads": 8,
+  "dependents": 0,
+  "updated": "2020-03-30T07:03:56.156Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 276
+}

@@ -1,6 +1,6 @@
 {
   "name": "@am-77/svelte-pdf",
-  "description": "View PDF documents within Svelte applications.",
+  "description": "View PDF files in Svelte applications.",
   "repo_url": "",
   "authors": [
     "am-77"

@@ -1,6 +1,6 @@
 {
   "name": "@maritime-fun-group/svelte-core",
-  "description": "Theming for Svelte components.",
+  "description": "Apply component theming to Svelte components.",
   "repo_url": "https://github.com/isaacmfg/svelte-core",
   "authors": [
     "mfgdevelopment",

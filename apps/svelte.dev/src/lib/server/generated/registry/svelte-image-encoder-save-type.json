@@ -1,6 +1,6 @@
 {
   "name": "svelte-image-encoder-save-type",
-  "description": "Encodes and compresses images in Svelte before server upload.",
+  "description": "Encode and compress images before upload in Svelte.",
   "repo_url": "https://github.com/efebia-com/svelte-image-encoder",
   "authors": [
     "calogero",

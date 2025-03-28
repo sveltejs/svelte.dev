@@ -1,0 +1,19 @@
+{
+  "name": "@elderjs/elderjs",
+  "description": "Builds SEO-focused static sites with Svelte.",
+  "repo_url": "https://github.com/Elderjs/elderjs",
+  "authors": [
+    "vonadz"
+  ],
+  "homepage": "https://elderguide.com/tech/elderjs/",
+  "downloads": 208,
+  "dependents": 2,
+  "updated": "2022-07-31T09:30:37.062Z",
+  "tags": [
+    "tooling",
+    "seo"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 2115
+}

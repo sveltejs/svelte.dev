@@ -1,6 +1,6 @@
 {
   "name": "@jill64/svelte-toast",
-  "description": "Pre-themed responsive toast notification.",
+  "description": "Create pre-themed responsive toast notifications.",
   "repo_url": "https://github.com/jill64/svelte-toast",
   "authors": [
     "jill64"

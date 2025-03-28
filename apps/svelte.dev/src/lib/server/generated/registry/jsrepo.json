@@ -1,6 +1,6 @@
 {
   "name": "jsrepo",
-  "description": "CLI for adding code from remote repositories.",
+  "description": "CLI tool to add shared code from remote repositories.",
   "repo_url": "https://github.com/ieedan/jsrepo",
   "authors": [
     "iedan."

@@ -1,6 +1,6 @@
 {
   "name": "@webstackjs/svelvet",
-  "description": "Build node-based user interfaces with Svelte components.",
+  "description": "Build dynamic, node-based user interfaces with Svelte.",
   "repo_url": "https://github.com/webstack/Svelvet",
   "authors": [
     "stephaner"

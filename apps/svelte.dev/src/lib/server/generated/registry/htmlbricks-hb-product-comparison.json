@@ -1,6 +1,6 @@
 {
   "name": "@htmlbricks/hb-product-comparison",
-  "description": "Build product comparison web components with Svelte.",
+  "description": "Build product comparison web components for Svelte apps.",
   "repo_url": "",
   "authors": [
     "dariocaruso"
@@ -9,7 +9,7 @@
   "dependents": 2,
   "updated": "2025-03-24T18:07:19.053Z",
   "tags": [
-    "component-library"
+    "ui"
   ],
   "svelte5": false,
   "runes": false

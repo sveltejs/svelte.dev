@@ -1,6 +1,6 @@
 {
   "name": "svelte-infinite-loading",
-  "description": "Creates infinite scroll components for Svelte apps.",
+  "description": "Create infinite scroll component for Svelte apps.",
   "repo_url": "https://github.com/jonasgeiler/svelte-infinite-loading",
   "authors": [
     "jonasgeiler"

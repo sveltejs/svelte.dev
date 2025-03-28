@@ -1,0 +1,17 @@
+{
+  "name": "svelte-touch-hold",
+  "description": "Run callback after touching component for specific milliseconds.",
+  "repo_url": "",
+  "authors": [
+    "ariannargesi"
+  ],
+  "homepage": "https://github.com/ariannargesi/svelte-touch-hold",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2022-11-26T08:15:30.125Z",
+  "tags": [
+    "miscellaneous"
+  ],
+  "svelte5": false,
+  "runes": false
+}

@@ -1,6 +1,6 @@
 {
   "name": "svelte-paginate-store",
-  "description": "Add pagination to data using Svelte store functionality.",
+  "description": "Create Svelte store with pagination for data management.",
   "repo_url": "https://github.com/stevenrico/svelte-paginate-store",
   "authors": [
     "stevenrico"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2020-03-12T13:32:59.925Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false

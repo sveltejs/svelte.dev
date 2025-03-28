@@ -1,6 +1,6 @@
 {
   "name": "@humanspeak/svelte-markdown",
-  "description": "Render Markdown to Svelte components, customizable and secure.",
+  "description": "Render Markdown content in Svelte applications.",
   "repo_url": "https://github.com/humanspeak/svelte-markdown",
   "authors": [
     "humanspeakadmin"

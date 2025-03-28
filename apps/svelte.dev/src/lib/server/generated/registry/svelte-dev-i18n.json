@@ -1,6 +1,6 @@
 {
   "name": "@svelte-dev/i18n",
-  "description": "Internationalization library for Svelte.",
+  "description": "Internationalization library for Svelte applications.",
   "repo_url": "https://github.com/willin/svelte-turbo",
   "authors": [
     "willin"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2023-12-31T05:27:38.141Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": true,
   "runes": false,

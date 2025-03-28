@@ -1,6 +1,6 @@
 {
   "name": "@feelinglovelynow/slug",
-  "description": "Generate slugs from strings, includes Svelte component.",
+  "description": "Generate URL slugs, includes Svelte component for browser use.",
   "repo_url": "https://github.com/feelinglovelynow/slug",
   "authors": [
     "feelinglovelynow"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2023-12-17T21:50:20.076Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

@@ -1,6 +1,6 @@
 {
   "name": "maska",
-  "description": "Creates input masks for Svelte.",
+  "description": "Create input masks for Svelte.",
   "repo_url": "https://github.com/beholdr/maska",
   "authors": [
     "beholdr"
@@ -10,9 +10,9 @@
   "dependents": 184,
   "updated": "2025-03-22T18:56:06.438Z",
   "tags": [
-    "utility"
+    "ui"
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 1867
+  "github_stars": 1868
 }

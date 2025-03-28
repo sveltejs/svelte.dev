@@ -1,6 +1,6 @@
 {
   "name": "svelte-element",
-  "description": "Provides Element UI components for Svelte.",
+  "description": "Implement Element UI components in Svelte applications.",
   "repo_url": "https://github.com/mistlog/svelte-element",
   "authors": [
     "mistlog"

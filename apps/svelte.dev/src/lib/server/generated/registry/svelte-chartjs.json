@@ -1,12 +1,12 @@
 {
   "name": "svelte-chartjs",
-  "description": "Svelte wrapper for chart.js.",
+  "description": "Create charts using Chart.js in Svelte apps.",
   "repo_url": "https://github.com/SauravKanchan/svelte-chartjs",
   "authors": [
     "sauravnk30"
   ],
   "homepage": "https://saurav.tech/mdbsvelte/?path=/story/charts--examples",
-  "downloads": 46994,
+  "downloads": 46856,
   "dependents": 15,
   "updated": "2024-02-06T14:40:40.928Z",
   "tags": [

@@ -1,6 +1,6 @@
 {
   "name": "@slideshow/show",
-  "description": "Offers basic components for creating slideshow presentations in Svelte.",
+  "description": "Create slideshow components for Svelte applications.",
   "repo_url": "https://github.com/AleCandido/show",
   "authors": [
     "annibale"

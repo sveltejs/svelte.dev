@@ -1,6 +1,6 @@
 {
   "name": "advanced-svelte-autocomplete",
-  "description": "Create autocomplete/select component for Svelte.",
+  "description": "Build autocomplete/select/typeahead components for Svelte.",
   "repo_url": "https://github.com/t-next/advanced-svelte-autocomplete",
   "authors": [
     "t-next"

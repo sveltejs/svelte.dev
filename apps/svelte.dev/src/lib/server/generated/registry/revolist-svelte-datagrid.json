@@ -1,16 +1,16 @@
 {
   "name": "@revolist/svelte-datagrid",
-  "description": "Svelte DataGrid spreadsheet component with native cell render support.",
+  "description": "Create Svelte DataGrid Spreadsheet component.",
   "repo_url": "https://github.com/revolist/svelte-datagrid",
   "authors": [
     "kumakint"
   ],
   "homepage": "https://github.com/revolist/revogrid#readme",
-  "downloads": 1039,
+  "downloads": 1149,
   "dependents": 0,
-  "updated": "2025-03-26T21:42:23.610Z",
+  "updated": "2025-03-27T14:49:00.379Z",
   "tags": [
-    "component-library"
+    "ui"
   ],
   "svelte5": true,
   "runes": false,

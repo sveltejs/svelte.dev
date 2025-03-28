@@ -1,6 +1,6 @@
 {
   "name": "svelte-steps-wizard",
-  "description": "Build multi-step wizards in Svelte applications.",
+  "description": "Implement step wizard component for Svelte.",
   "repo_url": "https://github.com/JeanChuquispuma/svelte-step-wizard",
   "authors": [
     "chuquis"

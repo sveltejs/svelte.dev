@@ -1,6 +1,6 @@
 {
   "name": "svelte4-headlessui",
-  "description": "Create unstyled, accessible UI components for Svelte.",
+  "description": "Provides unstyled, accessible UI components for Svelte, Headless UI port.",
   "repo_url": "https://github.com/zach-hopkins/svelte-headlessui",
   "authors": [
     "zach-hopkins"

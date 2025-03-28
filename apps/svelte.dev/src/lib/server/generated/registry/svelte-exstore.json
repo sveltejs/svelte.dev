@@ -1,6 +1,6 @@
 {
   "name": "svelte-exstore",
-  "description": "Simple state management library for Svelte with Redux DevTools.",
+  "description": "Connects Redux Devtools to monitor Svelte state, supports primitive values.",
   "repo_url": "https://github.com/noney1412/svelte-exstore",
   "authors": [
     "nonpanpila"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2022-10-05T07:51:09.913Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

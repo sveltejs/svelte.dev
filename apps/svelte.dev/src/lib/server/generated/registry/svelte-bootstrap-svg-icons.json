@@ -1,6 +1,6 @@
 {
   "name": "svelte-bootstrap-svg-icons",
-  "description": "Provides Bootstrap SVG Icon components for Svelte 5.",
+  "description": "Provides Bootstrap SVG icons for Svelte 5.",
   "repo_url": "https://github.com/shinokada/svelte-bootstrap-svg-icons",
   "authors": [
     "shinichiokada"

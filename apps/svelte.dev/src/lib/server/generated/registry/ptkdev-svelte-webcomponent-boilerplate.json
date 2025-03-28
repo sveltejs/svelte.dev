@@ -1,6 +1,6 @@
 {
   "name": "@ptkdev/svelte-webcomponent-boilerplate",
-  "description": "Generates HTML5 web components with Svelte.",
+  "description": "Create HTML5 Web Components with Svelte.",
   "repo_url": "https://github.com/ptkdev-boilerplate/svelte-webcomponent-boilerplate",
   "authors": [
     "ptkdevio"

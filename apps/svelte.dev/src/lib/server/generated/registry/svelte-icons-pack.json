@@ -1,6 +1,6 @@
 {
   "name": "svelte-icons-pack",
-  "description": "Provides SVG icons as Svelte components with props.",
+  "description": "Use SVG icons as Svelte components from various libraries.",
   "repo_url": "https://github.com/leshak/svelte-icons-pack",
   "authors": [
     "leshak"

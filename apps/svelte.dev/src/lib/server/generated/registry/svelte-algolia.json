@@ -1,6 +1,6 @@
 {
   "name": "svelte-algolia",
-  "description": "Provides Algolia index updater and search component for Svelte.",
+  "description": "Provides Algolia search integration for Svelte apps.",
   "repo_url": "https://github.com/janosh/svelte-algolia",
   "authors": [
     "janosh"
@@ -10,8 +10,7 @@
   "dependents": 0,
   "updated": "2022-10-24T21:39:10.581Z",
   "tags": [
-    "utility",
-    "server"
+    "integration"
   ],
   "svelte5": false,
   "runes": false,

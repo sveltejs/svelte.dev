@@ -1,6 +1,6 @@
 {
   "name": "@radar-azdelta/svelte-datatable",
-  "description": "Provides a datatable component for Svelte with CSV support.",
+  "description": "Provides a fast and flexible datatable component for Svelte.",
   "repo_url": "https://github.com/RADar-AZDelta/svelte-datatable",
   "authors": [
     "btoby",

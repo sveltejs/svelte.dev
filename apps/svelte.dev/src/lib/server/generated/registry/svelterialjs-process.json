@@ -1,6 +1,6 @@
 {
   "name": "@svelterialjs/process",
-  "description": "Preprocessor for Svelte, integrating Svelterial features.",
+  "description": "Preprocess Svelte code with Svelterial.",
   "repo_url": "https://github.com/svelterialjs/integrations",
   "authors": [
     "thecomputerm"
@@ -10,7 +10,6 @@
   "dependents": 0,
   "updated": "2021-10-04T12:47:19.342Z",
   "tags": [
-    "preprocessor",
     "tooling"
   ],
   "svelte5": false,

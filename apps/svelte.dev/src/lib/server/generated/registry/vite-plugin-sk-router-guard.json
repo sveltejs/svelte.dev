@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-sk-router-guard",
-  "description": "Implement global routing guards in SvelteKit applications.",
+  "description": "Global routing guard plugin for SvelteKit applications.",
   "repo_url": "https://github.com/ikun-svelte/vite-plugin-sk-router-guard",
   "authors": [
     "baiwusanyu"

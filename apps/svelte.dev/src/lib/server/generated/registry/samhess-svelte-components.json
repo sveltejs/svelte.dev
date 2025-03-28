@@ -1,6 +1,6 @@
 {
   "name": "@samhess/svelte-components",
-  "description": "Provide address autocompletion, data tables, and treemaps.",
+  "description": "Builds address autocompletion, datatables, and treemaps.",
   "repo_url": "https://github.com/samhess/svelte-components",
   "authors": [
     "samhess"
@@ -10,10 +10,10 @@
   "dependents": 0,
   "updated": "2025-02-05T12:26:54.853Z",
   "tags": [
-    "component-library",
-    "ui"
+    "ui",
+    "design-system"
   ],
   "svelte5": true,
-  "runes": true,
+  "runes": false,
   "github_stars": 0
 }

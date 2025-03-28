@@ -1,6 +1,6 @@
 {
   "name": "@responsive-ui/switch",
-  "description": "Create switch component for responsive Svelte UI.",
+  "description": "Create switch components in Svelte.",
   "repo_url": "https://github.com/wetix/responsive-ui",
   "authors": [
     "rexlow",

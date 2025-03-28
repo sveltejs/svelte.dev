@@ -1,6 +1,6 @@
 {
   "name": "@jangxyz/svelte-id-refs",
-  "description": "Manage page-level ID uniqueness in Svelte components.",
+  "description": "Manage page-level id uniqueness in Svelte components.",
   "repo_url": "https://github.com/jangxyz/svelte-id-refs",
   "authors": [
     "jangxyz"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2024-05-14T00:51:23.726Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": true,
   "runes": false,

@@ -1,6 +1,6 @@
 {
   "name": "svipe",
-  "description": "Create accessible Svelte slider/carousel components.",
+  "description": "Create accessible Svelte slider component.",
   "repo_url": "https://github.com/neesh-studio/svipe",
   "authors": [
     "lksslr"

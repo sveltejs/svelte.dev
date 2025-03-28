@@ -1,6 +1,6 @@
 {
   "name": "@yuanliwei/svelte-virtual-list",
-  "description": "Implements virtual scrolling for large Svelte lists.",
+  "description": "Implement virtual scrolling lists in Svelte applications.",
   "repo_url": "https://github.com/yuanliwei/svelte-virtual-list",
   "authors": [
     "yuanliwei"

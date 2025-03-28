@@ -1,6 +1,6 @@
 {
   "name": "svelte-cached-router",
-  "description": "Cache Svelte page components, providing local router with transitions.",
+  "description": "Svelte router caching page components, works locally.",
   "repo_url": "https://github.com/easyfrog/svelte-cached-router",
   "authors": [
     "easyfrog"

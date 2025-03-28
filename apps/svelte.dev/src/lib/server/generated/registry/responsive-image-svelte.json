@@ -6,14 +6,13 @@
     "simonihmig"
   ],
   "homepage": "https://github.com/simonihmig/responsive-image#readme",
-  "downloads": 4,
+  "downloads": 3,
   "dependents": 0,
   "updated": "2025-02-13T17:31:53.489Z",
   "tags": [
-    "ui",
     "media"
   ],
   "svelte5": true,
-  "runes": false,
+  "runes": true,
   "github_stars": 153
 }

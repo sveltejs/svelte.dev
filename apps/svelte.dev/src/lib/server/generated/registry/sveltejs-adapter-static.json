@@ -1,6 +1,6 @@
 {
   "name": "@sveltejs/adapter-static",
-  "description": "Builds SvelteKit apps as static sites.",
+  "description": "Build SvelteKit apps as static sites.",
   "repo_url": "https://github.com/sveltejs/kit",
   "authors": [
     "rich_harris",
@@ -9,7 +9,7 @@
     "dominik_g"
   ],
   "homepage": "https://svelte.dev",
-  "downloads": 146384,
+  "downloads": 147323,
   "dependents": 63,
   "updated": "2024-12-21T18:33:37.611Z",
   "tags": [
@@ -17,5 +17,5 @@
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 19137
+  "github_stars": 19138
 }

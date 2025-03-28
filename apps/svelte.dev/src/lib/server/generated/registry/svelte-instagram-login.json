@@ -1,6 +1,6 @@
 {
   "name": "svelte-instagram-login",
-  "description": "Integrate Instagram login functionality into Svelte apps.",
+  "description": "Integrates Instagram login functionality into Svelte applications.",
   "repo_url": "https://github.com/Baedonghee/svelte-instagram-login",
   "authors": [
     "dongheebae"
@@ -10,7 +10,8 @@
   "dependents": 0,
   "updated": "2021-07-27T12:15:00.942Z",
   "tags": [
-    "auth"
+    "auth",
+    "integration"
   ],
   "svelte5": false,
   "runes": false,

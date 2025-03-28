@@ -1,6 +1,6 @@
 {
   "name": "@svelte-press/theme-default",
-  "description": "Offer default theme for SveltePress documentation.",
+  "description": "Default theme for Sveltepress documentation sites.",
   "repo_url": "https://github.com/Blackman99/sveltepress",
   "authors": [
     "philadelphia"
@@ -10,9 +10,9 @@
   "dependents": 0,
   "updated": "2023-02-01T06:58:20.576Z",
   "tags": [
-    "tooling"
+    "content"
   ],
   "svelte5": false,
   "runes": false,
-  "github_stars": 414
+  "github_stars": 426
 }

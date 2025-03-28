@@ -1,6 +1,6 @@
 {
   "name": "svelte-gazefilter",
-  "description": "Integrate eye-tracking with gazefilter in Svelte apps.",
+  "description": "Integrate eye-tracking with Svelte components.",
   "repo_url": "",
   "authors": [
     "rostyslavb"
@@ -9,7 +9,7 @@
   "dependents": 0,
   "updated": "2021-03-24T12:21:10.723Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false

@@ -1,6 +1,6 @@
 {
   "name": "svelidation",
-  "description": "Validate Svelte application forms with customizable rules.",
+  "description": "Validate Svelte forms with customizable rules and types.",
   "repo_url": "https://github.com/yazonnile/svelidation",
   "authors": [
     "yazonnile"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2020-01-10T14:40:34.958Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

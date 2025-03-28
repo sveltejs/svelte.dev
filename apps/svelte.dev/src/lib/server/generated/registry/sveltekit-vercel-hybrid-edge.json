@@ -1,6 +1,6 @@
 {
   "name": "sveltekit-vercel-hybrid-edge",
-  "description": "Build SvelteKit apps for edge, fallback to serverless functions.",
+  "description": "Builds for edge, falls back to serverless functions on Vercel.",
   "repo_url": "https://github.com/lucagoslar/ts-pkg",
   "authors": [
     "lucagoslar"

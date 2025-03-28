@@ -1,6 +1,6 @@
 {
   "name": "svelte-5-inview",
-  "description": "Detect element visibility in Svelte 5 applications.",
+  "description": "Monitors element visibility in viewport using Intersection Observer.",
   "repo_url": "",
   "authors": [
     "sveltelaunch"
@@ -10,8 +10,7 @@
   "dependents": 0,
   "updated": "2024-08-04T16:38:15.750Z",
   "tags": [
-    "utility",
-    "dom"
+    "miscellaneous"
   ],
   "svelte5": true,
   "runes": false

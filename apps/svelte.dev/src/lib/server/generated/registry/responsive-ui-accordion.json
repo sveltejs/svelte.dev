@@ -1,6 +1,6 @@
 {
   "name": "@responsive-ui/accordion",
-  "description": "Create accordion component for Svelte with responsive-ui.",
+  "description": "Create accordion component for Svelte apps.",
   "repo_url": "https://github.com/wetix/responsive-ui",
   "authors": [
     "rexlow",

@@ -1,0 +1,19 @@
+{
+  "name": "tui-editor-svelte",
+  "description": "Integrate TUI editor into Svelte applications.",
+  "repo_url": "https://github.com/composite/tui-editor-svelte",
+  "authors": [
+    "ukjinplant"
+  ],
+  "homepage": "https://ui.toast.com",
+  "downloads": 9,
+  "dependents": 0,
+  "updated": "2021-04-09T05:55:24.562Z",
+  "tags": [
+    "content",
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 12
+}

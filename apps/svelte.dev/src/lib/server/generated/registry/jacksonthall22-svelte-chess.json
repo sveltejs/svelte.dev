@@ -1,6 +1,6 @@
 {
   "name": "@jacksonthall22/svelte-chess",
-  "description": "Play chess with fully playable Svelte component.",
+  "description": "Create fully playable chess components for Svelte.",
   "repo_url": "",
   "authors": [
     "jacksonthall22"
@@ -10,7 +10,8 @@
   "dependents": 0,
   "updated": "2024-06-10T16:30:20.418Z",
   "tags": [
-    "ui"
+    "ui",
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false

@@ -1,6 +1,6 @@
 {
   "name": "tabular-svelte",
-  "description": "Displays tabular data within Svelte components.",
+  "description": "Display tabular data within Svelte applications.",
   "repo_url": "https://github.com/jdmedlock/tabular-svelte",
   "authors": [
     "jdmedlock"

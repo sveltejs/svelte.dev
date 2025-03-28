@@ -1,6 +1,6 @@
 {
   "name": "@svelte-parts/modal",
-  "description": "Create simple modal components for Svelte applications.",
+  "description": "Create simple modal dialogs in Svelte applications.",
   "repo_url": "https://github.com/idris-maps/svelte-parts",
   "authors": [
     "idris-maps"

@@ -1,6 +1,6 @@
 {
   "name": "svelte-virtual-infinite-list",
-  "description": "Create virtual, infinite lists for Svelte apps, improving performance.",
+  "description": "Render virtual, infinite lists in Svelte apps.",
   "repo_url": "https://github.com/koheing/svelte-virtual-infinite-list",
   "authors": [
     "koheing"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2023-01-09T10:15:14.604Z",
   "tags": [
-    "utility"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

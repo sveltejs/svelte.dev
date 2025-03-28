@@ -1,6 +1,6 @@
 {
   "name": "radio-color-system",
-  "description": "Generates color palettes with accessible text contrast for Svelte.",
+  "description": "Generates color palettes with text contrast for Svelte.",
   "repo_url": "",
   "authors": [
     "canerakdas"
@@ -9,7 +9,7 @@
   "dependents": 0,
   "updated": "2023-09-07T16:31:13.030Z",
   "tags": [
-    "utility"
+    "ui"
   ],
   "svelte5": false,
   "runes": false

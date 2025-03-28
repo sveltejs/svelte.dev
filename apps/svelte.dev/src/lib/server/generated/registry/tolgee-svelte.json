@@ -1,6 +1,6 @@
 {
   "name": "@tolgee/svelte",
-  "description": "Provides Svelte implementation for Tolgee localization framework.",
+  "description": "Integrates Tolgee localization platform with Svelte applications.",
   "repo_url": "https://github.com/tolgee/tolgee-js",
   "authors": [
     "jancizmar",
@@ -11,7 +11,7 @@
   "dependents": 0,
   "updated": "2025-03-19T08:37:52.677Z",
   "tags": [
-    "utility"
+    "integration"
   ],
   "svelte5": false,
   "runes": false,

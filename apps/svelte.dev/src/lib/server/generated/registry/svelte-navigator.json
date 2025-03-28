@@ -1,6 +1,6 @@
 {
   "name": "svelte-navigator",
-  "description": "Provides simple, accessible routing for Svelte.",
+  "description": "Provides simple, accessible routing for Svelte apps.",
   "repo_url": "https://github.com/mefechoel/svelte-navigator",
   "authors": [
     "mefechoel",

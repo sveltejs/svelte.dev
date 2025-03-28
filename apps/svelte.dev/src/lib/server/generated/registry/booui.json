@@ -1,0 +1,19 @@
+{
+  "name": "booui",
+  "description": "Extended Bootstrap components for Svelte.",
+  "repo_url": "https://github.com/fantasyui-com/bookui",
+  "authors": [
+    "fantasyui.com"
+  ],
+  "homepage": "https://github.com/fantasyui-com/bookui#readme",
+  "downloads": 8,
+  "dependents": 0,
+  "updated": "2020-01-30T00:12:18.124Z",
+  "tags": [
+    "design-system",
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

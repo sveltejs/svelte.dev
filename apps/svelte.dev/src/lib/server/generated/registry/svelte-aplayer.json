@@ -1,0 +1,17 @@
+{
+  "name": "svelte-aplayer",
+  "description": "Embed APlayer music player in Svelte applications.",
+  "repo_url": "",
+  "authors": [
+    "fengkx"
+  ],
+  "homepage": "https://github.com/fengkx/svelte-aplayer",
+  "downloads": 23,
+  "dependents": 0,
+  "updated": "2023-02-19T03:09:35.503Z",
+  "tags": [
+    "media"
+  ],
+  "svelte5": false,
+  "runes": false
+}

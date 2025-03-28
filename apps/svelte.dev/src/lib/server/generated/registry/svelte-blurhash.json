@@ -1,6 +1,6 @@
 {
   "name": "svelte-blurhash",
-  "description": "Implement blurhash image placeholders for Svelte components.",
+  "description": "Implement Blurhash image placeholders in Svelte.",
   "repo_url": "https://github.com/h416/svelte-blurhash",
   "authors": [
     "h416"

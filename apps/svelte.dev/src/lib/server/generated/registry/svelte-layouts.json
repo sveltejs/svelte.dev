@@ -1,6 +1,6 @@
 {
   "name": "svelte-layouts",
-  "description": "Structure pages using Svelte components.",
+  "description": "Structure Svelte pages using CSS Flexbox and Grid.",
   "repo_url": "https://github.com/ryu-man/svelte-layouts",
   "authors": [
     "ryuman"

@@ -1,6 +1,6 @@
 {
   "name": "svelte-alert-and-button",
-  "description": "Create alert and button components for Svelte applications.",
+  "description": "Provides alert and button components for Svelte applications.",
   "repo_url": "https://github.com/Gift-Stack/Svelte-Form-Library",
   "authors": [
     "gifted"

@@ -5,11 +5,10 @@
   "authors": [
     "huntabyte"
   ],
-  "downloads": 38684,
+  "downloads": 38616,
   "dependents": 17,
   "updated": "2025-03-14T15:56:46.882Z",
   "tags": [
-    "component-library",
     "ui"
   ],
   "svelte5": false,

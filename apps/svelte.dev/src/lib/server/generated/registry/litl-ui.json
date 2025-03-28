@@ -1,6 +1,6 @@
 {
   "name": "litl-ui",
-  "description": "Litl design system for Svelte.",
+  "description": "Build Litl design system for Svelte.",
   "repo_url": "https://github.com/litlio/litl-ui",
   "authors": [
     "litlio"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2024-11-21T08:45:03.533Z",
   "tags": [
-    "component-library",
+    "design-system",
     "ui"
   ],
   "svelte5": true,

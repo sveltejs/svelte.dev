@@ -1,6 +1,6 @@
 {
   "name": "svelte-navbar",
-  "description": "Create animated navbar component for Svelte apps.",
+  "description": "Creates animated navbar component for Svelte, switches between side/bottom.",
   "repo_url": "",
   "authors": [
     "hannesgith"

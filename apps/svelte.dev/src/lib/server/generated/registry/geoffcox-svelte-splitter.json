@@ -1,6 +1,6 @@
 {
   "name": "@geoffcox/svelte-splitter",
-  "description": "Provides a splitter for Svelte using CSS grid for resizing.",
+  "description": "Create resizable splitters using CSS grid templates.",
   "repo_url": "",
   "authors": [
     "geoffcox"

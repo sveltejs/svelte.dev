@@ -1,6 +1,6 @@
 {
   "name": "@sveltejs/adapter-netlify",
-  "description": "Create Netlify app with SvelteKit.",
+  "description": "Create Netlify apps with SvelteKit.",
   "repo_url": "https://github.com/sveltejs/kit",
   "authors": [
     "rich_harris",
@@ -17,5 +17,5 @@
   ],
   "svelte5": false,
   "runes": false,
-  "github_stars": 19137
+  "github_stars": 19138
 }

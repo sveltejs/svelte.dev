@@ -5,12 +5,12 @@
   "authors": [
     "huntabyte"
   ],
-  "downloads": 38717,
+  "downloads": 39338,
   "dependents": 19,
   "updated": "2024-12-13T17:45:07.463Z",
   "tags": [
-    "component-library",
-    "utility"
+    "ui",
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false

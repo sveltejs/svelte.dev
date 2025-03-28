@@ -1,6 +1,6 @@
 {
   "name": "@didiercatz/sveo",
-  "description": "Declare metadata on SvelteKit pages.",
+  "description": "Declare metadata on SvelteKit pages for SEO.",
   "repo_url": "",
   "authors": [
     "didiercatz"

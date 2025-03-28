@@ -1,6 +1,6 @@
 {
   "name": "@svizzle/choropleth",
-  "description": "Render choropleth components for Svelte, visualizing geographic data.",
+  "description": "Render choropleth maps with Svelte and D3.",
   "repo_url": "https://github.com/nestauk/svizzle",
   "authors": [
     "nestauk-dev",

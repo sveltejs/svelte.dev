@@ -1,6 +1,6 @@
 {
   "name": "fa-svelte",
-  "description": "Integrate Font Awesome 5 SVG icons into Svelte apps.",
+  "description": "Use Fontawesome 5 SVG icons in Svelte apps.",
   "repo_url": "https://github.com/alphapeter/fa-svelte",
   "authors": [
     "alphapeter"

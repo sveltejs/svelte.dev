@@ -1,6 +1,6 @@
 {
   "name": "@hellocoop/svelte-otp",
-  "description": "Implement OTP input component for Svelte apps.",
+  "description": "Create OTP input component for Svelte applications.",
   "repo_url": "https://github.com/hellocoop/svelte-otp",
   "authors": [
     "rohanharikr",

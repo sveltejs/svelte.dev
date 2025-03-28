@@ -8,11 +8,12 @@
     "qderoubaix"
   ],
   "homepage": "https://www.agnosui.dev/latest/",
-  "downloads": 65,
+  "downloads": 40,
   "dependents": 0,
   "updated": "2025-01-09T15:44:02.149Z",
   "tags": [
-    "component-library"
+    "design-system",
+    "ui"
   ],
   "svelte5": true,
   "runes": false,

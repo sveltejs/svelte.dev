@@ -1,6 +1,6 @@
 {
   "name": "another-svelte-data-grid",
-  "description": "Display and edit data with virtual list in Svelte applications.",
+  "description": "Display and edit data within Svelte data grid component.",
   "repo_url": "https://github.com/millerlm012/another-svelte-data-grid",
   "authors": [
     "millerlm012"

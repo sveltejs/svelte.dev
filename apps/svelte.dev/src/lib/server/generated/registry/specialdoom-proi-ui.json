@@ -1,6 +1,6 @@
 {
   "name": "@specialdoom/proi-ui",
-  "description": "Create Svelte UI components.",
+  "description": "Build Svelte UI with this component library.",
   "repo_url": "https://github.com/specialdoom/proi-ui",
   "authors": [
     "specialdoom"
@@ -10,7 +10,6 @@
   "dependents": 0,
   "updated": "2023-10-28T08:08:56.095Z",
   "tags": [
-    "component-library",
     "ui"
   ],
   "svelte5": false,

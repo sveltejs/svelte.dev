@@ -1,6 +1,6 @@
 {
   "name": "overlayscrollbars-svelte",
-  "description": "Provides custom scrollbars for Svelte components.",
+  "description": "Integrates OverlayScrollbars for custom scrollbar styling.",
   "repo_url": "https://github.com/KingSora/OverlayScrollbars",
   "authors": [
     "kingsora"

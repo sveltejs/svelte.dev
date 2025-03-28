@@ -1,6 +1,6 @@
 {
   "name": "@highcharts/svelte",
-  "description": "Svelte wrapper for Highcharts, creates interactive charts.",
+  "description": "Provides a Svelte wrapper for Highcharts charts.",
   "repo_url": "https://github.com/highcharts/highcharts-svelte",
   "authors": [
     "torsteinhonsi",

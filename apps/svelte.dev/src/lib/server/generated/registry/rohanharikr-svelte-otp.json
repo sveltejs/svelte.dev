@@ -1,6 +1,6 @@
 {
   "name": "@rohanharikr/svelte-otp",
-  "description": "Simple, lightweight OTP input component for Svelte.",
+  "description": "Create simple, lightweight OTP input components for Svelte.",
   "repo_url": "https://github.com/rohanharikr/svelte-otp",
   "authors": [
     "rohanharikr"

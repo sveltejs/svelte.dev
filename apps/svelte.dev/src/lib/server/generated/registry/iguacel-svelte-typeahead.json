@@ -1,6 +1,6 @@
 {
   "name": "@iguacel/svelte-typeahead",
-  "description": "Provide accessible, fuzzy search typeahead component for Svelte.",
+  "description": "Create accessible, fuzzy search typeahead component for Svelte apps.",
   "repo_url": "https://github.com/metonym/svelte-typeahead",
   "authors": [
     "iguacel"

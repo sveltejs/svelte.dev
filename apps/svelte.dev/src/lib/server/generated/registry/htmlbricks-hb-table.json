@@ -1,6 +1,6 @@
 {
   "name": "@htmlbricks/hb-table",
-  "description": "Create streaming table web components for Svelte.",
+  "description": "Create table web component for Svelte applications.",
   "repo_url": "",
   "authors": [
     "dariocaruso"
@@ -9,7 +9,7 @@
   "dependents": 8,
   "updated": "2025-03-24T18:07:25.811Z",
   "tags": [
-    "component-library"
+    "ui"
   ],
   "svelte5": false,
   "runes": false

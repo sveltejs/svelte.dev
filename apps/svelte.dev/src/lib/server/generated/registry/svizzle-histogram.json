@@ -1,6 +1,6 @@
 {
   "name": "@svizzle/histogram",
-  "description": "Create histogram components and utilities for Svelte.",
+  "description": "Provides histogram component and utilities for Svelte.",
   "repo_url": "https://github.com/nestauk/svizzle",
   "authors": [
     "nestauk-dev",

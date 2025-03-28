@@ -1,6 +1,6 @@
 {
   "name": "@pouchlab/svead",
-  "description": "Manage meta tags and SEO for SvelteKit applications.",
+  "description": "Add SEO meta tags, Open Graph, and JSON-LD to SvelteKit apps.",
   "repo_url": "https://github.com/spences10/svead",
   "authors": [
     "pouchlab"

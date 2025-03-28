@@ -1,6 +1,6 @@
 {
   "name": "@afreidz/svelte-sonner",
-  "description": "Provides opinionated toast component for Svelte applications.",
+  "description": "Create opinionated toast notifications in Svelte apps.",
   "repo_url": "",
   "authors": [
     "afreidz"

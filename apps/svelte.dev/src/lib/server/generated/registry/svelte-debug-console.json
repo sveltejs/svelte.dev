@@ -1,6 +1,6 @@
 {
   "name": "svelte-debug-console",
-  "description": "Mirror debug statements to Svelte applications.",
+  "description": "Mirrors debug statements to Svelte applications.",
   "repo_url": "https://github.com/basaran/svelte-debug-console",
   "authors": [
     "anakha"

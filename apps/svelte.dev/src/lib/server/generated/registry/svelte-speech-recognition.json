@@ -1,6 +1,6 @@
 {
   "name": "svelte-speech-recognition",
-  "description": "Converts speech to text in Svelte applications.",
+  "description": "Integrate speech recognition into Svelte components.",
   "repo_url": "https://github.com/jhubbardsf/svelte-speech-recognition",
   "authors": [
     "jhubbardsf"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2022-06-13T02:15:08.286Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

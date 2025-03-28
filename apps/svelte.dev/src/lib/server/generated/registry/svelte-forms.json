@@ -1,16 +1,16 @@
 {
   "name": "svelte-forms",
-  "description": "Build forms with validation in Svelte apps.",
+  "description": "Create forms with validations in Svelte.",
   "repo_url": "https://github.com/chainlist/svelte-forms",
   "authors": [
     "chainlist"
   ],
   "homepage": "https://chainlist.github.io/svelte-forms/",
-  "downloads": 8954,
+  "downloads": 8785,
   "dependents": 15,
   "updated": "2022-03-31T22:29:26.074Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

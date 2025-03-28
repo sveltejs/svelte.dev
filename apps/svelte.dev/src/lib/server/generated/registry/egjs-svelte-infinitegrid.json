@@ -1,6 +1,6 @@
 {
   "name": "@egjs/svelte-infinitegrid",
-  "description": "Arrange items infinitely according to grid type in Svelte.",
+  "description": "Arrange items infinitely using various grid types.",
   "repo_url": "https://github.com/naver/egjs-infinitegrid",
   "authors": [
     "anuu0916",
@@ -19,7 +19,6 @@
   "dependents": 1,
   "updated": "2024-07-02T11:40:50.068Z",
   "tags": [
-    "component-library",
     "ui"
   ],
   "svelte5": false,

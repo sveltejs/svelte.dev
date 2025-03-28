@@ -1,6 +1,6 @@
 {
   "name": "@astralsoft/svelte-kit-jwt-session",
-  "description": "Provides JWT session hook for SvelteKit applications.",
+  "description": "Handle JWT sessions in SvelteKit applications.",
   "repo_url": "https://github.com/astralyazilim/svelte_kit_jwt_session",
   "authors": [
     "pisinsi"

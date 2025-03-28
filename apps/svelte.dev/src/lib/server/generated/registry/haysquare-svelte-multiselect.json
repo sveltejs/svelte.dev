@@ -1,6 +1,6 @@
 {
   "name": "@haysquare/svelte-multiselect",
-  "description": "Create custom multi-select component for SvelteKit projects.",
+  "description": "Develop custom multi-select components for SvelteKit projects.",
   "repo_url": "https://github.com/haysquareA/svelte-multiselect",
   "authors": [
     "haysquare"

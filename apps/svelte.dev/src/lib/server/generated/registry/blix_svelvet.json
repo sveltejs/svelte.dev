@@ -1,6 +1,6 @@
 {
   "name": "blix_svelvet",
-  "description": "Build node-based user interfaces with Svelte.",
+  "description": "Build node-based user interfaces with Svelte components.",
   "repo_url": "https://github.com/The-SpanishInquisition/Svelvet",
   "authors": [
     "armandkrynauw",
@@ -13,7 +13,7 @@
   "dependents": 0,
   "updated": "2023-11-01T15:01:56.107Z",
   "tags": [
-    "component-library"
+    "ui"
   ],
   "svelte5": true,
   "runes": false,

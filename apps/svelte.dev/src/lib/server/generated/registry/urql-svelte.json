@@ -1,6 +1,6 @@
 {
   "name": "@urql/svelte",
-  "description": "Fetch GraphQL queries, mutations, subscriptions in Svelte apps.",
+  "description": "GraphQL client for Svelte applications.",
   "repo_url": "https://github.com/urql-graphql/urql",
   "authors": [
     "michaelmerrill",
@@ -24,13 +24,13 @@
     "npm-urql"
   ],
   "homepage": "https://formidable.com/open-source/urql/docs/",
-  "downloads": 7981,
+  "downloads": 7903,
   "dependents": 8,
   "updated": "2025-03-03T21:13:56.638Z",
   "tags": [
-    "utility"
+    "server"
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 8763
+  "github_stars": 8764
 }

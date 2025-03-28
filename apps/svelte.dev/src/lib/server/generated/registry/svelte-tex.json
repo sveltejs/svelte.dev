@@ -1,6 +1,6 @@
 {
   "name": "svelte-tex",
-  "description": "Convert TeX to SVG using MathJax or MathML using Temml.",
+  "description": "Convert TeX to rendered SVG using MathJax or MathML.",
   "repo_url": "",
   "authors": [
     "ntsd"
@@ -9,7 +9,7 @@
   "dependents": 1,
   "updated": "2024-11-16T12:49:02.760Z",
   "tags": [
-    "utility"
+    "content"
   ],
   "svelte5": false,
   "runes": false

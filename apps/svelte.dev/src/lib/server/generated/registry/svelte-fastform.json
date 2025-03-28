@@ -1,6 +1,6 @@
 {
   "name": "svelte-fastform",
-  "description": "Manage form state and validation in Svelte applications.",
+  "description": "Manage forms with validation in Svelte applications.",
   "repo_url": "",
   "authors": [
     "srmullen"
@@ -9,7 +9,7 @@
   "dependents": 0,
   "updated": "2021-02-17T22:19:13.385Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false

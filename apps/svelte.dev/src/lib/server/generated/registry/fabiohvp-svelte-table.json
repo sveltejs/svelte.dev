@@ -1,6 +1,6 @@
 {
   "name": "@fabiohvp/svelte-table",
-  "description": "Render tables with pagination, search, and sort features.",
+  "description": "Render tables in Svelte applications.",
   "repo_url": "https://github.com/fabiohvp/svelte-table",
   "authors": [
     "fabiohvp"

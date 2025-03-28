@@ -1,6 +1,6 @@
 {
   "name": "@htmlbricks/hb-form",
-  "description": "Build Svelte forms with validation and web component support.",
+  "description": "Create form web component for Svelte applications.",
   "repo_url": "",
   "authors": [
     "dariocaruso"
@@ -9,7 +9,7 @@
   "dependents": 11,
   "updated": "2025-03-24T18:07:25.487Z",
   "tags": [
-    "component-library"
+    "ui"
   ],
   "svelte5": false,
   "runes": false

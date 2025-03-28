@@ -1,6 +1,6 @@
 {
   "name": "@accuser/svelte-plausible-analytics",
-  "description": "Integrates Plausible Analytics into SvelteKit apps.",
+  "description": "Integrate Plausible Analytics with SvelteKit.",
   "repo_url": "https://github.com/accuser/svelte-plausible-analytics",
   "authors": [
     "accuser"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2023-12-21T16:57:09.707Z",
   "tags": [
-    "utility"
+    "integration"
   ],
   "svelte5": false,
   "runes": false,

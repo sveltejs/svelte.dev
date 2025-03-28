@@ -1,6 +1,6 @@
 {
   "name": "svelte-toolbox",
-  "description": "Implement Google Material Design components for Svelte.",
+  "description": "Create UI components using Google's Material Design specification.",
   "repo_url": "https://github.com/svelte-toolbox/svelte-toolbox",
   "authors": [
     "vehmloewff"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2019-08-11T00:27:58.359Z",
   "tags": [
-    "component-library"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

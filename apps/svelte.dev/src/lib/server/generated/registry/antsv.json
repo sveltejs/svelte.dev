@@ -1,6 +1,6 @@
 {
   "name": "antsv",
-  "description": "Provide Ant Design components for Svelte.",
+  "description": "Provides Ant Design components for Svelte.",
   "repo_url": "https://github.com/ui-sv/antsv",
   "authors": [
     "justboereh"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2025-03-26T17:41:27.828Z",
   "tags": [
-    "component-library"
+    "ui"
   ],
   "svelte5": true,
   "runes": false,

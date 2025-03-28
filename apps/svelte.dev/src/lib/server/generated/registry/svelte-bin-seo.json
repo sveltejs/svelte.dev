@@ -1,6 +1,6 @@
 {
   "name": "@svelte-bin/seo",
-  "description": "Enhance SEO of Svelte apps with meta tags, Open Graph, and JSON-LD.",
+  "description": "Enhance SEO for Svelte apps with meta tags and Open Graph.",
   "repo_url": "",
   "authors": [
     "binsarjr"

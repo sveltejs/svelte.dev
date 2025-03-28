@@ -1,6 +1,6 @@
 {
   "name": "@keycloakify/svelte-email",
-  "description": "Build emails with Svelte components, render to HTML or plain text.",
+  "description": "Build emails with Svelte components.",
   "repo_url": "https://github.com/keycloakify/svelte-email",
   "authors": [
     "garronej"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2025-01-27T06:54:54.330Z",
   "tags": [
-    "content"
+    "tooling"
   ],
   "svelte5": true,
   "runes": false,

@@ -1,6 +1,6 @@
 {
   "name": "svelte-html5-validators",
-  "description": "Adds HTML5 validator attributes to form elements in Svelte.",
+  "description": "Add HTML5 validator attributes to Svelte form elements.",
   "repo_url": "https://github.com/omirobarcelo/svelte-html5-validators",
   "authors": [
     "magna_shogun"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2019-12-10T15:22:24.026Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

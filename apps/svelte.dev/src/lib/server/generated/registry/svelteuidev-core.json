@@ -11,10 +11,10 @@
   "dependents": 6,
   "updated": "2024-07-07T14:30:27.404Z",
   "tags": [
-    "component-library",
+    "design-system",
     "ui"
   ],
-  "svelte5": true,
+  "svelte5": false,
   "runes": false,
   "github_stars": 1363
 }

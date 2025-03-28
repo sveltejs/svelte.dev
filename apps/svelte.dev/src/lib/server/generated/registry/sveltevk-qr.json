@@ -1,6 +1,6 @@
 {
   "name": "@sveltevk/qr",
-  "description": "Generate VK-style QR codes as Svelte components.",
+  "description": "Generate VK-style QR codes in Svelte applications.",
   "repo_url": "https://github.com/sveltevk/qr",
   "authors": [
     "severecloud"

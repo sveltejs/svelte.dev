@@ -1,6 +1,6 @@
 {
   "name": "m3-svelte",
-  "description": "Implement Material 3 design system in Svelte.",
+  "description": "Implements Material 3 design system in Svelte.",
   "repo_url": "https://github.com/KTibow/m3-svelte",
   "authors": [
     "ktibow"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2025-03-20T04:10:08.461Z",
   "tags": [
-    "component-library"
+    "design-system"
   ],
   "svelte5": true,
   "runes": false,

@@ -1,6 +1,6 @@
 {
   "name": "svelte-modal-z",
-  "description": "Create simple and beautiful Svelte modals.",
+  "description": "Create simple and beautiful modal components for Svelte.",
   "repo_url": "https://github.com/delpikye-v/svelte-modal",
   "authors": [
     "delpikye"

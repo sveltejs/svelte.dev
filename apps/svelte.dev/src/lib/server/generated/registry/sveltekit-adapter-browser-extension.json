@@ -1,6 +1,6 @@
 {
   "name": "sveltekit-adapter-browser-extension",
-  "description": "Adapts SvelteKit apps to build cross-browser extensions.",
+  "description": "Adapt SvelteKit apps for cross-browser extension development.",
   "repo_url": "",
   "authors": [
     "antony"
@@ -9,7 +9,8 @@
   "dependents": 0,
   "updated": "2023-05-25T13:15:47.831Z",
   "tags": [
-    "adapter"
+    "adapter",
+    "tooling"
   ],
   "svelte5": false,
   "runes": false

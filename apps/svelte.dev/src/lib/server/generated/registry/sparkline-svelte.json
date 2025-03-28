@@ -1,6 +1,6 @@
 {
   "name": "sparkline-svelte",
-  "description": "Create responsive Sparkline charts for Svelte 5 with touch support.",
+  "description": "Create lightweight, responsive sparkline charts for Svelte 5 dashboards.",
   "repo_url": "https://github.com/bn-l/sparkline-svelte",
   "authors": [
     "bn-l-github"

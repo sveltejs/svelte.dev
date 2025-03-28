@@ -1,0 +1,17 @@
+{
+  "name": "@daaku/svelte-swipe-action",
+  "description": "Add swipe gestures to Svelte components.",
+  "repo_url": "",
+  "authors": [
+    "daaku"
+  ],
+  "downloads": 11,
+  "dependents": 0,
+  "updated": "2020-09-21T13:19:18.333Z",
+  "tags": [
+    "ui",
+    "miscellaneous"
+  ],
+  "svelte5": false,
+  "runes": false
+}

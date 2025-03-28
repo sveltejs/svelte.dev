@@ -1,15 +1,15 @@
 {
   "name": "@thisux/sveltednd",
-  "description": "Create drag and drop functionality in Svelte 5 applications.",
+  "description": "Implement drag and drop functionality in Svelte apps.",
   "repo_url": "",
   "authors": [
     "sanjusivalingam"
   ],
-  "downloads": 2374,
+  "downloads": 2799,
   "dependents": 4,
   "updated": "2025-01-23T06:05:15.817Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": true,
   "runes": false

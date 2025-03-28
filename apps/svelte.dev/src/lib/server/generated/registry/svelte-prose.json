@@ -1,6 +1,6 @@
 {
   "name": "svelte-prose",
-  "description": "Provide typography utilities for Svelte applications.",
+  "description": "Provide typography utilities for Svelte.",
   "repo_url": "https://github.com/metonym/svelte-prose",
   "authors": [
     "metonym"

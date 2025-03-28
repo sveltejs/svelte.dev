@@ -1,6 +1,6 @@
 {
   "name": "@jeppech/svelte-adapter-bun",
-  "description": "Generate standalone Bun.js server for SvelteKit apps.",
+  "description": "Generates a standalone Bun.js server for SvelteKit apps.",
   "repo_url": "https://github.com/gornostay25/svelte-adapter-bun",
   "authors": [
     "jeppech"

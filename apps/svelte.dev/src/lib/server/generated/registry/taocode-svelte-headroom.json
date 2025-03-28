@@ -1,6 +1,6 @@
 {
   "name": "@taocode/svelte-headroom",
-  "description": "Auto-hiding header and footer component for Svelte.",
+  "description": "Create auto-hiding headers and footers in Svelte apps.",
   "repo_url": "https://github.com/taocode/svelte-headroom",
   "authors": [
     "taocode"

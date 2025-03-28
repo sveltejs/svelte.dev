@@ -1,6 +1,6 @@
 {
   "name": "sveltetf",
-  "description": "Provides ML components using TensorflowJS for Svelte.",
+  "description": "Integrate machine learning features into Svelte apps.",
   "repo_url": "https://github.com/eksohinc/sveltetf",
   "authors": [
     "phrensoua"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2023-12-09T18:50:10.728Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

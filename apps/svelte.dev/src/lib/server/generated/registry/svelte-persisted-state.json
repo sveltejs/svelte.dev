@@ -1,6 +1,6 @@
 {
   "name": "svelte-persisted-state",
-  "description": "Persist Svelte 5 states with local or session storage.",
+  "description": "Persist Svelte state using local or session storage.",
   "repo_url": "https://github.com/oMaN-Rod/svelte-persisted-state",
   "authors": [
     "i_am_o"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2025-02-01T12:00:33.070Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": true,
   "runes": false,

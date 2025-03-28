@@ -1,17 +1,16 @@
 {
   "name": "@geoffcox/sterling-svelte",
-  "description": "Build modern, accessible UI component library for Svelte.",
+  "description": "Create modern, accessible UI components for Svelte.",
   "repo_url": "",
   "authors": [
     "geoffcox"
   ],
   "homepage": "https://github.com/GeoffCox/sterling-svelte/blob/main/README.md",
-  "downloads": 58,
+  "downloads": 28,
   "dependents": 0,
   "updated": "2025-01-09T22:06:33.143Z",
   "tags": [
-    "component-library",
-    "ui"
+    "design-system"
   ],
   "svelte5": true,
   "runes": false

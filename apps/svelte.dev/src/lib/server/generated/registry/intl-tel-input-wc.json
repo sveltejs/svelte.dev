@@ -1,6 +1,6 @@
 {
   "name": "intl-tel-input-wc",
-  "description": "Create international phone code selector web component.",
+  "description": "Integrate international phone code selector web component.",
   "repo_url": "https://github.com/swaggyp7/intl-tel-input-wc",
   "authors": [
     "swaggyplin"

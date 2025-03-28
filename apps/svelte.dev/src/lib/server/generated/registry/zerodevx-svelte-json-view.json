@@ -1,6 +1,6 @@
 {
   "name": "@zerodevx/svelte-json-view",
-  "description": "View JSON data prettily in Svelte apps.",
+  "description": "Prettify and display JSON data in a tree-like view.",
   "repo_url": "https://github.com/zerodevx/svelte-json-view",
   "authors": [
     "zerodevx"

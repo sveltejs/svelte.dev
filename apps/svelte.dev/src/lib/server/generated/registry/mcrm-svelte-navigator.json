@@ -1,6 +1,6 @@
 {
   "name": "mcrm-svelte-navigator",
-  "description": "Implement simple, accessible routing for Svelte applications.",
+  "description": "Provide simple, accessible routing for Svelte applications.",
   "repo_url": "https://github.com/mefechoel/svelte-navigator",
   "authors": [
     "mbouclas"

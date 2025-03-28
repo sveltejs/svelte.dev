@@ -1,6 +1,6 @@
 {
   "name": "svelte-web3-provider",
-  "description": "Detects and provides Web3 for Svelte, with fallback support.",
+  "description": "Provides Web3 functionality for Svelte applications.",
   "repo_url": "https://github.com/binsarjr/svelte-web3-provider",
   "authors": [
     "binsarjr"
@@ -10,7 +10,6 @@
   "dependents": 0,
   "updated": "2022-11-04T17:21:28.607Z",
   "tags": [
-    "utility",
     "integration"
   ],
   "svelte5": false,

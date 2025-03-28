@@ -1,6 +1,6 @@
 {
   "name": "@rootenginear/svelte-action-motionone",
-  "description": "Integrate Motion One animations into Svelte components.",
+  "description": "Animate Svelte elements using Motion One with Svelte actions.",
   "repo_url": "https://github.com/rootEnginear/svelte-action-motionone",
   "authors": [
     "rootenginear"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2024-09-28T18:29:21.619Z",
   "tags": [
-    "utility"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

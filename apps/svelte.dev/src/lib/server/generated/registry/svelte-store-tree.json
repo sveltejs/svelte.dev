@@ -1,6 +1,6 @@
 {
   "name": "svelte-store-tree",
-  "description": "Provide nested, zoomable stores for managing Svelte application state.",
+  "description": "Provide nested stores that zoom into store value parts.",
   "repo_url": "https://github.com/igrep/svelte-store-tree",
   "authors": [
     "igrep"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2023-10-12T08:51:56.120Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

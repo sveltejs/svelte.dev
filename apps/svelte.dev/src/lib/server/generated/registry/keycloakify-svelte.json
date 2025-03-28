@@ -1,6 +1,6 @@
 {
   "name": "@keycloakify/svelte",
-  "description": "Provides Svelte components for Keycloakify integration.",
+  "description": "Provide Svelte components for Keycloakify integration.",
   "repo_url": "https://github.com/keycloakify/keycloakify-svelte",
   "authors": [
     "garronej"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2025-03-14T07:06:47.557Z",
   "tags": [
-    "auth"
+    "integration"
   ],
   "svelte5": true,
   "runes": false,

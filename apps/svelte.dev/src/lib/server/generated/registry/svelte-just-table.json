@@ -1,6 +1,6 @@
 {
   "name": "svelte-just-table",
-  "description": "Create simple, customizable tables for Svelte projects.",
+  "description": "Create simple table components for Svelte applications.",
   "repo_url": "https://github.com/lukaszwisniewski88/SimpleSvelteTable",
   "authors": [
     "lukasz_wisniewski"

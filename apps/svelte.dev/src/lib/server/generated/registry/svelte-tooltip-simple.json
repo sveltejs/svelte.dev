@@ -1,6 +1,6 @@
 {
   "name": "svelte-tooltip-simple",
-  "description": "Displays simple tooltips for Svelte components.",
+  "description": "Displays simple tooltips in Svelte applications.",
   "repo_url": "https://github.com/gspasov/svelte-tooltip",
   "authors": [
     "gvspasov"

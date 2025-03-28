@@ -1,12 +1,12 @@
 {
   "name": "svelte-multiselect",
-  "description": "Create multi-select components for Svelte.",
+  "description": "Create multi-select components for Svelte with keyboard support.",
   "repo_url": "https://github.com/janosh/svelte-multiselect",
   "authors": [
     "janosh"
   ],
   "homepage": "https://janosh.github.io/svelte-multiselect",
-  "downloads": 20130,
+  "downloads": 19773,
   "dependents": 3,
   "updated": "2024-10-24T09:06:50.627Z",
   "tags": [

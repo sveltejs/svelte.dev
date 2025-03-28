@@ -1,6 +1,6 @@
 {
   "name": "@svelte-put/modal",
-  "description": "Create async, type-safe modal solutions in Svelte applications.",
+  "description": "Create async modal components in Svelte.",
   "repo_url": "https://github.com/vnphanquang/svelte-put",
   "authors": [
     "vnphanquang"
@@ -10,8 +10,7 @@
   "dependents": 0,
   "updated": "2024-12-19T02:40:45.295Z",
   "tags": [
-    "ui",
-    "utility"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

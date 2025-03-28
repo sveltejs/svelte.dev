@@ -1,6 +1,6 @@
 {
   "name": "svelte-action-touch-to-mouse",
-  "description": "Convert touch events to mouse events for Svelte.",
+  "description": "Converts touch events to mouse events in Svelte.",
   "repo_url": "",
   "authors": [
     "egnus"
@@ -10,8 +10,7 @@
   "dependents": 0,
   "updated": "2023-11-17T09:43:58.180Z",
   "tags": [
-    "utility",
-    "dom"
+    "miscellaneous"
   ],
   "svelte5": true,
   "runes": false

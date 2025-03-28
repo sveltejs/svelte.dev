@@ -1,6 +1,6 @@
 {
   "name": "sp-svelte-modal-menu",
-  "description": "Create modal menus for Svelte applications.",
+  "description": "Create modal menus in Svelte applications.",
   "repo_url": "https://github.com/sp-sveltejs/sp-svelte-modal-menu",
   "authors": [
     "kayodebristol"

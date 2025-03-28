@@ -1,6 +1,6 @@
 {
   "name": "@svelteuidev/preprocessors",
-  "description": "Enhance Svelte development with preprocessor utilities.",
+  "description": "Provide Svelte preprocessor library for development assistance.",
   "repo_url": "https://github.com/svelteuidev/svelteui",
   "authors": [
     "lowkey_daisy",
@@ -11,7 +11,7 @@
   "dependents": 0,
   "updated": "2024-07-07T14:30:26.435Z",
   "tags": [
-    "preprocessor"
+    "tooling"
   ],
   "svelte5": true,
   "runes": false,

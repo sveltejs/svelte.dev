@@ -1,6 +1,6 @@
 {
   "name": "svelecte",
-  "description": "Create flexible autocomplete/select component in Svelte.",
+  "description": "Create flexible autocomplete/select components in Svelte.",
   "repo_url": "https://github.com/mskocik/svelecte",
   "authors": [
     "mskocik"

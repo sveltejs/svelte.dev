@@ -1,6 +1,6 @@
 {
   "name": "@selemondev/svelte-marquee",
-  "description": "Create beautiful marquee components for Svelte.",
+  "description": "Create beautiful marquee components for Svelte with Tailwind CSS.",
   "repo_url": "https://github.com/selemondev/svelte-marquee",
   "authors": [
     "selemondev"

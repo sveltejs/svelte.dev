@@ -1,6 +1,6 @@
 {
   "name": "svelte-preprocess-global",
-  "description": "Apply :global() directive to CSS selectors in Svelte components.",
+  "description": "Apply :global() directive to Svelte component selectors.",
   "repo_url": "https://github.com/metonym/svelte-preprocess-global",
   "authors": [
     "metonym"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2022-05-16T01:17:57.789Z",
   "tags": [
-    "preprocessor"
+    "tooling"
   ],
   "svelte5": false,
   "runes": false,

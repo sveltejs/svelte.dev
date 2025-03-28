@@ -1,6 +1,6 @@
 {
   "name": "svelte-dnd-list",
-  "description": "Create simple drag and drop lists in Svelte.",
+  "description": "Create drag and drop lists in Svelte applications.",
   "repo_url": "https://github.com/tarb/svelte-dnd-list",
   "authors": [
     "tarb"

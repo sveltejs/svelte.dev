@@ -1,6 +1,6 @@
 {
   "name": "@svelteuidev/composables",
-  "description": "Svelte actions and utilities library.",
+  "description": "Provides Svelte actions and utilities for various use cases.",
   "repo_url": "https://github.com/svelteuidev/svelteui",
   "authors": [
     "lowkey_daisy",
@@ -11,7 +11,7 @@
   "dependents": 9,
   "updated": "2024-07-07T14:30:26.620Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": true,
   "runes": false,

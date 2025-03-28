@@ -1,6 +1,6 @@
 {
   "name": "svelte-phaser",
-  "description": "Integrate Phaser 3 game engine with Svelte.",
+  "description": "Integrate Phaser 3 game framework with Svelte.",
   "repo_url": "https://github.com/mattjennings/svelte-phaser",
   "authors": [
     "mattjennings"

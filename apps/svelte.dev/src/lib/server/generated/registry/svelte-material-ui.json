@@ -1,6 +1,6 @@
 {
   "name": "svelte-material-ui",
-  "description": "Use Material UI components in Svelte apps.",
+  "description": "Build Material Design UI components for Svelte applications.",
   "repo_url": "https://github.com/hperrin/svelte-material-ui",
   "authors": [
     "hperrin"
@@ -9,10 +9,10 @@
   "dependents": 8,
   "updated": "2024-12-22T22:58:40.767Z",
   "tags": [
-    "component-library",
+    "design-system",
     "ui"
   ],
   "svelte5": false,
   "runes": false,
-  "github_stars": 3358
+  "github_stars": 3359
 }

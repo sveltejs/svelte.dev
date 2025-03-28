@@ -1,6 +1,6 @@
 {
   "name": "@perseid/store",
-  "description": "Provides complete state management for front and back ends.",
+  "description": "Provide complete state management for Svelte applications.",
   "repo_url": "https://github.com/openizr/perseid",
   "authors": [
     "openizr2"
@@ -10,7 +10,7 @@
   "dependents": 3,
   "updated": "2024-08-08T14:14:11.059Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

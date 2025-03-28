@@ -1,6 +1,6 @@
 {
   "name": "svelte-adapter",
-  "description": "Use Svelte components with Vue and React.",
+  "description": "Use Svelte components inside React or Vue components.",
   "repo_url": "https://github.com/pngwn/svelte-adapter",
   "authors": [
     "evilpingwin"

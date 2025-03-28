@@ -1,6 +1,6 @@
 {
   "name": "svelte-bird",
-  "description": "Provides Svelte/SvelteKit admin template.",
+  "description": "Svelte/SvelteKit admin template.",
   "repo_url": "https://github.com/joaquimnetocel/svelte-bird",
   "authors": [
     "joaquim.neto.cel"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2025-03-23T19:16:57.004Z",
   "tags": [
-    "component-library"
+    "design-system"
   ],
   "svelte5": true,
   "runes": false,

@@ -1,6 +1,6 @@
 {
   "name": "@felte/validator-yup",
-  "description": "Validates Felte forms using Yup schema.",
+  "description": "Validate Felte forms with Yup.",
   "repo_url": "https://github.com/pablo-abc/felte",
   "authors": [
     "pberganza"
@@ -10,7 +10,7 @@
   "dependents": 6,
   "updated": "2024-10-29T22:05:28.329Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

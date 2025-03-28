@@ -1,6 +1,6 @@
 {
   "name": "@apsc/keyboard-shortcut-action",
-  "description": "Adds keyboard shortcut actions for Svelte directives.",
+  "description": "Call functions via keyboard shortcuts in Svelte apps.",
   "repo_url": "https://github.com/andrey-pavlenko/svelte-components",
   "authors": [
     "andrey-pavlenko"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2023-02-01T20:15:30.166Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

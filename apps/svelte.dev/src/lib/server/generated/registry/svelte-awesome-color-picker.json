@@ -1,12 +1,12 @@
 {
   "name": "svelte-awesome-color-picker",
-  "description": "Highly customizable color picker component library for Svelte.",
+  "description": "Create highly customizable color picker components for Svelte.",
   "repo_url": "https://github.com/Ennoriel/svelte-awesome-color-picker",
   "authors": [
     "ennoriel"
   ],
   "homepage": "https://svelte-awesome-color-picker.vercel.app",
-  "downloads": 9823,
+  "downloads": 10006,
   "dependents": 13,
   "updated": "2025-03-23T17:21:05.419Z",
   "tags": [

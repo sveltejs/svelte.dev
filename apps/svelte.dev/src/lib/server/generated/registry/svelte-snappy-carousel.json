@@ -1,6 +1,6 @@
 {
   "name": "svelte-snappy-carousel",
-  "description": "Create touch-friendly, snappy horizontal carousels for Svelte.",
+  "description": "Create touch-friendly, snappy horizontal carousels in Svelte.",
   "repo_url": "https://github.com/yoonbuck/svelte-snappy-carousel",
   "authors": [
     "yoonbuck"

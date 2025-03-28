@@ -1,6 +1,6 @@
 {
   "name": "svelte-plyr-fixed",
-  "description": "Thin Svelte wrapper around Plyr.js video player.",
+  "description": "Create Svelte wrappers for Plyr.js media player.",
   "repo_url": "https://github.com/benwoodward/svelte-plyr",
   "authors": [
     "koala1e"

@@ -1,6 +1,6 @@
 {
   "name": "svelte-firekit",
-  "description": "Integrate Firebase authentication and Firestore in Svelte apps.",
+  "description": "Integrate Firebase with SvelteKit applications.",
   "repo_url": "https://github.com/code-gio/svelte-firekit",
   "authors": [
     "code-gio"
@@ -10,6 +10,7 @@
   "dependents": 0,
   "updated": "2025-02-18T00:01:45.506Z",
   "tags": [
+    "integration",
     "auth",
     "server"
   ],

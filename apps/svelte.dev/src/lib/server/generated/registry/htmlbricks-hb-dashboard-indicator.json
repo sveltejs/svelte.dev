@@ -1,6 +1,6 @@
 {
   "name": "@htmlbricks/hb-dashboard-indicator",
-  "description": "Creates dashboard indicator web component.",
+  "description": "Creates dashboard indicator web component for Svelte applications.",
   "repo_url": "",
   "authors": [
     "dariocaruso"

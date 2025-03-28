@@ -1,6 +1,6 @@
 {
   "name": "svelte-uicons",
-  "description": "Provides FlatIcon's Uicons port for Svelte.",
+  "description": "Use FlatIcon's Uicons in Svelte projects.",
   "repo_url": "https://github.com/robak08/svelte-uicons",
   "authors": [
     "robakk08"

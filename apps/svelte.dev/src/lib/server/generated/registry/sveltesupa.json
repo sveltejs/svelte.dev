@@ -1,6 +1,6 @@
 {
   "name": "sveltesupa",
-  "description": "Simplify Supabase integration for Svelte apps.",
+  "description": "Enhance Supabase apps with Svelte components.",
   "repo_url": "https://github.com/yustarandomname/supasvelte",
   "authors": [
     "abeldebruijn"
@@ -10,7 +10,8 @@
   "dependents": 0,
   "updated": "2021-07-06T16:57:27.671Z",
   "tags": [
-    "integration"
+    "integration",
+    "auth"
   ],
   "svelte5": false,
   "runes": false,

@@ -1,6 +1,6 @@
 {
   "name": "svelte-selected",
-  "description": "Create select/autocomplete component for Svelte apps.",
+  "description": "Create select/autocomplete components for Svelte apps.",
   "repo_url": "https://github.com/basaran/svelte-selected",
   "authors": [
     "anakha"

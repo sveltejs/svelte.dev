@@ -1,6 +1,6 @@
 {
   "name": "sveltering",
-  "description": "Splits text elements into letters, words, or lines.",
+  "description": "Split text inside DOM elements to letters, words, or lines.",
   "repo_url": "https://github.com/eriksachse/sveltering",
   "authors": [
     "gammalasergun"

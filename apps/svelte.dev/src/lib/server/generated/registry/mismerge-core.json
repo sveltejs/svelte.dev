@@ -1,6 +1,6 @@
 {
   "name": "@mismerge/core",
-  "description": "Provides a web-based merge editor built with Svelte.",
+  "description": "Create a modern merge editor for the Web with Svelte.",
   "repo_url": "https://github.com/BearToCode/mismerge",
   "authors": [
     "astrobear"
@@ -10,7 +10,7 @@
   "dependents": 1,
   "updated": "2024-08-19T16:10:47.273Z",
   "tags": [
-    "ui"
+    "tooling"
   ],
   "svelte5": false,
   "runes": false,

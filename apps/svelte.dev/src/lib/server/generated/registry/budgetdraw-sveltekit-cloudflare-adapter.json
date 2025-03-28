@@ -1,6 +1,6 @@
 {
   "name": "@budgetdraw/sveltekit-cloudflare-adapter",
-  "description": "Adapt SvelteKit apps for Cloudflare workers.",
+  "description": "Adapt SvelteKit apps for Cloudflare Workers deployment.",
   "repo_url": "",
   "authors": [
     "budgetdrawdev"

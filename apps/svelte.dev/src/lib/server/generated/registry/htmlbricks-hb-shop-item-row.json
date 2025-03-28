@@ -1,6 +1,6 @@
 {
   "name": "@htmlbricks/hb-shop-item-row",
-  "description": "Create shop item row web components for Svelte applications.",
+  "description": "Creates Svelte Shop Item Row WebComponent.",
   "repo_url": "",
   "authors": [
     "dariocaruso"

@@ -1,6 +1,6 @@
 {
   "name": "@loscrackitos/svelte-typed-js",
-  "description": "Type text with Typed.js in Svelte components.",
+  "description": "Types text with Typed.js in Svelte components.",
   "repo_url": "https://github.com/Los-Crackitos/svelte-typed-js",
   "authors": [
     "thyrael",

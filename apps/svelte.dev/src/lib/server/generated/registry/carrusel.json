@@ -1,6 +1,6 @@
 {
   "name": "carrusel",
-  "description": "Creates dependency-free, SSR-compatible carousel for Svelte.",
+  "description": "Create dependency-free, SSR-compatible carousels for Svelte.",
   "repo_url": "https://github.com/jhanca-vm/carrusel",
   "authors": [
     "jhanca"

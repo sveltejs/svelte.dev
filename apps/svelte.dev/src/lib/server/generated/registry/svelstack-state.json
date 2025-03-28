@@ -1,6 +1,6 @@
 {
   "name": "@svelstack/state",
-  "description": "Provide Svelte Promise/Future states for data fetching.",
+  "description": "Manage Svelte Promise/Future states with AsyncableFutureState.",
   "repo_url": "https://github.com/svelstack/state",
   "authors": [
     "martk"
@@ -10,7 +10,7 @@
   "dependents": 1,
   "updated": "2025-03-26T16:39:49.737Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": true,
   "runes": false,

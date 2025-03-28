@@ -1,6 +1,6 @@
 {
   "name": "@o7/icon",
-  "description": "Efficiently uses SVG sprites for Svelte icon library.",
+  "description": "Efficient Svelte icon library using SVG sprites.",
   "repo_url": "",
   "authors": [
     "ottomated"

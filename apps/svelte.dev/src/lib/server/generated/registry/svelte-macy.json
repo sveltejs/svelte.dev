@@ -1,6 +1,6 @@
 {
   "name": "svelte-macy",
-  "description": "Create masonry layouts for Svelte components.",
+  "description": "Create masonry layout component for Svelte apps.",
   "repo_url": "https://github.com/hongkiulam/svelte-macy",
   "authors": [
     "hongkiulam"

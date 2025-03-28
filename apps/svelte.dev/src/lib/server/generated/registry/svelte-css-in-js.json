@@ -1,6 +1,6 @@
 {
   "name": "svelte-css-in-js",
-  "description": "Manage CSS-in-JS styles within Svelte components.",
+  "description": "Enable CSS-in-JS handling from Svelte components.",
   "repo_url": "",
   "authors": [
     "hmmhmmhm"
@@ -9,7 +9,7 @@
   "dependents": 1,
   "updated": "2020-01-02T03:04:35.844Z",
   "tags": [
-    "utility"
+    "tooling"
   ],
   "svelte5": true,
   "runes": false

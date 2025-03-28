@@ -1,6 +1,6 @@
 {
   "name": "@novacbn/svelte-stork",
-  "description": "Wrap Svelte Stores around Stork Search, provide components.",
+  "description": "Wrap Stork Search with Svelte stores and components.",
   "repo_url": "https://github.com/novacbn/svelte-stork",
   "authors": [
     "novacbn"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2021-08-09T08:30:59.154Z",
   "tags": [
-    "utility"
+    "seo"
   ],
   "svelte5": false,
   "runes": false,

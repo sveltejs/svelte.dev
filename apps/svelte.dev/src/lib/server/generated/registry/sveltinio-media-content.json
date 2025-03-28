@@ -1,6 +1,6 @@
 {
   "name": "@sveltinio/media-content",
-  "description": "Embed media content in Svelte and SvelteKit projects.",
+  "description": "Embed media content easily in Svelte and SvelteKit projects.",
   "repo_url": "https://github.com/sveltinio/components-library",
   "authors": [
     "sveltinio"

@@ -1,6 +1,6 @@
 {
   "name": "dsmgpos-pincode",
-  "description": "Create pincode input components for Svelte.",
+  "description": "Create pincode input component for Svelte applications.",
   "repo_url": "https://github.com/dsmgpos/dsmgpos-pincode",
   "authors": [
     "salvacmp"

@@ -1,6 +1,6 @@
 {
   "name": "svelte-chota-ablab",
-  "description": "Create UI components using Chota CSS framework in Svelte.",
+  "description": "Create UI components using Chota CSS framework for Svelte.",
   "repo_url": "https://github.com/AlexxNB/svelte-chota",
   "authors": [
     "acim"
@@ -10,7 +10,8 @@
   "dependents": 0,
   "updated": "2020-04-17T17:28:02.708Z",
   "tags": [
-    "component-library"
+    "ui",
+    "design-system"
   ],
   "svelte5": false,
   "runes": false,

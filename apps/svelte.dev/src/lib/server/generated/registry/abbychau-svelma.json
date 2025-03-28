@@ -1,6 +1,6 @@
 {
   "name": "@abbychau/svelma",
-  "description": "Provide Bulma components for Svelte applications.",
+  "description": "Provides Bulma components for Svelte.",
   "repo_url": "https://github.com/abbychau/svelma",
   "authors": [
     "abbychau"
@@ -10,8 +10,7 @@
   "dependents": 0,
   "updated": "2021-03-17T17:12:53.189Z",
   "tags": [
-    "component-library",
-    "ui"
+    "design-system"
   ],
   "svelte5": false,
   "runes": false,

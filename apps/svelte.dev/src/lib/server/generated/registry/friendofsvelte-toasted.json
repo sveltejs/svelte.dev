@@ -1,6 +1,6 @@
 {
   "name": "@friendofsvelte/toasted",
-  "description": "Display fast, easy toast and flash messages in Svelte applications.",
+  "description": "Adds toast and flash messages to Svelte applications.",
   "repo_url": "https://github.com/friendofsvelte/toasted",
   "authors": [
     "bishwasbh"
@@ -10,8 +10,7 @@
   "dependents": 0,
   "updated": "2024-01-26T03:50:39.994Z",
   "tags": [
-    "ui",
-    "utility"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

@@ -1,6 +1,6 @@
 {
   "name": "@castlenine/svelte-qrcode",
-  "description": "Generate QR codes for Svelte & SvelteKit, no dependencies.",
+  "description": "Generate QR codes in Svelte and SvelteKit, no dependencies.",
   "repo_url": "https://github.com/castlenine/svelte-qrcode",
   "authors": [
     "castlenine"

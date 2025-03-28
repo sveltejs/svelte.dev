@@ -1,6 +1,6 @@
 {
   "name": "ethers-svelte",
-  "description": "Integrate ethers.js with Svelte, providing reactive stores.",
+  "description": "Integrate ethers.js with Svelte for blockchain interactions.",
   "repo_url": "https://github.com/clbrge/ethers-svelte",
   "authors": [
     "clbrge"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2023-11-07T14:05:22.033Z",
   "tags": [
-    "utility"
+    "integration"
   ],
   "svelte5": true,
   "runes": false,

@@ -1,6 +1,6 @@
 {
   "name": "svelte-tree-view",
-  "description": "Displays JSON objects in customizable tree-view.",
+  "description": "Display Javascript objects in a tree layout for Svelte.",
   "repo_url": "https://github.com/TeemuKoivisto/svelte-tree-view",
   "authors": [
     "tekk"

@@ -1,6 +1,6 @@
 {
   "name": "@responsive-ui/action-sheet",
-  "description": "Create action sheet component for Svelte.",
+  "description": "Create action sheet component for Svelte apps.",
   "repo_url": "https://github.com/wetix/responsive-ui",
   "authors": [
     "rexlow",

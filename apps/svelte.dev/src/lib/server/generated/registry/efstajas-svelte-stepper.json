@@ -1,6 +1,6 @@
 {
   "name": "@efstajas/svelte-stepper",
-  "description": "Create animated, multi-step flows with Svelte.",
+  "description": "Build animated stepped flows with Svelte.",
   "repo_url": "",
   "authors": [
     "efstajas"

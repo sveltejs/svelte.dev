@@ -1,12 +1,12 @@
 {
   "name": "svelte-tiptap",
-  "description": "Create Svelte components for tiptap v2 rich text editor.",
+  "description": "Create rich text editors using Tiptap in Svelte.",
   "repo_url": "https://github.com/sibiraj-s/svelte-tiptap",
   "authors": [
     "sibiraj-s"
   ],
   "homepage": "https://github.com/sibiraj-s/svelte-tiptap#readme",
-  "downloads": 6427,
+  "downloads": 6717,
   "dependents": 5,
   "updated": "2024-12-01T10:24:47.495Z",
   "tags": [

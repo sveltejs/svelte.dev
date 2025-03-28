@@ -1,6 +1,6 @@
 {
   "name": "svelte-headroom",
-  "description": "Hide or show header on scroll with Svelte Headroom component.",
+  "description": "Create a header that hides on scroll for Svelte apps.",
   "repo_url": "https://github.com/collardeau/svelte-headroom",
   "authors": [
     "collardeau"

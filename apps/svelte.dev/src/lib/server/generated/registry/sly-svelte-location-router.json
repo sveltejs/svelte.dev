@@ -1,6 +1,6 @@
 {
   "name": "sly-svelte-location-router",
-  "description": "Implement lightweight Svelte router using Location API.",
+  "description": "Creates a lightweight router for Svelte applications.",
   "repo_url": "https://github.com/SlyOtis/svelte-router",
   "authors": [
     "slyotis"

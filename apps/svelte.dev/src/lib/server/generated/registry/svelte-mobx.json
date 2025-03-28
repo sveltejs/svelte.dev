@@ -1,6 +1,6 @@
 {
   "name": "svelte-mobx",
-  "description": "Integrate MobX for reactive state management in Svelte apps.",
+  "description": "Integrate MobX state management with Svelte.",
   "repo_url": "https://github.com/xelaok/svelte-mobx",
   "authors": [
     "xelaok"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2020-12-29T02:31:16.447Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

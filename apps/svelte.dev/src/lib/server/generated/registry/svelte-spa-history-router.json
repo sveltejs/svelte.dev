@@ -1,6 +1,6 @@
 {
   "name": "svelte-spa-history-router",
-  "description": "History-based router for Svelte SPA.",
+  "description": "Implement history-based routing for Svelte single-page applications.",
   "repo_url": "https://github.com/ykrods/svelte-spa-history-router",
   "authors": [
     "ykrods"

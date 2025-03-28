@@ -1,6 +1,6 @@
 {
   "name": "linted",
-  "description": "ESLint config for JavaScript, TypeScript, Svelte, HTML, CSS, etc.",
+  "description": "Provides ESLint configuration for Svelte projects.",
   "repo_url": "https://github.com/jimmy-zhening-luo/linted",
   "authors": [
     "jimmy-zhening-luo"
@@ -8,7 +8,7 @@
   "homepage": "https://github.com/jimmy-zhening-luo/linted#readme",
   "downloads": 1483,
   "dependents": 0,
-  "updated": "2025-03-27T05:41:07.799Z",
+  "updated": "2025-03-27T06:35:00.806Z",
   "tags": [
     "tooling"
   ],

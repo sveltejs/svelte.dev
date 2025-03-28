@@ -1,6 +1,6 @@
 {
   "name": "svelte-zoomable",
-  "description": "Zoom into different levels of detail with Svelte component.",
+  "description": "Create zoomable UI components in Svelte applications.",
   "repo_url": "https://github.com/dimfeld/svelte-zoomable",
   "authors": [
     "dimfeld"

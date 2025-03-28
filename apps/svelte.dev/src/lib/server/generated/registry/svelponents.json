@@ -1,6 +1,6 @@
 {
   "name": "svelponents",
-  "description": "Port Ant Design components to Svelte.",
+  "description": "Provides Ant Design components ported for Svelte.",
   "repo_url": "https://github.com/N00nDay/svelponents",
   "authors": [
     "noonday"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2020-06-23T15:35:24.109Z",
   "tags": [
-    "component-library"
+    "design-system"
   ],
   "svelte5": false,
   "runes": false,

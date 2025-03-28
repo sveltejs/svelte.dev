@@ -1,6 +1,6 @@
 {
   "name": "svbmit",
-  "description": "Provides form validation for Svelte applications.",
+  "description": "Validate forms in Svelte applications.",
   "repo_url": "https://github.com/PierBover/svbmit",
   "authors": [
     "pier25"
@@ -10,7 +10,8 @@
   "dependents": 0,
   "updated": "2021-12-24T15:41:57.508Z",
   "tags": [
-    "utility"
+    "tooling",
+    "integration"
   ],
   "svelte5": false,
   "runes": false,

@@ -1,6 +1,6 @@
 {
   "name": "ctw-kit",
-  "description": "Provide custom Svelte components and utilities.",
+  "description": "Create custom Svelte components with TailwindCSS and DaisyUI.",
   "repo_url": "https://github.com/ctwhome/ctw-kit",
   "authors": [
     "ctwhome"
@@ -10,7 +10,9 @@
   "dependents": 0,
   "updated": "2025-01-17T22:14:30.745Z",
   "tags": [
-    "component-library"
+    "ui",
+    "design-system",
+    "seo"
   ],
   "svelte5": true,
   "runes": false,

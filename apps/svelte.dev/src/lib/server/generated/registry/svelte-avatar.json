@@ -1,6 +1,6 @@
 {
   "name": "svelte-avatar",
-  "description": "Displays avatar images with fallback initials.",
+  "description": "Create avatar components with initials or images.",
   "repo_url": "https://github.com/wdtamagi/svelte-avatar",
   "authors": [
     "wdtamagi"

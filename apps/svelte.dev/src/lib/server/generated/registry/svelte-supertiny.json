@@ -1,6 +1,6 @@
 {
   "name": "svelte-supertiny",
-  "description": "Provide 340+ Svelte SVG Supertinyicons components.",
+  "description": "Provides Svelte components for SuperTinyIcons SVG icons.",
   "repo_url": "https://github.com/shinokada/svelte-supertiny",
   "authors": [
     "shinichiokada"

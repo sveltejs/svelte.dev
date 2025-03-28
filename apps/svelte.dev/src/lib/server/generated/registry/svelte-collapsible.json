@@ -1,12 +1,12 @@
 {
   "name": "svelte-collapsible",
-  "description": "Create collapsible components for Svelte apps.",
+  "description": "Create expanding and collapsing content in Svelte apps.",
   "repo_url": "https://github.com/rsdavis/svelte-collapsible",
   "authors": [
     "rsdavis"
   ],
   "homepage": "https://github.com/rsdavis/svelte-collapsible#readme",
-  "downloads": 765,
+  "downloads": 681,
   "dependents": 1,
   "updated": "2024-11-21T22:40:59.943Z",
   "tags": [

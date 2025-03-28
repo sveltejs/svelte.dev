@@ -1,6 +1,6 @@
 {
   "name": "file-viewer",
-  "description": "View files (PDF, Excel, etc.) using Svelte web component.",
+  "description": "View files using custom element built with Svelte.",
   "repo_url": "https://github.com/avipunes/File-Viewer",
   "authors": [
     "avipunes"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2020-07-26T14:07:44.591Z",
   "tags": [
-    "media"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

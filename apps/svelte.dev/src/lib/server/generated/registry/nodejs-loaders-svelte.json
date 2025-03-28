@@ -11,8 +11,7 @@
   "dependents": 0,
   "updated": "2025-02-26T13:27:15.563Z",
   "tags": [
-    "tooling",
-    "preprocessor"
+    "tooling"
   ],
   "svelte5": true,
   "runes": false,

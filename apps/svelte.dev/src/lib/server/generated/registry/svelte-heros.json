@@ -1,6 +1,6 @@
 {
   "name": "svelte-heros",
-  "description": "Provides Heroicons for Svelte, supports outline and solid variants.",
+  "description": "Provides Heroicons components for Svelte.",
   "repo_url": "https://github.com/shinokada/svelte-heros",
   "authors": [
     "shinichiokada"

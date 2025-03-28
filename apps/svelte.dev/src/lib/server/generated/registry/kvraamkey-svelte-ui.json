@@ -1,6 +1,6 @@
 {
   "name": "@kvraamkey/svelte-ui",
-  "description": "Build simple UI components for Svelte.",
+  "description": "Provide simple Svelte 3 UI components.",
   "repo_url": "https://github.com/kvraamkey/svelte-ui",
   "authors": [
     "kvraamkey"

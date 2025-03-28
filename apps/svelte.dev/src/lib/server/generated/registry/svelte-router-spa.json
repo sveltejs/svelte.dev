@@ -1,6 +1,6 @@
 {
   "name": "svelte-router-spa",
-  "description": "Adds routing to Svelte apps, organizes routes, and creates SPAs.",
+  "description": "Implement routing in Svelte single-page applications.",
   "repo_url": "https://github.com/jorgegorka/svelte-router",
   "authors": [
     "jorgegorka"

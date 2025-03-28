@@ -1,12 +1,12 @@
 {
   "name": "svelte-mini-router",
-  "description": "Implement minimal SPA routing for Svelte 5 applications.",
+  "description": "Create minimal, declarative SPA router for Svelte 5.",
   "repo_url": "https://github.com/rodrigocfd/svelte-mini-router",
   "authors": [
     "rodrigocfd"
   ],
   "homepage": "https://github.com/rodrigocfd/svelte-mini-router",
-  "downloads": 3,
+  "downloads": 11,
   "dependents": 0,
   "updated": "2024-12-25T13:46:23.073Z",
   "tags": [

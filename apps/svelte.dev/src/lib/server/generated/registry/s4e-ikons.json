@@ -1,6 +1,6 @@
 {
   "name": "s4e-ikons",
-  "description": "Provide automotive SVG icon components for Svelte",
+  "description": "Provide automotive SVG icon components for Svelte.",
   "repo_url": "https://github.com/eswat2/s4e-ikons",
   "authors": [
     "eswat2"

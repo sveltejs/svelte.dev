@@ -1,6 +1,6 @@
 {
   "name": "@hugokorte/twoslash-svelte",
-  "description": "Extends Twoslash for Svelte support.",
+  "description": "Extends Twoslash for Svelte support, enabling code analysis.",
   "repo_url": "https://github.com/twoslashes/twoslash",
   "authors": [
     "hugoskokos"

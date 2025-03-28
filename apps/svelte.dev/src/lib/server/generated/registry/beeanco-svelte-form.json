@@ -1,6 +1,6 @@
 {
   "name": "@beeanco/svelte-form",
-  "description": "Build forms with validation using Yup schema in Svelte apps.",
+  "description": "Build forms with validation using Yup schema in Svelte.",
   "repo_url": "https://github.com/LukasHechenberger/opensource",
   "authors": [
     "lhechenberger"
@@ -10,7 +10,7 @@
   "dependents": 1,
   "updated": "2022-02-04T11:07:30.478Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false

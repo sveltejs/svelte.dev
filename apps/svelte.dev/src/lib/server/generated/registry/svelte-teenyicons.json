@@ -1,6 +1,6 @@
 {
   "name": "svelte-teenyicons",
-  "description": "Integrate Teenyicons, providing SVG icon components for Svelte projects.",
+  "description": "Use Teenyicons, a set of tiny SVG icons, in Svelte.",
   "repo_url": "https://github.com/shinokada/svelte-teenyicons",
   "authors": [
     "shinichiokada"

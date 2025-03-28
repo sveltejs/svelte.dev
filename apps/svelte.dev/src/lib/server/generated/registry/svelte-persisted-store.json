@@ -1,6 +1,6 @@
 {
   "name": "svelte-persisted-store",
-  "description": "Persist Svelte stores to local storage, sync across tabs.",
+  "description": "Persist Svelte stores to local storage, syncing across browser tabs.",
   "repo_url": "https://github.com/joshnuss/svelte-persisted-store",
   "authors": [
     "joshnuss"
@@ -10,7 +10,7 @@
   "dependents": 17,
   "updated": "2024-10-31T12:16:06.628Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": true,
   "runes": false,

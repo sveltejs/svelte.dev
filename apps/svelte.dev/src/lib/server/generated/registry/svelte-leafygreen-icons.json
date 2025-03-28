@@ -1,6 +1,6 @@
 {
   "name": "svelte-leafygreen-icons",
-  "description": "Use Leafygreen UI SVG icons as Svelte components.",
+  "description": "Render Leafygreen UI SVG icons as Svelte components.",
   "repo_url": "https://github.com/metonym/svelte-leafygreen-icons",
   "authors": [
     "metonym"

@@ -1,6 +1,6 @@
 {
   "name": "@vietsch/svelte-video-player-kit",
-  "description": "Create basic video players for Svelte and SvelteKit apps.",
+  "description": "Create basic video player component for Svelte and SvelteKit apps.",
   "repo_url": "https://github.com/Vietsch/svelte-video-player-kit",
   "authors": [
     "vietsch"

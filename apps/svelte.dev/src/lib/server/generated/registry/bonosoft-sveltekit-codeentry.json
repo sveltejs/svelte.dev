@@ -1,6 +1,6 @@
 {
   "name": "@bonosoft/sveltekit-codeentry",
-  "description": "Implement code entry component for SvelteKit.",
+  "description": "Add code entry form element to SvelteKit sites.",
   "repo_url": "https://github.com/bonosoft/sveltekit-codeentry",
   "authors": [
     "bonosoft"

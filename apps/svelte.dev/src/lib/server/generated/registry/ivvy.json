@@ -1,6 +1,6 @@
 {
   "name": "ivvy",
-  "description": "Provides type-safe form management with validation and i18n support.",
+  "description": "Form manager with type-safe validators, i18n/l10n support.",
   "repo_url": "https://github.com/romelperez/ivvy",
   "authors": [
     "romelperez"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2024-03-27T03:15:55.115Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

@@ -1,6 +1,6 @@
 {
   "name": "@alex-way/adapter-lambda",
-  "description": "Adapt SvelteKit app for AWS Lambda deployment.",
+  "description": "Adapts SvelteKit apps for deployment to AWS Lambda.",
   "repo_url": "https://github.com/alex-way/adapter-lambda",
   "authors": [
     "alex-way"

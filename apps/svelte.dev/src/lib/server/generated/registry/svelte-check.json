@@ -1,6 +1,6 @@
 {
   "name": "svelte-check",
-  "description": "Checks Svelte code for errors and warnings.",
+  "description": "Check Svelte code for errors and warnings.",
   "repo_url": "https://github.com/sveltejs/language-tools",
   "authors": [
     "orta",
@@ -8,7 +8,7 @@
     "dummdidumm"
   ],
   "homepage": "https://github.com/sveltejs/language-tools#readme",
-  "downloads": 504446,
+  "downloads": 501901,
   "dependents": 69,
   "updated": "2025-03-06T14:20:23.951Z",
   "tags": [

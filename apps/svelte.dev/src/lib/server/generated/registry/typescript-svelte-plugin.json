@@ -1,6 +1,6 @@
 {
   "name": "typescript-svelte-plugin",
-  "description": "TypeScript plugin providing Svelte intellisense.",
+  "description": "Provide Svelte intellisense via TypeScript plugin.",
   "repo_url": "https://github.com/sveltejs/language-tools",
   "authors": [
     "orta",
@@ -8,7 +8,7 @@
     "dummdidumm"
   ],
   "homepage": "https://github.com/sveltejs/language-tools/tree/master/packages/typescript-plugin",
-  "downloads": 12517,
+  "downloads": 12598,
   "dependents": 4,
   "updated": "2025-03-06T14:09:32.286Z",
   "tags": [

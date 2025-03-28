@@ -1,6 +1,6 @@
 {
   "name": "flowbite-svelte",
-  "description": "UI components for Svelte apps.",
+  "description": "Build UI with Flowbite components for Svelte.",
   "repo_url": "https://github.com/themesberg/flowbite-svelte",
   "authors": [
     "jjagielka",
@@ -8,14 +8,14 @@
     "shinichiokada"
   ],
   "homepage": "https://flowbite-svelte.com/",
-  "downloads": 50711,
+  "downloads": 53854,
   "dependents": 44,
   "updated": "2025-02-24T16:22:35.419Z",
   "tags": [
-    "component-library",
-    "ui"
+    "ui",
+    "design-system"
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 2416
+  "github_stars": 2415
 }

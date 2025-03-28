@@ -1,6 +1,6 @@
 {
   "name": "svelte-compare-image",
-  "description": "Compare two images with slider to reveal one over other.",
+  "description": "Compare two images side-by-side with slider control.",
   "repo_url": "https://github.com/BrianMitchL/svelte-compare-image",
   "authors": [
     "brianmitchl"

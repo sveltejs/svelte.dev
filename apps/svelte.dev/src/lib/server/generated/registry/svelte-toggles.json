@@ -1,6 +1,6 @@
 {
   "name": "svelte-toggles",
-  "description": "Creates light and dark mode toggle switches for Svelte.",
+  "description": "Create light & dark mode toggle switches for Svelte.",
   "repo_url": "https://github.com/Team-GOATS/teamgoats-npm-package",
   "authors": [
     "soad",

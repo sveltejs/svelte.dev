@@ -1,6 +1,6 @@
 {
   "name": "svelte-preprocess-autoimport",
-  "description": "Preprocessor for automatic imports and createEventDispatcher.",
+  "description": "Automatically import and createEventDispatcher in Svelte.",
   "repo_url": "https://github.com/rixo/svelte-preprocess-autoimport",
   "authors": [
     "rixo"

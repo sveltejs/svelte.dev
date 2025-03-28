@@ -1,6 +1,6 @@
 {
   "name": "svelte-jsx",
-  "description": "Use JSX for testing Svelte components.",
+  "description": "Enable JSX syntax for testing Svelte components.",
   "repo_url": "https://github.com/kenoxa/svelte-jsx",
   "authors": [
     "sastan"

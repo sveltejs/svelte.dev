@@ -1,6 +1,6 @@
 {
   "name": "@nordcode/forms-svelte",
-  "description": "Create UI inputs and forms with validation in Svelte apps.",
+  "description": "Provide Nordcode UI inputs and forms for Svelte.",
   "repo_url": "",
   "authors": [
     "jshsj",
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2024-12-14T16:00:33.931Z",
   "tags": [
-    "component-library"
+    "ui"
   ],
   "svelte5": true,
   "runes": false

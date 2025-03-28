@@ -1,6 +1,6 @@
 {
   "name": "@egamer/ow-events-status-element",
-  "description": "Display Overwatch game event status using Svelte.",
+  "description": "Display Overwatch events status using Svelte.",
   "repo_url": "",
   "authors": [
     "egear"

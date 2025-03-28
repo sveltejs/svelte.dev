@@ -1,6 +1,6 @@
 {
   "name": "svelte-image-imgix",
-  "description": "Lazy load Imgix images in Svelte apps.",
+  "description": "Lazy load Imgix images in Svelte applications.",
   "repo_url": "https://github.com/Perspective-Software/svelte-image-imgix",
   "authors": [
     "schnubor",

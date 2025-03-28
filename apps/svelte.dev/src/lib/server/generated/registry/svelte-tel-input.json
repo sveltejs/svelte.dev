@@ -1,12 +1,12 @@
 {
   "name": "svelte-tel-input",
-  "description": "Format and validate phone numbers in Svelte applications.",
+  "description": "Provides a lightweight tel/phone input standardizer for Svelte.",
   "repo_url": "https://github.com/gyurielf/svelte-tel-input",
   "authors": [
     "gyurielf"
   ],
   "homepage": "https://github.com/gyurielf/svelte-tel-input#readme",
-  "downloads": 8106,
+  "downloads": 8141,
   "dependents": 2,
   "updated": "2025-02-18T13:23:56.457Z",
   "tags": [

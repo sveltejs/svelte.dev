@@ -1,6 +1,6 @@
 {
   "name": "@diramazioni/tui-editor-svelte",
-  "description": "Integrate TUI Editor, a Markdown WYSIWYG editor, into Svelte projects.",
+  "description": "Integrate TUI Editor, a Markdown editor, into Svelte.",
   "repo_url": "https://github.com/diramazioni/tui-editor-svelte",
   "authors": [
     "diramazioni"

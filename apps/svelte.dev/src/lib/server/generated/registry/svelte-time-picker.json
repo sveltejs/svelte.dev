@@ -1,6 +1,6 @@
 {
   "name": "svelte-time-picker",
-  "description": "Provides a Svelte time picker component.",
+  "description": "Implement time pickers with dialog for Svelte apps.",
   "repo_url": "git@gitlab.com/public-e-soa-com/svelte-time-picker",
   "authors": [
     "jack-y"

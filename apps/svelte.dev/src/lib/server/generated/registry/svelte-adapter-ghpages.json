@@ -1,6 +1,6 @@
 {
   "name": "svelte-adapter-ghpages",
-  "description": "Deploy SvelteKit apps to GitHub Pages.",
+  "description": "SvelteKit adapter for gh-pages.",
   "repo_url": "https://github.com/ota-meshi/svelte-adapter-ghpages",
   "authors": [
     "ota-meshi"

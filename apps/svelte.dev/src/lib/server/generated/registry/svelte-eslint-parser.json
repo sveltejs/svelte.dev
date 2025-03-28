@@ -1,6 +1,6 @@
 {
   "name": "svelte-eslint-parser",
-  "description": "Parses Svelte code for ESLint.",
+  "description": "Parse Svelte code for ESLint.",
   "repo_url": "https://github.com/sveltejs/svelte-eslint-parser",
   "authors": [
     "conduitry",
@@ -13,8 +13,7 @@
   "dependents": 75,
   "updated": "2025-03-27T01:49:26.272Z",
   "tags": [
-    "tooling",
-    "preprocessor"
+    "tooling"
   ],
   "svelte5": true,
   "runes": false,

@@ -1,6 +1,6 @@
 {
   "name": "sveltekit-auth-example",
-  "description": "Provides SvelteKit authentication example with Google and PostgreSQL.",
+  "description": "Example authentication and authorization for SvelteKit.",
   "repo_url": "https://github.com/nstuyvesant/sveltekit-auth-example",
   "authors": [
     "nstuyvesant"

@@ -1,6 +1,6 @@
 {
   "name": "svelte-multiselect-new",
-  "description": "Create keyboard-friendly, accessible multi-select Svelte components.",
+  "description": "Create keyboard-friendly, accessible multi-select components.",
   "repo_url": "https://github.com/janosh/svelte-multiselect",
   "authors": [
     "pingus"
@@ -10,7 +10,8 @@
   "dependents": 0,
   "updated": "2022-04-17T23:56:39.044Z",
   "tags": [
-    "ui"
+    "ui",
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

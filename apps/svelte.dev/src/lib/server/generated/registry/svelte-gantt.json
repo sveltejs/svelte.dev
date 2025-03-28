@@ -1,6 +1,6 @@
 {
   "name": "svelte-gantt",
-  "description": "Create interactive Gantt charts with drag-and-drop functionality.",
+  "description": "Creates interactive Gantt chart/resource booking components.",
   "repo_url": "https://github.com/ANovokmet/svelte-gantt",
   "authors": [
     "anovokmet",
@@ -15,5 +15,5 @@
   ],
   "svelte5": false,
   "runes": false,
-  "github_stars": 560
+  "github_stars": 561
 }

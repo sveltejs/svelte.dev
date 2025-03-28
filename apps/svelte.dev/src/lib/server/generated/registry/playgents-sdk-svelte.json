@@ -1,16 +1,16 @@
 {
   "name": "@playgents-sdk/svelte",
-  "description": "Integrate Playgents AI Toolkit with Svelte.",
+  "description": "Integrate Playgents AI Toolkit into Svelte applications.",
   "repo_url": "https://github.com/yamz8/playgents",
   "authors": [
     "yamz8"
   ],
   "homepage": "https://playgents/docs",
-  "downloads": 0,
+  "downloads": 2,
   "dependents": 0,
   "updated": "2024-12-19T12:59:24.594Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": true,
   "runes": false,

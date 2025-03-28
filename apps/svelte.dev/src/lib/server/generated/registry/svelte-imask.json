@@ -1,6 +1,6 @@
 {
   "name": "svelte-imask",
-  "description": "Mask input component and action for Svelte.",
+  "description": "Apply input masks with IMask in Svelte apps.",
   "repo_url": "https://github.com/PaulMaly/svelte-imask",
   "authors": [
     "paulmaly"
@@ -10,7 +10,7 @@
   "dependents": 3,
   "updated": "2019-12-02T10:22:35.983Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

@@ -1,6 +1,6 @@
 {
   "name": "lamy-debugbar",
-  "description": "Provides a debugbar for Svelte applications.",
+  "description": "Provide debugbar for Svelte apps.",
   "repo_url": "https://github.com/lnfel/lamy-debugbar",
   "authors": [
     "lnfel"

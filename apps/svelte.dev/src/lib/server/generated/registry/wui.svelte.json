@@ -1,6 +1,6 @@
 {
   "name": "wui.svelte",
-  "description": "Collection of Web UI components built with Svelte.",
+  "description": "Build Web User Interface components with Svelte.",
   "repo_url": "https://github.com/shuLhan/wui.svelte",
   "authors": [
     "shulhan"

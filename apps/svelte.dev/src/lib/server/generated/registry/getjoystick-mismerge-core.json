@@ -1,6 +1,6 @@
 {
   "name": "@getjoystick/mismerge-core",
-  "description": "Modern merge editor for the Web, built with Svelte.",
+  "description": "Provides a web-based merge editor built with Svelte.",
   "repo_url": "https://github.com/getjoystick/mismerge",
   "authors": [
     "valerii_maslenykov",
@@ -12,7 +12,7 @@
   "dependents": 0,
   "updated": "2024-02-21T13:45:50.643Z",
   "tags": [
-    "tooling"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

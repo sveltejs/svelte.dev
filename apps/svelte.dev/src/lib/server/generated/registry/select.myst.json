@@ -1,6 +1,6 @@
 {
   "name": "select.myst",
-  "description": "Provides custom select component with filtering and keyboard support.",
+  "description": "Custom select component with filtering and keyboard support.",
   "repo_url": "",
   "authors": [
     "codemyst"

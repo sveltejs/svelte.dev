@@ -1,6 +1,6 @@
 {
   "name": "svelte-dts",
-  "description": "Generates Typescript declarations for Svelte projects.",
+  "description": "Typescript declaration generator for svelte.",
   "repo_url": "https://github.com/andrelmlins/svelte-dts",
   "authors": [
     "andrelmlins"

@@ -1,6 +1,6 @@
 {
   "name": "@htmlbricks/hb-input-number",
-  "description": "Provides a Svelte-Bootstrap number input web component.",
+  "description": "Create number input web components for Svelte.",
   "repo_url": "",
   "authors": [
     "dariocaruso"

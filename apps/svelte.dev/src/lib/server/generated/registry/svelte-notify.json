@@ -1,6 +1,6 @@
 {
   "name": "svelte-notify",
-  "description": "Adds notification functionality to Svelte applications.",
+  "description": "Add notifications to Svelte applications.",
   "repo_url": "https://github.com/shaanu1404/svelte-notify",
   "authors": [
     "shaanu1404"

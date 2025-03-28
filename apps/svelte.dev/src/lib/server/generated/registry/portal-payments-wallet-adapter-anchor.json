@@ -1,6 +1,6 @@
 {
   "name": "@portal-payments/wallet-adapter-anchor",
-  "description": "Integrate Solana wallet adapter with Anchor in Svelte apps.",
+  "description": "Integrate Solana wallet adapter with Anchor in Svelte.",
   "repo_url": "https://github.com/portalpayments/svelte-on-solana-wallet-adapter",
   "authors": [
     "mikemaccana"

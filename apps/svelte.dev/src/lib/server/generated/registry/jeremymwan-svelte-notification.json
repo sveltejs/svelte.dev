@@ -1,6 +1,6 @@
 {
   "name": "@jeremymwan/svelte-notification",
-  "description": "Display notification messages in Svelte applications.",
+  "description": "Create notification components for Svelte.",
   "repo_url": "",
   "authors": [
     "jeremymwan"

@@ -1,6 +1,6 @@
 {
   "name": "@3-/svelte-preprocess",
-  "description": "Preprocess Svelte components with various preprocessors.",
+  "description": "Preprocess Svelte components with support for various languages.",
   "repo_url": "https://github.com/i18n-fork/svelte-preprocess",
   "authors": [
     "i18n-now"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2024-10-21T06:10:48.516Z",
   "tags": [
-    "preprocessor"
+    "tooling"
   ],
   "svelte5": true,
   "runes": false,

@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-svelte-checker",
-  "description": "Check Svelte projects using Vite with TypeScript and ESLint.",
+  "description": "Checks Svelte projects using Vite.",
   "repo_url": "https://github.com/FabianCarrasco/vite-plugin-svelte-checker",
   "authors": [
     "fabiancarrasco"

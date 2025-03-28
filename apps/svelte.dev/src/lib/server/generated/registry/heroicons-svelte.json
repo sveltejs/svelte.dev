@@ -1,6 +1,6 @@
 {
   "name": "heroicons-svelte",
-  "description": "Use hand-crafted SVG Heroicons in Svelte apps.",
+  "description": "Use hand-crafted SVG icons from Heroicons in Svelte apps.",
   "repo_url": "https://github.com/travishorn/heroicons-svelte",
   "authors": [
     "travishorn"
@@ -13,6 +13,6 @@
     "ui"
   ],
   "svelte5": true,
-  "runes": false,
+  "runes": true,
   "github_stars": 3
 }

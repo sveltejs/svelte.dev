@@ -1,6 +1,6 @@
 {
   "name": "svelte-autocomplete-table",
-  "description": "Table with autocomplete, sorting, filtering based on column values.",
+  "description": "Create tables with autocomplete, sorting, and filtering.",
   "repo_url": "https://github.com/Krishnan555/svelte-autocomplete-table",
   "authors": [
     "krishnan555"
@@ -11,7 +11,7 @@
   "updated": "2020-08-01T16:53:48.673Z",
   "tags": [
     "ui",
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

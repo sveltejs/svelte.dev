@@ -1,6 +1,6 @@
 {
   "name": "@mzaghetto/svelte-json-tree",
-  "description": "View JSON data in tree format within Svelte applications.",
+  "description": "Display JSON data in an expandable tree structure within Svelte.",
   "repo_url": "https://github.com/mzaghetto/svelte-json-tree",
   "authors": [
     "mzaghetto"

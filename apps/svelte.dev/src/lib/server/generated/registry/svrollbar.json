@@ -1,6 +1,6 @@
 {
   "name": "svrollbar",
-  "description": "Create custom scrollbar made by Svelte.",
+  "description": "Custom scrollbar made by svelte.",
   "repo_url": "https://github.com/daylilyfield/svrollbar",
   "authors": [
     "daylilyfield"

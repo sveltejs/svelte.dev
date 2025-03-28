@@ -1,6 +1,6 @@
 {
   "name": "@glean-dev/svelte-language-server",
-  "description": "Provides language server for Svelte, offering editor features.",
+  "description": "Provide language server for Svelte development.",
   "repo_url": "https://github.com/UnwrittenFun/svelte-language-server",
   "authors": [
     "osener"

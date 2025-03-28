@@ -1,6 +1,6 @@
 {
   "name": "ceilbit-hamburgers",
-  "description": "Create hamburger menu component for Svelte with customisation options.",
+  "description": "Provides hamburger menu component for Svelte.",
   "repo_url": "https://github.com/CeilBit/ceilbit-hamburgers",
   "authors": [
     "tzaimun"

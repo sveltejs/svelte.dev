@@ -1,6 +1,6 @@
 {
   "name": "svelte-splitpanes",
-  "description": "Create resizable pane layout splitters for Svelte.",
+  "description": "Create resizable pane layouts for Svelte applications.",
   "repo_url": "https://github.com/orefalo/svelte-splitpanes",
   "authors": [
     "orefalo"

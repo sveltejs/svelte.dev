@@ -1,6 +1,6 @@
 {
   "name": "svelte-store-webmonetization",
-  "description": "Create Svelte store for Web Monetization events.",
+  "description": "Implement Web Monetization with Svelte stores.",
   "repo_url": "https://github.com/mankins/svelte-store-webmonetization",
   "authors": [
     "mankins"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2021-06-02T16:24:36.701Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": true,
   "runes": false,

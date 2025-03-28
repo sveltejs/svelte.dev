@@ -1,6 +1,6 @@
 {
   "name": "sveditorjs",
-  "description": "Wraps EditorJS for Svelte and SvelteKit, outputs clean JSON.",
+  "description": "Wrap EditorJS for Svelte and SvelteKit projects.",
   "repo_url": "https://github.com/pouchcms/sveditorjs",
   "authors": [
     "pouchcms"

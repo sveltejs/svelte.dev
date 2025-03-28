@@ -1,6 +1,6 @@
 {
   "name": "@teddy-error/svelte-french-toast",
-  "description": "Create smooth, customizable toast notifications in Svelte apps.",
+  "description": "Create buttery smooth toast notifications in Svelte.",
   "repo_url": "https://github.com/team-poseidon/svelte-french-toast",
   "authors": [
     "teddy-error"

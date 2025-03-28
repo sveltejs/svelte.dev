@@ -1,11 +1,11 @@
 {
   "name": "@ikun-ui/collapse-wrapper",
-  "description": "Create collapse wrapper component for Svelte.",
+  "description": "Wrap content with collapse functionality in Svelte.",
   "repo_url": "",
   "authors": [
     "baiwusanyu"
   ],
-  "downloads": 27,
+  "downloads": 1,
   "dependents": 1,
   "updated": "2025-01-24T03:48:46.373Z",
   "tags": [

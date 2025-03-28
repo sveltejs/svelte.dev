@@ -1,6 +1,6 @@
 {
   "name": "@sveu/actions",
-  "description": "Provide a collection of Svelte actions for various use cases.",
+  "description": "Provides collection of Svelte actions.",
   "repo_url": "https://github.com/svelte-u/actions",
   "authors": [
     "mohamed-kaizen"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2023-10-21T10:24:27.550Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

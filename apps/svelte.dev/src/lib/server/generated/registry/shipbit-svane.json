@@ -1,6 +1,6 @@
 {
   "name": "@shipbit/svane",
-  "description": "Displays Tailwind viewport/breakpoint information.",
+  "description": "Show Tailwind viewport and distance to next viewport.",
   "repo_url": "https://github.com/ShipBit/svane",
   "authors": [
     "shackles",

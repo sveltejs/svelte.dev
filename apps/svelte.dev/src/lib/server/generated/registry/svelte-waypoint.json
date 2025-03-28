@@ -1,6 +1,6 @@
 {
   "name": "svelte-waypoint",
-  "description": "Lazyload images or other elements in Svelte and Sapper.",
+  "description": "Lazyload images or other content in Svelte apps.",
   "repo_url": "https://github.com/matyunya/svelte-waypoint",
   "authors": [
     "matyunya"
@@ -9,7 +9,7 @@
   "dependents": 6,
   "updated": "2019-12-28T02:55:49.875Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

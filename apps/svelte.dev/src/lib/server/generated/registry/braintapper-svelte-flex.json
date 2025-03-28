@@ -1,6 +1,6 @@
 {
   "name": "braintapper-svelte-flex",
-  "description": "Provide flexbox row and column components for Svelte layouts.",
+  "description": "Create flexbox rows and columns for Svelte layouts.",
   "repo_url": "https://github.com/braintapper/braintapper-svelte-flex",
   "authors": [
     "braintapper"

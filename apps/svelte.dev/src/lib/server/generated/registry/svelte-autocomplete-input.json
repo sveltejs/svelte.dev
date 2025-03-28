@@ -1,6 +1,6 @@
 {
   "name": "svelte-autocomplete-input",
-  "description": "Implement autocomplete input component for Svelte applications.",
+  "description": "Create autocomplete input components for Svelte applications.",
   "repo_url": "https://github.com/maxjerry0107/svelte-autocomplete-input",
   "authors": [
     "maxjerry0107"

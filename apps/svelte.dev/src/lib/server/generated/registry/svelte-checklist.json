@@ -1,6 +1,6 @@
 {
   "name": "svelte-checklist",
-  "description": "Create customizable checklist components in Svelte.",
+  "description": "Create customizable checklist components for Svelte.",
   "repo_url": "",
   "authors": [
     "rodgco"

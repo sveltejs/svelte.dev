@@ -1,15 +1,15 @@
 {
   "name": "@ikun-ui/infinite",
-  "description": "Implement infinite scrolling in Svelte apps.",
+  "description": "Provides infinite component for Svelte.",
   "repo_url": "",
   "authors": [
     "baiwusanyu"
   ],
-  "downloads": 22,
+  "downloads": 1,
   "dependents": 1,
   "updated": "2025-01-24T03:49:00.398Z",
   "tags": [
-    "utility"
+    "ui"
   ],
   "svelte5": false,
   "runes": false

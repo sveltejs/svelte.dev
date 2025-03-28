@@ -1,6 +1,6 @@
 {
   "name": "svelte-color-well",
-  "description": "Provide color picker component for Svelte projects.",
+  "description": "Provides a color picker component for Svelte applications.",
   "repo_url": "https://github.com/Indyandie/svelte-color-well",
   "authors": [
     "negroramen"

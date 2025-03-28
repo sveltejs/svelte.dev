@@ -1,6 +1,6 @@
 {
   "name": "svelte-easy-popover",
-  "description": "Create easy-to-use popover component for Svelte 3 applications.",
+  "description": "Create easy-to-use popover component for Svelte 3.",
   "repo_url": "https://github.com/jguze/svelte-easy-popover",
   "authors": [
     "jguze"

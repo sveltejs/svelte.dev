@@ -1,6 +1,6 @@
 {
   "name": "hindsight",
-  "description": "Generates prop documentation for Svelte components.",
+  "description": "Generate prop documentation for Svelte components.",
   "repo_url": "https://github.com/metonym/hindsight",
   "authors": [
     "metonym"

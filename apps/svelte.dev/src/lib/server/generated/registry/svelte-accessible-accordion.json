@@ -1,6 +1,6 @@
 {
   "name": "svelte-accessible-accordion",
-  "description": "Create accessible accordion component for Svelte applications.",
+  "description": "Create accessible accordion component for Svelte.",
   "repo_url": "https://github.com/metonym/svelte-accessible-accordion",
   "authors": [
     "metonym"

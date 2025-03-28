@@ -1,6 +1,6 @@
 {
   "name": "svelte-modal-system",
-  "description": "Create modal windows with customizable options in Svelte.",
+  "description": "Create modal windows in Svelte applications.",
   "repo_url": "https://github.com/DonutLaser/svelte-modal-system",
   "authors": [
     "donutlaser"
@@ -10,8 +10,7 @@
   "dependents": 0,
   "updated": "2021-11-08T16:54:11.785Z",
   "tags": [
-    "ui",
-    "utility"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

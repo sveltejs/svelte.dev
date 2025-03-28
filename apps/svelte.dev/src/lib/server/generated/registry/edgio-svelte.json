@@ -1,6 +1,6 @@
 {
   "name": "@edgio/svelte",
-  "description": "Integrate Svelte apps with Edgio.",
+  "description": "Prefetch pages from Edgio edge cache.",
   "repo_url": "",
   "authors": [
     "moovweb-admin"
@@ -9,7 +9,7 @@
   "dependents": 0,
   "updated": "2024-11-06T23:18:43.977Z",
   "tags": [
-    "adapter"
+    "server"
   ],
   "svelte5": false,
   "runes": false

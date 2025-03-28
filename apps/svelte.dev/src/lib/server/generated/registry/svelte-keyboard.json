@@ -1,6 +1,6 @@
 {
   "name": "svelte-keyboard",
-  "description": "Create keyboard component for Svelte apps.",
+  "description": "Create keyboard component for Svelte.",
   "repo_url": "https://github.com/russellgoldenberg/svelte-keyboard",
   "authors": [
     "russellsamora"

@@ -1,6 +1,6 @@
 {
   "name": "@maximux13/svelte-i18next",
-  "description": "Adds internationalization (i18n) support to SvelteKit projects.",
+  "description": "Add internationalization (i18n) support to SvelteKit.",
   "repo_url": "https://github.com/maximux13/svelte-i18next",
   "authors": [
     "maximux13"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2023-11-27T16:08:58.637Z",
   "tags": [
-    "utility"
+    "integration"
   ],
   "svelte5": false,
   "runes": false,

@@ -1,6 +1,6 @@
 {
   "name": "sigrist-svelte-mandelbrot-explorer",
-  "description": "Render Mandelbrot set using WebGL in Svelte.",
+  "description": "Renders Mandelbrot set using WebGL in Svelte.",
   "repo_url": "https://github.com/LorisSigrist/svelte-mandelbrot-explorer",
   "authors": [
     "lurmwoch"

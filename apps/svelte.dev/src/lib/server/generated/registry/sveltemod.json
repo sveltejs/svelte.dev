@@ -1,6 +1,6 @@
 {
   "name": "sveltemod",
-  "description": "Run codemods for Svelte, using jscodeshift for AST transformations.",
+  "description": "Run codemods for Svelte projects using a CLI.",
   "repo_url": "https://github.com/rajasegar/sveltemod",
   "authors": [
     "rajasegar"

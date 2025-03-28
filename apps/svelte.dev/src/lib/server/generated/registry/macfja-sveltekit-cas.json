@@ -1,6 +1,6 @@
 {
   "name": "@macfja/sveltekit-cas",
-  "description": "Integrate CAS/SSO authentication in SvelteKit applications.",
+  "description": "Integrate CAS/SSO authentication in SvelteKit apps.",
   "repo_url": "https://github.com/macfja/sveltekit-cas",
   "authors": [
     "macfja"

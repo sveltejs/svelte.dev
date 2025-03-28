@@ -1,6 +1,6 @@
 {
   "name": "@cheqd/creds-ui-components",
-  "description": "Provides reusable UI components for Creds Suite.",
+  "description": "Provides reusable UI components for Creds Suite in Svelte.",
   "repo_url": "https://github.com/cheqd/creds-libs",
   "authors": [
     "cheqd.io",
@@ -12,8 +12,8 @@
   "dependents": 0,
   "updated": "2025-02-03T11:51:07.627Z",
   "tags": [
-    "component-library",
-    "ui"
+    "ui",
+    "design-system"
   ],
   "svelte5": false,
   "runes": false

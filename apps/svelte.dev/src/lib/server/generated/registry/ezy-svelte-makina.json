@@ -1,6 +1,6 @@
 {
   "name": "@ezy/svelte-makina",
-  "description": "Provide Svelte bindings for Makina state management.",
+  "description": "Provides Svelte bindings for Makina state management.",
   "repo_url": "https://github.com/ezylean/svelte-makina",
   "authors": [
     "didierdemoniere"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2021-07-25T19:47:24.990Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

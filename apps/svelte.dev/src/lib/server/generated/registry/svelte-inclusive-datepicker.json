@@ -1,6 +1,6 @@
 {
   "name": "svelte-inclusive-datepicker",
-  "description": "Create accessible date picker component for Svelte.",
+  "description": "Create accessible date picker for Svelte applications.",
   "repo_url": "https://github.com/andrew-secret/svelte-datepicker",
   "authors": [
     "andrew-secret"

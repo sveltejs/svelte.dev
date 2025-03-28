@@ -1,6 +1,6 @@
 {
   "name": "extended-table",
-  "description": "Create sortable, filterable data tables for Svelte.",
+  "description": "Create extended data tables for Svelte applications.",
   "repo_url": "https://github.com/dritter/extended-table",
   "authors": [
     "dritter"

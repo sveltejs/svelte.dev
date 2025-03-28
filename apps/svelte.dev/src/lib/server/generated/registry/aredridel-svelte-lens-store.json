@@ -1,6 +1,6 @@
 {
   "name": "@aredridel/svelte-lens-store",
-  "description": "Provides functional lenses over Svelte stores.",
+  "description": "Provide functional lenses over Svelte stores.",
   "repo_url": "https://github.com/aredridel/svelte-lens-store",
   "authors": [
     "aredridel"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2022-05-15T21:35:43.809Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

@@ -1,6 +1,6 @@
 {
   "name": "svelte-ui-library-kit",
-  "description": "Create flexible Svelte UI component library.",
+  "description": "Provide UI components for Svelte applications.",
   "repo_url": "https://github.com/mariellecarnecer99/svelte-ui-library-kit",
   "authors": [
     "mcarnecer"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2023-11-09T11:49:56.247Z",
   "tags": [
-    "component-library"
+    "design-system"
   ],
   "svelte5": false,
   "runes": false,

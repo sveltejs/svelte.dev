@@ -1,6 +1,6 @@
 {
   "name": "@alexaegis/svelte-config",
-  "description": "Configure Svelte projects with TypeScript and other tooling.",
+  "description": "Provide Svelte configuration.",
   "repo_url": "https://github.com/AlexAegis/js-tooling",
   "authors": [
     "alexaegis"

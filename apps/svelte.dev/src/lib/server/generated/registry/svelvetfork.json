@@ -1,6 +1,6 @@
 {
   "name": "svelvetfork",
-  "description": "Builds dynamic, node-based user interfaces.",
+  "description": "Build node-based user interfaces with Svelte components.",
   "repo_url": "https://github.com/IamMathankumar/Svelvet",
   "authors": [
     "iammathankumar"

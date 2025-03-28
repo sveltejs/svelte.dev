@@ -1,6 +1,6 @@
 {
   "name": "@sveltejs/svelte-json-tree",
-  "description": "Svelte JSON Viewer Component, supports Map, Set, and Symbol.",
+  "description": "Renders JSON data as an expandable tree in Svelte.",
   "repo_url": "https://github.com/sveltejs/svelte-json-tree",
   "authors": [
     "rich_harris",

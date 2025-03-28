@@ -1,6 +1,6 @@
 {
   "name": "svelte-scroll-shadow",
-  "description": "Add scroll shadows to Svelte components.",
+  "description": "Customize scroll, insert shadow when scrolling exists.",
   "repo_url": "https://github.com/andrelmlins/svelte-scroll-shadow",
   "authors": [
     "andrelmlins"

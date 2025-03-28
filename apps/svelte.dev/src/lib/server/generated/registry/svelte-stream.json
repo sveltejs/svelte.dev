@@ -1,6 +1,6 @@
 {
   "name": "svelte-stream",
-  "description": "Stream data from browser to server without WebSockets.",
+  "description": "Stream audio, video, other data from browser to server.",
   "repo_url": "https://github.com/JacobLinCool/svelte-stream",
   "authors": [
     "jacoblincool"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2024-10-01T16:38:10.072Z",
   "tags": [
-    "utility"
+    "server"
   ],
   "svelte5": false,
   "runes": false,

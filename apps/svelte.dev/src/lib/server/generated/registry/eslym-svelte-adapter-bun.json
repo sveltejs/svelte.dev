@@ -1,6 +1,6 @@
 {
   "name": "@eslym/svelte-adapter-bun",
-  "description": "Generates a standalone Bun.js server for SvelteKit apps.",
+  "description": "Generate standalone Bun.js server for SvelteKit apps.",
   "repo_url": "https://github.com/eslym/svelte-adapter-bun",
   "authors": [
     "0nepeop1e"

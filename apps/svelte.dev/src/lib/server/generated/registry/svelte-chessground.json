@@ -1,6 +1,6 @@
 {
   "name": "svelte-chessground",
-  "description": "Provides Svelte chessboard component, a wrapper for Chessground.",
+  "description": "Integrate chessboard component for Svelte apps.",
   "repo_url": "",
   "authors": [
     "gtim"

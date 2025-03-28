@@ -1,6 +1,6 @@
 {
   "name": "svelte5-router",
-  "description": "Provides declarative Svelte routing with SSR support.",
+  "description": "Declarative Svelte routing library with SSR support.",
   "repo_url": "https://github.com/jpcutshall/svelte5-router",
   "authors": [
     "jpcutshall"

@@ -1,6 +1,6 @@
 {
   "name": "@jer-0/xstate-svelte4",
-  "description": "Provides XState tools for Svelte applications.",
+  "description": "Integrate XState state machines with Svelte applications.",
   "repo_url": "https://github.com/statelyai/xstate",
   "authors": [
     "jer-0"
@@ -10,9 +10,9 @@
   "dependents": 0,
   "updated": "2023-07-07T15:08:51.874Z",
   "tags": [
-    "utility"
+    "integration"
   ],
   "svelte5": false,
   "runes": false,
-  "github_stars": 28006
+  "github_stars": 28009
 }

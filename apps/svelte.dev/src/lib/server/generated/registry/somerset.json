@@ -1,6 +1,6 @@
 {
   "name": "somerset",
-  "description": "SEO meta tag and OpenGraph management for SvelteKit.",
+  "description": "Adds SEO meta tags, Open Graph, and JSON-LD to SvelteKit pages.",
   "repo_url": "https://github.com/realgoatish/somerset",
   "authors": [
     "realgoatish"

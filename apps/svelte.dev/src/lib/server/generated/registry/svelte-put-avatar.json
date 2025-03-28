@@ -1,6 +1,6 @@
 {
   "name": "@svelte-put/avatar",
-  "description": "Component and utilities for handling avatar images.",
+  "description": "Component and utilities for handling avatar.",
   "repo_url": "https://github.com/vnphanquang/svelte-put",
   "authors": [
     "vnphanquang"

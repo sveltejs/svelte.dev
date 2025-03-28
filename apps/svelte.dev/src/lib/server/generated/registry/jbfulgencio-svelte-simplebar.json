@@ -1,6 +1,6 @@
 {
   "name": "@jbfulgencio/svelte-simplebar",
-  "description": "Svelte wrapper for SimpleBar scrollbar component.",
+  "description": "Wrap SimpleBar for scrollable content in Svelte applications.",
   "repo_url": "https://github.com/jbfulgencio/svelte-simplebar",
   "authors": [
     "jbfulgencio"

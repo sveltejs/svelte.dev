@@ -1,6 +1,6 @@
 {
   "name": "sveltekit-flash-message",
-  "description": "Send temporary data to next request after redirect.",
+  "description": "Send temporary data to next request after redirect in SvelteKit.",
   "repo_url": "https://github.com/ciscoheat/sveltekit-flash-message",
   "authors": [
     "ciscoheat"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2025-01-23T11:43:38.078Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": true,
   "runes": false,

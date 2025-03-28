@@ -1,6 +1,6 @@
 {
   "name": "@futagoza/eslint-config-svelte",
-  "description": "Provides ESLint configurations for Svelte files.",
+  "description": "ESLint configurations for Svelte files.",
   "repo_url": "https://github.com/futagoza/eslint-config-futagozaryuu",
   "authors": [
     "ryuu"

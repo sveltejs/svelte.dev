@@ -1,6 +1,6 @@
 {
   "name": "@sxxov/sv",
-  "description": "Offer opinionated Svelte component library.",
+  "description": "Opinionated Svelte component library.",
   "repo_url": "https://github.com/sxxov/sv",
   "authors": [
     "sxxov"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2024-01-28T09:45:59.328Z",
   "tags": [
-    "component-library"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

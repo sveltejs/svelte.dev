@@ -1,6 +1,6 @@
 {
   "name": "p5-svelte5",
-  "description": "Integrate p5.js sketches seamlessly into Svelte components.",
+  "description": "Integrate p5 sketches into Svelte components easily.",
   "repo_url": "https://github.com/CodigoDemente/p5-svelte5",
   "authors": [
     "codigodemente"
@@ -10,8 +10,7 @@
   "dependents": 0,
   "updated": "2024-12-08T17:20:46.911Z",
   "tags": [
-    "ui",
-    "utility"
+    "ui"
   ],
   "svelte5": true,
   "runes": false,

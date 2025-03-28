@@ -1,6 +1,6 @@
 {
   "name": "@umaranis/svelte-code-editor",
-  "description": "Provides a code editor component for Svelte, based on CodeMirror.",
+  "description": "Integrate code editor with syntax highlighting in Svelte.",
   "repo_url": "",
   "authors": [
     "umaranis"

@@ -1,6 +1,6 @@
 {
   "name": "@toryz/eslint-config-svelte",
-  "description": "Provides ESLint configuration for Svelte projects.",
+  "description": "ESLint configuration for Svelte projects.",
   "repo_url": "",
   "authors": [
     "toryz"

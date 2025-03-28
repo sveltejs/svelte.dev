@@ -1,6 +1,6 @@
 {
   "name": "svelte-rough-notation",
-  "description": "Annotate text with rough-notation in Svelte applications.",
+  "description": "Annotate text with rough-notation in Svelte apps.",
   "repo_url": "https://github.com/dimfeld/svelte-rough-notation",
   "authors": [
     "dimfeld"

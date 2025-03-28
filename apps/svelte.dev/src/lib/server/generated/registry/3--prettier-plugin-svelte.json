@@ -1,6 +1,6 @@
 {
   "name": "@3-/prettier-plugin-svelte",
-  "description": "Format Svelte code using Prettier.",
+  "description": "Format Svelte components with Prettier.",
   "repo_url": "",
   "authors": [
     "i18n-now"
@@ -10,8 +10,7 @@
   "dependents": 0,
   "updated": "2025-02-05T07:26:58.910Z",
   "tags": [
-    "tooling",
-    "preprocessor"
+    "tooling"
   ],
   "svelte5": true,
   "runes": false

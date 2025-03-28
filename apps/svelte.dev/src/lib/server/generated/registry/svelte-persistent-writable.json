@@ -1,6 +1,6 @@
 {
   "name": "svelte-persistent-writable",
-  "description": "Creates persistent writable stores using local/session storage.",
+  "description": "Creates persistent writable stores for Svelte applications.",
   "repo_url": "https://github.com/cdellacqua/svelte-persistent-writable",
   "authors": [
     "cdellacqua"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2021-10-09T19:48:52.000Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

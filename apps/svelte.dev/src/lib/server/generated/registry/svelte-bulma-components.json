@@ -1,6 +1,6 @@
 {
   "name": "svelte-bulma-components",
-  "description": "Bulma UI components for Svelte.js.",
+  "description": "Bulma UI components for Svelte applications.",
   "repo_url": "https://github.com/elcobvg/svelte-bulma-components",
   "authors": [
     "elcobvg"
@@ -10,8 +10,7 @@
   "dependents": 0,
   "updated": "2018-08-20T04:37:19.244Z",
   "tags": [
-    "component-library",
-    "ui"
+    "design-system"
   ],
   "svelte5": false,
   "runes": false,

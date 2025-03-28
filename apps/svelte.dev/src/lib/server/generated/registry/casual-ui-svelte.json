@@ -1,0 +1,17 @@
+{
+  "name": "@casual-ui/svelte",
+  "description": "Provides a set of UI components for Svelte applications.",
+  "repo_url": "",
+  "authors": [
+    "philadelphia"
+  ],
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2024-07-15T15:46:15.227Z",
+  "tags": [
+    "ui",
+    "design-system"
+  ],
+  "svelte5": false,
+  "runes": false
+}

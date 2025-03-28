@@ -1,6 +1,6 @@
 {
   "name": "@whyframe/svelte",
-  "description": "Provides Svelte support for Whyframe, component isolation.",
+  "description": "Provide Svelte support for whyframe, a component isolation tool.",
   "repo_url": "https://github.com/bluwy/whyframe",
   "authors": [
     "bluwy"

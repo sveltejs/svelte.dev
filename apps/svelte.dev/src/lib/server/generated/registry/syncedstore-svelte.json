@@ -1,6 +1,6 @@
 {
   "name": "@syncedstore/svelte",
-  "description": "Svelte helper for SyncedStore.",
+  "description": "Provide Svelte helpers for SyncedStore.",
   "repo_url": "",
   "authors": [
     "yousefed"
@@ -9,7 +9,7 @@
   "dependents": 2,
   "updated": "2023-10-15T11:48:21.416Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": true,
   "runes": false

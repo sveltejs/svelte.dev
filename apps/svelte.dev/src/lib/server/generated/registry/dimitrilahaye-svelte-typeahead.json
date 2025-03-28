@@ -1,6 +1,6 @@
 {
   "name": "@dimitrilahaye/svelte-typeahead",
-  "description": "Develop typeahead/autocomplete component for Svelte.",
+  "description": "Create typeahead/autocomplete component for Svelte.",
   "repo_url": "https://github.com/dimitrilahaye/svelte-sync-async-autocomplete-component",
   "authors": [
     "dimitrilahaye"

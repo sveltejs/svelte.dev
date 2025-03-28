@@ -1,6 +1,6 @@
 {
   "name": "stores-x",
-  "description": "Manage Svelte stores with mutations, actions, and getters.",
+  "description": "Implements minimal Vuex-like state management for Svelte.",
   "repo_url": "https://github.com/Anyass3/stores-x",
   "authors": [
     "anyass"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2021-08-08T15:15:20.204Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

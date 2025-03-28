@@ -1,6 +1,6 @@
 {
   "name": "sveltmline",
-  "description": "Create timeline UI components for Svelte apps.",
+  "description": "Create timeline UI with Svelte.",
   "repo_url": "https://github.com/komietty/sveltmline",
   "authors": [
     "komietty"

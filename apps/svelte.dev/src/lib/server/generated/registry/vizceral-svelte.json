@@ -1,6 +1,6 @@
 {
   "name": "vizceral-svelte",
-  "description": "Visualize traffic data using WebGL in Svelte.",
+  "description": "Wrap Vizceral for displaying traffic data in Svelte.",
   "repo_url": "https://github.com/dgzlopes/vizceral-svelte",
   "authors": [
     "dgzlopes"

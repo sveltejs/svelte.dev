@@ -1,6 +1,6 @@
 {
   "name": "svelte-typewrite",
-  "description": "Create typewriter effects for Svelte apps.",
+  "description": "Create typewriter effects in Svelte components.",
   "repo_url": "https://github.com/satohshi/svelte-typewriter",
   "authors": [
     "satohshi"

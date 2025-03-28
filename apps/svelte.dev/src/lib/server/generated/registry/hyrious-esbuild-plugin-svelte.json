@@ -1,17 +1,16 @@
 {
   "name": "@hyrious/esbuild-plugin-svelte",
-  "description": "Load .svelte files in esbuild, enabling Svelte compilation.",
+  "description": "Loads Svelte files in esbuild for bundling.",
   "repo_url": "https://github.com/hyrious/esbuild-plugin-svelte",
   "authors": [
     "hyrious"
   ],
   "homepage": "https://github.com/hyrious/esbuild-plugin-svelte#readme",
-  "downloads": 19,
+  "downloads": 7,
   "dependents": 0,
   "updated": "2025-01-09T09:38:29.178Z",
   "tags": [
-    "tooling",
-    "preprocessor"
+    "tooling"
   ],
   "svelte5": true,
   "runes": false,

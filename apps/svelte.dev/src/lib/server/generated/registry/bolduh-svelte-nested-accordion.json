@@ -1,6 +1,6 @@
 {
   "name": "@bolduh/svelte-nested-accordion",
-  "description": "Display tree data structure with nested accordion.",
+  "description": "Display nested tree data structures in Svelte accordions.",
   "repo_url": "https://github.com/b3b00/svelte-nested-accordion",
   "authors": [
     "bolduh"

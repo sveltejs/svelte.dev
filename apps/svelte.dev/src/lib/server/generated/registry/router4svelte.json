@@ -1,6 +1,6 @@
 {
   "name": "router4svelte",
-  "description": "Client-side routing library for Svelte projects.",
+  "description": "Implement client-side routing for Svelte projects.",
   "repo_url": "https://github.com/OscarLundberg/router4svelte",
   "authors": [
     "oscarlundberg"

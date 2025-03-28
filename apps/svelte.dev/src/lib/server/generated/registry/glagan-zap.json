@@ -1,6 +1,6 @@
 {
   "name": "@glagan/zap",
-  "description": "Display customizable notifications in Svelte applications.",
+  "description": "Display customizable notifications in Svelte apps.",
   "repo_url": "https://github.com/Glagan/zap",
   "authors": [
     "glagan"

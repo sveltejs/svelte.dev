@@ -1,6 +1,6 @@
 {
   "name": "@cloudtables/svelte",
-  "description": "Integrates CloudTables into Svelte applications.",
+  "description": "Integrate CloudTables components into Svelte applications.",
   "repo_url": "https://bitbucket.org/sprymedia/cloudtables-svelte",
   "authors": [
     "datatables"

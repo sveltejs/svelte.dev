@@ -1,6 +1,6 @@
 {
   "name": "svercle",
-  "description": "Generate configurable superellipse approximations for Svelte.",
+  "description": "Generate superellipse approximations for Svelte components.",
   "repo_url": "https://github.com/aMediocreDad/svercle",
   "authors": [
     "amediocredad"

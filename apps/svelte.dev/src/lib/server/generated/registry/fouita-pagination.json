@@ -1,6 +1,6 @@
 {
   "name": "@fouita/pagination",
-  "description": "Create simple pagination component with Svelte and Tailwind CSS.",
+  "description": "Build simple pagination components with Svelte and Tailwind CSS.",
   "repo_url": "https://github.com/fouita/svelte-tw-pagination",
   "authors": [
     "fouita"

@@ -1,6 +1,6 @@
 {
   "name": "sveltemeacoffee",
-  "description": "Create Buy Me A Coffee button in Svelte.",
+  "description": "Create configurable Buy Me A Coffee button in Svelte.",
   "repo_url": "",
   "authors": [
     "skamansam"

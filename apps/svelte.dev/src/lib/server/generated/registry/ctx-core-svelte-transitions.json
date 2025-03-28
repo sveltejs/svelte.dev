@@ -1,6 +1,6 @@
 {
   "name": "@ctx-core/svelte-transitions",
-  "description": "ctx-core svelte transitions.",
+  "description": "Provide Svelte transitions.",
   "repo_url": "https://github.com/ctx-core/svelte-transitions",
   "authors": [
     "btakita"

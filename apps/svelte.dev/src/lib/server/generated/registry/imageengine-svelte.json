@@ -1,6 +1,6 @@
 {
   "name": "@imageengine/svelte",
-  "description": "Integrate optimized responsive images in Svelte applications.",
+  "description": "Integrates ImageEngine for optimized responsive images in Svelte.",
   "repo_url": "https://github.com/imgeng/imageengine-svelte",
   "authors": [
     "adityakantipudi",

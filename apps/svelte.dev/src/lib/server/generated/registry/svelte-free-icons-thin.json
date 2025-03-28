@@ -1,6 +1,6 @@
 {
   "name": "svelte-free-icons-thin",
-  "description": "Generate Svelte components for thin style free icons.",
+  "description": "Svelte icon components for free-icons.",
   "repo_url": "https://github.com/free-icons/svelte-free-icons",
   "authors": [
     "profmancusoa"

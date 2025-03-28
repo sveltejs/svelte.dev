@@ -1,6 +1,6 @@
 {
   "name": "@burnman/typewriter-svelte",
-  "description": "Create terminal-style typewriter effect component for Svelte apps.",
+  "description": "Create terminal-style typewriter effect component for Svelte.",
   "repo_url": "",
   "authors": [
     "burnman"

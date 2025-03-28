@@ -1,6 +1,6 @@
 {
   "name": "@omysoul/svelte-song-display",
-  "description": "Render lyrics, displaying one verse at a time.",
+  "description": "Display lyrics in Svelte, one verse at a time.",
   "repo_url": "https://github.com/philholden/svelte-song-display",
   "authors": [
     "omysoul"

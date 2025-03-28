@@ -1,6 +1,6 @@
 {
   "name": "svelte-range-slider-pips",
-  "description": "Multi-thumb, accessible range slider with pips.",
+  "description": "Create multi-thumb, accessible range sliders with pips.",
   "repo_url": "https://github.com/simeydotme/svelte-range-slider-pips",
   "authors": [
     "simeydotme"

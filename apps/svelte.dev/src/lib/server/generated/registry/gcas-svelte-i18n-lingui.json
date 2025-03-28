@@ -1,6 +1,6 @@
 {
   "name": "@gcas/svelte-i18n-lingui",
-  "description": "Add i18n to Svelte/SvelteKit projects using Lingui.",
+  "description": "Add i18n to Svelte/Sveltekit projects using Lingui.",
   "repo_url": "https://github.com/HenryLie/svelte-i18n-lingui",
   "authors": [
     "vpalos"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2024-12-30T03:48:18.232Z",
   "tags": [
-    "utility"
+    "tooling"
   ],
   "svelte5": true,
   "runes": false,

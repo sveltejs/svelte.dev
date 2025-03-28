@@ -1,6 +1,6 @@
 {
   "name": "svelte-froalacharts",
-  "description": "Integrate FroalaCharts into Svelte applications easily.",
+  "description": "Integrate FroalaCharts into Svelte applications.",
   "repo_url": "https://github.com/froala/svelte-froalacharts",
   "authors": [
     "sanjay.bhan",

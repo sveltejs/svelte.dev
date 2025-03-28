@@ -1,6 +1,6 @@
 {
   "name": "@responsive-ui/show-more",
-  "description": "Creates show more/less component for Svelte apps.",
+  "description": "Provides show more component for responsive-ui.",
   "repo_url": "https://github.com/wetix/responsive-ui",
   "authors": [
     "rexlow",

@@ -1,16 +1,16 @@
 {
   "name": "svelte-gestures",
-  "description": "Provides cross-platform gesture actions for Svelte.",
+  "description": "Add gesture recognition to Svelte components.",
   "repo_url": "https://github.com/Rezi/svelte-gestures",
   "authors": [
     "rezi99"
   ],
   "homepage": "https://github.com/Rezi/svelte-gestures#readme",
-  "downloads": 11084,
+  "downloads": 11436,
   "dependents": 8,
   "updated": "2025-01-16T12:29:42.019Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

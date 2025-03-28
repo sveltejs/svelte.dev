@@ -1,6 +1,6 @@
 {
   "name": "svelte-ux",
-  "description": "Provides Svelte components, actions, stores, and utilities.",
+  "description": "Simplify creating interactive and visual applications.",
   "repo_url": "https://github.com/techniq/svelte-ux",
   "authors": [
     "techniq"
@@ -10,7 +10,7 @@
   "dependents": 1,
   "updated": "2025-03-18T12:47:22.361Z",
   "tags": [
-    "component-library"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

@@ -1,6 +1,6 @@
 {
   "name": "@naorah/minipills",
-  "description": "Create customizable pill-style UI elements for Svelte.",
+  "description": "Generate customizable pill-style UI elements in Svelte.",
   "repo_url": "https://github.com/Naorah/npm-svelte-minipills",
   "authors": [
     "naorah"

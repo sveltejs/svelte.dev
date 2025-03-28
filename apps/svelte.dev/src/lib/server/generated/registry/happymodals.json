@@ -1,6 +1,6 @@
 {
   "name": "happymodals",
-  "description": "Create accessible modal dialogs in Svelte applications.",
+  "description": "Create accessible modals for Svelte with easy developer experience.",
   "repo_url": "https://github.com/byjackli/happymodals",
   "authors": [
     "byjackli"

@@ -1,6 +1,6 @@
 {
   "name": "svelte-swipe-to-action",
-  "description": "Create swipe-to-action components for Svelte apps.",
+  "description": "Implement swipe-to-action component for Svelte apps.",
   "repo_url": "",
   "authors": [
     "nutchyleo123"

@@ -1,6 +1,6 @@
 {
   "name": "@macfja/svelte-invalidable",
-  "description": "Create Svelte store that can be requested to update itself.",
+  "description": "Create Svelte stores that can update themselves on demand.",
   "repo_url": "https://github.com/macfja/svelte-invalidable",
   "authors": [
     "macfja"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2021-09-25T17:51:57.132Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

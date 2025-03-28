@@ -1,6 +1,6 @@
 {
   "name": "isaxvelte",
-  "description": "Integrate Iconsax icons as Svelte components.",
+  "description": "Iconsax icon library for Svelte, with various styles.",
   "repo_url": "https://github.com/RbnMach/isaxvelte",
   "authors": [
     "rubenmach.oficial"

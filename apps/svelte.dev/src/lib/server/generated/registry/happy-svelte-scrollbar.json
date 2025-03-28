@@ -1,6 +1,6 @@
 {
   "name": "happy-svelte-scrollbar",
-  "description": "Create custom scrollbar component for Svelte applications.",
+  "description": "Create custom scrollbar components for Svelte applications.",
   "repo_url": "https://github.com/happy-inc-tech/happy-svelte-scrollbar",
   "authors": [
     "happy-inc"

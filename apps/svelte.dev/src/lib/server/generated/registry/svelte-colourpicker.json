@@ -1,6 +1,6 @@
 {
   "name": "svelte-colourpicker",
-  "description": "Provides a color picker component for Svelte applications.",
+  "description": "Create color pickers for Svelte applications.",
   "repo_url": "https://github.com/cooolbros/svelte-colourpicker",
   "authors": [
     "cooolbros"

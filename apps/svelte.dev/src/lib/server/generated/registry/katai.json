@@ -1,6 +1,6 @@
 {
   "name": "katai",
-  "description": "Create simple, lightweight store implementation for Svelte 5.",
+  "description": "Create simple, lightweight state management for Svelte 5 applications.",
   "repo_url": "https://github.com/srav001/katai",
   "authors": [
     "sravan-suresh"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2024-03-10T13:59:39.441Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": true,
   "runes": false,

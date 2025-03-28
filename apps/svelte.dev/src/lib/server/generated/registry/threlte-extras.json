@@ -1,6 +1,6 @@
 {
   "name": "@threlte/extras",
-  "description": "Provide utilities for Threlte apps.",
+  "description": "Provides utilities, abstractions, and plugins for Threlte apps.",
   "repo_url": "https://github.com/threlte/threlte",
   "authors": [
     "grischaerbe"
@@ -10,9 +10,9 @@
   "dependents": 16,
   "updated": "2025-03-16T19:03:58.996Z",
   "tags": [
-    "ui"
+    "miscellaneous"
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 2828
+  "github_stars": 2831
 }

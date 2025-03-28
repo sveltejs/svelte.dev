@@ -1,0 +1,18 @@
+{
+  "name": "syncwave-dnd",
+  "description": "Create drag and drop functionality for Svelte.",
+  "repo_url": "https://github.com/isaacHagoel/svelte-dnd-action",
+  "authors": [
+    "tilyupo"
+  ],
+  "homepage": "https://github.com/isaacHagoel/svelte-dnd-action#readme",
+  "downloads": 3035,
+  "dependents": 0,
+  "updated": "2025-03-20T05:04:10.873Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 1919
+}

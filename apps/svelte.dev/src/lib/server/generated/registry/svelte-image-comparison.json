@@ -1,6 +1,6 @@
 {
   "name": "svelte-image-comparison",
-  "description": "Compare images or canvas elements in Svelte components.",
+  "description": "Compare image or canvas elements in Svelte.",
   "repo_url": "https://github.com/captaincodeman/svelte-image-comparison",
   "authors": [
     "captaincodeman"

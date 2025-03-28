@@ -1,6 +1,6 @@
 {
   "name": "@htmlbricks/hb-input-range",
-  "description": "Provides a Svelte-Bootstrap number input web component.",
+  "description": "Svelte-Bootstrap Number Input WebComponent.",
   "repo_url": "",
   "authors": [
     "dariocaruso"

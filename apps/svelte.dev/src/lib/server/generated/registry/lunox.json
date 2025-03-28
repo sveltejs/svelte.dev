@@ -1,6 +1,6 @@
 {
   "name": "lunox",
-  "description": "Offer Laravel-Flavoured NodeJs framework.",
+  "description": "Build Laravel-flavored Node.js framework with Svelte.",
   "repo_url": "https://github.com/kodepandai/lunox-framework",
   "authors": [
     "axmad386"

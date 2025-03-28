@@ -1,6 +1,6 @@
 {
   "name": "sveltekit-embed",
-  "description": "Embed YouTube, Vimeo, and Dailymotion videos in SvelteKit.",
+  "description": "Provides embed components for SvelteKit.",
   "repo_url": "",
   "authors": [
     "spences10"
@@ -9,7 +9,7 @@
   "dependents": 0,
   "updated": "2025-02-09T20:30:39.779Z",
   "tags": [
-    "utility"
+    "ui"
   ],
   "svelte5": true,
   "runes": false

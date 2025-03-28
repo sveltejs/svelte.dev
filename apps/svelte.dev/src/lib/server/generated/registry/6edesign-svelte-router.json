@@ -1,6 +1,6 @@
 {
   "name": "@6edesign/svelte-router",
-  "description": "Router component using page.js for Svelte.",
+  "description": "Implement page.js based routing for Svelte applications.",
   "repo_url": "https://github.com/6eDesign/svelte-router",
   "authors": [
     "6edesign"

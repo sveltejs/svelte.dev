@@ -1,6 +1,6 @@
 {
   "name": "@responsive-ui/input-number",
-  "description": "Create input number component for responsive-ui.",
+  "description": "Create responsive input number components for Svelte.",
   "repo_url": "https://github.com/wetix/responsive-ui",
   "authors": [
     "rexlow",

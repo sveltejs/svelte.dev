@@ -1,6 +1,6 @@
 {
   "name": "svelte4-chessground",
-  "description": "Svelte 4 chessboard component, wrapper for Chessground chess UI.",
+  "description": "Provides Svelte 4 chessboard component, a wrapper for Chessground UI.",
   "repo_url": "",
   "authors": [
     "liamkrenn"

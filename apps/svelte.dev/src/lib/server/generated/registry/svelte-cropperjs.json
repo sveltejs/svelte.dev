@@ -1,6 +1,6 @@
 {
   "name": "svelte-cropperjs",
-  "description": "Integrate Cropper.js for image cropping in Svelte.",
+  "description": "Integrate cropper.js for image cropping in Svelte apps.",
   "repo_url": "https://github.com/milo-ft/svelte-cropperjs",
   "authors": [
     "milo-ft"

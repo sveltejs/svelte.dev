@@ -1,6 +1,6 @@
 {
   "name": "svelte-oct",
-  "description": "Use Octicons components for Svelte.",
+  "description": "Use Octicons components in Svelte projects.",
   "repo_url": "https://github.com/shinokada/svelte-oct",
   "authors": [
     "shinichiokada"

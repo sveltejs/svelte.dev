@@ -1,6 +1,6 @@
 {
   "name": "@rschiang/svelte-timepicker",
-  "description": "Create simple time picker component for Svelte.",
+  "description": "Create simple time picker component for Svelte applications.",
   "repo_url": "https://github.com/ryanschiang/svelte-timepicker",
   "authors": [
     "ryanschiang"

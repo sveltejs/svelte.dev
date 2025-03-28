@@ -1,6 +1,6 @@
 {
   "name": "svelte-slideshow",
-  "description": "Create slideshow presentations using Svelte and Reveal.js.",
+  "description": "Create presentations using Svelte and Reveal.js.",
   "repo_url": "https://github.com/binsarjr/svelte-slideshow",
   "authors": [
     "binsarjr"

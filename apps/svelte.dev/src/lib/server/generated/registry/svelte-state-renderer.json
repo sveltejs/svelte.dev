@@ -1,6 +1,6 @@
 {
   "name": "svelte-state-renderer",
-  "description": "Renderer for abstract-state-router, use Svelte with abstract-state-router.",
+  "description": "Use abstract-state-router with Svelte.",
   "repo_url": "https://github.com/TehShrike/svelte-state-renderer",
   "authors": [
     "tehshrike"
@@ -10,8 +10,7 @@
   "dependents": 1,
   "updated": "2025-02-05T20:44:46.086Z",
   "tags": [
-    "router",
-    "utility"
+    "router"
   ],
   "svelte5": true,
   "runes": false,

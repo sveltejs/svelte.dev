@@ -1,6 +1,6 @@
 {
   "name": "svelte-free-transform",
-  "description": "Transform content with drag, resize, and rotate controls.",
+  "description": "Provide freely transformable container component for Svelte.",
   "repo_url": "https://github.com/mononaut/svelte-free-transform",
   "authors": [
     "mononaut"

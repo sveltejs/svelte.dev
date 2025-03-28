@@ -1,6 +1,6 @@
 {
   "name": "@dringtech/svelte-blocks",
-  "description": "Build Svelte libraries with components and utilities.",
+  "description": "Create Svelte libraries with create-svelte.",
   "repo_url": "https://github.com/dringtech/svelte-blocks",
   "authors": [
     "gilesdring"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2024-02-21T22:41:20.224Z",
   "tags": [
-    "utility"
+    "tooling"
   ],
   "svelte5": false,
   "runes": false,

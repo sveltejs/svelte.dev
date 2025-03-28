@@ -1,6 +1,6 @@
 {
   "name": "svelte-popover",
-  "description": "Smart popover component for Svelte applications.",
+  "description": "Create smart popover component for Svelte.",
   "repo_url": "https://github.com/vaheqelyan/svelte-popover",
   "authors": [
     "vaheqelyan"

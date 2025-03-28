@@ -1,6 +1,6 @@
 {
   "name": "@ismail424/svelte-formly",
-  "description": "Generate dynamic, reactive forms for Svelte applications.",
+  "description": "Generate dynamic, reactive forms with custom field types and validation.",
   "repo_url": "https://github.com/dyaliCode/svelte-formly",
   "authors": [
     "ismail424"
@@ -10,7 +10,8 @@
   "dependents": 0,
   "updated": "2025-03-19T23:08:19.927Z",
   "tags": [
-    "utility"
+    "integration",
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

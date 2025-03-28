@@ -1,6 +1,6 @@
 {
   "name": "@macfja/svelte-undoable",
-  "description": "Implement Memento design pattern for Svelte stores.",
+  "description": "Implement undo/redo functionality for Svelte stores.",
   "repo_url": "https://github.com/macfja/svelte-undoable",
   "authors": [
     "macfja"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2021-02-20T18:47:39.164Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

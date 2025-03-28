@@ -1,6 +1,6 @@
 {
   "name": "@twicpics/components",
-  "description": "Web components for responsive images and videos with TwicPics.",
+  "description": "Optimizes images and videos for Svelte with TwicPics.",
   "repo_url": "https://github.com/twicpics/components",
   "authors": [
     "florentb",

@@ -1,6 +1,6 @@
 {
   "name": "@neesh-studio/svelte-portal",
-  "description": "Renders content outside parent component's DOM in Svelte.",
+  "description": "Render Svelte components outside parent DOM element.",
   "repo_url": "https://github.com/neesh-studio/svelte-portal",
   "authors": [
     "ocupe",
@@ -11,7 +11,7 @@
   "dependents": 0,
   "updated": "2021-03-04T08:04:38.912Z",
   "tags": [
-    "dom"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

@@ -1,6 +1,6 @@
 {
   "name": "svelte-boring-avatars",
-  "description": "Generate boring avatars for Svelte applications.",
+  "description": "Generate avatar images based on names, with various styles.",
   "repo_url": "https://github.com/paolotiu/svelte-boring-avatars",
   "authors": [
     "paolotiu17"

@@ -1,6 +1,6 @@
 {
   "name": "@genoacms/sveltekit-adapter-cloud-run-functions",
-  "description": "Adapter for SvelteKit apps generating Cloud Run functions.",
+  "description": "Generate Cloud Run Function for SvelteKit apps.",
   "repo_url": "https://github.com/GenoaCMS/sveltekit-adapter-cloud-run-functions",
   "authors": [
     "filiph"
@@ -10,8 +10,7 @@
   "dependents": 0,
   "updated": "2024-11-23T10:52:34.927Z",
   "tags": [
-    "adapter",
-    "server"
+    "adapter"
   ],
   "svelte5": false,
   "runes": false,

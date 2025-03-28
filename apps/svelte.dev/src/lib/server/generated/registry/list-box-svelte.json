@@ -1,6 +1,6 @@
 {
   "name": "list-box-svelte",
-  "description": "Create flexible, customizable dropdown components using Svelte.",
+  "description": "Create flexible, customizable dropdown components in Svelte.",
   "repo_url": "https://github.com/Hayk-Asoyan/list-box",
   "authors": [
     "asoyan"

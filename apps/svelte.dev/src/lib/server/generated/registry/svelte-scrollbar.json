@@ -1,6 +1,6 @@
 {
   "name": "svelte-scrollbar",
-  "description": "Create custom scrollbars for Svelte applications.",
+  "description": "Create custom scrollbars for Svelte components.",
   "repo_url": "https://github.com/leshak/svelte-svrollbar",
   "authors": [
     "leshak"

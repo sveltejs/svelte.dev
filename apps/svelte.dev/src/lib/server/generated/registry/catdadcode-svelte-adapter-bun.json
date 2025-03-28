@@ -1,6 +1,6 @@
 {
   "name": "@catdadcode/svelte-adapter-bun",
-  "description": "Create standalone Bun.js server from SvelteKit apps.",
+  "description": "Generate standalone Bun.js server for SvelteKit apps.",
   "repo_url": "https://github.com/catdadcode/svelte-adapter-bun",
   "authors": [
     "catdadalex"

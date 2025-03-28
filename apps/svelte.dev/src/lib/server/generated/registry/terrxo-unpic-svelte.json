@@ -1,6 +1,6 @@
 {
   "name": "@terrxo/unpic-svelte",
-  "description": "Creates responsive, high-performance images in Svelte.",
+  "description": "Create responsive, high-performance images in Svelte.",
   "repo_url": "https://github.com/ascorbic/unpic-img",
   "authors": [
     "terrxo"

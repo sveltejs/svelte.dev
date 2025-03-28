@@ -1,6 +1,6 @@
 {
   "name": "@elron/svelte-audio-store",
-  "description": "Manage, play, and manipulate audio within Svelte applications.",
+  "description": "Manage, play, and preload audio in Svelte projects.",
   "repo_url": "https://github.com/elron/svelte-audio-store",
   "authors": [
     "elron"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2023-08-30T15:51:32.838Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

@@ -1,6 +1,6 @@
 {
   "name": "nosvelte",
-  "description": "Build Nostr apps easily with Svelte stores and components.",
+  "description": "Build Nostr apps easily with Svelte components.",
   "repo_url": "https://github.com/akiomik/nosvelte",
   "authors": [
     "akiomik"

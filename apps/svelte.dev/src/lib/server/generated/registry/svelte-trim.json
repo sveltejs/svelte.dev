@@ -1,6 +1,6 @@
 {
   "name": "svelte-trim",
-  "description": "Remove whitespace from Svelte component markup.",
+  "description": "Remove unwanted whitespace from Svelte component markup.",
   "repo_url": "https://github.com/firefish5000/svelte-trim",
   "authors": [
     "firefish5000"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2020-10-30T01:33:18.230Z",
   "tags": [
-    "preprocessor"
+    "tooling"
   ],
   "svelte5": false,
   "runes": false,

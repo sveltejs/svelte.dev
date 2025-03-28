@@ -1,6 +1,6 @@
 {
   "name": "@albaike/extension-storage-store",
-  "description": "Create Svelte stores for browser extension messaging.",
+  "description": "Manage extension storage with Svelte stores.",
   "repo_url": "https://gitgud.io/albaike/extension-storage-store",
   "authors": [
     "albaike"
@@ -9,7 +9,7 @@
   "dependents": 0,
   "updated": "2022-12-26T02:42:29.596Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false

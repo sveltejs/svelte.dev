@@ -1,6 +1,6 @@
 {
   "name": "svelte-crossword",
-  "description": "Generate crossword puzzles with customizable themes in Svelte.",
+  "description": "Create interactive crossword puzzles within Svelte applications.",
   "repo_url": "https://github.com/russellgoldenberg/svelte-crossword",
   "authors": [
     "russellsamora"

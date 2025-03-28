@@ -1,6 +1,6 @@
 {
   "name": "svelte-github-login",
-  "description": "Github login component for Svelte.",
+  "description": "Implement GitHub login in Svelte applications.",
   "repo_url": "https://github.com/andrelmlins/svelte-github-login",
   "authors": [
     "andrelmlins"

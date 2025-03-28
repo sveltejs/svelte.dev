@@ -1,6 +1,6 @@
 {
   "name": "svelte-stack-router",
-  "description": "Build native-like navigation in Svelte apps.",
+  "description": "Create stack-based navigation for Svelte web apps.",
   "repo_url": "https://github.com/cdellacqua/svelte-stack-router",
   "authors": [
     "cdellacqua"

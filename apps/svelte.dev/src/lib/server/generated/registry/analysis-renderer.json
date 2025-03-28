@@ -1,6 +1,6 @@
 {
   "name": "analysis-renderer",
-  "description": "Create dashboard cards with Svelte and Vite.",
+  "description": "Dashboard card component for Svelte with Vite.",
   "repo_url": "https://github.com/miyokoLeeM/vite-svelte-comps",
   "authors": [
     "miyoko0505"

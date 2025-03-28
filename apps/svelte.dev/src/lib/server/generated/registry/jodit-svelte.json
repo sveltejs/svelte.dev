@@ -10,7 +10,8 @@
   "dependents": 0,
   "updated": "2023-02-22T19:38:11.460Z",
   "tags": [
-    "ui"
+    "ui",
+    "content"
   ],
   "svelte5": false,
   "runes": false,

@@ -1,6 +1,6 @@
 {
   "name": "@svelteschool/svelte-forms",
-  "description": "Simple form component for Svelte, handles input and values.",
+  "description": "Build forms easily with simple Svelte component.",
   "repo_url": "https://github.com/svelteschool/svelte-forms",
   "authors": [
     "kevmodrome"
@@ -10,7 +10,7 @@
   "dependents": 2,
   "updated": "2020-05-20T11:11:14.215Z",
   "tags": [
-    "utility"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

@@ -1,6 +1,6 @@
 {
   "name": "@cfcs/svelte",
-  "description": "Create framework components for Svelte.",
+  "description": "Create cross-framework components supporting Svelte.",
   "repo_url": "https://github.com/naver/cfcs",
   "authors": [
     "younkue"
@@ -10,7 +10,7 @@
   "dependents": 5,
   "updated": "2023-02-24T13:04:42.073Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

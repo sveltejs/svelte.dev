@@ -1,6 +1,6 @@
 {
   "name": "@nick-mazuk/ui-svelte",
-  "description": "Provide opinionated UI component library for Svelte.",
+  "description": "Offer opinionated UI component library for Svelte.",
   "repo_url": "https://github.com/Nick-Mazuk/ui-svelte",
   "authors": [
     "nick-m"
@@ -10,7 +10,6 @@
   "dependents": 0,
   "updated": "2021-09-05T03:55:03.875Z",
   "tags": [
-    "component-library",
     "ui"
   ],
   "svelte5": false,

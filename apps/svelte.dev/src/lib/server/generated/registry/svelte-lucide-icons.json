@@ -1,6 +1,6 @@
 {
   "name": "svelte-lucide-icons",
-  "description": "Provides Lucide icons as Svelte components.",
+  "description": "Use Lucide icons as Svelte components.",
   "repo_url": "https://github.com/siarie/svelte-lucide-icons",
   "authors": [
     "siariee"

@@ -1,6 +1,6 @@
 {
   "name": "svelte-reactive-css-preprocess",
-  "description": "Creates CSS variables from Svelte variables for dynamic styling.",
+  "description": "Create and update CSS variables using Svelte reactivity.",
   "repo_url": "https://github.com/srmullen/svelte-reactive-css-preprocess",
   "authors": [
     "srmullen"
@@ -10,8 +10,7 @@
   "dependents": 0,
   "updated": "2021-10-28T12:55:09.511Z",
   "tags": [
-    "preprocessor",
-    "utility"
+    "tooling"
   ],
   "svelte5": false,
   "runes": false,

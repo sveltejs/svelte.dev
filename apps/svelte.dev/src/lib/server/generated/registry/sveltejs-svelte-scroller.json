@@ -1,6 +1,6 @@
 {
   "name": "@sveltejs/svelte-scroller",
-  "description": "Create a scroller component for Svelte apps.",
+  "description": "Create scroll-based components for Svelte apps.",
   "repo_url": "https://github.com/sveltejs/svelte-scroller",
   "authors": [
     "dominik_g",
@@ -13,7 +13,7 @@
   "dependents": 8,
   "updated": "2021-06-10T04:13:51.114Z",
   "tags": [
-    "utility"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

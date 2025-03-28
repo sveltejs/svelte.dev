@@ -1,6 +1,6 @@
 {
   "name": "styled-svelte",
-  "description": "Create styled components in Svelte using tagged template literals.",
+  "description": "Create Svelte components with attached styles using CSS-in-JS.",
   "repo_url": "https://github.com/vanzinvestor/styled-svelte",
   "authors": [
     "vanzinvestor"

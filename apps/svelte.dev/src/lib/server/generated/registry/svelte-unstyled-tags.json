@@ -1,6 +1,6 @@
 {
   "name": "svelte-unstyled-tags",
-  "description": "Handle tag input with customisable features and styling options.",
+  "description": "Create unstyled tag input component for Svelte.",
   "repo_url": "https://github.com/edjw/svelte-unstyled-tags",
   "authors": [
     "edjohnsonwilliams"

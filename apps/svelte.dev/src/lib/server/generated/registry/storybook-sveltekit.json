@@ -1,6 +1,6 @@
 {
   "name": "@storybook/sveltekit",
-  "description": "Storybook for SvelteKit apps.",
+  "description": "Develop and test Svelte components with Storybook.",
   "repo_url": "https://github.com/storybookjs/storybook",
   "authors": [
     "ndelangen",
@@ -25,5 +25,5 @@
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 86229
+  "github_stars": 86239
 }

@@ -1,6 +1,6 @@
 {
   "name": "super-sitemap",
-  "description": "Generate SvelteKit sitemaps, focused on ease of use.",
+  "description": "Generate sitemaps for SvelteKit sites, easy and impossible to forget.",
   "repo_url": "https://github.com/jasongitmail/super-sitemap",
   "authors": [
     "jasongitmail"
@@ -10,10 +10,9 @@
   "dependents": 0,
   "updated": "2024-11-08T17:40:39.130Z",
   "tags": [
-    "seo",
-    "server"
+    "seo"
   ],
-  "svelte5": false,
+  "svelte5": true,
   "runes": false,
   "github_stars": 182
 }

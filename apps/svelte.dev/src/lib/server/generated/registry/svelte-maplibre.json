@@ -1,6 +1,6 @@
 {
   "name": "svelte-maplibre",
-  "description": "Create Svelte bindings for MapLibre maps.",
+  "description": "Create interactive maps using MapLibre in Svelte.",
   "repo_url": "https://github.com/dimfeld/svelte-maplibre",
   "authors": [
     "dimfeld"

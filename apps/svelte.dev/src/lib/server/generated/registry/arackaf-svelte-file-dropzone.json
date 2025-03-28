@@ -1,6 +1,6 @@
 {
   "name": "arackaf-svelte-file-dropzone",
-  "description": "Creates file upload and dropzone components for Svelte.",
+  "description": "Create file upload and dropzone components for Svelte.",
   "repo_url": "https://github.com/thecodejack/svelte-file-dropzone",
   "authors": [
     "arackaf"

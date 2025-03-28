@@ -1,6 +1,6 @@
 {
   "name": "svseeds",
-  "description": "Offer simple headless Svelte components for UI development.",
+  "description": "Create simple headless UI components for Svelte.",
   "repo_url": "https://github.com/scirexs/svseeds-ui",
   "authors": [
     "scirexs"
@@ -8,9 +8,9 @@
   "homepage": "https://github.com/scirexs/svseeds-ui#readme",
   "downloads": 64,
   "dependents": 0,
-  "updated": "2025-03-26T10:03:53.669Z",
+  "updated": "2025-03-28T06:54:32.851Z",
   "tags": [
-    "component-library"
+    "ui"
   ],
   "svelte5": true,
   "runes": false,

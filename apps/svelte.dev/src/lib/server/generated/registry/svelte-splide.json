@@ -1,6 +1,6 @@
 {
   "name": "svelte-splide",
-  "description": "Integrate Splide carousel component into Svelte projects.",
+  "description": "Implement Splide slider component for Svelte.",
   "repo_url": "https://github.com/fiorelorenzo/svelte-splide",
   "authors": [
     "fiorelorenzo"

@@ -1,6 +1,6 @@
 {
   "name": "svelte-flex-slider",
-  "description": "Create flexible, responsive slider/carousel components for Svelte apps.",
+  "description": "Create flexible and responsive slider/carousel component.",
   "repo_url": "",
   "authors": [
     "nakxa"

@@ -1,6 +1,6 @@
 {
   "name": "svelte-restate",
-  "description": "Create immutable Svelte stores with Redux Devtools integration.",
+  "description": "Provide immutable store for Svelte with Redux Devtools integration.",
   "repo_url": "https://github.com/endenwer/svelte-restate",
   "authors": [
     "endenwer"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2022-02-15T16:34:17.365Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

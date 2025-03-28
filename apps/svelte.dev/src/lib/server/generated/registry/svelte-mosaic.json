@@ -1,6 +1,6 @@
 {
   "name": "svelte-mosaic",
-  "description": "Implement tiling window management in Svelte.",
+  "description": "Create tiling window manager layout for Svelte applications.",
   "repo_url": "https://github.com/LeoDog896/svelte-mosaic",
   "authors": [
     "leodog896"

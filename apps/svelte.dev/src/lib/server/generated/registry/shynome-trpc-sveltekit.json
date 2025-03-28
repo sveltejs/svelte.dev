@@ -1,6 +1,6 @@
 {
   "name": "@shynome/trpc-sveltekit",
-  "description": "Provides tRPC adapter for SvelteKit applications.",
+  "description": "Integrate tRPC with SvelteKit for typesafe APIs.",
   "repo_url": "https://github.com/icflorescu/trpc-sveltekit",
   "authors": [
     "shynome"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2022-07-12T07:50:16.965Z",
   "tags": [
-    "integration"
+    "server"
   ],
   "svelte5": false,
   "runes": false,

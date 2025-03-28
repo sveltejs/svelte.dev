@@ -1,6 +1,6 @@
 {
   "name": "@easyroute/svelte",
-  "description": "Config-based router for Svelte, similar to Vue Router, with SSR support.",
+  "description": "Config-based router for Svelte with SSR support.",
   "repo_url": "https://github.com/easyroute-router/easyroute",
   "authors": [
     "lyohaplotinka"

@@ -1,6 +1,6 @@
 {
   "name": "svelte-autosize",
-  "description": "Automatically adjusts textarea height in Svelte.",
+  "description": "Automatically adjust textarea height to content.",
   "repo_url": "https://github.com/jesseskinner/svelte-autosize",
   "authors": [
     "jesseskinner"
@@ -10,7 +10,7 @@
   "dependents": 8,
   "updated": "2024-11-01T14:42:17.801Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": true,
   "runes": false,

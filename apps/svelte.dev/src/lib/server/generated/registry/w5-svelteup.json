@@ -1,6 +1,6 @@
 {
   "name": "@w5/svelteup",
-  "description": "Bundle Svelte components as web components.",
+  "description": "Bundle Svelte components as web components quickly.",
   "repo_url": "https://github.com/wacfork/svelteup",
   "authors": [
     "i-user"

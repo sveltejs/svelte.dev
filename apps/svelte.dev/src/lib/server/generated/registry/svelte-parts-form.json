@@ -1,6 +1,6 @@
 {
   "name": "@svelte-parts/form",
-  "description": "Creates form component with fields defined in JSON.",
+  "description": "Create Svelte forms using JSON field definitions.",
   "repo_url": "https://github.com/idris-maps/svelte-parts",
   "authors": [
     "idris-maps"
@@ -10,7 +10,7 @@
   "dependents": 1,
   "updated": "2022-04-04T21:05:09.681Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

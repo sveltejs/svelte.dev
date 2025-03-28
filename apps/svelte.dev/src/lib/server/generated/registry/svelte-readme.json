@@ -1,6 +1,6 @@
 {
   "name": "svelte-readme",
-  "description": "Develop and demo Svelte components in README.md.",
+  "description": "Develops and demos Svelte components in README.md files.",
   "repo_url": "https://github.com/metonym/svelte-readme",
   "authors": [
     "metonym"

@@ -1,6 +1,6 @@
 {
   "name": "svelte-gitlab-icons",
-  "description": "Render GitLab SVG icons as Svelte components.",
+  "description": "Use GitLab SVG icons as Svelte components.",
   "repo_url": "https://github.com/metonym/svelte-gitlab-icons",
   "authors": [
     "metonym"

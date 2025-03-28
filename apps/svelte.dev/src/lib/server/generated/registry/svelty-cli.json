@@ -1,6 +1,6 @@
 {
   "name": "@svelty/cli",
-  "description": "CLI tool for building Svelte component libraries.",
+  "description": "CLI tool for creating Svelte component libraries.",
   "repo_url": "https://github.com/mochen0505/svelty-cli",
   "authors": [
     "chen.mo"

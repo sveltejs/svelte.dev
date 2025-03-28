@@ -1,6 +1,6 @@
 {
   "name": "@untemps/svelte-palette",
-  "description": "Display customisable color picker with Svelte component",
+  "description": "Displays customizable color picker component for Svelte.",
   "repo_url": "https://github.com/untemps/svelte-palette",
   "authors": [
     "untemps"

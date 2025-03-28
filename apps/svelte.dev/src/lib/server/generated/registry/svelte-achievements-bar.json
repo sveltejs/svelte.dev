@@ -1,6 +1,6 @@
 {
   "name": "svelte-achievements-bar",
-  "description": "Display progress bar with icons, text for achievements.",
+  "description": "Displays progress bar with icons, text for achievement progress.",
   "repo_url": "https://github.com/1boch1/svelte-achievements-bar",
   "authors": [
     "1boch1"

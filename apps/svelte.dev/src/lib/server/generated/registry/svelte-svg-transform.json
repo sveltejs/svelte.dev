@@ -1,6 +1,6 @@
 {
   "name": "svelte-svg-transform",
-  "description": "Transform and customize SVG files within Svelte projects.",
+  "description": "Transform and customize SVG files in Svelte.",
   "repo_url": "",
   "authors": [
     "bartektelec"

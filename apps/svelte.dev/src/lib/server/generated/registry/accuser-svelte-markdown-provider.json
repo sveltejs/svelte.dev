@@ -1,6 +1,6 @@
 {
   "name": "@accuser/svelte-markdown-provider",
-  "description": "Transforms Markdown into Svelte components.",
+  "description": "Transforms Markdown to Svelte components.",
   "repo_url": "https://github.com/accuser/svelte-markdown-provider",
   "authors": [
     "accuser"

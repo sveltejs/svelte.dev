@@ -1,6 +1,6 @@
 {
   "name": "svelte-table-0.1",
-  "description": "Provide table component supporting Svelte 5.",
+  "description": "Create table components for Svelte applications.",
   "repo_url": "",
   "authors": [
     "georgefaulkner1"

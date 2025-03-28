@@ -1,6 +1,6 @@
 {
   "name": "@xstate/svelte",
-  "description": "Provides XState tools for Svelte.",
+  "description": "Integrate XState state machines into Svelte applications.",
   "repo_url": "https://github.com/statelyai/xstate",
   "authors": [
     "davidkpiano",
@@ -8,13 +8,13 @@
     "xstate-release-bot"
   ],
   "homepage": "https://github.com/statelyai/xstate/tree/main/packages/xstate-svelte#readme",
-  "downloads": 6593,
+  "downloads": 6849,
   "dependents": 8,
   "updated": "2025-01-12T18:44:57.794Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": true,
   "runes": false,
-  "github_stars": 28006
+  "github_stars": 28010
 }

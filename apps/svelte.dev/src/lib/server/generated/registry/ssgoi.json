@@ -1,6 +1,6 @@
 {
   "name": "ssgoi",
-  "description": "Implement page transitions for Svelte and SvelteKit apps.",
+  "description": "Implement page transition library for Svelte and SvelteKit.",
   "repo_url": "https://github.com/meursyphus/ssgoi",
   "authors": [
     "anseotmd555"
@@ -10,8 +10,7 @@
   "dependents": 0,
   "updated": "2024-10-26T14:19:30.316Z",
   "tags": [
-    "ui",
-    "router"
+    "ui"
   ],
   "svelte5": true,
   "runes": false,

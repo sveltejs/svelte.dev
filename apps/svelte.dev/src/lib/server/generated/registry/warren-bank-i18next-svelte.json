@@ -1,6 +1,6 @@
 {
   "name": "@warren-bank/i18next-svelte",
-  "description": "Svelte wrapper for i18next.",
+  "description": "Svelte wrapper for i18next internationalization library.",
   "repo_url": "https://github.com/warren-bank/js-i18next-svelte",
   "authors": [
     "warren-r-bank"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2024-05-19T08:58:25.987Z",
   "tags": [
-    "utility"
+    "integration"
   ],
   "svelte5": true,
   "runes": false,

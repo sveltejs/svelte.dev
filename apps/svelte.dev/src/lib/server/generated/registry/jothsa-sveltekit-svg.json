@@ -1,6 +1,6 @@
 {
   "name": "@jothsa/sveltekit-svg",
-  "description": "Import SVG files as Svelte components in SvelteKit projects.",
+  "description": "Import SVG files as Svelte components.",
   "repo_url": "https://github.com/poppa/sveltekit-svg",
   "authors": [
     "jothsa"

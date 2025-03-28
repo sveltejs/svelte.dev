@@ -1,6 +1,6 @@
 {
   "name": "svelte-typewriter-store",
-  "description": "Create typewriter effect store for Svelte.",
+  "description": "Create typewriter effects in Svelte with a readable store.",
   "repo_url": "https://github.com/paoloricciuti/svelte-typewriter-store",
   "authors": [
     "pablopang"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2022-11-30T15:22:10.276Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

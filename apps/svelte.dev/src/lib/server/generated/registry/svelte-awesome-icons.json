@@ -1,6 +1,6 @@
 {
   "name": "svelte-awesome-icons",
-  "description": "Provides Font Awesome SVG icon components for Svelte 5.",
+  "description": "Use Font Awesome SVG icons in Svelte applications.",
   "repo_url": "https://github.com/shinokada/svelte-awesome-icons",
   "authors": [
     "shinichiokada"

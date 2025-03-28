@@ -1,16 +1,16 @@
 {
   "name": "melt",
-  "description": "Headless UI component library for Svelte, with runes support.",
+  "description": "Create headless UI component library for Svelte 5.",
   "repo_url": "https://github.com/melt-ui/next-gen",
   "authors": [
     "tglide_personal"
   ],
   "homepage": "https://next.melt-ui.com/",
-  "downloads": 1800,
+  "downloads": 1704,
   "dependents": 0,
-  "updated": "2025-03-25T16:20:10.149Z",
+  "updated": "2025-03-27T15:44:52.701Z",
   "tags": [
-    "component-library"
+    "ui"
   ],
   "svelte5": true,
   "runes": false,

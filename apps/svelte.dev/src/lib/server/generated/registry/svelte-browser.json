@@ -1,6 +1,6 @@
 {
   "name": "svelte-browser",
-  "description": "Detect browser, device, and viewport information in Svelte.",
+  "description": "Access browser information and viewport data in Svelte apps.",
   "repo_url": "",
   "authors": [
     "7korobi"
@@ -10,7 +10,7 @@
   "dependents": 4,
   "updated": "2022-11-05T16:48:33.138Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false

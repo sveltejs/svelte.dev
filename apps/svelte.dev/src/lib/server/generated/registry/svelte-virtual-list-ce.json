@@ -1,6 +1,6 @@
 {
   "name": "svelte-virtual-list-ce",
-  "description": "Virtual list component for Svelte apps, rendering visible items.",
+  "description": "Render virtual lists efficiently in Svelte applications.",
   "repo_url": "https://github.com/gitbreaker222/svelte-virtual-list",
   "authors": [
     "breaker222"

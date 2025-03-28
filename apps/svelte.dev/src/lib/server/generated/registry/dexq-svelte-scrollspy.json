@@ -1,6 +1,6 @@
 {
   "name": "@dexq/svelte-scrollspy",
-  "description": "Tracks scroll position of Svelte elements using actions.",
+  "description": "Track scroll position of Svelte elements using Intersection Observer.",
   "repo_url": "https://github.com/dexterklui/svelte-scrollspy",
   "authors": [
     "dexlui"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2023-11-26T14:24:04.525Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

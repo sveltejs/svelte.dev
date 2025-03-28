@@ -1,6 +1,6 @@
 {
   "name": "svelte-ripple-action",
-  "description": "Adds ripple effect to any element.",
+  "description": "Add ripple effect to any element.",
   "repo_url": "https://github.com/posandu/svelte-ripple-action",
   "authors": [
     "tronic247"

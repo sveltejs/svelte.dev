@@ -1,6 +1,6 @@
 {
   "name": "@jrmoynihan/svelte-fa",
-  "description": "Integrate FontAwesome icons into Svelte components.",
+  "description": "Integrate FontAwesome icons into Svelte components easily.",
   "repo_url": "https://github.com/@jrmoynihan/svelte-fa",
   "authors": [
     "jrmoynihan"

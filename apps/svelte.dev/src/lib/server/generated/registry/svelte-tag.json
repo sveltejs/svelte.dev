@@ -1,6 +1,6 @@
 {
   "name": "svelte-tag",
-  "description": "Wrap Svelte components inside web components.",
+  "description": "Web component wrapper for Svelte components.",
   "repo_url": "https://github.com/crisward/svelte-tag",
   "authors": [
     "crisward"
@@ -10,7 +10,7 @@
   "dependents": 1,
   "updated": "2025-01-20T14:59:54.630Z",
   "tags": [
-    "utility"
+    "tooling"
   ],
   "svelte5": true,
   "runes": false,

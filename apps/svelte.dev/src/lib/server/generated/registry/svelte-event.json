@@ -1,6 +1,6 @@
 {
   "name": "svelte-event",
-  "description": "Add modifiers to Svelte event handlers, manage event listeners.",
+  "description": "Add modifiers to event handlers and manage event listeners in Svelte.",
   "repo_url": "https://github.com/Not-Jayden/svelte-event",
   "authors": [
     "notjayden"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2023-12-09T17:22:43.401Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

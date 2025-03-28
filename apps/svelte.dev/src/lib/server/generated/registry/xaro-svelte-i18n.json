@@ -1,6 +1,6 @@
 {
   "name": "@xaro/svelte-i18n",
-  "description": "Adds dynamic i18n support with translation management.",
+  "description": "Provides i18n functionality with dynamic translations for Svelte.",
   "repo_url": "https://github.com/vladimir-xaro/svelte-i18n",
   "authors": [
     "xaro"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2023-10-31T21:38:11.932Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

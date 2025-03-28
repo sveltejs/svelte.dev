@@ -1,6 +1,6 @@
 {
   "name": "@mui3/button",
-  "description": "Build Svelte library using create-svelte.",
+  "description": "Build Material UI buttons for Svelte applications.",
   "repo_url": "https://github.com/svelte-mui3/mui3",
   "authors": [
     "mench32"

@@ -1,6 +1,6 @@
 {
   "name": "@htmlbricks/hb-stylus-paper",
-  "description": "Provides stylus paper component for Svelte.",
+  "description": "Svelte-Bootstrap stylus-paper component.",
   "repo_url": "",
   "authors": [
     "dariocaruso"

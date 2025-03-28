@@ -1,12 +1,12 @@
 {
   "name": "svelt-rating-selector-display",
-  "description": "Display and select star ratings in Svelte apps.",
+  "description": "Creates customizable, reactive rating selector component for Svelte.",
   "repo_url": "https://github.com/stinger567/svelt-rating-selector-display",
   "authors": [
     "stinger567"
   ],
   "homepage": "https://svelt-rating-selector-display.stinger567.com/",
-  "downloads": 194,
+  "downloads": 25,
   "dependents": 0,
   "updated": "2025-03-14T02:32:44.751Z",
   "tags": [

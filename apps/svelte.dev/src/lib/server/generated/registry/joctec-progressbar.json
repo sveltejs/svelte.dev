@@ -1,6 +1,6 @@
 {
   "name": "joctec-progressbar",
-  "description": "Create multi-series SVG progress bar components.",
+  "description": "Create multi-series SVG progress bars in Svelte.",
   "repo_url": "https://gitee.com/ruofeng945/joctec-ui",
   "authors": [
     "ruofeng945"

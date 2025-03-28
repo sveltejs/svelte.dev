@@ -1,6 +1,6 @@
 {
   "name": "@responsive-ui/tooltip",
-  "description": "Create tooltip component for responsive Svelte UI.",
+  "description": "Create tooltip component for responsive-ui.",
   "repo_url": "https://github.com/wetix/responsive-ui",
   "authors": [
     "rexlow",

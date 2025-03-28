@@ -1,6 +1,6 @@
 {
   "name": "vdtree-svelte",
-  "description": "Wraps vdtree abstract components for use in Svelte.",
+  "description": "Wrap vdtree abstract components for use in Svelte.",
   "repo_url": "https://github.com/lgirma/vdtree-plugins",
   "authors": [
     "lgirma"

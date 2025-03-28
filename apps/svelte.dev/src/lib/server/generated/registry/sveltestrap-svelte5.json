@@ -10,7 +10,8 @@
   "dependents": 0,
   "updated": "2024-11-20T18:59:29.972Z",
   "tags": [
-    "component-library"
+    "design-system",
+    "ui"
   ],
   "svelte5": true,
   "runes": false,

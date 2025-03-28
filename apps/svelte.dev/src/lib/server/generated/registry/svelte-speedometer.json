@@ -1,6 +1,6 @@
 {
   "name": "svelte-speedometer",
-  "description": "Show speedometer-like gauge using d3 in Svelte apps.",
+  "description": "Shows speedometer-like gauge using d3 in Svelte applications.",
   "repo_url": "https://github.com/palerdot/svelte-speedometer",
   "authors": [
     "palerdot"
@@ -12,7 +12,7 @@
   "tags": [
     "ui"
   ],
-  "svelte5": true,
+  "svelte5": false,
   "runes": false,
   "github_stars": 16
 }

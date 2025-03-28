@@ -1,6 +1,6 @@
 {
   "name": "svelte-reveal",
-  "description": "Reveal elements on scroll with Svelte and Intersection Observer API.",
+  "description": "Reveal elements on scroll with Svelte action.",
   "repo_url": "https://github.com/DaveKeehl/svelte-reveal",
   "authors": [
     "davekeehl"

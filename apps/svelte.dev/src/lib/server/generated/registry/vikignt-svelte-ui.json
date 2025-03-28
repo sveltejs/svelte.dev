@@ -1,6 +1,6 @@
 {
   "name": "@vikignt/svelte-ui",
-  "description": "Offers simple UI components for Svelte 3 applications.",
+  "description": "Offers simple UI components for Svelte applications.",
   "repo_url": "https://github.com/vikignt/svelte-ui",
   "authors": [
     "vikignt"
@@ -10,7 +10,6 @@
   "dependents": 0,
   "updated": "2019-11-27T19:47:49.800Z",
   "tags": [
-    "component-library",
     "ui"
   ],
   "svelte5": false,

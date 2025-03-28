@@ -1,6 +1,6 @@
 {
   "name": "svelte-coreui-icons",
-  "description": "Provides SVG component set for CoreUI icons in Svelte.",
+  "description": "Display CoreUI SVG icons in Svelte applications.",
   "repo_url": "https://github.com/shinokada/svelte-coreui-icons",
   "authors": [
     "shinichiokada"

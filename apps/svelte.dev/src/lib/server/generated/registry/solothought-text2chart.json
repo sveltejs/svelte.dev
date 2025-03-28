@@ -1,6 +1,6 @@
 {
   "name": "@solothought/text2chart",
-  "description": "Generate interactive flowcharts from text input.",
+  "description": "Generate interactive diagrams from text input.",
   "repo_url": "https://github.com/solothought/text2chart",
   "authors": [
     "amitgupta"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2025-03-17T10:35:46.842Z",
   "tags": [
-    "utility"
+    "ui"
   ],
   "svelte5": true,
   "runes": false,

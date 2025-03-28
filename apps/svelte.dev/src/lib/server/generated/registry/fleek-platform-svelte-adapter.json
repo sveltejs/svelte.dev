@@ -1,6 +1,6 @@
 {
   "name": "@fleek-platform/svelte-adapter",
-  "description": "SvelteKit adapter for deploying apps on Fleek Functions.",
+  "description": "Build SvelteKit apps for Fleek Functions deployment.",
   "repo_url": "",
   "authors": [
     "gabriel.fleek",
@@ -10,7 +10,7 @@
     "kkudriaiev",
     "mb-fleek"
   ],
-  "downloads": 2,
+  "downloads": 0,
   "dependents": 0,
   "updated": "2024-12-12T16:50:37.748Z",
   "tags": [

@@ -1,6 +1,6 @@
 {
   "name": "@storybook-tiny/svelte",
-  "description": "Develop and test Svelte components with a tiny Storybook.",
+  "description": "Create a tiny Storybook for Svelte 5 components.",
   "repo_url": "https://github.com/commenthol/storybook-tiny",
   "authors": [
     "commenthol"

@@ -1,6 +1,6 @@
 {
   "name": "@htmlbricks/hb-messages-send",
-  "description": "Create message sending components for Svelte applications.",
+  "description": "Create a message send component in Svelte.",
   "repo_url": "",
   "authors": [
     "dariocaruso"

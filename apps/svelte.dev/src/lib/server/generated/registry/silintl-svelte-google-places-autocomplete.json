@@ -1,6 +1,6 @@
 {
   "name": "@silintl/svelte-google-places-autocomplete",
-  "description": "Integrate Google Places Autocomplete API into Svelte apps.",
+  "description": "Provides Google Places Autocomplete component for Svelte.",
   "repo_url": "https://github.com/silinternational/svelte-google-places-autocomplete",
   "authors": [
     "fillup",
@@ -14,7 +14,7 @@
   "dependents": 0,
   "updated": "2024-09-23T19:47:54.049Z",
   "tags": [
-    "utility"
+    "integration"
   ],
   "svelte5": false,
   "runes": false,

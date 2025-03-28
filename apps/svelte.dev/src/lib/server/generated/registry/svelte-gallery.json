@@ -1,6 +1,6 @@
 {
   "name": "svelte-gallery",
-  "description": "Display images in a masonry-style gallery.",
+  "description": "Create masonry-style photo galleries in Svelte.",
   "repo_url": "https://github.com/peppercornstudio/svelte-gallery",
   "authors": [
     "madeleineostoja"

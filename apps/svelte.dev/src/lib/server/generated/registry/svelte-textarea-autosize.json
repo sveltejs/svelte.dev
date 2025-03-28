@@ -1,6 +1,6 @@
 {
   "name": "svelte-textarea-autosize",
-  "description": "Autosize textarea input component for Svelte.",
+  "description": "Provides autosizing textarea input component for Svelte.",
   "repo_url": "https://github.com/shivesh947/svelte-textarea-autosize",
   "authors": [
     "shivesh"

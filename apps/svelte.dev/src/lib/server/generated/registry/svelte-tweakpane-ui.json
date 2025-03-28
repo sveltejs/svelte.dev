@@ -1,6 +1,6 @@
 {
   "name": "svelte-tweakpane-ui",
-  "description": "Create UI controls with Tweakpane in Svelte applications.",
+  "description": "Provides Svelte components for Tweakpane UI elements.",
   "repo_url": "https://github.com/kitschpatrol/svelte-tweakpane-ui",
   "authors": [
     "kitschpatrol"

@@ -1,6 +1,6 @@
 {
   "name": "svelte-aoe",
-  "description": "Animate elements on enter using Intersection Observer API.",
+  "description": "Animate elements on enter with Svelte.",
   "repo_url": "https://github.com/lliamscholtz/svelte-aoe",
   "authors": [
     "lliamscholtz"

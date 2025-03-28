@@ -1,0 +1,16 @@
+{
+  "name": "svelte-formique",
+  "description": "Build accessible, WCAG-compliant forms in Svelte.",
+  "repo_url": "",
+  "authors": [
+    "gugulethu_nyoni"
+  ],
+  "downloads": 2,
+  "dependents": 1,
+  "updated": "2025-02-17T08:54:27.666Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false
+}

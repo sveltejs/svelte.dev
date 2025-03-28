@@ -1,6 +1,6 @@
 {
   "name": "trpc-svelte-query-adapter",
-  "description": "Adapt tRPC procedures with @tanstack/svelte-query.",
+  "description": "Integrate tRPC with Svelte Query for data fetching.",
   "repo_url": "https://github.com/vishalbalaji/trpc-svelte-query-adapter",
   "authors": [
     "vishalbalaji"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2025-03-24T10:40:20.413Z",
   "tags": [
-    "utility"
+    "server"
   ],
   "svelte5": true,
   "runes": false,

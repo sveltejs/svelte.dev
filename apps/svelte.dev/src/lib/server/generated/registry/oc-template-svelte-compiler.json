@@ -1,6 +1,6 @@
 {
   "name": "oc-template-svelte-compiler",
-  "description": "Compiles Svelte components for the OC template.",
+  "description": "Compiles Svelte components for Open Components.",
   "repo_url": "https://github.com/opencomponents/vite-templates",
   "authors": [
     "mkredz"

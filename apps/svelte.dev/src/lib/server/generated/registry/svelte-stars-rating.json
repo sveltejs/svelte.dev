@@ -1,6 +1,6 @@
 {
   "name": "svelte-stars-rating",
-  "description": "Create customizable star rating components for Svelte.",
+  "description": "Creates customizable star rating component for Svelte.",
   "repo_url": "https://github.com/heithemmoumni/svelte-stars-rating",
   "authors": [
     "heithemmoumni"

@@ -1,6 +1,6 @@
 {
   "name": "@htmlbricks/hb-input-select",
-  "description": "Create select input web components for Svelte.",
+  "description": "Svelte-Bootstrap Select Input WebComponent.",
   "repo_url": "",
   "authors": [
     "dariocaruso"

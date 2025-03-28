@@ -1,6 +1,6 @@
 {
   "name": "svelte-media",
-  "description": "Observe media queries, provide reactive store for Svelte apps.",
+  "description": "Observe media queries as reactive store for Svelte apps.",
   "repo_url": "https://github.com/cibernox/svelte-media",
   "authors": [
     "cibernox"
@@ -10,7 +10,7 @@
   "dependents": 7,
   "updated": "2021-08-23T13:16:32.816Z",
   "tags": [
-    "utility"
+    "media"
   ],
   "svelte5": false,
   "runes": false,

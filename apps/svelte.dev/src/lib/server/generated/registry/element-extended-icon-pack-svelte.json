@@ -1,6 +1,6 @@
 {
   "name": "@element-extended-icon-pack/svelte",
-  "description": "Provides Element UI style icons for Svelte.",
+  "description": "Use Element UI style icons in Svelte.",
   "repo_url": "https://github.com/richhost/element-extended-icon-pack",
   "authors": [
     "iugsm"

@@ -1,6 +1,6 @@
 {
   "name": "dxsvelte",
-  "description": "Integrate Svelte into Django projects.",
+  "description": "Integrates Svelte into Django projects, enabling SSR.",
   "repo_url": "",
   "authors": [
     "emmyarty"

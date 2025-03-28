@@ -1,6 +1,6 @@
 {
   "name": "s-file-load",
-  "description": "Offers rudimentary file loading component for Svelte.",
+  "description": "Create file upload component for Svelte apps.",
   "repo_url": "https://github.com/s-library/s-file-load",
   "authors": [
     "nanotron"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2023-09-29T03:10:13.144Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

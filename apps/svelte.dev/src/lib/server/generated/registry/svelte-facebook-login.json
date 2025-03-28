@@ -1,6 +1,6 @@
 {
   "name": "svelte-facebook-login",
-  "description": "Adds Facebook login functionality to Svelte applications.",
+  "description": "Integrate Facebook login into Svelte applications.",
   "repo_url": "https://github.com/andrelmlins/svelte-facebook-login",
   "authors": [
     "andrelmlins"
@@ -10,8 +10,7 @@
   "dependents": 0,
   "updated": "2021-02-24T12:05:55.071Z",
   "tags": [
-    "auth",
-    "integration"
+    "auth"
   ],
   "svelte5": false,
   "runes": false,

@@ -1,6 +1,6 @@
 {
   "name": "svelte-pdf",
-  "description": "Renders PDF documents using PDF.js in Svelte.",
+  "description": "Render PDF documents within Svelte applications.",
   "repo_url": "https://github.com/vinodnimbalkar/svelte-pdf",
   "authors": [
     "vinodnimbalkar"

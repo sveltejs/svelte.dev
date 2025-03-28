@@ -1,6 +1,6 @@
 {
   "name": "svelte-json-tree",
-  "description": "Displays JSON data in an expandable tree structure for Svelte.",
+  "description": "View JSON data with Svelte JSON Viewer Component.",
   "repo_url": "https://github.com/tanhauhau/svelte-json-tree",
   "authors": [
     "tanhauhau"

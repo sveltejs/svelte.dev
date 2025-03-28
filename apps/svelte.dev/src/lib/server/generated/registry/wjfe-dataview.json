@@ -1,6 +1,6 @@
 {
   "name": "@wjfe/dataview",
-  "description": "Render table component for examining tabular data in Svelte.",
+  "description": "Svelte v5 table component for examining tabular data.",
   "repo_url": "https://github.com/WJSoftware/wjfe-dataview",
   "authors": [
     "webjose"

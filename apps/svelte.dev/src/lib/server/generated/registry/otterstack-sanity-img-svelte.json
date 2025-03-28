@@ -1,6 +1,6 @@
 {
   "name": "@otterstack/sanity-img-svelte",
-  "description": "Render responsive images from Sanity CMS in Svelte.",
+  "description": "Render responsive images from Sanity with optimized srcset.",
   "repo_url": "https://github.com/otterdev-io/sanity-img",
   "authors": [
     "cfraz89"

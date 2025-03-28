@@ -1,6 +1,6 @@
 {
   "name": "elementari",
-  "description": "Provides interactive visualizations for materials science.",
+  "description": "Create interactive visualizations for materials science.",
   "repo_url": "https://github.com/janosh/elementari",
   "authors": [
     "janosh"

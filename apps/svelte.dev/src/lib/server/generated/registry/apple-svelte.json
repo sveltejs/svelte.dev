@@ -1,6 +1,6 @@
 {
   "name": "apple-svelte",
-  "description": "Create Apple Human Interface design components for Svelte apps.",
+  "description": "Create Svelte component library based on Apple's Human Interface design.",
   "repo_url": "https://github.com/Carza-104/apple-svelte",
   "authors": [
     "carza-104"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2024-08-23T19:38:25.301Z",
   "tags": [
-    "component-library"
+    "design-system"
   ],
   "svelte5": false,
   "runes": false,

@@ -1,6 +1,6 @@
 {
   "name": "svelte-inline-modal",
-  "description": "Create simple, inline modals on the fly in Svelte applications.",
+  "description": "Creates simple, inline modal components for Svelte.",
   "repo_url": "https://github.com/jill64/svelte-inline-modal",
   "authors": [
     "jill64"

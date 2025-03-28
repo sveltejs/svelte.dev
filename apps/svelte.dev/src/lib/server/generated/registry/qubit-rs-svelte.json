@@ -1,6 +1,6 @@
 {
   "name": "@qubit-rs/svelte",
-  "description": "Enable seamless RPC for Rust & TypeScript in Svelte.",
+  "description": "Seamless RPC for Rust & TypeScript - Svelte style.",
   "repo_url": "https://github.com/andogq/qubit",
   "authors": [
     "ando.gq"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2024-12-02T08:48:04.818Z",
   "tags": [
-    "utility"
+    "server"
   ],
   "svelte5": true,
   "runes": false,

@@ -1,6 +1,6 @@
 {
   "name": "svelvet",
-  "description": "Builds dynamic, node-based user interfaces with Svelte.",
+  "description": "Builds dynamic, node-based user interfaces with Svelte components.",
   "repo_url": "https://github.com/open-source-labs/Svelvet",
   "authors": [
     "vongarcia97",
@@ -19,8 +19,8 @@
   "dependents": 5,
   "updated": "2025-02-18T20:13:27.930Z",
   "tags": [
-    "component-library",
-    "ui"
+    "ui",
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

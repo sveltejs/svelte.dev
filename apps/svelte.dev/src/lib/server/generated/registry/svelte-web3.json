@@ -1,6 +1,6 @@
 {
   "name": "svelte-web3",
-  "description": "Integrates web3.js as Svelte stores for Ethereum dApps.",
+  "description": "Integrate web3.js with Svelte for blockchain interactions.",
   "repo_url": "https://github.com/clbrge/svelte-web3",
   "authors": [
     "clbrge"
@@ -10,7 +10,7 @@
   "dependents": 2,
   "updated": "2023-07-17T10:12:41.599Z",
   "tags": [
-    "utility"
+    "integration"
   ],
   "svelte5": false,
   "runes": false,

@@ -1,6 +1,6 @@
 {
   "name": "@nostr-dev-kit/ndk-svelte",
-  "description": "Provides functionalities to make usage of NDK with Svelte nicer.",
+  "description": "Provides convenience functions for using NDK with Svelte.",
   "repo_url": "",
   "authors": [
     "jinglescode",
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2025-03-06T14:57:54.028Z",
   "tags": [
-    "utility"
+    "integration"
   ],
   "svelte5": true,
   "runes": false

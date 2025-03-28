@@ -1,6 +1,6 @@
 {
   "name": "svelte-error-boundary",
-  "description": "Fixes Svelte 3 error boundary issues, preventing full app crashes.",
+  "description": "Handle errors in Svelte components, preventing full app crashes.",
   "repo_url": "https://github.com/denisstasyev/svelte-error-boundary",
   "authors": [
     "denisstasyev"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2021-06-21T05:54:20.359Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

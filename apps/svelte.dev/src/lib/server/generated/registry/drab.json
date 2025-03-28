@@ -1,6 +1,6 @@
 {
   "name": "drab",
-  "description": "Provide interactivity for web components in Svelte.",
+  "description": "Provide interactivity for web components and custom elements.",
   "repo_url": "https://github.com/rossrobino/drab",
   "authors": [
     "rossrobino"
@@ -10,7 +10,7 @@
   "dependents": 1,
   "updated": "2025-02-11T18:32:07.597Z",
   "tags": [
-    "dom"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

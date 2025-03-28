@@ -1,6 +1,6 @@
 {
   "name": "svelte-boilerplate",
-  "description": "Generate Svelte boilerplate template projects.",
+  "description": "Svelte boilerplate template project.",
   "repo_url": "https://github.com/basevich/svelte-boilerplate",
   "authors": [
     "basevich"

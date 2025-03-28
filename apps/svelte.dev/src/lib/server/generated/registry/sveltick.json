@@ -1,6 +1,6 @@
 {
   "name": "sveltick",
-  "description": "Track performance and traffic metrics in Svelte apps.",
+  "description": "Lightweight performance and traffic tracking library for Svelte.",
   "repo_url": "https://github.com/Adam014/sveltick",
   "authors": [
     "kindast"
@@ -10,8 +10,7 @@
   "dependents": 0,
   "updated": "2024-10-18T01:19:12.584Z",
   "tags": [
-    "utility",
-    "performance"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

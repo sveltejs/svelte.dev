@@ -1,6 +1,6 @@
 {
   "name": "svelte-target-blank",
-  "description": "Adds target=\"_blank\" to external links in Svelte templates.",
+  "description": "Adds target=\"_blank\" to external links in Svelte components.",
   "repo_url": "https://github.com/fcrozatier/svelte-targe-blank",
   "authors": [
     "fcrozatier"
@@ -10,7 +10,6 @@
   "dependents": 0,
   "updated": "2024-04-27T13:51:06.068Z",
   "tags": [
-    "preprocessor",
     "tooling"
   ],
   "svelte5": false,

@@ -1,6 +1,6 @@
 {
   "name": "@panta/svelte-router",
-  "description": "Implement routing in Svelte applications.",
+  "description": "Implement routing for Svelte applications.",
   "repo_url": "https://github.com/panta/svelte-router",
   "authors": [
     "panta"

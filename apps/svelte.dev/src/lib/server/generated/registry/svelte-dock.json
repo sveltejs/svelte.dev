@@ -1,6 +1,6 @@
 {
   "name": "svelte-dock",
-  "description": "Toggle boolean values with draggable Svelte dock component.",
+  "description": "Create dock component for Svelte apps.",
   "repo_url": "https://github.com/thecodejack/svelte-dock",
   "authors": [
     "thecodejack"

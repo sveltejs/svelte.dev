@@ -1,6 +1,6 @@
 {
   "name": "@airlookjs/svelte-sequence-editor",
-  "description": "Edit timed sequences in Svelte applications.",
+  "description": "Edit timed sequences in Svelte with nested layers and blocks.",
   "repo_url": "https://github.com/airlookjs/airlookjs",
   "authors": [
     "olekristensen",

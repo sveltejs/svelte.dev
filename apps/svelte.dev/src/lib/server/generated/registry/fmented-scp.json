@@ -1,6 +1,6 @@
 {
   "name": "@fmented/scp",
-  "description": "Parse Svelte components, extract props, slots, and events.",
+  "description": "Parses Svelte components, extracts props, slots, and events.",
   "repo_url": "https://github.com/fmented/scp",
   "authors": [
     "fmented"
@@ -10,8 +10,7 @@
   "dependents": 0,
   "updated": "2022-03-07T00:43:12.991Z",
   "tags": [
-    "tooling",
-    "preprocessor"
+    "tooling"
   ],
   "svelte5": false,
   "runes": false,

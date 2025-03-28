@@ -1,6 +1,6 @@
 {
   "name": "svelte-better-store",
-  "description": "Provides enhanced state management for Svelte, similar to @svelte/store.",
+  "description": "Provides state management similar to Svelte's store.",
   "repo_url": "https://github.com/ragokan/svelte-better-store",
   "authors": [
     "rago"
@@ -10,7 +10,7 @@
   "dependents": 1,
   "updated": "2021-12-28T18:45:31.538Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false

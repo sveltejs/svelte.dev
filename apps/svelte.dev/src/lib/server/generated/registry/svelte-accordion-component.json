@@ -1,0 +1,16 @@
+{
+  "name": "svelte-accordion-component",
+  "description": "Create accordion component for Svelte.",
+  "repo_url": "",
+  "authors": [
+    "notjayden"
+  ],
+  "downloads": 16,
+  "dependents": 0,
+  "updated": "2021-03-14T06:40:28.247Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

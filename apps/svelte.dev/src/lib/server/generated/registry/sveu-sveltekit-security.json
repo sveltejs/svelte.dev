@@ -1,6 +1,6 @@
 {
   "name": "@sveu/sveltekit-security",
-  "description": "Secure SvelteKit apps with ease, preventing vulnerabilities.",
+  "description": "Secure SvelteKit apps with ease, preventing common security risks.",
   "repo_url": "https://github.com/svelte-u/sveltekit-security",
   "authors": [
     "mohamed-kaizen"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2023-11-17T05:34:26.608Z",
   "tags": [
-    "utility"
+    "integration"
   ],
   "svelte5": false,
   "runes": false,

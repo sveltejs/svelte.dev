@@ -1,16 +1,16 @@
 {
   "name": "svelte-pagedjs",
-  "description": "Provides pagination and print layout capabilities for Svelte apps.",
+  "description": "Paginate content and create print layouts for Svelte applications.",
   "repo_url": "https://github.com/codebygio/svelte-pagedjs",
   "authors": [
     "codebygio"
   ],
   "homepage": "https://codebygio.com/libs/svelte-pagedjs",
-  "downloads": 3,
+  "downloads": 2,
   "dependents": 0,
   "updated": "2025-01-16T15:40:16.550Z",
   "tags": [
-    "utility"
+    "content"
   ],
   "svelte5": true,
   "runes": false,

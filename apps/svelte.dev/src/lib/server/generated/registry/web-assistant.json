@@ -1,6 +1,6 @@
 {
   "name": "web-assistant",
-  "description": "Create version introduction and guideline UI with Svelte.",
+  "description": "Create version introduction and guideline UI in Svelte.",
   "repo_url": "https://github.com/icheer/web-assistant",
   "authors": [
     "icheer"

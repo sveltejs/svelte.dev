@@ -1,6 +1,6 @@
 {
   "name": "@robotpajamas/headlessui-svelte",
-  "description": "Port HeadlessUI components to Svelte 5+.",
+  "description": "Unofficial port of HeadlessUI component library to Svelte 5+.",
   "repo_url": "https://github.com/robotpajamas/headlessui-svelte",
   "authors": [
     "sureshjoshi"
@@ -10,8 +10,8 @@
   "dependents": 0,
   "updated": "2024-12-11T14:10:54.356Z",
   "tags": [
-    "component-library",
-    "ui"
+    "ui",
+    "design-system"
   ],
   "svelte5": true,
   "runes": false,

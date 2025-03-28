@@ -1,0 +1,18 @@
+{
+  "name": "svelte-subtlecrypto-store",
+  "description": "Create encrypted writable store for Svelte using SubtleCrypto API.",
+  "repo_url": "https://github.com/diegommm/svelte-subtlecrypto-store",
+  "authors": [
+    "diegommm"
+  ],
+  "homepage": "https://github.com/diegommm/svelte-subtlecrypto-store#readme",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2023-10-07T00:29:24.962Z",
+  "tags": [
+    "miscellaneous"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

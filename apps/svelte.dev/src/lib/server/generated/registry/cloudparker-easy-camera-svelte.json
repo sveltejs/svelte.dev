@@ -1,6 +1,6 @@
 {
   "name": "@cloudparker/easy-camera-svelte",
-  "description": "Integrate camera features, capture images, and record videos.",
+  "description": "Capture images and videos with easy-to-use Svelte camera.",
   "repo_url": "",
   "authors": [
     "couldparker.com"

@@ -1,6 +1,6 @@
 {
   "name": "svelte-event-router",
-  "description": "Enforces event-driven user interfaces with a simple SPA router.",
+  "description": "Implement event-driven SPA routing for Svelte apps.",
   "repo_url": "https://github.com/qudo-lucas/svelte-router",
   "authors": [
     "lucashugdahl"

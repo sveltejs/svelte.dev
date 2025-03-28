@@ -1,6 +1,6 @@
 {
   "name": "svelte-hypercommands",
-  "description": "Provide headless command palette for Svelte apps.",
+  "description": "Create command/navigation palettes for Svelte apps.",
   "repo_url": "https://github.com/josu-dev/svelte-hypercommands",
   "authors": [
     "j_josu"
@@ -10,7 +10,8 @@
   "dependents": 0,
   "updated": "2024-04-10T16:18:36.263Z",
   "tags": [
-    "utility"
+    "ui",
+    "tooling"
   ],
   "svelte5": false,
   "runes": false,

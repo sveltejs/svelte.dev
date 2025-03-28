@@ -1,6 +1,6 @@
 {
   "name": "bubbles-threlte",
-  "description": "Generate customizable bubble effects for Svelte apps using Threlte.",
+  "description": "Generate customizable bubble effects for Svelte with Threlte.",
   "repo_url": "https://github.com/ZeroDelusions/Bubbles-Threlte",
   "authors": [
     "zero_delusions"

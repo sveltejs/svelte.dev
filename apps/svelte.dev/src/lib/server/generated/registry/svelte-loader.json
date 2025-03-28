@@ -1,6 +1,6 @@
 {
   "name": "svelte-loader",
-  "description": "Webpack loader for Svelte components.",
+  "description": "Compile Svelte components with Webpack.",
   "repo_url": "https://github.com/sveltejs/svelte-loader",
   "authors": [
     "nikku",
@@ -10,12 +10,11 @@
     "dummdidumm"
   ],
   "homepage": "https://github.com/sveltejs/svelte-loader#readme",
-  "downloads": 38672,
+  "downloads": 38217,
   "dependents": 88,
   "updated": "2024-10-09T21:13:47.738Z",
   "tags": [
-    "tooling",
-    "preprocessor"
+    "tooling"
   ],
   "svelte5": true,
   "runes": false,

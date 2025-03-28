@@ -1,6 +1,6 @@
 {
   "name": "@accuser/svelte-markdown-math",
-  "description": "Transforms Markdown to Svelte components, including math with KaTeX.",
+  "description": "Transforms Markdown to Svelte components, supporting math with KaTeX.",
   "repo_url": "https://github.com/accuser/svelte-markdown-math",
   "authors": [
     "accuser"

@@ -1,15 +1,16 @@
 {
   "name": "svelte-sonner",
-  "description": "Opinionated toast component for Svelte apps.",
+  "description": "Create toast notifications in Svelte apps.",
   "repo_url": "",
   "authors": [
     "wobsoriano"
   ],
-  "downloads": 62785,
+  "downloads": 63180,
   "dependents": 25,
   "updated": "2024-09-12T19:45:04.149Z",
   "tags": [
-    "ui"
+    "ui",
+    "miscellaneous"
   ],
   "svelte5": true,
   "runes": false

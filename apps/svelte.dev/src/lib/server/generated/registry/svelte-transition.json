@@ -1,6 +1,6 @@
 {
   "name": "svelte-transition",
-  "description": "Transition elements using CSS classes in Svelte.",
+  "description": "Transition elements via CSS classes.",
   "repo_url": "https://github.com/captaincodeman/svelte-transition",
   "authors": [
     "captaincodeman"

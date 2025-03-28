@@ -1,6 +1,6 @@
 {
   "name": "ccs-svelte-ag-grid",
-  "description": "Provides a barebones wrapper around ag-grid for Svelte.",
+  "description": "Barebones wrapper around ag-grid for Svelte applications.",
   "repo_url": "",
   "authors": [
     "crecatalyst"

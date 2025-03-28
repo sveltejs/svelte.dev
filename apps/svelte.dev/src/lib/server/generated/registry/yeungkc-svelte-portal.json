@@ -1,6 +1,6 @@
 {
   "name": "@yeungkc/svelte-portal",
-  "description": "Implements a portal library for Svelte, supporting SSR.",
+  "description": "Implement portal functionality, supporting SSR and updates.",
   "repo_url": "",
   "authors": [
     "yeungkc"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2023-04-20T09:30:26.163Z",
   "tags": [
-    "dom"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false

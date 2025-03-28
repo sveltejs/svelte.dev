@@ -1,6 +1,6 @@
 {
   "name": "svelte-table",
-  "description": "Provides a relatively minimal table component for Svelte.",
+  "description": "Create minimal table component with sorting and filtering.",
   "repo_url": "https://github.com/dasDaniel/svelte-table",
   "authors": [
     "danipo"
@@ -10,7 +10,7 @@
   "dependents": 6,
   "updated": "2025-03-26T15:47:00.290Z",
   "tags": [
-    "component-library"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

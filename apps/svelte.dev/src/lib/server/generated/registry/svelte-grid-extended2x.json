@@ -1,6 +1,6 @@
 {
   "name": "svelte-grid-extended2x",
-  "description": "Create draggable and resizable grid layouts for Svelte.",
+  "description": "Create draggable, resizable grid layouts for Svelte applications.",
   "repo_url": "https://github.com/vieurou/svelte-grid-extended2x",
   "authors": [
     "vieurou"

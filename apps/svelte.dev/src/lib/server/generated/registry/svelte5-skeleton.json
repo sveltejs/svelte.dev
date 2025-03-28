@@ -1,6 +1,6 @@
 {
   "name": "svelte5-skeleton",
-  "description": "Create SVG skeletons in Svelte 5.",
+  "description": "Implement SVG skeletons in Svelte 5 with types.",
   "repo_url": "https://github.com/sonniydsgn/svelte5-skeleton",
   "authors": [
     "sonniydsgn"

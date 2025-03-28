@@ -1,6 +1,6 @@
 {
   "name": "svelte-steer",
-  "description": "Provides router with lazy-loading and nested routes.",
+  "description": "Router with lazy-loading and nested routes for Svelte apps.",
   "repo_url": "https://github.com/emedware/svelte-steer",
   "authors": [
     "eeddow"

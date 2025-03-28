@@ -1,6 +1,6 @@
 {
   "name": "@htmlbricks/hb-input-checkbox",
-  "description": "Create Svelte-Bootstrap checkbox input web components.",
+  "description": "Create checkbox input web components for Svelte.",
   "repo_url": "",
   "authors": [
     "dariocaruso"

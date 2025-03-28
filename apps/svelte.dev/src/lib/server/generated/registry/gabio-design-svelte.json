@@ -1,6 +1,6 @@
 {
   "name": "@gabio/design-svelte",
-  "description": "Offers a design system with Svelte UI components.",
+  "description": "Offers a killer Svelte design library with various components.",
   "repo_url": "git@github.com-vigenere23:vigenere23/gabio-design-svelte",
   "authors": [
     "vigenere23"
@@ -10,8 +10,7 @@
   "dependents": 0,
   "updated": "2022-08-13T21:04:06.000Z",
   "tags": [
-    "component-library",
-    "ui"
+    "design-system"
   ],
   "svelte5": false,
   "runes": false

@@ -1,6 +1,6 @@
 {
   "name": "svelte-meilisearch-instantsearch",
-  "description": "Integrate Meilisearch with Svelte using InstantSearch.",
+  "description": "Svelte wrapper for Meilisearch InstantSearch.",
   "repo_url": "",
   "authors": [
     "dfanchon"
@@ -9,7 +9,7 @@
   "dependents": 0,
   "updated": "2024-08-23T09:31:43.629Z",
   "tags": [
-    "utility"
+    "integration"
   ],
   "svelte5": false,
   "runes": false

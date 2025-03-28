@@ -1,6 +1,6 @@
 {
   "name": "@khulnasoft/ai-sdk",
-  "description": "Build AI-powered streaming text and chat UIs in Svelte.",
+  "description": "Build AI-powered streaming text and chat UIs.",
   "repo_url": "https://github.com/khulnasoft/ai-sdk",
   "authors": [
     "nextlinux"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2023-12-13T03:45:51.798Z",
   "tags": [
-    "utility"
+    "integration"
   ],
   "svelte5": false,
   "runes": false

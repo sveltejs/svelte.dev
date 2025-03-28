@@ -1,6 +1,6 @@
 {
   "name": "@albinmedoc/svelte-googlemaps",
-  "description": "Integrates Google Maps and places autocomplete in Svelte.",
+  "description": "Implement Google Maps and places autocomplete in Svelte.",
   "repo_url": "https://github.com/albinmedoc/svelte-googlemaps",
   "authors": [
     "albinmedoc"

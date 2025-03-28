@@ -1,6 +1,6 @@
 {
   "name": "@cpp.js/sample-web-svelte-vite",
-  "description": "Sample project for integrating Cpp.js with Svelte and Vite.",
+  "description": "Sample project integrating Cpp.js with Svelte and Vite.",
   "repo_url": "https://github.com/bugra9/cpp.js",
   "authors": [
     "bugra9"

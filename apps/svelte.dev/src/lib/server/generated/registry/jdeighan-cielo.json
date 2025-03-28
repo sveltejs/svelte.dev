@@ -1,6 +1,6 @@
 {
   "name": "@jdeighan/cielo",
-  "description": "Process *.cielo and *.starbucks files, useful for SvelteKit projects.",
+  "description": "Process *.cielo and *.starbucks files.",
   "repo_url": "",
   "authors": [
     "jdeighan"
@@ -9,7 +9,6 @@
   "dependents": 0,
   "updated": "2022-03-10T19:34:19.023Z",
   "tags": [
-    "utility",
     "tooling"
   ],
   "svelte5": false,

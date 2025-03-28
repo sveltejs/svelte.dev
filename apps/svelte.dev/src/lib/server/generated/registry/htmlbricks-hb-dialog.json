@@ -1,6 +1,6 @@
 {
   "name": "@htmlbricks/hb-dialog",
-  "description": "Create Svelte-Bootstrap dialog web components.",
+  "description": "Create dialog web components for Svelte.",
   "repo_url": "",
   "authors": [
     "dariocaruso"

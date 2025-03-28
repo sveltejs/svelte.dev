@@ -1,6 +1,6 @@
 {
   "name": "maloon",
-  "description": "Create Svelte SPAs easily, ship less javascript.",
+  "description": "Create Svelte SPAs easily and ship less javascript.",
   "repo_url": "https://github.com/greencoder001/maloon",
   "authors": [
     "greencoder001"

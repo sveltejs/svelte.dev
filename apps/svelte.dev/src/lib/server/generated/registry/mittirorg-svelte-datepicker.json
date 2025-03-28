@@ -1,6 +1,6 @@
 {
   "name": "@mittirorg/svelte-datepicker",
-  "description": "Create customizable datepicker component for Svelte apps.",
+  "description": "Implement customizable calendar and datepicker components for Svelte apps.",
   "repo_url": "https://github.com/iamrhm/svelte-datepicker",
   "authors": [
     "mittirbabu"

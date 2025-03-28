@@ -1,6 +1,6 @@
 {
   "name": "svelte-htm",
-  "description": "Provides tagged template syntax for Svelte testing.",
+  "description": "Use HTML tagged template literals for Svelte components.",
   "repo_url": "https://github.com/kenoxa/svelte-htm",
   "authors": [
     "sastan"
@@ -10,7 +10,7 @@
   "dependents": 2,
   "updated": "2022-11-08T21:34:29.863Z",
   "tags": [
-    "testing"
+    "tooling"
   ],
   "svelte5": false,
   "runes": false,

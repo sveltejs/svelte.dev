@@ -1,0 +1,18 @@
+{
+  "name": "posthtml-svelte",
+  "description": "Compile Svelte code within HTML using PostHTML.",
+  "repo_url": "https://github.com/metonym/posthtml-svelte",
+  "authors": [
+    "metonym"
+  ],
+  "homepage": "https://github.com/metonym/posthtml-svelte",
+  "downloads": 12,
+  "dependents": 1,
+  "updated": "2020-05-03T22:43:57.661Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 3
+}

@@ -1,6 +1,6 @@
 {
   "name": "svelte-slideit",
-  "description": "Create lightweight, simple slider or carousel components.",
+  "description": "Create lightweight, simple sliders and carousels for Svelte.",
   "repo_url": "https://github.com/zgunz42/svelte-slideit",
   "authors": [
     "zgunz42"

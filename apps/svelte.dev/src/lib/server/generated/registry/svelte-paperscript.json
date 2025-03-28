@@ -1,6 +1,6 @@
 {
   "name": "svelte-paperscript",
-  "description": "Enables writing PaperScript code directly in Svelte components.",
+  "description": "Write PaperScript directly in Svelte components.",
   "repo_url": "https://github.com/apple-phi/svelte-paperscript",
   "authors": [
     "apple-phi"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2024-06-25T15:32:58.706Z",
   "tags": [
-    "preprocessor"
+    "tooling"
   ],
   "svelte5": false,
   "runes": false,

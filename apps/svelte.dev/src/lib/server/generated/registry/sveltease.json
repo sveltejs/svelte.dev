@@ -1,6 +1,6 @@
 {
   "name": "sveltease",
-  "description": "Integrate Svelte with Vue, React, and Next.js.",
+  "description": "Integrate Svelte with Vue, React, Vite, and Next.js.",
   "repo_url": "https://github.com/anurag-dhamala/sveltease",
   "authors": [
     "anurag-dhamala"

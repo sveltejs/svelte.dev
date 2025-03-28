@@ -1,6 +1,6 @@
 {
   "name": "@neesh-studio/svipe",
-  "description": "Create swipeable items for Svelte carousels.",
+  "description": "Provides swipeable items wrapper component for Svelte.",
   "repo_url": "https://github.com/neesh-studio/svelte-swipe",
   "authors": [
     "ocupe",

@@ -1,6 +1,6 @@
 {
   "name": "svelte-sortable-items",
-  "description": "Create sortable drag-and-drop items in Svelte apps.",
+  "description": "Create sortable drag-and-drop items for Svelte applications.",
   "repo_url": "https://github.com/joaquimnetocel/svelte-sortable-items",
   "authors": [
     "joaquim.neto.cel"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2024-08-26T20:44:52.886Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": true,
   "runes": false,

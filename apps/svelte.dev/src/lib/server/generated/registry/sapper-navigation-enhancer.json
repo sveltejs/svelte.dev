@@ -1,6 +1,6 @@
 {
   "name": "sapper-navigation-enhancer",
-  "description": "Enhance Sapper navigation with before/after hooks.",
+  "description": "Enhance Sapper navigation with beforeNavigate hook.",
   "repo_url": "https://github.com/PatrickG/sapper-navigation-enhancer",
   "authors": [
     "pehgeh"
@@ -10,8 +10,7 @@
   "dependents": 0,
   "updated": "2021-03-26T17:03:41.941Z",
   "tags": [
-    "utility",
-    "router"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

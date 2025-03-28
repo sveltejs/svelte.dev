@@ -1,16 +1,17 @@
 {
   "name": "@ikun-ui/core",
-  "description": "Build UI with UnoCSS UI library for Svelte.",
+  "description": "Build websites with this Svelte UI library.",
   "repo_url": "https://github.com/ikun-svelte/ikun-ui",
   "authors": [
     "baiwusanyu"
   ],
   "homepage": "https://github.com/ikun-svelte/ikun-ui#readme",
-  "downloads": 40,
+  "downloads": 9,
   "dependents": 1,
   "updated": "2025-01-24T03:49:30.129Z",
   "tags": [
-    "component-library"
+    "ui",
+    "design-system"
   ],
   "svelte5": false,
   "runes": false,

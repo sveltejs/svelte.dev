@@ -1,6 +1,6 @@
 {
   "name": "svelte-fullcalendar",
-  "description": "Integrate FullCalendar into Svelte applications.",
+  "description": "Svelte component wrapper around FullCalendar.",
   "repo_url": "https://github.com/YogliB/svelte-fullcalendar",
   "authors": [
     "yoglib"

@@ -1,6 +1,6 @@
 {
   "name": "@lastfm-viewer/svelte",
-  "description": "Displays recent scrobbles for Last.fm user in Svelte.",
+  "description": "View recent scrobbles for a last.fm user.",
   "repo_url": "",
   "authors": [
     "zoasr"

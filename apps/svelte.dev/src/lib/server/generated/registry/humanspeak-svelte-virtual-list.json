@@ -1,6 +1,6 @@
 {
   "name": "@humanspeak/svelte-virtual-list",
-  "description": "Render virtual list component for Svelte 5.",
+  "description": "Render large datasets efficiently with Svelte 5 virtual list.",
   "repo_url": "https://github.com/humanspeak/svelte-virtual-list",
   "authors": [
     "humanspeakadmin"

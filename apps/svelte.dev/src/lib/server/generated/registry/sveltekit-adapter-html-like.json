@@ -1,6 +1,6 @@
 {
   "name": "sveltekit-adapter-html-like",
-  "description": "Adapts SvelteKit for HTML-like template engines.",
+  "description": "Adapt SvelteKit for HTML-like template engines.",
   "repo_url": "https://github.com/idleberg/sveltekit-adapter-html-like",
   "authors": [
     "idleberg"

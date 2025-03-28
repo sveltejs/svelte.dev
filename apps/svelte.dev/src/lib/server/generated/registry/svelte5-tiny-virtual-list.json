@@ -1,12 +1,12 @@
 {
   "name": "svelte5-tiny-virtual-list",
-  "description": "Create tiny, mighty virtual list component for Svelte.",
+  "description": "Tiny virtual list component for Svelte.",
   "repo_url": "https://github.com/jonasgeiler/svelte-tiny-virtual-list",
   "authors": [
     "liamkrenn"
   ],
   "homepage": "https://github.com/TutorLatin/svelte-tiny-virtual-list/#readme",
-  "downloads": 74,
+  "downloads": 8,
   "dependents": 0,
   "updated": "2025-02-20T15:04:43.379Z",
   "tags": [

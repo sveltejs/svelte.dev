@@ -1,6 +1,6 @@
 {
   "name": "@ragone/svelte-maplibre",
-  "description": "Integrate MapLibre maps into Svelte applications.",
+  "description": "Provide Svelte bindings for MapLibre.",
   "repo_url": "https://github.com/dimfeld/svelte-maplibre",
   "authors": [
     "ragone"

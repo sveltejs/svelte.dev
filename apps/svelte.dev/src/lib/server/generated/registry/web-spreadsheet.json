@@ -1,6 +1,6 @@
 {
   "name": "web-spreadsheet",
-  "description": "Excel-like spreadsheet web component for Svelte.",
+  "description": "Create Excel-like spreadsheet web component for Svelte.",
   "repo_url": "https://github.com/icheer/web-spreadsheet",
   "authors": [
     "icheer"

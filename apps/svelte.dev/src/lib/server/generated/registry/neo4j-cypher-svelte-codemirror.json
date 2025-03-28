@@ -1,6 +1,6 @@
 {
   "name": "@neo4j-cypher/svelte-codemirror",
-  "description": "Integrate a Cypher editor using CodeMirror 6 in Svelte apps.",
+  "description": "Provides a Cypher editor component using CodeMirror 6 for Svelte.",
   "repo_url": "https://github.com/neo4j/cypher-editor",
   "authors": [
     "neo4j-bloom-reader2",

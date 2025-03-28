@@ -1,6 +1,6 @@
 {
   "name": "svelte-realtime-countdown",
-  "description": "Display real-time countdown timer in SvelteKit applications.",
+  "description": "Display real-time countdown timer in SvelteKit.",
   "repo_url": "https://github.com/haysquareA/svelte-real-time-countdown",
   "authors": [
     "haysquare"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2024-03-23T15:07:14.040Z",
   "tags": [
-    "utility"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

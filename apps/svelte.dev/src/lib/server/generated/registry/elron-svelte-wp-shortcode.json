@@ -1,6 +1,6 @@
 {
   "name": "@elron/svelte-wp-shortcode",
-  "description": "Embed Svelte components in content using WordPress shortcodes.",
+  "description": "Integrates Svelte components with WordPress shortcodes.",
   "repo_url": "https://github.com/elron/svelte-wp-shortcodes",
   "authors": [
     "elron"

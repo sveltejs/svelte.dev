@@ -1,6 +1,6 @@
 {
   "name": "leblog",
-  "description": "Add blog or changelog functionality to SvelteKit sites.",
+  "description": "Adds a blog or changelog to SvelteKit sites.",
   "repo_url": "https://github.com/nbgoodall/leblog",
   "authors": [
     "nickgoodall"

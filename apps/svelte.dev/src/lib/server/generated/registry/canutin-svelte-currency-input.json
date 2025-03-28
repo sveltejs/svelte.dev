@@ -1,6 +1,6 @@
 {
   "name": "@canutin/svelte-currency-input",
-  "description": "Format numbers to currencies as user types in Svelte forms.",
+  "description": "Formats currency input fields in Svelte applications.",
   "repo_url": "https://github.com/fmaclen/svelte-currency-input",
   "authors": [
     "fmaclen"

@@ -1,6 +1,6 @@
 {
   "name": "@ubeac/svelte",
-  "description": "Provides opinionated Svelte component library.",
+  "description": "Opinionated Svelte component library.",
   "repo_url": "https://github.com/ubeac/svelte",
   "authors": [
     "ubeac-owner"
@@ -10,8 +10,7 @@
   "dependents": 0,
   "updated": "2023-01-15T21:08:54.026Z",
   "tags": [
-    "component-library",
-    "ui"
+    "design-system"
   ],
   "svelte5": false,
   "runes": false,

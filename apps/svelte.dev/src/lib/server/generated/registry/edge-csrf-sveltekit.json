@@ -1,16 +1,16 @@
 {
   "name": "@edge-csrf/sveltekit",
-  "description": "Integrate CSRF protection into SvelteKit applications.",
+  "description": "Integrate Edge-CSRF protection into SvelteKit applications.",
   "repo_url": "https://github.com/kubetail-org/edge-csrf",
   "authors": [
     "amorey"
   ],
   "homepage": "https://github.com/kubetail-org/edge-csrf#readme",
-  "downloads": 34,
+  "downloads": 1,
   "dependents": 0,
   "updated": "2024-11-21T11:28:53.893Z",
   "tags": [
-    "utility"
+    "tooling"
   ],
   "svelte5": false,
   "runes": false,

@@ -1,6 +1,6 @@
 {
   "name": "svelte-checkable",
-  "description": "Validate data in Svelte using Specma.",
+  "description": "Validate data using Svelte stores and Specma.",
   "repo_url": "https://github.com/davidsavoie1/svelte-checkable",
   "authors": [
     "davidsavoie1"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2021-01-22T15:51:29.469Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

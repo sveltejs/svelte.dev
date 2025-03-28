@@ -1,6 +1,6 @@
 {
   "name": "svelte-fetchable",
-  "description": "Create fetchable stores for Svelte applications.",
+  "description": "Provides fetchable store for Svelte, simplifying data fetching.",
   "repo_url": "https://github.com/lewis-wow/svelte-fetchable",
   "authors": [
     "ujik"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2022-11-23T09:14:27.562Z",
   "tags": [
-    "utility"
+    "server"
   ],
   "svelte5": false,
   "runes": false,

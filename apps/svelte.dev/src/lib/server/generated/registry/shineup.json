@@ -1,6 +1,6 @@
 {
   "name": "shineup",
-  "description": "Implement CSS-in-JS for Svelte components.",
+  "description": "Implement simple, flexible CSS-in-JS for Svelte components.",
   "repo_url": "https://github.com/Vehmloewff/shineup",
   "authors": [
     "vehmloewff"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2019-12-10T01:11:24.687Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

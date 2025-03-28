@@ -1,6 +1,6 @@
 {
   "name": "@svelte-parts/map",
-  "description": "Create Leaflet map components for Svelte applications.",
+  "description": "Create Leaflet maps with Svelte components.",
   "repo_url": "https://github.com/idris-maps/svelte-parts",
   "authors": [
     "idris-maps"

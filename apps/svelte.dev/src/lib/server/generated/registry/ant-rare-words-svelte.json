@@ -1,6 +1,6 @@
 {
   "name": "ant-rare-words-svelte",
-  "description": "Implement rare character input component for Svelte.",
+  "description": "Provide rare character input component for Svelte.",
   "repo_url": "https://github.com/alipay/Z-RareCharacterSolution",
   "authors": [
     "andyliwr"

@@ -1,6 +1,6 @@
 {
   "name": "@datocms/svelte",
-  "description": "Integrate DatoCMS with Svelte for content management.",
+  "description": "Create components and utilities to work with DatoCMS in Svelte.",
   "repo_url": "https://github.com/datocms/datocms-svelte",
   "authors": [
     "marcelofinamorvieira",

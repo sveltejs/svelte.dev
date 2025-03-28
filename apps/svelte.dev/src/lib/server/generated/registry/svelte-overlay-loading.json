@@ -1,6 +1,6 @@
 {
   "name": "svelte-overlay-loading",
-  "description": "Svelte component for loading overlay.",
+  "description": "Provide loading overlay component for Svelte applications.",
   "repo_url": "https://github.com/andrusenn/SvelteComponents",
   "authors": [
     "andrusenn"

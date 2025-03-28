@@ -1,6 +1,6 @@
 {
   "name": "kudu-components",
-  "description": "Reusable UI components for Svelte and SvelteKit projects.",
+  "description": "Provide reusable UI components for Kudu projects.",
   "repo_url": "https://github.com/kudu-consultant/kudu-components",
   "authors": [
     "kuduconsultant"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2023-07-28T16:54:55.161Z",
   "tags": [
-    "component-library"
+    "design-system"
   ],
   "svelte5": false,
   "runes": false

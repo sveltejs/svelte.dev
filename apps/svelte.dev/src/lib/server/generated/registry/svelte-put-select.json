@@ -1,6 +1,6 @@
 {
   "name": "@svelte-put/select",
-  "description": "Build feature-rich, accessible select components.",
+  "description": "Create feature-rich, accessible select components for Svelte.",
   "repo_url": "https://github.com/vnphanquang/svelte-put",
   "authors": [
     "vnphanquang"

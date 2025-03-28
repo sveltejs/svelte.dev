@@ -1,6 +1,6 @@
 {
   "name": "@htmlbricks/hb-pad-joystick",
-  "description": "Create pad joystick web component for Svelte.",
+  "description": "Provide Svelte-Bootstrap pad-joystick web component.",
   "repo_url": "",
   "authors": [
     "dariocaruso"

@@ -1,6 +1,6 @@
 {
   "name": "svelteworld",
-  "description": "Display list of countries based on ISO 3155-1 standard.",
+  "description": "Display list of countries in Svelte components.",
   "repo_url": "https://gitlab.com/st33fn/svelteworld",
   "authors": [
     "st33fn"

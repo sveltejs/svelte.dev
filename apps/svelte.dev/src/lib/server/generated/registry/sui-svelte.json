@@ -1,6 +1,6 @@
 {
   "name": "sui-svelte",
-  "description": "Provides components for interacting with Sui wallets.",
+  "description": "Integrate Sui wallet functionality into Svelte applications.",
   "repo_url": "https://github.com/encypher-studio/sui-svelte",
   "authors": [
     "encypher"

@@ -1,6 +1,6 @@
 {
   "name": "yasp-modals",
-  "description": "Implement modal wrappers for Svelte 3 applications.",
+  "description": "Modal wrapper component for Svelte, easy to open and close.",
   "repo_url": "",
   "authors": [
     "dievardump"

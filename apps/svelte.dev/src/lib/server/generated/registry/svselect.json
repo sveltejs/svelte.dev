@@ -1,6 +1,6 @@
 {
   "name": "svselect",
-  "description": "Creates easy-to-use select input components for Svelte.",
+  "description": "Create easy-to-use select inputs for Svelte.",
   "repo_url": "https://github.com/Battledash-2/svselect",
   "authors": [
     "battledash2"

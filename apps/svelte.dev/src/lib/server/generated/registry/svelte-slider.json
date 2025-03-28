@@ -1,6 +1,6 @@
 {
   "name": "svelte-slider",
-  "description": "Create slider components for Svelte applications.",
+  "description": "Create slider components in Svelte applications.",
   "repo_url": "https://github.com/korywka/svelte-slider",
   "authors": [
     "moomoo"

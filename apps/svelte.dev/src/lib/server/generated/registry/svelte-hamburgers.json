@@ -1,6 +1,6 @@
 {
   "name": "svelte-hamburgers",
-  "description": "Svelte component for hamburger menu animations, customizable.",
+  "description": "Create Svelte component based on hamburgers.css library.",
   "repo_url": "https://github.com/ghostdevv/svelte-hamburgers",
   "authors": [
     "ghostsos"

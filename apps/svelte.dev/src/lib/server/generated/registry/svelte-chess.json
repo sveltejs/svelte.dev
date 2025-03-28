@@ -1,6 +1,6 @@
 {
   "name": "svelte-chess",
-  "description": "Play chess in Svelte with Chess.js and Chessground.",
+  "description": "Implement fully playable chess component for Svelte.",
   "repo_url": "",
   "authors": [
     "gtim"

@@ -1,6 +1,6 @@
 {
   "name": "@responsive-ui/tag",
-  "description": "Provides a tag component for Svelte applications.",
+  "description": "Provides tag component for responsive-ui.",
   "repo_url": "https://github.com/wetix/responsive-ui",
   "authors": [
     "rexlow",

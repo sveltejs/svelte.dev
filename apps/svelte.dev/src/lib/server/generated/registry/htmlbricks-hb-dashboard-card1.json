@@ -1,6 +1,6 @@
 {
   "name": "@htmlbricks/hb-dashboard-card1",
-  "description": "Provides a Svelte dashboard card component.",
+  "description": "Create dashboard cards with Svelte web components.",
   "repo_url": "",
   "authors": [
     "dariocaruso"

@@ -1,6 +1,6 @@
 {
   "name": "svelte-custom-components",
-  "description": "Create custom Svelte components with TS support.",
+  "description": "Create custom Svelte components with TypeScript.",
   "repo_url": "https://github.com/jinkalr/svelte-custom-components",
   "authors": [
     "jinkalr"

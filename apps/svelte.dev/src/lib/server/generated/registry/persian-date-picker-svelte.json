@@ -1,6 +1,6 @@
 {
   "name": "persian-date-picker-svelte",
-  "description": "Create Jalali and Gregorian date and time pickers for Svelte.",
+  "description": "Implement Jalali and Gregorian date pickers for Svelte.",
   "repo_url": "https://github.com/nargeszmn/persian-date-picker-svelte",
   "authors": [
     "nargeszmn"

@@ -1,6 +1,6 @@
 {
   "name": "@htmlbricks/hb-gallery-video",
-  "description": "Svelte Boostrap Video Gallery WebComponent.",
+  "description": "Provides Svelte Bootstrap video gallery web component.",
   "repo_url": "",
   "authors": [
     "dariocaruso"
@@ -9,7 +9,7 @@
   "dependents": 2,
   "updated": "2025-03-24T18:07:23.265Z",
   "tags": [
-    "media"
+    "ui"
   ],
   "svelte5": false,
   "runes": false

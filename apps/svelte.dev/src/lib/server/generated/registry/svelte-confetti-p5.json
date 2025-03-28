@@ -1,6 +1,6 @@
 {
   "name": "svelte-confetti-p5",
-  "description": "Generate customizable, realistic confetti animations using p5.js.",
+  "description": "Create customizable confetti animations using p5.js in Svelte.",
   "repo_url": "https://github.com/elron/svelte-confetti-p5",
   "authors": [
     "elron"

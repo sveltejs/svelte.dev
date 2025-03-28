@@ -1,6 +1,6 @@
 {
   "name": "svelte-file-dropzone-with-label",
-  "description": "Implement file upload and dropzone functionality in Svelte.",
+  "description": "Create file upload and dropzone component for Svelte.",
   "repo_url": "https://github.com/Roborob03/svelte-file-dropzone",
   "authors": [
     "roborob"

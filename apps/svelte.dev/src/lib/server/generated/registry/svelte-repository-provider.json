@@ -1,6 +1,6 @@
 {
   "name": "svelte-repository-provider",
-  "description": "Provides Svelte components for repository providers.",
+  "description": "Create Svelte components for repository providers.",
   "repo_url": "https://github.com/arlac77/svelte-repository-provider",
   "authors": [
     "arlac77"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2025-03-24T12:58:21.971Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": true,
   "runes": false,

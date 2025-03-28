@@ -1,6 +1,6 @@
 {
   "name": "@htmlbricks/hb-uploader",
-  "description": "Create file upload web component for Svelte.",
+  "description": "Provides a Svelte web component for file uploads.",
   "repo_url": "",
   "authors": [
     "dariocaruso"
@@ -9,7 +9,7 @@
   "dependents": 0,
   "updated": "2025-03-24T18:07:22.855Z",
   "tags": [
-    "media"
+    "ui"
   ],
   "svelte5": false,
   "runes": false

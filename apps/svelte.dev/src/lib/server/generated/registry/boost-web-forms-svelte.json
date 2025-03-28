@@ -1,6 +1,6 @@
 {
   "name": "boost-web-forms-svelte",
-  "description": "Build forms with validation in Svelte apps.",
+  "description": "Integrates boost-web-forms library into Svelte components.",
   "repo_url": "https://github.com/lgirma/boost-web-forms-svelte",
   "authors": [
     "lgirma"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2021-07-01T17:24:30.009Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false

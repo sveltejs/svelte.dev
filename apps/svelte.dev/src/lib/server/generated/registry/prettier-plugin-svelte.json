@@ -1,6 +1,6 @@
 {
   "name": "prettier-plugin-svelte",
-  "description": "Formats Svelte code with Prettier.",
+  "description": "Format Svelte components with Prettier.",
   "repo_url": "https://github.com/sveltejs/prettier-plugin-svelte",
   "authors": [
     "unwrittenfun",
@@ -8,12 +8,11 @@
     "dummdidumm"
   ],
   "homepage": "https://github.com/sveltejs/prettier-plugin-svelte#readme",
-  "downloads": 501182,
+  "downloads": 502251,
   "dependents": 166,
   "updated": "2025-01-13T10:09:51.803Z",
   "tags": [
-    "tooling",
-    "preprocessor"
+    "tooling"
   ],
   "svelte5": true,
   "runes": false,

@@ -1,6 +1,6 @@
 {
   "name": "svelte-page-router",
-  "description": "Config-based router for Svelte using page.js.",
+  "description": "Create config-based routing for Svelte apps using page.js.",
   "repo_url": "https://github.com/PaulMaly/svelte-page-router",
   "authors": [
     "paulmaly"

@@ -1,6 +1,6 @@
 {
   "name": "svelte-feather",
-  "description": "Render Feather icons as Svelte components.",
+  "description": "Integrate Feather icons into Svelte components easily.",
   "repo_url": "https://github.com/langbamit/svelte-feather",
   "authors": [
     "langbamit"

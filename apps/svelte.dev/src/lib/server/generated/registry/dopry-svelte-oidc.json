@@ -1,6 +1,6 @@
 {
   "name": "@dopry/svelte-oidc",
-  "description": "Integrate OIDC authentication into Svelte applications.",
+  "description": "Implement OIDC authentication in Svelte applications.",
   "repo_url": "https://github.com/dopry/svelte-oidc",
   "authors": [
     "dopry"
@@ -10,7 +10,6 @@
   "dependents": 0,
   "updated": "2023-01-24T16:47:18.807Z",
   "tags": [
-    "integration",
     "auth"
   ],
   "svelte5": false,

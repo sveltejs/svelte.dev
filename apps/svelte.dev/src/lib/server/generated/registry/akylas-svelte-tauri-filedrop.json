@@ -1,6 +1,6 @@
 {
   "name": "@akylas/svelte-tauri-filedrop",
-  "description": "Provides file drop handling component for Svelte and Tauri.",
+  "description": "Handle file drops in Svelte Tauri applications.",
   "repo_url": "https://github.com/probablykasper/svelte-tauri-filedrop",
   "authors": [
     "farfromrefuge"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2024-05-21T09:16:42.065Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

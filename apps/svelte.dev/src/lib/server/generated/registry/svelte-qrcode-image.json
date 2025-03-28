@@ -1,6 +1,6 @@
 {
   "name": "svelte-qrcode-image",
-  "description": "Generate QR codes as images or canvas elements in Svelte.",
+  "description": "Generate QR codes as images or canvas elements in SvelteKit.",
   "repo_url": "https://github.com/1toldyou/svelte-qrcode-image",
   "authors": [
     "ito1dyou"

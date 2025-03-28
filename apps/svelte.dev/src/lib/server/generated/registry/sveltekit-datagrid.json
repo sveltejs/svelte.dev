@@ -5,11 +5,12 @@
   "authors": [
     "joirg_dev98"
   ],
-  "downloads": 41,
+  "downloads": 119,
   "dependents": 0,
   "updated": "2025-03-20T16:35:37.207Z",
   "tags": [
-    "component-library"
+    "ui",
+    "miscellaneous"
   ],
   "svelte5": true,
   "runes": false

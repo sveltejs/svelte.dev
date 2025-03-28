@@ -1,6 +1,6 @@
 {
   "name": "svelte-plyr",
-  "description": "Thin Svelte wrapper around Plyr.js video player.",
+  "description": "Create video/audio players using Plyr.js in Svelte.",
   "repo_url": "https://github.com/benwoodward/svelte-plyr",
   "authors": [
     "benwoodward"

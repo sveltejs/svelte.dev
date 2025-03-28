@@ -1,6 +1,6 @@
 {
   "name": "novella-svelte",
-  "description": "Develop Notion-style WYSIWYG editor for Svelte.",
+  "description": "Create Notion-style WYSIWYG editor for Svelte.",
   "repo_url": "https://github.com/BrainDeadSocial/novella-svelte",
   "authors": [
     "zombienw"
@@ -10,7 +10,6 @@
   "dependents": 0,
   "updated": "2024-07-02T20:21:43.271Z",
   "tags": [
-    "ui",
     "content"
   ],
   "svelte5": false,

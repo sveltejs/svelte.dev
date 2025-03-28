@@ -1,6 +1,6 @@
 {
   "name": "svelte-interactions",
-  "description": "Provides Svelte actions for consistent UI interactions.",
+  "description": "Provides Svelte actions for consistent press, hover, and long press interactions.",
   "repo_url": "https://github.com/huntabyte/svelte-interactions",
   "authors": [
     "huntabyte"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2024-01-10T01:18:25.606Z",
   "tags": [
-    "utility"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

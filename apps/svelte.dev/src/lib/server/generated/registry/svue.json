@@ -1,6 +1,6 @@
 {
   "name": "svue",
-  "description": "Bring Vue-style reactive stores to Svelte applications.",
+  "description": "Adds Vue-style reactive stores with data and computed properties.",
   "repo_url": "https://github.com/freedmand/svue",
   "authors": [
     "freedmand"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2020-02-14T17:57:58.525Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

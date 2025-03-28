@@ -1,6 +1,6 @@
 {
   "name": "svelte-notifications",
-  "description": "Create simple, flexible notification system for Svelte apps.",
+  "description": "Create simple, flexible notifications for Svelte applications.",
   "repo_url": "https://github.com/keenethics/svelte-notifications",
   "authors": [
     "usernamus"

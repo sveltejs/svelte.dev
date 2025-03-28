@@ -1,6 +1,6 @@
 {
   "name": "chocobytes",
-  "description": "Provide building blocks for composable, SSR-ready UI components.",
+  "description": "Provides building blocks for composable Svelte UI components.",
   "repo_url": "https://github.com/fcrozatier/choco-ui",
   "authors": [
     "fcrozatier"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2024-10-01T08:41:43.731Z",
   "tags": [
-    "component-library"
+    "design-system"
   ],
   "svelte5": true,
   "runes": false,

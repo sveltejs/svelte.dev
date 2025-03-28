@@ -1,6 +1,6 @@
 {
   "name": "@storybook/addon-svelte-csf",
-  "description": "Enables writing stories in Svelte syntax for Storybook.",
+  "description": "Write stories in Svelte syntax for Storybook.",
   "repo_url": "https://github.com/storybookjs/addon-svelte-csf",
   "authors": [
     "ndelangen",

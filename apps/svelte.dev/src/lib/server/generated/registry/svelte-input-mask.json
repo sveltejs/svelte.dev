@@ -1,6 +1,6 @@
 {
   "name": "svelte-input-mask",
-  "description": "Masks input fields in Svelte, supports credit cards, dates, etc.",
+  "description": "Apply input masks to Svelte input elements.",
   "repo_url": "",
   "authors": [
     "xnimorz"
@@ -11,6 +11,6 @@
   "tags": [
     "ui"
   ],
-  "svelte5": true,
+  "svelte5": false,
   "runes": false
 }

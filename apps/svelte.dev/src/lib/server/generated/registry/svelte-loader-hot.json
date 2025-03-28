@@ -1,6 +1,6 @@
 {
   "name": "svelte-loader-hot",
-  "description": "Webpack loader for Svelte with HMR support.",
+  "description": "Adds HMR support to Svelte Webpack loader.",
   "repo_url": "https://github.com/rixo/svelte-loader-hot",
   "authors": [
     "rixo"

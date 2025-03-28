@@ -1,6 +1,6 @@
 {
   "name": "@icons-pack/svelte-simple-icons",
-  "description": "Provides Simple Icons as Svelte components.",
+  "description": "Use Simple Icons as Svelte components.",
   "repo_url": "https://github.com/icons-pack/svelte-simple-icons",
   "authors": [
     "wootsbot"

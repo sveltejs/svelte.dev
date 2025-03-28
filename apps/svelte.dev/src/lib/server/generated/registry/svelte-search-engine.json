@@ -1,6 +1,6 @@
 {
   "name": "svelte-search-engine",
-  "description": "Integrates Google Programmable Search Engine into Svelte apps.",
+  "description": "Integrate Google Programmable Search Engine into Svelte apps.",
   "repo_url": "https://github.com/pyoner/svelte-search-engine",
   "authors": [
     "pyoner"

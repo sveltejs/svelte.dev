@@ -1,6 +1,6 @@
 {
   "name": "@tadashi/svelte-notification",
-  "description": "Svelte component for notifications.",
+  "description": "Create notification components for Svelte apps.",
   "repo_url": "",
   "authors": [
     "lagden"

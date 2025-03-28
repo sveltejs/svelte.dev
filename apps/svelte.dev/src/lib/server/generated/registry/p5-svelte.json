@@ -1,6 +1,6 @@
 {
   "name": "p5-svelte",
-  "description": "Integrate p5.js sketches seamlessly within Svelte components.",
+  "description": "Use p5 sketches in Svelte apps.",
   "repo_url": "https://github.com/tonyketcham/p5-svelte",
   "authors": [
     "tonyketcham"

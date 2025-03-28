@@ -1,6 +1,6 @@
 {
   "name": "svelte-loading-animation",
-  "description": "Provide collection of loading animation components for Svelte.",
+  "description": "Collection of loading animation components for Svelte.",
   "repo_url": "",
   "authors": [
     "thetrisatria"

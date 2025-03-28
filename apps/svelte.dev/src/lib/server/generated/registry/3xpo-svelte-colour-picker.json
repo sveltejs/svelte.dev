@@ -1,6 +1,6 @@
 {
   "name": "@3xpo/svelte-colour-picker",
-  "description": "Build highly customizable color picker component for Svelte.",
+  "description": "Implement customizable color picker component for Svelte.",
   "repo_url": "https://github.com/Exponential-Workload/svelte-colour-picker",
   "authors": [
     "exponentialworkload"

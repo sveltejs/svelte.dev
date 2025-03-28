@@ -6,11 +6,11 @@
     "greenestgoat"
   ],
   "homepage": "https://github.com/vueframe/vueframe",
-  "downloads": 20,
+  "downloads": 2,
   "dependents": 0,
   "updated": "2025-02-20T12:35:00.882Z",
   "tags": [
-    "media"
+    "integration"
   ],
   "svelte5": true,
   "runes": false,

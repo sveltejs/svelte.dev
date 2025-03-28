@@ -1,6 +1,6 @@
 {
   "name": "@svelte-put/copy",
-  "description": "Copies text to clipboard using Svelte actions.",
+  "description": "Copy text to clipboard with Svelte action.",
   "repo_url": "https://github.com/vnphanquang/svelte-put",
   "authors": [
     "vnphanquang"
@@ -10,7 +10,7 @@
   "dependents": 3,
   "updated": "2024-10-25T05:17:14.208Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": true,
   "runes": false,

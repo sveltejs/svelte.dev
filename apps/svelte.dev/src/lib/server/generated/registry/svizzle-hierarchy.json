@@ -1,6 +1,6 @@
 {
   "name": "@svizzle/hierarchy",
-  "description": "Create Svelte charts for hierarchical data visualization.",
+  "description": "Visualize hierarchical data using Svelte charts.",
   "repo_url": "https://github.com/nestauk/svizzle",
   "authors": [
     "nestauk-dev",

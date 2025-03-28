@@ -1,6 +1,6 @@
 {
   "name": "svelte-custom-input",
-  "description": "Create custom input component for Svelte applications.",
+  "description": "Provides a customizable input component for Svelte.",
   "repo_url": "https://github.com/countnazgul/svelte-input",
   "authors": [
     "stefan.stoichev"

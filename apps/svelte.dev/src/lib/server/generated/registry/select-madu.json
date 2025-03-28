@@ -1,6 +1,6 @@
 {
   "name": "select-madu",
-  "description": "Provides a customizable select menu for Svelte.",
+  "description": "Provides a customizable select menu replacement for Svelte.",
   "repo_url": "https://github.com/pavish/select-madu",
   "authors": [
     "pavish"

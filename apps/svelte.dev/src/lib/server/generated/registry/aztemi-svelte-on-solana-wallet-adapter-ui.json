@@ -1,6 +1,6 @@
 {
   "name": "@aztemi/svelte-on-solana-wallet-adapter-ui",
-  "description": "Integrate Solana wallets with Svelte using pre-built components.",
+  "description": "Provides pre-built components for Solana wallet integration.",
   "repo_url": "https://github.com/aztemi/wallet-adapter",
   "authors": [
     "t4top"

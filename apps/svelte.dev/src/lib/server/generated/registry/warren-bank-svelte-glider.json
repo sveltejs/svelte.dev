@@ -1,6 +1,6 @@
 {
   "name": "@warren-bank/svelte-glider",
-  "description": "Create fast, lightweight carousel with Svelte wrapper for Glider.js.",
+  "description": "Svelte wrapper for Glider.js carousel component.",
   "repo_url": "https://github.com/warren-bank/js-svelte-glider",
   "authors": [
     "warren-r-bank"

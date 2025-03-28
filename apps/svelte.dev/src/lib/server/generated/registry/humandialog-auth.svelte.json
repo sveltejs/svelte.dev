@@ -1,6 +1,6 @@
 {
   "name": "@humandialog/auth.svelte",
-  "description": "Provides ObjectReef OAuth 2 Identity Provider integration.",
+  "description": "Support ObjectReef Identity Provider in Svelte apps.",
   "repo_url": "https://github.com/HumanDialog/auth.svelte",
   "authors": [
     "humandialog"

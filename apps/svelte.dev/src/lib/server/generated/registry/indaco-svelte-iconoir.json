@@ -1,6 +1,6 @@
 {
   "name": "@indaco/svelte-iconoir",
-  "description": "Provides Iconoir SVG icons as Svelte components.",
+  "description": "Use Iconoir SVG icons as Svelte components.",
   "repo_url": "https://github.com/indaco/svelte-iconoir",
   "authors": [
     "indaco"

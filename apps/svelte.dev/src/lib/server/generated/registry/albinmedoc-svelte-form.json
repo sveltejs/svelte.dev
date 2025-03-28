@@ -1,6 +1,6 @@
 {
   "name": "@albinmedoc/svelte-form",
-  "description": "Create responsive HTML forms with Svelte components.",
+  "description": "Create responsive HTML forms using Svelte components.",
   "repo_url": "https://github.com/albinmedoc/svelte-form",
   "authors": [
     "albinmedoc"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2021-02-25T20:08:32.113Z",
   "tags": [
-    "utility"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

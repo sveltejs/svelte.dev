@@ -1,6 +1,6 @@
 {
   "name": "lottie-svelte",
-  "description": "Simple Svelte wrapper for Lottie animations.",
+  "description": "Creates Svelte wrapper around lottie-web.",
   "repo_url": "https://github.com/MattDavis00/lottie-svelte",
   "authors": [
     "mattdavis00"

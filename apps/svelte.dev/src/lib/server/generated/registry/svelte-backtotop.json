@@ -1,6 +1,6 @@
 {
   "name": "svelte-backtotop",
-  "description": "Create a back-to-top button for Svelte apps.",
+  "description": "Provide component to scroll to top of Svelte pages.",
   "repo_url": "https://github.com/greatenemy/svelte-backtotop",
   "authors": [
     "iomge"

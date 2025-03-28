@@ -1,6 +1,6 @@
 {
   "name": "svelte-assets-preprocessor",
-  "description": "Preprocessor for extracting assets in Svelte.",
+  "description": "Preprocessor for extracting assets in Svelte components.",
   "repo_url": "https://github.com/pchynoweth/svelte-assets-preprocessor",
   "authors": [
     "pchynoweth"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2021-03-28T19:21:52.047Z",
   "tags": [
-    "preprocessor"
+    "tooling"
   ],
   "svelte5": false,
   "runes": false,

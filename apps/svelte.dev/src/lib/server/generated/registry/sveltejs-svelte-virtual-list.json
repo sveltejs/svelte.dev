@@ -1,6 +1,6 @@
 {
   "name": "@sveltejs/svelte-virtual-list",
-  "description": "Virtual list component for Svelte apps.",
+  "description": "Render virtual lists efficiently in Svelte applications.",
   "repo_url": "https://github.com/sveltejs/svelte-virtual-list",
   "authors": [
     "dominik_g",
@@ -9,11 +9,11 @@
     "conduitry"
   ],
   "homepage": "https://github.com/sveltejs/svelte-virtual-list#readme",
-  "downloads": 14844,
+  "downloads": 14867,
   "dependents": 5,
   "updated": "2019-08-22T14:41:08.370Z",
   "tags": [
-    "ui"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

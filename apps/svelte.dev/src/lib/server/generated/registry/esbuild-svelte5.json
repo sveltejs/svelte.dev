@@ -1,6 +1,6 @@
 {
   "name": "esbuild-svelte5",
-  "description": "Compiles Svelte components with esbuild, supporting Svelte 5.",
+  "description": "Compile Svelte components with esbuild, supporting Svelte 5.",
   "repo_url": "https://github.com/EMH333/esbuild-svelte",
   "authors": [
     "eugenehp"
@@ -10,8 +10,7 @@
   "dependents": 0,
   "updated": "2024-11-07T23:13:15.149Z",
   "tags": [
-    "tooling",
-    "preprocessor"
+    "tooling"
   ],
   "svelte5": true,
   "runes": false,

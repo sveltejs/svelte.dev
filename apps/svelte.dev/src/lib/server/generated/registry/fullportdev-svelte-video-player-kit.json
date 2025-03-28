@@ -1,6 +1,6 @@
 {
   "name": "@fullportdev/svelte-video-player-kit",
-  "description": "Provide basic video player component for Svelte and SvelteKit.",
+  "description": "Create basic video player components for Svelte and SvelteKit.",
   "repo_url": "https://github.com/FullPortDEV/svelte-video-player-kit",
   "authors": [
     "fullportdev"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2022-11-10T13:37:19.879Z",
   "tags": [
-    "ui"
+    "media"
   ],
   "svelte5": false,
   "runes": false,

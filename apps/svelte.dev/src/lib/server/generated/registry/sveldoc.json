@@ -1,6 +1,6 @@
 {
   "name": "sveldoc",
-  "description": "Generates documentation for Svelte components.",
+  "description": "Generate documentation from Svelte component Readme files.",
   "repo_url": "https://github.com/metonym/sveldoc",
   "authors": [
     "metonym"

@@ -1,6 +1,6 @@
 {
   "name": "svelte-highlight-switcher",
-  "description": "Dynamically switch svelte-highlight styles safely.",
+  "description": "Dynamically switches svelte-highlight styles safely.",
   "repo_url": "https://github.com/jill64/svelte-highlight-switcher",
   "authors": [
     "jill64"

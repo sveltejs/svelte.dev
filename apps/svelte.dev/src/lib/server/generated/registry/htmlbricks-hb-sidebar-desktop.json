@@ -1,6 +1,6 @@
 {
   "name": "@htmlbricks/hb-sidebar-desktop",
-  "description": "Svelte Boostrap Sidebar Desktop.",
+  "description": "Provides Svelte Bootstrap sidebar desktop component.",
   "repo_url": "",
   "authors": [
     "dariocaruso"

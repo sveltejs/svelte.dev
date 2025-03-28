@@ -1,6 +1,6 @@
 {
   "name": "@fabiohvp/svelte-gantt",
-  "description": "Create Gantt charts with Svelte.",
+  "description": "Create Gantt chart components with Svelte.",
   "repo_url": "https://github.com/fabiohvp/svelte-gantt",
   "authors": [
     "fabiohvp"

@@ -1,6 +1,6 @@
 {
   "name": "@intlify/eslint-plugin-svelte",
-  "description": "Provides ESLint plugin for internationalization with Svelte.",
+  "description": "Lint internationalization with Svelte components.",
   "repo_url": "https://github.com/intlify/eslint-plugin-svelte",
   "authors": [
     "kazupon",

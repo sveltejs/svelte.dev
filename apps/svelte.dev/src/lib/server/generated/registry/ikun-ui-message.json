@@ -1,11 +1,11 @@
 {
   "name": "@ikun-ui/message",
-  "description": "Display messages and notifications in Svelte apps.",
+  "description": "Display message notifications in Svelte applications.",
   "repo_url": "",
   "authors": [
     "baiwusanyu"
   ],
-  "downloads": 39,
+  "downloads": 4,
   "dependents": 1,
   "updated": "2025-01-24T03:49:05.072Z",
   "tags": [

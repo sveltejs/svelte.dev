@@ -1,6 +1,6 @@
 {
   "name": "@badgeradmin/svelte-touch-timepicker",
-  "description": "Create native-like touch timepicker components for Svelte apps.",
+  "description": "Provides native-like touch timepicker for Svelte.",
   "repo_url": "https://github.com/projectbadger/svelte-touch-timepicker",
   "authors": [
     "badgeradmin"

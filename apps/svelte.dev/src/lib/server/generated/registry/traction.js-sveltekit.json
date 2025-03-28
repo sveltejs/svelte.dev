@@ -1,6 +1,6 @@
 {
   "name": "@traction.js/sveltekit",
-  "description": "Provide simple, customizable loading progress bar for SvelteKit.",
+  "description": "Adds a customizable loading progress bar for SvelteKit.",
   "repo_url": "https://github.com/matinaniss/traction.js",
   "authors": [
     "matinaniss"

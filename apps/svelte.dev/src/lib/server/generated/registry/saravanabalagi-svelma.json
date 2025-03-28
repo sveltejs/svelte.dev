@@ -1,6 +1,6 @@
 {
   "name": "@saravanabalagi/svelma",
-  "description": "Provide Bulma UI components for Svelte applications.",
+  "description": "Bulma components for Svelte applications.",
   "repo_url": "https://github.com/saravanabalagi/svelma",
   "authors": [
     "saravanabalagi"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2023-01-09T05:59:04.079Z",
   "tags": [
-    "component-library",
+    "design-system",
     "ui"
   ],
   "svelte5": false,

@@ -1,6 +1,6 @@
 {
   "name": "ocularbook",
-  "description": "Preview Svelte components with Vite and Storybook.",
+  "description": "Build component documentation with Svelte and Vite.",
   "repo_url": "https://github.com/imadx/ocularbook",
   "authors": [
     "imadhusanka"

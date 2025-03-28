@@ -1,6 +1,6 @@
 {
   "name": "svelte-swipe",
-  "description": "Swipe elements wrapper component for Svelte.",
+  "description": "Create swipable items for Svelte apps.",
   "repo_url": "https://github.com/SharifClick/svelte-swipe",
   "authors": [
     "me.sharifahmed..gmail.com"

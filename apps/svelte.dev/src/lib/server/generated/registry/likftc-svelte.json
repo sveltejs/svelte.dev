@@ -1,6 +1,6 @@
 {
   "name": "@likftc/svelte",
-  "description": "Provide CSS transitions and animations for Svelte.",
+  "description": "Animate and transition elements in Svelte applications.",
   "repo_url": "https://github.com/VdustR/likftc",
   "authors": [
     "vdustr"
@@ -10,7 +10,8 @@
   "dependents": 0,
   "updated": "2023-08-29T04:35:12.678Z",
   "tags": [
-    "ui"
+    "ui",
+    "miscellaneous"
   ],
   "svelte5": true,
   "runes": false,

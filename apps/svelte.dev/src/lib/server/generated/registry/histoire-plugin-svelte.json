@@ -1,6 +1,6 @@
 {
   "name": "@histoire/plugin-svelte",
-  "description": "Provides Histoire plugin for Svelte support.",
+  "description": "Add Svelte support to Histoire.",
   "repo_url": "https://github.com/Akryum/histoire",
   "authors": [
     "akryum"
@@ -14,5 +14,5 @@
   ],
   "svelte5": false,
   "runes": false,
-  "github_stars": 3316
+  "github_stars": 3318
 }

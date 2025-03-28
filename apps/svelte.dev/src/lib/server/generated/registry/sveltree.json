@@ -1,6 +1,6 @@
 {
   "name": "sveltree",
-  "description": "Provide simple drag-and-drop tree component for Svelte 3.",
+  "description": "Implement drag-and-drop tree component for Svelte 3.",
   "repo_url": "",
   "authors": [
     "imkreislaufen"

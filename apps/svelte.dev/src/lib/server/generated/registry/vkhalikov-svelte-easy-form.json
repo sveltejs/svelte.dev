@@ -1,6 +1,6 @@
 {
   "name": "@vkhalikov/svelte-easy-form",
-  "description": "Handle form state and validation in Svelte applications.",
+  "description": "Handles form state and validation in Svelte applications.",
   "repo_url": "https://github.com/vkhalikov/svelte-easy-form",
   "authors": [
     "vkhalikov"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2021-04-26T22:44:56.175Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

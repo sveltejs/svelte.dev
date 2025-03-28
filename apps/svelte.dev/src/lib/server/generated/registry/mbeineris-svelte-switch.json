@@ -1,6 +1,6 @@
 {
   "name": "@mbeineris/svelte-switch",
-  "description": "Implement a simple switch component for Svelte.",
+  "description": "Provide simple switch component for Svelte.",
   "repo_url": "https://github.com/mbeineris/svelte-switch",
   "authors": [
     "mbeineris"

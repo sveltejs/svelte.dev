@@ -1,6 +1,6 @@
 {
   "name": "@doomd/components",
-  "description": "Reusable Svelte components including color pickers and wrappers.",
+  "description": "Provide reusable Svelte components.",
   "repo_url": "https://github.com/Doomd/doomd-components",
   "authors": [
     "doomd"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2023-12-22T00:11:35.852Z",
   "tags": [
-    "component-library"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false

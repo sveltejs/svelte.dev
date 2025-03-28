@@ -1,0 +1,16 @@
+{
+  "name": "@ikun-ui/timeline",
+  "description": "Create timeline component for Svelte apps.",
+  "repo_url": "",
+  "authors": [
+    "baiwusanyu"
+  ],
+  "downloads": 8,
+  "dependents": 1,
+  "updated": "2025-01-24T03:49:24.668Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

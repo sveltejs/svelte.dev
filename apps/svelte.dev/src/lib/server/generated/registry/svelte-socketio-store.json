@@ -1,6 +1,6 @@
 {
   "name": "svelte-socketio-store",
-  "description": "Create Svelte stores for Socket.IO backends.",
+  "description": "Provide Svelte Socket.IO store for backend integration.",
   "repo_url": "https://github.com/vcscsvcscs/svelte-socketio-store",
   "authors": [
     "vcscsvcscs"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2022-04-23T12:15:45.150Z",
   "tags": [
-    "utility"
+    "integration"
   ],
   "svelte5": false,
   "runes": false

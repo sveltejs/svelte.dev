@@ -1,6 +1,6 @@
 {
   "name": "@3xpo/svelte-slider",
-  "description": "Create highly customizable slider components for Svelte.",
+  "description": "Create highly customizable slider component for Svelte projects.",
   "repo_url": "https://github.com/Exponential-Workload/svelte-colour-picker",
   "authors": [
     "exponentialworkload"

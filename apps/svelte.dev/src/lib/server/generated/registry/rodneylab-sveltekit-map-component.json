@@ -1,6 +1,6 @@
 {
   "name": "@rodneylab/sveltekit-map-component",
-  "description": "Create map components using Mapbox and OpenStreetMap in SvelteKit.",
+  "description": "Provides handy components for building maps in SvelteKit applications.",
   "repo_url": "",
   "authors": [
     "rodneylab"

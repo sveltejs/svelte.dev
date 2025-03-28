@@ -1,6 +1,6 @@
 {
   "name": "firstly",
-  "description": "Opinionated Remult setup for SvelteKit projects.",
+  "description": "Set up Remult with opinionated configuration.",
   "repo_url": "https://github.com/jycouet/firstly",
   "authors": [
     "jycouet"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2025-03-18T17:19:16.285Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": true,
   "runes": false,

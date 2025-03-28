@@ -1,6 +1,6 @@
 {
   "name": "lucia",
-  "description": "Provides simple, flexible authentication library.",
+  "description": "Simple and flexible authentication library.",
   "repo_url": "https://github.com/pilcrowOnPaper/lucia",
   "authors": [
     "pilcrowonpaper"
@@ -14,5 +14,5 @@
   ],
   "svelte5": false,
   "runes": false,
-  "github_stars": 10030
+  "github_stars": 10032
 }

@@ -1,6 +1,6 @@
 {
   "name": "wx-svelte-gantt",
-  "description": "Creates interactive and customizable Gantt charts in Svelte.",
+  "description": "Interactive and customizable Gantt chart component written in Svelte.",
   "repo_url": "https://github.com/svar-widgets/gantt",
   "authors": [
     "marta-ko"
@@ -14,5 +14,5 @@
   ],
   "svelte5": false,
   "runes": false,
-  "github_stars": 97
+  "github_stars": 98
 }

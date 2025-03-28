@@ -1,6 +1,6 @@
 {
   "name": "svelte-former",
-  "description": "Create forms with validation and dynamic fields in Svelte.",
+  "description": "Create Svelte forms with validation and dynamic field support.",
   "repo_url": "https://github.com/mugendi/svelte-former",
   "authors": [
     "nguru"
@@ -10,7 +10,8 @@
   "dependents": 0,
   "updated": "2024-07-04T00:57:22.950Z",
   "tags": [
-    "utility"
+    "ui",
+    "tooling"
   ],
   "svelte5": false,
   "runes": false,

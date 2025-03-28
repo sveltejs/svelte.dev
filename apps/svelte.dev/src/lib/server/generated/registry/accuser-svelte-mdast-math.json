@@ -1,6 +1,6 @@
 {
   "name": "@accuser/svelte-mdast-math",
-  "description": "Render math expressions in Svelte using Mdast.",
+  "description": "Transform Markdown AST to Svelte components using Katex for math.",
   "repo_url": "https://github.com/accuser/svelte-mdast-math",
   "authors": [
     "accuser"

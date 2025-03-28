@@ -1,16 +1,16 @@
 {
   "name": "svelte-render",
-  "description": "Manage complex Svelte behaviors outside templates.",
+  "description": "Manage complex Svelte behaviors outside templates with type safety.",
   "repo_url": "https://github.com/bryanmylee/svelte-render",
   "authors": [
     "bryanmylee"
   ],
   "homepage": "https://github.com/bryanmylee/svelte-render#readme",
-  "downloads": 18270,
+  "downloads": 18244,
   "dependents": 4,
   "updated": "2024-02-02T15:24:28.108Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

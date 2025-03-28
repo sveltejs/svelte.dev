@@ -1,6 +1,6 @@
 {
   "name": "@steeze-ui/components",
-  "description": "Provide accessible, pre-styled, themable Svelte components.",
+  "description": "Build accessible, themable UI components for Svelte.",
   "repo_url": "https://github.com/steeze-ui/components",
   "authors": [
     "justinvoitel"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2022-10-06T12:20:44.564Z",
   "tags": [
-    "component-library",
+    "design-system",
     "ui"
   ],
   "svelte5": false,

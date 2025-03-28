@@ -1,6 +1,6 @@
 {
   "name": "svelte-eva-icons",
-  "description": "Integrate Eva icons into Svelte projects.",
+  "description": "Use Eva icons in Svelte projects.",
   "repo_url": "https://github.com/dylanblokhuis/svelte-eva-icons",
   "authors": [
     "dylanblokhuis"

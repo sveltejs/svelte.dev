@@ -1,11 +1,11 @@
 {
   "name": "@ikun-ui/layout",
-  "description": "Provide layout components for Svelte applications.",
+  "description": "Provide layout components for Svelte apps.",
   "repo_url": "",
   "authors": [
     "baiwusanyu"
   ],
-  "downloads": 25,
+  "downloads": 1,
   "dependents": 1,
   "updated": "2025-01-24T03:49:03.124Z",
   "tags": [

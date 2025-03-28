@@ -1,6 +1,6 @@
 {
   "name": "toas",
-  "description": "Display notifications without external dependencies.",
+  "description": "Displays simple, dependency-free notifications in Svelte apps.",
   "repo_url": "https://github.com/itamaesanorg/toas",
   "authors": [
     "itamaesanorg"

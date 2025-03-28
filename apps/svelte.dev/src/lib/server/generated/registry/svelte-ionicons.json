@@ -1,6 +1,6 @@
 {
   "name": "svelte-ionicons",
-  "description": "Use Ionicons SVG icons in Svelte apps.",
+  "description": "Display Ionicons SVG icons in Svelte applications.",
   "repo_url": "https://github.com/shinokada/svelte-ionicons",
   "authors": [
     "shinichiokada"

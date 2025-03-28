@@ -1,6 +1,6 @@
 {
   "name": "svelte-admin-components",
-  "description": "Offers Svelte admin components based on Skeleton UI toolkit.",
+  "description": "Create admin interfaces with reusable Svelte components.",
   "repo_url": "https://github.com/rabee-inc/svelte-admin-components",
   "authors": [
     "phi"
@@ -10,7 +10,8 @@
   "dependents": 0,
   "updated": "2023-04-13T12:05:36.254Z",
   "tags": [
-    "component-library"
+    "design-system",
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

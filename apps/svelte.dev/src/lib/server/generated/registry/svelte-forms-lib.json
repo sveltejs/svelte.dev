@@ -1,6 +1,6 @@
 {
   "name": "svelte-forms-lib",
-  "description": "Manage forms with a Formik-like API in Svelte.",
+  "description": "Manage forms, validation, and form-validation in Svelte apps.",
   "repo_url": "https://github.com/tjinauyeung/svelte-forms-lib",
   "authors": [
     "larrybotha",
@@ -11,7 +11,7 @@
   "dependents": 5,
   "updated": "2022-01-06T07:30:34.155Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

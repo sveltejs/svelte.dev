@@ -1,6 +1,6 @@
 {
   "name": "@viamrobotics/eslint-config-svelte",
-  "description": "Provide ESLint configuration for Svelte projects.",
+  "description": "Provides ESLint configuration for Svelte projects at Viam.",
   "repo_url": "https://github.com/viamrobotics/js-config",
   "authors": [
     "cheukt",

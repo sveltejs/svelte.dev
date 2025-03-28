@@ -1,6 +1,6 @@
 {
   "name": "svelte-simples",
-  "description": "Create Simple-icons components for Svelte applications.",
+  "description": "Display Simple-icons in Svelte components.",
   "repo_url": "https://github.com/shinokada/svelte-simples",
   "authors": [
     "shinichiokada"

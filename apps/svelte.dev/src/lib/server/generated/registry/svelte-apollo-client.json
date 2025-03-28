@@ -1,6 +1,6 @@
 {
   "name": "svelte-apollo-client",
-  "description": "Integrate Apollo GraphQL client with Svelte.",
+  "description": "Integrates Apollo GraphQL client with Svelte applications.",
   "repo_url": "https://github.com/unlocomqx/svelte-apollo-client",
   "authors": [
     "unlocomqx"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2021-07-17T12:18:58.563Z",
   "tags": [
-    "utility"
+    "integration"
   ],
   "svelte5": false,
   "runes": false,

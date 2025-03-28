@@ -1,6 +1,6 @@
 {
   "name": "svelte-regex-router",
-  "description": "Simple, lightweight router for Svelte using regular expressions.",
+  "description": "Provide lightweight router for Svelte using regex.",
   "repo_url": "",
   "authors": [
     "corman"

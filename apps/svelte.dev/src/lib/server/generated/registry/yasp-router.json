@@ -1,6 +1,6 @@
 {
   "name": "yasp-router",
-  "description": "Provides routing functionality for Svelte 3 applications.",
+  "description": "Implement routing for Svelte applications.",
   "repo_url": "",
   "authors": [
     "dievardump"

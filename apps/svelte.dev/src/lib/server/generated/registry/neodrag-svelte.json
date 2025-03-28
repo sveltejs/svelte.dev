@@ -1,6 +1,6 @@
 {
   "name": "@neodrag/svelte",
-  "description": "Adds drag-and-drop functionality to Svelte elements.",
+  "description": "Add drag-and-drop functionality to Svelte elements.",
   "repo_url": "https://github.com/PuruVJ/neodrag",
   "authors": [
     "puruvj"
@@ -10,9 +10,9 @@
   "dependents": 23,
   "updated": "2025-03-09T16:22:22.420Z",
   "tags": [
-    "utility"
+    "ui"
   ],
-  "svelte5": true,
+  "svelte5": false,
   "runes": false,
   "github_stars": 1815
 }

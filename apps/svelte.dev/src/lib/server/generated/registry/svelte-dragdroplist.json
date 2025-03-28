@@ -1,6 +1,6 @@
 {
   "name": "svelte-dragdroplist",
-  "description": "Create sortable, touch-friendly lists with Svelte.",
+  "description": "Create sortable lists with drag and drop in Svelte.",
   "repo_url": "",
   "authors": [
     "jwlarocque"

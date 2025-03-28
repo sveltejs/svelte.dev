@@ -1,6 +1,6 @@
 {
   "name": "@kuiper/svelte-drag-drop",
-  "description": "Implement drag and drop functionality for Svelte components.",
+  "description": "Create drag and drop image lists in Svelte applications.",
   "repo_url": "https://github.com/kofkuiper/svelte-drag-drop",
   "authors": [
     "kuiper"

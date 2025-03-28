@@ -1,0 +1,22 @@
+{
+  "name": "@digital-realty/auth-sveltekit",
+  "description": "Implement authentication for SvelteKit applications.",
+  "repo_url": "https://github.com/nextauthjs/next-auth",
+  "authors": [
+    "margani",
+    "dlr-pi-devops",
+    "ibrahim-dr",
+    "marcha-dlr",
+    "nicholasnewlands"
+  ],
+  "homepage": "https://sveltekit.authjs.dev",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2024-05-19T00:40:12.055Z",
+  "tags": [
+    "auth"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 26385
+}

@@ -1,6 +1,6 @@
 {
   "name": "tecble-components",
-  "description": "Offer reusable Svelte components for Tecble projects.",
+  "description": "Build reusable UI components for Tecble projects.",
   "repo_url": "",
   "authors": [
     "tecble"
@@ -9,7 +9,7 @@
   "dependents": 0,
   "updated": "2024-10-26T23:32:36.736Z",
   "tags": [
-    "component-library"
+    "design-system"
   ],
   "svelte5": false,
   "runes": false

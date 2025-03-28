@@ -1,6 +1,6 @@
 {
   "name": "@beyonk/svelte-scrollspy",
-  "description": "Create scrollspy functionality in Svelte applications.",
+  "description": "Create scrollspy navigation in Svelte applications.",
   "repo_url": "https://github.com/beyonk-adventures/svelte-scrollspy",
   "authors": [
     "antony",
@@ -15,7 +15,7 @@
   "dependents": 0,
   "updated": "2019-06-28T20:26:57.682Z",
   "tags": [
-    "dom"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

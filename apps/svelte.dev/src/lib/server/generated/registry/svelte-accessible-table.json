@@ -1,6 +1,6 @@
 {
   "name": "svelte-accessible-table",
-  "description": "Create accessible table components for Svelte.",
+  "description": "Create accessible table component for Svelte.",
   "repo_url": "https://github.com/metonym/svelte-accessible-table",
   "authors": [
     "metonym"

@@ -1,6 +1,6 @@
 {
   "name": "@spezifisch/svelte-select",
-  "description": "Create select and autocomplete components for Svelte apps.",
+  "description": "Create select/autocomplete components for Svelte apps.",
   "repo_url": "https://github.com/spezifisch/svelte-select",
   "authors": [
     "spezifisch"

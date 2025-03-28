@@ -1,6 +1,6 @@
 {
   "name": "svelte2dts",
-  "description": "Generates TypeScript declaration files from Svelte components.",
+  "description": "Generates d.ts files from Svelte components.",
   "repo_url": "https://github.com/firefish5000/svelte2dts",
   "authors": [
     "firefish5000"
@@ -10,8 +10,7 @@
   "dependents": 0,
   "updated": "2020-11-22T00:12:03.000Z",
   "tags": [
-    "tooling",
-    "preprocessor"
+    "tooling"
   ],
   "svelte5": false,
   "runes": false,

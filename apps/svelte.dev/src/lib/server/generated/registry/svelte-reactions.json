@@ -1,6 +1,6 @@
 {
   "name": "svelte-reactions",
-  "description": "Add emoji reactions to Svelte components easily.",
+  "description": "Adds emoji reactions to Svelte applications.",
   "repo_url": "https://github.com/Angel-Ponce/svelte-reactions",
   "authors": [
     "angel-ponce"

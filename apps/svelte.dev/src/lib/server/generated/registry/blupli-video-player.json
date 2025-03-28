@@ -1,6 +1,6 @@
 {
   "name": "@blupli/video-player",
-  "description": "Create video player component with controls.",
+  "description": "Provides video player component for Svelte.",
   "repo_url": "https://github.com/blupli/video-player",
   "authors": [
     "armagan_"
@@ -10,8 +10,7 @@
   "dependents": 0,
   "updated": "2024-12-02T12:00:47.133Z",
   "tags": [
-    "media",
-    "ui"
+    "media"
   ],
   "svelte5": true,
   "runes": false,

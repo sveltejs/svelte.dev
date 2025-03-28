@@ -1,6 +1,6 @@
 {
   "name": "@4mende2/svelte-heroicons",
-  "description": "Use Heroicons in Svelte applications.",
+  "description": "Use prepackaged heroicons with Svelte applications.",
   "repo_url": "https://gitlab.com/aldomendez/svelte-heroicons",
   "authors": [
     "4mende2"

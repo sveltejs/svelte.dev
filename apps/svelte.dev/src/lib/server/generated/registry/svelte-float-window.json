@@ -1,6 +1,6 @@
 {
   "name": "svelte-float-window",
-  "description": "Create moveable floating windows in Svelte apps.",
+  "description": "Create moveable floating window component with slot and resize corner.",
   "repo_url": "https://github.com/copious-world/svelte-float-window",
   "authors": [
     "rleddy"

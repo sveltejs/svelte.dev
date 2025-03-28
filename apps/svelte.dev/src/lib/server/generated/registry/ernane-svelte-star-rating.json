@@ -1,6 +1,6 @@
 {
   "name": "@ernane/svelte-star-rating",
-  "description": "Assign scores based on stars in Svelte.",
+  "description": "Creates star rating component for Svelte applications.",
   "repo_url": "https://github.com/ErnaneJ/svelte-star-rating",
   "authors": [
     "ernane",

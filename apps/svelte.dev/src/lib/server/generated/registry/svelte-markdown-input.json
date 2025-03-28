@@ -1,6 +1,6 @@
 {
   "name": "svelte-markdown-input",
-  "description": "Creates Markdown input with preview for Svelte apps.",
+  "description": "Create Markdown input with HTML preview for Svelte.",
   "repo_url": "https://github.com/captaincodeman/svelte-markdown-input",
   "authors": [
     "captaincodeman"
@@ -10,7 +10,8 @@
   "dependents": 0,
   "updated": "2024-04-29T20:33:19.894Z",
   "tags": [
-    "utility"
+    "content",
+    "ui"
   ],
   "svelte5": true,
   "runes": false,

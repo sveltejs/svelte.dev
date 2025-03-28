@@ -1,6 +1,6 @@
 {
   "name": "svelte-contextmenu",
-  "description": "Create simple, customizable context menus for Svelte applications.",
+  "description": "Simple, customizable context menu for Svelte with Bootstrap support.",
   "repo_url": "https://github.com/vincentlaucsb/svelte-contextmenu",
   "authors": [
     "vincela9"

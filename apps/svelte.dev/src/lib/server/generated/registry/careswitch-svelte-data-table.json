@@ -1,6 +1,6 @@
 {
   "name": "@careswitch/svelte-data-table",
-  "description": "Provides small, fast data table with client-side sorting, filtering, pagination.",
+  "description": "Provides fast data table with sorting, filtering, pagination.",
   "repo_url": "https://github.com/careswitch/svelte-data-table",
   "authors": [
     "markfayngersh"

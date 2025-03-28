@@ -1,6 +1,6 @@
 {
   "name": "@valiantlynx/svelte-leaflet",
-  "description": "Add Leaflet maps to SvelteKit projects.",
+  "description": "Offers Leaflet components for adding maps to SvelteKit projects.",
   "repo_url": "https://github.com/valiantlynx/svelte-leaflet",
   "authors": [
     "valiantlynx"

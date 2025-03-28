@@ -1,0 +1,16 @@
+{
+  "name": "svebass",
+  "description": "Create primitive, themeable UI components for Svelte with Styled System.",
+  "repo_url": "",
+  "authors": [
+    "tmarshall07"
+  ],
+  "downloads": 11,
+  "dependents": 0,
+  "updated": "2021-04-29T21:48:28.606Z",
+  "tags": [
+    "design-system"
+  ],
+  "svelte5": false,
+  "runes": false
+}

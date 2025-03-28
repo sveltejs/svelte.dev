@@ -1,6 +1,6 @@
 {
   "name": "@rsousacode/date-picker-svelte",
-  "description": "Provide date and time picker for Svelte apps.",
+  "description": "Date and time picker component for Svelte apps.",
   "repo_url": "https://github.com/rsousacode/date-picker-svelte",
   "authors": [
     "rsousacode"

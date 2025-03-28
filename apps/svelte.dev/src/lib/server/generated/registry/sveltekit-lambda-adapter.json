@@ -1,6 +1,6 @@
 {
   "name": "sveltekit-lambda-adapter",
-  "description": "Adapts SvelteKit apps for deployment on AWS Lambda.",
+  "description": "Adapt SvelteKit apps for AWS Lambda deployment.",
   "repo_url": "https://github.com/anasmohammed361/sveltekit-aws-lambda",
   "authors": [
     "anasmohammed361"

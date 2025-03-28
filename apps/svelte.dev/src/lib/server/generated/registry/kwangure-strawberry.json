@@ -1,6 +1,6 @@
 {
   "name": "@kwangure/strawberry",
-  "description": "Provide Svelte components and utilities.",
+  "description": "Build Svelte components including buttons, dropdowns, and dialogs.",
   "repo_url": "",
   "authors": [
     "kwangure"
@@ -9,7 +9,8 @@
   "dependents": 0,
   "updated": "2023-06-25T16:25:12.694Z",
   "tags": [
-    "component-library"
+    "ui",
+    "design-system"
   ],
   "svelte5": false,
   "runes": false

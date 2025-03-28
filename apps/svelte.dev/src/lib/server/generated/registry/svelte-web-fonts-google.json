@@ -1,6 +1,6 @@
 {
   "name": "@svelte-web-fonts/google",
-  "description": "Load Google fonts in Svelte projects.",
+  "description": "Loads Google Fonts into Svelte projects.",
   "repo_url": "https://github.com/svelte-web-fonts/google",
   "authors": [
     "jakob-kruse"
@@ -10,7 +10,7 @@
   "dependents": 1,
   "updated": "2022-06-19T12:44:11.136Z",
   "tags": [
-    "utility"
+    "ui"
   ],
   "svelte5": false,
   "runes": false,

@@ -1,6 +1,6 @@
 {
   "name": "@gplane/svelte-jest",
-  "description": "Jest transformer for Svelte components, using svelte-preprocess.",
+  "description": "Transform Svelte components for Jest testing with svelte-preprocess.",
   "repo_url": "https://github.com/g-plane/svelte-jest",
   "authors": [
     "gplane"
@@ -9,8 +9,8 @@
   "dependents": 0,
   "updated": "2021-06-04T08:51:53.936Z",
   "tags": [
-    "tooling",
-    "testing"
+    "testing",
+    "tooling"
   ],
   "svelte5": false,
   "runes": false,

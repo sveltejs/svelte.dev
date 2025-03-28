@@ -1,6 +1,6 @@
 {
   "name": "@douganderson444/svelte-fillvert",
-  "description": "Fill app to visible height, even on mobile.",
+  "description": "Fills app to visible height, even on mobile.",
   "repo_url": "https://github.com/DougAnderson444/svelte-fillvert",
   "authors": [
     "douganderson444"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2024-04-08T11:22:51.463Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

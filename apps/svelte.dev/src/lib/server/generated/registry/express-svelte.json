@@ -1,6 +1,6 @@
 {
   "name": "express-svelte",
-  "description": "Integrate Svelte views into Express applications.",
+  "description": "Svelte view engine for Express.js applications.",
   "repo_url": "https://github.com/maxiruani/express-svelte",
   "authors": [
     "maxiruani"

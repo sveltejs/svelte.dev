@@ -1,6 +1,6 @@
 {
   "name": "svelte-component-to-image",
-  "description": "Render Svelte components as PNG images in SvelteKit.",
+  "description": "Render .png images from Svelte components in SvelteKit.",
   "repo_url": "https://github.com/StephenGunn/svelte-component-to-image",
   "authors": [
     "jovian_moon"

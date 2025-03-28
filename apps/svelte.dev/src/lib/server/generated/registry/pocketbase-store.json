@@ -1,16 +1,16 @@
 {
   "name": "pocketbase-store",
-  "description": "Provides Svelte stores for PocketBase collections and records.",
+  "description": "Create Svelte stores for PocketBase collections and records.",
   "repo_url": "https://github.com/lixelv/pocketbase-store",
   "authors": [
     "lixelv"
   ],
   "homepage": "https://github.com/lixelv/pocketbase-store",
-  "downloads": 0,
+  "downloads": 13,
   "dependents": 0,
   "updated": "2024-11-28T16:59:17.964Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": true,
   "runes": false

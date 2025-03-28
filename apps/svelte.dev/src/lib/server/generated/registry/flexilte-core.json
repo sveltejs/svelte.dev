@@ -1,6 +1,6 @@
 {
   "name": "@flexilte/core",
-  "description": "Generate flex-based pages from JSON in SvelteKit.",
+  "description": "Generate flex-based layouts from JSON for SvelteKit.",
   "repo_url": "https://github.com/flexilte/flexilte",
   "authors": [
     "borgmon"
@@ -10,7 +10,7 @@
   "dependents": 1,
   "updated": "2024-11-20T03:33:24.150Z",
   "tags": [
-    "component-library"
+    "design-system"
   ],
   "svelte5": false,
   "runes": false,

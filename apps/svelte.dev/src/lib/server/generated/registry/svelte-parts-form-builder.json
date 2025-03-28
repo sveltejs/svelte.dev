@@ -1,6 +1,6 @@
 {
   "name": "@svelte-parts/form-builder",
-  "description": "Build form descriptions for Svelte using a UI.",
+  "description": "Build form descriptions for Svelte applications.",
   "repo_url": "https://github.com/idris-maps/svelte-parts",
   "authors": [
     "idris-maps"
@@ -10,8 +10,7 @@
   "dependents": 0,
   "updated": "2022-04-04T21:05:27.865Z",
   "tags": [
-    "ui",
-    "utility"
+    "tooling"
   ],
   "svelte5": false,
   "runes": false,

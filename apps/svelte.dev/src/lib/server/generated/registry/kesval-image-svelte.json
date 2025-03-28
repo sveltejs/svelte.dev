@@ -1,6 +1,6 @@
 {
   "name": "@kesval/image-svelte",
-  "description": "Optimizes images in Svelte applications.",
+  "description": "Optimize images in Svelte applications.",
   "repo_url": "https://github.com/xKesvaL/image-svelte",
   "authors": [
     "kesval"
@@ -10,8 +10,7 @@
   "dependents": 0,
   "updated": "2023-08-27T19:46:55.608Z",
   "tags": [
-    "ui",
-    "performance"
+    "media"
   ],
   "svelte5": false,
   "runes": false

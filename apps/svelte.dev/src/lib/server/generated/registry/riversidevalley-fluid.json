@@ -1,6 +1,6 @@
 {
   "name": "@riversidevalley/fluid",
-  "description": "UI framework for web based on Microsoft Fluent UI.",
+  "description": "Provides UI framework based on Microsoft Fluent UI for Svelte.",
   "repo_url": "https://github.com/RiversideValley/Fluid.Framework",
   "authors": [
     "lamparter"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2024-02-17T15:22:43.025Z",
   "tags": [
-    "component-library",
+    "design-system",
     "ui"
   ],
   "svelte5": false,

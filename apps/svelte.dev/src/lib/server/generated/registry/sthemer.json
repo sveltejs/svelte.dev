@@ -1,6 +1,6 @@
 {
   "name": "sthemer",
-  "description": "Support multiple color schemes in Svelte/SvelteKit applications.",
+  "description": "Implement color schemes and theming in Svelte/SvelteKit apps.",
   "repo_url": "https://github.com/ivanhofer/sthemer",
   "authors": [
     "ivanhofer"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2022-12-22T17:42:14.040Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false,

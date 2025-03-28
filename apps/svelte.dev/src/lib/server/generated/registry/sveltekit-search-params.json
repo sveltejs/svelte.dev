@@ -1,6 +1,6 @@
 {
   "name": "sveltekit-search-params",
-  "description": "Reads and writes query search params in SvelteKit.",
+  "description": "Read and write query search params in SvelteKit applications.",
   "repo_url": "https://github.com/paoloricciuti/sveltekit-search-params",
   "authors": [
     "pablopang"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2024-07-28T17:17:48.621Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": true,
   "runes": false,

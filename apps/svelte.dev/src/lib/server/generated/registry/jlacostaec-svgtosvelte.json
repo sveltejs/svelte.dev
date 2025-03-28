@@ -1,17 +1,16 @@
 {
   "name": "@jlacostaec/svgtosvelte",
-  "description": "Convert SVG files to Svelte 5 components via CLI.",
+  "description": "Convert SVG files into Svelte 5 components.",
   "repo_url": "https://github.com/JLAcostaEC/svgtosvelte",
   "authors": [
     "jlacostaec"
   ],
   "homepage": "https://github.com/JLAcostaEC/svgtosvelte#readme",
-  "downloads": 20,
+  "downloads": 0,
   "dependents": 0,
   "updated": "2025-02-20T20:44:57.416Z",
   "tags": [
-    "tooling",
-    "preprocessor"
+    "tooling"
   ],
   "svelte5": true,
   "runes": false,

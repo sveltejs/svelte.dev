@@ -1,6 +1,6 @@
 {
   "name": "svelte-json-tree-view",
-  "description": "Display JSON data in tree view format within Svelte apps.",
+  "description": "Create JSON tree view component for Svelte apps.",
   "repo_url": "https://github.com/PaulMaly/svelte-json-tree-view",
   "authors": [
     "paulmaly"

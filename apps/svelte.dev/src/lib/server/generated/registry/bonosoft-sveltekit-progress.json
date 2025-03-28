@@ -1,6 +1,6 @@
 {
   "name": "@bonosoft/sveltekit-progress",
-  "description": "Adds circular progress bars to SvelteKit sites.",
+  "description": "Create circular progress bars for SvelteKit applications.",
   "repo_url": "https://github.com/bonosoft/sveltekit-progress",
   "authors": [
     "bonosoft"

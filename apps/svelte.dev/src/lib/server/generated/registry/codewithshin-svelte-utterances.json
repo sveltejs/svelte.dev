@@ -1,6 +1,6 @@
 {
   "name": "@codewithshin/svelte-utterances",
-  "description": "Integrate Utterances comments into Svelte applications.",
+  "description": "Integrate Utterances comments into SvelteKit applications.",
   "repo_url": "https://github.com/shinokada/svelte-uttrances",
   "authors": [
     "shinichiokada"

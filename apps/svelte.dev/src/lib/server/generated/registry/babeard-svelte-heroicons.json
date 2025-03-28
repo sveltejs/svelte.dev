@@ -1,6 +1,6 @@
 {
   "name": "@babeard/svelte-heroicons",
-  "description": "Provides Svelte wrappers for Heroicons v2 library.",
+  "description": "Provides Svelte wrappers for Heroicons v2.",
   "repo_url": "https://github.com/babeard/svelte-heroicons",
   "authors": [
     "babeard"

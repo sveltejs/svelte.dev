@@ -1,6 +1,6 @@
 {
   "name": "svelte-document",
-  "description": "Generate PDF documents using Svelte components.",
+  "description": "Generate documents (PDFs) with Svelte components.",
   "repo_url": "",
   "authors": [
     "mblouka"

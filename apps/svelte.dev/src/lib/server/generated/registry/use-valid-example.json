@@ -1,6 +1,6 @@
 {
   "name": "use-valid-example",
-  "description": "Validate form in Svelte-Vite SPA.",
+  "description": "Validate forms in Svelte applications with voscausa/svelte-use-validate.",
   "repo_url": "https://github.com/voscausa/use-validate-example",
   "authors": [
     "voscausa"
@@ -10,7 +10,7 @@
   "dependents": 0,
   "updated": "2022-01-02T09:13:19.680Z",
   "tags": [
-    "utility"
+    "miscellaneous"
   ],
   "svelte5": false,
   "runes": false

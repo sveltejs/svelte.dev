@@ -1,6 +1,6 @@
 {
   "name": "@joshnuss/svelte-codemirror",
-  "description": "Integrate CodeMirror component with Svelte applications.",
+  "description": "Integrate CodeMirror editor with Svelte.",
   "repo_url": "",
   "authors": [
     "joshnuss"
@@ -9,7 +9,7 @@
   "dependents": 0,
   "updated": "2021-07-15T01:31:16.513Z",
   "tags": [
-    "tooling"
+    "ui"
   ],
   "svelte5": false,
   "runes": false

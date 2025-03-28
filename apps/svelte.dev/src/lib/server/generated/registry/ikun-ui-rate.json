@@ -1,11 +1,11 @@
 {
   "name": "@ikun-ui/rate",
-  "description": "Create rate components for Svelte applications.",
+  "description": "Create rate components for Svelte.",
   "repo_url": "",
   "authors": [
     "baiwusanyu"
   ],
-  "downloads": 24,
+  "downloads": 3,
   "dependents": 1,
   "updated": "2025-01-24T03:49:14.462Z",
   "tags": [

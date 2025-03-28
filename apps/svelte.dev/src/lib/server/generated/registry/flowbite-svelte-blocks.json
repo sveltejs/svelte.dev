@@ -1,16 +1,16 @@
 {
   "name": "flowbite-svelte-blocks",
-  "description": "Provides Flowbite blocks components for Svelte.",
+  "description": "Provides pre-built Flowbite blocks for Svelte applications.",
   "repo_url": "https://github.com/themesberg/flowbite-svelte-blocks",
   "authors": [
     "shinichiokada"
   ],
   "homepage": "https://flowbite-svelte-blocks.codewithshin.com/",
-  "downloads": 7140,
+  "downloads": 7155,
   "dependents": 1,
   "updated": "2024-10-17T05:41:13.142Z",
   "tags": [
-    "component-library"
+    "design-system"
   ],
   "svelte5": true,
   "runes": false,

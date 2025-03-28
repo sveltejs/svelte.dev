@@ -1,6 +1,6 @@
 {
   "name": "svelte-spa-router",
-  "description": "Create single-page applications with Svelte.",
+  "description": "Create single-page applications with Svelte using hash-based routing.",
   "repo_url": "https://github.com/ItalyPaleAle/svelte-spa-router",
   "authors": [
     "italypaleale"
