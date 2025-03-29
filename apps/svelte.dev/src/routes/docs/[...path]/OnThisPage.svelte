@@ -217,7 +217,7 @@
 				overflow-y: auto;
 				scrollbar-width: none;
 				margin-left: -1rem; /* negative margin avoids focus rings being cut off */
-				padding: 0 0 var(--sk-page-padding-top) 1rem;
+				padding: 0 1rem var(--sk-page-padding-top) 1rem;
 
 				li:first-child {
 					display: list-item;
