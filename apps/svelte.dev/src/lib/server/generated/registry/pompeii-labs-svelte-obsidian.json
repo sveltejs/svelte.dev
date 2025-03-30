@@ -1,0 +1,17 @@
+{
+  "name": "@pompeii-labs/svelte-obsidian",
+  "description": "Integrate Svelte providers for Magma chat.",
+  "repo_url": "",
+  "authors": [
+    "mattyhogan",
+    "coachjackferg"
+  ],
+  "downloads": 15,
+  "dependents": 0,
+  "updated": "2025-03-11T19:59:08.053Z",
+  "tags": [
+    "integration"
+  ],
+  "svelte5": true,
+  "runes": false
+}

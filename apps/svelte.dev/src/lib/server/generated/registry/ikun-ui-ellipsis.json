@@ -1,0 +1,16 @@
+{
+  "name": "@ikun-ui/ellipsis",
+  "description": "Create ellipsis components for Svelte applications.",
+  "repo_url": "",
+  "authors": [
+    "baiwusanyu"
+  ],
+  "downloads": 1,
+  "dependents": 1,
+  "updated": "2025-01-24T03:48:52.545Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

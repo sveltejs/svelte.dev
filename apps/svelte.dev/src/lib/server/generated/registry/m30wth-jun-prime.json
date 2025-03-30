@@ -1,0 +1,16 @@
+{
+  "name": "@m30wth/jun-prime",
+  "description": "Build shareable Svelte components.",
+  "repo_url": "",
+  "authors": [
+    "m30wth"
+  ],
+  "downloads": 172,
+  "dependents": 0,
+  "updated": "2020-02-17T07:33:15.247Z",
+  "tags": [
+    "miscellaneous"
+  ],
+  "svelte5": false,
+  "runes": false
+}

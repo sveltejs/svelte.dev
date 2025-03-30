@@ -1,0 +1,16 @@
+{
+  "name": "prismic-svelte",
+  "description": "Helpers for integrating Prismic CMS with Svelte projects.",
+  "repo_url": "",
+  "authors": [
+    "samlfair"
+  ],
+  "downloads": 25,
+  "dependents": 0,
+  "updated": "2021-08-23T16:52:40.307Z",
+  "tags": [
+    "content"
+  ],
+  "svelte5": false,
+  "runes": false
+}

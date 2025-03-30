@@ -122,7 +122,9 @@ export class PackageCache {
 	}
 
 	static async delete(pkg_name: string) {
-		await fsp.unlink(this.#get_full_path(pkg_name));
+		try {
+			await fsp.unlink(this.#get_full_path(pkg_name));
+		} catch {}
 	}
 
 	static async *entries() {

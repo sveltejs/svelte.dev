@@ -1,0 +1,16 @@
+{
+  "name": "@htmlbricks/hb-checkout-paypal",
+  "description": "Create PayPal checkout component for Svelte.",
+  "repo_url": "",
+  "authors": [
+    "dariocaruso"
+  ],
+  "downloads": 19,
+  "dependents": 0,
+  "updated": "2022-01-22T09:40:48.457Z",
+  "tags": [
+    "integration"
+  ],
+  "svelte5": false,
+  "runes": false
+}

@@ -1,0 +1,17 @@
+{
+  "name": "svelte-inline-markdown-editor",
+  "description": "Provide inline markdown editor with live preview.",
+  "repo_url": "",
+  "authors": [
+    "cbroms"
+  ],
+  "downloads": 6,
+  "dependents": 0,
+  "updated": "2020-12-21T22:21:40.000Z",
+  "tags": [
+    "content",
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

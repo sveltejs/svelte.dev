@@ -1,0 +1,18 @@
+{
+  "name": "swiper-test-chw",
+  "description": "Integrate Swiper touch slider with Svelte.",
+  "repo_url": "https://github.com/nolimits4web/Swiper",
+  "authors": [
+    "carlhampuswall"
+  ],
+  "homepage": "https://swiperjs.com",
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2022-08-28T22:43:32.782Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 40731
+}

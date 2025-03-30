@@ -1,0 +1,15 @@
+{
+  "name": "file-uploader-svelte-tailwind",
+  "description": "Create file upload component with Svelte and Tailwind.",
+  "authors": [
+    "sonuy1614"
+  ],
+  "downloads": 33,
+  "dependents": 0,
+  "updated": "2021-04-21T08:13:49.218Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

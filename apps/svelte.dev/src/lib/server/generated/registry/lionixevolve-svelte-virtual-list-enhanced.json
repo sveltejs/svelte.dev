@@ -1,0 +1,19 @@
+{
+  "name": "@lionixevolve/svelte-virtual-list-enhanced",
+  "description": "Render virtual lists efficiently in Svelte applications.",
+  "repo_url": "https://github.com/lionixevolve/svelte-virtual-list-enhanced",
+  "authors": [
+    "cumanacr",
+    "mrbarletta"
+  ],
+  "homepage": "https://github.com/lionixevolve/svelte-virtual-list-enhanced#readme",
+  "downloads": 12,
+  "dependents": 0,
+  "updated": "2020-09-30T01:37:07.318Z",
+  "tags": [
+    "miscellaneous"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 4
+}

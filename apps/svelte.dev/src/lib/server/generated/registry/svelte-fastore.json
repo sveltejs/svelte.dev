@@ -1,0 +1,17 @@
+{
+  "name": "svelte-fastore",
+  "description": "Use localStorage and sessionStorage with Svelte.",
+  "repo_url": "https://github.com/mwc/svelte-fastore",
+  "authors": [
+    "maowenchao"
+  ],
+  "homepage": "https://github.com/mwc/svelte-fastore#readme",
+  "downloads": 6,
+  "dependents": 0,
+  "updated": "2021-07-05T02:09:01.467Z",
+  "tags": [
+    "miscellaneous"
+  ],
+  "svelte5": false,
+  "runes": false
+}

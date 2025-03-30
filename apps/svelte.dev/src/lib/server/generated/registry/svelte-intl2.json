@@ -1,0 +1,18 @@
+{
+  "name": "svelte-intl2",
+  "description": "Implement simple i18n for Svelte applications.",
+  "repo_url": "https://github.com/kjj6198/svelte-intl2",
+  "authors": [
+    "kjj6198"
+  ],
+  "homepage": "https://github.com/kjj6198/svelte-intl2#readme",
+  "downloads": 9,
+  "dependents": 0,
+  "updated": "2020-05-08T12:13:40.392Z",
+  "tags": [
+    "miscellaneous"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

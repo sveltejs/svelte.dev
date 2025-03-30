@@ -1,0 +1,17 @@
+{
+  "name": "svelte-locomotive-scroll",
+  "description": "Integrate Locomotive Scroll for smooth scrolling in Svelte.",
+  "repo_url": "",
+  "authors": [
+    "jasonandrew"
+  ],
+  "downloads": 15,
+  "dependents": 0,
+  "updated": "2022-04-06T20:27:57.865Z",
+  "tags": [
+    "ui",
+    "miscellaneous"
+  ],
+  "svelte5": false,
+  "runes": false
+}

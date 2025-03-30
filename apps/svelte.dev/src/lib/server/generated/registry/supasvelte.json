@@ -1,0 +1,18 @@
+{
+  "name": "supasvelte",
+  "description": "Reactive bindings for Supabase in Svelte apps.",
+  "repo_url": "https://github.com/coflow-network/supasvelte",
+  "authors": [
+    "ixxie"
+  ],
+  "homepage": "https://github.com/coflow-network/supasvelte#readme",
+  "downloads": 19,
+  "dependents": 0,
+  "updated": "2021-05-04T20:09:55.135Z",
+  "tags": [
+    "integration"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 8
+}

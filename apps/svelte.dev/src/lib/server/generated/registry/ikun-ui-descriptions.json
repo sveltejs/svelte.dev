@@ -1,0 +1,16 @@
+{
+  "name": "@ikun-ui/descriptions",
+  "description": "Create description components for Svelte applications.",
+  "repo_url": "",
+  "authors": [
+    "baiwusanyu"
+  ],
+  "downloads": 1,
+  "dependents": 2,
+  "updated": "2025-01-24T03:48:48.594Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

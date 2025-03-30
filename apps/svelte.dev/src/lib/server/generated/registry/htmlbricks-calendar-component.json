@@ -1,0 +1,16 @@
+{
+  "name": "@htmlbricks/calendar-component",
+  "description": "Create calendar component for Svelte.",
+  "repo_url": "",
+  "authors": [
+    "dariocaruso"
+  ],
+  "downloads": 23,
+  "dependents": 0,
+  "updated": "2022-01-02T19:14:30.466Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

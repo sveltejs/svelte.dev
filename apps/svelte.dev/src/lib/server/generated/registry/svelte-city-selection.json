@@ -1,0 +1,16 @@
+{
+  "name": "svelte-city-selection",
+  "description": "Provides city selection component for Svelte applications.",
+  "repo_url": "",
+  "authors": [
+    "llllllleon"
+  ],
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2022-08-30T05:40:15.831Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

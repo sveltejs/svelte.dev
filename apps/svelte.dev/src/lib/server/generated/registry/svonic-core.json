@@ -1,0 +1,18 @@
+{
+  "name": "@svonic/core",
+  "description": "Testing",
+  "repo_url": "https://github.com/svonic/svonic",
+  "authors": [
+    "daimyo"
+  ],
+  "homepage": "https://github.com/svonic/svonic#readme",
+  "downloads": 10,
+  "dependents": 0,
+  "updated": "2023-11-06T09:31:55.996Z",
+  "tags": [
+    "miscellaneous"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 14
+}

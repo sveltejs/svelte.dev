@@ -1,0 +1,16 @@
+{
+  "name": "svelte-adapter-github",
+  "description": "Prerender SvelteKit apps as static files for GitHub Pages.",
+  "repo_url": "https://github.com/malynium/svelte-adapter-github",
+  "authors": [],
+  "homepage": "https://malynium.com",
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2022-09-27T17:06:23.746Z",
+  "tags": [
+    "adapter"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 43
+}

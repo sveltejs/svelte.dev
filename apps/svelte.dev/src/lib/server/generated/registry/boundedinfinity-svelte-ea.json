@@ -1,0 +1,18 @@
+{
+  "name": "@boundedinfinity/svelte-ea",
+  "description": "Create SvelteKit component libraries.",
+  "repo_url": "https://github.com/boundedinfinity/svelte-ea",
+  "authors": [
+    "brad.babb"
+  ],
+  "homepage": "https://github.com/boundedinfinity/svelte-ea#readme",
+  "downloads": 16,
+  "dependents": 1,
+  "updated": "2022-01-11T04:08:20.078Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

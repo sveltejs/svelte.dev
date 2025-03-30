@@ -1,0 +1,18 @@
+{
+  "name": "vite-plugin-svelte-svgr",
+  "description": "Enable SVG imports, transforming SVGs into Svelte components.",
+  "repo_url": "https://github.com/blujedis/vite-plugin-svelte-svgr",
+  "authors": [
+    "blujedis"
+  ],
+  "homepage": "https://github.com/blujedis/vite-plugin-svelte-svgr#readme",
+  "downloads": 151,
+  "dependents": 0,
+  "updated": "2022-09-22T22:15:54.613Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 2
+}

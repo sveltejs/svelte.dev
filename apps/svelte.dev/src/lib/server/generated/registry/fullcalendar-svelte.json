@@ -1,0 +1,16 @@
+{
+  "name": "fullcalendar-svelte",
+  "description": "Integrate FullCalendar into Svelte apps with Svelte 5 support.",
+  "repo_url": "",
+  "authors": [
+    "ntcbinh"
+  ],
+  "downloads": 0,
+  "dependents": 0,
+  "updated": "2025-03-30T10:14:50.902Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false
+}

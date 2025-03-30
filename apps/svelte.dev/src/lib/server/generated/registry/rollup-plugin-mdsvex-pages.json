@@ -1,0 +1,18 @@
+{
+  "name": "rollup-plugin-mdsvex-pages",
+  "description": "Generate documentation/blog with MDsveX and Svelte.",
+  "repo_url": "https://github.com/knightss27/rollup-plugin-mdsvex-pages",
+  "authors": [
+    "knightss27"
+  ],
+  "homepage": "https://github.com/knightss27/rollup-plugin-mdsvex-pages#readme",
+  "downloads": 10,
+  "dependents": 0,
+  "updated": "2021-10-02T20:08:25.002Z",
+  "tags": [
+    "content"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 1
+}

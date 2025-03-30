@@ -1,0 +1,17 @@
+{
+  "name": "@futagoza/eslint-config-svelte.ts",
+  "description": "Provides ESLint configurations for Svelte files with TypeScript.",
+  "repo_url": "https://github.com/futagoza/eslint-config-futagozaryuu",
+  "authors": [
+    "ryuu"
+  ],
+  "downloads": 5,
+  "dependents": 0,
+  "updated": "2021-05-23T02:39:44.220Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 2
+}

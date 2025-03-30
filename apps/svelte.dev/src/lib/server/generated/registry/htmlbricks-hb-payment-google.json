@@ -1,0 +1,16 @@
+{
+  "name": "@htmlbricks/hb-payment-google",
+  "description": "Integrate Google Pay web components into Svelte apps.",
+  "repo_url": "",
+  "authors": [
+    "dariocaruso"
+  ],
+  "downloads": 20,
+  "dependents": 0,
+  "updated": "2022-01-25T20:35:18.318Z",
+  "tags": [
+    "integration"
+  ],
+  "svelte5": false,
+  "runes": false
+}

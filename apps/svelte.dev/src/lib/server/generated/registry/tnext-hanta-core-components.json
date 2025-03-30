@@ -1,0 +1,16 @@
+{
+  "name": "tnext-hanta-core-components",
+  "description": "Core UI components for Svelte applications.",
+  "repo_url": "",
+  "authors": [
+    "t-next"
+  ],
+  "downloads": 160,
+  "dependents": 0,
+  "updated": "2023-12-20T22:21:22.030Z",
+  "tags": [
+    "design-system"
+  ],
+  "svelte5": false,
+  "runes": false
+}

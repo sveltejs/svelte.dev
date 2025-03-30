@@ -1,0 +1,18 @@
+{
+  "name": "github-commit-calendar",
+  "description": "Visualize GitHub commit history in Svelte calendar.",
+  "repo_url": "https://github.com/Ddupasquier/githubCommits",
+  "authors": [
+    "dupasquier"
+  ],
+  "homepage": "https://github.com/Ddupasquier/githubCommits#readme",
+  "downloads": 15,
+  "dependents": 0,
+  "updated": "2023-04-11T01:38:00.725Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 4
+}

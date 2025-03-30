@@ -1,0 +1,18 @@
+{
+  "name": "svelte-treeview-dnd",
+  "description": "Create JSON-based treeview component with custom icons and disabled nodes.",
+  "repo_url": "https://github.com/sytanta/svelte-treeview-dnd",
+  "authors": [
+    "sytanta"
+  ],
+  "homepage": "https://svelte-treeview-dnd.netlify.app",
+  "downloads": 6,
+  "dependents": 0,
+  "updated": "2023-02-13T15:49:58.978Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 4
+}

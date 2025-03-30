@@ -1,0 +1,18 @@
+{
+  "name": "@rairulyle/svelte-web-vitals",
+  "description": "Wrap web-vitals for Svelte applications.",
+  "repo_url": "https://github.com/rairulyle/svelte-web-vitals",
+  "authors": [
+    "rairulyle"
+  ],
+  "homepage": "https://github.com/rairulyle/svelte-web-vitals#readme",
+  "downloads": 41,
+  "dependents": 0,
+  "updated": "2023-04-25T11:46:06.657Z",
+  "tags": [
+    "seo"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 2
+}

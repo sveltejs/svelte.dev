@@ -1,0 +1,18 @@
+{
+  "name": "@takamunesuda/svecium",
+  "description": "Create 3D globe and map visualizations with Svelte and CesiumJS.",
+  "repo_url": "https://github.com/takamunesuda/svecium",
+  "authors": [
+    "takamunesuda"
+  ],
+  "homepage": "https://github.com/takamunesuda/svecium#readme",
+  "downloads": 60,
+  "dependents": 0,
+  "updated": "2025-03-23T06:30:23.685Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 3
+}

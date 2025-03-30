@@ -1,0 +1,17 @@
+{
+  "name": "@sveltekit-board/authenticator",
+  "description": "Provides authentication library for SvelteKit using MySQL.",
+  "repo_url": "",
+  "authors": [
+    "hotsixman"
+  ],
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2024-04-28T07:09:58.020Z",
+  "tags": [
+    "auth",
+    "server"
+  ],
+  "svelte5": false,
+  "runes": false
+}

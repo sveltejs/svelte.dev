@@ -1,0 +1,16 @@
+{
+  "name": "svelte-fullpage.js",
+  "description": "Create full-screen scrolling websites using Svelte and fullPage.js.",
+  "repo_url": "",
+  "authors": [
+    "nergel"
+  ],
+  "downloads": 17,
+  "dependents": 0,
+  "updated": "2020-01-24T15:19:56.343Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

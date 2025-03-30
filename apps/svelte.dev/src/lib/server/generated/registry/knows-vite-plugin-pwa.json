@@ -1,0 +1,18 @@
+{
+  "name": "@knows/vite-plugin-pwa",
+  "description": "Add PWA features to SvelteKit apps using Vite.",
+  "repo_url": "https://github.com/antfu/vite-plugin-pwa",
+  "authors": [
+    "jiaxinjiang"
+  ],
+  "homepage": "https://github.com/antfu/vite-plugin-pwa",
+  "downloads": 3,
+  "dependents": 0,
+  "updated": "2022-10-25T04:46:11.921Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 3464
+}

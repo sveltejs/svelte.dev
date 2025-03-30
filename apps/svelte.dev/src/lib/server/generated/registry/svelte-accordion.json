@@ -1,0 +1,18 @@
+{
+  "name": "svelte-accordion",
+  "description": "Create accordion components in Svelte.",
+  "repo_url": "https://github.com/diwakersurya/svelte-accordion",
+  "authors": [
+    "diwaker.surya"
+  ],
+  "homepage": "https://github.com/diwakersurya/svelte-accordion#readme",
+  "downloads": 7,
+  "dependents": 0,
+  "updated": "2019-11-03T05:59:42.614Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 9
+}

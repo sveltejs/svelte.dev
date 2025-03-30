@@ -1,0 +1,17 @@
+{
+  "name": "simply-svelte-autocomplete",
+  "description": "Lightweight, zero-dependency autocomplete component for Svelte.",
+  "repo_url": "",
+  "authors": [
+    "themarquisdesheric"
+  ],
+  "homepage": "https://github.com/themarquisdesheric/simply-svelte-autocomplete",
+  "downloads": 16,
+  "dependents": 0,
+  "updated": "2021-01-31T00:03:52.797Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

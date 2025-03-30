@@ -1,0 +1,18 @@
+{
+  "name": "obsidian-svelte-components",
+  "description": "Svelte components for Obsidian plugin development.",
+  "repo_url": "https://github.com/acgabbert/obsidian-svelte-components",
+  "authors": [
+    "acgabbert"
+  ],
+  "homepage": "https://github.com/acgabbert/obsidian-svelte-components#readme",
+  "downloads": 155,
+  "dependents": 0,
+  "updated": "2025-03-07T22:33:49.809Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

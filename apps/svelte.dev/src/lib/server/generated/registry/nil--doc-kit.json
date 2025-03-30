@@ -1,0 +1,16 @@
+{
+  "name": "@nil-/doc-kit",
+  "description": "Provide utility library for @nil-/doc and SvelteKit.",
+  "repo_url": "",
+  "authors": [
+    "nil-"
+  ],
+  "downloads": 3,
+  "dependents": 0,
+  "updated": "2023-07-05T13:02:56.660Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false
+}

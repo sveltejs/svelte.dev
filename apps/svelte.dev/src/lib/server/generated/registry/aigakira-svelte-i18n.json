@@ -1,0 +1,16 @@
+{
+  "name": "aigakira-svelte-i18n",
+  "description": "Integrate internationalization into Svelte projects.",
+  "repo_url": "",
+  "authors": [
+    "ariksubagia"
+  ],
+  "downloads": 15,
+  "dependents": 0,
+  "updated": "2021-12-01T13:14:20.467Z",
+  "tags": [
+    "integration"
+  ],
+  "svelte5": false,
+  "runes": false
+}

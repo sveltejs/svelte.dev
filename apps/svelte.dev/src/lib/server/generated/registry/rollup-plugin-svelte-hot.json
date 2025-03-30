@@ -1,0 +1,17 @@
+{
+  "name": "rollup-plugin-svelte-hot",
+  "description": "Integrate HMR for Svelte components in Rollup builds.",
+  "repo_url": "",
+  "authors": [
+    "rixo"
+  ],
+  "homepage": "https://github.com/rixo/rollup-plugin-svelte",
+  "downloads": 346,
+  "dependents": 4,
+  "updated": "2021-05-13T15:25:18.197Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false
+}

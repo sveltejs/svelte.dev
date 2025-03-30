@@ -1,0 +1,18 @@
+{
+  "name": "use-svelte-store",
+  "description": "Consume Svelte stores from React components using hooks.",
+  "repo_url": "https://github.com/Kiho/use-svelte-store",
+  "authors": [
+    "kiho"
+  ],
+  "homepage": "https://github.com/Kiho/use-svelte-store#readme",
+  "downloads": 19,
+  "dependents": 0,
+  "updated": "2021-06-27T18:25:44.658Z",
+  "tags": [
+    "miscellaneous"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 2
+}

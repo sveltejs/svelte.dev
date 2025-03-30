@@ -1,0 +1,18 @@
+{
+  "name": "@animotion/core",
+  "description": "Core components for Animotion, Svelte animation library.",
+  "repo_url": "https://github.com/animotionjs/animotion",
+  "authors": [
+    "mattcroat"
+  ],
+  "homepage": "https://animotion.pages.dev/",
+  "downloads": 72,
+  "dependents": 0,
+  "updated": "2025-02-22T15:03:29.513Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 1485
+}
