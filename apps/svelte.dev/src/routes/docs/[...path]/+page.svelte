@@ -69,7 +69,7 @@
 <div id="docs-content" use:legacy_details>
 	<header>
 		<Breadcrumbs breadcrumbs={data.document.breadcrumbs.slice(1)} />
-		<h1>{data.document.metadata.title}</h1>
+		<h1>{@html data.document.metadata.title.replaceAll('/', '/<wbr>')}</h1>
 	</header>
 
 	<OnThisPage {content} document={data.document} />
