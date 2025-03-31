@@ -12,7 +12,7 @@
 	interface Props {
 		status: string | null;
 		runtimeError?: Error | null;
-		embedded?: boolean;
+		embedded?: boolean | 'output-only';
 		relaxed?: boolean;
 		can_escape?: boolean;
 		injectedJS: string;
@@ -182,16 +182,18 @@
 	});
 </script>
 
-<div class="view-toggle">
-	{#if workspace.current.name.endsWith('.md')}
-		<button class="active">Markdown</button>
-	{:else}
-		<button aria-current={view === 'result'} onclick={() => (view = 'result')}>Result</button>
-		<button aria-current={view === 'js'} onclick={() => (view = 'js')}>JS output</button>
-		<button aria-current={view === 'css'} onclick={() => (view = 'css')}>CSS output</button>
-		<button aria-current={view === 'ast'} onclick={() => (view = 'ast')}>AST output</button>
-	{/if}
-</div>
+{#if embedded !== 'output-only'}
+	<div class="view-toggle">
+		{#if workspace.current.name.endsWith('.md')}
+			<button class="active">Markdown</button>
+		{:else}
+			<button aria-current={view === 'result'} onclick={() => (view = 'result')}>Result</button>
+			<button aria-current={view === 'js'} onclick={() => (view = 'js')}>JS output</button>
+			<button aria-current={view === 'css'} onclick={() => (view = 'css')}>CSS output</button>
+			<button aria-current={view === 'ast'} onclick={() => (view = 'ast')}>AST output</button>
+		{/if}
+	</div>
+{/if}
 
 <!-- component viewer -->
 <div class="tab-content" class:visible={!is_markdown && view === 'result'}>
@@ -202,6 +204,7 @@
 		{can_escape}
 		{injectedJS}
 		{injectedCSS}
+		onLog={embedded === 'output-only' ? () => {} : undefined}
 		theme={previewTheme}
 	/>
 </div>

@@ -48,6 +48,10 @@ export interface MigrateOutput {
 	error?: string;
 }
 
+export interface BundleOptions {
+	tailwind: boolean;
+}
+
 export type BundleMessageData = {
 	uid: number;
 	type: 'init' | 'bundle' | 'status' | 'error';
@@ -55,7 +59,7 @@ export type BundleMessageData = {
 	packages_url: string;
 	svelte_version: string;
 	files: File[];
-	options: CompileOptions;
+	options: BundleOptions;
 };
 
 declare global {
