@@ -224,6 +224,29 @@
 					</p>
 				</article>
 			{/each}
+
+			<div class="pagination">
+				<Pagination total={total_pages} bind:page={page_qp.current}>
+					{#snippet children(pageItem)}
+						{#if pageItem.type === 'ellipsis'}
+							<span>-</span>
+						{:else}
+							{@const url = new URL(page.url)}
+							{@const _ = url.searchParams.set('page', pageItem.value.toString())}
+							<a
+								href={url.pathname + url.search}
+								aria-current={page_qp.current === pageItem.value}
+								onclick={(e) => {
+									e.preventDefault();
+									page_qp.current = pageItem.value;
+								}}
+							>
+								{pageItem.value}
+							</a>
+						{/if}
+					{/snippet}
+				</Pagination>
+			</div>
 		</div>
 	</div>
 
@@ -332,29 +355,6 @@
 				{/each}
 			</ul>
 		</nav>
-
-		<div class="pagination">
-			<Pagination total={total_pages} bind:page={page_qp.current}>
-				{#snippet children(pageItem)}
-					{#if pageItem.type === 'ellipsis'}
-						<span>-</span>
-					{:else}
-						{@const url = new URL(page.url)}
-						{@const _ = url.searchParams.set('page', pageItem.value.toString())}
-						<a
-							href={url.pathname + url.search}
-							aria-current={page_qp.current === pageItem.value}
-							onclick={(e) => {
-								e.preventDefault();
-								page_qp.current = pageItem.value;
-							}}
-						>
-							{pageItem.value}
-						</a>
-					{/if}
-				{/snippet}
-			</Pagination>
-		</div>
 	</div>
 </div>
 
@@ -550,6 +550,7 @@
 	}
 
 	.pagination {
+		width: calc(100% - var(--sidebar-width));
 		display: flex;
 		justify-content: center;
 
