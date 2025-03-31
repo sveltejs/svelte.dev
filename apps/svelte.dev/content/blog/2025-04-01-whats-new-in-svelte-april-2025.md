@@ -15,6 +15,7 @@ So let's dive in!
 - State created in deriveds/effects can now be written/read locally without self-invalidation - reducing the number of "unsafe read"s significantly (**5.24.0**, [#15553](https://github.com/sveltejs/svelte/pull/15553))
 - Derived statements are now writable (**5.25.0/5.25.2**, [Docs](https://svelte.dev/docs/svelte/derived#Overriding-derived-values), [#15570](https://github.com/sveltejs/svelte/pull/15570) and [#15581](https://github.com/sveltejs/svelte/pull/15581))
 - The Svelte CLI also got an upgrade to its code generation for more intuitive formatting (**0.7.0**, [#380](https://github.com/sveltejs/cli/pull/380))
+- `eslint-plugin-svelte` v3 has been released. The main update is improved support for Svelte 5. Check out the [CHANGELOG](https://github.com/sveltejs/eslint-plugin-svelte/releases) for more details.
 
 There were also quite a few [fixes](https://github.com/sveltejs/language-tools/releases/tag/extensions-109.5.3) to the language tools earlier in the month - so be sure to keep your plugins up to date!
 
