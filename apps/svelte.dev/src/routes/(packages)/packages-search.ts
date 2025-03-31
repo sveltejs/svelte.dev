@@ -21,7 +21,7 @@ const EXACT_NAME_MATCH_BOOST = 10;
 const TAG_MATCH_BOOST = 5;
 const NAME_MATCH_BOOST = 3;
 const DEPENDENTS_BOOST = 0; // Highest weight for packages others depend on
-const GITHUB_STARS_BOOST = 5.5; // Medium weight for GitHub stars (between dependents and downloads)
+const GITHUB_STARS_BOOST = 11; // Medium weight for GitHub stars (between dependents and downloads)
 const DOWNLOADS_BOOST = 1.2; // Lower weight for NPM downloads
 const RECENT_UPDATE_BOOST = {
 	LAST_6_MONTHS: 1.0, // Highest boost for updates within 6 months
