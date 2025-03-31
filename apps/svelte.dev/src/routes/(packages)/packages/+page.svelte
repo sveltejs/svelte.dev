@@ -546,6 +546,7 @@
 			font: var(--sk-font-body-small);
 			color: var(--sk-fg-3);
 			margin: 0 0 0.5em 0;
+			max-width: calc(100% - var(--sidebar-width));
 		}
 	}
 
