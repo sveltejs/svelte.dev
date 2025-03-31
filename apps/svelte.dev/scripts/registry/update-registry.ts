@@ -13,12 +13,14 @@ import {
 	fetch_downloads_for_package,
 	HEADERS,
 	PackageCache,
+	REGISTRY_BASE_URL,
 	request_queue,
 	sanitize_github_url,
 	stream_packages_by_names,
 	stream_search_by_keywords,
 	structured_interim_package_to_package,
 	superfetch,
+	supports_svelte5,
 	type StructuredInterimPackage
 } from './npm.js';
 
@@ -791,6 +793,43 @@ async function delete_untagged() {
 	}
 }
 
+async function recheck_svelte5() {
+	for await (const [pkg_name, data] of PackageCache.entries()) {
+		let updating = false;
+		// Get package json
+		const package_json = await superfetch(`${REGISTRY_BASE_URL}${pkg_name}`).then((r) => r.json());
+
+		// Get latest versions package.json from versions field
+		const latest_version = package_json['dist-tags']?.latest;
+		if (!latest_version) continue;
+
+		const latest_package_json = package_json.versions[latest_version];
+
+		const svelte_version =
+			latest_package_json.peerDependencies?.svelte ||
+			latest_package_json.dependencies?.svelte ||
+			latest_package_json.devDependencies?.svelte;
+
+		if (!svelte_version) {
+			if (data.svelte5) updating = true;
+			data.svelte5 = false;
+		}
+
+		const is_svelte_5 = supports_svelte5(svelte_version);
+
+		if (is_svelte_5) {
+			if (!data.svelte5) updating = true;
+			data.svelte5 = true;
+		}
+
+		if (updating) {
+			console.log('UPDATING', pkg_name, data.svelte5, is_svelte_5);
+
+			PackageCache.set(pkg_name, data);
+		}
+	}
+}
+
 /**
  * Creates a generator that yields batches from a Map
  */
@@ -808,19 +847,21 @@ async function* create_map_batch_generator(
 }
 
 for (let i = 0; i < 1; i++) {
-	await process_batches_through_llm();
+	// await process_batches_through_llm();
 }
 
-await update_overrides();
+// await update_overrides();
 
 svelte_society_list;
-await process_packages_by_names_through_llm({ package_names: Object.keys(svelte_society_list) });
+// await process_packages_by_names_through_llm({ package_names: Object.keys(svelte_society_list) });
 
 // update_cache_from_npm();
-await update_all_github_stars();
+// await update_all_github_stars();
 
-await remove_forks();
-delete_untagged();
+// await remove_forks();
+// delete_untagged();
+
+recheck_svelte5();
 
 // program.name('packages').description('Package to curate the svelte.dev/packages list');
 

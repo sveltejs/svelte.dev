@@ -24,7 +24,7 @@
     "adapter",
     "tooling"
   ],
-  "svelte5": false,
+  "svelte5": true,
   "runes": false,
   "github_stars": 295
 }

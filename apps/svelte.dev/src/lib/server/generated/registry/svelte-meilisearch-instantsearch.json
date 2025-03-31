@@ -11,6 +11,6 @@
   "tags": [
     "integration"
   ],
-  "svelte5": false,
+  "svelte5": true,
   "runes": false
 }

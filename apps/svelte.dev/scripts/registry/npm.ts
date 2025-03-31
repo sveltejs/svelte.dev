@@ -279,7 +279,7 @@ function format(date: Date, format_str: string): string {
 }
 
 const API_BASE_URL = 'https://api.npmjs.org/';
-const REGISTRY_BASE_URL = 'https://registry.npmjs.org/';
+export const REGISTRY_BASE_URL = 'https://registry.npmjs.org/';
 
 const END_DATE = format(new Date(), 'yyyy-MM-dd');
 const START_DATE = format(sub_days(new Date(), 7), 'yyyy-MM-dd');
@@ -518,82 +518,83 @@ export async function* process_packages(
 
 /**
  * Checks if a semver range supports Svelte version 5.x
- *
- * @param {string} version_range - The semver version range to check
- * @returns {boolean} - True if the range supports Svelte 5, false otherwise
  */
-function supports_svelte5(version_range: string): boolean {
+export function supports_svelte5(version_range: string): boolean {
 	if (!version_range) return false;
 
-	// Handle complex range patterns first to prevent matching simpler patterns
-
-	// Handle complex version ranges with both upper and lower bounds (e.g., ">=3.0.0 <6.0.0")
-	if (
-		(version_range.includes('<') || version_range.includes('<=')) &&
-		(version_range.includes('>=') || version_range.includes('>'))
-	) {
-		// Extract lower bound
-		let lower_bound = 0;
-		let lower_bound_operator = '>=';
-
-		if (version_range.includes('>=')) {
-			const match = version_range.match(/>=\s*(\d+(\.\d+)*)/);
-			if (match) {
-				lower_bound = parseFloat(match[1]);
-				lower_bound_operator = '>=';
-			}
-		} else if (version_range.includes('>')) {
-			const match = version_range.match(/>\s*(\d+(\.\d+)*)/);
-			if (match) {
-				lower_bound = parseFloat(match[1]);
-				lower_bound_operator = '>';
-			}
-		}
-
-		// Extract upper bound
-		let upper_bound = Infinity;
-		let upper_bound_operator = '<';
-
-		if (version_range.includes('<')) {
-			const match = version_range.match(/<\s*(\d+(\.\d+)*)/);
-			if (match) {
-				upper_bound = parseFloat(match[1]);
-				upper_bound_operator = '<';
-			}
-		} else if (version_range.includes('<=')) {
-			const match = version_range.match(/<=\s*(\d+(\.\d+)*)/);
-			if (match) {
-				upper_bound = parseFloat(match[1]);
-				upper_bound_operator = '<=';
-			}
-		}
-
-		// Special case: If the upper bound is exactly 5 with '<', version 5 is excluded
-		if (upper_bound_operator === '<' && upper_bound === 5) {
-			return false;
-		}
-
-		// Check if version 5 is within the range
-		const is_lower_bound_satisfied =
-			lower_bound_operator === '>=' ? lower_bound <= 5 : lower_bound < 5;
-		const is_upper_bound_satisfied =
-			upper_bound_operator === '<' ? upper_bound > 5 : upper_bound >= 5;
-
-		return is_lower_bound_satisfied && is_upper_bound_satisfied;
-	}
-
-	// Handle version range with OR operators
+	// Handle version range with OR operators first before any other processing
 	if (version_range.includes('||')) {
 		const ranges = version_range.split('||').map((r) => r.trim());
 		// If any sub-range supports v5, the whole range supports it
 		return ranges.some((range) => supports_svelte5(range));
 	}
 
+	// Handle hyphen ranges directly (not part of a complex expression)
+	if (version_range.includes(' - ')) {
+		// Split by hyphen and trim whitespace
+		const parts = version_range.split('-').map((p) => p.trim());
+		// Handle "x - y" format correctly
+		if (parts.length === 2) {
+			const start = parseFloat(parts[0]);
+			const end = parseFloat(parts[1]);
+			return end >= 5;
+		}
+	}
+
+	// Handle complex version ranges with both upper and lower bounds in the same expression
+	// Examples: ">=1.0.0 <=4.9.9", ">=3.0.0 <6.0.0"
+	if (
+		version_range.includes(' ') &&
+		(version_range.includes('<') ||
+			version_range.includes('<=') ||
+			version_range.includes('>=') ||
+			version_range.includes('>'))
+	) {
+		// Process for complex range with multiple constraints
+		let includes_version_5 = true;
+
+		// Split by spaces to get individual constraints
+		const constraints = version_range.split(' ');
+
+		for (const constraint of constraints) {
+			if (constraint.startsWith('>=')) {
+				const version_number = parseFloat(constraint.substring(2));
+				// Does not include v5 if lower bound is > 5
+				if (version_number > 5) {
+					includes_version_5 = false;
+				}
+			} else if (constraint.startsWith('>')) {
+				const version_number = parseFloat(constraint.substring(1));
+				// Does not include v5 if lower bound is >= 5
+				if (version_number >= 5) {
+					includes_version_5 = false;
+				}
+			} else if (constraint.startsWith('<=')) {
+				const version_number = parseFloat(constraint.substring(2));
+				// Does not include v5 if upper bound is < 5
+				if (version_number < 5) {
+					includes_version_5 = false;
+				}
+			} else if (constraint.startsWith('<')) {
+				const version_number = parseFloat(constraint.substring(1));
+				// Does not include v5 if upper bound is <= 5
+				if (version_number <= 5) {
+					includes_version_5 = false;
+				}
+			}
+		}
+
+		return includes_version_5;
+	}
+
 	// Handle exact major version format (5)
 	if (version_range === '5') return true;
 
-	// Handle caret ranges like ^5 or ^5.0.0
+	// Handle caret ranges like ^5 or ^5.0.0 (including pre-release versions)
 	if (version_range.startsWith('^5')) return true;
+
+	// Handle pre-release versions of 5.x (e.g., 5.0.0-next.42)
+	if (/^5\.(\d+)\.(\d+)-/.test(version_range)) return true;
 
 	// Handle tilde ranges like ~5 or ~5.0.0
 	if (version_range.startsWith('~5')) return true;
@@ -607,12 +608,6 @@ function supports_svelte5(version_range: string): boolean {
 		(version_range.endsWith('*') || version_range.endsWith('x'))
 	) {
 		return true;
-	}
-
-	// Handle version ranges with hyphen notation
-	if (version_range.includes(' - ')) {
-		const [start, end] = version_range.split(' - ').map((v) => parseFloat(v));
-		return end >= 5;
 	}
 
 	// Handle >= ranges (after checking for complex ranges)

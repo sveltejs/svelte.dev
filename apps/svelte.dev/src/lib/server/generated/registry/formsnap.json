@@ -12,6 +12,6 @@
     "ui",
     "miscellaneous"
   ],
-  "svelte5": false,
+  "svelte5": true,
   "runes": false
 }
