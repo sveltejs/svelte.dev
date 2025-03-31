@@ -1,6 +1,5 @@
 import { read } from '$app/server';
 import type { Document } from '@sveltejs/site-kit';
-import { extract_frontmatter } from '@sveltejs/site-kit/markdown';
 import { create_index } from '@sveltejs/site-kit/server/content';
 
 const documents = import.meta.glob<string>('../../../content/**/*.md', {

@@ -782,7 +782,7 @@ export async function* stream_search_by_keywords({
 						if (pkg_name === 'svelte' || pkg_name === '@sveltejs/kit') continue;
 						if (skip_cached && (await PackageCache.has(pkg_name))) continue;
 						if (all_seen_packages.has(pkg_name)) break overlord_loop; // Skip already seen packages
-						if (total_runs >= limit) break;
+						if (total_runs >= limit) break overlord_loop;
 
 						all_seen_packages.add(pkg_name); // Mark this package as seen
 
