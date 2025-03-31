@@ -73,9 +73,11 @@ export class ReactiveQueryParam<T = string> {
 			(val) => {
 				const encoded = val != null ? encode(val ?? default_value) : undefined;
 
-				if ((default_value == null || encode(default_value) !== encoded) && encoded)
+				if ((default_value == null || encode(default_value) !== encoded) && encoded) {
 					page.url.searchParams.set(name, encoded);
-				else page.url.searchParams.delete(name);
+				} else {
+					page.url.searchParams.delete(name);
+				}
 
 				// So we don't run it when router hasn't initialized yet
 				tick().then(() => replaceState(page.url, {}));
