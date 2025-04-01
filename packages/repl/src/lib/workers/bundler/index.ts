@@ -632,7 +632,6 @@ async function bundle({
 	options: BundleOptions;
 }) {
 	if (!DEV) {
-		console.clear();
 		console.log(`running Svelte compiler version %c${svelte.VERSION}`, 'font-weight: bold');
 	}
 
