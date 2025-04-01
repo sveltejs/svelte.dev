@@ -588,7 +588,7 @@ async function get_bundle(
 						if (id === './__entry.js') return;
 						if (id === 'esm-env') return;
 						if (id === shared_file) return;
-						if (id.startsWith('https://unpkg.com/clsx@')) return;
+						if (id.startsWith('https://cdn.jsdelivr.net/npm/clsx@')) return;
 
 						add_tailwind_candidates(this.parse(code));
 					}

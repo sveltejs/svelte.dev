@@ -15,7 +15,7 @@ let inited: PromiseWithResolvers<typeof self.svelte>;
 let can_use_experimental_async = false;
 
 async function init(v: string) {
-	const svelte_url = v === 'local' ? '/svelte' : `https://unpkg.com/svelte@${v}`;
+	const svelte_url = v === 'local' ? '/svelte' : `https://cdn.jsdelivr.net/npm/svelte@${v}`;
 	const match = /^(?:pr|commit|branch)-(.+)/.exec(v);
 
 	let tarball: FileDescription[] | undefined;

@@ -27,7 +27,7 @@
 	}
 
 	let {
-		packagesUrl = 'https://unpkg.com',
+		packagesUrl = 'https://cdn.jsdelivr.net/npm',
 		svelteVersion = 'latest',
 		embedded = false,
 		orientation = 'columns',

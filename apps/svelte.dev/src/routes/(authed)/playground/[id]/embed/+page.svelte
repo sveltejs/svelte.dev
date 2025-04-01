@@ -17,7 +17,7 @@
 
 	if (version !== 'local' && !is_pr_or_commit_version) {
 		$effect(() => {
-			fetch(`https://unpkg.com/svelte@${version}/package.json`)
+			fetch(`https://cdn.jsdelivr.net/npm/svelte@${version}/package.json`)
 				.then((r) => r.json())
 				.then((pkg) => {
 					if (pkg.version !== data.version) {
