@@ -16,19 +16,17 @@ const packages_map = new Map<string, Package>();
 const name_to_index_map = new Map<string, number>();
 let next_id = 0;
 
+// Sorting direction
+export type SortDirection = 'asc' | 'dsc';
+
 // Scoring factors
 const EXACT_NAME_MATCH_BOOST = 10;
 const TAG_MATCH_BOOST = 5;
 const NAME_MATCH_BOOST = 3;
-const DEPENDENTS_BOOST = 0; // Highest weight for packages others depend on
-const GITHUB_STARS_BOOST = 11; // Medium weight for GitHub stars (between dependents and downloads)
+const DEPENDENTS_BOOST = 1.5; // Highest weight for packages others depend on
+const GITHUB_STARS_BOOST = 5.5; // Medium weight for GitHub stars (between dependents and downloads)
 const DOWNLOADS_BOOST = 1.2; // Lower weight for NPM downloads
-const RECENT_UPDATE_BOOST = {
-	LAST_6_MONTHS: 1.0, // Highest boost for updates within 6 months
-	LAST_1_YEAR: 0.6, // Medium boost for updates within a year
-	LAST_2_YEARS: 0.3 // Small boost for updates within 2 years
-};
-const RECENCY_WEIGHT = 10; // Adjust this value to control recency's impact
+const RECENT_UPDATE_BOOST = 0.2;
 const SVELTE_5_BOOST = 15;
 
 const OUTDATED_PENALTY = -6; // Substantial penalty for outdated packages
@@ -93,6 +91,15 @@ export type SortCriterion =
 	| 'updated'
 	| 'name';
 
+export const search_criteria: SortCriterion[] = [
+	'popularity',
+	'downloads',
+	'dependents',
+	'github_stars',
+	'updated',
+	'name'
+];
+
 /**
  * Search for packages matching the query and/or tags, returning a flat list sorted by the specified criterion
  *
@@ -105,6 +112,7 @@ export function search(
 	options: {
 		tags?: string[];
 		sort_by?: SortCriterion;
+		direction?: SortDirection;
 		filters?: {
 			svelte_5_only?: boolean;
 			show_outdated?: boolean;
@@ -115,8 +123,7 @@ export function search(
 		throw new Error('Search index not initialized. Call init() first.');
 	}
 
-	const { tags = [], sort_by = 'popularity', filters = {} } = options;
-
+	const { tags = [], sort_by = 'popularity', direction = 'dsc', filters = {} } = options;
 	const { svelte_5_only = false, show_outdated = true } = filters;
 
 	// Normalize query to empty string if null or undefined
@@ -130,13 +137,15 @@ export function search(
 
 	// Case 1: No query, no tags - return all packages sorted by selected criterion
 	if (!has_query && !has_tags) {
-		result_packages = Array.from(packages_map.values());
+		result_packages = Array.from(packages_map.values()).sort((a, b) =>
+			sort_packages(a, b, sort_by, direction)
+		);
 	}
 	// Case 2: Empty query, filter by tags only
 	else if (!has_query && has_tags) {
-		result_packages = Array.from(packages_map.values()).filter((pkg) =>
-			tags.some((tag) => pkg.tags && pkg.tags.includes(tag))
-		);
+		result_packages = Array.from(packages_map.values())
+			.filter((pkg) => tags.some((tag) => pkg.tags && pkg.tags.includes(tag)))
+			.sort((a, b) => sort_packages(a, b, sort_by, direction));
 	}
 	// Case 3 & 4: Has query (and possibly tags)
 	else if (has_query) {
@@ -235,14 +244,26 @@ export function search(
 
 					// Boost recently updated packages
 					if (pkg.updated) {
-						score += calculate_recency_boost(pkg.updated) * RECENCY_WEIGHT; // Multiply by 10 to make the boost more impactful
+						const update_date = new Date(pkg.updated);
+						const days_since_update =
+							(now.getTime() - update_date.getTime()) / (1000 * 60 * 60 * 24);
+						// More recent updates get higher boost
+						if (days_since_update < 30) {
+							// Last month
+							score += ((30 - days_since_update) * RECENT_UPDATE_BOOST) / 30;
+						}
 					}
 
 					entries.push({ package: pkg, score });
 				}
 
-				// Sort first by score
-				result_packages = entries.sort((a, b) => b.score - a.score).map((entry) => entry.package);
+				// Sort by score, considering direction
+				const sorted_entries = entries.sort((a, b) => {
+					const comparison = b.score - a.score;
+					return direction === 'asc' ? -comparison : comparison;
+				});
+
+				result_packages = sorted_entries.map((entry) => entry.package);
 			} else {
 				// For other sort criteria, directly extract and sort the packages
 				const matched_packages: Package[] = [];
@@ -275,8 +296,8 @@ export function search(
 					matched_packages.push(pkg);
 				}
 
-				// Sort directly by the selected criterion
-				result_packages = matched_packages.sort((a, b) => sort_packages(a, b, sort_by));
+				// Sort directly by the selected criterion, considering direction
+				result_packages = matched_packages.sort((a, b) => sort_packages(a, b, sort_by, direction));
 			}
 		}
 	}
@@ -294,16 +315,23 @@ export function search(
 		}
 
 		// Apply sorting after filtering
-		result_packages = result_packages.sort((a, b) => sort_packages(a, b, sort_by));
+		result_packages = result_packages.sort((a, b) => sort_packages(a, b, sort_by, direction));
 	}
 
 	return result_packages;
 }
 
 /**
- * Helper function to sort packages by the specified criterion
+ * Helper function to sort packages by the specified criterion with direction control
  */
-export function sort_packages(a: Package, b: Package, criterion: SortCriterion): number {
+export function sort_packages(
+	a: Package,
+	b: Package,
+	criterion: SortCriterion,
+	direction: SortDirection = 'dsc'
+): number {
+	let comparison = 0;
+
 	switch (criterion) {
 		case 'popularity':
 			// Create a balanced scoring system using logarithmic scales to prevent small numbers from dominating
@@ -326,38 +354,39 @@ export function sort_packages(a: Package, b: Package, criterion: SortCriterion):
 				Math.log10(b_stars + 1) * 2 +
 				Math.log10(b_downloads + 1) * 1;
 
-			// Apply recency boost using the same algorithm as in search
-			// Use a specific weight factor for recency in the sorting algorithm
-			a_score += calculate_recency_boost(a.updated) * RECENCY_WEIGHT;
-			b_score += calculate_recency_boost(b.updated) * RECENCY_WEIGHT;
-
 			// Apply penalties for outdated or deprecated packages
 			if (a.outdated) a_score += OUTDATED_PENALTY;
 			if (a.deprecated) a_score += DEPRECATED_PENALTY;
 			if (b.outdated) b_score += OUTDATED_PENALTY;
 			if (b.deprecated) b_score += DEPRECATED_PENALTY;
 
-			return b_score - a_score;
+			comparison = b_score - a_score;
+			break;
 
-		// Other cases remain unchanged
 		case 'downloads':
-			return (b.downloads || 0) - (a.downloads || 0);
+			comparison = (b.downloads || 0) - (a.downloads || 0);
+			break;
 
 		case 'dependents':
-			return (b.dependents || 0) - (a.dependents || 0);
+			comparison = (b.dependents || 0) - (a.dependents || 0);
+			break;
 
 		case 'github_stars':
-			return (b.github_stars || 0) - (a.github_stars || 0);
+			comparison = (b.github_stars || 0) - (a.github_stars || 0);
+			break;
 
 		case 'updated':
 			// Sort by most recently updated
 			const a_date = a.updated ? new Date(a.updated).getTime() : 0;
 			const b_date = b.updated ? new Date(b.updated).getTime() : 0;
-			return b_date - a_date;
+			comparison = b_date - a_date;
+			break;
 
 		case 'name':
 			// Sort alphabetically by name
-			return a.name.localeCompare(b.name);
+			comparison = a.name.localeCompare(b.name);
+			// For name, we reverse the direction to make alphabetical order the default ascending order
+			return direction === 'asc' ? comparison : -comparison;
 
 		default:
 			// Default to balanced popularity scoring if an invalid criterion is provided
@@ -379,44 +408,18 @@ export function sort_packages(a: Package, b: Package, criterion: SortCriterion):
 				Math.log10(b_def_stars + 1) * 3 +
 				Math.log10(b_def_downloads + 1) * 2;
 
-			// Apply recency boost using the same algorithm as in search
-			const DEFAULT_RECENCY_WEIGHT = 10; // Adjust as needed to balance with other factors
-			a_def_score += calculate_recency_boost(a.updated) * DEFAULT_RECENCY_WEIGHT;
-			b_def_score += calculate_recency_boost(b.updated) * DEFAULT_RECENCY_WEIGHT;
-
 			// Apply penalties for outdated or deprecated packages
 			if (a.outdated) a_def_score += OUTDATED_PENALTY;
 			if (a.deprecated) a_def_score += DEPRECATED_PENALTY;
 			if (b.outdated) b_def_score += OUTDATED_PENALTY;
 			if (b.deprecated) b_def_score += DEPRECATED_PENALTY;
 
-			return b_def_score - a_def_score;
-	}
-}
-
-/**
- * Calculate a boost factor based on how recently a package was updated
- */
-function calculate_recency_boost(update_date_str: string | undefined): number {
-	if (!update_date_str) return 0;
-
-	const update_date = new Date(update_date_str);
-	const now = new Date();
-	const days_since_update = (now.getTime() - update_date.getTime()) / (1000 * 60 * 60 * 24);
-
-	// Apply boost based on recency tiers
-	if (days_since_update <= 180) {
-		// 6 months
-		return RECENT_UPDATE_BOOST.LAST_6_MONTHS;
-	} else if (days_since_update <= 365) {
-		// 1 year
-		return RECENT_UPDATE_BOOST.LAST_1_YEAR;
-	} else if (days_since_update <= 730) {
-		// 2 years
-		return RECENT_UPDATE_BOOST.LAST_2_YEARS;
+			comparison = b_def_score - a_def_score;
+			break;
 	}
 
-	return 0; // No boost for packages older than 2 years
+	// Apply direction (except for name, which is handled separately above)
+	return direction === 'asc' ? -comparison : comparison;
 }
 
 /**
@@ -498,7 +501,10 @@ export function get_all_tags(): { tag: string; count: number }[] {
 /**
  * Get packages by author
  */
-export function get_packages_by_author(author: string): Package[] {
+export function get_packages_by_author(
+	author: string,
+	direction: SortDirection = 'dsc'
+): Package[] {
 	return Array.from(packages_map.values())
 		.filter((pkg) => pkg.authors?.includes(author))
 		.sort((a, b) => {
@@ -521,6 +527,7 @@ export function get_packages_by_author(author: string): Package[] {
 				Math.log10(b_stars + 1) * 2 +
 				Math.log10(b_downloads + 1) * 1;
 
-			return b_score - a_score;
+			const comparison = b_score - a_score;
+			return direction === 'asc' ? -comparison : comparison;
 		});
 }

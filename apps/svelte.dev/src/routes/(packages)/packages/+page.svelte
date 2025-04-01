@@ -4,6 +4,7 @@
 	import { Icon } from '@sveltejs/site-kit/components';
 	import { ReactiveQueryParam } from '@sveltejs/site-kit/reactivity';
 	import { onMount } from 'svelte';
+	import { search_criteria, type SortCriterion, type SortDirection } from '../packages-search';
 	import Pagination from './pagination.svelte';
 
 	const { data } = $props();
@@ -21,6 +22,8 @@
 		true,
 		ReactiveQueryParam.boolean
 	);
+	const sort_by_qp = new ReactiveQueryParam<SortCriterion>('sort_by', 'popularity');
+	const direction_qp = new ReactiveQueryParam<SortDirection>('direction', 'dsc');
 
 	let registry = $derived(data.registry);
 	let total_pages = $derived(data.pages.total_pages);
@@ -69,6 +72,8 @@
 		page_qp.current;
 		svelte_5_only_qp.current;
 		show_outdated_qp.current;
+		sort_by_qp.current;
+		direction_qp.current;
 
 		if (!ready) return;
 
@@ -87,7 +92,9 @@
 				page: page_qp.current,
 				tags: $state.snapshot(tags_qp.current),
 				svelte_5_only: svelte_5_only_qp.current,
-				show_outdated: show_outdated_qp.current
+				show_outdated: show_outdated_qp.current,
+				sort_by: sort_by_qp.current,
+				direction: direction_qp.current
 			}
 		});
 	});
@@ -280,6 +287,22 @@
 						<Icon name="close" />
 					</button>
 				</label>
+
+				<label>
+					<select bind:value={sort_by_qp.current}>
+						{#each search_criteria as criterion}
+							<option value={criterion}>{criterion}</option>
+						{/each}
+					</select>
+				</label>
+
+				<label>
+					<input type="radio" bind:group={direction_qp.current} value="asc" />
+					<span>Ascending</span>
+
+					<input type="radio" bind:group={direction_qp.current} value="dsc" />
+					<span>Descending</span>
+				</label>
 			</div>
 
 			<ul class="sidebar">
@@ -414,9 +437,16 @@
 
 	.controls {
 		background: var(--background);
-		padding: 0.5rem;
 		display: flex;
+		flex-direction: column;
 		gap: 1rem;
+		font: var(--sk-font-ui-medium);
+
+		select {
+			width: 100%;
+			padding: 1rem;
+			box-sizing: border-box;
+		}
 	}
 
 	.input-group {

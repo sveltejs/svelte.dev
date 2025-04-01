@@ -1,7 +1,14 @@
 import { registry } from '$lib/server/content';
 import { redirect } from '@sveltejs/kit';
 import registry_json from '../../../lib/registry.json';
-import { init, REGISTRY_PAGE_LIMIT, search } from '../packages-search';
+import {
+	init,
+	REGISTRY_PAGE_LIMIT,
+	search,
+	search_criteria,
+	type SortCriterion,
+	type SortDirection
+} from '../packages-search';
 
 export const prerender = false;
 
@@ -11,12 +18,19 @@ export async function load({ url }) {
 	let page = Math.max(1, +(url.searchParams.get('page')?.toString() ?? 1));
 	const svelte_5_only = (url.searchParams.get('svelte_5_only') ?? 'false') === 'true';
 	const show_outdated = (url.searchParams.get('show_outdated') ?? 'true') === 'true';
+	const sort_by_param = url.searchParams.get('sort_by') as SortCriterion;
+	let direction = url.searchParams.get('direction') as SortDirection;
+
+	direction = direction === 'asc' ? 'asc' : 'dsc';
+
+	const sort_by = search_criteria.includes(sort_by_param) ? sort_by_param : 'popularity';
 
 	init(registry);
 
 	const current_results = search(query, {
 		tags,
-		sort_by: 'popularity',
+		sort_by,
+		direction,
 		filters: {
 			svelte_5_only,
 			show_outdated

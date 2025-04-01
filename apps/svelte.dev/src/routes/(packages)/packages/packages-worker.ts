@@ -1,4 +1,4 @@
-import { init, REGISTRY_PAGE_LIMIT, search } from '../packages-search';
+import { init, REGISTRY_PAGE_LIMIT, search, search_criteria } from '../packages-search';
 
 addEventListener('message', async (event) => {
 	const { type, payload } = event.data;
@@ -11,11 +11,23 @@ addEventListener('message', async (event) => {
 	}
 
 	if (type === 'get') {
-		let { query, page = 1, tags = [], svelte_5_only = false, show_outdated = true } = payload;
+		let {
+			query,
+			page = 1,
+			tags = [],
+			svelte_5_only = false,
+			show_outdated = true,
+			sort_by,
+			direction = 'dsc'
+		} = payload;
 
-		console.log({ svelte_5_only, show_outdated });
+		direction = direction === 'asc' ? 'asc' : 'dsc';
+		sort_by = search_criteria.includes(sort_by) ? sort_by : 'popularity';
+
 		const current_results = search(query, {
 			tags,
+			sort_by,
+			direction,
 			filters: {
 				svelte_5_only,
 				show_outdated
