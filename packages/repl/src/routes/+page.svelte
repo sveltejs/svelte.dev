@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Repl from '$lib/Repl.svelte';
+	import { Repl } from '$lib/Repl.svelte';
 	import { onMount } from 'svelte';
 	import '@sveltejs/site-kit/styles/index.css';
 

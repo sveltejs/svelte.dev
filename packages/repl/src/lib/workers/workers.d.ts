@@ -62,15 +62,6 @@ export type BundleMessageData = {
 	options: BundleOptions;
 };
 
-export interface BundleResult {
-	uid: number;
-	error: CompileError | null;
-	client: any | null; // TODO
-	server: any | null; // TODO
-	tailwind: string | null;
-	imports: string[];
-}
-
 declare global {
 	var svelte: typeof import('svelte/compiler');
 }

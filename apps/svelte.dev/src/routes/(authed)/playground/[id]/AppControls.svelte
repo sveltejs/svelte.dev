@@ -9,7 +9,7 @@
 	import ModalDropdown from '$lib/components/ModalDropdown.svelte';
 	import SecondaryNav from '$lib/components/SecondaryNav.svelte';
 	import type { File } from '@sveltejs/repl/workspace';
-	import type Repl from '@sveltejs/repl';
+	import type { Repl } from '@sveltejs/repl';
 
 	interface Props {
 		examples: Array<{ title: string; examples: any[] }>;

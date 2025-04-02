@@ -11,8 +11,8 @@
 	import srcdoc_styles from './srcdoc/styles.css?raw';
 	import ErrorOverlay from './ErrorOverlay.svelte';
 	import type { CompileError } from 'svelte/compiler';
-	import type { Bundle } from '../types';
 	import type { Writable } from 'svelte/store';
+	import type { BundleResult } from '$lib/public';
 
 	export let error: Error | null;
 	/** status by Bundler class instance */
@@ -27,12 +27,12 @@
 	export let injectedCSS = '';
 	export let theme: 'light' | 'dark';
 	/** A store containing the current bundle result. Takes precedence over REPL context, if set */
-	export let bundle: Readable<Bundle | null> | undefined = undefined;
+	export let bundle: Writable<BundleResult | null> | undefined = undefined;
 	/** Called everytime a log is pushed. If this is set, the built-in console coming with the Viewer isn't shown */
 	export let onLog: ((logs: Log[]) => void) | undefined = undefined;
 
 	const context = get_repl_context();
-	bundle = bundle ?? context.bundle;
+	bundle ??= context.bundle;
 
 	let logs: Log[] = [];
 	let log_group_stack: Log[][] = [];
@@ -101,7 +101,7 @@
 
 	$: if (ready) proxy?.iframe_command('set_theme', { theme });
 
-	async function apply_bundle($bundle: Bundle | null | undefined) {
+	async function apply_bundle($bundle: BundleResult | null | undefined) {
 		if (!$bundle) return;
 
 		try {

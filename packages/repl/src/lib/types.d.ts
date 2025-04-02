@@ -3,6 +3,7 @@ import { OutputChunk, RollupError } from '@rollup/browser';
 import type { Readable, Writable } from 'svelte/store';
 import type { CompileError } from 'svelte/compiler';
 import type { Workspace } from './Workspace.svelte';
+import type { BundleResult } from './public';
 
 export type Lang = 'js' | 'svelte' | 'json' | 'md' | 'css' | (string & Record<never, never>);
 
@@ -21,16 +22,6 @@ export type MessageDetails = {
 
 export type Warning = MessageDetails;
 
-export type Bundle = {
-	uid: number;
-	client: OutputChunk | null;
-	error: (RollupError & CompileError) | null;
-	server: OutputChunk | null;
-	tailwind?: string;
-	imports: string[];
-	warnings: Warning[];
-};
-
 export type File = {
 	name: string;
 	source: string;
@@ -39,7 +30,7 @@ export type File = {
 };
 
 export type ReplState = {
-	bundle: Bundle | null;
+	bundle: BundleResult | null;
 	bundler: import('./Bundler').default | null;
 	toggleable: boolean;
 };

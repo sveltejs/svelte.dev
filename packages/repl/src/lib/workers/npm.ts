@@ -15,7 +15,7 @@ const pkg_pr_new_regex = /^(pr|commit|branch)-(.+)/;
 
 export async function load_svelte(version: string, onresolve?: (resolved: string) => void) {
 	if (version === 'local') {
-		await import(`${location.origin}/svelte/compiler/index.js`);
+		await import(/* @vite-ignore */ `${location.origin}/svelte/compiler/index.js`);
 	} else {
 		if (!pkg_pr_new_regex.test(version)) {
 			version = await resolve_version('svelte', version);

@@ -9,7 +9,7 @@
 	import { set_repl_context } from './context.js';
 	import { Workspace, type File } from './Workspace.svelte.js';
 	import Editor from './Editor/Editor.svelte';
-	import type { Bundle, ReplContext } from './types.js';
+	import type { ReplContext } from './types.js';
 
 	interface Props {
 		svelteVersion?: string;
@@ -100,7 +100,7 @@
 		const result = await bundler!.bundle(workspace.files as File[], {
 			tailwind: workspace.tailwind
 		});
-		if (token === current_token) $bundle = result as Bundle;
+		if (token === current_token) $bundle = result;
 	}
 
 	async function migrate() {

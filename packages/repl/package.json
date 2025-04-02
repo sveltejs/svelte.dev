@@ -24,9 +24,9 @@
 	"homepage": "https://github.com/sveltejs/svelte.dev/tree/main/packages/repl/#readme",
 	"exports": {
 		".": {
-			"types": "./src/lib/Repl.svelte",
-			"svelte": "./src/lib/Repl.svelte",
-			"default": "./src/lib/Repl.svelte"
+			"types": "./src/lib/public.d.ts",
+			"svelte": "./src/lib/index.ts",
+			"default": "./src/lib/index.ts"
 		},
 		"./bundler": {
 			"types": "./src/lib/Bundler.ts",
@@ -93,7 +93,6 @@
 		"@sveltejs/svelte-json-tree": "^2.2.1",
 		"acorn": "^8.11.3",
 		"codemirror": "^6.0.1",
-		"editor": "workspace:*",
 		"esm-env": "^1.0.0",
 		"esrap": "^1.2.2",
 		"locate-character": "^3.0.0",

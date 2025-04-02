@@ -4,7 +4,7 @@
 	import { browser } from '$app/environment';
 	import { afterNavigate, goto, replaceState } from '$app/navigation';
 	import type { Gist } from '$lib/db/types';
-	import Repl from '@sveltejs/repl';
+	import { Repl } from '@sveltejs/repl';
 	import { theme } from '@sveltejs/site-kit/state';
 	import { mapbox_setup } from '../../../../config.js';
 	import AppControls from './AppControls.svelte';

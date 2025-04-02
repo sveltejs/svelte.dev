@@ -3,13 +3,14 @@ import Bundler from '@sveltejs/repl/bundler';
 import * as yootils from 'yootils';
 import type { Adapter } from '$lib/tutorial';
 import type { File, Item } from '@sveltejs/repl/workspace';
+import type { BundleResult } from '@sveltejs/repl';
 
 /** Rollup bundler singleton */
 let bundler: Bundler;
 
 export const state = new (class RollupState {
 	progress = $state.raw({ value: 0, text: 'initialising' });
-	bundle = $state.raw<any>(null);
+	bundle = $state.raw<BundleResult | null>(null);
 })();
 
 /**
