@@ -1,6 +1,6 @@
 import type { CompileError, CompileResult } from 'svelte/compiler';
 import { Compartment, EditorState, StateEffect, StateField } from '@codemirror/state';
-import { compile_file } from './compile-worker';
+import { compile_file } from './Compiler';
 import { BROWSER } from 'esm-env';
 import { basicSetup, EditorView } from 'codemirror';
 import { javascript } from '@codemirror/lang-javascript';

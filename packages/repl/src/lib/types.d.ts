@@ -2,7 +2,7 @@ import type { EditorState } from '@codemirror/state';
 import { OutputChunk, RollupError } from '@rollup/browser';
 import type { Readable, Writable } from 'svelte/store';
 import type { CompileError } from 'svelte/compiler';
-import type { Workspace } from 'editor';
+import type { Workspace } from './Workspace.svelte';
 
 export type Lang = 'js' | 'svelte' | 'json' | 'md' | 'css' | (string & Record<never, never>);
 

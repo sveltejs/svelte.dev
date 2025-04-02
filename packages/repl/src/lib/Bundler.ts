@@ -1,6 +1,6 @@
 import type { BundleResult } from './workers/bundler';
 import type { BundleMessageData } from './workers/workers';
-import type { File } from 'editor';
+import type { File } from './Workspace.svelte';
 
 let uid = 1;
 

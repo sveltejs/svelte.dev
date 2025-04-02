@@ -24,14 +24,20 @@
 	"homepage": "https://github.com/sveltejs/svelte.dev/tree/main/packages/repl/#readme",
 	"exports": {
 		".": {
-			"svelte": "./src/lib/index.ts",
-			"default": "./src/lib/index.ts"
+			"svelte": "./src/lib/Repl.svelte",
+			"default": "./src/lib/Repl.svelte"
 		},
 		"./bundler": {
 			"default": "./src/lib/Bundler.ts"
 		},
+		"./editor": {
+			"svelte": "./src/lib/Editor/Editor.svelte"
+		},
 		"./viewer": {
 			"svelte": "./src/lib/Output/Viewer.svelte"
+		},
+		"./workspace": {
+			"svelte": "./src/lib/Workspace.svelte"
 		},
 		"./console": {
 			"svelte": "./src/lib/Output/console/Console.svelte"
@@ -64,6 +70,7 @@
 		"@codemirror/autocomplete": "^6.16.0",
 		"@codemirror/commands": "^6.5.0",
 		"@codemirror/lang-css": "^6.2.1",
+		"@codemirror/lang-html": "^6.4.6",
 		"@codemirror/lang-javascript": "^6.2.2",
 		"@codemirror/lang-json": "^6.0.1",
 		"@codemirror/lang-markdown": "^6.2.5",
@@ -79,6 +86,7 @@
 		"@sveltejs/site-kit": "workspace:*",
 		"@sveltejs/svelte-json-tree": "^2.2.1",
 		"acorn": "^8.11.3",
+		"codemirror": "^6.0.1",
 		"editor": "workspace:*",
 		"esm-env": "^1.0.0",
 		"esrap": "^1.2.2",

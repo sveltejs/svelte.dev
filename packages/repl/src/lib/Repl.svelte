@@ -7,7 +7,8 @@
 	import ComponentSelector from './Input/ComponentSelector.svelte';
 	import Output from './Output/Output.svelte';
 	import { set_repl_context } from './context.js';
-	import { Workspace, Editor, type File } from 'editor';
+	import { Workspace, type File } from './Workspace.svelte.js';
+	import Editor from './Editor/Editor.svelte';
 	import type { Bundle, ReplContext } from './types.js';
 
 	interface Props {

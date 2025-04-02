@@ -1,6 +1,6 @@
 <script lang="ts">
 	import RunesInfo from './RunesInfo.svelte';
-	import type { Workspace, File } from 'editor';
+	import type { Workspace, File } from '../Workspace.svelte';
 	import { tick } from 'svelte';
 	import { Checkbox, Toolbox } from '@sveltejs/site-kit/components';
 

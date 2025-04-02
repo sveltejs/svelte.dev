@@ -2,11 +2,11 @@
 	import { browser } from '$app/environment';
 	import { afterNavigate, replaceState } from '$app/navigation';
 	import { theme } from '@sveltejs/site-kit/state';
-	import { Repl } from '@sveltejs/repl';
+	import Repl from '@sveltejs/repl';
 	import { mapbox_setup } from '../../../../../config.js';
 	import { page } from '$app/state';
 	import { decode_and_decompress_text } from '../gzip.js';
-	import type { File } from 'editor';
+	import type { File } from '@sveltejs/repl/workspace';
 
 	let { data } = $props();
 

@@ -4,13 +4,13 @@
 	import { browser } from '$app/environment';
 	import { afterNavigate, goto, replaceState } from '$app/navigation';
 	import type { Gist } from '$lib/db/types';
-	import { Repl } from '@sveltejs/repl';
+	import Repl from '@sveltejs/repl';
 	import { theme } from '@sveltejs/site-kit/state';
 	import { mapbox_setup } from '../../../../config.js';
 	import AppControls from './AppControls.svelte';
 	import { compress_and_encode_text, decode_and_decompress_text } from './gzip.js';
 	import { page } from '$app/state';
-	import type { File } from 'editor';
+	import type { File } from '@sveltejs/repl/workspace';
 
 	let { data } = $props();
 

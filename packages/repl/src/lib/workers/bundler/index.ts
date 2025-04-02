@@ -15,7 +15,7 @@ import type { Plugin, RollupCache, TransformResult } from '@rollup/browser';
 import type { BundleMessageData, BundleOptions } from '../workers';
 import type { Warning } from '../../types';
 import type { CompileError, CompileResult } from 'svelte/compiler';
-import type { File } from 'editor';
+import type { File } from '../../Workspace.svelte';
 import type { Node } from 'estree';
 import { max } from './semver';
 import { ENTRYPOINT, ESM_ENV, NPM, STYLES, VIRTUAL } from './constants';
@@ -35,7 +35,7 @@ self.window = self;
 let svelte_version: string;
 let current_id: number;
 
-let inited = Promise.withResolvers<typeof svelte>();
+let inited = Promise.withResolvers<void>();
 
 let can_use_experimental_async = false;
 

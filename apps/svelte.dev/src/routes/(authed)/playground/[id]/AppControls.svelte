@@ -7,10 +7,9 @@
 	import type { Gist, User } from '$lib/db/types';
 	import { browser } from '$app/environment';
 	import ModalDropdown from '$lib/components/ModalDropdown.svelte';
-	import { untrack } from 'svelte';
 	import SecondaryNav from '$lib/components/SecondaryNav.svelte';
-	import type { File } from 'editor';
-	import type { Repl } from '@sveltejs/repl';
+	import type { File } from '@sveltejs/repl/workspace';
+	import type Repl from '@sveltejs/repl';
 
 	interface Props {
 		examples: Array<{ title: string; examples: any[] }>;

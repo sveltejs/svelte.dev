@@ -1,7 +1,7 @@
 import '@sveltejs/site-kit/polyfills';
 import { parseTar } from 'tarparser';
 import type { CompileResult } from 'svelte/compiler';
-import type { ExposedCompilerOptions, File } from '../Workspace.svelte';
+import type { ExposedCompilerOptions, File } from '../../Workspace.svelte';
 import type { FileDescription } from 'tarparser';
 
 // hack for magic-string and Svelte 4 compiler

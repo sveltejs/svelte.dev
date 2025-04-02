@@ -3,7 +3,7 @@ import { page } from '$app/stores';
 import type { state as WCState } from '$lib/tutorial/adapters/webcontainer/index.svelte';
 import type { state as RollupState } from '$lib/tutorial/adapters/rollup/index.svelte';
 import type { Adapter } from '$lib/tutorial';
-import type { File, Item } from 'editor';
+import type { File, Item } from '@sveltejs/repl/workspace';
 import { needs_webcontainers } from './shared';
 
 let initial_load = true;

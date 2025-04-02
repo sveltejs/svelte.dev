@@ -4,7 +4,7 @@
 	import ModalDropdown from '$lib/components/ModalDropdown.svelte';
 	import type { Exercise, PartStub } from '$lib/tutorial';
 	import { Checkbox, Icon, Toolbox } from '@sveltejs/site-kit/components';
-	import type { Workspace } from 'editor';
+	import type { Workspace } from '@sveltejs/repl/workspace';
 
 	interface Props {
 		index: PartStub[];
