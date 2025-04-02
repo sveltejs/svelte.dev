@@ -67,7 +67,7 @@
 	// TODO get rid
 	export function toJSON() {
 		return {
-			imports: bundler.result?.imports ?? [],
+			imports: bundler!.result?.imports ?? [],
 			files: workspace.files,
 			tailwind: workspace.tailwind
 		};

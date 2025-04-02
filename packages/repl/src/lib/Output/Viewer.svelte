@@ -11,8 +11,8 @@
 	import srcdoc_styles from './srcdoc/styles.css?raw';
 	import ErrorOverlay from './ErrorOverlay.svelte';
 	import type { CompileError } from 'svelte/compiler';
-	import type { BundleResult } from '$lib/public';
-	import type Bundler from '$lib/Bundler.svelte';
+	import type Bundler from '../Bundler.svelte';
+	import type { BundleResult } from '../public';
 
 	interface Props {
 		error: Error | null;
@@ -54,7 +54,7 @@
 	// svelte-ignore state_referenced_locally
 	let current_log_group = logs;
 
-	let iframe: HTMLIFrameElement = $state();
+	let iframe = $state<HTMLIFrameElement>();
 	let pending_imports = $state(0);
 	let pending = false;
 
@@ -67,7 +67,7 @@
 	let last_console_event: Log;
 
 	onMount(() => {
-		proxy = new ReplProxy(iframe, {
+		proxy = new ReplProxy(iframe!, {
 			on_fetch_progress: (progress) => {
 				pending_imports = progress;
 			},
@@ -105,7 +105,7 @@
 			}
 		});
 
-		iframe.addEventListener('load', () => {
+		iframe!.addEventListener('load', () => {
 			proxy?.handle_links();
 			ready = true;
 		});
