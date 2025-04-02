@@ -115,7 +115,7 @@ export function search(
 		direction?: SortDirection;
 		filters?: {
 			svelte_5_only?: boolean;
-			show_outdated?: boolean;
+			hide_outdated?: boolean;
 		};
 	} = {}
 ): Package[] {
@@ -124,7 +124,7 @@ export function search(
 	}
 
 	const { tags = [], sort_by = 'popularity', direction = 'dsc', filters = {} } = options;
-	const { svelte_5_only = false, show_outdated = true } = filters;
+	const { svelte_5_only = false, hide_outdated = false } = filters;
 
 	// Normalize query to empty string if null or undefined
 	const normalized_query = query === null || query === undefined ? '' : query;
@@ -186,7 +186,7 @@ export function search(
 					}
 
 					// Apply outdated filter if not showing outdated packages
-					if (!show_outdated && pkg.outdated) {
+					if (hide_outdated && pkg.outdated) {
 						continue;
 					}
 
@@ -289,7 +289,7 @@ export function search(
 					}
 
 					// Apply outdated filter if not showing outdated packages
-					if (!show_outdated && pkg.outdated) {
+					if (hide_outdated && pkg.outdated) {
 						continue;
 					}
 
@@ -310,7 +310,7 @@ export function search(
 		}
 
 		// Apply outdated filter if not showing outdated packages
-		if (!show_outdated) {
+		if (hide_outdated) {
 			result_packages = result_packages.filter((pkg) => !pkg.outdated);
 		}
 

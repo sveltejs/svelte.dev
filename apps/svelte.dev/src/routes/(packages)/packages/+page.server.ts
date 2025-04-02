@@ -17,7 +17,7 @@ export async function load({ url }) {
 	const tags = (url.searchParams.get('tags') ?? '').split(',').filter(Boolean);
 	let page = Math.max(1, +(url.searchParams.get('page')?.toString() ?? 1));
 	const svelte_5_only = (url.searchParams.get('svelte_5_only') ?? 'false') === 'true';
-	const show_outdated = (url.searchParams.get('show_outdated') ?? 'true') === 'true';
+	const hide_outdated = (url.searchParams.get('hide_outdated') ?? 'true') === 'false';
 	const sort_by_param = url.searchParams.get('sort_by') as SortCriterion;
 	let direction = url.searchParams.get('direction') as SortDirection;
 
@@ -33,7 +33,7 @@ export async function load({ url }) {
 		direction,
 		filters: {
 			svelte_5_only,
-			show_outdated
+			hide_outdated
 		}
 	});
 

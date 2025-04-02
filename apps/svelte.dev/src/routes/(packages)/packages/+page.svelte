@@ -17,9 +17,9 @@
 		false,
 		ReactiveQueryParam.boolean
 	);
-	const show_outdated_qp = new ReactiveQueryParam<boolean>(
-		'show_outdated',
-		true,
+	const hide_outdated_qp = new ReactiveQueryParam<boolean>(
+		'hide_outdated',
+		false,
 		ReactiveQueryParam.boolean
 	);
 	const sort_by_qp = new ReactiveQueryParam<SortCriterion>('sort_by', 'popularity');
@@ -71,7 +71,7 @@
 		tags_qp.current;
 		page_qp.current;
 		svelte_5_only_qp.current;
-		show_outdated_qp.current;
+		hide_outdated_qp.current;
 		sort_by_qp.current;
 		direction_qp.current;
 
@@ -92,7 +92,7 @@
 				page: page_qp.current,
 				tags: $state.snapshot(tags_qp.current),
 				svelte_5_only: svelte_5_only_qp.current,
-				show_outdated: show_outdated_qp.current,
+				hide_outdated: hide_outdated_qp.current,
 				sort_by: sort_by_qp.current,
 				direction: direction_qp.current
 			}
@@ -234,21 +234,21 @@
 
 			<div class="pagination">
 				<Pagination total={total_pages} bind:page={page_qp.current}>
-					{#snippet children(pageItem)}
-						{#if pageItem.type === 'ellipsis'}
+					{#snippet children(page_item)}
+						{#if page_item.type === 'ellipsis'}
 							<span>-</span>
 						{:else}
 							{@const url = new URL(page.url)}
-							{@const _ = url.searchParams.set('page', pageItem.value.toString())}
+							{@const _ = url.searchParams.set('page', page_item.value.toString())}
 							<a
 								href={url.pathname + url.search}
-								aria-current={page_qp.current === pageItem.value}
+								aria-current={page_qp.current === page_item.value}
 								onclick={(e) => {
 									e.preventDefault();
-									page_qp.current = pageItem.value;
+									page_qp.current = page_item.value;
 								}}
 							>
-								{pageItem.value}
+								{page_item.value}
 							</a>
 						{/if}
 					{/snippet}
@@ -308,6 +308,7 @@
 			<ul class="sidebar">
 				<b>FILTERS</b>
 				<li>
+					<input type="checkbox" value="svelte_5_only" bind:checked={svelte_5_only_qp.current} />
 					<a
 						class="tag"
 						href={svelte_5_only_qp.url_from(!svelte_5_only_qp.current)}
@@ -322,34 +323,51 @@
 					</a>
 				</li>
 				<li>
+					<input type="checkbox" value="svelte_5_only" bind:checked={hide_outdated_qp.current} />
 					<a
 						class="tag"
-						href={show_outdated_qp.url_from(!show_outdated_qp.current)}
+						href={hide_outdated_qp.url_from(!hide_outdated_qp.current)}
 						onclick={(e) => {
 							e.preventDefault();
-							show_outdated_qp.current = !show_outdated_qp.current;
+							hide_outdated_qp.current = !hide_outdated_qp.current;
 						}}
-						aria-current={show_outdated_qp.current}
+						aria-current={hide_outdated_qp.current}
 					>
-						Outdated
+						Hide Outdated
 					</a>
 				</li>
 			</ul>
 
 			<br /><br />
+
 			<ul class="sidebar">
 				<b>TAGS</b>
 				{#each [{ tag: 'all', short_title: 'All' }].concat(data.tags) as tag}
 					{@const link = new URL(page.url)}
-					{@const _ = link.searchParams.set(
-						'tags',
-						(tag.tag === 'all'
-							? []
-							: (link.searchParams.get('tags') ?? '').split(',').concat(tag.tag).filter(Boolean)
-						).join(',')
-					)}
+					{@const _ = link.searchParams.set('tags', (tag.tag === 'all' ? [] : [tag.tag]).join(','))}
 
 					<li>
+						<input
+							type="checkbox"
+							value={tag.tag}
+							bind:checked={() =>
+								tag.tag === 'all'
+									? tags_qp.current.length === 0
+									: tags_qp.current.includes(tag.tag),
+							() => {
+								if (tag.tag === 'all') {
+									// Click on this should just empty the tags array
+									tags_qp.current = [];
+									return;
+								}
+
+								if (tags_qp.current.includes(tag.tag)) {
+									tags_qp.current = tags_qp.current.filter((t) => t !== tag.tag);
+								} else {
+									tags_qp.current = [...tags_qp.current, tag.tag];
+								}
+							}}
+						/>
 						<a
 							class="tag"
 							href={link.pathname + link.search}
@@ -362,11 +380,7 @@
 									return;
 								}
 
-								if (tags_qp.current.includes(tag.tag)) {
-									tags_qp.current = tags_qp.current.filter((t) => t !== tag.tag);
-								} else {
-									tags_qp.current = [...tags_qp.current, tag.tag];
-								}
+								tags_qp.current = [tag.tag];
 							}}
 							aria-current={(tag.tag === 'all' && tags_qp.current.length === 0) ||
 								tags_qp.current.includes(tag.tag)}

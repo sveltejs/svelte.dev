@@ -16,7 +16,7 @@ addEventListener('message', async (event) => {
 			page = 1,
 			tags = [],
 			svelte_5_only = false,
-			show_outdated = true,
+			hide_outdated = false,
 			sort_by,
 			direction = 'dsc'
 		} = payload;
@@ -30,7 +30,7 @@ addEventListener('message', async (event) => {
 			direction,
 			filters: {
 				svelte_5_only,
-				show_outdated
+				hide_outdated
 			}
 		});
 
