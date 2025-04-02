@@ -12,7 +12,7 @@ import svg from './plugins/svg';
 import replace from './plugins/replace';
 import loop_protect from './plugins/loop-protect';
 import type { Plugin, RollupCache, TransformResult } from '@rollup/browser';
-import type { BundleMessageData, BundleOptions } from '../workers';
+import type { BundleMessageData, BundleOptions, BundleResult } from '../workers';
 import type { Warning } from '../../types';
 import type { CompileError, CompileResult } from 'svelte/compiler';
 import type { File } from '../../Workspace.svelte';
@@ -427,8 +427,6 @@ async function get_bundle(
 	};
 }
 
-export type BundleResult = ReturnType<typeof bundle>;
-
 async function bundle(
 	svelte: typeof import('svelte/compiler'),
 	svelte_version: string,
@@ -436,7 +434,7 @@ async function bundle(
 	files: File[],
 	options: BundleOptions,
 	can_use_experimental_async: boolean
-) {
+): Promise<BundleResult> {
 	if (!DEV) {
 		console.clear();
 		console.log(`running Svelte compiler version %c${svelte.VERSION}`, 'font-weight: bold');
@@ -547,27 +545,24 @@ async function bundle(
 
 		return {
 			uid,
+			error: null,
 			client: client_result,
 			server: server_result,
 			tailwind: client.tailwind,
-			imports: client.imports,
-			// Svelte 5 returns warnings as error objects with a toJSON method, prior versions return a POJO
-			// TODO are bundler warnings even used anywhere?
-			warnings: client.warnings.map((w: any) => w.toJSON?.() ?? w),
-			error: null
+			imports: client.imports
 		};
 	} catch (err) {
 		console.error(err);
 
-		const e = err as CompileError;
+		const e = err as CompileError; // TODO could be a non-Svelte error?
 
 		return {
 			uid,
+			error: { ...e, message: e.message }, // not all Svelte versions return an enumerable message property
 			client: null,
 			server: null,
-			imports: null,
-			warnings: [],
-			error: { ...e, message: e.message } // not all Svelte versions return an enumerable message property
+			tailwind: null,
+			imports: null
 		};
 	}
 }

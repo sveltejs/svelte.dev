@@ -1,5 +1,6 @@
 import type { CompileError, CompileOptions, CompileResult, Warning } from 'svelte/compiler';
 import type { File } from '../Workspace.svelte';
+import type { MessageDetails } from '$lib/types';
 
 export type CompilerCommand =
 	| {
@@ -60,6 +61,15 @@ export type BundleMessageData = {
 	files: File[];
 	options: BundleOptions;
 };
+
+export interface BundleResult {
+	uid: number;
+	error: CompileError | null;
+	client: any | null; // TODO
+	server: any | null; // TODO
+	tailwind: string | null;
+	imports: string[];
+}
 
 declare global {
 	var svelte: typeof import('svelte/compiler');
