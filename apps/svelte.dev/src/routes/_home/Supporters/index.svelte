@@ -98,6 +98,7 @@
 		background: no-repeat;
 		background-size: auto 102%;
 		filter: grayscale(1) opacity(0.7);
+		transform: var(--safari-fix);
 		-webkit-transform: var(--safari-fix);
 		order: calc((var(--columns) * (var(--row) - 1)) + var(--column));
 
