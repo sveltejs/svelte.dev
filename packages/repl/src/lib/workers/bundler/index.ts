@@ -237,6 +237,11 @@ async function get_bundle(
 				}
 			}
 
+			if (importer.startsWith(VIRTUAL)) {
+				// if this was imported by one of our files, add it to the `imports` set
+				imports.add(pkg_name);
+			}
+
 			const v = await resolve_version(match[1], match[2] ?? default_version);
 			const pkg = await fetch_package(pkg_name, pkg_name === 'svelte' ? svelte_version : v);
 			const subpath = resolve_subpath(pkg, '.' + (match[3] ?? ''));
