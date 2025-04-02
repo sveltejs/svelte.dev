@@ -23,9 +23,7 @@ export default class Bundler {
 			type: 'module'
 		});
 
-		this.#worker.postMessage({ type: 'init', svelte_version });
-
-		this.#worker.addEventListener('message', (event: MessageEvent<BundleMessageData>) => {
+		this.#worker.onmessage = (event: MessageEvent<BundleMessageData>) => {
 			if (event.data.type === 'status') {
 				onstatus(event.data.message);
 				return;
@@ -47,7 +45,9 @@ export default class Bundler {
 			this.#handlers.delete(event.data.uid);
 
 			handler(event.data);
-		});
+		};
+
+		this.#worker.postMessage({ type: 'init', svelte_version });
 	}
 
 	bundle(files: File[], options: { tailwind?: boolean }): Promise<BundleResult> {
