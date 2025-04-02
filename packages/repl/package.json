@@ -24,22 +24,28 @@
 	"homepage": "https://github.com/sveltejs/svelte.dev/tree/main/packages/repl/#readme",
 	"exports": {
 		".": {
+			"types": "./src/lib/Repl.svelte",
 			"svelte": "./src/lib/Repl.svelte",
 			"default": "./src/lib/Repl.svelte"
 		},
 		"./bundler": {
+			"types": "./src/lib/Bundler.ts",
 			"default": "./src/lib/Bundler.ts"
 		},
 		"./editor": {
+			"types": "./src/lib/Editor/Editor.svelte",
 			"svelte": "./src/lib/Editor/Editor.svelte"
 		},
 		"./viewer": {
+			"types": "./src/lib/Output/Viewer.svelte",
 			"svelte": "./src/lib/Output/Viewer.svelte"
 		},
 		"./workspace": {
-			"svelte": "./src/lib/Workspace.svelte"
+			"types": "./src/lib/Workspace.svelte.ts",
+			"svelte": "./src/lib/Workspace.svelte.ts"
 		},
 		"./console": {
+			"types": "./src/lib/Output/console/Console.svelte",
 			"svelte": "./src/lib/Output/console/Console.svelte"
 		}
 	},

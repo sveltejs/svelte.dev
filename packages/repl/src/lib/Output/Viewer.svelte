@@ -27,7 +27,7 @@
 	export let injectedCSS = '';
 	export let theme: 'light' | 'dark';
 	/** A store containing the current bundle result. Takes precedence over REPL context, if set */
-	export let bundle: Writable<Bundle | null> | undefined = undefined;
+	export let bundle: Readable<Bundle | null> | undefined = undefined;
 	/** Called everytime a log is pushed. If this is set, the built-in console coming with the Viewer isn't shown */
 	export let onLog: ((logs: Log[]) => void) | undefined = undefined;
 

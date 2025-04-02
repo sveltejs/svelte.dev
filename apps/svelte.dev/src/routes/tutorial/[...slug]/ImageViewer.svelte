@@ -1,5 +1,5 @@
 <script>
-	/** @type {import('editor').File | null} */
+	/** @type {import('@sveltejs/repl/workspace').File | null} */
 	export let selected;
 
 	const image_types = new Map([

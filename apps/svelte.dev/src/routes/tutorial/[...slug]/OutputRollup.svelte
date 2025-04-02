@@ -1,8 +1,6 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
-	// @ts-expect-error TODO types
 	import Viewer from '@sveltejs/repl/viewer';
-	// @ts-expect-error TODO types
 	import Console, { type Log } from '@sveltejs/repl/console';
 	import { theme } from '@sveltejs/site-kit/state';
 	import Chrome from './Chrome.svelte';
@@ -39,6 +37,8 @@
 			{bundle}
 			theme={theme.current}
 			injectedCSS="@import '/tutorial/shared.css';"
+			error={null}
+			status={null}
 		/>
 	{/if}
 
