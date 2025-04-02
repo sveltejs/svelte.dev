@@ -87,7 +87,7 @@ export function resolve_subpath(pkg: Package, subpath: string): string {
 				conditions: ['svelte', 'module', 'browser', 'development']
 			});
 
-			return resolved?.[0];
+			return resolved?.[0] as string;
 		} catch {
 			throw new Error(
 				`no matched export path was found for "${subpath}" in "${pkg.meta.name}/package.json"`
