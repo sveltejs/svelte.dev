@@ -89,13 +89,10 @@ addEventListener('message', async (event) => {
 			payload: {
 				error: null,
 				result: {
-					// @ts-expect-error Svelte 3/4 doesn't contain this field
 					metadata: { runes: false },
 					...result,
 					warnings: result.warnings.map((w) => {
-						// @ts-expect-error This exists on Svelte 3/4 and is required to be deleted, otherwise postMessage won't work
 						delete w.toString;
-						// @ts-expect-error https://github.com/sveltejs/svelte/issues/13628 (fixed in 5.0, but was like that for most of the preview phase)
 						return { message: w.message, ...w };
 					})
 				},
@@ -107,7 +104,6 @@ addEventListener('message', async (event) => {
 			id,
 			filename: file.name,
 			payload: {
-				// @ts-expect-error
 				error: { message: e.message, ...e },
 				result: null,
 				migration: null

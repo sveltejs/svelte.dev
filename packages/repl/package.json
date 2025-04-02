@@ -85,6 +85,7 @@
 		"@codemirror/state": "^6.5.0",
 		"@codemirror/view": "^6.35.3",
 		"@jridgewell/sourcemap-codec": "^1.4.15",
+		"@lezer/highlight": "^1.2.1",
 		"@replit/codemirror-lang-svelte": "^6.0.0",
 		"@replit/codemirror-vim": "^6.0.14",
 		"@rich_harris/svelte-split-pane": "^2.0.0",

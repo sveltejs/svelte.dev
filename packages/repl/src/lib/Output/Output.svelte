@@ -280,10 +280,6 @@
 		}
 	}
 
-	div[slot] {
-		height: 100%;
-	}
-
 	.tab-content {
 		position: absolute;
 		width: 100%;

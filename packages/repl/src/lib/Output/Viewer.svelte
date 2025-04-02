@@ -50,6 +50,8 @@
 
 	let logs: Log[] = $state([]);
 	let log_group_stack: Log[][] = [];
+
+	// svelte-ignore state_referenced_locally
 	let current_log_group = logs;
 
 	let iframe: HTMLIFrameElement = $state();
