@@ -16,8 +16,6 @@ export const state = new (class RollupState {
  * @returns {Promise<import('$lib/tutorial').Adapter>}
  */
 export async function create(): Promise<Adapter> {
-	bundler?.destroy();
-
 	state.progress = { value: 0, text: 'loading files' };
 
 	let done = false;
