@@ -73,7 +73,7 @@ export async function fetch_package(name: string, version: string): Promise<Pack
 	return packages.get(key)!;
 }
 
-export function resolve_subpath(pkg: Package, subpath: string) {
+export function resolve_subpath(pkg: Package, subpath: string): string {
 	// match legacy Rollup logic — pkg.svelte takes priority over pkg.exports
 	if (typeof pkg.meta.svelte === 'string' && subpath === '.') {
 		return `./${pkg.meta.svelte.replace('./', '')}`;
@@ -120,14 +120,14 @@ export function resolve_subpath(pkg: Package, subpath: string) {
 			throw new Error(`could not find entry point in "${pkg.meta.name}/package.json"`);
 		}
 
-		return resolved_id;
+		return resolved_id as string;
 	}
 
 	if (typeof pkg.meta.browser === 'object') {
 		// this will either return `pkg.browser[subpath]` or `subpath`
 		return resolve.legacy(pkg, {
 			browser: subpath
-		});
+		}) as string;
 	}
 
 	return subpath;
