@@ -200,7 +200,7 @@ async function get_bundle(
 				const url = new URL(importee, importer);
 
 				for (const suffix of ['', '.js', '.json']) {
-					const with_suffix = `.${url.pathname}${suffix}`;
+					const with_suffix = `${url.pathname.slice(1)}${suffix}`;
 					const file = local_files_lookup.get(with_suffix);
 
 					if (file) {
@@ -262,7 +262,7 @@ async function get_bundle(
 			}
 
 			if (resolved.startsWith(VIRTUAL)) {
-				const file = local_files_lookup.get(`./${resolved.slice(VIRTUAL.length + 1)}`)!;
+				const file = local_files_lookup.get(resolved.slice(VIRTUAL.length + 1))!;
 				return file.contents;
 			}
 
@@ -321,7 +321,7 @@ async function get_bundle(
 				if (result.css?.code) {
 					// resolve local files by inlining them
 					result.css.code = result.css.code.replace(
-						/url\(['"]?(\..+?\.(svg|webp|png))['"]?\)/g,
+						/url\(['"]?\.\/(.+?\.(svg|webp|png))['"]?\)/g,
 						(match, $1, $2) => {
 							if (local_files_lookup.has($1)) {
 								if ($2 === 'svg') {
@@ -461,7 +461,7 @@ async function bundle({
 
 	const lookup: Map<string, File> = new Map();
 
-	lookup.set('./__entry.js', {
+	lookup.set('__entry.js', {
 		type: 'file',
 		name: '__entry.js',
 		basename: '__entry.js',
@@ -494,7 +494,7 @@ async function bundle({
 		text: true
 	});
 
-	lookup.set(`./${shared_file}`, {
+	lookup.set(shared_file, {
 		type: 'file',
 		name: shared_file,
 		basename: shared_file,
@@ -505,8 +505,7 @@ async function bundle({
 	});
 
 	files.forEach((file) => {
-		const path = `./${file.name}`;
-		lookup.set(path, file);
+		lookup.set(file.name, file);
 	});
 
 	let client: Awaited<ReturnType<typeof get_bundle>> = await get_bundle(
