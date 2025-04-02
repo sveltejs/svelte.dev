@@ -10,18 +10,15 @@ export const state = new (class RollupState {
 	progress = $state.raw({ value: 0, text: 'initialising' });
 	bundler = new Bundler({
 		svelte_version: 'latest',
-		onstatus(val) {
+		onstatus: (val) => {
 			if (!done && val === null) {
 				done = true;
-				state.progress = { value: 1, text: 'ready' };
+				this.progress = { value: 1, text: 'ready' };
 			}
 		}
 	});
 })();
 
-/**
- * @returns {Promise<import('$lib/tutorial').Adapter>}
- */
 export async function create(): Promise<Adapter> {
 	state.progress = { value: 0.5, text: 'loading svelte compiler' };
 
@@ -29,7 +26,7 @@ export async function create(): Promise<Adapter> {
 	let current_files: Item[] = [];
 
 	async function compile() {
-		await state.bundler.bundle(
+		state.bundler.bundle(
 			current_files
 				// TODO we can probably remove all the SvelteKit specific stuff from the tutorial content once this settles down
 				.filter((f): f is File => f.name.startsWith('/src/lib/') && f.type === 'file')
