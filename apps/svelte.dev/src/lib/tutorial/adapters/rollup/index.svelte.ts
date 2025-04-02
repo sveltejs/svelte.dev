@@ -23,7 +23,6 @@ export async function create(): Promise<Adapter> {
 	let done = false;
 
 	bundler = new Bundler({
-		packages_url: 'https://unpkg.com',
 		svelte_version: 'latest',
 		onstatus(val) {
 			if (!done && val === null) {

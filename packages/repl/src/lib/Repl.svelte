@@ -11,7 +11,6 @@
 	import type { Bundle, ReplContext } from './types.js';
 
 	interface Props {
-		packagesUrl?: string;
 		svelteVersion?: string;
 		embedded?: boolean | 'output-only';
 		orientation?: 'columns' | 'rows';
@@ -27,7 +26,6 @@
 	}
 
 	let {
-		packagesUrl = 'https://unpkg.com',
 		svelteVersion = 'latest',
 		embedded = false,
 		orientation = 'columns',
@@ -122,7 +120,6 @@
 
 	const bundler = BROWSER
 		? new Bundler({
-				packages_url: packagesUrl,
 				svelte_version: svelteVersion,
 				onstatus: (message) => {
 					if (message) {

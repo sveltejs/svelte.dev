@@ -56,7 +56,6 @@ export type BundleMessageData = {
 	uid: number;
 	type: 'init' | 'bundle' | 'status' | 'error';
 	message: string;
-	packages_url: string;
 	svelte_version: string;
 	files: File[];
 	options: BundleOptions;
