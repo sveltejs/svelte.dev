@@ -208,7 +208,11 @@ async function get_bundle(
 				importer
 			);
 			const importer_pkg =
-				importer_match && (await fetch_package(importer_match[1], importer_match[2]));
+				importer_match &&
+				(await fetch_package(
+					importer_match[1],
+					importer_match[1] === 'svelte' ? version : importer_match[2]
+				));
 
 			// external package importing from itself
 			if (importer_pkg && importee[0] === '.') {
@@ -241,8 +245,8 @@ async function get_bundle(
 				}
 			}
 
-			const version = await resolve_version(match[1], match[2] ?? default_version);
-			const pkg = await fetch_package(pkg_name, version);
+			const v = await resolve_version(match[1], match[2] ?? default_version);
+			const pkg = await fetch_package(pkg_name, pkg_name === 'svelte' ? version : v);
 			const subpath = resolve_subpath(pkg, '.' + (match[3] ?? ''));
 
 			return add_suffix(pkg, subpath.slice(2));
@@ -256,10 +260,11 @@ async function get_bundle(
 			}
 
 			if (resolved.startsWith(NPM)) {
-				let [, name, version, subpath] =
-					/^npm:\/\/\$\/((?:@[^/]+\/)?[^/@]+)(?:@([^/]+))?\/(.+)$/.exec(resolved)!;
+				let [, name, v, subpath] = /^npm:\/\/\$\/((?:@[^/]+\/)?[^/@]+)(?:@([^/]+))?\/(.+)$/.exec(
+					resolved
+				)!;
 
-				const pkg = await fetch_package(name, version);
+				const pkg = await fetch_package(name, name === 'svelte' ? version : v);
 
 				const file = pkg.contents[subpath];
 				if (file) return file.text;
