@@ -1,7 +1,6 @@
 import '@sveltejs/site-kit/polyfills';
 import { walk } from 'zimmerframe';
 import '../patch_window';
-import { sleep } from '../../utils';
 import { rollup } from '@rollup/browser';
 import { DEV } from 'esm-env';
 import * as resolve from 'resolve.exports';
@@ -99,6 +98,77 @@ async function fetch_package(name: string, version: string) {
 	return packages.get(key);
 }
 
+function resolve_subpath(pkg: Package, subpath: string) {
+	// match legacy Rollup logic — pkg.svelte takes priority over pkg.exports
+	if (typeof pkg.meta.svelte === 'string' && subpath === '.') {
+		return pkg.meta.svelte;
+	}
+
+	// modern
+	if (pkg.meta.exports) {
+		try {
+			const resolved = resolve.exports(pkg.meta, subpath, {
+				browser: true,
+				conditions: ['svelte', 'module', 'browser', 'development']
+			});
+
+			return resolved?.[0];
+		} catch {
+			throw `no matched export path was found in "${pkg.meta.name}/package.json"`;
+		}
+	}
+
+	// legacy
+	if (subpath === '.') {
+		let resolved_id = resolve.legacy(pkg.meta, {
+			fields: ['browser', 'module', 'main']
+		});
+
+		if (typeof resolved_id === 'object' && !Array.isArray(resolved_id)) {
+			const subpath = resolved_id['.'];
+			if (subpath === false) return 'data:text/javascript,export {}';
+
+			resolved_id =
+				subpath ??
+				resolve.legacy(pkg.meta, {
+					fields: ['module', 'main']
+				});
+		}
+
+		if (!resolved_id) {
+			// last ditch — try to match index.js/index.mjs
+			if (pkg.contents['index.mjs']) return './index.mjs';
+			if (pkg.contents['index.js']) return './index.js';
+
+			throw `could not find entry point in "${pkg.meta.name}/package.json"`;
+		}
+
+		return resolved_id;
+	}
+
+	if (typeof pkg.meta.browser === 'object') {
+		// this will either return `pkg.browser[subpath]` or `subpath`
+		return resolve.legacy(pkg, {
+			browser: subpath
+		});
+	}
+
+	return subpath;
+}
+
+function add_suffix(pkg: Package, path: string) {
+	for (const suffix of ['', '.js', '.mjs', '.cjs', '/index.js', '/index.mjs', '/index.cjs']) {
+		const with_suffix = path + suffix;
+		const file = pkg.contents[with_suffix];
+
+		if (file && file.type === 'file') {
+			return `npm://$/${pkg.meta.name}@${pkg.meta.version}/${with_suffix}`;
+		}
+	}
+
+	throw new Error(`Could not find ${path} in ${pkg.meta.name}@${pkg.meta.version}`);
+}
+
 async function init(v: string) {
 	version = await resolve_version('svelte', v);
 	console.log(`Using Svelte compiler version ${version}`);
@@ -170,109 +240,6 @@ self.addEventListener('message', async (event: MessageEvent<BundleMessageData>) 
 });
 
 const ABORT = { aborted: true };
-
-const FETCH_CACHE: Map<string, Promise<{ url: string; body: string }>> = new Map();
-
-async function fetch_if_uncached(url: string, uid: number) {
-	if (FETCH_CACHE.has(url)) {
-		return FETCH_CACHE.get(url);
-	}
-
-	// TODO: investigate whether this is necessary
-	await sleep(50);
-	if (uid !== current_id) throw ABORT;
-
-	const promise = fetch(url)
-		.then(async (r) => {
-			if (!r.ok) throw new Error(await r.text());
-
-			return {
-				url: r.url,
-				body: await r.text()
-			};
-		})
-		.catch((err) => {
-			FETCH_CACHE.delete(url);
-			throw err;
-		});
-
-	FETCH_CACHE.set(url, promise);
-	return promise;
-}
-
-async function follow_redirects(url: string, uid: number) {
-	const res = await fetch_if_uncached(url, uid);
-	return res?.url;
-}
-
-async function resolve_from_pkg(
-	pkg: Record<string, unknown>,
-	subpath: string,
-	uid: number,
-	pkg_url_base: string
-) {
-	// match legacy Rollup logic — pkg.svelte takes priority over pkg.exports
-	if (typeof pkg.svelte === 'string' && subpath === '.') {
-		return pkg.svelte;
-	}
-
-	// modern
-	if (pkg.exports) {
-		try {
-			const resolved = resolve.exports(pkg, subpath, {
-				browser: true,
-				conditions: ['svelte', 'module', 'browser', 'development']
-			});
-
-			return resolved?.[0];
-		} catch {
-			throw `no matched export path was found in "${pkg.name}/package.json"`;
-		}
-	}
-
-	// legacy
-	if (subpath === '.') {
-		let resolved_id = resolve.legacy(pkg, {
-			fields: ['browser', 'module', 'main']
-		});
-
-		if (typeof resolved_id === 'object' && !Array.isArray(resolved_id)) {
-			const subpath = resolved_id['.'];
-			if (subpath === false) return 'data:text/javascript,export {}';
-
-			resolved_id =
-				subpath ??
-				resolve.legacy(pkg, {
-					fields: ['module', 'main']
-				});
-		}
-
-		if (!resolved_id) {
-			// last ditch — try to match index.js/index.mjs
-			for (const index_file of ['index.mjs', 'index.js']) {
-				try {
-					const indexUrl = new URL(index_file, `${pkg_url_base}/`).href;
-					return (await follow_redirects(indexUrl, uid)) ?? '';
-				} catch {
-					// maybe the next option will be successful
-				}
-			}
-
-			throw `could not find entry point in "${pkg.name}/package.json"`;
-		}
-
-		return resolved_id;
-	}
-
-	if (typeof pkg.browser === 'object') {
-		// this will either return `pkg.browser[subpath]` or `subpath`
-		return resolve.legacy(pkg, {
-			browser: subpath
-		});
-	}
-
-	return subpath;
-}
 
 let previous: {
 	key: string;
@@ -394,23 +361,12 @@ async function get_bundle(
 				parts.shift();
 				const path = parts.join('/');
 
-				for (const suffix of ['', '.js', '.mjs', '.cjs', '/index.js', '/index.mjs', '/index.cjs']) {
-					const with_suffix = path + suffix;
-					const file = importer_pkg.contents[with_suffix];
-
-					if (file && file.type === 'file') {
-						return url.href + suffix;
-					}
-				}
-
-				throw new Error(`Could not resolve ${importee} from ${importer}`);
+				return add_suffix(importer_pkg, path);
 			}
 
 			// bare import
 			const match = /^((?:@[^/]+\/)?[^/@]+)(?:@([^/]+))?(\/.+)?$/.exec(importee);
-			if (!match) {
-				return console.error(`Invalid import "${importee}"`);
-			}
+			if (!match) throw new Error(`Invalid import "${importee}"`);
 
 			const pkg_name = match[1];
 
@@ -431,32 +387,9 @@ async function get_bundle(
 
 			const pkg = await fetch_package(pkg_name, version);
 
-			let subpath = '.' + (match[3] ?? '');
+			let subpath = resolve_subpath(pkg, '.' + (match[3] ?? ''));
 
-			if (pkg.meta.exports) {
-				try {
-					const resolved = resolve.exports(pkg.meta, subpath ?? '.', {
-						browser: true,
-						conditions: ['svelte', 'module', 'browser', 'development']
-					});
-
-					subpath = resolved?.[0];
-				} catch {
-					console.log({ importee, importer, pkg_name, version, subpath });
-					throw `no matched export path was found in "${pkg_name}/package.json"`;
-				}
-			}
-
-			for (const suffix of ['', '.js', '.mjs', '.cjs', '/index.js', '/index.mjs', '/index.cjs']) {
-				const with_suffix = subpath.slice(2) + suffix;
-				const file = pkg.contents[with_suffix];
-
-				if (file && file.type === 'file') {
-					return `npm://$/${pkg_name}@${version}/${with_suffix}`;
-				}
-			}
-
-			throw new Error(`Could not resolve ${pkg_name}@${version}`);
+			return add_suffix(pkg, subpath.slice(2));
 		},
 		async load(resolved) {
 			if (uid !== current_id) throw ABORT;
