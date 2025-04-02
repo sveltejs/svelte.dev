@@ -21,6 +21,7 @@
 		injectedJS?: string;
 		injectedCSS?: string;
 		previewTheme?: 'light' | 'dark';
+		onversion?: (version: string) => void;
 		onchange?: () => void;
 		download?: () => void;
 	}
@@ -36,6 +37,7 @@
 		injectedJS = '',
 		injectedCSS = '',
 		previewTheme = 'light',
+		onversion,
 		onchange = () => {},
 		download
 	}: Props = $props();
@@ -121,6 +123,7 @@
 	const bundler = BROWSER
 		? new Bundler({
 				svelte_version: svelteVersion,
+				onversion,
 				onstatus: (message) => {
 					if (message) {
 						// show bundler status, but only after time has elapsed, to

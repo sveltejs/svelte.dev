@@ -54,7 +54,7 @@ export interface BundleOptions {
 
 export type BundleMessageData = {
 	uid: number;
-	type: 'init' | 'bundle' | 'status' | 'error';
+	type: 'init' | 'bundle' | 'status' | 'error' | 'version';
 	message: string;
 	svelte_version: string;
 	files: File[];

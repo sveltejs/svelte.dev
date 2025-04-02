@@ -39,9 +39,15 @@ let inited = Promise.withResolvers<typeof svelte>();
 
 let can_use_experimental_async = false;
 
-async function init(v: string) {
+async function init(v: string, uid: number) {
 	svelte_version = await resolve_version('svelte', v);
 	console.log(`Using Svelte compiler version ${svelte_version}`);
+
+	self.postMessage({
+		type: 'version',
+		uid,
+		message: svelte_version
+	});
 
 	if (svelte_version === 'local') {
 		await import(`${location.origin}/svelte/compiler/index.js`);
@@ -79,7 +85,7 @@ async function init(v: string) {
 self.addEventListener('message', async (event: MessageEvent<BundleMessageData>) => {
 	switch (event.data.type) {
 		case 'init': {
-			init(event.data.svelte_version).then(inited.resolve, inited.reject);
+			init(event.data.svelte_version, event.data.uid).then(inited.resolve, inited.reject);
 			break;
 		}
 

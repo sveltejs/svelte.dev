@@ -23,29 +23,10 @@
 
 	// svelte-ignore non_reactive_update
 	let version = page.url.searchParams.get('version') || 'latest';
-	let is_pr_or_commit_version = /^(pr|commit|branch)-(.+)/.test(version);
 
 	// Hashed URLs are less safe (we can't delete malicious REPLs), therefore
 	// don't allow links to escape the sandbox restrictions
 	const can_escape = browser && !page.url.hash;
-
-	if (version !== 'local' && !is_pr_or_commit_version) {
-		$effect(() => {
-			fetch(`https://cdn.jsdelivr.net/npm/svelte@${version}/package.json`)
-				.then((r) => r.json())
-				.then((pkg) => {
-					if (pkg.version !== version) {
-						version = pkg.version;
-
-						let url = `/playground/${data.gist.id}?version=${version}`;
-						if (location.hash) {
-							url += location.hash;
-						}
-						replaceState(url, {});
-					}
-				});
-		});
-	}
 
 	afterNavigate(() => {
 		name = data.gist.name;
@@ -244,6 +225,14 @@
 				{onchange}
 				{download}
 				previewTheme={theme.current}
+				onversion={(v) => {
+					if (version === (version = v)) return;
+
+					const url = new URL(location.href);
+					url.searchParams.set('version', v);
+
+					replaceState(url, {});
+				}}
 			/>
 		</div>
 	{/if}

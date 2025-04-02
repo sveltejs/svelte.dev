@@ -2,8 +2,6 @@ import type { BundleResult } from './workers/bundler';
 import type { BundleMessageData } from './workers/workers';
 import type { File } from 'editor';
 
-const workers = new Map();
-
 let uid = 1;
 
 export default class Bundler {
@@ -13,29 +11,28 @@ export default class Bundler {
 	constructor({
 		svelte_version,
 		onstatus,
+		onversion,
 		onerror
 	}: {
 		svelte_version: string;
 		onstatus: (val: string | null) => void;
+		onversion?: (version: string) => void;
 		onerror?: (message: string) => void;
 	}) {
-		if (!workers.has(svelte_version)) {
-			const worker = new Worker(new URL('./workers/bundler/index', import.meta.url), {
-				type: 'module'
-			});
+		this.#worker = new Worker(new URL('./workers/bundler/index', import.meta.url), {
+			type: 'module'
+		});
 
-			worker.postMessage({ type: 'init', svelte_version });
-			workers.set(svelte_version, worker);
-		}
-
-		this.#worker = workers.get(svelte_version);
+		this.#worker.postMessage({ type: 'init', svelte_version });
 
 		this.#worker.addEventListener('message', (event: MessageEvent<BundleMessageData>) => {
-			const handler = this.#handlers.get(event.data.uid);
-			if (!handler) return; // meant for different bundler with same worker
-
 			if (event.data.type === 'status') {
 				onstatus(event.data.message);
+				return;
+			}
+
+			if (event.data.type === 'version') {
+				onversion?.(event.data.message);
 				return;
 			}
 
@@ -45,8 +42,11 @@ export default class Bundler {
 			}
 
 			onstatus(null);
-			handler(event.data);
+
+			const handler = this.#handlers.get(event.data.uid);
 			this.#handlers.delete(event.data.uid);
+
+			handler(event.data);
 		});
 	}
 
