@@ -68,10 +68,12 @@ export async function resolve_version(name: string, version: string): Promise<st
 	const key = `${name}@${version}`;
 
 	if (!versions.has(key)) {
-		const promise = fetch(`https://cdn.jsdelivr.net/npm/${key}/package.json`).then(async (r) => {
+		const promise = fetch(
+			`https://data.jsdelivr.com/v1/packages/npm/${name}/resolved?specifier=${version}`
+		).then(async (r) => {
 			if (!r.ok) {
 				versions.delete(key);
-				throw new Error(await r.text());
+				throw new Error(`Failed to import ${key}. Are you sure the package exists?`);
 			}
 
 			return (await r.json()).version;
