@@ -270,7 +270,8 @@ async function get_bundle(
 		transform(code, id) {
 			if (uid !== current_id) throw ABORT;
 
-			self.postMessage({ type: 'status', message: `bundling ${id}` });
+			const message = `bundling ${id.replace(VIRTUAL + '/', '').replace(NPM + '/', '')}`;
+			self.postMessage({ type: 'status', message });
 
 			if (!/\.(svelte|js)$/.test(id)) return null;
 
