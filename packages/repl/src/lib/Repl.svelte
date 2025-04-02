@@ -93,14 +93,10 @@
 		svelteVersion
 	});
 
-	let current_token: Symbol;
-
 	async function rebundle() {
-		const token = (current_token = Symbol());
-		const result = await bundler!.bundle(workspace.files as File[], {
+		$bundle = await bundler!.bundle(workspace.files as File[], {
 			tailwind: workspace.tailwind
 		});
-		if (token === current_token) $bundle = result;
 	}
 
 	async function migrate() {
