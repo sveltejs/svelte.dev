@@ -14,7 +14,9 @@ const packages = new Map<string, Promise<Package>>();
 const pkg_pr_new_regex = /^(pr|commit|branch)-(.+)/;
 
 export async function resolve_version(name: string, version: string): Promise<string> {
-	// TODO handle `local` version (i.e. create an endpoint)
+	if (name === 'svelte' && version === 'local') {
+		return version;
+	}
 
 	if (pkg_pr_new_regex.test(version)) {
 		return version;
@@ -144,4 +146,31 @@ export function add_suffix(pkg: Package, path: string) {
 	}
 
 	throw new Error(`Could not find ${path} in ${pkg.meta.name}@${pkg.meta.version}`);
+}
+
+const LOCAL_PKG_URL = `${location.origin}/svelte/package.json`;
+let local_svelte_pkg: Promise<any>;
+
+export async function resolve_local(specifier: string) {
+	const pkg = await (local_svelte_pkg ??= fetch(LOCAL_PKG_URL).then((r) => r.json()));
+
+	const subpath = resolve.exports(pkg, specifier.replace('svelte', '.'), {
+		browser: true
+	})[0];
+
+	return new URL(subpath, LOCAL_PKG_URL).href;
+}
+
+export function parse_npm_url(href: string) {
+	const match = /^npm:\/\/\$\/((?:@[^/]+\/)?[^/@]+)(?:@([^/]+))?(\/.+)?$/.exec(href);
+
+	if (!match) {
+		throw new Error(`${href} is not a valid npm URL`);
+	}
+
+	return {
+		name: match[1],
+		version: match[2],
+		subpath: match[3]
+	};
 }

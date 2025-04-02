@@ -19,13 +19,20 @@ import type { File } from 'editor';
 import type { Node } from 'estree';
 import { max } from './semver';
 import { ENTRYPOINT, ESM_ENV, NPM, STYLES, VIRTUAL } from './constants';
-import { add_suffix, fetch_package, resolve_subpath, resolve_version } from './npm';
+import {
+	add_suffix,
+	fetch_package,
+	parse_npm_url,
+	resolve_local,
+	resolve_subpath,
+	resolve_version
+} from './npm';
 
 // hack for magic-string and rollup inline sourcemaps
 // do not put this into a separate module and import it, would be treeshaken in prod
 self.window = self;
 
-let version: string;
+let svelte_version: string;
 let current_id: number;
 
 let inited = Promise.withResolvers<typeof svelte>();
@@ -33,23 +40,27 @@ let inited = Promise.withResolvers<typeof svelte>();
 let can_use_experimental_async = false;
 
 async function init(v: string) {
-	version = await resolve_version('svelte', v);
-	console.log(`Using Svelte compiler version ${version}`);
+	svelte_version = await resolve_version('svelte', v);
+	console.log(`Using Svelte compiler version ${svelte_version}`);
 
-	const pkg = await fetch_package('svelte', version);
+	if (svelte_version === 'local') {
+		await import(`${location.origin}/svelte/compiler/index.js`);
+	} else {
+		const pkg = await fetch_package('svelte', svelte_version);
 
-	const entry = version.startsWith('3.')
-		? 'compiler.js'
-		: version.startsWith('4.')
-			? 'compiler.cjs'
-			: 'compiler/index.js';
+		const entry = svelte_version.startsWith('3.')
+			? 'compiler.js'
+			: svelte_version.startsWith('4.')
+				? 'compiler.cjs'
+				: 'compiler/index.js';
 
-	const compiler = pkg.contents[entry].text;
+		const compiler = pkg.contents[entry].text;
 
-	(0, eval)(compiler + `\n//# sourceURL=${entry}@` + version);
+		(0, eval)(compiler + `\n//# sourceURL=${entry}@` + svelte_version);
+	}
 
 	try {
-		self.svelte.compileModule('', {
+		svelte.compileModule('', {
 			generate: 'client',
 			// @ts-expect-error
 			experimental: {
@@ -188,41 +199,33 @@ async function get_bundle(
 			// importing from a URL
 			if (/^[a-z]+:/.test(importee)) return importee;
 
-			// importing a local file -> `virtual://$/<file>`
-			if (importee[0] === '.' && importer.startsWith(VIRTUAL)) {
-				const url = new URL(importee, importer);
+			// importing a relative file
+			if (importee[0] === '.') {
+				if (importer.startsWith(VIRTUAL)) {
+					const url = new URL(importee, importer);
 
-				for (const suffix of ['', '.js', '.json']) {
-					const with_suffix = `${url.pathname.slice(1)}${suffix}`;
-					const file = virtual.get(with_suffix);
+					for (const suffix of ['', '.js', '.json']) {
+						const with_suffix = `${url.pathname.slice(1)}${suffix}`;
+						const file = virtual.get(with_suffix);
 
-					if (file) {
-						return url.href + suffix;
+						if (file) {
+							return url.href + suffix;
+						}
 					}
+
+					throw new Error(`Could not resolve ${importee} from ${importer}`);
 				}
 
-				throw new Error(`Could not resolve ${importee} from ${importer}`);
-			}
+				if (importer.startsWith(NPM)) {
+					const { name, version } = parse_npm_url(importer);
 
-			const importer_match = /^npm:\/\/\$\/((?:@[^/]+\/)?[^/@]+)(?:@([^/]+))?(\/.+)?$/.exec(
-				importer
-			);
-			const importer_pkg =
-				importer_match &&
-				(await fetch_package(
-					importer_match[1],
-					importer_match[1] === 'svelte' ? version : importer_match[2]
-				));
+					const pkg = await fetch_package(name, name === 'svelte' ? svelte_version : version);
+					const path = new URL(importee, importer).pathname.replace(`/${name}@${version}/`, '');
 
-			// external package importing from itself
-			if (importer_pkg && importee[0] === '.') {
-				const url = new URL(importee, importer);
-				const parts = url.pathname.slice(1).split('/');
-				if (parts[0][0] === '@') parts.shift();
-				parts.shift();
-				const path = parts.join('/');
+					return add_suffix(pkg, path);
+				}
 
-				return add_suffix(importer_pkg, path);
+				return new URL(importee, importer).href;
 			}
 
 			// importing an external package -> `npm://$/<name>@<version>/<path>`
@@ -231,22 +234,31 @@ async function get_bundle(
 
 			const pkg_name = match[1];
 
+			if (pkg_name === 'svelte' && svelte_version === 'local') {
+				return await resolve_local(importee);
+			}
+
 			let default_version = 'latest';
 
-			if (importer_pkg) {
-				if (importer_pkg.meta.name === pkg_name) {
-					default_version = importer_pkg.meta.version;
+			if (importer.startsWith(NPM)) {
+				// use the version specified in importer's package.json, not `latest`
+				const { name, version } = parse_npm_url(importer);
+
+				const { meta } = await fetch_package(name, name === 'svelte' ? svelte_version : version);
+
+				if (meta.name === pkg_name) {
+					default_version = meta.version;
 				} else {
 					default_version = max(
-						importer_pkg.meta.devDependencies?.[pkg_name] ??
-							importer_pkg.meta.peerDependencies?.[pkg_name] ??
-							importer_pkg.meta.dependencies?.[pkg_name]
+						meta.devDependencies?.[pkg_name] ??
+							meta.peerDependencies?.[pkg_name] ??
+							meta.dependencies?.[pkg_name]
 					);
 				}
 			}
 
 			const v = await resolve_version(match[1], match[2] ?? default_version);
-			const pkg = await fetch_package(pkg_name, pkg_name === 'svelte' ? version : v);
+			const pkg = await fetch_package(pkg_name, pkg_name === 'svelte' ? svelte_version : v);
 			const subpath = resolve_subpath(pkg, '.' + (match[3] ?? ''));
 
 			return add_suffix(pkg, subpath.slice(2));
@@ -264,11 +276,14 @@ async function get_bundle(
 					resolved
 				)!;
 
-				const pkg = await fetch_package(name, name === 'svelte' ? version : v);
+				const pkg = await fetch_package(name, name === 'svelte' ? svelte_version : v);
 
 				const file = pkg.contents[subpath];
 				if (file) return file.text;
 			}
+
+			const response = await fetch(resolved);
+			if (response.ok) return response.text();
 
 			throw new Error(`Could not load ${resolved}`);
 		},
@@ -458,7 +473,7 @@ async function bundle({
 		name: ENTRYPOINT,
 		basename: ENTRYPOINT,
 		contents:
-			version.split('.')[0] >= '5'
+			svelte_version.split('.')[0] >= '5'
 				? `
 			import { unmount as u } from 'svelte';
 			import { styles } from '${VIRTUAL}/${STYLES}';
