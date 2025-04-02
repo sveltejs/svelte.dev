@@ -22,12 +22,16 @@ import type { Node } from 'estree';
 import { parseTar, type FileDescription } from 'tarparser';
 import { max } from './semver';
 
+interface Package {
+	meta: any; // package.json contents
+	files: FileDescription[];
+	contents: Record<string, FileDescription>;
+}
+
 // hack for magic-string and rollup inline sourcemaps
 // do not put this into a separate module and import it, would be treeshaken in prod
 self.window = self;
 
-let packages_url: string;
-let svelte_url: string;
 let version: string;
 let current_id: number;
 
@@ -35,42 +39,71 @@ let inited = Promise.withResolvers<typeof svelte>();
 
 let can_use_experimental_async = false;
 
-async function init(v: string, packages_url: string) {
-	const match = /^(pr|commit|branch)-(.+)/.exec(v);
+/** map of `pkg-name@1` -> `1.2.3` */
+const versions = new Map<string, Promise<string>>();
+const packages = new Map<string, Promise<Package>>();
 
-	let tarball: FileDescription[] | undefined;
+async function resolve_version(name: string, version: string) {
+	// TODO handle `local` version (i.e. create an endpoint)
+
+	const match = /^(pr|commit|branch)-(.+)/.exec(version);
 
 	if (match) {
-		const response = await fetch(`https://pkg.pr.new/svelte@${match[2]}`);
-
-		if (!response.ok) {
-			throw new Error(
-				`impossible to fetch the compiler from this ${match[1] === 'pr' ? 'PR' : 'commit'}`
-			);
-		}
-
-		tarball = await parseTar(await response.arrayBuffer());
-
-		const json = tarball.find((file) => file.name === 'package/package.json')!.text;
-		version = JSON.parse(json).version;
-
-		svelte_url = `svelte://svelte@${version}`;
-
-		for (const file of tarball) {
-			const url = `${svelte_url}/${file.name.slice('package/'.length)}`;
-			FETCH_CACHE.set(url, Promise.resolve({ url, body: file.text }));
-		}
-	} else if (v === 'local') {
-		version = v;
-		svelte_url = `/svelte`;
-	} else {
-		const response = await fetch(`${packages_url}/svelte@${v}/package.json`);
-		const pkg = await response.json();
-		version = pkg.version;
-		svelte_url = `${packages_url}/svelte@${version}`;
+		return `https://pkg.pr.new/svelte@${match[2]}`;
 	}
 
+	const key = `${name}@${version}`;
+
+	if (!versions.has(key)) {
+		const promise = fetch(`https://cdn.jsdelivr.net/npm/${key}/package.json`).then(async (r) => {
+			if (!r.ok) {
+				versions.delete(key);
+				throw new Error(await r.text());
+			}
+
+			return (await r.json()).version;
+		});
+
+		versions.set(key, promise);
+	}
+
+	return await versions.get(key);
+}
+
+async function fetch_package(name: string, version: string) {
+	const key = `${name}@${version}`;
+
+	if (!packages.has(key)) {
+		const url = `https://registry.npmjs.org/${name}/-/${name.split('/').pop()}-${version}.tgz`;
+		const promise = fetch(url).then(async (r) => {
+			if (!r.ok) {
+				packages.delete(url);
+				throw new Error(`Failed to fetch ${url}`);
+			}
+
+			const files = await parseTar(await r.arrayBuffer());
+			const contents = Object.fromEntries(files.map((file) => [file.name.slice(8), file]));
+
+			const pkg_json = contents['package.json'].text;
+
+			return {
+				meta: JSON.parse(pkg_json),
+				files,
+				contents
+			};
+		});
+
+		packages.set(key, promise);
+	}
+
+	return packages.get(key);
+}
+
+async function init(v: string) {
+	version = await resolve_version('svelte', v);
 	console.log(`Using Svelte compiler version ${version}`);
+
+	const pkg = await fetch_package('svelte', version);
 
 	const entry = version.startsWith('3.')
 		? 'compiler.js'
@@ -78,9 +111,7 @@ async function init(v: string, packages_url: string) {
 			? 'compiler.cjs'
 			: 'compiler/index.js';
 
-	const compiler = tarball
-		? tarball.find((file) => file.name === `package/${entry}`)!.text
-		: await fetch(`${svelte_url}/${entry}`).then((r) => r.text());
+	const compiler = pkg.files.find((file) => file.name === `package/${entry}`)!.text;
 
 	(0, eval)(compiler + `\n//# sourceURL=${entry}@` + version);
 
@@ -104,8 +135,7 @@ async function init(v: string, packages_url: string) {
 self.addEventListener('message', async (event: MessageEvent<BundleMessageData>) => {
 	switch (event.data.type) {
 		case 'init': {
-			packages_url = event.data.packages_url;
-			init(event.data.svelte_version, packages_url).then(inited.resolve, inited.reject);
+			init(event.data.svelte_version).then(inited.resolve, inited.reject);
 			break;
 		}
 
@@ -244,8 +274,6 @@ async function resolve_from_pkg(
 	return subpath;
 }
 
-const versions = Object.create(null);
-
 let previous: {
 	key: string;
 	cache: RollupCache | undefined;
@@ -321,120 +349,111 @@ async function get_bundle(
 		async resolveId(importee, importer) {
 			if (uid !== current_id) throw ABORT;
 
-			if (importee === 'esm-env') return importee;
-
-			if (importee === shared_file) return importee;
-
-			// importing from another file in REPL
-			if (local_files_lookup.has(importee) && (!importer || local_files_lookup.has(importer)))
+			if (importee === 'esm-env') {
 				return importee;
-			if (local_files_lookup.has(importee + '.js')) return importee + '.js';
-			if (local_files_lookup.has(importee + '.json')) return importee + '.json';
+			}
 
-			// remove trailing slash
-			if (importee.endsWith('/')) importee = importee.slice(0, -1);
+			if (importee === shared_file) {
+				return `virtual://$/${shared_file}`;
+			}
+
+			if (importee === './__entry.js') {
+				return 'virtual://$/__entry.js';
+			}
 
 			// importing from a URL
-			if (/^https?:/.test(importee)) return importee;
+			if (/^[a-z]+:/.test(importee)) {
+				return importee;
+			}
 
-			if (importee.startsWith('.')) {
-				if (importer && local_files_lookup.has(importer)) {
-					// relative import in a REPL file
-					// should've matched above otherwise importee doesn't exist
-					console.error(`Cannot find file "${importee}" imported by "${importer}" in the REPL`);
-					return;
-				} else {
-					// relative import in an external file
-					const url = new URL(importee, importer).href;
-					self.postMessage({ type: 'status', uid, message: `resolving ${url}` });
-					return await follow_redirects(url, uid);
-				}
-			} else {
-				// fetch from unpkg
-				self.postMessage({ type: 'status', uid, message: `resolving ${importee}` });
+			if (importee[0] === '.' && importer.startsWith('virtual:')) {
+				const url = new URL(importee, importer);
 
-				const match = /^((?:@[^/]+\/)?[^/@]+)(?:@([^/]+))?(\/.+)?$/.exec(importee);
-				if (!match) {
-					return console.error(`Invalid import "${importee}"`);
-				}
+				for (const suffix of ['', '.js', '.json']) {
+					const with_suffix = `.${url.pathname}${suffix}`;
+					const file = local_files_lookup.get(with_suffix);
 
-				const pkg_name = match[1];
-
-				let default_version = 'latest';
-
-				if (importer?.startsWith(packages_url)) {
-					const path = importer.slice(packages_url.length + 1);
-					const parts = path.split('/').slice(0, 2);
-					if (!parts[0].startsWith('@')) parts.pop();
-
-					const importer_name_and_version = parts.join('/');
-					const importer_name = importer_name_and_version.slice(
-						0,
-						importer_name_and_version.indexOf('@', 1)
-					);
-
-					const default_versions = (versions[importer_name_and_version] ??= Object.create(null));
-
-					if (!default_versions[pkg_name]) {
-						const pkg_json_url = `${packages_url}/${importer_name_and_version}/package.json`;
-						const pkg_json = (await fetch_if_uncached(pkg_json_url, uid))?.body;
-						const pkg = JSON.parse(pkg_json ?? '""');
-
-						if (importer_name === pkg_name) {
-							default_versions[pkg_name] = pkg.version;
-						} else {
-							const version =
-								pkg.devDependencies?.[pkg_name] ??
-								pkg.peerDependencies?.[pkg_name] ??
-								pkg.dependencies?.[pkg_name];
-
-							default_versions[pkg_name] = max(version);
-						}
+					if (file) {
+						return url.href + suffix;
 					}
-
-					default_version = default_versions[pkg_name];
 				}
 
-				const pkg_url =
-					pkg_name === 'svelte'
-						? `${svelte_url}/package.json`
-						: `${packages_url}/${pkg_name}@${match[2] ?? default_version}/package.json`;
-				const subpath = `.${match[3] ?? ''}`;
+				throw new Error(`Could not resolve ${importee} from ${importer}`);
+			}
 
-				// if this was imported by one of our files, add it to the `imports` set
-				if (importer && local_files_lookup.has(importer)) {
-					imports.add(pkg_name);
-				}
+			const importer_match = /^npm:\/\/\$\/((?:@[^/]+\/)?[^/@]+)(?:@([^/]+))?(\/.+)?$/.exec(
+				importer
+			);
+			const importer_pkg =
+				importer_match && (await fetch_package(importer_match[1], importer_match[2]));
 
-				const fetch_package_info = async (pkg_url: string) => {
-					try {
-						const redirected = await follow_redirects(pkg_url, uid);
+			if (importee[0] === '.') {
+				const url = new URL(importee, importer);
+				const path = url.pathname.split('/').slice(2).join('/');
 
-						if (!redirected) throw new Error();
+				for (const suffix of ['', '.js', '.mjs', '.cjs', '/index.js', '/index.mjs', '/index.cjs']) {
+					const with_suffix = path + suffix;
+					const file = importer_pkg.contents[with_suffix];
 
-						const pkg_json = (await fetch_if_uncached(redirected, uid))?.body;
-						const pkg = JSON.parse(pkg_json ?? '""');
-
-						const pkg_url_base = redirected.replace(/\/package\.json$/, '');
-
-						return {
-							pkg,
-							pkg_url_base
-						};
-					} catch (_e) {
-						throw new Error(`Error fetching "${pkg_name}" from unpkg. Does the package exist?`);
+					if (file && file.type === 'file') {
+						return url.href + suffix;
 					}
-				};
+				}
 
-				const { pkg, pkg_url_base } = await fetch_package_info(pkg_url);
+				throw new Error(`Could not resolve ${importee} from ${importer}`);
+			}
 
+			// bare import
+			const match = /^((?:@[^/]+\/)?[^/@]+)(?:@([^/]+))?(\/.+)?$/.exec(importee);
+			if (!match) {
+				return console.error(`Invalid import "${importee}"`);
+			}
+
+			const pkg_name = match[1];
+
+			let default_version = 'latest';
+
+			if (importer_pkg) {
+				default_version =
+					importer_pkg.meta.name === pkg_name
+						? importer_pkg.meta.version
+						: max(
+								importer_pkg.meta.devDependencies?.[pkg_name] ??
+									importer_pkg.meta.peerDependencies?.[pkg_name] ??
+									importer_pkg.meta.dependencies?.[pkg_name]
+							);
+			}
+
+			const version = await resolve_version(match[1], match[2] ?? default_version);
+
+			const pkg = await fetch_package(pkg_name, version);
+
+			let subpath = '.' + (match[3] ?? '');
+
+			if (pkg.meta.exports) {
 				try {
-					const resolved_id = await resolve_from_pkg(pkg, subpath, uid, pkg_url_base);
-					return new URL(resolved_id + '', `${pkg_url_base}/`).href;
-				} catch (reason) {
-					throw new Error(`Cannot import "${importee}": ${reason}.`);
+					const resolved = resolve.exports(pkg.meta, subpath ?? '.', {
+						browser: true,
+						conditions: ['svelte', 'module', 'browser', 'development']
+					});
+
+					subpath = resolved?.[0];
+				} catch {
+					console.log({ importee, importer, pkg_name, version, subpath });
+					throw `no matched export path was found in "${pkg_name}/package.json"`;
 				}
 			}
+
+			for (const suffix of ['', '.js', '.mjs', '.cjs', '/index.js', '/index.mjs', '/index.cjs']) {
+				const with_suffix = subpath.slice(2) + suffix;
+				const file = pkg.contents[with_suffix];
+
+				if (file && file.type === 'file') {
+					return `npm://$/${pkg_name}@${version}/${with_suffix}`;
+				}
+			}
+
+			throw new Error(`Could not resolve ${pkg_name}@${version}`);
 		},
 		async load(resolved) {
 			if (uid !== current_id) throw ABORT;
@@ -443,17 +462,22 @@ async function get_bundle(
 				return `export const BROWSER = true; export const DEV = true`;
 			}
 
-			const cached_file = local_files_lookup.get(resolved);
-			if (cached_file) {
-				return cached_file.contents;
+			if (resolved.startsWith('virtual://$/')) {
+				const file = local_files_lookup.get(`./${resolved.slice('virtual://$/'.length)}`)!;
+				return file.contents;
 			}
 
-			if (!FETCH_CACHE.has(resolved)) {
-				self.postMessage({ type: 'status', uid, message: `fetching ${resolved}` });
+			if (resolved.startsWith('npm:')) {
+				let [, name, version, subpath = ''] =
+					/^npm:\/\/\$\/((?:@[^/]+\/)?[^/@]+)(?:@([^/]+))?\/(.+)$/.exec(resolved)!;
+
+				const pkg = await fetch_package(name, version);
+
+				const file = pkg.contents[subpath];
+				if (file) return file.text;
 			}
 
-			const res = await fetch_if_uncached(resolved, uid);
-			return res?.body;
+			throw new Error(`Could not load ${resolved}`);
 		},
 		transform(code, id) {
 			if (uid !== current_id) throw ABORT;
@@ -671,7 +695,7 @@ async function bundle({
 		text: true
 	});
 
-	lookup.set(shared_file, {
+	lookup.set(`./${shared_file}`, {
 		type: 'file',
 		name: shared_file,
 		basename: shared_file,
