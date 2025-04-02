@@ -156,7 +156,7 @@ export async function resolve_local(specifier: string) {
 
 	const subpath = resolve.exports(pkg, specifier.replace('svelte', '.'), {
 		browser: true
-	})[0];
+	})[0] as string;
 
 	return new URL(subpath, LOCAL_PKG_URL).href;
 }
