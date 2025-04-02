@@ -137,7 +137,7 @@ export function resolve_subpath(pkg: Package, subpath: string): string {
 			return resolved?.[0] as string;
 		} catch {
 			throw new Error(
-				`no matched export path was found for "${subpath}" in "${pkg.meta.name}/package.json"`
+				`No matched export path was found for "${subpath}" in "${pkg.meta.name}/package.json"`
 			);
 		}
 	}
@@ -164,7 +164,7 @@ export function resolve_subpath(pkg: Package, subpath: string): string {
 			if (pkg.contents['index.mjs']) return './index.mjs';
 			if (pkg.contents['index.js']) return './index.js';
 
-			throw new Error(`could not find entry point in "${pkg.meta.name}/package.json"`);
+			throw new Error(`Could not find entry point in "${pkg.meta.name}/package.json"`);
 		}
 
 		return resolved_id as string;

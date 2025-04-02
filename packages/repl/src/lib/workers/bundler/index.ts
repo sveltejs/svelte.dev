@@ -193,7 +193,9 @@ async function get_bundle(
 						}
 					}
 
-					throw new Error(`Could not resolve ${importee} from ${importer}`);
+					throw new Error(
+						`'${importee}' (imported by ${importer.replace(VIRTUAL + '/', '')}) does not exist`
+					);
 				}
 
 				if (importer.startsWith(NPM)) {
