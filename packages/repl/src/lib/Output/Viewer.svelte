@@ -14,37 +14,51 @@
 	import type { Writable } from 'svelte/store';
 	import type { BundleResult } from '$lib/public';
 
-	export let error: Error | null;
-	/** status by Bundler class instance */
-	export let status: string | null;
-	/** sandbox allow-same-origin */
-	export let relaxed = false;
-	/** sandbox allow-popups-to-escape-sandbox (i.e. links within the REPL to other pages work) */
-	export let can_escape = false;
-	/** Any additional JS you may want to inject */
-	export let injectedJS = '';
-	/** Any additional CSS you may want to inject */
-	export let injectedCSS = '';
-	export let theme: 'light' | 'dark';
-	/** A store containing the current bundle result. Takes precedence over REPL context, if set */
-	export let bundle: Writable<BundleResult | null> | undefined = undefined;
-	/** Called everytime a log is pushed. If this is set, the built-in console coming with the Viewer isn't shown */
-	export let onLog: ((logs: Log[]) => void) | undefined = undefined;
+	interface Props {
+		error: Error | null;
+		/** status by Bundler class instance */
+		status: string | null;
+		/** sandbox allow-same-origin */
+		relaxed?: boolean;
+		/** sandbox allow-popups-to-escape-sandbox (i.e. links within the REPL to other pages work) */
+		can_escape?: boolean;
+		/** Any additional JS you may want to inject */
+		injectedJS?: string;
+		/** Any additional CSS you may want to inject */
+		injectedCSS?: string;
+		theme: 'light' | 'dark';
+		/** A store containing the current bundle result. Takes precedence over REPL context, if set */
+		bundle?: Writable<BundleResult | null> | undefined;
+		/** Called everytime a log is pushed. If this is set, the built-in console coming with the Viewer isn't shown */
+		onLog?: ((logs: Log[]) => void) | undefined;
+	}
+
+	let {
+		error = $bindable(),
+		status,
+		relaxed = false,
+		can_escape = false,
+		injectedJS = '',
+		injectedCSS = '',
+		theme,
+		bundle = $bindable(undefined),
+		onLog = undefined
+	}: Props = $props();
 
 	const context = get_repl_context();
 	bundle ??= context.bundle;
 
-	let logs: Log[] = [];
+	let logs: Log[] = $state([]);
 	let log_group_stack: Log[][] = [];
 	let current_log_group = logs;
 
-	let iframe: HTMLIFrameElement;
-	let pending_imports = 0;
+	let iframe: HTMLIFrameElement = $state();
+	let pending_imports = $state(0);
 	let pending = false;
 
-	let proxy: ReplProxy | null = null;
-	let ready = false;
-	let inited = false;
+	let proxy: ReplProxy | null = $state(null);
+	let ready = $state(false);
+	let inited = $state(false);
 
 	let log_height = 90;
 	let prev_height: number;
@@ -99,7 +113,11 @@
 		};
 	});
 
-	$: if (ready) proxy?.iframe_command('set_theme', { theme });
+	$effect(() => {
+		if (ready) {
+			proxy?.iframe_command('set_theme', { theme });
+		}
+	});
 
 	async function apply_bundle($bundle: BundleResult | null | undefined) {
 		if (!$bundle) return;
@@ -198,17 +216,23 @@
 		inited = true;
 	}
 
-	$: if (ready) apply_bundle($bundle);
+	$effect(() => {
+		if (ready) {
+			apply_bundle($bundle);
+		}
+	});
 
-	$: if (injectedCSS && proxy && ready) {
-		proxy.eval(
-			`{
-				const style = document.createElement('style');
-				style.textContent = ${JSON.stringify(injectedCSS)};
-				document.head.appendChild(style);
-			}`
-		);
-	}
+	$effect(() => {
+		if (injectedCSS && proxy && ready) {
+			proxy.eval(
+				`{
+					const style = document.createElement('style');
+					style.textContent = ${JSON.stringify(injectedCSS)};
+					document.head.appendChild(style);
+				}`
+			);
+		}
+	});
 
 	function show_error(e: CompileError & { loc: { line: number; column: number } }) {
 		const map = $bundle?.client?.map;
@@ -301,7 +325,14 @@
 	{#if !onLog}
 		<PaneWithPanel pos="100%" panel="Console" {main}>
 			{#snippet header()}
-				<button class="raised" disabled={logs.length === 0} on:click|stopPropagation={clear_logs}>
+				<button
+					class="raised"
+					disabled={logs.length === 0}
+					onclick={(e) => {
+						e.stopPropagation();
+						clear_logs();
+					}}
+				>
 					{#if logs.length > 0}
 						({logs.length})
 					{/if}
