@@ -389,7 +389,10 @@ async function get_bundle(
 
 			if (importee[0] === '.') {
 				const url = new URL(importee, importer);
-				const path = url.pathname.split('/').slice(2).join('/');
+				const parts = url.pathname.slice(1).split('/');
+				if (parts[0][0] === '@') parts.shift();
+				parts.shift();
+				const path = parts.join('/');
 
 				for (const suffix of ['', '.js', '.mjs', '.cjs', '/index.js', '/index.mjs', '/index.cjs']) {
 					const with_suffix = path + suffix;
