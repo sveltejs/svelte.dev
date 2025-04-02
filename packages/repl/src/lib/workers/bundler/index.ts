@@ -327,7 +327,7 @@ async function get_bundle(
 					result.js.code +=
 						'\n\n' +
 						`
-					import { styles as $$_styles } from './${STYLES}';
+					import { styles as $$_styles } from '${VIRTUAL}/${STYLES}';
 					const $$__style = document.createElement('style');
 					$$__style.textContent = ${JSON.stringify(result.css.code)};
 					document.head.append($$__style);
@@ -456,7 +456,7 @@ async function bundle({
 			version.split('.')[0] >= '5'
 				? `
 			import { unmount as u } from 'svelte';
-			import { styles } from './${STYLES}';
+			import { styles } from '${VIRTUAL}/${STYLES}';
 			export { mount, untrack } from 'svelte';
 			export {default as App} from './App.svelte';
 			export function unmount(component) {
@@ -465,7 +465,7 @@ async function bundle({
 			}
 		`
 				: `
-			import { styles } from './${STYLES}';
+			import { styles } from '${VIRTUAL}/${STYLES}';
 			export {default as App} from './App.svelte';
 			export function mount(component, options) {
 				return new component(options);
