@@ -7,8 +7,8 @@ const workers = new Map();
 let uid = 1;
 
 export default class Bundler {
-	worker: Worker;
-	handlers: Map<number, (data: BundleMessageData) => void>;
+	#worker: Worker;
+	#handlers = new Map<number, (data: BundleMessageData) => void>();
 
 	constructor({
 		svelte_version,
@@ -28,36 +28,33 @@ export default class Bundler {
 			workers.set(svelte_version, worker);
 		}
 
-		this.worker = workers.get(svelte_version);
+		this.#worker = workers.get(svelte_version);
 
-		this.handlers = new Map();
+		this.#worker.addEventListener('message', (event: MessageEvent<BundleMessageData>) => {
+			const handler = this.#handlers.get(event.data.uid);
+			if (!handler) return; // meant for different bundler with same worker
 
-		this.worker.addEventListener('message', (event: MessageEvent<BundleMessageData>) => {
-			const handler = this.handlers.get(event.data.uid);
-
-			if (handler) {
-				// if no handler, was meant for a different REPL
-				if (event.data.type === 'status') {
-					onstatus(event.data.message);
-					return;
-				}
-
-				if (event.data.type === 'error') {
-					onerror?.(event.data.message);
-					return;
-				}
-
-				onstatus(null);
-				handler(event.data);
-				this.handlers.delete(event.data.uid);
+			if (event.data.type === 'status') {
+				onstatus(event.data.message);
+				return;
 			}
+
+			if (event.data.type === 'error') {
+				onerror?.(event.data.message);
+				return;
+			}
+
+			onstatus(null);
+			handler(event.data);
+			this.#handlers.delete(event.data.uid);
 		});
 	}
 
 	bundle(files: File[], options: { tailwind?: boolean }): Promise<BundleResult> {
 		return new Promise<any>((fulfil) => {
-			this.handlers.set(uid, fulfil);
-			this.worker.postMessage({
+			this.#handlers.set(uid, fulfil);
+
+			this.#worker.postMessage({
 				uid,
 				type: 'bundle',
 				files,
