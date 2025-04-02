@@ -445,7 +445,7 @@ async function bundle(
 		name: ENTRYPOINT,
 		basename: ENTRYPOINT,
 		contents:
-			svelte_version.split('.')[0] >= '5'
+			svelte.VERSION.split('.')[0] >= '5'
 				? `
 			import { unmount as u } from 'svelte';
 			import { styles } from '${VIRTUAL}/${STYLES}';
