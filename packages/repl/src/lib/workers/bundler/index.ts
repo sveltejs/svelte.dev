@@ -31,6 +31,9 @@ interface Package {
 // do not put this into a separate module and import it, would be treeshaken in prod
 self.window = self;
 
+const VIRTUAL = 'virtual://$';
+const NPM = 'npm://$';
+
 let version: string;
 let current_id: number;
 
@@ -162,7 +165,7 @@ function add_suffix(pkg: Package, path: string) {
 		const file = pkg.contents[with_suffix];
 
 		if (file && file.type === 'file') {
-			return `npm://$/${pkg.meta.name}@${pkg.meta.version}/${with_suffix}`;
+			return `${NPM}/${pkg.meta.name}@${pkg.meta.version}/${with_suffix}`;
 		}
 	}
 
@@ -321,11 +324,11 @@ async function get_bundle(
 			}
 
 			if (importee === shared_file) {
-				return `virtual://$/${shared_file}`;
+				return `${VIRTUAL}/${shared_file}`;
 			}
 
 			if (importee === './__entry.js') {
-				return 'virtual://$/__entry.js';
+				return `${VIRTUAL}/__entry.js`;
 			}
 
 			// importing from a URL
@@ -333,7 +336,7 @@ async function get_bundle(
 				return importee;
 			}
 
-			if (importee[0] === '.' && importer.startsWith('virtual:')) {
+			if (importee[0] === '.' && importer.startsWith(VIRTUAL)) {
 				const url = new URL(importee, importer);
 
 				for (const suffix of ['', '.js', '.json']) {
@@ -398,12 +401,12 @@ async function get_bundle(
 				return `export const BROWSER = true; export const DEV = true`;
 			}
 
-			if (resolved.startsWith('virtual://$/')) {
-				const file = local_files_lookup.get(`./${resolved.slice('virtual://$/'.length)}`)!;
+			if (resolved.startsWith(VIRTUAL)) {
+				const file = local_files_lookup.get(`./${resolved.slice(VIRTUAL.length + 1)}`)!;
 				return file.contents;
 			}
 
-			if (resolved.startsWith('npm:')) {
+			if (resolved.startsWith(NPM)) {
 				let [, name, version, subpath = ''] =
 					/^npm:\/\/\$\/((?:@[^/]+\/)?[^/@]+)(?:@([^/]+))?\/(.+)$/.exec(resolved)!;
 
