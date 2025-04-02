@@ -31,12 +31,12 @@ export type File = {
 
 export type ReplState = {
 	bundle: BundleResult | null;
-	bundler: import('./Bundler').default | null;
+	bundler: import('./Bundler.svelte').default | null;
 	toggleable: boolean;
 };
 
 export type ReplContext = {
-	bundle: Writable<ReplState['bundle']>;
+	bundler: Bundler;
 	toggleable: Writable<ReplState['toggleable']>;
 	workspace: Workspace;
 	svelteVersion: string;

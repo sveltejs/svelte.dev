@@ -6,9 +6,6 @@
 	import Chrome from './Chrome.svelte';
 	import Loading from './Loading.svelte';
 	import { adapter_state, update } from './adapter.svelte';
-	import { toStore } from 'svelte/store';
-
-	const bundle = toStore(() => adapter_state.bundle);
 
 	let terminal_visible = $state(false);
 	let logs = $state<Log[]>([]);
@@ -34,7 +31,7 @@
 			relaxed
 			can_escape
 			onLog={(l: Log[]) => (logs = l)}
-			{bundle}
+			bundler={adapter_state.bundler}
 			theme={theme.current}
 			injectedCSS="@import '/tutorial/shared.css';"
 			error={null}

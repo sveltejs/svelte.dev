@@ -3,7 +3,7 @@
 	import { ScreenToggle } from '@sveltejs/site-kit/components';
 	import { BROWSER } from 'esm-env';
 	import { writable } from 'svelte/store';
-	import Bundler from './Bundler.js';
+	import Bundler from './Bundler.svelte.js';
 	import ComponentSelector from './Input/ComponentSelector.svelte';
 	import Output from './Output/Output.svelte';
 	import { set_repl_context } from './context.js';
@@ -67,7 +67,7 @@
 	// TODO get rid
 	export function toJSON() {
 		return {
-			imports: $bundle?.imports ?? [],
+			imports: bundler.result?.imports ?? [],
 			files: workspace.files,
 			tailwind: workspace.tailwind
 		};
@@ -83,18 +83,10 @@
 		workspace.mark_saved();
 	}
 
-	const bundle: ReplContext['bundle'] = writable(null);
 	const toggleable: ReplContext['toggleable'] = writable(false);
 
-	set_repl_context({
-		bundle,
-		toggleable,
-		workspace,
-		svelteVersion
-	});
-
 	async function rebundle() {
-		$bundle = await bundler!.bundle(workspace.files as File[], {
+		bundler!.bundle(workspace.files as File[], {
 			tailwind: workspace.tailwind
 		});
 	}
@@ -142,6 +134,13 @@
 				}
 			})
 		: null;
+
+	set_repl_context({
+		bundler,
+		toggleable,
+		workspace,
+		svelteVersion
+	});
 
 	function before_unload(event: BeforeUnloadEvent) {
 		if (Object.keys(workspace.modified).length > 0) {

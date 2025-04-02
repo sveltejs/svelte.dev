@@ -1,11 +1,12 @@
-import type { BundleMessageData, BundleResult } from './workers/workers';
+import type { BundleResult } from './public';
 import type { File } from './Workspace.svelte';
 
 let uid = 1;
 
 export default class Bundler {
 	#worker: Worker;
-	#handlers = new Map<number, (data: BundleMessageData) => void>(); // TODO this is leaky, we don't always remove handlers
+
+	result = $state.raw<BundleResult | null>(null);
 
 	constructor({
 		svelte_version,
@@ -22,7 +23,7 @@ export default class Bundler {
 			type: 'module'
 		});
 
-		this.#worker.onmessage = (event: MessageEvent<BundleMessageData>) => {
+		this.#worker.onmessage = (event) => {
 			if (event.data.type === 'status') {
 				onstatus(event.data.message);
 				return;
@@ -39,28 +40,20 @@ export default class Bundler {
 			}
 
 			onstatus(null);
-
-			const handler = this.#handlers.get(event.data.uid)!;
-			this.#handlers.delete(event.data.uid);
-
-			handler(event.data);
+			this.result = event.data;
 		};
 
 		this.#worker.postMessage({ type: 'init', svelte_version });
 	}
 
-	bundle(files: File[], options: { tailwind?: boolean }): Promise<BundleResult> {
-		return new Promise<any>((fulfil) => {
-			this.#handlers.set(uid, fulfil);
-
-			this.#worker.postMessage({
-				uid,
-				type: 'bundle',
-				files,
-				options
-			});
-
-			uid += 1;
+	bundle(files: File[], options: { tailwind?: boolean }) {
+		this.#worker.postMessage({
+			uid,
+			type: 'bundle',
+			files,
+			options
 		});
+
+		uid += 1;
 	}
 }

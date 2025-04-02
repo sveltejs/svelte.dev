@@ -29,8 +29,8 @@
 			"default": "./src/lib/index.ts"
 		},
 		"./bundler": {
-			"types": "./src/lib/Bundler.ts",
-			"default": "./src/lib/Bundler.ts"
+			"types": "./src/lib/Bundler.svelte.ts",
+			"default": "./src/lib/Bundler.svelte.ts"
 		},
 		"./editor": {
 			"types": "./src/lib/Editor/Editor.svelte",

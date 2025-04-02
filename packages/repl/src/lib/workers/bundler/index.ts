@@ -12,7 +12,7 @@ import svg from './plugins/svg';
 import replace from './plugins/replace';
 import loop_protect from './plugins/loop-protect';
 import type { Plugin, RollupCache, TransformResult } from '@rollup/browser';
-import type { BundleMessageData, BundleOptions, BundleResult } from '../workers';
+import type { BundleMessageData, BundleOptions } from '../workers';
 import type { Warning } from '../../types';
 import type { CompileError, CompileResult } from 'svelte/compiler';
 import type { File } from '../../Workspace.svelte';
@@ -28,6 +28,7 @@ import {
 	resolve_subpath,
 	resolve_version
 } from '../npm';
+import type { BundleResult } from '$lib/public';
 
 // hack for magic-string and rollup inline sourcemaps
 // do not put this into a separate module and import it, would be treeshaken in prod

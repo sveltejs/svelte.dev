@@ -21,8 +21,8 @@ export const adapter_state = new (class {
 	/** Logs from the web container instance. Irrelevant for Rollup */
 	logs = $derived(wc_state.logs || []);
 
-	/** Result of a rollup compile. Irrelevant for web containers */
-	bundle = $derived(rollup_state.bundle);
+	/** Irrelevant for web containers */
+	bundler = $derived(rollup_state.bundler);
 
 	/** Startup progress */
 	progress = $derived(

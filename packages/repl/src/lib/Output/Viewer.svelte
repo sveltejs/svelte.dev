@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { get_repl_context } from '../context';
 	import { BROWSER } from 'esm-env';
-	import { onMount } from 'svelte';
+	import { onMount, untrack } from 'svelte';
 	import Message from '../Message.svelte';
 	import PaneWithPanel from './PaneWithPanel.svelte';
 	import ReplProxy from './ReplProxy.js';
@@ -11,8 +11,8 @@
 	import srcdoc_styles from './srcdoc/styles.css?raw';
 	import ErrorOverlay from './ErrorOverlay.svelte';
 	import type { CompileError } from 'svelte/compiler';
-	import type { Writable } from 'svelte/store';
 	import type { BundleResult } from '$lib/public';
+	import type Bundler from '$lib/Bundler.svelte';
 
 	interface Props {
 		error: Error | null;
@@ -27,8 +27,8 @@
 		/** Any additional CSS you may want to inject */
 		injectedCSS?: string;
 		theme: 'light' | 'dark';
-		/** A store containing the current bundle result. Takes precedence over REPL context, if set */
-		bundle?: Writable<BundleResult | null> | undefined;
+		/** The current bundler. Takes precedence over REPL context, if set */
+		bundler?: Bundler;
 		/** Called everytime a log is pushed. If this is set, the built-in console coming with the Viewer isn't shown */
 		onLog?: ((logs: Log[]) => void) | undefined;
 	}
@@ -41,12 +41,12 @@
 		injectedJS = '',
 		injectedCSS = '',
 		theme,
-		bundle = $bindable(undefined),
+		bundler,
 		onLog = undefined
 	}: Props = $props();
 
-	const context = get_repl_context();
-	bundle ??= context.bundle;
+	let context = get_repl_context();
+	let bundle = $derived((bundler ?? context?.bundler)?.result);
 
 	let logs: Log[] = $state([]);
 	let log_group_stack: Log[][] = [];
@@ -119,13 +119,13 @@
 		}
 	});
 
-	async function apply_bundle($bundle: BundleResult | null | undefined) {
-		if (!$bundle) return;
+	async function apply_bundle(bundle: BundleResult | null) {
+		if (!bundle) return;
 
 		try {
 			clear_logs();
 
-			if (!$bundle.error) {
+			if (!bundle.error) {
 				await proxy?.eval(
 					`
 					${injectedJS}
@@ -175,7 +175,7 @@
 						window._svelteTransitionManager = null;
 					}
 
-					const __repl_exports = ${$bundle.client?.code};
+					const __repl_exports = ${bundle.client?.code};
 					{
 						const { mount, unmount, App, untrack } = __repl_exports;
 
@@ -204,7 +204,7 @@
 					}
 					//# sourceURL=playground:output
 				`,
-					$bundle?.tailwind ?? srcdoc_styles
+					bundle?.tailwind ?? srcdoc_styles
 				);
 				error = null;
 			}
@@ -218,7 +218,12 @@
 
 	$effect(() => {
 		if (ready) {
-			apply_bundle($bundle);
+			const b = bundle;
+
+			// TODO tidy up
+			untrack(() => {
+				apply_bundle(b);
+			});
 		}
 	});
 
@@ -235,7 +240,7 @@
 	});
 
 	function show_error(e: CompileError & { loc: { line: number; column: number } }) {
-		const map = $bundle?.client?.map;
+		const map = bundle?.client?.map;
 
 		// @ts-ignore INVESTIGATE
 		const loc = map && getLocationFromStack(e.stack, map);
@@ -316,8 +321,8 @@
 		srcdoc={BROWSER ? srcdoc : ''}
 	></iframe>
 
-	{#if $bundle?.error}
-		<ErrorOverlay error={$bundle.error} />
+	{#if bundle?.error}
+		<ErrorOverlay error={bundle.error} />
 	{/if}
 {/snippet}
 
@@ -351,7 +356,7 @@
 	<div class="overlay">
 		{#if error}
 			<Message kind="error" details={error} />
-		{:else if status || !$bundle}
+		{:else if status || !bundle}
 			<Message kind="info" truncate>{status || 'loading Svelte compiler...'}</Message>
 		{/if}
 	</div>
