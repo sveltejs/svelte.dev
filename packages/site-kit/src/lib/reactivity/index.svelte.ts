@@ -40,92 +40,111 @@ export class Box<T> {
 type Serde<T> = {
 	encode: (value: T) => string;
 	decode: (value: string) => T;
+	default?: T;
 };
 
-export class ReactiveQueryParam<T = string> {
-	#current: Box<T>;
+export const QueryParamSerde = {
+	boolean(default_value?: boolean): Serde<boolean> {
+		return {
+			encode: (v) => (v ? 'true' : 'false'),
+			decode: (v) => v === 'true',
+			default: default_value
+		};
+	},
 
-	#encode: (value: T) => string;
-	#name: string;
+	string<T extends string = string>(default_value?: T): Serde<T> {
+		return {
+			encode: (v) => v,
+			decode: (v) => v as T,
+			default: default_value
+		};
+	},
 
-	constructor(
-		name: string,
-		default_value?: T,
-		{ encode, decode }: Serde<T> = ReactiveQueryParam.string as any
-	) {
-		this.#encode = encode;
-		this.#name = name;
+	number(default_value?: number): Serde<number> {
+		return {
+			encode: (v) => v + '',
+			decode: (v) => +v,
+			default: default_value
+		};
+	},
 
-		this.#current = new Box<T>(
+	array<T extends string | number = string>(default_value?: T[]): Serde<T[]> {
+		return {
+			encode: (v) => v.join(','),
+			decode: (v) => v.split(',').filter(Boolean) as T[],
+			default: default_value
+		};
+	}
+};
+
+export function reactive_query_params<T extends Record<string, Serde<any>>>(
+	params: T
+): {
+	[K in keyof T]: T[K] extends Serde<infer U>
+		? T[K]['default'] extends undefined
+			? U | undefined
+			: U
+		: never;
+} & {
+	url_from<K extends keyof T>(field: K, value: T[K] extends Serde<infer U> ? U : never): string;
+} {
+	const boxes: Record<string, Box<any>> = {};
+	for (const [key, value] of Object.entries(params)) {
+		boxes[key] = new Box<any>(
 			() => {
-				const param_value = page.url.searchParams.get(name);
-
+				const param_value = page.url.searchParams.get(key);
 				if (param_value) {
-					return decode(param_value);
+					return value.decode(param_value);
 				}
-
-				if (default_value) {
-					return default_value;
+				if (value.default !== undefined) {
+					return value.default;
 				}
-
-				return decode('');
+				return value.decode('');
 			},
 			(val) => {
-				const encoded = val != null ? encode(val ?? default_value) : undefined;
-
-				if ((default_value == null || encode(default_value) !== encoded) && encoded) {
-					page.url.searchParams.set(name, encoded);
+				const encoded = val != null ? value.encode(val) : undefined;
+				if ((value.default == null || value.encode(value.default) !== encoded) && encoded) {
+					page.url.searchParams.set(key, encoded);
 				} else {
-					page.url.searchParams.delete(name);
+					page.url.searchParams.delete(key);
 				}
-
 				// So we don't run it when router hasn't initialized yet
 				tick().then(() => replaceState(page.url, {}));
 			}
 		);
 	}
 
-	get current() {
-		return this.#current.current;
+	const returned = {} as ReturnType<typeof reactive_query_params>;
+	for (const [key, value] of Object.entries(boxes)) {
+		Object.defineProperty(returned, key, {
+			get() {
+				return value.current;
+			},
+			set(val: T) {
+				value.current = val;
+			}
+		});
 	}
 
-	set current(value: T) {
-		this.#current.current = value;
-	}
-
-	url_from(value: T) {
-		const encoded = this.#encode(value);
+	returned.url_from = <K extends keyof T>(
+		field: K,
+		value: T[K] extends Serde<infer U> ? U : never
+	): string => {
+		const encoded = value != null ? params[field as string].encode(value) : undefined;
 		const new_url = new URL(page.url);
-		new_url.searchParams.set(this.#name, encoded);
-
+		if (encoded) {
+			new_url.searchParams.set(field as string, encoded);
+		} else {
+			new_url.searchParams.delete(field as string);
+		}
 		return new_url.pathname + new_url.search;
-	}
+	};
 
-	static get boolean(): Serde<boolean> {
-		return {
-			encode: (v) => (v ? 'true' : 'false'),
-			decode: (v) => v === 'true'
-		};
-	}
-
-	static get string(): Serde<string> {
-		return {
-			encode: (v) => v + '',
-			decode: (v) => v as string
-		};
-	}
-
-	static get number(): Serde<number> {
-		return {
-			encode: (v) => v + '',
-			decode: (v) => +v
-		};
-	}
-
-	static get array(): Serde<string[]> {
-		return {
-			encode: (v) => v.join(','),
-			decode: (v) => v.split(',').filter(Boolean)
-		};
-	}
+	return returned as any;
 }
+
+// const params = reactive_query_params({
+// 	x: { ...ReactiveQueryParam.string, default: 'foo' },
+// 	y: { ...ReactiveQueryParam.number, default: 1 },
+// 	z: { ...ReactiveQueryParam.array }
+// });

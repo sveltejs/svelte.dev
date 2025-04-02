@@ -2,28 +2,22 @@
 	import { page } from '$app/state';
 	import { forcefocus } from '@sveltejs/site-kit/actions';
 	import { Icon } from '@sveltejs/site-kit/components';
-	import { ReactiveQueryParam } from '@sveltejs/site-kit/reactivity';
+	import { reactive_query_params, QueryParamSerde } from '@sveltejs/site-kit/reactivity';
 	import { onMount } from 'svelte';
 	import { search_criteria, type SortCriterion, type SortDirection } from '../packages-search';
 	import Pagination from './pagination.svelte';
 
 	const { data } = $props();
 
-	const query_qp = new ReactiveQueryParam<string>('query');
-	const page_qp = new ReactiveQueryParam<number>('page', 1, ReactiveQueryParam.number);
-	const tags_qp = new ReactiveQueryParam<string[]>('tags', [], ReactiveQueryParam.array);
-	const svelte_5_only_qp = new ReactiveQueryParam<boolean>(
-		'svelte_5_only',
-		false,
-		ReactiveQueryParam.boolean
-	);
-	const hide_outdated_qp = new ReactiveQueryParam<boolean>(
-		'hide_outdated',
-		false,
-		ReactiveQueryParam.boolean
-	);
-	const sort_by_qp = new ReactiveQueryParam<SortCriterion>('sort_by', 'popularity');
-	const direction_qp = new ReactiveQueryParam<SortDirection>('direction', 'dsc');
+	const qps = reactive_query_params({
+		query: QueryParamSerde.string(),
+		page: QueryParamSerde.number(1),
+		tags: QueryParamSerde.array<string>(),
+		svelte_5_only: QueryParamSerde.boolean(),
+		hide_outdated: QueryParamSerde.boolean(),
+		sort_by: QueryParamSerde.string<SortCriterion>('popularity'),
+		direction: QueryParamSerde.string<SortDirection>('dsc')
+	});
 
 	let registry = $derived(data.registry);
 	let total_pages = $derived(data.pages.total_pages);
@@ -41,7 +35,7 @@
 			const { type, payload } = event.data;
 
 			if (type === 'update-page') {
-				page_qp.current = payload.page;
+				qps.page = payload.page;
 			}
 
 			if (type === 'ready') {
@@ -64,16 +58,14 @@
 		return () => worker.terminate();
 	});
 
-	$inspect(svelte_5_only_qp.current);
-
 	$effect(() => {
-		query_qp.current;
-		tags_qp.current;
-		page_qp.current;
-		svelte_5_only_qp.current;
-		hide_outdated_qp.current;
-		sort_by_qp.current;
-		direction_qp.current;
+		qps.query;
+		qps.tags;
+		qps.page;
+		qps.svelte_5_only;
+		qps.hide_outdated;
+		qps.sort_by;
+		qps.direction;
 
 		if (!ready) return;
 
@@ -88,13 +80,13 @@
 			type: 'get',
 			id,
 			payload: {
-				query: query_qp.current,
-				page: page_qp.current,
-				tags: $state.snapshot(tags_qp.current),
-				svelte_5_only: svelte_5_only_qp.current,
-				hide_outdated: hide_outdated_qp.current,
-				sort_by: sort_by_qp.current,
-				direction: direction_qp.current
+				query: qps.query,
+				page: qps.page,
+				tags: $state.snapshot(qps.tags),
+				svelte_5_only: qps.svelte_5_only,
+				hide_outdated: qps.hide_outdated,
+				sort_by: qps.sort_by,
+				direction: qps.direction
 			}
 		});
 	});
@@ -233,7 +225,7 @@
 			{/each}
 
 			<div class="pagination">
-				<Pagination total={total_pages} bind:page={page_qp.current}>
+				<Pagination total={total_pages} bind:page={qps.page}>
 					{#snippet children(page_item)}
 						{#if page_item.type === 'ellipsis'}
 							<span>-</span>
@@ -242,10 +234,10 @@
 							{@const _ = url.searchParams.set('page', page_item.value.toString())}
 							<a
 								href={url.pathname + url.search}
-								aria-current={page_qp.current === page_item.value}
+								aria-current={qps.page === page_item.value}
 								onclick={(e) => {
 									e.preventDefault();
-									page_qp.current = page_item.value;
+									qps.page = page_item.value;
 								}}
 							>
 								{page_item.value}
@@ -270,7 +262,7 @@
 								// element?.click();
 							}
 						}}
-						bind:value={query_qp.current}
+						bind:value={qps.query}
 						placeholder="Search"
 						aria-describedby="search-description"
 						aria-label={'Search'}
@@ -281,15 +273,16 @@
 						aria-label="Clear"
 						onclick={(e) => {
 							e.stopPropagation();
-							query_qp.current = '';
+							qps.query = '';
 						}}
 					>
 						<Icon name="close" />
 					</button>
 				</label>
 
+				<b>SORT BY</b>
 				<label>
-					<select bind:value={sort_by_qp.current}>
+					<select bind:value={qps.sort_by}>
 						{#each search_criteria as criterion}
 							<option value={criterion}>{criterion}</option>
 						{/each}
@@ -297,41 +290,43 @@
 				</label>
 
 				<label>
-					<input type="radio" bind:group={direction_qp.current} value="asc" />
+					<input type="radio" bind:group={qps.direction} value="asc" />
 					<span>Ascending</span>
 
-					<input type="radio" bind:group={direction_qp.current} value="dsc" />
+					<input type="radio" bind:group={qps.direction} value="dsc" />
 					<span>Descending</span>
 				</label>
 			</div>
 
+			<br /><br />
+
 			<ul class="sidebar">
 				<b>FILTERS</b>
 				<li>
-					<input type="checkbox" value="svelte_5_only" bind:checked={svelte_5_only_qp.current} />
+					<input type="checkbox" value="svelte_5_only" bind:checked={qps.svelte_5_only} />
 					<a
 						class="tag"
-						href={svelte_5_only_qp.url_from(!svelte_5_only_qp.current)}
+						href={qps.url_from('svelte_5_only', !qps.svelte_5_only)}
 						onclick={(e) => {
 							e.preventDefault();
-							svelte_5_only_qp.current = !svelte_5_only_qp.current;
+							qps.svelte_5_only = !qps.svelte_5_only;
 						}}
-						aria-current={svelte_5_only_qp.current}
+						aria-current={qps.svelte_5_only}
 						title="Show Svelte 5 packages"
 					>
 						Svelte 5 only
 					</a>
 				</li>
 				<li>
-					<input type="checkbox" value="svelte_5_only" bind:checked={hide_outdated_qp.current} />
+					<input type="checkbox" value="svelte_5_only" bind:checked={qps.hide_outdated} />
 					<a
 						class="tag"
-						href={hide_outdated_qp.url_from(!hide_outdated_qp.current)}
+						href={qps.url_from('hide_outdated', !qps.hide_outdated)}
 						onclick={(e) => {
 							e.preventDefault();
-							hide_outdated_qp.current = !hide_outdated_qp.current;
+							qps.hide_outdated = !qps.hide_outdated;
 						}}
-						aria-current={hide_outdated_qp.current}
+						aria-current={qps.hide_outdated}
 					>
 						Hide Outdated
 					</a>
@@ -351,20 +346,18 @@
 							type="checkbox"
 							value={tag.tag}
 							bind:checked={() =>
-								tag.tag === 'all'
-									? tags_qp.current.length === 0
-									: tags_qp.current.includes(tag.tag),
+								tag.tag === 'all' ? qps.tags.length === 0 : qps.tags.includes(tag.tag),
 							() => {
 								if (tag.tag === 'all') {
 									// Click on this should just empty the tags array
-									tags_qp.current = [];
+									qps.tags = [];
 									return;
 								}
 
-								if (tags_qp.current.includes(tag.tag)) {
-									tags_qp.current = tags_qp.current.filter((t) => t !== tag.tag);
+								if (qps.tags.includes(tag.tag)) {
+									qps.tags = qps.tags.filter((t) => t !== tag.tag);
 								} else {
-									tags_qp.current = [...tags_qp.current, tag.tag];
+									qps.tags = [...qps.tags, tag.tag];
 								}
 							}}
 						/>
@@ -376,14 +369,14 @@
 
 								if (tag.tag === 'all') {
 									// Click on this should just empty the tags array
-									tags_qp.current = [];
+									qps.tags = [];
 									return;
 								}
 
-								tags_qp.current = [tag.tag];
+								qps.tags = [tag.tag];
 							}}
-							aria-current={(tag.tag === 'all' && tags_qp.current.length === 0) ||
-								tags_qp.current.includes(tag.tag)}
+							aria-current={(tag.tag === 'all' && qps.tags.length === 0) ||
+								qps.tags.includes(tag.tag)}
 							title="Packages under {tag.tag}"
 						>
 							{tag.short_title}
@@ -455,6 +448,10 @@
 		flex-direction: column;
 		gap: 1rem;
 		font: var(--sk-font-ui-medium);
+
+		b {
+			font-size: large;
+		}
 
 		select {
 			width: 100%;
