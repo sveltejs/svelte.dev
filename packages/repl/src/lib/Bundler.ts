@@ -6,7 +6,7 @@ let uid = 1;
 
 export default class Bundler {
 	#worker: Worker;
-	#handlers = new Map<number, (data: BundleMessageData) => void>();
+	#handlers = new Map<number, (data: BundleMessageData) => void>(); // TODO this is leaky, we don't always remove handlers
 
 	constructor({
 		svelte_version,

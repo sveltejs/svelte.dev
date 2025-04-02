@@ -37,33 +37,45 @@ const ENTRYPOINT = '__entry.js';
 const STYLES = '__styles.js';
 const ESM_ENV = '__esm-env.js';
 
-let svelte_version: string;
 let current_id: number;
 
-let inited = Promise.withResolvers<void>();
-
-let can_use_experimental_async = false;
-
-async function init(v: string, uid: number) {
-	({ version: svelte_version, can_use_experimental_async } = await load_svelte(v, (version) => {
-		self.postMessage({
-			type: 'version',
-			uid,
-			message: version
-		});
-	}));
-}
+let ready: ReturnType<typeof load_svelte>;
 
 self.addEventListener('message', async (event: MessageEvent<BundleMessageData>) => {
 	switch (event.data.type) {
 		case 'init': {
-			init(event.data.svelte_version, event.data.uid).then(inited.resolve, inited.reject);
+			ready = load_svelte(event.data.svelte_version, (version) => {
+				self.postMessage({
+					type: 'version',
+					message: version
+				});
+			});
+
 			break;
 		}
 
 		case 'bundle': {
 			try {
-				await inited.promise;
+				const { svelte, version: svelte_version, can_use_experimental_async } = await ready;
+				const { uid, files, options } = event.data;
+
+				current_id = uid;
+
+				setTimeout(async () => {
+					if (current_id !== uid) return;
+
+					const result = await bundle(
+						svelte,
+						svelte_version,
+						uid,
+						files,
+						options,
+						can_use_experimental_async
+					);
+
+					if (JSON.stringify(result.error) === JSON.stringify(ABORT)) return;
+					if (result && uid === current_id) postMessage(result);
+				});
 			} catch (e) {
 				self.postMessage({
 					type: 'error',
@@ -71,20 +83,6 @@ self.addEventListener('message', async (event: MessageEvent<BundleMessageData>) 
 					message: `Error loading the compiler: ${(e as Error).message}`
 				});
 			}
-			const { uid, files, options } = event.data;
-
-			if (files.length === 0) return;
-
-			current_id = uid;
-
-			setTimeout(async () => {
-				if (current_id !== uid) return;
-
-				const result = await bundle({ uid, files, options });
-
-				if (JSON.stringify(result.error) === JSON.stringify(ABORT)) return;
-				if (result && uid === current_id) postMessage(result);
-			});
 
 			break;
 		}
@@ -128,10 +126,13 @@ async function init_tailwind() {
 }
 
 async function get_bundle(
+	svelte: typeof import('svelte/compiler'),
+	svelte_version: string,
 	uid: number,
 	mode: 'client' | 'server',
 	virtual: Map<string, File>,
-	options: BundleOptions
+	options: BundleOptions,
+	can_use_experimental_async: boolean
 ) {
 	let bundle;
 
@@ -268,7 +269,7 @@ async function get_bundle(
 		transform(code, id) {
 			if (uid !== current_id) throw ABORT;
 
-			self.postMessage({ type: 'status', uid, message: `bundling ${id}` });
+			self.postMessage({ type: 'status', message: `bundling ${id}` });
 
 			if (!/\.(svelte|js)$/.test(id)) return null;
 
@@ -430,15 +431,14 @@ async function get_bundle(
 
 export type BundleResult = ReturnType<typeof bundle>;
 
-async function bundle({
-	uid,
-	files,
-	options
-}: {
-	uid: number;
-	files: File[];
-	options: BundleOptions;
-}) {
+async function bundle(
+	svelte: typeof import('svelte/compiler'),
+	svelte_version: string,
+	uid: number,
+	files: File[],
+	options: BundleOptions,
+	can_use_experimental_async: boolean
+) {
 	if (!DEV) {
 		console.clear();
 		console.log(`running Svelte compiler version %c${svelte.VERSION}`, 'font-weight: bold');
@@ -505,10 +505,13 @@ async function bundle({
 	});
 
 	let client: Awaited<ReturnType<typeof get_bundle>> = await get_bundle(
+		svelte,
+		svelte_version,
 		uid,
 		'client',
 		lookup,
-		options
+		options,
+		can_use_experimental_async
 	);
 
 	try {
@@ -526,7 +529,15 @@ async function bundle({
 		)?.output[0];
 
 		const server = false // TODO how can we do SSR?
-			? await get_bundle(uid, 'server', lookup, options)
+			? await get_bundle(
+					svelte,
+					svelte_version,
+					uid,
+					'server',
+					lookup,
+					options,
+					can_use_experimental_async
+				)
 			: null;
 
 		if (server?.error) {
