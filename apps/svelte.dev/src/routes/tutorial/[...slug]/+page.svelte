@@ -170,6 +170,7 @@
 	let a = $derived(create_files(data.exercise.a));
 	let b = $derived(create_files({ ...data.exercise.a, ...data.exercise.b }));
 
+	// svelte-ignore state_referenced_locally
 	const workspace = new Workspace(Object.values(a), {
 		initial: data.exercise.focus,
 		onupdate(file) {
@@ -180,6 +181,7 @@
 		}
 	});
 
+	// svelte-ignore state_referenced_locally
 	solution.set(b);
 
 	// for the things we can't do with media queries
