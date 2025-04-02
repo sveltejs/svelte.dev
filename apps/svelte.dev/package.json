@@ -60,7 +60,7 @@
 		"@sveltejs/enhanced-img": "^0.4.3",
 		"@sveltejs/kit": "^2.20.0",
 		"@sveltejs/site-kit": "workspace:*",
-		"@sveltejs/vite-plugin-svelte": "5.0.3",
+		"@sveltejs/vite-plugin-svelte": "^4.0.3",
 		"@types/cookie": "^0.6.0",
 		"@types/node": "^20.14.2",
 		"browserslist": "^4.24.2",

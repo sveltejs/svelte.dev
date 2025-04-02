@@ -142,9 +142,3 @@ export function reactive_query_params<T extends Record<string, Serde<any>>>(
 
 	return returned as any;
 }
-
-// const params = reactive_query_params({
-// 	x: { ...ReactiveQueryParam.string, default: 'foo' },
-// 	y: { ...ReactiveQueryParam.number, default: 1 },
-// 	z: { ...ReactiveQueryParam.array }
-// });
