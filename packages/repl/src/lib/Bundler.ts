@@ -43,7 +43,7 @@ export default class Bundler {
 
 			onstatus(null);
 
-			const handler = this.#handlers.get(event.data.uid);
+			const handler = this.#handlers.get(event.data.uid)!;
 			this.#handlers.delete(event.data.uid);
 
 			handler(event.data);
