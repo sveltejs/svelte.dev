@@ -18,7 +18,7 @@ import type { CompileError, CompileResult } from 'svelte/compiler';
 import type { File } from 'editor';
 import type { Node } from 'estree';
 import { max } from './semver';
-import { NPM, VIRTUAL } from './constants';
+import { ENTRYPOINT, ESM_ENV, NPM, STYLES, VIRTUAL } from './constants';
 import { add_suffix, fetch_package, resolve_subpath, resolve_version } from './npm';
 
 // hack for magic-string and rollup inline sourcemaps
@@ -141,7 +141,7 @@ async function init_tailwind() {
 async function get_bundle(
 	uid: number,
 	mode: 'client' | 'server',
-	local_files_lookup: Map<string, File>,
+	virtual: Map<string, File>,
 	options: BundleOptions
 ) {
 	let bundle;
@@ -179,29 +179,22 @@ async function get_bundle(
 		async resolveId(importee, importer) {
 			if (uid !== current_id) throw ABORT;
 
-			if (importee === 'esm-env') {
-				return importee;
-			}
+			// entrypoint
+			if (!importer) return `${VIRTUAL}/${ENTRYPOINT}`;
 
-			if (importee === shared_file) {
-				return `${VIRTUAL}/${shared_file}`;
-			}
-
-			if (importee === './__entry.js') {
-				return `${VIRTUAL}/__entry.js`;
-			}
+			// special case
+			if (importee === 'esm-env') return `${VIRTUAL}/${ESM_ENV}`;
 
 			// importing from a URL
-			if (/^[a-z]+:/.test(importee)) {
-				return importee;
-			}
+			if (/^[a-z]+:/.test(importee)) return importee;
 
+			// importing a local file -> `virtual://$/<file>`
 			if (importee[0] === '.' && importer.startsWith(VIRTUAL)) {
 				const url = new URL(importee, importer);
 
 				for (const suffix of ['', '.js', '.json']) {
 					const with_suffix = `${url.pathname.slice(1)}${suffix}`;
-					const file = local_files_lookup.get(with_suffix);
+					const file = virtual.get(with_suffix);
 
 					if (file) {
 						return url.href + suffix;
@@ -217,6 +210,7 @@ async function get_bundle(
 			const importer_pkg =
 				importer_match && (await fetch_package(importer_match[1], importer_match[2]));
 
+			// external package importing from itself
 			if (importee[0] === '.') {
 				const url = new URL(importee, importer);
 				const parts = url.pathname.slice(1).split('/');
@@ -227,7 +221,7 @@ async function get_bundle(
 				return add_suffix(importer_pkg, path);
 			}
 
-			// bare import
+			// importing an external package -> `npm://$/<name>@<version>/<path>`
 			const match = /^((?:@[^/]+\/)?[^/@]+)(?:@([^/]+))?(\/.+)?$/.exec(importee);
 			if (!match) throw new Error(`Invalid import "${importee}"`);
 
@@ -236,38 +230,33 @@ async function get_bundle(
 			let default_version = 'latest';
 
 			if (importer_pkg) {
-				default_version =
-					importer_pkg.meta.name === pkg_name
-						? importer_pkg.meta.version
-						: max(
-								importer_pkg.meta.devDependencies?.[pkg_name] ??
-									importer_pkg.meta.peerDependencies?.[pkg_name] ??
-									importer_pkg.meta.dependencies?.[pkg_name]
-							);
+				if (importer_pkg.meta.name === pkg_name) {
+					default_version = importer_pkg.meta.version;
+				} else {
+					default_version = max(
+						importer_pkg.meta.devDependencies?.[pkg_name] ??
+							importer_pkg.meta.peerDependencies?.[pkg_name] ??
+							importer_pkg.meta.dependencies?.[pkg_name]
+					);
+				}
 			}
 
 			const version = await resolve_version(match[1], match[2] ?? default_version);
-
 			const pkg = await fetch_package(pkg_name, version);
-
-			let subpath = resolve_subpath(pkg, '.' + (match[3] ?? ''));
+			const subpath = resolve_subpath(pkg, '.' + (match[3] ?? ''));
 
 			return add_suffix(pkg, subpath.slice(2));
 		},
 		async load(resolved) {
 			if (uid !== current_id) throw ABORT;
 
-			if (resolved === 'esm-env') {
-				return `export const BROWSER = true; export const DEV = true`;
-			}
-
 			if (resolved.startsWith(VIRTUAL)) {
-				const file = local_files_lookup.get(resolved.slice(VIRTUAL.length + 1))!;
+				const file = virtual.get(resolved.slice(VIRTUAL.length + 1))!;
 				return file.contents;
 			}
 
 			if (resolved.startsWith(NPM)) {
-				let [, name, version, subpath = ''] =
+				let [, name, version, subpath] =
 					/^npm:\/\/\$\/((?:@[^/]+\/)?[^/@]+)(?:@([^/]+))?\/(.+)$/.exec(resolved)!;
 
 				const pkg = await fetch_package(name, version);
@@ -323,11 +312,11 @@ async function get_bundle(
 					result.css.code = result.css.code.replace(
 						/url\(['"]?\.\/(.+?\.(svg|webp|png))['"]?\)/g,
 						(match, $1, $2) => {
-							if (local_files_lookup.has($1)) {
+							if (virtual.has($1)) {
 								if ($2 === 'svg') {
-									return `url('data:image/svg+xml;base64,${btoa(local_files_lookup.get($1)!.contents)}')`;
+									return `url('data:image/svg+xml;base64,${btoa(virtual.get($1)!.contents)}')`;
 								} else {
-									return `url('data:image/${$2};base64,${local_files_lookup.get($1)!.contents}')`;
+									return `url('data:image/${$2};base64,${virtual.get($1)!.contents}')`;
 								}
 							} else {
 								return match;
@@ -338,7 +327,7 @@ async function get_bundle(
 					result.js.code +=
 						'\n\n' +
 						`
-					import { styles as $$_styles } from '${shared_file}';
+					import { styles as $$_styles } from './${STYLES}';
 					const $$__style = document.createElement('style');
 					$$__style.textContent = ${JSON.stringify(result.css.code)};
 					document.head.append($$__style);
@@ -408,10 +397,10 @@ async function get_bundle(
 						// TODO tidy this up
 						if (id.startsWith(`${NPM}/svelte@`)) return;
 						if (id.startsWith(`${NPM}/clsx@`)) return;
+						if (id === `${VIRTUAL}/${ENTRYPOINT}`) return;
+						if (id === `${VIRTUAL}/${STYLES}`) return;
+						if (id === `${VIRTUAL}/${ESM_ENV}`) return;
 						if (id.endsWith('.svelte')) return;
-						if (id === './__entry.js') return;
-						if (id === 'esm-env') return;
-						if (id === shared_file) return;
 
 						add_tailwind_candidates(this.parse(code));
 					}
@@ -443,8 +432,6 @@ async function get_bundle(
 
 export type BundleResult = ReturnType<typeof bundle>;
 
-const shared_file = '$$__shared__.js';
-
 async function bundle({
 	uid,
 	files,
@@ -461,15 +448,15 @@ async function bundle({
 
 	const lookup: Map<string, File> = new Map();
 
-	lookup.set('__entry.js', {
+	lookup.set(ENTRYPOINT, {
 		type: 'file',
-		name: '__entry.js',
-		basename: '__entry.js',
+		name: ENTRYPOINT,
+		basename: ENTRYPOINT,
 		contents:
 			version.split('.')[0] >= '5'
 				? `
 			import { unmount as u } from 'svelte';
-			import { styles } from '${shared_file}';
+			import { styles } from './${STYLES}';
 			export { mount, untrack } from 'svelte';
 			export {default as App} from './App.svelte';
 			export function unmount(component) {
@@ -478,7 +465,7 @@ async function bundle({
 			}
 		`
 				: `
-			import { styles } from '${shared_file}';
+			import { styles } from './${STYLES}';
 			export {default as App} from './App.svelte';
 			export function mount(component, options) {
 				return new component(options);
@@ -494,12 +481,23 @@ async function bundle({
 		text: true
 	});
 
-	lookup.set(shared_file, {
+	lookup.set(STYLES, {
 		type: 'file',
-		name: shared_file,
-		basename: shared_file,
+		name: STYLES,
+		basename: STYLES,
 		contents: `
 			export let styles = [];
+		`,
+		text: true
+	});
+
+	lookup.set(ESM_ENV, {
+		type: 'file',
+		name: STYLES,
+		basename: STYLES,
+		contents: `
+			export const BROWSER = true;
+			export const DEV = true;
 		`,
 		text: true
 	});
