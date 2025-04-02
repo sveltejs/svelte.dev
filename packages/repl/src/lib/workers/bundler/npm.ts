@@ -11,7 +11,7 @@ interface Package {
 const versions = new Map<string, Promise<string>>();
 const packages = new Map<string, Promise<Package>>();
 
-export async function resolve_version(name: string, version: string) {
+export async function resolve_version(name: string, version: string): Promise<string> {
 	// TODO handle `local` version (i.e. create an endpoint)
 
 	const match = /^(pr|commit|branch)-(.+)/.exec(version);
@@ -35,10 +35,10 @@ export async function resolve_version(name: string, version: string) {
 		versions.set(key, promise);
 	}
 
-	return await versions.get(key);
+	return await versions.get(key)!;
 }
 
-export async function fetch_package(name: string, version: string) {
+export async function fetch_package(name: string, version: string): Promise<Package> {
 	const key = `${name}@${version}`;
 
 	if (!packages.has(key)) {
@@ -49,7 +49,7 @@ export async function fetch_package(name: string, version: string) {
 				throw new Error(`Failed to fetch ${url}`);
 			}
 
-			const contents = {};
+			const contents: Record<string, FileDescription> = {};
 
 			for (const file of await parseTar(await r.arrayBuffer())) {
 				if (file.type === 'file') {
@@ -65,7 +65,7 @@ export async function fetch_package(name: string, version: string) {
 		packages.set(key, promise);
 	}
 
-	return packages.get(key);
+	return packages.get(key)!;
 }
 
 export function resolve_subpath(pkg: Package, subpath: string) {

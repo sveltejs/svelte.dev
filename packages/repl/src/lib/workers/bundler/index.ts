@@ -211,7 +211,7 @@ async function get_bundle(
 				importer_match && (await fetch_package(importer_match[1], importer_match[2]));
 
 			// external package importing from itself
-			if (importee[0] === '.') {
+			if (importer_pkg && importee[0] === '.') {
 				const url = new URL(importee, importer);
 				const parts = url.pathname.slice(1).split('/');
 				if (parts[0][0] === '@') parts.shift();
