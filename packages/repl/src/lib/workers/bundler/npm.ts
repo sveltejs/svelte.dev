@@ -71,7 +71,7 @@ export async function fetch_package(name: string, version: string): Promise<Pack
 export function resolve_subpath(pkg: Package, subpath: string) {
 	// match legacy Rollup logic — pkg.svelte takes priority over pkg.exports
 	if (typeof pkg.meta.svelte === 'string' && subpath === '.') {
-		return pkg.meta.svelte;
+		return `./${pkg.meta.svelte.replace('./', '')}`;
 	}
 
 	// modern
@@ -84,7 +84,9 @@ export function resolve_subpath(pkg: Package, subpath: string) {
 
 			return resolved?.[0];
 		} catch {
-			throw `no matched export path was found in "${pkg.meta.name}/package.json"`;
+			throw new Error(
+				`no matched export path was found for "${subpath}" in "${pkg.meta.name}/package.json"`
+			);
 		}
 	}
 
@@ -110,7 +112,7 @@ export function resolve_subpath(pkg: Package, subpath: string) {
 			if (pkg.contents['index.mjs']) return './index.mjs';
 			if (pkg.contents['index.js']) return './index.js';
 
-			throw `could not find entry point in "${pkg.meta.name}/package.json"`;
+			throw new Error(`could not find entry point in "${pkg.meta.name}/package.json"`);
 		}
 
 		return resolved_id;
