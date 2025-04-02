@@ -5,7 +5,7 @@ author: Dani Sandoval
 authorURL: https://dreamindani.com
 ---
 
-With a dozen minor releases of SvelteKit in the last month and a few more from Svelte itself, there's a lot to be excited about this month. From new helper functions to new configuration options, we've got a lot to cover...
+With a couple minor releases of SvelteKit in the last month and a few more from Svelte itself, there's a lot to be excited about this month. From new helper functions to new configuration options, we've got a lot to cover...
 
 So let's dive in!
 
@@ -24,6 +24,7 @@ There were also quite a few [fixes](https://github.com/sveltejs/language-tools/r
 - `reroute` can now be called async - with an option to `fetch` if you need to pass along cookies or other request context (**2.18.0/2.19.0**, [Docs](https://svelte.dev/docs/kit/@sveltejs-kit#Reroute), [#13520](https://github.com/sveltejs/kit/pull/13520) and [#13549](https://github.com/sveltejs/kit/pull/13549))
 - The new `normalizeUrl` helper provides people a way to normalize a raw URL that could contain SvelteKit-internal data (**2.18.0**, [Docs](https://svelte.dev/docs/kit/@sveltejs-kit#normalizeUrl), [#13539](https://github.com/sveltejs/kit/pull/13539))
 - `getRequestEvent` is a new function in `$app/server` that returns the current `RequestEvent` (**2.20.0**, [Docs](https://svelte.dev/docs/kit/app-server#getRequestEvent), [#13582](https://github.com/sveltejs/kit/pull/13582))
+- Updates to the `cloudflare-adapter` brings Wrangler 4 support, improved `_headers` and `_redirects` files, and support for specifically building for Cloudflare Workers Static Assets (**5.1.0-7.0.0**, [CHANGELOG]([url](https://github.com/sveltejs/kit/blob/main/packages/adapter-cloudflare/CHANGELOG.md)))
 
 For a full list of bug fixes in Svelte, SvelteKit and its adapters, check out their CHANGELOGs [here](https://github.com/sveltejs/svelte/blob/main/packages/svelte/CHANGELOG.md) and [here](https://github.com/sveltejs/kit/tree/main/packages).
 
