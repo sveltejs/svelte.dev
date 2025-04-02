@@ -13,11 +13,54 @@ const packages = new Map<string, Promise<Package>>();
 
 const pkg_pr_new_regex = /^(pr|commit|branch)-(.+)/;
 
-export async function resolve_version(name: string, version: string): Promise<string> {
-	if (name === 'svelte' && version === 'local') {
-		return version;
+export async function load_svelte(version: string, onresolve?: (resolved: string) => void) {
+	if (version === 'local') {
+		await import(`${location.origin}/svelte/compiler/index.js`);
+	} else {
+		if (!pkg_pr_new_regex.test(version)) {
+			version = await resolve_version('svelte', version);
+			onresolve?.(version);
+		}
+
+		const pkg = await fetch_package('svelte', version);
+
+		const entry = version.startsWith('3.')
+			? 'compiler.js'
+			: version.startsWith('4.')
+				? 'compiler.cjs'
+				: 'compiler/index.js';
+
+		const compiler = pkg.contents[entry].text;
+
+		(0, eval)(compiler + `\n//# sourceURL=${entry}@` + version);
 	}
 
+	console.log(`Using Svelte compiler version ${version}`);
+
+	let can_use_experimental_async = false;
+
+	try {
+		svelte.compileModule('', {
+			generate: 'client',
+			// @ts-expect-error
+			experimental: {
+				async: true
+			}
+		});
+
+		can_use_experimental_async = true;
+	} catch (e) {
+		// do nothing
+	}
+
+	return {
+		svelte,
+		version,
+		can_use_experimental_async
+	};
+}
+
+export async function resolve_version(name: string, version: string): Promise<string> {
 	if (pkg_pr_new_regex.test(version)) {
 		return version;
 	}

@@ -18,19 +18,24 @@ import type { CompileError, CompileResult } from 'svelte/compiler';
 import type { File } from '../../Workspace.svelte';
 import type { Node } from 'estree';
 import { max } from './semver';
-import { ENTRYPOINT, ESM_ENV, NPM, STYLES, VIRTUAL } from './constants';
+import { NPM, VIRTUAL } from '../constants';
 import {
 	add_suffix,
 	fetch_package,
+	load_svelte,
 	parse_npm_url,
 	resolve_local,
 	resolve_subpath,
 	resolve_version
-} from './npm';
+} from '../npm';
 
 // hack for magic-string and rollup inline sourcemaps
 // do not put this into a separate module and import it, would be treeshaken in prod
 self.window = self;
+
+const ENTRYPOINT = '__entry.js';
+const STYLES = '__styles.js';
+const ESM_ENV = '__esm-env.js';
 
 let svelte_version: string;
 let current_id: number;
@@ -40,44 +45,13 @@ let inited = Promise.withResolvers<void>();
 let can_use_experimental_async = false;
 
 async function init(v: string, uid: number) {
-	svelte_version = await resolve_version('svelte', v);
-	console.log(`Using Svelte compiler version ${svelte_version}`);
-
-	self.postMessage({
-		type: 'version',
-		uid,
-		message: svelte_version
-	});
-
-	if (svelte_version === 'local') {
-		await import(`${location.origin}/svelte/compiler/index.js`);
-	} else {
-		const pkg = await fetch_package('svelte', svelte_version);
-
-		const entry = svelte_version.startsWith('3.')
-			? 'compiler.js'
-			: svelte_version.startsWith('4.')
-				? 'compiler.cjs'
-				: 'compiler/index.js';
-
-		const compiler = pkg.contents[entry].text;
-
-		(0, eval)(compiler + `\n//# sourceURL=${entry}@` + svelte_version);
-	}
-
-	try {
-		svelte.compileModule('', {
-			generate: 'client',
-			// @ts-expect-error
-			experimental: {
-				async: true
-			}
+	({ version: svelte_version, can_use_experimental_async } = await load_svelte(v, (version) => {
+		self.postMessage({
+			type: 'version',
+			uid,
+			message: version
 		});
-
-		can_use_experimental_async = true;
-	} catch (e) {
-		// do nothing
-	}
+	}));
 }
 
 self.addEventListener('message', async (event: MessageEvent<BundleMessageData>) => {
