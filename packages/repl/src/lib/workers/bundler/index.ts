@@ -44,7 +44,7 @@ async function init(v: string) {
 			? 'compiler.cjs'
 			: 'compiler/index.js';
 
-	const compiler = pkg.files.find((file) => file.name === `package/${entry}`)!.text;
+	const compiler = pkg.contents[entry].text;
 
 	(0, eval)(compiler + `\n//# sourceURL=${entry}@` + version);
 

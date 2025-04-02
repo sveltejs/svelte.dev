@@ -4,7 +4,6 @@ import { NPM } from './constants';
 
 interface Package {
 	meta: any; // package.json contents
-	files: FileDescription[];
 	contents: Record<string, FileDescription>;
 }
 
@@ -50,16 +49,17 @@ export async function fetch_package(name: string, version: string) {
 				throw new Error(`Failed to fetch ${url}`);
 			}
 
-			const files = await parseTar(await r.arrayBuffer());
-			const contents = Object.fromEntries(files.map((file) => [file.name.slice(8), file]));
+			const contents = {};
 
-			const pkg_json = contents['package.json'].text;
+			for (const file of await parseTar(await r.arrayBuffer())) {
+				if (file.type === 'file') {
+					contents[file.name.slice(8)] = file; // remove `package/` prefix
+				}
+			}
 
-			return {
-				meta: JSON.parse(pkg_json),
-				files,
-				contents
-			};
+			const meta = JSON.parse(contents['package.json'].text);
+
+			return { meta, contents };
 		});
 
 		packages.set(key, promise);
