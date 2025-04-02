@@ -73,6 +73,8 @@ self.addEventListener('message', async (event: MessageEvent<BundleMessageData>) 
 						can_use_experimental_async
 					);
 
+					console.log(result);
+
 					if (JSON.stringify(result.error) === JSON.stringify(ABORT)) return;
 					if (result && uid === current_id) postMessage(result);
 				});
@@ -372,61 +374,57 @@ async function get_bundle(
 		}
 	};
 
-	try {
-		const key = JSON.stringify(options);
+	const key = JSON.stringify(options);
 
-		bundle = await rollup({
-			input: './__entry.js',
-			cache: previous?.key === key && previous.cache,
-			plugins: [
-				repl_plugin,
-				commonjs,
-				json,
-				svg,
-				mp3,
-				image,
-				glsl,
-				loop_protect,
-				replace({
-					'process.env.NODE_ENV': JSON.stringify('production')
-				}),
-				options.tailwind && {
-					name: 'tailwind-extract',
-					transform(code, id) {
-						// TODO tidy this up
-						if (id.startsWith(`${NPM}/svelte@`)) return;
-						if (id.startsWith(`${NPM}/clsx@`)) return;
-						if (id === `${VIRTUAL}/${ENTRYPOINT}`) return;
-						if (id === `${VIRTUAL}/${STYLES}`) return;
-						if (id === `${VIRTUAL}/${ESM_ENV}`) return;
-						if (id.endsWith('.svelte')) return;
+	bundle = await rollup({
+		input: './__entry.js',
+		cache: previous?.key === key && previous.cache,
+		plugins: [
+			repl_plugin,
+			commonjs,
+			json,
+			svg,
+			mp3,
+			image,
+			glsl,
+			loop_protect,
+			replace({
+				'process.env.NODE_ENV': JSON.stringify('production')
+			}),
+			options.tailwind && {
+				name: 'tailwind-extract',
+				transform(code, id) {
+					// TODO tidy this up
+					if (id.startsWith(`${NPM}/svelte@`)) return;
+					if (id.startsWith(`${NPM}/clsx@`)) return;
+					if (id === `${VIRTUAL}/${ENTRYPOINT}`) return;
+					if (id === `${VIRTUAL}/${STYLES}`) return;
+					if (id === `${VIRTUAL}/${ESM_ENV}`) return;
+					if (id.endsWith('.svelte')) return;
 
-						add_tailwind_candidates(this.parse(code));
-					}
+					add_tailwind_candidates(this.parse(code));
 				}
-			],
-			onwarn(warning) {
-				all_warnings.push({
-					message: warning.message
-				});
 			}
-		});
+		],
+		onwarn(warning) {
+			all_warnings.push({
+				message: warning.message
+			});
+		}
+	});
 
-		previous = { key, cache: bundle.cache };
+	previous = { key, cache: bundle.cache };
 
-		return {
-			bundle,
-			tailwind: options.tailwind
-				? (tailwind ?? (await init_tailwind())).build(tailwind_candidates)
-				: undefined,
-			imports: Array.from(imports),
-			error: null,
-			warnings,
-			all_warnings
-		};
-	} catch (error) {
-		return { error, imports: null, bundle: null, warnings, all_warnings };
-	}
+	return {
+		bundle,
+		tailwind: options.tailwind
+			? (tailwind ?? (await init_tailwind())).build(tailwind_candidates)
+			: undefined,
+		imports: Array.from(imports),
+		error: null,
+		warnings,
+		all_warnings
+	};
 }
 
 export type BundleResult = ReturnType<typeof bundle>;
@@ -504,20 +502,16 @@ async function bundle(
 		lookup.set(file.name, file);
 	});
 
-	let client: Awaited<ReturnType<typeof get_bundle>> = await get_bundle(
-		svelte,
-		svelte_version,
-		uid,
-		'client',
-		lookup,
-		options,
-		can_use_experimental_async
-	);
-
 	try {
-		if (client.error) {
-			throw client.error;
-		}
+		let client: Awaited<ReturnType<typeof get_bundle>> = await get_bundle(
+			svelte,
+			svelte_version,
+			uid,
+			'client',
+			lookup,
+			options,
+			can_use_experimental_async
+		);
 
 		const client_result = (
 			await client.bundle?.generate({
@@ -540,10 +534,6 @@ async function bundle(
 				)
 			: null;
 
-		if (server?.error) {
-			throw server.error;
-		}
-
 		const server_result = server
 			? (
 					await server.bundle?.generate({
@@ -562,6 +552,7 @@ async function bundle(
 			tailwind: client.tailwind,
 			imports: client.imports,
 			// Svelte 5 returns warnings as error objects with a toJSON method, prior versions return a POJO
+			// TODO are bundler warnings even used anywhere?
 			warnings: client.warnings.map((w: any) => w.toJSON?.() ?? w),
 			error: null
 		};
@@ -575,7 +566,7 @@ async function bundle(
 			client: null,
 			server: null,
 			imports: null,
-			warnings: client.warnings,
+			warnings: [],
 			error: { ...e, message: e.message } // not all Svelte versions return an enumerable message property
 		};
 	}
