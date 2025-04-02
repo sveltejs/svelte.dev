@@ -21,16 +21,6 @@ There were also quite a few [fixes](https://github.com/sveltejs/language-tools/r
 
 
 ## What's new in SvelteKit
-- The new action failure helper checks if a variable is an instance of `ActionFailure` (**2.8.0**, [Docs](https://svelte.dev/docs/kit/@sveltejs-kit#ActionFailure), [#12878](https://github.com/sveltejs/kit/pull/12878))
-- Vite 6 is now supported - making SvelteKit faster and more configurable at build time (**2.9.0**, [Blog Post](https://vite.dev/blog/announcing-vite6) and [#12270](https://github.com/sveltejs/kit/pull/12270))
-- The new server and client `init` hook makes it easier to inject context upon app initialization - helpful for i18n and more (**2.10.0**, Docs, [#13103](https://github.com/sveltejs/kit/pull/13103))
-- The new `$app/state` module replicates the existing `$app/stores` module but using Svelte 5 state (**2.12.0**, [Docs](https://svelte.dev/docs/kit/app-state), [#13140](https://github.com/sveltejs/kit/pull/13140))
-- A new configuration option, `bundleStrategy: 'split' | 'single' | 'inline'`, lets you configure how your app’s JavaScript and CSS files are loaded (**2.13.0/2.15.0**, [Docs](https://svelte.dev/docs/kit/configuration#output), [#13173](https://github.com/sveltejs/kit/pull/13173) and [#13193](https://github.com/sveltejs/kit/pull/13193))
-- Hash-based routing is now built in and can be configured app-wide (**2.14.0**, [Docs](https://svelte.dev/docs/kit/configuration#router), [#13191](https://github.com/sveltejs/kit/pull/13191))
-- A custom identifier can now be invalidated within a `goto()` (**2.16.0**, [Docs](https://svelte.dev/docs/kit/app-navigation#goto), [#13256](https://github.com/sveltejs/kit/pull/13256))
-- The `postinstall` script has been removed to support pnpm 10 - users should add `"prepare": "svelte-kit sync"` to their package.json in order to avoid a warning from Vite (**2.16.0**, [#13304](https://github.com/sveltejs/kit/pull/13304))
-- Values for `cache-control` and `content-type` headers will now be validated in dev mode (**2.17.0**, [#13114](https://github.com/sveltejs/kit/pull/13114))
-- Server-side route resolution is now supported - improving performance and security across the board. See PR for more details (**2.17.0**, [Docs](https://svelte.dev/docs/kit/configuration#router), [#13379](https://github.com/sveltejs/kit/pull/13379))
 - `reroute` can now be called async - with an option to `fetch` if you need to pass along cookies or other request context (**2.18.0/2.19.0**, [Docs](https://svelte.dev/docs/kit/@sveltejs-kit#Reroute), [#13520](https://github.com/sveltejs/kit/pull/13520) and [#13549](https://github.com/sveltejs/kit/pull/13549))
 - The new `normalizeUrl` helper provides people a way to normalize a raw URL that could contain SvelteKit-internal data (**2.18.0**, [Docs](https://svelte.dev/docs/kit/@sveltejs-kit#normalizeUrl), [#13539](https://github.com/sveltejs/kit/pull/13539))
 - `getRequestEvent` is a new function in `$app/server` that returns the current `RequestEvent` (**2.20.0**, [Docs](https://svelte.dev/docs/kit/app-server#getRequestEvent), [#13582](https://github.com/sveltejs/kit/pull/13582))
