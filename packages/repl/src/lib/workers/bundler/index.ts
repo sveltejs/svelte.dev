@@ -78,8 +78,6 @@ async function init(v: string, uid: number) {
 	} catch (e) {
 		// do nothing
 	}
-
-	return svelte;
 }
 
 self.addEventListener('message', async (event: MessageEvent<BundleMessageData>) => {
