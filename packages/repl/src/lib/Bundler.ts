@@ -7,7 +7,6 @@ const workers = new Map();
 let uid = 1;
 
 export default class Bundler {
-	svelte_version: string;
 	worker: Worker;
 	handlers: Map<number, (data: BundleMessageData) => void>;
 
@@ -20,8 +19,6 @@ export default class Bundler {
 		onstatus: (val: string | null) => void;
 		onerror?: (message: string) => void;
 	}) {
-		this.svelte_version = svelte_version;
-
 		if (!workers.has(svelte_version)) {
 			const worker = new Worker(new URL('./workers/bundler/index', import.meta.url), {
 				type: 'module'
@@ -69,11 +66,5 @@ export default class Bundler {
 
 			uid += 1;
 		});
-	}
-
-	destroy() {
-		// TODO this is assymetrical and probably wrong?
-		this.worker.terminate();
-		workers.delete(this.svelte_version);
 	}
 }
