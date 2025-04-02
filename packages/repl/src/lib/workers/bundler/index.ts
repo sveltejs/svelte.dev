@@ -3,7 +3,6 @@ import { walk } from 'zimmerframe';
 import '../patch_window';
 import { rollup } from '@rollup/browser';
 import { DEV } from 'esm-env';
-import * as resolve from 'resolve.exports';
 import commonjs from './plugins/commonjs';
 import glsl from './plugins/glsl';
 import json from './plugins/json';
@@ -18,21 +17,13 @@ import type { Warning } from '../../types';
 import type { CompileError, CompileResult } from 'svelte/compiler';
 import type { File } from 'editor';
 import type { Node } from 'estree';
-import { parseTar, type FileDescription } from 'tarparser';
 import { max } from './semver';
-
-interface Package {
-	meta: any; // package.json contents
-	files: FileDescription[];
-	contents: Record<string, FileDescription>;
-}
+import { NPM, VIRTUAL } from './constants';
+import { add_suffix, fetch_package, resolve_subpath, resolve_version } from './npm';
 
 // hack for magic-string and rollup inline sourcemaps
 // do not put this into a separate module and import it, would be treeshaken in prod
 self.window = self;
-
-const VIRTUAL = 'virtual://$';
-const NPM = 'npm://$';
 
 let version: string;
 let current_id: number;
@@ -40,137 +31,6 @@ let current_id: number;
 let inited = Promise.withResolvers<typeof svelte>();
 
 let can_use_experimental_async = false;
-
-/** map of `pkg-name@1` -> `1.2.3` */
-const versions = new Map<string, Promise<string>>();
-const packages = new Map<string, Promise<Package>>();
-
-async function resolve_version(name: string, version: string) {
-	// TODO handle `local` version (i.e. create an endpoint)
-
-	const match = /^(pr|commit|branch)-(.+)/.exec(version);
-
-	if (match) {
-		return `https://pkg.pr.new/svelte@${match[2]}`;
-	}
-
-	const key = `${name}@${version}`;
-
-	if (!versions.has(key)) {
-		const promise = fetch(`https://cdn.jsdelivr.net/npm/${key}/package.json`).then(async (r) => {
-			if (!r.ok) {
-				versions.delete(key);
-				throw new Error(await r.text());
-			}
-
-			return (await r.json()).version;
-		});
-
-		versions.set(key, promise);
-	}
-
-	return await versions.get(key);
-}
-
-async function fetch_package(name: string, version: string) {
-	const key = `${name}@${version}`;
-
-	if (!packages.has(key)) {
-		const url = `https://registry.npmjs.org/${name}/-/${name.split('/').pop()}-${version}.tgz`;
-		const promise = fetch(url).then(async (r) => {
-			if (!r.ok) {
-				packages.delete(url);
-				throw new Error(`Failed to fetch ${url}`);
-			}
-
-			const files = await parseTar(await r.arrayBuffer());
-			const contents = Object.fromEntries(files.map((file) => [file.name.slice(8), file]));
-
-			const pkg_json = contents['package.json'].text;
-
-			return {
-				meta: JSON.parse(pkg_json),
-				files,
-				contents
-			};
-		});
-
-		packages.set(key, promise);
-	}
-
-	return packages.get(key);
-}
-
-function resolve_subpath(pkg: Package, subpath: string) {
-	// match legacy Rollup logic — pkg.svelte takes priority over pkg.exports
-	if (typeof pkg.meta.svelte === 'string' && subpath === '.') {
-		return pkg.meta.svelte;
-	}
-
-	// modern
-	if (pkg.meta.exports) {
-		try {
-			const resolved = resolve.exports(pkg.meta, subpath, {
-				browser: true,
-				conditions: ['svelte', 'module', 'browser', 'development']
-			});
-
-			return resolved?.[0];
-		} catch {
-			throw `no matched export path was found in "${pkg.meta.name}/package.json"`;
-		}
-	}
-
-	// legacy
-	if (subpath === '.') {
-		let resolved_id = resolve.legacy(pkg.meta, {
-			fields: ['browser', 'module', 'main']
-		});
-
-		if (typeof resolved_id === 'object' && !Array.isArray(resolved_id)) {
-			const subpath = resolved_id['.'];
-			if (subpath === false) return 'data:text/javascript,export {}';
-
-			resolved_id =
-				subpath ??
-				resolve.legacy(pkg.meta, {
-					fields: ['module', 'main']
-				});
-		}
-
-		if (!resolved_id) {
-			// last ditch — try to match index.js/index.mjs
-			if (pkg.contents['index.mjs']) return './index.mjs';
-			if (pkg.contents['index.js']) return './index.js';
-
-			throw `could not find entry point in "${pkg.meta.name}/package.json"`;
-		}
-
-		return resolved_id;
-	}
-
-	if (typeof pkg.meta.browser === 'object') {
-		// this will either return `pkg.browser[subpath]` or `subpath`
-		return resolve.legacy(pkg, {
-			browser: subpath
-		});
-	}
-
-	return subpath;
-}
-
-function add_suffix(pkg: Package, path: string) {
-	for (const suffix of ['', '.js', '.mjs', '.cjs', '/index.js', '/index.mjs', '/index.cjs']) {
-		const with_suffix = path + suffix;
-		const file = pkg.contents[with_suffix];
-
-		if (file && file.type === 'file') {
-			return `${NPM}/${pkg.meta.name}@${pkg.meta.version}/${with_suffix}`;
-		}
-	}
-
-	throw new Error(`Could not find ${path} in ${pkg.meta.name}@${pkg.meta.version}`);
-}
 
 async function init(v: string) {
 	version = await resolve_version('svelte', v);
@@ -546,12 +406,12 @@ async function get_bundle(
 					name: 'tailwind-extract',
 					transform(code, id) {
 						// TODO tidy this up
-						if (id.startsWith(svelte_url)) return;
+						if (id.startsWith(`${NPM}/svelte@`)) return;
+						if (id.startsWith(`${NPM}/clsx@`)) return;
 						if (id.endsWith('.svelte')) return;
 						if (id === './__entry.js') return;
 						if (id === 'esm-env') return;
 						if (id === shared_file) return;
-						if (id.startsWith('https://unpkg.com/clsx@')) return;
 
 						add_tailwind_candidates(this.parse(code));
 					}
