@@ -23,7 +23,7 @@
 
 	// svelte-ignore non_reactive_update
 	let version = page.url.searchParams.get('version') || 'latest';
-	let is_pr_or_commit_version = version.startsWith('pr-') || version.startsWith('commit-');
+	let is_pr_or_commit_version = /^(pr|commit|branch)-(.+)/.test(version);
 
 	// Hashed URLs are less safe (we can't delete malicious REPLs), therefore
 	// don't allow links to escape the sandbox restrictions

@@ -11,13 +11,13 @@ interface Package {
 const versions = new Map<string, Promise<string>>();
 const packages = new Map<string, Promise<Package>>();
 
+const pkg_pr_new_regex = /^(pr|commit|branch)-(.+)/;
+
 export async function resolve_version(name: string, version: string): Promise<string> {
 	// TODO handle `local` version (i.e. create an endpoint)
 
-	const match = /^(pr|commit|branch)-(.+)/.exec(version);
-
-	if (match) {
-		return `https://pkg.pr.new/svelte@${match[2]}`;
+	if (pkg_pr_new_regex.test(version)) {
+		return version;
 	}
 
 	const key = `${name}@${version}`;
@@ -42,7 +42,12 @@ export async function fetch_package(name: string, version: string): Promise<Pack
 	const key = `${name}@${version}`;
 
 	if (!packages.has(key)) {
-		const url = `https://registry.npmjs.org/${name}/-/${name.split('/').pop()}-${version}.tgz`;
+		const match = pkg_pr_new_regex.exec(version);
+
+		const url = match
+			? `https://pkg.pr.new/svelte@${match[2]}`
+			: `https://registry.npmjs.org/${name}/-/${name.split('/').pop()}-${version}.tgz`;
+
 		const promise = fetch(url).then(async (r) => {
 			if (!r.ok) {
 				packages.delete(url);
