@@ -20,7 +20,7 @@ export async function create(): Promise<Adapter> {
 
 	let done = false;
 
-	bundler = new Bundler({
+	bundler ??= new Bundler({
 		svelte_version: 'latest',
 		onstatus(val) {
 			if (!done && val === null) {
