@@ -8,5 +8,5 @@
 
 <button onclick={increment}>
 	Clicked {count}
-	{count === 1 ? 'time' : 'times'}
+	{count <= 1 ? 'time' : 'times'}
 </button>
