@@ -48,7 +48,7 @@
 	let context = get_repl_context();
 	let bundle = $derived((bundler ?? context?.bundler)?.result);
 
-	let logs: Log[] = $state.raw([]);
+	let logs: Log[] = $state.raw([]); // we don't want to proxify the logged values
 	let log_group_stack: Log[][] = [];
 
 	// svelte-ignore state_referenced_locally
