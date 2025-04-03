@@ -48,17 +48,17 @@
 	let context = get_repl_context();
 	let bundle = $derived((bundler ?? context?.bundler)?.result);
 
-	let logs: Log[] = $state([]);
+	let logs: Log[] = $state.raw([]);
 	let log_group_stack: Log[][] = [];
 
 	// svelte-ignore state_referenced_locally
 	let current_log_group = logs;
 
-	let iframe = $state<HTMLIFrameElement>();
+	let iframe = $state.raw<HTMLIFrameElement>();
 	let pending_imports = $state(0);
 	let pending = false;
 
-	let proxy: ReplProxy | null = $state(null);
+	let proxy: ReplProxy | null = $state.raw(null);
 	let ready = $state(false);
 	let inited = $state(false);
 
