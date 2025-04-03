@@ -257,7 +257,7 @@
 
 	function push_logs(log: Log) {
 		current_log_group.push((last_console_event = log));
-		logs = logs;
+		logs = [...logs, log];
 		onLog?.(logs);
 	}
 
@@ -267,7 +267,7 @@
 		// TODO: Investigate
 		log_group_stack.push(current_log_group);
 		current_log_group = log.logs;
-		logs = logs;
+		logs = [...logs];
 		onLog?.(logs);
 	}
 
@@ -282,7 +282,7 @@
 
 		if (last_log) {
 			last_log.count = (last_log.count || 1) + 1;
-			logs = logs;
+			logs = [...logs];
 			onLog?.(logs);
 		} else {
 			last_console_event.count = 1;
