@@ -2,39 +2,21 @@ import { replaceState } from '$app/navigation';
 import { page } from '$app/state';
 import { tick } from 'svelte';
 
-export class Box<T> {
-	#getter: () => T;
-	#setter?: (value: T) => void;
+export function box<T>(getter: () => T, setter?: (value: T) => void) {
+	let derived_val = $derived(getter());
 
-	#derived = $derived.by(() => {
-		let val = $state(this.#getter());
-
-		return {
-			get current() {
-				return val;
-			},
-			set current(value) {
-				val = value;
-			}
-		};
+	$effect(() => {
+		setter?.($state.snapshot(derived_val) as T);
 	});
 
-	constructor(getter: () => T, setter?: (value: T) => void) {
-		this.#getter = getter;
-		this.#setter = setter;
-
-		$effect(() => {
-			this.#setter?.($state.snapshot(this.#derived.current) as T);
-		});
-	}
-
-	get current(): T {
-		return this.#derived.current;
-	}
-
-	set current(value: T) {
-		this.#derived.current = value;
-	}
+	return {
+		get current() {
+			return derived_val;
+		},
+		set current(value) {
+			derived_val = value;
+		}
+	};
 }
 
 type Serde<T> = {
@@ -88,9 +70,9 @@ export function reactive_query_params<T extends Record<string, Serde<any>>>(
 } & {
 	url_from<K extends keyof T>(field: K, value: T[K] extends Serde<infer U> ? U : never): string;
 } {
-	const boxes: Record<string, Box<any>> = {};
+	const boxes: Record<string, ReturnType<typeof box<any>>> = {};
 	for (const [key, value] of Object.entries(params)) {
-		boxes[key] = new Box<any>(
+		boxes[key] = box<any>(
 			() => {
 				const param_value = page.url.searchParams.get(key);
 				if (param_value) {
