@@ -66,9 +66,6 @@ export function stripTypes(content) {
 		}
 	});
 
-	console.log(content);
-	console.log(s.toString());
-
 	return s;
 }
 

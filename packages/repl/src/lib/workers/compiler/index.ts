@@ -22,7 +22,7 @@ addEventListener('message', async (event) => {
 
 	const { can_use_experimental_async, svelte } = (cache[version] ??= await load_svelte(version));
 
-	if (!file.name.endsWith('.svelte') && !svelte.compileModule) {
+	if (!file.name.endsWith('.svelte') && !file.name.includes('.svelte.') && !svelte.compileModule) {
 		// .svelte.js file compiled with Svelte 3/4 compiler
 		postMessage({
 			id,
@@ -81,8 +81,8 @@ addEventListener('message', async (event) => {
 				compilerOptions.experimental = { async: true };
 			}
 
-			const s = stripTypes(file.contents);
-			result = svelte.compileModule(s.toString(), compilerOptions);
+			const code = file.name.endsWith('.ts') ? stripTypes(file.contents).toString() : file.contents;
+			result = svelte.compileModule(code, compilerOptions);
 		}
 
 		postMessage({
