@@ -43,6 +43,15 @@
 							}
 
 							(0, eval)(data.args.script);
+
+							// hand focus back to the editor if it's taken in an effect
+							// that runs immediately (for focuses in effects, this is
+							// more effective than listening for the focusin event)
+							Promise.resolve().then(() => {
+								if (document.activeElement !== null && document.activeElement !== document.body) {
+									send({ type: 'iframe_took_focus' });
+								}
+							});
 						}
 
 						if (action === 'catch_clicks') {
