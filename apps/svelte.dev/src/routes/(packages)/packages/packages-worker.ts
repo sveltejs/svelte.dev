@@ -15,6 +15,8 @@ addEventListener('message', async (event) => {
 
 		sort_by = search_criteria.includes(sort_by) ? sort_by : 'popularity';
 
+		if (!query) return;
+
 		const current_results = search(query, {
 			sort_by,
 			filters: {

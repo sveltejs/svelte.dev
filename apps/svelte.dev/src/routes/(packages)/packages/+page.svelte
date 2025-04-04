@@ -106,33 +106,38 @@
 <div class="container">
 	<div class="page content">
 		<div class="controls">
-			<label class="input-group">
-				<Icon name="search" />
-				<input
-					use:forcefocus
-					onkeydown={(e) => {
-						if (e.key === 'Enter' && !e.isComposing) {
-							// const element = modal.querySelector('a[data-has-node]') as HTMLElement | undefined;
-							// element?.click();
-						}
-					}}
-					bind:value={qps.query}
-					placeholder="Search"
-					aria-describedby="search-description"
-					aria-label="Search"
-					spellcheck="false"
-				/>
+			<form onsubmit={(e) => e.preventDefault()}>
+				<label class="input-group">
+					<Icon name="search" />
+					<input
+						name="query"
+						use:forcefocus
+						onkeydown={(e) => {
+							if (e.key === 'Enter') {
+								e.stopPropagation();
+								e.preventDefault();
+							}
+						}}
+						bind:value={qps.query}
+						placeholder="Search"
+						aria-describedby="search-description"
+						aria-label="Search"
+						spellcheck="false"
+					/>
 
-				<button
-					aria-label="Clear"
-					onclick={(e) => {
-						e.stopPropagation();
-						qps.query = '';
-					}}
-				>
-					<Icon name="close" />
-				</button>
-			</label>
+					<button
+						aria-label="Clear"
+						onclick={(e) => {
+							e.stopPropagation();
+							qps.query = '';
+						}}
+					>
+						<Icon name="close" />
+					</button>
+				</label>
+
+				<button type="submit"> Submit </button>
+			</form>
 		</div>
 
 		{#if !qps.query && data.homepage}
@@ -320,9 +325,12 @@
 	.controls {
 		background: var(--background);
 		display: flex;
-		flex-direction: column;
 		gap: 1rem;
 		font: var(--sk-font-ui-medium);
+
+		form {
+			display: contents;
+		}
 
 		/* b {
 			font-size: large;
