@@ -4,16 +4,13 @@ import { stripTypes } from 'typestript';
 const plugin: Plugin = {
 	name: 'typescript-strip-types',
 	transform: (code, id) => {
-		const match = id.endsWith('.ts');
-		if (!match) return;
+		if (!id.endsWith('.ts')) return;
 
-		const { content, sourceMap } = stripTypes(code);
-
-		console.log(content);
+		const s = stripTypes(code);
 
 		return {
-			code: content,
-			map: sourceMap
+			code: s.toString(),
+			map: s.generateMap({ hires: true })
 		};
 	}
 };

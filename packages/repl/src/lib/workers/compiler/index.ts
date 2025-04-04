@@ -81,8 +81,8 @@ addEventListener('message', async (event) => {
 				compilerOptions.experimental = { async: true };
 			}
 
-			const { content } = stripTypes(file.contents);
-			result = svelte.compileModule(content, compilerOptions);
+			const s = stripTypes(file.contents);
+			result = svelte.compileModule(s.toString(), compilerOptions);
 		}
 
 		postMessage({

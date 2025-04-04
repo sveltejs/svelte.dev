@@ -8,15 +8,13 @@
 		"format": "prettier --write ."
 	},
 	"exports": {
-		".": "./dist/index.js"
+		".": {
+			"types": "./src/index.js",
+			"default": "./src/index.js"
+		}
 	},
 	"files": [
-		"dist",
-		"!dist/**/*.test.*",
-		"!dist/**/*.spec.*",
-    "src",
-    "!src/**/*.test.*",
-    "!src/**/*.spec.*"
+		"src"
 	],
 	"type": "module",
 	"dependencies": {
