@@ -51,7 +51,7 @@
 		"@cloudflare/workers-types": "^4.20241127.0",
 		"@resvg/resvg-js": "^2.6.2",
 		"@supabase/supabase-js": "^2.43.4",
-		"@sveltejs/adapter-vercel": "https://pkg.pr.new/@sveltejs/adapter-vercel@280b6711dc415ad7db23128d9cbb945983bbcd7e",
+		"@sveltejs/adapter-vercel": "^5.7.0",
 		"@sveltejs/enhanced-img": "^0.4.3",
 		"@sveltejs/kit": "^2.20.0",
 		"@sveltejs/site-kit": "workspace:*",
