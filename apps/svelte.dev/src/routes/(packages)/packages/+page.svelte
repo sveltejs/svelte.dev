@@ -4,8 +4,8 @@
 	import { Icon } from '@sveltejs/site-kit/components';
 	import { QueryParamSerde, reactive_query_params } from '@sveltejs/site-kit/reactivity';
 	import { onMount } from 'svelte';
-	import { type SortCriterion } from '../packages-search';
 	import PackageCard from './PackageCard.svelte';
+	import { type SortCriterion } from './packages-search';
 	import Pagination from './Pagination.svelte';
 
 	const { data } = $props();

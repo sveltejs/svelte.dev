@@ -1,4 +1,4 @@
-import { init, REGISTRY_PAGE_LIMIT, search, search_criteria } from '../packages-search';
+import { init, REGISTRY_PAGE_LIMIT, search, search_criteria } from './packages-search';
 
 addEventListener('message', async (event) => {
 	const { type, payload } = event.data;

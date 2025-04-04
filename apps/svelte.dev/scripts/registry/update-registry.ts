@@ -7,7 +7,7 @@ import { fileURLToPath } from 'node:url';
 import { PACKAGES_META } from '../../src/lib/packages-meta.js';
 import type { Package } from '../../src/lib/server/content.js';
 import svelte_society_list from '../../src/lib/society-npm.json' with { type: 'json' };
-import { sort_packages } from '../../src/routes/(packages)/packages-search.js';
+import { sort_packages } from '../../src/routes/(packages)/packages/packages-search.js';
 import {
 	fetch_details_for_package,
 	fetch_downloads_for_package,

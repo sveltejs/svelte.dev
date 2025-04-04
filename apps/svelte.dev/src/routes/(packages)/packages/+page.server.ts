@@ -7,7 +7,7 @@ import {
 	search,
 	search_criteria,
 	type SortCriterion
-} from '../packages-search';
+} from './packages-search';
 
 export const prerender = false;
 

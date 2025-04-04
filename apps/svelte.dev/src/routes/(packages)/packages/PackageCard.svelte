@@ -186,8 +186,10 @@
 <style>
 	h3 {
 		display: inline-block;
-		color: var(--sk-fg-1);
-		font: var(--sk-font-h3);
+		color: var(--sk-fg-2);
+		font-size: var(--sk-font-size-h3);
+		font-family: var(--sk-font-family-body);
+		margin-bottom: 1rem;
 
 		&.faded {
 			color: var(--sk-fg-3);
