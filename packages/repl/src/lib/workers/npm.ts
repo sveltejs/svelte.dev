@@ -172,7 +172,7 @@ export function resolve_subpath(pkg: Package, subpath: string): string {
 
 	if (typeof pkg.meta.browser === 'object') {
 		// this will either return `pkg.browser[subpath]` or `subpath`
-		return resolve.legacy(pkg, {
+		return resolve.legacy(pkg.meta, {
 			browser: subpath
 		}) as string;
 	}
@@ -182,7 +182,12 @@ export function resolve_subpath(pkg: Package, subpath: string): string {
 
 export function add_suffix(pkg: Package, path: string) {
 	for (const suffix of ['', '.js', '.mjs', '.cjs', '/index.js', '/index.mjs', '/index.cjs']) {
-		const with_suffix = path + suffix;
+		let with_suffix = path + suffix;
+
+		if (pkg.meta.browser) {
+			with_suffix = pkg.meta.browser[`./${with_suffix}`]?.replace('./', '') ?? with_suffix;
+		}
+
 		const file = pkg.contents[with_suffix];
 
 		if (file && file.type === 'file') {
