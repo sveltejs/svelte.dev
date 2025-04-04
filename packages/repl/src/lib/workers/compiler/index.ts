@@ -38,7 +38,7 @@ addEventListener('message', async (event) => {
 
 	let migration = null;
 
-	if (svelte.migrate) {
+	if (file.name.endsWith('.svelte') && svelte.migrate) {
 		try {
 			migration = svelte.migrate(file.contents, { filename: file.name });
 		} catch (e) {
