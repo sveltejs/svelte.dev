@@ -115,8 +115,8 @@ importers:
         specifier: ^2.43.4
         version: 2.43.4
       '@sveltejs/adapter-vercel':
-        specifier: ^5.5.2
-        version: 5.5.2(@sveltejs/kit@2.20.0(@sveltejs/vite-plugin-svelte@4.0.3(svelte@5.23.0)(vite@5.4.11(@types/node@20.14.2)(lightningcss@1.25.1)))(svelte@5.23.0)(vite@5.4.11(@types/node@20.14.2)(lightningcss@1.25.1)))(rollup@4.21.2)
+        specifier: https://pkg.pr.new/@sveltejs/adapter-vercel@13674
+        version: https://pkg.pr.new/@sveltejs/adapter-vercel@13674(@sveltejs/kit@2.20.0(@sveltejs/vite-plugin-svelte@4.0.3(svelte@5.23.0)(vite@5.4.11(@types/node@20.14.2)(lightningcss@1.25.1)))(svelte@5.23.0)(vite@5.4.11(@types/node@20.14.2)(lightningcss@1.25.1)))(rollup@4.21.2)
       '@sveltejs/enhanced-img':
         specifier: ^0.4.3
         version: 0.4.3(rollup@4.21.2)(svelte@5.23.0)(vite@5.4.11(@types/node@20.14.2)(lightningcss@1.25.1))
@@ -1245,8 +1245,8 @@ packages:
   '@manypkg/get-packages@1.1.3':
     resolution: {integrity: sha512-fo+QhuU3qE/2TQMQmbVMqaQ6EWbMhi4ABWP+O4AM1NqPBuy0OrApV5LO6BrrgnhtAHS2NH6RrVk9OL181tTi8A==}
 
-  '@mapbox/node-pre-gyp@2.0.0-rc.0':
-    resolution: {integrity: sha512-nhSMNprz3WmeRvd8iUs5JqkKr0Ncx46JtPxM3AhXes84XpSJfmIwKeWXRpsr53S7kqPkQfPhzrMFUxSNb23qSA==}
+  '@mapbox/node-pre-gyp@2.0.0':
+    resolution: {integrity: sha512-llMXd39jtP0HpQLVI37Bf1m2ADlEb35GYSh1SDSLsBhR+5iCxiNGlT31yqbNtVHygHAtMy6dWFERpU2JgufhPg==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -1550,8 +1550,9 @@ packages:
     peerDependencies:
       '@sveltejs/kit': ^2.0.0
 
-  '@sveltejs/adapter-vercel@5.5.2':
-    resolution: {integrity: sha512-6NpumKJ3m9Y6mkSFw4Z8YnaJZc42OWLkSFCk5hD6pLrS4f+b9JVBaXpKB/xkxf1Kf7JpzZtNZKbAaoRrTtJ+Hw==}
+  '@sveltejs/adapter-vercel@https://pkg.pr.new/@sveltejs/adapter-vercel@13674':
+    resolution: {tarball: https://pkg.pr.new/@sveltejs/adapter-vercel@13674}
+    version: 5.6.3
     peerDependencies:
       '@sveltejs/kit': ^2.4.0
 
@@ -1702,9 +1703,9 @@ packages:
       react:
         optional: true
 
-  '@vercel/nft@0.27.9':
-    resolution: {integrity: sha512-pTs7OchHQmSYJPR0puVQCWw/NqzuvAtnAhBurz21lq4Y4KqWoMpYKqmikkETG5r1bHNCM/hQMZ5JiRr9mhOkyg==}
-    engines: {node: '>=16'}
+  '@vercel/nft@0.29.2':
+    resolution: {integrity: sha512-A/Si4mrTkQqJ6EXJKv5EYCDQ3NL6nJXxG8VGXePsaiQigsomHYQC9xSpX8qGk7AEZk4b1ssbYIqJ0ISQQ7bfcA==}
+    engines: {node: '>=18'}
     hasBin: true
 
   '@vercel/speed-insights@1.1.0':
@@ -1882,9 +1883,6 @@ packages:
   bmp-ts@1.0.9:
     resolution: {integrity: sha512-cTEHk2jLrPyi+12M3dhpEbnnPOsaZuq7C45ylbbQIiWgDFZq4UVYPEY5mlqjvsj/6gJv9qX5sa+ebDzLXT28Vw==}
 
-  brace-expansion@1.1.11:
-    resolution: {integrity: sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA==}
-
   brace-expansion@2.0.1:
     resolution: {integrity: sha512-XnAIvQ8eM+kC6aULx6wuQiwVsnzsi9d3WxzV3FpWTGA19F621kwdbsAcFKXgKUHZWsy+mY6iL1sHTxWEFCytDA==}
 
@@ -1987,9 +1985,6 @@ packages:
   commander@7.2.0:
     resolution: {integrity: sha512-QrWXB+ZQSVPmIWIhtEO9H+gwHaMGYiF5ChvoJ+K9ZGHG/sVsa6yiesAD1GC/x46sET00Xlwo1u49RVVVzvcSkw==}
     engines: {node: '>= 10'}
-
-  concat-map@0.0.1:
-    resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
 
   consola@3.2.3:
     resolution: {integrity: sha512-I5qxpzLv+sJhTVEoLYNcTW+bThDCPsit0vLNKShZx6rLtpilNpmmeTPaeqJb9ZE9dV3DGaeby6Vuhrw38WjeyQ==}
@@ -2262,10 +2257,6 @@ packages:
   glob@10.4.5:
     resolution: {integrity: sha512-7Bv8RF0k6xjo7d4A/PxYLbUCfb6c+Vpd2/mB2yRDlew7Jb5hEXiCD9ibfO7wpk8i4sevK6DFny9h7EYbM3/sHg==}
     hasBin: true
-
-  glob@7.2.3:
-    resolution: {integrity: sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==}
-    deprecated: Glob versions prior to v9 are no longer supported
 
   glob@8.1.0:
     resolution: {integrity: sha512-r8hpEjiQEYlF2QU0df3dS+nxxSIreXQS1qRhMJM0Q5NDdR386C7jb7Hwwod8Fgiuex+k0GFjgft18yvxm5XoCQ==}
@@ -2544,9 +2535,6 @@ packages:
     resolution: {integrity: sha512-ethXTt3SGGR+95gudmqJ1eNhRO7eGEGIgYA9vnPatK4/etz2MEVDno5GMCibdMTuBMyElzIlgxMna3K94XDIDQ==}
     engines: {node: 20 || >=22}
 
-  minimatch@3.1.2:
-    resolution: {integrity: sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==}
-
   minimatch@5.1.6:
     resolution: {integrity: sha512-lKwV/1brpG6mBUFHtb7NUmtABCb2WZZmm2wNiOA5hAb8VdCS4B3dtMWyvcoViccwAW/COERjXLt0zP1zXUN26g==}
     engines: {node: '>=10'}
@@ -2697,10 +2685,6 @@ packages:
   path-exists@4.0.0:
     resolution: {integrity: sha512-ak9Qy5Q7jYb2Wwcey5Fpvg2KoAc/ZIhLSLOSBmRmygPsGwkVVt0fZa0qrtMz+m6tJTAHfZQ8FnmB4MG4LWy7/w==}
     engines: {node: '>=8'}
-
-  path-is-absolute@1.0.1:
-    resolution: {integrity: sha512-AVbw3UJ2e9bq64vSaS9Am0fje1Pa8pbGqTTsmXfaIiMpnr5DlDhfJOuLj9Sf95ZPVDAUerDfEk88MPmPe7UCQg==}
-    engines: {node: '>=0.10.0'}
 
   path-key@3.1.1:
     resolution: {integrity: sha512-ojmeN0qd+y0jszEtoY48r0Peq5dwMEkIlCOu6Q5f41lfkswXuKtYrhgoTpLnyIcHm24Uhqx+5Tqm2InSwLhE6Q==}
@@ -4178,7 +4162,7 @@ snapshots:
       globby: 11.1.0
       read-yaml-file: 1.1.0
 
-  '@mapbox/node-pre-gyp@2.0.0-rc.0':
+  '@mapbox/node-pre-gyp@2.0.0':
     dependencies:
       consola: 3.2.3
       detect-libc: 2.0.3
@@ -4481,10 +4465,10 @@ snapshots:
       '@sveltejs/kit': 2.20.0(@sveltejs/vite-plugin-svelte@4.0.0(svelte@5.23.0)(vite@5.4.11(@types/node@20.14.2)(lightningcss@1.25.1)))(svelte@5.23.0)(vite@5.4.11(@types/node@20.14.2)(lightningcss@1.25.1))
       import-meta-resolve: 4.1.0
 
-  '@sveltejs/adapter-vercel@5.5.2(@sveltejs/kit@2.20.0(@sveltejs/vite-plugin-svelte@4.0.3(svelte@5.23.0)(vite@5.4.11(@types/node@20.14.2)(lightningcss@1.25.1)))(svelte@5.23.0)(vite@5.4.11(@types/node@20.14.2)(lightningcss@1.25.1)))(rollup@4.21.2)':
+  '@sveltejs/adapter-vercel@https://pkg.pr.new/@sveltejs/adapter-vercel@13674(@sveltejs/kit@2.20.0(@sveltejs/vite-plugin-svelte@4.0.3(svelte@5.23.0)(vite@5.4.11(@types/node@20.14.2)(lightningcss@1.25.1)))(svelte@5.23.0)(vite@5.4.11(@types/node@20.14.2)(lightningcss@1.25.1)))(rollup@4.21.2)':
     dependencies:
       '@sveltejs/kit': 2.20.0(@sveltejs/vite-plugin-svelte@4.0.3(svelte@5.23.0)(vite@5.4.11(@types/node@20.14.2)(lightningcss@1.25.1)))(svelte@5.23.0)(vite@5.4.11(@types/node@20.14.2)(lightningcss@1.25.1))
-      '@vercel/nft': 0.27.9(rollup@4.21.2)
+      '@vercel/nft': 0.29.2(rollup@4.21.2)
       esbuild: 0.24.0
     transitivePeerDependencies:
       - encoding
@@ -4683,16 +4667,16 @@ snapshots:
     dependencies:
       server-only: 0.0.1
 
-  '@vercel/nft@0.27.9(rollup@4.21.2)':
+  '@vercel/nft@0.29.2(rollup@4.21.2)':
     dependencies:
-      '@mapbox/node-pre-gyp': 2.0.0-rc.0
+      '@mapbox/node-pre-gyp': 2.0.0
       '@rollup/pluginutils': 5.1.3(rollup@4.21.2)
-      acorn: 8.14.0
-      acorn-import-attributes: 1.9.5(acorn@8.14.0)
+      acorn: 8.14.1
+      acorn-import-attributes: 1.9.5(acorn@8.14.1)
       async-sema: 3.1.1
       bindings: 1.5.0
       estree-walker: 2.0.2
-      glob: 7.2.3
+      glob: 10.4.5
       graceful-fs: 4.2.11
       node-gyp-build: 4.8.4
       picomatch: 4.0.2
@@ -4751,9 +4735,9 @@ snapshots:
 
   abbrev@2.0.0: {}
 
-  acorn-import-attributes@1.9.5(acorn@8.14.0):
+  acorn-import-attributes@1.9.5(acorn@8.14.1):
     dependencies:
-      acorn: 8.14.0
+      acorn: 8.14.1
 
   acorn@8.14.0: {}
 
@@ -4829,11 +4813,6 @@ snapshots:
       file-uri-to-path: 1.0.0
 
   bmp-ts@1.0.9: {}
-
-  brace-expansion@1.1.11:
-    dependencies:
-      balanced-match: 1.0.2
-      concat-map: 0.0.1
 
   brace-expansion@2.0.1:
     dependencies:
@@ -4946,8 +4925,6 @@ snapshots:
   commander@2.20.3: {}
 
   commander@7.2.0: {}
-
-  concat-map@0.0.1: {}
 
   consola@3.2.3: {}
 
@@ -5248,15 +5225,6 @@ snapshots:
       package-json-from-dist: 1.0.1
       path-scurry: 1.11.1
 
-  glob@7.2.3:
-    dependencies:
-      fs.realpath: 1.0.0
-      inflight: 1.0.6
-      inherits: 2.0.4
-      minimatch: 3.1.2
-      once: 1.4.0
-      path-is-absolute: 1.0.1
-
   glob@8.1.0:
     dependencies:
       fs.realpath: 1.0.0
@@ -5551,10 +5519,6 @@ snapshots:
     dependencies:
       brace-expansion: 2.0.1
 
-  minimatch@3.1.2:
-    dependencies:
-      brace-expansion: 1.1.11
-
   minimatch@5.1.6:
     dependencies:
       brace-expansion: 2.0.1
@@ -5679,8 +5643,6 @@ snapshots:
       tslib: 2.6.3
 
   path-exists@4.0.0: {}
-
-  path-is-absolute@1.0.1: {}
 
   path-key@3.1.1: {}
 
