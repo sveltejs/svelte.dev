@@ -13,8 +13,8 @@
 	const qps = reactive_query_params({
 		query: QueryParamSerde.string(),
 		page: QueryParamSerde.number(1),
-		svelte_5_only: QueryParamSerde.boolean(),
-		hide_outdated: QueryParamSerde.boolean(),
+		svelte_5_only: QueryParamSerde.boolean(false),
+		hide_outdated: QueryParamSerde.boolean(false),
 		sort_by: QueryParamSerde.string<SortCriterion>('popularity')
 	});
 

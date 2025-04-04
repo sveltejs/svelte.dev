@@ -4,7 +4,7 @@ const TAGS = {
 	'design-system': {
 		prompt:
 			'MUST contain 2+ reusable Svelte components designed as a cohesive set with shared design principles. Examples: complete UI kits, design systems, form libraries, widget collections, component libraries. Key indicator: components are intentionally built to work together, share styling patterns, and serve a unified purpose. NOT a single component or unrelated components bundled together.',
-		title: 'Design Systems & Component Libraries',
+		title: 'Component Libraries',
 		featured: [
 			'bits-ui',
 			'@melt-ui/svelte',
@@ -23,7 +23,7 @@ const TAGS = {
 	ui: {
 		prompt:
 			'Individual visual Svelte components or styling tools focused on appearance. Examples: standalone UI elements (buttons, modals, dropdowns), animation libraries, transition effects, tooltips. Key indicator: primary purpose is enhancing visual presentation. NOT state management tools or multi-component systems that would qualify as design systems.',
-		title: 'UI Components & Elements',
+		title: 'UI',
 		featured: [
 			'@xyflow/svelte',
 			'@tanstack/svelte-table',
@@ -59,7 +59,7 @@ const TAGS = {
 	content: {
 		prompt:
 			'Tools for creating, processing, and rendering structured content in Svelte. Examples: Markdown/MDX processors, CMS connectors, blog frameworks, documentation generators. Key indicator: focused on content authoring, organization, or display. NOT general data fetching (server tag) or UI components (ui tag) unless specifically content-oriented.',
-		title: 'Content Management',
+		title: 'Content',
 		featured: [
 			'mdsvex',
 			'svelte-markdown',
@@ -77,8 +77,9 @@ const TAGS = {
 	media: {
 		prompt:
 			'Tools specifically for handling images, video, audio or file assets in Svelte. Examples: media players, image galleries, file uploaders, lazy-loading media components. Key indicator: primarily works with media files or streams. NOT general UI components or data fetching utilities unless media-specific.',
-		title: 'Media Handling',
+		title: 'Media',
 		featured: [
+			'@sveltejs/enhanced-img',
 			'@threlte/gltf',
 			'@vime/svelte',
 			'@uppy/svelte',
@@ -89,14 +90,13 @@ const TAGS = {
 			'svimg',
 			'svelte-easy-crop',
 			'svelte-pdf',
-			'@lottiefiles/svelte-lottie-player',
-			'@sveltejs/enhanced-img '
+			'@lottiefiles/svelte-lottie-player'
 		]
 	},
 	server: {
 		prompt:
 			'Tools for server-side operations and client-server communication in Svelte. Examples: SSR utilities, API clients, data fetching libraries, server action wrappers. Key indicator: facilitates interaction between frontend and backend. NOT client-side state management or deployment tools (adapter tag).',
-		title: 'Server Integration',
+		title: 'Server',
 		featured: [
 			'@urql/svelte',
 			'@sentry/sveltekit',
@@ -113,7 +113,7 @@ const TAGS = {
 	adapter: {
 		prompt:
 			'SvelteKit-specific deployment adapters or hosting integration tools. Examples: platform adapters (Vercel, Netlify, etc.), serverless deployment helpers, hosting configuration utilities. Key indicator: primary purpose is facilitating deployment to specific environments. NOT general server utilities or build tools.',
-		title: 'Deployment Adapters',
+		title: 'Svelte-Kit Adapters',
 		featured: [
 			'@sveltejs/adapter-node',
 			'@sveltejs/adapter-static',
@@ -131,7 +131,7 @@ const TAGS = {
 	tooling: {
 		prompt:
 			'Development tools for Svelte that operate outside runtime code. Examples: build plugins, code generators, debugging utilities, CLI tools, linters. Key indicator: used during development process but not part of runtime application code. NOT runtime libraries, components, or server integrations.',
-		title: 'Development Tools',
+		title: 'Tooling',
 		featured: [
 			'svelte2tsx',
 			'@sveltejs/package',
@@ -149,7 +149,7 @@ const TAGS = {
 	seo: {
 		prompt:
 			'Tools for improving search engine optimization in Svelte applications. Examples: meta tag managers, structured data generators, sitemap creators, link analyzers. Key indicator: primarily concerned with search engine visibility. NOT general head management or routing unless specifically SEO-focused.',
-		title: 'SEO Utilities',
+		title: 'SEO',
 		featured: [
 			'svelte-meta-tags',
 			'@sveltejs/amp',
@@ -164,7 +164,7 @@ const TAGS = {
 	auth: {
 		prompt:
 			'User authentication and authorization solutions for Svelte. Examples: login systems, OAuth implementations, JWT handlers, permission managers. Key indicator: primarily concerned with user identity and access control. NOT general API clients or state management unless specifically auth-focused.',
-		title: 'Authentication Solutions',
+		title: 'Auth',
 		featured: [
 			'lucia',
 			'@auth/sveltekit',
@@ -182,7 +182,7 @@ const TAGS = {
 	integration: {
 		prompt:
 			'Connectors between Svelte and external services or systems. Examples: database clients, third-party API wrappers, payment processor integrations. Key indicator: primary purpose is connecting Svelte apps with external platforms. NOT general UI components or utilities unless they specifically bridge to external services.',
-		title: 'External Integrations',
+		title: 'Integrations',
 		featured: [
 			'@astrojs/svelte',
 			'typesafe-i18n',
@@ -200,7 +200,7 @@ const TAGS = {
 	testing: {
 		prompt:
 			"Specialized testing tools designed for Svelte applications. Examples: component testing libraries, Svelte-aware test runners, store mocking utilities. Key indicator: explicitly built for testing Svelte code with awareness of Svelte's features. NOT general JavaScript testing tools that aren't Svelte-specific.",
-		title: 'Testing Frameworks',
+		title: 'Testing',
 		featured: [
 			'@testing-library/svelte',
 			'@playwright/experimental-ct-svelte',
@@ -212,7 +212,7 @@ const TAGS = {
 	miscellaneous: {
 		prompt:
 			"Svelte utilities, helpers, and tools that don't fit cleanly into other categories. Examples: state management solutions, custom stores, actions, directives, form validation, performance optimizers, DOM manipulation utilities, scroll utilities, focus managers. Key indicator: provides functionality that enhances Svelte development but doesn't align with existing categories.",
-		title: 'Miscellaneous Utilities',
+		title: 'State',
 		featured: [
 			'runed',
 			'@state/svelte',
