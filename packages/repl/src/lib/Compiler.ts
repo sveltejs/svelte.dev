@@ -1,6 +1,5 @@
 import { BROWSER } from 'esm-env';
-import CompileWorker from './worker?worker';
-import type { Compiled, File } from '../Workspace.svelte';
+import type { Compiled, File } from './Workspace.svelte';
 
 const callbacks = new Map<string, Map<number, (compiled: Compiled) => void>>();
 
@@ -9,7 +8,9 @@ let worker: Worker;
 let uid = 1;
 
 if (BROWSER) {
-	worker = new CompileWorker();
+	worker = new Worker(new URL('./workers/compiler/index', import.meta.url), {
+		type: 'module'
+	});
 
 	worker.addEventListener('message', (event) => {
 		const { filename, id, payload } = event.data;

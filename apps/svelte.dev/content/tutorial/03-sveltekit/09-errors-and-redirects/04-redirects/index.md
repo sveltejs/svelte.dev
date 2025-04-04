@@ -24,3 +24,5 @@ The most common status codes you'll use:
 - `303` — for form actions, following a successful submission
 - `307` — for temporary redirects
 - `308` — for permanent redirects
+
+> [!NOTE] `redirect(...)` throws, like `error(...)`, meaning no code _after_ the redirect will run.

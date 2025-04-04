@@ -38,10 +38,10 @@
 		"@fontsource/fira-sans": "^5.1.0",
 		"@lezer/common": "^1.0.4",
 		"@replit/codemirror-lang-svelte": "^6.0.0",
-		"@shikijs/twoslash": "^1.22.0",
+		"@shikijs/twoslash": "^3.2.1",
 		"esm-env": "^1.0.0",
 		"json5": "^2.2.3",
-		"shiki": "^1.22.0"
+		"shiki": "^3.2.1"
 	},
 	"devDependencies": {
 		"@sveltejs/kit": "^2.20.0",
