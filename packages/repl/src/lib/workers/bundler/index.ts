@@ -3,7 +3,7 @@ import { walk } from 'zimmerframe';
 import '../patch_window';
 import { rollup } from '@rollup/browser';
 import { DEV } from 'esm-env';
-import typescriptStripTypes from './plugins/typescript-strip-types';
+import strip_types from './plugins/typescript-strip-types';
 import commonjs from './plugins/commonjs';
 import glsl from './plugins/glsl';
 import json from './plugins/json';
@@ -388,7 +388,7 @@ async function get_bundle(
 		input: './__entry.js',
 		cache: previous?.key === key && previous.cache,
 		plugins: [
-			typescriptStripTypes,
+			strip_types,
 			repl_plugin,
 			commonjs,
 			json,
