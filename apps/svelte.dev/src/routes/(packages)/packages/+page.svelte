@@ -6,7 +6,7 @@
 	import { onMount } from 'svelte';
 	import { type SortCriterion } from '../packages-search';
 	import PackageCard from './PackageCard.svelte';
-	import Pagination from './Pagination.svelte';
+	import Pagination from '../Pagination.svelte';
 
 	const { data } = $props();
 
