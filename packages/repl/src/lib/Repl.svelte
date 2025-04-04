@@ -3,17 +3,17 @@
 	import { ScreenToggle } from '@sveltejs/site-kit/components';
 	import { BROWSER } from 'esm-env';
 	import { writable } from 'svelte/store';
-	import Bundler from './Bundler.js';
+	import Bundler from './Bundler.svelte.js';
 	import ComponentSelector from './Input/ComponentSelector.svelte';
 	import Output from './Output/Output.svelte';
 	import { set_repl_context } from './context.js';
-	import { Workspace, Editor, type File } from 'editor';
-	import type { Bundle, ReplContext } from './types.js';
+	import { Workspace, type File } from './Workspace.svelte.js';
+	import Editor from './Editor/Editor.svelte';
+	import type { ReplContext } from './types.js';
 
 	interface Props {
-		packagesUrl?: string;
 		svelteVersion?: string;
-		embedded?: boolean;
+		embedded?: boolean | 'output-only';
 		orientation?: 'columns' | 'rows';
 		relaxed?: boolean;
 		can_escape?: boolean;
@@ -22,12 +22,12 @@
 		injectedJS?: string;
 		injectedCSS?: string;
 		previewTheme?: 'light' | 'dark';
+		onversion?: (version: string) => void;
 		onchange?: () => void;
 		download?: () => void;
 	}
 
 	let {
-		packagesUrl = 'https://unpkg.com',
 		svelteVersion = 'latest',
 		embedded = false,
 		orientation = 'columns',
@@ -38,6 +38,7 @@
 		injectedJS = '',
 		injectedCSS = '',
 		previewTheme = 'light',
+		onversion,
 		onchange = () => {},
 		download
 	}: Props = $props();
@@ -66,14 +67,15 @@
 	// TODO get rid
 	export function toJSON() {
 		return {
-			imports: $bundle?.imports ?? [],
-			files: workspace.files
+			imports: bundler!.result?.imports ?? [],
+			files: workspace.files,
+			tailwind: workspace.tailwind
 		};
 	}
 
 	// TODO get rid
-	export async function set(data: { files: File[]; css?: string }) {
-		workspace.reset(data.files, 'App.svelte');
+	export async function set(data: { files: File[]; tailwind?: boolean }) {
+		workspace.reset(data.files, { tailwind: data.tailwind ?? false }, 'App.svelte');
 	}
 
 	// TODO get rid
@@ -81,22 +83,12 @@
 		workspace.mark_saved();
 	}
 
-	const bundle: ReplContext['bundle'] = writable(null);
 	const toggleable: ReplContext['toggleable'] = writable(false);
 
-	set_repl_context({
-		bundle,
-		toggleable,
-		workspace,
-		svelteVersion
-	});
-
-	let current_token: Symbol;
-
 	async function rebundle() {
-		const token = (current_token = Symbol());
-		const result = await bundler!.bundle(workspace.files as File[]);
-		if (token === current_token) $bundle = result as Bundle;
+		bundler!.bundle(workspace.files as File[], {
+			tailwind: workspace.tailwind
+		});
 	}
 
 	async function migrate() {
@@ -119,8 +111,8 @@
 
 	const bundler = BROWSER
 		? new Bundler({
-				packages_url: packagesUrl,
 				svelte_version: svelteVersion,
+				onversion,
 				onstatus: (message) => {
 					if (message) {
 						// show bundler status, but only after time has elapsed, to
@@ -143,6 +135,13 @@
 			})
 		: null;
 
+	set_repl_context({
+		bundler,
+		toggleable,
+		workspace,
+		svelteVersion
+	});
+
 	function before_unload(event: BeforeUnloadEvent) {
 		if (Object.keys(workspace.modified).length > 0) {
 			event.preventDefault();
@@ -152,7 +151,7 @@
 	let mobile = $derived(width < 540);
 
 	$effect(() => {
-		$toggleable = mobile && orientation === 'columns';
+		$toggleable = mobile && orientation === 'columns' && embedded !== 'output-only';
 	});
 
 	let runes = $derived(
@@ -166,13 +165,24 @@
 
 <svelte:window onbeforeunload={before_unload} />
 
-<div class="container" class:embedded class:toggleable={$toggleable} bind:clientWidth={width}>
+<div
+	class="container {embedded === 'output-only' ? '' : 'container-normal'}"
+	class:embedded
+	class:toggleable={$toggleable}
+	bind:clientWidth={width}
+>
 	<div class="viewport" class:output={show_output}>
 		<SplitPane
 			id="main"
 			type={orientation === 'rows' ? 'vertical' : 'horizontal'}
-			pos="{mobile || fixed ? fixedPos : orientation === 'rows' ? 60 : 50}%"
-			min="100px"
+			pos="{embedded === 'output-only'
+				? 0
+				: mobile || fixed
+					? fixedPos
+					: orientation === 'rows'
+						? 60
+						: 50}%"
+			min={embedded === 'output-only' ? '0px' : '100px'}
 			max="-4.1rem"
 		>
 			{#snippet a()}
@@ -264,7 +274,7 @@
 
 	/* on mobile, override the <SplitPane> controls */
 	@media (max-width: 799px) {
-		:global {
+		.container-normal :global {
 			[data-pane='main'] {
 				--pos: 50% !important;
 			}

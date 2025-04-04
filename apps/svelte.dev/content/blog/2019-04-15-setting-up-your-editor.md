@@ -2,7 +2,7 @@
 title: Setting up your editor
 description: Instructions for configuring linting and syntax highlighting
 author: Rich Harris
-authorURL: https://twitter.com/Rich_Harris
+authorURL: https://bsky.app/profile/rich-harris.dev
 draft: true
 ---
 

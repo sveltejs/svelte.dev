@@ -2,7 +2,7 @@
 title: Svelte <3 TypeScript
 description: Typernetically enhanced web apps
 author: Orta Therox
-authorURL: https://twitter.com/orta
+authorURL: https://bsky.app/profile/orta.io
 ---
 
 It's been by far the most requested feature for a while, and it's finally here: Svelte officially supports TypeScript.

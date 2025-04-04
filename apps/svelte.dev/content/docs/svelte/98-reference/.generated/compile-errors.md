@@ -84,6 +84,12 @@ Attribute values containing `{...}` must be enclosed in quote marks, unless the 
 `bind:group` can only bind to an Identifier or MemberExpression
 ```
 
+### bind_group_invalid_snippet_parameter
+
+```
+Cannot `bind:group` to a snippet parameter
+```
+
 ### bind_invalid_expression
 
 ```
@@ -187,7 +193,7 @@ Cyclical dependency detected: %cycle%
 ### const_tag_invalid_placement
 
 ```
-`{@const}` must be the immediate child of `{#snippet}`, `{#if}`, `{:else if}`, `{:else}`, `{#each}`, `{:then}`, `{:catch}`, `<svelte:fragment>` or `<Component>`
+`{@const}` must be the immediate child of `{#snippet}`, `{#if}`, `{:else if}`, `{:else}`, `{#each}`, `{:then}`, `{:catch}`, `<svelte:fragment>`, `<svelte:boundary` or `<Component>`
 ```
 
 ### constant_assignment
@@ -573,7 +579,13 @@ Unrecognised compiler option %keypath%
 ### props_duplicate
 
 ```
-Cannot use `$props()` more than once
+Cannot use `%rune%()` more than once
+```
+
+### props_id_invalid_placement
+
+```
+`$props.id()` can only be used at the top level of components as a variable declaration initializer
 ```
 
 ### props_illegal_name
@@ -646,6 +658,12 @@ Cannot access a computed property of a rune
 
 ```
 `%name%` is not a valid rune
+```
+
+### rune_invalid_spread
+
+```
+`%rune%` cannot be called with a spread argument
 ```
 
 ### rune_invalid_usage

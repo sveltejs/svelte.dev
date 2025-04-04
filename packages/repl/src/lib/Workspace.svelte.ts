@@ -1,6 +1,6 @@
 import type { CompileError, CompileResult } from 'svelte/compiler';
 import { Compartment, EditorState, StateEffect, StateField } from '@codemirror/state';
-import { compile_file } from './compile-worker';
+import { compile_file } from './Compiler';
 import { BROWSER } from 'esm-env';
 import { basicSetup, EditorView } from 'codemirror';
 import { javascript } from '@codemirror/lang-javascript';
@@ -113,6 +113,7 @@ export class Workspace {
 	#files = $state.raw<Item[]>([]);
 	#current = $state.raw() as File;
 	#vim = $state(false);
+	#tailwind = $state(false);
 
 	#handlers = {
 		hover: new Set<(pos: number | null) => void>(),
@@ -392,11 +393,13 @@ export class Workspace {
 		this.#onreset?.(this.#files);
 	}
 
-	reset(new_files: Item[], selected?: string) {
+	reset(new_files: Item[], options: { tailwind: boolean }, selected?: string) {
 		this.states.clear();
 		this.set(new_files, selected);
 
 		this.mark_saved();
+
+		this.#tailwind = options.tailwind;
 
 		this.#onreset(new_files);
 		this.#reset_diagnostics();
@@ -464,6 +467,15 @@ export class Workspace {
 		}
 	}
 
+	get tailwind() {
+		return this.#tailwind;
+	}
+
+	set tailwind(value) {
+		this.#tailwind = value;
+		this.#onupdate(this.#current);
+	}
+
 	get vim() {
 		return this.#vim;
 	}
@@ -477,7 +489,7 @@ export class Workspace {
 
 		localStorage.setItem('vim', String(value));
 
-		// @ts-expect-error jfc CodeMirror is a struggle
+		// @ts-ignore jfc CodeMirror is a struggle
 		let vim_extension_index = default_extensions.findIndex((ext) => ext.compartment === vim_mode);
 
 		let extension: any = [];

@@ -76,6 +76,9 @@ const config: UserConfig = {
 	ssr: {
 		noExternal: ['@sveltejs/site-kit', '@sveltejs/repl'],
 		external: ['shiki', '@shikijs/twoslash']
+	},
+	worker: {
+		format: 'es'
 	}
 };
 

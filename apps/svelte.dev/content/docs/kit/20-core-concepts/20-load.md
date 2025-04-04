@@ -25,7 +25,7 @@ export function load({ params }) {
 ```svelte
 <!--- file: src/routes/blog/[slug]/+page.svelte --->
 <script>
-	/** @type {{ data: import('./$types').PageData }} */
+	/** @type {import('./$types').PageProps} */
 	let { data } = $props();
 </script>
 
@@ -34,7 +34,14 @@ export function load({ params }) {
 ```
 
 > [!LEGACY]
-> In Svelte 4, you'd use `export let data` instead
+> Before version 2.16.0, the props of a page and layout had to be typed individually:
+> ```js
+> /// file: +page.svelte
+> /** @type {{ data: import('./$types').PageData }} */
+> let { data } = $props();
+> ```
+>
+> In Svelte 4, you'd use `export let data` instead.
 
 Thanks to the generated `$types` module, we get full type safety.
 
@@ -89,7 +96,7 @@ export async function load() {
 ```svelte
 <!--- file: src/routes/blog/[slug]/+layout.svelte --->
 <script>
-	/** @type {{ data: import('./$types').LayoutData, children: Snippet }} */
+	/** @type {import('./$types').LayoutProps} */
 	let { data, children } = $props();
 </script>
 
@@ -112,6 +119,14 @@ export async function load() {
 </aside>
 ```
 
+> [!LEGACY]
+> `LayoutProps` was added in 2.16.0. In earlier versions, properties had to be typed individually:
+> ```js
+> /// file: +layout.svelte
+> /** @type {{ data: import('./$types').LayoutData, children: Snippet }} */
+> let { data, children } = $props();
+> ```
+
 Data returned from layout `load` functions is available to child `+layout.svelte` components and the `+page.svelte` component as well as the layout that it 'belongs' to.
 
 ```svelte
@@ -119,7 +134,7 @@ Data returned from layout `load` functions is available to child `+layout.svelte
 <script>
 	+++import { page } from '$app/state';+++
 
-	/** @type {{ data: import('./$types').PageData }} */
+	/** @type {import('./$types').PageProps} */
 	let { data } = $props();
 
 +++	// we can access `data.posts` because it's returned from
@@ -373,7 +388,7 @@ export async function load({ parent }) {
 ```svelte
 <!--- file: src/routes/abc/+page.svelte --->
 <script>
-	/** @type {{ data: import('./$types').PageData }} */
+	/** @type {import('./$types').PageProps} */
 	let { data } = $props();
 </script>
 
@@ -512,7 +527,7 @@ This is useful for creating skeleton loading states, for example:
 ```svelte
 <!--- file: src/routes/blog/[slug]/+page.svelte --->
 <script>
-	/** @type {{ data: import('./$types').PageData }} */
+	/** @type {import('./$types').PageProps} */
 	let { data } = $props();
 </script>
 
@@ -653,7 +668,7 @@ export async function load({ fetch, depends }) {
 <script>
 	import { invalidate, invalidateAll } from '$app/navigation';
 
-	/** @type {{ data: import('./$types').PageData }} */
+	/** @type {import('./$types').PageProps} */
 	let { data } = $props();
 
 	function rerunLoadFunction() {
@@ -698,6 +713,74 @@ To prevent data waterfalls and preserve layout `load` caches:
 - Use auth guards directly in `+page.server.js` `load` functions for route specific protection
 
 Putting an auth guard in `+layout.server.js` requires all child pages to call `await parent()` before protected code. Unless every child page depends on returned data from `await parent()`, the other options will be more performant.
+
+## Using `getRequestEvent`
+
+When running server `load` functions, the `event` object passed to the function as an argument can also be retrieved with [`getRequestEvent`]($app-server#getRequestEvent). This allows shared logic (such as authentication guards) to access information about the current request without it needing to be passed around.
+
+For example, you might have a function that requires users to be logged in, and redirects them to `/login` if not:
+
+```js
+/// file: src/lib/server/auth.js
+// @filename: ambient.d.ts
+interface User {
+	name: string;
+}
+
+declare namespace App {
+	interface Locals {
+		user?: User;
+	}
+}
+
+// @filename: index.ts
+// ---cut---
+import { redirect } from '@sveltejs/kit';
+import { getRequestEvent } from '$app/server';
+
+export function requireLogin() {
+	const { locals, url } = getRequestEvent();
+
+	// assume `locals.user` is populated in `handle`
+	if (!locals.user) {
+		const redirectTo = url.pathname + url.search;
+		const params = new URLSearchParams({ redirectTo });
+
+		redirect(307, `/login?${params}`);
+	}
+
+	return locals.user;
+}
+```
+
+Now, you can call `requireLogin` in any `load` function (or [form action](form-actions), for example) to guarantee that the user is logged in:
+
+```js
+/// file: +page.server.js
+// @filename: ambient.d.ts
+
+declare module '$lib/server/auth' {
+	interface User {
+		name: string;
+	}
+
+	export function requireLogin(): User;
+}
+
+// @filename: index.ts
+// ---cut---
+import { requireLogin } from '$lib/server/auth';
+
+export function load() {
+	const user = requireLogin();
+
+	// `user` is guaranteed to be a user object here, because otherwise
+	// `requireLogin` would throw a redirect and we wouldn't get here
+	return {
+		message: `hello ${user.name}!`
+	};
+}
+```
 
 ## Further reading
 
