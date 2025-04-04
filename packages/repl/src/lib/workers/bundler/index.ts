@@ -3,7 +3,6 @@ import { walk } from 'zimmerframe';
 import '../patch_window';
 import { rollup } from '@rollup/browser';
 import { DEV } from 'esm-env';
-import strip_types from './plugins/typescript-strip-types';
 import commonjs from './plugins/commonjs';
 import glsl from './plugins/glsl';
 import json from './plugins/json';
@@ -185,7 +184,7 @@ async function get_bundle(
 				if (importer.startsWith(VIRTUAL)) {
 					const url = new URL(importee, importer);
 
-					for (const suffix of ['', '.js', '.ts', '.json']) {
+					for (const suffix of ['', '.js', '.json']) {
 						const with_suffix = `${url.pathname.slice(1)}${suffix}`;
 						const file = virtual.get(with_suffix);
 
@@ -281,15 +280,15 @@ async function get_bundle(
 			const message = `bundling ${id.replace(VIRTUAL + '/', '').replace(NPM + '/', '')}`;
 			self.postMessage({ type: 'status', message });
 
-			if (!/\.(svelte|js|ts)$/.test(id)) return null;
+			if (!/\.(svelte|js)$/.test(id)) return null;
 
-			const filename = id.split('/').pop()!;
+			const name = id.split('/').pop()?.split('.')[0];
 
 			let result: CompileResult;
 
 			if (id.endsWith('.svelte')) {
 				const compilerOptions: any = {
-					filename,
+					filename: name + '.svelte',
 					generate: Number(svelte.VERSION.split('.')[0]) >= 5 ? 'client' : 'dom',
 					dev: true
 				};
@@ -343,9 +342,9 @@ async function get_bundle(
 					$$_styles.push($$__style);
 				`.replace(/\t/g, '');
 				}
-			} else if (/\.svelte\.(js|ts)$/.test(id)) {
+			} else if (id.endsWith('.svelte.js')) {
 				const compilerOptions: any = {
-					filename,
+					filename: name + '.js',
 					generate: 'client',
 					dev: true
 				};
@@ -388,7 +387,6 @@ async function get_bundle(
 		input: './__entry.js',
 		cache: previous?.key === key && previous.cache,
 		plugins: [
-			strip_types,
 			repl_plugin,
 			commonjs,
 			json,

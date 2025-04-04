@@ -294,9 +294,6 @@ importers:
       tarparser:
         specifier: ^0.0.4
         version: 0.0.4
-      typestript:
-        specifier: workspace:*
-        version: link:../typestript
       zimmerframe:
         specifier: ^1.1.2
         version: 1.1.2
@@ -319,9 +316,6 @@ importers:
       '@types/estree':
         specifier: ^1.0.5
         version: 1.0.6
-      magic-string:
-        specifier: ^0.30.11
-        version: 0.30.12
       prettier:
         specifier: ^3.3.2
         version: 3.3.2
@@ -440,28 +434,6 @@ importers:
       vite:
         specifier: ^5.4.3
         version: 5.4.11(@types/node@20.14.2)(lightningcss@1.25.1)
-
-  packages/typestript:
-    dependencies:
-      '@sveltejs/acorn-typescript':
-        specifier: ^1.0.5
-        version: 1.0.5(acorn@8.14.1)
-      acorn:
-        specifier: ^8.11.3
-        version: 8.14.1
-      magic-string:
-        specifier: ^0.30.11
-        version: 0.30.12
-      zimmerframe:
-        specifier: ^1.1.2
-        version: 1.1.2
-    devDependencies:
-      '@typescript-eslint/types':
-        specifier: ^8.28.0
-        version: 8.28.0
-      prettier:
-        specifier: ^3.3.2
-        version: 3.3.2
 
 packages:
 
@@ -1705,10 +1677,6 @@ packages:
 
   '@types/ws@8.5.10':
     resolution: {integrity: sha512-vmQSUcfalpIq0R9q7uTo2lXs6eGIpt9wtnLdMv9LVpIjCA/+ufZRozlVoVelIYixx1ugCBKDhn89vnsEGOCx9A==}
-
-  '@typescript-eslint/types@8.28.0':
-    resolution: {integrity: sha512-bn4WS1bkKEjx7HqiwG2JNB3YJdC1q6Ue7GyGlwPHyt0TnVq6TtD/hiOdTZt71sq0s7UzqBFXD8t8o2e63tXgwA==}
-    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
   '@typescript/vfs@1.6.0':
     resolution: {integrity: sha512-hvJUjNVeBMp77qPINuUvYXj4FyWeeMMKZkxEATEU3hqBAQ7qdTBCUFT7Sp0Zu0faeEtFf+ldXxMEDr/bk73ISg==}
@@ -4677,8 +4645,6 @@ snapshots:
   '@types/ws@8.5.10':
     dependencies:
       '@types/node': 20.14.2
-
-  '@typescript-eslint/types@8.28.0': {}
 
   '@typescript/vfs@1.6.0(typescript@5.5.4)':
     dependencies:
