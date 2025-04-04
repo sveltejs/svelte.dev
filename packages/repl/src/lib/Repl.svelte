@@ -87,7 +87,9 @@
 
 	async function rebundle() {
 		bundler!.bundle(workspace.files as File[], {
-			tailwind: workspace.tailwind
+			tailwind: workspace.tailwind,
+			// @ts-ignore
+			templatingMode: workspace.compiler_options.templatingMode
 		});
 	}
 
