@@ -7,7 +7,7 @@ You can pass event handlers to components like any other prop. In `Stepper.svelt
 ```svelte
 /// file: Stepper.svelte
 <script>
-	+++let { increment, decrement } = $props();+++
+	let +++{ increment, decrement }+++ = $props();
 </script>
 ```
 
