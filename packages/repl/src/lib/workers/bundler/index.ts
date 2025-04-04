@@ -283,13 +283,13 @@ async function get_bundle(
 
 			if (!/\.(svelte|js|ts)$/.test(id)) return null;
 
-			const name = id.split('/').pop()?.split('.')[0];
+			const filename = id.split('/').pop()!;
 
 			let result: CompileResult;
 
 			if (id.endsWith('.svelte')) {
 				const compilerOptions: any = {
-					filename: name + '.svelte',
+					filename,
 					generate: Number(svelte.VERSION.split('.')[0]) >= 5 ? 'client' : 'dom',
 					dev: true
 				};
@@ -345,7 +345,7 @@ async function get_bundle(
 				}
 			} else if (/\.svelte\.(js|ts)$/.test(id)) {
 				const compilerOptions: any = {
-					filename: name + '.js',
+					filename,
 					generate: 'client',
 					dev: true
 				};
