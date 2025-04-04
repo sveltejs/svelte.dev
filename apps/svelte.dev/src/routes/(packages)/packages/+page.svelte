@@ -253,6 +253,8 @@
 			overflow-x: auto;
 			overflow-y: hidden;
 
+			padding-bottom: 1rem;
+
 			scroll-snap-type: x mandatory;
 
 			:global {
@@ -397,13 +399,13 @@
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(37rem, 1fr));
 		/* grid-auto-rows: 0.8fr; */
-		gap: 4rem;
+		gap: 2rem;
 		flex-direction: column;
 		margin-block-start: 4rem;
 
 		:global {
 			article {
-				margin-bottom: 2rem;
+				margin-bottom: 4rem;
 			}
 		}
 	}

@@ -199,9 +199,15 @@
 	article {
 		display: flex;
 		flex-direction: column;
+		box-sizing: border-box;
 
 		height: 100%;
 		min-height: 0;
+
+		background-color: var(--sk-bg-3);
+
+		border-radius: var(--sk-border-radius);
+		padding: 1rem;
 
 		a {
 			display: block;
