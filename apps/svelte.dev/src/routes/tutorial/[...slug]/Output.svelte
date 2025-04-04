@@ -11,7 +11,7 @@
 	import Loading from './Loading.svelte';
 	import { adapter_state, subscribe, reset } from './adapter.svelte';
 	import type { Exercise } from '$lib/tutorial';
-	import type { Workspace } from 'editor';
+	import type { Workspace } from '@sveltejs/repl/workspace';
 
 	interface Props {
 		exercise: Exercise;

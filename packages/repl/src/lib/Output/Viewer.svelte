@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { get_repl_context } from '../context';
 	import { BROWSER } from 'esm-env';
-	import { onMount } from 'svelte';
+	import { onMount, untrack } from 'svelte';
 	import Message from '../Message.svelte';
 	import PaneWithPanel from './PaneWithPanel.svelte';
 	import ReplProxy from './ReplProxy.js';
@@ -11,47 +11,63 @@
 	import srcdoc_styles from './srcdoc/styles.css?raw';
 	import ErrorOverlay from './ErrorOverlay.svelte';
 	import type { CompileError } from 'svelte/compiler';
-	import type { Bundle } from '../types';
-	import type { Writable } from 'svelte/store';
+	import type Bundler from '../Bundler.svelte';
+	import type { BundleResult } from '../public';
 
-	export let error: Error | null;
-	/** status by Bundler class instance */
-	export let status: string | null;
-	/** sandbox allow-same-origin */
-	export let relaxed = false;
-	/** sandbox allow-popups-to-escape-sandbox (i.e. links within the REPL to other pages work) */
-	export let can_escape = false;
-	/** Any additional JS you may want to inject */
-	export let injectedJS = '';
-	/** Any additional CSS you may want to inject */
-	export let injectedCSS = '';
-	export let theme: 'light' | 'dark';
-	/** A store containing the current bundle result. Takes precedence over REPL context, if set */
-	export let bundle: Writable<Bundle | null> | undefined = undefined;
-	/** Called everytime a log is pushed. If this is set, the built-in console coming with the Viewer isn't shown */
-	export let onLog: ((logs: Log[]) => void) | undefined = undefined;
+	interface Props {
+		error: Error | null;
+		/** status by Bundler class instance */
+		status: string | null;
+		/** sandbox allow-same-origin */
+		relaxed?: boolean;
+		/** sandbox allow-popups-to-escape-sandbox (i.e. links within the REPL to other pages work) */
+		can_escape?: boolean;
+		/** Any additional JS you may want to inject */
+		injectedJS?: string;
+		/** Any additional CSS you may want to inject */
+		injectedCSS?: string;
+		theme: 'light' | 'dark';
+		/** The current bundler. Takes precedence over REPL context, if set */
+		bundler?: Bundler;
+		/** Called everytime a log is pushed. If this is set, the built-in console coming with the Viewer isn't shown */
+		onLog?: ((logs: Log[]) => void) | undefined;
+	}
 
-	const context = get_repl_context();
-	bundle = bundle ?? context.bundle;
+	let {
+		error = $bindable(),
+		status,
+		relaxed = false,
+		can_escape = false,
+		injectedJS = '',
+		injectedCSS = '',
+		theme,
+		bundler,
+		onLog = undefined
+	}: Props = $props();
 
-	let logs: Log[] = [];
+	let context = get_repl_context();
+	let bundle = $derived((bundler ?? context?.bundler)?.result);
+
+	let logs: Log[] = $state.raw([]); // we don't want to proxify the logged values
 	let log_group_stack: Log[][] = [];
+
+	// svelte-ignore state_referenced_locally
 	let current_log_group = logs;
 
-	let iframe: HTMLIFrameElement;
-	let pending_imports = 0;
+	let iframe = $state.raw<HTMLIFrameElement>();
+	let pending_imports = $state(0);
 	let pending = false;
 
-	let proxy: ReplProxy | null = null;
-	let ready = false;
-	let inited = false;
+	let proxy: ReplProxy | null = $state.raw(null);
+	let ready = $state(false);
+	let inited = $state(false);
 
 	let log_height = 90;
 	let prev_height: number;
 	let last_console_event: Log;
 
 	onMount(() => {
-		proxy = new ReplProxy(iframe, {
+		proxy = new ReplProxy(iframe!, {
 			on_fetch_progress: (progress) => {
 				pending_imports = progress;
 			},
@@ -89,7 +105,7 @@
 			}
 		});
 
-		iframe.addEventListener('load', () => {
+		iframe!.addEventListener('load', () => {
 			proxy?.handle_links();
 			ready = true;
 		});
@@ -99,15 +115,19 @@
 		};
 	});
 
-	$: if (ready) proxy?.iframe_command('set_theme', { theme });
+	$effect(() => {
+		if (ready) {
+			proxy?.iframe_command('set_theme', { theme });
+		}
+	});
 
-	async function apply_bundle($bundle: Bundle | null | undefined) {
-		if (!$bundle) return;
+	async function apply_bundle(bundle: BundleResult | null) {
+		if (!bundle) return;
 
 		try {
 			clear_logs();
 
-			if (!$bundle.error) {
+			if (!bundle.error) {
 				await proxy?.eval(
 					`
 					${injectedJS}
@@ -157,7 +177,7 @@
 						window._svelteTransitionManager = null;
 					}
 
-					const __repl_exports = ${$bundle.client?.code};
+					const __repl_exports = ${bundle.client?.code};
 					{
 						const { mount, unmount, App, untrack } = __repl_exports;
 
@@ -186,7 +206,7 @@
 					}
 					//# sourceURL=playground:output
 				`,
-					$bundle?.tailwind ?? srcdoc_styles
+					bundle?.tailwind ?? srcdoc_styles
 				);
 				error = null;
 			}
@@ -198,20 +218,31 @@
 		inited = true;
 	}
 
-	$: if (ready) apply_bundle($bundle);
+	$effect(() => {
+		if (ready) {
+			const b = bundle;
 
-	$: if (injectedCSS && proxy && ready) {
-		proxy.eval(
-			`{
-				const style = document.createElement('style');
-				style.textContent = ${JSON.stringify(injectedCSS)};
-				document.head.appendChild(style);
-			}`
-		);
-	}
+			// TODO tidy up
+			untrack(() => {
+				apply_bundle(b);
+			});
+		}
+	});
+
+	$effect(() => {
+		if (injectedCSS && proxy && ready) {
+			proxy.eval(
+				`{
+					const style = document.createElement('style');
+					style.textContent = ${JSON.stringify(injectedCSS)};
+					document.head.appendChild(style);
+				}`
+			);
+		}
+	});
 
 	function show_error(e: CompileError & { loc: { line: number; column: number } }) {
-		const map = $bundle?.client?.map;
+		const map = bundle?.client?.map;
 
 		// @ts-ignore INVESTIGATE
 		const loc = map && getLocationFromStack(e.stack, map);
@@ -226,7 +257,7 @@
 
 	function push_logs(log: Log) {
 		current_log_group.push((last_console_event = log));
-		logs = logs;
+		logs = [...logs, log];
 		onLog?.(logs);
 	}
 
@@ -236,7 +267,7 @@
 		// TODO: Investigate
 		log_group_stack.push(current_log_group);
 		current_log_group = log.logs;
-		logs = logs;
+		logs = [...logs];
 		onLog?.(logs);
 	}
 
@@ -251,7 +282,7 @@
 
 		if (last_log) {
 			last_log.count = (last_log.count || 1) + 1;
-			logs = logs;
+			logs = [...logs];
 			onLog?.(logs);
 		} else {
 			last_console_event.count = 1;
@@ -292,8 +323,8 @@
 		srcdoc={BROWSER ? srcdoc : ''}
 	></iframe>
 
-	{#if $bundle?.error}
-		<ErrorOverlay error={$bundle.error} />
+	{#if bundle?.error}
+		<ErrorOverlay error={bundle.error} />
 	{/if}
 {/snippet}
 
@@ -301,7 +332,14 @@
 	{#if !onLog}
 		<PaneWithPanel pos="100%" panel="Console" {main}>
 			{#snippet header()}
-				<button class="raised" disabled={logs.length === 0} on:click|stopPropagation={clear_logs}>
+				<button
+					class="raised"
+					disabled={logs.length === 0}
+					onclick={(e) => {
+						e.stopPropagation();
+						clear_logs();
+					}}
+				>
 					{#if logs.length > 0}
 						({logs.length})
 					{/if}
@@ -320,7 +358,7 @@
 	<div class="overlay">
 		{#if error}
 			<Message kind="error" details={error} />
-		{:else if status || !$bundle}
+		{:else if status || !bundle}
 			<Message kind="info" truncate>{status || 'loading Svelte compiler...'}</Message>
 		{/if}
 	</div>

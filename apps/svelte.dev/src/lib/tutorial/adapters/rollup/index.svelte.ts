@@ -2,44 +2,31 @@ import Bundler from '@sveltejs/repl/bundler';
 // @ts-ignore package exports don't have types
 import * as yootils from 'yootils';
 import type { Adapter } from '$lib/tutorial';
-import type { File, Item } from 'editor';
+import type { File, Item } from '@sveltejs/repl/workspace';
 
-/** Rollup bundler singleton */
-let bundler: Bundler;
+let done = false;
 
 export const state = new (class RollupState {
 	progress = $state.raw({ value: 0, text: 'initialising' });
-	bundle = $state.raw<any>(null);
-})();
-
-/**
- * @returns {Promise<import('$lib/tutorial').Adapter>}
- */
-export async function create(): Promise<Adapter> {
-	bundler?.destroy();
-
-	state.progress = { value: 0, text: 'loading files' };
-
-	let done = false;
-
 	bundler = new Bundler({
-		packages_url: 'https://unpkg.com',
 		svelte_version: 'latest',
-		onstatus(val) {
+		onstatus: (val) => {
 			if (!done && val === null) {
 				done = true;
-				state.progress = { value: 1, text: 'ready' };
+				this.progress = { value: 1, text: 'ready' };
 			}
 		}
 	});
+})();
 
+export async function create(): Promise<Adapter> {
 	state.progress = { value: 0.5, text: 'loading svelte compiler' };
 
 	/** Paths and contents of the currently loaded file stubs */
 	let current_files: Item[] = [];
 
 	async function compile() {
-		state.bundle = await bundler.bundle(
+		state.bundler.bundle(
 			current_files
 				// TODO we can probably remove all the SvelteKit specific stuff from the tutorial content once this settles down
 				.filter((f): f is File => f.name.startsWith('/src/lib/') && f.type === 'file')

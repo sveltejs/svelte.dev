@@ -4,9 +4,9 @@
 
 <Section>
 	<p class="copyright">
-		© {new Date().getFullYear()} Svelte contributors. Svelte is <a href="https://github.com/sveltejs/svelte"
-			>free and open source software</a
-		> released under the MIT license.
+		© {new Date().getFullYear()} Svelte contributors. Svelte is
+		<a href="https://github.com/sveltejs/svelte">free and open source software</a> released under the
+		MIT license.
 	</p>
 </Section>
 

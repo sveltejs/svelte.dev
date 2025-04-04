@@ -93,10 +93,6 @@
 			outline: 2px solid var(--sk-fg-accent);
 			border-radius: var(--sk-border-radius);
 		}
-
-		span {
-			pointer-events: none;
-		}
 	}
 
 	summary {

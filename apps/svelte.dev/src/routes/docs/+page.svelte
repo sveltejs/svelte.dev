@@ -141,7 +141,9 @@
 			background-color: var(--sk-bg-2);
 			filter: drop-shadow(1px 2px 4px rgb(0 0 0 / 0.1));
 			text-decoration: none;
+			transform: var(--safari-fix);
 			-webkit-transform: var(--safari-fix);
+
 			h2 {
 				text-decoration: underline;
 			}

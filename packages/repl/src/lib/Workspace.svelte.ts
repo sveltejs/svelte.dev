@@ -1,6 +1,6 @@
 import type { CompileError, CompileResult } from 'svelte/compiler';
 import { Compartment, EditorState, StateEffect, StateField } from '@codemirror/state';
-import { compile_file } from './compile-worker';
+import { compile_file } from './Compiler';
 import { BROWSER } from 'esm-env';
 import { basicSetup, EditorView } from 'codemirror';
 import { javascript } from '@codemirror/lang-javascript';
@@ -496,7 +496,7 @@ export class Workspace {
 
 		localStorage.setItem('vim', String(value));
 
-		// @ts-expect-error jfc CodeMirror is a struggle
+		// @ts-ignore jfc CodeMirror is a struggle
 		let vim_extension_index = default_extensions.findIndex((ext) => ext.compartment === vim_mode);
 
 		let extension: any = [];
