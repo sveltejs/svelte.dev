@@ -1,5 +1,5 @@
 import type { Writable } from 'svelte/store';
-import type { File, Directory, Item } from 'editor';
+import type { File, Directory, Item } from '@sveltejs/repl/workspace';
 
 export interface Adapter {
 	/** Returns `false` if the reset was in such a way that a reload of the iframe isn't needed */

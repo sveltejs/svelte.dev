@@ -1,17 +1,19 @@
 <script lang="ts">
 	import RunesInfo from './RunesInfo.svelte';
-	import Migrate from './Migrate.svelte';
-	import type { Workspace, File } from 'editor';
+	import type { Workspace, File } from '../Workspace.svelte';
 	import { tick } from 'svelte';
+	import { Checkbox, Toolbox } from '@sveltejs/site-kit/components';
 
 	interface Props {
 		runes: boolean;
 		onchange: () => void;
 		workspace: Workspace;
 		can_migrate: boolean;
+		migrate: () => void;
+		download?: () => void;
 	}
 
-	let { runes, onchange, workspace, can_migrate }: Props = $props();
+	let { runes, onchange, workspace, can_migrate, migrate, download }: Props = $props();
 
 	let input = $state() as HTMLInputElement;
 	let input_value = $state(workspace.current.name);
@@ -162,7 +164,23 @@
 
 	<div class="runes">
 		<RunesInfo {runes} />
-		<Migrate {can_migrate} />
+		<Toolbox>
+			<label class="option">
+				<span>Toggle Vim mode</span>
+				<Checkbox bind:checked={workspace.vim}></Checkbox>
+			</label>
+
+			<label class="option">
+				<span>Toggle Tailwind</span>
+				<Checkbox bind:checked={workspace.tailwind}></Checkbox>
+			</label>
+
+			<button disabled={!can_migrate} onclick={migrate}>Migrate to Svelte 5, if possible</button>
+
+			{#if download}
+				<button onclick={download}>Download app</button>
+			{/if}
+		</Toolbox>
 	</div>
 </div>
 

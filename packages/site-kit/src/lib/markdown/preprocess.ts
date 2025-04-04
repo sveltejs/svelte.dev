@@ -122,7 +122,11 @@ function render_declaration(declaration: Declaration, full: boolean) {
 	let content = '';
 
 	if (declaration.deprecated) {
-		content += `<blockquote class="tag deprecated">\n\n${declaration.deprecated}\n\n</blockquote>\n\n`;
+		content += `<blockquote class="tag deprecated note">\n\n${declaration.deprecated}\n\n</blockquote>\n\n`;
+	}
+
+	if (declaration.since) {
+		content += `<blockquote class="since note">\n\nAvailable since ${declaration.since}\n\n</blockquote>\n\n`;
 	}
 
 	if (declaration.comment) {

@@ -53,15 +53,15 @@ We can get a lot more creative though. Let's make something truly gratuitous:
 	function spin(node, { duration }) {
 		return {
 			duration,
-			css: t => +++{
+			css: (t, u) => +++{
 				const eased = elasticOut(t);
 
 				return `
 					transform: scale(${eased}) rotate(${eased * 1080}deg);
 					color: hsl(
 						${Math.trunc(t * 360)},
-						${Math.min(100, 1000 * (1 - t))}%,
-						${Math.min(50, 500 * (1 - t))}%
+						${Math.min(100, 1000 * u)}%,
+						${Math.min(50, 500 * u)}%
 					);`
 			}+++
 		};

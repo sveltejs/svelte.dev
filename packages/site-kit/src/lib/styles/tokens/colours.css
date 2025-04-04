@@ -22,6 +22,7 @@
 	--sk-bg-4: hsl(0, 0%, 95%); /* hover states and highlights */
 	--sk-bg-accent: var(--sk-fg-accent);
 	--sk-bg-selection: hsla(204, 100%, 63%, 0.3);
+	--sk-bg-highlight: hsl(60, 100%, 80%);
 
 	/* Border color — use this for all borders, except 'active' borders (e.g. current nav) which use `--sk-fg-accent`  */
 	--sk-border: hsl(0, 0%, 92%);
@@ -62,6 +63,7 @@
 	--sk-bg-3: hsl(var(--sk-bg-hue), 14%, 16%);
 	--sk-bg-4: hsl(var(--sk-bg-hue), 15%, 21%);
 	--sk-bg-accent: hsl(15, 100%, 35%);
+	--sk-bg-highlight: hsl(60, 100%, 15%);
 
 	/* Border colour */
 	--sk-border: hsl(var(--sk-bg-hue), 15%, 22%);

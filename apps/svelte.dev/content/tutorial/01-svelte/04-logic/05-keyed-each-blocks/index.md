@@ -13,7 +13,7 @@ Click the 'Remove first thing' button a few times, and notice what happens:
 
 > [!NOTE] If you're coming from React, this might seem strange, because you're used to the entire component re-rendering when state changes. Svelte works differently: the component 'runs' once, and subsequent updates are 'fine-grained'. This makes things faster and gives you more control.
 
-One way to fix it would be to make `emoji` a [`$derived`](derived-state) value. But it makes more sense to remove the first `<Thing>` component altogether than to remove the _last_ one and update all the others.
+One way to fix it would be to make `emoji` a [`$derived`](derived-state) value. But it makes more sense to remove the first `<Thing>` component altogether rather than remove the _last_ one and update all the others.
 
 To do that, we specify a unique _key_ for each iteration of the `each` block:
 

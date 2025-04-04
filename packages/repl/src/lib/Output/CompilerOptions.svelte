@@ -1,6 +1,6 @@
 <script lang="ts">
-	import type { Workspace } from 'editor';
 	import { Checkbox } from '@sveltejs/site-kit/components';
+	import type { Workspace } from '../Workspace.svelte';
 
 	let { workspace }: { workspace: Workspace } = $props();
 </script>

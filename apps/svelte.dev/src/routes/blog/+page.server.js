@@ -1,7 +1,5 @@
 import { blog_posts } from '$lib/server/content';
 
-export const prerender = true;
-
 export async function load() {
 	const posts = blog_posts
 		.map((document) => ({

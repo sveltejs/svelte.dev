@@ -7,20 +7,16 @@
 
 	$effect(() => {
 		context = canvas.getContext('2d');
-
-		function resize() {
-			canvas.width = window.innerWidth;
-			canvas.height = window.innerHeight;
-		}
-
-		window.addEventListener('resize', resize);
 		resize();
-
-		return () => {
-			window.removeEventListener('resize', resize);
-		};
 	});
+
+	function resize() {
+		canvas.width = window.innerWidth;
+		canvas.height = window.innerHeight;
+	}
 </script>
+
+<svelte:window onresize={resize} />
 
 <canvas
 	bind:this={canvas}
