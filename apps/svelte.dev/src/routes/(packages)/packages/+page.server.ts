@@ -32,11 +32,15 @@ export async function load({ url }) {
 					.filter((v) => Boolean(v)) as Package[]
 			});
 		}
+
+		return {
+			homepage: homepage_data
+		};
 	}
 
 	init(registry);
 
-	const current_results = search(query, {
+	let current_results = search(query, {
 		sort_by,
 		filters: {
 			svelte_5_only,
@@ -82,8 +86,7 @@ export async function load({ url }) {
 				},
 				[] as { tag: string; title: string; short_title: string }[]
 			)
-			.sort((a, b) => a.tag.localeCompare(b.tag)),
-		homepage: homepage_data
+			.sort((a, b) => a.tag.localeCompare(b.tag))
 	};
 }
 

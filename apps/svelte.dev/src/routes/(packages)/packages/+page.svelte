@@ -19,7 +19,7 @@
 	});
 
 	let registry = $derived(data.registry);
-	let total_pages = $derived(data.pages.total_pages);
+	let total_pages = $derived(data.pages?.total_pages);
 
 	let ready = $state(false);
 	let uid = 1;
@@ -152,7 +152,7 @@
 					<br /><br /><br /><br />
 				{/each}
 			</section>
-		{:else}
+		{:else if registry && total_pages}
 			<div class="posts">
 				{#each registry as pkg}
 					<PackageCard {pkg} />
