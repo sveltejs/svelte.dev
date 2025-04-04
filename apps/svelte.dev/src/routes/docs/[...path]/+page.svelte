@@ -7,6 +7,7 @@
 	import Breadcrumbs from './Breadcrumbs.svelte';
 	import PageControls from '$lib/components/PageControls.svelte';
 	import { goto } from '$app/navigation';
+	import { escape_html } from '$lib/utils/escape';
 
 	let { data } = $props();
 
@@ -69,7 +70,7 @@
 <div id="docs-content" use:legacy_details>
 	<header>
 		<Breadcrumbs breadcrumbs={data.document.breadcrumbs.slice(1)} />
-		<h1>{data.document.metadata.title}</h1>
+		<h1>{@html escape_html(data.document.metadata.title).replaceAll('/', '/<wbr>')}</h1>
 	</header>
 
 	<OnThisPage {content} document={data.document} />

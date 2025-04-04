@@ -369,7 +369,7 @@ async function generate_ts_from_js(
 
 		if (!ts) return;
 
-		return code.replace(outer, `<script lang="ts">${ts}</script>`);
+		return code.replace(outer, `<script lang="ts">\n${ts}\n</script>`);
 	}
 
 	return await convert_to_ts(code);
@@ -420,13 +420,13 @@ async function convert_to_ts(js_code: string, indent = '', offset = '') {
 
 			for (const tag of tags) {
 				if (ts.isJSDocTypeTag(tag)) {
-					type = get_type_info(tag.typeExpression);
+					type = get_type_info(get_jsdoc_type_expression_text(tag.getText()));
 				} else if (ts.isJSDocParameterTag(tag)) {
-					params.push(get_type_info(tag.typeExpression!));
+					params.push(get_type_info(tag.typeExpression?.getText()!));
 				} else if (ts.isJSDocReturnTag(tag)) {
-					returns = get_type_info(tag.typeExpression!);
+					returns = get_type_info(tag.typeExpression?.getText()!);
 				} else if (ts.isJSDocSatisfiesTag(tag)) {
-					satisfies = get_type_info(tag.typeExpression!);
+					satisfies = get_type_info(tag.typeExpression?.getText()!);
 				} else {
 					throw new Error('Unhandled tag');
 				}
@@ -498,8 +498,45 @@ async function convert_to_ts(js_code: string, indent = '', offset = '') {
 					if (code.original[end - 1] === ';') end -= 1;
 					code.appendLeft(end, ` satisfies ${satisfies}`);
 				}
+			} else if (
+				(ts.isPropertyAssignment(node) && ts.isArrowFunction(node.initializer)) ||
+				ts.isMethodDeclaration(node)
+			) {
+				if (type) {
+					throw new Error('@type on property methods does nothing');
+				}
+
+				const parameters = ts.isMethodDeclaration(node)
+					? node.parameters
+					: (node.initializer as ts.ArrowFunction).parameters;
+				for (let i = 0; i < parameters.length; i += 1) {
+					if (params[i] !== undefined) {
+						code.appendLeft(parameters[i].getEnd(), `: ${params[i]}`);
+					}
+				}
+
+				if (returns) {
+					const body = ts.isMethodDeclaration(node)
+						? node.body
+						: (node.initializer as ts.ArrowFunction).body;
+					let start = body!.getStart();
+					while (code.original[start - 1] !== ')') start -= 1;
+					code.appendLeft(start, `: ${returns}`);
+				}
+			} else if (type && ts.isParenthesizedExpression(node)) {
+				// convert `/* @type {Foo} */ (foo)` to `foo as Foo`
+				// TODO one day we may need to account for operator precedence
+				// (i.e. preserve the parens in e.g. `(x as y).z()`)
+				let start = node.getStart();
+				while (js_code[start - 1] !== '/') start -= 1;
+				code.remove(start, node.getStart() + 1);
+
+				let end = node.getEnd();
+				code.overwrite(end - 1, end, ` as ${type}`);
 			} else {
-				throw new Error('Unhandled @type JsDoc->TS conversion: ' + js_code);
+				throw new Error(
+					'Unhandled @type JsDoc->TS conversion: ' + js_code.slice(node.getStart(), node.getEnd())
+				);
 			}
 
 			if (!comment) {
@@ -507,7 +544,9 @@ async function convert_to_ts(js_code: string, indent = '', offset = '') {
 				let start = jsdoc[0].getStart();
 				let end = jsdoc[0].getEnd();
 
-				while (start > 0 && code.original[start] !== '\n') start -= 1;
+				while (start > 0 && code.original[start - 1] === '\t') start -= 1;
+				while (start > 0 && code.original[start - 1] === '\n') start -= 1;
+
 				code.overwrite(start, end, '');
 			}
 		}
@@ -535,20 +574,20 @@ async function convert_to_ts(js_code: string, indent = '', offset = '') {
 			while (js_code[i] !== '\n') i += 1;
 			i += 1;
 
-			code.appendLeft(i, import_statements + '\n');
+			code.appendLeft(i, '\n' + import_statements + '\n');
 		} else {
 			code.prependLeft(0, offset + import_statements + '\n');
 		}
 	}
 
-	let transformed = code.toString();
+	// remove leading/trailing newlines (not any whitespace, because that can signify diffs)
+	let transformed = code.toString().replace(/^\n+/, '').replace(/\n+$/, '');
 
 	return transformed === js_code ? undefined : transformed;
 
-	function get_type_info(expression: ts.JSDocTypeExpression) {
-		const type = expression
-			?.getText()!
-			.slice(1, -1) // remove surrounding `{` and `}`
+	function get_type_info(text: string) {
+		const type = text
+			.replace(/^\{|\}$/g, '') // remove surrounding `{` and `}`
 			.replace(/ \* ?/gm, '')
 			.replace(/import\('(.+?)'\)\.(\w+)(?:(<.+>))?/gms, (_, source, name, args = '') => {
 				const existing = imports.get(source);
@@ -562,6 +601,10 @@ async function convert_to_ts(js_code: string, indent = '', offset = '') {
 			});
 
 		return type;
+	}
+
+	function get_jsdoc_type_expression_text(text: string): string {
+		return text.replace(/^@type\s*/, '').trim();
 	}
 }
 
@@ -695,16 +738,20 @@ async function syntax_highlight({
 
 		try {
 			html = await codeToHtml(prelude + redacted, {
-				lang: 'ts',
+				lang: language,
 				theme,
 				transformers: check
 					? [
 							transformerTwoslash({
 								twoslashOptions: {
 									compilerOptions: {
+										allowJs: true,
+										checkJs: true,
 										types: ['svelte', '@sveltejs/kit']
 									}
-								}
+								},
+								// by default, twoslash does not run on .js files, change that through this option
+								filter: () => true
 							})
 						]
 					: []

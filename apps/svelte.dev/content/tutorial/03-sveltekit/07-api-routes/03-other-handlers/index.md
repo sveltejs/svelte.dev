@@ -54,7 +54,9 @@ We can now interact with this endpoint inside our event handlers:
 				method: 'DELETE'
 			});
 
-			data.todos = data.todos.filter((t) => t !== todo);+++
+			const todos = data.todos.filter((t) => t !== todo);
+
+			data = { ...data, todos };+++
 		}}
 	></button>
 </label>

@@ -6,7 +6,7 @@
 	function spin(node, { duration }) {
 		return {
 			duration,
-			css: (t) => ``
+			css: (t, u) => ``
 		};
 	}
 </script>

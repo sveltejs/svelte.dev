@@ -1,8 +1,16 @@
 name: Sync docs
 
 on:
-  repository_dispatch:
-    types: [sync-request]
+  workflow_dispatch:
+    inputs:
+      repo:
+        description: 'Repository name (not fully-qualified, eg. `svelte` or `kit`)'
+        required: true
+        type: string
+
+permissions:
+  contents: write
+  pull-requests: write
 
 jobs:
   Sync:
@@ -17,13 +25,13 @@ jobs:
       - run: pnpm install --frozen-lockfile
 
       - name: Sync
-        run: cd apps/svelte.dev && pnpm sync-docs -p ${{ github.event.client_payload.package }}
+        run: cd apps/svelte.dev && pnpm sync-docs -p ${{ inputs.repo }}
 
       - name: Create or update pull request
         uses: peter-evans/create-pull-request@v7
         with:
-          commit-message: sync ${{ github.event.client_payload.package }} docs
-          title: Sync `${{ github.event.client_payload.package }}` docs
+          commit-message: sync ${{ inputs.repo }} docs
+          title: Sync `${{ inputs.repo }}` docs
           body: This is an automated pull request. See the [README](../tree/main/apps/svelte.dev/scripts/sync-docs/README.md) for more information
-          branch: sync/${{ github.event.client_payload.package }}
+          branch: sync-${{ inputs.repo }}
           base: main

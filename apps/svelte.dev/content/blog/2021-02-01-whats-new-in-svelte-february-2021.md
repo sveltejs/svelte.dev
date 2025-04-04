@@ -51,11 +51,11 @@ New changes to the Svelte Society website include [a new cheat sheet](https://sv
 
 - [Svelte Reactive Debugger](https://addons.mozilla.org/en-US/firefox/addon/svelte-reactive-debugger/) is a way to monitor Svelte reactive statements in Firefox devtools
 - [svelte-actions](https://github.com/sw-yx/svelte-actions) is a set of prototype Svelte actions for inclusion into official actions in future. [See RFC](https://github.com/sveltejs/rfcs/pull/24) and [Discuss High Level Policy](https://github.com/sw-yx/svelte-actions/issues/7).
-- [This css grid gallery](https://svelte.dev/repl/3a1b7fae13b242fe9cd4a4f7aa092fa4?version=3.31.2) made by @joja (in the Svelte Discord) features grid transitions based on a user's mouse position
+- [This css grid gallery](/playground/3a1b7fae13b242fe9cd4a4f7aa092fa4?version=3.31.2) made by @joja (in the Svelte Discord) features grid transitions based on a user's mouse position
 - [Patchcab](https://github.com/spectrome/patchcab) is a modular Eurorack style synthesizer made with Web Audio.
 - [svelte-knob](https://github.com/MelihAltintas/svelte-knob) is a knob control to help with speedometer-style visualization
 - [descent-ripple](https://github.com/micha-lmxt/descent-ripple) is a highly customizable javascript ripple animation for buttons
-- [makeItSnow](https://github.com/florianlouvet/make-it-snow/blob/main/makeItSnowAction.js) is a Svelte action made by @MrPoule (in the Svelte Discord) that can be used to add ❄️snow❄️ to any component ([Demo](https://svelte.dev/repl/de5223beb45540a5a11c9bd7b318304f?version=3.31.2))
+- [makeItSnow](https://github.com/florianlouvet/make-it-snow/blob/main/makeItSnowAction.js) is a Svelte action made by @MrPoule (in the Svelte Discord) that can be used to add ❄️snow❄️ to any component ([Demo](/playground/de5223beb45540a5a11c9bd7b318304f?version=3.31.2))
 - [svelte-video-player](https://github.com/meigo/svelte-video-player) is a customizable `VideoPlayer` component
 - [svelte-readonly](https://github.com/Crisfole/svelte-readonly) is a very small store that exposes only a readable interface.
 

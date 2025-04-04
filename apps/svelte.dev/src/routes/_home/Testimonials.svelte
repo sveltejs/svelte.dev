@@ -71,6 +71,7 @@
 		position: relative;
 		aspect-ratio: 457.4 / 138.8;
 		height: var(--sk-font-size-h1);
+		width: auto;
 		bottom: -0.3em;
 	}
 
@@ -131,6 +132,7 @@
 			object-fit: contain;
 			border-radius: var(--sk-border-radius);
 			transition: filter 0.2s;
+			transform: var(--safari-fix);
 			-webkit-transform: var(--safari-fix);
 
 			@media all and not (hover: none) {

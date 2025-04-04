@@ -22,7 +22,7 @@ Happy new year, Svelte Community! Lots to share this month across Svelte, Svelte
 
 - [Svelte 3.44.3](https://github.com/sveltejs/svelte/blob/master/CHANGELOG.md#3443) is out with a few bug fixes in the binding and loop code
 - Svelte Language Tools has introduced support for the then/catch shorthands from Svelte 3.41 and TypeScript's "go to" functionality ([105.8.0 and later](https://github.com/sveltejs/language-tools/releases/tag/extensions-105.8.0))
-- The Svelte REPL got a nice upgrade as well - letting you delete saved REPLs. Try it out by logging in at [svelte.dev/apps](https://svelte.dev/apps)
+- The Svelte REPL got a nice upgrade as well - letting you delete saved REPLs. Try it out by logging in at [svelte.dev/apps](/apps)
 
 ---
 
@@ -38,7 +38,7 @@ Happy new year, Svelte Community! Lots to share this month across Svelte, Svelte
 - [Version 0.2 of Tangent](http://tangentnotes.com/Download), a Svelte-based note writing app, is now in beta
 - [Intl Explorer](https://github.com/jesperorb/intl-explorer) is a tool for viewing output for all possible formatters for Intl
 
-A lot of work this month has gone into migrating the Svelte main website and Svelte REPL to live in the https://github.com/sveltejs/sites repository - including a brand new homepage for [svelte.dev](https://svelte.dev/). Thanks to all the contributors who made this possible!
+A lot of work this month has gone into migrating the Svelte main website and Svelte REPL to live in the https://github.com/sveltejs/sites repository - including a brand new homepage for [svelte.dev](/). Thanks to all the contributors who made this possible!
 
 If you're looking for a fun SvelteKit project to work on, [you can contribute to the Svelte Society site rewrite](https://github.com/svelte-society/sveltesociety-2021/issues) 💅
 

@@ -10,24 +10,32 @@
 	afterNavigate(() => {
 		current = location.hash.slice(1);
 		headings = content.querySelectorAll('h2');
+		update(); // Ensure active link is set correctly on navigation
 	});
 
+	// Update function to activate the correct section link
 	function update() {
-		// a section is 'active' when it crosses the threshold
 		const threshold = (innerHeight * 1) / 3;
+		let found = false;
 
-		for (let i = 0; i < headings.length; i += 1) {
+		for (let i = 0; i < headings.length; i++) {
 			const heading = headings[i];
 			const next = headings[i + 1];
 
+			// If the current heading is above the threshold and the next heading is below it
 			if (
-				next &&
 				heading.getBoundingClientRect().top < threshold &&
-				next.getBoundingClientRect().top > threshold
+				(!next || next.getBoundingClientRect().top > threshold)
 			) {
 				current = heading.id;
+				found = true;
 				break;
 			}
+		}
+
+		// Handle case when scrolled to the top of the page
+		if (!found && scrollY === 0) {
+			current = '';
 		}
 	}
 </script>
@@ -209,7 +217,11 @@
 				overflow-y: auto;
 				scrollbar-width: none;
 				margin-left: -1rem; /* negative margin avoids focus rings being cut off */
-				padding: 0 0 var(--sk-page-padding-top) 1rem;
+				padding: 0 var(--sk-page-padding-side) var(--sk-page-padding-top) 1rem;
+
+				li {
+					text-indent: 1ch hanging;
+				}
 
 				li:first-child {
 					display: list-item;

@@ -11,6 +11,8 @@ const config = {
 		inlineStyleThreshold: 1000,
 
 		prerender: {
+			origin: 'https://svelte.dev',
+
 			handleMissingId(warning) {
 				if (warning.id.startsWith('H4sIA')) {
 					// playground link — do nothing

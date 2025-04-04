@@ -7,7 +7,7 @@ import { get_depth } from '../../../utils/path.js';
 import { escape_html } from '../../../utils/escape.js';
 import { ready } from '../common/index.js';
 import type { Adapter } from '$lib/tutorial';
-import type { Item, File } from 'editor';
+import type { Item, File } from '@sveltejs/repl/workspace';
 
 const converter = new AnsiToHtml({
 	fg: 'var(--sk-fg-3)'

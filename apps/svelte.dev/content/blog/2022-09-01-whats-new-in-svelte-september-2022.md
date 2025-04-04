@@ -91,8 +91,8 @@ _To Read_
 - [sveltekit-flash-message](https://www.npmjs.com/package/sveltekit-flash-message) is a Sveltekit library that passes temporary data to the next request, usually from endpoints
 - [svelte-particles](https://github.com/matteobruni/tsparticles#svelte) is a lightweight TypeScript library for creating particles
 - [svelte-claps](https://github.com/bufgix/svelte-claps) adds clap button (like Medium) to any page for your SvelteKit apps
-- [Neon Flicker](https://svelte.dev/repl/fd5e3b2be7da42fe8afddf89661af7d7?version=3.49.0) is a Svelte component to make your text flicker in a cyberpunk style
-- [ComboBox](https://svelte.dev/repl/144f22d18c6943abb1fdd00f13e23fde?version=3.49.0) is a search input to help users select from a large list of items
+- [Neon Flicker](/playground/fd5e3b2be7da42fe8afddf89661af7d7?version=3.49.0) is a Svelte component to make your text flicker in a cyberpunk style
+- [ComboBox](/playground/144f22d18c6943abb1fdd00f13e23fde?version=3.49.0) is a search input to help users select from a large list of items
 - [@svelte-put](https://github.com/vnphanquang/svelte-put) is useful svelte stuff to put in your projects
 - [vite-plugin-svelte-bridge](https://github.com/joshnuss/vite-plugin-svelte-bridge) lets you write Svelte components and use them from React & Vue
 
