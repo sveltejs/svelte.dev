@@ -2,21 +2,21 @@
 	import { page } from '$app/state';
 	import { forcefocus } from '@sveltejs/site-kit/actions';
 	import { Icon } from '@sveltejs/site-kit/components';
-	import { reactive_query_params, QueryParamSerde } from '@sveltejs/site-kit/reactivity';
+	import { QueryParamSerde, reactive_query_params } from '@sveltejs/site-kit/reactivity';
 	import { onMount } from 'svelte';
-	import { search_criteria, type SortCriterion, type SortDirection } from '../packages-search';
-	import Pagination from './pagination.svelte';
+	import { type SortCriterion } from '../packages-search';
+	import Pagination from './Pagination.svelte';
+	import { PACKAGES_META } from '$lib/packages-meta';
+	import PackageCard from './PackageCard.svelte';
 
 	const { data } = $props();
 
 	const qps = reactive_query_params({
 		query: QueryParamSerde.string(),
 		page: QueryParamSerde.number(1),
-		tags: QueryParamSerde.array<string>(),
 		svelte_5_only: QueryParamSerde.boolean(),
 		hide_outdated: QueryParamSerde.boolean(),
-		sort_by: QueryParamSerde.string<SortCriterion>('popularity'),
-		direction: QueryParamSerde.string<SortDirection>('dsc')
+		sort_by: QueryParamSerde.string<SortCriterion>('popularity')
 	});
 
 	let registry = $derived(data.registry);
@@ -60,12 +60,10 @@
 
 	$effect(() => {
 		qps.query;
-		qps.tags;
 		qps.page;
 		qps.svelte_5_only;
 		qps.hide_outdated;
 		qps.sort_by;
-		qps.direction;
 
 		if (!ready) return;
 
@@ -82,16 +80,12 @@
 			payload: {
 				query: qps.query,
 				page: qps.page,
-				tags: $state.snapshot(qps.tags),
 				svelte_5_only: qps.svelte_5_only,
 				hide_outdated: qps.hide_outdated,
-				sort_by: qps.sort_by,
-				direction: qps.direction
+				sort_by: qps.sort_by
 			}
 		});
 	});
-
-	const number_formatter = Intl.NumberFormat();
 </script>
 
 <svelte:head>
@@ -112,117 +106,59 @@
 
 <div class="container">
 	<div class="page content">
-		<h1>Packages</h1>
+		<div class="controls">
+			<label class="input-group">
+				<Icon name="search" />
+				<input
+					use:forcefocus
+					onkeydown={(e) => {
+						if (e.key === 'Enter' && !e.isComposing) {
+							// const element = modal.querySelector('a[data-has-node]') as HTMLElement | undefined;
+							// element?.click();
+						}
+					}}
+					bind:value={qps.query}
+					placeholder="Search"
+					aria-describedby="search-description"
+					aria-label="Search"
+					spellcheck="false"
+				/>
 
-		<div class="posts">
-			{#each registry as pkg}
-				<article data-pubdate={pkg.updated}>
-					<a
-						href="https://npmjs.com/package/{pkg.name}"
-						target="_blank"
-						rel="noreferrer noopener"
-						title="Read the article »"
-					>
-						<h2 class={[(pkg.outdated || pkg.deprecated) && 'faded']}>{pkg.name}</h2>
-						<span class="status">
-							{#if pkg.outdated}
-								<span>outdated</span>
-							{/if}
-							{#if pkg.deprecated}
-								<span>deprecated</span>
-							{/if}
-						</span>
-					</a>
+				<button
+					aria-label="Clear"
+					onclick={(e) => {
+						e.stopPropagation();
+						qps.query = '';
+					}}
+				>
+					<Icon name="close" />
+				</button>
+			</label>
+		</div>
 
-					<p>{pkg.description}</p>
+		{#if !qps.query && data.homepage}
+			<br /><br />
 
-					<br />
-
-					<p class="tags">
-						{pkg.tags.map((tag) => tag).join(', ')}
-					</p>
-
-					<p class="stats">
-						{#if pkg.github_stars}
-							<span title="{pkg.github_stars} Github Stars">
-								{number_formatter.format(pkg.github_stars)}
-								<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"
-									><!-- Icon from All by undefined - undefined --><path
-										fill="currentColor"
-										d="M9.6 15.65L12 13.8l2.4 1.85l-.9-3.05l2.25-1.6h-2.8L12 7.9l-.95 3.1h-2.8l2.25 1.6zm2.4.65l-3.7 2.825q-.275.225-.6.213t-.575-.188t-.387-.475t-.013-.65L8.15 13.4l-3.625-2.575q-.3-.2-.375-.525t.025-.6t.35-.488t.6-.212H9.6l1.45-4.8q.125-.35.388-.538T12 3.475t.563.188t.387.537L14.4 9h4.475q.35 0 .6.213t.35.487t.025.6t-.375.525L15.85 13.4l1.425 4.625q.125.35-.012.65t-.388.475t-.575.188t-.6-.213zm0-4.525"
-									/></svg
-								>
-							</span>
-						{/if}
-
-						{#if pkg.downloads}
-							<span title="{pkg.downloads} downloads">
-								{number_formatter.format(+pkg.downloads)}
-								<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"
-									><!-- Icon from All by undefined - undefined --><path
-										fill="currentColor"
-										d="M12.554 16.506a.75.75 0 0 1-1.107 0l-4-4.375a.75.75 0 0 1 1.107-1.012l2.696 2.95V3a.75.75 0 0 1 1.5 0v11.068l2.697-2.95a.75.75 0 1 1 1.107 1.013z"
-									/><path
-										fill="currentColor"
-										d="M3.75 15a.75.75 0 0 0-1.5 0v.055c0 1.367 0 2.47.117 3.337c.12.9.38 1.658.981 2.26c.602.602 1.36.86 2.26.982c.867.116 1.97.116 3.337.116h6.11c1.367 0 2.47 0 3.337-.116c.9-.122 1.658-.38 2.26-.982s.86-1.36.982-2.26c.116-.867.116-1.97.116-3.337V15a.75.75 0 0 0-1.5 0c0 1.435-.002 2.436-.103 3.192c-.099.734-.28 1.122-.556 1.399c-.277.277-.665.457-1.4.556c-.755.101-1.756.103-3.191.103H9c-1.435 0-2.437-.002-3.192-.103c-.734-.099-1.122-.28-1.399-.556c-.277-.277-.457-.665-.556-1.4c-.101-.755-.103-1.756-.103-3.191"
-									/></svg
-								>
-							</span>
-						{/if}
-
-						{#if pkg.dependents}
-							<span title="{pkg.dependents} dependents">
-								{number_formatter.format(+pkg.dependents)}
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									height="1.5em"
-									width="1.5em"
-									viewBox="0 0 512 512"
-									style="translate: 0 2px;"
-								>
-									<!-- Top cube - slightly larger -->
-									<path
-										d="M256 100 L346 150 L256 200 L166 150 Z"
-										fill="none"
-										stroke="currentColor"
-										stroke-width="24"
-									/>
-
-									<!-- Connection lines - slightly curved for better visual flow -->
-									<path
-										d="M226 180 Q206 210 176 230"
-										fill="none"
-										stroke="currentColor"
-										stroke-width="20"
-									/>
-									<path
-										d="M286 180 Q306 210 336 230"
-										fill="none"
-										stroke="currentColor"
-										stroke-width="20"
-									/>
-
-									<!-- Bottom left cube - positioned for better balance -->
-									<path
-										d="M176 230 L246 280 L176 330 L106 280 Z"
-										fill="none"
-										stroke="currentColor"
-										stroke-width="20"
-									/>
-
-									<!-- Bottom right cube - positioned for better balance -->
-									<path
-										d="M336 230 L406 280 L336 330 L266 280 Z"
-										fill="none"
-										stroke="currentColor"
-										stroke-width="20"
-									/>
-								</svg></span
-							>
-						{/if}
-					</p>
-				</article>
-			{/each}
+			<section class="homepage">
+				<!-- Here we show netflix style page -->
+				{#each data.homepage as { packages, title }}
+					<section>
+						<h2>{title}</h2>
+						<div class="homepage-posts">
+							{#each packages as pkg}
+								<PackageCard {pkg} />
+							{/each}
+						</div>
+					</section>
+					<br /><br /><br /><br />
+				{/each}
+			</section>
+		{:else}
+			<div class="posts">
+				{#each registry as pkg}
+					<PackageCard {pkg} />
+				{/each}
+			</div>
 
 			<div class="pagination">
 				<Pagination total={total_pages} bind:page={qps.page}>
@@ -246,40 +182,12 @@
 					{/snippet}
 				</Pagination>
 			</div>
-		</div>
+		{/if}
 	</div>
 
-	<div class="toc-container">
+	<!-- <div class="toc-container">
 		<nav aria-label="Docs">
 			<div class="controls">
-				<label class="input-group">
-					<Icon name="search" />
-					<input
-						use:forcefocus
-						onkeydown={(e) => {
-							if (e.key === 'Enter' && !e.isComposing) {
-								// const element = modal.querySelector('a[data-has-node]') as HTMLElement | undefined;
-								// element?.click();
-							}
-						}}
-						bind:value={qps.query}
-						placeholder="Search"
-						aria-describedby="search-description"
-						aria-label={'Search'}
-						spellcheck="false"
-					/>
-
-					<button
-						aria-label="Clear"
-						onclick={(e) => {
-							e.stopPropagation();
-							qps.query = '';
-						}}
-					>
-						<Icon name="close" />
-					</button>
-				</label>
-
 				<b>SORT BY</b>
 				<label>
 					<select bind:value={qps.sort_by}>
@@ -287,14 +195,6 @@
 							<option value={criterion}>{criterion}</option>
 						{/each}
 					</select>
-				</label>
-
-				<label>
-					<input type="radio" bind:group={qps.direction} value="asc" />
-					<span>Ascending</span>
-
-					<input type="radio" bind:group={qps.direction} value="dsc" />
-					<span>Descending</span>
 				</label>
 			</div>
 
@@ -334,62 +234,36 @@
 			</ul>
 
 			<br /><br />
-
-			<ul class="sidebar">
-				<b>TAGS</b>
-				{#each [{ tag: 'all', short_title: 'All' }].concat(data.tags) as tag}
-					{@const link = new URL(page.url)}
-					{@const _ = link.searchParams.set('tags', (tag.tag === 'all' ? [] : [tag.tag]).join(','))}
-
-					<li>
-						<input
-							type="checkbox"
-							value={tag.tag}
-							bind:checked={() =>
-								tag.tag === 'all' ? qps.tags.length === 0 : qps.tags.includes(tag.tag),
-							() => {
-								if (tag.tag === 'all') {
-									// Click on this should just empty the tags array
-									qps.tags = [];
-									return;
-								}
-
-								if (qps.tags.includes(tag.tag)) {
-									qps.tags = qps.tags.filter((t) => t !== tag.tag);
-								} else {
-									qps.tags = [...qps.tags, tag.tag];
-								}
-							}}
-						/>
-						<a
-							class="tag"
-							href={link.pathname + link.search}
-							onclick={(e) => {
-								e.preventDefault();
-
-								if (tag.tag === 'all') {
-									// Click on this should just empty the tags array
-									qps.tags = [];
-									return;
-								}
-
-								qps.tags = [tag.tag];
-							}}
-							aria-current={(tag.tag === 'all' && qps.tags.length === 0) ||
-								qps.tags.includes(tag.tag)}
-							title="Packages under {tag.tag}"
-						>
-							{tag.short_title}
-						</a>
-					</li>
-				{/each}
-			</ul>
 		</nav>
-	</div>
+	</div> -->
 </div>
 
 <style>
-	nav {
+	.homepage {
+		h2 {
+			margin-bottom: 2rem;
+		}
+
+		.homepage-posts {
+			display: grid;
+			grid-auto-flow: column;
+			grid-auto-columns: 34rem;
+			gap: 2rem;
+
+			width: 100%;
+			overflow-x: auto;
+			overflow-y: hidden;
+
+			scroll-snap-type: x mandatory;
+
+			:global {
+				article {
+					scroll-snap-align: start;
+				}
+			}
+		}
+	}
+	/* nav {
 		top: 0;
 		left: 0;
 		color: var(--sk-fg-2);
@@ -416,7 +290,7 @@
 			align-items: center;
 			gap: 0.5rem;
 		}
-	}
+	} */
 
 	.container {
 		/* max-width: var(--sk-page-content-width); */
@@ -449,7 +323,7 @@
 		gap: 1rem;
 		font: var(--sk-font-ui-medium);
 
-		b {
+		/* b {
 			font-size: large;
 		}
 
@@ -457,7 +331,7 @@
 			width: 100%;
 			padding: 1rem;
 			box-sizing: border-box;
-		}
+		} */
 	}
 
 	.input-group {
@@ -521,78 +395,22 @@
 	}
 
 	.posts {
-		display: flex;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(37rem, 1fr));
+		/* grid-auto-rows: 0.8fr; */
+		gap: 4rem;
 		flex-direction: column;
 		margin-block-start: 4rem;
-	}
 
-	h2 {
-		display: inline-block;
-		color: var(--sk-fg-1);
-		font: var(--sk-font-h3);
-
-		&.faded {
-			color: var(--sk-fg-3);
-		}
-	}
-
-	article {
-		margin: 0 0 4rem 0;
-
-		a {
-			display: block;
-			text-decoration: none;
-			color: inherit;
-
-			&:hover h2 {
-				text-decoration: underline;
+		:global {
+			article {
+				margin-bottom: 2rem;
 			}
-		}
-
-		.status {
-			width: max-content;
-			font: var(--sk-font-ui-medium);
-			font-family: var(--sk-font-family-mono);
-			margin-left: 0.5rem;
-
-			> * {
-				padding: 0.4rem 0.5rem;
-				width: fit-content;
-				border: 1px solid var(--sk-border);
-				border-radius: 0.5rem;
-			}
-		}
-
-		.tags {
-			display: flex;
-			gap: 0.5rem;
-			font: var(--sk-font-ui-medium);
-			font-family: var(--sk-font-family-mono);
-		}
-
-		.stats {
-			display: flex;
-			gap: 1.6rem;
-			font: var(--sk-font-ui-medium);
-			font-family: var(--sk-font-family-mono);
-
-			span {
-				display: flex;
-				gap: 0.1rem;
-				align-items: center;
-			}
-		}
-
-		p {
-			font: var(--sk-font-body-small);
-			color: var(--sk-fg-3);
-			margin: 0 0 0.5em 0;
-			max-width: calc(100% - var(--sidebar-width));
 		}
 	}
 
 	.pagination {
-		width: calc(100% - var(--sidebar-width));
+		width: calc(100%);
 		display: flex;
 		justify-content: center;
 
@@ -613,12 +431,12 @@
 		}
 	}
 
-	.tag {
+	/* .tag {
 		&[aria-current='true'] {
 			color: var(--sk-fg-accent);
 			text-decoration: underline;
 		}
-	}
+	} */
 
 	@media (min-width: 832px) {
 		.content {
@@ -626,13 +444,13 @@
 		}
 	}
 
-	.toc-container {
+	/* .toc-container {
 		display: none;
 		padding-top: calc(var(--sk-nav-height) + var(--sk-banner-height));
-	}
+	} */
 
 	@media (min-width: 832px) {
-		.toc-container {
+		/* .toc-container {
 			display: block;
 			width: var(--sidebar-width);
 			height: calc(100vh - var(--sk-nav-height) - var(--sk-banner-height));
@@ -650,7 +468,7 @@
 				height: 100%;
 				background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.03));
 			}
-		}
+		} */
 
 		.page {
 			padding-left: calc(var(--sk-page-padding-side));
@@ -674,7 +492,7 @@
 
 		.page {
 			--on-this-page-display: block;
-			padding: var(--sk-page-padding-top) calc(var(--sidebar-width) + var(--sk-page-padding-side));
+			padding: var(--sk-page-padding-top) calc(4 * var(--sk-page-padding-side));
 			margin: 0 auto;
 			box-sizing: content-box;
 			width: 100%;

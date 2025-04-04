@@ -1,4 +1,5 @@
 import { read } from '$app/server';
+import { PACKAGES_META } from '$lib/packages-meta';
 import type { Document } from '@sveltejs/site-kit';
 import { create_index } from '@sveltejs/site-kit/server/content';
 
@@ -177,6 +178,8 @@ export interface Package {
 
 	/** Tags for categorizing the package */
 	tags: string[];
+
+	official?: boolean;
 }
 
 /**
@@ -204,6 +207,7 @@ function create_registry() {
 		const json = JSON.parse(frontmatter);
 		json.description = json.description;
 		json.outdated = +new Date() - +new Date(json.updated) > 2 * 365 * 24 * 60 * 60 * 1000;
+		json.official = json.official ?? PACKAGES_META.is_official(json.name);
 
 		output.push(json as unknown as Package);
 	}

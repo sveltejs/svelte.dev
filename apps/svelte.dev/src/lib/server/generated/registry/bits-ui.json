@@ -1,6 +1,6 @@
 {
   "name": "bits-ui",
-  "description": "The headless components for Svelte. For a design system and opinionated styles built on top of this library, see shadcn-svelte",
+  "description": "The headless components for Svelte.",
   "repo_url": "https://github.com/huntabyte/bits-ui",
   "authors": [
     "huntabyte"

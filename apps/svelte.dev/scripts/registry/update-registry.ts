@@ -4,7 +4,7 @@ import dotenv from 'dotenv';
 import fs, { mkdirSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import registry from '../../src/lib/registry.json' with { type: 'json' };
+import { PACKAGES_META } from '../../src/lib/packages-meta.js';
 import type { Package } from '../../src/lib/server/content.js';
 import svelte_society_list from '../../src/lib/society-npm.json' with { type: 'json' };
 import { sort_packages } from '../../src/routes/(packages)/packages-search.js';
@@ -54,7 +54,7 @@ function is_new_package(pkg: PackageWithTime): boolean {
 	return +now - +date > NEW_THRESHOLD_DAYS * 24 * 60 * 60 * 1000;
 }
 
-const keyword_to_categories = Object.entries(registry.tags).reduce((acc, [key, value]) => {
+const keyword_to_categories = Object.entries(PACKAGES_META.TAGS).reduce((acc, [key, value]) => {
 	const { keywords = [] } = value as { keywords?: string[] };
 
 	for (const keyword of keywords) {
@@ -103,7 +103,7 @@ const openrouter = createOpenRouter({
 	apiKey: process.env.OPENROUTER_API_KEY
 });
 
-const TAGS_PROMPT: Record<string, string> = Object.entries(registry.tags).reduce(
+const TAGS_PROMPT: Record<string, string> = Object.entries(PACKAGES_META.TAGS).reduce(
 	(acc, [key, value]) => {
 		acc[key] = value.prompt;
 		return acc;
@@ -601,49 +601,32 @@ async function remove_forks() {
 		}
 	}
 
-	// Now filter the entries where set size is <= 1
-	for (const [repo_url, set] of repo_url_to_interim_package.entries()) {
-		if (set.size <= 1) {
-			repo_url_to_interim_package.delete(repo_url);
-			continue;
-		}
-
+	const to_delete_packages = new Set<string>();
+	for (const set of repo_url_to_interim_package.values()) {
 		// find the most popular package
 		const max = Array.from(set).sort((a, b) => sort_packages(a, b, 'popularity'))[0];
 
 		// Now, delete entries from set where not even one author is in the max package
 		for (const pkg of set) {
+			if (pkg.name === max.name) continue;
+
+			to_delete_packages.add(pkg.name);
 			for (const author of pkg.authors ?? []) {
 				if (max.authors?.includes(author)) {
-					set.delete(pkg);
+					to_delete_packages.delete(pkg.name);
 				}
-				console.log('DELETING', max.name, pkg.name);
 			}
 		}
 	}
 
-	for (const [repo_url, set] of repo_url_to_interim_package.entries()) {
-		if (set.size <= 1) {
-			repo_url_to_interim_package.delete(repo_url);
-			continue;
-		}
-	}
-
-	// console.log(1, repo_url_to_interim_package);
-
-	console.log(repo_url_to_interim_package);
-
-	// Now delete all the packages which are in repo_url_to_interim_package
-
-	for (const [, set] of repo_url_to_interim_package.entries()) {
-		for (const pkg of set) {
-			PackageCache.delete(pkg.name);
-		}
+	for (const pkg of to_delete_packages) {
+		console.log('DELETING', pkg);
+		PackageCache.delete(pkg);
 	}
 }
 
 async function update_overrides() {
-	const overrides = registry.overrides;
+	const overrides = PACKAGES_META.OVERRIDES;
 
 	const to_force_include = new Set<string>();
 	const to_remove = new Set<string>();
@@ -858,10 +841,10 @@ svelte_society_list;
 // update_cache_from_npm();
 // await update_all_github_stars();
 
-// await remove_forks();
+await remove_forks();
 // delete_untagged();
 
-recheck_svelte5();
+// recheck_svelte5();
 
 // program.name('packages').description('Package to curate the svelte.dev/packages list');
 

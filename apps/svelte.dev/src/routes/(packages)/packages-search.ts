@@ -7,7 +7,7 @@ const Index = (flexsearch.Index as FlexSearchIndex) ?? flexsearch;
 /** If the search is already initialized */
 export let is_inited = false;
 
-export const REGISTRY_PAGE_LIMIT = 50;
+export const REGISTRY_PAGE_LIMIT = 100;
 
 let index: FlexSearchIndex;
 

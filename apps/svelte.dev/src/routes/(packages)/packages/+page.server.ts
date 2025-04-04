@@ -1,36 +1,43 @@
-import { registry } from '$lib/server/content';
+import { registry, type Package } from '$lib/server/content';
 import { redirect } from '@sveltejs/kit';
-import registry_json from '../../../lib/registry.json';
+import { PACKAGES_META } from '$lib/packages-meta';
 import {
 	init,
 	REGISTRY_PAGE_LIMIT,
 	search,
 	search_criteria,
-	type SortCriterion,
-	type SortDirection
+	type SortCriterion
 } from '../packages-search';
 
 export const prerender = false;
 
 export async function load({ url }) {
 	const query = url.searchParams.get('query');
-	const tags = (url.searchParams.get('tags') ?? '').split(',').filter(Boolean);
 	let page = Math.max(1, +(url.searchParams.get('page')?.toString() ?? 1));
 	const svelte_5_only = (url.searchParams.get('svelte_5_only') ?? 'false') === 'true';
-	const hide_outdated = (url.searchParams.get('hide_outdated') ?? 'true') === 'false';
+	const hide_outdated = (url.searchParams.get('hide_outdated') ?? 'false') === 'true';
 	const sort_by_param = url.searchParams.get('sort_by') as SortCriterion;
-	let direction = url.searchParams.get('direction') as SortDirection;
-
-	direction = direction === 'asc' ? 'asc' : 'dsc';
 
 	const sort_by = search_criteria.includes(sort_by_param) ? sort_by_param : 'popularity';
+
+	// If query doesn't exist, we show netflix style page. For this, send pre-done cards with categories
+	let homepage_data: { title: string; packages: Package[] }[] | null = null;
+	if (!query) {
+		homepage_data = [];
+		for (const { featured, title } of Object.values(PACKAGES_META.TAGS)) {
+			homepage_data.push({
+				title,
+				packages: featured
+					.map((name) => registry.find((pkg) => pkg.name === name) ?? null)
+					.filter((v) => Boolean(v)) as Package[]
+			});
+		}
+	}
 
 	init(registry);
 
 	const current_results = search(query, {
-		tags,
 		sort_by,
-		direction,
 		filters: {
 			svelte_5_only,
 			hide_outdated
@@ -57,7 +64,7 @@ export async function load({ url }) {
 		pages: {
 			total_pages: Math.ceil(current_results.length / REGISTRY_PAGE_LIMIT)
 		},
-		tags: Object.entries(registry_json.tags)
+		tags: Object.entries(PACKAGES_META.TAGS)
 			.reduce(
 				(acc, [key, value]) => {
 					if (value.title) {
@@ -75,7 +82,8 @@ export async function load({ url }) {
 				},
 				[] as { tag: string; title: string; short_title: string }[]
 			)
-			.sort((a, b) => a.tag.localeCompare(b.tag))
+			.sort((a, b) => a.tag.localeCompare(b.tag)),
+		homepage: homepage_data
 	};
 }
 
