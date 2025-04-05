@@ -18,6 +18,9 @@
 
 	let packages = $derived(data.packages);
 
+	const formatter = new Intl.NumberFormat();
+	const formatted_package_number = $derived(formatter.format(data.packages_count));
+
 	let ready = $state(false);
 	let uid = 1;
 
@@ -155,7 +158,7 @@
 						}}
 						enterkeyhint="search"
 						bind:value={qps.query}
-						placeholder="Search {data.packages_count} packages"
+						placeholder="Search {formatted_package_number} packages"
 						aria-describedby="search-description"
 						aria-label="Search"
 						spellcheck="false"
@@ -347,8 +350,8 @@
 			padding-bottom: 1rem;
 			padding-inline-end: 10em;
 
-			scrollbar-width: none; /* Firefox */
-			-ms-overflow-style: none; /* IE and Edge */
+			/* scrollbar-width: none; Firefox */
+			/* -ms-overflow-style: none; IE and Edge */
 			overflow-x: auto;
 			overflow-y: hidden;
 			scroll-snap-type: x mandatory;
@@ -356,9 +359,9 @@
 
 			transition: mask-image 0.2s ease-in-out;
 
-			&::-webkit-scrollbar {
+			/* &::-webkit-scrollbar {
 				display: none;
-			}
+			} */
 
 			&.end {
 				mask-image: linear-gradient(to right, #fff 90%, transparent 100%);
