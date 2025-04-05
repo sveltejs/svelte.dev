@@ -242,29 +242,6 @@
 					<PackageCard {pkg} />
 				{/each}
 			</div>
-
-			<!-- <div class="pagination">
-				<Pagination total={total_pages} bind:page={qps.page}>
-					{#snippet children(page_item)}
-						{#if page_item.type === 'ellipsis'}
-							<span>-</span>
-						{:else}
-							{@const url = new URL(page.url)}
-							{@const _ = url.searchParams.set('page', page_item.value.toString())}
-							<a
-								href={url.pathname + url.search}
-								aria-current={qps.page === page_item.value}
-								onclick={(e) => {
-									e.preventDefault();
-									qps.page = page_item.value;
-								}}
-							>
-								{page_item.value}
-							</a>
-						{/if}
-					{/snippet}
-				</Pagination>
-			</div> -->
 		{/if}
 	</div>
 </div>
@@ -346,7 +323,6 @@
 			transition: mask-image 0.2s ease-in-out;
 
 			&.end {
-				/* Keep the end gradient mask, which always applies */
 				mask-image: linear-gradient(to right, #fff 90%, transparent 100%);
 				mask-size: 100%;
 			}
@@ -358,41 +334,11 @@
 			}
 		}
 	}
-	/* nav {
-		top: 0;
-		left: 0;
-		color: var(--sk-fg-2);
-		position: relative;
-
-		a {
-			color: var(--sk-fg-2);
-		}
-	}
-
-	.sidebar {
-		font-family: var(--sk-font-family-body);
-		height: 100%;
-		bottom: auto;
-		width: 100%;
-		margin: 0;
-
-		list-style: none;
-
-		accent-color: var(--sk-fg-accent);
-
-		li {
-			display: flex;
-			align-items: center;
-			gap: 0.5rem;
-		}
-	} */
 
 	.container {
-		/* max-width: var(--sk-page-content-width); */
 		box-sizing: content-box;
 		margin: 0 auto;
 		text-wrap: balance;
-		/* padding: var(--sk-page-padding-top) var(--sk-page-padding-side); */
 
 		--sidebar-menu-width: 28rem;
 		--sidebar-width: var(--sidebar-menu-width);
@@ -420,16 +366,6 @@
 		form {
 			display: contents;
 		}
-
-		/* b {
-			font-size: large;
-		}
-
-		select {
-			width: 100%;
-			padding: 1rem;
-			box-sizing: border-box;
-		} */
 	}
 
 	.input-group {
@@ -492,67 +428,13 @@
 		margin-block-start: 4rem;
 	}
 
-	.pagination {
-		width: calc(100%);
-		display: flex;
-		justify-content: center;
-
-		span {
-			opacity: 0.5;
-		}
-
-		a,
-		span {
-			width: 2rem;
-			text-align: center;
-			font: var(--sk-font-ui-medium);
-		}
-
-		a[aria-current='true'] {
-			color: var(--sk-fg-accent);
-			text-decoration: underline;
-		}
-	}
-
-	/* .tag {
-		&[aria-current='true'] {
-			color: var(--sk-fg-accent);
-			text-decoration: underline;
-		}
-	} */
-
 	@media (min-width: 832px) {
 		.content {
 			padding-left: calc(var(--sk-page-padding-side));
 		}
 	}
 
-	/* .toc-container {
-		display: none;
-		padding-top: calc(var(--sk-nav-height) + var(--sk-banner-height));
-	} */
-
 	@media (min-width: 832px) {
-		/* .toc-container {
-			display: block;
-			width: var(--sidebar-width);
-			height: calc(100vh - var(--sk-nav-height) - var(--sk-banner-height));
-			position: fixed;
-			right: 100px;
-			top: var(--sk-nav-height);
-			overflow: hidden;
-
-			&::after {
-				content: '';
-				position: absolute;
-				right: 0;
-				top: 0;
-				width: 3px;
-				height: 100%;
-				background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.03));
-			}
-		} */
-
 		.page {
 			padding-left: calc(var(--sk-page-padding-side));
 		}
