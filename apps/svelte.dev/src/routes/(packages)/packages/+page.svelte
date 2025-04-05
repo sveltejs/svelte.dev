@@ -1,26 +1,22 @@
 <script lang="ts">
-	import { page } from '$app/state';
 	import { forcefocus } from '@sveltejs/site-kit/actions';
 	import { Icon } from '@sveltejs/site-kit/components';
 	import { QueryParamSerde, reactive_query_params } from '@sveltejs/site-kit/reactivity';
 	import { onMount } from 'svelte';
+	import { on } from 'svelte/events';
 	import PackageCard from './PackageCard.svelte';
 	import { type SortCriterion } from './packages-search';
-	import Pagination from './Pagination.svelte';
-	import { on } from 'svelte/events';
 
 	const { data } = $props();
 
 	const qps = reactive_query_params({
 		query: QueryParamSerde.string(),
-		page: QueryParamSerde.number(1),
 		svelte_5_only: QueryParamSerde.boolean(false),
 		hide_outdated: QueryParamSerde.boolean(false),
 		sort_by: QueryParamSerde.string<SortCriterion>('popularity')
 	});
 
 	let registry = $derived(data.registry);
-	let total_pages = $derived(data.pages?.total_pages);
 
 	let ready = $state(false);
 	let uid = 1;
@@ -40,17 +36,12 @@
 		worker.addEventListener('message', (event) => {
 			const { type, payload } = event.data;
 
-			if (type === 'update-page') {
-				qps.page = payload.page;
-			}
-
 			if (type === 'ready') {
 				ready = true;
 			}
 
 			if (type === 'results') {
 				registry = payload.results;
-				total_pages = payload.total_pages;
 			}
 		});
 
@@ -66,7 +57,6 @@
 
 	$effect(() => {
 		qps.query;
-		qps.page;
 		qps.svelte_5_only;
 		qps.hide_outdated;
 		qps.sort_by;
@@ -85,7 +75,6 @@
 			id,
 			payload: {
 				query: qps.query,
-				page: qps.page,
 				svelte_5_only: qps.svelte_5_only,
 				hide_outdated: qps.hide_outdated,
 				sort_by: qps.sort_by
@@ -247,14 +236,14 @@
 					<br /><br /><br /><br />
 				{/each}
 			</section>
-		{:else if registry && total_pages}
+		{:else if registry}
 			<div class="posts">
 				{#each registry as pkg}
 					<PackageCard {pkg} />
 				{/each}
 			</div>
 
-			<div class="pagination">
+			<!-- <div class="pagination">
 				<Pagination total={total_pages} bind:page={qps.page}>
 					{#snippet children(page_item)}
 						{#if page_item.type === 'ellipsis'}
@@ -275,7 +264,7 @@
 						{/if}
 					{/snippet}
 				</Pagination>
-			</div>
+			</div> -->
 		{/if}
 	</div>
 </div>

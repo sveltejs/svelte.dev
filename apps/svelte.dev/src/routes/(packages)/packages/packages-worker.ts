@@ -1,4 +1,4 @@
-import { init, REGISTRY_PAGE_LIMIT, search, search_criteria } from './packages-search';
+import { init, search, search_criteria } from './packages-search';
 
 addEventListener('message', async (event) => {
 	const { type, payload } = event.data;
@@ -11,7 +11,7 @@ addEventListener('message', async (event) => {
 	}
 
 	if (type === 'get') {
-		let { query, page = 1, svelte_5_only = false, hide_outdated = false, sort_by } = payload;
+		let { query, svelte_5_only = false, hide_outdated = false, sort_by } = payload;
 
 		sort_by = search_criteria.includes(sort_by) ? sort_by : 'popularity';
 
@@ -25,30 +25,12 @@ addEventListener('message', async (event) => {
 			}
 		});
 
-		const total_pages = Math.ceil(current_results.length / REGISTRY_PAGE_LIMIT);
-
-		if (page > total_pages && total_pages !== 0) {
-			page = 1;
-
-			console.log('Redirecting to page 0');
-			postMessage({
-				type: 'update-page',
-				payload: {
-					page: page
-				}
-			});
-
-			return;
-		}
+		console.log(current_results);
 
 		postMessage({
 			type: 'results',
 			payload: {
-				results: current_results.slice(
-					(page - 1) * REGISTRY_PAGE_LIMIT,
-					page * REGISTRY_PAGE_LIMIT
-				),
-				total_pages,
+				results: current_results,
 				query
 			}
 		});

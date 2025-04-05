@@ -1,9 +1,7 @@
-import { registry, type Package } from '$lib/server/content';
-import { redirect } from '@sveltejs/kit';
 import { PACKAGES_META } from '$lib/packages-meta';
+import { registry, type Package } from '$lib/server/content';
 import {
 	init,
-	REGISTRY_PAGE_LIMIT,
 	search,
 	search_criteria,
 	sort_packages,
@@ -14,7 +12,6 @@ export const prerender = false;
 
 export async function load({ url }) {
 	const query = url.searchParams.get('query');
-	let page = Math.max(1, +(url.searchParams.get('page')?.toString() ?? 1));
 	const svelte_5_only = (url.searchParams.get('svelte_5_only') ?? 'false') === 'true';
 	const hide_outdated = (url.searchParams.get('hide_outdated') ?? 'false') === 'true';
 	const sort_by_param = url.searchParams.get('sort_by') as SortCriterion;
@@ -54,26 +51,8 @@ export async function load({ url }) {
 		}
 	});
 
-	const total_pages = Math.ceil(current_results.length / REGISTRY_PAGE_LIMIT);
-
-	if (page > total_pages && total_pages !== 0) {
-		page = 1;
-
-		const new_url = new URL(url);
-		new_url.searchParams.set('page', page + '');
-		redirect(303, new_url);
-	}
-
-	const current_results_paged = current_results.slice(
-		(page - 1) * REGISTRY_PAGE_LIMIT,
-		(page - 1) * REGISTRY_PAGE_LIMIT + REGISTRY_PAGE_LIMIT
-	);
-
 	return {
-		registry: current_results_paged,
-		pages: {
-			total_pages: Math.ceil(current_results.length / REGISTRY_PAGE_LIMIT)
-		},
+		registry: current_results,
 		packages_count
 	};
 }
