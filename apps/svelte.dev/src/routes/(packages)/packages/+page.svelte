@@ -162,6 +162,7 @@
 					/>
 
 					<button
+						class="raised icon"
 						aria-label="Clear"
 						onclick={(e) => {
 							e.stopPropagation();
@@ -184,7 +185,7 @@
 						<h2>{title}</h2>
 						<div class="homepage-wrapper-wrapper">
 							{#if scroll_states[idx].start}
-								<button class="start" onclick={on_previous}>
+								<button class="start raised icon" onclick={on_previous}>
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
 										width="3em"
@@ -213,7 +214,7 @@
 								</div>
 
 								{#if scroll_states[idx].end}
-									<button class="end" onclick={on_next}>
+									<button class="end raised icon" onclick={on_next}>
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
 											width="3em"
@@ -261,16 +262,14 @@
 				position: absolute;
 				color: var(--sk-fg-3);
 				cursor: pointer;
+				background: var(--sk-bg-3);
 
 				left: 0;
 				top: 50%;
 				z-index: 100;
-				transform: translateY(-80%);
+				translate: 0 -80%;
 				mask: none !important;
 				-webkit-mask: none !important;
-				padding: 0.5rem;
-				border-radius: 50%;
-				box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 			}
 		}
 
@@ -289,6 +288,7 @@
 			button {
 				position: absolute;
 				color: var(--sk-fg-3);
+				background: var(--sk-bg-3);
 				cursor: pointer;
 			}
 
@@ -402,9 +402,10 @@
 
 		button {
 			position: absolute;
-			right: 0;
-			top: 0;
-			height: 100%;
+			right: 4px;
+			top: 50%;
+			translate: 0 -50%;
+			height: max-content;
 			aspect-ratio: 1;
 			color: var(--sk-fg-4);
 
