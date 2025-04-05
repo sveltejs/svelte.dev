@@ -5,7 +5,7 @@
 	import { onMount } from 'svelte';
 	import { on } from 'svelte/events';
 	import PackageCard from './PackageCard.svelte';
-	import { type SortCriterion } from './packages-search';
+	import { search_criteria, type SortCriterion } from './packages-search';
 
 	const { data } = $props();
 
@@ -16,7 +16,7 @@
 		sort_by: QueryParamSerde.string<SortCriterion>('popularity')
 	});
 
-	let pages = $derived(data.packages);
+	let packages = $derived(data.packages);
 
 	let ready = $state(false);
 	let uid = 1;
@@ -41,7 +41,7 @@
 			}
 
 			if (type === 'results') {
-				pages = payload.results;
+				packages = payload.results;
 			}
 		});
 
@@ -172,6 +172,29 @@
 						<Icon name="close" />
 					</button>
 				</label>
+
+				{#if qps.query}
+					<div class="sub">
+						<label>
+							Svelte 5 Only
+
+							<input type="checkbox" bind:checked={qps.svelte_5_only} />
+						</label>
+
+						<label>
+							Sort By:
+							<select bind:value={qps.sort_by}>
+								{#each search_criteria as criterion}
+									<option value={criterion}>{criterion}</option>
+								{/each}
+							</select>
+						</label>
+
+						<span style="flex: 1 1 auto"></span>
+
+						<span>Showing {packages?.length} results</span>
+					</div>
+				{/if}
 			</form>
 		</div>
 
@@ -184,24 +207,21 @@
 					<section>
 						<h2>{title}</h2>
 						<div class="homepage-wrapper-wrapper">
-							{#if scroll_states[idx].start}
-								<button class="start raised icon" onclick={on_previous}>
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										width="3em"
-										height="3em"
-										viewBox="0 0 24 24"
-										><!-- Icon from Lucide by Lucide Contributors - https://github.com/lucide-icons/lucide/blob/main/LICENSE --><path
-											fill="none"
-											stroke="currentColor"
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											stroke-width="2"
-											d="m15 18l-6-6l6-6"
-										/></svg
-									>
-								</button>
-							{/if}
+							<button
+								class={['start raised icon', scroll_states[idx].start && 'visible']}
+								onclick={on_previous}
+							>
+								<svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 24 24"
+									><!-- Icon from Lucide by Lucide Contributors - https://github.com/lucide-icons/lucide/blob/main/LICENSE --><path
+										fill="none"
+										stroke="currentColor"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="m15 18l-6-6l6-6"
+									/></svg
+								>
+							</button>
 
 							<div class={['homepage-posts-wrapper', scroll_states[idx].start && 'start']}>
 								<div
@@ -213,33 +233,34 @@
 									{/each}
 								</div>
 
-								{#if scroll_states[idx].end}
-									<button class="end raised icon" onclick={on_next}>
-										<svg
-											xmlns="http://www.w3.org/2000/svg"
-											width="3em"
-											height="3em"
-											viewBox="0 0 24 24"
-											><!-- Icon from Lucide by Lucide Contributors - https://github.com/lucide-icons/lucide/blob/main/LICENSE --><path
-												fill="none"
-												stroke="currentColor"
-												stroke-linecap="round"
-												stroke-linejoin="round"
-												stroke-width="2"
-												d="m9 18l6-6l-6-6"
-											/></svg
-										>
-									</button>
-								{/if}
+								<button
+									class={['end raised icon', scroll_states[idx].end && 'visible']}
+									onclick={on_next}
+								>
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										width="3em"
+										height="3em"
+										viewBox="0 0 24 24"
+										><!-- Icon from Lucide by Lucide Contributors - https://github.com/lucide-icons/lucide/blob/main/LICENSE --><path
+											fill="none"
+											stroke="currentColor"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="m9 18l6-6l-6-6"
+										/></svg
+									>
+								</button>
 							</div>
 						</div>
 					</section>
 					<br /><br /><br /><br />
 				{/each}
 			</section>
-		{:else if pages}
+		{:else if packages}
 			<div class="posts">
-				{#each pages as pkg}
+				{#each packages as pkg}
 					<PackageCard {pkg} />
 				{/each}
 			</div>
@@ -261,8 +282,9 @@
 			button.start {
 				position: absolute;
 				color: var(--sk-fg-3);
-				cursor: pointer;
 				background: var(--sk-bg-3);
+
+				opacity: 0;
 
 				left: 0;
 				top: 50%;
@@ -270,6 +292,10 @@
 				translate: 0 -80%;
 				mask: none !important;
 				-webkit-mask: none !important;
+
+				&.visible {
+					opacity: 1;
+				}
 			}
 		}
 
@@ -289,7 +315,6 @@
 				position: absolute;
 				color: var(--sk-fg-3);
 				background: var(--sk-bg-3);
-				cursor: pointer;
 			}
 
 			button.end {
@@ -300,6 +325,12 @@
 				translate: 0 -80%;
 
 				color: var(--sk-fg-3);
+
+				opacity: 0;
+
+				&.visible {
+					opacity: 1;
+				}
 			}
 		}
 
@@ -314,13 +345,20 @@
 
 			width: 100%;
 			padding-bottom: 1rem;
+			padding-inline-end: 10em;
+
+			scrollbar-width: none; /* Firefox */
+			-ms-overflow-style: none; /* IE and Edge */
 			overflow-x: auto;
 			overflow-y: hidden;
 			scroll-snap-type: x mandatory;
-			padding-inline-end: 10em;
 			scroll-padding-left: 4em;
 
 			transition: mask-image 0.2s ease-in-out;
+
+			&::-webkit-scrollbar {
+				display: none;
+			}
 
 			&.end {
 				mask-image: linear-gradient(to right, #fff 90%, transparent 100%);
@@ -360,11 +398,17 @@
 	.controls {
 		background: var(--background);
 		display: flex;
+		flex-direction: column;
 		gap: 1rem;
 		font: var(--sk-font-ui-medium);
 
 		form {
 			display: contents;
+		}
+
+		.sub {
+			display: flex;
+			gap: 1rem;
 		}
 	}
 

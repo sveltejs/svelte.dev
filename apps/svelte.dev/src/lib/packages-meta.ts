@@ -246,7 +246,10 @@ const OFFICIAL = [
 	'prettier-plugin-svelte',
 	'svelte',
 	'svelte2tsx',
-	'eslint-plugin-svelte'
+	'eslint-plugin-svelte',
+	'sv',
+	'svelte-loader',
+	'rollup-plugin-svelte'
 ];
 function is_official(pkg: string): boolean {
 	for (const official of OFFICIAL) {

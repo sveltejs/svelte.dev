@@ -403,8 +403,8 @@ export async function process_package_details(
 
 			// Get Svelte version
 			const svelte_version =
-				latest_package_json.dependencies?.svelte ??
 				latest_package_json.peerDependencies?.svelte ??
+				latest_package_json.dependencies?.svelte ??
 				latest_package_json.devDependencies?.svelte;
 
 			const is_svelte_5 = supports_svelte5(svelte_version);

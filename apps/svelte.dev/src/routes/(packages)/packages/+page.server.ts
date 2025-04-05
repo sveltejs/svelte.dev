@@ -31,7 +31,9 @@ export async function load({ url }) {
 					packages
 						.map((name) => registry.find((pkg) => pkg.name === name) ?? null)
 						.filter((v) => Boolean(v)) as Package[]
-				).sort((a, b) => sort_packages(a, b, 'popularity', weights))
+				)
+					.filter((v) => !v.outdated)
+					.sort((a, b) => sort_packages(a, b, 'popularity', weights))
 			});
 		}
 
