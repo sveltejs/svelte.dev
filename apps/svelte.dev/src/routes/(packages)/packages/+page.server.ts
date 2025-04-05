@@ -52,7 +52,7 @@ export async function load({ url }) {
 	});
 
 	return {
-		registry: current_results,
+		packages: current_results,
 		packages_count
 	};
 }

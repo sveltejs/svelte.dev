@@ -16,7 +16,7 @@
 		sort_by: QueryParamSerde.string<SortCriterion>('popularity')
 	});
 
-	let registry = $derived(data.registry);
+	let pages = $derived(data.packages);
 
 	let ready = $state(false);
 	let uid = 1;
@@ -41,7 +41,7 @@
 			}
 
 			if (type === 'results') {
-				registry = payload.results;
+				pages = payload.results;
 			}
 		});
 
@@ -236,9 +236,9 @@
 					<br /><br /><br /><br />
 				{/each}
 			</section>
-		{:else if registry}
+		{:else if pages}
 			<div class="posts">
-				{#each registry as pkg}
+				{#each pages as pkg}
 					<PackageCard {pkg} />
 				{/each}
 			</div>
