@@ -1,0 +1,18 @@
+{
+  "name": "svelte-axios-plus",
+  "description": "Reactive Axios wrapper with caching for Svelte apps.",
+  "repo_url": "https://github.com/itsEzz/svelte-axios-plus",
+  "authors": [
+    "itsezz"
+  ],
+  "homepage": "https://github.com/itsEzz/svelte-axios-plus",
+  "downloads": 9,
+  "dependents": 0,
+  "updated": "2024-12-22T22:52:37.232Z",
+  "tags": [
+    "server"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 0
+}

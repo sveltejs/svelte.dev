@@ -1,0 +1,18 @@
+{
+  "name": "tilez-echarts",
+  "description": "Integrate Apache ECharts charts into Svelte applications.",
+  "repo_url": "https://github.com/spren9er/tilez-echarts",
+  "authors": [
+    "spren9er"
+  ],
+  "homepage": "https://github.com/spren9er/tilez-echarts#readme",
+  "downloads": 16,
+  "dependents": 0,
+  "updated": "2024-10-24T20:02:25.243Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 3
+}

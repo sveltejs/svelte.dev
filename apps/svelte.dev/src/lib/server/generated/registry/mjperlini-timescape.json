@@ -1,0 +1,18 @@
+{
+  "name": "@mjperlini/timescape",
+  "description": "Build flexible date and time input fields for Svelte.",
+  "repo_url": "https://github.com/mjperlini/timescape",
+  "authors": [
+    "mjperlini"
+  ],
+  "homepage": "https://github.com/mjperlini/timescape#readme",
+  "downloads": 1,
+  "dependents": 0,
+  "updated": "2024-09-24T15:18:52.381Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

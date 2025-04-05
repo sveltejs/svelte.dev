@@ -1,0 +1,17 @@
+{
+  "name": "pixel-animate",
+  "description": "Animate elements on scroll in SvelteKit.",
+  "repo_url": "",
+  "authors": [
+    "pixel_1917"
+  ],
+  "downloads": 5,
+  "dependents": 0,
+  "updated": "2023-09-04T14:41:00.792Z",
+  "tags": [
+    "ui",
+    "miscellaneous"
+  ],
+  "svelte5": true,
+  "runes": false
+}

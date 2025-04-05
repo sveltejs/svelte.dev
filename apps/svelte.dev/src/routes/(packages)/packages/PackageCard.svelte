@@ -60,11 +60,11 @@
 </script>
 
 <article data-pubdate={pkg.updated}>
-	<span>
+	<span class="header">
 		<h3 class={[(pkg.outdated || pkg.deprecated) && 'faded']}>
 			{pkg.name}
 		</h3>
-		<span class="status">
+		<span class={['status']}>
 			{#if pkg.outdated}
 				<span>outdated</span>
 			{/if}
@@ -72,31 +72,27 @@
 				<span>deprecated</span>
 			{/if}
 			{#if pkg.official}
-				<span>official</span>
+				<span class={[pkg.official && 'official']}>official</span>
 			{/if}
 		</span>
 	</span>
 
-	<p>{pkg.description}</p>
-
-	<span style="flex: 1 1 auto"></span>
+	<p class="description">{pkg.description}</p>
 
 	<p class="stats">
 		{#if pkg.github_stars}
 			<span title="{pkg.github_stars} Github Stars">
-				{format_number(pkg.github_stars)}
 				<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"
 					><!-- Icon from All by undefined - undefined --><path
 						fill="currentColor"
 						d="M9.6 15.65L12 13.8l2.4 1.85l-.9-3.05l2.25-1.6h-2.8L12 7.9l-.95 3.1h-2.8l2.25 1.6zm2.4.65l-3.7 2.825q-.275.225-.6.213t-.575-.188t-.387-.475t-.013-.65L8.15 13.4l-3.625-2.575q-.3-.2-.375-.525t.025-.6t.35-.488t.6-.212H9.6l1.45-4.8q.125-.35.388-.538T12 3.475t.563.188t.387.537L14.4 9h4.475q.35 0 .6.213t.35.487t.025.6t-.375.525L15.85 13.4l1.425 4.625q.125.35-.012.65t-.388.475t-.575.188t-.6-.213zm0-4.525"
 					/></svg
-				>
+				>{format_number(pkg.github_stars)}
 			</span>
 		{/if}
 
 		{#if pkg.downloads}
 			<span title="{pkg.downloads} downloads">
-				{format_number(+pkg.downloads)}
 				<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"
 					><!-- Icon from All by undefined - undefined --><path
 						fill="currentColor"
@@ -106,12 +102,12 @@
 						d="M3.75 15a.75.75 0 0 0-1.5 0v.055c0 1.367 0 2.47.117 3.337c.12.9.38 1.658.981 2.26c.602.602 1.36.86 2.26.982c.867.116 1.97.116 3.337.116h6.11c1.367 0 2.47 0 3.337-.116c.9-.122 1.658-.38 2.26-.982s.86-1.36.982-2.26c.116-.867.116-1.97.116-3.337V15a.75.75 0 0 0-1.5 0c0 1.435-.002 2.436-.103 3.192c-.099.734-.28 1.122-.556 1.399c-.277.277-.665.457-1.4.556c-.755.101-1.756.103-3.191.103H9c-1.435 0-2.437-.002-3.192-.103c-.734-.099-1.122-.28-1.399-.556c-.277-.277-.457-.665-.556-1.4c-.101-.755-.103-1.756-.103-3.191"
 					/></svg
 				>
+				{format_number(+pkg.downloads)}
 			</span>
 		{/if}
 
 		{#if pkg.dependents}
 			<span title="{pkg.dependents} dependents">
-				{format_number(+pkg.dependents)}
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					height="1.5em"
@@ -146,7 +142,8 @@
 						stroke="currentColor"
 						stroke-width="20"
 					/>
-				</svg></span
+				</svg>
+				{format_number(+pkg.dependents)}</span
 			>
 		{/if}
 
@@ -184,12 +181,17 @@
 </article>
 
 <style>
+	.header {
+		display: flex;
+		align-items: center;
+		margin-bottom: 1rem;
+	}
+
 	h3 {
 		display: inline-block;
-		color: var(--sk-fg-2);
-		font-size: var(--sk-font-size-h3);
-		font-family: var(--sk-font-family-body);
-		margin-bottom: 1rem;
+		font: var(--sk-font-ui-medium);
+
+		flex: 1 1 auto;
 
 		&.faded {
 			color: var(--sk-fg-3);
@@ -204,10 +206,13 @@
 		height: 100%;
 		min-height: 0;
 
-		background-color: var(--sk-bg-3);
+		background-color: var(--sk-bg-2);
 
+		border: 1px solid var(--sk-bg-4);
 		border-radius: var(--sk-border-radius);
 		padding: 1rem;
+
+		min-height: 16em;
 
 		a {
 			display: block;
@@ -217,23 +222,28 @@
 
 		.status {
 			width: max-content;
-			font: var(--sk-font-ui-medium);
-			font-family: var(--sk-font-family-mono);
+
 			margin-left: 0.5rem;
 
 			> * {
-				padding: 0.4rem 0.5rem;
+				font: var(--sk-font-ui-small);
+				border-radius: 9999px;
+				padding: 0.2rem 1rem;
 				width: fit-content;
 				border: 1px solid var(--sk-border);
-				border-radius: 0.5rem;
+			}
+
+			.official {
+				border-color: var(--sk-fg-accent);
+				color: var(--sk-fg-accent);
+				background-color: color-mix(in hsl, var(--sk-fg-accent), transparent 95%);
 			}
 		}
 
 		.stats {
 			display: flex;
 			gap: 1.6rem;
-			font: var(--sk-font-ui-medium);
-			font-family: var(--sk-font-family-mono);
+			font: var(--sk-font-ui-small);
 
 			span {
 				display: flex;
@@ -242,10 +252,11 @@
 			}
 		}
 
-		p {
-			font: var(--sk-font-body-small);
+		.description {
+			font: var(--sk-font-ui-small);
 			color: var(--sk-fg-3);
 			margin: 0 0 0.5em 0;
+			flex: 1;
 			/* max-width: calc(100% - var(--sidebar-width)); */
 		}
 	}

@@ -632,7 +632,11 @@ async function update_overrides() {
 	const to_remove = new Set<string>();
 	const to_force_include_and_alter = new Map<string, Partial<Package>>();
 
-	for (const [pkg, value] of Object.entries(overrides)) {
+	for (const [pkg, value] of overrides) {
+		if (pkg instanceof RegExp) {
+			// TODO: Not supported yet
+			continue;
+		}
 		if (value === true) to_force_include.add(pkg);
 		else if (value === false) to_remove.add(pkg);
 		else if (typeof value === 'object') {
@@ -830,19 +834,19 @@ async function* create_map_batch_generator(
 }
 
 for (let i = 0; i < 1; i++) {
-	// await process_batches_through_llm();
+	await process_batches_through_llm();
 }
 
-// await update_overrides();
+await update_overrides();
 
 svelte_society_list;
-// await process_packages_by_names_through_llm({ package_names: Object.keys(svelte_society_list) });
+await process_packages_by_names_through_llm({ package_names: Object.keys(svelte_society_list) });
 
 // update_cache_from_npm();
-// await update_all_github_stars();
+await update_all_github_stars();
 
 await remove_forks();
-// delete_untagged();
+delete_untagged();
 
 // recheck_svelte5();
 

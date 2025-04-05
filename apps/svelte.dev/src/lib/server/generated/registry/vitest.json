@@ -1,0 +1,22 @@
+{
+  "name": "vitest",
+  "description": "Next generation testing framework powered by Vite.",
+  "repo_url": "https://github.com/vitest-dev/vitest",
+  "authors": [
+    "antfu",
+    "patak",
+    "oreanno",
+    "vitestbot"
+  ],
+  "homepage": "https://github.com/vitest-dev/vitest#readme",
+  "downloads": 10389095,
+  "dependents": 1036,
+  "updated": "2025-03-31T10:19:23.023Z",
+  "tags": [
+    "testing",
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 14097
+}

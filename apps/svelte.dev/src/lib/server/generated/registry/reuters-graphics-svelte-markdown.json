@@ -1,0 +1,21 @@
+{
+  "name": "@reuters-graphics/svelte-markdown",
+  "description": "Render Markdown content within Svelte components.",
+  "repo_url": "",
+  "authors": [
+    "allyjlevine",
+    "hobbes7878",
+    "mf475",
+    "pkd2512",
+    "swhart22",
+    "su.dev"
+  ],
+  "downloads": 107,
+  "dependents": 0,
+  "updated": "2025-04-02T09:34:03.010Z",
+  "tags": [
+    "content"
+  ],
+  "svelte5": true,
+  "runes": false
+}

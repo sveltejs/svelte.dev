@@ -1,0 +1,17 @@
+{
+  "name": "svelte-widgets-firebase",
+  "description": "Svelte widget CMS using Firebase.",
+  "repo_url": "https://github.com/colbymchenry/svelte-widgets",
+  "authors": [
+    "colbymchenry"
+  ],
+  "homepage": "https://github.com/colbymchenry/svelte-widgets",
+  "downloads": 15,
+  "dependents": 0,
+  "updated": "2023-05-16T04:26:11.118Z",
+  "tags": [
+    "integration"
+  ],
+  "svelte5": false,
+  "runes": false
+}

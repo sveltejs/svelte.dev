@@ -1,0 +1,18 @@
+{
+  "name": "my-svelte-components",
+  "description": "Create Svelte libraries with create-svelte.",
+  "repo_url": "https://github.com/1toldyou/svelte-components",
+  "authors": [
+    "ito1dyou"
+  ],
+  "homepage": "https://github.com/1toldyou/svelte-components#readme",
+  "downloads": 6,
+  "dependents": 0,
+  "updated": "2025-01-04T02:50:33.316Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 0
+}

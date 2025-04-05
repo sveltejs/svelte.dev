@@ -85,6 +85,8 @@
 			}
 		});
 	});
+
+	$inspect(qps.query);
 </script>
 
 <svelte:head>
@@ -118,8 +120,9 @@
 								e.preventDefault();
 							}
 						}}
+						enterkeyhint="search"
 						bind:value={qps.query}
-						placeholder="Search"
+						placeholder="Search {data.packages_count} packages"
 						aria-describedby="search-description"
 						aria-label="Search"
 						spellcheck="false"
@@ -135,8 +138,6 @@
 						<Icon name="close" />
 					</button>
 				</label>
-
-				<button type="submit"> Submit </button>
 			</form>
 		</div>
 
@@ -188,58 +189,6 @@
 			</div>
 		{/if}
 	</div>
-
-	<!-- <div class="toc-container">
-		<nav aria-label="Docs">
-			<div class="controls">
-				<b>SORT BY</b>
-				<label>
-					<select bind:value={qps.sort_by}>
-						{#each search_criteria as criterion}
-							<option value={criterion}>{criterion}</option>
-						{/each}
-					</select>
-				</label>
-			</div>
-
-			<br /><br />
-
-			<ul class="sidebar">
-				<b>FILTERS</b>
-				<li>
-					<input type="checkbox" value="svelte_5_only" bind:checked={qps.svelte_5_only} />
-					<a
-						class="tag"
-						href={qps.url_from('svelte_5_only', !qps.svelte_5_only)}
-						onclick={(e) => {
-							e.preventDefault();
-							qps.svelte_5_only = !qps.svelte_5_only;
-						}}
-						aria-current={qps.svelte_5_only}
-						title="Show Svelte 5 packages"
-					>
-						Svelte 5 only
-					</a>
-				</li>
-				<li>
-					<input type="checkbox" value="svelte_5_only" bind:checked={qps.hide_outdated} />
-					<a
-						class="tag"
-						href={qps.url_from('hide_outdated', !qps.hide_outdated)}
-						onclick={(e) => {
-							e.preventDefault();
-							qps.hide_outdated = !qps.hide_outdated;
-						}}
-						aria-current={qps.hide_outdated}
-					>
-						Hide Outdated
-					</a>
-				</li>
-			</ul>
-
-			<br /><br />
-		</nav>
-	</div> -->
 </div>
 
 <style>
@@ -410,12 +359,6 @@
 		gap: 2rem;
 		flex-direction: column;
 		margin-block-start: 4rem;
-
-		:global {
-			article {
-				margin-bottom: 4rem;
-			}
-		}
 	}
 
 	.pagination {

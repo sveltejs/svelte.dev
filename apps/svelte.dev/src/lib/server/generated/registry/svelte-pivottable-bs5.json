@@ -1,0 +1,18 @@
+{
+  "name": "svelte-pivottable-bs5",
+  "description": "Create pivot tables with drag-and-drop UI in Svelte.",
+  "repo_url": "https://github.com/Julos14/svelte-pivottable-bs5",
+  "authors": [
+    "julos14"
+  ],
+  "homepage": "https://github.com/Julos14/svelte-pivottable-bs5#readme",
+  "downloads": 70,
+  "dependents": 0,
+  "updated": "2025-03-25T10:17:37.886Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

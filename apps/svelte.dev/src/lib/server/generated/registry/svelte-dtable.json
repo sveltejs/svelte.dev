@@ -1,0 +1,18 @@
+{
+  "name": "svelte-dtable",
+  "description": "Create data tables in Svelte applications.",
+  "repo_url": "https://github.com/davidmungai/svelte-dtables",
+  "authors": [
+    "mungadavy"
+  ],
+  "homepage": "https://github.com/davidmungai/svelte-dtables#readme",
+  "downloads": 18,
+  "dependents": 0,
+  "updated": "2022-12-27T10:52:52.336Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 2
+}

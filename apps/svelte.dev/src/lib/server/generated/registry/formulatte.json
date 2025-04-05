@@ -1,0 +1,16 @@
+{
+  "name": "formulatte",
+  "description": "Manage forms with type safety and Yup validation in Svelte 5.",
+  "repo_url": "",
+  "authors": [
+    "nathabonfim59"
+  ],
+  "downloads": 58,
+  "dependents": 0,
+  "updated": "2025-03-24T05:00:14.442Z",
+  "tags": [
+    "miscellaneous"
+  ],
+  "svelte5": true,
+  "runes": true
+}

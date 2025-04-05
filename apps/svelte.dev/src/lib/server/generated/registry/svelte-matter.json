@@ -1,0 +1,16 @@
+{
+  "name": "svelte-matter",
+  "description": "Create UI library inspired by material design for Svelte.",
+  "repo_url": "https://github.com/UnwrittenFun/svelte-matter",
+  "authors": [
+    "unwrittenfun"
+  ],
+  "downloads": 2,
+  "dependents": 0,
+  "updated": "2019-05-25T17:46:52.923Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

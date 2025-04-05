@@ -1,0 +1,21 @@
+{
+  "name": "playwright",
+  "description": "A high-level API to automate web browsers, testing.",
+  "repo_url": "https://github.com/microsoft/playwright",
+  "authors": [
+    "pavelfeldman",
+    "yurys",
+    "dgozman-ms",
+    "playwright-bot"
+  ],
+  "homepage": "https://playwright.dev",
+  "downloads": 13400645,
+  "dependents": 1038,
+  "updated": "2025-03-17T17:02:50.323Z",
+  "tags": [
+    "testing"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 71301
+}

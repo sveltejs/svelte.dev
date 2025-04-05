@@ -1,0 +1,18 @@
+{
+  "name": "drupal_svelte_component_menu",
+  "description": "Create Svelte menu components for decoupled Drupal applications.",
+  "repo_url": "https://github.com/d34dman/drupal-jsonapi-params",
+  "authors": [
+    "d34dman"
+  ],
+  "homepage": "https://www.drupal.org/project/drupal_svelte_component_menu",
+  "downloads": 4,
+  "dependents": 0,
+  "updated": "2021-04-16T17:37:38.423Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 60
+}

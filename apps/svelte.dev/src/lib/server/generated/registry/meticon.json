@@ -1,0 +1,18 @@
+{
+  "name": "meticon",
+  "description": "Display Google Material Icons in Svelte applications.",
+  "repo_url": "https://github.com/ugurkorkmaz/meticon",
+  "authors": [
+    "ugurkorkmaz"
+  ],
+  "homepage": "https://github.com/ugurkorkmaz/meticon#readme",
+  "downloads": 37,
+  "dependents": 0,
+  "updated": "2023-04-24T19:03:39.452Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 2
+}

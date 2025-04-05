@@ -1,0 +1,16 @@
+{
+  "name": "svelte-tree-display",
+  "description": "Display hierarchical data structures as interactive trees in Svelte.",
+  "repo_url": "",
+  "authors": [
+    "kevvko"
+  ],
+  "downloads": 23,
+  "dependents": 1,
+  "updated": "2022-07-27T21:58:17.454Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

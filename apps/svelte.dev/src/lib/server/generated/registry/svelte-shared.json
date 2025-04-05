@@ -1,0 +1,18 @@
+{
+  "name": "svelte-shared",
+  "description": "Provide local storage stores with undo/redo functionality.",
+  "repo_url": "https://github.com/andreasmcdermott/svelte-shared",
+  "authors": [
+    "andreasmcdermott"
+  ],
+  "homepage": "https://github.com/andreasmcdermott/svelte-shared#readme",
+  "downloads": 15,
+  "dependents": 0,
+  "updated": "2022-09-18T07:23:47.351Z",
+  "tags": [
+    "miscellaneous"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

@@ -1,0 +1,17 @@
+{
+  "name": "@svuick/events",
+  "description": "Provides event handling utilities for Svelte and SvelteKit.",
+  "repo_url": "https://gitlab.com/david-plugge/svuick",
+  "authors": [
+    "davidplugge"
+  ],
+  "homepage": "https://gitlab.com/david-plugge/svuick#readme",
+  "downloads": 6,
+  "dependents": 1,
+  "updated": "2022-07-31T15:52:10.610Z",
+  "tags": [
+    "miscellaneous"
+  ],
+  "svelte5": false,
+  "runes": false
+}

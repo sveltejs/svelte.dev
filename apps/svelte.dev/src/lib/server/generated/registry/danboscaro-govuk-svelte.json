@@ -1,0 +1,18 @@
+{
+  "name": "@danboscaro/govuk-svelte",
+  "description": "Implement GOV.UK Design System components in Svelte.",
+  "repo_url": "https://gitlab.com/danboscaro/govuk-svelte",
+  "authors": [
+    "danboscaro"
+  ],
+  "homepage": "https://govuk-svelte-demo.vercel.app/",
+  "downloads": 147,
+  "dependents": 0,
+  "updated": "2023-08-25T12:08:20.903Z",
+  "tags": [
+    "ui",
+    "design-system"
+  ],
+  "svelte5": false,
+  "runes": false
+}

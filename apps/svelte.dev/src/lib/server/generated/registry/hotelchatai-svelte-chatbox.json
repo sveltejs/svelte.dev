@@ -1,0 +1,18 @@
+{
+  "name": "@hotelchatai/svelte-chatbox",
+  "description": "Simplify embedding chatbox iframe within Svelte websites.",
+  "repo_url": "https://github.com/Hotel-Chat-AI/svelte-chatbox",
+  "authors": [
+    "hotelchatai"
+  ],
+  "homepage": "https://github.com/Hotel-Chat-AI/svelte-chatbox#readme",
+  "downloads": 399,
+  "dependents": 0,
+  "updated": "2025-03-26T01:45:43.879Z",
+  "tags": [
+    "integration"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 0
+}

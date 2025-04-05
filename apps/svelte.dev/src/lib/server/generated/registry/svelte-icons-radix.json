@@ -1,0 +1,18 @@
+{
+  "name": "svelte-icons-radix",
+  "description": "Create Svelte icons inspired by Radix Icons.",
+  "repo_url": "https://github.com/kewkartik/svelte-radix-icons",
+  "authors": [
+    "kewkartik"
+  ],
+  "homepage": "https://github.com/kewkartik/svelte-radix-icons",
+  "downloads": 7,
+  "dependents": 0,
+  "updated": "2023-07-27T07:20:06.702Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

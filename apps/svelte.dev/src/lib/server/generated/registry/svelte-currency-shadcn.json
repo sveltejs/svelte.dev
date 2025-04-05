@@ -1,0 +1,16 @@
+{
+  "name": "svelte-currency-shadcn",
+  "description": "Form input converts numbers to currency formats in Svelte.",
+  "repo_url": "",
+  "authors": [
+    "drloloto"
+  ],
+  "downloads": 16,
+  "dependents": 0,
+  "updated": "2024-04-10T20:55:53.014Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

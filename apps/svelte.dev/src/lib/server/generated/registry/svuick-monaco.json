@@ -1,0 +1,17 @@
+{
+  "name": "@svuick/monaco",
+  "description": "Integrate Monaco editor into Svelte projects.",
+  "repo_url": "https://gitlab.com/david-plugge/svuick",
+  "authors": [
+    "davidplugge"
+  ],
+  "homepage": "https://gitlab.com/david-plugge/svuick#readme",
+  "downloads": 6,
+  "dependents": 1,
+  "updated": "2022-07-29T15:09:31.921Z",
+  "tags": [
+    "tooling"
+  ],
+  "svelte5": false,
+  "runes": false
+}

@@ -1,0 +1,18 @@
+{
+  "name": "render-big-data",
+  "description": "Render big data lists with high performance in Svelte.",
+  "repo_url": "https://github.com/Buzhifanji/render-big-data",
+  "authors": [
+    "buzhifanji"
+  ],
+  "homepage": "https://github.com/Buzhifanji/render-big-data#readme",
+  "downloads": 52,
+  "dependents": 0,
+  "updated": "2023-01-03T14:17:41.361Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 1
+}

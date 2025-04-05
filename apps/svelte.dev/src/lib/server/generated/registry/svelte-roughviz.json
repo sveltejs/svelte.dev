@@ -1,0 +1,18 @@
+{
+  "name": "svelte-roughviz",
+  "description": "Create rough, hand-drawn-style data visualizations in Svelte.",
+  "repo_url": "https://github.com/GrayFrost/svelte-roughviz",
+  "authors": [
+    "garyfrost"
+  ],
+  "homepage": "https://github.com/GrayFrost/svelte-roughviz#readme",
+  "downloads": 61,
+  "dependents": 0,
+  "updated": "2025-03-24T02:04:46.492Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": true,
+  "runes": false,
+  "github_stars": 0
+}

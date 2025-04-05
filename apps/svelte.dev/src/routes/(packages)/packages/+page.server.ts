@@ -6,6 +6,7 @@ import {
 	REGISTRY_PAGE_LIMIT,
 	search,
 	search_criteria,
+	sort_packages,
 	type SortCriterion
 } from './packages-search';
 
@@ -20,21 +21,26 @@ export async function load({ url }) {
 
 	const sort_by = search_criteria.includes(sort_by_param) ? sort_by_param : 'popularity';
 
+	const packages_count = registry.length;
+
 	// If query doesn't exist, we show netflix style page. For this, send pre-done cards with categories
 	let homepage_data: { title: string; packages: Package[] }[] | null = null;
 	if (!query) {
 		homepage_data = [];
-		for (const { featured, title } of Object.values(PACKAGES_META.TAGS)) {
+		for (const { packages, title, weights } of PACKAGES_META.FEATURED) {
 			homepage_data.push({
 				title,
-				packages: featured
-					.map((name) => registry.find((pkg) => pkg.name === name) ?? null)
-					.filter((v) => Boolean(v)) as Package[]
+				packages: (
+					packages
+						.map((name) => registry.find((pkg) => pkg.name === name) ?? null)
+						.filter((v) => Boolean(v)) as Package[]
+				).sort((a, b) => sort_packages(a, b, 'popularity', weights))
 			});
 		}
 
 		return {
-			homepage: homepage_data
+			homepage: homepage_data,
+			packages_count
 		};
 	}
 
@@ -68,31 +74,6 @@ export async function load({ url }) {
 		pages: {
 			total_pages: Math.ceil(current_results.length / REGISTRY_PAGE_LIMIT)
 		},
-		tags: Object.entries(PACKAGES_META.TAGS)
-			.reduce(
-				(acc, [key, value]) => {
-					if (value.title) {
-						acc.push({
-							tag: key,
-							title: value.title,
-							short_title:
-								{
-									ui: 'UI',
-									seo: 'SEO'
-								}[key] ?? kebab_to_capital(key)
-						});
-					}
-					return acc;
-				},
-				[] as { tag: string; title: string; short_title: string }[]
-			)
-			.sort((a, b) => a.tag.localeCompare(b.tag))
+		packages_count
 	};
-}
-
-function kebab_to_capital(str: string) {
-	return str
-		.split('-')
-		.map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-		.join(' ');
 }

@@ -1,0 +1,22 @@
+{
+  "name": "beyond",
+  "description": "The meta-framework for universal packages.",
+  "repo_url": "https://github.com/beyondjs/engine",
+  "authors": [
+    "hello-beyond",
+    "jircdeveloper",
+    "ftovar8",
+    "enriquebox",
+    "jr0driguez"
+  ],
+  "homepage": "https://github.com/beyondjs/engine#readme",
+  "downloads": 54,
+  "dependents": 39,
+  "updated": "2025-02-17T19:21:26.766Z",
+  "tags": [
+    "miscellaneous"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 17
+}

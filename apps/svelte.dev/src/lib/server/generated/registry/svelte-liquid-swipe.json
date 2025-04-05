@@ -1,0 +1,18 @@
+{
+  "name": "svelte-liquid-swipe",
+  "description": "Create liquid swipe transitions between Svelte components.",
+  "repo_url": "https://github.com/tncrazvan/svelte-liquid-swipe",
+  "authors": [
+    "loopcake"
+  ],
+  "homepage": "https://github.com/tncrazvan/svelte-liquid-swipe#readme",
+  "downloads": 42,
+  "dependents": 0,
+  "updated": "2024-06-10T17:26:27.430Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 64
+}

@@ -1,0 +1,18 @@
+{
+  "name": "polder",
+  "description": "Svelte component library in progress.",
+  "repo_url": "https://github.com/yimme/svelte-polder-ui",
+  "authors": [
+    "jimme"
+  ],
+  "homepage": "https://github.com/yimme/svelte-polder-ui#readme",
+  "downloads": 10,
+  "dependents": 0,
+  "updated": "2022-11-11T13:53:03.477Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

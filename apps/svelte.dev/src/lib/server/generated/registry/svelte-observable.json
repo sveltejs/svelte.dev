@@ -1,0 +1,18 @@
+{
+  "name": "svelte-observable",
+  "description": "Use observables in Svelte components with ease.",
+  "repo_url": "https://github.com/timhall/svelte-observable",
+  "authors": [
+    "timhall"
+  ],
+  "homepage": "https://github.com/timhall/svelte-observable#readme",
+  "downloads": 314,
+  "dependents": 1,
+  "updated": "2019-04-26T20:13:35.925Z",
+  "tags": [
+    "miscellaneous"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 63
+}

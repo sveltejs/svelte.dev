@@ -1,0 +1,18 @@
+{
+  "name": "svelte-jawns",
+  "description": "Build customizable Svelte components with Tailwind and TypeScript.",
+  "repo_url": "https://github.com/atuttle/svelte-jawns",
+  "authors": [
+    "atuttle"
+  ],
+  "homepage": "https://github.com/atuttle/svelte-jawns#readme",
+  "downloads": 66,
+  "dependents": 0,
+  "updated": "2023-03-26T21:22:54.149Z",
+  "tags": [
+    "design-system"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

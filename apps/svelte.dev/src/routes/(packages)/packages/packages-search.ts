@@ -138,14 +138,14 @@ export function search(
 	// Case 1: No query, no tags - return all packages sorted by selected criterion
 	if (!has_query && !has_tags) {
 		result_packages = Array.from(packages_map.values()).sort((a, b) =>
-			sort_packages(a, b, sort_by, direction)
+			sort_packages(a, b, sort_by)
 		);
 	}
 	// Case 2: Empty query, filter by tags only
 	else if (!has_query && has_tags) {
 		result_packages = Array.from(packages_map.values())
 			.filter((pkg) => tags.some((tag) => pkg.tags && pkg.tags.includes(tag)))
-			.sort((a, b) => sort_packages(a, b, sort_by, direction));
+			.sort((a, b) => sort_packages(a, b, sort_by));
 	}
 	// Case 3 & 4: Has query (and possibly tags)
 	else if (has_query) {
@@ -297,7 +297,7 @@ export function search(
 				}
 
 				// Sort directly by the selected criterion, considering direction
-				result_packages = matched_packages.sort((a, b) => sort_packages(a, b, sort_by, direction));
+				result_packages = matched_packages.sort((a, b) => sort_packages(a, b, sort_by));
 			}
 		}
 	}
@@ -315,23 +315,41 @@ export function search(
 		}
 
 		// Apply sorting after filtering
-		result_packages = result_packages.sort((a, b) => sort_packages(a, b, sort_by, direction));
+		result_packages = result_packages.sort((a, b) => sort_packages(a, b, sort_by));
 	}
 
 	return result_packages;
 }
 
 /**
- * Helper function to sort packages by the specified criterion with direction control
+ * Helper function to sort packages by the specified criterion with optional weights
+ * Higher weights will prioritize packages to appear earlier in the sorted list
+ *
+ * @param a First package to compare
+ * @param b Second package to compare
+ * @param criterion The sorting criterion to use
+ * @param weights Optional record of package name to weight multiplier
+ * @returns Comparison result (-1, 0, or 1)
  */
 export function sort_packages(
 	a: Package,
 	b: Package,
 	criterion: SortCriterion,
-	direction: SortDirection = 'dsc'
+	weights?: Record<string, number>
 ): number {
-	let comparison = 0;
+	// Apply weights if provided
+	const a_weight = weights?.[a.name] || 1;
+	const b_weight = weights?.[b.name] || 1;
 
+	// Check for significant weight difference first
+	// This ensures packages with higher weights are prioritized
+	const weight_diff = a_weight - b_weight;
+	if (Math.abs(weight_diff) > 0.1) {
+		// Higher weights should come first
+		return weight_diff > 0 ? -1 : 1;
+	}
+
+	// If weights are similar, use standard sorting criteria
 	switch (criterion) {
 		case 'popularity':
 			// Create a balanced scoring system using logarithmic scales to prevent small numbers from dominating
@@ -343,7 +361,6 @@ export function sort_packages(
 			const b_downloads = b.downloads || 0;
 
 			// Use log scale with appropriate weights to maintain priority but prevent small values from dominating
-			// Log base 10 with +1 to handle zeros, multiplied by importance factor
 			let a_score =
 				Math.log10(a_dependents + 1) * 3 +
 				Math.log10(a_stars + 1) * 2 +
@@ -360,33 +377,26 @@ export function sort_packages(
 			if (b.outdated) b_score += OUTDATED_PENALTY;
 			if (b.deprecated) b_score += DEPRECATED_PENALTY;
 
-			comparison = b_score - a_score;
-			break;
+			return b_score - a_score;
 
 		case 'downloads':
-			comparison = (b.downloads || 0) - (a.downloads || 0);
-			break;
+			return (b.downloads || 0) - (a.downloads || 0);
 
 		case 'dependents':
-			comparison = (b.dependents || 0) - (a.dependents || 0);
-			break;
+			return (b.dependents || 0) - (a.dependents || 0);
 
 		case 'github_stars':
-			comparison = (b.github_stars || 0) - (a.github_stars || 0);
-			break;
+			return (b.github_stars || 0) - (a.github_stars || 0);
 
 		case 'updated':
-			// Sort by most recently updated
+			// For date-based sorting
 			const a_date = a.updated ? new Date(a.updated).getTime() : 0;
 			const b_date = b.updated ? new Date(b.updated).getTime() : 0;
-			comparison = b_date - a_date;
-			break;
+			return b_date - a_date;
 
 		case 'name':
-			// Sort alphabetically by name
-			comparison = a.name.localeCompare(b.name);
-			// For name, we reverse the direction to make alphabetical order the default ascending order
-			return direction === 'asc' ? comparison : -comparison;
+			// For name sorting
+			return a.name.localeCompare(b.name);
 
 		default:
 			// Default to balanced popularity scoring if an invalid criterion is provided
@@ -414,12 +424,8 @@ export function sort_packages(
 			if (b.outdated) b_def_score += OUTDATED_PENALTY;
 			if (b.deprecated) b_def_score += DEPRECATED_PENALTY;
 
-			comparison = b_def_score - a_def_score;
-			break;
+			return b_def_score - a_def_score;
 	}
-
-	// Apply direction (except for name, which is handled separately above)
-	return direction === 'asc' ? -comparison : comparison;
 }
 
 /**

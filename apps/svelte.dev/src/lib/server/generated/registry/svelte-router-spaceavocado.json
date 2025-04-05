@@ -1,0 +1,18 @@
+{
+  "name": "svelte-router-spaceavocado",
+  "description": "Provides simple routing for Svelte single-page applications.",
+  "repo_url": "https://github.com/OrkhanAlikhanov/svelte-router",
+  "authors": [
+    "orkhan.alikhanov"
+  ],
+  "homepage": "https://github.com/OrkhanAlikhanov/svelte-router",
+  "downloads": 30,
+  "dependents": 0,
+  "updated": "2024-07-18T13:54:43.470Z",
+  "tags": [
+    "router"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

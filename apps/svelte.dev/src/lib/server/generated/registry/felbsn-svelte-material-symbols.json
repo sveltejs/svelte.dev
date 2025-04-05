@@ -1,0 +1,17 @@
+{
+  "name": "@felbsn/svelte-material-symbols",
+  "description": "Select and use Google Material Symbols in Svelte apps.",
+  "repo_url": "",
+  "authors": [
+    "felbsn"
+  ],
+  "homepage": "https://svelte-material-symbols.vercel.app/",
+  "downloads": 14,
+  "dependents": 0,
+  "updated": "2023-09-13T20:25:25.605Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false
+}

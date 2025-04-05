@@ -1,0 +1,18 @@
+{
+  "name": "@foxkdev/svelte-components",
+  "description": "Provide reusable Svelte components.",
+  "repo_url": "https://github.com/foxkdev/svelte-components",
+  "authors": [
+    "foxkdev"
+  ],
+  "homepage": "https://github.com/foxkdev/svelte-components",
+  "downloads": 16,
+  "dependents": 0,
+  "updated": "2023-05-10T21:51:40.278Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

@@ -1,14 +1,14 @@
 {
-  "name": "@llui85/svelte-accessible-dialog",
+  "name": "svelte-accessible-dialog",
   "description": "Create accessible dialog components for Svelte apps.",
   "repo_url": "https://github.com/reecelucas/svelte-accessible-dialog",
   "authors": [
-    "llui85"
+    "reecelucas"
   ],
   "homepage": "https://github.com/reecelucas/svelte-accessible-dialog#readme",
-  "downloads": 3,
+  "downloads": 643,
   "dependents": 0,
-  "updated": "2024-07-06T08:18:49.036Z",
+  "updated": "2021-04-14T14:02:34.803Z",
   "tags": [
     "ui"
   ],

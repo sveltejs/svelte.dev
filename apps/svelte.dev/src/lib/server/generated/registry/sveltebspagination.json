@@ -1,0 +1,19 @@
+{
+  "name": "sveltebspagination",
+  "description": "Create simple pagination components for SvelteKit projects.",
+  "repo_url": "https://github.com/aliciamlr88/SveltePagination",
+  "authors": [
+    "t2ny",
+    "aliciamlr"
+  ],
+  "homepage": "https://github.com/aliciamlr88/SveltePagination#readme",
+  "downloads": 15,
+  "dependents": 0,
+  "updated": "2024-03-27T11:54:14.776Z",
+  "tags": [
+    "ui"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

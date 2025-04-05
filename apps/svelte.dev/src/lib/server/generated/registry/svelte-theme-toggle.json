@@ -1,0 +1,19 @@
+{
+  "name": "svelte-theme-toggle",
+  "description": "Implement dark theme toggle in Svelte/SvelteKit applications.",
+  "repo_url": "https://github.com/meetmistry0/svelte-theme-toggle",
+  "authors": [
+    "meet-mistry"
+  ],
+  "homepage": "https://github.com/meetmistry0/svelte-theme-toggle#readme",
+  "downloads": 31,
+  "dependents": 0,
+  "updated": "2022-07-18T11:39:52.845Z",
+  "tags": [
+    "ui",
+    "miscellaneous"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}

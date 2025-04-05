@@ -1,14 +1,14 @@
 {
-  "name": "svelte-connection-status",
-  "description": "Detect online/offline status in Svelte apps.",
+  "name": "svelte-connection-status-patched",
+  "description": "Detect online/offline status changes in Svelte apps.",
   "repo_url": "https://github.com/said-m/svelte-connection-status",
   "authors": [
-    "said-m"
+    "herasium"
   ],
   "homepage": "https://github.com/said-m/svelte-connection-status#readme",
-  "downloads": 8,
+  "downloads": 9,
   "dependents": 0,
-  "updated": "2021-05-30T14:04:23.474Z",
+  "updated": "2024-08-11T14:17:00.698Z",
   "tags": [
     "miscellaneous"
   ],

@@ -1,0 +1,18 @@
+{
+  "name": "svelte-router-pagejs",
+  "description": "Implement routing using page.js for Svelte applications.",
+  "repo_url": "https://github.com/chammanganti/svelte-router-pagejs",
+  "authors": [
+    "chammanganti"
+  ],
+  "homepage": "https://github.com/chammanganti/svelte-router-pagejs#readme",
+  "downloads": 3,
+  "dependents": 0,
+  "updated": "2021-04-04T07:52:08.315Z",
+  "tags": [
+    "router"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 0
+}
