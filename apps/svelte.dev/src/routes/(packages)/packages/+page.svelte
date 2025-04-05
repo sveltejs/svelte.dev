@@ -408,6 +408,7 @@
 			height: max-content;
 			aspect-ratio: 1;
 			color: var(--sk-fg-4);
+			background: var(--sk-bg-3);
 
 			&:hover,
 			&:focus {
