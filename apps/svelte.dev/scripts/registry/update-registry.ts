@@ -575,11 +575,12 @@ async function update_all_github_stars(ignore_if_exists = false) {
 				const stars = await fetch_github_stars(data.repo_url);
 
 				if (typeof stars === 'number') {
+					const old_stars = data.github_stars;
 					data.github_stars = stars;
 
 					console.log({ pkg });
 
-					PackageCache.set(pkg, data);
+					if (old_stars !== stars) PackageCache.set(pkg, data);
 				}
 			} catch (e) {
 				console.error(e, data);
@@ -834,13 +835,13 @@ async function* create_map_batch_generator(
 }
 
 for (let i = 0; i < 1; i++) {
-	await process_batches_through_llm();
+	// await process_batches_through_llm();
 }
 
 await update_overrides();
 
 svelte_society_list;
-await process_packages_by_names_through_llm({ package_names: Object.keys(svelte_society_list) });
+// await process_packages_by_names_through_llm({ package_names: Object.keys(svelte_society_list) });
 
 // update_cache_from_npm();
 await update_all_github_stars();

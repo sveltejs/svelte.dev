@@ -7,6 +7,7 @@
 	import PackageCard from './PackageCard.svelte';
 	import { type SortCriterion } from './packages-search';
 	import Pagination from './Pagination.svelte';
+	import { on } from 'svelte/events';
 
 	const { data } = $props();
 
@@ -25,6 +26,12 @@
 	let uid = 1;
 
 	let worker_first_run = true;
+
+	const scroll_states = $state(
+		Array.from({ length: data.homepage?.length || 0 }, () => ({ start: false, end: true }))
+	);
+
+	let homepage_card_width = $state<number | null>(null);
 
 	let worker: Worker;
 	onMount(() => {
@@ -87,16 +94,53 @@
 	});
 
 	$inspect(qps.query);
+
+	// This function is first run on onMount to enable/disable the arrow buttons, and on scroll
+	function handle_scroll(node: HTMLElement, idx: number) {
+		function update() {
+			const width = node.offsetWidth;
+			const scroll_width = node.scrollWidth;
+			const scroll_left = node.scrollLeft;
+
+			scroll_states[idx].start = scroll_left !== 0;
+			scroll_states[idx].end = scroll_left + width !== scroll_width;
+		}
+
+		update();
+
+		const controller = new AbortController();
+
+		on(node, 'scroll', update, { passive: true, signal: controller.signal });
+		on(window, 'resize', update, { passive: true, signal: controller.signal });
+
+		return {
+			destroy: () => {
+				controller.abort();
+			}
+		};
+	}
+
+	function on_next(e: MouseEvent & { currentTarget: HTMLButtonElement }) {
+		if (homepage_card_width) {
+			e.currentTarget.previousElementSibling?.scrollBy({
+				behavior: 'smooth',
+				left: homepage_card_width
+			});
+		}
+	}
+
+	function on_previous(e: MouseEvent & { currentTarget: HTMLButtonElement }) {
+		if (homepage_card_width) {
+			e.currentTarget.nextElementSibling?.children[0]?.scrollBy({
+				behavior: 'smooth',
+				left: -homepage_card_width
+			});
+		}
+	}
 </script>
 
 <svelte:head>
 	<title>Packages • Svelte</title>
-	<!-- <link
-		rel="alternate"
-		type="application/rss+xml"
-		title="Svelte blog"
-		href="https://svelte.dev/blog/rss.xml"
-	/> -->
 
 	<meta name="twitter:title" content="Packages • Svelte" />
 	<meta name="twitter:description" content="Articles about Svelte and UI development" />
@@ -146,13 +190,58 @@
 
 			<section class="homepage">
 				<!-- Here we show netflix style page -->
-				{#each data.homepage as { packages, title }}
+				{#each data.homepage as { packages, title }, idx}
 					<section>
 						<h2>{title}</h2>
-						<div class="homepage-posts">
-							{#each packages as pkg}
-								<PackageCard {pkg} />
-							{/each}
+						<div class="homepage-wrapper-wrapper">
+							{#if scroll_states[idx].start}
+								<button class="start" onclick={on_previous}>
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										width="3em"
+										height="3em"
+										viewBox="0 0 24 24"
+										><!-- Icon from Lucide by Lucide Contributors - https://github.com/lucide-icons/lucide/blob/main/LICENSE --><path
+											fill="none"
+											stroke="currentColor"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="m15 18l-6-6l6-6"
+										/></svg
+									>
+								</button>
+							{/if}
+
+							<div class={['homepage-posts-wrapper', scroll_states[idx].start && 'start']}>
+								<div
+									class={['homepage-posts', scroll_states[idx].end && 'end']}
+									use:handle_scroll={idx}
+								>
+									{#each packages as pkg}
+										<PackageCard {pkg} bind:width={homepage_card_width} />
+									{/each}
+								</div>
+
+								{#if scroll_states[idx].end}
+									<button class="end" onclick={on_next}>
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											width="3em"
+											height="3em"
+											viewBox="0 0 24 24"
+											><!-- Icon from Lucide by Lucide Contributors - https://github.com/lucide-icons/lucide/blob/main/LICENSE --><path
+												fill="none"
+												stroke="currentColor"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												stroke-width="2"
+												d="m9 18l6-6l-6-6"
+											/></svg
+										>
+									</button>
+								{/if}
+							</div>
 						</div>
 					</section>
 					<br /><br /><br /><br />
@@ -197,19 +286,81 @@
 			margin-bottom: 2rem;
 		}
 
+		.homepage-wrapper-wrapper {
+			position: relative;
+
+			width: 100%;
+
+			button.start {
+				position: absolute;
+				color: var(--sk-fg-3);
+				cursor: pointer;
+
+				left: 0;
+				top: 50%;
+				z-index: 100;
+				transform: translateY(-80%);
+				mask: none !important;
+				-webkit-mask: none !important;
+				padding: 0.5rem;
+				border-radius: 50%;
+				box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+			}
+		}
+
+		.homepage-posts-wrapper {
+			position: relative;
+
+			width: 100%;
+
+			transition: mask-image 0.2s ease-in-out;
+
+			&.start {
+				mask-image: linear-gradient(to right, transparent 0%, var(--sk-bg-1) 10%);
+				mask-size: 100%;
+			}
+
+			button {
+				position: absolute;
+				color: var(--sk-fg-3);
+				cursor: pointer;
+			}
+
+			button.end {
+				position: absolute;
+				right: 0;
+				top: 50%;
+
+				translate: 0 -80%;
+
+				color: var(--sk-fg-3);
+			}
+		}
+
 		.homepage-posts {
+			/* Keep your existing layout styles */
+			box-sizing: border-box;
+			position: relative;
 			display: grid;
 			grid-auto-flow: column;
 			grid-auto-columns: 34rem;
 			gap: 2rem;
 
 			width: 100%;
+			padding-bottom: 1rem;
 			overflow-x: auto;
 			overflow-y: hidden;
-
-			padding-bottom: 1rem;
-
 			scroll-snap-type: x mandatory;
+			padding-inline-end: 10em;
+			scroll-padding-left: 4em;
+
+			transition: mask-image 0.2s ease-in-out;
+
+			&.end {
+				/* Keep the end gradient mask, which always applies */
+				mask-image: linear-gradient(to right, #fff 90%, transparent 100%);
+				mask-size: 100%;
+			}
 
 			:global {
 				article {
@@ -299,7 +450,8 @@
 		flex: 1;
 
 		border-radius: 0.5rem;
-		padding: 0.5rem 0.5rem 0.5rem 0rem;
+		border: solid 1px var(--sk-border);
+		padding: 1rem;
 		margin-block-start: 1rem;
 
 		position: relative;
@@ -307,16 +459,6 @@
 		&:has(:focus-visible) {
 			outline: 2px solid var(--sk-fg-accent);
 			outline-offset: 4px;
-		}
-
-		/* Border that is not rounded */
-		&::after {
-			content: '';
-			position: absolute;
-			inset-block-end: 0;
-			inset-inline: 0;
-			height: 1px;
-			background: var(--sk-border);
 		}
 
 		input {

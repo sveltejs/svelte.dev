@@ -149,13 +149,7 @@ const FEATURED: { title: string; packages: string[]; weights?: Record<string, nu
 	},
 	{
 		title: 'Bundler plugins',
-		packages: [
-			'vite-plugin-svelte',
-			'rollup-plugin-svelte',
-			'svelte-loader',
-			'esbuild-svelte',
-			'parcel-plugin-svelte'
-		]
+		packages: ['vite-plugin-svelte', 'rollup-plugin-svelte', 'svelte-loader', 'esbuild-svelte']
 	},
 	{
 		title: 'Media',
@@ -214,7 +208,8 @@ const FEATURED: { title: string; packages: string[]; weights?: Record<string, nu
 			'@sentry/sveltekit',
 			'svelte-stripe',
 			'clerk-sveltekit',
-			'@storyblok/svelte'
+			'@storyblok/svelte',
+			'@inlang/paraglide-js'
 		]
 	},
 	{
@@ -241,7 +236,8 @@ const OVERRIDES = new Map<string | RegExp, boolean | number | Partial<Package>>(
 	['sveltekit-rate-limiter', true],
 	['@astrojs/starlight', true],
 	['playwright', true],
-	['vitest', true]
+	['vitest', true],
+	['@inlang/paraglide-js', true]
 	// [/@smui\//, true] TODO: This kind of pattern complicates things, not supported yet. Instead focusing on getting smui to add svelte to their deps/peerDeps
 ]);
 

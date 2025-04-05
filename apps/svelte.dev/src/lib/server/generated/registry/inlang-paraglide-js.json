@@ -1,0 +1,19 @@
+{
+  "name": "@inlang/paraglide-js",
+  "description": "A compiler-based i18n library that emits tree-shakable message functions.",
+  "repo_url": "github.com/opral/inlang-paraglide-js",
+  "authors": [
+    "samuelstroschein",
+    "inlangbot"
+  ],
+  "homepage": "https://inlang.com/m/gerre34r/library-inlang-paraglideJs",
+  "downloads": 131804,
+  "dependents": 9,
+  "updated": "2025-04-04T15:19:36.039Z",
+  "tags": [
+    "integration"
+  ],
+  "svelte5": false,
+  "runes": false,
+  "github_stars": 86
+}
