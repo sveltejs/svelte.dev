@@ -428,6 +428,10 @@
 			display: contents;
 		}
 
+		input {
+			accent-color: var(--sk-fg-accent);
+		}
+
 		.sub {
 			display: flex;
 			gap: 2rem;
