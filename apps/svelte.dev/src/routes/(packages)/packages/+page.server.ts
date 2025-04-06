@@ -30,26 +30,18 @@ export async function load({ url }) {
 	const packages_count = registry.length;
 
 	// If query doesn't exist, we show netflix style page. For this, send pre-done cards with categories
-	let homepage_data: { title: string; packages: Package[] }[] | null = null;
-	if (!query) {
-		homepage_data = [];
-		for (const { packages, title, weights } of PACKAGES_META.FEATURED) {
-			homepage_data.push({
-				title,
-				packages: (
-					packages
-						.map((name) => registry.find((pkg) => pkg.name === name) ?? null)
-						.filter((v) => Boolean(v)) as Package[]
-				)
-					.filter((v) => !v.outdated)
-					.sort((a, b) => sort_packages(a, b, 'popularity', weights))
-			});
-		}
-
-		return {
-			homepage: homepage_data,
-			packages_count
-		};
+	const homepage_data: { title: string; packages: Package[] }[] = [];
+	for (const { packages, title, weights } of PACKAGES_META.FEATURED) {
+		homepage_data.push({
+			title,
+			packages: (
+				packages
+					.map((name) => registry.find((pkg) => pkg.name === name) ?? null)
+					.filter((v) => Boolean(v)) as Package[]
+			)
+				.filter((v) => !v.outdated)
+				.sort((a, b) => sort_packages(a, b, 'popularity', weights))
+		});
 	}
 
 	init(registry);
@@ -64,6 +56,7 @@ export async function load({ url }) {
 
 	return {
 		packages: current_results,
-		packages_count
+		packages_count,
+		homepage: homepage_data
 	};
 }

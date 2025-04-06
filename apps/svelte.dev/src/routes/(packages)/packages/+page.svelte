@@ -220,12 +220,12 @@
 			</form>
 		</div>
 
-		{#if !qps.query && data.homepage}
+		{#if qps.query === ''}
 			<br /><br />
 
 			<section class="homepage">
 				<!-- Here we show netflix style page -->
-				{#each data.homepage as { packages, title }, idx}
+				{#each data.homepage ?? [] as { packages, title }, idx}
 					<section>
 						<h2>{title}</h2>
 						<div class="homepage-wrapper-wrapper">
@@ -280,9 +280,9 @@
 					<br /><br /><br /><br />
 				{/each}
 			</section>
-		{:else if packages}
+		{:else}
 			<div class="posts">
-				{#each packages as pkg}
+				{#each packages ?? [] as pkg}
 					<PackageCard {pkg} />
 				{/each}
 			</div>
