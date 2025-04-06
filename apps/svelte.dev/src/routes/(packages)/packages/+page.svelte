@@ -2,7 +2,7 @@
 	import { forcefocus } from '@sveltejs/site-kit/actions';
 	import { Icon } from '@sveltejs/site-kit/components';
 	import { QueryParamSerde, reactive_query_params } from '@sveltejs/site-kit/reactivity';
-	import { onMount } from 'svelte';
+	import { onMount, tick } from 'svelte';
 	import { on } from 'svelte/events';
 	import PackageCard from './PackageCard.svelte';
 	import { search_criteria, type SortCriterion } from './packages-search';
@@ -92,6 +92,8 @@
 	// This function is first run on onMount to enable/disable the arrow buttons, and on scroll
 	function handle_scroll(node: HTMLElement, idx: number) {
 		function update() {
+			homepage_card_width = (node.children[0] as HTMLElement)?.offsetWidth;
+
 			const width = node.offsetWidth;
 			const scroll_width = node.scrollWidth;
 			const scroll_left = node.scrollLeft;
@@ -100,7 +102,7 @@
 			scroll_states[idx].end = scroll_left + width !== scroll_width;
 		}
 
-		update();
+		tick().then(update);
 
 		const controller = new AbortController();
 
@@ -220,18 +222,42 @@
 			</form>
 		</div>
 
-		{#if qps.query === ''}
+		<section class="homepage" style="display: {qps.query ? 'none' : null}">
 			<br /><br />
+			<!-- Here we show netflix style page -->
+			{#each data.homepage ?? [] as { packages, title }, idx}
+				<section>
+					<h2>{title}</h2>
+					<div class="homepage-wrapper-wrapper">
+						<button
+							class={['start raised icon', scroll_states[idx].start && 'visible']}
+							onclick={on_previous}
+						>
+							<svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 24 24"
+								><!-- Icon from Lucide by Lucide Contributors - https://github.com/lucide-icons/lucide/blob/main/LICENSE --><path
+									fill="none"
+									stroke="currentColor"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="m15 18l-6-6l6-6"
+								/></svg
+							>
+						</button>
 
-			<section class="homepage">
-				<!-- Here we show netflix style page -->
-				{#each data.homepage ?? [] as { packages, title }, idx}
-					<section>
-						<h2>{title}</h2>
-						<div class="homepage-wrapper-wrapper">
+						<div class={['homepage-posts-wrapper', scroll_states[idx].start && 'start']}>
+							<div
+								class={['homepage-posts', scroll_states[idx].end && 'end']}
+								use:handle_scroll={idx}
+							>
+								{#each packages as pkg}
+									<PackageCard {pkg} />
+								{/each}
+							</div>
+
 							<button
-								class={['start raised icon', scroll_states[idx].start && 'visible']}
-								onclick={on_previous}
+								class={['end raised icon', scroll_states[idx].end && 'visible']}
+								onclick={on_next}
 							>
 								<svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 24 24"
 									><!-- Icon from Lucide by Lucide Contributors - https://github.com/lucide-icons/lucide/blob/main/LICENSE --><path
@@ -240,53 +266,22 @@
 										stroke-linecap="round"
 										stroke-linejoin="round"
 										stroke-width="2"
-										d="m15 18l-6-6l6-6"
+										d="m9 18l6-6l-6-6"
 									/></svg
 								>
 							</button>
-
-							<div class={['homepage-posts-wrapper', scroll_states[idx].start && 'start']}>
-								<div
-									class={['homepage-posts', scroll_states[idx].end && 'end']}
-									use:handle_scroll={idx}
-								>
-									{#each packages as pkg}
-										<PackageCard {pkg} bind:width={homepage_card_width} />
-									{/each}
-								</div>
-
-								<button
-									class={['end raised icon', scroll_states[idx].end && 'visible']}
-									onclick={on_next}
-								>
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										width="3em"
-										height="3em"
-										viewBox="0 0 24 24"
-										><!-- Icon from Lucide by Lucide Contributors - https://github.com/lucide-icons/lucide/blob/main/LICENSE --><path
-											fill="none"
-											stroke="currentColor"
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											stroke-width="2"
-											d="m9 18l6-6l-6-6"
-										/></svg
-									>
-								</button>
-							</div>
 						</div>
-					</section>
-					<br /><br /><br /><br />
-				{/each}
-			</section>
-		{:else}
-			<div class="posts">
-				{#each packages ?? [] as pkg}
-					<PackageCard {pkg} />
-				{/each}
-			</div>
-		{/if}
+					</div>
+				</section>
+				<br /><br /><br /><br />
+			{/each}
+		</section>
+
+		<div class="posts" style="display: {!qps.query ? 'none' : null}">
+			{#each packages as pkg}
+				<PackageCard {pkg} />
+			{/each}
+		</div>
 	</div>
 </div>
 

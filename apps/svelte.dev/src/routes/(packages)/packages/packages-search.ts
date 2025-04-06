@@ -154,9 +154,10 @@ export function search(
 
 	// Case 1: No query, no tags - return all packages sorted by selected criterion
 	if (!has_query && !has_tags) {
-		result_packages = Array.from(packages_map.values()).sort((a, b) =>
-			sort_packages(a, b, sort_by)
-		);
+		// result_packages = Array.from(packages_map.values()).sort((a, b) =>
+		// 	sort_packages(a, b, sort_by)
+		// );
+		result_packages = [];
 	}
 	// Case 2: Empty query, filter by tags only
 	else if (!has_query && has_tags) {

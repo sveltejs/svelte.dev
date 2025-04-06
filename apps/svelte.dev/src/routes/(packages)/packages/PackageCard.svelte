@@ -3,10 +3,9 @@
 
 	type Props = {
 		pkg: Package;
-		width?: number | null;
 	};
 
-	let { pkg, width = $bindable<null | number>(null) }: Props = $props();
+	let { pkg }: Props = $props();
 
 	/**
 	 * Formats a number with K, M, B, T suffixes
@@ -60,7 +59,7 @@
 	}
 </script>
 
-<article data-pubdate={pkg.updated} bind:offsetWidth={width}>
+<article data-pubdate={pkg.updated}>
 	<span class="header">
 		<h3 class={[(pkg.outdated || pkg.deprecated) && 'faded']}>
 			{pkg.name}
