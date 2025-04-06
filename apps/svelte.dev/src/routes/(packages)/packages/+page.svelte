@@ -12,7 +12,7 @@
 	const qps = reactive_query_params({
 		query: QueryParamSerde.string(),
 		svelte_versions: QueryParamSerde.array(['4', '5']),
-		hide_outdated: QueryParamSerde.boolean(false),
+		hide_outdated: QueryParamSerde.boolean(true),
 		sort_by: QueryParamSerde.string<SortCriterion>('popularity')
 	});
 
@@ -104,6 +104,12 @@
 
 		tick().then(update);
 
+		$effect(() => {
+			if (!qps.query) {
+				update();
+			}
+		});
+
 		const controller = new AbortController();
 
 		on(node, 'scroll', update, { passive: true, signal: controller.signal });
@@ -182,6 +188,10 @@
 
 				{#if qps.query}
 					<div class="sub">
+						<span>Showing {packages?.length} results</span>
+
+						<span style="flex: 1 1 auto"></span>
+
 						<div>
 							Svelte versions:
 							<label>
@@ -213,10 +223,6 @@
 							Hide outdated:
 							<input type="checkbox" bind:checked={qps.hide_outdated} />
 						</label>
-
-						<span style="flex: 1 1 auto"></span>
-
-						<span>Showing {packages?.length} results</span>
 					</div>
 				{/if}
 			</form>
@@ -224,7 +230,6 @@
 
 		<section class="homepage" style="display: {qps.query ? 'none' : null}">
 			<br /><br />
-			<!-- Here we show netflix style page -->
 			{#each data.homepage ?? [] as { packages, title }, idx}
 				<section>
 					<h2>{title}</h2>
