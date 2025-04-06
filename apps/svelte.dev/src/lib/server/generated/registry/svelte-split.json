@@ -1,18 +1,19 @@
 {
-  "name": "svelte-split",
-  "description": "Create split panel layouts for Svelte applications.",
-  "repo_url": "https://github.com/rabee-inc/svelte-split",
-  "authors": [
-    "phi"
-  ],
-  "homepage": "https://github.com/rabee-inc/svelte-split#readme",
-  "downloads": 12,
-  "dependents": 0,
-  "updated": "2022-04-16T07:54:17.917Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelte-split",
+	"description": "Create split panel layouts for Svelte applications.",
+	"repo_url": "https://github.com/rabee-inc/svelte-split",
+	"authors": ["phi"],
+	"homepage": "https://github.com/rabee-inc/svelte-split#readme",
+	"downloads": 12,
+	"dependents": 0,
+	"updated": "2022-04-16T07:54:17.917Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

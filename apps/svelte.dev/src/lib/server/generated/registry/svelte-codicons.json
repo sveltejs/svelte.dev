@@ -1,18 +1,19 @@
 {
-  "name": "svelte-codicons",
-  "description": "Use VS Code Codicons as Svelte components.",
-  "repo_url": "https://github.com/metonym/svelte-codicons",
-  "authors": [
-    "metonym"
-  ],
-  "homepage": "https://github.com/metonym/svelte-codicons",
-  "downloads": 644,
-  "dependents": 0,
-  "updated": "2024-08-25T15:52:45.861Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 4
+	"name": "svelte-codicons",
+	"description": "Use VS Code Codicons as Svelte components.",
+	"repo_url": "https://github.com/metonym/svelte-codicons",
+	"authors": ["metonym"],
+	"homepage": "https://github.com/metonym/svelte-codicons",
+	"downloads": 644,
+	"dependents": 0,
+	"updated": "2024-08-25T15:52:45.861Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 4,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	}
 }

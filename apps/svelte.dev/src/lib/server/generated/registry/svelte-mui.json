@@ -1,19 +1,19 @@
 {
-  "name": "svelte-mui",
-  "description": "Create Material UI components for Svelte apps.",
-  "repo_url": "https://github.com/vikignt/svelte-mui",
-  "authors": [
-    "vikignt"
-  ],
-  "homepage": "https://github.com/vikignt/svelte-mui#readme",
-  "downloads": 451,
-  "dependents": 4,
-  "updated": "2024-09-17T21:03:31.840Z",
-  "tags": [
-    "ui",
-    "design-system"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 317
+	"name": "svelte-mui",
+	"description": "Create Material UI components for Svelte apps.",
+	"repo_url": "https://github.com/vikignt/svelte-mui",
+	"authors": ["vikignt"],
+	"homepage": "https://github.com/vikignt/svelte-mui#readme",
+	"downloads": 451,
+	"dependents": 4,
+	"updated": "2024-09-17T21:03:31.840Z",
+	"tags": ["ui", "design-system"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 317,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": false
+	}
 }

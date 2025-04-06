@@ -1,18 +1,19 @@
 {
-  "name": "svelte-cropperjs",
-  "description": "Integrate cropper.js for image cropping in Svelte apps.",
-  "repo_url": "https://github.com/milo-ft/svelte-cropperjs",
-  "authors": [
-    "milo-ft"
-  ],
-  "homepage": "https://github.com/milo-ft/svelte-cropperjs#readme",
-  "downloads": 10,
-  "dependents": 0,
-  "updated": "2024-04-30T13:43:56.358Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelte-cropperjs",
+	"description": "Integrate cropper.js for image cropping in Svelte apps.",
+	"repo_url": "https://github.com/milo-ft/svelte-cropperjs",
+	"authors": ["milo-ft"],
+	"homepage": "https://github.com/milo-ft/svelte-cropperjs#readme",
+	"downloads": 10,
+	"dependents": 0,
+	"updated": "2024-04-30T13:43:56.358Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "@sjsf/sveltekit",
-  "description": "Integrate svelte-jsonschema-form with SvelteKit.",
-  "repo_url": "https://github.com/x0k/svelte-jsonschema-form",
-  "authors": [
-    "x0k"
-  ],
-  "homepage": "https://x0k.github.io/svelte-jsonschema-form/",
-  "downloads": 119,
-  "dependents": 0,
-  "updated": "2025-01-28T22:50:21.963Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 48
+	"name": "@sjsf/sveltekit",
+	"description": "Integrate svelte-jsonschema-form with SvelteKit.",
+	"repo_url": "https://github.com/x0k/svelte-jsonschema-form",
+	"authors": ["x0k"],
+	"homepage": "https://x0k.github.io/svelte-jsonschema-form/",
+	"downloads": 119,
+	"dependents": 0,
+	"updated": "2025-01-28T22:50:21.963Z",
+	"tags": ["tooling"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 48,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

@@ -1,16 +1,17 @@
 {
-  "name": "svelte-translate-pro",
-  "description": "Provides i18n library for dynamic language management.",
-  "repo_url": "",
-  "authors": [
-    "dev.zarghami"
-  ],
-  "downloads": 2,
-  "dependents": 0,
-  "updated": "2025-01-19T11:22:08.976Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-translate-pro",
+	"description": "Provides i18n library for dynamic language management.",
+	"repo_url": "",
+	"authors": ["dev.zarghami"],
+	"downloads": 2,
+	"dependents": 0,
+	"updated": "2025-01-19T11:22:08.976Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

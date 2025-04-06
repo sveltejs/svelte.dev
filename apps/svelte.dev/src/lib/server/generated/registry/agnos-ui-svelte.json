@@ -1,21 +1,19 @@
 {
-  "name": "@agnos-ui/svelte",
-  "description": "Provides Bootstrap-based widgets for Svelte applications.",
-  "repo_url": "https://github.com/AmadeusITGroup/AgnosUI",
-  "authors": [
-    "qderoubaix",
-    "basso",
-    "divdavem"
-  ],
-  "homepage": "https://amadeusitgroup.github.io/AgnosUI/latest/",
-  "downloads": 13,
-  "dependents": 0,
-  "updated": "2024-03-05T09:27:30.377Z",
-  "tags": [
-    "ui",
-    "design-system"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 70
+	"name": "@agnos-ui/svelte",
+	"description": "Provides Bootstrap-based widgets for Svelte applications.",
+	"repo_url": "https://github.com/AmadeusITGroup/AgnosUI",
+	"authors": ["qderoubaix", "basso", "divdavem"],
+	"homepage": "https://amadeusitgroup.github.io/AgnosUI/latest/",
+	"downloads": 13,
+	"dependents": 0,
+	"updated": "2024-03-05T09:27:30.377Z",
+	"tags": ["ui", "design-system"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 70,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

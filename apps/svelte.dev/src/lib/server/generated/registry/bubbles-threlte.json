@@ -1,18 +1,19 @@
 {
-  "name": "bubbles-threlte",
-  "description": "Generate customizable bubble effects for Svelte with Threlte.",
-  "repo_url": "https://github.com/ZeroDelusions/Bubbles-Threlte",
-  "authors": [
-    "zero_delusions"
-  ],
-  "homepage": "https://github.com/ZeroDelusions/Bubbles-Threlte",
-  "downloads": 1,
-  "dependents": 0,
-  "updated": "2024-08-02T12:22:08.127Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "bubbles-threlte",
+	"description": "Generate customizable bubble effects for Svelte with Threlte.",
+	"repo_url": "https://github.com/ZeroDelusions/Bubbles-Threlte",
+	"authors": ["zero_delusions"],
+	"homepage": "https://github.com/ZeroDelusions/Bubbles-Threlte",
+	"downloads": 1,
+	"dependents": 0,
+	"updated": "2024-08-02T12:22:08.127Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

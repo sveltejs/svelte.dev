@@ -1,16 +1,17 @@
 {
-  "name": "@tnthung/svelte-component",
-  "description": "Provide Svelte actions, functions, and components.",
-  "repo_url": "",
-  "authors": [
-    "tnthung"
-  ],
-  "downloads": 4,
-  "dependents": 0,
-  "updated": "2023-05-29T01:13:31.829Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@tnthung/svelte-component",
+	"description": "Provide Svelte actions, functions, and components.",
+	"repo_url": "",
+	"authors": ["tnthung"],
+	"downloads": 4,
+	"dependents": 0,
+	"updated": "2023-05-29T01:13:31.829Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

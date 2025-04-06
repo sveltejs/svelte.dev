@@ -1,18 +1,19 @@
 {
-  "name": "@accuser/svelte-markdown-math",
-  "description": "Transforms Markdown to Svelte components, supporting math with KaTeX.",
-  "repo_url": "https://github.com/accuser/svelte-markdown-math",
-  "authors": [
-    "accuser"
-  ],
-  "homepage": "https://github.com/accuser/svelte-markdown-math",
-  "downloads": 17,
-  "dependents": 0,
-  "updated": "2024-09-30T08:54:41.193Z",
-  "tags": [
-    "content"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 0
+	"name": "@accuser/svelte-markdown-math",
+	"description": "Transforms Markdown to Svelte components, supporting math with KaTeX.",
+	"repo_url": "https://github.com/accuser/svelte-markdown-math",
+	"authors": ["accuser"],
+	"homepage": "https://github.com/accuser/svelte-markdown-math",
+	"downloads": 17,
+	"dependents": 0,
+	"updated": "2024-09-30T08:54:41.193Z",
+	"tags": ["content"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

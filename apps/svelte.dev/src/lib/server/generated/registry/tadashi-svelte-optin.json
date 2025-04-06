@@ -1,16 +1,17 @@
 {
-  "name": "@tadashi/svelte-optin",
-  "description": "Create opt-in components for Svelte apps.",
-  "repo_url": "https://gitlab.textecnologia.io/nimble/optin",
-  "authors": [
-    "lagden"
-  ],
-  "downloads": 21,
-  "dependents": 0,
-  "updated": "2025-01-23T14:41:41.156Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@tadashi/svelte-optin",
+	"description": "Create opt-in components for Svelte apps.",
+	"repo_url": "https://gitlab.textecnologia.io/nimble/optin",
+	"authors": ["lagden"],
+	"downloads": 21,
+	"dependents": 0,
+	"updated": "2025-01-23T14:41:41.156Z",
+	"tags": ["integration"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

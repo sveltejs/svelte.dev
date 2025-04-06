@@ -1,18 +1,19 @@
 {
-  "name": "svelte-autocomplete",
-  "description": "Create lightweight typeahead/autocomplete components.",
-  "repo_url": "https://github.com/elcobvg/svelte-autocomplete",
-  "authors": [
-    "elcobvg"
-  ],
-  "homepage": "https://github.com/elcobvg/svelte-autocomplete#readme",
-  "downloads": 82,
-  "dependents": 0,
-  "updated": "2019-01-16T08:10:05.292Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 118
+	"name": "svelte-autocomplete",
+	"description": "Create lightweight typeahead/autocomplete components.",
+	"repo_url": "https://github.com/elcobvg/svelte-autocomplete",
+	"authors": ["elcobvg"],
+	"homepage": "https://github.com/elcobvg/svelte-autocomplete#readme",
+	"downloads": 82,
+	"dependents": 0,
+	"updated": "2019-01-16T08:10:05.292Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 118,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	}
 }

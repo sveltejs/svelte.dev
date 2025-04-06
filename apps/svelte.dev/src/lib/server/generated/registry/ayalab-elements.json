@@ -1,16 +1,17 @@
 {
-  "name": "@ayalab/elements",
-  "description": "Create Svelte UI library.",
-  "repo_url": "",
-  "authors": [
-    "ikari132"
-  ],
-  "downloads": 8,
-  "dependents": 0,
-  "updated": "2024-12-15T17:47:40.900Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@ayalab/elements",
+	"description": "Create Svelte UI library.",
+	"repo_url": "",
+	"authors": ["ikari132"],
+	"downloads": 8,
+	"dependents": 0,
+	"updated": "2024-12-15T17:47:40.900Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "svelte-hamburger",
-  "description": "Create animated hamburger menu icons for Svelte.",
-  "repo_url": "https://github.com/madeleineostoja/svelte-hamburger",
-  "authors": [
-    "madeleineostoja"
-  ],
-  "homepage": "https://github.com/madeleineostoja/svelte-hamburger#readme",
-  "downloads": 93,
-  "dependents": 0,
-  "updated": "2022-02-10T07:05:08.586Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 5
+	"name": "svelte-hamburger",
+	"description": "Create animated hamburger menu icons for Svelte.",
+	"repo_url": "https://github.com/madeleineostoja/svelte-hamburger",
+	"authors": ["madeleineostoja"],
+	"homepage": "https://github.com/madeleineostoja/svelte-hamburger#readme",
+	"downloads": 93,
+	"dependents": 0,
+	"updated": "2022-02-10T07:05:08.586Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 5,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

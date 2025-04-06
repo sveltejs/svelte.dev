@@ -1,16 +1,17 @@
 {
-  "name": "@svelte-bin/clipboard",
-  "description": "Copy text and images to clipboard using Svelte actions.",
-  "repo_url": "",
-  "authors": [
-    "binsarjr"
-  ],
-  "downloads": 145,
-  "dependents": 0,
-  "updated": "2023-11-13T20:03:51.203Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@svelte-bin/clipboard",
+	"description": "Copy text and images to clipboard using Svelte actions.",
+	"repo_url": "",
+	"authors": ["binsarjr"],
+	"downloads": 145,
+	"dependents": 0,
+	"updated": "2023-11-13T20:03:51.203Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

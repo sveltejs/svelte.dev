@@ -1,18 +1,19 @@
 {
-  "name": "svelte-fullscreen",
-  "description": "Adds fullscreen functionality to DOM elements in Svelte.",
-  "repo_url": "https://github.com/andrelmlins/svelte-fullscreen",
-  "authors": [
-    "andrelmlins"
-  ],
-  "homepage": "https://svelte-fullscreen.netlify.com/",
-  "downloads": 89,
-  "dependents": 0,
-  "updated": "2021-09-01T00:58:55.624Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 65
+	"name": "svelte-fullscreen",
+	"description": "Adds fullscreen functionality to DOM elements in Svelte.",
+	"repo_url": "https://github.com/andrelmlins/svelte-fullscreen",
+	"authors": ["andrelmlins"],
+	"homepage": "https://svelte-fullscreen.netlify.com/",
+	"downloads": 89,
+	"dependents": 0,
+	"updated": "2021-09-01T00:58:55.624Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 65,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

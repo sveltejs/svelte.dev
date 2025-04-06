@@ -1,18 +1,19 @@
 {
-  "name": "svelte-svg",
-  "description": "Create SVG components for Svelte.",
-  "repo_url": "https://github.com/manuel3108/svelte-svg",
-  "authors": [
-    "manuel3108"
-  ],
-  "homepage": "https://github.com/manuel3108/svelte-svg#README",
-  "downloads": 52,
-  "dependents": 1,
-  "updated": "2020-01-07T20:57:20.700Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelte-svg",
+	"description": "Create SVG components for Svelte.",
+	"repo_url": "https://github.com/manuel3108/svelte-svg",
+	"authors": ["manuel3108"],
+	"homepage": "https://github.com/manuel3108/svelte-svg#README",
+	"downloads": 52,
+	"dependents": 1,
+	"updated": "2020-01-07T20:57:20.700Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

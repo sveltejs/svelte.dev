@@ -1,19 +1,19 @@
 {
-  "name": "@vite-pwa/sveltekit",
-  "description": "Enables zero-config PWA support for SvelteKit.",
-  "repo_url": "https://github.com/vite-pwa/sveltekit",
-  "authors": [
-    "antfu",
-    "userquin"
-  ],
-  "homepage": "https://github.com/vite-pwa/sveltekit#readme",
-  "downloads": 6349,
-  "dependents": 5,
-  "updated": "2024-12-31T15:28:58.780Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 350
+	"name": "@vite-pwa/sveltekit",
+	"description": "Enables zero-config PWA support for SvelteKit.",
+	"repo_url": "https://github.com/vite-pwa/sveltekit",
+	"authors": ["antfu", "userquin"],
+	"homepage": "https://github.com/vite-pwa/sveltekit#readme",
+	"downloads": 6349,
+	"dependents": 5,
+	"updated": "2024-12-31T15:28:58.780Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 350,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	}
 }

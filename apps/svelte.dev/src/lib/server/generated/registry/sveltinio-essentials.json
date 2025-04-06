@@ -1,19 +1,19 @@
 {
-  "name": "@sveltinio/essentials",
-  "description": "Provide type-safe, accessible, configurable Svelte components.",
-  "repo_url": "https://github.com/sveltinio/components-library",
-  "authors": [
-    "sveltinio"
-  ],
-  "homepage": "https://components.sveltin.io",
-  "downloads": 21,
-  "dependents": 1,
-  "updated": "2023-10-01T09:54:37.197Z",
-  "tags": [
-    "design-system",
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 12
+	"name": "@sveltinio/essentials",
+	"description": "Provide type-safe, accessible, configurable Svelte components.",
+	"repo_url": "https://github.com/sveltinio/components-library",
+	"authors": ["sveltinio"],
+	"homepage": "https://components.sveltin.io",
+	"downloads": 21,
+	"dependents": 1,
+	"updated": "2023-10-01T09:54:37.197Z",
+	"tags": ["design-system", "ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 12,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": false
+	}
 }

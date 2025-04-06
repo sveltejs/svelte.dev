@@ -1,16 +1,17 @@
 {
-  "name": "@htmlbricks/hb-modal-video",
-  "description": "Provides Svelte Bootstrap video modal web component.",
-  "repo_url": "",
-  "authors": [
-    "dariocaruso"
-  ],
-  "downloads": 467,
-  "dependents": 2,
-  "updated": "2025-03-24T18:07:22.184Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@htmlbricks/hb-modal-video",
+	"description": "Provides Svelte Bootstrap video modal web component.",
+	"repo_url": "",
+	"authors": ["dariocaruso"],
+	"downloads": 467,
+	"dependents": 2,
+	"updated": "2025-03-24T18:07:22.184Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

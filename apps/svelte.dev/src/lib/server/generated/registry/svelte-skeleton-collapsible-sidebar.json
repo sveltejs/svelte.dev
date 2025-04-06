@@ -1,18 +1,19 @@
 {
-  "name": "svelte-skeleton-collapsible-sidebar",
-  "description": "Create collapsible sidebar component for Svelte 5 and Skeleton UI.",
-  "repo_url": "https://github.com/CoffeeStraw/svelte-skeleton-collapsible-sidebar",
-  "authors": [
-    "coffeestraw"
-  ],
-  "homepage": "https://github.com/CoffeeStraw/svelte-skeleton-collapsible-sidebar",
-  "downloads": 2,
-  "dependents": 0,
-  "updated": "2024-12-18T23:01:35.667Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelte-skeleton-collapsible-sidebar",
+	"description": "Create collapsible sidebar component for Svelte 5 and Skeleton UI.",
+	"repo_url": "https://github.com/CoffeeStraw/svelte-skeleton-collapsible-sidebar",
+	"authors": ["coffeestraw"],
+	"homepage": "https://github.com/CoffeeStraw/svelte-skeleton-collapsible-sidebar",
+	"downloads": 2,
+	"dependents": 0,
+	"updated": "2024-12-18T23:01:35.667Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

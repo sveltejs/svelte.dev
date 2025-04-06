@@ -1,16 +1,17 @@
 {
-  "name": "@ikun-ui/backtop",
-  "description": "Create back-to-top components for Svelte applications.",
-  "repo_url": "",
-  "authors": [
-    "baiwusanyu"
-  ],
-  "downloads": 3,
-  "dependents": 1,
-  "updated": "2025-01-24T03:48:31.489Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@ikun-ui/backtop",
+	"description": "Create back-to-top components for Svelte applications.",
+	"repo_url": "",
+	"authors": ["baiwusanyu"],
+	"downloads": 3,
+	"dependents": 1,
+	"updated": "2025-01-24T03:48:31.489Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

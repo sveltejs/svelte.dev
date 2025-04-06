@@ -1,19 +1,19 @@
 {
-  "name": "spaper",
-  "description": "PaperCSS components for Svelte.",
-  "repo_url": "https://github.com/Oli8/spaper",
-  "authors": [
-    "oli8"
-  ],
-  "homepage": "https://github.com/Oli8/spaper#readme",
-  "downloads": 8,
-  "dependents": 0,
-  "updated": "2024-03-01T11:12:48.285Z",
-  "tags": [
-    "ui",
-    "design-system"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 203
+	"name": "spaper",
+	"description": "PaperCSS components for Svelte.",
+	"repo_url": "https://github.com/Oli8/spaper",
+	"authors": ["oli8"],
+	"homepage": "https://github.com/Oli8/spaper#readme",
+	"downloads": 8,
+	"dependents": 0,
+	"updated": "2024-03-01T11:12:48.285Z",
+	"tags": ["ui", "design-system"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 203,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	}
 }

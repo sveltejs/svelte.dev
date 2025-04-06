@@ -1,16 +1,17 @@
 {
-  "name": "svelte-navaid",
-  "description": "Implement navaid-based routing in Svelte applications.",
-  "repo_url": "",
-  "authors": [
-    "jacwright"
-  ],
-  "downloads": 12,
-  "dependents": 0,
-  "updated": "2019-08-26T15:30:57.833Z",
-  "tags": [
-    "router"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-navaid",
+	"description": "Implement navaid-based routing in Svelte applications.",
+	"repo_url": "",
+	"authors": ["jacwright"],
+	"downloads": 12,
+	"dependents": 0,
+	"updated": "2019-08-26T15:30:57.833Z",
+	"tags": ["router"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

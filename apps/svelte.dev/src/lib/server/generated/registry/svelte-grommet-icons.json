@@ -1,18 +1,19 @@
 {
-  "name": "svelte-grommet-icons",
-  "description": "Provides Grommet SVG icons as Svelte components.",
-  "repo_url": "https://github.com/metonym/svelte-grommet-icons",
-  "authors": [
-    "metonym"
-  ],
-  "homepage": "https://github.com/metonym/svelte-grommet-icons",
-  "downloads": 14,
-  "dependents": 0,
-  "updated": "2023-03-11T20:39:10.827Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 2
+	"name": "svelte-grommet-icons",
+	"description": "Provides Grommet SVG icons as Svelte components.",
+	"repo_url": "https://github.com/metonym/svelte-grommet-icons",
+	"authors": ["metonym"],
+	"homepage": "https://github.com/metonym/svelte-grommet-icons",
+	"downloads": 14,
+	"dependents": 0,
+	"updated": "2023-03-11T20:39:10.827Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

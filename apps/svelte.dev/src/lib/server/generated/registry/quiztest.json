@@ -1,18 +1,19 @@
 {
-  "name": "quiztest",
-  "description": "Generate interactive quiz apps using Markdown in Svelte.",
-  "repo_url": "https://github.com/Nitinbabariya/quiztest-js",
-  "authors": [
-    "nitinbabariya"
-  ],
-  "homepage": "https://github.com/Nitinbabariya/quiztest-js#readme",
-  "downloads": 4,
-  "dependents": 0,
-  "updated": "2023-04-27T23:03:07.963Z",
-  "tags": [
-    "content"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "quiztest",
+	"description": "Generate interactive quiz apps using Markdown in Svelte.",
+	"repo_url": "https://github.com/Nitinbabariya/quiztest-js",
+	"authors": ["nitinbabariya"],
+	"homepage": "https://github.com/Nitinbabariya/quiztest-js#readme",
+	"downloads": 4,
+	"dependents": 0,
+	"updated": "2023-04-27T23:03:07.963Z",
+	"tags": ["content"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

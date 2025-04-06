@@ -1,18 +1,19 @@
 {
-  "name": "svelte-remix",
-  "description": "Provides Remix icon components for Svelte.",
-  "repo_url": "https://github.com/shinokada/svelte-remix",
-  "authors": [
-    "shinichiokada"
-  ],
-  "homepage": "https://svelte-remix.codewithshin.com/",
-  "downloads": 308,
-  "dependents": 0,
-  "updated": "2024-10-25T14:02:51.353Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 3
+	"name": "svelte-remix",
+	"description": "Provides Remix icon components for Svelte.",
+	"repo_url": "https://github.com/shinokada/svelte-remix",
+	"authors": ["shinichiokada"],
+	"homepage": "https://svelte-remix.codewithshin.com/",
+	"downloads": 308,
+	"dependents": 0,
+	"updated": "2024-10-25T14:02:51.353Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 3,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

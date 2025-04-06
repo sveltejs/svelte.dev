@@ -1,21 +1,19 @@
 {
-  "name": "@sveltejs/adapter-netlify",
-  "description": "Create Netlify apps with SvelteKit.",
-  "repo_url": "https://github.com/sveltejs/kit",
-  "authors": [
-    "rich_harris",
-    "svelte-admin",
-    "conduitry",
-    "dominik_g"
-  ],
-  "homepage": "https://svelte.dev",
-  "downloads": 13309,
-  "dependents": 2,
-  "updated": "2025-03-20T12:09:21.110Z",
-  "tags": [
-    "adapter"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 19167
+	"name": "@sveltejs/adapter-netlify",
+	"description": "Create Netlify apps with SvelteKit.",
+	"repo_url": "https://github.com/sveltejs/kit",
+	"authors": ["rich_harris", "svelte-admin", "conduitry", "dominik_g"],
+	"homepage": "https://svelte.dev",
+	"downloads": 13309,
+	"dependents": 2,
+	"updated": "2025-03-20T12:09:21.110Z",
+	"tags": ["adapter"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 19168,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	}
 }

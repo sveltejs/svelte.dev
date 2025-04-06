@@ -1,17 +1,18 @@
 {
-  "name": "@simtropolis/fractalicons",
-  "description": "Provide Svelte wrappers for Heroicons and Material Design Icons.",
-  "repo_url": "https://github.com/simtropolis/fratalicons",
-  "authors": [
-    "asvegah"
-  ],
-  "homepage": "https://github.com/simtropolis/fractalicons",
-  "downloads": 10,
-  "dependents": 0,
-  "updated": "2022-04-08T21:35:31.444Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@simtropolis/fractalicons",
+	"description": "Provide Svelte wrappers for Heroicons and Material Design Icons.",
+	"repo_url": "https://github.com/simtropolis/fratalicons",
+	"authors": ["asvegah"],
+	"homepage": "https://github.com/simtropolis/fractalicons",
+	"downloads": 10,
+	"dependents": 0,
+	"updated": "2022-04-08T21:35:31.444Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

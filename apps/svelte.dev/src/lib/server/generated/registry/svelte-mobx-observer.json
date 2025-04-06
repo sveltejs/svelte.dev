@@ -1,17 +1,19 @@
 {
-  "name": "svelte-mobx-observer",
-  "description": "Integrates MobX state management with Svelte components.",
-  "repo_url": "https://github.com/episage/svelte-mobx-observer",
-  "authors": [
-    "episage"
-  ],
-  "downloads": 21,
-  "dependents": 0,
-  "updated": "2020-07-30T13:19:27.755Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 8
+	"name": "svelte-mobx-observer",
+	"description": "Integrates MobX state management with Svelte components.",
+	"repo_url": "https://github.com/episage/svelte-mobx-observer",
+	"authors": ["episage"],
+	"downloads": 21,
+	"dependents": 0,
+	"updated": "2020-07-30T13:19:27.755Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 8,
+	"homepage": "",
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

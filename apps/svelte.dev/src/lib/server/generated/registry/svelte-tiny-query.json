@@ -1,16 +1,17 @@
 {
-  "name": "svelte-tiny-query",
-  "description": "Simplify data fetching with declarative queries in Svelte 5.",
-  "repo_url": "",
-  "authors": [
-    "sra448"
-  ],
-  "downloads": 88,
-  "dependents": 0,
-  "updated": "2025-03-24T08:40:32.938Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "svelte-tiny-query",
+	"description": "Simplify data fetching with declarative queries in Svelte 5.",
+	"repo_url": "",
+	"authors": ["sra448"],
+	"downloads": 88,
+	"dependents": 0,
+	"updated": "2025-03-24T08:40:32.938Z",
+	"tags": ["miscellaneous"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

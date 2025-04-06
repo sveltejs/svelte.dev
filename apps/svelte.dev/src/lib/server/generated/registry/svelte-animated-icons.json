@@ -1,18 +1,19 @@
 {
-  "name": "svelte-animated-icons",
-  "description": "Provides animated SVG icons for Svelte.",
-  "repo_url": "https://github.com/shinokada/svelte-animated-icons",
-  "authors": [
-    "shinichiokada"
-  ],
-  "homepage": "https://svelte-animated-icons.codewithshin.com/",
-  "downloads": 25,
-  "dependents": 0,
-  "updated": "2024-11-26T10:33:45.264Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 3
+	"name": "svelte-animated-icons",
+	"description": "Provides animated SVG icons for Svelte.",
+	"repo_url": "https://github.com/shinokada/svelte-animated-icons",
+	"authors": ["shinichiokada"],
+	"homepage": "https://svelte-animated-icons.codewithshin.com/",
+	"downloads": 25,
+	"dependents": 0,
+	"updated": "2024-11-26T10:33:45.264Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 3,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

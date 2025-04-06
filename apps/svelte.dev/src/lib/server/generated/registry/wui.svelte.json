@@ -1,18 +1,19 @@
 {
-  "name": "wui.svelte",
-  "description": "Build Web User Interface components with Svelte.",
-  "repo_url": "https://github.com/shuLhan/wui.svelte",
-  "authors": [
-    "shulhan"
-  ],
-  "homepage": "https://github.com/shuLhan/wui.svelte#readme",
-  "downloads": 6,
-  "dependents": 0,
-  "updated": "2020-09-01T06:09:28.298Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "wui.svelte",
+	"description": "Build Web User Interface components with Svelte.",
+	"repo_url": "https://github.com/shuLhan/wui.svelte",
+	"authors": ["shulhan"],
+	"homepage": "https://github.com/shuLhan/wui.svelte#readme",
+	"downloads": 6,
+	"dependents": 0,
+	"updated": "2020-09-01T06:09:28.298Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "@fouita/tooltip",
-  "description": "Create tooltips for Svelte and Tailwind CSS projects.",
-  "repo_url": "https://github.com/fouita/svelte-tw-tooltip",
-  "authors": [
-    "fouita"
-  ],
-  "homepage": "https://github.com/fouita/svelte-tw-tooltip#readme",
-  "downloads": 137,
-  "dependents": 1,
-  "updated": "2020-09-13T12:59:38.941Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 5
+	"name": "@fouita/tooltip",
+	"description": "Create tooltips for Svelte and Tailwind CSS projects.",
+	"repo_url": "https://github.com/fouita/svelte-tw-tooltip",
+	"authors": ["fouita"],
+	"homepage": "https://github.com/fouita/svelte-tw-tooltip#readme",
+	"downloads": 137,
+	"dependents": 1,
+	"updated": "2020-09-13T12:59:38.941Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 5,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

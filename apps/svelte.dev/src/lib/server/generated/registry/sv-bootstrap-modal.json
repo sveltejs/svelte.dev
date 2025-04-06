@@ -1,18 +1,19 @@
 {
-  "name": "sv-bootstrap-modal",
-  "description": "Implement Bootstrap modal component for Svelte applications.",
-  "repo_url": "https://github.com/Sidd27/sv-bootstrap-modal",
-  "authors": [
-    "sidd27"
-  ],
-  "homepage": "https://github.com/Sidd27/sv-bootstrap-modal#readme",
-  "downloads": 19,
-  "dependents": 0,
-  "updated": "2020-11-16T14:37:30.505Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 14
+	"name": "sv-bootstrap-modal",
+	"description": "Implement Bootstrap modal component for Svelte applications.",
+	"repo_url": "https://github.com/Sidd27/sv-bootstrap-modal",
+	"authors": ["sidd27"],
+	"homepage": "https://github.com/Sidd27/sv-bootstrap-modal#readme",
+	"downloads": 19,
+	"dependents": 0,
+	"updated": "2020-11-16T14:37:30.505Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 14,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

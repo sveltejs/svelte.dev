@@ -1,18 +1,19 @@
 {
-  "name": "@ubeac/svelte-preprocessors",
-  "description": "Provide useful preprocessors for Svelte projects.",
-  "repo_url": "https://github.com/ubeac/svelte-preprocessors",
-  "authors": [
-    "ubeac-owner"
-  ],
-  "homepage": "https://github.com/ubeac/svelte-preprocessors",
-  "downloads": 4,
-  "dependents": 0,
-  "updated": "2023-01-15T21:07:09.620Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@ubeac/svelte-preprocessors",
+	"description": "Provide useful preprocessors for Svelte projects.",
+	"repo_url": "https://github.com/ubeac/svelte-preprocessors",
+	"authors": ["ubeac-owner"],
+	"homepage": "https://github.com/ubeac/svelte-preprocessors",
+	"downloads": 4,
+	"dependents": 0,
+	"updated": "2023-01-15T21:07:09.620Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

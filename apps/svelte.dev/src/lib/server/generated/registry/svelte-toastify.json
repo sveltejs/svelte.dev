@@ -1,16 +1,17 @@
 {
-  "name": "svelte-toastify",
-  "description": "Display toast notifications in Svelte applications.",
-  "repo_url": "",
-  "authors": [
-    "rishabhgupta293"
-  ],
-  "downloads": 79,
-  "dependents": 0,
-  "updated": "2020-08-23T20:38:05.349Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-toastify",
+	"description": "Display toast notifications in Svelte applications.",
+	"repo_url": "",
+	"authors": ["rishabhgupta293"],
+	"downloads": 79,
+	"dependents": 0,
+	"updated": "2020-08-23T20:38:05.349Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

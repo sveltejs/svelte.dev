@@ -1,18 +1,19 @@
 {
-  "name": "svelte-adapter-firebase",
-  "description": "Integrate SvelteKit apps with Firebase Hosting and Cloud Functions.",
-  "repo_url": "https://github.com/jthegedus/svelte-adapter-firebase",
-  "authors": [
-    "jthegedus"
-  ],
-  "homepage": "https://github.com/jthegedus/svelte-adapter-firebase#readme",
-  "downloads": 22,
-  "dependents": 0,
-  "updated": "2023-01-17T02:32:22.230Z",
-  "tags": [
-    "adapter"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 288
+	"name": "svelte-adapter-firebase",
+	"description": "Integrate SvelteKit apps with Firebase Hosting and Cloud Functions.",
+	"repo_url": "https://github.com/jthegedus/svelte-adapter-firebase",
+	"authors": ["jthegedus"],
+	"homepage": "https://github.com/jthegedus/svelte-adapter-firebase#readme",
+	"downloads": 22,
+	"dependents": 0,
+	"updated": "2023-01-17T02:32:22.230Z",
+	"tags": ["adapter"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 288,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	}
 }

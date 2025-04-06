@@ -1,18 +1,19 @@
 {
-  "name": "moosmann-svelte",
-  "description": "Integrate moosmann i18n library into Svelte projects.",
-  "repo_url": "https://github.com/Niphram/moosmann",
-  "authors": [
-    "niphram"
-  ],
-  "homepage": "https://github.com/Niphram/moosmann#readme",
-  "downloads": 1,
-  "dependents": 0,
-  "updated": "2025-01-18T15:40:18.348Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 0
+	"name": "moosmann-svelte",
+	"description": "Integrate moosmann i18n library into Svelte projects.",
+	"repo_url": "https://github.com/Niphram/moosmann",
+	"authors": ["niphram"],
+	"homepage": "https://github.com/Niphram/moosmann#readme",
+	"downloads": 1,
+	"dependents": 0,
+	"updated": "2025-01-18T15:40:18.348Z",
+	"tags": ["integration"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

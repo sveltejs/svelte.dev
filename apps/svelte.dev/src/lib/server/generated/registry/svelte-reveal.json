@@ -1,18 +1,19 @@
 {
-  "name": "svelte-reveal",
-  "description": "Reveal elements on scroll with Svelte action.",
-  "repo_url": "https://github.com/DaveKeehl/svelte-reveal",
-  "authors": [
-    "davekeehl"
-  ],
-  "homepage": "https://github.com/DaveKeehl/svelte-reveal#readme",
-  "downloads": 574,
-  "dependents": 0,
-  "updated": "2024-04-10T16:13:16.167Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 133
+	"name": "svelte-reveal",
+	"description": "Reveal elements on scroll with Svelte action.",
+	"repo_url": "https://github.com/DaveKeehl/svelte-reveal",
+	"authors": ["davekeehl"],
+	"homepage": "https://github.com/DaveKeehl/svelte-reveal#readme",
+	"downloads": 574,
+	"dependents": 0,
+	"updated": "2024-04-10T16:13:16.167Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 133,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

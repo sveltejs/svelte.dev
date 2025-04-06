@@ -1,18 +1,19 @@
 {
-  "name": "@grasshopper42/svelte-grid",
-  "description": "Arranges items in various grid layouts for Svelte.",
-  "repo_url": "https://github.com/grasshopper42/egjs-grid",
-  "authors": [
-    "grasshopper42"
-  ],
-  "homepage": "https://github.com/grasshopper42/egjs-grid",
-  "downloads": 5,
-  "dependents": 0,
-  "updated": "2022-09-01T07:49:40.135Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@grasshopper42/svelte-grid",
+	"description": "Arranges items in various grid layouts for Svelte.",
+	"repo_url": "https://github.com/grasshopper42/egjs-grid",
+	"authors": ["grasshopper42"],
+	"homepage": "https://github.com/grasshopper42/egjs-grid",
+	"downloads": 5,
+	"dependents": 0,
+	"updated": "2022-09-01T07:49:40.135Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

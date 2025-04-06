@@ -1,19 +1,19 @@
 {
-  "name": "@svelte-on-solana/wallet-adapter-core",
-  "description": "Provide core functionality for Solana wallet adapter.",
-  "repo_url": "https://github.com/svelte-on-solana/wallet-adapter",
-  "authors": [
-    "silvestrevivo",
-    "c_ogoo"
-  ],
-  "homepage": "https://github.com/svelte-on-solana/wallet-adapter#readme",
-  "downloads": 56,
-  "dependents": 2,
-  "updated": "2022-12-14T18:09:56.076Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 65
+	"name": "@svelte-on-solana/wallet-adapter-core",
+	"description": "Provide core functionality for Solana wallet adapter.",
+	"repo_url": "https://github.com/svelte-on-solana/wallet-adapter",
+	"authors": ["silvestrevivo", "c_ogoo"],
+	"homepage": "https://github.com/svelte-on-solana/wallet-adapter#readme",
+	"downloads": 56,
+	"dependents": 2,
+	"updated": "2022-12-14T18:09:56.076Z",
+	"tags": ["integration"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 65,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,23 +1,26 @@
 {
-  "name": "@healthtree/svelte-epic-form",
-  "description": "Build reactive forms with validation in Svelte.",
-  "repo_url": "https://github.com/HealthTree/svelte-epic-form",
-  "authors": [
-    "sahagun-jorge",
-    "alvarocapde",
-    "healthtree-admin",
-    "diegofhe",
-    "jpcapdevila",
-    "aureliob"
-  ],
-  "homepage": "https://github.com/HealthTree/svelte-epic-form#readme",
-  "downloads": 28,
-  "dependents": 0,
-  "updated": "2021-06-28T18:06:14.819Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@healthtree/svelte-epic-form",
+	"description": "Build reactive forms with validation in Svelte.",
+	"repo_url": "https://github.com/HealthTree/svelte-epic-form",
+	"authors": [
+		"sahagun-jorge",
+		"alvarocapde",
+		"healthtree-admin",
+		"diegofhe",
+		"jpcapdevila",
+		"aureliob"
+	],
+	"homepage": "https://github.com/HealthTree/svelte-epic-form#readme",
+	"downloads": 28,
+	"dependents": 0,
+	"updated": "2021-06-28T18:06:14.819Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

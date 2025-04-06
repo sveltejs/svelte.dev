@@ -1,18 +1,19 @@
 {
-  "name": "dsmgpos-pincode",
-  "description": "Create pincode input component for Svelte applications.",
-  "repo_url": "https://github.com/dsmgpos/dsmgpos-pincode",
-  "authors": [
-    "salvacmp"
-  ],
-  "homepage": "https://github.com/dsmgpos/dsmgpos-pincode",
-  "downloads": 9,
-  "dependents": 0,
-  "updated": "2021-10-16T15:41:21.985Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "dsmgpos-pincode",
+	"description": "Create pincode input component for Svelte applications.",
+	"repo_url": "https://github.com/dsmgpos/dsmgpos-pincode",
+	"authors": ["salvacmp"],
+	"homepage": "https://github.com/dsmgpos/dsmgpos-pincode",
+	"downloads": 9,
+	"dependents": 0,
+	"updated": "2021-10-16T15:41:21.985Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

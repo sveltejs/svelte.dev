@@ -1,18 +1,19 @@
 {
-  "name": "svelte-web3-provider",
-  "description": "Provides Web3 functionality for Svelte applications.",
-  "repo_url": "https://github.com/binsarjr/svelte-web3-provider",
-  "authors": [
-    "binsarjr"
-  ],
-  "homepage": "https://github.com/binsarjr/svelte-web3-provider#readme",
-  "downloads": 0,
-  "dependents": 0,
-  "updated": "2022-11-04T17:21:28.607Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 2
+	"name": "svelte-web3-provider",
+	"description": "Provides Web3 functionality for Svelte applications.",
+	"repo_url": "https://github.com/binsarjr/svelte-web3-provider",
+	"authors": ["binsarjr"],
+	"homepage": "https://github.com/binsarjr/svelte-web3-provider#readme",
+	"downloads": 0,
+	"dependents": 0,
+	"updated": "2022-11-04T17:21:28.607Z",
+	"tags": ["integration"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

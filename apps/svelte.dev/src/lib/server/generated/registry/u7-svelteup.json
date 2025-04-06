@@ -1,18 +1,19 @@
 {
-  "name": "@u7/svelteup",
-  "description": "Bundles Svelte components as web components.",
-  "repo_url": "https://github.com/brandonxiang/svelteup",
-  "authors": [
-    "i-user"
-  ],
-  "homepage": "https://github.com/brandonxiang/svelteup#readme",
-  "downloads": 10,
-  "dependents": 0,
-  "updated": "2023-02-20T06:35:06.928Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 16
+	"name": "@u7/svelteup",
+	"description": "Bundles Svelte components as web components.",
+	"repo_url": "https://github.com/brandonxiang/svelteup",
+	"authors": ["i-user"],
+	"homepage": "https://github.com/brandonxiang/svelteup#readme",
+	"downloads": 10,
+	"dependents": 0,
+	"updated": "2023-02-20T06:35:06.928Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 16,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

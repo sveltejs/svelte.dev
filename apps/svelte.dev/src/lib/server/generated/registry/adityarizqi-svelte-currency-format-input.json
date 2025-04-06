@@ -1,18 +1,19 @@
 {
-  "name": "@adityarizqi/svelte-currency-format-input",
-  "description": "Format numerical entries into localized currency formats.",
-  "repo_url": "https://github.com/Adityarizqi7/svelte-currency-format-input",
-  "authors": [
-    "adityarizqi"
-  ],
-  "homepage": "https://svelte-currency-format-input.netlify.app",
-  "downloads": 46,
-  "dependents": 0,
-  "updated": "2024-01-15T09:01:16.339Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "@adityarizqi/svelte-currency-format-input",
+	"description": "Format numerical entries into localized currency formats.",
+	"repo_url": "https://github.com/Adityarizqi7/svelte-currency-format-input",
+	"authors": ["adityarizqi"],
+	"homepage": "https://svelte-currency-format-input.netlify.app",
+	"downloads": 46,
+	"dependents": 0,
+	"updated": "2024-01-15T09:01:16.339Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

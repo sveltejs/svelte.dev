@@ -1,17 +1,18 @@
 {
-  "name": "svelte-dragdroplist",
-  "description": "Create sortable lists with drag and drop in Svelte.",
-  "repo_url": "",
-  "authors": [
-    "jwlarocque"
-  ],
-  "homepage": "https://github.com/jwlarocque/svelte-dragdroplist",
-  "downloads": 58,
-  "dependents": 0,
-  "updated": "2020-08-19T21:00:08.121Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-dragdroplist",
+	"description": "Create sortable lists with drag and drop in Svelte.",
+	"repo_url": "",
+	"authors": ["jwlarocque"],
+	"homepage": "https://github.com/jwlarocque/svelte-dragdroplist",
+	"downloads": 58,
+	"dependents": 0,
+	"updated": "2020-08-19T21:00:08.121Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

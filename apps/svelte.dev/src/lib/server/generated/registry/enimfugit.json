@@ -1,18 +1,19 @@
 {
-  "name": "enimfugit",
-  "description": "Web3 stores for Svelte, Sapper, and SvelteKit.",
-  "repo_url": "https://github.com/ZelmaShanahan/enimfugit",
-  "authors": [
-    "amosgerhold"
-  ],
-  "homepage": "https://github.com/ZelmaShanahan/enimfugit#readme",
-  "downloads": 22,
-  "dependents": 0,
-  "updated": "2024-04-04T00:51:11.023Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "enimfugit",
+	"description": "Web3 stores for Svelte, Sapper, and SvelteKit.",
+	"repo_url": "https://github.com/ZelmaShanahan/enimfugit",
+	"authors": ["amosgerhold"],
+	"homepage": "https://github.com/ZelmaShanahan/enimfugit#readme",
+	"downloads": 22,
+	"dependents": 0,
+	"updated": "2024-04-04T00:51:11.023Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

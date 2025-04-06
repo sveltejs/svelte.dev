@@ -1,16 +1,17 @@
 {
-  "name": "@tomatrow/ag-grid-svelte",
-  "description": "Create ag-grid component for Svelte apps.",
-  "repo_url": "",
-  "authors": [
-    "tomatrow"
-  ],
-  "downloads": 52,
-  "dependents": 0,
-  "updated": "2025-03-18T06:45:49.440Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "@tomatrow/ag-grid-svelte",
+	"description": "Create ag-grid component for Svelte apps.",
+	"repo_url": "",
+	"authors": ["tomatrow"],
+	"downloads": 52,
+	"dependents": 0,
+	"updated": "2025-03-18T06:45:49.440Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

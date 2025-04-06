@@ -1,18 +1,19 @@
 {
-  "name": "svelte-marquee",
-  "description": "Create responsive marquee component for Svelte.",
-  "repo_url": "https://github.com/silvestrevivo/svelte-marquee",
-  "authors": [
-    "silvestrevivo"
-  ],
-  "homepage": "https://github.com/silvestrevivo/svelte-marquee#readme",
-  "downloads": 19,
-  "dependents": 0,
-  "updated": "2020-07-15T19:15:34.745Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 8
+	"name": "svelte-marquee",
+	"description": "Create responsive marquee component for Svelte.",
+	"repo_url": "https://github.com/silvestrevivo/svelte-marquee",
+	"authors": ["silvestrevivo"],
+	"homepage": "https://github.com/silvestrevivo/svelte-marquee#readme",
+	"downloads": 19,
+	"dependents": 0,
+	"updated": "2020-07-15T19:15:34.745Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 8,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "svelte-unicons",
-  "description": "Use Unicon icons in Svelte applications.",
-  "repo_url": "https://github.com/devShamim/svelte-unicons",
-  "authors": [
-    "shamim-ahmed"
-  ],
-  "homepage": "https://github.com/devShamim/svelte-unicons#readme",
-  "downloads": 4,
-  "dependents": 0,
-  "updated": "2022-10-09T04:56:57.666Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 3
+	"name": "svelte-unicons",
+	"description": "Use Unicon icons in Svelte applications.",
+	"repo_url": "https://github.com/devShamim/svelte-unicons",
+	"authors": ["shamim-ahmed"],
+	"homepage": "https://github.com/devShamim/svelte-unicons#readme",
+	"downloads": 4,
+	"dependents": 0,
+	"updated": "2022-10-09T04:56:57.666Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 3,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

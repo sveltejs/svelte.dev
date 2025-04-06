@@ -1,18 +1,19 @@
 {
-  "name": "svelte-switch",
-  "description": "Create toggle button component for Svelte.",
-  "repo_url": "https://github.com/thecodejack/svelte-switch",
-  "authors": [
-    "thecodejack"
-  ],
-  "homepage": "https://github.com/thecodejack/svelte-switch#readme",
-  "downloads": 292,
-  "dependents": 1,
-  "updated": "2021-09-26T06:25:26.046Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 28
+	"name": "svelte-switch",
+	"description": "Create toggle button component for Svelte.",
+	"repo_url": "https://github.com/thecodejack/svelte-switch",
+	"authors": ["thecodejack"],
+	"homepage": "https://github.com/thecodejack/svelte-switch#readme",
+	"downloads": 292,
+	"dependents": 1,
+	"updated": "2021-09-26T06:25:26.046Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 28,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

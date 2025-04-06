@@ -1,16 +1,17 @@
 {
-  "name": "svelte-ad-block-detect",
-  "description": "Detect ad blockers in Svelte applications.",
-  "repo_url": "",
-  "authors": [
-    "soikat"
-  ],
-  "downloads": 2,
-  "dependents": 0,
-  "updated": "2025-01-30T10:32:45.166Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "svelte-ad-block-detect",
+	"description": "Detect ad blockers in Svelte applications.",
+	"repo_url": "",
+	"authors": ["soikat"],
+	"downloads": 2,
+	"dependents": 0,
+	"updated": "2025-01-30T10:32:45.166Z",
+	"tags": ["miscellaneous"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

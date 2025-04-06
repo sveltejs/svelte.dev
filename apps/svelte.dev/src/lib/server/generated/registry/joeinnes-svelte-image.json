@@ -1,17 +1,18 @@
 {
-  "name": "@joeinnes/svelte-image",
-  "description": "Serve responsive images using image CDNs in Svelte.",
-  "repo_url": "",
-  "authors": [
-    "joeinnes"
-  ],
-  "homepage": "https://github.com/joeinnes/svelte-image",
-  "downloads": 20,
-  "dependents": 0,
-  "updated": "2021-11-20T11:57:43.923Z",
-  "tags": [
-    "media"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@joeinnes/svelte-image",
+	"description": "Serve responsive images using image CDNs in Svelte.",
+	"repo_url": "",
+	"authors": ["joeinnes"],
+	"homepage": "https://github.com/joeinnes/svelte-image",
+	"downloads": 20,
+	"dependents": 0,
+	"updated": "2021-11-20T11:57:43.923Z",
+	"tags": ["media"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

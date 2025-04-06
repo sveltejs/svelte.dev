@@ -1,18 +1,19 @@
 {
-  "name": "svelte-section-list",
-  "description": "Create headless, draggable section lists for Svelte.",
-  "repo_url": "https://github.com/TIKramer/svelte-section-list",
-  "authors": [
-    "tikramer"
-  ],
-  "homepage": "https://github.com/TIKramer/svelte-section-list",
-  "downloads": 11,
-  "dependents": 0,
-  "updated": "2023-06-06T08:31:14.884Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 17
+	"name": "svelte-section-list",
+	"description": "Create headless, draggable section lists for Svelte.",
+	"repo_url": "https://github.com/TIKramer/svelte-section-list",
+	"authors": ["tikramer"],
+	"homepage": "https://github.com/TIKramer/svelte-section-list",
+	"downloads": 11,
+	"dependents": 0,
+	"updated": "2023-06-06T08:31:14.884Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 17,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

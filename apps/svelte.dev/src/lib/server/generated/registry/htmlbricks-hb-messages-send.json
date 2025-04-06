@@ -1,16 +1,17 @@
 {
-  "name": "@htmlbricks/hb-messages-send",
-  "description": "Create a message send component in Svelte.",
-  "repo_url": "",
-  "authors": [
-    "dariocaruso"
-  ],
-  "downloads": 99,
-  "dependents": 1,
-  "updated": "2025-03-24T18:07:17.045Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@htmlbricks/hb-messages-send",
+	"description": "Create a message send component in Svelte.",
+	"repo_url": "",
+	"authors": ["dariocaruso"],
+	"downloads": 99,
+	"dependents": 1,
+	"updated": "2025-03-24T18:07:17.045Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

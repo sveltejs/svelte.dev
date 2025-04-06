@@ -1,18 +1,19 @@
 {
-  "name": "svelte-view-split",
-  "description": "Create resizable views (panels) in Svelte applications.",
-  "repo_url": "https://github.com/tuggle24/view-split",
-  "authors": [
-    "tgnd"
-  ],
-  "homepage": "https://github.com/tuggle24/view-split#readme",
-  "downloads": 6,
-  "dependents": 0,
-  "updated": "2021-09-20T06:02:22.349Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "svelte-view-split",
+	"description": "Create resizable views (panels) in Svelte applications.",
+	"repo_url": "https://github.com/tuggle24/view-split",
+	"authors": ["tgnd"],
+	"homepage": "https://github.com/tuggle24/view-split#readme",
+	"downloads": 6,
+	"dependents": 0,
+	"updated": "2021-09-20T06:02:22.349Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

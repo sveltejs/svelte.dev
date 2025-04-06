@@ -1,18 +1,19 @@
 {
-  "name": "svelte-pell",
-  "description": "Implement Pell rich text editor as Svelte component.",
-  "repo_url": "https://github.com/demonicious/svelte-pell",
-  "authors": [
-    "demonicious"
-  ],
-  "homepage": "https://github.com/demonicious/svelte-pell",
-  "downloads": 7,
-  "dependents": 0,
-  "updated": "2020-10-06T00:24:51.243Z",
-  "tags": [
-    "content"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 9
+	"name": "svelte-pell",
+	"description": "Implement Pell rich text editor as Svelte component.",
+	"repo_url": "https://github.com/demonicious/svelte-pell",
+	"authors": ["demonicious"],
+	"homepage": "https://github.com/demonicious/svelte-pell",
+	"downloads": 7,
+	"dependents": 0,
+	"updated": "2020-10-06T00:24:51.243Z",
+	"tags": ["content"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 9,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

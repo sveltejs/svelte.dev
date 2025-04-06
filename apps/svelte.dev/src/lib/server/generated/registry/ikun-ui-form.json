@@ -1,16 +1,17 @@
 {
-  "name": "@ikun-ui/form",
-  "description": "Creates form components for Svelte.",
-  "repo_url": "",
-  "authors": [
-    "baiwusanyu"
-  ],
-  "downloads": 7,
-  "dependents": 14,
-  "updated": "2025-01-24T03:48:55.592Z",
-  "tags": [
-    "design-system"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@ikun-ui/form",
+	"description": "Creates form components for Svelte.",
+	"repo_url": "",
+	"authors": ["baiwusanyu"],
+	"downloads": 7,
+	"dependents": 14,
+	"updated": "2025-01-24T03:48:55.592Z",
+	"tags": ["design-system"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

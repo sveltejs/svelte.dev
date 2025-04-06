@@ -1,18 +1,19 @@
 {
-  "name": "figma-plugin-ds-svelte",
-  "description": "Create Figma plugin UI with Svelte components.",
-  "repo_url": "https://github.com/thomas-lowry/figma-plugin-ds-svelte",
-  "authors": [
-    "thomas-lowry"
-  ],
-  "homepage": "https://github.com/thomas-lowry/figma-plugin-ds-svelte#readme",
-  "downloads": 528,
-  "dependents": 0,
-  "updated": "2022-09-08T00:18:47.123Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 183
+	"name": "figma-plugin-ds-svelte",
+	"description": "Create Figma plugin UI with Svelte components.",
+	"repo_url": "https://github.com/thomas-lowry/figma-plugin-ds-svelte",
+	"authors": ["thomas-lowry"],
+	"homepage": "https://github.com/thomas-lowry/figma-plugin-ds-svelte#readme",
+	"downloads": 528,
+	"dependents": 0,
+	"updated": "2022-09-08T00:18:47.123Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 183,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,19 +1,19 @@
 {
-  "name": "svelte-hypercommands",
-  "description": "Create command/navigation palettes for Svelte apps.",
-  "repo_url": "https://github.com/josu-dev/svelte-hypercommands",
-  "authors": [
-    "j_josu"
-  ],
-  "homepage": "https://github.com/josu-dev/svelte-hypercommands#readme",
-  "downloads": 1,
-  "dependents": 0,
-  "updated": "2024-04-10T16:18:36.263Z",
-  "tags": [
-    "ui",
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 3
+	"name": "svelte-hypercommands",
+	"description": "Create command/navigation palettes for Svelte apps.",
+	"repo_url": "https://github.com/josu-dev/svelte-hypercommands",
+	"authors": ["j_josu"],
+	"homepage": "https://github.com/josu-dev/svelte-hypercommands#readme",
+	"downloads": 1,
+	"dependents": 0,
+	"updated": "2024-04-10T16:18:36.263Z",
+	"tags": ["ui", "tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 3,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": false
+	}
 }

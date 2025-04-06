@@ -1,18 +1,19 @@
 {
-  "name": "caligula",
-  "description": "Optimize CSS stylesheets for Svelte apps.",
-  "repo_url": "https://github.com/metonym/caligula",
-  "authors": [
-    "metonym"
-  ],
-  "homepage": "https://github.com/metonym/caligula",
-  "downloads": 10,
-  "dependents": 0,
-  "updated": "2020-04-04T15:37:04.792Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 3
+	"name": "caligula",
+	"description": "Optimize CSS stylesheets for Svelte apps.",
+	"repo_url": "https://github.com/metonym/caligula",
+	"authors": ["metonym"],
+	"homepage": "https://github.com/metonym/caligula",
+	"downloads": 10,
+	"dependents": 0,
+	"updated": "2020-04-04T15:37:04.792Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 3,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

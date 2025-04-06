@@ -1,16 +1,17 @@
 {
-  "name": "@soyao/ldui",
-  "description": "Develop Svelte and TypeScript applications with Vite.",
-  "repo_url": "",
-  "authors": [
-    "soyao"
-  ],
-  "downloads": 37,
-  "dependents": 0,
-  "updated": "2022-01-19T01:45:10.548Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@soyao/ldui",
+	"description": "Develop Svelte and TypeScript applications with Vite.",
+	"repo_url": "",
+	"authors": ["soyao"],
+	"downloads": 37,
+	"dependents": 0,
+	"updated": "2022-01-19T01:45:10.548Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

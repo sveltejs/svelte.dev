@@ -1,18 +1,19 @@
 {
-  "name": "book-gui",
-  "description": "Extend Bootstrap components for book publishing with Svelte.",
-  "repo_url": "https://github.com/fantasyui-com/book-gui",
-  "authors": [
-    "fantasyui.com"
-  ],
-  "homepage": "https://github.com/fantasyui-com/book-gui#readme",
-  "downloads": 19,
-  "dependents": 0,
-  "updated": "2020-01-31T04:38:40.292Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "book-gui",
+	"description": "Extend Bootstrap components for book publishing with Svelte.",
+	"repo_url": "https://github.com/fantasyui-com/book-gui",
+	"authors": ["fantasyui.com"],
+	"homepage": "https://github.com/fantasyui-com/book-gui#readme",
+	"downloads": 19,
+	"dependents": 0,
+	"updated": "2020-01-31T04:38:40.292Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

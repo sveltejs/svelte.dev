@@ -1,18 +1,19 @@
 {
-  "name": "@sveltinio/seo",
-  "description": "Add SEO metadata to Svelte and SvelteKit applications.",
-  "repo_url": "https://github.com/sveltinio/components-library",
-  "authors": [
-    "sveltinio"
-  ],
-  "homepage": "https://components.sveltin.io",
-  "downloads": 18,
-  "dependents": 0,
-  "updated": "2023-10-01T09:55:06.864Z",
-  "tags": [
-    "seo"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 12
+	"name": "@sveltinio/seo",
+	"description": "Add SEO metadata to Svelte and SvelteKit applications.",
+	"repo_url": "https://github.com/sveltinio/components-library",
+	"authors": ["sveltinio"],
+	"homepage": "https://components.sveltin.io",
+	"downloads": 18,
+	"dependents": 0,
+	"updated": "2023-10-01T09:55:06.864Z",
+	"tags": ["seo"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 12,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

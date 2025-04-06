@@ -1,18 +1,19 @@
 {
-  "name": "prosemirror-dev-toolkit",
-  "description": "Inject dev tools for ProseMirror editors.",
-  "repo_url": "https://github.com/TeemuKoivisto/prosemirror-dev-toolkit",
-  "authors": [
-    "tekk"
-  ],
-  "homepage": "https://teemukoivisto.github.io/prosemirror-dev-toolkit/",
-  "downloads": 3761,
-  "dependents": 2,
-  "updated": "2024-09-01T11:21:28.951Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 125
+	"name": "prosemirror-dev-toolkit",
+	"description": "Inject dev tools for ProseMirror editors.",
+	"repo_url": "https://github.com/TeemuKoivisto/prosemirror-dev-toolkit",
+	"authors": ["tekk"],
+	"homepage": "https://teemukoivisto.github.io/prosemirror-dev-toolkit/",
+	"downloads": 3761,
+	"dependents": 2,
+	"updated": "2024-09-01T11:21:28.951Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 125,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

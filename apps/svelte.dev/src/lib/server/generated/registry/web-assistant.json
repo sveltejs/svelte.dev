@@ -1,18 +1,19 @@
 {
-  "name": "web-assistant",
-  "description": "Create version introduction and guideline UI in Svelte.",
-  "repo_url": "https://github.com/icheer/web-assistant",
-  "authors": [
-    "icheer"
-  ],
-  "homepage": "http://guidebook.topurl.cn",
-  "downloads": 1,
-  "dependents": 0,
-  "updated": "2023-03-28T01:55:38.532Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 5
+	"name": "web-assistant",
+	"description": "Create version introduction and guideline UI in Svelte.",
+	"repo_url": "https://github.com/icheer/web-assistant",
+	"authors": ["icheer"],
+	"homepage": "http://guidebook.topurl.cn",
+	"downloads": 1,
+	"dependents": 0,
+	"updated": "2023-03-28T01:55:38.532Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 5,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

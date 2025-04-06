@@ -1,18 +1,19 @@
 {
-  "name": "@cpp.js/sample-web-svelte-vite",
-  "description": "Sample project integrating Cpp.js with Svelte and Vite.",
-  "repo_url": "https://github.com/bugra9/cpp.js",
-  "authors": [
-    "bugra9"
-  ],
-  "homepage": "https://github.com/bugra9/cpp.js/tree/main/packages/cppjs-sample-web-svelte-vite#readme",
-  "downloads": 13,
-  "dependents": 1,
-  "updated": "2025-01-19T13:37:33.028Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 25
+	"name": "@cpp.js/sample-web-svelte-vite",
+	"description": "Sample project integrating Cpp.js with Svelte and Vite.",
+	"repo_url": "https://github.com/bugra9/cpp.js",
+	"authors": ["bugra9"],
+	"homepage": "https://github.com/bugra9/cpp.js/tree/main/packages/cppjs-sample-web-svelte-vite#readme",
+	"downloads": 13,
+	"dependents": 1,
+	"updated": "2025-01-19T13:37:33.028Z",
+	"tags": ["tooling"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 25,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

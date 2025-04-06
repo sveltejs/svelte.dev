@@ -1,18 +1,19 @@
 {
-  "name": "svelte-loading-spinners",
-  "description": "Provide loading spinners for Svelte applications.",
-  "repo_url": "https://github.com/schum123/svelte-loading-spinners",
-  "authors": [
-    "schum123"
-  ],
-  "homepage": "https://github.com/schum123/svelte-loading-spinners#readme",
-  "downloads": 16025,
-  "dependents": 11,
-  "updated": "2024-04-03T08:12:05.776Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 521
+	"name": "svelte-loading-spinners",
+	"description": "Provide loading spinners for Svelte applications.",
+	"repo_url": "https://github.com/schum123/svelte-loading-spinners",
+	"authors": ["schum123"],
+	"homepage": "https://github.com/schum123/svelte-loading-spinners#readme",
+	"downloads": 16025,
+	"dependents": 11,
+	"updated": "2024-04-03T08:12:05.776Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 521,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

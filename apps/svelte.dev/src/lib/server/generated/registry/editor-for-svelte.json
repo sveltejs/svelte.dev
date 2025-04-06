@@ -1,19 +1,19 @@
 {
-  "name": "editor-for-svelte",
-  "description": "Create a simple, customizable code editor for Svelte.",
-  "repo_url": "https://github.com/CoderN-P/SvelteEditor",
-  "authors": [
-    "codern"
-  ],
-  "homepage": "https://svelte-editor.neelp.tech",
-  "downloads": 11,
-  "dependents": 0,
-  "updated": "2024-06-20T17:12:00.234Z",
-  "tags": [
-    "ui",
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "editor-for-svelte",
+	"description": "Create a simple, customizable code editor for Svelte.",
+	"repo_url": "https://github.com/CoderN-P/SvelteEditor",
+	"authors": ["codern"],
+	"homepage": "https://svelte-editor.neelp.tech",
+	"downloads": 11,
+	"dependents": 0,
+	"updated": "2024-06-20T17:12:00.234Z",
+	"tags": ["ui", "tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

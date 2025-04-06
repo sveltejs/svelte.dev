@@ -1,16 +1,17 @@
 {
-  "name": "@htmlbricks/hb-terms-doc-templates",
-  "description": "Creates terms web component for Svelte applications.",
-  "repo_url": "",
-  "authors": [
-    "dariocaruso"
-  ],
-  "downloads": 235,
-  "dependents": 0,
-  "updated": "2025-03-24T18:07:28.224Z",
-  "tags": [
-    "content"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@htmlbricks/hb-terms-doc-templates",
+	"description": "Creates terms web component for Svelte applications.",
+	"repo_url": "",
+	"authors": ["dariocaruso"],
+	"downloads": 235,
+	"dependents": 0,
+	"updated": "2025-03-24T18:07:28.224Z",
+	"tags": ["content"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

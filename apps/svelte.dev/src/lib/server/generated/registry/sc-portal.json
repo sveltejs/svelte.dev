@@ -1,16 +1,17 @@
 {
-  "name": "sc-portal",
-  "description": "Provides an opinionated portal component for Svelte applications.",
-  "repo_url": "",
-  "authors": [
-    "hunghg255"
-  ],
-  "downloads": 1,
-  "dependents": 1,
-  "updated": "2023-10-20T02:10:43.359Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "sc-portal",
+	"description": "Provides an opinionated portal component for Svelte applications.",
+	"repo_url": "",
+	"authors": ["hunghg255"],
+	"downloads": 1,
+	"dependents": 1,
+	"updated": "2023-10-20T02:10:43.359Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": false
+	}
 }

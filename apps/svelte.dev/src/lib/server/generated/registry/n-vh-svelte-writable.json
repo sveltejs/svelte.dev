@@ -1,18 +1,19 @@
 {
-  "name": "@n-vh/svelte-writable",
-  "description": "Create custom writable stores for Svelte applications.",
-  "repo_url": "https://github.com/n-vh/svelte-writable",
-  "authors": [
-    "n-vh"
-  ],
-  "homepage": "https://github.com/n-vh/svelte-writable",
-  "downloads": 1,
-  "dependents": 0,
-  "updated": "2023-01-24T17:47:17.199Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@n-vh/svelte-writable",
+	"description": "Create custom writable stores for Svelte applications.",
+	"repo_url": "https://github.com/n-vh/svelte-writable",
+	"authors": ["n-vh"],
+	"homepage": "https://github.com/n-vh/svelte-writable",
+	"downloads": 1,
+	"dependents": 0,
+	"updated": "2023-01-24T17:47:17.199Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

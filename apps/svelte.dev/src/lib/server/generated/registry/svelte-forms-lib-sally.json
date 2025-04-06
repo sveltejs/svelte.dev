@@ -1,18 +1,19 @@
 {
-  "name": "svelte-forms-lib-sally",
-  "description": "Manage forms and validate input in Svelte applications.",
-  "repo_url": "https://github.com/Sally-R-AB/svelte-forms-lib",
-  "authors": [
-    "sallysamuel"
-  ],
-  "homepage": "https://svelte-forms-lib-sapper-docs.now.sh",
-  "downloads": 70,
-  "dependents": 0,
-  "updated": "2024-02-22T11:46:13.423Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelte-forms-lib-sally",
+	"description": "Manage forms and validate input in Svelte applications.",
+	"repo_url": "https://github.com/Sally-R-AB/svelte-forms-lib",
+	"authors": ["sallysamuel"],
+	"homepage": "https://svelte-forms-lib-sapper-docs.now.sh",
+	"downloads": 70,
+	"dependents": 0,
+	"updated": "2024-02-22T11:46:13.423Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

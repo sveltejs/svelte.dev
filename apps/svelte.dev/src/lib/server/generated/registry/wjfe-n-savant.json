@@ -1,16 +1,17 @@
 {
-  "name": "@wjfe/n-savant",
-  "description": "Client-side router for Svelte v5 SPAs, inventing multi hash routing.",
-  "repo_url": "",
-  "authors": [
-    "webjose"
-  ],
-  "downloads": 22,
-  "dependents": 0,
-  "updated": "2025-03-07T02:31:45.548Z",
-  "tags": [
-    "router"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "@wjfe/n-savant",
+	"description": "Client-side router for Svelte v5 SPAs, inventing multi hash routing.",
+	"repo_url": "",
+	"authors": ["webjose"],
+	"downloads": 22,
+	"dependents": 0,
+	"updated": "2025-03-07T02:31:45.548Z",
+	"tags": ["router"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

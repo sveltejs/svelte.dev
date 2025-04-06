@@ -1,18 +1,19 @@
 {
-  "name": "@flexilte/skeleton",
-  "description": "Provide skeleton support for Flexilte, a JSON-driven Svelte framework.",
-  "repo_url": "https://github.com/flexilte/flexilte",
-  "authors": [
-    "borgmon"
-  ],
-  "homepage": "https://flexilte.github.io",
-  "downloads": 0,
-  "dependents": 0,
-  "updated": "2024-11-20T03:33:24.380Z",
-  "tags": [
-    "design-system"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "@flexilte/skeleton",
+	"description": "Provide skeleton support for Flexilte, a JSON-driven Svelte framework.",
+	"repo_url": "https://github.com/flexilte/flexilte",
+	"authors": ["borgmon"],
+	"homepage": "https://flexilte.github.io",
+	"downloads": 0,
+	"dependents": 0,
+	"updated": "2024-11-20T03:33:24.380Z",
+	"tags": ["design-system"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

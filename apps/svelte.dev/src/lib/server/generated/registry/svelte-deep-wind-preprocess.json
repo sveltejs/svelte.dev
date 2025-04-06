@@ -1,18 +1,19 @@
 {
-  "name": "svelte-deep-wind-preprocess",
-  "description": "Passes scoped Windicss classes to child Svelte components.",
-  "repo_url": "https://github.com/jacob-8/svelte-deep-wind-preprocess",
-  "authors": [
-    "jacobbowdoin"
-  ],
-  "homepage": "https://github.com/jacob-8/svelte-deep-wind-preprocess#readme",
-  "downloads": 8,
-  "dependents": 0,
-  "updated": "2022-07-28T11:58:35.408Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelte-deep-wind-preprocess",
+	"description": "Passes scoped Windicss classes to child Svelte components.",
+	"repo_url": "https://github.com/jacob-8/svelte-deep-wind-preprocess",
+	"authors": ["jacobbowdoin"],
+	"homepage": "https://github.com/jacob-8/svelte-deep-wind-preprocess#readme",
+	"downloads": 8,
+	"dependents": 0,
+	"updated": "2022-07-28T11:58:35.408Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

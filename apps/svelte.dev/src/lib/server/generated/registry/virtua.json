@@ -1,18 +1,19 @@
 {
-  "name": "virtua",
-  "description": "Virtualize lists and grids for Svelte.",
-  "repo_url": "https://github.com/inokawa/virtua",
-  "authors": [
-    "inokawa"
-  ],
-  "homepage": "https://github.com/inokawa/virtua#readme",
-  "downloads": 78431,
-  "dependents": 24,
-  "updated": "2025-03-08T01:58:08.375Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 2649
+	"name": "virtua",
+	"description": "Virtualize lists and grids for Svelte.",
+	"repo_url": "https://github.com/inokawa/virtua",
+	"authors": ["inokawa"],
+	"homepage": "https://github.com/inokawa/virtua#readme",
+	"downloads": 78431,
+	"dependents": 24,
+	"updated": "2025-03-08T01:58:08.375Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 2657,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

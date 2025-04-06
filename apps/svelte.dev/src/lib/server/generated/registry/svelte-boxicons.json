@@ -1,18 +1,19 @@
 {
-  "name": "svelte-boxicons",
-  "description": "Use SVG boxicons components in Svelte applications.",
-  "repo_url": "https://github.com/shinokada/svelte-boxicons",
-  "authors": [
-    "shinichiokada"
-  ],
-  "homepage": "https://svelte-boxicons.codewithshin.com",
-  "downloads": 8,
-  "dependents": 0,
-  "updated": "2024-03-01T16:38:42.211Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 3
+	"name": "svelte-boxicons",
+	"description": "Use SVG boxicons components in Svelte applications.",
+	"repo_url": "https://github.com/shinokada/svelte-boxicons",
+	"authors": ["shinichiokada"],
+	"homepage": "https://svelte-boxicons.codewithshin.com",
+	"downloads": 8,
+	"dependents": 0,
+	"updated": "2024-03-01T16:38:42.211Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 3,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

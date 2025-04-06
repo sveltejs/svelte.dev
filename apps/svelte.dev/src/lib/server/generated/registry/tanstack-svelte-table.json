@@ -1,19 +1,19 @@
 {
-  "name": "@tanstack/svelte-table",
-  "description": "Build powerful tables and datagrids for Svelte.",
-  "repo_url": "https://github.com/TanStack/table",
-  "authors": [
-    "tannerlinsley",
-    "nksaraf"
-  ],
-  "homepage": "https://tanstack.com/table",
-  "downloads": 9841,
-  "dependents": 14,
-  "updated": "2025-02-11T21:00:39.245Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 26152
+	"name": "@tanstack/svelte-table",
+	"description": "Build powerful tables and datagrids for Svelte.",
+	"repo_url": "https://github.com/TanStack/table",
+	"authors": ["tannerlinsley", "nksaraf"],
+	"homepage": "https://tanstack.com/table",
+	"downloads": 9841,
+	"dependents": 14,
+	"updated": "2025-02-11T21:00:39.245Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 26163,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": false
+	}
 }

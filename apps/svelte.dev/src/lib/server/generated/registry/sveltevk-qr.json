@@ -1,18 +1,19 @@
 {
-  "name": "@sveltevk/qr",
-  "description": "Generate VK-style QR codes in Svelte applications.",
-  "repo_url": "https://github.com/sveltevk/qr",
-  "authors": [
-    "severecloud"
-  ],
-  "homepage": "https://github.com/sveltevk/qr",
-  "downloads": 56,
-  "dependents": 0,
-  "updated": "2022-02-16T17:56:21.151Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 2
+	"name": "@sveltevk/qr",
+	"description": "Generate VK-style QR codes in Svelte applications.",
+	"repo_url": "https://github.com/sveltevk/qr",
+	"authors": ["severecloud"],
+	"homepage": "https://github.com/sveltevk/qr",
+	"downloads": 56,
+	"dependents": 0,
+	"updated": "2022-02-16T17:56:21.151Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

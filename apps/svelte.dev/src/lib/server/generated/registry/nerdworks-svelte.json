@@ -1,18 +1,19 @@
 {
-  "name": "@nerdworks/svelte",
-  "description": "Integrate Inertia.js with Svelte for modern web applications.",
-  "repo_url": "https://github.com/inertiajs/inertia",
-  "authors": [
-    "nobbo"
-  ],
-  "homepage": "https://inertiajs.com/",
-  "downloads": 1,
-  "dependents": 0,
-  "updated": "2024-06-24T11:26:04.392Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 7009
+	"name": "@nerdworks/svelte",
+	"description": "Integrate Inertia.js with Svelte for modern web applications.",
+	"repo_url": "https://github.com/inertiajs/inertia",
+	"authors": ["nobbo"],
+	"homepage": "https://inertiajs.com/",
+	"downloads": 1,
+	"dependents": 0,
+	"updated": "2024-06-24T11:26:04.392Z",
+	"tags": ["integration"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 7010,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": false
+	}
 }

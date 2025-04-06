@@ -1,18 +1,19 @@
 {
-  "name": "@botala/pine",
-  "description": "Build component library in vanilla Svelte.",
-  "repo_url": "https://github.com/BotalaFoods/client-components",
-  "authors": [
-    "kierangill"
-  ],
-  "homepage": "https://github.com/BotalaFoods/client-components#readme",
-  "downloads": 54,
-  "dependents": 0,
-  "updated": "2020-07-26T08:09:59.357Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@botala/pine",
+	"description": "Build component library in vanilla Svelte.",
+	"repo_url": "https://github.com/BotalaFoods/client-components",
+	"authors": ["kierangill"],
+	"homepage": "https://github.com/BotalaFoods/client-components#readme",
+	"downloads": 54,
+	"dependents": 0,
+	"updated": "2020-07-26T08:09:59.357Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

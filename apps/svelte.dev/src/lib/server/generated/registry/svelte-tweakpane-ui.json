@@ -1,18 +1,19 @@
 {
-  "name": "svelte-tweakpane-ui",
-  "description": "Provides Svelte components for Tweakpane UI elements.",
-  "repo_url": "https://github.com/kitschpatrol/svelte-tweakpane-ui",
-  "authors": [
-    "kitschpatrol"
-  ],
-  "homepage": "https://kitschpatrol.com/svelte-tweakpane-ui",
-  "downloads": 1164,
-  "dependents": 3,
-  "updated": "2025-03-18T15:09:13.099Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 168
+	"name": "svelte-tweakpane-ui",
+	"description": "Provides Svelte components for Tweakpane UI elements.",
+	"repo_url": "https://github.com/kitschpatrol/svelte-tweakpane-ui",
+	"authors": ["kitschpatrol"],
+	"homepage": "https://kitschpatrol.com/svelte-tweakpane-ui",
+	"downloads": 1164,
+	"dependents": 3,
+	"updated": "2025-03-18T15:09:13.099Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 168,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": true
+	}
 }

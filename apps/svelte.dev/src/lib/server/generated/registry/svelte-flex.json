@@ -1,18 +1,19 @@
 {
-  "name": "svelte-flex",
-  "description": "Create flexible layouts with a reusable flexbox component.",
-  "repo_url": "https://github.com/himynameisdave/svelte-flex",
-  "authors": [
-    "himynameisdave"
-  ],
-  "homepage": "https://github.com/himynameisdave/svelte-flex",
-  "downloads": 35,
-  "dependents": 0,
-  "updated": "2023-09-05T16:22:00.240Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 79
+	"name": "svelte-flex",
+	"description": "Create flexible layouts with a reusable flexbox component.",
+	"repo_url": "https://github.com/himynameisdave/svelte-flex",
+	"authors": ["himynameisdave"],
+	"homepage": "https://github.com/himynameisdave/svelte-flex",
+	"downloads": 35,
+	"dependents": 0,
+	"updated": "2023-09-05T16:22:00.240Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 80,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

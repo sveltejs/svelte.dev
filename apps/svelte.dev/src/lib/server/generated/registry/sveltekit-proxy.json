@@ -1,18 +1,19 @@
 {
-  "name": "sveltekit-proxy",
-  "description": "Implement proxy helper for SvelteKit server hooks.",
-  "repo_url": "https://github.com/ariefsn/sveltekit-proxy",
-  "authors": [
-    "ariefsn"
-  ],
-  "homepage": "https://github.com/ariefsn/sveltekit-proxy#readme",
-  "downloads": 2,
-  "dependents": 0,
-  "updated": "2024-07-30T17:21:42.618Z",
-  "tags": [
-    "server"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "sveltekit-proxy",
+	"description": "Implement proxy helper for SvelteKit server hooks.",
+	"repo_url": "https://github.com/ariefsn/sveltekit-proxy",
+	"authors": ["ariefsn"],
+	"homepage": "https://github.com/ariefsn/sveltekit-proxy#readme",
+	"downloads": 2,
+	"dependents": 0,
+	"updated": "2024-07-30T17:21:42.618Z",
+	"tags": ["server"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	}
 }

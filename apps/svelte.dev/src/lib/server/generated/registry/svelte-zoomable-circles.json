@@ -1,16 +1,17 @@
 {
-  "name": "svelte-zoomable-circles",
-  "description": "Display hierarchical data using zoomable circles in Svelte.",
-  "repo_url": "",
-  "authors": [
-    "tjb111"
-  ],
-  "downloads": 3,
-  "dependents": 0,
-  "updated": "2024-03-31T20:37:56.980Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-zoomable-circles",
+	"description": "Display hierarchical data using zoomable circles in Svelte.",
+	"repo_url": "",
+	"authors": ["tjb111"],
+	"downloads": 3,
+	"dependents": 0,
+	"updated": "2024-03-31T20:37:56.980Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

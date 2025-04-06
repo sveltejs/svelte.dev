@@ -1,17 +1,18 @@
 {
-  "name": "svelteworld",
-  "description": "Display list of countries in Svelte components.",
-  "repo_url": "https://gitlab.com/st33fn/svelteworld",
-  "authors": [
-    "st33fn"
-  ],
-  "homepage": "https://gitlab.com/st33fn/svelteworld#readme",
-  "downloads": 5,
-  "dependents": 0,
-  "updated": "2021-09-25T08:11:38.412Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelteworld",
+	"description": "Display list of countries in Svelte components.",
+	"repo_url": "https://gitlab.com/st33fn/svelteworld",
+	"authors": ["st33fn"],
+	"homepage": "https://gitlab.com/st33fn/svelteworld#readme",
+	"downloads": 5,
+	"dependents": 0,
+	"updated": "2021-09-25T08:11:38.412Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

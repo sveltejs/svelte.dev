@@ -1,18 +1,18 @@
 {
-  "name": "@soleil-se/build-app",
-  "description": "Builds WebApps, RESTApps, Widgets with Svelte in Sitevision.",
-  "repo_url": "",
-  "authors": [
-    "soleil-ab",
-    "kling90"
-  ],
-  "homepage": "https://docs.soleil.se/build/app",
-  "downloads": 50,
-  "dependents": 0,
-  "updated": "2025-03-26T11:46:26.319Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "@soleil-se/build-app",
+	"description": "Builds WebApps, RESTApps, Widgets with Svelte in Sitevision.",
+	"repo_url": "",
+	"authors": ["soleil-ab", "kling90"],
+	"homepage": "https://docs.soleil.se/build/app",
+	"downloads": 50,
+	"dependents": 0,
+	"updated": "2025-03-26T11:46:26.319Z",
+	"tags": ["tooling"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

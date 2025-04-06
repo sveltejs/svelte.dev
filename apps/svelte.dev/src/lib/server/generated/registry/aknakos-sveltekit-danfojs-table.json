@@ -1,16 +1,17 @@
 {
-  "name": "@aknakos/sveltekit-danfojs-table",
-  "description": "Display Danfo.js dataframes in SvelteKit tables.",
-  "authors": [
-    "aknakos"
-  ],
-  "homepage": "https://github.com/aknakos/sveltekit-danfojs-table#readme",
-  "downloads": 15,
-  "dependents": 0,
-  "updated": "2022-06-27T21:13:52.218Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@aknakos/sveltekit-danfojs-table",
+	"description": "Display Danfo.js dataframes in SvelteKit tables.",
+	"authors": ["aknakos"],
+	"homepage": "https://github.com/aknakos/sveltekit-danfojs-table#readme",
+	"downloads": 15,
+	"dependents": 0,
+	"updated": "2022-06-27T21:13:52.218Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

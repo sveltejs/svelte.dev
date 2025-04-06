@@ -1,17 +1,18 @@
 {
-  "name": "svelte-browser",
-  "description": "Access browser information and viewport data in Svelte apps.",
-  "repo_url": "",
-  "authors": [
-    "7korobi"
-  ],
-  "homepage": "https://github.com/7korobi/svelte-browser/blob/main/src/lib/",
-  "downloads": 5,
-  "dependents": 4,
-  "updated": "2022-11-05T16:48:33.138Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-browser",
+	"description": "Access browser information and viewport data in Svelte apps.",
+	"repo_url": "",
+	"authors": ["7korobi"],
+	"homepage": "https://github.com/7korobi/svelte-browser/blob/main/src/lib/",
+	"downloads": 5,
+	"dependents": 4,
+	"updated": "2022-11-05T16:48:33.138Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

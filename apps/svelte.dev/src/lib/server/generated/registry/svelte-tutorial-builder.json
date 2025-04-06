@@ -1,16 +1,17 @@
 {
-  "name": "svelte-tutorial-builder",
-  "description": "Create linear in-app tutorials for Svelte applications.",
-  "repo_url": "",
-  "authors": [
-    "sfasulo"
-  ],
-  "downloads": 1,
-  "dependents": 0,
-  "updated": "2024-06-25T17:59:02.536Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-tutorial-builder",
+	"description": "Create linear in-app tutorials for Svelte applications.",
+	"repo_url": "",
+	"authors": ["sfasulo"],
+	"downloads": 1,
+	"dependents": 0,
+	"updated": "2024-06-25T17:59:02.536Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

@@ -1,16 +1,17 @@
 {
-  "name": "svelte-html-repl",
-  "description": "Create HTML REPL using Svelte.",
-  "repo_url": "",
-  "authors": [
-    "nph"
-  ],
-  "downloads": 12,
-  "dependents": 0,
-  "updated": "2021-03-15T12:13:37.229Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-html-repl",
+	"description": "Create HTML REPL using Svelte.",
+	"repo_url": "",
+	"authors": ["nph"],
+	"downloads": 12,
+	"dependents": 0,
+	"updated": "2021-03-15T12:13:37.229Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

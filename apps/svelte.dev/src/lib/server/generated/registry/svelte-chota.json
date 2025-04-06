@@ -1,18 +1,19 @@
 {
-  "name": "svelte-chota",
-  "description": "Build Svelte UI components with the Chota CSS framework.",
-  "repo_url": "https://github.com/AlexxNB/svelte-chota",
-  "authors": [
-    "alexxnb"
-  ],
-  "homepage": "https://alexxnb.github.io/svelte-chota",
-  "downloads": 77,
-  "dependents": 0,
-  "updated": "2021-07-29T11:43:20.374Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 287
+	"name": "svelte-chota",
+	"description": "Build Svelte UI components with the Chota CSS framework.",
+	"repo_url": "https://github.com/AlexxNB/svelte-chota",
+	"authors": ["alexxnb"],
+	"homepage": "https://alexxnb.github.io/svelte-chota",
+	"downloads": 77,
+	"dependents": 0,
+	"updated": "2021-07-29T11:43:20.374Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 287,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

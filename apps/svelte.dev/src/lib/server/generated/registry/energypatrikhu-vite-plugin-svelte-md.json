@@ -1,19 +1,19 @@
 {
-  "name": "@energypatrikhu/vite-plugin-svelte-md",
-  "description": "Converts Markdown files to Svelte components using Vite.",
-  "repo_url": "https://github.com/energypatrikhu/vite-plugin-svelte-md",
-  "authors": [
-    "energypatrikhu"
-  ],
-  "homepage": "https://github.com/energypatrikhu/vite-plugin-svelte-md#readme",
-  "downloads": 0,
-  "dependents": 0,
-  "updated": "2024-12-03T13:40:46.199Z",
-  "tags": [
-    "tooling",
-    "content"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 0
+	"name": "@energypatrikhu/vite-plugin-svelte-md",
+	"description": "Converts Markdown files to Svelte components using Vite.",
+	"repo_url": "https://github.com/energypatrikhu/vite-plugin-svelte-md",
+	"authors": ["energypatrikhu"],
+	"homepage": "https://github.com/energypatrikhu/vite-plugin-svelte-md#readme",
+	"downloads": 0,
+	"dependents": 0,
+	"updated": "2024-12-03T13:40:46.199Z",
+	"tags": ["tooling", "content"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

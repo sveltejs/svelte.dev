@@ -1,18 +1,19 @@
 {
-  "name": "svelte-calculator",
-  "description": "Provide Svelte calculator with animation and sounds.",
-  "repo_url": "https://github.com/ArshdeepSahni/svelte-calculator",
-  "authors": [
-    "arshdeepsahni"
-  ],
-  "homepage": "https://github.com/ArshdeepSahni/svelte-calculator",
-  "downloads": 12,
-  "dependents": 0,
-  "updated": "2021-07-19T07:42:50.091Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 5
+	"name": "svelte-calculator",
+	"description": "Provide Svelte calculator with animation and sounds.",
+	"repo_url": "https://github.com/ArshdeepSahni/svelte-calculator",
+	"authors": ["arshdeepsahni"],
+	"homepage": "https://github.com/ArshdeepSahni/svelte-calculator",
+	"downloads": 12,
+	"dependents": 0,
+	"updated": "2021-07-19T07:42:50.091Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 5,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

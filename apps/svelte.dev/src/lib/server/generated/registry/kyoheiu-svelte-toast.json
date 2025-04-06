@@ -1,17 +1,18 @@
 {
-  "name": "@kyoheiu/svelte-toast",
-  "description": "Display simple toast notifications in Svelte applications.",
-  "repo_url": "https://github.com/kyoheiu/svelte-toast",
-  "authors": [
-    "kyoheiu"
-  ],
-  "homepage": "https://github.com/kyoheiu/svelte-toast#readme",
-  "downloads": 1,
-  "dependents": 0,
-  "updated": "2023-09-22T21:28:00.172Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@kyoheiu/svelte-toast",
+	"description": "Display simple toast notifications in Svelte applications.",
+	"repo_url": "https://github.com/kyoheiu/svelte-toast",
+	"authors": ["kyoheiu"],
+	"homepage": "https://github.com/kyoheiu/svelte-toast#readme",
+	"downloads": 1,
+	"dependents": 0,
+	"updated": "2023-09-22T21:28:00.172Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": false
+	}
 }

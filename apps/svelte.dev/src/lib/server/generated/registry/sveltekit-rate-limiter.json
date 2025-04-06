@@ -1,18 +1,19 @@
 {
-  "name": "sveltekit-rate-limiter",
-  "description": "Modular rate limiter for SvelteKit, use in password resets.",
-  "repo_url": "https://github.com/ciscoheat/sveltekit-rate-limiter",
-  "authors": [
-    "ciscoheat"
-  ],
-  "homepage": "https://github.com/ciscoheat/sveltekit-rate-limiter#readme",
-  "downloads": 3021,
-  "dependents": 0,
-  "updated": "2024-09-19T14:55:23.003Z",
-  "tags": [
-    "server"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 253
+	"name": "sveltekit-rate-limiter",
+	"description": "Modular rate limiter for SvelteKit, use in password resets.",
+	"repo_url": "https://github.com/ciscoheat/sveltekit-rate-limiter",
+	"authors": ["ciscoheat"],
+	"homepage": "https://github.com/ciscoheat/sveltekit-rate-limiter#readme",
+	"downloads": 3021,
+	"dependents": 0,
+	"updated": "2024-09-19T14:55:23.003Z",
+	"tags": ["server"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 253,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

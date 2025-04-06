@@ -1,19 +1,19 @@
 {
-  "name": "svelte-kit-sessions",
-  "description": "Provides user-friendly session management for SvelteKit applications.",
-  "repo_url": "https://github.com/yutak23/svelte-kit-sessions",
-  "authors": [
-    "yutak23"
-  ],
-  "homepage": "https://github.com/yutak23/svelte-kit-sessions#readme",
-  "downloads": 127,
-  "dependents": 3,
-  "updated": "2024-11-13T04:51:52.547Z",
-  "tags": [
-    "server",
-    "auth"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 16
+	"name": "svelte-kit-sessions",
+	"description": "Provides user-friendly session management for SvelteKit applications.",
+	"repo_url": "https://github.com/yutak23/svelte-kit-sessions",
+	"authors": ["yutak23"],
+	"homepage": "https://github.com/yutak23/svelte-kit-sessions#readme",
+	"downloads": 127,
+	"dependents": 3,
+	"updated": "2024-11-13T04:51:52.547Z",
+	"tags": ["server", "auth"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 16,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

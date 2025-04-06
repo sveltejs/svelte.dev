@@ -1,18 +1,19 @@
 {
-  "name": "svelte-image-compare",
-  "description": "Compare two images using a responsive slider in Svelte.",
-  "repo_url": "https://github.com/PaulMaly/svelte-image-compare",
-  "authors": [
-    "paulmaly"
-  ],
-  "homepage": "https://github.com/PaulMaly/svelte-image-compare#readme",
-  "downloads": 44,
-  "dependents": 0,
-  "updated": "2019-08-24T23:29:22.232Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 22
+	"name": "svelte-image-compare",
+	"description": "Compare two images using a responsive slider in Svelte.",
+	"repo_url": "https://github.com/PaulMaly/svelte-image-compare",
+	"authors": ["paulmaly"],
+	"homepage": "https://github.com/PaulMaly/svelte-image-compare#readme",
+	"downloads": 44,
+	"dependents": 0,
+	"updated": "2019-08-24T23:29:22.232Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 22,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	}
 }

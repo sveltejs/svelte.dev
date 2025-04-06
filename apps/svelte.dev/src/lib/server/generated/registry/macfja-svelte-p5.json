@@ -1,18 +1,19 @@
 {
-  "name": "@macfja/svelte-p5",
-  "description": "Wrap P5.js for use within Svelte components.",
-  "repo_url": "https://github.com/macfja/svelte-p5",
-  "authors": [
-    "macfja"
-  ],
-  "homepage": "https://github.com/macfja/svelte-p5#readme",
-  "downloads": 10,
-  "dependents": 0,
-  "updated": "2022-08-05T20:21:19.264Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 10
+	"name": "@macfja/svelte-p5",
+	"description": "Wrap P5.js for use within Svelte components.",
+	"repo_url": "https://github.com/macfja/svelte-p5",
+	"authors": ["macfja"],
+	"homepage": "https://github.com/macfja/svelte-p5#readme",
+	"downloads": 10,
+	"dependents": 0,
+	"updated": "2022-08-05T20:21:19.264Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 10,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

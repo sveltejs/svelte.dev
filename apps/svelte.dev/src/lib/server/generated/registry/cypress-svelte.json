@@ -1,18 +1,19 @@
 {
-  "name": "@cypress/svelte",
-  "description": "Mount Svelte components for Cypress component testing.",
-  "repo_url": "https://github.com/cypress-io/cypress",
-  "authors": [
-    "cypress-npm-publisher"
-  ],
-  "homepage": "https://github.com/cypress-io/cypress/blob/develop/npm/svelte/#readme",
-  "downloads": 32,
-  "dependents": 0,
-  "updated": "2025-01-08T00:58:28.672Z",
-  "tags": [
-    "testing"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 48478
+	"name": "@cypress/svelte",
+	"description": "Mount Svelte components for Cypress component testing.",
+	"repo_url": "https://github.com/cypress-io/cypress",
+	"authors": ["cypress-npm-publisher"],
+	"homepage": "https://github.com/cypress-io/cypress/blob/develop/npm/svelte/#readme",
+	"downloads": 32,
+	"dependents": 0,
+	"updated": "2025-01-08T00:58:28.672Z",
+	"tags": ["testing"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 48479,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

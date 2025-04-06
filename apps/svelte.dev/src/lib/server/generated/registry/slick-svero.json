@@ -1,18 +1,19 @@
 {
-  "name": "slick-svero",
-  "description": "Implement page.js based routing for Svelte applications.",
-  "repo_url": "https://github.com/antonielbordin/slick-svero",
-  "authors": [
-    "antonielbordin"
-  ],
-  "homepage": "https://github.com/antonielbordin/slick-svero/blob/main/README.md",
-  "downloads": 5,
-  "dependents": 0,
-  "updated": "2020-11-28T15:07:10.301Z",
-  "tags": [
-    "router"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "slick-svero",
+	"description": "Implement page.js based routing for Svelte applications.",
+	"repo_url": "https://github.com/antonielbordin/slick-svero",
+	"authors": ["antonielbordin"],
+	"homepage": "https://github.com/antonielbordin/slick-svero/blob/main/README.md",
+	"downloads": 5,
+	"dependents": 0,
+	"updated": "2020-11-28T15:07:10.301Z",
+	"tags": ["router"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

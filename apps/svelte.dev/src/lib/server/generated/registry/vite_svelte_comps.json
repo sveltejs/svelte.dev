@@ -1,16 +1,17 @@
 {
-  "name": "vite_svelte_comps",
-  "description": "Build Svelte components with Vite and Web Components.",
-  "repo_url": "",
-  "authors": [
-    "miyoko0505"
-  ],
-  "downloads": 5,
-  "dependents": 2,
-  "updated": "2023-03-17T08:23:36.296Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "vite_svelte_comps",
+	"description": "Build Svelte components with Vite and Web Components.",
+	"repo_url": "",
+	"authors": ["miyoko0505"],
+	"downloads": 5,
+	"dependents": 2,
+	"updated": "2023-03-17T08:23:36.296Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

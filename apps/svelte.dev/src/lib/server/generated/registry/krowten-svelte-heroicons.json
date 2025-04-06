@@ -1,18 +1,19 @@
 {
-  "name": "@krowten/svelte-heroicons",
-  "description": "Provides Heroicons for Svelte applications.",
-  "repo_url": "https://github.com/krowten/svelte-heroicons",
-  "authors": [
-    "krowten"
-  ],
-  "homepage": "https://github.com/krowten/svelte-heroicons#readme",
-  "downloads": 2,
-  "dependents": 0,
-  "updated": "2023-01-06T11:00:52.870Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 8
+	"name": "@krowten/svelte-heroicons",
+	"description": "Provides Heroicons for Svelte applications.",
+	"repo_url": "https://github.com/krowten/svelte-heroicons",
+	"authors": ["krowten"],
+	"homepage": "https://github.com/krowten/svelte-heroicons#readme",
+	"downloads": 2,
+	"dependents": 0,
+	"updated": "2023-01-06T11:00:52.870Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 8,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

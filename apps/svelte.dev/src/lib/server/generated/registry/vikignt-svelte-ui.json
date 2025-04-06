@@ -1,18 +1,19 @@
 {
-  "name": "@vikignt/svelte-ui",
-  "description": "Offers simple UI components for Svelte applications.",
-  "repo_url": "https://github.com/vikignt/svelte-ui",
-  "authors": [
-    "vikignt"
-  ],
-  "homepage": "https://github.com/vikignt/svelte-ui#readme",
-  "downloads": 24,
-  "dependents": 0,
-  "updated": "2019-11-27T19:47:49.800Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 317
+	"name": "@vikignt/svelte-ui",
+	"description": "Offers simple UI components for Svelte applications.",
+	"repo_url": "https://github.com/vikignt/svelte-ui",
+	"authors": ["vikignt"],
+	"homepage": "https://github.com/vikignt/svelte-ui#readme",
+	"downloads": 24,
+	"dependents": 0,
+	"updated": "2019-11-27T19:47:49.800Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 317,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

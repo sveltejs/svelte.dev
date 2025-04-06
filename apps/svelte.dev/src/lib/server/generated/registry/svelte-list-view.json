@@ -1,18 +1,19 @@
 {
-  "name": "svelte-list-view",
-  "description": "Create infinite list components for Svelte apps.",
-  "repo_url": "https://github.com/maxam2017/svelte-list-view",
-  "authors": [
-    "maxam2017"
-  ],
-  "homepage": "https://github.com/maxam2017/svelte-list-view#readme",
-  "downloads": 0,
-  "dependents": 0,
-  "updated": "2022-06-19T13:13:56.360Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "svelte-list-view",
+	"description": "Create infinite list components for Svelte apps.",
+	"repo_url": "https://github.com/maxam2017/svelte-list-view",
+	"authors": ["maxam2017"],
+	"homepage": "https://github.com/maxam2017/svelte-list-view#readme",
+	"downloads": 0,
+	"dependents": 0,
+	"updated": "2022-06-19T13:13:56.360Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

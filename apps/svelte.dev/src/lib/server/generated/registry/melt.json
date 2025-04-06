@@ -1,18 +1,19 @@
 {
-  "name": "melt",
-  "description": "Create headless UI component library for Svelte 5.",
-  "repo_url": "https://github.com/melt-ui/next-gen",
-  "authors": [
-    "tglide_personal"
-  ],
-  "homepage": "https://next.melt-ui.com/",
-  "downloads": 1704,
-  "dependents": 0,
-  "updated": "2025-03-27T15:44:52.701Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 139
+	"name": "melt",
+	"description": "Create headless UI component library for Svelte 5.",
+	"repo_url": "https://github.com/melt-ui/next-gen",
+	"authors": ["tglide_personal"],
+	"homepage": "https://next.melt-ui.com/",
+	"downloads": 1704,
+	"dependents": 0,
+	"updated": "2025-03-27T15:44:52.701Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 141,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

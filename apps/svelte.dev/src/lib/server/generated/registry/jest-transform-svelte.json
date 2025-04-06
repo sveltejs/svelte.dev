@@ -1,18 +1,19 @@
 {
-  "name": "jest-transform-svelte",
-  "description": "Transform Svelte components for Jest testing.",
-  "repo_url": "https://github.com/rspieker/jest-transform-svelte",
-  "authors": [
-    "rogier.spieker"
-  ],
-  "homepage": "https://github.com/rspieker/jest-transform-svelte#readme",
-  "downloads": 1258,
-  "dependents": 2,
-  "updated": "2020-01-16T06:53:51.360Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 35
+	"name": "jest-transform-svelte",
+	"description": "Transform Svelte components for Jest testing.",
+	"repo_url": "https://github.com/rspieker/jest-transform-svelte",
+	"authors": ["rogier.spieker"],
+	"homepage": "https://github.com/rspieker/jest-transform-svelte#readme",
+	"downloads": 1258,
+	"dependents": 2,
+	"updated": "2020-01-16T06:53:51.360Z",
+	"tags": ["tooling"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 35,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

@@ -1,16 +1,17 @@
 {
-  "name": "@sveltecool/smelt",
-  "description": "Build forms with validation in Svelte applications.",
-  "repo_url": "",
-  "authors": [
-    "cstrnt"
-  ],
-  "downloads": 3,
-  "dependents": 0,
-  "updated": "2020-03-29T11:07:03.907Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@sveltecool/smelt",
+	"description": "Build forms with validation in Svelte applications.",
+	"repo_url": "",
+	"authors": ["cstrnt"],
+	"downloads": 3,
+	"dependents": 0,
+	"updated": "2020-03-29T11:07:03.907Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,19 +1,19 @@
 {
-  "name": "svault",
-  "description": "Provide authentication and user management for SvelteKit applications.",
-  "repo_url": "https://github.com/oslabs-beta/Svault",
-  "authors": [
-    "mbuen21",
-    "tristbt"
-  ],
-  "homepage": "https://svault.dev",
-  "downloads": 4,
-  "dependents": 0,
-  "updated": "2023-07-23T00:08:53.291Z",
-  "tags": [
-    "auth"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 65
+	"name": "svault",
+	"description": "Provide authentication and user management for SvelteKit applications.",
+	"repo_url": "https://github.com/oslabs-beta/Svault",
+	"authors": ["mbuen21", "tristbt"],
+	"homepage": "https://svault.dev",
+	"downloads": 4,
+	"dependents": 0,
+	"updated": "2023-07-23T00:08:53.291Z",
+	"tags": ["auth"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 65,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

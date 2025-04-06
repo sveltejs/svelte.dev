@@ -1,16 +1,17 @@
 {
-  "name": "@htmlbricks/hb-dashboard-card1",
-  "description": "Create dashboard cards with Svelte web components.",
-  "repo_url": "",
-  "authors": [
-    "dariocaruso"
-  ],
-  "downloads": 274,
-  "dependents": 0,
-  "updated": "2025-03-24T18:07:11.998Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@htmlbricks/hb-dashboard-card1",
+	"description": "Create dashboard cards with Svelte web components.",
+	"repo_url": "",
+	"authors": ["dariocaruso"],
+	"downloads": 274,
+	"dependents": 0,
+	"updated": "2025-03-24T18:07:11.998Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

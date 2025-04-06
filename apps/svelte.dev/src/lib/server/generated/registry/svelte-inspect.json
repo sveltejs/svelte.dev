@@ -1,18 +1,19 @@
 {
-  "name": "svelte-inspect",
-  "description": "Inspects Svelte objects within development environments.",
-  "repo_url": "https://github.com/trbrc/svelte-inspect",
-  "authors": [
-    "trbrc"
-  ],
-  "homepage": "https://github.com/trbrc/svelte-inspect",
-  "downloads": 42,
-  "dependents": 0,
-  "updated": "2022-01-20T17:11:35.757Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 35
+	"name": "svelte-inspect",
+	"description": "Inspects Svelte objects within development environments.",
+	"repo_url": "https://github.com/trbrc/svelte-inspect",
+	"authors": ["trbrc"],
+	"homepage": "https://github.com/trbrc/svelte-inspect",
+	"downloads": 42,
+	"dependents": 0,
+	"updated": "2022-01-20T17:11:35.757Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 35,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

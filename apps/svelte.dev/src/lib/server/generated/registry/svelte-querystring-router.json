@@ -1,18 +1,19 @@
 {
-  "name": "svelte-querystring-router",
-  "description": "Serialize Svelte app state to querystring without full routing.",
-  "repo_url": "https://github.com/TehShrike/svelte-querystring-router",
-  "authors": [
-    "tehshrike"
-  ],
-  "homepage": "https://github.com/TehShrike/svelte-querystring-router#readme",
-  "downloads": 50,
-  "dependents": 0,
-  "updated": "2018-07-03T17:46:38.854Z",
-  "tags": [
-    "router"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 6
+	"name": "svelte-querystring-router",
+	"description": "Serialize Svelte app state to querystring without full routing.",
+	"repo_url": "https://github.com/TehShrike/svelte-querystring-router",
+	"authors": ["tehshrike"],
+	"homepage": "https://github.com/TehShrike/svelte-querystring-router#readme",
+	"downloads": 50,
+	"dependents": 0,
+	"updated": "2018-07-03T17:46:38.854Z",
+	"tags": ["router"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 6,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	}
 }

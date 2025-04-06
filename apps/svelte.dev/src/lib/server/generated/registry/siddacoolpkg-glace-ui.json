@@ -1,16 +1,17 @@
 {
-  "name": "@siddacoolpkg/glace-ui",
-  "description": "Provides UI components for Svelte applications.",
-  "repo_url": "",
-  "authors": [
-    "siddacool"
-  ],
-  "downloads": 57,
-  "dependents": 0,
-  "updated": "2025-03-19T09:39:44.898Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "@siddacoolpkg/glace-ui",
+	"description": "Provides UI components for Svelte applications.",
+	"repo_url": "",
+	"authors": ["siddacool"],
+	"downloads": 57,
+	"dependents": 0,
+	"updated": "2025-03-19T09:39:44.898Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

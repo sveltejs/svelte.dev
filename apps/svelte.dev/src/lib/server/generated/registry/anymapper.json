@@ -1,18 +1,19 @@
 {
-  "name": "anymapper",
-  "description": "Visualize data as zoomable map in Svelte.",
-  "repo_url": "https://github.com/webvis/anymapper",
-  "authors": [
-    "nitaku"
-  ],
-  "homepage": "https://github.com/webvis/anymapper#readme",
-  "downloads": 120,
-  "dependents": 0,
-  "updated": "2023-03-21T11:29:04.430Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 4
+	"name": "anymapper",
+	"description": "Visualize data as zoomable map in Svelte.",
+	"repo_url": "https://github.com/webvis/anymapper",
+	"authors": ["nitaku"],
+	"homepage": "https://github.com/webvis/anymapper#readme",
+	"downloads": 120,
+	"dependents": 0,
+	"updated": "2023-03-21T11:29:04.430Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 4,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

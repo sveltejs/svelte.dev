@@ -1,16 +1,17 @@
 {
-  "name": "ccs-svelte-ag-grid",
-  "description": "Barebones wrapper around ag-grid for Svelte applications.",
-  "repo_url": "",
-  "authors": [
-    "crecatalyst"
-  ],
-  "downloads": 7,
-  "dependents": 1,
-  "updated": "2021-04-20T08:16:35.596Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "ccs-svelte-ag-grid",
+	"description": "Barebones wrapper around ag-grid for Svelte applications.",
+	"repo_url": "",
+	"authors": ["crecatalyst"],
+	"downloads": 7,
+	"dependents": 1,
+	"updated": "2021-04-20T08:16:35.596Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

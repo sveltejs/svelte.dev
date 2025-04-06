@@ -1,18 +1,19 @@
 {
-  "name": "create-skittle",
-  "description": "Generate new SvelteKit projects with added features.",
-  "repo_url": "https://github.com/cowboycodr/skittle",
-  "authors": [
-    "cowboycodr"
-  ],
-  "homepage": "https://kit.svelte.dev",
-  "downloads": 3,
-  "dependents": 0,
-  "updated": "2024-08-22T02:40:44.001Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 4
+	"name": "create-skittle",
+	"description": "Generate new SvelteKit projects with added features.",
+	"repo_url": "https://github.com/cowboycodr/skittle",
+	"authors": ["cowboycodr"],
+	"homepage": "https://kit.svelte.dev",
+	"downloads": 3,
+	"dependents": 0,
+	"updated": "2024-08-22T02:40:44.001Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 4,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

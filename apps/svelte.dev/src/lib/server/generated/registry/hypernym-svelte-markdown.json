@@ -1,20 +1,19 @@
 {
-  "name": "@hypernym/svelte-markdown",
-  "description": "Preprocess Markdown files into Svelte components.",
-  "repo_url": "https://github.com/hypernym-studio/svelte-markdown",
-  "authors": [
-    "ivodolenc",
-    "hypernym"
-  ],
-  "homepage": "https://github.com/hypernym-studio/svelte-markdown",
-  "downloads": 82,
-  "dependents": 0,
-  "updated": "2025-03-18T19:02:47.745Z",
-  "tags": [
-    "content",
-    "tooling"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 5
+	"name": "@hypernym/svelte-markdown",
+	"description": "Preprocess Markdown files into Svelte components.",
+	"repo_url": "https://github.com/hypernym-studio/svelte-markdown",
+	"authors": ["ivodolenc", "hypernym"],
+	"homepage": "https://github.com/hypernym-studio/svelte-markdown",
+	"downloads": 82,
+	"dependents": 0,
+	"updated": "2025-03-18T19:02:47.745Z",
+	"tags": ["content", "tooling"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 5,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

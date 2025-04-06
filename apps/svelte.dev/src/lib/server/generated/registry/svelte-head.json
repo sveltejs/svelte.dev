@@ -1,16 +1,17 @@
 {
-  "name": "svelte-head",
-  "description": "Manage meta information for Svelte applications.",
-  "repo_url": "",
-  "authors": [
-    "phi"
-  ],
-  "downloads": 90,
-  "dependents": 0,
-  "updated": "2023-03-27T14:23:44.444Z",
-  "tags": [
-    "seo"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-head",
+	"description": "Manage meta information for Svelte applications.",
+	"repo_url": "",
+	"authors": ["phi"],
+	"downloads": 90,
+	"dependents": 0,
+	"updated": "2023-03-27T14:23:44.444Z",
+	"tags": ["seo"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

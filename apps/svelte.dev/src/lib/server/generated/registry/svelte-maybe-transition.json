@@ -1,18 +1,19 @@
 {
-  "name": "svelte-maybe-transition",
-  "description": "Enable and modify Svelte transitions dynamically.",
-  "repo_url": "https://github.com/kiosion/svelte-maybe-transition",
-  "authors": [
-    "kiosion"
-  ],
-  "homepage": "https://github.com/kiosion/svelte-maybe-transition#readme",
-  "downloads": 0,
-  "dependents": 0,
-  "updated": "2023-02-03T05:03:37.806Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "svelte-maybe-transition",
+	"description": "Enable and modify Svelte transitions dynamically.",
+	"repo_url": "https://github.com/kiosion/svelte-maybe-transition",
+	"authors": ["kiosion"],
+	"homepage": "https://github.com/kiosion/svelte-maybe-transition#readme",
+	"downloads": 0,
+	"dependents": 0,
+	"updated": "2023-02-03T05:03:37.806Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

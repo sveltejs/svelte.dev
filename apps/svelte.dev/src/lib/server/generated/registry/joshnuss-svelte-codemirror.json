@@ -1,16 +1,17 @@
 {
-  "name": "@joshnuss/svelte-codemirror",
-  "description": "Integrate CodeMirror editor with Svelte.",
-  "repo_url": "",
-  "authors": [
-    "joshnuss"
-  ],
-  "downloads": 106,
-  "dependents": 0,
-  "updated": "2021-07-15T01:31:16.513Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@joshnuss/svelte-codemirror",
+	"description": "Integrate CodeMirror editor with Svelte.",
+	"repo_url": "",
+	"authors": ["joshnuss"],
+	"downloads": 106,
+	"dependents": 0,
+	"updated": "2021-07-15T01:31:16.513Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "@dimfeld/svelte-lazyload",
-  "description": "Lazy load images and other content in Svelte apps.",
-  "repo_url": "https://github.com/dimfeld/svelte-lazyload",
-  "authors": [
-    "dimfeld"
-  ],
-  "homepage": "https://github.com/dimfeld/svelte-lazyload#readme",
-  "downloads": 130,
-  "dependents": 0,
-  "updated": "2021-10-22T07:41:49.538Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "@dimfeld/svelte-lazyload",
+	"description": "Lazy load images and other content in Svelte apps.",
+	"repo_url": "https://github.com/dimfeld/svelte-lazyload",
+	"authors": ["dimfeld"],
+	"homepage": "https://github.com/dimfeld/svelte-lazyload#readme",
+	"downloads": 130,
+	"dependents": 0,
+	"updated": "2021-10-22T07:41:49.538Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

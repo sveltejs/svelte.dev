@@ -1,18 +1,19 @@
 {
-  "name": "svelte-zoo",
-  "description": "Provides Svelte components for building doc sites.",
-  "repo_url": "https://github.com/janosh/svelte-zoo",
-  "authors": [
-    "janosh"
-  ],
-  "homepage": "https://janosh.github.io/svelte-zoo",
-  "downloads": 157,
-  "dependents": 1,
-  "updated": "2025-02-18T01:35:28.682Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 6
+	"name": "svelte-zoo",
+	"description": "Provides Svelte components for building doc sites.",
+	"repo_url": "https://github.com/janosh/svelte-zoo",
+	"authors": ["janosh"],
+	"homepage": "https://janosh.github.io/svelte-zoo",
+	"downloads": 157,
+	"dependents": 1,
+	"updated": "2025-02-18T01:35:28.682Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 6,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "@kahi-ui/framework",
-  "description": "Create UI with Kahi UI, a Svelte component library.",
-  "repo_url": "https://github.com/novacbn/kahi-ui",
-  "authors": [
-    "novacbn"
-  ],
-  "homepage": "https://github.com/novacbn/kahi-ui#readme",
-  "downloads": 75,
-  "dependents": 0,
-  "updated": "2022-03-19T19:31:18.325Z",
-  "tags": [
-    "design-system"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 187
+	"name": "@kahi-ui/framework",
+	"description": "Create UI with Kahi UI, a Svelte component library.",
+	"repo_url": "https://github.com/novacbn/kahi-ui",
+	"authors": ["novacbn"],
+	"homepage": "https://github.com/novacbn/kahi-ui#readme",
+	"downloads": 75,
+	"dependents": 0,
+	"updated": "2022-03-19T19:31:18.325Z",
+	"tags": ["design-system"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 187,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,16 +1,17 @@
 {
-  "name": "hyinsit-bbui",
-  "description": "Offers UI components for Budibase projects, built with Svelte.",
-  "repo_url": "",
-  "authors": [
-    "hyinsit"
-  ],
-  "downloads": 1,
-  "dependents": 3,
-  "updated": "2022-11-14T09:21:26.490Z",
-  "tags": [
-    "design-system"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "hyinsit-bbui",
+	"description": "Offers UI components for Budibase projects, built with Svelte.",
+	"repo_url": "",
+	"authors": ["hyinsit"],
+	"downloads": 1,
+	"dependents": 3,
+	"updated": "2022-11-14T09:21:26.490Z",
+	"tags": ["design-system"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

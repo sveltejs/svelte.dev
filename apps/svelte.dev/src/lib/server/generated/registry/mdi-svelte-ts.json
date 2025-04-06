@@ -1,16 +1,17 @@
 {
-  "name": "mdi-svelte-ts",
-  "description": "Use Material Design Icons as Svelte components with TypeScript support.",
-  "repo_url": "",
-  "authors": [
-    "abeldebruijn"
-  ],
-  "downloads": 20,
-  "dependents": 0,
-  "updated": "2022-09-22T13:48:07.272Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "mdi-svelte-ts",
+	"description": "Use Material Design Icons as Svelte components with TypeScript support.",
+	"repo_url": "",
+	"authors": ["abeldebruijn"],
+	"downloads": 20,
+	"dependents": 0,
+	"updated": "2022-09-22T13:48:07.272Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

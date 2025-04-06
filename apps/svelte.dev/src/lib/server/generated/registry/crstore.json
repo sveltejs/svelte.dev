@@ -1,18 +1,19 @@
 {
-  "name": "crstore",
-  "description": "Create conflict-free replicated stores for Svelte.",
-  "repo_url": "https://github.com/Azarattum/CRStore",
-  "authors": [
-    "azarattum"
-  ],
-  "homepage": "https://github.com/Azarattum/CRStore#readme",
-  "downloads": 380,
-  "dependents": 0,
-  "updated": "2025-02-11T04:49:18.967Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 100
+	"name": "crstore",
+	"description": "Create conflict-free replicated stores for Svelte.",
+	"repo_url": "https://github.com/Azarattum/CRStore",
+	"authors": ["azarattum"],
+	"homepage": "https://github.com/Azarattum/CRStore#readme",
+	"downloads": 380,
+	"dependents": 0,
+	"updated": "2025-02-11T04:49:18.967Z",
+	"tags": ["miscellaneous"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 100,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

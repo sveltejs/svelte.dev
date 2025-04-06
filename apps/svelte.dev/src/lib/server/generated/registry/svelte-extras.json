@@ -1,18 +1,19 @@
 {
-  "name": "svelte-extras",
-  "description": "Provides extra array and tweening methods for Svelte components.",
-  "repo_url": "https://github.com/sveltejs/svelte-extras",
-  "authors": [
-    "rich_harris"
-  ],
-  "homepage": "https://github.com/sveltejs/svelte-extras#readme",
-  "downloads": 160,
-  "dependents": 5,
-  "updated": "2018-04-19T16:21:25.308Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 43
+	"name": "svelte-extras",
+	"description": "Provides extra array and tweening methods for Svelte components.",
+	"repo_url": "https://github.com/sveltejs/svelte-extras",
+	"authors": ["rich_harris"],
+	"homepage": "https://github.com/sveltejs/svelte-extras#readme",
+	"downloads": 160,
+	"dependents": 5,
+	"updated": "2018-04-19T16:21:25.308Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 43,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	}
 }

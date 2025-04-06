@@ -1,17 +1,18 @@
 {
-  "name": "svelte-design",
-  "description": "UI library based on Svelte.",
-  "repo_url": "https://gitee.com/vnaki/svelted",
-  "authors": [
-    "vnaki"
-  ],
-  "homepage": "https://gitee.com/vnaki/svelted",
-  "downloads": 9,
-  "dependents": 0,
-  "updated": "2022-12-01T10:54:24.243Z",
-  "tags": [
-    "design-system"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-design",
+	"description": "UI library based on Svelte.",
+	"repo_url": "https://gitee.com/vnaki/svelted",
+	"authors": ["vnaki"],
+	"homepage": "https://gitee.com/vnaki/svelted",
+	"downloads": 9,
+	"dependents": 0,
+	"updated": "2022-12-01T10:54:24.243Z",
+	"tags": ["design-system"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,19 +1,19 @@
 {
-  "name": "@nubolab-ffwd/svelte-fluent",
-  "description": "Integrate Mozilla's Fluent syntax for Svelte localization.",
-  "repo_url": "https://github.com/nubolab-ffwd/svelte-fluent",
-  "authors": [
-    "sfriedel",
-    "dtldtl"
-  ],
-  "homepage": "https://github.com/nubolab-ffwd/svelte-fluent",
-  "downloads": 66,
-  "dependents": 0,
-  "updated": "2024-12-06T13:29:07.434Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 98
+	"name": "@nubolab-ffwd/svelte-fluent",
+	"description": "Integrate Mozilla's Fluent syntax for Svelte localization.",
+	"repo_url": "https://github.com/nubolab-ffwd/svelte-fluent",
+	"authors": ["sfriedel", "dtldtl"],
+	"homepage": "https://github.com/nubolab-ffwd/svelte-fluent",
+	"downloads": 66,
+	"dependents": 0,
+	"updated": "2024-12-06T13:29:07.434Z",
+	"tags": ["integration"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 98,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

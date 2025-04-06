@@ -1,21 +1,18 @@
 {
-  "name": "@boxyhq/svelte-ui",
-  "description": "BoxyHQ's Svelte UI components for enterprise features.",
-  "repo_url": "",
-  "authors": [
-    "deepakp",
-    "utkarsh_boxyhq",
-    "aswin_boxyhq",
-    "kiranboxyhq"
-  ],
-  "homepage": "https://github.com/boxyhq/ui",
-  "downloads": 111,
-  "dependents": 0,
-  "updated": "2025-02-28T16:24:58.185Z",
-  "tags": [
-    "ui",
-    "auth"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@boxyhq/svelte-ui",
+	"description": "BoxyHQ's Svelte UI components for enterprise features.",
+	"repo_url": "",
+	"authors": ["deepakp", "utkarsh_boxyhq", "aswin_boxyhq", "kiranboxyhq"],
+	"homepage": "https://github.com/boxyhq/ui",
+	"downloads": 111,
+	"dependents": 0,
+	"updated": "2025-02-28T16:24:58.185Z",
+	"tags": ["ui", "auth"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": false
+	}
 }

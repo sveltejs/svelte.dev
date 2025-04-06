@@ -1,18 +1,19 @@
 {
-  "name": "veeui-svelte",
-  "description": "Provide Vee UI components for Svelte.",
-  "repo_url": "https://github.com/vleedesigntheory/veeui-svelte",
-  "authors": [
-    "we452366"
-  ],
-  "homepage": "https://github.com/vleedesigntheory/veeui-svelte#readme",
-  "downloads": 2,
-  "dependents": 0,
-  "updated": "2023-09-24T16:12:04.549Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "veeui-svelte",
+	"description": "Provide Vee UI components for Svelte.",
+	"repo_url": "https://github.com/vleedesigntheory/veeui-svelte",
+	"authors": ["we452366"],
+	"homepage": "https://github.com/vleedesigntheory/veeui-svelte#readme",
+	"downloads": 2,
+	"dependents": 0,
+	"updated": "2023-09-24T16:12:04.549Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

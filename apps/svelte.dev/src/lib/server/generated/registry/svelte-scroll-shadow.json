@@ -1,18 +1,19 @@
 {
-  "name": "svelte-scroll-shadow",
-  "description": "Customize scroll, insert shadow when scrolling exists.",
-  "repo_url": "https://github.com/andrelmlins/svelte-scroll-shadow",
-  "authors": [
-    "andrelmlins"
-  ],
-  "homepage": "https://svelte-scroll-shadow.netlify.com/",
-  "downloads": 10,
-  "dependents": 0,
-  "updated": "2020-04-27T02:24:24.244Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 2
+	"name": "svelte-scroll-shadow",
+	"description": "Customize scroll, insert shadow when scrolling exists.",
+	"repo_url": "https://github.com/andrelmlins/svelte-scroll-shadow",
+	"authors": ["andrelmlins"],
+	"homepage": "https://svelte-scroll-shadow.netlify.com/",
+	"downloads": 10,
+	"dependents": 0,
+	"updated": "2020-04-27T02:24:24.244Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

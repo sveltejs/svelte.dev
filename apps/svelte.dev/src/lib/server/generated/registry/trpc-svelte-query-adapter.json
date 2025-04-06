@@ -1,18 +1,19 @@
 {
-  "name": "trpc-svelte-query-adapter",
-  "description": "Integrate tRPC with Svelte Query for data fetching.",
-  "repo_url": "https://github.com/vishalbalaji/trpc-svelte-query-adapter",
-  "authors": [
-    "vishalbalaji"
-  ],
-  "homepage": "https://github.com/vishalbalaji/trpc-svelte-query-adapter#readme",
-  "downloads": 380,
-  "dependents": 0,
-  "updated": "2025-03-24T10:40:20.413Z",
-  "tags": [
-    "server"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 79
+	"name": "trpc-svelte-query-adapter",
+	"description": "Integrate tRPC with Svelte Query for data fetching.",
+	"repo_url": "https://github.com/vishalbalaji/trpc-svelte-query-adapter",
+	"authors": ["vishalbalaji"],
+	"homepage": "https://github.com/vishalbalaji/trpc-svelte-query-adapter#readme",
+	"downloads": 380,
+	"dependents": 0,
+	"updated": "2025-03-24T10:40:20.413Z",
+	"tags": ["server"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 79,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

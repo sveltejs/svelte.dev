@@ -1,18 +1,19 @@
 {
-  "name": "svelte-lock",
-  "description": "Manage reactive locks for Svelte 5 applications.",
-  "repo_url": "https://github.com/akeylimepie/svelte-lock",
-  "authors": [
-    "akeylimepie"
-  ],
-  "homepage": "https://github.com/akeylimepie/svelte-lock#readme",
-  "downloads": 85,
-  "dependents": 1,
-  "updated": "2025-04-03T03:30:57.227Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelte-lock",
+	"description": "Manage reactive locks for Svelte 5 applications.",
+	"repo_url": "https://github.com/akeylimepie/svelte-lock",
+	"authors": ["akeylimepie"],
+	"homepage": "https://github.com/akeylimepie/svelte-lock#readme",
+	"downloads": 85,
+	"dependents": 1,
+	"updated": "2025-04-03T03:30:57.227Z",
+	"tags": ["miscellaneous"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

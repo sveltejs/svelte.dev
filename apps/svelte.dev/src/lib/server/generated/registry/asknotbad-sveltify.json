@@ -1,18 +1,19 @@
 {
-  "name": "@asknotbad/sveltify",
-  "description": "Create Svelte UI components with Sveltify.",
-  "repo_url": "https://github.com/asknotbad/sveltify",
-  "authors": [
-    "zdpro"
-  ],
-  "homepage": "https://sveltify.dev",
-  "downloads": 0,
-  "dependents": 0,
-  "updated": "2022-07-16T11:18:28.544Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@asknotbad/sveltify",
+	"description": "Create Svelte UI components with Sveltify.",
+	"repo_url": "https://github.com/asknotbad/sveltify",
+	"authors": ["zdpro"],
+	"homepage": "https://sveltify.dev",
+	"downloads": 0,
+	"dependents": 0,
+	"updated": "2022-07-16T11:18:28.544Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

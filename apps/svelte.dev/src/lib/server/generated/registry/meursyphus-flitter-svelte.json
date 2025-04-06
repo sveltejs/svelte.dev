@@ -1,19 +1,19 @@
 {
-  "name": "@meursyphus/flitter-svelte",
-  "description": "Integrates Flitter, a widget-based SVG framework, with Svelte.",
-  "repo_url": "https://github.com/meursyphus/flitter",
-  "authors": [
-    "anseotmd555",
-    "leedongwook"
-  ],
-  "homepage": "https://flitter.pages.dev",
-  "downloads": 9,
-  "dependents": 0,
-  "updated": "2024-06-28T06:42:00.752Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 330
+	"name": "@meursyphus/flitter-svelte",
+	"description": "Integrates Flitter, a widget-based SVG framework, with Svelte.",
+	"repo_url": "https://github.com/meursyphus/flitter",
+	"authors": ["anseotmd555", "leedongwook"],
+	"homepage": "https://flitter.pages.dev",
+	"downloads": 9,
+	"dependents": 0,
+	"updated": "2024-06-28T06:42:00.752Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 330,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

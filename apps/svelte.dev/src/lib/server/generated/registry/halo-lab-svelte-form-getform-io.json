@@ -1,20 +1,19 @@
 {
-  "name": "@halo-lab/svelte-form-getform-io",
-  "description": "Builds forms with validation for Svelte using Getform.",
-  "repo_url": "https://github.com/Halo-Lab/svelte-form-getform-io",
-  "authors": [
-    "prostory",
-    "halolab",
-    "tyagun.aleksandr"
-  ],
-  "homepage": "https://github.com/Halo-Lab/svelte-form-getform-io#readme",
-  "downloads": 0,
-  "dependents": 0,
-  "updated": "2023-04-26T15:19:25.091Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@halo-lab/svelte-form-getform-io",
+	"description": "Builds forms with validation for Svelte using Getform.",
+	"repo_url": "https://github.com/Halo-Lab/svelte-form-getform-io",
+	"authors": ["prostory", "halolab", "tyagun.aleksandr"],
+	"homepage": "https://github.com/Halo-Lab/svelte-form-getform-io#readme",
+	"downloads": 0,
+	"dependents": 0,
+	"updated": "2023-04-26T15:19:25.091Z",
+	"tags": ["integration"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

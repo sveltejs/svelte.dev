@@ -1,18 +1,18 @@
 {
-  "name": "@statsforvalteren/staf-komponentbibliotek-svelte",
-  "description": "Provide a component library for Svelte applications.",
-  "repo_url": "https://github.com/fmfaDigitalisering/staf-komponentbibliotek-svelte",
-  "authors": [
-    "pekaaw",
-    "krdon"
-  ],
-  "homepage": "https://github.com/fmfaDigitalisering/staf-komponentbibliotek-svelte#readme",
-  "downloads": 37,
-  "dependents": 0,
-  "updated": "2022-02-01T08:54:31.521Z",
-  "tags": [
-    "design-system"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@statsforvalteren/staf-komponentbibliotek-svelte",
+	"description": "Provide a component library for Svelte applications.",
+	"repo_url": "https://github.com/fmfaDigitalisering/staf-komponentbibliotek-svelte",
+	"authors": ["pekaaw", "krdon"],
+	"homepage": "https://github.com/fmfaDigitalisering/staf-komponentbibliotek-svelte#readme",
+	"downloads": 37,
+	"dependents": 0,
+	"updated": "2022-02-01T08:54:31.521Z",
+	"tags": ["design-system"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

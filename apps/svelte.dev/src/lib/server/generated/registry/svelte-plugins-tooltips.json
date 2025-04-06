@@ -1,18 +1,19 @@
 {
-  "name": "@svelte-plugins/tooltips",
-  "description": "Provides simple tooltip action and component for Svelte.",
-  "repo_url": "https://github.com/svelte-plugins/tooltips",
-  "authors": [
-    "dysfunc"
-  ],
-  "homepage": "https://github.com/svelte-plugins/tooltips",
-  "downloads": 4896,
-  "dependents": 2,
-  "updated": "2025-02-07T04:58:52.924Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 71
+	"name": "@svelte-plugins/tooltips",
+	"description": "Provides simple tooltip action and component for Svelte.",
+	"repo_url": "https://github.com/svelte-plugins/tooltips",
+	"authors": ["dysfunc"],
+	"homepage": "https://github.com/svelte-plugins/tooltips",
+	"downloads": 4896,
+	"dependents": 2,
+	"updated": "2025-02-07T04:58:52.924Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 71,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

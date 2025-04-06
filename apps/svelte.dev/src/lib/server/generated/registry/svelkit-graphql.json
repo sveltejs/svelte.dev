@@ -1,18 +1,19 @@
 {
-  "name": "@svelkit/graphql",
-  "description": "Use GraphQL APIs in Svelte applications.",
-  "repo_url": "https://github.com/kenoxa/svelkit",
-  "authors": [
-    "sastan"
-  ],
-  "homepage": "https://github.com/kenoxa/svelkit#readme",
-  "downloads": 36,
-  "dependents": 1,
-  "updated": "2020-09-25T12:46:02.876Z",
-  "tags": [
-    "server"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 7
+	"name": "@svelkit/graphql",
+	"description": "Use GraphQL APIs in Svelte applications.",
+	"repo_url": "https://github.com/kenoxa/svelkit",
+	"authors": ["sastan"],
+	"homepage": "https://github.com/kenoxa/svelkit#readme",
+	"downloads": 36,
+	"dependents": 1,
+	"updated": "2020-09-25T12:46:02.876Z",
+	"tags": ["server"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 7,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

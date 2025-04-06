@@ -1,18 +1,19 @@
 {
-  "name": "@gregg-cbs/svelte-date-picker",
-  "description": "Provide date and time picker components for Svelte.",
-  "repo_url": "https://github.com/coldbrewstudios/svelte-date-picker",
-  "authors": [
-    "gregg-cbs"
-  ],
-  "homepage": "https://github.com/coldbrewstudios",
-  "downloads": 5,
-  "dependents": 0,
-  "updated": "2024-05-17T14:30:44.548Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@gregg-cbs/svelte-date-picker",
+	"description": "Provide date and time picker components for Svelte.",
+	"repo_url": "https://github.com/coldbrewstudios/svelte-date-picker",
+	"authors": ["gregg-cbs"],
+	"homepage": "https://github.com/coldbrewstudios",
+	"downloads": 5,
+	"dependents": 0,
+	"updated": "2024-05-17T14:30:44.548Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": false
+	}
 }

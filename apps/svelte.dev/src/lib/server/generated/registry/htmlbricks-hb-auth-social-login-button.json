@@ -1,16 +1,17 @@
 {
-  "name": "@htmlbricks/hb-auth-social-login-button",
-  "description": "Create auth social login button web component.",
-  "repo_url": "",
-  "authors": [
-    "dariocaruso"
-  ],
-  "downloads": 167,
-  "dependents": 1,
-  "updated": "2025-03-24T18:07:12.348Z",
-  "tags": [
-    "auth"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@htmlbricks/hb-auth-social-login-button",
+	"description": "Create auth social login button web component.",
+	"repo_url": "",
+	"authors": ["dariocaruso"],
+	"downloads": 167,
+	"dependents": 1,
+	"updated": "2025-03-24T18:07:12.348Z",
+	"tags": ["auth"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	}
 }

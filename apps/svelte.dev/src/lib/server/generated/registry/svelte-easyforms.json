@@ -1,18 +1,19 @@
 {
-  "name": "svelte-easyforms",
-  "description": "Build forms with validation using inputs and textarea components.",
-  "repo_url": "https://github.com/kevmodrome/svelte-easyforms",
-  "authors": [
-    "kevmodrome"
-  ],
-  "homepage": "https://github.com/kevmodrome/svelte-easyforms#readme",
-  "downloads": 11,
-  "dependents": 0,
-  "updated": "2019-12-05T16:04:21.334Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 11
+	"name": "svelte-easyforms",
+	"description": "Build forms with validation using inputs and textarea components.",
+	"repo_url": "https://github.com/kevmodrome/svelte-easyforms",
+	"authors": ["kevmodrome"],
+	"homepage": "https://github.com/kevmodrome/svelte-easyforms#readme",
+	"downloads": 11,
+	"dependents": 0,
+	"updated": "2019-12-05T16:04:21.334Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 11,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

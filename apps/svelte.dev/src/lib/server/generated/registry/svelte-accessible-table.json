@@ -1,18 +1,19 @@
 {
-  "name": "svelte-accessible-table",
-  "description": "Create accessible table component for Svelte.",
-  "repo_url": "https://github.com/metonym/svelte-accessible-table",
-  "authors": [
-    "metonym"
-  ],
-  "homepage": "https://github.com/metonym/svelte-accessible-table",
-  "downloads": 8,
-  "dependents": 0,
-  "updated": "2022-01-24T16:09:32.934Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 3
+	"name": "svelte-accessible-table",
+	"description": "Create accessible table component for Svelte.",
+	"repo_url": "https://github.com/metonym/svelte-accessible-table",
+	"authors": ["metonym"],
+	"homepage": "https://github.com/metonym/svelte-accessible-table",
+	"downloads": 8,
+	"dependents": 0,
+	"updated": "2022-01-24T16:09:32.934Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 3,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

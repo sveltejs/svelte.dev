@@ -1,18 +1,19 @@
 {
-  "name": "svelte-splide",
-  "description": "Implement Splide slider component for Svelte.",
-  "repo_url": "https://github.com/fiorelorenzo/svelte-splide",
-  "authors": [
-    "fiorelorenzo"
-  ],
-  "homepage": "https://github.com/fiorelorenzo/svelte-splide",
-  "downloads": 13,
-  "dependents": 0,
-  "updated": "2021-01-11T17:32:48.003Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 4
+	"name": "svelte-splide",
+	"description": "Implement Splide slider component for Svelte.",
+	"repo_url": "https://github.com/fiorelorenzo/svelte-splide",
+	"authors": ["fiorelorenzo"],
+	"homepage": "https://github.com/fiorelorenzo/svelte-splide",
+	"downloads": 13,
+	"dependents": 0,
+	"updated": "2021-01-11T17:32:48.003Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 4,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

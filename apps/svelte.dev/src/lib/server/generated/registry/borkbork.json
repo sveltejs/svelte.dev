@@ -1,16 +1,17 @@
 {
-  "name": "borkbork",
-  "description": "Provide a base for building shareable Svelte component libraries.",
-  "repo_url": "",
-  "authors": [
-    "benbenbenbenbenben"
-  ],
-  "downloads": 4,
-  "dependents": 0,
-  "updated": "2020-08-22T00:23:45.234Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "borkbork",
+	"description": "Provide a base for building shareable Svelte component libraries.",
+	"repo_url": "",
+	"authors": ["benbenbenbenbenben"],
+	"downloads": 4,
+	"dependents": 0,
+	"updated": "2020-08-22T00:23:45.234Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

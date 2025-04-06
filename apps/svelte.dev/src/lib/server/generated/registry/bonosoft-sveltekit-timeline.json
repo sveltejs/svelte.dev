@@ -1,18 +1,19 @@
 {
-  "name": "@bonosoft/sveltekit-timeline",
-  "description": "Display timelines in SvelteKit applications.",
-  "repo_url": "https://github.com/bonosoft/sveltekit-timeline",
-  "authors": [
-    "bonosoft"
-  ],
-  "homepage": "https://github.com/bonosoft/sveltekit-timeline#readme",
-  "downloads": 138,
-  "dependents": 0,
-  "updated": "2023-04-11T21:11:38.944Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@bonosoft/sveltekit-timeline",
+	"description": "Display timelines in SvelteKit applications.",
+	"repo_url": "https://github.com/bonosoft/sveltekit-timeline",
+	"authors": ["bonosoft"],
+	"homepage": "https://github.com/bonosoft/sveltekit-timeline#readme",
+	"downloads": 138,
+	"dependents": 0,
+	"updated": "2023-04-11T21:11:38.944Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,17 +1,18 @@
 {
-  "name": "runic-ui",
-  "description": "Create headless UI components for Svelte apps.",
-  "repo_url": "https://github.com/runic-ui/runic-ui",
-  "authors": [
-    "buhodev"
-  ],
-  "homepage": "https://github.com/runic-ui/runic-ui#readme",
-  "downloads": 2,
-  "dependents": 0,
-  "updated": "2024-09-02T05:42:16.992Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "runic-ui",
+	"description": "Create headless UI components for Svelte apps.",
+	"repo_url": "https://github.com/runic-ui/runic-ui",
+	"authors": ["buhodev"],
+	"homepage": "https://github.com/runic-ui/runic-ui#readme",
+	"downloads": 2,
+	"dependents": 0,
+	"updated": "2024-09-02T05:42:16.992Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

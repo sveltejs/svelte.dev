@@ -1,17 +1,18 @@
 {
-  "name": "@fvilers/heroicons-svelte",
-  "description": "Use Heroicons SVG icons in Svelte applications.",
-  "repo_url": "",
-  "authors": [
-    "fvilers"
-  ],
-  "homepage": "https://github.com/fvilers/heroicons-svelte#readme",
-  "downloads": 7,
-  "dependents": 0,
-  "updated": "2025-01-28T13:49:35.237Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "@fvilers/heroicons-svelte",
+	"description": "Use Heroicons SVG icons in Svelte applications.",
+	"repo_url": "",
+	"authors": ["fvilers"],
+	"homepage": "https://github.com/fvilers/heroicons-svelte#readme",
+	"downloads": 7,
+	"dependents": 0,
+	"updated": "2025-01-28T13:49:35.237Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

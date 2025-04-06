@@ -1,19 +1,19 @@
 {
-  "name": "svelte-image-comparison",
-  "description": "Compare image or canvas elements in Svelte.",
-  "repo_url": "https://github.com/captaincodeman/svelte-image-comparison",
-  "authors": [
-    "captaincodeman"
-  ],
-  "homepage": "https://captaincodeman.github.io/svelte-image-comparison/",
-  "downloads": 6,
-  "dependents": 0,
-  "updated": "2024-04-27T18:56:28.004Z",
-  "tags": [
-    "ui",
-    "media"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 17
+	"name": "svelte-image-comparison",
+	"description": "Compare image or canvas elements in Svelte.",
+	"repo_url": "https://github.com/captaincodeman/svelte-image-comparison",
+	"authors": ["captaincodeman"],
+	"homepage": "https://captaincodeman.github.io/svelte-image-comparison/",
+	"downloads": 6,
+	"dependents": 0,
+	"updated": "2024-04-27T18:56:28.004Z",
+	"tags": ["ui", "media"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 17,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

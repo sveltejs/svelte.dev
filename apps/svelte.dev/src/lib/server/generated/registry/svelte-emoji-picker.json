@@ -1,16 +1,17 @@
 {
-  "name": "svelte-emoji-picker",
-  "description": "Add emoji picker component to Svelte apps.",
-  "repo_url": "",
-  "authors": [
-    "ehne"
-  ],
-  "downloads": 99,
-  "dependents": 0,
-  "updated": "2019-08-20T05:32:15.567Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-emoji-picker",
+	"description": "Add emoji picker component to Svelte apps.",
+	"repo_url": "",
+	"authors": ["ehne"],
+	"downloads": 99,
+	"dependents": 0,
+	"updated": "2019-08-20T05:32:15.567Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

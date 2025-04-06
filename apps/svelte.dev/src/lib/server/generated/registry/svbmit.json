@@ -1,19 +1,19 @@
 {
-  "name": "svbmit",
-  "description": "Validate forms in Svelte applications.",
-  "repo_url": "https://github.com/PierBover/svbmit",
-  "authors": [
-    "pier25"
-  ],
-  "homepage": "https://github.com/PierBover/svbmit#readme",
-  "downloads": 12,
-  "dependents": 0,
-  "updated": "2021-12-24T15:41:57.508Z",
-  "tags": [
-    "tooling",
-    "integration"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 2
+	"name": "svbmit",
+	"description": "Validate forms in Svelte applications.",
+	"repo_url": "https://github.com/PierBover/svbmit",
+	"authors": ["pier25"],
+	"homepage": "https://github.com/PierBover/svbmit#readme",
+	"downloads": 12,
+	"dependents": 0,
+	"updated": "2021-12-24T15:41:57.508Z",
+	"tags": ["tooling", "integration"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

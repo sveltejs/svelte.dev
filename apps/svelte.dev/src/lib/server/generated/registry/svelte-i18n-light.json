@@ -1,16 +1,17 @@
 {
-  "name": "svelte-i18n-light",
-  "description": "Lightweight internationalization and translation for Svelte apps.",
-  "repo_url": "",
-  "authors": [
-    "rolator"
-  ],
-  "downloads": 14,
-  "dependents": 0,
-  "updated": "2021-01-21T13:03:33.140Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-i18n-light",
+	"description": "Lightweight internationalization and translation for Svelte apps.",
+	"repo_url": "",
+	"authors": ["rolator"],
+	"downloads": 14,
+	"dependents": 0,
+	"updated": "2021-01-21T13:03:33.140Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

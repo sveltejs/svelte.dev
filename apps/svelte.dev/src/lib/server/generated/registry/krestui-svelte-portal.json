@@ -1,17 +1,18 @@
 {
-  "name": "@krestui/svelte-portal",
-  "description": "Implement portal functionality in Svelte applications.",
-  "repo_url": "https://github.com/krestui/krestui",
-  "authors": [
-    "hellokarthik"
-  ],
-  "homepage": "https://github.com/krestui/krestui#readme",
-  "downloads": 7,
-  "dependents": 1,
-  "updated": "2023-02-23T17:14:49.462Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@krestui/svelte-portal",
+	"description": "Implement portal functionality in Svelte applications.",
+	"repo_url": "https://github.com/krestui/krestui",
+	"authors": ["hellokarthik"],
+	"homepage": "https://github.com/krestui/krestui#readme",
+	"downloads": 7,
+	"dependents": 1,
+	"updated": "2023-02-23T17:14:49.462Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

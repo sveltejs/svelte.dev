@@ -1,18 +1,19 @@
 {
-  "name": "svelte-popover",
-  "description": "Create smart popover component for Svelte.",
-  "repo_url": "https://github.com/vaheqelyan/svelte-popover",
-  "authors": [
-    "vaheqelyan"
-  ],
-  "homepage": "https://github.com/vaheqelyan/svelte-popover#readme",
-  "downloads": 365,
-  "dependents": 0,
-  "updated": "2019-10-16T12:11:15.168Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 57
+	"name": "svelte-popover",
+	"description": "Create smart popover component for Svelte.",
+	"repo_url": "https://github.com/vaheqelyan/svelte-popover",
+	"authors": ["vaheqelyan"],
+	"homepage": "https://github.com/vaheqelyan/svelte-popover#readme",
+	"downloads": 365,
+	"dependents": 0,
+	"updated": "2019-10-16T12:11:15.168Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 57,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

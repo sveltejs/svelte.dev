@@ -1,20 +1,19 @@
 {
-  "name": "@keenmate/svelte-spa-router",
-  "description": "Implement SPA routing for Svelte 4 applications.",
-  "repo_url": "https://github.com/keenmate/svelte-spa-router",
-  "authors": [
-    "benjaminhorne",
-    "themaikxx",
-    "ondrejvalenta"
-  ],
-  "homepage": "https://github.com/KeenMate/svelte-spa-router#readme",
-  "downloads": 26,
-  "dependents": 0,
-  "updated": "2024-10-07T14:05:55.519Z",
-  "tags": [
-    "router"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@keenmate/svelte-spa-router",
+	"description": "Implement SPA routing for Svelte 4 applications.",
+	"repo_url": "https://github.com/keenmate/svelte-spa-router",
+	"authors": ["benjaminhorne", "themaikxx", "ondrejvalenta"],
+	"homepage": "https://github.com/KeenMate/svelte-spa-router#readme",
+	"downloads": 26,
+	"dependents": 0,
+	"updated": "2024-10-07T14:05:55.519Z",
+	"tags": ["router"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

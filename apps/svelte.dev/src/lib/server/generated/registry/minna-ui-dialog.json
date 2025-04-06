@@ -1,18 +1,19 @@
 {
-  "name": "@minna-ui/dialog",
-  "description": "Create dialog components for Svelte projects.",
-  "repo_url": "https://github.com/WeAreGenki/minna-ui",
-  "authors": [
-    "maxmilton"
-  ],
-  "homepage": "https://wearegenki.github.io/minna-ui",
-  "downloads": 6,
-  "dependents": 0,
-  "updated": "2019-04-14T19:53:59.669Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 87
+	"name": "@minna-ui/dialog",
+	"description": "Create dialog components for Svelte projects.",
+	"repo_url": "https://github.com/WeAreGenki/minna-ui",
+	"authors": ["maxmilton"],
+	"homepage": "https://wearegenki.github.io/minna-ui",
+	"downloads": 6,
+	"dependents": 0,
+	"updated": "2019-04-14T19:53:59.669Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 87,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,16 +1,17 @@
 {
-  "name": "@htmlbricks/hb-input-date",
-  "description": "Svelte-Bootstrap Date Input WebComponent.",
-  "repo_url": "",
-  "authors": [
-    "dariocaruso"
-  ],
-  "downloads": 502,
-  "dependents": 4,
-  "updated": "2025-03-24T18:07:15.016Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@htmlbricks/hb-input-date",
+	"description": "Svelte-Bootstrap Date Input WebComponent.",
+	"repo_url": "",
+	"authors": ["dariocaruso"],
+	"downloads": 502,
+	"dependents": 4,
+	"updated": "2025-03-24T18:07:15.016Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	}
 }

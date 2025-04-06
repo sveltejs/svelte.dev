@@ -1,18 +1,19 @@
 {
-  "name": "@hi-ashleyj/sveltekit-adapter-node-fullbundle",
-  "description": "Generate standalone Node server for SvelteKit apps.",
-  "repo_url": "https://github.com/hi-ashleyj/sveltekit-adapter-node-fullbundle",
-  "authors": [
-    "hi-ashleyj"
-  ],
-  "homepage": "https://svelte.dev",
-  "downloads": 8,
-  "dependents": 0,
-  "updated": "2025-02-16T23:19:14.182Z",
-  "tags": [
-    "adapter"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@hi-ashleyj/sveltekit-adapter-node-fullbundle",
+	"description": "Generate standalone Node server for SvelteKit apps.",
+	"repo_url": "https://github.com/hi-ashleyj/sveltekit-adapter-node-fullbundle",
+	"authors": ["hi-ashleyj"],
+	"homepage": "https://svelte.dev",
+	"downloads": 8,
+	"dependents": 0,
+	"updated": "2025-02-16T23:19:14.182Z",
+	"tags": ["adapter"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	}
 }

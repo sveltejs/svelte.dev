@@ -1,18 +1,19 @@
 {
-  "name": "@codewithshin/svelte-utterances",
-  "description": "Integrate Utterances comments into SvelteKit applications.",
-  "repo_url": "https://github.com/shinokada/svelte-uttrances",
-  "authors": [
-    "shinichiokada"
-  ],
-  "homepage": "https://github.com/shinokada/svelte-uttrances",
-  "downloads": 6,
-  "dependents": 0,
-  "updated": "2022-10-21T06:11:24.975Z",
-  "tags": [
-    "content"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 12
+	"name": "@codewithshin/svelte-utterances",
+	"description": "Integrate Utterances comments into SvelteKit applications.",
+	"repo_url": "https://github.com/shinokada/svelte-uttrances",
+	"authors": ["shinichiokada"],
+	"homepage": "https://github.com/shinokada/svelte-uttrances",
+	"downloads": 6,
+	"dependents": 0,
+	"updated": "2022-10-21T06:11:24.975Z",
+	"tags": ["content"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 12,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

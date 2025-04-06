@@ -1,18 +1,19 @@
 {
-  "name": "@whoisyeshua-svelte/modal-custom-element",
-  "description": "Create modal custom elements with Svelte.",
-  "repo_url": "https://github.com/whoisYeshua/svelte-modal-custom-element",
-  "authors": [
-    "whoisyeshua"
-  ],
-  "homepage": "https://github.com/whoisYeshua/svelte-modal-custom-element#readme",
-  "downloads": 39,
-  "dependents": 0,
-  "updated": "2023-10-26T18:23:44.013Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@whoisyeshua-svelte/modal-custom-element",
+	"description": "Create modal custom elements with Svelte.",
+	"repo_url": "https://github.com/whoisYeshua/svelte-modal-custom-element",
+	"authors": ["whoisyeshua"],
+	"homepage": "https://github.com/whoisYeshua/svelte-modal-custom-element#readme",
+	"downloads": 39,
+	"dependents": 0,
+	"updated": "2023-10-26T18:23:44.013Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

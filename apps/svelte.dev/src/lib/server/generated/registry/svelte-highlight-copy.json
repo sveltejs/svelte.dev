@@ -1,18 +1,19 @@
 {
-  "name": "svelte-highlight-copy",
-  "description": "Syntax highlighting for Svelte using highlight.js.",
-  "repo_url": "https://github.com/kayaman/svelte-highlight-copy",
-  "authors": [
-    "marcoantoniogonzalezjunior"
-  ],
-  "homepage": "https://github.com/kayaman/svelte-highlight-copy",
-  "downloads": 8,
-  "dependents": 0,
-  "updated": "2023-12-06T05:09:06.287Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelte-highlight-copy",
+	"description": "Syntax highlighting for Svelte using highlight.js.",
+	"repo_url": "https://github.com/kayaman/svelte-highlight-copy",
+	"authors": ["marcoantoniogonzalezjunior"],
+	"homepage": "https://github.com/kayaman/svelte-highlight-copy",
+	"downloads": 8,
+	"dependents": 0,
+	"updated": "2023-12-06T05:09:06.287Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

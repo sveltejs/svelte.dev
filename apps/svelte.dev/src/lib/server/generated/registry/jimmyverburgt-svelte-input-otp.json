@@ -1,18 +1,19 @@
 {
-  "name": "@jimmyverburgt/svelte-input-otp",
-  "description": "Build accessible, unstyled one-time passcode input components for Svelte.",
-  "repo_url": "https://github.com/VerburgtJimmy/svelte-input-otp",
-  "authors": [
-    "jimmyverburgt"
-  ],
-  "homepage": "http://svelte-input-otp.jimmyverburgt.com",
-  "downloads": 224,
-  "dependents": 1,
-  "updated": "2024-08-30T18:19:35.962Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 11
+	"name": "@jimmyverburgt/svelte-input-otp",
+	"description": "Build accessible, unstyled one-time passcode input components for Svelte.",
+	"repo_url": "https://github.com/VerburgtJimmy/svelte-input-otp",
+	"authors": ["jimmyverburgt"],
+	"homepage": "http://svelte-input-otp.jimmyverburgt.com",
+	"downloads": 224,
+	"dependents": 1,
+	"updated": "2024-08-30T18:19:35.962Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 11,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

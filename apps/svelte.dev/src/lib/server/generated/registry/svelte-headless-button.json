@@ -1,18 +1,19 @@
 {
-  "name": "svelte-headless-button",
-  "description": "Create simple button component without default styling.",
-  "repo_url": "https://github.com/zerok84/svelte-headless-button",
-  "authors": [
-    "zerok84"
-  ],
-  "homepage": "https://github.com/zerok84/svelte-headless-button#readme",
-  "downloads": 27,
-  "dependents": 0,
-  "updated": "2022-07-21T04:14:49.117Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelte-headless-button",
+	"description": "Create simple button component without default styling.",
+	"repo_url": "https://github.com/zerok84/svelte-headless-button",
+	"authors": ["zerok84"],
+	"homepage": "https://github.com/zerok84/svelte-headless-button#readme",
+	"downloads": 27,
+	"dependents": 0,
+	"updated": "2022-07-21T04:14:49.117Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

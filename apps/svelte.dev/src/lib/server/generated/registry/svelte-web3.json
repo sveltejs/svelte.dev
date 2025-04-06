@@ -1,18 +1,19 @@
 {
-  "name": "svelte-web3",
-  "description": "Integrate web3.js with Svelte for blockchain interactions.",
-  "repo_url": "https://github.com/clbrge/svelte-web3",
-  "authors": [
-    "clbrge"
-  ],
-  "homepage": "https://github.com/clbrge/svelte-web3#readme",
-  "downloads": 163,
-  "dependents": 2,
-  "updated": "2023-07-17T10:12:41.599Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 140
+	"name": "svelte-web3",
+	"description": "Integrate web3.js with Svelte for blockchain interactions.",
+	"repo_url": "https://github.com/clbrge/svelte-web3",
+	"authors": ["clbrge"],
+	"homepage": "https://github.com/clbrge/svelte-web3#readme",
+	"downloads": 163,
+	"dependents": 2,
+	"updated": "2023-07-17T10:12:41.599Z",
+	"tags": ["integration"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 140,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

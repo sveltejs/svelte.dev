@@ -1,18 +1,19 @@
 {
-  "name": "svelte-number-spinner",
-  "description": "Implement highly configurable number spinner component for Svelte.",
-  "repo_url": "https://github.com/bohnacker/svelte-number-spinner",
-  "authors": [
-    "bohnacker"
-  ],
-  "homepage": "https://github.com/bohnacker/svelte-number-spinner#readme",
-  "downloads": 144,
-  "dependents": 0,
-  "updated": "2022-01-06T12:20:44.313Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 27
+	"name": "svelte-number-spinner",
+	"description": "Implement highly configurable number spinner component for Svelte.",
+	"repo_url": "https://github.com/bohnacker/svelte-number-spinner",
+	"authors": ["bohnacker"],
+	"homepage": "https://github.com/bohnacker/svelte-number-spinner#readme",
+	"downloads": 144,
+	"dependents": 0,
+	"updated": "2022-01-06T12:20:44.313Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 27,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "@perseid/store",
-  "description": "Provide complete state management for Svelte applications.",
-  "repo_url": "https://github.com/openizr/perseid",
-  "authors": [
-    "openizr2"
-  ],
-  "homepage": "https://github.com/openizr/perseid",
-  "downloads": 30,
-  "dependents": 3,
-  "updated": "2024-08-08T14:14:11.059Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 12
+	"name": "@perseid/store",
+	"description": "Provide complete state management for Svelte applications.",
+	"repo_url": "https://github.com/openizr/perseid",
+	"authors": ["openizr2"],
+	"homepage": "https://github.com/openizr/perseid",
+	"downloads": 30,
+	"dependents": 3,
+	"updated": "2024-08-08T14:14:11.059Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 12,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

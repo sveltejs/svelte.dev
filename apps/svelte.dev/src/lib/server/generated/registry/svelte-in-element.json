@@ -1,17 +1,18 @@
 {
-  "name": "svelte-in-element",
-  "description": "Render Svelte component parts in arbitrary elements.",
-  "repo_url": "",
-  "authors": [
-    "ravenstine"
-  ],
-  "homepage": "https://github.com/ravenstine/svelte-in-element",
-  "downloads": 7,
-  "dependents": 0,
-  "updated": "2022-07-29T22:26:18.693Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-in-element",
+	"description": "Render Svelte component parts in arbitrary elements.",
+	"repo_url": "",
+	"authors": ["ravenstine"],
+	"homepage": "https://github.com/ravenstine/svelte-in-element",
+	"downloads": 7,
+	"dependents": 0,
+	"updated": "2022-07-29T22:26:18.693Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

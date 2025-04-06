@@ -1,16 +1,17 @@
 {
-  "name": "svelty-picker",
-  "description": "Create date and time pickers in Svelte applications.",
-  "repo_url": "",
-  "authors": [
-    "mskocik"
-  ],
-  "downloads": 4855,
-  "dependents": 3,
-  "updated": "2025-02-25T09:59:33.057Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "svelty-picker",
+	"description": "Create date and time pickers in Svelte applications.",
+	"repo_url": "",
+	"authors": ["mskocik"],
+	"downloads": 4855,
+	"dependents": 3,
+	"updated": "2025-02-25T09:59:33.057Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

@@ -1,16 +1,17 @@
 {
-  "name": "@jdeighan/cielo",
-  "description": "Process *.cielo and *.starbucks files.",
-  "repo_url": "",
-  "authors": [
-    "jdeighan"
-  ],
-  "downloads": 314,
-  "dependents": 0,
-  "updated": "2022-03-10T19:34:19.023Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@jdeighan/cielo",
+	"description": "Process *.cielo and *.starbucks files.",
+	"repo_url": "",
+	"authors": ["jdeighan"],
+	"downloads": 314,
+	"dependents": 0,
+	"updated": "2022-03-10T19:34:19.023Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

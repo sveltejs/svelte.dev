@@ -1,18 +1,19 @@
 {
-  "name": "svelte-v4-i18n",
-  "description": "Implement internationalization in Svelte v4 applications.",
-  "repo_url": "https://github.com/harshmandan/svelte-i18n",
-  "authors": [
-    "harshmandan"
-  ],
-  "homepage": "https://github.com/harshmandan/svelte-i18n#readme",
-  "downloads": 6,
-  "dependents": 0,
-  "updated": "2023-06-30T05:14:21.438Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelte-v4-i18n",
+	"description": "Implement internationalization in Svelte v4 applications.",
+	"repo_url": "https://github.com/harshmandan/svelte-i18n",
+	"authors": ["harshmandan"],
+	"homepage": "https://github.com/harshmandan/svelte-i18n#readme",
+	"downloads": 6,
+	"dependents": 0,
+	"updated": "2023-06-30T05:14:21.438Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": false
+	}
 }

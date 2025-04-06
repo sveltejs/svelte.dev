@@ -1,18 +1,19 @@
 {
-  "name": "@perseid/form",
-  "description": "Build dynamic forms or input-based UIs in Svelte.",
-  "repo_url": "https://github.com/openizr/perseid",
-  "authors": [
-    "openizr2"
-  ],
-  "homepage": "https://github.com/openizr/perseid",
-  "downloads": 29,
-  "dependents": 1,
-  "updated": "2024-10-01T13:05:38.878Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 12
+	"name": "@perseid/form",
+	"description": "Build dynamic forms or input-based UIs in Svelte.",
+	"repo_url": "https://github.com/openizr/perseid",
+	"authors": ["openizr2"],
+	"homepage": "https://github.com/openizr/perseid",
+	"downloads": 29,
+	"dependents": 1,
+	"updated": "2024-10-01T13:05:38.878Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 12,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

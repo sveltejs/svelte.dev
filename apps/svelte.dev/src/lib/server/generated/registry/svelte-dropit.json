@@ -1,17 +1,18 @@
 {
-  "name": "svelte-dropit",
-  "description": "Enable drag-and-drop functionality within Svelte applications.",
-  "repo_url": "https://github.com/PMathieu16/DropIt",
-  "authors": [
-    "pmathieu16"
-  ],
-  "homepage": "https://github.com/PMathieu16/DropIt#readme",
-  "downloads": 1,
-  "dependents": 0,
-  "updated": "2024-01-12T10:38:30.312Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-dropit",
+	"description": "Enable drag-and-drop functionality within Svelte applications.",
+	"repo_url": "https://github.com/PMathieu16/DropIt",
+	"authors": ["pmathieu16"],
+	"homepage": "https://github.com/PMathieu16/DropIt#readme",
+	"downloads": 1,
+	"dependents": 0,
+	"updated": "2024-01-12T10:38:30.312Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

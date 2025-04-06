@@ -1,18 +1,19 @@
 {
-  "name": "svelte-document-title",
-  "description": "Manage document titles in Svelte applications.",
-  "repo_url": "https://github.com/andrelmlins/svelte-document-title",
-  "authors": [
-    "andrelmlins"
-  ],
-  "homepage": "https://github.com/andrelmlins/svelte-document-title#readme",
-  "downloads": 6,
-  "dependents": 0,
-  "updated": "2020-04-14T21:41:07.318Z",
-  "tags": [
-    "seo"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 2
+	"name": "svelte-document-title",
+	"description": "Manage document titles in Svelte applications.",
+	"repo_url": "https://github.com/andrelmlins/svelte-document-title",
+	"authors": ["andrelmlins"],
+	"homepage": "https://github.com/andrelmlins/svelte-document-title#readme",
+	"downloads": 6,
+	"dependents": 0,
+	"updated": "2020-04-14T21:41:07.318Z",
+	"tags": ["seo"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "houdini-plugin-svelte-global-stores",
-  "description": "Generates global stores for Houdini GraphQL client in Svelte.",
-  "repo_url": "https://github.com/HoudiniGraphql/houdini",
-  "authors": [
-    "aaivazis"
-  ],
-  "homepage": "https://github.com/HoudiniGraphql/houdini",
-  "downloads": 1181,
-  "dependents": 0,
-  "updated": "2025-03-27T05:47:18.487Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 944
+	"name": "houdini-plugin-svelte-global-stores",
+	"description": "Generates global stores for Houdini GraphQL client in Svelte.",
+	"repo_url": "https://github.com/HoudiniGraphql/houdini",
+	"authors": ["aaivazis"],
+	"homepage": "https://github.com/HoudiniGraphql/houdini",
+	"downloads": 1181,
+	"dependents": 0,
+	"updated": "2025-03-27T05:47:18.487Z",
+	"tags": ["tooling"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 944,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

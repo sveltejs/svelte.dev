@@ -1,17 +1,18 @@
 {
-  "name": "@webstackjs/svelvet",
-  "description": "Build dynamic, node-based user interfaces with Svelte.",
-  "repo_url": "https://github.com/webstack/Svelvet",
-  "authors": [
-    "stephaner"
-  ],
-  "homepage": "https://github.com/open-source-labs/Svelvet",
-  "downloads": 5,
-  "dependents": 0,
-  "updated": "2023-11-07T12:43:35.146Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@webstackjs/svelvet",
+	"description": "Build dynamic, node-based user interfaces with Svelte.",
+	"repo_url": "https://github.com/webstack/Svelvet",
+	"authors": ["stephaner"],
+	"homepage": "https://github.com/open-source-labs/Svelvet",
+	"downloads": 5,
+	"dependents": 0,
+	"updated": "2023-11-07T12:43:35.146Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

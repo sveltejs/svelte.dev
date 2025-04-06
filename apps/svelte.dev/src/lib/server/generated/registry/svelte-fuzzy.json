@@ -1,18 +1,19 @@
 {
-  "name": "svelte-fuzzy",
-  "description": "Integrates Fuse.js for fuzzy text matching and highlighting in Svelte.",
-  "repo_url": "https://github.com/metonym/svelte-fuzzy",
-  "authors": [
-    "metonym"
-  ],
-  "homepage": "https://github.com/metonym/svelte-fuzzy",
-  "downloads": 15,
-  "dependents": 0,
-  "updated": "2021-09-08T15:47:20.996Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 31
+	"name": "svelte-fuzzy",
+	"description": "Integrates Fuse.js for fuzzy text matching and highlighting in Svelte.",
+	"repo_url": "https://github.com/metonym/svelte-fuzzy",
+	"authors": ["metonym"],
+	"homepage": "https://github.com/metonym/svelte-fuzzy",
+	"downloads": 15,
+	"dependents": 0,
+	"updated": "2021-09-08T15:47:20.996Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 31,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

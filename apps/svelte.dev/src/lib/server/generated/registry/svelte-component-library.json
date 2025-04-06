@@ -1,17 +1,17 @@
 {
-  "name": "svelte-component-library",
-  "description": "Build shareable Svelte component libraries with testing and Storybook.",
-  "repo_url": "",
-  "authors": [
-    "omysoul"
-  ],
-  "downloads": 6,
-  "dependents": 0,
-  "updated": "2020-06-12T20:54:16.744Z",
-  "tags": [
-    "design-system",
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-component-library",
+	"description": "Build shareable Svelte component libraries with testing and Storybook.",
+	"repo_url": "",
+	"authors": ["omysoul"],
+	"downloads": 6,
+	"dependents": 0,
+	"updated": "2020-06-12T20:54:16.744Z",
+	"tags": ["design-system", "tooling"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

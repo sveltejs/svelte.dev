@@ -1,18 +1,19 @@
 {
-  "name": "@dishuostec/sapper",
-  "description": "Framework for building high-performance universal web apps.",
-  "repo_url": "https://github.com/sveltejs/sapper",
-  "authors": [
-    "dishuostec"
-  ],
-  "homepage": "https://github.com/sveltejs/sapper#readme",
-  "downloads": 82,
-  "dependents": 0,
-  "updated": "2020-08-29T08:43:53.220Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 6981
+	"name": "@dishuostec/sapper",
+	"description": "Framework for building high-performance universal web apps.",
+	"repo_url": "https://github.com/sveltejs/sapper",
+	"authors": ["dishuostec"],
+	"homepage": "https://github.com/sveltejs/sapper#readme",
+	"downloads": 82,
+	"dependents": 0,
+	"updated": "2020-08-29T08:43:53.220Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 6981,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

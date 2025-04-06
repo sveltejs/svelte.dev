@@ -1,18 +1,19 @@
 {
-  "name": "sveltick",
-  "description": "Lightweight performance and traffic tracking library for Svelte.",
-  "repo_url": "https://github.com/Adam014/sveltick",
-  "authors": [
-    "kindast"
-  ],
-  "homepage": "https://github.com/Adam014/sveltick#readme",
-  "downloads": 12,
-  "dependents": 0,
-  "updated": "2024-10-18T01:19:12.584Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 40
+	"name": "sveltick",
+	"description": "Lightweight performance and traffic tracking library for Svelte.",
+	"repo_url": "https://github.com/Adam014/sveltick",
+	"authors": ["kindast"],
+	"homepage": "https://github.com/Adam014/sveltick#readme",
+	"downloads": 12,
+	"dependents": 0,
+	"updated": "2024-10-18T01:19:12.584Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 40,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

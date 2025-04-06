@@ -1,16 +1,17 @@
 {
-  "name": "svelte-use-boop",
-  "description": "Add boopy-goodness animation to Svelte apps.",
-  "repo_url": "",
-  "authors": [
-    "austincrim"
-  ],
-  "downloads": 8,
-  "dependents": 0,
-  "updated": "2021-11-16T22:46:58.325Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-use-boop",
+	"description": "Add boopy-goodness animation to Svelte apps.",
+	"repo_url": "",
+	"authors": ["austincrim"],
+	"downloads": 8,
+	"dependents": 0,
+	"updated": "2021-11-16T22:46:58.325Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

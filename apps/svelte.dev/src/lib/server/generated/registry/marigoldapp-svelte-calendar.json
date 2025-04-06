@@ -1,16 +1,17 @@
 {
-  "name": "@marigoldapp/svelte-calendar",
-  "description": "Implement date picker component for Svelte applications.",
-  "repo_url": "",
-  "authors": [
-    "marigoldapp"
-  ],
-  "downloads": 13,
-  "dependents": 0,
-  "updated": "2021-02-22T18:41:33.214Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@marigoldapp/svelte-calendar",
+	"description": "Implement date picker component for Svelte applications.",
+	"repo_url": "",
+	"authors": ["marigoldapp"],
+	"downloads": 13,
+	"dependents": 0,
+	"updated": "2021-02-22T18:41:33.214Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

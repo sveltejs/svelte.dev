@@ -1,17 +1,19 @@
 {
-  "name": "svelte-actions-resize",
-  "description": "Use ResizeObserver action for Svelte components.",
-  "repo_url": "https://github.com/Gennnji/svelte-actions-resize",
-  "authors": [
-    "gennnji"
-  ],
-  "downloads": 14,
-  "dependents": 0,
-  "updated": "2020-03-10T07:35:18.296Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "svelte-actions-resize",
+	"description": "Use ResizeObserver action for Svelte components.",
+	"repo_url": "https://github.com/Gennnji/svelte-actions-resize",
+	"authors": ["gennnji"],
+	"downloads": 14,
+	"dependents": 0,
+	"updated": "2020-03-10T07:35:18.296Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"homepage": "",
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

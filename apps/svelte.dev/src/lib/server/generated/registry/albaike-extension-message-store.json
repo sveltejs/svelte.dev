@@ -1,16 +1,17 @@
 {
-  "name": "@albaike/extension-message-store",
-  "description": "Provide Svelte store for web extension messaging.",
-  "repo_url": "https://gitgud.io/albaike/extension-message-store",
-  "authors": [
-    "albaike"
-  ],
-  "downloads": 12,
-  "dependents": 0,
-  "updated": "2022-12-27T07:48:52.213Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@albaike/extension-message-store",
+	"description": "Provide Svelte store for web extension messaging.",
+	"repo_url": "https://gitgud.io/albaike/extension-message-store",
+	"authors": ["albaike"],
+	"downloads": 12,
+	"dependents": 0,
+	"updated": "2022-12-27T07:48:52.213Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

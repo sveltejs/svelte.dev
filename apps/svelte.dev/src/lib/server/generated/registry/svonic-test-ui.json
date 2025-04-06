@@ -1,17 +1,18 @@
 {
-  "name": "@svonic-test/ui",
-  "description": "UI components for testing Svelte and SvelteKit applications.",
-  "repo_url": "https://github.com/svonic/test",
-  "authors": [
-    "daimyo"
-  ],
-  "homepage": "https://github.com/svonic/test#readme",
-  "downloads": 59,
-  "dependents": 0,
-  "updated": "2022-04-11T08:44:54.018Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@svonic-test/ui",
+	"description": "UI components for testing Svelte and SvelteKit applications.",
+	"repo_url": "https://github.com/svonic/test",
+	"authors": ["daimyo"],
+	"homepage": "https://github.com/svonic/test#readme",
+	"downloads": 59,
+	"dependents": 0,
+	"updated": "2022-04-11T08:44:54.018Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

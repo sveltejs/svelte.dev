@@ -20,7 +20,7 @@ import {
 	stream_search_by_keywords,
 	structured_interim_package_to_package,
 	superfetch,
-	supports_svelte5,
+	supports_svelte_versions,
 	type StructuredInterimPackage
 } from './npm.js';
 
@@ -366,7 +366,7 @@ async function process_batches_through_llm_base({
 							console.log(`[${batch_id}] Updated description for ${pkg_name}`);
 						}
 
-						if (json[pkg_name].runes && package_details.meta.svelte5) {
+						if (json[pkg_name].runes && package_details.meta.svelte[5]) {
 							package_details.meta.runes = json[pkg_name].runes;
 							console.log(`[${batch_id}] Updated runes for ${pkg_name}`);
 						}
@@ -513,7 +513,9 @@ async function process_packages_by_names_through_llm({
 /**
  * Fetches the number of stars for a GitHub repository
  */
-export async function fetch_github_stars(repo_url: string): Promise<number | null> {
+export async function fetch_github_data(
+	repo_url: string
+): Promise<{ stars: number; homepage: string } | null> {
 	// Validate and normalize the GitHub URL
 	if (!repo_url) {
 		console.error('No repository URL provided');
@@ -560,27 +562,29 @@ export async function fetch_github_stars(repo_url: string): Promise<number | nul
 			return null;
 		}
 
-		return data.stargazers_count;
+		return {
+			stars: data.stargazers_count,
+			homepage: data.homepage
+		};
 	} catch (error) {
 		console.error(`Error fetching stars for ${repo_url}:`, error);
 		return null;
 	}
 }
 
-async function update_all_github_stars(ignore_if_exists = false) {
+async function update_all_github_data(ignore_if_exists = false) {
 	for await (const [pkg, data] of PackageCache.entries()) {
 		if (data.repo_url && !(ignore_if_exists && data.github_stars)) {
 			try {
 				// Fetch stars of this repo
-				const stars = await fetch_github_stars(data.repo_url);
+				const gh_data = await fetch_github_data(data.repo_url);
 
-				if (typeof stars === 'number') {
-					const old_stars = data.github_stars;
-					data.github_stars = stars;
+				if (gh_data != null) {
+					data.github_stars = gh_data.stars;
+					if (!data.homepage) data.homepage = gh_data.homepage;
 
 					console.log({ pkg });
-
-					if (old_stars !== stars) PackageCache.set(pkg, data);
+					PackageCache.set(pkg, data);
 				}
 			} catch (e) {
 				console.error(e, data);
@@ -781,9 +785,8 @@ async function delete_untagged() {
 	}
 }
 
-async function recheck_svelte5() {
+async function recheck_svelte_support() {
 	for await (const [pkg_name, data] of PackageCache.entries()) {
-		let updating = false;
 		// Get package json
 		const package_json = await superfetch(`${REGISTRY_BASE_URL}${pkg_name}`).then((r) => r.json());
 
@@ -798,20 +801,14 @@ async function recheck_svelte5() {
 			latest_package_json.dependencies?.svelte ||
 			latest_package_json.devDependencies?.svelte;
 
-		if (!svelte_version) {
-			if (data.svelte5) updating = true;
-			data.svelte5 = false;
-		}
+		const svelte_support = supports_svelte_versions(svelte_version);
 
-		const is_svelte_5 = supports_svelte5(svelte_version);
+		const old_svelte_support = data.svelte;
 
-		if (is_svelte_5) {
-			if (!data.svelte5) updating = true;
-			data.svelte5 = true;
-		}
+		data.svelte = svelte_support;
 
-		if (updating) {
-			console.log('UPDATING', pkg_name, data.svelte5, is_svelte_5);
+		if (JSON.stringify(old_svelte_support) !== JSON.stringify(data.svelte)) {
+			console.log('UPDATING', pkg_name, svelte_support);
 
 			PackageCache.set(pkg_name, data);
 		}
@@ -838,18 +835,19 @@ for (let i = 0; i < 1; i++) {
 	// await process_batches_through_llm();
 }
 
-await update_overrides();
+// await update_overrides();
 
 svelte_society_list;
 // await process_packages_by_names_through_llm({ package_names: Object.keys(svelte_society_list) });
 
 // update_cache_from_npm();
-await update_all_github_stars();
+// await update_all_github_data();
 
-await remove_forks();
-delete_untagged();
+// await remove_forks();
+// delete_untagged();
 
-// recheck_svelte5();
+await PackageCache.format_all();
+await recheck_svelte_support();
 
 // program.name('packages').description('Package to curate the svelte.dev/packages list');
 

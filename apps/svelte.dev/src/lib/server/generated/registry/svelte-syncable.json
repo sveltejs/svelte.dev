@@ -1,18 +1,19 @@
 {
-  "name": "svelte-syncable",
-  "description": "Synchronize Svelte store values with localStorage.",
-  "repo_url": "https://github.com/chainlist/svelte-syncable",
-  "authors": [
-    "chainlist"
-  ],
-  "homepage": "https://github.com/chainlist/svelte-syncable#readme",
-  "downloads": 18,
-  "dependents": 0,
-  "updated": "2019-06-26T19:01:00.960Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 26
+	"name": "svelte-syncable",
+	"description": "Synchronize Svelte store values with localStorage.",
+	"repo_url": "https://github.com/chainlist/svelte-syncable",
+	"authors": ["chainlist"],
+	"homepage": "https://github.com/chainlist/svelte-syncable#readme",
+	"downloads": 18,
+	"dependents": 0,
+	"updated": "2019-06-26T19:01:00.960Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 26,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

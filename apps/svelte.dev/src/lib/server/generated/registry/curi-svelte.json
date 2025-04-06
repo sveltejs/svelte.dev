@@ -1,17 +1,19 @@
 {
-  "name": "@curi/svelte",
-  "description": "Integrate Curi routing with Svelte applications.",
-  "repo_url": "https://github.com/pshrmn/curi",
-  "authors": [
-    "pshrmn"
-  ],
-  "downloads": 179,
-  "dependents": 0,
-  "updated": "2020-06-27T21:47:14.336Z",
-  "tags": [
-    "router"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 269
+	"name": "@curi/svelte",
+	"description": "Integrate Curi routing with Svelte applications.",
+	"repo_url": "https://github.com/pshrmn/curi",
+	"authors": ["pshrmn"],
+	"downloads": 179,
+	"dependents": 0,
+	"updated": "2020-06-27T21:47:14.336Z",
+	"tags": ["router"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 269,
+	"homepage": "https://curi.js.org",
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

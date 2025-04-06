@@ -1,16 +1,17 @@
 {
-  "name": "rdfjs-svelte",
-  "description": "Svelte components for RDFJS objects like Literals and NamedNodes.",
-  "repo_url": "",
-  "authors": [
-    "retog"
-  ],
-  "downloads": 20,
-  "dependents": 0,
-  "updated": "2020-11-01T21:07:17.259Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "rdfjs-svelte",
+	"description": "Svelte components for RDFJS objects like Literals and NamedNodes.",
+	"repo_url": "",
+	"authors": ["retog"],
+	"downloads": 20,
+	"dependents": 0,
+	"updated": "2020-11-01T21:07:17.259Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,16 +1,17 @@
 {
-  "name": "svelte-calendar",
-  "description": "Create a small, responsive date picker for Svelte.",
-  "repo_url": "",
-  "authors": [
-    "6edesign"
-  ],
-  "downloads": 5252,
-  "dependents": 2,
-  "updated": "2021-09-22T18:19:33.586Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-calendar",
+	"description": "Create a small, responsive date picker for Svelte.",
+	"repo_url": "",
+	"authors": ["6edesign"],
+	"downloads": 5252,
+	"dependents": 2,
+	"updated": "2021-09-22T18:19:33.586Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

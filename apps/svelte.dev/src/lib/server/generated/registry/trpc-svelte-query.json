@@ -1,18 +1,19 @@
 {
-  "name": "trpc-svelte-query",
-  "description": "Use tRPC with SvelteKit and Tanstack Query.",
-  "repo_url": "https://github.com/ottomated/trpc-svelte-query",
-  "authors": [
-    "ottomated"
-  ],
-  "homepage": "https://github.com/ottomated/trpc-svelte-query#readme",
-  "downloads": 513,
-  "dependents": 0,
-  "updated": "2025-03-26T22:16:14.634Z",
-  "tags": [
-    "server"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 70
+	"name": "trpc-svelte-query",
+	"description": "Use tRPC with SvelteKit and Tanstack Query.",
+	"repo_url": "https://github.com/ottomated/trpc-svelte-query",
+	"authors": ["ottomated"],
+	"homepage": "https://github.com/ottomated/trpc-svelte-query#readme",
+	"downloads": 513,
+	"dependents": 0,
+	"updated": "2025-03-26T22:16:14.634Z",
+	"tags": ["server"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 70,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

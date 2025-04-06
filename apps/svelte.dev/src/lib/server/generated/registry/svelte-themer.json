@@ -1,18 +1,19 @@
 {
-  "name": "svelte-themer",
-  "description": "Theming solution for Svelte applications.",
-  "repo_url": "https://github.com/josefaidt/svelte-themer",
-  "authors": [
-    "garlicbred"
-  ],
-  "homepage": "https://svelte-themer.vercel.app",
-  "downloads": 52,
-  "dependents": 0,
-  "updated": "2022-01-30T20:18:20.870Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 142
+	"name": "svelte-themer",
+	"description": "Theming solution for Svelte applications.",
+	"repo_url": "https://github.com/josefaidt/svelte-themer",
+	"authors": ["garlicbred"],
+	"homepage": "https://svelte-themer.vercel.app",
+	"downloads": 52,
+	"dependents": 0,
+	"updated": "2022-01-30T20:18:20.870Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 142,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

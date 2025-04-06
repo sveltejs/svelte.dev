@@ -1,18 +1,19 @@
 {
-  "name": "@svelteschool/svelte-forms",
-  "description": "Build forms easily with simple Svelte component.",
-  "repo_url": "https://github.com/svelteschool/svelte-forms",
-  "authors": [
-    "kevmodrome"
-  ],
-  "homepage": "https://github.com/svelteschool/svelte-forms/",
-  "downloads": 33,
-  "dependents": 2,
-  "updated": "2020-05-20T11:11:14.215Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 137
+	"name": "@svelteschool/svelte-forms",
+	"description": "Build forms easily with simple Svelte component.",
+	"repo_url": "https://github.com/svelteschool/svelte-forms",
+	"authors": ["kevmodrome"],
+	"homepage": "https://github.com/svelteschool/svelte-forms/",
+	"downloads": 33,
+	"dependents": 2,
+	"updated": "2020-05-20T11:11:14.215Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 137,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

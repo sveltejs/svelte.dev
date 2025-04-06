@@ -1,24 +1,19 @@
 {
-  "name": "@viamrobotics/prettier-config-svelte",
-  "description": "Provides Viam's Prettier configuration for Svelte projects.",
-  "repo_url": "https://github.com/viamrobotics/js-config",
-  "authors": [
-    "cheukt",
-    "mcous",
-    "stevebriskin",
-    "viambot",
-    "micheal.parks",
-    "mpviam",
-    "njooma"
-  ],
-  "homepage": "https://github.com/viamrobotics/js-config#readme",
-  "downloads": 148,
-  "dependents": 0,
-  "updated": "2024-12-03T16:12:49.990Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 2
+	"name": "@viamrobotics/prettier-config-svelte",
+	"description": "Provides Viam's Prettier configuration for Svelte projects.",
+	"repo_url": "https://github.com/viamrobotics/js-config",
+	"authors": ["cheukt", "mcous", "stevebriskin", "viambot", "micheal.parks", "mpviam", "njooma"],
+	"homepage": "https://github.com/viamrobotics/js-config#readme",
+	"downloads": 148,
+	"dependents": 0,
+	"updated": "2024-12-03T16:12:49.990Z",
+	"tags": ["tooling"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

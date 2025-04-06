@@ -1,19 +1,19 @@
 {
-  "name": "@airlookjs/svelte-sequence-editor",
-  "description": "Edit timed sequences in Svelte with nested layers and blocks.",
-  "repo_url": "https://github.com/airlookjs/airlookjs",
-  "authors": [
-    "olekristensen",
-    "smukkejohan"
-  ],
-  "homepage": "https://github.com/airlookjs/airlookjs/packages/svelte-sequence-editor#readme",
-  "downloads": 12,
-  "dependents": 0,
-  "updated": "2024-09-02T19:35:39.529Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 5
+	"name": "@airlookjs/svelte-sequence-editor",
+	"description": "Edit timed sequences in Svelte with nested layers and blocks.",
+	"repo_url": "https://github.com/airlookjs/airlookjs",
+	"authors": ["olekristensen", "smukkejohan"],
+	"homepage": "https://github.com/airlookjs/airlookjs/packages/svelte-sequence-editor#readme",
+	"downloads": 12,
+	"dependents": 0,
+	"updated": "2024-09-02T19:35:39.529Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 5,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

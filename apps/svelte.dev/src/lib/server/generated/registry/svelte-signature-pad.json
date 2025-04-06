@@ -1,18 +1,19 @@
 {
-  "name": "svelte-signature-pad",
-  "description": "Captures smoothed signatures as SVG paths.",
-  "repo_url": "https://github.com/captaincodeman/svelte-signature-pad",
-  "authors": [
-    "captaincodeman"
-  ],
-  "homepage": "https://captaincodeman.github.io/svelte-signature-pad/",
-  "downloads": 144,
-  "dependents": 0,
-  "updated": "2023-06-22T16:29:16.562Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 28
+	"name": "svelte-signature-pad",
+	"description": "Captures smoothed signatures as SVG paths.",
+	"repo_url": "https://github.com/captaincodeman/svelte-signature-pad",
+	"authors": ["captaincodeman"],
+	"homepage": "https://captaincodeman.github.io/svelte-signature-pad/",
+	"downloads": 144,
+	"dependents": 0,
+	"updated": "2023-06-22T16:29:16.562Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 28,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": false
+	}
 }

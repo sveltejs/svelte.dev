@@ -1,18 +1,19 @@
 {
-  "name": "svelte-tea",
-  "description": "Project on Svelte for tea.",
-  "repo_url": "https://github.com/rickrock3242/svelte-tea",
-  "authors": [
-    "rickrock3242"
-  ],
-  "homepage": "https://github.com/rickrock3242/svelte-tea#readme",
-  "downloads": 9,
-  "dependents": 2,
-  "updated": "2024-03-25T10:01:37.361Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelte-tea",
+	"description": "Project on Svelte for tea.",
+	"repo_url": "https://github.com/rickrock3242/svelte-tea",
+	"authors": ["rickrock3242"],
+	"homepage": "https://github.com/rickrock3242/svelte-tea#readme",
+	"downloads": 9,
+	"dependents": 2,
+	"updated": "2024-03-25T10:01:37.361Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

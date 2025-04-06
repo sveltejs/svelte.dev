@@ -1,18 +1,19 @@
 {
-  "name": "svelte-highlight-switcher",
-  "description": "Dynamically switches svelte-highlight styles safely.",
-  "repo_url": "https://github.com/jill64/svelte-highlight-switcher",
-  "authors": [
-    "jill64"
-  ],
-  "homepage": "https://github.com/jill64/svelte-highlight-switcher#readme",
-  "downloads": 7910,
-  "dependents": 1,
-  "updated": "2025-01-20T02:43:10.149Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 2
+	"name": "svelte-highlight-switcher",
+	"description": "Dynamically switches svelte-highlight styles safely.",
+	"repo_url": "https://github.com/jill64/svelte-highlight-switcher",
+	"authors": ["jill64"],
+	"homepage": "https://github.com/jill64/svelte-highlight-switcher#readme",
+	"downloads": 7910,
+	"dependents": 1,
+	"updated": "2025-01-20T02:43:10.149Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": true
+	}
 }

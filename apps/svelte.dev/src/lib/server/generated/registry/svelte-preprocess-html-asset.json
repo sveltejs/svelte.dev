@@ -1,18 +1,19 @@
 {
-  "name": "svelte-preprocess-html-asset",
-  "description": "Transform HTML asset paths in Svelte preprocessor.",
-  "repo_url": "https://github.com/jiangfengming/svelte-preprocess-html-asset",
-  "authors": [
-    "jiangfengming"
-  ],
-  "homepage": "https://github.com/jiangfengming/svelte-preprocess-html-asset#readme",
-  "downloads": 6,
-  "dependents": 0,
-  "updated": "2023-04-10T12:48:15.722Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 3
+	"name": "svelte-preprocess-html-asset",
+	"description": "Transform HTML asset paths in Svelte preprocessor.",
+	"repo_url": "https://github.com/jiangfengming/svelte-preprocess-html-asset",
+	"authors": ["jiangfengming"],
+	"homepage": "https://github.com/jiangfengming/svelte-preprocess-html-asset#readme",
+	"downloads": 6,
+	"dependents": 0,
+	"updated": "2023-04-10T12:48:15.722Z",
+	"tags": ["tooling"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 3,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

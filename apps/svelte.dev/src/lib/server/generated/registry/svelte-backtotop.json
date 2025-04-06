@@ -1,18 +1,19 @@
 {
-  "name": "svelte-backtotop",
-  "description": "Provide component to scroll to top of Svelte pages.",
-  "repo_url": "https://github.com/greatenemy/svelte-backtotop",
-  "authors": [
-    "iomge"
-  ],
-  "homepage": "https://github.com/GreatEnemy/svelte-backtotop#readme",
-  "downloads": 9,
-  "dependents": 0,
-  "updated": "2019-09-06T01:52:41.935Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "svelte-backtotop",
+	"description": "Provide component to scroll to top of Svelte pages.",
+	"repo_url": "https://github.com/greatenemy/svelte-backtotop",
+	"authors": ["iomge"],
+	"homepage": "https://github.com/GreatEnemy/svelte-backtotop#readme",
+	"downloads": 9,
+	"dependents": 0,
+	"updated": "2019-09-06T01:52:41.935Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

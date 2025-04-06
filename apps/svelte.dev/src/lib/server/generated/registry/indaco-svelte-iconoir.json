@@ -1,18 +1,19 @@
 {
-  "name": "@indaco/svelte-iconoir",
-  "description": "Use Iconoir SVG icons as Svelte components.",
-  "repo_url": "https://github.com/indaco/svelte-iconoir",
-  "authors": [
-    "indaco"
-  ],
-  "homepage": "https://github.com/indaco/svelte-iconoir#readme",
-  "downloads": 1661,
-  "dependents": 0,
-  "updated": "2025-01-13T12:00:43.633Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 15
+	"name": "@indaco/svelte-iconoir",
+	"description": "Use Iconoir SVG icons as Svelte components.",
+	"repo_url": "https://github.com/indaco/svelte-iconoir",
+	"authors": ["indaco"],
+	"homepage": "https://github.com/indaco/svelte-iconoir#readme",
+	"downloads": 1661,
+	"dependents": 0,
+	"updated": "2025-01-13T12:00:43.633Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 15,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "timescape",
-  "description": "Flexible, headless date and time input library for Svelte.",
-  "repo_url": "https://github.com/dan-lee/timescape",
-  "authors": [
-    "dan-lee"
-  ],
-  "homepage": "https://github.com/dan-lee/timescape#readme",
-  "downloads": 4858,
-  "dependents": 6,
-  "updated": "2024-12-25T11:05:58.735Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 189
+	"name": "timescape",
+	"description": "Flexible, headless date and time input library for Svelte.",
+	"repo_url": "https://github.com/dan-lee/timescape",
+	"authors": ["dan-lee"],
+	"homepage": "https://github.com/dan-lee/timescape#readme",
+	"downloads": 4858,
+	"dependents": 6,
+	"updated": "2024-12-25T11:05:58.735Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 192,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

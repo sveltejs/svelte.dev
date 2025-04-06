@@ -1,20 +1,19 @@
 {
-  "name": "@sveltek/markdown",
-  "description": "Preprocess Markdown content for Svelte components.",
-  "repo_url": "https://github.com/sveltek/markdown",
-  "authors": [
-    "ivodolenc",
-    "sveltek"
-  ],
-  "homepage": "https://github.com/sveltek/markdown",
-  "downloads": 118,
-  "dependents": 0,
-  "updated": "2025-04-04T17:02:39.287Z",
-  "tags": [
-    "content",
-    "tooling"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 5
+	"name": "@sveltek/markdown",
+	"description": "Preprocess Markdown content for Svelte components.",
+	"repo_url": "https://github.com/sveltek/markdown",
+	"authors": ["ivodolenc", "sveltek"],
+	"homepage": "https://github.com/sveltek/markdown",
+	"downloads": 118,
+	"dependents": 0,
+	"updated": "2025-04-04T17:02:39.287Z",
+	"tags": ["content", "tooling"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 5,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

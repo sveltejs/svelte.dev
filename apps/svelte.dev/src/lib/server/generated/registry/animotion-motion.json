@@ -1,18 +1,19 @@
 {
-  "name": "@animotion/motion",
-  "description": "Animate values over time in Svelte applications.",
-  "repo_url": "https://github.com/animotionjs/motion",
-  "authors": [
-    "mattcroat"
-  ],
-  "homepage": "https://animotion.pages.dev",
-  "downloads": 19,
-  "dependents": 1,
-  "updated": "2025-01-22T10:51:32.916Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 46
+	"name": "@animotion/motion",
+	"description": "Animate values over time in Svelte applications.",
+	"repo_url": "https://github.com/animotionjs/motion",
+	"authors": ["mattcroat"],
+	"homepage": "https://animotion.pages.dev",
+	"downloads": 19,
+	"dependents": 1,
+	"updated": "2025-01-22T10:51:32.916Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 46,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

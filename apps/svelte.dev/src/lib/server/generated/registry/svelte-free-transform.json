@@ -1,18 +1,19 @@
 {
-  "name": "svelte-free-transform",
-  "description": "Provide freely transformable container component for Svelte.",
-  "repo_url": "https://github.com/mononaut/svelte-free-transform",
-  "authors": [
-    "mononaut"
-  ],
-  "homepage": "https://github.com/mononaut/svelte-free-transform#readme",
-  "downloads": 11,
-  "dependents": 0,
-  "updated": "2021-08-04T18:58:28.335Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 11
+	"name": "svelte-free-transform",
+	"description": "Provide freely transformable container component for Svelte.",
+	"repo_url": "https://github.com/mononaut/svelte-free-transform",
+	"authors": ["mononaut"],
+	"homepage": "https://github.com/mononaut/svelte-free-transform#readme",
+	"downloads": 11,
+	"dependents": 0,
+	"updated": "2021-08-04T18:58:28.335Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 11,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

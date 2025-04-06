@@ -1,18 +1,19 @@
 {
-  "name": "@minissg/render-svelte",
-  "description": "Integrates Svelte with Minissg for static site generation.",
-  "repo_url": "https://github.com/uenoB/minissg",
-  "authors": [
-    "uenob"
-  ],
-  "homepage": "https://github.com/uenoB/minissg/tree/main/packages/render-svelte#readme",
-  "downloads": 4,
-  "dependents": 0,
-  "updated": "2025-01-03T22:39:19.254Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 3
+	"name": "@minissg/render-svelte",
+	"description": "Integrates Svelte with Minissg for static site generation.",
+	"repo_url": "https://github.com/uenoB/minissg",
+	"authors": ["uenob"],
+	"homepage": "https://github.com/uenoB/minissg/tree/main/packages/render-svelte#readme",
+	"downloads": 4,
+	"dependents": 0,
+	"updated": "2025-01-03T22:39:19.254Z",
+	"tags": ["tooling"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 3,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

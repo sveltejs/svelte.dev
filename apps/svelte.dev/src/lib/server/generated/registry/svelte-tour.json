@@ -1,18 +1,19 @@
 {
-  "name": "svelte-tour",
-  "description": "Create interactive tours for Svelte applications.",
-  "repo_url": "https://github.com/nickheal/svelte-tour",
-  "authors": [
-    "nickheal"
-  ],
-  "homepage": "https://github.com/nickheal/svelte-tour#readme",
-  "downloads": 44,
-  "dependents": 0,
-  "updated": "2021-08-01T09:31:51.246Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 25
+	"name": "svelte-tour",
+	"description": "Create interactive tours for Svelte applications.",
+	"repo_url": "https://github.com/nickheal/svelte-tour",
+	"authors": ["nickheal"],
+	"homepage": "https://github.com/nickheal/svelte-tour#readme",
+	"downloads": 44,
+	"dependents": 0,
+	"updated": "2021-08-01T09:31:51.246Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 25,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

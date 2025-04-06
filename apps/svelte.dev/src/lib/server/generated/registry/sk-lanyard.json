@@ -1,18 +1,19 @@
 {
-  "name": "sk-lanyard",
-  "description": "Integrate SvelteKit with Lanyard, fetch Discord presence.",
-  "repo_url": "https://github.com/nebulatgs/sk-lanyard",
-  "authors": [
-    "nebulatgs"
-  ],
-  "homepage": "https://github.com/nebulatgs/sk-lanyard#readme",
-  "downloads": 47,
-  "dependents": 0,
-  "updated": "2023-09-10T05:43:44.019Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 8
+	"name": "sk-lanyard",
+	"description": "Integrate SvelteKit with Lanyard, fetch Discord presence.",
+	"repo_url": "https://github.com/nebulatgs/sk-lanyard",
+	"authors": ["nebulatgs"],
+	"homepage": "https://github.com/nebulatgs/sk-lanyard#readme",
+	"downloads": 47,
+	"dependents": 0,
+	"updated": "2023-09-10T05:43:44.019Z",
+	"tags": ["integration"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 8,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

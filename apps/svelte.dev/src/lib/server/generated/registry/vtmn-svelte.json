@@ -1,20 +1,19 @@
 {
-  "name": "@vtmn/svelte",
-  "description": "Vitamin Design System components for Svelte.",
-  "repo_url": "https://github.com/Decathlon/vitamin-web",
-  "authors": [
-    "ossdecathlon",
-    "lthieb05"
-  ],
-  "homepage": "https://github.com/Decathlon/vitamin-web/tree/main/packages/sources/svelte",
-  "downloads": 5028,
-  "dependents": 1,
-  "updated": "2024-03-25T10:00:34.270Z",
-  "tags": [
-    "design-system",
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 286
+	"name": "@vtmn/svelte",
+	"description": "Vitamin Design System components for Svelte.",
+	"repo_url": "https://github.com/Decathlon/vitamin-web",
+	"authors": ["ossdecathlon", "lthieb05"],
+	"homepage": "https://github.com/Decathlon/vitamin-web/tree/main/packages/sources/svelte",
+	"downloads": 5028,
+	"dependents": 1,
+	"updated": "2024-03-25T10:00:34.270Z",
+	"tags": ["design-system", "ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 286,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

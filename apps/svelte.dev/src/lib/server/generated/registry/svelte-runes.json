@@ -1,17 +1,18 @@
 {
-  "name": "svelte-runes",
-  "description": "Provides Svelte 5 runes for state, effects, and component APIs.",
-  "repo_url": "https://github.com/0xD1M4/svelte-runes",
-  "authors": [
-    "0xd1m4"
-  ],
-  "homepage": "https://github.com/0xD1M4/svelte-runes#readme",
-  "downloads": 8,
-  "dependents": 0,
-  "updated": "2024-11-17T08:43:57.598Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "svelte-runes",
+	"description": "Provides Svelte 5 runes for state, effects, and component APIs.",
+	"repo_url": "https://github.com/0xD1M4/svelte-runes",
+	"authors": ["0xd1m4"],
+	"homepage": "https://github.com/0xD1M4/svelte-runes#readme",
+	"downloads": 8,
+	"dependents": 0,
+	"updated": "2024-11-17T08:43:57.598Z",
+	"tags": ["miscellaneous"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

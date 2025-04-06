@@ -1,18 +1,19 @@
 {
-  "name": "svelte-hemicycle",
-  "description": "Create hemicycle charts for Svelte applications.",
-  "repo_url": "https://github.com/j-norwood-young/svelte-hemicycle",
-  "authors": [
-    "jasony"
-  ],
-  "homepage": "https://github.com/j-norwood-young/svelte-hemicycle#readme",
-  "downloads": 0,
-  "dependents": 0,
-  "updated": "2024-05-23T06:58:09.657Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "svelte-hemicycle",
+	"description": "Create hemicycle charts for Svelte applications.",
+	"repo_url": "https://github.com/j-norwood-young/svelte-hemicycle",
+	"authors": ["jasony"],
+	"homepage": "https://github.com/j-norwood-young/svelte-hemicycle#readme",
+	"downloads": 0,
+	"dependents": 0,
+	"updated": "2024-05-23T06:58:09.657Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

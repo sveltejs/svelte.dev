@@ -1,18 +1,19 @@
 {
-  "name": "@martinse/svelte-heroicons",
-  "description": "Integrates Heroicons into Svelte components.",
-  "repo_url": "https://github.com/martinse/svelte-heroicons",
-  "authors": [
-    "martinse"
-  ],
-  "homepage": "https://github.com/martinse/svelte-heroicons#readme",
-  "downloads": 20,
-  "dependents": 1,
-  "updated": "2021-02-11T17:51:40.217Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 14
+	"name": "@martinse/svelte-heroicons",
+	"description": "Integrates Heroicons into Svelte components.",
+	"repo_url": "https://github.com/martinse/svelte-heroicons",
+	"authors": ["martinse"],
+	"homepage": "https://github.com/martinse/svelte-heroicons#readme",
+	"downloads": 20,
+	"dependents": 1,
+	"updated": "2021-02-11T17:51:40.217Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 14,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

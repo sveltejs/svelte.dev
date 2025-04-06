@@ -1,16 +1,17 @@
 {
-  "name": "svelte-meta-data",
-  "description": "Manage SEO metadata for Svelte applications.",
-  "repo_url": "",
-  "authors": [
-    "stordahl_"
-  ],
-  "downloads": 8,
-  "dependents": 0,
-  "updated": "2021-01-09T04:38:42.967Z",
-  "tags": [
-    "seo"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-meta-data",
+	"description": "Manage SEO metadata for Svelte applications.",
+	"repo_url": "",
+	"authors": ["stordahl_"],
+	"downloads": 8,
+	"dependents": 0,
+	"updated": "2021-01-09T04:38:42.967Z",
+	"tags": ["seo"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

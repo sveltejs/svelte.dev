@@ -1,19 +1,19 @@
 {
-  "name": "@ai-sdk/svelte",
-  "description": "Provide Svelte UI components for AI SDK.",
-  "repo_url": "https://github.com/vercel/ai",
-  "authors": [
-    "jaredpalmer",
-    "vercel-release-bot"
-  ],
-  "homepage": "https://sdk.vercel.ai/docs",
-  "downloads": 348466,
-  "dependents": 7,
-  "updated": "2025-03-25T17:48:07.988Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 13149
+	"name": "@ai-sdk/svelte",
+	"description": "Provide Svelte UI components for AI SDK.",
+	"repo_url": "https://github.com/vercel/ai",
+	"authors": ["jaredpalmer", "vercel-release-bot"],
+	"homepage": "https://sdk.vercel.ai/docs",
+	"downloads": 348466,
+	"dependents": 7,
+	"updated": "2025-03-25T17:48:07.988Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 13159,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

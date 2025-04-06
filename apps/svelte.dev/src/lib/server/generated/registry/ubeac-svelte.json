@@ -1,18 +1,19 @@
 {
-  "name": "@ubeac/svelte",
-  "description": "Opinionated Svelte component library.",
-  "repo_url": "https://github.com/ubeac/svelte",
-  "authors": [
-    "ubeac-owner"
-  ],
-  "homepage": "https://svelte.ubeac.io/",
-  "downloads": 237,
-  "dependents": 0,
-  "updated": "2023-01-15T21:08:54.026Z",
-  "tags": [
-    "design-system"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 37
+	"name": "@ubeac/svelte",
+	"description": "Opinionated Svelte component library.",
+	"repo_url": "https://github.com/ubeac/svelte",
+	"authors": ["ubeac-owner"],
+	"homepage": "https://svelte.ubeac.io/",
+	"downloads": 237,
+	"dependents": 0,
+	"updated": "2023-01-15T21:08:54.026Z",
+	"tags": ["design-system"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 37,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

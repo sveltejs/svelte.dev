@@ -1,16 +1,17 @@
 {
-  "name": "@easylogic/svelte-summernote",
-  "description": "Integrate Summernote editor into Svelte applications.",
-  "repo_url": "",
-  "authors": [
-    "easylogic"
-  ],
-  "downloads": 25,
-  "dependents": 0,
-  "updated": "2020-03-22T15:16:23.015Z",
-  "tags": [
-    "content"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@easylogic/svelte-summernote",
+	"description": "Integrate Summernote editor into Svelte applications.",
+	"repo_url": "",
+	"authors": ["easylogic"],
+	"downloads": 25,
+	"dependents": 0,
+	"updated": "2020-03-22T15:16:23.015Z",
+	"tags": ["content"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

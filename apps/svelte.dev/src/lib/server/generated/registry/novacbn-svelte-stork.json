@@ -1,18 +1,19 @@
 {
-  "name": "@novacbn/svelte-stork",
-  "description": "Wrap Stork Search with Svelte stores and components.",
-  "repo_url": "https://github.com/novacbn/svelte-stork",
-  "authors": [
-    "novacbn"
-  ],
-  "homepage": "https://github.com/novacbn/svelte-stork#readme",
-  "downloads": 9,
-  "dependents": 0,
-  "updated": "2021-08-09T08:30:59.154Z",
-  "tags": [
-    "seo"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "@novacbn/svelte-stork",
+	"description": "Wrap Stork Search with Svelte stores and components.",
+	"repo_url": "https://github.com/novacbn/svelte-stork",
+	"authors": ["novacbn"],
+	"homepage": "https://github.com/novacbn/svelte-stork#readme",
+	"downloads": 9,
+	"dependents": 0,
+	"updated": "2021-08-09T08:30:59.154Z",
+	"tags": ["seo"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

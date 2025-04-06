@@ -1,20 +1,19 @@
 {
-  "name": "vite-plugin-pwa",
-  "description": "Add PWA support to Vite projects.",
-  "repo_url": "https://github.com/vite-pwa/vite-plugin-pwa",
-  "authors": [
-    "antfu",
-    "hannoeru",
-    "userquin"
-  ],
-  "homepage": "https://github.com/vite-pwa/vite-plugin-pwa#readme",
-  "downloads": 434952,
-  "dependents": 71,
-  "updated": "2025-03-21T23:47:33.446Z",
-  "tags": [
-    "adapter"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 3475
+	"name": "vite-plugin-pwa",
+	"description": "Add PWA support to Vite projects.",
+	"repo_url": "https://github.com/vite-pwa/vite-plugin-pwa",
+	"authors": ["antfu", "hannoeru", "userquin"],
+	"homepage": "https://github.com/vite-pwa/vite-plugin-pwa#readme",
+	"downloads": 434952,
+	"dependents": 71,
+	"updated": "2025-03-21T23:47:33.446Z",
+	"tags": ["adapter"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 3475,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

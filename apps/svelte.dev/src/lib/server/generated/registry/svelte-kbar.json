@@ -1,17 +1,18 @@
 {
-  "name": "svelte-kbar",
-  "description": "Create command/search bars in Svelte applications.",
-  "repo_url": "https://github.com/dwagio/svelte-kbar",
-  "authors": [
-    "dwagio"
-  ],
-  "homepage": "https://github.com/dwagio/svelte-kbar",
-  "downloads": 25,
-  "dependents": 0,
-  "updated": "2021-10-15T21:03:00.325Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-kbar",
+	"description": "Create command/search bars in Svelte applications.",
+	"repo_url": "https://github.com/dwagio/svelte-kbar",
+	"authors": ["dwagio"],
+	"homepage": "https://github.com/dwagio/svelte-kbar",
+	"downloads": 25,
+	"dependents": 0,
+	"updated": "2021-10-15T21:03:00.325Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

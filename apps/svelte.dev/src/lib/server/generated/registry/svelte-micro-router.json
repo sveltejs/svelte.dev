@@ -1,18 +1,19 @@
 {
-  "name": "svelte-micro-router",
-  "description": "Implement a micro router for Svelte applications.",
-  "repo_url": "https://github.com/davidrot/svelte-micro-router",
-  "authors": [
-    "davidrot1"
-  ],
-  "homepage": "https://github.com/davidrot/svelte-micro-router#readme",
-  "downloads": 14,
-  "dependents": 0,
-  "updated": "2022-09-15T13:22:52.240Z",
-  "tags": [
-    "router"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 3
+	"name": "svelte-micro-router",
+	"description": "Implement a micro router for Svelte applications.",
+	"repo_url": "https://github.com/davidrot/svelte-micro-router",
+	"authors": ["davidrot1"],
+	"homepage": "https://github.com/davidrot/svelte-micro-router#readme",
+	"downloads": 14,
+	"dependents": 0,
+	"updated": "2022-09-15T13:22:52.240Z",
+	"tags": ["router"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 3,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

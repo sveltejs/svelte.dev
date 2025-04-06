@@ -1,18 +1,19 @@
 {
-  "name": "svelte-masonry",
-  "description": "Implements lightweight Masonry layout for Svelte.",
-  "repo_url": "https://github.com/janzheng/svelte-masonry",
-  "authors": [
-    "janzheng"
-  ],
-  "homepage": "https://github.com/janzheng/svelte-masonry#readme",
-  "downloads": 34,
-  "dependents": 1,
-  "updated": "2025-01-14T23:02:23.331Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 33
+	"name": "svelte-masonry",
+	"description": "Implements lightweight Masonry layout for Svelte.",
+	"repo_url": "https://github.com/janzheng/svelte-masonry",
+	"authors": ["janzheng"],
+	"homepage": "https://github.com/janzheng/svelte-masonry#readme",
+	"downloads": 34,
+	"dependents": 1,
+	"updated": "2025-01-14T23:02:23.331Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 33,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

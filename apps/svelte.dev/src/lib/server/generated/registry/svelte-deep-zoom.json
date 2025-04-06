@@ -1,17 +1,18 @@
 {
-  "name": "svelte-deep-zoom",
-  "description": "Renders interactive Deep Zoom images in Svelte.",
-  "repo_url": "https://github.com/captaincodeman/svelte-deep-zoom",
-  "authors": [
-    "captaincodeman"
-  ],
-  "homepage": "https://captaincodeman.github.io/svelte-deep-zoom/",
-  "downloads": 55,
-  "dependents": 0,
-  "updated": "2024-04-29T20:32:33.444Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "svelte-deep-zoom",
+	"description": "Renders interactive Deep Zoom images in Svelte.",
+	"repo_url": "https://github.com/captaincodeman/svelte-deep-zoom",
+	"authors": ["captaincodeman"],
+	"homepage": "https://captaincodeman.github.io/svelte-deep-zoom/",
+	"downloads": 55,
+	"dependents": 0,
+	"updated": "2024-04-29T20:32:33.444Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

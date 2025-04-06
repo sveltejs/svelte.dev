@@ -1,16 +1,17 @@
 {
-  "name": "@htmlbricks/loginregister-component",
-  "description": "Create login and register components for Svelte apps.",
-  "repo_url": "",
-  "authors": [
-    "dariocaruso"
-  ],
-  "downloads": 123,
-  "dependents": 0,
-  "updated": "2022-01-02T19:14:36.273Z",
-  "tags": [
-    "auth"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@htmlbricks/loginregister-component",
+	"description": "Create login and register components for Svelte apps.",
+	"repo_url": "",
+	"authors": ["dariocaruso"],
+	"downloads": 123,
+	"dependents": 0,
+	"updated": "2022-01-02T19:14:36.273Z",
+	"tags": ["auth"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "lucia",
-  "description": "Simple and flexible authentication library.",
-  "repo_url": "https://github.com/pilcrowOnPaper/lucia",
-  "authors": [
-    "pilcrowonpaper"
-  ],
-  "homepage": "https://github.com/pilcrowOnPaper/lucia#readme",
-  "downloads": 42452,
-  "dependents": 34,
-  "updated": "2024-10-20T12:40:32.030Z",
-  "tags": [
-    "auth"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 10057
+	"name": "lucia",
+	"description": "Simple and flexible authentication library.",
+	"repo_url": "https://github.com/pilcrowOnPaper/lucia",
+	"authors": ["pilcrowonpaper"],
+	"homepage": "https://github.com/pilcrowOnPaper/lucia#readme",
+	"downloads": 42452,
+	"dependents": 34,
+	"updated": "2024-10-20T12:40:32.030Z",
+	"tags": ["auth"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 10057,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	}
 }

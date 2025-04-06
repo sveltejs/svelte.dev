@@ -1,16 +1,17 @@
 {
-  "name": "google-login-svelte",
-  "description": "Implement Google sign-in functionality in Svelte apps.",
-  "repo_url": "",
-  "authors": [
-    "jorge-pereira"
-  ],
-  "downloads": 37,
-  "dependents": 0,
-  "updated": "2022-01-08T01:36:00.174Z",
-  "tags": [
-    "auth"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "google-login-svelte",
+	"description": "Implement Google sign-in functionality in Svelte apps.",
+	"repo_url": "",
+	"authors": ["jorge-pereira"],
+	"downloads": 37,
+	"dependents": 0,
+	"updated": "2022-01-08T01:36:00.174Z",
+	"tags": ["auth"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

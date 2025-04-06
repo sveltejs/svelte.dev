@@ -1,18 +1,19 @@
 {
-  "name": "svelte-scrollto-element",
-  "description": "Animate scrolling to elements with Svelte action.",
-  "repo_url": "https://github.com/bartholomej/svelte-scrollto-element",
-  "authors": [
-    "bartholomej"
-  ],
-  "homepage": "https://github.com/bartholomej/svelte-scrollto-element#readme",
-  "downloads": 108,
-  "dependents": 1,
-  "updated": "2025-01-05T18:09:19.188Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 18
+	"name": "svelte-scrollto-element",
+	"description": "Animate scrolling to elements with Svelte action.",
+	"repo_url": "https://github.com/bartholomej/svelte-scrollto-element",
+	"authors": ["bartholomej"],
+	"homepage": "https://github.com/bartholomej/svelte-scrollto-element#readme",
+	"downloads": 108,
+	"dependents": 1,
+	"updated": "2025-01-05T18:09:19.188Z",
+	"tags": ["miscellaneous"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 18,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": true
+	}
 }

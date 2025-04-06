@@ -1,18 +1,19 @@
 {
-  "name": "esbuild-plugin-svelte",
-  "description": "Load Svelte files with esbuild.",
-  "repo_url": "https://github.com/yagebu/esbuild-plugin-svelte",
-  "authors": [
-    "yagebu"
-  ],
-  "homepage": "https://github.com/yagebu/esbuild-plugin-svelte#readme",
-  "downloads": 32,
-  "dependents": 0,
-  "updated": "2021-01-02T12:08:49.332Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 3
+	"name": "esbuild-plugin-svelte",
+	"description": "Load Svelte files with esbuild.",
+	"repo_url": "https://github.com/yagebu/esbuild-plugin-svelte",
+	"authors": ["yagebu"],
+	"homepage": "https://github.com/yagebu/esbuild-plugin-svelte#readme",
+	"downloads": 32,
+	"dependents": 0,
+	"updated": "2021-01-02T12:08:49.332Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 3,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

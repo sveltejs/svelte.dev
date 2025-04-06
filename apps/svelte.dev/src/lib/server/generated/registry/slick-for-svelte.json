@@ -1,18 +1,19 @@
 {
-  "name": "@slick-for/svelte",
-  "description": "Manage views and routing for Svelte components.",
-  "repo_url": "https://github.com/shavyg2/slick-for-svelte",
-  "authors": [
-    "shavyg2"
-  ],
-  "homepage": "https://github.com/shavyg2/slick-for-svelte#readme",
-  "downloads": 95,
-  "dependents": 0,
-  "updated": "2019-09-04T13:15:49.424Z",
-  "tags": [
-    "router"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 24
+	"name": "@slick-for/svelte",
+	"description": "Manage views and routing for Svelte components.",
+	"repo_url": "https://github.com/shavyg2/slick-for-svelte",
+	"authors": ["shavyg2"],
+	"homepage": "https://github.com/shavyg2/slick-for-svelte#readme",
+	"downloads": 95,
+	"dependents": 0,
+	"updated": "2019-09-04T13:15:49.424Z",
+	"tags": ["router"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 24,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

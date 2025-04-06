@@ -1,21 +1,19 @@
 {
-  "name": "@sveltejs/adapter-auto",
-  "description": "Automatically choose SvelteKit adapter.",
-  "repo_url": "https://github.com/sveltejs/kit",
-  "authors": [
-    "rich_harris",
-    "svelte-admin",
-    "conduitry",
-    "dominik_g"
-  ],
-  "homepage": "https://svelte.dev",
-  "downloads": 239041,
-  "dependents": 45,
-  "updated": "2025-03-20T12:09:20.685Z",
-  "tags": [
-    "adapter"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 19167
+	"name": "@sveltejs/adapter-auto",
+	"description": "Automatically choose SvelteKit adapter.",
+	"repo_url": "https://github.com/sveltejs/kit",
+	"authors": ["rich_harris", "svelte-admin", "conduitry", "dominik_g"],
+	"homepage": "https://svelte.dev",
+	"downloads": 239041,
+	"dependents": 45,
+	"updated": "2025-03-20T12:09:20.685Z",
+	"tags": ["adapter"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 19168,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	}
 }

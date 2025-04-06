@@ -1,17 +1,19 @@
 {
-  "name": "@eslym/svelte-preprocess-stylex",
-  "description": "Preprocesses Svelte code to make StyleX more readable.",
-  "repo_url": "https://github.com/eslym/svelte-preprocess-stylex",
-  "authors": [
-    "0nepeop1e"
-  ],
-  "downloads": 63,
-  "dependents": 0,
-  "updated": "2025-03-08T13:50:29.157Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 0
+	"name": "@eslym/svelte-preprocess-stylex",
+	"description": "Preprocesses Svelte code to make StyleX more readable.",
+	"repo_url": "https://github.com/eslym/svelte-preprocess-stylex",
+	"authors": ["0nepeop1e"],
+	"downloads": 63,
+	"dependents": 0,
+	"updated": "2025-03-08T13:50:29.157Z",
+	"tags": ["tooling"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 0,
+	"homepage": null,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "stack54",
-  "description": "Provide Javascript stack for SSR and streaming.",
-  "repo_url": "https://github.com/joshamaju/stack54",
-  "authors": [
-    "joshamaju"
-  ],
-  "homepage": "https://github.com/joshamaju/stack54#readme",
-  "downloads": 86,
-  "dependents": 4,
-  "updated": "2025-03-26T15:22:52.245Z",
-  "tags": [
-    "server"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "stack54",
+	"description": "Provide Javascript stack for SSR and streaming.",
+	"repo_url": "https://github.com/joshamaju/stack54",
+	"authors": ["joshamaju"],
+	"homepage": "https://github.com/joshamaju/stack54#readme",
+	"downloads": 86,
+	"dependents": 4,
+	"updated": "2025-03-26T15:22:52.245Z",
+	"tags": ["server"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

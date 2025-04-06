@@ -1,18 +1,19 @@
 {
-  "name": "@bizmate-oss/svelte-formly",
-  "description": "Generate dynamic, reactive forms in Svelte.",
-  "repo_url": "https://github.com/bizmate-oss/svelte-formly",
-  "authors": [
-    "webfrank"
-  ],
-  "homepage": "https://github.com/bizmate-oss/svelte-formly#readme",
-  "downloads": 5,
-  "dependents": 0,
-  "updated": "2022-07-26T13:03:48.139Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@bizmate-oss/svelte-formly",
+	"description": "Generate dynamic, reactive forms in Svelte.",
+	"repo_url": "https://github.com/bizmate-oss/svelte-formly",
+	"authors": ["webfrank"],
+	"homepage": "https://github.com/bizmate-oss/svelte-formly#readme",
+	"downloads": 5,
+	"dependents": 0,
+	"updated": "2022-07-26T13:03:48.139Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

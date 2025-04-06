@@ -1,16 +1,17 @@
 {
-  "name": "@rodneylab/sveltekit-map-component",
-  "description": "Provides handy components for building maps in SvelteKit applications.",
-  "repo_url": "",
-  "authors": [
-    "rodneylab"
-  ],
-  "downloads": 9,
-  "dependents": 0,
-  "updated": "2024-05-15T07:44:14.697Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@rodneylab/sveltekit-map-component",
+	"description": "Provides handy components for building maps in SvelteKit applications.",
+	"repo_url": "",
+	"authors": ["rodneylab"],
+	"downloads": 9,
+	"dependents": 0,
+	"updated": "2024-05-15T07:44:14.697Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

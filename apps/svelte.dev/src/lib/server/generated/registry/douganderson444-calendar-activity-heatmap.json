@@ -1,16 +1,17 @@
 {
-  "name": "@douganderson444/calendar-activity-heatmap",
-  "description": "Create calendar activity heatmap component for Svelte.",
-  "repo_url": "",
-  "authors": [
-    "douganderson444"
-  ],
-  "downloads": 5,
-  "dependents": 0,
-  "updated": "2023-02-07T14:10:42.661Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@douganderson444/calendar-activity-heatmap",
+	"description": "Create calendar activity heatmap component for Svelte.",
+	"repo_url": "",
+	"authors": ["douganderson444"],
+	"downloads": 5,
+	"dependents": 0,
+	"updated": "2023-02-07T14:10:42.661Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

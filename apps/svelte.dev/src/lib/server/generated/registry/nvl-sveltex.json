@@ -1,19 +1,19 @@
 {
-  "name": "@nvl/sveltex",
-  "description": "Preprocess Markdown and LaTeX for Svelte components.",
-  "repo_url": "https://github.com/nvlang/sveltex",
-  "authors": [
-    "nvl"
-  ],
-  "homepage": "https://sveltex.dev",
-  "downloads": 17,
-  "dependents": 0,
-  "updated": "2024-07-18T17:43:51.892Z",
-  "tags": [
-    "content",
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 7
+	"name": "@nvl/sveltex",
+	"description": "Preprocess Markdown and LaTeX for Svelte components.",
+	"repo_url": "https://github.com/nvlang/sveltex",
+	"authors": ["nvl"],
+	"homepage": "https://sveltex.dev",
+	"downloads": 17,
+	"dependents": 0,
+	"updated": "2024-07-18T17:43:51.892Z",
+	"tags": ["content", "tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 7,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

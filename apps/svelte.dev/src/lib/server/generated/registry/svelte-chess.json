@@ -1,17 +1,18 @@
 {
-  "name": "svelte-chess",
-  "description": "Implement fully playable chess component for Svelte.",
-  "repo_url": "",
-  "authors": [
-    "gtim"
-  ],
-  "homepage": "https://github.com/gtim/svelte-chess#readme",
-  "downloads": 55,
-  "dependents": 0,
-  "updated": "2023-08-13T12:54:50.425Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-chess",
+	"description": "Implement fully playable chess component for Svelte.",
+	"repo_url": "",
+	"authors": ["gtim"],
+	"homepage": "https://github.com/gtim/svelte-chess#readme",
+	"downloads": 55,
+	"dependents": 0,
+	"updated": "2023-08-13T12:54:50.425Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,16 +1,17 @@
 {
-  "name": "@ikun-ui/popover",
-  "description": "Create popover component for Svelte.",
-  "repo_url": "",
-  "authors": [
-    "baiwusanyu"
-  ],
-  "downloads": 10,
-  "dependents": 9,
-  "updated": "2025-01-24T03:49:10.903Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@ikun-ui/popover",
+	"description": "Create popover component for Svelte.",
+	"repo_url": "",
+	"authors": ["baiwusanyu"],
+	"downloads": 10,
+	"dependents": 9,
+	"updated": "2025-01-24T03:49:10.903Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

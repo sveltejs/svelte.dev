@@ -1,23 +1,19 @@
 {
-  "name": "@beyonk/svelte-intercom",
-  "description": "Integrate Intercom chat with Svelte applications.",
-  "repo_url": "https://github.com/beyonk-adventures/svelte-intercom",
-  "authors": [
-    "antony",
-    "adampond",
-    "alex.dilley",
-    "jedwoodcock",
-    "leandro.silva",
-    "tomlewis0"
-  ],
-  "homepage": "https://github.com/beyonk-adventures/svelte-intercom#readme",
-  "downloads": 1,
-  "dependents": 0,
-  "updated": "2020-07-04T19:39:48.402Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 2
+	"name": "@beyonk/svelte-intercom",
+	"description": "Integrate Intercom chat with Svelte applications.",
+	"repo_url": "https://github.com/beyonk-adventures/svelte-intercom",
+	"authors": ["antony", "adampond", "alex.dilley", "jedwoodcock", "leandro.silva", "tomlewis0"],
+	"homepage": "https://github.com/beyonk-adventures/svelte-intercom#readme",
+	"downloads": 1,
+	"dependents": 0,
+	"updated": "2020-07-04T19:39:48.402Z",
+	"tags": ["integration"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

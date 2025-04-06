@@ -1,19 +1,19 @@
 {
-  "name": "leafletjs-svelte",
-  "description": "Integrate Leaflet maps into Svelte applications.",
-  "repo_url": "https://github.com/otokama/leafletjs-svelte",
-  "authors": [
-    "lampoppa"
-  ],
-  "homepage": "https://otokama.github.io/leafletjs-svelte/",
-  "downloads": 18,
-  "dependents": 0,
-  "updated": "2023-10-19T14:42:06.771Z",
-  "tags": [
-    "ui",
-    "media"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 4
+	"name": "leafletjs-svelte",
+	"description": "Integrate Leaflet maps into Svelte applications.",
+	"repo_url": "https://github.com/otokama/leafletjs-svelte",
+	"authors": ["lampoppa"],
+	"homepage": "https://otokama.github.io/leafletjs-svelte/",
+	"downloads": 18,
+	"dependents": 0,
+	"updated": "2023-10-19T14:42:06.771Z",
+	"tags": ["ui", "media"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 4,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

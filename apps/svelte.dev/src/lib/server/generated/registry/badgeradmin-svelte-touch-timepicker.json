@@ -1,18 +1,19 @@
 {
-  "name": "@badgeradmin/svelte-touch-timepicker",
-  "description": "Provides native-like touch timepicker for Svelte.",
-  "repo_url": "https://github.com/projectbadger/svelte-touch-timepicker",
-  "authors": [
-    "badgeradmin"
-  ],
-  "homepage": "https://github.com/projectbadger/svelte-touch-timepicker",
-  "downloads": 4,
-  "dependents": 0,
-  "updated": "2022-07-23T14:02:08.572Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "@badgeradmin/svelte-touch-timepicker",
+	"description": "Provides native-like touch timepicker for Svelte.",
+	"repo_url": "https://github.com/projectbadger/svelte-touch-timepicker",
+	"authors": ["badgeradmin"],
+	"homepage": "https://github.com/projectbadger/svelte-touch-timepicker",
+	"downloads": 4,
+	"dependents": 0,
+	"updated": "2022-07-23T14:02:08.572Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

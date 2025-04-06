@@ -1,18 +1,19 @@
 {
-  "name": "svue",
-  "description": "Adds Vue-style reactive stores with data and computed properties.",
-  "repo_url": "https://github.com/freedmand/svue",
-  "authors": [
-    "freedmand"
-  ],
-  "homepage": "https://github.com/freedmand/svue#readme",
-  "downloads": 24,
-  "dependents": 0,
-  "updated": "2020-02-14T17:57:58.525Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 8
+	"name": "svue",
+	"description": "Adds Vue-style reactive stores with data and computed properties.",
+	"repo_url": "https://github.com/freedmand/svue",
+	"authors": ["freedmand"],
+	"homepage": "https://github.com/freedmand/svue#readme",
+	"downloads": 24,
+	"dependents": 0,
+	"updated": "2020-02-14T17:57:58.525Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 8,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

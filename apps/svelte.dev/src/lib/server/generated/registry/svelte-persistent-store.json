@@ -1,18 +1,19 @@
 {
-  "name": "svelte-persistent-store",
-  "description": "Persist Svelte stores using localStorage or sessionStorage.",
-  "repo_url": "https://github.com/andsala/svelte-persistent-store",
-  "authors": [
-    "andsala"
-  ],
-  "homepage": "https://github.com/andsala/svelte-persistent-store",
-  "downloads": 101,
-  "dependents": 0,
-  "updated": "2021-01-06T16:44:14.502Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 85
+	"name": "svelte-persistent-store",
+	"description": "Persist Svelte stores using localStorage or sessionStorage.",
+	"repo_url": "https://github.com/andsala/svelte-persistent-store",
+	"authors": ["andsala"],
+	"homepage": "https://github.com/andsala/svelte-persistent-store",
+	"downloads": 101,
+	"dependents": 0,
+	"updated": "2021-01-06T16:44:14.502Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 85,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

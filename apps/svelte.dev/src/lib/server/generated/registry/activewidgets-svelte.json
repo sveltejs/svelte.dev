@@ -1,18 +1,19 @@
 {
-  "name": "@activewidgets/svelte",
-  "description": "Provide virtualized datagrid component for Svelte applications.",
-  "repo_url": "https://github.com/activewidgets/svelte",
-  "authors": [
-    "xkam"
-  ],
-  "homepage": "https://activewidgets.com/svelte/data-grid/",
-  "downloads": 17,
-  "dependents": 0,
-  "updated": "2023-04-30T18:45:55.134Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 13
+	"name": "@activewidgets/svelte",
+	"description": "Provide virtualized datagrid component for Svelte applications.",
+	"repo_url": "https://github.com/activewidgets/svelte",
+	"authors": ["xkam"],
+	"homepage": "https://activewidgets.com/svelte/data-grid/",
+	"downloads": 17,
+	"dependents": 0,
+	"updated": "2023-04-30T18:45:55.134Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 13,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "svelte-formup",
-  "description": "Form helpers for Svelte with Yup validation.",
-  "repo_url": "https://github.com/kenoxa/svelte-formup",
-  "authors": [
-    "sastan"
-  ],
-  "homepage": "https://svelte-formup.js.org",
-  "downloads": 18,
-  "dependents": 0,
-  "updated": "2020-07-13T10:36:44.595Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 3
+	"name": "svelte-formup",
+	"description": "Form helpers for Svelte with Yup validation.",
+	"repo_url": "https://github.com/kenoxa/svelte-formup",
+	"authors": ["sastan"],
+	"homepage": "https://svelte-formup.js.org",
+	"downloads": 18,
+	"dependents": 0,
+	"updated": "2020-07-13T10:36:44.595Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 3,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

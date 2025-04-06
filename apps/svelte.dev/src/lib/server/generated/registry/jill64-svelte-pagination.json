@@ -1,18 +1,19 @@
 {
-  "name": "@jill64/svelte-pagination",
-  "description": "Pagination component for Svelte.",
-  "repo_url": "https://github.com/jill64/svelte-pagination",
-  "authors": [
-    "jill64"
-  ],
-  "homepage": "https://github.com/jill64/svelte-pagination#readme",
-  "downloads": 1960,
-  "dependents": 0,
-  "updated": "2025-01-23T06:31:56.141Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 4
+	"name": "@jill64/svelte-pagination",
+	"description": "Pagination component for Svelte.",
+	"repo_url": "https://github.com/jill64/svelte-pagination",
+	"authors": ["jill64"],
+	"homepage": "https://github.com/jill64/svelte-pagination#readme",
+	"downloads": 1960,
+	"dependents": 0,
+	"updated": "2025-01-23T06:31:56.141Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 4,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

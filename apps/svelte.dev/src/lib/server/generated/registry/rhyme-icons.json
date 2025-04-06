@@ -1,16 +1,17 @@
 {
-  "name": "rhyme-icons",
-  "description": "Offer icon components for Svelte, designed for Rhyme Player.",
-  "repo_url": "https://github.com/Rhyme-Player/RhymeIcons",
-  "authors": [
-    "abdallah-moh"
-  ],
-  "downloads": 11,
-  "dependents": 0,
-  "updated": "2022-01-01T06:56:04.045Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "rhyme-icons",
+	"description": "Offer icon components for Svelte, designed for Rhyme Player.",
+	"repo_url": "https://github.com/Rhyme-Player/RhymeIcons",
+	"authors": ["abdallah-moh"],
+	"downloads": 11,
+	"dependents": 0,
+	"updated": "2022-01-01T06:56:04.045Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

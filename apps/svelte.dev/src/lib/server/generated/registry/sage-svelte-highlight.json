@@ -1,16 +1,17 @@
 {
-  "name": "sage-svelte-highlight",
-  "description": "Syntax highlighting for Svelte using Highlight.js.",
-  "repo_url": "",
-  "authors": [
-    "sagethesagesage"
-  ],
-  "downloads": 1,
-  "dependents": 0,
-  "updated": "2022-08-17T15:08:22.424Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "sage-svelte-highlight",
+	"description": "Syntax highlighting for Svelte using Highlight.js.",
+	"repo_url": "",
+	"authors": ["sagethesagesage"],
+	"downloads": 1,
+	"dependents": 0,
+	"updated": "2022-08-17T15:08:22.424Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

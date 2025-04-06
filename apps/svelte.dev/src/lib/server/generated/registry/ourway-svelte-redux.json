@@ -1,19 +1,19 @@
 {
-  "name": "@ourway/svelte-redux",
-  "description": "Connect Svelte components to Redux store.",
-  "repo_url": "https://github.com/AndrewBlackledge/svelte-redux",
-  "authors": [
-    "implode963",
-    "anicolao"
-  ],
-  "homepage": "https://github.com/AndrewBlackledge/svelte-redux#readme",
-  "downloads": 2,
-  "dependents": 0,
-  "updated": "2024-04-03T18:57:53.050Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@ourway/svelte-redux",
+	"description": "Connect Svelte components to Redux store.",
+	"repo_url": "https://github.com/AndrewBlackledge/svelte-redux",
+	"authors": ["implode963", "anicolao"],
+	"homepage": "https://github.com/AndrewBlackledge/svelte-redux#readme",
+	"downloads": 2,
+	"dependents": 0,
+	"updated": "2024-04-03T18:57:53.050Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

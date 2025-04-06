@@ -1,18 +1,19 @@
 {
-  "name": "@svelte-put/clickoutside",
-  "description": "Detect clicks outside Svelte component elements.",
-  "repo_url": "https://github.com/vnphanquang/svelte-put",
-  "authors": [
-    "vnphanquang"
-  ],
-  "homepage": "https://svelte-put.vnphanquang.com/docs/clickoutside",
-  "downloads": 2267,
-  "dependents": 7,
-  "updated": "2024-10-25T05:17:14.604Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 916
+	"name": "@svelte-put/clickoutside",
+	"description": "Detect clicks outside Svelte component elements.",
+	"repo_url": "https://github.com/vnphanquang/svelte-put",
+	"authors": ["vnphanquang"],
+	"homepage": "https://svelte-put.vnphanquang.com/docs/clickoutside",
+	"downloads": 2267,
+	"dependents": 7,
+	"updated": "2024-10-25T05:17:14.604Z",
+	"tags": ["miscellaneous"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 917,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

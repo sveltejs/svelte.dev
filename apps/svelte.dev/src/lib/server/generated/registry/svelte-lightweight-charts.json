@@ -1,18 +1,19 @@
 {
-  "name": "svelte-lightweight-charts",
-  "description": "Svelte wrapper for lightweight charts, financial charting.",
-  "repo_url": "https://github.com/trash-and-fire/svelte-lightweight-charts",
-  "authors": [
-    "trash-and-fire"
-  ],
-  "homepage": "https://github.com/trash-and-fire/svelte-lightweight-charts#readme",
-  "downloads": 253,
-  "dependents": 0,
-  "updated": "2023-05-18T22:55:02.647Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 115
+	"name": "svelte-lightweight-charts",
+	"description": "Svelte wrapper for lightweight charts, financial charting.",
+	"repo_url": "https://github.com/trash-and-fire/svelte-lightweight-charts",
+	"authors": ["trash-and-fire"],
+	"homepage": "https://github.com/trash-and-fire/svelte-lightweight-charts#readme",
+	"downloads": 253,
+	"dependents": 0,
+	"updated": "2023-05-18T22:55:02.647Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 115,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": true
+	}
 }

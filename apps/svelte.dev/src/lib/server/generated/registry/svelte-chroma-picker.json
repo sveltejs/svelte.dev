@@ -1,18 +1,19 @@
 {
-  "name": "svelte-chroma-picker",
-  "description": "Integrate color picker component for Svelte apps.",
-  "repo_url": "https://github.com/tricinel/svelte-chroma-picker",
-  "authors": [
-    "tricinel"
-  ],
-  "homepage": "https://github.com/tricinel/svelte-chroma-picker#readme",
-  "downloads": 36,
-  "dependents": 0,
-  "updated": "2021-06-12T11:11:11.825Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 5
+	"name": "svelte-chroma-picker",
+	"description": "Integrate color picker component for Svelte apps.",
+	"repo_url": "https://github.com/tricinel/svelte-chroma-picker",
+	"authors": ["tricinel"],
+	"homepage": "https://github.com/tricinel/svelte-chroma-picker#readme",
+	"downloads": 36,
+	"dependents": 0,
+	"updated": "2021-06-12T11:11:11.825Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 5,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

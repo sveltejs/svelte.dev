@@ -1,18 +1,19 @@
 {
-  "name": "svelte-twitter-emoji",
-  "description": "Provides Twitter emoji icon components for Svelte.",
-  "repo_url": "https://github.com/shinokada/svelte-twitter-emoji",
-  "authors": [
-    "shinichiokada"
-  ],
-  "homepage": "https://svelte-twitter-emoji.codewithshin.com/",
-  "downloads": 31,
-  "dependents": 0,
-  "updated": "2024-03-01T17:20:21.038Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 3
+	"name": "svelte-twitter-emoji",
+	"description": "Provides Twitter emoji icon components for Svelte.",
+	"repo_url": "https://github.com/shinokada/svelte-twitter-emoji",
+	"authors": ["shinichiokada"],
+	"homepage": "https://svelte-twitter-emoji.codewithshin.com/",
+	"downloads": 31,
+	"dependents": 0,
+	"updated": "2024-03-01T17:20:21.038Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 3,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

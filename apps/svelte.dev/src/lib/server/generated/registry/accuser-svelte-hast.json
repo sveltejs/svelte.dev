@@ -1,18 +1,19 @@
 {
-  "name": "@accuser/svelte-hast",
-  "description": "Transform HAST to Svelte components.",
-  "repo_url": "https://github.com/accuser/svelte-hast",
-  "authors": [
-    "accuser"
-  ],
-  "homepage": "https://github.com/accuser/svelte-hast",
-  "downloads": 16,
-  "dependents": 1,
-  "updated": "2024-10-06T06:37:34.602Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 0
+	"name": "@accuser/svelte-hast",
+	"description": "Transform HAST to Svelte components.",
+	"repo_url": "https://github.com/accuser/svelte-hast",
+	"authors": ["accuser"],
+	"homepage": "https://github.com/accuser/svelte-hast",
+	"downloads": 16,
+	"dependents": 1,
+	"updated": "2024-10-06T06:37:34.602Z",
+	"tags": ["tooling"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

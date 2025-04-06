@@ -1,18 +1,19 @@
 {
-  "name": "svelte-to-rxjs",
-  "description": "Convert Svelte stores into RxJS Observables for data transformations.",
-  "repo_url": "https://github.com/Tommertom/svelte-to-observable",
-  "authors": [
-    "tommertom"
-  ],
-  "homepage": "https://github.com/Tommertom/svelte-to-observable",
-  "downloads": 2,
-  "dependents": 0,
-  "updated": "2023-01-28T07:12:48.278Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "svelte-to-rxjs",
+	"description": "Convert Svelte stores into RxJS Observables for data transformations.",
+	"repo_url": "https://github.com/Tommertom/svelte-to-observable",
+	"authors": ["tommertom"],
+	"homepage": "https://github.com/Tommertom/svelte-to-observable",
+	"downloads": 2,
+	"dependents": 0,
+	"updated": "2023-01-28T07:12:48.278Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

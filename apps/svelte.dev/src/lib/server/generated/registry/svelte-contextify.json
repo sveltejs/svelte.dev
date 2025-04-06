@@ -1,18 +1,19 @@
 {
-  "name": "svelte-contextify",
-  "description": "Improves context management in Svelte apps using Context API.",
-  "repo_url": "https://github.com/Hugos68/svelte-contextify",
-  "authors": [
-    "hugoskokos"
-  ],
-  "homepage": "https://github.com/Hugos68/svelte-contextify#readme",
-  "downloads": 24,
-  "dependents": 0,
-  "updated": "2024-07-19T18:26:09.420Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 63
+	"name": "svelte-contextify",
+	"description": "Improves context management in Svelte apps using Context API.",
+	"repo_url": "https://github.com/Hugos68/svelte-contextify",
+	"authors": ["hugoskokos"],
+	"homepage": "https://github.com/Hugos68/svelte-contextify#readme",
+	"downloads": 24,
+	"dependents": 0,
+	"updated": "2024-07-19T18:26:09.420Z",
+	"tags": ["miscellaneous"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 63,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": true
+	}
 }

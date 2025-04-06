@@ -1,17 +1,18 @@
 {
-  "name": "@jacksonthall22/svelte-chessground",
-  "description": "Integrates Chessground chess UI into Svelte components.",
-  "repo_url": "",
-  "authors": [
-    "jacksonthall22"
-  ],
-  "homepage": "https://github.com/gtim/svelte-chessground#readme",
-  "downloads": 11,
-  "dependents": 1,
-  "updated": "2024-12-21T23:30:38.449Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "@jacksonthall22/svelte-chessground",
+	"description": "Integrates Chessground chess UI into Svelte components.",
+	"repo_url": "",
+	"authors": ["jacksonthall22"],
+	"homepage": "https://github.com/gtim/svelte-chessground#readme",
+	"downloads": 11,
+	"dependents": 1,
+	"updated": "2024-12-21T23:30:38.449Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

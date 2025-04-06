@@ -1,18 +1,19 @@
 {
-  "name": "@robotpajamas/svelte-hammertime",
-  "description": "Integrates HammerJS gesture handlers into Svelte applications.",
-  "repo_url": "https://github.com/robotpajamas/svelte-hammertime",
-  "authors": [
-    "sureshjoshi"
-  ],
-  "homepage": "https://github.com/robotpajamas/svelte-hammertime",
-  "downloads": 3,
-  "dependents": 0,
-  "updated": "2023-09-30T04:23:50.601Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 0
+	"name": "@robotpajamas/svelte-hammertime",
+	"description": "Integrates HammerJS gesture handlers into Svelte applications.",
+	"repo_url": "https://github.com/robotpajamas/svelte-hammertime",
+	"authors": ["sureshjoshi"],
+	"homepage": "https://github.com/robotpajamas/svelte-hammertime",
+	"downloads": 3,
+	"dependents": 0,
+	"updated": "2023-09-30T04:23:50.601Z",
+	"tags": ["miscellaneous"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

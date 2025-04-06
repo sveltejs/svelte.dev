@@ -1,18 +1,19 @@
 {
-  "name": "svelte-preprocess-css-mods",
-  "description": "Enable CSS Modules support within Svelte components.",
-  "repo_url": "https://github.com/ryoppippi/svelte-preprocess-css-mods",
-  "authors": [
-    "ryoppippi"
-  ],
-  "homepage": "https://github.com/ryoppippi/svelte-preprocess-css-mods#readme",
-  "downloads": 10,
-  "dependents": 0,
-  "updated": "2024-08-10T11:13:13.749Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelte-preprocess-css-mods",
+	"description": "Enable CSS Modules support within Svelte components.",
+	"repo_url": "https://github.com/ryoppippi/svelte-preprocess-css-mods",
+	"authors": ["ryoppippi"],
+	"homepage": "https://github.com/ryoppippi/svelte-preprocess-css-mods#readme",
+	"downloads": 10,
+	"dependents": 0,
+	"updated": "2024-08-10T11:13:13.749Z",
+	"tags": ["tooling"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

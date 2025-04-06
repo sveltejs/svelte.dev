@@ -1,18 +1,19 @@
 {
-  "name": "@prgm/sveltekit-progress-bar",
-  "description": "Adds a progress bar to SvelteKit applications during navigation.",
-  "repo_url": "https://github.com/prgm-dev/sveltekit-progress-bar",
-  "authors": [
-    "alexandre-prgm"
-  ],
-  "homepage": "https://github.com/prgm-dev/sveltekit-progress-bar#readme",
-  "downloads": 7139,
-  "dependents": 0,
-  "updated": "2025-02-18T11:47:43.630Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 43
+	"name": "@prgm/sveltekit-progress-bar",
+	"description": "Adds a progress bar to SvelteKit applications during navigation.",
+	"repo_url": "https://github.com/prgm-dev/sveltekit-progress-bar",
+	"authors": ["alexandre-prgm"],
+	"homepage": "https://github.com/prgm-dev/sveltekit-progress-bar#readme",
+	"downloads": 7139,
+	"dependents": 0,
+	"updated": "2025-02-18T11:47:43.630Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 43,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

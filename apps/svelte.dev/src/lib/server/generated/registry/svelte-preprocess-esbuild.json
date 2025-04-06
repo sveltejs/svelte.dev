@@ -1,18 +1,19 @@
 {
-  "name": "svelte-preprocess-esbuild",
-  "description": "Compile TypeScript via esbuild in Svelte preprocessor.",
-  "repo_url": "https://github.com/lukeed/svelte-preprocess-esbuild",
-  "authors": [
-    "lukeed"
-  ],
-  "homepage": "https://github.com/lukeed/svelte-preprocess-esbuild#readme",
-  "downloads": 6035,
-  "dependents": 1,
-  "updated": "2022-08-28T04:02:38.971Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 45
+	"name": "svelte-preprocess-esbuild",
+	"description": "Compile TypeScript via esbuild in Svelte preprocessor.",
+	"repo_url": "https://github.com/lukeed/svelte-preprocess-esbuild",
+	"authors": ["lukeed"],
+	"homepage": "https://github.com/lukeed/svelte-preprocess-esbuild#readme",
+	"downloads": 6035,
+	"dependents": 1,
+	"updated": "2022-08-28T04:02:38.971Z",
+	"tags": ["tooling"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 45,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": true
+	}
 }

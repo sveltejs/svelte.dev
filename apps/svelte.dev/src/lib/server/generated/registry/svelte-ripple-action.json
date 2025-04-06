@@ -1,18 +1,19 @@
 {
-  "name": "svelte-ripple-action",
-  "description": "Add ripple effect to any element.",
-  "repo_url": "https://github.com/posandu/svelte-ripple-action",
-  "authors": [
-    "tronic247"
-  ],
-  "homepage": "https://github.com/posandu/svelte-ripple-action#readme",
-  "downloads": 576,
-  "dependents": 0,
-  "updated": "2024-11-15T13:18:50.975Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 61
+	"name": "svelte-ripple-action",
+	"description": "Add ripple effect to any element.",
+	"repo_url": "https://github.com/posandu/svelte-ripple-action",
+	"authors": ["tronic247"],
+	"homepage": "https://github.com/posandu/svelte-ripple-action#readme",
+	"downloads": 576,
+	"dependents": 0,
+	"updated": "2024-11-15T13:18:50.975Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 61,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

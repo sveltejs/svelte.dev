@@ -1,18 +1,19 @@
 {
-  "name": "svelte-toggle",
-  "description": "Create accessible toggle switch component for Svelte.",
-  "repo_url": "https://github.com/metonym/svelte-toggle",
-  "authors": [
-    "metonym"
-  ],
-  "homepage": "https://github.com/metonym/svelte-toggle",
-  "downloads": 452,
-  "dependents": 1,
-  "updated": "2024-03-15T20:10:55.160Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 44
+	"name": "svelte-toggle",
+	"description": "Create accessible toggle switch component for Svelte.",
+	"repo_url": "https://github.com/metonym/svelte-toggle",
+	"authors": ["metonym"],
+	"homepage": "https://github.com/metonym/svelte-toggle",
+	"downloads": 452,
+	"dependents": 1,
+	"updated": "2024-03-15T20:10:55.160Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 44,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

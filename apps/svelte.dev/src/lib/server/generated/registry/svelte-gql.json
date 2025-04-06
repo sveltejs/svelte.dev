@@ -1,18 +1,19 @@
 {
-  "name": "svelte-gql",
-  "description": "Offer lightweight GraphQL client for Svelte.",
-  "repo_url": "https://github.com/drejohnson/svql",
-  "authors": [
-    "drejohnson"
-  ],
-  "homepage": "https://github.com/drejohnson/svql#readme",
-  "downloads": 13,
-  "dependents": 0,
-  "updated": "2019-06-24T21:15:44.470Z",
-  "tags": [
-    "server"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 7
+	"name": "svelte-gql",
+	"description": "Offer lightweight GraphQL client for Svelte.",
+	"repo_url": "https://github.com/drejohnson/svql",
+	"authors": ["drejohnson"],
+	"homepage": "https://github.com/drejohnson/svql#readme",
+	"downloads": 13,
+	"dependents": 0,
+	"updated": "2019-06-24T21:15:44.470Z",
+	"tags": ["server"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 7,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

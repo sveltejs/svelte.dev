@@ -1,19 +1,17 @@
 {
-  "name": "@nust_misis/ui",
-  "description": "Create UI with MISIS UI components for Svelte.",
-  "repo_url": "",
-  "authors": [
-    "dmdin",
-    "julia_grishina",
-    "evilya2505",
-    "polinaryabukhina"
-  ],
-  "downloads": 364,
-  "dependents": 0,
-  "updated": "2025-03-24T16:33:11.881Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "@nust_misis/ui",
+	"description": "Create UI with MISIS UI components for Svelte.",
+	"repo_url": "",
+	"authors": ["dmdin", "julia_grishina", "evilya2505", "polinaryabukhina"],
+	"downloads": 364,
+	"dependents": 0,
+	"updated": "2025-03-24T16:33:11.881Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

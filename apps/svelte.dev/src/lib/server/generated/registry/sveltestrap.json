@@ -1,19 +1,19 @@
 {
-  "name": "sveltestrap",
-  "description": "Bootstrap 5 components for Svelte v3.",
-  "repo_url": "https://github.com/bestguy/sveltestrap",
-  "authors": [
-    "bestguy"
-  ],
-  "homepage": "https://github.com/bestguy/sveltestrap#readme",
-  "downloads": 3063,
-  "dependents": 13,
-  "updated": "2023-12-23T03:15:42.477Z",
-  "tags": [
-    "ui",
-    "design-system"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1314
+	"name": "sveltestrap",
+	"description": "Bootstrap 5 components for Svelte v3.",
+	"repo_url": "https://github.com/bestguy/sveltestrap",
+	"authors": ["bestguy"],
+	"homepage": "https://github.com/bestguy/sveltestrap#readme",
+	"downloads": 3063,
+	"dependents": 13,
+	"updated": "2023-12-23T03:15:42.477Z",
+	"tags": ["ui", "design-system"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1314,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

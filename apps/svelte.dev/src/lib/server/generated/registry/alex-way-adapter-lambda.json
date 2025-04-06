@@ -1,17 +1,18 @@
 {
-  "name": "@alex-way/adapter-lambda",
-  "description": "Adapts SvelteKit apps for deployment to AWS Lambda.",
-  "repo_url": "https://github.com/alex-way/adapter-lambda",
-  "authors": [
-    "alex-way"
-  ],
-  "homepage": "https://github.com/alex-way/adapter-lambda#readme",
-  "downloads": 20,
-  "dependents": 0,
-  "updated": "2023-02-03T11:46:44.308Z",
-  "tags": [
-    "adapter"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@alex-way/adapter-lambda",
+	"description": "Adapts SvelteKit apps for deployment to AWS Lambda.",
+	"repo_url": "https://github.com/alex-way/adapter-lambda",
+	"authors": ["alex-way"],
+	"homepage": "https://github.com/alex-way/adapter-lambda#readme",
+	"downloads": 20,
+	"dependents": 0,
+	"updated": "2023-02-03T11:46:44.308Z",
+	"tags": ["adapter"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	}
 }

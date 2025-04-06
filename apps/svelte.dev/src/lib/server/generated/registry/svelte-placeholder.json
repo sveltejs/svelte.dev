@@ -1,18 +1,19 @@
 {
-  "name": "svelte-placeholder",
-  "description": "Display placeholder images in Svelte apps.",
-  "repo_url": "https://github.com/treboryx/svelte-placeholder",
-  "authors": [
-    "rowboat"
-  ],
-  "homepage": "https://github.com/treboryx/svelte-placeholder#readme",
-  "downloads": 0,
-  "dependents": 0,
-  "updated": "2022-06-10T13:11:28.847Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelte-placeholder",
+	"description": "Display placeholder images in Svelte apps.",
+	"repo_url": "https://github.com/treboryx/svelte-placeholder",
+	"authors": ["rowboat"],
+	"homepage": "https://github.com/treboryx/svelte-placeholder#readme",
+	"downloads": 0,
+	"dependents": 0,
+	"updated": "2022-06-10T13:11:28.847Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

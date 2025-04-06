@@ -1,18 +1,19 @@
 {
-  "name": "@phoria/phoria-svelte",
-  "description": "Integrate Svelte components with Phoria Islands for .NET.",
-  "repo_url": "https://github.com/CMeeg/phoria",
-  "authors": [
-    "meeg"
-  ],
-  "homepage": "https://github.com/CMeeg/phoria#readme",
-  "downloads": 6,
-  "dependents": 0,
-  "updated": "2025-01-13T00:53:32.795Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 2
+	"name": "@phoria/phoria-svelte",
+	"description": "Integrate Svelte components with Phoria Islands for .NET.",
+	"repo_url": "https://github.com/CMeeg/phoria",
+	"authors": ["meeg"],
+	"homepage": "https://github.com/CMeeg/phoria#readme",
+	"downloads": 6,
+	"dependents": 0,
+	"updated": "2025-01-13T00:53:32.795Z",
+	"tags": ["integration"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

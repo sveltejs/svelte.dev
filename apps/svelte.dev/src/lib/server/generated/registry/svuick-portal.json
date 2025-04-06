@@ -1,16 +1,17 @@
 {
-  "name": "@svuick/portal",
-  "description": "Create portals for Svelte components.",
-  "repo_url": "https://gitlab.com/david-plugge/svuick",
-  "authors": [
-    "davidplugge"
-  ],
-  "downloads": 18,
-  "dependents": 2,
-  "updated": "2022-02-03T11:38:58.010Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@svuick/portal",
+	"description": "Create portals for Svelte components.",
+	"repo_url": "https://gitlab.com/david-plugge/svuick",
+	"authors": ["davidplugge"],
+	"downloads": 18,
+	"dependents": 2,
+	"updated": "2022-02-03T11:38:58.010Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

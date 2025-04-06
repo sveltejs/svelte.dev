@@ -1,18 +1,19 @@
 {
-  "name": "@uraniadev/emailer",
-  "description": "Create email templates with Svelte, Tailwind CSS, and tw-to-css.",
-  "repo_url": "https://github.com/urania-dev/emailer",
-  "authors": [
-    "uraniadev"
-  ],
-  "homepage": "https://github.com/urania-dev/emailer#readme",
-  "downloads": 44,
-  "dependents": 0,
-  "updated": "2024-10-28T14:40:41.975Z",
-  "tags": [
-    "server"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 8
+	"name": "@uraniadev/emailer",
+	"description": "Create email templates with Svelte, Tailwind CSS, and tw-to-css.",
+	"repo_url": "https://github.com/urania-dev/emailer",
+	"authors": ["uraniadev"],
+	"homepage": "https://github.com/urania-dev/emailer#readme",
+	"downloads": 44,
+	"dependents": 0,
+	"updated": "2024-10-28T14:40:41.975Z",
+	"tags": ["server"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 8,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

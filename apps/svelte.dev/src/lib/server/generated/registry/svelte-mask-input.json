@@ -1,16 +1,17 @@
 {
-  "name": "svelte-mask-input",
-  "description": "Apply input masks for credit cards, phone numbers, and dates.",
-  "repo_url": "",
-  "authors": [
-    "xnimorz"
-  ],
-  "downloads": 11,
-  "dependents": 0,
-  "updated": "2019-10-13T14:53:13.130Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-mask-input",
+	"description": "Apply input masks for credit cards, phone numbers, and dates.",
+	"repo_url": "",
+	"authors": ["xnimorz"],
+	"downloads": 11,
+	"dependents": 0,
+	"updated": "2019-10-13T14:53:13.130Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

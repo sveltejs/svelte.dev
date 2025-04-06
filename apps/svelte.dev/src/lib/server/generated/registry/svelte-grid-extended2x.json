@@ -1,18 +1,19 @@
 {
-  "name": "svelte-grid-extended2x",
-  "description": "Create draggable, resizable grid layouts for Svelte applications.",
-  "repo_url": "https://github.com/vieurou/svelte-grid-extended2x",
-  "authors": [
-    "vieurou"
-  ],
-  "homepage": "https://github.com/vieurou/svelte-grid-extended2x#readme",
-  "downloads": 0,
-  "dependents": 0,
-  "updated": "2024-04-08T09:03:09.393Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelte-grid-extended2x",
+	"description": "Create draggable, resizable grid layouts for Svelte applications.",
+	"repo_url": "https://github.com/vieurou/svelte-grid-extended2x",
+	"authors": ["vieurou"],
+	"homepage": "https://github.com/vieurou/svelte-grid-extended2x#readme",
+	"downloads": 0,
+	"dependents": 0,
+	"updated": "2024-04-08T09:03:09.393Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

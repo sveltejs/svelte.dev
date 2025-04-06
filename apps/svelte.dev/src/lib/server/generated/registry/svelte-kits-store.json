@@ -1,18 +1,19 @@
 {
-  "name": "@svelte-kits/store",
-  "description": "Safe stores for SvelteKit, handling SSR.",
-  "repo_url": "https://github.com/svelte-kits/store",
-  "authors": [
-    "devunt"
-  ],
-  "homepage": "https://github.com/svelte-kits/store#readme",
-  "downloads": 2,
-  "dependents": 0,
-  "updated": "2023-06-27T02:47:42.513Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 44
+	"name": "@svelte-kits/store",
+	"description": "Safe stores for SvelteKit, handling SSR.",
+	"repo_url": "https://github.com/svelte-kits/store",
+	"authors": ["devunt"],
+	"homepage": "https://github.com/svelte-kits/store#readme",
+	"downloads": 2,
+	"dependents": 0,
+	"updated": "2023-06-27T02:47:42.513Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 44,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": false
+	}
 }

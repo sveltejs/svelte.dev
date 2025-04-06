@@ -1,18 +1,19 @@
 {
-  "name": "svelte-elements",
-  "description": "Wraps HTML elements for use within Svelte components.",
-  "repo_url": "https://github.com/timhall/svelte-elements",
-  "authors": [
-    "timhall"
-  ],
-  "homepage": "https://github.com/timhall/svelte-elements#readme",
-  "downloads": 11,
-  "dependents": 1,
-  "updated": "2019-05-14T15:25:13.375Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 29
+	"name": "svelte-elements",
+	"description": "Wraps HTML elements for use within Svelte components.",
+	"repo_url": "https://github.com/timhall/svelte-elements",
+	"authors": ["timhall"],
+	"homepage": "https://github.com/timhall/svelte-elements#readme",
+	"downloads": 11,
+	"dependents": 1,
+	"updated": "2019-05-14T15:25:13.375Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 29,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

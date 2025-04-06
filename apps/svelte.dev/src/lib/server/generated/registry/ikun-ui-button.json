@@ -1,16 +1,17 @@
 {
-  "name": "@ikun-ui/button",
-  "description": "Builds button components for Svelte.",
-  "repo_url": "",
-  "authors": [
-    "baiwusanyu"
-  ],
-  "downloads": 6,
-  "dependents": 7,
-  "updated": "2025-01-24T03:48:36.328Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@ikun-ui/button",
+	"description": "Builds button components for Svelte.",
+	"repo_url": "",
+	"authors": ["baiwusanyu"],
+	"downloads": 6,
+	"dependents": 7,
+	"updated": "2025-01-24T03:48:36.328Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

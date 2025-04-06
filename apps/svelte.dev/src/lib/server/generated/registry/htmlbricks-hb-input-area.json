@@ -1,16 +1,17 @@
 {
-  "name": "@htmlbricks/hb-input-area",
-  "description": "Create text area input web component for Svelte applications.",
-  "repo_url": "",
-  "authors": [
-    "dariocaruso"
-  ],
-  "downloads": 493,
-  "dependents": 3,
-  "updated": "2025-03-24T18:07:14.589Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@htmlbricks/hb-input-area",
+	"description": "Create text area input web component for Svelte applications.",
+	"repo_url": "",
+	"authors": ["dariocaruso"],
+	"downloads": 493,
+	"dependents": 3,
+	"updated": "2025-03-24T18:07:14.589Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	}
 }

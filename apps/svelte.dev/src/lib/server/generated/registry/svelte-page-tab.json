@@ -1,19 +1,19 @@
 {
-  "name": "svelte-page-tab",
-  "description": "Create tab menu component using page as state.",
-  "repo_url": "https://github.com/jill64/svelte-page-tab",
-  "authors": [
-    "jill64"
-  ],
-  "homepage": "https://github.com/jill64/svelte-page-tab#readme",
-  "downloads": 2516,
-  "dependents": 0,
-  "updated": "2025-03-25T14:57:04.463Z",
-  "tags": [
-    "ui",
-    "router"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 1
+	"name": "svelte-page-tab",
+	"description": "Create tab menu component using page as state.",
+	"repo_url": "https://github.com/jill64/svelte-page-tab",
+	"authors": ["jill64"],
+	"homepage": "https://github.com/jill64/svelte-page-tab#readme",
+	"downloads": 2516,
+	"dependents": 0,
+	"updated": "2025-03-25T14:57:04.463Z",
+	"tags": ["ui", "router"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

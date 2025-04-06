@@ -1,18 +1,19 @@
 {
-  "name": "@mpiorowski/svelte-init",
-  "description": "Offers low-overhead Svelte UI components.",
-  "repo_url": "https://github.com/mpiorowski/svelte-init",
-  "authors": [
-    "mpiorowski"
-  ],
-  "homepage": "https://svelte-init.vercel.app",
-  "downloads": 52,
-  "dependents": 0,
-  "updated": "2023-01-12T23:27:11.827Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@mpiorowski/svelte-init",
+	"description": "Offers low-overhead Svelte UI components.",
+	"repo_url": "https://github.com/mpiorowski/svelte-init",
+	"authors": ["mpiorowski"],
+	"homepage": "https://svelte-init.vercel.app",
+	"downloads": 52,
+	"dependents": 0,
+	"updated": "2023-01-12T23:27:11.827Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

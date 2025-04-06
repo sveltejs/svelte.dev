@@ -1,18 +1,19 @@
 {
-  "name": "braintapper-svelte-css",
-  "description": "Provide Svelte component for common CSS for Braintapper applications.",
-  "repo_url": "https://github.com/braintapper/braintapper-svelte-css",
-  "authors": [
-    "braintapper"
-  ],
-  "homepage": "https://github.com/braintapper/braintapper-svelte-css#readme",
-  "downloads": 46,
-  "dependents": 0,
-  "updated": "2021-08-30T21:16:50.310Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "braintapper-svelte-css",
+	"description": "Provide Svelte component for common CSS for Braintapper applications.",
+	"repo_url": "https://github.com/braintapper/braintapper-svelte-css",
+	"authors": ["braintapper"],
+	"homepage": "https://github.com/braintapper/braintapper-svelte-css#readme",
+	"downloads": 46,
+	"dependents": 0,
+	"updated": "2021-08-30T21:16:50.310Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

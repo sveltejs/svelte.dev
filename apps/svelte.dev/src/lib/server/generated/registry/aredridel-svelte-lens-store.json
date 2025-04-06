@@ -1,18 +1,19 @@
 {
-  "name": "@aredridel/svelte-lens-store",
-  "description": "Provide functional lenses over Svelte stores.",
-  "repo_url": "https://github.com/aredridel/svelte-lens-store",
-  "authors": [
-    "aredridel"
-  ],
-  "homepage": "https://github.com/aredridel/svelte-lens-store#readme",
-  "downloads": 8,
-  "dependents": 0,
-  "updated": "2022-05-15T21:35:43.809Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 13
+	"name": "@aredridel/svelte-lens-store",
+	"description": "Provide functional lenses over Svelte stores.",
+	"repo_url": "https://github.com/aredridel/svelte-lens-store",
+	"authors": ["aredridel"],
+	"homepage": "https://github.com/aredridel/svelte-lens-store#readme",
+	"downloads": 8,
+	"dependents": 0,
+	"updated": "2022-05-15T21:35:43.809Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 13,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,17 +1,18 @@
 {
-  "name": "svelte-textfit",
-  "description": "Fits text content into elements.",
-  "repo_url": "",
-  "authors": [
-    "micha-lmxt"
-  ],
-  "homepage": "https://github.com/micha-lmxt/svelte-textfit",
-  "downloads": 1076,
-  "dependents": 0,
-  "updated": "2022-09-27T07:21:22.421Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-textfit",
+	"description": "Fits text content into elements.",
+	"repo_url": "",
+	"authors": ["micha-lmxt"],
+	"homepage": "https://github.com/micha-lmxt/svelte-textfit",
+	"downloads": 1076,
+	"dependents": 0,
+	"updated": "2022-09-27T07:21:22.421Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

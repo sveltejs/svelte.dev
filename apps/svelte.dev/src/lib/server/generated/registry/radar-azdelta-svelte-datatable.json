@@ -1,19 +1,19 @@
 {
-  "name": "@radar-azdelta/svelte-datatable",
-  "description": "Provides a fast and flexible datatable component for Svelte.",
-  "repo_url": "https://github.com/RADar-AZDelta/svelte-datatable",
-  "authors": [
-    "btoby",
-    "pjlammertyn"
-  ],
-  "homepage": "https://radar-azdelta.github.io/svelte-datatable/",
-  "downloads": 62,
-  "dependents": 1,
-  "updated": "2024-08-19T10:05:15.370Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 4
+	"name": "@radar-azdelta/svelte-datatable",
+	"description": "Provides a fast and flexible datatable component for Svelte.",
+	"repo_url": "https://github.com/RADar-AZDelta/svelte-datatable",
+	"authors": ["btoby", "pjlammertyn"],
+	"homepage": "https://radar-azdelta.github.io/svelte-datatable/",
+	"downloads": 62,
+	"dependents": 1,
+	"updated": "2024-08-19T10:05:15.370Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 4,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "@dukerupert/sveltekit-medusa-client",
-  "description": "Client library for Medusa ecommerce backend in SvelteKit.",
-  "repo_url": "https://github.com/dukerupert/sveltekit-medusa-client",
-  "authors": [
-    "dukerupert"
-  ],
-  "homepage": "https://github.com/dukerupert/sveltekit-medusa-client#readme",
-  "downloads": 1,
-  "dependents": 0,
-  "updated": "2023-11-30T19:41:40.594Z",
-  "tags": [
-    "server"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@dukerupert/sveltekit-medusa-client",
+	"description": "Client library for Medusa ecommerce backend in SvelteKit.",
+	"repo_url": "https://github.com/dukerupert/sveltekit-medusa-client",
+	"authors": ["dukerupert"],
+	"homepage": "https://github.com/dukerupert/sveltekit-medusa-client#readme",
+	"downloads": 1,
+	"dependents": 0,
+	"updated": "2023-11-30T19:41:40.594Z",
+	"tags": ["server"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

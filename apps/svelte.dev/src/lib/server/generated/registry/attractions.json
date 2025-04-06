@@ -1,16 +1,19 @@
 {
-  "name": "attractions",
-  "description": "Provide UI kit for Svelte applications.",
-  "repo_url": "https://github.com/illright/attractions",
-  "authors": [],
-  "homepage": "https://illright.github.io/attractions/",
-  "downloads": 0,
-  "dependents": 0,
-  "updated": "2024-03-01T18:56:48.834Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1036
+	"name": "attractions",
+	"description": "Provide UI kit for Svelte applications.",
+	"repo_url": "https://github.com/illright/attractions",
+	"authors": [],
+	"homepage": "https://illright.github.io/attractions/",
+	"downloads": 0,
+	"dependents": 0,
+	"updated": "2024-03-01T18:56:48.834Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1036,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "@unpic/svelte",
-  "description": "Create responsive, high-performance images in Svelte.",
-  "repo_url": "https://github.com/ascorbic/unpic-img",
-  "authors": [
-    "ascorbic"
-  ],
-  "homepage": "https://unpic.pics/img/svelte",
-  "downloads": 5773,
-  "dependents": 5,
-  "updated": "2025-01-19T16:47:12.413Z",
-  "tags": [
-    "media"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 1678
+	"name": "@unpic/svelte",
+	"description": "Create responsive, high-performance images in Svelte.",
+	"repo_url": "https://github.com/ascorbic/unpic-img",
+	"authors": ["ascorbic"],
+	"homepage": "https://unpic.pics/img/svelte",
+	"downloads": 5773,
+	"dependents": 5,
+	"updated": "2025-01-19T16:47:12.413Z",
+	"tags": ["media"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 1680,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

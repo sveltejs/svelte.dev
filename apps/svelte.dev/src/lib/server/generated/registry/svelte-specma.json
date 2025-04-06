@@ -1,18 +1,19 @@
 {
-  "name": "svelte-specma",
-  "description": "Validates data using Specma in Svelte stores.",
-  "repo_url": "https://github.com/davidsavoie1/svelte-specma",
-  "authors": [
-    "davidsavoie1"
-  ],
-  "homepage": "https://github.com/davidsavoie1/svelte-specma.git",
-  "downloads": 22,
-  "dependents": 0,
-  "updated": "2023-02-20T21:39:35.381Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "svelte-specma",
+	"description": "Validates data using Specma in Svelte stores.",
+	"repo_url": "https://github.com/davidsavoie1/svelte-specma",
+	"authors": ["davidsavoie1"],
+	"homepage": "https://github.com/davidsavoie1/svelte-specma.git",
+	"downloads": 22,
+	"dependents": 0,
+	"updated": "2023-02-20T21:39:35.381Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

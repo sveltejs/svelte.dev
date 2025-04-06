@@ -1,18 +1,19 @@
 {
-  "name": "svelte-runes-store",
-  "description": "Build persistent Svelte states using runes.",
-  "repo_url": "https://github.com/joaquimnetocel/svelte-runes-store",
-  "authors": [
-    "joaquim.neto.cel"
-  ],
-  "homepage": "https://github.com/joaquimnetocel/svelte-runes-store#readme",
-  "downloads": 322,
-  "dependents": 0,
-  "updated": "2025-03-17T02:16:54.748Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": true,
-  "runes": true,
-  "github_stars": 2
+	"name": "svelte-runes-store",
+	"description": "Build persistent Svelte states using runes.",
+	"repo_url": "https://github.com/joaquimnetocel/svelte-runes-store",
+	"authors": ["joaquim.neto.cel"],
+	"homepage": "https://github.com/joaquimnetocel/svelte-runes-store#readme",
+	"downloads": 322,
+	"dependents": 0,
+	"updated": "2025-03-17T02:16:54.748Z",
+	"tags": ["miscellaneous"],
+	"svelte5": true,
+	"runes": true,
+	"github_stars": 2,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

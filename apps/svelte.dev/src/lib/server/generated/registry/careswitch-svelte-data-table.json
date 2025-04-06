@@ -1,18 +1,19 @@
 {
-  "name": "@careswitch/svelte-data-table",
-  "description": "Provides fast data table with sorting, filtering, pagination.",
-  "repo_url": "https://github.com/careswitch/svelte-data-table",
-  "authors": [
-    "markfayngersh"
-  ],
-  "homepage": "https://careswitch-svelte-data-table.vercel.app",
-  "downloads": 36,
-  "dependents": 1,
-  "updated": "2024-07-19T20:43:36.426Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 21
+	"name": "@careswitch/svelte-data-table",
+	"description": "Provides fast data table with sorting, filtering, pagination.",
+	"repo_url": "https://github.com/careswitch/svelte-data-table",
+	"authors": ["markfayngersh"],
+	"homepage": "https://careswitch-svelte-data-table.vercel.app",
+	"downloads": 36,
+	"dependents": 1,
+	"updated": "2024-07-19T20:43:36.426Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 21,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "svelte-textarea-autosize",
-  "description": "Provides autosizing textarea input component for Svelte.",
-  "repo_url": "https://github.com/shivesh947/svelte-textarea-autosize",
-  "authors": [
-    "shivesh"
-  ],
-  "homepage": "https://github.com/shivesh947/svelte-textarea-autosize#readme",
-  "downloads": 2,
-  "dependents": 0,
-  "updated": "2024-01-15T12:31:21.707Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "svelte-textarea-autosize",
+	"description": "Provides autosizing textarea input component for Svelte.",
+	"repo_url": "https://github.com/shivesh947/svelte-textarea-autosize",
+	"authors": ["shivesh"],
+	"homepage": "https://github.com/shivesh947/svelte-textarea-autosize#readme",
+	"downloads": 2,
+	"dependents": 0,
+	"updated": "2024-01-15T12:31:21.707Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

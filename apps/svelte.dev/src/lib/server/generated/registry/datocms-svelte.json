@@ -1,23 +1,26 @@
 {
-  "name": "@datocms/svelte",
-  "description": "Create components and utilities to work with DatoCMS in Svelte.",
-  "repo_url": "https://github.com/datocms/datocms-svelte",
-  "authors": [
-    "marcelofinamorvieira",
-    "stefanoverna",
-    "delphaber",
-    "mat_jack1",
-    "souljuse",
-    "sistrall_"
-  ],
-  "homepage": "https://github.com/datocms/datocms-svelte",
-  "downloads": 387,
-  "dependents": 0,
-  "updated": "2025-03-24T12:28:20.724Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 12
+	"name": "@datocms/svelte",
+	"description": "Create components and utilities to work with DatoCMS in Svelte.",
+	"repo_url": "https://github.com/datocms/datocms-svelte",
+	"authors": [
+		"marcelofinamorvieira",
+		"stefanoverna",
+		"delphaber",
+		"mat_jack1",
+		"souljuse",
+		"sistrall_"
+	],
+	"homepage": "https://github.com/datocms/datocms-svelte",
+	"downloads": 387,
+	"dependents": 0,
+	"updated": "2025-03-24T12:28:20.724Z",
+	"tags": ["integration"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 12,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": true
+	}
 }

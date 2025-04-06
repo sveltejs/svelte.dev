@@ -1,17 +1,18 @@
 {
-  "name": "@josesan9/svelte-virtual-scroll-list",
-  "description": "Implement virtualized scrolling for large lists in Svelte.",
-  "repo_url": "https://github.com/josesan9/svelte-virtual-scroll-list",
-  "authors": [
-    "josesan9"
-  ],
-  "homepage": "https://github.com/josesan9/svelte-virtual-scroll-list#readme",
-  "downloads": 75,
-  "dependents": 0,
-  "updated": "2025-03-20T12:17:10.497Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "@josesan9/svelte-virtual-scroll-list",
+	"description": "Implement virtualized scrolling for large lists in Svelte.",
+	"repo_url": "https://github.com/josesan9/svelte-virtual-scroll-list",
+	"authors": ["josesan9"],
+	"homepage": "https://github.com/josesan9/svelte-virtual-scroll-list#readme",
+	"downloads": 75,
+	"dependents": 0,
+	"updated": "2025-03-20T12:17:10.497Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": true
+	}
 }

@@ -1,17 +1,18 @@
 {
-  "name": "sveltekit-chessground",
-  "description": "Provides Svelte component for Chessground chess UI.",
-  "repo_url": "",
-  "authors": [
-    "sharlesleglerg"
-  ],
-  "homepage": "https://github.com/AhsanSarwar45/sveltekit-chessground#readme",
-  "downloads": 2,
-  "dependents": 0,
-  "updated": "2023-12-08T06:24:58.312Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "sveltekit-chessground",
+	"description": "Provides Svelte component for Chessground chess UI.",
+	"repo_url": "",
+	"authors": ["sharlesleglerg"],
+	"homepage": "https://github.com/AhsanSarwar45/sveltekit-chessground#readme",
+	"downloads": 2,
+	"dependents": 0,
+	"updated": "2023-12-08T06:24:58.312Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

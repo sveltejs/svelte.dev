@@ -1,19 +1,19 @@
 {
-  "name": "fluent-svelte",
-  "description": "Implement Microsoft's Fluent Design System in Svelte.",
-  "repo_url": "https://github.com/tropix126/fluent-svelte",
-  "authors": [
-    "tropix126"
-  ],
-  "homepage": "https://github.com/tropix126/fluent-svelte",
-  "downloads": 125,
-  "dependents": 1,
-  "updated": "2022-06-05T01:14:26.483Z",
-  "tags": [
-    "ui",
-    "design-system"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 634
+	"name": "fluent-svelte",
+	"description": "Implement Microsoft's Fluent Design System in Svelte.",
+	"repo_url": "https://github.com/tropix126/fluent-svelte",
+	"authors": ["tropix126"],
+	"homepage": "https://github.com/tropix126/fluent-svelte",
+	"downloads": 125,
+	"dependents": 1,
+	"updated": "2022-06-05T01:14:26.483Z",
+	"tags": ["ui", "design-system"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 634,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

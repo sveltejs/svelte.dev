@@ -1,18 +1,19 @@
 {
-  "name": "@vietsch/svelte-video-player-kit",
-  "description": "Create basic video player component for Svelte and SvelteKit apps.",
-  "repo_url": "https://github.com/Vietsch/svelte-video-player-kit",
-  "authors": [
-    "vietsch"
-  ],
-  "homepage": "https://github.com/Vietsch/svelte-video-player-kit",
-  "downloads": 7,
-  "dependents": 1,
-  "updated": "2025-01-22T11:46:53.740Z",
-  "tags": [
-    "media"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@vietsch/svelte-video-player-kit",
+	"description": "Create basic video player component for Svelte and SvelteKit apps.",
+	"repo_url": "https://github.com/Vietsch/svelte-video-player-kit",
+	"authors": ["vietsch"],
+	"homepage": "https://github.com/Vietsch/svelte-video-player-kit",
+	"downloads": 7,
+	"dependents": 1,
+	"updated": "2025-01-22T11:46:53.740Z",
+	"tags": ["media"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": false
+	}
 }

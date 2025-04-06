@@ -1,18 +1,19 @@
 {
-  "name": "@panta/svelte-router",
-  "description": "Implement routing for Svelte applications.",
-  "repo_url": "https://github.com/panta/svelte-router",
-  "authors": [
-    "panta"
-  ],
-  "homepage": "https://github.com/panta/svelte-router#readme",
-  "downloads": 22,
-  "dependents": 0,
-  "updated": "2019-10-08T12:25:06.350Z",
-  "tags": [
-    "router"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@panta/svelte-router",
+	"description": "Implement routing for Svelte applications.",
+	"repo_url": "https://github.com/panta/svelte-router",
+	"authors": ["panta"],
+	"homepage": "https://github.com/panta/svelte-router#readme",
+	"downloads": 22,
+	"dependents": 0,
+	"updated": "2019-10-08T12:25:06.350Z",
+	"tags": ["router"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

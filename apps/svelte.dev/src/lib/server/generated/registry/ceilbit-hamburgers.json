@@ -1,18 +1,19 @@
 {
-  "name": "ceilbit-hamburgers",
-  "description": "Provides hamburger menu component for Svelte.",
-  "repo_url": "https://github.com/CeilBit/ceilbit-hamburgers",
-  "authors": [
-    "tzaimun"
-  ],
-  "homepage": "https://github.com/CeilBit/ceilbit-hamburgers#readme",
-  "downloads": 13,
-  "dependents": 0,
-  "updated": "2023-06-08T13:59:43.179Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "ceilbit-hamburgers",
+	"description": "Provides hamburger menu component for Svelte.",
+	"repo_url": "https://github.com/CeilBit/ceilbit-hamburgers",
+	"authors": ["tzaimun"],
+	"homepage": "https://github.com/CeilBit/ceilbit-hamburgers#readme",
+	"downloads": 13,
+	"dependents": 0,
+	"updated": "2023-06-08T13:59:43.179Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

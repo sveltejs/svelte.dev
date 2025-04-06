@@ -1,20 +1,19 @@
 {
-  "name": "@astrojs/svelte",
-  "description": "Use Svelte components within Astro.",
-  "repo_url": "https://github.com/withastro/astro",
-  "authors": [
-    "natemoo-re",
-    "fredkschott",
-    "matthewp"
-  ],
-  "homepage": "https://docs.astro.build/en/guides/integrations-guide/svelte/",
-  "downloads": 24203,
-  "dependents": 11,
-  "updated": "2025-03-26T10:25:32.995Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 50240
+	"name": "@astrojs/svelte",
+	"description": "Use Svelte components within Astro.",
+	"repo_url": "https://github.com/withastro/astro",
+	"authors": ["natemoo-re", "fredkschott", "matthewp"],
+	"homepage": "https://docs.astro.build/en/guides/integrations-guide/svelte/",
+	"downloads": 24203,
+	"dependents": 11,
+	"updated": "2025-03-26T10:25:32.995Z",
+	"tags": ["integration"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 50251,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

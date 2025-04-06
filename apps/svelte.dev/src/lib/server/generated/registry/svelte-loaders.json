@@ -1,17 +1,18 @@
 {
-  "name": "svelte-loaders",
-  "description": "Provide customizable SVG spinner/loader components for Svelte.",
-  "repo_url": "",
-  "authors": [
-    "enzineer"
-  ],
-  "homepage": "https://enzineer.github.io/svelte-loaders/",
-  "downloads": 10,
-  "dependents": 0,
-  "updated": "2022-07-28T06:05:00.747Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-loaders",
+	"description": "Provide customizable SVG spinner/loader components for Svelte.",
+	"repo_url": "",
+	"authors": ["enzineer"],
+	"homepage": "https://enzineer.github.io/svelte-loaders/",
+	"downloads": 10,
+	"dependents": 0,
+	"updated": "2022-07-28T06:05:00.747Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

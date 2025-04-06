@@ -1,18 +1,19 @@
 {
-  "name": "list-box-svelte",
-  "description": "Create flexible, customizable dropdown components in Svelte.",
-  "repo_url": "https://github.com/Hayk-Asoyan/list-box",
-  "authors": [
-    "asoyan"
-  ],
-  "homepage": "https://github.com/Hayk-Asoyan/list-box#readme",
-  "downloads": 9,
-  "dependents": 0,
-  "updated": "2023-11-29T08:31:33.266Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "list-box-svelte",
+	"description": "Create flexible, customizable dropdown components in Svelte.",
+	"repo_url": "https://github.com/Hayk-Asoyan/list-box",
+	"authors": ["asoyan"],
+	"homepage": "https://github.com/Hayk-Asoyan/list-box#readme",
+	"downloads": 9,
+	"dependents": 0,
+	"updated": "2023-11-29T08:31:33.266Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

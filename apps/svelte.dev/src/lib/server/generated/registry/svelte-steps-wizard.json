@@ -1,18 +1,19 @@
 {
-  "name": "svelte-steps-wizard",
-  "description": "Implement step wizard component for Svelte.",
-  "repo_url": "https://github.com/JeanChuquispuma/svelte-step-wizard",
-  "authors": [
-    "chuquis"
-  ],
-  "homepage": "https://github.com/JeanChuquispuma/svelte-step-wizard#readme",
-  "downloads": 15,
-  "dependents": 0,
-  "updated": "2023-01-27T23:35:57.142Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelte-steps-wizard",
+	"description": "Implement step wizard component for Svelte.",
+	"repo_url": "https://github.com/JeanChuquispuma/svelte-step-wizard",
+	"authors": ["chuquis"],
+	"homepage": "https://github.com/JeanChuquispuma/svelte-step-wizard#readme",
+	"downloads": 15,
+	"dependents": 0,
+	"updated": "2023-01-27T23:35:57.142Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

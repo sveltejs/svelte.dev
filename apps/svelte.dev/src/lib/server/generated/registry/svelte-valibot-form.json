@@ -1,18 +1,19 @@
 {
-  "name": "svelte-valibot-form",
-  "description": "Validate forms in Svelte using Valibot.",
-  "repo_url": "https://github.com/matheustavarestrindade/svelte-valibot-form",
-  "authors": [
-    "matheustt098"
-  ],
-  "homepage": "https://github.com/matheustavarestrindade/svelte-valibot-form",
-  "downloads": 16,
-  "dependents": 0,
-  "updated": "2025-01-02T20:25:25.572Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelte-valibot-form",
+	"description": "Validate forms in Svelte using Valibot.",
+	"repo_url": "https://github.com/matheustavarestrindade/svelte-valibot-form",
+	"authors": ["matheustt098"],
+	"homepage": "https://github.com/matheustavarestrindade/svelte-valibot-form",
+	"downloads": 16,
+	"dependents": 0,
+	"updated": "2025-01-02T20:25:25.572Z",
+	"tags": ["miscellaneous"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

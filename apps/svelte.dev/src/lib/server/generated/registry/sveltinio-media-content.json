@@ -1,18 +1,19 @@
 {
-  "name": "@sveltinio/media-content",
-  "description": "Embed media content easily in Svelte and SvelteKit projects.",
-  "repo_url": "https://github.com/sveltinio/components-library",
-  "authors": [
-    "sveltinio"
-  ],
-  "homepage": "https://components.sveltin.io",
-  "downloads": 16,
-  "dependents": 0,
-  "updated": "2023-10-01T09:56:06.591Z",
-  "tags": [
-    "media"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 12
+	"name": "@sveltinio/media-content",
+	"description": "Embed media content easily in Svelte and SvelteKit projects.",
+	"repo_url": "https://github.com/sveltinio/components-library",
+	"authors": ["sveltinio"],
+	"homepage": "https://components.sveltin.io",
+	"downloads": 16,
+	"dependents": 0,
+	"updated": "2023-10-01T09:56:06.591Z",
+	"tags": ["media"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 12,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": false
+	}
 }

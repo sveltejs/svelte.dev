@@ -1,20 +1,19 @@
 {
-  "name": "@auth/sveltekit",
-  "description": "Authentication for SvelteKit.",
-  "repo_url": "https://github.com/nextauthjs/next-auth",
-  "authors": [
-    "thvu",
-    "balazsorban"
-  ],
-  "homepage": "https://sveltekit.authjs.dev",
-  "downloads": 15676,
-  "dependents": 5,
-  "updated": "2025-02-27T10:08:09.107Z",
-  "tags": [
-    "auth",
-    "server"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 26454
+	"name": "@auth/sveltekit",
+	"description": "Authentication for SvelteKit.",
+	"repo_url": "https://github.com/nextauthjs/next-auth",
+	"authors": ["thvu", "balazsorban"],
+	"homepage": "https://sveltekit.authjs.dev",
+	"downloads": 15676,
+	"dependents": 5,
+	"updated": "2025-02-27T10:08:09.107Z",
+	"tags": ["auth", "server"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 26456,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

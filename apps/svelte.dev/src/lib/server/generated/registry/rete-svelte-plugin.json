@@ -1,18 +1,19 @@
 {
-  "name": "rete-svelte-plugin",
-  "description": "Render Rete.js elements using Svelte components.",
-  "repo_url": "https://github.com/retejs/svelte-plugin",
-  "authors": [
-    "ni55an"
-  ],
-  "homepage": "https://retejs.org",
-  "downloads": 26,
-  "dependents": 1,
-  "updated": "2024-12-28T16:15:46.501Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 5
+	"name": "rete-svelte-plugin",
+	"description": "Render Rete.js elements using Svelte components.",
+	"repo_url": "https://github.com/retejs/svelte-plugin",
+	"authors": ["ni55an"],
+	"homepage": "https://retejs.org",
+	"downloads": 26,
+	"dependents": 1,
+	"updated": "2024-12-28T16:15:46.501Z",
+	"tags": ["tooling"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 5,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

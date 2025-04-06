@@ -1,18 +1,19 @@
 {
-  "name": "@svelte-web-fonts/google",
-  "description": "Loads Google Fonts into Svelte projects.",
-  "repo_url": "https://github.com/svelte-web-fonts/google",
-  "authors": [
-    "jakob-kruse"
-  ],
-  "homepage": "https://github.com/svelte-web-fonts/google#readme",
-  "downloads": 13,
-  "dependents": 1,
-  "updated": "2022-06-19T12:44:11.136Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 16
+	"name": "@svelte-web-fonts/google",
+	"description": "Loads Google Fonts into Svelte projects.",
+	"repo_url": "https://github.com/svelte-web-fonts/google",
+	"authors": ["jakob-kruse"],
+	"homepage": "https://github.com/svelte-web-fonts/google#readme",
+	"downloads": 13,
+	"dependents": 1,
+	"updated": "2022-06-19T12:44:11.136Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 16,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

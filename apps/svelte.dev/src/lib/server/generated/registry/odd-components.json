@@ -1,18 +1,19 @@
 {
-  "name": "odd-components",
-  "description": "Provide miscellaneous Svelte components.",
-  "repo_url": "https://github.com/JulianNymark/odd-components",
-  "authors": [
-    "just_a_guy"
-  ],
-  "homepage": "https://github.com/JulianNymark/odd-components#readme",
-  "downloads": 13,
-  "dependents": 0,
-  "updated": "2023-06-06T21:30:55.950Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "odd-components",
+	"description": "Provide miscellaneous Svelte components.",
+	"repo_url": "https://github.com/JulianNymark/odd-components",
+	"authors": ["just_a_guy"],
+	"homepage": "https://github.com/JulianNymark/odd-components#readme",
+	"downloads": 13,
+	"dependents": 0,
+	"updated": "2023-06-06T21:30:55.950Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

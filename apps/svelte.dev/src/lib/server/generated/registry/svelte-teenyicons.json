@@ -1,18 +1,19 @@
 {
-  "name": "svelte-teenyicons",
-  "description": "Use Teenyicons, a set of tiny SVG icons, in Svelte.",
-  "repo_url": "https://github.com/shinokada/svelte-teenyicons",
-  "authors": [
-    "shinichiokada"
-  ],
-  "homepage": "https://svelte-teenyicons.codewithshin.com/",
-  "downloads": 2,
-  "dependents": 0,
-  "updated": "2024-03-01T17:07:32.435Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 1
+	"name": "svelte-teenyicons",
+	"description": "Use Teenyicons, a set of tiny SVG icons, in Svelte.",
+	"repo_url": "https://github.com/shinokada/svelte-teenyicons",
+	"authors": ["shinichiokada"],
+	"homepage": "https://svelte-teenyicons.codewithshin.com/",
+	"downloads": 2,
+	"dependents": 0,
+	"updated": "2024-03-01T17:07:32.435Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

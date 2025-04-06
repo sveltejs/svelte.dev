@@ -1,21 +1,19 @@
 {
-  "name": "@responsive-ui/tooltip",
-  "description": "Create tooltip component for responsive-ui.",
-  "repo_url": "https://github.com/wetix/responsive-ui",
-  "authors": [
-    "rexlow",
-    "bassemsab",
-    "rm.oska",
-    "apacventure"
-  ],
-  "homepage": "https://github.com/wetix/responsive-ui/blob/main/components/tooltip#README.md",
-  "downloads": 73,
-  "dependents": 1,
-  "updated": "2024-04-23T07:51:23.902Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 19
+	"name": "@responsive-ui/tooltip",
+	"description": "Create tooltip component for responsive-ui.",
+	"repo_url": "https://github.com/wetix/responsive-ui",
+	"authors": ["rexlow", "bassemsab", "rm.oska", "apacventure"],
+	"homepage": "https://github.com/wetix/responsive-ui/blob/main/components/tooltip#README.md",
+	"downloads": 73,
+	"dependents": 1,
+	"updated": "2024-04-23T07:51:23.902Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 19,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

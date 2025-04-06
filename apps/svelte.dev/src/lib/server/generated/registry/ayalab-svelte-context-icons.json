@@ -1,16 +1,17 @@
 {
-  "name": "@ayalab/svelte-context-icons",
-  "description": "Integrate lightweight and configurable icons into Svelte apps.",
-  "repo_url": "",
-  "authors": [
-    "ikari132"
-  ],
-  "downloads": 1,
-  "dependents": 1,
-  "updated": "2024-02-29T21:24:06.555Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@ayalab/svelte-context-icons",
+	"description": "Integrate lightweight and configurable icons into Svelte apps.",
+	"repo_url": "",
+	"authors": ["ikari132"],
+	"downloads": 1,
+	"dependents": 1,
+	"updated": "2024-02-29T21:24:06.555Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

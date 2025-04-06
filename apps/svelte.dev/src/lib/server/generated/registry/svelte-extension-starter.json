@@ -1,18 +1,19 @@
 {
-  "name": "svelte-extension-starter",
-  "description": "Generate Svelte Chrome extension with Manifest V3.",
-  "repo_url": "https://github.com/raashy/svelte-chrome-extension-starter-mv3",
-  "authors": [
-    "rashy"
-  ],
-  "homepage": "https://github.com/raashy/svelte-chrome-extension-starter-mv3",
-  "downloads": 1,
-  "dependents": 0,
-  "updated": "2024-02-28T05:05:28.435Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "svelte-extension-starter",
+	"description": "Generate Svelte Chrome extension with Manifest V3.",
+	"repo_url": "https://github.com/raashy/svelte-chrome-extension-starter-mv3",
+	"authors": ["rashy"],
+	"homepage": "https://github.com/raashy/svelte-chrome-extension-starter-mv3",
+	"downloads": 1,
+	"dependents": 0,
+	"updated": "2024-02-28T05:05:28.435Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

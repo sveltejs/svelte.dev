@@ -1,19 +1,19 @@
 {
-  "name": "svelte-former",
-  "description": "Create Svelte forms with validation and dynamic field support.",
-  "repo_url": "https://github.com/mugendi/svelte-former",
-  "authors": [
-    "nguru"
-  ],
-  "homepage": "https://github.com/mugendi/svelte-former#readme",
-  "downloads": 1,
-  "dependents": 0,
-  "updated": "2024-07-04T00:57:22.950Z",
-  "tags": [
-    "ui",
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelte-former",
+	"description": "Create Svelte forms with validation and dynamic field support.",
+	"repo_url": "https://github.com/mugendi/svelte-former",
+	"authors": ["nguru"],
+	"homepage": "https://github.com/mugendi/svelte-former#readme",
+	"downloads": 1,
+	"dependents": 0,
+	"updated": "2024-07-04T00:57:22.950Z",
+	"tags": ["ui", "tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

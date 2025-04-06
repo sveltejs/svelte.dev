@@ -1,20 +1,18 @@
 {
-  "name": "@informaticon/lib.svelte.base.components",
-  "description": "Create Informaticon Svelte base components library.",
-  "repo_url": "https://github.com/informaticon/lib.svelte.base.components",
-  "authors": [
-    "informaticon.bot",
-    "haldc",
-    "sebaz6r",
-    "michaelhugi"
-  ],
-  "homepage": "https://github.com/informaticon/lib.svelte.base.components#readme",
-  "downloads": 37,
-  "dependents": 0,
-  "updated": "2022-09-08T13:36:04.171Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@informaticon/lib.svelte.base.components",
+	"description": "Create Informaticon Svelte base components library.",
+	"repo_url": "https://github.com/informaticon/lib.svelte.base.components",
+	"authors": ["informaticon.bot", "haldc", "sebaz6r", "michaelhugi"],
+	"homepage": "https://github.com/informaticon/lib.svelte.base.components#readme",
+	"downloads": 37,
+	"dependents": 0,
+	"updated": "2022-09-08T13:36:04.171Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

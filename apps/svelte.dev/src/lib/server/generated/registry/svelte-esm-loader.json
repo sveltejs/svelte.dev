@@ -1,16 +1,17 @@
 {
-  "name": "svelte-esm-loader",
-  "description": "Load Svelte components using ESM, with custom options.",
-  "repo_url": "",
-  "authors": [
-    "jakobrosenberg"
-  ],
-  "downloads": 15,
-  "dependents": 0,
-  "updated": "2022-02-11T12:52:08.182Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-esm-loader",
+	"description": "Load Svelte components using ESM, with custom options.",
+	"repo_url": "",
+	"authors": ["jakobrosenberg"],
+	"downloads": 15,
+	"dependents": 0,
+	"updated": "2022-02-11T12:52:08.182Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "@castlenine/svelte-canvas-confetti",
-  "description": "Create canvas-based confetti animations in Svelte apps.",
-  "repo_url": "https://github.com/castlenine/svelte-canvas-confetti",
-  "authors": [
-    "castlenine"
-  ],
-  "homepage": "https://github.com/castlenine/svelte-canvas-confetti",
-  "downloads": 100,
-  "dependents": 0,
-  "updated": "2024-05-06T15:57:41.692Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@castlenine/svelte-canvas-confetti",
+	"description": "Create canvas-based confetti animations in Svelte apps.",
+	"repo_url": "https://github.com/castlenine/svelte-canvas-confetti",
+	"authors": ["castlenine"],
+	"homepage": "https://github.com/castlenine/svelte-canvas-confetti",
+	"downloads": 100,
+	"dependents": 0,
+	"updated": "2024-05-06T15:57:41.692Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": false
+	}
 }

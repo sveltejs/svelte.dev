@@ -1,17 +1,18 @@
 {
-  "name": "svelte-tabular-table",
-  "description": "Create fully-featured, lightweight table component for Svelte.",
-  "repo_url": "https://github.com/autr/svelte-tabular-table",
-  "authors": [
-    "autr"
-  ],
-  "homepage": "https://autr.github.io/svelte-tabular-table",
-  "downloads": 12,
-  "dependents": 0,
-  "updated": "2021-05-06T16:01:02.357Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-tabular-table",
+	"description": "Create fully-featured, lightweight table component for Svelte.",
+	"repo_url": "https://github.com/autr/svelte-tabular-table",
+	"authors": ["autr"],
+	"homepage": "https://autr.github.io/svelte-tabular-table",
+	"downloads": 12,
+	"dependents": 0,
+	"updated": "2021-05-06T16:01:02.357Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

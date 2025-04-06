@@ -1,17 +1,18 @@
 {
-  "name": "svelte-adapter-aspcore",
-  "description": "Adapter for SvelteKit apps running on ASP.NET Core.",
-  "repo_url": "",
-  "authors": [
-    "kiho"
-  ],
-  "homepage": "https://github.com/kiho/svelte-adapter-aspcore#readme",
-  "downloads": 1,
-  "dependents": 0,
-  "updated": "2022-12-20T05:58:32.924Z",
-  "tags": [
-    "adapter"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-adapter-aspcore",
+	"description": "Adapter for SvelteKit apps running on ASP.NET Core.",
+	"repo_url": "",
+	"authors": ["kiho"],
+	"homepage": "https://github.com/kiho/svelte-adapter-aspcore#readme",
+	"downloads": 1,
+	"dependents": 0,
+	"updated": "2022-12-20T05:58:32.924Z",
+	"tags": ["adapter"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	}
 }

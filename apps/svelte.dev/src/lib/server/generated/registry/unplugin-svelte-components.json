@@ -1,18 +1,19 @@
 {
-  "name": "unplugin-svelte-components",
-  "description": "Enables on-demand component auto-importing for Svelte.",
-  "repo_url": "https://github.com/Mohamed-Kaizen/unplugin-svelte-components",
-  "authors": [
-    "mohamed-kaizen"
-  ],
-  "homepage": "https://github.com/Mohamed-Kaizen/unplugin-svelte-components",
-  "downloads": 574,
-  "dependents": 0,
-  "updated": "2023-10-22T06:53:41.200Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 38
+	"name": "unplugin-svelte-components",
+	"description": "Enables on-demand component auto-importing for Svelte.",
+	"repo_url": "https://github.com/Mohamed-Kaizen/unplugin-svelte-components",
+	"authors": ["mohamed-kaizen"],
+	"homepage": "https://github.com/Mohamed-Kaizen/unplugin-svelte-components",
+	"downloads": 574,
+	"dependents": 0,
+	"updated": "2023-10-22T06:53:41.200Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 38,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": false
+	}
 }

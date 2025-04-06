@@ -1,18 +1,19 @@
 {
-  "name": "@urami/svelte",
-  "description": "Provides automatic image optimization for Svelte components.",
-  "repo_url": "https://github.com/rayriffy/urami",
-  "authors": [
-    "rayriffy"
-  ],
-  "homepage": "https://urami.dev/",
-  "downloads": 13,
-  "dependents": 0,
-  "updated": "2024-11-15T06:40:00.292Z",
-  "tags": [
-    "media"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 88
+	"name": "@urami/svelte",
+	"description": "Provides automatic image optimization for Svelte components.",
+	"repo_url": "https://github.com/rayriffy/urami",
+	"authors": ["rayriffy"],
+	"homepage": "https://urami.dev/",
+	"downloads": 13,
+	"dependents": 0,
+	"updated": "2024-11-15T06:40:00.292Z",
+	"tags": ["media"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 88,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "@rodneylab/sveltekit-components",
-  "description": "Provide handy components for SvelteKit sites.",
-  "repo_url": "https://github.com/rodneylab/sveltekit-components",
-  "authors": [
-    "rodneylab"
-  ],
-  "homepage": "https://github.com/rodneylab/sveltekit-components#readme",
-  "downloads": 104,
-  "dependents": 0,
-  "updated": "2024-12-04T10:06:54.921Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 59
+	"name": "@rodneylab/sveltekit-components",
+	"description": "Provide handy components for SvelteKit sites.",
+	"repo_url": "https://github.com/rodneylab/sveltekit-components",
+	"authors": ["rodneylab"],
+	"homepage": "https://github.com/rodneylab/sveltekit-components#readme",
+	"downloads": 104,
+	"dependents": 0,
+	"updated": "2024-12-04T10:06:54.921Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 59,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "@prosemirror-adapter/svelte",
-  "description": "Integrate ProseMirror editor with Svelte.",
-  "repo_url": "https://github.com/Saul-Mirone/prosemirror-adapter",
-  "authors": [
-    "mirone"
-  ],
-  "homepage": "https://github.com/Saul-Mirone/prosemirror-adapter#readme",
-  "downloads": 3334,
-  "dependents": 5,
-  "updated": "2025-03-17T21:59:01.355Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 125
+	"name": "@prosemirror-adapter/svelte",
+	"description": "Integrate ProseMirror editor with Svelte.",
+	"repo_url": "https://github.com/Saul-Mirone/prosemirror-adapter",
+	"authors": ["mirone"],
+	"homepage": "https://github.com/Saul-Mirone/prosemirror-adapter#readme",
+	"downloads": 3334,
+	"dependents": 5,
+	"updated": "2025-03-17T21:59:01.355Z",
+	"tags": ["integration"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 125,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": true
+	}
 }

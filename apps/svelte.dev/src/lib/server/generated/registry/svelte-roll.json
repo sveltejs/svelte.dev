@@ -1,18 +1,19 @@
 {
-  "name": "svelte-roll",
-  "description": "Create custom scroll behavior for Svelte applications.",
-  "repo_url": "https://github.com/sulitprod/svelte-roll",
-  "authors": [
-    "sulitprod"
-  ],
-  "homepage": "https://github.com/sulitprod/svelte-roll#readme",
-  "downloads": 12,
-  "dependents": 0,
-  "updated": "2023-07-22T06:01:08.297Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelte-roll",
+	"description": "Create custom scroll behavior for Svelte applications.",
+	"repo_url": "https://github.com/sulitprod/svelte-roll",
+	"authors": ["sulitprod"],
+	"homepage": "https://github.com/sulitprod/svelte-roll#readme",
+	"downloads": 12,
+	"dependents": 0,
+	"updated": "2023-07-22T06:01:08.297Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

@@ -1,17 +1,18 @@
 {
-  "name": "oditqui",
-  "description": "Font Awesome component for Svelte, using inline SVG.",
-  "repo_url": "https://github.com/BentonKohler/oditqui",
-  "authors": [
-    "alanherzog"
-  ],
-  "homepage": "https://github.com/BentonKohler/oditqui#readme",
-  "downloads": 22,
-  "dependents": 0,
-  "updated": "2024-04-03T19:43:15.651Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "oditqui",
+	"description": "Font Awesome component for Svelte, using inline SVG.",
+	"repo_url": "https://github.com/BentonKohler/oditqui",
+	"authors": ["alanherzog"],
+	"homepage": "https://github.com/BentonKohler/oditqui#readme",
+	"downloads": 22,
+	"dependents": 0,
+	"updated": "2024-04-03T19:43:15.651Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": false
+	}
 }

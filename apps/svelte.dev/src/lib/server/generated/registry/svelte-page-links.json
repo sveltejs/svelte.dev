@@ -1,18 +1,19 @@
 {
-  "name": "svelte-page-links",
-  "description": "Generate pagination links for Svelte, customizable and intelligent.",
-  "repo_url": "https://github.com/captaincodeman/svelte-page-links",
-  "authors": [
-    "captaincodeman"
-  ],
-  "homepage": "https://captaincodeman.github.io/svelte-page-links/",
-  "downloads": 7,
-  "dependents": 0,
-  "updated": "2024-09-14T19:10:03.271Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 4
+	"name": "svelte-page-links",
+	"description": "Generate pagination links for Svelte, customizable and intelligent.",
+	"repo_url": "https://github.com/captaincodeman/svelte-page-links",
+	"authors": ["captaincodeman"],
+	"homepage": "https://captaincodeman.github.io/svelte-page-links/",
+	"downloads": 7,
+	"dependents": 0,
+	"updated": "2024-09-14T19:10:03.271Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 4,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": true
+	}
 }

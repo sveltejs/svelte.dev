@@ -1,16 +1,17 @@
 {
-  "name": "@svelte-bin/qr",
-  "description": "Renders QR codes as child, img, or canvas elements in Svelte.",
-  "repo_url": "",
-  "authors": [
-    "binsarjr"
-  ],
-  "downloads": 3,
-  "dependents": 0,
-  "updated": "2023-11-11T04:22:56.755Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@svelte-bin/qr",
+	"description": "Renders QR codes as child, img, or canvas elements in Svelte.",
+	"repo_url": "",
+	"authors": ["binsarjr"],
+	"downloads": 3,
+	"dependents": 0,
+	"updated": "2023-11-11T04:22:56.755Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

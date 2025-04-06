@@ -1,18 +1,19 @@
 {
-  "name": "svelte-magnifier",
-  "description": "Magnify images in Svelte applications.",
-  "repo_url": "https://github.com/supercoww/svelte-magnifier",
-  "authors": [
-    "supercoww"
-  ],
-  "homepage": "https://github.com/supercoww/svelte-magnifier#readme",
-  "downloads": 109,
-  "dependents": 0,
-  "updated": "2021-10-06T08:20:05.624Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 8
+	"name": "svelte-magnifier",
+	"description": "Magnify images in Svelte applications.",
+	"repo_url": "https://github.com/supercoww/svelte-magnifier",
+	"authors": ["supercoww"],
+	"homepage": "https://github.com/supercoww/svelte-magnifier#readme",
+	"downloads": 109,
+	"dependents": 0,
+	"updated": "2021-10-06T08:20:05.624Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 8,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

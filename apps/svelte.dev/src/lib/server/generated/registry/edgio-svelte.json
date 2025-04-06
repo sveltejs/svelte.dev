@@ -1,16 +1,17 @@
 {
-  "name": "@edgio/svelte",
-  "description": "Prefetch pages from Edgio edge cache.",
-  "repo_url": "",
-  "authors": [
-    "moovweb-admin"
-  ],
-  "downloads": 3643,
-  "dependents": 0,
-  "updated": "2024-11-06T23:18:43.977Z",
-  "tags": [
-    "server"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@edgio/svelte",
+	"description": "Prefetch pages from Edgio edge cache.",
+	"repo_url": "",
+	"authors": ["moovweb-admin"],
+	"downloads": 3643,
+	"dependents": 0,
+	"updated": "2024-11-06T23:18:43.977Z",
+	"tags": ["server"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

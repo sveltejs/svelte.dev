@@ -1,16 +1,17 @@
 {
-  "name": "svelte-idle",
-  "description": "Detect idleness in Svelte applications.",
-  "repo_url": "",
-  "authors": [
-    "mathiaswp"
-  ],
-  "downloads": 706,
-  "dependents": 0,
-  "updated": "2024-10-02T16:15:22.727Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-idle",
+	"description": "Detect idleness in Svelte applications.",
+	"repo_url": "",
+	"authors": ["mathiaswp"],
+	"downloads": 706,
+	"dependents": 0,
+	"updated": "2024-10-02T16:15:22.727Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

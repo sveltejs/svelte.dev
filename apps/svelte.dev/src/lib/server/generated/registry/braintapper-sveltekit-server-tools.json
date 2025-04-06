@@ -1,18 +1,19 @@
 {
-  "name": "braintapper-sveltekit-server-tools",
-  "description": "Offer server-side code libraries for SvelteKit.",
-  "repo_url": "https://github.com/braintapper/braintapper-sveltekit-server-tools",
-  "authors": [
-    "braintapper"
-  ],
-  "homepage": "https://github.com/braintapper/braintapper-sveltekit-server-tools#readme",
-  "downloads": 23,
-  "dependents": 0,
-  "updated": "2021-07-29T18:39:16.463Z",
-  "tags": [
-    "server"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "braintapper-sveltekit-server-tools",
+	"description": "Offer server-side code libraries for SvelteKit.",
+	"repo_url": "https://github.com/braintapper/braintapper-sveltekit-server-tools",
+	"authors": ["braintapper"],
+	"homepage": "https://github.com/braintapper/braintapper-sveltekit-server-tools#readme",
+	"downloads": 23,
+	"dependents": 0,
+	"updated": "2021-07-29T18:39:16.463Z",
+	"tags": ["server"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

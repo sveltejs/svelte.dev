@@ -1,18 +1,19 @@
 {
-  "name": "@haysquare/svelte-multiselect",
-  "description": "Develop custom multi-select components for SvelteKit projects.",
-  "repo_url": "https://github.com/haysquareA/svelte-multiselect",
-  "authors": [
-    "haysquare"
-  ],
-  "homepage": "https://github.com/haysquareA/svelte-multiselect#readme",
-  "downloads": 1,
-  "dependents": 0,
-  "updated": "2024-03-21T15:06:42.434Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@haysquare/svelte-multiselect",
+	"description": "Develop custom multi-select components for SvelteKit projects.",
+	"repo_url": "https://github.com/haysquareA/svelte-multiselect",
+	"authors": ["haysquare"],
+	"homepage": "https://github.com/haysquareA/svelte-multiselect#readme",
+	"downloads": 1,
+	"dependents": 0,
+	"updated": "2024-03-21T15:06:42.434Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

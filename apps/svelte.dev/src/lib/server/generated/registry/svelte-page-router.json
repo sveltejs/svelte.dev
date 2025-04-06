@@ -1,18 +1,19 @@
 {
-  "name": "svelte-page-router",
-  "description": "Create config-based routing for Svelte apps using page.js.",
-  "repo_url": "https://github.com/PaulMaly/svelte-page-router",
-  "authors": [
-    "paulmaly"
-  ],
-  "homepage": "https://github.com/PaulMaly/svelte-page-router#readme",
-  "downloads": 10,
-  "dependents": 0,
-  "updated": "2019-09-12T06:05:27.630Z",
-  "tags": [
-    "router"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 21
+	"name": "svelte-page-router",
+	"description": "Create config-based routing for Svelte apps using page.js.",
+	"repo_url": "https://github.com/PaulMaly/svelte-page-router",
+	"authors": ["paulmaly"],
+	"homepage": "https://github.com/PaulMaly/svelte-page-router#readme",
+	"downloads": 10,
+	"dependents": 0,
+	"updated": "2019-09-12T06:05:27.630Z",
+	"tags": ["router"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 21,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,16 +1,17 @@
 {
-  "name": "svelte-select-kit",
-  "description": "Build WAI-ARIA compliant navigation/select menus.",
-  "repo_url": "",
-  "authors": [
-    "snehalbaghel"
-  ],
-  "downloads": 0,
-  "dependents": 0,
-  "updated": "2024-08-15T20:21:19.305Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-select-kit",
+	"description": "Build WAI-ARIA compliant navigation/select menus.",
+	"repo_url": "",
+	"authors": ["snehalbaghel"],
+	"downloads": 0,
+	"dependents": 0,
+	"updated": "2024-08-15T20:21:19.305Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

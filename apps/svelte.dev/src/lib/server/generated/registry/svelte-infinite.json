@@ -1,18 +1,19 @@
 {
-  "name": "svelte-infinite",
-  "description": "Create infinite scroll for Svelte 5 with Runes.",
-  "repo_url": "https://github.com/ndom91/svelte-infinite",
-  "authors": [
-    "ndom91"
-  ],
-  "homepage": "https://svelte-5-infinite.vercel.app",
-  "downloads": 412,
-  "dependents": 0,
-  "updated": "2025-03-19T14:03:08.848Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 74
+	"name": "svelte-infinite",
+	"description": "Create infinite scroll for Svelte 5 with Runes.",
+	"repo_url": "https://github.com/ndom91/svelte-infinite",
+	"authors": ["ndom91"],
+	"homepage": "https://svelte-5-infinite.vercel.app",
+	"downloads": 412,
+	"dependents": 0,
+	"updated": "2025-03-19T14:03:08.848Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 74,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

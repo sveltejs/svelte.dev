@@ -1,18 +1,19 @@
 {
-  "name": "elementari",
-  "description": "Create interactive visualizations for materials science.",
-  "repo_url": "https://github.com/janosh/elementari",
-  "authors": [
-    "janosh"
-  ],
-  "homepage": "https://janosh.github.io/elementari",
-  "downloads": 164,
-  "dependents": 0,
-  "updated": "2025-03-26T00:47:39.788Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 143
+	"name": "elementari",
+	"description": "Create interactive visualizations for materials science.",
+	"repo_url": "https://github.com/janosh/elementari",
+	"authors": ["janosh"],
+	"homepage": "https://janosh.github.io/elementari",
+	"downloads": 164,
+	"dependents": 0,
+	"updated": "2025-03-26T00:47:39.788Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 143,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

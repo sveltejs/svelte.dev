@@ -1,19 +1,19 @@
 {
-  "name": "trap-focus-svelte",
-  "description": "Creates focus trap, supports stacking, toggling, dynamic content.",
-  "repo_url": "https://github.com/henrygd/trap-focus-svelte",
-  "authors": [
-    "henrygd"
-  ],
-  "homepage": "https://trap-focus-svelte.henrygd.me",
-  "downloads": 409,
-  "dependents": 0,
-  "updated": "2024-05-10T22:23:53.626Z",
-  "tags": [
-    "ui",
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 8
+	"name": "trap-focus-svelte",
+	"description": "Creates focus trap, supports stacking, toggling, dynamic content.",
+	"repo_url": "https://github.com/henrygd/trap-focus-svelte",
+	"authors": ["henrygd"],
+	"homepage": "https://trap-focus-svelte.henrygd.me",
+	"downloads": 409,
+	"dependents": 0,
+	"updated": "2024-05-10T22:23:53.626Z",
+	"tags": ["ui", "miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 8,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

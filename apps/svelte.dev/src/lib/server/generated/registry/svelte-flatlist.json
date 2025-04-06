@@ -1,18 +1,19 @@
 {
-  "name": "svelte-flatlist",
-  "description": "Create draggable, customizable, mobile-friendly menus in Svelte.",
-  "repo_url": "https://github.com/snuffyDev/svelte-flatlist",
-  "authors": [
-    "snuffydev"
-  ],
-  "homepage": "https://github.com/snuffyDev/svelte-flatlist#readme",
-  "downloads": 12,
-  "dependents": 0,
-  "updated": "2021-12-20T16:31:42.503Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 16
+	"name": "svelte-flatlist",
+	"description": "Create draggable, customizable, mobile-friendly menus in Svelte.",
+	"repo_url": "https://github.com/snuffyDev/svelte-flatlist",
+	"authors": ["snuffydev"],
+	"homepage": "https://github.com/snuffyDev/svelte-flatlist#readme",
+	"downloads": 12,
+	"dependents": 0,
+	"updated": "2021-12-20T16:31:42.503Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 16,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

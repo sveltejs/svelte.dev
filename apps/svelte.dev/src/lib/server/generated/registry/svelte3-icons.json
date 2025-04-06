@@ -1,18 +1,19 @@
 {
-  "name": "svelte3-icons",
-  "description": "Provide icon components for Svelte.",
-  "repo_url": "https://github.com/sclzl/svelte-icons",
-  "authors": [
-    "li1960659134"
-  ],
-  "homepage": "https://github.com/sclzl/svelte-icons#readme",
-  "downloads": 13,
-  "dependents": 0,
-  "updated": "2023-02-22T07:18:25.032Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "svelte3-icons",
+	"description": "Provide icon components for Svelte.",
+	"repo_url": "https://github.com/sclzl/svelte-icons",
+	"authors": ["li1960659134"],
+	"homepage": "https://github.com/sclzl/svelte-icons#readme",
+	"downloads": 13,
+	"dependents": 0,
+	"updated": "2023-02-22T07:18:25.032Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

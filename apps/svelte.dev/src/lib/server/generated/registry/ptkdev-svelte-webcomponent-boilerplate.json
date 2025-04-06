@@ -1,18 +1,19 @@
 {
-  "name": "@ptkdev/svelte-webcomponent-boilerplate",
-  "description": "Create HTML5 Web Components with Svelte.",
-  "repo_url": "https://github.com/ptkdev-boilerplate/svelte-webcomponent-boilerplate",
-  "authors": [
-    "ptkdevio"
-  ],
-  "homepage": "https://codepen.io/ptkdev/pen/jOyNmEQ",
-  "downloads": 147,
-  "dependents": 0,
-  "updated": "2022-02-20T23:46:11.424Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 60
+	"name": "@ptkdev/svelte-webcomponent-boilerplate",
+	"description": "Create HTML5 Web Components with Svelte.",
+	"repo_url": "https://github.com/ptkdev-boilerplate/svelte-webcomponent-boilerplate",
+	"authors": ["ptkdevio"],
+	"homepage": "https://codepen.io/ptkdev/pen/jOyNmEQ",
+	"downloads": 147,
+	"dependents": 0,
+	"updated": "2022-02-20T23:46:11.424Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 60,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

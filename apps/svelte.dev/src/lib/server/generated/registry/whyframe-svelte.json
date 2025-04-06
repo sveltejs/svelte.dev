@@ -1,18 +1,19 @@
 {
-  "name": "@whyframe/svelte",
-  "description": "Provide Svelte support for whyframe, a component isolation tool.",
-  "repo_url": "https://github.com/bluwy/whyframe",
-  "authors": [
-    "bluwy"
-  ],
-  "homepage": "https://whyframe.dev",
-  "downloads": 1241,
-  "dependents": 0,
-  "updated": "2025-03-18T03:48:37.354Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 565
+	"name": "@whyframe/svelte",
+	"description": "Provide Svelte support for whyframe, a component isolation tool.",
+	"repo_url": "https://github.com/bluwy/whyframe",
+	"authors": ["bluwy"],
+	"homepage": "https://whyframe.dev",
+	"downloads": 1241,
+	"dependents": 0,
+	"updated": "2025-03-18T03:48:37.354Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 564,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "@zerodevx/svelte-json-view",
-  "description": "Prettify and display JSON data in a tree-like view.",
-  "repo_url": "https://github.com/zerodevx/svelte-json-view",
-  "authors": [
-    "zerodevx"
-  ],
-  "homepage": "https://github.com/zerodevx/svelte-json-view#readme",
-  "downloads": 5040,
-  "dependents": 8,
-  "updated": "2024-09-23T17:55:11.462Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 53
+	"name": "@zerodevx/svelte-json-view",
+	"description": "Prettify and display JSON data in a tree-like view.",
+	"repo_url": "https://github.com/zerodevx/svelte-json-view",
+	"authors": ["zerodevx"],
+	"homepage": "https://github.com/zerodevx/svelte-json-view#readme",
+	"downloads": 5040,
+	"dependents": 8,
+	"updated": "2024-09-23T17:55:11.462Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 53,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

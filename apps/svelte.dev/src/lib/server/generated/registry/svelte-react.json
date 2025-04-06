@@ -1,18 +1,19 @@
 {
-  "name": "svelte-react",
-  "description": "Use React components inside Svelte apps.",
-  "repo_url": "https://github.com/jesseskinner/svelte-react",
-  "authors": [
-    "jesseskinner"
-  ],
-  "homepage": "https://github.com/jesseskinner/svelte-react#readme",
-  "downloads": 18,
-  "dependents": 0,
-  "updated": "2020-02-07T17:48:34.443Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 77
+	"name": "svelte-react",
+	"description": "Use React components inside Svelte apps.",
+	"repo_url": "https://github.com/jesseskinner/svelte-react",
+	"authors": ["jesseskinner"],
+	"homepage": "https://github.com/jesseskinner/svelte-react#readme",
+	"downloads": 18,
+	"dependents": 0,
+	"updated": "2020-02-07T17:48:34.443Z",
+	"tags": ["integration"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 77,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

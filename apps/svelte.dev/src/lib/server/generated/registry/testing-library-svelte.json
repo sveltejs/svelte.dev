@@ -1,33 +1,36 @@
 {
-  "name": "@testing-library/svelte",
-  "description": "Test Svelte components with Testing Library.",
-  "repo_url": "https://github.com/testing-library/svelte-testing-library",
-  "authors": [
-    "testing-library-bot",
-    "kentcdodds",
-    "timdeschryver",
-    "patrickhulce",
-    "dfcook",
-    "gpx",
-    "mpeyper",
-    "mihar-22",
-    "pago",
-    "cmckinstry",
-    "thymikee",
-    "brrianalexis",
-    "jdecroock",
-    "mdjastrzebski",
-    "eps1lon",
-    "phryneas"
-  ],
-  "homepage": "https://github.com/testing-library/svelte-testing-library#readme",
-  "downloads": 166956,
-  "dependents": 11,
-  "updated": "2025-02-11T18:02:00.554Z",
-  "tags": [
-    "testing"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 630
+	"name": "@testing-library/svelte",
+	"description": "Test Svelte components with Testing Library.",
+	"repo_url": "https://github.com/testing-library/svelte-testing-library",
+	"authors": [
+		"testing-library-bot",
+		"kentcdodds",
+		"timdeschryver",
+		"patrickhulce",
+		"dfcook",
+		"gpx",
+		"mpeyper",
+		"mihar-22",
+		"pago",
+		"cmckinstry",
+		"thymikee",
+		"brrianalexis",
+		"jdecroock",
+		"mdjastrzebski",
+		"eps1lon",
+		"phryneas"
+	],
+	"homepage": "https://github.com/testing-library/svelte-testing-library#readme",
+	"downloads": 166956,
+	"dependents": 11,
+	"updated": "2025-02-11T18:02:00.554Z",
+	"tags": ["testing"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 630,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

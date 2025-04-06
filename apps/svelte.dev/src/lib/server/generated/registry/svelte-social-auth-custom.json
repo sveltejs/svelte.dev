@@ -1,16 +1,17 @@
 {
-  "name": "svelte-social-auth-custom",
-  "description": "Implement social authentication with Google and Facebook in Svelte.",
-  "repo_url": "",
-  "authors": [
-    "louishrg"
-  ],
-  "downloads": 29,
-  "dependents": 0,
-  "updated": "2021-04-22T22:36:58.586Z",
-  "tags": [
-    "auth"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-social-auth-custom",
+	"description": "Implement social authentication with Google and Facebook in Svelte.",
+	"repo_url": "",
+	"authors": ["louishrg"],
+	"downloads": 29,
+	"dependents": 0,
+	"updated": "2021-04-22T22:36:58.586Z",
+	"tags": ["auth"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "easy-git-explorer",
-  "description": "Explore Git repositories visually with this Svelte-based tool.",
-  "repo_url": "https://github.com/danisss9/easy-git-explorer",
-  "authors": [
-    "danisss9"
-  ],
-  "homepage": "https://github.com/danisss9/easy-git-explorer#readme",
-  "downloads": 3,
-  "dependents": 0,
-  "updated": "2024-06-25T23:59:37.496Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "easy-git-explorer",
+	"description": "Explore Git repositories visually with this Svelte-based tool.",
+	"repo_url": "https://github.com/danisss9/easy-git-explorer",
+	"authors": ["danisss9"],
+	"homepage": "https://github.com/danisss9/easy-git-explorer#readme",
+	"downloads": 3,
+	"dependents": 0,
+	"updated": "2024-06-25T23:59:37.496Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

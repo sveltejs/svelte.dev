@@ -1,18 +1,19 @@
 {
-  "name": "vaul-svelte",
-  "description": "Create accessible, unstyled Svelte components.",
-  "repo_url": "https://github.com/huntabyte/vaul-svelte",
-  "authors": [
-    "huntabyte"
-  ],
-  "homepage": "https://github.com/huntabyte/vaul-svelte#readme",
-  "downloads": 23075,
-  "dependents": 15,
-  "updated": "2024-06-29T16:12:55.492Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 529
+	"name": "vaul-svelte",
+	"description": "Create accessible, unstyled Svelte components.",
+	"repo_url": "https://github.com/huntabyte/vaul-svelte",
+	"authors": ["huntabyte"],
+	"homepage": "https://github.com/huntabyte/vaul-svelte#readme",
+	"downloads": 23075,
+	"dependents": 15,
+	"updated": "2024-06-29T16:12:55.492Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 529,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": true
+	}
 }

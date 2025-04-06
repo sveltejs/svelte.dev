@@ -1,18 +1,19 @@
 {
-  "name": "tech-radar-editor",
-  "description": "Create and edit Tech Radars with an easy-to-use Svelte component.",
-  "repo_url": "https://github.com/jcreek/Tech-Radar-Editor",
-  "authors": [
-    "jcreek"
-  ],
-  "homepage": "https://github.com/jcreek/Tech-Radar-Editor#readme",
-  "downloads": 10,
-  "dependents": 0,
-  "updated": "2024-09-27T20:36:10.012Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "tech-radar-editor",
+	"description": "Create and edit Tech Radars with an easy-to-use Svelte component.",
+	"repo_url": "https://github.com/jcreek/Tech-Radar-Editor",
+	"authors": ["jcreek"],
+	"homepage": "https://github.com/jcreek/Tech-Radar-Editor#readme",
+	"downloads": 10,
+	"dependents": 0,
+	"updated": "2024-09-27T20:36:10.012Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

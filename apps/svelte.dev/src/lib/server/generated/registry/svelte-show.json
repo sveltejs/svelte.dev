@@ -1,18 +1,19 @@
 {
-  "name": "svelte-show",
-  "description": "Conditionally show/hide elements without destroying components.",
-  "repo_url": "https://github.com/Foxeye-Rinx/svelte-show",
-  "authors": [
-    "foxeye.rinx"
-  ],
-  "homepage": "https://github.com/Foxeye-Rinx/svelte-show#readme",
-  "downloads": 5,
-  "dependents": 0,
-  "updated": "2022-09-04T08:14:42.658Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelte-show",
+	"description": "Conditionally show/hide elements without destroying components.",
+	"repo_url": "https://github.com/Foxeye-Rinx/svelte-show",
+	"authors": ["foxeye.rinx"],
+	"homepage": "https://github.com/Foxeye-Rinx/svelte-show#readme",
+	"downloads": 5,
+	"dependents": 0,
+	"updated": "2022-09-04T08:14:42.658Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

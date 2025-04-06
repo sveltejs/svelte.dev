@@ -1,18 +1,19 @@
 {
-  "name": "sv-filegrid",
-  "description": "Create responsive file grid components for Svelte.",
-  "repo_url": "https://github.com/sidfishus/sv-filegrid",
-  "authors": [
-    "sidfishus"
-  ],
-  "homepage": "https://github.com/sidfishus/sv-filegrid#readme",
-  "downloads": 139,
-  "dependents": 0,
-  "updated": "2025-03-25T19:32:57.089Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 0
+	"name": "sv-filegrid",
+	"description": "Create responsive file grid components for Svelte.",
+	"repo_url": "https://github.com/sidfishus/sv-filegrid",
+	"authors": ["sidfishus"],
+	"homepage": "https://github.com/sidfishus/sv-filegrid#readme",
+	"downloads": 139,
+	"dependents": 0,
+	"updated": "2025-03-25T19:32:57.089Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

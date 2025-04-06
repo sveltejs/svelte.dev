@@ -1,17 +1,18 @@
 {
-  "name": "svelte-i18n-svelte5",
-  "description": "Internationalize Svelte applications with reactive tools.",
-  "repo_url": "https://github.com/mardax/svelte-i18n",
-  "authors": [
-    "mardax"
-  ],
-  "homepage": "https://github.com/mardax/svelte-i18n#readme",
-  "downloads": 3,
-  "dependents": 0,
-  "updated": "2024-06-10T18:53:39.869Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "svelte-i18n-svelte5",
+	"description": "Internationalize Svelte applications with reactive tools.",
+	"repo_url": "https://github.com/mardax/svelte-i18n",
+	"authors": ["mardax"],
+	"homepage": "https://github.com/mardax/svelte-i18n#readme",
+	"downloads": 3,
+	"dependents": 0,
+	"updated": "2024-06-10T18:53:39.869Z",
+	"tags": ["miscellaneous"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

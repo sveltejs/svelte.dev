@@ -1,18 +1,19 @@
 {
-  "name": "@alanchenchen/svelte-store-persisted",
-  "description": "Persist Svelte store data to browser storage, with global and module use.",
-  "repo_url": "https://github.com/alanchenchen/svelte-store-persisted",
-  "authors": [
-    "alanchenchen"
-  ],
-  "homepage": "https://github.com/alanchenchen/svelte-store-persisted",
-  "downloads": 27,
-  "dependents": 0,
-  "updated": "2020-01-19T09:42:20.915Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 2
+	"name": "@alanchenchen/svelte-store-persisted",
+	"description": "Persist Svelte store data to browser storage, with global and module use.",
+	"repo_url": "https://github.com/alanchenchen/svelte-store-persisted",
+	"authors": ["alanchenchen"],
+	"homepage": "https://github.com/alanchenchen/svelte-store-persisted",
+	"downloads": 27,
+	"dependents": 0,
+	"updated": "2020-01-19T09:42:20.915Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

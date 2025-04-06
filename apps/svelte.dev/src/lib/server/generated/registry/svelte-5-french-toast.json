@@ -1,18 +1,19 @@
 {
-  "name": "svelte-5-french-toast",
-  "description": "Create buttery smooth Svelte 5 toasts.",
-  "repo_url": "https://github.com/anatoliy-t7/svelte-5-french-toast",
-  "authors": [
-    "anatoliy.st"
-  ],
-  "homepage": "https://github.com/anatoliy-t7/svelte-5-french-toast#readme",
-  "downloads": 471,
-  "dependents": 0,
-  "updated": "2025-01-16T03:07:23.749Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 12
+	"name": "svelte-5-french-toast",
+	"description": "Create buttery smooth Svelte 5 toasts.",
+	"repo_url": "https://github.com/anatoliy-t7/svelte-5-french-toast",
+	"authors": ["anatoliy.st"],
+	"homepage": "https://github.com/anatoliy-t7/svelte-5-french-toast#readme",
+	"downloads": 471,
+	"dependents": 0,
+	"updated": "2025-01-16T03:07:23.749Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 12,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

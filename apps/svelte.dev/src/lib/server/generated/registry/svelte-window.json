@@ -1,18 +1,19 @@
 {
-  "name": "svelte-window",
-  "description": "Renders large, scrollable lists and tabular data efficiently.",
-  "repo_url": "https://github.com/micha-lmxt/svelte-window",
-  "authors": [
-    "micha-lmxt"
-  ],
-  "homepage": "https://github.com/micha-lmxt/svelte-window#readme",
-  "downloads": 77,
-  "dependents": 0,
-  "updated": "2022-09-27T07:25:49.318Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 60
+	"name": "svelte-window",
+	"description": "Renders large, scrollable lists and tabular data efficiently.",
+	"repo_url": "https://github.com/micha-lmxt/svelte-window",
+	"authors": ["micha-lmxt"],
+	"homepage": "https://github.com/micha-lmxt/svelte-window#readme",
+	"downloads": 77,
+	"dependents": 0,
+	"updated": "2022-09-27T07:25:49.318Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 60,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

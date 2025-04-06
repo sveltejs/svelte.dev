@@ -1,17 +1,18 @@
 {
-  "name": "wafer-connect",
-  "description": "Connect to wallets in Svelte dApps.",
-  "repo_url": "https://github.com/saklani/wafer-connect",
-  "authors": [
-    "saklani"
-  ],
-  "homepage": "https://wafer.vercel.app",
-  "downloads": 0,
-  "dependents": 0,
-  "updated": "2023-06-16T07:47:20.582Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "wafer-connect",
+	"description": "Connect to wallets in Svelte dApps.",
+	"repo_url": "https://github.com/saklani/wafer-connect",
+	"authors": ["saklani"],
+	"homepage": "https://wafer.vercel.app",
+	"downloads": 0,
+	"dependents": 0,
+	"updated": "2023-06-16T07:47:20.582Z",
+	"tags": ["integration"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

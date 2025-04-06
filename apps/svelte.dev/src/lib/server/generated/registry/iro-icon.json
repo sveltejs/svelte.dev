@@ -1,18 +1,19 @@
 {
-  "name": "@iro/icon",
-  "description": "Use icon components in Svelte projects.",
-  "repo_url": "https://github.com/choogo-cn/icon",
-  "authors": [
-    "jetlua"
-  ],
-  "homepage": "https://github.com/choogo-cn/icon#readme",
-  "downloads": 12,
-  "dependents": 0,
-  "updated": "2023-09-19T17:44:54.258Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@iro/icon",
+	"description": "Use icon components in Svelte projects.",
+	"repo_url": "https://github.com/choogo-cn/icon",
+	"authors": ["jetlua"],
+	"homepage": "https://github.com/choogo-cn/icon#readme",
+	"downloads": 12,
+	"dependents": 0,
+	"updated": "2023-09-19T17:44:54.258Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

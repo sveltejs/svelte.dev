@@ -1,18 +1,19 @@
 {
-  "name": "svelte-navigator-no-postinstall",
-  "description": "Provides simple, accessible routing for Svelte applications.",
-  "repo_url": "https://github.com/sebastien-roch/svelte-navigator-no-postinstall",
-  "authors": [
-    "scandit-sebastien"
-  ],
-  "homepage": "https://github.com/sebastien-roch/svelte-navigator-no-postinstall#readme",
-  "downloads": 654,
-  "dependents": 0,
-  "updated": "2025-03-24T12:55:12.404Z",
-  "tags": [
-    "router"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelte-navigator-no-postinstall",
+	"description": "Provides simple, accessible routing for Svelte applications.",
+	"repo_url": "https://github.com/sebastien-roch/svelte-navigator-no-postinstall",
+	"authors": ["scandit-sebastien"],
+	"homepage": "https://github.com/sebastien-roch/svelte-navigator-no-postinstall#readme",
+	"downloads": 654,
+	"dependents": 0,
+	"updated": "2025-03-24T12:55:12.404Z",
+	"tags": ["router"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

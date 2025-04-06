@@ -1,18 +1,19 @@
 {
-  "name": "svelte-form-easy",
-  "description": "Build forms with validation in Svelte apps.",
-  "repo_url": "https://github.com/vanzinvestor/svelte-form-easy",
-  "authors": [
-    "vanzinvestor"
-  ],
-  "homepage": "https://github.com/vanzinvestor/svelte-form-easy",
-  "downloads": 13,
-  "dependents": 0,
-  "updated": "2022-11-08T11:25:56.673Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelte-form-easy",
+	"description": "Build forms with validation in Svelte apps.",
+	"repo_url": "https://github.com/vanzinvestor/svelte-form-easy",
+	"authors": ["vanzinvestor"],
+	"homepage": "https://github.com/vanzinvestor/svelte-form-easy",
+	"downloads": 13,
+	"dependents": 0,
+	"updated": "2022-11-08T11:25:56.673Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

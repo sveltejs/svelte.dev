@@ -1,17 +1,19 @@
 {
-  "name": "svelte-waypoint",
-  "description": "Lazyload images or other content in Svelte apps.",
-  "repo_url": "https://github.com/matyunya/svelte-waypoint",
-  "authors": [
-    "matyunya"
-  ],
-  "downloads": 619,
-  "dependents": 6,
-  "updated": "2019-12-28T02:55:49.875Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 83
+	"name": "svelte-waypoint",
+	"description": "Lazyload images or other content in Svelte apps.",
+	"repo_url": "https://github.com/matyunya/svelte-waypoint",
+	"authors": ["matyunya"],
+	"downloads": 619,
+	"dependents": 6,
+	"updated": "2019-12-28T02:55:49.875Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 83,
+	"homepage": null,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

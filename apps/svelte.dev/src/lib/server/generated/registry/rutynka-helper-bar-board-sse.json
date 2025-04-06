@@ -1,18 +1,19 @@
 {
-  "name": "@rutynka/helper-bar-board-sse",
-  "description": "Create sticky bar with SSE layer for Svelte apps.",
-  "repo_url": "https://github.com/rutynka/helper-bar-board-sse",
-  "authors": [
-    "all-the-fish"
-  ],
-  "homepage": "https://github.com/rutynka/helper-bar-board-sse",
-  "downloads": 6,
-  "dependents": 0,
-  "updated": "2023-02-08T01:45:42.506Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@rutynka/helper-bar-board-sse",
+	"description": "Create sticky bar with SSE layer for Svelte apps.",
+	"repo_url": "https://github.com/rutynka/helper-bar-board-sse",
+	"authors": ["all-the-fish"],
+	"homepage": "https://github.com/rutynka/helper-bar-board-sse",
+	"downloads": 6,
+	"dependents": 0,
+	"updated": "2023-02-08T01:45:42.506Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

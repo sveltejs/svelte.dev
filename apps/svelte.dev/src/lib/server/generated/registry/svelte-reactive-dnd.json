@@ -1,18 +1,19 @@
 {
-  "name": "svelte-reactive-dnd",
-  "description": "Enables drag and drop functionality in Svelte applications.",
-  "repo_url": "https://github.com/kyythane/svelte-reactive-dnd",
-  "authors": [
-    "lilyprim"
-  ],
-  "homepage": "https://github.com/kyythane/svelte-reactive-dnd#readme",
-  "downloads": 11,
-  "dependents": 0,
-  "updated": "2020-09-13T07:14:50.628Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 6
+	"name": "svelte-reactive-dnd",
+	"description": "Enables drag and drop functionality in Svelte applications.",
+	"repo_url": "https://github.com/kyythane/svelte-reactive-dnd",
+	"authors": ["lilyprim"],
+	"homepage": "https://github.com/kyythane/svelte-reactive-dnd#readme",
+	"downloads": 11,
+	"dependents": 0,
+	"updated": "2020-09-13T07:14:50.628Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 6,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

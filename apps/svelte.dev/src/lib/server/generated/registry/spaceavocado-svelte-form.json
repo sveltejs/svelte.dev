@@ -1,18 +1,19 @@
 {
-  "name": "@spaceavocado/svelte-form",
-  "description": "Handle Svelte form models and input validations.",
-  "repo_url": "https://github.com/spaceavocado/svelte-form",
-  "authors": [
-    "davidhorak"
-  ],
-  "homepage": "https://github.com/spaceavocado/svelte-form",
-  "downloads": 96,
-  "dependents": 0,
-  "updated": "2019-10-11T14:37:50.096Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 47
+	"name": "@spaceavocado/svelte-form",
+	"description": "Handle Svelte form models and input validations.",
+	"repo_url": "https://github.com/spaceavocado/svelte-form",
+	"authors": ["davidhorak"],
+	"homepage": "https://github.com/spaceavocado/svelte-form",
+	"downloads": 96,
+	"dependents": 0,
+	"updated": "2019-10-11T14:37:50.096Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 47,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "ckeditor5-svelte",
-  "description": "Integrates CKEditor5 editor component into Svelte applications.",
-  "repo_url": "https://github.com/techlab23/ckeditor5-svelte",
-  "authors": [
-    "nigamshirish"
-  ],
-  "homepage": "https://github.com/techlab23/ckeditor5-svelte",
-  "downloads": 244,
-  "dependents": 0,
-  "updated": "2021-02-04T15:15:11.920Z",
-  "tags": [
-    "content"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 20
+	"name": "ckeditor5-svelte",
+	"description": "Integrates CKEditor5 editor component into Svelte applications.",
+	"repo_url": "https://github.com/techlab23/ckeditor5-svelte",
+	"authors": ["nigamshirish"],
+	"homepage": "https://github.com/techlab23/ckeditor5-svelte",
+	"downloads": 244,
+	"dependents": 0,
+	"updated": "2021-02-04T15:15:11.920Z",
+	"tags": ["content"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 20,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

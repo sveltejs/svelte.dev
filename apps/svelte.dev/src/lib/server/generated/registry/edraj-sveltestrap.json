@@ -1,18 +1,19 @@
 {
-  "name": "@edraj/sveltestrap",
-  "description": "Integrate Bootstrap 5 components into Svelte applications.",
-  "repo_url": "https://github.com/edraj/sveltestrap",
-  "authors": [
-    "ms_splimter"
-  ],
-  "homepage": "https://github.com/edraj/sveltestrap#readme",
-  "downloads": 3,
-  "dependents": 0,
-  "updated": "2023-11-22T12:49:14.172Z",
-  "tags": [
-    "design-system"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@edraj/sveltestrap",
+	"description": "Integrate Bootstrap 5 components into Svelte applications.",
+	"repo_url": "https://github.com/edraj/sveltestrap",
+	"authors": ["ms_splimter"],
+	"homepage": "https://github.com/edraj/sveltestrap#readme",
+	"downloads": 3,
+	"dependents": 0,
+	"updated": "2023-11-22T12:49:14.172Z",
+	"tags": ["design-system"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "@svelte-put/tooltip",
-  "description": "Build type-safe, headless tooltips with Svelte actions.",
-  "repo_url": "https://github.com/vnphanquang/svelte-put",
-  "authors": [
-    "vnphanquang"
-  ],
-  "homepage": "https://svelte-put.vnphanquang.com/docs/tooltip",
-  "downloads": 3,
-  "dependents": 0,
-  "updated": "2024-05-17T09:08:59.162Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 916
+	"name": "@svelte-put/tooltip",
+	"description": "Build type-safe, headless tooltips with Svelte actions.",
+	"repo_url": "https://github.com/vnphanquang/svelte-put",
+	"authors": ["vnphanquang"],
+	"homepage": "https://svelte-put.vnphanquang.com/docs/tooltip",
+	"downloads": 3,
+	"dependents": 0,
+	"updated": "2024-05-17T09:08:59.162Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 917,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": false
+	}
 }

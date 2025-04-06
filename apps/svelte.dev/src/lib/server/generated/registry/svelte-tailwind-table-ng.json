@@ -1,17 +1,18 @@
 {
-  "name": "svelte-tailwind-table-ng",
-  "description": "Render dynamic tables using Tailwind CSS in Svelte.",
-  "repo_url": "https://gitlab.com/LiftX/svelte-tailwind-table",
-  "authors": [
-    "zusier"
-  ],
-  "homepage": "https://svelte-tailwind-table-demo.vercel.app/",
-  "downloads": 9,
-  "dependents": 0,
-  "updated": "2022-09-09T15:46:56.958Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-tailwind-table-ng",
+	"description": "Render dynamic tables using Tailwind CSS in Svelte.",
+	"repo_url": "https://gitlab.com/LiftX/svelte-tailwind-table",
+	"authors": ["zusier"],
+	"homepage": "https://svelte-tailwind-table-demo.vercel.app/",
+	"downloads": 9,
+	"dependents": 0,
+	"updated": "2022-09-09T15:46:56.958Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

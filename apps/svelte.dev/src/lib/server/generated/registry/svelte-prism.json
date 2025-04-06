@@ -1,18 +1,19 @@
 {
-  "name": "svelte-prism",
-  "description": "Provides Prismjs syntax highlighting for Svelte.",
-  "repo_url": "https://github.com/jakobrosenberg/svelte-prism",
-  "authors": [
-    "jakobrosenberg"
-  ],
-  "homepage": "https://github.com/jakobrosenberg/svelte-prism#readme",
-  "downloads": 384,
-  "dependents": 5,
-  "updated": "2022-07-23T19:31:59.073Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 35
+	"name": "svelte-prism",
+	"description": "Provides Prismjs syntax highlighting for Svelte.",
+	"repo_url": "https://github.com/jakobrosenberg/svelte-prism",
+	"authors": ["jakobrosenberg"],
+	"homepage": "https://github.com/jakobrosenberg/svelte-prism#readme",
+	"downloads": 384,
+	"dependents": 5,
+	"updated": "2022-07-23T19:31:59.073Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 35,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,16 +1,17 @@
 {
-  "name": "svelte-virtual-table",
-  "description": "Provides sortable, virtual table component for Svelte.",
-  "repo_url": "https://github.com/BernhardWebstudio/SvelteVirtualTable",
-  "authors": [
-    "bernhard_webstudio"
-  ],
-  "downloads": 17,
-  "dependents": 0,
-  "updated": "2023-12-29T08:15:20.197Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-virtual-table",
+	"description": "Provides sortable, virtual table component for Svelte.",
+	"repo_url": "https://github.com/BernhardWebstudio/SvelteVirtualTable",
+	"authors": ["bernhard_webstudio"],
+	"downloads": 17,
+	"dependents": 0,
+	"updated": "2023-12-29T08:15:20.197Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

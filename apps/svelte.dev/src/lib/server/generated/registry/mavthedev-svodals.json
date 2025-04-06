@@ -1,18 +1,19 @@
 {
-  "name": "@mavthedev/svodals",
-  "description": "Create cybernetically enhanced Svelte modals.",
-  "repo_url": "https://github.com/mavthedev/svodals",
-  "authors": [
-    "maverickquill55"
-  ],
-  "homepage": "https://github.com/mavthedev/svodals#readme",
-  "downloads": 4,
-  "dependents": 0,
-  "updated": "2022-07-09T00:19:07.840Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "@mavthedev/svodals",
+	"description": "Create cybernetically enhanced Svelte modals.",
+	"repo_url": "https://github.com/mavthedev/svodals",
+	"authors": ["maverickquill55"],
+	"homepage": "https://github.com/mavthedev/svodals#readme",
+	"downloads": 4,
+	"dependents": 0,
+	"updated": "2022-07-09T00:19:07.840Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "fa-svelte",
-  "description": "Use Fontawesome 5 SVG icons in Svelte apps.",
-  "repo_url": "https://github.com/alphapeter/fa-svelte",
-  "authors": [
-    "alphapeter"
-  ],
-  "homepage": "https://github.com/alphapeter/fa-svelte#readme",
-  "downloads": 205,
-  "dependents": 2,
-  "updated": "2019-11-09T14:38:48.567Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 71
+	"name": "fa-svelte",
+	"description": "Use Fontawesome 5 SVG icons in Svelte apps.",
+	"repo_url": "https://github.com/alphapeter/fa-svelte",
+	"authors": ["alphapeter"],
+	"homepage": "https://github.com/alphapeter/fa-svelte#readme",
+	"downloads": 205,
+	"dependents": 2,
+	"updated": "2019-11-09T14:38:48.567Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 71,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

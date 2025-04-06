@@ -1,16 +1,17 @@
 {
-  "name": "sozai",
-  "description": "Build UI with material components for Svelte.",
-  "repo_url": "",
-  "authors": [
-    "r2dev2"
-  ],
-  "downloads": 19,
-  "dependents": 0,
-  "updated": "2022-03-10T18:06:21.791Z",
-  "tags": [
-    "design-system"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "sozai",
+	"description": "Build UI with material components for Svelte.",
+	"repo_url": "",
+	"authors": ["r2dev2"],
+	"downloads": 19,
+	"dependents": 0,
+	"updated": "2022-03-10T18:06:21.791Z",
+	"tags": ["design-system"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

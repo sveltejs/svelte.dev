@@ -1,18 +1,19 @@
 {
-  "name": "@threlte/core",
-  "description": "3D framework for web, built on Svelte and Three.js.",
-  "repo_url": "https://github.com/threlte/threlte",
-  "authors": [
-    "grischaerbe"
-  ],
-  "homepage": "https://threlte.xyz",
-  "downloads": 8786,
-  "dependents": 18,
-  "updated": "2025-01-23T22:30:32.135Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 2838
+	"name": "@threlte/core",
+	"description": "3D framework for web, built on Svelte and Three.js.",
+	"repo_url": "https://github.com/threlte/threlte",
+	"authors": ["grischaerbe"],
+	"homepage": "https://threlte.xyz",
+	"downloads": 8786,
+	"dependents": 18,
+	"updated": "2025-01-23T22:30:32.135Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 2839,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "svelte-fetch",
-  "description": "Provide fetch client with Svelte store integration.",
-  "repo_url": "https://github.com/ctrl-alt-null/svelte-fetch",
-  "authors": [
-    "progging"
-  ],
-  "homepage": "https://github.com/ctrl-alt-null/svelte-fetch#readme",
-  "downloads": 12,
-  "dependents": 0,
-  "updated": "2019-10-07T15:10:04.247Z",
-  "tags": [
-    "server"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 9
+	"name": "svelte-fetch",
+	"description": "Provide fetch client with Svelte store integration.",
+	"repo_url": "https://github.com/ctrl-alt-null/svelte-fetch",
+	"authors": ["progging"],
+	"homepage": "https://github.com/ctrl-alt-null/svelte-fetch#readme",
+	"downloads": 12,
+	"dependents": 0,
+	"updated": "2019-10-07T15:10:04.247Z",
+	"tags": ["server"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 9,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

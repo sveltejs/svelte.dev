@@ -1,18 +1,19 @@
 {
-  "name": "ethers-svelte",
-  "description": "Integrate ethers.js with Svelte for blockchain interactions.",
-  "repo_url": "https://github.com/clbrge/ethers-svelte",
-  "authors": [
-    "clbrge"
-  ],
-  "homepage": "https://github.com/clbrge/ethers-svelte#readme",
-  "downloads": 60,
-  "dependents": 0,
-  "updated": "2023-11-07T14:05:22.033Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 16
+	"name": "ethers-svelte",
+	"description": "Integrate ethers.js with Svelte for blockchain interactions.",
+	"repo_url": "https://github.com/clbrge/ethers-svelte",
+	"authors": ["clbrge"],
+	"homepage": "https://github.com/clbrge/ethers-svelte#readme",
+	"downloads": 60,
+	"dependents": 0,
+	"updated": "2023-11-07T14:05:22.033Z",
+	"tags": ["integration"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 16,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

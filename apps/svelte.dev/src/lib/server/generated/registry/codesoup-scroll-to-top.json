@@ -1,17 +1,17 @@
 {
-  "name": "@codesoup/scroll-to-top",
-  "description": "Adds scroll-to-top button to Svelte applications.",
-  "repo_url": "",
-  "authors": [
-    "alnig441"
-  ],
-  "downloads": 0,
-  "dependents": 0,
-  "updated": "2022-11-11T19:33:05.818Z",
-  "tags": [
-    "ui",
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@codesoup/scroll-to-top",
+	"description": "Adds scroll-to-top button to Svelte applications.",
+	"repo_url": "",
+	"authors": ["alnig441"],
+	"downloads": 0,
+	"dependents": 0,
+	"updated": "2022-11-11T19:33:05.818Z",
+	"tags": ["ui", "miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,17 +1,17 @@
 {
-  "name": "@kwangure/strawberry",
-  "description": "Build Svelte components including buttons, dropdowns, and dialogs.",
-  "repo_url": "",
-  "authors": [
-    "kwangure"
-  ],
-  "downloads": 0,
-  "dependents": 0,
-  "updated": "2023-06-25T16:25:12.694Z",
-  "tags": [
-    "ui",
-    "design-system"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@kwangure/strawberry",
+	"description": "Build Svelte components including buttons, dropdowns, and dialogs.",
+	"repo_url": "",
+	"authors": ["kwangure"],
+	"downloads": 0,
+	"dependents": 0,
+	"updated": "2023-06-25T16:25:12.694Z",
+	"tags": ["ui", "design-system"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

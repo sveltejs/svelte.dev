@@ -1,18 +1,19 @@
 {
-  "name": "@non25/svelte-loader",
-  "description": "Offers a Webpack loader for Svelte with bug fixes.",
-  "repo_url": "https://github.com/non25/svelte-loader",
-  "authors": [
-    "non25"
-  ],
-  "homepage": "https://github.com/non25/svelte-loader#readme",
-  "downloads": 18,
-  "dependents": 0,
-  "updated": "2021-06-03T23:36:44.625Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 2
+	"name": "@non25/svelte-loader",
+	"description": "Offers a Webpack loader for Svelte with bug fixes.",
+	"repo_url": "https://github.com/non25/svelte-loader",
+	"authors": ["non25"],
+	"homepage": "https://github.com/non25/svelte-loader#readme",
+	"downloads": 18,
+	"dependents": 0,
+	"updated": "2021-06-03T23:36:44.625Z",
+	"tags": ["tooling"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": true
+	}
 }

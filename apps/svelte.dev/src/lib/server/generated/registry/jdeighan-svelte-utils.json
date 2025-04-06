@@ -1,16 +1,17 @@
 {
-  "name": "@jdeighan/svelte-utils",
-  "description": "Provide utility functions for Svelte development.",
-  "repo_url": "",
-  "authors": [
-    "jdeighan"
-  ],
-  "downloads": 27,
-  "dependents": 0,
-  "updated": "2024-04-22T12:57:03.221Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "@jdeighan/svelte-utils",
+	"description": "Provide utility functions for Svelte development.",
+	"repo_url": "",
+	"authors": ["jdeighan"],
+	"downloads": 27,
+	"dependents": 0,
+	"updated": "2024-04-22T12:57:03.221Z",
+	"tags": ["miscellaneous"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

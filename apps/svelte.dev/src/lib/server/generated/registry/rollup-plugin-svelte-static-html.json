@@ -1,18 +1,19 @@
 {
-  "name": "rollup-plugin-svelte-static-html",
-  "description": "Generate static HTML files from Svelte components using Rollup.",
-  "repo_url": "https://github.com/vladshcherbin/rollup-plugin-svelte-static-html",
-  "authors": [
-    "shcherbin"
-  ],
-  "homepage": "https://github.com/vladshcherbin/rollup-plugin-svelte-static-html#readme",
-  "downloads": 7,
-  "dependents": 0,
-  "updated": "2019-10-17T00:50:21.942Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 19
+	"name": "rollup-plugin-svelte-static-html",
+	"description": "Generate static HTML files from Svelte components using Rollup.",
+	"repo_url": "https://github.com/vladshcherbin/rollup-plugin-svelte-static-html",
+	"authors": ["shcherbin"],
+	"homepage": "https://github.com/vladshcherbin/rollup-plugin-svelte-static-html#readme",
+	"downloads": 7,
+	"dependents": 0,
+	"updated": "2019-10-17T00:50:21.942Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 19,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

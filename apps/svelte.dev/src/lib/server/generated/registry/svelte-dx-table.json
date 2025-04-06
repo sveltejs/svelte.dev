@@ -1,18 +1,19 @@
 {
-  "name": "svelte-dx-table",
-  "description": "Creates dx friendly Svelte table component.",
-  "repo_url": "https://github.com/thecodejack/svelte-dx-table",
-  "authors": [
-    "thecodejack"
-  ],
-  "homepage": "https://github.com/thecodejack/svelte-dx-table#readme",
-  "downloads": 9,
-  "dependents": 0,
-  "updated": "2022-01-04T17:48:23.882Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "svelte-dx-table",
+	"description": "Creates dx friendly Svelte table component.",
+	"repo_url": "https://github.com/thecodejack/svelte-dx-table",
+	"authors": ["thecodejack"],
+	"homepage": "https://github.com/thecodejack/svelte-dx-table#readme",
+	"downloads": 9,
+	"dependents": 0,
+	"updated": "2022-01-04T17:48:23.882Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

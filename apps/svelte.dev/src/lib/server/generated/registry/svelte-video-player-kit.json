@@ -1,18 +1,19 @@
 {
-  "name": "svelte-video-player-kit",
-  "description": "Provide basic video player component for Svelte and SvelteKit.",
-  "repo_url": "https://github.com/basaran/svelte-video-player-kit",
-  "authors": [
-    "anakha"
-  ],
-  "homepage": "https://github.com/basaran/svelte-video-player-kit",
-  "downloads": 13,
-  "dependents": 0,
-  "updated": "2021-10-24T19:58:12.779Z",
-  "tags": [
-    "media"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 3
+	"name": "svelte-video-player-kit",
+	"description": "Provide basic video player component for Svelte and SvelteKit.",
+	"repo_url": "https://github.com/basaran/svelte-video-player-kit",
+	"authors": ["anakha"],
+	"homepage": "https://github.com/basaran/svelte-video-player-kit",
+	"downloads": 13,
+	"dependents": 0,
+	"updated": "2021-10-24T19:58:12.779Z",
+	"tags": ["media"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 3,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

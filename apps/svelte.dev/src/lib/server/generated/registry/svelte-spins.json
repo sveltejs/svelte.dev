@@ -1,16 +1,17 @@
 {
-  "name": "svelte-spins",
-  "description": "Provide loaders.css spinners as Svelte components.",
-  "repo_url": "",
-  "authors": [
-    "ksmarty"
-  ],
-  "downloads": 12,
-  "dependents": 0,
-  "updated": "2021-01-18T04:44:55.278Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-spins",
+	"description": "Provide loaders.css spinners as Svelte components.",
+	"repo_url": "",
+	"authors": ["ksmarty"],
+	"downloads": 12,
+	"dependents": 0,
+	"updated": "2021-01-18T04:44:55.278Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

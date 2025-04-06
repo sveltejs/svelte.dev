@@ -1,18 +1,19 @@
 {
-  "name": "keen-slider-svelte",
-  "description": "Create touch slider carousel with native feel in Svelte.",
-  "repo_url": "https://github.com/JustDenP/svelte-keen-slider",
-  "authors": [
-    "justdenp"
-  ],
-  "homepage": "https://github.com/JustDenP/svelte-keen-slider#readme",
-  "downloads": 5,
-  "dependents": 0,
-  "updated": "2023-12-30T12:05:15.678Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "keen-slider-svelte",
+	"description": "Create touch slider carousel with native feel in Svelte.",
+	"repo_url": "https://github.com/JustDenP/svelte-keen-slider",
+	"authors": ["justdenp"],
+	"homepage": "https://github.com/JustDenP/svelte-keen-slider#readme",
+	"downloads": 5,
+	"dependents": 0,
+	"updated": "2023-12-30T12:05:15.678Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

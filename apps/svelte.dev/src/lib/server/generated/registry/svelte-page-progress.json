@@ -1,18 +1,19 @@
 {
-  "name": "svelte-page-progress",
-  "description": "Track page progress with a progress bar in Svelte.",
-  "repo_url": "https://github.com/NomanGul/svelte-page-progress",
-  "authors": [
-    "nomangul"
-  ],
-  "homepage": "https://github.com/NomanGul/svelte-page-progress",
-  "downloads": 9,
-  "dependents": 0,
-  "updated": "2020-05-17T22:12:20.577Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 18
+	"name": "svelte-page-progress",
+	"description": "Track page progress with a progress bar in Svelte.",
+	"repo_url": "https://github.com/NomanGul/svelte-page-progress",
+	"authors": ["nomangul"],
+	"homepage": "https://github.com/NomanGul/svelte-page-progress",
+	"downloads": 9,
+	"dependents": 0,
+	"updated": "2020-05-17T22:12:20.577Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 18,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

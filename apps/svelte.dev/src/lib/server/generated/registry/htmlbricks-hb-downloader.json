@@ -1,16 +1,17 @@
 {
-  "name": "@htmlbricks/hb-downloader",
-  "description": "Create download components for Svelte apps.",
-  "repo_url": "",
-  "authors": [
-    "dariocaruso"
-  ],
-  "downloads": 476,
-  "dependents": 2,
-  "updated": "2025-03-24T18:07:22.303Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@htmlbricks/hb-downloader",
+	"description": "Create download components for Svelte apps.",
+	"repo_url": "",
+	"authors": ["dariocaruso"],
+	"downloads": 476,
+	"dependents": 2,
+	"updated": "2025-03-24T18:07:22.303Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

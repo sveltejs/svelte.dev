@@ -1,17 +1,18 @@
 {
-  "name": "svelte-lenis",
-  "description": "Provide Svelte bindings for Lenis smooth scrolling library.",
-  "repo_url": "",
-  "authors": [
-    "iugsm"
-  ],
-  "homepage": "https://github.com/richhost/svelte-lenis",
-  "downloads": 7,
-  "dependents": 0,
-  "updated": "2024-12-19T14:55:43.901Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "svelte-lenis",
+	"description": "Provide Svelte bindings for Lenis smooth scrolling library.",
+	"repo_url": "",
+	"authors": ["iugsm"],
+	"homepage": "https://github.com/richhost/svelte-lenis",
+	"downloads": 7,
+	"dependents": 0,
+	"updated": "2024-12-19T14:55:43.901Z",
+	"tags": ["miscellaneous"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

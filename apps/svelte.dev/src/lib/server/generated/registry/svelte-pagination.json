@@ -1,16 +1,17 @@
 {
-  "name": "svelte-pagination",
-  "description": "Implement pagination component for Svelte applications.",
-  "repo_url": "",
-  "authors": [
-    "thecodejack"
-  ],
-  "downloads": 48,
-  "dependents": 0,
-  "updated": "2020-09-13T14:57:15.819Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-pagination",
+	"description": "Implement pagination component for Svelte applications.",
+	"repo_url": "",
+	"authors": ["thecodejack"],
+	"downloads": 48,
+	"dependents": 0,
+	"updated": "2020-09-13T14:57:15.819Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

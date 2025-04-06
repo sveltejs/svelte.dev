@@ -1,18 +1,19 @@
 {
-  "name": "tweakpane-css",
-  "description": "Detect and tweak CSS variables at runtime.",
-  "repo_url": "https://github.com/kitschpatrol/tweakpane-css",
-  "authors": [
-    "kitschpatrol"
-  ],
-  "homepage": "https://github.com/kitschpatrol/tweakpane-css",
-  "downloads": 16,
-  "dependents": 0,
-  "updated": "2025-03-04T18:36:04.005Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": true,
-  "runes": true,
-  "github_stars": 8
+	"name": "tweakpane-css",
+	"description": "Detect and tweak CSS variables at runtime.",
+	"repo_url": "https://github.com/kitschpatrol/tweakpane-css",
+	"authors": ["kitschpatrol"],
+	"homepage": "https://github.com/kitschpatrol/tweakpane-css",
+	"downloads": 16,
+	"dependents": 0,
+	"updated": "2025-03-04T18:36:04.005Z",
+	"tags": ["tooling"],
+	"svelte5": true,
+	"runes": true,
+	"github_stars": 8,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

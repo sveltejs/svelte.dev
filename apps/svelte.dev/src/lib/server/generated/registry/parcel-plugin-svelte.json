@@ -1,18 +1,19 @@
 {
-  "name": "parcel-plugin-svelte",
-  "description": "Enable Svelte support in Parcel bundler.",
-  "repo_url": "https://github.com/DeMoorJasper/parcel-plugin-svelte",
-  "authors": [
-    "jasperdm"
-  ],
-  "homepage": "https://github.com/DeMoorJasper/parcel-plugin-svelte#readme",
-  "downloads": 316,
-  "dependents": 2,
-  "updated": "2021-08-12T09:13:48.921Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 231
+	"name": "parcel-plugin-svelte",
+	"description": "Enable Svelte support in Parcel bundler.",
+	"repo_url": "https://github.com/DeMoorJasper/parcel-plugin-svelte",
+	"authors": ["jasperdm"],
+	"homepage": "https://github.com/DeMoorJasper/parcel-plugin-svelte#readme",
+	"downloads": 316,
+	"dependents": 2,
+	"updated": "2021-08-12T09:13:48.921Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 231,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

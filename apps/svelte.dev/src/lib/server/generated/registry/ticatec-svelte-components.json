@@ -1,16 +1,17 @@
 {
-  "name": "ticatec-svelte-components",
-  "description": "Develop UI components for Svelte web applications.",
-  "repo_url": "",
-  "authors": [
-    "henry.feng"
-  ],
-  "downloads": 38,
-  "dependents": 0,
-  "updated": "2023-01-11T10:20:32.707Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "ticatec-svelte-components",
+	"description": "Develop UI components for Svelte web applications.",
+	"repo_url": "",
+	"authors": ["henry.feng"],
+	"downloads": 38,
+	"dependents": 0,
+	"updated": "2023-01-11T10:20:32.707Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

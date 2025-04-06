@@ -1,18 +1,19 @@
 {
-  "name": "@auroratide/svelte-custom-element-transitions",
-  "description": "Enable Svelte transitions in custom elements.",
-  "repo_url": "https://github.com/Auroratide/svelte-custom-element-transitions",
-  "authors": [
-    "auroratide"
-  ],
-  "homepage": "https://github.com/Auroratide/svelte-custom-element-transitions#readme",
-  "downloads": 16,
-  "dependents": 2,
-  "updated": "2021-04-25T02:14:51.463Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 2
+	"name": "@auroratide/svelte-custom-element-transitions",
+	"description": "Enable Svelte transitions in custom elements.",
+	"repo_url": "https://github.com/Auroratide/svelte-custom-element-transitions",
+	"authors": ["auroratide"],
+	"homepage": "https://github.com/Auroratide/svelte-custom-element-transitions#readme",
+	"downloads": 16,
+	"dependents": 2,
+	"updated": "2021-04-25T02:14:51.463Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

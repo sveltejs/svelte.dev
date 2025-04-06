@@ -1,18 +1,19 @@
 {
-  "name": "@minna-ui/tooltip",
-  "description": "Create tooltips for Svelte components.",
-  "repo_url": "https://github.com/WeAreGenki/minna-ui",
-  "authors": [
-    "maxmilton"
-  ],
-  "homepage": "https://wearegenki.github.io/minna-ui",
-  "downloads": 181,
-  "dependents": 1,
-  "updated": "2020-03-24T19:40:15.486Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 87
+	"name": "@minna-ui/tooltip",
+	"description": "Create tooltips for Svelte components.",
+	"repo_url": "https://github.com/WeAreGenki/minna-ui",
+	"authors": ["maxmilton"],
+	"homepage": "https://wearegenki.github.io/minna-ui",
+	"downloads": 181,
+	"dependents": 1,
+	"updated": "2020-03-24T19:40:15.486Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 87,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

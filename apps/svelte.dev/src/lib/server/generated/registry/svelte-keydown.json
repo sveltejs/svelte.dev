@@ -1,18 +1,19 @@
 {
-  "name": "svelte-keydown",
-  "description": "Listen for keyboard events in Svelte applications.",
-  "repo_url": "https://github.com/metonym/svelte-keydown",
-  "authors": [
-    "metonym"
-  ],
-  "homepage": "https://github.com/metonym/svelte-keydown",
-  "downloads": 477,
-  "dependents": 0,
-  "updated": "2024-03-15T02:20:40.717Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 44
+	"name": "svelte-keydown",
+	"description": "Listen for keyboard events in Svelte applications.",
+	"repo_url": "https://github.com/metonym/svelte-keydown",
+	"authors": ["metonym"],
+	"homepage": "https://github.com/metonym/svelte-keydown",
+	"downloads": 477,
+	"dependents": 0,
+	"updated": "2024-03-15T02:20:40.717Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 44,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

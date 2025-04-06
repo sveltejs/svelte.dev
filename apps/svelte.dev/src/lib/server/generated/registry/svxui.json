@@ -1,17 +1,18 @@
 {
-  "name": "svxui",
-  "description": "Provide UI components for Svelte apps.",
-  "repo_url": "",
-  "authors": [
-    "radiium"
-  ],
-  "homepage": "https://github.com/radiium/svxui",
-  "downloads": 0,
-  "dependents": 0,
-  "updated": "2024-12-23T11:55:03.593Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "svxui",
+	"description": "Provide UI components for Svelte apps.",
+	"repo_url": "",
+	"authors": ["radiium"],
+	"homepage": "https://github.com/radiium/svxui",
+	"downloads": 0,
+	"dependents": 0,
+	"updated": "2024-12-23T11:55:03.593Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

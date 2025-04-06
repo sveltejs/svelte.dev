@@ -1,18 +1,18 @@
 {
-  "name": "@makolabs/ripple",
-  "description": "Build UI components for Svelte 5 with Ripple UI.",
-  "repo_url": "https://github.com/makolabsai/mako-ui-components",
-  "authors": [
-    "bishwasbh",
-    "sharktu"
-  ],
-  "homepage": "https://github.com/makolabsai/mako-ui-components#readme",
-  "downloads": 17,
-  "dependents": 0,
-  "updated": "2025-03-21T07:43:52.783Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "@makolabs/ripple",
+	"description": "Build UI components for Svelte 5 with Ripple UI.",
+	"repo_url": "https://github.com/makolabsai/mako-ui-components",
+	"authors": ["bishwasbh", "sharktu"],
+	"homepage": "https://github.com/makolabsai/mako-ui-components#readme",
+	"downloads": 17,
+	"dependents": 0,
+	"updated": "2025-03-21T07:43:52.783Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

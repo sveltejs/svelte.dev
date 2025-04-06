@@ -1,16 +1,17 @@
 {
-  "name": "nova-js-ui",
-  "description": "Provides UI components for Svelte and Astro projects.",
-  "repo_url": "",
-  "authors": [
-    "martinramos98"
-  ],
-  "downloads": 4,
-  "dependents": 0,
-  "updated": "2024-10-21T19:28:31.788Z",
-  "tags": [
-    "design-system"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "nova-js-ui",
+	"description": "Provides UI components for Svelte and Astro projects.",
+	"repo_url": "",
+	"authors": ["martinramos98"],
+	"downloads": 4,
+	"dependents": 0,
+	"updated": "2024-10-21T19:28:31.788Z",
+	"tags": ["design-system"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

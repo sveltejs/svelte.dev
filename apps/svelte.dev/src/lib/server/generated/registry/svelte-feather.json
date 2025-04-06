@@ -1,18 +1,19 @@
 {
-  "name": "svelte-feather",
-  "description": "Integrate Feather icons into Svelte components easily.",
-  "repo_url": "https://github.com/langbamit/svelte-feather",
-  "authors": [
-    "langbamit"
-  ],
-  "homepage": "https://github.com/langbamit/svelte-feather#readme",
-  "downloads": 13,
-  "dependents": 0,
-  "updated": "2020-12-04T09:07:14.487Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 2
+	"name": "svelte-feather",
+	"description": "Integrate Feather icons into Svelte components easily.",
+	"repo_url": "https://github.com/langbamit/svelte-feather",
+	"authors": ["langbamit"],
+	"homepage": "https://github.com/langbamit/svelte-feather#readme",
+	"downloads": 13,
+	"dependents": 0,
+	"updated": "2020-12-04T09:07:14.487Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

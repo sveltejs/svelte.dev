@@ -1,18 +1,19 @@
 {
-  "name": "@a-luna/svelte-simple-tables",
-  "description": "Create accessible, sortable, paginated table components.",
-  "repo_url": "https://github.com/a-luna/svelte-simple-tables",
-  "authors": [
-    "a-luna"
-  ],
-  "homepage": "https://github.com/a-luna/svelte-simple-tables",
-  "downloads": 14,
-  "dependents": 0,
-  "updated": "2022-07-19T09:27:18.684Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 6
+	"name": "@a-luna/svelte-simple-tables",
+	"description": "Create accessible, sortable, paginated table components.",
+	"repo_url": "https://github.com/a-luna/svelte-simple-tables",
+	"authors": ["a-luna"],
+	"homepage": "https://github.com/a-luna/svelte-simple-tables",
+	"downloads": 14,
+	"dependents": 0,
+	"updated": "2022-07-19T09:27:18.684Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 6,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

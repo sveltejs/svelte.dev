@@ -1,18 +1,19 @@
 {
-  "name": "@fouita/avatar",
-  "description": "Create customizable avatar components with Tailwind classes.",
-  "repo_url": "https://github.com/fouita/svelte-tw-avatar",
-  "authors": [
-    "fouita"
-  ],
-  "homepage": "https://github.com/fouita/svelte-tw-avatar#readme",
-  "downloads": 11,
-  "dependents": 0,
-  "updated": "2020-09-10T11:05:05.378Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 7
+	"name": "@fouita/avatar",
+	"description": "Create customizable avatar components with Tailwind classes.",
+	"repo_url": "https://github.com/fouita/svelte-tw-avatar",
+	"authors": ["fouita"],
+	"homepage": "https://github.com/fouita/svelte-tw-avatar#readme",
+	"downloads": 11,
+	"dependents": 0,
+	"updated": "2020-09-10T11:05:05.378Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 7,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "@bonosoft/sveltekit-base32",
-  "description": "Encode/decode strings to/from base32 in SvelteKit.",
-  "repo_url": "https://github.com/bonosoft/sveltekit-base32",
-  "authors": [
-    "bonosoft"
-  ],
-  "homepage": "https://github.com/bonosoft/sveltekit-base32#readme",
-  "downloads": 0,
-  "dependents": 0,
-  "updated": "2023-04-07T21:04:37.255Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@bonosoft/sveltekit-base32",
+	"description": "Encode/decode strings to/from base32 in SvelteKit.",
+	"repo_url": "https://github.com/bonosoft/sveltekit-base32",
+	"authors": ["bonosoft"],
+	"homepage": "https://github.com/bonosoft/sveltekit-base32#readme",
+	"downloads": 0,
+	"dependents": 0,
+	"updated": "2023-04-07T21:04:37.255Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

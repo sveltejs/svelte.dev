@@ -1,17 +1,17 @@
 {
-  "name": "@centroculturadigital-mx/svelte-themer",
-  "description": "Style Svelte apps with CSS variables, persisted.",
-  "repo_url": "",
-  "authors": [
-    "furenku",
-    "josecaos"
-  ],
-  "downloads": 37,
-  "dependents": 0,
-  "updated": "2020-05-13T21:50:40.141Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@centroculturadigital-mx/svelte-themer",
+	"description": "Style Svelte apps with CSS variables, persisted.",
+	"repo_url": "",
+	"authors": ["furenku", "josecaos"],
+	"downloads": 37,
+	"dependents": 0,
+	"updated": "2020-05-13T21:50:40.141Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

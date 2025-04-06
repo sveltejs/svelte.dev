@@ -1,19 +1,19 @@
 {
-  "name": "@centroculturadigital-mx/svelte-carousel",
-  "description": "Create carousel component for Svelte apps.",
-  "repo_url": "https://github.com/centroculturadigital-mx/svelte-carousel",
-  "authors": [
-    "furenku",
-    "josecaos"
-  ],
-  "homepage": "https://github.com/centroculturadigital-mx/svelte-carousel#readme",
-  "downloads": 96,
-  "dependents": 1,
-  "updated": "2020-04-06T02:03:25.729Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@centroculturadigital-mx/svelte-carousel",
+	"description": "Create carousel component for Svelte apps.",
+	"repo_url": "https://github.com/centroculturadigital-mx/svelte-carousel",
+	"authors": ["furenku", "josecaos"],
+	"homepage": "https://github.com/centroculturadigital-mx/svelte-carousel#readme",
+	"downloads": 96,
+	"dependents": 1,
+	"updated": "2020-04-06T02:03:25.729Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

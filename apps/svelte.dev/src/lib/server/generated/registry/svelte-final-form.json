@@ -1,18 +1,19 @@
 {
-  "name": "svelte-final-form",
-  "description": "Provides subscription-based form state management for Svelte.",
-  "repo_url": "https://github.com/jetrockets/svelte-final-form",
-  "authors": [
-    "solilin"
-  ],
-  "homepage": "https://github.com/jetrockets/svelte-final-form#readme",
-  "downloads": 138,
-  "dependents": 2,
-  "updated": "2020-12-22T16:33:08.780Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 43
+	"name": "svelte-final-form",
+	"description": "Provides subscription-based form state management for Svelte.",
+	"repo_url": "https://github.com/jetrockets/svelte-final-form",
+	"authors": ["solilin"],
+	"homepage": "https://github.com/jetrockets/svelte-final-form#readme",
+	"downloads": 138,
+	"dependents": 2,
+	"updated": "2020-12-22T16:33:08.780Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 43,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

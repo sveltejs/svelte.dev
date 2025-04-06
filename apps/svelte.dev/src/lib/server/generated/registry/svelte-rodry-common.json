@@ -1,16 +1,17 @@
 {
-  "name": "svelte-rodry-common",
-  "description": "Provide Svelte components for common use cases.",
-  "repo_url": "",
-  "authors": [
-    "rodryquintero"
-  ],
-  "downloads": 29,
-  "dependents": 0,
-  "updated": "2021-06-11T18:42:26.862Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-rodry-common",
+	"description": "Provide Svelte components for common use cases.",
+	"repo_url": "",
+	"authors": ["rodryquintero"],
+	"downloads": 29,
+	"dependents": 0,
+	"updated": "2021-06-11T18:42:26.862Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

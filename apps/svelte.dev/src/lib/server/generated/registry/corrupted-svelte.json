@@ -1,17 +1,18 @@
 {
-  "name": "corrupted-svelte",
-  "description": "Build corrupted-looking websites with Svelte components.",
-  "repo_url": "",
-  "authors": [
-    "ultracakebakery"
-  ],
-  "homepage": "https://github.com/UltraCakeBakery/corrupted-text-svelte",
-  "downloads": 6,
-  "dependents": 0,
-  "updated": "2023-11-11T16:47:22.010Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "corrupted-svelte",
+	"description": "Build corrupted-looking websites with Svelte components.",
+	"repo_url": "",
+	"authors": ["ultracakebakery"],
+	"homepage": "https://github.com/UltraCakeBakery/corrupted-text-svelte",
+	"downloads": 6,
+	"dependents": 0,
+	"updated": "2023-11-11T16:47:22.010Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

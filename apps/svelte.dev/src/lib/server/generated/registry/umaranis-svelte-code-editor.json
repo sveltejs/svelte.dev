@@ -1,16 +1,17 @@
 {
-  "name": "@umaranis/svelte-code-editor",
-  "description": "Integrate code editor with syntax highlighting in Svelte.",
-  "repo_url": "",
-  "authors": [
-    "umaranis"
-  ],
-  "downloads": 460,
-  "dependents": 0,
-  "updated": "2025-03-26T06:31:17.802Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "@umaranis/svelte-code-editor",
+	"description": "Integrate code editor with syntax highlighting in Svelte.",
+	"repo_url": "",
+	"authors": ["umaranis"],
+	"downloads": 460,
+	"dependents": 0,
+	"updated": "2025-03-26T06:31:17.802Z",
+	"tags": ["tooling"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

@@ -1,17 +1,18 @@
 {
-  "name": "svelte-5-inview",
-  "description": "Monitors element visibility in viewport using Intersection Observer.",
-  "repo_url": "",
-  "authors": [
-    "sveltelaunch"
-  ],
-  "homepage": "https://github.com/travisdmathis/svelte-5-inview",
-  "downloads": 2,
-  "dependents": 0,
-  "updated": "2024-08-04T16:38:15.750Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "svelte-5-inview",
+	"description": "Monitors element visibility in viewport using Intersection Observer.",
+	"repo_url": "",
+	"authors": ["sveltelaunch"],
+	"homepage": "https://github.com/travisdmathis/svelte-5-inview",
+	"downloads": 2,
+	"dependents": 0,
+	"updated": "2024-08-04T16:38:15.750Z",
+	"tags": ["miscellaneous"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

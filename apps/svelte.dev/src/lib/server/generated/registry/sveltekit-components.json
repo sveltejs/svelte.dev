@@ -1,19 +1,19 @@
 {
-  "name": "sveltekit-components",
-  "description": "Provides opinionated UI components for SvelteKit applications.",
-  "repo_url": "https://github.com/mirkoschubert/sveltekit-components",
-  "authors": [
-    "mirkoschubert"
-  ],
-  "homepage": "https://sveltekit-components.mirkoschubert.com",
-  "downloads": 28,
-  "dependents": 0,
-  "updated": "2022-10-24T17:05:35.461Z",
-  "tags": [
-    "ui",
-    "design-system"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 6
+	"name": "sveltekit-components",
+	"description": "Provides opinionated UI components for SvelteKit applications.",
+	"repo_url": "https://github.com/mirkoschubert/sveltekit-components",
+	"authors": ["mirkoschubert"],
+	"homepage": "https://sveltekit-components.mirkoschubert.com",
+	"downloads": 28,
+	"dependents": 0,
+	"updated": "2022-10-24T17:05:35.461Z",
+	"tags": ["ui", "design-system"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 6,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

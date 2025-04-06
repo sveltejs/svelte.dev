@@ -1,19 +1,19 @@
 {
-  "name": "@svelteuidev/composables",
-  "description": "Provides Svelte actions and utilities for various use cases.",
-  "repo_url": "https://github.com/svelteuidev/svelteui",
-  "authors": [
-    "lowkey_daisy",
-    "uxtitan"
-  ],
-  "homepage": "https://svelteui.dev/",
-  "downloads": 1210,
-  "dependents": 9,
-  "updated": "2024-07-07T14:30:26.620Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 1369
+	"name": "@svelteuidev/composables",
+	"description": "Provides Svelte actions and utilities for various use cases.",
+	"repo_url": "https://github.com/svelteuidev/svelteui",
+	"authors": ["lowkey_daisy", "uxtitan"],
+	"homepage": "https://svelteui.dev/",
+	"downloads": 1210,
+	"dependents": 9,
+	"updated": "2024-07-07T14:30:26.620Z",
+	"tags": ["miscellaneous"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 1370,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": true
+	}
 }

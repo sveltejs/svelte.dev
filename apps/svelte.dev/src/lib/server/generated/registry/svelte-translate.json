@@ -1,18 +1,19 @@
 {
-  "name": "svelte-translate",
-  "description": "Provide dynamic translation service for Svelte applications.",
-  "repo_url": "https://github.com/noelmugnier/svelte-translate",
-  "authors": [
-    "noelmugnier"
-  ],
-  "homepage": "https://github.com/noelmugnier/svelte-translate#readme",
-  "downloads": 15,
-  "dependents": 0,
-  "updated": "2021-10-01T14:03:15.146Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 10
+	"name": "svelte-translate",
+	"description": "Provide dynamic translation service for Svelte applications.",
+	"repo_url": "https://github.com/noelmugnier/svelte-translate",
+	"authors": ["noelmugnier"],
+	"homepage": "https://github.com/noelmugnier/svelte-translate#readme",
+	"downloads": 15,
+	"dependents": 0,
+	"updated": "2021-10-01T14:03:15.146Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 10,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

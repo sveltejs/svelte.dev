@@ -1,18 +1,19 @@
 {
-  "name": "svelte-virtual",
-  "description": "Create virtual list and grid components for Svelte applications.",
-  "repo_url": "https://github.com/ghostebony/svelte-virtual",
-  "authors": [
-    "ghostebony"
-  ],
-  "homepage": "https://github.com/ghostebony/svelte-virtual#readme",
-  "downloads": 274,
-  "dependents": 0,
-  "updated": "2024-02-26T10:53:04.110Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 60
+	"name": "svelte-virtual",
+	"description": "Create virtual list and grid components for Svelte applications.",
+	"repo_url": "https://github.com/ghostebony/svelte-virtual",
+	"authors": ["ghostebony"],
+	"homepage": "https://github.com/ghostebony/svelte-virtual#readme",
+	"downloads": 274,
+	"dependents": 0,
+	"updated": "2024-02-26T10:53:04.110Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 60,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": false
+	}
 }

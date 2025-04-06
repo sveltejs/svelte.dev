@@ -1,18 +1,19 @@
 {
-  "name": "create-capacitor-svelte-app",
-  "description": "Generate new Capacitor apps using SvelteKit.",
-  "repo_url": "https://github.com/Tommertom/svelte-ionic-npm",
-  "authors": [
-    "tommertom"
-  ],
-  "homepage": "https://ionic-svelte.firebaseapp.com",
-  "downloads": 24,
-  "dependents": 0,
-  "updated": "2024-08-04T11:59:50.572Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 19
+	"name": "create-capacitor-svelte-app",
+	"description": "Generate new Capacitor apps using SvelteKit.",
+	"repo_url": "https://github.com/Tommertom/svelte-ionic-npm",
+	"authors": ["tommertom"],
+	"homepage": "https://ionic-svelte.firebaseapp.com",
+	"downloads": 24,
+	"dependents": 0,
+	"updated": "2024-08-04T11:59:50.572Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 19,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

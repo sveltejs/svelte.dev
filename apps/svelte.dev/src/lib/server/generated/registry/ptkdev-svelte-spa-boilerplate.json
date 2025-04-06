@@ -1,18 +1,19 @@
 {
-  "name": "@ptkdev/svelte-spa-boilerplate",
-  "description": "Create single-page applications with Svelte and Typescript.",
-  "repo_url": "https://github.com/ptkdev-boilerplate/svelte-spa-boilerplate",
-  "authors": [
-    "ptkdevio"
-  ],
-  "homepage": "https://github.com/ptkdev-boilerplate/svelte-spa-boilerplate",
-  "downloads": 1713,
-  "dependents": 0,
-  "updated": "2022-02-07T22:38:32.725Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 33
+	"name": "@ptkdev/svelte-spa-boilerplate",
+	"description": "Create single-page applications with Svelte and Typescript.",
+	"repo_url": "https://github.com/ptkdev-boilerplate/svelte-spa-boilerplate",
+	"authors": ["ptkdevio"],
+	"homepage": "https://github.com/ptkdev-boilerplate/svelte-spa-boilerplate",
+	"downloads": 1713,
+	"dependents": 0,
+	"updated": "2022-02-07T22:38:32.725Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 33,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "@histoire/plugin-svelte",
-  "description": "Add Svelte support to Histoire.",
-  "repo_url": "https://github.com/Akryum/histoire",
-  "authors": [
-    "akryum"
-  ],
-  "homepage": "https://github.com/Akryum/histoire#readme",
-  "downloads": 3421,
-  "dependents": 0,
-  "updated": "2025-02-21T17:43:01.965Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 3328
+	"name": "@histoire/plugin-svelte",
+	"description": "Add Svelte support to Histoire.",
+	"repo_url": "https://github.com/Akryum/histoire",
+	"authors": ["akryum"],
+	"homepage": "https://github.com/Akryum/histoire#readme",
+	"downloads": 3421,
+	"dependents": 0,
+	"updated": "2025-02-21T17:43:01.965Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 3328,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": false
+	}
 }

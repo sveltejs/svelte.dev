@@ -1,18 +1,19 @@
 {
-  "name": "@witheslint/preset-svelte",
-  "description": "Provide Svelte preset for witheslint.",
-  "repo_url": "https://github.com/witheslint/witheslint",
-  "authors": [
-    "usings"
-  ],
-  "homepage": "https://github.com/witheslint/witheslint",
-  "downloads": 63,
-  "dependents": 1,
-  "updated": "2025-03-21T13:52:05.199Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 5
+	"name": "@witheslint/preset-svelte",
+	"description": "Provide Svelte preset for witheslint.",
+	"repo_url": "https://github.com/witheslint/witheslint",
+	"authors": ["usings"],
+	"homepage": "https://github.com/witheslint/witheslint",
+	"downloads": 63,
+	"dependents": 1,
+	"updated": "2025-03-21T13:52:05.199Z",
+	"tags": ["tooling"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 5,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

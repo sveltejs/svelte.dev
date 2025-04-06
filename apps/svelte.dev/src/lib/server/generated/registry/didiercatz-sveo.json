@@ -1,16 +1,17 @@
 {
-  "name": "@didiercatz/sveo",
-  "description": "Declare metadata on SvelteKit pages for SEO.",
-  "repo_url": "",
-  "authors": [
-    "didiercatz"
-  ],
-  "downloads": 50,
-  "dependents": 0,
-  "updated": "2021-10-22T21:16:01.588Z",
-  "tags": [
-    "seo"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@didiercatz/sveo",
+	"description": "Declare metadata on SvelteKit pages for SEO.",
+	"repo_url": "",
+	"authors": ["didiercatz"],
+	"downloads": 50,
+	"dependents": 0,
+	"updated": "2021-10-22T21:16:01.588Z",
+	"tags": ["seo"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "svelte-outclick",
-  "description": "Listen for clicks outside Svelte elements.",
-  "repo_url": "https://github.com/babakfp/svelte-outclick",
-  "authors": [
-    "babakfp"
-  ],
-  "homepage": "https://github.com/babakfp/svelte-outclick#readme",
-  "downloads": 1005,
-  "dependents": 0,
-  "updated": "2025-03-02T18:16:12.982Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 68
+	"name": "svelte-outclick",
+	"description": "Listen for clicks outside Svelte elements.",
+	"repo_url": "https://github.com/babakfp/svelte-outclick",
+	"authors": ["babakfp"],
+	"homepage": "https://github.com/babakfp/svelte-outclick#readme",
+	"downloads": 1005,
+	"dependents": 0,
+	"updated": "2025-03-02T18:16:12.982Z",
+	"tags": ["miscellaneous"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 68,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

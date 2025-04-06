@@ -1,18 +1,19 @@
 {
-  "name": "svelte-parallax",
-  "description": "Create spring-based parallax component library for Svelte.",
-  "repo_url": "https://github.com/kindoflew/svelte-parallax",
-  "authors": [
-    "kindoflew"
-  ],
-  "homepage": "https://github.com/kindoflew/svelte-parallax#readme",
-  "downloads": 304,
-  "dependents": 1,
-  "updated": "2022-08-01T00:10:30.578Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 146
+	"name": "svelte-parallax",
+	"description": "Create spring-based parallax component library for Svelte.",
+	"repo_url": "https://github.com/kindoflew/svelte-parallax",
+	"authors": ["kindoflew"],
+	"homepage": "https://github.com/kindoflew/svelte-parallax#readme",
+	"downloads": 304,
+	"dependents": 1,
+	"updated": "2022-08-01T00:10:30.578Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 146,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

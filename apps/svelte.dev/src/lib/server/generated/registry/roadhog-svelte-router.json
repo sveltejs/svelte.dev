@@ -1,16 +1,17 @@
 {
-  "name": "@roadhog/svelte-router",
-  "description": "Implement config-based routing for Svelte applications.",
-  "repo_url": "",
-  "authors": [
-    "roadhog"
-  ],
-  "downloads": 2,
-  "dependents": 0,
-  "updated": "2022-11-02T02:13:30.547Z",
-  "tags": [
-    "router"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@roadhog/svelte-router",
+	"description": "Implement config-based routing for Svelte applications.",
+	"repo_url": "",
+	"authors": ["roadhog"],
+	"downloads": 2,
+	"dependents": 0,
+	"updated": "2022-11-02T02:13:30.547Z",
+	"tags": ["router"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

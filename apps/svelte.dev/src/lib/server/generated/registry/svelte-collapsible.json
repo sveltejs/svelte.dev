@@ -1,18 +1,19 @@
 {
-  "name": "svelte-collapsible",
-  "description": "Create expanding and collapsing content in Svelte apps.",
-  "repo_url": "https://github.com/rsdavis/svelte-collapsible",
-  "authors": [
-    "rsdavis"
-  ],
-  "homepage": "https://github.com/rsdavis/svelte-collapsible#readme",
-  "downloads": 681,
-  "dependents": 1,
-  "updated": "2024-11-21T22:40:59.943Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 32
+	"name": "svelte-collapsible",
+	"description": "Create expanding and collapsing content in Svelte apps.",
+	"repo_url": "https://github.com/rsdavis/svelte-collapsible",
+	"authors": ["rsdavis"],
+	"homepage": "https://github.com/rsdavis/svelte-collapsible#readme",
+	"downloads": 681,
+	"dependents": 1,
+	"updated": "2024-11-21T22:40:59.943Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 32,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

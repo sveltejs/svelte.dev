@@ -1,16 +1,17 @@
 {
-  "name": "@n0n3br/svelte-persist-store",
-  "description": "Persist Svelte stores in localStorage or sessionStorage.",
-  "repo_url": "",
-  "authors": [
-    "n0n3br"
-  ],
-  "downloads": 15,
-  "dependents": 0,
-  "updated": "2020-04-19T18:42:13.676Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@n0n3br/svelte-persist-store",
+	"description": "Persist Svelte stores in localStorage or sessionStorage.",
+	"repo_url": "",
+	"authors": ["n0n3br"],
+	"downloads": 15,
+	"dependents": 0,
+	"updated": "2020-04-19T18:42:13.676Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

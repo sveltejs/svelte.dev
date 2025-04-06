@@ -1,18 +1,19 @@
 {
-  "name": "@valiantlynx/svelte-leaflet",
-  "description": "Offers Leaflet components for adding maps to SvelteKit projects.",
-  "repo_url": "https://github.com/valiantlynx/svelte-leaflet",
-  "authors": [
-    "valiantlynx"
-  ],
-  "homepage": "https://svelte-leaflet.vercel.app",
-  "downloads": 16,
-  "dependents": 0,
-  "updated": "2023-12-28T23:56:01.908Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 6
+	"name": "@valiantlynx/svelte-leaflet",
+	"description": "Offers Leaflet components for adding maps to SvelteKit projects.",
+	"repo_url": "https://github.com/valiantlynx/svelte-leaflet",
+	"authors": ["valiantlynx"],
+	"homepage": "https://svelte-leaflet.vercel.app",
+	"downloads": 16,
+	"dependents": 0,
+	"updated": "2023-12-28T23:56:01.908Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 6,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

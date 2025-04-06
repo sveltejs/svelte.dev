@@ -1,18 +1,19 @@
 {
-  "name": "@arkangel-dev/svelte-recaptcha-v2",
-  "description": "Integrate Google reCAPTCHA v2 in Svelte and SvelteKit.",
-  "repo_url": "https://github.com/arkangel-dev/svelte-recaptcha-v2",
-  "authors": [
-    "arkangel-dev"
-  ],
-  "homepage": "https://github.com/arkangel-dev/svelte-recaptcha-v2",
-  "downloads": 1,
-  "dependents": 0,
-  "updated": "2024-02-17T16:18:26.739Z",
-  "tags": [
-    "auth"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@arkangel-dev/svelte-recaptcha-v2",
+	"description": "Integrate Google reCAPTCHA v2 in Svelte and SvelteKit.",
+	"repo_url": "https://github.com/arkangel-dev/svelte-recaptcha-v2",
+	"authors": ["arkangel-dev"],
+	"homepage": "https://github.com/arkangel-dev/svelte-recaptcha-v2",
+	"downloads": 1,
+	"dependents": 0,
+	"updated": "2024-02-17T16:18:26.739Z",
+	"tags": ["auth"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

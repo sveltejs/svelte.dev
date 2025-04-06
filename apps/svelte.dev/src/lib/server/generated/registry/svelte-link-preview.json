@@ -1,18 +1,19 @@
 {
-  "name": "svelte-link-preview",
-  "description": "Preview links in Svelte applications.",
-  "repo_url": "https://github.com/dhaiwat10/svelte-link-preview",
-  "authors": [
-    "dhaiwat10"
-  ],
-  "homepage": "https://github.com/dhaiwat10/svelte-link-preview",
-  "downloads": 23,
-  "dependents": 0,
-  "updated": "2021-11-24T03:36:08.445Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 15
+	"name": "svelte-link-preview",
+	"description": "Preview links in Svelte applications.",
+	"repo_url": "https://github.com/dhaiwat10/svelte-link-preview",
+	"authors": ["dhaiwat10"],
+	"homepage": "https://github.com/dhaiwat10/svelte-link-preview",
+	"downloads": 23,
+	"dependents": 0,
+	"updated": "2021-11-24T03:36:08.445Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 15,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

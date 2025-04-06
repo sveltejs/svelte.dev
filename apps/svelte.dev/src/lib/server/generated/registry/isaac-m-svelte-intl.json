@@ -1,18 +1,19 @@
 {
-  "name": "@isaac-m/svelte-intl",
-  "description": "Internationalize Svelte 4 apps using format-message.",
-  "repo_url": "https://github.com/isaac-mok/svelte-intl",
-  "authors": [
-    "isaac-m"
-  ],
-  "homepage": "https://github.com/isaac-mok/svelte-intl",
-  "downloads": 51,
-  "dependents": 0,
-  "updated": "2023-10-02T08:36:14.820Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@isaac-m/svelte-intl",
+	"description": "Internationalize Svelte 4 apps using format-message.",
+	"repo_url": "https://github.com/isaac-mok/svelte-intl",
+	"authors": ["isaac-m"],
+	"homepage": "https://github.com/isaac-mok/svelte-intl",
+	"downloads": 51,
+	"dependents": 0,
+	"updated": "2023-10-02T08:36:14.820Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "yrv",
-  "description": "Provides routing capabilities for Svelte applications.",
-  "repo_url": "https://github.com/pateketrueke/yrv",
-  "authors": [
-    "pateketrueke"
-  ],
-  "homepage": "https://github.com/pateketrueke/yrv",
-  "downloads": 242,
-  "dependents": 1,
-  "updated": "2022-06-26T18:57:46.496Z",
-  "tags": [
-    "router"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 161
+	"name": "yrv",
+	"description": "Provides routing capabilities for Svelte applications.",
+	"repo_url": "https://github.com/pateketrueke/yrv",
+	"authors": ["pateketrueke"],
+	"homepage": "https://github.com/pateketrueke/yrv",
+	"downloads": 242,
+	"dependents": 1,
+	"updated": "2022-06-26T18:57:46.496Z",
+	"tags": ["router"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 161,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

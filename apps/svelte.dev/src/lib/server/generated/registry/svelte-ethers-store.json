@@ -1,17 +1,18 @@
 {
-  "name": "svelte-ethers-store",
-  "description": "Use Ethers.js library as Svelte stores.",
-  "repo_url": "https://gitlab.com/clb1/svelte-ethers-store",
-  "authors": [
-    "clbrge"
-  ],
-  "homepage": "https://gitlab.com/clb1/svelte-ethers-store#readme",
-  "downloads": 170,
-  "dependents": 1,
-  "updated": "2023-04-10T15:04:33.292Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-ethers-store",
+	"description": "Use Ethers.js library as Svelte stores.",
+	"repo_url": "https://gitlab.com/clb1/svelte-ethers-store",
+	"authors": ["clbrge"],
+	"homepage": "https://gitlab.com/clb1/svelte-ethers-store#readme",
+	"downloads": 170,
+	"dependents": 1,
+	"updated": "2023-04-10T15:04:33.292Z",
+	"tags": ["integration"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,23 +1,26 @@
 {
-  "name": "@rabee-org/svelte-head",
-  "description": "Manage meta tags and SEO in Svelte applications.",
-  "repo_url": "",
-  "authors": [
-    "horietty",
-    "tata_jp",
-    "ooharamasaki",
-    "suico",
-    "juth5",
-    "mtnn_rabee",
-    "simiraaaa",
-    "phi"
-  ],
-  "downloads": 21,
-  "dependents": 1,
-  "updated": "2023-05-24T11:34:58.173Z",
-  "tags": [
-    "seo"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@rabee-org/svelte-head",
+	"description": "Manage meta tags and SEO in Svelte applications.",
+	"repo_url": "",
+	"authors": [
+		"horietty",
+		"tata_jp",
+		"ooharamasaki",
+		"suico",
+		"juth5",
+		"mtnn_rabee",
+		"simiraaaa",
+		"phi"
+	],
+	"downloads": 21,
+	"dependents": 1,
+	"updated": "2023-05-24T11:34:58.173Z",
+	"tags": ["seo"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

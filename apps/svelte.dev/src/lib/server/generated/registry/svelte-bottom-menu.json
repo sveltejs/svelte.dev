@@ -1,16 +1,17 @@
 {
-  "name": "svelte-bottom-menu",
-  "description": "Create bottom menu components for Svelte applications.",
-  "repo_url": "",
-  "authors": [
-    "kuanyu0729"
-  ],
-  "downloads": 16,
-  "dependents": 0,
-  "updated": "2022-04-26T04:11:13.284Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-bottom-menu",
+	"description": "Create bottom menu components for Svelte applications.",
+	"repo_url": "",
+	"authors": ["kuanyu0729"],
+	"downloads": 16,
+	"dependents": 0,
+	"updated": "2022-04-26T04:11:13.284Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

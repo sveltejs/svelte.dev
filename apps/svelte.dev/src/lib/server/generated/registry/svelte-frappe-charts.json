@@ -1,18 +1,19 @@
 {
-  "name": "svelte-frappe-charts",
-  "description": "Create charts using Frappe Charts in Svelte applications.",
-  "repo_url": "https://github.com/himynameisdave/svelte-frappe-charts",
-  "authors": [
-    "himynameisdave"
-  ],
-  "homepage": "https://github.com/himynameisdave/svelte-frappe-charts#readme",
-  "downloads": 383,
-  "dependents": 4,
-  "updated": "2022-11-24T21:53:37.458Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 311
+	"name": "svelte-frappe-charts",
+	"description": "Create charts using Frappe Charts in Svelte applications.",
+	"repo_url": "https://github.com/himynameisdave/svelte-frappe-charts",
+	"authors": ["himynameisdave"],
+	"homepage": "https://github.com/himynameisdave/svelte-frappe-charts#readme",
+	"downloads": 383,
+	"dependents": 4,
+	"updated": "2022-11-24T21:53:37.458Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 312,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

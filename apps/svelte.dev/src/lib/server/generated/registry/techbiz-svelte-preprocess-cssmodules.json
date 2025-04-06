@@ -1,17 +1,18 @@
 {
-  "name": "@techbiz/svelte-preprocess-cssmodules",
-  "description": "Generate CSS Modules classnames on Svelte components.",
-  "repo_url": "https://github.com/techbiz100/-techbiz-svelte-preprocess-cssmodules",
-  "authors": [
-    "techbiz"
-  ],
-  "homepage": "https://github.com/techbiz100/-techbiz-svelte-preprocess-cssmodules",
-  "downloads": 71,
-  "dependents": 0,
-  "updated": "2024-06-17T09:51:45.935Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@techbiz/svelte-preprocess-cssmodules",
+	"description": "Generate CSS Modules classnames on Svelte components.",
+	"repo_url": "https://github.com/techbiz100/-techbiz-svelte-preprocess-cssmodules",
+	"authors": ["techbiz"],
+	"homepage": "https://github.com/techbiz100/-techbiz-svelte-preprocess-cssmodules",
+	"downloads": 71,
+	"dependents": 0,
+	"updated": "2024-06-17T09:51:45.935Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

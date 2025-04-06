@@ -1,17 +1,19 @@
 {
-  "name": "svelte-vertical-timeline",
-  "description": "Create vertical timeline components for Svelte.",
-  "repo_url": "https://github.com/K-Sato1995/svelte-vertical-timeline",
-  "authors": [
-    "sato0130"
-  ],
-  "downloads": 377,
-  "dependents": 0,
-  "updated": "2024-11-16T03:28:55.958Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 117
+	"name": "svelte-vertical-timeline",
+	"description": "Create vertical timeline components for Svelte.",
+	"repo_url": "https://github.com/K-Sato1995/svelte-vertical-timeline",
+	"authors": ["sato0130"],
+	"downloads": 377,
+	"dependents": 0,
+	"updated": "2024-11-16T03:28:55.958Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 117,
+	"homepage": "https://svelte-vertical-timeline.vercel.app/",
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

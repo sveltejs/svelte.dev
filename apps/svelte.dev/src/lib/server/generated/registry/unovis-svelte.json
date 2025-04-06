@@ -1,24 +1,27 @@
 {
-  "name": "@unovis/svelte",
-  "description": "Modular data visualization framework for Svelte apps.",
-  "repo_url": "https://github.com/f5/unovis",
-  "authors": [
-    "rokotyan",
-    "nikita-rokotyan-f5",
-    "rmauer",
-    "caabernathy",
-    "curran",
-    "lee00678",
-    "rebeccabol"
-  ],
-  "homepage": "https://unovis.dev",
-  "downloads": 8592,
-  "dependents": 1,
-  "updated": "2025-02-19T18:26:10.533Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 2429
+	"name": "@unovis/svelte",
+	"description": "Modular data visualization framework for Svelte apps.",
+	"repo_url": "https://github.com/f5/unovis",
+	"authors": [
+		"rokotyan",
+		"nikita-rokotyan-f5",
+		"rmauer",
+		"caabernathy",
+		"curran",
+		"lee00678",
+		"rebeccabol"
+	],
+	"homepage": "https://unovis.dev",
+	"downloads": 8592,
+	"dependents": 1,
+	"updated": "2025-02-19T18:26:10.533Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 2430,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": false
+	}
 }

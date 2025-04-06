@@ -1,18 +1,19 @@
 {
-  "name": "svelte-legos",
-  "description": "Provide Svelte composition utilities.",
-  "repo_url": "https://github.com/ankurrsinghal/svelte-legos",
-  "authors": [
-    "anksin1994"
-  ],
-  "homepage": "https://svelte-legos.surge.sh",
-  "downloads": 8680,
-  "dependents": 6,
-  "updated": "2024-08-25T21:05:06.320Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 822
+	"name": "svelte-legos",
+	"description": "Provide Svelte composition utilities.",
+	"repo_url": "https://github.com/ankurrsinghal/svelte-legos",
+	"authors": ["anksin1994"],
+	"homepage": "https://svelte-legos.surge.sh",
+	"downloads": 8680,
+	"dependents": 6,
+	"updated": "2024-08-25T21:05:06.320Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 822,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

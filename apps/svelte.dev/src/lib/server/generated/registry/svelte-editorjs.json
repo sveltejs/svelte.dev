@@ -1,18 +1,19 @@
 {
-  "name": "svelte-editorjs",
-  "description": "Wrap EditorJS for use in Svelte applications.",
-  "repo_url": "https://github.com/pablo-abc/svelte-editorjs",
-  "authors": [
-    "pberganza"
-  ],
-  "homepage": "https://github.com/pablo-abc/svelte-editorjs",
-  "downloads": 21,
-  "dependents": 0,
-  "updated": "2021-04-08T21:22:36.716Z",
-  "tags": [
-    "content"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 33
+	"name": "svelte-editorjs",
+	"description": "Wrap EditorJS for use in Svelte applications.",
+	"repo_url": "https://github.com/pablo-abc/svelte-editorjs",
+	"authors": ["pberganza"],
+	"homepage": "https://github.com/pablo-abc/svelte-editorjs",
+	"downloads": 21,
+	"dependents": 0,
+	"updated": "2021-04-08T21:22:36.716Z",
+	"tags": ["content"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 33,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

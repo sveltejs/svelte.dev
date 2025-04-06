@@ -1,18 +1,19 @@
 {
-  "name": "svelte-tenor",
-  "description": "Integrate Tenor GIF components into Svelte apps.",
-  "repo_url": "https://github.com/GauBen/svelte-tenor",
-  "authors": [
-    "gauben"
-  ],
-  "homepage": "https://github.com/GauBen/svelte-tenor/#readme",
-  "downloads": 41,
-  "dependents": 0,
-  "updated": "2022-08-15T14:51:40.288Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 8
+	"name": "svelte-tenor",
+	"description": "Integrate Tenor GIF components into Svelte apps.",
+	"repo_url": "https://github.com/GauBen/svelte-tenor",
+	"authors": ["gauben"],
+	"homepage": "https://github.com/GauBen/svelte-tenor/#readme",
+	"downloads": 41,
+	"dependents": 0,
+	"updated": "2022-08-15T14:51:40.288Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 8,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

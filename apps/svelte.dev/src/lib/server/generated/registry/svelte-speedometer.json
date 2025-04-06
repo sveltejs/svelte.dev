@@ -1,18 +1,19 @@
 {
-  "name": "svelte-speedometer",
-  "description": "Shows speedometer-like gauge using d3 in Svelte applications.",
-  "repo_url": "https://github.com/palerdot/svelte-speedometer",
-  "authors": [
-    "palerdot"
-  ],
-  "homepage": "https://github.com/palerdot/svelte-speedometer#readme",
-  "downloads": 1067,
-  "dependents": 1,
-  "updated": "2024-12-18T03:50:01.999Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 17
+	"name": "svelte-speedometer",
+	"description": "Shows speedometer-like gauge using d3 in Svelte applications.",
+	"repo_url": "https://github.com/palerdot/svelte-speedometer",
+	"authors": ["palerdot"],
+	"homepage": "https://github.com/palerdot/svelte-speedometer#readme",
+	"downloads": 1067,
+	"dependents": 1,
+	"updated": "2024-12-18T03:50:01.999Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 17,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

@@ -1,19 +1,19 @@
 {
-  "name": "sv",
-  "description": "CLI for creating and updating SvelteKit projects.",
-  "repo_url": "https://github.com/sveltejs/cli",
-  "authors": [
-    "rich_harris",
-    "svelte-admin"
-  ],
-  "homepage": "https://svelte.dev",
-  "downloads": 15207,
-  "dependents": 6,
-  "updated": "2025-03-24T17:48:37.718Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 338
+	"name": "sv",
+	"description": "CLI for creating and updating SvelteKit projects.",
+	"repo_url": "https://github.com/sveltejs/cli",
+	"authors": ["rich_harris", "svelte-admin"],
+	"homepage": "https://svelte.dev",
+	"downloads": 15207,
+	"dependents": 6,
+	"updated": "2025-03-24T17:48:37.718Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 338,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "svelte-fragment",
-  "description": "Render Svelte components without DOM containers.",
-  "repo_url": "https://github.com/qutran/svelte-fragment",
-  "authors": [
-    "dmitry.kutran"
-  ],
-  "homepage": "https://github.com/qutran/svelte-fragment",
-  "downloads": 19,
-  "dependents": 0,
-  "updated": "2019-06-17T20:27:52.491Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 9
+	"name": "svelte-fragment",
+	"description": "Render Svelte components without DOM containers.",
+	"repo_url": "https://github.com/qutran/svelte-fragment",
+	"authors": ["dmitry.kutran"],
+	"homepage": "https://github.com/qutran/svelte-fragment",
+	"downloads": 19,
+	"dependents": 0,
+	"updated": "2019-06-17T20:27:52.491Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 9,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

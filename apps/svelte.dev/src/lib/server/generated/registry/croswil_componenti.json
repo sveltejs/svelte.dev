@@ -1,16 +1,17 @@
 {
-  "name": "croswil_componenti",
-  "description": "Provides Croswil UI components for Svelte applications.",
-  "repo_url": "",
-  "authors": [
-    "croswil"
-  ],
-  "downloads": 116,
-  "dependents": 0,
-  "updated": "2025-03-20T16:13:31.299Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "croswil_componenti",
+	"description": "Provides Croswil UI components for Svelte applications.",
+	"repo_url": "",
+	"authors": ["croswil"],
+	"downloads": 116,
+	"dependents": 0,
+	"updated": "2025-03-20T16:13:31.299Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

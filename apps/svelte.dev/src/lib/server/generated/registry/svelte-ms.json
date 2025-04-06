@@ -1,18 +1,19 @@
 {
-  "name": "svelte-ms",
-  "description": "Svelte component for media queries.",
-  "repo_url": "https://github.com/pckkkkkk/svelte-ms",
-  "authors": [
-    "pckkkkkk"
-  ],
-  "homepage": "https://github.com/pckkkkkk/svelte-ms",
-  "downloads": 11,
-  "dependents": 0,
-  "updated": "2020-12-02T17:56:27.419Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelte-ms",
+	"description": "Svelte component for media queries.",
+	"repo_url": "https://github.com/pckkkkkk/svelte-ms",
+	"authors": ["pckkkkkk"],
+	"homepage": "https://github.com/pckkkkkk/svelte-ms",
+	"downloads": 11,
+	"dependents": 0,
+	"updated": "2020-12-02T17:56:27.419Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

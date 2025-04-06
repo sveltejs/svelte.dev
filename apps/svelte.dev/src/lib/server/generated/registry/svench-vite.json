@@ -1,18 +1,19 @@
 {
-  "name": "svench-vite",
-  "description": "Svench CLI package for Vite and Svelte.",
-  "repo_url": "https://github.com/rixo/svench",
-  "authors": [
-    "rixo"
-  ],
-  "homepage": "https://github.com/rixo/svench#readme",
-  "downloads": 6,
-  "dependents": 0,
-  "updated": "2021-03-20T23:18:07.501Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 207
+	"name": "svench-vite",
+	"description": "Svench CLI package for Vite and Svelte.",
+	"repo_url": "https://github.com/rixo/svench",
+	"authors": ["rixo"],
+	"homepage": "https://github.com/rixo/svench#readme",
+	"downloads": 6,
+	"dependents": 0,
+	"updated": "2021-03-20T23:18:07.501Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 207,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

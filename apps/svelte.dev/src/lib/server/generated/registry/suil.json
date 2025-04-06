@@ -1,18 +1,19 @@
 {
-  "name": "suil",
-  "description": "Build Svelte UI with this component library.",
-  "repo_url": "https://github.com/lemmon/suil",
-  "authors": [
-    "lemmon"
-  ],
-  "homepage": "https://suil.vercel.app",
-  "downloads": 2,
-  "dependents": 0,
-  "updated": "2024-03-11T11:37:38.647Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "suil",
+	"description": "Build Svelte UI with this component library.",
+	"repo_url": "https://github.com/lemmon/suil",
+	"authors": ["lemmon"],
+	"homepage": "https://suil.vercel.app",
+	"downloads": 2,
+	"dependents": 0,
+	"updated": "2024-03-11T11:37:38.647Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

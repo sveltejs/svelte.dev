@@ -1,16 +1,17 @@
 {
-  "name": "sveltekit-embed",
-  "description": "Provides embed components for SvelteKit.",
-  "repo_url": "",
-  "authors": [
-    "spences10"
-  ],
-  "downloads": 976,
-  "dependents": 0,
-  "updated": "2025-02-09T20:30:39.779Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "sveltekit-embed",
+	"description": "Provides embed components for SvelteKit.",
+	"repo_url": "",
+	"authors": ["spences10"],
+	"downloads": 976,
+	"dependents": 0,
+	"updated": "2025-02-09T20:30:39.779Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": true
+	}
 }

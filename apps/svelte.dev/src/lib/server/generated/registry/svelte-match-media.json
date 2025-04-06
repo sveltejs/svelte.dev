@@ -1,18 +1,19 @@
 {
-  "name": "svelte-match-media",
-  "description": "Use matchMedia queries in Svelte components.",
-  "repo_url": "https://github.com/pearofducks/svelte-match-media",
-  "authors": [
-    "pearofducks"
-  ],
-  "homepage": "https://github.com/pearofducks/svelte-match-media#readme",
-  "downloads": 39,
-  "dependents": 2,
-  "updated": "2021-03-31T14:01:03.360Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 38
+	"name": "svelte-match-media",
+	"description": "Use matchMedia queries in Svelte components.",
+	"repo_url": "https://github.com/pearofducks/svelte-match-media",
+	"authors": ["pearofducks"],
+	"homepage": "https://github.com/pearofducks/svelte-match-media#readme",
+	"downloads": 39,
+	"dependents": 2,
+	"updated": "2021-03-31T14:01:03.360Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 38,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,16 +1,17 @@
 {
-  "name": "hnic-svelte",
-  "description": "Create reusable Svelte component library.",
-  "repo_url": "",
-  "authors": [
-    "youne"
-  ],
-  "downloads": 148,
-  "dependents": 0,
-  "updated": "2024-08-30T10:10:12.640Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "hnic-svelte",
+	"description": "Create reusable Svelte component library.",
+	"repo_url": "",
+	"authors": ["youne"],
+	"downloads": 148,
+	"dependents": 0,
+	"updated": "2024-08-30T10:10:12.640Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

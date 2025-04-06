@@ -1,18 +1,19 @@
 {
-  "name": "@overlays/svelte",
-  "description": "Create imperative overlays in Svelte applications.",
-  "repo_url": "https://github.com/hairyf/unoverlays",
-  "authors": [
-    "tuimao"
-  ],
-  "homepage": "https://github.com/hairyf/unoverlays#readme",
-  "downloads": 8,
-  "dependents": 0,
-  "updated": "2023-05-22T03:04:41.188Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 66
+	"name": "@overlays/svelte",
+	"description": "Create imperative overlays in Svelte applications.",
+	"repo_url": "https://github.com/hairyf/unoverlays",
+	"authors": ["tuimao"],
+	"homepage": "https://github.com/hairyf/unoverlays#readme",
+	"downloads": 8,
+	"dependents": 0,
+	"updated": "2023-05-22T03:04:41.188Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 66,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

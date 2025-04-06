@@ -1,19 +1,19 @@
 {
-  "name": "svelte-jest",
-  "description": "Transform Svelte components for Jest testing.",
-  "repo_url": "https://github.com/ktsn/svelte-jest",
-  "authors": [
-    "ktsn"
-  ],
-  "homepage": "https://github.com/ktsn/svelte-jest#readme",
-  "downloads": 204,
-  "dependents": 0,
-  "updated": "2019-10-09T06:24:43.419Z",
-  "tags": [
-    "tooling",
-    "testing"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 36
+	"name": "svelte-jest",
+	"description": "Transform Svelte components for Jest testing.",
+	"repo_url": "https://github.com/ktsn/svelte-jest",
+	"authors": ["ktsn"],
+	"homepage": "https://github.com/ktsn/svelte-jest#readme",
+	"downloads": 204,
+	"dependents": 0,
+	"updated": "2019-10-09T06:24:43.419Z",
+	"tags": ["tooling", "testing"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 36,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

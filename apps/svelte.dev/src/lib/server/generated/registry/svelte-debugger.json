@@ -1,18 +1,19 @@
 {
-  "name": "svelte-debugger",
-  "description": "Debug Svelte apps with a JSON debugger component.",
-  "repo_url": "https://github.com/ftonato/svelte-debugger",
-  "authors": [
-    "ftonato"
-  ],
-  "homepage": "https://github.com/ftonato/svelte-debugger#readme",
-  "downloads": 34,
-  "dependents": 0,
-  "updated": "2021-02-03T12:38:08.560Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 12
+	"name": "svelte-debugger",
+	"description": "Debug Svelte apps with a JSON debugger component.",
+	"repo_url": "https://github.com/ftonato/svelte-debugger",
+	"authors": ["ftonato"],
+	"homepage": "https://github.com/ftonato/svelte-debugger#readme",
+	"downloads": 34,
+	"dependents": 0,
+	"updated": "2021-02-03T12:38:08.560Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 12,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

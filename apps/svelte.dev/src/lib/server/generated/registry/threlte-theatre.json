@@ -1,18 +1,19 @@
 {
-  "name": "@threlte/theatre",
-  "description": "Animate Threlte components with Theatre.js.",
-  "repo_url": "https://github.com/threlte/threlte",
-  "authors": [
-    "grischaerbe"
-  ],
-  "homepage": "https://threlte.xyz",
-  "downloads": 542,
-  "dependents": 1,
-  "updated": "2025-01-20T22:28:45.486Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 2838
+	"name": "@threlte/theatre",
+	"description": "Animate Threlte components with Theatre.js.",
+	"repo_url": "https://github.com/threlte/threlte",
+	"authors": ["grischaerbe"],
+	"homepage": "https://threlte.xyz",
+	"downloads": 542,
+	"dependents": 1,
+	"updated": "2025-01-20T22:28:45.486Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 2839,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": true
+	}
 }

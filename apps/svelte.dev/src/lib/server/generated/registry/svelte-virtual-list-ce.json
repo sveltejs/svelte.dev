@@ -1,18 +1,19 @@
 {
-  "name": "svelte-virtual-list-ce",
-  "description": "Render virtual lists efficiently in Svelte applications.",
-  "repo_url": "https://github.com/gitbreaker222/svelte-virtual-list",
-  "authors": [
-    "breaker222"
-  ],
-  "homepage": "https://github.com/gitbreaker222/svelte-virtual-list#readme",
-  "downloads": 69,
-  "dependents": 0,
-  "updated": "2022-01-23T17:21:01.681Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 21
+	"name": "svelte-virtual-list-ce",
+	"description": "Render virtual lists efficiently in Svelte applications.",
+	"repo_url": "https://github.com/gitbreaker222/svelte-virtual-list",
+	"authors": ["breaker222"],
+	"homepage": "https://github.com/gitbreaker222/svelte-virtual-list#readme",
+	"downloads": 69,
+	"dependents": 0,
+	"updated": "2022-01-23T17:21:01.681Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 21,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

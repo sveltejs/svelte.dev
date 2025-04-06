@@ -1,18 +1,19 @@
 {
-  "name": "svelte-d3-cloud",
-  "description": "Generate word clouds using d3-cloud in Svelte.",
-  "repo_url": "https://github.com/maziyank/svelte-d3-cloud",
-  "authors": [
-    "maziyank"
-  ],
-  "homepage": "https://github.com/maziyank/svelte-d3-cloud#readme",
-  "downloads": 45,
-  "dependents": 0,
-  "updated": "2021-07-16T22:43:00.144Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "svelte-d3-cloud",
+	"description": "Generate word clouds using d3-cloud in Svelte.",
+	"repo_url": "https://github.com/maziyank/svelte-d3-cloud",
+	"authors": ["maziyank"],
+	"homepage": "https://github.com/maziyank/svelte-d3-cloud#readme",
+	"downloads": 45,
+	"dependents": 0,
+	"updated": "2021-07-16T22:43:00.144Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

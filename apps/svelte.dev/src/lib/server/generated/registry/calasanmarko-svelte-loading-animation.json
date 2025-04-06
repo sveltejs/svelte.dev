@@ -1,16 +1,17 @@
 {
-  "name": "@calasanmarko/svelte-loading-animation",
-  "description": "Offers a collection of loading animation components for Svelte.",
-  "repo_url": "",
-  "authors": [
-    "calasanmarko"
-  ],
-  "downloads": 0,
-  "dependents": 0,
-  "updated": "2024-05-13T18:05:52.073Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@calasanmarko/svelte-loading-animation",
+	"description": "Offers a collection of loading animation components for Svelte.",
+	"repo_url": "",
+	"authors": ["calasanmarko"],
+	"downloads": 0,
+	"dependents": 0,
+	"updated": "2024-05-13T18:05:52.073Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

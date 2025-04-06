@@ -1,18 +1,19 @@
 {
-  "name": "@apsc/tabs",
-  "description": "Provides a component set for organizing Tabs interface.",
-  "repo_url": "https://github.com/andrey-pavlenko/svelte-components",
-  "authors": [
-    "andrey-pavlenko"
-  ],
-  "homepage": "https://github.com/andrey-pavlenko/svelte-components/tree/main/packages/tabs#readme",
-  "downloads": 1,
-  "dependents": 0,
-  "updated": "2023-02-01T20:17:15.649Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 3
+	"name": "@apsc/tabs",
+	"description": "Provides a component set for organizing Tabs interface.",
+	"repo_url": "https://github.com/andrey-pavlenko/svelte-components",
+	"authors": ["andrey-pavlenko"],
+	"homepage": "https://github.com/andrey-pavlenko/svelte-components/tree/main/packages/tabs#readme",
+	"downloads": 1,
+	"dependents": 0,
+	"updated": "2023-02-01T20:17:15.649Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 3,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

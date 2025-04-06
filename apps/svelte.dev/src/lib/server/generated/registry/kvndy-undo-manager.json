@@ -1,17 +1,18 @@
 {
-  "name": "@kvndy/undo-manager",
-  "description": "Manage undo/redo functionality for Svelte stores.",
-  "repo_url": "https://gitlab.com/kevindoughty/undo-manager",
-  "authors": [
-    "kvndy"
-  ],
-  "homepage": "https://gitlab.com/kevindoughty/undo-manager#readme",
-  "downloads": 0,
-  "dependents": 0,
-  "updated": "2025-01-10T21:12:18.933Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "@kvndy/undo-manager",
+	"description": "Manage undo/redo functionality for Svelte stores.",
+	"repo_url": "https://gitlab.com/kevindoughty/undo-manager",
+	"authors": ["kvndy"],
+	"homepage": "https://gitlab.com/kevindoughty/undo-manager#readme",
+	"downloads": 0,
+	"dependents": 0,
+	"updated": "2025-01-10T21:12:18.933Z",
+	"tags": ["miscellaneous"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

@@ -1,16 +1,17 @@
 {
-  "name": "argil-svelte",
-  "description": "Offer Svelte UI components kit from argil data agency.",
-  "repo_url": "",
-  "authors": [
-    "delwwwinc"
-  ],
-  "downloads": 10,
-  "dependents": 0,
-  "updated": "2024-09-26T12:22:38.610Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "argil-svelte",
+	"description": "Offer Svelte UI components kit from argil data agency.",
+	"repo_url": "",
+	"authors": ["delwwwinc"],
+	"downloads": 10,
+	"dependents": 0,
+	"updated": "2024-09-26T12:22:38.610Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

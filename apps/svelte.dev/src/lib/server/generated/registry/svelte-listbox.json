@@ -1,16 +1,17 @@
 {
-  "name": "svelte-listbox",
-  "description": "Implement listbox component for Svelte.",
-  "repo_url": "",
-  "authors": [
-    "danipo"
-  ],
-  "downloads": 15,
-  "dependents": 0,
-  "updated": "2020-06-04T13:53:44.303Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-listbox",
+	"description": "Implement listbox component for Svelte.",
+	"repo_url": "",
+	"authors": ["danipo"],
+	"downloads": 15,
+	"dependents": 0,
+	"updated": "2020-06-04T13:53:44.303Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

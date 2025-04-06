@@ -1,18 +1,19 @@
 {
-  "name": "sveltestrap-paginate",
-  "description": "Paginate data in Svelte applications with sveltestrap.",
-  "repo_url": "https://github.com/hazg/sveltestrap-paginate",
-  "authors": [
-    "hazg"
-  ],
-  "homepage": "https://github.com/hazg/sveltestrap-paginate#readme",
-  "downloads": 21,
-  "dependents": 0,
-  "updated": "2021-06-22T09:08:59.327Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "sveltestrap-paginate",
+	"description": "Paginate data in Svelte applications with sveltestrap.",
+	"repo_url": "https://github.com/hazg/sveltestrap-paginate",
+	"authors": ["hazg"],
+	"homepage": "https://github.com/hazg/sveltestrap-paginate#readme",
+	"downloads": 21,
+	"dependents": 0,
+	"updated": "2021-06-22T09:08:59.327Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

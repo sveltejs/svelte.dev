@@ -1,18 +1,19 @@
 {
-  "name": "svelte-audio",
-  "description": "Create audio player component for Svelte.",
-  "repo_url": "https://github.com/JacobLinCool/svelte-audio",
-  "authors": [
-    "jacoblincool"
-  ],
-  "homepage": "https://jacoblincool.github.io/svelte-audio/",
-  "downloads": 2,
-  "dependents": 0,
-  "updated": "2024-04-04T15:44:10.337Z",
-  "tags": [
-    "media"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "svelte-audio",
+	"description": "Create audio player component for Svelte.",
+	"repo_url": "https://github.com/JacobLinCool/svelte-audio",
+	"authors": ["jacoblincool"],
+	"homepage": "https://jacoblincool.github.io/svelte-audio/",
+	"downloads": 2,
+	"dependents": 0,
+	"updated": "2024-04-04T15:44:10.337Z",
+	"tags": ["media"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

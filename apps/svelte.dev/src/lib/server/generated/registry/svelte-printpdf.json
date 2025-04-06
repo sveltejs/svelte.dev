@@ -1,18 +1,19 @@
 {
-  "name": "svelte-printpdf",
-  "description": "Support PDF printing with color, flexbox, and grid.",
-  "repo_url": "https://github.com/binsarjr/svelte-printpdf",
-  "authors": [
-    "binsarjr"
-  ],
-  "homepage": "https://github.com/binsarjr/svelte-printpdf#readme",
-  "downloads": 219,
-  "dependents": 0,
-  "updated": "2022-11-09T02:54:27.317Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 9
+	"name": "svelte-printpdf",
+	"description": "Support PDF printing with color, flexbox, and grid.",
+	"repo_url": "https://github.com/binsarjr/svelte-printpdf",
+	"authors": ["binsarjr"],
+	"homepage": "https://github.com/binsarjr/svelte-printpdf#readme",
+	"downloads": 219,
+	"dependents": 0,
+	"updated": "2022-11-09T02:54:27.317Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 9,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

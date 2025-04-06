@@ -1,19 +1,19 @@
 {
-  "name": "tanoshi",
-  "description": "Build UI components with configurable TypeScript objects for SvelteKit.",
-  "repo_url": "https://github.com/deozza/tanoshi",
-  "authors": [
-    "deozza"
-  ],
-  "homepage": "https://github.com/deozza/tanoshi#readme",
-  "downloads": 127,
-  "dependents": 0,
-  "updated": "2023-11-20T11:46:47.305Z",
-  "tags": [
-    "design-system",
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "tanoshi",
+	"description": "Build UI components with configurable TypeScript objects for SvelteKit.",
+	"repo_url": "https://github.com/deozza/tanoshi",
+	"authors": ["deozza"],
+	"homepage": "https://github.com/deozza/tanoshi#readme",
+	"downloads": 127,
+	"dependents": 0,
+	"updated": "2023-11-20T11:46:47.305Z",
+	"tags": ["design-system", "ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

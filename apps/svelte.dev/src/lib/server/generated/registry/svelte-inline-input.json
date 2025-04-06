@@ -1,18 +1,19 @@
 {
-  "name": "svelte-inline-input",
-  "description": "Create inline editable input components for Svelte.",
-  "repo_url": "https://github.com/ukchukx/svelte-inline-input",
-  "authors": [
-    "ukchukx"
-  ],
-  "homepage": "https://github.com/ukchukx/svelte-inline-input#readme",
-  "downloads": 10,
-  "dependents": 0,
-  "updated": "2020-08-27T11:11:09.890Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 24
+	"name": "svelte-inline-input",
+	"description": "Create inline editable input components for Svelte.",
+	"repo_url": "https://github.com/ukchukx/svelte-inline-input",
+	"authors": ["ukchukx"],
+	"homepage": "https://github.com/ukchukx/svelte-inline-input#readme",
+	"downloads": 10,
+	"dependents": 0,
+	"updated": "2020-08-27T11:11:09.890Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 24,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

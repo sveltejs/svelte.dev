@@ -1,18 +1,19 @@
 {
-  "name": "fluentui-icons-svelte",
-  "description": "Provides FluentUI icons as Svelte 5 components.",
-  "repo_url": "https://github.com/JLAcostaEC/fluentui-icons-svelte",
-  "authors": [
-    "jlacostaec"
-  ],
-  "homepage": "https://github.com/JLAcostaEC/fluentui-icons-svelte#readme",
-  "downloads": 2,
-  "dependents": 0,
-  "updated": "2025-02-20T21:39:41.714Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 4
+	"name": "fluentui-icons-svelte",
+	"description": "Provides FluentUI icons as Svelte 5 components.",
+	"repo_url": "https://github.com/JLAcostaEC/fluentui-icons-svelte",
+	"authors": ["jlacostaec"],
+	"homepage": "https://github.com/JLAcostaEC/fluentui-icons-svelte#readme",
+	"downloads": 2,
+	"dependents": 0,
+	"updated": "2025-02-20T21:39:41.714Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 4,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

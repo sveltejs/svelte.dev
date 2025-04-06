@@ -1,18 +1,19 @@
 {
-  "name": "@sveltevk/icons",
-  "description": "Use SVG icons as Svelte components.",
-  "repo_url": "https://github.com/sveltevk/icons",
-  "authors": [
-    "severecloud"
-  ],
-  "homepage": "https://sveltevk.github.io/icons/",
-  "downloads": 255,
-  "dependents": 1,
-  "updated": "2022-05-02T17:54:03.031Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 4
+	"name": "@sveltevk/icons",
+	"description": "Use SVG icons as Svelte components.",
+	"repo_url": "https://github.com/sveltevk/icons",
+	"authors": ["severecloud"],
+	"homepage": "https://sveltevk.github.io/icons/",
+	"downloads": 255,
+	"dependents": 1,
+	"updated": "2022-05-02T17:54:03.031Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 4,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

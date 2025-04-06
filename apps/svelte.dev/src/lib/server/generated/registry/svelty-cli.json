@@ -1,18 +1,19 @@
 {
-  "name": "@svelty/cli",
-  "description": "CLI tool for creating Svelte component libraries.",
-  "repo_url": "https://github.com/mochen0505/svelty-cli",
-  "authors": [
-    "chen.mo"
-  ],
-  "homepage": "https://github.com/mochen0505/svelty-cli",
-  "downloads": 9,
-  "dependents": 0,
-  "updated": "2024-02-25T07:36:32.155Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@svelty/cli",
+	"description": "CLI tool for creating Svelte component libraries.",
+	"repo_url": "https://github.com/mochen0505/svelty-cli",
+	"authors": ["chen.mo"],
+	"homepage": "https://github.com/mochen0505/svelty-cli",
+	"downloads": 9,
+	"dependents": 0,
+	"updated": "2024-02-25T07:36:32.155Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

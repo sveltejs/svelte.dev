@@ -1,19 +1,19 @@
 {
-  "name": "@rgottleber/svelte-wallet",
-  "description": "Connect Web3 wallets in Svelte applications.",
-  "repo_url": "https://github.com/rgottleber/svelte-wallet",
-  "authors": [
-    "rgottleber"
-  ],
-  "homepage": "https://github.com/rgottleber/svelte-wallet#readme",
-  "downloads": 2,
-  "dependents": 0,
-  "updated": "2022-07-29T14:28:26.287Z",
-  "tags": [
-    "auth",
-    "integration"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@rgottleber/svelte-wallet",
+	"description": "Connect Web3 wallets in Svelte applications.",
+	"repo_url": "https://github.com/rgottleber/svelte-wallet",
+	"authors": ["rgottleber"],
+	"homepage": "https://github.com/rgottleber/svelte-wallet#readme",
+	"downloads": 2,
+	"dependents": 0,
+	"updated": "2022-07-29T14:28:26.287Z",
+	"tags": ["auth", "integration"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "sveltyper",
-  "description": "Generate type definition files for Svelte components.",
-  "repo_url": "https://github.com/TheComputerM/sveltyper",
-  "authors": [
-    "thecomputerm"
-  ],
-  "homepage": "https://github.com/TheComputerM/sveltyper#readme",
-  "downloads": 7,
-  "dependents": 0,
-  "updated": "2021-05-26T09:42:26.591Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 5
+	"name": "sveltyper",
+	"description": "Generate type definition files for Svelte components.",
+	"repo_url": "https://github.com/TheComputerM/sveltyper",
+	"authors": ["thecomputerm"],
+	"homepage": "https://github.com/TheComputerM/sveltyper#readme",
+	"downloads": 7,
+	"dependents": 0,
+	"updated": "2021-05-26T09:42:26.591Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 5,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

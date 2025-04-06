@@ -1,18 +1,19 @@
 {
-  "name": "svelte-steps",
-  "description": "Create customizable step components in Svelte.",
-  "repo_url": "https://github.com/shaozi/svelte-steps",
-  "authors": [
-    "shaozi"
-  ],
-  "homepage": "https://svelte-steps.web.app",
-  "downloads": 3046,
-  "dependents": 0,
-  "updated": "2022-12-21T15:49:56.086Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 106
+	"name": "svelte-steps",
+	"description": "Create customizable step components in Svelte.",
+	"repo_url": "https://github.com/shaozi/svelte-steps",
+	"authors": ["shaozi"],
+	"homepage": "https://svelte-steps.web.app",
+	"downloads": 3046,
+	"dependents": 0,
+	"updated": "2022-12-21T15:49:56.086Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 106,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "svelte-yup",
-  "description": "Validate forms in Svelte using Yup schema.",
-  "repo_url": "https://github.com/KamyarLajani/svelte-yup",
-  "authors": [
-    "kamyar_lajani"
-  ],
-  "homepage": "https://github.com/KamyarLajani/svelte-yup#readme",
-  "downloads": 123,
-  "dependents": 1,
-  "updated": "2020-12-06T00:50:33.446Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 34
+	"name": "svelte-yup",
+	"description": "Validate forms in Svelte using Yup schema.",
+	"repo_url": "https://github.com/KamyarLajani/svelte-yup",
+	"authors": ["kamyar_lajani"],
+	"homepage": "https://github.com/KamyarLajani/svelte-yup#readme",
+	"downloads": 123,
+	"dependents": 1,
+	"updated": "2020-12-06T00:50:33.446Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 34,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

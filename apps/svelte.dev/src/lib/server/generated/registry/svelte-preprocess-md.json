@@ -1,19 +1,19 @@
 {
-  "name": "svelte-preprocess-md",
-  "description": "Preprocess Svelte components from Markdown files.",
-  "repo_url": "https://github.com/timhall/svelte-preprocess-md",
-  "authors": [
-    "timhall"
-  ],
-  "homepage": "https://github.com/timhall/svelte-preprocess-md#readme",
-  "downloads": 7,
-  "dependents": 0,
-  "updated": "2019-01-06T17:10:41.555Z",
-  "tags": [
-    "tooling",
-    "content"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 7
+	"name": "svelte-preprocess-md",
+	"description": "Preprocess Svelte components from Markdown files.",
+	"repo_url": "https://github.com/timhall/svelte-preprocess-md",
+	"authors": ["timhall"],
+	"homepage": "https://github.com/timhall/svelte-preprocess-md#readme",
+	"downloads": 7,
+	"dependents": 0,
+	"updated": "2019-01-06T17:10:41.555Z",
+	"tags": ["tooling", "content"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 7,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

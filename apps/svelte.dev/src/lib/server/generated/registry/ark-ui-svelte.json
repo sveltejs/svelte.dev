@@ -1,19 +1,19 @@
 {
-  "name": "@ark-ui/svelte",
-  "description": "Provide unstyled, accessible UI components for Svelte.",
-  "repo_url": "https://github.com/chakra-ui/ark",
-  "authors": [
-    "segunadebayo",
-    "schroetier"
-  ],
-  "homepage": "https://ark-ui.com",
-  "downloads": 3,
-  "dependents": 0,
-  "updated": "2025-01-08T14:15:51.964Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 4201
+	"name": "@ark-ui/svelte",
+	"description": "Provide unstyled, accessible UI components for Svelte.",
+	"repo_url": "https://github.com/chakra-ui/ark",
+	"authors": ["segunadebayo", "schroetier"],
+	"homepage": "https://ark-ui.com",
+	"downloads": 3,
+	"dependents": 0,
+	"updated": "2025-01-08T14:15:51.964Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 4202,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

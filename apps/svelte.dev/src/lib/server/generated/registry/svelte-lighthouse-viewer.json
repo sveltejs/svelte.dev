@@ -1,16 +1,17 @@
 {
-  "name": "svelte-lighthouse-viewer",
-  "description": "View Lighthouse reports within Svelte applications.",
-  "authors": [
-    "dvelasquez"
-  ],
-  "homepage": "https://dvelasquez.github.io/lighthouse-viewer/packages/svelte-lighthouse-viewer/demo/index.html",
-  "downloads": 581,
-  "dependents": 0,
-  "updated": "2025-03-24T06:51:40.541Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "svelte-lighthouse-viewer",
+	"description": "View Lighthouse reports within Svelte applications.",
+	"authors": ["dvelasquez"],
+	"homepage": "https://dvelasquez.github.io/lighthouse-viewer/packages/svelte-lighthouse-viewer/demo/index.html",
+	"downloads": 581,
+	"dependents": 0,
+	"updated": "2025-03-24T06:51:40.541Z",
+	"tags": ["tooling"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

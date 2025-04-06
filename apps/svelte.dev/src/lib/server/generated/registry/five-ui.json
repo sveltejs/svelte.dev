@@ -1,19 +1,19 @@
 {
-  "name": "five-ui",
-  "description": "Create UI toolkit built with Svelte and Tailwind CSS.",
-  "repo_url": "https://github.com/wqy2dev/five-ui",
-  "authors": [
-    "wqy2dev"
-  ],
-  "homepage": "https://github.com/wqy2dev/five-ui#readme",
-  "downloads": 71,
-  "dependents": 0,
-  "updated": "2025-03-12T14:35:24.957Z",
-  "tags": [
-    "ui",
-    "design-system"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 2
+	"name": "five-ui",
+	"description": "Create UI toolkit built with Svelte and Tailwind CSS.",
+	"repo_url": "https://github.com/wqy2dev/five-ui",
+	"authors": ["wqy2dev"],
+	"homepage": "https://github.com/wqy2dev/five-ui#readme",
+	"downloads": 71,
+	"dependents": 0,
+	"updated": "2025-03-12T14:35:24.957Z",
+	"tags": ["ui", "design-system"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "@untemps/svelte-use-drop-outside",
-  "description": "Provides a Svelte action to drop elements outside an area.",
-  "repo_url": "https://github.com/untemps/svelte-use-drop-outside",
-  "authors": [
-    "untemps"
-  ],
-  "homepage": "https://github.com/untemps/svelte-use-drop-outside#readme",
-  "downloads": 274,
-  "dependents": 2,
-  "updated": "2022-09-12T18:38:52.366Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 12
+	"name": "@untemps/svelte-use-drop-outside",
+	"description": "Provides a Svelte action to drop elements outside an area.",
+	"repo_url": "https://github.com/untemps/svelte-use-drop-outside",
+	"authors": ["untemps"],
+	"homepage": "https://github.com/untemps/svelte-use-drop-outside#readme",
+	"downloads": 274,
+	"dependents": 2,
+	"updated": "2022-09-12T18:38:52.366Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 12,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

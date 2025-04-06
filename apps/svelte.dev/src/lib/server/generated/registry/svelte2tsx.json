@@ -1,21 +1,19 @@
 {
-  "name": "svelte2tsx",
-  "description": "Convert Svelte components to TSX for type checking.",
-  "repo_url": "https://github.com/sveltejs/language-tools",
-  "authors": [
-    "orta",
-    "svelte-language-tools-deploy",
-    "dummdidumm",
-    "halfnelson"
-  ],
-  "homepage": "https://github.com/sveltejs/language-tools/tree/master/packages/svelte2tsx",
-  "downloads": 224270,
-  "dependents": 411,
-  "updated": "2025-03-06T14:09:16.473Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 1294
+	"name": "svelte2tsx",
+	"description": "Convert Svelte components to TSX for type checking.",
+	"repo_url": "https://github.com/sveltejs/language-tools",
+	"authors": ["orta", "svelte-language-tools-deploy", "dummdidumm", "halfnelson"],
+	"homepage": "https://github.com/sveltejs/language-tools/tree/master/packages/svelte2tsx",
+	"downloads": 224270,
+	"dependents": 411,
+	"updated": "2025-03-06T14:09:16.473Z",
+	"tags": ["tooling"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 1296,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

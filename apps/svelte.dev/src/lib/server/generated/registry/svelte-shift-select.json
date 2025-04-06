@@ -1,18 +1,18 @@
 {
-  "name": "svelte-shift-select",
-  "description": "Adds shift-click multi-select functionality to Svelte checkboxes.",
-  "repo_url": "https://github.com/anotherempty/svelte-shift-select",
-  "authors": [
-    "anotherempty"
-  ],
-  "homepage": "https://anotherempty.github.io/svelte-shift-select/",
-  "downloads": 30,
-  "dependents": 0,
-  "updated": "2022-05-29T19:45:46.609Z",
-  "tags": [
-    "ui",
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-shift-select",
+	"description": "Adds shift-click multi-select functionality to Svelte checkboxes.",
+	"repo_url": "https://github.com/anotherempty/svelte-shift-select",
+	"authors": ["anotherempty"],
+	"homepage": "https://anotherempty.github.io/svelte-shift-select/",
+	"downloads": 30,
+	"dependents": 0,
+	"updated": "2022-05-29T19:45:46.609Z",
+	"tags": ["ui", "miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

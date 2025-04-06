@@ -1,18 +1,18 @@
 {
-  "name": "@astralsoft/svelte-kit-jwt-session",
-  "description": "Handle JWT sessions in SvelteKit applications.",
-  "repo_url": "https://github.com/astralyazilim/svelte_kit_jwt_session",
-  "authors": [
-    "pisinsi"
-  ],
-  "homepage": "https://github.com/astralyazilim/svelte_kit_jwt_session#readme",
-  "downloads": 5,
-  "dependents": 0,
-  "updated": "2022-11-18T16:13:20.258Z",
-  "tags": [
-    "auth",
-    "server"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@astralsoft/svelte-kit-jwt-session",
+	"description": "Handle JWT sessions in SvelteKit applications.",
+	"repo_url": "https://github.com/astralyazilim/svelte_kit_jwt_session",
+	"authors": ["pisinsi"],
+	"homepage": "https://github.com/astralyazilim/svelte_kit_jwt_session#readme",
+	"downloads": 5,
+	"dependents": 0,
+	"updated": "2022-11-18T16:13:20.258Z",
+	"tags": ["auth", "server"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

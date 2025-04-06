@@ -1,18 +1,19 @@
 {
-  "name": "svelte-style-directive",
-  "description": "Adds style directive support to Svelte components.",
-  "repo_url": "https://github.com/sidx1024/svelte-style-directive",
-  "authors": [
-    "sidx1024"
-  ],
-  "homepage": "https://github.com/sidx1024/svelte-style-directive#readme",
-  "downloads": 12,
-  "dependents": 0,
-  "updated": "2020-11-29T14:47:58.873Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 17
+	"name": "svelte-style-directive",
+	"description": "Adds style directive support to Svelte components.",
+	"repo_url": "https://github.com/sidx1024/svelte-style-directive",
+	"authors": ["sidx1024"],
+	"homepage": "https://github.com/sidx1024/svelte-style-directive#readme",
+	"downloads": 12,
+	"dependents": 0,
+	"updated": "2020-11-29T14:47:58.873Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 17,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

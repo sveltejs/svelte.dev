@@ -1,18 +1,19 @@
 {
-  "name": "svelte-show-action",
-  "description": "Show/hide elements in Svelte, similar to Vue's v-show.",
-  "repo_url": "https://github.com/ramonmalcolm10/svelte-show-action",
-  "authors": [
-    "ramon10"
-  ],
-  "homepage": "https://github.com/ramonmalcolm10/svelte-show-action#readme",
-  "downloads": 0,
-  "dependents": 0,
-  "updated": "2023-05-30T11:22:46.433Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "svelte-show-action",
+	"description": "Show/hide elements in Svelte, similar to Vue's v-show.",
+	"repo_url": "https://github.com/ramonmalcolm10/svelte-show-action",
+	"authors": ["ramon10"],
+	"homepage": "https://github.com/ramonmalcolm10/svelte-show-action#readme",
+	"downloads": 0,
+	"dependents": 0,
+	"updated": "2023-05-30T11:22:46.433Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

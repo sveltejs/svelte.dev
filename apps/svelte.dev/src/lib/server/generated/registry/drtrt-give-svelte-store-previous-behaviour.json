@@ -1,18 +1,19 @@
 {
-  "name": "@drtrt/give-svelte-store-previous-behaviour",
-  "description": "Give Svelte stores access to previous values.",
-  "repo_url": "https://github.com/drtrt-org/give-svelte-store-previous-behaviour",
-  "authors": [
-    "drtrt-admin"
-  ],
-  "homepage": "https://github.com/drtrt-org/give-svelte-store-previous-behaviour#readme",
-  "downloads": 0,
-  "dependents": 0,
-  "updated": "2024-09-16T09:36:54.285Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@drtrt/give-svelte-store-previous-behaviour",
+	"description": "Give Svelte stores access to previous values.",
+	"repo_url": "https://github.com/drtrt-org/give-svelte-store-previous-behaviour",
+	"authors": ["drtrt-admin"],
+	"homepage": "https://github.com/drtrt-org/give-svelte-store-previous-behaviour#readme",
+	"downloads": 0,
+	"dependents": 0,
+	"updated": "2024-09-16T09:36:54.285Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": false
+	}
 }

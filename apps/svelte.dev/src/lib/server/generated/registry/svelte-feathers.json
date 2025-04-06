@@ -1,18 +1,19 @@
 {
-  "name": "svelte-feathers",
-  "description": "Feathericon components for Svelte applications.",
-  "repo_url": "https://github.com/shinokada/svelte-feathers",
-  "authors": [
-    "shinichiokada"
-  ],
-  "homepage": "https://svelte-feathers.codewithshin.com",
-  "downloads": 61,
-  "dependents": 0,
-  "updated": "2024-06-09T03:43:03.719Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 4
+	"name": "svelte-feathers",
+	"description": "Feathericon components for Svelte applications.",
+	"repo_url": "https://github.com/shinokada/svelte-feathers",
+	"authors": ["shinichiokada"],
+	"homepage": "https://svelte-feathers.codewithshin.com",
+	"downloads": 61,
+	"dependents": 0,
+	"updated": "2024-06-09T03:43:03.719Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 4,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

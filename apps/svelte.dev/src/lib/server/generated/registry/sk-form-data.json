@@ -1,16 +1,17 @@
 {
-  "name": "sk-form-data",
-  "description": "Parse form data automatically in SvelteKit form actions.",
-  "repo_url": "",
-  "authors": [
-    "stolinski"
-  ],
-  "downloads": 19,
-  "dependents": 0,
-  "updated": "2024-07-03T04:11:00.448Z",
-  "tags": [
-    "server"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "sk-form-data",
+	"description": "Parse form data automatically in SvelteKit form actions.",
+	"repo_url": "",
+	"authors": ["stolinski"],
+	"downloads": 19,
+	"dependents": 0,
+	"updated": "2024-07-03T04:11:00.448Z",
+	"tags": ["server"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	}
 }

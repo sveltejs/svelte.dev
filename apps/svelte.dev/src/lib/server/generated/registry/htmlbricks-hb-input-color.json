@@ -1,16 +1,17 @@
 {
-  "name": "@htmlbricks/hb-input-color",
-  "description": "Create color input web component for Svelte applications.",
-  "repo_url": "",
-  "authors": [
-    "dariocaruso"
-  ],
-  "downloads": 412,
-  "dependents": 3,
-  "updated": "2025-03-24T18:07:14.897Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@htmlbricks/hb-input-color",
+	"description": "Create color input web component for Svelte applications.",
+	"repo_url": "",
+	"authors": ["dariocaruso"],
+	"downloads": 412,
+	"dependents": 3,
+	"updated": "2025-03-24T18:07:14.897Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	}
 }

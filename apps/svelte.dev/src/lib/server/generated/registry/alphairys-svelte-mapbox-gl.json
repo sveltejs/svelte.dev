@@ -1,17 +1,17 @@
 {
-  "name": "@alphairys/svelte-mapbox-gl",
-  "description": "Create Svelte components for Mapbox GL JS.",
-  "repo_url": "",
-  "authors": [
-    "alphairys"
-  ],
-  "downloads": 2,
-  "dependents": 0,
-  "updated": "2024-02-28T19:02:57.141Z",
-  "tags": [
-    "ui",
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@alphairys/svelte-mapbox-gl",
+	"description": "Create Svelte components for Mapbox GL JS.",
+	"repo_url": "",
+	"authors": ["alphairys"],
+	"downloads": 2,
+	"dependents": 0,
+	"updated": "2024-02-28T19:02:57.141Z",
+	"tags": ["ui", "miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

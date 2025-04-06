@@ -1,16 +1,17 @@
 {
-  "name": "@simplero/svelte-font-select",
-  "description": "Provide font selection component for Svelte applications.",
-  "repo_url": "",
-  "authors": [
-    "owaissimplero"
-  ],
-  "downloads": 78,
-  "dependents": 0,
-  "updated": "2024-10-03T08:51:46.788Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@simplero/svelte-font-select",
+	"description": "Provide font selection component for Svelte applications.",
+	"repo_url": "",
+	"authors": ["owaissimplero"],
+	"downloads": 78,
+	"dependents": 0,
+	"updated": "2024-10-03T08:51:46.788Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

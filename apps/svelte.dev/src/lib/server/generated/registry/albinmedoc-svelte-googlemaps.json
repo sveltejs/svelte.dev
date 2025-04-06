@@ -1,18 +1,19 @@
 {
-  "name": "@albinmedoc/svelte-googlemaps",
-  "description": "Implement Google Maps and places autocomplete in Svelte.",
-  "repo_url": "https://github.com/albinmedoc/svelte-googlemaps",
-  "authors": [
-    "albinmedoc"
-  ],
-  "homepage": "https://github.com/albinmedoc/svelte-googlemaps#readme",
-  "downloads": 110,
-  "dependents": 0,
-  "updated": "2020-12-01T18:45:18.135Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@albinmedoc/svelte-googlemaps",
+	"description": "Implement Google Maps and places autocomplete in Svelte.",
+	"repo_url": "https://github.com/albinmedoc/svelte-googlemaps",
+	"authors": ["albinmedoc"],
+	"homepage": "https://github.com/albinmedoc/svelte-googlemaps#readme",
+	"downloads": 110,
+	"dependents": 0,
+	"updated": "2020-12-01T18:45:18.135Z",
+	"tags": ["integration"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

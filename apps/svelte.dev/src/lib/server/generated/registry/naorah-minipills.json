@@ -1,18 +1,19 @@
 {
-  "name": "@naorah/minipills",
-  "description": "Generate customizable pill-style UI elements in Svelte.",
-  "repo_url": "https://github.com/Naorah/npm-svelte-minipills",
-  "authors": [
-    "naorah"
-  ],
-  "homepage": "https://minipills.pelsy.net",
-  "downloads": 4,
-  "dependents": 0,
-  "updated": "2024-08-04T19:45:21.299Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@naorah/minipills",
+	"description": "Generate customizable pill-style UI elements in Svelte.",
+	"repo_url": "https://github.com/Naorah/npm-svelte-minipills",
+	"authors": ["naorah"],
+	"homepage": "https://minipills.pelsy.net",
+	"downloads": 4,
+	"dependents": 0,
+	"updated": "2024-08-04T19:45:21.299Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

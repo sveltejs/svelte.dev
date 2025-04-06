@@ -1,18 +1,19 @@
 {
-  "name": "svelte-styling",
-  "description": "Apply CSS variables and styles within Svelte components.",
-  "repo_url": "https://github.com/LeoDog896/svelte-styling",
-  "authors": [
-    "leodog896"
-  ],
-  "homepage": "https://leodog896.github.io/svelte-styling",
-  "downloads": 2,
-  "dependents": 0,
-  "updated": "2022-10-17T13:00:40.238Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "svelte-styling",
+	"description": "Apply CSS variables and styles within Svelte components.",
+	"repo_url": "https://github.com/LeoDog896/svelte-styling",
+	"authors": ["leodog896"],
+	"homepage": "https://leodog896.github.io/svelte-styling",
+	"downloads": 2,
+	"dependents": 0,
+	"updated": "2022-10-17T13:00:40.238Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

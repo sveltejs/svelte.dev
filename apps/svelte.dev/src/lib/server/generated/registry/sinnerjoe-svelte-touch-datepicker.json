@@ -1,18 +1,19 @@
 {
-  "name": "@sinnerjoe/svelte-touch-datepicker",
-  "description": "Implement native-like touch datepicker for Svelte.",
-  "repo_url": "https://github.com/sinnerJoe/svelte-touch-datepicker",
-  "authors": [
-    "sinnerjoe"
-  ],
-  "homepage": "https://github.com/sinnerJoe/svelte-touch-datepicker",
-  "downloads": 24,
-  "dependents": 0,
-  "updated": "2021-05-15T12:45:52.595Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "@sinnerjoe/svelte-touch-datepicker",
+	"description": "Implement native-like touch datepicker for Svelte.",
+	"repo_url": "https://github.com/sinnerJoe/svelte-touch-datepicker",
+	"authors": ["sinnerjoe"],
+	"homepage": "https://github.com/sinnerJoe/svelte-touch-datepicker",
+	"downloads": 24,
+	"dependents": 0,
+	"updated": "2021-05-15T12:45:52.595Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

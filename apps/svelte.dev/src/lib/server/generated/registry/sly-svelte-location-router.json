@@ -1,18 +1,19 @@
 {
-  "name": "sly-svelte-location-router",
-  "description": "Creates a lightweight router for Svelte applications.",
-  "repo_url": "https://github.com/SlyOtis/svelte-router",
-  "authors": [
-    "slyotis"
-  ],
-  "homepage": "https://github.com/SlyOtis/svelte-router",
-  "downloads": 8,
-  "dependents": 0,
-  "updated": "2024-10-10T11:43:43.753Z",
-  "tags": [
-    "router"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "sly-svelte-location-router",
+	"description": "Creates a lightweight router for Svelte applications.",
+	"repo_url": "https://github.com/SlyOtis/svelte-router",
+	"authors": ["slyotis"],
+	"homepage": "https://github.com/SlyOtis/svelte-router",
+	"downloads": 8,
+	"dependents": 0,
+	"updated": "2024-10-10T11:43:43.753Z",
+	"tags": ["router"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

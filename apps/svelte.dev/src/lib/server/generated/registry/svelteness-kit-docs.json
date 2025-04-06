@@ -1,18 +1,19 @@
 {
-  "name": "@svelteness/kit-docs",
-  "description": "Integrate documentation for SvelteKit.",
-  "repo_url": "https://github.com/svelteness/kit-docs",
-  "authors": [
-    "mihar-22"
-  ],
-  "downloads": 110,
-  "dependents": 0,
-  "updated": "2023-09-16T01:27:25.411Z",
-  "tags": [
-    "tooling",
-    "content"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 493
+	"name": "@svelteness/kit-docs",
+	"description": "Integrate documentation for SvelteKit.",
+	"repo_url": "https://github.com/svelteness/kit-docs",
+	"authors": ["mihar-22"],
+	"downloads": 110,
+	"dependents": 0,
+	"updated": "2023-09-16T01:27:25.411Z",
+	"tags": ["tooling", "content"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 493,
+	"homepage": "https://kitdocs.vercel.app",
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

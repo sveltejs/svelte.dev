@@ -1,18 +1,19 @@
 {
-  "name": "@salonhub/svelte-spa-router",
-  "description": "Provides hash-based routing for Single Page Applications in Svelte.",
-  "repo_url": "https://github.com/Salonhub/svelte-spa-router",
-  "authors": [
-    "nielsleenheer"
-  ],
-  "homepage": "https://github.com/ItalyPaleAle/svelte-spa-router#readme",
-  "downloads": 5,
-  "dependents": 0,
-  "updated": "2024-12-02T19:31:49.235Z",
-  "tags": [
-    "router"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 0
+	"name": "@salonhub/svelte-spa-router",
+	"description": "Provides hash-based routing for Single Page Applications in Svelte.",
+	"repo_url": "https://github.com/Salonhub/svelte-spa-router",
+	"authors": ["nielsleenheer"],
+	"homepage": "https://github.com/ItalyPaleAle/svelte-spa-router#readme",
+	"downloads": 5,
+	"dependents": 0,
+	"updated": "2024-12-02T19:31:49.235Z",
+	"tags": ["router"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

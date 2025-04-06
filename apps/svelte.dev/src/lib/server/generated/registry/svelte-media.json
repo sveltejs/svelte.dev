@@ -1,18 +1,19 @@
 {
-  "name": "svelte-media",
-  "description": "Observe media queries as reactive store for Svelte apps.",
-  "repo_url": "https://github.com/cibernox/svelte-media",
-  "authors": [
-    "cibernox"
-  ],
-  "homepage": "https://github.com/cibernox/svelte-media#readme",
-  "downloads": 576,
-  "dependents": 7,
-  "updated": "2021-08-23T13:16:32.816Z",
-  "tags": [
-    "media"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 59
+	"name": "svelte-media",
+	"description": "Observe media queries as reactive store for Svelte apps.",
+	"repo_url": "https://github.com/cibernox/svelte-media",
+	"authors": ["cibernox"],
+	"homepage": "https://github.com/cibernox/svelte-media#readme",
+	"downloads": 576,
+	"dependents": 7,
+	"updated": "2021-08-23T13:16:32.816Z",
+	"tags": ["media"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 59,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

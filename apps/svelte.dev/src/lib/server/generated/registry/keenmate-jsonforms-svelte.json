@@ -1,18 +1,17 @@
 {
-  "name": "@keenmate/jsonforms-svelte",
-  "description": "Build Svelte forms from JSON schema.",
-  "repo_url": "",
-  "authors": [
-    "benjaminhorne",
-    "themaikxx",
-    "ondrejvalenta"
-  ],
-  "downloads": 91,
-  "dependents": 1,
-  "updated": "2025-03-21T01:03:52.447Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "@keenmate/jsonforms-svelte",
+	"description": "Build Svelte forms from JSON schema.",
+	"repo_url": "",
+	"authors": ["benjaminhorne", "themaikxx", "ondrejvalenta"],
+	"downloads": 91,
+	"dependents": 1,
+	"updated": "2025-03-21T01:03:52.447Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

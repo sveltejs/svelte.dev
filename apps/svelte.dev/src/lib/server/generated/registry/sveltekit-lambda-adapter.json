@@ -1,18 +1,19 @@
 {
-  "name": "sveltekit-lambda-adapter",
-  "description": "Adapt SvelteKit apps for AWS Lambda deployment.",
-  "repo_url": "https://github.com/anasmohammed361/sveltekit-aws-lambda",
-  "authors": [
-    "anasmohammed361"
-  ],
-  "homepage": "https://github.com/anasmohammed361/sveltekit-aws-lambda#readme",
-  "downloads": 22,
-  "dependents": 0,
-  "updated": "2023-08-25T01:07:21.085Z",
-  "tags": [
-    "adapter"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "sveltekit-lambda-adapter",
+	"description": "Adapt SvelteKit apps for AWS Lambda deployment.",
+	"repo_url": "https://github.com/anasmohammed361/sveltekit-aws-lambda",
+	"authors": ["anasmohammed361"],
+	"homepage": "https://github.com/anasmohammed361/sveltekit-aws-lambda#readme",
+	"downloads": 22,
+	"dependents": 0,
+	"updated": "2023-08-25T01:07:21.085Z",
+	"tags": ["adapter"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	}
 }

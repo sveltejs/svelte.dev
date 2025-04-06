@@ -1,18 +1,19 @@
 {
-  "name": "svelte-store-router",
-  "description": "Provides store-based routing for Svelte applications.",
-  "repo_url": "https://github.com/zyxd/svelte-store-router",
-  "authors": [
-    "zyxd"
-  ],
-  "homepage": "https://github.com/zyxd/svelte-store-router#readme",
-  "downloads": 10,
-  "dependents": 0,
-  "updated": "2021-12-13T15:08:08.723Z",
-  "tags": [
-    "router"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 91
+	"name": "svelte-store-router",
+	"description": "Provides store-based routing for Svelte applications.",
+	"repo_url": "https://github.com/zyxd/svelte-store-router",
+	"authors": ["zyxd"],
+	"homepage": "https://github.com/zyxd/svelte-store-router#readme",
+	"downloads": 10,
+	"dependents": 0,
+	"updated": "2021-12-13T15:08:08.723Z",
+	"tags": ["router"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 91,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

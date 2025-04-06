@@ -1,19 +1,19 @@
 {
-  "name": "@beyowi/svelte-google-places-autocomplete",
-  "description": "Integrate Google Places Autocomplete API into Svelte apps.",
-  "repo_url": "https://github.com/beyowi/svelte-google-places-autocomplete",
-  "authors": [
-    "cedricbyw",
-    "pascalbyw"
-  ],
-  "homepage": "https://github.com/beyowi/svelte-google-places-autocomplete#readme",
-  "downloads": 2,
-  "dependents": 0,
-  "updated": "2023-05-30T00:39:06.483Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "@beyowi/svelte-google-places-autocomplete",
+	"description": "Integrate Google Places Autocomplete API into Svelte apps.",
+	"repo_url": "https://github.com/beyowi/svelte-google-places-autocomplete",
+	"authors": ["cedricbyw", "pascalbyw"],
+	"homepage": "https://github.com/beyowi/svelte-google-places-autocomplete#readme",
+	"downloads": 2,
+	"dependents": 0,
+	"updated": "2023-05-30T00:39:06.483Z",
+	"tags": ["integration"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

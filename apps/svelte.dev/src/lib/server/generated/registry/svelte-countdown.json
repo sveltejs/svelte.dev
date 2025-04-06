@@ -1,18 +1,19 @@
 {
-  "name": "svelte-countdown",
-  "description": "Creates countdown timer components for Svelte.",
-  "repo_url": "https://github.com/rallisf1/svelte-countdown",
-  "authors": [
-    "rallisf1"
-  ],
-  "homepage": "https://github.com/rallisf1/svelte-countdown#readme",
-  "downloads": 176,
-  "dependents": 0,
-  "updated": "2022-07-22T08:13:38.121Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 21
+	"name": "svelte-countdown",
+	"description": "Creates countdown timer components for Svelte.",
+	"repo_url": "https://github.com/rallisf1/svelte-countdown",
+	"authors": ["rallisf1"],
+	"homepage": "https://github.com/rallisf1/svelte-countdown#readme",
+	"downloads": 176,
+	"dependents": 0,
+	"updated": "2022-07-22T08:13:38.121Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 21,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

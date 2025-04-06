@@ -1,18 +1,19 @@
 {
-  "name": "svelte-ticker",
-  "description": "Create ticker-style scrolling content for Svelte.",
-  "repo_url": "https://github.com/PaulMaly/svelte-ticker",
-  "authors": [
-    "paulmaly"
-  ],
-  "homepage": "https://github.com/PaulMaly/svelte-ticker#readme",
-  "downloads": 17,
-  "dependents": 0,
-  "updated": "2019-12-16T00:09:47.095Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 18
+	"name": "svelte-ticker",
+	"description": "Create ticker-style scrolling content for Svelte.",
+	"repo_url": "https://github.com/PaulMaly/svelte-ticker",
+	"authors": ["paulmaly"],
+	"homepage": "https://github.com/PaulMaly/svelte-ticker#readme",
+	"downloads": 17,
+	"dependents": 0,
+	"updated": "2019-12-16T00:09:47.095Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 18,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	}
 }

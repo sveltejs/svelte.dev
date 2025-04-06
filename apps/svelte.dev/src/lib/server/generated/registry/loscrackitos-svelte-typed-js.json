@@ -1,19 +1,19 @@
 {
-  "name": "@loscrackitos/svelte-typed-js",
-  "description": "Types text with Typed.js in Svelte components.",
-  "repo_url": "https://github.com/Los-Crackitos/svelte-typed-js",
-  "authors": [
-    "thyrael",
-    "jerome1337"
-  ],
-  "homepage": "https://github.com/Los-Crackitos/svelte-typed-js#readme",
-  "downloads": 20,
-  "dependents": 0,
-  "updated": "2020-09-11T18:56:12.776Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 6
+	"name": "@loscrackitos/svelte-typed-js",
+	"description": "Types text with Typed.js in Svelte components.",
+	"repo_url": "https://github.com/Los-Crackitos/svelte-typed-js",
+	"authors": ["thyrael", "jerome1337"],
+	"homepage": "https://github.com/Los-Crackitos/svelte-typed-js#readme",
+	"downloads": 20,
+	"dependents": 0,
+	"updated": "2020-09-11T18:56:12.776Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 6,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

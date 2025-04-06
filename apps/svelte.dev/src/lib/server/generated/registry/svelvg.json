@@ -1,18 +1,19 @@
 {
-  "name": "svelvg",
-  "description": "Convert SVG files to Svelte components with TypeScript.",
-  "repo_url": "https://github.com/metonym/svelvg",
-  "authors": [
-    "metonym"
-  ],
-  "homepage": "https://github.com/metonym/svelvg",
-  "downloads": 117,
-  "dependents": 0,
-  "updated": "2024-06-19T20:04:37.913Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 44
+	"name": "svelvg",
+	"description": "Convert SVG files to Svelte components with TypeScript.",
+	"repo_url": "https://github.com/metonym/svelvg",
+	"authors": ["metonym"],
+	"homepage": "https://github.com/metonym/svelvg",
+	"downloads": 117,
+	"dependents": 0,
+	"updated": "2024-06-19T20:04:37.913Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 44,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

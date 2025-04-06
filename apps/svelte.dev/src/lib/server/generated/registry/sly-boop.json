@@ -1,18 +1,19 @@
 {
-  "name": "sly-boop",
-  "description": "Apply 3D card twisting hover animation directive for Svelte.",
-  "repo_url": "https://github.com/SlyOtis/sly-boop",
-  "authors": [
-    "slyotis"
-  ],
-  "homepage": "https://github.com/SlyOtis/sly-boop.git",
-  "downloads": 1,
-  "dependents": 0,
-  "updated": "2024-10-23T14:53:58.630Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "sly-boop",
+	"description": "Apply 3D card twisting hover animation directive for Svelte.",
+	"repo_url": "https://github.com/SlyOtis/sly-boop",
+	"authors": ["slyotis"],
+	"homepage": "https://github.com/SlyOtis/sly-boop.git",
+	"downloads": 1,
+	"dependents": 0,
+	"updated": "2024-10-23T14:53:58.630Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

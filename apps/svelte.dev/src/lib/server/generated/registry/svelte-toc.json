@@ -1,18 +1,19 @@
 {
-  "name": "svelte-toc",
-  "description": "Create sticky responsive table of contents component.",
-  "repo_url": "https://github.com/janosh/svelte-toc",
-  "authors": [
-    "janosh"
-  ],
-  "homepage": "https://janosh.github.io/svelte-toc",
-  "downloads": 216,
-  "dependents": 0,
-  "updated": "2024-06-12T17:18:18.813Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 114
+	"name": "svelte-toc",
+	"description": "Create sticky responsive table of contents component.",
+	"repo_url": "https://github.com/janosh/svelte-toc",
+	"authors": ["janosh"],
+	"homepage": "https://janosh.github.io/svelte-toc",
+	"downloads": 216,
+	"dependents": 0,
+	"updated": "2024-06-12T17:18:18.813Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 114,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

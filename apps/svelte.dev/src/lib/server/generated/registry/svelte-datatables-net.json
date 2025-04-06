@@ -1,18 +1,19 @@
 {
-  "name": "svelte-datatables-net",
-  "description": "Create interactive HTML tables from data in Svelte applications.",
-  "repo_url": "https://github.com/joaquimnetocel/svelte-datatables-net",
-  "authors": [
-    "joaquim.neto.cel"
-  ],
-  "homepage": "https://github.com/joaquimnetocel/svelte-datatables-net#readme",
-  "downloads": 367,
-  "dependents": 0,
-  "updated": "2025-02-16T21:17:43.890Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 28
+	"name": "svelte-datatables-net",
+	"description": "Create interactive HTML tables from data in Svelte applications.",
+	"repo_url": "https://github.com/joaquimnetocel/svelte-datatables-net",
+	"authors": ["joaquim.neto.cel"],
+	"homepage": "https://github.com/joaquimnetocel/svelte-datatables-net#readme",
+	"downloads": 367,
+	"dependents": 0,
+	"updated": "2025-02-16T21:17:43.890Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 28,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

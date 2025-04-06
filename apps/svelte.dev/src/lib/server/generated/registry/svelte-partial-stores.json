@@ -1,18 +1,19 @@
 {
-  "name": "svelte-partial-stores",
-  "description": "Create derived stores watching parts of Svelte stores.",
-  "repo_url": "https://github.com/jacobzwang/svelte-partial-stores",
-  "authors": [
-    "jacobzwang"
-  ],
-  "homepage": "https://github.com/jacobzwang/svelte-partial-stores.git",
-  "downloads": 0,
-  "dependents": 0,
-  "updated": "2022-10-06T22:04:53.272Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelte-partial-stores",
+	"description": "Create derived stores watching parts of Svelte stores.",
+	"repo_url": "https://github.com/jacobzwang/svelte-partial-stores",
+	"authors": ["jacobzwang"],
+	"homepage": "https://github.com/jacobzwang/svelte-partial-stores.git",
+	"downloads": 0,
+	"dependents": 0,
+	"updated": "2022-10-06T22:04:53.272Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

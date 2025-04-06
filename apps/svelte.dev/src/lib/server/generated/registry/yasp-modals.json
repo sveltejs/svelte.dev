@@ -1,16 +1,17 @@
 {
-  "name": "yasp-modals",
-  "description": "Modal wrapper component for Svelte, easy to open and close.",
-  "repo_url": "",
-  "authors": [
-    "dievardump"
-  ],
-  "downloads": 12,
-  "dependents": 0,
-  "updated": "2021-06-25T07:56:57.895Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "yasp-modals",
+	"description": "Modal wrapper component for Svelte, easy to open and close.",
+	"repo_url": "",
+	"authors": ["dievardump"],
+	"downloads": 12,
+	"dependents": 0,
+	"updated": "2021-06-25T07:56:57.895Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

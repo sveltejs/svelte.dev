@@ -1,18 +1,19 @@
 {
-  "name": "@accuser/svelte-markdown-gfm",
-  "description": "Transform Markdown to Svelte components using GitHub Flavored Markdown.",
-  "repo_url": "https://github.com/accuser/svelte-markdown-gfm",
-  "authors": [
-    "accuser"
-  ],
-  "homepage": "https://github.com/accuser/svelte-markdown-gfm",
-  "downloads": 15,
-  "dependents": 0,
-  "updated": "2024-09-30T08:49:03.326Z",
-  "tags": [
-    "content"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 1
+	"name": "@accuser/svelte-markdown-gfm",
+	"description": "Transform Markdown to Svelte components using GitHub Flavored Markdown.",
+	"repo_url": "https://github.com/accuser/svelte-markdown-gfm",
+	"authors": ["accuser"],
+	"homepage": "https://github.com/accuser/svelte-markdown-gfm",
+	"downloads": 15,
+	"dependents": 0,
+	"updated": "2024-09-30T08:49:03.326Z",
+	"tags": ["content"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

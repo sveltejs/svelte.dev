@@ -1,17 +1,19 @@
 {
-  "name": "svelte-shiki",
-  "description": "Preprocessor for Svelte, adding syntax highlighting via Shiki.",
-  "repo_url": "https://github.com/morsby/svelte-shiki",
-  "authors": [
-    "morsby"
-  ],
-  "downloads": 11,
-  "dependents": 0,
-  "updated": "2020-05-19T09:47:10.548Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 12
+	"name": "svelte-shiki",
+	"description": "Preprocessor for Svelte, adding syntax highlighting via Shiki.",
+	"repo_url": "https://github.com/morsby/svelte-shiki",
+	"authors": ["morsby"],
+	"downloads": 11,
+	"dependents": 0,
+	"updated": "2020-05-19T09:47:10.548Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 12,
+	"homepage": null,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

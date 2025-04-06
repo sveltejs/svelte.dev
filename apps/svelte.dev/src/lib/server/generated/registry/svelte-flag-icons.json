@@ -1,18 +1,19 @@
 {
-  "name": "svelte-flag-icons",
-  "description": "Provides flag icon components for Svelte.",
-  "repo_url": "https://github.com/shinokada/svelte-flag-icons",
-  "authors": [
-    "shinichiokada"
-  ],
-  "homepage": "https://svelte-flag-icons.codewithshin.com/",
-  "downloads": 2077,
-  "dependents": 2,
-  "updated": "2024-10-25T14:49:30.769Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 11
+	"name": "svelte-flag-icons",
+	"description": "Provides flag icon components for Svelte.",
+	"repo_url": "https://github.com/shinokada/svelte-flag-icons",
+	"authors": ["shinichiokada"],
+	"homepage": "https://svelte-flag-icons.codewithshin.com/",
+	"downloads": 2077,
+	"dependents": 2,
+	"updated": "2024-10-25T14:49:30.769Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 11,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

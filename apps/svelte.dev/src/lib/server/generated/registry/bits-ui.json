@@ -1,19 +1,19 @@
 {
-  "name": "bits-ui",
-  "description": "The headless components for Svelte.",
-  "repo_url": "https://github.com/huntabyte/bits-ui",
-  "authors": [
-    "huntabyte"
-  ],
-  "homepage": "https://github.com/huntabyte/bits-ui#readme",
-  "downloads": 151815,
-  "dependents": 79,
-  "updated": "2025-03-26T21:51:31.952Z",
-  "tags": [
-    "design-system",
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 1952
+	"name": "bits-ui",
+	"description": "The headless components for Svelte.",
+	"repo_url": "https://github.com/huntabyte/bits-ui",
+	"authors": ["huntabyte"],
+	"homepage": "https://github.com/huntabyte/bits-ui#readme",
+	"downloads": 151815,
+	"dependents": 79,
+	"updated": "2025-03-26T21:51:31.952Z",
+	"tags": ["design-system", "ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 1953,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

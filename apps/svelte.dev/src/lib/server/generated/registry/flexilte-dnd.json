@@ -1,18 +1,19 @@
 {
-  "name": "@flexilte/dnd",
-  "description": "Create JSON-driven layouts with drag and drop support in Svelte.",
-  "repo_url": "https://github.com/flexilte/flexilte",
-  "authors": [
-    "borgmon"
-  ],
-  "homepage": "https://flexilte.github.io",
-  "downloads": 0,
-  "dependents": 0,
-  "updated": "2024-11-20T03:33:24.377Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "@flexilte/dnd",
+	"description": "Create JSON-driven layouts with drag and drop support in Svelte.",
+	"repo_url": "https://github.com/flexilte/flexilte",
+	"authors": ["borgmon"],
+	"homepage": "https://flexilte.github.io",
+	"downloads": 0,
+	"dependents": 0,
+	"updated": "2024-11-20T03:33:24.377Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

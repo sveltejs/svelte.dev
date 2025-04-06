@@ -1,18 +1,19 @@
 {
-  "name": "svelte-swipeable",
-  "description": "Handle swipe gestures in Svelte applications.",
-  "repo_url": "https://github.com/James-revans/svelte-swipeable",
-  "authors": [
-    "james_revans"
-  ],
-  "homepage": "https://github.com/James-revans/svelte-swipeable#readme",
-  "downloads": 11,
-  "dependents": 1,
-  "updated": "2020-03-20T08:25:17.894Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 6
+	"name": "svelte-swipeable",
+	"description": "Handle swipe gestures in Svelte applications.",
+	"repo_url": "https://github.com/James-revans/svelte-swipeable",
+	"authors": ["james_revans"],
+	"homepage": "https://github.com/James-revans/svelte-swipeable#readme",
+	"downloads": 11,
+	"dependents": 1,
+	"updated": "2020-03-20T08:25:17.894Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 6,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "svelte-read-more",
-  "description": "Create read more/less components in Svelte.",
-  "repo_url": "https://github.com/saideepesh000/svelte-read-more",
-  "authors": [
-    "saideepesh000"
-  ],
-  "homepage": "https://github.com/saideepesh000/svelte-read-more",
-  "downloads": 69,
-  "dependents": 0,
-  "updated": "2021-11-03T12:28:10.232Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 4
+	"name": "svelte-read-more",
+	"description": "Create read more/less components in Svelte.",
+	"repo_url": "https://github.com/saideepesh000/svelte-read-more",
+	"authors": ["saideepesh000"],
+	"homepage": "https://github.com/saideepesh000/svelte-read-more",
+	"downloads": 69,
+	"dependents": 0,
+	"updated": "2021-11-03T12:28:10.232Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 4,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "sveltekit-route-hooks",
-  "description": "Scope SvelteKit hooks to specific routes, simplifying routing logic.",
-  "repo_url": "https://github.com/dslatkin/sveltekit-route-hooks",
-  "authors": [
-    "dslatkin"
-  ],
-  "homepage": "https://github.com/dslatkin/sveltekit-route-hooks#readme",
-  "downloads": 15,
-  "dependents": 0,
-  "updated": "2023-12-01T22:35:53.961Z",
-  "tags": [
-    "router"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "sveltekit-route-hooks",
+	"description": "Scope SvelteKit hooks to specific routes, simplifying routing logic.",
+	"repo_url": "https://github.com/dslatkin/sveltekit-route-hooks",
+	"authors": ["dslatkin"],
+	"homepage": "https://github.com/dslatkin/sveltekit-route-hooks#readme",
+	"downloads": 15,
+	"dependents": 0,
+	"updated": "2023-12-01T22:35:53.961Z",
+	"tags": ["router"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

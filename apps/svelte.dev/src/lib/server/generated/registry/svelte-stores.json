@@ -1,18 +1,19 @@
 {
-  "name": "svelte-stores",
-  "description": "Provide safe stores for SvelteKit, preventing SSR state leaks.",
-  "repo_url": "https://github.com/devunt/svelte-stores",
-  "authors": [
-    "devunt"
-  ],
-  "homepage": "https://github.com/devunt/svelte-stores#readme",
-  "downloads": 8,
-  "dependents": 0,
-  "updated": "2023-04-17T17:02:03.568Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 44
+	"name": "svelte-stores",
+	"description": "Provide safe stores for SvelteKit, preventing SSR state leaks.",
+	"repo_url": "https://github.com/devunt/svelte-stores",
+	"authors": ["devunt"],
+	"homepage": "https://github.com/devunt/svelte-stores#readme",
+	"downloads": 8,
+	"dependents": 0,
+	"updated": "2023-04-17T17:02:03.568Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 44,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

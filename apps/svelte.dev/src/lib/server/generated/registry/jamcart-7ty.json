@@ -1,18 +1,19 @@
 {
-  "name": "@jamcart/7ty",
-  "description": "Generate static sites using Svelte for templating.",
-  "repo_url": "https://github.com/JamCart/7ty",
-  "authors": [
-    "adantes"
-  ],
-  "homepage": "https://github.com/JamCart/7ty#readme",
-  "downloads": 28,
-  "dependents": 0,
-  "updated": "2021-04-11T04:14:52.686Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 40
+	"name": "@jamcart/7ty",
+	"description": "Generate static sites using Svelte for templating.",
+	"repo_url": "https://github.com/JamCart/7ty",
+	"authors": ["adantes"],
+	"homepage": "https://github.com/JamCart/7ty#readme",
+	"downloads": 28,
+	"dependents": 0,
+	"updated": "2021-04-11T04:14:52.686Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 40,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

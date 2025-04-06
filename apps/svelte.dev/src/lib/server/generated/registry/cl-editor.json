@@ -1,18 +1,19 @@
 {
-  "name": "cl-editor",
-  "description": "Creates lightweight text editor built with Svelte.",
-  "repo_url": "https://github.com/nenadpnc/cl-editor",
-  "authors": [
-    "nenadpnc"
-  ],
-  "homepage": "https://nenadpnc.github.io/cl-editor/",
-  "downloads": 930,
-  "dependents": 2,
-  "updated": "2021-12-03T20:40:58.512Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 298
+	"name": "cl-editor",
+	"description": "Creates lightweight text editor built with Svelte.",
+	"repo_url": "https://github.com/nenadpnc/cl-editor",
+	"authors": ["nenadpnc"],
+	"homepage": "https://nenadpnc.github.io/cl-editor/",
+	"downloads": 930,
+	"dependents": 2,
+	"updated": "2021-12-03T20:40:58.512Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 298,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

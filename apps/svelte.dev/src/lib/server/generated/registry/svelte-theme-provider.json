@@ -1,18 +1,19 @@
 {
-  "name": "svelte-theme-provider",
-  "description": "Provide theme support for Svelte applications.",
-  "repo_url": "https://github.com/wecount-dev/svelte-theme-provider",
-  "authors": [
-    "yujonglee"
-  ],
-  "homepage": "https://github.com/wecount-dev/svelte-theme-provider",
-  "downloads": 26,
-  "dependents": 0,
-  "updated": "2021-10-22T12:55:06.226Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 6
+	"name": "svelte-theme-provider",
+	"description": "Provide theme support for Svelte applications.",
+	"repo_url": "https://github.com/wecount-dev/svelte-theme-provider",
+	"authors": ["yujonglee"],
+	"homepage": "https://github.com/wecount-dev/svelte-theme-provider",
+	"downloads": 26,
+	"dependents": 0,
+	"updated": "2021-10-22T12:55:06.226Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 6,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

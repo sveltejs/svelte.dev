@@ -1,18 +1,19 @@
 {
-  "name": "oc-template-svelte-compiler",
-  "description": "Compiles Svelte components for Open Components.",
-  "repo_url": "https://github.com/opencomponents/vite-templates",
-  "authors": [
-    "mkredz"
-  ],
-  "homepage": "https://github.com/opencomponents/vite-templates#readme",
-  "downloads": 93,
-  "dependents": 0,
-  "updated": "2025-03-18T08:58:38.341Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 0
+	"name": "oc-template-svelte-compiler",
+	"description": "Compiles Svelte components for Open Components.",
+	"repo_url": "https://github.com/opencomponents/vite-templates",
+	"authors": ["mkredz"],
+	"homepage": "https://github.com/opencomponents/vite-templates#readme",
+	"downloads": 93,
+	"dependents": 0,
+	"updated": "2025-03-18T08:58:38.341Z",
+	"tags": ["tooling"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

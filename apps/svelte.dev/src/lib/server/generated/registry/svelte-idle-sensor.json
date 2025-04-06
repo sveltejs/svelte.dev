@@ -1,18 +1,19 @@
 {
-  "name": "svelte-idle-sensor",
-  "description": "Detect user idleness, manage session timeouts in Svelte.",
-  "repo_url": "https://github.com/AyloSrd/svelte-idle-sensor",
-  "authors": [
-    "aylo"
-  ],
-  "homepage": "https://github.com/AyloSrd/svelte-idle-sensor#readme",
-  "downloads": 57,
-  "dependents": 0,
-  "updated": "2022-11-19T17:31:39.242Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 2
+	"name": "svelte-idle-sensor",
+	"description": "Detect user idleness, manage session timeouts in Svelte.",
+	"repo_url": "https://github.com/AyloSrd/svelte-idle-sensor",
+	"authors": ["aylo"],
+	"homepage": "https://github.com/AyloSrd/svelte-idle-sensor#readme",
+	"downloads": 57,
+	"dependents": 0,
+	"updated": "2022-11-19T17:31:39.242Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

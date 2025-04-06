@@ -1,19 +1,19 @@
 {
-  "name": "@0xmageia/mdsvex",
-  "description": "Process Markdown with Svelte components, like MDX for Svelte.",
-  "repo_url": "https://github.com/0xmageia/MDsveX",
-  "authors": [
-    "0xmageia"
-  ],
-  "homepage": "https://github.com/0xmageia/MDsveX#readme",
-  "downloads": 15,
-  "dependents": 0,
-  "updated": "2023-10-08T01:00:50.441Z",
-  "tags": [
-    "content",
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@0xmageia/mdsvex",
+	"description": "Process Markdown with Svelte components, like MDX for Svelte.",
+	"repo_url": "https://github.com/0xmageia/MDsveX",
+	"authors": ["0xmageia"],
+	"homepage": "https://github.com/0xmageia/MDsveX#readme",
+	"downloads": 15,
+	"dependents": 0,
+	"updated": "2023-10-08T01:00:50.441Z",
+	"tags": ["content", "tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": false
+	}
 }

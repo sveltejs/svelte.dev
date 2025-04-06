@@ -1,18 +1,19 @@
 {
-  "name": "@humanspeak/svelte-keyed",
-  "description": "Create deep, reactive stores for Svelte with TypeScript support.",
-  "repo_url": "https://github.com/humanspeak/svelte-keyed",
-  "authors": [
-    "humanspeakadmin"
-  ],
-  "homepage": "https://github.com/humanspeak/svelte-keyed#readme",
-  "downloads": 245,
-  "dependents": 1,
-  "updated": "2025-01-27T19:29:34.608Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 0
+	"name": "@humanspeak/svelte-keyed",
+	"description": "Create deep, reactive stores for Svelte with TypeScript support.",
+	"repo_url": "https://github.com/humanspeak/svelte-keyed",
+	"authors": ["humanspeakadmin"],
+	"homepage": "https://github.com/humanspeak/svelte-keyed#readme",
+	"downloads": 245,
+	"dependents": 1,
+	"updated": "2025-01-27T19:29:34.608Z",
+	"tags": ["miscellaneous"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

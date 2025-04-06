@@ -1,18 +1,19 @@
 {
-  "name": "svelte-lazyload",
-  "description": "Implement lazy loading for images and content in Svelte.",
-  "repo_url": "https://github.com/abrochard/svelte-lazyload",
-  "authors": [
-    "abrochard"
-  ],
-  "homepage": "https://github.com/abrochard/svelte-lazyload#readme",
-  "downloads": 11,
-  "dependents": 0,
-  "updated": "2019-06-15T03:53:55.405Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 9
+	"name": "svelte-lazyload",
+	"description": "Implement lazy loading for images and content in Svelte.",
+	"repo_url": "https://github.com/abrochard/svelte-lazyload",
+	"authors": ["abrochard"],
+	"homepage": "https://github.com/abrochard/svelte-lazyload#readme",
+	"downloads": 11,
+	"dependents": 0,
+	"updated": "2019-06-15T03:53:55.405Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 9,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

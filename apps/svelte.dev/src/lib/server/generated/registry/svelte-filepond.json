@@ -1,18 +1,19 @@
 {
-  "name": "svelte-filepond",
-  "description": "Integrate FilePond file upload library with Svelte.",
-  "repo_url": "https://github.com/pqina/svelte-filepond",
-  "authors": [
-    "pqina"
-  ],
-  "homepage": "https://pqina.nl/filepond",
-  "downloads": 2169,
-  "dependents": 2,
-  "updated": "2023-12-28T14:02:23.546Z",
-  "tags": [
-    "media"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 260
+	"name": "svelte-filepond",
+	"description": "Integrate FilePond file upload library with Svelte.",
+	"repo_url": "https://github.com/pqina/svelte-filepond",
+	"authors": ["pqina"],
+	"homepage": "https://pqina.nl/filepond",
+	"downloads": 2169,
+	"dependents": 2,
+	"updated": "2023-12-28T14:02:23.546Z",
+	"tags": ["media"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 260,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

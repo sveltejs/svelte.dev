@@ -1,18 +1,19 @@
 {
-  "name": "@specialdoom/proi-ui",
-  "description": "Build Svelte UI with this component library.",
-  "repo_url": "https://github.com/specialdoom/proi-ui",
-  "authors": [
-    "specialdoom"
-  ],
-  "homepage": "https://proi-ui.vercel.app",
-  "downloads": 64,
-  "dependents": 0,
-  "updated": "2023-10-28T08:08:56.095Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 142
+	"name": "@specialdoom/proi-ui",
+	"description": "Build Svelte UI with this component library.",
+	"repo_url": "https://github.com/specialdoom/proi-ui",
+	"authors": ["specialdoom"],
+	"homepage": "https://proi-ui.vercel.app",
+	"downloads": 64,
+	"dependents": 0,
+	"updated": "2023-10-28T08:08:56.095Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 142,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

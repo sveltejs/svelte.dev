@@ -1,18 +1,19 @@
 {
-  "name": "komodo-svelte",
-  "description": "Provides Svelte bindings for Komodo Elixir library.",
-  "repo_url": "https://github.com/hungry-egg/komodo",
-  "authors": [
-    "markevans"
-  ],
-  "homepage": "https://github.com/hungry-egg/komodo/tree/main/packages/komodo-svelte#readme",
-  "downloads": 0,
-  "dependents": 0,
-  "updated": "2024-06-07T11:33:16.337Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 64
+	"name": "komodo-svelte",
+	"description": "Provides Svelte bindings for Komodo Elixir library.",
+	"repo_url": "https://github.com/hungry-egg/komodo",
+	"authors": ["markevans"],
+	"homepage": "https://github.com/hungry-egg/komodo/tree/main/packages/komodo-svelte#readme",
+	"downloads": 0,
+	"dependents": 0,
+	"updated": "2024-06-07T11:33:16.337Z",
+	"tags": ["integration"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 64,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

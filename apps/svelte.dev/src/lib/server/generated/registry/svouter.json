@@ -1,16 +1,17 @@
 {
-  "name": "svouter",
-  "description": "Declarative Svelte routing library with SSR support.",
-  "repo_url": "",
-  "authors": [
-    "pixelmund"
-  ],
-  "downloads": 16,
-  "dependents": 0,
-  "updated": "2023-11-23T15:28:51.780Z",
-  "tags": [
-    "router"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "svouter",
+	"description": "Declarative Svelte routing library with SSR support.",
+	"repo_url": "",
+	"authors": ["pixelmund"],
+	"downloads": 16,
+	"dependents": 0,
+	"updated": "2023-11-23T15:28:51.780Z",
+	"tags": ["router"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": true
+	}
 }

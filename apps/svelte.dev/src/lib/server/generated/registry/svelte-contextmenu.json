@@ -1,18 +1,19 @@
 {
-  "name": "svelte-contextmenu",
-  "description": "Simple, customizable context menu for Svelte with Bootstrap support.",
-  "repo_url": "https://github.com/vincentlaucsb/svelte-contextmenu",
-  "authors": [
-    "vincela9"
-  ],
-  "homepage": "https://github.com/vincentlaucsb/svelte-contextmenu#readme",
-  "downloads": 93,
-  "dependents": 0,
-  "updated": "2023-01-09T07:46:17.532Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 12
+	"name": "svelte-contextmenu",
+	"description": "Simple, customizable context menu for Svelte with Bootstrap support.",
+	"repo_url": "https://github.com/vincentlaucsb/svelte-contextmenu",
+	"authors": ["vincela9"],
+	"homepage": "https://github.com/vincentlaucsb/svelte-contextmenu#readme",
+	"downloads": 93,
+	"dependents": 0,
+	"updated": "2023-01-09T07:46:17.532Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 12,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

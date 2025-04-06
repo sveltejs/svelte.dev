@@ -1,19 +1,19 @@
 {
-  "name": "svelma2",
-  "description": "Build UI with Bulma components for Svelte applications.",
-  "repo_url": "https://github.com/abbychau/svelma",
-  "authors": [
-    "abbychau"
-  ],
-  "homepage": "https://github.com/abbychau/svelma#readme",
-  "downloads": 9,
-  "dependents": 0,
-  "updated": "2021-03-19T09:37:05.949Z",
-  "tags": [
-    "design-system",
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 5
+	"name": "svelma2",
+	"description": "Build UI with Bulma components for Svelte applications.",
+	"repo_url": "https://github.com/abbychau/svelma",
+	"authors": ["abbychau"],
+	"homepage": "https://github.com/abbychau/svelma#readme",
+	"downloads": 9,
+	"dependents": 0,
+	"updated": "2021-03-19T09:37:05.949Z",
+	"tags": ["design-system", "ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 5,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,16 +1,17 @@
 {
-  "name": "svelte-search-spotify",
-  "description": "Integrate Spotify search functionality into Svelte applications.",
-  "repo_url": "",
-  "authors": [
-    "jimkang"
-  ],
-  "downloads": 22,
-  "dependents": 0,
-  "updated": "2020-10-27T22:12:41.620Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-search-spotify",
+	"description": "Integrate Spotify search functionality into Svelte applications.",
+	"repo_url": "",
+	"authors": ["jimkang"],
+	"downloads": 22,
+	"dependents": 0,
+	"updated": "2020-10-27T22:12:41.620Z",
+	"tags": ["integration"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

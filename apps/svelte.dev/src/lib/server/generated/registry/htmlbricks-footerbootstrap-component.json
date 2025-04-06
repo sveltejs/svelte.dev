@@ -1,16 +1,17 @@
 {
-  "name": "@htmlbricks/footerbootstrap-component",
-  "description": "Create Bootstrap footer components for Svelte applications.",
-  "repo_url": "",
-  "authors": [
-    "dariocaruso"
-  ],
-  "downloads": 143,
-  "dependents": 0,
-  "updated": "2022-01-02T19:14:28.995Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@htmlbricks/footerbootstrap-component",
+	"description": "Create Bootstrap footer components for Svelte applications.",
+	"repo_url": "",
+	"authors": ["dariocaruso"],
+	"downloads": 143,
+	"dependents": 0,
+	"updated": "2022-01-02T19:14:28.995Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

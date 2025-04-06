@@ -1,18 +1,19 @@
 {
-  "name": "sthemer",
-  "description": "Implement color schemes and theming in Svelte/SvelteKit apps.",
-  "repo_url": "https://github.com/ivanhofer/sthemer",
-  "authors": [
-    "ivanhofer"
-  ],
-  "homepage": "https://github.com/ivanhofer/sthemer",
-  "downloads": 1,
-  "dependents": 0,
-  "updated": "2022-12-22T17:42:14.040Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 27
+	"name": "sthemer",
+	"description": "Implement color schemes and theming in Svelte/SvelteKit apps.",
+	"repo_url": "https://github.com/ivanhofer/sthemer",
+	"authors": ["ivanhofer"],
+	"homepage": "https://github.com/ivanhofer/sthemer",
+	"downloads": 1,
+	"dependents": 0,
+	"updated": "2022-12-22T17:42:14.040Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 27,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "svelte-axios-form",
-  "description": "Create forms with axios integration in Svelte apps.",
-  "repo_url": "https://github.com/greatenemy/svelte-axios-form",
-  "authors": [
-    "iomge"
-  ],
-  "homepage": "https://github.com/GreatEnemy/svelte-axios-form#readme",
-  "downloads": 13,
-  "dependents": 0,
-  "updated": "2019-09-05T20:23:06.365Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelte-axios-form",
+	"description": "Create forms with axios integration in Svelte apps.",
+	"repo_url": "https://github.com/greatenemy/svelte-axios-form",
+	"authors": ["iomge"],
+	"homepage": "https://github.com/GreatEnemy/svelte-axios-form#readme",
+	"downloads": 13,
+	"dependents": 0,
+	"updated": "2019-09-05T20:23:06.365Z",
+	"tags": ["integration"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

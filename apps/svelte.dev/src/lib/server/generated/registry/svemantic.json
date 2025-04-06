@@ -1,18 +1,19 @@
 {
-  "name": "svemantic",
-  "description": "Provide Fomantic-UI components for Svelte.",
-  "repo_url": "https://github.com/eddow/svemantic",
-  "authors": [
-    "eeddow"
-  ],
-  "homepage": "https://github.com/eddow/svemantic#readme",
-  "downloads": 2,
-  "dependents": 0,
-  "updated": "2023-04-29T08:53:31.853Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "svemantic",
+	"description": "Provide Fomantic-UI components for Svelte.",
+	"repo_url": "https://github.com/eddow/svemantic",
+	"authors": ["eeddow"],
+	"homepage": "https://github.com/eddow/svemantic#readme",
+	"downloads": 2,
+	"dependents": 0,
+	"updated": "2023-04-29T08:53:31.853Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

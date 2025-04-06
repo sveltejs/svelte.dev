@@ -1,18 +1,19 @@
 {
-  "name": "svauth",
-  "description": "Provides authentication for SvelteKit applications.",
-  "repo_url": "https://github.com/sshkeda/svauth",
-  "authors": [
-    "sshkeda"
-  ],
-  "homepage": "https://github.com/sshkeda/svauth",
-  "downloads": 10,
-  "dependents": 0,
-  "updated": "2023-04-18T00:56:09.353Z",
-  "tags": [
-    "auth"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 3
+	"name": "svauth",
+	"description": "Provides authentication for SvelteKit applications.",
+	"repo_url": "https://github.com/sshkeda/svauth",
+	"authors": ["sshkeda"],
+	"homepage": "https://github.com/sshkeda/svauth",
+	"downloads": 10,
+	"dependents": 0,
+	"updated": "2023-04-18T00:56:09.353Z",
+	"tags": ["auth"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 3,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,19 +1,19 @@
 {
-  "name": "@oneezy/ui",
-  "description": "UI library for Tailwind CSS v4 and Svelte v5.",
-  "repo_url": "https://github.com/oneezy/ui",
-  "authors": [
-    "oneezy"
-  ],
-  "homepage": "https://github.com/oneezy/ui",
-  "downloads": 52,
-  "dependents": 0,
-  "updated": "2024-06-07T06:33:13.161Z",
-  "tags": [
-    "design-system",
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 1
+	"name": "@oneezy/ui",
+	"description": "UI library for Tailwind CSS v4 and Svelte v5.",
+	"repo_url": "https://github.com/oneezy/ui",
+	"authors": ["oneezy"],
+	"homepage": "https://github.com/oneezy/ui",
+	"downloads": 52,
+	"dependents": 0,
+	"updated": "2024-06-07T06:33:13.161Z",
+	"tags": ["design-system", "ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

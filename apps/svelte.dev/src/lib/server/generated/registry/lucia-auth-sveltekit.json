@@ -1,18 +1,19 @@
 {
-  "name": "@lucia-auth/sveltekit",
-  "description": "Integrate Lucia authentication in SvelteKit apps.",
-  "repo_url": "https://github.com/pilcrowOnPaper/lucia",
-  "authors": [
-    "pilcrowonpaper"
-  ],
-  "homepage": "https://github.com/pilcrowOnPaper/lucia#readme",
-  "downloads": 77,
-  "dependents": 0,
-  "updated": "2023-03-19T12:24:16.861Z",
-  "tags": [
-    "auth"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 10057
+	"name": "@lucia-auth/sveltekit",
+	"description": "Integrate Lucia authentication in SvelteKit apps.",
+	"repo_url": "https://github.com/pilcrowOnPaper/lucia",
+	"authors": ["pilcrowonpaper"],
+	"homepage": "https://github.com/pilcrowOnPaper/lucia#readme",
+	"downloads": 77,
+	"dependents": 0,
+	"updated": "2023-03-19T12:24:16.861Z",
+	"tags": ["auth"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 10057,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

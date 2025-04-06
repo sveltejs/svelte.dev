@@ -1,18 +1,19 @@
 {
-  "name": "typescript-eslint-parser-for-extra-files",
-  "description": "ESLint parser for Vue, Svelte, and Astro with TypeScript.",
-  "repo_url": "https://github.com/ota-meshi/typescript-eslint-parser-for-extra-files",
-  "authors": [
-    "ota-meshi"
-  ],
-  "homepage": "https://github.com/ota-meshi/typescript-eslint-parser-for-extra-files#readme",
-  "downloads": 4978,
-  "dependents": 3,
-  "updated": "2024-06-09T11:58:52.874Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 47
+	"name": "typescript-eslint-parser-for-extra-files",
+	"description": "ESLint parser for Vue, Svelte, and Astro with TypeScript.",
+	"repo_url": "https://github.com/ota-meshi/typescript-eslint-parser-for-extra-files",
+	"authors": ["ota-meshi"],
+	"homepage": "https://github.com/ota-meshi/typescript-eslint-parser-for-extra-files#readme",
+	"downloads": 4978,
+	"dependents": 3,
+	"updated": "2024-06-09T11:58:52.874Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 47,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

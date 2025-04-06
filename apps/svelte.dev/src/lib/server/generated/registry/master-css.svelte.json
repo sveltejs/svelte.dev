@@ -1,19 +1,19 @@
 {
-  "name": "@master/css.svelte",
-  "description": "Integrate Master CSS in Svelte.",
-  "repo_url": "https://github.com/master-co/css",
-  "authors": [
-    "1aron",
-    "benseage0"
-  ],
-  "homepage": "https://css.master.co",
-  "downloads": 451,
-  "dependents": 0,
-  "updated": "2023-03-28T13:32:19.183Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 1867
+	"name": "@master/css.svelte",
+	"description": "Integrate Master CSS in Svelte.",
+	"repo_url": "https://github.com/master-co/css",
+	"authors": ["1aron", "benseage0"],
+	"homepage": "https://css.master.co",
+	"downloads": 451,
+	"dependents": 0,
+	"updated": "2023-03-28T13:32:19.183Z",
+	"tags": ["tooling"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 1869,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

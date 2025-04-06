@@ -1,18 +1,19 @@
 {
-  "name": "nota-ui",
-  "description": "Create Svelte component library.",
-  "repo_url": "https://github.com/Vincentvibe3/nota-ui",
-  "authors": [
-    "vincentvibe3"
-  ],
-  "homepage": "https://github.com/Vincentvibe3/nota-ui#readme",
-  "downloads": 19,
-  "dependents": 0,
-  "updated": "2023-07-31T17:06:59.648Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "nota-ui",
+	"description": "Create Svelte component library.",
+	"repo_url": "https://github.com/Vincentvibe3/nota-ui",
+	"authors": ["vincentvibe3"],
+	"homepage": "https://github.com/Vincentvibe3/nota-ui#readme",
+	"downloads": 19,
+	"dependents": 0,
+	"updated": "2023-07-31T17:06:59.648Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

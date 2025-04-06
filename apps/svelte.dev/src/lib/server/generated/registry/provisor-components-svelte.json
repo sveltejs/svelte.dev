@@ -1,17 +1,18 @@
 {
-  "name": "provisor-components-svelte",
-  "description": "Implements Provisor Design System components for Svelte.",
-  "repo_url": "https://github.com/provisorDAO/provisor-components-svelte",
-  "authors": [
-    "rnd332"
-  ],
-  "homepage": "https://github.com/provisorDAO/provisor-components-svelte",
-  "downloads": 1,
-  "dependents": 0,
-  "updated": "2023-01-19T06:25:40.104Z",
-  "tags": [
-    "design-system"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "provisor-components-svelte",
+	"description": "Implements Provisor Design System components for Svelte.",
+	"repo_url": "https://github.com/provisorDAO/provisor-components-svelte",
+	"authors": ["rnd332"],
+	"homepage": "https://github.com/provisorDAO/provisor-components-svelte",
+	"downloads": 1,
+	"dependents": 0,
+	"updated": "2023-01-19T06:25:40.104Z",
+	"tags": ["design-system"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

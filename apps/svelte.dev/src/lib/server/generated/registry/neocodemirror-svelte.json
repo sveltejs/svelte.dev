@@ -1,18 +1,19 @@
 {
-  "name": "@neocodemirror/svelte",
-  "description": "Integrate CodeMirror 6 editor into Svelte applications.",
-  "repo_url": "https://github.com/PuruVJ/neocodemirror",
-  "authors": [
-    "puruvj"
-  ],
-  "homepage": "https://github.com/PuruVJ/neocodemirror",
-  "downloads": 741,
-  "dependents": 2,
-  "updated": "2024-07-04T18:31:33.069Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 38
+	"name": "@neocodemirror/svelte",
+	"description": "Integrate CodeMirror 6 editor into Svelte applications.",
+	"repo_url": "https://github.com/PuruVJ/neocodemirror",
+	"authors": ["puruvj"],
+	"homepage": "https://github.com/PuruVJ/neocodemirror",
+	"downloads": 741,
+	"dependents": 2,
+	"updated": "2024-07-04T18:31:33.069Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 38,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": false
+	}
 }

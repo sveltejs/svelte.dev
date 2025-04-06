@@ -1,18 +1,19 @@
 {
-  "name": "svelte-dark-mode-toggle",
-  "description": "Animated toggle button for dark mode in Svelte apps.",
-  "repo_url": "https://github.com/Disimasa/svelte-dark-mode-toggle",
-  "authors": [
-    "disimasar"
-  ],
-  "homepage": "https://github.com/Disimasa/svelte-dark-mode-toggle#readme",
-  "downloads": 61,
-  "dependents": 0,
-  "updated": "2024-09-04T04:13:05.381Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 3
+	"name": "svelte-dark-mode-toggle",
+	"description": "Animated toggle button for dark mode in Svelte apps.",
+	"repo_url": "https://github.com/Disimasa/svelte-dark-mode-toggle",
+	"authors": ["disimasar"],
+	"homepage": "https://github.com/Disimasa/svelte-dark-mode-toggle#readme",
+	"downloads": 61,
+	"dependents": 0,
+	"updated": "2024-09-04T04:13:05.381Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 3,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

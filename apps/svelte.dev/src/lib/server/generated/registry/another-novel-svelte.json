@@ -1,18 +1,19 @@
 {
-  "name": "another-novel-svelte",
-  "description": "Create Notion-style WYSIWYG editor for Svelte apps.",
-  "repo_url": "https://github.com/DennisOluoch/novel-svelte",
-  "authors": [
-    "dennisoluoch"
-  ],
-  "homepage": "https://github.com/DennisOluoch/novel-svelte#readme",
-  "downloads": 7,
-  "dependents": 0,
-  "updated": "2024-10-06T19:09:46.082Z",
-  "tags": [
-    "content"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "another-novel-svelte",
+	"description": "Create Notion-style WYSIWYG editor for Svelte apps.",
+	"repo_url": "https://github.com/DennisOluoch/novel-svelte",
+	"authors": ["dennisoluoch"],
+	"homepage": "https://github.com/DennisOluoch/novel-svelte#readme",
+	"downloads": 7,
+	"dependents": 0,
+	"updated": "2024-10-06T19:09:46.082Z",
+	"tags": ["content"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

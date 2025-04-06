@@ -1,16 +1,17 @@
 {
-  "name": "@afreidz/svelte-sonner",
-  "description": "Create opinionated toast notifications in Svelte apps.",
-  "repo_url": "",
-  "authors": [
-    "afreidz"
-  ],
-  "downloads": 17,
-  "dependents": 0,
-  "updated": "2024-10-23T16:16:33.051Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "@afreidz/svelte-sonner",
+	"description": "Create opinionated toast notifications in Svelte apps.",
+	"repo_url": "",
+	"authors": ["afreidz"],
+	"downloads": 17,
+	"dependents": 0,
+	"updated": "2024-10-23T16:16:33.051Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

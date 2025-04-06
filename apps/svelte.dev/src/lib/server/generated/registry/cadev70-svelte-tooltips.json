@@ -1,18 +1,19 @@
 {
-  "name": "@cadev70/svelte-tooltips",
-  "description": "Create tooltips using action wrapper for Svelte.",
-  "repo_url": "https://github.com/cadev70/svelte-tooltips",
-  "authors": [
-    "cadev70"
-  ],
-  "homepage": "https://github.com/cadev70/svelte-tooltips#readme",
-  "downloads": 0,
-  "dependents": 0,
-  "updated": "2023-06-26T11:31:55.253Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@cadev70/svelte-tooltips",
+	"description": "Create tooltips using action wrapper for Svelte.",
+	"repo_url": "https://github.com/cadev70/svelte-tooltips",
+	"authors": ["cadev70"],
+	"homepage": "https://github.com/cadev70/svelte-tooltips#readme",
+	"downloads": 0,
+	"dependents": 0,
+	"updated": "2023-06-26T11:31:55.253Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

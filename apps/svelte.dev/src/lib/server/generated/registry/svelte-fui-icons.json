@@ -1,18 +1,19 @@
 {
-  "name": "@svelte-fui/icons",
-  "description": "Integrate Fluent UI icons into Svelte-fui projects.",
-  "repo_url": "https://github.com/ryu-man/svelte-fui-icons",
-  "authors": [
-    "ryuman"
-  ],
-  "homepage": "https://github.com/ryu-man/svelte-fui-icons#readme",
-  "downloads": 1,
-  "dependents": 0,
-  "updated": "2023-05-22T20:38:00.677Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "@svelte-fui/icons",
+	"description": "Integrate Fluent UI icons into Svelte-fui projects.",
+	"repo_url": "https://github.com/ryu-man/svelte-fui-icons",
+	"authors": ["ryuman"],
+	"homepage": "https://github.com/ryu-man/svelte-fui-icons#readme",
+	"downloads": 1,
+	"dependents": 0,
+	"updated": "2023-05-22T20:38:00.677Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

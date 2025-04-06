@@ -1,16 +1,17 @@
 {
-  "name": "@ikun-ui/input-number",
-  "description": "Create input number component for Svelte.",
-  "repo_url": "",
-  "authors": [
-    "baiwusanyu"
-  ],
-  "downloads": 2,
-  "dependents": 2,
-  "updated": "2025-01-24T03:49:01.245Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@ikun-ui/input-number",
+	"description": "Create input number component for Svelte.",
+	"repo_url": "",
+	"authors": ["baiwusanyu"],
+	"downloads": 2,
+	"dependents": 2,
+	"updated": "2025-01-24T03:49:01.245Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

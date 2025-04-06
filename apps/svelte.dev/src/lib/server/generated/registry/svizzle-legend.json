@@ -1,19 +1,19 @@
 {
-  "name": "@svizzle/legend",
-  "description": "Create Svelte components for color scales and data visualization.",
-  "repo_url": "https://github.com/nestauk/svizzle",
-  "authors": [
-    "nestauk-dev",
-    "mindrones"
-  ],
-  "homepage": "https://github.com/nestauk/svizzle",
-  "downloads": 17,
-  "dependents": 2,
-  "updated": "2023-11-23T20:36:02.129Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 19
+	"name": "@svizzle/legend",
+	"description": "Create Svelte components for color scales and data visualization.",
+	"repo_url": "https://github.com/nestauk/svizzle",
+	"authors": ["nestauk-dev", "mindrones"],
+	"homepage": "https://github.com/nestauk/svizzle",
+	"downloads": 17,
+	"dependents": 2,
+	"updated": "2023-11-23T20:36:02.129Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 19,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

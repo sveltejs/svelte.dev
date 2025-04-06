@@ -1,16 +1,17 @@
 {
-  "name": "svelte-adm",
-  "description": "Generate Svelte library with sv, for building Svelte libraries.",
-  "repo_url": "",
-  "authors": [
-    "besmaili"
-  ],
-  "downloads": 66,
-  "dependents": 0,
-  "updated": "2025-03-28T17:39:26.890Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "svelte-adm",
+	"description": "Generate Svelte library with sv, for building Svelte libraries.",
+	"repo_url": "",
+	"authors": ["besmaili"],
+	"downloads": 66,
+	"dependents": 0,
+	"updated": "2025-03-28T17:39:26.890Z",
+	"tags": ["tooling"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

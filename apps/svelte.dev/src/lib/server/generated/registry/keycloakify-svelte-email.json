@@ -1,18 +1,19 @@
 {
-  "name": "@keycloakify/svelte-email",
-  "description": "Build emails with Svelte components.",
-  "repo_url": "https://github.com/keycloakify/svelte-email",
-  "authors": [
-    "garronej"
-  ],
-  "homepage": "https://github.com/keycloakify/svelte-email#readme",
-  "downloads": 0,
-  "dependents": 0,
-  "updated": "2025-01-27T06:54:54.330Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 2
+	"name": "@keycloakify/svelte-email",
+	"description": "Build emails with Svelte components.",
+	"repo_url": "https://github.com/keycloakify/svelte-email",
+	"authors": ["garronej"],
+	"homepage": "https://github.com/keycloakify/svelte-email#readme",
+	"downloads": 0,
+	"dependents": 0,
+	"updated": "2025-01-27T06:54:54.330Z",
+	"tags": ["tooling"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

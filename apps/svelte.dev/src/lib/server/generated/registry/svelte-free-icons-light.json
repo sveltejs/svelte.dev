@@ -1,18 +1,19 @@
 {
-  "name": "svelte-free-icons-light",
-  "description": "Provide Svelte icon components from free-icons set.",
-  "repo_url": "https://github.com/free-icons/svelte-free-icons",
-  "authors": [
-    "profmancusoa"
-  ],
-  "homepage": "https://github.com/free-icons/svelte-free-icons#readme",
-  "downloads": 0,
-  "dependents": 0,
-  "updated": "2025-02-16T14:50:07.377Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 3
+	"name": "svelte-free-icons-light",
+	"description": "Provide Svelte icon components from free-icons set.",
+	"repo_url": "https://github.com/free-icons/svelte-free-icons",
+	"authors": ["profmancusoa"],
+	"homepage": "https://github.com/free-icons/svelte-free-icons#readme",
+	"downloads": 0,
+	"dependents": 0,
+	"updated": "2025-02-16T14:50:07.377Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 3,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

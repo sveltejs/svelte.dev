@@ -1,18 +1,19 @@
 {
-  "name": "@gratrockstar/svelte-simple-accordion",
-  "description": "Create simple accordion component for Svelte applications.",
-  "repo_url": "https://github.com/gratrockstar/svelte-simple-accordion",
-  "authors": [
-    "gratrockstar"
-  ],
-  "homepage": "https://github.com/gratrockstar/svelte-simple-accordion#readme",
-  "downloads": 3,
-  "dependents": 0,
-  "updated": "2023-12-29T22:36:49.176Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@gratrockstar/svelte-simple-accordion",
+	"description": "Create simple accordion component for Svelte applications.",
+	"repo_url": "https://github.com/gratrockstar/svelte-simple-accordion",
+	"authors": ["gratrockstar"],
+	"homepage": "https://github.com/gratrockstar/svelte-simple-accordion#readme",
+	"downloads": 3,
+	"dependents": 0,
+	"updated": "2023-12-29T22:36:49.176Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,19 +1,19 @@
 {
-  "name": "@restspace/svelte-schema-form",
-  "description": "Generates forms from JSON schema in Svelte applications.",
-  "repo_url": "https://github.com/restspace/svelte-schema-form",
-  "authors": [
-    "restspace"
-  ],
-  "homepage": "https://github.com/restspace/svelte-schema-form#readme",
-  "downloads": 16,
-  "dependents": 0,
-  "updated": "2023-08-19T09:26:18.506Z",
-  "tags": [
-    "ui",
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 73
+	"name": "@restspace/svelte-schema-form",
+	"description": "Generates forms from JSON schema in Svelte applications.",
+	"repo_url": "https://github.com/restspace/svelte-schema-form",
+	"authors": ["restspace"],
+	"homepage": "https://github.com/restspace/svelte-schema-form#readme",
+	"downloads": 16,
+	"dependents": 0,
+	"updated": "2023-08-19T09:26:18.506Z",
+	"tags": ["ui", "miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 73,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

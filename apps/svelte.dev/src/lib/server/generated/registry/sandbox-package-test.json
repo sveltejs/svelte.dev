@@ -1,16 +1,17 @@
 {
-  "name": "sandbox-package-test",
-  "description": "Everything needed to build a Svelte library.",
-  "repo_url": "",
-  "authors": [
-    "nycolaide"
-  ],
-  "downloads": 1113,
-  "dependents": 0,
-  "updated": "2025-03-26T13:47:57.598Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "sandbox-package-test",
+	"description": "Everything needed to build a Svelte library.",
+	"repo_url": "",
+	"authors": ["nycolaide"],
+	"downloads": 1113,
+	"dependents": 0,
+	"updated": "2025-03-26T13:47:57.598Z",
+	"tags": ["miscellaneous"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

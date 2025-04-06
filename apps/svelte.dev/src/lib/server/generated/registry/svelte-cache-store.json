@@ -1,16 +1,17 @@
 {
-  "name": "svelte-cache-store",
-  "description": "Cache API data in Svelte stores, compatible with Svelte 4.",
-  "repo_url": "",
-  "authors": [
-    "joachimhskeie"
-  ],
-  "downloads": 4,
-  "dependents": 0,
-  "updated": "2024-10-12T12:16:04.512Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "svelte-cache-store",
+	"description": "Cache API data in Svelte stores, compatible with Svelte 4.",
+	"repo_url": "",
+	"authors": ["joachimhskeie"],
+	"downloads": 4,
+	"dependents": 0,
+	"updated": "2024-10-12T12:16:04.512Z",
+	"tags": ["miscellaneous"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

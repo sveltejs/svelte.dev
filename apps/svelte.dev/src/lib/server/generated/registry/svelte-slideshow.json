@@ -1,18 +1,19 @@
 {
-  "name": "svelte-slideshow",
-  "description": "Create presentations using Svelte and Reveal.js.",
-  "repo_url": "https://github.com/binsarjr/svelte-slideshow",
-  "authors": [
-    "binsarjr"
-  ],
-  "homepage": "https://github.com/binsarjr/svelte-slideshow#readme",
-  "downloads": 2,
-  "dependents": 0,
-  "updated": "2023-05-05T05:34:01.076Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 3
+	"name": "svelte-slideshow",
+	"description": "Create presentations using Svelte and Reveal.js.",
+	"repo_url": "https://github.com/binsarjr/svelte-slideshow",
+	"authors": ["binsarjr"],
+	"homepage": "https://github.com/binsarjr/svelte-slideshow#readme",
+	"downloads": 2,
+	"dependents": 0,
+	"updated": "2023-05-05T05:34:01.076Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 3,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

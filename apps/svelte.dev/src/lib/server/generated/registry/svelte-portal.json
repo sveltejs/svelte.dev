@@ -1,18 +1,19 @@
 {
-  "name": "svelte-portal",
-  "description": "Render Svelte components outside parent component's DOM.",
-  "repo_url": "https://github.com/romkor/svelte-portal",
-  "authors": [
-    "rodych"
-  ],
-  "homepage": "https://github.com/romkor/svelte-portal#readme",
-  "downloads": 21196,
-  "dependents": 53,
-  "updated": "2024-01-17T09:01:10.277Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 452
+	"name": "svelte-portal",
+	"description": "Render Svelte components outside parent component's DOM.",
+	"repo_url": "https://github.com/romkor/svelte-portal",
+	"authors": ["rodych"],
+	"homepage": "https://github.com/romkor/svelte-portal#readme",
+	"downloads": 21196,
+	"dependents": 53,
+	"updated": "2024-01-17T09:01:10.277Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 452,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

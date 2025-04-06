@@ -1,18 +1,19 @@
 {
-  "name": "svelxios",
-  "description": "Wrap Axios for use in SvelteKit applications.",
-  "repo_url": "https://github.com/hbourgeot/svex",
-  "authors": [
-    "hbourgeot"
-  ],
-  "homepage": "https://github.com/hbourgeot/svex#readme",
-  "downloads": 1,
-  "dependents": 0,
-  "updated": "2023-11-28T14:25:15.518Z",
-  "tags": [
-    "server"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 2
+	"name": "svelxios",
+	"description": "Wrap Axios for use in SvelteKit applications.",
+	"repo_url": "https://github.com/hbourgeot/svex",
+	"authors": ["hbourgeot"],
+	"homepage": "https://github.com/hbourgeot/svex#readme",
+	"downloads": 1,
+	"dependents": 0,
+	"updated": "2023-11-28T14:25:15.518Z",
+	"tags": ["server"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

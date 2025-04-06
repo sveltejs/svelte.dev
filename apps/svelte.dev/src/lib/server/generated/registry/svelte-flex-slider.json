@@ -1,16 +1,17 @@
 {
-  "name": "svelte-flex-slider",
-  "description": "Create flexible and responsive slider/carousel component.",
-  "repo_url": "",
-  "authors": [
-    "nakxa"
-  ],
-  "downloads": 12,
-  "dependents": 0,
-  "updated": "2024-10-08T17:51:51.936Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-flex-slider",
+	"description": "Create flexible and responsive slider/carousel component.",
+	"repo_url": "",
+	"authors": ["nakxa"],
+	"downloads": 12,
+	"dependents": 0,
+	"updated": "2024-10-08T17:51:51.936Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "sv-bootstrap-dropdown",
-  "description": "Create Bootstrap dropdown components for Svelte apps.",
-  "repo_url": "https://github.com/Sidd27/sv-bootstrap-dropdown",
-  "authors": [
-    "sidd27"
-  ],
-  "homepage": "https://github.com/Sidd27/sv-bootstrap-dropdown#readme",
-  "downloads": 61,
-  "dependents": 0,
-  "updated": "2020-11-16T13:20:41.652Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 11
+	"name": "sv-bootstrap-dropdown",
+	"description": "Create Bootstrap dropdown components for Svelte apps.",
+	"repo_url": "https://github.com/Sidd27/sv-bootstrap-dropdown",
+	"authors": ["sidd27"],
+	"homepage": "https://github.com/Sidd27/sv-bootstrap-dropdown#readme",
+	"downloads": 61,
+	"dependents": 0,
+	"updated": "2020-11-16T13:20:41.652Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 11,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

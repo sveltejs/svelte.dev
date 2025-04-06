@@ -1,23 +1,26 @@
 {
-  "name": "@rabee-org/svelte-popup-manager",
-  "description": "Create popups and toast notifications in Svelte apps.",
-  "repo_url": "",
-  "authors": [
-    "horietty",
-    "tata_jp",
-    "ooharamasaki",
-    "suico",
-    "juth5",
-    "mtnn_rabee",
-    "simiraaaa",
-    "phi"
-  ],
-  "downloads": 8,
-  "dependents": 0,
-  "updated": "2023-07-03T05:32:01.523Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@rabee-org/svelte-popup-manager",
+	"description": "Create popups and toast notifications in Svelte apps.",
+	"repo_url": "",
+	"authors": [
+		"horietty",
+		"tata_jp",
+		"ooharamasaki",
+		"suico",
+		"juth5",
+		"mtnn_rabee",
+		"simiraaaa",
+		"phi"
+	],
+	"downloads": 8,
+	"dependents": 0,
+	"updated": "2023-07-03T05:32:01.523Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

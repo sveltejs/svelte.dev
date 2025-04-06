@@ -1,18 +1,19 @@
 {
-  "name": "tinro5",
-  "description": "Create tiny declarative routers for Svelte 5 applications.",
-  "repo_url": "https://github.com/caracal7/tinro5",
-  "authors": [
-    "caracal7"
-  ],
-  "homepage": "https://github.com/caracal7/tinro5#readme",
-  "downloads": 174,
-  "dependents": 0,
-  "updated": "2025-03-15T12:15:03.074Z",
-  "tags": [
-    "router"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 3
+	"name": "tinro5",
+	"description": "Create tiny declarative routers for Svelte 5 applications.",
+	"repo_url": "https://github.com/caracal7/tinro5",
+	"authors": ["caracal7"],
+	"homepage": "https://github.com/caracal7/tinro5#readme",
+	"downloads": 174,
+	"dependents": 0,
+	"updated": "2025-03-15T12:15:03.074Z",
+	"tags": ["router"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 4,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

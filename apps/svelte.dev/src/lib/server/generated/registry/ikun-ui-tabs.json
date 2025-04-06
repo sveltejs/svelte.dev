@@ -1,16 +1,17 @@
 {
-  "name": "@ikun-ui/tabs",
-  "description": "Create tabbed interfaces for Svelte applications.",
-  "repo_url": "",
-  "authors": [
-    "baiwusanyu"
-  ],
-  "downloads": 2,
-  "dependents": 1,
-  "updated": "2025-01-24T03:49:23.143Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@ikun-ui/tabs",
+	"description": "Create tabbed interfaces for Svelte applications.",
+	"repo_url": "",
+	"authors": ["baiwusanyu"],
+	"downloads": 2,
+	"dependents": 1,
+	"updated": "2025-01-24T03:49:23.143Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

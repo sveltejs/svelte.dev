@@ -1,19 +1,19 @@
 {
-  "name": "@iota/is-ui-components",
-  "description": "Provide Svelte UI components for IOTA Integration Services.",
-  "repo_url": "https://github.com/iotaledger/is-ui-components",
-  "authors": [
-    "domschiener",
-    "iota_ci"
-  ],
-  "homepage": "https://github.com/iotaledger/is-ui-components#readme",
-  "downloads": 69,
-  "dependents": 0,
-  "updated": "2022-10-21T09:39:15.992Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 3
+	"name": "@iota/is-ui-components",
+	"description": "Provide Svelte UI components for IOTA Integration Services.",
+	"repo_url": "https://github.com/iotaledger/is-ui-components",
+	"authors": ["domschiener", "iota_ci"],
+	"homepage": "https://github.com/iotaledger/is-ui-components#readme",
+	"downloads": 69,
+	"dependents": 0,
+	"updated": "2022-10-21T09:39:15.992Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 3,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

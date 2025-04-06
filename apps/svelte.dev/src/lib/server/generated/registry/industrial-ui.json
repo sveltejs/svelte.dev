@@ -1,18 +1,19 @@
 {
-  "name": "industrial-ui",
-  "description": "Provides unstyled UI components for Svelte applications.",
-  "repo_url": "https://github.com/VanishMax/industrial-ui",
-  "authors": [
-    "vanishmax"
-  ],
-  "homepage": "https://github.com/VanishMax/industrial-ui#readme",
-  "downloads": 11,
-  "dependents": 0,
-  "updated": "2020-05-13T14:15:08.738Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 3
+	"name": "industrial-ui",
+	"description": "Provides unstyled UI components for Svelte applications.",
+	"repo_url": "https://github.com/VanishMax/industrial-ui",
+	"authors": ["vanishmax"],
+	"homepage": "https://github.com/VanishMax/industrial-ui#readme",
+	"downloads": 11,
+	"dependents": 0,
+	"updated": "2020-05-13T14:15:08.738Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 3,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,17 +1,17 @@
 {
-  "name": "svelte-lib-test",
-  "description": "Base for building shareable Svelte components.",
-  "repo_url": "",
-  "authors": [
-    "1ilsang"
-  ],
-  "downloads": 6,
-  "dependents": 0,
-  "updated": "2021-06-13T15:15:20.431Z",
-  "tags": [
-    "tooling",
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-lib-test",
+	"description": "Base for building shareable Svelte components.",
+	"repo_url": "",
+	"authors": ["1ilsang"],
+	"downloads": 6,
+	"dependents": 0,
+	"updated": "2021-06-13T15:15:20.431Z",
+	"tags": ["tooling", "miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

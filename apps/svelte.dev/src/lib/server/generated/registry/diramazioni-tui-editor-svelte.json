@@ -1,19 +1,19 @@
 {
-  "name": "@diramazioni/tui-editor-svelte",
-  "description": "Integrate TUI Editor, a Markdown editor, into Svelte.",
-  "repo_url": "https://github.com/diramazioni/tui-editor-svelte",
-  "authors": [
-    "diramazioni"
-  ],
-  "homepage": "https://github.com/diramazioni/tui-editor-svelte#readme",
-  "downloads": 1,
-  "dependents": 0,
-  "updated": "2024-10-31T00:38:34.938Z",
-  "tags": [
-    "content",
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 0
+	"name": "@diramazioni/tui-editor-svelte",
+	"description": "Integrate TUI Editor, a Markdown editor, into Svelte.",
+	"repo_url": "https://github.com/diramazioni/tui-editor-svelte",
+	"authors": ["diramazioni"],
+	"homepage": "https://github.com/diramazioni/tui-editor-svelte#readme",
+	"downloads": 1,
+	"dependents": 0,
+	"updated": "2024-10-31T00:38:34.938Z",
+	"tags": ["content", "ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

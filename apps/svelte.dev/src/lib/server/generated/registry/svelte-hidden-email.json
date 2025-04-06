@@ -1,18 +1,19 @@
 {
-  "name": "svelte-hidden-email",
-  "description": "Obfuscate email addresses from bots in Svelte projects.",
-  "repo_url": "https://github.com/rallisf1/svelte-hidden-email",
-  "authors": [
-    "rallisf1"
-  ],
-  "homepage": "https://github.com/rallisf1/svelte-hidden-email#readme",
-  "downloads": 7,
-  "dependents": 0,
-  "updated": "2022-05-09T09:55:17.036Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelte-hidden-email",
+	"description": "Obfuscate email addresses from bots in Svelte projects.",
+	"repo_url": "https://github.com/rallisf1/svelte-hidden-email",
+	"authors": ["rallisf1"],
+	"homepage": "https://github.com/rallisf1/svelte-hidden-email#readme",
+	"downloads": 7,
+	"dependents": 0,
+	"updated": "2022-05-09T09:55:17.036Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

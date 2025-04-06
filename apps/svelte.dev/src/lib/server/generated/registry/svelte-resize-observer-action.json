@@ -1,18 +1,19 @@
 {
-  "name": "svelte-resize-observer-action",
-  "description": "Observe element resizes in Svelte applications.",
-  "repo_url": "https://github.com/captaincodeman/svelte-resize-observer-action",
-  "authors": [
-    "captaincodeman"
-  ],
-  "homepage": "https://captaincodeman.github.io/svelte-resize-observer-action/",
-  "downloads": 706,
-  "dependents": 3,
-  "updated": "2024-04-29T20:09:13.892Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 13
+	"name": "svelte-resize-observer-action",
+	"description": "Observe element resizes in Svelte applications.",
+	"repo_url": "https://github.com/captaincodeman/svelte-resize-observer-action",
+	"authors": ["captaincodeman"],
+	"homepage": "https://captaincodeman.github.io/svelte-resize-observer-action/",
+	"downloads": 706,
+	"dependents": 3,
+	"updated": "2024-04-29T20:09:13.892Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 13,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

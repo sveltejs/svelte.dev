@@ -66,9 +66,7 @@ const FEATURED: { title: string; packages: string[]; weights?: Record<string, nu
 			'flowbite-svelte',
 			'svelte-material-ui',
 			'carbon-components-svelte',
-			'@ikun-ui/core',
-			'sveltestrap',
-			'@svelteuidev/core'
+			'@sveltestrap/sveltestrap'
 		],
 		weights: {
 			'shadcn-svelte': 2
@@ -77,21 +75,18 @@ const FEATURED: { title: string; packages: string[]; weights?: Record<string, nu
 	{
 		title: 'Individual components',
 		packages: [
-			'bits-ui',
 			'@tanstack/svelte-table',
-			'lucide-svelte',
 			'@ai-sdk/svelte',
 			'svelte-moveable',
 			'@tanstack/svelte-virtual',
 			'maska',
 			'virtua',
-			'@threlte/core',
 			'@event-calendar/core',
 			'svelte-chartjs'
 		]
 	},
 	{
-		title: 'Svelte-Kit Adapters',
+		title: 'SvelteKit adapters',
 		packages: [
 			'@sveltejs/adapter-node',
 			'@sveltejs/adapter-vercel',
@@ -106,6 +101,16 @@ const FEATURED: { title: string; packages: string[]; weights?: Record<string, nu
 			'svelte-adapter-appengine',
 			'sveltekit-adapter-browser-extension',
 			'svelte-adapter-azure-swa'
+		]
+	},
+	{
+		title: 'Icons',
+		packages: [
+			'@iconify/tailwind4',
+			'@unocss/preset-icons',
+			'lucide-svelte',
+			'svelte-awesome',
+			'phosphor-svelte'
 		]
 	},
 	{
@@ -126,7 +131,7 @@ const FEATURED: { title: string; packages: string[]; weights?: Record<string, nu
 	},
 	{
 		title: 'Data Visualization',
-		packages: ['layercake', 'layerchart', 'svelte-maplibre']
+		packages: ['layercake', 'layerchart', 'svelte-maplibre', '@xyflow/svelte', 'svelte-maplibre-gl']
 	},
 	{
 		title: '3D Rendering',
@@ -149,7 +154,13 @@ const FEATURED: { title: string; packages: string[]; weights?: Record<string, nu
 	},
 	{
 		title: 'Bundler plugins',
-		packages: ['vite-plugin-svelte', 'rollup-plugin-svelte', 'svelte-loader', 'esbuild-svelte']
+		packages: [
+			'vite-plugin-svelte',
+			'rollup-plugin-svelte',
+			'svelte-loader',
+			'esbuild-svelte',
+			'@sveltejs/vite-plugin-svelte'
+		]
 	},
 	{
 		title: 'Media',
@@ -212,16 +223,16 @@ const FEATURED: { title: string; packages: string[]; weights?: Record<string, nu
 			'@inlang/paraglide-js'
 		]
 	},
-	{
-		title: 'Testing',
-		packages: [
-			'@testing-library/svelte',
-			'svelte-jester',
-			'@cypress/svelte',
-			'playwright',
-			'vitest'
-		]
-	},
+	// {
+	// 	title: 'Testing',
+	// 	packages: [
+	// 		'@testing-library/svelte',
+	// 		'svelte-jester',
+	// 		'@cypress/svelte',
+	// 		'playwright',
+	// 		'vitest'
+	// 	]
+	// },
 	{
 		title: 'Forms',
 		packages: ['sveltekit-superforms', 'felte', 'formsnap']
@@ -237,7 +248,10 @@ const OVERRIDES = new Map<string | RegExp, boolean | number | Partial<Package>>(
 	['@astrojs/starlight', true],
 	['playwright', true],
 	['vitest', true],
-	['@inlang/paraglide-js', true]
+	['@inlang/paraglide-js', true],
+	['phosphor-svelte', true],
+	['@iconify/tailwind4', true],
+	['@unocss/preset-icons', true]
 	// [/@smui\//, true] TODO: This kind of pattern complicates things, not supported yet. Instead focusing on getting smui to add svelte to their deps/peerDeps
 ]);
 

@@ -1,19 +1,19 @@
 {
-  "name": "@grail-ui/svelte",
-  "description": "Build accessible, high-quality Svelte applications.",
-  "repo_url": "https://github.com/grail-ui/grail-ui",
-  "authors": [
-    "bekos"
-  ],
-  "homepage": "https://github.com/grail-ui/grail-ui#readme",
-  "downloads": 183,
-  "dependents": 0,
-  "updated": "2023-09-30T14:03:30.742Z",
-  "tags": [
-    "design-system",
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 382
+	"name": "@grail-ui/svelte",
+	"description": "Build accessible, high-quality Svelte applications.",
+	"repo_url": "https://github.com/grail-ui/grail-ui",
+	"authors": ["bekos"],
+	"homepage": "https://github.com/grail-ui/grail-ui#readme",
+	"downloads": 183,
+	"dependents": 0,
+	"updated": "2023-09-30T14:03:30.742Z",
+	"tags": ["design-system", "ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 382,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

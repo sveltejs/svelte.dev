@@ -1,18 +1,19 @@
 {
-  "name": "@really-headless/sv-marketing",
-  "description": "Build marketing sites with SvelteKit.",
-  "repo_url": "https://github.com/feuersteiner/sv-marketing",
-  "authors": [
-    "feuersteiner"
-  ],
-  "homepage": "https://github.com/feuersteiner/sv-marketing#readme",
-  "downloads": 283,
-  "dependents": 0,
-  "updated": "2025-03-27T21:14:43.790Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 18
+	"name": "@really-headless/sv-marketing",
+	"description": "Build marketing sites with SvelteKit.",
+	"repo_url": "https://github.com/feuersteiner/sv-marketing",
+	"authors": ["feuersteiner"],
+	"homepage": "https://github.com/feuersteiner/sv-marketing#readme",
+	"downloads": 283,
+	"dependents": 0,
+	"updated": "2025-03-27T21:14:43.790Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 18,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

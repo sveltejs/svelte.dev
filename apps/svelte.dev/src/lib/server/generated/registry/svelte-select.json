@@ -1,18 +1,19 @@
 {
-  "name": "svelte-select",
-  "description": "Create select/autocomplete/typeahead components.",
-  "repo_url": "https://rob-balfre@github.com/rob-balfre/svelte-select",
-  "authors": [
-    "rob-balfre"
-  ],
-  "homepage": "https://github.com/rob-balfre/svelte-select#readme",
-  "downloads": 29993,
-  "dependents": 49,
-  "updated": "2024-01-05T01:59:21.822Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1314
+	"name": "svelte-select",
+	"description": "Create select/autocomplete/typeahead components.",
+	"repo_url": "https://rob-balfre@github.com/rob-balfre/svelte-select",
+	"authors": ["rob-balfre"],
+	"homepage": "https://github.com/rob-balfre/svelte-select#readme",
+	"downloads": 29993,
+	"dependents": 49,
+	"updated": "2024-01-05T01:59:21.822Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1314,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

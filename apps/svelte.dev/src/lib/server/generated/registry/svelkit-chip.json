@@ -1,18 +1,19 @@
 {
-  "name": "@svelkit/chip",
-  "description": "Create chip components for Svelte applications.",
-  "repo_url": "https://github.com/kenoxa/svelkit",
-  "authors": [
-    "sastan"
-  ],
-  "homepage": "https://github.com/kenoxa/svelkit#readme",
-  "downloads": 32,
-  "dependents": 0,
-  "updated": "2020-07-15T08:56:18.757Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 7
+	"name": "@svelkit/chip",
+	"description": "Create chip components for Svelte applications.",
+	"repo_url": "https://github.com/kenoxa/svelkit",
+	"authors": ["sastan"],
+	"homepage": "https://github.com/kenoxa/svelkit#readme",
+	"downloads": 32,
+	"dependents": 0,
+	"updated": "2020-07-15T08:56:18.757Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 7,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

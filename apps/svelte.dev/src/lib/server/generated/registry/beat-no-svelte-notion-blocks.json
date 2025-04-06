@@ -1,18 +1,19 @@
 {
-  "name": "@beat-no/svelte-notion-blocks",
-  "description": "Render Notion blocks within Svelte applications.",
-  "repo_url": "https://github.com/beat-no/svelte-notion-blocks",
-  "authors": [
-    "vegard_larsen"
-  ],
-  "homepage": "https://github.com/beat-no/svelte-notion-blocks",
-  "downloads": 43,
-  "dependents": 0,
-  "updated": "2023-03-30T14:01:23.463Z",
-  "tags": [
-    "content"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 24
+	"name": "@beat-no/svelte-notion-blocks",
+	"description": "Render Notion blocks within Svelte applications.",
+	"repo_url": "https://github.com/beat-no/svelte-notion-blocks",
+	"authors": ["vegard_larsen"],
+	"homepage": "https://github.com/beat-no/svelte-notion-blocks",
+	"downloads": 43,
+	"dependents": 0,
+	"updated": "2023-03-30T14:01:23.463Z",
+	"tags": ["content"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 24,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,16 +1,17 @@
 {
-  "name": "svelte-types-writer",
-  "description": "Generate TypeScript type definitions for Svelte components.",
-  "repo_url": "",
-  "authors": [
-    "micha-lmxt"
-  ],
-  "downloads": 20,
-  "dependents": 0,
-  "updated": "2021-01-19T10:40:35.468Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-types-writer",
+	"description": "Generate TypeScript type definitions for Svelte components.",
+	"repo_url": "",
+	"authors": ["micha-lmxt"],
+	"downloads": 20,
+	"dependents": 0,
+	"updated": "2021-01-19T10:40:35.468Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "entitlement-provider-frontend",
-  "description": "Web frontend for entitlement-provider.",
-  "repo_url": "https://github.com/arlac77/entitlement-provider-frontend",
-  "authors": [
-    "arlac77"
-  ],
-  "homepage": "https://github.com/arlac77/entitlement-provider-frontend#readme",
-  "downloads": 167,
-  "dependents": 0,
-  "updated": "2024-08-01T21:58:57.486Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 1
+	"name": "entitlement-provider-frontend",
+	"description": "Web frontend for entitlement-provider.",
+	"repo_url": "https://github.com/arlac77/entitlement-provider-frontend",
+	"authors": ["arlac77"],
+	"homepage": "https://github.com/arlac77/entitlement-provider-frontend#readme",
+	"downloads": 167,
+	"dependents": 0,
+	"updated": "2024-08-01T21:58:57.486Z",
+	"tags": ["miscellaneous"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

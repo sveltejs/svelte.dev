@@ -1,18 +1,19 @@
 {
-  "name": "svelte-lazy-image-loader",
-  "description": "Load images lazily with loading animation in Svelte.",
-  "repo_url": "https://github.com/jz222/svelte-lazy-image-loader",
-  "authors": [
-    "timoz"
-  ],
-  "homepage": "https://github.com/jz222/svelte-lazy-image-loader#readme",
-  "downloads": 11,
-  "dependents": 0,
-  "updated": "2020-02-18T10:16:46.667Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 5
+	"name": "svelte-lazy-image-loader",
+	"description": "Load images lazily with loading animation in Svelte.",
+	"repo_url": "https://github.com/jz222/svelte-lazy-image-loader",
+	"authors": ["timoz"],
+	"homepage": "https://github.com/jz222/svelte-lazy-image-loader#readme",
+	"downloads": 11,
+	"dependents": 0,
+	"updated": "2020-02-18T10:16:46.667Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 5,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

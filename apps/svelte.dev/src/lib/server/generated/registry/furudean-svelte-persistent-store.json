@@ -1,18 +1,19 @@
 {
-  "name": "@furudean/svelte-persistent-store",
-  "description": "Create Svelte store saving data to localStorage or sessionStorage.",
-  "repo_url": "https://github.com/furudean/svelte-persistent-store",
-  "authors": [
-    "furudean"
-  ],
-  "homepage": "https://github.com/furudean/svelte-persistent-store#readme",
-  "downloads": 42,
-  "dependents": 0,
-  "updated": "2024-04-01T18:44:55.851Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 37
+	"name": "@furudean/svelte-persistent-store",
+	"description": "Create Svelte store saving data to localStorage or sessionStorage.",
+	"repo_url": "https://github.com/furudean/svelte-persistent-store",
+	"authors": ["furudean"],
+	"homepage": "https://github.com/furudean/svelte-persistent-store#readme",
+	"downloads": 42,
+	"dependents": 0,
+	"updated": "2024-04-01T18:44:55.851Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 37,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": false
+	}
 }

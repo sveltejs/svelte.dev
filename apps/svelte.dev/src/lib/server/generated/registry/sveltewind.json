@@ -1,17 +1,17 @@
 {
-  "name": "sveltewind",
-  "description": "Build UI with utility-first CSS framework for Svelte.",
-  "repo_url": "",
-  "authors": [
-    "bobthered"
-  ],
-  "downloads": 1,
-  "dependents": 0,
-  "updated": "2025-01-04T15:34:03.468Z",
-  "tags": [
-    "ui",
-    "design-system"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "sveltewind",
+	"description": "Build UI with utility-first CSS framework for Svelte.",
+	"repo_url": "",
+	"authors": ["bobthered"],
+	"downloads": 1,
+	"dependents": 0,
+	"updated": "2025-01-04T15:34:03.468Z",
+	"tags": ["ui", "design-system"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

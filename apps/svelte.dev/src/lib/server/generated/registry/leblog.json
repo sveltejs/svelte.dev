@@ -1,18 +1,19 @@
 {
-  "name": "leblog",
-  "description": "Adds a blog or changelog to SvelteKit sites.",
-  "repo_url": "https://github.com/nbgoodall/leblog",
-  "authors": [
-    "nickgoodall"
-  ],
-  "homepage": "https://leblog.dev",
-  "downloads": 21,
-  "dependents": 0,
-  "updated": "2024-02-04T17:41:51.552Z",
-  "tags": [
-    "content"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "leblog",
+	"description": "Adds a blog or changelog to SvelteKit sites.",
+	"repo_url": "https://github.com/nbgoodall/leblog",
+	"authors": ["nickgoodall"],
+	"homepage": "https://leblog.dev",
+	"downloads": 21,
+	"dependents": 0,
+	"updated": "2024-02-04T17:41:51.552Z",
+	"tags": ["content"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

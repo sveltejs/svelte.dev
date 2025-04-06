@@ -1,17 +1,18 @@
 {
-  "name": "svelte-toaster",
-  "description": "Display toast notifications in Svelte applications.",
-  "repo_url": "https://github.com/captaincodeman/svelte-toaster",
-  "authors": [
-    "captaincodeman"
-  ],
-  "homepage": "https://captaincodeman.github.io/svelte-toaster",
-  "downloads": 2,
-  "dependents": 0,
-  "updated": "2024-04-29T19:46:29.475Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "svelte-toaster",
+	"description": "Display toast notifications in Svelte applications.",
+	"repo_url": "https://github.com/captaincodeman/svelte-toaster",
+	"authors": ["captaincodeman"],
+	"homepage": "https://captaincodeman.github.io/svelte-toaster",
+	"downloads": 2,
+	"dependents": 0,
+	"updated": "2024-04-29T19:46:29.475Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": true
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "svelte-type-checker",
-  "description": "Check Svelte components for problems using Typescript.",
-  "repo_url": "https://github.com/halfnelson/svelte-type-checker",
-  "authors": [
-    "halfnelson"
-  ],
-  "homepage": "https://github.com/halfnelson/svelte-type-checker",
-  "downloads": 11,
-  "dependents": 0,
-  "updated": "2019-12-08T06:25:14.188Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 99
+	"name": "svelte-type-checker",
+	"description": "Check Svelte components for problems using Typescript.",
+	"repo_url": "https://github.com/halfnelson/svelte-type-checker",
+	"authors": ["halfnelson"],
+	"homepage": "https://github.com/halfnelson/svelte-type-checker",
+	"downloads": 11,
+	"dependents": 0,
+	"updated": "2019-12-08T06:25:14.188Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 99,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

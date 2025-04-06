@@ -1,18 +1,19 @@
 {
-  "name": "svelte-csv",
-  "description": "Parse and generate CSV files in Svelte apps.",
-  "repo_url": "https://github.com/Bunlong/svelte-csv",
-  "authors": [
-    "bunlong"
-  ],
-  "homepage": "https://github.com/Bunlong/svelte-csv",
-  "downloads": 96,
-  "dependents": 0,
-  "updated": "2022-02-14T17:53:33.830Z",
-  "tags": [
-    "content"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 12
+	"name": "svelte-csv",
+	"description": "Parse and generate CSV files in Svelte apps.",
+	"repo_url": "https://github.com/Bunlong/svelte-csv",
+	"authors": ["bunlong"],
+	"homepage": "https://github.com/Bunlong/svelte-csv",
+	"downloads": 96,
+	"dependents": 0,
+	"updated": "2022-02-14T17:53:33.830Z",
+	"tags": ["content"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 12,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

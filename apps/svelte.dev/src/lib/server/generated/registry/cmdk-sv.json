@@ -1,16 +1,17 @@
 {
-  "name": "cmdk-sv",
-  "description": "Provides a command menu and accessible combobox for Svelte.",
-  "repo_url": "",
-  "authors": [
-    "huntabyte"
-  ],
-  "downloads": 38616,
-  "dependents": 17,
-  "updated": "2025-03-14T15:56:46.882Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "cmdk-sv",
+	"description": "Provides a command menu and accessible combobox for Svelte.",
+	"repo_url": "",
+	"authors": ["huntabyte"],
+	"downloads": 38616,
+	"dependents": 17,
+	"updated": "2025-03-14T15:56:46.882Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": true
+	}
 }

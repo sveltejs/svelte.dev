@@ -1,18 +1,18 @@
 {
-  "name": "svelte-dragdroplist-clickable",
-  "description": "Create sortable lists with Svelte, touch-friendly, and accessible.",
-  "repo_url": "",
-  "authors": [
-    "rohitmeshramd",
-    "rohitmeshramcodeb"
-  ],
-  "homepage": "https://github.com/rohitmeshramD/svelte-dragdroplist",
-  "downloads": 3,
-  "dependents": 0,
-  "updated": "2022-11-18T13:06:32.460Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-dragdroplist-clickable",
+	"description": "Create sortable lists with Svelte, touch-friendly, and accessible.",
+	"repo_url": "",
+	"authors": ["rohitmeshramd", "rohitmeshramcodeb"],
+	"homepage": "https://github.com/rohitmeshramD/svelte-dragdroplist",
+	"downloads": 3,
+	"dependents": 0,
+	"updated": "2022-11-18T13:06:32.460Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

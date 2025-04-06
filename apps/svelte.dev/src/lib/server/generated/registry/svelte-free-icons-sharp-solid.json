@@ -1,18 +1,19 @@
 {
-  "name": "svelte-free-icons-sharp-solid",
-  "description": "Provide Svelte components for free-icons sharp solid icons.",
-  "repo_url": "https://github.com/free-icons/svelte-free-icons",
-  "authors": [
-    "profmancusoa"
-  ],
-  "homepage": "https://github.com/free-icons/svelte-free-icons#readme",
-  "downloads": 1,
-  "dependents": 0,
-  "updated": "2025-02-09T10:46:10.313Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 3
+	"name": "svelte-free-icons-sharp-solid",
+	"description": "Provide Svelte components for free-icons sharp solid icons.",
+	"repo_url": "https://github.com/free-icons/svelte-free-icons",
+	"authors": ["profmancusoa"],
+	"homepage": "https://github.com/free-icons/svelte-free-icons#readme",
+	"downloads": 1,
+	"dependents": 0,
+	"updated": "2025-02-09T10:46:10.313Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 3,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

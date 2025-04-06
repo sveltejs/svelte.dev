@@ -1,18 +1,19 @@
 {
-  "name": "@untemps/svelte-palette",
-  "description": "Displays customizable color picker component for Svelte.",
-  "repo_url": "https://github.com/untemps/svelte-palette",
-  "authors": [
-    "untemps"
-  ],
-  "homepage": "https://svelte-palette.vercel.app",
-  "downloads": 313,
-  "dependents": 0,
-  "updated": "2024-02-29T10:00:11.025Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 28
+	"name": "@untemps/svelte-palette",
+	"description": "Displays customizable color picker component for Svelte.",
+	"repo_url": "https://github.com/untemps/svelte-palette",
+	"authors": ["untemps"],
+	"homepage": "https://svelte-palette.vercel.app",
+	"downloads": 313,
+	"dependents": 0,
+	"updated": "2024-02-29T10:00:11.025Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 28,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

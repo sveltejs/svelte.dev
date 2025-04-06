@@ -1,18 +1,19 @@
 {
-  "name": "@omysoul/svelte-song-display",
-  "description": "Display lyrics in Svelte, one verse at a time.",
-  "repo_url": "https://github.com/philholden/svelte-song-display",
-  "authors": [
-    "omysoul"
-  ],
-  "homepage": "https://ipfs.infura.io/ipfs/QmciYNTJzeKcEMWTYvNhcRErKvGVXMSbevvfgVhCLT7T2j/",
-  "downloads": 174,
-  "dependents": 0,
-  "updated": "2020-09-05T06:23:08.112Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "@omysoul/svelte-song-display",
+	"description": "Display lyrics in Svelte, one verse at a time.",
+	"repo_url": "https://github.com/philholden/svelte-song-display",
+	"authors": ["omysoul"],
+	"homepage": "https://ipfs.infura.io/ipfs/QmciYNTJzeKcEMWTYvNhcRErKvGVXMSbevvfgVhCLT7T2j/",
+	"downloads": 174,
+	"dependents": 0,
+	"updated": "2020-09-05T06:23:08.112Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

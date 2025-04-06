@@ -1,18 +1,19 @@
 {
-  "name": "union-design-system",
-  "description": "Create scalable design architecture in Svelte.",
-  "repo_url": "https://github.com/jamespatrickgibson/union",
-  "authors": [
-    "jamespatrickgibson"
-  ],
-  "homepage": "https://github.com/jamespatrickgibson/union#readme",
-  "downloads": 10,
-  "dependents": 0,
-  "updated": "2020-05-19T22:22:18.844Z",
-  "tags": [
-    "design-system"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 2
+	"name": "union-design-system",
+	"description": "Create scalable design architecture in Svelte.",
+	"repo_url": "https://github.com/jamespatrickgibson/union",
+	"authors": ["jamespatrickgibson"],
+	"homepage": "https://github.com/jamespatrickgibson/union#readme",
+	"downloads": 10,
+	"dependents": 0,
+	"updated": "2020-05-19T22:22:18.844Z",
+	"tags": ["design-system"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

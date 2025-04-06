@@ -1,18 +1,19 @@
 {
-  "name": "svelte-heros-v2",
-  "description": "Use Heroicons v2 in Svelte applications.",
-  "repo_url": "https://github.com/shinokada/svelte-heros-v2",
-  "authors": [
-    "shinichiokada"
-  ],
-  "homepage": "https://svelte-heros-v2.codewithshin.com/",
-  "downloads": 2950,
-  "dependents": 0,
-  "updated": "2024-10-25T14:39:08.466Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 47
+	"name": "svelte-heros-v2",
+	"description": "Use Heroicons v2 in Svelte applications.",
+	"repo_url": "https://github.com/shinokada/svelte-heros-v2",
+	"authors": ["shinichiokada"],
+	"homepage": "https://svelte-heros-v2.codewithshin.com/",
+	"downloads": 2950,
+	"dependents": 0,
+	"updated": "2024-10-25T14:39:08.466Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 47,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

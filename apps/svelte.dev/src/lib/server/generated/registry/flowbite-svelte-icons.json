@@ -1,18 +1,19 @@
 {
-  "name": "flowbite-svelte-icons",
-  "description": "Use Flowbite SVG icons in Svelte apps.",
-  "repo_url": "https://github.com/themesberg/flowbite-svelte-icons",
-  "authors": [
-    "shinichiokada"
-  ],
-  "homepage": "https://flowbite-svelte-icons.codewithshin.com/",
-  "downloads": 26540,
-  "dependents": 17,
-  "updated": "2025-03-23T05:32:08.827Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 73
+	"name": "flowbite-svelte-icons",
+	"description": "Use Flowbite SVG icons in Svelte apps.",
+	"repo_url": "https://github.com/themesberg/flowbite-svelte-icons",
+	"authors": ["shinichiokada"],
+	"homepage": "https://flowbite-svelte-icons.codewithshin.com/",
+	"downloads": 26540,
+	"dependents": 17,
+	"updated": "2025-03-23T05:32:08.827Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 73,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

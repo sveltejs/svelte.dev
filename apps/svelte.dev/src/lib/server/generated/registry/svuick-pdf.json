@@ -1,17 +1,18 @@
 {
-  "name": "@svuick/pdf",
-  "description": "Generate PDF documents within SvelteKit applications.",
-  "repo_url": "https://gitlab.com/david-plugge/svuick",
-  "authors": [
-    "davidplugge"
-  ],
-  "homepage": "https://gitlab.com/david-plugge/svuick#readme",
-  "downloads": 6,
-  "dependents": 0,
-  "updated": "2022-07-29T15:09:34.737Z",
-  "tags": [
-    "content"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@svuick/pdf",
+	"description": "Generate PDF documents within SvelteKit applications.",
+	"repo_url": "https://gitlab.com/david-plugge/svuick",
+	"authors": ["davidplugge"],
+	"homepage": "https://gitlab.com/david-plugge/svuick#readme",
+	"downloads": 6,
+	"dependents": 0,
+	"updated": "2022-07-29T15:09:34.737Z",
+	"tags": ["content"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,19 +1,19 @@
 {
-  "name": "headless-audioplayer-svelte",
-  "description": "Provide unstyled audio player wrapper for Svelte apps.",
-  "repo_url": "https://github.com/JosueRhea/headless-audioplayer",
-  "authors": [
-    "josuerhea"
-  ],
-  "homepage": "https://headless-audioplayer.vercel.app",
-  "downloads": 6,
-  "dependents": 0,
-  "updated": "2023-04-30T03:07:29.487Z",
-  "tags": [
-    "ui",
-    "media"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 6
+	"name": "headless-audioplayer-svelte",
+	"description": "Provide unstyled audio player wrapper for Svelte apps.",
+	"repo_url": "https://github.com/JosueRhea/headless-audioplayer",
+	"authors": ["josuerhea"],
+	"homepage": "https://headless-audioplayer.vercel.app",
+	"downloads": 6,
+	"dependents": 0,
+	"updated": "2023-04-30T03:07:29.487Z",
+	"tags": ["ui", "media"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 6,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

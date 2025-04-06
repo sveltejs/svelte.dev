@@ -1,18 +1,19 @@
 {
-  "name": "sveldoc",
-  "description": "Generate documentation from Svelte component Readme files.",
-  "repo_url": "https://github.com/metonym/sveldoc",
-  "authors": [
-    "metonym"
-  ],
-  "homepage": "https://github.com/metonym/sveldoc",
-  "downloads": 0,
-  "dependents": 0,
-  "updated": "2022-09-03T22:31:52.248Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "sveldoc",
+	"description": "Generate documentation from Svelte component Readme files.",
+	"repo_url": "https://github.com/metonym/sveldoc",
+	"authors": ["metonym"],
+	"homepage": "https://github.com/metonym/sveldoc",
+	"downloads": 0,
+	"dependents": 0,
+	"updated": "2022-09-03T22:31:52.248Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

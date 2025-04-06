@@ -1,18 +1,19 @@
 {
-  "name": "vite-plugin-svelte-ssr-hot",
-  "description": "Compile Svelte components with Vite, supporting HMR and SSR.",
-  "repo_url": "https://github.com/jiangfengming/vite-plugin-svelte-ssr-hot",
-  "authors": [
-    "jiangfengming"
-  ],
-  "homepage": "https://github.com/jiangfengming/vite-plugin-svelte-ssr-hot#readme",
-  "downloads": 8,
-  "dependents": 0,
-  "updated": "2021-04-25T09:10:35.972Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 0
+	"name": "vite-plugin-svelte-ssr-hot",
+	"description": "Compile Svelte components with Vite, supporting HMR and SSR.",
+	"repo_url": "https://github.com/jiangfengming/vite-plugin-svelte-ssr-hot",
+	"authors": ["jiangfengming"],
+	"homepage": "https://github.com/jiangfengming/vite-plugin-svelte-ssr-hot#readme",
+	"downloads": 8,
+	"dependents": 0,
+	"updated": "2021-04-25T09:10:35.972Z",
+	"tags": ["tooling"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": true
+	}
 }

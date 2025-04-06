@@ -1,18 +1,19 @@
 {
-  "name": "sveltejs-forms",
-  "description": "Build declarative forms with validation for Svelte.",
-  "repo_url": "https://github.com/mdauner/sveltejs-forms",
-  "authors": [
-    "mdauner"
-  ],
-  "homepage": "https://mdauner.github.io/sveltejs-forms/",
-  "downloads": 948,
-  "dependents": 0,
-  "updated": "2020-09-05T16:46:05.508Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 197
+	"name": "sveltejs-forms",
+	"description": "Build declarative forms with validation for Svelte.",
+	"repo_url": "https://github.com/mdauner/sveltejs-forms",
+	"authors": ["mdauner"],
+	"homepage": "https://mdauner.github.io/sveltejs-forms/",
+	"downloads": 948,
+	"dependents": 0,
+	"updated": "2020-09-05T16:46:05.508Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 197,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

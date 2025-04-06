@@ -1,16 +1,17 @@
 {
-  "name": "feature-sliced-svelte",
-  "description": "Maintain Svelte projects using Feature Sliced Design.",
-  "repo_url": "",
-  "authors": [
-    "mishamyrt"
-  ],
-  "downloads": 11,
-  "dependents": 0,
-  "updated": "2023-11-14T16:55:03.217Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "feature-sliced-svelte",
+	"description": "Maintain Svelte projects using Feature Sliced Design.",
+	"repo_url": "",
+	"authors": ["mishamyrt"],
+	"downloads": 11,
+	"dependents": 0,
+	"updated": "2023-11-14T16:55:03.217Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

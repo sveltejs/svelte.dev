@@ -1,18 +1,19 @@
 {
-  "name": "svelte-infinite-viewer",
-  "description": "Create infinite scrolling document viewers in Svelte.",
-  "repo_url": "https://github.com/daybrush/infinite-viewer",
-  "authors": [
-    "younkue"
-  ],
-  "homepage": "https://daybrush.com/infinite-viewer",
-  "downloads": 80,
-  "dependents": 0,
-  "updated": "2023-10-31T17:13:57.479Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 313
+	"name": "svelte-infinite-viewer",
+	"description": "Create infinite scrolling document viewers in Svelte.",
+	"repo_url": "https://github.com/daybrush/infinite-viewer",
+	"authors": ["younkue"],
+	"homepage": "https://daybrush.com/infinite-viewer",
+	"downloads": 80,
+	"dependents": 0,
+	"updated": "2023-10-31T17:13:57.479Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 313,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

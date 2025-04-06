@@ -1,18 +1,19 @@
 {
-  "name": "@iconslib/svelte",
-  "description": "Provide open source icons for Svelte projects.",
-  "repo_url": "https://github.com/iconslib/svelte",
-  "authors": [
-    "bitkidd"
-  ],
-  "homepage": "https://iconslib.com/frameworks/svelte",
-  "downloads": 27,
-  "dependents": 1,
-  "updated": "2024-07-20T20:25:14.428Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 4
+	"name": "@iconslib/svelte",
+	"description": "Provide open source icons for Svelte projects.",
+	"repo_url": "https://github.com/iconslib/svelte",
+	"authors": ["bitkidd"],
+	"homepage": "https://iconslib.com/frameworks/svelte",
+	"downloads": 27,
+	"dependents": 1,
+	"updated": "2024-07-20T20:25:14.428Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 4,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": true
+	}
 }

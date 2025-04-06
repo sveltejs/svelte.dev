@@ -1,16 +1,17 @@
 {
-  "name": "@htmlbricks/hb-input-range",
-  "description": "Svelte-Bootstrap Number Input WebComponent.",
-  "repo_url": "",
-  "authors": [
-    "dariocaruso"
-  ],
-  "downloads": 68,
-  "dependents": 1,
-  "updated": "2025-03-24T18:07:16.424Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@htmlbricks/hb-input-range",
+	"description": "Svelte-Bootstrap Number Input WebComponent.",
+	"repo_url": "",
+	"authors": ["dariocaruso"],
+	"downloads": 68,
+	"dependents": 1,
+	"updated": "2025-03-24T18:07:16.424Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	}
 }

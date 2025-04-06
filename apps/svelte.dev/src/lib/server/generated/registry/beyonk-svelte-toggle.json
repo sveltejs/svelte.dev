@@ -1,21 +1,17 @@
 {
-  "name": "@beyonk/svelte-toggle",
-  "description": "Create toggle component for Svelte.",
-  "repo_url": "",
-  "authors": [
-    "antony",
-    "adampond",
-    "alex.dilley",
-    "jedwoodcock",
-    "leandro.silva",
-    "tomlewis0"
-  ],
-  "downloads": 6,
-  "dependents": 0,
-  "updated": "2021-12-02T13:42:31.145Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@beyonk/svelte-toggle",
+	"description": "Create toggle component for Svelte.",
+	"repo_url": "",
+	"authors": ["antony", "adampond", "alex.dilley", "jedwoodcock", "leandro.silva", "tomlewis0"],
+	"downloads": 6,
+	"dependents": 0,
+	"updated": "2021-12-02T13:42:31.145Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

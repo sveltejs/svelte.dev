@@ -1,19 +1,19 @@
 {
-  "name": "svelte-autocomplete-table",
-  "description": "Create tables with autocomplete, sorting, and filtering.",
-  "repo_url": "https://github.com/Krishnan555/svelte-autocomplete-table",
-  "authors": [
-    "krishnan555"
-  ],
-  "homepage": "https://github.com/Krishnan555/svelte-autocomplete-table#readme",
-  "downloads": 11,
-  "dependents": 0,
-  "updated": "2020-08-01T16:53:48.673Z",
-  "tags": [
-    "ui",
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelte-autocomplete-table",
+	"description": "Create tables with autocomplete, sorting, and filtering.",
+	"repo_url": "https://github.com/Krishnan555/svelte-autocomplete-table",
+	"authors": ["krishnan555"],
+	"homepage": "https://github.com/Krishnan555/svelte-autocomplete-table#readme",
+	"downloads": 11,
+	"dependents": 0,
+	"updated": "2020-08-01T16:53:48.673Z",
+	"tags": ["ui", "miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

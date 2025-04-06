@@ -1,18 +1,19 @@
 {
-  "name": "theui-sveltekit",
-  "description": "Provides accessible SvelteKit component library with TailwindCSS.",
-  "repo_url": "https://github.com/mbparvezme/theui-svelte",
-  "authors": [
-    "mbparvez"
-  ],
-  "homepage": "https://www.theui.dev/r/skc",
-  "downloads": 1,
-  "dependents": 1,
-  "updated": "2024-05-23T20:10:39.463Z",
-  "tags": [
-    "design-system"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 4
+	"name": "theui-sveltekit",
+	"description": "Provides accessible SvelteKit component library with TailwindCSS.",
+	"repo_url": "https://github.com/mbparvezme/theui-svelte",
+	"authors": ["mbparvez"],
+	"homepage": "https://www.theui.dev/r/skc",
+	"downloads": 1,
+	"dependents": 1,
+	"updated": "2024-05-23T20:10:39.463Z",
+	"tags": ["design-system"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 4,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

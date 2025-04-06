@@ -1,18 +1,19 @@
 {
-  "name": "katai",
-  "description": "Create simple, lightweight state management for Svelte 5 applications.",
-  "repo_url": "https://github.com/srav001/katai",
-  "authors": [
-    "sravan-suresh"
-  ],
-  "homepage": "https://github.com/srav001/katai#readme",
-  "downloads": 16,
-  "dependents": 0,
-  "updated": "2024-03-10T13:59:39.441Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 17
+	"name": "katai",
+	"description": "Create simple, lightweight state management for Svelte 5 applications.",
+	"repo_url": "https://github.com/srav001/katai",
+	"authors": ["sravan-suresh"],
+	"homepage": "https://github.com/srav001/katai#readme",
+	"downloads": 16,
+	"dependents": 0,
+	"updated": "2024-03-10T13:59:39.441Z",
+	"tags": ["miscellaneous"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 17,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

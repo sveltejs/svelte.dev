@@ -1,19 +1,19 @@
 {
-  "name": "@hellocoop/svelte-otp",
-  "description": "Create OTP input component for Svelte applications.",
-  "repo_url": "https://github.com/hellocoop/svelte-otp",
-  "authors": [
-    "rohanharikr",
-    "dickhardt"
-  ],
-  "homepage": "https://github.com/hellocoop/svelte-otp#readme",
-  "downloads": 16,
-  "dependents": 0,
-  "updated": "2024-05-17T12:09:40.288Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@hellocoop/svelte-otp",
+	"description": "Create OTP input component for Svelte applications.",
+	"repo_url": "https://github.com/hellocoop/svelte-otp",
+	"authors": ["rohanharikr", "dickhardt"],
+	"homepage": "https://github.com/hellocoop/svelte-otp#readme",
+	"downloads": 16,
+	"dependents": 0,
+	"updated": "2024-05-17T12:09:40.288Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

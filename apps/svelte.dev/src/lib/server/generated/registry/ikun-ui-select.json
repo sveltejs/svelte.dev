@@ -1,16 +1,17 @@
 {
-  "name": "@ikun-ui/select",
-  "description": "Create select components for Svelte.",
-  "repo_url": "",
-  "authors": [
-    "baiwusanyu"
-  ],
-  "downloads": 1,
-  "dependents": 3,
-  "updated": "2025-01-24T03:49:17.234Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@ikun-ui/select",
+	"description": "Create select components for Svelte.",
+	"repo_url": "",
+	"authors": ["baiwusanyu"],
+	"downloads": 1,
+	"dependents": 3,
+	"updated": "2025-01-24T03:49:17.234Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

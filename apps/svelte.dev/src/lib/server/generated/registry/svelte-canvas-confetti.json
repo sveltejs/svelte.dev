@@ -1,18 +1,19 @@
 {
-  "name": "svelte-canvas-confetti",
-  "description": "Adds canvas-based confetti effects to Svelte applications.",
-  "repo_url": "https://github.com/andreasmcdermott/svelte-canvas-confetti",
-  "authors": [
-    "andreasmcdermott"
-  ],
-  "homepage": "https://github.com/andreasmcdermott/svelte-canvas-confetti#readme",
-  "downloads": 208,
-  "dependents": 0,
-  "updated": "2022-09-16T06:52:34.667Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 19
+	"name": "svelte-canvas-confetti",
+	"description": "Adds canvas-based confetti effects to Svelte applications.",
+	"repo_url": "https://github.com/andreasmcdermott/svelte-canvas-confetti",
+	"authors": ["andreasmcdermott"],
+	"homepage": "https://github.com/andreasmcdermott/svelte-canvas-confetti#readme",
+	"downloads": 208,
+	"dependents": 0,
+	"updated": "2022-09-16T06:52:34.667Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 19,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

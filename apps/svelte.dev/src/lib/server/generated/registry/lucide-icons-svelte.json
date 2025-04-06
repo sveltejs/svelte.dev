@@ -1,18 +1,19 @@
 {
-  "name": "lucide-icons-svelte",
-  "description": "Import Lucide icons as Svelte components, customize size, color, stroke.",
-  "repo_url": "https://github.com/ElectronicBlueberry/svelte-lucide-icons",
-  "authors": [
-    "electronicblueberry"
-  ],
-  "homepage": "https://github.com/ElectronicBlueberry/svelte-lucide-icons#readme",
-  "downloads": 36,
-  "dependents": 0,
-  "updated": "2021-11-28T19:05:46.594Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "lucide-icons-svelte",
+	"description": "Import Lucide icons as Svelte components, customize size, color, stroke.",
+	"repo_url": "https://github.com/ElectronicBlueberry/svelte-lucide-icons",
+	"authors": ["electronicblueberry"],
+	"homepage": "https://github.com/ElectronicBlueberry/svelte-lucide-icons#readme",
+	"downloads": 36,
+	"dependents": 0,
+	"updated": "2021-11-28T19:05:46.594Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

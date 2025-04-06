@@ -1,18 +1,19 @@
 {
-  "name": "sveltekit-stripe",
-  "description": "Integrate Stripe Elements into SvelteKit applications.",
-  "repo_url": "https://github.com/pevey/sveltekit-stripe",
-  "authors": [
-    "pevey"
-  ],
-  "homepage": "https://pevey.com/sveltekit-stripe",
-  "downloads": 25,
-  "dependents": 0,
-  "updated": "2024-03-30T13:22:57.386Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 11
+	"name": "sveltekit-stripe",
+	"description": "Integrate Stripe Elements into SvelteKit applications.",
+	"repo_url": "https://github.com/pevey/sveltekit-stripe",
+	"authors": ["pevey"],
+	"homepage": "https://pevey.com/sveltekit-stripe",
+	"downloads": 25,
+	"dependents": 0,
+	"updated": "2024-03-30T13:22:57.386Z",
+	"tags": ["integration"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 11,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

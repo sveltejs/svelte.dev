@@ -1,18 +1,19 @@
 {
-  "name": "@rodoch/svelte-i18n",
-  "description": "Provides internationalization support for Svelte applications.",
-  "repo_url": "https://github.com/rodoch/svelte-i18n",
-  "authors": [
-    "rodoch"
-  ],
-  "homepage": "https://github.com/rodoch/svelte-i18n#readme",
-  "downloads": 6,
-  "dependents": 0,
-  "updated": "2020-03-19T11:26:03.215Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@rodoch/svelte-i18n",
+	"description": "Provides internationalization support for Svelte applications.",
+	"repo_url": "https://github.com/rodoch/svelte-i18n",
+	"authors": ["rodoch"],
+	"homepage": "https://github.com/rodoch/svelte-i18n#readme",
+	"downloads": 6,
+	"dependents": 0,
+	"updated": "2020-03-19T11:26:03.215Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

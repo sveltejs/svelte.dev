@@ -1,18 +1,19 @@
 {
-  "name": "@efstajas/svelte-stored-writable",
-  "description": "Store and restore data from localstorage automatically.",
-  "repo_url": "https://github.com/efstajas/svelte-stored-writable",
-  "authors": [
-    "efstajas"
-  ],
-  "homepage": "https://github.com/efstajas/svelte-stored-writable#readme",
-  "downloads": 184,
-  "dependents": 0,
-  "updated": "2024-09-24T10:38:21.548Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 45
+	"name": "@efstajas/svelte-stored-writable",
+	"description": "Store and restore data from localstorage automatically.",
+	"repo_url": "https://github.com/efstajas/svelte-stored-writable",
+	"authors": ["efstajas"],
+	"homepage": "https://github.com/efstajas/svelte-stored-writable#readme",
+	"downloads": 184,
+	"dependents": 0,
+	"updated": "2024-09-24T10:38:21.548Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 45,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

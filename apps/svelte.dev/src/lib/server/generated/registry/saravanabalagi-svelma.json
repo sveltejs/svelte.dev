@@ -1,19 +1,19 @@
 {
-  "name": "@saravanabalagi/svelma",
-  "description": "Bulma components for Svelte applications.",
-  "repo_url": "https://github.com/saravanabalagi/svelma",
-  "authors": [
-    "saravanabalagi"
-  ],
-  "homepage": "https://github.com/saravanabalagi/svelma#readme",
-  "downloads": 4,
-  "dependents": 0,
-  "updated": "2023-01-09T05:59:04.079Z",
-  "tags": [
-    "design-system",
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 2
+	"name": "@saravanabalagi/svelma",
+	"description": "Bulma components for Svelte applications.",
+	"repo_url": "https://github.com/saravanabalagi/svelma",
+	"authors": ["saravanabalagi"],
+	"homepage": "https://github.com/saravanabalagi/svelma#readme",
+	"downloads": 4,
+	"dependents": 0,
+	"updated": "2023-01-09T05:59:04.079Z",
+	"tags": ["design-system", "ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,19 +1,19 @@
 {
-  "name": "@brewer/beerui",
-  "description": "Provides Svelte UI components.",
-  "repo_url": "https://github.com/beerui/BeerUi",
-  "authors": [
-    "beerer",
-    "beer-ui"
-  ],
-  "homepage": "https://github.com/beerui/BeerUi",
-  "downloads": 3,
-  "dependents": 1,
-  "updated": "2023-08-08T10:34:44.735Z",
-  "tags": [
-    "design-system"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 86
+	"name": "@brewer/beerui",
+	"description": "Provides Svelte UI components.",
+	"repo_url": "https://github.com/beerui/BeerUi",
+	"authors": ["beerer", "beer-ui"],
+	"homepage": "https://github.com/beerui/BeerUi",
+	"downloads": 3,
+	"dependents": 1,
+	"updated": "2023-08-08T10:34:44.735Z",
+	"tags": ["design-system"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 86,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

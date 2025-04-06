@@ -1,18 +1,19 @@
 {
-  "name": "cloudstream",
-  "description": "Embed Cloudflare Stream videos in Svelte apps.",
-  "repo_url": "https://github.com/GreenestGoat/cloudstream",
-  "authors": [
-    "greenestgoat"
-  ],
-  "homepage": "https://github.com/GreenestGoat/cloudstream",
-  "downloads": 7,
-  "dependents": 0,
-  "updated": "2025-03-09T19:27:51.399Z",
-  "tags": [
-    "media"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 1
+	"name": "cloudstream",
+	"description": "Embed Cloudflare Stream videos in Svelte apps.",
+	"repo_url": "https://github.com/GreenestGoat/cloudstream",
+	"authors": ["greenestgoat"],
+	"homepage": "https://github.com/GreenestGoat/cloudstream",
+	"downloads": 7,
+	"dependents": 0,
+	"updated": "2025-03-09T19:27:51.399Z",
+	"tags": ["media"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

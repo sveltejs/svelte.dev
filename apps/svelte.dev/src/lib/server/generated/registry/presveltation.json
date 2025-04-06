@@ -1,18 +1,19 @@
 {
-  "name": "presveltation",
-  "description": "Build interactive presentations and slideshows with Svelte and Tailwind.",
-  "repo_url": "https://github.com/bennymi/presveltation",
-  "authors": [
-    "bennymi"
-  ],
-  "homepage": "https://presveltation.vercel.app/",
-  "downloads": 2,
-  "dependents": 0,
-  "updated": "2023-02-27T11:45:58.813Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 49
+	"name": "presveltation",
+	"description": "Build interactive presentations and slideshows with Svelte and Tailwind.",
+	"repo_url": "https://github.com/bennymi/presveltation",
+	"authors": ["bennymi"],
+	"homepage": "https://presveltation.vercel.app/",
+	"downloads": 2,
+	"dependents": 0,
+	"updated": "2023-02-27T11:45:58.813Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 49,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

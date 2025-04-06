@@ -1,21 +1,19 @@
 {
-  "name": "@sveltejs/svelte-repl",
-  "description": "Provides the <Repl> component used on the Svelte website.",
-  "repo_url": "https://github.com/sveltejs/svelte-repl",
-  "authors": [
-    "rich_harris",
-    "svelte-admin",
-    "conduitry",
-    "dominik_g"
-  ],
-  "homepage": "https://github.com/sveltejs/svelte-repl#readme",
-  "downloads": 246,
-  "dependents": 0,
-  "updated": "2021-12-02T20:58:48.819Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 276
+	"name": "@sveltejs/svelte-repl",
+	"description": "Provides the <Repl> component used on the Svelte website.",
+	"repo_url": "https://github.com/sveltejs/svelte-repl",
+	"authors": ["rich_harris", "svelte-admin", "conduitry", "dominik_g"],
+	"homepage": "https://github.com/sveltejs/svelte-repl#readme",
+	"downloads": 246,
+	"dependents": 0,
+	"updated": "2021-12-02T20:58:48.819Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 276,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

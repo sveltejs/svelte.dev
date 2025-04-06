@@ -1,21 +1,17 @@
 {
-  "name": "@beyonk/gdpr-cookie-consent-banner",
-  "description": "Create GDPR cookie consent banner for Svelte/Kit applications.",
-  "repo_url": "",
-  "authors": [
-    "antony",
-    "adampond",
-    "alex.dilley",
-    "jedwoodcock",
-    "leandro.silva",
-    "tomlewis0"
-  ],
-  "downloads": 586,
-  "dependents": 1,
-  "updated": "2025-03-04T10:16:39.901Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "@beyonk/gdpr-cookie-consent-banner",
+	"description": "Create GDPR cookie consent banner for Svelte/Kit applications.",
+	"repo_url": "",
+	"authors": ["antony", "adampond", "alex.dilley", "jedwoodcock", "leandro.silva", "tomlewis0"],
+	"downloads": 586,
+	"dependents": 1,
+	"updated": "2025-03-04T10:16:39.901Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

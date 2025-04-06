@@ -1,19 +1,19 @@
 {
-  "name": "@enkitek/sveltestrap",
-  "description": "Bootstrap 5 components for Svelte applications.",
-  "repo_url": "https://github.com/ENKI-Technologies-S-L/enki-sveltestrap",
-  "authors": [
-    "shebinpr",
-    "maheshenkitek"
-  ],
-  "homepage": "https://github.com/ENKI-Technologies-S-L/enki-sveltestrap#readme",
-  "downloads": 10,
-  "dependents": 0,
-  "updated": "2024-08-16T05:36:13.858Z",
-  "tags": [
-    "design-system"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@enkitek/sveltestrap",
+	"description": "Bootstrap 5 components for Svelte applications.",
+	"repo_url": "https://github.com/ENKI-Technologies-S-L/enki-sveltestrap",
+	"authors": ["shebinpr", "maheshenkitek"],
+	"homepage": "https://github.com/ENKI-Technologies-S-L/enki-sveltestrap#readme",
+	"downloads": 10,
+	"dependents": 0,
+	"updated": "2024-08-16T05:36:13.858Z",
+	"tags": ["design-system"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

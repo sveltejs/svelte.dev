@@ -1,18 +1,19 @@
 {
-  "name": "@macfja/svelte-scroll-video",
-  "description": "Play video by scrolling page with Svelte component.",
-  "repo_url": "https://github.com/macfja/svelte-scroll-video",
-  "authors": [
-    "macfja"
-  ],
-  "homepage": "https://github.com/macfja/svelte-scroll-video#readme",
-  "downloads": 4,
-  "dependents": 0,
-  "updated": "2022-10-17T16:23:31.904Z",
-  "tags": [
-    "media"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 4
+	"name": "@macfja/svelte-scroll-video",
+	"description": "Play video by scrolling page with Svelte component.",
+	"repo_url": "https://github.com/macfja/svelte-scroll-video",
+	"authors": ["macfja"],
+	"homepage": "https://github.com/macfja/svelte-scroll-video#readme",
+	"downloads": 4,
+	"dependents": 0,
+	"updated": "2022-10-17T16:23:31.904Z",
+	"tags": ["media"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 4,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

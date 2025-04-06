@@ -1,27 +1,30 @@
 {
-  "name": "@egjs/svelte-flicking",
-  "description": "Create reliable, flexible, and extendable carousels.",
-  "repo_url": "https://github.com/naver/egjs-flicking",
-  "authors": [
-    "ajaxpf",
-    "jongmoon",
-    "sculove",
-    "happyhj",
-    "anuu0916",
-    "mixed",
-    "netil",
-    "younkue",
-    "woodneck",
-    "braixen"
-  ],
-  "homepage": "https://naver.github.io/egjs-flicking/",
-  "downloads": 120,
-  "dependents": 0,
-  "updated": "2024-12-06T10:11:02.542Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 2831
+	"name": "@egjs/svelte-flicking",
+	"description": "Create reliable, flexible, and extendable carousels.",
+	"repo_url": "https://github.com/naver/egjs-flicking",
+	"authors": [
+		"ajaxpf",
+		"jongmoon",
+		"sculove",
+		"happyhj",
+		"anuu0916",
+		"mixed",
+		"netil",
+		"younkue",
+		"woodneck",
+		"braixen"
+	],
+	"homepage": "https://naver.github.io/egjs-flicking/",
+	"downloads": 120,
+	"dependents": 0,
+	"updated": "2024-12-06T10:11:02.542Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 2833,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

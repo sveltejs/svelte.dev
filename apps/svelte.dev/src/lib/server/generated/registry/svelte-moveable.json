@@ -1,18 +1,19 @@
 {
-  "name": "svelte-moveable",
-  "description": "Enables draggable, resizable, scalable, rotatable elements.",
-  "repo_url": "https://github.com/daybrush/moveable",
-  "authors": [
-    "younkue"
-  ],
-  "homepage": "https://daybrush.com/moveable",
-  "downloads": 1198,
-  "dependents": 9,
-  "updated": "2023-12-03T13:48:06.920Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 10303
+	"name": "svelte-moveable",
+	"description": "Enables draggable, resizable, scalable, rotatable elements.",
+	"repo_url": "https://github.com/daybrush/moveable",
+	"authors": ["younkue"],
+	"homepage": "https://daybrush.com/moveable",
+	"downloads": 1198,
+	"dependents": 9,
+	"updated": "2023-12-03T13:48:06.920Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 10303,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": false
+	}
 }

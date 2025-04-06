@@ -1,18 +1,19 @@
 {
-  "name": "svelte-hover-draw-svg",
-  "description": "Draws SVG elements on hover using Svelte.",
-  "repo_url": "https://github.com/davipon/svelte-hover-draw-svg",
-  "authors": [
-    "davipon"
-  ],
-  "homepage": "https://github.com/davipon/svelte-hover-draw-svg#readme",
-  "downloads": 22,
-  "dependents": 0,
-  "updated": "2023-03-28T15:40:25.598Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 25
+	"name": "svelte-hover-draw-svg",
+	"description": "Draws SVG elements on hover using Svelte.",
+	"repo_url": "https://github.com/davipon/svelte-hover-draw-svg",
+	"authors": ["davipon"],
+	"homepage": "https://github.com/davipon/svelte-hover-draw-svg#readme",
+	"downloads": 22,
+	"dependents": 0,
+	"updated": "2023-03-28T15:40:25.598Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 25,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

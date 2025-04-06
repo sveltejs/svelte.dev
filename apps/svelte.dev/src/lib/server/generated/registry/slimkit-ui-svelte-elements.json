@@ -1,16 +1,17 @@
 {
-  "name": "@slimkit-ui/svelte-elements",
-  "description": "Provide Svelte UI elements and components.",
-  "repo_url": "",
-  "authors": [
-    "zirconlabz"
-  ],
-  "downloads": 14,
-  "dependents": 0,
-  "updated": "2022-08-31T10:32:45.999Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@slimkit-ui/svelte-elements",
+	"description": "Provide Svelte UI elements and components.",
+	"repo_url": "",
+	"authors": ["zirconlabz"],
+	"downloads": 14,
+	"dependents": 0,
+	"updated": "2022-08-31T10:32:45.999Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

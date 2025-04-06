@@ -240,6 +240,10 @@
 
 		min-height: 16em;
 
+		&:hover {
+			filter: drop-shadow(0.2rem, 0.4rem, 1rem rgb(0 0 0 / 0.1));
+		}
+
 		a {
 			display: block;
 			text-decoration: none;
@@ -283,6 +287,12 @@
 			color: var(--sk-fg-3);
 			margin: 0 0 0.5em 0;
 			flex: 1;
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			line-clamp: 2;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			max-height: 2lh;
 			/* max-width: calc(100% - var(--sidebar-width)); */
 		}
 	}

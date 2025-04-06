@@ -1,18 +1,19 @@
 {
-  "name": "@sveu/shared",
-  "description": "Provides shared utilities for Svelte utility libraries.",
-  "repo_url": "https://github.com/svelte-u/shared",
-  "authors": [
-    "mohamed-kaizen"
-  ],
-  "homepage": "https://github.com/svelte-u/shared#readme",
-  "downloads": 94,
-  "dependents": 3,
-  "updated": "2023-07-03T11:54:34.297Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 5
+	"name": "@sveu/shared",
+	"description": "Provides shared utilities for Svelte utility libraries.",
+	"repo_url": "https://github.com/svelte-u/shared",
+	"authors": ["mohamed-kaizen"],
+	"homepage": "https://github.com/svelte-u/shared#readme",
+	"downloads": 94,
+	"dependents": 3,
+	"updated": "2023-07-03T11:54:34.297Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 5,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

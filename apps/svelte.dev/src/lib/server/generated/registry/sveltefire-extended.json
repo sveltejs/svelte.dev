@@ -1,16 +1,17 @@
 {
-  "name": "sveltefire-extended",
-  "description": "Improved SvelteFire for Firebase integration.",
-  "repo_url": "",
-  "authors": [
-    "digital-daniel"
-  ],
-  "downloads": 7,
-  "dependents": 0,
-  "updated": "2023-02-18T08:07:19.403Z",
-  "tags": [
-    "server"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "sveltefire-extended",
+	"description": "Improved SvelteFire for Firebase integration.",
+	"repo_url": "",
+	"authors": ["digital-daniel"],
+	"downloads": 7,
+	"dependents": 0,
+	"updated": "2023-02-18T08:07:19.403Z",
+	"tags": ["server"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

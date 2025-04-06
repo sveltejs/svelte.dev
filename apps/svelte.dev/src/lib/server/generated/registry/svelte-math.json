@@ -1,16 +1,17 @@
 {
-  "name": "svelte-math",
-  "description": "Render math equations using MathML and Temml in Svelte components.",
-  "repo_url": "",
-  "authors": [
-    "kelvinsjk"
-  ],
-  "downloads": 1,
-  "dependents": 0,
-  "updated": "2024-08-27T03:31:11.663Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "svelte-math",
+	"description": "Render math equations using MathML and Temml in Svelte components.",
+	"repo_url": "",
+	"authors": ["kelvinsjk"],
+	"downloads": 1,
+	"dependents": 0,
+	"updated": "2024-08-27T03:31:11.663Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

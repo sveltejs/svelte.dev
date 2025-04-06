@@ -1,18 +1,19 @@
 {
-  "name": "@proicons/svelte",
-  "description": "Provides customizable icon components for Svelte apps.",
-  "repo_url": "https://github.com/ProCode-Software/proicons",
-  "authors": [
-    "procode-software"
-  ],
-  "homepage": "https://github.com/ProCode-Software/proicons/tree/main/packages/proicons-svelte",
-  "downloads": 4,
-  "dependents": 0,
-  "updated": "2025-02-12T22:36:20.339Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 7
+	"name": "@proicons/svelte",
+	"description": "Provides customizable icon components for Svelte apps.",
+	"repo_url": "https://github.com/ProCode-Software/proicons",
+	"authors": ["procode-software"],
+	"homepage": "https://github.com/ProCode-Software/proicons/tree/main/packages/proicons-svelte",
+	"downloads": 4,
+	"dependents": 0,
+	"updated": "2025-02-12T22:36:20.339Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 7,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

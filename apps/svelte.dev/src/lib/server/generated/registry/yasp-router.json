@@ -1,17 +1,18 @@
 {
-  "name": "yasp-router",
-  "description": "Implement routing for Svelte applications.",
-  "repo_url": "",
-  "authors": [
-    "dievardump"
-  ],
-  "homepage": "https://github.com/dievardump/yasp-router",
-  "downloads": 8,
-  "dependents": 0,
-  "updated": "2020-08-23T15:51:24.067Z",
-  "tags": [
-    "router"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "yasp-router",
+	"description": "Implement routing for Svelte applications.",
+	"repo_url": "",
+	"authors": ["dievardump"],
+	"homepage": "https://github.com/dievardump/yasp-router",
+	"downloads": 8,
+	"dependents": 0,
+	"updated": "2020-08-23T15:51:24.067Z",
+	"tags": ["router"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,16 +1,17 @@
 {
-  "name": "@tagnumelite/svelte-chartjs",
-  "description": "Create Chart.JS charts using Svelte components.",
-  "authors": [
-    "tagnumelite"
-  ],
-  "homepage": "https://github.com/TagnumElite/tagnumelite-svelte-chartjs",
-  "downloads": 1,
-  "dependents": 0,
-  "updated": "2024-12-31T23:29:08.021Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "@tagnumelite/svelte-chartjs",
+	"description": "Create Chart.JS charts using Svelte components.",
+	"authors": ["tagnumelite"],
+	"homepage": "https://github.com/TagnumElite/tagnumelite-svelte-chartjs",
+	"downloads": 1,
+	"dependents": 0,
+	"updated": "2024-12-31T23:29:08.021Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

@@ -1,17 +1,18 @@
 {
-  "name": "@crypto-pepe/pepekit",
-  "description": "Develop UI/UX components for Svelte with PepeKit.",
-  "repo_url": "https://github.com/crypto-pepe/pepekit",
-  "authors": [
-    "stupid_boar"
-  ],
-  "homepage": "https://github.com/crypto-pepe/pepekit#readme",
-  "downloads": 249,
-  "dependents": 0,
-  "updated": "2022-01-11T20:04:31.903Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@crypto-pepe/pepekit",
+	"description": "Develop UI/UX components for Svelte with PepeKit.",
+	"repo_url": "https://github.com/crypto-pepe/pepekit",
+	"authors": ["stupid_boar"],
+	"homepage": "https://github.com/crypto-pepe/pepekit#readme",
+	"downloads": 249,
+	"dependents": 0,
+	"updated": "2022-01-11T20:04:31.903Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

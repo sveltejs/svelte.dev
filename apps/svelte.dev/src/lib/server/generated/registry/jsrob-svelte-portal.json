@@ -1,18 +1,19 @@
 {
-  "name": "@jsrob/svelte-portal",
-  "description": "Render children into different part of DOM using Svelte.",
-  "repo_url": "https://github.com/wobsoriano/svelte-portal",
-  "authors": [
-    "wobsoriano"
-  ],
-  "homepage": "https://github.com/wobsoriano/svelte-portal#readme",
-  "downloads": 376,
-  "dependents": 0,
-  "updated": "2024-10-21T21:24:37.566Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 12
+	"name": "@jsrob/svelte-portal",
+	"description": "Render children into different part of DOM using Svelte.",
+	"repo_url": "https://github.com/wobsoriano/svelte-portal",
+	"authors": ["wobsoriano"],
+	"homepage": "https://github.com/wobsoriano/svelte-portal#readme",
+	"downloads": 376,
+	"dependents": 0,
+	"updated": "2024-10-21T21:24:37.566Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 12,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

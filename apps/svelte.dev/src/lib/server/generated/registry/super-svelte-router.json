@@ -1,18 +1,19 @@
 {
-  "name": "super-svelte-router",
-  "description": "Provides a powerful, easy-to-use router for Svelte.",
-  "repo_url": "https://github.com/AliBasicCoder/super-svelte-router",
-  "authors": [
-    "ali_ahmed"
-  ],
-  "homepage": "https://github.com/AliBasicCoder/super-svelte-router#readme",
-  "downloads": 6,
-  "dependents": 0,
-  "updated": "2022-06-24T16:38:34.987Z",
-  "tags": [
-    "router"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 2
+	"name": "super-svelte-router",
+	"description": "Provides a powerful, easy-to-use router for Svelte.",
+	"repo_url": "https://github.com/AliBasicCoder/super-svelte-router",
+	"authors": ["ali_ahmed"],
+	"homepage": "https://github.com/AliBasicCoder/super-svelte-router#readme",
+	"downloads": 6,
+	"dependents": 0,
+	"updated": "2022-06-24T16:38:34.987Z",
+	"tags": ["router"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

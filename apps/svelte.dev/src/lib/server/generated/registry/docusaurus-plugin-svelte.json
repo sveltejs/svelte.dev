@@ -1,17 +1,18 @@
 {
-  "name": "docusaurus-plugin-svelte",
-  "description": "Enables Docusaurus to render Svelte components in MDX files.",
-  "repo_url": "https://github.com/akkumar/docusaurus-plugin-svelte",
-  "authors": [
-    "hellokarthik"
-  ],
-  "homepage": "https://github.com/akkumar/docusaurus-plugin-svelte#readme",
-  "downloads": 13,
-  "dependents": 0,
-  "updated": "2021-12-06T16:16:10.257Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "docusaurus-plugin-svelte",
+	"description": "Enables Docusaurus to render Svelte components in MDX files.",
+	"repo_url": "https://github.com/akkumar/docusaurus-plugin-svelte",
+	"authors": ["hellokarthik"],
+	"homepage": "https://github.com/akkumar/docusaurus-plugin-svelte#readme",
+	"downloads": 13,
+	"dependents": 0,
+	"updated": "2021-12-06T16:16:10.257Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

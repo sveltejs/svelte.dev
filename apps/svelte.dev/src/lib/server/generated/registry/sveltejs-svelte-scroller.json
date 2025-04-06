@@ -1,21 +1,19 @@
 {
-  "name": "@sveltejs/svelte-scroller",
-  "description": "Create scroll-based components for Svelte apps.",
-  "repo_url": "https://github.com/sveltejs/svelte-scroller",
-  "authors": [
-    "dominik_g",
-    "rich_harris",
-    "svelte-admin",
-    "conduitry"
-  ],
-  "homepage": "https://github.com/sveltejs/svelte-scroller#readme",
-  "downloads": 690,
-  "dependents": 8,
-  "updated": "2021-06-10T04:13:51.114Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 358
+	"name": "@sveltejs/svelte-scroller",
+	"description": "Create scroll-based components for Svelte apps.",
+	"repo_url": "https://github.com/sveltejs/svelte-scroller",
+	"authors": ["dominik_g", "rich_harris", "svelte-admin", "conduitry"],
+	"homepage": "https://github.com/sveltejs/svelte-scroller#readme",
+	"downloads": 690,
+	"dependents": 8,
+	"updated": "2021-06-10T04:13:51.114Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 358,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

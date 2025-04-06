@@ -1,18 +1,19 @@
 {
-  "name": "@huntabyte/mdsvex",
-  "description": "Process Markdown with Svelte components using MDsveX.",
-  "repo_url": "https://github.com/huntabyte/MDsveX",
-  "authors": [
-    "huntabyte"
-  ],
-  "homepage": "https://github.com/huntabyte/MDsveX#readme",
-  "downloads": 442,
-  "dependents": 0,
-  "updated": "2023-08-01T15:13:31.096Z",
-  "tags": [
-    "content"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@huntabyte/mdsvex",
+	"description": "Process Markdown with Svelte components using MDsveX.",
+	"repo_url": "https://github.com/huntabyte/MDsveX",
+	"authors": ["huntabyte"],
+	"homepage": "https://github.com/huntabyte/MDsveX#readme",
+	"downloads": 442,
+	"dependents": 0,
+	"updated": "2023-08-01T15:13:31.096Z",
+	"tags": ["content"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "svelte-fluid-layout",
-  "description": "Create responsive layouts for Svelte apps with ease.",
-  "repo_url": "https://github.com/collardeau/svelte-fluid-layout",
-  "authors": [
-    "collardeau"
-  ],
-  "homepage": "https://github.com/collardeau/svelte-fluid-layout#readme",
-  "downloads": 8,
-  "dependents": 0,
-  "updated": "2019-10-12T15:09:45.581Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 8
+	"name": "svelte-fluid-layout",
+	"description": "Create responsive layouts for Svelte apps with ease.",
+	"repo_url": "https://github.com/collardeau/svelte-fluid-layout",
+	"authors": ["collardeau"],
+	"homepage": "https://github.com/collardeau/svelte-fluid-layout#readme",
+	"downloads": 8,
+	"dependents": 0,
+	"updated": "2019-10-12T15:09:45.581Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 8,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

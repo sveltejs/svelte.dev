@@ -1,19 +1,19 @@
 {
-  "name": "@rodrigodagostino/svelte-sortable-list",
-  "description": "Create accessible, sortable lists with drag-and-drop in Svelte.",
-  "repo_url": "https://github.com/rodrigodagostino/svelte-sortable-list",
-  "authors": [
-    "rodrigodagostino"
-  ],
-  "homepage": "https://github.com/rodrigodagostino/svelte-sortable-list#readme",
-  "downloads": 97,
-  "dependents": 0,
-  "updated": "2025-02-05T02:12:11.651Z",
-  "tags": [
-    "ui",
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 23
+	"name": "@rodrigodagostino/svelte-sortable-list",
+	"description": "Create accessible, sortable lists with drag-and-drop in Svelte.",
+	"repo_url": "https://github.com/rodrigodagostino/svelte-sortable-list",
+	"authors": ["rodrigodagostino"],
+	"homepage": "https://github.com/rodrigodagostino/svelte-sortable-list#readme",
+	"downloads": 97,
+	"dependents": 0,
+	"updated": "2025-02-05T02:12:11.651Z",
+	"tags": ["ui", "miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 23,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

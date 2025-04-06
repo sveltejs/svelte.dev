@@ -1,18 +1,19 @@
 {
-  "name": "@eraviart/svelte-json-tree",
-  "description": "View and explore JSON data within Svelte applications.",
-  "repo_url": "https://github.com/eraviart/svelte-json-tree",
-  "authors": [
-    "eraviart"
-  ],
-  "homepage": "https://github.com/eraviart/svelte-json-tree#readme",
-  "downloads": 19,
-  "dependents": 0,
-  "updated": "2022-04-02T21:27:14.109Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@eraviart/svelte-json-tree",
+	"description": "View and explore JSON data within Svelte applications.",
+	"repo_url": "https://github.com/eraviart/svelte-json-tree",
+	"authors": ["eraviart"],
+	"homepage": "https://github.com/eraviart/svelte-json-tree#readme",
+	"downloads": 19,
+	"dependents": 0,
+	"updated": "2022-04-02T21:27:14.109Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

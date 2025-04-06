@@ -1,18 +1,19 @@
 {
-  "name": "svelte-swipe-cards",
-  "description": "Create Tinder-like swipe card interfaces in Svelte applications.",
-  "repo_url": "https://github.com/remoflury/svelte-swipe-cards",
-  "authors": [
-    "fluryr"
-  ],
-  "homepage": "https://github.com/remoflury/svelte-swipe-cards#readme",
-  "downloads": 14,
-  "dependents": 0,
-  "updated": "2024-08-26T13:17:11.268Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 2
+	"name": "svelte-swipe-cards",
+	"description": "Create Tinder-like swipe card interfaces in Svelte applications.",
+	"repo_url": "https://github.com/remoflury/svelte-swipe-cards",
+	"authors": ["fluryr"],
+	"homepage": "https://github.com/remoflury/svelte-swipe-cards#readme",
+	"downloads": 14,
+	"dependents": 0,
+	"updated": "2024-08-26T13:17:11.268Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

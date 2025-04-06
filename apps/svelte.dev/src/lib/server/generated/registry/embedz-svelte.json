@@ -1,18 +1,19 @@
 {
-  "name": "@embedz/svelte",
-  "description": "Embed YouTube, Vimeo, and Dailymotion videos easily.",
-  "repo_url": "https://github.com/embedz/embedz",
-  "authors": [
-    "greenestgoat"
-  ],
-  "homepage": "https://github.com/embedz/embedz",
-  "downloads": 117,
-  "dependents": 0,
-  "updated": "2025-03-21T21:08:50.224Z",
-  "tags": [
-    "media"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 17
+	"name": "@embedz/svelte",
+	"description": "Embed YouTube, Vimeo, and Dailymotion videos easily.",
+	"repo_url": "https://github.com/embedz/embedz",
+	"authors": ["greenestgoat"],
+	"homepage": "https://github.com/embedz/embedz",
+	"downloads": 117,
+	"dependents": 0,
+	"updated": "2025-03-21T21:08:50.224Z",
+	"tags": ["media"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 17,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

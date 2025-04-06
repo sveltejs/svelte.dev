@@ -1,18 +1,19 @@
 {
-  "name": "kilo-ui",
-  "description": "Develop UI with Kilo UI component library for Svelte.",
-  "repo_url": "https://github.com/kiloOhm/kilo-ui",
-  "authors": [
-    "kiloohm"
-  ],
-  "homepage": "https://kiloui.com",
-  "downloads": 10,
-  "dependents": 0,
-  "updated": "2023-04-17T07:36:48.474Z",
-  "tags": [
-    "design-system"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "kilo-ui",
+	"description": "Develop UI with Kilo UI component library for Svelte.",
+	"repo_url": "https://github.com/kiloOhm/kilo-ui",
+	"authors": ["kiloohm"],
+	"homepage": "https://kiloui.com",
+	"downloads": 10,
+	"dependents": 0,
+	"updated": "2023-04-17T07:36:48.474Z",
+	"tags": ["design-system"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

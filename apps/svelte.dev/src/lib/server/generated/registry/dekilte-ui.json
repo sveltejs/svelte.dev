@@ -1,18 +1,19 @@
 {
-  "name": "dekilte-ui",
-  "description": "Offers a UI component library for Svelte.",
-  "repo_url": "https://github.com/Daiki48/dekilte-ui",
-  "authors": [
-    "daiki48"
-  ],
-  "homepage": "https://github.com/Daiki48/dekilte-ui#readme",
-  "downloads": 7,
-  "dependents": 0,
-  "updated": "2023-12-27T14:02:20.466Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "dekilte-ui",
+	"description": "Offers a UI component library for Svelte.",
+	"repo_url": "https://github.com/Daiki48/dekilte-ui",
+	"authors": ["daiki48"],
+	"homepage": "https://github.com/Daiki48/dekilte-ui#readme",
+	"downloads": 7,
+	"dependents": 0,
+	"updated": "2023-12-27T14:02:20.466Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

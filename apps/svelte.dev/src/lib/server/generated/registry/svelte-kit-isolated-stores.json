@@ -1,17 +1,18 @@
 {
-  "name": "svelte-kit-isolated-stores",
-  "description": "Use stores in SvelteKit during SSR without modifying server state.",
-  "repo_url": "https://gitlab.com/x3ro/svelte-kit-isolated-stores",
-  "authors": [
-    "x3ro"
-  ],
-  "homepage": "https://gitlab.com/x3ro/svelte-kit-isolated-stores#readme",
-  "downloads": 3,
-  "dependents": 0,
-  "updated": "2022-07-18T12:59:10.550Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-kit-isolated-stores",
+	"description": "Use stores in SvelteKit during SSR without modifying server state.",
+	"repo_url": "https://gitlab.com/x3ro/svelte-kit-isolated-stores",
+	"authors": ["x3ro"],
+	"homepage": "https://gitlab.com/x3ro/svelte-kit-isolated-stores#readme",
+	"downloads": 3,
+	"dependents": 0,
+	"updated": "2022-07-18T12:59:10.550Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,16 +1,17 @@
 {
-  "name": "svekyll-cli",
-  "description": "Generate static blogs using Svelte and Markdown.",
-  "repo_url": "",
-  "authors": [
-    "chris"
-  ],
-  "downloads": 133,
-  "dependents": 0,
-  "updated": "2025-02-27T20:55:19.722Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svekyll-cli",
+	"description": "Generate static blogs using Svelte and Markdown.",
+	"repo_url": "",
+	"authors": ["chris"],
+	"downloads": 133,
+	"dependents": 0,
+	"updated": "2025-02-27T20:55:19.722Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

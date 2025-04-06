@@ -1,21 +1,19 @@
 {
-  "name": "@sveltejs/adapter-cloudflare",
-  "description": "Deploy SvelteKit apps to Cloudflare Pages.",
-  "repo_url": "https://github.com/sveltejs/kit",
-  "authors": [
-    "rich_harris",
-    "svelte-admin",
-    "conduitry",
-    "dominik_g"
-  ],
-  "homepage": "https://svelte.dev",
-  "downloads": 63821,
-  "dependents": 3,
-  "updated": "2025-03-22T15:29:49.767Z",
-  "tags": [
-    "adapter"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 19167
+	"name": "@sveltejs/adapter-cloudflare",
+	"description": "Deploy SvelteKit apps to Cloudflare Pages.",
+	"repo_url": "https://github.com/sveltejs/kit",
+	"authors": ["rich_harris", "svelte-admin", "conduitry", "dominik_g"],
+	"homepage": "https://svelte.dev",
+	"downloads": 63821,
+	"dependents": 3,
+	"updated": "2025-03-22T15:29:49.767Z",
+	"tags": ["adapter"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 19168,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	}
 }

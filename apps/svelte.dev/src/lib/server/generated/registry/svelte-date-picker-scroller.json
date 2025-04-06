@@ -1,18 +1,19 @@
 {
-  "name": "svelte-date-picker-scroller",
-  "description": "Create scrollable date picker component for Svelte.",
-  "repo_url": "https://github.com/jayeshpatil594/svelte-date-picker-scroller",
-  "authors": [
-    "jayeshpatil594"
-  ],
-  "homepage": "https://github.com/jayeshpatil594/svelte-date-picker-scroller",
-  "downloads": 1,
-  "dependents": 0,
-  "updated": "2024-02-19T10:14:01.306Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelte-date-picker-scroller",
+	"description": "Create scrollable date picker component for Svelte.",
+	"repo_url": "https://github.com/jayeshpatil594/svelte-date-picker-scroller",
+	"authors": ["jayeshpatil594"],
+	"homepage": "https://github.com/jayeshpatil594/svelte-date-picker-scroller",
+	"downloads": 1,
+	"dependents": 0,
+	"updated": "2024-02-19T10:14:01.306Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "@sveadmin/element",
-  "description": "Provide helper components for dynamic admin pages in Svelte.",
-  "repo_url": "https://github.com/sveadmin/element",
-  "authors": [
-    "mkufferstein"
-  ],
-  "homepage": "https://github.com/sveadmin/element#readme",
-  "downloads": 5,
-  "dependents": 1,
-  "updated": "2023-08-06T16:23:15.478Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@sveadmin/element",
+	"description": "Provide helper components for dynamic admin pages in Svelte.",
+	"repo_url": "https://github.com/sveadmin/element",
+	"authors": ["mkufferstein"],
+	"homepage": "https://github.com/sveadmin/element#readme",
+	"downloads": 5,
+	"dependents": 1,
+	"updated": "2023-08-06T16:23:15.478Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

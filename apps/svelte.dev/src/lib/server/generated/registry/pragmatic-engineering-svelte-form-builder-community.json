@@ -1,18 +1,19 @@
 {
-  "name": "@pragmatic-engineering/svelte-form-builder-community",
-  "description": "Drag and drop form builder library for Svelte.",
-  "repo_url": "https://github.com/pragmatic-engineering/svelte-form-builder-community",
-  "authors": [
-    "jojoshua"
-  ],
-  "homepage": "https://github.com/pragmatic-engineering/svelte-form-builder-community#readme",
-  "downloads": 14,
-  "dependents": 0,
-  "updated": "2023-06-05T01:44:11.592Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 73
+	"name": "@pragmatic-engineering/svelte-form-builder-community",
+	"description": "Drag and drop form builder library for Svelte.",
+	"repo_url": "https://github.com/pragmatic-engineering/svelte-form-builder-community",
+	"authors": ["jojoshua"],
+	"homepage": "https://github.com/pragmatic-engineering/svelte-form-builder-community#readme",
+	"downloads": 14,
+	"dependents": 0,
+	"updated": "2023-06-05T01:44:11.592Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 73,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

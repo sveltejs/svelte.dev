@@ -1,18 +1,19 @@
 {
-  "name": "svelte-rc-knob",
-  "description": "Implement highly customizable knob component for Svelte.",
-  "repo_url": "https://github.com/rjt-rockx/svelte-rc-knob",
-  "authors": [
-    "rjt_rockx"
-  ],
-  "homepage": "https://github.com/rjt-rockx/svelte-rc-knob#readme",
-  "downloads": 17,
-  "dependents": 0,
-  "updated": "2025-03-12T10:05:23.223Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelte-rc-knob",
+	"description": "Implement highly customizable knob component for Svelte.",
+	"repo_url": "https://github.com/rjt-rockx/svelte-rc-knob",
+	"authors": ["rjt_rockx"],
+	"homepage": "https://github.com/rjt-rockx/svelte-rc-knob#readme",
+	"downloads": 17,
+	"dependents": 0,
+	"updated": "2025-03-12T10:05:23.223Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

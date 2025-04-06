@@ -1,18 +1,19 @@
 {
-  "name": "beet-root-red",
-  "description": "Provides Svelte component library.",
-  "repo_url": "https://github.com/sudhanshuydv11/beet-root-red",
-  "authors": [
-    "sudhanshuydv11"
-  ],
-  "homepage": "https://github.com/sudhanshuydv11/beet-root-red#readme",
-  "downloads": 4,
-  "dependents": 0,
-  "updated": "2025-03-11T16:15:54.794Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "beet-root-red",
+	"description": "Provides Svelte component library.",
+	"repo_url": "https://github.com/sudhanshuydv11/beet-root-red",
+	"authors": ["sudhanshuydv11"],
+	"homepage": "https://github.com/sudhanshuydv11/beet-root-red#readme",
+	"downloads": 4,
+	"dependents": 0,
+	"updated": "2025-03-11T16:15:54.794Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

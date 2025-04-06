@@ -1,18 +1,19 @@
 {
-  "name": "svelte-reader",
-  "description": "Embed EPUB reader into Svelte apps.",
-  "repo_url": "https://github.com/jinhuan138/svelte-reader",
-  "authors": [
-    "jinhuan"
-  ],
-  "homepage": "https://jinhuan138.github.io/svelte-reader/docs/",
-  "downloads": 13,
-  "dependents": 0,
-  "updated": "2025-01-08T05:55:25.895Z",
-  "tags": [
-    "content"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 2
+	"name": "svelte-reader",
+	"description": "Embed EPUB reader into Svelte apps.",
+	"repo_url": "https://github.com/jinhuan138/svelte-reader",
+	"authors": ["jinhuan"],
+	"homepage": "https://jinhuan138.github.io/svelte-reader/docs/",
+	"downloads": 13,
+	"dependents": 0,
+	"updated": "2025-01-08T05:55:25.895Z",
+	"tags": ["content"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

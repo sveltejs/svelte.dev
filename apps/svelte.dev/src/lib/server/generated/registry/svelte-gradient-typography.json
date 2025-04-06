@@ -1,18 +1,19 @@
 {
-  "name": "svelte-gradient-typography",
-  "description": "Apply gradient typography to Svelte text elements.",
-  "repo_url": "https://github.com/thetrisatria/svelte-gradient-typography",
-  "authors": [
-    "thetrisatria"
-  ],
-  "homepage": "https://github.com/thetrisatria/svelte-gradient-typography#readme",
-  "downloads": 9,
-  "dependents": 0,
-  "updated": "2021-01-21T11:08:38.718Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 2
+	"name": "svelte-gradient-typography",
+	"description": "Apply gradient typography to Svelte text elements.",
+	"repo_url": "https://github.com/thetrisatria/svelte-gradient-typography",
+	"authors": ["thetrisatria"],
+	"homepage": "https://github.com/thetrisatria/svelte-gradient-typography#readme",
+	"downloads": 9,
+	"dependents": 0,
+	"updated": "2021-01-21T11:08:38.718Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

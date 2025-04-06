@@ -1,18 +1,19 @@
 {
-  "name": "svelte-hash-router",
-  "description": "Implement hash-based routing for Svelte applications.",
-  "repo_url": "https://github.com/pynnl/svelte-hash-router",
-  "authors": [
-    "pynnl"
-  ],
-  "homepage": "https://github.com/pynnl/svelte-hash-router#readme",
-  "downloads": 12,
-  "dependents": 0,
-  "updated": "2019-06-16T16:31:41.755Z",
-  "tags": [
-    "router"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 47
+	"name": "svelte-hash-router",
+	"description": "Implement hash-based routing for Svelte applications.",
+	"repo_url": "https://github.com/pynnl/svelte-hash-router",
+	"authors": ["pynnl"],
+	"homepage": "https://github.com/pynnl/svelte-hash-router#readme",
+	"downloads": 12,
+	"dependents": 0,
+	"updated": "2019-06-16T16:31:41.755Z",
+	"tags": ["router"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 47,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

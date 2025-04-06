@@ -1,18 +1,19 @@
 {
-  "name": "@megapenthes/svelte4-progressbar",
-  "description": "Create multi-series SVG progress bar components for Svelte.",
-  "repo_url": "https://github.com/Pete-Y-CS/svelte-progressbar",
-  "authors": [
-    "pete-y"
-  ],
-  "homepage": "https://github.com/Pete-Y-CS/svelte-progressbar#readme",
-  "downloads": 2,
-  "dependents": 0,
-  "updated": "2023-07-04T14:32:04.051Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@megapenthes/svelte4-progressbar",
+	"description": "Create multi-series SVG progress bar components for Svelte.",
+	"repo_url": "https://github.com/Pete-Y-CS/svelte-progressbar",
+	"authors": ["pete-y"],
+	"homepage": "https://github.com/Pete-Y-CS/svelte-progressbar#readme",
+	"downloads": 2,
+	"dependents": 0,
+	"updated": "2023-07-04T14:32:04.051Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

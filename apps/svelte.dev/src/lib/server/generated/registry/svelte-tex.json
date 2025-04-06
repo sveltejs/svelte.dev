@@ -1,16 +1,17 @@
 {
-  "name": "svelte-tex",
-  "description": "Convert TeX to rendered SVG using MathJax or MathML.",
-  "repo_url": "",
-  "authors": [
-    "ntsd"
-  ],
-  "downloads": 9,
-  "dependents": 1,
-  "updated": "2024-11-16T12:49:02.760Z",
-  "tags": [
-    "content"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-tex",
+	"description": "Convert TeX to rendered SVG using MathJax or MathML.",
+	"repo_url": "",
+	"authors": ["ntsd"],
+	"downloads": 9,
+	"dependents": 1,
+	"updated": "2024-11-16T12:49:02.760Z",
+	"tags": ["content"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": false
+	}
 }

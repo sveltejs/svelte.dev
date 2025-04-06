@@ -1,19 +1,19 @@
 {
-  "name": "virtue-ui",
-  "description": "Build Svelte UI components with TailwindCSS and melt-ui.",
-  "repo_url": "https://github.com/virtueorg/ui",
-  "authors": [
-    "leonardodipace"
-  ],
-  "homepage": "https://github.com/virtueorg/ui#readme",
-  "downloads": 1,
-  "dependents": 0,
-  "updated": "2024-08-21T21:32:50.873Z",
-  "tags": [
-    "design-system",
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 17
+	"name": "virtue-ui",
+	"description": "Build Svelte UI components with TailwindCSS and melt-ui.",
+	"repo_url": "https://github.com/virtueorg/ui",
+	"authors": ["leonardodipace"],
+	"homepage": "https://github.com/virtueorg/ui#readme",
+	"downloads": 1,
+	"dependents": 0,
+	"updated": "2024-08-21T21:32:50.873Z",
+	"tags": ["design-system", "ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 17,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

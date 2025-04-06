@@ -1,18 +1,19 @@
 {
-  "name": "svelte-popup",
-  "description": "Create popup components with top, bottom, left, and right positioning.",
-  "repo_url": "https://github.com/hengshanMWC/svelte-popup",
-  "authors": [
-    "abmao"
-  ],
-  "homepage": "https://github.com/hengshanMWC/svelte-popup#readme",
-  "downloads": 10,
-  "dependents": 0,
-  "updated": "2022-02-16T06:40:47.989Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 5
+	"name": "svelte-popup",
+	"description": "Create popup components with top, bottom, left, and right positioning.",
+	"repo_url": "https://github.com/hengshanMWC/svelte-popup",
+	"authors": ["abmao"],
+	"homepage": "https://github.com/hengshanMWC/svelte-popup#readme",
+	"downloads": 10,
+	"dependents": 0,
+	"updated": "2022-02-16T06:40:47.989Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 5,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

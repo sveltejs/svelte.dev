@@ -1,17 +1,18 @@
 {
-  "name": "@svuick/editor",
-  "description": "Create a WYSIWYG editor for Svelte applications.",
-  "repo_url": "https://gitlab.com/david-plugge/svuick",
-  "authors": [
-    "davidplugge"
-  ],
-  "homepage": "https://gitlab.com/david-plugge/svuick#readme",
-  "downloads": 3,
-  "dependents": 0,
-  "updated": "2022-07-29T15:09:28.756Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@svuick/editor",
+	"description": "Create a WYSIWYG editor for Svelte applications.",
+	"repo_url": "https://gitlab.com/david-plugge/svuick",
+	"authors": ["davidplugge"],
+	"homepage": "https://gitlab.com/david-plugge/svuick#readme",
+	"downloads": 3,
+	"dependents": 0,
+	"updated": "2022-07-29T15:09:28.756Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "svelte-formit",
-  "description": "Handle forms with validation in Svelte applications.",
-  "repo_url": "https://github.com/galkatz373/svelte-formit",
-  "authors": [
-    "galkatz373"
-  ],
-  "homepage": "https://svelte-formit.now.sh/",
-  "downloads": 11,
-  "dependents": 0,
-  "updated": "2020-06-15T17:46:08.910Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 2
+	"name": "svelte-formit",
+	"description": "Handle forms with validation in Svelte applications.",
+	"repo_url": "https://github.com/galkatz373/svelte-formit",
+	"authors": ["galkatz373"],
+	"homepage": "https://svelte-formit.now.sh/",
+	"downloads": 11,
+	"dependents": 0,
+	"updated": "2020-06-15T17:46:08.910Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

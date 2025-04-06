@@ -1,18 +1,19 @@
 {
-  "name": "svelte-fsm",
-  "description": "Implement finite state machines in Svelte applications.",
-  "repo_url": "https://github.com/kenkunz/svelte-fsm",
-  "authors": [
-    "kenkunz"
-  ],
-  "homepage": "https://github.com/kenkunz/svelte-fsm#README",
-  "downloads": 439,
-  "dependents": 3,
-  "updated": "2022-09-08T21:43:40.495Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 278
+	"name": "svelte-fsm",
+	"description": "Implement finite state machines in Svelte applications.",
+	"repo_url": "https://github.com/kenkunz/svelte-fsm",
+	"authors": ["kenkunz"],
+	"homepage": "https://github.com/kenkunz/svelte-fsm#README",
+	"downloads": 439,
+	"dependents": 3,
+	"updated": "2022-09-08T21:43:40.495Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 279,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	}
 }

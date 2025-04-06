@@ -1,18 +1,19 @@
 {
-  "name": "svelte-tables-tailwind",
-  "description": "Create tables with Tailwind styling in Svelte.",
-  "repo_url": "https://github.com/ArshdeepSahni/Svelte-Tables-Tailwind",
-  "authors": [
-    "arshdeepsahni"
-  ],
-  "homepage": "https://github.com/ArshdeepSahni/Svelte-Tables-Tailwind",
-  "downloads": 10,
-  "dependents": 0,
-  "updated": "2021-07-10T09:17:51.383Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 11
+	"name": "svelte-tables-tailwind",
+	"description": "Create tables with Tailwind styling in Svelte.",
+	"repo_url": "https://github.com/ArshdeepSahni/Svelte-Tables-Tailwind",
+	"authors": ["arshdeepsahni"],
+	"homepage": "https://github.com/ArshdeepSahni/Svelte-Tables-Tailwind",
+	"downloads": 10,
+	"dependents": 0,
+	"updated": "2021-07-10T09:17:51.383Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 11,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "svelte-local-storage-store",
-  "description": "Persist Svelte store data to local storage.",
-  "repo_url": "https://github.com/joshnuss/svelte-local-storage-store",
-  "authors": [
-    "joshnuss"
-  ],
-  "homepage": "https://github.com/joshnuss/svelte-local-storage-store#readme",
-  "downloads": 13277,
-  "dependents": 14,
-  "updated": "2023-10-04T04:03:29.057Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 1091
+	"name": "svelte-local-storage-store",
+	"description": "Persist Svelte store data to local storage.",
+	"repo_url": "https://github.com/joshnuss/svelte-local-storage-store",
+	"authors": ["joshnuss"],
+	"homepage": "https://github.com/joshnuss/svelte-local-storage-store#readme",
+	"downloads": 13277,
+	"dependents": 14,
+	"updated": "2023-10-04T04:03:29.057Z",
+	"tags": ["miscellaneous"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 1091,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": true
+	}
 }

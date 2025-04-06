@@ -1,18 +1,19 @@
 {
-  "name": "@kreonovo/places-autocomplete-svelte",
-  "description": "Integrate Google Maps Places Autocomplete in Svelte apps.",
-  "repo_url": "https://github.com/JaunPaul/places-autocomplete-svelte",
-  "authors": [
-    "kreonovo"
-  ],
-  "homepage": "https://github.com/alexpechkarev",
-  "downloads": 10,
-  "dependents": 0,
-  "updated": "2024-11-26T02:17:43.910Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 0
+	"name": "@kreonovo/places-autocomplete-svelte",
+	"description": "Integrate Google Maps Places Autocomplete in Svelte apps.",
+	"repo_url": "https://github.com/JaunPaul/places-autocomplete-svelte",
+	"authors": ["kreonovo"],
+	"homepage": "https://github.com/alexpechkarev",
+	"downloads": 10,
+	"dependents": 0,
+	"updated": "2024-11-26T02:17:43.910Z",
+	"tags": ["integration"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

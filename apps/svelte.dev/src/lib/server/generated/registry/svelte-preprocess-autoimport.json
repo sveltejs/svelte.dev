@@ -1,18 +1,19 @@
 {
-  "name": "svelte-preprocess-autoimport",
-  "description": "Automatically import and createEventDispatcher in Svelte.",
-  "repo_url": "https://github.com/rixo/svelte-preprocess-autoimport",
-  "authors": [
-    "rixo"
-  ],
-  "homepage": "https://github.com/rixo/svelte-preprocess-autoimport",
-  "downloads": 10,
-  "dependents": 0,
-  "updated": "2020-11-08T14:48:38.989Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 21
+	"name": "svelte-preprocess-autoimport",
+	"description": "Automatically import and createEventDispatcher in Svelte.",
+	"repo_url": "https://github.com/rixo/svelte-preprocess-autoimport",
+	"authors": ["rixo"],
+	"homepage": "https://github.com/rixo/svelte-preprocess-autoimport",
+	"downloads": 10,
+	"dependents": 0,
+	"updated": "2020-11-08T14:48:38.989Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 21,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "svelte.charts.css",
-  "description": "Svelte wrapper for Charts CSS, create charts easily.",
-  "repo_url": "https://github.com/PfisterFactor/svelte.charts.css",
-  "authors": [
-    "pfisterfactor"
-  ],
-  "homepage": "https://github.com/PfisterFactor/svelte.charts.css#readme",
-  "downloads": 10,
-  "dependents": 0,
-  "updated": "2022-04-10T20:46:00.007Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelte.charts.css",
+	"description": "Svelte wrapper for Charts CSS, create charts easily.",
+	"repo_url": "https://github.com/PfisterFactor/svelte.charts.css",
+	"authors": ["pfisterfactor"],
+	"homepage": "https://github.com/PfisterFactor/svelte.charts.css#readme",
+	"downloads": 10,
+	"dependents": 0,
+	"updated": "2022-04-10T20:46:00.007Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

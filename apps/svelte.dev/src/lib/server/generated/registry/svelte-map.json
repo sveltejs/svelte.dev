@@ -1,19 +1,19 @@
 {
-  "name": "svelte-map",
-  "description": "Integrate Leaflet maps into Svelte applications.",
-  "repo_url": "https://github.com/andre-brandao/svelte-map",
-  "authors": [
-    "andre-brandao"
-  ],
-  "homepage": "https://github.com/andre-brandao/svelte-map#readme",
-  "downloads": 0,
-  "dependents": 0,
-  "updated": "2025-01-15T04:09:52.598Z",
-  "tags": [
-    "ui",
-    "integration"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelte-map",
+	"description": "Integrate Leaflet maps into Svelte applications.",
+	"repo_url": "https://github.com/andre-brandao/svelte-map",
+	"authors": ["andre-brandao"],
+	"homepage": "https://github.com/andre-brandao/svelte-map#readme",
+	"downloads": 0,
+	"dependents": 0,
+	"updated": "2025-01-15T04:09:52.598Z",
+	"tags": ["ui", "integration"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

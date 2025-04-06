@@ -1,18 +1,19 @@
 {
-  "name": "sveltecms",
-  "description": "Build content-managed sites with SvelteKit.",
-  "repo_url": "https://github.com/dnotes/sveltecms",
-  "authors": [
-    "dnotes"
-  ],
-  "homepage": "https://github.com/dnotes/sveltecms#readme",
-  "downloads": 2,
-  "dependents": 0,
-  "updated": "2023-12-11T04:51:30.445Z",
-  "tags": [
-    "content"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 12
+	"name": "sveltecms",
+	"description": "Build content-managed sites with SvelteKit.",
+	"repo_url": "https://github.com/dnotes/sveltecms",
+	"authors": ["dnotes"],
+	"homepage": "https://github.com/dnotes/sveltecms#readme",
+	"downloads": 2,
+	"dependents": 0,
+	"updated": "2023-12-11T04:51:30.445Z",
+	"tags": ["content"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 12,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

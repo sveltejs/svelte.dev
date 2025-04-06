@@ -1,21 +1,19 @@
 {
-  "name": "@sveltejs/eslint-config",
-  "description": "Provide ESLint configuration for Svelte projects.",
-  "repo_url": "https://github.com/sveltejs/eslint-config",
-  "authors": [
-    "rich_harris",
-    "svelte-admin",
-    "conduitry",
-    "dominik_g"
-  ],
-  "homepage": "https://github.com/svelte/eslint-config#readme",
-  "downloads": 2036,
-  "dependents": 0,
-  "updated": "2025-03-04T01:23:32.195Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 16
+	"name": "@sveltejs/eslint-config",
+	"description": "Provide ESLint configuration for Svelte projects.",
+	"repo_url": "https://github.com/sveltejs/eslint-config",
+	"authors": ["rich_harris", "svelte-admin", "conduitry", "dominik_g"],
+	"homepage": "https://github.com/svelte/eslint-config#readme",
+	"downloads": 2036,
+	"dependents": 0,
+	"updated": "2025-03-04T01:23:32.195Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 16,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

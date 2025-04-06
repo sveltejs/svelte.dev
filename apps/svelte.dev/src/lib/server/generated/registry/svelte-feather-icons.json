@@ -1,18 +1,19 @@
 {
-  "name": "svelte-feather-icons",
-  "description": "Feather icon components for Svelte.",
-  "repo_url": "https://github.com/dylanblokhuis/svelte-feather-icons",
-  "authors": [
-    "dylanblokhuis"
-  ],
-  "homepage": "https://github.com/dylanblokhuis/svelte-feather-icons#readme",
-  "downloads": 17798,
-  "dependents": 19,
-  "updated": "2024-10-31T09:34:14.681Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 138
+	"name": "svelte-feather-icons",
+	"description": "Feather icon components for Svelte.",
+	"repo_url": "https://github.com/dylanblokhuis/svelte-feather-icons",
+	"authors": ["dylanblokhuis"],
+	"homepage": "https://github.com/dylanblokhuis/svelte-feather-icons#readme",
+	"downloads": 17798,
+	"dependents": 19,
+	"updated": "2024-10-31T09:34:14.681Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 138,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

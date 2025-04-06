@@ -1,15 +1,16 @@
 {
-  "name": "svtest01-svelte-counter",
-  "description": "Provides customizable text editor component for Svelte.",
-  "authors": [
-    "akifb37"
-  ],
-  "downloads": 12,
-  "dependents": 0,
-  "updated": "2024-12-27T00:26:05.703Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "svtest01-svelte-counter",
+	"description": "Provides customizable text editor component for Svelte.",
+	"authors": ["akifb37"],
+	"downloads": 12,
+	"dependents": 0,
+	"updated": "2024-12-27T00:26:05.703Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

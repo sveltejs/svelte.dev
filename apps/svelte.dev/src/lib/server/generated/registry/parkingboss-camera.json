@@ -1,18 +1,17 @@
 {
-  "name": "@parkingboss/camera",
-  "description": "Create camera element for video, barcode detection in Svelte.",
-  "repo_url": "",
-  "authors": [
-    "nlemesurier",
-    "jpfohl",
-    "crisfole"
-  ],
-  "downloads": 7,
-  "dependents": 0,
-  "updated": "2020-04-20T15:01:12.181Z",
-  "tags": [
-    "media"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@parkingboss/camera",
+	"description": "Create camera element for video, barcode detection in Svelte.",
+	"repo_url": "",
+	"authors": ["nlemesurier", "jpfohl", "crisfole"],
+	"downloads": 7,
+	"dependents": 0,
+	"updated": "2020-04-20T15:01:12.181Z",
+	"tags": ["media"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "svelte-guardian",
-  "description": "Provides authentication for SvelteKit applications.",
-  "repo_url": "https://github.com/mudiageo/svelte-guardian",
-  "authors": [
-    "mudiageo"
-  ],
-  "homepage": "https://github.com/mudiageo/svelte-guardian#readme",
-  "downloads": 18,
-  "dependents": 0,
-  "updated": "2025-02-20T16:03:13.410Z",
-  "tags": [
-    "auth"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 1
+	"name": "svelte-guardian",
+	"description": "Provides authentication for SvelteKit applications.",
+	"repo_url": "https://github.com/mudiageo/svelte-guardian",
+	"authors": ["mudiageo"],
+	"homepage": "https://github.com/mudiageo/svelte-guardian#readme",
+	"downloads": 18,
+	"dependents": 0,
+	"updated": "2025-02-20T16:03:13.410Z",
+	"tags": ["auth"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

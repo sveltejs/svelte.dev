@@ -1,17 +1,18 @@
 {
-  "name": "@getneurotic/svelte",
-  "description": "Offers Svelte directives and helpers for common application tasks.",
-  "repo_url": "https://github.com/getneurotic/svelte",
-  "authors": [
-    "geoffrey.stekelenburg"
-  ],
-  "homepage": "https://github.com/getneurotic/svelte#readme",
-  "downloads": 0,
-  "dependents": 0,
-  "updated": "2023-09-29T13:06:15.562Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@getneurotic/svelte",
+	"description": "Offers Svelte directives and helpers for common application tasks.",
+	"repo_url": "https://github.com/getneurotic/svelte",
+	"authors": ["geoffrey.stekelenburg"],
+	"homepage": "https://github.com/getneurotic/svelte#readme",
+	"downloads": 0,
+	"dependents": 0,
+	"updated": "2023-09-29T13:06:15.562Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

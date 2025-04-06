@@ -1,18 +1,19 @@
 {
-  "name": "svelte-highlighted-code-editor",
-  "description": "Create highlighted code editor for Svelte projects.",
-  "repo_url": "https://github.com/linusjaderlund/svelte-highlighted-code-editor",
-  "authors": [
-    "linusjaderlund"
-  ],
-  "homepage": "https://github.com/linusjaderlund/svelte-highlighted-code-editor#readme",
-  "downloads": 0,
-  "dependents": 0,
-  "updated": "2022-11-14T16:46:50.140Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 2
+	"name": "svelte-highlighted-code-editor",
+	"description": "Create highlighted code editor for Svelte projects.",
+	"repo_url": "https://github.com/linusjaderlund/svelte-highlighted-code-editor",
+	"authors": ["linusjaderlund"],
+	"homepage": "https://github.com/linusjaderlund/svelte-highlighted-code-editor#readme",
+	"downloads": 0,
+	"dependents": 0,
+	"updated": "2022-11-14T16:46:50.140Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

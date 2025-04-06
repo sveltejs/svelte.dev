@@ -1,16 +1,17 @@
 {
-  "name": "@rubus/svelte-spectrum-icons-ui",
-  "description": "Use Adobe Spectrum UI icons as Svelte components.",
-  "repo_url": "",
-  "authors": [
-    "runningzs"
-  ],
-  "downloads": 51,
-  "dependents": 1,
-  "updated": "2020-10-24T18:11:07.838Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@rubus/svelte-spectrum-icons-ui",
+	"description": "Use Adobe Spectrum UI icons as Svelte components.",
+	"repo_url": "",
+	"authors": ["runningzs"],
+	"downloads": 51,
+	"dependents": 1,
+	"updated": "2020-10-24T18:11:07.838Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

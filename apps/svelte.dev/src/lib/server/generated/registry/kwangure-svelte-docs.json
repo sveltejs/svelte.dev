@@ -1,18 +1,19 @@
 {
-  "name": "@kwangure/svelte-docs",
-  "description": "Generate JSON documentation for Svelte components and CSS.",
-  "repo_url": "https://github.com/kwangure/svelte-docs",
-  "authors": [
-    "kwangure"
-  ],
-  "homepage": "https://github.com/kwangure/svelte-docs#readme",
-  "downloads": 19,
-  "dependents": 0,
-  "updated": "2022-12-10T11:25:42.958Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@kwangure/svelte-docs",
+	"description": "Generate JSON documentation for Svelte components and CSS.",
+	"repo_url": "https://github.com/kwangure/svelte-docs",
+	"authors": ["kwangure"],
+	"homepage": "https://github.com/kwangure/svelte-docs#readme",
+	"downloads": 19,
+	"dependents": 0,
+	"updated": "2022-12-10T11:25:42.958Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

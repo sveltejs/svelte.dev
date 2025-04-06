@@ -1,16 +1,17 @@
 {
-  "name": "@signalchain/svelte-forms",
-  "description": "Provide a Svelte forms library.",
-  "repo_url": "",
-  "authors": [
-    "signalchain"
-  ],
-  "downloads": 33,
-  "dependents": 0,
-  "updated": "2022-03-12T12:43:48.404Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@signalchain/svelte-forms",
+	"description": "Provide a Svelte forms library.",
+	"repo_url": "",
+	"authors": ["signalchain"],
+	"downloads": 33,
+	"dependents": 0,
+	"updated": "2022-03-12T12:43:48.404Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

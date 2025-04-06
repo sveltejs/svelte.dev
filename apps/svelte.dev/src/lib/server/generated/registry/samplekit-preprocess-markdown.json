@@ -1,19 +1,19 @@
 {
-  "name": "@samplekit/preprocess-markdown",
-  "description": "Preprocesses Markdown within Svelte components using Marked.",
-  "repo_url": "https://github.com/timothycohen/samplekit",
-  "authors": [
-    "timothycohen"
-  ],
-  "homepage": "https://preprocessors.samplekit.dev",
-  "downloads": 7,
-  "dependents": 0,
-  "updated": "2024-10-30T23:48:22.637Z",
-  "tags": [
-    "tooling",
-    "content"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 20
+	"name": "@samplekit/preprocess-markdown",
+	"description": "Preprocesses Markdown within Svelte components using Marked.",
+	"repo_url": "https://github.com/timothycohen/samplekit",
+	"authors": ["timothycohen"],
+	"homepage": "https://preprocessors.samplekit.dev",
+	"downloads": 7,
+	"dependents": 0,
+	"updated": "2024-10-30T23:48:22.637Z",
+	"tags": ["tooling", "content"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 20,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

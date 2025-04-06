@@ -1,18 +1,19 @@
 {
-  "name": "@dimitrilahaye/svelte-typeahead",
-  "description": "Create typeahead/autocomplete component for Svelte.",
-  "repo_url": "https://github.com/dimitrilahaye/svelte-sync-async-autocomplete-component",
-  "authors": [
-    "dimitrilahaye"
-  ],
-  "homepage": "https://github.com/dimitrilahaye/svelte-sync-async-autocomplete-component#readme",
-  "downloads": 10,
-  "dependents": 0,
-  "updated": "2020-07-14T14:53:26.117Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "@dimitrilahaye/svelte-typeahead",
+	"description": "Create typeahead/autocomplete component for Svelte.",
+	"repo_url": "https://github.com/dimitrilahaye/svelte-sync-async-autocomplete-component",
+	"authors": ["dimitrilahaye"],
+	"homepage": "https://github.com/dimitrilahaye/svelte-sync-async-autocomplete-component#readme",
+	"downloads": 10,
+	"dependents": 0,
+	"updated": "2020-07-14T14:53:26.117Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

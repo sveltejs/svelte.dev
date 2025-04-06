@@ -1,23 +1,26 @@
 {
-  "name": "@nodegui/svelte-nodegui-preprocessor",
-  "description": "Preprocess Svelte components for Svelte NodeGUI.",
-  "repo_url": "https://github.com/nodegui/svelte-nodegui-preprocessor",
-  "authors": [
-    "sedwards2009",
-    "atulanand94",
-    "rahulgaba",
-    "kakulgupta",
-    "shubhamzanwar",
-    "shirakaba"
-  ],
-  "homepage": "https://github.com/nodegui/svelte-nodegui-preprocessor",
-  "downloads": 5,
-  "dependents": 0,
-  "updated": "2021-03-03T22:18:51.779Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 2
+	"name": "@nodegui/svelte-nodegui-preprocessor",
+	"description": "Preprocess Svelte components for Svelte NodeGUI.",
+	"repo_url": "https://github.com/nodegui/svelte-nodegui-preprocessor",
+	"authors": [
+		"sedwards2009",
+		"atulanand94",
+		"rahulgaba",
+		"kakulgupta",
+		"shubhamzanwar",
+		"shirakaba"
+	],
+	"homepage": "https://github.com/nodegui/svelte-nodegui-preprocessor",
+	"downloads": 5,
+	"dependents": 0,
+	"updated": "2021-03-03T22:18:51.779Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

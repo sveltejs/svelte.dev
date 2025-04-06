@@ -1,18 +1,19 @@
 {
-  "name": "svelte-theme-select",
-  "description": "Provides customizable theme selection components for Svelte.",
-  "repo_url": "https://github.com/captaincodeman/svelte-theme-select",
-  "authors": [
-    "captaincodeman"
-  ],
-  "homepage": "https://captaincodeman.github.io/svelte-theme-select/",
-  "downloads": 6,
-  "dependents": 0,
-  "updated": "2024-10-24T19:27:12.758Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 19
+	"name": "svelte-theme-select",
+	"description": "Provides customizable theme selection components for Svelte.",
+	"repo_url": "https://github.com/captaincodeman/svelte-theme-select",
+	"authors": ["captaincodeman"],
+	"homepage": "https://captaincodeman.github.io/svelte-theme-select/",
+	"downloads": 6,
+	"dependents": 0,
+	"updated": "2024-10-24T19:27:12.758Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 19,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

@@ -1,16 +1,17 @@
 {
-  "name": "svelte-google-auth",
-  "description": "Implement Google authentication in SvelteKit applications.",
-  "repo_url": "",
-  "authors": [
-    "halfdanj"
-  ],
-  "downloads": 43,
-  "dependents": 0,
-  "updated": "2023-01-17T21:18:10.634Z",
-  "tags": [
-    "auth"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-google-auth",
+	"description": "Implement Google authentication in SvelteKit applications.",
+	"repo_url": "",
+	"authors": ["halfdanj"],
+	"downloads": 43,
+	"dependents": 0,
+	"updated": "2023-01-17T21:18:10.634Z",
+	"tags": ["auth"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

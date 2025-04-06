@@ -1,16 +1,17 @@
 {
-  "name": "svelte-sexy-modal",
-  "description": "Create modal components for Svelte.",
-  "repo_url": "",
-  "authors": [
-    "codecrapper"
-  ],
-  "downloads": 10,
-  "dependents": 0,
-  "updated": "2020-08-31T10:10:17.918Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-sexy-modal",
+	"description": "Create modal components for Svelte.",
+	"repo_url": "",
+	"authors": ["codecrapper"],
+	"downloads": 10,
+	"dependents": 0,
+	"updated": "2020-08-31T10:10:17.918Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

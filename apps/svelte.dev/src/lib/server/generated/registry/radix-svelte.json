@@ -1,16 +1,17 @@
 {
-  "name": "radix-svelte",
-  "description": "Build accessible UI components with Svelte and Radix UI.",
-  "repo_url": "",
-  "authors": [
-    "tglide_personal"
-  ],
-  "downloads": 632,
-  "dependents": 1,
-  "updated": "2023-07-23T19:43:39.851Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "radix-svelte",
+	"description": "Build accessible UI components with Svelte and Radix UI.",
+	"repo_url": "",
+	"authors": ["tglide_personal"],
+	"downloads": 632,
+	"dependents": 1,
+	"updated": "2023-07-23T19:43:39.851Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

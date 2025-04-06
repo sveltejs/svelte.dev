@@ -1,18 +1,19 @@
 {
-  "name": "@peter-pakanun/svelte-icon",
-  "description": "Implement simple Svelte icon component.",
-  "repo_url": "https://github.com/peter-pakanun/svelte-icon",
-  "authors": [
-    "peter-pakanun"
-  ],
-  "homepage": "https://github.com/peter-pakanun/svelte-icon#readme",
-  "downloads": 6,
-  "dependents": 0,
-  "updated": "2022-07-01T16:25:36.088Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@peter-pakanun/svelte-icon",
+	"description": "Implement simple Svelte icon component.",
+	"repo_url": "https://github.com/peter-pakanun/svelte-icon",
+	"authors": ["peter-pakanun"],
+	"homepage": "https://github.com/peter-pakanun/svelte-icon#readme",
+	"downloads": 6,
+	"dependents": 0,
+	"updated": "2022-07-01T16:25:36.088Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

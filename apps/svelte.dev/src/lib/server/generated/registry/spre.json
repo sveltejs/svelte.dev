@@ -1,18 +1,19 @@
 {
-  "name": "spre",
-  "description": "Offer Svelte preprocessing utilities for import rewriting.",
-  "repo_url": "https://github.com/metonym/spre",
-  "authors": [
-    "metonym"
-  ],
-  "homepage": "https://github.com/metonym/spre",
-  "downloads": 5,
-  "dependents": 0,
-  "updated": "2021-08-07T00:47:43.925Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "spre",
+	"description": "Offer Svelte preprocessing utilities for import rewriting.",
+	"repo_url": "https://github.com/metonym/spre",
+	"authors": ["metonym"],
+	"homepage": "https://github.com/metonym/spre",
+	"downloads": 5,
+	"dependents": 0,
+	"updated": "2021-08-07T00:47:43.925Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

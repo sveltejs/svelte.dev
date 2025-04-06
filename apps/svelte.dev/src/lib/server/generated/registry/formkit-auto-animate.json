@@ -1,21 +1,19 @@
 {
-  "name": "@formkit/auto-animate",
-  "description": "Animate Svelte apps with single line of code.",
-  "repo_url": "https://github.com/formkit/auto-animate",
-  "authors": [
-    "devoidofgenius",
-    "fenilli",
-    "justin-schroeder",
-    "boyd"
-  ],
-  "homepage": "https://github.com/formkit/auto-animate#readme",
-  "downloads": 255022,
-  "dependents": 148,
-  "updated": "2024-04-10T16:20:50.136Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 13262
+	"name": "@formkit/auto-animate",
+	"description": "Animate Svelte apps with single line of code.",
+	"repo_url": "https://github.com/formkit/auto-animate",
+	"authors": ["devoidofgenius", "fenilli", "justin-schroeder", "boyd"],
+	"homepage": "https://github.com/formkit/auto-animate#readme",
+	"downloads": 255022,
+	"dependents": 148,
+	"updated": "2024-04-10T16:20:50.136Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 13263,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,16 +1,17 @@
 {
-  "name": "@budgetdraw/sveltekit-cloudflare-adapter",
-  "description": "Adapt SvelteKit apps for Cloudflare Workers deployment.",
-  "repo_url": "",
-  "authors": [
-    "budgetdrawdev"
-  ],
-  "downloads": 12,
-  "dependents": 0,
-  "updated": "2021-11-17T23:26:29.636Z",
-  "tags": [
-    "adapter"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@budgetdraw/sveltekit-cloudflare-adapter",
+	"description": "Adapt SvelteKit apps for Cloudflare Workers deployment.",
+	"repo_url": "",
+	"authors": ["budgetdrawdev"],
+	"downloads": 12,
+	"dependents": 0,
+	"updated": "2021-11-17T23:26:29.636Z",
+	"tags": ["adapter"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	}
 }

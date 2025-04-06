@@ -1,19 +1,19 @@
 {
-  "name": "sadforms",
-  "description": "Create accessible forms for Svelte with validation and custom styling.",
-  "repo_url": "https://github.com/byjackli/sadforms",
-  "authors": [
-    "byjackli"
-  ],
-  "homepage": "https://sadforms.com",
-  "downloads": 19,
-  "dependents": 0,
-  "updated": "2022-07-24T13:17:19.228Z",
-  "tags": [
-    "ui",
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 2
+	"name": "sadforms",
+	"description": "Create accessible forms for Svelte with validation and custom styling.",
+	"repo_url": "https://github.com/byjackli/sadforms",
+	"authors": ["byjackli"],
+	"homepage": "https://sadforms.com",
+	"downloads": 19,
+	"dependents": 0,
+	"updated": "2022-07-24T13:17:19.228Z",
+	"tags": ["ui", "miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

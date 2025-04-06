@@ -1,19 +1,19 @@
 {
-  "name": "@maritime-fun-group/svelte-core",
-  "description": "Apply component theming to Svelte components.",
-  "repo_url": "https://github.com/isaacmfg/svelte-core",
-  "authors": [
-    "mfgdevelopment",
-    "isaacmfg"
-  ],
-  "homepage": "https://github.com/isaacmfg/svelte-core",
-  "downloads": 40,
-  "dependents": 0,
-  "updated": "2021-06-01T14:43:25.354Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@maritime-fun-group/svelte-core",
+	"description": "Apply component theming to Svelte components.",
+	"repo_url": "https://github.com/isaacmfg/svelte-core",
+	"authors": ["mfgdevelopment", "isaacmfg"],
+	"homepage": "https://github.com/isaacmfg/svelte-core",
+	"downloads": 40,
+	"dependents": 0,
+	"updated": "2021-06-01T14:43:25.354Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

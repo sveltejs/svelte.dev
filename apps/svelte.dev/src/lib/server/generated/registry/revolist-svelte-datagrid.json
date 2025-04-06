@@ -1,18 +1,19 @@
 {
-  "name": "@revolist/svelte-datagrid",
-  "description": "Create Svelte DataGrid Spreadsheet component.",
-  "repo_url": "https://github.com/revolist/svelte-datagrid",
-  "authors": [
-    "kumakint"
-  ],
-  "homepage": "https://github.com/revolist/revogrid#readme",
-  "downloads": 1149,
-  "dependents": 0,
-  "updated": "2025-03-27T14:49:00.379Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 119
+	"name": "@revolist/svelte-datagrid",
+	"description": "Create Svelte DataGrid Spreadsheet component.",
+	"repo_url": "https://github.com/revolist/svelte-datagrid",
+	"authors": ["kumakint"],
+	"homepage": "https://github.com/revolist/revogrid#readme",
+	"downloads": 1149,
+	"dependents": 0,
+	"updated": "2025-03-27T14:49:00.379Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 119,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

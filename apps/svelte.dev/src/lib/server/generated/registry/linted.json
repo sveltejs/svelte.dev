@@ -1,18 +1,19 @@
 {
-  "name": "linted",
-  "description": "Provides ESLint configuration for Svelte projects.",
-  "repo_url": "https://github.com/jimmy-zhening-luo/linted",
-  "authors": [
-    "jimmy-zhening-luo"
-  ],
-  "homepage": "https://github.com/jimmy-zhening-luo/linted#readme",
-  "downloads": 1483,
-  "dependents": 0,
-  "updated": "2025-03-27T06:35:00.806Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 1
+	"name": "linted",
+	"description": "Provides ESLint configuration for Svelte projects.",
+	"repo_url": "https://github.com/jimmy-zhening-luo/linted",
+	"authors": ["jimmy-zhening-luo"],
+	"homepage": "https://github.com/jimmy-zhening-luo/linted#readme",
+	"downloads": 1483,
+	"dependents": 0,
+	"updated": "2025-03-27T06:35:00.806Z",
+	"tags": ["tooling"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

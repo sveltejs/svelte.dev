@@ -1,17 +1,18 @@
 {
-  "name": "svelte-formek",
-  "description": "Manage forms with validation in Svelte applications.",
-  "repo_url": "https://github.com/eriknyk/svelte-formek",
-  "authors": [
-    "eriknyk"
-  ],
-  "homepage": "https://github.com/eriknyk/svelte-formek#readme",
-  "downloads": 7,
-  "dependents": 0,
-  "updated": "2019-12-30T16:39:16.145Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-formek",
+	"description": "Manage forms with validation in Svelte applications.",
+	"repo_url": "https://github.com/eriknyk/svelte-formek",
+	"authors": ["eriknyk"],
+	"homepage": "https://github.com/eriknyk/svelte-formek#readme",
+	"downloads": 7,
+	"dependents": 0,
+	"updated": "2019-12-30T16:39:16.145Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "@benzara/svelte-animated-counter",
-  "description": "Animate counter components in Svelte applications.",
-  "repo_url": "https://github.com/benzara-tahar/svelte-animated-counter",
-  "authors": [
-    "lahcene"
-  ],
-  "homepage": "https://svelte-animated-counter.vercel.app",
-  "downloads": 9,
-  "dependents": 0,
-  "updated": "2022-08-21T20:01:42.817Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 15
+	"name": "@benzara/svelte-animated-counter",
+	"description": "Animate counter components in Svelte applications.",
+	"repo_url": "https://github.com/benzara-tahar/svelte-animated-counter",
+	"authors": ["lahcene"],
+	"homepage": "https://svelte-animated-counter.vercel.app",
+	"downloads": 9,
+	"dependents": 0,
+	"updated": "2022-08-21T20:01:42.817Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 15,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

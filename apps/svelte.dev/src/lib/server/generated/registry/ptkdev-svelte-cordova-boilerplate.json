@@ -1,18 +1,19 @@
 {
-  "name": "@ptkdev/svelte-cordova-boilerplate",
-  "description": "Create Android and iOS mobile apps with Svelte and Cordova.",
-  "repo_url": "https://github.com/ptkdev-boilerplate/svelte-cordova-boilerplate",
-  "authors": [
-    "ptkdevio"
-  ],
-  "homepage": "https://github.com/ptkdev-boilerplate/svelte-cordova-boilerplate",
-  "downloads": 12,
-  "dependents": 0,
-  "updated": "2021-11-20T00:27:26.080Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 28
+	"name": "@ptkdev/svelte-cordova-boilerplate",
+	"description": "Create Android and iOS mobile apps with Svelte and Cordova.",
+	"repo_url": "https://github.com/ptkdev-boilerplate/svelte-cordova-boilerplate",
+	"authors": ["ptkdevio"],
+	"homepage": "https://github.com/ptkdev-boilerplate/svelte-cordova-boilerplate",
+	"downloads": 12,
+	"dependents": 0,
+	"updated": "2021-11-20T00:27:26.080Z",
+	"tags": ["integration"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 28,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

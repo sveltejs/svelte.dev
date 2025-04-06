@@ -1,19 +1,19 @@
 {
-  "name": "@tolgee/svelte",
-  "description": "Integrates Tolgee localization platform with Svelte applications.",
-  "repo_url": "https://github.com/tolgee/tolgee-js",
-  "authors": [
-    "jancizmar",
-    "stepan662"
-  ],
-  "homepage": "https://tolgee.io",
-  "downloads": 668,
-  "dependents": 0,
-  "updated": "2025-03-19T08:37:52.677Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 242
+	"name": "@tolgee/svelte",
+	"description": "Integrates Tolgee localization platform with Svelte applications.",
+	"repo_url": "https://github.com/tolgee/tolgee-js",
+	"authors": ["jancizmar", "stepan662"],
+	"homepage": "https://tolgee.io",
+	"downloads": 668,
+	"dependents": 0,
+	"updated": "2025-03-19T08:37:52.677Z",
+	"tags": ["integration"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 242,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": true
+	}
 }

@@ -1,16 +1,17 @@
 {
-  "name": "@ikun-ui/input",
-  "description": "Build input components for Svelte applications.",
-  "repo_url": "",
-  "authors": [
-    "baiwusanyu"
-  ],
-  "downloads": 3,
-  "dependents": 5,
-  "updated": "2025-01-24T03:49:00.997Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@ikun-ui/input",
+	"description": "Build input components for Svelte applications.",
+	"repo_url": "",
+	"authors": ["baiwusanyu"],
+	"downloads": 3,
+	"dependents": 5,
+	"updated": "2025-01-24T03:49:00.997Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

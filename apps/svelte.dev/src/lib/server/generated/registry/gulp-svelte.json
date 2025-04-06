@@ -1,18 +1,19 @@
 {
-  "name": "gulp-svelte",
-  "description": "Compile Svelte templates to JavaScript using Gulp.",
-  "repo_url": "https://github.com/shinnn/gulp-svelte",
-  "authors": [
-    "shinnn"
-  ],
-  "homepage": "https://github.com/shinnn/gulp-svelte#readme",
-  "downloads": 41,
-  "dependents": 0,
-  "updated": "2018-12-17T09:01:59.954Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 26
+	"name": "gulp-svelte",
+	"description": "Compile Svelte templates to JavaScript using Gulp.",
+	"repo_url": "https://github.com/shinnn/gulp-svelte",
+	"authors": ["shinnn"],
+	"homepage": "https://github.com/shinnn/gulp-svelte#readme",
+	"downloads": 41,
+	"dependents": 0,
+	"updated": "2018-12-17T09:01:59.954Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 26,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	}
 }

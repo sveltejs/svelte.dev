@@ -1,20 +1,18 @@
 {
-  "name": "@sveltejs/gl",
-  "description": "Bring WebGL scene graphs to Svelte.",
-  "repo_url": "https://github.com/Rich-Harris/gl",
-  "authors": [
-    "dominik_g",
-    "rich_harris",
-    "svelte-admin",
-    "conduitry"
-  ],
-  "homepage": "https://github.com/Rich-Harris/gl#readme",
-  "downloads": 242,
-  "dependents": 0,
-  "updated": "2020-02-18T18:25:21.038Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@sveltejs/gl",
+	"description": "Bring WebGL scene graphs to Svelte.",
+	"repo_url": "https://github.com/Rich-Harris/gl",
+	"authors": ["dominik_g", "rich_harris", "svelte-admin", "conduitry"],
+	"homepage": "https://github.com/Rich-Harris/gl#readme",
+	"downloads": 242,
+	"dependents": 0,
+	"updated": "2020-02-18T18:25:21.038Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	}
 }

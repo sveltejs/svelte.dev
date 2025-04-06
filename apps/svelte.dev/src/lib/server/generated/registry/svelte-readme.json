@@ -1,18 +1,19 @@
 {
-  "name": "svelte-readme",
-  "description": "Develops and demos Svelte components in README.md files.",
-  "repo_url": "https://github.com/metonym/svelte-readme",
-  "authors": [
-    "metonym"
-  ],
-  "homepage": "https://github.com/metonym/svelte-readme",
-  "downloads": 98,
-  "dependents": 0,
-  "updated": "2022-02-26T02:31:22.417Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 2
+	"name": "svelte-readme",
+	"description": "Develops and demos Svelte components in README.md files.",
+	"repo_url": "https://github.com/metonym/svelte-readme",
+	"authors": ["metonym"],
+	"homepage": "https://github.com/metonym/svelte-readme",
+	"downloads": 98,
+	"dependents": 0,
+	"updated": "2022-02-26T02:31:22.417Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

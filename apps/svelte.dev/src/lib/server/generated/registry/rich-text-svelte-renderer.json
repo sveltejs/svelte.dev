@@ -1,18 +1,19 @@
 {
-  "name": "rich-text-svelte-renderer",
-  "description": "Render Hygraph Rich Text content in Svelte.",
-  "repo_url": "https://github.com/bertybot/svelte-renderer",
-  "authors": [
-    "bertybot"
-  ],
-  "homepage": "https://github.com/bertybot/svelte-renderer#readme",
-  "downloads": 43,
-  "dependents": 0,
-  "updated": "2025-03-17T20:25:18.413Z",
-  "tags": [
-    "content"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 6
+	"name": "rich-text-svelte-renderer",
+	"description": "Render Hygraph Rich Text content in Svelte.",
+	"repo_url": "https://github.com/bertybot/svelte-renderer",
+	"authors": ["bertybot"],
+	"homepage": "https://github.com/bertybot/svelte-renderer#readme",
+	"downloads": 43,
+	"dependents": 0,
+	"updated": "2025-03-17T20:25:18.413Z",
+	"tags": ["content"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 6,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

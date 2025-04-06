@@ -1,18 +1,19 @@
 {
-  "name": "svelterial",
-  "description": "Implement Material Design components in Svelte.",
-  "repo_url": "https://github.com/masyukun/svelterial",
-  "authors": [
-    "masyukun"
-  ],
-  "homepage": "https://github.com/masyukun/svelterial#readme",
-  "downloads": 25,
-  "dependents": 0,
-  "updated": "2022-11-29T08:14:42.712Z",
-  "tags": [
-    "design-system"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 3
+	"name": "svelterial",
+	"description": "Implement Material Design components in Svelte.",
+	"repo_url": "https://github.com/masyukun/svelterial",
+	"authors": ["masyukun"],
+	"homepage": "https://github.com/masyukun/svelterial#readme",
+	"downloads": 25,
+	"dependents": 0,
+	"updated": "2022-11-29T08:14:42.712Z",
+	"tags": ["design-system"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 3,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

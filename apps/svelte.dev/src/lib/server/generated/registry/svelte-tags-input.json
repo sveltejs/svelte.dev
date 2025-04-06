@@ -1,18 +1,19 @@
 {
-  "name": "svelte-tags-input",
-  "description": "Fully customizable Svelte component to enter tags.",
-  "repo_url": "https://github.com/agustinl/svelte-tags-input",
-  "authors": [
-    "agustinl"
-  ],
-  "homepage": "https://svelte-tags-input.vercel.app/",
-  "downloads": 1117,
-  "dependents": 4,
-  "updated": "2025-01-07T00:13:20.232Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 315
+	"name": "svelte-tags-input",
+	"description": "Fully customizable Svelte component to enter tags.",
+	"repo_url": "https://github.com/agustinl/svelte-tags-input",
+	"authors": ["agustinl"],
+	"homepage": "https://svelte-tags-input.vercel.app/",
+	"downloads": 1117,
+	"dependents": 4,
+	"updated": "2025-01-07T00:13:20.232Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 315,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

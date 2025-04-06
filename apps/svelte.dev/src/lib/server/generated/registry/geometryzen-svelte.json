@@ -1,18 +1,19 @@
 {
-  "name": "@geometryzen/svelte",
-  "description": "Bundle Svelte as an EcmaScript module and system module.",
-  "repo_url": "https://github.com/geometryzen/esm-bundle-svelte",
-  "authors": [
-    "geometryzen"
-  ],
-  "homepage": "https://github.com/geometryzen/esm-bundle-svelte#readme",
-  "downloads": 16,
-  "dependents": 0,
-  "updated": "2024-05-27T13:38:08.586Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 0
+	"name": "@geometryzen/svelte",
+	"description": "Bundle Svelte as an EcmaScript module and system module.",
+	"repo_url": "https://github.com/geometryzen/esm-bundle-svelte",
+	"authors": ["geometryzen"],
+	"homepage": "https://github.com/geometryzen/esm-bundle-svelte#readme",
+	"downloads": 16,
+	"dependents": 0,
+	"updated": "2024-05-27T13:38:08.586Z",
+	"tags": ["tooling"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

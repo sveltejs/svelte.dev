@@ -1,16 +1,17 @@
 {
-  "name": "sveltemeacoffee",
-  "description": "Create configurable Buy Me A Coffee button in Svelte.",
-  "repo_url": "",
-  "authors": [
-    "skamansam"
-  ],
-  "downloads": 10,
-  "dependents": 0,
-  "updated": "2022-06-25T20:53:52.345Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "sveltemeacoffee",
+	"description": "Create configurable Buy Me A Coffee button in Svelte.",
+	"repo_url": "",
+	"authors": ["skamansam"],
+	"downloads": 10,
+	"dependents": 0,
+	"updated": "2022-06-25T20:53:52.345Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

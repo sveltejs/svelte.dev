@@ -1,19 +1,19 @@
 {
-  "name": "@svizzle/choropleth",
-  "description": "Render choropleth maps with Svelte and D3.",
-  "repo_url": "https://github.com/nestauk/svizzle",
-  "authors": [
-    "nestauk-dev",
-    "mindrones"
-  ],
-  "homepage": "https://github.com/nestauk/svizzle",
-  "downloads": 24,
-  "dependents": 2,
-  "updated": "2023-11-23T20:36:01.088Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 19
+	"name": "@svizzle/choropleth",
+	"description": "Render choropleth maps with Svelte and D3.",
+	"repo_url": "https://github.com/nestauk/svizzle",
+	"authors": ["nestauk-dev", "mindrones"],
+	"homepage": "https://github.com/nestauk/svizzle",
+	"downloads": 24,
+	"dependents": 2,
+	"updated": "2023-11-23T20:36:01.088Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 19,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

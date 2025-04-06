@@ -1,17 +1,18 @@
 {
-  "name": "@yuzu-health/svelte-headless-table",
-  "description": "Build unopinionated, extensible data tables for Svelte.",
-  "repo_url": "https://github.com/ryanylee/svelte-headless-table",
-  "authors": [
-    "ryanylee_"
-  ],
-  "homepage": "https://svelte-headless-table.bryanmylee.com",
-  "downloads": 37,
-  "dependents": 0,
-  "updated": "2023-12-18T20:19:36.758Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@yuzu-health/svelte-headless-table",
+	"description": "Build unopinionated, extensible data tables for Svelte.",
+	"repo_url": "https://github.com/ryanylee/svelte-headless-table",
+	"authors": ["ryanylee_"],
+	"homepage": "https://svelte-headless-table.bryanmylee.com",
+	"downloads": 37,
+	"dependents": 0,
+	"updated": "2023-12-18T20:19:36.758Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "svelte-compare-image-slider",
-  "description": "Compares two images with interactive slider.",
-  "repo_url": "https://github.com/johnwalley/compare-image-slider",
-  "authors": [
-    "johnwalley"
-  ],
-  "homepage": "https://github.com/johnwalley/compare-image-slider#readme",
-  "downloads": 21,
-  "dependents": 0,
-  "updated": "2020-07-27T20:18:53.273Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 17
+	"name": "svelte-compare-image-slider",
+	"description": "Compares two images with interactive slider.",
+	"repo_url": "https://github.com/johnwalley/compare-image-slider",
+	"authors": ["johnwalley"],
+	"homepage": "https://github.com/johnwalley/compare-image-slider#readme",
+	"downloads": 21,
+	"dependents": 0,
+	"updated": "2020-07-27T20:18:53.273Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 17,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

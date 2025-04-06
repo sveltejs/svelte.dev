@@ -1,17 +1,18 @@
 {
-  "name": "svelte4-fragment-component",
-  "description": "Render children with lifecycle hooks for testing in Svelte.",
-  "repo_url": "https://github.com/NanezX/svelte4-fragment-component",
-  "authors": [
-    "nanez"
-  ],
-  "homepage": "https://github.com/NanezX/svelte4-fragment-component#readme",
-  "downloads": 719,
-  "dependents": 1,
-  "updated": "2023-07-17T23:19:54.275Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte4-fragment-component",
+	"description": "Render children with lifecycle hooks for testing in Svelte.",
+	"repo_url": "https://github.com/NanezX/svelte4-fragment-component",
+	"authors": ["nanez"],
+	"homepage": "https://github.com/NanezX/svelte4-fragment-component#readme",
+	"downloads": 719,
+	"dependents": 1,
+	"updated": "2023-07-17T23:19:54.275Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": false
+	}
 }

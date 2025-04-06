@@ -1,18 +1,19 @@
 {
-  "name": "@powchess/chessboard",
-  "description": "Create chessboard UI components for Svelte.",
-  "repo_url": "https://github.com/powchess/chessboard",
-  "authors": [
-    "trgsv"
-  ],
-  "homepage": "https://powchess.com",
-  "downloads": 84,
-  "dependents": 0,
-  "updated": "2023-11-12T14:55:34.244Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "@powchess/chessboard",
+	"description": "Create chessboard UI components for Svelte.",
+	"repo_url": "https://github.com/powchess/chessboard",
+	"authors": ["trgsv"],
+	"homepage": "https://powchess.com",
+	"downloads": 84,
+	"dependents": 0,
+	"updated": "2023-11-12T14:55:34.244Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

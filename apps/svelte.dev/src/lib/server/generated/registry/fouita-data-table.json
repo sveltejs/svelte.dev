@@ -1,18 +1,19 @@
 {
-  "name": "@fouita/data-table",
-  "description": "Build responsive data tables with Svelte and Tailwind CSS.",
-  "repo_url": "https://github.com/fouita/svelte-tw-data-table",
-  "authors": [
-    "fouita"
-  ],
-  "homepage": "https://github.com/fouita/svelte-tw-data-table#readme",
-  "downloads": 12,
-  "dependents": 0,
-  "updated": "2021-02-20T16:58:36.814Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 26
+	"name": "@fouita/data-table",
+	"description": "Build responsive data tables with Svelte and Tailwind CSS.",
+	"repo_url": "https://github.com/fouita/svelte-tw-data-table",
+	"authors": ["fouita"],
+	"homepage": "https://github.com/fouita/svelte-tw-data-table#readme",
+	"downloads": 12,
+	"dependents": 0,
+	"updated": "2021-02-20T16:58:36.814Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 26,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

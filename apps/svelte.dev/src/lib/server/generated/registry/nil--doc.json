@@ -1,16 +1,17 @@
 {
-  "name": "@nil-/doc",
-  "description": "Create documentation with Svelte components.",
-  "repo_url": "",
-  "authors": [
-    "nil-"
-  ],
-  "downloads": 65,
-  "dependents": 0,
-  "updated": "2023-07-05T13:02:59.924Z",
-  "tags": [
-    "content"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@nil-/doc",
+	"description": "Create documentation with Svelte components.",
+	"repo_url": "",
+	"authors": ["nil-"],
+	"downloads": 65,
+	"dependents": 0,
+	"updated": "2023-07-05T13:02:59.924Z",
+	"tags": ["content"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

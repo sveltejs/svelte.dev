@@ -1,18 +1,19 @@
 {
-  "name": "svelte-picture-source",
-  "description": "Optimize images with picture and source tags in Svelte.",
-  "repo_url": "https://github.com/ppvg/svelte-picture-source",
-  "authors": [
-    "ppvg"
-  ],
-  "homepage": "https://github.com/ppvg/svelte-picture-source#readme",
-  "downloads": 10,
-  "dependents": 0,
-  "updated": "2020-09-14T16:41:56.077Z",
-  "tags": [
-    "media"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "svelte-picture-source",
+	"description": "Optimize images with picture and source tags in Svelte.",
+	"repo_url": "https://github.com/ppvg/svelte-picture-source",
+	"authors": ["ppvg"],
+	"homepage": "https://github.com/ppvg/svelte-picture-source#readme",
+	"downloads": 10,
+	"dependents": 0,
+	"updated": "2020-09-14T16:41:56.077Z",
+	"tags": ["media"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

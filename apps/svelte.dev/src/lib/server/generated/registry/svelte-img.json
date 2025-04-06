@@ -1,19 +1,19 @@
 {
-  "name": "svelte-img",
-  "description": "Create responsive image loading component for Svelte.",
-  "repo_url": "https://github.com/metonym/svelte-img",
-  "authors": [
-    "metonym"
-  ],
-  "homepage": "https://github.com/metonym/svelte-img",
-  "downloads": 14,
-  "dependents": 0,
-  "updated": "2021-10-16T22:09:11.151Z",
-  "tags": [
-    "ui",
-    "media"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 5
+	"name": "svelte-img",
+	"description": "Create responsive image loading component for Svelte.",
+	"repo_url": "https://github.com/metonym/svelte-img",
+	"authors": ["metonym"],
+	"homepage": "https://github.com/metonym/svelte-img",
+	"downloads": 14,
+	"dependents": 0,
+	"updated": "2021-10-16T22:09:11.151Z",
+	"tags": ["ui", "media"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 5,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

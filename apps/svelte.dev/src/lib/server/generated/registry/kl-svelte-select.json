@@ -1,18 +1,19 @@
 {
-  "name": "kl-svelte-select",
-  "description": "Create select/autocomplete/typeahead component for Svelte.",
-  "repo_url": "https://github.com/Kirill-Lekhov/svelte-select",
-  "authors": [
-    "k.lekhov"
-  ],
-  "homepage": "https://github.com/Kirill-Lekhov/svelte-select#readme",
-  "downloads": 3,
-  "dependents": 0,
-  "updated": "2024-11-06T13:15:13.993Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "kl-svelte-select",
+	"description": "Create select/autocomplete/typeahead component for Svelte.",
+	"repo_url": "https://github.com/Kirill-Lekhov/svelte-select",
+	"authors": ["k.lekhov"],
+	"homepage": "https://github.com/Kirill-Lekhov/svelte-select#readme",
+	"downloads": 3,
+	"dependents": 0,
+	"updated": "2024-11-06T13:15:13.993Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

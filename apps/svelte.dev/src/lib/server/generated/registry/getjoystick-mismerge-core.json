@@ -1,20 +1,19 @@
 {
-  "name": "@getjoystick/mismerge-core",
-  "description": "Provides a web-based merge editor built with Svelte.",
-  "repo_url": "https://github.com/getjoystick/mismerge",
-  "authors": [
-    "valerii_maslenykov",
-    "joystick-team",
-    "get-joystick"
-  ],
-  "homepage": "https://github.com/getjoystick/mismerge#readme",
-  "downloads": 5,
-  "dependents": 0,
-  "updated": "2024-02-21T13:45:50.643Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@getjoystick/mismerge-core",
+	"description": "Provides a web-based merge editor built with Svelte.",
+	"repo_url": "https://github.com/getjoystick/mismerge",
+	"authors": ["valerii_maslenykov", "joystick-team", "get-joystick"],
+	"homepage": "https://github.com/getjoystick/mismerge#readme",
+	"downloads": 5,
+	"dependents": 0,
+	"updated": "2024-02-21T13:45:50.643Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

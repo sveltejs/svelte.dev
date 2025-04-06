@@ -1,16 +1,17 @@
 {
-  "name": "@syncedstore/svelte",
-  "description": "Provide Svelte helpers for SyncedStore.",
-  "repo_url": "",
-  "authors": [
-    "yousefed"
-  ],
-  "downloads": 384,
-  "dependents": 2,
-  "updated": "2023-10-15T11:48:21.416Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "@syncedstore/svelte",
+	"description": "Provide Svelte helpers for SyncedStore.",
+	"repo_url": "",
+	"authors": ["yousefed"],
+	"downloads": 384,
+	"dependents": 2,
+	"updated": "2023-10-15T11:48:21.416Z",
+	"tags": ["miscellaneous"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

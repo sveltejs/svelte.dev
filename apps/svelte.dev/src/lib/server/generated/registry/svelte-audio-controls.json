@@ -1,19 +1,19 @@
 {
-  "name": "svelte-audio-controls",
-  "description": "Wrap audio tag with styled controls for consistent experience.",
-  "repo_url": "https://github.com/Linkcube/svelte-audio-controls",
-  "authors": [
-    "linkcube"
-  ],
-  "homepage": "https://github.com/Linkcube/svelte-audio-controls#readme",
-  "downloads": 12,
-  "dependents": 0,
-  "updated": "2020-02-21T22:19:18.414Z",
-  "tags": [
-    "ui",
-    "media"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 12
+	"name": "svelte-audio-controls",
+	"description": "Wrap audio tag with styled controls for consistent experience.",
+	"repo_url": "https://github.com/Linkcube/svelte-audio-controls",
+	"authors": ["linkcube"],
+	"homepage": "https://github.com/Linkcube/svelte-audio-controls#readme",
+	"downloads": 12,
+	"dependents": 0,
+	"updated": "2020-02-21T22:19:18.414Z",
+	"tags": ["ui", "media"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 12,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

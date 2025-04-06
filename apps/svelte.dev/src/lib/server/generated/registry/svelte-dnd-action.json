@@ -1,19 +1,19 @@
 {
-  "name": "svelte-dnd-action",
-  "description": "Implement drag and drop functionality in Svelte apps.",
-  "repo_url": "https://github.com/isaacHagoel/svelte-dnd-action",
-  "authors": [
-    "isaac_hagoel"
-  ],
-  "homepage": "https://github.com/isaacHagoel/svelte-dnd-action#readme",
-  "downloads": 35032,
-  "dependents": 33,
-  "updated": "2025-03-10T12:09:09.509Z",
-  "tags": [
-    "ui",
-    "miscellaneous"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 1926
+	"name": "svelte-dnd-action",
+	"description": "Implement drag and drop functionality in Svelte apps.",
+	"repo_url": "https://github.com/isaacHagoel/svelte-dnd-action",
+	"authors": ["isaac_hagoel"],
+	"homepage": "https://github.com/isaacHagoel/svelte-dnd-action#readme",
+	"downloads": 35032,
+	"dependents": 33,
+	"updated": "2025-03-10T12:09:09.509Z",
+	"tags": ["ui", "miscellaneous"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 1926,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": true
+	}
 }

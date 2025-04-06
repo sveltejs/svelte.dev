@@ -1,17 +1,17 @@
 {
-  "name": "supasveltekit",
-  "description": "Integrate SvelteKit with Supabase for authentication and realtime.",
-  "repo_url": "",
-  "authors": [
-    "itsalexousd",
-    "jeremyvoisin"
-  ],
-  "downloads": 10,
-  "dependents": 0,
-  "updated": "2024-08-07T13:13:28.223Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "supasveltekit",
+	"description": "Integrate SvelteKit with Supabase for authentication and realtime.",
+	"repo_url": "",
+	"authors": ["itsalexousd", "jeremyvoisin"],
+	"downloads": 10,
+	"dependents": 0,
+	"updated": "2024-08-07T13:13:28.223Z",
+	"tags": ["integration"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

@@ -1,16 +1,17 @@
 {
-  "name": "@plasmicapp/loader-svelte",
-  "description": "Load Plasmic components into Svelte applications.",
-  "repo_url": "",
-  "authors": [
-    "plasmicapp"
-  ],
-  "downloads": 502,
-  "dependents": 0,
-  "updated": "2025-03-18T21:32:06.565Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@plasmicapp/loader-svelte",
+	"description": "Load Plasmic components into Svelte applications.",
+	"repo_url": "",
+	"authors": ["plasmicapp"],
+	"downloads": 502,
+	"dependents": 0,
+	"updated": "2025-03-18T21:32:06.565Z",
+	"tags": ["integration"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

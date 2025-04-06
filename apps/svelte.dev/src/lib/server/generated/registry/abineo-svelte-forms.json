@@ -1,18 +1,19 @@
 {
-  "name": "@abineo/svelte-forms",
-  "description": "Provides form validation for Svelte and SvelteKit projects.",
-  "repo_url": "https://github.com/abineo-ag/svelte-forms",
-  "authors": [
-    "christoph-jeanluc-schneider"
-  ],
-  "homepage": "https://github.com/abineo-ag/svelte-forms#readme",
-  "downloads": 12,
-  "dependents": 0,
-  "updated": "2023-06-27T14:48:12.451Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@abineo/svelte-forms",
+	"description": "Provides form validation for Svelte and SvelteKit projects.",
+	"repo_url": "https://github.com/abineo-ag/svelte-forms",
+	"authors": ["christoph-jeanluc-schneider"],
+	"homepage": "https://github.com/abineo-ag/svelte-forms#readme",
+	"downloads": 12,
+	"dependents": 0,
+	"updated": "2023-06-27T14:48:12.451Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

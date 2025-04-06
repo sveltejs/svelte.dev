@@ -1,18 +1,19 @@
 {
-  "name": "@floratmin/svelte-fragment-divider",
-  "description": "Divide Svelte files into script, style, and HTML fragments.",
-  "repo_url": "https://github.com/floratmin/svelte-fragment-divider",
-  "authors": [
-    "floratmin"
-  ],
-  "homepage": "https://github.com/floratmin/svelte-fragment-divider#readme",
-  "downloads": 0,
-  "dependents": 1,
-  "updated": "2023-10-04T18:29:19.274Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 2
+	"name": "@floratmin/svelte-fragment-divider",
+	"description": "Divide Svelte files into script, style, and HTML fragments.",
+	"repo_url": "https://github.com/floratmin/svelte-fragment-divider",
+	"authors": ["floratmin"],
+	"homepage": "https://github.com/floratmin/svelte-fragment-divider#readme",
+	"downloads": 0,
+	"dependents": 1,
+	"updated": "2023-10-04T18:29:19.274Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

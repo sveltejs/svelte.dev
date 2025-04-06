@@ -11,7 +11,7 @@ addEventListener('message', async (event) => {
 	}
 
 	if (type === 'get') {
-		let { query, svelte_5_only = false, hide_outdated = false, sort_by } = payload;
+		let { query, svelte_versions = ['4', '5'], hide_outdated = false, sort_by } = payload;
 
 		sort_by = search_criteria.includes(sort_by) ? sort_by : 'popularity';
 
@@ -20,7 +20,13 @@ addEventListener('message', async (event) => {
 		const current_results = search(query, {
 			sort_by,
 			filters: {
-				svelte_5_only,
+				svelte_versions: (svelte_versions as string[]).reduce(
+					(acc, val) => {
+						acc[val] = true;
+						return acc;
+					},
+					{} as Record<string, boolean>
+				),
 				hide_outdated
 			}
 		});

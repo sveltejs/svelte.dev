@@ -1,18 +1,19 @@
 {
-  "name": "svelte-zdog",
-  "description": "Create 3D renders with Zdog in Svelte components.",
-  "repo_url": "https://github.com/wh0am1-dev/svelte-zdog",
-  "authors": [
-    "wh0am1-dev"
-  ],
-  "homepage": "https://carlos-aguilar.com/svelte-zdog",
-  "downloads": 1,
-  "dependents": 0,
-  "updated": "2023-08-21T02:15:43.393Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 44
+	"name": "svelte-zdog",
+	"description": "Create 3D renders with Zdog in Svelte components.",
+	"repo_url": "https://github.com/wh0am1-dev/svelte-zdog",
+	"authors": ["wh0am1-dev"],
+	"homepage": "https://carlos-aguilar.com/svelte-zdog",
+	"downloads": 1,
+	"dependents": 0,
+	"updated": "2023-08-21T02:15:43.393Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 44,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

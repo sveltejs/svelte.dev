@@ -1,18 +1,19 @@
 {
-  "name": "svelte-app-router",
-  "description": "Simple SPA router for Svelte applications.",
-  "repo_url": "https://github.com/coussej/svelte-app-router",
-  "authors": [
-    "coussej"
-  ],
-  "homepage": "https://github.com/coussej/svelte-app-router#readme",
-  "downloads": 3,
-  "dependents": 0,
-  "updated": "2023-08-03T13:22:36.505Z",
-  "tags": [
-    "router"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 13
+	"name": "svelte-app-router",
+	"description": "Simple SPA router for Svelte applications.",
+	"repo_url": "https://github.com/coussej/svelte-app-router",
+	"authors": ["coussej"],
+	"homepage": "https://github.com/coussej/svelte-app-router#readme",
+	"downloads": 3,
+	"dependents": 0,
+	"updated": "2023-08-03T13:22:36.505Z",
+	"tags": ["router"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 13,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

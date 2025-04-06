@@ -1,18 +1,19 @@
 {
-  "name": "@bztes/svelte-rip",
-  "description": "Create responsive images with preview and blurhash support.",
-  "repo_url": "https://github.com/bztes/svelte-rip",
-  "authors": [
-    "bztes"
-  ],
-  "homepage": "https://bztes.github.io/svelte-rip/",
-  "downloads": 12,
-  "dependents": 0,
-  "updated": "2021-11-07T22:00:49.998Z",
-  "tags": [
-    "media"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 2
+	"name": "@bztes/svelte-rip",
+	"description": "Create responsive images with preview and blurhash support.",
+	"repo_url": "https://github.com/bztes/svelte-rip",
+	"authors": ["bztes"],
+	"homepage": "https://bztes.github.io/svelte-rip/",
+	"downloads": 12,
+	"dependents": 0,
+	"updated": "2021-11-07T22:00:49.998Z",
+	"tags": ["media"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

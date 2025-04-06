@@ -1,18 +1,19 @@
 {
-  "name": "sapper-navigation-enhancer",
-  "description": "Enhance Sapper navigation with beforeNavigate hook.",
-  "repo_url": "https://github.com/PatrickG/sapper-navigation-enhancer",
-  "authors": [
-    "pehgeh"
-  ],
-  "homepage": "https://github.com/PatrickG/sapper-navigation-enhancer#readme",
-  "downloads": 16,
-  "dependents": 0,
-  "updated": "2021-03-26T17:03:41.941Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 2
+	"name": "sapper-navigation-enhancer",
+	"description": "Enhance Sapper navigation with beforeNavigate hook.",
+	"repo_url": "https://github.com/PatrickG/sapper-navigation-enhancer",
+	"authors": ["pehgeh"],
+	"homepage": "https://github.com/PatrickG/sapper-navigation-enhancer#readme",
+	"downloads": 16,
+	"dependents": 0,
+	"updated": "2021-03-26T17:03:41.941Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

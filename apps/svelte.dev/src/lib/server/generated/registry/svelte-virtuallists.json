@@ -1,18 +1,19 @@
 {
-  "name": "svelte-virtuallists",
-  "description": "Render only visible items, for efficient Svelte lists.",
-  "repo_url": "https://github.com/orefalo/svelte-virtuallists",
-  "authors": [
-    "orefalo"
-  ],
-  "homepage": "https://orefalo.github.io/svelte-virtuallists/",
-  "downloads": 764,
-  "dependents": 0,
-  "updated": "2025-03-01T19:17:52.480Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 113
+	"name": "svelte-virtuallists",
+	"description": "Render only visible items, for efficient Svelte lists.",
+	"repo_url": "https://github.com/orefalo/svelte-virtuallists",
+	"authors": ["orefalo"],
+	"homepage": "https://orefalo.github.io/svelte-virtuallists/",
+	"downloads": 764,
+	"dependents": 0,
+	"updated": "2025-03-01T19:17:52.480Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 113,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

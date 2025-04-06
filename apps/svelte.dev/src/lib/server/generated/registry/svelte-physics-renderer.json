@@ -1,18 +1,19 @@
 {
-  "name": "svelte-physics-renderer",
-  "description": "Render HTML-based physics simulations in Svelte.",
-  "repo_url": "https://github.com/pnm122/svelte-physics-renderer",
-  "authors": [
-    "pnm122"
-  ],
-  "homepage": "https://github.com/pnm122/svelte-physics-renderer#readme",
-  "downloads": 1,
-  "dependents": 0,
-  "updated": "2024-09-22T01:02:47.834Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelte-physics-renderer",
+	"description": "Render HTML-based physics simulations in Svelte.",
+	"repo_url": "https://github.com/pnm122/svelte-physics-renderer",
+	"authors": ["pnm122"],
+	"homepage": "https://github.com/pnm122/svelte-physics-renderer#readme",
+	"downloads": 1,
+	"dependents": 0,
+	"updated": "2024-09-22T01:02:47.834Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

@@ -1,17 +1,18 @@
 {
-  "name": "better-svelte-writable",
-  "description": "Create type-safe Svelte writable stores with previous value tracking.",
-  "repo_url": "",
-  "authors": [
-    "tnthung"
-  ],
-  "homepage": "https://github.com/tnthung/better-svelte-writable",
-  "downloads": 24,
-  "dependents": 0,
-  "updated": "2023-12-01T00:51:18.489Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "better-svelte-writable",
+	"description": "Create type-safe Svelte writable stores with previous value tracking.",
+	"repo_url": "",
+	"authors": ["tnthung"],
+	"homepage": "https://github.com/tnthung/better-svelte-writable",
+	"downloads": 24,
+	"dependents": 0,
+	"updated": "2023-12-01T00:51:18.489Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

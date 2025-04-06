@@ -1,30 +1,32 @@
 {
-  "name": "@dfinity/gix-components",
-  "description": "Create UI components for Dfinity projects using Svelte.",
-  "repo_url": "https://github.com/dfinity/gix-components",
-  "authors": [
-    "dayyildiz",
-    "eric-swanson-dfinity",
-    "krpeacock",
-    "npm-dfinity-org",
-    "bitdivine",
-    "ielashi",
-    "keplervital",
-    "nathan.mcgrath.dfinity",
-    "dfx-json",
-    "dfn_wndlng",
-    "dsarlis",
-    "ihor_dfinity"
-  ],
-  "homepage": "https://github.com/dfinity/gix-components#readme",
-  "downloads": 2779,
-  "dependents": 0,
-  "updated": "2025-03-24T15:45:57.968Z",
-  "tags": [
-    "ui",
-    "design-system"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 40
+	"name": "@dfinity/gix-components",
+	"description": "Create UI components for Dfinity projects using Svelte.",
+	"repo_url": "https://github.com/dfinity/gix-components",
+	"authors": [
+		"dayyildiz",
+		"eric-swanson-dfinity",
+		"krpeacock",
+		"npm-dfinity-org",
+		"bitdivine",
+		"ielashi",
+		"keplervital",
+		"nathan.mcgrath.dfinity",
+		"dfx-json",
+		"dfn_wndlng",
+		"dsarlis",
+		"ihor_dfinity"
+	],
+	"homepage": "https://github.com/dfinity/gix-components#readme",
+	"downloads": 2779,
+	"dependents": 0,
+	"updated": "2025-03-24T15:45:57.968Z",
+	"tags": ["ui", "design-system"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 40,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

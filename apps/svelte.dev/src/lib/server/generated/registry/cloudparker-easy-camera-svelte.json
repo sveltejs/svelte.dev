@@ -1,16 +1,17 @@
 {
-  "name": "@cloudparker/easy-camera-svelte",
-  "description": "Capture images and videos with easy-to-use Svelte camera.",
-  "repo_url": "",
-  "authors": [
-    "couldparker.com"
-  ],
-  "downloads": 21,
-  "dependents": 1,
-  "updated": "2024-11-26T17:44:28.796Z",
-  "tags": [
-    "media"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "@cloudparker/easy-camera-svelte",
+	"description": "Capture images and videos with easy-to-use Svelte camera.",
+	"repo_url": "",
+	"authors": ["couldparker.com"],
+	"downloads": 21,
+	"dependents": 1,
+	"updated": "2024-11-26T17:44:28.796Z",
+	"tags": ["media"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

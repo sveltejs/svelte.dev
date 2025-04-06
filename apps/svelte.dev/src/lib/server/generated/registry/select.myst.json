@@ -1,16 +1,17 @@
 {
-  "name": "select.myst",
-  "description": "Custom select component with filtering and keyboard support.",
-  "repo_url": "",
-  "authors": [
-    "codemyst"
-  ],
-  "downloads": 12,
-  "dependents": 0,
-  "updated": "2021-05-28T14:41:55.951Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "select.myst",
+	"description": "Custom select component with filtering and keyboard support.",
+	"repo_url": "",
+	"authors": ["codemyst"],
+	"downloads": 12,
+	"dependents": 0,
+	"updated": "2021-05-28T14:41:55.951Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,16 +1,17 @@
 {
-  "name": "@htmlbricks/hb-gallery-video",
-  "description": "Provides Svelte Bootstrap video gallery web component.",
-  "repo_url": "",
-  "authors": [
-    "dariocaruso"
-  ],
-  "downloads": 474,
-  "dependents": 2,
-  "updated": "2025-03-24T18:07:23.265Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@htmlbricks/hb-gallery-video",
+	"description": "Provides Svelte Bootstrap video gallery web component.",
+	"repo_url": "",
+	"authors": ["dariocaruso"],
+	"downloads": 474,
+	"dependents": 2,
+	"updated": "2025-03-24T18:07:23.265Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

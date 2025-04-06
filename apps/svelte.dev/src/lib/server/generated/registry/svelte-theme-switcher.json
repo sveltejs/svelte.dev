@@ -1,16 +1,17 @@
 {
-  "name": "svelte-theme-switcher",
-  "description": "Switch Svelte themes, light or dark, with a simple component.",
-  "repo_url": "",
-  "authors": [
-    "dev-warner"
-  ],
-  "downloads": 21,
-  "dependents": 0,
-  "updated": "2020-04-20T15:09:05.770Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-theme-switcher",
+	"description": "Switch Svelte themes, light or dark, with a simple component.",
+	"repo_url": "",
+	"authors": ["dev-warner"],
+	"downloads": 21,
+	"dependents": 0,
+	"updated": "2020-04-20T15:09:05.770Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

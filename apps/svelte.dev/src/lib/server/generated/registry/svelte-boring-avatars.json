@@ -1,18 +1,19 @@
 {
-  "name": "svelte-boring-avatars",
-  "description": "Generate avatar images based on names, with various styles.",
-  "repo_url": "https://github.com/paolotiu/svelte-boring-avatars",
-  "authors": [
-    "paolotiu17"
-  ],
-  "homepage": "https://github.com/paolotiu/svelte-boring-avatars#readme",
-  "downloads": 344,
-  "dependents": 0,
-  "updated": "2024-03-08T08:12:43.519Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 65
+	"name": "svelte-boring-avatars",
+	"description": "Generate avatar images based on names, with various styles.",
+	"repo_url": "https://github.com/paolotiu/svelte-boring-avatars",
+	"authors": ["paolotiu17"],
+	"homepage": "https://github.com/paolotiu/svelte-boring-avatars#readme",
+	"downloads": 344,
+	"dependents": 0,
+	"updated": "2024-03-08T08:12:43.519Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 65,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

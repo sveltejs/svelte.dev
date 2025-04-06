@@ -1,18 +1,19 @@
 {
-  "name": "@spaceavocado/svelte-router",
-  "description": "Implement routing for Svelte single-page applications.",
-  "repo_url": "https://github.com/spaceavocado/svelte-router",
-  "authors": [
-    "davidhorak"
-  ],
-  "homepage": "https://github.com/spaceavocado/svelte-router",
-  "downloads": 40,
-  "dependents": 0,
-  "updated": "2019-09-30T03:07:07.713Z",
-  "tags": [
-    "router"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 61
+	"name": "@spaceavocado/svelte-router",
+	"description": "Implement routing for Svelte single-page applications.",
+	"repo_url": "https://github.com/spaceavocado/svelte-router",
+	"authors": ["davidhorak"],
+	"homepage": "https://github.com/spaceavocado/svelte-router",
+	"downloads": 40,
+	"dependents": 0,
+	"updated": "2019-09-30T03:07:07.713Z",
+	"tags": ["router"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 61,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "svelte-writable-derived",
-  "description": "Create writable derived stores for Svelte, transforming data bidirectionally.",
-  "repo_url": "https://github.com/PixievoltNo1/svelte-writable-derived",
-  "authors": [
-    "pixievoltno1"
-  ],
-  "homepage": "https://github.com/PixievoltNo1/svelte-writable-derived",
-  "downloads": 20232,
-  "dependents": 14,
-  "updated": "2024-04-04T06:55:02.096Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 89
+	"name": "svelte-writable-derived",
+	"description": "Create writable derived stores for Svelte, transforming data bidirectionally.",
+	"repo_url": "https://github.com/PixievoltNo1/svelte-writable-derived",
+	"authors": ["pixievoltno1"],
+	"homepage": "https://github.com/PixievoltNo1/svelte-writable-derived",
+	"downloads": 20232,
+	"dependents": 14,
+	"updated": "2024-04-04T06:55:02.096Z",
+	"tags": ["miscellaneous"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 89,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

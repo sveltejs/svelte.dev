@@ -1,18 +1,19 @@
 {
-  "name": "html-svelte-parser",
-  "description": "Parses HTML into Svelte components.",
-  "repo_url": "https://github.com/PatrickG/html-svelte-parser",
-  "authors": [
-    "pehgeh"
-  ],
-  "homepage": "https://github.com/PatrickG/html-svelte-parser#readme",
-  "downloads": 271,
-  "dependents": 0,
-  "updated": "2024-01-11T10:14:34.087Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 16
+	"name": "html-svelte-parser",
+	"description": "Parses HTML into Svelte components.",
+	"repo_url": "https://github.com/PatrickG/html-svelte-parser",
+	"authors": ["pehgeh"],
+	"homepage": "https://github.com/PatrickG/html-svelte-parser#readme",
+	"downloads": 271,
+	"dependents": 0,
+	"updated": "2024-01-11T10:14:34.087Z",
+	"tags": ["tooling"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 16,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

@@ -1,23 +1,19 @@
 {
-  "name": "@beyonk/svelte-trustpilot",
-  "description": "Integrate Trustpilot reviews into Svelte applications.",
-  "repo_url": "https://github.com/beyonk-adventures/svelte-trustpilot",
-  "authors": [
-    "antony",
-    "adampond",
-    "alex.dilley",
-    "jedwoodcock",
-    "leandro.silva",
-    "tomlewis0"
-  ],
-  "homepage": "https://github.com/beyonk-adventures/svelte-trustpilot#readme",
-  "downloads": 2,
-  "dependents": 0,
-  "updated": "2019-06-22T07:13:07.617Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 4
+	"name": "@beyonk/svelte-trustpilot",
+	"description": "Integrate Trustpilot reviews into Svelte applications.",
+	"repo_url": "https://github.com/beyonk-adventures/svelte-trustpilot",
+	"authors": ["antony", "adampond", "alex.dilley", "jedwoodcock", "leandro.silva", "tomlewis0"],
+	"homepage": "https://github.com/beyonk-adventures/svelte-trustpilot#readme",
+	"downloads": 2,
+	"dependents": 0,
+	"updated": "2019-06-22T07:13:07.617Z",
+	"tags": ["integration"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 4,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

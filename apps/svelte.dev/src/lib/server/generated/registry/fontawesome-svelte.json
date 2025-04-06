@@ -1,18 +1,19 @@
 {
-  "name": "fontawesome-svelte",
-  "description": "Integrate FontAwesome icons into Svelte components.",
-  "repo_url": "https://github.com/yukipastelcat/svelte-fontawesome",
-  "authors": [
-    "yukipastelcat"
-  ],
-  "homepage": "https://yukipastelcat.github.io/svelte-fontawesome",
-  "downloads": 160,
-  "dependents": 1,
-  "updated": "2025-01-12T16:15:55.759Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 12
+	"name": "fontawesome-svelte",
+	"description": "Integrate FontAwesome icons into Svelte components.",
+	"repo_url": "https://github.com/yukipastelcat/svelte-fontawesome",
+	"authors": ["yukipastelcat"],
+	"homepage": "https://yukipastelcat.github.io/svelte-fontawesome",
+	"downloads": 160,
+	"dependents": 1,
+	"updated": "2025-01-12T16:15:55.759Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 12,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

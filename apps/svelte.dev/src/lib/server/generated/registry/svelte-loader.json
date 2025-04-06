@@ -1,22 +1,19 @@
 {
-  "name": "svelte-loader",
-  "description": "Compile Svelte components with Webpack.",
-  "repo_url": "https://github.com/sveltejs/svelte-loader",
-  "authors": [
-    "nikku",
-    "rich_harris",
-    "conduitry",
-    "svelte-admin",
-    "dummdidumm"
-  ],
-  "homepage": "https://github.com/sveltejs/svelte-loader#readme",
-  "downloads": 38217,
-  "dependents": 88,
-  "updated": "2024-10-09T21:13:47.738Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 602
+	"name": "svelte-loader",
+	"description": "Compile Svelte components with Webpack.",
+	"repo_url": "https://github.com/sveltejs/svelte-loader",
+	"authors": ["nikku", "rich_harris", "conduitry", "svelte-admin", "dummdidumm"],
+	"homepage": "https://github.com/sveltejs/svelte-loader#readme",
+	"downloads": 38217,
+	"dependents": 88,
+	"updated": "2024-10-09T21:13:47.738Z",
+	"tags": ["tooling"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 602,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

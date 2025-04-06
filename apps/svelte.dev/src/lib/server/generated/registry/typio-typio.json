@@ -1,16 +1,17 @@
 {
-  "name": "@typio/typio",
-  "description": "Create lightweight, aesthetic WYSIWYG rich text editor.",
-  "repo_url": "",
-  "authors": [
-    "typio"
-  ],
-  "downloads": 4,
-  "dependents": 0,
-  "updated": "2022-07-10T10:09:16.126Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@typio/typio",
+	"description": "Create lightweight, aesthetic WYSIWYG rich text editor.",
+	"repo_url": "",
+	"authors": ["typio"],
+	"downloads": 4,
+	"dependents": 0,
+	"updated": "2022-07-10T10:09:16.126Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

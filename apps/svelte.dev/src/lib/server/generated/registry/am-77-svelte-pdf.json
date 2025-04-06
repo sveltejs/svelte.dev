@@ -1,16 +1,17 @@
 {
-  "name": "@am-77/svelte-pdf",
-  "description": "View PDF files in Svelte applications.",
-  "repo_url": "",
-  "authors": [
-    "am-77"
-  ],
-  "downloads": 16,
-  "dependents": 0,
-  "updated": "2023-09-05T15:19:06.902Z",
-  "tags": [
-    "media"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@am-77/svelte-pdf",
+	"description": "View PDF files in Svelte applications.",
+	"repo_url": "",
+	"authors": ["am-77"],
+	"downloads": 16,
+	"dependents": 0,
+	"updated": "2023-09-05T15:19:06.902Z",
+	"tags": ["media"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "layercake",
-  "description": "Build reusable graphics with Svelte, compatible with Svelte 3 through 5.",
-  "repo_url": "https://github.com/mhkeller/layercake",
-  "authors": [
-    "mhkeller0"
-  ],
-  "homepage": "https://layercake.graphics/",
-  "downloads": 11179,
-  "dependents": 14,
-  "updated": "2025-03-20T18:25:02.048Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 1547
+	"name": "layercake",
+	"description": "Build reusable graphics with Svelte, compatible with Svelte 3 through 5.",
+	"repo_url": "https://github.com/mhkeller/layercake",
+	"authors": ["mhkeller0"],
+	"homepage": "https://layercake.graphics/",
+	"downloads": 11179,
+	"dependents": 14,
+	"updated": "2025-03-20T18:25:02.048Z",
+	"tags": ["miscellaneous"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 1547,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

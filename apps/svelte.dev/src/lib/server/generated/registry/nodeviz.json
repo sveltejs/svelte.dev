@@ -1,18 +1,19 @@
 {
-  "name": "nodeviz",
-  "description": "Create node graph based UI framework for Svelte and SvelteKit.",
-  "repo_url": "https://github.com/jarecsni/nodeviz",
-  "authors": [
-    "jarecsni"
-  ],
-  "homepage": "https://github.com/jarecsni/nodeviz#readme",
-  "downloads": 19,
-  "dependents": 0,
-  "updated": "2022-11-27T11:38:56.057Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "nodeviz",
+	"description": "Create node graph based UI framework for Svelte and SvelteKit.",
+	"repo_url": "https://github.com/jarecsni/nodeviz",
+	"authors": ["jarecsni"],
+	"homepage": "https://github.com/jarecsni/nodeviz#readme",
+	"downloads": 19,
+	"dependents": 0,
+	"updated": "2022-11-27T11:38:56.057Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

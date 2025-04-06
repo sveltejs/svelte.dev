@@ -1,18 +1,19 @@
 {
-  "name": "@form-observer/svelte",
-  "description": "Provide form validation and observation utilities for Svelte apps.",
-  "repo_url": "https://github.com/enthusiastic-js/form-observer",
-  "authors": [
-    "itenthusiasm"
-  ],
-  "homepage": "https://github.com/enthusiastic-js/form-observer#readme",
-  "downloads": 16,
-  "dependents": 0,
-  "updated": "2024-05-05T17:20:03.222Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 10
+	"name": "@form-observer/svelte",
+	"description": "Provide form validation and observation utilities for Svelte apps.",
+	"repo_url": "https://github.com/enthusiastic-js/form-observer",
+	"authors": ["itenthusiasm"],
+	"homepage": "https://github.com/enthusiastic-js/form-observer#readme",
+	"downloads": 16,
+	"dependents": 0,
+	"updated": "2024-05-05T17:20:03.222Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 10,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

@@ -1,20 +1,19 @@
 {
-  "name": "svelte-language-server",
-  "description": "Provide language server for Svelte.",
-  "repo_url": "https://github.com/sveltejs/language-tools",
-  "authors": [
-    "orta",
-    "svelte-language-tools-deploy",
-    "dummdidumm"
-  ],
-  "homepage": "https://github.com/sveltejs/language-tools#readme",
-  "downloads": 8660,
-  "dependents": 9,
-  "updated": "2025-03-06T14:09:49.594Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1294
+	"name": "svelte-language-server",
+	"description": "Provide language server for Svelte.",
+	"repo_url": "https://github.com/sveltejs/language-tools",
+	"authors": ["orta", "svelte-language-tools-deploy", "dummdidumm"],
+	"homepage": "https://github.com/sveltejs/language-tools#readme",
+	"downloads": 8660,
+	"dependents": 9,
+	"updated": "2025-03-06T14:09:49.594Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1296,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

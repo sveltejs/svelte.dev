@@ -1,18 +1,19 @@
 {
-  "name": "sveaflet",
-  "description": "Create interactive maps with Leaflet in Svelte.",
-  "repo_url": "https://github.com/GrayFrost/sveaflet",
-  "authors": [
-    "garyfrost"
-  ],
-  "homepage": "https://sveaflet.vercel.app/",
-  "downloads": 260,
-  "dependents": 0,
-  "updated": "2025-02-23T11:47:05.924Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 70
+	"name": "sveaflet",
+	"description": "Create interactive maps with Leaflet in Svelte.",
+	"repo_url": "https://github.com/GrayFrost/sveaflet",
+	"authors": ["garyfrost"],
+	"homepage": "https://sveaflet.vercel.app/",
+	"downloads": 260,
+	"dependents": 0,
+	"updated": "2025-02-23T11:47:05.924Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 70,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": true
+	}
 }

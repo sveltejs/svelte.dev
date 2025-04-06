@@ -1,21 +1,19 @@
 {
-  "name": "@sveltejs/svelte-virtual-list",
-  "description": "Render virtual lists efficiently in Svelte applications.",
-  "repo_url": "https://github.com/sveltejs/svelte-virtual-list",
-  "authors": [
-    "dominik_g",
-    "rich_harris",
-    "svelte-admin",
-    "conduitry"
-  ],
-  "homepage": "https://github.com/sveltejs/svelte-virtual-list#readme",
-  "downloads": 14867,
-  "dependents": 5,
-  "updated": "2019-08-22T14:41:08.370Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 715
+	"name": "@sveltejs/svelte-virtual-list",
+	"description": "Render virtual lists efficiently in Svelte applications.",
+	"repo_url": "https://github.com/sveltejs/svelte-virtual-list",
+	"authors": ["dominik_g", "rich_harris", "svelte-admin", "conduitry"],
+	"homepage": "https://github.com/sveltejs/svelte-virtual-list#readme",
+	"downloads": 14867,
+	"dependents": 5,
+	"updated": "2019-08-22T14:41:08.370Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 715,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "svelte-eventbus",
-  "description": "Implements simple eventbus using Svelte's internal tools.",
-  "repo_url": "https://github.com/AlexxNB/svelte-eventbus",
-  "authors": [
-    "alexxnb"
-  ],
-  "homepage": "https://github.com/AlexxNB/svelte-eventbus#readme",
-  "downloads": 11,
-  "dependents": 0,
-  "updated": "2022-02-18T12:24:22.806Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 38
+	"name": "svelte-eventbus",
+	"description": "Implements simple eventbus using Svelte's internal tools.",
+	"repo_url": "https://github.com/AlexxNB/svelte-eventbus",
+	"authors": ["alexxnb"],
+	"homepage": "https://github.com/AlexxNB/svelte-eventbus#readme",
+	"downloads": 11,
+	"dependents": 0,
+	"updated": "2022-02-18T12:24:22.806Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 38,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

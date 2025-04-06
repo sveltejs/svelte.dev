@@ -1,16 +1,17 @@
 {
-  "name": "@cloudparker/easy-qrcode-reader-svelte",
-  "description": "Reads QR codes from webcam or mobile camera in Svelte apps.",
-  "repo_url": "",
-  "authors": [
-    "couldparker.com"
-  ],
-  "downloads": 8,
-  "dependents": 0,
-  "updated": "2024-11-26T17:55:43.992Z",
-  "tags": [
-    "media"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "@cloudparker/easy-qrcode-reader-svelte",
+	"description": "Reads QR codes from webcam or mobile camera in Svelte apps.",
+	"repo_url": "",
+	"authors": ["couldparker.com"],
+	"downloads": 8,
+	"dependents": 0,
+	"updated": "2024-11-26T17:55:43.992Z",
+	"tags": ["media"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

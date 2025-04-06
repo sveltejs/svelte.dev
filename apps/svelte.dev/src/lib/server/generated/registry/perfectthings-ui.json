@@ -1,19 +1,19 @@
 {
-  "name": "@perfectthings/ui",
-  "description": "Create simple, perfect UI components for Svelte.",
-  "repo_url": "https://github.com/perfect-things/ui",
-  "authors": [
-    "tborychowski"
-  ],
-  "homepage": "https://github.com/perfect-things/ui#readme",
-  "downloads": 132,
-  "dependents": 0,
-  "updated": "2024-07-27T20:54:42.797Z",
-  "tags": [
-    "ui",
-    "design-system"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 18
+	"name": "@perfectthings/ui",
+	"description": "Create simple, perfect UI components for Svelte.",
+	"repo_url": "https://github.com/perfect-things/ui",
+	"authors": ["tborychowski"],
+	"homepage": "https://github.com/perfect-things/ui#readme",
+	"downloads": 132,
+	"dependents": 0,
+	"updated": "2024-07-27T20:54:42.797Z",
+	"tags": ["ui", "design-system"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 18,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "svelte-layouts",
-  "description": "Structure Svelte pages using CSS Flexbox and Grid.",
-  "repo_url": "https://github.com/ryu-man/svelte-layouts",
-  "authors": [
-    "ryuman"
-  ],
-  "homepage": "https://github.com/ryu-man/svelte-layouts#readme",
-  "downloads": 26,
-  "dependents": 0,
-  "updated": "2022-09-04T10:16:31.383Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 11
+	"name": "svelte-layouts",
+	"description": "Structure Svelte pages using CSS Flexbox and Grid.",
+	"repo_url": "https://github.com/ryu-man/svelte-layouts",
+	"authors": ["ryuman"],
+	"homepage": "https://github.com/ryu-man/svelte-layouts#readme",
+	"downloads": 26,
+	"dependents": 0,
+	"updated": "2022-09-04T10:16:31.383Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 11,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

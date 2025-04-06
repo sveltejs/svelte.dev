@@ -1,17 +1,18 @@
 {
-  "name": "svelte-simple-accordion",
-  "description": "Build simple, fully configurable accordion components for Svelte.",
-  "repo_url": "git@gitlab.com/public-e-soa-com/svelte-simple-accordion",
-  "authors": [
-    "jack-y"
-  ],
-  "homepage": "https://gitlab.com/public-e-soa-com/svelte-simple-accordion#readme",
-  "downloads": 13,
-  "dependents": 0,
-  "updated": "2021-10-26T14:09:42.861Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-simple-accordion",
+	"description": "Build simple, fully configurable accordion components for Svelte.",
+	"repo_url": "git@gitlab.com/public-e-soa-com/svelte-simple-accordion",
+	"authors": ["jack-y"],
+	"homepage": "https://gitlab.com/public-e-soa-com/svelte-simple-accordion#readme",
+	"downloads": 13,
+	"dependents": 0,
+	"updated": "2021-10-26T14:09:42.861Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

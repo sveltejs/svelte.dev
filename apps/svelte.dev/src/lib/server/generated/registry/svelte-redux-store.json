@@ -1,18 +1,19 @@
 {
-  "name": "svelte-redux-store",
-  "description": "Integrate Redux store functionality into Svelte applications.",
-  "repo_url": "https://github.com/vanzinvestor/svelte-redux-store",
-  "authors": [
-    "vanzinvestor"
-  ],
-  "homepage": "https://github.com/vanzinvestor/svelte-redux-store",
-  "downloads": 18,
-  "dependents": 0,
-  "updated": "2023-01-16T15:39:14.477Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 2
+	"name": "svelte-redux-store",
+	"description": "Integrate Redux store functionality into Svelte applications.",
+	"repo_url": "https://github.com/vanzinvestor/svelte-redux-store",
+	"authors": ["vanzinvestor"],
+	"homepage": "https://github.com/vanzinvestor/svelte-redux-store",
+	"downloads": 18,
+	"dependents": 0,
+	"updated": "2023-01-16T15:39:14.477Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "file-viewer",
-  "description": "View files using custom element built with Svelte.",
-  "repo_url": "https://github.com/avipunes/File-Viewer",
-  "authors": [
-    "avipunes"
-  ],
-  "homepage": "https://github.com/avipunes/File-Viewer#readme",
-  "downloads": 286,
-  "dependents": 0,
-  "updated": "2020-07-26T14:07:44.591Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 40
+	"name": "file-viewer",
+	"description": "View files using custom element built with Svelte.",
+	"repo_url": "https://github.com/avipunes/File-Viewer",
+	"authors": ["avipunes"],
+	"homepage": "https://github.com/avipunes/File-Viewer#readme",
+	"downloads": 286,
+	"dependents": 0,
+	"updated": "2020-07-26T14:07:44.591Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 40,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,20 +1,19 @@
 {
-  "name": "metawrite",
-  "description": "Appwrite SDK with ready-to-use components for SvelteKit.",
-  "repo_url": "https://github.com/koodeau/metawrite",
-  "authors": [
-    "koodeau"
-  ],
-  "homepage": "https://increas.io/metawrite",
-  "downloads": 35,
-  "dependents": 0,
-  "updated": "2022-06-12T19:33:50.028Z",
-  "tags": [
-    "integration",
-    "auth",
-    "database"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 26
+	"name": "metawrite",
+	"description": "Appwrite SDK with ready-to-use components for SvelteKit.",
+	"repo_url": "https://github.com/koodeau/metawrite",
+	"authors": ["koodeau"],
+	"homepage": "https://increas.io/metawrite",
+	"downloads": 35,
+	"dependents": 0,
+	"updated": "2022-06-12T19:33:50.028Z",
+	"tags": ["integration", "auth", "database"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 26,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

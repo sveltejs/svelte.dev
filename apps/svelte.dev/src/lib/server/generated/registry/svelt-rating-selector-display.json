@@ -1,18 +1,19 @@
 {
-  "name": "svelt-rating-selector-display",
-  "description": "Creates customizable, reactive rating selector component for Svelte.",
-  "repo_url": "https://github.com/stinger567/svelt-rating-selector-display",
-  "authors": [
-    "stinger567"
-  ],
-  "homepage": "https://svelt-rating-selector-display.stinger567.com/",
-  "downloads": 25,
-  "dependents": 0,
-  "updated": "2025-03-14T02:32:44.751Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelt-rating-selector-display",
+	"description": "Creates customizable, reactive rating selector component for Svelte.",
+	"repo_url": "https://github.com/stinger567/svelt-rating-selector-display",
+	"authors": ["stinger567"],
+	"homepage": "https://svelt-rating-selector-display.stinger567.com/",
+	"downloads": 25,
+	"dependents": 0,
+	"updated": "2025-03-14T02:32:44.751Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

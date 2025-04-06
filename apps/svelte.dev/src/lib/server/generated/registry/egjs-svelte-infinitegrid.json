@@ -1,27 +1,30 @@
 {
-  "name": "@egjs/svelte-infinitegrid",
-  "description": "Arrange items infinitely using various grid types.",
-  "repo_url": "https://github.com/naver/egjs-infinitegrid",
-  "authors": [
-    "anuu0916",
-    "braixen",
-    "ajaxpf",
-    "jongmoon",
-    "sculove",
-    "happyhj",
-    "mixed",
-    "netil",
-    "younkue",
-    "woodneck"
-  ],
-  "homepage": "https://github.com/naver/egjs-infinitegrid",
-  "downloads": 118,
-  "dependents": 1,
-  "updated": "2024-07-02T11:40:50.068Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 2279
+	"name": "@egjs/svelte-infinitegrid",
+	"description": "Arrange items infinitely using various grid types.",
+	"repo_url": "https://github.com/naver/egjs-infinitegrid",
+	"authors": [
+		"anuu0916",
+		"braixen",
+		"ajaxpf",
+		"jongmoon",
+		"sculove",
+		"happyhj",
+		"mixed",
+		"netil",
+		"younkue",
+		"woodneck"
+	],
+	"homepage": "https://github.com/naver/egjs-infinitegrid",
+	"downloads": 118,
+	"dependents": 1,
+	"updated": "2024-07-02T11:40:50.068Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 2279,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,21 +1,19 @@
 {
-  "name": "@sveltejs/amp",
-  "description": "Integrate AMP with SvelteKit.",
-  "repo_url": "https://github.com/sveltejs/kit",
-  "authors": [
-    "rich_harris",
-    "svelte-admin",
-    "conduitry",
-    "dominik_g"
-  ],
-  "homepage": "https://svelte.dev",
-  "downloads": 238,
-  "dependents": 0,
-  "updated": "2024-10-25T12:12:36.654Z",
-  "tags": [
-    "seo"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 19167
+	"name": "@sveltejs/amp",
+	"description": "Integrate AMP with SvelteKit.",
+	"repo_url": "https://github.com/sveltejs/kit",
+	"authors": ["rich_harris", "svelte-admin", "conduitry", "dominik_g"],
+	"homepage": "https://svelte.dev",
+	"downloads": 238,
+	"dependents": 0,
+	"updated": "2024-10-25T12:12:36.654Z",
+	"tags": ["seo"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 19168,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "svelte-monaco",
-  "description": "Integrate Monaco Editor into Svelte applications.",
-  "repo_url": "https://github.com/LeoDog896/svelte-monaco",
-  "authors": [
-    "leodog896"
-  ],
-  "homepage": "https://leodog896.github.io/svelte-monaco",
-  "downloads": 178,
-  "dependents": 0,
-  "updated": "2024-06-29T03:35:39.513Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 7
+	"name": "svelte-monaco",
+	"description": "Integrate Monaco Editor into Svelte applications.",
+	"repo_url": "https://github.com/LeoDog896/svelte-monaco",
+	"authors": ["leodog896"],
+	"homepage": "https://leodog896.github.io/svelte-monaco",
+	"downloads": 178,
+	"dependents": 0,
+	"updated": "2024-06-29T03:35:39.513Z",
+	"tags": ["tooling"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 7,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": true
+	}
 }

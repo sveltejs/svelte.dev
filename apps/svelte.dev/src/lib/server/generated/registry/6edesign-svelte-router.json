@@ -1,18 +1,19 @@
 {
-  "name": "@6edesign/svelte-router",
-  "description": "Implement page.js based routing for Svelte applications.",
-  "repo_url": "https://github.com/6eDesign/svelte-router",
-  "authors": [
-    "6edesign"
-  ],
-  "homepage": "https://github.com/6eDesign/svelte-router#readme",
-  "downloads": 93,
-  "dependents": 0,
-  "updated": "2020-06-17T15:51:09.055Z",
-  "tags": [
-    "router"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 6
+	"name": "@6edesign/svelte-router",
+	"description": "Implement page.js based routing for Svelte applications.",
+	"repo_url": "https://github.com/6eDesign/svelte-router",
+	"authors": ["6edesign"],
+	"homepage": "https://github.com/6eDesign/svelte-router#readme",
+	"downloads": 93,
+	"dependents": 0,
+	"updated": "2020-06-17T15:51:09.055Z",
+	"tags": ["router"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 6,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

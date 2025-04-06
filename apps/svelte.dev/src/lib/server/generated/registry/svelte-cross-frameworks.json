@@ -1,18 +1,19 @@
 {
-  "name": "svelte-cross-frameworks",
-  "description": "Wraps Svelte components for use in React and Vue applications.",
-  "repo_url": "https://github.com/zheeeng/svelte-cross-frameworks",
-  "authors": [
-    "zheeeng"
-  ],
-  "homepage": "https://github.com/zheeeng/svelte-cross-frameworks#readme",
-  "downloads": 2,
-  "dependents": 0,
-  "updated": "2023-12-11T13:11:13.865Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 5
+	"name": "svelte-cross-frameworks",
+	"description": "Wraps Svelte components for use in React and Vue applications.",
+	"repo_url": "https://github.com/zheeeng/svelte-cross-frameworks",
+	"authors": ["zheeeng"],
+	"homepage": "https://github.com/zheeeng/svelte-cross-frameworks#readme",
+	"downloads": 2,
+	"dependents": 0,
+	"updated": "2023-12-11T13:11:13.865Z",
+	"tags": ["integration"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 5,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

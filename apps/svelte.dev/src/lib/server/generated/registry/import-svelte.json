@@ -1,18 +1,19 @@
 {
-  "name": "import-svelte",
-  "description": "Require and transpile Svelte on the fly for Node.js environments.",
-  "repo_url": "https://github.com/SyMind/import-svelte",
-  "authors": [
-    "symind"
-  ],
-  "homepage": "https://github.com/SyMind/import-svelte#readme",
-  "downloads": 0,
-  "dependents": 0,
-  "updated": "2023-01-23T11:20:19.250Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 5
+	"name": "import-svelte",
+	"description": "Require and transpile Svelte on the fly for Node.js environments.",
+	"repo_url": "https://github.com/SyMind/import-svelte",
+	"authors": ["symind"],
+	"homepage": "https://github.com/SyMind/import-svelte#readme",
+	"downloads": 0,
+	"dependents": 0,
+	"updated": "2023-01-23T11:20:19.250Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 5,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

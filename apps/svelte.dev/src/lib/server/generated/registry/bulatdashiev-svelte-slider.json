@@ -1,18 +1,19 @@
 {
-  "name": "@bulatdashiev/svelte-slider",
-  "description": "Create simple range slider components for Svelte.",
-  "repo_url": "https://github.com/BulatDashiev/svelte-slider",
-  "authors": [
-    "bulatdashiev"
-  ],
-  "homepage": "https://github.com/BulatDashiev/svelte-slider#readme",
-  "downloads": 842,
-  "dependents": 2,
-  "updated": "2020-05-24T07:55:02.534Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 28
+	"name": "@bulatdashiev/svelte-slider",
+	"description": "Create simple range slider components for Svelte.",
+	"repo_url": "https://github.com/BulatDashiev/svelte-slider",
+	"authors": ["bulatdashiev"],
+	"homepage": "https://github.com/BulatDashiev/svelte-slider#readme",
+	"downloads": 842,
+	"dependents": 2,
+	"updated": "2020-05-24T07:55:02.534Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 28,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

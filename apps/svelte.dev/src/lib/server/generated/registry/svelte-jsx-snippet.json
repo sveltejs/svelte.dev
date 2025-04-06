@@ -1,18 +1,19 @@
 {
-  "name": "svelte-jsx-snippet",
-  "description": "Write JSX as Svelte snippets for testing.",
-  "repo_url": "https://github.com/ssssota/svelte-jsx-snippet",
-  "authors": [
-    "ssssota"
-  ],
-  "homepage": "https://github.com/ssssota/svelte-jsx-snippet#readme",
-  "downloads": 8,
-  "dependents": 0,
-  "updated": "2024-07-17T15:35:41.129Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 9
+	"name": "svelte-jsx-snippet",
+	"description": "Write JSX as Svelte snippets for testing.",
+	"repo_url": "https://github.com/ssssota/svelte-jsx-snippet",
+	"authors": ["ssssota"],
+	"homepage": "https://github.com/ssssota/svelte-jsx-snippet#readme",
+	"downloads": 8,
+	"dependents": 0,
+	"updated": "2024-07-17T15:35:41.129Z",
+	"tags": ["tooling"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 9,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "@accuser/breakpoint",
-  "description": "Provides breakpoint utility for SvelteKit and TailwindCSS.",
-  "repo_url": "https://github.com/accuser/svelte-tailwindcss-breakpoint",
-  "authors": [
-    "accuser"
-  ],
-  "homepage": "https://github.com/accuser/svelte-tailwindcss-breakpoint/README.md",
-  "downloads": 16,
-  "dependents": 0,
-  "updated": "2022-08-31T20:48:53.134Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "@accuser/breakpoint",
+	"description": "Provides breakpoint utility for SvelteKit and TailwindCSS.",
+	"repo_url": "https://github.com/accuser/svelte-tailwindcss-breakpoint",
+	"authors": ["accuser"],
+	"homepage": "https://github.com/accuser/svelte-tailwindcss-breakpoint/README.md",
+	"downloads": 16,
+	"dependents": 0,
+	"updated": "2022-08-31T20:48:53.134Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

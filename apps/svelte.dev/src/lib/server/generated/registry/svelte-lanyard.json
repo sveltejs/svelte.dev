@@ -1,18 +1,19 @@
 {
-  "name": "svelte-lanyard",
-  "description": "Wrap Lanyard API for Discord presence in Svelte apps.",
-  "repo_url": "https://github.com/iGalaxyYT/svelte-lanyard",
-  "authors": [
-    "igalaxy"
-  ],
-  "homepage": "https://github.com/iGalaxyYT/svelte-lanyard#readme",
-  "downloads": 16,
-  "dependents": 0,
-  "updated": "2021-11-21T11:15:44.238Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 9
+	"name": "svelte-lanyard",
+	"description": "Wrap Lanyard API for Discord presence in Svelte apps.",
+	"repo_url": "https://github.com/iGalaxyYT/svelte-lanyard",
+	"authors": ["igalaxy"],
+	"homepage": "https://github.com/iGalaxyYT/svelte-lanyard#readme",
+	"downloads": 16,
+	"dependents": 0,
+	"updated": "2021-11-21T11:15:44.238Z",
+	"tags": ["integration"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 9,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

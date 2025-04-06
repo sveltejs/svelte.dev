@@ -1,18 +1,19 @@
 {
-  "name": "braintapper-svelte-datepicker",
-  "description": "Create datepicker component for Svelte.",
-  "repo_url": "https://github.com/braintapper/braintapper-svelte-datepicker",
-  "authors": [
-    "braintapper"
-  ],
-  "homepage": "https://github.com/braintapper/braintapper-svelte-datepicker#readme",
-  "downloads": 12,
-  "dependents": 0,
-  "updated": "2020-12-20T16:44:28.784Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "braintapper-svelte-datepicker",
+	"description": "Create datepicker component for Svelte.",
+	"repo_url": "https://github.com/braintapper/braintapper-svelte-datepicker",
+	"authors": ["braintapper"],
+	"homepage": "https://github.com/braintapper/braintapper-svelte-datepicker#readme",
+	"downloads": 12,
+	"dependents": 0,
+	"updated": "2020-12-20T16:44:28.784Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

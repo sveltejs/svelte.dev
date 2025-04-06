@@ -1,18 +1,19 @@
 {
-  "name": "sveltekit-superactions",
-  "description": "Call server code from SvelteKit client components.",
-  "repo_url": "https://github.com/kumpmati/sveltekit-superactions",
-  "authors": [
-    "kumpmati"
-  ],
-  "homepage": "https://github.com/kumpmati/sveltekit-superactions#readme",
-  "downloads": 1,
-  "dependents": 0,
-  "updated": "2024-10-20T20:08:12.370Z",
-  "tags": [
-    "server"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 22
+	"name": "sveltekit-superactions",
+	"description": "Call server code from SvelteKit client components.",
+	"repo_url": "https://github.com/kumpmati/sveltekit-superactions",
+	"authors": ["kumpmati"],
+	"homepage": "https://github.com/kumpmati/sveltekit-superactions#readme",
+	"downloads": 1,
+	"dependents": 0,
+	"updated": "2024-10-20T20:08:12.370Z",
+	"tags": ["server"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 23,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

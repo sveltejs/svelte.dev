@@ -1,19 +1,19 @@
 {
-  "name": "svelte-forms-lib",
-  "description": "Manage forms, validation, and form-validation in Svelte apps.",
-  "repo_url": "https://github.com/tjinauyeung/svelte-forms-lib",
-  "authors": [
-    "larrybotha",
-    "tjinauyeung"
-  ],
-  "homepage": "https://svelte-forms-lib-sapper-docs.now.sh",
-  "downloads": 5167,
-  "dependents": 5,
-  "updated": "2022-01-06T07:30:34.155Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 610
+	"name": "svelte-forms-lib",
+	"description": "Manage forms, validation, and form-validation in Svelte apps.",
+	"repo_url": "https://github.com/tjinauyeung/svelte-forms-lib",
+	"authors": ["larrybotha", "tjinauyeung"],
+	"homepage": "https://svelte-forms-lib-sapper-docs.now.sh",
+	"downloads": 5167,
+	"dependents": 5,
+	"updated": "2022-01-06T07:30:34.155Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 610,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

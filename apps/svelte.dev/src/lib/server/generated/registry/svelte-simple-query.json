@@ -1,19 +1,19 @@
 {
-  "name": "svelte-simple-query",
-  "description": "Fetch and manage data with a simple query library for Svelte 5.",
-  "repo_url": "https://github.com/harryhdt/svelte-simple-query",
-  "authors": [
-    "harryhdt"
-  ],
-  "homepage": "https://svelte-simple-query.harryhdt.dev",
-  "downloads": 82,
-  "dependents": 0,
-  "updated": "2025-03-16T07:58:40.326Z",
-  "tags": [
-    "server",
-    "tooling"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelte-simple-query",
+	"description": "Fetch and manage data with a simple query library for Svelte 5.",
+	"repo_url": "https://github.com/harryhdt/svelte-simple-query",
+	"authors": ["harryhdt"],
+	"homepage": "https://svelte-simple-query.harryhdt.dev",
+	"downloads": 82,
+	"dependents": 0,
+	"updated": "2025-03-16T07:58:40.326Z",
+	"tags": ["server", "tooling"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

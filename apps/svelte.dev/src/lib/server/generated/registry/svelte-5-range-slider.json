@@ -1,18 +1,19 @@
 {
-  "name": "svelte-5-range-slider",
-  "description": "Implement range slider component for Svelte 5 apps.",
-  "repo_url": "https://github.com/Ionmi/svelte-5-range-slider",
-  "authors": [
-    "ionmi"
-  ],
-  "homepage": "https://github.com/Ionmi/svelte-5-range-slider",
-  "downloads": 14,
-  "dependents": 0,
-  "updated": "2025-01-30T15:30:23.484Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelte-5-range-slider",
+	"description": "Implement range slider component for Svelte 5 apps.",
+	"repo_url": "https://github.com/Ionmi/svelte-5-range-slider",
+	"authors": ["ionmi"],
+	"homepage": "https://github.com/Ionmi/svelte-5-range-slider",
+	"downloads": 14,
+	"dependents": 0,
+	"updated": "2025-01-30T15:30:23.484Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

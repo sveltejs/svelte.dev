@@ -1,18 +1,19 @@
 {
-  "name": "svelte-time-series",
-  "description": "Display time series data in Svelte applications.",
-  "repo_url": "https://github.com/arlac77/svelte-time-series",
-  "authors": [
-    "arlac77"
-  ],
-  "homepage": "https://github.com/arlac77/svelte-time-series#readme",
-  "downloads": 98,
-  "dependents": 0,
-  "updated": "2025-03-26T18:26:26.886Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 5
+	"name": "svelte-time-series",
+	"description": "Display time series data in Svelte applications.",
+	"repo_url": "https://github.com/arlac77/svelte-time-series",
+	"authors": ["arlac77"],
+	"homepage": "https://github.com/arlac77/svelte-time-series#readme",
+	"downloads": 98,
+	"dependents": 0,
+	"updated": "2025-03-26T18:26:26.886Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 5,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

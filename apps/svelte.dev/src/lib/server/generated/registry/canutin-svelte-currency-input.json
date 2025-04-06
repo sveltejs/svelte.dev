@@ -1,18 +1,19 @@
 {
-  "name": "@canutin/svelte-currency-input",
-  "description": "Formats currency input fields in Svelte applications.",
-  "repo_url": "https://github.com/fmaclen/svelte-currency-input",
-  "authors": [
-    "fmaclen"
-  ],
-  "homepage": "https://svelte-currency-input.fernando.is",
-  "downloads": 992,
-  "dependents": 0,
-  "updated": "2024-11-01T21:04:48.714Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 41
+	"name": "@canutin/svelte-currency-input",
+	"description": "Formats currency input fields in Svelte applications.",
+	"repo_url": "https://github.com/fmaclen/svelte-currency-input",
+	"authors": ["fmaclen"],
+	"homepage": "https://svelte-currency-input.fernando.is",
+	"downloads": 992,
+	"dependents": 0,
+	"updated": "2024-11-01T21:04:48.714Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 41,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

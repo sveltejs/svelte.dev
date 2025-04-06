@@ -1,18 +1,19 @@
 {
-  "name": "@rschiang/svelte-timepicker",
-  "description": "Create simple time picker component for Svelte applications.",
-  "repo_url": "https://github.com/ryanschiang/svelte-timepicker",
-  "authors": [
-    "ryanschiang"
-  ],
-  "homepage": "https://github.com/ryanschiang/svelte-timepicker#readme",
-  "downloads": 24,
-  "dependents": 0,
-  "updated": "2023-12-22T17:35:00.029Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 2
+	"name": "@rschiang/svelte-timepicker",
+	"description": "Create simple time picker component for Svelte applications.",
+	"repo_url": "https://github.com/ryanschiang/svelte-timepicker",
+	"authors": ["ryanschiang"],
+	"homepage": "https://github.com/ryanschiang/svelte-timepicker#readme",
+	"downloads": 24,
+	"dependents": 0,
+	"updated": "2023-12-22T17:35:00.029Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

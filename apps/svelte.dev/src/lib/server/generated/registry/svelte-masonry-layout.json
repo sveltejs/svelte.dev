@@ -1,18 +1,19 @@
 {
-  "name": "svelte-masonry-layout",
-  "description": "Create masonry-based grid layout component for Svelte apps.",
-  "repo_url": "https://github.com/jorge-brito/svelte-masonry-layout",
-  "authors": [
-    "jorge-pereira"
-  ],
-  "homepage": "https://github.com/jorge-brito/svelte-masonry-layout",
-  "downloads": 51,
-  "dependents": 0,
-  "updated": "2022-01-27T21:23:47.956Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 3
+	"name": "svelte-masonry-layout",
+	"description": "Create masonry-based grid layout component for Svelte apps.",
+	"repo_url": "https://github.com/jorge-brito/svelte-masonry-layout",
+	"authors": ["jorge-pereira"],
+	"homepage": "https://github.com/jorge-brito/svelte-masonry-layout",
+	"downloads": 51,
+	"dependents": 0,
+	"updated": "2022-01-27T21:23:47.956Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 3,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

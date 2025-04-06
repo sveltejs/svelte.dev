@@ -1,18 +1,19 @@
 {
-  "name": "svelte-checkable",
-  "description": "Validate data using Svelte stores and Specma.",
-  "repo_url": "https://github.com/davidsavoie1/svelte-checkable",
-  "authors": [
-    "davidsavoie1"
-  ],
-  "homepage": "https://github.com/davidsavoie1/svelte-checkable.git",
-  "downloads": 27,
-  "dependents": 0,
-  "updated": "2021-01-22T15:51:29.469Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelte-checkable",
+	"description": "Validate data using Svelte stores and Specma.",
+	"repo_url": "https://github.com/davidsavoie1/svelte-checkable",
+	"authors": ["davidsavoie1"],
+	"homepage": "https://github.com/davidsavoie1/svelte-checkable.git",
+	"downloads": 27,
+	"dependents": 0,
+	"updated": "2021-01-22T15:51:29.469Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

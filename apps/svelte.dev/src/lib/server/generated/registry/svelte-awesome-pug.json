@@ -1,18 +1,19 @@
 {
-  "name": "svelte-awesome-pug",
-  "description": "Enhance pug html-templates for Svelte components.",
-  "repo_url": "https://github.com/refzlund/svelte-awesome-pug",
-  "authors": [
-    "refzlund"
-  ],
-  "homepage": "https://github.com/Refzlund/svelte-awesome-pug",
-  "downloads": 2,
-  "dependents": 0,
-  "updated": "2023-01-05T09:50:04.639Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 9
+	"name": "svelte-awesome-pug",
+	"description": "Enhance pug html-templates for Svelte components.",
+	"repo_url": "https://github.com/refzlund/svelte-awesome-pug",
+	"authors": ["refzlund"],
+	"homepage": "https://github.com/Refzlund/svelte-awesome-pug",
+	"downloads": 2,
+	"dependents": 0,
+	"updated": "2023-01-05T09:50:04.639Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 9,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

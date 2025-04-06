@@ -1,16 +1,17 @@
 {
-  "name": "sussy-components",
-  "description": "Add sussy web components to Svelte websites.",
-  "repo_url": "https://github.com/laspruca/sussy-components",
-  "authors": [
-    "laspruca"
-  ],
-  "downloads": 7,
-  "dependents": 0,
-  "updated": "2022-02-23T07:01:59.425Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "sussy-components",
+	"description": "Add sussy web components to Svelte websites.",
+	"repo_url": "https://github.com/laspruca/sussy-components",
+	"authors": ["laspruca"],
+	"downloads": 7,
+	"dependents": 0,
+	"updated": "2022-02-23T07:01:59.425Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

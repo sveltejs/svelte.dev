@@ -1,18 +1,19 @@
 {
-  "name": "@mzaghetto/svelte-json-tree",
-  "description": "Display JSON data in an expandable tree structure within Svelte.",
-  "repo_url": "https://github.com/mzaghetto/svelte-json-tree",
-  "authors": [
-    "mzaghetto"
-  ],
-  "homepage": "https://github.com/mzaghetto/svelte-json-tree#readme",
-  "downloads": 41,
-  "dependents": 0,
-  "updated": "2021-06-03T15:05:43.619Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "@mzaghetto/svelte-json-tree",
+	"description": "Display JSON data in an expandable tree structure within Svelte.",
+	"repo_url": "https://github.com/mzaghetto/svelte-json-tree",
+	"authors": ["mzaghetto"],
+	"homepage": "https://github.com/mzaghetto/svelte-json-tree#readme",
+	"downloads": 41,
+	"dependents": 0,
+	"updated": "2021-06-03T15:05:43.619Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

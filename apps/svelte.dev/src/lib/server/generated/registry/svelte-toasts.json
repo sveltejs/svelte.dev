@@ -1,18 +1,19 @@
 {
-  "name": "svelte-toasts",
-  "description": "Create highly configurable toast/notification components.",
-  "repo_url": "https://github.com/mzohaibqc/svelte-toasts",
-  "authors": [
-    "mzohaibqc"
-  ],
-  "homepage": "https://mzohaibqc.github.io/svelte-toasts",
-  "downloads": 2746,
-  "dependents": 2,
-  "updated": "2021-03-16T12:21:46.651Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 45
+	"name": "svelte-toasts",
+	"description": "Create highly configurable toast/notification components.",
+	"repo_url": "https://github.com/mzohaibqc/svelte-toasts",
+	"authors": ["mzohaibqc"],
+	"homepage": "https://mzohaibqc.github.io/svelte-toasts",
+	"downloads": 2746,
+	"dependents": 2,
+	"updated": "2021-03-16T12:21:46.651Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 45,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

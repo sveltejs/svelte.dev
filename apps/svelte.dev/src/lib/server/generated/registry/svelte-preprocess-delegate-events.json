@@ -1,18 +1,19 @@
 {
-  "name": "svelte-preprocess-delegate-events",
-  "description": "Delegate events by on:* in Svelte components.",
-  "repo_url": "https://github.com/baseballyama/svelte-preprocess-delegate-events",
-  "authors": [
-    "baseballyama"
-  ],
-  "homepage": "https://github.com/baseballyama/svelte-preprocess-delegate-events#readme",
-  "downloads": 227,
-  "dependents": 0,
-  "updated": "2024-05-09T12:16:12.839Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 53
+	"name": "svelte-preprocess-delegate-events",
+	"description": "Delegate events by on:* in Svelte components.",
+	"repo_url": "https://github.com/baseballyama/svelte-preprocess-delegate-events",
+	"authors": ["baseballyama"],
+	"homepage": "https://github.com/baseballyama/svelte-preprocess-delegate-events#readme",
+	"downloads": 227,
+	"dependents": 0,
+	"updated": "2024-05-09T12:16:12.839Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 53,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": false
+	}
 }

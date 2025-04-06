@@ -1,17 +1,18 @@
 {
-  "name": "@yeungkc/svelte-portal",
-  "description": "Implement portal functionality, supporting SSR and updates.",
-  "repo_url": "",
-  "authors": [
-    "yeungkc"
-  ],
-  "homepage": "https://github.com/YeungKC/svelte-portal/",
-  "downloads": 11,
-  "dependents": 0,
-  "updated": "2023-04-20T09:30:26.163Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@yeungkc/svelte-portal",
+	"description": "Implement portal functionality, supporting SSR and updates.",
+	"repo_url": "",
+	"authors": ["yeungkc"],
+	"homepage": "https://github.com/YeungKC/svelte-portal/",
+	"downloads": 11,
+	"dependents": 0,
+	"updated": "2023-04-20T09:30:26.163Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

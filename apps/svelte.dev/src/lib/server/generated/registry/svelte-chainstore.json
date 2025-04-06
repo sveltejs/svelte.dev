@@ -1,18 +1,19 @@
 {
-  "name": "svelte-chainstore",
-  "description": "Chains operations in response to Svelte store changes.",
-  "repo_url": "https://github.com/louislouw/svelte-chainstore",
-  "authors": [
-    "codelouis"
-  ],
-  "homepage": "https://github.com/louislouw/svelte-chainstore#readme",
-  "downloads": 31,
-  "dependents": 0,
-  "updated": "2021-12-16T19:46:54.427Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelte-chainstore",
+	"description": "Chains operations in response to Svelte store changes.",
+	"repo_url": "https://github.com/louislouw/svelte-chainstore",
+	"authors": ["codelouis"],
+	"homepage": "https://github.com/louislouw/svelte-chainstore#readme",
+	"downloads": 31,
+	"dependents": 0,
+	"updated": "2021-12-16T19:46:54.427Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "@mashroom/mashroom-portal-demo-svelte-app",
-  "description": "Demonstrate Svelte app integration within Mashroom Portal.",
-  "repo_url": "https://github.com/nonblocking/mashroom",
-  "authors": [
-    "jkofler"
-  ],
-  "homepage": "https://www.mashroom-server.com",
-  "downloads": 79,
-  "dependents": 0,
-  "updated": "2024-07-08T08:48:46.968Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 55
+	"name": "@mashroom/mashroom-portal-demo-svelte-app",
+	"description": "Demonstrate Svelte app integration within Mashroom Portal.",
+	"repo_url": "https://github.com/nonblocking/mashroom",
+	"authors": ["jkofler"],
+	"homepage": "https://www.mashroom-server.com",
+	"downloads": 79,
+	"dependents": 0,
+	"updated": "2024-07-08T08:48:46.968Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 55,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "svelte-draggable-plus",
-  "description": "Create drag-and-drop sorting functionality in Svelte apps.",
-  "repo_url": "https://github.com/Alfred-Skyblue/svelte-draggable-plus",
-  "authors": [
-    "yuanfang03"
-  ],
-  "homepage": "https://github.com/Alfred-Skyblue/svelte-draggable-plus#readme",
-  "downloads": 1,
-  "dependents": 0,
-  "updated": "2023-10-19T14:12:59.006Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 10
+	"name": "svelte-draggable-plus",
+	"description": "Create drag-and-drop sorting functionality in Svelte apps.",
+	"repo_url": "https://github.com/Alfred-Skyblue/svelte-draggable-plus",
+	"authors": ["yuanfang03"],
+	"homepage": "https://github.com/Alfred-Skyblue/svelte-draggable-plus#readme",
+	"downloads": 1,
+	"dependents": 0,
+	"updated": "2023-10-19T14:12:59.006Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 10,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

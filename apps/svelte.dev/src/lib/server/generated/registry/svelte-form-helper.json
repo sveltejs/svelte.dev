@@ -1,18 +1,19 @@
 {
-  "name": "svelte-form-helper",
-  "description": "Provides lightweight helper for Svelte form validation.",
-  "repo_url": "https://github.com/captaincodeman/svelte-form-helper",
-  "authors": [
-    "captaincodeman"
-  ],
-  "homepage": "https://captaincodeman.github.io/svelte-form-helper/",
-  "downloads": 13,
-  "dependents": 0,
-  "updated": "2024-04-27T18:51:26.876Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 56
+	"name": "svelte-form-helper",
+	"description": "Provides lightweight helper for Svelte form validation.",
+	"repo_url": "https://github.com/captaincodeman/svelte-form-helper",
+	"authors": ["captaincodeman"],
+	"homepage": "https://captaincodeman.github.io/svelte-form-helper/",
+	"downloads": 13,
+	"dependents": 0,
+	"updated": "2024-04-27T18:51:26.876Z",
+	"tags": ["miscellaneous"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 56,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

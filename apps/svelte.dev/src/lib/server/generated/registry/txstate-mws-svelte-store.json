@@ -1,20 +1,19 @@
 {
-  "name": "@txstate-mws/svelte-store",
-  "description": "Provides new store types compatible with Svelte stores.",
-  "repo_url": "https://github.com/txstate-etc/svelte-store",
-  "authors": [
-    "wickning1",
-    "jsnider",
-    "rmcew"
-  ],
-  "homepage": "https://github.com/txstate-etc/svelte-store#readme",
-  "downloads": 114,
-  "dependents": 4,
-  "updated": "2023-03-15T12:35:23.182Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "@txstate-mws/svelte-store",
+	"description": "Provides new store types compatible with Svelte stores.",
+	"repo_url": "https://github.com/txstate-etc/svelte-store",
+	"authors": ["wickning1", "jsnider", "rmcew"],
+	"homepage": "https://github.com/txstate-etc/svelte-store#readme",
+	"downloads": 114,
+	"dependents": 4,
+	"updated": "2023-03-15T12:35:23.182Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

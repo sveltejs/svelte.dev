@@ -1,16 +1,17 @@
 {
-  "name": "@aknakos/sveltekit-danfojs",
-  "description": "Integrates Danfo.js with SvelteKit for data analysis.",
-  "authors": [
-    "aknakos"
-  ],
-  "homepage": "https://github.com/aknakos/sveltekit-danfojs#readme",
-  "downloads": 21,
-  "dependents": 1,
-  "updated": "2022-09-06T17:52:12.554Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@aknakos/sveltekit-danfojs",
+	"description": "Integrates Danfo.js with SvelteKit for data analysis.",
+	"authors": ["aknakos"],
+	"homepage": "https://github.com/aknakos/sveltekit-danfojs#readme",
+	"downloads": 21,
+	"dependents": 1,
+	"updated": "2022-09-06T17:52:12.554Z",
+	"tags": ["integration"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

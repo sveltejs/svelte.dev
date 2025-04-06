@@ -1,18 +1,19 @@
 {
-  "name": "svelte-bootstrap-svg-icons",
-  "description": "Provides Bootstrap SVG icons for Svelte 5.",
-  "repo_url": "https://github.com/shinokada/svelte-bootstrap-svg-icons",
-  "authors": [
-    "shinichiokada"
-  ],
-  "homepage": "https://svelte-bootstrap-svg-icons.codewithshin.com/",
-  "downloads": 1804,
-  "dependents": 0,
-  "updated": "2024-10-31T11:40:47.021Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 2
+	"name": "svelte-bootstrap-svg-icons",
+	"description": "Provides Bootstrap SVG icons for Svelte 5.",
+	"repo_url": "https://github.com/shinokada/svelte-bootstrap-svg-icons",
+	"authors": ["shinichiokada"],
+	"homepage": "https://svelte-bootstrap-svg-icons.codewithshin.com/",
+	"downloads": 1804,
+	"dependents": 0,
+	"updated": "2024-10-31T11:40:47.021Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

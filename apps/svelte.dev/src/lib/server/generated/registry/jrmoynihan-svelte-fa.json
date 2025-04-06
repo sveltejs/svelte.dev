@@ -1,17 +1,18 @@
 {
-  "name": "@jrmoynihan/svelte-fa",
-  "description": "Integrate FontAwesome icons into Svelte components easily.",
-  "repo_url": "https://github.com/@jrmoynihan/svelte-fa",
-  "authors": [
-    "jrmoynihan"
-  ],
-  "homepage": "https://github.com/jrmoynihan/svelte-fa/",
-  "downloads": 0,
-  "dependents": 1,
-  "updated": "2024-05-26T11:05:34.851Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "@jrmoynihan/svelte-fa",
+	"description": "Integrate FontAwesome icons into Svelte components easily.",
+	"repo_url": "https://github.com/@jrmoynihan/svelte-fa",
+	"authors": ["jrmoynihan"],
+	"homepage": "https://github.com/jrmoynihan/svelte-fa/",
+	"downloads": 0,
+	"dependents": 1,
+	"updated": "2024-05-26T11:05:34.851Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

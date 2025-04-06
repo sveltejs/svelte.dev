@@ -1,18 +1,19 @@
 {
-  "name": "svelte-dnd-list",
-  "description": "Create drag and drop lists in Svelte applications.",
-  "repo_url": "https://github.com/tarb/svelte-dnd-list",
-  "authors": [
-    "tarb"
-  ],
-  "homepage": "https://github.com/tarb/svelte-dnd-list",
-  "downloads": 3219,
-  "dependents": 0,
-  "updated": "2023-01-16T06:33:54.487Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 49
+	"name": "svelte-dnd-list",
+	"description": "Create drag and drop lists in Svelte applications.",
+	"repo_url": "https://github.com/tarb/svelte-dnd-list",
+	"authors": ["tarb"],
+	"homepage": "https://github.com/tarb/svelte-dnd-list",
+	"downloads": 3219,
+	"dependents": 0,
+	"updated": "2023-01-16T06:33:54.487Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 49,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

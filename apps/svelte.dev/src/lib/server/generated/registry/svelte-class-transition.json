@@ -1,17 +1,18 @@
 {
-  "name": "svelte-class-transition",
-  "description": "Transition Svelte components using CSS classes.",
-  "repo_url": "https://github.com/gawlk/svelte-class-transition",
-  "authors": [
-    "gawlk"
-  ],
-  "homepage": "https://github.com/gawlk/svelte-class-transition#readme",
-  "downloads": 388,
-  "dependents": 4,
-  "updated": "2020-06-25T11:53:54.118Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-class-transition",
+	"description": "Transition Svelte components using CSS classes.",
+	"repo_url": "https://github.com/gawlk/svelte-class-transition",
+	"authors": ["gawlk"],
+	"homepage": "https://github.com/gawlk/svelte-class-transition#readme",
+	"downloads": 388,
+	"dependents": 4,
+	"updated": "2020-06-25T11:53:54.118Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "@lottiefiles/svelte-lottie-player",
-  "description": "Play Lottie animations within Svelte applications.",
-  "repo_url": "https://github.com/LottieFiles/svelte-lottie-player",
-  "authors": [
-    "jawish"
-  ],
-  "homepage": "https://github.com/LottieFiles/svelte-lottie-player",
-  "downloads": 4804,
-  "dependents": 2,
-  "updated": "2024-01-16T08:16:28.170Z",
-  "tags": [
-    "media"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 138
+	"name": "@lottiefiles/svelte-lottie-player",
+	"description": "Play Lottie animations within Svelte applications.",
+	"repo_url": "https://github.com/LottieFiles/svelte-lottie-player",
+	"authors": ["jawish"],
+	"homepage": "https://github.com/LottieFiles/svelte-lottie-player",
+	"downloads": 4804,
+	"dependents": 2,
+	"updated": "2024-01-16T08:16:28.170Z",
+	"tags": ["media"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 138,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

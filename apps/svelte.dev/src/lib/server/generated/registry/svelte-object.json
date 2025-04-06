@@ -1,16 +1,17 @@
 {
-  "name": "svelte-object",
-  "description": "Structure objects/arrays with nested components in Svelte.",
-  "authors": [
-    "refzlund"
-  ],
-  "homepage": "https://github.com/Refzlund/svelte-object",
-  "downloads": 23,
-  "dependents": 0,
-  "updated": "2025-01-17T00:49:59.218Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "svelte-object",
+	"description": "Structure objects/arrays with nested components in Svelte.",
+	"authors": ["refzlund"],
+	"homepage": "https://github.com/Refzlund/svelte-object",
+	"downloads": 23,
+	"dependents": 0,
+	"updated": "2025-01-17T00:49:59.218Z",
+	"tags": ["miscellaneous"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

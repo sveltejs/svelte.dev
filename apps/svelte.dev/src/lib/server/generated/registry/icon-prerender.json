@@ -1,17 +1,18 @@
 {
-  "name": "icon-prerender",
-  "description": "Prerender SVG icons at build time for Svelte and other frameworks.",
-  "repo_url": "https://github.com/Ernxst/icon-prerender",
-  "authors": [
-    "ernxst"
-  ],
-  "homepage": "https://github.com/Ernxst/icon-prerender/packages/core",
-  "downloads": 8,
-  "dependents": 0,
-  "updated": "2022-09-11T22:19:25.259Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "icon-prerender",
+	"description": "Prerender SVG icons at build time for Svelte and other frameworks.",
+	"repo_url": "https://github.com/Ernxst/icon-prerender",
+	"authors": ["ernxst"],
+	"homepage": "https://github.com/Ernxst/icon-prerender/packages/core",
+	"downloads": 8,
+	"dependents": 0,
+	"updated": "2022-09-11T22:19:25.259Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "@jill64/svelte-i18n",
-  "description": "Provides i18n toolkit for SvelteKit applications.",
-  "repo_url": "https://github.com/jill64/svelte-i18n",
-  "authors": [
-    "jill64"
-  ],
-  "homepage": "https://github.com/jill64/svelte-i18n#readme",
-  "downloads": 8007,
-  "dependents": 1,
-  "updated": "2025-03-13T14:39:32.161Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 4
+	"name": "@jill64/svelte-i18n",
+	"description": "Provides i18n toolkit for SvelteKit applications.",
+	"repo_url": "https://github.com/jill64/svelte-i18n",
+	"authors": ["jill64"],
+	"homepage": "https://github.com/jill64/svelte-i18n#readme",
+	"downloads": 8007,
+	"dependents": 1,
+	"updated": "2025-03-13T14:39:32.161Z",
+	"tags": ["integration"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 4,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

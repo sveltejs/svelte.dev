@@ -1,18 +1,19 @@
 {
-  "name": "kappa-chat-svelte-component",
-  "description": "Create Kappa hypercore chat component for Svelte.",
-  "repo_url": "https://github.com/DougAnderson444/kappa-chat-svelte-component",
-  "authors": [
-    "douganderson444"
-  ],
-  "homepage": "https://github.com/DougAnderson444/kappa-chat-svelte-component#readme",
-  "downloads": 7,
-  "dependents": 0,
-  "updated": "2020-09-20T16:58:30.615Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "kappa-chat-svelte-component",
+	"description": "Create Kappa hypercore chat component for Svelte.",
+	"repo_url": "https://github.com/DougAnderson444/kappa-chat-svelte-component",
+	"authors": ["douganderson444"],
+	"homepage": "https://github.com/DougAnderson444/kappa-chat-svelte-component#readme",
+	"downloads": 7,
+	"dependents": 0,
+	"updated": "2020-09-20T16:58:30.615Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,16 +1,17 @@
 {
-  "name": "@ovenwand/svelte-sidebar",
-  "description": "Implement sidebar component for Svelte applications.",
-  "repo_url": "",
-  "authors": [
-    "sheijne"
-  ],
-  "downloads": 18,
-  "dependents": 0,
-  "updated": "2021-03-20T17:28:20.305Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@ovenwand/svelte-sidebar",
+	"description": "Implement sidebar component for Svelte applications.",
+	"repo_url": "",
+	"authors": ["sheijne"],
+	"downloads": 18,
+	"dependents": 0,
+	"updated": "2021-03-20T17:28:20.305Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,16 +1,17 @@
 {
-  "name": "svelte-native-grid",
-  "description": "Build responsive grid layouts for Svelte Native applications.",
-  "repo_url": "",
-  "authors": [
-    "kohlenbach"
-  ],
-  "downloads": 8,
-  "dependents": 0,
-  "updated": "2020-05-10T07:45:01.609Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-native-grid",
+	"description": "Build responsive grid layouts for Svelte Native applications.",
+	"repo_url": "",
+	"authors": ["kohlenbach"],
+	"downloads": 8,
+	"dependents": 0,
+	"updated": "2020-05-10T07:45:01.609Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

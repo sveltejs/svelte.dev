@@ -1,17 +1,17 @@
 {
-  "name": "@nordcode/forms-svelte",
-  "description": "Provide Nordcode UI inputs and forms for Svelte.",
-  "repo_url": "",
-  "authors": [
-    "jshsj",
-    "lukas-koeller"
-  ],
-  "downloads": 3,
-  "dependents": 0,
-  "updated": "2024-12-14T16:00:33.931Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "@nordcode/forms-svelte",
+	"description": "Provide Nordcode UI inputs and forms for Svelte.",
+	"repo_url": "",
+	"authors": ["jshsj", "lukas-koeller"],
+	"downloads": 3,
+	"dependents": 0,
+	"updated": "2024-12-14T16:00:33.931Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

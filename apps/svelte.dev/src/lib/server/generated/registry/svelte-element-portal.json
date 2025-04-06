@@ -1,18 +1,19 @@
 {
-  "name": "svelte-element-portal",
-  "description": "Render element over ancestor to escape parent overflow.",
-  "repo_url": "https://github.com/nwaughachukwuma/svelte-element-portal",
-  "authors": [
-    "nwaughachukwuma"
-  ],
-  "homepage": "https://github.com/nwaughachukwuma/svelte-element-portal#readme",
-  "downloads": 0,
-  "dependents": 0,
-  "updated": "2022-11-25T17:27:38.705Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 4
+	"name": "svelte-element-portal",
+	"description": "Render element over ancestor to escape parent overflow.",
+	"repo_url": "https://github.com/nwaughachukwuma/svelte-element-portal",
+	"authors": ["nwaughachukwuma"],
+	"homepage": "https://github.com/nwaughachukwuma/svelte-element-portal#readme",
+	"downloads": 0,
+	"dependents": 0,
+	"updated": "2022-11-25T17:27:38.705Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 4,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

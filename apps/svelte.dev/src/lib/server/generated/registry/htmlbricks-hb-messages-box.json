@@ -1,16 +1,17 @@
 {
-  "name": "@htmlbricks/hb-messages-box",
-  "description": "Create a message box component in Svelte.",
-  "repo_url": "",
-  "authors": [
-    "dariocaruso"
-  ],
-  "downloads": 104,
-  "dependents": 0,
-  "updated": "2025-03-24T18:07:23.399Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@htmlbricks/hb-messages-box",
+	"description": "Create a message box component in Svelte.",
+	"repo_url": "",
+	"authors": ["dariocaruso"],
+	"downloads": 104,
+	"dependents": 0,
+	"updated": "2025-03-24T18:07:23.399Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

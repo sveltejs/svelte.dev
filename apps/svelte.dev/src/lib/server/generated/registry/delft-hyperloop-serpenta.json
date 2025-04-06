@@ -1,19 +1,18 @@
 {
-  "name": "@delft-hyperloop/serpenta",
-  "description": "UI component library for Delft Hyperloop's Serpenta GUI.",
-  "repo_url": "",
-  "authors": [
-    "zakrok09",
-    "harry258"
-  ],
-  "homepage": "https://delft-hyperloop.github.io/serpenta",
-  "downloads": 0,
-  "dependents": 0,
-  "updated": "2025-02-04T13:41:33.113Z",
-  "tags": [
-    "design-system",
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@delft-hyperloop/serpenta",
+	"description": "UI component library for Delft Hyperloop's Serpenta GUI.",
+	"repo_url": "",
+	"authors": ["zakrok09", "harry258"],
+	"homepage": "https://delft-hyperloop.github.io/serpenta",
+	"downloads": 0,
+	"dependents": 0,
+	"updated": "2025-02-04T13:41:33.113Z",
+	"tags": ["design-system", "ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "svelte-signals",
-  "description": "Create reactive state and derived values in Svelte.",
-  "repo_url": "https://github.com/abdel-17/svelte-signals",
-  "authors": [
-    "abdel-17"
-  ],
-  "homepage": "https://github.com/abdel-17/svelte-signals#readme",
-  "downloads": 38,
-  "dependents": 1,
-  "updated": "2025-03-12T10:44:43.305Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": true,
-  "runes": true,
-  "github_stars": 0
+	"name": "svelte-signals",
+	"description": "Create reactive state and derived values in Svelte.",
+	"repo_url": "https://github.com/abdel-17/svelte-signals",
+	"authors": ["abdel-17"],
+	"homepage": "https://github.com/abdel-17/svelte-signals#readme",
+	"downloads": 38,
+	"dependents": 1,
+	"updated": "2025-03-12T10:44:43.305Z",
+	"tags": ["miscellaneous"],
+	"svelte5": true,
+	"runes": true,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

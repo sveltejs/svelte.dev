@@ -1,19 +1,19 @@
 {
-  "name": "@ernane/svelte-star-rating",
-  "description": "Creates star rating component for Svelte applications.",
-  "repo_url": "https://github.com/ErnaneJ/svelte-star-rating",
-  "authors": [
-    "ernane",
-    "teago"
-  ],
-  "homepage": "https://github.com/ErnaneJ/svelte-star-rating",
-  "downloads": 204,
-  "dependents": 0,
-  "updated": "2024-08-10T13:04:55.878Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 36
+	"name": "@ernane/svelte-star-rating",
+	"description": "Creates star rating component for Svelte applications.",
+	"repo_url": "https://github.com/ErnaneJ/svelte-star-rating",
+	"authors": ["ernane", "teago"],
+	"homepage": "https://github.com/ErnaneJ/svelte-star-rating",
+	"downloads": 204,
+	"dependents": 0,
+	"updated": "2024-08-10T13:04:55.878Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 36,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

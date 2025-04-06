@@ -1,16 +1,17 @@
 {
-  "name": "svelte-meilisearch-instantsearch",
-  "description": "Svelte wrapper for Meilisearch InstantSearch.",
-  "repo_url": "",
-  "authors": [
-    "dfanchon"
-  ],
-  "downloads": 8,
-  "dependents": 0,
-  "updated": "2024-08-23T09:31:43.629Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "svelte-meilisearch-instantsearch",
+	"description": "Svelte wrapper for Meilisearch InstantSearch.",
+	"repo_url": "",
+	"authors": ["dfanchon"],
+	"downloads": 8,
+	"dependents": 0,
+	"updated": "2024-08-23T09:31:43.629Z",
+	"tags": ["integration"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

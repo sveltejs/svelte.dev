@@ -1,18 +1,19 @@
 {
-  "name": "@vite-cms/content",
-  "description": "Preprocess markdown files and add them to Vite output.",
-  "repo_url": "https://github.com/StarLederer/vite-plugin-content",
-  "authors": [
-    "starlederer"
-  ],
-  "homepage": "https://github.com/StarLederer/vite-plugin-content#readme",
-  "downloads": 2,
-  "dependents": 0,
-  "updated": "2022-11-13T18:01:20.685Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@vite-cms/content",
+	"description": "Preprocess markdown files and add them to Vite output.",
+	"repo_url": "https://github.com/StarLederer/vite-plugin-content",
+	"authors": ["starlederer"],
+	"homepage": "https://github.com/StarLederer/vite-plugin-content#readme",
+	"downloads": 2,
+	"dependents": 0,
+	"updated": "2022-11-13T18:01:20.685Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

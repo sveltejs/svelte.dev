@@ -1,18 +1,19 @@
 {
-  "name": "@leanup/stack-svelte",
-  "description": "Provides Svelte framework extension for @leanup/cli.",
-  "repo_url": "https://github.com/leanupjs/leanup",
-  "authors": [
-    "m.oppitz"
-  ],
-  "homepage": "https://leanupjs.org",
-  "downloads": 436,
-  "dependents": 0,
-  "updated": "2024-06-11T08:58:35.229Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 33
+	"name": "@leanup/stack-svelte",
+	"description": "Provides Svelte framework extension for @leanup/cli.",
+	"repo_url": "https://github.com/leanupjs/leanup",
+	"authors": ["m.oppitz"],
+	"homepage": "https://leanupjs.org",
+	"downloads": 436,
+	"dependents": 0,
+	"updated": "2024-06-11T08:58:35.229Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 33,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": false
+	}
 }

@@ -1,16 +1,17 @@
 {
-  "name": "@turbo-lang/card-note",
-  "description": "Create note card component for Svelte.",
-  "repo_url": "",
-  "authors": [
-    "trevyn"
-  ],
-  "downloads": 15,
-  "dependents": 0,
-  "updated": "2021-01-17T14:10:37.911Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@turbo-lang/card-note",
+	"description": "Create note card component for Svelte.",
+	"repo_url": "",
+	"authors": ["trevyn"],
+	"downloads": 15,
+	"dependents": 0,
+	"updated": "2021-01-17T14:10:37.911Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

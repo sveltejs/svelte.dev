@@ -1,29 +1,32 @@
 {
-  "name": "@storybook/svelte",
-  "description": "Develop and document Svelte components with Storybook.",
-  "repo_url": "https://github.com/storybookjs/storybook",
-  "authors": [
-    "ndelangen",
-    "shilman",
-    "tmeasday",
-    "ghengeveld",
-    "winkervsbecks",
-    "yannbf",
-    "kylegach",
-    "jreinhold",
-    "kasperpeulen",
-    "valentinpalkovic",
-    "domyen",
-    "storybook-bot"
-  ],
-  "homepage": "https://github.com/storybookjs/storybook/tree/next/code/renderers/svelte",
-  "downloads": 91014,
-  "dependents": 5,
-  "updated": "2025-03-26T16:08:00.099Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 86296
+	"name": "@storybook/svelte",
+	"description": "Develop and document Svelte components with Storybook.",
+	"repo_url": "https://github.com/storybookjs/storybook",
+	"authors": [
+		"ndelangen",
+		"shilman",
+		"tmeasday",
+		"ghengeveld",
+		"winkervsbecks",
+		"yannbf",
+		"kylegach",
+		"jreinhold",
+		"kasperpeulen",
+		"valentinpalkovic",
+		"domyen",
+		"storybook-bot"
+	],
+	"homepage": "https://github.com/storybookjs/storybook/tree/next/code/renderers/svelte",
+	"downloads": 91014,
+	"dependents": 5,
+	"updated": "2025-03-26T16:08:00.099Z",
+	"tags": ["tooling"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 86302,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": true
+	}
 }

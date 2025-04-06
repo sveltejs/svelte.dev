@@ -1,16 +1,17 @@
 {
-  "name": "svelte-chess-pgn",
-  "description": "Render chess PGN games within Svelte components.",
-  "repo_url": "",
-  "authors": [
-    "mrbeast"
-  ],
-  "downloads": 6,
-  "dependents": 0,
-  "updated": "2023-05-12T15:30:17.899Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-chess-pgn",
+	"description": "Render chess PGN games within Svelte components.",
+	"repo_url": "",
+	"authors": ["mrbeast"],
+	"downloads": 6,
+	"dependents": 0,
+	"updated": "2023-05-12T15:30:17.899Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,19 +1,19 @@
 {
-  "name": "sveltegram",
-  "description": "Embed Telegram widgets in Svelte web applications.",
-  "repo_url": "https://github.com/amr3k/sveltegram",
-  "authors": [
-    "a3k"
-  ],
-  "homepage": "https://sveltegram.a3k.me",
-  "downloads": 41,
-  "dependents": 1,
-  "updated": "2025-03-25T19:33:57.888Z",
-  "tags": [
-    "integration",
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 31
+	"name": "sveltegram",
+	"description": "Embed Telegram widgets in Svelte web applications.",
+	"repo_url": "https://github.com/amr3k/sveltegram",
+	"authors": ["a3k"],
+	"homepage": "https://sveltegram.a3k.me",
+	"downloads": 41,
+	"dependents": 1,
+	"updated": "2025-03-25T19:33:57.888Z",
+	"tags": ["integration", "ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 31,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

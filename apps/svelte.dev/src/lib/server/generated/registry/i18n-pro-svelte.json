@@ -1,17 +1,18 @@
 {
-  "name": "@i18n-pro/svelte",
-  "description": "Internationalize Svelte apps with automatic translation features.",
-  "repo_url": "",
-  "authors": [
-    "eyelly"
-  ],
-  "homepage": "https://github.com/i18n-pro/svelte",
-  "downloads": 5,
-  "dependents": 0,
-  "updated": "2024-04-29T08:05:36.290Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@i18n-pro/svelte",
+	"description": "Internationalize Svelte apps with automatic translation features.",
+	"repo_url": "",
+	"authors": ["eyelly"],
+	"homepage": "https://github.com/i18n-pro/svelte",
+	"downloads": 5,
+	"dependents": 0,
+	"updated": "2024-04-29T08:05:36.290Z",
+	"tags": ["integration"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

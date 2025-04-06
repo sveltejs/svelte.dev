@@ -1,18 +1,19 @@
 {
-  "name": "svecure",
-  "description": "Secure SvelteKit load functions with error handling.",
-  "repo_url": "https://github.com/afroborg/svecure",
-  "authors": [
-    "afroborg"
-  ],
-  "homepage": "https://github.com/afroborg/svecure#readme",
-  "downloads": 9,
-  "dependents": 0,
-  "updated": "2023-03-03T12:45:07.628Z",
-  "tags": [
-    "server"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "svecure",
+	"description": "Secure SvelteKit load functions with error handling.",
+	"repo_url": "https://github.com/afroborg/svecure",
+	"authors": ["afroborg"],
+	"homepage": "https://github.com/afroborg/svecure#readme",
+	"downloads": 9,
+	"dependents": 0,
+	"updated": "2023-03-03T12:45:07.628Z",
+	"tags": ["server"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

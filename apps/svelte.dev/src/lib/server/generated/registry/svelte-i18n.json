@@ -1,18 +1,19 @@
 {
-  "name": "svelte-i18n",
-  "description": "Internationalize Svelte applications.",
-  "repo_url": "https://github.com/kaisermann/svelte-i18n",
-  "authors": [
-    "kaisermann"
-  ],
-  "homepage": "https://github.com/kaisermann/svelte-i18n#readme",
-  "downloads": 52158,
-  "dependents": 57,
-  "updated": "2024-10-21T08:19:33.762Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 1319
+	"name": "svelte-i18n",
+	"description": "Internationalize Svelte applications.",
+	"repo_url": "https://github.com/kaisermann/svelte-i18n",
+	"authors": ["kaisermann"],
+	"homepage": "https://github.com/kaisermann/svelte-i18n#readme",
+	"downloads": 52158,
+	"dependents": 57,
+	"updated": "2024-10-21T08:19:33.762Z",
+	"tags": ["miscellaneous"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 1319,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

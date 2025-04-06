@@ -1,20 +1,19 @@
 {
-  "name": "@wundergraph/svelte-query",
-  "description": "Integrates WunderGraph with Svelte Query for data fetching.",
-  "repo_url": "https://github.com/wundergraph/wundergraph",
-  "authors": [
-    "jens-wundergraph",
-    "starptech",
-    "csechristwunder"
-  ],
-  "homepage": "https://wundergraph.com",
-  "downloads": 348,
-  "dependents": 0,
-  "updated": "2024-05-15T10:33:34.396Z",
-  "tags": [
-    "server"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 2335
+	"name": "@wundergraph/svelte-query",
+	"description": "Integrates WunderGraph with Svelte Query for data fetching.",
+	"repo_url": "https://github.com/wundergraph/wundergraph",
+	"authors": ["jens-wundergraph", "starptech", "csechristwunder"],
+	"homepage": "https://wundergraph.com",
+	"downloads": 348,
+	"dependents": 0,
+	"updated": "2024-05-15T10:33:34.396Z",
+	"tags": ["server"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 2336,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": false
+	}
 }

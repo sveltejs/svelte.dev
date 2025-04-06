@@ -1,18 +1,19 @@
 {
-  "name": "sonda",
-  "description": "Visualize and analyze JavaScript and CSS bundles.",
-  "repo_url": "https://github.com/filipsobol/sonda",
-  "authors": [
-    "filipsobol"
-  ],
-  "homepage": "https://sonda.dev",
-  "downloads": 12976,
-  "dependents": 1,
-  "updated": "2024-12-31T08:29:09.012Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 428
+	"name": "sonda",
+	"description": "Visualize and analyze JavaScript and CSS bundles.",
+	"repo_url": "https://github.com/filipsobol/sonda",
+	"authors": ["filipsobol"],
+	"homepage": "https://sonda.dev",
+	"downloads": 12976,
+	"dependents": 1,
+	"updated": "2024-12-31T08:29:09.012Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 428,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,17 +1,18 @@
 {
-  "name": "@kesval/image-svelte",
-  "description": "Optimize images in Svelte applications.",
-  "repo_url": "https://github.com/xKesvaL/image-svelte",
-  "authors": [
-    "kesval"
-  ],
-  "homepage": "https://github.com/xKesvaL/image-svelte",
-  "downloads": 0,
-  "dependents": 0,
-  "updated": "2023-08-27T19:46:55.608Z",
-  "tags": [
-    "media"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@kesval/image-svelte",
+	"description": "Optimize images in Svelte applications.",
+	"repo_url": "https://github.com/xKesvaL/image-svelte",
+	"authors": ["kesval"],
+	"homepage": "https://github.com/xKesvaL/image-svelte",
+	"downloads": 0,
+	"dependents": 0,
+	"updated": "2023-08-27T19:46:55.608Z",
+	"tags": ["media"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

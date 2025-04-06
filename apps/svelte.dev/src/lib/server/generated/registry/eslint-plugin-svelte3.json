@@ -1,18 +1,19 @@
 {
-  "name": "eslint-plugin-svelte3",
-  "description": "Lint Svelte v3 components with ESLint.",
-  "repo_url": "https://github.com/sveltejs/eslint-plugin-svelte3",
-  "authors": [
-    "conduitry"
-  ],
-  "homepage": "https://github.com/sveltejs/eslint-plugin-svelte3#readme",
-  "downloads": 40739,
-  "dependents": 80,
-  "updated": "2022-05-05T17:17:48.103Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 375
+	"name": "eslint-plugin-svelte3",
+	"description": "Lint Svelte v3 components with ESLint.",
+	"repo_url": "https://github.com/sveltejs/eslint-plugin-svelte3",
+	"authors": ["conduitry"],
+	"homepage": "https://github.com/sveltejs/eslint-plugin-svelte3#readme",
+	"downloads": 40739,
+	"dependents": 80,
+	"updated": "2022-05-05T17:17:48.103Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 375,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

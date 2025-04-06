@@ -1,18 +1,19 @@
 {
-  "name": "@vccoding/svelte-recaptcha-v2",
-  "description": "Integrate Google reCAPTCHA v2 in Svelte and SvelteKit apps.",
-  "repo_url": "https://github.com/vccoding/svelte-recaptcha-v2",
-  "authors": [
-    "vccoding"
-  ],
-  "homepage": "https://github.com/vccoding/svelte-recaptcha-v2#readme",
-  "downloads": 5,
-  "dependents": 0,
-  "updated": "2024-04-04T23:00:22.813Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@vccoding/svelte-recaptcha-v2",
+	"description": "Integrate Google reCAPTCHA v2 in Svelte and SvelteKit apps.",
+	"repo_url": "https://github.com/vccoding/svelte-recaptcha-v2",
+	"authors": ["vccoding"],
+	"homepage": "https://github.com/vccoding/svelte-recaptcha-v2#readme",
+	"downloads": 5,
+	"dependents": 0,
+	"updated": "2024-04-04T23:00:22.813Z",
+	"tags": ["integration"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

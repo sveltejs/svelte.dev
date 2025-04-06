@@ -1,18 +1,19 @@
 {
-  "name": "@threlte/extras",
-  "description": "Provides utilities, abstractions, and plugins for Threlte apps.",
-  "repo_url": "https://github.com/threlte/threlte",
-  "authors": [
-    "grischaerbe"
-  ],
-  "homepage": "https://threlte.xyz",
-  "downloads": 4573,
-  "dependents": 16,
-  "updated": "2025-03-16T19:03:58.996Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 2838
+	"name": "@threlte/extras",
+	"description": "Provides utilities, abstractions, and plugins for Threlte apps.",
+	"repo_url": "https://github.com/threlte/threlte",
+	"authors": ["grischaerbe"],
+	"homepage": "https://threlte.xyz",
+	"downloads": 4573,
+	"dependents": 16,
+	"updated": "2025-03-16T19:03:58.996Z",
+	"tags": ["miscellaneous"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 2839,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

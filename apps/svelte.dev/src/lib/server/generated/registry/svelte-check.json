@@ -1,20 +1,19 @@
 {
-  "name": "svelte-check",
-  "description": "Check Svelte code for errors and warnings.",
-  "repo_url": "https://github.com/sveltejs/language-tools",
-  "authors": [
-    "orta",
-    "svelte-language-tools-deploy",
-    "dummdidumm"
-  ],
-  "homepage": "https://github.com/sveltejs/language-tools#readme",
-  "downloads": 501901,
-  "dependents": 69,
-  "updated": "2025-03-06T14:20:23.951Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 1294
+	"name": "svelte-check",
+	"description": "Check Svelte code for errors and warnings.",
+	"repo_url": "https://github.com/sveltejs/language-tools",
+	"authors": ["orta", "svelte-language-tools-deploy", "dummdidumm"],
+	"homepage": "https://github.com/sveltejs/language-tools#readme",
+	"downloads": 501901,
+	"dependents": 69,
+	"updated": "2025-03-06T14:20:23.951Z",
+	"tags": ["tooling"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 1296,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": true
+	}
 }

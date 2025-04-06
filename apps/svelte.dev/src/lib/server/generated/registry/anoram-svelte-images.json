@@ -1,18 +1,19 @@
 {
-  "name": "@anoram/svelte-images",
-  "description": "Display images with gallery and carousel features in Svelte.",
-  "repo_url": "https://github.com/peopledrivemecrazy/svelte-images",
-  "authors": [
-    "shriji"
-  ],
-  "homepage": "https://github.com/peopledrivemecrazy/svelte-images#readme",
-  "downloads": 1,
-  "dependents": 0,
-  "updated": "2020-12-13T10:19:08.979Z",
-  "tags": [
-    "media"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@anoram/svelte-images",
+	"description": "Display images with gallery and carousel features in Svelte.",
+	"repo_url": "https://github.com/peopledrivemecrazy/svelte-images",
+	"authors": ["shriji"],
+	"homepage": "https://github.com/peopledrivemecrazy/svelte-images#readme",
+	"downloads": 1,
+	"dependents": 0,
+	"updated": "2020-12-13T10:19:08.979Z",
+	"tags": ["media"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

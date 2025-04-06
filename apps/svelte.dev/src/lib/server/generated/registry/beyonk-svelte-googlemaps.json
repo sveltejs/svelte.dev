@@ -1,21 +1,17 @@
 {
-  "name": "@beyonk/svelte-googlemaps",
-  "description": "Integrate Google Maps and Places in Svelte applications.",
-  "repo_url": "",
-  "authors": [
-    "antony",
-    "adampond",
-    "alex.dilley",
-    "jedwoodcock",
-    "leandro.silva",
-    "tomlewis0"
-  ],
-  "downloads": 82,
-  "dependents": 0,
-  "updated": "2022-01-06T17:25:02.073Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@beyonk/svelte-googlemaps",
+	"description": "Integrate Google Maps and Places in Svelte applications.",
+	"repo_url": "",
+	"authors": ["antony", "adampond", "alex.dilley", "jedwoodcock", "leandro.silva", "tomlewis0"],
+	"downloads": 82,
+	"dependents": 0,
+	"updated": "2022-01-06T17:25:02.073Z",
+	"tags": ["integration"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

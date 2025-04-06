@@ -1,16 +1,17 @@
 {
-  "name": "@rubus/svelte-spectrum-icons-workflow",
-  "description": "Provides Adobe Spectrum workflow icons as Svelte components.",
-  "repo_url": "",
-  "authors": [
-    "runningzs"
-  ],
-  "downloads": 32,
-  "dependents": 1,
-  "updated": "2020-08-25T14:44:20.917Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@rubus/svelte-spectrum-icons-workflow",
+	"description": "Provides Adobe Spectrum workflow icons as Svelte components.",
+	"repo_url": "",
+	"authors": ["runningzs"],
+	"downloads": 32,
+	"dependents": 1,
+	"updated": "2020-08-25T14:44:20.917Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

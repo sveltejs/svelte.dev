@@ -1,18 +1,19 @@
 {
-  "name": "@dxlb/svelte-apollo",
-  "description": "Integrates Apollo GraphQL with Svelte applications.",
-  "repo_url": "https://github.com/timhall/svelte-apollo",
-  "authors": [
-    "dexterlabs"
-  ],
-  "homepage": "https://github.com/timhall/svelte-apollo#readme",
-  "downloads": 18,
-  "dependents": 0,
-  "updated": "2021-09-23T19:27:38.281Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 948
+	"name": "@dxlb/svelte-apollo",
+	"description": "Integrates Apollo GraphQL with Svelte applications.",
+	"repo_url": "https://github.com/timhall/svelte-apollo",
+	"authors": ["dexterlabs"],
+	"homepage": "https://github.com/timhall/svelte-apollo#readme",
+	"downloads": 18,
+	"dependents": 0,
+	"updated": "2021-09-23T19:27:38.281Z",
+	"tags": ["integration"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 948,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

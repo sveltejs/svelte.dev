@@ -1,18 +1,19 @@
 {
-  "name": "svelte-suggestbox",
-  "description": "Create autocomplete, multiselect, and typeahead components for Svelte.",
-  "repo_url": "https://github.com/Ascarbek/svelte-suggestbox",
-  "authors": [
-    "ascarbek"
-  ],
-  "homepage": "https://github.com/Ascarbek/svelte-suggestbox#readme",
-  "downloads": 11,
-  "dependents": 0,
-  "updated": "2020-07-09T04:47:55.100Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 2
+	"name": "svelte-suggestbox",
+	"description": "Create autocomplete, multiselect, and typeahead components for Svelte.",
+	"repo_url": "https://github.com/Ascarbek/svelte-suggestbox",
+	"authors": ["ascarbek"],
+	"homepage": "https://github.com/Ascarbek/svelte-suggestbox#readme",
+	"downloads": 11,
+	"dependents": 0,
+	"updated": "2020-07-09T04:47:55.100Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "svelte-favicon-badge",
-  "description": "Adds favicon with badge to show notifications in Svelte apps.",
-  "repo_url": "https://github.com/kevmodrome/svelte-favicon-badge",
-  "authors": [
-    "kevmodrome"
-  ],
-  "homepage": "https://github.com/kevmodrome/svelte-favicon-badge#readme",
-  "downloads": 7,
-  "dependents": 0,
-  "updated": "2020-03-25T19:02:04.005Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 102
+	"name": "svelte-favicon-badge",
+	"description": "Adds favicon with badge to show notifications in Svelte apps.",
+	"repo_url": "https://github.com/kevmodrome/svelte-favicon-badge",
+	"authors": ["kevmodrome"],
+	"homepage": "https://github.com/kevmodrome/svelte-favicon-badge#readme",
+	"downloads": 7,
+	"dependents": 0,
+	"updated": "2020-03-25T19:02:04.005Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 102,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

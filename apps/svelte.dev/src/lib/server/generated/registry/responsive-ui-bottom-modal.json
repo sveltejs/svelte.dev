@@ -1,21 +1,19 @@
 {
-  "name": "@responsive-ui/bottom-modal",
-  "description": "Create bottom modal component for responsive-ui.",
-  "repo_url": "https://github.com/wetix/responsive-ui",
-  "authors": [
-    "rexlow",
-    "bassemsab",
-    "rm.oska",
-    "apacventure"
-  ],
-  "homepage": "https://github.com/wetix/responsive-ui/blob/main/components/bottom-modal#README.md",
-  "downloads": 61,
-  "dependents": 0,
-  "updated": "2021-12-27T05:02:12.421Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 19
+	"name": "@responsive-ui/bottom-modal",
+	"description": "Create bottom modal component for responsive-ui.",
+	"repo_url": "https://github.com/wetix/responsive-ui",
+	"authors": ["rexlow", "bassemsab", "rm.oska", "apacventure"],
+	"homepage": "https://github.com/wetix/responsive-ui/blob/main/components/bottom-modal#README.md",
+	"downloads": 61,
+	"dependents": 0,
+	"updated": "2021-12-27T05:02:12.421Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 19,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,17 +1,18 @@
 {
-  "name": "@jeremymwan/svelte-notification",
-  "description": "Create notification components for Svelte.",
-  "repo_url": "",
-  "authors": [
-    "jeremymwan"
-  ],
-  "homepage": "https://github.com/lagden/svelte-notification#readme",
-  "downloads": 7,
-  "dependents": 0,
-  "updated": "2025-03-12T03:32:39.043Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "@jeremymwan/svelte-notification",
+	"description": "Create notification components for Svelte.",
+	"repo_url": "",
+	"authors": ["jeremymwan"],
+	"homepage": "https://github.com/lagden/svelte-notification#readme",
+	"downloads": 7,
+	"dependents": 0,
+	"updated": "2025-03-12T03:32:39.043Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": true
+	}
 }

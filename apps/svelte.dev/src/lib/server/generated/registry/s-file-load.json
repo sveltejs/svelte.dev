@@ -1,18 +1,19 @@
 {
-  "name": "s-file-load",
-  "description": "Create file upload component for Svelte apps.",
-  "repo_url": "https://github.com/s-library/s-file-load",
-  "authors": [
-    "nanotron"
-  ],
-  "homepage": "https://s-file-load-khn1ohzvd-s-library.vercel.app/",
-  "downloads": 1,
-  "dependents": 0,
-  "updated": "2023-09-29T03:10:13.144Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "s-file-load",
+	"description": "Create file upload component for Svelte apps.",
+	"repo_url": "https://github.com/s-library/s-file-load",
+	"authors": ["nanotron"],
+	"homepage": "https://s-file-load-khn1ohzvd-s-library.vercel.app/",
+	"downloads": 1,
+	"dependents": 0,
+	"updated": "2023-09-29T03:10:13.144Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

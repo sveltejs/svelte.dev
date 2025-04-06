@@ -1,17 +1,18 @@
 {
-  "name": "svelte-target-blank",
-  "description": "Adds target=\"_blank\" to external links in Svelte components.",
-  "repo_url": "https://github.com/fcrozatier/svelte-targe-blank",
-  "authors": [
-    "fcrozatier"
-  ],
-  "homepage": "https://github.com/fcrozatier/svelte-targe-blank#readme",
-  "downloads": 12,
-  "dependents": 0,
-  "updated": "2024-04-27T13:51:06.068Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-target-blank",
+	"description": "Adds target=\"_blank\" to external links in Svelte components.",
+	"repo_url": "https://github.com/fcrozatier/svelte-targe-blank",
+	"authors": ["fcrozatier"],
+	"homepage": "https://github.com/fcrozatier/svelte-targe-blank#readme",
+	"downloads": 12,
+	"dependents": 0,
+	"updated": "2024-04-27T13:51:06.068Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

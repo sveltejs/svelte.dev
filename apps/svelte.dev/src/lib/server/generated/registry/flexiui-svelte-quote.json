@@ -1,16 +1,17 @@
 {
-  "name": "@flexiui/svelte-quote",
-  "description": "Create quote components for Svelte.",
-  "repo_url": "",
-  "authors": [
-    "alexgipi"
-  ],
-  "downloads": 21,
-  "dependents": 0,
-  "updated": "2025-02-17T12:07:03.750Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "@flexiui/svelte-quote",
+	"description": "Create quote components for Svelte.",
+	"repo_url": "",
+	"authors": ["alexgipi"],
+	"downloads": 21,
+	"dependents": 0,
+	"updated": "2025-02-17T12:07:03.750Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

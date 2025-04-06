@@ -1,16 +1,17 @@
 {
-  "name": "luna_charts",
-  "description": "Create accessible chart components for Svelte applications.",
-  "repo_url": "",
-  "authors": [
-    "ninosaurier"
-  ],
-  "downloads": 7,
-  "dependents": 0,
-  "updated": "2022-09-07T12:00:20.754Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "luna_charts",
+	"description": "Create accessible chart components for Svelte applications.",
+	"repo_url": "",
+	"authors": ["ninosaurier"],
+	"downloads": 7,
+	"dependents": 0,
+	"updated": "2022-09-07T12:00:20.754Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

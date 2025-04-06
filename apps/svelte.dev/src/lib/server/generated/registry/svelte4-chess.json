@@ -1,17 +1,18 @@
 {
-  "name": "svelte4-chess",
-  "description": "Creates fully playable chess component for Svelte 4.",
-  "repo_url": "",
-  "authors": [
-    "liamkrenn"
-  ],
-  "homepage": "https://github.com/LiamKrenn/svelte4-chess",
-  "downloads": 3,
-  "dependents": 0,
-  "updated": "2025-02-03T16:55:04.243Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte4-chess",
+	"description": "Creates fully playable chess component for Svelte 4.",
+	"repo_url": "",
+	"authors": ["liamkrenn"],
+	"homepage": "https://github.com/LiamKrenn/svelte4-chess",
+	"downloads": 3,
+	"dependents": 0,
+	"updated": "2025-02-03T16:55:04.243Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

@@ -1,16 +1,17 @@
 {
-  "name": "svelte-input-mask",
-  "description": "Apply input masks to Svelte input elements.",
-  "repo_url": "",
-  "authors": [
-    "xnimorz"
-  ],
-  "downloads": 1386,
-  "dependents": 2,
-  "updated": "2020-12-08T00:04:28.690Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "svelte-input-mask",
+	"description": "Apply input masks to Svelte input elements.",
+	"repo_url": "",
+	"authors": ["xnimorz"],
+	"downloads": 1386,
+	"dependents": 2,
+	"updated": "2020-12-08T00:04:28.690Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": true
+	}
 }

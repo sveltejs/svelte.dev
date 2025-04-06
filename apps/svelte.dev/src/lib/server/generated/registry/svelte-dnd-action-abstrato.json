@@ -1,18 +1,19 @@
 {
-  "name": "svelte-dnd-action-abstrato",
-  "description": "Implement drag and drop functionality with rich animations in Svelte.",
-  "repo_url": "https://github.com/dilonhenrique/svelte-dnd-action",
-  "authors": [
-    "dilonhenrique"
-  ],
-  "homepage": "https://github.com/dilonhenrique/svelte-dnd-action#readme",
-  "downloads": 2,
-  "dependents": 0,
-  "updated": "2024-05-10T16:25:33.049Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelte-dnd-action-abstrato",
+	"description": "Implement drag and drop functionality with rich animations in Svelte.",
+	"repo_url": "https://github.com/dilonhenrique/svelte-dnd-action",
+	"authors": ["dilonhenrique"],
+	"homepage": "https://github.com/dilonhenrique/svelte-dnd-action#readme",
+	"downloads": 2,
+	"dependents": 0,
+	"updated": "2024-05-10T16:25:33.049Z",
+	"tags": ["miscellaneous"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": true
+	}
 }

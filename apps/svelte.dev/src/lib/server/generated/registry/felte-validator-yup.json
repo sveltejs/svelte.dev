@@ -1,18 +1,19 @@
 {
-  "name": "@felte/validator-yup",
-  "description": "Validate Felte forms with Yup.",
-  "repo_url": "https://github.com/pablo-abc/felte",
-  "authors": [
-    "pberganza"
-  ],
-  "homepage": "https://github.com/pablo-abc/felte/tree/main/packages/validator-yup",
-  "downloads": 3296,
-  "dependents": 6,
-  "updated": "2024-10-29T22:05:28.329Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1045
+	"name": "@felte/validator-yup",
+	"description": "Validate Felte forms with Yup.",
+	"repo_url": "https://github.com/pablo-abc/felte",
+	"authors": ["pberganza"],
+	"homepage": "https://github.com/pablo-abc/felte/tree/main/packages/validator-yup",
+	"downloads": 3296,
+	"dependents": 6,
+	"updated": "2024-10-29T22:05:28.329Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1046,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

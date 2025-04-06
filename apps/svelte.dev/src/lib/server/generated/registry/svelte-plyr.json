@@ -1,18 +1,19 @@
 {
-  "name": "svelte-plyr",
-  "description": "Create video/audio players using Plyr.js in Svelte.",
-  "repo_url": "https://github.com/benwoodward/svelte-plyr",
-  "authors": [
-    "benwoodward"
-  ],
-  "homepage": "https://github.com/benwoodward/svelte-plyr#readme",
-  "downloads": 38,
-  "dependents": 0,
-  "updated": "2020-01-24T21:43:21.714Z",
-  "tags": [
-    "media"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 21
+	"name": "svelte-plyr",
+	"description": "Create video/audio players using Plyr.js in Svelte.",
+	"repo_url": "https://github.com/benwoodward/svelte-plyr",
+	"authors": ["benwoodward"],
+	"homepage": "https://github.com/benwoodward/svelte-plyr#readme",
+	"downloads": 38,
+	"dependents": 0,
+	"updated": "2020-01-24T21:43:21.714Z",
+	"tags": ["media"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 21,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

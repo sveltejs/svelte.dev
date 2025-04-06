@@ -1,18 +1,19 @@
 {
-  "name": "svelte-color-select",
-  "description": "Select colors using Okhsv color space in Svelte.",
-  "repo_url": "https://github.com/captaincodeman/svelte-color-select",
-  "authors": [
-    "captaincodeman"
-  ],
-  "homepage": "https://captaincodeman.github.io/svelte-color-select/",
-  "downloads": 24,
-  "dependents": 0,
-  "updated": "2024-11-27T00:12:45.841Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 33
+	"name": "svelte-color-select",
+	"description": "Select colors using Okhsv color space in Svelte.",
+	"repo_url": "https://github.com/captaincodeman/svelte-color-select",
+	"authors": ["captaincodeman"],
+	"homepage": "https://captaincodeman.github.io/svelte-color-select/",
+	"downloads": 24,
+	"dependents": 0,
+	"updated": "2024-11-27T00:12:45.841Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 33,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

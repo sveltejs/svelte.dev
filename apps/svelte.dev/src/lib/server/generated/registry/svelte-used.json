@@ -1,16 +1,17 @@
 {
-  "name": "svelte-used",
-  "description": "Provide useful Svelte store extensions and utilities.",
-  "repo_url": "",
-  "authors": [
-    "1bye"
-  ],
-  "downloads": 2,
-  "dependents": 0,
-  "updated": "2023-12-04T12:01:41.579Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-used",
+	"description": "Provide useful Svelte store extensions and utilities.",
+	"repo_url": "",
+	"authors": ["1bye"],
+	"downloads": 2,
+	"dependents": 0,
+	"updated": "2023-12-04T12:01:41.579Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

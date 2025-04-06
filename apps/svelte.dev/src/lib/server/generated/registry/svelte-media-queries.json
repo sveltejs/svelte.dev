@@ -1,18 +1,19 @@
 {
-  "name": "svelte-media-queries",
-  "description": "Use CSS media queries in Svelte components.",
-  "repo_url": "https://github.com/fedorovvvv/svelte-media-queries",
-  "authors": [
-    "fedorovvvv"
-  ],
-  "homepage": "https://github.com/fedorovvvv/svelte-media-queries#readme",
-  "downloads": 2963,
-  "dependents": 2,
-  "updated": "2023-10-13T16:20:11.544Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 39
+	"name": "svelte-media-queries",
+	"description": "Use CSS media queries in Svelte components.",
+	"repo_url": "https://github.com/fedorovvvv/svelte-media-queries",
+	"authors": ["fedorovvvv"],
+	"homepage": "https://github.com/fedorovvvv/svelte-media-queries#readme",
+	"downloads": 2963,
+	"dependents": 2,
+	"updated": "2023-10-13T16:20:11.544Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 39,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

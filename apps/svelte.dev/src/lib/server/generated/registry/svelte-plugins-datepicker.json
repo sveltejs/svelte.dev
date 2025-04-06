@@ -1,18 +1,19 @@
 {
-  "name": "@svelte-plugins/datepicker",
-  "description": "Implement simple datepicker component for Svelte.",
-  "repo_url": "https://github.com/svelte-plugins/datepicker",
-  "authors": [
-    "dysfunc"
-  ],
-  "homepage": "https://github.com/svelte-plugins/datepicker",
-  "downloads": 3865,
-  "dependents": 2,
-  "updated": "2025-01-19T19:50:33.977Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 84
+	"name": "@svelte-plugins/datepicker",
+	"description": "Implement simple datepicker component for Svelte.",
+	"repo_url": "https://github.com/svelte-plugins/datepicker",
+	"authors": ["dysfunc"],
+	"homepage": "https://github.com/svelte-plugins/datepicker",
+	"downloads": 3865,
+	"dependents": 2,
+	"updated": "2025-01-19T19:50:33.977Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 84,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

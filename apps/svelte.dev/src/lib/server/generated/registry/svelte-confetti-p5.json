@@ -1,18 +1,19 @@
 {
-  "name": "svelte-confetti-p5",
-  "description": "Create customizable confetti animations using p5.js in Svelte.",
-  "repo_url": "https://github.com/elron/svelte-confetti-p5",
-  "authors": [
-    "elron"
-  ],
-  "homepage": "https://svelte-confetti-p5.netlify.app/",
-  "downloads": 12,
-  "dependents": 0,
-  "updated": "2023-08-22T18:04:17.056Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 2
+	"name": "svelte-confetti-p5",
+	"description": "Create customizable confetti animations using p5.js in Svelte.",
+	"repo_url": "https://github.com/elron/svelte-confetti-p5",
+	"authors": ["elron"],
+	"homepage": "https://svelte-confetti-p5.netlify.app/",
+	"downloads": 12,
+	"dependents": 0,
+	"updated": "2023-08-22T18:04:17.056Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

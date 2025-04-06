@@ -1,19 +1,19 @@
 {
-  "name": "@svizzle/hierarchy",
-  "description": "Visualize hierarchical data using Svelte charts.",
-  "repo_url": "https://github.com/nestauk/svizzle",
-  "authors": [
-    "nestauk-dev",
-    "mindrones"
-  ],
-  "homepage": "https://github.com/nestauk/svizzle",
-  "downloads": 2,
-  "dependents": 0,
-  "updated": "2023-11-23T20:36:03.117Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 19
+	"name": "@svizzle/hierarchy",
+	"description": "Visualize hierarchical data using Svelte charts.",
+	"repo_url": "https://github.com/nestauk/svizzle",
+	"authors": ["nestauk-dev", "mindrones"],
+	"homepage": "https://github.com/nestauk/svizzle",
+	"downloads": 2,
+	"dependents": 0,
+	"updated": "2023-11-23T20:36:03.117Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 19,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

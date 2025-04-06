@@ -1,19 +1,19 @@
 {
-  "name": "@ptkdev/svelte-kit-ssr-boilerplate",
-  "description": "Create Svelte server-side rendering boilerplate with SEO in mind.",
-  "repo_url": "https://github.com/ptkdev-boilerplate/svelte-kit-ssr-boilerplate",
-  "authors": [
-    "ptkdevio"
-  ],
-  "homepage": "https://github.com/ptkdev-boilerplate/svelte-kit-ssr-boilerplate",
-  "downloads": 25,
-  "dependents": 0,
-  "updated": "2021-05-16T11:31:54.460Z",
-  "tags": [
-    "server",
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 37
+	"name": "@ptkdev/svelte-kit-ssr-boilerplate",
+	"description": "Create Svelte server-side rendering boilerplate with SEO in mind.",
+	"repo_url": "https://github.com/ptkdev-boilerplate/svelte-kit-ssr-boilerplate",
+	"authors": ["ptkdevio"],
+	"homepage": "https://github.com/ptkdev-boilerplate/svelte-kit-ssr-boilerplate",
+	"downloads": 25,
+	"dependents": 0,
+	"updated": "2021-05-16T11:31:54.460Z",
+	"tags": ["server", "tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 37,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

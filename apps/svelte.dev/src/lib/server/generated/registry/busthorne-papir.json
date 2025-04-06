@@ -1,18 +1,19 @@
 {
-  "name": "@busthorne/papir",
-  "description": "Develop UI components inspired by dramaturgy for Svelte.",
-  "repo_url": "https://github.com/busthorne/papir",
-  "authors": [
-    "badt"
-  ],
-  "homepage": "https://github.com/busthorne/papir",
-  "downloads": 0,
-  "dependents": 0,
-  "updated": "2025-02-06T01:54:55.084Z",
-  "tags": [
-    "design-system"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 4
+	"name": "@busthorne/papir",
+	"description": "Develop UI components inspired by dramaturgy for Svelte.",
+	"repo_url": "https://github.com/busthorne/papir",
+	"authors": ["badt"],
+	"homepage": "https://github.com/busthorne/papir",
+	"downloads": 0,
+	"dependents": 0,
+	"updated": "2025-02-06T01:54:55.084Z",
+	"tags": ["design-system"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 4,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

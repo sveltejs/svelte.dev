@@ -1,18 +1,19 @@
 {
-  "name": "svelte-object-explorer",
-  "description": "Inspect Svelte objects, view state, and stores.",
-  "repo_url": "https://github.com/Swiftaff/svelte-object-explorer",
-  "authors": [
-    "swiftaff"
-  ],
-  "homepage": "https://github.com/Swiftaff/svelte-object-explorer",
-  "downloads": 22,
-  "dependents": 0,
-  "updated": "2021-10-09T10:46:23.877Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 3
+	"name": "svelte-object-explorer",
+	"description": "Inspect Svelte objects, view state, and stores.",
+	"repo_url": "https://github.com/Swiftaff/svelte-object-explorer",
+	"authors": ["swiftaff"],
+	"homepage": "https://github.com/Swiftaff/svelte-object-explorer",
+	"downloads": 22,
+	"dependents": 0,
+	"updated": "2021-10-09T10:46:23.877Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 3,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

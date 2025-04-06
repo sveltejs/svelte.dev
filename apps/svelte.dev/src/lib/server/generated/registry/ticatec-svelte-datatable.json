@@ -1,16 +1,17 @@
 {
-  "name": "ticatec-svelte-datatable",
-  "description": "Create advanced datatables for Svelte applications.",
-  "repo_url": "",
-  "authors": [
-    "henry.feng"
-  ],
-  "downloads": 14,
-  "dependents": 0,
-  "updated": "2022-08-12T02:37:39.464Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "ticatec-svelte-datatable",
+	"description": "Create advanced datatables for Svelte applications.",
+	"repo_url": "",
+	"authors": ["henry.feng"],
+	"downloads": 14,
+	"dependents": 0,
+	"updated": "2022-08-12T02:37:39.464Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

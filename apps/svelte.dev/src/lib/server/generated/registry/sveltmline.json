@@ -1,18 +1,19 @@
 {
-  "name": "sveltmline",
-  "description": "Create timeline UI with Svelte.",
-  "repo_url": "https://github.com/komietty/sveltmline",
-  "authors": [
-    "komietty"
-  ],
-  "homepage": "https://github.com/komietty/sveltmline#readme",
-  "downloads": 9,
-  "dependents": 0,
-  "updated": "2021-03-02T15:43:00.389Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 2
+	"name": "sveltmline",
+	"description": "Create timeline UI with Svelte.",
+	"repo_url": "https://github.com/komietty/sveltmline",
+	"authors": ["komietty"],
+	"homepage": "https://github.com/komietty/sveltmline#readme",
+	"downloads": 9,
+	"dependents": 0,
+	"updated": "2021-03-02T15:43:00.389Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

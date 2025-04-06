@@ -1,18 +1,19 @@
 {
-  "name": "@feelinglovelynow/svelte-turnstile",
-  "description": "Integrate Cloudflare Turnstile form validation in Svelte.",
-  "repo_url": "https://github.com/feelinglovelynow/svelte-turnstile",
-  "authors": [
-    "feelinglovelynow"
-  ],
-  "homepage": "https://github.com/feelinglovelynow/svelte-turnstile#readme",
-  "downloads": 1,
-  "dependents": 0,
-  "updated": "2023-10-30T10:53:34.288Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "@feelinglovelynow/svelte-turnstile",
+	"description": "Integrate Cloudflare Turnstile form validation in Svelte.",
+	"repo_url": "https://github.com/feelinglovelynow/svelte-turnstile",
+	"authors": ["feelinglovelynow"],
+	"homepage": "https://github.com/feelinglovelynow/svelte-turnstile#readme",
+	"downloads": 1,
+	"dependents": 0,
+	"updated": "2023-10-30T10:53:34.288Z",
+	"tags": ["integration"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

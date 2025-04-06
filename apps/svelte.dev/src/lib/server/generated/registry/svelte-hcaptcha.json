@@ -1,18 +1,19 @@
 {
-  "name": "svelte-hcaptcha",
-  "description": "Integrate hCaptcha into Svelte apps.",
-  "repo_url": "https://github.com/mrmikardo/svelte-hcaptcha",
-  "authors": [
-    "colinattab"
-  ],
-  "homepage": "https://github.com/mrmikardo/svelte-hcaptcha#readme",
-  "downloads": 90,
-  "dependents": 0,
-  "updated": "2022-04-18T11:43:21.517Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 23
+	"name": "svelte-hcaptcha",
+	"description": "Integrate hCaptcha into Svelte apps.",
+	"repo_url": "https://github.com/mrmikardo/svelte-hcaptcha",
+	"authors": ["colinattab"],
+	"homepage": "https://github.com/mrmikardo/svelte-hcaptcha#readme",
+	"downloads": 90,
+	"dependents": 0,
+	"updated": "2022-04-18T11:43:21.517Z",
+	"tags": ["integration"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 23,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

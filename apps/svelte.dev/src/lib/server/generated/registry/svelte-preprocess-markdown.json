@@ -1,18 +1,19 @@
 {
-  "name": "svelte-preprocess-markdown",
-  "description": "Use Markdown in Svelte components.",
-  "repo_url": "https://github.com/AlexxNB/svelte-preprocess-markdown",
-  "authors": [
-    "alexxnb"
-  ],
-  "homepage": "https://github.com/AlexxNB/svelte-preprocess-markdown#readme",
-  "downloads": 45,
-  "dependents": 2,
-  "updated": "2020-08-14T05:06:27.368Z",
-  "tags": [
-    "content"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 138
+	"name": "svelte-preprocess-markdown",
+	"description": "Use Markdown in Svelte components.",
+	"repo_url": "https://github.com/AlexxNB/svelte-preprocess-markdown",
+	"authors": ["alexxnb"],
+	"homepage": "https://github.com/AlexxNB/svelte-preprocess-markdown#readme",
+	"downloads": 45,
+	"dependents": 2,
+	"updated": "2020-08-14T05:06:27.368Z",
+	"tags": ["content"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 138,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	}
 }

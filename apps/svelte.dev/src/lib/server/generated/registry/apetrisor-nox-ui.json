@@ -1,18 +1,19 @@
 {
-  "name": "@apetrisor/nox-ui",
-  "description": "Create UI components for Svelte apps.",
-  "repo_url": "https://github.com/apetrisor/nox-ui",
-  "authors": [
-    "apetrisor"
-  ],
-  "homepage": "https://github.com/apetrisor/nox-ui#readme",
-  "downloads": 11,
-  "dependents": 0,
-  "updated": "2021-02-25T18:05:03.626Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@apetrisor/nox-ui",
+	"description": "Create UI components for Svelte apps.",
+	"repo_url": "https://github.com/apetrisor/nox-ui",
+	"authors": ["apetrisor"],
+	"homepage": "https://github.com/apetrisor/nox-ui#readme",
+	"downloads": 11,
+	"dependents": 0,
+	"updated": "2021-02-25T18:05:03.626Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

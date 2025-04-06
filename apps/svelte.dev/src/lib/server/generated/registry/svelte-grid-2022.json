@@ -1,18 +1,19 @@
 {
-  "name": "svelte-grid-2022",
-  "description": "Provides responsive, draggable, and resizable grid layout for Svelte.",
-  "repo_url": "https://github.com/raashy/svelte-grid-2022",
-  "authors": [
-    "rashy"
-  ],
-  "homepage": "https://github.com/raashy/svelte-grid-2022#readme",
-  "downloads": 2,
-  "dependents": 0,
-  "updated": "2024-02-21T17:31:26.839Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelte-grid-2022",
+	"description": "Provides responsive, draggable, and resizable grid layout for Svelte.",
+	"repo_url": "https://github.com/raashy/svelte-grid-2022",
+	"authors": ["rashy"],
+	"homepage": "https://github.com/raashy/svelte-grid-2022#readme",
+	"downloads": 2,
+	"dependents": 0,
+	"updated": "2024-02-21T17:31:26.839Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

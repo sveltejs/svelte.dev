@@ -1,18 +1,19 @@
 {
-  "name": "@ui-machines/svelte",
-  "description": "Provides state machines for building UI components in Svelte.",
-  "repo_url": "https://github.com/chakra-ui/ui-machines",
-  "authors": [
-    "segunadebayo"
-  ],
-  "homepage": "https://github.com/chakra-ui/ui-machines#readme",
-  "downloads": 192,
-  "dependents": 0,
-  "updated": "2022-01-14T22:32:22.889Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 4336
+	"name": "@ui-machines/svelte",
+	"description": "Provides state machines for building UI components in Svelte.",
+	"repo_url": "https://github.com/chakra-ui/ui-machines",
+	"authors": ["segunadebayo"],
+	"homepage": "https://github.com/chakra-ui/ui-machines#readme",
+	"downloads": 192,
+	"dependents": 0,
+	"updated": "2022-01-14T22:32:22.889Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 4338,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

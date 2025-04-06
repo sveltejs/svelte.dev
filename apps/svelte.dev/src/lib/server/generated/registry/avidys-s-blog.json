@@ -1,17 +1,18 @@
 {
-  "name": "@avidys/s-blog",
-  "description": "Create blog component with SvelteKit and Markdown support.",
-  "repo_url": "",
-  "authors": [
-    "nanotron"
-  ],
-  "homepage": "https://github.com/avidys/s-blog",
-  "downloads": 609,
-  "dependents": 0,
-  "updated": "2025-03-27T23:28:52.277Z",
-  "tags": [
-    "content"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "@avidys/s-blog",
+	"description": "Create blog component with SvelteKit and Markdown support.",
+	"repo_url": "",
+	"authors": ["nanotron"],
+	"homepage": "https://github.com/avidys/s-blog",
+	"downloads": 609,
+	"dependents": 0,
+	"updated": "2025-03-27T23:28:52.277Z",
+	"tags": ["content"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

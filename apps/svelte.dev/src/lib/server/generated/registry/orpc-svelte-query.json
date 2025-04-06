@@ -1,18 +1,19 @@
 {
-  "name": "@orpc/svelte-query",
-  "description": "Fetch and manage data in Svelte with orpc.",
-  "repo_url": "https://github.com/unnoq/orpc",
-  "authors": [
-    "unnoq"
-  ],
-  "homepage": "https://orpc.unnoq.com",
-  "downloads": 1504,
-  "dependents": 0,
-  "updated": "2025-03-25T14:54:04.695Z",
-  "tags": [
-    "server"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 945
+	"name": "@orpc/svelte-query",
+	"description": "Fetch and manage data in Svelte with orpc.",
+	"repo_url": "https://github.com/unnoq/orpc",
+	"authors": ["unnoq"],
+	"homepage": "https://orpc.unnoq.com",
+	"downloads": 1504,
+	"dependents": 0,
+	"updated": "2025-03-25T14:54:04.695Z",
+	"tags": ["server"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 950,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

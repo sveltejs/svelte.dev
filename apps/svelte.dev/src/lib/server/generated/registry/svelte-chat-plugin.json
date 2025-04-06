@@ -1,16 +1,17 @@
 {
-  "name": "@svelte-chat/plugin",
-  "description": "Integrate Svelte-Chat solution with SvelteKit applications.",
-  "repo_url": "",
-  "authors": [
-    "kotekpsotek"
-  ],
-  "downloads": 6,
-  "dependents": 1,
-  "updated": "2023-11-06T21:42:58.240Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@svelte-chat/plugin",
+	"description": "Integrate Svelte-Chat solution with SvelteKit applications.",
+	"repo_url": "",
+	"authors": ["kotekpsotek"],
+	"downloads": 6,
+	"dependents": 1,
+	"updated": "2023-11-06T21:42:58.240Z",
+	"tags": ["integration"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "@leveluptuts/svelte-notion",
-  "description": "Fetch and render Notion content within Svelte applications.",
-  "repo_url": "https://github.com/leveluptuts/svelte-notion",
-  "authors": [
-    "stolinski"
-  ],
-  "homepage": "https://github.com/leveluptuts/svelte-notion#readme",
-  "downloads": 22,
-  "dependents": 0,
-  "updated": "2020-05-13T00:05:05.061Z",
-  "tags": [
-    "content"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 56
+	"name": "@leveluptuts/svelte-notion",
+	"description": "Fetch and render Notion content within Svelte applications.",
+	"repo_url": "https://github.com/leveluptuts/svelte-notion",
+	"authors": ["stolinski"],
+	"homepage": "https://github.com/leveluptuts/svelte-notion#readme",
+	"downloads": 22,
+	"dependents": 0,
+	"updated": "2020-05-13T00:05:05.061Z",
+	"tags": ["content"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 56,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

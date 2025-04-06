@@ -1,18 +1,19 @@
 {
-  "name": "@krestui/svelte-context-test",
-  "description": "Test Svelte components using context with getContext() API.",
-  "repo_url": "https://github.com/krestui/svelte-context-test",
-  "authors": [
-    "hellokarthik"
-  ],
-  "homepage": "https://github.com/krestui/svelte-context-test#readme",
-  "downloads": 1,
-  "dependents": 0,
-  "updated": "2022-07-19T05:23:21.787Z",
-  "tags": [
-    "testing"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@krestui/svelte-context-test",
+	"description": "Test Svelte components using context with getContext() API.",
+	"repo_url": "https://github.com/krestui/svelte-context-test",
+	"authors": ["hellokarthik"],
+	"homepage": "https://github.com/krestui/svelte-context-test#readme",
+	"downloads": 1,
+	"dependents": 0,
+	"updated": "2022-07-19T05:23:21.787Z",
+	"tags": ["testing"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

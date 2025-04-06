@@ -1,16 +1,17 @@
 {
-  "name": "svelte-swipe-to-action",
-  "description": "Implement swipe-to-action component for Svelte apps.",
-  "repo_url": "",
-  "authors": [
-    "nutchyleo123"
-  ],
-  "downloads": 2,
-  "dependents": 0,
-  "updated": "2025-03-11T10:11:30.079Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "svelte-swipe-to-action",
+	"description": "Implement swipe-to-action component for Svelte apps.",
+	"repo_url": "",
+	"authors": ["nutchyleo123"],
+	"downloads": 2,
+	"dependents": 0,
+	"updated": "2025-03-11T10:11:30.079Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

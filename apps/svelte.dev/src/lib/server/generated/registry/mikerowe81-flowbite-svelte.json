@@ -1,19 +1,19 @@
 {
-  "name": "@mikerowe81/flowbite-svelte",
-  "description": "Build websites faster with Svelte components on Tailwind CSS.",
-  "repo_url": "https://github.com/mikerowe81/flowbite-svelte",
-  "authors": [
-    "mikerowe81"
-  ],
-  "homepage": "https://flowbite-svelte.com/",
-  "downloads": 7,
-  "dependents": 0,
-  "updated": "2025-02-10T21:27:48.532Z",
-  "tags": [
-    "design-system",
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 0
+	"name": "@mikerowe81/flowbite-svelte",
+	"description": "Build websites faster with Svelte components on Tailwind CSS.",
+	"repo_url": "https://github.com/mikerowe81/flowbite-svelte",
+	"authors": ["mikerowe81"],
+	"homepage": "https://flowbite-svelte.com/",
+	"downloads": 7,
+	"dependents": 0,
+	"updated": "2025-02-10T21:27:48.532Z",
+	"tags": ["design-system", "ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

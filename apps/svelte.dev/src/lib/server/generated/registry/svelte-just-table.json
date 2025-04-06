@@ -1,18 +1,19 @@
 {
-  "name": "svelte-just-table",
-  "description": "Create simple table components for Svelte applications.",
-  "repo_url": "https://github.com/lukaszwisniewski88/SimpleSvelteTable",
-  "authors": [
-    "lukasz_wisniewski"
-  ],
-  "homepage": "https://github.com/lukaszwisniewski88/SimpleSvelteTable",
-  "downloads": 0,
-  "dependents": 0,
-  "updated": "2024-12-09T07:52:21.368Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelte-just-table",
+	"description": "Create simple table components for Svelte applications.",
+	"repo_url": "https://github.com/lukaszwisniewski88/SimpleSvelteTable",
+	"authors": ["lukasz_wisniewski"],
+	"homepage": "https://github.com/lukaszwisniewski88/SimpleSvelteTable",
+	"downloads": 0,
+	"dependents": 0,
+	"updated": "2024-12-09T07:52:21.368Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

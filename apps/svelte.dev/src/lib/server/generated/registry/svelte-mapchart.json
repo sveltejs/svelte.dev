@@ -1,16 +1,17 @@
 {
-  "name": "svelte-mapchart",
-  "description": "Generate SVG map charts using Svelte and d3-geo.",
-  "repo_url": "svelte-mapchart",
-  "authors": [
-    "zimrick"
-  ],
-  "downloads": 9,
-  "dependents": 0,
-  "updated": "2019-11-30T21:25:38.808Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-mapchart",
+	"description": "Generate SVG map charts using Svelte and d3-geo.",
+	"repo_url": "svelte-mapchart",
+	"authors": ["zimrick"],
+	"downloads": 9,
+	"dependents": 0,
+	"updated": "2019-11-30T21:25:38.808Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

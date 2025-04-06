@@ -1,18 +1,19 @@
 {
-  "name": "sveltekit-session",
-  "description": "Manage sessions in SvelteKit applications.",
-  "repo_url": "https://github.com/mc-0bit/sveltekit-session",
-  "authors": [
-    "mc_0bit"
-  ],
-  "homepage": "https://github.com/mc-0bit/sveltekit-session",
-  "downloads": 0,
-  "dependents": 0,
-  "updated": "2023-04-23T12:49:02.024Z",
-  "tags": [
-    "server"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "sveltekit-session",
+	"description": "Manage sessions in SvelteKit applications.",
+	"repo_url": "https://github.com/mc-0bit/sveltekit-session",
+	"authors": ["mc_0bit"],
+	"homepage": "https://github.com/mc-0bit/sveltekit-session",
+	"downloads": 0,
+	"dependents": 0,
+	"updated": "2023-04-23T12:49:02.024Z",
+	"tags": ["server"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

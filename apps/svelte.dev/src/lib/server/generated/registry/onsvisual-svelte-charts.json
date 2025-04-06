@@ -1,23 +1,26 @@
 {
-  "name": "@onsvisual/svelte-charts",
-  "description": "Reusable chart templates for Svelte projects.",
-  "repo_url": "https://github.com/onsvisual/svelte-charts",
-  "authors": [
-    "bothness",
-    "henrylau",
-    "petem-ons",
-    "sambennettons",
-    "erinvickery-ons",
-    "shiny-penny"
-  ],
-  "homepage": "http://onsvisual.github.io/svelte-charts",
-  "downloads": 11,
-  "dependents": 0,
-  "updated": "2024-12-02T10:53:25.346Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 14
+	"name": "@onsvisual/svelte-charts",
+	"description": "Reusable chart templates for Svelte projects.",
+	"repo_url": "https://github.com/onsvisual/svelte-charts",
+	"authors": [
+		"bothness",
+		"henrylau",
+		"petem-ons",
+		"sambennettons",
+		"erinvickery-ons",
+		"shiny-penny"
+	],
+	"homepage": "http://onsvisual.github.io/svelte-charts",
+	"downloads": 11,
+	"dependents": 0,
+	"updated": "2024-12-02T10:53:25.346Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 14,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": false
+	}
 }

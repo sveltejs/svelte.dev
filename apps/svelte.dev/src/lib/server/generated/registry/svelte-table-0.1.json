@@ -1,16 +1,17 @@
 {
-  "name": "svelte-table-0.1",
-  "description": "Create table components for Svelte applications.",
-  "repo_url": "",
-  "authors": [
-    "georgefaulkner1"
-  ],
-  "downloads": 60,
-  "dependents": 0,
-  "updated": "2025-03-19T22:52:06.630Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "svelte-table-0.1",
+	"description": "Create table components for Svelte applications.",
+	"repo_url": "",
+	"authors": ["georgefaulkner1"],
+	"downloads": 60,
+	"dependents": 0,
+	"updated": "2025-03-19T22:52:06.630Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

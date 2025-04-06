@@ -1,18 +1,19 @@
 {
-  "name": "svelte-flatpickr-plus",
-  "description": "Provides a wrapper for Flatpickr with extra features.",
-  "repo_url": "https://github.com/kodaicoder/svelte-flatpickr-plus",
-  "authors": [
-    "nutchyleo123"
-  ],
-  "homepage": "https://github.com/kodaicoder/svelte-flatpickr-plus",
-  "downloads": 95,
-  "dependents": 0,
-  "updated": "2025-02-17T07:12:15.189Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 10
+	"name": "svelte-flatpickr-plus",
+	"description": "Provides a wrapper for Flatpickr with extra features.",
+	"repo_url": "https://github.com/kodaicoder/svelte-flatpickr-plus",
+	"authors": ["nutchyleo123"],
+	"homepage": "https://github.com/kodaicoder/svelte-flatpickr-plus",
+	"downloads": 95,
+	"dependents": 0,
+	"updated": "2025-02-17T07:12:15.189Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 10,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

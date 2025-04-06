@@ -1,18 +1,19 @@
 {
-  "name": "sveltix",
-  "description": "Manage complex stores in Svelte applications.",
-  "repo_url": "https://github.com/SpongeBed81/sveltix",
-  "authors": [
-    "spongebed"
-  ],
-  "homepage": "https://github.com/SpongeBed81/sveltix#readme",
-  "downloads": 7,
-  "dependents": 0,
-  "updated": "2023-07-03T19:42:31.532Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 20
+	"name": "sveltix",
+	"description": "Manage complex stores in Svelte applications.",
+	"repo_url": "https://github.com/SpongeBed81/sveltix",
+	"authors": ["spongebed"],
+	"homepage": "https://github.com/SpongeBed81/sveltix#readme",
+	"downloads": 7,
+	"dependents": 0,
+	"updated": "2023-07-03T19:42:31.532Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 20,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

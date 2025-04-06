@@ -1,18 +1,19 @@
 {
-  "name": "slocation",
-  "description": "Reactive Svelte location store.",
-  "repo_url": "https://github.com/varbhat/slocation",
-  "authors": [
-    "varbhat"
-  ],
-  "homepage": "https://github.com/varbhat/slocation#readme",
-  "downloads": 18,
-  "dependents": 0,
-  "updated": "2021-09-16T14:48:35.166Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 5
+	"name": "slocation",
+	"description": "Reactive Svelte location store.",
+	"repo_url": "https://github.com/varbhat/slocation",
+	"authors": ["varbhat"],
+	"homepage": "https://github.com/varbhat/slocation#readme",
+	"downloads": 18,
+	"dependents": 0,
+	"updated": "2021-09-16T14:48:35.166Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 5,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	}
 }

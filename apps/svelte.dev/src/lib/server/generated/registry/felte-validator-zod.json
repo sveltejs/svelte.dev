@@ -1,18 +1,19 @@
 {
-  "name": "@felte/validator-zod",
-  "description": "Integrates Zod validation with Felte forms.",
-  "repo_url": "https://github.com/pablo-abc/felte",
-  "authors": [
-    "pberganza"
-  ],
-  "homepage": "https://github.com/pablo-abc/felte/tree/main/packages/validator-zod",
-  "downloads": 6621,
-  "dependents": 6,
-  "updated": "2024-10-29T22:05:33.472Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1045
+	"name": "@felte/validator-zod",
+	"description": "Integrates Zod validation with Felte forms.",
+	"repo_url": "https://github.com/pablo-abc/felte",
+	"authors": ["pberganza"],
+	"homepage": "https://github.com/pablo-abc/felte/tree/main/packages/validator-zod",
+	"downloads": 6621,
+	"dependents": 6,
+	"updated": "2024-10-29T22:05:33.472Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1046,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

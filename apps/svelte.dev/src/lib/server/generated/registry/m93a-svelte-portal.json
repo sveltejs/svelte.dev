@@ -1,17 +1,19 @@
 {
-  "name": "@m93a/svelte-portal",
-  "description": "Creates portals for rendering content outside Svelte components.",
-  "repo_url": "https://github.com/m93a/svelte-portal",
-  "authors": [
-    "c.sha"
-  ],
-  "downloads": 5,
-  "dependents": 0,
-  "updated": "2022-05-18T13:41:13.891Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@m93a/svelte-portal",
+	"description": "Creates portals for rendering content outside Svelte components.",
+	"repo_url": "https://github.com/m93a/svelte-portal",
+	"authors": ["c.sha"],
+	"downloads": 5,
+	"dependents": 0,
+	"updated": "2022-05-18T13:41:13.891Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"homepage": "https://svelte.dev/repl/407576d4fa984cfb97dcdd3da98e833e",
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

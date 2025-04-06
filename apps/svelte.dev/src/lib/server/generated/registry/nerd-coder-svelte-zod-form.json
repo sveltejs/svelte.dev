@@ -1,18 +1,19 @@
 {
-  "name": "@nerd-coder/svelte-zod-form",
-  "description": "Build forms with Zod validation in Svelte.",
-  "repo_url": "https://github.com/nerd-coder/svelte-zod-form",
-  "authors": [
-    "toanzzz"
-  ],
-  "homepage": "https://github.com/nerd-coder/svelte-zod-form#readme",
-  "downloads": 37,
-  "dependents": 0,
-  "updated": "2024-10-20T17:48:47.815Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 10
+	"name": "@nerd-coder/svelte-zod-form",
+	"description": "Build forms with Zod validation in Svelte.",
+	"repo_url": "https://github.com/nerd-coder/svelte-zod-form",
+	"authors": ["toanzzz"],
+	"homepage": "https://github.com/nerd-coder/svelte-zod-form#readme",
+	"downloads": 37,
+	"dependents": 0,
+	"updated": "2024-10-20T17:48:47.815Z",
+	"tags": ["miscellaneous"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 10,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": true
+	}
 }

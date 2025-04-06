@@ -1,18 +1,19 @@
 {
-  "name": "svelte-algolia-instantsearch",
-  "description": "Svelte wrapper for Algolia InstantSearch.",
-  "repo_url": "https://github.com/aymeric-giraudet/svelte-algolia-instantsearch",
-  "authors": [
-    "aymeric.giraudet"
-  ],
-  "homepage": "https://github.com/aymeric-giraudet/svelte-algolia-instantsearch#readme",
-  "downloads": 422,
-  "dependents": 0,
-  "updated": "2024-01-13T17:50:29.450Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 53
+	"name": "svelte-algolia-instantsearch",
+	"description": "Svelte wrapper for Algolia InstantSearch.",
+	"repo_url": "https://github.com/aymeric-giraudet/svelte-algolia-instantsearch",
+	"authors": ["aymeric.giraudet"],
+	"homepage": "https://github.com/aymeric-giraudet/svelte-algolia-instantsearch#readme",
+	"downloads": 422,
+	"dependents": 0,
+	"updated": "2024-01-13T17:50:29.450Z",
+	"tags": ["integration"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 53,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

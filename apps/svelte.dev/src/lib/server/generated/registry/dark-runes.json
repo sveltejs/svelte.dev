@@ -1,18 +1,19 @@
 {
-  "name": "dark-runes",
-  "description": "Adds runes for Svelte, including state and effect management.",
-  "repo_url": "https://github.com/flakolefluk/dark-runes",
-  "authors": [
-    "flakolefluk"
-  ],
-  "homepage": "https://github.com/flakolefluk/dark-runes#readme",
-  "downloads": 13,
-  "dependents": 0,
-  "updated": "2024-01-08T15:25:57.797Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 39
+	"name": "dark-runes",
+	"description": "Adds runes for Svelte, including state and effect management.",
+	"repo_url": "https://github.com/flakolefluk/dark-runes",
+	"authors": ["flakolefluk"],
+	"homepage": "https://github.com/flakolefluk/dark-runes#readme",
+	"downloads": 13,
+	"dependents": 0,
+	"updated": "2024-01-08T15:25:57.797Z",
+	"tags": ["miscellaneous"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 39,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

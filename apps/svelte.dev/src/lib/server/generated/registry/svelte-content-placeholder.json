@@ -1,18 +1,19 @@
 {
-  "name": "svelte-content-placeholder",
-  "description": "Replicate components with shadow versions while content is loading.",
-  "repo_url": "https://github.com/EstebanBorai/svelte-content-placeholder",
-  "authors": [
-    "estebanborai"
-  ],
-  "homepage": "https://github.com/EstebanBorai/svelte-content-placeholder#readme",
-  "downloads": 0,
-  "dependents": 0,
-  "updated": "2022-06-14T05:35:35.260Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "svelte-content-placeholder",
+	"description": "Replicate components with shadow versions while content is loading.",
+	"repo_url": "https://github.com/EstebanBorai/svelte-content-placeholder",
+	"authors": ["estebanborai"],
+	"homepage": "https://github.com/EstebanBorai/svelte-content-placeholder#readme",
+	"downloads": 0,
+	"dependents": 0,
+	"updated": "2022-06-14T05:35:35.260Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,16 +1,17 @@
 {
-  "name": "@efstajas/svelte-stepper",
-  "description": "Build animated stepped flows with Svelte.",
-  "repo_url": "",
-  "authors": [
-    "efstajas"
-  ],
-  "downloads": 43,
-  "dependents": 0,
-  "updated": "2024-12-10T10:19:53.469Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@efstajas/svelte-stepper",
+	"description": "Build animated stepped flows with Svelte.",
+	"repo_url": "",
+	"authors": ["efstajas"],
+	"downloads": 43,
+	"dependents": 0,
+	"updated": "2024-12-10T10:19:53.469Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

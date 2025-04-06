@@ -1,18 +1,19 @@
 {
-  "name": "svecial",
-  "description": "Create social buttons for Svelte apps, using Bulma and Font Awesome.",
-  "repo_url": "https://github.com/Olyno/svecial",
-  "authors": [
-    "olyno"
-  ],
-  "homepage": "https://github.com/Olyno/svecial#readme",
-  "downloads": 17,
-  "dependents": 0,
-  "updated": "2019-09-04T16:04:26.066Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 5
+	"name": "svecial",
+	"description": "Create social buttons for Svelte apps, using Bulma and Font Awesome.",
+	"repo_url": "https://github.com/Olyno/svecial",
+	"authors": ["olyno"],
+	"homepage": "https://github.com/Olyno/svecial#readme",
+	"downloads": 17,
+	"dependents": 0,
+	"updated": "2019-09-04T16:04:26.066Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 5,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

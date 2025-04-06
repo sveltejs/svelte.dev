@@ -1,18 +1,19 @@
 {
-  "name": "svelte-hotkey",
-  "description": "Create keyboard shortcut actions for Svelte 5.",
-  "repo_url": "https://github.com/akeylimepie/svelte-hotkey",
-  "authors": [
-    "akeylimepie"
-  ],
-  "homepage": "https://github.com/akeylimepie/svelte-hotkey#readme",
-  "downloads": 68,
-  "dependents": 0,
-  "updated": "2025-04-04T04:35:21.374Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelte-hotkey",
+	"description": "Create keyboard shortcut actions for Svelte 5.",
+	"repo_url": "https://github.com/akeylimepie/svelte-hotkey",
+	"authors": ["akeylimepie"],
+	"homepage": "https://github.com/akeylimepie/svelte-hotkey#readme",
+	"downloads": 68,
+	"dependents": 0,
+	"updated": "2025-04-04T04:35:21.374Z",
+	"tags": ["miscellaneous"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": true
+	}
 }

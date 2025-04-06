@@ -1,16 +1,17 @@
 {
-  "name": "@htmlbricks/streamingtablebootstrap-webcomponent",
-  "description": "Build streaming table components for Svelte applications.",
-  "repo_url": "",
-  "authors": [
-    "dariocaruso"
-  ],
-  "downloads": 137,
-  "dependents": 0,
-  "updated": "2022-01-02T19:14:37.860Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@htmlbricks/streamingtablebootstrap-webcomponent",
+	"description": "Build streaming table components for Svelte applications.",
+	"repo_url": "",
+	"authors": ["dariocaruso"],
+	"downloads": 137,
+	"dependents": 0,
+	"updated": "2022-01-02T19:14:37.860Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

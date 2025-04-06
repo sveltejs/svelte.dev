@@ -1,18 +1,19 @@
 {
-  "name": "svelte-toolbox",
-  "description": "Create UI components using Google's Material Design specification.",
-  "repo_url": "https://github.com/svelte-toolbox/svelte-toolbox",
-  "authors": [
-    "vehmloewff"
-  ],
-  "homepage": "https://svelte.dev/repl/5cf847108884453cbedd5920e919b630?version=3.6.5",
-  "downloads": 18,
-  "dependents": 0,
-  "updated": "2019-08-11T00:27:58.359Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 78
+	"name": "svelte-toolbox",
+	"description": "Create UI components using Google's Material Design specification.",
+	"repo_url": "https://github.com/svelte-toolbox/svelte-toolbox",
+	"authors": ["vehmloewff"],
+	"homepage": "https://svelte.dev/repl/5cf847108884453cbedd5920e919b630?version=3.6.5",
+	"downloads": 18,
+	"dependents": 0,
+	"updated": "2019-08-11T00:27:58.359Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 78,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

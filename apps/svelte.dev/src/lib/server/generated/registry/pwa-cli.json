@@ -1,17 +1,17 @@
 {
-  "name": "@pwa/cli",
-  "description": "CLI application for Progressive Web Apps.",
-  "repo_url": "",
-  "authors": [
-    "lukeed",
-    "ragingwind"
-  ],
-  "downloads": 74,
-  "dependents": 0,
-  "updated": "2020-04-16T19:10:28.055Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@pwa/cli",
+	"description": "CLI application for Progressive Web Apps.",
+	"repo_url": "",
+	"authors": ["lukeed", "ragingwind"],
+	"downloads": 74,
+	"dependents": 0,
+	"updated": "2020-04-16T19:10:28.055Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	}
 }

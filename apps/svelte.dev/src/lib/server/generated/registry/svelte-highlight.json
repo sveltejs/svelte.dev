@@ -1,18 +1,19 @@
 {
-  "name": "svelte-highlight",
-  "description": "Highlights code syntax using highlight.js in Svelte apps.",
-  "repo_url": "https://github.com/metonym/svelte-highlight",
-  "authors": [
-    "metonym"
-  ],
-  "homepage": "https://github.com/metonym/svelte-highlight",
-  "downloads": 19595,
-  "dependents": 24,
-  "updated": "2024-12-28T02:44:14.035Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 285
+	"name": "svelte-highlight",
+	"description": "Highlights code syntax using highlight.js in Svelte apps.",
+	"repo_url": "https://github.com/metonym/svelte-highlight",
+	"authors": ["metonym"],
+	"homepage": "https://github.com/metonym/svelte-highlight",
+	"downloads": 19595,
+	"dependents": 24,
+	"updated": "2024-12-28T02:44:14.035Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 285,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "svelte-parse-markup",
-  "description": "Parse Svelte markup without parsing script or style tags.",
-  "repo_url": "https://github.com/bluwy/svelte-parse-markup",
-  "authors": [
-    "bluwy"
-  ],
-  "homepage": "https://github.com/bluwy/svelte-parse-markup",
-  "downloads": 28212,
-  "dependents": 14,
-  "updated": "2024-06-04T07:17:52.754Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 7
+	"name": "svelte-parse-markup",
+	"description": "Parse Svelte markup without parsing script or style tags.",
+	"repo_url": "https://github.com/bluwy/svelte-parse-markup",
+	"authors": ["bluwy"],
+	"homepage": "https://github.com/bluwy/svelte-parse-markup",
+	"downloads": 28212,
+	"dependents": 14,
+	"updated": "2024-06-04T07:17:52.754Z",
+	"tags": ["tooling"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 7,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

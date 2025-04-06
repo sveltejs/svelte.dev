@@ -1,23 +1,19 @@
 {
-  "name": "@radiofrance/svelte-leaflet",
-  "description": "Svelte components wrapping Leaflet library.",
-  "repo_url": "https://github.com/radiofrance/svelte-leaflet",
-  "authors": [
-    "haklop",
-    "karacala",
-    "old_radiofrance_user",
-    "zckrs",
-    "tsatse",
-    "romaindurand"
-  ],
-  "homepage": "https://github.com/radiofrance/svelte-leaflet#readme",
-  "downloads": 30,
-  "dependents": 0,
-  "updated": "2024-09-05T10:11:34.317Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 2
+	"name": "@radiofrance/svelte-leaflet",
+	"description": "Svelte components wrapping Leaflet library.",
+	"repo_url": "https://github.com/radiofrance/svelte-leaflet",
+	"authors": ["haklop", "karacala", "old_radiofrance_user", "zckrs", "tsatse", "romaindurand"],
+	"homepage": "https://github.com/radiofrance/svelte-leaflet#readme",
+	"downloads": 30,
+	"dependents": 0,
+	"updated": "2024-09-05T10:11:34.317Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

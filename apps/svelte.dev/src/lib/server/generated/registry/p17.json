@@ -1,19 +1,19 @@
 {
-  "name": "p17",
-  "description": "Experiment with Svelte form behavior and user interaction.",
-  "repo_url": "https://github.com/PaulioRandall/p17",
-  "authors": [
-    "pauliorandall"
-  ],
-  "homepage": "https://github.com/PaulioRandall/p17#readme",
-  "downloads": 36,
-  "dependents": 0,
-  "updated": "2024-07-07T14:25:33.069Z",
-  "tags": [
-    "ui",
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "p17",
+	"description": "Experiment with Svelte form behavior and user interaction.",
+	"repo_url": "https://github.com/PaulioRandall/p17",
+	"authors": ["pauliorandall"],
+	"homepage": "https://github.com/PaulioRandall/p17#readme",
+	"downloads": 36,
+	"dependents": 0,
+	"updated": "2024-07-07T14:25:33.069Z",
+	"tags": ["ui", "miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

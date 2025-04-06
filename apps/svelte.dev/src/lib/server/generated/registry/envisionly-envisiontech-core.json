@@ -1,17 +1,18 @@
 {
-  "name": "@envisionly/envisiontech-core",
-  "description": "Build reusable Svelte components for Envisionly projects.",
-  "repo_url": "",
-  "authors": [
-    "paulgeoghegan"
-  ],
-  "homepage": "https://envisionly.tech",
-  "downloads": 56,
-  "dependents": 0,
-  "updated": "2025-03-27T17:14:29.629Z",
-  "tags": [
-    "design-system"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "@envisionly/envisiontech-core",
+	"description": "Build reusable Svelte components for Envisionly projects.",
+	"repo_url": "",
+	"authors": ["paulgeoghegan"],
+	"homepage": "https://envisionly.tech",
+	"downloads": 56,
+	"dependents": 0,
+	"updated": "2025-03-27T17:14:29.629Z",
+	"tags": ["design-system"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

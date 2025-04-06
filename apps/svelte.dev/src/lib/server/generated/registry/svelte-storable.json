@@ -1,18 +1,19 @@
 {
-  "name": "svelte-storable",
-  "description": "Extend Svelte's writable store with localStorage.",
-  "repo_url": "https://github.com/matssom/svelte-storable",
-  "authors": [
-    "matssom"
-  ],
-  "homepage": "https://github.com/matssom/amidst#readme",
-  "downloads": 11,
-  "dependents": 0,
-  "updated": "2020-11-17T14:11:41.332Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 3
+	"name": "svelte-storable",
+	"description": "Extend Svelte's writable store with localStorage.",
+	"repo_url": "https://github.com/matssom/svelte-storable",
+	"authors": ["matssom"],
+	"homepage": "https://github.com/matssom/amidst#readme",
+	"downloads": 11,
+	"dependents": 0,
+	"updated": "2020-11-17T14:11:41.332Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 3,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

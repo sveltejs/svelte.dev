@@ -1,18 +1,19 @@
 {
-  "name": "@aredridel/svelte-damped-store",
-  "description": "Create derived writable store that can suspend updates.",
-  "repo_url": "https://github.com/aredridel/svelte-damped-store",
-  "authors": [
-    "aredridel"
-  ],
-  "homepage": "https://github.com/aredridel/svelte-damped-store#readme",
-  "downloads": 10,
-  "dependents": 0,
-  "updated": "2022-05-15T19:27:58.801Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 6
+	"name": "@aredridel/svelte-damped-store",
+	"description": "Create derived writable store that can suspend updates.",
+	"repo_url": "https://github.com/aredridel/svelte-damped-store",
+	"authors": ["aredridel"],
+	"homepage": "https://github.com/aredridel/svelte-damped-store#readme",
+	"downloads": 10,
+	"dependents": 0,
+	"updated": "2022-05-15T19:27:58.801Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 6,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

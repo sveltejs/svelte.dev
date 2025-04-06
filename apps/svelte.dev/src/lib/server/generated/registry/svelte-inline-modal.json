@@ -1,18 +1,19 @@
 {
-  "name": "svelte-inline-modal",
-  "description": "Creates simple, inline modal components for Svelte.",
-  "repo_url": "https://github.com/jill64/svelte-inline-modal",
-  "authors": [
-    "jill64"
-  ],
-  "homepage": "https://github.com/jill64/svelte-inline-modal#readme",
-  "downloads": 5771,
-  "dependents": 1,
-  "updated": "2024-12-30T19:04:58.251Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 4
+	"name": "svelte-inline-modal",
+	"description": "Creates simple, inline modal components for Svelte.",
+	"repo_url": "https://github.com/jill64/svelte-inline-modal",
+	"authors": ["jill64"],
+	"homepage": "https://github.com/jill64/svelte-inline-modal#readme",
+	"downloads": 5771,
+	"dependents": 1,
+	"updated": "2024-12-30T19:04:58.251Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 4,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

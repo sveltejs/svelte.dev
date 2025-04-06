@@ -1,18 +1,19 @@
 {
-  "name": "@bitworks/svelte-split-text-animation",
-  "description": "Animate text split into characters, words, or lines.",
-  "repo_url": "https://github.com/pavlanovotna/svelte-split-type-animation",
-  "authors": [
-    "pavlanovotna"
-  ],
-  "homepage": "https://github.com/pavlanovotna/svelte-split-type-animation#readme",
-  "downloads": 1,
-  "dependents": 0,
-  "updated": "2023-07-11T10:20:21.993Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "@bitworks/svelte-split-text-animation",
+	"description": "Animate text split into characters, words, or lines.",
+	"repo_url": "https://github.com/pavlanovotna/svelte-split-type-animation",
+	"authors": ["pavlanovotna"],
+	"homepage": "https://github.com/pavlanovotna/svelte-split-type-animation#readme",
+	"downloads": 1,
+	"dependents": 0,
+	"updated": "2023-07-11T10:20:21.993Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

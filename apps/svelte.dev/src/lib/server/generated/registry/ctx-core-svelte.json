@@ -1,18 +1,19 @@
 {
-  "name": "@ctx-core/svelte",
-  "description": "Utility library for Svelte.",
-  "repo_url": "https://github.com/ctx-core/svelte",
-  "authors": [
-    "btakita"
-  ],
-  "homepage": "https://github.com/ctx-core/svelte#readme",
-  "downloads": 797,
-  "dependents": 8,
-  "updated": "2024-09-01T17:09:37.185Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 2
+	"name": "@ctx-core/svelte",
+	"description": "Utility library for Svelte.",
+	"repo_url": "https://github.com/ctx-core/svelte",
+	"authors": ["btakita"],
+	"homepage": "https://github.com/ctx-core/svelte#readme",
+	"downloads": 797,
+	"dependents": 8,
+	"updated": "2024-09-01T17:09:37.185Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "@typhonjs-fvtt/runtime",
-  "description": "Integrates runtime library for Foundry VTT & Svelte.",
-  "repo_url": "https://github.com/typhonjs-fvtt-lib/runtime",
-  "authors": [
-    "typhonrt"
-  ],
-  "homepage": "https://github.com/typhonjs-fvtt-lib/runtime#readme",
-  "downloads": 156,
-  "dependents": 0,
-  "updated": "2025-02-16T06:48:30.381Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 18
+	"name": "@typhonjs-fvtt/runtime",
+	"description": "Integrates runtime library for Foundry VTT & Svelte.",
+	"repo_url": "https://github.com/typhonjs-fvtt-lib/runtime",
+	"authors": ["typhonrt"],
+	"homepage": "https://github.com/typhonjs-fvtt-lib/runtime#readme",
+	"downloads": 156,
+	"dependents": 0,
+	"updated": "2025-02-16T06:48:30.381Z",
+	"tags": ["integration"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 18,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

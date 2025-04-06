@@ -1,18 +1,19 @@
 {
-  "name": "@keycloakify/svelte",
-  "description": "Provide Svelte components for Keycloakify integration.",
-  "repo_url": "https://github.com/keycloakify/keycloakify-svelte",
-  "authors": [
-    "garronej"
-  ],
-  "homepage": "https://www.keycloakify.dev",
-  "downloads": 96,
-  "dependents": 0,
-  "updated": "2025-03-14T07:06:47.557Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 4
+	"name": "@keycloakify/svelte",
+	"description": "Provide Svelte components for Keycloakify integration.",
+	"repo_url": "https://github.com/keycloakify/keycloakify-svelte",
+	"authors": ["garronej"],
+	"homepage": "https://www.keycloakify.dev",
+	"downloads": 96,
+	"dependents": 0,
+	"updated": "2025-03-14T07:06:47.557Z",
+	"tags": ["integration"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 4,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

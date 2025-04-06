@@ -1,18 +1,19 @@
 {
-  "name": "svelte-sidebar-panels",
-  "description": "Create sidebar navigation menu component for Svelte.",
-  "repo_url": "https://github.com/saibotsivad/svelte-sidebar-panels",
-  "authors": [
-    "saibotsivad"
-  ],
-  "homepage": "https://github.com/saibotsivad/svelte-sidebar-panels#readme",
-  "downloads": 58,
-  "dependents": 0,
-  "updated": "2023-02-20T22:26:20.943Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 6
+	"name": "svelte-sidebar-panels",
+	"description": "Create sidebar navigation menu component for Svelte.",
+	"repo_url": "https://github.com/saibotsivad/svelte-sidebar-panels",
+	"authors": ["saibotsivad"],
+	"homepage": "https://github.com/saibotsivad/svelte-sidebar-panels#readme",
+	"downloads": 58,
+	"dependents": 0,
+	"updated": "2023-02-20T22:26:20.943Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 6,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

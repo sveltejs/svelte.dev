@@ -1,16 +1,17 @@
 {
-  "name": "@htmlbricks/hb-messages-topics-card",
-  "description": "Provide Svelte-Bootstrap messages-topics-card web component.",
-  "repo_url": "",
-  "authors": [
-    "dariocaruso"
-  ],
-  "downloads": 96,
-  "dependents": 0,
-  "updated": "2025-03-24T18:07:17.596Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@htmlbricks/hb-messages-topics-card",
+	"description": "Provide Svelte-Bootstrap messages-topics-card web component.",
+	"repo_url": "",
+	"authors": ["dariocaruso"],
+	"downloads": 96,
+	"dependents": 0,
+	"updated": "2025-03-24T18:07:17.596Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

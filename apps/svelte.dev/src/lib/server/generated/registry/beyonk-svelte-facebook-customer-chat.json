@@ -1,21 +1,17 @@
 {
-  "name": "@beyonk/svelte-facebook-customer-chat",
-  "description": "Integrate Facebook Customer Chat in Svelte apps.",
-  "repo_url": "",
-  "authors": [
-    "antony",
-    "adampond",
-    "alex.dilley",
-    "jedwoodcock",
-    "leandro.silva",
-    "tomlewis0"
-  ],
-  "downloads": 3,
-  "dependents": 0,
-  "updated": "2019-05-25T17:04:33.458Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@beyonk/svelte-facebook-customer-chat",
+	"description": "Integrate Facebook Customer Chat in Svelte apps.",
+	"repo_url": "",
+	"authors": ["antony", "adampond", "alex.dilley", "jedwoodcock", "leandro.silva", "tomlewis0"],
+	"downloads": 3,
+	"dependents": 0,
+	"updated": "2019-05-25T17:04:33.458Z",
+	"tags": ["integration"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,16 +1,17 @@
 {
-  "name": "svelte-g2plot-pie",
-  "description": "Create pie charts using G2Plot for Svelte applications.",
-  "repo_url": "",
-  "authors": [
-    "gonwe"
-  ],
-  "downloads": 3,
-  "dependents": 0,
-  "updated": "2023-02-14T08:43:32.172Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-g2plot-pie",
+	"description": "Create pie charts using G2Plot for Svelte applications.",
+	"repo_url": "",
+	"authors": ["gonwe"],
+	"downloads": 3,
+	"dependents": 0,
+	"updated": "2023-02-14T08:43:32.172Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

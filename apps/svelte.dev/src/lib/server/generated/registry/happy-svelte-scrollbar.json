@@ -1,18 +1,19 @@
 {
-  "name": "happy-svelte-scrollbar",
-  "description": "Create custom scrollbar components for Svelte applications.",
-  "repo_url": "https://github.com/happy-inc-tech/happy-svelte-scrollbar",
-  "authors": [
-    "happy-inc"
-  ],
-  "homepage": "https://github.com/happy-inc-tech/happy-svelte-scrollbar#readme",
-  "downloads": 11,
-  "dependents": 0,
-  "updated": "2020-12-15T13:24:34.841Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 6
+	"name": "happy-svelte-scrollbar",
+	"description": "Create custom scrollbar components for Svelte applications.",
+	"repo_url": "https://github.com/happy-inc-tech/happy-svelte-scrollbar",
+	"authors": ["happy-inc"],
+	"homepage": "https://github.com/happy-inc-tech/happy-svelte-scrollbar#readme",
+	"downloads": 11,
+	"dependents": 0,
+	"updated": "2020-12-15T13:24:34.841Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 6,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

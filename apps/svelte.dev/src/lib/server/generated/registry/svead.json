@@ -1,18 +1,19 @@
 {
-  "name": "svead",
-  "description": "Svelte component for managing meta tags and SEO.",
-  "repo_url": "https://github.com/spences10/svead",
-  "authors": [
-    "spences10"
-  ],
-  "homepage": "https://github.com/spences10/svead#readme",
-  "downloads": 827,
-  "dependents": 0,
-  "updated": "2024-10-21T08:33:56.452Z",
-  "tags": [
-    "seo"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 75
+	"name": "svead",
+	"description": "Svelte component for managing meta tags and SEO.",
+	"repo_url": "https://github.com/spences10/svead",
+	"authors": ["spences10"],
+	"homepage": "https://github.com/spences10/svead#readme",
+	"downloads": 827,
+	"dependents": 0,
+	"updated": "2024-10-21T08:33:56.452Z",
+	"tags": ["seo"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 75,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": true
+	}
 }

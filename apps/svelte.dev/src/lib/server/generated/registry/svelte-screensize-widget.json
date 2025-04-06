@@ -1,18 +1,19 @@
 {
-  "name": "svelte-screensize-widget",
-  "description": "Display screen size breakpoints during Svelte development.",
-  "repo_url": "https://github.com/Be1zebub/svelte-screensize-widget",
-  "authors": [
-    "gmod.one"
-  ],
-  "homepage": "https://github.com/Be1zebub/svelte-screensize-widget#readme",
-  "downloads": 198,
-  "dependents": 0,
-  "updated": "2025-03-31T12:47:39.670Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 3
+	"name": "svelte-screensize-widget",
+	"description": "Display screen size breakpoints during Svelte development.",
+	"repo_url": "https://github.com/Be1zebub/svelte-screensize-widget",
+	"authors": ["gmod.one"],
+	"homepage": "https://github.com/Be1zebub/svelte-screensize-widget#readme",
+	"downloads": 198,
+	"dependents": 0,
+	"updated": "2025-03-31T12:47:39.670Z",
+	"tags": ["tooling"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 3,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": true
+	}
 }

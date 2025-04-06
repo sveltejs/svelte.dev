@@ -1,18 +1,19 @@
 {
-  "name": "@jill64/svelte-dark-theme",
-  "description": "Manage dark theme in SvelteKit applications.",
-  "repo_url": "https://github.com/jill64/svelte-dark-theme",
-  "authors": [
-    "jill64"
-  ],
-  "homepage": "https://github.com/jill64/svelte-dark-theme#readme",
-  "downloads": 13405,
-  "dependents": 2,
-  "updated": "2025-03-15T03:10:26.142Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 3
+	"name": "@jill64/svelte-dark-theme",
+	"description": "Manage dark theme in SvelteKit applications.",
+	"repo_url": "https://github.com/jill64/svelte-dark-theme",
+	"authors": ["jill64"],
+	"homepage": "https://github.com/jill64/svelte-dark-theme#readme",
+	"downloads": 13405,
+	"dependents": 2,
+	"updated": "2025-03-15T03:10:26.142Z",
+	"tags": ["miscellaneous"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 3,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

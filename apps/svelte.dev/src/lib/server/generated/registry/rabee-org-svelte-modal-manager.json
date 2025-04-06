@@ -1,24 +1,26 @@
 {
-  "name": "@rabee-org/svelte-modal-manager",
-  "description": "Manage modals in Svelte applications.",
-  "repo_url": "",
-  "authors": [
-    "horietty",
-    "tata_jp",
-    "ooharamasaki",
-    "suico",
-    "juth5",
-    "mtnn_rabee",
-    "simiraaaa",
-    "phi"
-  ],
-  "downloads": 29,
-  "dependents": 1,
-  "updated": "2023-06-12T07:17:23.796Z",
-  "tags": [
-    "ui",
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@rabee-org/svelte-modal-manager",
+	"description": "Manage modals in Svelte applications.",
+	"repo_url": "",
+	"authors": [
+		"horietty",
+		"tata_jp",
+		"ooharamasaki",
+		"suico",
+		"juth5",
+		"mtnn_rabee",
+		"simiraaaa",
+		"phi"
+	],
+	"downloads": 29,
+	"dependents": 1,
+	"updated": "2023-06-12T07:17:23.796Z",
+	"tags": ["ui", "miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

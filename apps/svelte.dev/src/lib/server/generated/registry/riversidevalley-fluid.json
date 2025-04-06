@@ -1,19 +1,19 @@
 {
-  "name": "@riversidevalley/fluid",
-  "description": "Provides UI framework based on Microsoft Fluent UI for Svelte.",
-  "repo_url": "https://github.com/RiversideValley/Fluid.Framework",
-  "authors": [
-    "lamparter"
-  ],
-  "homepage": "https://github.com/RiversideValley/Fluid.Framework",
-  "downloads": 3,
-  "dependents": 0,
-  "updated": "2024-02-17T15:22:43.025Z",
-  "tags": [
-    "design-system",
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 2
+	"name": "@riversidevalley/fluid",
+	"description": "Provides UI framework based on Microsoft Fluent UI for Svelte.",
+	"repo_url": "https://github.com/RiversideValley/Fluid.Framework",
+	"authors": ["lamparter"],
+	"homepage": "https://github.com/RiversideValley/Fluid.Framework",
+	"downloads": 3,
+	"dependents": 0,
+	"updated": "2024-02-17T15:22:43.025Z",
+	"tags": ["design-system", "ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

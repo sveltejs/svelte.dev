@@ -1,18 +1,19 @@
 {
-  "name": "@sorens/artist-svelte",
-  "description": "Provides opinionated UI framework for SvelteKit.",
-  "repo_url": "https://github.com/sorenabedi/artist-svelte",
-  "authors": [
-    "sorenabedi"
-  ],
-  "homepage": "https://artist-ui.pages.dev",
-  "downloads": 449,
-  "dependents": 0,
-  "updated": "2021-11-21T14:06:50.947Z",
-  "tags": [
-    "design-system"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 4
+	"name": "@sorens/artist-svelte",
+	"description": "Provides opinionated UI framework for SvelteKit.",
+	"repo_url": "https://github.com/sorenabedi/artist-svelte",
+	"authors": ["sorenabedi"],
+	"homepage": "https://artist-ui.pages.dev",
+	"downloads": 449,
+	"dependents": 0,
+	"updated": "2021-11-21T14:06:50.947Z",
+	"tags": ["design-system"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 4,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

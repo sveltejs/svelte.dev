@@ -1,32 +1,36 @@
 {
-  "name": "@square/svelte-store",
-  "description": "Extend Svelte stores for asynchronous behavior.",
-  "repo_url": "https://github.com/square/svelte-store",
-  "authors": [
-    "devonsquare",
-    "plinio-square",
-    "artemchubaryan",
-    "akolyte01",
-    "amoghk",
-    "jguze-sq",
-    "joanc",
-    "square-owner",
-    "adrw",
-    "square-developers",
-    "matahwoosh",
-    "hirokiosame",
-    "dpapastrat",
-    "linnea",
-    "pretzelhammer",
-    "alexandersmanning"
-  ],
-  "downloads": 6404,
-  "dependents": 1,
-  "updated": "2024-02-21T15:08:52.067Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 529
+	"name": "@square/svelte-store",
+	"description": "Extend Svelte stores for asynchronous behavior.",
+	"repo_url": "https://github.com/square/svelte-store",
+	"authors": [
+		"devonsquare",
+		"plinio-square",
+		"artemchubaryan",
+		"akolyte01",
+		"amoghk",
+		"jguze-sq",
+		"joanc",
+		"square-owner",
+		"adrw",
+		"square-developers",
+		"matahwoosh",
+		"hirokiosame",
+		"dpapastrat",
+		"linnea",
+		"pretzelhammer",
+		"alexandersmanning"
+	],
+	"downloads": 6404,
+	"dependents": 1,
+	"updated": "2024-02-21T15:08:52.067Z",
+	"tags": ["miscellaneous"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 529,
+	"homepage": null,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

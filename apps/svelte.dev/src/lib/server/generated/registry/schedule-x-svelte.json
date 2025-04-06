@@ -1,16 +1,17 @@
 {
-  "name": "@schedule-x/svelte",
-  "description": "Provides Svelte component for Schedule-X calendar.",
-  "repo_url": "",
-  "authors": [
-    "tomosterlund"
-  ],
-  "downloads": 358,
-  "dependents": 0,
-  "updated": "2025-03-25T06:04:26.620Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "@schedule-x/svelte",
+	"description": "Provides Svelte component for Schedule-X calendar.",
+	"repo_url": "",
+	"authors": ["tomosterlund"],
+	"downloads": 358,
+	"dependents": 0,
+	"updated": "2025-03-25T06:04:26.620Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": true
+	}
 }

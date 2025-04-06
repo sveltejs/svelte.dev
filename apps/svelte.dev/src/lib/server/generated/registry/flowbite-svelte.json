@@ -1,21 +1,19 @@
 {
-  "name": "flowbite-svelte",
-  "description": "Build UI with Flowbite components for Svelte.",
-  "repo_url": "https://github.com/themesberg/flowbite-svelte",
-  "authors": [
-    "jjagielka",
-    "zoliszogyenyi",
-    "shinichiokada"
-  ],
-  "homepage": "https://flowbite-svelte.com/",
-  "downloads": 53854,
-  "dependents": 44,
-  "updated": "2025-02-24T16:22:35.419Z",
-  "tags": [
-    "ui",
-    "design-system"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 2428
+	"name": "flowbite-svelte",
+	"description": "Build UI with Flowbite components for Svelte.",
+	"repo_url": "https://github.com/themesberg/flowbite-svelte",
+	"authors": ["jjagielka", "zoliszogyenyi", "shinichiokada"],
+	"homepage": "https://flowbite-svelte.com/",
+	"downloads": 53854,
+	"dependents": 44,
+	"updated": "2025-02-24T16:22:35.419Z",
+	"tags": ["ui", "design-system"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 2430,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

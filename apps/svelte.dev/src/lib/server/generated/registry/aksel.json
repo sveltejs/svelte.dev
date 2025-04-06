@@ -1,17 +1,18 @@
 {
-  "name": "aksel",
-  "description": "Add Aksel the seagull to your Svelte site.",
-  "repo_url": "",
-  "authors": [
-    "mallsoft"
-  ],
-  "homepage": "https://github.com/mallsoft/aksel#readme",
-  "downloads": 6,
-  "dependents": 0,
-  "updated": "2023-03-21T21:35:01.634Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "aksel",
+	"description": "Add Aksel the seagull to your Svelte site.",
+	"repo_url": "",
+	"authors": ["mallsoft"],
+	"homepage": "https://github.com/mallsoft/aksel#readme",
+	"downloads": 6,
+	"dependents": 0,
+	"updated": "2023-03-21T21:35:01.634Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

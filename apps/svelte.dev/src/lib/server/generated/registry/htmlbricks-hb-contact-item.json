@@ -1,16 +1,17 @@
 {
-  "name": "@htmlbricks/hb-contact-item",
-  "description": "Create Svelte Contact WebComponent.",
-  "repo_url": "",
-  "authors": [
-    "dariocaruso"
-  ],
-  "downloads": 482,
-  "dependents": 3,
-  "updated": "2025-03-24T18:07:11.992Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@htmlbricks/hb-contact-item",
+	"description": "Create Svelte Contact WebComponent.",
+	"repo_url": "",
+	"authors": ["dariocaruso"],
+	"downloads": 482,
+	"dependents": 3,
+	"updated": "2025-03-24T18:07:11.992Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

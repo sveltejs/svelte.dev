@@ -1,18 +1,19 @@
 {
-  "name": "jhipster-svelte-library",
-  "description": "Provide Svelte components for JHipster generated projects.",
-  "repo_url": "https://github.com/vishal423/jhipster-svelte-library",
-  "authors": [
-    "vishal423"
-  ],
-  "homepage": "https://github.com/vishal423/jhipster-svelte-library",
-  "downloads": 84,
-  "dependents": 0,
-  "updated": "2024-10-06T08:56:16.491Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 3
+	"name": "jhipster-svelte-library",
+	"description": "Provide Svelte components for JHipster generated projects.",
+	"repo_url": "https://github.com/vishal423/jhipster-svelte-library",
+	"authors": ["vishal423"],
+	"homepage": "https://github.com/vishal423/jhipster-svelte-library",
+	"downloads": 84,
+	"dependents": 0,
+	"updated": "2024-10-06T08:56:16.491Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 3,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

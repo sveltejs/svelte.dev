@@ -1,17 +1,18 @@
 {
-  "name": "floeui",
-  "description": "Extend DaisyUI with UnoCSS for Svelte applications.",
-  "repo_url": "",
-  "authors": [
-    "pondra"
-  ],
-  "homepage": "https://github.com/pondrax/floeui#readme",
-  "downloads": 35,
-  "dependents": 0,
-  "updated": "2024-09-27T06:28:27.537Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "floeui",
+	"description": "Extend DaisyUI with UnoCSS for Svelte applications.",
+	"repo_url": "",
+	"authors": ["pondra"],
+	"homepage": "https://github.com/pondrax/floeui#readme",
+	"downloads": 35,
+	"dependents": 0,
+	"updated": "2024-09-27T06:28:27.537Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

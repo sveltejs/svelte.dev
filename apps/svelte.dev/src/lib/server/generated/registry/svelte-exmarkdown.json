@@ -1,18 +1,19 @@
 {
-  "name": "svelte-exmarkdown",
-  "description": "Renders markdown content in Svelte applications.",
-  "repo_url": "https://github.com/ssssota/svelte-exmarkdown",
-  "authors": [
-    "ssssota"
-  ],
-  "homepage": "https://ssssota.github.io/svelte-exmarkdown",
-  "downloads": 7000,
-  "dependents": 5,
-  "updated": "2025-03-27T15:17:12.597Z",
-  "tags": [
-    "content"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 255
+	"name": "svelte-exmarkdown",
+	"description": "Renders markdown content in Svelte applications.",
+	"repo_url": "https://github.com/ssssota/svelte-exmarkdown",
+	"authors": ["ssssota"],
+	"homepage": "https://ssssota.github.io/svelte-exmarkdown",
+	"downloads": 7000,
+	"dependents": 5,
+	"updated": "2025-03-27T15:17:12.597Z",
+	"tags": ["content"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 255,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

@@ -1,19 +1,19 @@
 {
-  "name": "@beyowi/svelte-recaptcha-v2",
-  "description": "Integrate Google reCAPTCHA v2 into Svelte and SvelteKit apps.",
-  "repo_url": "https://github.com/beyowi/svelte-recaptcha-v2",
-  "authors": [
-    "cedricbyw",
-    "pascalbyw"
-  ],
-  "homepage": "https://github.com/beyowi/svelte-recaptcha-v2#readme",
-  "downloads": 12,
-  "dependents": 0,
-  "updated": "2022-09-21T21:30:42.755Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@beyowi/svelte-recaptcha-v2",
+	"description": "Integrate Google reCAPTCHA v2 into Svelte and SvelteKit apps.",
+	"repo_url": "https://github.com/beyowi/svelte-recaptcha-v2",
+	"authors": ["cedricbyw", "pascalbyw"],
+	"homepage": "https://github.com/beyowi/svelte-recaptcha-v2#readme",
+	"downloads": 12,
+	"dependents": 0,
+	"updated": "2022-09-21T21:30:42.755Z",
+	"tags": ["integration"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

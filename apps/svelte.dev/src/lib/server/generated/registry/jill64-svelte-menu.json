@@ -1,18 +1,19 @@
 {
-  "name": "@jill64/svelte-menu",
-  "description": "Create functional menu components for Svelte.",
-  "repo_url": "https://github.com/jill64/svelte-menu",
-  "authors": [
-    "jill64"
-  ],
-  "homepage": "https://github.com/jill64/svelte-menu#readme",
-  "downloads": 14507,
-  "dependents": 3,
-  "updated": "2025-03-13T02:30:03.254Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 1
+	"name": "@jill64/svelte-menu",
+	"description": "Create functional menu components for Svelte.",
+	"repo_url": "https://github.com/jill64/svelte-menu",
+	"authors": ["jill64"],
+	"homepage": "https://github.com/jill64/svelte-menu#readme",
+	"downloads": 14507,
+	"dependents": 3,
+	"updated": "2025-03-13T02:30:03.254Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

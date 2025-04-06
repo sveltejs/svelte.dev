@@ -1,18 +1,19 @@
 {
-  "name": "svelte-loader-hot",
-  "description": "Adds HMR support to Svelte Webpack loader.",
-  "repo_url": "https://github.com/rixo/svelte-loader-hot",
-  "authors": [
-    "rixo"
-  ],
-  "homepage": "https://github.com/rixo/svelte-loader-hot",
-  "downloads": 220,
-  "dependents": 2,
-  "updated": "2020-08-24T19:37:40.168Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 22
+	"name": "svelte-loader-hot",
+	"description": "Adds HMR support to Svelte Webpack loader.",
+	"repo_url": "https://github.com/rixo/svelte-loader-hot",
+	"authors": ["rixo"],
+	"homepage": "https://github.com/rixo/svelte-loader-hot",
+	"downloads": 220,
+	"dependents": 2,
+	"updated": "2020-08-24T19:37:40.168Z",
+	"tags": ["tooling"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 22,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

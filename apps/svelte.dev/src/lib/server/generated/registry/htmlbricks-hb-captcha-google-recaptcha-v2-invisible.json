@@ -1,16 +1,17 @@
 {
-  "name": "@htmlbricks/hb-captcha-google-recaptcha-v2-invisible",
-  "description": "Svelte-Bootstrap Checkbox Input WebComponent.",
-  "repo_url": "",
-  "authors": [
-    "dariocaruso"
-  ],
-  "downloads": 267,
-  "dependents": 0,
-  "updated": "2025-03-24T18:07:12.040Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@htmlbricks/hb-captcha-google-recaptcha-v2-invisible",
+	"description": "Svelte-Bootstrap Checkbox Input WebComponent.",
+	"repo_url": "",
+	"authors": ["dariocaruso"],
+	"downloads": 267,
+	"dependents": 0,
+	"updated": "2025-03-24T18:07:12.040Z",
+	"tags": ["integration"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

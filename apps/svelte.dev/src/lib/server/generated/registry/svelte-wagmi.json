@@ -1,19 +1,19 @@
 {
-  "name": "svelte-wagmi",
-  "description": "Integrate Wagmi for Ethereum interactions in Svelte apps.",
-  "repo_url": "https://github.com/softwarecurator/svelte-wagmi",
-  "authors": [
-    "softwarecurator"
-  ],
-  "homepage": "https://github.com/softwarecurator/svelte-wagmi#readme",
-  "downloads": 53,
-  "dependents": 0,
-  "updated": "2024-06-13T18:37:45.508Z",
-  "tags": [
-    "integration",
-    "auth"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 74
+	"name": "svelte-wagmi",
+	"description": "Integrate Wagmi for Ethereum interactions in Svelte apps.",
+	"repo_url": "https://github.com/softwarecurator/svelte-wagmi",
+	"authors": ["softwarecurator"],
+	"homepage": "https://github.com/softwarecurator/svelte-wagmi#readme",
+	"downloads": 53,
+	"dependents": 0,
+	"updated": "2024-06-13T18:37:45.508Z",
+	"tags": ["integration", "auth"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 74,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": true
+	}
 }

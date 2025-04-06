@@ -1,18 +1,19 @@
 {
-  "name": "@tb-dev/eslint-config",
-  "description": "Provide ESLint configuration for Svelte projects.",
-  "repo_url": "https://github.com/ferreira-tb/eslint-config",
-  "authors": [
-    "ferreira-tb"
-  ],
-  "homepage": "https://github.com/ferreira-tb/eslint-config",
-  "downloads": 429,
-  "dependents": 0,
-  "updated": "2025-03-27T21:11:37.359Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 1
+	"name": "@tb-dev/eslint-config",
+	"description": "Provide ESLint configuration for Svelte projects.",
+	"repo_url": "https://github.com/ferreira-tb/eslint-config",
+	"authors": ["ferreira-tb"],
+	"homepage": "https://github.com/ferreira-tb/eslint-config",
+	"downloads": 429,
+	"dependents": 0,
+	"updated": "2025-03-27T21:11:37.359Z",
+	"tags": ["tooling"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

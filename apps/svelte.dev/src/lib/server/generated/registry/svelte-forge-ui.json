@@ -1,18 +1,19 @@
 {
-  "name": "svelte-forge-ui",
-  "description": "Provides lightweight, flexible UI components for Svelte applications.",
-  "repo_url": "https://github.com/jorgeluis2000/svelte-forge-ui",
-  "authors": [
-    "jorgeluis2000"
-  ],
-  "homepage": "https://github.com/jorgeluis2000/svelte-forge-ui",
-  "downloads": 0,
-  "dependents": 0,
-  "updated": "2024-05-23T13:10:34.130Z",
-  "tags": [
-    "design-system"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelte-forge-ui",
+	"description": "Provides lightweight, flexible UI components for Svelte applications.",
+	"repo_url": "https://github.com/jorgeluis2000/svelte-forge-ui",
+	"authors": ["jorgeluis2000"],
+	"homepage": "https://github.com/jorgeluis2000/svelte-forge-ui",
+	"downloads": 0,
+	"dependents": 0,
+	"updated": "2024-05-23T13:10:34.130Z",
+	"tags": ["design-system"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

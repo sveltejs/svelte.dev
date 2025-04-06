@@ -1,18 +1,19 @@
 {
-  "name": "@biggiepete/svelte-editorjs",
-  "description": "Wrap EditorJS for use in Svelte applications.",
-  "repo_url": "https://github.com/BiggiePete/svelte-editorjs",
-  "authors": [
-    "0xhelp"
-  ],
-  "homepage": "https://github.com/BiggiePete/svelte-editorjs",
-  "downloads": 1,
-  "dependents": 0,
-  "updated": "2024-02-18T02:02:16.832Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@biggiepete/svelte-editorjs",
+	"description": "Wrap EditorJS for use in Svelte applications.",
+	"repo_url": "https://github.com/BiggiePete/svelte-editorjs",
+	"authors": ["0xhelp"],
+	"homepage": "https://github.com/BiggiePete/svelte-editorjs",
+	"downloads": 1,
+	"dependents": 0,
+	"updated": "2024-02-18T02:02:16.832Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

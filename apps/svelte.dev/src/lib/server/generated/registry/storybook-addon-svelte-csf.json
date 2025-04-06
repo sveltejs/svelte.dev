@@ -1,29 +1,32 @@
 {
-  "name": "@storybook/addon-svelte-csf",
-  "description": "Write stories in Svelte syntax for Storybook.",
-  "repo_url": "https://github.com/storybookjs/addon-svelte-csf",
-  "authors": [
-    "ndelangen",
-    "shilman",
-    "tmeasday",
-    "ghengeveld",
-    "winkervsbecks",
-    "yannbf",
-    "kylegach",
-    "jreinhold",
-    "kasperpeulen",
-    "valentinpalkovic",
-    "domyen",
-    "storybook-bot"
-  ],
-  "homepage": "https://github.com/storybookjs/addon-svelte-csf#readme",
-  "downloads": 59064,
-  "dependents": 15,
-  "updated": "2024-11-28T09:20:51.195Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 129
+	"name": "@storybook/addon-svelte-csf",
+	"description": "Write stories in Svelte syntax for Storybook.",
+	"repo_url": "https://github.com/storybookjs/addon-svelte-csf",
+	"authors": [
+		"ndelangen",
+		"shilman",
+		"tmeasday",
+		"ghengeveld",
+		"winkervsbecks",
+		"yannbf",
+		"kylegach",
+		"jreinhold",
+		"kasperpeulen",
+		"valentinpalkovic",
+		"domyen",
+		"storybook-bot"
+	],
+	"homepage": "https://github.com/storybookjs/addon-svelte-csf#readme",
+	"downloads": 59064,
+	"dependents": 15,
+	"updated": "2024-11-28T09:20:51.195Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 129,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

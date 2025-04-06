@@ -1,18 +1,19 @@
 {
-  "name": "@feelinglovelynow/slug",
-  "description": "Generate URL slugs, includes Svelte component for browser use.",
-  "repo_url": "https://github.com/feelinglovelynow/slug",
-  "authors": [
-    "feelinglovelynow"
-  ],
-  "homepage": "https://github.com/feelinglovelynow/slug#readme",
-  "downloads": 7,
-  "dependents": 0,
-  "updated": "2023-12-17T21:50:20.076Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@feelinglovelynow/slug",
+	"description": "Generate URL slugs, includes Svelte component for browser use.",
+	"repo_url": "https://github.com/feelinglovelynow/slug",
+	"authors": ["feelinglovelynow"],
+	"homepage": "https://github.com/feelinglovelynow/slug#readme",
+	"downloads": 7,
+	"dependents": 0,
+	"updated": "2023-12-17T21:50:20.076Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

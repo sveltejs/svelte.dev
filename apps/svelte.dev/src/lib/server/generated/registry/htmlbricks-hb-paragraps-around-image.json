@@ -1,16 +1,17 @@
 {
-  "name": "@htmlbricks/hb-paragraps-around-image",
-  "description": "Provides paragraphs around image web components for Svelte.",
-  "repo_url": "",
-  "authors": [
-    "dariocaruso"
-  ],
-  "downloads": 252,
-  "dependents": 0,
-  "updated": "2025-03-24T18:07:18.526Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@htmlbricks/hb-paragraps-around-image",
+	"description": "Provides paragraphs around image web components for Svelte.",
+	"repo_url": "",
+	"authors": ["dariocaruso"],
+	"downloads": 252,
+	"dependents": 0,
+	"updated": "2025-03-24T18:07:18.526Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

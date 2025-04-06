@@ -1,18 +1,19 @@
 {
-  "name": "svelte-indeterminate-checkbox",
-  "description": "Adds indeterminate state support to Svelte checkboxes.",
-  "repo_url": "https://github.com/zerok84/svelte-indeterminate-checkbox",
-  "authors": [
-    "zerok84"
-  ],
-  "homepage": "https://github.com/zerok84/svelte-indeterminate-checkbox#readme",
-  "downloads": 11,
-  "dependents": 0,
-  "updated": "2022-07-17T15:13:19.384Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 3
+	"name": "svelte-indeterminate-checkbox",
+	"description": "Adds indeterminate state support to Svelte checkboxes.",
+	"repo_url": "https://github.com/zerok84/svelte-indeterminate-checkbox",
+	"authors": ["zerok84"],
+	"homepage": "https://github.com/zerok84/svelte-indeterminate-checkbox#readme",
+	"downloads": 11,
+	"dependents": 0,
+	"updated": "2022-07-17T15:13:19.384Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 3,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

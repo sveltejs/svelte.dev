@@ -1,18 +1,19 @@
 {
-  "name": "estiusto",
-  "description": "Integrate web3.js stores for Svelte, Sapper, or SvelteKit.",
-  "repo_url": "https://github.com/NewellLeannon/estiusto",
-  "authors": [
-    "jaclynwaters"
-  ],
-  "homepage": "https://github.com/NewellLeannon/estiusto#readme",
-  "downloads": 5,
-  "dependents": 0,
-  "updated": "2024-04-01T23:46:55.285Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "estiusto",
+	"description": "Integrate web3.js stores for Svelte, Sapper, or SvelteKit.",
+	"repo_url": "https://github.com/NewellLeannon/estiusto",
+	"authors": ["jaclynwaters"],
+	"homepage": "https://github.com/NewellLeannon/estiusto#readme",
+	"downloads": 5,
+	"dependents": 0,
+	"updated": "2024-04-01T23:46:55.285Z",
+	"tags": ["integration"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

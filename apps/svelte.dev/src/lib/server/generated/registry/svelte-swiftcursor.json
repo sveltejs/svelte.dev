@@ -1,18 +1,19 @@
 {
-  "name": "svelte-swiftcursor",
-  "description": "Create customizable cursor components for Svelte applications.",
-  "repo_url": "https://github.com/eagleyeee/svelte-swiftcursor",
-  "authors": [
-    "eagleyeee"
-  ],
-  "homepage": "https://svelte-swiftcursor.vercel.app/",
-  "downloads": 0,
-  "dependents": 0,
-  "updated": "2024-12-23T12:56:18.357Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelte-swiftcursor",
+	"description": "Create customizable cursor components for Svelte applications.",
+	"repo_url": "https://github.com/eagleyeee/svelte-swiftcursor",
+	"authors": ["eagleyeee"],
+	"homepage": "https://svelte-swiftcursor.vercel.app/",
+	"downloads": 0,
+	"dependents": 0,
+	"updated": "2024-12-23T12:56:18.357Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

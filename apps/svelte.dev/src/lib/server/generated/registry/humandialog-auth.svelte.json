@@ -1,18 +1,19 @@
 {
-  "name": "@humandialog/auth.svelte",
-  "description": "Support ObjectReef Identity Provider in Svelte apps.",
-  "repo_url": "https://github.com/HumanDialog/auth.svelte",
-  "authors": [
-    "humandialog"
-  ],
-  "homepage": "https://github.com/HumanDialog/auth.svelte#readme",
-  "downloads": 118,
-  "dependents": 1,
-  "updated": "2025-03-18T09:14:57.585Z",
-  "tags": [
-    "auth"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@humandialog/auth.svelte",
+	"description": "Support ObjectReef Identity Provider in Svelte apps.",
+	"repo_url": "https://github.com/HumanDialog/auth.svelte",
+	"authors": ["humandialog"],
+	"homepage": "https://github.com/HumanDialog/auth.svelte#readme",
+	"downloads": 118,
+	"dependents": 1,
+	"updated": "2025-03-18T09:14:57.585Z",
+	"tags": ["auth"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

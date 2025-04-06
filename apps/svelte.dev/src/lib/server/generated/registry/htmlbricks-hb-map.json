@@ -1,16 +1,17 @@
 {
-  "name": "@htmlbricks/hb-map",
-  "description": "Provides Svelte map web components.",
-  "repo_url": "",
-  "authors": [
-    "dariocaruso"
-  ],
-  "downloads": 467,
-  "dependents": 2,
-  "updated": "2025-03-24T18:07:18.100Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@htmlbricks/hb-map",
+	"description": "Provides Svelte map web components.",
+	"repo_url": "",
+	"authors": ["dariocaruso"],
+	"downloads": 467,
+	"dependents": 2,
+	"updated": "2025-03-24T18:07:18.100Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

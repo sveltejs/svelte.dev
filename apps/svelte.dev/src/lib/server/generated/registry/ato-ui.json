@@ -1,19 +1,19 @@
 {
-  "name": "ato-ui",
-  "description": "Provides elemental UI components for Svelte/SvelteKit.",
-  "repo_url": "https://github.com/bennymi/ato-ui",
-  "authors": [
-    "bennymi"
-  ],
-  "homepage": "https://ato-ui.vercel.app/",
-  "downloads": 12,
-  "dependents": 0,
-  "updated": "2023-11-25T19:05:39.718Z",
-  "tags": [
-    "ui",
-    "design-system"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 79
+	"name": "ato-ui",
+	"description": "Provides elemental UI components for Svelte/SvelteKit.",
+	"repo_url": "https://github.com/bennymi/ato-ui",
+	"authors": ["bennymi"],
+	"homepage": "https://ato-ui.vercel.app/",
+	"downloads": 12,
+	"dependents": 0,
+	"updated": "2023-11-25T19:05:39.718Z",
+	"tags": ["ui", "design-system"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 79,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": true
+	}
 }

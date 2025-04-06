@@ -1,18 +1,19 @@
 {
-  "name": "@svelterun/store",
-  "description": "Manage local storage with Svelte.",
-  "repo_url": "https://github.com/svelterun/store",
-  "authors": [
-    "nberlette"
-  ],
-  "homepage": "https://svelterun.com/pkg/store",
-  "downloads": 10,
-  "dependents": 0,
-  "updated": "2022-01-14T19:42:07.446Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "@svelterun/store",
+	"description": "Manage local storage with Svelte.",
+	"repo_url": "https://github.com/svelterun/store",
+	"authors": ["nberlette"],
+	"homepage": "https://svelterun.com/pkg/store",
+	"downloads": 10,
+	"dependents": 0,
+	"updated": "2022-01-14T19:42:07.446Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

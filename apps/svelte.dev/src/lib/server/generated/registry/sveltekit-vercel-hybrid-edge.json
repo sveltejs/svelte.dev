@@ -1,18 +1,19 @@
 {
-  "name": "sveltekit-vercel-hybrid-edge",
-  "description": "Builds for edge, falls back to serverless functions on Vercel.",
-  "repo_url": "https://github.com/lucagoslar/ts-pkg",
-  "authors": [
-    "lucagoslar"
-  ],
-  "homepage": "https://github.com/lucagoslar/ts-pkg#readme",
-  "downloads": 2,
-  "dependents": 0,
-  "updated": "2023-01-31T20:27:04.130Z",
-  "tags": [
-    "adapter"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 4
+	"name": "sveltekit-vercel-hybrid-edge",
+	"description": "Builds for edge, falls back to serverless functions on Vercel.",
+	"repo_url": "https://github.com/lucagoslar/ts-pkg",
+	"authors": ["lucagoslar"],
+	"homepage": "https://github.com/lucagoslar/ts-pkg#readme",
+	"downloads": 2,
+	"dependents": 0,
+	"updated": "2023-01-31T20:27:04.130Z",
+	"tags": ["adapter"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 4,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

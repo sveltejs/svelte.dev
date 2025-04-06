@@ -1,21 +1,19 @@
 {
-  "name": "@agnos-ui/svelte-bootstrap",
-  "description": "Build Bootstrap-based UI components for Svelte applications.",
-  "repo_url": "https://github.com/AmadeusITGroup/AgnosUI",
-  "authors": [
-    "divdavem",
-    "basso",
-    "qderoubaix"
-  ],
-  "homepage": "https://www.agnosui.dev/latest/",
-  "downloads": 40,
-  "dependents": 0,
-  "updated": "2025-01-09T15:44:02.149Z",
-  "tags": [
-    "design-system",
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 70
+	"name": "@agnos-ui/svelte-bootstrap",
+	"description": "Build Bootstrap-based UI components for Svelte applications.",
+	"repo_url": "https://github.com/AmadeusITGroup/AgnosUI",
+	"authors": ["divdavem", "basso", "qderoubaix"],
+	"homepage": "https://www.agnosui.dev/latest/",
+	"downloads": 40,
+	"dependents": 0,
+	"updated": "2025-01-09T15:44:02.149Z",
+	"tags": ["design-system", "ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 70,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

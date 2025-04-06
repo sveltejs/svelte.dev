@@ -1,18 +1,19 @@
 {
-  "name": "stores-x",
-  "description": "Implements minimal Vuex-like state management for Svelte.",
-  "repo_url": "https://github.com/Anyass3/stores-x",
-  "authors": [
-    "anyass"
-  ],
-  "homepage": "https://github.com/Anyass3/stores-x#readme",
-  "downloads": 9,
-  "dependents": 0,
-  "updated": "2021-08-08T15:15:20.204Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 6
+	"name": "stores-x",
+	"description": "Implements minimal Vuex-like state management for Svelte.",
+	"repo_url": "https://github.com/Anyass3/stores-x",
+	"authors": ["anyass"],
+	"homepage": "https://github.com/Anyass3/stores-x#readme",
+	"downloads": 9,
+	"dependents": 0,
+	"updated": "2021-08-08T15:15:20.204Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 6,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

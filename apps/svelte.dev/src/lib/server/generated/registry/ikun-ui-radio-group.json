@@ -1,16 +1,17 @@
 {
-  "name": "@ikun-ui/radio-group",
-  "description": "Create radio group components for Svelte applications.",
-  "repo_url": "",
-  "authors": [
-    "baiwusanyu"
-  ],
-  "downloads": 4,
-  "dependents": 2,
-  "updated": "2025-01-24T03:49:14.020Z",
-  "tags": [
-    "design-system"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@ikun-ui/radio-group",
+	"description": "Create radio group components for Svelte applications.",
+	"repo_url": "",
+	"authors": ["baiwusanyu"],
+	"downloads": 4,
+	"dependents": 2,
+	"updated": "2025-01-24T03:49:14.020Z",
+	"tags": ["design-system"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

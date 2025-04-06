@@ -1,18 +1,19 @@
 {
-  "name": "svelte-droplet",
-  "description": "Creates file dropzone for Svelte applications.",
-  "repo_url": "https://github.com/probablykasper/svelte-droplet",
-  "authors": [
-    "probablykasper"
-  ],
-  "homepage": "https://svelte-droplet.kasper.space",
-  "downloads": 79,
-  "dependents": 0,
-  "updated": "2024-10-23T05:24:38.827Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 35
+	"name": "svelte-droplet",
+	"description": "Creates file dropzone for Svelte applications.",
+	"repo_url": "https://github.com/probablykasper/svelte-droplet",
+	"authors": ["probablykasper"],
+	"homepage": "https://svelte-droplet.kasper.space",
+	"downloads": 79,
+	"dependents": 0,
+	"updated": "2024-10-23T05:24:38.827Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 35,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

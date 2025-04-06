@@ -1,18 +1,19 @@
 {
-  "name": "@macfja/svelte-oauth2",
-  "description": "Implement OAuth2 authorization in Svelte and SvelteKit apps.",
-  "repo_url": "https://github.com/macfja/svelte-oauth2",
-  "authors": [
-    "macfja"
-  ],
-  "homepage": "https://github.com/macfja/svelte-oauth2#readme",
-  "downloads": 17,
-  "dependents": 0,
-  "updated": "2021-09-23T11:37:47.583Z",
-  "tags": [
-    "auth"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 41
+	"name": "@macfja/svelte-oauth2",
+	"description": "Implement OAuth2 authorization in Svelte and SvelteKit apps.",
+	"repo_url": "https://github.com/macfja/svelte-oauth2",
+	"authors": ["macfja"],
+	"homepage": "https://github.com/macfja/svelte-oauth2#readme",
+	"downloads": 17,
+	"dependents": 0,
+	"updated": "2021-09-23T11:37:47.583Z",
+	"tags": ["auth"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 41,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

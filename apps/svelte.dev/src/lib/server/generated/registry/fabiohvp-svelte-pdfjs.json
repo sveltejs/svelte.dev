@@ -1,18 +1,19 @@
 {
-  "name": "@fabiohvp/svelte-pdfjs",
-  "description": "Render PDF files within Svelte applications.",
-  "repo_url": "https://github.com/fabiohvp/svelte-pdfjs",
-  "authors": [
-    "fabiohvp"
-  ],
-  "homepage": "https://github.com/fabiohvp/svelte-pdfjs#readme",
-  "downloads": 40,
-  "dependents": 0,
-  "updated": "2020-03-06T04:09:26.015Z",
-  "tags": [
-    "media"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 5
+	"name": "@fabiohvp/svelte-pdfjs",
+	"description": "Render PDF files within Svelte applications.",
+	"repo_url": "https://github.com/fabiohvp/svelte-pdfjs",
+	"authors": ["fabiohvp"],
+	"homepage": "https://github.com/fabiohvp/svelte-pdfjs#readme",
+	"downloads": 40,
+	"dependents": 0,
+	"updated": "2020-03-06T04:09:26.015Z",
+	"tags": ["media"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 5,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

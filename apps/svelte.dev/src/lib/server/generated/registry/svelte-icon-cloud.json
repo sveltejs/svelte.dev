@@ -1,18 +1,19 @@
 {
-  "name": "svelte-icon-cloud",
-  "description": "Create interactive 3D clouds of icons in Svelte.",
-  "repo_url": "https://github.com/Ahram-41/svelte-icon-cloud",
-  "authors": [
-    "ahram-41"
-  ],
-  "homepage": "https://github.com/Ahram-41/svelte-icon-cloud#readme",
-  "downloads": 3,
-  "dependents": 0,
-  "updated": "2025-02-26T10:12:25.162Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelte-icon-cloud",
+	"description": "Create interactive 3D clouds of icons in Svelte.",
+	"repo_url": "https://github.com/Ahram-41/svelte-icon-cloud",
+	"authors": ["ahram-41"],
+	"homepage": "https://github.com/Ahram-41/svelte-icon-cloud#readme",
+	"downloads": 3,
+	"dependents": 0,
+	"updated": "2025-02-26T10:12:25.162Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

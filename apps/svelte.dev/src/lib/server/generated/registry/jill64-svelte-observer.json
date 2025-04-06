@@ -1,18 +1,19 @@
 {
-  "name": "@jill64/svelte-observer",
-  "description": "Observe Promise status easily from outside Svelte components.",
-  "repo_url": "https://github.com/jill64/svelte-observer",
-  "authors": [
-    "jill64"
-  ],
-  "homepage": "https://github.com/jill64/svelte-observer#readme",
-  "downloads": 13008,
-  "dependents": 2,
-  "updated": "2024-12-28T00:40:53.815Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 0
+	"name": "@jill64/svelte-observer",
+	"description": "Observe Promise status easily from outside Svelte components.",
+	"repo_url": "https://github.com/jill64/svelte-observer",
+	"authors": ["jill64"],
+	"homepage": "https://github.com/jill64/svelte-observer#readme",
+	"downloads": 13008,
+	"dependents": 2,
+	"updated": "2024-12-28T00:40:53.815Z",
+	"tags": ["miscellaneous"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "@oklookat/svelte-portal",
-  "description": "Render Svelte components outside parent component.",
-  "repo_url": "https://github.com/oklookat/svelte-portal",
-  "authors": [
-    "oklookit"
-  ],
-  "homepage": "https://github.com/oklookat/svelte-portal#readme",
-  "downloads": 4,
-  "dependents": 0,
-  "updated": "2022-05-31T12:53:19.325Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@oklookat/svelte-portal",
+	"description": "Render Svelte components outside parent component.",
+	"repo_url": "https://github.com/oklookat/svelte-portal",
+	"authors": ["oklookit"],
+	"homepage": "https://github.com/oklookat/svelte-portal#readme",
+	"downloads": 4,
+	"dependents": 0,
+	"updated": "2022-05-31T12:53:19.325Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

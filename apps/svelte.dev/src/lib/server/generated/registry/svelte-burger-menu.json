@@ -1,18 +1,19 @@
 {
-  "name": "svelte-burger-menu",
-  "description": "Create simple burger menu with CSS transitions for Svelte.",
-  "repo_url": "https://github.com/jorisBarkema/svelte-burger-menu",
-  "authors": [
-    "jorisbarkema"
-  ],
-  "homepage": "https://github.com/jorisBarkema/svelte-burger-menu#readme",
-  "downloads": 13,
-  "dependents": 0,
-  "updated": "2022-10-06T18:55:18.734Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 3
+	"name": "svelte-burger-menu",
+	"description": "Create simple burger menu with CSS transitions for Svelte.",
+	"repo_url": "https://github.com/jorisBarkema/svelte-burger-menu",
+	"authors": ["jorisbarkema"],
+	"homepage": "https://github.com/jorisBarkema/svelte-burger-menu#readme",
+	"downloads": 13,
+	"dependents": 0,
+	"updated": "2022-10-06T18:55:18.734Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 3,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

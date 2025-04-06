@@ -1,18 +1,19 @@
 {
-  "name": "svelte-hyperscript",
-  "description": "Use hyperscript to create Svelte components.",
-  "repo_url": "https://github.com/kenoxa/svelte-hyperscript",
-  "authors": [
-    "sastan"
-  ],
-  "homepage": "https://github.com/kenoxa/svelte-hyperscript#readme",
-  "downloads": 4121,
-  "dependents": 3,
-  "updated": "2020-06-29T15:29:31.097Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 8
+	"name": "svelte-hyperscript",
+	"description": "Use hyperscript to create Svelte components.",
+	"repo_url": "https://github.com/kenoxa/svelte-hyperscript",
+	"authors": ["sastan"],
+	"homepage": "https://github.com/kenoxa/svelte-hyperscript#readme",
+	"downloads": 4121,
+	"dependents": 3,
+	"updated": "2020-06-29T15:29:31.097Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 8,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "svelte-route",
-  "description": "Simple routing library for Svelte applications.",
-  "repo_url": "https://github.com/imsamtar/svelte-route",
-  "authors": [
-    "imsamtar"
-  ],
-  "homepage": "https://github.com/imsamtar/svelte-route#readme",
-  "downloads": 9,
-  "dependents": 0,
-  "updated": "2020-06-24T15:48:19.635Z",
-  "tags": [
-    "router"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelte-route",
+	"description": "Simple routing library for Svelte applications.",
+	"repo_url": "https://github.com/imsamtar/svelte-route",
+	"authors": ["imsamtar"],
+	"homepage": "https://github.com/imsamtar/svelte-route#readme",
+	"downloads": 9,
+	"dependents": 0,
+	"updated": "2020-06-24T15:48:19.635Z",
+	"tags": ["router"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

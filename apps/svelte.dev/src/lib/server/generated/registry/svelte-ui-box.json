@@ -1,18 +1,19 @@
 {
-  "name": "svelte-ui-box",
-  "description": "Provide UI components for Svelte applications.",
-  "repo_url": "https://github.com/yeori/svelte-ui-box",
-  "authors": [
-    "yeori"
-  ],
-  "homepage": "https://github.com/yeori/svelte-ui-box#readme",
-  "downloads": 24,
-  "dependents": 0,
-  "updated": "2024-11-04T04:54:37.929Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelte-ui-box",
+	"description": "Provide UI components for Svelte applications.",
+	"repo_url": "https://github.com/yeori/svelte-ui-box",
+	"authors": ["yeori"],
+	"homepage": "https://github.com/yeori/svelte-ui-box#readme",
+	"downloads": 24,
+	"dependents": 0,
+	"updated": "2024-11-04T04:54:37.929Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

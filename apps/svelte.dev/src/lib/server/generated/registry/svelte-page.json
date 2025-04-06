@@ -1,18 +1,19 @@
 {
-  "name": "svelte-page",
-  "description": "Nested routing with page.js for Svelte.",
-  "repo_url": "https://github.com/kaisermann/svelte-router",
-  "authors": [
-    "kaisermann"
-  ],
-  "homepage": "https://github.com/kaisermann/svelte-router#readme",
-  "downloads": 52,
-  "dependents": 0,
-  "updated": "2019-01-22T21:01:48.349Z",
-  "tags": [
-    "router"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 18
+	"name": "svelte-page",
+	"description": "Nested routing with page.js for Svelte.",
+	"repo_url": "https://github.com/kaisermann/svelte-router",
+	"authors": ["kaisermann"],
+	"homepage": "https://github.com/kaisermann/svelte-router#readme",
+	"downloads": 52,
+	"dependents": 0,
+	"updated": "2019-01-22T21:01:48.349Z",
+	"tags": ["router"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 18,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	}
 }

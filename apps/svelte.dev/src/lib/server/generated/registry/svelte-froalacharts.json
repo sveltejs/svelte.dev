@@ -1,19 +1,19 @@
 {
-  "name": "svelte-froalacharts",
-  "description": "Integrate FroalaCharts into Svelte applications.",
-  "repo_url": "https://github.com/froala/svelte-froalacharts",
-  "authors": [
-    "sanjay.bhan",
-    "froala"
-  ],
-  "homepage": "https://github.com/froala/svelte-froalacharts",
-  "downloads": 0,
-  "dependents": 0,
-  "updated": "2020-11-08T10:52:41.105Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelte-froalacharts",
+	"description": "Integrate FroalaCharts into Svelte applications.",
+	"repo_url": "https://github.com/froala/svelte-froalacharts",
+	"authors": ["sanjay.bhan", "froala"],
+	"homepage": "https://github.com/froala/svelte-froalacharts",
+	"downloads": 0,
+	"dependents": 0,
+	"updated": "2020-11-08T10:52:41.105Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

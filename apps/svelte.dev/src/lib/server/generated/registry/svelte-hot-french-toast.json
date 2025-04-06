@@ -1,18 +1,19 @@
 {
-  "name": "svelte-hot-french-toast",
-  "description": "Create buttery smooth toast notifications for Svelte 5.",
-  "repo_url": "https://github.com/babakfp/svelte-hot-french-toast",
-  "authors": [
-    "babakfp"
-  ],
-  "homepage": "https://github.com/babakfp/svelte-hot-french-toast#readme",
-  "downloads": 953,
-  "dependents": 1,
-  "updated": "2024-11-02T13:56:35.586Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 11
+	"name": "svelte-hot-french-toast",
+	"description": "Create buttery smooth toast notifications for Svelte 5.",
+	"repo_url": "https://github.com/babakfp/svelte-hot-french-toast",
+	"authors": ["babakfp"],
+	"homepage": "https://github.com/babakfp/svelte-hot-french-toast#readme",
+	"downloads": 953,
+	"dependents": 1,
+	"updated": "2024-11-02T13:56:35.586Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 11,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

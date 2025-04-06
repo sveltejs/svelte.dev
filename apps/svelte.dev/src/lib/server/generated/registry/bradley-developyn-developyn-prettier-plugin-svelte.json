@@ -1,16 +1,17 @@
 {
-  "name": "@bradley-developyn/developyn-prettier-plugin-svelte",
-  "description": "Format Svelte code with Prettier, Developyn specific rules.",
-  "repo_url": "",
-  "authors": [
-    "bradley-developyn"
-  ],
-  "downloads": 1,
-  "dependents": 0,
-  "updated": "2023-10-31T13:16:24.600Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@bradley-developyn/developyn-prettier-plugin-svelte",
+	"description": "Format Svelte code with Prettier, Developyn specific rules.",
+	"repo_url": "",
+	"authors": ["bradley-developyn"],
+	"downloads": 1,
+	"dependents": 0,
+	"updated": "2023-10-31T13:16:24.600Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": false
+	}
 }

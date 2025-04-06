@@ -1,18 +1,19 @@
 {
-  "name": "@runkai/eslint-config",
-  "description": "Provide ESLint and Prettier configuration for Svelte projects.",
-  "repo_url": "https://github.com/runkaiz/eslint-config",
-  "authors": [
-    "runkai"
-  ],
-  "homepage": "https://github.com/runkaiz/eslint-config#readme",
-  "downloads": 26,
-  "dependents": 0,
-  "updated": "2024-05-16T10:21:26.375Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@runkai/eslint-config",
+	"description": "Provide ESLint and Prettier configuration for Svelte projects.",
+	"repo_url": "https://github.com/runkaiz/eslint-config",
+	"authors": ["runkai"],
+	"homepage": "https://github.com/runkaiz/eslint-config#readme",
+	"downloads": 26,
+	"dependents": 0,
+	"updated": "2024-05-16T10:21:26.375Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

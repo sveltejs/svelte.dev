@@ -1,18 +1,19 @@
 {
-  "name": "@threlte/rapier",
-  "description": "Integrate Rapier physics engine with Threlte for 3D apps.",
-  "repo_url": "https://github.com/threlte/threlte",
-  "authors": [
-    "grischaerbe"
-  ],
-  "homepage": "https://threlte.xyz",
-  "downloads": 645,
-  "dependents": 5,
-  "updated": "2025-03-12T23:25:03.609Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 2838
+	"name": "@threlte/rapier",
+	"description": "Integrate Rapier physics engine with Threlte for 3D apps.",
+	"repo_url": "https://github.com/threlte/threlte",
+	"authors": ["grischaerbe"],
+	"homepage": "https://threlte.xyz",
+	"downloads": 645,
+	"dependents": 5,
+	"updated": "2025-03-12T23:25:03.609Z",
+	"tags": ["miscellaneous"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 2839,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

@@ -1,27 +1,30 @@
 {
-  "name": "@egjs/svelte-conveyer",
-  "description": "Adds drag gestures to native scroll in Svelte apps.",
-  "repo_url": "https://github.com/naver/egjs-conveyer",
-  "authors": [
-    "anuu0916",
-    "braixen",
-    "ajaxpf",
-    "jongmoon",
-    "sculove",
-    "happyhj",
-    "mixed",
-    "netil",
-    "younkue",
-    "woodneck"
-  ],
-  "homepage": "https://github.com/naver/egjs-conveyer",
-  "downloads": 43,
-  "dependents": 1,
-  "updated": "2023-09-27T04:35:48.923Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 116
+	"name": "@egjs/svelte-conveyer",
+	"description": "Adds drag gestures to native scroll in Svelte apps.",
+	"repo_url": "https://github.com/naver/egjs-conveyer",
+	"authors": [
+		"anuu0916",
+		"braixen",
+		"ajaxpf",
+		"jongmoon",
+		"sculove",
+		"happyhj",
+		"mixed",
+		"netil",
+		"younkue",
+		"woodneck"
+	],
+	"homepage": "https://github.com/naver/egjs-conveyer",
+	"downloads": 43,
+	"dependents": 1,
+	"updated": "2023-09-27T04:35:48.923Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 116,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

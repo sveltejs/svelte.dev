@@ -1,18 +1,19 @@
 {
-  "name": "@pivotass/zvelte",
-  "description": "Compile twig-like syntax to PHP for SSR and JS for browser.",
-  "repo_url": "https://github.com/PivotStick/zvelte",
-  "authors": [
-    "pivotass"
-  ],
-  "homepage": "https://github.com/PivotStick/zvelte#readme",
-  "downloads": 914,
-  "dependents": 0,
-  "updated": "2025-03-27T19:44:02.405Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@pivotass/zvelte",
+	"description": "Compile twig-like syntax to PHP for SSR and JS for browser.",
+	"repo_url": "https://github.com/PivotStick/zvelte",
+	"authors": ["pivotass"],
+	"homepage": "https://github.com/PivotStick/zvelte#readme",
+	"downloads": 914,
+	"dependents": 0,
+	"updated": "2025-03-27T19:44:02.405Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	}
 }

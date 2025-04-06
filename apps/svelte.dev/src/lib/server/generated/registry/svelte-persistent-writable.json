@@ -1,18 +1,19 @@
 {
-  "name": "svelte-persistent-writable",
-  "description": "Creates persistent writable stores for Svelte applications.",
-  "repo_url": "https://github.com/cdellacqua/svelte-persistent-writable",
-  "authors": [
-    "cdellacqua"
-  ],
-  "homepage": "https://github.com/cdellacqua/svelte-persistent-writable",
-  "downloads": 16,
-  "dependents": 0,
-  "updated": "2021-10-09T19:48:52.000Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 4
+	"name": "svelte-persistent-writable",
+	"description": "Creates persistent writable stores for Svelte applications.",
+	"repo_url": "https://github.com/cdellacqua/svelte-persistent-writable",
+	"authors": ["cdellacqua"],
+	"homepage": "https://github.com/cdellacqua/svelte-persistent-writable",
+	"downloads": 16,
+	"dependents": 0,
+	"updated": "2021-10-09T19:48:52.000Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 4,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

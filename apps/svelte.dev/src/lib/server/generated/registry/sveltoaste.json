@@ -1,18 +1,19 @@
 {
-  "name": "sveltoaste",
-  "description": "Display notifications in Svelte applications.",
-  "repo_url": "https://github.com/marvinody/sveltoaste",
-  "authors": [
-    "marvinody"
-  ],
-  "homepage": "https://github.com/marvinody/sveltoaste#readme",
-  "downloads": 6,
-  "dependents": 0,
-  "updated": "2020-06-27T17:31:40.624Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "sveltoaste",
+	"description": "Display notifications in Svelte applications.",
+	"repo_url": "https://github.com/marvinody/sveltoaste",
+	"authors": ["marvinody"],
+	"homepage": "https://github.com/marvinody/sveltoaste#readme",
+	"downloads": 6,
+	"dependents": 0,
+	"updated": "2020-06-27T17:31:40.624Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

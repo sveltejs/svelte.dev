@@ -1,17 +1,19 @@
 {
-  "name": "svelte-dispatchable",
-  "description": "Implement dispatchable reactive store, alternative to Svelte stores.",
-  "repo_url": "https://github.com/ravid7000/svelte-dispatchable",
-  "authors": [
-    "ravid7000"
-  ],
-  "downloads": 10,
-  "dependents": 0,
-  "updated": "2022-01-22T21:57:11.071Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "svelte-dispatchable",
+	"description": "Implement dispatchable reactive store, alternative to Svelte stores.",
+	"repo_url": "https://github.com/ravid7000/svelte-dispatchable",
+	"authors": ["ravid7000"],
+	"downloads": 10,
+	"dependents": 0,
+	"updated": "2022-01-22T21:57:11.071Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"homepage": null,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

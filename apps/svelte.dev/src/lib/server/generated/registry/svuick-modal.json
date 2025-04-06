@@ -1,17 +1,18 @@
 {
-  "name": "@svuick/modal",
-  "description": "Create modal components for Svelte and SvelteKit.",
-  "repo_url": "https://gitlab.com/david-plugge/svuick",
-  "authors": [
-    "davidplugge"
-  ],
-  "homepage": "https://gitlab.com/david-plugge/svuick#readme",
-  "downloads": 6,
-  "dependents": 0,
-  "updated": "2022-07-29T15:05:28.470Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@svuick/modal",
+	"description": "Create modal components for Svelte and SvelteKit.",
+	"repo_url": "https://gitlab.com/david-plugge/svuick",
+	"authors": ["davidplugge"],
+	"homepage": "https://gitlab.com/david-plugge/svuick#readme",
+	"downloads": 6,
+	"dependents": 0,
+	"updated": "2022-07-29T15:05:28.470Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

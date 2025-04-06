@@ -1,16 +1,17 @@
 {
-  "name": "svelte-tree",
-  "description": "Create tree-like outline views in Svelte applications.",
-  "repo_url": "",
-  "authors": [
-    "esinx"
-  ],
-  "downloads": 13,
-  "dependents": 0,
-  "updated": "2020-06-01T11:58:28.755Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-tree",
+	"description": "Create tree-like outline views in Svelte applications.",
+	"repo_url": "",
+	"authors": ["esinx"],
+	"downloads": 13,
+	"dependents": 0,
+	"updated": "2020-06-01T11:58:28.755Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

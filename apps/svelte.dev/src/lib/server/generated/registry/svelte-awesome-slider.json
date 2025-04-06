@@ -1,18 +1,19 @@
 {
-  "name": "svelte-awesome-slider",
-  "description": "Create highly customizable slider components for Svelte.",
-  "repo_url": "https://github.com/Ennoriel/svelte-awesome-slider",
-  "authors": [
-    "ennoriel"
-  ],
-  "homepage": "https://svelte-awesome-slider.vercel.app",
-  "downloads": 6711,
-  "dependents": 1,
-  "updated": "2025-03-23T16:42:29.500Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelte-awesome-slider",
+	"description": "Create highly customizable slider components for Svelte.",
+	"repo_url": "https://github.com/Ennoriel/svelte-awesome-slider",
+	"authors": ["ennoriel"],
+	"homepage": "https://svelte-awesome-slider.vercel.app",
+	"downloads": 6711,
+	"dependents": 1,
+	"updated": "2025-03-23T16:42:29.500Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

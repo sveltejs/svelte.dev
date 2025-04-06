@@ -1,18 +1,19 @@
 {
-  "name": "@kuiper/svelte-drag-drop",
-  "description": "Create drag and drop image lists in Svelte applications.",
-  "repo_url": "https://github.com/kofkuiper/svelte-drag-drop",
-  "authors": [
-    "kuiper"
-  ],
-  "homepage": "https://github.com/kofkuiper/svelte-drag-drop",
-  "downloads": 2,
-  "dependents": 0,
-  "updated": "2023-12-05T15:17:34.946Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "@kuiper/svelte-drag-drop",
+	"description": "Create drag and drop image lists in Svelte applications.",
+	"repo_url": "https://github.com/kofkuiper/svelte-drag-drop",
+	"authors": ["kuiper"],
+	"homepage": "https://github.com/kofkuiper/svelte-drag-drop",
+	"downloads": 2,
+	"dependents": 0,
+	"updated": "2023-12-05T15:17:34.946Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "trpc-sveltekit",
-  "description": "Provides SvelteKit adapter for tRPC.io.",
-  "repo_url": "https://github.com/icflorescu/trpc-sveltekit",
-  "authors": [
-    "icflorescu"
-  ],
-  "homepage": "https://icflorescu.github.io/trpc-sveltekit/",
-  "downloads": 5056,
-  "dependents": 4,
-  "updated": "2025-03-06T12:52:54.703Z",
-  "tags": [
-    "server"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 815
+	"name": "trpc-sveltekit",
+	"description": "Provides SvelteKit adapter for tRPC.io.",
+	"repo_url": "https://github.com/icflorescu/trpc-sveltekit",
+	"authors": ["icflorescu"],
+	"homepage": "https://icflorescu.github.io/trpc-sveltekit/",
+	"downloads": 5056,
+	"dependents": 4,
+	"updated": "2025-03-06T12:52:54.703Z",
+	"tags": ["server"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 815,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	}
 }

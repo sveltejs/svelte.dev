@@ -1,18 +1,19 @@
 {
-  "name": "cofein",
-  "description": "Create fetchable stores for Svelte applications.",
-  "repo_url": "https://github.com/lewis-wow/svelte-fetchable",
-  "authors": [
-    "ujik"
-  ],
-  "homepage": "https://github.com/lewis-wow/svelte-fetchable#readme",
-  "downloads": 5,
-  "dependents": 0,
-  "updated": "2022-10-25T13:47:31.153Z",
-  "tags": [
-    "server"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "cofein",
+	"description": "Create fetchable stores for Svelte applications.",
+	"repo_url": "https://github.com/lewis-wow/svelte-fetchable",
+	"authors": ["ujik"],
+	"homepage": "https://github.com/lewis-wow/svelte-fetchable#readme",
+	"downloads": 5,
+	"dependents": 0,
+	"updated": "2022-10-25T13:47:31.153Z",
+	"tags": ["server"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

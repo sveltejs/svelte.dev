@@ -1,17 +1,19 @@
 {
-  "name": "sveltekit-adapter-iis",
-  "description": "SvelteKit adapter for IIS web servers.",
-  "repo_url": "https://github.com/abaga129/sveltekit-adapter-iis",
-  "authors": [
-    "abaga129"
-  ],
-  "downloads": 32,
-  "dependents": 0,
-  "updated": "2024-11-06T20:19:37.060Z",
-  "tags": [
-    "adapter"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 19
+	"name": "sveltekit-adapter-iis",
+	"description": "SvelteKit adapter for IIS web servers.",
+	"repo_url": "https://github.com/abaga129/sveltekit-adapter-iis",
+	"authors": ["abaga129"],
+	"downloads": 32,
+	"dependents": 0,
+	"updated": "2024-11-06T20:19:37.060Z",
+	"tags": ["adapter"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 19,
+	"homepage": null,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "@babeard/svelte-heroicons",
-  "description": "Provides Svelte wrappers for Heroicons v2.",
-  "repo_url": "https://github.com/babeard/svelte-heroicons",
-  "authors": [
-    "babeard"
-  ],
-  "homepage": "https://github.com/babeard/svelte-heroicons",
-  "downloads": 13,
-  "dependents": 0,
-  "updated": "2024-01-12T02:26:38.362Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 2
+	"name": "@babeard/svelte-heroicons",
+	"description": "Provides Svelte wrappers for Heroicons v2.",
+	"repo_url": "https://github.com/babeard/svelte-heroicons",
+	"authors": ["babeard"],
+	"homepage": "https://github.com/babeard/svelte-heroicons",
+	"downloads": 13,
+	"dependents": 0,
+	"updated": "2024-01-12T02:26:38.362Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

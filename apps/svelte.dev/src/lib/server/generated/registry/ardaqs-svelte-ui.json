@@ -1,18 +1,19 @@
 {
-  "name": "@ardaqs/svelte-ui",
-  "description": "Create Svelte UI component library.",
-  "repo_url": "https://github.com/ardaqs/svelte-ui",
-  "authors": [
-    "ardaqs"
-  ],
-  "homepage": "https://github.com/ardaqs/svelte-ui#readme",
-  "downloads": 0,
-  "dependents": 0,
-  "updated": "2023-04-23T12:06:28.751Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@ardaqs/svelte-ui",
+	"description": "Create Svelte UI component library.",
+	"repo_url": "https://github.com/ardaqs/svelte-ui",
+	"authors": ["ardaqs"],
+	"homepage": "https://github.com/ardaqs/svelte-ui#readme",
+	"downloads": 0,
+	"dependents": 0,
+	"updated": "2023-04-23T12:06:28.751Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "svelte-copy-url-button",
-  "description": "Create button component that copies current URL to clipboard.",
-  "repo_url": "https://github.com/terziev1/svelte-copy-url-button",
-  "authors": [
-    "kostadinterziev"
-  ],
-  "homepage": "https://github.com/terziev1/svelte-copy-url-button#readme",
-  "downloads": 13,
-  "dependents": 1,
-  "updated": "2020-12-01T17:24:45.982Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 3
+	"name": "svelte-copy-url-button",
+	"description": "Create button component that copies current URL to clipboard.",
+	"repo_url": "https://github.com/terziev1/svelte-copy-url-button",
+	"authors": ["kostadinterziev"],
+	"homepage": "https://github.com/terziev1/svelte-copy-url-button#readme",
+	"downloads": 13,
+	"dependents": 1,
+	"updated": "2020-12-01T17:24:45.982Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 3,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

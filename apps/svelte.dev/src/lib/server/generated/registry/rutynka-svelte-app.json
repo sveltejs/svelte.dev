@@ -1,18 +1,19 @@
 {
-  "name": "rutynka-svelte-app",
-  "description": "Create quiz app using Svelte and Wikipedia API data.",
-  "repo_url": "https://github.com/rutynka/routine-svelte-quiz",
-  "authors": [
-    "all-the-fish"
-  ],
-  "homepage": "https://github.com/rutynka/routine-svelte-quiz",
-  "downloads": 9,
-  "dependents": 0,
-  "updated": "2022-02-15T10:51:54.857Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "rutynka-svelte-app",
+	"description": "Create quiz app using Svelte and Wikipedia API data.",
+	"repo_url": "https://github.com/rutynka/routine-svelte-quiz",
+	"authors": ["all-the-fish"],
+	"homepage": "https://github.com/rutynka/routine-svelte-quiz",
+	"downloads": 9,
+	"dependents": 0,
+	"updated": "2022-02-15T10:51:54.857Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

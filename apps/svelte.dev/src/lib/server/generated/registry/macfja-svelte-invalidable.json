@@ -1,18 +1,19 @@
 {
-  "name": "@macfja/svelte-invalidable",
-  "description": "Create Svelte stores that can update themselves on demand.",
-  "repo_url": "https://github.com/macfja/svelte-invalidable",
-  "authors": [
-    "macfja"
-  ],
-  "homepage": "https://github.com/macfja/svelte-invalidable#readme",
-  "downloads": 11,
-  "dependents": 0,
-  "updated": "2021-09-25T17:51:57.132Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 4
+	"name": "@macfja/svelte-invalidable",
+	"description": "Create Svelte stores that can update themselves on demand.",
+	"repo_url": "https://github.com/macfja/svelte-invalidable",
+	"authors": ["macfja"],
+	"homepage": "https://github.com/macfja/svelte-invalidable#readme",
+	"downloads": 11,
+	"dependents": 0,
+	"updated": "2021-09-25T17:51:57.132Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 4,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

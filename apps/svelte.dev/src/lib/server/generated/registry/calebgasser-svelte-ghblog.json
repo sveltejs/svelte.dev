@@ -1,18 +1,19 @@
 {
-  "name": "@calebgasser/svelte-ghblog",
-  "description": "Create blog from GitHub repo using Svelte.",
-  "repo_url": "https://github.com/calebgasser/svelte-ghblog",
-  "authors": [
-    "cgasser"
-  ],
-  "homepage": "https://github.com/calebgasser/svelte-ghblog/tree/develop#readme",
-  "downloads": 1,
-  "dependents": 0,
-  "updated": "2022-07-25T23:22:58.248Z",
-  "tags": [
-    "content"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "@calebgasser/svelte-ghblog",
+	"description": "Create blog from GitHub repo using Svelte.",
+	"repo_url": "https://github.com/calebgasser/svelte-ghblog",
+	"authors": ["cgasser"],
+	"homepage": "https://github.com/calebgasser/svelte-ghblog/tree/develop#readme",
+	"downloads": 1,
+	"dependents": 0,
+	"updated": "2022-07-25T23:22:58.248Z",
+	"tags": ["content"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

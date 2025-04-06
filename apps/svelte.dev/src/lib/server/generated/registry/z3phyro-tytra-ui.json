@@ -1,18 +1,19 @@
 {
-  "name": "@z3phyro/tytra-ui",
-  "description": "UI for typed translations package (TyTra).",
-  "repo_url": "https://github.com/z3phyro/tytra-ui",
-  "authors": [
-    "z3phyro"
-  ],
-  "homepage": "https://github.com/z3phyro/tytra-ui#readme",
-  "downloads": 23,
-  "dependents": 0,
-  "updated": "2023-04-17T07:16:12.547Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "@z3phyro/tytra-ui",
+	"description": "UI for typed translations package (TyTra).",
+	"repo_url": "https://github.com/z3phyro/tytra-ui",
+	"authors": ["z3phyro"],
+	"homepage": "https://github.com/z3phyro/tytra-ui#readme",
+	"downloads": 23,
+	"dependents": 0,
+	"updated": "2023-04-17T07:16:12.547Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

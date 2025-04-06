@@ -1,19 +1,19 @@
 {
-  "name": "svelte-gantt",
-  "description": "Creates interactive Gantt chart/resource booking components.",
-  "repo_url": "https://github.com/ANovokmet/svelte-gantt",
-  "authors": [
-    "anovokmet",
-    "v-py"
-  ],
-  "homepage": "https://github.com/ANovokmet/svelte-gantt#readme",
-  "downloads": 1205,
-  "dependents": 2,
-  "updated": "2025-02-10T09:27:05.820Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 562
+	"name": "svelte-gantt",
+	"description": "Creates interactive Gantt chart/resource booking components.",
+	"repo_url": "https://github.com/ANovokmet/svelte-gantt",
+	"authors": ["anovokmet", "v-py"],
+	"homepage": "https://github.com/ANovokmet/svelte-gantt#readme",
+	"downloads": 1205,
+	"dependents": 2,
+	"updated": "2025-02-10T09:27:05.820Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 562,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

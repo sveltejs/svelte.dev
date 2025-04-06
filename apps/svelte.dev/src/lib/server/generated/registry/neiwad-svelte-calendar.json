@@ -1,18 +1,19 @@
 {
-  "name": "@neiwad/svelte-calendar",
-  "description": "Create Svelte calendar acting as date picker.",
-  "repo_url": "https://github.com/neiwad/svelte-calendar",
-  "authors": [
-    "neiwad"
-  ],
-  "homepage": "https://github.com/neiwad/svelte-calendar",
-  "downloads": 14,
-  "dependents": 0,
-  "updated": "2022-04-28T20:28:21.171Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 2
+	"name": "@neiwad/svelte-calendar",
+	"description": "Create Svelte calendar acting as date picker.",
+	"repo_url": "https://github.com/neiwad/svelte-calendar",
+	"authors": ["neiwad"],
+	"homepage": "https://github.com/neiwad/svelte-calendar",
+	"downloads": 14,
+	"dependents": 0,
+	"updated": "2022-04-28T20:28:21.171Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

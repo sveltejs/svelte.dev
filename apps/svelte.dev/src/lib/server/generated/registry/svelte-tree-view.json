@@ -1,18 +1,19 @@
 {
-  "name": "svelte-tree-view",
-  "description": "Display Javascript objects in a tree layout for Svelte.",
-  "repo_url": "https://github.com/TeemuKoivisto/svelte-tree-view",
-  "authors": [
-    "tekk"
-  ],
-  "homepage": "https://github.com/TeemuKoivisto/svelte-tree-view",
-  "downloads": 3812,
-  "dependents": 2,
-  "updated": "2023-07-24T12:04:25.865Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 24
+	"name": "svelte-tree-view",
+	"description": "Display Javascript objects in a tree layout for Svelte.",
+	"repo_url": "https://github.com/TeemuKoivisto/svelte-tree-view",
+	"authors": ["tekk"],
+	"homepage": "https://github.com/TeemuKoivisto/svelte-tree-view",
+	"downloads": 3812,
+	"dependents": 2,
+	"updated": "2023-07-24T12:04:25.865Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 24,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

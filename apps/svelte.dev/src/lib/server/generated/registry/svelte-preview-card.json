@@ -1,18 +1,19 @@
 {
-  "name": "svelte-preview-card",
-  "description": "Display title, image, and open event for Svelte cards.",
-  "repo_url": "https://github.com/Linkcube/svelte-preview-card",
-  "authors": [
-    "linkcube"
-  ],
-  "homepage": "https://github.com/Linkcube/svelte-preview-card#readme",
-  "downloads": 3,
-  "dependents": 0,
-  "updated": "2020-02-28T22:22:11.515Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelte-preview-card",
+	"description": "Display title, image, and open event for Svelte cards.",
+	"repo_url": "https://github.com/Linkcube/svelte-preview-card",
+	"authors": ["linkcube"],
+	"homepage": "https://github.com/Linkcube/svelte-preview-card#readme",
+	"downloads": 3,
+	"dependents": 0,
+	"updated": "2020-02-28T22:22:11.515Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

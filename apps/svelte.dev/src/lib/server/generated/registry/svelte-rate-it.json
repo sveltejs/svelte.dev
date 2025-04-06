@@ -1,18 +1,19 @@
 {
-  "name": "svelte-rate-it",
-  "description": "Implement star rating component for Svelte applications.",
-  "repo_url": "https://github.com/emrekara37/svelte-rate-it",
-  "authors": [
-    "emrek37"
-  ],
-  "homepage": "https://github.com/emrekara37/svelte-rate-it#readme",
-  "downloads": 9,
-  "dependents": 0,
-  "updated": "2019-07-29T11:30:11.230Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 38
+	"name": "svelte-rate-it",
+	"description": "Implement star rating component for Svelte applications.",
+	"repo_url": "https://github.com/emrekara37/svelte-rate-it",
+	"authors": ["emrek37"],
+	"homepage": "https://github.com/emrekara37/svelte-rate-it#readme",
+	"downloads": 9,
+	"dependents": 0,
+	"updated": "2019-07-29T11:30:11.230Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 38,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

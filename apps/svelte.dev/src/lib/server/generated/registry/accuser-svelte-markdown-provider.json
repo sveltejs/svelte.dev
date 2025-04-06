@@ -1,18 +1,19 @@
 {
-  "name": "@accuser/svelte-markdown-provider",
-  "description": "Transforms Markdown to Svelte components.",
-  "repo_url": "https://github.com/accuser/svelte-markdown-provider",
-  "authors": [
-    "accuser"
-  ],
-  "homepage": "https://github.com/accuser/svelte-markdown-provider",
-  "downloads": 32,
-  "dependents": 2,
-  "updated": "2024-10-06T07:16:41.227Z",
-  "tags": [
-    "content"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 0
+	"name": "@accuser/svelte-markdown-provider",
+	"description": "Transforms Markdown to Svelte components.",
+	"repo_url": "https://github.com/accuser/svelte-markdown-provider",
+	"authors": ["accuser"],
+	"homepage": "https://github.com/accuser/svelte-markdown-provider",
+	"downloads": 32,
+	"dependents": 2,
+	"updated": "2024-10-06T07:16:41.227Z",
+	"tags": ["content"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

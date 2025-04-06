@@ -1,18 +1,19 @@
 {
-  "name": "@macfja/svelte-multi-adapter",
-  "description": "Launch multiple SvelteKit adapters.",
-  "repo_url": "https://github.com/macfja/svelte-adapter-multi",
-  "authors": [
-    "macfja"
-  ],
-  "homepage": "https://github.com/macfja/svelte-adapter-multi#readme",
-  "downloads": 156,
-  "dependents": 0,
-  "updated": "2021-12-29T15:05:52.563Z",
-  "tags": [
-    "adapter"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 17
+	"name": "@macfja/svelte-multi-adapter",
+	"description": "Launch multiple SvelteKit adapters.",
+	"repo_url": "https://github.com/macfja/svelte-adapter-multi",
+	"authors": ["macfja"],
+	"homepage": "https://github.com/macfja/svelte-adapter-multi#readme",
+	"downloads": 156,
+	"dependents": 0,
+	"updated": "2021-12-29T15:05:52.563Z",
+	"tags": ["adapter"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 17,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

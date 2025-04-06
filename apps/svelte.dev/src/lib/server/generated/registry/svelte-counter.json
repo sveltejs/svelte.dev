@@ -1,18 +1,19 @@
 {
-  "name": "svelte-counter",
-  "description": "Create simple, CSS-agnostic count-up component for Svelte.",
-  "repo_url": "https://github.com/rallisf1/svelte-counter",
-  "authors": [
-    "rallisf1"
-  ],
-  "homepage": "https://github.com/rallisf1/svelte-counter#readme",
-  "downloads": 17,
-  "dependents": 0,
-  "updated": "2020-04-23T17:07:06.855Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 4
+	"name": "svelte-counter",
+	"description": "Create simple, CSS-agnostic count-up component for Svelte.",
+	"repo_url": "https://github.com/rallisf1/svelte-counter",
+	"authors": ["rallisf1"],
+	"homepage": "https://github.com/rallisf1/svelte-counter#readme",
+	"downloads": 17,
+	"dependents": 0,
+	"updated": "2020-04-23T17:07:06.855Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 4,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

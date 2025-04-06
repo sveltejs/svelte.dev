@@ -1,18 +1,19 @@
 {
-  "name": "svelte-validoz",
-  "description": "Provides form validation for Svelte applications.",
-  "repo_url": "https://github.com/KamyarLajani/svelte-validoz",
-  "authors": [
-    "kamyar_lajani"
-  ],
-  "homepage": "https://github.com/KamyarLajani/svelte-validoz#readme",
-  "downloads": 13,
-  "dependents": 0,
-  "updated": "2020-11-24T22:49:21.267Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 3
+	"name": "svelte-validoz",
+	"description": "Provides form validation for Svelte applications.",
+	"repo_url": "https://github.com/KamyarLajani/svelte-validoz",
+	"authors": ["kamyar_lajani"],
+	"homepage": "https://github.com/KamyarLajani/svelte-validoz#readme",
+	"downloads": 13,
+	"dependents": 0,
+	"updated": "2020-11-24T22:49:21.267Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 3,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

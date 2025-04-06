@@ -1,19 +1,19 @@
 {
-  "name": "sveltekit-yup",
-  "description": "Validate forms in SvelteKit using Yup schema.",
-  "repo_url": "https://github.com/etuncay/sveltekit-yup",
-  "authors": [
-    "etuncay"
-  ],
-  "homepage": "https://github.com/etuncay/sveltekit-yup",
-  "downloads": 18,
-  "dependents": 0,
-  "updated": "2023-11-15T15:48:29.096Z",
-  "tags": [
-    "ui",
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "sveltekit-yup",
+	"description": "Validate forms in SvelteKit using Yup schema.",
+	"repo_url": "https://github.com/etuncay/sveltekit-yup",
+	"authors": ["etuncay"],
+	"homepage": "https://github.com/etuncay/sveltekit-yup",
+	"downloads": 18,
+	"dependents": 0,
+	"updated": "2023-11-15T15:48:29.096Z",
+	"tags": ["ui", "miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

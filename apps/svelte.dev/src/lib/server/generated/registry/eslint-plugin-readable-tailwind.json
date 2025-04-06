@@ -1,18 +1,19 @@
 {
-  "name": "eslint-plugin-readable-tailwind",
-  "description": "Auto-wraps Tailwind classes for improved readability.",
-  "repo_url": "https://github.com/schoero/eslint-plugin-readable-tailwind",
-  "authors": [
-    "schoero"
-  ],
-  "homepage": "https://github.com/schoero/eslint-plugin-readable-tailwind#readme",
-  "downloads": 8326,
-  "dependents": 6,
-  "updated": "2025-03-08T20:27:37.922Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 164
+	"name": "eslint-plugin-readable-tailwind",
+	"description": "Auto-wraps Tailwind classes for improved readability.",
+	"repo_url": "https://github.com/schoero/eslint-plugin-readable-tailwind",
+	"authors": ["schoero"],
+	"homepage": "https://github.com/schoero/eslint-plugin-readable-tailwind#readme",
+	"downloads": 8326,
+	"dependents": 6,
+	"updated": "2025-03-08T20:27:37.922Z",
+	"tags": ["tooling"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 164,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "svelte-unstyled-tags",
-  "description": "Create unstyled tag input component for Svelte.",
-  "repo_url": "https://github.com/edjw/svelte-unstyled-tags",
-  "authors": [
-    "edjohnsonwilliams"
-  ],
-  "homepage": "https://github.com/edjw/svelte-unstyled-tags#readme",
-  "downloads": 18,
-  "dependents": 0,
-  "updated": "2025-03-05T14:58:22.879Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 1
+	"name": "svelte-unstyled-tags",
+	"description": "Create unstyled tag input component for Svelte.",
+	"repo_url": "https://github.com/edjw/svelte-unstyled-tags",
+	"authors": ["edjohnsonwilliams"],
+	"homepage": "https://github.com/edjw/svelte-unstyled-tags#readme",
+	"downloads": 18,
+	"dependents": 0,
+	"updated": "2025-03-05T14:58:22.879Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": true
+	}
 }

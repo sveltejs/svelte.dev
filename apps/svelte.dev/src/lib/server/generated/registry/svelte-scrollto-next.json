@@ -1,18 +1,19 @@
 {
-  "name": "svelte-scrollto-next",
-  "description": "Animate vertical and horizontal scrolling in Svelte.",
-  "repo_url": "https://github.com/brev/svelte-scrollto-next",
-  "authors": [
-    "brev"
-  ],
-  "homepage": "https://github.com/brev/svelte-scrollto-next#readme",
-  "downloads": 3,
-  "dependents": 0,
-  "updated": "2023-06-29T23:17:29.993Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelte-scrollto-next",
+	"description": "Animate vertical and horizontal scrolling in Svelte.",
+	"repo_url": "https://github.com/brev/svelte-scrollto-next",
+	"authors": ["brev"],
+	"homepage": "https://github.com/brev/svelte-scrollto-next#readme",
+	"downloads": 3,
+	"dependents": 0,
+	"updated": "2023-06-29T23:17:29.993Z",
+	"tags": ["miscellaneous"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

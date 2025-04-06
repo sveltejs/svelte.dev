@@ -1,17 +1,18 @@
 {
-  "name": "fab-kit",
-  "description": "UI Kit for Svelte, providing reusable components.",
-  "repo_url": "https://github.com/gived/fab-kit",
-  "authors": [
-    "isnit0"
-  ],
-  "homepage": "https://github.com/gived/fab-kit#readme",
-  "downloads": 28,
-  "dependents": 0,
-  "updated": "2021-10-29T15:25:51.374Z",
-  "tags": [
-    "design-system"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "fab-kit",
+	"description": "UI Kit for Svelte, providing reusable components.",
+	"repo_url": "https://github.com/gived/fab-kit",
+	"authors": ["isnit0"],
+	"homepage": "https://github.com/gived/fab-kit#readme",
+	"downloads": 28,
+	"dependents": 0,
+	"updated": "2021-10-29T15:25:51.374Z",
+	"tags": ["design-system"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

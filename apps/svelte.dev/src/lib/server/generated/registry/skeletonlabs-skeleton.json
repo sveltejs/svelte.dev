@@ -1,22 +1,19 @@
 {
-  "name": "@skeletonlabs/skeleton",
-  "description": "Comprehensive UI component library for Svelte with themes and utilities.",
-  "repo_url": "https://github.com/skeletonlabs/skeleton",
-  "authors": [
-    "skeletonadmin",
-    "endigo9740",
-    "teknikal",
-    "cokakoala"
-  ],
-  "homepage": "https://github.com/skeletonlabs/skeleton#readme",
-  "downloads": 25119,
-  "dependents": 9,
-  "updated": "2025-03-22T13:22:43.826Z",
-  "tags": [
-    "design-system",
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 5432
+	"name": "@skeletonlabs/skeleton",
+	"description": "Comprehensive UI component library for Svelte with themes and utilities.",
+	"repo_url": "https://github.com/skeletonlabs/skeleton",
+	"authors": ["skeletonadmin", "endigo9740", "teknikal", "cokakoala"],
+	"homepage": "https://github.com/skeletonlabs/skeleton#readme",
+	"downloads": 25119,
+	"dependents": 9,
+	"updated": "2025-03-22T13:22:43.826Z",
+	"tags": ["design-system", "ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 5432,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,16 +1,19 @@
 {
-  "name": "@supabase/auth-helpers-sveltekit",
-  "description": "Provides auth helpers for Supabase in SvelteKit.",
-  "repo_url": "https://github.com/supabase/auth-helpers",
-  "authors": [],
-  "homepage": "https://github.com/supabase/auth-helpers/tree/main/packages/sveltekit#readme",
-  "downloads": 0,
-  "dependents": 0,
-  "updated": "2024-04-09T10:33:33.451Z",
-  "tags": [
-    "auth"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 899
+	"name": "@supabase/auth-helpers-sveltekit",
+	"description": "Provides auth helpers for Supabase in SvelteKit.",
+	"repo_url": "https://github.com/supabase/auth-helpers",
+	"authors": [],
+	"homepage": "https://github.com/supabase/auth-helpers/tree/main/packages/sveltekit#readme",
+	"downloads": 0,
+	"dependents": 0,
+	"updated": "2024-04-09T10:33:33.451Z",
+	"tags": ["auth"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 899,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

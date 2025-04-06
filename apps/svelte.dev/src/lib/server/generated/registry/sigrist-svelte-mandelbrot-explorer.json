@@ -1,18 +1,19 @@
 {
-  "name": "sigrist-svelte-mandelbrot-explorer",
-  "description": "Renders Mandelbrot set using WebGL in Svelte.",
-  "repo_url": "https://github.com/LorisSigrist/svelte-mandelbrot-explorer",
-  "authors": [
-    "lurmwoch"
-  ],
-  "homepage": "https://github.com/LorisSigrist/svelte-mandelbrot-explorer#readme",
-  "downloads": 6,
-  "dependents": 0,
-  "updated": "2021-11-04T20:01:29.288Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "sigrist-svelte-mandelbrot-explorer",
+	"description": "Renders Mandelbrot set using WebGL in Svelte.",
+	"repo_url": "https://github.com/LorisSigrist/svelte-mandelbrot-explorer",
+	"authors": ["lurmwoch"],
+	"homepage": "https://github.com/LorisSigrist/svelte-mandelbrot-explorer#readme",
+	"downloads": 6,
+	"dependents": 0,
+	"updated": "2021-11-04T20:01:29.288Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

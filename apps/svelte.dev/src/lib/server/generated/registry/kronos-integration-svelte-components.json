@@ -1,19 +1,19 @@
 {
-  "name": "@kronos-integration/svelte-components",
-  "description": "Provides Svelte components for Kronos.",
-  "repo_url": "https://github.com/Kronos-Integration/svelte-components",
-  "authors": [
-    "arlac77",
-    "darlenya"
-  ],
-  "homepage": "https://github.com/Kronos-Integration/svelte-components#readme",
-  "downloads": 58,
-  "dependents": 3,
-  "updated": "2024-05-28T15:38:33.272Z",
-  "tags": [
-    "design-system"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 1
+	"name": "@kronos-integration/svelte-components",
+	"description": "Provides Svelte components for Kronos.",
+	"repo_url": "https://github.com/Kronos-Integration/svelte-components",
+	"authors": ["arlac77", "darlenya"],
+	"homepage": "https://github.com/Kronos-Integration/svelte-components#readme",
+	"downloads": 58,
+	"dependents": 3,
+	"updated": "2024-05-28T15:38:33.272Z",
+	"tags": ["design-system"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

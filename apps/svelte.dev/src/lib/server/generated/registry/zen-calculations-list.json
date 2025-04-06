@@ -1,18 +1,18 @@
 {
-  "name": "zen-calculations-list",
-  "description": "Create sortable lists for dimensions and expressions in Svelte.",
-  "repo_url": "https://gitlab.com/countnazgul/zen-dim-measure-list",
-  "authors": [
-    "stefan.stoichev",
-    "arperyan"
-  ],
-  "homepage": "https://gitlab.com/countnazgul/zen-dim-measure-list#readme",
-  "downloads": 39,
-  "dependents": 0,
-  "updated": "2020-10-29T12:38:30.506Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "zen-calculations-list",
+	"description": "Create sortable lists for dimensions and expressions in Svelte.",
+	"repo_url": "https://gitlab.com/countnazgul/zen-dim-measure-list",
+	"authors": ["stefan.stoichev", "arperyan"],
+	"homepage": "https://gitlab.com/countnazgul/zen-dim-measure-list#readme",
+	"downloads": 39,
+	"dependents": 0,
+	"updated": "2020-10-29T12:38:30.506Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

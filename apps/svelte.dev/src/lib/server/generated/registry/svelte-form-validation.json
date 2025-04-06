@@ -1,18 +1,19 @@
 {
-  "name": "svelte-form-validation",
-  "description": "Validate Svelte forms using Yup schema validation.",
-  "repo_url": "https://github.com/DhyeyMoliya/svelte-form-validation",
-  "authors": [
-    "dhyeymoliya"
-  ],
-  "homepage": "https://github.com/DhyeyMoliya/svelte-form-validation#readme",
-  "downloads": 12,
-  "dependents": 0,
-  "updated": "2021-11-06T18:03:27.150Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 2
+	"name": "svelte-form-validation",
+	"description": "Validate Svelte forms using Yup schema validation.",
+	"repo_url": "https://github.com/DhyeyMoliya/svelte-form-validation",
+	"authors": ["dhyeymoliya"],
+	"homepage": "https://github.com/DhyeyMoliya/svelte-form-validation#readme",
+	"downloads": 12,
+	"dependents": 0,
+	"updated": "2021-11-06T18:03:27.150Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

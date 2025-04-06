@@ -1,18 +1,19 @@
 {
-  "name": "svelte-preprocess-unocss",
-  "description": "Run UnoCSS in svelte-scoped mode via preprocessor.",
-  "repo_url": "https://github.com/jacob-8/svelte-scoped-uno",
-  "authors": [
-    "jacobbowdoin"
-  ],
-  "homepage": "https://polylingual.dev",
-  "downloads": 8,
-  "dependents": 0,
-  "updated": "2023-05-20T00:02:34.567Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 17
+	"name": "svelte-preprocess-unocss",
+	"description": "Run UnoCSS in svelte-scoped mode via preprocessor.",
+	"repo_url": "https://github.com/jacob-8/svelte-scoped-uno",
+	"authors": ["jacobbowdoin"],
+	"homepage": "https://polylingual.dev",
+	"downloads": 8,
+	"dependents": 0,
+	"updated": "2023-05-20T00:02:34.567Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 17,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

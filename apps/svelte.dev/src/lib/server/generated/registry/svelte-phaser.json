@@ -1,17 +1,19 @@
 {
-  "name": "svelte-phaser",
-  "description": "Integrate Phaser 3 game framework with Svelte.",
-  "repo_url": "https://github.com/mattjennings/svelte-phaser",
-  "authors": [
-    "mattjennings"
-  ],
-  "downloads": 34,
-  "dependents": 0,
-  "updated": "2021-02-15T18:55:44.261Z",
-  "tags": [
-    "media"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 79
+	"name": "svelte-phaser",
+	"description": "Integrate Phaser 3 game framework with Svelte.",
+	"repo_url": "https://github.com/mattjennings/svelte-phaser",
+	"authors": ["mattjennings"],
+	"downloads": 34,
+	"dependents": 0,
+	"updated": "2021-02-15T18:55:44.261Z",
+	"tags": ["media"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 79,
+	"homepage": null,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

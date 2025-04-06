@@ -1,18 +1,19 @@
 {
-  "name": "svelte-key",
-  "description": "Recreate content when key changes, emulating React's key feature.",
-  "repo_url": "https://github.com/rixo/svelte-key",
-  "authors": [
-    "rixo"
-  ],
-  "homepage": "https://github.com/rixo/svelte-key",
-  "downloads": 11,
-  "dependents": 0,
-  "updated": "2019-11-26T11:26:04.452Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 6
+	"name": "svelte-key",
+	"description": "Recreate content when key changes, emulating React's key feature.",
+	"repo_url": "https://github.com/rixo/svelte-key",
+	"authors": ["rixo"],
+	"homepage": "https://github.com/rixo/svelte-key",
+	"downloads": 11,
+	"dependents": 0,
+	"updated": "2019-11-26T11:26:04.452Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 6,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

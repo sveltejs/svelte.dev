@@ -1,18 +1,19 @@
 {
-  "name": "svelte-popperjs",
-  "description": "Use Popper.js for tooltips and positioning in Svelte.",
-  "repo_url": "https://github.com/bryanmylee/svelte-popperjs",
-  "authors": [
-    "bryanmylee"
-  ],
-  "homepage": "https://github.com/bryanmylee/svelte-popperjs#readme",
-  "downloads": 7722,
-  "dependents": 12,
-  "updated": "2022-08-30T04:12:00.943Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 113
+	"name": "svelte-popperjs",
+	"description": "Use Popper.js for tooltips and positioning in Svelte.",
+	"repo_url": "https://github.com/bryanmylee/svelte-popperjs",
+	"authors": ["bryanmylee"],
+	"homepage": "https://github.com/bryanmylee/svelte-popperjs#readme",
+	"downloads": 7722,
+	"dependents": 12,
+	"updated": "2022-08-30T04:12:00.943Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 113,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

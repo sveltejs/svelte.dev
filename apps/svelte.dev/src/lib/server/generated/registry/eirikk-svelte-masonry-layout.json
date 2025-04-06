@@ -1,18 +1,19 @@
 {
-  "name": "@eirikk/svelte-masonry-layout",
-  "description": "Create Masonry layouts in Svelte applications, with dynamic item sizing.",
-  "repo_url": "https://github.com/ampled/svelte-masonrylayout",
-  "authors": [
-    "eirikk"
-  ],
-  "homepage": "https://github.com/ampled/svelte-masonrylayout#readme",
-  "downloads": 0,
-  "dependents": 0,
-  "updated": "2023-02-12T12:57:25.688Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 2
+	"name": "@eirikk/svelte-masonry-layout",
+	"description": "Create Masonry layouts in Svelte applications, with dynamic item sizing.",
+	"repo_url": "https://github.com/ampled/svelte-masonrylayout",
+	"authors": ["eirikk"],
+	"homepage": "https://github.com/ampled/svelte-masonrylayout#readme",
+	"downloads": 0,
+	"dependents": 0,
+	"updated": "2023-02-12T12:57:25.688Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

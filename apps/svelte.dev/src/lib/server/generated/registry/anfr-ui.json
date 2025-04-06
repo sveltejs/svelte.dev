@@ -1,17 +1,18 @@
 {
-  "name": "@anfr/ui",
-  "description": "Create Svelte component library for Anafro tools.",
-  "repo_url": "",
-  "authors": [
-    "anfr"
-  ],
-  "homepage": "https://github.com/anafro/ui",
-  "downloads": 0,
-  "dependents": 0,
-  "updated": "2024-12-17T02:18:06.756Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "@anfr/ui",
+	"description": "Create Svelte component library for Anafro tools.",
+	"repo_url": "",
+	"authors": ["anfr"],
+	"homepage": "https://github.com/anafro/ui",
+	"downloads": 0,
+	"dependents": 0,
+	"updated": "2024-12-17T02:18:06.756Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

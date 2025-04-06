@@ -1,18 +1,19 @@
 {
-  "name": "@whizzes/svelte-forms",
-  "description": "Manage forms with validation in Svelte applications.",
-  "repo_url": "https://github.com/whizzes/svelte-forms",
-  "authors": [
-    "estebanborai"
-  ],
-  "homepage": "https://github.com/whizzes/svelte-forms#readme",
-  "downloads": 14,
-  "dependents": 0,
-  "updated": "2024-03-16T22:33:25.450Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 5
+	"name": "@whizzes/svelte-forms",
+	"description": "Manage forms with validation in Svelte applications.",
+	"repo_url": "https://github.com/whizzes/svelte-forms",
+	"authors": ["estebanborai"],
+	"homepage": "https://github.com/whizzes/svelte-forms#readme",
+	"downloads": 14,
+	"dependents": 0,
+	"updated": "2024-03-16T22:33:25.450Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 5,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

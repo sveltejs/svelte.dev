@@ -1,18 +1,19 @@
 {
-  "name": "svelte-a11y-dialog",
-  "description": "Create Svelte wrapper for a11y-dialog.",
-  "repo_url": "https://github.com/AgnosticUI/svelte-a11y-dialog",
-  "authors": [
-    "rlevin"
-  ],
-  "homepage": "https://github.com/AgnosticUI/svelte-a11y-dialog",
-  "downloads": 346,
-  "dependents": 3,
-  "updated": "2022-03-18T15:55:40.801Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 7
+	"name": "svelte-a11y-dialog",
+	"description": "Create Svelte wrapper for a11y-dialog.",
+	"repo_url": "https://github.com/AgnosticUI/svelte-a11y-dialog",
+	"authors": ["rlevin"],
+	"homepage": "https://github.com/AgnosticUI/svelte-a11y-dialog",
+	"downloads": 346,
+	"dependents": 3,
+	"updated": "2022-03-18T15:55:40.801Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 7,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

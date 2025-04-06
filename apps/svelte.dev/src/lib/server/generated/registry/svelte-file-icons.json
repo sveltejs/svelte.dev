@@ -1,18 +1,19 @@
 {
-  "name": "svelte-file-icons",
-  "description": "Provide SVG file icon components for Svelte.",
-  "repo_url": "https://github.com/shinokada/svelte-file-icons",
-  "authors": [
-    "shinichiokada"
-  ],
-  "homepage": "https://svelte-file-icons.codewithshin.com/",
-  "downloads": 45,
-  "dependents": 0,
-  "updated": "2024-03-01T16:46:50.565Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 3
+	"name": "svelte-file-icons",
+	"description": "Provide SVG file icon components for Svelte.",
+	"repo_url": "https://github.com/shinokada/svelte-file-icons",
+	"authors": ["shinichiokada"],
+	"homepage": "https://svelte-file-icons.codewithshin.com/",
+	"downloads": 45,
+	"dependents": 0,
+	"updated": "2024-03-01T16:46:50.565Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 3,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

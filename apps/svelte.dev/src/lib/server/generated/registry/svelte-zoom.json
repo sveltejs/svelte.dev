@@ -1,18 +1,19 @@
 {
-  "name": "svelte-zoom",
-  "description": "Implement image scaling with pinch and pan in Svelte.",
-  "repo_url": "https://github.com/vaheqelyan/svelte-zoom",
-  "authors": [
-    "vaheqelyan"
-  ],
-  "homepage": "https://github.com/vaheqelyan/svelte-zoom#readme",
-  "downloads": 300,
-  "dependents": 2,
-  "updated": "2021-08-14T12:10:29.116Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 77
+	"name": "svelte-zoom",
+	"description": "Implement image scaling with pinch and pan in Svelte.",
+	"repo_url": "https://github.com/vaheqelyan/svelte-zoom",
+	"authors": ["vaheqelyan"],
+	"homepage": "https://github.com/vaheqelyan/svelte-zoom#readme",
+	"downloads": 300,
+	"dependents": 2,
+	"updated": "2021-08-14T12:10:29.116Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 77,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

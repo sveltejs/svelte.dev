@@ -1,18 +1,19 @@
 {
-  "name": "svelte-num-otp",
-  "description": "Create numbers OTP input component for Svelte.",
-  "repo_url": "https://github.com/rezk2ll/svelte-num-otp",
-  "authors": [
-    "kferjani"
-  ],
-  "homepage": "https://github.com/rezk2ll/svelte-num-otp#readme",
-  "downloads": 42,
-  "dependents": 0,
-  "updated": "2024-08-27T15:07:07.550Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelte-num-otp",
+	"description": "Create numbers OTP input component for Svelte.",
+	"repo_url": "https://github.com/rezk2ll/svelte-num-otp",
+	"authors": ["kferjani"],
+	"homepage": "https://github.com/rezk2ll/svelte-num-otp#readme",
+	"downloads": 42,
+	"dependents": 0,
+	"updated": "2024-08-27T15:07:07.550Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

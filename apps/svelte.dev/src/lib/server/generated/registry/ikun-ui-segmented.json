@@ -1,16 +1,17 @@
 {
-  "name": "@ikun-ui/segmented",
-  "description": "Create segmented controls for Svelte applications.",
-  "repo_url": "",
-  "authors": [
-    "baiwusanyu"
-  ],
-  "downloads": 1,
-  "dependents": 1,
-  "updated": "2025-01-24T03:49:17.272Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@ikun-ui/segmented",
+	"description": "Create segmented controls for Svelte applications.",
+	"repo_url": "",
+	"authors": ["baiwusanyu"],
+	"downloads": 1,
+	"dependents": 1,
+	"updated": "2025-01-24T03:49:17.272Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

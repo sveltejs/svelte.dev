@@ -1,16 +1,17 @@
 {
-  "name": "svelte-copyright",
-  "description": "Formats and displays copyright notices in Svelte.",
-  "repo_url": "",
-  "authors": [
-    "himynameisdave"
-  ],
-  "downloads": 28,
-  "dependents": 0,
-  "updated": "2023-08-31T18:49:12.288Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-copyright",
+	"description": "Formats and displays copyright notices in Svelte.",
+	"repo_url": "",
+	"authors": ["himynameisdave"],
+	"downloads": 28,
+	"dependents": 0,
+	"updated": "2023-08-31T18:49:12.288Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

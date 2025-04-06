@@ -1,18 +1,19 @@
 {
-  "name": "svelte-gitlab-icons",
-  "description": "Use GitLab SVG icons as Svelte components.",
-  "repo_url": "https://github.com/metonym/svelte-gitlab-icons",
-  "authors": [
-    "metonym"
-  ],
-  "homepage": "https://github.com/metonym/svelte-gitlab-icons",
-  "downloads": 28,
-  "dependents": 0,
-  "updated": "2023-09-26T20:12:15.736Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 2
+	"name": "svelte-gitlab-icons",
+	"description": "Use GitLab SVG icons as Svelte components.",
+	"repo_url": "https://github.com/metonym/svelte-gitlab-icons",
+	"authors": ["metonym"],
+	"homepage": "https://github.com/metonym/svelte-gitlab-icons",
+	"downloads": 28,
+	"dependents": 0,
+	"updated": "2023-09-26T20:12:15.736Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

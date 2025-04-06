@@ -1,18 +1,18 @@
 {
-  "name": "@soleil-se/config-mediaflow-svelte",
-  "description": "Provides configuration components for selecting images/videos from Mediaflow.",
-  "repo_url": "",
-  "authors": [
-    "soleil-ab",
-    "kling90"
-  ],
-  "homepage": "https://docs.soleil.se/packages/config-mediaflow-svelte",
-  "downloads": 18,
-  "dependents": 0,
-  "updated": "2025-03-11T14:16:10.086Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "@soleil-se/config-mediaflow-svelte",
+	"description": "Provides configuration components for selecting images/videos from Mediaflow.",
+	"repo_url": "",
+	"authors": ["soleil-ab", "kling90"],
+	"homepage": "https://docs.soleil.se/packages/config-mediaflow-svelte",
+	"downloads": 18,
+	"dependents": 0,
+	"updated": "2025-03-11T14:16:10.086Z",
+	"tags": ["integration"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": true
+	}
 }

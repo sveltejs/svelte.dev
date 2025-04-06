@@ -1,17 +1,18 @@
 {
-  "name": "svelte-paginate-store",
-  "description": "Create Svelte store with pagination for data management.",
-  "repo_url": "https://github.com/stevenrico/svelte-paginate-store",
-  "authors": [
-    "stevenrico"
-  ],
-  "homepage": "https://github.com/stevenrico/svelte-paginate-store",
-  "downloads": 6,
-  "dependents": 0,
-  "updated": "2020-03-12T13:32:59.925Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-paginate-store",
+	"description": "Create Svelte store with pagination for data management.",
+	"repo_url": "https://github.com/stevenrico/svelte-paginate-store",
+	"authors": ["stevenrico"],
+	"homepage": "https://github.com/stevenrico/svelte-paginate-store",
+	"downloads": 6,
+	"dependents": 0,
+	"updated": "2020-03-12T13:32:59.925Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

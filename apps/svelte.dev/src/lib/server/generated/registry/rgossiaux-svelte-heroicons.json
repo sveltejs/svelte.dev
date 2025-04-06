@@ -1,18 +1,19 @@
 {
-  "name": "@rgossiaux/svelte-heroicons",
-  "description": "Svelte wrappers for Heroicons library.",
-  "repo_url": "https://github.com/rgossiaux/svelte-heroicons",
-  "authors": [
-    "rgossiaux"
-  ],
-  "homepage": "https://github.com/rgossiaux/svelte-heroicons",
-  "downloads": 136,
-  "dependents": 0,
-  "updated": "2022-02-10T06:08:17.906Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 66
+	"name": "@rgossiaux/svelte-heroicons",
+	"description": "Svelte wrappers for Heroicons library.",
+	"repo_url": "https://github.com/rgossiaux/svelte-heroicons",
+	"authors": ["rgossiaux"],
+	"homepage": "https://github.com/rgossiaux/svelte-heroicons",
+	"downloads": 136,
+	"dependents": 0,
+	"updated": "2022-02-10T06:08:17.906Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 66,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

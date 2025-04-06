@@ -1,18 +1,19 @@
 {
-  "name": "@shipitdev/sveltepocket",
-  "description": "Query data from PocketBase instance into Svelte apps.",
-  "repo_url": "https://github.com/brennerm/sveltepocket",
-  "authors": [
-    "shipitdev"
-  ],
-  "homepage": "https://github.com/brennerm/sveltepocket#readme",
-  "downloads": 58,
-  "dependents": 0,
-  "updated": "2025-03-25T17:33:34.870Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 13
+	"name": "@shipitdev/sveltepocket",
+	"description": "Query data from PocketBase instance into Svelte apps.",
+	"repo_url": "https://github.com/brennerm/sveltepocket",
+	"authors": ["shipitdev"],
+	"homepage": "https://github.com/brennerm/sveltepocket#readme",
+	"downloads": 58,
+	"dependents": 0,
+	"updated": "2025-03-25T17:33:34.870Z",
+	"tags": ["integration"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 13,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

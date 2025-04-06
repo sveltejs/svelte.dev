@@ -1,17 +1,18 @@
 {
-  "name": "kudu-components",
-  "description": "Provide reusable UI components for Kudu projects.",
-  "repo_url": "https://github.com/kudu-consultant/kudu-components",
-  "authors": [
-    "kuduconsultant"
-  ],
-  "homepage": "https://github.com/kudu-consultant/kudu-components",
-  "downloads": 10,
-  "dependents": 0,
-  "updated": "2023-07-28T16:54:55.161Z",
-  "tags": [
-    "design-system"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "kudu-components",
+	"description": "Provide reusable UI components for Kudu projects.",
+	"repo_url": "https://github.com/kudu-consultant/kudu-components",
+	"authors": ["kuduconsultant"],
+	"homepage": "https://github.com/kudu-consultant/kudu-components",
+	"downloads": 10,
+	"dependents": 0,
+	"updated": "2023-07-28T16:54:55.161Z",
+	"tags": ["design-system"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "filedrop-svelte",
-  "description": "Create drag-and-drop file upload zones in Svelte applications.",
-  "repo_url": "https://github.com/chanced/filedrop-svelte",
-  "authors": [
-    "chance--"
-  ],
-  "homepage": "https://github.com/chanced/filedrop-svelte#readme",
-  "downloads": 1067,
-  "dependents": 2,
-  "updated": "2022-05-09T16:14:11.728Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 112
+	"name": "filedrop-svelte",
+	"description": "Create drag-and-drop file upload zones in Svelte applications.",
+	"repo_url": "https://github.com/chanced/filedrop-svelte",
+	"authors": ["chance--"],
+	"homepage": "https://github.com/chanced/filedrop-svelte#readme",
+	"downloads": 1067,
+	"dependents": 2,
+	"updated": "2022-05-09T16:14:11.728Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 112,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

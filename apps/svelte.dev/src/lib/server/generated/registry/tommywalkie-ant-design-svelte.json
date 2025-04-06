@@ -1,18 +1,18 @@
 {
-  "name": "@tommywalkie/ant-design-svelte",
-  "description": "Unofficial Ant Design components for Svelte.",
-  "repo_url": "https://github.com/tommywalkie/ant-design-svelte",
-  "authors": [
-    "tommywalkie"
-  ],
-  "homepage": "https://github.com/tommywalkie/ant-design-svelte#readme",
-  "downloads": 10,
-  "dependents": 0,
-  "updated": "2020-12-11T10:46:00.481Z",
-  "tags": [
-    "design-system",
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@tommywalkie/ant-design-svelte",
+	"description": "Unofficial Ant Design components for Svelte.",
+	"repo_url": "https://github.com/tommywalkie/ant-design-svelte",
+	"authors": ["tommywalkie"],
+	"homepage": "https://github.com/tommywalkie/ant-design-svelte#readme",
+	"downloads": 10,
+	"dependents": 0,
+	"updated": "2020-12-11T10:46:00.481Z",
+	"tags": ["design-system", "ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

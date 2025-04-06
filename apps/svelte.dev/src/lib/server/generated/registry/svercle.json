@@ -1,18 +1,19 @@
 {
-  "name": "svercle",
-  "description": "Generate superellipse approximations for Svelte components.",
-  "repo_url": "https://github.com/aMediocreDad/svercle",
-  "authors": [
-    "amediocredad"
-  ],
-  "homepage": "https://github.com/aMediocreDad/svercle#readme",
-  "downloads": 7,
-  "dependents": 0,
-  "updated": "2021-11-05T23:34:34.874Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 12
+	"name": "svercle",
+	"description": "Generate superellipse approximations for Svelte components.",
+	"repo_url": "https://github.com/aMediocreDad/svercle",
+	"authors": ["amediocredad"],
+	"homepage": "https://github.com/aMediocreDad/svercle#readme",
+	"downloads": 7,
+	"dependents": 0,
+	"updated": "2021-11-05T23:34:34.874Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 12,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

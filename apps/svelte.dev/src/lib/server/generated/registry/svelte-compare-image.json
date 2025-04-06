@@ -1,18 +1,19 @@
 {
-  "name": "svelte-compare-image",
-  "description": "Compare two images side-by-side with slider control.",
-  "repo_url": "https://github.com/BrianMitchL/svelte-compare-image",
-  "authors": [
-    "brianmitchl"
-  ],
-  "homepage": "https://projects.brianm.me/svelte-compare-image/",
-  "downloads": 51,
-  "dependents": 0,
-  "updated": "2024-04-18T05:36:53.378Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 5
+	"name": "svelte-compare-image",
+	"description": "Compare two images side-by-side with slider control.",
+	"repo_url": "https://github.com/BrianMitchL/svelte-compare-image",
+	"authors": ["brianmitchl"],
+	"homepage": "https://projects.brianm.me/svelte-compare-image/",
+	"downloads": 51,
+	"dependents": 0,
+	"updated": "2024-04-18T05:36:53.378Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 5,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

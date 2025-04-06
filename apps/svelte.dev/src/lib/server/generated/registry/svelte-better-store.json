@@ -1,17 +1,18 @@
 {
-  "name": "svelte-better-store",
-  "description": "Provides state management similar to Svelte's store.",
-  "repo_url": "https://github.com/ragokan/svelte-better-store",
-  "authors": [
-    "rago"
-  ],
-  "homepage": "https://github.com/ragokan/svelte-better-store#readme",
-  "downloads": 12,
-  "dependents": 1,
-  "updated": "2021-12-28T18:45:31.538Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-better-store",
+	"description": "Provides state management similar to Svelte's store.",
+	"repo_url": "https://github.com/ragokan/svelte-better-store",
+	"authors": ["rago"],
+	"homepage": "https://github.com/ragokan/svelte-better-store#readme",
+	"downloads": 12,
+	"dependents": 1,
+	"updated": "2021-12-28T18:45:31.538Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "swheel",
-  "description": "Create declarative component-based routing for Svelte.",
-  "repo_url": "https://github.com/qutran/swheel",
-  "authors": [
-    "dmitry.kutran"
-  ],
-  "homepage": "https://github.com/qutran/swheel",
-  "downloads": 19,
-  "dependents": 0,
-  "updated": "2019-09-05T14:20:54.973Z",
-  "tags": [
-    "router"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 43
+	"name": "swheel",
+	"description": "Create declarative component-based routing for Svelte.",
+	"repo_url": "https://github.com/qutran/swheel",
+	"authors": ["dmitry.kutran"],
+	"homepage": "https://github.com/qutran/swheel",
+	"downloads": 19,
+	"dependents": 0,
+	"updated": "2019-09-05T14:20:54.973Z",
+	"tags": ["router"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 43,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

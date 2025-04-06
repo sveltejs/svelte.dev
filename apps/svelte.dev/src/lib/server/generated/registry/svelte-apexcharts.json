@@ -1,18 +1,19 @@
 {
-  "name": "svelte-apexcharts",
-  "description": "Create interactive visualizations in Svelte with ApexCharts.",
-  "repo_url": "https://github.com/galkatz373/svelte-apexcharts",
-  "authors": [
-    "galkatz373"
-  ],
-  "homepage": "https://github.com/galkatz373/svelte-apexcharts#readme",
-  "downloads": 1494,
-  "dependents": 7,
-  "updated": "2020-06-24T19:10:49.645Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 72
+	"name": "svelte-apexcharts",
+	"description": "Create interactive visualizations in Svelte with ApexCharts.",
+	"repo_url": "https://github.com/galkatz373/svelte-apexcharts",
+	"authors": ["galkatz373"],
+	"homepage": "https://github.com/galkatz373/svelte-apexcharts#readme",
+	"downloads": 1494,
+	"dependents": 7,
+	"updated": "2020-06-24T19:10:49.645Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 72,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,19 +1,19 @@
 {
-  "name": "routve",
-  "description": "Advanced Svelte 3 router with nested routing and code splitting.",
-  "repo_url": "https://github.com/routve/routve",
-  "authors": [
-    "kahverengi",
-    "berkaltiok"
-  ],
-  "homepage": "https://github.com/routve/routve#readme",
-  "downloads": 11,
-  "dependents": 0,
-  "updated": "2021-02-17T09:38:05.671Z",
-  "tags": [
-    "router"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 24
+	"name": "routve",
+	"description": "Advanced Svelte 3 router with nested routing and code splitting.",
+	"repo_url": "https://github.com/routve/routve",
+	"authors": ["kahverengi", "berkaltiok"],
+	"homepage": "https://github.com/routve/routve#readme",
+	"downloads": 11,
+	"dependents": 0,
+	"updated": "2021-02-17T09:38:05.671Z",
+	"tags": ["router"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 24,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

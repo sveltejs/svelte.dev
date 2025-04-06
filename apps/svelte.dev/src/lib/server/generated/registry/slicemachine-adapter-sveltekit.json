@@ -1,30 +1,33 @@
 {
-  "name": "@slicemachine/adapter-sveltekit",
-  "description": "Adapts SvelteKit for use with Prismic Slice Machine.",
-  "repo_url": "https://github.com/prismicio/slice-machine",
-  "authors": [
-    "lihbr",
-    "angeloashmore",
-    "amaurycahuet",
-    "odim",
-    "levimykel",
-    "danielbg",
-    "nvld",
-    "prismic-ci",
-    "jomifepe",
-    "srflp",
-    "bohdan-one",
-    "xrutayisire",
-    "bapmrl"
-  ],
-  "downloads": 4968,
-  "dependents": 0,
-  "updated": "2025-03-21T15:38:28.152Z",
-  "tags": [
-    "adapter",
-    "tooling"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 294
+	"name": "@slicemachine/adapter-sveltekit",
+	"description": "Adapts SvelteKit for use with Prismic Slice Machine.",
+	"repo_url": "https://github.com/prismicio/slice-machine",
+	"authors": [
+		"lihbr",
+		"angeloashmore",
+		"amaurycahuet",
+		"odim",
+		"levimykel",
+		"danielbg",
+		"nvld",
+		"prismic-ci",
+		"jomifepe",
+		"srflp",
+		"bohdan-one",
+		"xrutayisire",
+		"bapmrl"
+	],
+	"downloads": 4968,
+	"dependents": 0,
+	"updated": "2025-03-21T15:38:28.152Z",
+	"tags": ["adapter", "tooling"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 294,
+	"homepage": "https://prismic.io/docs",
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

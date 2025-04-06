@@ -1,20 +1,19 @@
 {
-  "name": "@svelteuidev/core",
-  "description": "Create accessible web applications quickly with SvelteUI.",
-  "repo_url": "https://github.com/svelteuidev/svelteui",
-  "authors": [
-    "lowkey_daisy",
-    "uxtitan"
-  ],
-  "homepage": "https://svelteui.dev/",
-  "downloads": 637,
-  "dependents": 6,
-  "updated": "2024-07-07T14:30:27.404Z",
-  "tags": [
-    "design-system",
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 1369
+	"name": "@svelteuidev/core",
+	"description": "Create accessible web applications quickly with SvelteUI.",
+	"repo_url": "https://github.com/svelteuidev/svelteui",
+	"authors": ["lowkey_daisy", "uxtitan"],
+	"homepage": "https://svelteui.dev/",
+	"downloads": 637,
+	"dependents": 6,
+	"updated": "2024-07-07T14:30:27.404Z",
+	"tags": ["design-system", "ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 1370,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": true
+	}
 }

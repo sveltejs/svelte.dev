@@ -1,18 +1,19 @@
 {
-  "name": "@humanspeak/svelte-virtual-list",
-  "description": "Render large datasets efficiently with Svelte 5 virtual list.",
-  "repo_url": "https://github.com/humanspeak/svelte-virtual-list",
-  "authors": [
-    "humanspeakadmin"
-  ],
-  "homepage": "https://virtuallist.svelte.page",
-  "downloads": 17,
-  "dependents": 0,
-  "updated": "2025-01-21T17:10:25.865Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 0
+	"name": "@humanspeak/svelte-virtual-list",
+	"description": "Render large datasets efficiently with Svelte 5 virtual list.",
+	"repo_url": "https://github.com/humanspeak/svelte-virtual-list",
+	"authors": ["humanspeakadmin"],
+	"homepage": "https://virtuallist.svelte.page",
+	"downloads": 17,
+	"dependents": 0,
+	"updated": "2025-01-21T17:10:25.865Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

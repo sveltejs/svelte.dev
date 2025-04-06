@@ -1,18 +1,19 @@
 {
-  "name": "svelte-gestalt-icons",
-  "description": "Uses Pinterest Gestalt SVG icons as Svelte components.",
-  "repo_url": "https://github.com/metonym/svelte-gestalt-icons",
-  "authors": [
-    "metonym"
-  ],
-  "homepage": "https://github.com/metonym/svelte-gestalt-icons",
-  "downloads": 26,
-  "dependents": 0,
-  "updated": "2022-09-02T17:59:34.155Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "svelte-gestalt-icons",
+	"description": "Uses Pinterest Gestalt SVG icons as Svelte components.",
+	"repo_url": "https://github.com/metonym/svelte-gestalt-icons",
+	"authors": ["metonym"],
+	"homepage": "https://github.com/metonym/svelte-gestalt-icons",
+	"downloads": 26,
+	"dependents": 0,
+	"updated": "2022-09-02T17:59:34.155Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

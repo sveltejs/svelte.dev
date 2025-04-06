@@ -1,24 +1,19 @@
 {
-  "name": "@viamrobotics/svelte-sdk",
-  "description": "Build Svelte apps with Viam.",
-  "repo_url": "https://github.com/viamrobotics/viam-svelte-sdk",
-  "authors": [
-    "cheukt",
-    "mcous",
-    "stevebriskin",
-    "viambot",
-    "micheal.parks",
-    "mpviam",
-    "njooma"
-  ],
-  "homepage": "https://github.com/viamrobotics/viam-svelte-sdk#readme",
-  "downloads": 88,
-  "dependents": 0,
-  "updated": "2025-03-24T18:25:50.465Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 0
+	"name": "@viamrobotics/svelte-sdk",
+	"description": "Build Svelte apps with Viam.",
+	"repo_url": "https://github.com/viamrobotics/viam-svelte-sdk",
+	"authors": ["cheukt", "mcous", "stevebriskin", "viambot", "micheal.parks", "mpviam", "njooma"],
+	"homepage": "https://github.com/viamrobotics/viam-svelte-sdk#readme",
+	"downloads": 88,
+	"dependents": 0,
+	"updated": "2025-03-24T18:25:50.465Z",
+	"tags": ["integration"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

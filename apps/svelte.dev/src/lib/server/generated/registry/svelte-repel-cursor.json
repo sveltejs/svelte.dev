@@ -1,18 +1,19 @@
 {
-  "name": "svelte-repel-cursor",
-  "description": "Create Svelte action repelling element from cursor.",
-  "repo_url": "https://github.com/JuanDAC/power-styles",
-  "authors": [
-    "juandac"
-  ],
-  "homepage": "https://github.com/JuanDAC/power-styles#readme",
-  "downloads": 10,
-  "dependents": 0,
-  "updated": "2021-11-30T13:32:48.071Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 8
+	"name": "svelte-repel-cursor",
+	"description": "Create Svelte action repelling element from cursor.",
+	"repo_url": "https://github.com/JuanDAC/power-styles",
+	"authors": ["juandac"],
+	"homepage": "https://github.com/JuanDAC/power-styles#readme",
+	"downloads": 10,
+	"dependents": 0,
+	"updated": "2021-11-30T13:32:48.071Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 8,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

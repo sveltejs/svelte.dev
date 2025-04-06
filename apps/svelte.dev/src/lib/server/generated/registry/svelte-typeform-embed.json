@@ -1,18 +1,19 @@
 {
-  "name": "svelte-typeform-embed",
-  "description": "Embed Typeform forms within Svelte applications.",
-  "repo_url": "https://github.com/silvestrevivo/svelte-typeform-embed",
-  "authors": [
-    "silvestrevivo"
-  ],
-  "homepage": "https://svelte-typeform-embed.netlify.app/",
-  "downloads": 42,
-  "dependents": 0,
-  "updated": "2020-09-29T20:19:56.157Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 10
+	"name": "svelte-typeform-embed",
+	"description": "Embed Typeform forms within Svelte applications.",
+	"repo_url": "https://github.com/silvestrevivo/svelte-typeform-embed",
+	"authors": ["silvestrevivo"],
+	"homepage": "https://svelte-typeform-embed.netlify.app/",
+	"downloads": 42,
+	"dependents": 0,
+	"updated": "2020-09-29T20:19:56.157Z",
+	"tags": ["integration"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 10,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

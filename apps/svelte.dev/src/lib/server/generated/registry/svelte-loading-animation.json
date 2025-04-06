@@ -1,16 +1,17 @@
 {
-  "name": "svelte-loading-animation",
-  "description": "Collection of loading animation components for Svelte.",
-  "repo_url": "",
-  "authors": [
-    "thetrisatria"
-  ],
-  "downloads": 6,
-  "dependents": 0,
-  "updated": "2021-02-12T15:17:53.199Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-loading-animation",
+	"description": "Collection of loading animation components for Svelte.",
+	"repo_url": "",
+	"authors": ["thetrisatria"],
+	"downloads": 6,
+	"dependents": 0,
+	"updated": "2021-02-12T15:17:53.199Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

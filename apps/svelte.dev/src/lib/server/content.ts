@@ -172,7 +172,11 @@ export interface Package {
 
 	deprecated?: boolean;
 
-	svelte5: boolean;
+	svelte: {
+		3: boolean;
+		4: boolean;
+		5: boolean;
+	};
 
 	runes: boolean;
 

@@ -1,18 +1,19 @@
 {
-  "name": "@svelte-press/theme-default",
-  "description": "Default theme for Sveltepress documentation sites.",
-  "repo_url": "https://github.com/Blackman99/sveltepress",
-  "authors": [
-    "philadelphia"
-  ],
-  "homepage": "https://sveltepress.site/",
-  "downloads": 49,
-  "dependents": 0,
-  "updated": "2023-02-01T06:58:20.576Z",
-  "tags": [
-    "content"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 434
+	"name": "@svelte-press/theme-default",
+	"description": "Default theme for Sveltepress documentation sites.",
+	"repo_url": "https://github.com/Blackman99/sveltepress",
+	"authors": ["philadelphia"],
+	"homepage": "https://sveltepress.site/",
+	"downloads": 49,
+	"dependents": 0,
+	"updated": "2023-02-01T06:58:20.576Z",
+	"tags": ["content"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 434,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

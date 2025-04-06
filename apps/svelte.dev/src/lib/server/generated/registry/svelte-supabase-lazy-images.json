@@ -1,18 +1,19 @@
 {
-  "name": "svelte-supabase-lazy-images",
-  "description": "Lazy loads images from Supabase within Svelte applications.",
-  "repo_url": "https://github.com/Mitcheljager/svelte-supabase-lazy-images",
-  "authors": [
-    "mitcheljager"
-  ],
-  "homepage": "https://github.com/Mitcheljager/svelte-supabase-lazy-images#readme",
-  "downloads": 8,
-  "dependents": 0,
-  "updated": "2021-08-29T13:39:17.161Z",
-  "tags": [
-    "media"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelte-supabase-lazy-images",
+	"description": "Lazy loads images from Supabase within Svelte applications.",
+	"repo_url": "https://github.com/Mitcheljager/svelte-supabase-lazy-images",
+	"authors": ["mitcheljager"],
+	"homepage": "https://github.com/Mitcheljager/svelte-supabase-lazy-images#readme",
+	"downloads": 8,
+	"dependents": 0,
+	"updated": "2021-08-29T13:39:17.161Z",
+	"tags": ["media"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

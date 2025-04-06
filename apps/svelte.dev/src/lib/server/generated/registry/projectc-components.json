@@ -1,18 +1,19 @@
 {
-  "name": "projectc-components",
-  "description": "Provide UI components for lightweight Svelte applications.",
-  "repo_url": "https://github.com/yustarandomname/projectC-components",
-  "authors": [
-    "abeldebruijn"
-  ],
-  "homepage": "https://github.com/yustarandomname/projectC-components#readme",
-  "downloads": 37,
-  "dependents": 0,
-  "updated": "2021-06-03T21:39:17.930Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "projectc-components",
+	"description": "Provide UI components for lightweight Svelte applications.",
+	"repo_url": "https://github.com/yustarandomname/projectC-components",
+	"authors": ["abeldebruijn"],
+	"homepage": "https://github.com/yustarandomname/projectC-components#readme",
+	"downloads": 37,
+	"dependents": 0,
+	"updated": "2021-06-03T21:39:17.930Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

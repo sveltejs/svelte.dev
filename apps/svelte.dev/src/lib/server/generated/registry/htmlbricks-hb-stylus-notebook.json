@@ -1,16 +1,17 @@
 {
-  "name": "@htmlbricks/hb-stylus-notebook",
-  "description": "Create a Svelte-Bootstrap stylus-notebook web component.",
-  "repo_url": "",
-  "authors": [
-    "dariocaruso"
-  ],
-  "downloads": 123,
-  "dependents": 0,
-  "updated": "2025-03-24T18:07:23.402Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@htmlbricks/hb-stylus-notebook",
+	"description": "Create a Svelte-Bootstrap stylus-notebook web component.",
+	"repo_url": "",
+	"authors": ["dariocaruso"],
+	"downloads": 123,
+	"dependents": 0,
+	"updated": "2025-03-24T18:07:23.402Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "svelte-uicons",
-  "description": "Use FlatIcon's Uicons in Svelte projects.",
-  "repo_url": "https://github.com/robak08/svelte-uicons",
-  "authors": [
-    "robakk08"
-  ],
-  "homepage": "https://github.com/robak08/svelte-uicons#readme",
-  "downloads": 30,
-  "dependents": 0,
-  "updated": "2023-03-02T10:21:37.716Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 3
+	"name": "svelte-uicons",
+	"description": "Use FlatIcon's Uicons in Svelte projects.",
+	"repo_url": "https://github.com/robak08/svelte-uicons",
+	"authors": ["robakk08"],
+	"homepage": "https://github.com/robak08/svelte-uicons#readme",
+	"downloads": 30,
+	"dependents": 0,
+	"updated": "2023-03-02T10:21:37.716Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 3,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

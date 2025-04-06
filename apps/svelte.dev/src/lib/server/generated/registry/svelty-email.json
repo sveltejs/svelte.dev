@@ -1,18 +1,19 @@
 {
-  "name": "svelty-email",
-  "description": "Builds emails with Svelte components.",
-  "repo_url": "https://github.com/cmjoseph07/svelty-email",
-  "authors": [
-    "cmjoseph07"
-  ],
-  "homepage": "https://github.com/cmjoseph07/svelty-email#readme",
-  "downloads": 294,
-  "dependents": 1,
-  "updated": "2024-08-10T02:37:10.914Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 39
+	"name": "svelty-email",
+	"description": "Builds emails with Svelte components.",
+	"repo_url": "https://github.com/cmjoseph07/svelty-email",
+	"authors": ["cmjoseph07"],
+	"homepage": "https://github.com/cmjoseph07/svelty-email#readme",
+	"downloads": 294,
+	"dependents": 1,
+	"updated": "2024-08-10T02:37:10.914Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 39,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

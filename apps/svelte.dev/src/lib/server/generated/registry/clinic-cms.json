@@ -1,18 +1,18 @@
 {
-  "name": "clinic-cms",
-  "description": "Build frontend for clinic CMS with Skeleton UI and Svelte.",
-  "repo_url": "",
-  "authors": [
-    "jeromecc"
-  ],
-  "homepage": "https://github.com/medica-im/clinic-cms",
-  "downloads": 66,
-  "dependents": 0,
-  "updated": "2025-03-14T14:36:14.866Z",
-  "tags": [
-    "content",
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "clinic-cms",
+	"description": "Build frontend for clinic CMS with Skeleton UI and Svelte.",
+	"repo_url": "",
+	"authors": ["jeromecc"],
+	"homepage": "https://github.com/medica-im/clinic-cms",
+	"downloads": 66,
+	"dependents": 0,
+	"updated": "2025-03-14T14:36:14.866Z",
+	"tags": ["content", "ui"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

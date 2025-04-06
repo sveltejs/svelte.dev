@@ -1,16 +1,17 @@
 {
-  "name": "@htmlbricks/hb-input-text",
-  "description": "Create text input web components for Svelte.",
-  "repo_url": "",
-  "authors": [
-    "dariocaruso"
-  ],
-  "downloads": 498,
-  "dependents": 3,
-  "updated": "2025-03-24T18:07:16.377Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@htmlbricks/hb-input-text",
+	"description": "Create text input web components for Svelte.",
+	"repo_url": "",
+	"authors": ["dariocaruso"],
+	"downloads": 498,
+	"dependents": 3,
+	"updated": "2025-03-24T18:07:16.377Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	}
 }

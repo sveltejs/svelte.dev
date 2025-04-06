@@ -1,16 +1,17 @@
 {
-  "name": "@pdfsvex/dynamic-page-number",
-  "description": "Add dynamic page numbers to PDF documents in Svelte.",
-  "repo_url": "",
-  "authors": [
-    "manuel3108"
-  ],
-  "downloads": 43,
-  "dependents": 2,
-  "updated": "2021-07-04T12:13:32.847Z",
-  "tags": [
-    "content"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@pdfsvex/dynamic-page-number",
+	"description": "Add dynamic page numbers to PDF documents in Svelte.",
+	"repo_url": "",
+	"authors": ["manuel3108"],
+	"downloads": 43,
+	"dependents": 2,
+	"updated": "2021-07-04T12:13:32.847Z",
+	"tags": ["content"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

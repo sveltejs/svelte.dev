@@ -1,18 +1,19 @@
 {
-  "name": "svelte-media-query-store",
-  "description": "Provide reactive store detecting CSS media queries.",
-  "repo_url": "https://github.com/michaelbelete/svelte-media-query-store",
-  "authors": [
-    "michaelbelete"
-  ],
-  "homepage": "https://github.com/michaelbelete/svelte-media-query-store#readme",
-  "downloads": 6,
-  "dependents": 1,
-  "updated": "2022-09-25T00:49:45.983Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 3
+	"name": "svelte-media-query-store",
+	"description": "Provide reactive store detecting CSS media queries.",
+	"repo_url": "https://github.com/michaelbelete/svelte-media-query-store",
+	"authors": ["michaelbelete"],
+	"homepage": "https://github.com/michaelbelete/svelte-media-query-store#readme",
+	"downloads": 6,
+	"dependents": 1,
+	"updated": "2022-09-25T00:49:45.983Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 3,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "svelte-easy-crop",
-  "description": "Crop images with easy drag and zoom interactions in Svelte.",
-  "repo_url": "https://github.com/ValentinH/svelte-easy-crop",
-  "authors": [
-    "valentinhervieu"
-  ],
-  "homepage": "https://github.com/ValentinH/svelte-easy-crop",
-  "downloads": 3902,
-  "dependents": 1,
-  "updated": "2025-03-19T10:01:04.759Z",
-  "tags": [
-    "media"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 219
+	"name": "svelte-easy-crop",
+	"description": "Crop images with easy drag and zoom interactions in Svelte.",
+	"repo_url": "https://github.com/ValentinH/svelte-easy-crop",
+	"authors": ["valentinhervieu"],
+	"homepage": "https://github.com/ValentinH/svelte-easy-crop",
+	"downloads": 3902,
+	"dependents": 1,
+	"updated": "2025-03-19T10:01:04.759Z",
+	"tags": ["media"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 219,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

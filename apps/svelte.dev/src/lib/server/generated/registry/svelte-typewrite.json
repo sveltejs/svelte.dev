@@ -1,18 +1,19 @@
 {
-  "name": "svelte-typewrite",
-  "description": "Create typewriter effects in Svelte components.",
-  "repo_url": "https://github.com/satohshi/svelte-typewriter",
-  "authors": [
-    "satohshi"
-  ],
-  "homepage": "https://satohshi.github.io/svelte-typewriter",
-  "downloads": 9,
-  "dependents": 0,
-  "updated": "2025-03-21T14:31:58.002Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 3
+	"name": "svelte-typewrite",
+	"description": "Create typewriter effects in Svelte components.",
+	"repo_url": "https://github.com/satohshi/svelte-typewriter",
+	"authors": ["satohshi"],
+	"homepage": "https://satohshi.github.io/svelte-typewriter",
+	"downloads": 9,
+	"dependents": 0,
+	"updated": "2025-03-21T14:31:58.002Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 3,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

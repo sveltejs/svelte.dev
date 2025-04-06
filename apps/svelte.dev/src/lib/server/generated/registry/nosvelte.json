@@ -1,18 +1,19 @@
 {
-  "name": "nosvelte",
-  "description": "Build Nostr apps easily with Svelte components.",
-  "repo_url": "https://github.com/akiomik/nosvelte",
-  "authors": [
-    "akiomik"
-  ],
-  "homepage": "https://github.com/akiomik/nosvelte#readme",
-  "downloads": 5,
-  "dependents": 0,
-  "updated": "2023-06-15T09:10:04.725Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 28
+	"name": "nosvelte",
+	"description": "Build Nostr apps easily with Svelte components.",
+	"repo_url": "https://github.com/akiomik/nosvelte",
+	"authors": ["akiomik"],
+	"homepage": "https://github.com/akiomik/nosvelte#readme",
+	"downloads": 5,
+	"dependents": 0,
+	"updated": "2023-06-15T09:10:04.725Z",
+	"tags": ["integration"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 28,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

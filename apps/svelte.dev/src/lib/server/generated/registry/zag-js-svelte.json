@@ -1,18 +1,19 @@
 {
-  "name": "@zag-js/svelte",
-  "description": "Provides Svelte components for Zag.js state machines.",
-  "repo_url": "https://github.com/chakra-ui/zag",
-  "authors": [
-    "segunadebayo"
-  ],
-  "homepage": "https://github.com/chakra-ui/zag#readme",
-  "downloads": 7190,
-  "dependents": 5,
-  "updated": "2025-03-28T01:58:15.428Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 4336
+	"name": "@zag-js/svelte",
+	"description": "Provides Svelte components for Zag.js state machines.",
+	"repo_url": "https://github.com/chakra-ui/zag",
+	"authors": ["segunadebayo"],
+	"homepage": "https://github.com/chakra-ui/zag#readme",
+	"downloads": 7190,
+	"dependents": 5,
+	"updated": "2025-03-28T01:58:15.428Z",
+	"tags": ["miscellaneous"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 4338,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

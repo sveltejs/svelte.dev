@@ -1,18 +1,19 @@
 {
-  "name": "carrusel",
-  "description": "Create dependency-free, SSR-compatible carousels for Svelte.",
-  "repo_url": "https://github.com/jhanca-vm/carrusel",
-  "authors": [
-    "jhanca"
-  ],
-  "homepage": "https://carruseljs.vercel.app",
-  "downloads": 14,
-  "dependents": 0,
-  "updated": "2023-07-07T17:59:12.222Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 7
+	"name": "carrusel",
+	"description": "Create dependency-free, SSR-compatible carousels for Svelte.",
+	"repo_url": "https://github.com/jhanca-vm/carrusel",
+	"authors": ["jhanca"],
+	"homepage": "https://carruseljs.vercel.app",
+	"downloads": 14,
+	"dependents": 0,
+	"updated": "2023-07-07T17:59:12.222Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 7,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

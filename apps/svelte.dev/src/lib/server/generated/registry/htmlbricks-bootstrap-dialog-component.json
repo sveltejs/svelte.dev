@@ -1,16 +1,17 @@
 {
-  "name": "@htmlbricks/bootstrap-dialog-component",
-  "description": "Create dialog web component for Svelte apps.",
-  "repo_url": "",
-  "authors": [
-    "dariocaruso"
-  ],
-  "downloads": 169,
-  "dependents": 0,
-  "updated": "2022-01-02T19:14:28.888Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@htmlbricks/bootstrap-dialog-component",
+	"description": "Create dialog web component for Svelte apps.",
+	"repo_url": "",
+	"authors": ["dariocaruso"],
+	"downloads": 169,
+	"dependents": 0,
+	"updated": "2022-01-02T19:14:28.888Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

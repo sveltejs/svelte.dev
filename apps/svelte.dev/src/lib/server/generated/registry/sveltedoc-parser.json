@@ -1,19 +1,19 @@
 {
-  "name": "sveltedoc-parser",
-  "description": "Generate JSON documentation for Svelte components.",
-  "repo_url": "https://github.com/alexprey/sveltedoc-parser",
-  "authors": [
-    "ardenivanov",
-    "alexprey"
-  ],
-  "homepage": "https://github.com/alexprey/sveltedoc-parser",
-  "downloads": 117186,
-  "dependents": 10,
-  "updated": "2021-12-15T10:08:28.326Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 92
+	"name": "sveltedoc-parser",
+	"description": "Generate JSON documentation for Svelte components.",
+	"repo_url": "https://github.com/alexprey/sveltedoc-parser",
+	"authors": ["ardenivanov", "alexprey"],
+	"homepage": "https://github.com/alexprey/sveltedoc-parser",
+	"downloads": 117186,
+	"dependents": 10,
+	"updated": "2021-12-15T10:08:28.326Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 92,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	}
 }

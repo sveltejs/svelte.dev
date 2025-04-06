@@ -1,17 +1,17 @@
 {
-  "name": "@unocode/field-mask",
-  "description": "Apply input masks to form fields in Svelte applications.",
-  "repo_url": "",
-  "authors": [
-    "jonathandamiani",
-    "kazzkiq"
-  ],
-  "downloads": 241,
-  "dependents": 1,
-  "updated": "2020-06-22T13:40:50.261Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@unocode/field-mask",
+	"description": "Apply input masks to form fields in Svelte applications.",
+	"repo_url": "",
+	"authors": ["jonathandamiani", "kazzkiq"],
+	"downloads": 241,
+	"dependents": 1,
+	"updated": "2020-06-22T13:40:50.261Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

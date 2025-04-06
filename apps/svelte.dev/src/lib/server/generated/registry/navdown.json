@@ -1,18 +1,19 @@
 {
-  "name": "navdown",
-  "description": "Hides navbar on scroll in Svelte applications.",
-  "repo_url": "https://github.com/AuriOpenSource/navdown",
-  "authors": [
-    "realfakenerd"
-  ],
-  "homepage": "https://github.com/AuriOpenSource/navdown#readme",
-  "downloads": 5,
-  "dependents": 0,
-  "updated": "2023-11-14T21:22:41.734Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "navdown",
+	"description": "Hides navbar on scroll in Svelte applications.",
+	"repo_url": "https://github.com/AuriOpenSource/navdown",
+	"authors": ["realfakenerd"],
+	"homepage": "https://github.com/AuriOpenSource/navdown#readme",
+	"downloads": 5,
+	"dependents": 0,
+	"updated": "2023-11-14T21:22:41.734Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

@@ -1,16 +1,17 @@
 {
-  "name": "@htmlbricks/hb-dropdown-notifications",
-  "description": "Creates Svelte Dropdown Notifications WebComponent.",
-  "repo_url": "",
-  "authors": [
-    "dariocaruso"
-  ],
-  "downloads": 330,
-  "dependents": 0,
-  "updated": "2025-03-24T18:07:14.153Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@htmlbricks/hb-dropdown-notifications",
+	"description": "Creates Svelte Dropdown Notifications WebComponent.",
+	"repo_url": "",
+	"authors": ["dariocaruso"],
+	"downloads": 330,
+	"dependents": 0,
+	"updated": "2025-03-24T18:07:14.153Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

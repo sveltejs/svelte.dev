@@ -1,16 +1,17 @@
 {
-  "name": "@yellowinq/svelte-pin-input",
-  "description": "Create PIN input component for Svelte.",
-  "repo_url": "",
-  "authors": [
-    "hig4342"
-  ],
-  "downloads": 29,
-  "dependents": 0,
-  "updated": "2021-12-08T13:25:01.734Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@yellowinq/svelte-pin-input",
+	"description": "Create PIN input component for Svelte.",
+	"repo_url": "",
+	"authors": ["hig4342"],
+	"downloads": 29,
+	"dependents": 0,
+	"updated": "2021-12-08T13:25:01.734Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

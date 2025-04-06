@@ -1,18 +1,19 @@
 {
-  "name": "svelte-ionicons",
-  "description": "Display Ionicons SVG icons in Svelte applications.",
-  "repo_url": "https://github.com/shinokada/svelte-ionicons",
-  "authors": [
-    "shinichiokada"
-  ],
-  "homepage": "https://svelte-ionicons.codewithshin.com/",
-  "downloads": 570,
-  "dependents": 1,
-  "updated": "2024-10-25T14:32:26.931Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 23
+	"name": "svelte-ionicons",
+	"description": "Display Ionicons SVG icons in Svelte applications.",
+	"repo_url": "https://github.com/shinokada/svelte-ionicons",
+	"authors": ["shinichiokada"],
+	"homepage": "https://svelte-ionicons.codewithshin.com/",
+	"downloads": 570,
+	"dependents": 1,
+	"updated": "2024-10-25T14:32:26.931Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 23,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "svelte-codemirror-component",
-  "description": "Integrate CodeMirror editor component into Svelte applications.",
-  "repo_url": "https://github.com/rozek/svelte-codemirror-component",
-  "authors": [
-    "arozek"
-  ],
-  "homepage": "https://github.com/rozek/svelte-codemirror-component#readme",
-  "downloads": 11,
-  "dependents": 0,
-  "updated": "2022-02-24T14:08:59.893Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 2
+	"name": "svelte-codemirror-component",
+	"description": "Integrate CodeMirror editor component into Svelte applications.",
+	"repo_url": "https://github.com/rozek/svelte-codemirror-component",
+	"authors": ["arozek"],
+	"homepage": "https://github.com/rozek/svelte-codemirror-component#readme",
+	"downloads": 11,
+	"dependents": 0,
+	"updated": "2022-02-24T14:08:59.893Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

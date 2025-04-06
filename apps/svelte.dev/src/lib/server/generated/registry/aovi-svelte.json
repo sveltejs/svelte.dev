@@ -1,18 +1,19 @@
 {
-  "name": "aovi-svelte",
-  "description": "Integrate Aovi validation library into Svelte forms.",
-  "repo_url": "https://github.com/AlexxNB/aovi-svelte",
-  "authors": [
-    "alexxnb"
-  ],
-  "homepage": "https://github.com/AlexxNB/aovi-svelte#readme",
-  "downloads": 62,
-  "dependents": 0,
-  "updated": "2021-11-06T20:29:42.356Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 12
+	"name": "aovi-svelte",
+	"description": "Integrate Aovi validation library into Svelte forms.",
+	"repo_url": "https://github.com/AlexxNB/aovi-svelte",
+	"authors": ["alexxnb"],
+	"homepage": "https://github.com/AlexxNB/aovi-svelte#readme",
+	"downloads": 62,
+	"dependents": 0,
+	"updated": "2021-11-06T20:29:42.356Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 12,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

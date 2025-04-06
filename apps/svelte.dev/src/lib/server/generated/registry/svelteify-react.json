@@ -1,18 +1,19 @@
 {
-  "name": "svelteify-react",
-  "description": "Integrate React components within Svelte applications.",
-  "repo_url": "https://github.com/MKAbuMattar/svelteify-react",
-  "authors": [
-    "mkabumattar"
-  ],
-  "homepage": "https://github.com/MKAbuMattar/svelteify-react#readme",
-  "downloads": 5,
-  "dependents": 0,
-  "updated": "2024-04-17T18:59:19.807Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelteify-react",
+	"description": "Integrate React components within Svelte applications.",
+	"repo_url": "https://github.com/MKAbuMattar/svelteify-react",
+	"authors": ["mkabumattar"],
+	"homepage": "https://github.com/MKAbuMattar/svelteify-react#readme",
+	"downloads": 5,
+	"dependents": 0,
+	"updated": "2024-04-17T18:59:19.807Z",
+	"tags": ["integration"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

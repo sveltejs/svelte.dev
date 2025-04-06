@@ -1,19 +1,19 @@
 {
-  "name": "mytril",
-  "description": "Build modern websites with Mytril Svelte component library.",
-  "repo_url": "https://github.com/minedelve/mytril",
-  "authors": [
-    "nycolaide"
-  ],
-  "homepage": "https://minedelve.com/mytril/docs",
-  "downloads": 517,
-  "dependents": 0,
-  "updated": "2025-03-16T20:46:43.855Z",
-  "tags": [
-    "design-system",
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 2
+	"name": "mytril",
+	"description": "Build modern websites with Mytril Svelte component library.",
+	"repo_url": "https://github.com/minedelve/mytril",
+	"authors": ["nycolaide"],
+	"homepage": "https://minedelve.com/mytril/docs",
+	"downloads": 517,
+	"dependents": 0,
+	"updated": "2025-03-16T20:46:43.855Z",
+	"tags": ["design-system", "ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

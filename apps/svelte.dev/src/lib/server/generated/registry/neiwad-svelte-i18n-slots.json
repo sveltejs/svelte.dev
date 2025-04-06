@@ -1,18 +1,19 @@
 {
-  "name": "@neiwad/svelte-i18n-slots",
-  "description": "Transform i18n variables into slots within Svelte components.",
-  "repo_url": "https://github.com/neiwad/svelte-i18n-slots",
-  "authors": [
-    "neiwad"
-  ],
-  "homepage": "https://github.com/neiwad/svelte-i18n-slots",
-  "downloads": 8,
-  "dependents": 0,
-  "updated": "2022-04-26T12:53:20.970Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 2
+	"name": "@neiwad/svelte-i18n-slots",
+	"description": "Transform i18n variables into slots within Svelte components.",
+	"repo_url": "https://github.com/neiwad/svelte-i18n-slots",
+	"authors": ["neiwad"],
+	"homepage": "https://github.com/neiwad/svelte-i18n-slots",
+	"downloads": 8,
+	"dependents": 0,
+	"updated": "2022-04-26T12:53:20.970Z",
+	"tags": ["integration"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

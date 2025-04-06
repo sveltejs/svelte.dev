@@ -1,18 +1,19 @@
 {
-  "name": "@pierogis/utensils",
-  "description": "Set of Svelte UI components.",
-  "repo_url": "https://github.com/pierogis/live",
-  "authors": [
-    "ksmoore17"
-  ],
-  "homepage": "https://utensils.pierogis.live",
-  "downloads": 32,
-  "dependents": 0,
-  "updated": "2024-01-04T05:11:10.473Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@pierogis/utensils",
+	"description": "Set of Svelte UI components.",
+	"repo_url": "https://github.com/pierogis/live",
+	"authors": ["ksmoore17"],
+	"homepage": "https://utensils.pierogis.live",
+	"downloads": 32,
+	"dependents": 0,
+	"updated": "2024-01-04T05:11:10.473Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

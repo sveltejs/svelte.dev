@@ -1,17 +1,18 @@
 {
-  "name": "@gabio/design-svelte",
-  "description": "Offers a killer Svelte design library with various components.",
-  "repo_url": "git@github.com-vigenere23:vigenere23/gabio-design-svelte",
-  "authors": [
-    "vigenere23"
-  ],
-  "homepage": "https://github.com/vigenere23/gabio-design-svelte#readme",
-  "downloads": 27,
-  "dependents": 0,
-  "updated": "2022-08-13T21:04:06.000Z",
-  "tags": [
-    "design-system"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@gabio/design-svelte",
+	"description": "Offers a killer Svelte design library with various components.",
+	"repo_url": "git@github.com-vigenere23:vigenere23/gabio-design-svelte",
+	"authors": ["vigenere23"],
+	"homepage": "https://github.com/vigenere23/gabio-design-svelte#readme",
+	"downloads": 27,
+	"dependents": 0,
+	"updated": "2022-08-13T21:04:06.000Z",
+	"tags": ["design-system"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

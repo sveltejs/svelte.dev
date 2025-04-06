@@ -1,19 +1,19 @@
 {
-  "name": "saraui",
-  "description": "Provide enhanced daisyUI components for SvelteKit.",
-  "repo_url": "https://github.com/r4rmas/saraui",
-  "authors": [
-    "r4rmas"
-  ],
-  "homepage": "https://saraui.com",
-  "downloads": 2,
-  "dependents": 0,
-  "updated": "2024-05-17T05:53:56.977Z",
-  "tags": [
-    "design-system",
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 109
+	"name": "saraui",
+	"description": "Provide enhanced daisyUI components for SvelteKit.",
+	"repo_url": "https://github.com/r4rmas/saraui",
+	"authors": ["r4rmas"],
+	"homepage": "https://saraui.com",
+	"downloads": 2,
+	"dependents": 0,
+	"updated": "2024-05-17T05:53:56.977Z",
+	"tags": ["design-system", "ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 109,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

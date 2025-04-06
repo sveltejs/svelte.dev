@@ -1,17 +1,18 @@
 {
-  "name": "@3xpo/svelte-colour-picker",
-  "description": "Implement customizable color picker component for Svelte.",
-  "repo_url": "https://github.com/Exponential-Workload/svelte-colour-picker",
-  "authors": [
-    "exponentialworkload"
-  ],
-  "homepage": "https://gh.expo.moe/svelte-colour-picker/",
-  "downloads": 1,
-  "dependents": 0,
-  "updated": "2024-03-01T19:10:08.365Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@3xpo/svelte-colour-picker",
+	"description": "Implement customizable color picker component for Svelte.",
+	"repo_url": "https://github.com/Exponential-Workload/svelte-colour-picker",
+	"authors": ["exponentialworkload"],
+	"homepage": "https://gh.expo.moe/svelte-colour-picker/",
+	"downloads": 1,
+	"dependents": 0,
+	"updated": "2024-03-01T19:10:08.365Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": false
+	}
 }

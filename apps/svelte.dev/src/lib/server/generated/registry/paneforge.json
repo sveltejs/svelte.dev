@@ -1,18 +1,19 @@
 {
-  "name": "paneforge",
-  "description": "Create resizable, nestable panes for Svelte applications.",
-  "repo_url": "https://github.com/svecosystem/paneforge",
-  "authors": [
-    "huntabyte"
-  ],
-  "homepage": "https://github.com/svecosystem/paneforge#readme",
-  "downloads": 28679,
-  "dependents": 16,
-  "updated": "2024-09-19T21:01:48.516Z",
-  "tags": [
-    "design-system"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 504
+	"name": "paneforge",
+	"description": "Create resizable, nestable panes for Svelte applications.",
+	"repo_url": "https://github.com/svecosystem/paneforge",
+	"authors": ["huntabyte"],
+	"homepage": "https://github.com/svecosystem/paneforge#readme",
+	"downloads": 28679,
+	"dependents": 16,
+	"updated": "2024-09-19T21:01:48.516Z",
+	"tags": ["design-system"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 504,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": true
+	}
 }

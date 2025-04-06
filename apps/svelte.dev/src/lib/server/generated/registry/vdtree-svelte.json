@@ -1,17 +1,18 @@
 {
-  "name": "vdtree-svelte",
-  "description": "Wrap vdtree abstract components for use in Svelte.",
-  "repo_url": "https://github.com/lgirma/vdtree-plugins",
-  "authors": [
-    "lgirma"
-  ],
-  "homepage": "https://github.com/lgirma/vdtree-plugins/tree/master/svelte",
-  "downloads": 10,
-  "dependents": 0,
-  "updated": "2021-07-09T06:45:48.364Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "vdtree-svelte",
+	"description": "Wrap vdtree abstract components for use in Svelte.",
+	"repo_url": "https://github.com/lgirma/vdtree-plugins",
+	"authors": ["lgirma"],
+	"homepage": "https://github.com/lgirma/vdtree-plugins/tree/master/svelte",
+	"downloads": 10,
+	"dependents": 0,
+	"updated": "2021-07-09T06:45:48.364Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

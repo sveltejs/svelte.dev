@@ -1,18 +1,19 @@
 {
-  "name": "@macfja/svelte-persistent-runes",
-  "description": "Persist Svelte reactive values through page reloads.",
-  "repo_url": "https://github.com/MacFJA/svelte-persistent-runes",
-  "authors": [
-    "macfja"
-  ],
-  "homepage": "https://github.com/MacFJA/svelte-persistent-runes",
-  "downloads": 2,
-  "dependents": 0,
-  "updated": "2024-12-09T22:07:33.275Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 9
+	"name": "@macfja/svelte-persistent-runes",
+	"description": "Persist Svelte reactive values through page reloads.",
+	"repo_url": "https://github.com/MacFJA/svelte-persistent-runes",
+	"authors": ["macfja"],
+	"homepage": "https://github.com/MacFJA/svelte-persistent-runes",
+	"downloads": 2,
+	"dependents": 0,
+	"updated": "2024-12-09T22:07:33.275Z",
+	"tags": ["miscellaneous"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 9,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

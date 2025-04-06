@@ -1,18 +1,19 @@
 {
-  "name": "@fouita/slider",
-  "description": "Create range input (slider) components with Svelte and TailwindCSS.",
-  "repo_url": "https://github.com/fouita/svelte-tw-slider",
-  "authors": [
-    "fouita"
-  ],
-  "homepage": "https://github.com/fouita/svelte-tw-slider#readme",
-  "downloads": 38,
-  "dependents": 0,
-  "updated": "2021-04-10T08:57:13.703Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 11
+	"name": "@fouita/slider",
+	"description": "Create range input (slider) components with Svelte and TailwindCSS.",
+	"repo_url": "https://github.com/fouita/svelte-tw-slider",
+	"authors": ["fouita"],
+	"homepage": "https://github.com/fouita/svelte-tw-slider#readme",
+	"downloads": 38,
+	"dependents": 0,
+	"updated": "2021-04-10T08:57:13.703Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 11,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

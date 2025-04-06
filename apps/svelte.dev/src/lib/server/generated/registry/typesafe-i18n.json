@@ -1,18 +1,19 @@
 {
-  "name": "typesafe-i18n",
-  "description": "Provides type-safe internationalization for Svelte and other frameworks.",
-  "repo_url": "https://github.com/ivanhofer/typesafe-i18n",
-  "authors": [
-    "ivanhofer"
-  ],
-  "homepage": "https://github.com/ivanhofer/typesafe-i18n",
-  "downloads": 26257,
-  "dependents": 16,
-  "updated": "2023-08-25T07:58:11.071Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 2304
+	"name": "typesafe-i18n",
+	"description": "Provides type-safe internationalization for Svelte and other frameworks.",
+	"repo_url": "https://github.com/ivanhofer/typesafe-i18n",
+	"authors": ["ivanhofer"],
+	"homepage": "https://github.com/ivanhofer/typesafe-i18n",
+	"downloads": 26257,
+	"dependents": 16,
+	"updated": "2023-08-25T07:58:11.071Z",
+	"tags": ["integration"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 2304,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "sv-router",
-  "description": "Provide modern routing for Svelte single-page apps.",
-  "repo_url": "https://github.com/colinlienard/sv-router",
-  "authors": [
-    "colinlienard"
-  ],
-  "homepage": "https://github.com/colinlienard/sv-router",
-  "downloads": 120,
-  "dependents": 0,
-  "updated": "2025-03-19T13:12:25.929Z",
-  "tags": [
-    "router"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 31
+	"name": "sv-router",
+	"description": "Provide modern routing for Svelte single-page apps.",
+	"repo_url": "https://github.com/colinlienard/sv-router",
+	"authors": ["colinlienard"],
+	"homepage": "https://github.com/colinlienard/sv-router",
+	"downloads": 120,
+	"dependents": 0,
+	"updated": "2025-03-19T13:12:25.929Z",
+	"tags": ["router"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 31,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

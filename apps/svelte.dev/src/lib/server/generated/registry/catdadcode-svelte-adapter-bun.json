@@ -1,18 +1,19 @@
 {
-  "name": "@catdadcode/svelte-adapter-bun",
-  "description": "Generate standalone Bun.js server for SvelteKit apps.",
-  "repo_url": "https://github.com/catdadcode/svelte-adapter-bun",
-  "authors": [
-    "catdadalex"
-  ],
-  "homepage": "https://github.com/catdadcode/svelte-adapter-bun#readme",
-  "downloads": 43,
-  "dependents": 0,
-  "updated": "2023-11-25T18:02:13.039Z",
-  "tags": [
-    "adapter"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 17
+	"name": "@catdadcode/svelte-adapter-bun",
+	"description": "Generate standalone Bun.js server for SvelteKit apps.",
+	"repo_url": "https://github.com/catdadcode/svelte-adapter-bun",
+	"authors": ["catdadalex"],
+	"homepage": "https://github.com/catdadcode/svelte-adapter-bun#readme",
+	"downloads": 43,
+	"dependents": 0,
+	"updated": "2023-11-25T18:02:13.039Z",
+	"tags": ["adapter"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 17,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	}
 }

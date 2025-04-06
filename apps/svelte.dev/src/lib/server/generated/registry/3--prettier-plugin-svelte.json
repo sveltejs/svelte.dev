@@ -1,17 +1,18 @@
 {
-  "name": "@3-/prettier-plugin-svelte",
-  "description": "Format Svelte components with Prettier.",
-  "repo_url": "",
-  "authors": [
-    "i18n-now"
-  ],
-  "homepage": "https://github.com/i18n-fork/prettier-plugin-svelte/tree/tmp",
-  "downloads": 62,
-  "dependents": 0,
-  "updated": "2025-02-05T07:26:58.910Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "@3-/prettier-plugin-svelte",
+	"description": "Format Svelte components with Prettier.",
+	"repo_url": "",
+	"authors": ["i18n-now"],
+	"homepage": "https://github.com/i18n-fork/prettier-plugin-svelte/tree/tmp",
+	"downloads": 62,
+	"dependents": 0,
+	"updated": "2025-02-05T07:26:58.910Z",
+	"tags": ["tooling"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

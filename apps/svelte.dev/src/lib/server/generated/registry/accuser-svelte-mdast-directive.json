@@ -1,18 +1,19 @@
 {
-  "name": "@accuser/svelte-mdast-directive",
-  "description": "Transform Markdown to Svelte components using directives.",
-  "repo_url": "https://github.com/accuser/svelte-mdast-directive",
-  "authors": [
-    "accuser"
-  ],
-  "homepage": "https://github.com/accuser/svelte-mdast-directive",
-  "downloads": 18,
-  "dependents": 1,
-  "updated": "2024-10-06T13:16:37.069Z",
-  "tags": [
-    "content"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 0
+	"name": "@accuser/svelte-mdast-directive",
+	"description": "Transform Markdown to Svelte components using directives.",
+	"repo_url": "https://github.com/accuser/svelte-mdast-directive",
+	"authors": ["accuser"],
+	"homepage": "https://github.com/accuser/svelte-mdast-directive",
+	"downloads": 18,
+	"dependents": 1,
+	"updated": "2024-10-06T13:16:37.069Z",
+	"tags": ["content"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

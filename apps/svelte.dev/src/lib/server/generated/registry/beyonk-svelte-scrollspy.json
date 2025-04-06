@@ -1,23 +1,19 @@
 {
-  "name": "@beyonk/svelte-scrollspy",
-  "description": "Create scrollspy navigation in Svelte applications.",
-  "repo_url": "https://github.com/beyonk-adventures/svelte-scrollspy",
-  "authors": [
-    "antony",
-    "adampond",
-    "alex.dilley",
-    "jedwoodcock",
-    "leandro.silva",
-    "tomlewis0"
-  ],
-  "homepage": "https://github.com/beyonk-adventures/svelte-scrollspy#readme",
-  "downloads": 12,
-  "dependents": 0,
-  "updated": "2019-06-28T20:26:57.682Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 40
+	"name": "@beyonk/svelte-scrollspy",
+	"description": "Create scrollspy navigation in Svelte applications.",
+	"repo_url": "https://github.com/beyonk-adventures/svelte-scrollspy",
+	"authors": ["antony", "adampond", "alex.dilley", "jedwoodcock", "leandro.silva", "tomlewis0"],
+	"homepage": "https://github.com/beyonk-adventures/svelte-scrollspy#readme",
+	"downloads": 12,
+	"dependents": 0,
+	"updated": "2019-06-28T20:26:57.682Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 40,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

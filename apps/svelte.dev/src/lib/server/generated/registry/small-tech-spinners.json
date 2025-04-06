@@ -1,18 +1,19 @@
 {
-  "name": "@small-tech/spinners",
-  "description": "Display indeterminate progress spinners in Svelte apps.",
-  "repo_url": "https://github.com/small-tech/spinners",
-  "authors": [
-    "aral"
-  ],
-  "homepage": "https://github.com/small-tech/spinners",
-  "downloads": 18,
-  "dependents": 0,
-  "updated": "2021-07-06T10:24:03.128Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 5
+	"name": "@small-tech/spinners",
+	"description": "Display indeterminate progress spinners in Svelte apps.",
+	"repo_url": "https://github.com/small-tech/spinners",
+	"authors": ["aral"],
+	"homepage": "https://github.com/small-tech/spinners",
+	"downloads": 18,
+	"dependents": 0,
+	"updated": "2021-07-06T10:24:03.128Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 5,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

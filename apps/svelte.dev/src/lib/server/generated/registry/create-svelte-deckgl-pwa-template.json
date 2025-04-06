@@ -1,18 +1,19 @@
 {
-  "name": "create-svelte-deckgl-pwa-template",
-  "description": "Generate Svelte-based geospatial progressive web app template.",
-  "repo_url": "https://github.com/b-lack/create-svelte-deckgl-pwa-template",
-  "authors": [
-    "gruenecho"
-  ],
-  "homepage": "https://github.com/b-lack/create-svelte-deckgl-pwa-template#readme",
-  "downloads": 20,
-  "dependents": 0,
-  "updated": "2022-02-28T22:08:07.389Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "create-svelte-deckgl-pwa-template",
+	"description": "Generate Svelte-based geospatial progressive web app template.",
+	"repo_url": "https://github.com/b-lack/create-svelte-deckgl-pwa-template",
+	"authors": ["gruenecho"],
+	"homepage": "https://github.com/b-lack/create-svelte-deckgl-pwa-template#readme",
+	"downloads": 20,
+	"dependents": 0,
+	"updated": "2022-02-28T22:08:07.389Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "@dopry/svelte-oidc",
-  "description": "Implement OIDC authentication in Svelte applications.",
-  "repo_url": "https://github.com/dopry/svelte-oidc",
-  "authors": [
-    "dopry"
-  ],
-  "homepage": "https://github.com/dopry/svelte-oidc#readme",
-  "downloads": 54,
-  "dependents": 0,
-  "updated": "2023-01-24T16:47:18.807Z",
-  "tags": [
-    "auth"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 42
+	"name": "@dopry/svelte-oidc",
+	"description": "Implement OIDC authentication in Svelte applications.",
+	"repo_url": "https://github.com/dopry/svelte-oidc",
+	"authors": ["dopry"],
+	"homepage": "https://github.com/dopry/svelte-oidc#readme",
+	"downloads": 54,
+	"dependents": 0,
+	"updated": "2023-01-24T16:47:18.807Z",
+	"tags": ["auth"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 42,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

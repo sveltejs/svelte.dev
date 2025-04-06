@@ -1,21 +1,19 @@
 {
-  "name": "@telegram-apps/sdk-svelte",
-  "description": "Provides Svelte.js bindings for Mini Apps client SDK.",
-  "repo_url": "https://github.com/Telegram-Mini-Apps/telegram-apps",
-  "authors": [
-    "dimitreee",
-    "qbnk",
-    "sorawalker",
-    "mainsmirnov"
-  ],
-  "homepage": "https://github.com/Telegram-Mini-Apps/telegram-apps#readme",
-  "downloads": 100,
-  "dependents": 0,
-  "updated": "2025-03-22T18:05:03.673Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 915
+	"name": "@telegram-apps/sdk-svelte",
+	"description": "Provides Svelte.js bindings for Mini Apps client SDK.",
+	"repo_url": "https://github.com/Telegram-Mini-Apps/telegram-apps",
+	"authors": ["dimitreee", "qbnk", "sorawalker", "mainsmirnov"],
+	"homepage": "https://github.com/Telegram-Mini-Apps/telegram-apps#readme",
+	"downloads": 100,
+	"dependents": 0,
+	"updated": "2025-03-22T18:05:03.673Z",
+	"tags": ["integration"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 919,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

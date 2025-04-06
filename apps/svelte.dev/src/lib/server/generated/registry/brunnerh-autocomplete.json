@@ -1,17 +1,18 @@
 {
-  "name": "@brunnerh/autocomplete",
-  "description": "Create autocomplete component for Svelte projects.",
-  "repo_url": "",
-  "authors": [
-    "brunnerh"
-  ],
-  "homepage": "https://github.com/brunnerh/autocomplete",
-  "downloads": 13,
-  "dependents": 0,
-  "updated": "2020-03-10T20:24:40.005Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@brunnerh/autocomplete",
+	"description": "Create autocomplete component for Svelte projects.",
+	"repo_url": "",
+	"authors": ["brunnerh"],
+	"homepage": "https://github.com/brunnerh/autocomplete",
+	"downloads": 13,
+	"dependents": 0,
+	"updated": "2020-03-10T20:24:40.005Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

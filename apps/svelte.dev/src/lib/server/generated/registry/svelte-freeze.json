@@ -1,16 +1,17 @@
 {
-  "name": "svelte-freeze",
-  "description": "Freeze Svelte components to prevent unnecessary updates.",
-  "repo_url": "",
-  "authors": [
-    "externdefs"
-  ],
-  "downloads": 234,
-  "dependents": 0,
-  "updated": "2025-03-28T05:45:30.275Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "svelte-freeze",
+	"description": "Freeze Svelte components to prevent unnecessary updates.",
+	"repo_url": "",
+	"authors": ["externdefs"],
+	"downloads": 234,
+	"dependents": 0,
+	"updated": "2025-03-28T05:45:30.275Z",
+	"tags": ["miscellaneous"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

@@ -1,19 +1,19 @@
 {
-  "name": "svelte-custom-roulette",
-  "description": "Create custom roulette wheel UI components for Svelte.",
-  "repo_url": "https://github.com/jor-col/svelte-custom-roulette",
-  "authors": [
-    "colin-williams-dev",
-    "codingmustache"
-  ],
-  "homepage": "https://github.com/jor-col/svelte-custom-roulette#readme",
-  "downloads": 0,
-  "dependents": 1,
-  "updated": "2023-06-16T23:38:29.754Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 16
+	"name": "svelte-custom-roulette",
+	"description": "Create custom roulette wheel UI components for Svelte.",
+	"repo_url": "https://github.com/jor-col/svelte-custom-roulette",
+	"authors": ["colin-williams-dev", "codingmustache"],
+	"homepage": "https://github.com/jor-col/svelte-custom-roulette#readme",
+	"downloads": 0,
+	"dependents": 1,
+	"updated": "2023-06-16T23:38:29.754Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 16,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

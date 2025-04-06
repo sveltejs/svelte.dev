@@ -1,18 +1,19 @@
 {
-  "name": "svelte-create-state",
-  "description": "Create state variables similar to React's useState for Svelte.",
-  "repo_url": "https://github.com/juliandavidmr/svelte-create-state",
-  "authors": [
-    "anlijudavid"
-  ],
-  "homepage": "https://github.com/juliandavidmr/svelte-create-state#readme",
-  "downloads": 8,
-  "dependents": 0,
-  "updated": "2020-04-30T05:21:49.803Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 3
+	"name": "svelte-create-state",
+	"description": "Create state variables similar to React's useState for Svelte.",
+	"repo_url": "https://github.com/juliandavidmr/svelte-create-state",
+	"authors": ["anlijudavid"],
+	"homepage": "https://github.com/juliandavidmr/svelte-create-state#readme",
+	"downloads": 8,
+	"dependents": 0,
+	"updated": "2020-04-30T05:21:49.803Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 3,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

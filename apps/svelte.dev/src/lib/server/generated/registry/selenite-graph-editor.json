@@ -1,18 +1,18 @@
 {
-  "name": "@selenite/graph-editor",
-  "description": "Graph editor for visual programming, based on rete and svelte.",
-  "repo_url": "https://github.com/Selenite-GEOS/graph-editor",
-  "authors": [
-    "moonlyss"
-  ],
-  "homepage": "https://selenite-geos.github.io/docs/developper/components/#graph-editor",
-  "downloads": 224,
-  "dependents": 0,
-  "updated": "2024-11-15T17:08:55.955Z",
-  "tags": [
-    "ui",
-    "tooling"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "@selenite/graph-editor",
+	"description": "Graph editor for visual programming, based on rete and svelte.",
+	"repo_url": "https://github.com/Selenite-GEOS/graph-editor",
+	"authors": ["moonlyss"],
+	"homepage": "https://selenite-geos.github.io/docs/developper/components/#graph-editor",
+	"downloads": 224,
+	"dependents": 0,
+	"updated": "2024-11-15T17:08:55.955Z",
+	"tags": ["ui", "tooling"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

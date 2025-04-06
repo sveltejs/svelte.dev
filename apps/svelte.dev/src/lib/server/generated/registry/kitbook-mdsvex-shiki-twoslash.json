@@ -1,18 +1,19 @@
 {
-  "name": "@kitbook/mdsvex-shiki-twoslash",
-  "description": "Highlight code blocks using shiki-twoslash in MDSvex.",
-  "repo_url": "https://github.com/jacob-8/kitbook",
-  "authors": [
-    "jacobbowdoin"
-  ],
-  "homepage": "https://kitbook.vercel.app",
-  "downloads": 7,
-  "dependents": 2,
-  "updated": "2024-04-27T16:08:33.240Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 65
+	"name": "@kitbook/mdsvex-shiki-twoslash",
+	"description": "Highlight code blocks using shiki-twoslash in MDSvex.",
+	"repo_url": "https://github.com/jacob-8/kitbook",
+	"authors": ["jacobbowdoin"],
+	"homepage": "https://kitbook.vercel.app",
+	"downloads": 7,
+	"dependents": 2,
+	"updated": "2024-04-27T16:08:33.240Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 65,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

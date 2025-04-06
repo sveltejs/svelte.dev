@@ -1,18 +1,19 @@
 {
-  "name": "svelte-resize-observer",
-  "description": "Observes element resizes within Svelte components.",
-  "repo_url": "https://github.com/andrelmlins/svelte-resize-observer",
-  "authors": [
-    "andrelmlins"
-  ],
-  "homepage": "https://svelte-resize-observer.netlify.com/",
-  "downloads": 116,
-  "dependents": 0,
-  "updated": "2021-08-17T00:58:10.467Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 14
+	"name": "svelte-resize-observer",
+	"description": "Observes element resizes within Svelte components.",
+	"repo_url": "https://github.com/andrelmlins/svelte-resize-observer",
+	"authors": ["andrelmlins"],
+	"homepage": "https://svelte-resize-observer.netlify.com/",
+	"downloads": 116,
+	"dependents": 0,
+	"updated": "2021-08-17T00:58:10.467Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 14,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,22 +1,19 @@
 {
-  "name": "@playwright/experimental-ct-svelte",
-  "description": "Enable component testing for Svelte with Playwright.",
-  "repo_url": "https://github.com/microsoft/playwright",
-  "authors": [
-    "pavelfeldman",
-    "yurys",
-    "mxschmitt",
-    "dgozman-ms",
-    "playwright-bot"
-  ],
-  "homepage": "https://playwright.dev",
-  "downloads": 16814,
-  "dependents": 0,
-  "updated": "2025-03-17T17:03:45.100Z",
-  "tags": [
-    "testing"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 71301
+	"name": "@playwright/experimental-ct-svelte",
+	"description": "Enable component testing for Svelte with Playwright.",
+	"repo_url": "https://github.com/microsoft/playwright",
+	"authors": ["pavelfeldman", "yurys", "mxschmitt", "dgozman-ms", "playwright-bot"],
+	"homepage": "https://playwright.dev",
+	"downloads": 16814,
+	"dependents": 0,
+	"updated": "2025-03-17T17:03:45.100Z",
+	"tags": ["testing"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 71321,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

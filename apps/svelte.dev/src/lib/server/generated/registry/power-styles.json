@@ -1,18 +1,19 @@
 {
-  "name": "power-styles",
-  "description": "Provide dynamic style properties for Svelte components.",
-  "repo_url": "https://github.com/JuanDAC/power-styles",
-  "authors": [
-    "juandac"
-  ],
-  "homepage": "https://github.com/JuanDAC/power-styles#readme",
-  "downloads": 52,
-  "dependents": 0,
-  "updated": "2021-12-02T12:41:58.725Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 8
+	"name": "power-styles",
+	"description": "Provide dynamic style properties for Svelte components.",
+	"repo_url": "https://github.com/JuanDAC/power-styles",
+	"authors": ["juandac"],
+	"homepage": "https://github.com/JuanDAC/power-styles#readme",
+	"downloads": 52,
+	"dependents": 0,
+	"updated": "2021-12-02T12:41:58.725Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 8,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

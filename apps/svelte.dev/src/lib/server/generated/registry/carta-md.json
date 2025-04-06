@@ -1,19 +1,19 @@
 {
-  "name": "carta-md",
-  "description": "Provides a lightweight, customizable Markdown editor for Svelte.",
-  "repo_url": "https://github.com/BearToCode/carta",
-  "authors": [
-    "astrobear"
-  ],
-  "homepage": "https://github.com/BearToCode/carta#readme",
-  "downloads": 1608,
-  "dependents": 0,
-  "updated": "2025-03-03T21:36:52.262Z",
-  "tags": [
-    "content",
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 564
+	"name": "carta-md",
+	"description": "Provides a lightweight, customizable Markdown editor for Svelte.",
+	"repo_url": "https://github.com/BearToCode/carta",
+	"authors": ["astrobear"],
+	"homepage": "https://github.com/BearToCode/carta#readme",
+	"downloads": 1608,
+	"dependents": 0,
+	"updated": "2025-03-03T21:36:52.262Z",
+	"tags": ["content", "ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 564,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

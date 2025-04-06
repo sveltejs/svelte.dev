@@ -1,16 +1,17 @@
 {
-  "name": "@htmlbricks/hb-player-live",
-  "description": "Create live player components for Svelte apps.",
-  "repo_url": "",
-  "authors": [
-    "dariocaruso"
-  ],
-  "downloads": 459,
-  "dependents": 3,
-  "updated": "2025-03-24T18:07:19.326Z",
-  "tags": [
-    "media"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@htmlbricks/hb-player-live",
+	"description": "Create live player components for Svelte apps.",
+	"repo_url": "",
+	"authors": ["dariocaruso"],
+	"downloads": 459,
+	"dependents": 3,
+	"updated": "2025-03-24T18:07:19.326Z",
+	"tags": ["media"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

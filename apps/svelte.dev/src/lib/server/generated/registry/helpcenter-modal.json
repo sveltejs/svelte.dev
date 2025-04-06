@@ -1,16 +1,17 @@
 {
-  "name": "helpcenter-modal",
-  "description": "Create modal component for Svelte applications.",
-  "repo_url": "",
-  "authors": [
-    "liuzhengzheng"
-  ],
-  "downloads": 5,
-  "dependents": 0,
-  "updated": "2023-02-19T08:19:29.248Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "helpcenter-modal",
+	"description": "Create modal component for Svelte applications.",
+	"repo_url": "",
+	"authors": ["liuzhengzheng"],
+	"downloads": 5,
+	"dependents": 0,
+	"updated": "2023-02-19T08:19:29.248Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "@tadashi/svelte-atom-elements",
-  "description": "Provides reusable Svelte UI components.",
-  "repo_url": "https://github.com/lagden/svelte-atom-elements",
-  "authors": [
-    "lagden"
-  ],
-  "homepage": "https://github.com/lagden/svelte-atom-elements#readme",
-  "downloads": 41,
-  "dependents": 0,
-  "updated": "2022-08-16T14:53:59.919Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "@tadashi/svelte-atom-elements",
+	"description": "Provides reusable Svelte UI components.",
+	"repo_url": "https://github.com/lagden/svelte-atom-elements",
+	"authors": ["lagden"],
+	"homepage": "https://github.com/lagden/svelte-atom-elements#readme",
+	"downloads": 41,
+	"dependents": 0,
+	"updated": "2022-08-16T14:53:59.919Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

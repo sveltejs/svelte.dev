@@ -1,18 +1,19 @@
 {
-  "name": "svelte-pragmatic-sortable",
-  "description": "Enables pragmatic drag-and-drop functionality in Svelte 5 applications.",
-  "repo_url": "https://github.com/dysbulic/svelte-pragmatic-sortable",
-  "authors": [
-    "dysbulic"
-  ],
-  "homepage": "https://dysbulic.github.io/svelte-pragmatic-sortable/",
-  "downloads": 0,
-  "dependents": 0,
-  "updated": "2025-02-18T20:02:14.877Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelte-pragmatic-sortable",
+	"description": "Enables pragmatic drag-and-drop functionality in Svelte 5 applications.",
+	"repo_url": "https://github.com/dysbulic/svelte-pragmatic-sortable",
+	"authors": ["dysbulic"],
+	"homepage": "https://dysbulic.github.io/svelte-pragmatic-sortable/",
+	"downloads": 0,
+	"dependents": 0,
+	"updated": "2025-02-18T20:02:14.877Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

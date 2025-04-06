@@ -1,18 +1,19 @@
 {
-  "name": "svelte-reactive-css-preprocess-with-object-array-support",
-  "description": "Create reactive CSS variables using Svelte's reactivity.",
-  "repo_url": "https://github.com/SBHattarj/svelte-reactive-css-preprocess",
-  "authors": [
-    "subhambh"
-  ],
-  "homepage": "https://github.com/SBHattarj/svelte-reactive-css-preprocess/tree/main#readme",
-  "downloads": 1,
-  "dependents": 0,
-  "updated": "2022-11-30T19:09:16.629Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelte-reactive-css-preprocess-with-object-array-support",
+	"description": "Create reactive CSS variables using Svelte's reactivity.",
+	"repo_url": "https://github.com/SBHattarj/svelte-reactive-css-preprocess",
+	"authors": ["subhambh"],
+	"homepage": "https://github.com/SBHattarj/svelte-reactive-css-preprocess/tree/main#readme",
+	"downloads": 1,
+	"dependents": 0,
+	"updated": "2022-11-30T19:09:16.629Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

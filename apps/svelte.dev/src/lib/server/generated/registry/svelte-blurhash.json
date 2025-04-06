@@ -1,17 +1,18 @@
 {
-  "name": "svelte-blurhash",
-  "description": "Implement Blurhash image placeholders in Svelte.",
-  "repo_url": "https://github.com/h416/svelte-blurhash",
-  "authors": [
-    "h416"
-  ],
-  "homepage": "https://github.com/h416/svelte-blurhash#readme",
-  "downloads": 12,
-  "dependents": 1,
-  "updated": "2021-04-30T05:00:20.927Z",
-  "tags": [
-    "media"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-blurhash",
+	"description": "Implement Blurhash image placeholders in Svelte.",
+	"repo_url": "https://github.com/h416/svelte-blurhash",
+	"authors": ["h416"],
+	"homepage": "https://github.com/h416/svelte-blurhash#readme",
+	"downloads": 12,
+	"dependents": 1,
+	"updated": "2021-04-30T05:00:20.927Z",
+	"tags": ["media"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "svelte-achievements-bar",
-  "description": "Displays progress bar with icons, text for achievement progress.",
-  "repo_url": "https://github.com/1boch1/svelte-achievements-bar",
-  "authors": [
-    "1boch1"
-  ],
-  "homepage": "https://github.com/1boch1/svelte-achievements-bar#readme",
-  "downloads": 144,
-  "dependents": 0,
-  "updated": "2025-03-16T21:35:48.806Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 1
+	"name": "svelte-achievements-bar",
+	"description": "Displays progress bar with icons, text for achievement progress.",
+	"repo_url": "https://github.com/1boch1/svelte-achievements-bar",
+	"authors": ["1boch1"],
+	"homepage": "https://github.com/1boch1/svelte-achievements-bar#readme",
+	"downloads": 144,
+	"dependents": 0,
+	"updated": "2025-03-16T21:35:48.806Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

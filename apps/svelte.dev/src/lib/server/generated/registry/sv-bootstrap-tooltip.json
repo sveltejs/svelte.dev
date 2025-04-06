@@ -1,18 +1,19 @@
 {
-  "name": "sv-bootstrap-tooltip",
-  "description": "Create Bootstrap tooltips for Svelte applications.",
-  "repo_url": "https://github.com/Sidd27/sv-bootstrap-tooltip",
-  "authors": [
-    "sidd27"
-  ],
-  "homepage": "https://github.com/Sidd27/sv-bootstrap-tooltip#readme",
-  "downloads": 55,
-  "dependents": 0,
-  "updated": "2020-11-16T13:30:01.122Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "sv-bootstrap-tooltip",
+	"description": "Create Bootstrap tooltips for Svelte applications.",
+	"repo_url": "https://github.com/Sidd27/sv-bootstrap-tooltip",
+	"authors": ["sidd27"],
+	"homepage": "https://github.com/Sidd27/sv-bootstrap-tooltip#readme",
+	"downloads": 55,
+	"dependents": 0,
+	"updated": "2020-11-16T13:30:01.122Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

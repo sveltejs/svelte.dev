@@ -1,18 +1,19 @@
 {
-  "name": "svelte-icons-pack",
-  "description": "Use SVG icons as Svelte components from various libraries.",
-  "repo_url": "https://github.com/leshak/svelte-icons-pack",
-  "authors": [
-    "leshak"
-  ],
-  "homepage": "https://github.com/leshak/svelte-icons-pack#readme",
-  "downloads": 1193,
-  "dependents": 8,
-  "updated": "2024-03-27T10:54:27.761Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 67
+	"name": "svelte-icons-pack",
+	"description": "Use SVG icons as Svelte components from various libraries.",
+	"repo_url": "https://github.com/leshak/svelte-icons-pack",
+	"authors": ["leshak"],
+	"homepage": "https://github.com/leshak/svelte-icons-pack#readme",
+	"downloads": 1193,
+	"dependents": 8,
+	"updated": "2024-03-27T10:54:27.761Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 67,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

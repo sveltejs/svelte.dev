@@ -1,17 +1,18 @@
 {
-  "name": "svelte-lite-youtube-embed",
-  "description": "Embed YouTube videos with a lightweight Svelte component.",
-  "repo_url": "https://github.com/zamanruhy/svelte-lite-youtube-embed",
-  "authors": [
-    "zamanruhy"
-  ],
-  "homepage": "https://github.com/zamanruhy/svelte-lite-youtube-embed",
-  "downloads": 63,
-  "dependents": 0,
-  "updated": "2022-07-31T03:49:11.345Z",
-  "tags": [
-    "media"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-lite-youtube-embed",
+	"description": "Embed YouTube videos with a lightweight Svelte component.",
+	"repo_url": "https://github.com/zamanruhy/svelte-lite-youtube-embed",
+	"authors": ["zamanruhy"],
+	"homepage": "https://github.com/zamanruhy/svelte-lite-youtube-embed",
+	"downloads": 63,
+	"dependents": 0,
+	"updated": "2022-07-31T03:49:11.345Z",
+	"tags": ["media"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

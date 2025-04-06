@@ -1,18 +1,19 @@
 {
-  "name": "@taocode/svelte-headroom",
-  "description": "Create auto-hiding headers and footers in Svelte apps.",
-  "repo_url": "https://github.com/taocode/svelte-headroom",
-  "authors": [
-    "taocode"
-  ],
-  "homepage": "https://github.com/taocode/svelte-headroom#readme",
-  "downloads": 60,
-  "dependents": 0,
-  "updated": "2022-11-22T08:32:56.974Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 2
+	"name": "@taocode/svelte-headroom",
+	"description": "Create auto-hiding headers and footers in Svelte apps.",
+	"repo_url": "https://github.com/taocode/svelte-headroom",
+	"authors": ["taocode"],
+	"homepage": "https://github.com/taocode/svelte-headroom#readme",
+	"downloads": 60,
+	"dependents": 0,
+	"updated": "2022-11-22T08:32:56.974Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

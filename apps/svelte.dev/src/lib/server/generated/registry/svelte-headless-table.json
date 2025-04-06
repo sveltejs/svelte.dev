@@ -1,18 +1,19 @@
 {
-  "name": "svelte-headless-table",
-  "description": "Create unopinionated and extensible data tables for Svelte.",
-  "repo_url": "https://github.com/bryanmylee/svelte-headless-table",
-  "authors": [
-    "bryanmylee"
-  ],
-  "homepage": "https://svelte-headless-table.bryanmylee.com",
-  "downloads": 18300,
-  "dependents": 8,
-  "updated": "2024-10-28T12:34:41.590Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 492
+	"name": "svelte-headless-table",
+	"description": "Create unopinionated and extensible data tables for Svelte.",
+	"repo_url": "https://github.com/bryanmylee/svelte-headless-table",
+	"authors": ["bryanmylee"],
+	"homepage": "https://svelte-headless-table.bryanmylee.com",
+	"downloads": 18300,
+	"dependents": 8,
+	"updated": "2024-10-28T12:34:41.590Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 492,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

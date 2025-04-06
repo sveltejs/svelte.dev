@@ -1,17 +1,18 @@
 {
-  "name": "@khulnasoft/ai-sdk",
-  "description": "Build AI-powered streaming text and chat UIs.",
-  "repo_url": "https://github.com/khulnasoft/ai-sdk",
-  "authors": [
-    "nextlinux"
-  ],
-  "homepage": "https://ai.khulnasoft.com/docs",
-  "downloads": 3,
-  "dependents": 0,
-  "updated": "2023-12-13T03:45:51.798Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@khulnasoft/ai-sdk",
+	"description": "Build AI-powered streaming text and chat UIs.",
+	"repo_url": "https://github.com/khulnasoft/ai-sdk",
+	"authors": ["nextlinux"],
+	"homepage": "https://ai.khulnasoft.com/docs",
+	"downloads": 3,
+	"dependents": 0,
+	"updated": "2023-12-13T03:45:51.798Z",
+	"tags": ["integration"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": false
+	}
 }

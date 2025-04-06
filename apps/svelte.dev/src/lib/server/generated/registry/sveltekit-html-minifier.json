@@ -1,18 +1,19 @@
 {
-  "name": "sveltekit-html-minifier",
-  "description": "Minify HTML output for SvelteKit static adapter.",
-  "repo_url": "https://github.com/ntsd/sveltekit-html-minifier",
-  "authors": [
-    "ntsd"
-  ],
-  "homepage": "https://github.com/ntsd/sveltekit-html-minifier#readme",
-  "downloads": 121,
-  "dependents": 0,
-  "updated": "2024-10-25T06:10:25.528Z",
-  "tags": [
-    "adapter"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 7
+	"name": "sveltekit-html-minifier",
+	"description": "Minify HTML output for SvelteKit static adapter.",
+	"repo_url": "https://github.com/ntsd/sveltekit-html-minifier",
+	"authors": ["ntsd"],
+	"homepage": "https://github.com/ntsd/sveltekit-html-minifier#readme",
+	"downloads": 121,
+	"dependents": 0,
+	"updated": "2024-10-25T06:10:25.528Z",
+	"tags": ["adapter"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 7,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

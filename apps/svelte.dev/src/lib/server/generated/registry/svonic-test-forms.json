@@ -1,17 +1,18 @@
 {
-  "name": "@svonic-test/forms",
-  "description": "Test forms in Svelte applications.",
-  "repo_url": "https://github.com/svonic/test",
-  "authors": [
-    "daimyo"
-  ],
-  "homepage": "https://github.com/svonic/test#readme",
-  "downloads": 57,
-  "dependents": 0,
-  "updated": "2022-04-11T08:45:10.634Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@svonic-test/forms",
+	"description": "Test forms in Svelte applications.",
+	"repo_url": "https://github.com/svonic/test",
+	"authors": ["daimyo"],
+	"homepage": "https://github.com/svonic/test#readme",
+	"downloads": 57,
+	"dependents": 0,
+	"updated": "2022-04-11T08:45:10.634Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

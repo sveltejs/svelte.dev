@@ -1,17 +1,19 @@
 {
-  "name": "@naylour/telegram",
-  "description": "Svelte 5 library for interacting with Telegram API.",
-  "repo_url": "https://github.com/naylour/NaylourTelegram",
-  "authors": [
-    "shahtheshah"
-  ],
-  "downloads": 14,
-  "dependents": 0,
-  "updated": "2025-01-04T22:40:10.009Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 0
+	"name": "@naylour/telegram",
+	"description": "Svelte 5 library for interacting with Telegram API.",
+	"repo_url": "https://github.com/naylour/NaylourTelegram",
+	"authors": ["shahtheshah"],
+	"downloads": 14,
+	"dependents": 0,
+	"updated": "2025-01-04T22:40:10.009Z",
+	"tags": ["integration"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 0,
+	"homepage": null,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

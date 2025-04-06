@@ -1,18 +1,19 @@
 {
-  "name": "svelte-scripts",
-  "description": "Create Svelte applications and libraries with zero settings.",
-  "repo_url": "https://github.com/andrelmlins/svelte-scripts",
-  "authors": [
-    "andrelmlins"
-  ],
-  "homepage": "https://github.com/andrelmlins/svelte-scripts",
-  "downloads": 29,
-  "dependents": 0,
-  "updated": "2020-03-23T13:37:05.769Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 3
+	"name": "svelte-scripts",
+	"description": "Create Svelte applications and libraries with zero settings.",
+	"repo_url": "https://github.com/andrelmlins/svelte-scripts",
+	"authors": ["andrelmlins"],
+	"homepage": "https://github.com/andrelmlins/svelte-scripts",
+	"downloads": 29,
+	"dependents": 0,
+	"updated": "2020-03-23T13:37:05.769Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 3,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

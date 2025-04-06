@@ -1,17 +1,19 @@
 {
-  "name": "rollup-config-sven",
-  "description": "Minimal static site generator for Svelte.",
-  "repo_url": "https://github.com/wulfmann/sven",
-  "authors": [
-    "wulfmann"
-  ],
-  "downloads": 10,
-  "dependents": 0,
-  "updated": "2020-10-23T18:05:22.233Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 4
+	"name": "rollup-config-sven",
+	"description": "Minimal static site generator for Svelte.",
+	"repo_url": "https://github.com/wulfmann/sven",
+	"authors": ["wulfmann"],
+	"downloads": 10,
+	"dependents": 0,
+	"updated": "2020-10-23T18:05:22.233Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 4,
+	"homepage": "https://www.npmjs.com/package/rollup-config-sven",
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

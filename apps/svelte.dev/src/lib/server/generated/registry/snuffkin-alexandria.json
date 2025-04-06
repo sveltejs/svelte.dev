@@ -1,16 +1,17 @@
 {
-  "name": "@snuffkin/alexandria",
-  "description": "Create Svelte component library.",
-  "repo_url": "",
-  "authors": [
-    "snuffkin"
-  ],
-  "downloads": 1,
-  "dependents": 0,
-  "updated": "2024-11-15T22:51:18.713Z",
-  "tags": [
-    "design-system"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "@snuffkin/alexandria",
+	"description": "Create Svelte component library.",
+	"repo_url": "",
+	"authors": ["snuffkin"],
+	"downloads": 1,
+	"dependents": 0,
+	"updated": "2024-11-15T22:51:18.713Z",
+	"tags": ["design-system"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "svelte-algolia",
-  "description": "Provides Algolia search integration for Svelte apps.",
-  "repo_url": "https://github.com/janosh/svelte-algolia",
-  "authors": [
-    "janosh"
-  ],
-  "homepage": "https://svelte-algolia.netlify.app",
-  "downloads": 2,
-  "dependents": 0,
-  "updated": "2022-10-24T21:39:10.581Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 36
+	"name": "svelte-algolia",
+	"description": "Provides Algolia search integration for Svelte apps.",
+	"repo_url": "https://github.com/janosh/svelte-algolia",
+	"authors": ["janosh"],
+	"homepage": "https://svelte-algolia.netlify.app",
+	"downloads": 2,
+	"dependents": 0,
+	"updated": "2022-10-24T21:39:10.581Z",
+	"tags": ["integration"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 36,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

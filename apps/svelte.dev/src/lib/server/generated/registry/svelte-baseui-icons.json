@@ -1,18 +1,19 @@
 {
-  "name": "svelte-baseui-icons",
-  "description": "Use Uber Base UI SVG icons as Svelte components.",
-  "repo_url": "https://github.com/metonym/svelte-baseui-icons",
-  "authors": [
-    "metonym"
-  ],
-  "homepage": "https://github.com/metonym/svelte-baseui-icons",
-  "downloads": 7,
-  "dependents": 0,
-  "updated": "2020-04-26T23:27:04.036Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelte-baseui-icons",
+	"description": "Use Uber Base UI SVG icons as Svelte components.",
+	"repo_url": "https://github.com/metonym/svelte-baseui-icons",
+	"authors": ["metonym"],
+	"homepage": "https://github.com/metonym/svelte-baseui-icons",
+	"downloads": 7,
+	"dependents": 0,
+	"updated": "2020-04-26T23:27:04.036Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

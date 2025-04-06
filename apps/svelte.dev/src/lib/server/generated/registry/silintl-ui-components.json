@@ -1,22 +1,19 @@
 {
-  "name": "@silintl/ui-components",
-  "description": "Develop reusable Svelte components for internal applications.",
-  "repo_url": "https://github.com/silinternational/ui-components",
-  "authors": [
-    "fillup",
-    "wcjr11",
-    "matt-h",
-    "schparky",
-    "hobbitronics"
-  ],
-  "homepage": "https://github.com/silinternational/ui-components#readme",
-  "downloads": 129,
-  "dependents": 0,
-  "updated": "2024-12-11T05:17:05.186Z",
-  "tags": [
-    "design-system"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 4
+	"name": "@silintl/ui-components",
+	"description": "Develop reusable Svelte components for internal applications.",
+	"repo_url": "https://github.com/silinternational/ui-components",
+	"authors": ["fillup", "wcjr11", "matt-h", "schparky", "hobbitronics"],
+	"homepage": "https://github.com/silinternational/ui-components#readme",
+	"downloads": 129,
+	"dependents": 0,
+	"updated": "2024-12-11T05:17:05.186Z",
+	"tags": ["design-system"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 4,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

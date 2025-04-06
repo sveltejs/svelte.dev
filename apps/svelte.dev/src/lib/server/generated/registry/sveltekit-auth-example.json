@@ -1,19 +1,19 @@
 {
-  "name": "sveltekit-auth-example",
-  "description": "Example authentication and authorization for SvelteKit.",
-  "repo_url": "https://github.com/nstuyvesant/sveltekit-auth-example",
-  "authors": [
-    "nstuyvesant"
-  ],
-  "homepage": "https://github.com/nstuyvesant/sveltekit-auth-example#readme",
-  "downloads": 5,
-  "dependents": 0,
-  "updated": "2025-03-08T17:30:00.649Z",
-  "tags": [
-    "auth",
-    "server"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 339
+	"name": "sveltekit-auth-example",
+	"description": "Example authentication and authorization for SvelteKit.",
+	"repo_url": "https://github.com/nstuyvesant/sveltekit-auth-example",
+	"authors": ["nstuyvesant"],
+	"homepage": "https://github.com/nstuyvesant/sveltekit-auth-example#readme",
+	"downloads": 5,
+	"dependents": 0,
+	"updated": "2025-03-08T17:30:00.649Z",
+	"tags": ["auth", "server"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 339,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

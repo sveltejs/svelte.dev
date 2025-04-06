@@ -1,17 +1,18 @@
 {
-  "name": "svelte-store-extended",
-  "description": "Extend Svelte stores with additional functionalities.",
-  "repo_url": "https://github.com/chainlist/svelte-store-extended",
-  "authors": [
-    "chainlist"
-  ],
-  "homepage": "https://github.com/chainlist/svelte-store-extended#readme",
-  "downloads": 8,
-  "dependents": 0,
-  "updated": "2021-04-04T14:18:30.388Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-store-extended",
+	"description": "Extend Svelte stores with additional functionalities.",
+	"repo_url": "https://github.com/chainlist/svelte-store-extended",
+	"authors": ["chainlist"],
+	"homepage": "https://github.com/chainlist/svelte-store-extended#readme",
+	"downloads": 8,
+	"dependents": 0,
+	"updated": "2021-04-04T14:18:30.388Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

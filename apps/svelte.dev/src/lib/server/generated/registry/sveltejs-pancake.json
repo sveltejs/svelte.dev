@@ -1,21 +1,19 @@
 {
-  "name": "@sveltejs/pancake",
-  "description": "Create responsive charts with Svelte.",
-  "repo_url": "https://github.com/Rich-Harris/pancake",
-  "authors": [
-    "rich_harris",
-    "svelte-admin",
-    "conduitry",
-    "dominik_g"
-  ],
-  "homepage": "https://github.com/Rich-Harris/pancake#readme",
-  "downloads": 3714,
-  "dependents": 1,
-  "updated": "2021-08-12T13:59:47.557Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1308
+	"name": "@sveltejs/pancake",
+	"description": "Create responsive charts with Svelte.",
+	"repo_url": "https://github.com/Rich-Harris/pancake",
+	"authors": ["rich_harris", "svelte-admin", "conduitry", "dominik_g"],
+	"homepage": "https://github.com/Rich-Harris/pancake#readme",
+	"downloads": 3714,
+	"dependents": 1,
+	"updated": "2021-08-12T13:59:47.557Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1308,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	}
 }

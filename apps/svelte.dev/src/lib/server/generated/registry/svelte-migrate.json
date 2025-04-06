@@ -1,18 +1,19 @@
 {
-  "name": "svelte-migrate",
-  "description": "Migrate Svelte(Kit) codebases with a CLI.",
-  "repo_url": "https://github.com/sveltejs/cli",
-  "authors": [
-    "svelte-admin"
-  ],
-  "homepage": "https://svelte.dev",
-  "downloads": 563,
-  "dependents": 0,
-  "updated": "2025-03-23T08:02:29.802Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 338
+	"name": "svelte-migrate",
+	"description": "Migrate Svelte(Kit) codebases with a CLI.",
+	"repo_url": "https://github.com/sveltejs/cli",
+	"authors": ["svelte-admin"],
+	"homepage": "https://svelte.dev",
+	"downloads": 563,
+	"dependents": 0,
+	"updated": "2025-03-23T08:02:29.802Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 338,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

@@ -1,19 +1,19 @@
 {
-  "name": "@neo4j-cypher/svelte-codemirror",
-  "description": "Provides a Cypher editor component using CodeMirror 6 for Svelte.",
-  "repo_url": "https://github.com/neo4j/cypher-editor",
-  "authors": [
-    "neo4j-bloom-reader2",
-    "neo4j-organization"
-  ],
-  "homepage": "https://github.com/neo4j/cypher-editor#readme",
-  "downloads": 36,
-  "dependents": 0,
-  "updated": "2024-04-02T12:27:23.937Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 46
+	"name": "@neo4j-cypher/svelte-codemirror",
+	"description": "Provides a Cypher editor component using CodeMirror 6 for Svelte.",
+	"repo_url": "https://github.com/neo4j/cypher-editor",
+	"authors": ["neo4j-bloom-reader2", "neo4j-organization"],
+	"homepage": "https://github.com/neo4j/cypher-editor#readme",
+	"downloads": 36,
+	"dependents": 0,
+	"updated": "2024-04-02T12:27:23.937Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 46,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

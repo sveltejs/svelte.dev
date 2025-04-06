@@ -1,18 +1,19 @@
 {
-  "name": "@electrojet/svelte",
-  "description": "Provide build scripts for Electrojet Svelte applications.",
-  "repo_url": "https://github.com/agneym/electrojet-scripts",
-  "authors": [
-    "agney"
-  ],
-  "homepage": "https://github.com/agneym/electrojet-scripts#readme",
-  "downloads": 104,
-  "dependents": 0,
-  "updated": "2019-11-23T19:07:33.558Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "@electrojet/svelte",
+	"description": "Provide build scripts for Electrojet Svelte applications.",
+	"repo_url": "https://github.com/agneym/electrojet-scripts",
+	"authors": ["agney"],
+	"homepage": "https://github.com/agneym/electrojet-scripts#readme",
+	"downloads": 104,
+	"dependents": 0,
+	"updated": "2019-11-23T19:07:33.558Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

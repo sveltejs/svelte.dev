@@ -1,23 +1,19 @@
 {
-  "name": "@firstfleet/sveltejs-brunch",
-  "description": "Compile Svelte components within Brunch projects.",
-  "repo_url": "https://github.com/firstfleetinc/sveltejs-brunch",
-  "authors": [
-    "brbeaird",
-    "grantdaddy",
-    "jxpatto",
-    "dwhitak",
-    "nathanbelete",
-    "aleverette"
-  ],
-  "homepage": "https://github.com/firstfleetinc/sveltejs-brunch#readme",
-  "downloads": 0,
-  "dependents": 0,
-  "updated": "2022-04-04T15:36:50.821Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "@firstfleet/sveltejs-brunch",
+	"description": "Compile Svelte components within Brunch projects.",
+	"repo_url": "https://github.com/firstfleetinc/sveltejs-brunch",
+	"authors": ["brbeaird", "grantdaddy", "jxpatto", "dwhitak", "nathanbelete", "aleverette"],
+	"homepage": "https://github.com/firstfleetinc/sveltejs-brunch#readme",
+	"downloads": 0,
+	"dependents": 0,
+	"updated": "2022-04-04T15:36:50.821Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

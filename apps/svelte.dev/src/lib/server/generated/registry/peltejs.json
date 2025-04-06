@@ -1,18 +1,19 @@
 {
-  "name": "peltejs",
-  "description": "Shorten Svelte 5 runes syntax with preprocessor.",
-  "repo_url": "https://github.com/98mux/pelte",
-  "authors": [
-    "filipot"
-  ],
-  "homepage": "https://github.com/98mux/pelte#readme",
-  "downloads": 4,
-  "dependents": 0,
-  "updated": "2024-03-06T20:11:12.822Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 0
+	"name": "peltejs",
+	"description": "Shorten Svelte 5 runes syntax with preprocessor.",
+	"repo_url": "https://github.com/98mux/pelte",
+	"authors": ["filipot"],
+	"homepage": "https://github.com/98mux/pelte#readme",
+	"downloads": 4,
+	"dependents": 0,
+	"updated": "2024-03-06T20:11:12.822Z",
+	"tags": ["tooling"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

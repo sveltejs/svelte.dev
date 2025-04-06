@@ -1,18 +1,19 @@
 {
-  "name": "svelte-coreui-icons",
-  "description": "Display CoreUI SVG icons in Svelte applications.",
-  "repo_url": "https://github.com/shinokada/svelte-coreui-icons",
-  "authors": [
-    "shinichiokada"
-  ],
-  "homepage": "https://svelte-coreui-icons.codewithshin.com",
-  "downloads": 1278,
-  "dependents": 0,
-  "updated": "2024-03-01T16:41:51.800Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 1
+	"name": "svelte-coreui-icons",
+	"description": "Display CoreUI SVG icons in Svelte applications.",
+	"repo_url": "https://github.com/shinokada/svelte-coreui-icons",
+	"authors": ["shinichiokada"],
+	"homepage": "https://svelte-coreui-icons.codewithshin.com",
+	"downloads": 1278,
+	"dependents": 0,
+	"updated": "2024-03-01T16:41:51.800Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": true
+	}
 }

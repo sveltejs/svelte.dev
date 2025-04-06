@@ -1,18 +1,19 @@
 {
-  "name": "svelte-awesome-icons",
-  "description": "Use Font Awesome SVG icons in Svelte applications.",
-  "repo_url": "https://github.com/shinokada/svelte-awesome-icons",
-  "authors": [
-    "shinichiokada"
-  ],
-  "homepage": "https://svelte-awesome-icons.codewithshin.com/",
-  "downloads": 1752,
-  "dependents": 1,
-  "updated": "2024-10-25T14:54:03.773Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 21
+	"name": "svelte-awesome-icons",
+	"description": "Use Font Awesome SVG icons in Svelte applications.",
+	"repo_url": "https://github.com/shinokada/svelte-awesome-icons",
+	"authors": ["shinichiokada"],
+	"homepage": "https://svelte-awesome-icons.codewithshin.com/",
+	"downloads": 1752,
+	"dependents": 1,
+	"updated": "2024-10-25T14:54:03.773Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 21,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

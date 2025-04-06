@@ -1,18 +1,18 @@
 {
-  "name": "minmat",
-  "description": "Create minimalistic material design UI components for Svelte.",
-  "repo_url": "https://github.com/pvharmo/minmat",
-  "authors": [
-    "pvharmo"
-  ],
-  "homepage": "https://github.com/pvharmo/minmat#readme",
-  "downloads": 27,
-  "dependents": 0,
-  "updated": "2021-12-01T22:34:04.719Z",
-  "tags": [
-    "ui",
-    "design-system"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "minmat",
+	"description": "Create minimalistic material design UI components for Svelte.",
+	"repo_url": "https://github.com/pvharmo/minmat",
+	"authors": ["pvharmo"],
+	"homepage": "https://github.com/pvharmo/minmat#readme",
+	"downloads": 27,
+	"dependents": 0,
+	"updated": "2021-12-01T22:34:04.719Z",
+	"tags": ["ui", "design-system"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

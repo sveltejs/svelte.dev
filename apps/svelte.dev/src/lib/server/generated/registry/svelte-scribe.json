@@ -1,18 +1,19 @@
 {
-  "name": "svelte-scribe",
-  "description": "Process Markdown files with Markdoc for SvelteKit documentation.",
-  "repo_url": "https://github.com/shepherd1530/svelte-scribe",
-  "authors": [
-    "sam.codes"
-  ],
-  "homepage": "https://github.com/shepherd1530/svelte-scribe#readme",
-  "downloads": 10,
-  "dependents": 0,
-  "updated": "2023-04-15T00:05:52.390Z",
-  "tags": [
-    "content"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "svelte-scribe",
+	"description": "Process Markdown files with Markdoc for SvelteKit documentation.",
+	"repo_url": "https://github.com/shepherd1530/svelte-scribe",
+	"authors": ["sam.codes"],
+	"homepage": "https://github.com/shepherd1530/svelte-scribe#readme",
+	"downloads": 10,
+	"dependents": 0,
+	"updated": "2023-04-15T00:05:52.390Z",
+	"tags": ["content"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

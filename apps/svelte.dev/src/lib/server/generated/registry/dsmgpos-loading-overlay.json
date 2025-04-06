@@ -1,17 +1,18 @@
 {
-  "name": "dsmgpos-loading-overlay",
-  "description": "Create loading overlay component for Svelte apps.",
-  "repo_url": "https://github.com/dsmgpos/dsmgpos-loading-overlay",
-  "authors": [
-    "salvacmp"
-  ],
-  "homepage": "https://github.com/dsmgpos/dsmgpos-loading-overlay#readme",
-  "downloads": 7,
-  "dependents": 0,
-  "updated": "2021-10-16T16:39:09.058Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "dsmgpos-loading-overlay",
+	"description": "Create loading overlay component for Svelte apps.",
+	"repo_url": "https://github.com/dsmgpos/dsmgpos-loading-overlay",
+	"authors": ["salvacmp"],
+	"homepage": "https://github.com/dsmgpos/dsmgpos-loading-overlay#readme",
+	"downloads": 7,
+	"dependents": 0,
+	"updated": "2021-10-16T16:39:09.058Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

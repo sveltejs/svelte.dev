@@ -1,18 +1,19 @@
 {
-  "name": "svelte-remixicon",
-  "description": "Use Remix Icon in Svelte/SvelteKit apps.",
-  "repo_url": "https://github.com/aantusahaa/svelte-remixicon",
-  "authors": [
-    "antusaha"
-  ],
-  "homepage": "https://github.com/aantusahaa/svelte-remixicon#readme",
-  "downloads": 293,
-  "dependents": 0,
-  "updated": "2024-12-22T06:19:02.395Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": true,
-  "github_stars": 44
+	"name": "svelte-remixicon",
+	"description": "Use Remix Icon in Svelte/SvelteKit apps.",
+	"repo_url": "https://github.com/aantusahaa/svelte-remixicon",
+	"authors": ["antusaha"],
+	"homepage": "https://github.com/aantusahaa/svelte-remixicon#readme",
+	"downloads": 293,
+	"dependents": 0,
+	"updated": "2024-12-22T06:19:02.395Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": true,
+	"github_stars": 44,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

@@ -1,17 +1,18 @@
 {
-  "name": "svelte-dock",
-  "description": "Create dock component for Svelte apps.",
-  "repo_url": "https://github.com/thecodejack/svelte-dock",
-  "authors": [
-    "thecodejack"
-  ],
-  "homepage": "https://github.com/thecodejack/svelte-dock#readme",
-  "downloads": 7,
-  "dependents": 0,
-  "updated": "2020-09-13T16:47:06.683Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-dock",
+	"description": "Create dock component for Svelte apps.",
+	"repo_url": "https://github.com/thecodejack/svelte-dock",
+	"authors": ["thecodejack"],
+	"homepage": "https://github.com/thecodejack/svelte-dock#readme",
+	"downloads": 7,
+	"dependents": 0,
+	"updated": "2020-09-13T16:47:06.683Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

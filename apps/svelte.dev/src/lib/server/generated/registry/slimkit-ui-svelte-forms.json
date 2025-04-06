@@ -1,16 +1,17 @@
 {
-  "name": "@slimkit-ui/svelte-forms",
-  "description": "Validate forms in Svelte applications with zero dependencies.",
-  "repo_url": "",
-  "authors": [
-    "zirconlabz"
-  ],
-  "downloads": 14,
-  "dependents": 0,
-  "updated": "2022-05-26T04:03:53.384Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@slimkit-ui/svelte-forms",
+	"description": "Validate forms in Svelte applications with zero dependencies.",
+	"repo_url": "",
+	"authors": ["zirconlabz"],
+	"downloads": 14,
+	"dependents": 0,
+	"updated": "2022-05-26T04:03:53.384Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

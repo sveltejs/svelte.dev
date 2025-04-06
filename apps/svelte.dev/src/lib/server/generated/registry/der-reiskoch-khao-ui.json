@@ -1,18 +1,19 @@
 {
-  "name": "@der-reiskoch/khao-ui",
-  "description": "Provides UI components as web-components.",
-  "repo_url": "https://github.com/Khao-UI-Tools/khao-ui",
-  "authors": [
-    "jens-reiskoch"
-  ],
-  "homepage": "https://khao-ui-tools.github.io/khao-ui",
-  "downloads": 208,
-  "dependents": 0,
-  "updated": "2025-03-16T14:55:41.597Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "@der-reiskoch/khao-ui",
+	"description": "Provides UI components as web-components.",
+	"repo_url": "https://github.com/Khao-UI-Tools/khao-ui",
+	"authors": ["jens-reiskoch"],
+	"homepage": "https://khao-ui-tools.github.io/khao-ui",
+	"downloads": 208,
+	"dependents": 0,
+	"updated": "2025-03-16T14:55:41.597Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

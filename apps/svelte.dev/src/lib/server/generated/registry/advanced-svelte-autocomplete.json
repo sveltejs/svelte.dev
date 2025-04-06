@@ -1,18 +1,19 @@
 {
-  "name": "advanced-svelte-autocomplete",
-  "description": "Build autocomplete/select/typeahead components for Svelte.",
-  "repo_url": "https://github.com/t-next/advanced-svelte-autocomplete",
-  "authors": [
-    "t-next"
-  ],
-  "homepage": "https://github.com/t-next/advanced-svelte-autocomplete#readme",
-  "downloads": 59,
-  "dependents": 2,
-  "updated": "2021-11-02T15:42:50.840Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "advanced-svelte-autocomplete",
+	"description": "Build autocomplete/select/typeahead components for Svelte.",
+	"repo_url": "https://github.com/t-next/advanced-svelte-autocomplete",
+	"authors": ["t-next"],
+	"homepage": "https://github.com/t-next/advanced-svelte-autocomplete#readme",
+	"downloads": 59,
+	"dependents": 2,
+	"updated": "2021-11-02T15:42:50.840Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

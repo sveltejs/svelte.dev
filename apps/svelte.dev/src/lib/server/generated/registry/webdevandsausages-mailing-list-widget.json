@@ -1,18 +1,19 @@
 {
-  "name": "@webdevandsausages/mailing-list-widget",
-  "description": "Display mailing list widget for Svelte apps.",
-  "repo_url": "https://github.com/webDevAndSausages/world-of-webdevandsausages",
-  "authors": [
-    "rikuvan"
-  ],
-  "homepage": "https://github.com/webDevAndSausages/world-of-webdevandsausages#readme",
-  "downloads": 16,
-  "dependents": 0,
-  "updated": "2020-02-16T13:46:27.137Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 5
+	"name": "@webdevandsausages/mailing-list-widget",
+	"description": "Display mailing list widget for Svelte apps.",
+	"repo_url": "https://github.com/webDevAndSausages/world-of-webdevandsausages",
+	"authors": ["rikuvan"],
+	"homepage": "https://github.com/webDevAndSausages/world-of-webdevandsausages#readme",
+	"downloads": 16,
+	"dependents": 0,
+	"updated": "2020-02-16T13:46:27.137Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 5,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

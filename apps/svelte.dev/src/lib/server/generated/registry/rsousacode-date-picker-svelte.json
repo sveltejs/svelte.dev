@@ -1,18 +1,19 @@
 {
-  "name": "@rsousacode/date-picker-svelte",
-  "description": "Date and time picker component for Svelte apps.",
-  "repo_url": "https://github.com/rsousacode/date-picker-svelte",
-  "authors": [
-    "rsousacode"
-  ],
-  "homepage": "https://date-picker-svelte.kasper.space",
-  "downloads": 6,
-  "dependents": 0,
-  "updated": "2023-02-01T15:11:13.105Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@rsousacode/date-picker-svelte",
+	"description": "Date and time picker component for Svelte apps.",
+	"repo_url": "https://github.com/rsousacode/date-picker-svelte",
+	"authors": ["rsousacode"],
+	"homepage": "https://date-picker-svelte.kasper.space",
+	"downloads": 6,
+	"dependents": 0,
+	"updated": "2023-02-01T15:11:13.105Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

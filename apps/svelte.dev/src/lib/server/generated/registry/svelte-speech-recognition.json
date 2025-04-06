@@ -1,18 +1,19 @@
 {
-  "name": "svelte-speech-recognition",
-  "description": "Integrate speech recognition into Svelte components.",
-  "repo_url": "https://github.com/jhubbardsf/svelte-speech-recognition",
-  "authors": [
-    "jhubbardsf"
-  ],
-  "homepage": "https://github.com/jhubbardsf/svelte-speech-recognition#readme",
-  "downloads": 94,
-  "dependents": 0,
-  "updated": "2022-06-13T02:15:08.286Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 34
+	"name": "svelte-speech-recognition",
+	"description": "Integrate speech recognition into Svelte components.",
+	"repo_url": "https://github.com/jhubbardsf/svelte-speech-recognition",
+	"authors": ["jhubbardsf"],
+	"homepage": "https://github.com/jhubbardsf/svelte-speech-recognition#readme",
+	"downloads": 94,
+	"dependents": 0,
+	"updated": "2022-06-13T02:15:08.286Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 34,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

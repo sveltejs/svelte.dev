@@ -1,22 +1,19 @@
 {
-  "name": "@sheepdog/svelte",
-  "description": "Handle async tasks in Svelte applications.",
-  "repo_url": "https://github.com/mainmatter/sheepdog",
-  "authors": [
-    "pablopang",
-    "marcoow",
-    "mainmatter",
-    "beerinho",
-    "nickschot"
-  ],
-  "homepage": "https://github.com/mainmatter/sheepdog#readme",
-  "downloads": 117,
-  "dependents": 0,
-  "updated": "2025-03-21T22:28:06.239Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 85
+	"name": "@sheepdog/svelte",
+	"description": "Handle async tasks in Svelte applications.",
+	"repo_url": "https://github.com/mainmatter/sheepdog",
+	"authors": ["pablopang", "marcoow", "mainmatter", "beerinho", "nickschot"],
+	"homepage": "https://github.com/mainmatter/sheepdog#readme",
+	"downloads": 117,
+	"dependents": 0,
+	"updated": "2025-03-21T22:28:06.239Z",
+	"tags": ["miscellaneous"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 85,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": true
+	}
 }

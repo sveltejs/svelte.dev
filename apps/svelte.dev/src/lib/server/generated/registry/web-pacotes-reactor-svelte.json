@@ -1,17 +1,18 @@
 {
-  "name": "@web-pacotes/reactor-svelte",
-  "description": "Manage reactive state using Flutter Bloc in Svelte apps.",
-  "repo_url": "https://github.com/web-pacotes/reactor-svelte",
-  "authors": [
-    "freitzzz"
-  ],
-  "homepage": "https://github.com/web-pacotes/reactor-svelte#readme",
-  "downloads": 6,
-  "dependents": 0,
-  "updated": "2024-04-17T22:26:52.027Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@web-pacotes/reactor-svelte",
+	"description": "Manage reactive state using Flutter Bloc in Svelte apps.",
+	"repo_url": "https://github.com/web-pacotes/reactor-svelte",
+	"authors": ["freitzzz"],
+	"homepage": "https://github.com/web-pacotes/reactor-svelte#readme",
+	"downloads": 6,
+	"dependents": 0,
+	"updated": "2024-04-17T22:26:52.027Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

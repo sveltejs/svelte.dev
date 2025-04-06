@@ -1,18 +1,19 @@
 {
-  "name": "create-sveltekit-starterpack",
-  "description": "CLI tool to quickly set up SvelteKit applications.",
-  "repo_url": "https://github.com/thomasmol/create-sveltekit-starterpack",
-  "authors": [
-    "thomasmol"
-  ],
-  "homepage": "https://github.com/thomasmol/sveltekit-starterpack#readme",
-  "downloads": 12,
-  "dependents": 0,
-  "updated": "2023-04-23T10:46:51.628Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "create-sveltekit-starterpack",
+	"description": "CLI tool to quickly set up SvelteKit applications.",
+	"repo_url": "https://github.com/thomasmol/create-sveltekit-starterpack",
+	"authors": ["thomasmol"],
+	"homepage": "https://github.com/thomasmol/sveltekit-starterpack#readme",
+	"downloads": 12,
+	"dependents": 0,
+	"updated": "2023-04-23T10:46:51.628Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

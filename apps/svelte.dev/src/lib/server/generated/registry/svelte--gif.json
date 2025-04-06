@@ -1,18 +1,19 @@
 {
-  "name": "svelte--gif",
-  "description": "Integrate Tenor GIF components into Svelte applications.",
-  "repo_url": "https://github.com/atordvairn/svelte-tenor",
-  "authors": [
-    "atordvairn"
-  ],
-  "homepage": "https://github.com/atordvairn/svelte-tenor/#readme",
-  "downloads": 9,
-  "dependents": 0,
-  "updated": "2022-03-11T17:33:13.690Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelte--gif",
+	"description": "Integrate Tenor GIF components into Svelte applications.",
+	"repo_url": "https://github.com/atordvairn/svelte-tenor",
+	"authors": ["atordvairn"],
+	"homepage": "https://github.com/atordvairn/svelte-tenor/#readme",
+	"downloads": 9,
+	"dependents": 0,
+	"updated": "2022-03-11T17:33:13.690Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

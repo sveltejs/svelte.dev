@@ -1,19 +1,19 @@
 {
-  "name": "svelte-paginator",
-  "description": "Create unopinionated pagination components for Svelte.",
-  "repo_url": "https://github.com/mpdaugherty/svelte-paginator",
-  "authors": [
-    "mpdaugherty"
-  ],
-  "homepage": "https://github.com/mpdaugherty/svelte-paginator#readme",
-  "downloads": 7,
-  "dependents": 0,
-  "updated": "2020-11-21T14:42:40.808Z",
-  "tags": [
-    "ui",
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 3
+	"name": "svelte-paginator",
+	"description": "Create unopinionated pagination components for Svelte.",
+	"repo_url": "https://github.com/mpdaugherty/svelte-paginator",
+	"authors": ["mpdaugherty"],
+	"homepage": "https://github.com/mpdaugherty/svelte-paginator#readme",
+	"downloads": 7,
+	"dependents": 0,
+	"updated": "2020-11-21T14:42:40.808Z",
+	"tags": ["ui", "miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 3,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

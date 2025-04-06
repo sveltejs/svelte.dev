@@ -1,18 +1,19 @@
 {
-  "name": "svelte-twc",
-  "description": "Create reusable Tailwind CSS components easily in Svelte.",
-  "repo_url": "https://github.com/ssssota/svelte-twc",
-  "authors": [
-    "ssssota"
-  ],
-  "homepage": "https://github.com/ssssota/svelte-twc#readme",
-  "downloads": 1,
-  "dependents": 0,
-  "updated": "2024-10-22T05:38:10.980Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 2
+	"name": "svelte-twc",
+	"description": "Create reusable Tailwind CSS components easily in Svelte.",
+	"repo_url": "https://github.com/ssssota/svelte-twc",
+	"authors": ["ssssota"],
+	"homepage": "https://github.com/ssssota/svelte-twc#readme",
+	"downloads": 1,
+	"dependents": 0,
+	"updated": "2024-10-22T05:38:10.980Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

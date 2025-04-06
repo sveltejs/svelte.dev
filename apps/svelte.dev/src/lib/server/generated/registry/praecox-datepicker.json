@@ -1,16 +1,17 @@
 {
-  "name": "praecox-datepicker",
-  "description": "Datepicker component for Svelte apps.",
-  "repo_url": "",
-  "authors": [
-    "runningzs"
-  ],
-  "downloads": 122,
-  "dependents": 0,
-  "updated": "2021-11-14T07:14:34.466Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "praecox-datepicker",
+	"description": "Datepicker component for Svelte apps.",
+	"repo_url": "",
+	"authors": ["runningzs"],
+	"downloads": 122,
+	"dependents": 0,
+	"updated": "2021-11-14T07:14:34.466Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

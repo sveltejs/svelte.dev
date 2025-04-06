@@ -1,18 +1,19 @@
 {
-  "name": "@cfcs/svelte",
-  "description": "Create cross-framework components supporting Svelte.",
-  "repo_url": "https://github.com/naver/cfcs",
-  "authors": [
-    "younkue"
-  ],
-  "homepage": "https://naver.github.io/cfcs",
-  "downloads": 65,
-  "dependents": 5,
-  "updated": "2023-02-24T13:04:42.073Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 104
+	"name": "@cfcs/svelte",
+	"description": "Create cross-framework components supporting Svelte.",
+	"repo_url": "https://github.com/naver/cfcs",
+	"authors": ["younkue"],
+	"homepage": "https://naver.github.io/cfcs",
+	"downloads": 65,
+	"dependents": 5,
+	"updated": "2023-02-24T13:04:42.073Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 104,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

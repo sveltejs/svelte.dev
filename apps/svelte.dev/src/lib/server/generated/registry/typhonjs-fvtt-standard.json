@@ -1,18 +1,19 @@
 {
-  "name": "@typhonjs-fvtt/standard",
-  "description": "Provides standard Svelte components for Foundry VTT.",
-  "repo_url": "https://github.com/typhonjs-fvtt-lib/standard",
-  "authors": [
-    "typhonrt"
-  ],
-  "homepage": "https://github.com/typhonjs-fvtt-lib/standard#readme",
-  "downloads": 26,
-  "dependents": 0,
-  "updated": "2025-03-03T00:57:02.788Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 2
+	"name": "@typhonjs-fvtt/standard",
+	"description": "Provides standard Svelte components for Foundry VTT.",
+	"repo_url": "https://github.com/typhonjs-fvtt-lib/standard",
+	"authors": ["typhonrt"],
+	"homepage": "https://github.com/typhonjs-fvtt-lib/standard#readme",
+	"downloads": 26,
+	"dependents": 0,
+	"updated": "2025-03-03T00:57:02.788Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

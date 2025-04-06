@@ -1,18 +1,19 @@
 {
-  "name": "p5-svelte5",
-  "description": "Integrate p5 sketches into Svelte components easily.",
-  "repo_url": "https://github.com/CodigoDemente/p5-svelte5",
-  "authors": [
-    "codigodemente"
-  ],
-  "homepage": "https://p5-svelte5.netlify.app/",
-  "downloads": 2,
-  "dependents": 0,
-  "updated": "2024-12-08T17:20:46.911Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 0
+	"name": "p5-svelte5",
+	"description": "Integrate p5 sketches into Svelte components easily.",
+	"repo_url": "https://github.com/CodigoDemente/p5-svelte5",
+	"authors": ["codigodemente"],
+	"homepage": "https://p5-svelte5.netlify.app/",
+	"downloads": 2,
+	"dependents": 0,
+	"updated": "2024-12-08T17:20:46.911Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

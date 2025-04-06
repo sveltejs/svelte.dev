@@ -1,18 +1,19 @@
 {
-  "name": "@event-calendar/core",
-  "description": "Create full-sized drag & drop event calendars.",
-  "repo_url": "https://github.com/vkurko/calendar",
-  "authors": [
-    "vkurko"
-  ],
-  "homepage": "https://vkurko.github.io/calendar/",
-  "downloads": 5355,
-  "dependents": 13,
-  "updated": "2025-03-25T17:43:40.753Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1630
+	"name": "@event-calendar/core",
+	"description": "Create full-sized drag & drop event calendars.",
+	"repo_url": "https://github.com/vkurko/calendar",
+	"authors": ["vkurko"],
+	"homepage": "https://vkurko.github.io/calendar/",
+	"downloads": 5355,
+	"dependents": 13,
+	"updated": "2025-03-25T17:43:40.753Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1631,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

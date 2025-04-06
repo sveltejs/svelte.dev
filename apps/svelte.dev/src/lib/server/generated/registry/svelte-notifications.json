@@ -1,18 +1,19 @@
 {
-  "name": "svelte-notifications",
-  "description": "Create simple, flexible notifications for Svelte applications.",
-  "repo_url": "https://github.com/keenethics/svelte-notifications",
-  "authors": [
-    "usernamus"
-  ],
-  "homepage": "https://github.com/keenethics/svelte-notifications#readme",
-  "downloads": 1471,
-  "dependents": 2,
-  "updated": "2022-10-19T22:21:14.245Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 581
+	"name": "svelte-notifications",
+	"description": "Create simple, flexible notifications for Svelte applications.",
+	"repo_url": "https://github.com/keenethics/svelte-notifications",
+	"authors": ["usernamus"],
+	"homepage": "https://github.com/keenethics/svelte-notifications#readme",
+	"downloads": 1471,
+	"dependents": 2,
+	"updated": "2022-10-19T22:21:14.245Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 581,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

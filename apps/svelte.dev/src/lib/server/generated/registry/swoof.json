@@ -1,18 +1,19 @@
 {
-  "name": "swoof",
-  "description": "Integrate Google Firebase Firestore, Auth, Storage, Functions.",
-  "repo_url": "https://github.com/ampatspell/swoof",
-  "authors": [
-    "ampatspell"
-  ],
-  "homepage": "https://github.com/ampatspell/swoof#readme",
-  "downloads": 33,
-  "dependents": 0,
-  "updated": "2020-10-24T01:36:36.586Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "swoof",
+	"description": "Integrate Google Firebase Firestore, Auth, Storage, Functions.",
+	"repo_url": "https://github.com/ampatspell/swoof",
+	"authors": ["ampatspell"],
+	"homepage": "https://github.com/ampatspell/swoof#readme",
+	"downloads": 33,
+	"dependents": 0,
+	"updated": "2020-10-24T01:36:36.586Z",
+	"tags": ["integration"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

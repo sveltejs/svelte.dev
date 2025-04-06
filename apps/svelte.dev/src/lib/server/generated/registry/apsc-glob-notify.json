@@ -1,19 +1,19 @@
 {
-  "name": "@apsc/glob-notify",
-  "description": "Create application-wide notification components for Svelte.",
-  "repo_url": "https://github.com/andrey-pavlenko/svelte-components",
-  "authors": [
-    "andrey-pavlenko"
-  ],
-  "homepage": "https://github.com/andrey-pavlenko/svelte-components/tree/main/packages/glob-notify#readme",
-  "downloads": 0,
-  "dependents": 0,
-  "updated": "2023-02-01T20:16:50.892Z",
-  "tags": [
-    "ui",
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 3
+	"name": "@apsc/glob-notify",
+	"description": "Create application-wide notification components for Svelte.",
+	"repo_url": "https://github.com/andrey-pavlenko/svelte-components",
+	"authors": ["andrey-pavlenko"],
+	"homepage": "https://github.com/andrey-pavlenko/svelte-components/tree/main/packages/glob-notify#readme",
+	"downloads": 0,
+	"dependents": 0,
+	"updated": "2023-02-01T20:16:50.892Z",
+	"tags": ["ui", "miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 3,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

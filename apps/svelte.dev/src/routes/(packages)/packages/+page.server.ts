@@ -12,7 +12,16 @@ export const prerender = false;
 
 export async function load({ url }) {
 	const query = url.searchParams.get('query');
-	const svelte_5_only = (url.searchParams.get('svelte_5_only') ?? 'false') === 'true';
+	const svelte_versions = (url.searchParams.get('svelte_versions') ?? '3,4,5')
+		.split(',')
+		.filter(Boolean)
+		.reduce(
+			(acc, val) => {
+				acc[val] = true;
+				return acc;
+			},
+			{} as Record<string, boolean>
+		);
 	const hide_outdated = (url.searchParams.get('hide_outdated') ?? 'false') === 'true';
 	const sort_by_param = url.searchParams.get('sort_by') as SortCriterion;
 
@@ -48,7 +57,7 @@ export async function load({ url }) {
 	let current_results = search(query, {
 		sort_by,
 		filters: {
-			svelte_5_only,
+			svelte_versions,
 			hide_outdated
 		}
 	});

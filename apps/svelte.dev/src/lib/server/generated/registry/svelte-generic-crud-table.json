@@ -1,18 +1,19 @@
 {
-  "name": "svelte-generic-crud-table",
-  "description": "Render object arrays with options and inline edit in Svelte.",
-  "repo_url": "https://github.com/ivosdc/svelte-generic-crud-table",
-  "authors": [
-    "nologin"
-  ],
-  "homepage": "https://github.com/ivosdc/svelte-generic-crud-table#readme",
-  "downloads": 6,
-  "dependents": 0,
-  "updated": "2023-12-26T18:52:30.309Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 67
+	"name": "svelte-generic-crud-table",
+	"description": "Render object arrays with options and inline edit in Svelte.",
+	"repo_url": "https://github.com/ivosdc/svelte-generic-crud-table",
+	"authors": ["nologin"],
+	"homepage": "https://github.com/ivosdc/svelte-generic-crud-table#readme",
+	"downloads": 6,
+	"dependents": 0,
+	"updated": "2023-12-26T18:52:30.309Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 67,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

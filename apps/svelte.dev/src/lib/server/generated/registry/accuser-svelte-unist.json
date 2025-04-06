@@ -1,18 +1,19 @@
 {
-  "name": "@accuser/svelte-unist",
-  "description": "Transform Unist syntax trees into Svelte components.",
-  "repo_url": "https://github.com/accuser/svelte-unist",
-  "authors": [
-    "accuser"
-  ],
-  "homepage": "https://github.com/accuser/svelte-unist",
-  "downloads": 20,
-  "dependents": 7,
-  "updated": "2024-10-06T06:22:30.687Z",
-  "tags": [
-    "content"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 0
+	"name": "@accuser/svelte-unist",
+	"description": "Transform Unist syntax trees into Svelte components.",
+	"repo_url": "https://github.com/accuser/svelte-unist",
+	"authors": ["accuser"],
+	"homepage": "https://github.com/accuser/svelte-unist",
+	"downloads": 20,
+	"dependents": 7,
+	"updated": "2024-10-06T06:22:30.687Z",
+	"tags": ["content"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

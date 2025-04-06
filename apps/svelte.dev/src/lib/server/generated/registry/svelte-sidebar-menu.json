@@ -1,18 +1,19 @@
 {
-  "name": "svelte-sidebar-menu",
-  "description": "Create responsive sidebar menus for Svelte applications.",
-  "repo_url": "https://github.com/shinokada/svelte-sidebar",
-  "authors": [
-    "shinichiokada"
-  ],
-  "homepage": "https://svelte-sidebar.vercel.app/",
-  "downloads": 12,
-  "dependents": 0,
-  "updated": "2022-10-07T01:56:39.177Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 40
+	"name": "svelte-sidebar-menu",
+	"description": "Create responsive sidebar menus for Svelte applications.",
+	"repo_url": "https://github.com/shinokada/svelte-sidebar",
+	"authors": ["shinichiokada"],
+	"homepage": "https://svelte-sidebar.vercel.app/",
+	"downloads": 12,
+	"dependents": 0,
+	"updated": "2022-10-07T01:56:39.177Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 40,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

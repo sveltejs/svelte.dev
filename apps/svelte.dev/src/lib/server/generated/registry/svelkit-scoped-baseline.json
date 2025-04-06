@@ -1,18 +1,19 @@
 {
-  "name": "@svelkit/scoped-baseline",
-  "description": "Apply scoped baseline styles to Svelte components.",
-  "repo_url": "https://github.com/kenoxa/svelkit",
-  "authors": [
-    "sastan"
-  ],
-  "homepage": "https://github.com/kenoxa/svelkit#readme",
-  "downloads": 36,
-  "dependents": 0,
-  "updated": "2020-07-16T19:45:05.773Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 7
+	"name": "@svelkit/scoped-baseline",
+	"description": "Apply scoped baseline styles to Svelte components.",
+	"repo_url": "https://github.com/kenoxa/svelkit",
+	"authors": ["sastan"],
+	"homepage": "https://github.com/kenoxa/svelkit#readme",
+	"downloads": 36,
+	"dependents": 0,
+	"updated": "2020-07-16T19:45:05.773Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 7,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,0 +1,19 @@
+{
+	"name": "phosphor-svelte",
+	"description": "Render Phosphor icons in Svelte applications.",
+	"repo_url": "https://github.com/haruaki07/phosphor-svelte",
+	"authors": ["haruaki07"],
+	"homepage": "https://phosphoricons.com",
+	"downloads": 7600,
+	"dependents": 3,
+	"updated": "2024-12-06T04:02:09.247Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 180,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
+}

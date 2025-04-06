@@ -1,18 +1,19 @@
 {
-  "name": "mathjax-svelte",
-  "description": "Render math equations using MathJax in Svelte components.",
-  "repo_url": "https://github.com/WoolDoughnut310/mathjax-svelte",
-  "authors": [
-    "wooldoughnut310"
-  ],
-  "homepage": "https://github.com/WoolDoughnut310/mathjax-svelte",
-  "downloads": 6,
-  "dependents": 0,
-  "updated": "2023-01-08T12:02:34.886Z",
-  "tags": [
-    "content"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "mathjax-svelte",
+	"description": "Render math equations using MathJax in Svelte components.",
+	"repo_url": "https://github.com/WoolDoughnut310/mathjax-svelte",
+	"authors": ["wooldoughnut310"],
+	"homepage": "https://github.com/WoolDoughnut310/mathjax-svelte",
+	"downloads": 6,
+	"dependents": 0,
+	"updated": "2023-01-08T12:02:34.886Z",
+	"tags": ["content"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

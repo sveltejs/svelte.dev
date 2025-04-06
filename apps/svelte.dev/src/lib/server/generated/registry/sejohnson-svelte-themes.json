@@ -1,18 +1,19 @@
 {
-  "name": "@sejohnson/svelte-themes",
-  "description": "Implement easy and performant themes for Svelte apps.",
-  "repo_url": "https://github.com/elliott-with-the-longest-name-on-github/svelte-themes",
-  "authors": [
-    "tcc-sejohnson"
-  ],
-  "homepage": "https://github.com/elliott-with-the-longest-name-on-github/svelte-themes#readme",
-  "downloads": 115,
-  "dependents": 0,
-  "updated": "2025-02-27T18:35:40.228Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 6
+	"name": "@sejohnson/svelte-themes",
+	"description": "Implement easy and performant themes for Svelte apps.",
+	"repo_url": "https://github.com/elliott-with-the-longest-name-on-github/svelte-themes",
+	"authors": ["tcc-sejohnson"],
+	"homepage": "https://github.com/elliott-with-the-longest-name-on-github/svelte-themes#readme",
+	"downloads": 115,
+	"dependents": 0,
+	"updated": "2025-02-27T18:35:40.228Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 6,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

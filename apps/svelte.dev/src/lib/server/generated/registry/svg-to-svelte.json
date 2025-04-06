@@ -1,18 +1,19 @@
 {
-  "name": "svg-to-svelte",
-  "description": "Convert SVG files into Svelte components.",
-  "repo_url": "https://github.com/metonym/svg-to-svelte",
-  "authors": [
-    "metonym"
-  ],
-  "homepage": "https://github.com/metonym/svg-to-svelte",
-  "downloads": 158,
-  "dependents": 0,
-  "updated": "2021-07-24T13:55:06.529Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 37
+	"name": "svg-to-svelte",
+	"description": "Convert SVG files into Svelte components.",
+	"repo_url": "https://github.com/metonym/svg-to-svelte",
+	"authors": ["metonym"],
+	"homepage": "https://github.com/metonym/svg-to-svelte",
+	"downloads": 158,
+	"dependents": 0,
+	"updated": "2021-07-24T13:55:06.529Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 37,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

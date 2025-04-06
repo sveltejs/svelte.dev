@@ -1,16 +1,17 @@
 {
-  "name": "@svelte-chat/utils",
-  "description": "Offer utilities for Svelte-Chat applications.",
-  "repo_url": "",
-  "authors": [
-    "kotekpsotek"
-  ],
-  "downloads": 3,
-  "dependents": 2,
-  "updated": "2023-11-06T20:54:03.607Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@svelte-chat/utils",
+	"description": "Offer utilities for Svelte-Chat applications.",
+	"repo_url": "",
+	"authors": ["kotekpsotek"],
+	"downloads": 3,
+	"dependents": 2,
+	"updated": "2023-11-06T20:54:03.607Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

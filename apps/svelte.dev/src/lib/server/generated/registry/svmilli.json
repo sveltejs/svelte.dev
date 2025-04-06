@@ -1,16 +1,17 @@
 {
-  "name": "svmilli",
-  "description": "UI framework for Svelte using the milligram CSS.",
-  "repo_url": "",
-  "authors": [
-    "bebenzer"
-  ],
-  "downloads": 13,
-  "dependents": 0,
-  "updated": "2020-05-17T15:27:34.840Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svmilli",
+	"description": "UI framework for Svelte using the milligram CSS.",
+	"repo_url": "",
+	"authors": ["bebenzer"],
+	"downloads": 13,
+	"dependents": 0,
+	"updated": "2020-05-17T15:27:34.840Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

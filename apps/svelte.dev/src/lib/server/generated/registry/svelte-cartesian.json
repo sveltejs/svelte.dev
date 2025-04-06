@@ -1,18 +1,19 @@
 {
-  "name": "svelte-cartesian",
-  "description": "Renders prop combinations for visual regression testing in Svelte components.",
-  "repo_url": "https://github.com/theetrain/svelte-cartesian",
-  "authors": [
-    "etrain"
-  ],
-  "homepage": "https://github.com/theetrain/svelte-cartesian#readme",
-  "downloads": 55,
-  "dependents": 0,
-  "updated": "2024-09-06T02:07:39.457Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 11
+	"name": "svelte-cartesian",
+	"description": "Renders prop combinations for visual regression testing in Svelte components.",
+	"repo_url": "https://github.com/theetrain/svelte-cartesian",
+	"authors": ["etrain"],
+	"homepage": "https://github.com/theetrain/svelte-cartesian#readme",
+	"downloads": 55,
+	"dependents": 0,
+	"updated": "2024-09-06T02:07:39.457Z",
+	"tags": ["tooling"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 11,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": true
+	}
 }

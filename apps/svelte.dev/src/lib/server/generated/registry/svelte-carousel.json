@@ -1,18 +1,19 @@
 {
-  "name": "svelte-carousel",
-  "description": "Create carousel components for Svelte applications.",
-  "repo_url": "https://github.com/vadimkorr/svelte-carousel",
-  "authors": [
-    "vadimkorr"
-  ],
-  "homepage": "https://github.com/vadimkorr/svelte-carousel#readme",
-  "downloads": 7492,
-  "dependents": 6,
-  "updated": "2023-04-03T20:55:32.574Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 293
+	"name": "svelte-carousel",
+	"description": "Create carousel components for Svelte applications.",
+	"repo_url": "https://github.com/vadimkorr/svelte-carousel",
+	"authors": ["vadimkorr"],
+	"homepage": "https://github.com/vadimkorr/svelte-carousel#readme",
+	"downloads": 7492,
+	"dependents": 6,
+	"updated": "2023-04-03T20:55:32.574Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 293,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "@eslym/svelte-adapter-bun",
-  "description": "Generate standalone Bun.js server for SvelteKit apps.",
-  "repo_url": "https://github.com/eslym/svelte-adapter-bun",
-  "authors": [
-    "0nepeop1e"
-  ],
-  "homepage": "https://github.com/eslym/svelte-adapter-bun#readme",
-  "downloads": 36,
-  "dependents": 0,
-  "updated": "2024-05-16T17:57:55.657Z",
-  "tags": [
-    "adapter"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 3
+	"name": "@eslym/svelte-adapter-bun",
+	"description": "Generate standalone Bun.js server for SvelteKit apps.",
+	"repo_url": "https://github.com/eslym/svelte-adapter-bun",
+	"authors": ["0nepeop1e"],
+	"homepage": "https://github.com/eslym/svelte-adapter-bun#readme",
+	"downloads": 36,
+	"dependents": 0,
+	"updated": "2024-05-16T17:57:55.657Z",
+	"tags": ["adapter"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 3,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	}
 }

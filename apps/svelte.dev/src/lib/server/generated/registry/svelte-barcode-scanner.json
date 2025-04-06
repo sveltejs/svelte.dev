@@ -1,18 +1,19 @@
 {
-  "name": "svelte-barcode-scanner",
-  "description": "Detect QR codes and barcodes in Svelte applications.",
-  "repo_url": "https://github.com/ollema/svelte-barcode-scanner",
-  "authors": [
-    "ollema"
-  ],
-  "homepage": "https://github.com/ollema/svelte-barcode-scanner",
-  "downloads": 9,
-  "dependents": 0,
-  "updated": "2024-02-27T14:47:04.560Z",
-  "tags": [
-    "media"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 6
+	"name": "svelte-barcode-scanner",
+	"description": "Detect QR codes and barcodes in Svelte applications.",
+	"repo_url": "https://github.com/ollema/svelte-barcode-scanner",
+	"authors": ["ollema"],
+	"homepage": "https://github.com/ollema/svelte-barcode-scanner",
+	"downloads": 9,
+	"dependents": 0,
+	"updated": "2024-02-27T14:47:04.560Z",
+	"tags": ["media"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 6,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

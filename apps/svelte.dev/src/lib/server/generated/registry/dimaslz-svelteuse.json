@@ -1,18 +1,19 @@
 {
-  "name": "@dimaslz/svelteuse",
-  "description": "Implement hooks inspired by VueUse and React hooks for Svelte.",
-  "repo_url": "https://github.com/dimaslz/svelteuse",
-  "authors": [
-    "dimaslz"
-  ],
-  "homepage": "https://svelteuse.dimaslz.dev",
-  "downloads": 4,
-  "dependents": 0,
-  "updated": "2024-03-10T18:20:06.792Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 4
+	"name": "@dimaslz/svelteuse",
+	"description": "Implement hooks inspired by VueUse and React hooks for Svelte.",
+	"repo_url": "https://github.com/dimaslz/svelteuse",
+	"authors": ["dimaslz"],
+	"homepage": "https://svelteuse.dimaslz.dev",
+	"downloads": 4,
+	"dependents": 0,
+	"updated": "2024-03-10T18:20:06.792Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 4,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

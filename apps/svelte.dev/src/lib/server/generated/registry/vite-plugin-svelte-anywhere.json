@@ -1,18 +1,19 @@
 {
-  "name": "vite-plugin-svelte-anywhere",
-  "description": "Use Svelte components anywhere with Vite plugin.",
-  "repo_url": "https://github.com/vidschofelix/vite-plugin-svelte-anywhere",
-  "authors": [
-    "vidschofelix"
-  ],
-  "homepage": "https://svelte-anywhere.dev",
-  "downloads": 17,
-  "dependents": 0,
-  "updated": "2025-02-14T20:01:21.281Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 16
+	"name": "vite-plugin-svelte-anywhere",
+	"description": "Use Svelte components anywhere with Vite plugin.",
+	"repo_url": "https://github.com/vidschofelix/vite-plugin-svelte-anywhere",
+	"authors": ["vidschofelix"],
+	"homepage": "https://svelte-anywhere.dev",
+	"downloads": 17,
+	"dependents": 0,
+	"updated": "2025-02-14T20:01:21.281Z",
+	"tags": ["tooling"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 16,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

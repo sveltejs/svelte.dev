@@ -1,18 +1,19 @@
 {
-  "name": "svelte-tooltip-simple",
-  "description": "Displays simple tooltips in Svelte applications.",
-  "repo_url": "https://github.com/gspasov/svelte-tooltip",
-  "authors": [
-    "gvspasov"
-  ],
-  "homepage": "https://github.com/gspasov/svelte-tooltip#readme",
-  "downloads": 4,
-  "dependents": 0,
-  "updated": "2022-06-05T15:27:06.422Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelte-tooltip-simple",
+	"description": "Displays simple tooltips in Svelte applications.",
+	"repo_url": "https://github.com/gspasov/svelte-tooltip",
+	"authors": ["gvspasov"],
+	"homepage": "https://github.com/gspasov/svelte-tooltip#readme",
+	"downloads": 4,
+	"dependents": 0,
+	"updated": "2022-06-05T15:27:06.422Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

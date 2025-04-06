@@ -1,19 +1,19 @@
 {
-  "name": "svelte-quicksearch-bar",
-  "description": "Implement quick search bar with fuzzy search in Svelte apps.",
-  "repo_url": "https://github.com/Sarodus/svelte-quicksearch-bar",
-  "authors": [
-    "sarodus"
-  ],
-  "homepage": "https://github.com/Sarodus/svelte-quicksearch-bar#readme",
-  "downloads": 25,
-  "dependents": 0,
-  "updated": "2022-02-21T15:37:18.966Z",
-  "tags": [
-    "ui",
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 20
+	"name": "svelte-quicksearch-bar",
+	"description": "Implement quick search bar with fuzzy search in Svelte apps.",
+	"repo_url": "https://github.com/Sarodus/svelte-quicksearch-bar",
+	"authors": ["sarodus"],
+	"homepage": "https://github.com/Sarodus/svelte-quicksearch-bar#readme",
+	"downloads": 25,
+	"dependents": 0,
+	"updated": "2022-02-21T15:37:18.966Z",
+	"tags": ["ui", "miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 20,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

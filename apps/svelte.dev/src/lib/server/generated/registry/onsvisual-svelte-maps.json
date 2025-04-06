@@ -1,23 +1,26 @@
 {
-  "name": "@onsvisual/svelte-maps",
-  "description": "Create reusable map components for Svelte projects.",
-  "repo_url": "https://github.com/onsvisual/svelte-maps",
-  "authors": [
-    "bothness",
-    "henrylau",
-    "petem-ons",
-    "sambennettons",
-    "erinvickery-ons",
-    "shiny-penny"
-  ],
-  "homepage": "http://onsvisual.github.io/svelte-maps",
-  "downloads": 223,
-  "dependents": 0,
-  "updated": "2025-02-18T15:39:09.069Z",
-  "tags": [
-    "media"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 29
+	"name": "@onsvisual/svelte-maps",
+	"description": "Create reusable map components for Svelte projects.",
+	"repo_url": "https://github.com/onsvisual/svelte-maps",
+	"authors": [
+		"bothness",
+		"henrylau",
+		"petem-ons",
+		"sambennettons",
+		"erinvickery-ons",
+		"shiny-penny"
+	],
+	"homepage": "http://onsvisual.github.io/svelte-maps",
+	"downloads": 223,
+	"dependents": 0,
+	"updated": "2025-02-18T15:39:09.069Z",
+	"tags": ["media"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 29,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

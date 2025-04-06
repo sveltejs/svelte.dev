@@ -1,18 +1,19 @@
 {
-  "name": "custom-slider-pro",
-  "description": "Create customizable slider components for SvelteKit.",
-  "repo_url": "https://github.com/Civoremo/custom-slider-pro",
-  "authors": [
-    "civoremon"
-  ],
-  "homepage": "https://custom-slider-pro.netlify.app/",
-  "downloads": 16,
-  "dependents": 0,
-  "updated": "2024-11-21T19:30:44.646Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "custom-slider-pro",
+	"description": "Create customizable slider components for SvelteKit.",
+	"repo_url": "https://github.com/Civoremo/custom-slider-pro",
+	"authors": ["civoremon"],
+	"homepage": "https://custom-slider-pro.netlify.app/",
+	"downloads": 16,
+	"dependents": 0,
+	"updated": "2024-11-21T19:30:44.646Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

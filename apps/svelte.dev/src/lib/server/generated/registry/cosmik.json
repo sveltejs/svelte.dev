@@ -1,17 +1,18 @@
 {
-  "name": "cosmik",
-  "description": "Offers out-of-the-box Svelte UI components.",
-  "repo_url": "https://github.com/PatrickChoDev/Cosmik",
-  "authors": [
-    "patrickchodev"
-  ],
-  "homepage": "https://github.com/PatrickChoDev/Cosmik#readme",
-  "downloads": 8,
-  "dependents": 0,
-  "updated": "2022-01-09T05:28:36.789Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "cosmik",
+	"description": "Offers out-of-the-box Svelte UI components.",
+	"repo_url": "https://github.com/PatrickChoDev/Cosmik",
+	"authors": ["patrickchodev"],
+	"homepage": "https://github.com/PatrickChoDev/Cosmik#readme",
+	"downloads": 8,
+	"dependents": 0,
+	"updated": "2022-01-09T05:28:36.789Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,16 +1,17 @@
 {
-  "name": "@chienleng/svelte-calendar",
-  "description": "Create calendar view components for Svelte applications.",
-  "repo_url": "",
-  "authors": [
-    "chienleng"
-  ],
-  "downloads": 0,
-  "dependents": 0,
-  "updated": "2022-10-18T00:52:01.927Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@chienleng/svelte-calendar",
+	"description": "Create calendar view components for Svelte applications.",
+	"repo_url": "",
+	"authors": ["chienleng"],
+	"downloads": 0,
+	"dependents": 0,
+	"updated": "2022-10-18T00:52:01.927Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

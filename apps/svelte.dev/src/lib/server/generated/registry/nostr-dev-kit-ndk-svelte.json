@@ -1,17 +1,17 @@
 {
-  "name": "@nostr-dev-kit/ndk-svelte",
-  "description": "Provides convenience functions for using NDK with Svelte.",
-  "repo_url": "",
-  "authors": [
-    "jinglescode",
-    "pablof7z"
-  ],
-  "downloads": 137,
-  "dependents": 0,
-  "updated": "2025-03-06T14:57:54.028Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "@nostr-dev-kit/ndk-svelte",
+	"description": "Provides convenience functions for using NDK with Svelte.",
+	"repo_url": "",
+	"authors": ["jinglescode", "pablof7z"],
+	"downloads": 137,
+	"dependents": 0,
+	"updated": "2025-03-06T14:57:54.028Z",
+	"tags": ["integration"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

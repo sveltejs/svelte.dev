@@ -1,18 +1,19 @@
 {
-  "name": "@candidosales/svelte-google-translate",
-  "description": "Integrate Google Translate into Svelte applications.",
-  "repo_url": "https://github.com/candidosales/svelte-google-translate",
-  "authors": [
-    "candidosales"
-  ],
-  "homepage": "https://github.com/candidosales/svelte-google-translate#readme",
-  "downloads": 2,
-  "dependents": 0,
-  "updated": "2023-07-27T04:29:14.170Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 11
+	"name": "@candidosales/svelte-google-translate",
+	"description": "Integrate Google Translate into Svelte applications.",
+	"repo_url": "https://github.com/candidosales/svelte-google-translate",
+	"authors": ["candidosales"],
+	"homepage": "https://github.com/candidosales/svelte-google-translate#readme",
+	"downloads": 2,
+	"dependents": 0,
+	"updated": "2023-07-27T04:29:14.170Z",
+	"tags": ["integration"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 11,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

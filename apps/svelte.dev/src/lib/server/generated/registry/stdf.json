@@ -1,18 +1,19 @@
 {
-  "name": "stdf",
-  "description": "Mobile web component library based on Svelte and Tailwind.",
-  "repo_url": "https://github.com/any-tdf/stdf",
-  "authors": [
-    "dufu1991"
-  ],
-  "homepage": "https://stdf.design",
-  "downloads": 20,
-  "dependents": 0,
-  "updated": "2024-12-16T08:04:37.783Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 677
+	"name": "stdf",
+	"description": "Mobile web component library based on Svelte and Tailwind.",
+	"repo_url": "https://github.com/any-tdf/stdf",
+	"authors": ["dufu1991"],
+	"homepage": "https://stdf.design",
+	"downloads": 20,
+	"dependents": 0,
+	"updated": "2024-12-16T08:04:37.783Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 677,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	}
 }

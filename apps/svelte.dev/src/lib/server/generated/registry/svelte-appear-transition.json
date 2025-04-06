@@ -1,16 +1,17 @@
 {
-  "name": "svelte-appear-transition",
-  "description": "Transition elements when appearing in Svelte viewport.",
-  "repo_url": "",
-  "authors": [
-    "adevien-solutions"
-  ],
-  "downloads": 3,
-  "dependents": 0,
-  "updated": "2024-09-10T18:55:44.312Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "svelte-appear-transition",
+	"description": "Transition elements when appearing in Svelte viewport.",
+	"repo_url": "",
+	"authors": ["adevien-solutions"],
+	"downloads": 3,
+	"dependents": 0,
+	"updated": "2024-09-10T18:55:44.312Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

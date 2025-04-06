@@ -1,18 +1,19 @@
 {
-  "name": "svelte-meta-tags",
-  "description": "Manage SEO for Svelte projects with meta tags.",
-  "repo_url": "https://github.com/oekazuma/svelte-meta-tags",
-  "authors": [
-    "oe.kazuma"
-  ],
-  "homepage": "https://github.com/oekazuma/svelte-meta-tags#readme",
-  "downloads": 13715,
-  "dependents": 11,
-  "updated": "2025-03-03T03:52:13.897Z",
-  "tags": [
-    "seo"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 574
+	"name": "svelte-meta-tags",
+	"description": "Manage SEO for Svelte projects with meta tags.",
+	"repo_url": "https://github.com/oekazuma/svelte-meta-tags",
+	"authors": ["oe.kazuma"],
+	"homepage": "https://github.com/oekazuma/svelte-meta-tags#readme",
+	"downloads": 13715,
+	"dependents": 11,
+	"updated": "2025-03-03T03:52:13.897Z",
+	"tags": ["seo"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 574,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

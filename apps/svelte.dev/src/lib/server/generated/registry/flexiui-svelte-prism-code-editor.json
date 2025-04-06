@@ -1,16 +1,17 @@
 {
-  "name": "@flexiui/svelte-prism-code-editor",
-  "description": "Integrate Prism code editor with syntax highlighting in Svelte.",
-  "repo_url": "",
-  "authors": [
-    "alexgipi"
-  ],
-  "downloads": 21,
-  "dependents": 1,
-  "updated": "2025-03-13T02:15:32.644Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "@flexiui/svelte-prism-code-editor",
+	"description": "Integrate Prism code editor with syntax highlighting in Svelte.",
+	"repo_url": "",
+	"authors": ["alexgipi"],
+	"downloads": 21,
+	"dependents": 1,
+	"updated": "2025-03-13T02:15:32.644Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

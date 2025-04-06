@@ -1,18 +1,19 @@
 {
-  "name": "@jill64/svelte-toast",
-  "description": "Create pre-themed responsive toast notifications.",
-  "repo_url": "https://github.com/jill64/svelte-toast",
-  "authors": [
-    "jill64"
-  ],
-  "homepage": "https://github.com/jill64/svelte-toast#readme",
-  "downloads": 12986,
-  "dependents": 2,
-  "updated": "2025-01-21T21:56:04.025Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 4
+	"name": "@jill64/svelte-toast",
+	"description": "Create pre-themed responsive toast notifications.",
+	"repo_url": "https://github.com/jill64/svelte-toast",
+	"authors": ["jill64"],
+	"homepage": "https://github.com/jill64/svelte-toast#readme",
+	"downloads": 12986,
+	"dependents": 2,
+	"updated": "2025-01-21T21:56:04.025Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 4,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

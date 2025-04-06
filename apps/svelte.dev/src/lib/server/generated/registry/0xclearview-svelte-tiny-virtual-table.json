@@ -1,18 +1,19 @@
 {
-  "name": "@0xclearview/svelte-tiny-virtual-table",
-  "description": "Provides a tiny virtual table component for Svelte.",
-  "repo_url": "https://github.com/0xclearview/svelte-tiny-virtual-table",
-  "authors": [
-    "margual56"
-  ],
-  "homepage": "https://github.com/0xclearview/svelte-tiny-virtual-table#readme",
-  "downloads": 17,
-  "dependents": 0,
-  "updated": "2024-11-16T13:11:37.125Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 0
+	"name": "@0xclearview/svelte-tiny-virtual-table",
+	"description": "Provides a tiny virtual table component for Svelte.",
+	"repo_url": "https://github.com/0xclearview/svelte-tiny-virtual-table",
+	"authors": ["margual56"],
+	"homepage": "https://github.com/0xclearview/svelte-tiny-virtual-table#readme",
+	"downloads": 17,
+	"dependents": 0,
+	"updated": "2024-11-16T13:11:37.125Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

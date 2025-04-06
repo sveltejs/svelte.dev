@@ -1,17 +1,18 @@
 {
-  "name": "svelty",
-  "description": "Build high-quality components with Svelte and TailwindCSS.",
-  "repo_url": "git@gitlab.com/nexylan/svelty",
-  "authors": [
-    "nexybot"
-  ],
-  "homepage": "https://gitlab.com/nexylan/svelty#readme",
-  "downloads": 47,
-  "dependents": 0,
-  "updated": "2020-12-01T10:36:45.912Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelty",
+	"description": "Build high-quality components with Svelte and TailwindCSS.",
+	"repo_url": "git@gitlab.com/nexylan/svelty",
+	"authors": ["nexybot"],
+	"homepage": "https://gitlab.com/nexylan/svelty#readme",
+	"downloads": 47,
+	"dependents": 0,
+	"updated": "2020-12-01T10:36:45.912Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,16 +1,17 @@
 {
-  "name": "@sv-print/hiprint",
-  "description": "Design and print documents in Svelte.",
-  "repo_url": "",
-  "authors": [
-    "cc-better"
-  ],
-  "downloads": 67,
-  "dependents": 3,
-  "updated": "2024-06-03T15:56:02.801Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@sv-print/hiprint",
+	"description": "Design and print documents in Svelte.",
+	"repo_url": "",
+	"authors": ["cc-better"],
+	"downloads": 67,
+	"dependents": 3,
+	"updated": "2024-06-03T15:56:02.801Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

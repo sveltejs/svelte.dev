@@ -1,17 +1,18 @@
 {
-  "name": "@daks.dev/svelte.sdk",
-  "description": "Provides DAKS.DEV Svelte SDK.",
-  "repo_url": "https://github.com/daks-dev/svelte",
-  "authors": [
-    "daks.dev"
-  ],
-  "homepage": "https://svelte.daks.dev",
-  "downloads": 115,
-  "dependents": 0,
-  "updated": "2025-03-22T18:36:24.217Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "@daks.dev/svelte.sdk",
+	"description": "Provides DAKS.DEV Svelte SDK.",
+	"repo_url": "https://github.com/daks-dev/svelte",
+	"authors": ["daks.dev"],
+	"homepage": "https://svelte.daks.dev",
+	"downloads": 115,
+	"dependents": 0,
+	"updated": "2025-03-22T18:36:24.217Z",
+	"tags": ["tooling"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

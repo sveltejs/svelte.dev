@@ -1,18 +1,19 @@
 {
-  "name": "sveltekit-notion-blog",
-  "description": "Build blogs in SvelteKit using Notion as a CMS.",
-  "repo_url": "https://github.com/subhendupsingh/sveltekit-notion-blog",
-  "authors": [
-    "subhendupsingh"
-  ],
-  "homepage": "https://sveltekit-notion-blog.netlify.app/",
-  "downloads": 7,
-  "dependents": 0,
-  "updated": "2025-03-01T14:08:35.920Z",
-  "tags": [
-    "content"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 40
+	"name": "sveltekit-notion-blog",
+	"description": "Build blogs in SvelteKit using Notion as a CMS.",
+	"repo_url": "https://github.com/subhendupsingh/sveltekit-notion-blog",
+	"authors": ["subhendupsingh"],
+	"homepage": "https://sveltekit-notion-blog.netlify.app/",
+	"downloads": 7,
+	"dependents": 0,
+	"updated": "2025-03-01T14:08:35.920Z",
+	"tags": ["content"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 40,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

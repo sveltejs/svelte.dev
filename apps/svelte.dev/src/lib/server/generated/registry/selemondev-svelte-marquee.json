@@ -1,18 +1,19 @@
 {
-  "name": "@selemondev/svelte-marquee",
-  "description": "Create beautiful marquee components for Svelte with Tailwind CSS.",
-  "repo_url": "https://github.com/selemondev/svelte-marquee",
-  "authors": [
-    "selemondev"
-  ],
-  "homepage": "https://github.com/selemondev/svelte-marquee#readme",
-  "downloads": 341,
-  "dependents": 0,
-  "updated": "2025-03-04T18:51:20.897Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 91
+	"name": "@selemondev/svelte-marquee",
+	"description": "Create beautiful marquee components for Svelte with Tailwind CSS.",
+	"repo_url": "https://github.com/selemondev/svelte-marquee",
+	"authors": ["selemondev"],
+	"homepage": "https://github.com/selemondev/svelte-marquee#readme",
+	"downloads": 341,
+	"dependents": 0,
+	"updated": "2025-03-04T18:51:20.897Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 91,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

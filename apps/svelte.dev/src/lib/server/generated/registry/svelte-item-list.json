@@ -1,18 +1,19 @@
 {
-  "name": "svelte-item-list",
-  "description": "Create item lists with pagination in Svelte.",
-  "repo_url": "https://github.com/Zimtir/svelte-item-list",
-  "authors": [
-    "zimtir"
-  ],
-  "homepage": "https://github.com/Zimtir/svelte-item-list",
-  "downloads": 12,
-  "dependents": 0,
-  "updated": "2020-05-03T23:00:39.152Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 6
+	"name": "svelte-item-list",
+	"description": "Create item lists with pagination in Svelte.",
+	"repo_url": "https://github.com/Zimtir/svelte-item-list",
+	"authors": ["zimtir"],
+	"homepage": "https://github.com/Zimtir/svelte-item-list",
+	"downloads": 12,
+	"dependents": 0,
+	"updated": "2020-05-03T23:00:39.152Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 6,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

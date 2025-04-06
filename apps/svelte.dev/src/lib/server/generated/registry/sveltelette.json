@@ -1,16 +1,17 @@
 {
-  "name": "sveltelette",
-  "description": "Simplify development of small Svelte applications.",
-  "repo_url": "",
-  "authors": [
-    "willcro"
-  ],
-  "downloads": 9,
-  "dependents": 0,
-  "updated": "2023-02-01T15:08:35.273Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "sveltelette",
+	"description": "Simplify development of small Svelte applications.",
+	"repo_url": "",
+	"authors": ["willcro"],
+	"downloads": 9,
+	"dependents": 0,
+	"updated": "2023-02-01T15:08:35.273Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

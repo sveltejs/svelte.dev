@@ -1,18 +1,19 @@
 {
-  "name": "svelte-sequential-preprocessor",
-  "description": "Force Svelte preprocessors to run sequentially.",
-  "repo_url": "https://github.com/pchynoweth/svelte-sequential-preprocessor",
-  "authors": [
-    "pchynoweth"
-  ],
-  "homepage": "https://github.com/pchynoweth/svelte-sequential-preprocessor#readme",
-  "downloads": 15654,
-  "dependents": 8,
-  "updated": "2024-09-29T17:46:07.132Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 9
+	"name": "svelte-sequential-preprocessor",
+	"description": "Force Svelte preprocessors to run sequentially.",
+	"repo_url": "https://github.com/pchynoweth/svelte-sequential-preprocessor",
+	"authors": ["pchynoweth"],
+	"homepage": "https://github.com/pchynoweth/svelte-sequential-preprocessor#readme",
+	"downloads": 15654,
+	"dependents": 8,
+	"updated": "2024-09-29T17:46:07.132Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 9,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

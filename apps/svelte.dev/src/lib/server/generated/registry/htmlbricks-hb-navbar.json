@@ -1,16 +1,17 @@
 {
-  "name": "@htmlbricks/hb-navbar",
-  "description": "Create Svelte Navbar WebComponent.",
-  "repo_url": "",
-  "authors": [
-    "dariocaruso"
-  ],
-  "downloads": 486,
-  "dependents": 5,
-  "updated": "2025-03-24T18:07:21.833Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@htmlbricks/hb-navbar",
+	"description": "Create Svelte Navbar WebComponent.",
+	"repo_url": "",
+	"authors": ["dariocaruso"],
+	"downloads": 486,
+	"dependents": 5,
+	"updated": "2025-03-24T18:07:21.833Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

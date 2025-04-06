@@ -1,18 +1,19 @@
 {
-  "name": "svelte-avatar",
-  "description": "Create avatar components with initials or images.",
-  "repo_url": "https://github.com/wdtamagi/svelte-avatar",
-  "authors": [
-    "wdtamagi"
-  ],
-  "homepage": "https://svelte-avatar.netlify.app/",
-  "downloads": 118,
-  "dependents": 2,
-  "updated": "2022-10-02T20:44:08.102Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 17
+	"name": "svelte-avatar",
+	"description": "Create avatar components with initials or images.",
+	"repo_url": "https://github.com/wdtamagi/svelte-avatar",
+	"authors": ["wdtamagi"],
+	"homepage": "https://svelte-avatar.netlify.app/",
+	"downloads": 118,
+	"dependents": 2,
+	"updated": "2022-10-02T20:44:08.102Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 17,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

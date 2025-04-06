@@ -1,18 +1,19 @@
 {
-  "name": "svelte-lingui",
-  "description": "Translate Svelte apps using Lingui for internationalization.",
-  "repo_url": "https://github.com/hyperlab/svelte-lingui",
-  "authors": [
-    "mrlundis"
-  ],
-  "downloads": 8,
-  "dependents": 0,
-  "updated": "2019-11-04T16:39:26.182Z",
-  "tags": [
-    "integration",
-    "content"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 3
+	"name": "svelte-lingui",
+	"description": "Translate Svelte apps using Lingui for internationalization.",
+	"repo_url": "https://github.com/hyperlab/svelte-lingui",
+	"authors": ["mrlundis"],
+	"downloads": 8,
+	"dependents": 0,
+	"updated": "2019-11-04T16:39:26.182Z",
+	"tags": ["integration", "content"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 3,
+	"homepage": "",
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

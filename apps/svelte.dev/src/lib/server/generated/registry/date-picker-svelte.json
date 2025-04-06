@@ -1,18 +1,19 @@
 {
-  "name": "date-picker-svelte",
-  "description": "Create date and time picker components for Svelte applications.",
-  "repo_url": "https://github.com/probablykasper/date-picker-svelte",
-  "authors": [
-    "probablykasper"
-  ],
-  "homepage": "https://date-picker-svelte.kasper.space",
-  "downloads": 10346,
-  "dependents": 17,
-  "updated": "2025-03-19T07:59:20.339Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 332
+	"name": "date-picker-svelte",
+	"description": "Create date and time picker components for Svelte applications.",
+	"repo_url": "https://github.com/probablykasper/date-picker-svelte",
+	"authors": ["probablykasper"],
+	"homepage": "https://date-picker-svelte.kasper.space",
+	"downloads": 10346,
+	"dependents": 17,
+	"updated": "2025-03-19T07:59:20.339Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 332,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

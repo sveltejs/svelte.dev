@@ -1,18 +1,19 @@
 {
-  "name": "svelte-supertiny",
-  "description": "Provides Svelte components for SuperTinyIcons SVG icons.",
-  "repo_url": "https://github.com/shinokada/svelte-supertiny",
-  "authors": [
-    "shinichiokada"
-  ],
-  "homepage": "https://svelte-supertiny.codewithshin.com/",
-  "downloads": 55,
-  "dependents": 0,
-  "updated": "2024-11-10T12:02:08.105Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 1
+	"name": "svelte-supertiny",
+	"description": "Provides Svelte components for SuperTinyIcons SVG icons.",
+	"repo_url": "https://github.com/shinokada/svelte-supertiny",
+	"authors": ["shinichiokada"],
+	"homepage": "https://svelte-supertiny.codewithshin.com/",
+	"downloads": 55,
+	"dependents": 0,
+	"updated": "2024-11-10T12:02:08.105Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

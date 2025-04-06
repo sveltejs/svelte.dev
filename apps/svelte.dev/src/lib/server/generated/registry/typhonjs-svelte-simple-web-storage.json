@@ -1,18 +1,19 @@
 {
-  "name": "@typhonjs-svelte/simple-web-storage",
-  "description": "Provide Svelte stores for Web Storage API (localStorage/sessionStorage).",
-  "repo_url": "https://github.com/typhonjs-svelte/simple-web-storage",
-  "authors": [
-    "typhonrt"
-  ],
-  "homepage": "https://github.com/typhonjs-svelte/simple-web-storage#readme",
-  "downloads": 8,
-  "dependents": 0,
-  "updated": "2024-01-14T07:37:35.938Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 0
+	"name": "@typhonjs-svelte/simple-web-storage",
+	"description": "Provide Svelte stores for Web Storage API (localStorage/sessionStorage).",
+	"repo_url": "https://github.com/typhonjs-svelte/simple-web-storage",
+	"authors": ["typhonrt"],
+	"homepage": "https://github.com/typhonjs-svelte/simple-web-storage#readme",
+	"downloads": 8,
+	"dependents": 0,
+	"updated": "2024-01-14T07:37:35.938Z",
+	"tags": ["miscellaneous"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": true
+	}
 }

@@ -1,16 +1,17 @@
 {
-  "name": "svelte-number-format",
-  "description": "Format numbers in Svelte input or text elements.",
-  "repo_url": "",
-  "authors": [
-    "pitis"
-  ],
-  "downloads": 34,
-  "dependents": 0,
-  "updated": "2024-11-17T02:26:36.650Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "svelte-number-format",
+	"description": "Format numbers in Svelte input or text elements.",
+	"repo_url": "",
+	"authors": ["pitis"],
+	"downloads": 34,
+	"dependents": 0,
+	"updated": "2024-11-17T02:26:36.650Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

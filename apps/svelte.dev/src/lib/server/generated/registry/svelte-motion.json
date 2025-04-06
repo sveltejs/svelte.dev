@@ -1,18 +1,19 @@
 {
-  "name": "svelte-motion",
-  "description": "Animate Svelte components with framer-motion.",
-  "repo_url": "https://github.com/micha-lmxt/svelte-motion",
-  "authors": [
-    "micha-lmxt"
-  ],
-  "homepage": "https://github.com/micha-lmxt/svelte-motion#readme",
-  "downloads": 10419,
-  "dependents": 2,
-  "updated": "2024-02-27T20:12:47.917Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 621
+	"name": "svelte-motion",
+	"description": "Animate Svelte components with framer-motion.",
+	"repo_url": "https://github.com/micha-lmxt/svelte-motion",
+	"authors": ["micha-lmxt"],
+	"homepage": "https://github.com/micha-lmxt/svelte-motion#readme",
+	"downloads": 10419,
+	"dependents": 2,
+	"updated": "2024-02-27T20:12:47.917Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 621,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": true
+	}
 }

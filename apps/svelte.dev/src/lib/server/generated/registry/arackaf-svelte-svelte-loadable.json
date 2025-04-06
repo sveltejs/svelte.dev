@@ -1,18 +1,19 @@
 {
-  "name": "@arackaf-svelte/svelte-loadable",
-  "description": "Dynamically load Svelte components asynchronously.",
-  "repo_url": "https://github.com/arackaf/svelte-loadable",
-  "authors": [
-    "arackaf"
-  ],
-  "homepage": "https://github.com/arackaf/svelte-loadable#readme",
-  "downloads": 0,
-  "dependents": 0,
-  "updated": "2020-12-11T04:27:56.412Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@arackaf-svelte/svelte-loadable",
+	"description": "Dynamically load Svelte components asynchronously.",
+	"repo_url": "https://github.com/arackaf/svelte-loadable",
+	"authors": ["arackaf"],
+	"homepage": "https://github.com/arackaf/svelte-loadable#readme",
+	"downloads": 0,
+	"dependents": 0,
+	"updated": "2020-12-11T04:27:56.412Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,20 +1,19 @@
 {
-  "name": "@agnos-ui/svelte-preprocess",
-  "description": "Preprocess Svelte directives server-side.",
-  "repo_url": "https://github.com/AmadeusITGroup/AgnosUI",
-  "authors": [
-    "divdavem",
-    "basso",
-    "qderoubaix"
-  ],
-  "homepage": "https://www.agnosui.dev/latest/",
-  "downloads": 38,
-  "dependents": 0,
-  "updated": "2025-01-09T15:44:05.026Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 70
+	"name": "@agnos-ui/svelte-preprocess",
+	"description": "Preprocess Svelte directives server-side.",
+	"repo_url": "https://github.com/AmadeusITGroup/AgnosUI",
+	"authors": ["divdavem", "basso", "qderoubaix"],
+	"homepage": "https://www.agnosui.dev/latest/",
+	"downloads": 38,
+	"dependents": 0,
+	"updated": "2025-01-09T15:44:05.026Z",
+	"tags": ["tooling"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 70,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

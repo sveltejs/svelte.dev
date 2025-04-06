@@ -1,18 +1,19 @@
 {
-  "name": "svelte-mobx",
-  "description": "Integrate MobX state management with Svelte.",
-  "repo_url": "https://github.com/xelaok/svelte-mobx",
-  "authors": [
-    "xelaok"
-  ],
-  "homepage": "https://github.com/xelaok/svelte-mobx#readme",
-  "downloads": 29,
-  "dependents": 0,
-  "updated": "2020-12-29T02:31:16.447Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 49
+	"name": "svelte-mobx",
+	"description": "Integrate MobX state management with Svelte.",
+	"repo_url": "https://github.com/xelaok/svelte-mobx",
+	"authors": ["xelaok"],
+	"homepage": "https://github.com/xelaok/svelte-mobx#readme",
+	"downloads": 29,
+	"dependents": 0,
+	"updated": "2020-12-29T02:31:16.447Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 49,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

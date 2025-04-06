@@ -1,20 +1,19 @@
 {
-  "name": "typescript-svelte-plugin",
-  "description": "Provide Svelte intellisense via TypeScript plugin.",
-  "repo_url": "https://github.com/sveltejs/language-tools",
-  "authors": [
-    "orta",
-    "svelte-language-tools-deploy",
-    "dummdidumm"
-  ],
-  "homepage": "https://github.com/sveltejs/language-tools/tree/master/packages/typescript-plugin",
-  "downloads": 12598,
-  "dependents": 4,
-  "updated": "2025-03-06T14:09:32.286Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1295
+	"name": "typescript-svelte-plugin",
+	"description": "Provide Svelte intellisense via TypeScript plugin.",
+	"repo_url": "https://github.com/sveltejs/language-tools",
+	"authors": ["orta", "svelte-language-tools-deploy", "dummdidumm"],
+	"homepage": "https://github.com/sveltejs/language-tools/tree/master/packages/typescript-plugin",
+	"downloads": 12598,
+	"dependents": 4,
+	"updated": "2025-03-06T14:09:32.286Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1296,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

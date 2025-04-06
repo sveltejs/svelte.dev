@@ -1,18 +1,19 @@
 {
-  "name": "svelte-multitoneimage",
-  "description": "Apply multitone effects to images in Svelte.",
-  "repo_url": "https://github.com/stephane-vanraes/svelte-multitoneimage",
-  "authors": [
-    "rainlife"
-  ],
-  "homepage": "https://stephane-vanraes.github.io/svelte-multitoneimage",
-  "downloads": 10,
-  "dependents": 0,
-  "updated": "2024-11-01T08:01:58.463Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 7
+	"name": "svelte-multitoneimage",
+	"description": "Apply multitone effects to images in Svelte.",
+	"repo_url": "https://github.com/stephane-vanraes/svelte-multitoneimage",
+	"authors": ["rainlife"],
+	"homepage": "https://stephane-vanraes.github.io/svelte-multitoneimage",
+	"downloads": 10,
+	"dependents": 0,
+	"updated": "2024-11-01T08:01:58.463Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 7,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "svelte-actions",
-  "description": "Provide reusable Svelte actions for various UI interactions.",
-  "repo_url": "https://github.com/sw-yx/svelte-actions",
-  "authors": [
-    "sw-yx"
-  ],
-  "homepage": "https://github.com/sw-yx/svelte-actions#readme",
-  "downloads": 12,
-  "dependents": 0,
-  "updated": "2022-03-07T21:09:39.307Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 225
+	"name": "svelte-actions",
+	"description": "Provide reusable Svelte actions for various UI interactions.",
+	"repo_url": "https://github.com/sw-yx/svelte-actions",
+	"authors": ["sw-yx"],
+	"homepage": "https://github.com/sw-yx/svelte-actions#readme",
+	"downloads": 12,
+	"dependents": 0,
+	"updated": "2022-03-07T21:09:39.307Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 226,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

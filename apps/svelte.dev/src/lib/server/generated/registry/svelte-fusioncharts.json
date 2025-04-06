@@ -1,18 +1,19 @@
 {
-  "name": "svelte-fusioncharts",
-  "description": "Creates charts with FusionCharts JavaScript charting library.",
-  "repo_url": "https://github.com/priyanjitdey94/svelte-fusioncharts",
-  "authors": [
-    "meherhowji"
-  ],
-  "homepage": "https://github.com/priyanjitdey94/svelte-fusioncharts#readme",
-  "downloads": 158,
-  "dependents": 0,
-  "updated": "2024-06-23T09:47:07.097Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 130
+	"name": "svelte-fusioncharts",
+	"description": "Creates charts with FusionCharts JavaScript charting library.",
+	"repo_url": "https://github.com/priyanjitdey94/svelte-fusioncharts",
+	"authors": ["meherhowji"],
+	"homepage": "https://github.com/priyanjitdey94/svelte-fusioncharts#readme",
+	"downloads": 158,
+	"dependents": 0,
+	"updated": "2024-06-23T09:47:07.097Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 130,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

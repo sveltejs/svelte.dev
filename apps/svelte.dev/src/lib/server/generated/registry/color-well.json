@@ -1,16 +1,17 @@
 {
-  "name": "color-well",
-  "description": "Create color picker component.",
-  "repo_url": "",
-  "authors": [
-    "negroramen"
-  ],
-  "downloads": 11,
-  "dependents": 0,
-  "updated": "2020-05-25T04:45:06.838Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "color-well",
+	"description": "Create color picker component.",
+	"repo_url": "",
+	"authors": ["negroramen"],
+	"downloads": 11,
+	"dependents": 0,
+	"updated": "2020-05-25T04:45:06.838Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

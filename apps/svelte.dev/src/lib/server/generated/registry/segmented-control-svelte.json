@@ -1,18 +1,19 @@
 {
-  "name": "segmented-control-svelte",
-  "description": "Creates segmented controls with sliding background animation.",
-  "repo_url": "https://github.com/stuymedova/segmented-control-svelte",
-  "authors": [
-    "stuymedova"
-  ],
-  "homepage": "https://github.com/stuymedova/segmented-control-svelte#readme",
-  "downloads": 10,
-  "dependents": 0,
-  "updated": "2022-06-21T19:54:43.190Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 2
+	"name": "segmented-control-svelte",
+	"description": "Creates segmented controls with sliding background animation.",
+	"repo_url": "https://github.com/stuymedova/segmented-control-svelte",
+	"authors": ["stuymedova"],
+	"homepage": "https://github.com/stuymedova/segmented-control-svelte#readme",
+	"downloads": 10,
+	"dependents": 0,
+	"updated": "2022-06-21T19:54:43.190Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

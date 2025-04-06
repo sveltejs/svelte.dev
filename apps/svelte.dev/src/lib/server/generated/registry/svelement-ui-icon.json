@@ -1,18 +1,19 @@
 {
-  "name": "@svelement-ui/icon",
-  "description": "Use Element UI icons in Svelte applications.",
-  "repo_url": "https://github.com/koory1st/svelement-ui",
-  "authors": [
-    "koory1st"
-  ],
-  "homepage": "https://koory1st.github.io/svelement-ui/",
-  "downloads": 34,
-  "dependents": 0,
-  "updated": "2024-02-15T11:12:41.776Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "@svelement-ui/icon",
+	"description": "Use Element UI icons in Svelte applications.",
+	"repo_url": "https://github.com/koory1st/svelement-ui",
+	"authors": ["koory1st"],
+	"homepage": "https://koory1st.github.io/svelement-ui/",
+	"downloads": 34,
+	"dependents": 0,
+	"updated": "2024-02-15T11:12:41.776Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

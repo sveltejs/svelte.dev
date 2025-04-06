@@ -1,18 +1,19 @@
 {
-  "name": "svelte-film-countdown",
-  "description": "Display vintage-style film countdowns in Svelte 5 apps.",
-  "repo_url": "https://github.com/bethropolis/svelte-film-countdown",
-  "authors": [
-    "bethropolis"
-  ],
-  "homepage": "https://bethropolis.github.io/svelte-film-countdown",
-  "downloads": 1,
-  "dependents": 0,
-  "updated": "2025-01-11T14:13:47.403Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelte-film-countdown",
+	"description": "Display vintage-style film countdowns in Svelte 5 apps.",
+	"repo_url": "https://github.com/bethropolis/svelte-film-countdown",
+	"authors": ["bethropolis"],
+	"homepage": "https://bethropolis.github.io/svelte-film-countdown",
+	"downloads": 1,
+	"dependents": 0,
+	"updated": "2025-01-11T14:13:47.403Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

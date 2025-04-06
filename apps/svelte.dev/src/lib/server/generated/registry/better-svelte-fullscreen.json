@@ -1,17 +1,18 @@
 {
-  "name": "better-svelte-fullscreen",
-  "description": "Implement fullscreen functionality in Svelte DOM elements.",
-  "repo_url": "https://gitlab.com/uimaxbai/better-svelte-fullscreen",
-  "authors": [
-    "uimaxbai"
-  ],
-  "homepage": "https://gitlab.com/uimaxbai/better-svelte-fullscreen#readme",
-  "downloads": 1,
-  "dependents": 0,
-  "updated": "2024-03-06T11:35:06.418Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "better-svelte-fullscreen",
+	"description": "Implement fullscreen functionality in Svelte DOM elements.",
+	"repo_url": "https://gitlab.com/uimaxbai/better-svelte-fullscreen",
+	"authors": ["uimaxbai"],
+	"homepage": "https://gitlab.com/uimaxbai/better-svelte-fullscreen#readme",
+	"downloads": 1,
+	"dependents": 0,
+	"updated": "2024-03-06T11:35:06.418Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

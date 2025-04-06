@@ -1,18 +1,19 @@
 {
-  "name": "altcha",
-  "description": "Provides a GDPR-compliant CAPTCHA alternative for Svelte.",
-  "repo_url": "https://github.com/altcha-org/altcha",
-  "authors": [
-    "ovx"
-  ],
-  "homepage": "https://altcha.org",
-  "downloads": 7741,
-  "dependents": 6,
-  "updated": "2025-03-16T04:33:24.207Z",
-  "tags": [
-    "auth"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 751
+	"name": "altcha",
+	"description": "Provides a GDPR-compliant CAPTCHA alternative for Svelte.",
+	"repo_url": "https://github.com/altcha-org/altcha",
+	"authors": ["ovx"],
+	"homepage": "https://altcha.org",
+	"downloads": 7741,
+	"dependents": 6,
+	"updated": "2025-03-16T04:33:24.207Z",
+	"tags": ["auth"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 752,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

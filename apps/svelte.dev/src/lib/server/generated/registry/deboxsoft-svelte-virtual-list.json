@@ -1,18 +1,19 @@
 {
-  "name": "@deboxsoft/svelte-virtual-list",
-  "description": "Render virtual lists for Svelte apps.",
-  "repo_url": "https://github.com/lionixevolve/svelte-virtual-list-enhanced",
-  "authors": [
-    "nurdiansyah"
-  ],
-  "homepage": "https://github.com/lionixevolve/svelte-virtual-list-enhanced#readme",
-  "downloads": 25,
-  "dependents": 0,
-  "updated": "2021-04-13T06:28:20.364Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 4
+	"name": "@deboxsoft/svelte-virtual-list",
+	"description": "Render virtual lists for Svelte apps.",
+	"repo_url": "https://github.com/lionixevolve/svelte-virtual-list-enhanced",
+	"authors": ["nurdiansyah"],
+	"homepage": "https://github.com/lionixevolve/svelte-virtual-list-enhanced#readme",
+	"downloads": 25,
+	"dependents": 0,
+	"updated": "2021-04-13T06:28:20.364Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 4,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

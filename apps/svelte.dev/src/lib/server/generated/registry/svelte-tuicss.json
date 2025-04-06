@@ -1,18 +1,19 @@
 {
-  "name": "svelte-tuicss",
-  "description": "Use Tuicss UI framework components in Svelte.",
-  "repo_url": "https://github.com/nick-somebody/svelte-tuicss",
-  "authors": [
-    "nick-somebody"
-  ],
-  "homepage": "https://nick-somebody.github.io/svelte-tuicss",
-  "downloads": 2,
-  "dependents": 0,
-  "updated": "2024-11-16T05:41:01.486Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "svelte-tuicss",
+	"description": "Use Tuicss UI framework components in Svelte.",
+	"repo_url": "https://github.com/nick-somebody/svelte-tuicss",
+	"authors": ["nick-somebody"],
+	"homepage": "https://nick-somebody.github.io/svelte-tuicss",
+	"downloads": 2,
+	"dependents": 0,
+	"updated": "2024-11-16T05:41:01.486Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

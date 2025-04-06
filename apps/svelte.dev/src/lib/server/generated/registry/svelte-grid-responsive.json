@@ -1,18 +1,19 @@
 {
-  "name": "svelte-grid-responsive",
-  "description": "Create responsive grid layouts for Svelte applications.",
-  "repo_url": "https://github.com/andrelmlins/svelte-grid-responsive",
-  "authors": [
-    "andrelmlins"
-  ],
-  "homepage": "https://svelte-grid-responsive.netlify.com/",
-  "downloads": 108,
-  "dependents": 1,
-  "updated": "2022-04-06T01:41:27.294Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 54
+	"name": "svelte-grid-responsive",
+	"description": "Create responsive grid layouts for Svelte applications.",
+	"repo_url": "https://github.com/andrelmlins/svelte-grid-responsive",
+	"authors": ["andrelmlins"],
+	"homepage": "https://svelte-grid-responsive.netlify.com/",
+	"downloads": 108,
+	"dependents": 1,
+	"updated": "2022-04-06T01:41:27.294Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 54,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

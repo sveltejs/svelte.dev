@@ -1,18 +1,19 @@
 {
-  "name": "@bowline/svelte-lexical",
-  "description": "Create rich text editors for Svelte using Lexical.",
-  "repo_url": "https://github.com/bowlineai/svelte-lexical",
-  "authors": [
-    "stayradiated"
-  ],
-  "homepage": "https://github.com/bowlineai/svelte-lexical#readme",
-  "downloads": 1,
-  "dependents": 0,
-  "updated": "2024-01-31T15:41:38.148Z",
-  "tags": [
-    "content"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 2
+	"name": "@bowline/svelte-lexical",
+	"description": "Create rich text editors for Svelte using Lexical.",
+	"repo_url": "https://github.com/bowlineai/svelte-lexical",
+	"authors": ["stayradiated"],
+	"homepage": "https://github.com/bowlineai/svelte-lexical#readme",
+	"downloads": 1,
+	"dependents": 0,
+	"updated": "2024-01-31T15:41:38.148Z",
+	"tags": ["content"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

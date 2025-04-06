@@ -1,22 +1,25 @@
 {
-  "name": "@healthtree/svelte-data-table",
-  "description": "Create reactive data tables for Svelte applications.",
-  "repo_url": "",
-  "authors": [
-    "sahagun-jorge",
-    "alvarocapde",
-    "healthtree-admin",
-    "diegofhe",
-    "jpcapdevila",
-    "aureliob"
-  ],
-  "homepage": "https://github.com/Healthtree/svelte-data-table/blob/master/README.md",
-  "downloads": 39,
-  "dependents": 0,
-  "updated": "2021-05-26T21:31:56.931Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@healthtree/svelte-data-table",
+	"description": "Create reactive data tables for Svelte applications.",
+	"repo_url": "",
+	"authors": [
+		"sahagun-jorge",
+		"alvarocapde",
+		"healthtree-admin",
+		"diegofhe",
+		"jpcapdevila",
+		"aureliob"
+	],
+	"homepage": "https://github.com/Healthtree/svelte-data-table/blob/master/README.md",
+	"downloads": 39,
+	"dependents": 0,
+	"updated": "2021-05-26T21:31:56.931Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

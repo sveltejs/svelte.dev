@@ -1,17 +1,18 @@
 {
-  "name": "svelte-socketio-store",
-  "description": "Provide Svelte Socket.IO store for backend integration.",
-  "repo_url": "https://github.com/vcscsvcscs/svelte-socketio-store",
-  "authors": [
-    "vcscsvcscs"
-  ],
-  "homepage": "https://github.com/vcscsvcscs/svelte-socketio-store#readme",
-  "downloads": 8,
-  "dependents": 0,
-  "updated": "2022-04-23T12:15:45.150Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-socketio-store",
+	"description": "Provide Svelte Socket.IO store for backend integration.",
+	"repo_url": "https://github.com/vcscsvcscs/svelte-socketio-store",
+	"authors": ["vcscsvcscs"],
+	"homepage": "https://github.com/vcscsvcscs/svelte-socketio-store#readme",
+	"downloads": 8,
+	"dependents": 0,
+	"updated": "2022-04-23T12:15:45.150Z",
+	"tags": ["integration"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

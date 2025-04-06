@@ -1,18 +1,19 @@
 {
-  "name": "svelte-inputs",
-  "description": "Provides basic input components for Svelte.",
-  "repo_url": "https://github.com/JuicyJah/svelte-inputs",
-  "authors": [
-    "juicyjah"
-  ],
-  "homepage": "https://github.com/JuicyJah/svelte-inputs#readme",
-  "downloads": 21,
-  "dependents": 0,
-  "updated": "2019-11-27T14:13:04.261Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "svelte-inputs",
+	"description": "Provides basic input components for Svelte.",
+	"repo_url": "https://github.com/JuicyJah/svelte-inputs",
+	"authors": ["juicyjah"],
+	"homepage": "https://github.com/JuicyJah/svelte-inputs#readme",
+	"downloads": 21,
+	"dependents": 0,
+	"updated": "2019-11-27T14:13:04.261Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

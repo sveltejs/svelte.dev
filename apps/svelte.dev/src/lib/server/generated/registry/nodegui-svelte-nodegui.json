@@ -1,23 +1,26 @@
 {
-  "name": "@nodegui/svelte-nodegui",
-  "description": "Build native desktop apps with Svelte and NodeGUI.",
-  "repo_url": "https://github.com/nodegui/svelte-nodegui",
-  "authors": [
-    "sedwards2009",
-    "atulanand94",
-    "rahulgaba",
-    "kakulgupta",
-    "shubhamzanwar",
-    "shirakaba"
-  ],
-  "homepage": "https://github.com/nodegui/svelte-nodegui",
-  "downloads": 17,
-  "dependents": 0,
-  "updated": "2021-05-04T20:35:22.026Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 2846
+	"name": "@nodegui/svelte-nodegui",
+	"description": "Build native desktop apps with Svelte and NodeGUI.",
+	"repo_url": "https://github.com/nodegui/svelte-nodegui",
+	"authors": [
+		"sedwards2009",
+		"atulanand94",
+		"rahulgaba",
+		"kakulgupta",
+		"shubhamzanwar",
+		"shirakaba"
+	],
+	"homepage": "https://github.com/nodegui/svelte-nodegui",
+	"downloads": 17,
+	"dependents": 0,
+	"updated": "2021-05-04T20:35:22.026Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 2846,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

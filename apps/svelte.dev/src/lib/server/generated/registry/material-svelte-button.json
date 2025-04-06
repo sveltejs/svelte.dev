@@ -1,19 +1,19 @@
 {
-  "name": "@material-svelte/button",
-  "description": "Create Material Design buttons for Svelte applications.",
-  "repo_url": "https://github.com/material-svelte/material-svelte",
-  "authors": [
-    "betaboon",
-    "material-svelte-bot"
-  ],
-  "homepage": "https://material-svelte.dev",
-  "downloads": 36,
-  "dependents": 1,
-  "updated": "2021-05-20T07:50:32.457Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 18
+	"name": "@material-svelte/button",
+	"description": "Create Material Design buttons for Svelte applications.",
+	"repo_url": "https://github.com/material-svelte/material-svelte",
+	"authors": ["betaboon", "material-svelte-bot"],
+	"homepage": "https://material-svelte.dev",
+	"downloads": 36,
+	"dependents": 1,
+	"updated": "2021-05-20T07:50:32.457Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 18,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

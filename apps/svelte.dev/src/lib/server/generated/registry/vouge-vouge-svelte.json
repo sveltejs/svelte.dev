@@ -1,18 +1,19 @@
 {
-  "name": "@vouge/vouge-svelte",
-  "description": "Web UI library for Svelte, focusing on modern CSS trends.",
-  "repo_url": "https://github.com/VougeJS/vouge-svelte",
-  "authors": [
-    "savander"
-  ],
-  "homepage": "https://github.com/VougeJS/vouge-svelte#readme",
-  "downloads": 3,
-  "dependents": 0,
-  "updated": "2019-09-21T23:53:04.107Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@vouge/vouge-svelte",
+	"description": "Web UI library for Svelte, focusing on modern CSS trends.",
+	"repo_url": "https://github.com/VougeJS/vouge-svelte",
+	"authors": ["savander"],
+	"homepage": "https://github.com/VougeJS/vouge-svelte#readme",
+	"downloads": 3,
+	"dependents": 0,
+	"updated": "2019-09-21T23:53:04.107Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

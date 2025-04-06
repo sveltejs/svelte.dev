@@ -1,16 +1,17 @@
 {
-  "name": "svelte-tel",
-  "description": "Provides headless phone number input handling for Svelte.",
-  "repo_url": "",
-  "authors": [
-    "mattheous"
-  ],
-  "downloads": 7,
-  "dependents": 0,
-  "updated": "2025-02-19T15:05:48.136Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false
+	"name": "svelte-tel",
+	"description": "Provides headless phone number input handling for Svelte.",
+	"repo_url": "",
+	"authors": ["mattheous"],
+	"downloads": 7,
+	"dependents": 0,
+	"updated": "2025-02-19T15:05:48.136Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

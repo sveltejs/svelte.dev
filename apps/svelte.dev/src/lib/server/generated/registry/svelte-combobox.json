@@ -1,18 +1,19 @@
 {
-  "name": "svelte-combobox",
-  "description": "Create simple combobox components for Svelte and SvelteKit.",
-  "repo_url": "https://github.com/Sourabhpatel1/svelte-combobox",
-  "authors": [
-    "sourabh_patel_1"
-  ],
-  "homepage": "https://sourabhpatel1.github.io/combobox-docs/",
-  "downloads": 9,
-  "dependents": 0,
-  "updated": "2023-12-27T15:28:07.726Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "svelte-combobox",
+	"description": "Create simple combobox components for Svelte and SvelteKit.",
+	"repo_url": "https://github.com/Sourabhpatel1/svelte-combobox",
+	"authors": ["sourabh_patel_1"],
+	"homepage": "https://sourabhpatel1.github.io/combobox-docs/",
+	"downloads": 9,
+	"dependents": 0,
+	"updated": "2023-12-27T15:28:07.726Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

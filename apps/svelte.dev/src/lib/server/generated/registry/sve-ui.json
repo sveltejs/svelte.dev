@@ -1,18 +1,19 @@
 {
-  "name": "sve-ui",
-  "description": "Provide customizable UI components for Svelte applications.",
-  "repo_url": "https://github.com/rodriabregu/sve-ui",
-  "authors": [
-    "rodriabregu"
-  ],
-  "homepage": "https://sveui.org/",
-  "downloads": 0,
-  "dependents": 0,
-  "updated": "2023-04-17T08:52:53.546Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 3
+	"name": "sve-ui",
+	"description": "Provide customizable UI components for Svelte applications.",
+	"repo_url": "https://github.com/rodriabregu/sve-ui",
+	"authors": ["rodriabregu"],
+	"homepage": "https://sveui.org/",
+	"downloads": 0,
+	"dependents": 0,
+	"updated": "2023-04-17T08:52:53.546Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 3,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "sveltetf",
-  "description": "Integrate machine learning features into Svelte apps.",
-  "repo_url": "https://github.com/eksohinc/sveltetf",
-  "authors": [
-    "phrensoua"
-  ],
-  "homepage": "https://github.com/eksohinc/sveltetf#readme",
-  "downloads": 15,
-  "dependents": 0,
-  "updated": "2023-12-09T18:50:10.728Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "sveltetf",
+	"description": "Integrate machine learning features into Svelte apps.",
+	"repo_url": "https://github.com/eksohinc/sveltetf",
+	"authors": ["phrensoua"],
+	"homepage": "https://github.com/eksohinc/sveltetf#readme",
+	"downloads": 15,
+	"dependents": 0,
+	"updated": "2023-12-09T18:50:10.728Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "tdesign-svelte",
-  "description": "Build TDesign components for Svelte applications.",
-  "repo_url": "https://github.com/hzx000822/tdesign-svelte",
-  "authors": [
-    "programmer-hzx"
-  ],
-  "homepage": "http://182.43.78.202:90/",
-  "downloads": 6,
-  "dependents": 0,
-  "updated": "2023-11-16T06:10:50.111Z",
-  "tags": [
-    "design-system"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "tdesign-svelte",
+	"description": "Build TDesign components for Svelte applications.",
+	"repo_url": "https://github.com/hzx000822/tdesign-svelte",
+	"authors": ["programmer-hzx"],
+	"homepage": "http://182.43.78.202:90/",
+	"downloads": 6,
+	"dependents": 0,
+	"updated": "2023-11-16T06:10:50.111Z",
+	"tags": ["design-system"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

@@ -1,19 +1,19 @@
 {
-  "name": "@neesh-studio/svipe",
-  "description": "Provides swipeable items wrapper component for Svelte.",
-  "repo_url": "https://github.com/neesh-studio/svelte-swipe",
-  "authors": [
-    "ocupe",
-    "lksslr"
-  ],
-  "homepage": "https://github.com/neesh-studio/svelte-swipe",
-  "downloads": 29,
-  "dependents": 0,
-  "updated": "2021-04-12T09:13:35.457Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@neesh-studio/svipe",
+	"description": "Provides swipeable items wrapper component for Svelte.",
+	"repo_url": "https://github.com/neesh-studio/svelte-swipe",
+	"authors": ["ocupe", "lksslr"],
+	"homepage": "https://github.com/neesh-studio/svelte-swipe",
+	"downloads": 29,
+	"dependents": 0,
+	"updated": "2021-04-12T09:13:35.457Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

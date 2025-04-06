@@ -1,18 +1,19 @@
 {
-  "name": "svelte-grouter",
-  "description": "Client-side routing engine for Svelte applications.",
-  "repo_url": "https://github.com/gbuerk/svelte-grouter",
-  "authors": [
-    "gbuerk"
-  ],
-  "homepage": "https://github.com/gbuerk/svelte-grouter#readme",
-  "downloads": 1,
-  "dependents": 0,
-  "updated": "2024-07-26T02:02:03.539Z",
-  "tags": [
-    "router"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 3
+	"name": "svelte-grouter",
+	"description": "Client-side routing engine for Svelte applications.",
+	"repo_url": "https://github.com/gbuerk/svelte-grouter",
+	"authors": ["gbuerk"],
+	"homepage": "https://github.com/gbuerk/svelte-grouter#readme",
+	"downloads": 1,
+	"dependents": 0,
+	"updated": "2024-07-26T02:02:03.539Z",
+	"tags": ["router"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 3,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

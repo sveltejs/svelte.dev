@@ -1,18 +1,19 @@
 {
-  "name": "svelte-repo-card",
-  "description": "Displays GitHub repository cards in Svelte applications.",
-  "repo_url": "https://github.com/thislooksfun/svelte-repo-card",
-  "authors": [
-    "thislooksfun"
-  ],
-  "homepage": "https://github.com/thislooksfun/svelte-repo-card#readme",
-  "downloads": 14,
-  "dependents": 0,
-  "updated": "2021-03-21T03:05:28.017Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 6
+	"name": "svelte-repo-card",
+	"description": "Displays GitHub repository cards in Svelte applications.",
+	"repo_url": "https://github.com/thislooksfun/svelte-repo-card",
+	"authors": ["thislooksfun"],
+	"homepage": "https://github.com/thislooksfun/svelte-repo-card#readme",
+	"downloads": 14,
+	"dependents": 0,
+	"updated": "2021-03-21T03:05:28.017Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 6,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

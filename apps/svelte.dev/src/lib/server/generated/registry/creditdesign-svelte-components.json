@@ -1,18 +1,19 @@
 {
-  "name": "creditdesign-svelte-components",
-  "description": "Provide Svelte components for layout.",
-  "repo_url": "https://github.com/chris-creditdesign/creditdesign-svelte-components",
-  "authors": [
-    "chris-creditdesign"
-  ],
-  "homepage": "https://serene-albattani-31205c.netlify.app/",
-  "downloads": 31,
-  "dependents": 0,
-  "updated": "2022-06-14T20:40:35.608Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 3
+	"name": "creditdesign-svelte-components",
+	"description": "Provide Svelte components for layout.",
+	"repo_url": "https://github.com/chris-creditdesign/creditdesign-svelte-components",
+	"authors": ["chris-creditdesign"],
+	"homepage": "https://serene-albattani-31205c.netlify.app/",
+	"downloads": 31,
+	"dependents": 0,
+	"updated": "2022-06-14T20:40:35.608Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 3,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

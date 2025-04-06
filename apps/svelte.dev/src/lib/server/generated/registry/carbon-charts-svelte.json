@@ -1,19 +1,19 @@
 {
-  "name": "@carbon/charts-svelte",
-  "description": "Create Carbon Design System charts in Svelte.",
-  "repo_url": "https://github.com/carbon-design-system/carbon-charts",
-  "authors": [
-    "carbon-bot",
-    "theiliad"
-  ],
-  "homepage": "https://github.com/carbon-design-system/carbon-charts#readme",
-  "downloads": 1924,
-  "dependents": 2,
-  "updated": "2025-02-18T17:07:04.219Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 941
+	"name": "@carbon/charts-svelte",
+	"description": "Create Carbon Design System charts in Svelte.",
+	"repo_url": "https://github.com/carbon-design-system/carbon-charts",
+	"authors": ["carbon-bot", "theiliad"],
+	"homepage": "https://github.com/carbon-design-system/carbon-charts#readme",
+	"downloads": 1924,
+	"dependents": 2,
+	"updated": "2025-02-18T17:07:04.219Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 941,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

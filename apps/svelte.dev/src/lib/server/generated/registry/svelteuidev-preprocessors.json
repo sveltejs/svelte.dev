@@ -1,19 +1,19 @@
 {
-  "name": "@svelteuidev/preprocessors",
-  "description": "Provide Svelte preprocessor library for development assistance.",
-  "repo_url": "https://github.com/svelteuidev/svelteui",
-  "authors": [
-    "lowkey_daisy",
-    "uxtitan"
-  ],
-  "homepage": "https://svelteui.dev/",
-  "downloads": 32,
-  "dependents": 0,
-  "updated": "2024-07-07T14:30:26.435Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 1369
+	"name": "@svelteuidev/preprocessors",
+	"description": "Provide Svelte preprocessor library for development assistance.",
+	"repo_url": "https://github.com/svelteuidev/svelteui",
+	"authors": ["lowkey_daisy", "uxtitan"],
+	"homepage": "https://svelteui.dev/",
+	"downloads": 32,
+	"dependents": 0,
+	"updated": "2024-07-07T14:30:26.435Z",
+	"tags": ["tooling"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 1370,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": true
+	}
 }

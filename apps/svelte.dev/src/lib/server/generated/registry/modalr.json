@@ -1,17 +1,19 @@
 {
-  "name": "modalr",
-  "description": "Create modal layers for Svelte applications.",
-  "repo_url": "https://gitee.com/yuekcc/modalr",
-  "authors": [
-    "yuekcc"
-  ],
-  "downloads": 6,
-  "dependents": 0,
-  "updated": "2021-06-20T03:07:00.385Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "modalr",
+	"description": "Create modal layers for Svelte applications.",
+	"repo_url": "https://gitee.com/yuekcc/modalr",
+	"authors": ["yuekcc"],
+	"downloads": 6,
+	"dependents": 0,
+	"updated": "2021-06-20T03:07:00.385Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"homepage": "",
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

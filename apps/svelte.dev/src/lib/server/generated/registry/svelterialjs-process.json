@@ -1,17 +1,18 @@
 {
-  "name": "@svelterialjs/process",
-  "description": "Preprocess Svelte code with Svelterial.",
-  "repo_url": "https://github.com/svelterialjs/integrations",
-  "authors": [
-    "thecomputerm"
-  ],
-  "homepage": "https://github.com/svelterialjs/integrations/tree/main/packages/preprocessor#readme",
-  "downloads": 49,
-  "dependents": 0,
-  "updated": "2021-10-04T12:47:19.342Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@svelterialjs/process",
+	"description": "Preprocess Svelte code with Svelterial.",
+	"repo_url": "https://github.com/svelterialjs/integrations",
+	"authors": ["thecomputerm"],
+	"homepage": "https://github.com/svelterialjs/integrations/tree/main/packages/preprocessor#readme",
+	"downloads": 49,
+	"dependents": 0,
+	"updated": "2021-10-04T12:47:19.342Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "svelte-popper",
-  "description": "Wrapper for Popper.js in Svelte.",
-  "repo_url": "https://github.com/bgreenacre/svelte-popper",
-  "authors": [
-    "bgreenacre"
-  ],
-  "homepage": "https://github.com/bgreenacre/svelte-popper#readme",
-  "downloads": 13,
-  "dependents": 0,
-  "updated": "2020-07-04T01:06:27.813Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 7
+	"name": "svelte-popper",
+	"description": "Wrapper for Popper.js in Svelte.",
+	"repo_url": "https://github.com/bgreenacre/svelte-popper",
+	"authors": ["bgreenacre"],
+	"homepage": "https://github.com/bgreenacre/svelte-popper#readme",
+	"downloads": 13,
+	"dependents": 0,
+	"updated": "2020-07-04T01:06:27.813Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 7,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

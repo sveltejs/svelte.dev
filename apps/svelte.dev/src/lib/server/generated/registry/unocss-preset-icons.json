@@ -1,0 +1,19 @@
+{
+	"name": "@unocss/preset-icons",
+	"description": "Use any icons with Pure CSS for UnoCSS in Svelte projects.",
+	"repo_url": "https://github.com/unocss/unocss",
+	"authors": ["antfu", "unocss-bot"],
+	"homepage": "https://unocss.dev",
+	"downloads": 209471,
+	"dependents": 53,
+	"updated": "2025-04-05T14:06:22.968Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 17473,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	}
+}

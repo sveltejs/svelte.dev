@@ -1,18 +1,19 @@
 {
-  "name": "sveltejs-brunch",
-  "description": "Compiles Svelte components inside Brunch projects.",
-  "repo_url": "https://github.com/StarpTech/sveltejs-brunch",
-  "authors": [
-    "starptech"
-  ],
-  "homepage": "https://github.com/StarpTech/sveltejs-brunch#readme",
-  "downloads": 21,
-  "dependents": 0,
-  "updated": "2021-07-27T22:26:01.518Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 6
+	"name": "sveltejs-brunch",
+	"description": "Compiles Svelte components inside Brunch projects.",
+	"repo_url": "https://github.com/StarpTech/sveltejs-brunch",
+	"authors": ["starptech"],
+	"homepage": "https://github.com/StarpTech/sveltejs-brunch#readme",
+	"downloads": 21,
+	"dependents": 0,
+	"updated": "2021-07-27T22:26:01.518Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 6,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

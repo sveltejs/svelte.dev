@@ -1,16 +1,17 @@
 {
-  "name": "@htmlbricks/hb-input-datetime",
-  "description": "Create date and time input components for Svelte apps.",
-  "repo_url": "",
-  "authors": [
-    "dariocaruso"
-  ],
-  "downloads": 227,
-  "dependents": 1,
-  "updated": "2025-03-24T18:07:23.590Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@htmlbricks/hb-input-datetime",
+	"description": "Create date and time input components for Svelte apps.",
+	"repo_url": "",
+	"authors": ["dariocaruso"],
+	"downloads": 227,
+	"dependents": 1,
+	"updated": "2025-03-24T18:07:23.590Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	}
 }

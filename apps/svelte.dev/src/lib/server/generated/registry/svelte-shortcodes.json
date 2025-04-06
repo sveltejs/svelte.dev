@@ -1,18 +1,19 @@
 {
-  "name": "svelte-shortcodes",
-  "description": "Embed Svelte components in rich content using shortcodes.",
-  "repo_url": "https://github.com/hyperlab/svelte-shortcodes",
-  "authors": [
-    "alfredringstad",
-    "mrlundis"
-  ],
-  "downloads": 9,
-  "dependents": 0,
-  "updated": "2021-03-03T14:35:33.790Z",
-  "tags": [
-    "content"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 6
+	"name": "svelte-shortcodes",
+	"description": "Embed Svelte components in rich content using shortcodes.",
+	"repo_url": "https://github.com/hyperlab/svelte-shortcodes",
+	"authors": ["alfredringstad", "mrlundis"],
+	"downloads": 9,
+	"dependents": 0,
+	"updated": "2021-03-03T14:35:33.790Z",
+	"tags": ["content"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 6,
+	"homepage": "",
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

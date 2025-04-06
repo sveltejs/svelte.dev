@@ -1,17 +1,18 @@
 {
-  "name": "dxsvelte",
-  "description": "Integrates Svelte into Django projects, enabling SSR.",
-  "repo_url": "",
-  "authors": [
-    "emmyarty"
-  ],
-  "homepage": "https://dxsvelte.com/",
-  "downloads": 47,
-  "dependents": 0,
-  "updated": "2023-10-29T00:13:10.144Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "dxsvelte",
+	"description": "Integrates Svelte into Django projects, enabling SSR.",
+	"repo_url": "",
+	"authors": ["emmyarty"],
+	"homepage": "https://dxsvelte.com/",
+	"downloads": 47,
+	"dependents": 0,
+	"updated": "2023-10-29T00:13:10.144Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

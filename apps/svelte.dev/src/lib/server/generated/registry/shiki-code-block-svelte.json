@@ -1,18 +1,19 @@
 {
-  "name": "shiki-code-block-svelte",
-  "description": "Render code blocks with syntax highlighting using Shiki.",
-  "repo_url": "https://github.com/selemondev/shiki-code-block",
-  "authors": [
-    "selemondev"
-  ],
-  "homepage": "https://github.com/selemondev/shiki-code-block#readme",
-  "downloads": 22,
-  "dependents": 1,
-  "updated": "2025-01-24T09:06:29.407Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 3
+	"name": "shiki-code-block-svelte",
+	"description": "Render code blocks with syntax highlighting using Shiki.",
+	"repo_url": "https://github.com/selemondev/shiki-code-block",
+	"authors": ["selemondev"],
+	"homepage": "https://github.com/selemondev/shiki-code-block#readme",
+	"downloads": 22,
+	"dependents": 1,
+	"updated": "2025-01-24T09:06:29.407Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 3,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

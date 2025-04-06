@@ -1,16 +1,17 @@
 {
-  "name": "sveltree",
-  "description": "Implement drag-and-drop tree component for Svelte 3.",
-  "repo_url": "",
-  "authors": [
-    "imkreislaufen"
-  ],
-  "downloads": 6,
-  "dependents": 0,
-  "updated": "2020-06-11T09:58:27.928Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "sveltree",
+	"description": "Implement drag-and-drop tree component for Svelte 3.",
+	"repo_url": "",
+	"authors": ["imkreislaufen"],
+	"downloads": 6,
+	"dependents": 0,
+	"updated": "2020-06-11T09:58:27.928Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

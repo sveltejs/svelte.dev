@@ -1,18 +1,19 @@
 {
-  "name": "@magidoc/plugin-svelte-marked",
-  "description": "Parse Markdown to Svelte components for Magidoc.",
-  "repo_url": "https://github.com/magidoc-org/magidoc",
-  "authors": [
-    "pelletier197"
-  ],
-  "homepage": "https://github.com/magidoc-org/magidoc#readme",
-  "downloads": 5996,
-  "dependents": 1,
-  "updated": "2024-11-08T18:33:01.933Z",
-  "tags": [
-    "content"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 263
+	"name": "@magidoc/plugin-svelte-marked",
+	"description": "Parse Markdown to Svelte components for Magidoc.",
+	"repo_url": "https://github.com/magidoc-org/magidoc",
+	"authors": ["pelletier197"],
+	"homepage": "https://github.com/magidoc-org/magidoc#readme",
+	"downloads": 5996,
+	"dependents": 1,
+	"updated": "2024-11-08T18:33:01.933Z",
+	"tags": ["content"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 263,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

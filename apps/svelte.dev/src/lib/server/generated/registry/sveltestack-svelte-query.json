@@ -1,17 +1,18 @@
 {
-  "name": "@sveltestack/svelte-query",
-  "description": "Manage, cache, and sync asynchronous data in Svelte.",
-  "repo_url": "",
-  "authors": [
-    "amen-souissi"
-  ],
-  "homepage": "https://github.com/SvelteStack/svelte-query",
-  "downloads": 2202,
-  "dependents": 4,
-  "updated": "2022-01-22T21:30:04.205Z",
-  "tags": [
-    "server"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@sveltestack/svelte-query",
+	"description": "Manage, cache, and sync asynchronous data in Svelte.",
+	"repo_url": "",
+	"authors": ["amen-souissi"],
+	"homepage": "https://github.com/SvelteStack/svelte-query",
+	"downloads": 2202,
+	"dependents": 4,
+	"updated": "2022-01-22T21:30:04.205Z",
+	"tags": ["server"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

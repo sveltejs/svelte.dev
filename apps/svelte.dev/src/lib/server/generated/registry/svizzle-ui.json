@@ -1,19 +1,19 @@
 {
-  "name": "@svizzle/ui",
-  "description": "Provides set of UI components for Svelte.",
-  "repo_url": "https://github.com/nestauk/svizzle",
-  "authors": [
-    "nestauk-dev",
-    "mindrones"
-  ],
-  "homepage": "https://github.com/nestauk/svizzle",
-  "downloads": 19,
-  "dependents": 5,
-  "updated": "2023-11-23T20:36:01.455Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 19
+	"name": "@svizzle/ui",
+	"description": "Provides set of UI components for Svelte.",
+	"repo_url": "https://github.com/nestauk/svizzle",
+	"authors": ["nestauk-dev", "mindrones"],
+	"homepage": "https://github.com/nestauk/svizzle",
+	"downloads": 19,
+	"dependents": 5,
+	"updated": "2023-11-23T20:36:01.455Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 19,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

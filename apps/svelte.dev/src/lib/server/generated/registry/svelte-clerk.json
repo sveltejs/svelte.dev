@@ -1,18 +1,19 @@
 {
-  "name": "svelte-clerk",
-  "description": "Integrate Clerk authentication with SvelteKit.",
-  "repo_url": "https://github.com/wobsoriano/svelte-clerk",
-  "authors": [
-    "wobsoriano"
-  ],
-  "homepage": "https://github.com/wobsoriano/svelte-clerk#readme",
-  "downloads": 795,
-  "dependents": 0,
-  "updated": "2025-03-27T06:13:03.090Z",
-  "tags": [
-    "auth"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 104
+	"name": "svelte-clerk",
+	"description": "Integrate Clerk authentication with SvelteKit.",
+	"repo_url": "https://github.com/wobsoriano/svelte-clerk",
+	"authors": ["wobsoriano"],
+	"homepage": "https://github.com/wobsoriano/svelte-clerk#readme",
+	"downloads": 795,
+	"dependents": 0,
+	"updated": "2025-03-27T06:13:03.090Z",
+	"tags": ["auth"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 105,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

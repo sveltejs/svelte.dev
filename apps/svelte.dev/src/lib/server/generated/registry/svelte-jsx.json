@@ -1,18 +1,19 @@
 {
-  "name": "svelte-jsx",
-  "description": "Enable JSX syntax for testing Svelte components.",
-  "repo_url": "https://github.com/kenoxa/svelte-jsx",
-  "authors": [
-    "sastan"
-  ],
-  "homepage": "https://github.com/kenoxa/svelte-jsx#readme",
-  "downloads": 369,
-  "dependents": 2,
-  "updated": "2021-02-07T11:12:20.070Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 38
+	"name": "svelte-jsx",
+	"description": "Enable JSX syntax for testing Svelte components.",
+	"repo_url": "https://github.com/kenoxa/svelte-jsx",
+	"authors": ["sastan"],
+	"homepage": "https://github.com/kenoxa/svelte-jsx#readme",
+	"downloads": 369,
+	"dependents": 2,
+	"updated": "2021-02-07T11:12:20.070Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 38,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

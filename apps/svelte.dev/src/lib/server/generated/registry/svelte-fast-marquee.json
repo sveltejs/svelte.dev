@@ -1,18 +1,19 @@
 {
-  "name": "svelte-fast-marquee",
-  "description": "Create fast marquee component for Svelte, inspired by react-fast-marquee.",
-  "repo_url": "https://github.com/abosch19/svelte-fast-marquee",
-  "authors": [
-    "abosch19"
-  ],
-  "homepage": "https://svelte-fast-marquee-docs.vercel.app/",
-  "downloads": 1448,
-  "dependents": 0,
-  "updated": "2024-09-23T15:12:07.918Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 46
+	"name": "svelte-fast-marquee",
+	"description": "Create fast marquee component for Svelte, inspired by react-fast-marquee.",
+	"repo_url": "https://github.com/abosch19/svelte-fast-marquee",
+	"authors": ["abosch19"],
+	"homepage": "https://svelte-fast-marquee-docs.vercel.app/",
+	"downloads": 1448,
+	"dependents": 0,
+	"updated": "2024-09-23T15:12:07.918Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 46,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "@hexagon6/svelte-solid-store",
-  "description": "Provides Svelte stores for Solid social linked data.",
-  "repo_url": "https://github.com/hexagon6/svelte-solid-store",
-  "authors": [
-    "hexagon6"
-  ],
-  "homepage": "https://github.com/hexagon6/svelte-solid-store#readme",
-  "downloads": 14,
-  "dependents": 0,
-  "updated": "2024-05-21T09:52:43.589Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 1
+	"name": "@hexagon6/svelte-solid-store",
+	"description": "Provides Svelte stores for Solid social linked data.",
+	"repo_url": "https://github.com/hexagon6/svelte-solid-store",
+	"authors": ["hexagon6"],
+	"homepage": "https://github.com/hexagon6/svelte-solid-store#readme",
+	"downloads": 14,
+	"dependents": 0,
+	"updated": "2024-05-21T09:52:43.589Z",
+	"tags": ["miscellaneous"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": true
+	}
 }

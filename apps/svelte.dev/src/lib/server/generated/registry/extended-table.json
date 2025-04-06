@@ -1,18 +1,19 @@
 {
-  "name": "extended-table",
-  "description": "Create extended data tables for Svelte applications.",
-  "repo_url": "https://github.com/dritter/extended-table",
-  "authors": [
-    "dritter"
-  ],
-  "homepage": "https://github.com/dritter/extended-table#readme",
-  "downloads": 8,
-  "dependents": 0,
-  "updated": "2023-06-07T06:14:06.916Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 6
+	"name": "extended-table",
+	"description": "Create extended data tables for Svelte applications.",
+	"repo_url": "https://github.com/dritter/extended-table",
+	"authors": ["dritter"],
+	"homepage": "https://github.com/dritter/extended-table#readme",
+	"downloads": 8,
+	"dependents": 0,
+	"updated": "2023-06-07T06:14:06.916Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 6,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

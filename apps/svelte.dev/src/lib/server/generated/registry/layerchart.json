@@ -1,18 +1,19 @@
 {
-  "name": "layerchart",
-  "description": "Build a wide range of data visualizations with composable components.",
-  "repo_url": "https://github.com/techniq/layerchart",
-  "authors": [
-    "techniq"
-  ],
-  "homepage": "https://github.com/techniq/layerchart#readme",
-  "downloads": 6371,
-  "dependents": 4,
-  "updated": "2025-03-14T18:43:12.983Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 832
+	"name": "layerchart",
+	"description": "Build a wide range of data visualizations with composable components.",
+	"repo_url": "https://github.com/techniq/layerchart",
+	"authors": ["techniq"],
+	"homepage": "https://github.com/techniq/layerchart#readme",
+	"downloads": 6371,
+	"dependents": 4,
+	"updated": "2025-03-14T18:43:12.983Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 833,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

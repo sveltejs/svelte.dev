@@ -1,18 +1,19 @@
 {
-  "name": "@jdeighan/starbucks",
-  "description": "Transform .starbucks files into .svelte files.",
-  "repo_url": "https://github.com/johndeighan/starbucks",
-  "authors": [
-    "jdeighan"
-  ],
-  "homepage": "https://github.com/johndeighan/starbucks#readme",
-  "downloads": 146,
-  "dependents": 1,
-  "updated": "2022-08-17T09:36:08.291Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@jdeighan/starbucks",
+	"description": "Transform .starbucks files into .svelte files.",
+	"repo_url": "https://github.com/johndeighan/starbucks",
+	"authors": ["jdeighan"],
+	"homepage": "https://github.com/johndeighan/starbucks#readme",
+	"downloads": 146,
+	"dependents": 1,
+	"updated": "2022-08-17T09:36:08.291Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

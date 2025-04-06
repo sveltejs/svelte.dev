@@ -1,20 +1,19 @@
 {
-  "name": "@shipbit/svane",
-  "description": "Show Tailwind viewport and distance to next viewport.",
-  "repo_url": "https://github.com/ShipBit/svane",
-  "authors": [
-    "shackles",
-    "robertschiller",
-    "shardiaz"
-  ],
-  "homepage": "https://github.com/ShipBit/svane#readme",
-  "downloads": 6,
-  "dependents": 0,
-  "updated": "2023-10-09T09:09:50.158Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 35
+	"name": "@shipbit/svane",
+	"description": "Show Tailwind viewport and distance to next viewport.",
+	"repo_url": "https://github.com/ShipBit/svane",
+	"authors": ["shackles", "robertschiller", "shardiaz"],
+	"homepage": "https://github.com/ShipBit/svane#readme",
+	"downloads": 6,
+	"dependents": 0,
+	"updated": "2023-10-09T09:09:50.158Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 35,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

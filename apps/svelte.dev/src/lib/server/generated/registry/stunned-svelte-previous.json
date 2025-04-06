@@ -1,17 +1,18 @@
 {
-  "name": "@stunned/svelte-previous",
-  "description": "Create Svelte stores that remember previous values.",
-  "repo_url": "https://github.com/regexyl/svelte-previous",
-  "authors": [
-    "stunned"
-  ],
-  "homepage": "https://github.com/regexyl/svelte-previous#readme",
-  "downloads": 2,
-  "dependents": 0,
-  "updated": "2023-09-14T16:02:50.144Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@stunned/svelte-previous",
+	"description": "Create Svelte stores that remember previous values.",
+	"repo_url": "https://github.com/regexyl/svelte-previous",
+	"authors": ["stunned"],
+	"homepage": "https://github.com/regexyl/svelte-previous#readme",
+	"downloads": 2,
+	"dependents": 0,
+	"updated": "2023-09-14T16:02:50.144Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "svelte-logos",
-  "description": "Provides Svelte components for various logos and brand icons.",
-  "repo_url": "https://github.com/joaopalmeiro/svelte-logos",
-  "authors": [
-    "joaopalmeiro"
-  ],
-  "homepage": "https://github.com/joaopalmeiro/svelte-logos#readme",
-  "downloads": 16,
-  "dependents": 0,
-  "updated": "2022-01-02T18:25:27.143Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelte-logos",
+	"description": "Provides Svelte components for various logos and brand icons.",
+	"repo_url": "https://github.com/joaopalmeiro/svelte-logos",
+	"authors": ["joaopalmeiro"],
+	"homepage": "https://github.com/joaopalmeiro/svelte-logos#readme",
+	"downloads": 16,
+	"dependents": 0,
+	"updated": "2022-01-02T18:25:27.143Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

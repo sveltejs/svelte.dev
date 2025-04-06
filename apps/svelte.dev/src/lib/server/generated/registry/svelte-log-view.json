@@ -1,18 +1,19 @@
 {
-  "name": "svelte-log-view",
-  "description": "Displays log content within Svelte applications.",
-  "repo_url": "https://github.com/arlac77/svelte-log-view",
-  "authors": [
-    "arlac77"
-  ],
-  "homepage": "https://github.com/arlac77/svelte-log-view#readme",
-  "downloads": 193,
-  "dependents": 2,
-  "updated": "2025-03-24T12:59:00.765Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 4
+	"name": "svelte-log-view",
+	"description": "Displays log content within Svelte applications.",
+	"repo_url": "https://github.com/arlac77/svelte-log-view",
+	"authors": ["arlac77"],
+	"homepage": "https://github.com/arlac77/svelte-log-view#readme",
+	"downloads": 193,
+	"dependents": 2,
+	"updated": "2025-03-24T12:59:00.765Z",
+	"tags": ["miscellaneous"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 4,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

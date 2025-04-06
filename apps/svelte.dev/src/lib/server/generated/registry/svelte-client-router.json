@@ -1,18 +1,19 @@
 {
-  "name": "svelte-client-router",
-  "description": "Provides client-side routing for Svelte applications.",
-  "repo_url": "https://github.com/arthurgermano/svelte-client-router",
-  "authors": [
-    "arthurgermano"
-  ],
-  "homepage": "https://arthurgermano.github.io/svelte-client-router/#/svelte-client-router/v2/presentation",
-  "downloads": 47,
-  "dependents": 0,
-  "updated": "2024-04-08T20:54:07.076Z",
-  "tags": [
-    "router"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 17
+	"name": "svelte-client-router",
+	"description": "Provides client-side routing for Svelte applications.",
+	"repo_url": "https://github.com/arthurgermano/svelte-client-router",
+	"authors": ["arthurgermano"],
+	"homepage": "https://arthurgermano.github.io/svelte-client-router/#/svelte-client-router/v2/presentation",
+	"downloads": 47,
+	"dependents": 0,
+	"updated": "2024-04-08T20:54:07.076Z",
+	"tags": ["router"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 17,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

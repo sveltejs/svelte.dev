@@ -1,18 +1,19 @@
 {
-  "name": "use-svelte",
-  "description": "Collection of Svelte actions and directives.",
-  "repo_url": "https://github.com/treboryx/use-svelte",
-  "authors": [
-    "rowboat"
-  ],
-  "homepage": "https://github.com/treboryx/use-svelte#readme",
-  "downloads": 5,
-  "dependents": 0,
-  "updated": "2022-11-09T12:09:47.647Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "use-svelte",
+	"description": "Collection of Svelte actions and directives.",
+	"repo_url": "https://github.com/treboryx/use-svelte",
+	"authors": ["rowboat"],
+	"homepage": "https://github.com/treboryx/use-svelte#readme",
+	"downloads": 5,
+	"dependents": 0,
+	"updated": "2022-11-09T12:09:47.647Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

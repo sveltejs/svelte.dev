@@ -1,18 +1,19 @@
 {
-  "name": "pentagonjs",
-  "description": "Generate documentation for Svelte projects.",
-  "repo_url": "https://github.com/ten-humans/pentagon",
-  "authors": [
-    "mandoo_"
-  ],
-  "homepage": "https://github.com/ten-humans/pentagon#readme",
-  "downloads": 18,
-  "dependents": 0,
-  "updated": "2021-09-22T02:23:55.155Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "pentagonjs",
+	"description": "Generate documentation for Svelte projects.",
+	"repo_url": "https://github.com/ten-humans/pentagon",
+	"authors": ["mandoo_"],
+	"homepage": "https://github.com/ten-humans/pentagon#readme",
+	"downloads": 18,
+	"dependents": 0,
+	"updated": "2021-09-22T02:23:55.155Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,16 +1,17 @@
 {
-  "name": "@htmlbricks/hb-banner",
-  "description": "Create banner web components for Svelte applications.",
-  "repo_url": "",
-  "authors": [
-    "dariocaruso"
-  ],
-  "downloads": 496,
-  "dependents": 2,
-  "updated": "2025-03-24T18:07:11.943Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@htmlbricks/hb-banner",
+	"description": "Create banner web components for Svelte applications.",
+	"repo_url": "",
+	"authors": ["dariocaruso"],
+	"downloads": 496,
+	"dependents": 2,
+	"updated": "2025-03-24T18:07:11.943Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

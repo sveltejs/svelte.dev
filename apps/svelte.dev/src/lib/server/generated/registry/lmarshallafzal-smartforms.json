@@ -1,18 +1,19 @@
 {
-  "name": "@lmarshallafzal/smartforms",
-  "description": "Generate dynamic forms for Svelte applications.",
-  "repo_url": "https://github.com/LMarshallAfzal/SmartForms",
-  "authors": [
-    "lmarshallafzal"
-  ],
-  "homepage": "https://github.com/LMarshallAfzal/SmartForms#readme",
-  "downloads": 2,
-  "dependents": 0,
-  "updated": "2024-12-18T15:55:42.110Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 0
+	"name": "@lmarshallafzal/smartforms",
+	"description": "Generate dynamic forms for Svelte applications.",
+	"repo_url": "https://github.com/LMarshallAfzal/SmartForms",
+	"authors": ["lmarshallafzal"],
+	"homepage": "https://github.com/LMarshallAfzal/SmartForms#readme",
+	"downloads": 2,
+	"dependents": 0,
+	"updated": "2024-12-18T15:55:42.110Z",
+	"tags": ["tooling"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

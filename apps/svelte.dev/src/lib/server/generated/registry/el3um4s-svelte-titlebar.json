@@ -1,18 +1,19 @@
 {
-  "name": "@el3um4s/svelte-titlebar",
-  "description": "Create titlebars for Svelte projects.",
-  "repo_url": "https://github.com/el3um4s/svelte-titlebar",
-  "authors": [
-    "el3um4s"
-  ],
-  "homepage": "https://github.com/el3um4s/svelte-titlebar#readme",
-  "downloads": 0,
-  "dependents": 0,
-  "updated": "2022-08-09T09:55:27.681Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 2
+	"name": "@el3um4s/svelte-titlebar",
+	"description": "Create titlebars for Svelte projects.",
+	"repo_url": "https://github.com/el3um4s/svelte-titlebar",
+	"authors": ["el3um4s"],
+	"homepage": "https://github.com/el3um4s/svelte-titlebar#readme",
+	"downloads": 0,
+	"dependents": 0,
+	"updated": "2022-08-09T09:55:27.681Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,23 +1,18 @@
 {
-  "name": "@vouchfor/uikit",
-  "description": "Build Vouch Svelte UIKit components.",
-  "repo_url": "https://github.com/VouchAU/vouch-uikit",
-  "authors": [
-    "dstirk",
-    "nathanvouch",
-    "dteale",
-    "julianburr-vouch",
-    "aaron-vouch",
-    "vouch-tech"
-  ],
-  "homepage": "https://vouchau.github.io/vouch-uikit",
-  "downloads": 1005,
-  "dependents": 0,
-  "updated": "2024-01-11T00:39:12.366Z",
-  "tags": [
-    "design-system",
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@vouchfor/uikit",
+	"description": "Build Vouch Svelte UIKit components.",
+	"repo_url": "https://github.com/VouchAU/vouch-uikit",
+	"authors": ["dstirk", "nathanvouch", "dteale", "julianburr-vouch", "aaron-vouch", "vouch-tech"],
+	"homepage": "https://vouchau.github.io/vouch-uikit",
+	"downloads": 1005,
+	"dependents": 0,
+	"updated": "2024-01-11T00:39:12.366Z",
+	"tags": ["design-system", "ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

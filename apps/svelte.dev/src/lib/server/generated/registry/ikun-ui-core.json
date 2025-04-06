@@ -1,19 +1,19 @@
 {
-  "name": "@ikun-ui/core",
-  "description": "Build websites with this Svelte UI library.",
-  "repo_url": "https://github.com/ikun-svelte/ikun-ui",
-  "authors": [
-    "baiwusanyu"
-  ],
-  "homepage": "https://github.com/ikun-svelte/ikun-ui#readme",
-  "downloads": 9,
-  "dependents": 1,
-  "updated": "2025-01-24T03:49:30.129Z",
-  "tags": [
-    "ui",
-    "design-system"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1434
+	"name": "@ikun-ui/core",
+	"description": "Build websites with this Svelte UI library.",
+	"repo_url": "https://github.com/ikun-svelte/ikun-ui",
+	"authors": ["baiwusanyu"],
+	"homepage": "https://github.com/ikun-svelte/ikun-ui#readme",
+	"downloads": 9,
+	"dependents": 1,
+	"updated": "2025-01-24T03:49:30.129Z",
+	"tags": ["ui", "design-system"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1434,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

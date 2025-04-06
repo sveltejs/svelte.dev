@@ -1,18 +1,19 @@
 {
-  "name": "analysis-renderer",
-  "description": "Dashboard card component for Svelte with Vite.",
-  "repo_url": "https://github.com/miyokoLeeM/vite-svelte-comps",
-  "authors": [
-    "miyoko0505"
-  ],
-  "homepage": "https://github.com/miyokoLeeM/vite-svelte-comps#readme",
-  "downloads": 7,
-  "dependents": 0,
-  "updated": "2023-03-24T08:00:51.703Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 2
+	"name": "analysis-renderer",
+	"description": "Dashboard card component for Svelte with Vite.",
+	"repo_url": "https://github.com/miyokoLeeM/vite-svelte-comps",
+	"authors": ["miyoko0505"],
+	"homepage": "https://github.com/miyokoLeeM/vite-svelte-comps#readme",
+	"downloads": 7,
+	"dependents": 0,
+	"updated": "2023-03-24T08:00:51.703Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

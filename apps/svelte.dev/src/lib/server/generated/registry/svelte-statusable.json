@@ -1,18 +1,19 @@
 {
-  "name": "svelte-statusable",
-  "description": "Manage application status with a simple Svelte store.",
-  "repo_url": "https://github.com/sveltetools/svelte-statusable",
-  "authors": [
-    "paulmaly"
-  ],
-  "homepage": "https://github.com/sveltetools/svelte-statusable#readme",
-  "downloads": 6,
-  "dependents": 0,
-  "updated": "2022-07-28T07:42:07.521Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 4
+	"name": "svelte-statusable",
+	"description": "Manage application status with a simple Svelte store.",
+	"repo_url": "https://github.com/sveltetools/svelte-statusable",
+	"authors": ["paulmaly"],
+	"homepage": "https://github.com/sveltetools/svelte-statusable#readme",
+	"downloads": 6,
+	"dependents": 0,
+	"updated": "2022-07-28T07:42:07.521Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 4,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

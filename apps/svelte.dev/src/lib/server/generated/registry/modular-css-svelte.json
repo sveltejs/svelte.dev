@@ -1,18 +1,19 @@
 {
-  "name": "@modular-css/svelte",
-  "description": "Adds modular-css support to Svelte components.",
-  "repo_url": "https://github.com/tivac/modular-css",
-  "authors": [
-    "tivac"
-  ],
-  "homepage": "https://m-css.com",
-  "downloads": 68,
-  "dependents": 1,
-  "updated": "2025-01-10T20:32:42.433Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 293
+	"name": "@modular-css/svelte",
+	"description": "Adds modular-css support to Svelte components.",
+	"repo_url": "https://github.com/tivac/modular-css",
+	"authors": ["tivac"],
+	"homepage": "https://m-css.com",
+	"downloads": 68,
+	"dependents": 1,
+	"updated": "2025-01-10T20:32:42.433Z",
+	"tags": ["tooling"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 293,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "@easyroute/svelte",
-  "description": "Config-based router for Svelte with SSR support.",
-  "repo_url": "https://github.com/easyroute-router/easyroute",
-  "authors": [
-    "lyohaplotinka"
-  ],
-  "homepage": "https://easyroute.lyoha.info",
-  "downloads": 33,
-  "dependents": 1,
-  "updated": "2023-07-25T19:38:21.847Z",
-  "tags": [
-    "router"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 20
+	"name": "@easyroute/svelte",
+	"description": "Config-based router for Svelte with SSR support.",
+	"repo_url": "https://github.com/easyroute-router/easyroute",
+	"authors": ["lyohaplotinka"],
+	"homepage": "https://easyroute.lyoha.info",
+	"downloads": 33,
+	"dependents": 1,
+	"updated": "2023-07-25T19:38:21.847Z",
+	"tags": ["router"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 20,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": false
+	}
 }

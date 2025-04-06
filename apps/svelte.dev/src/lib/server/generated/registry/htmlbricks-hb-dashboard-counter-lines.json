@@ -1,16 +1,17 @@
 {
-  "name": "@htmlbricks/hb-dashboard-counter-lines",
-  "description": "Dashboard counter lines web component for Svelte.",
-  "repo_url": "",
-  "authors": [
-    "dariocaruso"
-  ],
-  "downloads": 224,
-  "dependents": 0,
-  "updated": "2025-03-24T18:07:14.328Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@htmlbricks/hb-dashboard-counter-lines",
+	"description": "Dashboard counter lines web component for Svelte.",
+	"repo_url": "",
+	"authors": ["dariocaruso"],
+	"downloads": 224,
+	"dependents": 0,
+	"updated": "2025-03-24T18:07:14.328Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

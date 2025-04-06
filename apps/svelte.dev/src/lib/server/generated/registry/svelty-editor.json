@@ -1,18 +1,19 @@
 {
-  "name": "svelty-editor",
-  "description": "Svelte wrapper for Editor.js with TypeScript support.",
-  "repo_url": "https://github.com/code-gio/svelty-editor",
-  "authors": [
-    "code-gio"
-  ],
-  "homepage": "https://github.com/code-gio/svelty-editor#readme",
-  "downloads": 9,
-  "dependents": 0,
-  "updated": "2025-03-04T19:57:41.103Z",
-  "tags": [
-    "content"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelty-editor",
+	"description": "Svelte wrapper for Editor.js with TypeScript support.",
+	"repo_url": "https://github.com/code-gio/svelty-editor",
+	"authors": ["code-gio"],
+	"homepage": "https://github.com/code-gio/svelty-editor#readme",
+	"downloads": 9,
+	"dependents": 0,
+	"updated": "2025-03-04T19:57:41.103Z",
+	"tags": ["content"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

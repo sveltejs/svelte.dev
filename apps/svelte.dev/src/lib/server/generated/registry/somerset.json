@@ -1,18 +1,19 @@
 {
-  "name": "somerset",
-  "description": "Adds SEO meta tags, Open Graph, and JSON-LD to SvelteKit pages.",
-  "repo_url": "https://github.com/realgoatish/somerset",
-  "authors": [
-    "realgoatish"
-  ],
-  "homepage": "https://github.com/realgoatish/somerset#readme",
-  "downloads": 7,
-  "dependents": 0,
-  "updated": "2024-01-06T04:44:00.504Z",
-  "tags": [
-    "seo"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 21
+	"name": "somerset",
+	"description": "Adds SEO meta tags, Open Graph, and JSON-LD to SvelteKit pages.",
+	"repo_url": "https://github.com/realgoatish/somerset",
+	"authors": ["realgoatish"],
+	"homepage": "https://github.com/realgoatish/somerset#readme",
+	"downloads": 7,
+	"dependents": 0,
+	"updated": "2024-01-06T04:44:00.504Z",
+	"tags": ["seo"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 21,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

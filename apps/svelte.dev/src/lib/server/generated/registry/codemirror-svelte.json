@@ -1,18 +1,19 @@
 {
-  "name": "codemirror-svelte",
-  "description": "Integrate CodeMirror editor into Svelte components.",
-  "repo_url": "https://github.com/NaokiM03/codemirror-svelte",
-  "authors": [
-    "naokim03"
-  ],
-  "homepage": "https://github.com/NaokiM03/codemirror-svelte#readme",
-  "downloads": 5,
-  "dependents": 0,
-  "updated": "2023-06-04T19:49:43.011Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 9
+	"name": "codemirror-svelte",
+	"description": "Integrate CodeMirror editor into Svelte components.",
+	"repo_url": "https://github.com/NaokiM03/codemirror-svelte",
+	"authors": ["naokim03"],
+	"homepage": "https://github.com/NaokiM03/codemirror-svelte#readme",
+	"downloads": 5,
+	"dependents": 0,
+	"updated": "2023-06-04T19:49:43.011Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 9,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "@apsc/keyboard-shortcut-action",
-  "description": "Call functions via keyboard shortcuts in Svelte apps.",
-  "repo_url": "https://github.com/andrey-pavlenko/svelte-components",
-  "authors": [
-    "andrey-pavlenko"
-  ],
-  "homepage": "https://github.com/andrey-pavlenko/svelte-components/tree/main/packages/keyboard-shortcut-action#readme",
-  "downloads": 0,
-  "dependents": 0,
-  "updated": "2023-02-01T20:15:30.166Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 3
+	"name": "@apsc/keyboard-shortcut-action",
+	"description": "Call functions via keyboard shortcuts in Svelte apps.",
+	"repo_url": "https://github.com/andrey-pavlenko/svelte-components",
+	"authors": ["andrey-pavlenko"],
+	"homepage": "https://github.com/andrey-pavlenko/svelte-components/tree/main/packages/keyboard-shortcut-action#readme",
+	"downloads": 0,
+	"dependents": 0,
+	"updated": "2023-02-01T20:15:30.166Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 3,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

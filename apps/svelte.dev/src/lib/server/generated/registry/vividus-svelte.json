@@ -1,18 +1,19 @@
 {
-  "name": "@vividus/svelte",
-  "description": "Component library for Svelte with lively transitions.",
-  "repo_url": "https://github.com/hAbuMustafa/vividus",
-  "authors": [
-    "eyecode"
-  ],
-  "homepage": "https://github.com/hAbuMustafa/vividus#readme",
-  "downloads": 6,
-  "dependents": 0,
-  "updated": "2024-01-25T17:50:12.920Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@vividus/svelte",
+	"description": "Component library for Svelte with lively transitions.",
+	"repo_url": "https://github.com/hAbuMustafa/vividus",
+	"authors": ["eyecode"],
+	"homepage": "https://github.com/hAbuMustafa/vividus#readme",
+	"downloads": 6,
+	"dependents": 0,
+	"updated": "2024-01-25T17:50:12.920Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

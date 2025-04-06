@@ -1,18 +1,19 @@
 {
-  "name": "svelte-adapter-ghpages",
-  "description": "SvelteKit adapter for gh-pages.",
-  "repo_url": "https://github.com/ota-meshi/svelte-adapter-ghpages",
-  "authors": [
-    "ota-meshi"
-  ],
-  "homepage": "https://github.com/ota-meshi/vite-plugin-svelte-md#readme",
-  "downloads": 3687,
-  "dependents": 0,
-  "updated": "2023-12-15T02:42:03.756Z",
-  "tags": [
-    "adapter"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "svelte-adapter-ghpages",
+	"description": "SvelteKit adapter for gh-pages.",
+	"repo_url": "https://github.com/ota-meshi/svelte-adapter-ghpages",
+	"authors": ["ota-meshi"],
+	"homepage": "https://github.com/ota-meshi/vite-plugin-svelte-md#readme",
+	"downloads": 3687,
+	"dependents": 0,
+	"updated": "2023-12-15T02:42:03.756Z",
+	"tags": ["adapter"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

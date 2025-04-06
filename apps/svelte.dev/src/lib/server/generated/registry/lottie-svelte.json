@@ -1,18 +1,19 @@
 {
-  "name": "lottie-svelte",
-  "description": "Creates Svelte wrapper around lottie-web.",
-  "repo_url": "https://github.com/MattDavis00/lottie-svelte",
-  "authors": [
-    "mattdavis00"
-  ],
-  "homepage": "https://github.com/MattDavis00/lottie-svelte",
-  "downloads": 123,
-  "dependents": 0,
-  "updated": "2024-01-11T18:45:04.303Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 10
+	"name": "lottie-svelte",
+	"description": "Creates Svelte wrapper around lottie-web.",
+	"repo_url": "https://github.com/MattDavis00/lottie-svelte",
+	"authors": ["mattdavis00"],
+	"homepage": "https://github.com/MattDavis00/lottie-svelte",
+	"downloads": 123,
+	"dependents": 0,
+	"updated": "2024-01-11T18:45:04.303Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 10,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

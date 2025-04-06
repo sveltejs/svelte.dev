@@ -1,18 +1,19 @@
 {
-  "name": "svelte-formik",
-  "description": "Build forms easily in Svelte projects, inspired by Formik.",
-  "repo_url": "https://github.com/h1b9b/svelte-formik",
-  "authors": [
-    "h1b9b"
-  ],
-  "homepage": "https://github.com/h1b9b/svelte-formik#readme",
-  "downloads": 7,
-  "dependents": 0,
-  "updated": "2020-12-01T18:11:26.431Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelte-formik",
+	"description": "Build forms easily in Svelte projects, inspired by Formik.",
+	"repo_url": "https://github.com/h1b9b/svelte-formik",
+	"authors": ["h1b9b"],
+	"homepage": "https://github.com/h1b9b/svelte-formik#readme",
+	"downloads": 7,
+	"dependents": 0,
+	"updated": "2020-12-01T18:11:26.431Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

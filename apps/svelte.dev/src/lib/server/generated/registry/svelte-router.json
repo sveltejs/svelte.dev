@@ -1,18 +1,19 @@
 {
-  "name": "svelte-router",
-  "description": "Implement a simple router for Svelte applications.",
-  "repo_url": "https://github.com/jikkai/svelte-router",
-  "authors": [
-    "jikkai"
-  ],
-  "homepage": "https://jikkai.github.io/svelte-router",
-  "downloads": 76,
-  "dependents": 1,
-  "updated": "2019-08-14T08:17:51.148Z",
-  "tags": [
-    "router"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 62
+	"name": "svelte-router",
+	"description": "Implement a simple router for Svelte applications.",
+	"repo_url": "https://github.com/jikkai/svelte-router",
+	"authors": ["jikkai"],
+	"homepage": "https://jikkai.github.io/svelte-router",
+	"downloads": 76,
+	"dependents": 1,
+	"updated": "2019-08-14T08:17:51.148Z",
+	"tags": ["router"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 62,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

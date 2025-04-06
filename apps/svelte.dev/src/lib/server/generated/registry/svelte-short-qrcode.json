@@ -1,18 +1,18 @@
 {
-  "name": "svelte-short-qrcode",
-  "description": "Generate short URLs and QR codes for SvelteKit applications.",
-  "repo_url": "https://github.com/captaincodeman/svelte-short-qrcode",
-  "authors": [
-    "captaincodeman"
-  ],
-  "homepage": "https://captaincodeman.github.io/svelte-short-qrcode/",
-  "downloads": 12,
-  "dependents": 0,
-  "updated": "2024-04-29T20:40:57.231Z",
-  "tags": [
-    "tooling",
-    "server"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-short-qrcode",
+	"description": "Generate short URLs and QR codes for SvelteKit applications.",
+	"repo_url": "https://github.com/captaincodeman/svelte-short-qrcode",
+	"authors": ["captaincodeman"],
+	"homepage": "https://captaincodeman.github.io/svelte-short-qrcode/",
+	"downloads": 12,
+	"dependents": 0,
+	"updated": "2024-04-29T20:40:57.231Z",
+	"tags": ["tooling", "server"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

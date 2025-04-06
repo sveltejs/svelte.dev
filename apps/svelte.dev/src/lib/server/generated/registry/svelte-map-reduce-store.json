@@ -1,17 +1,18 @@
 {
-  "name": "svelte-map-reduce-store",
-  "description": "Creates map-reduce stores for Svelte, simplifying data transformations.",
-  "repo_url": "",
-  "authors": [
-    "7korobi"
-  ],
-  "homepage": "https://github.com/7korobi/svelte-giji/tree/master/src/lib/map-reduce",
-  "downloads": 18,
-  "dependents": 0,
-  "updated": "2022-02-13T15:32:43.570Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-map-reduce-store",
+	"description": "Creates map-reduce stores for Svelte, simplifying data transformations.",
+	"repo_url": "",
+	"authors": ["7korobi"],
+	"homepage": "https://github.com/7korobi/svelte-giji/tree/master/src/lib/map-reduce",
+	"downloads": 18,
+	"dependents": 0,
+	"updated": "2022-02-13T15:32:43.570Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

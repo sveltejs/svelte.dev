@@ -1,16 +1,17 @@
 {
-  "name": "gb7svelteds",
-  "description": "Provides a simple Svelte design system template.",
-  "repo_url": "",
-  "authors": [
-    "gbarska"
-  ],
-  "downloads": 2,
-  "dependents": 0,
-  "updated": "2023-02-22T20:31:07.854Z",
-  "tags": [
-    "design-system"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "gb7svelteds",
+	"description": "Provides a simple Svelte design system template.",
+	"repo_url": "",
+	"authors": ["gbarska"],
+	"downloads": 2,
+	"dependents": 0,
+	"updated": "2023-02-22T20:31:07.854Z",
+	"tags": ["design-system"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

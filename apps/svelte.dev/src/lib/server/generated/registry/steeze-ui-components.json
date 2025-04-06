@@ -1,19 +1,19 @@
 {
-  "name": "@steeze-ui/components",
-  "description": "Build accessible, themable UI components for Svelte.",
-  "repo_url": "https://github.com/steeze-ui/components",
-  "authors": [
-    "justinvoitel"
-  ],
-  "homepage": "https://steeze-ui.com",
-  "downloads": 21,
-  "dependents": 0,
-  "updated": "2022-10-06T12:20:44.564Z",
-  "tags": [
-    "design-system",
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 31
+	"name": "@steeze-ui/components",
+	"description": "Build accessible, themable UI components for Svelte.",
+	"repo_url": "https://github.com/steeze-ui/components",
+	"authors": ["justinvoitel"],
+	"homepage": "https://steeze-ui.com",
+	"downloads": 21,
+	"dependents": 0,
+	"updated": "2022-10-06T12:20:44.564Z",
+	"tags": ["design-system", "ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 31,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

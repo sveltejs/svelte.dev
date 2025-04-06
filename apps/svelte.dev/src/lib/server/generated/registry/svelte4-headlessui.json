@@ -1,18 +1,19 @@
 {
-  "name": "svelte4-headlessui",
-  "description": "Provides unstyled, accessible UI components for Svelte, Headless UI port.",
-  "repo_url": "https://github.com/zach-hopkins/svelte-headlessui",
-  "authors": [
-    "zach-hopkins"
-  ],
-  "homepage": "https://svelte-headlessui.goss.io",
-  "downloads": 0,
-  "dependents": 0,
-  "updated": "2024-08-05T21:42:37.835Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelte4-headlessui",
+	"description": "Provides unstyled, accessible UI components for Svelte, Headless UI port.",
+	"repo_url": "https://github.com/zach-hopkins/svelte-headlessui",
+	"authors": ["zach-hopkins"],
+	"homepage": "https://svelte-headlessui.goss.io",
+	"downloads": 0,
+	"dependents": 0,
+	"updated": "2024-08-05T21:42:37.835Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

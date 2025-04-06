@@ -1,18 +1,19 @@
 {
-  "name": "svelponents",
-  "description": "Provides Ant Design components ported for Svelte.",
-  "repo_url": "https://github.com/N00nDay/svelponents",
-  "authors": [
-    "noonday"
-  ],
-  "homepage": "https://github.com/N00nDay/svelponents#readme",
-  "downloads": 17,
-  "dependents": 0,
-  "updated": "2020-06-23T15:35:24.109Z",
-  "tags": [
-    "design-system"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 3
+	"name": "svelponents",
+	"description": "Provides Ant Design components ported for Svelte.",
+	"repo_url": "https://github.com/N00nDay/svelponents",
+	"authors": ["noonday"],
+	"homepage": "https://github.com/N00nDay/svelponents#readme",
+	"downloads": 17,
+	"dependents": 0,
+	"updated": "2020-06-23T15:35:24.109Z",
+	"tags": ["design-system"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 3,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

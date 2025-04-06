@@ -1,18 +1,19 @@
 {
-  "name": "date-picker-svelte-fork",
-  "description": "Implement date and time pickers for Svelte applications.",
-  "repo_url": "https://github.com/phongcao1998/date-picker-svelte",
-  "authors": [
-    "phongcao1998"
-  ],
-  "homepage": "https://date-picker-svelte.kasper.space",
-  "downloads": 2,
-  "dependents": 0,
-  "updated": "2023-12-27T04:56:10.067Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "date-picker-svelte-fork",
+	"description": "Implement date and time pickers for Svelte applications.",
+	"repo_url": "https://github.com/phongcao1998/date-picker-svelte",
+	"authors": ["phongcao1998"],
+	"homepage": "https://date-picker-svelte.kasper.space",
+	"downloads": 2,
+	"dependents": 0,
+	"updated": "2023-12-27T04:56:10.067Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": false
+	}
 }

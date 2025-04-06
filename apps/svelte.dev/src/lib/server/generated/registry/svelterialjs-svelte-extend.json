@@ -1,17 +1,18 @@
 {
-  "name": "@svelterialjs/svelte-extend",
-  "description": "Generate Svelte components by extending existing ones.",
-  "repo_url": "https://github.com/svelterialjs/svelte-extend",
-  "authors": [
-    "thecomputerm"
-  ],
-  "homepage": "https://github.com/svelterialjs/svelte-extend#readme",
-  "downloads": 6,
-  "dependents": 0,
-  "updated": "2021-06-19T19:47:19.709Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@svelterialjs/svelte-extend",
+	"description": "Generate Svelte components by extending existing ones.",
+	"repo_url": "https://github.com/svelterialjs/svelte-extend",
+	"authors": ["thecomputerm"],
+	"homepage": "https://github.com/svelterialjs/svelte-extend#readme",
+	"downloads": 6,
+	"dependents": 0,
+	"updated": "2021-06-19T19:47:19.709Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

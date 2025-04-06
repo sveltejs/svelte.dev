@@ -1,16 +1,17 @@
 {
-  "name": "svelte-theme",
-  "description": "Provides theming capabilities for Svelte apps, supporting light/dark themes.",
-  "repo_url": "",
-  "authors": [
-    "dooboolab"
-  ],
-  "downloads": 12,
-  "dependents": 0,
-  "updated": "2021-11-12T07:51:45.122Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-theme",
+	"description": "Provides theming capabilities for Svelte apps, supporting light/dark themes.",
+	"repo_url": "",
+	"authors": ["dooboolab"],
+	"downloads": 12,
+	"dependents": 0,
+	"updated": "2021-11-12T07:51:45.122Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

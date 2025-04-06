@@ -1,18 +1,19 @@
 {
-  "name": "svelte-hamburgers",
-  "description": "Create Svelte component based on hamburgers.css library.",
-  "repo_url": "https://github.com/ghostdevv/svelte-hamburgers",
-  "authors": [
-    "ghostsos"
-  ],
-  "homepage": "https://github.com/ghostdevv/svelte-hamburgers#readme",
-  "downloads": 1290,
-  "dependents": 1,
-  "updated": "2024-10-21T00:00:29.969Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 99
+	"name": "svelte-hamburgers",
+	"description": "Create Svelte component based on hamburgers.css library.",
+	"repo_url": "https://github.com/ghostdevv/svelte-hamburgers",
+	"authors": ["ghostsos"],
+	"homepage": "https://github.com/ghostdevv/svelte-hamburgers#readme",
+	"downloads": 1290,
+	"dependents": 1,
+	"updated": "2024-10-21T00:00:29.969Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 99,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

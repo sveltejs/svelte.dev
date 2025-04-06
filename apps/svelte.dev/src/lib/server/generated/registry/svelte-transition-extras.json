@@ -1,17 +1,18 @@
 {
-  "name": "svelte-transition-extras",
-  "description": "Extend Svelte transitions with more control over execution.",
-  "repo_url": "",
-  "authors": [
-    "ovao"
-  ],
-  "homepage": "https://github.com/boatilus/svelte-transition-extras",
-  "downloads": 11,
-  "dependents": 0,
-  "updated": "2022-01-11T00:54:54.782Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-transition-extras",
+	"description": "Extend Svelte transitions with more control over execution.",
+	"repo_url": "",
+	"authors": ["ovao"],
+	"homepage": "https://github.com/boatilus/svelte-transition-extras",
+	"downloads": 11,
+	"dependents": 0,
+	"updated": "2022-01-11T00:54:54.782Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

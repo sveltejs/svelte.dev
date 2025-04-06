@@ -1,18 +1,19 @@
 {
-  "name": "svelte-state-renderer",
-  "description": "Use abstract-state-router with Svelte.",
-  "repo_url": "https://github.com/TehShrike/svelte-state-renderer",
-  "authors": [
-    "tehshrike"
-  ],
-  "homepage": "https://github.com/TehShrike/svelte-state-renderer#readme",
-  "downloads": 132,
-  "dependents": 1,
-  "updated": "2025-02-05T20:44:46.086Z",
-  "tags": [
-    "router"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 37
+	"name": "svelte-state-renderer",
+	"description": "Use abstract-state-router with Svelte.",
+	"repo_url": "https://github.com/TehShrike/svelte-state-renderer",
+	"authors": ["tehshrike"],
+	"homepage": "https://github.com/TehShrike/svelte-state-renderer#readme",
+	"downloads": 132,
+	"dependents": 1,
+	"updated": "2025-02-05T20:44:46.086Z",
+	"tags": ["router"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 37,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

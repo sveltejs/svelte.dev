@@ -1,17 +1,19 @@
 {
-  "name": "@leomotors/sv-components",
-  "description": "Offers a UI component library for Svelte.",
-  "repo_url": "https://github.com/Leomotors/sv-components",
-  "authors": [
-    "leomotors"
-  ],
-  "downloads": 5,
-  "dependents": 0,
-  "updated": "2022-06-04T09:06:53.060Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@leomotors/sv-components",
+	"description": "Offers a UI component library for Svelte.",
+	"repo_url": "https://github.com/Leomotors/sv-components",
+	"authors": ["leomotors"],
+	"downloads": 5,
+	"dependents": 0,
+	"updated": "2022-06-04T09:06:53.060Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"homepage": "https://sv-components.leomotors.me",
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "svelte-device-detector",
-  "description": "Renders views on different device types.",
-  "repo_url": "https://github.com/andrelmlins/svelte-device-detector",
-  "authors": [
-    "andrelmlins"
-  ],
-  "homepage": "https://github.com/andrelmlins/svelte-device-detector#readme",
-  "downloads": 378,
-  "dependents": 1,
-  "updated": "2020-11-29T02:42:01.694Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 19
+	"name": "svelte-device-detector",
+	"description": "Renders views on different device types.",
+	"repo_url": "https://github.com/andrelmlins/svelte-device-detector",
+	"authors": ["andrelmlins"],
+	"homepage": "https://github.com/andrelmlins/svelte-device-detector#readme",
+	"downloads": 378,
+	"dependents": 1,
+	"updated": "2020-11-29T02:42:01.694Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 19,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

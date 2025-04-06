@@ -1,18 +1,19 @@
 {
-  "name": "svelte-subscribe",
-  "description": "Subscribe to non top-level stores in Svelte templates.",
-  "repo_url": "https://github.com/bryanmylee/svelte-subscribe",
-  "authors": [
-    "bryanmylee"
-  ],
-  "homepage": "https://github.com/bryanmylee/svelte-subscribe#readme",
-  "downloads": 18264,
-  "dependents": 6,
-  "updated": "2024-01-02T19:35:50.625Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 12
+	"name": "svelte-subscribe",
+	"description": "Subscribe to non top-level stores in Svelte templates.",
+	"repo_url": "https://github.com/bryanmylee/svelte-subscribe",
+	"authors": ["bryanmylee"],
+	"homepage": "https://github.com/bryanmylee/svelte-subscribe#readme",
+	"downloads": 18264,
+	"dependents": 6,
+	"updated": "2024-01-02T19:35:50.625Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 12,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

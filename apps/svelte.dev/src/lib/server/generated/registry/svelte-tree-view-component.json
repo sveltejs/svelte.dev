@@ -1,18 +1,19 @@
 {
-  "name": "svelte-tree-view-component",
-  "description": "Create tree view components for Svelte applications.",
-  "repo_url": "https://github.com/SamuelQZQ/svelte-tree-view-component",
-  "authors": [
-    "samuelqzq"
-  ],
-  "homepage": "https://github.com/SamuelQZQ/svelte-tree-view-component#readme",
-  "downloads": 32,
-  "dependents": 0,
-  "updated": "2022-04-28T15:35:33.719Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 6
+	"name": "svelte-tree-view-component",
+	"description": "Create tree view components for Svelte applications.",
+	"repo_url": "https://github.com/SamuelQZQ/svelte-tree-view-component",
+	"authors": ["samuelqzq"],
+	"homepage": "https://github.com/SamuelQZQ/svelte-tree-view-component#readme",
+	"downloads": 32,
+	"dependents": 0,
+	"updated": "2022-04-28T15:35:33.719Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 6,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

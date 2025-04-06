@@ -1,16 +1,17 @@
 {
-  "name": "@htmlbricks/hb-sidenav-link",
-  "description": "Create sidenav link web component for Svelte.",
-  "repo_url": "",
-  "authors": [
-    "dariocaruso"
-  ],
-  "downloads": 465,
-  "dependents": 5,
-  "updated": "2025-03-24T18:07:20.385Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@htmlbricks/hb-sidenav-link",
+	"description": "Create sidenav link web component for Svelte.",
+	"repo_url": "",
+	"authors": ["dariocaruso"],
+	"downloads": 465,
+	"dependents": 5,
+	"updated": "2025-03-24T18:07:20.385Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

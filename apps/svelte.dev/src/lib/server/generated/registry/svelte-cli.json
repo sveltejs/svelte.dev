@@ -1,18 +1,19 @@
 {
-  "name": "svelte-cli",
-  "description": "Compile Svelte components from command line.",
-  "repo_url": "https://github.com/sveltejs/svelte-cli",
-  "authors": [
-    "rich_harris"
-  ],
-  "homepage": "https://github.com/sveltejs/svelte-cli#readme",
-  "downloads": 305,
-  "dependents": 2,
-  "updated": "2018-04-21T17:01:51.671Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 107
+	"name": "svelte-cli",
+	"description": "Compile Svelte components from command line.",
+	"repo_url": "https://github.com/sveltejs/svelte-cli",
+	"authors": ["rich_harris"],
+	"homepage": "https://github.com/sveltejs/svelte-cli#readme",
+	"downloads": 305,
+	"dependents": 2,
+	"updated": "2018-04-21T17:01:51.671Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 107,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	}
 }

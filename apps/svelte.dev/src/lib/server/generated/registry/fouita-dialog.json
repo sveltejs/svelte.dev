@@ -1,18 +1,19 @@
 {
-  "name": "@fouita/dialog",
-  "description": "Build dialog components with Svelte and TailwindCSS.",
-  "repo_url": "https://github.com/fouita/svelte-tw-dialog",
-  "authors": [
-    "fouita"
-  ],
-  "homepage": "https://github.com/fouita/svelte-tw-dialog#readme",
-  "downloads": 11,
-  "dependents": 0,
-  "updated": "2020-09-19T13:58:55.351Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 3
+	"name": "@fouita/dialog",
+	"description": "Build dialog components with Svelte and TailwindCSS.",
+	"repo_url": "https://github.com/fouita/svelte-tw-dialog",
+	"authors": ["fouita"],
+	"homepage": "https://github.com/fouita/svelte-tw-dialog#readme",
+	"downloads": 11,
+	"dependents": 0,
+	"updated": "2020-09-19T13:58:55.351Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 3,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

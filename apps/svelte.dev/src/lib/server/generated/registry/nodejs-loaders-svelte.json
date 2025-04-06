@@ -1,19 +1,19 @@
 {
-  "name": "@nodejs-loaders/svelte",
-  "description": "Enables importing Svelte files in Node.js environments.",
-  "repo_url": "https://github.com/nodejs-loaders/nodejs-loaders",
-  "authors": [
-    "jakobjingleheimer",
-    "augustinmauroy"
-  ],
-  "homepage": "https://github.com/nodejs-loaders/nodejs-loaders#readme",
-  "downloads": 3,
-  "dependents": 0,
-  "updated": "2025-02-26T13:27:15.563Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 35
+	"name": "@nodejs-loaders/svelte",
+	"description": "Enables importing Svelte files in Node.js environments.",
+	"repo_url": "https://github.com/nodejs-loaders/nodejs-loaders",
+	"authors": ["jakobjingleheimer", "augustinmauroy"],
+	"homepage": "https://github.com/nodejs-loaders/nodejs-loaders#readme",
+	"downloads": 3,
+	"dependents": 0,
+	"updated": "2025-02-26T13:27:15.563Z",
+	"tags": ["tooling"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 35,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

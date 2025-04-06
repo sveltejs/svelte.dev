@@ -1,18 +1,19 @@
 {
-  "name": "svelte-formly",
-  "description": "Generate dynamic, reactive forms for Svelte applications.",
-  "repo_url": "https://github.com/dyaliCode/svelte-formly",
-  "authors": [
-    "marocdevelop"
-  ],
-  "homepage": "https://github.com/dyaliCode/svelte-formly#readme",
-  "downloads": 252,
-  "dependents": 1,
-  "updated": "2022-07-24T00:42:19.533Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 255
+	"name": "svelte-formly",
+	"description": "Generate dynamic, reactive forms for Svelte applications.",
+	"repo_url": "https://github.com/dyaliCode/svelte-formly",
+	"authors": ["marocdevelop"],
+	"homepage": "https://github.com/dyaliCode/svelte-formly#readme",
+	"downloads": 252,
+	"dependents": 1,
+	"updated": "2022-07-24T00:42:19.533Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 255,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

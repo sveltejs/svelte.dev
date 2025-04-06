@@ -1,18 +1,19 @@
 {
-  "name": "sveltekit-adapter-dotnetcore",
-  "description": "Deploy SvelteKit apps with a standalone .NET Core server.",
-  "repo_url": "https://github.com/samlam/sveltekit-adapter-dotnetcore",
-  "authors": [
-    "samlam"
-  ],
-  "homepage": "https://github.com/samlam/sveltekit-adapter-dotnetcore#readme",
-  "downloads": 0,
-  "dependents": 0,
-  "updated": "2023-06-01T00:22:28.234Z",
-  "tags": [
-    "adapter"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 18
+	"name": "sveltekit-adapter-dotnetcore",
+	"description": "Deploy SvelteKit apps with a standalone .NET Core server.",
+	"repo_url": "https://github.com/samlam/sveltekit-adapter-dotnetcore",
+	"authors": ["samlam"],
+	"homepage": "https://github.com/samlam/sveltekit-adapter-dotnetcore#readme",
+	"downloads": 0,
+	"dependents": 0,
+	"updated": "2023-06-01T00:22:28.234Z",
+	"tags": ["adapter"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 18,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	}
 }

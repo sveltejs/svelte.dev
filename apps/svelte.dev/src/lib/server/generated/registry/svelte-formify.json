@@ -1,18 +1,19 @@
 {
-  "name": "svelte-formify",
-  "description": "Manage, validate forms using decorators in Svelte.",
-  "repo_url": "https://github.com/nodify-at/svelte-formify",
-  "authors": [
-    "nodify_at"
-  ],
-  "homepage": "https://github.com/nodify-at/svelte-formify#readme",
-  "downloads": 14,
-  "dependents": 0,
-  "updated": "2022-04-10T22:08:32.153Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 11
+	"name": "svelte-formify",
+	"description": "Manage, validate forms using decorators in Svelte.",
+	"repo_url": "https://github.com/nodify-at/svelte-formify",
+	"authors": ["nodify_at"],
+	"homepage": "https://github.com/nodify-at/svelte-formify#readme",
+	"downloads": 14,
+	"dependents": 0,
+	"updated": "2022-04-10T22:08:32.153Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 11,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

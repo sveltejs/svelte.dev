@@ -1,18 +1,19 @@
 {
-  "name": "lc-svelte-floating-ui",
-  "description": "Create floating UI elements with Svelte actions.",
-  "repo_url": "https://github.com/lecong/svelte-floating-ui",
-  "authors": [
-    "lecongit"
-  ],
-  "homepage": "https://github.com/lecong/svelte-floating-ui#readme",
-  "downloads": 1,
-  "dependents": 0,
-  "updated": "2024-03-09T05:30:26.635Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "lc-svelte-floating-ui",
+	"description": "Create floating UI elements with Svelte actions.",
+	"repo_url": "https://github.com/lecong/svelte-floating-ui",
+	"authors": ["lecongit"],
+	"homepage": "https://github.com/lecong/svelte-floating-ui#readme",
+	"downloads": 1,
+	"dependents": 0,
+	"updated": "2024-03-09T05:30:26.635Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

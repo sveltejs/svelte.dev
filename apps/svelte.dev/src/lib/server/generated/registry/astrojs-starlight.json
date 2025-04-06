@@ -1,20 +1,19 @@
 {
-  "name": "@astrojs/starlight",
-  "description": "Build documentation websites with Astro, built with Starlight.",
-  "repo_url": "https://github.com/withastro/starlight",
-  "authors": [
-    "natemoo-re",
-    "fredkschott",
-    "matthewp"
-  ],
-  "homepage": "https://starlight.astro.build",
-  "downloads": 56391,
-  "dependents": 27,
-  "updated": "2025-03-26T14:05:01.234Z",
-  "tags": [
-    "content"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 6224
+	"name": "@astrojs/starlight",
+	"description": "Build documentation websites with Astro, built with Starlight.",
+	"repo_url": "https://github.com/withastro/starlight",
+	"authors": ["natemoo-re", "fredkschott", "matthewp"],
+	"homepage": "https://starlight.astro.build",
+	"downloads": 56391,
+	"dependents": 27,
+	"updated": "2025-03-26T14:05:01.234Z",
+	"tags": ["content"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 6224,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	}
 }

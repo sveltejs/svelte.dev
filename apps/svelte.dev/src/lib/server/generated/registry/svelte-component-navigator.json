@@ -1,17 +1,18 @@
 {
-  "name": "svelte-component-navigator",
-  "description": "Simple component router for Svelte 3, useful for embedded apps.",
-  "repo_url": "https://github.com/russellraimundo/svelte-abstract-router",
-  "authors": [
-    "russellraimundo"
-  ],
-  "homepage": "https://github.com/russellraimundo/svelte-abstract-router#readme",
-  "downloads": 31,
-  "dependents": 0,
-  "updated": "2021-09-11T03:13:28.331Z",
-  "tags": [
-    "router"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-component-navigator",
+	"description": "Simple component router for Svelte 3, useful for embedded apps.",
+	"repo_url": "https://github.com/russellraimundo/svelte-abstract-router",
+	"authors": ["russellraimundo"],
+	"homepage": "https://github.com/russellraimundo/svelte-abstract-router#readme",
+	"downloads": 31,
+	"dependents": 0,
+	"updated": "2021-09-11T03:13:28.331Z",
+	"tags": ["router"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

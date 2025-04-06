@@ -1,18 +1,19 @@
 {
-  "name": "svelte-debug-console",
-  "description": "Mirrors debug statements to Svelte applications.",
-  "repo_url": "https://github.com/basaran/svelte-debug-console",
-  "authors": [
-    "anakha"
-  ],
-  "homepage": "https://github.com/basaran/svelte-debug-console#readme",
-  "downloads": 7,
-  "dependents": 0,
-  "updated": "2021-10-22T03:58:50.472Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 10
+	"name": "svelte-debug-console",
+	"description": "Mirrors debug statements to Svelte applications.",
+	"repo_url": "https://github.com/basaran/svelte-debug-console",
+	"authors": ["anakha"],
+	"homepage": "https://github.com/basaran/svelte-debug-console#readme",
+	"downloads": 7,
+	"dependents": 0,
+	"updated": "2021-10-22T03:58:50.472Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 10,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

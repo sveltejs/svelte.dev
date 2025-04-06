@@ -1,21 +1,19 @@
 {
-  "name": "@sveltejs/adapter-vercel",
-  "description": "Deploy SvelteKit apps to Vercel.",
-  "repo_url": "https://github.com/sveltejs/kit",
-  "authors": [
-    "rich_harris",
-    "svelte-admin",
-    "conduitry",
-    "dominik_g"
-  ],
-  "homepage": "https://svelte.dev",
-  "downloads": 67535,
-  "dependents": 13,
-  "updated": "2025-02-21T00:04:48.230Z",
-  "tags": [
-    "adapter"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 19167
+	"name": "@sveltejs/adapter-vercel",
+	"description": "Deploy SvelteKit apps to Vercel.",
+	"repo_url": "https://github.com/sveltejs/kit",
+	"authors": ["rich_harris", "svelte-admin", "conduitry", "dominik_g"],
+	"homepage": "https://svelte.dev",
+	"downloads": 67535,
+	"dependents": 13,
+	"updated": "2025-02-21T00:04:48.230Z",
+	"tags": ["adapter"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 19168,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	}
 }

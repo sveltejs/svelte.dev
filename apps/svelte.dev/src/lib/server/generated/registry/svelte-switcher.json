@@ -1,16 +1,17 @@
 {
-  "name": "svelte-switcher",
-  "description": "Create accessible, customizable toggle components for Svelte apps.",
-  "repo_url": "",
-  "authors": [
-    "rohitpotato"
-  ],
-  "downloads": 87,
-  "dependents": 0,
-  "updated": "2022-12-09T09:05:56.490Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-switcher",
+	"description": "Create accessible, customizable toggle components for Svelte apps.",
+	"repo_url": "",
+	"authors": ["rohitpotato"],
+	"downloads": 87,
+	"dependents": 0,
+	"updated": "2022-12-09T09:05:56.490Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

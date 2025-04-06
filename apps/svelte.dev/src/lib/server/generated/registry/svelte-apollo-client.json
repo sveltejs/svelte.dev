@@ -1,18 +1,19 @@
 {
-  "name": "svelte-apollo-client",
-  "description": "Integrates Apollo GraphQL client with Svelte applications.",
-  "repo_url": "https://github.com/unlocomqx/svelte-apollo-client",
-  "authors": [
-    "unlocomqx"
-  ],
-  "homepage": "https://github.com/unlocomqx/svelte-apollo-client#readme",
-  "downloads": 20,
-  "dependents": 0,
-  "updated": "2021-07-17T12:18:58.563Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 12
+	"name": "svelte-apollo-client",
+	"description": "Integrates Apollo GraphQL client with Svelte applications.",
+	"repo_url": "https://github.com/unlocomqx/svelte-apollo-client",
+	"authors": ["unlocomqx"],
+	"homepage": "https://github.com/unlocomqx/svelte-apollo-client#readme",
+	"downloads": 20,
+	"dependents": 0,
+	"updated": "2021-07-17T12:18:58.563Z",
+	"tags": ["integration"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 12,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

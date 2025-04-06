@@ -1,18 +1,19 @@
 {
-  "name": "svelte-mapbox",
-  "description": "Integrate Mapbox GL JS maps into Svelte applications.",
-  "repo_url": "https://github.com/jack-weilage/svelte-mapbox",
-  "authors": [
-    "jack-weilage"
-  ],
-  "homepage": "https://github.com/jack-weilage/svelte-mapbox#readme",
-  "downloads": 24,
-  "dependents": 0,
-  "updated": "2024-02-09T18:13:00.635Z",
-  "tags": [
-    "media"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 9
+	"name": "svelte-mapbox",
+	"description": "Integrate Mapbox GL JS maps into Svelte applications.",
+	"repo_url": "https://github.com/jack-weilage/svelte-mapbox",
+	"authors": ["jack-weilage"],
+	"homepage": "https://github.com/jack-weilage/svelte-mapbox#readme",
+	"downloads": 24,
+	"dependents": 0,
+	"updated": "2024-02-09T18:13:00.635Z",
+	"tags": ["media"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 9,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

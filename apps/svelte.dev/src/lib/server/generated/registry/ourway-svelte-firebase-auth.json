@@ -1,19 +1,19 @@
 {
-  "name": "@ourway/svelte-firebase-auth",
-  "description": "Integrate Firebase authentication into Svelte projects.",
-  "repo_url": "https://github.com/AndrewBlackledge/svelte-firebase-auth",
-  "authors": [
-    "implode963",
-    "anicolao"
-  ],
-  "homepage": "https://github.com/AndrewBlackledge/svelte-firebase-auth#readme",
-  "downloads": 4,
-  "dependents": 0,
-  "updated": "2024-04-03T19:41:28.818Z",
-  "tags": [
-    "auth"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@ourway/svelte-firebase-auth",
+	"description": "Integrate Firebase authentication into Svelte projects.",
+	"repo_url": "https://github.com/AndrewBlackledge/svelte-firebase-auth",
+	"authors": ["implode963", "anicolao"],
+	"homepage": "https://github.com/AndrewBlackledge/svelte-firebase-auth#readme",
+	"downloads": 4,
+	"dependents": 0,
+	"updated": "2024-04-03T19:41:28.818Z",
+	"tags": ["auth"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

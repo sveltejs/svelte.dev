@@ -1,18 +1,19 @@
 {
-  "name": "svelte-use-mousetrap",
-  "description": "Integrates Mousetrap library for handling keyboard shortcuts in Svelte.",
-  "repo_url": "https://github.com/wareset/svelte-use-mousetrap",
-  "authors": [
-    "nk12"
-  ],
-  "homepage": "https://github.com/wareset/svelte-use-mousetrap#readme",
-  "downloads": 189,
-  "dependents": 0,
-  "updated": "2021-05-27T22:14:09.252Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 2
+	"name": "svelte-use-mousetrap",
+	"description": "Integrates Mousetrap library for handling keyboard shortcuts in Svelte.",
+	"repo_url": "https://github.com/wareset/svelte-use-mousetrap",
+	"authors": ["nk12"],
+	"homepage": "https://github.com/wareset/svelte-use-mousetrap#readme",
+	"downloads": 189,
+	"dependents": 0,
+	"updated": "2021-05-27T22:14:09.252Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,19 +1,19 @@
 {
-  "name": "jirolu-svelte",
-  "description": "Create reusable Svelte components for text, textarea, and select inputs.",
-  "repo_url": "https://github.com/arief-fajri/jirolu",
-  "authors": [
-    "arief_fajri"
-  ],
-  "homepage": "https://github.com/arief-fajri/jirolu#readme",
-  "downloads": 16,
-  "dependents": 0,
-  "updated": "2023-11-13T20:50:41.268Z",
-  "tags": [
-    "ui",
-    "design-system"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "jirolu-svelte",
+	"description": "Create reusable Svelte components for text, textarea, and select inputs.",
+	"repo_url": "https://github.com/arief-fajri/jirolu",
+	"authors": ["arief_fajri"],
+	"homepage": "https://github.com/arief-fajri/jirolu#readme",
+	"downloads": 16,
+	"dependents": 0,
+	"updated": "2023-11-13T20:50:41.268Z",
+	"tags": ["ui", "design-system"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

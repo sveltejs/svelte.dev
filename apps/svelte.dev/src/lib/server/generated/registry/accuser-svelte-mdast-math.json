@@ -1,18 +1,19 @@
 {
-  "name": "@accuser/svelte-mdast-math",
-  "description": "Transform Markdown AST to Svelte components using Katex for math.",
-  "repo_url": "https://github.com/accuser/svelte-mdast-math",
-  "authors": [
-    "accuser"
-  ],
-  "homepage": "https://github.com/accuser/svelte-mdast-math",
-  "downloads": 15,
-  "dependents": 0,
-  "updated": "2024-10-06T13:06:31.603Z",
-  "tags": [
-    "content"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 0
+	"name": "@accuser/svelte-mdast-math",
+	"description": "Transform Markdown AST to Svelte components using Katex for math.",
+	"repo_url": "https://github.com/accuser/svelte-mdast-math",
+	"authors": ["accuser"],
+	"homepage": "https://github.com/accuser/svelte-mdast-math",
+	"downloads": 15,
+	"dependents": 0,
+	"updated": "2024-10-06T13:06:31.603Z",
+	"tags": ["content"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "@edge-csrf/sveltekit",
-  "description": "Integrate Edge-CSRF protection into SvelteKit applications.",
-  "repo_url": "https://github.com/kubetail-org/edge-csrf",
-  "authors": [
-    "amorey"
-  ],
-  "homepage": "https://github.com/kubetail-org/edge-csrf#readme",
-  "downloads": 1,
-  "dependents": 0,
-  "updated": "2024-11-21T11:28:53.893Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 167
+	"name": "@edge-csrf/sveltekit",
+	"description": "Integrate Edge-CSRF protection into SvelteKit applications.",
+	"repo_url": "https://github.com/kubetail-org/edge-csrf",
+	"authors": ["amorey"],
+	"homepage": "https://github.com/kubetail-org/edge-csrf#readme",
+	"downloads": 1,
+	"dependents": 0,
+	"updated": "2024-11-21T11:28:53.893Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 167,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	}
 }

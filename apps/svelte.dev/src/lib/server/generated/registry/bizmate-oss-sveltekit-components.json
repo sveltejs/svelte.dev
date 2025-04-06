@@ -1,16 +1,17 @@
 {
-  "name": "@bizmate-oss/sveltekit-components",
-  "description": "SvelteKit components for tables, selects, and more.",
-  "repo_url": "",
-  "authors": [
-    "webfrank"
-  ],
-  "downloads": 6,
-  "dependents": 0,
-  "updated": "2025-01-13T14:39:37.859Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@bizmate-oss/sveltekit-components",
+	"description": "SvelteKit components for tables, selects, and more.",
+	"repo_url": "",
+	"authors": ["webfrank"],
+	"downloads": 6,
+	"dependents": 0,
+	"updated": "2025-01-13T14:39:37.859Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

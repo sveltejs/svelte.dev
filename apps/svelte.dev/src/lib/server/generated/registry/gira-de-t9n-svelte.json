@@ -1,20 +1,19 @@
 {
-  "name": "@gira-de/t9n-svelte",
-  "description": "Translate Svelte applications using t9n library.",
-  "repo_url": "https://github.com/gira-de/t9n",
-  "authors": [
-    "zeekrey",
-    "bztes",
-    "daniel.albuschat"
-  ],
-  "homepage": "https://github.com/gira-de/t9n#readme",
-  "downloads": 52,
-  "dependents": 0,
-  "updated": "2024-08-12T07:23:26.204Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 5
+	"name": "@gira-de/t9n-svelte",
+	"description": "Translate Svelte applications using t9n library.",
+	"repo_url": "https://github.com/gira-de/t9n",
+	"authors": ["zeekrey", "bztes", "daniel.albuschat"],
+	"homepage": "https://github.com/gira-de/t9n#readme",
+	"downloads": 52,
+	"dependents": 0,
+	"updated": "2024-08-12T07:23:26.204Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 5,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

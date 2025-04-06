@@ -1,18 +1,19 @@
 {
-  "name": "svelecte",
-  "description": "Create flexible autocomplete/select components in Svelte.",
-  "repo_url": "https://github.com/mskocik/svelecte",
-  "authors": [
-    "mskocik"
-  ],
-  "homepage": "https://svelecte.vercel.app/",
-  "downloads": 4685,
-  "dependents": 11,
-  "updated": "2025-03-07T14:56:00.569Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 517
+	"name": "svelecte",
+	"description": "Create flexible autocomplete/select components in Svelte.",
+	"repo_url": "https://github.com/mskocik/svelecte",
+	"authors": ["mskocik"],
+	"homepage": "https://svelecte.vercel.app/",
+	"downloads": 4685,
+	"dependents": 11,
+	"updated": "2025-03-07T14:56:00.569Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 517,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

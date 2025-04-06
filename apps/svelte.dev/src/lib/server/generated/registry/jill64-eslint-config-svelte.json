@@ -1,18 +1,19 @@
 {
-  "name": "@jill64/eslint-config-svelte",
-  "description": "Pre-defined ESLint flat config for Svelte projects.",
-  "repo_url": "https://github.com/jill64/eslint-config-svelte",
-  "authors": [
-    "jill64"
-  ],
-  "homepage": "https://github.com/jill64/eslint-config-svelte#readme",
-  "downloads": 16168,
-  "dependents": 0,
-  "updated": "2025-03-20T02:48:08.631Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 2
+	"name": "@jill64/eslint-config-svelte",
+	"description": "Pre-defined ESLint flat config for Svelte projects.",
+	"repo_url": "https://github.com/jill64/eslint-config-svelte",
+	"authors": ["jill64"],
+	"homepage": "https://github.com/jill64/eslint-config-svelte#readme",
+	"downloads": 16168,
+	"dependents": 0,
+	"updated": "2025-03-20T02:48:08.631Z",
+	"tags": ["tooling"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

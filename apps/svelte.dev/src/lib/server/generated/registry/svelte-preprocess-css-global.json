@@ -1,17 +1,19 @@
 {
-  "name": "svelte-preprocess-css-global",
-  "description": "Preprocess Svelte styles, creating global CSS rules.",
-  "repo_url": "https://github.com/aheissenberger/svelte-preprocess-css-global",
-  "authors": [
-    "aheissenberger"
-  ],
-  "downloads": 7,
-  "dependents": 0,
-  "updated": "2019-05-12T20:39:25.326Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 2
+	"name": "svelte-preprocess-css-global",
+	"description": "Preprocess Svelte styles, creating global CSS rules.",
+	"repo_url": "https://github.com/aheissenberger/svelte-preprocess-css-global",
+	"authors": ["aheissenberger"],
+	"downloads": 7,
+	"dependents": 0,
+	"updated": "2019-05-12T20:39:25.326Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 2,
+	"homepage": null,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

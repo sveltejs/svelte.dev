@@ -1,18 +1,19 @@
 {
-  "name": "svate",
-  "description": "Offer state machines for Svelte applications.",
-  "repo_url": "https://github.com/AlexxNB/svate",
-  "authors": [
-    "alexxnb"
-  ],
-  "homepage": "https://github.com/AlexxNB/svate#readme",
-  "downloads": 12,
-  "dependents": 0,
-  "updated": "2021-09-29T04:48:55.969Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 14
+	"name": "svate",
+	"description": "Offer state machines for Svelte applications.",
+	"repo_url": "https://github.com/AlexxNB/svate",
+	"authors": ["alexxnb"],
+	"homepage": "https://github.com/AlexxNB/svate#readme",
+	"downloads": 12,
+	"dependents": 0,
+	"updated": "2021-09-29T04:48:55.969Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 14,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "@appist/webpack-preset-appy",
-  "description": "Webpack preset for the appy web framework, with HMR and Svelte support.",
-  "repo_url": "https://github.com/appist/webpack-preset-appy",
-  "authors": [
-    "cayter"
-  ],
-  "homepage": "https://github.com/appist/webpack-preset-appy#readme",
-  "downloads": 24,
-  "dependents": 0,
-  "updated": "2020-07-13T11:56:45.920Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "@appist/webpack-preset-appy",
+	"description": "Webpack preset for the appy web framework, with HMR and Svelte support.",
+	"repo_url": "https://github.com/appist/webpack-preset-appy",
+	"authors": ["cayter"],
+	"homepage": "https://github.com/appist/webpack-preset-appy#readme",
+	"downloads": 24,
+	"dependents": 0,
+	"updated": "2020-07-13T11:56:45.920Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

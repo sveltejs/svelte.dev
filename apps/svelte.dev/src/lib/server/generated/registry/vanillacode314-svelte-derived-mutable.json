@@ -1,18 +1,19 @@
 {
-  "name": "@vanillacode314/svelte-derived-mutable",
-  "description": "Create mutable derived runes in Svelte 5.",
-  "repo_url": "https://github.com/vanillacode314/svelte-derived-mutable",
-  "authors": [
-    "raqueebuddinaziz"
-  ],
-  "homepage": "https://github.com/vanillacode314/svelte-derived-mutable#readme",
-  "downloads": 10,
-  "dependents": 0,
-  "updated": "2024-09-22T23:37:04.691Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": true,
-  "runes": true,
-  "github_stars": 0
+	"name": "@vanillacode314/svelte-derived-mutable",
+	"description": "Create mutable derived runes in Svelte 5.",
+	"repo_url": "https://github.com/vanillacode314/svelte-derived-mutable",
+	"authors": ["raqueebuddinaziz"],
+	"homepage": "https://github.com/vanillacode314/svelte-derived-mutable#readme",
+	"downloads": 10,
+	"dependents": 0,
+	"updated": "2024-09-22T23:37:04.691Z",
+	"tags": ["miscellaneous"],
+	"svelte5": true,
+	"runes": true,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

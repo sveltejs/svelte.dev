@@ -1,18 +1,19 @@
 {
-  "name": "svem",
-  "description": "Preprocess Svelte code within Markdown files.",
-  "repo_url": "https://github.com/beerush-id/svem",
-  "authors": [
-    "mahdaen"
-  ],
-  "homepage": "https://github.com/beerush-id/svem#readme",
-  "downloads": 105,
-  "dependents": 0,
-  "updated": "2025-03-16T01:58:53.353Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 11
+	"name": "svem",
+	"description": "Preprocess Svelte code within Markdown files.",
+	"repo_url": "https://github.com/beerush-id/svem",
+	"authors": ["mahdaen"],
+	"homepage": "https://github.com/beerush-id/svem#readme",
+	"downloads": 105,
+	"dependents": 0,
+	"updated": "2025-03-16T01:58:53.353Z",
+	"tags": ["tooling"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 11,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

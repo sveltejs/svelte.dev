@@ -1,18 +1,19 @@
 {
-  "name": "@svelte-parts/form",
-  "description": "Create Svelte forms using JSON field definitions.",
-  "repo_url": "https://github.com/idris-maps/svelte-parts",
-  "authors": [
-    "idris-maps"
-  ],
-  "homepage": "https://github.com/idris-maps/svelte-parts#readme",
-  "downloads": 35,
-  "dependents": 1,
-  "updated": "2022-04-04T21:05:09.681Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 50
+	"name": "@svelte-parts/form",
+	"description": "Create Svelte forms using JSON field definitions.",
+	"repo_url": "https://github.com/idris-maps/svelte-parts",
+	"authors": ["idris-maps"],
+	"homepage": "https://github.com/idris-maps/svelte-parts#readme",
+	"downloads": 35,
+	"dependents": 1,
+	"updated": "2022-04-04T21:05:09.681Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 50,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

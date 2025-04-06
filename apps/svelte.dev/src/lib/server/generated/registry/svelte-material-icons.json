@@ -1,18 +1,19 @@
 {
-  "name": "svelte-material-icons",
-  "description": "Display Material Design Icons in Svelte applications.",
-  "repo_url": "https://github.com/ramiroaisen/svelte-material-icons",
-  "authors": [
-    "ramiroaisen"
-  ],
-  "homepage": "https://github.com/ramiroaisen/svelte-material-icons#readme",
-  "downloads": 2031,
-  "dependents": 4,
-  "updated": "2023-07-10T17:34:10.050Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 67
+	"name": "svelte-material-icons",
+	"description": "Display Material Design Icons in Svelte applications.",
+	"repo_url": "https://github.com/ramiroaisen/svelte-material-icons",
+	"authors": ["ramiroaisen"],
+	"homepage": "https://github.com/ramiroaisen/svelte-material-icons#readme",
+	"downloads": 2031,
+	"dependents": 4,
+	"updated": "2023-07-10T17:34:10.050Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 67,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": false
+	}
 }

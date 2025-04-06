@@ -1,19 +1,19 @@
 {
-  "name": "@crownframework/svelte-error-boundary",
-  "description": "Provides a simple error boundary component for Svelte.",
-  "repo_url": "https://github.com/crownframework/svelte-error-boundary",
-  "authors": [
-    "mrlundis",
-    "alfredringstad"
-  ],
-  "homepage": "https://github.com/crownframework/svelte-error-boundary#readme",
-  "downloads": 1498,
-  "dependents": 3,
-  "updated": "2020-11-17T12:33:31.915Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 74
+	"name": "@crownframework/svelte-error-boundary",
+	"description": "Provides a simple error boundary component for Svelte.",
+	"repo_url": "https://github.com/crownframework/svelte-error-boundary",
+	"authors": ["mrlundis", "alfredringstad"],
+	"homepage": "https://github.com/crownframework/svelte-error-boundary#readme",
+	"downloads": 1498,
+	"dependents": 3,
+	"updated": "2020-11-17T12:33:31.915Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 74,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,21 +1,19 @@
 {
-  "name": "@sveltejs/vite-plugin-svelte",
-  "description": "Integrate Svelte components into Vite projects.",
-  "repo_url": "https://github.com/sveltejs/vite-plugin-svelte",
-  "authors": [
-    "rich_harris",
-    "svelte-admin",
-    "conduitry",
-    "dominik_g"
-  ],
-  "homepage": "https://github.com/sveltejs/vite-plugin-svelte#readme",
-  "downloads": 645757,
-  "dependents": 141,
-  "updated": "2024-12-18T10:03:00.518Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 905
+	"name": "@sveltejs/vite-plugin-svelte",
+	"description": "Integrate Svelte components into Vite projects.",
+	"repo_url": "https://github.com/sveltejs/vite-plugin-svelte",
+	"authors": ["rich_harris", "svelte-admin", "conduitry", "dominik_g"],
+	"homepage": "https://github.com/sveltejs/vite-plugin-svelte#readme",
+	"downloads": 645757,
+	"dependents": 141,
+	"updated": "2024-12-18T10:03:00.518Z",
+	"tags": ["tooling"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 905,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

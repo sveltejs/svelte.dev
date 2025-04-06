@@ -1,18 +1,19 @@
 {
-  "name": "svelte-router-spa",
-  "description": "Implement routing in Svelte single-page applications.",
-  "repo_url": "https://github.com/jorgegorka/svelte-router",
-  "authors": [
-    "jorgegorka"
-  ],
-  "homepage": "https://github.com/jorgegorka/svelte-router/blob/master/README.md",
-  "downloads": 624,
-  "dependents": 0,
-  "updated": "2023-09-14T10:24:36.330Z",
-  "tags": [
-    "router"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 532
+	"name": "svelte-router-spa",
+	"description": "Implement routing in Svelte single-page applications.",
+	"repo_url": "https://github.com/jorgegorka/svelte-router",
+	"authors": ["jorgegorka"],
+	"homepage": "https://github.com/jorgegorka/svelte-router/blob/master/README.md",
+	"downloads": 624,
+	"dependents": 0,
+	"updated": "2023-09-14T10:24:36.330Z",
+	"tags": ["router"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 532,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

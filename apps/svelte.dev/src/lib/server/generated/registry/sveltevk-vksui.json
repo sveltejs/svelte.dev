@@ -1,18 +1,19 @@
 {
-  "name": "@sveltevk/vksui",
-  "description": "Create adaptive Svelte components for VK apps.",
-  "repo_url": "https://github.com/sveltevk/VKSUI",
-  "authors": [
-    "severecloud"
-  ],
-  "homepage": "https://sveltevk.github.io/VKSUI",
-  "downloads": 32,
-  "dependents": 0,
-  "updated": "2022-05-04T21:36:55.991Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 19
+	"name": "@sveltevk/vksui",
+	"description": "Create adaptive Svelte components for VK apps.",
+	"repo_url": "https://github.com/sveltevk/VKSUI",
+	"authors": ["severecloud"],
+	"homepage": "https://sveltevk.github.io/VKSUI",
+	"downloads": 32,
+	"dependents": 0,
+	"updated": "2022-05-04T21:36:55.991Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 19,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

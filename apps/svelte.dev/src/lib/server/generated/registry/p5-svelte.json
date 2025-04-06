@@ -1,18 +1,19 @@
 {
-  "name": "p5-svelte",
-  "description": "Use p5 sketches in Svelte apps.",
-  "repo_url": "https://github.com/tonyketcham/p5-svelte",
-  "authors": [
-    "tonyketcham"
-  ],
-  "homepage": "https://p5-svelte.netlify.app/",
-  "downloads": 153,
-  "dependents": 2,
-  "updated": "2022-04-03T01:45:26.342Z",
-  "tags": [
-    "media"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 179
+	"name": "p5-svelte",
+	"description": "Use p5 sketches in Svelte apps.",
+	"repo_url": "https://github.com/tonyketcham/p5-svelte",
+	"authors": ["tonyketcham"],
+	"homepage": "https://p5-svelte.netlify.app/",
+	"downloads": 153,
+	"dependents": 2,
+	"updated": "2022-04-03T01:45:26.342Z",
+	"tags": ["media"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 179,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "vite-plugin-kit-routes",
-  "description": "Generate routes file for SvelteKit projects.",
-  "repo_url": "https://github.com/jycouet/kitql",
-  "authors": [
-    "jycouet"
-  ],
-  "homepage": "https://www.kitql.dev/",
-  "downloads": 3877,
-  "dependents": 2,
-  "updated": "2025-03-18T17:02:07.958Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 427
+	"name": "vite-plugin-kit-routes",
+	"description": "Generate routes file for SvelteKit projects.",
+	"repo_url": "https://github.com/jycouet/kitql",
+	"authors": ["jycouet"],
+	"homepage": "https://www.kitql.dev/",
+	"downloads": 3877,
+	"dependents": 2,
+	"updated": "2025-03-18T17:02:07.958Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 427,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,16 +1,17 @@
 {
-  "name": "svelte-comps",
-  "description": "Inspired by braid-design-system, build Svelte utility components.",
-  "repo_url": "",
-  "authors": [
-    "tienou"
-  ],
-  "downloads": 9,
-  "dependents": 0,
-  "updated": "2020-04-28T13:12:44.307Z",
-  "tags": [
-    "design-system"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-comps",
+	"description": "Inspired by braid-design-system, build Svelte utility components.",
+	"repo_url": "",
+	"authors": ["tienou"],
+	"downloads": 9,
+	"dependents": 0,
+	"updated": "2020-04-28T13:12:44.307Z",
+	"tags": ["design-system"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

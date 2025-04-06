@@ -1,18 +1,19 @@
 {
-  "name": "@tadashi/svelte-btn",
-  "description": "Create customizable button components for Svelte.",
-  "repo_url": "https://github.com/lagden/svelte-btn",
-  "authors": [
-    "lagden"
-  ],
-  "homepage": "https://github.com/lagden/svelte-btn#readme",
-  "downloads": 46,
-  "dependents": 0,
-  "updated": "2022-05-02T21:55:14.027Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "@tadashi/svelte-btn",
+	"description": "Create customizable button components for Svelte.",
+	"repo_url": "https://github.com/lagden/svelte-btn",
+	"authors": ["lagden"],
+	"homepage": "https://github.com/lagden/svelte-btn#readme",
+	"downloads": 46,
+	"dependents": 0,
+	"updated": "2022-05-02T21:55:14.027Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

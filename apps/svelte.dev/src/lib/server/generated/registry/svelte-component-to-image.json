@@ -1,18 +1,19 @@
 {
-  "name": "svelte-component-to-image",
-  "description": "Render .png images from Svelte components in SvelteKit.",
-  "repo_url": "https://github.com/StephenGunn/svelte-component-to-image",
-  "authors": [
-    "jovian_moon"
-  ],
-  "homepage": "https://github.com/StephenGunn/svelte-component-to-image",
-  "downloads": 147,
-  "dependents": 0,
-  "updated": "2024-11-09T17:17:00.413Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 48
+	"name": "svelte-component-to-image",
+	"description": "Render .png images from Svelte components in SvelteKit.",
+	"repo_url": "https://github.com/StephenGunn/svelte-component-to-image",
+	"authors": ["jovian_moon"],
+	"homepage": "https://github.com/StephenGunn/svelte-component-to-image",
+	"downloads": 147,
+	"dependents": 0,
+	"updated": "2024-11-09T17:17:00.413Z",
+	"tags": ["tooling"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 48,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

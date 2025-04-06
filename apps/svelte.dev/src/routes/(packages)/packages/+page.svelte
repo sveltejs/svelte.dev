@@ -11,7 +11,7 @@
 
 	const qps = reactive_query_params({
 		query: QueryParamSerde.string(),
-		svelte_5_only: QueryParamSerde.boolean(false),
+		svelte_versions: QueryParamSerde.array(['4', '5']),
 		hide_outdated: QueryParamSerde.boolean(false),
 		sort_by: QueryParamSerde.string<SortCriterion>('popularity')
 	});
@@ -60,7 +60,7 @@
 
 	$effect(() => {
 		qps.query;
-		qps.svelte_5_only;
+		qps.svelte_versions;
 		qps.hide_outdated;
 		qps.sort_by;
 
@@ -78,12 +78,14 @@
 			id,
 			payload: {
 				query: qps.query,
-				svelte_5_only: qps.svelte_5_only,
+				svelte_versions: $state.snapshot(qps.svelte_versions),
 				hide_outdated: qps.hide_outdated,
 				sort_by: qps.sort_by
 			}
 		});
 	});
+
+	$inspect(qps.svelte_versions);
 
 	$inspect(qps.query);
 
@@ -178,11 +180,23 @@
 
 				{#if qps.query}
 					<div class="sub">
-						<label>
-							Svelte 5 Only
+						<div>
+							Svelte versions:
+							<label>
+								<input type="checkbox" bind:group={qps.svelte_versions} value="3" />
+								3
+							</label>
 
-							<input type="checkbox" bind:checked={qps.svelte_5_only} />
-						</label>
+							<label>
+								<input type="checkbox" bind:group={qps.svelte_versions} value="4" />
+								4
+							</label>
+
+							<label>
+								<input type="checkbox" bind:group={qps.svelte_versions} value="5" />
+								5
+							</label>
+						</div>
 
 						<label>
 							Sort By:
@@ -191,6 +205,11 @@
 									<option value={criterion}>{criterion}</option>
 								{/each}
 							</select>
+						</label>
+
+						<label>
+							Hide outdated:
+							<input type="checkbox" bind:checked={qps.hide_outdated} />
 						</label>
 
 						<span style="flex: 1 1 auto"></span>
@@ -411,7 +430,7 @@
 
 		.sub {
 			display: flex;
-			gap: 1rem;
+			gap: 2rem;
 		}
 	}
 

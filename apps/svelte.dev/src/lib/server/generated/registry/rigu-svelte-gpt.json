@@ -1,17 +1,18 @@
 {
-  "name": "@rigu/svelte-gpt",
-  "description": "Render Google Ads using Google Publisher Tags in Svelte.",
-  "repo_url": "",
-  "authors": [
-    "rigu"
-  ],
-  "homepage": "https://github.com/rigu/svelte-gpt#readme",
-  "downloads": 6,
-  "dependents": 0,
-  "updated": "2024-01-03T23:52:24.738Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@rigu/svelte-gpt",
+	"description": "Render Google Ads using Google Publisher Tags in Svelte.",
+	"repo_url": "",
+	"authors": ["rigu"],
+	"homepage": "https://github.com/rigu/svelte-gpt#readme",
+	"downloads": 6,
+	"dependents": 0,
+	"updated": "2024-01-03T23:52:24.738Z",
+	"tags": ["integration"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

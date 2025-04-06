@@ -1,18 +1,19 @@
 {
-  "name": "svelte-form-zod",
-  "description": "Build forms with Zod validation for SvelteKit applications.",
-  "repo_url": "https://github.com/viniribeirodev/svelte-form-zod",
-  "authors": [
-    "viniciusdev"
-  ],
-  "homepage": "https://github.com/viniribeirodev/svelte-form-zod",
-  "downloads": 2,
-  "dependents": 0,
-  "updated": "2024-09-06T03:41:04.827Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelte-form-zod",
+	"description": "Build forms with Zod validation for SvelteKit applications.",
+	"repo_url": "https://github.com/viniribeirodev/svelte-form-zod",
+	"authors": ["viniciusdev"],
+	"homepage": "https://github.com/viniribeirodev/svelte-form-zod",
+	"downloads": 2,
+	"dependents": 0,
+	"updated": "2024-09-06T03:41:04.827Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

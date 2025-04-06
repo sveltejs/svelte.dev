@@ -1,18 +1,19 @@
 {
-  "name": "@sveltevietnam/ui",
-  "description": "Offers UI kit for Svelte Vietnam.",
-  "repo_url": "https://github.com/sveltevietnam/sveltevietnam.dev",
-  "authors": [
-    "vnphanquang"
-  ],
-  "homepage": "https://www.sveltevietnam.dev",
-  "downloads": 28,
-  "dependents": 0,
-  "updated": "2024-06-03T11:50:26.858Z",
-  "tags": [
-    "design-system"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 35
+	"name": "@sveltevietnam/ui",
+	"description": "Offers UI kit for Svelte Vietnam.",
+	"repo_url": "https://github.com/sveltevietnam/sveltevietnam.dev",
+	"authors": ["vnphanquang"],
+	"homepage": "https://www.sveltevietnam.dev",
+	"downloads": 28,
+	"dependents": 0,
+	"updated": "2024-06-03T11:50:26.858Z",
+	"tags": ["design-system"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 35,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

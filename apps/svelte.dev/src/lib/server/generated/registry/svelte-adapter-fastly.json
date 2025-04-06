@@ -1,18 +1,19 @@
 {
-  "name": "svelte-adapter-fastly",
-  "description": "Deploy SvelteKit apps to Fastly Compute@Edge.",
-  "repo_url": "https://github.com/bertybot/svelte-adapter-fastly",
-  "authors": [
-    "bertybot"
-  ],
-  "homepage": "https://github.com/bertybot/svelte-adapter-fastly#readme",
-  "downloads": 7,
-  "dependents": 0,
-  "updated": "2025-01-29T20:41:40.887Z",
-  "tags": [
-    "adapter"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 2
+	"name": "svelte-adapter-fastly",
+	"description": "Deploy SvelteKit apps to Fastly Compute@Edge.",
+	"repo_url": "https://github.com/bertybot/svelte-adapter-fastly",
+	"authors": ["bertybot"],
+	"homepage": "https://github.com/bertybot/svelte-adapter-fastly#readme",
+	"downloads": 7,
+	"dependents": 0,
+	"updated": "2025-01-29T20:41:40.887Z",
+	"tags": ["adapter"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	}
 }

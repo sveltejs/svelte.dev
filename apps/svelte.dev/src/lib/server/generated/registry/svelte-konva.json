@@ -1,19 +1,19 @@
 {
-  "name": "svelte-konva",
-  "description": "Create reactive canvas rendering with Svelte and Konva.",
-  "repo_url": "https://github.com/konvajs/svelte-konva",
-  "authors": [
-    "lavrton",
-    "teykey1"
-  ],
-  "homepage": "https://konvajs.org/docs/svelte",
-  "downloads": 1249,
-  "dependents": 2,
-  "updated": "2023-08-24T21:45:43.140Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 71
+	"name": "svelte-konva",
+	"description": "Create reactive canvas rendering with Svelte and Konva.",
+	"repo_url": "https://github.com/konvajs/svelte-konva",
+	"authors": ["lavrton", "teykey1"],
+	"homepage": "https://konvajs.org/docs/svelte",
+	"downloads": 1249,
+	"dependents": 2,
+	"updated": "2023-08-24T21:45:43.140Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 71,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": false
+	}
 }

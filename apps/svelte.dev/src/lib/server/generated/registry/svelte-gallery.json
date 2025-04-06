@@ -1,18 +1,19 @@
 {
-  "name": "svelte-gallery",
-  "description": "Create masonry-style photo galleries in Svelte.",
-  "repo_url": "https://github.com/peppercornstudio/svelte-gallery",
-  "authors": [
-    "madeleineostoja"
-  ],
-  "homepage": "https://github.com/peppercornstudio/svelte-gallery#readme",
-  "downloads": 26,
-  "dependents": 0,
-  "updated": "2022-01-22T09:02:53.968Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 27
+	"name": "svelte-gallery",
+	"description": "Create masonry-style photo galleries in Svelte.",
+	"repo_url": "https://github.com/peppercornstudio/svelte-gallery",
+	"authors": ["madeleineostoja"],
+	"homepage": "https://github.com/peppercornstudio/svelte-gallery#readme",
+	"downloads": 26,
+	"dependents": 0,
+	"updated": "2022-01-22T09:02:53.968Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 27,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

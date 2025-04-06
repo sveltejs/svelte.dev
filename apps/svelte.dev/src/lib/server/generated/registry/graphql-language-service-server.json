@@ -1,31 +1,34 @@
 {
-  "name": "graphql-language-service-server",
-  "description": "Server process backing GraphQL Language Service.",
-  "repo_url": "https://github.com/graphql/graphiql",
-  "authors": [
-    "benjie",
-    "mjmahone",
-    "leebyron",
-    "i1g",
-    "acao",
-    "schickling",
-    "fb",
-    "wincent",
-    "kassens",
-    "orta",
-    "asiandrummer",
-    "lostplan",
-    "mgadda",
-    "ags-"
-  ],
-  "homepage": "https://github.com/graphql/graphiql/tree/main/packages/graphql-language-service-server#readme",
-  "downloads": 3510,
-  "dependents": 3,
-  "updated": "2025-03-14T02:16:24.594Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 16363
+	"name": "graphql-language-service-server",
+	"description": "Server process backing GraphQL Language Service.",
+	"repo_url": "https://github.com/graphql/graphiql",
+	"authors": [
+		"benjie",
+		"mjmahone",
+		"leebyron",
+		"i1g",
+		"acao",
+		"schickling",
+		"fb",
+		"wincent",
+		"kassens",
+		"orta",
+		"asiandrummer",
+		"lostplan",
+		"mgadda",
+		"ags-"
+	],
+	"homepage": "https://github.com/graphql/graphiql/tree/main/packages/graphql-language-service-server#readme",
+	"downloads": 3510,
+	"dependents": 3,
+	"updated": "2025-03-14T02:16:24.594Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 16363,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

@@ -1,16 +1,17 @@
 {
-  "name": "@htmlbricks/hb-table",
-  "description": "Create table web component for Svelte applications.",
-  "repo_url": "",
-  "authors": [
-    "dariocaruso"
-  ],
-  "downloads": 490,
-  "dependents": 8,
-  "updated": "2025-03-24T18:07:25.811Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@htmlbricks/hb-table",
+	"description": "Create table web component for Svelte applications.",
+	"repo_url": "",
+	"authors": ["dariocaruso"],
+	"downloads": 490,
+	"dependents": 8,
+	"updated": "2025-03-24T18:07:25.811Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	}
 }

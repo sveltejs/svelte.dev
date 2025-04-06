@@ -1,18 +1,19 @@
 {
-  "name": "@fouita/pagination",
-  "description": "Build simple pagination components with Svelte and Tailwind CSS.",
-  "repo_url": "https://github.com/fouita/svelte-tw-pagination",
-  "authors": [
-    "fouita"
-  ],
-  "homepage": "https://github.com/fouita/svelte-tw-pagination#readme",
-  "downloads": 19,
-  "dependents": 0,
-  "updated": "2021-04-07T09:15:56.234Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 20
+	"name": "@fouita/pagination",
+	"description": "Build simple pagination components with Svelte and Tailwind CSS.",
+	"repo_url": "https://github.com/fouita/svelte-tw-pagination",
+	"authors": ["fouita"],
+	"homepage": "https://github.com/fouita/svelte-tw-pagination#readme",
+	"downloads": 19,
+	"dependents": 0,
+	"updated": "2021-04-07T09:15:56.234Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 20,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "@jbfulgencio/svelte-simplebar",
-  "description": "Wrap SimpleBar for scrollable content in Svelte applications.",
-  "repo_url": "https://github.com/jbfulgencio/svelte-simplebar",
-  "authors": [
-    "jbfulgencio"
-  ],
-  "homepage": "https://github.com/jbfulgencio/svelte-simplebar#readme",
-  "downloads": 11,
-  "dependents": 0,
-  "updated": "2022-03-15T19:13:52.173Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "@jbfulgencio/svelte-simplebar",
+	"description": "Wrap SimpleBar for scrollable content in Svelte applications.",
+	"repo_url": "https://github.com/jbfulgencio/svelte-simplebar",
+	"authors": ["jbfulgencio"],
+	"homepage": "https://github.com/jbfulgencio/svelte-simplebar#readme",
+	"downloads": 11,
+	"dependents": 0,
+	"updated": "2022-03-15T19:13:52.173Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

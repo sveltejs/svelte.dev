@@ -1,18 +1,19 @@
 {
-  "name": "svelte-range-slider-pips",
-  "description": "Create multi-thumb, accessible range sliders with pips.",
-  "repo_url": "https://github.com/simeydotme/svelte-range-slider-pips",
-  "authors": [
-    "simeydotme"
-  ],
-  "homepage": "https://simeydotme.github.io/svelte-range-slider-pips/",
-  "downloads": 9226,
-  "dependents": 11,
-  "updated": "2025-02-23T05:53:27.474Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 485
+	"name": "svelte-range-slider-pips",
+	"description": "Create multi-thumb, accessible range sliders with pips.",
+	"repo_url": "https://github.com/simeydotme/svelte-range-slider-pips",
+	"authors": ["simeydotme"],
+	"homepage": "https://simeydotme.github.io/svelte-range-slider-pips/",
+	"downloads": 9226,
+	"dependents": 11,
+	"updated": "2025-02-23T05:53:27.474Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 485,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": true
+	}
 }

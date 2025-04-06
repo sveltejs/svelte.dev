@@ -1,18 +1,19 @@
 {
-  "name": "topform",
-  "description": "Generate forms for SvelteKit applications.",
-  "repo_url": "https://github.com/tguelcan/topform",
-  "authors": [
-    "tayfuuu"
-  ],
-  "homepage": "https://github.com/tguelcan/topform#readme",
-  "downloads": 0,
-  "dependents": 0,
-  "updated": "2023-05-01T20:33:21.801Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 10
+	"name": "topform",
+	"description": "Generate forms for SvelteKit applications.",
+	"repo_url": "https://github.com/tguelcan/topform",
+	"authors": ["tayfuuu"],
+	"homepage": "https://github.com/tguelcan/topform#readme",
+	"downloads": 0,
+	"dependents": 0,
+	"updated": "2023-05-01T20:33:21.801Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 10,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

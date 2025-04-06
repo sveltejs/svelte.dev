@@ -1,18 +1,19 @@
 {
-  "name": "arackaf-svelte-file-dropzone",
-  "description": "Create file upload and dropzone components for Svelte.",
-  "repo_url": "https://github.com/thecodejack/svelte-file-dropzone",
-  "authors": [
-    "arackaf"
-  ],
-  "homepage": "https://github.com/thecodejack/svelte-file-dropzone#readme",
-  "downloads": 11,
-  "dependents": 0,
-  "updated": "2023-03-11T22:37:33.308Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 269
+	"name": "arackaf-svelte-file-dropzone",
+	"description": "Create file upload and dropzone components for Svelte.",
+	"repo_url": "https://github.com/thecodejack/svelte-file-dropzone",
+	"authors": ["arackaf"],
+	"homepage": "https://github.com/thecodejack/svelte-file-dropzone#readme",
+	"downloads": 11,
+	"dependents": 0,
+	"updated": "2023-03-11T22:37:33.308Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 269,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

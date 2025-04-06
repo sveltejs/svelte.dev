@@ -1,18 +1,19 @@
 {
-  "name": "svelte-command",
-  "description": "Handles general command execution for Svelte components.",
-  "repo_url": "https://github.com/arlac77/svelte-command",
-  "authors": [
-    "arlac77"
-  ],
-  "homepage": "https://github.com/arlac77/svelte-command#readme",
-  "downloads": 424,
-  "dependents": 5,
-  "updated": "2025-03-24T13:01:59.582Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 2
+	"name": "svelte-command",
+	"description": "Handles general command execution for Svelte components.",
+	"repo_url": "https://github.com/arlac77/svelte-command",
+	"authors": ["arlac77"],
+	"homepage": "https://github.com/arlac77/svelte-command#readme",
+	"downloads": 424,
+	"dependents": 5,
+	"updated": "2025-03-24T13:01:59.582Z",
+	"tags": ["tooling"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

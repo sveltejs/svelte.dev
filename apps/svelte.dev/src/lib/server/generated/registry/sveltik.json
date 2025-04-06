@@ -1,18 +1,19 @@
 {
-  "name": "sveltik",
-  "description": "Build forms with validation in Svelte applications.",
-  "repo_url": "https://github.com/nathancahill/sveltik",
-  "authors": [
-    "nathancahill",
-    "mapgrid"
-  ],
-  "downloads": 82,
-  "dependents": 0,
-  "updated": "2020-12-07T10:36:34.057Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 195
+	"name": "sveltik",
+	"description": "Build forms with validation in Svelte applications.",
+	"repo_url": "https://github.com/nathancahill/sveltik",
+	"authors": ["nathancahill", "mapgrid"],
+	"downloads": 82,
+	"dependents": 0,
+	"updated": "2020-12-07T10:36:34.057Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 195,
+	"homepage": "",
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

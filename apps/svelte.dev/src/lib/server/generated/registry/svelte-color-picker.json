@@ -1,18 +1,19 @@
 {
-  "name": "svelte-color-picker",
-  "description": "Create color pickers for Svelte apps.",
-  "repo_url": "https://github.com/qintarp/svelte-color-picker",
-  "authors": [
-    "qintarp"
-  ],
-  "homepage": "https://qintarp.github.io/svelte-color-picker",
-  "downloads": 249,
-  "dependents": 2,
-  "updated": "2019-10-12T13:34:22.928Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 105
+	"name": "svelte-color-picker",
+	"description": "Create color pickers for Svelte apps.",
+	"repo_url": "https://github.com/qintarp/svelte-color-picker",
+	"authors": ["qintarp"],
+	"homepage": "https://qintarp.github.io/svelte-color-picker",
+	"downloads": 249,
+	"dependents": 2,
+	"updated": "2019-10-12T13:34:22.928Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 105,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,17 +1,18 @@
 {
-  "name": "@apan222/svelte-icon",
-  "description": "Render SVG icons in Svelte components.",
-  "repo_url": "https://github.com/02rasjac/svelte-icon-ts",
-  "authors": [
-    "apan222"
-  ],
-  "homepage": "https://github.com/02rasjac/svelte-icon-ts#readme",
-  "downloads": 0,
-  "dependents": 0,
-  "updated": "2023-08-16T12:36:42.741Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@apan222/svelte-icon",
+	"description": "Render SVG icons in Svelte components.",
+	"repo_url": "https://github.com/02rasjac/svelte-icon-ts",
+	"authors": ["apan222"],
+	"homepage": "https://github.com/02rasjac/svelte-icon-ts#readme",
+	"downloads": 0,
+	"dependents": 0,
+	"updated": "2023-08-16T12:36:42.741Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

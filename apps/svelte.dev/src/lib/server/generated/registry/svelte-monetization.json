@@ -1,17 +1,18 @@
 {
-  "name": "svelte-monetization",
-  "description": "Wraps Web Monetization API for Svelte applications.",
-  "repo_url": "https://github.com/sorxrob/svelte-monetization",
-  "authors": [
-    "wobsoriano"
-  ],
-  "homepage": "https://github.com/sorxrob/svelte-monetization#readme",
-  "downloads": 7,
-  "dependents": 0,
-  "updated": "2021-09-23T12:24:45.286Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-monetization",
+	"description": "Wraps Web Monetization API for Svelte applications.",
+	"repo_url": "https://github.com/sorxrob/svelte-monetization",
+	"authors": ["wobsoriano"],
+	"homepage": "https://github.com/sorxrob/svelte-monetization#readme",
+	"downloads": 7,
+	"dependents": 0,
+	"updated": "2021-09-23T12:24:45.286Z",
+	"tags": ["integration"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

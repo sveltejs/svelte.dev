@@ -1,18 +1,19 @@
 {
-  "name": "svelte-konvajs",
-  "description": "Create Svelte wrapper for KonvaJS.",
-  "repo_url": "https://github.com/PatWie/svelte-konvajs",
-  "authors": [
-    "patwie"
-  ],
-  "homepage": "https://svelte-konvajs.patwie.com/",
-  "downloads": 7,
-  "dependents": 0,
-  "updated": "2022-02-20T18:07:01.988Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 2
+	"name": "svelte-konvajs",
+	"description": "Create Svelte wrapper for KonvaJS.",
+	"repo_url": "https://github.com/PatWie/svelte-konvajs",
+	"authors": ["patwie"],
+	"homepage": "https://svelte-konvajs.patwie.com/",
+	"downloads": 7,
+	"dependents": 0,
+	"updated": "2022-02-20T18:07:01.988Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

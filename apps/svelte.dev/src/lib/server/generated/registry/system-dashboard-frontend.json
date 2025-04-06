@@ -1,18 +1,19 @@
 {
-  "name": "system-dashboard-frontend",
-  "description": "Frontend for system dashboard built with Svelte.",
-  "repo_url": "https://github.com/arlac77/system-dashboard-frontend",
-  "authors": [
-    "arlac77"
-  ],
-  "homepage": "https://github.com/arlac77/system-dashboard-frontend#readme",
-  "downloads": 5,
-  "dependents": 0,
-  "updated": "2024-08-05T08:47:42.065Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 1
+	"name": "system-dashboard-frontend",
+	"description": "Frontend for system dashboard built with Svelte.",
+	"repo_url": "https://github.com/arlac77/system-dashboard-frontend",
+	"authors": ["arlac77"],
+	"homepage": "https://github.com/arlac77/system-dashboard-frontend#readme",
+	"downloads": 5,
+	"dependents": 0,
+	"updated": "2024-08-05T08:47:42.065Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

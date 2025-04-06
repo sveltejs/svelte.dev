@@ -1,18 +1,19 @@
 {
-  "name": "@matb85/svelte-pack",
-  "description": "UI components for Svelte 5.",
-  "repo_url": "https://github.com/Matb85/components-pack",
-  "authors": [
-    "matb85"
-  ],
-  "homepage": "https://github.com/Matb85/components-pack#readme",
-  "downloads": 77,
-  "dependents": 0,
-  "updated": "2025-03-01T16:13:58.492Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 10
+	"name": "@matb85/svelte-pack",
+	"description": "UI components for Svelte 5.",
+	"repo_url": "https://github.com/Matb85/components-pack",
+	"authors": ["matb85"],
+	"homepage": "https://github.com/Matb85/components-pack#readme",
+	"downloads": 77,
+	"dependents": 0,
+	"updated": "2025-03-01T16:13:58.492Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 10,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

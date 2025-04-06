@@ -1,19 +1,19 @@
 {
-  "name": "@smallstack/svelte-ui",
-  "description": "Offer Svelte 5 UI library with DaisyUI and web components.",
-  "repo_url": "https://github.com/smallstack/svelte-ui",
-  "authors": [
-    "maxfriedmann"
-  ],
-  "homepage": "https://svelte-ui.com",
-  "downloads": 102,
-  "dependents": 0,
-  "updated": "2025-02-17T14:34:24.387Z",
-  "tags": [
-    "design-system",
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 7
+	"name": "@smallstack/svelte-ui",
+	"description": "Offer Svelte 5 UI library with DaisyUI and web components.",
+	"repo_url": "https://github.com/smallstack/svelte-ui",
+	"authors": ["maxfriedmann"],
+	"homepage": "https://svelte-ui.com",
+	"downloads": 102,
+	"dependents": 0,
+	"updated": "2025-02-17T14:34:24.387Z",
+	"tags": ["design-system", "ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 7,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

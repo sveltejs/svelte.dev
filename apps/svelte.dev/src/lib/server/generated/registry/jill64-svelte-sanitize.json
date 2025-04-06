@@ -1,18 +1,19 @@
 {
-  "name": "@jill64/svelte-sanitize",
-  "description": "Sanitizes HTML for Svelte using universal-sanitize.",
-  "repo_url": "https://github.com/jill64/svelte-sanitize",
-  "authors": [
-    "jill64"
-  ],
-  "homepage": "https://github.com/jill64/svelte-sanitize#readme",
-  "downloads": 8818,
-  "dependents": 1,
-  "updated": "2025-03-20T03:38:12.444Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 7
+	"name": "@jill64/svelte-sanitize",
+	"description": "Sanitizes HTML for Svelte using universal-sanitize.",
+	"repo_url": "https://github.com/jill64/svelte-sanitize",
+	"authors": ["jill64"],
+	"homepage": "https://github.com/jill64/svelte-sanitize#readme",
+	"downloads": 8818,
+	"dependents": 1,
+	"updated": "2025-03-20T03:38:12.444Z",
+	"tags": ["miscellaneous"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 7,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

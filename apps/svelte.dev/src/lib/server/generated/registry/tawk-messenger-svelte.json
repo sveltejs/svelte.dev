@@ -1,18 +1,19 @@
 {
-  "name": "tawk-messenger-svelte",
-  "description": "Integrate Tawk.to messenger into Svelte applications.",
-  "repo_url": "https://github.com/eduardolat/tawk-messenger-svelte",
-  "authors": [
-    "eduardolat"
-  ],
-  "homepage": "https://github.com/eduardolat/tawk-messenger-svelte#readme",
-  "downloads": 114,
-  "dependents": 0,
-  "updated": "2022-12-17T23:32:50.306Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 3
+	"name": "tawk-messenger-svelte",
+	"description": "Integrate Tawk.to messenger into Svelte applications.",
+	"repo_url": "https://github.com/eduardolat/tawk-messenger-svelte",
+	"authors": ["eduardolat"],
+	"homepage": "https://github.com/eduardolat/tawk-messenger-svelte#readme",
+	"downloads": 114,
+	"dependents": 0,
+	"updated": "2022-12-17T23:32:50.306Z",
+	"tags": ["integration"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 3,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

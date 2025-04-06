@@ -1,18 +1,19 @@
 {
-  "name": "ssgoi",
-  "description": "Implement page transition library for Svelte and SvelteKit.",
-  "repo_url": "https://github.com/meursyphus/ssgoi",
-  "authors": [
-    "anseotmd555"
-  ],
-  "homepage": "https://ssgoi.pages.dev",
-  "downloads": 28,
-  "dependents": 0,
-  "updated": "2024-10-26T14:19:30.316Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 165
+	"name": "ssgoi",
+	"description": "Implement page transition library for Svelte and SvelteKit.",
+	"repo_url": "https://github.com/meursyphus/ssgoi",
+	"authors": ["anseotmd555"],
+	"homepage": "https://ssgoi.pages.dev",
+	"downloads": 28,
+	"dependents": 0,
+	"updated": "2024-10-26T14:19:30.316Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 165,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": true
+	}
 }

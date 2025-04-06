@@ -1,18 +1,19 @@
 {
-  "name": "svelte-triple-state-switch",
-  "description": "Creates triple-state switch component for Svelte.",
-  "repo_url": "https://github.com/Carlos-err406/svelte-triple-state-switch",
-  "authors": [
-    "carlos.vilaseca"
-  ],
-  "homepage": "https://github.com/Carlos-err406/svelte-triple-state-switch#readme",
-  "downloads": 13,
-  "dependents": 0,
-  "updated": "2024-08-21T22:19:30.999Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelte-triple-state-switch",
+	"description": "Creates triple-state switch component for Svelte.",
+	"repo_url": "https://github.com/Carlos-err406/svelte-triple-state-switch",
+	"authors": ["carlos.vilaseca"],
+	"homepage": "https://github.com/Carlos-err406/svelte-triple-state-switch#readme",
+	"downloads": 13,
+	"dependents": 0,
+	"updated": "2024-08-21T22:19:30.999Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

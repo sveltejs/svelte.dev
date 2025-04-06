@@ -1,18 +1,19 @@
 {
-  "name": "svelte-error-boundary",
-  "description": "Handle errors in Svelte components, preventing full app crashes.",
-  "repo_url": "https://github.com/denisstasyev/svelte-error-boundary",
-  "authors": [
-    "denisstasyev"
-  ],
-  "homepage": "https://github.com/denisstasyev/svelte-error-boundary#readme",
-  "downloads": 65,
-  "dependents": 0,
-  "updated": "2021-06-21T05:54:20.359Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 10
+	"name": "svelte-error-boundary",
+	"description": "Handle errors in Svelte components, preventing full app crashes.",
+	"repo_url": "https://github.com/denisstasyev/svelte-error-boundary",
+	"authors": ["denisstasyev"],
+	"homepage": "https://github.com/denisstasyev/svelte-error-boundary#readme",
+	"downloads": 65,
+	"dependents": 0,
+	"updated": "2021-06-21T05:54:20.359Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 10,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	}
 }

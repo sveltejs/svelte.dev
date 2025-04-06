@@ -1,17 +1,18 @@
 {
-  "name": "@magrinilopes/svelte-downloadfile",
-  "description": "Provides a Svelte component for downloading files.",
-  "repo_url": "",
-  "authors": [
-    "magrinilopes"
-  ],
-  "homepage": "https://github.com/magrinilopes/svelte-downloadfile#readme",
-  "downloads": 34,
-  "dependents": 0,
-  "updated": "2021-05-03T19:15:26.922Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@magrinilopes/svelte-downloadfile",
+	"description": "Provides a Svelte component for downloading files.",
+	"repo_url": "",
+	"authors": ["magrinilopes"],
+	"homepage": "https://github.com/magrinilopes/svelte-downloadfile#readme",
+	"downloads": 34,
+	"dependents": 0,
+	"updated": "2021-05-03T19:15:26.922Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

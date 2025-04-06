@@ -1,18 +1,19 @@
 {
-  "name": "@shuk/shortcut-manager",
-  "description": "Manage keyboard shortcuts in Svelte applications.",
-  "repo_url": "https://github.com/shukar1/svelte-shortcut-manager",
-  "authors": [
-    "shuk"
-  ],
-  "homepage": "https://github.com/shukar1/svelte-shortcut-manager#readme",
-  "downloads": 6,
-  "dependents": 0,
-  "updated": "2020-12-19T18:36:14.508Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "@shuk/shortcut-manager",
+	"description": "Manage keyboard shortcuts in Svelte applications.",
+	"repo_url": "https://github.com/shukar1/svelte-shortcut-manager",
+	"authors": ["shuk"],
+	"homepage": "https://github.com/shukar1/svelte-shortcut-manager#readme",
+	"downloads": 6,
+	"dependents": 0,
+	"updated": "2020-12-19T18:36:14.508Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

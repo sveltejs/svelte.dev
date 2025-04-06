@@ -1,18 +1,19 @@
 {
-  "name": "golte",
-  "description": "Render Svelte components in Go HTTP handlers.",
-  "repo_url": "https://github.com/nichady/golte",
-  "authors": [
-    "nichady"
-  ],
-  "homepage": "https://github.com/nichady/golte#README.md",
-  "downloads": 1,
-  "dependents": 0,
-  "updated": "2024-12-16T00:15:36.132Z",
-  "tags": [
-    "server"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 228
+	"name": "golte",
+	"description": "Render Svelte components in Go HTTP handlers.",
+	"repo_url": "https://github.com/nichady/golte",
+	"authors": ["nichady"],
+	"homepage": "https://github.com/nichady/golte#README.md",
+	"downloads": 1,
+	"dependents": 0,
+	"updated": "2024-12-16T00:15:36.132Z",
+	"tags": ["server"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 228,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

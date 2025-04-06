@@ -1,18 +1,19 @@
 {
-  "name": "ninjaformkit",
-  "description": "Build forms with validation in SvelteKit apps.",
-  "repo_url": "https://github.com/ninjagator/NinjaFormKit",
-  "authors": [
-    "ninjagator"
-  ],
-  "homepage": "https://github.com/ninjagator/NinjaFormKit#readme",
-  "downloads": 7,
-  "dependents": 0,
-  "updated": "2024-08-17T15:03:17.755Z",
-  "tags": [
-    "design-system"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "ninjaformkit",
+	"description": "Build forms with validation in SvelteKit apps.",
+	"repo_url": "https://github.com/ninjagator/NinjaFormKit",
+	"authors": ["ninjagator"],
+	"homepage": "https://github.com/ninjagator/NinjaFormKit#readme",
+	"downloads": 7,
+	"dependents": 0,
+	"updated": "2024-08-17T15:03:17.755Z",
+	"tags": ["design-system"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

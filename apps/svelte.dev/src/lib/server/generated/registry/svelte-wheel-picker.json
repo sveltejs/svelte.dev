@@ -1,18 +1,19 @@
 {
-  "name": "svelte-wheel-picker",
-  "description": "Create customizable wheel picker components for Svelte.",
-  "repo_url": "https://github.com/urmoov-dev/svelte-wheel-picker",
-  "authors": [
-    "umdev"
-  ],
-  "homepage": "https://github.com/urmoov-dev/svelte-wheel-picker#readme",
-  "downloads": 1,
-  "dependents": 0,
-  "updated": "2024-10-06T03:27:11.925Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "svelte-wheel-picker",
+	"description": "Create customizable wheel picker components for Svelte.",
+	"repo_url": "https://github.com/urmoov-dev/svelte-wheel-picker",
+	"authors": ["umdev"],
+	"homepage": "https://github.com/urmoov-dev/svelte-wheel-picker#readme",
+	"downloads": 1,
+	"dependents": 0,
+	"updated": "2024-10-06T03:27:11.925Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

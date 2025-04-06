@@ -1,18 +1,19 @@
 {
-  "name": "@bonosoft/sveltekit-codeentry",
-  "description": "Add code entry form element to SvelteKit sites.",
-  "repo_url": "https://github.com/bonosoft/sveltekit-codeentry",
-  "authors": [
-    "bonosoft"
-  ],
-  "homepage": "https://github.com/bonosoft/sveltekit-codeentry#readme",
-  "downloads": 1,
-  "dependents": 0,
-  "updated": "2023-04-03T21:16:12.509Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@bonosoft/sveltekit-codeentry",
+	"description": "Add code entry form element to SvelteKit sites.",
+	"repo_url": "https://github.com/bonosoft/sveltekit-codeentry",
+	"authors": ["bonosoft"],
+	"homepage": "https://github.com/bonosoft/sveltekit-codeentry#readme",
+	"downloads": 1,
+	"dependents": 0,
+	"updated": "2023-04-03T21:16:12.509Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

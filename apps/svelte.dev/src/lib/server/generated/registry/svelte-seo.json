@@ -1,18 +1,19 @@
 {
-  "name": "svelte-seo",
-  "description": "Optimize Svelte apps for search engines, social media.",
-  "repo_url": "https://github.com/artiebits/svelte-seo",
-  "authors": [
-    "artiebits"
-  ],
-  "homepage": "https://github.com/artiebits/svelte-seo#readme",
-  "downloads": 1576,
-  "dependents": 0,
-  "updated": "2024-05-07T18:25:38.747Z",
-  "tags": [
-    "seo"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 470
+	"name": "svelte-seo",
+	"description": "Optimize Svelte apps for search engines, social media.",
+	"repo_url": "https://github.com/artiebits/svelte-seo",
+	"authors": ["artiebits"],
+	"homepage": "https://github.com/artiebits/svelte-seo#readme",
+	"downloads": 1576,
+	"dependents": 0,
+	"updated": "2024-05-07T18:25:38.747Z",
+	"tags": ["seo"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 470,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

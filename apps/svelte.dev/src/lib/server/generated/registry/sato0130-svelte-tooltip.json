@@ -1,17 +1,19 @@
 {
-  "name": "@sato0130/svelte-tooltip",
-  "description": "Create lightweight, action-based tooltips for Svelte elements.",
-  "repo_url": "https://github.com/K-Sato1995/svelte-tooltip",
-  "authors": [
-    "sato0130"
-  ],
-  "downloads": 6,
-  "dependents": 0,
-  "updated": "2022-06-24T07:15:53.633Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 3
+	"name": "@sato0130/svelte-tooltip",
+	"description": "Create lightweight, action-based tooltips for Svelte elements.",
+	"repo_url": "https://github.com/K-Sato1995/svelte-tooltip",
+	"authors": ["sato0130"],
+	"downloads": 6,
+	"dependents": 0,
+	"updated": "2022-06-24T07:15:53.633Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 3,
+	"homepage": "https://svelte-tooltip-k-sato1995.vercel.app/",
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

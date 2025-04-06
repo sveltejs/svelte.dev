@@ -1,18 +1,19 @@
 {
-  "name": "@megakuul/adapter-battleshiper",
-  "description": "Deploy SvelteKit apps to battleshiper lambda infrastructure.",
-  "repo_url": "https://github.com/megakuul/battleshiper",
-  "authors": [
-    "megakuul"
-  ],
-  "homepage": "https://github.com/megakuul/battleshiper#readme",
-  "downloads": 11,
-  "dependents": 0,
-  "updated": "2024-10-03T18:26:22.551Z",
-  "tags": [
-    "adapter"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 2
+	"name": "@megakuul/adapter-battleshiper",
+	"description": "Deploy SvelteKit apps to battleshiper lambda infrastructure.",
+	"repo_url": "https://github.com/megakuul/battleshiper",
+	"authors": ["megakuul"],
+	"homepage": "https://github.com/megakuul/battleshiper#readme",
+	"downloads": 11,
+	"dependents": 0,
+	"updated": "2024-10-03T18:26:22.551Z",
+	"tags": ["adapter"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	}
 }

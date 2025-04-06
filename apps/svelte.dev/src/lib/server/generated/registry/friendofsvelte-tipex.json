@@ -1,18 +1,19 @@
 {
-  "name": "@friendofsvelte/tipex",
-  "description": "Advanced rich text editor for Svelte apps, powered by Tiptap and Prosemirror.",
-  "repo_url": "https://github.com/friendofsvelte/tipex",
-  "authors": [
-    "bishwasbh"
-  ],
-  "homepage": "https://tipex.pages.dev/",
-  "downloads": 501,
-  "dependents": 1,
-  "updated": "2025-03-22T03:00:45.220Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 307
+	"name": "@friendofsvelte/tipex",
+	"description": "Advanced rich text editor for Svelte apps, powered by Tiptap and Prosemirror.",
+	"repo_url": "https://github.com/friendofsvelte/tipex",
+	"authors": ["bishwasbh"],
+	"homepage": "https://tipex.pages.dev/",
+	"downloads": 501,
+	"dependents": 1,
+	"updated": "2025-03-22T03:00:45.220Z",
+	"tags": ["ui"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 307,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

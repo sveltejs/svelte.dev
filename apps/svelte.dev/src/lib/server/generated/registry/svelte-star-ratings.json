@@ -1,18 +1,19 @@
 {
-  "name": "svelte-star-ratings",
-  "description": "Display and select star ratings in Svelte applications.",
-  "repo_url": "https://github.com/impauloalves/svelte-star-ratings",
-  "authors": [
-    "impauloalves"
-  ],
-  "homepage": "https://github.com/impauloalves/svelte-star-ratings",
-  "downloads": 9,
-  "dependents": 0,
-  "updated": "2022-06-01T17:31:45.079Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "svelte-star-ratings",
+	"description": "Display and select star ratings in Svelte applications.",
+	"repo_url": "https://github.com/impauloalves/svelte-star-ratings",
+	"authors": ["impauloalves"],
+	"homepage": "https://github.com/impauloalves/svelte-star-ratings",
+	"downloads": 9,
+	"dependents": 0,
+	"updated": "2022-06-01T17:31:45.079Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

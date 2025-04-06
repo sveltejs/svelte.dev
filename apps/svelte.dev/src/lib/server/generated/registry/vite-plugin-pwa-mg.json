@@ -1,17 +1,18 @@
 {
-  "name": "vite-plugin-pwa-mg",
-  "description": "Integrate PWA features into Vite-based Svelte projects.",
-  "repo_url": "https://github.com/markgregg/vite-plugin-pwa-mg",
-  "authors": [
-    "markgregg"
-  ],
-  "homepage": "https://github.com/markgregg/vite-plugin-pwa-mg",
-  "downloads": 1,
-  "dependents": 0,
-  "updated": "2023-06-18T19:39:06.541Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "vite-plugin-pwa-mg",
+	"description": "Integrate PWA features into Vite-based Svelte projects.",
+	"repo_url": "https://github.com/markgregg/vite-plugin-pwa-mg",
+	"authors": ["markgregg"],
+	"homepage": "https://github.com/markgregg/vite-plugin-pwa-mg",
+	"downloads": 1,
+	"dependents": 0,
+	"updated": "2023-06-18T19:39:06.541Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,16 +1,17 @@
 {
-  "name": "@laosb/archive-of-sb-banner",
-  "description": "Insert web component to archived sites on Archive.of.sb.",
-  "repo_url": "",
-  "authors": [
-    "laosb"
-  ],
-  "downloads": 36,
-  "dependents": 0,
-  "updated": "2022-02-11T15:11:10.765Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@laosb/archive-of-sb-banner",
+	"description": "Insert web component to archived sites on Archive.of.sb.",
+	"repo_url": "",
+	"authors": ["laosb"],
+	"downloads": 36,
+	"dependents": 0,
+	"updated": "2022-02-11T15:11:10.765Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

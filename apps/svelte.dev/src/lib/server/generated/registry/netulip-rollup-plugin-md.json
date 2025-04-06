@@ -1,17 +1,18 @@
 {
-  "name": "@netulip/rollup-plugin-md",
-  "description": "Use Markdown files as components in Svelte apps.",
-  "repo_url": "https://github.com/netulip/rollup-plugin-md",
-  "authors": [
-    "tedmeftah"
-  ],
-  "homepage": "https://github.com/netulip/rollup-plugin-md#readme",
-  "downloads": 10,
-  "dependents": 0,
-  "updated": "2021-04-21T14:51:44.528Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@netulip/rollup-plugin-md",
+	"description": "Use Markdown files as components in Svelte apps.",
+	"repo_url": "https://github.com/netulip/rollup-plugin-md",
+	"authors": ["tedmeftah"],
+	"homepage": "https://github.com/netulip/rollup-plugin-md#readme",
+	"downloads": 10,
+	"dependents": 0,
+	"updated": "2021-04-21T14:51:44.528Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

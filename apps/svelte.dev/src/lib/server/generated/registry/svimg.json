@@ -1,18 +1,19 @@
 {
-  "name": "svimg",
-  "description": "Processes images for Svelte, generating responsive images and lazy loading.",
-  "repo_url": "https://github.com/xiphux/svimg",
-  "authors": [
-    "xiphux"
-  ],
-  "homepage": "https://github.com/xiphux/svimg",
-  "downloads": 59,
-  "dependents": 2,
-  "updated": "2023-11-10T01:51:33.648Z",
-  "tags": [
-    "media"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 247
+	"name": "svimg",
+	"description": "Processes images for Svelte, generating responsive images and lazy loading.",
+	"repo_url": "https://github.com/xiphux/svimg",
+	"authors": ["xiphux"],
+	"homepage": "https://github.com/xiphux/svimg",
+	"downloads": 59,
+	"dependents": 2,
+	"updated": "2023-11-10T01:51:33.648Z",
+	"tags": ["media"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 247,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

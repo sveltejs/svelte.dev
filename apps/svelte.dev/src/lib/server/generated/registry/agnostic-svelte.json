@@ -1,18 +1,19 @@
 {
-  "name": "agnostic-svelte",
-  "description": "Build UI components for Svelte with AgnosticUI.",
-  "repo_url": "https://github.com/AgnosticUI/agnosticui",
-  "authors": [
-    "rlevin"
-  ],
-  "homepage": "https://github.com/AgnosticUI/agnosticui#readme",
-  "downloads": 413,
-  "dependents": 0,
-  "updated": "2022-05-16T16:25:06.512Z",
-  "tags": [
-    "design-system"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 732
+	"name": "agnostic-svelte",
+	"description": "Build UI components for Svelte with AgnosticUI.",
+	"repo_url": "https://github.com/AgnosticUI/agnosticui",
+	"authors": ["rlevin"],
+	"homepage": "https://github.com/AgnosticUI/agnosticui#readme",
+	"downloads": 413,
+	"dependents": 0,
+	"updated": "2022-05-16T16:25:06.512Z",
+	"tags": ["design-system"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 732,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

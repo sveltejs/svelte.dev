@@ -1,19 +1,19 @@
 {
-  "name": "svelte-tooltips",
-  "description": "Provide customizable tooltips for Svelte elements.",
-  "repo_url": "https://github.com/DonutLaser/svelte-tooltips",
-  "authors": [
-    "donutlaser"
-  ],
-  "homepage": "https://github.com/DonutLaser/svelte-tooltips",
-  "downloads": 4,
-  "dependents": 0,
-  "updated": "2023-01-03T19:38:00.827Z",
-  "tags": [
-    "ui",
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "svelte-tooltips",
+	"description": "Provide customizable tooltips for Svelte elements.",
+	"repo_url": "https://github.com/DonutLaser/svelte-tooltips",
+	"authors": ["donutlaser"],
+	"homepage": "https://github.com/DonutLaser/svelte-tooltips",
+	"downloads": 4,
+	"dependents": 0,
+	"updated": "2023-01-03T19:38:00.827Z",
+	"tags": ["ui", "miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

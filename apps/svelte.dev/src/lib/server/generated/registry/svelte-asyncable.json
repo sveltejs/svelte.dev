@@ -1,18 +1,19 @@
 {
-  "name": "svelte-asyncable",
-  "description": "Create async stores for Svelte applications.",
-  "repo_url": "https://github.com/sveltetools/svelte-asyncable",
-  "authors": [
-    "paulmaly"
-  ],
-  "homepage": "https://github.com/sveltetools/svelte-asyncable#readme",
-  "downloads": 1919,
-  "dependents": 0,
-  "updated": "2024-09-26T15:45:57.061Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 169
+	"name": "svelte-asyncable",
+	"description": "Create async stores for Svelte applications.",
+	"repo_url": "https://github.com/sveltetools/svelte-asyncable",
+	"authors": ["paulmaly"],
+	"homepage": "https://github.com/sveltetools/svelte-asyncable#readme",
+	"downloads": 1919,
+	"dependents": 0,
+	"updated": "2024-09-26T15:45:57.061Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 169,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

@@ -1,22 +1,19 @@
 {
-  "name": "eslint-plugin-svelte",
-  "description": "Lint Svelte code using AST.",
-  "repo_url": "https://github.com/sveltejs/eslint-plugin-svelte",
-  "authors": [
-    "jounqin",
-    "conduitry",
-    "ota-meshi",
-    "svelte-admin",
-    "baseballyama"
-  ],
-  "homepage": "https://sveltejs.github.io/eslint-plugin-svelte",
-  "downloads": 442089,
-  "dependents": 144,
-  "updated": "2025-03-20T00:24:18.230Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 325
+	"name": "eslint-plugin-svelte",
+	"description": "Lint Svelte code using AST.",
+	"repo_url": "https://github.com/sveltejs/eslint-plugin-svelte",
+	"authors": ["jounqin", "conduitry", "ota-meshi", "svelte-admin", "baseballyama"],
+	"homepage": "https://sveltejs.github.io/eslint-plugin-svelte",
+	"downloads": 442089,
+	"dependents": 144,
+	"updated": "2025-03-20T00:24:18.230Z",
+	"tags": ["tooling"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 325,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

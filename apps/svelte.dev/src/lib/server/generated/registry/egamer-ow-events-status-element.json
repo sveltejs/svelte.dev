@@ -1,16 +1,17 @@
 {
-  "name": "@egamer/ow-events-status-element",
-  "description": "Display Overwatch events status using Svelte.",
-  "repo_url": "",
-  "authors": [
-    "egear"
-  ],
-  "downloads": 43,
-  "dependents": 0,
-  "updated": "2019-12-09T21:42:27.683Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@egamer/ow-events-status-element",
+	"description": "Display Overwatch events status using Svelte.",
+	"repo_url": "",
+	"authors": ["egear"],
+	"downloads": 43,
+	"dependents": 0,
+	"updated": "2019-12-09T21:42:27.683Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

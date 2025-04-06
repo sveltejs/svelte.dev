@@ -1,18 +1,19 @@
 {
-  "name": "svelte-colourpicker",
-  "description": "Create color pickers for Svelte applications.",
-  "repo_url": "https://github.com/cooolbros/svelte-colourpicker",
-  "authors": [
-    "cooolbros"
-  ],
-  "homepage": "https://github.com/cooolbros/svelte-colourpicker#readme",
-  "downloads": 13,
-  "dependents": 0,
-  "updated": "2023-12-02T03:51:33.188Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 10
+	"name": "svelte-colourpicker",
+	"description": "Create color pickers for Svelte applications.",
+	"repo_url": "https://github.com/cooolbros/svelte-colourpicker",
+	"authors": ["cooolbros"],
+	"homepage": "https://github.com/cooolbros/svelte-colourpicker#readme",
+	"downloads": 13,
+	"dependents": 0,
+	"updated": "2023-12-02T03:51:33.188Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 10,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

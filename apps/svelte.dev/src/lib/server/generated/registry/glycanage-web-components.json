@@ -1,18 +1,19 @@
 {
-  "name": "@glycanage/web-components",
-  "description": "Provides web components for rendering disease segments.",
-  "repo_url": "https://github.com/GlycanAge/ga-components",
-  "authors": [
-    "flauc1"
-  ],
-  "homepage": "https://github.com/GlycanAge/ga-components#readme",
-  "downloads": 42,
-  "dependents": 0,
-  "updated": "2025-02-19T11:11:41.193Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@glycanage/web-components",
+	"description": "Provides web components for rendering disease segments.",
+	"repo_url": "https://github.com/GlycanAge/ga-components",
+	"authors": ["flauc1"],
+	"homepage": "https://github.com/GlycanAge/ga-components#readme",
+	"downloads": 42,
+	"dependents": 0,
+	"updated": "2025-02-19T11:11:41.193Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

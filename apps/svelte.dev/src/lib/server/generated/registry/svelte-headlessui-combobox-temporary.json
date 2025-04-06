@@ -1,18 +1,19 @@
 {
-  "name": "svelte-headlessui-combobox-temporary",
-  "description": "Provide unstyled, accessible UI components for Svelte.",
-  "repo_url": "https://github.com/NoelOConnell/svelte-headlessui",
-  "authors": [
-    "noeloconnell"
-  ],
-  "homepage": "https://svelte-headlessui.goss.io",
-  "downloads": 6,
-  "dependents": 1,
-  "updated": "2023-01-25T15:41:18.398Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 4
+	"name": "svelte-headlessui-combobox-temporary",
+	"description": "Provide unstyled, accessible UI components for Svelte.",
+	"repo_url": "https://github.com/NoelOConnell/svelte-headlessui",
+	"authors": ["noeloconnell"],
+	"homepage": "https://svelte-headlessui.goss.io",
+	"downloads": 6,
+	"dependents": 1,
+	"updated": "2023-01-25T15:41:18.398Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 4,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,17 +1,18 @@
 {
-  "name": "jsonapi-svelte-form",
-  "description": "Build forms for JSON:API backends in Svelte.",
-  "repo_url": "",
-  "authors": [
-    "saibotsivad"
-  ],
-  "homepage": "https://github.com/saibotsivad/jsonapi-svelte-form",
-  "downloads": 91,
-  "dependents": 0,
-  "updated": "2022-05-10T16:18:36.002Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "jsonapi-svelte-form",
+	"description": "Build forms for JSON:API backends in Svelte.",
+	"repo_url": "",
+	"authors": ["saibotsivad"],
+	"homepage": "https://github.com/saibotsivad/jsonapi-svelte-form",
+	"downloads": 91,
+	"dependents": 0,
+	"updated": "2022-05-10T16:18:36.002Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

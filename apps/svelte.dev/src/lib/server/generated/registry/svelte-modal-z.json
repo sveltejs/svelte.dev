@@ -1,17 +1,18 @@
 {
-  "name": "svelte-modal-z",
-  "description": "Create simple and beautiful modal components for Svelte.",
-  "repo_url": "https://github.com/delpikye-v/svelte-modal",
-  "authors": [
-    "delpikye"
-  ],
-  "homepage": "https://github.com/delpikye-v/svelte-modal#readme",
-  "downloads": 4,
-  "dependents": 0,
-  "updated": "2023-02-03T07:57:30.563Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-modal-z",
+	"description": "Create simple and beautiful modal components for Svelte.",
+	"repo_url": "https://github.com/delpikye-v/svelte-modal",
+	"authors": ["delpikye"],
+	"homepage": "https://github.com/delpikye-v/svelte-modal#readme",
+	"downloads": 4,
+	"dependents": 0,
+	"updated": "2023-02-03T07:57:30.563Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

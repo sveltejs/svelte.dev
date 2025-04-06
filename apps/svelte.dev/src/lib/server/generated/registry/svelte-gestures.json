@@ -1,18 +1,19 @@
 {
-  "name": "svelte-gestures",
-  "description": "Add gesture recognition to Svelte components.",
-  "repo_url": "https://github.com/Rezi/svelte-gestures",
-  "authors": [
-    "rezi99"
-  ],
-  "homepage": "https://github.com/Rezi/svelte-gestures#readme",
-  "downloads": 11436,
-  "dependents": 8,
-  "updated": "2025-01-16T12:29:42.019Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 148
+	"name": "svelte-gestures",
+	"description": "Add gesture recognition to Svelte components.",
+	"repo_url": "https://github.com/Rezi/svelte-gestures",
+	"authors": ["rezi99"],
+	"homepage": "https://github.com/Rezi/svelte-gestures#readme",
+	"downloads": 11436,
+	"dependents": 8,
+	"updated": "2025-01-16T12:29:42.019Z",
+	"tags": ["miscellaneous"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 148,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "@vkhalikov/svelte-easy-form",
-  "description": "Handles form state and validation in Svelte applications.",
-  "repo_url": "https://github.com/vkhalikov/svelte-easy-form",
-  "authors": [
-    "vkhalikov"
-  ],
-  "homepage": "https://vkhalikov.github.io/svelte-easy-form",
-  "downloads": 10,
-  "dependents": 0,
-  "updated": "2021-04-26T22:44:56.175Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 0
+	"name": "@vkhalikov/svelte-easy-form",
+	"description": "Handles form state and validation in Svelte applications.",
+	"repo_url": "https://github.com/vkhalikov/svelte-easy-form",
+	"authors": ["vkhalikov"],
+	"homepage": "https://vkhalikov.github.io/svelte-easy-form",
+	"downloads": 10,
+	"dependents": 0,
+	"updated": "2021-04-26T22:44:56.175Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 0,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "@ryanatkn/eslint-config",
-  "description": "ESLint config for TypeScript, Svelte, and Prettier.",
-  "repo_url": "https://github.com/ryanatkn/eslint-config",
-  "authors": [
-    "ryanatkn"
-  ],
-  "homepage": "https://github.com/ryanatkn/eslint-config",
-  "downloads": 97,
-  "dependents": 0,
-  "updated": "2025-02-27T19:26:48.683Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 1
+	"name": "@ryanatkn/eslint-config",
+	"description": "ESLint config for TypeScript, Svelte, and Prettier.",
+	"repo_url": "https://github.com/ryanatkn/eslint-config",
+	"authors": ["ryanatkn"],
+	"homepage": "https://github.com/ryanatkn/eslint-config",
+	"downloads": 97,
+	"dependents": 0,
+	"updated": "2025-02-27T19:26:48.683Z",
+	"tags": ["tooling"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

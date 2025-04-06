@@ -1,19 +1,19 @@
 {
-  "name": "runes-meta-tags",
-  "description": "Manage meta tags for Svelte, including SEO and social media.",
-  "repo_url": "https://github.com/shinokada/runes-meta-tag",
-  "authors": [
-    "shinichiokada"
-  ],
-  "homepage": "https://runes-meta-tag.codewithshin.com/",
-  "downloads": 75,
-  "dependents": 0,
-  "updated": "2024-11-18T08:38:22.777Z",
-  "tags": [
-    "seo",
-    "tooling"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 2
+	"name": "runes-meta-tags",
+	"description": "Manage meta tags for Svelte, including SEO and social media.",
+	"repo_url": "https://github.com/shinokada/runes-meta-tag",
+	"authors": ["shinichiokada"],
+	"homepage": "https://runes-meta-tag.codewithshin.com/",
+	"downloads": 75,
+	"dependents": 0,
+	"updated": "2024-11-18T08:38:22.777Z",
+	"tags": ["seo", "tooling"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	}
 }

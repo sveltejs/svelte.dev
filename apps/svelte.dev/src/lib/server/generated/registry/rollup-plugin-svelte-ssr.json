@@ -1,19 +1,19 @@
 {
-  "name": "rollup-plugin-svelte-ssr",
-  "description": "Perform server-side rendering of Svelte components using Rollup.",
-  "repo_url": "https://github.com/akaSybe/rollup-plugin-svelte-ssr",
-  "authors": [
-    "akasybe"
-  ],
-  "homepage": "https://github.com/akaSybe/rollup-plugin-svelte-ssr#readme",
-  "downloads": 12,
-  "dependents": 0,
-  "updated": "2020-06-12T06:54:08.965Z",
-  "tags": [
-    "server",
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 35
+	"name": "rollup-plugin-svelte-ssr",
+	"description": "Perform server-side rendering of Svelte components using Rollup.",
+	"repo_url": "https://github.com/akaSybe/rollup-plugin-svelte-ssr",
+	"authors": ["akasybe"],
+	"homepage": "https://github.com/akaSybe/rollup-plugin-svelte-ssr#readme",
+	"downloads": 12,
+	"dependents": 0,
+	"updated": "2020-06-12T06:54:08.965Z",
+	"tags": ["server", "tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 35,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

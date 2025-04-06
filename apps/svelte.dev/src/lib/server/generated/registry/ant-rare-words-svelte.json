@@ -1,18 +1,19 @@
 {
-  "name": "ant-rare-words-svelte",
-  "description": "Provide rare character input component for Svelte.",
-  "repo_url": "https://github.com/alipay/Z-RareCharacterSolution",
-  "authors": [
-    "andyliwr"
-  ],
-  "homepage": "https://github.com/alipay/Z-RareCharacterSolution#readme",
-  "downloads": 4,
-  "dependents": 0,
-  "updated": "2023-11-06T03:16:54.936Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 49
+	"name": "ant-rare-words-svelte",
+	"description": "Provide rare character input component for Svelte.",
+	"repo_url": "https://github.com/alipay/Z-RareCharacterSolution",
+	"authors": ["andyliwr"],
+	"homepage": "https://github.com/alipay/Z-RareCharacterSolution#readme",
+	"downloads": 4,
+	"dependents": 0,
+	"updated": "2023-11-06T03:16:54.936Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 49,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

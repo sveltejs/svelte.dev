@@ -1,17 +1,18 @@
 {
-  "name": "svelte-treeviews",
-  "description": "Create full-featured treeview components for Svelte.",
-  "repo_url": "https://github.com/orefalo/svelte-treeviewss",
-  "authors": [
-    "orefalo"
-  ],
-  "homepage": "https://orefalo.github.io/svelte-treeviews/",
-  "downloads": 7,
-  "dependents": 0,
-  "updated": "2022-04-09T06:58:08.001Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-treeviews",
+	"description": "Create full-featured treeview components for Svelte.",
+	"repo_url": "https://github.com/orefalo/svelte-treeviewss",
+	"authors": ["orefalo"],
+	"homepage": "https://orefalo.github.io/svelte-treeviews/",
+	"downloads": 7,
+	"dependents": 0,
+	"updated": "2022-04-09T06:58:08.001Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

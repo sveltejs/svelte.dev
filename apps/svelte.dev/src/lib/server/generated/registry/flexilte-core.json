@@ -1,18 +1,19 @@
 {
-  "name": "@flexilte/core",
-  "description": "Generate flex-based layouts from JSON for SvelteKit.",
-  "repo_url": "https://github.com/flexilte/flexilte",
-  "authors": [
-    "borgmon"
-  ],
-  "homepage": "https://flexilte.github.io",
-  "downloads": 0,
-  "dependents": 1,
-  "updated": "2024-11-20T03:33:24.150Z",
-  "tags": [
-    "design-system"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 1
+	"name": "@flexilte/core",
+	"description": "Generate flex-based layouts from JSON for SvelteKit.",
+	"repo_url": "https://github.com/flexilte/flexilte",
+	"authors": ["borgmon"],
+	"homepage": "https://flexilte.github.io",
+	"downloads": 0,
+	"dependents": 1,
+	"updated": "2024-11-20T03:33:24.150Z",
+	"tags": ["design-system"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 1,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

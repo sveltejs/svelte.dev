@@ -1,18 +1,19 @@
 {
-  "name": "focus-svelte",
-  "description": "Create focus lock for Svelte with zero dependencies.",
-  "repo_url": "https://github.com/chanced/focus-svelte",
-  "authors": [
-    "chance--"
-  ],
-  "homepage": "https://github.com/chanced/focus-svelte#readme",
-  "downloads": 321,
-  "dependents": 1,
-  "updated": "2021-10-17T16:55:36.762Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 31
+	"name": "focus-svelte",
+	"description": "Create focus lock for Svelte with zero dependencies.",
+	"repo_url": "https://github.com/chanced/focus-svelte",
+	"authors": ["chance--"],
+	"homepage": "https://github.com/chanced/focus-svelte#readme",
+	"downloads": 321,
+	"dependents": 1,
+	"updated": "2021-10-17T16:55:36.762Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 31,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

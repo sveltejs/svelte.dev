@@ -1,16 +1,17 @@
 {
-  "name": "svelte-infinite-canvas",
-  "description": "Create pannable, zoomable interface for Svelte.",
-  "repo_url": "",
-  "authors": [
-    "cbroms"
-  ],
-  "downloads": 49,
-  "dependents": 0,
-  "updated": "2021-04-03T00:28:14.062Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "svelte-infinite-canvas",
+	"description": "Create pannable, zoomable interface for Svelte.",
+	"repo_url": "",
+	"authors": ["cbroms"],
+	"downloads": 49,
+	"dependents": 0,
+	"updated": "2021-04-03T00:28:14.062Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "svelte-dts",
-  "description": "Typescript declaration generator for svelte.",
-  "repo_url": "https://github.com/andrelmlins/svelte-dts",
-  "authors": [
-    "andrelmlins"
-  ],
-  "homepage": "https://github.com/andrelmlins/svelte-dts",
-  "downloads": 2020,
-  "dependents": 1,
-  "updated": "2022-04-06T01:37:55.222Z",
-  "tags": [
-    "tooling"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 28
+	"name": "svelte-dts",
+	"description": "Typescript declaration generator for svelte.",
+	"repo_url": "https://github.com/andrelmlins/svelte-dts",
+	"authors": ["andrelmlins"],
+	"homepage": "https://github.com/andrelmlins/svelte-dts",
+	"downloads": 2020,
+	"dependents": 1,
+	"updated": "2022-04-06T01:37:55.222Z",
+	"tags": ["tooling"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 28,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

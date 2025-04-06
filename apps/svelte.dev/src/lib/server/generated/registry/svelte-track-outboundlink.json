@@ -1,18 +1,19 @@
 {
-  "name": "svelte-track-outboundlink",
-  "description": "Track outbound links using Google Tag Manager in Svelte apps.",
-  "repo_url": "https://github.com/mikachan/svelte-track-outboundlink",
-  "authors": [
-    "mikachan"
-  ],
-  "homepage": "https://github.com/mikachan/svelte-track-outboundlink#readme",
-  "downloads": 12,
-  "dependents": 0,
-  "updated": "2021-03-26T01:30:33.113Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 2
+	"name": "svelte-track-outboundlink",
+	"description": "Track outbound links using Google Tag Manager in Svelte apps.",
+	"repo_url": "https://github.com/mikachan/svelte-track-outboundlink",
+	"authors": ["mikachan"],
+	"homepage": "https://github.com/mikachan/svelte-track-outboundlink#readme",
+	"downloads": 12,
+	"dependents": 0,
+	"updated": "2021-03-26T01:30:33.113Z",
+	"tags": ["integration"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

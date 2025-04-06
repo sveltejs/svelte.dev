@@ -1,18 +1,19 @@
 {
-  "name": "@sveltinio/services",
-  "description": "Integrate GoogleFonts, Analytics, and Umami in Svelte projects.",
-  "repo_url": "https://github.com/sveltinio/components-library",
-  "authors": [
-    "sveltinio"
-  ],
-  "homepage": "https://components.sveltin.io",
-  "downloads": 11,
-  "dependents": 0,
-  "updated": "2023-10-01T09:55:35.949Z",
-  "tags": [
-    "integration"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 12
+	"name": "@sveltinio/services",
+	"description": "Integrate GoogleFonts, Analytics, and Umami in Svelte projects.",
+	"repo_url": "https://github.com/sveltinio/components-library",
+	"authors": ["sveltinio"],
+	"homepage": "https://components.sveltin.io",
+	"downloads": 11,
+	"dependents": 0,
+	"updated": "2023-10-01T09:55:35.949Z",
+	"tags": ["integration"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 12,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": false
+	}
 }

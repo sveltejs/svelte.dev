@@ -2,6 +2,7 @@ import * as fsp from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import type { Package } from '../../src/lib/server/content.js';
+import { format as prettier_format, resolveConfig, type Options } from 'prettier';
 
 /**
  * Simple queue implementation for limiting concurrent requests
@@ -79,6 +80,8 @@ export interface SuperfetchOptions {
 }
 
 export class PackageCache {
+	static #prettier_config: Options | undefined;
+
 	static #clean_name(name: string) {
 		return name.replace(/@/g, '').replace(/\//g, '-');
 	}
@@ -92,8 +95,21 @@ export class PackageCache {
 		return path.resolve(this.#root_dir, `${this.#clean_name(name)}.json`);
 	}
 
-	static stringify(package_details: Package) {
-		return JSON.stringify(package_details, null, 2);
+	static async stringify(package_details: Package) {
+		if (!this.#prettier_config) {
+			this.#prettier_config = {
+				...(await resolveConfig(new URL('../../.prettierrc', import.meta.url).pathname))!,
+				parser: 'json'
+			};
+		}
+
+		return prettier_format(JSON.stringify(package_details, null, 2), this.#prettier_config);
+	}
+
+	static async format_all() {
+		for await (const [pkg_name, data] of this.entries()) {
+			await this.set(pkg_name, data);
+		}
 	}
 
 	static parse(markdown: string) {
@@ -118,7 +134,7 @@ export class PackageCache {
 	}
 
 	static async set(pkg_name: string, data: Package) {
-		await fsp.writeFile(this.#get_full_path(pkg_name), this.stringify(data));
+		await fsp.writeFile(this.#get_full_path(pkg_name), await this.stringify(data));
 	}
 
 	static async delete(pkg_name: string) {
@@ -372,7 +388,11 @@ export async function process_package_details(
 				deprecated: false,
 				last_updated: '',
 				tags: [],
-				svelte5: false,
+				svelte: {
+					'3': false,
+					'4': false,
+					'5': false
+				},
 				runes: false,
 				repo_url: '',
 				dependents: stats?.dependents || 0,
@@ -383,17 +403,17 @@ export async function process_package_details(
 		};
 
 		// Skip certain packages
-		if (pkg_name === 'svelte' || pkg_name === '@sveltejs/kit') return null;
+		if (pkg_name === 'svelte') return null;
 
 		// Check Svelte dependencies
 		const latest_package_json = package_json.versions[latest_version];
 
 		if (check_svelte_dep_criteria) {
 			if (
-				!latest_package_json.dependencies?.svelte &&
-				!latest_package_json.dependencies?.['@sveltejs/kit'] &&
 				!latest_package_json.peerDependencies?.svelte &&
 				!latest_package_json.peerDependencies?.['@sveltejs/kit'] &&
+				!latest_package_json.dependencies?.svelte &&
+				!latest_package_json.dependencies?.['@sveltejs/kit'] &&
 				!latest_package_json.devDependencies?.svelte &&
 				!latest_package_json.devDependencies?.['@sveltejs/kit']
 			) {
@@ -407,10 +427,7 @@ export async function process_package_details(
 				latest_package_json.dependencies?.svelte ??
 				latest_package_json.devDependencies?.svelte;
 
-			const is_svelte_5 = supports_svelte5(svelte_version);
-			if (is_svelte_5) {
-				interim_pkg.meta.svelte5 = true;
-			}
+			interim_pkg.meta.svelte = supports_svelte_versions(svelte_version);
 		}
 
 		// Get repository URL
@@ -517,16 +534,37 @@ export async function* process_packages(
 }
 
 /**
- * Checks if a semver range supports Svelte version 5.x
+ * Checks if a semver range supports Svelte versions 3.x, 4.x, and 5.x
  */
-export function supports_svelte5(version_range: string): boolean {
-	if (!version_range) return false;
+export function supports_svelte_versions(version_range: string): {
+	3: boolean;
+	4: boolean;
+	5: boolean;
+} {
+	if (!version_range) return { 3: false, 4: false, 5: false };
+
+	// Initialize result object
+	const result = { 3: false, 4: false, 5: false };
 
 	// Handle version range with OR operators first before any other processing
 	if (version_range.includes('||')) {
 		const ranges = version_range.split('||').map((r) => r.trim());
-		// If any sub-range supports v5, the whole range supports it
-		return ranges.some((range) => supports_svelte5(range));
+
+		// Check each range and combine results with OR logic
+		for (const range of ranges) {
+			const range_result = supports_svelte_versions(range);
+			result[3] = result[3] || range_result[3];
+			result[4] = result[4] || range_result[4];
+			result[5] = result[5] || range_result[5];
+		}
+
+		return result;
+	}
+
+	// Handle exact version with equals sign
+	if (version_range.startsWith('=')) {
+		const exact_version = version_range.substring(1);
+		return supports_svelte_versions(exact_version);
 	}
 
 	// Handle hyphen ranges directly (not part of a complex expression)
@@ -537,12 +575,17 @@ export function supports_svelte5(version_range: string): boolean {
 		if (parts.length === 2) {
 			const start = parseFloat(parts[0]);
 			const end = parseFloat(parts[1]);
-			return end >= 5;
+
+			result[3] = start <= 3 && end >= 3;
+			result[4] = start <= 4 && end >= 4;
+			result[5] = start <= 5 && end >= 5;
+
+			return result;
 		}
 	}
 
 	// Handle complex version ranges with both upper and lower bounds in the same expression
-	// Examples: ">=1.0.0 <=4.9.9", ">=3.0.0 <6.0.0"
+	// Examples: ">=1.0.0 <=4.9.9", ">=3.0.0 <6.0.0", ">3.0.0-rc.1 <3.1.0"
 	if (
 		version_range.includes(' ') &&
 		(version_range.includes('<') ||
@@ -551,114 +594,196 @@ export function supports_svelte5(version_range: string): boolean {
 			version_range.includes('>'))
 	) {
 		// Process for complex range with multiple constraints
+		let includes_version_3 = true;
+		let includes_version_4 = true;
 		let includes_version_5 = true;
 
 		// Split by spaces to get individual constraints
-		const constraints = version_range.split(' ');
+		const constraints = version_range
+			.split(' ')
+			.filter(
+				(c) => c.startsWith('<') || c.startsWith('<=') || c.startsWith('>') || c.startsWith('>=')
+			);
+
+		// If we couldn't parse any valid constraints, return false
+		if (constraints.length === 0) {
+			return { 3: false, 4: false, 5: false };
+		}
+
+		// Special case handling for pre-release specific ranges (e.g., ">3.0.0-rc.1 <3.1.0")
+		if (constraints.some((c) => c.includes('-'))) {
+			// Identify if this is a narrow range for a specific major version
+			let major_version = null;
+
+			for (const constraint of constraints) {
+				const match = constraint.match(/[<>=]+\s*(\d+)/);
+				if (match) {
+					const version = parseInt(match[1]);
+					if (major_version === null) {
+						major_version = version;
+					} else if (major_version !== version) {
+						major_version = null; // Different major versions, not a narrow range
+						break;
+					}
+				}
+			}
+
+			// If we identified a specific major version for this pre-release constraint
+			if (major_version !== null) {
+				result[3] = major_version === 3;
+				result[4] = major_version === 4;
+				result[5] = major_version === 5;
+				return result;
+			}
+		}
 
 		for (const constraint of constraints) {
 			if (constraint.startsWith('>=')) {
 				const version_number = parseFloat(constraint.substring(2));
-				// Does not include v5 if lower bound is > 5
-				if (version_number > 5) {
-					includes_version_5 = false;
-				}
+				// Check lower bounds for each version
+				if (version_number > 3) includes_version_3 = false;
+				if (version_number > 4) includes_version_4 = false;
+				if (version_number > 5) includes_version_5 = false;
 			} else if (constraint.startsWith('>')) {
 				const version_number = parseFloat(constraint.substring(1));
-				// Does not include v5 if lower bound is >= 5
-				if (version_number >= 5) {
-					includes_version_5 = false;
-				}
+				// Check lower bounds for each version
+				if (version_number >= 3) includes_version_3 = false;
+				if (version_number >= 4) includes_version_4 = false;
+				if (version_number >= 5) includes_version_5 = false;
 			} else if (constraint.startsWith('<=')) {
 				const version_number = parseFloat(constraint.substring(2));
-				// Does not include v5 if upper bound is < 5
-				if (version_number < 5) {
-					includes_version_5 = false;
-				}
+				// Check upper bounds for each version
+				if (version_number < 3) includes_version_3 = false;
+				if (version_number < 4) includes_version_4 = false;
+				if (version_number < 5) includes_version_5 = false;
 			} else if (constraint.startsWith('<')) {
 				const version_number = parseFloat(constraint.substring(1));
-				// Does not include v5 if upper bound is <= 5
-				if (version_number <= 5) {
-					includes_version_5 = false;
-				}
+				// Check upper bounds for each version
+				if (version_number <= 3) includes_version_3 = false;
+				if (version_number <= 4) includes_version_4 = false;
+				if (version_number <= 5) includes_version_5 = false;
 			}
 		}
 
-		return includes_version_5;
+		result[3] = includes_version_3;
+		result[4] = includes_version_4;
+		result[5] = includes_version_5;
+
+		return result;
 	}
 
-	// Handle exact major version format (5)
-	if (version_range === '5') return true;
+	// Handle exact major version format
+	if (/^[0-9]+$/.test(version_range)) {
+		const version = parseInt(version_range);
+		result[3] = version === 3;
+		result[4] = version === 4;
+		result[5] = version === 5;
+		return result;
+	}
 
-	// Handle caret ranges like ^5 or ^5.0.0 (including pre-release versions)
-	if (version_range.startsWith('^5')) return true;
+	// Handle caret ranges
+	if (version_range.startsWith('^')) {
+		const major_version = parseInt(version_range.substring(1).split('.')[0]);
+		result[3] = major_version === 3;
+		result[4] = major_version === 4;
+		result[5] = major_version === 5;
+		return result;
+	}
 
-	// Handle pre-release versions of 5.x (e.g., 5.0.0-next.42)
-	if (/^5\.(\d+)\.(\d+)-/.test(version_range)) return true;
+	// Handle pre-release versions directly (e.g., 5.0.0-next.42)
+	if (/^([0-9]+)\.([0-9]+)\.([0-9]+)-/.test(version_range)) {
+		const match = version_range.match(/^([0-9]+)\./);
+		if (match) {
+			// Extract major version from the pre-release
+			const major_version = parseInt(match[1]);
+			result[3] = major_version === 3;
+			result[4] = major_version === 4;
+			result[5] = major_version === 5;
+			return result;
+		}
+	}
 
-	// Handle tilde ranges like ~5 or ~5.0.0
-	if (version_range.startsWith('~5')) return true;
+	// Handle tilde ranges
+	if (version_range.startsWith('~')) {
+		const major_version = parseInt(version_range.substring(1).split('.')[0]);
+		result[3] = major_version === 3;
+		result[4] = major_version === 4;
+		result[5] = major_version === 5;
+		return result;
+	}
 
 	// Handle wildcard (*) by itself, which means any version
-	if (version_range === '*') return true;
-
-	// Handle * and x ranges (e.g., "5.x", "5.*")
-	if (
-		version_range.startsWith('5.') &&
-		(version_range.endsWith('*') || version_range.endsWith('x'))
-	) {
-		return true;
+	if (version_range === '*') {
+		return { 3: true, 4: true, 5: true };
 	}
 
-	// Handle >= ranges (after checking for complex ranges)
+	// Handle * and x ranges (e.g., "3.x", "4.*")
+	if (/^([0-9]+)\.(x|\*)/.test(version_range)) {
+		const match = version_range.match(/^([0-9]+)\./);
+		if (match) {
+			const major_version = parseInt(match[1]);
+			result[3] = major_version === 3;
+			result[4] = major_version === 4;
+			result[5] = major_version === 5;
+			return result;
+		}
+	}
+
+	// Handle >= ranges
 	if (version_range.startsWith('>=')) {
 		const version_number = parseFloat(version_range.substring(2));
-		return version_number <= 5;
+		result[3] = version_number <= 3;
+		result[4] = version_number <= 4;
+		result[5] = version_number <= 5;
+		return result;
 	}
 
 	// Handle > ranges
 	if (version_range.startsWith('>')) {
 		const version_number = parseFloat(version_range.substring(1));
-		return version_number < 5;
+		result[3] = version_number < 3;
+		result[4] = version_number < 4;
+		result[5] = version_number < 5;
+		return result;
 	}
 
 	// Handle <= ranges
 	if (version_range.startsWith('<=')) {
 		const version_number = parseFloat(version_range.substring(2));
-		return version_number >= 5;
+		result[3] = version_number >= 3;
+		result[4] = version_number >= 4;
+		result[5] = version_number >= 5;
+		return result;
 	}
 
 	// Handle < ranges
 	if (version_range.startsWith('<')) {
 		const version_number = parseFloat(version_range.substring(1));
-		return version_number > 5;
+		result[3] = version_number > 3;
+		result[4] = version_number > 4;
+		result[5] = version_number > 5;
+		return result;
 	}
 
-	// Handle exact versions of non-5 (like 4.0.0 or 6.0.0)
-	if (/^\d+(\.\d+)*$/.test(version_range)) {
+	// Handle exact versions (like 3.0.0, 4.1.2, etc.)
+	if (/^[0-9]+\.[0-9]+\.[0-9]+$/.test(version_range)) {
 		const major_version = parseInt(version_range.split('.')[0]);
-		return major_version === 5;
+		result[3] = major_version === 3;
+		result[4] = major_version === 4;
+		result[5] = major_version === 5;
+		return result;
 	}
 
-	// Handle other caret ranges (^4.x.x, ^6.x.x)
-	if (version_range.startsWith('^')) {
-		const major_version = parseInt(version_range.substring(1).split('.')[0]);
-		return major_version === 5;
-	}
-
-	// Handle other tilde ranges (~4.x.x, ~6.x.x)
-	if (version_range.startsWith('~')) {
-		const major_version = parseInt(version_range.substring(1).split('.')[0]);
-		return major_version === 5;
-	}
-
-	// Handle other x-ranges (4.x, 6.x)
+	// Handle x-ranges (3.x.x, 4.x, etc.)
 	if (version_range.includes('.x') || version_range.includes('.*')) {
 		const major_version = parseInt(version_range.split('.')[0]);
-		return major_version === 5;
+		result[3] = major_version === 3;
+		result[4] = major_version === 4;
+		result[5] = major_version === 5;
+		return result;
 	}
 
-	return false;
+	return result;
 }
 
 /** Options for searching npm packages */
@@ -696,7 +821,11 @@ export type StructuredInterimPackage = {
 		downloads?: number;
 		dependents?: number;
 		github_stars?: number;
-		svelte5: boolean;
+		svelte: {
+			3: boolean;
+			4: boolean;
+			5: boolean;
+		};
 		runes: boolean;
 		repo_url: string;
 		fork_of?: string;
@@ -723,7 +852,7 @@ export function structured_interim_package_to_package(
 	data.updated = structured_package.meta.last_updated;
 	data.tags = structured_package.meta.tags;
 	data.github_stars = structured_package.meta.github_stars;
-	data.svelte5 = structured_package.meta.svelte5;
+	data.svelte = structured_package.meta.svelte;
 	data.runes = structured_package.meta.runes;
 
 	return data;

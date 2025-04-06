@@ -1,18 +1,19 @@
 {
-  "name": "svelte-golden-layout",
-  "description": "GoldenLayout 2.x Wrapper for Svelte.",
-  "repo_url": "https://github.com/SillyFreak/svelte-golden-layout",
-  "authors": [
-    "sillyfreak"
-  ],
-  "homepage": "https://github.com/SillyFreak/svelte-golden-layout#readme",
-  "downloads": 1825,
-  "dependents": 0,
-  "updated": "2022-03-14T15:03:53.148Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 40
+	"name": "svelte-golden-layout",
+	"description": "GoldenLayout 2.x Wrapper for Svelte.",
+	"repo_url": "https://github.com/SillyFreak/svelte-golden-layout",
+	"authors": ["sillyfreak"],
+	"homepage": "https://github.com/SillyFreak/svelte-golden-layout#readme",
+	"downloads": 1825,
+	"dependents": 0,
+	"updated": "2022-03-14T15:03:53.148Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 40,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

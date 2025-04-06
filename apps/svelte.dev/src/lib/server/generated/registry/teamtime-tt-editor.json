@@ -1,16 +1,17 @@
 {
-  "name": "@teamtime/tt-editor",
-  "description": "Create WYSIWYG editor for Svelte with ProseMirror and Tailwind.",
-  "repo_url": "https://bitbucket.org/amigoalt/tt-editor/src/tailwind_implemented/",
-  "authors": [
-    "amigoalt"
-  ],
-  "downloads": 11,
-  "dependents": 0,
-  "updated": "2020-09-20T18:25:16.997Z",
-  "tags": [
-    "content"
-  ],
-  "svelte5": false,
-  "runes": false
+	"name": "@teamtime/tt-editor",
+	"description": "Create WYSIWYG editor for Svelte with ProseMirror and Tailwind.",
+	"repo_url": "https://bitbucket.org/amigoalt/tt-editor/src/tailwind_implemented/",
+	"authors": ["amigoalt"],
+	"downloads": 11,
+	"dependents": 0,
+	"updated": "2020-09-20T18:25:16.997Z",
+	"tags": ["content"],
+	"svelte5": false,
+	"runes": false,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

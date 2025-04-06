@@ -1,18 +1,19 @@
 {
-  "name": "@rootenginear/svelte-action-motionone",
-  "description": "Animate Svelte elements using Motion One with Svelte actions.",
-  "repo_url": "https://github.com/rootEnginear/svelte-action-motionone",
-  "authors": [
-    "rootenginear"
-  ],
-  "homepage": "https://github.com/rootEnginear/svelte-action-motionone#readme",
-  "downloads": 6,
-  "dependents": 0,
-  "updated": "2024-09-28T18:29:21.619Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 12
+	"name": "@rootenginear/svelte-action-motionone",
+	"description": "Animate Svelte elements using Motion One with Svelte actions.",
+	"repo_url": "https://github.com/rootEnginear/svelte-action-motionone",
+	"authors": ["rootenginear"],
+	"homepage": "https://github.com/rootEnginear/svelte-action-motionone#readme",
+	"downloads": 6,
+	"dependents": 0,
+	"updated": "2024-09-28T18:29:21.619Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 12,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

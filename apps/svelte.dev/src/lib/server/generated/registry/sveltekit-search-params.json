@@ -1,18 +1,19 @@
 {
-  "name": "sveltekit-search-params",
-  "description": "Read and write query search params in SvelteKit applications.",
-  "repo_url": "https://github.com/paoloricciuti/sveltekit-search-params",
-  "authors": [
-    "pablopang"
-  ],
-  "homepage": "https://sveltekit-search-params.netlify.app",
-  "downloads": 6765,
-  "dependents": 0,
-  "updated": "2024-07-28T17:17:48.621Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": true,
-  "runes": false,
-  "github_stars": 587
+	"name": "sveltekit-search-params",
+	"description": "Read and write query search params in SvelteKit applications.",
+	"repo_url": "https://github.com/paoloricciuti/sveltekit-search-params",
+	"authors": ["pablopang"],
+	"homepage": "https://sveltekit-search-params.netlify.app",
+	"downloads": 6765,
+	"dependents": 0,
+	"updated": "2024-07-28T17:17:48.621Z",
+	"tags": ["miscellaneous"],
+	"svelte5": true,
+	"runes": false,
+	"github_stars": 587,
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	}
 }

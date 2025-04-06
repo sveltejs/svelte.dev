@@ -1,18 +1,19 @@
 {
-  "name": "svelte-cleanable-store",
-  "description": "Create Svelte stores with built-in cleanup support.",
-  "repo_url": "https://github.com/Skaldebane/svelte-cleanable-store",
-  "authors": [
-    "skaldebane"
-  ],
-  "homepage": "https://github.com/Skaldebane/svelte-cleanable-store#readme",
-  "downloads": 5,
-  "dependents": 0,
-  "updated": "2024-02-16T15:51:05.541Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 2
+	"name": "svelte-cleanable-store",
+	"description": "Create Svelte stores with built-in cleanup support.",
+	"repo_url": "https://github.com/Skaldebane/svelte-cleanable-store",
+	"authors": ["skaldebane"],
+	"homepage": "https://github.com/Skaldebane/svelte-cleanable-store#readme",
+	"downloads": 5,
+	"dependents": 0,
+	"updated": "2024-02-16T15:51:05.541Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 2,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

@@ -1,18 +1,19 @@
 {
-  "name": "svelte-overlay",
-  "description": "Create overlay components for dropdowns, tooltips, and popovers.",
-  "repo_url": "https://github.com/wysher/svelte-overlay",
-  "authors": [
-    "wysher"
-  ],
-  "homepage": "https://github.com/wysher/svelte-overlay#readme",
-  "downloads": 33,
-  "dependents": 0,
-  "updated": "2020-06-07T15:38:40.344Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 22
+	"name": "svelte-overlay",
+	"description": "Create overlay components for dropdowns, tooltips, and popovers.",
+	"repo_url": "https://github.com/wysher/svelte-overlay",
+	"authors": ["wysher"],
+	"homepage": "https://github.com/wysher/svelte-overlay#readme",
+	"downloads": 33,
+	"dependents": 0,
+	"updated": "2020-06-07T15:38:40.344Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 22,
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	}
 }

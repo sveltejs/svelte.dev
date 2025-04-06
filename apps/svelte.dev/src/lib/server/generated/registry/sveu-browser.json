@@ -1,18 +1,19 @@
 {
-  "name": "@sveu/browser",
-  "description": "Provides browser utilities for Svelte, type-safe and SSR friendly.",
-  "repo_url": "https://github.com/svelte-u/browser",
-  "authors": [
-    "mohamed-kaizen"
-  ],
-  "homepage": "https://github.com/svelte-u/browser#readme",
-  "downloads": 89,
-  "dependents": 1,
-  "updated": "2023-09-18T11:22:29.271Z",
-  "tags": [
-    "miscellaneous"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 15
+	"name": "@sveu/browser",
+	"description": "Provides browser utilities for Svelte, type-safe and SSR friendly.",
+	"repo_url": "https://github.com/svelte-u/browser",
+	"authors": ["mohamed-kaizen"],
+	"homepage": "https://github.com/svelte-u/browser#readme",
+	"downloads": 89,
+	"dependents": 1,
+	"updated": "2023-09-18T11:22:29.271Z",
+	"tags": ["miscellaneous"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 15,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }

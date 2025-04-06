@@ -110,9 +110,12 @@ export function search(
 	options: {
 		tags?: string[];
 		sort_by?: SortCriterion;
-		direction?: SortDirection;
 		filters?: {
-			svelte_5_only?: boolean;
+			svelte_versions?: {
+				3?: boolean;
+				4?: boolean;
+				5?: boolean;
+			};
 			hide_outdated?: boolean;
 		};
 	} = {}
@@ -121,14 +124,30 @@ export function search(
 		throw new Error('Search index not initialized. Call init() first.');
 	}
 
-	const { tags = [], sort_by = 'popularity', direction = 'dsc', filters = {} } = options;
-	const { svelte_5_only = false, hide_outdated = false } = filters;
+	const { tags = [], sort_by = 'popularity', filters = {} } = options;
+
+	const { svelte_versions = { 3: true, 4: true, 5: true }, hide_outdated = false } = filters;
 
 	// Normalize query to empty string if null or undefined
 	const normalized_query = query === null || query === undefined ? '' : query;
 
 	const has_query = normalized_query.trim().length > 0;
 	const has_tags = tags.length > 0;
+	const has_version_filter =
+		svelte_versions['3'] !== undefined ||
+		svelte_versions['4'] !== undefined ||
+		svelte_versions['5'] !== undefined;
+
+	// Function to check if a package matches the version filters
+	const matches_svelte_version = (pkg: Package): boolean => {
+		if (!has_version_filter) return true;
+
+		return !!(
+			(svelte_versions['3'] && pkg.svelte?.['3']) ||
+			(svelte_versions['4'] && pkg.svelte?.['4']) ||
+			(svelte_versions['5'] && pkg.svelte?.['5'])
+		);
+	};
 
 	// Get all packages that match the criteria
 	let result_packages: Package[] = [];
@@ -178,8 +197,8 @@ export function search(
 						continue;
 					}
 
-					// Apply Svelte 5 filter if enabled
-					if (svelte_5_only && !pkg.svelte5) {
+					// Apply Svelte version filter
+					if (!matches_svelte_version(pkg)) {
 						continue;
 					}
 
@@ -227,7 +246,7 @@ export function search(
 					score += Math.log10(downloads + 1) * DOWNLOADS_BOOST;
 
 					// If svelte 5, give boost
-					if (pkg.svelte5) {
+					if (pkg.svelte?.['5']) {
 						score *= SVELTE_5_BOOST;
 					}
 
@@ -255,13 +274,8 @@ export function search(
 					entries.push({ package: pkg, score });
 				}
 
-				// Sort by score, considering direction
-				const sorted_entries = entries.sort((a, b) => {
-					const comparison = b.score - a.score;
-					return direction === 'asc' ? -comparison : comparison;
-				});
-
-				result_packages = sorted_entries.map((entry) => entry.package);
+				// Sort by score
+				result_packages = entries.sort((a, b) => b.score - a.score).map((entry) => entry.package);
 			} else {
 				// For other sort criteria, directly extract and sort the packages
 				const matched_packages: Package[] = [];
@@ -281,8 +295,8 @@ export function search(
 						continue;
 					}
 
-					// Apply Svelte 5 filter if enabled
-					if (svelte_5_only && !pkg.svelte5) {
+					// Apply Svelte version filter
+					if (!matches_svelte_version(pkg)) {
 						continue;
 					}
 
@@ -294,7 +308,7 @@ export function search(
 					matched_packages.push(pkg);
 				}
 
-				// Sort directly by the selected criterion, considering direction
+				// Sort directly by the selected criterion
 				result_packages = matched_packages.sort((a, b) => sort_packages(a, b, sort_by));
 			}
 		}
@@ -302,9 +316,9 @@ export function search(
 
 	// Apply filters to results when not using search (cases 1 & 2)
 	if (!has_query) {
-		// Apply Svelte 5 filter if enabled
-		if (svelte_5_only) {
-			result_packages = result_packages.filter((pkg) => pkg.svelte5);
+		// Apply Svelte version filter
+		if (has_version_filter) {
+			result_packages = result_packages.filter(matches_svelte_version);
 		}
 
 		// Apply outdated filter if not showing outdated packages

@@ -1,18 +1,19 @@
 {
-  "name": "svelte-fullcalendar",
-  "description": "Svelte component wrapper around FullCalendar.",
-  "repo_url": "https://github.com/YogliB/svelte-fullcalendar",
-  "authors": [
-    "yoglib"
-  ],
-  "homepage": "https://github.com/YogliB/svelte-fullcalendar#readme",
-  "downloads": 1581,
-  "dependents": 3,
-  "updated": "2023-09-14T15:26:31.125Z",
-  "tags": [
-    "ui"
-  ],
-  "svelte5": false,
-  "runes": false,
-  "github_stars": 198
+	"name": "svelte-fullcalendar",
+	"description": "Svelte component wrapper around FullCalendar.",
+	"repo_url": "https://github.com/YogliB/svelte-fullcalendar",
+	"authors": ["yoglib"],
+	"homepage": "https://github.com/YogliB/svelte-fullcalendar#readme",
+	"downloads": 1581,
+	"dependents": 3,
+	"updated": "2023-09-14T15:26:31.125Z",
+	"tags": ["ui"],
+	"svelte5": false,
+	"runes": false,
+	"github_stars": 198,
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	}
 }
