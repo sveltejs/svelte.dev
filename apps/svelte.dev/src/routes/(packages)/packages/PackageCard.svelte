@@ -225,8 +225,8 @@
 	}
 
 	article {
-		display: flex;
-		flex-direction: column;
+		display: grid;
+		grid-template-rows: auto 1fr auto;
 		box-sizing: border-box;
 
 		height: 100%;
