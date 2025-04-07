@@ -32,7 +32,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		background: white url('./image-viewer-background.svg');
+		background: white url(./image-viewer-background.svg);
 	}
 
 	img {
