@@ -1,11 +1,13 @@
 import MagicString from 'magic-string';
-import { createHash, Hash } from 'node:crypto';
+import { createHash, type Hash } from 'node:crypto';
 import fs from 'node:fs';
 import process from 'node:process';
 import path from 'node:path';
 import ts from 'typescript';
 import * as marked from 'marked';
-import { codeToHtml, createCssVariablesTheme } from 'shiki';
+import { createHighlighterCore } from 'shiki/core';
+import { createOnigurumaEngine } from 'shiki/engine/oniguruma';
+import { createCssVariablesTheme } from 'shiki';
 import { transformerTwoslash } from '@shikijs/twoslash';
 import { SHIKI_LANGUAGE_MAP, slugify, smart_quotes, transform } from './utils';
 
@@ -42,6 +44,20 @@ if (!fs.existsSync(original_file)) {
 }
 hash_graph(hash, original_file);
 const digest = hash.digest().toString('base64').replace(/\//g, '-');
+
+const highlighter = await createHighlighterCore({
+	themes: [],
+	langs: [
+		import('@shikijs/langs/javascript'),
+		import('@shikijs/langs/typescript'),
+		import('@shikijs/langs/html'),
+		import('@shikijs/langs/css'),
+		import('@shikijs/langs/bash'),
+		import('@shikijs/langs/yaml'),
+		import('@shikijs/langs/svelte')
+	],
+	engine: createOnigurumaEngine(import('shiki/wasm'))
+});
 
 /**
  * Utility function to work with code snippet caching.
@@ -722,7 +738,7 @@ async function syntax_highlight({
 
 	if (/^(dts|yaml|yml)/.test(language)) {
 		html = replace_blank_lines(
-			await codeToHtml(source, {
+			highlighter.codeToHtml(source, {
 				lang: language === 'dts' ? 'ts' : language,
 				theme
 			})
@@ -737,7 +753,7 @@ async function syntax_highlight({
 		});
 
 		try {
-			html = await codeToHtml(prelude + redacted, {
+			html = highlighter.codeToHtml(prelude + redacted, {
 				lang: language,
 				theme,
 				transformers: check
@@ -833,7 +849,7 @@ async function syntax_highlight({
 
 		html = replace_blank_lines(html);
 	} else {
-		const highlighted = await codeToHtml(source, {
+		const highlighted = highlighter.codeToHtml(source, {
 			lang: SHIKI_LANGUAGE_MAP[language as keyof typeof SHIKI_LANGUAGE_MAP],
 			theme
 		});

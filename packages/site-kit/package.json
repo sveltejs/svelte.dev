@@ -38,6 +38,7 @@
 		"@fontsource/fira-sans": "^5.1.0",
 		"@lezer/common": "^1.0.4",
 		"@replit/codemirror-lang-svelte": "^6.0.0",
+		"@shikijs/langs": "^3.2.1",
 		"@shikijs/twoslash": "^3.2.1",
 		"esm-env": "^1.0.0",
 		"json5": "^2.2.3",
