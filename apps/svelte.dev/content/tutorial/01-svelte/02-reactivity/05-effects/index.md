@@ -41,7 +41,7 @@ $effect(() => {
 });
 ```
 
-The cleanup function is called immediately before the effect function re-runs when `interval` changes, and also when the component is destroyed.
+An effect can return a teardown function which will run immediately before the effect re-runs. That's why are returning the cleanup function here so the lastly created interval is properly removed. The cleanup function will also run when the component is destroyed.
 
 If the effect function doesn't read any state when it runs, it will only run once, when the component mounts.
 
