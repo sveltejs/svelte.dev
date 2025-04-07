@@ -188,7 +188,9 @@
 
 				{#if qps.query}
 					<div class="sub">
-						<span>Showing {packages?.length} results</span>
+						<span
+							>Showing {packages.packages?.length ?? 0 + packages.sv_add?.length ?? 0} results</span
+						>
 
 						<span style="flex: 1 1 auto"></span>
 
@@ -283,9 +285,23 @@
 		</section>
 
 		<div class="posts" style="display: {!qps.query ? 'none' : null}">
-			{#each packages as pkg}
-				<PackageCard {pkg} />
-			{/each}
+			{#if packages.sv_add.length > 0}
+				<h2>sv add</h2>
+				<section>
+					{#each packages.sv_add as pkg}
+						<PackageCard {pkg} />
+					{/each}
+				</section>
+			{/if}
+
+			{#if packages.packages.length > 0}
+				<h2>Packages</h2>
+				<section>
+					{#each packages.packages as pkg}
+						<PackageCard {pkg} />
+					{/each}
+				</section>
+			{/if}
 		</div>
 	</div>
 </div>
@@ -492,12 +508,16 @@
 	}
 
 	.posts {
-		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(37rem, 1fr));
-		/* grid-auto-rows: 0.8fr; */
-		gap: 2rem;
-		flex-direction: column;
-		margin-block-start: 4rem;
+		margin-block-start: 2rem;
+		& > section {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(37rem, 1fr));
+			/* grid-auto-rows: 0.8fr; */
+			gap: 2rem;
+			flex-direction: column;
+			margin-block-start: 2rem;
+			margin-block-end: 4rem;
+		}
 	}
 
 	@media (min-width: 832px) {

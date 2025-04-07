@@ -57,7 +57,7 @@ const TAGS = {
 
 const SV_ADD = {
 	packages: [
-		'drizzle',
+		'drizzle-orm',
 		'eslint',
 		'lucia',
 		'mdsvex',
@@ -69,7 +69,8 @@ const SV_ADD = {
 		'vitest'
 	],
 	alias: {
-		'@inlang/paraglide-js': 'paraglidejs'
+		'@inlang/paraglide-js': 'paraglidejs',
+		'drizzle-orm': 'drizzle'
 	}
 };
 
@@ -270,7 +271,7 @@ const OVERRIDES = new Map<string | RegExp, boolean | number | Partial<Package>>(
 	['phosphor-svelte', true],
 	['@iconify/tailwind4', true],
 	['@unocss/preset-icons', true],
-	['drizzle', true],
+	['drizzle-orm', true],
 	['prettier', true],
 	['storybook', true],
 	['tailwindcss', true]

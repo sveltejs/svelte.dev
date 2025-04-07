@@ -1,3 +1,4 @@
+import { PACKAGES_META } from '$lib/packages-meta';
 import type { Package, PackageGroup } from '$lib/server/content';
 import flexsearch, { type Index as FlexSearchIndex } from 'flexsearch';
 
@@ -119,7 +120,10 @@ export function search(
 			hide_outdated?: boolean;
 		};
 	} = {}
-): Package[] {
+): {
+	packages: Package[];
+	sv_add: Package[];
+} {
 	if (!is_inited) {
 		throw new Error('Search index not initialized. Call init() first.');
 	}
@@ -199,7 +203,7 @@ export function search(
 					}
 
 					// Apply Svelte version filter
-					if (!matches_svelte_version(pkg)) {
+					if (!matches_svelte_version(pkg) && !PACKAGES_META.SV_ADD.packages.includes(pkg.name)) {
 						continue;
 					}
 
@@ -331,7 +335,22 @@ export function search(
 		result_packages = result_packages.sort((a, b) => sort_packages(a, b, sort_by));
 	}
 
-	return result_packages;
+	// return result_packages;
+	const final: ReturnType<typeof search> = {
+		packages: [],
+		sv_add: []
+	};
+
+	for (const pkg of result_packages) {
+		if (PACKAGES_META.SV_ADD.packages.includes(pkg.name)) {
+			console.log('1');
+			final.sv_add.push(pkg);
+		} else {
+			final.packages.push(pkg);
+		}
+	}
+
+	return final;
 }
 
 /**
