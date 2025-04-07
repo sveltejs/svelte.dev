@@ -74,8 +74,7 @@ const config: UserConfig = {
 		exclude: ['@sveltejs/site-kit', '@sveltejs/repl', '@rollup/browser']
 	},
 	ssr: {
-		noExternal: ['@sveltejs/site-kit', '@sveltejs/repl'],
-		external: ['shiki', '@shikijs/twoslash']
+		noExternal: ['@sveltejs/site-kit', '@sveltejs/repl']
 	},
 	worker: {
 		format: 'es'
