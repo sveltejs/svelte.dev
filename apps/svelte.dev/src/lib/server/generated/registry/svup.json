@@ -1,0 +1,18 @@
+{
+	"name": "svup",
+	"description": "Provides Yup validation for Svelte forms using actions.",
+	"repo_url": "https://github.com/FalkaiPeter/svup",
+	"authors": ["falkai_peter"],
+	"homepage": "https://github.com/FalkaiPeter/svup#readme",
+	"downloads": 21,
+	"dependents": 0,
+	"updated": "2022-12-29T15:39:07.945Z",
+	"tags": ["tooling"],
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	},
+	"runes": false,
+	"github_stars": 0
+}

@@ -1,0 +1,16 @@
+{
+	"name": "svelte-procedures",
+	"description": "Create step-by-step procedures in Svelte applications.",
+	"repo_url": "",
+	"authors": ["esinx"],
+	"downloads": 7,
+	"dependents": 0,
+	"updated": "2020-07-15T19:11:39.811Z",
+	"tags": ["miscellaneous"],
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	},
+	"runes": false
+}

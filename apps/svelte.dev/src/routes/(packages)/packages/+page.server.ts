@@ -30,7 +30,18 @@ export async function load({ url }) {
 	const packages_count = registry.length;
 
 	// If query doesn't exist, we show netflix style page. For this, send pre-done cards with categories
-	const homepage_data: { title: string; packages: Package[] }[] = [];
+	const homepage_data: { title: string; packages: Package[] }[] = [
+		{
+			title: 'sv add',
+			packages: (
+				PACKAGES_META.SV_ADD.packages
+					.map((name) => registry.find((pkg) => pkg.name === name) ?? null)
+					.filter((v) => Boolean(v)) as Package[]
+			)
+				.filter((v) => !v.outdated)
+				.sort((a, b) => sort_packages(a, b, 'popularity'))
+		}
+	];
 	for (const { packages, title, weights } of PACKAGES_META.FEATURED) {
 		homepage_data.push({
 			title,

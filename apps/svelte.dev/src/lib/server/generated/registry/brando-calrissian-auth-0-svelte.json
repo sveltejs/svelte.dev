@@ -1,0 +1,16 @@
+{
+	"name": "@brando-calrissian/auth-0-svelte",
+	"description": "Authenticates client ID to Auth0 domain, stores user data.",
+	"repo_url": "",
+	"authors": ["brando-calrissian"],
+	"downloads": 2,
+	"dependents": 0,
+	"updated": "2021-02-22T01:39:07.503Z",
+	"tags": ["auth"],
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	},
+	"runes": false
+}

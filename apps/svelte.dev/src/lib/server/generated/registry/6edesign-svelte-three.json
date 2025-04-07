@@ -1,0 +1,16 @@
+{
+	"name": "@6edesign/svelte-three",
+	"description": "Create Mograph experiments with Three.js.",
+	"repo_url": "",
+	"authors": ["6edesign"],
+	"downloads": 22,
+	"dependents": 0,
+	"updated": "2021-01-20T04:40:39.253Z",
+	"tags": ["ui"],
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	},
+	"runes": false
+}

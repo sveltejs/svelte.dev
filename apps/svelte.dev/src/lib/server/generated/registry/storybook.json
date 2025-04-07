@@ -1,0 +1,27 @@
+{
+	"name": "storybook",
+	"description": "Develop UI components in isolation.",
+	"repo_url": "https://github.com/storybookjs/storybook",
+	"authors": [
+		"ndelangen",
+		"tmeasday",
+		"ghengeveld",
+		"kasperpeulen",
+		"shilman",
+		"jreinhold",
+		"valentinpalkovic",
+		"storybook-bot"
+	],
+	"homepage": "https://github.com/storybookjs/storybook/tree/next/code/lib/cli",
+	"downloads": 6110766,
+	"dependents": 803,
+	"updated": "2025-04-02T17:03:02.202Z",
+	"tags": ["tooling"],
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	},
+	"runes": false,
+	"github_stars": 86309
+}

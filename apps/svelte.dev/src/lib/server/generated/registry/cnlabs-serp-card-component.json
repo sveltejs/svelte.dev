@@ -1,0 +1,16 @@
+{
+	"name": "@cnlabs/serp-card-component",
+	"description": "Create SERP card components with tests.",
+	"repo_url": "",
+	"authors": ["migger", "kammif", "fmckey", "barakuda"],
+	"downloads": 92,
+	"dependents": 0,
+	"updated": "2022-05-06T15:32:15.588Z",
+	"tags": ["ui"],
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	},
+	"runes": false
+}

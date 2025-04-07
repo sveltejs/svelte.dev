@@ -1,0 +1,16 @@
+{
+	"name": "gentosvelte-ui",
+	"description": "Provide lightweight, reusable Svelte UI components.",
+	"repo_url": "",
+	"authors": ["ryugenxd"],
+	"downloads": 120,
+	"dependents": 0,
+	"updated": "2025-03-24T10:38:35.028Z",
+	"tags": ["ui"],
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	},
+	"runes": false
+}

@@ -1,0 +1,18 @@
+{
+	"name": "flowbite-svelte-illustrations",
+	"description": "Provide free and open-source SVG illustrations.",
+	"repo_url": "https://github.com/shinokada/flowbite-svelte-illustrations",
+	"authors": ["shinichiokada"],
+	"homepage": "https://flowbite-svelte-illustrations.codewithshin.com/",
+	"downloads": 189,
+	"dependents": 0,
+	"updated": "2025-04-01T06:23:03.821Z",
+	"tags": ["ui"],
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	},
+	"runes": false,
+	"github_stars": 1
+}

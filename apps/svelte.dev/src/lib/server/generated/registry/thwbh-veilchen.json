@@ -1,0 +1,18 @@
+{
+	"name": "@thwbh/veilchen",
+	"description": "Reusable Svelte components styled with DaisyUI.",
+	"repo_url": "https://github.com/thwbh/veilchen",
+	"authors": ["tohuwabohu"],
+	"homepage": "https://veilchen.tohuwabohu.io/",
+	"downloads": 34,
+	"dependents": 0,
+	"updated": "2025-04-06T11:35:04.678Z",
+	"tags": ["ui"],
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	},
+	"runes": false,
+	"github_stars": 0
+}

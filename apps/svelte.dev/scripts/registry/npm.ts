@@ -420,15 +420,15 @@ export async function process_package_details(
 				console.log(`Package ${pkg_name} is not a Svelte package, skipping`);
 				return null; // Skip non-Svelte packages
 			}
-
-			// Get Svelte version
-			const svelte_version =
-				latest_package_json.peerDependencies?.svelte ??
-				latest_package_json.dependencies?.svelte ??
-				latest_package_json.devDependencies?.svelte;
-
-			interim_pkg.meta.svelte = supports_svelte_versions(svelte_version);
 		}
+
+		// Get Svelte version
+		const svelte_version =
+			latest_package_json.peerDependencies?.svelte ??
+			latest_package_json.dependencies?.svelte ??
+			latest_package_json.devDependencies?.svelte;
+
+		interim_pkg.meta.svelte = supports_svelte_versions(svelte_version);
 
 		// Get repository URL
 		if (latest_package_json.repository) {

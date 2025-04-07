@@ -1,0 +1,16 @@
+{
+	"name": "utfpr-svelte",
+	"description": "Create UI components for Svelte, following UTFPR Design System.",
+	"repo_url": "git@gitlab.utfpr.edu.br:desis/utfpr-svelte",
+	"authors": ["edujed"],
+	"downloads": 67,
+	"dependents": 0,
+	"updated": "2022-12-01T19:07:38.938Z",
+	"tags": ["ui", "design-system"],
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	},
+	"runes": false
+}

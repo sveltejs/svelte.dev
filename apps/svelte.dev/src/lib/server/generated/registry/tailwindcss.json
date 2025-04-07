@@ -1,0 +1,18 @@
+{
+	"name": "tailwindcss",
+	"description": "Rapidly build custom user interfaces with utility-first CSS.",
+	"repo_url": "https://github.com/tailwindlabs/tailwindcss",
+	"authors": ["malfaitrobin", "adamwathan", "reinink"],
+	"homepage": "https://tailwindcss.com",
+	"downloads": 19200543,
+	"dependents": 7010,
+	"updated": "2025-04-04T18:11:56.153Z",
+	"tags": ["ui"],
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": false
+	},
+	"runes": false,
+	"github_stars": 86941
+}

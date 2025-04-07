@@ -1,0 +1,17 @@
+{
+	"name": "@webcomponents-dev/svelte-console",
+	"description": "Display JSON data with a console component for Svelte.",
+	"repo_url": "https://github.com/webcomponents-dev/svelte-console",
+	"authors": ["_wcd_", "georges-gomes", "gluck", "gqio"],
+	"homepage": "https://github.com/webcomponents-dev/svelte-console#readme",
+	"downloads": 2,
+	"dependents": 0,
+	"updated": "2019-11-20T15:34:32.682Z",
+	"tags": ["ui"],
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	},
+	"runes": false
+}

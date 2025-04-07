@@ -1,0 +1,17 @@
+{
+	"name": "web-component-framework",
+	"description": "Develop reusable web components using Svelte.",
+	"repo_url": "https://github.com/Echo5414/web-component-framework",
+	"authors": ["echo5414"],
+	"homepage": "https://github.com/Echo5414/web-component-framework#readme",
+	"downloads": 24,
+	"dependents": 0,
+	"updated": "2024-06-15T18:00:13.246Z",
+	"tags": ["tooling"],
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	},
+	"runes": false
+}

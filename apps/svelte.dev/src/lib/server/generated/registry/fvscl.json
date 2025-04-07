@@ -1,0 +1,17 @@
+{
+	"name": "fvscl",
+	"description": "Build fluid, visually scaling component library for Svelte.",
+	"repo_url": "git@gitlab.com/superallan/fvscl",
+	"authors": ["allancorbett"],
+	"homepage": "https://gitlab.com/superallan/fvscl#readme",
+	"downloads": 3,
+	"dependents": 0,
+	"updated": "2020-04-17T09:02:29.722Z",
+	"tags": ["ui"],
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	},
+	"runes": false
+}

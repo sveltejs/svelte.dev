@@ -1,0 +1,16 @@
+{
+	"name": "ccs-ui",
+	"description": "Reusable Svelte components for Budibase organization.",
+	"repo_url": "",
+	"authors": ["crecatalyst"],
+	"downloads": 2,
+	"dependents": 1,
+	"updated": "2021-04-20T17:40:52.457Z",
+	"tags": ["design-system"],
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	},
+	"runes": false
+}

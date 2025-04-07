@@ -1,0 +1,17 @@
+{
+	"name": "svelte-tick-timer",
+	"description": "Provides Svelte components for time-based events and timers.",
+	"repo_url": "",
+	"authors": ["7korobi"],
+	"homepage": "https://github.com/7korobi/svelte-tick-timer/blob/main/src/lib/",
+	"downloads": 22,
+	"dependents": 1,
+	"updated": "2022-11-05T16:41:22.728Z",
+	"tags": ["miscellaneous"],
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	},
+	"runes": false
+}

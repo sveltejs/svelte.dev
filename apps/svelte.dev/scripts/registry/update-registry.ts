@@ -122,7 +122,8 @@ async function process_batches_through_llm_base({
 	batch_size = 20,
 	max_retries = 2,
 	retry_count = 0,
-	failed_packages = null
+	failed_packages = null,
+	force_include_all_packages = false
 }: {
 	package_source: AsyncGenerator<Map<string, StructuredInterimPackage>>;
 	limit?: number;
@@ -130,6 +131,7 @@ async function process_batches_through_llm_base({
 	max_retries?: number;
 	retry_count?: number;
 	failed_packages?: Map<string, StructuredInterimPackage> | null;
+	force_include_all_packages?: boolean;
 }): Promise<Map<string, StructuredInterimPackage>> {
 	const packages_map = new Map<string, StructuredInterimPackage>();
 	const failed_llm = new Map<string, StructuredInterimPackage>();
@@ -163,10 +165,14 @@ async function process_batches_through_llm_base({
 				console.time(`llm-${batch_id}`);
 				const batch_data = Object.fromEntries(packages);
 
+				console.log({ force_include_all_packages });
 				const { text } = await generateText({
 					model: openrouter('google/gemini-2.0-flash-lite-001'),
 					prompt: `
 				INSTRUCTIONS:
+				${
+					!force_include_all_packages
+						? `
 				Apply this filtering to packages and return ONLY a valid JSON object.
 				
 				1. EXCLUDE any package where:
@@ -179,14 +185,27 @@ async function process_batches_through_llm_base({
 					 - Any package with "carousel" AND "react" in the name
 					 - Any package with "react-" prefix
 					 - Any package with "-react" suffix
+				`
+						: `
+				Process ALL packages in the input and return a valid JSON object.
+				`
+				}
 				
-				3. For INCLUDED packages:
-					 - Assign relevant tags based on functionality
-					 - ALWAYS provide a terse description:
-						 - Must be plain text (no markdown, HTML, or special chars)
-						 - Should be 30-80 characters, direct and to the point
-						 - Use simple present tense verbs
-						 - No need for complete sentences; can omit articles
+				${
+					force_include_all_packages
+						? `
+				For EVERY package:
+				`
+						: `
+				For INCLUDED packages:
+				`
+				}
+				 - Assign relevant tags based on functionality (at least one tag is MANDATORY)
+				 - ALWAYS provide a terse description:
+					 - Must be plain text (no markdown, HTML, or special chars)
+					 - Should be 30-80 characters, direct and to the point
+					 - Use simple present tense verbs
+					 - No need for complete sentences; can omit articles
 				
 				OUTPUT FORMAT:
 				Return ONLY a valid JSON object like this:
@@ -229,20 +248,34 @@ async function process_batches_through_llm_base({
 				
 				Or an empty object {} if no packages qualify.
 				
+				${
+					!force_include_all_packages
+						? `
 				FILTERING LOGIC:
 				1. Exclude packages with other framework names (unless they also have "svelte")
 				2. Exclude packages without 'svelte' in dependencies/peerDependencies
 				3. Exclude packages without \`\`\`svelte code examples in README
 				4. ALWAYS exclude "embla-carousel-react" and similar packages
+				`
+						: `
+				IMPORTANT:
+				Process ALL packages, without applying filtering criteria. Assign at least one tag to EVERY package.
+				`
+				}
 				
 				DESCRIPTION REQUIREMENTS:
-				For ALL qualifying packages:
+				For ${force_include_all_packages ? 'ALL' : 'qualifying'} packages:
 				1. Create terse, direct descriptions (30-80 characters)
 				2. Start with a verb in present tense (Parse, Create, Generate, etc.)
 				3. Focus only on core functionality, omit fluff
 				4. Articles (a, an, the) can be omitted
 				5. Use plain text only - no markdown, HTML, or special characters
 				6. Prioritize brevity over completeness
+				
+				TAG REQUIREMENTS:
+				For ${force_include_all_packages ? 'ALL' : 'qualifying'} packages:
+				1. Every package MUST have at least one tag assigned
+				2. Choose the most relevant tags based on package functionality
 				
 				EXAMPLE FORMATS:
 				- "Parse Svelte markup without parsing script tags, useful for codemods."
@@ -252,7 +285,7 @@ async function process_batches_through_llm_base({
 				
 				SVELTE 5 RUNES DETECTION:
 				For each package, thoroughly analyze code examples to determine if they use Svelte 5 runes and include a "runes" boolean field:
-
+				
 				1. Set "runes": true if ANY of these patterns appear in code examples:
 					
 					STATE MANAGEMENT:
@@ -312,9 +345,9 @@ async function process_batches_through_llm_base({
 				3. Consider package metadata:
 					- If package specifically mentions "Svelte 5" or "runes" support in description
 					- If package.json shows a dependency on "svelte": "^5" or similar
-
+				
 				4. When in doubt, set "runes": false - be conservative with detection
-
+				
 				AVAILABLE TAGS:
 				${JSON.stringify(TAGS_PROMPT)}
 				
@@ -486,12 +519,14 @@ async function process_packages_by_names_through_llm({
 	package_names = [],
 	limit = Infinity,
 	batch_size = 20,
-	max_retries = 2
+	max_retries = 2,
+	force_include_all_packages = false
 }: {
 	package_names?: string[];
 	limit?: number;
 	batch_size?: number;
 	max_retries?: number;
+	force_include_all_packages?: boolean;
 } = {}): Promise<Map<string, StructuredInterimPackage>> {
 	// Source of packages from specific package names
 	const package_source = stream_packages_by_names({
@@ -506,7 +541,8 @@ async function process_packages_by_names_through_llm({
 		package_source,
 		limit,
 		batch_size,
-		max_retries
+		max_retries,
+		force_include_all_packages
 	});
 }
 
@@ -661,7 +697,8 @@ async function update_overrides() {
 		package_names: Array.from(combined_to_crawl),
 		limit: Infinity,
 		batch_size: 20,
-		max_retries: 2
+		max_retries: 2,
+		force_include_all_packages: true
 	});
 
 	// Now go through the to_force_include_and_alter, and merge the existing package data with the one in the override
@@ -831,22 +868,33 @@ async function* create_map_batch_generator(
 	}
 }
 
+async function delete_legacy_svelte5_field() {
+	for await (const [pkg_name, data] of PackageCache.entries()) {
+		// @ts-expect-error
+		if (data.svelte5) {
+			// @ts-expect-error
+			delete data.svelte;
+			PackageCache.set(pkg_name, data);
+		}
+	}
+}
+
 for (let i = 0; i < 1; i++) {
 	// await process_batches_through_llm();
 }
 
-// await update_overrides();
+await update_overrides();
 
 svelte_society_list;
 // await process_packages_by_names_through_llm({ package_names: Object.keys(svelte_society_list) });
 
 // update_cache_from_npm();
-// await update_all_github_data();
+await update_all_github_data();
 
 // await remove_forks();
 // delete_untagged();
 
-await PackageCache.format_all();
+// await PackageCache.format_all();
 await recheck_svelte_support();
 
 // program.name('packages').description('Package to curate the svelte.dev/packages list');

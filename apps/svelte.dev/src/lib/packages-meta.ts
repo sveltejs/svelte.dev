@@ -55,6 +55,24 @@ const TAGS = {
 	}
 } satisfies Record<string, { prompt: string }>;
 
+const SV_ADD = {
+	packages: [
+		'drizzle',
+		'eslint',
+		'lucia',
+		'mdsvex',
+		'@inlang/paraglide-js',
+		'playwright',
+		'prettier',
+		'storybook',
+		'tailwindcss',
+		'vitest'
+	],
+	alias: {
+		'@inlang/paraglide-js': 'paraglidejs'
+	}
+};
+
 const FEATURED: { title: string; packages: string[]; weights?: Record<string, number> }[] = [
 	{
 		title: 'Component libraries',
@@ -251,7 +269,11 @@ const OVERRIDES = new Map<string | RegExp, boolean | number | Partial<Package>>(
 	['@inlang/paraglide-js', true],
 	['phosphor-svelte', true],
 	['@iconify/tailwind4', true],
-	['@unocss/preset-icons', true]
+	['@unocss/preset-icons', true],
+	['drizzle', true],
+	['prettier', true],
+	['storybook', true],
+	['tailwindcss', true]
 	// [/@smui\//, true] TODO: This kind of pattern complicates things, not supported yet. Instead focusing on getting smui to add svelte to their deps/peerDeps
 ]);
 
@@ -282,5 +304,6 @@ export const PACKAGES_META = {
 	TAGS,
 	OVERRIDES,
 	is_official,
-	FEATURED
+	FEATURED,
+	SV_ADD
 };
