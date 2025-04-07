@@ -1,5 +1,5 @@
 import MagicString from 'magic-string';
-import { createHash, Hash } from 'node:crypto';
+import { createHash, type Hash } from 'node:crypto';
 import fs from 'node:fs';
 import process from 'node:process';
 import path from 'node:path';
