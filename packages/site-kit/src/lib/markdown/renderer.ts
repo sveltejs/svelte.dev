@@ -46,17 +46,14 @@ hash_graph(hash, original_file);
 const digest = hash.digest().toString('base64').replace(/\//g, '-');
 
 const highlighter = await createHighlighterCore({
-	themes: [
-		createCssVariablesTheme({
-			name: 'css-variables',
-			variablePrefix: '--shiki-'
-		})
-	],
+	themes: [],
 	langs: [
 		import('@shikijs/langs/javascript'),
 		import('@shikijs/langs/typescript'),
 		import('@shikijs/langs/html'),
 		import('@shikijs/langs/css'),
+		import('@shikijs/langs/bash'),
+		import('@shikijs/langs/yaml'),
 		import('@shikijs/langs/svelte')
 	],
 	engine: createOnigurumaEngine(import('shiki/wasm'))

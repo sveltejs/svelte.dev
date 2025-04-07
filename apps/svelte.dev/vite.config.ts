@@ -59,7 +59,20 @@ const config: UserConfig = {
 		}
 	},
 	build: {
-		cssMinify: 'lightningcss'
+		cssMinify: 'lightningcss',
+		rollupOptions: {
+			output: {
+				banner: (chunk) => {
+					// this monstrosity is required for twoslash (which uses `require`) to work during prerendering.
+					// it is brittle and may not work in perpetuity but i'm not sure what a better solution would be
+					if (chunk.type === 'chunk' && chunk.name === 'renderer') {
+						return `import { createRequire } from 'node:module'; const require = createRequire(import.meta.url);`;
+					}
+
+					return '';
+				}
+			}
+		}
 	},
 	server: {
 		fs: { allow: ['../../packages', '../../../KIT/kit/packages/kit'] },
