@@ -26,5 +26,10 @@
 		"5": false
 	},
 	"runes": false,
-	"github_stars": 50222
+	"github_stars": 50223,
+	"typescript": {
+		"has_types": true,
+		"types_source": "first-party",
+		"types_info": "First-party types defined in package.json: ./index.d.ts"
+	}
 }

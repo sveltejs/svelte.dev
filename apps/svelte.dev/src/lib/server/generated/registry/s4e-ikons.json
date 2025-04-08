@@ -7,7 +7,6 @@
 	"dependents": 0,
 	"updated": "2024-10-21T14:36:20.457Z",
 	"tags": ["ui"],
-	"svelte5": true,
 	"runes": false,
 	"github_stars": 1,
 	"homepage": "https://www.npmjs.com/package/s4e-ikons",
@@ -15,5 +14,10 @@
 		"3": false,
 		"4": false,
 		"5": true
+	},
+	"typescript": {
+		"has_types": false,
+		"types_source": "none",
+		"types_info": "No TypeScript type definitions found"
 	}
 }

@@ -10,10 +10,15 @@
 	"tags": ["adapter"],
 	"svelte5": false,
 	"runes": false,
-	"github_stars": 23384,
+	"github_stars": 23390,
 	"svelte": {
 		"3": false,
 		"4": false,
 		"5": false
+	},
+	"typescript": {
+		"has_types": true,
+		"types_source": "first-party",
+		"types_info": "First-party types defined in exports field"
 	}
 }

@@ -8,9 +8,13 @@
 	"dependents": 0,
 	"updated": "2021-05-18T17:40:16.186Z",
 	"tags": ["tooling"],
-	"svelte5": true,
 	"runes": false,
 	"github_stars": 40,
+	"typescript": {
+		"has_types": true,
+		"types_source": "first-party",
+		"types_info": "First-party types defined in package.json: dist/.eleventy.d.ts"
+	},
 	"svelte": {
 		"3": false,
 		"4": true,

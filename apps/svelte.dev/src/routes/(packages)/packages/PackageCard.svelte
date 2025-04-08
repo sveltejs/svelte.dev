@@ -65,6 +65,42 @@
 			{pkg.name}
 		</h3>
 		<span class={['status']}>
+			{#if pkg.ts_support}
+				<span class="no-pill" style="translate: 0 2px;">
+					{#if pkg.ts_support === 'first-party'}
+						<svg xmlns="http://www.w3.org/2000/svg" width="1.3em" height="1.3em" viewBox="0 0 24 24"
+							><!-- Icon from Simple Icons by Simple Icons Collaborators - https://github.com/simple-icons/simple-icons/blob/develop/LICENSE.md --><path
+								fill="currentColor"
+								d="M1.125 0C.502 0 0 .502 0 1.125v21.75C0 23.498.502 24 1.125 24h21.75c.623 0 1.125-.502 1.125-1.125V1.125C24 .502 23.498 0 22.875 0zm17.363 9.75q.918 0 1.627.111a6.4 6.4 0 0 1 1.306.34v2.458a4 4 0 0 0-.643-.361a5 5 0 0 0-.717-.26a5.5 5.5 0 0 0-1.426-.2q-.45 0-.819.086a2.1 2.1 0 0 0-.623.242q-.254.156-.393.374a.9.9 0 0 0-.14.49q0 .294.156.529q.156.234.443.444c.287.21.423.276.696.41q.41.203.926.416q.705.296 1.266.628q.561.333.963.753q.402.418.614.957q.213.538.214 1.253q0 .986-.373 1.656a3 3 0 0 1-1.012 1.085a4.4 4.4 0 0 1-1.487.596q-.85.18-1.79.18a10 10 0 0 1-1.84-.164a5.5 5.5 0 0 1-1.512-.493v-2.63a5.03 5.03 0 0 0 3.237 1.2q.5 0 .872-.09q.373-.09.623-.25q.249-.162.373-.38a1.02 1.02 0 0 0-.074-1.089a2.1 2.1 0 0 0-.537-.5a5.6 5.6 0 0 0-.807-.444a28 28 0 0 0-1.007-.436q-1.377-.575-2.053-1.405t-.676-2.005q0-.92.369-1.582q.368-.662 1.004-1.089a4.5 4.5 0 0 1 1.47-.629a7.5 7.5 0 0 1 1.77-.201m-15.113.188h9.563v2.166H9.506v9.646H6.789v-9.646H3.375z"
+							/></svg
+						>
+					{:else if pkg.ts_support === '@types'}
+						<svg
+							version="1.1"
+							xmlns="http://www.w3.org/2000/svg"
+							x="0px"
+							y="0px"
+							viewBox="0 0 256 256"
+							xml:space="preserve"
+							width="1.3em"
+							height="1.3em"
+						>
+							<rect class="st0" width="256" height="256" style="fill: currentColor;" />
+							<rect x="6" y="6" class="st1" width="244" height="244" style="fill: currentColor;" />
+							<path
+								class="st0"
+								d="M41.8,111.5c8.6-1.6,19.9-2.5,31.8-2.5c19.7,0,32.6,4.2,42.6,13c10.8,9.4,17.6,24.5,17.6,46
+	c0,23.4-7.3,39.5-17.3,49.5c-11,10.7-27.6,15.8-48,15.8c-12.2,0-20.8-0.9-26.7-1.8V111.5z M65.4,211.2c2,0.5,5.2,0.5,8.2,0.5
+	c21.3,0.2,35.2-13.6,35.2-42.7c0.2-25.4-12.5-38.8-32.7-38.8c-5.2,0-8.6,0.5-10.6,1.1V211.2z"
+							/>
+							<path class="st0" d="M169.4,134.7h-32.2v-22.8h92.3v22.8h-32.8V232h-27.3V134.7z" />
+						</svg>
+					{/if}
+				</span>
+			{/if}
+
+			<span style="flex: 1 1 auto" class="no-pill"></span>
+
 			{#if pkg.outdated}
 				<span>outdated</span>
 			{/if}
@@ -216,7 +252,7 @@
 		display: inline-block;
 		font: var(--sk-font-ui-medium);
 
-		flex: 1 1 auto;
+		/* flex: 1 1 auto; */
 
 		&.faded {
 			color: var(--sk-fg-3);
@@ -250,11 +286,14 @@
 		}
 
 		.status {
-			width: max-content;
+			flex: 1 1 auto;
+
+			display: flex;
+			align-items: center;
 
 			margin-left: 0.5rem;
 
-			> * {
+			> *:not(.no-pill) {
 				font: var(--sk-font-ui-small);
 				border-radius: 9999px;
 				padding: 0.2rem 1rem;
@@ -273,6 +312,10 @@
 			display: flex;
 			gap: 1.6rem;
 			font: var(--sk-font-ui-small);
+
+			a {
+				display: flex;
+			}
 
 			span {
 				display: flex;

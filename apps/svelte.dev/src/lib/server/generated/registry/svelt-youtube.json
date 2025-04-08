@@ -1,0 +1,22 @@
+{
+	"name": "svelt-youtube",
+	"description": "Provide a simple Svelte component for YouTube IFrame API.",
+	"repo_url": "https://github.com/zgabievi/svelte-youtube",
+	"authors": ["npm-zgabievi"],
+	"homepage": "https://github.com/zgabievi/svelte-youtube#readme",
+	"downloads": 3,
+	"dependents": 0,
+	"updated": "2019-12-28T01:14:47.152Z",
+	"tags": ["media"],
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	},
+	"runes": false,
+	"typescript": {
+		"has_types": false,
+		"types_source": "none",
+		"types_info": "No TypeScript type definitions found"
+	}
+}

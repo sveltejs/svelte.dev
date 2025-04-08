@@ -10,10 +10,15 @@
 	"tags": ["integration"],
 	"svelte5": false,
 	"runes": false,
-	"github_stars": 7014,
+	"github_stars": 7016,
 	"svelte": {
 		"3": true,
 		"4": true,
 		"5": false
+	},
+	"typescript": {
+		"has_types": true,
+		"types_source": "first-party",
+		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
 	}
 }

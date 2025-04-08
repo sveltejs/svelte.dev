@@ -85,10 +85,6 @@
 		});
 	});
 
-	$inspect(qps.svelte_versions);
-
-	$inspect(qps.query);
-
 	// This function is first run on onMount to enable/disable the arrow buttons, and on scroll
 	function handle_scroll(node: HTMLElement, idx: number) {
 		function update() {

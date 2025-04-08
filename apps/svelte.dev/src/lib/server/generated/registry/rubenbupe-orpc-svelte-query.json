@@ -1,0 +1,23 @@
+{
+	"name": "@rubenbupe/orpc-svelte-query",
+	"description": "Integrate oRPC with Svelte Query for data fetching.",
+	"repo_url": "https://github.com/rubenbupe/orpc",
+	"authors": ["rubenbupe"],
+	"homepage": "https://orpc.unnoq.com",
+	"downloads": 405,
+	"dependents": 0,
+	"updated": "2025-03-30T11:59:02.924Z",
+	"tags": ["server"],
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	},
+	"runes": false,
+	"github_stars": 0,
+	"typescript": {
+		"has_types": true,
+		"types_source": "first-party",
+		"types_info": "First-party types defined in exports field"
+	}
+}

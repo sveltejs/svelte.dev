@@ -10,10 +10,15 @@
 	"tags": ["ui"],
 	"svelte5": false,
 	"runes": false,
-	"github_stars": 1632,
+	"github_stars": 1634,
 	"svelte": {
 		"3": false,
 		"4": true,
 		"5": false
+	},
+	"typescript": {
+		"has_types": true,
+		"types_source": "@types",
+		"types_info": "Types available through @types/event-calendar__core"
 	}
 }

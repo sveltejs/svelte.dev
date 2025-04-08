@@ -8,12 +8,16 @@
 	"dependents": 1,
 	"updated": "2025-02-19T13:28:21.987Z",
 	"tags": ["ui"],
-	"svelte5": true,
 	"runes": false,
-	"github_stars": 4057,
+	"github_stars": 4060,
 	"svelte": {
 		"3": false,
 		"4": false,
 		"5": true
+	},
+	"typescript": {
+		"has_types": true,
+		"types_source": "first-party",
+		"types_info": "First-party types defined in package.json: overlayscrollbars-svelte.d.ts"
 	}
 }

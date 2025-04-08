@@ -10,10 +10,15 @@
 	"tags": ["ui", "integration"],
 	"svelte5": false,
 	"runes": false,
-	"github_stars": 2496,
+	"github_stars": 2497,
 	"svelte": {
 		"3": true,
 		"4": false,
 		"5": false
+	},
+	"typescript": {
+		"has_types": false,
+		"types_source": "none",
+		"types_info": "No TypeScript type definitions found"
 	}
 }

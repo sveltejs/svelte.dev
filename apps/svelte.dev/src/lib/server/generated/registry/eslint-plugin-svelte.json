@@ -8,9 +8,13 @@
 	"dependents": 144,
 	"updated": "2025-03-20T00:24:18.230Z",
 	"tags": ["tooling"],
-	"svelte5": true,
 	"runes": false,
 	"github_stars": 325,
+	"typescript": {
+		"has_types": true,
+		"types_source": "first-party",
+		"types_info": "First-party types defined in package.json: ./lib/index.d.ts"
+	},
 	"svelte": {
 		"3": true,
 		"4": true,

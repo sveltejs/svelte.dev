@@ -7,8 +7,12 @@
 	"dependents": 0,
 	"updated": "2024-09-25T11:19:08.528Z",
 	"tags": ["media"],
-	"svelte5": true,
 	"runes": false,
+	"typescript": {
+		"has_types": true,
+		"types_source": "first-party",
+		"types_info": "First-party types defined in package.json: ./index.d.ts"
+	},
 	"svelte": {
 		"3": true,
 		"4": true,

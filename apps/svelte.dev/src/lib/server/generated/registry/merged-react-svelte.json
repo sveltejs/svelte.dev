@@ -1,0 +1,22 @@
+{
+	"name": "@merged/react-svelte",
+	"description": "Use Svelte components inside React applications.",
+	"repo_url": "https://github.com/merged-js/react-svelte",
+	"authors": ["torsten4385"],
+	"homepage": "https://github.com/merged-js/react-svelte",
+	"downloads": 1,
+	"dependents": 0,
+	"updated": "2021-09-02T09:36:26.781Z",
+	"tags": ["integration"],
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	},
+	"runes": false,
+	"typescript": {
+		"has_types": true,
+		"types_source": "first-party",
+		"types_info": "First-party types defined in package.json: dist/index.d.ts"
+	}
+}

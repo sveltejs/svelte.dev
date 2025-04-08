@@ -7,8 +7,12 @@
 	"dependents": 1,
 	"updated": "2025-03-04T10:16:39.901Z",
 	"tags": ["ui"],
-	"svelte5": true,
 	"runes": false,
+	"typescript": {
+		"has_types": true,
+		"types_source": "@types",
+		"types_info": "Types available through @types/beyonk__gdpr-cookie-consent-banner"
+	},
 	"svelte": {
 		"3": false,
 		"4": false,

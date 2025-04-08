@@ -8,11 +8,15 @@
 	"dependents": 0,
 	"updated": "2025-03-15T18:18:32.876Z",
 	"tags": ["miscellaneous"],
-	"svelte5": true,
 	"runes": false,
 	"svelte": {
 		"3": true,
 		"4": true,
 		"5": true
+	},
+	"typescript": {
+		"has_types": true,
+		"types_source": "first-party",
+		"types_info": "First-party types defined in package.json: ./lib/index.d.ts"
 	}
 }

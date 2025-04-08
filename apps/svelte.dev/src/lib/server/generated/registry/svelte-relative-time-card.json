@@ -1,0 +1,21 @@
+{
+	"name": "svelte-relative-time-card",
+	"description": "Display relative time with timezone information.",
+	"repo_url": "",
+	"authors": ["itsmingjie"],
+	"downloads": 58,
+	"dependents": 0,
+	"updated": "2025-03-31T16:06:10.690Z",
+	"tags": ["ui"],
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	},
+	"runes": false,
+	"typescript": {
+		"has_types": true,
+		"types_source": "first-party",
+		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
+	}
+}

@@ -7,8 +7,12 @@
 	"dependents": 0,
 	"updated": "2024-06-22T08:58:14.131Z",
 	"tags": ["tooling"],
-	"svelte5": true,
 	"runes": false,
+	"typescript": {
+		"has_types": true,
+		"types_source": "first-party",
+		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
+	},
 	"svelte": {
 		"3": false,
 		"4": false,

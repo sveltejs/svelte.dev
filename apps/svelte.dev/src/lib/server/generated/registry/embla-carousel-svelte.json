@@ -1,0 +1,23 @@
+{
+	"name": "embla-carousel-svelte",
+	"description": "Create performant, accessible carousel components for Svelte applications.",
+	"repo_url": "https://github.com/davidjerleke/embla-carousel",
+	"authors": ["davidjerleke"],
+	"homepage": "https://www.embla-carousel.com",
+	"downloads": 29668,
+	"dependents": 11,
+	"updated": "2025-04-04T17:37:57.367Z",
+	"tags": ["ui"],
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	},
+	"runes": false,
+	"typescript": {
+		"has_types": true,
+		"types_source": "first-party",
+		"types_info": "First-party types defined in package.json: index.d.ts"
+	},
+	"github_stars": 6896
+}

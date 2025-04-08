@@ -21,7 +21,6 @@
 	"dependents": 0,
 	"updated": "2025-03-21T15:38:28.152Z",
 	"tags": ["adapter", "tooling"],
-	"svelte5": true,
 	"runes": false,
 	"github_stars": 294,
 	"homepage": "https://prismic.io/docs",
@@ -29,5 +28,10 @@
 		"3": true,
 		"4": true,
 		"5": true
+	},
+	"typescript": {
+		"has_types": true,
+		"types_source": "first-party",
+		"types_info": "First-party types defined in package.json: dist/index.d.ts"
 	}
 }

@@ -8,11 +8,15 @@
 	"dependents": 0,
 	"updated": "2025-03-26T11:46:26.319Z",
 	"tags": ["tooling"],
-	"svelte5": true,
 	"runes": false,
 	"svelte": {
 		"3": false,
 		"4": false,
 		"5": true
+	},
+	"typescript": {
+		"has_types": false,
+		"types_source": "none",
+		"types_info": "No TypeScript type definitions found"
 	}
 }

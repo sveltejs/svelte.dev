@@ -25,10 +25,15 @@
 	"tags": ["tooling"],
 	"svelte5": false,
 	"runes": false,
-	"github_stars": 16367,
+	"github_stars": 16368,
 	"svelte": {
 		"3": false,
 		"4": true,
 		"5": false
+	},
+	"typescript": {
+		"has_types": true,
+		"types_source": "first-party",
+		"types_info": "First-party types defined in package.json: esm/index.d.ts"
 	}
 }

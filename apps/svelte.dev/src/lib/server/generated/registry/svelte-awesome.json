@@ -8,12 +8,16 @@
 	"dependents": 20,
 	"updated": "2024-10-22T12:51:36.311Z",
 	"tags": ["ui"],
-	"svelte5": true,
 	"runes": false,
 	"github_stars": 498,
 	"svelte": {
 		"3": true,
 		"4": true,
 		"5": true
+	},
+	"typescript": {
+		"has_types": true,
+		"types_source": "first-party",
+		"types_info": "First-party types defined in exports field"
 	}
 }

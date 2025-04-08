@@ -1,0 +1,23 @@
+{
+	"name": "@flightlesslabs/dodo-ui",
+	"description": "Build opinionated UI framework for Svelte.",
+	"repo_url": "https://github.com/flightlesslabs/dodo-ui",
+	"authors": ["siddacool"],
+	"homepage": "https://flightlesslabs.github.io/dodo-ui",
+	"downloads": 273,
+	"dependents": 0,
+	"updated": "2025-04-08T09:40:52.688Z",
+	"tags": ["design-system"],
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	},
+	"runes": false,
+	"typescript": {
+		"has_types": true,
+		"types_source": "first-party",
+		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
+	},
+	"github_stars": 0
+}

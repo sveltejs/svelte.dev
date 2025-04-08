@@ -13,5 +13,10 @@
 		"4": false,
 		"5": false
 	},
-	"runes": false
+	"runes": false,
+	"typescript": {
+		"has_types": false,
+		"types_source": "none",
+		"types_info": "No TypeScript type definitions found"
+	}
 }

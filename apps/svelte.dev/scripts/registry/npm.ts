@@ -112,12 +112,13 @@ export class PackageCache {
 		}
 	}
 
-	static parse(markdown: string) {
-		return JSON.parse(markdown);
+	static parse(text: string) {
+		return JSON.parse(text);
 	}
 
 	static async get(pkg_name: string): Promise<Package | null> {
 		try {
+			console.log(pkg_name);
 			return this.parse(await fsp.readFile(this.#get_full_path(pkg_name), { encoding: 'utf8' }));
 		} catch {
 			return null;
@@ -312,6 +313,115 @@ export async function fetch_downloads_for_package(pkg: string): Promise<number> 
 		.then((r) => r.json())
 		.then((res) => res.downloads)
 		.catch(() => 0);
+}
+
+export /**
+ * Determines if a package ships with TypeScript types and checks for separate @types
+ * package if first-party types aren't included
+ *
+ * @param package_json - The parsed package.json object
+ * @returns An object with information about type availability
+ */
+async function check_typescript_types(package_json: any): Promise<{
+	has_types: boolean;
+	types_source: 'first-party' | '@types' | 'none';
+	types_info: string;
+}> {
+	// Check for types or typings field in package.json (traditional approach)
+	if (package_json.types || package_json.typings) {
+		return {
+			has_types: true,
+			types_source: 'first-party',
+			types_info: `First-party types defined in package.json: ${package_json.types || package_json.typings}`
+		};
+	}
+
+	// Check export maps for TypeScript typings
+	if (package_json.exports) {
+		// Function to recursively check if an export condition contains types
+		const check_export_for_types = (export_obj: any): boolean => {
+			if (!export_obj || typeof export_obj !== 'object') {
+				return false;
+			}
+
+			// Check if this is a conditional export with types
+			if (export_obj.types || export_obj.typings) {
+				return true;
+			}
+
+			// Modern pattern uses "import" condition
+			if (export_obj.import?.types) {
+				return true;
+			}
+
+			// TypeScript support could also be in these fields
+			if (export_obj.default?.types || export_obj.require?.types) {
+				return true;
+			}
+
+			// Recursive check for nested conditions
+			return Object.values(export_obj).some(
+				(value) => typeof value === 'object' && check_export_for_types(value)
+			);
+		};
+
+		// Iterate through all export paths
+		const has_types_in_exports = Object.values(package_json.exports).some((export_def) => {
+			if (typeof export_def === 'string') {
+				// Simple export string - check if it's a .d.ts file
+				return export_def.endsWith('.d.ts');
+			}
+			return check_export_for_types(export_def);
+		});
+
+		if (has_types_in_exports) {
+			return {
+				has_types: true,
+				types_source: 'first-party',
+				types_info: 'First-party types defined in exports field'
+			};
+		}
+	}
+
+	// Check if there's a @types package available
+	const package_name = package_json.name;
+	if (package_name) {
+		try {
+			// For scoped packages, transform @scope/package to @types/scope__package
+			let types_package_name;
+			if (package_name.startsWith('@')) {
+				// Convert @scope/package to scope__package
+				types_package_name = package_name.slice(1).replace('/', '__');
+			} else {
+				// For regular packages, just use the package name
+				types_package_name = package_name;
+			}
+
+			const types_package = `@types/${types_package_name}`;
+
+			// Try to fetch metadata for the @types package
+			const response = await fetch(
+				`https://registry.npmjs.org/${encodeURIComponent(types_package)}`
+			);
+
+			if (response.ok) {
+				return {
+					has_types: true,
+					types_source: '@types',
+					types_info: `Types available through ${types_package}`
+				};
+			}
+		} catch (error) {
+			// Ignore fetch errors and fall through to the "no types" case
+		}
+	}
+
+	// No types found
+	return {
+		has_types: false,
+		types_source: 'none',
+		types_info: 'No TypeScript type definitions found'
+	};
 }
 
 /**

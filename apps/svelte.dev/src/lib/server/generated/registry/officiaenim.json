@@ -1,0 +1,22 @@
+{
+	"name": "officiaenim",
+	"description": "Svelte component for miscellaneous use.",
+	"repo_url": "https://github.com/JulianGusikowski/officiaenim",
+	"authors": ["kayleeglover"],
+	"homepage": "https://github.com/JulianGusikowski/officiaenim.git",
+	"downloads": 6,
+	"dependents": 0,
+	"updated": "2024-04-02T15:30:33.562Z",
+	"tags": ["miscellaneous"],
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	},
+	"runes": false,
+	"typescript": {
+		"has_types": true,
+		"types_source": "first-party",
+		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
+	}
+}

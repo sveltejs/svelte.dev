@@ -10,8 +10,13 @@
 	"svelte5": false,
 	"runes": false,
 	"svelte": {
-		"3": true,
+		"3": false,
 		"4": false,
 		"5": false
+	},
+	"typescript": {
+		"has_types": false,
+		"types_source": "none",
+		"types_info": "No TypeScript type definitions found"
 	}
 }

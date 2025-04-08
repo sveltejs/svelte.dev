@@ -1,0 +1,23 @@
+{
+	"name": "svelte-ink",
+	"description": "Build interactive command-line apps with Svelte.",
+	"repo_url": "https://github.com/SyMind/svelte-ink",
+	"authors": ["symind"],
+	"homepage": "https://github.com/SyMind/svelte-ink#readme",
+	"downloads": 0,
+	"dependents": 0,
+	"updated": "2023-01-19T15:04:27.630Z",
+	"tags": ["tooling"],
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	},
+	"runes": false,
+	"github_stars": 6,
+	"typescript": {
+		"has_types": false,
+		"types_source": "none",
+		"types_info": "No TypeScript type definitions found"
+	}
+}

@@ -8,9 +8,13 @@
 	"dependents": 6,
 	"updated": "2025-03-08T20:27:37.922Z",
 	"tags": ["tooling"],
-	"svelte5": true,
 	"runes": false,
-	"github_stars": 165,
+	"github_stars": 167,
+	"typescript": {
+		"has_types": true,
+		"types_source": "first-party",
+		"types_info": "First-party types defined in package.json: ./lib/cjs/configs/cjs.d.ts"
+	},
 	"svelte": {
 		"3": false,
 		"4": false,

@@ -8,11 +8,15 @@
 	"dependents": 0,
 	"updated": "2025-03-12T03:32:39.043Z",
 	"tags": ["ui"],
-	"svelte5": true,
 	"runes": false,
 	"svelte": {
 		"3": false,
 		"4": true,
 		"5": true
+	},
+	"typescript": {
+		"has_types": true,
+		"types_source": "first-party",
+		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
 	}
 }

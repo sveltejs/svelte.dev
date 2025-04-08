@@ -8,12 +8,16 @@
 	"dependents": 5,
 	"updated": "2025-03-27T15:17:12.597Z",
 	"tags": ["content"],
-	"svelte5": true,
 	"runes": false,
 	"github_stars": 256,
 	"svelte": {
 		"3": false,
 		"4": false,
 		"5": true
+	},
+	"typescript": {
+		"has_types": true,
+		"types_source": "first-party",
+		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
 	}
 }

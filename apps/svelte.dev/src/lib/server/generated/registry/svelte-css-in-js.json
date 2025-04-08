@@ -7,11 +7,15 @@
 	"dependents": 1,
 	"updated": "2020-01-02T03:04:35.844Z",
 	"tags": ["tooling"],
-	"svelte5": true,
 	"runes": false,
 	"svelte": {
 		"3": true,
 		"4": true,
 		"5": true
+	},
+	"typescript": {
+		"has_types": false,
+		"types_source": "none",
+		"types_info": "No TypeScript type definitions found"
 	}
 }

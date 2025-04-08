@@ -10,10 +10,15 @@
 	"tags": ["ui"],
 	"svelte5": false,
 	"runes": false,
-	"github_stars": 677,
+	"github_stars": 678,
 	"svelte": {
 		"3": false,
 		"4": false,
-		"5": false
+		"5": true
+	},
+	"typescript": {
+		"has_types": true,
+		"types_source": "first-party",
+		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
 	}
 }

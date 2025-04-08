@@ -1,0 +1,21 @@
+{
+	"name": "gabiui",
+	"description": "Create Svelte libraries with ease.",
+	"repo_url": "",
+	"authors": ["gabilungu"],
+	"downloads": 39,
+	"dependents": 0,
+	"updated": "2025-04-08T07:07:49.048Z",
+	"tags": ["tooling"],
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	},
+	"runes": false,
+	"typescript": {
+		"has_types": true,
+		"types_source": "first-party",
+		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
+	}
+}

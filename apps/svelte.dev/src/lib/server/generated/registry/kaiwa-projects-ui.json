@@ -1,0 +1,21 @@
+{
+	"name": "@kaiwa-projects/ui",
+	"description": "Create Svelte UI library.",
+	"repo_url": "",
+	"authors": ["ka1wa"],
+	"downloads": 145,
+	"dependents": 0,
+	"updated": "2025-04-08T06:05:51.182Z",
+	"tags": ["ui"],
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	},
+	"runes": false,
+	"typescript": {
+		"has_types": true,
+		"types_source": "first-party",
+		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
+	}
+}

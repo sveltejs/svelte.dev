@@ -8,12 +8,16 @@
 	"dependents": 0,
 	"updated": "2025-03-08T17:30:00.649Z",
 	"tags": ["auth", "server"],
-	"svelte5": true,
 	"runes": false,
-	"github_stars": 339,
+	"github_stars": 340,
 	"svelte": {
 		"3": false,
 		"4": false,
 		"5": true
+	},
+	"typescript": {
+		"has_types": false,
+		"types_source": "none",
+		"types_info": "No TypeScript type definitions found"
 	}
 }

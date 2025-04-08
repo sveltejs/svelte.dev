@@ -1,0 +1,23 @@
+{
+	"name": "svelte-jwt-session",
+	"description": "Manages sessions with JSON Web Tokens in Svelte.",
+	"repo_url": "https://github.com/escheiermann/svelte-jwt-session",
+	"authors": ["escheiermann"],
+	"homepage": "https://github.com/escheiermann/svelte-jwt-session#readme",
+	"downloads": 6,
+	"dependents": 0,
+	"updated": "2023-02-04T18:22:30.743Z",
+	"tags": ["auth"],
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	},
+	"runes": false,
+	"github_stars": 0,
+	"typescript": {
+		"has_types": false,
+		"types_source": "none",
+		"types_info": "No TypeScript type definitions found"
+	}
+}

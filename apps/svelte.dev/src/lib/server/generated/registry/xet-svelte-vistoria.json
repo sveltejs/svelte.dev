@@ -1,0 +1,22 @@
+{
+	"name": "@xet/svelte-vistoria",
+	"description": "Create Svelte components for UI design.",
+	"repo_url": "",
+	"authors": ["lagden"],
+	"homepage": "https://gitlab.textecnologia.io/nimble/svelte-vistoria#readme",
+	"downloads": 7,
+	"dependents": 0,
+	"updated": "2023-07-05T20:21:41.460Z",
+	"tags": ["ui"],
+	"svelte": {
+		"3": true,
+		"4": true,
+		"5": true
+	},
+	"runes": false,
+	"typescript": {
+		"has_types": false,
+		"types_source": "none",
+		"types_info": "No TypeScript type definitions found"
+	}
+}

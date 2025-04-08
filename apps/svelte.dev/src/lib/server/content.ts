@@ -184,6 +184,15 @@ export interface Package {
 	tags: string[];
 
 	official?: boolean;
+
+	/** @deprecated NOT FOR API USE */
+	typescript: {
+		has_types: boolean;
+		types_source: 'first-party' | '@types' | 'none';
+		types_info: string;
+	};
+
+	ts_support: 'first-party' | '@types' | 'none';
 }
 
 /**
@@ -212,6 +221,7 @@ function create_registry() {
 		json.description = json.description;
 		json.outdated = +new Date() - +new Date(json.updated) > 2 * 365 * 24 * 60 * 60 * 1000;
 		json.official = json.official ?? PACKAGES_META.is_official(json.name);
+		json.ts_support = json.typescript?.types_source;
 
 		output.push(json as unknown as Package);
 	}

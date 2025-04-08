@@ -1,0 +1,21 @@
+{
+	"name": "xofy",
+	"description": "Display current index of array in Svelte.",
+	"repo_url": "{component-repo}",
+	"authors": ["nickmanning214"],
+	"downloads": 1,
+	"dependents": 0,
+	"updated": "2020-04-03T22:49:15.057Z",
+	"tags": ["ui"],
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	},
+	"runes": false,
+	"typescript": {
+		"has_types": false,
+		"types_source": "none",
+		"types_info": "No TypeScript type definitions found"
+	}
+}

@@ -1,0 +1,23 @@
+{
+	"name": "@pageql/pageql-auth",
+	"description": "Provide authentication and authorization helpers for Svelte apps.",
+	"repo_url": "https://github.com/pageql/pageql-auth",
+	"authors": ["conprogramming"],
+	"homepage": "https://github.com/pageql/pageql-auth#readme",
+	"downloads": 0,
+	"dependents": 0,
+	"updated": "2020-08-06T05:26:33.669Z",
+	"tags": ["auth"],
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	},
+	"runes": false,
+	"github_stars": 2,
+	"typescript": {
+		"has_types": false,
+		"types_source": "none",
+		"types_info": "No TypeScript type definitions found"
+	}
+}

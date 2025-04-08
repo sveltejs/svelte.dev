@@ -8,11 +8,15 @@
 	"dependents": 0,
 	"updated": "2023-07-05T19:59:58.276Z",
 	"tags": ["ui"],
-	"svelte5": true,
 	"runes": false,
 	"svelte": {
 		"3": true,
 		"4": true,
 		"5": true
+	},
+	"typescript": {
+		"has_types": false,
+		"types_source": "none",
+		"types_info": "No TypeScript type definitions found"
 	}
 }

@@ -14,5 +14,10 @@
 		"3": false,
 		"4": false,
 		"5": false
+	},
+	"typescript": {
+		"has_types": true,
+		"types_source": "first-party",
+		"types_info": "First-party types defined in package.json: index.d.ts"
 	}
 }

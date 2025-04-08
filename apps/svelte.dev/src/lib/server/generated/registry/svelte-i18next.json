@@ -8,12 +8,16 @@
 	"dependents": 1,
 	"updated": "2023-10-19T07:46:00.728Z",
 	"tags": ["integration"],
-	"svelte5": true,
 	"runes": false,
 	"github_stars": 52,
 	"svelte": {
 		"3": true,
 		"4": true,
 		"5": true
+	},
+	"typescript": {
+		"has_types": true,
+		"types_source": "first-party",
+		"types_info": "First-party types defined in package.json: index.d.ts"
 	}
 }

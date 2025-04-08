@@ -1,0 +1,23 @@
+{
+	"name": "userfront-svelte",
+	"description": "Integrate Userfront authentication into Svelte(Kit) projects.",
+	"repo_url": "https://github.com/Leftium/userfront-svelte",
+	"authors": ["leftium"],
+	"homepage": "https://github.com/Leftium/userfront-svelte#readme",
+	"downloads": 5,
+	"dependents": 0,
+	"updated": "2025-04-02T10:37:23.909Z",
+	"tags": ["auth"],
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	},
+	"runes": false,
+	"github_stars": 4,
+	"typescript": {
+		"has_types": true,
+		"types_source": "first-party",
+		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
+	}
+}

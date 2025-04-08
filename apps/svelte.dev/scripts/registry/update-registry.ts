@@ -9,6 +9,7 @@ import type { Package } from '../../src/lib/server/content.js';
 import svelte_society_list from '../../src/lib/society-npm.json' with { type: 'json' };
 import { sort_packages } from '../../src/routes/(packages)/packages/packages-search.js';
 import {
+	check_typescript_types,
 	fetch_details_for_package,
 	fetch_downloads_for_package,
 	HEADERS,
@@ -873,9 +874,26 @@ async function delete_legacy_svelte5_field() {
 		// @ts-expect-error
 		if (data.svelte5) {
 			// @ts-expect-error
-			delete data.svelte;
+			delete data.svelte5;
 			PackageCache.set(pkg_name, data);
 		}
+	}
+}
+
+async function update_typescript_data() {
+	for await (const [pkg_name, data] of PackageCache.entries()) {
+		const package_detail = await superfetch(`${REGISTRY_BASE_URL}${pkg_name}`).then((r) =>
+			r.json()
+		);
+
+		const latest = package_detail['dist-tags']?.latest;
+		if (!latest) continue;
+
+		const latest_package_json = package_detail.versions[latest];
+
+		const typescript_data = await check_typescript_types(latest_package_json);
+		data.typescript = typescript_data;
+		PackageCache.set(pkg_name, data);
 	}
 }
 
@@ -886,16 +904,22 @@ for (let i = 0; i < 1; i++) {
 await update_overrides();
 
 svelte_society_list;
-// await process_packages_by_names_through_llm({ package_names: Object.keys(svelte_society_list) });
+await process_packages_by_names_through_llm({
+	package_names: Object.keys(svelte_society_list),
+	force_include_all_packages: true
+});
 
 // update_cache_from_npm();
 await update_all_github_data();
 
-// await remove_forks();
+await remove_forks();
 // delete_untagged();
 
 // await PackageCache.format_all();
 await recheck_svelte_support();
+
+await delete_legacy_svelte5_field();
+await update_typescript_data();
 
 // program.name('packages').description('Package to curate the svelte.dev/packages list');
 

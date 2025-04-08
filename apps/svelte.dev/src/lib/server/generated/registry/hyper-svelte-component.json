@@ -14,5 +14,10 @@
 		"5": false
 	},
 	"runes": false,
-	"github_stars": 1
+	"github_stars": 1,
+	"typescript": {
+		"has_types": false,
+		"types_source": "none",
+		"types_info": "No TypeScript type definitions found"
+	}
 }

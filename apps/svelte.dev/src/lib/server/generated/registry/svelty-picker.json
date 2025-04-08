@@ -7,11 +7,15 @@
 	"dependents": 3,
 	"updated": "2025-02-25T09:59:33.057Z",
 	"tags": ["ui"],
-	"svelte5": true,
 	"runes": false,
 	"svelte": {
 		"3": false,
 		"4": false,
 		"5": true
+	},
+	"typescript": {
+		"has_types": true,
+		"types_source": "first-party",
+		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
 	}
 }

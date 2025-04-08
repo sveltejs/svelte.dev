@@ -8,9 +8,13 @@
 	"dependents": 0,
 	"updated": "2024-10-25T23:06:50.424Z",
 	"tags": ["ui"],
-	"svelte5": true,
 	"runes": false,
 	"github_stars": 1,
+	"typescript": {
+		"has_types": true,
+		"types_source": "first-party",
+		"types_info": "First-party types defined in exports field"
+	},
 	"svelte": {
 		"3": false,
 		"4": false,

@@ -10,10 +10,15 @@
 	"tags": ["tooling"],
 	"svelte5": false,
 	"runes": false,
-	"github_stars": 1870,
+	"github_stars": 1874,
 	"svelte": {
 		"3": false,
 		"4": true,
 		"5": false
+	},
+	"typescript": {
+		"has_types": false,
+		"types_source": "none",
+		"types_info": "No TypeScript type definitions found"
 	}
 }

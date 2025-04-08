@@ -25,12 +25,16 @@
 	"dependents": 11,
 	"updated": "2025-02-11T18:02:00.554Z",
 	"tags": ["testing"],
-	"svelte5": true,
 	"runes": false,
-	"github_stars": 631,
+	"github_stars": 630,
 	"svelte": {
 		"3": true,
 		"4": true,
 		"5": true
+	},
+	"typescript": {
+		"has_types": true,
+		"types_source": "first-party",
+		"types_info": "First-party types defined in package.json: types/index.d.ts"
 	}
 }

@@ -12,5 +12,10 @@
 		"4": false,
 		"5": false
 	},
-	"runes": false
+	"runes": false,
+	"typescript": {
+		"has_types": true,
+		"types_source": "first-party",
+		"types_info": "First-party types defined in package.json: src/Navigation/Nav.d.ts"
+	}
 }

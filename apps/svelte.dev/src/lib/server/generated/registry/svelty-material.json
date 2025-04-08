@@ -1,0 +1,23 @@
+{
+	"name": "svelty-material",
+	"description": "Create Svelte UI components based on Material Design.",
+	"repo_url": "https://github.com/abdo643-HULK/svelty-material",
+	"authors": ["abdo643"],
+	"homepage": "https://github.com/abdo643-HULK/svelty-material",
+	"downloads": 202,
+	"dependents": 0,
+	"updated": "2022-09-27T12:10:12.810Z",
+	"tags": ["ui", "design-system"],
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": true
+	},
+	"runes": false,
+	"github_stars": 1,
+	"typescript": {
+		"has_types": true,
+		"types_source": "first-party",
+		"types_info": "First-party types defined in package.json: ./index.d.ts"
+	}
+}

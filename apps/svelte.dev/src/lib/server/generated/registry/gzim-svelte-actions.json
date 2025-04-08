@@ -8,9 +8,13 @@
 	"dependents": 0,
 	"updated": "2024-11-04T16:02:07.068Z",
 	"tags": ["miscellaneous"],
-	"svelte5": true,
 	"runes": false,
 	"github_stars": 3,
+	"typescript": {
+		"has_types": true,
+		"types_source": "first-party",
+		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
+	},
 	"svelte": {
 		"3": false,
 		"4": true,

@@ -8,9 +8,13 @@
 	"dependents": 0,
 	"updated": "2021-11-15T16:36:46.200Z",
 	"tags": ["miscellaneous"],
-	"svelte5": true,
 	"runes": false,
 	"github_stars": 2,
+	"typescript": {
+		"has_types": false,
+		"types_source": "none",
+		"types_info": "No TypeScript type definitions found"
+	},
 	"svelte": {
 		"3": true,
 		"4": true,

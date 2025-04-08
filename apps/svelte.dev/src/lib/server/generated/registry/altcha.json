@@ -8,9 +8,13 @@
 	"dependents": 6,
 	"updated": "2025-03-16T04:33:24.207Z",
 	"tags": ["auth"],
-	"svelte5": true,
 	"runes": false,
-	"github_stars": 755,
+	"github_stars": 757,
+	"typescript": {
+		"has_types": true,
+		"types_source": "first-party",
+		"types_info": "First-party types defined in package.json: ./dist/altcha.d.ts"
+	},
 	"svelte": {
 		"3": false,
 		"4": false,

@@ -17,12 +17,16 @@
 	"dependents": 2,
 	"updated": "2025-01-03T15:41:32.037Z",
 	"tags": ["integration"],
-	"svelte5": true,
 	"runes": false,
 	"github_stars": 84,
 	"svelte": {
 		"3": false,
 		"4": false,
 		"5": true
+	},
+	"typescript": {
+		"has_types": true,
+		"types_source": "first-party",
+		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
 	}
 }

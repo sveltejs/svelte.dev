@@ -1,0 +1,21 @@
+{
+	"name": "@ikun-ui/affix",
+	"description": "Create affix components in Svelte applications.",
+	"repo_url": "",
+	"authors": ["baiwusanyu"],
+	"downloads": 35,
+	"dependents": 1,
+	"updated": "2025-01-24T03:48:31.789Z",
+	"tags": ["ui"],
+	"svelte": {
+		"3": false,
+		"4": true,
+		"5": false
+	},
+	"runes": false,
+	"typescript": {
+		"has_types": true,
+		"types_source": "first-party",
+		"types_info": "First-party types defined in package.json: dist/index.d.ts"
+	}
+}

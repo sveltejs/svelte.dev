@@ -34,12 +34,16 @@
 	"dependents": 3,
 	"updated": "2025-03-19T20:06:48.540Z",
 	"tags": ["content"],
-	"svelte5": true,
 	"runes": false,
 	"github_stars": 24,
 	"svelte": {
 		"3": false,
 		"4": true,
 		"5": true
+	},
+	"typescript": {
+		"has_types": true,
+		"types_source": "first-party",
+		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
 	}
 }

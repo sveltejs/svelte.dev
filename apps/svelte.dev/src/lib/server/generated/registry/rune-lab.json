@@ -1,0 +1,21 @@
+{
+	"name": "rune-lab",
+	"description": "Build reactive UI components using Svelte 5 runes.",
+	"repo_url": "",
+	"authors": ["yrrrrrf"],
+	"downloads": 3,
+	"dependents": 0,
+	"updated": "2025-04-07T04:51:40.634Z",
+	"tags": ["ui"],
+	"svelte": {
+		"3": false,
+		"4": false,
+		"5": true
+	},
+	"runes": true,
+	"typescript": {
+		"has_types": true,
+		"types_source": "first-party",
+		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
+	}
+}

@@ -7,8 +7,12 @@
 	"dependents": 0,
 	"updated": "2024-10-23T16:16:33.051Z",
 	"tags": ["ui"],
-	"svelte5": true,
 	"runes": false,
+	"typescript": {
+		"has_types": true,
+		"types_source": "first-party",
+		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
+	},
 	"svelte": {
 		"3": true,
 		"4": true,

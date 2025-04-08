@@ -8,9 +8,13 @@
 	"dependents": 2,
 	"updated": "2022-03-31T13:04:24.486Z",
 	"tags": ["ui"],
-	"svelte5": true,
 	"runes": false,
 	"github_stars": 60,
+	"typescript": {
+		"has_types": true,
+		"types_source": "first-party",
+		"types_info": "First-party types defined in package.json: ./index.d.ts"
+	},
 	"svelte": {
 		"3": false,
 		"4": true,

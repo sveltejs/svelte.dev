@@ -1,0 +1,23 @@
+{
+	"name": "ant-design-svelte",
+	"description": "Enterprise-class UI design language for Svelte.",
+	"repo_url": "https://github.com/Jetsly/ant-design-svelte",
+	"authors": ["ddotjs"],
+	"homepage": "https://github.com/Jetsly/ant-design-svelte#readme",
+	"downloads": 0,
+	"dependents": 0,
+	"updated": "2019-07-19T03:41:12.923Z",
+	"tags": ["design-system"],
+	"svelte": {
+		"3": true,
+		"4": false,
+		"5": false
+	},
+	"runes": false,
+	"typescript": {
+		"has_types": true,
+		"types_source": "first-party",
+		"types_info": "First-party types defined in package.json: es/index.d.ts"
+	},
+	"github_stars": 98
+}

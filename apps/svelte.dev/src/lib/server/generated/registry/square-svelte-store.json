@@ -24,7 +24,6 @@
 	"dependents": 1,
 	"updated": "2024-02-21T15:08:52.067Z",
 	"tags": ["miscellaneous"],
-	"svelte5": true,
 	"runes": false,
 	"github_stars": 528,
 	"homepage": null,
@@ -32,5 +31,10 @@
 		"3": true,
 		"4": true,
 		"5": true
+	},
+	"typescript": {
+		"has_types": true,
+		"types_source": "first-party",
+		"types_info": "First-party types defined in package.json: lib/index.d.ts"
 	}
 }
