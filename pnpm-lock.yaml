@@ -313,9 +313,6 @@ importers:
       '@types/estree':
         specifier: ^1.0.5
         version: 1.0.6
-      magic-string:
-        specifier: ^0.30.11
-        version: 0.30.12
       prettier:
         specifier: ^3.3.2
         version: 3.3.2

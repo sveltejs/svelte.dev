@@ -84,7 +84,7 @@ const config: UserConfig = {
 		}
 	},
 	optimizeDeps: {
-		exclude: ['@sveltejs/site-kit', '@sveltejs/repl', '@rollup/browser'] // todo maybe need ts-blank-space
+		exclude: ['@sveltejs/site-kit', '@sveltejs/repl', '@rollup/browser']
 	},
 	ssr: {
 		noExternal: ['@sveltejs/site-kit', '@sveltejs/repl']

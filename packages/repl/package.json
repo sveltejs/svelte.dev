@@ -64,7 +64,6 @@
 		"@sveltejs/package": "^2.0.0",
 		"@sveltejs/vite-plugin-svelte": "4.0.0",
 		"@types/estree": "^1.0.5",
-		"magic-string": "^0.30.11",
 		"prettier": "^3.3.2",
 		"prettier-plugin-svelte": "^3.3.2",
 		"publint": "^0.2.12",
