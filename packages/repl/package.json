@@ -88,7 +88,7 @@
 		"resolve.exports": "^2.0.2",
 		"svelte": "5.23.0",
 		"tarparser": "^0.0.4",
-		"zimmerframe": "^1.1.2",
-		"typestript": "workspace:*"
+		"ts-blank-space": "^0.6.1",
+		"zimmerframe": "^1.1.2"
 	}
 }

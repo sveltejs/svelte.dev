@@ -1,5 +1,5 @@
 import type { Plugin } from '@rollup/browser';
-import { stripTypes } from 'typestript';
+import tsBlankSpace from 'ts-blank-space';
 
 const plugin: Plugin = {
 	name: 'typescript-strip-types',
@@ -7,13 +7,8 @@ const plugin: Plugin = {
 		const match = id.endsWith('.ts');
 		if (!match) return;
 
-		const { content, sourceMap } = stripTypes(code);
-
-		console.log(content);
-
 		return {
-			code: content,
-			map: sourceMap
+			code: tsBlankSpace(code)
 		};
 	}
 };
