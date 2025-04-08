@@ -14,6 +14,8 @@ if (!building && (!env.SUPABASE_URL || !env.SUPABASE_KEY)) {
 // @ts-ignore-line
 export const client =
 	!building &&
+	env.SUPABASE_URL &&
+	env.SUPABASE_KEY &&
 	createClient(env.SUPABASE_URL, env.SUPABASE_KEY, {
 		global: { fetch },
 		auth: { persistSession: false }
