@@ -185,7 +185,7 @@ async function get_bundle(
 					const url = new URL(importee, importer);
 
 					for (const suffix of ['', '.js', '.json']) {
-						const with_suffix = `${url.pathname.slice(1)}${suffix}`;
+						const with_suffix = `${url.href.slice(VIRTUAL.length + 1)}${suffix}`;
 						const file = virtual.get(with_suffix);
 
 						if (file) {
@@ -202,7 +202,7 @@ async function get_bundle(
 					const { name, version } = parse_npm_url(importer);
 
 					const pkg = await fetch_package(name, name === 'svelte' ? svelte_version : version);
-					const path = new URL(importee, importer).pathname.replace(`/${name}@${version}/`, '');
+					const path = new URL(importee, importer).href.replace(`${NPM}/${name}@${version}/`, '');
 
 					return normalize_path(pkg, path);
 				}
