@@ -10,7 +10,7 @@
 	import AppControls from './AppControls.svelte';
 	import { compress_and_encode_text, decode_and_decompress_text } from './gzip.js';
 	import { page } from '$app/state';
-	import type { File } from 'editor';
+	import type { File } from '@sveltejs/repl/workspace';
 
 	let { data } = $props();
 
@@ -23,29 +23,10 @@
 
 	// svelte-ignore non_reactive_update
 	let version = page.url.searchParams.get('version') || 'latest';
-	let is_pr_or_commit_version = version.startsWith('pr-') || version.startsWith('commit-');
 
 	// Hashed URLs are less safe (we can't delete malicious REPLs), therefore
 	// don't allow links to escape the sandbox restrictions
 	const can_escape = browser && !page.url.hash;
-
-	if (version !== 'local' && !is_pr_or_commit_version) {
-		$effect(() => {
-			fetch(`https://unpkg.com/svelte@${version}/package.json`)
-				.then((r) => r.json())
-				.then((pkg) => {
-					if (pkg.version !== version) {
-						version = pkg.version;
-
-						let url = `/playground/${data.gist.id}?version=${version}`;
-						if (location.hash) {
-							url += location.hash;
-						}
-						replaceState(url, {});
-					}
-				});
-		});
-	}
 
 	afterNavigate(() => {
 		name = data.gist.name;
@@ -72,7 +53,8 @@
 		if (!hash && !saved) {
 			repl?.set({
 				// TODO make this munging unnecessary (using JSON instead of structuredClone for better browser compat)
-				files: JSON.parse(JSON.stringify(data.gist.components)).map(munge)
+				files: JSON.parse(JSON.stringify(data.gist.components)).map(munge),
+				tailwind: false // TODO
 			});
 
 			modified = false;
@@ -92,7 +74,7 @@
 				name = recovered.name;
 			}
 
-			repl.set({ files });
+			repl.set({ files, tailwind: recovered.tailwind ?? false });
 		} catch {
 			alert(`Couldn't load the code from the URL. Make sure you copied the link correctly.`);
 		}
@@ -155,7 +137,8 @@
 	async function update_hash() {
 		// Only change hash when necessary to avoid polluting everyone's browser history
 		if (modified) {
-			const json = JSON.stringify({ name, files: repl.toJSON().files });
+			const { files, tailwind } = repl.toJSON();
+			const json = JSON.stringify({ name, files, tailwind });
 			await set_hash(json);
 		}
 	}
@@ -210,7 +193,8 @@
 		if (modified) {
 			// we can't save to the hash because it's an async operation, so we use
 			// a short-lived sessionStorage value instead
-			const json = JSON.stringify({ name, files: repl.toJSON().files });
+			const { files, tailwind } = repl.toJSON();
+			const json = JSON.stringify({ name, files, tailwind });
 			sessionStorage.setItem(STORAGE_KEY, json);
 		}
 	}}
@@ -241,6 +225,14 @@
 				{onchange}
 				{download}
 				previewTheme={theme.current}
+				onversion={(v) => {
+					if (version === (version = v)) return;
+
+					const url = new URL(location.href);
+					url.searchParams.set('version', v);
+
+					replaceState(url, {});
+				}}
 			/>
 		</div>
 	{/if}

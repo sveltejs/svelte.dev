@@ -62,8 +62,7 @@ const get_rss = async (posts) => {
 export async function GET() {
 	return new Response(await get_rss(index.blog.children), {
 		headers: {
-			'Cache-Control': `max-age=${30 * 60 * 1e3}`,
-			'Content-Type': 'application/rss+xml'
+			'Content-Type': 'application/xml'
 		}
 	});
 }

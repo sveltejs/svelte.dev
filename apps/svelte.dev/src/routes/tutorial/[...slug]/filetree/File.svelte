@@ -4,7 +4,7 @@
 	import file_icon from '$lib/icons/file.svg';
 	import { solution } from '../state.svelte';
 	import type { MenuItem } from '$lib/tutorial';
-	import type { File } from 'editor';
+	import type { File } from '@sveltejs/repl/workspace';
 
 	interface Props {
 		file: File;

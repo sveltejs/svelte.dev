@@ -1,5 +1,6 @@
 import type { CompileError, CompileOptions, CompileResult, Warning } from 'svelte/compiler';
-import type { File } from 'editor';
+import type { File } from '../Workspace.svelte';
+import type { MessageDetails } from '$lib/types';
 
 export type CompilerCommand =
 	| {
@@ -48,14 +49,18 @@ export interface MigrateOutput {
 	error?: string;
 }
 
+export interface BundleOptions {
+	tailwind?: boolean;
+	runes?: boolean;
+}
+
 export type BundleMessageData = {
 	uid: number;
-	type: 'init' | 'bundle' | 'status' | 'error';
+	type: 'init' | 'bundle' | 'status' | 'error' | 'version';
 	message: string;
-	packages_url: string;
 	svelte_version: string;
 	files: File[];
-	options: CompileOptions;
+	options: BundleOptions;
 };
 
 declare global {
