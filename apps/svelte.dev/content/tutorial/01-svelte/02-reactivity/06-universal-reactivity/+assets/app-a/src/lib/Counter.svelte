@@ -1,3 +1,6 @@
+<!-- disable legacy mode for this tutorial -->
+<svelte:options runes={true} />
+
 <script>
 	import { counter } from './shared.js';
 </script>
