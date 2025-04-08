@@ -33,6 +33,7 @@ export async function create(): Promise<Adapter> {
 				.map((f) => ({ ...f, name: f.name.slice(9) })),
 			{
 				// TODO support Tailwind here?
+				runes: true
 			}
 		);
 	}

@@ -50,7 +50,8 @@ export interface MigrateOutput {
 }
 
 export interface BundleOptions {
-	tailwind: boolean;
+	tailwind?: boolean;
+	runes?: boolean;
 }
 
 export type BundleMessageData = {

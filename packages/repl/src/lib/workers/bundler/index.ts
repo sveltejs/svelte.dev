@@ -290,7 +290,8 @@ async function get_bundle(
 				const compilerOptions: any = {
 					filename: name + '.svelte',
 					generate: Number(svelte.VERSION.split('.')[0]) >= 5 ? 'client' : 'dom',
-					dev: true
+					dev: true,
+					runes: options.runes
 				};
 
 				if (can_use_experimental_async) {
