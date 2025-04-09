@@ -18,7 +18,7 @@ const DOWNLOADS_BOOST = 7.5; // Lower weight for NPM downloads
 const RECENT_UPDATE_BOOST = 0.2;
 const SVELTE_5_BOOST = 15;
 
-const OUTDATED_PENALTY = -6; // Substantial penalty for outdated packages
+const OUTDATED_PENALTY = -20; // Substantial penalty for outdated packages
 const DEPRECATED_PENALTY = -12; // Severe penalty for deprecated packages
 
 /**
@@ -286,7 +286,9 @@ export async function search(
 				if (!pkg) continue;
 
 				// Base score from Orama result
-				let score = hit.score / 10;
+				let score = hit.score * 10;
+
+				console.log({ score, name: pkg.name });
 
 				// Apply custom scoring logic
 				if (exact_match.test(pkg.name)) {
