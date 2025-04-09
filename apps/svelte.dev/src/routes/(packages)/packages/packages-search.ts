@@ -18,6 +18,9 @@ const SVELTE_5_BOOST = 15;
 
 const OUTDATED_PENALTY = -20;
 const DEPRECATED_PENALTY = -12;
+const EXACT_NAME_MATCH_BOOST = 20;
+
+const EXACT_QUERY_REPLACEMENT_REGEX = /[-[\]{}()*+?.,\\^$|#\s]/g;
 
 /**
  * Simple utility to strip HTML tags from text
@@ -304,16 +307,31 @@ export async function search(
 			// For similar search scores or no search query, use the selected criterion
 			switch (current_sort) {
 				case 'popularity':
+					let score_a = doc_a.popularity_score as number;
+					let score_b = doc_b.popularity_score as number;
+
 					// For popularity, blend search score with popularity score when applicable
 					if (use_search_score) {
+						const name_a = doc_a.name as string;
+						const name_b = doc_b.name as string;
+
+						// Create regex patterns for scoring
+						const escaped_query = query!.replace(EXACT_QUERY_REPLACEMENT_REGEX, '\\$&');
+						const exact_match = new RegExp(`^${escaped_query}$`, 'i');
+
+						// Apply exact match boost
+						if (exact_match.test(name_a)) {
+							score_a += EXACT_NAME_MATCH_BOOST;
+						}
+
+						if (exact_match.test(name_b)) {
+							score_b += EXACT_NAME_MATCH_BOOST;
+						}
+
 						// Blend search relevance with popularity (70% popularity, 30% search score)
-						return (
-							(doc_b.popularity_score as number) * 0.5 +
-							score_b * 0.5 -
-							((doc_a.popularity_score as number) * 0.5 + score_a * 0.5)
-						);
+						return score_a * 0.5 + score_b * 0.5 - ((score_b as number) * 0.5 + score_a * 0.5);
 					}
-					return (doc_b.popularity_score as number) - (doc_a.popularity_score as number);
+					return score_b - score_a;
 				case 'downloads':
 					return (doc_b.downloads as number) - (doc_a.downloads as number);
 				case 'dependents':
