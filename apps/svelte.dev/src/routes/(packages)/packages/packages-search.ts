@@ -9,7 +9,6 @@ export const REGISTRY_PAGE_LIMIT = 50;
 const packages_map = new Map<string, Package>();
 
 // Scoring factors
-
 const DEPENDENTS_BOOST = 1;
 const GITHUB_STARS_BOOST = 10;
 const DOWNLOADS_BOOST = 4;
