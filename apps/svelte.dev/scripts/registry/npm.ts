@@ -226,7 +226,7 @@ export function superfetch(
 				// Use the request queue to limit concurrency
 				request_queue!
 					.enqueue(async () => {
-						const res = await fetch(url, fetch_options);
+						const res = await fetch(url, { cache: 'force-cache', ...fetch_options });
 
 						if (!res.ok) {
 							// Don't retry 404s, just return them
@@ -315,14 +315,14 @@ export async function fetch_downloads_for_package(pkg: string): Promise<number> 
 		.catch(() => 0);
 }
 
-export /**
+/**
  * Determines if a package ships with TypeScript types and checks for separate @types
  * package if first-party types aren't included
  *
  * @param package_json - The parsed package.json object
  * @returns An object with information about type availability
  */
-async function check_typescript_types(package_json: any): Promise<{
+export async function check_typescript_types(package_json: any): Promise<{
 	has_types: boolean;
 	types_source: 'first-party' | '@types' | 'none';
 	types_info: string;
@@ -379,6 +379,31 @@ async function check_typescript_types(package_json: any): Promise<{
 				has_types: true,
 				types_source: 'first-party',
 				types_info: 'First-party types defined in exports field'
+			};
+		}
+	}
+
+	// Check if the files field includes TypeScript declaration files
+	if (Array.isArray(package_json.files)) {
+		const has_type_files = package_json.files.some((pattern: string) => {
+			return (
+				pattern.includes('*.d.ts') ||
+				pattern.includes('**/*.d.ts') ||
+				pattern.endsWith('.d.ts') ||
+				pattern.includes('/types/') ||
+				pattern.includes('/typings/') ||
+				pattern === 'types' ||
+				pattern === 'typings' ||
+				pattern === 'dist/types' ||
+				pattern === 'dist/typings'
+			);
+		});
+
+		if (has_type_files) {
+			return {
+				has_types: true,
+				types_source: 'first-party',
+				types_info: 'First-party types included in files field'
 			};
 		}
 	}
