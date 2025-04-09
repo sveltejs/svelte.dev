@@ -8,7 +8,7 @@ export function entries() {
 }
 
 export function GET({ params }) {
-	const pkg = params.path;
+	const pkg = `${params.topic}/${params.path}`;
 
 	const section = sections.find((s) => s.slug === pkg);
 

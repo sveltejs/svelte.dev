@@ -3,7 +3,7 @@ import { render_content } from '$lib/server/renderer';
 import { error } from '@sveltejs/kit';
 
 export async function load({ params }) {
-	const document = docs.pages[`docs/${params.path}`];
+	const document = docs.pages[`docs/${params.topic}/${params.path}`];
 
 	if (!document) {
 		error(404);
