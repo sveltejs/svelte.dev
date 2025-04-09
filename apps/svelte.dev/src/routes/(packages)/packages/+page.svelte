@@ -12,7 +12,6 @@
 	const qps = reactive_query_params({
 		query: QueryParamSerde.string(),
 		svelte_versions: QueryParamSerde.array(),
-		hide_outdated: QueryParamSerde.boolean(true),
 		sort_by: QueryParamSerde.string<SortCriterion>('popularity')
 	});
 
@@ -61,7 +60,7 @@
 	$effect(() => {
 		qps.query;
 		qps.svelte_versions;
-		qps.hide_outdated;
+
 		qps.sort_by;
 
 		if (!ready) return;
@@ -79,7 +78,6 @@
 			payload: {
 				query: qps.query,
 				svelte_versions: $state.snapshot(qps.svelte_versions),
-				hide_outdated: qps.hide_outdated,
 				sort_by: qps.sort_by
 			}
 		});
@@ -215,10 +213,10 @@
 							</select>
 						</label>
 
-						<label>
+						<!-- <label>
 							Hide outdated:
 							<input type="checkbox" bind:checked={qps.hide_outdated} />
-						</label>
+						</label> -->
 					</div>
 				{/if}
 			</form>

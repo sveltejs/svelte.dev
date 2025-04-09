@@ -11,7 +11,7 @@ addEventListener('message', async (event) => {
 	}
 
 	if (type === 'get') {
-		let { query, svelte_versions = [], hide_outdated = false, sort_by } = payload;
+		let { query, svelte_versions = [], sort_by } = payload;
 
 		sort_by = search_criteria.includes(sort_by) ? sort_by : 'popularity';
 
@@ -26,8 +26,7 @@ addEventListener('message', async (event) => {
 						return acc;
 					},
 					{} as Record<string, boolean>
-				),
-				hide_outdated
+				)
 			}
 		});
 
