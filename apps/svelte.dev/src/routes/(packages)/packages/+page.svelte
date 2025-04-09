@@ -184,9 +184,7 @@
 
 				{#if qps.query}
 					<div class="sub">
-						<span
-							>Showing {packages.packages?.length ?? 0 + packages.sv_add?.length ?? 0} results</span
-						>
+						<span>Showing {packages?.length ?? 0} results</span>
 
 						<span style="flex: 1 1 auto"></span>
 
@@ -281,19 +279,19 @@
 		</section>
 
 		<div class="posts" style="display: {!qps.query ? 'none' : null}">
-			{#if packages.sv_add.length > 0}
+			<!-- {#if packages.sv_add.length > 0}
 				<h2>sv add</h2>
 				<section>
 					{#each packages.sv_add as pkg}
 						<PackageCard {pkg} />
 					{/each}
 				</section>
-			{/if}
+			{/if} -->
 
-			{#if packages.packages.length > 0}
+			{#if packages.length > 0}
 				<h2>Packages</h2>
 				<section>
-					{#each packages.packages as pkg}
+					{#each packages as pkg}
 						<PackageCard {pkg} />
 					{/each}
 				</section>

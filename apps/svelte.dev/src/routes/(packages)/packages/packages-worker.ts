@@ -5,7 +5,7 @@ addEventListener('message', async (event) => {
 
 	if (type === 'init') {
 		const data = await fetch(`${payload.origin}/packages.json`).then((r) => r.json());
-		init(data);
+		await init(data);
 
 		postMessage({ type: 'ready' });
 	}
@@ -17,7 +17,7 @@ addEventListener('message', async (event) => {
 
 		if (!query) return;
 
-		const current_results = search(query, {
+		const current_results = await search(query, {
 			sort_by,
 			filters: {
 				svelte_versions: (svelte_versions as string[]).reduce(

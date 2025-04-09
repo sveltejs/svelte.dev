@@ -55,9 +55,9 @@ export async function load({ url }) {
 		});
 	}
 
-	init(registry);
+	await init(registry);
 
-	let current_results = search(query, {
+	let current_results = await search(query, {
 		sort_by,
 		filters: {
 			svelte_versions,
