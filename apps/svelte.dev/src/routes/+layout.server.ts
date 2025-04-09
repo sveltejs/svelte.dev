@@ -65,7 +65,7 @@ const nav_links: NavigationLink[] = [
 
 export const load = async () => {
 	return {
-		nav_links
-		// banner
+		nav_links,
+		banner: undefined
 	};
 };
