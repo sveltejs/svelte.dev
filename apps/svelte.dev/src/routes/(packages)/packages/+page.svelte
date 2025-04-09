@@ -11,7 +11,7 @@
 
 	const qps = reactive_query_params({
 		query: QueryParamSerde.string(),
-		svelte_versions: QueryParamSerde.array(['4', '5']),
+		svelte_versions: QueryParamSerde.array(),
 		hide_outdated: QueryParamSerde.boolean(true),
 		sort_by: QueryParamSerde.string<SortCriterion>('popularity')
 	});

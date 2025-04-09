@@ -1,14 +1,11 @@
 import { PACKAGES_META } from '$lib/packages-meta';
 import type { Package, PackageGroup } from '$lib/server/content';
-import flexsearch, { type Index as FlexSearchIndex } from 'flexsearch';
-
-// @ts-expect-error
-const Index = (flexsearch.Index as FlexSearchIndex) ?? flexsearch;
+import { Index } from 'flexsearch';
 
 /** If the search is already initialized */
 export let is_inited = false;
 
-let index: FlexSearchIndex;
+let index: Index;
 
 const packages_map = new Map<string, Package>();
 
@@ -16,7 +13,6 @@ const name_to_index_map = new Map<string, number>();
 let next_id = 0;
 
 // Sorting direction
-export type SortDirection = 'asc' | 'dsc';
 
 // Scoring factors
 const EXACT_NAME_MATCH_BOOST = 10;
@@ -49,9 +45,10 @@ interface SearchEntry {
 export function init(packages: Package[]) {
 	if (is_inited) return;
 
-	// @ts-expect-error
 	index = new Index({
-		tokenize: 'forward'
+		tokenize: 'forward',
+		optimize: true,
+		preset: 'score'
 	});
 
 	for (const pkg of packages) {
@@ -66,11 +63,10 @@ export function init(packages: Package[]) {
 		// Format: index.add(id, text)
 		const searchable_text = [
 			pkg.name,
+			pkg.name.replace(/[^a-zA-Z0-9]/g, ' '),
 			strip_html(pkg.description || ''),
 			(pkg.tags || []).join(' '),
-			pkg.authors
-				? `${pkg.authors.reduce((a, b) => `${a.includes('author:') ? `author:${a}` : `${a}`} author:${b}`, '')}`
-				: '' // Add authors with prefix for targeted searching
+			pkg.authors ? pkg.authors.map((v) => `author:${v}`).join(' ') : '' // Add authors with prefix for targeted searching
 		].join(' ');
 
 		index.add(id, searchable_text);
@@ -172,7 +168,10 @@ export function search(
 	// Case 3 & 4: Has query (and possibly tags)
 	else if (has_query) {
 		// Search the index
-		const result_ids = index.search(normalized_query);
+		const result_ids = index.search(normalized_query, {
+			suggest: true,
+			limit: 100
+		});
 
 		if (result_ids && result_ids.length > 0) {
 			if (sort_by === 'popularity') {
@@ -539,10 +538,7 @@ export function get_all_tags(): { tag: string; count: number }[] {
 /**
  * Get packages by author
  */
-export function get_packages_by_author(
-	author: string,
-	direction: SortDirection = 'dsc'
-): Package[] {
+export function get_packages_by_author(author: string): Package[] {
 	return Array.from(packages_map.values())
 		.filter((pkg) => pkg.authors?.includes(author))
 		.sort((a, b) => {
@@ -566,6 +562,6 @@ export function get_packages_by_author(
 				Math.log10(b_downloads + 1) * 1;
 
 			const comparison = b_score - a_score;
-			return direction === 'asc' ? -comparison : comparison;
+			return comparison;
 		});
 }

@@ -93,8 +93,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages/editor
       flexsearch:
-        specifier: ^0.7.43
-        version: 0.7.43
+        specifier: ^0.8.151
+        version: 0.8.151
       flru:
         specifier: ^1.0.2
         version: 1.0.2
@@ -2482,6 +2482,9 @@ packages:
 
   flexsearch@0.7.43:
     resolution: {integrity: sha512-c5o/+Um8aqCSOXGcZoqZOm+NqtVwNsvVpWv6lfmSclU954O3wvQKxxK8zj74fPaSJbXpSLTs4PRhh+wnoCXnKg==}
+
+  flexsearch@0.8.151:
+    resolution: {integrity: sha512-bMI/vDndsaldfmOLKGk5HMYSiXhX1sBiD/ENZKAnsQJaqC/yk51aTy0+Ny2hYcu+Utazy3s8NZA/zbh2o88ctQ==}
 
   flru@1.0.2:
     resolution: {integrity: sha512-kWyh8ADvHBFz6ua5xYOPnUroZTT/bwWfrCeL0Wj1dzG4/YOmOcfJ99W8dOVyyynJN35rZ9aCOtHChqQovV7yog==}
@@ -5661,6 +5664,8 @@ snapshots:
       path-exists: 4.0.0
 
   flexsearch@0.7.43: {}
+
+  flexsearch@0.8.151: {}
 
   flru@1.0.2: {}
 

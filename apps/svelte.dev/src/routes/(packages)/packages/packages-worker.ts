@@ -11,7 +11,7 @@ addEventListener('message', async (event) => {
 	}
 
 	if (type === 'get') {
-		let { query, svelte_versions = ['4', '5'], hide_outdated = false, sort_by } = payload;
+		let { query, svelte_versions = [], hide_outdated = false, sort_by } = payload;
 
 		sort_by = search_criteria.includes(sort_by) ? sort_by : 'popularity';
 

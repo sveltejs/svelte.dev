@@ -61,6 +61,11 @@ const config: UserConfig = {
 	build: {
 		cssMinify: 'lightningcss'
 	},
+	resolve: {
+		alias: {
+			// flexsearch: './node_modules/flexsearch/dist/module/index.js'
+		}
+	},
 	server: {
 		fs: { allow: ['../../packages', '../../../KIT/kit/packages/kit'] },
 		// for SvelteKit tutorial

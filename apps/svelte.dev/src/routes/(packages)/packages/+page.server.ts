@@ -12,7 +12,7 @@ export const prerender = false;
 
 export async function load({ url }) {
 	const query = url.searchParams.get('query');
-	const svelte_versions = (url.searchParams.get('svelte_versions') ?? '4,5')
+	const svelte_versions = (url.searchParams.get('svelte_versions') ?? '')
 		.split(',')
 		.filter(Boolean)
 		.reduce(
