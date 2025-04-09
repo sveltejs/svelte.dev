@@ -452,7 +452,7 @@ type: Exclude<NavigationType, 'leave'>;
 <div class="ts-block-property-details">
 
 The type of navigation:
-- `enter`: The app has hydrated
+- `enter`: The app has hydrated/started
 - `form`: The user submitted a `<form>`
 - `link`: Navigation was triggered by a link click
 - `goto`: Navigation was triggered by a `goto(...)` call or a redirect
@@ -1538,7 +1538,7 @@ id: RouteId;
 
 <div class="ts-block-property-details">
 
-The ID of the current route - e.g. for `src/routes/blog/[slug]`, it would be `/blog/[slug]`
+The ID of the current route - e.g. for `src/routes/blog/[slug]`, it would be `/blog/[slug]`. It is `null` when no route is matched.
 
 </div>
 </div></div>
@@ -1586,12 +1586,25 @@ Is `null` if the target is not part of the SvelteKit app (could not be resolved 
 <div class="ts-block-property">
 
 ```dts
-route: { id: string | null };
+route: {/*…*/}
 ```
 
 <div class="ts-block-property-details">
 
 Info about the target route
+
+<div class="ts-block-property-children"><div class="ts-block-property">
+
+```dts
+id: string | null;
+```
+
+<div class="ts-block-property-details">
+
+The ID of the current route - e.g. for `src/routes/blog/[slug]`, it would be `/blog/[slug]`. It is `null` when no route is matched.
+
+</div>
+</div></div>
 
 </div>
 </div>
@@ -1611,7 +1624,7 @@ The URL that is navigated to
 
 ## NavigationType
 
-- `enter`: The app has hydrated
+- `enter`: The app has hydrated/started
 - `form`: The user submitted a `<form>` with a GET method
 - `leave`: The user is leaving the app by closing the tab or using the back/forward buttons to go to a different document
 - `link`: Navigation was triggered by a link click
@@ -1745,7 +1758,7 @@ id: RouteId;
 
 <div class="ts-block-property-details">
 
-The ID of the current route - e.g. for `src/routes/blog/[slug]`, it would be `/blog/[slug]`.
+The ID of the current route - e.g. for `src/routes/blog/[slug]`, it would be `/blog/[slug]`. It is `null` when no route is matched.
 
 </div>
 </div></div>
@@ -2006,7 +2019,7 @@ id: RouteId;
 
 <div class="ts-block-property-details">
 
-The ID of the current route - e.g. for `src/routes/blog/[slug]`, it would be `/blog/[slug]`.
+The ID of the current route - e.g. for `src/routes/blog/[slug]`, it would be `/blog/[slug]`. It is `null` when no route is matched.
 
 </div>
 </div></div>
@@ -2117,6 +2130,7 @@ The [`reroute`](/docs/kit/hooks#Universal-hooks-reroute) hook allows you to modi
 ```dts
 type Reroute = (event: {
 	url: URL;
+	fetch: typeof fetch;
 }) => MaybePromise<void | string>;
 ```
 
