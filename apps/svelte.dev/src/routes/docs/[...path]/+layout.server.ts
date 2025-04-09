@@ -1,4 +1,4 @@
-import { docs } from '$lib/server/content';
+import { create_summary, docs } from '$lib/server/content';
 import { redirect } from '@sveltejs/kit';
 import { error } from '@sveltejs/kit';
 
@@ -20,6 +20,6 @@ export async function load({ params }) {
 	}
 
 	return {
-		sections: document.children
+		sections: document.children.map(create_summary)
 	};
 }

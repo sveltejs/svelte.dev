@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { afterNavigate } from '$app/navigation';
 	import { page } from '$app/stores';
-	import type { Document } from '../types';
+	import type { Document, DocumentSummary } from '../types';
 
 	interface Props {
-		contents: Document[];
+		contents: DocumentSummary[];
 		show_ts_toggle?: boolean;
 	}
 
