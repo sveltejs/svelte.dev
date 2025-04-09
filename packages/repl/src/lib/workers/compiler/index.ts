@@ -102,6 +102,13 @@ addEventListener('message', async (event) => {
 			}
 		});
 	} catch (e) {
+		if (!e.position && e.loc) {
+			// this came from tsBlankSpace. Workspace expects a
+			// `position` property from a Svelte compile error;
+			// this is a hacky but pragmatic way to solve it
+			e.position = [e.pos, e.raisedAt];
+		}
+
 		postMessage({
 			id,
 			filename: file.name,
