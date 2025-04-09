@@ -157,6 +157,15 @@ const FEATURED: { title: string; packages: string[]; weights?: Record<string, nu
 		packages: ['@threlte/core', 'svelte-zdog']
 	},
 	{
+		title: 'Animations',
+		packages: [
+			'@neoconfetti/svelte',
+			'svelte-motion',
+			'@lottiefiles/svelte-lottie-player',
+			'@tsparticles/svelte'
+		]
+	},
+	{
 		title: 'Content',
 		packages: [
 			'mdsvex',
@@ -168,7 +177,8 @@ const FEATURED: { title: string; packages: string[]; weights?: Record<string, nu
 			'@svelteness/kit-docs',
 			'@evidence-dev/evidence',
 			'@magidoc/plugin-svelte-marked',
-			'svelte-exmarkdown'
+			'svelte-exmarkdown',
+			'svelte-pdf'
 		]
 	},
 	{
@@ -191,9 +201,7 @@ const FEATURED: { title: string; packages: string[]; weights?: Record<string, nu
 			'unlazy-svelte',
 			'scrolly-video',
 			'@zerodevx/svelte-img',
-			'svelte-easy-crop',
-			'svelte-pdf',
-			'@lottiefiles/svelte-lottie-player'
+			'svelte-easy-crop'
 		]
 	},
 	{
