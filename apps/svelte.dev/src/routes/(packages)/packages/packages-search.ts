@@ -14,7 +14,7 @@ const GITHUB_STARS_BOOST = 10;
 const DOWNLOADS_BOOST = 4;
 const RECENT_UPDATE_BOOST = 1;
 const SVELTE_5_BOOST = 15;
-const EXACT_NAME_MATCH_BOOST = 30;
+const EXACT_NAME_MATCH_BOOST = 100;
 
 const OUTDATED_PENALTY = -100;
 const DEPRECATED_PENALTY = -120;
@@ -126,6 +126,7 @@ function create_index() {
 				stemming: false
 			}
 		}
+		// plugins: [pluginPT15()]
 		// Custom sort function that considers search score and custom criteria
 	});
 }
@@ -273,6 +274,7 @@ export async function search(
 	// Prepare search configuration
 	const search_config: SearchParams<ReturnType<typeof create_index>> = {
 		limit: 100,
+		mode: 'fulltext',
 		sortBy: (a, b) => {
 			const id_a = a[0];
 			const id_b = b[0];

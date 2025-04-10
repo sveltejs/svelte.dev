@@ -287,7 +287,6 @@
 			{/if} -->
 
 			{#if packages.length > 0}
-				<h2>Packages</h2>
 				<section>
 					{#each packages as pkg}
 						<PackageCard {pkg} />
