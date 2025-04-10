@@ -140,7 +140,7 @@ constructor(...params: any[]);
 ## SvelteMap
 
 A reactive version of the built-in [`Map`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) object.
-Reading contents of the map in an [effect](/docs/svelte/$effect) or [derived](/docs/svelte/$derived) (by iterating, or by reading `map.size` or calling `map.get(...)` or `map.has(...)` as in the [tic-tac-toe example](/playground/0b0ff4aa49c9443f9b47fe5203c78293?version=5.25.10) below)
+Reading contents of the map in an [effect](/docs/svelte/$effect) or [derived](/docs/svelte/$derived) (by iterating, or by reading `map.size` or calling `map.get(...)` or `map.has(...)` as in the [tic-tac-toe example](/playground/0b0ff4aa49c9443f9b47fe5203c78293) below)
 will cause it to be re-evaluated as necessary when the map is updated.
 
 Note that values in a reactive map are _not_ made [deeply reactive](/docs/svelte/$state#Deep-state).
@@ -207,6 +207,37 @@ set(key: K, value: V): this;
 
 
 ## SvelteSet
+
+A reactive version of the built-in [`Set`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) object.
+Reading contents of the set in an [effect](/docs/svelte/$effect) or [derived](/docs/svelte/$derived) (by iterating, or by reading `set.size` or calling `set.has(...)` as in the [example](/playground/53438b51194b4882bcc18cddf9f96f15) below)
+will cause it to be re-evaluated as necessary when the set is updated.
+
+Note that values in a reactive set are _not_ made [deeply reactive](/docs/svelte/$state#Deep-state).
+
+```svelte
+<script>
+	import { SvelteSet } from 'svelte/reactivity';
+	let monkeys = new SvelteSet();
+
+	function toggle(monkey) {
+		if (monkeys.has(monkey)) {
+			monkeys.delete(monkey);
+		} else {
+			monkeys.add(monkey);
+		}
+	}
+</script>
+
+{#each ['🙈', '🙉', '🙊'] as monkey}
+	<button onclick={() => toggle(monkey)}>{monkey}</button>
+{/each}
+
+<button onclick={() => monkeys.clear()}>clear</button>
+
+{#if monkeys.has('🙈')}<p>see no evil</p>{/if}
+{#if monkeys.has('🙉')}<p>hear no evil</p>{/if}
+{#if monkeys.has('🙊')}<p>speak no evil</p>{/if}
+```
 
 <div class="ts-block">
 
