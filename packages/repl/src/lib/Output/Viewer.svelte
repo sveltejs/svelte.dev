@@ -51,9 +51,9 @@
 
 	let logs: Log[] = $state([]);
 	let log_group_stack: Log[][] = [];
-
 	// svelte-ignore state_referenced_locally
 	let current_log_group = logs;
+	let last_console_event: Log;
 
 	let iframe = $state.raw<HTMLIFrameElement>();
 	let pending_imports = $state(0);
@@ -62,10 +62,6 @@
 	let proxy: ReplProxy | null = $state.raw(null);
 	let ready = $state(false);
 	let inited = $state(false);
-
-	let log_height = 90;
-	let prev_height: number;
-	let last_console_event: Log;
 
 	onMount(() => {
 		proxy = new ReplProxy(iframe!, {
@@ -285,15 +281,6 @@
 		} else {
 			// console was cleared
 			push_logs(last_console_event);
-		}
-	}
-
-	function on_toggle_console() {
-		if (log_height < 90) {
-			prev_height = log_height;
-			log_height = 90;
-		} else {
-			log_height = prev_height || 45;
 		}
 	}
 

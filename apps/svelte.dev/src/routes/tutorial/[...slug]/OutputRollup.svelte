@@ -71,7 +71,6 @@
 		width: 100%;
 		height: 80%;
 		font: var(--sk-font-mono);
-		padding: 1rem;
 		background: var(--sk-bg-1);
 		border-top: 1px solid var(--sk-border);
 		transform: translate(0, 100%);
