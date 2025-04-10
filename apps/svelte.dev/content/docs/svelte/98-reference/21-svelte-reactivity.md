@@ -89,6 +89,37 @@ constructor(query: string, fallback?: boolean | undefined);
 
 ## SvelteDate
 
+A reactive version of the built-in [`Date`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object.
+Reading the date in an [effect](/docs/svelte/$effect) or [derived](/docs/svelte/$derived) (whether with methods like `date.getTime()` or `date.toString()`,
+or via things like [`Intl.DateTimeFormat`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)) will cause it to be re-evaluated when the
+value of the date changes.
+
+```svelte
+<script>
+	import { SvelteDate } from 'svelte/reactivity';
+
+	const date = new SvelteDate();
+
+	const formatter = new Intl.DateTimeFormat(undefined, {
+	  hour: 'numeric',
+	  minute: 'numeric',
+	  second: 'numeric'
+	});
+
+	$effect(() => {
+		const interval = setInterval(() => {
+			date.setTime(Date.now());
+		}, 1000);
+
+		return () => {
+			clearInterval(interval);
+		};
+	});
+</script>
+
+<p>The time is {formatter.format(date)}</p>
+```
+
 <div class="ts-block">
 
 ```dts
