@@ -4,11 +4,14 @@ import { generate_llm_content, get_documentation_title, sections } from '$lib/se
 export const prerender = true;
 
 export function entries() {
-	return sections.map((section) => ({ path: section.slug }));
+	return sections.map((section) => {
+		const [topic, ...rest] = section.slug.split('/');
+		return { topic, path: rest.join('/') };
+	});
 }
 
 export function GET({ params }) {
-	const pkg = params.path;
+	const pkg = params.path ? `${params.topic}/${params.path}` : params.topic;
 
 	const section = sections.find((s) => s.slug === pkg);
 

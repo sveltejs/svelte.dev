@@ -2,14 +2,14 @@
 title: Keyed each blocks
 ---
 
-By default, when you modify the value of an `each` block, it will add and remove DOM nodes at the _end_ of the block, and update any values that have changed. That might not be what you want.
+By default, updating the value of an `each` block will add or remove DOM nodes at the _end_ of the block if the size changes, and update the remaining DOM. That might not be what you want.
 
 It's easier to show why than to explain. Inside `Thing.svelte`, `name` is a dynamic prop but `emoji` is a constant.
 
 Click the 'Remove first thing' button a few times, and notice what happens:
 
 1. It removes the last component.
-2. It then updates the `name` value in the remaining DOM nodes, but not the emoji.
+2. It then updates the `name` value in the remaining DOM nodes (the text node containing 'doughnut' now contains 'egg', and so on), but not the emoji.
 
 > [!NOTE] If you're coming from React, this might seem strange, because you're used to the entire component re-rendering when state changes. Svelte works differently: the component 'runs' once, and subsequent updates are 'fine-grained'. This makes things faster and gives you more control.
 

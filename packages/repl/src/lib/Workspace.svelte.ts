@@ -1,6 +1,6 @@
 import type { CompileError, CompileResult } from 'svelte/compiler';
 import { Compartment, EditorState, StateEffect, StateField } from '@codemirror/state';
-import { compile_file } from './compile-worker';
+import { compile_file } from './Compiler';
 import { BROWSER } from 'esm-env';
 import { basicSetup, EditorView } from 'codemirror';
 import { javascript } from '@codemirror/lang-javascript';
@@ -140,14 +140,17 @@ export class Workspace {
 				to: error.position![1],
 				message: error.message,
 				renderMessage: () => {
-					const span = document.createElement('span');
-					span.innerHTML = `${error.message
+					let html = error.message
 						.replace(/&/g, '&amp;')
 						.replace(/</g, '&lt;')
-						.replace(
-							/`(.+?)`/g,
-							`<code>$1</code>`
-						)} (<a href="/docs/svelte/compiler-errors#${error.code}">${error.code}</a>)`;
+						.replace(/`(.+?)`/g, `<code>$1</code>`);
+
+					if (error.code) {
+						html += ` (<a href="/docs/svelte/compiler-errors#${error.code}">${error.code}</a>)`;
+					}
+
+					const span = document.createElement('span');
+					span.innerHTML = html;
 
 					return span;
 				}
@@ -489,7 +492,7 @@ export class Workspace {
 
 		localStorage.setItem('vim', String(value));
 
-		// @ts-expect-error jfc CodeMirror is a struggle
+		// @ts-ignore jfc CodeMirror is a struggle
 		let vim_extension_index = default_extensions.findIndex((ext) => ext.compartment === vim_mode);
 
 		let extension: any = [];
@@ -587,6 +590,10 @@ export class Workspace {
 			case 'js': // TODO autocomplete, including runes
 			case 'json':
 				extensions.push(javascript());
+				break;
+
+			case 'ts':
+				extensions.push(javascript({ typescript: true }));
 				break;
 
 			case 'html':

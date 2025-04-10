@@ -119,6 +119,7 @@
 
 	.cm-selectionBackground {
 		border-radius: 2px;
+		background-color: var(--sk-bg-unfocused-selection);
 	}
 
 	.cm-selectionMatch {
