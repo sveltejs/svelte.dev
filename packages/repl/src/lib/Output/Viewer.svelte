@@ -5,7 +5,7 @@
 	import Message from '../Message.svelte';
 	import PaneWithPanel from './PaneWithPanel.svelte';
 	import ReplProxy from './ReplProxy.js';
-	import Console, { type Log } from './console/Console.svelte';
+	import Console from './console/Console.svelte';
 	import getLocationFromStack from './get-location-from-stack';
 	import srcdoc from './srcdoc/index.html?raw';
 	import srcdoc_styles from './srcdoc/styles.css?raw';
@@ -13,6 +13,7 @@
 	import type { CompileError } from 'svelte/compiler';
 	import type Bundler from '../Bundler.svelte';
 	import type { BundleResult } from '../public';
+	import { Log } from './console/Log.svelte';
 
 	interface Props {
 		error: Error | null;
@@ -48,7 +49,7 @@
 	let context = get_repl_context();
 	let bundle = $derived((bundler ?? context?.bundler)?.result);
 
-	let logs: Log[] = $state.raw([]); // we don't want to proxify the logged values
+	let logs: Log[] = $state([]);
 	let log_group_stack: Log[][] = [];
 
 	// svelte-ignore state_referenced_locally
@@ -255,19 +256,18 @@
 		error = e;
 	}
 
-	function push_logs(log: Log) {
+	function push_logs(data: any) {
+		const log = new Log(data);
 		current_log_group.push((last_console_event = log));
-		logs = [...logs, log];
 		onLog?.(logs);
 	}
 
-	function group_logs(log: Log) {
-		log.logs = [];
+	function group_logs(data: any) {
+		const log = new Log(data);
 		current_log_group.push(log);
 		// TODO: Investigate
 		log_group_stack.push(current_log_group);
 		current_log_group = log.logs;
-		logs = [...logs];
 		onLog?.(logs);
 	}
 
@@ -278,14 +278,12 @@
 	}
 
 	function increment_duplicate_log() {
-		const last_log = current_log_group[current_log_group.length - 1];
+		last_console_event.count += 1;
 
-		if (last_log) {
-			last_log.count = (last_log.count || 1) + 1;
-			logs = [...logs];
+		if (current_log_group.includes(last_console_event)) {
 			onLog?.(logs);
 		} else {
-			last_console_event.count = 1;
+			// console was cleared
 			push_logs(last_console_event);
 		}
 	}

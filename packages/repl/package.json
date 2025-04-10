@@ -45,8 +45,8 @@
 			"svelte": "./src/lib/Workspace.svelte.ts"
 		},
 		"./console": {
-			"types": "./src/lib/Output/console/Console.svelte",
-			"svelte": "./src/lib/Output/console/Console.svelte"
+			"types": "./src/lib/Output/console/index.ts",
+			"svelte": "./src/lib/Output/console/index.ts"
 		}
 	},
 	"files": [

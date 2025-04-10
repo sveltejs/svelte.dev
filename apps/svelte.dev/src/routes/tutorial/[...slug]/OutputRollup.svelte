@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
 	import Viewer from '@sveltejs/repl/viewer';
-	import Console, { type Log } from '@sveltejs/repl/console';
+	import { Console, type Log } from '@sveltejs/repl/console';
 	import { theme } from '@sveltejs/site-kit/state';
 	import Chrome from './Chrome.svelte';
 	import Loading from './Loading.svelte';
