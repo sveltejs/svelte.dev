@@ -679,7 +679,7 @@ generateManifest: (opts: {
 
 - `opts.relativePath` a relative path to the base directory of the app
 - `opts.routes` optional. In which format (esm or cjs) the manifest should be generated
-- `opts.rerouteMiddleware` optional. True if the `reroute` hook will run in a middleware before the main handler
+- `opts.rerouteMiddleware` optional. True if the `reroute` hook will run in a middleware before the main handler using the [`applyReroute`](https://svelte.dev/docs/kit/@sveltejs-kit-adapter#applyReroute) function
 
 </div>
 
@@ -756,7 +756,7 @@ getReroutePath: () => Promise<string | void>;
 
 <div class="ts-block-property-bullets">
 
-- <span class="tag since">available since</span> v2.19.0
+- <span class="tag since">available since</span> v2.21.0
 
 </div>
 
