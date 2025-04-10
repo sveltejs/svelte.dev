@@ -60,7 +60,6 @@
 	$effect(() => {
 		qps.query;
 		qps.svelte_versions;
-
 		qps.sort_by;
 
 		if (!ready) return;
