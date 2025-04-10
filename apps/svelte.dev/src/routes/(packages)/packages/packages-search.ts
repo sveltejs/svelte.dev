@@ -14,10 +14,10 @@ const GITHUB_STARS_BOOST = 10;
 const DOWNLOADS_BOOST = 4;
 const RECENT_UPDATE_BOOST = 1;
 const SVELTE_5_BOOST = 15;
+const EXACT_NAME_MATCH_BOOST = 30;
 
-const OUTDATED_PENALTY = -20;
-const DEPRECATED_PENALTY = -12;
-const EXACT_NAME_MATCH_BOOST = 20;
+const OUTDATED_PENALTY = -100;
+const DEPRECATED_PENALTY = -120;
 
 const EXACT_QUERY_REPLACEMENT_REGEX = /[-[\]{}()*+?.,\\^$|#\s]/g;
 
@@ -306,8 +306,8 @@ export async function search(
 			// For similar search scores or no search query, use the selected criterion
 			switch (current_sort) {
 				case 'popularity':
-					let score_a = doc_a.popularity_score as number;
-					let score_b = doc_b.popularity_score as number;
+					let popularity_score_a = doc_a.popularity_score as number;
+					let popularity_score_b = doc_b.popularity_score as number;
 
 					// For popularity, blend search score with popularity score when applicable
 					if (use_search_score) {
@@ -320,15 +320,17 @@ export async function search(
 
 						// Apply exact match boost
 						if (exact_match.test(name_a)) {
-							score_a += EXACT_NAME_MATCH_BOOST;
+							popularity_score_a += EXACT_NAME_MATCH_BOOST;
 						}
 
 						if (exact_match.test(name_b)) {
-							score_b += EXACT_NAME_MATCH_BOOST;
+							popularity_score_b += EXACT_NAME_MATCH_BOOST;
 						}
 
 						// Blend search relevance with popularity (70% popularity, 30% search score)
-						return score_a * 0.5 + score_b * 0.5 - ((score_b as number) * 0.5 + score_a * 0.5);
+						return (
+							popularity_score_b * 0.5 + score_b * 0.5 - (score_a * 0.5 + popularity_score_a * 0.5)
+						);
 					}
 					return score_b - score_a;
 				case 'downloads':
