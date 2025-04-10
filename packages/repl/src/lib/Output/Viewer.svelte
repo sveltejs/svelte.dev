@@ -205,6 +205,7 @@
 									console[method] = original[method];
 								}
 								if (component) unmount(component);
+								window.__unmount_previous = null;
 							}
 						}
 					}
