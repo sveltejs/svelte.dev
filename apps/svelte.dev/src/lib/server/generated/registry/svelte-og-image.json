@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/eltigerchino/svelte-og-image",
 	"authors": ["eltigerchino"],
 	"homepage": "https://github.com/eltigerchino/svelte-og-image#readme",
-	"downloads": 2,
-	"dependents": 0,
+	"downloads": 9,
 	"updated": "2024-07-15T16:39:13.496Z",
 	"tags": ["seo"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.0.6",
+	"svelte_range": "^4.0.0",
+	"kit_range": "^2.5.18"
 }

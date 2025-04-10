@@ -3,20 +3,12 @@
 	"description": "Create simple native dialog components for Svelte apps.",
 	"repo_url": "",
 	"authors": ["gratrockstar"],
-	"downloads": 2,
-	"dependents": 0,
+	"downloads": 0,
 	"updated": "2023-12-29T23:48:26.382Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "1.0.0",
+	"svelte_range": "^4.2.7",
+	"kit_range": "^2.0.0"
 }

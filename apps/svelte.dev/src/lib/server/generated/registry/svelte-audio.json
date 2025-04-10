@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/JacobLinCool/svelte-audio",
 	"authors": ["jacoblincool"],
 	"homepage": "https://jacoblincool.github.io/svelte-audio/",
-	"downloads": 2,
-	"dependents": 0,
+	"downloads": 24,
 	"updated": "2024-04-04T15:44:10.337Z",
 	"tags": ["media"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 1,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.0.1",
+	"svelte_range": "^4.0.0",
+	"kit_range": "^2.5.5"
 }

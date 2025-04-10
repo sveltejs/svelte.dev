@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/kudu-consultant/kudu-components",
 	"authors": ["kuduconsultant"],
 	"homepage": "https://github.com/kudu-consultant/kudu-components",
-	"downloads": 10,
-	"dependents": 0,
+	"downloads": 3,
 	"updated": "2023-07-28T16:54:55.161Z",
 	"tags": ["design-system"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in exports field"
-	}
+	"typescript": "first-party",
+	"version": "0.1.0",
+	"svelte_range": "3.59.1",
+	"kit_range": "1.20.1"
 }

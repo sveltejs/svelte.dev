@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/jill64/eslint-config-svelte",
 	"authors": ["jill64"],
 	"homepage": "https://github.com/jill64/eslint-config-svelte#readme",
-	"downloads": 16168,
-	"dependents": 0,
-	"updated": "2025-03-20T02:48:08.631Z",
+	"downloads": 10776,
+	"updated": "2025-04-10T10:49:26.573Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 2,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "2.2.10",
+	"svelte_range": "^5.0.0"
 }

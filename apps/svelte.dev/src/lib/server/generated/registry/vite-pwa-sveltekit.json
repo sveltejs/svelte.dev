@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/vite-pwa/sveltekit",
 	"authors": ["antfu", "userquin"],
 	"homepage": "https://github.com/vite-pwa/sveltekit#readme",
-	"downloads": 6349,
-	"dependents": 5,
-	"updated": "2024-12-31T15:28:58.780Z",
+	"downloads": 6220,
+	"updated": "2025-03-29T20:38:55.733Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 351,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.0.0",
+	"kit_range": "^1.3.1 || ^2.0.1"
 }

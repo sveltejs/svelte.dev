@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/sveiljs/sveil",
 	"authors": ["donapot"],
 	"homepage": "https://github.com/sveiljs/sveil#readme",
-	"downloads": 15,
-	"dependents": 0,
+	"downloads": 1,
 	"updated": "2023-10-07T22:57:20.506Z",
 	"tags": ["miscellaneous"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/cjs/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.0.15",
+	"svelte_range": "^4.2.0"
 }

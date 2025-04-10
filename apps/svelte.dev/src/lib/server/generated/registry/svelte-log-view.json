@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/arlac77/svelte-log-view",
 	"authors": ["arlac77"],
 	"homepage": "https://github.com/arlac77/svelte-log-view#readme",
-	"downloads": 193,
-	"dependents": 2,
+	"downloads": 79,
 	"updated": "2025-03-24T12:59:00.765Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
 	"github_stars": 4,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "6.3.42",
+	"svelte_range": "^5.25.0"
 }

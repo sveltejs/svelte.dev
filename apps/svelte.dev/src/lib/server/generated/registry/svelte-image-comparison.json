@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/captaincodeman/svelte-image-comparison",
 	"authors": ["captaincodeman"],
 	"homepage": "https://captaincodeman.github.io/svelte-image-comparison/",
-	"downloads": 6,
-	"dependents": 0,
+	"downloads": 32,
 	"updated": "2024-04-27T18:56:28.004Z",
 	"tags": ["ui", "media"],
 	"runes": false,
 	"github_stars": 17,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.0.6",
+	"svelte_range": "^3.54.0 || ^4.0.0 || ^5.0.0",
+	"kit_range": "^2.5.7"
 }

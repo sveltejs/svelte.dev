@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/quentincaffeino/manypixels-illustrations",
 	"authors": ["quentincaffeino"],
 	"homepage": "https://github.com/quentincaffeino/manypixels-illustrations#readme",
-	"downloads": 13,
-	"dependents": 0,
+	"downloads": 0,
 	"updated": "2021-07-26T14:51:50.167Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.2.2",
+	"svelte_range": "^3.38.3"
 }

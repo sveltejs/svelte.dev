@@ -3,20 +3,11 @@
 	"description": "Integrate Google Analytics v4 into Svelte applications.",
 	"repo_url": "",
 	"authors": ["hyunseunglee2008"],
-	"downloads": 4,
-	"dependents": 0,
+	"downloads": 7,
 	"updated": "2023-12-17T02:00:29.836Z",
 	"tags": ["integration"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "2.6.4",
+	"svelte_range": "^3.24.1"
 }

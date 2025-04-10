@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/rgossiaux/svelte-headlessui",
 	"authors": ["rgossiaux"],
 	"homepage": "https://svelte-headlessui.goss.io",
-	"downloads": 3215,
-	"dependents": 3,
+	"downloads": 2957,
 	"updated": "2023-06-11T21:49:03.380Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 1806,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "2.0.0",
+	"svelte_range": "^3.47.0",
+	"kit_range": "next"
 }

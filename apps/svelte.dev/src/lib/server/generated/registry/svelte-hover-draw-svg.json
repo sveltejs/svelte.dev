@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/davipon/svelte-hover-draw-svg",
 	"authors": ["davipon"],
 	"homepage": "https://github.com/davipon/svelte-hover-draw-svg#readme",
-	"downloads": 22,
-	"dependents": 0,
+	"downloads": 10,
 	"updated": "2023-03-28T15:40:25.598Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 25,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in exports field"
-	}
+	"typescript": "first-party",
+	"version": "3.0.1",
+	"svelte_range": "^3.57.0",
+	"kit_range": "1.14.0"
 }

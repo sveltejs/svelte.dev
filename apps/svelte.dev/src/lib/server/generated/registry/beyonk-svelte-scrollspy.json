@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/beyonk-adventures/svelte-scrollspy",
 	"authors": ["antony", "adampond", "alex.dilley", "jedwoodcock", "leandro.silva", "tomlewis0"],
 	"homepage": "https://github.com/beyonk-adventures/svelte-scrollspy#readme",
-	"downloads": 12,
-	"dependents": 0,
+	"downloads": 38,
 	"updated": "2019-06-28T20:26:57.682Z",
 	"tags": ["miscellaneous"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 40,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "2.1.2",
+	"svelte_range": "^3.6.1"
 }

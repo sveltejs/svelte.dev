@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/jill64/svelte-code-copy",
 	"authors": ["jill64"],
 	"homepage": "https://github.com/jill64/svelte-code-copy#readme",
-	"downloads": 7624,
-	"dependents": 2,
+	"downloads": 5629,
 	"updated": "2024-12-31T02:41:33.044Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 2,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "2.2.0",
+	"svelte_range": "^5.0.0",
+	"kit_range": "2.15.1"
 }

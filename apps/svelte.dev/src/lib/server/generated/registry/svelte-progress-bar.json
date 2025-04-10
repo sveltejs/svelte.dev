@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/saibotsivad/svelte-progress-bar",
 	"authors": ["saibotsivad"],
 	"homepage": "https://github.com/saibotsivad/svelte-progress-bar#readme",
-	"downloads": 589,
-	"dependents": 0,
+	"downloads": 602,
 	"updated": "2022-01-19T16:08:17.518Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 72,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "3.0.2",
+	"svelte_range": "^3.44.3"
 }

@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/khulnasoft/ai-toolkit",
 	"authors": ["khulnasoft-lab"],
 	"homepage": "https://sdk.khulnasoft.com/docs",
-	"downloads": 15,
-	"dependents": 0,
+	"downloads": 1,
 	"updated": "2025-03-09T18:58:49.742Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
 	"github_stars": 0,
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	},
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	}
+	"typescript": "first-party",
+	"version": "1.1.22",
+	"svelte_range": "^3.0.0 || ^4.0.0 || ^5.0.0"
 }

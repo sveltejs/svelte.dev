@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/rixo/svelte-loader-hot",
 	"authors": ["rixo"],
 	"homepage": "https://github.com/rixo/svelte-loader-hot",
-	"downloads": 220,
-	"dependents": 2,
+	"downloads": 202,
 	"updated": "2020-08-24T19:37:40.168Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 22,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.3.1",
+	"svelte_range": ">1.44.0"
 }

@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/kayodebristol/svelte-robot-factory",
 	"authors": ["kayodebristol"],
 	"homepage": "https://github.com/kayodebristol/svelte-robot-factory#readme",
-	"downloads": 11,
-	"dependents": 1,
+	"downloads": 50,
 	"updated": "2023-03-20T11:23:05.209Z",
 	"tags": ["integration", "miscellaneous"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 15,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "2.0.5",
+	"svelte_range": "~3.x"
 }

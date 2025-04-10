@@ -5,20 +5,11 @@
 	"authors": ["arthurgermano"],
 	"homepage": "https://arthurgermano.github.io/spa-storage/",
 	"downloads": 0,
-	"dependents": 1,
 	"updated": "2022-09-14T12:35:50.270Z",
 	"tags": ["miscellaneous"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 1,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "2.0.2",
+	"svelte_range": "^3.49.0"
 }

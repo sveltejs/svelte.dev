@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/stuymedova/segmented-control-svelte",
 	"authors": ["stuymedova"],
 	"homepage": "https://github.com/stuymedova/segmented-control-svelte#readme",
-	"downloads": 10,
-	"dependents": 0,
+	"downloads": 8,
 	"updated": "2022-06-21T19:54:43.190Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 2,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "3.8.3",
+	"svelte_range": "^3.46.6",
+	"kit_range": "next"
 }

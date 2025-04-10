@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/LQR471814/custom-scrollbar",
 	"authors": ["lqr471814"],
 	"homepage": "https://github.com/LQR471814/custom-scrollbar#readme",
-	"downloads": 11,
-	"dependents": 0,
+	"downloads": 6,
 	"updated": "2021-06-27T20:32:47.106Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.1.10",
+	"svelte_range": "^3.20.1"
 }

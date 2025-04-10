@@ -4,21 +4,11 @@
 	"repo_url": "https://github.com/idris-maps/svelte-parts",
 	"authors": ["idris-maps"],
 	"homepage": "https://github.com/idris-maps/svelte-parts#readme",
-	"downloads": 47,
-	"dependents": 1,
+	"downloads": 11,
 	"updated": "2022-04-04T21:05:57.009Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 50,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.0.24"
 }

@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/Salonhub/svelte-spa-router",
 	"authors": ["nielsleenheer"],
 	"homepage": "https://github.com/ItalyPaleAle/svelte-spa-router#readme",
-	"downloads": 5,
-	"dependents": 0,
+	"downloads": 1,
 	"updated": "2024-12-02T19:31:49.235Z",
 	"tags": ["router"],
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: Router.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "5.0.0",
+	"svelte_range": "^5.0"
 }

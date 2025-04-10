@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/typewriter-editor/typewriter",
 	"authors": ["jacwright"],
 	"homepage": "https://github.com/typewriter-editor/typewriter#readme",
-	"downloads": 727,
-	"dependents": 2,
+	"downloads": 252,
 	"updated": "2025-02-12T18:30:38.430Z",
 	"tags": ["ui", "content"],
 	"runes": false,
 	"github_stars": 416,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.12.9",
+	"svelte_range": ">=3.43.0 <6",
+	"kit_range": "^2.5.25"
 }

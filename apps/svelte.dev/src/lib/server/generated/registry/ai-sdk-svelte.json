@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/vercel/ai",
 	"authors": ["jaredpalmer", "vercel-release-bot"],
 	"homepage": "https://sdk.vercel.ai/docs",
-	"downloads": 348466,
-	"dependents": 7,
-	"updated": "2025-03-25T17:48:07.988Z",
+	"downloads": 365653,
+	"updated": "2025-04-08T10:52:00.982Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 13242,
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	},
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	}
+	"typescript": "first-party",
+	"version": "2.1.8",
+	"svelte_range": "^5.0.0"
 }

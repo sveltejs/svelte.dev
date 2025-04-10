@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/pateketrueke/yrv",
 	"authors": ["pateketrueke"],
 	"homepage": "https://github.com/pateketrueke/yrv",
-	"downloads": 242,
-	"dependents": 1,
+	"downloads": 83,
 	"updated": "2022-06-26T18:57:46.496Z",
 	"tags": ["router"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 161,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: types/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.0.57",
+	"svelte_range": "3.x"
 }

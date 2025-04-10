@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/Vietsch/svelte-image-gallery",
 	"authors": ["vietsch"],
 	"homepage": "https://github.com/Vietsch/svelte-image-gallery",
-	"downloads": 21,
-	"dependents": 0,
+	"downloads": 8,
 	"updated": "2025-01-29T14:59:10.343Z",
 	"tags": ["media", "ui"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.1.2",
+	"svelte_range": "^3.54.0",
+	"kit_range": "^1.0.0"
 }

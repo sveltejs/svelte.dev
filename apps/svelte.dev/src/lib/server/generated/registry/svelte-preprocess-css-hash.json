@@ -4,21 +4,11 @@
 	"repo_url": "https://github.com/jiangfengming/svelte-preprocess-css-hash",
 	"authors": ["jiangfengming"],
 	"homepage": "https://github.com/jiangfengming/svelte-preprocess-css-hash#readme",
-	"downloads": 23,
-	"dependents": 0,
+	"downloads": 3,
 	"updated": "2024-11-21T22:16:46.093Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 9,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.2.0"
 }

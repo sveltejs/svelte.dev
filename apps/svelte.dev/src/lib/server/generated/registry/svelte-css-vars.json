@@ -3,20 +3,10 @@
 	"description": "Manage CSS variables dynamically within Svelte components.",
 	"repo_url": "",
 	"authors": ["kaisermann"],
-	"downloads": 716,
-	"dependents": 5,
+	"downloads": 1694,
 	"updated": "2021-06-17T16:00:46.189Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.0.3"
 }

@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/uenoB/minissg",
 	"authors": ["uenob"],
 	"homepage": "https://github.com/uenoB/minissg/tree/main/packages/render-svelte#readme",
-	"downloads": 4,
-	"dependents": 0,
+	"downloads": 2,
 	"updated": "2025-01-03T22:39:19.254Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 3,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "4.0.0",
+	"svelte_range": "^5"
 }

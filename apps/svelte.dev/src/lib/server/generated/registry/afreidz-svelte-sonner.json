@@ -3,19 +3,12 @@
 	"description": "Create opinionated toast notifications in Svelte apps.",
 	"repo_url": "",
 	"authors": ["afreidz"],
-	"downloads": 17,
-	"dependents": 0,
+	"downloads": 1,
 	"updated": "2024-10-23T16:16:33.051Z",
 	"tags": ["ui"],
 	"runes": false,
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	},
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	}
+	"typescript": "first-party",
+	"version": "0.3.31",
+	"svelte_range": "^3.0.0 || ^4.0.0 || ^5.0.0-next.1",
+	"kit_range": "^2.5.27"
 }

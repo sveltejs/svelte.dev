@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/1toldyou/svelte-qrcode-image",
 	"authors": ["ito1dyou"],
 	"homepage": "https://svelte-qrcode-image.itoldyou.dev/",
-	"downloads": 328,
-	"dependents": 2,
+	"downloads": 246,
 	"updated": "2024-06-30T21:36:09.578Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 3,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "2.0.0-alpha.1",
+	"svelte_range": "^4.0.0",
+	"kit_range": "^2.0.0"
 }

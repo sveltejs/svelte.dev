@@ -3,20 +3,12 @@
 	"description": "Build animated stepped flows with Svelte.",
 	"repo_url": "",
 	"authors": ["efstajas"],
-	"downloads": 43,
-	"dependents": 0,
+	"downloads": 44,
 	"updated": "2024-12-10T10:19:53.469Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in exports field"
-	}
+	"typescript": "first-party",
+	"version": "0.2.2",
+	"svelte_range": "^4.0.0",
+	"kit_range": "^1.24.0"
 }

@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/revolist/svelte-datagrid",
 	"authors": ["kumakint"],
 	"homepage": "https://github.com/revolist/revogrid#readme",
-	"downloads": 1149,
-	"dependents": 0,
-	"updated": "2025-03-27T14:49:00.379Z",
+	"downloads": 476,
+	"updated": "2025-04-09T10:25:33.840Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 119,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "4.15.2",
+	"svelte_range": "^5.2.7"
 }

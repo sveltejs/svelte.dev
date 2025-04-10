@@ -3,20 +3,11 @@
 	"description": "Use Adobe Spectrum UI icons as Svelte components.",
 	"repo_url": "",
 	"authors": ["runningzs"],
-	"downloads": 51,
-	"dependents": 1,
+	"downloads": 17,
 	"updated": "2020-10-24T18:11:07.838Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.1.96",
+	"svelte_range": "^3.0.0"
 }

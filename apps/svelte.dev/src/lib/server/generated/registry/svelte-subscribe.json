@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/bryanmylee/svelte-subscribe",
 	"authors": ["bryanmylee"],
 	"homepage": "https://github.com/bryanmylee/svelte-subscribe#readme",
-	"downloads": 18264,
-	"dependents": 6,
+	"downloads": 13757,
 	"updated": "2024-01-02T19:35:50.625Z",
 	"tags": ["miscellaneous"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 12,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "2.0.1",
+	"svelte_range": "^4.0.0",
+	"kit_range": "^2.0.0"
 }

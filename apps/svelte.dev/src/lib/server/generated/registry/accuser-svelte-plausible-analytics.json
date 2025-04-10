@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/accuser/svelte-plausible-analytics",
 	"authors": ["accuser"],
 	"homepage": "https://github.com/accuser/svelte-plausible-analytics/README.md",
-	"downloads": 772,
-	"dependents": 0,
+	"downloads": 738,
 	"updated": "2023-12-21T16:57:09.707Z",
 	"tags": ["integration"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 16,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.0.0",
+	"svelte_range": "^4.2.8",
+	"kit_range": "^1.30.3 || ^2.0.0"
 }

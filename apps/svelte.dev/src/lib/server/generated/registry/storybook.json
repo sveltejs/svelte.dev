@@ -13,20 +13,11 @@
 		"storybook-bot"
 	],
 	"homepage": "https://github.com/storybookjs/storybook/tree/next/code/lib/cli",
-	"downloads": 6110766,
-	"dependents": 803,
+	"downloads": 6200681,
 	"updated": "2025-04-02T17:03:02.202Z",
 	"tags": ["tooling"],
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
 	"runes": false,
 	"github_stars": 86315,
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "8.6.12"
 }

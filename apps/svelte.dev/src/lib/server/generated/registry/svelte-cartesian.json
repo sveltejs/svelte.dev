@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/theetrain/svelte-cartesian",
 	"authors": ["etrain"],
 	"homepage": "https://github.com/theetrain/svelte-cartesian#readme",
-	"downloads": 55,
-	"dependents": 0,
+	"downloads": 64,
 	"updated": "2024-09-06T02:07:39.457Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 12,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "1.1.5",
+	"svelte_range": "^4.2.18 || ^5.0.0-next.164"
 }

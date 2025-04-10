@@ -3,20 +3,11 @@
 	"description": "Template for building shareable Svelte component libraries.",
 	"repo_url": "",
 	"authors": ["jcald"],
-	"downloads": 7,
-	"dependents": 0,
+	"downloads": 0,
 	"updated": "2021-09-29T17:43:12.620Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.2.0-beta.0",
+	"svelte_range": "^3.20.1"
 }

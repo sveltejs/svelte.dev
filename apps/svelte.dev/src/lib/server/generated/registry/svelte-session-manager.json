@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/arlac77/svelte-session-manager",
 	"authors": ["arlac77"],
 	"homepage": "https://github.com/arlac77/svelte-session-manager#readme",
-	"downloads": 325,
-	"dependents": 5,
-	"updated": "2025-03-13T13:31:10.798Z",
+	"downloads": 430,
+	"updated": "2025-04-01T18:23:15.324Z",
 	"tags": ["miscellaneous", "auth"],
 	"runes": false,
 	"github_stars": 105,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "3.0.36",
+	"svelte_range": "^5.25.0"
 }

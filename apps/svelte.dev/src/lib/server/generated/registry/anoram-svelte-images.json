@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/peopledrivemecrazy/svelte-images",
 	"authors": ["shriji"],
 	"homepage": "https://github.com/peopledrivemecrazy/svelte-images#readme",
-	"downloads": 1,
-	"dependents": 0,
+	"downloads": 2,
 	"updated": "2020-12-13T10:19:08.979Z",
 	"tags": ["media"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.0.1",
+	"svelte_range": "^3.16.1"
 }

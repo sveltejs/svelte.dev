@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/wetix/responsive-ui",
 	"authors": ["rexlow", "bassemsab", "rm.oska", "apacventure"],
 	"homepage": "https://github.com/wetix/responsive-ui/blob/main/components/textarea#README.md",
-	"downloads": 78,
-	"dependents": 1,
+	"downloads": 20,
 	"updated": "2024-04-23T07:51:23.612Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 19,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: types/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.1.0-alpha.58",
+	"svelte_range": "^3.46.2"
 }

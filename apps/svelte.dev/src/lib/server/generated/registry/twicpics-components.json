@@ -4,21 +4,11 @@
 	"repo_url": "https://github.com/twicpics/components",
 	"authors": ["florentb", "jaubourg", "balda", "mbgspcii"],
 	"homepage": "https://github.com/twicpics/components",
-	"downloads": 6872,
-	"dependents": 5,
+	"downloads": 3421,
 	"updated": "2025-03-24T09:42:59.917Z",
 	"tags": ["media", "ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 55,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in exports field"
-	}
+	"typescript": "first-party",
+	"version": "0.33.0"
 }

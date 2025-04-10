@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/jacobzwang/svelte-partial-stores",
 	"authors": ["jacobzwang"],
 	"homepage": "https://github.com/jacobzwang/svelte-partial-stores.git",
-	"downloads": 0,
-	"dependents": 0,
+	"downloads": 1,
 	"updated": "2022-10-06T22:04:53.272Z",
 	"tags": ["miscellaneous"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: lib/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.0.3",
+	"svelte_range": "^3.0.0"
 }

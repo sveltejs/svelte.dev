@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/ieedan/jsrepo",
 	"authors": ["iedan."],
 	"homepage": "https://jsrepo.dev",
-	"downloads": 1749,
-	"dependents": 1,
-	"updated": "2025-03-19T18:43:16.126Z",
+	"downloads": 1980,
+	"updated": "2025-04-09T16:27:29.492Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 367,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.47.0",
+	"svelte_range": "^5.25.9"
 }

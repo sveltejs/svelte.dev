@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/ryoppippi/svelte-fancy-darkmode",
 	"authors": ["ryoppippi"],
 	"homepage": "https://github.com/ryoppippi/svelte-fancy-darkmode#readme",
-	"downloads": 1775,
-	"dependents": 0,
+	"downloads": 1602,
 	"updated": "2025-03-18T12:21:38.319Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 5,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.1.2",
+	"svelte_range": "^5.23.0",
+	"kit_range": "^2.19.1"
 }

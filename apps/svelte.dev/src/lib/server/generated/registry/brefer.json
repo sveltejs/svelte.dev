@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/KilDesu/brefer",
 	"authors": ["kildesu"],
 	"homepage": "https://github.com/KilDesu/brefer#readme",
-	"downloads": 21,
-	"dependents": 0,
+	"downloads": 3,
 	"updated": "2024-09-17T14:58:51.419Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 44,
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./types/index.d.ts"
-	},
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	}
+	"typescript": "first-party",
+	"version": "1.0.0-beta-1",
+	"svelte_range": "5.0.0-next.248"
 }

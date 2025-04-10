@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/albingroen/utilcomps",
 	"authors": ["albingroen"],
 	"homepage": "https://utilcomps.vercel.app/",
-	"downloads": 71,
-	"dependents": 0,
+	"downloads": 7,
 	"updated": "2022-06-02T12:28:58.369Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 12,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "2.0.4",
+	"svelte_range": "^3.34.0",
+	"kit_range": "next"
 }

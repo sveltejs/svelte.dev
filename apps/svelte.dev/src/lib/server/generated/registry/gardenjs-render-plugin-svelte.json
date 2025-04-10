@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/gardenjs/render-plugin-svelte",
 	"authors": ["robindanzinger", "martinfarkas"],
 	"homepage": "https://github.com/gardenjs/render-plugin-svelte#readme",
-	"downloads": 0,
-	"dependents": 0,
+	"downloads": 8,
 	"updated": "2024-12-11T20:37:25.938Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 0,
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	},
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	}
+	"typescript": "none",
+	"version": "2.0.0",
+	"svelte_range": "^5.0.0"
 }

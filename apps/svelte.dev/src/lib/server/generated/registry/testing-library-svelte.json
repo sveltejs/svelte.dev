@@ -21,20 +21,12 @@
 		"phryneas"
 	],
 	"homepage": "https://github.com/testing-library/svelte-testing-library#readme",
-	"downloads": 166956,
-	"dependents": 11,
+	"downloads": 172343,
 	"updated": "2025-02-11T18:02:00.554Z",
 	"tags": ["testing"],
 	"runes": false,
 	"github_stars": 630,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: types/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "5.2.7",
+	"svelte_range": "^3 || ^4 || ^5 || ^5.0.0-next.0"
 }

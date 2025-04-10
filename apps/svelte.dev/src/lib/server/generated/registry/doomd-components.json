@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/Doomd/doomd-components",
 	"authors": ["doomd"],
 	"homepage": "https://github.com/Doomd/doomd-components#readme",
-	"downloads": 1,
-	"dependents": 0,
+	"downloads": 3,
 	"updated": "2023-12-22T00:11:35.852Z",
 	"tags": ["miscellaneous"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.2.19",
+	"svelte_range": "^3.57.0",
+	"kit_range": "^1.30.3"
 }

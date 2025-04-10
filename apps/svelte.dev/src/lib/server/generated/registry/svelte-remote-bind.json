@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/yellowmachine/svelte-remote-bind",
 	"authors": ["yellow.machine"],
 	"homepage": "https://github.com/yellowmachine/svelte-remote-bind#readme",
-	"downloads": 28,
-	"dependents": 0,
+	"downloads": 3,
 	"updated": "2022-07-02T18:16:07.407Z",
 	"tags": ["integration"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.0.9",
+	"svelte_range": "^3.44.0",
+	"kit_range": "next"
 }

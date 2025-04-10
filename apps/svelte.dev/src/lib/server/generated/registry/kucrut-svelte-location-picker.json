@@ -4,20 +4,12 @@
 	"repo_url": "https://gitlab.com/kucrut/svelte-location-picker",
 	"authors": ["kucrut"],
 	"homepage": "https://kucrut.gitlab.io/svelte-location-picker",
-	"downloads": 17,
-	"dependents": 0,
+	"downloads": 0,
 	"updated": "2023-10-01T20:34:11.918Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in exports field"
-	}
+	"typescript": "first-party",
+	"version": "0.2.1",
+	"svelte_range": "^4.2.1",
+	"kit_range": "1.25.1"
 }

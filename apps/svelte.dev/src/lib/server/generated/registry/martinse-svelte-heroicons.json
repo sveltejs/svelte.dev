@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/martinse/svelte-heroicons",
 	"authors": ["martinse"],
 	"homepage": "https://github.com/martinse/svelte-heroicons#readme",
-	"downloads": 20,
-	"dependents": 1,
+	"downloads": 1,
 	"updated": "2021-02-11T17:51:40.217Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 14,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.1.4",
+	"svelte_range": "^3.0.0"
 }

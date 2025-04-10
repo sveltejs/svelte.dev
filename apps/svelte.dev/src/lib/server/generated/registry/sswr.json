@@ -3,21 +3,13 @@
 	"description": "Fetch data with SWR strategy for Svelte, improving performance.",
 	"repo_url": "https://github.com/ConsoleTVs/sswr",
 	"authors": ["consoletvs"],
-	"downloads": 351375,
-	"dependents": 34,
+	"downloads": 421998,
 	"updated": "2025-03-04T20:30:45.524Z",
 	"tags": ["server"],
 	"runes": false,
 	"github_stars": 255,
 	"homepage": "",
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/sswr.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "2.2.0",
+	"svelte_range": "^4.0.0 || ^5.0.0"
 }

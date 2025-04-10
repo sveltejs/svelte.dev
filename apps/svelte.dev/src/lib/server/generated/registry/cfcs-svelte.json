@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/naver/cfcs",
 	"authors": ["younkue"],
 	"homepage": "https://naver.github.io/cfcs",
-	"downloads": 65,
-	"dependents": 5,
+	"downloads": 52,
 	"updated": "2023-02-24T13:04:42.073Z",
 	"tags": ["miscellaneous"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 104,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: declaration/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.1.0",
+	"svelte_range": "^3.31.0"
 }

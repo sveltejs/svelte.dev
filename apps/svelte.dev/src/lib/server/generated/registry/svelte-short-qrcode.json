@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/captaincodeman/svelte-short-qrcode",
 	"authors": ["captaincodeman"],
 	"homepage": "https://captaincodeman.github.io/svelte-short-qrcode/",
-	"downloads": 12,
-	"dependents": 0,
+	"downloads": 1,
 	"updated": "2024-04-29T20:40:57.231Z",
 	"tags": ["tooling", "server"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.0.4",
+	"svelte_range": "^4.2.15",
+	"kit_range": "^2.5.7"
 }

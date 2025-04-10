@@ -5,19 +5,10 @@
 	"authors": ["rnd332"],
 	"homepage": "https://github.com/provisorDAO/provisor-components-svelte",
 	"downloads": 1,
-	"dependents": 0,
 	"updated": "2023-01-19T06:25:40.104Z",
 	"tags": ["design-system"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./types/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.0.0",
+	"svelte_range": "^3.51.0"
 }

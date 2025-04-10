@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/robinscholz/svelte-inline-svg",
 	"authors": ["robinscholz"],
 	"homepage": "https://github.com/robinscholz/svelte-inline-svg#readme",
-	"downloads": 525,
-	"dependents": 1,
+	"downloads": 326,
 	"updated": "2022-10-11T07:48:57.752Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 61,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.2.0",
+	"svelte_range": "^3.31.0"
 }

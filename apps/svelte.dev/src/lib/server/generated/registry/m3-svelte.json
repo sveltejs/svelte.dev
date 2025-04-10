@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/KTibow/m3-svelte",
 	"authors": ["ktibow"],
 	"homepage": "https://github.com/KTibow/m3-svelte",
-	"downloads": 203,
-	"dependents": 0,
-	"updated": "2025-03-20T04:10:08.461Z",
+	"downloads": 216,
+	"updated": "2025-04-03T02:37:27.418Z",
 	"tags": ["design-system"],
 	"runes": false,
 	"github_stars": 296,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./package/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "3.4.12",
+	"svelte_range": "^5.25.6",
+	"kit_range": "^2.20.2"
 }

@@ -3,20 +3,12 @@
 	"description": "Build reusable UI components for Tecble projects.",
 	"repo_url": "",
 	"authors": ["tecble"],
-	"downloads": 164,
-	"dependents": 0,
+	"downloads": 41,
 	"updated": "2024-10-26T23:32:36.736Z",
 	"tags": ["design-system"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.1.160",
+	"svelte_range": "^4.0.0",
+	"kit_range": "^2.0.0"
 }

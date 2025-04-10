@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/Saul-Mirone/prosemirror-adapter",
 	"authors": ["mirone"],
 	"homepage": "https://github.com/Saul-Mirone/prosemirror-adapter#readme",
-	"downloads": 3334,
-	"dependents": 5,
+	"downloads": 2883,
 	"updated": "2025-03-17T21:59:01.355Z",
 	"tags": ["integration"],
 	"runes": false,
 	"github_stars": 125,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./lib/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.4.1",
+	"svelte_range": "^4.0.0 || ^5.0.0"
 }

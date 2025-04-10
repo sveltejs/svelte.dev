@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/unocss/unocss",
 	"authors": ["antfu", "unocss-bot"],
 	"homepage": "https://unocss.dev",
-	"downloads": 1202,
-	"dependents": 0,
-	"updated": "2025-03-25T09:25:29.636Z",
+	"downloads": 1057,
+	"updated": "2025-04-05T14:07:50.189Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 17483,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/vite.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "66.1.0-beta.10",
+	"svelte_range": "^5.25.3"
 }

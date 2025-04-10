@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/untemps/svelte-use-tooltip",
 	"authors": ["untemps"],
 	"homepage": "https://github.com/untemps/svelte-use-tooltip#readme",
-	"downloads": 296,
-	"dependents": 2,
+	"downloads": 128,
 	"updated": "2024-12-01T15:07:35.483Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 61,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "3.0.0",
+	"svelte_range": "^5.0.0",
+	"kit_range": "^2.0.0"
 }

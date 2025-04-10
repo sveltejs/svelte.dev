@@ -4,20 +4,11 @@
 	"repo_url": "",
 	"authors": ["dievardump"],
 	"homepage": "https://github.com/dievardump/yasp-router",
-	"downloads": 8,
-	"dependents": 0,
+	"downloads": 7,
 	"updated": "2020-08-23T15:51:24.067Z",
 	"tags": ["router"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "1.1.2",
+	"svelte_range": "3.x"
 }

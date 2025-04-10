@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/jbystronski/jb-svelte-weather-widget",
 	"authors": ["pogodisco"],
 	"homepage": "https://jb-weather-widget.surge.sh",
-	"downloads": 2,
-	"dependents": 0,
+	"downloads": 1,
 	"updated": "2023-02-13T22:42:17.609Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.1.0",
+	"svelte_range": "^3.54.0",
+	"kit_range": "^1.5.0"
 }

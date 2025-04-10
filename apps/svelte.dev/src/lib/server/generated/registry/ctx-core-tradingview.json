@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/ctx-core/tradingview",
 	"authors": ["btakita"],
 	"homepage": "https://github.com/ctx-core/tradingview#readme",
-	"downloads": 1090,
-	"dependents": 0,
+	"downloads": 728,
 	"updated": "2024-09-01T17:09:47.798Z",
 	"tags": ["integration"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 1,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "9.2.226",
+	"svelte_range": "^4.2.19"
 }

@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/braintapper/braintapper-sveltekit-server-tools",
 	"authors": ["braintapper"],
 	"homepage": "https://github.com/braintapper/braintapper-sveltekit-server-tools#readme",
-	"downloads": 23,
-	"dependents": 0,
+	"downloads": 1,
 	"updated": "2021-07-29T18:39:16.463Z",
 	"tags": ["server"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.0.8",
+	"svelte_range": "^3.38.3",
+	"kit_range": "^1.0.0-next.120"
 }

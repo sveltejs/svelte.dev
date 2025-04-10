@@ -17,21 +17,14 @@
 		"xrutayisire",
 		"bapmrl"
 	],
-	"downloads": 4968,
-	"dependents": 0,
-	"updated": "2025-03-21T15:38:28.152Z",
+	"downloads": 968,
+	"updated": "2025-03-31T15:09:46.386Z",
 	"tags": ["adapter", "tooling"],
 	"runes": false,
 	"github_stars": 294,
 	"homepage": "https://prismic.io/docs",
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.3.73",
+	"svelte_range": "^3.54.0 || ^4.0.0-next.0 || ^5.0.0-next.1",
+	"kit_range": "^1 || ^2"
 }

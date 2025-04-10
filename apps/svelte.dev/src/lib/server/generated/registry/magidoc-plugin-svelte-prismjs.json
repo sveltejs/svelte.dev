@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/magidoc-org/magidoc",
 	"authors": ["pelletier197"],
 	"homepage": "https://magidoc.js.org/svelte-plugins/prismjs",
-	"downloads": 1970,
-	"dependents": 0,
+	"downloads": 2033,
 	"updated": "2024-11-08T18:33:01.772Z",
 	"tags": ["content", "ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 263,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./build/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "6.2.0",
+	"svelte_range": "4.2.19",
+	"kit_range": "2.6.1"
 }

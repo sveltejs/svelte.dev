@@ -4,21 +4,13 @@
 	"repo_url": "https://rob-balfre@github.com/rob-balfre/svelte-select",
 	"authors": ["rob-balfre"],
 	"homepage": "https://github.com/rob-balfre/svelte-select#readme",
-	"downloads": 29993,
-	"dependents": 49,
+	"downloads": 29410,
 	"updated": "2024-01-05T01:59:21.822Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 1312,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "5.8.3",
+	"svelte_range": "^3.58.0",
+	"kit_range": "1.15.0"
 }

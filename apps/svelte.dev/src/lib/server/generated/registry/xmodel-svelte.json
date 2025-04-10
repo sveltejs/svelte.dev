@@ -5,20 +5,11 @@
 	"authors": ["tiscodes"],
 	"homepage": "https://github.com/TishanV/xmodel/tree/main#readme",
 	"downloads": 0,
-	"dependents": 0,
 	"updated": "2022-08-16T11:30:26.399Z",
 	"tags": ["miscellaneous"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.0.2",
+	"svelte_range": "^3.49.0"
 }

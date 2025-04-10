@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/smallstack/svelte-ui",
 	"authors": ["maxfriedmann"],
 	"homepage": "https://svelte-ui.com",
-	"downloads": 102,
-	"dependents": 0,
+	"downloads": 44,
 	"updated": "2025-02-17T14:34:24.387Z",
 	"tags": ["design-system", "ui"],
 	"runes": false,
 	"github_stars": 7,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.5.4",
+	"svelte_range": "^5.20.0",
+	"kit_range": "^2.15.1"
 }

@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/aantusahaa/svelte-remixicon",
 	"authors": ["antusaha"],
 	"homepage": "https://github.com/aantusahaa/svelte-remixicon#readme",
-	"downloads": 293,
-	"dependents": 0,
+	"downloads": 480,
 	"updated": "2024-12-22T06:19:02.395Z",
 	"tags": ["ui"],
 	"runes": true,
 	"github_stars": 44,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "2.7.0",
+	"svelte_range": "^3.54.0 || ^4.0.0 || ^5.0.0",
+	"kit_range": "^2.5.0"
 }

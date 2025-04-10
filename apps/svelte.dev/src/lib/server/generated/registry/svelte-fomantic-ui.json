@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/roycdaviesuoa/svelte-fomantic-ui",
 	"authors": ["roycdavies"],
 	"homepage": "http://roycdaviesuoa.github.io/",
-	"downloads": 4,
-	"dependents": 0,
+	"downloads": 41,
 	"updated": "2025-02-01T07:54:50.188Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 4,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.3.9",
+	"svelte_range": "^5.19.6"
 }

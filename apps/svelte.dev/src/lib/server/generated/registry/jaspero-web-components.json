@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/Jaspero/web-components",
 	"authors": ["flauc1", "antoniostipic"],
 	"homepage": "https://github.com/Jaspero/web-components#readme",
-	"downloads": 741,
-	"dependents": 1,
-	"updated": "2025-03-14T12:36:39.411Z",
+	"downloads": 257,
+	"updated": "2025-04-02T19:10:51.376Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 1,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "1.192.9",
+	"svelte_range": "4.2.19"
 }

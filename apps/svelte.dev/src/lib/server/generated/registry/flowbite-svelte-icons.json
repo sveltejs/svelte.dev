@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/themesberg/flowbite-svelte-icons",
 	"authors": ["shinichiokada"],
 	"homepage": "https://flowbite-svelte-icons.codewithshin.com/",
-	"downloads": 26540,
-	"dependents": 17,
-	"updated": "2025-03-23T05:32:08.827Z",
+	"downloads": 26374,
+	"updated": "2025-04-08T15:05:46.350Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 73,
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	},
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	}
+	"typescript": "first-party",
+	"version": "2.1.1",
+	"svelte_range": "^5.0.0",
+	"kit_range": "^2.20.4"
 }

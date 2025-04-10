@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/AmadeusITGroup/AgnosUI",
 	"authors": ["divdavem", "basso", "qderoubaix"],
 	"homepage": "https://www.agnosui.dev/latest/",
-	"downloads": 52,
-	"dependents": 2,
-	"updated": "2025-01-09T15:43:58.775Z",
+	"downloads": 19,
+	"updated": "2025-04-01T11:31:15.750Z",
 	"tags": ["design-system"],
 	"runes": false,
 	"github_stars": 70,
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./index.d.ts"
-	},
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	}
+	"typescript": "first-party",
+	"version": "0.8.0",
+	"svelte_range": "^5.16.0"
 }

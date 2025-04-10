@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/CMeeg/phoria",
 	"authors": ["meeg"],
 	"homepage": "https://github.com/CMeeg/phoria#readme",
-	"downloads": 6,
-	"dependents": 0,
+	"downloads": 2,
 	"updated": "2025-01-13T00:53:32.795Z",
 	"tags": ["integration"],
 	"runes": false,
 	"github_stars": 2,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/main.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.3.2",
+	"svelte_range": "^5.0.0"
 }

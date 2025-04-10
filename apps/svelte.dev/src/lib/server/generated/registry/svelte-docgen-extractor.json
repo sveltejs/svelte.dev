@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/svelte-docgen/svelte-docgen",
 	"authors": ["xeho91", "ciscorn"],
 	"homepage": "https://github.com/xeho91/svelte-docgen",
-	"downloads": 1,
-	"dependents": 1,
+	"downloads": 2,
 	"updated": "2024-12-07T09:42:13.836Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 11,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./types/mod.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.1.0",
+	"svelte_range": "^5.3.0"
 }

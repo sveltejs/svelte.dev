@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/lnfel/lamy-debugbar",
 	"authors": ["lnfel"],
 	"homepage": "https://lnfel.github.io/lamy-debugbar/",
-	"downloads": 17,
-	"dependents": 0,
+	"downloads": 3,
 	"updated": "2023-11-27T03:20:21.232Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 12,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.3.1",
+	"svelte_range": "^4.2.7",
+	"kit_range": "^1.27.6"
 }

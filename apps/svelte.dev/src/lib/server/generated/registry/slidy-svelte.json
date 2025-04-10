@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/Valexr/slidy",
 	"authors": ["valexr"],
 	"homepage": "https://github.com/Valexr/Slidy/tree/master/packages/svelte",
-	"downloads": 72,
-	"dependents": 0,
+	"downloads": 195,
 	"updated": "2024-11-20T12:02:25.399Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 341,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "3.5.3",
+	"svelte_range": "^5.0.0"
 }

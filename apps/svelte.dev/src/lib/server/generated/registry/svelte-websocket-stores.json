@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/xt449/svelte-websocket-stores",
 	"authors": ["binarybanana"],
 	"homepage": "https://github.com/xt449/svelte-websocket-stores#readme",
-	"downloads": 116,
-	"dependents": 0,
+	"downloads": 11,
 	"updated": "2025-03-19T13:13:12.408Z",
 	"tags": ["integration"],
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.2.1",
+	"svelte_range": "^3.0.0 || ^4.0.0 || ^5.0.0"
 }

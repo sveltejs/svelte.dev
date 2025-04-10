@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/PivotStick/zvelte",
 	"authors": ["pivotass"],
 	"homepage": "https://github.com/PivotStick/zvelte#readme",
-	"downloads": 914,
-	"dependents": 0,
-	"updated": "2025-03-27T19:44:02.405Z",
+	"downloads": 149,
+	"updated": "2025-04-10T14:46:50.850Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in exports field"
-	}
+	"typescript": "first-party",
+	"version": "0.4.185",
+	"svelte_range": "https://registry.npmjs.org/svelte/-/svelte-5.19.5.tgz"
 }

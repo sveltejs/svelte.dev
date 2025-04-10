@@ -15,21 +15,12 @@
 		"woodneck"
 	],
 	"homepage": "https://github.com/naver/egjs-conveyer",
-	"downloads": 43,
-	"dependents": 1,
+	"downloads": 39,
 	"updated": "2023-09-27T04:35:48.923Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 116,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: declaration/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.7.1",
+	"svelte_range": "^3.31.0"
 }

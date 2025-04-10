@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/ndom91/svelte-infinite",
 	"authors": ["ndom91"],
 	"homepage": "https://svelte-5-infinite.vercel.app",
-	"downloads": 412,
-	"dependents": 0,
+	"downloads": 188,
 	"updated": "2025-03-19T14:03:08.848Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 75,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.5.0",
+	"svelte_range": "^5.0.0-0",
+	"kit_range": "^2.8.1"
 }

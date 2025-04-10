@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/the-non-expert/Alphabet-List-Svelte",
 	"authors": ["ayushjhunjhunwala"],
 	"homepage": "https://github.com/the-non-expert/Alphabet-List-Svelte#readme",
-	"downloads": 6,
-	"dependents": 0,
+	"downloads": 1,
 	"updated": "2024-07-24T06:22:47.776Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "2.0.1",
+	"svelte_range": "^4.2.7",
+	"kit_range": "^2.0.0"
 }

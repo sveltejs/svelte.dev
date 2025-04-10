@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/sveltejs/kit",
 	"authors": ["rich_harris", "svelte-admin", "conduitry", "dominik_g"],
 	"homepage": "https://svelte.dev",
-	"downloads": 147323,
-	"dependents": 63,
+	"downloads": 184514,
 	"updated": "2024-12-21T18:33:37.611Z",
 	"tags": ["adapter"],
 	"runes": false,
 	"github_stars": 19179,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "3.0.8",
+	"svelte_range": "^5.2.9",
+	"kit_range": "^2.0.0"
 }

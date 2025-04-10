@@ -3,19 +3,12 @@
 	"description": "Render math equations using MathML and Temml in Svelte components.",
 	"repo_url": "",
 	"authors": ["kelvinsjk"],
-	"downloads": 1,
-	"dependents": 0,
+	"downloads": 3,
 	"updated": "2024-08-27T03:31:11.663Z",
 	"tags": ["ui"],
 	"runes": false,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.0.1",
+	"svelte_range": "^5.0.0-next.239",
+	"kit_range": "^2.0.0"
 }

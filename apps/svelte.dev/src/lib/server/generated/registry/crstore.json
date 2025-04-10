@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/Azarattum/CRStore",
 	"authors": ["azarattum"],
 	"homepage": "https://github.com/Azarattum/CRStore#readme",
-	"downloads": 380,
-	"dependents": 0,
+	"downloads": 101,
 	"updated": "2025-02-11T04:49:18.967Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
 	"github_stars": 100,
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	},
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	}
+	"typescript": "first-party",
+	"version": "0.24.0",
+	"svelte_range": "^5.19.9",
+	"kit_range": "2.17.1"
 }

@@ -3,20 +3,11 @@
 	"description": "Create Begin/Architect app using function for server rendering.",
 	"repo_url": "",
 	"authors": ["brianleroux", "dam", "kborchers", "ryanblock", "architectci", "filmaj"],
-	"downloads": 11,
-	"dependents": 0,
+	"downloads": 2,
 	"updated": "2021-10-11T15:40:39.994Z",
 	"tags": ["adapter"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.0.4",
+	"kit_range": "^1.0.0-next.147"
 }

@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/arlac77/svelte-command",
 	"authors": ["arlac77"],
 	"homepage": "https://github.com/arlac77/svelte-command#readme",
-	"downloads": 424,
-	"dependents": 5,
+	"downloads": 359,
 	"updated": "2025-03-24T13:01:59.582Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 2,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "3.0.26",
+	"svelte_range": "^5.25.0"
 }

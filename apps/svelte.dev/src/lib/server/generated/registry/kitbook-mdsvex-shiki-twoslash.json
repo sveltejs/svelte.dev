@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/jacob-8/kitbook",
 	"authors": ["jacobbowdoin"],
 	"homepage": "https://kitbook.vercel.app",
-	"downloads": 7,
-	"dependents": 2,
+	"downloads": 29,
 	"updated": "2024-04-27T16:08:33.240Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 65,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.0.0-beta.31",
+	"svelte_range": "^4.2.15"
 }

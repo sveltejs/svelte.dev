@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/Alfred-Skyblue/svelte-draggable-plus",
 	"authors": ["yuanfang03"],
 	"homepage": "https://github.com/Alfred-Skyblue/svelte-draggable-plus#readme",
-	"downloads": 1,
-	"dependents": 0,
+	"downloads": 0,
 	"updated": "2023-10-19T14:12:59.006Z",
 	"tags": ["miscellaneous"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 10,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.1.1",
+	"svelte_range": "^4.0.0",
+	"kit_range": "^1.25.2"
 }

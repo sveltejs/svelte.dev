@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/shinokada/svelte-shields",
 	"authors": ["shinichiokada"],
 	"homepage": "https://svelte-shields.codewithshin.com/",
-	"downloads": 40,
-	"dependents": 0,
+	"downloads": 34,
 	"updated": "2024-07-17T04:50:22.746Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.5.1",
+	"svelte_range": "^5.0.0",
+	"kit_range": "^2.5.18"
 }

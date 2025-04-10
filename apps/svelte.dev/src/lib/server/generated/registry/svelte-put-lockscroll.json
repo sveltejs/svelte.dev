@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/vnphanquang/svelte-put",
 	"authors": ["vnphanquang"],
 	"homepage": "https://svelte-put.vnphanquang.com/docs/lockscroll",
-	"downloads": 125,
-	"dependents": 3,
+	"downloads": 167,
 	"updated": "2024-10-25T05:17:14.244Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
 	"github_stars": 917,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: types/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "2.0.0",
+	"svelte_range": "^5.1.0"
 }

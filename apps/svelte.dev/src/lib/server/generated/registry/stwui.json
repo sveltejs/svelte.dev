@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/N00nDay/stwui",
 	"authors": ["noonday"],
 	"homepage": "https://github.com/N00nDay/stwui",
-	"downloads": 199,
-	"dependents": 0,
+	"downloads": 158,
 	"updated": "2024-01-12T02:42:57.915Z",
 	"tags": ["design-system"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 460,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: package/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.21.2-next",
+	"svelte_range": "^4.2.8",
+	"kit_range": "^2.3.2"
 }

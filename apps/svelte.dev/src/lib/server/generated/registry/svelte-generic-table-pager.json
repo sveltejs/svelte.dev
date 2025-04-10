@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/ivosdc/svelte-generic-table-pager",
 	"authors": ["nologin"],
 	"homepage": "https://github.com/ivosdc/svelte-generic-table-pager#readme",
-	"downloads": 26,
-	"dependents": 0,
+	"downloads": 79,
 	"updated": "2021-06-30T13:14:36.152Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 4,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.2.73",
+	"svelte_range": "^3.37.0"
 }

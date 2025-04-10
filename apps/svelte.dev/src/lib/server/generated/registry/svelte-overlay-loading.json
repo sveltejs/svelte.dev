@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/andrusenn/SvelteComponents",
 	"authors": ["andrusenn"],
 	"homepage": "https://github.com/andrusenn/SvelteComponents#readme",
-	"downloads": 8,
-	"dependents": 0,
+	"downloads": 1,
 	"updated": "2020-07-24T21:57:47.167Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 4,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "1.0.1",
+	"svelte_range": "^3.24.0"
 }

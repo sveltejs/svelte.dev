@@ -15,20 +15,13 @@
 		"aaronwnyc"
 	],
 	"homepage": "https://github.com/open-source-labs/Svelvet",
-	"downloads": 1310,
-	"dependents": 5,
+	"downloads": 1409,
 	"updated": "2025-02-18T20:13:27.930Z",
 	"tags": ["ui", "miscellaneous"],
 	"runes": false,
 	"github_stars": 2681,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "11.0.5",
+	"svelte_range": ">=3.59.2 || ^4.0.0",
+	"kit_range": "^1.20.4"
 }

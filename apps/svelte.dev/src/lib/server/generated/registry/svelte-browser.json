@@ -4,20 +4,12 @@
 	"repo_url": "",
 	"authors": ["7korobi"],
 	"homepage": "https://github.com/7korobi/svelte-browser/blob/main/src/lib/",
-	"downloads": 5,
-	"dependents": 4,
+	"downloads": 12,
 	"updated": "2022-11-05T16:48:33.138Z",
 	"tags": ["miscellaneous"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.4.6",
+	"svelte_range": "^3.52.0",
+	"kit_range": "1.0.0-next.535"
 }

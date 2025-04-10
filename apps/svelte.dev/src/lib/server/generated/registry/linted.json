@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/jimmy-zhening-luo/linted",
 	"authors": ["jimmy-zhening-luo"],
 	"homepage": "https://github.com/jimmy-zhening-luo/linted#readme",
-	"downloads": 1483,
-	"dependents": 0,
-	"updated": "2025-03-27T06:35:00.806Z",
+	"downloads": 481,
+	"updated": "2025-04-08T21:15:32.162Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 1,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "28.24.2",
+	"svelte_range": "^5.25.9"
 }

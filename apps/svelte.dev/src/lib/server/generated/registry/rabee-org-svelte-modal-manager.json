@@ -12,20 +12,12 @@
 		"simiraaaa",
 		"phi"
 	],
-	"downloads": 29,
-	"dependents": 1,
+	"downloads": 37,
 	"updated": "2023-06-12T07:17:23.796Z",
 	"tags": ["ui", "miscellaneous"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./package/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.2.1",
+	"svelte_range": "^3.54.0",
+	"kit_range": "^1.5.0"
 }

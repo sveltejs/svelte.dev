@@ -3,20 +3,11 @@
 	"description": "Create flexible and responsive slider/carousel component.",
 	"repo_url": "",
 	"authors": ["nakxa"],
-	"downloads": 12,
-	"dependents": 0,
+	"downloads": 3,
 	"updated": "2024-10-08T17:51:51.936Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "1.0.5",
+	"svelte_range": "^4.2.19"
 }

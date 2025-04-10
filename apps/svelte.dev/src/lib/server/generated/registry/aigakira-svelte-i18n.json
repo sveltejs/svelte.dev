@@ -3,20 +3,12 @@
 	"description": "Integrate internationalization into Svelte projects.",
 	"repo_url": "",
 	"authors": ["ariksubagia"],
-	"downloads": 15,
-	"dependents": 0,
+	"downloads": 2,
 	"updated": "2021-12-01T13:14:20.467Z",
 	"tags": ["integration"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.0.4",
+	"svelte_range": "^3.44.0",
+	"kit_range": "next"
 }

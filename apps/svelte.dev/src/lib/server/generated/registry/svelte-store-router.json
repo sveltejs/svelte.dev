@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/zyxd/svelte-store-router",
 	"authors": ["zyxd"],
 	"homepage": "https://github.com/zyxd/svelte-store-router#readme",
-	"downloads": 10,
-	"dependents": 0,
+	"downloads": 22,
 	"updated": "2021-12-13T15:08:08.723Z",
 	"tags": ["router"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 91,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: src/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "2.0.10",
+	"svelte_range": "^3.0.0"
 }

@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/idleberg/sveltekit-adapter-html-like",
 	"authors": ["idleberg"],
 	"homepage": "https://github.com/idleberg/sveltekit-adapter-html-like#readme",
-	"downloads": 9,
-	"dependents": 0,
+	"downloads": 10,
 	"updated": "2023-07-08T22:48:45.243Z",
 	"tags": ["adapter"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 26,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.3.2",
+	"svelte_range": "^3.55.0",
+	"kit_range": "1.0.0-next.588"
 }

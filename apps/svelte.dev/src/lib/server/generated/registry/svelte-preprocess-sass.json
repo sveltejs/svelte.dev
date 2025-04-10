@@ -4,21 +4,11 @@
 	"repo_url": "https://github.com/ls-age/svelte-preprocess-sass",
 	"authors": ["lhechenberger"],
 	"homepage": "https://github.com/ls-age/svelte-preprocess-sass#readme",
-	"downloads": 599,
-	"dependents": 7,
+	"downloads": 713,
 	"updated": "2021-07-16T09:48:00.920Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 90,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "2.0.1"
 }

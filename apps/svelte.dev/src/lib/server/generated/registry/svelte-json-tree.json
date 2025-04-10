@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/tanhauhau/svelte-json-tree",
 	"authors": ["tanhauhau"],
 	"homepage": "https://github.com/tanhauhau/svelte-json-tree#readme",
-	"downloads": 2369,
-	"dependents": 24,
+	"downloads": 2938,
 	"updated": "2023-10-15T10:44:28.736Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 183,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in exports field"
-	}
+	"typescript": "first-party",
+	"version": "2.2.0",
+	"svelte_range": "^4.0.0",
+	"kit_range": "^1.20.4"
 }

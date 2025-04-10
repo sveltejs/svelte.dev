@@ -5,20 +5,12 @@
 	"authors": ["dexlui"],
 	"homepage": "https://github.com/dexterklui/svelte-scrollspy#readme",
 	"downloads": 1,
-	"dependents": 0,
 	"updated": "2023-11-26T14:24:04.525Z",
 	"tags": ["miscellaneous"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 4,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.0.1",
+	"svelte_range": "^4.0.0",
+	"kit_range": "^1.27.4"
 }

@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/Tommertom/svelte-ionic-app",
 	"authors": ["tommertom"],
 	"homepage": "https://ionic-svelte.firebaseapp.com",
-	"downloads": 172,
-	"dependents": 2,
+	"downloads": 67,
 	"updated": "2024-07-29T17:44:24.427Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 16,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.5.85",
+	"svelte_range": "^4.0.5"
 }

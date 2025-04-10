@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/BiggiePete/svelte-editorjs",
 	"authors": ["0xhelp"],
 	"homepage": "https://github.com/BiggiePete/svelte-editorjs",
-	"downloads": 1,
-	"dependents": 0,
+	"downloads": 2,
 	"updated": "2024-02-18T02:02:16.832Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.2.2",
+	"svelte_range": "^4.0.5"
 }

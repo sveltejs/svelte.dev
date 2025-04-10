@@ -4,21 +4,11 @@
 	"repo_url": "https://github.com/TorstenDittmann/svelte-adapter-static-digitalocean",
 	"authors": ["torstendittmann"],
 	"homepage": "https://github.com/TorstenDittmann/svelte-adapter-static-digitalocean#readme",
-	"downloads": 9,
-	"dependents": 0,
-	"updated": "2024-04-15T11:45:14.555Z",
+	"downloads": 88,
+	"updated": "2025-04-09T14:16:47.349Z",
 	"tags": ["adapter"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 13,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "3.0.1"
 }

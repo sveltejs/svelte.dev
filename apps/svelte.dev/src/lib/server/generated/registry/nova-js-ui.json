@@ -3,20 +3,12 @@
 	"description": "Provides UI components for Svelte and Astro projects.",
 	"repo_url": "",
 	"authors": ["martinramos98"],
-	"downloads": 4,
-	"dependents": 0,
+	"downloads": 0,
 	"updated": "2024-10-21T19:28:31.788Z",
 	"tags": ["design-system"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.1.3",
+	"svelte_range": "^4.2.14",
+	"kit_range": "^2.6.1"
 }

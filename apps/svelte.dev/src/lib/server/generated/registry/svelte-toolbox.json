@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/svelte-toolbox/svelte-toolbox",
 	"authors": ["vehmloewff"],
 	"homepage": "https://svelte.dev/repl/5cf847108884453cbedd5920e919b630?version=3.6.5",
-	"downloads": 18,
-	"dependents": 0,
+	"downloads": 40,
 	"updated": "2019-08-11T00:27:58.359Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 78,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.6.1",
+	"svelte_range": "^3.5.4"
 }

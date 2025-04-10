@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/castlenine/svelte-canvas-confetti",
 	"authors": ["castlenine"],
 	"homepage": "https://github.com/castlenine/svelte-canvas-confetti",
-	"downloads": 100,
-	"dependents": 0,
+	"downloads": 39,
 	"updated": "2024-05-06T15:57:41.692Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.0.0",
+	"svelte_range": "^3.54.0 || ^4.0.0",
+	"kit_range": "^1.30.4"
 }

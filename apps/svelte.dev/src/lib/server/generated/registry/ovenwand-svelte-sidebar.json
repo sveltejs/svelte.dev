@@ -3,20 +3,11 @@
 	"description": "Implement sidebar component for Svelte applications.",
 	"repo_url": "",
 	"authors": ["sheijne"],
-	"downloads": 18,
-	"dependents": 0,
+	"downloads": 1,
 	"updated": "2021-03-20T17:28:20.305Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.0.5",
+	"svelte_range": "^3.0.0"
 }

@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/thingsneverchange/svelte-heart",
 	"authors": ["themecloset"],
 	"homepage": "https://github.com/thingsneverchange/svelte-heart#readme",
-	"downloads": 31,
-	"dependents": 0,
+	"downloads": 30,
 	"updated": "2024-03-27T12:07:32.713Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 6,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.0.15",
+	"svelte_range": "^4.0.0",
+	"kit_range": "^2.0.0"
 }

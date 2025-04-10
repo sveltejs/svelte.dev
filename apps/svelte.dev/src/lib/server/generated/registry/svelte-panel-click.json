@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/saibotsivad/svelte-panel-click",
 	"authors": ["saibotsivad"],
 	"homepage": "https://github.com/saibotsivad/svelte-panel-click#readme",
-	"downloads": 12,
-	"dependents": 0,
+	"downloads": 2,
 	"updated": "2018-12-15T20:37:24.651Z",
 	"tags": ["ui", "miscellaneous"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 19,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "1.0.3",
+	"svelte_range": "2.8.0"
 }

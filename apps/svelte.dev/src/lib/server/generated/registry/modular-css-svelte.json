@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/tivac/modular-css",
 	"authors": ["tivac"],
 	"homepage": "https://m-css.com",
-	"downloads": 68,
-	"dependents": 1,
+	"downloads": 19,
 	"updated": "2025-01-10T20:32:42.433Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 293,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "29.0.4",
+	"svelte_range": ">1"
 }

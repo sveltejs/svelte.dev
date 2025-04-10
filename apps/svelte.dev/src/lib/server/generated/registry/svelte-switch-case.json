@@ -3,20 +3,10 @@
 	"description": "Enable switch/case syntax within Svelte components.",
 	"repo_url": "",
 	"authors": ["l-portet"],
-	"downloads": 22,
-	"dependents": 0,
+	"downloads": 19,
 	"updated": "2022-08-31T22:51:03.399Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "2.0.0"
 }

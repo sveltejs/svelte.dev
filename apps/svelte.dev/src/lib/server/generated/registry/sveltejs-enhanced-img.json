@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/sveltejs/kit",
 	"authors": ["rich_harris", "svelte-admin", "conduitry", "dominik_g"],
 	"homepage": "https://svelte.dev",
-	"downloads": 23034,
-	"dependents": 0,
+	"downloads": 18425,
 	"updated": "2024-12-12T22:34:24.780Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 19179,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: types/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.4.4",
+	"svelte_range": "^5.0.0"
 }

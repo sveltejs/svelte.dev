@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/CalebPena/svelte-json-form",
 	"authors": ["not_a_cm"],
 	"homepage": "https://github.com/CalebPena/svelte-json-form#readme",
-	"downloads": 2,
-	"dependents": 0,
+	"downloads": 1,
 	"updated": "2024-03-01T16:12:28.456Z",
 	"tags": ["miscellaneous"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.0.5",
+	"svelte_range": "^4.0.0",
+	"kit_range": "^2.0.0"
 }

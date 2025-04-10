@@ -3,20 +3,12 @@
 	"description": "Create a small, responsive date picker for Svelte.",
 	"repo_url": "",
 	"authors": ["6edesign"],
-	"downloads": 5252,
-	"dependents": 2,
+	"downloads": 3933,
 	"updated": "2021-09-22T18:19:33.586Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "3.1.6",
+	"svelte_range": "3.38.0",
+	"kit_range": "^1.0.0-next.147"
 }

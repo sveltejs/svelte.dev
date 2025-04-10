@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/lagossapp/lagoss",
 	"authors": ["anbraten"],
 	"homepage": "https://github.com/lagossapp/lagoss/tree/main/packages/integrations/sveltekit",
-	"downloads": 4,
-	"dependents": 0,
+	"downloads": 2,
 	"updated": "2024-03-01T09:00:01.292Z",
 	"tags": ["adapter"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 9,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.2.1",
+	"kit_range": "^1.0.0"
 }

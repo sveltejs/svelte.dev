@@ -3,20 +3,12 @@
 	"description": "Implement Google authentication in SvelteKit applications.",
 	"repo_url": "",
 	"authors": ["halfdanj"],
-	"downloads": 43,
-	"dependents": 0,
+	"downloads": 84,
 	"updated": "2023-01-17T21:18:10.634Z",
 	"tags": ["auth"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.7.2",
+	"svelte_range": "^3.44.0",
+	"kit_range": "next"
 }

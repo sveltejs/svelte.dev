@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/sveltinio/components-library",
 	"authors": ["sveltinio"],
 	"homepage": "https://components.sveltin.io",
-	"downloads": 21,
-	"dependents": 1,
+	"downloads": 14,
 	"updated": "2023-10-01T09:54:37.197Z",
 	"tags": ["design-system", "ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 12,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in exports field"
-	}
+	"typescript": "first-party",
+	"version": "0.7.9",
+	"svelte_range": "^3.59.2 || ^4.0.0",
+	"kit_range": "^1.25.1"
 }

@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/shaozi/svelte-steps",
 	"authors": ["shaozi"],
 	"homepage": "https://svelte-steps.web.app",
-	"downloads": 3046,
-	"dependents": 0,
+	"downloads": 4012,
 	"updated": "2022-12-21T15:49:56.086Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 106,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "2.4.1",
+	"svelte_range": "^3.55.0",
+	"kit_range": "^1.0.1"
 }

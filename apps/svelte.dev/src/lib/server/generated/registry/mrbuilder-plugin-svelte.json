@@ -3,20 +3,11 @@
 	"description": "Provide Svelte file handling for MrBuilder.",
 	"repo_url": "",
 	"authors": ["speajus", "nanandn", "brycereynolds"],
-	"downloads": 11,
-	"dependents": 0,
+	"downloads": 3,
 	"updated": "2021-10-25T22:41:48.846Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "4.4.7-alpha.9",
+	"svelte_range": "^3.22.3"
 }

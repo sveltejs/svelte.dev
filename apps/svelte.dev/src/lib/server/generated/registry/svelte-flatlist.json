@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/snuffyDev/svelte-flatlist",
 	"authors": ["snuffydev"],
 	"homepage": "https://github.com/snuffyDev/svelte-flatlist#readme",
-	"downloads": 12,
-	"dependents": 0,
+	"downloads": 32,
 	"updated": "2021-12-20T16:31:42.503Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 16,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.2.6",
+	"svelte_range": "^3.42.6",
+	"kit_range": "next"
 }

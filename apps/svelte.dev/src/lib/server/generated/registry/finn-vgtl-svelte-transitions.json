@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/finn-vgtl/svelte-transitions",
 	"authors": ["finn-vgtl"],
 	"homepage": "https://github.com/finn-vgtl/svelte-transitions#readme",
-	"downloads": 141,
-	"dependents": 0,
+	"downloads": 79,
 	"updated": "2021-11-04T11:09:09.538Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "1.6.1",
+	"svelte_range": "^3.44.1"
 }

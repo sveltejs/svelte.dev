@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/webDevAndSausages/world-of-webdevandsausages",
 	"authors": ["rikuvan"],
 	"homepage": "https://github.com/webDevAndSausages/world-of-webdevandsausages#readme",
-	"downloads": 127,
-	"dependents": 0,
+	"downloads": 7,
 	"updated": "2020-02-10T17:01:40.617Z",
 	"tags": ["miscellaneous"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 5,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.6.1",
+	"svelte_range": "3.18.1"
 }

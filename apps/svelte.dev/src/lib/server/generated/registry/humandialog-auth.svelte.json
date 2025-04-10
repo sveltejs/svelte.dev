@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/HumanDialog/auth.svelte",
 	"authors": ["humandialog"],
 	"homepage": "https://github.com/HumanDialog/auth.svelte#readme",
-	"downloads": 118,
-	"dependents": 1,
+	"downloads": 21,
 	"updated": "2025-03-18T09:14:57.585Z",
 	"tags": ["auth"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/ts/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.8.5",
+	"svelte_range": "^3.24.0"
 }

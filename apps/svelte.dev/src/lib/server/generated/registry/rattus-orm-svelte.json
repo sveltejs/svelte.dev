@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/lyohaplotinka/rattus-orm",
 	"authors": ["lyohaplotinka"],
 	"homepage": "https://lyohaplotinka.github.io/rattus-orm/",
-	"downloads": 7,
-	"dependents": 0,
+	"downloads": 2,
 	"updated": "2025-02-11T19:44:34.537Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
 	"github_stars": 5,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/rattus-orm-svelte-provider.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.2.3",
+	"svelte_range": "^5.19.10"
 }

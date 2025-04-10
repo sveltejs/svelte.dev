@@ -3,20 +3,11 @@
 	"description": "Secure SvelteKit apps using HTTP response security headers.",
 	"repo_url": "",
 	"authors": ["islamzaoui"],
-	"downloads": 4,
-	"dependents": 0,
+	"downloads": 2,
 	"updated": "2024-09-29T16:27:19.507Z",
 	"tags": ["server"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.1.0",
+	"kit_range": "^2.0.0"
 }

@@ -2,20 +2,11 @@
 	"name": "svelte-apollo",
 	"description": "Integrate Apollo GraphQL with Svelte applications.",
 	"authors": ["timhall"],
-	"downloads": 1124,
-	"dependents": 3,
+	"downloads": 1249,
 	"updated": "2022-02-21T22:26:28.006Z",
 	"tags": ["integration"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/svelte-apollo.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.5.0",
+	"svelte_range": "^3"
 }

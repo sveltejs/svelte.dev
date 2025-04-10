@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/rodneylab/svelte-social-icons",
 	"authors": ["rodneylab"],
 	"homepage": "https://github.com/rodneylab/svelte-social-icons#readme",
-	"downloads": 126,
-	"dependents": 1,
+	"downloads": 129,
 	"updated": "2024-12-03T09:18:32.864Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 13,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: src/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.0.31",
+	"svelte_range": ">=3 <6"
 }

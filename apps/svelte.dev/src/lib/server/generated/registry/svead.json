@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/spences10/svead",
 	"authors": ["spences10"],
 	"homepage": "https://github.com/spences10/svead#readme",
-	"downloads": 827,
-	"dependents": 0,
+	"downloads": 976,
 	"updated": "2024-10-21T08:33:56.452Z",
 	"tags": ["seo"],
 	"runes": false,
 	"github_stars": 75,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.0.13",
+	"svelte_range": "^4.0.0 || ^5.0.0",
+	"kit_range": "^2.7.2"
 }

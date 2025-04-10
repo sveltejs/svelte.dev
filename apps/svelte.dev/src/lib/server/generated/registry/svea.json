@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/AronssonFredrik/svea",
 	"authors": ["aronsson"],
 	"homepage": "https://github.com/AronssonFredrik/svea#readme",
-	"downloads": 16,
-	"dependents": 0,
+	"downloads": 10,
 	"updated": "2019-11-04T20:10:04.776Z",
 	"tags": ["design-system"],
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
 	"runes": false,
 	"github_stars": 1,
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "1.0.3",
+	"svelte_range": "^3.4.4"
 }

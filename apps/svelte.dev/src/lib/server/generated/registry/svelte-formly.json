@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/dyaliCode/svelte-formly",
 	"authors": ["marocdevelop"],
 	"homepage": "https://github.com/dyaliCode/svelte-formly#readme",
-	"downloads": 252,
-	"dependents": 1,
+	"downloads": 364,
 	"updated": "2022-07-24T00:42:19.533Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 255,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "2.0.1",
+	"svelte_range": "^3.44.0",
+	"kit_range": "next"
 }

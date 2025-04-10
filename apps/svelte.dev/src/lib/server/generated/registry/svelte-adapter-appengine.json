@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/halfdanj/svelte-adapter-appengine",
 	"authors": ["halfdanj"],
 	"homepage": "https://github.com/halfdanj/svelte-adapter-appengine#readme",
-	"downloads": 155,
-	"dependents": 0,
+	"downloads": 119,
 	"updated": "2025-02-24T22:48:25.803Z",
 	"tags": ["adapter"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 69,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.2.0",
+	"kit_range": "^1.0.0 || ^2.0.0"
 }

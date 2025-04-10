@@ -5,20 +5,11 @@
 	"authors": ["andrey-pavlenko"],
 	"homepage": "https://github.com/andrey-pavlenko/svelte-components/tree/main/packages/keyboard-shortcut-action#readme",
 	"downloads": 0,
-	"dependents": 0,
 	"updated": "2023-02-01T20:15:30.166Z",
 	"tags": ["miscellaneous"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 3,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.0.4",
+	"svelte_range": "^3.30.0"
 }

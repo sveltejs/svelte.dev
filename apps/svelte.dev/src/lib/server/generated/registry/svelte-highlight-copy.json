@@ -5,20 +5,11 @@
 	"authors": ["marcoantoniogonzalezjunior"],
 	"homepage": "https://github.com/kayaman/svelte-highlight-copy",
 	"downloads": 8,
-	"dependents": 0,
 	"updated": "2023-12-06T05:09:06.287Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.0.10",
+	"svelte_range": "^4.2.8"
 }

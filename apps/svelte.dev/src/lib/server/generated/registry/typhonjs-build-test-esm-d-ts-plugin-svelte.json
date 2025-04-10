@@ -5,20 +5,11 @@
 	"authors": ["typhonrt"],
 	"homepage": "https://github.com/typhonjs-node-build-test/esm-d-ts-plugin-svelte#readme",
 	"downloads": 1,
-	"dependents": 0,
 	"updated": "2024-03-26T20:55:05.202Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in exports field"
-	}
+	"typescript": "first-party",
+	"version": "0.1.0-next.1",
+	"svelte_range": "4"
 }

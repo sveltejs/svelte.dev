@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/jill64/svelte-page-tab",
 	"authors": ["jill64"],
 	"homepage": "https://github.com/jill64/svelte-page-tab#readme",
-	"downloads": 2516,
-	"dependents": 0,
-	"updated": "2025-03-25T14:57:04.463Z",
+	"downloads": 2568,
+	"updated": "2025-04-04T16:25:32.728Z",
 	"tags": ["ui", "router"],
 	"runes": false,
 	"github_stars": 1,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "2.0.8",
+	"svelte_range": "^5.0.0",
+	"kit_range": "^2.0.0"
 }

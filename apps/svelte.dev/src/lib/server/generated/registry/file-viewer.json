@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/avipunes/File-Viewer",
 	"authors": ["avipunes"],
 	"homepage": "https://github.com/avipunes/File-Viewer#readme",
-	"downloads": 286,
-	"dependents": 0,
+	"downloads": 223,
 	"updated": "2020-07-26T14:07:44.591Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 40,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "1.2.0",
+	"svelte_range": "^3.6.10"
 }

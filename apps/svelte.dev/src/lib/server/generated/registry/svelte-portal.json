@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/romkor/svelte-portal",
 	"authors": ["rodych"],
 	"homepage": "https://github.com/romkor/svelte-portal#readme",
-	"downloads": 21196,
-	"dependents": 53,
+	"downloads": 22076,
 	"updated": "2024-01-17T09:01:10.277Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 452,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: src/Portal.svelte.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "2.2.1",
+	"svelte_range": "^3.29.4"
 }

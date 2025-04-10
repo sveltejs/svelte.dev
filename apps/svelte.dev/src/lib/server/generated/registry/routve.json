@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/routve/routve",
 	"authors": ["kahverengi", "berkaltiok"],
 	"homepage": "https://github.com/routve/routve#readme",
-	"downloads": 11,
-	"dependents": 0,
+	"downloads": 10,
 	"updated": "2021-02-17T09:38:05.671Z",
 	"tags": ["router"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 24,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "4.0.0",
+	"svelte_range": "3.x"
 }

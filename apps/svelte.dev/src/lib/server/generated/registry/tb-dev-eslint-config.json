@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/ferreira-tb/eslint-config",
 	"authors": ["ferreira-tb"],
 	"homepage": "https://github.com/ferreira-tb/eslint-config",
-	"downloads": 429,
-	"dependents": 0,
+	"downloads": 40,
 	"updated": "2025-03-27T21:11:37.359Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 1,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "6.7.2",
+	"svelte_range": "^5.25.3"
 }

@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/bscotch/gamemaker-info",
 	"authors": ["bscotchadam"],
 	"homepage": "https://github.com/bscotch/gamemaker-info/blob/develop/packages/releases-ui/README.md",
-	"downloads": 1,
-	"dependents": 0,
+	"downloads": 6,
 	"updated": "2023-02-13T22:46:28.930Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 1,
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	},
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	}
+	"typescript": "none",
+	"version": "0.4.0",
+	"svelte_range": "*",
+	"kit_range": "^1.0.0-next.572"
 }

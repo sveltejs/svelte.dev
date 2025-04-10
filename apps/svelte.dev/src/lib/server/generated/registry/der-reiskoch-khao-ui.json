@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/Khao-UI-Tools/khao-ui",
 	"authors": ["jens-reiskoch"],
 	"homepage": "https://khao-ui-tools.github.io/khao-ui",
-	"downloads": 208,
-	"dependents": 0,
-	"updated": "2025-03-16T14:55:41.597Z",
+	"downloads": 194,
+	"updated": "2025-04-10T06:59:19.245Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 1,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "3.5.5",
+	"svelte_range": "^4.2.18"
 }

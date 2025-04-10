@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/sveltejs/language-tools",
 	"authors": ["orta", "svelte-language-tools-deploy", "dummdidumm"],
 	"homepage": "https://github.com/sveltejs/language-tools#readme",
-	"downloads": 8660,
-	"dependents": 9,
+	"downloads": 7792,
 	"updated": "2025-03-06T14:09:49.594Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 1297,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/src/index"
-	}
+	"typescript": "first-party",
+	"version": "0.17.11",
+	"svelte_range": "^4.2.19"
 }

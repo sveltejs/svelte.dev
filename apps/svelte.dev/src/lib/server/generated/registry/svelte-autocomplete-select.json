@@ -3,20 +3,11 @@
 	"description": "Provides flexible, zero-dependency autocomplete component for Svelte.",
 	"repo_url": "",
 	"authors": ["tiaanduplessis"],
-	"downloads": 97,
-	"dependents": 1,
+	"downloads": 32,
 	"updated": "2021-02-12T12:07:06.700Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "1.1.0",
+	"svelte_range": "3"
 }

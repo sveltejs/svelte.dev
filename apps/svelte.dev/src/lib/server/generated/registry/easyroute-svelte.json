@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/easyroute-router/easyroute",
 	"authors": ["lyohaplotinka"],
 	"homepage": "https://easyroute.lyoha.info",
-	"downloads": 33,
-	"dependents": 1,
+	"downloads": 7,
 	"updated": "2023-07-25T19:38:21.847Z",
 	"tags": ["router"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 20,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./types.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "3.2.3",
+	"svelte_range": "^3.0.0 || ^4.0.0"
 }

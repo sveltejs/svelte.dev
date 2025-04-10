@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/kodepandai/lunox-framework",
 	"authors": ["axmad386"],
 	"homepage": "https://github.com/kodepandai/lunox-framework#readme",
-	"downloads": 158,
-	"dependents": 1,
+	"downloads": 182,
 	"updated": "2022-08-25T03:11:18.497Z",
 	"tags": ["server"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 22,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.7.1",
+	"svelte_range": "^3.46.6"
 }

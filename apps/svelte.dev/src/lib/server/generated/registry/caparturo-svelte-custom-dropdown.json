@@ -3,20 +3,12 @@
 	"description": "Create customizable dropdown lists in Svelte applications.",
 	"repo_url": "",
 	"authors": ["caparturo"],
-	"downloads": 0,
-	"dependents": 0,
+	"downloads": 5,
 	"updated": "2022-07-13T03:39:20.369Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.0.8",
+	"svelte_range": "^3.44.0",
+	"kit_range": "next"
 }

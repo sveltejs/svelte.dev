@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/reecelucas/svelte-accessible-dialog",
 	"authors": ["reecelucas"],
 	"homepage": "https://github.com/reecelucas/svelte-accessible-dialog#readme",
-	"downloads": 643,
-	"dependents": 0,
+	"downloads": 440,
 	"updated": "2021-04-14T14:02:34.803Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 26,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "2.1.3",
+	"svelte_range": "^3.20.1"
 }

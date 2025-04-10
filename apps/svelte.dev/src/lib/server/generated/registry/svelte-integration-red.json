@@ -4,20 +4,11 @@
 	"repo_url": "https://gitlab.com/2WeltenChris/svelte-integration-red",
 	"authors": ["2weltenchris", "meijey"],
 	"homepage": "https://gitlab.com/2WeltenChris/svelte-integration-red#readme",
-	"downloads": 392,
-	"dependents": 1,
-	"updated": "2025-03-27T09:40:30.547Z",
+	"downloads": 438,
+	"updated": "2025-04-10T14:53:15.034Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "2.8.6",
+	"svelte_range": "^4.2.19"
 }

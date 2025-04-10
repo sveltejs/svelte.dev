@@ -5,20 +5,11 @@
 	"authors": ["valterkraemer"],
 	"homepage": "https://github.com/valterkraemer/rollup-plugin-syntax-highlight#readme",
 	"downloads": 1,
-	"dependents": 0,
 	"updated": "2022-10-05T14:07:01.231Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 1,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.1.0",
+	"svelte_range": "^3.50.1"
 }

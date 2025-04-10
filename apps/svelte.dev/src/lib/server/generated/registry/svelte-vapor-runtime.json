@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/kazupon/inclusion-vapor",
 	"authors": ["kazupon"],
 	"homepage": "https://github.com/kazupon/inclusion-vapor#readme",
-	"downloads": 3,
-	"dependents": 1,
+	"downloads": 0,
 	"updated": "2024-11-27T11:37:05.121Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 35,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.0.5",
+	"svelte_range": "4.2.18"
 }

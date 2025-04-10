@@ -3,20 +3,11 @@
 	"description": "Integrate Slim Select, lightweight select component, into Svelte apps.",
 	"repo_url": "",
 	"authors": ["antony", "adampond", "alex.dilley", "jedwoodcock", "leandro.silva", "tomlewis0"],
-	"downloads": 0,
-	"dependents": 0,
+	"downloads": 2,
 	"updated": "2018-10-25T16:10:53.318Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.4.1",
+	"svelte_range": "^2.14.3"
 }

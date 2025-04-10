@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/webermarci/svelte-store-fetcher",
 	"authors": ["webermarci"],
 	"homepage": "https://github.com/webermarci/svelte-store-fetcher#readme",
-	"downloads": 12,
-	"dependents": 0,
+	"downloads": 4,
 	"updated": "2021-05-02T07:41:56.708Z",
 	"tags": ["server", "miscellaneous"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 4,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.5.6",
+	"svelte_range": "3.38.1"
 }

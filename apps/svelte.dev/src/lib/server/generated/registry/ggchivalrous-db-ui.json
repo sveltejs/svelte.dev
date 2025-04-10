@@ -3,20 +3,11 @@
 	"description": "Build UI components for Svelte applications.",
 	"repo_url": "",
 	"authors": ["ggchivalrous"],
-	"downloads": 6,
-	"dependents": 0,
+	"downloads": 3,
 	"updated": "2023-12-03T07:24:16.128Z",
 	"tags": ["ui", "design-system"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./components/packages/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.3.1",
+	"svelte_range": "^3.51.0"
 }

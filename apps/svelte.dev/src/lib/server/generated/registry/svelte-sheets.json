@@ -3,20 +3,12 @@
 	"description": "Run Excel sheets in browser with Svelte, using virtual lists.",
 	"repo_url": "",
 	"authors": ["ticruz38"],
-	"downloads": 21,
-	"dependents": 0,
+	"downloads": 62,
 	"updated": "2022-05-16T16:15:07.940Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.0.0",
+	"svelte_range": "^3.44.0",
+	"kit_range": "next"
 }

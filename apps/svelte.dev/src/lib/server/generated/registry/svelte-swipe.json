@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/SharifClick/svelte-swipe",
 	"authors": ["me.sharifahmed..gmail.com"],
 	"homepage": "https://github.com/SharifClick/svelte-swipe",
-	"downloads": 281,
-	"dependents": 2,
+	"downloads": 247,
 	"updated": "2023-11-10T13:18:12.910Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 389,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "2.0.4",
+	"svelte_range": "^3.54.0 || ^4.0.0",
+	"kit_range": "^1.24.1"
 }

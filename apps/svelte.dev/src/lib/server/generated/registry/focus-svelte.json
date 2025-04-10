@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/chanced/focus-svelte",
 	"authors": ["chance--"],
 	"homepage": "https://github.com/chanced/focus-svelte#readme",
-	"downloads": 321,
-	"dependents": 1,
+	"downloads": 342,
 	"updated": "2021-10-17T16:55:36.762Z",
 	"tags": ["miscellaneous"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 31,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.3.4",
+	"svelte_range": "^3.43.0",
+	"kit_range": "next"
 }

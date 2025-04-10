@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/viamrobotics/js-config",
 	"authors": ["cheukt", "mcous", "stevebriskin", "viambot", "micheal.parks", "mpviam", "njooma"],
 	"homepage": "https://github.com/viamrobotics/js-config#readme",
-	"downloads": 148,
-	"dependents": 0,
-	"updated": "2024-12-03T16:12:49.990Z",
+	"downloads": 210,
+	"updated": "2025-04-07T17:10:19.076Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 2,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/prettier-config-svelte.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.1.0",
+	"svelte_range": "*"
 }

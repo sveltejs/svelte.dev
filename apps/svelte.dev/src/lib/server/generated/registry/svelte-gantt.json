@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/ANovokmet/svelte-gantt",
 	"authors": ["anovokmet", "v-py"],
 	"homepage": "https://github.com/ANovokmet/svelte-gantt#readme",
-	"downloads": 1205,
-	"dependents": 2,
+	"downloads": 1016,
 	"updated": "2025-02-10T09:27:05.820Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 563,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in exports field"
-	}
+	"typescript": "first-party",
+	"version": "4.5.0",
+	"svelte_range": "^4.0.0"
 }

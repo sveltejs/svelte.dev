@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/powchess/chessboard",
 	"authors": ["trgsv"],
 	"homepage": "https://powchess.com",
-	"downloads": 84,
-	"dependents": 0,
+	"downloads": 22,
 	"updated": "2023-11-12T14:55:34.244Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 1,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.4.12",
+	"svelte_range": "^4.2.2",
+	"kit_range": "1.27.3"
 }

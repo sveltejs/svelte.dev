@@ -3,20 +3,11 @@
 	"description": "Create responsive flexbox layouts for Svelte applications.",
 	"repo_url": "",
 	"authors": ["tmarshall07"],
-	"downloads": 37,
-	"dependents": 1,
+	"downloads": 5,
 	"updated": "2021-04-29T21:47:16.442Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "1.1.7",
+	"svelte_range": "^3.37.0"
 }

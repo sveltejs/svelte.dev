@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/friendofsvelte/tipex",
 	"authors": ["bishwasbh"],
 	"homepage": "https://tipex.pages.dev/",
-	"downloads": 501,
-	"dependents": 1,
+	"downloads": 529,
 	"updated": "2025-03-22T03:00:45.220Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 307,
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	},
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	}
+	"typescript": "first-party",
+	"version": "0.0.8-dev.0",
+	"svelte_range": "^5.0.0",
+	"kit_range": "^2.16.0"
 }

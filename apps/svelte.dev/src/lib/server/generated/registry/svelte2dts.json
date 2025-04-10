@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/firefish5000/svelte2dts",
 	"authors": ["firefish5000"],
 	"homepage": "https://github.com/firefish5000/svelte2dts",
-	"downloads": 27,
-	"dependents": 0,
+	"downloads": 12,
 	"updated": "2020-11-22T00:12:03.000Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 23,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.2.12",
+	"svelte_range": "^3.28.0"
 }

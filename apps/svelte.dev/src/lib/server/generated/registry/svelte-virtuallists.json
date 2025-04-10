@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/orefalo/svelte-virtuallists",
 	"authors": ["orefalo"],
 	"homepage": "https://orefalo.github.io/svelte-virtuallists/",
-	"downloads": 764,
-	"dependents": 0,
+	"downloads": 715,
 	"updated": "2025-03-01T19:17:52.480Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 113,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.4.2",
+	"svelte_range": "^5.20.5"
 }

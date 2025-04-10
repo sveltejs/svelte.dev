@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/nonblocking/mashroom",
 	"authors": ["jkofler"],
 	"homepage": "https://www.mashroom-server.com",
-	"downloads": 79,
-	"dependents": 0,
-	"updated": "2024-07-08T08:48:46.968Z",
+	"downloads": 119,
+	"updated": "2025-04-02T14:06:23.311Z",
 	"tags": ["miscellaneous"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 55,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "2.8.1",
+	"svelte_range": "^5.16.2"
 }

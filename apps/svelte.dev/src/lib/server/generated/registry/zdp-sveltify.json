@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/zdproduction/sveltify",
 	"authors": ["zdpro"],
 	"homepage": "https://sveltify.dev",
-	"downloads": 11,
-	"dependents": 0,
+	"downloads": 0,
 	"updated": "2020-05-29T21:07:17.179Z",
 	"tags": ["design-system"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 2,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.0.2",
+	"svelte_range": "^3.23.0"
 }

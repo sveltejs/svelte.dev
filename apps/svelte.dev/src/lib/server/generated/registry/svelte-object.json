@@ -3,19 +3,11 @@
 	"description": "Structure objects/arrays with nested components in Svelte.",
 	"authors": ["refzlund"],
 	"homepage": "https://github.com/Refzlund/svelte-object",
-	"downloads": 23,
-	"dependents": 0,
+	"downloads": 9,
 	"updated": "2025-01-17T00:49:59.218Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in exports field"
-	}
+	"typescript": "first-party",
+	"version": "2.0.3",
+	"svelte_range": "^5.0.0"
 }

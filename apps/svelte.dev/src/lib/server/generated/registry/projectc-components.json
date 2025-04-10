@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/yustarandomname/projectC-components",
 	"authors": ["abeldebruijn"],
 	"homepage": "https://github.com/yustarandomname/projectC-components#readme",
-	"downloads": 37,
-	"dependents": 0,
+	"downloads": 12,
 	"updated": "2021-06-03T21:39:17.930Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "1.2.7",
+	"svelte_range": "^3.16.7"
 }

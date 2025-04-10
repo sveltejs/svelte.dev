@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/AlbertAZ1992/svelte-g6",
 	"authors": ["albertaz777"],
 	"homepage": "https://github.com/AlbertAZ1992/svelte-g6#readme",
-	"downloads": 14,
-	"dependents": 0,
+	"downloads": 2,
 	"updated": "2021-07-23T13:39:45.007Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 6,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.0.4",
+	"svelte_range": ">=3.34.0"
 }

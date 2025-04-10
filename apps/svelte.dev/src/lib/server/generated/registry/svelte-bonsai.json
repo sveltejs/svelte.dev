@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/stelath/svelte-bonsai",
 	"authors": ["stelath"],
 	"homepage": "https://github.com/stelath/svelte-bonsai#readme",
-	"downloads": 0,
-	"dependents": 0,
+	"downloads": 4,
 	"updated": "2025-01-12T05:03:46.907Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.0.1",
+	"svelte_range": "^5.0.0"
 }

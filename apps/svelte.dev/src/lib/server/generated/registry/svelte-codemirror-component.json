@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/rozek/svelte-codemirror-component",
 	"authors": ["arozek"],
 	"homepage": "https://github.com/rozek/svelte-codemirror-component#readme",
-	"downloads": 11,
-	"dependents": 0,
+	"downloads": 2,
 	"updated": "2022-02-24T14:08:59.893Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 2,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/svelte-codemirror-component.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.0.3",
+	"svelte_range": "^3.38.3"
 }

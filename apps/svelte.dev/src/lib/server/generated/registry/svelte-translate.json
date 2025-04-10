@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/noelmugnier/svelte-translate",
 	"authors": ["noelmugnier"],
 	"homepage": "https://github.com/noelmugnier/svelte-translate#readme",
-	"downloads": 15,
-	"dependents": 0,
+	"downloads": 3,
 	"updated": "2021-10-01T14:03:15.146Z",
 	"tags": ["miscellaneous"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 10,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/ts/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.1.11",
+	"svelte_range": "^3.43.1"
 }

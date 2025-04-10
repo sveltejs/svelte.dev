@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/svelte-u/extend",
 	"authors": ["mohamed-kaizen"],
 	"homepage": "https://github.com/svelte-u/extend#readme",
-	"downloads": 26,
-	"dependents": 0,
+	"downloads": 16,
 	"updated": "2023-07-04T05:50:02.769Z",
 	"tags": ["integration"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 2,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "1.0.0",
+	"svelte_range": "^4.0.3"
 }

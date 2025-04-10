@@ -3,20 +3,11 @@
 	"description": "Create opt-in components for Svelte apps.",
 	"repo_url": "https://gitlab.textecnologia.io/nimble/optin",
 	"authors": ["lagden"],
-	"downloads": 21,
-	"dependents": 0,
+	"downloads": 5,
 	"updated": "2025-01-23T14:41:41.156Z",
 	"tags": ["integration"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "1.3.2",
+	"svelte_range": "4.2.19"
 }

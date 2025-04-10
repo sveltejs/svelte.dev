@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/AlexAegis/js-tooling",
 	"authors": ["alexaegis"],
 	"homepage": "https://github.com/AlexAegis/js-tooling",
-	"downloads": 79,
-	"dependents": 0,
+	"downloads": 47,
 	"updated": "2024-11-30T21:42:24.347Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 8,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.12.0",
+	"kit_range": "~2.9.0"
 }

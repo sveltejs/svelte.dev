@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/hedgehog125/SvelteKit-Adapter-Versioned-Worker",
 	"authors": ["hedgehog125"],
 	"homepage": "https://github.com/hedgehog125/SvelteKit-Adapter-Versioned-Worker#readme",
-	"downloads": 1,
-	"dependents": 0,
+	"downloads": 2,
 	"updated": "2023-09-08T20:33:20.084Z",
 	"tags": ["adapter"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 13,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./build/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.0.1",
+	"svelte_range": "^4.0.0",
+	"kit_range": "^1.22.0"
 }

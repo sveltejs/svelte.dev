@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/dustbort/svelte-flagicon",
 	"authors": ["dustinbortner"],
 	"homepage": "https://github.com/dustbort/svelte-flagicon#readme",
-	"downloads": 40,
-	"dependents": 0,
+	"downloads": 23,
 	"updated": "2020-05-12T01:56:58.454Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 3,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.2.0",
+	"svelte_range": "^3.22.2"
 }

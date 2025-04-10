@@ -20,21 +20,13 @@
 		"pretzelhammer",
 		"alexandersmanning"
 	],
-	"downloads": 6404,
-	"dependents": 1,
+	"downloads": 5439,
 	"updated": "2024-02-21T15:08:52.067Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
 	"github_stars": 528,
 	"homepage": null,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: lib/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.0.18",
+	"svelte_range": ">= 3.0.0 < 5.0.0"
 }

@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/rspieker/jest-transform-svelte",
 	"authors": ["rogier.spieker"],
 	"homepage": "https://github.com/rspieker/jest-transform-svelte#readme",
-	"downloads": 1258,
-	"dependents": 2,
+	"downloads": 1711,
 	"updated": "2020-01-16T06:53:51.360Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 35,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "2.1.1",
+	"svelte_range": ">= 3"
 }

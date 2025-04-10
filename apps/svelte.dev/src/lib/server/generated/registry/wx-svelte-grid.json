@@ -4,21 +4,11 @@
 	"repo_url": "https://github.com/svar-widgets/grid",
 	"authors": ["marta-ko"],
 	"homepage": "https://svar.dev/svelte/datagrid/",
-	"downloads": 4086,
-	"dependents": 2,
+	"downloads": 3293,
 	"updated": "2025-03-24T11:25:22.367Z",
 	"tags": ["design-system"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 82,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "2.1.3"
 }

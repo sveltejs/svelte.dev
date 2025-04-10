@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/tjinauyeung/svelte-forms-lib",
 	"authors": ["larrybotha", "tjinauyeung"],
 	"homepage": "https://svelte-forms-lib-sapper-docs.now.sh",
-	"downloads": 5167,
-	"dependents": 5,
+	"downloads": 5535,
 	"updated": "2022-01-06T07:30:34.155Z",
 	"tags": ["miscellaneous"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 610,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./lib/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "2.0.1",
+	"svelte_range": "3.40.2"
 }

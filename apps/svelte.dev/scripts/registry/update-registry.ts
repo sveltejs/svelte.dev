@@ -10,7 +10,6 @@ import svelte_society_list from '../../src/lib/society-npm.json' with { type: 'j
 import { sort_packages } from '../../src/routes/(packages)/packages/packages-search.js';
 import {
 	check_typescript_types,
-	fetch_details_for_package,
 	fetch_downloads_for_package,
 	HEADERS,
 	PackageCache,
@@ -21,19 +20,10 @@ import {
 	stream_search_by_keywords,
 	structured_interim_package_to_package,
 	superfetch,
-	supports_svelte_versions,
 	type StructuredInterimPackage
 } from './npm.js';
 
 dotenv.config({ path: '.env.local' });
-
-/**
- * Checks if a package is an official Svelte package
- */
-function is_official(pkg: string): boolean {
-	// TODO: Is the the only condition?
-	return pkg.startsWith('@sveltejs/') || pkg === 'prettier-plugin-svelte';
-}
 
 const NEW_THRESHOLD_DAYS = 28;
 
@@ -400,7 +390,7 @@ async function process_batches_through_llm_base({
 							console.log(`[${batch_id}] Updated description for ${pkg_name}`);
 						}
 
-						if (json[pkg_name].runes && package_details.meta.svelte[5]) {
+						if (json[pkg_name].runes) {
 							package_details.meta.runes = json[pkg_name].runes;
 							console.log(`[${batch_id}] Updated runes for ${pkg_name}`);
 						}
@@ -725,130 +715,53 @@ async function update_overrides() {
  * Updates package cache with latest npm data
  * Uses existing request_queue from superfetch for concurrency control
  */
-async function update_cache_from_npm() {
-	// Track progress
-	let processedCount = 0;
-	const updatedPackages: {
-		pkg_name: string;
-		data: Package;
-	}[] = [];
-
-	// Collect all package entries to count total
-	const packages = [];
+async function update_cache_from_npm(update_stats = true) {
 	for await (const [pkg_name, data] of PackageCache.entries()) {
-		packages.push({ pkg_name, data });
+		const package_detail = await superfetch(`${REGISTRY_BASE_URL}${pkg_name}`).then((r) =>
+			r.json()
+		);
+
+		const latest = package_detail['dist-tags']?.latest;
+		if (!latest) continue;
+
+		const latest_package_json = package_detail.versions[latest];
+
+		// @ts-expect-error
+		delete data.svelte;
+		// @ts-expect-error
+		delete data.svelte5;
+		// @ts-expect-error
+		delete data.dependents;
+
+		const typescript_data = await check_typescript_types(latest_package_json);
+		data.typescript = typescript_data;
+
+		data.version = latest_package_json.version;
+		data.updated = package_detail.time?.[latest];
+		data.svelte_range =
+			latest_package_json.peerDependencies?.svelte ??
+			latest_package_json.dependencies?.svelte ??
+			latest_package_json.devDependencies?.svelte;
+
+		data.kit_range =
+			latest_package_json.peerDependencies?.['@sveltejs/kit'] ??
+			latest_package_json.dependencies?.['@sveltejs/kit'] ??
+			latest_package_json.devDependencies?.['@sveltejs/kit'];
+
+		if (update_stats) {
+			const downloads = await fetch_downloads_for_package(pkg_name);
+
+			data.downloads = downloads;
+		}
+
+		PackageCache.set(pkg_name, data);
 	}
-
-	const totalPackages = packages.length;
-	console.log(`Starting update for ${totalPackages} packages`);
-
-	// Create array of promises for package updates
-	const promises = packages.map(({ pkg_name, data }) => {
-		// These fetch functions already use request_queue internally via superfetch
-		return Promise.all([
-			fetch_details_for_package(data.name),
-			fetch_downloads_for_package(data.name)
-		])
-			.then(([details, downloads]) => {
-				try {
-					if (!details) {
-						console.warn(`No details found for package: ${data.name}`);
-						return null;
-					}
-
-					const latest_version = details['dist-tags']?.latest;
-					if (!latest_version) {
-						console.warn(`No latest version found for package: ${data.name}`);
-						return null;
-					}
-
-					// Get last update date and deprecation status
-					const updated = details.time?.[latest_version]
-						? new Date(details.time[latest_version])
-						: undefined;
-					const deprecated = details.versions?.[latest_version]?.deprecated || false;
-
-					// Update the package data
-					const updatedData = {
-						...data,
-						downloads,
-						updated: updated?.toISOString(),
-						deprecated: deprecated || undefined // Only include if true
-					};
-
-					// Save updated data back to cache
-					PackageCache.set(data.name, updatedData);
-
-					// Track progress
-					processedCount++;
-					if (processedCount % 10 === 0 || processedCount === totalPackages) {
-						console.log(
-							`Progress: ${processedCount}/${totalPackages} (${Math.round((processedCount / totalPackages) * 100)}%)`
-						);
-					}
-
-					// Store updated package info
-					const packageInfo: Package = {
-						...data,
-						downloads,
-						updated: updated?.toISOString(),
-						deprecated
-					};
-
-					updatedPackages.push({ data: packageInfo as any, pkg_name: data.name });
-					return packageInfo;
-				} catch (error) {
-					console.error(`Error processing package ${data.name}:`, error);
-					return null;
-				}
-			})
-			.catch((error) => {
-				console.error(`Error fetching package ${data.name}:`, error);
-				return null;
-			});
-	});
-
-	// Wait for all updates to complete
-	await Promise.all(promises);
-
-	console.log(`Update completed for ${processedCount} packages`);
-	return updatedPackages.filter(Boolean);
 }
 
 async function delete_untagged() {
 	for await (const [pkg_name_file, data] of PackageCache.entries()) {
 		if (!Array.isArray(data.tags)) {
 			PackageCache.delete(data.name);
-		}
-	}
-}
-
-async function recheck_svelte_support() {
-	for await (const [pkg_name, data] of PackageCache.entries()) {
-		// Get package json
-		const package_json = await superfetch(`${REGISTRY_BASE_URL}${pkg_name}`).then((r) => r.json());
-
-		// Get latest versions package.json from versions field
-		const latest_version = package_json['dist-tags']?.latest;
-		if (!latest_version) continue;
-
-		const latest_package_json = package_json.versions[latest_version];
-
-		const svelte_version =
-			latest_package_json.peerDependencies?.svelte ||
-			latest_package_json.dependencies?.svelte ||
-			latest_package_json.devDependencies?.svelte;
-
-		const svelte_support = supports_svelte_versions(svelte_version);
-
-		const old_svelte_support = data.svelte;
-
-		data.svelte = svelte_support;
-
-		if (JSON.stringify(old_svelte_support) !== JSON.stringify(data.svelte)) {
-			console.log('UPDATING', pkg_name, svelte_support);
-
-			PackageCache.set(pkg_name, data);
 		}
 	}
 }
@@ -897,33 +810,53 @@ async function update_typescript_data() {
 	}
 }
 
-/** @deprecated */
-async function TEMPORARY_update_typescript_for_unmarked_to_accomodate_for_wrong_function() {
-	for await (const [pkg_name, data] of PackageCache.entries()) {
-		if (data.typescript.has_types) continue;
+// /** @deprecated */
+// async function TEMPORARY_update_typescript_for_unmarked_to_accomodate_for_wrong_function() {
+// 	for await (const [pkg_name, data] of PackageCache.entries()) {
+// 		if (data.typescript.has_types) continue;
 
-		console.log(`TRYING ${pkg_name}`);
+// 		console.log(`TRYING ${pkg_name}`);
 
-		const package_detail = await superfetch(`${REGISTRY_BASE_URL}${pkg_name}`).then((r) =>
-			r.json()
-		);
+// 		const package_detail = await superfetch(`${REGISTRY_BASE_URL}${pkg_name}`).then((r) =>
+// 			r.json()
+// 		);
 
-		const latest = package_detail['dist-tags']?.latest;
-		if (!latest) continue;
+// 		const latest = package_detail['dist-tags']?.latest;
+// 		if (!latest) continue;
 
-		const latest_package_json = package_detail.versions[latest];
+// 		const latest_package_json = package_detail.versions[latest];
 
-		const typescript_data = await check_typescript_types(latest_package_json);
-		data.typescript = typescript_data;
-		PackageCache.set(pkg_name, data);
-	}
-}
+// 		const typescript_data = await check_typescript_types(latest_package_json);
+// 		data.typescript = typescript_data;
+// 		PackageCache.set(pkg_name, data);
+// 	}
+// }
+
+// async function update_versions_only() {
+// 	for await (const [pkg_name, data] of PackageCache.entries()) {
+// 		const package_detail = await superfetch(`${REGISTRY_BASE_URL}${pkg_name}`).then((r) =>
+// 			r.json()
+// 		);
+
+// 		const latest = package_detail['dist-tags']?.latest;
+// 		if (!latest) continue;
+
+// 		const latest_package_json = package_detail.versions[latest];
+
+// 		data.version = latest_package_json.version;
+// 		PackageCache.set(pkg_name, data);
+// 	}
+// }
+
+// update_versions_only();
 
 for (let i = 0; i < 1; i++) {
 	// await process_batches_through_llm();
 }
 
 // await update_overrides();
+
+update_cache_from_npm();
 
 svelte_society_list;
 // await process_packages_by_names_through_llm({

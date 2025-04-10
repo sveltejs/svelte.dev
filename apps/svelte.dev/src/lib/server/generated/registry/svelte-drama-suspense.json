@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/svelte-drama/suspense",
 	"authors": ["adantes"],
 	"homepage": "https://github.com/svelte-drama/suspense#readme",
-	"downloads": 179,
-	"dependents": 0,
+	"downloads": 52,
 	"updated": "2025-02-24T15:39:27.165Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
 	"github_stars": 65,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.9.0",
+	"svelte_range": "^5.3.0",
+	"kit_range": "^2.17.2"
 }

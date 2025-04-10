@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/yutak23/svelte-kit-sessions",
 	"authors": ["yutak23"],
 	"homepage": "https://github.com/yutak23/svelte-kit-sessions#readme",
-	"downloads": 127,
-	"dependents": 3,
+	"downloads": 260,
 	"updated": "2024-11-13T04:51:52.547Z",
 	"tags": ["server", "auth"],
 	"runes": false,
 	"github_stars": 16,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.4.0",
+	"svelte_range": "^5.1.13",
+	"kit_range": "^1.0.0 || ^2.0.0"
 }

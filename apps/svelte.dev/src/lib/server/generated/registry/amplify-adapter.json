@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/gzimbron/amplify-adapter",
 	"authors": ["zimbronapps"],
 	"homepage": "https://github.com/gzimbron/amplify-adapter#readme",
-	"downloads": 1500,
-	"dependents": 2,
+	"downloads": 1766,
 	"updated": "2024-10-27T07:50:22.272Z",
 	"tags": ["adapter", "server"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 27,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.2.0",
+	"kit_range": "^1.0.0 || ^2.0.0"
 }

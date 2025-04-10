@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/StephenGunn/svelte-component-to-image",
 	"authors": ["jovian_moon"],
 	"homepage": "https://github.com/StephenGunn/svelte-component-to-image",
-	"downloads": 147,
-	"dependents": 0,
+	"downloads": 108,
 	"updated": "2024-11-09T17:17:00.413Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 48,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in exports field"
-	}
+	"typescript": "first-party",
+	"version": "1.0.16",
+	"svelte_range": "^5.1.13",
+	"kit_range": "^2.8.0"
 }

@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/TanStack/store",
 	"authors": ["tannerlinsley", "nksaraf"],
 	"homepage": "https://tanstack.com/store",
-	"downloads": 67,
-	"dependents": 0,
+	"downloads": 47,
 	"updated": "2024-12-26T22:22:32.347Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
 	"github_stars": 480,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.7.0",
+	"svelte_range": "^5.0.0"
 }

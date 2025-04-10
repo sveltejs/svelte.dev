@@ -5,19 +5,11 @@
 	"authors": ["macfja"],
 	"homepage": "https://github.com/macfja/svelte-redux-devtools#readme",
 	"downloads": 1,
-	"dependents": 0,
 	"updated": "2024-11-25T15:08:30.521Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.0.0",
+	"svelte_range": "*"
 }

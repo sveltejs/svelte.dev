@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/etuncay/svelte-intro.js",
 	"authors": ["etuncay"],
 	"homepage": "https://github.com/etuncay/svelte-intro.js",
-	"downloads": 5,
-	"dependents": 0,
+	"downloads": 3,
 	"updated": "2023-11-15T05:23:46.709Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 1,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.0.4",
+	"svelte_range": "^4.0.0",
+	"kit_range": "^1.27.4"
 }

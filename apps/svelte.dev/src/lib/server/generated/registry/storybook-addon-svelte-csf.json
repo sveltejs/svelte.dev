@@ -17,21 +17,13 @@
 		"storybook-bot"
 	],
 	"homepage": "https://github.com/storybookjs/addon-svelte-csf#readme",
-	"downloads": 59064,
-	"dependents": 15,
+	"downloads": 68542,
 	"updated": "2024-11-28T09:20:51.195Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 129,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "4.2.0",
+	"svelte_range": "^4.0.0",
+	"kit_range": "^2.5.7"
 }

@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/wacfork/svelte-preprocess",
 	"authors": ["i-user"],
 	"homepage": "https://github.com/wacfork/svelte-preprocess#readme",
-	"downloads": 20,
-	"dependents": 2,
+	"downloads": 6,
 	"updated": "2023-10-20T06:25:37.551Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "5.0.23",
+	"svelte_range": "^3.23.0 || ^4.0.0-next.0 || ^4.0.0"
 }

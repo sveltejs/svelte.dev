@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/sxxov/sv",
 	"authors": ["sxxov"],
 	"homepage": "https://github.com/sxxov/sv#readme",
-	"downloads": 86,
-	"dependents": 0,
+	"downloads": 24,
 	"updated": "2024-01-28T09:45:59.328Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.27.7",
+	"svelte_range": "^4.2.9",
+	"kit_range": "^2.5.0"
 }

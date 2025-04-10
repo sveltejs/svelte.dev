@@ -3,20 +3,10 @@
 	"description": "Adapt SvelteKit apps for Cloudflare Workers deployment.",
 	"repo_url": "",
 	"authors": ["budgetdrawdev"],
-	"downloads": 12,
-	"dependents": 0,
+	"downloads": 2,
 	"updated": "2021-11-17T23:26:29.636Z",
 	"tags": ["adapter"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.3.0"
 }

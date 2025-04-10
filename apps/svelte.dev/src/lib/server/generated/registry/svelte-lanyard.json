@@ -5,20 +5,11 @@
 	"authors": ["igalaxy"],
 	"homepage": "https://github.com/iGalaxyYT/svelte-lanyard#readme",
 	"downloads": 16,
-	"dependents": 0,
 	"updated": "2021-11-21T11:15:44.238Z",
 	"tags": ["integration"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 9,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.0.2",
+	"svelte_range": "^3.44.2"
 }

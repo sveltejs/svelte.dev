@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/VerburgtJimmy/svelte-input-otp",
 	"authors": ["jimmyverburgt"],
 	"homepage": "http://svelte-input-otp.jimmyverburgt.com",
-	"downloads": 224,
-	"dependents": 1,
+	"downloads": 255,
 	"updated": "2024-08-30T18:19:35.962Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 11,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.0.3",
+	"svelte_range": "^4.0.0",
+	"kit_range": "^2.0.0"
 }

@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/russellgoldenberg/svelte-keyboard",
 	"authors": ["russellsamora"],
 	"homepage": "https://github.com/russellgoldenberg/svelte-keyboard#readme",
-	"downloads": 281,
-	"dependents": 2,
+	"downloads": 296,
 	"updated": "2022-09-30T14:42:13.836Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 60,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./Keyboard.svelte.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.5.5",
+	"svelte_range": "^3.46.2",
+	"kit_range": "next"
 }

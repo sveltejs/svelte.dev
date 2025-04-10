@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/phongcao1998/date-picker-svelte",
 	"authors": ["phongcao1998"],
 	"homepage": "https://date-picker-svelte.kasper.space",
-	"downloads": 2,
-	"dependents": 0,
+	"downloads": 0,
 	"updated": "2023-12-27T04:56:10.067Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "2.10.1",
+	"svelte_range": "^3.24.0 || ^4.0.0",
+	"kit_range": "^1.27.7"
 }

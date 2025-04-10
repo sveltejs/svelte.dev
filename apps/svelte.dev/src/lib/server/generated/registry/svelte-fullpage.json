@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/Hejtmus/svelte-fullpage",
 	"authors": ["filiph"],
 	"homepage": "https://hejtmus.github.io/svelte-fullpage/",
-	"downloads": 64,
-	"dependents": 0,
+	"downloads": 35,
 	"updated": "2025-03-07T15:36:45.019Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 70,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.1.1",
+	"svelte_range": "^3.0.0 || ^4.0.0 || ^5.0.0",
+	"kit_range": "^1.23.0"
 }

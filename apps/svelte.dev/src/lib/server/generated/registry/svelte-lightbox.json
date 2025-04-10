@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/Hejtmus/svelte-lightbox",
 	"authors": ["filiph"],
 	"homepage": "https://svelte-lightbox.js.org",
-	"downloads": 613,
-	"dependents": 1,
+	"downloads": 880,
 	"updated": "2024-11-17T15:54:05.444Z",
 	"tags": ["media"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 52,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.1.6",
+	"svelte_range": "^3.25.0 || ^4.0.0",
+	"kit_range": "1.24.0"
 }

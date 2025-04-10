@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/beholdr/maska",
 	"authors": ["beholdr"],
 	"homepage": "https://beholdr.github.io/maska/",
-	"downloads": 184853,
-	"dependents": 184,
+	"downloads": 185704,
 	"updated": "2025-03-22T18:56:06.438Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 1875,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/maska.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "3.1.1",
+	"svelte_range": "^5.19.6"
 }

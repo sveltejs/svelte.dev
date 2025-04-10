@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/bertybot/svelte-adapter-fastly",
 	"authors": ["bertybot"],
 	"homepage": "https://github.com/bertybot/svelte-adapter-fastly#readme",
-	"downloads": 7,
-	"dependents": 0,
+	"downloads": 2,
 	"updated": "2025-01-29T20:41:40.887Z",
 	"tags": ["adapter"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 2,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.1.0",
+	"kit_range": "^2.0.0"
 }

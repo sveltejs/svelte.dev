@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/DavKato/svelte-i-pack",
 	"authors": ["davkat"],
 	"homepage": "https://github.com/DavKato/svelte-i-pack",
-	"downloads": 12,
-	"dependents": 0,
+	"downloads": 9,
 	"updated": "2020-02-06T16:31:57.678Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 1,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.2.8",
+	"svelte_range": "^3.18.1"
 }

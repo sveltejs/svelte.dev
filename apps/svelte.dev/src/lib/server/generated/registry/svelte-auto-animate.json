@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/Thiagolino8/svelte-auto-animate",
 	"authors": ["thiagolino8"],
 	"homepage": "https://svelte-auto-animate.vercel.app/",
-	"downloads": 0,
-	"dependents": 0,
+	"downloads": 4,
 	"updated": "2024-12-31T16:17:20.621Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.0.1",
+	"svelte_range": "^3.0.0 || ^4.0.0 || ^5.0.0",
+	"kit_range": "^2.15.1"
 }

@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/sveltejs/eslint-plugin-svelte",
 	"authors": ["jounqin", "conduitry", "ota-meshi", "svelte-admin", "baseballyama"],
 	"homepage": "https://sveltejs.github.io/eslint-plugin-svelte",
-	"downloads": 442089,
-	"dependents": 144,
-	"updated": "2025-03-20T00:24:18.230Z",
+	"downloads": 502703,
+	"updated": "2025-04-04T00:17:55.069Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 325,
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./lib/index.d.ts"
-	},
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	}
+	"typescript": "first-party",
+	"version": "3.5.1",
+	"svelte_range": "^3.37.0 || ^4.0.0 || ^5.0.0"
 }

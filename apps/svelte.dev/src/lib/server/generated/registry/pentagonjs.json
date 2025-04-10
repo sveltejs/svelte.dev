@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/ten-humans/pentagon",
 	"authors": ["mandoo_"],
 	"homepage": "https://github.com/ten-humans/pentagon#readme",
-	"downloads": 18,
-	"dependents": 0,
+	"downloads": 6,
 	"updated": "2021-09-22T02:23:55.155Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "1.0.7",
+	"svelte_range": "^3.42.4"
 }

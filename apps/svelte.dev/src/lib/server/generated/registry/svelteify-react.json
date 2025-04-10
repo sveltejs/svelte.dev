@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/MKAbuMattar/svelteify-react",
 	"authors": ["mkabumattar"],
 	"homepage": "https://github.com/MKAbuMattar/svelteify-react#readme",
-	"downloads": 5,
-	"dependents": 0,
+	"downloads": 2,
 	"updated": "2024-04-17T18:59:19.807Z",
 	"tags": ["integration"],
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.1.0",
+	"svelte_range": ">=4.2.15",
+	"kit_range": "2.5.6"
 }

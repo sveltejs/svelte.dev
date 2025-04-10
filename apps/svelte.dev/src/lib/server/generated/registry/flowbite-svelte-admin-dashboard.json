@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/themesberg/flowbite-svelte-admin-dashboard",
 	"authors": ["shinichiokada"],
 	"homepage": "https://flowbite-svelte-admin-dashboard.vercel.app/",
-	"downloads": 160,
-	"dependents": 0,
+	"downloads": 101,
 	"updated": "2024-02-09T19:18:55.629Z",
 	"tags": ["design-system"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 391,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.1.2",
+	"svelte_range": "^4.0.0",
+	"kit_range": "^2.0.0"
 }

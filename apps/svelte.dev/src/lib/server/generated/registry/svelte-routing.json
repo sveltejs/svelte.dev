@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/EmilTholin/svelte-routing",
 	"authors": ["tholle", "krishnatorque"],
 	"homepage": "https://github.com/EmilTholin/svelte-routing#readme",
-	"downloads": 14049,
-	"dependents": 20,
+	"downloads": 14090,
 	"updated": "2024-05-05T16:56:57.134Z",
 	"tags": ["router"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 2044,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./types/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "2.13.0",
+	"svelte_range": "^4.2.15"
 }

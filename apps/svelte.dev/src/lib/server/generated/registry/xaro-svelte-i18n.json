@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/vladimir-xaro/svelte-i18n",
 	"authors": ["xaro"],
 	"homepage": "https://github.com/vladimir-xaro/svelte-i18n#readme",
-	"downloads": 8,
-	"dependents": 0,
+	"downloads": 1,
 	"updated": "2023-10-31T21:38:11.932Z",
 	"tags": ["miscellaneous"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/svelte-i18n.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.0.8",
+	"svelte_range": "^4.0.5"
 }

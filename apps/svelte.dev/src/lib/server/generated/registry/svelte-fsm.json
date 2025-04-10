@@ -4,21 +4,11 @@
 	"repo_url": "https://github.com/kenkunz/svelte-fsm",
 	"authors": ["kenkunz"],
 	"homepage": "https://github.com/kenkunz/svelte-fsm#README",
-	"downloads": 439,
-	"dependents": 3,
+	"downloads": 458,
 	"updated": "2022-09-08T21:43:40.495Z",
 	"tags": ["miscellaneous"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 279,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.2.0"
 }

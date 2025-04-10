@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/hungry-egg/komodo",
 	"authors": ["markevans"],
 	"homepage": "https://github.com/hungry-egg/komodo/tree/main/packages/komodo-svelte#readme",
-	"downloads": 0,
-	"dependents": 0,
-	"updated": "2024-06-07T11:33:16.337Z",
+	"downloads": 3,
+	"updated": "2025-03-28T17:57:01.207Z",
 	"tags": ["integration"],
 	"runes": false,
 	"github_stars": 64,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/index.svelte.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.1.0",
+	"svelte_range": ">=5"
 }

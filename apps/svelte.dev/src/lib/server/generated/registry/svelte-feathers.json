@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/shinokada/svelte-feathers",
 	"authors": ["shinichiokada"],
 	"homepage": "https://svelte-feathers.codewithshin.com",
-	"downloads": 61,
-	"dependents": 0,
+	"downloads": 99,
 	"updated": "2024-06-09T03:43:03.719Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 4,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.0.6",
+	"svelte_range": "^3.54.0 || ^4.0.0 || ^5.0.0",
+	"kit_range": "^2.5.10"
 }

@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/AyloSrd/svelte-idle-sensor",
 	"authors": ["aylo"],
 	"homepage": "https://github.com/AyloSrd/svelte-idle-sensor#readme",
-	"downloads": 57,
-	"dependents": 0,
+	"downloads": 46,
 	"updated": "2022-11-19T17:31:39.242Z",
 	"tags": ["miscellaneous"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 2,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.0.8",
+	"svelte_range": "^3.44.0",
+	"kit_range": "next"
 }

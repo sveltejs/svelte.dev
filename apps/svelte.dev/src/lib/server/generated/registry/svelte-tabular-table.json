@@ -5,19 +5,10 @@
 	"authors": ["autr"],
 	"homepage": "https://autr.github.io/svelte-tabular-table",
 	"downloads": 12,
-	"dependents": 0,
 	"updated": "2021-05-06T16:01:02.357Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "1.0.6",
+	"svelte_range": "^3.37.0"
 }

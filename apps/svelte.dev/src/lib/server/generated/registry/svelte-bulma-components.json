@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/elcobvg/svelte-bulma-components",
 	"authors": ["elcobvg"],
 	"homepage": "https://github.com/elcobvg/svelte-bulma-components#readme",
-	"downloads": 14,
-	"dependents": 0,
+	"downloads": 8,
 	"updated": "2018-08-20T04:37:19.244Z",
 	"tags": ["design-system"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 94,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.1.5",
+	"svelte_range": "^2.9.1"
 }

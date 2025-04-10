@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/ykrods/svelte-spa-history-router",
 	"authors": ["ykrods"],
 	"homepage": "https://github.com/ykrods/svelte-spa-history-router",
-	"downloads": 47,
-	"dependents": 0,
+	"downloads": 61,
 	"updated": "2024-11-18T01:00:25.875Z",
 	"tags": ["router"],
 	"runes": false,
 	"github_stars": 9,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: src/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "2.2.0",
+	"svelte_range": "*"
 }

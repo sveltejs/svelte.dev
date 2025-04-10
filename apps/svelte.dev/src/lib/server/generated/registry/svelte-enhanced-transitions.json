@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/Thiagolino8/svelte-enhanced-transitions",
 	"authors": ["thiagolino8"],
 	"homepage": "https://svelte-enhanced-transitions.vercel.app/",
-	"downloads": 8,
-	"dependents": 0,
-	"updated": "2023-09-12T13:52:21.309Z",
+	"downloads": 18,
+	"updated": "2025-04-02T16:10:32.156Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 7,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.1.0",
+	"svelte_range": "^4.2.8",
+	"kit_range": "^2.4.1"
 }

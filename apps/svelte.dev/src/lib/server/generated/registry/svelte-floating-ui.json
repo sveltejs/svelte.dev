@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/fedorovvvv/svelte-floating-ui",
 	"authors": ["fedorovvvv"],
 	"homepage": "https://github.com/fedorovvvv/svelte-floating-ui#readme",
-	"downloads": 31275,
-	"dependents": 22,
+	"downloads": 31858,
 	"updated": "2025-03-28T02:03:16.649Z",
 	"tags": ["ui", "miscellaneous"],
 	"runes": false,
 	"github_stars": 160,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.6.2",
+	"svelte_range": "^5.25.3",
+	"kit_range": "^2.20.2"
 }

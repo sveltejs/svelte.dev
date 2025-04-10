@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/spaceavocado/svelte-router",
 	"authors": ["davidhorak"],
 	"homepage": "https://github.com/spaceavocado/svelte-router",
-	"downloads": 40,
-	"dependents": 0,
+	"downloads": 6,
 	"updated": "2019-09-30T03:07:07.713Z",
 	"tags": ["router"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 61,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "1.0.16",
+	"svelte_range": "^3.8.1"
 }

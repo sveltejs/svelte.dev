@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/blujedis/vite-plugin-svelte-svgr",
 	"authors": ["blujedis"],
 	"homepage": "https://github.com/blujedis/vite-plugin-svelte-svgr#readme",
-	"downloads": 151,
-	"dependents": 0,
+	"downloads": 174,
 	"updated": "2022-09-22T22:15:54.613Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 2,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/types/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.0.4",
+	"svelte_range": ">=3.x"
 }

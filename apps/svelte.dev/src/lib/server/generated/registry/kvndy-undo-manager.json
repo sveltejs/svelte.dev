@@ -4,19 +4,11 @@
 	"repo_url": "https://gitlab.com/kevindoughty/undo-manager",
 	"authors": ["kvndy"],
 	"homepage": "https://gitlab.com/kevindoughty/undo-manager#readme",
-	"downloads": 0,
-	"dependents": 0,
+	"downloads": 55,
 	"updated": "2025-01-10T21:12:18.933Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/undo-manager.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "6.2.0",
+	"svelte_range": "^5.17.3"
 }

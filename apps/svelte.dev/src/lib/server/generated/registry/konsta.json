@@ -4,21 +4,11 @@
 	"repo_url": "https://github.com/konstaui/konsta",
 	"authors": ["nolimits4web"],
 	"homepage": "https://konstaui.com",
-	"downloads": 827,
-	"dependents": 6,
+	"downloads": 1137,
 	"updated": "2024-09-18T16:14:44.738Z",
 	"tags": ["ui", "design-system"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 3660,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in exports field"
-	}
+	"typescript": "first-party",
+	"version": "4.0.1"
 }

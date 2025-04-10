@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/x0k/svelte-jsonschema-form",
 	"authors": ["x0k"],
 	"homepage": "https://x0k.github.io/svelte-jsonschema-form/",
-	"downloads": 119,
-	"dependents": 0,
+	"downloads": 85,
 	"updated": "2025-01-28T22:50:21.963Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 48,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/model.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.9.2",
+	"svelte_range": "^5.0.0",
+	"kit_range": "^2.12.0"
 }

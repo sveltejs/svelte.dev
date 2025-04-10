@@ -3,19 +3,12 @@
 	"description": "Generate Svelte library with sv, for building Svelte libraries.",
 	"repo_url": "",
 	"authors": ["besmaili"],
-	"downloads": 66,
-	"dependents": 0,
+	"downloads": 3,
 	"updated": "2025-03-28T17:39:26.890Z",
 	"tags": ["tooling"],
 	"runes": false,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.0.1",
+	"svelte_range": "^5.0.0",
+	"kit_range": "^2.16.0"
 }

@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/arlac77/entitlement-provider-frontend",
 	"authors": ["arlac77"],
 	"homepage": "https://github.com/arlac77/entitlement-provider-frontend#readme",
-	"downloads": 167,
-	"dependents": 0,
+	"downloads": 40,
 	"updated": "2024-08-01T21:58:57.486Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
 	"github_stars": 1,
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	},
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	}
+	"typescript": "none",
+	"version": "1.15.12",
+	"svelte_range": "^5.0.0-next.205"
 }

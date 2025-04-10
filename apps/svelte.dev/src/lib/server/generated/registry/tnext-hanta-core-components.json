@@ -3,20 +3,12 @@
 	"description": "Core UI components for Svelte applications.",
 	"repo_url": "",
 	"authors": ["t-next"],
-	"downloads": 160,
-	"dependents": 0,
+	"downloads": 31,
 	"updated": "2023-12-20T22:21:22.030Z",
 	"tags": ["design-system"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./package/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "2.57.0",
+	"svelte_range": "^4.2.7",
+	"kit_range": "^2.0.2"
 }

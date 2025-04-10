@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/sveltejs/svelte-eslint-parser",
 	"authors": ["conduitry", "ota-meshi", "svelte-admin", "baseballyama"],
 	"homepage": "https://github.com/sveltejs/svelte-eslint-parser#readme",
-	"downloads": 475671,
-	"dependents": 75,
-	"updated": "2025-03-27T01:49:26.272Z",
+	"downloads": 554855,
+	"updated": "2025-04-03T09:17:52.072Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 99,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./lib/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.1.2",
+	"svelte_range": "^3.37.0 || ^4.0.0 || ^5.0.0"
 }

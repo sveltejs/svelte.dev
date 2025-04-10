@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/kristiankunc/svelte-vatsim-stands",
 	"authors": ["kristiankunc"],
 	"homepage": "https://github.com/kristiankunc/svelte-vatsim-stands#readme",
-	"downloads": 8,
-	"dependents": 0,
+	"downloads": 3,
 	"updated": "2025-02-25T13:05:44.190Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.1.0",
+	"svelte_range": "^5.0.0",
+	"kit_range": "^2.16.0"
 }

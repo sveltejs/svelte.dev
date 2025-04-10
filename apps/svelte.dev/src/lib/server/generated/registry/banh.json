@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/daniel-le97/banh",
 	"authors": ["cocobob"],
 	"homepage": "https://github.com/daniel-le97/banh#readme",
-	"downloads": 12,
-	"dependents": 0,
+	"downloads": 2,
 	"updated": "2023-09-18T03:39:49.418Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 1,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.6.2-beta.9",
+	"svelte_range": "^4.2.0"
 }

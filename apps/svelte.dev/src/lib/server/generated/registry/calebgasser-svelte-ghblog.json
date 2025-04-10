@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/calebgasser/svelte-ghblog",
 	"authors": ["cgasser"],
 	"homepage": "https://github.com/calebgasser/svelte-ghblog/tree/develop#readme",
-	"downloads": 1,
-	"dependents": 0,
+	"downloads": 10,
 	"updated": "2022-07-25T23:22:58.248Z",
 	"tags": ["content"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 1,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.1.31",
+	"svelte_range": "^3.44.0",
+	"kit_range": "next"
 }

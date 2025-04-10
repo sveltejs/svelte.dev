@@ -5,20 +5,12 @@
 	"authors": ["feelinglovelynow"],
 	"homepage": "https://github.com/feelinglovelynow/svelte-turnstile#readme",
 	"downloads": 1,
-	"dependents": 0,
 	"updated": "2023-10-30T10:53:34.288Z",
 	"tags": ["integration"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 1,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.0.0",
+	"svelte_range": "^4.0.0",
+	"kit_range": "^1.27.2"
 }

@@ -4,19 +4,12 @@
 	"repo_url": "https://github.com/0xD1M4/svelte-runes",
 	"authors": ["0xd1m4"],
 	"homepage": "https://github.com/0xD1M4/svelte-runes#readme",
-	"downloads": 8,
-	"dependents": 0,
+	"downloads": 20,
 	"updated": "2024-11-17T08:43:57.598Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.0.7",
+	"svelte_range": "5.0.0",
+	"kit_range": "^2.5.5"
 }

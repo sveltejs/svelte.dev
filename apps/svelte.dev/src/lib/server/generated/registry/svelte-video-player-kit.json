@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/basaran/svelte-video-player-kit",
 	"authors": ["anakha"],
 	"homepage": "https://github.com/basaran/svelte-video-player-kit",
-	"downloads": 13,
-	"dependents": 0,
+	"downloads": 3,
 	"updated": "2021-10-24T19:58:12.779Z",
 	"tags": ["media"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 3,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./types/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.2.8",
+	"svelte_range": "^3.41.0"
 }

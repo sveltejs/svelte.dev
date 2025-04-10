@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/mehdikhody/svelte-guard",
 	"authors": ["mehdikhody"],
 	"homepage": "https://github.com/mehdikhody/svelte-guard#readme",
-	"downloads": 116,
-	"dependents": 0,
+	"downloads": 87,
 	"updated": "2025-02-22T13:41:50.551Z",
 	"tags": ["auth", "router"],
 	"runes": false,
 	"github_stars": 17,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.0.0",
+	"svelte_range": "^5.0.0",
+	"kit_range": "^2.5.27"
 }

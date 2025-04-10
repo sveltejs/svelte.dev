@@ -4,20 +4,11 @@
 	"repo_url": "https://github.com/ragokan/svelte-better-store",
 	"authors": ["rago"],
 	"homepage": "https://github.com/ragokan/svelte-better-store#readme",
-	"downloads": 12,
-	"dependents": 1,
+	"downloads": 4,
 	"updated": "2021-12-28T18:45:31.538Z",
 	"tags": ["miscellaneous"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.1.4",
+	"svelte_range": "^3.44.2"
 }

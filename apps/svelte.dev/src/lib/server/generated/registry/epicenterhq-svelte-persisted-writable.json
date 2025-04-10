@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/braden-w/svelte-persisted-writable",
 	"authors": ["braden_wong_"],
 	"homepage": "https://github.com/braden-w/svelte-persisted-writable#readme",
-	"downloads": 1,
-	"dependents": 0,
+	"downloads": 3,
 	"updated": "2024-02-28T23:46:24.285Z",
 	"tags": ["miscellaneous"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.0.5",
+	"svelte_range": "^4.2.12"
 }

@@ -4,21 +4,11 @@
 	"repo_url": "https://github.com/alexprey/sveltedoc-parser",
 	"authors": ["ardenivanov", "alexprey"],
 	"homepage": "https://github.com/alexprey/sveltedoc-parser",
-	"downloads": 117186,
-	"dependents": 10,
+	"downloads": 115053,
 	"updated": "2021-12-15T10:08:28.326Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 92,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./typings.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "4.2.1"
 }

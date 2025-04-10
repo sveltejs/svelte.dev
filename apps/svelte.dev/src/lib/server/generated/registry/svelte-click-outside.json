@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/joeattardi/svelte-click-outside",
 	"authors": ["joeattardi"],
 	"homepage": "https://github.com/joeattardi/svelte-click-outside#readme",
-	"downloads": 758,
-	"dependents": 8,
+	"downloads": 681,
 	"updated": "2019-08-10T15:40:54.728Z",
 	"tags": ["miscellaneous"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 29,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "1.0.0",
+	"svelte_range": "^3.0.0"
 }

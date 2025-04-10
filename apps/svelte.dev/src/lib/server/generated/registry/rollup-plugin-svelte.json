@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/sveltejs/rollup-plugin-svelte",
 	"authors": ["lukeed", "rich_harris", "lukastaegert", "shellscape", "conduitry", "dummdidumm"],
 	"homepage": "https://github.com/sveltejs/rollup-plugin-svelte#readme",
-	"downloads": 88796,
-	"dependents": 126,
+	"downloads": 91135,
 	"updated": "2024-06-06T09:02:39.239Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 508,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "7.2.2",
+	"svelte_range": ">=3.5.0"
 }

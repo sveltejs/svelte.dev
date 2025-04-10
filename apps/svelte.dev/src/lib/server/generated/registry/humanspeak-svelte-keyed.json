@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/humanspeak/svelte-keyed",
 	"authors": ["humanspeakadmin"],
 	"homepage": "https://github.com/humanspeak/svelte-keyed#readme",
-	"downloads": 245,
-	"dependents": 1,
+	"downloads": 1044,
 	"updated": "2025-01-27T19:29:34.608Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
 	"github_stars": 0,
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	},
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	}
+	"typescript": "first-party",
+	"version": "5.0.1",
+	"svelte_range": "^5.19.3",
+	"kit_range": "^2.16.1"
 }

@@ -5,20 +5,11 @@
 	"authors": ["stefan.stoichev"],
 	"homepage": "https://github.com/countnazgul/zensele-tabs",
 	"downloads": 9,
-	"dependents": 0,
 	"updated": "2020-06-15T15:39:31.989Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 1,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.0.17",
+	"svelte_range": "^3.0.0"
 }

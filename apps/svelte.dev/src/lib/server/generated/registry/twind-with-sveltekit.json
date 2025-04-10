@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/tw-in-js/twind",
 	"authors": ["sastan"],
 	"homepage": "https://twind.style",
-	"downloads": 614,
-	"dependents": 1,
+	"downloads": 690,
 	"updated": "2023-01-24T21:30:38.707Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 3851,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./with-sveltekit.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.1.3",
+	"kit_range": "^1.0.0"
 }

@@ -5,20 +5,11 @@
 	"authors": ["samlam"],
 	"homepage": "https://github.com/samlam/sveltekit-adapter-dotnetcore#readme",
 	"downloads": 0,
-	"dependents": 0,
 	"updated": "2023-06-01T00:22:28.234Z",
 	"tags": ["adapter"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 18,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.1.7",
+	"kit_range": "^1.0.0-next.335"
 }

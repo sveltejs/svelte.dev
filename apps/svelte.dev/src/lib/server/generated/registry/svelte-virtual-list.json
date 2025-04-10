@@ -3,20 +3,11 @@
 	"description": "Render virtual lists in Svelte apps.",
 	"repo_url": "https://github.devops.utc.com/40000519/virtual-list",
 	"authors": ["angelglnd"],
-	"downloads": 149,
-	"dependents": 0,
+	"downloads": 206,
 	"updated": "2021-06-22T03:01:17.986Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "3.0.1",
+	"svelte_range": "^3.0.0-beta.2"
 }

@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/dasDaniel/svelte-table",
 	"authors": ["danipo"],
 	"homepage": "https://github.com/dasDaniel/svelte-table#readme",
-	"downloads": 2720,
-	"dependents": 6,
+	"downloads": 2061,
 	"updated": "2025-03-26T15:47:00.290Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 544,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: src/types.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.6.4",
+	"svelte_range": "3.57.0"
 }

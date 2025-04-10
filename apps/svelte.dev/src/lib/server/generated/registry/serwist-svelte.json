@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/serwist/serwist",
 	"authors": ["serwist"],
 	"homepage": "https://serwist.pages.dev",
-	"downloads": 39,
-	"dependents": 0,
-	"updated": "2025-02-22T22:38:42.796Z",
+	"downloads": 55,
+	"updated": "2025-04-06T17:22:39.233Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 918,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in exports field"
-	}
+	"typescript": "first-party",
+	"version": "9.0.13",
+	"kit_range": ">=2.0.0"
 }

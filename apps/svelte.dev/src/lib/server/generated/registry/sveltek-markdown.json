@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/sveltek/markdown",
 	"authors": ["ivodolenc", "sveltek"],
 	"homepage": "https://github.com/sveltek/markdown",
-	"downloads": 118,
-	"dependents": 0,
+	"downloads": 122,
 	"updated": "2025-04-04T17:02:39.287Z",
 	"tags": ["content", "tooling"],
 	"runes": false,
 	"github_stars": 5,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in exports field"
-	}
+	"typescript": "first-party",
+	"version": "0.11.0",
+	"svelte_range": ">=5.0.0"
 }

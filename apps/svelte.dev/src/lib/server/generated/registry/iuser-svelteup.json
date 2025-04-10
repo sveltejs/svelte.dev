@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/brandonxiang/svelteup",
 	"authors": ["i-user"],
 	"homepage": "https://github.com/brandonxiang/svelteup#readme",
-	"downloads": 55,
-	"dependents": 0,
+	"downloads": 3,
 	"updated": "2023-02-14T09:21:12.146Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 16,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "2.0.21",
+	"svelte_range": "^3.55.1"
 }

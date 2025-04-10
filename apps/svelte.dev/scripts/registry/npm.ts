@@ -2,7 +2,7 @@ import * as fsp from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import type { Package } from '../../src/lib/server/content.js';
-import { format as prettier_format, resolveConfig, type Options } from 'prettier';
+import { check, format as prettier_format, resolveConfig, type Options } from 'prettier';
 
 /**
  * Simple queue implementation for limiting concurrent requests
@@ -322,18 +322,12 @@ export async function fetch_downloads_for_package(pkg: string): Promise<number> 
  * @param package_json - The parsed package.json object
  * @returns An object with information about type availability
  */
-export async function check_typescript_types(package_json: any): Promise<{
-	has_types: boolean;
-	types_source: 'first-party' | '@types' | 'none';
-	types_info: string;
-}> {
+export async function check_typescript_types(
+	package_json: any
+): Promise<'first-party' | '@types' | 'none'> {
 	// Check for types or typings field in package.json (traditional approach)
 	if (package_json.types || package_json.typings) {
-		return {
-			has_types: true,
-			types_source: 'first-party',
-			types_info: `First-party types defined in package.json: ${package_json.types || package_json.typings}`
-		};
+		return 'first-party';
 	}
 
 	// Check export maps for TypeScript typings
@@ -375,11 +369,7 @@ export async function check_typescript_types(package_json: any): Promise<{
 		});
 
 		if (has_types_in_exports) {
-			return {
-				has_types: true,
-				types_source: 'first-party',
-				types_info: 'First-party types defined in exports field'
-			};
+			return 'first-party';
 		}
 	}
 
@@ -400,11 +390,7 @@ export async function check_typescript_types(package_json: any): Promise<{
 		});
 
 		if (has_type_files) {
-			return {
-				has_types: true,
-				types_source: 'first-party',
-				types_info: 'First-party types included in files field'
-			};
+			return 'first-party';
 		}
 	}
 
@@ -424,17 +410,15 @@ export async function check_typescript_types(package_json: any): Promise<{
 
 			const types_package = `@types/${types_package_name}`;
 
+			console.log('FETCHING DEFINITELYTYPED TYPES FOR', types_package);
+
 			// Try to fetch metadata for the @types package
-			const response = await fetch(
+			const response = await superfetch(
 				`https://registry.npmjs.org/${encodeURIComponent(types_package)}`
 			);
 
 			if (response.ok) {
-				return {
-					has_types: true,
-					types_source: '@types',
-					types_info: `Types available through ${types_package}`
-				};
+				('@types');
 			}
 		} catch (error) {
 			// Ignore fetch errors and fall through to the "no types" case
@@ -442,11 +426,7 @@ export async function check_typescript_types(package_json: any): Promise<{
 	}
 
 	// No types found
-	return {
-		has_types: false,
-		types_source: 'none',
-		types_info: 'No TypeScript type definitions found'
-	};
+	return 'none';
 }
 
 /**
@@ -454,7 +434,7 @@ export async function check_typescript_types(package_json: any): Promise<{
  */
 export async function fetch_details_for_package(pkg_name: string): Promise<any> {
 	const url = new URL(`${REGISTRY_BASE_URL}-/v1/search`);
-	url.searchParams.set('text', pkg_name); // Search for the exact package name
+	url.searchParams.set('text', `name:${pkg_name}`); // Search for the exact package name
 	url.searchParams.set('size', '5'); // Limit to 5 results to keep it efficient
 
 	const response = await superfetch(url, { headers: HEADERS, cache: 'force-cache' });
@@ -472,33 +452,33 @@ export async function fetch_details_for_package(pkg_name: string): Promise<any> 
 	return matched_package;
 }
 
-/**
- * Gets the number of packages that depend on a given package and weekly downloads
- * by using npm search API to find the exact package
- */
-export async function fetch_package_stats(
-	pkg_name: string
-): Promise<{ dependents: number; downloads: number; authors: string[] }> {
-	try {
-		// Find the exact package name match
-		const matched_package = await fetch_details_for_package(pkg_name);
+// /**
+//  * Gets the number of packages that depend on a given package and weekly downloads
+//  * by using npm search API to find the exact package
+//  */
+// export async function fetch_package_stats(
+// 	pkg_name: string
+// ): Promise<{ dependents: number; downloads: number; authors: string[] }> {
+// 	try {
+// 		// Find the exact package name match
+// 		const matched_package = await fetch_details_for_package(pkg_name);
 
-		if (!matched_package) {
-			console.log(`No exact match found for package ${pkg_name} in search results`);
-			return { dependents: 0, downloads: 0, authors: [] };
-		}
+// 		if (!matched_package) {
+// 			console.log(`No exact match found for package ${pkg_name} in search results`);
+// 			return { dependents: 0, downloads: 0, authors: [] };
+// 		}
 
-		// Extract dependents and downloads
-		return {
-			dependents: matched_package.dependents || 0,
-			downloads: matched_package.downloads?.weekly || 0,
-			authors: matched_package.package.maintainers?.map((v: any) => v.username)
-		};
-	} catch (error) {
-		console.error(`Error fetching stats for ${pkg_name}:`, error);
-		return { dependents: 0, downloads: 0, authors: [] };
-	}
-}
+// 		// Extract dependents and downloads
+// 		return {
+// 			dependents: matched_package.dependents || 0,
+// 			downloads: matched_package.downloads?.weekly || 0,
+// 			authors: matched_package.package.maintainers?.map((v: any) => v.username)
+// 		};
+// 	} catch (error) {
+// 		console.error(`Error fetching stats for ${pkg_name}:`, error);
+// 		return { dependents: 0, downloads: 0, authors: [] };
+// 	}
+// }
 
 /**
  * Analyzes package details to determine if it's a valid Svelte package and extracts metadata
@@ -507,7 +487,8 @@ export async function process_package_details(
 	pkg_name: string,
 	package_json: any,
 	check_svelte_dep_criteria = true,
-	stats?: { dependents?: number; downloads?: number; authors: string[] }
+	authors: string[],
+	downloads?: number
 ): Promise<StructuredInterimPackage | null> {
 	try {
 		const latest_version = package_json['dist-tags']?.latest;
@@ -523,16 +504,12 @@ export async function process_package_details(
 				deprecated: false,
 				last_updated: '',
 				tags: [],
-				svelte: {
-					'3': false,
-					'4': false,
-					'5': false
-				},
+				// @ts-expect-error
+				typescript: {},
 				runes: false,
 				repo_url: '',
-				dependents: stats?.dependents || 0,
-				downloads: stats?.downloads || 0,
-				authors: stats?.authors || []
+				downloads: downloads || 0,
+				authors: authors || []
 			},
 			package_json: package_json
 		};
@@ -563,7 +540,15 @@ export async function process_package_details(
 			latest_package_json.dependencies?.svelte ??
 			latest_package_json.devDependencies?.svelte;
 
-		interim_pkg.meta.svelte = supports_svelte_versions(svelte_version);
+		const kit_version =
+			latest_package_json.peerDependencies?.['@sveltejs/kit'] ??
+			latest_package_json.dependencies?.['@sveltejs/kit'] ??
+			latest_package_json.devDependencies?.['@sveltejs/kit'];
+
+		interim_pkg.meta.svelte_range = svelte_version;
+		interim_pkg.meta.kit_range = kit_version;
+
+		interim_pkg.meta.typescript = await check_typescript_types(interim_pkg.package_json);
 
 		// Get repository URL
 		if (latest_package_json.repository) {
@@ -643,19 +628,18 @@ export async function* process_packages(
 
 		try {
 			// Get package details
-			const package_json = await superfetch(`${REGISTRY_BASE_URL}${pkg_name}`).then((r) =>
-				r.json()
-			);
-
-			// Get package stats
-			const stats = await fetch_package_stats(pkg_name);
+			const [package_json, downloads] = await Promise.all([
+				superfetch(`${REGISTRY_BASE_URL}${pkg_name}`).then((r) => r.json()),
+				fetch_downloads_for_package(pkg_name)
+			]);
 
 			// Process package details
 			const interim_pkg = await process_package_details(
 				pkg_name,
 				package_json,
 				options.check_svelte_dep_criteria,
-				stats
+				package_json.package.maintainers?.map((v: any) => v.username) ?? [],
+				downloads
 			);
 
 			if (interim_pkg) {
@@ -666,259 +650,6 @@ export async function* process_packages(
 			console.error(`Error processing package ${pkg_name}:`, error);
 		}
 	}
-}
-
-/**
- * Checks if a semver range supports Svelte versions 3.x, 4.x, and 5.x
- */
-export function supports_svelte_versions(version_range: string): {
-	3: boolean;
-	4: boolean;
-	5: boolean;
-} {
-	if (!version_range) return { 3: false, 4: false, 5: false };
-
-	// Initialize result object
-	const result = { 3: false, 4: false, 5: false };
-
-	// Handle version range with OR operators first before any other processing
-	if (version_range.includes('||')) {
-		const ranges = version_range.split('||').map((r) => r.trim());
-
-		// Check each range and combine results with OR logic
-		for (const range of ranges) {
-			const range_result = supports_svelte_versions(range);
-			result[3] = result[3] || range_result[3];
-			result[4] = result[4] || range_result[4];
-			result[5] = result[5] || range_result[5];
-		}
-
-		return result;
-	}
-
-	// Handle exact version with equals sign
-	if (version_range.startsWith('=')) {
-		const exact_version = version_range.substring(1);
-		return supports_svelte_versions(exact_version);
-	}
-
-	// Handle hyphen ranges directly (not part of a complex expression)
-	if (version_range.includes(' - ')) {
-		// Split by hyphen and trim whitespace
-		const parts = version_range.split('-').map((p) => p.trim());
-		// Handle "x - y" format correctly
-		if (parts.length === 2) {
-			const start = parseFloat(parts[0]);
-			const end = parseFloat(parts[1]);
-
-			result[3] = start <= 3 && end >= 3;
-			result[4] = start <= 4 && end >= 4;
-			result[5] = start <= 5 && end >= 5;
-
-			return result;
-		}
-	}
-
-	// Handle complex version ranges with both upper and lower bounds in the same expression
-	// Examples: ">=1.0.0 <=4.9.9", ">=3.0.0 <6.0.0", ">3.0.0-rc.1 <3.1.0"
-	if (
-		version_range.includes(' ') &&
-		(version_range.includes('<') ||
-			version_range.includes('<=') ||
-			version_range.includes('>=') ||
-			version_range.includes('>'))
-	) {
-		// Process for complex range with multiple constraints
-		let includes_version_3 = true;
-		let includes_version_4 = true;
-		let includes_version_5 = true;
-
-		// Split by spaces to get individual constraints
-		const constraints = version_range
-			.split(' ')
-			.filter(
-				(c) => c.startsWith('<') || c.startsWith('<=') || c.startsWith('>') || c.startsWith('>=')
-			);
-
-		// If we couldn't parse any valid constraints, return false
-		if (constraints.length === 0) {
-			return { 3: false, 4: false, 5: false };
-		}
-
-		// Special case handling for pre-release specific ranges (e.g., ">3.0.0-rc.1 <3.1.0")
-		if (constraints.some((c) => c.includes('-'))) {
-			// Identify if this is a narrow range for a specific major version
-			let major_version = null;
-
-			for (const constraint of constraints) {
-				const match = constraint.match(/[<>=]+\s*(\d+)/);
-				if (match) {
-					const version = parseInt(match[1]);
-					if (major_version === null) {
-						major_version = version;
-					} else if (major_version !== version) {
-						major_version = null; // Different major versions, not a narrow range
-						break;
-					}
-				}
-			}
-
-			// If we identified a specific major version for this pre-release constraint
-			if (major_version !== null) {
-				result[3] = major_version === 3;
-				result[4] = major_version === 4;
-				result[5] = major_version === 5;
-				return result;
-			}
-		}
-
-		for (const constraint of constraints) {
-			if (constraint.startsWith('>=')) {
-				const version_number = parseFloat(constraint.substring(2));
-				// Check lower bounds for each version
-				if (version_number > 3) includes_version_3 = false;
-				if (version_number > 4) includes_version_4 = false;
-				if (version_number > 5) includes_version_5 = false;
-			} else if (constraint.startsWith('>')) {
-				const version_number = parseFloat(constraint.substring(1));
-				// Check lower bounds for each version
-				if (version_number >= 3) includes_version_3 = false;
-				if (version_number >= 4) includes_version_4 = false;
-				if (version_number >= 5) includes_version_5 = false;
-			} else if (constraint.startsWith('<=')) {
-				const version_number = parseFloat(constraint.substring(2));
-				// Check upper bounds for each version
-				if (version_number < 3) includes_version_3 = false;
-				if (version_number < 4) includes_version_4 = false;
-				if (version_number < 5) includes_version_5 = false;
-			} else if (constraint.startsWith('<')) {
-				const version_number = parseFloat(constraint.substring(1));
-				// Check upper bounds for each version
-				if (version_number <= 3) includes_version_3 = false;
-				if (version_number <= 4) includes_version_4 = false;
-				if (version_number <= 5) includes_version_5 = false;
-			}
-		}
-
-		result[3] = includes_version_3;
-		result[4] = includes_version_4;
-		result[5] = includes_version_5;
-
-		return result;
-	}
-
-	// Handle exact major version format
-	if (/^[0-9]+$/.test(version_range)) {
-		const version = parseInt(version_range);
-		result[3] = version === 3;
-		result[4] = version === 4;
-		result[5] = version === 5;
-		return result;
-	}
-
-	// Handle caret ranges
-	if (version_range.startsWith('^')) {
-		const major_version = parseInt(version_range.substring(1).split('.')[0]);
-		result[3] = major_version === 3;
-		result[4] = major_version === 4;
-		result[5] = major_version === 5;
-		return result;
-	}
-
-	// Handle pre-release versions directly (e.g., 5.0.0-next.42)
-	if (/^([0-9]+)\.([0-9]+)\.([0-9]+)-/.test(version_range)) {
-		const match = version_range.match(/^([0-9]+)\./);
-		if (match) {
-			// Extract major version from the pre-release
-			const major_version = parseInt(match[1]);
-			result[3] = major_version === 3;
-			result[4] = major_version === 4;
-			result[5] = major_version === 5;
-			return result;
-		}
-	}
-
-	// Handle tilde ranges
-	if (version_range.startsWith('~')) {
-		const major_version = parseInt(version_range.substring(1).split('.')[0]);
-		result[3] = major_version === 3;
-		result[4] = major_version === 4;
-		result[5] = major_version === 5;
-		return result;
-	}
-
-	// Handle wildcard (*) by itself, which means any version
-	if (version_range === '*') {
-		return { 3: true, 4: true, 5: true };
-	}
-
-	// Handle * and x ranges (e.g., "3.x", "4.*")
-	if (/^([0-9]+)\.(x|\*)/.test(version_range)) {
-		const match = version_range.match(/^([0-9]+)\./);
-		if (match) {
-			const major_version = parseInt(match[1]);
-			result[3] = major_version === 3;
-			result[4] = major_version === 4;
-			result[5] = major_version === 5;
-			return result;
-		}
-	}
-
-	// Handle >= ranges
-	if (version_range.startsWith('>=')) {
-		const version_number = parseFloat(version_range.substring(2));
-		result[3] = version_number <= 3;
-		result[4] = version_number <= 4;
-		result[5] = version_number <= 5;
-		return result;
-	}
-
-	// Handle > ranges
-	if (version_range.startsWith('>')) {
-		const version_number = parseFloat(version_range.substring(1));
-		result[3] = version_number < 3;
-		result[4] = version_number < 4;
-		result[5] = version_number < 5;
-		return result;
-	}
-
-	// Handle <= ranges
-	if (version_range.startsWith('<=')) {
-		const version_number = parseFloat(version_range.substring(2));
-		result[3] = version_number >= 3;
-		result[4] = version_number >= 4;
-		result[5] = version_number >= 5;
-		return result;
-	}
-
-	// Handle < ranges
-	if (version_range.startsWith('<')) {
-		const version_number = parseFloat(version_range.substring(1));
-		result[3] = version_number > 3;
-		result[4] = version_number > 4;
-		result[5] = version_number > 5;
-		return result;
-	}
-
-	// Handle exact versions (like 3.0.0, 4.1.2, etc.)
-	if (/^[0-9]+\.[0-9]+\.[0-9]+$/.test(version_range)) {
-		const major_version = parseInt(version_range.split('.')[0]);
-		result[3] = major_version === 3;
-		result[4] = major_version === 4;
-		result[5] = major_version === 5;
-		return result;
-	}
-
-	// Handle x-ranges (3.x.x, 4.x, etc.)
-	if (version_range.includes('.x') || version_range.includes('.*')) {
-		const major_version = parseInt(version_range.split('.')[0]);
-		result[3] = major_version === 3;
-		result[4] = major_version === 4;
-		result[5] = major_version === 5;
-		return result;
-	}
-
-	return result;
 }
 
 /** Options for searching npm packages */
@@ -956,11 +687,9 @@ export type StructuredInterimPackage = {
 		downloads?: number;
 		dependents?: number;
 		github_stars?: number;
-		svelte: {
-			3: boolean;
-			4: boolean;
-			5: boolean;
-		};
+		svelte_range?: string;
+		typescript: Awaited<ReturnType<typeof check_typescript_types>>;
+		kit_range?: string;
 		runes: boolean;
 		repo_url: string;
 		fork_of?: string;
@@ -976,18 +705,21 @@ export function structured_interim_package_to_package(
 	const data = {} as Package;
 
 	data.name = structured_package.package_json.name;
+	data.version = structured_package.package_json.version;
 	data.description = structured_package.meta.description;
+
+	data.typescript = structured_package.meta.typescript;
 
 	data.repo_url = structured_package.meta.repo_url;
 
 	data.authors = structured_package.meta.authors;
 	data.homepage = structured_package.package_json.homepage;
 	data.downloads = structured_package.meta.downloads;
-	data.dependents = structured_package.meta.dependents;
 	data.updated = structured_package.meta.last_updated;
 	data.tags = structured_package.meta.tags;
 	data.github_stars = structured_package.meta.github_stars;
-	data.svelte = structured_package.meta.svelte;
+	data.svelte_range = structured_package.meta.svelte_range;
+	data.kit_range = structured_package.meta.kit_range;
 	data.runes = structured_package.meta.runes;
 
 	return data;
@@ -1051,19 +783,16 @@ export async function* stream_search_by_keywords({
 								v.json()
 							);
 
-							// Use stats from search results
-							const stats = {
-								dependents: obj.dependents || 0,
-								downloads: obj.downloads?.weekly || 0,
-								authors: obj.package.maintainers?.map((v: any) => v.username) ?? []
-							};
+							const downloads = obj.downloads?.weekly || 0;
+							const authors = obj.package.maintainers?.map((v: any) => v.username) ?? [];
 
 							// Process package details
 							const interim_pkg = await process_package_details(
 								pkg_name,
 								package_json,
 								true,
-								stats
+								authors,
+								downloads
 							);
 
 							if (interim_pkg) {

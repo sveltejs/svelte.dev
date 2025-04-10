@@ -4,20 +4,12 @@
 	"repo_url": "",
 	"authors": ["zakrok09", "harry258"],
 	"homepage": "https://delft-hyperloop.github.io/serpenta",
-	"downloads": 0,
-	"dependents": 0,
+	"downloads": 3,
 	"updated": "2025-02-04T13:41:33.113Z",
 	"tags": ["design-system", "ui"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.4.2",
+	"svelte_range": "^4.0.0",
+	"kit_range": "^2.0.0"
 }

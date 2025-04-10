@@ -11,20 +11,13 @@
 		"sistrall_"
 	],
 	"homepage": "https://github.com/datocms/datocms-svelte",
-	"downloads": 387,
-	"dependents": 0,
+	"downloads": 290,
 	"updated": "2025-03-24T12:28:20.724Z",
 	"tags": ["integration"],
 	"runes": false,
 	"github_stars": 12,
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in exports field"
-	},
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": true
-	}
+	"typescript": "first-party",
+	"version": "4.2.2",
+	"svelte_range": "^4.0.0 || ^5.0.0",
+	"kit_range": "^2.0.0"
 }

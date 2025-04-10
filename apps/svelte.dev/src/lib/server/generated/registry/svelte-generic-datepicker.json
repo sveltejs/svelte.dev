@@ -5,20 +5,11 @@
 	"authors": ["nologin"],
 	"homepage": "https://github.com/ivosdc/svelte-datepicker",
 	"downloads": 11,
-	"dependents": 0,
 	"updated": "2021-03-21T19:35:32.246Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 1,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.0.10",
+	"svelte_range": "^3.35.0"
 }

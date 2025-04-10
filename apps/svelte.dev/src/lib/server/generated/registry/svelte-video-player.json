@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/meigo/svelte-video-player",
 	"authors": ["meigo"],
 	"homepage": "https://github.com/meigo/svelte-video-player",
-	"downloads": 233,
-	"dependents": 1,
+	"downloads": 554,
 	"updated": "2021-03-18T09:15:42.653Z",
 	"tags": ["media", "ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 133,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./types/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.2.5",
+	"svelte_range": "^3.31.2"
 }

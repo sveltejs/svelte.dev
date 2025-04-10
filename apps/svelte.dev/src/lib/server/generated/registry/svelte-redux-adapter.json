@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/ColaFanta/svelte-redux-adapter",
 	"authors": ["colafantawlk"],
 	"homepage": "https://github.com/ColaFanta/svelte-redux-adapter",
-	"downloads": 0,
-	"dependents": 0,
+	"downloads": 2,
 	"updated": "2023-08-28T09:46:28.645Z",
 	"tags": ["miscellaneous"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.0.4",
+	"svelte_range": "^4.2.0",
+	"kit_range": "^1.23.0"
 }

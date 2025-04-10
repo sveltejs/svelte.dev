@@ -5,19 +5,12 @@
 	"authors": ["leodog896"],
 	"homepage": "https://leodog896.github.io/svelte-reparent",
 	"downloads": 2,
-	"dependents": 0,
 	"updated": "2023-09-07T23:39:43.789Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
 	"github_stars": 16,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.0.1",
+	"svelte_range": ">=4.0.0",
+	"kit_range": "^1.20.4"
 }

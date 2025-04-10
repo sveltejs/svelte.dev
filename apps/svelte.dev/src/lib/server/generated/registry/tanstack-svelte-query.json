@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/TanStack/query",
 	"authors": ["tannerlinsley", "nksaraf"],
 	"homepage": "https://tanstack.com/query",
-	"downloads": 31531,
-	"dependents": 19,
-	"updated": "2025-03-28T08:20:50.825Z",
+	"downloads": 27767,
+	"updated": "2025-04-09T14:18:55.668Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
 	"github_stars": 44617,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "5.72.2",
+	"svelte_range": "^3.54.0 || ^4.0.0 || ^5.0.0"
 }

@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/seanvelasco/barcode-kit",
 	"authors": ["seanvelasco"],
 	"homepage": "https://github.com/seanvelasco/barcode-kit#readme",
-	"downloads": 10,
-	"dependents": 0,
+	"downloads": 5,
 	"updated": "2023-10-02T00:58:13.670Z",
 	"tags": ["media"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 2,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.0.10",
+	"svelte_range": "^4.0.0"
 }

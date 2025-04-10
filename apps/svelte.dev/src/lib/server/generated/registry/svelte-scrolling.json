@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/valmisson/svelte-scrolling",
 	"authors": ["valmisson"],
 	"homepage": "https://github.com/valmisson/svelte-scrolling#readme",
-	"downloads": 371,
-	"dependents": 5,
+	"downloads": 336,
 	"updated": "2024-12-03T20:36:58.798Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
 	"github_stars": 56,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.5.1",
+	"svelte_range": "^4 || ^5"
 }

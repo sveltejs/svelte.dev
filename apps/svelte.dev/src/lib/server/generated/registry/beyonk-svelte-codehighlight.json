@@ -3,20 +3,11 @@
 	"description": "Highlight code blocks within Svelte components.",
 	"repo_url": "",
 	"authors": ["antony", "adampond", "alex.dilley", "jedwoodcock", "leandro.silva", "tomlewis0"],
-	"downloads": 3,
-	"dependents": 0,
+	"downloads": 0,
 	"updated": "2019-09-26T09:56:19.422Z",
 	"tags": ["ui", "tooling"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.0.5",
+	"svelte_range": "^3.8.0"
 }

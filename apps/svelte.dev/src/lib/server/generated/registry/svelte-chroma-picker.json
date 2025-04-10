@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/tricinel/svelte-chroma-picker",
 	"authors": ["tricinel"],
 	"homepage": "https://github.com/tricinel/svelte-chroma-picker#readme",
-	"downloads": 36,
-	"dependents": 0,
+	"downloads": 45,
 	"updated": "2021-06-12T11:11:11.825Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 5,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "1.1.1",
+	"svelte_range": "^3.19.1"
 }

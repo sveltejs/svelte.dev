@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/svelteuidev/svelteui",
 	"authors": ["lowkey_daisy", "uxtitan"],
 	"homepage": "https://svelteui.dev/",
-	"downloads": 73,
-	"dependents": 0,
+	"downloads": 59,
 	"updated": "2024-07-07T14:30:27.111Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 1372,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.15.7",
+	"svelte_range": ">=3.55.0",
+	"kit_range": "1.16.3"
 }

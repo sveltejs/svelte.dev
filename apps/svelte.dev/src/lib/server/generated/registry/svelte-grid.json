@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/vaheqelyan/svelte-grid",
 	"authors": ["vaheqelyan"],
 	"homepage": "https://github.com/vaheqelyan/svelte-grid#readme",
-	"downloads": 1756,
-	"dependents": 6,
+	"downloads": 1499,
 	"updated": "2023-08-20T18:18:47.780Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 988,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "5.1.2",
+	"svelte_range": "^3.30.0"
 }

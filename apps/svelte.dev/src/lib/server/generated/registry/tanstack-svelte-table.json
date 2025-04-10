@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/TanStack/table",
 	"authors": ["tannerlinsley", "nksaraf"],
 	"homepage": "https://tanstack.com/table",
-	"downloads": 9841,
-	"dependents": 14,
+	"downloads": 8082,
 	"updated": "2025-02-11T21:00:39.245Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 26194,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: build/lib/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "8.21.2",
+	"svelte_range": "^4.0.0 || ^3.49.0"
 }

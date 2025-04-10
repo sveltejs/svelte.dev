@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/supercoww/svelte-magnifier",
 	"authors": ["supercoww"],
 	"homepage": "https://github.com/supercoww/svelte-magnifier#readme",
-	"downloads": 109,
-	"dependents": 0,
+	"downloads": 63,
 	"updated": "2021-10-06T08:20:05.624Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 8,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.0.1",
+	"svelte_range": "^3.42.6",
+	"kit_range": "next"
 }

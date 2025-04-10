@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/robinloeffel/svelte-define-config",
 	"authors": ["rbnlffl"],
 	"homepage": "https://github.com/robinloeffel/svelte-define-config",
-	"downloads": 1,
-	"dependents": 0,
+	"downloads": 3,
 	"updated": "2024-02-11T14:34:52.676Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.0.0",
+	"kit_range": "^2"
 }

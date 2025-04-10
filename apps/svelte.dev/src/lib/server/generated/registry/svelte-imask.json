@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/PaulMaly/svelte-imask",
 	"authors": ["paulmaly"],
 	"homepage": "https://github.com/PaulMaly/svelte-imask#readme",
-	"downloads": 1222,
-	"dependents": 3,
+	"downloads": 811,
 	"updated": "2019-12-02T10:22:35.983Z",
 	"tags": ["miscellaneous"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 66,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "1.2.0",
+	"svelte_range": "latest"
 }

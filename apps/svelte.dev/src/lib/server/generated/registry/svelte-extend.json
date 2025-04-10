@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/homer0/svelte-extend",
 	"authors": ["homer0"],
 	"homepage": "https://homer0.github.io/svelte-extend/",
-	"downloads": 17,
-	"dependents": 0,
+	"downloads": 11,
 	"updated": "2023-10-02T09:23:46.656Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 25,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "6.0.0",
+	"svelte_range": "^4.2.1"
 }

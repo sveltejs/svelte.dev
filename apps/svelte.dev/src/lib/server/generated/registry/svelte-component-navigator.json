@@ -4,20 +4,11 @@
 	"repo_url": "https://github.com/russellraimundo/svelte-abstract-router",
 	"authors": ["russellraimundo"],
 	"homepage": "https://github.com/russellraimundo/svelte-abstract-router#readme",
-	"downloads": 31,
-	"dependents": 0,
+	"downloads": 9,
 	"updated": "2021-09-11T03:13:28.331Z",
 	"tags": ["router"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "1.1.1",
+	"svelte_range": "^3.0.0"
 }

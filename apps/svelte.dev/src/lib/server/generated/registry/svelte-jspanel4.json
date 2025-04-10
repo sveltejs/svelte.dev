@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/ngyewch/svelte-jspanel4",
 	"authors": ["ngyewch"],
 	"homepage": "https://ngyewch.github.io/svelte-jspanel4/",
-	"downloads": 9,
-	"dependents": 0,
+	"downloads": 1,
 	"updated": "2020-09-17T13:16:15.195Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 1,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.1.3",
+	"svelte_range": ">= 3.25.0"
 }

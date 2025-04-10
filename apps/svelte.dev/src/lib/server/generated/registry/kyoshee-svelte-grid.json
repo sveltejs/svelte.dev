@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/kyosheek/svelte-grid",
 	"authors": ["kyoshee"],
 	"homepage": "https://github.com/kyosheek/svelte-grid",
-	"downloads": 36,
-	"dependents": 0,
+	"downloads": 0,
 	"updated": "2023-07-04T17:03:08.639Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 1,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.0.5",
+	"svelte_range": "^4.0.3"
 }

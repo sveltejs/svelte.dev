@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/WeAreGenki/minna-ui",
 	"authors": ["maxmilton"],
 	"homepage": "https://wearegenki.github.io/minna-ui",
-	"downloads": 36,
-	"dependents": 0,
+	"downloads": 4,
 	"updated": "2019-02-06T00:32:26.403Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 87,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.21.0",
+	"svelte_range": "^2.0.0"
 }

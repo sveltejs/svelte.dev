@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/sveltejs/language-tools",
 	"authors": ["orta", "svelte-language-tools-deploy", "dummdidumm", "halfnelson"],
 	"homepage": "https://github.com/sveltejs/language-tools/tree/master/packages/svelte2tsx",
-	"downloads": 224270,
-	"dependents": 411,
+	"downloads": 232397,
 	"updated": "2025-03-06T14:09:16.473Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 1297,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.7.35",
+	"svelte_range": "^3.55 || ^4.0.0-next.0 || ^4.0 || ^5.0.0-next.0"
 }

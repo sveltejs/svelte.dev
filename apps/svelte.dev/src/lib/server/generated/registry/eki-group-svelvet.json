@@ -5,19 +5,12 @@
 	"authors": ["script_sorcerer"],
 	"homepage": "https://github.com/open-source-labs/Svelvet",
 	"downloads": 1,
-	"dependents": 0,
 	"updated": "2024-03-04T15:18:23.900Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 0,
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	},
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": true
-	}
+	"typescript": "first-party",
+	"version": "10.0.2",
+	"svelte_range": ">=3.59.2 || ^4.0.0",
+	"kit_range": "^1.15.9"
 }

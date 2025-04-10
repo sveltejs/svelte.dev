@@ -3,20 +3,11 @@
 	"description": "Provide Svelte components for the Prisme Design System.",
 	"repo_url": "https://github.com/halcyonnouveau/prisme",
 	"authors": ["beanpup.py"],
-	"downloads": 9,
-	"dependents": 0,
+	"downloads": 2,
 	"updated": "2020-02-18T22:42:18.518Z",
 	"tags": ["design-system"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "1.0.0",
+	"svelte_range": "^3.0.0"
 }

@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/silinternational/svelte-google-places-autocomplete",
 	"authors": ["fillup", "wcjr11", "matt-h", "schparky", "hobbitronics"],
 	"homepage": "https://github.com/silinternational/svelte-google-places-autocomplete#readme",
-	"downloads": 1183,
-	"dependents": 0,
+	"downloads": 830,
 	"updated": "2024-09-23T19:47:54.049Z",
 	"tags": ["integration"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 21,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "1.3.0",
+	"svelte_range": "^3.38.2"
 }

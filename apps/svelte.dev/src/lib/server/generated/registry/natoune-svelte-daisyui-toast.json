@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/Natoune/svelte-daisyui-toast",
 	"authors": ["natoune"],
 	"homepage": "https://natoune.github.io/svelte-daisyui-toast",
-	"downloads": 4,
-	"dependents": 0,
+	"downloads": 9,
 	"updated": "2025-02-13T20:46:30.430Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 1,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.1.1",
+	"svelte_range": "^5.0.0",
+	"kit_range": "^2.16.0"
 }

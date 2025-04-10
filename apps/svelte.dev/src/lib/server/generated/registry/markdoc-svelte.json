@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/CollierCZ/markdoc-svelte",
 	"authors": ["colliercz"],
 	"homepage": "https://github.com/CollierCZ/markdoc-svelte#readme",
-	"downloads": 22,
-	"dependents": 0,
+	"downloads": 2,
 	"updated": "2025-01-14T21:26:29.968Z",
 	"tags": ["content"],
 	"runes": false,
 	"github_stars": 13,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/main.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "2.0.1",
+	"svelte_range": "4.x || 5.x"
 }

@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/markjaquith/clerk-sveltekit",
 	"authors": ["markjaquith"],
 	"homepage": "https://github.com/markjaquith/clerk-sveltekit#readme",
-	"downloads": 687,
-	"dependents": 0,
+	"downloads": 319,
 	"updated": "2024-04-30T17:57:09.111Z",
 	"tags": ["auth", "integration"],
 	"runes": false,
 	"github_stars": 184,
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	},
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": true
-	}
+	"typescript": "first-party",
+	"version": "0.4.2",
+	"svelte_range": "^4.0.0||^5.0.0",
+	"kit_range": "^1.25.1||^2.0.2"
 }

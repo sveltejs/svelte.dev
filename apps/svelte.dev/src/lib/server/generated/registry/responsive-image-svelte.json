@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/simonihmig/responsive-image",
 	"authors": ["simonihmig"],
 	"homepage": "https://github.com/simonihmig/responsive-image#readme",
-	"downloads": 3,
-	"dependents": 0,
+	"downloads": 1,
 	"updated": "2025-02-13T17:31:53.489Z",
 	"tags": ["media"],
 	"runes": true,
 	"github_stars": 155,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.1.0",
+	"svelte_range": "^5.0.0"
 }

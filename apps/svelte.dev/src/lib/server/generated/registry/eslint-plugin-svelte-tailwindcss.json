@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/mikededo/eslint-plugin-svelte-tailwindcss",
 	"authors": ["mikededo"],
 	"homepage": "https://github.com/mikededo/eslint-plugin-svelte-tailwindcss",
-	"downloads": 2,
-	"dependents": 0,
+	"downloads": 14,
 	"updated": "2024-11-19T17:09:31.103Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 4,
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	},
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	}
+	"typescript": "first-party",
+	"version": "0.0.1",
+	"svelte_range": "5.1.15"
 }

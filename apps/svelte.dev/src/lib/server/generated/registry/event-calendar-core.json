@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/vkurko/calendar",
 	"authors": ["vkurko"],
 	"homepage": "https://vkurko.github.io/calendar/",
-	"downloads": 5355,
-	"dependents": 13,
-	"updated": "2025-03-25T17:43:40.753Z",
+	"downloads": 5908,
+	"updated": "2025-04-01T19:04:09.263Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 1634,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "@types",
-		"types_info": "Types available through @types/event-calendar__core"
-	}
+	"typescript": "none",
+	"version": "3.12.0",
+	"svelte_range": "^4.2.19"
 }

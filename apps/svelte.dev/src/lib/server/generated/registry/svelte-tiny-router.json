@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/notnotsamuel/svelte-tiny-router",
 	"authors": ["notnotsamuel"],
 	"homepage": "https://github.com/notnotsamuel/svelte-tiny-router#readme",
-	"downloads": 15,
-	"dependents": 0,
+	"downloads": 9,
 	"updated": "2025-03-12T10:15:02.991Z",
 	"tags": ["router"],
 	"runes": false,
 	"github_stars": 13,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "1.0.3",
+	"svelte_range": ">=5.0.0"
 }

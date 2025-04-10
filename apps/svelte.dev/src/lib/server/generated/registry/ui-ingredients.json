@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/calvo-jp/ui-ingredients",
 	"authors": ["calvojp"],
 	"homepage": "https://github.com/calvo-jp/ui-ingredients#readme",
-	"downloads": 344,
-	"dependents": 0,
-	"updated": "2025-03-16T08:48:05.249Z",
+	"downloads": 372,
+	"updated": "2025-04-06T14:14:07.131Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 46,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.3.0",
+	"svelte_range": "^5.20.0",
+	"kit_range": "^2.20.4"
 }

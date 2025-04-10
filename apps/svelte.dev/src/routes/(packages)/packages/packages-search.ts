@@ -32,16 +32,13 @@ function strip_html(html: string): string {
  * Calculate a popularity score for a package
  */
 function calculate_popularity_score(pkg: Package): number {
-	const dependents = pkg.dependents || 0;
 	const stars = pkg.github_stars || 0;
 	const downloads = pkg.downloads || 0;
 	const now = new Date();
 
 	// Base score using logarithmic scales
 	let score =
-		Math.log10(dependents + 1) * DEPENDENTS_BOOST +
-		Math.log10(stars + 1) * GITHUB_STARS_BOOST +
-		Math.log10(downloads + 1) * DOWNLOADS_BOOST;
+		Math.log10(stars + 1) * GITHUB_STARS_BOOST + Math.log10(downloads + 1) * DOWNLOADS_BOOST;
 
 	// If svelte 5, give boost
 	if (pkg.svelte?.[5]) {
@@ -72,18 +69,11 @@ function calculate_popularity_score(pkg: Package): number {
 /**
  * Sort criteria options for package search results
  */
-export type SortCriterion =
-	| 'popularity'
-	| 'downloads'
-	| 'dependents'
-	| 'github_stars'
-	| 'updated'
-	| 'name';
+export type SortCriterion = 'popularity' | 'downloads' | 'github_stars' | 'updated' | 'name';
 
 export const search_criteria: SortCriterion[] = [
 	'popularity',
 	'downloads',
-	'dependents',
 	'github_stars',
 	'updated',
 	'name'
@@ -175,7 +165,6 @@ export async function init(packages: Package[]) {
 			description,
 			tags: pkg.tags || [],
 			authors: pkg.authors || [],
-			dependents: pkg.dependents || 0,
 			downloads: pkg.downloads || 0,
 			github_stars: pkg.github_stars || 0,
 			updated: pkg.updated || '',
@@ -337,8 +326,6 @@ export async function search(
 					return score_b - score_a;
 				case 'downloads':
 					return (doc_b.downloads as number) - (doc_a.downloads as number);
-				case 'dependents':
-					return (doc_b.dependents as number) - (doc_a.dependents as number);
 				case 'github_stars':
 					return (doc_b.github_stars as number) - (doc_a.github_stars as number);
 				case 'updated':
@@ -489,9 +476,6 @@ export function sort_packages(
 
 		case 'downloads':
 			return (b.downloads || 0) - (a.downloads || 0);
-
-		case 'dependents':
-			return (b.dependents || 0) - (a.dependents || 0);
 
 		case 'github_stars':
 			return (b.github_stars || 0) - (a.github_stars || 0);

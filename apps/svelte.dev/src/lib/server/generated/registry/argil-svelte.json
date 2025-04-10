@@ -4,19 +4,10 @@
 	"repo_url": "",
 	"authors": ["delwwwinc"],
 	"downloads": 10,
-	"dependents": 0,
 	"updated": "2024-09-26T12:22:38.610Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.0.8",
+	"svelte_range": "^4.0.0"
 }

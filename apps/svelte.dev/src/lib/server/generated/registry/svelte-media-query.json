@@ -4,21 +4,11 @@
 	"repo_url": "https://github.com/xelaok/svelte-media-query",
 	"authors": ["xelaok"],
 	"homepage": "https://github.com/xelaok/svelte-media-query#readme",
-	"downloads": 665,
-	"dependents": 2,
+	"downloads": 682,
 	"updated": "2021-10-20T19:17:12.625Z",
 	"tags": ["miscellaneous"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 52,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "1.1.2"
 }

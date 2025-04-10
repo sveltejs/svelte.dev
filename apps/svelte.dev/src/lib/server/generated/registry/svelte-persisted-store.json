@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/joshnuss/svelte-persisted-store",
 	"authors": ["joshnuss"],
 	"homepage": "https://github.com/joshnuss/svelte-persisted-store#readme",
-	"downloads": 21575,
-	"dependents": 17,
+	"downloads": 17828,
 	"updated": "2024-10-31T12:16:06.628Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
 	"github_stars": 1091,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.12.0",
+	"svelte_range": "^3.48.0 || ^4 || ^5"
 }

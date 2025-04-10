@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/jonasgeiler/svelte-tiny-virtual-list",
 	"authors": ["jonasgeiler"],
 	"homepage": "https://github.com/jonasgeiler/svelte-tiny-virtual-list",
-	"downloads": 8662,
-	"dependents": 6,
+	"downloads": 7736,
 	"updated": "2024-05-28T06:05:48.177Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 506,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: types/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "2.1.2",
+	"svelte_range": "^3.31.0"
 }

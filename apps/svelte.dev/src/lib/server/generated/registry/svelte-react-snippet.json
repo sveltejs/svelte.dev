@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/ssssota/svelte-react-snippet",
 	"authors": ["ssssota"],
 	"homepage": "https://ssssota.github.io/svelte-react-snippet/",
-	"downloads": 2,
-	"dependents": 0,
+	"downloads": 0,
 	"updated": "2024-08-18T07:51:08.372Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 3,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in exports field"
-	}
+	"typescript": "first-party",
+	"version": "0.1.1",
+	"svelte_range": "^5.0.0-next.223"
 }

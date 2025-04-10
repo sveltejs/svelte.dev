@@ -4,21 +4,11 @@
 	"repo_url": "https://github.com/unocss/unocss",
 	"authors": ["antfu", "unocss-bot"],
 	"homepage": "https://unocss.dev",
-	"downloads": 209471,
-	"dependents": 53,
+	"downloads": 209313,
 	"updated": "2025-04-05T14:06:22.968Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 17483,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "66.1.0-beta.10"
 }

@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/svelte-pilot/svelte-pilot",
 	"authors": ["jiangfengming"],
 	"homepage": "https://svelte-pilot.github.io/",
-	"downloads": 183,
-	"dependents": 1,
+	"downloads": 75,
 	"updated": "2025-03-19T18:02:43.184Z",
 	"tags": ["router"],
 	"runes": false,
 	"github_stars": 39,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "6.0.4",
+	"svelte_range": "^5"
 }

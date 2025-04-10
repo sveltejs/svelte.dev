@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/TehShrike/svelte-state-renderer",
 	"authors": ["tehshrike"],
 	"homepage": "https://github.com/TehShrike/svelte-state-renderer#readme",
-	"downloads": 132,
-	"dependents": 1,
+	"downloads": 34,
 	"updated": "2025-02-05T20:44:46.086Z",
 	"tags": ["router"],
 	"runes": false,
 	"github_stars": 37,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "5.0.1",
+	"svelte_range": "^5.0.5"
 }

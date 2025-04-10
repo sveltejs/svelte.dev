@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/ramiroaisen/svelte-material-icons",
 	"authors": ["ramiroaisen"],
 	"homepage": "https://github.com/ramiroaisen/svelte-material-icons#readme",
-	"downloads": 2031,
-	"dependents": 4,
+	"downloads": 2497,
 	"updated": "2023-07-10T17:34:10.050Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 67,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "3.0.5",
+	"svelte_range": "^3.0.0 || ^4.0.0"
 }

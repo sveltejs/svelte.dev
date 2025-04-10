@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/jill64/svelte-highlight-switcher",
 	"authors": ["jill64"],
 	"homepage": "https://github.com/jill64/svelte-highlight-switcher#readme",
-	"downloads": 7910,
-	"dependents": 1,
+	"downloads": 5889,
 	"updated": "2025-01-20T02:43:10.149Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 2,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.3.5",
+	"svelte_range": "^4.0.0 || ^5.0.0",
+	"kit_range": "2.15.1"
 }

@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/captaincodeman/svelte-markdown-input",
 	"authors": ["captaincodeman"],
 	"homepage": "https://captaincodeman.github.io/svelte-markdown-input/",
-	"downloads": 46,
-	"dependents": 0,
+	"downloads": 6,
 	"updated": "2024-04-29T20:33:19.894Z",
 	"tags": ["content", "ui"],
 	"runes": false,
 	"github_stars": 1,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.0.2",
+	"svelte_range": "^3.54.0 || ^4.0.0 || ^5.0.0",
+	"kit_range": "^2.5.7"
 }

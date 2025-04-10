@@ -4,20 +4,13 @@
 	"repo_url": "hhttps://github.com/codersandipdas/svelte-otp",
 	"authors": ["codersandip"],
 	"homepage": "https://github.com/codersandipdas/svelte-otp",
-	"downloads": 3,
-	"dependents": 0,
+	"downloads": 2,
 	"updated": "2024-08-25T06:03:31.966Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 0,
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	},
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	}
+	"typescript": "first-party",
+	"version": "0.0.5",
+	"svelte_range": "*",
+	"kit_range": "^2.0.0"
 }

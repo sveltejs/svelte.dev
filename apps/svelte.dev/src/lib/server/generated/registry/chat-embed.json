@@ -3,20 +3,11 @@
 	"description": "Create and manage chats easily.",
 	"repo_url": "",
 	"authors": ["ceifa"],
-	"downloads": 32,
-	"dependents": 1,
+	"downloads": 9,
 	"updated": "2023-03-18T13:25:04.673Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.0.32",
+	"svelte_range": "3.57.0"
 }

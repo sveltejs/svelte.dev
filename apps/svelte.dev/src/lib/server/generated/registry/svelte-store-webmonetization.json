@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/mankins/svelte-store-webmonetization",
 	"authors": ["mankins"],
 	"homepage": "https://github.com/mankins/svelte-store-webmonetization#readme",
-	"downloads": 9,
-	"dependents": 0,
+	"downloads": 3,
 	"updated": "2021-06-02T16:24:36.701Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.0.3",
+	"svelte_range": ">= 1.43.0"
 }

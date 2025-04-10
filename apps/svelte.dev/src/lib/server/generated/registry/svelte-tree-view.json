@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/TeemuKoivisto/svelte-tree-view",
 	"authors": ["tekk"],
 	"homepage": "https://github.com/TeemuKoivisto/svelte-tree-view",
-	"downloads": 3812,
-	"dependents": 2,
+	"downloads": 2410,
 	"updated": "2023-07-24T12:04:25.865Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 24,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./pkg/types.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.4.2",
+	"svelte_range": ">=3",
+	"kit_range": "^1.22.3"
 }

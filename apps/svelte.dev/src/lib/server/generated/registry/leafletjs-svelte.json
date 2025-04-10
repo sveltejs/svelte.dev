@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/otokama/leafletjs-svelte",
 	"authors": ["lampoppa"],
 	"homepage": "https://otokama.github.io/leafletjs-svelte/",
-	"downloads": 18,
-	"dependents": 0,
+	"downloads": 1,
 	"updated": "2023-10-19T14:42:06.771Z",
 	"tags": ["ui", "media"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 4,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.1.1",
+	"svelte_range": "^4.0.5",
+	"kit_range": "^1.25.2"
 }

@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/leanupjs/leanup",
 	"authors": ["m.oppitz"],
 	"homepage": "https://leanupjs.org",
-	"downloads": 436,
-	"dependents": 0,
+	"downloads": 548,
 	"updated": "2024-06-11T08:58:35.229Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 33,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "1.3.54",
+	"svelte_range": "^4 || ^3"
 }

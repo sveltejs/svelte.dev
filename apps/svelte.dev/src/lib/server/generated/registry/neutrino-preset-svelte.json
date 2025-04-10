@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/constgen/neutrino-preset-svelte",
 	"authors": ["constgen"],
 	"homepage": "https://github.com/constgen/neutrino-preset-svelte",
-	"downloads": 26,
-	"dependents": 1,
+	"downloads": 6,
 	"updated": "2018-01-22T00:00:17.733Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 5,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "5.0.0",
+	"svelte_range": "~1.53.0"
 }

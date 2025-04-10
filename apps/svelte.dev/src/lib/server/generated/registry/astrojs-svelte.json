@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/withastro/astro",
 	"authors": ["natemoo-re", "fredkschott", "matthewp"],
 	"homepage": "https://docs.astro.build/en/guides/integrations-guide/svelte/",
-	"downloads": 24203,
-	"dependents": 11,
-	"updated": "2025-03-26T10:25:32.995Z",
+	"downloads": 30473,
+	"updated": "2025-03-31T15:47:43.438Z",
 	"tags": ["integration"],
 	"runes": false,
 	"github_stars": 50321,
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	},
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	}
+	"typescript": "first-party",
+	"version": "7.0.9",
+	"svelte_range": "^5.1.16"
 }

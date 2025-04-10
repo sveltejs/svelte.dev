@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/lucide-icons/lucide",
 	"authors": ["ericfennis"],
 	"homepage": "https://lucide.dev",
-	"downloads": 91058,
-	"dependents": 105,
-	"updated": "2025-03-25T16:08:28.469Z",
+	"downloads": 89017,
+	"updated": "2025-04-02T06:46:55.391Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 16523,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/lucide-svelte.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.487.0",
+	"svelte_range": "^3 || ^4 || ^5.0.0-next.42"
 }

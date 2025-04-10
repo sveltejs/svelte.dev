@@ -5,19 +5,11 @@
 	"authors": ["wabosh"],
 	"homepage": "https://navigation-loader.vercel.app",
 	"downloads": 32,
-	"dependents": 0,
 	"updated": "2024-12-30T14:06:34.729Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 1,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.3.0",
+	"svelte_range": "^5.0.0"
 }

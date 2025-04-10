@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/EMH333/esbuild-svelte",
 	"authors": ["emh333"],
 	"homepage": "https://github.com/EMH333/esbuild-svelte#readme",
-	"downloads": 21715,
-	"dependents": 38,
+	"downloads": 18270,
 	"updated": "2025-03-14T02:28:58.960Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 252,
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/index.d.ts"
-	},
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	}
+	"typescript": "first-party",
+	"version": "0.9.2",
+	"svelte_range": ">=4.2.1 <6"
 }

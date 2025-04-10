@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/sveltejs/prettier-plugin-svelte",
 	"authors": ["unwrittenfun", "conduitry", "dummdidumm"],
 	"homepage": "https://github.com/sveltejs/prettier-plugin-svelte#readme",
-	"downloads": 502251,
-	"dependents": 166,
+	"downloads": 573819,
 	"updated": "2025-01-13T10:09:51.803Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 764,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "3.3.3",
+	"svelte_range": "^3.2.0 || ^4.0.0-next.0 || ^5.0.0-next.0"
 }

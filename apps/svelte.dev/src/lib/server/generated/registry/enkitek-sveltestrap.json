@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/ENKI-Technologies-S-L/enki-sveltestrap",
 	"authors": ["shebinpr", "maheshenkitek"],
 	"homepage": "https://github.com/ENKI-Technologies-S-L/enki-sveltestrap#readme",
-	"downloads": 10,
-	"dependents": 0,
+	"downloads": 9,
 	"updated": "2024-08-16T05:36:13.858Z",
 	"tags": ["design-system"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: src/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "5.11.12",
+	"svelte_range": "^3.53.1"
 }

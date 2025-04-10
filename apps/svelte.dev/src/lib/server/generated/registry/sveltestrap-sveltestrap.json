@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/sveltestrap/sveltestrap",
 	"authors": ["dysfunc"],
 	"homepage": "https://sveltestrap.js.org",
-	"downloads": 5259,
-	"dependents": 5,
+	"downloads": 5446,
 	"updated": "2025-02-04T15:33:33.979Z",
 	"tags": ["design-system", "ui"],
 	"runes": false,
 	"github_stars": 175,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "7.1.0",
+	"svelte_range": "^4.0.0 || ^5.0.0 || ^5.0.0-next.0"
 }

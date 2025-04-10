@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/cowboycodr/skittle",
 	"authors": ["cowboycodr"],
 	"homepage": "https://kit.svelte.dev",
-	"downloads": 3,
-	"dependents": 0,
+	"downloads": 1,
 	"updated": "2024-08-22T02:40:44.001Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 4,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: types/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.1.2",
+	"svelte_range": "^4.2.10"
 }

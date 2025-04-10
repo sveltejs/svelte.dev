@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/ikun-svelte/vite-plugin-sk-router-guard",
 	"authors": ["baiwusanyu"],
 	"homepage": "https://github.com/ikun-svelte",
-	"downloads": 2,
-	"dependents": 2,
+	"downloads": 8,
 	"updated": "2023-08-29T08:21:32.602Z",
 	"tags": ["router"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 6,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.0.1",
+	"svelte_range": "^4.0.5"
 }

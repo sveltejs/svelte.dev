@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/svelteness/svelte-jester",
 	"authors": ["mihar-22", "sebastianrothe"],
 	"homepage": "https://github.com/svelteness/svelte-jester#readme",
-	"downloads": 21663,
-	"dependents": 10,
+	"downloads": 19629,
 	"updated": "2024-06-14T23:13:24.804Z",
 	"tags": ["tooling", "testing"],
 	"runes": false,
 	"github_stars": 128,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "5.0.0",
+	"svelte_range": ">= 3"
 }

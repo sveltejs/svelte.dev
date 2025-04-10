@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/Telegram-Mini-Apps/telegram-apps",
 	"authors": ["dimitreee", "qbnk", "sorawalker", "mainsmirnov"],
 	"homepage": "https://github.com/Telegram-Mini-Apps/telegram-apps#readme",
-	"downloads": 100,
-	"dependents": 0,
-	"updated": "2025-03-22T18:05:03.673Z",
+	"downloads": 204,
+	"updated": "2025-04-05T19:55:36.374Z",
 	"tags": ["integration"],
 	"runes": false,
 	"github_stars": 922,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/dts/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "2.0.19",
+	"svelte_range": "^5.2.3"
 }

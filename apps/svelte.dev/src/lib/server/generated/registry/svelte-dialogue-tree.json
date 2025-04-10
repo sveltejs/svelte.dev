@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/KutayGuler/svelte-dialogue-tree",
 	"authors": ["kutayguler"],
 	"homepage": "http://svelte-dialogue-tree.vercel.app",
-	"downloads": 34,
-	"dependents": 0,
+	"downloads": 5,
 	"updated": "2023-04-17T09:00:52.198Z",
 	"tags": ["miscellaneous"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 2,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.0.10",
+	"svelte_range": "^3.54.0",
+	"kit_range": "^1.5.0"
 }

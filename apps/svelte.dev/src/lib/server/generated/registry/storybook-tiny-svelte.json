@@ -5,19 +5,11 @@
 	"authors": ["commenthol"],
 	"homepage": "https://github.com/commenthol/storybook-tiny/tree/main/packages/svelte#readme",
 	"downloads": 3,
-	"dependents": 0,
 	"updated": "2024-11-10T20:15:36.102Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "2.0.0",
+	"svelte_range": "^5.1.13"
 }

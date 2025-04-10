@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/cibernox/svelte-media",
 	"authors": ["cibernox"],
 	"homepage": "https://github.com/cibernox/svelte-media#readme",
-	"downloads": 576,
-	"dependents": 7,
+	"downloads": 480,
 	"updated": "2021-08-23T13:16:32.816Z",
 	"tags": ["media"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 59,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.1.5",
+	"svelte_range": "^3.14.1"
 }

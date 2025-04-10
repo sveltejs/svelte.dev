@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/AgnosticUI/svelte-a11y-dialog",
 	"authors": ["rlevin"],
 	"homepage": "https://github.com/AgnosticUI/svelte-a11y-dialog",
-	"downloads": 346,
-	"dependents": 3,
+	"downloads": 370,
 	"updated": "2022-03-18T15:55:40.801Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 7,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.2.0",
+	"svelte_range": "^3.44.0",
+	"kit_range": "next"
 }

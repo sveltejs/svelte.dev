@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/spren9er/tilez-echarts",
 	"authors": ["spren9er"],
 	"homepage": "https://github.com/spren9er/tilez-echarts#readme",
-	"downloads": 16,
-	"dependents": 0,
+	"downloads": 2,
 	"updated": "2024-10-24T20:02:25.243Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 3,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.0.0",
+	"svelte_range": "^5.0.0",
+	"kit_range": "^2.7.2"
 }

@@ -17,20 +17,12 @@
 		"storybook-bot"
 	],
 	"homepage": "https://github.com/storybookjs/storybook/tree/next/code/renderers/svelte",
-	"downloads": 91014,
-	"dependents": 5,
-	"updated": "2025-03-26T16:08:00.099Z",
+	"downloads": 88817,
+	"updated": "2025-04-02T17:03:39.796Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 86315,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "8.6.12",
+	"svelte_range": "^4.0.0 || ^5.0.0"
 }

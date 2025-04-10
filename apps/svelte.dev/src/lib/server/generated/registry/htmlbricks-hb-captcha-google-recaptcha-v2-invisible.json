@@ -3,20 +3,10 @@
 	"description": "Svelte-Bootstrap Checkbox Input WebComponent.",
 	"repo_url": "",
 	"authors": ["dariocaruso"],
-	"downloads": 267,
-	"dependents": 0,
-	"updated": "2025-03-24T18:07:12.040Z",
+	"downloads": 382,
+	"updated": "2025-04-08T22:27:37.169Z",
 	"tags": ["integration"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.50.0-alpha.27"
 }

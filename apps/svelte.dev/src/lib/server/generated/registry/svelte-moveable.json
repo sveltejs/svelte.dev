@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/daybrush/moveable",
 	"authors": ["younkue"],
 	"homepage": "https://daybrush.com/moveable",
-	"downloads": 1198,
-	"dependents": 9,
+	"downloads": 1275,
 	"updated": "2023-12-03T13:48:06.920Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 10306,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.45.0",
+	"svelte_range": "^3.54.0 || ^4.0.0",
+	"kit_range": "^1.5.0"
 }

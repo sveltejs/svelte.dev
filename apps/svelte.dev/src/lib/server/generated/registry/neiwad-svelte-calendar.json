@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/neiwad/svelte-calendar",
 	"authors": ["neiwad"],
 	"homepage": "https://github.com/neiwad/svelte-calendar",
-	"downloads": 14,
-	"dependents": 0,
+	"downloads": 0,
 	"updated": "2022-04-28T20:28:21.171Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 2,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.0.4",
+	"svelte_range": "^3.44.0",
+	"kit_range": "next"
 }

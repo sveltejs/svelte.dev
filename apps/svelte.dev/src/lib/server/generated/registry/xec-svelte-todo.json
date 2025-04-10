@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/xec/svelte-todo",
 	"authors": ["xec"],
 	"homepage": "https://xec.github.io/todo/",
-	"downloads": 19,
-	"dependents": 0,
+	"downloads": 3,
 	"updated": "2020-03-08T16:06:46.780Z",
 	"tags": ["miscellaneous"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 1,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "1.0.4",
+	"svelte_range": "^3.0.0"
 }

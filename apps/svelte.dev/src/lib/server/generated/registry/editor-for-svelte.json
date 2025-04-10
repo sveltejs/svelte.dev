@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/CoderN-P/SvelteEditor",
 	"authors": ["codern"],
 	"homepage": "https://svelte-editor.neelp.tech",
-	"downloads": 11,
-	"dependents": 0,
+	"downloads": 6,
 	"updated": "2024-06-20T17:12:00.234Z",
 	"tags": ["ui", "tooling"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 1,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.0.9",
+	"svelte_range": "^4.2.12"
 }

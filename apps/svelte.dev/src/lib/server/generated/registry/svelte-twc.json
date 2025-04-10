@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/ssssota/svelte-twc",
 	"authors": ["ssssota"],
 	"homepage": "https://github.com/ssssota/svelte-twc#readme",
-	"downloads": 1,
-	"dependents": 0,
+	"downloads": 10,
 	"updated": "2024-10-22T05:38:10.980Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 2,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.0.0",
+	"svelte_range": ">=5.0.0"
 }

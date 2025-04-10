@@ -5,19 +5,10 @@
 	"authors": ["eagerestwolf2"],
 	"homepage": "https://github.com/garavest/eslint-config#readme",
 	"downloads": 1,
-	"dependents": 0,
 	"updated": "2023-12-10T06:55:56.304Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "2.1.1",
+	"svelte_range": "^4.2.8"
 }

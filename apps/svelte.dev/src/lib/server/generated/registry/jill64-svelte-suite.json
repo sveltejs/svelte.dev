@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/jill64/svelte-suite",
 	"authors": ["jill64"],
 	"homepage": "https://github.com/jill64/svelte-suite#readme",
-	"downloads": 8340,
-	"dependents": 0,
+	"downloads": 5138,
 	"updated": "2025-03-15T06:58:33.867Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
 	"github_stars": 1,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "2.2.7",
+	"svelte_range": "^5.0.0",
+	"kit_range": "^2.0.0"
 }

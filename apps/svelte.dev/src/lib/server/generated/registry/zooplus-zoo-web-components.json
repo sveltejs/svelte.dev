@@ -4,21 +4,11 @@
 	"repo_url": "https://github.com/zooplus/zoo-web-components",
 	"authors": ["mpad0x55z", "bartlech", "ziaber"],
 	"homepage": "https://github.com/zooplus/zoo-web-components#readme",
-	"downloads": 411,
-	"dependents": 0,
+	"downloads": 278,
 	"updated": "2023-10-27T10:52:11.180Z",
 	"tags": ["ui", "design-system"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 47,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "10.4.0"
 }

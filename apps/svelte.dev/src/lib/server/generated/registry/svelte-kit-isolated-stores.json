@@ -4,20 +4,12 @@
 	"repo_url": "https://gitlab.com/x3ro/svelte-kit-isolated-stores",
 	"authors": ["x3ro"],
 	"homepage": "https://gitlab.com/x3ro/svelte-kit-isolated-stores#readme",
-	"downloads": 3,
-	"dependents": 0,
+	"downloads": 0,
 	"updated": "2022-07-18T12:59:10.550Z",
 	"tags": ["miscellaneous"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/main.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.0.0-alpha.3",
+	"svelte_range": "^3.44.3",
+	"kit_range": "^1.0.0-next.232"
 }

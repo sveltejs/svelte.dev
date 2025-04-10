@@ -4,21 +4,11 @@
 	"repo_url": "https://github.com/filipsobol/sonda",
 	"authors": ["filipsobol"],
 	"homepage": "https://sonda.dev",
-	"downloads": 12976,
-	"dependents": 1,
+	"downloads": 15819,
 	"updated": "2024-12-31T08:29:09.012Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 429,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in exports field"
-	}
+	"typescript": "first-party",
+	"version": "0.7.1"
 }

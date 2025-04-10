@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/embodijs/generator",
 	"authors": ["cordlesswool"],
 	"homepage": "https://github.com/embodijs/generator/tree/main#readme",
-	"downloads": 136,
-	"dependents": 0,
-	"updated": "2024-11-16T16:20:35.949Z",
+	"downloads": 502,
+	"updated": "2025-04-06T15:54:15.254Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 2,
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/exports/lib.d.ts"
-	},
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	}
+	"typescript": "first-party",
+	"version": "0.10.0",
+	"svelte_range": "^5.23.0"
 }

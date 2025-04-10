@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/bluwy/svelte-parse-markup",
 	"authors": ["bluwy"],
 	"homepage": "https://github.com/bluwy/svelte-parse-markup",
-	"downloads": 28212,
-	"dependents": 14,
+	"downloads": 26812,
 	"updated": "2024-06-04T07:17:52.754Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 7,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.1.5",
+	"svelte_range": "^3.0.0 || ^4.0.0 || ^5.0.0-next.1"
 }

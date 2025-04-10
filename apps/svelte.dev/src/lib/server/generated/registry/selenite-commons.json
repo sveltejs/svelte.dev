@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/ShaitanLyss/selenite-commons",
 	"authors": ["moonlyss"],
 	"homepage": "https://github.com/ShaitanLyss/selenite-commons#readme",
-	"downloads": 181,
-	"dependents": 0,
-	"updated": "2024-11-15T16:43:43.817Z",
+	"downloads": 300,
+	"updated": "2025-03-31T13:25:35.300Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.30.12",
+	"svelte_range": "^5.2.0",
+	"kit_range": "^2.8.1"
 }

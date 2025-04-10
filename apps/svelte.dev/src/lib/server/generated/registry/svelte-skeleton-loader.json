@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/Aushtiin/svelte-skeleton",
 	"authors": ["aushtiin"],
 	"homepage": "https://github.com/Aushtiin/svelte-skeleton#readme",
-	"downloads": 59,
-	"dependents": 1,
+	"downloads": 93,
 	"updated": "2021-08-20T21:02:18.202Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 12,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.1.4",
+	"svelte_range": "^3.41.0"
 }

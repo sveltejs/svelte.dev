@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/crashmax-dev/fireworks-js",
 	"authors": ["crashmax"],
 	"homepage": "https://fireworks.js.org",
-	"downloads": 48,
-	"dependents": 0,
+	"downloads": 86,
 	"updated": "2024-07-13T18:36:15.655Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 1255,
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in exports field"
-	},
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	}
+	"typescript": "first-party",
+	"version": "2.10.8",
+	"svelte_range": ">=3.0.0",
+	"kit_range": "2.5.18"
 }

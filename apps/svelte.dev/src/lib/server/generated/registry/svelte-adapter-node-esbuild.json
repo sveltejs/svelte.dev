@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/JadedBlueEyes/svelte-adapter-node-esbuild",
 	"authors": ["jadedblueeyes"],
 	"homepage": "https://github.com/JadedBlueEyes/svelte-adapter-node-esbuild#readme",
-	"downloads": 395,
-	"dependents": 0,
+	"downloads": 15,
 	"updated": "2025-03-19T02:18:13.792Z",
 	"tags": ["adapter"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.2.5",
+	"kit_range": "^2.8.2"
 }

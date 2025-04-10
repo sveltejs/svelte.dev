@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/unnoq/orpc",
 	"authors": ["unnoq"],
 	"homepage": "https://orpc.unnoq.com",
-	"downloads": 1504,
-	"dependents": 0,
-	"updated": "2025-03-25T14:54:04.695Z",
+	"downloads": 799,
+	"updated": "2025-04-09T13:47:16.846Z",
 	"tags": ["server"],
 	"runes": false,
 	"github_stars": 975,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in exports field"
-	}
+	"typescript": "first-party",
+	"version": "0.53.0",
+	"svelte_range": ">=4.2.0"
 }

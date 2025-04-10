@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/98mux/pelte",
 	"authors": ["filipot"],
 	"homepage": "https://github.com/98mux/pelte#readme",
-	"downloads": 4,
-	"dependents": 0,
+	"downloads": 1,
 	"updated": "2024-03-06T20:11:12.822Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: types/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.0.3",
+	"svelte_range": "5.0.0-next.52"
 }

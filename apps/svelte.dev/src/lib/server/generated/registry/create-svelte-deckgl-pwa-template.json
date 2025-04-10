@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/b-lack/create-svelte-deckgl-pwa-template",
 	"authors": ["gruenecho"],
 	"homepage": "https://github.com/b-lack/create-svelte-deckgl-pwa-template#readme",
-	"downloads": 20,
-	"dependents": 0,
+	"downloads": 3,
 	"updated": "2022-02-28T22:08:07.389Z",
 	"tags": ["miscellaneous"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 1,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "1.0.5",
+	"svelte_range": "^3.46.3"
 }

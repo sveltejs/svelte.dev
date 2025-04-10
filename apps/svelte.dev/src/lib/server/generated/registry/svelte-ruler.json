@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/daybrush/ruler",
 	"authors": ["younkue"],
 	"homepage": "https://github.com/daybrush/ruler#readme",
-	"downloads": 3,
-	"dependents": 0,
+	"downloads": 13,
 	"updated": "2023-06-02T16:20:49.677Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 344,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: src/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.19.0",
+	"svelte_range": "^3.0.0"
 }

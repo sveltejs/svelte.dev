@@ -4,18 +4,10 @@
 	"repo_url": "",
 	"authors": ["burnman"],
 	"downloads": 0,
-	"dependents": 0,
 	"updated": "2024-12-25T07:54:08.335Z",
 	"tags": ["ui"],
 	"runes": false,
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	},
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	}
+	"typescript": "first-party",
+	"version": "0.0.1",
+	"svelte_range": "^5.0.0"
 }

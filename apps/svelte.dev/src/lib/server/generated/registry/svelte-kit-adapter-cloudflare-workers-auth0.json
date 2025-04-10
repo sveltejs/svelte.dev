@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/green-arrow/svelte-kit-adapter-cloudflare-workers-auth0",
 	"authors": ["green-arrow"],
 	"homepage": "https://github.com/green-arrow/svelte-kit-adapter-cloudflare-workers-auth0#readme",
-	"downloads": 6,
-	"dependents": 0,
+	"downloads": 1,
 	"updated": "2021-08-29T05:16:18.983Z",
 	"tags": ["adapter", "auth"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 4,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.0.1",
+	"kit_range": "^1.0.0-next.158"
 }

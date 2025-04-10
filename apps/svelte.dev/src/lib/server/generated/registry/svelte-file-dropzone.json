@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/thecodejack/svelte-file-dropzone",
 	"authors": ["thecodejack", "arackaf"],
 	"homepage": "https://github.com/thecodejack/svelte-file-dropzone#readme",
-	"downloads": 10099,
-	"dependents": 20,
+	"downloads": 10547,
 	"updated": "2024-10-19T20:44:48.960Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 270,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "2.0.9",
+	"svelte_range": "^3.54.0 || ^4.0.0 || ^5",
+	"kit_range": "^1.30.4"
 }

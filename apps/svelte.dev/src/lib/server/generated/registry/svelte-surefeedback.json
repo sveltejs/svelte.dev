@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/codebygio/svelte-surefeedback",
 	"authors": ["codebygio"],
 	"homepage": "https://codebygio.com/libs/svelte-surefeedback",
-	"downloads": 7,
-	"dependents": 0,
+	"downloads": 9,
 	"updated": "2025-01-15T21:26:47.393Z",
 	"tags": ["integration"],
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.0.1",
+	"svelte_range": "^5.0.0",
+	"kit_range": "^2.0.0"
 }

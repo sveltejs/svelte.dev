@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/lagden/svelte-pesquisa",
 	"authors": ["lagden"],
 	"homepage": "https://github.com/lagden/svelte-pesquisa#readme",
-	"downloads": 21,
-	"dependents": 0,
+	"downloads": 9,
 	"updated": "2023-01-09T07:10:49.333Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 2,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "2.0.0",
+	"svelte_range": "3.55.0"
 }

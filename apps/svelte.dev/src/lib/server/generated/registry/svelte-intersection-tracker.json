@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/Corrl/svelte-intersection-tracker",
 	"authors": ["corrl"],
 	"homepage": "https://corrl.github.io/svelte-intersection-tracker/",
-	"downloads": 16,
-	"dependents": 0,
+	"downloads": 5,
 	"updated": "2022-07-06T09:20:28.471Z",
 	"tags": ["miscellaneous"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 5,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.0.1",
+	"svelte_range": "^3.44.0",
+	"kit_range": "next"
 }

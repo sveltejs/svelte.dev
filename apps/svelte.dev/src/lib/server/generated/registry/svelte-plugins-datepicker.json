@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/svelte-plugins/datepicker",
 	"authors": ["dysfunc"],
 	"homepage": "https://github.com/svelte-plugins/datepicker",
-	"downloads": 3865,
-	"dependents": 2,
+	"downloads": 3539,
 	"updated": "2025-01-19T19:50:33.977Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 85,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.0.11",
+	"svelte_range": "^4.2.8"
 }

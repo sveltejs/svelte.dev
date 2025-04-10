@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/micantoine/svelte-cssmodules-loader",
 	"authors": ["micantoine"],
 	"homepage": "https://github.com/micantoine/svelte-cssmodules-loader",
-	"downloads": 6,
-	"dependents": 0,
+	"downloads": 1,
 	"updated": "2020-04-15T14:07:32.597Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "1.0.0",
+	"svelte_range": ">1.44.0"
 }

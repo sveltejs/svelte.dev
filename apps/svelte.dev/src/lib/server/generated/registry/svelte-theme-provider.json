@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/wecount-dev/svelte-theme-provider",
 	"authors": ["yujonglee"],
 	"homepage": "https://github.com/wecount-dev/svelte-theme-provider",
-	"downloads": 26,
-	"dependents": 0,
+	"downloads": 8,
 	"updated": "2021-10-22T12:55:06.226Z",
 	"tags": ["miscellaneous"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 6,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./types/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.1.11",
+	"svelte_range": "^3.0.0"
 }

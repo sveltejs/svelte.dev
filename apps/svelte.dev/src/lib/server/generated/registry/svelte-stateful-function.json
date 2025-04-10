@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/akeylimepie/svelte-stateful-function",
 	"authors": ["akeylimepie"],
 	"homepage": "https://github.com/akeylimepie/svelte-stateful-function#readme",
-	"downloads": 37,
-	"dependents": 0,
+	"downloads": 33,
 	"updated": "2025-04-08T00:12:58.872Z",
 	"tags": ["miscellaneous"],
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
 	"runes": false,
 	"github_stars": 0,
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.0.0",
+	"svelte_range": "^5.0.0",
+	"kit_range": "^2.20.2"
 }

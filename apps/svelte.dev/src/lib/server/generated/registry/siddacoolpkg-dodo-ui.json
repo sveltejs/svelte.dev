@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/siddacool/dodo-ui",
 	"authors": ["siddacool"],
 	"homepage": "https://siddacool.github.io/dodo-ui",
-	"downloads": 170,
-	"dependents": 0,
-	"updated": "2025-03-20T09:13:56.004Z",
+	"downloads": 130,
+	"updated": "2025-04-03T10:44:39.974Z",
 	"tags": ["ui", "design-system"],
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.0.15",
+	"svelte_range": "^5.0.0",
+	"kit_range": "^2.16.0"
 }

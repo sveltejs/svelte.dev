@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/okrad/svelte-progressbar",
 	"authors": ["okrad"],
 	"homepage": "https://github.com/okrad/svelte-progressbar#readme",
-	"downloads": 446,
-	"dependents": 0,
+	"downloads": 1094,
 	"updated": "2023-07-06T09:06:19.807Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 129,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/types.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "2.2.0",
+	"svelte_range": "^4.0.4",
+	"kit_range": "^1.22.0"
 }

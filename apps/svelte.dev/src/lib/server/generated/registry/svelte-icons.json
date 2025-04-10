@@ -3,20 +3,10 @@
 	"description": "Use icon components in Svelte applications.",
 	"repo_url": "",
 	"authors": ["introvertuous"],
-	"downloads": 3119,
-	"dependents": 22,
+	"downloads": 5268,
 	"updated": "2020-03-07T23:48:39.756Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "2.1.0"
 }

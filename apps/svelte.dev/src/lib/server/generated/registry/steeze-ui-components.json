@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/steeze-ui/components",
 	"authors": ["justinvoitel"],
 	"homepage": "https://steeze-ui.com",
-	"downloads": 21,
-	"dependents": 0,
+	"downloads": 32,
 	"updated": "2022-10-06T12:20:44.564Z",
 	"tags": ["design-system", "ui"],
 	"runes": false,
 	"github_stars": 31,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.2.0",
+	"svelte_range": ">= ^3.46.3",
+	"kit_range": "next"
 }

@@ -4,20 +4,11 @@
 	"repo_url": "",
 	"authors": ["sisou"],
 	"homepage": "https://github.com/sisou/nimiq-svelte-stores",
-	"downloads": 28,
-	"dependents": 0,
+	"downloads": 3,
 	"updated": "2020-02-26T09:12:05.474Z",
 	"tags": ["integration"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/nimiq-svelte-stores.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.4.0",
+	"svelte_range": "^3.0.0"
 }

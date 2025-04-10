@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/noahsalvi/sotion",
 	"authors": ["noahsalvi"],
 	"homepage": "https://github.com/noahsalvi/sotion#readme",
-	"downloads": 25,
-	"dependents": 0,
+	"downloads": 9,
 	"updated": "2021-06-27T14:19:49.344Z",
 	"tags": ["content"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 17,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/ts/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.1.2",
+	"svelte_range": "^3.31.2"
 }

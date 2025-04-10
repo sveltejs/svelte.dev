@@ -3,20 +3,11 @@
 	"description": "Generate PDF documents easily within Svelte applications.",
 	"repo_url": "",
 	"authors": ["manuel3108"],
-	"downloads": 41,
-	"dependents": 2,
+	"downloads": 4,
 	"updated": "2021-07-04T12:13:28.006Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.1.7",
+	"svelte_range": "^3.0.0"
 }

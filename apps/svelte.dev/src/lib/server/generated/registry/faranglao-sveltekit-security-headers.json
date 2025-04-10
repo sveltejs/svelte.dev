@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/kevinobee/sveltekit-security-headers",
 	"authors": ["faranglao"],
 	"homepage": "https://sveltekit-security-headers.vercel.app/",
-	"downloads": 213,
-	"dependents": 0,
+	"downloads": 160,
 	"updated": "2024-02-26T12:08:11.041Z",
 	"tags": ["server"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 5,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.2.2",
+	"svelte_range": "^4.0.0",
+	"kit_range": "^2.0.0"
 }

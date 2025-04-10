@@ -4,19 +4,11 @@
 	"repo_url": "",
 	"authors": ["soleil-ab", "kling90"],
 	"homepage": "https://docs.soleil.se/packages/config-svelte",
-	"downloads": 99,
-	"dependents": 0,
+	"downloads": 26,
 	"updated": "2025-03-11T14:11:59.784Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./types/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.27.17",
+	"svelte_range": "^3.46.0 || ^4.0.0 || ^5.0.0-next || ^5.0.0"
 }

@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/Jakeii/svelte-popdown",
 	"authors": ["jakeii"],
 	"homepage": "https://github.com/Jakeii/svelte-popdown#readme",
-	"downloads": 4,
-	"dependents": 0,
+	"downloads": 2,
 	"updated": "2024-10-13T05:19:53.842Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in exports field"
-	}
+	"typescript": "first-party",
+	"version": "2.3.0",
+	"svelte_range": "^4.2.0",
+	"kit_range": "^2.0.0"
 }

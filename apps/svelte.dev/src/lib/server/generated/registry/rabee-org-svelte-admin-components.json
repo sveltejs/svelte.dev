@@ -13,21 +13,13 @@
 		"phi"
 	],
 	"homepage": "https://github.com/rabee-inc/svelte-admin-components#readme",
-	"downloads": 26,
-	"dependents": 0,
+	"downloads": 25,
 	"updated": "2024-11-15T06:00:17.966Z",
 	"tags": ["design-system"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./package/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.1.19",
+	"svelte_range": "^3.55.1",
+	"kit_range": "^1.5.0"
 }

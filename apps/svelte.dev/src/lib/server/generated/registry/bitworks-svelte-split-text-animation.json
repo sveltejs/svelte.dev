@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/pavlanovotna/svelte-split-type-animation",
 	"authors": ["pavlanovotna"],
 	"homepage": "https://github.com/pavlanovotna/svelte-split-type-animation#readme",
-	"downloads": 1,
-	"dependents": 0,
+	"downloads": 14,
 	"updated": "2023-07-11T10:20:21.993Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 1,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.0.9",
+	"svelte_range": "^4.0.0",
+	"kit_range": "^1.20.4"
 }

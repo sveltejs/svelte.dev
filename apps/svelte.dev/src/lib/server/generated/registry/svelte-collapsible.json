@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/rsdavis/svelte-collapsible",
 	"authors": ["rsdavis"],
 	"homepage": "https://github.com/rsdavis/svelte-collapsible#readme",
-	"downloads": 681,
-	"dependents": 1,
+	"downloads": 574,
 	"updated": "2024-11-21T22:40:59.943Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 32,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: src/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.3.1",
+	"svelte_range": "^3.0.0"
 }
