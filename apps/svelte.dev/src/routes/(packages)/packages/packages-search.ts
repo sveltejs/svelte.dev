@@ -1,5 +1,6 @@
 import type { Package, PackageGroup } from '$lib/server/content';
 import { create, insert, search as orama_search, type SearchParams } from '@orama/orama';
+import { stopwords as english_stopwords } from '@orama/stopwords/english';
 
 /** If the search is already initialized */
 export let is_inited = false;
@@ -113,7 +114,11 @@ function create_index() {
 		},
 		components: {
 			tokenizer: {
-				stemming: false
+				stemming: false,
+				stopWords: english_stopwords,
+				tokenize(raw, language, prop, withCache) {
+					return raw.split(/[\s\-]+/);
+				}
 			}
 		}
 		// plugins: [pluginPT15()]
