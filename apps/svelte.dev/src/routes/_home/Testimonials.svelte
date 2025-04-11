@@ -34,7 +34,7 @@
 			></enhanced:img>
 		</a>
 
-		<a href="https://2023.stateofjs.com/en-US/libraries/front-end-frameworks/">
+		<a href="https://2024.stateofjs.com/en-US/libraries/front-end-frameworks/">
 			<enhanced:img
 				class="screenshot"
 				alt="State of JavaScript 2023"
